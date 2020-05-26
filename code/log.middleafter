@@ -1,0 +1,75 @@
+0: push float x_plus_1
+1: push float float8$0#
+2: if x_plus_1 <= float8$0# goto 70
+3: expo = int2$0#
+4: push float x_plus_1
+5: push float float8$0.3678794411714423216036827922#
+6: if x_plus_1 >= float8$0.3678794411714423216036827922# goto 13
+7: push float x_plus_1
+8: push float float8$2.7182818284590452353#
+9: £temporary436 = x_plus_1 * float8$2.7182818284590452353#
+10: pop float x_plus_1
+11: --expo
+12: goto 4
+13: push float x_plus_1
+14: push float float8$0.7357588823428846432073655843#
+15: if x_plus_1 <= float8$0.7357588823428846432073655843# goto 22
+16: push float x_plus_1
+17: push float float8$2.7182818284590452353#
+18: £temporary439 = x_plus_1 / float8$2.7182818284590452353#
+19: pop float x_plus_1
+20: ++expo
+21: goto 13
+22: push float float8$1#
+23: pop float n
+24: push float float8$1#
+25: pop float plusMinusOne
+26: push float x_plus_1
+27: push float float8$1#
+28: £temporary441 = x_plus_1 - float8$1#
+29: pop float x
+30: push float float8$0#
+31: pop float sum
+32: push float x
+33: pop float power
+34: push float plusMinusOne
+35: push float power
+36: push float n
+37: push float n
+38: push 1
+39: n = n + float8$1#
+40: pop float n
+41: £temporary443 = power / £temporary442
+42: £temporary444 = plusMinusOne * £temporary443
+43: pop float term
+44: push float sum
+45: push float term
+46: £temporary445 = sum + term
+47: pop float sum
+48: push float power
+49: push float x
+50: £temporary446 = power * x
+51: pop float power
+52: push float plusMinusOne
+53: push float float8$minus1.0#
+54: £temporary447 = plusMinusOne * float8$minus1.0#
+55: pop float plusMinusOne
+56: check track map float stack
+57: call header integral zero 0 stack zero 0
+58: push float term
+59: parameter term, offset 70
+60: call function noellipse-noellipse fabs
+61: post call
+62: £temporary448 = return_value
+63: push float float8$0.000000001#
+64: if £temporary448 > float8$0.000000001# goto 34
+65: push float sum
+66: £temporary450 = int_to_float expo (Signed_Int -> Double)
+67: £temporary451 = sum + £temporary450
+68: return_value = £temporary451
+69: return
+70: errno = int2$6#
+71: push float float8$0#
+72: return_value = float8$0#
+73: return
+74: function end log

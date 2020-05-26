@@ -1,0 +1,41 @@
+0: push float x
+1: push float float8$0#
+2: if x <= float8$0# goto 37
+3: push float x
+4: push float float8$1#
+5: if x != float8$1# goto 8
+6: return_value = int2$0#
+7: return
+8: push float x
+9: push float float8$1#
+10: if x <= float8$1# goto 24
+11: count = int2$0#
+12: push float x
+13: push float float8$1#
+14: if x <= float8$1# goto 21
+15: push float x
+16: push float float8$10#
+17: £temporary460 = x / float8$10#
+18: pop float x
+19: ++count
+20: goto 12
+21: £temporary462 = count - int2$1#
+22: return_value = £temporary462
+23: return
+24: count = int2$0#
+25: push float x
+26: push float float8$1#
+27: if x >= float8$1# goto 34
+28: push float x
+29: push float float8$10#
+30: £temporary464 = x * float8$10#
+31: pop float x
+32: ++count
+33: goto 25
+34: £temporary466 = -count
+35: return_value = £temporary466
+36: return
+37: errno = int2$6#
+38: return_value = int2$0#
+39: return
+40: function end log10_int

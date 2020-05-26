@@ -1,0 +1,298 @@
+0: width = int2$0#
+1: precision = int2$0#
+2: percent = int2$0#
+3: plus = int2$0#
+4: minus = int2$0#
+5: space = int2$0#
+6: zero = int2$0#
+7: grid = int2$0#
+8: widthStar = int2$0#
+9: period = int2$0#
+10: precisionStar = int2$0#
+11: shortInt = int2$0#
+12: longInt = int2$0#
+13: longDouble = int2$0#
+14: g_outChars = int2$0#
+15: index = int2$0#
+16: £temporary2189 = format + index
+17: £temporary2188 -> £temporary2189 = *£temporary2189
+18: if £temporary2188 -> £temporary2189 == int1$0# goto 289
+19: £temporary2193 = format + index
+20: £temporary2192 -> £temporary2193 = *£temporary2193
+21: c = £temporary2192 -> £temporary2193
+22: if percent == int1$0# goto 267
+23: case c == int1$43# goto 52
+24: case c == int1$45# goto 54
+25: case c == int1$32# goto 56
+26: case c == int1$48# goto 58
+27: case c == int1$35# goto 60
+28: case c == int1$46# goto 62
+29: case c == int1$42# goto 64
+30: case c == int1$104# goto 69
+31: case c == int1$108# goto 71
+32: case c == int1$76# goto 73
+33: case c == int1$37# goto 75
+34: case c == int1$110# goto 75
+35: case c == int1$112# goto 75
+36: case c == int1$71# goto 75
+37: case c == int1$103# goto 75
+38: case c == int1$69# goto 75
+39: case c == int1$101# goto 75
+40: case c == int1$102# goto 75
+41: case c == int1$115# goto 75
+42: case c == int1$99# goto 75
+43: case c == int1$88# goto 75
+44: case c == int1$120# goto 75
+45: case c == int1$111# goto 75
+46: case c == int1$98# goto 75
+47: case c == int1$117# goto 75
+48: case c == int1$100# goto 75
+49: case c == int1$105# goto 75
+50: case end c
+51: goto 242
+52: plus = int2$1#
+53: goto 287
+54: minus = int2$1#
+55: goto 287
+56: space = int2$1#
+57: goto 287
+58: zero = int2$1#
+59: goto 287
+60: grid = int2$1#
+61: goto 287
+62: period = int2$1#
+63: goto 287
+64: if period != int1$0# goto 67
+65: width = int2$minus1#
+66: goto 287
+67: precision = int2$minus1#
+68: goto 287
+69: shortInt = int2$1#
+70: goto 287
+71: longInt = int2$1#
+72: goto 287
+73: longDouble = int2$1#
+74: goto 287
+75: if minus == int1$0# goto 108
+76: startChars = g_outChars
+77: call header integral zero 0 stack zero 0
+78: £temporary2197 = format + index
+79: £temporary2196 -> £temporary2197 = *£temporary2197
+80: £temporary2198 = &£temporary2196 -> £temporary2197
+81: parameter £temporary2198, offset 49
+82: parameter arg_list, offset 51
+83: parameter plus, offset 53
+84: parameter space, offset 55
+85: parameter grid, offset 57
+86: £temporary2199 = &width
+87: parameter £temporary2199, offset 59
+88: parameter precision, offset 61
+89: parameter shortInt, offset 63
+90: parameter longInt, offset 65
+91: parameter longDouble, offset 67
+92: parameter int2$1#, offset 69
+93: parameter int2$0#, offset 71
+94: call function noellipse-noellipse printArgument
+95: post call
+96: £temporary2200 = return_value
+97: arg_list = £temporary2200
+98: £temporary2201 = g_outChars - startChars
+99: field = £temporary2201
+100: £temporary2202 = field
+101: ++field
+102: if £temporary2202 >= width goto 240
+103: call header integral zero 0 stack zero 0
+104: parameter int1$32#, offset 51
+105: call function noellipse-noellipse printChar
+106: post call
+107: goto 100
+108: if zero == int1$0# goto 186
+109: startChars = g_outChars
+110: oldOutStatus = g_outStatus
+111: negative = int2$0#
+112: g_outStatus = int2$2#
+113: call header integral zero 0 stack zero 0
+114: £temporary2206 = format + index
+115: £temporary2205 -> £temporary2206 = *£temporary2206
+116: £temporary2207 = &£temporary2205 -> £temporary2206
+117: parameter £temporary2207, offset 53
+118: parameter arg_list, offset 55
+119: parameter int2$0#, offset 57
+120: parameter int2$0#, offset 59
+121: parameter grid, offset 61
+122: £temporary2208 = &width
+123: parameter £temporary2208, offset 63
+124: parameter precision, offset 65
+125: parameter shortInt, offset 67
+126: parameter longInt, offset 69
+127: parameter longDouble, offset 71
+128: parameter int2$0#, offset 73
+129: £temporary2209 = &negative
+130: parameter £temporary2209, offset 75
+131: call function noellipse-noellipse printArgument
+132: post call
+133: g_outStatus = oldOutStatus
+134: £temporary2211 = g_outChars - startChars
+135: field = £temporary2211
+136: g_outChars = startChars
+137: if negative == int1$0# goto 144
+138: call header integral zero 0 stack zero 0
+139: parameter int1$45#, offset 55
+140: call function noellipse-noellipse printChar
+141: post call
+142: ++field
+143: goto 157
+144: if plus == int1$0# goto 151
+145: call header integral zero 0 stack zero 0
+146: parameter int1$43#, offset 55
+147: call function noellipse-noellipse printChar
+148: post call
+149: ++field
+150: goto 157
+151: if space == int1$0# goto 157
+152: call header integral zero 0 stack zero 0
+153: parameter int1$32#, offset 55
+154: call function noellipse-noellipse printChar
+155: post call
+156: ++field
+157: £temporary2221 = field
+158: ++field
+159: if £temporary2221 >= width goto 165
+160: call header integral zero 0 stack zero 0
+161: parameter int1$48#, offset 55
+162: call function noellipse-noellipse printChar
+163: post call
+164: goto 157
+165: call header integral zero 0 stack zero 0
+166: £temporary2225 = format + index
+167: £temporary2224 -> £temporary2225 = *£temporary2225
+168: £temporary2226 = &£temporary2224 -> £temporary2225
+169: parameter £temporary2226, offset 55
+170: parameter arg_list, offset 57
+171: parameter int2$0#, offset 59
+172: parameter int2$0#, offset 61
+173: parameter grid, offset 63
+174: parameter int2$0#, offset 65
+175: parameter precision, offset 67
+176: parameter shortInt, offset 69
+177: parameter longInt, offset 71
+178: parameter longDouble, offset 73
+179: parameter int2$0#, offset 75
+180: parameter int2$0#, offset 77
+181: call function noellipse-noellipse printArgument
+182: post call
+183: £temporary2227 = return_value
+184: arg_list = £temporary2227
+185: goto 240
+186: startChars = g_outChars
+187: oldOutStatus = g_outStatus
+188: g_outStatus = int2$2#
+189: call header integral zero 0 stack zero 0
+190: £temporary2229 = format + index
+191: £temporary2228 -> £temporary2229 = *£temporary2229
+192: £temporary2230 = &£temporary2228 -> £temporary2229
+193: parameter £temporary2230, offset 51
+194: parameter arg_list, offset 53
+195: parameter plus, offset 55
+196: parameter space, offset 57
+197: parameter grid, offset 59
+198: £temporary2231 = &width
+199: parameter £temporary2231, offset 61
+200: parameter precision, offset 63
+201: parameter shortInt, offset 65
+202: parameter longInt, offset 67
+203: parameter longDouble, offset 69
+204: parameter int2$1#, offset 71
+205: parameter int2$0#, offset 73
+206: call function noellipse-noellipse printArgument
+207: post call
+208: g_outStatus = oldOutStatus
+209: £temporary2233 = g_outChars - startChars
+210: field = £temporary2233
+211: g_outChars = startChars
+212: £temporary2234 = field
+213: ++field
+214: if £temporary2234 >= width goto 220
+215: call header integral zero 0 stack zero 0
+216: parameter int1$32#, offset 53
+217: call function noellipse-noellipse printChar
+218: post call
+219: goto 212
+220: call header integral zero 0 stack zero 0
+221: £temporary2238 = format + index
+222: £temporary2237 -> £temporary2238 = *£temporary2238
+223: £temporary2239 = &£temporary2237 -> £temporary2238
+224: parameter £temporary2239, offset 53
+225: parameter arg_list, offset 55
+226: parameter plus, offset 57
+227: parameter space, offset 59
+228: parameter grid, offset 61
+229: parameter int2$0#, offset 63
+230: parameter precision, offset 65
+231: parameter shortInt, offset 67
+232: parameter longInt, offset 69
+233: parameter longDouble, offset 71
+234: parameter int2$1#, offset 73
+235: parameter int2$0#, offset 75
+236: call function noellipse-noellipse printArgument
+237: post call
+238: £temporary2240 = return_value
+239: arg_list = £temporary2240
+240: percent = int2$0#
+241: goto 287
+242: value = int2$0#
+243: call header integral zero 0 stack zero 0
+244: £temporary2243 = int_to_int c (Signed_Char -> Signed_Int)
+245: parameter £temporary2243, offset 49
+246: call function noellipse-noellipse isdigit
+247: post call
+248: £temporary2244 = return_value
+249: if £temporary2244 == int1$0# goto 261
+250: £temporary2245 = value * int2$10#
+251: £temporary2246 = c - int1$48#
+252: £temporary2247 = int_to_int £temporary2246 (Signed_Char -> Signed_Int)
+253: £temporary2248 = £temporary2245 + £temporary2247
+254: value = £temporary2248
+255: ++index
+256: £temporary2249 = index
+257: £temporary2251 = format + £temporary2249
+258: £temporary2250 -> £temporary2251 = *£temporary2251
+259: c = £temporary2250 -> £temporary2251
+260: goto 243
+261: --index
+262: if period != int1$0# goto 265
+263: width = value
+264: goto 287
+265: precision = value
+266: goto 287
+267: if c != int1$37# goto 283
+268: percent = int2$1#
+269: plus = int2$0#
+270: minus = int2$0#
+271: space = int2$0#
+272: zero = int2$0#
+273: grid = int2$0#
+274: widthStar = int2$0#
+275: period = int2$0#
+276: precisionStar = int2$0#
+277: shortInt = int2$0#
+278: longInt = int2$0#
+279: longDouble = int2$0#
+280: width = int2$0#
+281: precision = int2$0#
+282: goto 287
+283: call header integral zero 0 stack zero 0
+284: parameter c, offset 47
+285: call function noellipse-noellipse printChar
+286: post call
+287: ++index
+288: goto 16
+289: if g_outStatus != int2$1# goto 295
+290: £temporary2260 = int_to_int g_outDevice (Pointer -> Pointer)
+291: outString = £temporary2260
+292: £temporary2262 = outString + g_outChars
+293: £temporary2261 -> £temporary2262 = *£temporary2262
+294: £temporary2261 -> £temporary2262 = int1$0#
+295: return_value = g_outChars
+296: return
+297: function end printFormat

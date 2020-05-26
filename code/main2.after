@@ -1,0 +1,10 @@
+0: empty
+1: a$p = int2$0#
+2: a$q = int2$0#
+3: call header integral zero 0 stack zero 0
+4: parameter string_test12Etxt#, offset 12
+5: parameter string_test22Etxt#, offset 14
+6: call function noellipse-noellipse file_test
+7: post call
+8: return
+9: function end main2

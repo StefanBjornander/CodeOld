@@ -1,0 +1,22 @@
+0: push float int4$0#
+1: if size >= int4$0# goto 57
+2: c = int1$97#
+3: if c > int1$122# goto 57
+4: £temporary1325 = name + size
+5: £temporary1324 -> £temporary1325 = *£temporary1325
+6: £temporary1324 -> £temporary1325 = c
+7: £temporary1326 = size + int4$1#
+8: £temporary1328 = name + £temporary1326
+9: £temporary1327 -> £temporary1328 = *£temporary1328
+10: £temporary1327 -> £temporary1328 = int1$0#
+11: call header integral zero 0 stack no zero 1
+12: parameter name, offset 45
+13: call function noellipse-noellipse fileexists
+14: post call
+15: £temporary1329 = return_value
+16: if £temporary1329 != int4$0# goto 43
+17: if status == int4$0# goto 20
+18: if status == int4$1# goto 22
+19: goto 43
+20: return_value = name
+21: return

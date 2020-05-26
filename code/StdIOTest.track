@@ -1,0 +1,1540 @@
+1:	
+
+stdio_test:	; n = 0
+2:		mov word [bp + 6], 0
+4:	
+
+stdio_test$1:	; £temporary4923 = &n
+5:		mov t2878, bp
+6:		add t2878, 6
+8:	
+
+stdio_test$2:	; p = £temporary4923
+9:		mov [bp + 8], t2878
+11:	
+
+stdio_test$3:	; call header integral zero 0 stack zero 0
+13:	
+
+stdio_test$4:	; parameter string_3C25i3E203C25i3E203C25li3E203C25li3E203C25u3E203C25lu3E0A0A#, offset 6
+14:		mov word [bp + 16], string_3C25i3E203C25i3E203C25li3E203C25li3E203C25u3E203C25lu3E0A0A#
+16:	
+
+stdio_test$5:	; parameter 123, offset 8
+17:		mov word [bp + 18], 123
+19:	
+
+stdio_test$6:	; parameter -123, offset 10
+20:		mov word [bp + 20], -123
+22:	
+
+stdio_test$7:	; parameter 123, offset 12
+23:		mov dword [bp + 22], 123
+25:	
+
+stdio_test$8:	; parameter -123, offset 16
+26:		mov dword [bp + 26], -123
+28:	
+
+stdio_test$9:	; parameter 123, offset 20
+29:		mov word [bp + 30], 123
+31:	
+
+stdio_test$10:	; parameter 123, offset 22
+32:		mov dword [bp + 32], 123
+34:	
+
+stdio_test$11:	; call function noellipse-ellipse printf, extra 0
+35:		mov word [bp + 10], stdio_test$12
+36:		mov [bp + 12], bp
+37:		add bp, 10
+38:		mov di, bp
+39:		add di, 18
+40:		jmp printf
+42:	
+
+stdio_test$12:	; post call
+44:	
+
+stdio_test$13:	; call header integral zero 0 stack zero 0
+46:	
+
+stdio_test$14:	; parameter string_3C256i3E203C256i3E203C256li3E203C256li3E203C256u3E203C256lu3E0A#, offset 6
+47:		mov word [bp + 16], string_3C256i3E203C256i3E203C256li3E203C256li3E203C256u3E203C256lu3E0A#
+49:	
+
+stdio_test$15:	; parameter 123, offset 8
+50:		mov word [bp + 18], 123
+52:	
+
+stdio_test$16:	; parameter -123, offset 10
+53:		mov word [bp + 20], -123
+55:	
+
+stdio_test$17:	; parameter 123, offset 12
+56:		mov dword [bp + 22], 123
+58:	
+
+stdio_test$18:	; parameter -123, offset 16
+59:		mov dword [bp + 26], -123
+61:	
+
+stdio_test$19:	; parameter 123, offset 20
+62:		mov word [bp + 30], 123
+64:	
+
+stdio_test$20:	; parameter 123, offset 22
+65:		mov dword [bp + 32], 123
+67:	
+
+stdio_test$21:	; call function noellipse-ellipse printf, extra 0
+68:		mov word [bp + 10], stdio_test$22
+69:		mov [bp + 12], bp
+70:		add bp, 10
+71:		mov di, bp
+72:		add di, 18
+73:		jmp printf
+75:	
+
+stdio_test$22:	; post call
+77:	
+
+stdio_test$23:	; call header integral zero 0 stack zero 0
+79:	
+
+stdio_test$24:	; parameter string_3C252B6i3E203C252B6i3E203C252B6li3E203C252B6li3E203C252B6u3E203C252B6lu3E0A#, offset 6
+80:		mov word [bp + 16], string_3C252B6i3E203C252B6i3E203C252B6li3E203C252B6li3E203C252B6u3E203C252B6lu3E0A#
+82:	
+
+stdio_test$25:	; parameter 123, offset 8
+83:		mov word [bp + 18], 123
+85:	
+
+stdio_test$26:	; parameter -123, offset 10
+86:		mov word [bp + 20], -123
+88:	
+
+stdio_test$27:	; parameter 123, offset 12
+89:		mov dword [bp + 22], 123
+91:	
+
+stdio_test$28:	; parameter -123, offset 16
+92:		mov dword [bp + 26], -123
+94:	
+
+stdio_test$29:	; parameter 123, offset 20
+95:		mov word [bp + 30], 123
+97:	
+
+stdio_test$30:	; parameter 123, offset 22
+98:		mov dword [bp + 32], 123
+100:	
+
+stdio_test$31:	; call function noellipse-ellipse printf, extra 0
+101:		mov word [bp + 10], stdio_test$32
+102:		mov [bp + 12], bp
+103:		add bp, 10
+104:		mov di, bp
+105:		add di, 18
+106:		jmp printf
+108:	
+
+stdio_test$32:	; post call
+110:	
+
+stdio_test$33:	; call header integral zero 0 stack zero 0
+112:	
+
+stdio_test$34:	; parameter string_3C252D6i3E203C252D6i3E203C252D6li3E203C252D6li3E203C252D6u3E203C252D6lu3E0A#, offset 6
+113:		mov word [bp + 16], string_3C252D6i3E203C252D6i3E203C252D6li3E203C252D6li3E203C252D6u3E203C252D6lu3E0A#
+115:	
+
+stdio_test$35:	; parameter 123, offset 8
+116:		mov word [bp + 18], 123
+118:	
+
+stdio_test$36:	; parameter -123, offset 10
+119:		mov word [bp + 20], -123
+121:	
+
+stdio_test$37:	; parameter 123, offset 12
+122:		mov dword [bp + 22], 123
+124:	
+
+stdio_test$38:	; parameter -123, offset 16
+125:		mov dword [bp + 26], -123
+127:	
+
+stdio_test$39:	; parameter 123, offset 20
+128:		mov word [bp + 30], 123
+130:	
+
+stdio_test$40:	; parameter 123, offset 22
+131:		mov dword [bp + 32], 123
+133:	
+
+stdio_test$41:	; call function noellipse-ellipse printf, extra 0
+134:		mov word [bp + 10], stdio_test$42
+135:		mov [bp + 12], bp
+136:		add bp, 10
+137:		mov di, bp
+138:		add di, 18
+139:		jmp printf
+141:	
+
+stdio_test$42:	; post call
+143:	
+
+stdio_test$43:	; call header integral zero 0 stack zero 0
+145:	
+
+stdio_test$44:	; parameter string_3C252B2D6i3E203C252B2D6i3E203C252B2D6li3E203C252B2D6li3E203C252B2D6u3E203C252B2D6lu3E0A0A#, offset 6
+146:		mov word [bp + 16], string_3C252B2D6i3E203C252B2D6i3E203C252B2D6li3E203C252B2D6li3E203C252B2D6u3E203C252B2D6lu3E0A0A#
+148:	
+
+stdio_test$45:	; parameter 123, offset 8
+149:		mov word [bp + 18], 123
+151:	
+
+stdio_test$46:	; parameter -123, offset 10
+152:		mov word [bp + 20], -123
+154:	
+
+stdio_test$47:	; parameter 123, offset 12
+155:		mov dword [bp + 22], 123
+157:	
+
+stdio_test$48:	; parameter -123, offset 16
+158:		mov dword [bp + 26], -123
+160:	
+
+stdio_test$49:	; parameter 123, offset 20
+161:		mov word [bp + 30], 123
+163:	
+
+stdio_test$50:	; parameter 123, offset 22
+164:		mov dword [bp + 32], 123
+166:	
+
+stdio_test$51:	; call function noellipse-ellipse printf, extra 0
+167:		mov word [bp + 10], stdio_test$52
+168:		mov [bp + 12], bp
+169:		add bp, 10
+170:		mov di, bp
+171:		add di, 18
+172:		jmp printf
+174:	
+
+stdio_test$52:	; post call
+176:	
+
+stdio_test$53:	; call header integral zero 0 stack zero 0
+178:	
+
+stdio_test$54:	; parameter string_3C2506i3E203C2506i3E203C2506li3E203C2506li3E203C2506u3E203C2506lu3E0A#, offset 6
+179:		mov word [bp + 16], string_3C2506i3E203C2506i3E203C2506li3E203C2506li3E203C2506u3E203C2506lu3E0A#
+181:	
+
+stdio_test$55:	; parameter 123, offset 8
+182:		mov word [bp + 18], 123
+184:	
+
+stdio_test$56:	; parameter -123, offset 10
+185:		mov word [bp + 20], -123
+187:	
+
+stdio_test$57:	; parameter 123, offset 12
+188:		mov dword [bp + 22], 123
+190:	
+
+stdio_test$58:	; parameter -123, offset 16
+191:		mov dword [bp + 26], -123
+193:	
+
+stdio_test$59:	; parameter 123, offset 20
+194:		mov word [bp + 30], 123
+196:	
+
+stdio_test$60:	; parameter 123, offset 22
+197:		mov dword [bp + 32], 123
+199:	
+
+stdio_test$61:	; call function noellipse-ellipse printf, extra 0
+200:		mov word [bp + 10], stdio_test$62
+201:		mov [bp + 12], bp
+202:		add bp, 10
+203:		mov di, bp
+204:		add di, 18
+205:		jmp printf
+207:	
+
+stdio_test$62:	; post call
+209:	
+
+stdio_test$63:	; call header integral zero 0 stack zero 0
+211:	
+
+stdio_test$64:	; parameter string_3C252B06i3E203C252B06i3E203C252B06li3E203C252B06li3E203C252B06u3E203C252B06lu3E0A#, offset 6
+212:		mov word [bp + 16], string_3C252B06i3E203C252B06i3E203C252B06li3E203C252B06li3E203C252B06u3E203C252B06lu3E0A#
+214:	
+
+stdio_test$65:	; parameter 123, offset 8
+215:		mov word [bp + 18], 123
+217:	
+
+stdio_test$66:	; parameter -123, offset 10
+218:		mov word [bp + 20], -123
+220:	
+
+stdio_test$67:	; parameter 123, offset 12
+221:		mov dword [bp + 22], 123
+223:	
+
+stdio_test$68:	; parameter -123, offset 16
+224:		mov dword [bp + 26], -123
+226:	
+
+stdio_test$69:	; parameter 123, offset 20
+227:		mov word [bp + 30], 123
+229:	
+
+stdio_test$70:	; parameter 123, offset 22
+230:		mov dword [bp + 32], 123
+232:	
+
+stdio_test$71:	; call function noellipse-ellipse printf, extra 0
+233:		mov word [bp + 10], stdio_test$72
+234:		mov [bp + 12], bp
+235:		add bp, 10
+236:		mov di, bp
+237:		add di, 18
+238:		jmp printf
+240:	
+
+stdio_test$72:	; post call
+242:	
+
+stdio_test$73:	; call header integral zero 0 stack zero 0
+244:	
+
+stdio_test$74:	; parameter string_3C252D06i3E203C252D06i3E203C252D06li3E203C252D06li3E203C252D06u3E203C252D06lu3E0A#, offset 6
+245:		mov word [bp + 16], string_3C252D06i3E203C252D06i3E203C252D06li3E203C252D06li3E203C252D06u3E203C252D06lu3E0A#
+247:	
+
+stdio_test$75:	; parameter 123, offset 8
+248:		mov word [bp + 18], 123
+250:	
+
+stdio_test$76:	; parameter -123, offset 10
+251:		mov word [bp + 20], -123
+253:	
+
+stdio_test$77:	; parameter 123, offset 12
+254:		mov dword [bp + 22], 123
+256:	
+
+stdio_test$78:	; parameter -123, offset 16
+257:		mov dword [bp + 26], -123
+259:	
+
+stdio_test$79:	; parameter 123, offset 20
+260:		mov word [bp + 30], 123
+262:	
+
+stdio_test$80:	; parameter 123, offset 22
+263:		mov dword [bp + 32], 123
+265:	
+
+stdio_test$81:	; call function noellipse-ellipse printf, extra 0
+266:		mov word [bp + 10], stdio_test$82
+267:		mov [bp + 12], bp
+268:		add bp, 10
+269:		mov di, bp
+270:		add di, 18
+271:		jmp printf
+273:	
+
+stdio_test$82:	; post call
+275:	
+
+stdio_test$83:	; call header integral zero 0 stack zero 0
+277:	
+
+stdio_test$84:	; parameter string_3C252B2D06i3E203C252B2D06i3E203C252B2D06li3E203C252B2D06li3E203C252B2D06u3E203C252B2D06lu3E0A0A#, offset 6
+278:		mov word [bp + 16], string_3C252B2D06i3E203C252B2D06i3E203C252B2D06li3E203C252B2D06li3E203C252B2D06u3E203C252B2D06lu3E0A0A#
+280:	
+
+stdio_test$85:	; parameter 123, offset 8
+281:		mov word [bp + 18], 123
+283:	
+
+stdio_test$86:	; parameter -123, offset 10
+284:		mov word [bp + 20], -123
+286:	
+
+stdio_test$87:	; parameter 123, offset 12
+287:		mov dword [bp + 22], 123
+289:	
+
+stdio_test$88:	; parameter -123, offset 16
+290:		mov dword [bp + 26], -123
+292:	
+
+stdio_test$89:	; parameter 123, offset 20
+293:		mov word [bp + 30], 123
+295:	
+
+stdio_test$90:	; parameter 123, offset 22
+296:		mov dword [bp + 32], 123
+298:	
+
+stdio_test$91:	; call function noellipse-ellipse printf, extra 0
+299:		mov word [bp + 10], stdio_test$92
+300:		mov [bp + 12], bp
+301:		add bp, 10
+302:		mov di, bp
+303:		add di, 18
+304:		jmp printf
+306:	
+
+stdio_test$92:	; post call
+308:	
+
+stdio_test$93:	; call header integral zero 0 stack zero 0
+310:	
+
+stdio_test$94:	; parameter string_3C25206i3E203C25206i3E203C25206li3E203C25206li3E203C25206u3E203C25206lu3E0A#, offset 6
+311:		mov word [bp + 16], string_3C25206i3E203C25206i3E203C25206li3E203C25206li3E203C25206u3E203C25206lu3E0A#
+313:	
+
+stdio_test$95:	; parameter 123, offset 8
+314:		mov word [bp + 18], 123
+316:	
+
+stdio_test$96:	; parameter -123, offset 10
+317:		mov word [bp + 20], -123
+319:	
+
+stdio_test$97:	; parameter 123, offset 12
+320:		mov dword [bp + 22], 123
+322:	
+
+stdio_test$98:	; parameter -123, offset 16
+323:		mov dword [bp + 26], -123
+325:	
+
+stdio_test$99:	; parameter 123, offset 20
+326:		mov word [bp + 30], 123
+328:	
+
+stdio_test$100:	; parameter 123, offset 22
+329:		mov dword [bp + 32], 123
+331:	
+
+stdio_test$101:	; call function noellipse-ellipse printf, extra 0
+332:		mov word [bp + 10], stdio_test$102
+333:		mov [bp + 12], bp
+334:		add bp, 10
+335:		mov di, bp
+336:		add di, 18
+337:		jmp printf
+339:	
+
+stdio_test$102:	; post call
+341:	
+
+stdio_test$103:	; call header integral zero 0 stack zero 0
+343:	
+
+stdio_test$104:	; parameter string_3C252B206i3E203C252B206i3E203C252B206li3E203C252B206li3E203C252B206u3E203C252B206lu3E0A#, offset 6
+344:		mov word [bp + 16], string_3C252B206i3E203C252B206i3E203C252B206li3E203C252B206li3E203C252B206u3E203C252B206lu3E0A#
+346:	
+
+stdio_test$105:	; parameter 123, offset 8
+347:		mov word [bp + 18], 123
+349:	
+
+stdio_test$106:	; parameter -123, offset 10
+350:		mov word [bp + 20], -123
+352:	
+
+stdio_test$107:	; parameter 123, offset 12
+353:		mov dword [bp + 22], 123
+355:	
+
+stdio_test$108:	; parameter -123, offset 16
+356:		mov dword [bp + 26], -123
+358:	
+
+stdio_test$109:	; parameter 123, offset 20
+359:		mov word [bp + 30], 123
+361:	
+
+stdio_test$110:	; parameter 123, offset 22
+362:		mov dword [bp + 32], 123
+364:	
+
+stdio_test$111:	; call function noellipse-ellipse printf, extra 0
+365:		mov word [bp + 10], stdio_test$112
+366:		mov [bp + 12], bp
+367:		add bp, 10
+368:		mov di, bp
+369:		add di, 18
+370:		jmp printf
+372:	
+
+stdio_test$112:	; post call
+374:	
+
+stdio_test$113:	; call header integral zero 0 stack zero 0
+376:	
+
+stdio_test$114:	; parameter string_3C252D206i3E203C252D206i3E203C252D206li3E203C252D206li3E203C252D206u3E203C252D206lu3E0A#, offset 6
+377:		mov word [bp + 16], string_3C252D206i3E203C252D206i3E203C252D206li3E203C252D206li3E203C252D206u3E203C252D206lu3E0A#
+379:	
+
+stdio_test$115:	; parameter 123, offset 8
+380:		mov word [bp + 18], 123
+382:	
+
+stdio_test$116:	; parameter -123, offset 10
+383:		mov word [bp + 20], -123
+385:	
+
+stdio_test$117:	; parameter 123, offset 12
+386:		mov dword [bp + 22], 123
+388:	
+
+stdio_test$118:	; parameter -123, offset 16
+389:		mov dword [bp + 26], -123
+391:	
+
+stdio_test$119:	; parameter 123, offset 20
+392:		mov word [bp + 30], 123
+394:	
+
+stdio_test$120:	; parameter 123, offset 22
+395:		mov dword [bp + 32], 123
+397:	
+
+stdio_test$121:	; call function noellipse-ellipse printf, extra 0
+398:		mov word [bp + 10], stdio_test$122
+399:		mov [bp + 12], bp
+400:		add bp, 10
+401:		mov di, bp
+402:		add di, 18
+403:		jmp printf
+405:	
+
+stdio_test$122:	; post call
+407:	
+
+stdio_test$123:	; call header integral zero 0 stack zero 0
+409:	
+
+stdio_test$124:	; parameter string_3C252B2D206i3E203C252B2D206i3E203C252B2D206li3E203C252B2D206li3E203C252B2D206u3E203C252B2D206lu3E0A0A#, offset 6
+410:		mov word [bp + 16], string_3C252B2D206i3E203C252B2D206i3E203C252B2D206li3E203C252B2D206li3E203C252B2D206u3E203C252B2D206lu3E0A0A#
+412:	
+
+stdio_test$125:	; parameter 123, offset 8
+413:		mov word [bp + 18], 123
+415:	
+
+stdio_test$126:	; parameter -123, offset 10
+416:		mov word [bp + 20], -123
+418:	
+
+stdio_test$127:	; parameter 123, offset 12
+419:		mov dword [bp + 22], 123
+421:	
+
+stdio_test$128:	; parameter -123, offset 16
+422:		mov dword [bp + 26], -123
+424:	
+
+stdio_test$129:	; parameter 123, offset 20
+425:		mov word [bp + 30], 123
+427:	
+
+stdio_test$130:	; parameter 123, offset 22
+428:		mov dword [bp + 32], 123
+430:	
+
+stdio_test$131:	; call function noellipse-ellipse printf, extra 0
+431:		mov word [bp + 10], stdio_test$132
+432:		mov [bp + 12], bp
+433:		add bp, 10
+434:		mov di, bp
+435:		add di, 18
+436:		jmp printf
+438:	
+
+stdio_test$132:	; post call
+440:	
+
+stdio_test$133:	; call header integral zero 0 stack zero 0
+442:	
+
+stdio_test$134:	; parameter string_3C25x3E203C25X3E203C25o3E203C25lx3E203C25lX3E203C25lo3E0A#, offset 6
+443:		mov word [bp + 16], string_3C25x3E203C25X3E203C25o3E203C25lx3E203C25lX3E203C25lo3E0A#
+445:	
+
+stdio_test$135:	; parameter 123, offset 8
+446:		mov word [bp + 18], 123
+448:	
+
+stdio_test$136:	; parameter 123, offset 10
+449:		mov word [bp + 20], 123
+451:	
+
+stdio_test$137:	; parameter 123, offset 12
+452:		mov word [bp + 22], 123
+454:	
+
+stdio_test$138:	; parameter 123, offset 14
+455:		mov dword [bp + 24], 123
+457:	
+
+stdio_test$139:	; parameter 123, offset 18
+458:		mov dword [bp + 28], 123
+460:	
+
+stdio_test$140:	; parameter 123, offset 22
+461:		mov dword [bp + 32], 123
+463:	
+
+stdio_test$141:	; call function noellipse-ellipse printf, extra 0
+464:		mov word [bp + 10], stdio_test$142
+465:		mov [bp + 12], bp
+466:		add bp, 10
+467:		mov di, bp
+468:		add di, 18
+469:		jmp printf
+471:	
+
+stdio_test$142:	; post call
+473:	
+
+stdio_test$143:	; call header integral zero 0 stack zero 0
+475:	
+
+stdio_test$144:	; parameter string_3C2523x3E203C2523X3E203C2523o3E203C2523lx3E203C2523lX3E203C2523lo3E0A#, offset 6
+476:		mov word [bp + 16], string_3C2523x3E203C2523X3E203C2523o3E203C2523lx3E203C2523lX3E203C2523lo3E0A#
+478:	
+
+stdio_test$145:	; parameter 123, offset 8
+479:		mov word [bp + 18], 123
+481:	
+
+stdio_test$146:	; parameter 123, offset 10
+482:		mov word [bp + 20], 123
+484:	
+
+stdio_test$147:	; parameter 123, offset 12
+485:		mov word [bp + 22], 123
+487:	
+
+stdio_test$148:	; parameter 123, offset 14
+488:		mov dword [bp + 24], 123
+490:	
+
+stdio_test$149:	; parameter 123, offset 18
+491:		mov dword [bp + 28], 123
+493:	
+
+stdio_test$150:	; parameter 123, offset 22
+494:		mov dword [bp + 32], 123
+496:	
+
+stdio_test$151:	; call function noellipse-ellipse printf, extra 0
+497:		mov word [bp + 10], stdio_test$152
+498:		mov [bp + 12], bp
+499:		add bp, 10
+500:		mov di, bp
+501:		add di, 18
+502:		jmp printf
+504:	
+
+stdio_test$152:	; post call
+506:	
+
+stdio_test$153:	; call header integral zero 0 stack zero 0
+508:	
+
+stdio_test$154:	; parameter string_3C25253E203C25s3E203C25c3E203C25p3E0A0A#, offset 6
+509:		mov word [bp + 16], string_3C25253E203C25s3E203C25c3E203C25p3E0A0A#
+511:	
+
+stdio_test$155:	; parameter string_Hello2C20World21#, offset 8
+512:		mov word [bp + 18], string_Hello2C20World21#
+514:	
+
+stdio_test$156:	; parameter 88, offset 10
+515:		mov word [bp + 20], 88
+517:	
+
+stdio_test$157:	; parameter p, offset 12
+518:		mov a2879, [bp + 8]
+519:		mov [bp + 22], a2879
+521:	
+
+stdio_test$158:	; call function noellipse-ellipse printf, extra 0
+522:		mov word [bp + 10], stdio_test$159
+523:		mov [bp + 12], bp
+524:		add bp, 10
+525:		mov di, bp
+526:		add di, 6
+527:		jmp printf
+529:	
+
+stdio_test$159:	; post call
+531:	
+
+stdio_test$160:	; call header integral zero 0 stack zero 0
+533:	
+
+stdio_test$161:	; parameter string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A#, offset 6
+534:		mov word [bp + 16], string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A#
+536:	
+
+stdio_test$162:	; push float 123.456
+537:		fld qword [float8$123.456#]
+539:	
+
+stdio_test$163:	; parameter 123.456, offset 8
+540:		fstp qword [bp + 18]
+542:	
+
+stdio_test$164:	; push float 123.456
+543:		fld qword [float8$123.456#]
+545:	
+
+stdio_test$165:	; parameter 123.456, offset 16
+546:		fstp qword [bp + 26]
+548:	
+
+stdio_test$166:	; push float 123.456
+549:		fld qword [float8$123.456#]
+551:	
+
+stdio_test$167:	; parameter 123.456, offset 24
+552:		fstp qword [bp + 34]
+554:	
+
+stdio_test$168:	; push float 123456.1
+555:		fld qword [float8$123456.1#]
+557:	
+
+stdio_test$169:	; parameter 123456.1, offset 32
+558:		fstp qword [bp + 42]
+560:	
+
+stdio_test$170:	; push float 123456.1
+561:		fld qword [float8$123456.1#]
+563:	
+
+stdio_test$171:	; parameter 123456.1, offset 40
+564:		fstp qword [bp + 50]
+566:	
+
+stdio_test$172:	; call function noellipse-ellipse printf, extra 0
+567:		mov word [bp + 10], stdio_test$173
+568:		mov [bp + 12], bp
+569:		add bp, 10
+570:		mov di, bp
+571:		add di, 40
+572:		jmp printf
+574:	
+
+stdio_test$173:	; post call
+576:	
+
+stdio_test$174:	; call header integral zero 0 stack zero 0
+578:	
+
+stdio_test$175:	; parameter string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A#, offset 6
+579:		mov word [bp + 16], string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A#
+581:	
+
+stdio_test$176:	; push float 123.456
+582:		fld qword [float8$123.456#]
+584:	
+
+stdio_test$177:	; parameter 123.456, offset 8
+585:		fstp qword [bp + 18]
+587:	
+
+stdio_test$178:	; push float 123.456
+588:		fld qword [float8$123.456#]
+590:	
+
+stdio_test$179:	; parameter 123.456, offset 16
+591:		fstp qword [bp + 26]
+593:	
+
+stdio_test$180:	; push float 123.456
+594:		fld qword [float8$123.456#]
+596:	
+
+stdio_test$181:	; parameter 123.456, offset 24
+597:		fstp qword [bp + 34]
+599:	
+
+stdio_test$182:	; push float 123456.1
+600:		fld qword [float8$123456.1#]
+602:	
+
+stdio_test$183:	; parameter 123456.1, offset 32
+603:		fstp qword [bp + 42]
+605:	
+
+stdio_test$184:	; push float 123456.1
+606:		fld qword [float8$123456.1#]
+608:	
+
+stdio_test$185:	; parameter 123456.1, offset 40
+609:		fstp qword [bp + 50]
+611:	
+
+stdio_test$186:	; call function noellipse-ellipse printf, extra 0
+612:		mov word [bp + 10], stdio_test$187
+613:		mov [bp + 12], bp
+614:		add bp, 10
+615:		mov di, bp
+616:		add di, 40
+617:		jmp printf
+619:	
+
+stdio_test$187:	; post call
+621:	
+
+stdio_test$188:	; call header integral zero 0 stack zero 0
+623:	
+
+stdio_test$189:	; parameter string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A#, offset 6
+624:		mov word [bp + 16], string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A#
+626:	
+
+stdio_test$190:	; push float 123.456
+627:		fld qword [float8$123.456#]
+629:	
+
+stdio_test$191:	; parameter 123.456, offset 8
+630:		fstp qword [bp + 18]
+632:	
+
+stdio_test$192:	; push float 123.456
+633:		fld qword [float8$123.456#]
+635:	
+
+stdio_test$193:	; parameter 123.456, offset 16
+636:		fstp qword [bp + 26]
+638:	
+
+stdio_test$194:	; push float 123.456
+639:		fld qword [float8$123.456#]
+641:	
+
+stdio_test$195:	; parameter 123.456, offset 24
+642:		fstp qword [bp + 34]
+644:	
+
+stdio_test$196:	; push float 123.456
+645:		fld qword [float8$123.456#]
+647:	
+
+stdio_test$197:	; parameter 123.456, offset 32
+648:		fstp qword [bp + 42]
+650:	
+
+stdio_test$198:	; push float 123.456
+651:		fld qword [float8$123.456#]
+653:	
+
+stdio_test$199:	; parameter 123.456, offset 40
+654:		fstp qword [bp + 50]
+656:	
+
+stdio_test$200:	; call function noellipse-ellipse printf, extra 0
+657:		mov word [bp + 10], stdio_test$201
+658:		mov [bp + 12], bp
+659:		add bp, 10
+660:		mov di, bp
+661:		add di, 40
+662:		jmp printf
+664:	
+
+stdio_test$201:	; post call
+666:	
+
+stdio_test$202:	; call header integral zero 0 stack zero 0
+668:	
+
+stdio_test$203:	; parameter string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A#, offset 6
+669:		mov word [bp + 16], string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A#
+671:	
+
+stdio_test$204:	; push float 123.456
+672:		fld qword [float8$123.456#]
+674:	
+
+stdio_test$205:	; parameter 123.456, offset 8
+675:		fstp qword [bp + 18]
+677:	
+
+stdio_test$206:	; push float 123.456
+678:		fld qword [float8$123.456#]
+680:	
+
+stdio_test$207:	; parameter 123.456, offset 16
+681:		fstp qword [bp + 26]
+683:	
+
+stdio_test$208:	; push float 123.456
+684:		fld qword [float8$123.456#]
+686:	
+
+stdio_test$209:	; parameter 123.456, offset 24
+687:		fstp qword [bp + 34]
+689:	
+
+stdio_test$210:	; push float 123.456
+690:		fld qword [float8$123.456#]
+692:	
+
+stdio_test$211:	; parameter 123.456, offset 32
+693:		fstp qword [bp + 42]
+695:	
+
+stdio_test$212:	; push float 123.456
+696:		fld qword [float8$123.456#]
+698:	
+
+stdio_test$213:	; parameter 123.456, offset 40
+699:		fstp qword [bp + 50]
+701:	
+
+stdio_test$214:	; call function noellipse-ellipse printf, extra 0
+702:		mov word [bp + 10], stdio_test$215
+703:		mov [bp + 12], bp
+704:		add bp, 10
+705:		mov di, bp
+706:		add di, 40
+707:		jmp printf
+709:	
+
+stdio_test$215:	; post call
+711:	
+
+stdio_test$216:	; call header integral zero 0 stack zero 0
+713:	
+
+stdio_test$217:	; parameter string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A#, offset 6
+714:		mov word [bp + 16], string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A#
+716:	
+
+stdio_test$218:	; push float 123.456
+717:		fld qword [float8$123.456#]
+719:	
+
+stdio_test$219:	; parameter 123.456, offset 8
+720:		fstp qword [bp + 18]
+722:	
+
+stdio_test$220:	; push float 123.456
+723:		fld qword [float8$123.456#]
+725:	
+
+stdio_test$221:	; parameter 123.456, offset 16
+726:		fstp qword [bp + 26]
+728:	
+
+stdio_test$222:	; push float 123.456
+729:		fld qword [float8$123.456#]
+731:	
+
+stdio_test$223:	; parameter 123.456, offset 24
+732:		fstp qword [bp + 34]
+734:	
+
+stdio_test$224:	; push float 123.456
+735:		fld qword [float8$123.456#]
+737:	
+
+stdio_test$225:	; parameter 123.456, offset 32
+738:		fstp qword [bp + 42]
+740:	
+
+stdio_test$226:	; push float 123.456
+741:		fld qword [float8$123.456#]
+743:	
+
+stdio_test$227:	; parameter 123.456, offset 40
+744:		fstp qword [bp + 50]
+746:	
+
+stdio_test$228:	; call function noellipse-ellipse printf, extra 0
+747:		mov word [bp + 10], stdio_test$229
+748:		mov [bp + 12], bp
+749:		add bp, 10
+750:		mov di, bp
+751:		add di, 40
+752:		jmp printf
+754:	
+
+stdio_test$229:	; post call
+756:	
+
+stdio_test$230:	; call header integral zero 0 stack zero 0
+758:	
+
+stdio_test$231:	; parameter string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A#, offset 6
+759:		mov word [bp + 16], string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A#
+761:	
+
+stdio_test$232:	; push float 123.456
+762:		fld qword [float8$123.456#]
+764:	
+
+stdio_test$233:	; parameter 123.456, offset 8
+765:		fstp qword [bp + 18]
+767:	
+
+stdio_test$234:	; push float 123.456
+768:		fld qword [float8$123.456#]
+770:	
+
+stdio_test$235:	; parameter 123.456, offset 16
+771:		fstp qword [bp + 26]
+773:	
+
+stdio_test$236:	; push float 123.456
+774:		fld qword [float8$123.456#]
+776:	
+
+stdio_test$237:	; parameter 123.456, offset 24
+777:		fstp qword [bp + 34]
+779:	
+
+stdio_test$238:	; push float 123.456
+780:		fld qword [float8$123.456#]
+782:	
+
+stdio_test$239:	; parameter 123.456, offset 32
+783:		fstp qword [bp + 42]
+785:	
+
+stdio_test$240:	; push float 123.456
+786:		fld qword [float8$123.456#]
+788:	
+
+stdio_test$241:	; parameter 123.456, offset 40
+789:		fstp qword [bp + 50]
+791:	
+
+stdio_test$242:	; call function noellipse-ellipse printf, extra 0
+792:		mov word [bp + 10], stdio_test$243
+793:		mov [bp + 12], bp
+794:		add bp, 10
+795:		mov di, bp
+796:		add di, 40
+797:		jmp printf
+799:	
+
+stdio_test$243:	; post call
+801:	
+
+stdio_test$244:	; call header integral zero 0 stack zero 0
+803:	
+
+stdio_test$245:	; parameter string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A#, offset 6
+804:		mov word [bp + 16], string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A#
+806:	
+
+stdio_test$246:	; push float -123.456
+807:		fld qword [float8$minus123.456#]
+809:	
+
+stdio_test$247:	; parameter -123.456, offset 8
+810:		fstp qword [bp + 18]
+812:	
+
+stdio_test$248:	; push float -123.456
+813:		fld qword [float8$minus123.456#]
+815:	
+
+stdio_test$249:	; parameter -123.456, offset 16
+816:		fstp qword [bp + 26]
+818:	
+
+stdio_test$250:	; push float -123.456
+819:		fld qword [float8$minus123.456#]
+821:	
+
+stdio_test$251:	; parameter -123.456, offset 24
+822:		fstp qword [bp + 34]
+824:	
+
+stdio_test$252:	; push float -0.000000123456
+825:		fld qword [float8$minus0.000000123456#]
+827:	
+
+stdio_test$253:	; parameter -0.000000123456, offset 32
+828:		fstp qword [bp + 42]
+830:	
+
+stdio_test$254:	; push float -0.000000123456
+831:		fld qword [float8$minus0.000000123456#]
+833:	
+
+stdio_test$255:	; parameter -0.000000123456, offset 40
+834:		fstp qword [bp + 50]
+836:	
+
+stdio_test$256:	; call function noellipse-ellipse printf, extra 0
+837:		mov word [bp + 10], stdio_test$257
+838:		mov [bp + 12], bp
+839:		add bp, 10
+840:		mov di, bp
+841:		add di, 40
+842:		jmp printf
+844:	
+
+stdio_test$257:	; post call
+846:	
+
+stdio_test$258:	; call header integral zero 0 stack zero 0
+848:	
+
+stdio_test$259:	; parameter string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A#, offset 6
+849:		mov word [bp + 16], string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A#
+851:	
+
+stdio_test$260:	; push float -123.456
+852:		fld qword [float8$minus123.456#]
+854:	
+
+stdio_test$261:	; parameter -123.456, offset 8
+855:		fstp qword [bp + 18]
+857:	
+
+stdio_test$262:	; push float -123.456
+858:		fld qword [float8$minus123.456#]
+860:	
+
+stdio_test$263:	; parameter -123.456, offset 16
+861:		fstp qword [bp + 26]
+863:	
+
+stdio_test$264:	; push float -123.456
+864:		fld qword [float8$minus123.456#]
+866:	
+
+stdio_test$265:	; parameter -123.456, offset 24
+867:		fstp qword [bp + 34]
+869:	
+
+stdio_test$266:	; push float -0.000000123456
+870:		fld qword [float8$minus0.000000123456#]
+872:	
+
+stdio_test$267:	; parameter -0.000000123456, offset 32
+873:		fstp qword [bp + 42]
+875:	
+
+stdio_test$268:	; push float -0.000000123456
+876:		fld qword [float8$minus0.000000123456#]
+878:	
+
+stdio_test$269:	; parameter -0.000000123456, offset 40
+879:		fstp qword [bp + 50]
+881:	
+
+stdio_test$270:	; call function noellipse-ellipse printf, extra 0
+882:		mov word [bp + 10], stdio_test$271
+883:		mov [bp + 12], bp
+884:		add bp, 10
+885:		mov di, bp
+886:		add di, 40
+887:		jmp printf
+889:	
+
+stdio_test$271:	; post call
+891:	
+
+stdio_test$272:	; call header integral zero 0 stack zero 0
+893:	
+
+stdio_test$273:	; parameter string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A#, offset 6
+894:		mov word [bp + 16], string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A#
+896:	
+
+stdio_test$274:	; push float -123.456
+897:		fld qword [float8$minus123.456#]
+899:	
+
+stdio_test$275:	; parameter -123.456, offset 8
+900:		fstp qword [bp + 18]
+902:	
+
+stdio_test$276:	; push float -123.456
+903:		fld qword [float8$minus123.456#]
+905:	
+
+stdio_test$277:	; parameter -123.456, offset 16
+906:		fstp qword [bp + 26]
+908:	
+
+stdio_test$278:	; push float -123.456
+909:		fld qword [float8$minus123.456#]
+911:	
+
+stdio_test$279:	; parameter -123.456, offset 24
+912:		fstp qword [bp + 34]
+914:	
+
+stdio_test$280:	; push float -123.456
+915:		fld qword [float8$minus123.456#]
+917:	
+
+stdio_test$281:	; parameter -123.456, offset 32
+918:		fstp qword [bp + 42]
+920:	
+
+stdio_test$282:	; push float -123.456
+921:		fld qword [float8$minus123.456#]
+923:	
+
+stdio_test$283:	; parameter -123.456, offset 40
+924:		fstp qword [bp + 50]
+926:	
+
+stdio_test$284:	; call function noellipse-ellipse printf, extra 0
+927:		mov word [bp + 10], stdio_test$285
+928:		mov [bp + 12], bp
+929:		add bp, 10
+930:		mov di, bp
+931:		add di, 40
+932:		jmp printf
+934:	
+
+stdio_test$285:	; post call
+936:	
+
+stdio_test$286:	; call header integral zero 0 stack zero 0
+938:	
+
+stdio_test$287:	; parameter string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A#, offset 6
+939:		mov word [bp + 16], string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A#
+941:	
+
+stdio_test$288:	; push float -123.456
+942:		fld qword [float8$minus123.456#]
+944:	
+
+stdio_test$289:	; parameter -123.456, offset 8
+945:		fstp qword [bp + 18]
+947:	
+
+stdio_test$290:	; push float -123.456
+948:		fld qword [float8$minus123.456#]
+950:	
+
+stdio_test$291:	; parameter -123.456, offset 16
+951:		fstp qword [bp + 26]
+953:	
+
+stdio_test$292:	; push float -123.456
+954:		fld qword [float8$minus123.456#]
+956:	
+
+stdio_test$293:	; parameter -123.456, offset 24
+957:		fstp qword [bp + 34]
+959:	
+
+stdio_test$294:	; push float -123.456
+960:		fld qword [float8$minus123.456#]
+962:	
+
+stdio_test$295:	; parameter -123.456, offset 32
+963:		fstp qword [bp + 42]
+965:	
+
+stdio_test$296:	; push float -123.456
+966:		fld qword [float8$minus123.456#]
+968:	
+
+stdio_test$297:	; parameter -123.456, offset 40
+969:		fstp qword [bp + 50]
+971:	
+
+stdio_test$298:	; call function noellipse-ellipse printf, extra 0
+972:		mov word [bp + 10], stdio_test$299
+973:		mov [bp + 12], bp
+974:		add bp, 10
+975:		mov di, bp
+976:		add di, 40
+977:		jmp printf
+979:	
+
+stdio_test$299:	; post call
+981:	
+
+stdio_test$300:	; call header integral zero 0 stack zero 0
+983:	
+
+stdio_test$301:	; parameter string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A#, offset 6
+984:		mov word [bp + 16], string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A#
+986:	
+
+stdio_test$302:	; push float -123.456
+987:		fld qword [float8$minus123.456#]
+989:	
+
+stdio_test$303:	; parameter -123.456, offset 8
+990:		fstp qword [bp + 18]
+992:	
+
+stdio_test$304:	; push float -123.456
+993:		fld qword [float8$minus123.456#]
+995:	
+
+stdio_test$305:	; parameter -123.456, offset 16
+996:		fstp qword [bp + 26]
+998:	
+
+stdio_test$306:	; push float -123.456
+999:		fld qword [float8$minus123.456#]
+1001:	
+
+stdio_test$307:	; parameter -123.456, offset 24
+1002:		fstp qword [bp + 34]
+1004:	
+
+stdio_test$308:	; push float -123.456
+1005:		fld qword [float8$minus123.456#]
+1007:	
+
+stdio_test$309:	; parameter -123.456, offset 32
+1008:		fstp qword [bp + 42]
+1010:	
+
+stdio_test$310:	; push float -123.456
+1011:		fld qword [float8$minus123.456#]
+1013:	
+
+stdio_test$311:	; parameter -123.456, offset 40
+1014:		fstp qword [bp + 50]
+1016:	
+
+stdio_test$312:	; call function noellipse-ellipse printf, extra 0
+1017:		mov word [bp + 10], stdio_test$313
+1018:		mov [bp + 12], bp
+1019:		add bp, 10
+1020:		mov di, bp
+1021:		add di, 40
+1022:		jmp printf
+1024:	
+
+stdio_test$313:	; post call
+1026:	
+
+stdio_test$314:	; call header integral zero 0 stack zero 0
+1028:	
+
+stdio_test$315:	; parameter string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A#, offset 6
+1029:		mov word [bp + 16], string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A#
+1031:	
+
+stdio_test$316:	; push float -123.456
+1032:		fld qword [float8$minus123.456#]
+1034:	
+
+stdio_test$317:	; parameter -123.456, offset 8
+1035:		fstp qword [bp + 18]
+1037:	
+
+stdio_test$318:	; push float -123.456
+1038:		fld qword [float8$minus123.456#]
+1040:	
+
+stdio_test$319:	; parameter -123.456, offset 16
+1041:		fstp qword [bp + 26]
+1043:	
+
+stdio_test$320:	; push float -123.456
+1044:		fld qword [float8$minus123.456#]
+1046:	
+
+stdio_test$321:	; parameter -123.456, offset 24
+1047:		fstp qword [bp + 34]
+1049:	
+
+stdio_test$322:	; push float -123.456
+1050:		fld qword [float8$minus123.456#]
+1052:	
+
+stdio_test$323:	; parameter -123.456, offset 32
+1053:		fstp qword [bp + 42]
+1055:	
+
+stdio_test$324:	; push float -123.456
+1056:		fld qword [float8$minus123.456#]
+1058:	
+
+stdio_test$325:	; parameter -123.456, offset 40
+1059:		fstp qword [bp + 50]
+1061:	
+
+stdio_test$326:	; call function noellipse-ellipse printf, extra 0
+1062:		mov word [bp + 10], stdio_test$327
+1063:		mov [bp + 12], bp
+1064:		add bp, 10
+1065:		mov di, bp
+1066:		add di, 40
+1067:		jmp printf
+1069:	
+
+stdio_test$327:	; post call
+1071:	
+
+stdio_test$328:	; call header integral zero 0 stack zero 0
+1073:	
+
+stdio_test$329:	; parameter string_Please20write20the20patterns205Babc5D3A20#, offset 6
+1074:		mov word [bp + 112], string_Please20write20the20patterns205Babc5D3A20#
+1076:	
+
+stdio_test$330:	; call function noellipse-ellipse printf, extra 0
+1077:		mov word [bp + 106], stdio_test$331
+1078:		mov [bp + 108], bp
+1079:		add bp, 106
+1080:		mov di, bp
+1081:		jmp printf
+1083:	
+
+stdio_test$331:	; post call
+1085:	
+
+stdio_test$332:	; call header integral zero 0 stack zero 0
+1087:	
+
+stdio_test$333:	; parameter string_255Babc5D#, offset 6
+1088:		mov word [bp + 112], string_255Babc5D#
+1090:	
+
+stdio_test$334:	; parameter s, offset 8
+1091:		mov [bp + 114], bp
+1092:		add word [bp + 114], 6
+1094:	
+
+stdio_test$335:	; call function noellipse-ellipse scanf, extra 0
+1095:		mov word [bp + 106], stdio_test$336
+1096:		mov [bp + 108], bp
+1097:		add bp, 106
+1098:		mov di, bp
+1099:		add di, 2
+1100:		jmp scanf
+1102:	
+
+stdio_test$336:	; post call
+1104:	
+
+stdio_test$337:	; call header integral zero 0 stack zero 0
+1106:	
+
+stdio_test$338:	; parameter string_0A3C25s3E0A#, offset 6
+1107:		mov word [bp + 112], string_0A3C25s3E0A#
+1109:	
+
+stdio_test$339:	; parameter s, offset 8
+1110:		mov [bp + 114], bp
+1111:		add word [bp + 114], 6
+1113:	
+
+stdio_test$340:	; call function noellipse-ellipse printf, extra 0
+1114:		mov word [bp + 106], stdio_test$341
+1115:		mov [bp + 108], bp
+1116:		add bp, 106
+1117:		mov di, bp
+1118:		add di, 2
+1119:		jmp printf
+1121:	
+
+stdio_test$341:	; post call
+1123:	
+
+stdio_test$342:	; call header integral zero 0 stack zero 0
+1125:	
+
+stdio_test$343:	; parameter string_Please20write20the20patterns205B5Eabc5D3A20#, offset 6
+1126:		mov word [bp + 112], string_Please20write20the20patterns205B5Eabc5D3A20#
+1128:	
+
+stdio_test$344:	; call function noellipse-ellipse printf, extra 0
+1129:		mov word [bp + 106], stdio_test$345
+1130:		mov [bp + 108], bp
+1131:		add bp, 106
+1132:		mov di, bp
+1133:		jmp printf
+1135:	
+
+stdio_test$345:	; post call
+1137:	
+
+stdio_test$346:	; call header integral zero 0 stack zero 0
+1139:	
+
+stdio_test$347:	; parameter string_255B5Eabc5D#, offset 6
+1140:		mov word [bp + 112], string_255B5Eabc5D#
+1142:	
+
+stdio_test$348:	; parameter s, offset 8
+1143:		mov [bp + 114], bp
+1144:		add word [bp + 114], 6
+1146:	
+
+stdio_test$349:	; call function noellipse-ellipse scanf, extra 0
+1147:		mov word [bp + 106], stdio_test$350
+1148:		mov [bp + 108], bp
+1149:		add bp, 106
+1150:		mov di, bp
+1151:		add di, 2
+1152:		jmp scanf
+1154:	
+
+stdio_test$350:	; post call
+1156:	
+
+stdio_test$351:	; call header integral zero 0 stack zero 0
+1158:	
+
+stdio_test$352:	; parameter string_0A3C25s3E#, offset 6
+1159:		mov word [bp + 112], string_0A3C25s3E#
+1161:	
+
+stdio_test$353:	; parameter s, offset 8
+1162:		mov [bp + 114], bp
+1163:		add word [bp + 114], 6
+1165:	
+
+stdio_test$354:	; call function noellipse-ellipse printf, extra 0
+1166:		mov word [bp + 106], stdio_test$355
+1167:		mov [bp + 108], bp
+1168:		add bp, 106
+1169:		mov di, bp
+1170:		add di, 2
+1171:		jmp printf
+1173:	
+
+stdio_test$355:	; post call
+1175:	
+
+stdio_test$356:	; return
+1176:		mov t2880, [bp]
+1177:		mov di, [bp + 4]
+1178:		mov bp, [bp + 2]
+1179:		jmp t2880
+1181:	
+
+stdio_test$357:	; function end stdio_test

@@ -1,0 +1,284 @@
+1:	
+
+signal:	; call header integral zero 0 stack zero 0
+3:	
+
+signal$1:	; parameter string_Signal2025i20function2025p0A#, offset 6
+4:		mov word [bp + 16], string_Signal2025i20function2025p0A#
+6:	
+
+signal$2:	; parameter sig, offset 8
+7:		mov ax, [bp + 6]
+8:		mov [bp + 18], ax
+10:	
+
+signal$3:	; parameter func, offset 10
+11:		mov ax, [bp + 8]
+12:		mov [bp + 20], ax
+14:	
+
+signal$4:	; call function noellipse-ellipse printf, extra 0
+15:		mov word [bp + 10], signal$5
+16:		mov [bp + 12], bp
+17:		add bp, 10
+18:		mov di, bp
+19:		add di, 4
+20:		jmp printf
+22:	
+
+signal$5:	; post call
+24:	
+
+signal$6:	; £temporary941 = int_to_int sig (Signed_Int -> Signed_Short_Int)
+25:		mov ax, [bp + 6]
+28:		cmp ax, 0
+29:		jge signal$7
+30:		neg ax
+32:		neg al
+34:	
+
+signal$7:	; al = £temporary941
+36:	
+
+signal$8:	; ah = 37
+37:		mov ah, 37
+39:	
+
+signal$9:	; dx = func
+40:		mov dx, [bp + 8]
+42:	
+
+signal$10:	; interrupt 33
+43:		int 33
+45:	
+
+signal$11:	; call header integral zero 0 stack zero 0
+47:	
+
+signal$12:	; parameter string_Signal20done0A#, offset 6
+48:		mov word [bp + 16], string_Signal20done0A#
+50:	
+
+signal$13:	; call function noellipse-ellipse printf, extra 0
+51:		mov word [bp + 10], signal$14
+52:		mov [bp + 12], bp
+53:		add bp, 10
+54:		mov di, bp
+55:		jmp printf
+57:	
+
+signal$14:	; post call
+59:	
+
+signal$15:	; return
+60:		mov ax, [bp]
+61:		mov di, [bp + 4]
+62:		mov bp, [bp + 2]
+63:		jmp ax
+65:	
+
+signal$16:	; function end signal
+1:	
+
+raise:	; call header integral zero 0 stack zero 0
+3:	
+
+raise$1:	; parameter string_0ARaise20signal2025i0A#, offset 6
+4:		mov word [bp + 14], string_0ARaise20signal2025i0A#
+6:	
+
+raise$2:	; parameter sig, offset 8
+7:		mov ax, [bp + 6]
+8:		mov [bp + 16], ax
+10:	
+
+raise$3:	; call function noellipse-ellipse printf, extra 0
+11:		mov word [bp + 8], raise$4
+12:		mov [bp + 10], bp
+13:		add bp, 8
+14:		mov di, bp
+15:		add di, 2
+16:		jmp printf
+18:	
+
+raise$4:	; post call
+20:	
+
+raise$5:	; £temporary951 = int_to_int sig (Signed_Int -> Signed_Short_Int)
+21:		mov ax, [bp + 6]
+24:		cmp ax, 0
+25:		jge raise$6
+26:		neg ax
+28:		neg al
+30:	
+
+raise$6:	; al = £temporary951
+32:	
+
+raise$7:	; ah = 53
+33:		mov ah, 53
+35:	
+
+raise$8:	; interrupt 33
+36:		int 33
+38:	
+
+raise$9:	; £temporary953 = bx
+40:	
+
+raise$10:	; func = £temporary953
+41:		mov [bp + 8], bx
+43:	
+
+raise$11:	; call header integral zero 0 stack zero 0
+45:	
+
+raise$12:	; parameter string_Raise20function2025p0A#, offset 6
+46:		mov word [bp + 16], string_Raise20function2025p0A#
+48:	
+
+raise$13:	; parameter func, offset 8
+49:		mov ax, [bp + 8]
+50:		mov [bp + 18], ax
+52:	
+
+raise$14:	; call function noellipse-ellipse printf, extra 0
+53:		mov word [bp + 10], raise$15
+54:		mov [bp + 12], bp
+55:		add bp, 10
+56:		mov di, bp
+57:		add di, 2
+58:		jmp printf
+60:	
+
+raise$15:	; post call
+62:	
+
+raise$16:	; if func != 0 goto 23
+63:		cmp word [bp + 8], 0
+64:		jne raise$23
+66:	
+
+raise$17:	; call header integral zero 0 stack zero 0
+68:	
+
+raise$18:	; parameter string_Raise20default0A#, offset 6
+69:		mov word [bp + 16], string_Raise20default0A#
+71:	
+
+raise$19:	; call function noellipse-ellipse printf, extra 0
+72:		mov word [bp + 10], raise$20
+73:		mov [bp + 12], bp
+74:		add bp, 10
+75:		mov di, bp
+76:		jmp printf
+78:	
+
+raise$20:	; post call
+80:	
+
+raise$21:	; return_value = 1
+81:		mov bx, 1
+83:	
+
+raise$22:	; return
+84:		mov ax, [bp]
+85:		mov di, [bp + 4]
+86:		mov bp, [bp + 2]
+87:		jmp ax
+89:	
+
+raise$23:	; if func != 0 goto 30
+90:		cmp word [bp + 8], 0
+91:		jne raise$30
+93:	
+
+raise$24:	; call header integral zero 0 stack zero 0
+95:	
+
+raise$25:	; parameter string_Raise20error0A#, offset 6
+96:		mov word [bp + 16], string_Raise20error0A#
+98:	
+
+raise$26:	; call function noellipse-ellipse printf, extra 0
+99:		mov word [bp + 10], raise$27
+100:		mov [bp + 12], bp
+101:		add bp, 10
+102:		mov di, bp
+103:		jmp printf
+105:	
+
+raise$27:	; post call
+107:	
+
+raise$28:	; return_value = 0
+108:		mov bx, 0
+110:	
+
+raise$29:	; return
+111:		mov ax, [bp]
+112:		mov di, [bp + 4]
+113:		mov bp, [bp + 2]
+114:		jmp ax
+116:	
+
+raise$30:	; call header integral zero 0 stack zero 0
+118:	
+
+raise$31:	; parameter string_Raise20function2C20calling2025i20with2025i0A#, offset 6
+119:		mov word [bp + 16], string_Raise20function2C20calling2025i20with2025i0A#
+121:	
+
+raise$32:	; parameter func, offset 8
+122:		mov ax, [bp + 8]
+123:		mov [bp + 18], ax
+125:	
+
+raise$33:	; parameter sig, offset 10
+126:		mov ax, [bp + 6]
+127:		mov [bp + 20], ax
+129:	
+
+raise$34:	; call function noellipse-ellipse printf, extra 0
+130:		mov word [bp + 10], raise$35
+131:		mov [bp + 12], bp
+132:		add bp, 10
+133:		mov di, bp
+134:		add di, 4
+135:		jmp printf
+137:	
+
+raise$35:	; post call
+139:	
+
+raise$36:	; call header integral zero 0 stack zero 0
+141:	
+
+raise$37:	; parameter sig, offset 6
+142:		mov ax, [bp + 6]
+143:		mov [bp + 16], ax
+145:	
+
+raise$38:	; call function noellipse-noellipse func
+146:		mov word [bp + 10], raise$39
+147:		mov [bp + 12], bp
+148:		mov ax, [bp + 8]
+149:		add bp, 10
+150:		jmp ax
+152:	
+
+raise$39:	; post call
+154:	
+
+raise$40:	; return_value = 1
+155:		mov bx, 1
+157:	
+
+raise$41:	; return
+158:		mov ax, [bp]
+159:		mov di, [bp + 4]
+160:		mov bp, [bp + 2]
+161:		jmp ax
+163:	
+
+raise$42:	; function end raise

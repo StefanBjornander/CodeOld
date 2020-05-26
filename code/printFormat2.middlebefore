@@ -1,0 +1,344 @@
+0: width = int2$0#
+1: precision = int2$0#
+2: percent = int2$0#
+3: plus = int2$0#
+4: minus = int2$0#
+5: space = int2$0#
+6: zero = int2$0#
+7: grid = int2$0#
+8: widthStar = int2$0#
+9: period = int2$0#
+10: precisionStar = int2$0#
+11: shortInt = int2$0#
+12: longInt = int2$0#
+13: longDouble = int2$0#
+14: g_outChars = int2$0#
+15: index = int2$0#
+16: empty
+17: £temporary2247 = format + index
+18: £temporary2246 -> £temporary2247 = *£temporary2247
+19: if £temporary2246 -> £temporary2247 != int1$0# goto <MiddleCode>
+20: goto <MiddleCode>
+21: check track map float stack
+22: empty
+23: £temporary2251 = format + index
+24: £temporary2250 -> £temporary2251 = *£temporary2251
+25: c = £temporary2250 -> £temporary2251
+26: if percent != int2$0# goto <MiddleCode>
+27: goto <MiddleCode>
+28: check track map float stack
+29: if c == int1$43# goto <MiddleCode>
+30: if c == int1$45# goto <MiddleCode>
+31: if c == int1$32# goto <MiddleCode>
+32: if c == int1$48# goto <MiddleCode>
+33: if c == int1$35# goto <MiddleCode>
+34: if c == int1$46# goto <MiddleCode>
+35: if c == int1$42# goto <MiddleCode>
+36: if c == int1$104# goto <MiddleCode>
+37: if c == int1$108# goto <MiddleCode>
+38: if c == int1$76# goto <MiddleCode>
+39: if c == int1$37# goto <MiddleCode>
+40: if c == int1$110# goto <MiddleCode>
+41: if c == int1$112# goto <MiddleCode>
+42: if c == int1$71# goto <MiddleCode>
+43: if c == int1$103# goto <MiddleCode>
+44: if c == int1$69# goto <MiddleCode>
+45: if c == int1$101# goto <MiddleCode>
+46: if c == int1$102# goto <MiddleCode>
+47: if c == int1$115# goto <MiddleCode>
+48: if c == int1$99# goto <MiddleCode>
+49: if c == int1$88# goto <MiddleCode>
+50: if c == int1$120# goto <MiddleCode>
+51: if c == int1$111# goto <MiddleCode>
+52: if c == int1$98# goto <MiddleCode>
+53: if c == int1$117# goto <MiddleCode>
+54: if c == int1$100# goto <MiddleCode>
+55: if c == int1$105# goto <MiddleCode>
+56: goto <MiddleCode>
+57: plus = int2$1#
+58: goto <MiddleCode>
+59: minus = int2$1#
+60: goto <MiddleCode>
+61: space = int2$1#
+62: goto <MiddleCode>
+63: zero = int2$1#
+64: goto <MiddleCode>
+65: grid = int2$1#
+66: goto <MiddleCode>
+67: period = int2$1#
+68: goto <MiddleCode>
+69: if period != int2$0# goto <MiddleCode>
+70: goto <MiddleCode>
+71: check track map float stack
+72: width = int2$minus1#
+73: goto <MiddleCode>
+74: precision = int2$minus1#
+75: goto <MiddleCode>
+76: goto <MiddleCode>
+77: shortInt = int2$1#
+78: goto <MiddleCode>
+79: longInt = int2$1#
+80: goto <MiddleCode>
+81: longDouble = int2$1#
+82: goto <MiddleCode>
+83: if minus != int2$0# goto <MiddleCode>
+84: goto <MiddleCode>
+85: check track map float stack
+86: startChars = g_outChars
+87: call header
+88: £temporary2255 = format + index
+89: £temporary2254 -> £temporary2255 = *£temporary2255
+90: £temporary2256 = &£temporary2254 -> £temporary2255
+91: parameter £temporary2256, offset 6
+92: parameter arg_list, offset 8
+93: parameter plus, offset 10
+94: parameter space, offset 12
+95: parameter grid, offset 14
+96: £temporary2257 = &width
+97: parameter £temporary2257, offset 16
+98: parameter precision, offset 18
+99: parameter shortInt, offset 20
+100: parameter longInt, offset 22
+101: parameter longDouble, offset 24
+102: parameter int2$1#, offset 26
+103: parameter int2$0#, offset 28
+104: call function noellipse-noellipse printArgument
+105: post call
+106: £temporary2258 = return_value
+107: arg_list = £temporary2258
+108: £temporary2259 = g_outChars - startChars
+109: field = £temporary2259
+110: £temporary2260 = field
+111: ++field
+112: if £temporary2260 < width goto <MiddleCode>
+113: goto <MiddleCode>
+114: check track map float stack
+115: call header
+116: parameter int1$32#, offset 6
+117: call function noellipse-noellipse printChar
+118: post call
+119: goto <MiddleCode>
+120: goto <MiddleCode>
+121: if zero != int2$0# goto <MiddleCode>
+122: goto <MiddleCode>
+123: check track map float stack
+124: startChars = g_outChars
+125: oldOutStatus = g_outStatus
+126: negative = int2$0#
+127: g_outStatus = int2$2#
+128: call header
+129: £temporary2264 = format + index
+130: £temporary2263 -> £temporary2264 = *£temporary2264
+131: £temporary2265 = &£temporary2263 -> £temporary2264
+132: parameter £temporary2265, offset 6
+133: parameter arg_list, offset 8
+134: parameter int2$0#, offset 10
+135: parameter int2$0#, offset 12
+136: parameter grid, offset 14
+137: £temporary2266 = &width
+138: parameter £temporary2266, offset 16
+139: parameter precision, offset 18
+140: parameter shortInt, offset 20
+141: parameter longInt, offset 22
+142: parameter longDouble, offset 24
+143: parameter int2$0#, offset 26
+144: £temporary2267 = &negative
+145: parameter £temporary2267, offset 28
+146: call function noellipse-noellipse printArgument
+147: post call
+148: g_outStatus = oldOutStatus
+149: £temporary2269 = g_outChars - startChars
+150: field = £temporary2269
+151: g_outChars = startChars
+152: if negative != int2$0# goto <MiddleCode>
+153: goto <MiddleCode>
+154: check track map float stack
+155: call header
+156: parameter int1$45#, offset 6
+157: call function noellipse-noellipse printChar
+158: post call
+159: ++field
+160: goto <MiddleCode>
+161: if plus != int2$0# goto <MiddleCode>
+162: goto <MiddleCode>
+163: check track map float stack
+164: call header
+165: parameter int1$43#, offset 6
+166: call function noellipse-noellipse printChar
+167: post call
+168: ++field
+169: goto <MiddleCode>
+170: if space != int2$0# goto <MiddleCode>
+171: goto <MiddleCode>
+172: check track map float stack
+173: call header
+174: parameter int1$32#, offset 6
+175: call function noellipse-noellipse printChar
+176: post call
+177: ++field
+178: goto <MiddleCode>
+179: goto <MiddleCode>
+180: goto <MiddleCode>
+181: £temporary2279 = field
+182: ++field
+183: if £temporary2279 < width goto <MiddleCode>
+184: goto <MiddleCode>
+185: check track map float stack
+186: call header
+187: parameter int1$48#, offset 6
+188: call function noellipse-noellipse printChar
+189: post call
+190: goto <MiddleCode>
+191: call header
+192: £temporary2283 = format + index
+193: £temporary2282 -> £temporary2283 = *£temporary2283
+194: £temporary2284 = &£temporary2282 -> £temporary2283
+195: parameter £temporary2284, offset 6
+196: parameter arg_list, offset 8
+197: parameter int2$0#, offset 10
+198: parameter int2$0#, offset 12
+199: parameter grid, offset 14
+200: parameter int2$0#, offset 16
+201: parameter precision, offset 18
+202: parameter shortInt, offset 20
+203: parameter longInt, offset 22
+204: parameter longDouble, offset 24
+205: parameter int2$0#, offset 26
+206: parameter int2$0#, offset 28
+207: call function noellipse-noellipse printArgument
+208: post call
+209: £temporary2285 = return_value
+210: arg_list = £temporary2285
+211: goto <MiddleCode>
+212: startChars = g_outChars
+213: oldOutStatus = g_outStatus
+214: g_outStatus = int2$2#
+215: call header
+216: £temporary2287 = format + index
+217: £temporary2286 -> £temporary2287 = *£temporary2287
+218: £temporary2288 = &£temporary2286 -> £temporary2287
+219: parameter £temporary2288, offset 6
+220: parameter arg_list, offset 8
+221: parameter plus, offset 10
+222: parameter space, offset 12
+223: parameter grid, offset 14
+224: £temporary2289 = &width
+225: parameter £temporary2289, offset 16
+226: parameter precision, offset 18
+227: parameter shortInt, offset 20
+228: parameter longInt, offset 22
+229: parameter longDouble, offset 24
+230: parameter int2$1#, offset 26
+231: parameter int2$0#, offset 28
+232: call function noellipse-noellipse printArgument
+233: post call
+234: g_outStatus = oldOutStatus
+235: £temporary2291 = g_outChars - startChars
+236: field = £temporary2291
+237: g_outChars = startChars
+238: £temporary2292 = field
+239: ++field
+240: if £temporary2292 < width goto <MiddleCode>
+241: goto <MiddleCode>
+242: check track map float stack
+243: call header
+244: parameter int1$32#, offset 6
+245: call function noellipse-noellipse printChar
+246: post call
+247: goto <MiddleCode>
+248: call header
+249: £temporary2296 = format + index
+250: £temporary2295 -> £temporary2296 = *£temporary2296
+251: £temporary2297 = &£temporary2295 -> £temporary2296
+252: parameter £temporary2297, offset 6
+253: parameter arg_list, offset 8
+254: parameter plus, offset 10
+255: parameter space, offset 12
+256: parameter grid, offset 14
+257: parameter int2$0#, offset 16
+258: parameter precision, offset 18
+259: parameter shortInt, offset 20
+260: parameter longInt, offset 22
+261: parameter longDouble, offset 24
+262: parameter int2$1#, offset 26
+263: parameter int2$0#, offset 28
+264: call function noellipse-noellipse printArgument
+265: post call
+266: £temporary2298 = return_value
+267: arg_list = £temporary2298
+268: goto <MiddleCode>
+269: goto <MiddleCode>
+270: percent = int2$0#
+271: goto <MiddleCode>
+272: value = int2$0#
+273: call header
+274: £temporary2301 = int_to_int c (Signed_Char -> Signed_Int)
+275: parameter £temporary2301, offset 6
+276: call function noellipse-noellipse isdigit
+277: post call
+278: £temporary2302 = return_value
+279: if £temporary2302 != int2$0# goto <MiddleCode>
+280: goto <MiddleCode>
+281: check track map float stack
+282: £temporary2303 = int2$10# * value
+283: £temporary2304 = c - int1$48#
+284: £temporary2305 = int_to_int £temporary2304 (Signed_Char -> Signed_Int)
+285: £temporary2306 = £temporary2303 + £temporary2305
+286: value = £temporary2306
+287: ++index
+288: £temporary2307 = index
+289: £temporary2309 = format + £temporary2307
+290: £temporary2308 -> £temporary2309 = *£temporary2309
+291: c = £temporary2308 -> £temporary2309
+292: goto <MiddleCode>
+293: --index
+294: if period != int2$0# goto <MiddleCode>
+295: goto <MiddleCode>
+296: check track map float stack
+297: width = value
+298: goto <MiddleCode>
+299: precision = value
+300: goto <MiddleCode>
+301: goto <MiddleCode>
+302: goto <MiddleCode>
+303: if c == int1$37# goto <MiddleCode>
+304: goto <MiddleCode>
+305: check track map float stack
+306: percent = int2$1#
+307: plus = int2$0#
+308: minus = int2$0#
+309: space = int2$0#
+310: zero = int2$0#
+311: grid = int2$0#
+312: widthStar = int2$0#
+313: period = int2$0#
+314: precisionStar = int2$0#
+315: shortInt = int2$0#
+316: longInt = int2$0#
+317: longDouble = int2$0#
+318: width = int2$0#
+319: precision = int2$0#
+320: goto <MiddleCode>
+321: call header
+322: parameter c, offset 6
+323: call function noellipse-noellipse printChar
+324: post call
+325: goto <MiddleCode>
+326: goto <MiddleCode>
+327: empty
+328: ++index
+329: goto <MiddleCode>
+330: if g_outStatus == int2$1# goto <MiddleCode>
+331: goto <MiddleCode>
+332: check track map float stack
+333: £temporary2318 = int_to_int g_outDevice (Pointer -> Pointer)
+334: outString = £temporary2318
+335: £temporary2320 = outString + g_outChars
+336: £temporary2319 -> £temporary2320 = *£temporary2320
+337: £temporary2319 -> £temporary2320 = int1$0#
+338: goto <MiddleCode>
+339: return_value = g_outChars
+340: return
+341: empty
+342: return
+343: function end printFormat

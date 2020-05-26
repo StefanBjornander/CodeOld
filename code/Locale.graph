@@ -1,0 +1,38 @@
+setlocale
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a306 a306 g_currStructPtr 6 9,t307 t307 £temporary462 9)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a306 a306 g_currStructPtr si 6 9,t307 t307 £temporary462 ax 9)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a315 a315 sArray 52 53 58,t316 t316 £temporary466.name$0 58 59)
+  (a315 a315 sArray 52 53 58,t314 t314 £temporary467 ax 49 53)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a315 a315 sArray si 52 53 58,t316 t316 £temporary466.name$0 ax 58 59)
+  (a315 a315 sArray si 52 53 58,t314 t314 £temporary467 ax 49 53)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a323 a323 sArray 89 90 97,t322 t322 £temporary472 ax 86 90)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a315 a315 sArray si 52 53 58,t316 t316 £temporary466.name$0 ax 58 59)
+  (a315 a315 sArray si 52 53 58,t314 t314 £temporary467 ax 49 53)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a323 a323 sArray si 89 90 97,t322 t322 £temporary472 ax 86 90)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+localeconv
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a326 a326 g_currStructPtr 6 9,t327 t327 £temporary482 bx 9)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a326 a326 g_currStructPtr si 6 9,t327 t327 £temporary482 bx 9)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
