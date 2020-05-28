@@ -1219,19 +1219,19 @@ string_You20wrote20the20string202225s222E0A#:
 	; init String
 	db "You wrote the string ", 34, "%s", 34, ".", 10, 0
 
-@69$ZERO:
+@378$ZERO:
 	; init Signed_Int
 	dd 0
 
-@70$ONE:
+@379$ONE:
 	; init Signed_Int
 	dd 1
 
-@73$TWO:
+@382$TWO:
 	; init Signed_Int
 	dd 2
 
-@74$THREE:
+@383$THREE:
 	; init Signed_Int
 	dd 3
 

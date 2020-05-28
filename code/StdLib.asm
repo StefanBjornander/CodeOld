@@ -716,7 +716,7 @@ bsearch$64:	; return
 bsearch$65:	; function end bsearch
 
 rand:	; £temporary2637 = g_randValue * int8$1664525#
-	mov rax, [@648$g_randValue]
+	mov rax, [@3822$g_randValue]
 	xor rdx, rdx
 	imul qword [int8$1664525#]
 
@@ -728,10 +728,10 @@ rand$2:	; £temporary2639 = £temporary2638 % int8$127#
 	idiv qword [int8$127#]
 
 rand$3:	; g_randValue = £temporary2639
-	mov [@648$g_randValue], rdx
+	mov [@3822$g_randValue], rdx
 
 rand$4:	; £temporary2640 = int_to_int g_randValue (Signed_Long_Int -> Signed_Int)
-	mov rbx, [@648$g_randValue]
+	mov rbx, [@3822$g_randValue]
 	cmp rbx, 0
 	jge rand$5
 	neg rbx
@@ -753,7 +753,7 @@ srand:	; £temporary2641 = int_to_int seed (Unsigned_Int -> Signed_Long_Int)
 	and rax, rbx
 
 srand$1:	; g_randValue = £temporary2641
-	mov [@648$g_randValue], rax
+	mov [@3822$g_randValue], rax
 
 srand$2:	; return
 	mov rax, [rbp]
@@ -1549,7 +1549,7 @@ int4$2#:
 	; init Signed_Int
 	dd 2
 
-@648$g_randValue:
+@3822$g_randValue:
 	times 8 db 0
 
 int8$1664525#:

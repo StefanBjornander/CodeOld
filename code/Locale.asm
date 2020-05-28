@@ -8,11 +8,11 @@ section .text
 setlocale:	; empty
 
 setlocale$1:	; if g_currStructPtr == int8$0# goto 5
-	cmp qword [@231$g_currStructPtr], 0
+	cmp qword [@1403$g_currStructPtr], 0
 	je setlocale$5
 
 setlocale$2:	; £temporary462 -> g_currStructPtr = *g_currStructPtr
-	mov rsi, [@231$g_currStructPtr]
+	mov rsi, [@1403$g_currStructPtr]
 
 setlocale$3:	; £temporary463 = £temporary462 -> g_currStructPtr
 	mov rax, [rsi]
@@ -27,7 +27,7 @@ setlocale$6:	; oldName = £temporary463
 	mov [rbp + 40], rax
 
 setlocale$7:	; g_currStructPtr = int8$0#
-	mov qword [@231$g_currStructPtr], 0
+	mov qword [@1403$g_currStructPtr], 0
 
 setlocale$8:	; if newName == int8$0# goto 31
 	cmp qword [rbp + 28], 0
@@ -38,7 +38,7 @@ setlocale$9:	; index = int4$0#
 
 setlocale$10:	; if index >= sSize goto 31
 	mov eax, [rbp + 36]
-	cmp eax, [@230$sSize]
+	cmp eax, [@1402$sSize]
 	jge setlocale$31
 
 setlocale$11:	; call header integral zero 0 stack zero 0
@@ -57,7 +57,7 @@ setlocale$14:	; £temporary469 = £temporary467 * Array_#
 	mul qword [Array_#]
 
 setlocale$15:	; £temporary470 = sArray + £temporary469
-	mov rsi, @229$sArray
+	mov rsi, @1401$sArray
 	add rsi, rax
 
 setlocale$16:	; £temporary468 -> £temporary470 = *£temporary470
@@ -90,7 +90,7 @@ setlocale$23:	; £temporary475 = £temporary473 * Array_#
 	mul qword [Array_#]
 
 setlocale$24:	; £temporary476 = sArray + £temporary475
-	mov rsi, @229$sArray
+	mov rsi, @1401$sArray
 	add rsi, rax
 
 setlocale$25:	; £temporary474 -> £temporary476 = *£temporary476
@@ -98,7 +98,7 @@ setlocale$25:	; £temporary474 -> £temporary476 = *£temporary476
 setlocale$26:	; £temporary477 = &£temporary474 -> £temporary476
 
 setlocale$27:	; g_currStructPtr = £temporary477
-	mov [@231$g_currStructPtr], rsi
+	mov [@1403$g_currStructPtr], rsi
 
 setlocale$28:	; goto 31
 	jmp setlocale$31
@@ -121,11 +121,11 @@ setlocale$32:	; return
 setlocale$33:	; function end setlocale
 
 localeconv:	; if g_currStructPtr == int8$0# goto 4
-	cmp qword [@231$g_currStructPtr], 0
+	cmp qword [@1403$g_currStructPtr], 0
 	je localeconv$4
 
 localeconv$1:	; £temporary481 -> g_currStructPtr = *g_currStructPtr, offset 8
-	mov rsi, [@231$g_currStructPtr]
+	mov rsi, [@1403$g_currStructPtr]
 
 localeconv$2:	; £temporary482 = £temporary481 -> g_currStructPtr
 	mov rbx, [rsi + 8]
@@ -171,7 +171,7 @@ string_Fri#:
 string_Sat#:
 	db "Sat", 0
 
-@216$enShortDayList:
+@1366$enShortDayList:
 	dq string_Sun#
 	dq string_Mon#
 	dq string_Tue#
@@ -201,7 +201,7 @@ string_Friday#:
 string_Saturday#:
 	db "Saturday", 0
 
-@217$enLongDayList:
+@1367$enLongDayList:
 	dq string_Sunday#
 	dq string_Monday#
 	dq string_Tuesday#
@@ -246,7 +246,7 @@ string_Nov#:
 string_Dec#:
 	db "Dec", 0
 
-@218$enShortMonthList:
+@1368$enShortMonthList:
 	dq string_Jan#
 	dq string_Feb#
 	dq string_Mar#
@@ -293,7 +293,7 @@ string_November#:
 string_December#:
 	db "December", 0
 
-@219$enLongMonthList:
+@1369$enLongMonthList:
 	dq string_January#
 	dq string_February#
 	dq string_March#
@@ -394,13 +394,13 @@ string_abcdefghijklmnopqrstuvwxyz#:
 string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#:
 	db "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 0
 
-@220$en_US_utf8:
+@1392$en_US_utf8:
 	dd -5
 	dd -4
-	dq @216$enShortDayList
-	dq @217$enLongDayList
-	dq @218$enShortMonthList
-	dq @219$enLongMonthList
+	dq @1366$enShortDayList
+	dq @1367$enLongDayList
+	dq @1368$enShortMonthList
+	dq @1369$enLongMonthList
 	dq string_abcdefghijklmnopqrstuvwxyz#
 	dq string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#
 	dq enMessageList
@@ -426,7 +426,7 @@ string_Fre#:
 string_Lor#:
 	db "Lor", 0
 
-@221$swShortDayList:
+@1393$swShortDayList:
 	dq string_Son#
 	dq string_Man#
 	dq string_Tis#
@@ -456,7 +456,7 @@ string_Fredag#:
 string_Lordag#:
 	db "Lordag", 0
 
-@222$swLongDayList:
+@1394$swLongDayList:
 	dq string_Sondag#
 	dq string_Mandag#
 	dq string_Tisdag#
@@ -471,7 +471,7 @@ string_Maj#:
 string_Okt#:
 	db "Okt", 0
 
-@223$swShortMonthList:
+@1395$swShortMonthList:
 	dq string_Jan#
 	dq string_Feb#
 	dq string_Mar#
@@ -506,7 +506,7 @@ string_Augusit#:
 string_Oktober#:
 	db "Oktober", 0
 
-@224$swLongMonthList:
+@1396$swLongMonthList:
 	dq string_Januari#
 	dq string_Februari#
 	dq string_Mars#
@@ -577,7 +577,7 @@ string_fel20vid20borttagning20av20fil#:
 string_fel20vid20namnbyte20av20fil#:
 	db "fel vid namnbyte av fil", 0
 
-@225$swMessageList:
+@1397$swMessageList:
 	dq string_inga20fel#
 	dq string_felaktigt20functionsnummer#
 	dq string_hittar20ej20filen#
@@ -598,16 +598,16 @@ string_fel20vid20namnbyte20av20fil#:
 	dq string_fel20vid20borttagning20av20fil#
 	dq string_fel20vid20namnbyte20av20fil#
 
-@226$sw_EN_utf8:
+@1398$sw_EN_utf8:
 	dd 1
 	dd 2
-	dq @221$swShortDayList
-	dq @222$swLongDayList
-	dq @218$enShortMonthList
-	dq @224$swLongMonthList
+	dq @1393$swShortDayList
+	dq @1394$swLongDayList
+	dq @1368$enShortMonthList
+	dq @1396$swLongMonthList
 	dq string_abcdefghijklmnopqrstuvwxyz#
 	dq string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#
-	dq @225$swMessageList
+	dq @1397$swMessageList
 
 string_#:
 	db 0
@@ -621,21 +621,21 @@ string_US#:
 string_SE#:
 	db "SE", 0
 
-@229$sArray:
+@1401$sArray:
 	dq string_#
-	dq @226$sw_EN_utf8
+	dq @1398$sw_EN_utf8
 	dq string_C#
-	dq @220$en_US_utf8
+	dq @1392$en_US_utf8
 	dq string_US#
-	dq @220$en_US_utf8
+	dq @1392$en_US_utf8
 	dq string_SE#
-	dq @226$sw_EN_utf8
+	dq @1398$sw_EN_utf8
 
-@230$sSize:
+@1402$sSize:
 	dd 1
 
-@231$g_currStructPtr:
-	dq @229$sArray
+@1403$g_currStructPtr:
+	dq @1401$sArray
 
 Array_#:
 	; init Array

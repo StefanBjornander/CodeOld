@@ -244,7 +244,7 @@ gmtime$7:	; £temporary2817 = int_to_int £temporary2816 (Signed_Long_Int -> Sig
 	neg eax
 
 gmtime$8:	; g_timeStruct$tm_hour = £temporary2817
-	mov [@722$g_timeStruct + 8], eax
+	mov [@4191$g_timeStruct + 8], eax
 
 gmtime$9:	; £temporary2819 = secondsOfDay % int8$3600#
 	mov rax, [rbp + 44]
@@ -263,7 +263,7 @@ gmtime$11:	; £temporary2821 = int_to_int £temporary2820 (Signed_Long_Int -> Si
 	neg eax
 
 gmtime$12:	; g_timeStruct$tm_min = £temporary2821
-	mov [@722$g_timeStruct + 4], eax
+	mov [@4191$g_timeStruct + 4], eax
 
 gmtime$13:	; £temporary2823 = secondsOfDay % int8$3600#
 	mov rax, [rbp + 44]
@@ -282,7 +282,7 @@ gmtime$15:	; £temporary2825 = int_to_int £temporary2824 (Signed_Long_Int -> Si
 	neg edx
 
 gmtime$16:	; g_timeStruct$tm_sec = £temporary2825
-	mov [@722$g_timeStruct], edx
+	mov [@4191$g_timeStruct], edx
 
 gmtime$17:	; £temporary2826 = time / int8$86400#
 	mov rax, [rbp + 36]
@@ -307,7 +307,7 @@ gmtime$21:	; £temporary2830 = int_to_int £temporary2829 (Signed_Long_Int -> Si
 	neg eax
 
 gmtime$22:	; g_timeStruct$tm_wday = £temporary2830
-	mov [@722$g_timeStruct + 24], eax
+	mov [@4191$g_timeStruct + 24], eax
 
 gmtime$23:	; goto 28
 	jmp gmtime$28
@@ -327,7 +327,7 @@ gmtime$26:	; £temporary2834 = int_to_int £temporary2833 (Signed_Long_Int -> Si
 	neg edx
 
 gmtime$27:	; g_timeStruct$tm_wday = £temporary2834
-	mov [@722$g_timeStruct + 24], edx
+	mov [@4191$g_timeStruct + 24], edx
 
 gmtime$28:	; £temporary2835 = year % int4$4#
 	mov eax, [rbp + 32]
@@ -402,7 +402,7 @@ gmtime$45:	; £temporary2849 = year - int4$1900#
 	sub eax, 1900
 
 gmtime$46:	; g_timeStruct$tm_year = £temporary2849
-	mov [@722$g_timeStruct + 20], eax
+	mov [@4191$g_timeStruct + 20], eax
 
 gmtime$47:	; £temporary2851 = int_to_int totalDays (Signed_Long_Int -> Signed_Int)
 	mov rax, [rbp + 52]
@@ -412,7 +412,7 @@ gmtime$47:	; £temporary2851 = int_to_int totalDays (Signed_Long_Int -> Signed_I
 	neg eax
 
 gmtime$48:	; g_timeStruct$tm_yday = £temporary2851
-	mov [@722$g_timeStruct + 28], eax
+	mov [@4191$g_timeStruct + 28], eax
 
 gmtime$49:	; daysOfMonths[0] = int4$31#
 	mov dword [rbp + 68], 31
@@ -535,7 +535,7 @@ gmtime$80:	; goto 66
 
 gmtime$81:	; g_timeStruct$tm_mon = month
 	mov eax, [rbp + 116]
-	mov [@722$g_timeStruct + 16], eax
+	mov [@4191$g_timeStruct + 16], eax
 
 gmtime$82:	; £temporary2881 = totalDays + int8$1#
 	mov rax, [rbp + 52]
@@ -548,13 +548,13 @@ gmtime$83:	; £temporary2882 = int_to_int £temporary2881 (Signed_Long_Int -> Si
 	neg eax
 
 gmtime$84:	; g_timeStruct$tm_mday = £temporary2882
-	mov [@722$g_timeStruct + 12], eax
+	mov [@4191$g_timeStruct + 12], eax
 
 gmtime$85:	; g_timeStruct$tm_isdst = int4$minus1#
-	mov dword [@722$g_timeStruct + 32], -1
+	mov dword [@4191$g_timeStruct + 32], -1
 
-gmtime$86:	; return_value = staticaddress$@722$g_timeStruct$0#
-	mov rbx, @722$g_timeStruct
+gmtime$86:	; return_value = staticaddress$@4191$g_timeStruct$0#
+	mov rbx, @4191$g_timeStruct
 
 gmtime$87:	; return
 	mov rax, [rbp]
@@ -675,7 +675,7 @@ asctime$15:	; goto 17
 	jmp asctime$17
 
 asctime$16:	; £temporary2897 = g_defaultShortDayList
-	mov rax, @732$g_defaultShortDayList
+	mov rax, @4204$g_defaultShortDayList
 
 asctime$17:	; shortDayList = £temporary2897
 	mov [rbp + 40], rax
@@ -691,7 +691,7 @@ asctime$20:	; goto 22
 	jmp asctime$22
 
 asctime$21:	; £temporary2899 = g_defaultShortMonthList
-	mov rax, @734$g_defaultShortMonthList
+	mov rax, @4206$g_defaultShortMonthList
 
 asctime$22:	; shortMonthList = £temporary2899
 	mov [rbp + 48], rax
@@ -699,7 +699,7 @@ asctime$22:	; shortMonthList = £temporary2899
 asctime$23:	; call header integral zero 0 stack zero 0
 
 asctime$24:	; parameter g_timeString, offset 80
-	mov qword [rbp + 80], @731$g_timeString
+	mov qword [rbp + 80], @4203$g_timeString
 
 asctime$25:	; parameter string_25s2025s20252i202502i3A2502i3A2502i202504i#, offset 88
 	mov qword [rbp + 88], string_25s2025s20252i202502i3A2502i3A2502i202504i#
@@ -797,7 +797,7 @@ asctime$49:	; call function noellipse-ellipse sprintf, extra 36
 asctime$50:	; post call
 
 asctime$51:	; return_value = g_timeString
-	mov rbx, @731$g_timeString
+	mov rbx, @4203$g_timeString
 
 asctime$52:	; return
 	mov rax, [rbp]
@@ -1081,7 +1081,7 @@ strftime$36:	; goto 38
 	jmp strftime$38
 
 strftime$37:	; £temporary2962 = g_defaultShortDayList
-	mov rax, @732$g_defaultShortDayList
+	mov rax, @4204$g_defaultShortDayList
 
 strftime$38:	; shortDayList = £temporary2962
 	mov [rbp + 60], rax
@@ -1097,7 +1097,7 @@ strftime$41:	; goto 43
 	jmp strftime$43
 
 strftime$42:	; £temporary2964 = g_defaultLongDayList
-	mov rax, @733$g_defaultLongDayList
+	mov rax, @4205$g_defaultLongDayList
 
 strftime$43:	; longDayList = £temporary2964
 	mov [rbp + 76], rax
@@ -1113,7 +1113,7 @@ strftime$46:	; goto 48
 	jmp strftime$48
 
 strftime$47:	; £temporary2966 = g_defaultShortMonthList
-	mov rax, @734$g_defaultShortMonthList
+	mov rax, @4206$g_defaultShortMonthList
 
 strftime$48:	; shortMonthList = £temporary2966
 	mov [rbp + 68], rax
@@ -1129,7 +1129,7 @@ strftime$51:	; goto 53
 	jmp strftime$53
 
 strftime$52:	; £temporary2968 = g_defaultLongMonthList
-	mov rax, @735$g_defaultLongMonthList
+	mov rax, @4207$g_defaultLongMonthList
 
 strftime$53:	; longMonthList = £temporary2968
 	mov [rbp + 84], rax
@@ -2354,7 +2354,7 @@ int8$60#:
 	; init Signed_Long_Int
 	dq 60
 
-@722$g_timeStruct:
+@4191$g_timeStruct:
 	times 36 db 0
 
 int8$7#:
@@ -2373,7 +2373,7 @@ Array_#:
 	; init Array
 	dq 4
 
-@731$g_timeString:
+@4203$g_timeString:
 	times 256 db 0
 
 string_Sun#:
@@ -2397,7 +2397,7 @@ string_Fri#:
 string_Sat#:
 	db "Sat", 0
 
-@732$g_defaultShortDayList:
+@4204$g_defaultShortDayList:
 	dq string_Sun#
 	dq string_Mon#
 	dq string_Tue#
@@ -2427,7 +2427,7 @@ string_Friday#:
 string_Saturday#:
 	db "Saturday", 0
 
-@733$g_defaultLongDayList:
+@4205$g_defaultLongDayList:
 	dq string_Sunday#
 	dq string_Monday#
 	dq string_Tuesday#
@@ -2472,7 +2472,7 @@ string_Nov#:
 string_Dec#:
 	db "Dec", 0
 
-@734$g_defaultShortMonthList:
+@4206$g_defaultShortMonthList:
 	dq string_Jan#
 	dq string_Feb#
 	dq string_Mar#
@@ -2519,7 +2519,7 @@ string_November#:
 string_December#:
 	db "December", 0
 
-@735$g_defaultLongMonthList:
+@4207$g_defaultLongMonthList:
 	dq string_January#
 	dq string_February#
 	dq string_March#

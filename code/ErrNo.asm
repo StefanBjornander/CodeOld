@@ -1,25 +1,3 @@
-	global NO_ERROR
-	global NO_FUNCTION
-	global NO_FILE
-	global NO_PATH
-	global NO_HANDLE
-	global NO_ACCESS
-	global EDOM
-	global ERANGE
-	global EILSEQ
-	global FOPEN
-	global FFLUSH
-	global FCLOSE
-	global NO_MODE
-	global FWRITE
-	global FREAD
-	global FSEEK
-	global FTELL
-	global FSIZE
-	global FREMOVE
-	global FRENAME
-	global FTEMPNAME
-	global FTEMPFILE
 	global errno
 
 section .text
@@ -28,70 +6,70 @@ section .data
 $IntegralStorage#:
 	times 8 db 0
 
-NO_ERROR:
+@1041$NO_ERROR:
 	dd 0
 
-NO_FUNCTION:
+@1042$NO_FUNCTION:
 	dd 1
 
-NO_FILE:
+@1043$NO_FILE:
 	dd 2
 
-NO_PATH:
+@1044$NO_PATH:
 	dd 3
 
-NO_HANDLE:
+@1045$NO_HANDLE:
 	dd 4
 
-NO_ACCESS:
+@1046$NO_ACCESS:
 	dd 5
 
-EDOM:
+@1047$EDOM:
 	dd 6
 
-ERANGE:
+@1048$ERANGE:
 	dd 7
 
-EILSEQ:
+@1049$EILSEQ:
 	dd 8
 
-FOPEN:
+@1050$FOPEN:
 	dd 9
 
-FFLUSH:
+@1051$FFLUSH:
 	dd 10
 
-FCLOSE:
+@1052$FCLOSE:
 	dd 11
 
-NO_MODE:
+@1053$NO_MODE:
 	dd 12
 
-FWRITE:
+@1054$FWRITE:
 	dd 13
 
-FREAD:
+@1055$FREAD:
 	dd 14
 
-FSEEK:
+@1056$FSEEK:
 	dd 15
 
-FTELL:
+@1057$FTELL:
 	dd 16
 
-FSIZE:
+@1058$FSIZE:
 	dd 17
 
-FREMOVE:
+@1059$FREMOVE:
 	dd 18
 
-FRENAME:
+@1060$FRENAME:
 	dd 19
 
-FTEMPNAME:
+@1061$FTEMPNAME:
 	dd 20
 
-FTEMPFILE:
+@1062$FTEMPFILE:
 	dd 21
 errno:
 	dd 0

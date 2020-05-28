@@ -2,15 +2,6 @@
 	global stdin
 	global stdout
 	global stderr
-	global EEXIST
-	global ENOENT
-	global EACCES
-	global SEEK_SET
-	global SEEK_CUR
-	global SEEK_END
-	global READ
-	global WRITE
-	global READ_WRITE
 	global fileexists
 	global fopen
 	global freopen
@@ -49,30 +40,30 @@
 	extern printf
 section .text
 
-@390$filecreate:	; rax = int8$85#
+@2463$filecreate:	; rax = int8$85#
 	mov rax, 85
 
-@390$filecreate$1:	; £temporary924 = int_to_int name (Pointer -> Unsigned_Long_Int)
+@2463$filecreate$1:	; £temporary924 = int_to_int name (Pointer -> Unsigned_Long_Int)
 	mov rdi, [rbp + 24]
 
-@390$filecreate$2:	; rdi = £temporary924
+@2463$filecreate$2:	; rdi = £temporary924
 
-@390$filecreate$3:	; rsi = int8$511#
+@2463$filecreate$3:	; rsi = int8$511#
 	mov rsi, 511
 
-@390$filecreate$4:	; syscall
+@2463$filecreate$4:	; syscall
 	syscall 
 
-@390$filecreate$5:	; return_value = int4$0#
+@2463$filecreate$5:	; return_value = int4$0#
 	mov ebx, 0
 
-@390$filecreate$6:	; return
+@2463$filecreate$6:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-@390$filecreate$7:	; function end filecreate
+@2463$filecreate$7:	; function end filecreate
 
 fileexists:	; return_value = int4$1#
 	mov ebx, 1
@@ -85,38 +76,38 @@ fileexists$1:	; return
 
 fileexists$2:	; function end fileexists
 
-@391$fileopen:	; rax = int8$2#
+@2467$fileopen:	; rax = int8$2#
 	mov rax, 2
 
-@391$fileopen$1:	; £temporary928 = int_to_int name (Pointer -> Unsigned_Long_Int)
+@2467$fileopen$1:	; £temporary928 = int_to_int name (Pointer -> Unsigned_Long_Int)
 	mov rdi, [rbp + 24]
 
-@391$fileopen$2:	; rdi = £temporary928
+@2467$fileopen$2:	; rdi = £temporary928
 
-@391$fileopen$3:	; £temporary930 = int_to_int mode (Unsigned_Short_Int -> Unsigned_Long_Int)
+@2467$fileopen$3:	; £temporary930 = int_to_int mode (Unsigned_Short_Int -> Unsigned_Long_Int)
 	mov si, [rbp + 32]
 	mov rbx, 65535
 	and rsi, rbx
 
-@391$fileopen$4:	; rsi = £temporary930
+@2467$fileopen$4:	; rsi = £temporary930
 
-@391$fileopen$5:	; syscall
+@2467$fileopen$5:	; syscall
 	syscall 
 
-@391$fileopen$6:	; £temporary931 = rax
+@2467$fileopen$6:	; £temporary931 = rax
 
-@391$fileopen$7:	; £temporary932 = int_to_int £temporary931 (Unsigned_Long_Int -> Signed_Int)
+@2467$fileopen$7:	; £temporary932 = int_to_int £temporary931 (Unsigned_Long_Int -> Signed_Int)
 
-@391$fileopen$8:	; return_value = £temporary932
+@2467$fileopen$8:	; return_value = £temporary932
 	mov ebx, eax
 
-@391$fileopen$9:	; return
+@2467$fileopen$9:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-@391$fileopen$10:	; function end fileopen
+@2467$fileopen$10:	; function end fileopen
 
 fopen:	; empty
 
@@ -250,7 +241,7 @@ freopen$11:	; call function noellipse-noellipse fileopen
 	mov qword [rbp + 52], freopen$12
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @391$fileopen
+	jmp @2467$fileopen
 
 freopen$12:	; post call
 
@@ -295,7 +286,7 @@ freopen$25:	; call function noellipse-noellipse filecreate
 	mov qword [rbp + 52], freopen$26
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @390$filecreate
+	jmp @2463$filecreate
 
 freopen$26:	; post call
 
@@ -343,7 +334,7 @@ freopen$40:	; call function noellipse-noellipse fileopen
 	mov qword [rbp + 52], freopen$41
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @391$fileopen
+	jmp @2467$fileopen
 
 freopen$41:	; post call
 
@@ -389,7 +380,7 @@ freopen$54:	; call function noellipse-noellipse filecreate
 	mov qword [rbp + 52], freopen$55
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @390$filecreate
+	jmp @2463$filecreate
 
 freopen$55:	; post call
 
@@ -437,7 +428,7 @@ freopen$69:	; call function noellipse-noellipse fileopen
 	mov qword [rbp + 52], freopen$70
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @391$fileopen
+	jmp @2467$fileopen
 
 freopen$70:	; post call
 
@@ -505,7 +496,7 @@ freopen$90:	; call function noellipse-noellipse fileopen
 	mov qword [rbp + 52], freopen$91
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @391$fileopen
+	jmp @2467$fileopen
 
 freopen$91:	; post call
 
@@ -527,7 +518,7 @@ freopen$97:	; call function noellipse-noellipse filecreate
 	mov qword [rbp + 52], freopen$98
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @390$filecreate
+	jmp @2463$filecreate
 
 freopen$98:	; post call
 
@@ -575,7 +566,7 @@ freopen$112:	; call function noellipse-noellipse fileopen
 	mov qword [rbp + 52], freopen$113
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @391$fileopen
+	jmp @2467$fileopen
 
 freopen$113:	; post call
 
@@ -621,7 +612,7 @@ freopen$126:	; call function noellipse-noellipse filecreate
 	mov qword [rbp + 52], freopen$127
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @390$filecreate
+	jmp @2463$filecreate
 
 freopen$127:	; post call
 
@@ -1931,31 +1922,31 @@ stdout:
 stderr:
 	dq g_fileArray + 82
 
-EEXIST:
+@2453$EEXIST:
 	dd 0
 
-ENOENT:
+@2454$ENOENT:
 	dd 1
 
-EACCES:
+@2455$EACCES:
 	dd 2
 
-SEEK_SET:
+@2456$SEEK_SET:
 	dd 0
 
-SEEK_CUR:
+@2457$SEEK_CUR:
 	dd 1
 
-SEEK_END:
+@2458$SEEK_END:
 	dd 2
 
-READ:
+@2459$READ:
 	dd 64
 
-WRITE:
+@2460$WRITE:
 	dd 65
 
-READ_WRITE:
+@2461$READ_WRITE:
 	dd 66
 
 Array_#:

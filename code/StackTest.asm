@@ -13,10 +13,10 @@ stack_test$2:	; parameter string_25i20#, offset 48
 	mov qword [rbp + 48], string_25i20#
 
 stack_test$3:	; £temporary5270 = i
-	mov eax, [@1136$i]
+	mov eax, [@7418$i]
 
 stack_test$4:	; ++i
-	inc dword [@1136$i]
+	inc dword [@7418$i]
 
 stack_test$5:	; parameter £temporary5270, offset 56
 	mov [rbp + 56], eax
@@ -117,7 +117,7 @@ section .data
 $IntegralStorage#:
 	times 8 db 0
 
-@1136$i:
+@7418$i:
 	; init Signed_Int
 	dd 0
 
