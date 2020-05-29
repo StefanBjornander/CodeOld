@@ -1571,6 +1571,7 @@ string_2020index2025u2C20address2025u2C20size2025u0A#:
 string_0A#:
 	; init String
 	db 10, 0
+
 g_funcArray:
 	dq 0
 	times 2040 db 0

@@ -927,6 +927,7 @@ section .data
 
 $IntegralStorage#:
 	times 8 db 0
+
 g_firstBlockPtr:
 	dq 0
 

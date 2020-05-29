@@ -71,5 +71,6 @@ $IntegralStorage#:
 
 @1062$FTEMPFILE:
 	dd 21
+
 errno:
 	dd 0

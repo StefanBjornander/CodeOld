@@ -1904,6 +1904,7 @@ section .data
 
 $IntegralStorage#:
 	times 8 db 0
+
 g_fileArray:
 	dd 1
 	dd 0
@@ -1915,10 +1916,13 @@ g_fileArray:
 	dd 2
 	times 33 db 0
 	times 697 db 0
+
 stdin:
 	dq g_fileArray
+
 stdout:
 	dq g_fileArray + 41
+
 stderr:
 	dq g_fileArray + 82
 

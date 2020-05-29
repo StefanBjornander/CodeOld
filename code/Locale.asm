@@ -366,6 +366,7 @@ string_error20while20removing20file#:
 
 string_error20while20renaming20file#:
 	db "error while renaming file", 0
+
 enMessageList:
 	dq string_no20error#
 	dq string_function20number20invalid#
