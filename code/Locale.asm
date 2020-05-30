@@ -47,12 +47,12 @@ setlocale$12:	; parameter newName, offset 72
 	mov rax, [rbp + 28]
 	mov [rbp + 72], rax
 
-setlocale$13:	; £temporary467 = int_to_int index (Signed_Int -> Array)
+setlocale$13:	; £temporary468 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-setlocale$14:	; £temporary469 = £temporary467 * Array_#
+setlocale$14:	; £temporary469 = £temporary468 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
@@ -60,9 +60,9 @@ setlocale$15:	; £temporary470 = sArray + £temporary469
 	mov rsi, @1401$sArray
 	add rsi, rax
 
-setlocale$16:	; £temporary468 -> £temporary470 = *£temporary470
+setlocale$16:	; £temporary467 -> £temporary470 = *£temporary470
 
-setlocale$17:	; parameter £temporary468.name$0 -> £temporary470, offset 80
+setlocale$17:	; parameter £temporary467.name$0 -> £temporary470, offset 80
 	mov rax, [rsi]
 	mov [rbp + 80], rax
 
@@ -80,12 +80,12 @@ setlocale$21:	; if £temporary471 != int4$0# goto 29
 	cmp ebx, 0
 	jne setlocale$29
 
-setlocale$22:	; £temporary473 = int_to_int index (Signed_Int -> Array)
+setlocale$22:	; £temporary474 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-setlocale$23:	; £temporary475 = £temporary473 * Array_#
+setlocale$23:	; £temporary475 = £temporary474 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
@@ -93,9 +93,9 @@ setlocale$24:	; £temporary476 = sArray + £temporary475
 	mov rsi, @1401$sArray
 	add rsi, rax
 
-setlocale$25:	; £temporary474 -> £temporary476 = *£temporary476
+setlocale$25:	; £temporary473 -> £temporary476 = *£temporary476
 
-setlocale$26:	; £temporary477 = &£temporary474 -> £temporary476
+setlocale$26:	; £temporary477 = &£temporary473 -> £temporary476
 
 setlocale$27:	; g_currStructPtr = £temporary477
 	mov [@1403$g_currStructPtr], rsi
@@ -124,7 +124,7 @@ localeconv:	; if g_currStructPtr == int8$0# goto 4
 	cmp qword [@1403$g_currStructPtr], 0
 	je localeconv$4
 
-localeconv$1:	; £temporary481 -> g_currStructPtr = *g_currStructPtr, offset 8
+localeconv$1:	; £temporary481 -> g_currStructPtr = *g_currStructPtr
 	mov rsi, [@1403$g_currStructPtr]
 
 localeconv$2:	; £temporary482 = £temporary481 -> g_currStructPtr

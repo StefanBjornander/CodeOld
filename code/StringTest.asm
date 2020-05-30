@@ -104,7 +104,7 @@ string_test$22:	; call function noellipse-noellipse strncpy
 
 string_test$23:	; post call
 
-string_test$24:	; £temporary3891 -> u = *u, offset 5
+string_test$24:	; £temporary3891 -> u = *u
 	mov rsi, rbp
 	add rsi, 136
 
@@ -194,18 +194,18 @@ string_test$49:	; £temporary3896 = i + int4$2#
 	mov eax, [rbp + 24]
 	add eax, 2
 
-string_test$50:	; £temporary3897 = int_to_int £temporary3896 (Signed_Int -> Array)
+string_test$50:	; £temporary3898 = int_to_int £temporary3896 (Signed_Int -> Array)
 	mov rbx, 4294967295
 	and rax, rbx
 
-string_test$51:	; £temporary3900 = u + £temporary3897
+string_test$51:	; £temporary3900 = u + £temporary3898
 	mov rsi, rbp
 	add rsi, 136
 	add rsi, rax
 
-string_test$52:	; £temporary3898 -> £temporary3900 = *£temporary3900
+string_test$52:	; £temporary3897 -> £temporary3900 = *£temporary3900
 
-string_test$53:	; £temporary3898 -> £temporary3900 = int1$0#
+string_test$53:	; £temporary3897 -> £temporary3900 = int1$0#
 	mov byte [rsi], 0
 
 string_test$54:	; call header integral zero 0 stack zero 0
@@ -602,7 +602,7 @@ string_test$171:	; call function noellipse-noellipse memset
 
 string_test$172:	; post call
 
-string_test$173:	; £temporary3937 -> u = *u, offset 21
+string_test$173:	; £temporary3937 -> u = *u
 	mov rsi, rbp
 	add rsi, 136
 

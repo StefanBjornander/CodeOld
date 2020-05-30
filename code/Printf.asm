@@ -185,7 +185,7 @@ printChar$7:	; stream = £temporary1849
 printChar$8:	; rax = int8$1#
 	mov rax, 1
 
-printChar$9:	; £temporary1852 -> stream = *stream, offset 4
+printChar$9:	; £temporary1852 -> stream = *stream
 	mov rsi, [rbp + 37]
 
 printChar$10:	; £temporary1853 = int_to_int £temporary1852 -> stream (Unsigned_Int -> Unsigned_Long_Int)
@@ -227,17 +227,17 @@ printChar$21:	; £temporary1860 = g_outChars
 printChar$22:	; ++g_outChars
 	inc dword [g_outChars]
 
-printChar$23:	; £temporary1861 = int_to_int £temporary1860 (Signed_Int -> Pointer)
+printChar$23:	; £temporary1862 = int_to_int £temporary1860 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
-printChar$24:	; £temporary1864 = outString + £temporary1861
+printChar$24:	; £temporary1864 = outString + £temporary1862
 	mov rsi, [rbp + 29]
 	add rsi, rax
 
-printChar$25:	; £temporary1862 -> £temporary1864 = *£temporary1864
+printChar$25:	; £temporary1861 -> £temporary1864 = *£temporary1864
 
-printChar$26:	; £temporary1862 -> £temporary1864 = c
+printChar$26:	; £temporary1861 -> £temporary1864 = c
 	mov al, [rbp + 24]
 	mov [rsi], al
 
@@ -266,35 +266,35 @@ printString$1:	; if precision != int4$0# goto 16
 printString$2:	; index = int4$0#
 	mov dword [rbp + 36], 0
 
-printString$3:	; £temporary1869 = int_to_int index (Signed_Int -> Pointer)
+printString$3:	; £temporary1870 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-printString$4:	; £temporary1872 = s + £temporary1869
+printString$4:	; £temporary1872 = s + £temporary1870
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-printString$5:	; £temporary1870 -> £temporary1872 = *£temporary1872
+printString$5:	; £temporary1869 -> £temporary1872 = *£temporary1872
 
-printString$6:	; if £temporary1870 -> £temporary1872 == int1$0# goto 57
+printString$6:	; if £temporary1869 -> £temporary1872 == int1$0# goto 57
 	cmp byte [rsi], 0
 	je printString$57
 
 printString$7:	; call header integral zero 0 stack zero 0
 
-printString$8:	; £temporary1875 = int_to_int index (Signed_Int -> Pointer)
+printString$8:	; £temporary1876 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-printString$9:	; £temporary1878 = s + £temporary1875
+printString$9:	; £temporary1878 = s + £temporary1876
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-printString$10:	; £temporary1876 -> £temporary1878 = *£temporary1878
+printString$10:	; £temporary1875 -> £temporary1878 = *£temporary1878
 
-printString$11:	; parameter £temporary1876 -> £temporary1878, offset 64
+printString$11:	; parameter £temporary1875 -> £temporary1878, offset 64
 	mov al, [rsi]
 	mov [rbp + 64], al
 
@@ -325,35 +325,35 @@ printString$19:	; if £temporary1880 <= int4$0# goto 57
 	cmp eax, 0
 	jle printString$57
 
-printString$20:	; £temporary1882 = int_to_int index (Signed_Int -> Pointer)
+printString$20:	; £temporary1883 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-printString$21:	; £temporary1885 = s + £temporary1882
+printString$21:	; £temporary1885 = s + £temporary1883
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-printString$22:	; £temporary1883 -> £temporary1885 = *£temporary1885
+printString$22:	; £temporary1882 -> £temporary1885 = *£temporary1885
 
-printString$23:	; if £temporary1883 -> £temporary1885 == int1$0# goto 57
+printString$23:	; if £temporary1882 -> £temporary1885 == int1$0# goto 57
 	cmp byte [rsi], 0
 	je printString$57
 
 printString$24:	; call header integral zero 0 stack zero 0
 
-printString$25:	; £temporary1889 = int_to_int index (Signed_Int -> Pointer)
+printString$25:	; £temporary1890 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-printString$26:	; £temporary1892 = s + £temporary1889
+printString$26:	; £temporary1892 = s + £temporary1890
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-printString$27:	; £temporary1890 -> £temporary1892 = *£temporary1892
+printString$27:	; £temporary1889 -> £temporary1892 = *£temporary1892
 
-printString$28:	; parameter £temporary1890 -> £temporary1892, offset 64
+printString$28:	; parameter £temporary1889 -> £temporary1892, offset 64
 	mov al, [rsi]
 	mov [rbp + 64], al
 
@@ -2892,33 +2892,33 @@ printFormat$14:	; g_outChars = int4$0#
 printFormat$15:	; index = int4$0#
 	mov dword [rbp + 40], 0
 
-printFormat$16:	; £temporary2320 = int_to_int index (Signed_Int -> Pointer)
+printFormat$16:	; £temporary2321 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
-printFormat$17:	; £temporary2323 = format + £temporary2320
+printFormat$17:	; £temporary2323 = format + £temporary2321
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-printFormat$18:	; £temporary2321 -> £temporary2323 = *£temporary2323
+printFormat$18:	; £temporary2320 -> £temporary2323 = *£temporary2323
 
-printFormat$19:	; if £temporary2321 -> £temporary2323 == int1$0# goto 297
+printFormat$19:	; if £temporary2320 -> £temporary2323 == int1$0# goto 297
 	cmp byte [rsi], 0
 	je printFormat$297
 
-printFormat$20:	; £temporary2326 = int_to_int index (Signed_Int -> Pointer)
+printFormat$20:	; £temporary2327 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
-printFormat$21:	; £temporary2329 = format + £temporary2326
+printFormat$21:	; £temporary2329 = format + £temporary2327
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-printFormat$22:	; £temporary2327 -> £temporary2329 = *£temporary2329
+printFormat$22:	; £temporary2326 -> £temporary2329 = *£temporary2329
 
-printFormat$23:	; c = £temporary2327 -> £temporary2329
+printFormat$23:	; c = £temporary2326 -> £temporary2329
 	mov al, [rsi]
 	mov [rbp + 100], al
 
@@ -3120,18 +3120,18 @@ printFormat$78:	; startChars = g_outChars
 
 printFormat$79:	; call header integral zero 0 stack zero 0
 
-printFormat$80:	; £temporary2332 = int_to_int index (Signed_Int -> Pointer)
+printFormat$80:	; £temporary2333 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
-printFormat$81:	; £temporary2335 = format + £temporary2332
+printFormat$81:	; £temporary2335 = format + £temporary2333
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-printFormat$82:	; £temporary2333 -> £temporary2335 = *£temporary2335
+printFormat$82:	; £temporary2332 -> £temporary2335 = *£temporary2335
 
-printFormat$83:	; £temporary2336 = &£temporary2333 -> £temporary2335
+printFormat$83:	; £temporary2336 = &£temporary2332 -> £temporary2335
 
 printFormat$84:	; parameter £temporary2336, offset 129
 	mov [rbp + 129], rsi
@@ -3248,18 +3248,18 @@ printFormat$115:	; g_outStatus = int4$2#
 
 printFormat$116:	; call header integral zero 0 stack zero 0
 
-printFormat$117:	; £temporary2343 = int_to_int index (Signed_Int -> Pointer)
+printFormat$117:	; £temporary2344 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
-printFormat$118:	; £temporary2346 = format + £temporary2343
+printFormat$118:	; £temporary2346 = format + £temporary2344
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-printFormat$119:	; £temporary2344 -> £temporary2346 = *£temporary2346
+printFormat$119:	; £temporary2343 -> £temporary2346 = *£temporary2346
 
-printFormat$120:	; £temporary2347 = &£temporary2344 -> £temporary2346
+printFormat$120:	; £temporary2347 = &£temporary2343 -> £temporary2346
 
 printFormat$121:	; parameter £temporary2347, offset 137
 	mov [rbp + 137], rsi
@@ -3428,18 +3428,18 @@ printFormat$168:	; goto 161
 
 printFormat$169:	; call header integral zero 0 stack zero 0
 
-printFormat$170:	; £temporary2364 = int_to_int index (Signed_Int -> Pointer)
+printFormat$170:	; £temporary2365 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
-printFormat$171:	; £temporary2367 = format + £temporary2364
+printFormat$171:	; £temporary2367 = format + £temporary2365
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-printFormat$172:	; £temporary2365 -> £temporary2367 = *£temporary2367
+printFormat$172:	; £temporary2364 -> £temporary2367 = *£temporary2367
 
-printFormat$173:	; £temporary2368 = &£temporary2365 -> £temporary2367
+printFormat$173:	; £temporary2368 = &£temporary2364 -> £temporary2367
 
 printFormat$174:	; parameter £temporary2368, offset 141
 	mov [rbp + 141], rsi
@@ -3514,18 +3514,18 @@ printFormat$193:	; g_outStatus = int4$2#
 
 printFormat$194:	; call header integral zero 0 stack zero 0
 
-printFormat$195:	; £temporary2370 = int_to_int index (Signed_Int -> Pointer)
+printFormat$195:	; £temporary2371 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
-printFormat$196:	; £temporary2373 = format + £temporary2370
+printFormat$196:	; £temporary2373 = format + £temporary2371
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-printFormat$197:	; £temporary2371 -> £temporary2373 = *£temporary2373
+printFormat$197:	; £temporary2370 -> £temporary2373 = *£temporary2373
 
-printFormat$198:	; £temporary2374 = &£temporary2371 -> £temporary2373
+printFormat$198:	; £temporary2374 = &£temporary2370 -> £temporary2373
 
 printFormat$199:	; parameter £temporary2374, offset 133
 	mov [rbp + 133], rsi
@@ -3627,18 +3627,18 @@ printFormat$225:	; goto 218
 
 printFormat$226:	; call header integral zero 0 stack zero 0
 
-printFormat$227:	; £temporary2381 = int_to_int index (Signed_Int -> Pointer)
+printFormat$227:	; £temporary2382 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
-printFormat$228:	; £temporary2384 = format + £temporary2381
+printFormat$228:	; £temporary2384 = format + £temporary2382
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-printFormat$229:	; £temporary2382 -> £temporary2384 = *£temporary2384
+printFormat$229:	; £temporary2381 -> £temporary2384 = *£temporary2384
 
-printFormat$230:	; £temporary2385 = &£temporary2382 -> £temporary2384
+printFormat$230:	; £temporary2385 = &£temporary2381 -> £temporary2384
 
 printFormat$231:	; parameter £temporary2385, offset 137
 	mov [rbp + 137], rsi
@@ -3763,17 +3763,17 @@ printFormat$262:	; ++index
 printFormat$263:	; £temporary2395 = index
 	mov eax, [rbp + 40]
 
-printFormat$264:	; £temporary2396 = int_to_int £temporary2395 (Signed_Int -> Pointer)
+printFormat$264:	; £temporary2397 = int_to_int £temporary2395 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
-printFormat$265:	; £temporary2399 = format + £temporary2396
+printFormat$265:	; £temporary2399 = format + £temporary2397
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-printFormat$266:	; £temporary2397 -> £temporary2399 = *£temporary2399
+printFormat$266:	; £temporary2396 -> £temporary2399 = *£temporary2399
 
-printFormat$267:	; c = £temporary2397 -> £temporary2399
+printFormat$267:	; c = £temporary2396 -> £temporary2399
 	mov al, [rsi]
 	mov [rbp + 100], al
 
@@ -3880,18 +3880,18 @@ printFormat$298:	; £temporary2408 = int_to_int g_outDevice (Pointer -> Pointer)
 printFormat$299:	; outString = £temporary2408
 	mov [rbp + 100], rax
 
-printFormat$300:	; £temporary2409 = int_to_int g_outChars (Signed_Int -> Pointer)
+printFormat$300:	; £temporary2410 = int_to_int g_outChars (Signed_Int -> Pointer)
 	mov eax, [g_outChars]
 	mov rbx, 4294967295
 	and rax, rbx
 
-printFormat$301:	; £temporary2412 = outString + £temporary2409
+printFormat$301:	; £temporary2412 = outString + £temporary2410
 	mov rsi, [rbp + 100]
 	add rsi, rax
 
-printFormat$302:	; £temporary2410 -> £temporary2412 = *£temporary2412
+printFormat$302:	; £temporary2409 -> £temporary2412 = *£temporary2412
 
-printFormat$303:	; £temporary2410 -> £temporary2412 = int1$0#
+printFormat$303:	; £temporary2409 -> £temporary2412 = int1$0#
 	mov byte [rsi], 0
 
 printFormat$304:	; return_value = g_outChars

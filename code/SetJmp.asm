@@ -22,20 +22,20 @@ setjmp$5:	; £temporary903 -> buf = £temporary904 -> ebp_pointer
 	mov eax, [rdi]
 	mov [rsi], eax
 
-setjmp$6:	; £temporary905 -> buf = *buf, offset 4
+setjmp$6:	; £temporary905 -> buf = *buf
 	mov rsi, [rbp + 24]
 
-setjmp$7:	; £temporary906 -> ebp_pointer = *ebp_pointer, offset 4
+setjmp$7:	; £temporary906 -> ebp_pointer = *ebp_pointer
 	mov rdi, [rbp + 32]
 
 setjmp$8:	; £temporary905 -> buf = £temporary906 -> ebp_pointer
 	mov eax, [rdi + 4]
 	mov [rsi + 4], eax
 
-setjmp$9:	; £temporary907 -> buf = *buf, offset 8
+setjmp$9:	; £temporary907 -> buf = *buf
 	mov rsi, [rbp + 24]
 
-setjmp$10:	; £temporary908 -> ebp_pointer = *ebp_pointer, offset 8
+setjmp$10:	; £temporary908 -> ebp_pointer = *ebp_pointer
 	mov rdi, [rbp + 32]
 
 setjmp$11:	; £temporary907 -> buf = £temporary908 -> ebp_pointer

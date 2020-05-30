@@ -1279,12 +1279,12 @@ file_test$360:	; parameter index, offset 168
 	mov eax, [rbp + 132]
 	mov [rbp + 168], eax
 
-file_test$361:	; £temporary4565 = int_to_int index (Signed_Int -> Array)
+file_test$361:	; £temporary4566 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 132]
 	mov rbx, 4294967295
 	and rax, rbx
 
-file_test$362:	; £temporary4567 = £temporary4565 * Array_#
+file_test$362:	; £temporary4567 = £temporary4566 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
@@ -1293,12 +1293,12 @@ file_test$363:	; £temporary4568 = arr + £temporary4567
 	add rsi, 52
 	add rsi, rax
 
-file_test$364:	; £temporary4566 -> £temporary4568 = *£temporary4568
+file_test$364:	; £temporary4565 -> £temporary4568 = *£temporary4568
 
-file_test$365:	; push float £temporary4566 -> £temporary4568
+file_test$365:	; push float £temporary4565 -> £temporary4568
 	fld qword [rsi]
 
-file_test$366:	; parameter £temporary4566 -> £temporary4568, offset 172
+file_test$366:	; parameter £temporary4565 -> £temporary4568, offset 172
 	fstp qword [rbp + 172]
 
 file_test$367:	; call function noellipse-ellipse printf, extra 12
@@ -1805,12 +1805,12 @@ file_test$510:	; parameter index, offset 108
 	mov eax, [rbp + 72]
 	mov [rbp + 108], eax
 
-file_test$511:	; £temporary4608 = int_to_int index (Signed_Int -> Pointer)
+file_test$511:	; £temporary4609 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 72]
 	mov rbx, 4294967295
 	and rax, rbx
 
-file_test$512:	; £temporary4610 = £temporary4608 * int8$8#
+file_test$512:	; £temporary4610 = £temporary4609 * int8$8#
 	xor rdx, rdx
 	mul qword [int8$8#]
 
@@ -1818,12 +1818,12 @@ file_test$513:	; £temporary4611 = p + £temporary4610
 	mov rsi, [rbp + 56]
 	add rsi, rax
 
-file_test$514:	; £temporary4609 -> £temporary4611 = *£temporary4611
+file_test$514:	; £temporary4608 -> £temporary4611 = *£temporary4611
 
-file_test$515:	; push float £temporary4609 -> £temporary4611
+file_test$515:	; push float £temporary4608 -> £temporary4611
 	fld qword [rsi]
 
-file_test$516:	; parameter £temporary4609 -> £temporary4611, offset 112
+file_test$516:	; parameter £temporary4608 -> £temporary4611, offset 112
 	fstp qword [rbp + 112]
 
 file_test$517:	; call function noellipse-ellipse printf, extra 12

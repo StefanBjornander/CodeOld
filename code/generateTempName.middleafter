@@ -1,22 +1,60 @@
-0: push float int4$0#
-1: if size >= int4$0# goto 57
-2: c = int1$97#
-3: if c > int1$122# goto 57
-4: £temporary1325 = name + size
-5: £temporary1324 -> £temporary1325 = *£temporary1325
-6: £temporary1324 -> £temporary1325 = c
-7: £temporary1326 = size + int4$1#
-8: £temporary1328 = name + £temporary1326
-9: £temporary1327 -> £temporary1328 = *£temporary1328
-10: £temporary1327 -> £temporary1328 = int1$0#
-11: call header integral zero 0 stack no zero 1
-12: parameter name, offset 45
-13: call function noellipse-noellipse fileexists
-14: post call
-15: £temporary1329 = return_value
-16: if £temporary1329 != int4$0# goto 43
-17: if status == int4$0# goto 20
-18: if status == int4$1# goto 22
+0: if size >= int2$5# goto 57
+1: c = int1$97#
+2: if c > int1$122# goto 57
+3: £temporary1245 = name + size
+4: £temporary1243 -> £temporary1245 = *£temporary1245
+5: £temporary1243 -> £temporary1245 = c
+6: £temporary1246 = size + int2$1#
+7: £temporary1249 = name + £temporary1246
+8: £temporary1247 -> £temporary1249 = *£temporary1249
+9: £temporary1247 -> £temporary1249 = int1$0#
+10: call header integral zero 0 stack zero 0
+11: parameter name, offset 19
+12: call function noellipse-noellipse fileexists
+13: post call
+14: £temporary1250 = return_value
+15: if £temporary1250 != int2$0# goto 43
+16: case status == int2$0# goto 20
+17: case status == int2$1# goto 22
+18: case end status
 19: goto 43
 20: return_value = name
 21: return
+22: call header integral zero 0 stack zero 0
+23: parameter name, offset 19
+24: call function noellipse-noellipse existsTempName
+25: post call
+26: £temporary1253 = return_value
+27: if £temporary1253 != int2$0# goto 43
+28: call header integral zero 0 stack zero 0
+29: £temporary1257 = g_tempSize * Array_#
+30: £temporary1258 = g_tempArray + £temporary1257
+31: £temporary1256 -> £temporary1258 = *£temporary1258
+32: parameter £temporary1256 -> £temporary1258, offset 19
+33: parameter name, offset 21
+34: call function noellipse-noellipse strcpy
+35: post call
+36: £temporary1260 = g_tempSize
+37: ++g_tempSize
+38: £temporary1262 = £temporary1260 * Array_#
+39: £temporary1263 = g_tempArray + £temporary1262
+40: £temporary1261 -> £temporary1263 = *£temporary1263
+41: return_value = £temporary1261 -> £temporary1263
+42: return
+43: call header integral zero 0 stack zero 0
+44: parameter name, offset 19
+45: £temporary1264 = size + int2$1#
+46: parameter £temporary1264, offset 21
+47: parameter status, offset 23
+48: call function noellipse-noellipse generateTempName
+49: post call
+50: £temporary1265 = return_value
+51: result = £temporary1265
+52: if result == int2$0# goto 55
+53: return_value = result
+54: return
+55: ++c
+56: goto 2
+57: return_value = int2$0#
+58: return
+59: function end generateTempName

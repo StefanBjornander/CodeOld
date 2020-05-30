@@ -41,7 +41,7 @@ islower$5:	; if localeConvPtr == int8$0# goto 19
 
 islower$6:	; call header integral zero 0 stack zero 0
 
-islower$7:	; £temporary315 -> localeConvPtr = *localeConvPtr, offset 40
+islower$7:	; £temporary315 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 28]
 
 islower$8:	; parameter £temporary315 -> localeConvPtr, offset 60
@@ -185,7 +185,7 @@ isupper$5:	; if localeConvPtr == int8$0# goto 19
 
 isupper$6:	; call header integral zero 0 stack zero 0
 
-isupper$7:	; £temporary335 -> localeConvPtr = *localeConvPtr, offset 48
+isupper$7:	; £temporary335 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 28]
 
 isupper$8:	; parameter £temporary335 -> localeConvPtr, offset 60
@@ -746,14 +746,14 @@ tolower$11:	; if localeConvPtr == int8$0# goto 31
 	cmp qword [rbp + 28], 0
 	je tolower$31
 
-tolower$12:	; £temporary421 -> localeConvPtr = *localeConvPtr, offset 40
+tolower$12:	; £temporary421 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 28]
 
 tolower$13:	; lowerCase = £temporary421 -> localeConvPtr
 	mov rax, [rsi + 40]
 	mov [rbp + 36], rax
 
-tolower$14:	; £temporary422 -> localeConvPtr = *localeConvPtr, offset 48
+tolower$14:	; £temporary422 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 28]
 
 tolower$15:	; upperCase = £temporary422 -> localeConvPtr
@@ -788,18 +788,18 @@ tolower$23:	; £temporary426 = int_to_int £temporary425 (Pointer -> Signed_Int)
 tolower$24:	; index = £temporary426
 	mov [rbp + 52], ebx
 
-tolower$25:	; £temporary427 = int_to_int index (Signed_Int -> Pointer)
+tolower$25:	; £temporary428 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 52]
 	mov rbx, 4294967295
 	and rax, rbx
 
-tolower$26:	; £temporary430 = lowerCase + £temporary427
+tolower$26:	; £temporary430 = lowerCase + £temporary428
 	mov rsi, [rbp + 36]
 	add rsi, rax
 
-tolower$27:	; £temporary428 -> £temporary430 = *£temporary430
+tolower$27:	; £temporary427 -> £temporary430 = *£temporary430
 
-tolower$28:	; £temporary431 = int_to_int £temporary428 -> £temporary430 (Signed_Char -> Signed_Int)
+tolower$28:	; £temporary431 = int_to_int £temporary427 -> £temporary430 (Signed_Char -> Signed_Int)
 	mov bl, [rsi]
 	and ebx, 255
 	cmp bl, 0
@@ -919,14 +919,14 @@ toupper$11:	; if localeConvPtr == int8$0# goto 31
 	cmp qword [rbp + 28], 0
 	je toupper$31
 
-toupper$12:	; £temporary445 -> localeConvPtr = *localeConvPtr, offset 40
+toupper$12:	; £temporary445 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 28]
 
 toupper$13:	; lowerCase = £temporary445 -> localeConvPtr
 	mov rax, [rsi + 40]
 	mov [rbp + 36], rax
 
-toupper$14:	; £temporary446 -> localeConvPtr = *localeConvPtr, offset 48
+toupper$14:	; £temporary446 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 28]
 
 toupper$15:	; upperCase = £temporary446 -> localeConvPtr
@@ -961,18 +961,18 @@ toupper$23:	; £temporary450 = int_to_int £temporary449 (Pointer -> Signed_Int)
 toupper$24:	; index = £temporary450
 	mov [rbp + 52], ebx
 
-toupper$25:	; £temporary451 = int_to_int index (Signed_Int -> Pointer)
+toupper$25:	; £temporary452 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 52]
 	mov rbx, 4294967295
 	and rax, rbx
 
-toupper$26:	; £temporary454 = upperCase + £temporary451
+toupper$26:	; £temporary454 = upperCase + £temporary452
 	mov rsi, [rbp + 44]
 	add rsi, rax
 
-toupper$27:	; £temporary452 -> £temporary454 = *£temporary454
+toupper$27:	; £temporary451 -> £temporary454 = *£temporary454
 
-toupper$28:	; £temporary455 = int_to_int £temporary452 -> £temporary454 (Signed_Char -> Signed_Int)
+toupper$28:	; £temporary455 = int_to_int £temporary451 -> £temporary454 (Signed_Char -> Signed_Int)
 	mov bl, [rsi]
 	and ebx, 255
 	cmp bl, 0

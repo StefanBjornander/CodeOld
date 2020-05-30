@@ -157,7 +157,7 @@ malloc$39:	; prevBlockPtr = currBlockPtr
 	mov rax, [rbp + 64]
 	mov [rbp + 56], rax
 
-malloc$40:	; £temporary195 -> currBlockPtr = *currBlockPtr, offset 4
+malloc$40:	; £temporary195 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 64]
 
 malloc$41:	; currBlockPtr = £temporary195 -> currBlockPtr
@@ -201,7 +201,7 @@ malloc$52:	; £temporary202 -> newBlockPtr = memorySize
 	mov eax, [rbp + 24]
 	mov [rsi], eax
 
-malloc$53:	; £temporary203 -> newBlockPtr = *newBlockPtr, offset 4
+malloc$53:	; £temporary203 -> newBlockPtr = *newBlockPtr
 	mov rsi, [rbp + 76]
 
 malloc$54:	; £temporary203 -> newBlockPtr = minBlockPtr
@@ -212,7 +212,7 @@ malloc$55:	; if minPrevBlockPtr == int8$0# goto 59
 	cmp qword [rbp + 48], 0
 	je malloc$59
 
-malloc$56:	; £temporary205 -> minPrevBlockPtr = *minPrevBlockPtr, offset 4
+malloc$56:	; £temporary205 -> minPrevBlockPtr = *minPrevBlockPtr
 	mov rsi, [rbp + 48]
 
 malloc$57:	; £temporary205 -> minPrevBlockPtr = newBlockPtr
@@ -277,7 +277,7 @@ malloc$73:	; £temporary213 -> newBlockPtr = memorySize
 	mov eax, [rbp + 24]
 	mov [rsi], eax
 
-malloc$74:	; £temporary214 -> newBlockPtr = *newBlockPtr, offset 4
+malloc$74:	; £temporary214 -> newBlockPtr = *newBlockPtr
 	mov rsi, [rbp + 80]
 
 malloc$75:	; £temporary214 -> newBlockPtr = int8$0#
@@ -287,7 +287,7 @@ malloc$76:	; if prevBlockPtr == int8$0# goto 80
 	cmp qword [rbp + 56], 0
 	je malloc$80
 
-malloc$77:	; £temporary216 -> prevBlockPtr = *prevBlockPtr, offset 4
+malloc$77:	; £temporary216 -> prevBlockPtr = *prevBlockPtr
 	mov rsi, [rbp + 56]
 
 malloc$78:	; £temporary216 -> prevBlockPtr = newBlockPtr
@@ -430,7 +430,7 @@ free$10:	; if prevBlockPtr != int8$0# goto 15
 	cmp qword [rbp + 40], 0
 	jne free$15
 
-free$11:	; £temporary239 -> currBlockPtr = *currBlockPtr, offset 4
+free$11:	; £temporary239 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 48]
 
 free$12:	; if £temporary239 -> currBlockPtr != int8$0# goto 15
@@ -447,7 +447,7 @@ free$15:	; if prevBlockPtr != int8$0# goto 19
 	cmp qword [rbp + 40], 0
 	jne free$19
 
-free$16:	; £temporary243 -> currBlockPtr = *currBlockPtr, offset 4
+free$16:	; £temporary243 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 48]
 
 free$17:	; g_firstBlockPtr = £temporary243 -> currBlockPtr
@@ -457,14 +457,14 @@ free$17:	; g_firstBlockPtr = £temporary243 -> currBlockPtr
 free$18:	; goto 27
 	jmp free$27
 
-free$19:	; £temporary244 -> currBlockPtr = *currBlockPtr, offset 4
+free$19:	; £temporary244 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 48]
 
 free$20:	; if £temporary244 -> currBlockPtr != int8$0# goto 24
 	cmp qword [rsi + 4], 0
 	jne free$24
 
-free$21:	; £temporary246 -> prevBlockPtr = *prevBlockPtr, offset 4
+free$21:	; £temporary246 -> prevBlockPtr = *prevBlockPtr
 	mov rsi, [rbp + 40]
 
 free$22:	; £temporary246 -> prevBlockPtr = int8$0#
@@ -473,10 +473,10 @@ free$22:	; £temporary246 -> prevBlockPtr = int8$0#
 free$23:	; goto 27
 	jmp free$27
 
-free$24:	; £temporary247 -> prevBlockPtr = *prevBlockPtr, offset 4
+free$24:	; £temporary247 -> prevBlockPtr = *prevBlockPtr
 	mov rsi, [rbp + 40]
 
-free$25:	; £temporary248 -> currBlockPtr = *currBlockPtr, offset 4
+free$25:	; £temporary248 -> currBlockPtr = *currBlockPtr
 	mov rdi, [rbp + 48]
 
 free$26:	; £temporary247 -> prevBlockPtr = £temporary248 -> currBlockPtr
@@ -493,7 +493,7 @@ free$28:	; prevBlockPtr = currBlockPtr
 	mov rax, [rbp + 48]
 	mov [rbp + 40], rax
 
-free$29:	; £temporary249 -> currBlockPtr = *currBlockPtr, offset 4
+free$29:	; £temporary249 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 48]
 
 free$30:	; currBlockPtr = £temporary249 -> currBlockPtr
@@ -753,7 +753,7 @@ realloc$65:	; £temporary278 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
 realloc$66:	; lastAddress = £temporary278
 	mov [rbp + 48], eax
 
-realloc$67:	; £temporary279 -> currBlockPtr = *currBlockPtr, offset 4
+realloc$67:	; £temporary279 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 52]
 
 realloc$68:	; currBlockPtr = £temporary279 -> currBlockPtr
@@ -892,7 +892,7 @@ print_heap$12:	; call function noellipse-ellipse printf, extra 8
 
 print_heap$13:	; post call
 
-print_heap$14:	; £temporary306 -> currBlockPtr = *currBlockPtr, offset 4
+print_heap$14:	; £temporary306 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 24]
 
 print_heap$15:	; currBlockPtr = £temporary306 -> currBlockPtr

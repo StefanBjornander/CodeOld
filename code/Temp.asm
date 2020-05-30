@@ -23,12 +23,12 @@ section .text
 	mov rax, [rbp + 24]
 	mov [rbp + 60], rax
 
-@2773$existsTempName$5:	; £temporary1209 = int_to_int index (Signed_Int -> Array)
+@2773$existsTempName$5:	; £temporary1210 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
-@2773$existsTempName$6:	; £temporary1211 = £temporary1209 * Array_#
+@2773$existsTempName$6:	; £temporary1211 = £temporary1210 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
@@ -36,11 +36,10 @@ section .text
 	mov rsi, @2770$g_tempArray
 	add rsi, rax
 
-@2773$existsTempName$8:	; £temporary1210 -> £temporary1212 = *£temporary1212
+@2773$existsTempName$8:	; £temporary1209 -> £temporary1212 = *£temporary1212
 
-@2773$existsTempName$9:	; parameter £temporary1210 -> £temporary1212, offset 68
+@2773$existsTempName$9:	; parameter £temporary1209 -> £temporary1212, offset 68
 	mov [rbp + 68], rsi
-	add qword [rbp + 68], 0
 
 @2773$existsTempName$10:	; call function noellipse-noellipse strcmp
 	mov qword [rbp + 36], @2773$existsTempName$11
@@ -93,18 +92,18 @@ section .text
 	cmp byte [rbp + 40], 122
 	jg @2778$generateTempName$61
 
-@2778$generateTempName$3:	; £temporary1220 = int_to_int size (Signed_Int -> Pointer)
+@2778$generateTempName$3:	; £temporary1221 = int_to_int size (Signed_Int -> Pointer)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
-@2778$generateTempName$4:	; £temporary1223 = name + £temporary1220
+@2778$generateTempName$4:	; £temporary1223 = name + £temporary1221
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-@2778$generateTempName$5:	; £temporary1221 -> £temporary1223 = *£temporary1223
+@2778$generateTempName$5:	; £temporary1220 -> £temporary1223 = *£temporary1223
 
-@2778$generateTempName$6:	; £temporary1221 -> £temporary1223 = c
+@2778$generateTempName$6:	; £temporary1220 -> £temporary1223 = c
 	mov al, [rbp + 40]
 	mov [rsi], al
 
@@ -112,17 +111,17 @@ section .text
 	mov eax, [rbp + 32]
 	inc eax
 
-@2778$generateTempName$8:	; £temporary1225 = int_to_int £temporary1224 (Signed_Int -> Pointer)
+@2778$generateTempName$8:	; £temporary1226 = int_to_int £temporary1224 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
-@2778$generateTempName$9:	; £temporary1228 = name + £temporary1225
+@2778$generateTempName$9:	; £temporary1228 = name + £temporary1226
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-@2778$generateTempName$10:	; £temporary1226 -> £temporary1228 = *£temporary1228
+@2778$generateTempName$10:	; £temporary1225 -> £temporary1228 = *£temporary1228
 
-@2778$generateTempName$11:	; £temporary1226 -> £temporary1228 = int1$0#
+@2778$generateTempName$11:	; £temporary1225 -> £temporary1228 = int1$0#
 	mov byte [rsi], 0
 
 @2778$generateTempName$12:	; call header integral zero 0 stack zero 0
@@ -190,12 +189,12 @@ section .text
 
 @2778$generateTempName$30:	; call header integral zero 0 stack zero 0
 
-@2778$generateTempName$31:	; £temporary1235 = int_to_int g_tempSize (Signed_Int -> Array)
+@2778$generateTempName$31:	; £temporary1236 = int_to_int g_tempSize (Signed_Int -> Array)
 	mov eax, [@2771$g_tempSize]
 	mov rbx, 4294967295
 	and rax, rbx
 
-@2778$generateTempName$32:	; £temporary1237 = £temporary1235 * Array_#
+@2778$generateTempName$32:	; £temporary1237 = £temporary1236 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
@@ -203,11 +202,10 @@ section .text
 	mov rsi, @2770$g_tempArray
 	add rsi, rax
 
-@2778$generateTempName$34:	; £temporary1236 -> £temporary1238 = *£temporary1238
+@2778$generateTempName$34:	; £temporary1235 -> £temporary1238 = *£temporary1238
 
-@2778$generateTempName$35:	; parameter £temporary1236 -> £temporary1238, offset 65
+@2778$generateTempName$35:	; parameter £temporary1235 -> £temporary1238, offset 65
 	mov [rbp + 65], rsi
-	add qword [rbp + 65], 0
 
 @2778$generateTempName$36:	; parameter name, offset 73
 	mov rax, [rbp + 24]
@@ -227,11 +225,11 @@ section .text
 @2778$generateTempName$40:	; ++g_tempSize
 	inc dword [@2771$g_tempSize]
 
-@2778$generateTempName$41:	; £temporary1241 = int_to_int £temporary1240 (Signed_Int -> Array)
+@2778$generateTempName$41:	; £temporary1242 = int_to_int £temporary1240 (Signed_Int -> Array)
 	mov rbx, 4294967295
 	and rax, rbx
 
-@2778$generateTempName$42:	; £temporary1243 = £temporary1241 * Array_#
+@2778$generateTempName$42:	; £temporary1243 = £temporary1242 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
@@ -239,9 +237,9 @@ section .text
 	mov rsi, @2770$g_tempArray
 	add rsi, rax
 
-@2778$generateTempName$44:	; £temporary1242 -> £temporary1244 = *£temporary1244
+@2778$generateTempName$44:	; £temporary1241 -> £temporary1244 = *£temporary1244
 
-@2778$generateTempName$45:	; return_value = £temporary1242 -> £temporary1244
+@2778$generateTempName$45:	; return_value = £temporary1241 -> £temporary1244
 	mov rbx, rsi
 
 @2778$generateTempName$46:	; return
@@ -364,7 +362,7 @@ tmpfile$16:	; if stream == int8$0# goto 21
 	cmp qword [rbp + 24], 0
 	je tmpfile$21
 
-tmpfile$17:	; £temporary1260 -> stream = *stream, offset 37
+tmpfile$17:	; £temporary1260 -> stream = *stream
 	mov rsi, [rbp + 24]
 
 tmpfile$18:	; £temporary1260 -> stream = int4$1#

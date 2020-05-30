@@ -152,12 +152,12 @@ time_test$38:	; call header integral zero 0 stack zero 0
 time_test$39:	; parameter string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#, offset 164
 	mov qword [rbp + 164], string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 
-time_test$40:	; £temporary5605 = int_to_int s$tm_wday (Signed_Int -> Array)
+time_test$40:	; £temporary5606 = int_to_int s$tm_wday (Signed_Int -> Array)
 	mov eax, [rbp + 128]
 	mov rbx, 4294967295
 	and rax, rbx
 
-time_test$41:	; £temporary5607 = £temporary5605 * Array_#
+time_test$41:	; £temporary5607 = £temporary5606 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
@@ -166,9 +166,9 @@ time_test$42:	; £temporary5608 = weekdays + £temporary5607
 	add rsi, 24
 	add rsi, rax
 
-time_test$43:	; £temporary5606 -> £temporary5608 = *£temporary5608
+time_test$43:	; £temporary5605 -> £temporary5608 = *£temporary5608
 
-time_test$44:	; parameter £temporary5606 -> £temporary5608, offset 172
+time_test$44:	; parameter £temporary5605 -> £temporary5608, offset 172
 	mov rax, [rsi]
 	mov [rbp + 172], rax
 
@@ -264,12 +264,12 @@ time_test$66:	; call header integral zero 0 stack zero 0
 time_test$67:	; parameter string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#, offset 164
 	mov qword [rbp + 164], string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 
-time_test$68:	; £temporary5625 = int_to_int s$tm_wday (Signed_Int -> Array)
+time_test$68:	; £temporary5626 = int_to_int s$tm_wday (Signed_Int -> Array)
 	mov eax, [rbp + 128]
 	mov rbx, 4294967295
 	and rax, rbx
 
-time_test$69:	; £temporary5627 = £temporary5625 * Array_#
+time_test$69:	; £temporary5627 = £temporary5626 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
@@ -278,9 +278,9 @@ time_test$70:	; £temporary5628 = weekdays + £temporary5627
 	add rsi, 24
 	add rsi, rax
 
-time_test$71:	; £temporary5626 -> £temporary5628 = *£temporary5628
+time_test$71:	; £temporary5625 -> £temporary5628 = *£temporary5628
 
-time_test$72:	; parameter £temporary5626 -> £temporary5628, offset 172
+time_test$72:	; parameter £temporary5625 -> £temporary5628, offset 172
 	mov rax, [rsi]
 	mov [rbp + 172], rax
 

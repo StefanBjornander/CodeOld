@@ -52,7 +52,7 @@ scanChar$5:	; £temporary1271 = int_to_int g_inDevice (Pointer -> Pointer)
 scanChar$6:	; stream = £temporary1271
 	mov [rbp + 25], rax
 
-scanChar$7:	; £temporary1272 -> stream = *stream, offset 4
+scanChar$7:	; £temporary1272 -> stream = *stream
 	mov rsi, [rbp + 25]
 
 scanChar$8:	; handle = £temporary1272 -> stream
@@ -62,7 +62,7 @@ scanChar$8:	; handle = £temporary1272 -> stream
 scanChar$9:	; rax = int8$0#
 	mov rax, 0
 
-scanChar$10:	; £temporary1275 -> stream = *stream, offset 4
+scanChar$10:	; £temporary1275 -> stream = *stream
 	mov rsi, [rbp + 25]
 
 scanChar$11:	; £temporary1276 = int_to_int £temporary1275 -> stream (Unsigned_Int -> Unsigned_Long_Int)
@@ -110,17 +110,17 @@ scanChar$23:	; £temporary1283 = g_inChars
 scanChar$24:	; ++g_inChars
 	inc dword [g_inChars]
 
-scanChar$25:	; £temporary1284 = int_to_int £temporary1283 (Signed_Int -> Pointer)
+scanChar$25:	; £temporary1285 = int_to_int £temporary1283 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
-scanChar$26:	; £temporary1287 = inString + £temporary1284
+scanChar$26:	; £temporary1287 = inString + £temporary1285
 	mov rsi, [rbp + 37]
 	add rsi, rax
 
-scanChar$27:	; £temporary1285 -> £temporary1287 = *£temporary1287
+scanChar$27:	; £temporary1284 -> £temporary1287 = *£temporary1287
 
-scanChar$28:	; return_value = £temporary1285 -> £temporary1287
+scanChar$28:	; return_value = £temporary1284 -> £temporary1287
 	mov bl, [rsi]
 
 scanChar$29:	; return
@@ -314,17 +314,17 @@ scanPattern$38:	; £temporary1310 = index
 scanPattern$39:	; ++index
 	inc dword [rbp + 44]
 
-scanPattern$40:	; £temporary1311 = int_to_int £temporary1310 (Signed_Int -> Pointer)
+scanPattern$40:	; £temporary1312 = int_to_int £temporary1310 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
-scanPattern$41:	; £temporary1314 = string + £temporary1311
+scanPattern$41:	; £temporary1314 = string + £temporary1312
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-scanPattern$42:	; £temporary1312 -> £temporary1314 = *£temporary1314
+scanPattern$42:	; £temporary1311 -> £temporary1314 = *£temporary1314
 
-scanPattern$43:	; £temporary1312 -> £temporary1314 = input
+scanPattern$43:	; £temporary1311 -> £temporary1314 = input
 	mov al, [rbp + 48]
 	mov [rsi], al
 
@@ -346,18 +346,18 @@ scanPattern$48:	; input = £temporary1315
 scanPattern$49:	; goto 20
 	jmp scanPattern$20
 
-scanPattern$50:	; £temporary1316 = int_to_int index (Signed_Int -> Pointer)
+scanPattern$50:	; £temporary1317 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
-scanPattern$51:	; £temporary1319 = string + £temporary1316
+scanPattern$51:	; £temporary1319 = string + £temporary1317
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-scanPattern$52:	; £temporary1317 -> £temporary1319 = *£temporary1319
+scanPattern$52:	; £temporary1316 -> £temporary1319 = *£temporary1319
 
-scanPattern$53:	; £temporary1317 -> £temporary1319 = int1$0#
+scanPattern$53:	; £temporary1316 -> £temporary1319 = int1$0#
 	mov byte [rsi], 0
 
 scanPattern$54:	; goto 79
@@ -582,17 +582,17 @@ scanString$32:	; £temporary1359 = index
 scanString$33:	; ++index
 	inc dword [rbp + 36]
 
-scanString$34:	; £temporary1360 = int_to_int £temporary1359 (Signed_Int -> Pointer)
+scanString$34:	; £temporary1361 = int_to_int £temporary1359 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
-scanString$35:	; £temporary1363 = string + £temporary1360
+scanString$35:	; £temporary1363 = string + £temporary1361
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-scanString$36:	; £temporary1361 -> £temporary1363 = *£temporary1363
+scanString$36:	; £temporary1360 -> £temporary1363 = *£temporary1363
 
-scanString$37:	; £temporary1361 -> £temporary1363 = input
+scanString$37:	; £temporary1360 -> £temporary1363 = input
 	mov al, [rbp + 40]
 	mov [rsi], al
 
@@ -620,18 +620,18 @@ scanString$44:	; ++g_inChars
 scanString$45:	; goto 22
 	jmp scanString$22
 
-scanString$46:	; £temporary1366 = int_to_int index (Signed_Int -> Pointer)
+scanString$46:	; £temporary1367 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-scanString$47:	; £temporary1369 = string + £temporary1366
+scanString$47:	; £temporary1369 = string + £temporary1367
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-scanString$48:	; £temporary1367 -> £temporary1369 = *£temporary1369
+scanString$48:	; £temporary1366 -> £temporary1369 = *£temporary1369
 
-scanString$49:	; £temporary1367 -> £temporary1369 = int1$0#
+scanString$49:	; £temporary1366 -> £temporary1369 = int1$0#
 	mov byte [rsi], 0
 
 scanString$50:	; ++g_inChars
@@ -699,17 +699,17 @@ scanString$65:	; £temporary1383 = index
 scanString$66:	; ++index
 	inc dword [rbp + 36]
 
-scanString$67:	; £temporary1384 = int_to_int £temporary1383 (Signed_Int -> Pointer)
+scanString$67:	; £temporary1385 = int_to_int £temporary1383 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
-scanString$68:	; £temporary1387 = string + £temporary1384
+scanString$68:	; £temporary1387 = string + £temporary1385
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-scanString$69:	; £temporary1385 -> £temporary1387 = *£temporary1387
+scanString$69:	; £temporary1384 -> £temporary1387 = *£temporary1387
 
-scanString$70:	; £temporary1385 -> £temporary1387 = input
+scanString$70:	; £temporary1384 -> £temporary1387 = input
 	mov al, [rbp + 40]
 	mov [rsi], al
 
@@ -741,18 +741,18 @@ scanString$79:	; if precision <= int4$0# goto 130
 	cmp dword [rbp + 32], 0
 	jle scanString$130
 
-scanString$80:	; £temporary1391 = int_to_int index (Signed_Int -> Pointer)
+scanString$80:	; £temporary1392 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-scanString$81:	; £temporary1394 = string + £temporary1391
+scanString$81:	; £temporary1394 = string + £temporary1392
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-scanString$82:	; £temporary1392 -> £temporary1394 = *£temporary1394
+scanString$82:	; £temporary1391 -> £temporary1394 = *£temporary1394
 
-scanString$83:	; £temporary1392 -> £temporary1394 = int1$0#
+scanString$83:	; £temporary1391 -> £temporary1394 = int1$0#
 	mov byte [rsi], 0
 
 scanString$84:	; ++g_inChars
@@ -2040,33 +2040,33 @@ scanFormat$7:	; g_inChars = int4$0#
 scanFormat$8:	; index = int4$0#
 	mov dword [rbp + 93], 0
 
-scanFormat$9:	; £temporary1556 = int_to_int index (Signed_Int -> Pointer)
+scanFormat$9:	; £temporary1557 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 93]
 	mov rbx, 4294967295
 	and rax, rbx
 
-scanFormat$10:	; £temporary1559 = format + £temporary1556
+scanFormat$10:	; £temporary1559 = format + £temporary1557
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-scanFormat$11:	; £temporary1557 -> £temporary1559 = *£temporary1559
+scanFormat$11:	; £temporary1556 -> £temporary1559 = *£temporary1559
 
-scanFormat$12:	; if £temporary1557 -> £temporary1559 == int1$0# goto 354
+scanFormat$12:	; if £temporary1556 -> £temporary1559 == int1$0# goto 354
 	cmp byte [rsi], 0
 	je scanFormat$354
 
-scanFormat$13:	; £temporary1562 = int_to_int index (Signed_Int -> Pointer)
+scanFormat$13:	; £temporary1563 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 93]
 	mov rbx, 4294967295
 	and rax, rbx
 
-scanFormat$14:	; £temporary1565 = format + £temporary1562
+scanFormat$14:	; £temporary1565 = format + £temporary1563
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-scanFormat$15:	; £temporary1563 -> £temporary1565 = *£temporary1565
+scanFormat$15:	; £temporary1562 -> £temporary1565 = *£temporary1565
 
-scanFormat$16:	; c = £temporary1563 -> £temporary1565
+scanFormat$16:	; c = £temporary1562 -> £temporary1565
 	mov al, [rsi]
 	mov [rbp + 40], al
 
@@ -2950,18 +2950,18 @@ scanFormat$281:	; not = int4$0#
 scanFormat$282:	; ++index
 	inc dword [rbp + 93]
 
-scanFormat$283:	; £temporary1737 = int_to_int index (Signed_Int -> Pointer)
+scanFormat$283:	; £temporary1738 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 93]
 	mov rbx, 4294967295
 	and rax, rbx
 
-scanFormat$284:	; £temporary1740 = format + £temporary1737
+scanFormat$284:	; £temporary1740 = format + £temporary1738
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-scanFormat$285:	; £temporary1738 -> £temporary1740 = *£temporary1740
+scanFormat$285:	; £temporary1737 -> £temporary1740 = *£temporary1740
 
-scanFormat$286:	; if £temporary1738 -> £temporary1740 != int1$94# goto 289
+scanFormat$286:	; if £temporary1737 -> £temporary1740 != int1$94# goto 289
 	cmp byte [rsi], 94
 	jne scanFormat$289
 
@@ -2975,18 +2975,18 @@ scanFormat$289:	; startIndex = index
 	mov eax, [rbp + 93]
 	mov [rbp + 161], eax
 
-scanFormat$290:	; £temporary1743 = int_to_int index (Signed_Int -> Pointer)
+scanFormat$290:	; £temporary1744 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 93]
 	mov rbx, 4294967295
 	and rax, rbx
 
-scanFormat$291:	; £temporary1746 = format + £temporary1743
+scanFormat$291:	; £temporary1746 = format + £temporary1744
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-scanFormat$292:	; £temporary1744 -> £temporary1746 = *£temporary1746
+scanFormat$292:	; £temporary1743 -> £temporary1746 = *£temporary1746
 
-scanFormat$293:	; if £temporary1744 -> £temporary1746 == int1$93# goto 296
+scanFormat$293:	; if £temporary1743 -> £temporary1746 == int1$93# goto 296
 	cmp byte [rsi], 93
 	je scanFormat$296
 
@@ -2996,18 +2996,18 @@ scanFormat$294:	; ++index
 scanFormat$295:	; goto 290
 	jmp scanFormat$290
 
-scanFormat$296:	; £temporary1749 = int_to_int index (Signed_Int -> Pointer)
+scanFormat$296:	; £temporary1750 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 93]
 	mov rbx, 4294967295
 	and rax, rbx
 
-scanFormat$297:	; £temporary1752 = format + £temporary1749
+scanFormat$297:	; £temporary1752 = format + £temporary1750
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-scanFormat$298:	; £temporary1750 -> £temporary1752 = *£temporary1752
+scanFormat$298:	; £temporary1749 -> £temporary1752 = *£temporary1752
 
-scanFormat$299:	; £temporary1750 -> £temporary1752 = int1$0#
+scanFormat$299:	; £temporary1749 -> £temporary1752 = int1$0#
 	mov byte [rsi], 0
 
 scanFormat$300:	; if star != int4$0# goto 318
@@ -3039,18 +3039,18 @@ scanFormat$308:	; parameter string, offset 197
 	mov rax, [rbp + 165]
 	mov [rbp + 197], rax
 
-scanFormat$309:	; £temporary1761 = int_to_int startIndex (Signed_Int -> Pointer)
+scanFormat$309:	; £temporary1762 = int_to_int startIndex (Signed_Int -> Pointer)
 	mov eax, [rbp + 161]
 	mov rbx, 4294967295
 	and rax, rbx
 
-scanFormat$310:	; £temporary1764 = format + £temporary1761
+scanFormat$310:	; £temporary1764 = format + £temporary1762
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-scanFormat$311:	; £temporary1762 -> £temporary1764 = *£temporary1764
+scanFormat$311:	; £temporary1761 -> £temporary1764 = *£temporary1764
 
-scanFormat$312:	; £temporary1765 = &£temporary1762 -> £temporary1764
+scanFormat$312:	; £temporary1765 = &£temporary1761 -> £temporary1764
 
 scanFormat$313:	; parameter £temporary1765, offset 205
 	mov [rbp + 205], rsi
@@ -3076,18 +3076,18 @@ scanFormat$319:	; parameter int8$0#, offset 189
 	mov rax, 0
 	mov [rbp + 189], rax
 
-scanFormat$320:	; £temporary1767 = int_to_int startIndex (Signed_Int -> Pointer)
+scanFormat$320:	; £temporary1768 = int_to_int startIndex (Signed_Int -> Pointer)
 	mov eax, [rbp + 161]
 	mov rbx, 4294967295
 	and rax, rbx
 
-scanFormat$321:	; £temporary1770 = format + £temporary1767
+scanFormat$321:	; £temporary1770 = format + £temporary1768
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-scanFormat$322:	; £temporary1768 -> £temporary1770 = *£temporary1770
+scanFormat$322:	; £temporary1767 -> £temporary1770 = *£temporary1770
 
-scanFormat$323:	; £temporary1771 = &£temporary1768 -> £temporary1770
+scanFormat$323:	; £temporary1771 = &£temporary1767 -> £temporary1770
 
 scanFormat$324:	; parameter £temporary1771, offset 197
 	mov [rbp + 197], rsi

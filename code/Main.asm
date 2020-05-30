@@ -100,12 +100,12 @@ main$10:	; parameter index, offset 72
 	mov eax, [rbp + 36]
 	mov [rbp + 72], eax
 
-main$11:	; £temporary59 = int_to_int index (Signed_Int -> Pointer)
+main$11:	; £temporary60 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-main$12:	; £temporary61 = £temporary59 * int8$8#
+main$12:	; £temporary61 = £temporary60 * int8$8#
 	xor rdx, rdx
 	mul qword [int8$8#]
 
@@ -113,9 +113,9 @@ main$13:	; £temporary62 = argv + £temporary61
 	mov rsi, [rbp + 28]
 	add rsi, rax
 
-main$14:	; £temporary60 -> £temporary62 = *£temporary62
+main$14:	; £temporary59 -> £temporary62 = *£temporary62
 
-main$15:	; parameter £temporary60 -> £temporary62, offset 76
+main$15:	; parameter £temporary59 -> £temporary62, offset 76
 	mov rax, [rsi]
 	mov [rbp + 76], rax
 
@@ -152,12 +152,12 @@ main$23:	; post call
 main$24:	; index = int4$0#
 	mov dword [rbp + 36], 0
 
-main$25:	; £temporary65 = int_to_int index (Signed_Int -> Pointer)
+main$25:	; £temporary66 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-main$26:	; £temporary67 = £temporary65 * int8$8#
+main$26:	; £temporary67 = £temporary66 * int8$8#
 	xor rdx, rdx
 	mul qword [int8$8#]
 
@@ -165,9 +165,9 @@ main$27:	; £temporary68 = argv + £temporary67
 	mov rsi, [rbp + 28]
 	add rsi, rax
 
-main$28:	; £temporary66 -> £temporary68 = *£temporary68
+main$28:	; £temporary65 -> £temporary68 = *£temporary68
 
-main$29:	; if £temporary66 -> £temporary68 == int8$0# goto 42
+main$29:	; if £temporary65 -> £temporary68 == int8$0# goto 42
 	cmp qword [rsi], 0
 	je main$42
 
@@ -180,12 +180,12 @@ main$32:	; parameter index, offset 72
 	mov eax, [rbp + 36]
 	mov [rbp + 72], eax
 
-main$33:	; £temporary71 = int_to_int index (Signed_Int -> Pointer)
+main$33:	; £temporary72 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-main$34:	; £temporary73 = £temporary71 * int8$8#
+main$34:	; £temporary73 = £temporary72 * int8$8#
 	xor rdx, rdx
 	mul qword [int8$8#]
 
@@ -193,9 +193,9 @@ main$35:	; £temporary74 = argv + £temporary73
 	mov rsi, [rbp + 28]
 	add rsi, rax
 
-main$36:	; £temporary72 -> £temporary74 = *£temporary74
+main$36:	; £temporary71 -> £temporary74 = *£temporary74
 
-main$37:	; parameter £temporary72 -> £temporary74, offset 76
+main$37:	; parameter £temporary71 -> £temporary74, offset 76
 	mov rax, [rsi]
 	mov [rbp + 76], rax
 

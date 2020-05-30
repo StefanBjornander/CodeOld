@@ -400,59 +400,59 @@ memswp$5:	; if index >= valueSize goto 23
 	cmp eax, [rbp + 40]
 	jge memswp$23
 
-memswp$6:	; £temporary2583 = int_to_int index (Signed_Int -> Pointer)
+memswp$6:	; £temporary2584 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
 
-memswp$7:	; £temporary2586 = charValue1 + £temporary2583
+memswp$7:	; £temporary2586 = charValue1 + £temporary2584
 	mov rsi, [rbp + 44]
 	add rsi, rax
 
-memswp$8:	; £temporary2584 -> £temporary2586 = *£temporary2586
+memswp$8:	; £temporary2583 -> £temporary2586 = *£temporary2586
 
-memswp$9:	; tempValue = £temporary2584 -> £temporary2586
+memswp$9:	; tempValue = £temporary2583 -> £temporary2586
 	mov al, [rsi]
 	mov [rbp + 64], al
 
-memswp$10:	; £temporary2587 = int_to_int index (Signed_Int -> Pointer)
+memswp$10:	; £temporary2588 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
 
-memswp$11:	; £temporary2590 = charValue1 + £temporary2587
+memswp$11:	; £temporary2590 = charValue1 + £temporary2588
 	mov rsi, [rbp + 44]
 	add rsi, rax
 
-memswp$12:	; £temporary2588 -> £temporary2590 = *£temporary2590
+memswp$12:	; £temporary2587 -> £temporary2590 = *£temporary2590
 
-memswp$13:	; £temporary2591 = int_to_int index (Signed_Int -> Pointer)
+memswp$13:	; £temporary2592 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
 
-memswp$14:	; £temporary2594 = charValue2 + £temporary2591
+memswp$14:	; £temporary2594 = charValue2 + £temporary2592
 	mov rdi, [rbp + 52]
 	add rdi, rax
 
-memswp$15:	; £temporary2592 -> £temporary2594 = *£temporary2594
+memswp$15:	; £temporary2591 -> £temporary2594 = *£temporary2594
 
-memswp$16:	; £temporary2588 -> £temporary2590 = £temporary2592 -> £temporary2594
+memswp$16:	; £temporary2587 -> £temporary2590 = £temporary2591 -> £temporary2594
 	mov al, [rdi]
 	mov [rsi], al
 
-memswp$17:	; £temporary2595 = int_to_int index (Signed_Int -> Pointer)
+memswp$17:	; £temporary2596 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
 
-memswp$18:	; £temporary2598 = charValue2 + £temporary2595
+memswp$18:	; £temporary2598 = charValue2 + £temporary2596
 	mov rsi, [rbp + 52]
 	add rsi, rax
 
-memswp$19:	; £temporary2596 -> £temporary2598 = *£temporary2598
+memswp$19:	; £temporary2595 -> £temporary2598 = *£temporary2598
 
-memswp$20:	; £temporary2596 -> £temporary2598 = tempValue
+memswp$20:	; £temporary2595 -> £temporary2598 = tempValue
 	mov al, [rbp + 64]
 	mov [rsi], al
 
@@ -923,12 +923,12 @@ atexit$6:	; if index >= int4$256# goto 31
 	cmp dword [rbp + 32], 256
 	jge atexit$31
 
-atexit$7:	; £temporary2668 = int_to_int index (Signed_Int -> Array)
+atexit$7:	; £temporary2669 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
-atexit$8:	; £temporary2670 = £temporary2668 * Array_#
+atexit$8:	; £temporary2670 = £temporary2669 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
@@ -936,18 +936,18 @@ atexit$9:	; £temporary2671 = g_funcArray + £temporary2670
 	mov rsi, g_funcArray
 	add rsi, rax
 
-atexit$10:	; £temporary2669 -> £temporary2671 = *£temporary2671
+atexit$10:	; £temporary2668 -> £temporary2671 = *£temporary2671
 
-atexit$11:	; if £temporary2669 -> £temporary2671 != int8$0# goto 29
+atexit$11:	; if £temporary2668 -> £temporary2671 != int8$0# goto 29
 	cmp qword [rsi], 0
 	jne atexit$29
 
-atexit$12:	; £temporary2673 = int_to_int index (Signed_Int -> Array)
+atexit$12:	; £temporary2674 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
-atexit$13:	; £temporary2675 = £temporary2673 * Array_#
+atexit$13:	; £temporary2675 = £temporary2674 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
@@ -955,9 +955,9 @@ atexit$14:	; £temporary2676 = g_funcArray + £temporary2675
 	mov rsi, g_funcArray
 	add rsi, rax
 
-atexit$15:	; £temporary2674 -> £temporary2676 = *£temporary2676
+atexit$15:	; £temporary2673 -> £temporary2676 = *£temporary2676
 
-atexit$16:	; £temporary2674 -> £temporary2676 = fcn
+atexit$16:	; £temporary2673 -> £temporary2676 = fcn
 	mov rax, [rbp + 24]
 	mov [rsi], rax
 
@@ -970,12 +970,12 @@ atexit$19:	; parameter index, offset 68
 	mov eax, [rbp + 32]
 	mov [rbp + 68], eax
 
-atexit$20:	; £temporary2677 = int_to_int index (Signed_Int -> Array)
+atexit$20:	; £temporary2678 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
-atexit$21:	; £temporary2679 = £temporary2677 * Array_#
+atexit$21:	; £temporary2679 = £temporary2678 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
@@ -983,9 +983,9 @@ atexit$22:	; £temporary2680 = g_funcArray + £temporary2679
 	mov rsi, g_funcArray
 	add rsi, rax
 
-atexit$23:	; £temporary2678 -> £temporary2680 = *£temporary2680
+atexit$23:	; £temporary2677 -> £temporary2680 = *£temporary2680
 
-atexit$24:	; parameter £temporary2678 -> £temporary2680, offset 72
+atexit$24:	; parameter £temporary2677 -> £temporary2680, offset 72
 	mov rax, [rsi]
 	mov [rbp + 72], rax
 
@@ -1048,12 +1048,12 @@ exit$6:	; if index < int4$0# goto 31
 	cmp dword [rbp + 28], 0
 	jl exit$31
 
-exit$7:	; £temporary2689 = int_to_int index (Signed_Int -> Array)
+exit$7:	; £temporary2690 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 28]
 	mov rbx, 4294967295
 	and rax, rbx
 
-exit$8:	; £temporary2691 = £temporary2689 * Array_#
+exit$8:	; £temporary2691 = £temporary2690 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
@@ -1061,9 +1061,9 @@ exit$9:	; £temporary2692 = g_funcArray + £temporary2691
 	mov rsi, g_funcArray
 	add rsi, rax
 
-exit$10:	; £temporary2690 -> £temporary2692 = *£temporary2692
+exit$10:	; £temporary2689 -> £temporary2692 = *£temporary2692
 
-exit$11:	; if £temporary2690 -> £temporary2692 == int8$0# goto 29
+exit$11:	; if £temporary2689 -> £temporary2692 == int8$0# goto 29
 	cmp qword [rsi], 0
 	je exit$29
 
@@ -1076,12 +1076,12 @@ exit$14:	; parameter index, offset 64
 	mov eax, [rbp + 28]
 	mov [rbp + 64], eax
 
-exit$15:	; £temporary2694 = int_to_int index (Signed_Int -> Array)
+exit$15:	; £temporary2695 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 28]
 	mov rbx, 4294967295
 	and rax, rbx
 
-exit$16:	; £temporary2696 = £temporary2694 * Array_#
+exit$16:	; £temporary2696 = £temporary2695 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
@@ -1089,9 +1089,9 @@ exit$17:	; £temporary2697 = g_funcArray + £temporary2696
 	mov rsi, g_funcArray
 	add rsi, rax
 
-exit$18:	; £temporary2695 -> £temporary2697 = *£temporary2697
+exit$18:	; £temporary2694 -> £temporary2697 = *£temporary2697
 
-exit$19:	; parameter £temporary2695 -> £temporary2697, offset 68
+exit$19:	; parameter £temporary2694 -> £temporary2697, offset 68
 	mov rax, [rsi]
 	mov [rbp + 68], rax
 
@@ -1105,12 +1105,12 @@ exit$20:	; call function noellipse-ellipse printf, extra 12
 
 exit$21:	; post call
 
-exit$22:	; £temporary2699 = int_to_int index (Signed_Int -> Array)
+exit$22:	; £temporary2700 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 28]
 	mov rbx, 4294967295
 	and rax, rbx
 
-exit$23:	; £temporary2701 = £temporary2699 * Array_#
+exit$23:	; £temporary2701 = £temporary2700 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
@@ -1118,12 +1118,12 @@ exit$24:	; £temporary2702 = g_funcArray + £temporary2701
 	mov rbx, g_funcArray
 	add rbx, rax
 
-exit$25:	; £temporary2700 -> £temporary2702 = *£temporary2702
+exit$25:	; £temporary2699 -> £temporary2702 = *£temporary2702
 
 exit$26:	; call header integral no zero 1 stack zero 0
 	mov [rbp + 32], rbx
 
-exit$27:	; call function noellipse-noellipse £temporary2700 -> £temporary2702
+exit$27:	; call function noellipse-noellipse £temporary2699 -> £temporary2702
 	mov qword [rbp + 2080], exit$28
 	mov [rbp + 2088], rbp
 	mov rax, [rbp]
@@ -1170,59 +1170,59 @@ swap$2:	; if index >= valueSize goto 20
 	cmp eax, [rbp + 40]
 	jge swap$20
 
-swap$3:	; £temporary2714 = int_to_int index (Signed_Int -> Pointer)
+swap$3:	; £temporary2715 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
-swap$4:	; £temporary2717 = leftValuePtr + £temporary2714
+swap$4:	; £temporary2717 = leftValuePtr + £temporary2715
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-swap$5:	; £temporary2715 -> £temporary2717 = *£temporary2717
+swap$5:	; £temporary2714 -> £temporary2717 = *£temporary2717
 
-swap$6:	; tempValue = £temporary2715 -> £temporary2717
+swap$6:	; tempValue = £temporary2714 -> £temporary2717
 	mov al, [rsi]
 	mov [rbp + 48], al
 
-swap$7:	; £temporary2718 = int_to_int index (Signed_Int -> Pointer)
+swap$7:	; £temporary2719 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
-swap$8:	; £temporary2721 = leftValuePtr + £temporary2718
+swap$8:	; £temporary2721 = leftValuePtr + £temporary2719
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-swap$9:	; £temporary2719 -> £temporary2721 = *£temporary2721
+swap$9:	; £temporary2718 -> £temporary2721 = *£temporary2721
 
-swap$10:	; £temporary2722 = int_to_int index (Signed_Int -> Pointer)
+swap$10:	; £temporary2723 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
-swap$11:	; £temporary2725 = rightValuePtr + £temporary2722
+swap$11:	; £temporary2725 = rightValuePtr + £temporary2723
 	mov rdi, [rbp + 32]
 	add rdi, rax
 
-swap$12:	; £temporary2723 -> £temporary2725 = *£temporary2725
+swap$12:	; £temporary2722 -> £temporary2725 = *£temporary2725
 
-swap$13:	; £temporary2719 -> £temporary2721 = £temporary2723 -> £temporary2725
+swap$13:	; £temporary2718 -> £temporary2721 = £temporary2722 -> £temporary2725
 	mov al, [rdi]
 	mov [rsi], al
 
-swap$14:	; £temporary2726 = int_to_int index (Signed_Int -> Pointer)
+swap$14:	; £temporary2727 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
-swap$15:	; £temporary2729 = rightValuePtr + £temporary2726
+swap$15:	; £temporary2729 = rightValuePtr + £temporary2727
 	mov rsi, [rbp + 32]
 	add rsi, rax
 
-swap$16:	; £temporary2727 -> £temporary2729 = *£temporary2729
+swap$16:	; £temporary2726 -> £temporary2729 = *£temporary2729
 
-swap$17:	; £temporary2727 -> £temporary2729 = tempValue
+swap$17:	; £temporary2726 -> £temporary2729 = tempValue
 	mov al, [rbp + 48]
 	mov [rsi], al
 
