@@ -361,26 +361,30 @@ main$80:	; function end main
 main2:	; empty
 
 main2$1:	; a$p = int8$0#
-	mov qword [a], 0
+	mov rax, 0
 
 main2$2:	; a$q = int8$0#
-	mov qword [a + 8], 0
+	mov rbx, 0
 
-main2$3:	; call header integral zero 0 stack zero 0
+main2$3:	; call header integral no zero 2 stack zero 0
+	mov [rbp + 24], rax
+	mov [rbp + 32], rbx
 
 main2$4:	; parameter string_test12Etxt#, offset 48
-	mov qword [rbp + 48], string_test12Etxt#
+	mov qword [rbp + 64], string_test12Etxt#
 
 main2$5:	; parameter string_test22Etxt#, offset 56
-	mov qword [rbp + 56], string_test22Etxt#
+	mov qword [rbp + 72], string_test22Etxt#
 
 main2$6:	; call function noellipse-noellipse file_test
-	mov qword [rbp + 24], main2$7
-	mov [rbp + 32], rbp
-	add rbp, 24
+	mov qword [rbp + 40], main2$7
+	mov [rbp + 48], rbp
+	add rbp, 40
 	jmp file_test
 
 main2$7:	; post call
+	mov rax, [rbp + 24]
+	mov rbx, [rbp + 32]
 
 main2$8:	; return
 	mov rax, [rbp]

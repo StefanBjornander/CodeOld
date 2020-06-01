@@ -242,9 +242,9 @@ gmtime$7:	; £temporary2817 = int_to_int £temporary2816 (Signed_Long_Int -> Sig
 	jge gmtime$8
 	neg rax
 	neg eax
+	mov ebx, eax
 
 gmtime$8:	; g_timeStruct$tm_hour = £temporary2817
-	mov [@4191$g_timeStruct + 8], eax
 
 gmtime$9:	; £temporary2819 = secondsOfDay % int8$3600#
 	mov rax, [rbp + 44]
@@ -261,9 +261,9 @@ gmtime$11:	; £temporary2821 = int_to_int £temporary2820 (Signed_Long_Int -> Si
 	jge gmtime$12
 	neg rax
 	neg eax
+	mov ebx, eax
 
 gmtime$12:	; g_timeStruct$tm_min = £temporary2821
-	mov [@4191$g_timeStruct + 4], eax
 
 gmtime$13:	; £temporary2823 = secondsOfDay % int8$3600#
 	mov rax, [rbp + 44]
@@ -282,7 +282,6 @@ gmtime$15:	; £temporary2825 = int_to_int £temporary2824 (Signed_Long_Int -> Si
 	neg edx
 
 gmtime$16:	; g_timeStruct$tm_sec = £temporary2825
-	mov [@4191$g_timeStruct], edx
 
 gmtime$17:	; £temporary2826 = time / int8$86400#
 	mov rax, [rbp + 36]
@@ -307,7 +306,6 @@ gmtime$21:	; £temporary2830 = int_to_int £temporary2829 (Signed_Long_Int -> Si
 	neg eax
 
 gmtime$22:	; g_timeStruct$tm_wday = £temporary2830
-	mov [@4191$g_timeStruct + 24], eax
 
 gmtime$23:	; goto 28
 	jmp gmtime$28
@@ -327,7 +325,6 @@ gmtime$26:	; £temporary2834 = int_to_int £temporary2833 (Signed_Long_Int -> Si
 	neg edx
 
 gmtime$27:	; g_timeStruct$tm_wday = £temporary2834
-	mov [@4191$g_timeStruct + 24], edx
 
 gmtime$28:	; £temporary2835 = year % int4$4#
 	mov eax, [rbp + 32]
@@ -402,7 +399,6 @@ gmtime$45:	; £temporary2849 = year - int4$1900#
 	sub eax, 1900
 
 gmtime$46:	; g_timeStruct$tm_year = £temporary2849
-	mov [@4191$g_timeStruct + 20], eax
 
 gmtime$47:	; £temporary2851 = int_to_int totalDays (Signed_Long_Int -> Signed_Int)
 	mov rax, [rbp + 52]
@@ -412,7 +408,6 @@ gmtime$47:	; £temporary2851 = int_to_int totalDays (Signed_Long_Int -> Signed_I
 	neg eax
 
 gmtime$48:	; g_timeStruct$tm_yday = £temporary2851
-	mov [@4191$g_timeStruct + 28], eax
 
 gmtime$49:	; daysOfMonths[0] = int4$31#
 	mov dword [rbp + 68], 31
@@ -535,7 +530,6 @@ gmtime$80:	; goto 66
 
 gmtime$81:	; g_timeStruct$tm_mon = month
 	mov eax, [rbp + 116]
-	mov [@4191$g_timeStruct + 16], eax
 
 gmtime$82:	; £temporary2881 = totalDays + int8$1#
 	mov rax, [rbp + 52]
@@ -548,10 +542,9 @@ gmtime$83:	; £temporary2882 = int_to_int £temporary2881 (Signed_Long_Int -> Si
 	neg eax
 
 gmtime$84:	; g_timeStruct$tm_mday = £temporary2882
-	mov [@4191$g_timeStruct + 12], eax
 
 gmtime$85:	; g_timeStruct$tm_isdst = int4$minus1#
-	mov dword [@4191$g_timeStruct + 32], -1
+	mov eax, -1
 
 gmtime$86:	; return_value = staticaddress$@4191$g_timeStruct$0#
 	mov rbx, @4191$g_timeStruct

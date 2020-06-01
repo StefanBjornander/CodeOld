@@ -1454,9 +1454,9 @@ div$6:	; £temporary2766 = num / denum
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [rbp + 28]
+	mov ebx, eax
 
 div$7:	; result$quot = £temporary2766
-	mov [rbp + 32], eax
 
 div$8:	; £temporary2768 = num % denum
 	mov eax, [rbp + 24]
@@ -1464,7 +1464,6 @@ div$8:	; £temporary2768 = num % denum
 	idiv dword [rbp + 28]
 
 div$9:	; result$rem = £temporary2768
-	mov [rbp + 36], edx
 
 div$10:	; return_value = result
 	mov rbx, rbp
@@ -1505,9 +1504,9 @@ ldiv$6:	; £temporary2775 = num / denum
 	mov rax, [rbp + 24]
 	xor rdx, rdx
 	idiv qword [rbp + 32]
+	mov rbx, rax
 
 ldiv$7:	; result$quot = £temporary2775
-	mov [rbp + 40], rax
 
 ldiv$8:	; £temporary2777 = num % denum
 	mov rax, [rbp + 24]
@@ -1515,7 +1514,6 @@ ldiv$8:	; £temporary2777 = num % denum
 	idiv qword [rbp + 32]
 
 ldiv$9:	; result$rem = £temporary2777
-	mov [rbp + 48], rdx
 
 ldiv$10:	; return_value = result
 	mov rbx, rbp
