@@ -11,19 +11,19 @@ setlocale$1:	; if g_currStructPtr == int8$0# goto 5
 	cmp qword [@1403$g_currStructPtr], 0
 	je setlocale$5
 
-setlocale$2:	; £temporary462 -> g_currStructPtr = *g_currStructPtr
+setlocale$2:	; £field47 -> g_currStructPtr = *g_currStructPtr
 	mov rsi, [@1403$g_currStructPtr]
 
-setlocale$3:	; £temporary463 = £temporary462 -> g_currStructPtr
+setlocale$3:	; £temporary415 = £field47 -> g_currStructPtr
 	mov rax, [rsi]
 
 setlocale$4:	; goto 6
 	jmp setlocale$6
 
-setlocale$5:	; £temporary463 = int8$0#
+setlocale$5:	; £temporary415 = int8$0#
 	mov rax, 0
 
-setlocale$6:	; oldName = £temporary463
+setlocale$6:	; oldName = £temporary415
 	mov [rbp + 40], rax
 
 setlocale$7:	; g_currStructPtr = int8$0#
@@ -47,22 +47,22 @@ setlocale$12:	; parameter newName, offset 72
 	mov rax, [rbp + 28]
 	mov [rbp + 72], rax
 
-setlocale$13:	; £temporary468 = int_to_int index (Signed_Int -> Array)
+setlocale$13:	; £temporary419 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-setlocale$14:	; £temporary469 = £temporary468 * Array_#
+setlocale$14:	; £temporary420 = £temporary419 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
-setlocale$15:	; £temporary470 = sArray + £temporary469
+setlocale$15:	; £temporary421 = sArray + £temporary420
 	mov rsi, @1401$sArray
 	add rsi, rax
 
-setlocale$16:	; £temporary467 -> £temporary470 = *£temporary470
+setlocale$16:	; £field48 -> £temporary421 = *£temporary421
 
-setlocale$17:	; parameter £temporary467.name$0 -> £temporary470, offset 80
+setlocale$17:	; parameter £field48.name$0 -> £temporary421, offset 80
 	mov rax, [rsi]
 	mov [rbp + 80], rax
 
@@ -74,30 +74,30 @@ setlocale$18:	; call function noellipse-noellipse strcmp
 
 setlocale$19:	; post call
 
-setlocale$20:	; £temporary471 = return_value
+setlocale$20:	; £temporary422 = return_value
 
-setlocale$21:	; if £temporary471 != int4$0# goto 29
+setlocale$21:	; if £temporary422 != int4$0# goto 29
 	cmp ebx, 0
 	jne setlocale$29
 
-setlocale$22:	; £temporary474 = int_to_int index (Signed_Int -> Array)
+setlocale$22:	; £temporary424 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-setlocale$23:	; £temporary475 = £temporary474 * Array_#
+setlocale$23:	; £temporary425 = £temporary424 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
-setlocale$24:	; £temporary476 = sArray + £temporary475
+setlocale$24:	; £temporary426 = sArray + £temporary425
 	mov rsi, @1401$sArray
 	add rsi, rax
 
-setlocale$25:	; £temporary473 -> £temporary476 = *£temporary476
+setlocale$25:	; £field49 -> £temporary426 = *£temporary426
 
-setlocale$26:	; £temporary477 = &£temporary473 -> £temporary476
+setlocale$26:	; £temporary427 = &£field49 -> £temporary426
 
-setlocale$27:	; g_currStructPtr = £temporary477
+setlocale$27:	; g_currStructPtr = £temporary427
 	mov [@1403$g_currStructPtr], rsi
 
 setlocale$28:	; goto 31
@@ -124,19 +124,19 @@ localeconv:	; if g_currStructPtr == int8$0# goto 4
 	cmp qword [@1403$g_currStructPtr], 0
 	je localeconv$4
 
-localeconv$1:	; £temporary481 -> g_currStructPtr = *g_currStructPtr
+localeconv$1:	; £field50 -> g_currStructPtr = *g_currStructPtr
 	mov rsi, [@1403$g_currStructPtr]
 
-localeconv$2:	; £temporary482 = £temporary481 -> g_currStructPtr
+localeconv$2:	; £temporary431 = £field50 -> g_currStructPtr
 	mov rbx, [rsi + 8]
 
 localeconv$3:	; goto 5
 	jmp localeconv$5
 
-localeconv$4:	; £temporary482 = int8$0#
+localeconv$4:	; £temporary431 = int8$0#
 	mov rbx, 0
 
-localeconv$5:	; return_value = £temporary482
+localeconv$5:	; return_value = £temporary431
 
 localeconv$6:	; return
 	mov rax, [rbp]
