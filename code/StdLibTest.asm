@@ -16,7 +16,7 @@
 	extern atol
 	extern getenv
 	extern system
-	extern abs_
+	extern _abs
 	extern labs
 	extern div
 	extern ldiv
@@ -24,21 +24,21 @@
 	extern bsearch
 section .text
 
-compare:	; £temporary4936 = int_to_int valuePtr1 (Pointer -> Pointer)
+compare:	; £temporary5384 = int_to_int valuePtr1 (Pointer -> Pointer)
 	mov rsi, [rbp + 24]
 
-compare$1:	; £field448 -> £temporary4936 = *£temporary4936
+compare$1:	; £field5385 -> £temporary5384 = *£temporary5384
 
-compare$2:	; intValue1 = £field448 -> £temporary4936
+compare$2:	; intValue1 = £field5385 -> £temporary5384
 	mov eax, [rsi]
 	mov [rbp + 40], eax
 
-compare$3:	; £temporary4937 = int_to_int valuePtr2 (Pointer -> Pointer)
+compare$3:	; £temporary5386 = int_to_int valuePtr2 (Pointer -> Pointer)
 	mov rsi, [rbp + 32]
 
-compare$4:	; £field449 -> £temporary4937 = *£temporary4937
+compare$4:	; £field5387 -> £temporary5386 = *£temporary5386
 
-compare$5:	; intValue2 = £field449 -> £temporary4937
+compare$5:	; intValue2 = £field5387 -> £temporary5386
 	mov eax, [rsi]
 	mov [rbp + 44], eax
 
@@ -47,7 +47,7 @@ compare$6:	; if intValue1 >= intValue2 goto 9
 	cmp eax, [rbp + 44]
 	jge compare$9
 
-compare$7:	; £temporary4941 = int4$minus1#
+compare$7:	; £temporary5391 = int4$minus1#
 	mov eax, -1
 
 compare$8:	; goto 14
@@ -58,18 +58,18 @@ compare$9:	; if intValue1 != intValue2 goto 12
 	cmp eax, [rbp + 44]
 	jne compare$12
 
-compare$10:	; £temporary4940 = int4$0#
+compare$10:	; £temporary5390 = int4$0#
 	mov ebx, 0
 
 compare$11:	; goto 13
 	jmp compare$13
 
-compare$12:	; £temporary4940 = int4$1#
+compare$12:	; £temporary5390 = int4$1#
 	mov ebx, 1
 
-compare$13:	; £temporary4941 = £temporary4940
+compare$13:	; £temporary5391 = £temporary5390
 
-compare$14:	; return_value = £temporary4941
+compare$14:	; return_value = £temporary5391
 
 compare$15:	; return
 	mov rax, [rbp]
@@ -79,21 +79,21 @@ compare$15:	; return
 
 compare$16:	; function end compare
 
-reverse_compare:	; £temporary4942 = int_to_int valuePtr1 (Pointer -> Pointer)
+reverse_compare:	; £temporary5392 = int_to_int valuePtr1 (Pointer -> Pointer)
 	mov rsi, [rbp + 24]
 
-reverse_compare$1:	; £field450 -> £temporary4942 = *£temporary4942
+reverse_compare$1:	; £field5393 -> £temporary5392 = *£temporary5392
 
-reverse_compare$2:	; intValue1 = £field450 -> £temporary4942
+reverse_compare$2:	; intValue1 = £field5393 -> £temporary5392
 	mov eax, [rsi]
 	mov [rbp + 40], eax
 
-reverse_compare$3:	; £temporary4943 = int_to_int valuePtr2 (Pointer -> Pointer)
+reverse_compare$3:	; £temporary5394 = int_to_int valuePtr2 (Pointer -> Pointer)
 	mov rsi, [rbp + 32]
 
-reverse_compare$4:	; £field451 -> £temporary4943 = *£temporary4943
+reverse_compare$4:	; £field5395 -> £temporary5394 = *£temporary5394
 
-reverse_compare$5:	; intValue2 = £field451 -> £temporary4943
+reverse_compare$5:	; intValue2 = £field5395 -> £temporary5394
 	mov eax, [rsi]
 	mov [rbp + 44], eax
 
@@ -102,7 +102,7 @@ reverse_compare$6:	; if intValue1 >= intValue2 goto 9
 	cmp eax, [rbp + 44]
 	jge reverse_compare$9
 
-reverse_compare$7:	; £temporary4947 = int4$1#
+reverse_compare$7:	; £temporary5399 = int4$1#
 	mov eax, 1
 
 reverse_compare$8:	; goto 14
@@ -113,18 +113,18 @@ reverse_compare$9:	; if intValue1 != intValue2 goto 12
 	cmp eax, [rbp + 44]
 	jne reverse_compare$12
 
-reverse_compare$10:	; £temporary4946 = int4$0#
+reverse_compare$10:	; £temporary5398 = int4$0#
 	mov ebx, 0
 
 reverse_compare$11:	; goto 13
 	jmp reverse_compare$13
 
-reverse_compare$12:	; £temporary4946 = int4$minus1#
+reverse_compare$12:	; £temporary5398 = int4$minus1#
 	mov ebx, -1
 
-reverse_compare$13:	; £temporary4947 = £temporary4946
+reverse_compare$13:	; £temporary5399 = £temporary5398
 
-reverse_compare$14:	; return_value = £temporary4947
+reverse_compare$14:	; return_value = £temporary5399
 
 reverse_compare$15:	; return
 	mov rax, [rbp]
@@ -281,11 +281,11 @@ stdlib_test$4:	; call header integral zero 0 stack zero 0
 stdlib_test$5:	; parameter string_1232E456abc#, offset 372
 	mov qword [rbp + 372], string_1232E456abc#
 
-stdlib_test$6:	; £temporary4962 = &p
+stdlib_test$6:	; £temporary5418 = &p
 	mov rsi, rbp
 	add rsi, 324
 
-stdlib_test$7:	; parameter £temporary4962, offset 380
+stdlib_test$7:	; parameter £temporary5418, offset 380
 	mov [rbp + 380], rsi
 
 stdlib_test$8:	; call function noellipse-noellipse strtod
@@ -296,7 +296,7 @@ stdlib_test$8:	; call function noellipse-noellipse strtod
 
 stdlib_test$9:	; post call
 
-stdlib_test$10:	; £temporary4963 = return_value
+stdlib_test$10:	; £temporary5419 = return_value
 
 stdlib_test$11:	; pop float x
 	fstp qword [rbp + 348]
@@ -314,7 +314,7 @@ stdlib_test$14:	; call function noellipse-noellipse atof
 
 stdlib_test$15:	; post call
 
-stdlib_test$16:	; £temporary4964 = return_value
+stdlib_test$16:	; £temporary5420 = return_value
 
 stdlib_test$17:	; pop float y
 	fstp qword [rbp + 356]
@@ -324,11 +324,11 @@ stdlib_test$18:	; call header integral zero 0 stack zero 0
 stdlib_test$19:	; parameter string_123abc#, offset 388
 	mov qword [rbp + 388], string_123abc#
 
-stdlib_test$20:	; £temporary4965 = &q
+stdlib_test$20:	; £temporary5421 = &q
 	mov rsi, rbp
 	add rsi, 332
 
-stdlib_test$21:	; parameter £temporary4965, offset 396
+stdlib_test$21:	; parameter £temporary5421, offset 396
 	mov [rbp + 396], rsi
 
 stdlib_test$22:	; parameter int4$8#, offset 404
@@ -342,9 +342,9 @@ stdlib_test$23:	; call function noellipse-noellipse strtol
 
 stdlib_test$24:	; post call
 
-stdlib_test$25:	; £temporary4966 = return_value
+stdlib_test$25:	; £temporary5422 = return_value
 
-stdlib_test$26:	; l = £temporary4966
+stdlib_test$26:	; l = £temporary5422
 	mov [rbp + 364], rbx
 
 stdlib_test$27:	; call header integral zero 0 stack zero 0
@@ -352,11 +352,11 @@ stdlib_test$27:	; call header integral zero 0 stack zero 0
 stdlib_test$28:	; parameter string_123abc#, offset 396
 	mov qword [rbp + 396], string_123abc#
 
-stdlib_test$29:	; £temporary4967 = &r
+stdlib_test$29:	; £temporary5423 = &r
 	mov rsi, rbp
 	add rsi, 340
 
-stdlib_test$30:	; parameter £temporary4967, offset 404
+stdlib_test$30:	; parameter £temporary5423, offset 404
 	mov [rbp + 404], rsi
 
 stdlib_test$31:	; parameter int4$8#, offset 412
@@ -370,9 +370,9 @@ stdlib_test$32:	; call function noellipse-noellipse strtoul
 
 stdlib_test$33:	; post call
 
-stdlib_test$34:	; £temporary4968 = return_value
+stdlib_test$34:	; £temporary5424 = return_value
 
-stdlib_test$35:	; ul = £temporary4968
+stdlib_test$35:	; ul = £temporary5424
 	mov [rbp + 372], rbx
 
 stdlib_test$36:	; call header integral zero 0 stack zero 0
@@ -414,9 +414,9 @@ stdlib_test$46:	; call function noellipse-noellipse atoi
 
 stdlib_test$47:	; post call
 
-stdlib_test$48:	; £temporary4970 = return_value
+stdlib_test$48:	; £temporary5426 = return_value
 
-stdlib_test$49:	; parameter £temporary4970, offset 412
+stdlib_test$49:	; parameter £temporary5426, offset 412
 	mov [rbp + 412], ebx
 
 stdlib_test$50:	; call function noellipse-ellipse printf, extra 4
@@ -447,9 +447,9 @@ stdlib_test$56:	; call function noellipse-noellipse atol
 
 stdlib_test$57:	; post call
 
-stdlib_test$58:	; £temporary4972 = return_value
+stdlib_test$58:	; £temporary5428 = return_value
 
-stdlib_test$59:	; parameter £temporary4972, offset 412
+stdlib_test$59:	; parameter £temporary5428, offset 412
 	mov [rbp + 412], rbx
 
 stdlib_test$60:	; call function noellipse-ellipse printf, extra 8
@@ -551,9 +551,9 @@ stdlib_test$85:	; call function noellipse-noellipse getenv
 
 stdlib_test$86:	; post call
 
-stdlib_test$87:	; £temporary4977 = return_value
+stdlib_test$87:	; £temporary5433 = return_value
 
-stdlib_test$88:	; parameter £temporary4977, offset 56
+stdlib_test$88:	; parameter £temporary5433, offset 56
 	mov [rbp + 56], rbx
 
 stdlib_test$89:	; call function noellipse-ellipse printf, extra 8
@@ -607,13 +607,13 @@ stdlib_test$103:	; call function noellipse-noellipse abs
 	mov qword [rbp + 56], stdlib_test$104
 	mov [rbp + 64], rbp
 	add rbp, 56
-	jmp abs_
+	jmp _abs
 
 stdlib_test$104:	; post call
 
-stdlib_test$105:	; £temporary4981 = return_value
+stdlib_test$105:	; £temporary5437 = return_value
 
-stdlib_test$106:	; parameter £temporary4981, offset 56
+stdlib_test$106:	; parameter £temporary5437, offset 56
 	mov [rbp + 56], ebx
 
 stdlib_test$107:	; call header integral zero 0 stack zero 0
@@ -625,13 +625,13 @@ stdlib_test$109:	; call function noellipse-noellipse abs
 	mov qword [rbp + 60], stdlib_test$110
 	mov [rbp + 68], rbp
 	add rbp, 60
-	jmp abs_
+	jmp _abs
 
 stdlib_test$110:	; post call
 
-stdlib_test$111:	; £temporary4982 = return_value
+stdlib_test$111:	; £temporary5438 = return_value
 
-stdlib_test$112:	; parameter £temporary4982, offset 60
+stdlib_test$112:	; parameter £temporary5438, offset 60
 	mov [rbp + 60], ebx
 
 stdlib_test$113:	; call header integral zero 0 stack zero 0
@@ -648,9 +648,9 @@ stdlib_test$115:	; call function noellipse-noellipse labs
 
 stdlib_test$116:	; post call
 
-stdlib_test$117:	; £temporary4983 = return_value
+stdlib_test$117:	; £temporary5439 = return_value
 
-stdlib_test$118:	; parameter £temporary4983, offset 64
+stdlib_test$118:	; parameter £temporary5439, offset 64
 	mov [rbp + 64], rbx
 
 stdlib_test$119:	; call header integral zero 0 stack zero 0
@@ -667,9 +667,9 @@ stdlib_test$121:	; call function noellipse-noellipse labs
 
 stdlib_test$122:	; post call
 
-stdlib_test$123:	; £temporary4984 = return_value
+stdlib_test$123:	; £temporary5440 = return_value
 
-stdlib_test$124:	; parameter £temporary4984, offset 72
+stdlib_test$124:	; parameter £temporary5440, offset 72
 	mov [rbp + 72], rbx
 
 stdlib_test$125:	; call function noellipse-ellipse printf, extra 24
@@ -698,9 +698,9 @@ stdlib_test$130:	; call function noellipse-noellipse div
 
 stdlib_test$131:	; post call
 
-stdlib_test$132:	; £temporary4986 -> £temporary4987 = return_value
+stdlib_test$132:	; £temporary5442 -> £temporary5443 = return_value
 
-stdlib_test$133:	; i = £temporary4986 -> £temporary4987
+stdlib_test$133:	; i = £temporary5442 -> £temporary5443
 	mov rsi, rbp
 	add rsi, 24
 	mov al, 8
@@ -781,9 +781,9 @@ stdlib_test$147:	; call function noellipse-noellipse ldiv
 
 stdlib_test$148:	; post call
 
-stdlib_test$149:	; £temporary4990 -> £temporary4991 = return_value
+stdlib_test$149:	; £temporary5448 -> £temporary5449 = return_value
 
-stdlib_test$150:	; li = £temporary4990 -> £temporary4991
+stdlib_test$150:	; li = £temporary5448 -> £temporary5449
 	mov rsi, rbp
 	add rsi, 24
 	mov al, 16
@@ -888,23 +888,23 @@ stdlib_test$172:	; call header integral zero 0 stack zero 0
 stdlib_test$173:	; parameter string_25i20#, offset 72
 	mov qword [rbp + 72], string_25i20#
 
-stdlib_test$174:	; £temporary4997 = int_to_int index (Signed_Int -> Array)
+stdlib_test$174:	; £temporary5462 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
-stdlib_test$175:	; £temporary4999 = £temporary4997 * int8$4#
+stdlib_test$175:	; £temporary5464 = £temporary5462 * int8$4#
 	xor rdx, rdx
 	mul qword [int8$4#]
 
-stdlib_test$176:	; £temporary4998 = list + £temporary4999
+stdlib_test$176:	; £temporary5463 = list + £temporary5464
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
-stdlib_test$177:	; £field465 -> £temporary4998 = *£temporary4998
+stdlib_test$177:	; £field5465 -> £temporary5463 = *£temporary5463
 
-stdlib_test$178:	; parameter £field465 -> £temporary4998, offset 80
+stdlib_test$178:	; parameter £field5465 -> £temporary5463, offset 80
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -976,23 +976,23 @@ stdlib_test$196:	; call header integral zero 0 stack zero 0
 stdlib_test$197:	; parameter string_25i20#, offset 72
 	mov qword [rbp + 72], string_25i20#
 
-stdlib_test$198:	; £temporary5005 = int_to_int index (Signed_Int -> Array)
+stdlib_test$198:	; £temporary5472 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
-stdlib_test$199:	; £temporary5007 = £temporary5005 * int8$4#
+stdlib_test$199:	; £temporary5474 = £temporary5472 * int8$4#
 	xor rdx, rdx
 	mul qword [int8$4#]
 
-stdlib_test$200:	; £temporary5006 = list + £temporary5007
+stdlib_test$200:	; £temporary5473 = list + £temporary5474
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
-stdlib_test$201:	; £field467 -> £temporary5006 = *£temporary5006
+stdlib_test$201:	; £field5475 -> £temporary5473 = *£temporary5473
 
-stdlib_test$202:	; parameter £field467 -> £temporary5006, offset 80
+stdlib_test$202:	; parameter £field5475 -> £temporary5473, offset 80
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1064,23 +1064,23 @@ stdlib_test$220:	; call header integral zero 0 stack zero 0
 stdlib_test$221:	; parameter string_25i20#, offset 72
 	mov qword [rbp + 72], string_25i20#
 
-stdlib_test$222:	; £temporary5013 = int_to_int index (Signed_Int -> Array)
+stdlib_test$222:	; £temporary5482 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
-stdlib_test$223:	; £temporary5015 = £temporary5013 * int8$4#
+stdlib_test$223:	; £temporary5484 = £temporary5482 * int8$4#
 	xor rdx, rdx
 	mul qword [int8$4#]
 
-stdlib_test$224:	; £temporary5014 = list + £temporary5015
+stdlib_test$224:	; £temporary5483 = list + £temporary5484
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
-stdlib_test$225:	; £field469 -> £temporary5014 = *£temporary5014
+stdlib_test$225:	; £field5485 -> £temporary5483 = *£temporary5483
 
-stdlib_test$226:	; parameter £field469 -> £temporary5014, offset 80
+stdlib_test$226:	; parameter £field5485 -> £temporary5483, offset 80
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1123,11 +1123,11 @@ stdlib_test$236:	; if key >= int4$6# goto 265
 
 stdlib_test$237:	; call header integral zero 0 stack zero 0
 
-stdlib_test$238:	; £temporary5020 = &key
+stdlib_test$238:	; £temporary5490 = &key
 	mov rsi, rbp
 	add rsi, 44
 
-stdlib_test$239:	; parameter £temporary5020, offset 72
+stdlib_test$239:	; parameter £temporary5490, offset 72
 	mov [rbp + 72], rsi
 
 stdlib_test$240:	; parameter list, offset 80
@@ -1152,38 +1152,38 @@ stdlib_test$244:	; call function noellipse-noellipse bsearch
 
 stdlib_test$245:	; post call
 
-stdlib_test$246:	; £temporary5021 = return_value
+stdlib_test$246:	; £temporary5492 = return_value
 
-stdlib_test$247:	; £temporary5022 = int_to_int £temporary5021 (Pointer -> Pointer)
+stdlib_test$247:	; £temporary5493 = int_to_int £temporary5492 (Pointer -> Pointer)
 
-stdlib_test$248:	; p = £temporary5022
+stdlib_test$248:	; p = £temporary5493
 	mov [rbp + 48], rbx
 
 stdlib_test$249:	; if p == int8$0# goto 255
 	cmp qword [rbp + 48], 0
 	je stdlib_test$255
 
-stdlib_test$250:	; £temporary5025 = p - list
+stdlib_test$250:	; £temporary5496 = p - list
 	mov rax, [rbp + 48]
 	mov rbx, rbp
 	add rbx, 24
 	sub rax, rbx
 
-stdlib_test$251:	; £temporary5024 = £temporary5025 / int8$4#
+stdlib_test$251:	; £temporary5495 = £temporary5496 / int8$4#
 	xor rdx, rdx
 	div qword [int8$4#]
 
-stdlib_test$252:	; £temporary5026 = int_to_int £temporary5024 (Pointer -> Signed_Int)
+stdlib_test$252:	; £temporary5497 = int_to_int £temporary5495 (Pointer -> Signed_Int)
 
-stdlib_test$253:	; £temporary5027 = £temporary5026
+stdlib_test$253:	; £temporary5498 = £temporary5497
 
 stdlib_test$254:	; goto 256
 	jmp stdlib_test$256
 
-stdlib_test$255:	; £temporary5027 = int4$minus1#
+stdlib_test$255:	; £temporary5498 = int4$minus1#
 	mov eax, -1
 
-stdlib_test$256:	; index = £temporary5027
+stdlib_test$256:	; index = £temporary5498
 	mov [rbp + 56], eax
 
 stdlib_test$257:	; call header integral zero 0 stack zero 0

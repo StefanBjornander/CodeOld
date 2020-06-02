@@ -50,9 +50,9 @@ string_test$7:	; call function noellipse-noellipse strlen
 
 string_test$8:	; post call
 
-string_test$9:	; £temporary3508 = return_value
+string_test$9:	; £temporary3887 = return_value
 
-string_test$10:	; parameter £temporary3508, offset 284
+string_test$10:	; parameter £temporary3887, offset 284
 	mov [rbp + 284], ebx
 
 string_test$11:	; call function noellipse-ellipse printf, extra 12
@@ -104,11 +104,11 @@ string_test$22:	; call function noellipse-noellipse strncpy
 
 string_test$23:	; post call
 
-string_test$24:	; £field379 -> u = *u
+string_test$24:	; £field3891 -> u = *u
 	mov rsi, rbp
 	add rsi, 136
 
-string_test$25:	; £field379 -> u = int1$0#
+string_test$25:	; £field3891 -> u = int1$0#
 	mov byte [rsi + 5], 0
 
 string_test$26:	; call header integral zero 0 stack zero 0
@@ -165,9 +165,9 @@ string_test$39:	; call function noellipse-noellipse strlen
 
 string_test$40:	; post call
 
-string_test$41:	; £temporary3514 = return_value
+string_test$41:	; £temporary3894 = return_value
 
-string_test$42:	; i = £temporary3514
+string_test$42:	; i = £temporary3894
 	mov [rbp + 24], ebx
 
 string_test$43:	; call header integral zero 0 stack zero 0
@@ -190,22 +190,22 @@ string_test$47:	; call function noellipse-noellipse strncat
 
 string_test$48:	; post call
 
-string_test$49:	; £temporary3516 = i + int4$2#
+string_test$49:	; £temporary3896 = i + int4$2#
 	mov eax, [rbp + 24]
 	add eax, 2
 
-string_test$50:	; £temporary3517 = int_to_int £temporary3516 (Signed_Int -> Array)
+string_test$50:	; £temporary3898 = int_to_int £temporary3896 (Signed_Int -> Array)
 	mov rbx, 4294967295
 	and rax, rbx
 
-string_test$51:	; £temporary3519 = u + £temporary3517
+string_test$51:	; £temporary3900 = u + £temporary3898
 	mov rsi, rbp
 	add rsi, 136
 	add rsi, rax
 
-string_test$52:	; £field380 -> £temporary3519 = *£temporary3519
+string_test$52:	; £field3897 -> £temporary3900 = *£temporary3900
 
-string_test$53:	; £field380 -> £temporary3519 = int1$0#
+string_test$53:	; £field3897 -> £temporary3900 = int1$0#
 	mov byte [rsi], 0
 
 string_test$54:	; call header integral zero 0 stack zero 0
@@ -254,9 +254,9 @@ string_test$65:	; call function noellipse-noellipse strcmp
 
 string_test$66:	; post call
 
-string_test$67:	; £temporary3521 = return_value
+string_test$67:	; £temporary3902 = return_value
 
-string_test$68:	; parameter £temporary3521, offset 276
+string_test$68:	; parameter £temporary3902, offset 276
 	mov [rbp + 276], ebx
 
 string_test$69:	; call function noellipse-ellipse printf, extra 4
@@ -295,9 +295,9 @@ string_test$77:	; call function noellipse-noellipse strncmp
 
 string_test$78:	; post call
 
-string_test$79:	; £temporary3523 = return_value
+string_test$79:	; £temporary3904 = return_value
 
-string_test$80:	; parameter £temporary3523, offset 276
+string_test$80:	; parameter £temporary3904, offset 276
 	mov [rbp + 276], ebx
 
 string_test$81:	; call function noellipse-ellipse printf, extra 4
@@ -327,9 +327,9 @@ string_test$86:	; call function noellipse-noellipse strchr
 
 string_test$87:	; post call
 
-string_test$88:	; £temporary3525 = return_value
+string_test$88:	; £temporary3906 = return_value
 
-string_test$89:	; p = £temporary3525
+string_test$89:	; p = £temporary3906
 	mov [rbp + 236], rbx
 
 string_test$90:	; call header integral zero 0 stack zero 0
@@ -341,21 +341,21 @@ string_test$92:	; if p == int8$0# goto 97
 	cmp qword [rbp + 236], 0
 	je string_test$97
 
-string_test$93:	; £temporary3528 = p - s
+string_test$93:	; £temporary3909 = p - s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
-string_test$94:	; £temporary3529 = int_to_int £temporary3528 (Pointer -> Signed_Int)
+string_test$94:	; £temporary3910 = int_to_int £temporary3909 (Pointer -> Signed_Int)
 
-string_test$95:	; £temporary3530 = £temporary3529
+string_test$95:	; £temporary3911 = £temporary3910
 
 string_test$96:	; goto 98
 	jmp string_test$98
 
-string_test$97:	; £temporary3530 = int4$minus1#
+string_test$97:	; £temporary3911 = int4$minus1#
 	mov eax, -1
 
-string_test$98:	; parameter £temporary3530, offset 276
+string_test$98:	; parameter £temporary3911, offset 276
 	mov [rbp + 276], eax
 
 string_test$99:	; call function noellipse-ellipse printf, extra 4
@@ -385,9 +385,9 @@ string_test$104:	; call function noellipse-noellipse strrchr
 
 string_test$105:	; post call
 
-string_test$106:	; £temporary3532 = return_value
+string_test$106:	; £temporary3913 = return_value
 
-string_test$107:	; p = £temporary3532
+string_test$107:	; p = £temporary3913
 	mov [rbp + 236], rbx
 
 string_test$108:	; call header integral zero 0 stack zero 0
@@ -399,21 +399,21 @@ string_test$110:	; if p == int8$0# goto 115
 	cmp qword [rbp + 236], 0
 	je string_test$115
 
-string_test$111:	; £temporary3535 = p - s
+string_test$111:	; £temporary3916 = p - s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
-string_test$112:	; £temporary3536 = int_to_int £temporary3535 (Pointer -> Signed_Int)
+string_test$112:	; £temporary3917 = int_to_int £temporary3916 (Pointer -> Signed_Int)
 
-string_test$113:	; £temporary3537 = £temporary3536
+string_test$113:	; £temporary3918 = £temporary3917
 
 string_test$114:	; goto 116
 	jmp string_test$116
 
-string_test$115:	; £temporary3537 = int4$minus1#
+string_test$115:	; £temporary3918 = int4$minus1#
 	mov eax, -1
 
-string_test$116:	; parameter £temporary3537, offset 276
+string_test$116:	; parameter £temporary3918, offset 276
 	mov [rbp + 276], eax
 
 string_test$117:	; call function noellipse-ellipse printf, extra 4
@@ -443,9 +443,9 @@ string_test$122:	; call function noellipse-noellipse strchr
 
 string_test$123:	; post call
 
-string_test$124:	; £temporary3539 = return_value
+string_test$124:	; £temporary3920 = return_value
 
-string_test$125:	; p = £temporary3539
+string_test$125:	; p = £temporary3920
 	mov [rbp + 236], rbx
 
 string_test$126:	; call header integral zero 0 stack zero 0
@@ -457,21 +457,21 @@ string_test$128:	; if p == int8$0# goto 133
 	cmp qword [rbp + 236], 0
 	je string_test$133
 
-string_test$129:	; £temporary3542 = p - s
+string_test$129:	; £temporary3923 = p - s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
-string_test$130:	; £temporary3543 = int_to_int £temporary3542 (Pointer -> Signed_Int)
+string_test$130:	; £temporary3924 = int_to_int £temporary3923 (Pointer -> Signed_Int)
 
-string_test$131:	; £temporary3544 = £temporary3543
+string_test$131:	; £temporary3925 = £temporary3924
 
 string_test$132:	; goto 134
 	jmp string_test$134
 
-string_test$133:	; £temporary3544 = int4$minus1#
+string_test$133:	; £temporary3925 = int4$minus1#
 	mov eax, -1
 
-string_test$134:	; parameter £temporary3544, offset 276
+string_test$134:	; parameter £temporary3925, offset 276
 	mov [rbp + 276], eax
 
 string_test$135:	; call function noellipse-ellipse printf, extra 4
@@ -501,9 +501,9 @@ string_test$140:	; call function noellipse-noellipse strrchr
 
 string_test$141:	; post call
 
-string_test$142:	; £temporary3546 = return_value
+string_test$142:	; £temporary3927 = return_value
 
-string_test$143:	; p = £temporary3546
+string_test$143:	; p = £temporary3927
 	mov [rbp + 236], rbx
 
 string_test$144:	; call header integral zero 0 stack zero 0
@@ -515,21 +515,21 @@ string_test$146:	; if p == int8$0# goto 151
 	cmp qword [rbp + 236], 0
 	je string_test$151
 
-string_test$147:	; £temporary3549 = p - s
+string_test$147:	; £temporary3930 = p - s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
-string_test$148:	; £temporary3550 = int_to_int £temporary3549 (Pointer -> Signed_Int)
+string_test$148:	; £temporary3931 = int_to_int £temporary3930 (Pointer -> Signed_Int)
 
-string_test$149:	; £temporary3551 = £temporary3550
+string_test$149:	; £temporary3932 = £temporary3931
 
 string_test$150:	; goto 152
 	jmp string_test$152
 
-string_test$151:	; £temporary3551 = int4$minus1#
+string_test$151:	; £temporary3932 = int4$minus1#
 	mov eax, -1
 
-string_test$152:	; parameter £temporary3551, offset 276
+string_test$152:	; parameter £temporary3932, offset 276
 	mov [rbp + 276], eax
 
 string_test$153:	; call function noellipse-ellipse printf, extra 4
@@ -602,11 +602,11 @@ string_test$171:	; call function noellipse-noellipse memset
 
 string_test$172:	; post call
 
-string_test$173:	; £field381 -> u = *u
+string_test$173:	; £field3937 -> u = *u
 	mov rsi, rbp
 	add rsi, 136
 
-string_test$174:	; £field381 -> u = int1$0#
+string_test$174:	; £field3937 -> u = int1$0#
 	mov byte [rsi + 21], 0
 
 string_test$175:	; call header integral zero 0 stack zero 0
@@ -656,9 +656,9 @@ string_test$186:	; call function noellipse-noellipse memchr
 
 string_test$187:	; post call
 
-string_test$188:	; £temporary3557 = return_value
+string_test$188:	; £temporary3939 = return_value
 
-string_test$189:	; p = £temporary3557
+string_test$189:	; p = £temporary3939
 	mov [rbp + 236], rbx
 
 string_test$190:	; call header integral zero 0 stack zero 0
@@ -670,21 +670,21 @@ string_test$192:	; if p == int8$0# goto 197
 	cmp qword [rbp + 236], 0
 	je string_test$197
 
-string_test$193:	; £temporary3560 = p - s
+string_test$193:	; £temporary3942 = p - s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
-string_test$194:	; £temporary3561 = int_to_int £temporary3560 (Pointer -> Signed_Int)
+string_test$194:	; £temporary3943 = int_to_int £temporary3942 (Pointer -> Signed_Int)
 
-string_test$195:	; £temporary3562 = £temporary3561
+string_test$195:	; £temporary3944 = £temporary3943
 
 string_test$196:	; goto 198
 	jmp string_test$198
 
-string_test$197:	; £temporary3562 = int4$minus1#
+string_test$197:	; £temporary3944 = int4$minus1#
 	mov eax, -1
 
-string_test$198:	; parameter £temporary3562, offset 276
+string_test$198:	; parameter £temporary3944, offset 276
 	mov [rbp + 276], eax
 
 string_test$199:	; call function noellipse-ellipse printf, extra 4
@@ -717,9 +717,9 @@ string_test$205:	; call function noellipse-noellipse memchr
 
 string_test$206:	; post call
 
-string_test$207:	; £temporary3564 = return_value
+string_test$207:	; £temporary3946 = return_value
 
-string_test$208:	; p = £temporary3564
+string_test$208:	; p = £temporary3946
 	mov [rbp + 236], rbx
 
 string_test$209:	; call header integral zero 0 stack zero 0
@@ -731,21 +731,21 @@ string_test$211:	; if p == int8$0# goto 216
 	cmp qword [rbp + 236], 0
 	je string_test$216
 
-string_test$212:	; £temporary3567 = p - s
+string_test$212:	; £temporary3949 = p - s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
-string_test$213:	; £temporary3568 = int_to_int £temporary3567 (Pointer -> Signed_Int)
+string_test$213:	; £temporary3950 = int_to_int £temporary3949 (Pointer -> Signed_Int)
 
-string_test$214:	; £temporary3569 = £temporary3568
+string_test$214:	; £temporary3951 = £temporary3950
 
 string_test$215:	; goto 217
 	jmp string_test$217
 
-string_test$216:	; £temporary3569 = int4$minus1#
+string_test$216:	; £temporary3951 = int4$minus1#
 	mov eax, -1
 
-string_test$217:	; parameter £temporary3569, offset 276
+string_test$217:	; parameter £temporary3951, offset 276
 	mov [rbp + 276], eax
 
 string_test$218:	; call function noellipse-ellipse printf, extra 4
@@ -784,9 +784,9 @@ string_test$226:	; call function noellipse-noellipse memcmp
 
 string_test$227:	; post call
 
-string_test$228:	; £temporary3571 = return_value
+string_test$228:	; £temporary3953 = return_value
 
-string_test$229:	; parameter £temporary3571, offset 276
+string_test$229:	; parameter £temporary3953, offset 276
 	mov [rbp + 276], ebx
 
 string_test$230:	; call function noellipse-ellipse printf, extra 4
@@ -821,9 +821,9 @@ string_test$237:	; call function noellipse-noellipse strspn
 
 string_test$238:	; post call
 
-string_test$239:	; £temporary3573 = return_value
+string_test$239:	; £temporary3955 = return_value
 
-string_test$240:	; parameter £temporary3573, offset 276
+string_test$240:	; parameter £temporary3955, offset 276
 	mov [rbp + 276], ebx
 
 string_test$241:	; call function noellipse-ellipse printf, extra 4
@@ -858,9 +858,9 @@ string_test$248:	; call function noellipse-noellipse strcspn
 
 string_test$249:	; post call
 
-string_test$250:	; £temporary3575 = return_value
+string_test$250:	; £temporary3957 = return_value
 
-string_test$251:	; parameter £temporary3575, offset 276
+string_test$251:	; parameter £temporary3957, offset 276
 	mov [rbp + 276], ebx
 
 string_test$252:	; call function noellipse-ellipse printf, extra 4
@@ -892,9 +892,9 @@ string_test$258:	; call function noellipse-noellipse strerror
 
 string_test$259:	; post call
 
-string_test$260:	; £temporary3577 = return_value
+string_test$260:	; £temporary3959 = return_value
 
-string_test$261:	; parameter £temporary3577, offset 276
+string_test$261:	; parameter £temporary3959, offset 276
 	mov [rbp + 276], rbx
 
 string_test$262:	; call function noellipse-ellipse printf, extra 8
@@ -924,9 +924,9 @@ string_test$267:	; call function noellipse-noellipse strtok
 
 string_test$268:	; post call
 
-string_test$269:	; £temporary3579 = return_value
+string_test$269:	; £temporary3961 = return_value
 
-string_test$270:	; p = £temporary3579
+string_test$270:	; p = £temporary3961
 	mov [rbp + 236], rbx
 
 string_test$271:	; if p == int8$0# goto 285
@@ -969,9 +969,9 @@ string_test$280:	; call function noellipse-noellipse strtok
 
 string_test$281:	; post call
 
-string_test$282:	; £temporary3582 = return_value
+string_test$282:	; £temporary3964 = return_value
 
-string_test$283:	; p = £temporary3582
+string_test$283:	; p = £temporary3964
 	mov [rbp + 236], rbx
 
 string_test$284:	; goto 271

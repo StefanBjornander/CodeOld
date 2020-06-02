@@ -26,10 +26,10 @@ divide$3:	; push float x
 divide$4:	; push float y
 	fld qword [rbp + 32]
 
-divide$5:	; £temporary3675 = x / y
+divide$5:	; £temporary4057 = x / y
 	fdiv 
 
-divide$6:	; return_value = £temporary3675
+divide$6:	; return_value = £temporary4057
 
 divide$7:	; return
 	mov rax, [rbp]
@@ -68,10 +68,10 @@ divide$15:	; call header integral zero 0 stack zero 0
 divide$16:	; parameter buffer, offset 72
 	mov qword [rbp + 72], buffer
 
-divide$17:	; £temporary3677 = int_to_int p (Pointer -> Signed_Int)
+divide$17:	; £temporary4059 = int_to_int p (Pointer -> Signed_Int)
 	mov rax, [rbp + 40]
 
-divide$18:	; parameter £temporary3677, offset 80
+divide$18:	; parameter £temporary4059, offset 80
 	mov [rbp + 80], eax
 
 divide$19:	; call function noellipse-noellipse longjmp
@@ -117,9 +117,9 @@ invers$5:	; call function noellipse-noellipse divide
 
 invers$6:	; post call
 
-invers$7:	; £temporary3684 = return_value
+invers$7:	; £temporary4066 = return_value
 
-invers$8:	; return_value = £temporary3684
+invers$8:	; return_value = £temporary4066
 
 invers$9:	; return
 	mov rax, [rbp]
@@ -144,13 +144,13 @@ setjmp_test$3:	; call function noellipse-noellipse setjmp
 
 setjmp_test$4:	; post call
 
-setjmp_test$5:	; £temporary3687 = return_value
+setjmp_test$5:	; £temporary4069 = return_value
 
-setjmp_test$6:	; £temporary3688 = int_to_int £temporary3687 (Signed_Int -> Pointer)
+setjmp_test$6:	; £temporary4070 = int_to_int £temporary4069 (Signed_Int -> Pointer)
 	mov rax, 4294967295
 	and rbx, rax
 
-setjmp_test$7:	; p = £temporary3688
+setjmp_test$7:	; p = £temporary4070
 	mov [rbp + 32], rbx
 
 setjmp_test$8:	; if p != int8$0# goto 23
@@ -184,9 +184,9 @@ setjmp_test$16:	; call function noellipse-noellipse invers
 
 setjmp_test$17:	; post call
 
-setjmp_test$18:	; £temporary3690 = return_value
+setjmp_test$18:	; £temporary4072 = return_value
 
-setjmp_test$19:	; parameter £temporary3690, offset 80
+setjmp_test$19:	; parameter £temporary4072, offset 80
 	fstp qword [rbp + 80]
 
 setjmp_test$20:	; call function noellipse-ellipse printf, extra 16
