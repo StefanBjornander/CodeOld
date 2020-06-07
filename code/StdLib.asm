@@ -763,25 +763,22 @@ srand$2:	; return
 
 srand$3:	; function end srand
 
-print_heap2:	; £field2642 -> int8$32764# = *int8$32764#
-	mov rsi, 32764
+print_heap2:	; £temporary2642 = int_to_int int8$CCompiler.StaticValue# (Pointer -> Unsigned_Int)
+	mov rax, [int8$CCompiler.StaticValue#]
 
-print_heap2$1:	; heapBottom = £field2642 -> int8$32764#
-	mov eax, [rsi]
+print_heap2$1:	; heapBottom = £temporary2642
 	mov [rbp + 24], eax
 
-print_heap2$2:	; £field2643 -> int8$32766# = *int8$32766#
-	mov rsi, 32766
+print_heap2$2:	; £temporary2643 = int_to_int int8$CCompiler.StaticValue# (Pointer -> Unsigned_Int)
+	mov rax, [int8$CCompiler.StaticValue#]
 
-print_heap2$3:	; topStack = £field2643 -> int8$32766#
-	mov eax, [rsi]
+print_heap2$3:	; topStack = £temporary2643
 	mov [rbp + 28], eax
 
-print_heap2$4:	; £field2644 -> int8$32762# = *int8$32762#
-	mov rsi, 32762
+print_heap2$4:	; £temporary2644 = int_to_int int8$CCompiler.StaticValue# (Pointer -> Unsigned_Int)
+	mov rax, [int8$CCompiler.StaticValue#]
 
-print_heap2$5:	; heapTop = £field2644 -> int8$32762#
-	mov eax, [rsi]
+print_heap2$5:	; heapTop = £temporary2644
 	mov [rbp + 32], eax
 
 print_heap2$6:	; index = int4$0#
