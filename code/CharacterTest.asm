@@ -900,65 +900,65 @@ $IntegralStorage#:
 	times 8 db 0
 
 string_ascii2025i0A#:
-	; init String
+	; initializer String
 	db "ascii %i", 10, 0
 
 string_islower282725c2729203D2025s0A#:
-	; init String
+	; initializer String
 	db "islower(", 39, "%c", 39, ") = %s", 10, 0
 
 string_Yes#:
-	; init String
+	; initializer String
 	db "Yes", 0
 
 string_No#:
-	; init String
+	; initializer String
 	db "No", 0
 
 string_isupper282725c2729203D2025s0A#:
-	; init String
+	; initializer String
 	db "isupper(", 39, "%c", 39, ") = %s", 10, 0
 
 string_isalpha282725c2729203D2025s0A#:
-	; init String
+	; initializer String
 	db "isalpha(", 39, "%c", 39, ") = %s", 10, 0
 
 string_isdigit282725c2729203D2025s0A#:
-	; init String
+	; initializer String
 	db "isdigit(", 39, "%c", 39, ") = %s", 10, 0
 
 string_isalnum282725c2729203D2025s0A#:
-	; init String
+	; initializer String
 	db "isalnum(", 39, "%c", 39, ") = %s", 10, 0
 
 string_isxdigit282725c2729203D2025s0A#:
-	; init String
+	; initializer String
 	db "isxdigit(", 39, "%c", 39, ") = %s", 10, 0
 
 string_isgraph282725c2729203D2025s0A#:
-	; init String
+	; initializer String
 	db "isgraph(", 39, "%c", 39, ") = %s", 10, 0
 
 string_isprint282725c2729203D2025s0A#:
-	; init String
+	; initializer String
 	db "isprint(", 39, "%c", 39, ") = %s", 10, 0
 
 string_ispunct282725c2729203D2025s0A#:
-	; init String
+	; initializer String
 	db "ispunct(", 39, "%c", 39, ") = %s", 10, 0
 
 string_iscntrl282725c2729203D2025s0A#:
-	; init String
+	; initializer String
 	db "iscntrl(", 39, "%c", 39, ") = %s", 10, 0
 
 string_isspace282725c2729203D2025s0A#:
-	; init String
+	; initializer String
 	db "isspace(", 39, "%c", 39, ") = %s", 10, 0
 
 string_tolower282725c2729203D202725c270A#:
-	; init String
+	; initializer String
 	db "tolower(", 39, "%c", 39, ") = ", 39, "%c", 39, 10, 0
 
 string_toupper282725c2729203D202725c270A0A#:
-	; init String
+	; initializer String
 	db "toupper(", 39, "%c", 39, ") = ", 39, "%c", 39, 10, 10, 0

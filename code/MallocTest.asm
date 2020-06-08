@@ -797,9 +797,9 @@ $IntegralStorage#:
 	times 8 db 0
 
 string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#:
-	; init String
+	; initializer String
 	db "Stack Top: %u, Low Heap: %u", 10, 0
 
 string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#:
-	; init String
+	; initializer String
 	db "Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u", 10, 0

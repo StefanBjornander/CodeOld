@@ -1954,37 +1954,37 @@ stderr:
 	dd 66
 
 Array_#:
-	; init Array
+	; initializer Array
 	dq 41
 
 string_r#:
-	; init String
+	; initializer String
 	db "r", 0
 
 string_w#:
-	; init String
+	; initializer String
 	db "w", 0
 
 string_a#:
-	; init String
+	; initializer String
 	db "a", 0
 
 string_r2B#:
-	; init String
+	; initializer String
 	db "r+", 0
 
 string_w2B#:
-	; init String
+	; initializer String
 	db "w+", 0
 
 string_a2B#:
-	; init String
+	; initializer String
 	db "a+", 0
 
 string_25c#:
-	; init String
+	; initializer String
 	db "%c", 0
 
 string_25s3A2025s2E0A#:
-	; init String
+	; initializer String
 	db "%s: %s.", 10, 0

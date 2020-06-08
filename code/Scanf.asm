@@ -3479,13 +3479,13 @@ g_inCount:
 	times 4 db 0
 
 int8$10#:
-	; init Signed_Long_Int
+	; initializer Signed_Long_Int
 	dq 10
 
 float8$10.0#:
-	; init Long_Double
+	; initializer Long_Double
 	dq 10.0
 
 string_scanFormat20c203D202725c270A#:
-	; init String
+	; initializer String
 	db "scanFormat c = ", 39, "%c", 39, 10, 0

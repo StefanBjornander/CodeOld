@@ -763,22 +763,25 @@ srand$2:	; return
 
 srand$3:	; function end srand
 
-print_heap2:	; £temporary2642 = int_to_int int8$CCompiler.StaticValue# (Pointer -> Unsigned_Int)
-	mov rax, [int8$CCompiler.StaticValue#]
+print_heap2:	; £field2642 -> int8$32764# = *int8$32764#
+	mov rsi, 32764
 
-print_heap2$1:	; heapBottom = £temporary2642
+print_heap2$1:	; heapBottom = £field2642 -> int8$32764#
+	mov eax, [rsi]
 	mov [rbp + 24], eax
 
-print_heap2$2:	; £temporary2643 = int_to_int int8$CCompiler.StaticValue# (Pointer -> Unsigned_Int)
-	mov rax, [int8$CCompiler.StaticValue#]
+print_heap2$2:	; £field2643 -> int8$32766# = *int8$32766#
+	mov rsi, 32766
 
-print_heap2$3:	; topStack = £temporary2643
+print_heap2$3:	; topStack = £field2643 -> int8$32766#
+	mov eax, [rsi]
 	mov [rbp + 28], eax
 
-print_heap2$4:	; £temporary2644 = int_to_int int8$CCompiler.StaticValue# (Pointer -> Unsigned_Int)
-	mov rax, [int8$CCompiler.StaticValue#]
+print_heap2$4:	; £field2644 -> int8$32762# = *int8$32762#
+	mov rsi, 32762
 
-print_heap2$5:	; heapTop = £temporary2644
+print_heap2$5:	; heapTop = £field2644 -> int8$32762#
+	mov eax, [rsi]
 	mov [rbp + 32], eax
 
 print_heap2$6:	; index = int4$0#
@@ -1531,42 +1534,42 @@ $IntegralStorage#:
 	times 8 db 0
 
 string_25li25n#:
-	; init String
+	; initializer String
 	db "%li%n", 0
 
 string_25lu25n#:
-	; init String
+	; initializer String
 	db "%lu%n", 0
 
 string_25lf25n#:
-	; init String
+	; initializer String
 	db "%lf%n", 0
 
 int4$2#:
-	; init Signed_Int
+	; initializer Signed_Int
 	dd 2
 
 @3822$g_randValue:
 	times 8 db 0
 
 int8$1664525#:
-	; init Signed_Long_Int
+	; initializer Signed_Long_Int
 	dq 1664525
 
 int8$127#:
-	; init Signed_Long_Int
+	; initializer Signed_Long_Int
 	dq 127
 
 string_stack20top2025u2C20heap20top2025u2C20heap20bottom2025u0A#:
-	; init String
+	; initializer String
 	db "stack top %u, heap top %u, heap bottom %u", 10, 0
 
 string_2020index2025u2C20address2025u2C20size2025u0A#:
-	; init String
+	; initializer String
 	db "  index %u, address %u, size %u", 10, 0
 
 string_0A#:
-	; init String
+	; initializer String
 	db 10, 0
 
 g_funcArray:
@@ -1574,13 +1577,13 @@ g_funcArray:
 	times 2040 db 0
 
 string_Added20function20index2025i3A2025i0A#:
-	; init String
+	; initializer String
 	db "Added function index %i: %i", 10, 0
 
 Array_#:
-	; init Array
+	; initializer Array
 	dq 8
 
 string_Called20function20index2025i3A2025i0A#:
-	; init String
+	; initializer String
 	db "Called function index %i: %i", 10, 0

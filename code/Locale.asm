@@ -639,5 +639,5 @@ string_SE#:
 	dq @1401$sArray
 
 Array_#:
-	; init Array
+	; initializer Array
 	dq 16

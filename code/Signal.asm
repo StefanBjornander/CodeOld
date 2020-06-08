@@ -125,13 +125,13 @@ $IntegralStorage#:
 	times 8 db 0
 
 string_Raise20default0A#:
-	; init String
+	; initializer String
 	db "Raise default", 10, 0
 
 string_Raise20error0A#:
-	; init String
+	; initializer String
 	db "Raise error", 10, 0
 
 string_Raise20function2C20calling2025i20with2025i0A#:
-	; init String
+	; initializer String
 	db "Raise function, calling %i with %i", 10, 0

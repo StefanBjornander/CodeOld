@@ -1929,8 +1929,8 @@ file_test$546:	; personVector[0].name[13] = int1$111#
 file_test$547:	; personVector[0].name[14] = int1$110#
 	mov byte [rbp + 54], 110
 
-file_test$548:	; personVector[0].name[15] = int1$0#
-	mov byte [rbp + 55], 0
+file_test$548:	; personVector[0].name[15] = int1$48#
+	mov byte [rbp + 55], 48
 
 file_test$549:	; personVector[0].phone = int4$12345#
 	mov dword [rbp + 88], 12345
@@ -1986,8 +1986,8 @@ file_test$565:	; personVector[1].name[15] = int1$111#
 file_test$566:	; personVector[1].name[16] = int1$110#
 	mov byte [rbp + 108], 110
 
-file_test$567:	; personVector[1].name[17] = int1$0#
-	mov byte [rbp + 109], 0
+file_test$567:	; personVector[1].name[17] = int1$48#
+	mov byte [rbp + 109], 48
 
 file_test$568:	; personVector[1].phone = int4$23456#
 	mov dword [rbp + 140], 23456
@@ -2040,8 +2040,8 @@ file_test$583:	; personVector[2].name[14] = int1$111#
 file_test$584:	; personVector[2].name[15] = int1$110#
 	mov byte [rbp + 159], 110
 
-file_test$585:	; personVector[2].name[16] = int1$0#
-	mov byte [rbp + 160], 0
+file_test$585:	; personVector[2].name[16] = int1$48#
+	mov byte [rbp + 160], 48
 
 file_test$586:	; personVector[2].phone = int4$24567#
 	mov dword [rbp + 192], 24567
@@ -2951,225 +2951,225 @@ $IntegralStorage#:
 	times 8 db 0
 
 string_r#:
-	; init String
+	; initializer String
 	db "r", 0
 
 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
-	; init String
+	; initializer String
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 string_inFilePtrPtr20213D20NULL#:
-	; init String
+	; initializer String
 	db "inFilePtrPtr != NULL", 0
 
 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
-	; init String
+	; initializer String
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
 
 string_w#:
-	; init String
+	; initializer String
 	db "w", 0
 
 string_outFilePtrPtr20213D20NULL#:
-	; init String
+	; initializer String
 	db "outFilePtrPtr != NULL", 0
 
 string_25i#:
-	; init String
+	; initializer String
 	db "%i", 0
 
 string_25lf#:
-	; init String
+	; initializer String
 	db "%lf", 0
 
 string_25f0A#:
-	; init String
+	; initializer String
 	db "%f", 10, 0
 
 string_X#:
-	; init String
+	; initializer String
 	db "X", 0
 
 string_Y#:
-	; init String
+	; initializer String
 	db "Y", 0
 
 string_2225s2220has20been20renamed20to202225s222E0A#:
-	; init String
+	; initializer String
 	db 34, "%s", 34, " has been renamed to ", 34, "%s", 34, ".", 10, 0
 
 string_Error2025i3A2025s2E0A#:
-	; init String
+	; initializer String
 	db "Error %i: %s.", 10, 0
 
 string_Z#:
-	; init String
+	; initializer String
 	db "Z", 0
 
 string_2225s2220has20been20removed2E0A#:
-	; init String
+	; initializer String
 	db 34, "%s", 34, " has been removed.", 10, 0
 
 string_PBook2Etxt#:
-	; init String
+	; initializer String
 	db "PBook.txt", 0
 
 string_inFilePtr20213D20NULL#:
-	; init String
+	; initializer String
 	db "inFilePtr != NULL", 0
 
 string_0A252D24s20252D24s0A#:
-	; init String
+	; initializer String
 	db 10, "%-24s %-24s", 10, 0
 
 string_Name#:
-	; init String
+	; initializer String
 	db "Name", 0
 
 string_Phone#:
-	; init String
+	; initializer String
 	db "Phone", 0
 
 string_252D24s20252D24s0A#:
-	; init String
+	; initializer String
 	db "%-24s %-24s", 10, 0
 
 string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#:
-	; init String
+	; initializer String
 	db "========================", 0
 
 string_25s25s#:
-	; init String
+	; initializer String
 	db "%s%s", 0
 
 string_0A#:
-	; init String
+	; initializer String
 	db 10, 0
 
 string_Flow12Etxt#:
-	; init String
+	; initializer String
 	db "Flow1.txt", 0
 
 string_Flow22Etxt#:
-	; init String
+	; initializer String
 	db "Flow2.txt", 0
 
 string_outFilePtr20213D20NULL#:
-	; init String
+	; initializer String
 	db "outFilePtr != NULL", 0
 
 string_Test2Ebin#:
-	; init String
+	; initializer String
 	db "Test.bin", 0
 
 string_size12025i0A#:
-	; init String
+	; initializer String
 	db "size1 %i", 10, 0
 
 string_index12025i3A20value2025f0A#:
-	; init String
+	; initializer String
 	db "index1 %i: value %f", 10, 0
 
 string_size22025i0A#:
-	; init String
+	; initializer String
 	db "size2 %i", 10, 0
 
 string_index22025i3A20value2025f0A#:
-	; init String
+	; initializer String
 	db "index2 %i: value %f", 10, 0
 
 string_size32025i20total2025i0A#:
-	; init String
+	; initializer String
 	db "size3 %i total %i", 10, 0
 
 string_p20213D20NULL#:
-	; init String
+	; initializer String
 	db "p != NULL", 0
 
 string_malloc2025u2025u2025u0A#:
-	; init String
+	; initializer String
 	db "malloc %u %u %u", 10, 0
 
 string_index32025i3A20value2025f0A#:
-	; init String
+	; initializer String
 	db "index3 %i: value %f", 10, 0
 
 string_Adam20Bertilsson#:
-	; init String
+	; initializer String
 	db "Adam Bertilsson", 0
 
 string_Bertil20Ceasarsson#:
-	; init String
+	; initializer String
 	db "Bertil Ceasarsson", 0
 
 string_Ceasar20Davidsson#:
-	; init String
+	; initializer String
 	db "Ceasar Davidsson", 0
 
 string_Block2Ebin#:
-	; init String
+	; initializer String
 	db "Block.bin", 0
 
 string_Name20203A2025s0A#:
-	; init String
+	; initializer String
 	db "Name  : %s", 10, 0
 
 string_Phone203A2025d0A#:
-	; init String
+	; initializer String
 	db "Phone : %d", 10, 0
 
 string_Test12Etxt#:
-	; init String
+	; initializer String
 	db "Test1.txt", 0
 
 string_0A0A#:
-	; init String
+	; initializer String
 	db 10, 10, 0
 
 string_fileexists20X2025s0A#:
-	; init String
+	; initializer String
 	db "fileexists X %s", 10, 0
 
 string_Yes#:
-	; init String
+	; initializer String
 	db "Yes", 0
 
 string_No#:
-	; init String
+	; initializer String
 	db "No", 0
 
 string_fileexists20Y2025s0A0A#:
-	; init String
+	; initializer String
 	db "fileexists Y %s", 10, 10, 0
 
 string_PBookX2Etxt#:
-	; init String
+	; initializer String
 	db "PBookX.txt", 0
 
 string_r2B#:
-	; init String
+	; initializer String
 	db "r+", 0
 
 string_inOutFilePtr20213D20NULL#:
-	; init String
+	; initializer String
 	db "inOutFilePtr != NULL", 0
 
 string_tempFilePtr20213D20NULL#:
-	; init String
+	; initializer String
 	db "tempFilePtr != NULL", 0
 
 string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A#:
-	; init String
+	; initializer String
 	db 10, "------------", 10, 0
 
 Array_#:
-	; init Array
+	; initializer Array
 	dq 8
 
 int4$8#:
-	; init Signed_Int
+	; initializer Signed_Int
 	dd 8
 
 int8$8#:
-	; init Pointer
+	; initializer Pointer
 	dq 8

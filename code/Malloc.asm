@@ -932,33 +932,33 @@ g_firstBlockPtr:
 	dq 0
 
 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
-	; init String
+	; initializer String
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 string_memorySize203E3D200#:
-	; init String
+	; initializer String
 	db "memorySize >= 0", 0
 
 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#:
-	; init String
+	; initializer String
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c", 0
 
 string_newMemorySize203E3D200#:
-	; init String
+	; initializer String
 	db "newMemorySize >= 0", 0
 
 string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#:
-	; init String
+	; initializer String
 	db "( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )", 0
 
 string_Heap3A0A#:
-	; init String
+	; initializer String
 	db "Heap:", 10, 0
 
 string_2020Address2025u2C20Size2025u0A#:
-	; init String
+	; initializer String
 	db "  Address %u, Size %u", 10, 0
 
 string_0A#:
-	; init String
+	; initializer String
 	db 10, 0

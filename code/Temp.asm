@@ -444,9 +444,9 @@ $IntegralStorage#:
 	dd 0
 
 Array_#:
-	; init Array
+	; initializer Array
 	dq 4
 
 string_w#:
-	; init String
+	; initializer String
 	db "w", 0

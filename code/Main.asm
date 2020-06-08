@@ -30,19 +30,19 @@ section .text
 	global _start
 _start:
 
-	; Initialize Stack Pointer
+	; Initializerialize Stack Pointer
 	mov rbp, $StackTop
 
-	; Initialize Heap Pointer
+	; Initializerialize Heap Pointer
 	mov dword [$StackTop + 65534], $StackTop
 	add dword [$StackTop + 65534], 65534
 
-	; Initialize FPU Control Word, truncate mode => set bit 10 and 11.
+	; Initializerialize FPU Control Word, truncate mode => set bit 10 and 11.
 	fstcw [rbp]
 	or word [rbp], 3072
 	fldcw [rbp]
 
-	; Initialize Command Line Arguments
+	; Initializerialize Command Line Arguments
 	pop rbx
 	mov rax, rbx
 	mov rdx, rbp
@@ -405,8 +405,8 @@ main33$3:	; s[3] = int1$108#
 main33$4:	; s[4] = int1$111#
 	mov byte [rbp + 28], 111
 
-main33$5:	; s[5] = int1$0#
-	mov byte [rbp + 29], 0
+main33$5:	; s[5] = int1$48#
+	mov byte [rbp + 29], 48
 
 main33$6:	; t[0] = int1$87#
 	mov byte [rbp + 44], 87
@@ -423,8 +423,8 @@ main33$9:	; t[3] = int1$108#
 main33$10:	; t[4] = int1$100#
 	mov byte [rbp + 48], 100
 
-main33$11:	; t[5] = int1$0#
-	mov byte [rbp + 49], 0
+main33$11:	; t[5] = int1$48#
+	mov byte [rbp + 49], 48
 
 main33$12:	; call header integral zero 0 stack zero 0
 
@@ -1164,149 +1164,149 @@ a:
 	times 16 db 0
 
 string_test12Etxt#:
-	; init String
+	; initializer String
 	db "test1.txt", 0
 
 string_test22Etxt#:
-	; init String
+	; initializer String
 	db "test2.txt", 0
 
 string_Hello#:
-	; init String
+	; initializer String
 	db "Hello", 0
 
 string_World#:
-	; init String
+	; initializer String
 	db "World", 0
 
 string_3C25s3E203C25s3E0A#:
-	; init String
+	; initializer String
 	db "<%s> <%s>", 10, 0
 
 string_Please20write20a20character3A20#:
-	; init String
+	; initializer String
 	db "Please write a character: ", 0
 
 string_25c#:
-	; init String
+	; initializer String
 	db "%c", 0
 
 string_You20wrote20the20character202725c272E0A#:
-	; init String
+	; initializer String
 	db "You wrote the character ", 39, "%c", 39, ".", 10, 0
 
 string_Please20write20an20integer3A20#:
-	; init String
+	; initializer String
 	db "Please write an integer: ", 0
 
 string_25i#:
-	; init String
+	; initializer String
 	db "%i", 0
 
 string_You20wrote20the20integer2025i2E0A#:
-	; init String
+	; initializer String
 	db "You wrote the integer %i.", 10, 0
 
 string_Please20write20a20string3A20#:
-	; init String
+	; initializer String
 	db "Please write a string: ", 0
 
 string_25s#:
-	; init String
+	; initializer String
 	db "%s", 0
 
 string_You20wrote20the20string202225s222E0A#:
-	; init String
+	; initializer String
 	db "You wrote the string ", 34, "%s", 34, ".", 10, 0
 
 @378$ZERO:
-	; init Signed_Int
+	; initializer Signed_Int
 	dd 0
 
 @379$ONE:
-	; init Signed_Int
+	; initializer Signed_Int
 	dd 1
 
 @382$TWO:
-	; init Signed_Int
+	; initializer Signed_Int
 	dd 2
 
 @383$THREE:
-	; init Signed_Int
+	; initializer Signed_Int
 	dd 3
 
 string_argc3A2025i0A#:
-	; init String
+	; initializer String
 	db "argc: %i", 10, 0
 
 string_25i3A203C25s3E0A#:
-	; init String
+	; initializer String
 	db "%i: <%s>", 10, 0
 
 string_0A#:
-	; init String
+	; initializer String
 	db 10, 0
 
 string_Hello210A#:
-	; init String
+	; initializer String
 	db "Hello!", 10, 0
 
 string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#:
-	; init String
+	; initializer String
 	db "Please write a character, a string, an integer, and a double: ", 0
 
 string_25c2025s2025i2025lf#:
-	; init String
+	; initializer String
 	db "%c %s %i %lf", 0
 
 string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#:
-	; init String
+	; initializer String
 	db "You wrote the character ", 39, "%c", 39, ", the string ", 34, "%s", 34, ", the integer %i, and the double %f.", 10, 0
 
 int8$8#:
-	; init Pointer
+	; initializer Pointer
 	dq 8
 
 string_3A20#:
-	; init String
+	; initializer String
 	db ": ", 0
 
 string_25lf#:
-	; init String
+	; initializer String
 	db "%lf", 0
 
 string_3C25f3E#:
-	; init String
+	; initializer String
 	db "<%f>", 0
 
 string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#:
-	; init String
+	; initializer String
 	db "---------------------------------------------", 10, 0
 
 float8$3.14#:
-	; init Double
+	; initializer Double
 	dq 3.14
 
 float8$2.71#:
-	; init Double
+	; initializer Double
 	dq 2.71
 
 string_Please20write20a20number2028not20620or207293A20#:
-	; init String
+	; initializer String
 	db "Please write a number (not 6 or 7): ", 0
 
 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
-	; init String
+	; initializer String
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 string_n20213D206#:
-	; init String
+	; initializer String
 	db "n != 6", 0
 
 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#:
-	; init String
+	; initializer String
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c", 0
 
 string_n20213D207#:
-	; init String
+	; initializer String
 	db "n != 7", 0

@@ -200,21 +200,21 @@ $IntegralStorage#:
 	times 8 db 0
 
 string_Floating20point20error3A2025i0A#:
-	; init String
+	; initializer String
 	db "Floating point error: %i", 10, 0
 
 string_exit10A#:
-	; init String
+	; initializer String
 	db "exit1", 10, 0
 
 string_exit20A#:
-	; init String
+	; initializer String
 	db "exit2", 10, 0
 
 string_exit30A#:
-	; init String
+	; initializer String
 	db "exit3", 10, 0
 
 string_25i0A#:
-	; init String
+	; initializer String
 	db "%i", 10, 0

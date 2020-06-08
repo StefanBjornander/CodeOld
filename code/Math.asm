@@ -4548,109 +4548,109 @@ $IntegralStorage#:
 	times 8 db 0
 
 float8$0.000000001#:
-	; init Double
+	; initializer Double
 	dq 0.000000001
 
 float8$0.3678794411714423216036827922#:
-	; init Double
+	; initializer Double
 	dq 0.3678794411714423216036827922
 
 float8$2.7182818284590452353#:
-	; init Double
+	; initializer Double
 	dq 2.7182818284590452353
 
 float8$0.7357588823428846432073655843#:
-	; init Double
+	; initializer Double
 	dq 0.7357588823428846432073655843
 
 float8$minus1.0#:
-	; init Double
+	; initializer Double
 	dq -1.0
 
 float8$0.4342944820#:
-	; init Double
+	; initializer Double
 	dq 0.4342944820
 
 float8$10#:
-	; init Double
+	; initializer Double
 	dq 10.0
 
 float8$2#:
-	; init Double
+	; initializer Double
 	dq 2.0
 
 float8$minus1#:
-	; init Double
+	; initializer Double
 	dq -1.0
 
 float8$3#:
-	; init Double
+	; initializer Double
 	dq 3.0
 
 float8$1.5707963267948966192#:
-	; init Double
+	; initializer Double
 	dq 1.5707963267948966192
 
 float8$minus1.5707963267948966192#:
-	; init Double
+	; initializer Double
 	dq -1.5707963267948966192
 
 string_x_n2025f2C20x_nplus12025f0A#:
-	; init String
+	; initializer String
 	db "x_n %f, x_nplus1 %f", 10, 0
 
 float8$0.7853981633974483096#:
-	; init Double
+	; initializer Double
 	dq 0.7853981633974483096
 
 float8$minus0.7853981633974483096#:
-	; init Double
+	; initializer Double
 	dq -0.7853981633974483096
 
 string_atan2050A#:
-	; init String
+	; initializer String
 	db "atan 5", 10, 0
 
 string_atan20x2025f20x_nplus12025f0A#:
-	; init String
+	; initializer String
 	db "atan x %f x_nplus1 %f", 10, 0
 
 string_atan2070A#:
-	; init String
+	; initializer String
 	db "atan 7", 10, 0
 
 float8$0.5#:
-	; init Double
+	; initializer Double
 	dq 0.5
 
 float8$3.1415926535897932384#:
-	; init Double
+	; initializer Double
 	dq 3.1415926535897932384
 
 string_20A#:
-	; init String
+	; initializer String
 	db "2", 10, 0
 
 string_30A#:
-	; init String
+	; initializer String
 	db "3", 10, 0
 
 string_40A#:
-	; init String
+	; initializer String
 	db "4", 10, 0
 
 string_50A#:
-	; init String
+	; initializer String
 	db "5", 10, 0
 
 string_60A#:
-	; init String
+	; initializer String
 	db "6", 10, 0
 
 float8$minus3.1415926535897932384#:
-	; init Double
+	; initializer Double
 	dq -3.1415926535897932384
 
 float8$0.999999999999#:
-	; init Double
+	; initializer Double
 	dq 0.999999999999

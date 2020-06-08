@@ -241,17 +241,17 @@ buffer:
 	times 12 db 0
 
 string_Division20by20Zero2E#:
-	; init String
+	; initializer String
 	db "Division by Zero.", 0
 
 string_longjmp203C25s3E203C25u3E0A#:
-	; init String
+	; initializer String
 	db "longjmp <%s> <%u>", 10, 0
 
 string_12E0202F2025f203D2025f0A#:
-	; init String
+	; initializer String
 	db "1.0 / %f = %f", 10, 0
 
 string_p203D203C25s3E203C25u3E0A#:
-	; init String
+	; initializer String
 	db "p = <%s> <%u>", 10, 0

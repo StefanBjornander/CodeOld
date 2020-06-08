@@ -118,13 +118,13 @@ $IntegralStorage#:
 	times 8 db 0
 
 @7418$i:
-	; init Signed_Int
+	; initializer Signed_Int
 	dd 0
 
 string_25i20#:
-	; init String
+	; initializer String
 	db "%i ", 0
 
 string_102420bytes2Dblock20number3A2025i0A#:
-	; init String
+	; initializer String
 	db "1024 bytes-block number: %i", 10, 0

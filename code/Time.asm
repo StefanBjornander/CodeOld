@@ -2335,42 +2335,42 @@ $IntegralStorage#:
 	times 8 db 0
 
 int4$4#:
-	; init Signed_Int
+	; initializer Signed_Int
 	dd 4
 
 int4$365#:
-	; init Signed_Int
+	; initializer Signed_Int
 	dd 365
 
 int8$86400#:
-	; init Signed_Long_Int
+	; initializer Signed_Long_Int
 	dq 86400
 
 int8$3600#:
-	; init Signed_Long_Int
+	; initializer Signed_Long_Int
 	dq 3600
 
 int8$60#:
-	; init Signed_Long_Int
+	; initializer Signed_Long_Int
 	dq 60
 
 @4191$g_timeStruct:
 	times 36 db 0
 
 int8$7#:
-	; init Signed_Long_Int
+	; initializer Signed_Long_Int
 	dq 7
 
 int4$100#:
-	; init Signed_Int
+	; initializer Signed_Int
 	dd 100
 
 int4$400#:
-	; init Signed_Int
+	; initializer Signed_Int
 	dd 400
 
 Array_#:
-	; init Array
+	; initializer Array
 	dq 4
 
 @4203$g_timeString:
@@ -2534,73 +2534,73 @@ string_December#:
 	dq string_December#
 
 string_25s2025s20252i202502i3A2502i3A2502i202504i#:
-	; init String
+	; initializer String
 	db "%s %s %2i %02i:%02i:%02i %04i", 0
 
 int8$8#:
-	; init Pointer
+	; initializer Pointer
 	dq 8
 
 int4$3600#:
-	; init Signed_Int
+	; initializer Signed_Int
 	dd 3600
 
 string_#:
-	; init String
+	; initializer String
 	db 0
 
 string_leap20days2025i2C20total20days2025lu0A#:
-	; init String
+	; initializer String
 	db "leap days %i, total days %lu", 10, 0
 
 string_yearDaySunday2025i0A#:
-	; init String
+	; initializer String
 	db "yearDaySunday %i", 10, 0
 
 string_yearDayMonday2025i0A#:
-	; init String
+	; initializer String
 	db "yearDayMonday %i", 10, 0
 
 string_2504d2D2502d2D2502d202502d3A2502d3A2502d#:
-	; init String
+	; initializer String
 	db "%04d-%02d-%02d %02d:%02d:%02d", 0
 
 string_2502d#:
-	; init String
+	; initializer String
 	db "%02d", 0
 
 string_2503d#:
-	; init String
+	; initializer String
 	db "%03d", 0
 
 string_25s#:
-	; init String
+	; initializer String
 	db "%s", 0
 
 string_AM#:
-	; init String
+	; initializer String
 	db "AM", 0
 
 string_PM#:
-	; init String
+	; initializer String
 	db "PM", 0
 
 string_2504d2D2502d2D2502d#:
-	; init String
+	; initializer String
 	db "%04d-%02d-%02d", 0
 
 string_2502d3A2502d3A2502d#:
-	; init String
+	; initializer String
 	db "%02d:%02d:%02d", 0
 
 string_2504d#:
-	; init String
+	; initializer String
 	db "%04d", 0
 
 string_25#:
-	; init String
+	; initializer String
 	db "%", 0
 
 int4$12#:
-	; init Signed_Int
+	; initializer Signed_Int
 	dd 12

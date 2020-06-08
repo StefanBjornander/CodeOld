@@ -167,25 +167,25 @@ $IntegralStorage#:
 	times 8 db 0
 
 string_Please20write20a20number2028not20620or207293A20#:
-	; init String
+	; initializer String
 	db "Please write a number (not 6 or 7): ", 0
 
 string_25i#:
-	; init String
+	; initializer String
 	db "%i", 0
 
 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
-	; init String
+	; initializer String
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 string_n20213D206#:
-	; init String
+	; initializer String
 	db "n != 6", 0
 
 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CAssertTest2Ec#:
-	; init String
+	; initializer String
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\AssertTest.c", 0
 
 string_n20213D207#:
-	; init String
+	; initializer String
 	db "n != 7", 0

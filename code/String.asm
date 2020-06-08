@@ -2169,7 +2169,7 @@ $IntegralStorage#:
 	times 8 db 0
 
 int8$8#:
-	; init Pointer
+	; initializer Pointer
 	dq 8
 
 token:

@@ -4177,13 +4177,13 @@ g_outDevice:
 	times 8 db 0
 
 int8$10#:
-	; init Signed_Long_Int
+	; initializer Signed_Long_Int
 	dq 10
 
 float8$10.0#:
-	; init Long_Double
+	; initializer Long_Double
 	dq 10.0
 
 int4$10#:
-	; init Signed_Int
+	; initializer Signed_Int
 	dd 10

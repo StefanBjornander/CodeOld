@@ -1242,121 +1242,121 @@ $IntegralStorage#:
 	times 8 db 0
 
 string_div_t20quot2025i20rem2025i0A#:
-	; init String
+	; initializer String
 	db "div_t quot %i rem %i", 10, 0
 
 string_ldiv_t20quot2025li20rem2025li0A#:
-	; init String
+	; initializer String
 	db "ldiv_t quot %li rem %li", 10, 0
 
 string_exit10A#:
-	; init String
+	; initializer String
 	db "exit1", 10, 0
 
 string_exit20A#:
-	; init String
+	; initializer String
 	db "exit2", 10, 0
 
 string_exit30A#:
-	; init String
+	; initializer String
 	db "exit3", 10, 0
 
 string_1232E456abc#:
-	; init String
+	; initializer String
 	db "123.456abc", 0
 
 string_1232E456#:
-	; init String
+	; initializer String
 	db "123.456", 0
 
 string_123abc#:
-	; init String
+	; initializer String
 	db "123abc", 0
 
 string_atof28221232E4562229203D2025f0A#:
-	; init String
+	; initializer String
 	db "atof(", 34, "123.456", 34, ") = %f", 10, 0
 
 string_atoi28221232229203D2025i0A#:
-	; init String
+	; initializer String
 	db "atoi(", 34, "123", 34, ") = %i", 10, 0
 
 string_123#:
-	; init String
+	; initializer String
 	db "123", 0
 
 string_atol28221232229203D2025li0A0A#:
-	; init String
+	; initializer String
 	db "atol(", 34, "123", 34, ") = %li", 10, 10, 0
 
 string_strtod28221232E456abc222C2026endp29203D202825f2C2025s290A#:
-	; init String
+	; initializer String
 	db "strtod(", 34, "123.456abc", 34, ", &endp) = (%f, %s)", 10, 0
 
 string_strtol2822123abc222C2026endp29203D202825li2C2025s290A#:
-	; init String
+	; initializer String
 	db "strtol(", 34, "123abc", 34, ", &endp) = (%li, %s)", 10, 0
 
 string_strtoul2822123abc222C2026endp29203D202825lu2C2025s290A#:
-	; init String
+	; initializer String
 	db "strtoul(", 34, "123abc", 34, ", &endp) = (%lu, %s)", 10, 0
 
 string_0Agetenv2822path2229203D2025s0A#:
-	; init String
+	; initializer String
 	db 10, "getenv(", 34, "path", 34, ") = %s", 10, 0
 
 string_path#:
-	; init String
+	; initializer String
 	db "path", 0
 
 string_system2822dir22290A#:
-	; init String
+	; initializer String
 	db "system(", 34, "dir", 34, ")", 10, 0
 
 string_dir#:
-	; init String
+	; initializer String
 	db "dir", 0
 
 string_abs282D329203D2025i2C20abs28329203D2025i2C20labs282D3l29203D2025li2C20labs283l29203D2025li0A#:
-	; init String
+	; initializer String
 	db "abs(-3) = %i, abs(3) = %i, labs(-3l) = %li, labs(3l) = %li", 10, 0
 
 string_div_t28102C20329203D202825i2C2025i292C0A#:
-	; init String
+	; initializer String
 	db "div_t(10, 3) = (%i, %i),", 10, 0
 
 string_ldiv_t28102C20329203D202825li2C2025li290A#:
-	; init String
+	; initializer String
 	db "ldiv_t(10, 3) = (%li, %li)", 10, 0
 
 string_0AA20List2013A20#:
-	; init String
+	; initializer String
 	db 10, "A List 1: ", 0
 
 string_25i20#:
-	; init String
+	; initializer String
 	db "%i ", 0
 
 string_0AB20List2023A20#:
-	; init String
+	; initializer String
 	db 10, "B List 2: ", 0
 
 string_0AC20List2033A20#:
-	; init String
+	; initializer String
 	db 10, "C List 3: ", 0
 
 string_0A0ASearch3A0A#:
-	; init String
+	; initializer String
 	db 10, 10, "Search:", 10, 0
 
 string_20202825i2C2025i290A#:
-	; init String
+	; initializer String
 	db "  (%i, %i)", 10, 0
 
 string_0A#:
-	; init String
+	; initializer String
 	db 10, 0
 
 int8$4#:
-	; init Pointer
+	; initializer Pointer
 	dq 4

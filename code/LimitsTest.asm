@@ -291,61 +291,61 @@ $IntegralStorage#:
 	times 8 db 0
 
 string_CHAR_BIT203D2025i0A#:
-	; init String
+	; initializer String
 	db "CHAR_BIT = %i", 10, 0
 
 string_CHAR_MIN203D2025i0A0A#:
-	; init String
+	; initializer String
 	db "CHAR_MIN = %i", 10, 10, 0
 
 string_CHAR_MAX203D2025i0A#:
-	; init String
+	; initializer String
 	db "CHAR_MAX = %i", 10, 0
 
 string_UCHAR_MAX203D2025u0A0A#:
-	; init String
+	; initializer String
 	db "UCHAR_MAX = %u", 10, 10, 0
 
 string_SHRT_MIN203D2025i0A#:
-	; init String
+	; initializer String
 	db "SHRT_MIN = %i", 10, 0
 
 string_SHRT_MAX203D2025i0A#:
-	; init String
+	; initializer String
 	db "SHRT_MAX = %i", 10, 0
 
 string_USHRT_MAX203D2025u0A0A#:
-	; init String
+	; initializer String
 	db "USHRT_MAX = %u", 10, 10, 0
 
 string_INT_MIN203D2025i0A#:
-	; init String
+	; initializer String
 	db "INT_MIN = %i", 10, 0
 
 string_INT_MAX203D2025i0A#:
-	; init String
+	; initializer String
 	db "INT_MAX = %i", 10, 0
 
 string_UINT_MAX203D2025u0A0A#:
-	; init String
+	; initializer String
 	db "UINT_MAX = %u", 10, 10, 0
 
 string_LONG_MIN203D2025li0A#:
-	; init String
+	; initializer String
 	db "LONG_MIN = %li", 10, 0
 
 string_LONG_MAX203D2025li0A#:
-	; init String
+	; initializer String
 	db "LONG_MAX = %li", 10, 0
 
 string_ULONG_MAX203D2025lu0A#:
-	; init String
+	; initializer String
 	db "ULONG_MAX = %lu", 10, 0
 
 string_ULONG_MAX203D2025lx0A#:
-	; init String
+	; initializer String
 	db "ULONG_MAX = %lx", 10, 0
 
 string_ULONG_MAX203D2025lX0A#:
-	; init String
+	; initializer String
 	db "ULONG_MAX = %lX", 10, 0
