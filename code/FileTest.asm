@@ -1884,1067 +1884,914 @@ file_test$531:	; call function noellipse-noellipse fclose
 
 file_test$532:	; post call
 
-file_test$533:	; personVector[0].name[0] = int1$65#
-	mov byte [rbp + 40], 65
-
-file_test$534:	; personVector[0].name[1] = int1$100#
-	mov byte [rbp + 41], 100
-
-file_test$535:	; personVector[0].name[2] = int1$97#
-	mov byte [rbp + 42], 97
-
-file_test$536:	; personVector[0].name[3] = int1$109#
-	mov byte [rbp + 43], 109
-
-file_test$537:	; personVector[0].name[4] = int1$32#
-	mov byte [rbp + 44], 32
-
-file_test$538:	; personVector[0].name[5] = int1$66#
-	mov byte [rbp + 45], 66
-
-file_test$539:	; personVector[0].name[6] = int1$101#
-	mov byte [rbp + 46], 101
-
-file_test$540:	; personVector[0].name[7] = int1$114#
-	mov byte [rbp + 47], 114
-
-file_test$541:	; personVector[0].name[8] = int1$116#
-	mov byte [rbp + 48], 116
-
-file_test$542:	; personVector[0].name[9] = int1$105#
-	mov byte [rbp + 49], 105
-
-file_test$543:	; personVector[0].name[10] = int1$108#
-	mov byte [rbp + 50], 108
-
-file_test$544:	; personVector[0].name[11] = int1$115#
-	mov byte [rbp + 51], 115
-
-file_test$545:	; personVector[0].name[12] = int1$115#
-	mov byte [rbp + 52], 115
-
-file_test$546:	; personVector[0].name[13] = int1$111#
-	mov byte [rbp + 53], 111
-
-file_test$547:	; personVector[0].name[14] = int1$110#
-	mov byte [rbp + 54], 110
-
-file_test$548:	; personVector[0].name[15] = int1$48#
-	mov byte [rbp + 55], 48
-
-file_test$549:	; personVector[0].phone = int4$12345#
+file_test$533:	; personVector[0].phone = int4$12345#
 	mov dword [rbp + 88], 12345
 
-file_test$550:	; personVector[1].name[0] = int1$66#
-	mov byte [rbp + 92], 66
-
-file_test$551:	; personVector[1].name[1] = int1$101#
-	mov byte [rbp + 93], 101
-
-file_test$552:	; personVector[1].name[2] = int1$114#
-	mov byte [rbp + 94], 114
-
-file_test$553:	; personVector[1].name[3] = int1$116#
-	mov byte [rbp + 95], 116
-
-file_test$554:	; personVector[1].name[4] = int1$105#
-	mov byte [rbp + 96], 105
-
-file_test$555:	; personVector[1].name[5] = int1$108#
-	mov byte [rbp + 97], 108
-
-file_test$556:	; personVector[1].name[6] = int1$32#
-	mov byte [rbp + 98], 32
-
-file_test$557:	; personVector[1].name[7] = int1$67#
-	mov byte [rbp + 99], 67
-
-file_test$558:	; personVector[1].name[8] = int1$101#
-	mov byte [rbp + 100], 101
-
-file_test$559:	; personVector[1].name[9] = int1$97#
-	mov byte [rbp + 101], 97
-
-file_test$560:	; personVector[1].name[10] = int1$115#
-	mov byte [rbp + 102], 115
-
-file_test$561:	; personVector[1].name[11] = int1$97#
-	mov byte [rbp + 103], 97
-
-file_test$562:	; personVector[1].name[12] = int1$114#
-	mov byte [rbp + 104], 114
-
-file_test$563:	; personVector[1].name[13] = int1$115#
-	mov byte [rbp + 105], 115
-
-file_test$564:	; personVector[1].name[14] = int1$115#
-	mov byte [rbp + 106], 115
-
-file_test$565:	; personVector[1].name[15] = int1$111#
-	mov byte [rbp + 107], 111
-
-file_test$566:	; personVector[1].name[16] = int1$110#
-	mov byte [rbp + 108], 110
-
-file_test$567:	; personVector[1].name[17] = int1$48#
-	mov byte [rbp + 109], 48
-
-file_test$568:	; personVector[1].phone = int4$23456#
+file_test$534:	; personVector[1].phone = int4$23456#
 	mov dword [rbp + 140], 23456
 
-file_test$569:	; personVector[2].name[0] = int1$67#
-	mov byte [rbp + 144], 67
-
-file_test$570:	; personVector[2].name[1] = int1$101#
-	mov byte [rbp + 145], 101
-
-file_test$571:	; personVector[2].name[2] = int1$97#
-	mov byte [rbp + 146], 97
-
-file_test$572:	; personVector[2].name[3] = int1$115#
-	mov byte [rbp + 147], 115
-
-file_test$573:	; personVector[2].name[4] = int1$97#
-	mov byte [rbp + 148], 97
-
-file_test$574:	; personVector[2].name[5] = int1$114#
-	mov byte [rbp + 149], 114
-
-file_test$575:	; personVector[2].name[6] = int1$32#
-	mov byte [rbp + 150], 32
-
-file_test$576:	; personVector[2].name[7] = int1$68#
-	mov byte [rbp + 151], 68
-
-file_test$577:	; personVector[2].name[8] = int1$97#
-	mov byte [rbp + 152], 97
-
-file_test$578:	; personVector[2].name[9] = int1$118#
-	mov byte [rbp + 153], 118
-
-file_test$579:	; personVector[2].name[10] = int1$105#
-	mov byte [rbp + 154], 105
-
-file_test$580:	; personVector[2].name[11] = int1$100#
-	mov byte [rbp + 155], 100
-
-file_test$581:	; personVector[2].name[12] = int1$115#
-	mov byte [rbp + 156], 115
-
-file_test$582:	; personVector[2].name[13] = int1$115#
-	mov byte [rbp + 157], 115
-
-file_test$583:	; personVector[2].name[14] = int1$111#
-	mov byte [rbp + 158], 111
-
-file_test$584:	; personVector[2].name[15] = int1$110#
-	mov byte [rbp + 159], 110
-
-file_test$585:	; personVector[2].name[16] = int1$48#
-	mov byte [rbp + 160], 48
-
-file_test$586:	; personVector[2].phone = int4$24567#
+file_test$535:	; personVector[2].phone = int4$24567#
 	mov dword [rbp + 192], 24567
 
-file_test$587:	; call header integral zero 0 stack zero 0
+file_test$536:	; call header integral zero 0 stack zero 0
 
-file_test$588:	; parameter string_Block2Ebin#, offset 272
+file_test$537:	; parameter string_Block2Ebin#, offset 272
 	mov qword [rbp + 272], string_Block2Ebin#
 
-file_test$589:	; parameter string_w#, offset 280
+file_test$538:	; parameter string_w#, offset 280
 	mov qword [rbp + 280], string_w#
 
-file_test$590:	; call function noellipse-noellipse fopen
-	mov qword [rbp + 248], file_test$591
+file_test$539:	; call function noellipse-noellipse fopen
+	mov qword [rbp + 248], file_test$540
 	mov [rbp + 256], rbp
 	add rbp, 248
 	jmp fopen
 
-file_test$591:	; post call
+file_test$540:	; post call
 
-file_test$592:	; £temporary4676 = return_value
+file_test$541:	; £temporary4676 = return_value
 
-file_test$593:	; outFilePtr = £temporary4676
+file_test$542:	; outFilePtr = £temporary4676
 	mov [rbp + 248], rbx
 
-file_test$594:	; if outFilePtr != int8$0# goto 606
+file_test$543:	; if outFilePtr != int8$0# goto 555
 	cmp qword [rbp + 248], 0
-	jne file_test$606
+	jne file_test$555
 
-file_test$595:	; call header integral zero 0 stack zero 0
+file_test$544:	; call header integral zero 0 stack zero 0
 
-file_test$596:	; parameter stderr, offset 280
+file_test$545:	; parameter stderr, offset 280
 	mov rax, [stderr]
 	mov [rbp + 280], rax
 
-file_test$597:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 288
+file_test$546:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 288
 	mov qword [rbp + 288], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
-file_test$598:	; parameter string_outFilePtr20213D20NULL#, offset 296
+file_test$547:	; parameter string_outFilePtr20213D20NULL#, offset 296
 	mov qword [rbp + 296], string_outFilePtr20213D20NULL#
 
-file_test$599:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 304
+file_test$548:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 304
 	mov qword [rbp + 304], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
-file_test$600:	; parameter int4$185#, offset 312
+file_test$549:	; parameter int4$185#, offset 312
 	mov dword [rbp + 312], 185
 
-file_test$601:	; call function noellipse-ellipse fprintf, extra 20
-	mov qword [rbp + 256], file_test$602
+file_test$550:	; call function noellipse-ellipse fprintf, extra 20
+	mov qword [rbp + 256], file_test$551
 	mov [rbp + 264], rbp
 	add rbp, 256
 	mov rdi, rbp
 	add rdi, 20
 	jmp fprintf
 
-file_test$602:	; post call
+file_test$551:	; post call
 
-file_test$603:	; call header integral zero 0 stack zero 0
+file_test$552:	; call header integral zero 0 stack zero 0
 
-file_test$604:	; call function noellipse-noellipse abort
-	mov qword [rbp + 256], file_test$605
+file_test$553:	; call function noellipse-noellipse abort
+	mov qword [rbp + 256], file_test$554
 	mov [rbp + 264], rbp
 	add rbp, 256
 	jmp abort
 
-file_test$605:	; post call
+file_test$554:	; post call
 
-file_test$606:	; call header integral zero 0 stack zero 0
+file_test$555:	; call header integral zero 0 stack zero 0
 
-file_test$607:	; parameter personVector, offset 280
+file_test$556:	; parameter personVector, offset 280
 	mov [rbp + 280], rbp
 	add qword [rbp + 280], 40
 
-file_test$608:	; parameter int4$156#, offset 288
+file_test$557:	; parameter int4$156#, offset 288
 	mov dword [rbp + 288], 156
 
-file_test$609:	; parameter int4$1#, offset 292
+file_test$558:	; parameter int4$1#, offset 292
 	mov dword [rbp + 292], 1
 
-file_test$610:	; parameter outFilePtr, offset 296
+file_test$559:	; parameter outFilePtr, offset 296
 	mov rax, [rbp + 248]
 	mov [rbp + 296], rax
 
-file_test$611:	; call function noellipse-noellipse fwrite
-	mov qword [rbp + 256], file_test$612
+file_test$560:	; call function noellipse-noellipse fwrite
+	mov qword [rbp + 256], file_test$561
 	mov [rbp + 264], rbp
 	add rbp, 256
 	jmp fwrite
 
-file_test$612:	; post call
+file_test$561:	; post call
 
-file_test$613:	; call header integral zero 0 stack zero 0
+file_test$562:	; call header integral zero 0 stack zero 0
 
-file_test$614:	; parameter outFilePtr, offset 280
+file_test$563:	; parameter outFilePtr, offset 280
 	mov rax, [rbp + 248]
 	mov [rbp + 280], rax
 
-file_test$615:	; call function noellipse-noellipse fclose
-	mov qword [rbp + 256], file_test$616
+file_test$564:	; call function noellipse-noellipse fclose
+	mov qword [rbp + 256], file_test$565
 	mov [rbp + 264], rbp
 	add rbp, 256
 	jmp fclose
 
-file_test$616:	; post call
+file_test$565:	; post call
 
-file_test$617:	; call header integral zero 0 stack zero 0
+file_test$566:	; call header integral zero 0 stack zero 0
 
-file_test$618:	; parameter string_Block2Ebin#, offset 280
+file_test$567:	; parameter string_Block2Ebin#, offset 280
 	mov qword [rbp + 280], string_Block2Ebin#
 
-file_test$619:	; parameter string_r#, offset 288
+file_test$568:	; parameter string_r#, offset 288
 	mov qword [rbp + 288], string_r#
 
-file_test$620:	; call function noellipse-noellipse fopen
-	mov qword [rbp + 256], file_test$621
+file_test$569:	; call function noellipse-noellipse fopen
+	mov qword [rbp + 256], file_test$570
 	mov [rbp + 264], rbp
 	add rbp, 256
 	jmp fopen
 
-file_test$621:	; post call
+file_test$570:	; post call
 
-file_test$622:	; £temporary4683 = return_value
+file_test$571:	; £temporary4683 = return_value
 
-file_test$623:	; inFilePtr = £temporary4683
+file_test$572:	; inFilePtr = £temporary4683
 	mov [rbp + 256], rbx
 
-file_test$624:	; if inFilePtr != int8$0# goto 636
+file_test$573:	; if inFilePtr != int8$0# goto 585
 	cmp qword [rbp + 256], 0
-	jne file_test$636
+	jne file_test$585
 
-file_test$625:	; call header integral zero 0 stack zero 0
+file_test$574:	; call header integral zero 0 stack zero 0
 
-file_test$626:	; parameter stderr, offset 288
+file_test$575:	; parameter stderr, offset 288
 	mov rax, [stderr]
 	mov [rbp + 288], rax
 
-file_test$627:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 296
+file_test$576:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 296
 	mov qword [rbp + 296], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
-file_test$628:	; parameter string_inFilePtr20213D20NULL#, offset 304
+file_test$577:	; parameter string_inFilePtr20213D20NULL#, offset 304
 	mov qword [rbp + 304], string_inFilePtr20213D20NULL#
 
-file_test$629:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 312
+file_test$578:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 312
 	mov qword [rbp + 312], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
-file_test$630:	; parameter int4$191#, offset 320
+file_test$579:	; parameter int4$191#, offset 320
 	mov dword [rbp + 320], 191
 
-file_test$631:	; call function noellipse-ellipse fprintf, extra 20
-	mov qword [rbp + 264], file_test$632
+file_test$580:	; call function noellipse-ellipse fprintf, extra 20
+	mov qword [rbp + 264], file_test$581
 	mov [rbp + 272], rbp
 	add rbp, 264
 	mov rdi, rbp
 	add rdi, 20
 	jmp fprintf
 
-file_test$632:	; post call
+file_test$581:	; post call
 
-file_test$633:	; call header integral zero 0 stack zero 0
+file_test$582:	; call header integral zero 0 stack zero 0
 
-file_test$634:	; call function noellipse-noellipse abort
-	mov qword [rbp + 264], file_test$635
+file_test$583:	; call function noellipse-noellipse abort
+	mov qword [rbp + 264], file_test$584
 	mov [rbp + 272], rbp
 	add rbp, 264
 	jmp abort
 
-file_test$635:	; post call
+file_test$584:	; post call
 
-file_test$636:	; call header integral zero 0 stack zero 0
+file_test$585:	; call header integral zero 0 stack zero 0
 
-file_test$637:	; parameter inFilePtr, offset 288
+file_test$586:	; parameter inFilePtr, offset 288
 	mov rax, [rbp + 256]
 	mov [rbp + 288], rax
 
-file_test$638:	; call function noellipse-noellipse feof
-	mov qword [rbp + 264], file_test$639
+file_test$587:	; call function noellipse-noellipse feof
+	mov qword [rbp + 264], file_test$588
 	mov [rbp + 272], rbp
 	add rbp, 264
 	jmp feof
 
-file_test$639:	; post call
+file_test$588:	; post call
 
-file_test$640:	; £temporary4688 = return_value
+file_test$589:	; £temporary4688 = return_value
 
-file_test$641:	; if £temporary4688 != int4$0# goto 661
+file_test$590:	; if £temporary4688 != int4$0# goto 610
 	cmp ebx, 0
-	jne file_test$661
+	jne file_test$610
 
-file_test$642:	; call header integral zero 0 stack zero 0
+file_test$591:	; call header integral zero 0 stack zero 0
 
-file_test$643:	; £temporary4691 = &person
+file_test$592:	; £temporary4691 = &person
 	mov rsi, rbp
 	add rsi, 196
 
-file_test$644:	; parameter £temporary4691, offset 288
+file_test$593:	; parameter £temporary4691, offset 288
 	mov [rbp + 288], rsi
 
-file_test$645:	; parameter int4$52#, offset 296
+file_test$594:	; parameter int4$52#, offset 296
 	mov dword [rbp + 296], 52
 
-file_test$646:	; parameter int4$1#, offset 300
+file_test$595:	; parameter int4$1#, offset 300
 	mov dword [rbp + 300], 1
 
-file_test$647:	; parameter inFilePtr, offset 304
+file_test$596:	; parameter inFilePtr, offset 304
 	mov rax, [rbp + 256]
 	mov [rbp + 304], rax
 
-file_test$648:	; call function noellipse-noellipse fread
-	mov qword [rbp + 264], file_test$649
+file_test$597:	; call function noellipse-noellipse fread
+	mov qword [rbp + 264], file_test$598
 	mov [rbp + 272], rbp
 	add rbp, 264
 	jmp fread
 
-file_test$649:	; post call
+file_test$598:	; post call
 
-file_test$650:	; call header integral zero 0 stack zero 0
+file_test$599:	; call header integral zero 0 stack zero 0
 
-file_test$651:	; parameter string_Name20203A2025s0A#, offset 288
+file_test$600:	; parameter string_Name20203A2025s0A#, offset 288
 	mov qword [rbp + 288], string_Name20203A2025s0A#
 
-file_test$652:	; parameter person$name, offset 296
+file_test$601:	; parameter person$name, offset 296
 	mov [rbp + 296], rbp
 	add qword [rbp + 296], 196
 
-file_test$653:	; call function noellipse-ellipse printf, extra 8
-	mov qword [rbp + 264], file_test$654
+file_test$602:	; call function noellipse-ellipse printf, extra 8
+	mov qword [rbp + 264], file_test$603
 	mov [rbp + 272], rbp
 	add rbp, 264
 	mov rdi, rbp
 	add rdi, 8
 	jmp printf
 
-file_test$654:	; post call
+file_test$603:	; post call
 
-file_test$655:	; call header integral zero 0 stack zero 0
+file_test$604:	; call header integral zero 0 stack zero 0
 
-file_test$656:	; parameter string_Phone203A2025d0A#, offset 288
+file_test$605:	; parameter string_Phone203A2025d0A#, offset 288
 	mov qword [rbp + 288], string_Phone203A2025d0A#
 
-file_test$657:	; parameter person$phone, offset 296
+file_test$606:	; parameter person$phone, offset 296
 	mov eax, [rbp + 244]
 	mov [rbp + 296], eax
 
-file_test$658:	; call function noellipse-ellipse printf, extra 4
-	mov qword [rbp + 264], file_test$659
+file_test$607:	; call function noellipse-ellipse printf, extra 4
+	mov qword [rbp + 264], file_test$608
 	mov [rbp + 272], rbp
 	add rbp, 264
 	mov rdi, rbp
 	add rdi, 4
 	jmp printf
 
-file_test$659:	; post call
+file_test$608:	; post call
 
-file_test$660:	; goto 636
-	jmp file_test$636
+file_test$609:	; goto 585
+	jmp file_test$585
 
-file_test$661:	; call header integral zero 0 stack zero 0
+file_test$610:	; call header integral zero 0 stack zero 0
 
-file_test$662:	; parameter inFilePtr, offset 288
+file_test$611:	; parameter inFilePtr, offset 288
 	mov rax, [rbp + 256]
 	mov [rbp + 288], rax
 
-file_test$663:	; call function noellipse-noellipse fclose
-	mov qword [rbp + 264], file_test$664
+file_test$612:	; call function noellipse-noellipse fclose
+	mov qword [rbp + 264], file_test$613
 	mov [rbp + 272], rbp
 	add rbp, 264
 	jmp fclose
 
-file_test$664:	; post call
+file_test$613:	; post call
 
-file_test$665:	; call header integral zero 0 stack zero 0
+file_test$614:	; call header integral zero 0 stack zero 0
 
-file_test$666:	; parameter string_Test12Etxt#, offset 64
+file_test$615:	; parameter string_Test12Etxt#, offset 64
 	mov qword [rbp + 64], string_Test12Etxt#
 
-file_test$667:	; parameter string_r#, offset 72
+file_test$616:	; parameter string_r#, offset 72
 	mov qword [rbp + 72], string_r#
 
-file_test$668:	; call function noellipse-noellipse fopen
-	mov qword [rbp + 40], file_test$669
+file_test$617:	; call function noellipse-noellipse fopen
+	mov qword [rbp + 40], file_test$618
 	mov [rbp + 48], rbp
 	add rbp, 40
 	jmp fopen
 
-file_test$669:	; post call
+file_test$618:	; post call
 
-file_test$670:	; £temporary4698 = return_value
+file_test$619:	; £temporary4698 = return_value
 
-file_test$671:	; inFilePtr = £temporary4698
+file_test$620:	; inFilePtr = £temporary4698
 	mov [rbp + 40], rbx
 
-file_test$672:	; if inFilePtr != int8$0# goto 684
+file_test$621:	; if inFilePtr != int8$0# goto 633
 	cmp qword [rbp + 40], 0
-	jne file_test$684
+	jne file_test$633
 
-file_test$673:	; call header integral zero 0 stack zero 0
+file_test$622:	; call header integral zero 0 stack zero 0
 
-file_test$674:	; parameter stderr, offset 72
+file_test$623:	; parameter stderr, offset 72
 	mov rax, [stderr]
 	mov [rbp + 72], rax
 
-file_test$675:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 80
+file_test$624:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 80
 	mov qword [rbp + 80], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
-file_test$676:	; parameter string_inFilePtr20213D20NULL#, offset 88
+file_test$625:	; parameter string_inFilePtr20213D20NULL#, offset 88
 	mov qword [rbp + 88], string_inFilePtr20213D20NULL#
 
-file_test$677:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 96
+file_test$626:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 96
 	mov qword [rbp + 96], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
-file_test$678:	; parameter int4$204#, offset 104
+file_test$627:	; parameter int4$204#, offset 104
 	mov dword [rbp + 104], 204
 
-file_test$679:	; call function noellipse-ellipse fprintf, extra 20
-	mov qword [rbp + 48], file_test$680
+file_test$628:	; call function noellipse-ellipse fprintf, extra 20
+	mov qword [rbp + 48], file_test$629
 	mov [rbp + 56], rbp
 	add rbp, 48
 	mov rdi, rbp
 	add rdi, 20
 	jmp fprintf
 
-file_test$680:	; post call
+file_test$629:	; post call
 
-file_test$681:	; call header integral zero 0 stack zero 0
+file_test$630:	; call header integral zero 0 stack zero 0
 
-file_test$682:	; call function noellipse-noellipse abort
-	mov qword [rbp + 48], file_test$683
+file_test$631:	; call function noellipse-noellipse abort
+	mov qword [rbp + 48], file_test$632
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp abort
 
-file_test$683:	; post call
+file_test$632:	; post call
 
-file_test$684:	; call header integral zero 0 stack zero 0
+file_test$633:	; call header integral zero 0 stack zero 0
 
-file_test$685:	; parameter inFilePtr, offset 72
+file_test$634:	; parameter inFilePtr, offset 72
 	mov rax, [rbp + 40]
 	mov [rbp + 72], rax
 
-file_test$686:	; parameter int4$minus1#, offset 80
+file_test$635:	; parameter int4$minus1#, offset 80
 	mov dword [rbp + 80], -1
 
-file_test$687:	; parameter int4$2#, offset 84
+file_test$636:	; parameter int4$2#, offset 84
 	mov dword [rbp + 84], 2
 
-file_test$688:	; call function noellipse-noellipse fseek
-	mov qword [rbp + 48], file_test$689
+file_test$637:	; call function noellipse-noellipse fseek
+	mov qword [rbp + 48], file_test$638
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp fseek
 
-file_test$689:	; post call
+file_test$638:	; post call
 
-file_test$690:	; call header integral zero 0 stack zero 0
+file_test$639:	; call header integral zero 0 stack zero 0
 
-file_test$691:	; parameter inFilePtr, offset 76
+file_test$640:	; parameter inFilePtr, offset 76
 	mov rax, [rbp + 40]
 	mov [rbp + 76], rax
 
-file_test$692:	; call function noellipse-noellipse ftell
-	mov qword [rbp + 52], file_test$693
+file_test$641:	; call function noellipse-noellipse ftell
+	mov qword [rbp + 52], file_test$642
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp ftell
 
-file_test$693:	; post call
+file_test$642:	; post call
 
-file_test$694:	; £temporary4704 = return_value
+file_test$643:	; £temporary4704 = return_value
 
-file_test$695:	; £temporary4705 = int_to_int £temporary4704 (Signed_Int -> Unsigned_Int)
+file_test$644:	; £temporary4705 = int_to_int £temporary4704 (Signed_Int -> Unsigned_Int)
 
-file_test$696:	; u = £temporary4705
+file_test$645:	; u = £temporary4705
 	mov [rbp + 48], ebx
 
-file_test$697:	; if u < int4$0# goto 718
+file_test$646:	; if u < int4$0# goto 667
 	cmp dword [rbp + 48], 0
-	jb file_test$718
+	jb file_test$667
 
-file_test$698:	; call header integral zero 0 stack zero 0
+file_test$647:	; call header integral zero 0 stack zero 0
 
-file_test$699:	; parameter inFilePtr, offset 76
+file_test$648:	; parameter inFilePtr, offset 76
 	mov rax, [rbp + 40]
 	mov [rbp + 76], rax
 
-file_test$700:	; call function noellipse-noellipse fgetc
-	mov qword [rbp + 52], file_test$701
+file_test$649:	; call function noellipse-noellipse fgetc
+	mov qword [rbp + 52], file_test$650
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp fgetc
 
-file_test$701:	; post call
+file_test$650:	; post call
 
-file_test$702:	; £temporary4707 = return_value
+file_test$651:	; £temporary4707 = return_value
 
-file_test$703:	; £temporary4708 = int_to_int £temporary4707 (Signed_Int -> Signed_Char)
+file_test$652:	; £temporary4708 = int_to_int £temporary4707 (Signed_Int -> Signed_Char)
 	cmp ebx, 0
-	jge file_test$704
+	jge file_test$653
 	neg ebx
 	neg bl
 
-file_test$704:	; c = £temporary4708
+file_test$653:	; c = £temporary4708
 	mov [rbp + 52], bl
 
-file_test$705:	; call header integral zero 0 stack zero 0
+file_test$654:	; call header integral zero 0 stack zero 0
 
-file_test$706:	; £temporary4709 = int_to_int c (Signed_Char -> Signed_Int)
+file_test$655:	; £temporary4709 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 52]
 	and eax, 255
 	cmp al, 0
-	jge file_test$707
+	jge file_test$656
 	neg al
 	neg eax
 
-file_test$707:	; parameter £temporary4709, offset 77
+file_test$656:	; parameter £temporary4709, offset 77
 	mov [rbp + 77], eax
 
-file_test$708:	; call function noellipse-noellipse putchar
-	mov qword [rbp + 53], file_test$709
+file_test$657:	; call function noellipse-noellipse putchar
+	mov qword [rbp + 53], file_test$658
 	mov [rbp + 61], rbp
 	add rbp, 53
 	jmp putchar
 
-file_test$709:	; post call
+file_test$658:	; post call
 
-file_test$710:	; if u == int4$0# goto 718
+file_test$659:	; if u == int4$0# goto 667
 	cmp dword [rbp + 48], 0
-	je file_test$718
+	je file_test$667
 
-file_test$711:	; call header integral zero 0 stack zero 0
+file_test$660:	; call header integral zero 0 stack zero 0
 
-file_test$712:	; parameter inFilePtr, offset 77
+file_test$661:	; parameter inFilePtr, offset 77
 	mov rax, [rbp + 40]
 	mov [rbp + 77], rax
 
-file_test$713:	; parameter int4$minus2#, offset 85
+file_test$662:	; parameter int4$minus2#, offset 85
 	mov dword [rbp + 85], -2
 
-file_test$714:	; parameter int4$1#, offset 89
+file_test$663:	; parameter int4$1#, offset 89
 	mov dword [rbp + 89], 1
 
-file_test$715:	; call function noellipse-noellipse fseek
-	mov qword [rbp + 53], file_test$716
+file_test$664:	; call function noellipse-noellipse fseek
+	mov qword [rbp + 53], file_test$665
 	mov [rbp + 61], rbp
 	add rbp, 53
 	jmp fseek
 
-file_test$716:	; post call
+file_test$665:	; post call
 
-file_test$717:	; goto 690
-	jmp file_test$690
+file_test$666:	; goto 639
+	jmp file_test$639
 
-file_test$718:	; call header integral zero 0 stack zero 0
+file_test$667:	; call header integral zero 0 stack zero 0
 
-file_test$719:	; parameter string_0A0A#, offset 76
+file_test$668:	; parameter string_0A0A#, offset 76
 	mov qword [rbp + 76], string_0A0A#
 
-file_test$720:	; call function noellipse-ellipse printf, extra 0
-	mov qword [rbp + 52], file_test$721
+file_test$669:	; call function noellipse-ellipse printf, extra 0
+	mov qword [rbp + 52], file_test$670
 	mov [rbp + 60], rbp
 	add rbp, 52
 	mov rdi, rbp
 	jmp printf
+
+file_test$670:	; post call
+
+file_test$671:	; call header integral zero 0 stack zero 0
+
+file_test$672:	; parameter inFilePtr, offset 76
+	mov rax, [rbp + 40]
+	mov [rbp + 76], rax
+
+file_test$673:	; call function noellipse-noellipse fclose
+	mov qword [rbp + 52], file_test$674
+	mov [rbp + 60], rbp
+	add rbp, 52
+	jmp fclose
+
+file_test$674:	; post call
+
+file_test$675:	; call header integral zero 0 stack zero 0
+
+file_test$676:	; parameter string_fileexists20X2025s0A#, offset 64
+	mov qword [rbp + 64], string_fileexists20X2025s0A#
+
+file_test$677:	; call header integral zero 0 stack zero 0
+
+file_test$678:	; parameter string_X#, offset 96
+	mov qword [rbp + 96], string_X#
+
+file_test$679:	; call function noellipse-noellipse fileexists
+	mov qword [rbp + 72], file_test$680
+	mov [rbp + 80], rbp
+	add rbp, 72
+	jmp fileexists
+
+file_test$680:	; post call
+
+file_test$681:	; £temporary4715 = return_value
+
+file_test$682:	; if £temporary4715 == int4$0# goto 685
+	cmp ebx, 0
+	je file_test$685
+
+file_test$683:	; £temporary4717 = string_Yes#
+	mov rax, string_Yes#
+
+file_test$684:	; goto 686
+	jmp file_test$686
+
+file_test$685:	; £temporary4717 = string_No#
+	mov rax, string_No#
+
+file_test$686:	; parameter £temporary4717, offset 72
+	mov [rbp + 72], rax
+
+file_test$687:	; call function noellipse-ellipse printf, extra 8
+	mov qword [rbp + 40], file_test$688
+	mov [rbp + 48], rbp
+	add rbp, 40
+	mov rdi, rbp
+	add rdi, 8
+	jmp printf
+
+file_test$688:	; post call
+
+file_test$689:	; call header integral zero 0 stack zero 0
+
+file_test$690:	; parameter string_fileexists20Y2025s0A0A#, offset 64
+	mov qword [rbp + 64], string_fileexists20Y2025s0A0A#
+
+file_test$691:	; call header integral zero 0 stack zero 0
+
+file_test$692:	; parameter string_Y#, offset 96
+	mov qword [rbp + 96], string_Y#
+
+file_test$693:	; call function noellipse-noellipse fileexists
+	mov qword [rbp + 72], file_test$694
+	mov [rbp + 80], rbp
+	add rbp, 72
+	jmp fileexists
+
+file_test$694:	; post call
+
+file_test$695:	; £temporary4719 = return_value
+
+file_test$696:	; if £temporary4719 == int4$0# goto 699
+	cmp ebx, 0
+	je file_test$699
+
+file_test$697:	; £temporary4721 = string_Yes#
+	mov rax, string_Yes#
+
+file_test$698:	; goto 700
+	jmp file_test$700
+
+file_test$699:	; £temporary4721 = string_No#
+	mov rax, string_No#
+
+file_test$700:	; parameter £temporary4721, offset 72
+	mov [rbp + 72], rax
+
+file_test$701:	; call function noellipse-ellipse printf, extra 8
+	mov qword [rbp + 40], file_test$702
+	mov [rbp + 48], rbp
+	add rbp, 40
+	mov rdi, rbp
+	add rdi, 8
+	jmp printf
+
+file_test$702:	; post call
+
+file_test$703:	; call header integral zero 0 stack zero 0
+
+file_test$704:	; parameter string_PBookX2Etxt#, offset 72
+	mov qword [rbp + 72], string_PBookX2Etxt#
+
+file_test$705:	; parameter string_r2B#, offset 80
+	mov qword [rbp + 80], string_r2B#
+
+file_test$706:	; call function noellipse-noellipse fopen
+	mov qword [rbp + 48], file_test$707
+	mov [rbp + 56], rbp
+	add rbp, 48
+	jmp fopen
+
+file_test$707:	; post call
+
+file_test$708:	; £temporary4723 = return_value
+
+file_test$709:	; inOutFilePtr = £temporary4723
+	mov [rbp + 48], rbx
+
+file_test$710:	; if inOutFilePtr != int8$0# goto 722
+	cmp qword [rbp + 48], 0
+	jne file_test$722
+
+file_test$711:	; call header integral zero 0 stack zero 0
+
+file_test$712:	; parameter stderr, offset 80
+	mov rax, [stderr]
+	mov [rbp + 80], rax
+
+file_test$713:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 88
+	mov qword [rbp + 88], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+
+file_test$714:	; parameter string_inOutFilePtr20213D20NULL#, offset 96
+	mov qword [rbp + 96], string_inOutFilePtr20213D20NULL#
+
+file_test$715:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 104
+	mov qword [rbp + 104], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+
+file_test$716:	; parameter int4$228#, offset 112
+	mov dword [rbp + 112], 228
+
+file_test$717:	; call function noellipse-ellipse fprintf, extra 20
+	mov qword [rbp + 56], file_test$718
+	mov [rbp + 64], rbp
+	add rbp, 56
+	mov rdi, rbp
+	add rdi, 20
+	jmp fprintf
+
+file_test$718:	; post call
+
+file_test$719:	; call header integral zero 0 stack zero 0
+
+file_test$720:	; call function noellipse-noellipse abort
+	mov qword [rbp + 56], file_test$721
+	mov [rbp + 64], rbp
+	add rbp, 56
+	jmp abort
 
 file_test$721:	; post call
 
 file_test$722:	; call header integral zero 0 stack zero 0
 
-file_test$723:	; parameter inFilePtr, offset 76
-	mov rax, [rbp + 40]
-	mov [rbp + 76], rax
-
-file_test$724:	; call function noellipse-noellipse fclose
-	mov qword [rbp + 52], file_test$725
-	mov [rbp + 60], rbp
-	add rbp, 52
-	jmp fclose
-
-file_test$725:	; post call
-
-file_test$726:	; call header integral zero 0 stack zero 0
-
-file_test$727:	; parameter string_fileexists20X2025s0A#, offset 64
-	mov qword [rbp + 64], string_fileexists20X2025s0A#
-
-file_test$728:	; call header integral zero 0 stack zero 0
-
-file_test$729:	; parameter string_X#, offset 96
-	mov qword [rbp + 96], string_X#
-
-file_test$730:	; call function noellipse-noellipse fileexists
-	mov qword [rbp + 72], file_test$731
-	mov [rbp + 80], rbp
-	add rbp, 72
-	jmp fileexists
-
-file_test$731:	; post call
-
-file_test$732:	; £temporary4715 = return_value
-
-file_test$733:	; if £temporary4715 == int4$0# goto 736
-	cmp ebx, 0
-	je file_test$736
-
-file_test$734:	; £temporary4717 = string_Yes#
-	mov rax, string_Yes#
-
-file_test$735:	; goto 737
-	jmp file_test$737
-
-file_test$736:	; £temporary4717 = string_No#
-	mov rax, string_No#
-
-file_test$737:	; parameter £temporary4717, offset 72
-	mov [rbp + 72], rax
-
-file_test$738:	; call function noellipse-ellipse printf, extra 8
-	mov qword [rbp + 40], file_test$739
-	mov [rbp + 48], rbp
-	add rbp, 40
-	mov rdi, rbp
-	add rdi, 8
-	jmp printf
-
-file_test$739:	; post call
-
-file_test$740:	; call header integral zero 0 stack zero 0
-
-file_test$741:	; parameter string_fileexists20Y2025s0A0A#, offset 64
-	mov qword [rbp + 64], string_fileexists20Y2025s0A0A#
-
-file_test$742:	; call header integral zero 0 stack zero 0
-
-file_test$743:	; parameter string_Y#, offset 96
-	mov qword [rbp + 96], string_Y#
-
-file_test$744:	; call function noellipse-noellipse fileexists
-	mov qword [rbp + 72], file_test$745
-	mov [rbp + 80], rbp
-	add rbp, 72
-	jmp fileexists
-
-file_test$745:	; post call
-
-file_test$746:	; £temporary4719 = return_value
-
-file_test$747:	; if £temporary4719 == int4$0# goto 750
-	cmp ebx, 0
-	je file_test$750
-
-file_test$748:	; £temporary4721 = string_Yes#
-	mov rax, string_Yes#
-
-file_test$749:	; goto 751
-	jmp file_test$751
-
-file_test$750:	; £temporary4721 = string_No#
-	mov rax, string_No#
-
-file_test$751:	; parameter £temporary4721, offset 72
-	mov [rbp + 72], rax
-
-file_test$752:	; call function noellipse-ellipse printf, extra 8
-	mov qword [rbp + 40], file_test$753
-	mov [rbp + 48], rbp
-	add rbp, 40
-	mov rdi, rbp
-	add rdi, 8
-	jmp printf
-
-file_test$753:	; post call
-
-file_test$754:	; call header integral zero 0 stack zero 0
-
-file_test$755:	; parameter string_PBookX2Etxt#, offset 72
-	mov qword [rbp + 72], string_PBookX2Etxt#
-
-file_test$756:	; parameter string_r2B#, offset 80
-	mov qword [rbp + 80], string_r2B#
-
-file_test$757:	; call function noellipse-noellipse fopen
-	mov qword [rbp + 48], file_test$758
-	mov [rbp + 56], rbp
-	add rbp, 48
-	jmp fopen
-
-file_test$758:	; post call
-
-file_test$759:	; £temporary4723 = return_value
-
-file_test$760:	; inOutFilePtr = £temporary4723
-	mov [rbp + 48], rbx
-
-file_test$761:	; if inOutFilePtr != int8$0# goto 773
-	cmp qword [rbp + 48], 0
-	jne file_test$773
-
-file_test$762:	; call header integral zero 0 stack zero 0
-
-file_test$763:	; parameter stderr, offset 80
-	mov rax, [stderr]
-	mov [rbp + 80], rax
-
-file_test$764:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 88
-	mov qword [rbp + 88], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-
-file_test$765:	; parameter string_inOutFilePtr20213D20NULL#, offset 96
-	mov qword [rbp + 96], string_inOutFilePtr20213D20NULL#
-
-file_test$766:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 104
-	mov qword [rbp + 104], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-
-file_test$767:	; parameter int4$228#, offset 112
-	mov dword [rbp + 112], 228
-
-file_test$768:	; call function noellipse-ellipse fprintf, extra 20
-	mov qword [rbp + 56], file_test$769
-	mov [rbp + 64], rbp
-	add rbp, 56
-	mov rdi, rbp
-	add rdi, 20
-	jmp fprintf
-
-file_test$769:	; post call
-
-file_test$770:	; call header integral zero 0 stack zero 0
-
-file_test$771:	; call function noellipse-noellipse abort
-	mov qword [rbp + 56], file_test$772
-	mov [rbp + 64], rbp
-	add rbp, 56
-	jmp abort
-
-file_test$772:	; post call
-
-file_test$773:	; call header integral zero 0 stack zero 0
-
-file_test$774:	; call function noellipse-noellipse tmpfile
-	mov qword [rbp + 56], file_test$775
+file_test$723:	; call function noellipse-noellipse tmpfile
+	mov qword [rbp + 56], file_test$724
 	mov [rbp + 64], rbp
 	add rbp, 56
 	jmp tmpfile
 
-file_test$775:	; post call
+file_test$724:	; post call
 
-file_test$776:	; £temporary4728 = return_value
+file_test$725:	; £temporary4728 = return_value
 
-file_test$777:	; tempFilePtr = £temporary4728
+file_test$726:	; tempFilePtr = £temporary4728
 	mov [rbp + 40], rbx
 
-file_test$778:	; if tempFilePtr != int8$0# goto 790
+file_test$727:	; if tempFilePtr != int8$0# goto 739
 	cmp qword [rbp + 40], 0
-	jne file_test$790
+	jne file_test$739
 
-file_test$779:	; call header integral zero 0 stack zero 0
+file_test$728:	; call header integral zero 0 stack zero 0
 
-file_test$780:	; parameter stderr, offset 80
+file_test$729:	; parameter stderr, offset 80
 	mov rax, [stderr]
 	mov [rbp + 80], rax
 
-file_test$781:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 88
+file_test$730:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 88
 	mov qword [rbp + 88], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
-file_test$782:	; parameter string_tempFilePtr20213D20NULL#, offset 96
+file_test$731:	; parameter string_tempFilePtr20213D20NULL#, offset 96
 	mov qword [rbp + 96], string_tempFilePtr20213D20NULL#
 
-file_test$783:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 104
+file_test$732:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 104
 	mov qword [rbp + 104], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
-file_test$784:	; parameter int4$231#, offset 112
+file_test$733:	; parameter int4$231#, offset 112
 	mov dword [rbp + 112], 231
 
-file_test$785:	; call function noellipse-ellipse fprintf, extra 20
-	mov qword [rbp + 56], file_test$786
+file_test$734:	; call function noellipse-ellipse fprintf, extra 20
+	mov qword [rbp + 56], file_test$735
 	mov [rbp + 64], rbp
 	add rbp, 56
 	mov rdi, rbp
 	add rdi, 20
 	jmp fprintf
 
-file_test$786:	; post call
+file_test$735:	; post call
 
-file_test$787:	; call header integral zero 0 stack zero 0
+file_test$736:	; call header integral zero 0 stack zero 0
 
-file_test$788:	; call function noellipse-noellipse abort
-	mov qword [rbp + 56], file_test$789
+file_test$737:	; call function noellipse-noellipse abort
+	mov qword [rbp + 56], file_test$738
 	mov [rbp + 64], rbp
 	add rbp, 56
 	jmp abort
 
-file_test$789:	; post call
+file_test$738:	; post call
 
-file_test$790:	; call header integral zero 0 stack zero 0
+file_test$739:	; call header integral zero 0 stack zero 0
 
-file_test$791:	; parameter inOutFilePtr, offset 80
+file_test$740:	; parameter inOutFilePtr, offset 80
 	mov rax, [rbp + 48]
 	mov [rbp + 80], rax
 
-file_test$792:	; call function noellipse-noellipse fgetc
-	mov qword [rbp + 56], file_test$793
+file_test$741:	; call function noellipse-noellipse fgetc
+	mov qword [rbp + 56], file_test$742
 	mov [rbp + 64], rbp
 	add rbp, 56
 	jmp fgetc
 
-file_test$793:	; post call
+file_test$742:	; post call
 
-file_test$794:	; £temporary4733 = return_value
+file_test$743:	; £temporary4733 = return_value
 
-file_test$795:	; £temporary4734 = int_to_int £temporary4733 (Signed_Int -> Signed_Char)
+file_test$744:	; £temporary4734 = int_to_int £temporary4733 (Signed_Int -> Signed_Char)
 	cmp ebx, 0
-	jge file_test$796
+	jge file_test$745
 	neg ebx
 	neg bl
 
-file_test$796:	; c = £temporary4734
+file_test$745:	; c = £temporary4734
 	mov [rbp + 56], bl
 
-file_test$797:	; £temporary4735 = int_to_int c (Signed_Char -> Signed_Int)
+file_test$746:	; £temporary4735 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 56]
 	and eax, 255
 	cmp al, 0
-	jge file_test$798
+	jge file_test$747
 	neg al
 	neg eax
 
-file_test$798:	; if £temporary4735 == int4$minus1# goto 811
+file_test$747:	; if £temporary4735 == int4$minus1# goto 760
 	cmp eax, -1
-	je file_test$811
+	je file_test$760
 
-file_test$799:	; call header integral zero 0 stack zero 0
+file_test$748:	; call header integral zero 0 stack zero 0
 
-file_test$800:	; call header integral zero 0 stack zero 0
+file_test$749:	; call header integral zero 0 stack zero 0
 
-file_test$801:	; £temporary4737 = int_to_int c (Signed_Char -> Signed_Int)
+file_test$750:	; £temporary4737 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 56]
 	and eax, 255
 	cmp al, 0
-	jge file_test$802
+	jge file_test$751
 	neg al
 	neg eax
 
-file_test$802:	; parameter £temporary4737, offset 81
+file_test$751:	; parameter £temporary4737, offset 81
 	mov [rbp + 81], eax
 
-file_test$803:	; call function noellipse-noellipse toupper
-	mov qword [rbp + 57], file_test$804
+file_test$752:	; call function noellipse-noellipse toupper
+	mov qword [rbp + 57], file_test$753
 	mov [rbp + 65], rbp
 	add rbp, 57
 	jmp toupper
 
-file_test$804:	; post call
+file_test$753:	; post call
 
-file_test$805:	; £temporary4738 = return_value
+file_test$754:	; £temporary4738 = return_value
 
-file_test$806:	; parameter £temporary4738, offset 81
+file_test$755:	; parameter £temporary4738, offset 81
 	mov [rbp + 81], ebx
 
-file_test$807:	; parameter tempFilePtr, offset 85
+file_test$756:	; parameter tempFilePtr, offset 85
 	mov rax, [rbp + 40]
 	mov [rbp + 85], rax
 
-file_test$808:	; call function noellipse-noellipse putc
-	mov qword [rbp + 57], file_test$809
+file_test$757:	; call function noellipse-noellipse putc
+	mov qword [rbp + 57], file_test$758
 	mov [rbp + 65], rbp
 	add rbp, 57
 	jmp putc
 
-file_test$809:	; post call
+file_test$758:	; post call
 
-file_test$810:	; goto 790
-	jmp file_test$790
+file_test$759:	; goto 739
+	jmp file_test$739
 
-file_test$811:	; call header integral zero 0 stack zero 0
+file_test$760:	; call header integral zero 0 stack zero 0
 
-file_test$812:	; parameter tempFilePtr, offset 80
+file_test$761:	; parameter tempFilePtr, offset 80
 	mov rax, [rbp + 40]
 	mov [rbp + 80], rax
 
-file_test$813:	; call function noellipse-noellipse rewind
-	mov qword [rbp + 56], file_test$814
+file_test$762:	; call function noellipse-noellipse rewind
+	mov qword [rbp + 56], file_test$763
 	mov [rbp + 64], rbp
 	add rbp, 56
 	jmp rewind
 
-file_test$814:	; post call
+file_test$763:	; post call
 
-file_test$815:	; call header integral zero 0 stack zero 0
+file_test$764:	; call header integral zero 0 stack zero 0
 
-file_test$816:	; parameter inOutFilePtr, offset 80
+file_test$765:	; parameter inOutFilePtr, offset 80
 	mov rax, [rbp + 48]
 	mov [rbp + 80], rax
 
-file_test$817:	; parameter string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A#, offset 88
+file_test$766:	; parameter string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A#, offset 88
 	mov qword [rbp + 88], string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A#
 
-file_test$818:	; call function noellipse-ellipse fprintf, extra 0
-	mov qword [rbp + 56], file_test$819
+file_test$767:	; call function noellipse-ellipse fprintf, extra 0
+	mov qword [rbp + 56], file_test$768
 	mov [rbp + 64], rbp
 	add rbp, 56
 	mov rdi, rbp
 	jmp fprintf
 
-file_test$819:	; post call
+file_test$768:	; post call
 
-file_test$820:	; call header integral zero 0 stack zero 0
+file_test$769:	; call header integral zero 0 stack zero 0
 
-file_test$821:	; parameter tempFilePtr, offset 80
+file_test$770:	; parameter tempFilePtr, offset 80
 	mov rax, [rbp + 40]
 	mov [rbp + 80], rax
 
-file_test$822:	; call function noellipse-noellipse fgetc
-	mov qword [rbp + 56], file_test$823
+file_test$771:	; call function noellipse-noellipse fgetc
+	mov qword [rbp + 56], file_test$772
 	mov [rbp + 64], rbp
 	add rbp, 56
 	jmp fgetc
 
-file_test$823:	; post call
+file_test$772:	; post call
 
-file_test$824:	; £temporary4743 = return_value
+file_test$773:	; £temporary4743 = return_value
 
-file_test$825:	; £temporary4744 = int_to_int £temporary4743 (Signed_Int -> Signed_Char)
+file_test$774:	; £temporary4744 = int_to_int £temporary4743 (Signed_Int -> Signed_Char)
 	cmp ebx, 0
-	jge file_test$826
+	jge file_test$775
 	neg ebx
 	neg bl
 
-file_test$826:	; c = £temporary4744
+file_test$775:	; c = £temporary4744
 	mov [rbp + 56], bl
 
-file_test$827:	; £temporary4745 = int_to_int c (Signed_Char -> Signed_Int)
+file_test$776:	; £temporary4745 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 56]
 	and eax, 255
 	cmp al, 0
-	jge file_test$828
+	jge file_test$777
 	neg al
 	neg eax
 
-file_test$828:	; if £temporary4745 == int4$minus1# goto 836
+file_test$777:	; if £temporary4745 == int4$minus1# goto 785
 	cmp eax, -1
-	je file_test$836
+	je file_test$785
 
-file_test$829:	; call header integral zero 0 stack zero 0
+file_test$778:	; call header integral zero 0 stack zero 0
 
-file_test$830:	; £temporary4747 = int_to_int c (Signed_Char -> Signed_Int)
+file_test$779:	; £temporary4747 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 56]
 	and eax, 255
 	cmp al, 0
-	jge file_test$831
+	jge file_test$780
 	neg al
 	neg eax
 
-file_test$831:	; parameter £temporary4747, offset 81
+file_test$780:	; parameter £temporary4747, offset 81
 	mov [rbp + 81], eax
 
-file_test$832:	; parameter inOutFilePtr, offset 85
+file_test$781:	; parameter inOutFilePtr, offset 85
 	mov rax, [rbp + 48]
 	mov [rbp + 85], rax
 
-file_test$833:	; call function noellipse-noellipse putc
-	mov qword [rbp + 57], file_test$834
+file_test$782:	; call function noellipse-noellipse putc
+	mov qword [rbp + 57], file_test$783
 	mov [rbp + 65], rbp
 	add rbp, 57
 	jmp putc
 
-file_test$834:	; post call
+file_test$783:	; post call
 
-file_test$835:	; goto 820
-	jmp file_test$820
+file_test$784:	; goto 769
+	jmp file_test$769
 
-file_test$836:	; call header integral zero 0 stack zero 0
+file_test$785:	; call header integral zero 0 stack zero 0
 
-file_test$837:	; parameter inOutFilePtr, offset 80
+file_test$786:	; parameter inOutFilePtr, offset 80
 	mov rax, [rbp + 48]
 	mov [rbp + 80], rax
 
-file_test$838:	; call function noellipse-noellipse fclose
-	mov qword [rbp + 56], file_test$839
+file_test$787:	; call function noellipse-noellipse fclose
+	mov qword [rbp + 56], file_test$788
 	mov [rbp + 64], rbp
 	add rbp, 56
 	jmp fclose
 
-file_test$839:	; post call
+file_test$788:	; post call
 
-file_test$840:	; call header integral zero 0 stack zero 0
+file_test$789:	; call header integral zero 0 stack zero 0
 
-file_test$841:	; parameter tempFilePtr, offset 80
+file_test$790:	; parameter tempFilePtr, offset 80
 	mov rax, [rbp + 40]
 	mov [rbp + 80], rax
 
-file_test$842:	; call function noellipse-noellipse fclose
-	mov qword [rbp + 56], file_test$843
+file_test$791:	; call function noellipse-noellipse fclose
+	mov qword [rbp + 56], file_test$792
 	mov [rbp + 64], rbp
 	add rbp, 56
 	jmp fclose
 
-file_test$843:	; post call
+file_test$792:	; post call
 
-file_test$844:	; return
+file_test$793:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-file_test$845:	; function end file_test
+file_test$794:	; function end file_test
 section .data
 
 $IntegralStorage#:
