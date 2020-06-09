@@ -390,38 +390,72 @@ main2$8:	; return
 
 main2$9:	; function end main2
 
-main33:	; empty
+main33:	; s[0] = int1$72#
+	mov byte [rbp + 24], 72
 
-main33$1:	; call header integral zero 0 stack zero 0
+main33$1:	; s[1] = int1$101#
+	mov byte [rbp + 25], 101
 
-main33$2:	; parameter string_3C25s3E203C25s3E0A#, offset 88
+main33$2:	; s[2] = int1$108#
+	mov byte [rbp + 26], 108
+
+main33$3:	; s[3] = int1$108#
+	mov byte [rbp + 27], 108
+
+main33$4:	; s[4] = int1$111#
+	mov byte [rbp + 28], 111
+
+main33$5:	; s[5] = int1$48#
+	mov byte [rbp + 29], 48
+
+main33$6:	; t[0] = int1$87#
+	mov byte [rbp + 44], 87
+
+main33$7:	; t[1] = int1$111#
+	mov byte [rbp + 45], 111
+
+main33$8:	; t[2] = int1$114#
+	mov byte [rbp + 46], 114
+
+main33$9:	; t[3] = int1$108#
+	mov byte [rbp + 47], 108
+
+main33$10:	; t[4] = int1$100#
+	mov byte [rbp + 48], 100
+
+main33$11:	; t[5] = int1$48#
+	mov byte [rbp + 49], 48
+
+main33$12:	; call header integral zero 0 stack zero 0
+
+main33$13:	; parameter string_3C25s3E203C25s3E0A#, offset 88
 	mov qword [rbp + 88], string_3C25s3E203C25s3E0A#
 
-main33$3:	; parameter s, offset 96
+main33$14:	; parameter s, offset 96
 	mov [rbp + 96], rbp
 	add qword [rbp + 96], 24
 
-main33$4:	; parameter t, offset 104
+main33$15:	; parameter t, offset 104
 	mov [rbp + 104], rbp
 	add qword [rbp + 104], 44
 
-main33$5:	; call function noellipse-ellipse printf, extra 16
-	mov qword [rbp + 64], main33$6
+main33$16:	; call function noellipse-ellipse printf, extra 16
+	mov qword [rbp + 64], main33$17
 	mov [rbp + 72], rbp
 	add rbp, 64
 	mov rdi, rbp
 	add rdi, 16
 	jmp printf
 
-main33$6:	; post call
+main33$17:	; post call
 
-main33$7:	; return
+main33$18:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-main33$8:	; function end main33
+main33$19:	; function end main33
 
 main34:	; g_outDevice = stdout
 	mov rax, [stdout]
