@@ -1,4 +1,4 @@
-0: if size < int4$5# goto <MiddleCode>
+0: if size < int2$5# goto <MiddleCode>
 1: goto <MiddleCode>
 2: check track map float stack
 3: empty
@@ -7,79 +7,75 @@
 6: if c <= int1$122# goto <MiddleCode>
 7: goto <MiddleCode>
 8: check track map float stack
-9: £temporary1221 = int_to_int size (Signed_Int -> Pointer)
-10: £temporary1222 = £temporary1221 * int8$1#
-11: £temporary1223 = name + £temporary1222
-12: £field1220 -> £temporary1223 = *£temporary1223
-13: £field1220 -> £temporary1223 = c
-14: £temporary1224 = size + int4$1#
-15: £temporary1226 = int_to_int £temporary1224 (Signed_Int -> Pointer)
-16: £temporary1227 = £temporary1226 * int8$1#
-17: £temporary1228 = name + £temporary1227
-18: £field1225 -> £temporary1228 = *£temporary1228
-19: £field1225 -> £temporary1228 = int1$0#
-20: call header
-21: parameter name, offset 65
-22: call function noellipse-noellipse fileexists
-23: post call
-24: £temporary1229 = return_value
-25: if £temporary1229 != int4$0# goto <MiddleCode>
-26: goto <MiddleCode>
-27: check track map float stack
-28: case status == int4$0# goto return_value = name
-29: case status == int4$1# goto call header
-30: case end status
-31: goto <MiddleCode>
-32: return_value = name
-33: return
-34: call header
-35: parameter name, offset 65
-36: call function noellipse-noellipse existsTempName
-37: post call
-38: £temporary1232 = return_value
-39: if £temporary1232 != int4$0# goto <MiddleCode>
-40: goto <MiddleCode>
-41: check track map float stack
-42: call header
-43: £temporary1236 = int_to_int g_tempSize (Signed_Int -> Array)
-44: £temporary1237 = £temporary1236 * Array_#
-45: £temporary1238 = g_tempArray + £temporary1237
-46: £field1235 -> £temporary1238 = *£temporary1238
-47: parameter £field1235 -> £temporary1238, offset 65
-48: parameter name, offset 73
-49: call function noellipse-noellipse strcpy
-50: post call
-51: £temporary1240 = g_tempSize
-52: ++g_tempSize
-53: £temporary1242 = int_to_int £temporary1240 (Signed_Int -> Array)
-54: £temporary1243 = £temporary1242 * Array_#
-55: £temporary1244 = g_tempArray + £temporary1243
-56: £field1241 -> £temporary1244 = *£temporary1244
-57: return_value = £field1241 -> £temporary1244
-58: return
-59: goto <MiddleCode>
-60: goto <MiddleCode>
-61: goto <MiddleCode>
-62: call header
-63: parameter name, offset 65
-64: £temporary1245 = size + int4$1#
-65: parameter £temporary1245, offset 73
-66: parameter status, offset 77
-67: call function noellipse-noellipse generateTempName
-68: post call
-69: £temporary1246 = return_value
-70: result = £temporary1246
-71: if result != int8$0# goto <MiddleCode>
+9: £temporary1244 = size * int2$1#
+10: £temporary1245 = name + £temporary1244
+11: £field1243 -> £temporary1245 = *£temporary1245
+12: £field1243 -> £temporary1245 = c
+13: £temporary1246 = size + int2$1#
+14: £temporary1248 = £temporary1246 * int2$1#
+15: £temporary1249 = name + £temporary1248
+16: £field1247 -> £temporary1249 = *£temporary1249
+17: £field1247 -> £temporary1249 = int1$0#
+18: call header
+19: parameter name, offset 19
+20: call function noellipse-noellipse fileexists
+21: post call
+22: £temporary1250 = return_value
+23: if £temporary1250 != int2$0# goto <MiddleCode>
+24: goto <MiddleCode>
+25: check track map float stack
+26: case status == int2$0# goto return_value = name
+27: case status == int2$1# goto call header
+28: case end status
+29: goto <MiddleCode>
+30: return_value = name
+31: return
+32: call header
+33: parameter name, offset 19
+34: call function noellipse-noellipse existsTempName
+35: post call
+36: £temporary1253 = return_value
+37: if £temporary1253 != int2$0# goto <MiddleCode>
+38: goto <MiddleCode>
+39: check track map float stack
+40: call header
+41: £temporary1257 = g_tempSize * Array_#
+42: £temporary1258 = g_tempArray + £temporary1257
+43: £field1256 -> £temporary1258 = *£temporary1258
+44: parameter £field1256 -> £temporary1258, offset 19
+45: parameter name, offset 21
+46: call function noellipse-noellipse strcpy
+47: post call
+48: £temporary1260 = g_tempSize
+49: ++g_tempSize
+50: £temporary1262 = £temporary1260 * Array_#
+51: £temporary1263 = g_tempArray + £temporary1262
+52: £field1261 -> £temporary1263 = *£temporary1263
+53: return_value = £field1261 -> £temporary1263
+54: return
+55: goto <MiddleCode>
+56: goto <MiddleCode>
+57: goto <MiddleCode>
+58: call header
+59: parameter name, offset 19
+60: £temporary1264 = size + int2$1#
+61: parameter £temporary1264, offset 21
+62: parameter status, offset 23
+63: call function noellipse-noellipse generateTempName
+64: post call
+65: £temporary1265 = return_value
+66: result = £temporary1265
+67: if result != int2$0# goto <MiddleCode>
+68: goto <MiddleCode>
+69: check track map float stack
+70: return_value = result
+71: return
 72: goto <MiddleCode>
-73: check track map float stack
-74: return_value = result
-75: return
+73: empty
+74: ++c
+75: goto <MiddleCode>
 76: goto <MiddleCode>
-77: empty
-78: ++c
-79: goto <MiddleCode>
-80: goto <MiddleCode>
-81: return_value = int8$0#
-82: return
-83: empty
-84: function end generateTempName
+77: return_value = int2$0#
+78: return
+79: empty
+80: function end generateTempName
