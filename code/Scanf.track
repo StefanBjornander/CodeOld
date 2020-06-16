@@ -4032,8 +4032,8 @@ scanf$7:	; call function ellipse-noellipse vscanf
 25:		mov word [di + 10], scanf$8
 26:		mov [di + 12], bp
 27:		mov [di + 14], di
-28:		mov bp, di
-29:		add bp, 10
+28:		add di, 10
+29:		mov bp, di
 30:		jmp vscanf
 32:	
 
@@ -4138,8 +4138,8 @@ fscanf$8:	; call function ellipse-noellipse vfscanf
 29:		mov word [di + 12], fscanf$9
 30:		mov [di + 14], bp
 31:		mov [di + 16], di
-32:		mov bp, di
-33:		add bp, 12
+32:		add di, 12
+33:		mov bp, di
 34:		jmp vfscanf
 36:	
 
@@ -4251,8 +4251,8 @@ sscanf$8:	; call function ellipse-noellipse vsscanf
 29:		mov word [di + 12], sscanf$9
 30:		mov [di + 14], bp
 31:		mov [di + 16], di
-32:		mov bp, di
-33:		add bp, 12
+32:		add di, 12
+33:		mov bp, di
 34:		jmp vsscanf
 36:	
 

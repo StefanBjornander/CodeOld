@@ -103,8 +103,8 @@ raise$22:	; parameter sig, offset 60
 raise$23:	; call function noellipse-noellipse func
 	mov qword [rbp + 36], raise$24
 	mov [rbp + 44], rbp
-	mov rax, [rbp]
 	add rbp, 36
+	mov rax, [rbp + 28]
 	jmp rax
 
 raise$24:	; post call

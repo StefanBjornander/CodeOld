@@ -262,8 +262,8 @@ raise$37:	; parameter sig, offset 6
 raise$38:	; call function noellipse-noellipse func
 146:		mov word [bp + 10], raise$39
 147:		mov [bp + 12], bp
-148:		mov ax, [bp + 8]
-149:		add bp, 10
+148:		add bp, 10
+149:		mov ax, [bp + 8]
 150:		jmp ax
 152:	
 

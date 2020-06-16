@@ -586,9 +586,9 @@ bsearch$12:	; parameter firstValuePtr, offset 8
 bsearch$13:	; call function noellipse-noellipse compare
 55:		mov word [bp + 22], bsearch$14
 56:		mov [bp + 24], bp
-57:		mov a1635, [bp + 14]
-58:		add bp, 22
-59:		jmp a1635 a1635 compare 57 59
+57:		add bp, 22
+58:		mov a1635, [bp + 14]
+59:		jmp a1635 a1635 compare 58 59
 61:	
 
 bsearch$14:	; post call
@@ -667,9 +667,9 @@ bsearch$29:	; parameter lastValuePtr, offset 8
 bsearch$30:	; call function noellipse-noellipse compare
 128:		mov word [bp + 22], bsearch$31
 129:		mov [bp + 24], bp
-130:		mov a1649, [bp + 14]
-131:		add bp, 22
-132:		jmp a1649 a1649 compare 130 132
+130:		add bp, 22
+131:		mov a1649, [bp + 14]
+132:		jmp a1649 a1649 compare 131 132
 134:	
 
 bsearch$31:	; post call
@@ -762,9 +762,9 @@ bsearch$49:	; parameter middleValuePtr, offset 8
 bsearch$50:	; call function noellipse-noellipse compare
 217:		mov word [bp + 24], bsearch$51
 218:		mov [bp + 26], bp
-219:		mov a1667, [bp + 14]
-220:		add bp, 24
-221:		jmp a1667 a1667 compare 219 221
+219:		add bp, 24
+220:		mov a1667, [bp + 14]
+221:		jmp a1667 a1667 compare 220 221
 223:	
 
 bsearch$51:	; post call
@@ -1289,9 +1289,9 @@ exit$22:	; call header integral zero 0 stack zero 0
 exit$23:	; call function noellipse-noellipse £temporary2614 -> £temporary2616
 102:		mov word [bp + 12], exit$24
 103:		mov [bp + 14], bp
-104:		mov t1738, [bp + 10]
-105:		add bp, 12
-106:		jmp t1738 t1738 £temporary2614 104 106
+104:		add bp, 12
+105:		mov t1738, [bp + 10]
+106:		jmp t1738 t1738 £temporary2614 105 106
 108:	
 
 exit$24:	; post call
@@ -1495,9 +1495,9 @@ qsort$17:	; parameter valuePtr2, offset 8
 qsort$18:	; call function noellipse-noellipse compare
 78:		mov word [bp + 26], qsort$19
 79:		mov [bp + 28], bp
-80:		mov a1766, [bp + 12]
-81:		add bp, 26
-82:		jmp a1766 a1766 compare 80 82
+80:		add bp, 26
+81:		mov a1766, [bp + 12]
+82:		jmp a1766 a1766 compare 81 82
 84:	
 
 qsort$19:	; post call

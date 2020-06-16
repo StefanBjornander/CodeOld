@@ -4918,8 +4918,8 @@ printf$7:	; call function ellipse-noellipse vprintf
 25:		mov word [di + 10], printf$8
 26:		mov [di + 12], bp
 27:		mov [di + 14], di
-28:		mov bp, di
-29:		add bp, 10
+28:		add di, 10
+29:		mov bp, di
 30:		jmp vprintf
 32:	
 
@@ -5024,8 +5024,8 @@ fprintf$8:	; call function ellipse-noellipse vfprintf
 29:		mov word [di + 12], fprintf$9
 30:		mov [di + 14], bp
 31:		mov [di + 16], di
-32:		mov bp, di
-33:		add bp, 12
+32:		add di, 12
+33:		mov bp, di
 34:		jmp vfprintf
 36:	
 
@@ -5137,8 +5137,8 @@ sprintf$8:	; call function ellipse-noellipse vsprintf
 29:		mov word [di + 12], sprintf$9
 30:		mov [di + 14], bp
 31:		mov [di + 16], di
-32:		mov bp, di
-33:		add bp, 12
+32:		add di, 12
+33:		mov bp, di
 34:		jmp vsprintf
 36:	
 

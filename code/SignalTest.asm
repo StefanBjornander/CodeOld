@@ -108,12 +108,12 @@ signal_test:	; a = int4$1#
 signal_test$1:	; b = int4$1#
 	mov dword [rbp + 28], 1
 
-signal_test$2:	; £temporary5258 = a / b
+signal_test$2:	; £temporary5252 = a / b
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [rbp + 28]
 
-signal_test$3:	; c = £temporary5258
+signal_test$3:	; c = £temporary5252
 	mov [rbp + 32], eax
 
 signal_test$4:	; call header integral zero 0 stack zero 0

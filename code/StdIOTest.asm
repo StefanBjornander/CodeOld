@@ -7,11 +7,11 @@ section .text
 stdio_test:	; n = int4$0#
 	mov dword [rbp + 24], 0
 
-stdio_test$1:	; £temporary5022 = &n
+stdio_test$1:	; £temporary5016 = &n
 	mov rsi, rbp
 	add rsi, 24
 
-stdio_test$2:	; p = £temporary5022
+stdio_test$2:	; p = £temporary5016
 	mov [rbp + 28], rsi
 
 stdio_test$3:	; call header integral zero 0 stack zero 0

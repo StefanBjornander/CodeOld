@@ -31,11 +31,11 @@ assert_testX$5:	; call header integral zero 0 stack zero 0
 assert_testX$6:	; parameter string_25i#, offset 52
 	mov qword [rbp + 52], string_25i#
 
-assert_testX$7:	; £temporary3861 = &n
+assert_testX$7:	; £temporary3855 = &n
 	mov rsi, rbp
 	add rsi, 24
 
-assert_testX$8:	; parameter £temporary3861, offset 60
+assert_testX$8:	; parameter £temporary3855, offset 60
 	mov [rbp + 60], rsi
 
 assert_testX$9:	; call function noellipse-ellipse scanf, extra 8

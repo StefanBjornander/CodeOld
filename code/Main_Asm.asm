@@ -379,8 +379,8 @@ printf$7:	; call function ellipse-noellipse vprintf
 x973:	mov word [di + 10], printf$8	; 5: -57 69 10 -32 3
 x978:	mov [di + 12], bp	; 3: -119 109 12
 x981:	mov [di + 14], di	; 3: -119 125 14
-x984:	mov bp, di	; 2: -119 -3
-x986:	add bp, 10	; 3: -125 -59 10
+x984:	add di, 10	; 3: -125 -57 10
+x987:	mov bp, di	; 2: -119 -3
 x989:	nop	; 1: -112
 x990:	jmp vprintf	; 2: -21 11
 
@@ -5690,8 +5690,8 @@ scanf$7:	; call function ellipse-noellipse vscanf
 x9168:	mov word [di + 10], scanf$8	; 5: -57 69 10 -29 35
 x9173:	mov [di + 12], bp	; 3: -119 109 12
 x9176:	mov [di + 14], di	; 3: -119 125 14
-x9179:	mov bp, di	; 2: -119 -3
-x9181:	add bp, 10	; 3: -125 -59 10
+x9179:	add di, 10	; 3: -125 -57 10
+x9182:	mov bp, di	; 2: -119 -3
 x9184:	nop	; 1: -112
 x9185:	jmp vscanf	; 2: -21 11
 

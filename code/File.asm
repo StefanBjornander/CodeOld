@@ -43,10 +43,10 @@ section .text
 @2463$filecreate:	; rax = int8$85#
 	mov rax, 85
 
-@2463$filecreate$1:	; £temporary924 = int_to_int name (Pointer -> Unsigned_Long_Int)
+@2463$filecreate$1:	; £temporary923 = int_to_int name (Pointer -> Unsigned_Long_Int)
 	mov rdi, [rbp + 24]
 
-@2463$filecreate$2:	; rdi = £temporary924
+@2463$filecreate$2:	; rdi = £temporary923
 
 @2463$filecreate$3:	; rsi = int8$511#
 	mov rsi, 511
@@ -79,26 +79,26 @@ fileexists$2:	; function end fileexists
 @2467$fileopen:	; rax = int8$2#
 	mov rax, 2
 
-@2467$fileopen$1:	; £temporary928 = int_to_int name (Pointer -> Unsigned_Long_Int)
+@2467$fileopen$1:	; £temporary927 = int_to_int name (Pointer -> Unsigned_Long_Int)
 	mov rdi, [rbp + 24]
 
-@2467$fileopen$2:	; rdi = £temporary928
+@2467$fileopen$2:	; rdi = £temporary927
 
-@2467$fileopen$3:	; £temporary930 = int_to_int mode (Unsigned_Short_Int -> Unsigned_Long_Int)
+@2467$fileopen$3:	; £temporary929 = int_to_int mode (Unsigned_Short_Int -> Unsigned_Long_Int)
 	mov si, [rbp + 32]
 	mov rbx, 65535
 	and rsi, rbx
 
-@2467$fileopen$4:	; rsi = £temporary930
+@2467$fileopen$4:	; rsi = £temporary929
 
 @2467$fileopen$5:	; syscall
 	syscall 
 
-@2467$fileopen$6:	; £temporary931 = rax
+@2467$fileopen$6:	; £temporary930 = rax
 
-@2467$fileopen$7:	; £temporary932 = int_to_int £temporary931 (Unsigned_Long_Int -> Signed_Int)
+@2467$fileopen$7:	; £temporary931 = int_to_int £temporary930 (Unsigned_Long_Int -> Signed_Int)
 
-@2467$fileopen$8:	; return_value = £temporary932
+@2467$fileopen$8:	; return_value = £temporary931
 	mov ebx, eax
 
 @2467$fileopen$9:	; return
@@ -118,22 +118,22 @@ fopen$2:	; if index >= int4$20# goto 24
 	cmp dword [rbp + 40], 20
 	jge fopen$24
 
-fopen$3:	; £temporary936 = int_to_int index (Signed_Int -> Array)
+fopen$3:	; £temporary935 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
-fopen$4:	; £temporary937 = £temporary936 * Array_#
+fopen$4:	; £temporary936 = £temporary935 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
-fopen$5:	; £temporary938 = g_fileArray + £temporary937
+fopen$5:	; £temporary937 = g_fileArray + £temporary936
 	mov rsi, g_fileArray
 	add rsi, rax
 
-fopen$6:	; £field935 -> £temporary938 = *£temporary938
+fopen$6:	; £field934 -> £temporary937 = *£temporary937
 
-fopen$7:	; if £field935.open$0 -> £temporary938 != int4$0# goto 22
+fopen$7:	; if £field934.open$0 -> £temporary937 != int4$0# goto 22
 	cmp dword [rsi], 0
 	jne fopen$22
 
@@ -147,24 +147,24 @@ fopen$10:	; parameter mode, offset 76
 	mov rax, [rbp + 32]
 	mov [rbp + 76], rax
 
-fopen$11:	; £temporary942 = int_to_int index (Signed_Int -> Array)
+fopen$11:	; £temporary941 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
-fopen$12:	; £temporary943 = £temporary942 * Array_#
+fopen$12:	; £temporary942 = £temporary941 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
-fopen$13:	; £temporary944 = g_fileArray + £temporary943
+fopen$13:	; £temporary943 = g_fileArray + £temporary942
 	mov rsi, g_fileArray
 	add rsi, rax
 
-fopen$14:	; £field941 -> £temporary944 = *£temporary944
+fopen$14:	; £field940 -> £temporary943 = *£temporary943
 
-fopen$15:	; £temporary945 = &£field941 -> £temporary944
+fopen$15:	; £temporary944 = &£field940 -> £temporary943
 
-fopen$16:	; parameter £temporary945, offset 84
+fopen$16:	; parameter £temporary944, offset 84
 	mov [rbp + 84], rsi
 
 fopen$17:	; call function noellipse-noellipse freopen
@@ -175,9 +175,9 @@ fopen$17:	; call function noellipse-noellipse freopen
 
 fopen$18:	; post call
 
-fopen$19:	; £temporary946 = return_value
+fopen$19:	; £temporary945 = return_value
 
-fopen$20:	; return_value = £temporary946
+fopen$20:	; return_value = £temporary945
 
 fopen$21:	; return
 	mov rax, [rbp]
@@ -222,9 +222,9 @@ freopen$4:	; call function noellipse-noellipse strcmp
 
 freopen$5:	; post call
 
-freopen$6:	; £temporary950 = return_value
+freopen$6:	; £temporary949 = return_value
 
-freopen$7:	; if £temporary950 != int4$0# goto 16
+freopen$7:	; if £temporary949 != int4$0# goto 16
 	cmp ebx, 0
 	jne freopen$16
 
@@ -245,9 +245,9 @@ freopen$11:	; call function noellipse-noellipse fileopen
 
 freopen$12:	; post call
 
-freopen$13:	; £temporary952 = return_value
+freopen$13:	; £temporary951 = return_value
 
-freopen$14:	; handle = £temporary952
+freopen$14:	; handle = £temporary951
 	mov [rbp + 48], ebx
 
 freopen$15:	; goto 130
@@ -270,9 +270,9 @@ freopen$19:	; call function noellipse-noellipse strcmp
 
 freopen$20:	; post call
 
-freopen$21:	; £temporary953 = return_value
+freopen$21:	; £temporary952 = return_value
 
-freopen$22:	; if £temporary953 != int4$0# goto 30
+freopen$22:	; if £temporary952 != int4$0# goto 30
 	cmp ebx, 0
 	jne freopen$30
 
@@ -290,9 +290,9 @@ freopen$25:	; call function noellipse-noellipse filecreate
 
 freopen$26:	; post call
 
-freopen$27:	; £temporary955 = return_value
+freopen$27:	; £temporary954 = return_value
 
-freopen$28:	; handle = £temporary955
+freopen$28:	; handle = £temporary954
 	mov [rbp + 48], ebx
 
 freopen$29:	; goto 130
@@ -315,9 +315,9 @@ freopen$33:	; call function noellipse-noellipse strcmp
 
 freopen$34:	; post call
 
-freopen$35:	; £temporary956 = return_value
+freopen$35:	; £temporary955 = return_value
 
-freopen$36:	; if £temporary956 != int4$0# goto 59
+freopen$36:	; if £temporary955 != int4$0# goto 59
 	cmp ebx, 0
 	jne freopen$59
 
@@ -338,9 +338,9 @@ freopen$40:	; call function noellipse-noellipse fileopen
 
 freopen$41:	; post call
 
-freopen$42:	; £temporary958 = return_value
+freopen$42:	; £temporary957 = return_value
 
-freopen$43:	; handle = £temporary958
+freopen$43:	; handle = £temporary957
 	mov [rbp + 48], ebx
 
 freopen$44:	; if handle == int4$minus1# goto 52
@@ -384,9 +384,9 @@ freopen$54:	; call function noellipse-noellipse filecreate
 
 freopen$55:	; post call
 
-freopen$56:	; £temporary961 = return_value
+freopen$56:	; £temporary960 = return_value
 
-freopen$57:	; handle = £temporary961
+freopen$57:	; handle = £temporary960
 	mov [rbp + 48], ebx
 
 freopen$58:	; goto 130
@@ -409,9 +409,9 @@ freopen$62:	; call function noellipse-noellipse strcmp
 
 freopen$63:	; post call
 
-freopen$64:	; £temporary962 = return_value
+freopen$64:	; £temporary961 = return_value
 
-freopen$65:	; if £temporary962 != int4$0# goto 74
+freopen$65:	; if £temporary961 != int4$0# goto 74
 	cmp ebx, 0
 	jne freopen$74
 
@@ -432,9 +432,9 @@ freopen$69:	; call function noellipse-noellipse fileopen
 
 freopen$70:	; post call
 
-freopen$71:	; £temporary964 = return_value
+freopen$71:	; £temporary963 = return_value
 
-freopen$72:	; handle = £temporary964
+freopen$72:	; handle = £temporary963
 	mov [rbp + 48], ebx
 
 freopen$73:	; goto 130
@@ -457,9 +457,9 @@ freopen$77:	; call function noellipse-noellipse strcmp
 
 freopen$78:	; post call
 
-freopen$79:	; £temporary965 = return_value
+freopen$79:	; £temporary964 = return_value
 
-freopen$80:	; if £temporary965 != int4$0# goto 102
+freopen$80:	; if £temporary964 != int4$0# goto 102
 	cmp ebx, 0
 	jne freopen$102
 
@@ -477,9 +477,9 @@ freopen$83:	; call function noellipse-noellipse fileexists
 
 freopen$84:	; post call
 
-freopen$85:	; £temporary967 = return_value
+freopen$85:	; £temporary966 = return_value
 
-freopen$86:	; if £temporary967 == int4$0# goto 95
+freopen$86:	; if £temporary966 == int4$0# goto 95
 	cmp ebx, 0
 	je freopen$95
 
@@ -500,9 +500,9 @@ freopen$90:	; call function noellipse-noellipse fileopen
 
 freopen$91:	; post call
 
-freopen$92:	; £temporary968 = return_value
+freopen$92:	; £temporary967 = return_value
 
-freopen$93:	; handle = £temporary968
+freopen$93:	; handle = £temporary967
 	mov [rbp + 48], ebx
 
 freopen$94:	; goto 130
@@ -522,9 +522,9 @@ freopen$97:	; call function noellipse-noellipse filecreate
 
 freopen$98:	; post call
 
-freopen$99:	; £temporary969 = return_value
+freopen$99:	; £temporary968 = return_value
 
-freopen$100:	; handle = £temporary969
+freopen$100:	; handle = £temporary968
 	mov [rbp + 48], ebx
 
 freopen$101:	; goto 130
@@ -547,9 +547,9 @@ freopen$105:	; call function noellipse-noellipse strcmp
 
 freopen$106:	; post call
 
-freopen$107:	; £temporary971 = return_value
+freopen$107:	; £temporary970 = return_value
 
-freopen$108:	; if £temporary971 != int4$0# goto 130
+freopen$108:	; if £temporary970 != int4$0# goto 130
 	cmp ebx, 0
 	jne freopen$130
 
@@ -570,9 +570,9 @@ freopen$112:	; call function noellipse-noellipse fileopen
 
 freopen$113:	; post call
 
-freopen$114:	; £temporary973 = return_value
+freopen$114:	; £temporary972 = return_value
 
-freopen$115:	; handle = £temporary973
+freopen$115:	; handle = £temporary972
 	mov [rbp + 48], ebx
 
 freopen$116:	; if handle == int4$minus1# goto 124
@@ -616,40 +616,40 @@ freopen$126:	; call function noellipse-noellipse filecreate
 
 freopen$127:	; post call
 
-freopen$128:	; £temporary976 = return_value
+freopen$128:	; £temporary975 = return_value
 
-freopen$129:	; handle = £temporary976
+freopen$129:	; handle = £temporary975
 	mov [rbp + 48], ebx
 
 freopen$130:	; if handle == int4$minus1# goto 147
 	cmp dword [rbp + 48], -1
 	je freopen$147
 
-freopen$131:	; £field978 -> stream = *stream
+freopen$131:	; £field977 -> stream = *stream
 	mov rsi, [rbp + 40]
 
-freopen$132:	; £field978 -> stream = int4$1#
+freopen$132:	; £field977 -> stream = int4$1#
 	mov dword [rsi], 1
 
-freopen$133:	; £field979 -> stream = *stream
+freopen$133:	; £field978 -> stream = *stream
 	mov rsi, [rbp + 40]
 
-freopen$134:	; £field979 -> stream = handle
+freopen$134:	; £field978 -> stream = handle
 	mov eax, [rbp + 48]
 	mov [rsi + 4], eax
 
-freopen$135:	; £field980 -> stream = *stream
+freopen$135:	; £field979 -> stream = *stream
 	mov rsi, [rbp + 40]
 
-freopen$136:	; £field980 -> stream = int4$0#
+freopen$136:	; £field979 -> stream = int4$0#
 	mov dword [rsi + 33], 0
 
 freopen$137:	; call header integral zero 0 stack zero 0
 
-freopen$138:	; £field981 -> stream = *stream
+freopen$138:	; £field980 -> stream = *stream
 	mov rsi, [rbp + 40]
 
-freopen$139:	; parameter £field981 -> stream, offset 76
+freopen$139:	; parameter £field980 -> stream, offset 76
 	mov [rbp + 76], rsi
 	add qword [rbp + 76], 8
 
@@ -665,10 +665,10 @@ freopen$141:	; call function noellipse-noellipse strcpy
 
 freopen$142:	; post call
 
-freopen$143:	; £field983 -> stream = *stream
+freopen$143:	; £field982 -> stream = *stream
 	mov rsi, [rbp + 40]
 
-freopen$144:	; £field983 -> stream = int4$0#
+freopen$144:	; £field982 -> stream = int4$0#
 	mov dword [rsi + 37], 0
 
 freopen$145:	; return_value = stream
@@ -680,10 +680,10 @@ freopen$146:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-freopen$147:	; £field984 -> stream = *stream
+freopen$147:	; £field983 -> stream = *stream
 	mov rsi, [rbp + 40]
 
-freopen$148:	; £field984 -> stream = int4$0#
+freopen$148:	; £field983 -> stream = int4$0#
 	mov dword [rsi], 0
 
 freopen$149:	; return_value = int8$0#
@@ -708,45 +708,45 @@ fflush$2:	; if index >= int4$20# goto 23
 	cmp dword [rbp + 32], 20
 	jge fflush$23
 
-fflush$3:	; £temporary1024 = int_to_int index (Signed_Int -> Array)
+fflush$3:	; £temporary1023 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
-fflush$4:	; £temporary1025 = £temporary1024 * Array_#
+fflush$4:	; £temporary1024 = £temporary1023 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
-fflush$5:	; £temporary1026 = g_fileArray + £temporary1025
+fflush$5:	; £temporary1025 = g_fileArray + £temporary1024
 	mov rsi, g_fileArray
 	add rsi, rax
 
-fflush$6:	; £field1023 -> £temporary1026 = *£temporary1026
+fflush$6:	; £field1022 -> £temporary1025 = *£temporary1025
 
-fflush$7:	; if £field1023.open$0 -> £temporary1026 == int4$0# goto 21
+fflush$7:	; if £field1022.open$0 -> £temporary1025 == int4$0# goto 21
 	cmp dword [rsi], 0
 	je fflush$21
 
 fflush$8:	; call header integral zero 0 stack zero 0
 
-fflush$9:	; £temporary1028 = int_to_int index (Signed_Int -> Array)
+fflush$9:	; £temporary1027 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
-fflush$10:	; £temporary1029 = £temporary1028 * Array_#
+fflush$10:	; £temporary1028 = £temporary1027 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
-fflush$11:	; £temporary1030 = g_fileArray + £temporary1029
+fflush$11:	; £temporary1029 = g_fileArray + £temporary1028
 	mov rsi, g_fileArray
 	add rsi, rax
 
-fflush$12:	; £field1027 -> £temporary1030 = *£temporary1030
+fflush$12:	; £field1026 -> £temporary1029 = *£temporary1029
 
-fflush$13:	; £temporary1031 = &£field1027 -> £temporary1030
+fflush$13:	; £temporary1030 = &£field1026 -> £temporary1029
 
-fflush$14:	; parameter £temporary1031, offset 60
+fflush$14:	; parameter £temporary1030, offset 60
 	mov [rbp + 60], rsi
 
 fflush$15:	; call function noellipse-noellipse fflush
@@ -757,9 +757,9 @@ fflush$15:	; call function noellipse-noellipse fflush
 
 fflush$16:	; post call
 
-fflush$17:	; £temporary1032 = return_value
+fflush$17:	; £temporary1031 = return_value
 
-fflush$18:	; if £temporary1032 != int4$minus1# goto 21
+fflush$18:	; if £temporary1031 != int4$minus1# goto 21
 	cmp ebx, -1
 	jne fflush$21
 
@@ -796,15 +796,15 @@ fclose:	; if stream == int8$0# goto 8
 fclose$1:	; rax = int8$3#
 	mov rax, 3
 
-fclose$2:	; £field1039 -> stream = *stream
+fclose$2:	; £field1038 -> stream = *stream
 	mov rsi, [rbp + 24]
 
-fclose$3:	; £temporary1040 = int_to_int £field1039 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+fclose$3:	; £temporary1039 = int_to_int £field1038 -> stream (Unsigned_Int -> Unsigned_Long_Int)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
 
-fclose$4:	; rdi = £temporary1040
+fclose$4:	; rdi = £temporary1039
 
 fclose$5:	; syscall
 	syscall 
@@ -825,45 +825,45 @@ fclose$9:	; if index >= int4$20# goto 30
 	cmp dword [rbp + 32], 20
 	jge fclose$30
 
-fclose$10:	; £temporary1044 = int_to_int index (Signed_Int -> Array)
+fclose$10:	; £temporary1043 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
-fclose$11:	; £temporary1045 = £temporary1044 * Array_#
+fclose$11:	; £temporary1044 = £temporary1043 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
-fclose$12:	; £temporary1046 = g_fileArray + £temporary1045
+fclose$12:	; £temporary1045 = g_fileArray + £temporary1044
 	mov rsi, g_fileArray
 	add rsi, rax
 
-fclose$13:	; £field1043 -> £temporary1046 = *£temporary1046
+fclose$13:	; £field1042 -> £temporary1045 = *£temporary1045
 
-fclose$14:	; if £field1043.open$0 -> £temporary1046 == int4$0# goto 28
+fclose$14:	; if £field1042.open$0 -> £temporary1045 == int4$0# goto 28
 	cmp dword [rsi], 0
 	je fclose$28
 
 fclose$15:	; call header integral zero 0 stack zero 0
 
-fclose$16:	; £temporary1048 = int_to_int index (Signed_Int -> Array)
+fclose$16:	; £temporary1047 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
-fclose$17:	; £temporary1049 = £temporary1048 * Array_#
+fclose$17:	; £temporary1048 = £temporary1047 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
-fclose$18:	; £temporary1050 = g_fileArray + £temporary1049
+fclose$18:	; £temporary1049 = g_fileArray + £temporary1048
 	mov rsi, g_fileArray
 	add rsi, rax
 
-fclose$19:	; £field1047 -> £temporary1050 = *£temporary1050
+fclose$19:	; £field1046 -> £temporary1049 = *£temporary1049
 
-fclose$20:	; £temporary1051 = &£field1047 -> £temporary1050
+fclose$20:	; £temporary1050 = &£field1046 -> £temporary1049
 
-fclose$21:	; parameter £temporary1051, offset 60
+fclose$21:	; parameter £temporary1050, offset 60
 	mov [rbp + 60], rsi
 
 fclose$22:	; call function noellipse-noellipse fclose
@@ -874,9 +874,9 @@ fclose$22:	; call function noellipse-noellipse fclose
 
 fclose$23:	; post call
 
-fclose$24:	; £temporary1052 = return_value
+fclose$24:	; £temporary1051 = return_value
 
-fclose$25:	; if £temporary1052 != int4$minus1# goto 28
+fclose$25:	; if £temporary1051 != int4$minus1# goto 28
 	cmp ebx, -1
 	jne fclose$28
 
@@ -909,10 +909,10 @@ fclose$32:	; function end fclose
 remove:	; rax = int8$88#
 	mov rax, 88
 
-remove$1:	; £temporary1058 = int_to_int name (Pointer -> Unsigned_Long_Int)
+remove$1:	; £temporary1057 = int_to_int name (Pointer -> Unsigned_Long_Int)
 	mov rdi, [rbp + 24]
 
-remove$2:	; rdi = £temporary1058
+remove$2:	; rdi = £temporary1057
 
 remove$3:	; syscall
 	syscall 
@@ -931,15 +931,15 @@ remove$6:	; function end remove
 rename:	; rax = int8$82#
 	mov rax, 82
 
-rename$1:	; £temporary1061 = int_to_int oldName (Pointer -> Unsigned_Long_Int)
+rename$1:	; £temporary1060 = int_to_int oldName (Pointer -> Unsigned_Long_Int)
 	mov rdi, [rbp + 24]
 
-rename$2:	; rdi = £temporary1061
+rename$2:	; rdi = £temporary1060
 
-rename$3:	; £temporary1063 = int_to_int newName (Pointer -> Unsigned_Long_Int)
+rename$3:	; £temporary1062 = int_to_int newName (Pointer -> Unsigned_Long_Int)
 	mov rsi, [rbp + 32]
 
-rename$4:	; rsi = £temporary1063
+rename$4:	; rsi = £temporary1062
 
 rename$5:	; syscall
 	syscall 
@@ -981,11 +981,11 @@ fgetc:	; c = int1$0#
 
 fgetc$1:	; call header integral zero 0 stack zero 0
 
-fgetc$2:	; £temporary1064 = &c
+fgetc$2:	; £temporary1063 = &c
 	mov rsi, rbp
 	add rsi, 32
 
-fgetc$3:	; parameter £temporary1064, offset 57
+fgetc$3:	; parameter £temporary1063, offset 57
 	mov [rbp + 57], rsi
 
 fgetc$4:	; parameter int4$1#, offset 65
@@ -1006,13 +1006,13 @@ fgetc$7:	; call function noellipse-noellipse fread
 
 fgetc$8:	; post call
 
-fgetc$9:	; £temporary1065 = return_value
+fgetc$9:	; £temporary1064 = return_value
 
-fgetc$10:	; if £temporary1065 <= int4$0# goto 14
+fgetc$10:	; if £temporary1064 <= int4$0# goto 14
 	cmp ebx, 0
 	jle fgetc$14
 
-fgetc$11:	; £temporary1067 = int_to_int c (Signed_Char -> Signed_Int)
+fgetc$11:	; £temporary1066 = int_to_int c (Signed_Char -> Signed_Int)
 	mov bl, [rbp + 32]
 	and ebx, 255
 	cmp bl, 0
@@ -1020,7 +1020,7 @@ fgetc$11:	; £temporary1067 = int_to_int c (Signed_Char -> Signed_Int)
 	neg bl
 	neg ebx
 
-fgetc$12:	; return_value = £temporary1067
+fgetc$12:	; return_value = £temporary1066
 
 fgetc$13:	; return
 	mov rax, [rbp]
@@ -1045,11 +1045,11 @@ fgets:	; count = int4$0#
 fgets$1:	; prevChar = int1$0#
 	mov byte [rbp + 48], 0
 
-fgets$2:	; £temporary1073 = size - int4$1#
+fgets$2:	; £temporary1072 = size - int4$1#
 	mov eax, [rbp + 32]
 	dec eax
 
-fgets$3:	; if count >= £temporary1073 goto 36
+fgets$3:	; if count >= £temporary1072 goto 36
 	cmp [rbp + 44], eax
 	jge fgets$36
 
@@ -1065,11 +1065,11 @@ fgets$6:	; parameter stream, offset 74
 fgets$7:	; parameter string_25c#, offset 82
 	mov qword [rbp + 82], string_25c#
 
-fgets$8:	; £temporary1075 = &currChar
+fgets$8:	; £temporary1074 = &currChar
 	mov rsi, rbp
 	add rsi, 49
 
-fgets$9:	; parameter £temporary1075, offset 90
+fgets$9:	; parameter £temporary1074, offset 90
 	mov [rbp + 90], rsi
 
 fgets$10:	; call function noellipse-ellipse fscanf, extra 8
@@ -1090,24 +1090,24 @@ fgets$13:	; if currChar != int1$10# goto 19
 	cmp byte [rbp + 49], 10
 	jne fgets$19
 
-fgets$14:	; £temporary1081 = int_to_int count (Signed_Int -> Pointer)
+fgets$14:	; £temporary1080 = int_to_int count (Signed_Int -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
-fgets$15:	; £temporary1083 = text + £temporary1081
+fgets$15:	; £temporary1082 = text + £temporary1080
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-fgets$16:	; £field1080 -> £temporary1083 = *£temporary1083
+fgets$16:	; £field1079 -> £temporary1082 = *£temporary1082
 
-fgets$17:	; £field1080 -> £temporary1083 = int1$0#
+fgets$17:	; £field1079 -> £temporary1082 = int1$0#
 	mov byte [rsi], 0
 
 fgets$18:	; goto 36
 	jmp fgets$36
 
-fgets$19:	; £temporary1084 = int_to_int currChar (Signed_Char -> Signed_Int)
+fgets$19:	; £temporary1083 = int_to_int currChar (Signed_Char -> Signed_Int)
 	mov al, [rbp + 49]
 	and eax, 255
 	cmp al, 0
@@ -1115,22 +1115,22 @@ fgets$19:	; £temporary1084 = int_to_int currChar (Signed_Char -> Signed_Int)
 	neg al
 	neg eax
 
-fgets$20:	; if £temporary1084 != int4$minus1# goto 26
+fgets$20:	; if £temporary1083 != int4$minus1# goto 26
 	cmp eax, -1
 	jne fgets$26
 
-fgets$21:	; £temporary1087 = int_to_int count (Signed_Int -> Pointer)
+fgets$21:	; £temporary1086 = int_to_int count (Signed_Int -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
-fgets$22:	; £temporary1089 = text + £temporary1087
+fgets$22:	; £temporary1088 = text + £temporary1086
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-fgets$23:	; £field1086 -> £temporary1089 = *£temporary1089
+fgets$23:	; £field1085 -> £temporary1088 = *£temporary1088
 
-fgets$24:	; £field1086 -> £temporary1089 = int1$0#
+fgets$24:	; £field1085 -> £temporary1088 = int1$0#
 	mov byte [rsi], 0
 
 fgets$25:	; goto 36
@@ -1144,23 +1144,23 @@ fgets$27:	; if currChar == int1$10# goto 34
 	cmp byte [rbp + 49], 10
 	je fgets$34
 
-fgets$28:	; £temporary1093 = count
+fgets$28:	; £temporary1092 = count
 	mov eax, [rbp + 44]
 
 fgets$29:	; ++count
 	inc dword [rbp + 44]
 
-fgets$30:	; £temporary1095 = int_to_int £temporary1093 (Signed_Int -> Pointer)
+fgets$30:	; £temporary1094 = int_to_int £temporary1092 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
-fgets$31:	; £temporary1097 = text + £temporary1095
+fgets$31:	; £temporary1096 = text + £temporary1094
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-fgets$32:	; £field1094 -> £temporary1097 = *£temporary1097
+fgets$32:	; £field1093 -> £temporary1096 = *£temporary1096
 
-fgets$33:	; £field1094 -> £temporary1097 = currChar
+fgets$33:	; £field1093 -> £temporary1096 = currChar
 	mov al, [rbp + 49]
 	mov [rsi], al
 
@@ -1196,12 +1196,12 @@ fputs$2:	; call function noellipse-noellipse strlen
 
 fputs$3:	; post call
 
-fputs$4:	; £temporary1102 = return_value
+fputs$4:	; £temporary1101 = return_value
 
-fputs$5:	; £temporary1103 = £temporary1102 + int4$1#
+fputs$5:	; £temporary1102 = £temporary1101 + int4$1#
 	inc ebx
 
-fputs$6:	; size = £temporary1103
+fputs$6:	; size = £temporary1102
 	mov [rbp + 40], ebx
 
 fputs$7:	; call header integral zero 0 stack zero 0
@@ -1229,22 +1229,22 @@ fputs$12:	; call function noellipse-noellipse fwrite
 
 fputs$13:	; post call
 
-fputs$14:	; £temporary1105 = return_value
+fputs$14:	; £temporary1104 = return_value
 
-fputs$15:	; if £temporary1105 != size goto 18
+fputs$15:	; if £temporary1104 != size goto 18
 	cmp ebx, [rbp + 40]
 	jne fputs$18
 
-fputs$16:	; £temporary1107 = int4$0#
+fputs$16:	; £temporary1106 = int4$0#
 	mov ebx, 0
 
 fputs$17:	; goto 19
 	jmp fputs$19
 
-fputs$18:	; £temporary1107 = int4$minus1#
+fputs$18:	; £temporary1106 = int4$minus1#
 	mov ebx, -1
 
-fputs$19:	; return_value = £temporary1107
+fputs$19:	; return_value = £temporary1106
 
 fputs$20:	; return
 	mov rax, [rbp]
@@ -1268,9 +1268,9 @@ getchar$2:	; call function noellipse-noellipse fgetc
 
 getchar$3:	; post call
 
-getchar$4:	; £temporary1113 = return_value
+getchar$4:	; £temporary1112 = return_value
 
-getchar$5:	; return_value = £temporary1113
+getchar$5:	; return_value = £temporary1112
 
 getchar$6:	; return
 	mov rax, [rbp]
@@ -1301,9 +1301,9 @@ gets$4:	; call function noellipse-noellipse fgets
 
 gets$5:	; post call
 
-gets$6:	; £temporary1115 = return_value
+gets$6:	; £temporary1114 = return_value
 
-gets$7:	; if £temporary1115 == int8$0# goto 22
+gets$7:	; if £temporary1114 == int8$0# goto 22
 	cmp rbx, 0
 	je gets$22
 
@@ -1321,30 +1321,30 @@ gets$10:	; call function noellipse-noellipse strlen
 
 gets$11:	; post call
 
-gets$12:	; £temporary1117 = return_value
+gets$12:	; £temporary1116 = return_value
 
-gets$13:	; size = £temporary1117
+gets$13:	; size = £temporary1116
 	mov [rbp + 32], ebx
 
 gets$14:	; if size <= int4$0# goto 20
 	cmp dword [rbp + 32], 0
 	jle gets$20
 
-gets$15:	; £temporary1119 = size - int4$1#
+gets$15:	; £temporary1118 = size - int4$1#
 	mov eax, [rbp + 32]
 	dec eax
 
-gets$16:	; £temporary1121 = int_to_int £temporary1119 (Signed_Int -> Pointer)
+gets$16:	; £temporary1120 = int_to_int £temporary1118 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
-gets$17:	; £temporary1123 = s + £temporary1121
+gets$17:	; £temporary1122 = s + £temporary1120
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
-gets$18:	; £field1120 -> £temporary1123 = *£temporary1123
+gets$18:	; £field1119 -> £temporary1122 = *£temporary1122
 
-gets$19:	; £field1120 -> £temporary1123 = int1$0#
+gets$19:	; £field1119 -> £temporary1122 = int1$0#
 	mov byte [rsi], 0
 
 gets$20:	; return_value = s
@@ -1385,9 +1385,9 @@ puts$3:	; call function noellipse-noellipse fputs
 
 puts$4:	; post call
 
-puts$5:	; £temporary1128 = return_value
+puts$5:	; £temporary1127 = return_value
 
-puts$6:	; if £temporary1128 == int4$0# goto 15
+puts$6:	; if £temporary1127 == int4$0# goto 15
 	cmp ebx, 0
 	je puts$15
 
@@ -1408,9 +1408,9 @@ puts$10:	; call function noellipse-noellipse fputc
 
 puts$11:	; post call
 
-puts$12:	; £temporary1130 = return_value
+puts$12:	; £temporary1129 = return_value
 
-puts$13:	; return_value = £temporary1130
+puts$13:	; return_value = £temporary1129
 
 puts$14:	; return
 	mov rax, [rbp]
@@ -1429,10 +1429,10 @@ puts$16:	; return
 
 puts$17:	; function end puts
 
-ungetc:	; £field1135 -> stream = *stream
+ungetc:	; £field1134 -> stream = *stream
 	mov rsi, [rbp + 28]
 
-ungetc$1:	; £temporary1136 = int_to_int £field1135 -> stream (Signed_Char -> Signed_Int)
+ungetc$1:	; £temporary1135 = int_to_int £field1134 -> stream (Signed_Char -> Signed_Int)
 	mov al, [rsi + 24]
 	and eax, 255
 	cmp al, 0
@@ -1440,21 +1440,21 @@ ungetc$1:	; £temporary1136 = int_to_int £field1135 -> stream (Signed_Char -> S
 	neg al
 	neg eax
 
-ungetc$2:	; if £temporary1136 == int4$minus1# goto 6
+ungetc$2:	; if £temporary1135 == int4$minus1# goto 6
 	cmp eax, -1
 	je ungetc$6
 
-ungetc$3:	; £field1138 -> stream = *stream
+ungetc$3:	; £field1137 -> stream = *stream
 	mov rsi, [rbp + 28]
 
-ungetc$4:	; £temporary1139 = int_to_int c (Signed_Int -> Signed_Char)
+ungetc$4:	; £temporary1138 = int_to_int c (Signed_Int -> Signed_Char)
 	mov eax, [rbp + 24]
 	cmp eax, 0
 	jge ungetc$5
 	neg eax
 	neg al
 
-ungetc$5:	; £field1138 -> stream = £temporary1139
+ungetc$5:	; £field1137 -> stream = £temporary1138
 	mov [rsi + 24], al
 
 ungetc$6:	; return_value = c
@@ -1471,31 +1471,31 @@ ungetc$8:	; function end ungetc
 fread:	; rax = int8$0#
 	mov rax, 0
 
-fread$1:	; £field1142 -> stream = *stream
+fread$1:	; £field1141 -> stream = *stream
 	mov rsi, [rbp + 40]
 
-fread$2:	; £temporary1143 = int_to_int £field1142 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+fread$2:	; £temporary1142 = int_to_int £field1141 -> stream (Unsigned_Int -> Unsigned_Long_Int)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
 
-fread$3:	; rdi = £temporary1143
+fread$3:	; rdi = £temporary1142
 
-fread$4:	; £temporary1145 = int_to_int ptr (Pointer -> Unsigned_Long_Int)
+fread$4:	; £temporary1144 = int_to_int ptr (Pointer -> Unsigned_Long_Int)
 	mov rsi, [rbp + 24]
 
-fread$5:	; rsi = £temporary1145
+fread$5:	; rsi = £temporary1144
 
-fread$6:	; £temporary1147 = size * nobj
+fread$6:	; £temporary1146 = size * nobj
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [rbp + 36]
 
-fread$7:	; £temporary1148 = int_to_int £temporary1147 (Signed_Int -> Unsigned_Long_Int)
+fread$7:	; £temporary1147 = int_to_int £temporary1146 (Signed_Int -> Unsigned_Long_Int)
 	mov rbx, 4294967295
 	and rax, rbx
 
-fread$8:	; rdx = £temporary1148
+fread$8:	; rdx = £temporary1147
 	mov rdx, rax
 
 fread$9:	; syscall
@@ -1515,31 +1515,31 @@ fread$12:	; function end fread
 fwrite:	; rax = int8$0#
 	mov rax, 0
 
-fwrite$1:	; £field1151 -> stream = *stream
+fwrite$1:	; £field1150 -> stream = *stream
 	mov rsi, [rbp + 40]
 
-fwrite$2:	; £temporary1152 = int_to_int £field1151 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+fwrite$2:	; £temporary1151 = int_to_int £field1150 -> stream (Unsigned_Int -> Unsigned_Long_Int)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
 
-fwrite$3:	; rdi = £temporary1152
+fwrite$3:	; rdi = £temporary1151
 
-fwrite$4:	; £temporary1154 = int_to_int ptr (Pointer -> Unsigned_Long_Int)
+fwrite$4:	; £temporary1153 = int_to_int ptr (Pointer -> Unsigned_Long_Int)
 	mov rsi, [rbp + 24]
 
-fwrite$5:	; rsi = £temporary1154
+fwrite$5:	; rsi = £temporary1153
 
-fwrite$6:	; £temporary1156 = size * nobj
+fwrite$6:	; £temporary1155 = size * nobj
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [rbp + 36]
 
-fwrite$7:	; £temporary1157 = int_to_int £temporary1156 (Signed_Int -> Unsigned_Long_Int)
+fwrite$7:	; £temporary1156 = int_to_int £temporary1155 (Signed_Int -> Unsigned_Long_Int)
 	mov rbx, 4294967295
 	and rax, rbx
 
-fwrite$8:	; rdx = £temporary1157
+fwrite$8:	; rdx = £temporary1156
 	mov rdx, rax
 
 fwrite$9:	; syscall
@@ -1559,29 +1559,29 @@ fwrite$12:	; function end fwrite
 fseek:	; rax = int8$8#
 	mov rax, 8
 
-fseek$1:	; £field1160 -> stream = *stream
+fseek$1:	; £field1159 -> stream = *stream
 	mov rsi, [rbp + 24]
 
-fseek$2:	; £temporary1161 = int_to_int £field1160 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+fseek$2:	; £temporary1160 = int_to_int £field1159 -> stream (Unsigned_Int -> Unsigned_Long_Int)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
 
-fseek$3:	; rdi = £temporary1161
+fseek$3:	; rdi = £temporary1160
 
-fseek$4:	; £temporary1163 = int_to_int offset (Signed_Int -> Unsigned_Long_Int)
+fseek$4:	; £temporary1162 = int_to_int offset (Signed_Int -> Unsigned_Long_Int)
 	mov esi, [rbp + 32]
 	mov rbx, 4294967295
 	and rsi, rbx
 
-fseek$5:	; rsi = £temporary1163
+fseek$5:	; rsi = £temporary1162
 
-fseek$6:	; £temporary1165 = int_to_int origin (Signed_Int -> Unsigned_Long_Int)
+fseek$6:	; £temporary1164 = int_to_int origin (Signed_Int -> Unsigned_Long_Int)
 	mov edx, [rbp + 36]
 	mov rbx, 4294967295
 	and rdx, rbx
 
-fseek$7:	; rdx = £temporary1165
+fseek$7:	; rdx = £temporary1164
 
 fseek$8:	; syscall
 	syscall 
@@ -1617,9 +1617,9 @@ ftell$4:	; call function noellipse-noellipse fseek
 
 ftell$5:	; post call
 
-ftell$6:	; £temporary1166 = return_value
+ftell$6:	; £temporary1165 = return_value
 
-ftell$7:	; return_value = £temporary1166
+ftell$7:	; return_value = £temporary1165
 
 ftell$8:	; return
 	mov rax, [rbp]
@@ -1639,7 +1639,7 @@ rewind$1:	; return
 
 rewind$2:	; function end rewind
 
-fgetpos:	; £field1172 -> ptr = *ptr
+fgetpos:	; £field1171 -> ptr = *ptr
 	mov rsi, [rbp + 32]
 
 fgetpos$1:	; call header integral no zero 1 stack zero 0
@@ -1658,11 +1658,11 @@ fgetpos$3:	; call function noellipse-noellipse ftell
 fgetpos$4:	; post call
 	mov rsi, [rbp + 40]
 
-fgetpos$5:	; £temporary1173 = return_value
+fgetpos$5:	; £temporary1172 = return_value
 
-fgetpos$6:	; £temporary1174 = int_to_int £temporary1173 (Signed_Int -> Signed_Int)
+fgetpos$6:	; £temporary1173 = int_to_int £temporary1172 (Signed_Int -> Signed_Int)
 
-fgetpos$7:	; £field1172 -> ptr = £temporary1174
+fgetpos$7:	; £field1171 -> ptr = £temporary1173
 	mov [rsi], ebx
 
 fgetpos$8:	; return_value = int4$0#
@@ -1682,10 +1682,10 @@ fsetpos$1:	; parameter stream, offset 64
 	mov rax, [rbp + 24]
 	mov [rbp + 64], rax
 
-fsetpos$2:	; £field1176 -> ptr = *ptr
+fsetpos$2:	; £field1175 -> ptr = *ptr
 	mov rsi, [rbp + 32]
 
-fsetpos$3:	; parameter £field1176 -> ptr, offset 72
+fsetpos$3:	; parameter £field1175 -> ptr, offset 72
 	mov eax, [rsi]
 	mov [rbp + 72], eax
 
@@ -1700,11 +1700,11 @@ fsetpos$5:	; call function noellipse-noellipse fseek
 
 fsetpos$6:	; post call
 
-fsetpos$7:	; £temporary1177 = return_value
+fsetpos$7:	; £temporary1176 = return_value
 
-fsetpos$8:	; £temporary1178 = int_to_int £temporary1177 (Signed_Int -> Signed_Int)
+fsetpos$8:	; £temporary1177 = int_to_int £temporary1176 (Signed_Int -> Signed_Int)
 
-fsetpos$9:	; return_value = £temporary1178
+fsetpos$9:	; return_value = £temporary1177
 
 fsetpos$10:	; return
 	mov rax, [rbp]
@@ -1714,13 +1714,13 @@ fsetpos$10:	; return
 
 fsetpos$11:	; function end fsetpos
 
-clearerr:	; £field1182 -> stream = *stream
+clearerr:	; £field1181 -> stream = *stream
 	mov rsi, [rbp + 24]
 
 clearerr$1:	; errno = int4$0#
 	mov dword [errno], 0
 
-clearerr$2:	; £field1182 -> stream = errno
+clearerr$2:	; £field1181 -> stream = errno
 	mov eax, [errno]
 	mov [rsi + 25], eax
 
@@ -1752,13 +1752,13 @@ feof$4:	; call function noellipse-noellipse fseek
 
 feof$5:	; post call
 
-feof$6:	; £temporary1183 = return_value
+feof$6:	; £temporary1182 = return_value
 
-feof$7:	; £temporary1184 = int_to_int £temporary1183 (Signed_Int -> Unsigned_Long_Int)
+feof$7:	; £temporary1183 = int_to_int £temporary1182 (Signed_Int -> Unsigned_Long_Int)
 	mov rax, 4294967295
 	and rbx, rax
 
-feof$8:	; currPosition = £temporary1184
+feof$8:	; currPosition = £temporary1183
 	mov [rbp + 32], rbx
 
 feof$9:	; call header integral zero 0 stack zero 0
@@ -1781,13 +1781,13 @@ feof$13:	; call function noellipse-noellipse fseek
 
 feof$14:	; post call
 
-feof$15:	; £temporary1185 = return_value
+feof$15:	; £temporary1184 = return_value
 
-feof$16:	; £temporary1186 = int_to_int £temporary1185 (Signed_Int -> Unsigned_Long_Int)
+feof$16:	; £temporary1185 = int_to_int £temporary1184 (Signed_Int -> Unsigned_Long_Int)
 	mov rax, 4294967295
 	and rbx, rax
 
-feof$17:	; lastPosition = £temporary1186
+feof$17:	; lastPosition = £temporary1185
 	mov [rbp + 40], rbx
 
 feof$18:	; call header integral zero 0 stack zero 0
@@ -1796,10 +1796,10 @@ feof$19:	; parameter stream, offset 72
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
-feof$20:	; £temporary1187 = int_to_int currPosition (Unsigned_Long_Int -> Signed_Int)
+feof$20:	; £temporary1186 = int_to_int currPosition (Unsigned_Long_Int -> Signed_Int)
 	mov rax, [rbp + 32]
 
-feof$21:	; parameter £temporary1187, offset 80
+feof$21:	; parameter £temporary1186, offset 80
 	mov [rbp + 80], eax
 
 feof$22:	; parameter int4$0#, offset 84
@@ -1818,16 +1818,16 @@ feof$25:	; if currPosition != lastPosition goto 28
 	cmp rax, [rbp + 40]
 	jne feof$28
 
-feof$26:	; £temporary1190 = int4$1#
+feof$26:	; £temporary1189 = int4$1#
 	mov eax, 1
 
 feof$27:	; goto 29
 	jmp feof$29
 
-feof$28:	; £temporary1190 = int4$0#
+feof$28:	; £temporary1189 = int4$0#
 	mov eax, 0
 
-feof$29:	; endOfFile = £temporary1190
+feof$29:	; endOfFile = £temporary1189
 	mov [rbp + 48], eax
 
 feof$30:	; return_value = endOfFile
@@ -1841,10 +1841,10 @@ feof$31:	; return
 
 feof$32:	; function end feof
 
-ferror:	; £field1200 -> stream = *stream
+ferror:	; £field1199 -> stream = *stream
 	mov rsi, [rbp + 24]
 
-ferror$1:	; return_value = £field1200 -> stream
+ferror$1:	; return_value = £field1199 -> stream
 	mov ebx, [rsi + 25]
 
 ferror$2:	; return
@@ -1878,9 +1878,9 @@ perror$5:	; call function noellipse-noellipse strerror
 
 perror$6:	; post call
 
-perror$7:	; £temporary1201 = return_value
+perror$7:	; £temporary1200 = return_value
 
-perror$8:	; parameter £temporary1201, offset 72
+perror$8:	; parameter £temporary1200, offset 72
 	mov [rbp + 72], rbx
 
 perror$9:	; call function noellipse-ellipse printf, extra 16
