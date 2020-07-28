@@ -26,9 +26,9 @@ ldexp
 frexp
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a350 a350 p 35 38 68 73 89 107,t351 t351 £temporary554 101 104 107)>
+  (a348 a348 p 35 38 68 73 89 105,t349 t349 £temporary554 101 104 105)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a350 a350 p si 35 38 68 73 89 107,t351 t351 £temporary554 ax 101 104 107)>
+  (a348 a348 p si 35 38 68 73 89 105,t349 t349 £temporary554 ax 101 104 105)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
@@ -78,7 +78,6 @@ atan
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 atanY
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>

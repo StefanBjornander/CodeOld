@@ -15,7 +15,7 @@ stack_test$2:	; parameter string_25i20#, offset 48
 stack_test$3:	; £temporary5264 = i
 	mov eax, [@7418$i]
 
-stack_test$4:	; ++i
+stack_test$4:	; i = i + int4$1#
 	inc dword [@7418$i]
 
 stack_test$5:	; parameter £temporary5264, offset 56
@@ -82,7 +82,7 @@ heap_test$9:	; parameter string_102420bytes2Dblock20number3A2025i0A#, offset 60
 heap_test$10:	; £temporary5271 = count
 	mov eax, [rbp + 24]
 
-heap_test$11:	; ++count
+heap_test$11:	; count = count + int4$1#
 	inc dword [rbp + 24]
 
 heap_test$12:	; parameter £temporary5271, offset 68

@@ -898,6 +898,8 @@ stdlib_test$175:	; £temporary5458 = £temporary5456 * int8$4#
 	mul qword [int8$4#]
 
 stdlib_test$176:	; £temporary5457 = list + £temporary5458
+	mov rbx, rbp
+	add rbx, 24
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
@@ -918,7 +920,7 @@ stdlib_test$179:	; call function noellipse-ellipse printf, extra 4
 
 stdlib_test$180:	; post call
 
-stdlib_test$181:	; ++index
+stdlib_test$181:	; index = index + int4$1#
 	inc dword [rbp + 44]
 
 stdlib_test$182:	; goto 171
@@ -986,6 +988,8 @@ stdlib_test$199:	; £temporary5468 = £temporary5466 * int8$4#
 	mul qword [int8$4#]
 
 stdlib_test$200:	; £temporary5467 = list + £temporary5468
+	mov rbx, rbp
+	add rbx, 24
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
@@ -1006,7 +1010,7 @@ stdlib_test$203:	; call function noellipse-ellipse printf, extra 4
 
 stdlib_test$204:	; post call
 
-stdlib_test$205:	; ++index
+stdlib_test$205:	; index = index + int4$1#
 	inc dword [rbp + 44]
 
 stdlib_test$206:	; goto 195
@@ -1074,6 +1078,8 @@ stdlib_test$223:	; £temporary5478 = £temporary5476 * int8$4#
 	mul qword [int8$4#]
 
 stdlib_test$224:	; £temporary5477 = list + £temporary5478
+	mov rbx, rbp
+	add rbx, 24
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
@@ -1094,7 +1100,7 @@ stdlib_test$227:	; call function noellipse-ellipse printf, extra 4
 
 stdlib_test$228:	; post call
 
-stdlib_test$229:	; ++index
+stdlib_test$229:	; index = index + int4$1#
 	inc dword [rbp + 44]
 
 stdlib_test$230:	; goto 219
@@ -1164,9 +1170,9 @@ stdlib_test$249:	; if p == int8$0# goto 255
 	je stdlib_test$255
 
 stdlib_test$250:	; £temporary5490 = p - list
-	mov rax, [rbp + 48]
 	mov rbx, rbp
 	add rbx, 24
+	mov rax, [rbp + 48]
 	sub rax, rbx
 
 stdlib_test$251:	; £temporary5489 = £temporary5490 / int8$4#
@@ -1209,7 +1215,7 @@ stdlib_test$261:	; call function noellipse-ellipse printf, extra 8
 
 stdlib_test$262:	; post call
 
-stdlib_test$263:	; ++key
+stdlib_test$263:	; key = key + int4$1#
 	inc dword [rbp + 44]
 
 stdlib_test$264:	; goto 236

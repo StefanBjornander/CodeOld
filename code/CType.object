@@ -859,38 +859,35 @@ tolowerX$3:	; post call
 tolowerX$4:	; £temporary409 = return_value
 20:	
 
-tolowerX$5:	; if £temporary409 == 0 goto 9
+tolowerX$5:	; if £temporary409 == 0 goto 8
 21:		cmp bx, 0
-22:		je tolowerX$9
+22:		je tolowerX$8
 24:	
 
-tolowerX$6:	; £temporary410 = c + 32
+tolowerX$6:	; £temporary415 = c + 32
 25:		mov bx, [bp + 6]
 26:		add bx, 32
 28:	
 
-tolowerX$7:	; £temporary415 = £temporary410
-30:	
+tolowerX$7:	; goto 9
+29:		jmp tolowerX$9
+31:	
 
-tolowerX$8:	; goto 10
-31:		jmp tolowerX$10
-33:	
+tolowerX$8:	; £temporary415 = c
+32:		mov bx, [bp + 6]
+34:	
 
-tolowerX$9:	; £temporary415 = c
-34:		mov bx, [bp + 6]
+tolowerX$9:	; return_value = £temporary415
 36:	
 
-tolowerX$10:	; return_value = £temporary415
-38:	
+tolowerX$10:	; return
+37:		mov ax, [bp]
+38:		mov di, [bp + 4]
+39:		mov bp, [bp + 2]
+40:		jmp ax
+42:	
 
-tolowerX$11:	; return
-39:		mov ax, [bp]
-40:		mov di, [bp + 4]
-41:		mov bp, [bp + 2]
-42:		jmp ax
-44:	
-
-tolowerX$12:	; function end tolowerX
+tolowerX$11:	; function end tolowerX
 1:	
 
 tolower:	; call header integral zero 0 stack zero 0
@@ -914,9 +911,9 @@ tolower$3:	; post call
 tolower$4:	; £temporary417 = return_value
 20:	
 
-tolower$5:	; if £temporary417 == 0 goto 32
+tolower$5:	; if £temporary417 == 0 goto 31
 21:		cmp bx, 0
-22:		je tolower$32
+22:		je tolower$31
 24:	
 
 tolower$6:	; call header integral zero 0 stack zero 0
@@ -939,9 +936,9 @@ tolower$10:	; localeConvPtr = £temporary418
 40:		mov [bp + 8], bx
 42:	
 
-tolower$11:	; if localeConvPtr == 0 goto 29
+tolower$11:	; if localeConvPtr == 0 goto 28
 43:		cmp word [bp + 8], 0
-44:		je tolower$29
+44:		je tolower$28
 46:	
 
 tolower$12:	; £temporary420 -> localeConvPtr = *localeConvPtr, offset 12
@@ -988,68 +985,65 @@ tolower$20:	; post call
 tolower$21:	; £temporary422 = return_value
 83:	
 
-tolower$22:	; £temporary423 = £temporary422 - upperCase
+tolower$22:	; index = £temporary422 - upperCase
 84:		sub bx, [bp + 12]
-86:	
+85:		mov [bp + 14], bx
+87:	
 
-tolower$23:	; index = £temporary423
-87:		mov [bp + 14], bx
-89:	
+tolower$23:	; £temporary425 = lowerCase + index
+88:		mov si, [bp + 10]
+89:		add si, [bp + 14]
+91:	
 
-tolower$24:	; £temporary425 = lowerCase + index
-90:		mov si, [bp + 10]
-91:		add si, [bp + 14]
+tolower$24:	; £temporary424 -> £temporary425 = *£temporary425
 93:	
 
-tolower$25:	; £temporary424 -> £temporary425 = *£temporary425
-95:	
+tolower$25:	; £temporary426 = int_to_int £temporary424 -> £temporary425 (Signed_Char -> Signed_Int)
+94:		mov bl, [si]
+96:		and bx, 255
+98:		cmp bl, 0
+99:		jge tolower$26
+100:		neg bl
+102:		neg bx
+104:	
 
-tolower$26:	; £temporary426 = int_to_int £temporary424 -> £temporary425 (Signed_Char -> Signed_Int)
-96:		mov bl, [si]
-98:		and bx, 255
-100:		cmp bl, 0
-101:		jge tolower$27
-102:		neg bl
-104:		neg bx
+tolower$26:	; return_value = £temporary426
 106:	
 
-tolower$27:	; return_value = £temporary426
-108:	
+tolower$27:	; return
+107:		mov ax, [bp]
+108:		mov di, [bp + 4]
+109:		mov bp, [bp + 2]
+110:		jmp ax
+112:	
 
-tolower$28:	; return
-109:		mov ax, [bp]
-110:		mov di, [bp + 4]
-111:		mov bp, [bp + 2]
-112:		jmp ax
-114:	
+tolower$28:	; £temporary427 = c + 32
+113:		mov bx, [bp + 6]
+114:		add bx, 32
+116:	
 
-tolower$29:	; £temporary427 = c + 32
-115:		mov bx, [bp + 6]
-116:		add bx, 32
+tolower$29:	; return_value = £temporary427
 118:	
 
-tolower$30:	; return_value = £temporary427
-120:	
+tolower$30:	; return
+119:		mov ax, [bp]
+120:		mov di, [bp + 4]
+121:		mov bp, [bp + 2]
+122:		jmp ax
+124:	
 
-tolower$31:	; return
-121:		mov ax, [bp]
-122:		mov di, [bp + 4]
-123:		mov bp, [bp + 2]
-124:		jmp ax
-126:	
+tolower$31:	; return_value = c
+125:		mov bx, [bp + 6]
+127:	
 
-tolower$32:	; return_value = c
-127:		mov bx, [bp + 6]
-129:	
+tolower$32:	; return
+128:		mov ax, [bp]
+129:		mov di, [bp + 4]
+130:		mov bp, [bp + 2]
+131:		jmp ax
+133:	
 
-tolower$33:	; return
-130:		mov ax, [bp]
-131:		mov di, [bp + 4]
-132:		mov bp, [bp + 2]
-133:		jmp ax
-135:	
-
-tolower$34:	; function end tolower
+tolower$33:	; function end tolower
 1:	
 
 toupperX:	; call header integral zero 0 stack zero 0
@@ -1073,38 +1067,35 @@ toupperX$3:	; post call
 toupperX$4:	; £temporary432 = return_value
 20:	
 
-toupperX$5:	; if £temporary432 == 0 goto 9
+toupperX$5:	; if £temporary432 == 0 goto 8
 21:		cmp bx, 0
-22:		je toupperX$9
+22:		je toupperX$8
 24:	
 
-toupperX$6:	; £temporary433 = c - 32
+toupperX$6:	; £temporary438 = c - 32
 25:		mov bx, [bp + 6]
 26:		sub bx, 32
 28:	
 
-toupperX$7:	; £temporary438 = £temporary433
-30:	
+toupperX$7:	; goto 9
+29:		jmp toupperX$9
+31:	
 
-toupperX$8:	; goto 10
-31:		jmp toupperX$10
-33:	
+toupperX$8:	; £temporary438 = c
+32:		mov bx, [bp + 6]
+34:	
 
-toupperX$9:	; £temporary438 = c
-34:		mov bx, [bp + 6]
+toupperX$9:	; return_value = £temporary438
 36:	
 
-toupperX$10:	; return_value = £temporary438
-38:	
+toupperX$10:	; return
+37:		mov ax, [bp]
+38:		mov di, [bp + 4]
+39:		mov bp, [bp + 2]
+40:		jmp ax
+42:	
 
-toupperX$11:	; return
-39:		mov ax, [bp]
-40:		mov di, [bp + 4]
-41:		mov bp, [bp + 2]
-42:		jmp ax
-44:	
-
-toupperX$12:	; function end toupperX
+toupperX$11:	; function end toupperX
 1:	
 
 toupper:	; call header integral zero 0 stack zero 0
@@ -1128,9 +1119,9 @@ toupper$3:	; post call
 toupper$4:	; £temporary440 = return_value
 20:	
 
-toupper$5:	; if £temporary440 == 0 goto 32
+toupper$5:	; if £temporary440 == 0 goto 31
 21:		cmp bx, 0
-22:		je toupper$32
+22:		je toupper$31
 24:	
 
 toupper$6:	; call header integral zero 0 stack zero 0
@@ -1153,9 +1144,9 @@ toupper$10:	; localeConvPtr = £temporary441
 40:		mov [bp + 8], bx
 42:	
 
-toupper$11:	; if localeConvPtr == 0 goto 29
+toupper$11:	; if localeConvPtr == 0 goto 28
 43:		cmp word [bp + 8], 0
-44:		je toupper$29
+44:		je toupper$28
 46:	
 
 toupper$12:	; £temporary443 -> localeConvPtr = *localeConvPtr, offset 12
@@ -1202,65 +1193,62 @@ toupper$20:	; post call
 toupper$21:	; £temporary445 = return_value
 83:	
 
-toupper$22:	; £temporary446 = £temporary445 - lowerCase
+toupper$22:	; index = £temporary445 - lowerCase
 84:		sub bx, [bp + 10]
-86:	
+85:		mov [bp + 14], bx
+87:	
 
-toupper$23:	; index = £temporary446
-87:		mov [bp + 14], bx
-89:	
+toupper$23:	; £temporary448 = upperCase + index
+88:		mov si, [bp + 12]
+89:		add si, [bp + 14]
+91:	
 
-toupper$24:	; £temporary448 = upperCase + index
-90:		mov si, [bp + 12]
-91:		add si, [bp + 14]
+toupper$24:	; £temporary447 -> £temporary448 = *£temporary448
 93:	
 
-toupper$25:	; £temporary447 -> £temporary448 = *£temporary448
-95:	
+toupper$25:	; £temporary449 = int_to_int £temporary447 -> £temporary448 (Signed_Char -> Signed_Int)
+94:		mov bl, [si]
+96:		and bx, 255
+98:		cmp bl, 0
+99:		jge toupper$26
+100:		neg bl
+102:		neg bx
+104:	
 
-toupper$26:	; £temporary449 = int_to_int £temporary447 -> £temporary448 (Signed_Char -> Signed_Int)
-96:		mov bl, [si]
-98:		and bx, 255
-100:		cmp bl, 0
-101:		jge toupper$27
-102:		neg bl
-104:		neg bx
+toupper$26:	; return_value = £temporary449
 106:	
 
-toupper$27:	; return_value = £temporary449
-108:	
+toupper$27:	; return
+107:		mov ax, [bp]
+108:		mov di, [bp + 4]
+109:		mov bp, [bp + 2]
+110:		jmp ax
+112:	
 
-toupper$28:	; return
-109:		mov ax, [bp]
-110:		mov di, [bp + 4]
-111:		mov bp, [bp + 2]
-112:		jmp ax
-114:	
+toupper$28:	; £temporary450 = c - 32
+113:		mov bx, [bp + 6]
+114:		sub bx, 32
+116:	
 
-toupper$29:	; £temporary450 = c - 32
-115:		mov bx, [bp + 6]
-116:		sub bx, 32
+toupper$29:	; return_value = £temporary450
 118:	
 
-toupper$30:	; return_value = £temporary450
-120:	
+toupper$30:	; return
+119:		mov ax, [bp]
+120:		mov di, [bp + 4]
+121:		mov bp, [bp + 2]
+122:		jmp ax
+124:	
 
-toupper$31:	; return
-121:		mov ax, [bp]
-122:		mov di, [bp + 4]
-123:		mov bp, [bp + 2]
-124:		jmp ax
-126:	
+toupper$31:	; return_value = c
+125:		mov bx, [bp + 6]
+127:	
 
-toupper$32:	; return_value = c
-127:		mov bx, [bp + 6]
-129:	
+toupper$32:	; return
+128:		mov ax, [bp]
+129:		mov di, [bp + 4]
+130:		mov bp, [bp + 2]
+131:		jmp ax
+133:	
 
-toupper$33:	; return
-130:		mov ax, [bp]
-131:		mov di, [bp + 4]
-132:		mov bp, [bp + 2]
-133:		jmp ax
-135:	
-
-toupper$34:	; function end toupper
+toupper$33:	; function end toupper

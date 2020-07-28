@@ -199,6 +199,8 @@ string_test$50:	; £temporary3892 = int_to_int £temporary3890 (Signed_Int -> Ar
 	and rax, rbx
 
 string_test$51:	; £temporary3894 = u + £temporary3892
+	mov rbx, rbp
+	add rbx, 136
 	mov rsi, rbp
 	add rsi, 136
 	add rsi, rax

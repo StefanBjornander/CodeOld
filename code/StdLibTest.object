@@ -1380,9 +1380,9 @@ stdlib_test$231:	; key = 0
 875:		mov word [bp + 16], 0
 877:	
 
-stdlib_test$232:	; if key >= 6 goto 260
+stdlib_test$232:	; if key >= 6 goto 259
 878:		cmp word [bp + 16], 6
-879:		jge stdlib_test$260
+879:		jge stdlib_test$259
 881:	
 
 stdlib_test$233:	; call header integral zero 0 stack zero 0
@@ -1435,9 +1435,9 @@ stdlib_test$244:	; p = £temporary5401
 921:		mov [bp + 18], bx
 923:	
 
-stdlib_test$245:	; if p == 0 goto 250
+stdlib_test$245:	; if p == 0 goto 249
 924:		cmp word [bp + 18], 0
-925:		je stdlib_test$250
+925:		je stdlib_test$249
 927:	
 
 stdlib_test$246:	; £temporary5403 = p - list
@@ -1447,86 +1447,83 @@ stdlib_test$246:	; £temporary5403 = p - list
 931:		sub ax, bx
 933:	
 
-stdlib_test$247:	; £temporary5404 = £temporary5403 / 2
+stdlib_test$247:	; £temporary5408 = £temporary5403 / 2
 935:		xor dx, dx
 936:		div word [int2$2#]
 942:	
 
-stdlib_test$248:	; £temporary5408 = £temporary5404
-944:	
+stdlib_test$248:	; goto 250
+943:		jmp stdlib_test$250
+945:	
 
-stdlib_test$249:	; goto 251
-945:		jmp stdlib_test$251
-947:	
+stdlib_test$249:	; £temporary5408 = -1
+946:		mov ax, -1
+948:	
 
-stdlib_test$250:	; £temporary5408 = -1
-948:		mov ax, -1
-950:	
+stdlib_test$250:	; index = £temporary5408
+949:		mov [bp + 20], ax
+951:	
 
-stdlib_test$251:	; index = £temporary5408
-951:		mov [bp + 20], ax
+stdlib_test$251:	; call header integral zero 0 stack zero 0
 953:	
 
-stdlib_test$252:	; call header integral zero 0 stack zero 0
-955:	
+stdlib_test$252:	; parameter string_20202825i2C2025i290A#, offset 6
+954:		mov word [bp + 28], string_20202825i2C2025i290A#
+956:	
 
-stdlib_test$253:	; parameter string_20202825i2C2025i290A#, offset 6
-956:		mov word [bp + 28], string_20202825i2C2025i290A#
-958:	
+stdlib_test$253:	; parameter key, offset 8
+957:		mov ax, [bp + 16]
+958:		mov [bp + 30], ax
+960:	
 
-stdlib_test$254:	; parameter key, offset 8
-959:		mov ax, [bp + 16]
-960:		mov [bp + 30], ax
-962:	
+stdlib_test$254:	; parameter index, offset 10
+961:		mov ax, [bp + 20]
+962:		mov [bp + 32], ax
+964:	
 
-stdlib_test$255:	; parameter index, offset 10
-963:		mov ax, [bp + 20]
-964:		mov [bp + 32], ax
-966:	
+stdlib_test$255:	; call function noellipse-ellipse printf, extra 0
+965:		mov word [bp + 22], stdlib_test$256
+966:		mov [bp + 24], bp
+967:		add bp, 22
+968:		mov di, bp
+969:		add di, 4
+970:		jmp printf
+972:	
 
-stdlib_test$256:	; call function noellipse-ellipse printf, extra 0
-967:		mov word [bp + 22], stdlib_test$257
-968:		mov [bp + 24], bp
-969:		add bp, 22
-970:		mov di, bp
-971:		add di, 4
-972:		jmp printf
+stdlib_test$256:	; post call
 974:	
 
-stdlib_test$257:	; post call
-976:	
+stdlib_test$257:	; ++key
+975:		inc word [bp + 16]
+977:	
 
-stdlib_test$258:	; ++key
-977:		inc word [bp + 16]
-979:	
+stdlib_test$258:	; goto 232
+978:		jmp stdlib_test$232
+980:	
 
-stdlib_test$259:	; goto 232
-980:		jmp stdlib_test$232
+stdlib_test$259:	; call header integral zero 0 stack zero 0
 982:	
 
-stdlib_test$260:	; call header integral zero 0 stack zero 0
-984:	
+stdlib_test$260:	; parameter string_0A#, offset 6
+983:		mov word [bp + 24], string_0A#
+985:	
 
-stdlib_test$261:	; parameter string_0A#, offset 6
-985:		mov word [bp + 24], string_0A#
-987:	
+stdlib_test$261:	; call function noellipse-ellipse printf, extra 0
+986:		mov word [bp + 18], stdlib_test$262
+987:		mov [bp + 20], bp
+988:		add bp, 18
+989:		mov di, bp
+990:		jmp printf
+992:	
 
-stdlib_test$262:	; call function noellipse-ellipse printf, extra 0
-988:		mov word [bp + 18], stdlib_test$263
-989:		mov [bp + 20], bp
-990:		add bp, 18
-991:		mov di, bp
-992:		jmp printf
+stdlib_test$262:	; post call
 994:	
 
-stdlib_test$263:	; post call
-996:	
+stdlib_test$263:	; return
+995:		mov ax, [bp]
+996:		mov di, [bp + 4]
+997:		mov bp, [bp + 2]
+998:		jmp ax
+1000:	
 
-stdlib_test$264:	; return
-997:		mov ax, [bp]
-998:		mov di, [bp + 4]
-999:		mov bp, [bp + 2]
-1000:		jmp ax
-1002:	
-
-stdlib_test$265:	; function end stdlib_test
+stdlib_test$264:	; function end stdlib_test

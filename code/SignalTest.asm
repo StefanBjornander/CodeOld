@@ -108,92 +108,90 @@ signal_test:	; a = int4$1#
 signal_test$1:	; b = int4$1#
 	mov dword [rbp + 28], 1
 
-signal_test$2:	; £temporary5252 = a / b
+signal_test$2:	; c = a / b
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [rbp + 28]
-
-signal_test$3:	; c = £temporary5252
 	mov [rbp + 32], eax
 
-signal_test$4:	; call header integral zero 0 stack zero 0
+signal_test$3:	; call header integral zero 0 stack zero 0
 
-signal_test$5:	; parameter string_25i0A#, offset 60
+signal_test$4:	; parameter string_25i0A#, offset 60
 	mov qword [rbp + 60], string_25i0A#
 
-signal_test$6:	; parameter c, offset 68
+signal_test$5:	; parameter c, offset 68
 	mov eax, [rbp + 32]
 	mov [rbp + 68], eax
 
-signal_test$7:	; call function noellipse-ellipse printf, extra 4
-	mov qword [rbp + 36], signal_test$8
+signal_test$6:	; call function noellipse-ellipse printf, extra 4
+	mov qword [rbp + 36], signal_test$7
 	mov [rbp + 44], rbp
 	add rbp, 36
 	mov rdi, rbp
 	add rdi, 4
 	jmp printf
 
-signal_test$8:	; post call
+signal_test$7:	; post call
 
-signal_test$9:	; call header integral zero 0 stack zero 0
+signal_test$8:	; call header integral zero 0 stack zero 0
 
-signal_test$10:	; parameter exit_handle1, offset 60
+signal_test$9:	; parameter exit_handle1, offset 60
 	mov qword [rbp + 60], exit_handle1
 
-signal_test$11:	; call function noellipse-noellipse atexit
-	mov qword [rbp + 36], signal_test$12
+signal_test$10:	; call function noellipse-noellipse atexit
+	mov qword [rbp + 36], signal_test$11
 	mov [rbp + 44], rbp
 	add rbp, 36
 	jmp atexit
 
-signal_test$12:	; post call
+signal_test$11:	; post call
 
-signal_test$13:	; call header integral zero 0 stack zero 0
+signal_test$12:	; call header integral zero 0 stack zero 0
 
-signal_test$14:	; parameter exit_handle2, offset 60
+signal_test$13:	; parameter exit_handle2, offset 60
 	mov qword [rbp + 60], exit_handle2
 
-signal_test$15:	; call function noellipse-noellipse atexit
-	mov qword [rbp + 36], signal_test$16
+signal_test$14:	; call function noellipse-noellipse atexit
+	mov qword [rbp + 36], signal_test$15
 	mov [rbp + 44], rbp
 	add rbp, 36
 	jmp atexit
 
-signal_test$16:	; post call
+signal_test$15:	; post call
 
-signal_test$17:	; call header integral zero 0 stack zero 0
+signal_test$16:	; call header integral zero 0 stack zero 0
 
-signal_test$18:	; parameter exit_handle3, offset 60
+signal_test$17:	; parameter exit_handle3, offset 60
 	mov qword [rbp + 60], exit_handle3
 
-signal_test$19:	; call function noellipse-noellipse atexit
-	mov qword [rbp + 36], signal_test$20
+signal_test$18:	; call function noellipse-noellipse atexit
+	mov qword [rbp + 36], signal_test$19
 	mov [rbp + 44], rbp
 	add rbp, 36
 	jmp atexit
 
-signal_test$20:	; post call
+signal_test$19:	; post call
 
-signal_test$21:	; call header integral zero 0 stack zero 0
+signal_test$20:	; call header integral zero 0 stack zero 0
 
-signal_test$22:	; parameter int4$0#, offset 60
+signal_test$21:	; parameter int4$0#, offset 60
 	mov dword [rbp + 60], 0
 
-signal_test$23:	; call function noellipse-noellipse exit
-	mov qword [rbp + 36], signal_test$24
+signal_test$22:	; call function noellipse-noellipse exit
+	mov qword [rbp + 36], signal_test$23
 	mov [rbp + 44], rbp
 	add rbp, 36
 	jmp exit
 
-signal_test$24:	; post call
+signal_test$23:	; post call
 
-signal_test$25:	; return
+signal_test$24:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-signal_test$26:	; function end signal_test
+signal_test$25:	; function end signal_test
 section .data
 
 $IntegralStorage#:

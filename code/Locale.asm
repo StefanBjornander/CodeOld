@@ -103,7 +103,7 @@ setlocale$27:	; g_currStructPtr = £temporary477
 setlocale$28:	; goto 31
 	jmp setlocale$31
 
-setlocale$29:	; ++index
+setlocale$29:	; index = index + int4$1#
 	inc dword [rbp + 36]
 
 setlocale$30:	; goto 10

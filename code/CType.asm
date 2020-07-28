@@ -681,31 +681,29 @@ tolowerX$3:	; post call
 
 tolowerX$4:	; £temporary413 = return_value
 
-tolowerX$5:	; if £temporary413 == int4$0# goto 9
+tolowerX$5:	; if £temporary413 == int4$0# goto 8
 	cmp ebx, 0
-	je tolowerX$9
+	je tolowerX$8
 
-tolowerX$6:	; £temporary414 = c + int4$32#
+tolowerX$6:	; £temporary416 = c + int4$32#
 	mov ebx, [rbp + 24]
 	add ebx, 32
 
-tolowerX$7:	; £temporary416 = £temporary414
+tolowerX$7:	; goto 9
+	jmp tolowerX$9
 
-tolowerX$8:	; goto 10
-	jmp tolowerX$10
-
-tolowerX$9:	; £temporary416 = c
+tolowerX$8:	; £temporary416 = c
 	mov ebx, [rbp + 24]
 
-tolowerX$10:	; return_value = £temporary416
+tolowerX$9:	; return_value = £temporary416
 
-tolowerX$11:	; return
+tolowerX$10:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-tolowerX$12:	; function end tolowerX
+tolowerX$11:	; function end tolowerX
 
 tolower:	; call header integral zero 0 stack zero 0
 
@@ -854,31 +852,29 @@ toupperX$3:	; post call
 
 toupperX$4:	; £temporary437 = return_value
 
-toupperX$5:	; if £temporary437 == int4$0# goto 9
+toupperX$5:	; if £temporary437 == int4$0# goto 8
 	cmp ebx, 0
-	je toupperX$9
+	je toupperX$8
 
-toupperX$6:	; £temporary438 = c - int4$32#
+toupperX$6:	; £temporary440 = c - int4$32#
 	mov ebx, [rbp + 24]
 	sub ebx, 32
 
-toupperX$7:	; £temporary440 = £temporary438
+toupperX$7:	; goto 9
+	jmp toupperX$9
 
-toupperX$8:	; goto 10
-	jmp toupperX$10
-
-toupperX$9:	; £temporary440 = c
+toupperX$8:	; £temporary440 = c
 	mov ebx, [rbp + 24]
 
-toupperX$10:	; return_value = £temporary440
+toupperX$9:	; return_value = £temporary440
 
-toupperX$11:	; return
+toupperX$10:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-toupperX$12:	; function end toupperX
+toupperX$11:	; function end toupperX
 
 toupper:	; call header integral zero 0 stack zero 0
 

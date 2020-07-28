@@ -1607,79 +1607,76 @@ fputs$5:	; £temporary1155 = £temporary1154 + 1
 21:		add bx, 1
 23:	
 
-fputs$6:	; £temporary1156 = £temporary1155 * 1
+fputs$6:	; size = £temporary1155 * 1
 24:		mov ax, bx
 26:		xor dx, dx
 27:		imul word [int2$1#]
-33:	
+28:		mov [bp + 10], ax
+30:	
 
-fputs$7:	; size = £temporary1156
-34:		mov [bp + 10], ax
+fputs$7:	; call header integral zero 0 stack zero 0
+32:	
+
+fputs$8:	; parameter s, offset 6
+33:		mov ax, [bp + 6]
+34:		mov [bp + 18], ax
 36:	
 
-fputs$8:	; call header integral zero 0 stack zero 0
-38:	
+fputs$9:	; parameter size, offset 8
+37:		mov ax, [bp + 10]
+38:		mov [bp + 20], ax
+40:	
 
-fputs$9:	; parameter s, offset 6
-39:		mov ax, [bp + 6]
-40:		mov [bp + 18], ax
-42:	
+fputs$10:	; parameter 1, offset 10
+41:		mov word [bp + 22], 1
+43:	
 
-fputs$10:	; parameter size, offset 8
-43:		mov ax, [bp + 10]
-44:		mov [bp + 20], ax
-46:	
+fputs$11:	; parameter stream, offset 12
+44:		mov ax, [bp + 8]
+45:		mov [bp + 24], ax
+47:	
 
-fputs$11:	; parameter 1, offset 10
-47:		mov word [bp + 22], 1
-49:	
-
-fputs$12:	; parameter stream, offset 12
-50:		mov ax, [bp + 8]
-51:		mov [bp + 24], ax
+fputs$12:	; call function noellipse-noellipse fwrite
+48:		mov word [bp + 12], fputs$13
+49:		mov [bp + 14], bp
+50:		add bp, 12
+51:		jmp fwrite
 53:	
 
-fputs$13:	; call function noellipse-noellipse fwrite
-54:		mov word [bp + 12], fputs$14
-55:		mov [bp + 14], bp
-56:		add bp, 12
-57:		jmp fwrite
-59:	
+fputs$13:	; post call
+55:	
 
-fputs$14:	; post call
-61:	
+fputs$14:	; £temporary1157 = return_value
+60:	
 
-fputs$15:	; £temporary1157 = return_value
-66:	
+fputs$15:	; if £temporary1157 != size goto 18
+61:		cmp bx, [bp + 10]
+62:		jne fputs$18
+64:	
 
-fputs$16:	; if £temporary1157 != size goto 19
-67:		cmp bx, [bp + 10]
-68:		jne fputs$19
+fputs$16:	; £temporary1162 = 0
+65:		mov bx, 0
+67:	
+
+fputs$17:	; goto 19
+68:		jmp fputs$19
 70:	
 
-fputs$17:	; £temporary1162 = 0
-71:		mov bx, 0
+fputs$18:	; £temporary1162 = -1
+71:		mov bx, -1
 73:	
 
-fputs$18:	; goto 20
-74:		jmp fputs$20
-76:	
+fputs$19:	; return_value = £temporary1162
+75:	
 
-fputs$19:	; £temporary1162 = -1
-77:		mov bx, -1
-79:	
-
-fputs$20:	; return_value = £temporary1162
+fputs$20:	; return
+76:		mov ax, [bp]
+77:		mov di, [bp + 4]
+78:		mov bp, [bp + 2]
+79:		jmp ax
 81:	
 
-fputs$21:	; return
-82:		mov ax, [bp]
-83:		mov di, [bp + 4]
-84:		mov bp, [bp + 2]
-85:		jmp ax
-87:	
-
-fputs$22:	; function end fputs
+fputs$21:	; function end fputs
 1:	
 
 getchar:	; call header integral zero 0 stack zero 0

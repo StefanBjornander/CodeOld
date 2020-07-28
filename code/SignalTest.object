@@ -126,113 +126,110 @@ signal_test$1:	; b = 1
 5:		mov word [bp + 8], 1
 7:	
 
-signal_test$2:	; £temporary5159 = a / b
+signal_test$2:	; c = a / b
 8:		mov ax, [bp + 6]
 10:		xor dx, dx
 11:		idiv word [bp + 8]
-17:	
+12:		mov [bp + 10], ax
+14:	
 
-signal_test$3:	; c = £temporary5159
-18:		mov [bp + 10], ax
-20:	
+signal_test$3:	; call header integral zero 0 stack zero 0
+16:	
 
-signal_test$4:	; call header integral zero 0 stack zero 0
-22:	
+signal_test$4:	; parameter string_25i0A#, offset 6
+17:		mov word [bp + 18], string_25i0A#
+19:	
 
-signal_test$5:	; parameter string_25i0A#, offset 6
-23:		mov word [bp + 18], string_25i0A#
-25:	
+signal_test$5:	; parameter c, offset 8
+20:		mov ax, [bp + 10]
+21:		mov [bp + 20], ax
+23:	
 
-signal_test$6:	; parameter c, offset 8
-26:		mov ax, [bp + 10]
-27:		mov [bp + 20], ax
-29:	
+signal_test$6:	; call function noellipse-ellipse printf, extra 0
+24:		mov word [bp + 12], signal_test$7
+25:		mov [bp + 14], bp
+26:		add bp, 12
+27:		mov di, bp
+28:		add di, 2
+29:		jmp printf
+31:	
 
-signal_test$7:	; call function noellipse-ellipse printf, extra 0
-30:		mov word [bp + 12], signal_test$8
-31:		mov [bp + 14], bp
-32:		add bp, 12
-33:		mov di, bp
-34:		add di, 2
-35:		jmp printf
-37:	
+signal_test$7:	; post call
+33:	
 
-signal_test$8:	; post call
-39:	
+signal_test$8:	; call header integral zero 0 stack zero 0
+35:	
 
-signal_test$9:	; call header integral zero 0 stack zero 0
-41:	
+signal_test$9:	; parameter exit_handle1, offset 6
+36:		mov word [bp + 18], exit_handle1
+38:	
 
-signal_test$10:	; parameter exit_handle1, offset 6
-42:		mov word [bp + 18], exit_handle1
+signal_test$10:	; call function noellipse-noellipse atexit
+39:		mov word [bp + 12], signal_test$11
+40:		mov [bp + 14], bp
+41:		add bp, 12
+42:		jmp atexit
 44:	
 
-signal_test$11:	; call function noellipse-noellipse atexit
-45:		mov word [bp + 12], signal_test$12
-46:		mov [bp + 14], bp
-47:		add bp, 12
-48:		jmp atexit
-50:	
+signal_test$11:	; post call
+46:	
 
-signal_test$12:	; post call
-52:	
+signal_test$12:	; call header integral zero 0 stack zero 0
+48:	
 
-signal_test$13:	; call header integral zero 0 stack zero 0
-54:	
+signal_test$13:	; parameter exit_handle2, offset 6
+49:		mov word [bp + 18], exit_handle2
+51:	
 
-signal_test$14:	; parameter exit_handle2, offset 6
-55:		mov word [bp + 18], exit_handle2
+signal_test$14:	; call function noellipse-noellipse atexit
+52:		mov word [bp + 12], signal_test$15
+53:		mov [bp + 14], bp
+54:		add bp, 12
+55:		jmp atexit
 57:	
 
-signal_test$15:	; call function noellipse-noellipse atexit
-58:		mov word [bp + 12], signal_test$16
-59:		mov [bp + 14], bp
-60:		add bp, 12
-61:		jmp atexit
-63:	
+signal_test$15:	; post call
+59:	
 
-signal_test$16:	; post call
-65:	
+signal_test$16:	; call header integral zero 0 stack zero 0
+61:	
 
-signal_test$17:	; call header integral zero 0 stack zero 0
-67:	
+signal_test$17:	; parameter exit_handle3, offset 6
+62:		mov word [bp + 18], exit_handle3
+64:	
 
-signal_test$18:	; parameter exit_handle3, offset 6
-68:		mov word [bp + 18], exit_handle3
+signal_test$18:	; call function noellipse-noellipse atexit
+65:		mov word [bp + 12], signal_test$19
+66:		mov [bp + 14], bp
+67:		add bp, 12
+68:		jmp atexit
 70:	
 
-signal_test$19:	; call function noellipse-noellipse atexit
-71:		mov word [bp + 12], signal_test$20
-72:		mov [bp + 14], bp
-73:		add bp, 12
-74:		jmp atexit
-76:	
+signal_test$19:	; post call
+72:	
 
-signal_test$20:	; post call
-78:	
+signal_test$20:	; call header integral zero 0 stack zero 0
+74:	
 
-signal_test$21:	; call header integral zero 0 stack zero 0
-80:	
+signal_test$21:	; parameter 0, offset 6
+75:		mov word [bp + 18], 0
+77:	
 
-signal_test$22:	; parameter 0, offset 6
-81:		mov word [bp + 18], 0
+signal_test$22:	; call function noellipse-noellipse exit
+78:		mov word [bp + 12], signal_test$23
+79:		mov [bp + 14], bp
+80:		add bp, 12
+81:		jmp exit
 83:	
 
-signal_test$23:	; call function noellipse-noellipse exit
-84:		mov word [bp + 12], signal_test$24
-85:		mov [bp + 14], bp
-86:		add bp, 12
-87:		jmp exit
-89:	
+signal_test$23:	; post call
+85:	
 
-signal_test$24:	; post call
+signal_test$24:	; return
+86:		mov ax, [bp]
+87:		mov di, [bp + 4]
+88:		mov bp, [bp + 2]
+89:		jmp ax
 91:	
 
-signal_test$25:	; return
-92:		mov ax, [bp]
-93:		mov di, [bp + 4]
-94:		mov bp, [bp + 2]
-95:		jmp ax
-97:	
-
-signal_test$26:	; function end signal_test
+signal_test$25:	; function end signal_test

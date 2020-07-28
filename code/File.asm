@@ -185,7 +185,7 @@ fopen$21:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-fopen$22:	; ++index
+fopen$22:	; index = index + int4$1#
 	inc dword [rbp + 40]
 
 fopen$23:	; goto 2
@@ -772,7 +772,7 @@ fflush$20:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-fflush$21:	; ++index
+fflush$21:	; index = index + int4$1#
 	inc dword [rbp + 32]
 
 fflush$22:	; goto 2
@@ -889,7 +889,7 @@ fclose$27:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-fclose$28:	; ++index
+fclose$28:	; index = index + int4$1#
 	inc dword [rbp + 32]
 
 fclose$29:	; goto 9
@@ -1147,7 +1147,7 @@ fgets$27:	; if currChar == int1$10# goto 34
 fgets$28:	; £temporary1092 = count
 	mov eax, [rbp + 44]
 
-fgets$29:	; ++count
+fgets$29:	; count = count + int4$1#
 	inc dword [rbp + 44]
 
 fgets$30:	; £temporary1094 = int_to_int £temporary1092 (Signed_Int -> Pointer)
@@ -1198,61 +1198,59 @@ fputs$3:	; post call
 
 fputs$4:	; £temporary1101 = return_value
 
-fputs$5:	; £temporary1102 = £temporary1101 + int4$1#
+fputs$5:	; size = £temporary1101 + int4$1#
 	inc ebx
-
-fputs$6:	; size = £temporary1102
 	mov [rbp + 40], ebx
 
-fputs$7:	; call header integral zero 0 stack zero 0
+fputs$6:	; call header integral zero 0 stack zero 0
 
-fputs$8:	; parameter s, offset 68
+fputs$7:	; parameter s, offset 68
 	mov rax, [rbp + 24]
 	mov [rbp + 68], rax
 
-fputs$9:	; parameter size, offset 76
+fputs$8:	; parameter size, offset 76
 	mov eax, [rbp + 40]
 	mov [rbp + 76], eax
 
-fputs$10:	; parameter int4$1#, offset 80
+fputs$9:	; parameter int4$1#, offset 80
 	mov dword [rbp + 80], 1
 
-fputs$11:	; parameter stream, offset 84
+fputs$10:	; parameter stream, offset 84
 	mov rax, [rbp + 32]
 	mov [rbp + 84], rax
 
-fputs$12:	; call function noellipse-noellipse fwrite
-	mov qword [rbp + 44], fputs$13
+fputs$11:	; call function noellipse-noellipse fwrite
+	mov qword [rbp + 44], fputs$12
 	mov [rbp + 52], rbp
 	add rbp, 44
 	jmp fwrite
 
-fputs$13:	; post call
+fputs$12:	; post call
 
-fputs$14:	; £temporary1104 = return_value
+fputs$13:	; £temporary1104 = return_value
 
-fputs$15:	; if £temporary1104 != size goto 18
+fputs$14:	; if £temporary1104 != size goto 17
 	cmp ebx, [rbp + 40]
-	jne fputs$18
+	jne fputs$17
 
-fputs$16:	; £temporary1106 = int4$0#
+fputs$15:	; £temporary1106 = int4$0#
 	mov ebx, 0
 
-fputs$17:	; goto 19
-	jmp fputs$19
+fputs$16:	; goto 18
+	jmp fputs$18
 
-fputs$18:	; £temporary1106 = int4$minus1#
+fputs$17:	; £temporary1106 = int4$minus1#
 	mov ebx, -1
 
-fputs$19:	; return_value = £temporary1106
+fputs$18:	; return_value = £temporary1106
 
-fputs$20:	; return
+fputs$19:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-fputs$21:	; function end fputs
+fputs$20:	; function end fputs
 
 getchar:	; call header integral zero 0 stack zero 0
 

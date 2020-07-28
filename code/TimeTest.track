@@ -49,19 +49,19 @@ time_test$11:	; £temporary5507 = return_value
 40:	
 
 time_test$12:	; now = £temporary5507
-41:		mov [bp + 20], t3068
+41:		mov [bp + 20], t3009
 43:	
 
 time_test$13:	; call header integral zero 0 stack zero 0
 45:	
 
 time_test$14:	; £temporary5508 = &now
-46:		mov t3069, bp
-47:		add t3069, 20
+46:		mov t3010, bp
+47:		add t3010, 20
 49:	
 
 time_test$15:	; parameter £temporary5508, offset 6
-50:		mov [bp + 30], t3069
+50:		mov [bp + 30], t3010
 52:	
 
 time_test$16:	; call function noellipse-noellipse gmtime
@@ -78,15 +78,15 @@ time_test$18:	; £temporary5509 = return_value
 65:	
 
 time_test$19:	; p = £temporary5509
-66:		mov [bp + 24], t3071
+66:		mov [bp + 24], t3012
 68:	
 
 time_test$20:	; call header integral zero 0 stack zero 0
 70:	
 
 time_test$21:	; parameter p, offset 6
-71:		mov a3072, [bp + 24]
-72:		mov [bp + 32], a3072
+71:		mov a3013, [bp + 24]
+72:		mov [bp + 32], a3013
 74:	
 
 time_test$22:	; call function noellipse-noellipse mktime
@@ -103,7 +103,7 @@ time_test$24:	; £temporary5510 = return_value
 87:	
 
 time_test$25:	; now2 = £temporary5510
-88:		mov [bp + 26], t3074
+88:		mov [bp + 26], t3015
 90:	
 
 time_test$26:	; call header integral zero 0 stack zero 0
@@ -114,8 +114,8 @@ time_test$27:	; parameter string_now2013A2025lu0A#, offset 6
 95:	
 
 time_test$28:	; parameter now, offset 8
-96:		mov a3075, [bp + 20]
-97:		mov [bp + 38], a3075
+96:		mov a3016, [bp + 20]
+97:		mov [bp + 38], a3016
 99:	
 
 time_test$29:	; call function noellipse-ellipse printf, extra 0
@@ -138,8 +138,8 @@ time_test$32:	; parameter string_now2023A2025lu0A#, offset 6
 114:	
 
 time_test$33:	; parameter now2, offset 8
-115:		mov a3076, [bp + 26]
-116:		mov [bp + 38], a3076
+115:		mov a3017, [bp + 26]
+116:		mov [bp + 38], a3017
 118:	
 
 time_test$34:	; call function noellipse-ellipse printf, extra 0
@@ -155,22 +155,22 @@ time_test$35:	; post call
 128:	
 
 time_test$36:	; £temporary5513 -> p = *p
-129:		mov a3077, [bp + 24]
+129:		mov a3018, [bp + 24]
 131:	
 
 time_test$37:	; s = £temporary5513 -> p
-132:		mov t3078, bp
-133:		add t3078, 30
-134:		mov t3079, 18
+132:		mov t3019, bp
+133:		add t3019, 30
+134:		mov t3020, 18
 135:	
 
 time_test$37$Loop:
-136:		mov t3080, [a3077]
-137:		mov [t3078], t3080
-138:		inc a3077
-139:		inc t3078
-140:		dec t3079
-141:		cmp t3079, 0
+136:		mov t3021, [a3018]
+137:		mov [t3019], t3021
+138:		inc a3018
+139:		inc t3019
+140:		dec t3020
+141:		cmp t3020, 0
 142:		jne time_test$37$Loop
 144:	
 
@@ -182,76 +182,76 @@ time_test$39:	; parameter string_202020gm20time3A2025s202502i2D2502i2D2502i20250
 149:	
 
 time_test$40:	; £temporary5516 = s$tm_wday * 2
-150:		mov a3081, [bp + 42]
+150:		mov a3022, [bp + 42]
 152:		xor dx, dx
 153:		mul word [int2$2#]
 159:	
 
 time_test$41:	; £temporary5517 = weekdays + £temporary5516
-160:		mov a3085, bp
-161:		add a3085, 6
-162:		add a3085, t3084
+160:		mov a3026, bp
+161:		add a3026, 6
+162:		add a3026, t3025
 164:	
 
 time_test$42:	; £temporary5515 -> £temporary5517 = *£temporary5517
 166:	
 
 time_test$43:	; parameter £temporary5515 -> £temporary5517, offset 8
-167:		mov t3086, [a3085]
-168:		mov [bp + 56], t3086
+167:		mov t3027, [a3026]
+168:		mov [bp + 56], t3027
 170:	
 
 time_test$44:	; £temporary5519 = s$tm_year + 1900
-171:		mov a3087, [bp + 40]
-172:		add a3087, 1900
+171:		mov a3028, [bp + 40]
+172:		add a3028, 1900
 174:	
 
 time_test$45:	; parameter £temporary5519, offset 10
-175:		mov [bp + 58], a3087
+175:		mov [bp + 58], a3028
 177:	
 
 time_test$46:	; £temporary5521 = s$tm_mon + 1
-178:		mov a3088, [bp + 38]
-179:		add a3088, 1
+178:		mov a3029, [bp + 38]
+179:		add a3029, 1
 181:	
 
 time_test$47:	; parameter £temporary5521, offset 12
-182:		mov [bp + 60], a3088
+182:		mov [bp + 60], a3029
 184:	
 
 time_test$48:	; parameter s$tm_mday, offset 14
-185:		mov a3089, [bp + 36]
-186:		mov [bp + 62], a3089
+185:		mov a3030, [bp + 36]
+186:		mov [bp + 62], a3030
 188:	
 
 time_test$49:	; parameter s$tm_hour, offset 16
-189:		mov a3090, [bp + 34]
-190:		mov [bp + 64], a3090
+189:		mov a3031, [bp + 34]
+190:		mov [bp + 64], a3031
 192:	
 
 time_test$50:	; parameter s$tm_min, offset 18
-193:		mov a3091, [bp + 32]
-194:		mov [bp + 66], a3091
+193:		mov a3032, [bp + 32]
+194:		mov [bp + 66], a3032
 196:	
 
 time_test$51:	; parameter s$tm_sec, offset 20
-197:		mov a3092, [bp + 30]
-198:		mov [bp + 68], a3092
+197:		mov a3033, [bp + 30]
+198:		mov [bp + 68], a3033
 200:	
 
 time_test$52:	; parameter s$tm_yday, offset 22
-201:		mov a3093, [bp + 44]
-202:		mov [bp + 70], a3093
+201:		mov a3034, [bp + 44]
+202:		mov [bp + 70], a3034
 204:	
 
 time_test$53:	; parameter s$tm_wday, offset 24
-205:		mov a3094, [bp + 42]
-206:		mov [bp + 72], a3094
+205:		mov a3035, [bp + 42]
+206:		mov [bp + 72], a3035
 208:	
 
 time_test$54:	; parameter s$tm_isdst, offset 26
-209:		mov a3095, [bp + 46]
-210:		mov [bp + 74], a3095
+209:		mov a3036, [bp + 46]
+210:		mov [bp + 74], a3036
 212:	
 
 time_test$55:	; call function noellipse-ellipse printf, extra 0
@@ -270,12 +270,12 @@ time_test$57:	; call header integral zero 0 stack zero 0
 224:	
 
 time_test$58:	; £temporary5530 = &now
-225:		mov t3096, bp
-226:		add t3096, 20
+225:		mov t3037, bp
+226:		add t3037, 20
 228:	
 
 time_test$59:	; parameter £temporary5530, offset 6
-229:		mov [bp + 54], t3096
+229:		mov [bp + 54], t3037
 231:	
 
 time_test$60:	; call function noellipse-noellipse localtime
@@ -295,18 +295,18 @@ time_test$63:	; £temporary5532 -> £temporary5531 = *£temporary5531
 246:	
 
 time_test$64:	; s = £temporary5532 -> £temporary5531
-247:		mov t3099, bp
-248:		add t3099, 30
-249:		mov t3100, 18
+247:		mov t3040, bp
+248:		add t3040, 30
+249:		mov t3041, 18
 250:	
 
 time_test$64$Loop:
-251:		mov t3101, [t3098]
-252:		mov [t3099], t3101
-253:		inc t3098
-254:		inc t3099
-255:		dec t3100
-256:		cmp t3100, 0
+251:		mov t3042, [t3039]
+252:		mov [t3040], t3042
+253:		inc t3039
+254:		inc t3040
+255:		dec t3041
+256:		cmp t3041, 0
 257:		jne time_test$64$Loop
 259:	
 
@@ -318,76 +318,76 @@ time_test$66:	; parameter string_local20time3A2025s202502i2D2502i2D2502i202502i3
 264:	
 
 time_test$67:	; £temporary5535 = s$tm_wday * 2
-265:		mov a3102, [bp + 42]
+265:		mov a3043, [bp + 42]
 267:		xor dx, dx
 268:		mul word [int2$2#]
 274:	
 
 time_test$68:	; £temporary5536 = weekdays + £temporary5535
-275:		mov a3106, bp
-276:		add a3106, 6
-277:		add a3106, t3105
+275:		mov a3047, bp
+276:		add a3047, 6
+277:		add a3047, t3046
 279:	
 
 time_test$69:	; £temporary5534 -> £temporary5536 = *£temporary5536
 281:	
 
 time_test$70:	; parameter £temporary5534 -> £temporary5536, offset 8
-282:		mov t3107, [a3106]
-283:		mov [bp + 56], t3107
+282:		mov t3048, [a3047]
+283:		mov [bp + 56], t3048
 285:	
 
 time_test$71:	; £temporary5538 = s$tm_year + 1900
-286:		mov a3108, [bp + 40]
-287:		add a3108, 1900
+286:		mov a3049, [bp + 40]
+287:		add a3049, 1900
 289:	
 
 time_test$72:	; parameter £temporary5538, offset 10
-290:		mov [bp + 58], a3108
+290:		mov [bp + 58], a3049
 292:	
 
 time_test$73:	; £temporary5540 = s$tm_mon + 1
-293:		mov a3109, [bp + 38]
-294:		add a3109, 1
+293:		mov a3050, [bp + 38]
+294:		add a3050, 1
 296:	
 
 time_test$74:	; parameter £temporary5540, offset 12
-297:		mov [bp + 60], a3109
+297:		mov [bp + 60], a3050
 299:	
 
 time_test$75:	; parameter s$tm_mday, offset 14
-300:		mov a3110, [bp + 36]
-301:		mov [bp + 62], a3110
+300:		mov a3051, [bp + 36]
+301:		mov [bp + 62], a3051
 303:	
 
 time_test$76:	; parameter s$tm_hour, offset 16
-304:		mov a3111, [bp + 34]
-305:		mov [bp + 64], a3111
+304:		mov a3052, [bp + 34]
+305:		mov [bp + 64], a3052
 307:	
 
 time_test$77:	; parameter s$tm_min, offset 18
-308:		mov a3112, [bp + 32]
-309:		mov [bp + 66], a3112
+308:		mov a3053, [bp + 32]
+309:		mov [bp + 66], a3053
 311:	
 
 time_test$78:	; parameter s$tm_sec, offset 20
-312:		mov a3113, [bp + 30]
-313:		mov [bp + 68], a3113
+312:		mov a3054, [bp + 30]
+313:		mov [bp + 68], a3054
 315:	
 
 time_test$79:	; parameter s$tm_yday, offset 22
-316:		mov a3114, [bp + 44]
-317:		mov [bp + 70], a3114
+316:		mov a3055, [bp + 44]
+317:		mov [bp + 70], a3055
 319:	
 
 time_test$80:	; parameter s$tm_wday, offset 24
-320:		mov a3115, [bp + 42]
-321:		mov [bp + 72], a3115
+320:		mov a3056, [bp + 42]
+321:		mov [bp + 72], a3056
 323:	
 
 time_test$81:	; parameter s$tm_isdst, offset 26
-324:		mov a3116, [bp + 46]
-325:		mov [bp + 74], a3116
+324:		mov a3057, [bp + 46]
+325:		mov [bp + 74], a3057
 327:	
 
 time_test$82:	; call function noellipse-ellipse printf, extra 0
@@ -414,12 +414,12 @@ time_test$86:	; call header integral zero 0 stack zero 0
 345:	
 
 time_test$87:	; £temporary5549 = &s
-346:		mov t3117, bp
-347:		add t3117, 30
+346:		mov t3058, bp
+347:		add t3058, 30
 349:	
 
 time_test$88:	; parameter £temporary5549, offset 112
-350:		mov [bp + 360], t3117
+350:		mov [bp + 360], t3058
 352:	
 
 time_test$89:	; call function noellipse-noellipse asctime
@@ -436,7 +436,7 @@ time_test$91:	; £temporary5550 = return_value
 365:	
 
 time_test$92:	; parameter £temporary5550, offset 8
-366:		mov [bp + 256], t3119
+366:		mov [bp + 256], t3060
 368:	
 
 time_test$93:	; call function noellipse-noellipse strcpy
@@ -461,12 +461,12 @@ time_test$97:	; call header integral zero 0 stack zero 0
 384:	
 
 time_test$98:	; £temporary5552 = &now
-385:		mov t3120, bp
-386:		add t3120, 20
+385:		mov t3061, bp
+386:		add t3061, 20
 388:	
 
 time_test$99:	; parameter £temporary5552, offset 112
-389:		mov [bp + 360], t3120
+389:		mov [bp + 360], t3061
 391:	
 
 time_test$100:	; call function noellipse-noellipse ctime
@@ -483,7 +483,7 @@ time_test$102:	; £temporary5553 = return_value
 404:	
 
 time_test$103:	; parameter £temporary5553, offset 8
-405:		mov [bp + 256], t3122
+405:		mov [bp + 256], t3063
 407:	
 
 time_test$104:	; call function noellipse-noellipse strcpy
@@ -542,12 +542,12 @@ time_test$115:	; parameter string_short20day2025a2C20long20day2025A2C20short20mo
 450:	
 
 time_test$116:	; £temporary5556 = &s
-451:		mov t3123, bp
-452:		add t3123, 30
+451:		mov t3064, bp
+452:		add t3064, 30
 454:	
 
 time_test$117:	; parameter £temporary5556, offset 12
-455:		mov [bp + 560], t3123
+455:		mov [bp + 560], t3064
 457:	
 
 time_test$118:	; call function noellipse-noellipse strftime
@@ -564,7 +564,7 @@ time_test$120:	; £temporary5557 = return_value
 470:	
 
 time_test$121:	; i = £temporary5557
-471:		mov [bp + 548], t3125
+471:		mov [bp + 548], t3066
 473:	
 
 time_test$122:	; call header integral zero 0 stack zero 0
@@ -575,8 +575,8 @@ time_test$123:	; parameter string_strftime203C25i3E203C25s3E0A#, offset 6
 478:	
 
 time_test$124:	; parameter i, offset 8
-479:		mov a3126, [bp + 548]
-480:		mov [bp + 558], a3126
+479:		mov a3067, [bp + 548]
+480:		mov [bp + 558], a3067
 482:	
 
 time_test$125:	; parameter buffer, offset 10
@@ -597,10 +597,10 @@ time_test$127:	; post call
 496:	
 
 time_test$128:	; return
-497:		mov t3127, [bp]
+497:		mov t3068, [bp]
 498:		mov di, [bp + 4]
 499:		mov bp, [bp + 2]
-500:		jmp t3127
+500:		jmp t3068
 502:	
 
 time_test$129:	; function end time_test

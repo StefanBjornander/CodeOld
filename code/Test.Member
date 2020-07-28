@@ -125,7 +125,7 @@
 18: call function noellipse-ellipse printf, extra 0
 19: post call
 20: empty
-21: ++index
+21: index = index + 1
 22: goto 6
 23: call header
 24: parameter string_0A#, offset 6
@@ -150,7 +150,7 @@
 43: call function noellipse-ellipse printf, extra 0
 44: post call
 45: empty
-46: ++index
+46: index = index + 1
 47: goto 28
 48: call header
 49: parameter string_0A#, offset 6
@@ -1120,7 +1120,7 @@
 37: goto 43
 38: goto 39
 39: empty
-40: ++index
+40: index = index + 1
 41: goto 15
 42: goto 43
 43: return_value = oldName
@@ -1210,7 +1210,7 @@
 15: £temporary493 = x_plus_1 * 2.7182818284590452353
 16: top float x_plus_1
 17: pop float empty X
-18: --expo
+18: expo = expo - 1
 19: goto 6
 20: push float x_plus_1
 21: push float 2.7182818284590452353
@@ -1224,7 +1224,7 @@
 29: £temporary496 = x_plus_1 / 2.7182818284590452353
 30: top float x_plus_1
 31: pop float empty X
-32: ++expo
+32: expo = expo + 1
 33: goto 20
 34: push 1
 35: pop float n
@@ -1334,7 +1334,7 @@
 26: £temporary517 = x / 10
 27: top float x
 28: pop float empty X
-29: ++count
+29: count = count + 1
 30: goto 19
 31: £temporary519 = count - 1
 32: return_value = £temporary519
@@ -1351,7 +1351,7 @@
 43: £temporary521 = x * 10
 44: top float x
 45: pop float empty X
-46: ++count
+46: count = count + 1
 47: goto 36
 48: £temporary523 = -count
 49: return_value = £temporary523
@@ -1388,7 +1388,7 @@
 19: top float product
 20: pop float empty X
 21: empty
-22: ++index
+22: index = index + 1
 23: goto 11
 24: if minus != 0 goto 26
 25: goto 32
@@ -1854,7 +1854,7 @@
 21: £temporary653 = £temporary652 / 2
 22: top float x_nplus1
 23: pop float empty X
-24: ++count
+24: count = count + 1
 25: £temporary654 = count
 26: if £temporary654 < 1000 goto 28
 27: goto 41
@@ -2026,7 +2026,7 @@
 60: £temporary691 = £temporary688 + £temporary690
 61: top float x_nplus1
 62: pop float empty X
-63: ++count
+63: count = count + 1
 64: £temporary692 = count
 65: if £temporary692 < 1000 goto 67
 66: goto 80
@@ -2220,7 +2220,7 @@
 71: £temporary731 = denominator + 2
 72: top float denominator
 73: pop float empty X
-74: ++count
+74: count = count + 1
 75: £temporary732 = count
 76: if £temporary732 < 1000 goto 78
 77: goto 89
@@ -2319,7 +2319,7 @@
 72: pop float empty X
 73: £temporary751 = denominator + 2
 74: denominator = £temporary751
-75: ++count
+75: count = count + 1
 76: £temporary752 = count
 77: if £temporary752 < 1000 goto 79
 78: goto 90
@@ -3105,7 +3105,7 @@
 24: return
 25: goto 26
 26: empty
-27: ++index
+27: index = index + 1
 28: goto 1
 29: return_value = 0
 30: return
@@ -3329,7 +3329,7 @@
 29: goto 31
 30: goto 31
 31: empty
-32: ++index
+32: index = index + 1
 33: goto 4
 34: goto 35
 35: return_value = 0
@@ -3395,7 +3395,7 @@
 55: goto 57
 56: goto 57
 57: empty
-58: ++index
+58: index = index + 1
 59: goto 30
 60: return_value = 0
 61: return
@@ -3505,7 +3505,7 @@
 36: goto 44
 37: check track map float stack
 38: £temporary1147 = count
-39: ++count
+39: count = count + 1
 40: £temporary1149 = text + £temporary1147
 41: £temporary1148 -> £temporary1149 = *£temporary1149
 42: £temporary1148 -> £temporary1149 = currChar
@@ -3832,7 +3832,7 @@
 19: return
 20: goto 21
 21: empty
-22: ++index
+22: index = index + 1
 23: goto 1
 24: return_value = 0
 25: return
@@ -3886,7 +3886,7 @@
 44: call function noellipse-noellipse strcpy
 45: post call
 46: £temporary1296 = g_tempSize
-47: ++g_tempSize
+47: g_tempSize = g_tempSize + 1
 48: £temporary1298 = £temporary1296 * 2
 49: £temporary1299 = g_tempArray + £temporary1298
 50: £temporary1297 -> £temporary1299 = *£temporary1299
@@ -3911,7 +3911,7 @@
 69: return
 70: goto 71
 71: empty
-72: ++c
+72: c = c + 1
 73: goto 4
 74: goto 75
 75: return_value = 0
@@ -3981,13 +3981,13 @@
 12: £temporary1332 = &c
 13: dx = £temporary1332
 14: interrupt 33
-15: ++g_inChars
+15: g_inChars = g_inChars + 1
 16: return_value = c
 17: return
 18: £temporary1334 = int_to_int g_inDevice (Pointer -> Pointer)
 19: inString = £temporary1334
 20: £temporary1335 = g_inChars
-21: ++g_inChars
+21: g_inChars = g_inChars + 1
 22: £temporary1337 = inString + £temporary1335
 23: £temporary1336 -> £temporary1337 = *£temporary1337
 24: return_value = £temporary1336 -> £temporary1337
@@ -4001,9 +4001,9 @@
 1: case g_inStatus == 1 goto 6
 2: case end g_inStatus
 3: goto 8
-4: --g_inChars
+4: g_inChars = g_inChars - 1
 5: goto 8
-6: --g_inChars
+6: g_inChars = g_inChars - 1
 7: goto 8
 8: empty
 9: return
@@ -4056,7 +4056,7 @@
 45: goto 47
 46: check track map float stack
 47: £temporary1360 = index
-48: ++index
+48: index = index + 1
 49: £temporary1362 = string + £temporary1360
 50: £temporary1361 -> £temporary1362 = *£temporary1362
 51: £temporary1361 -> £temporary1362 = input
@@ -4146,7 +4146,7 @@
 40: goto 55
 41: check track map float stack
 42: £temporary1405 = index
-43: ++index
+43: index = index + 1
 44: £temporary1407 = string + £temporary1405
 45: £temporary1406 -> £temporary1407 = *£temporary1407
 46: £temporary1406 -> £temporary1407 = input
@@ -4156,15 +4156,15 @@
 50: £temporary1408 = return_value
 51: input = £temporary1408
 52: found = 1
-53: ++g_inChars
+53: g_inChars = g_inChars + 1
 54: goto 28
 55: £temporary1411 = string + index
 56: £temporary1410 -> £temporary1411 = *£temporary1411
 57: £temporary1410 -> £temporary1411 = 0
-58: ++g_inChars
+58: g_inChars = g_inChars + 1
 59: goto 161
 60: £temporary1413 = precision
-61: --precision
+61: precision = precision - 1
 62: if £temporary1413 > 0 goto 64
 63: goto 91
 64: call header
@@ -4182,7 +4182,7 @@
 76: goto 91
 77: check track map float stack
 78: £temporary1425 = index
-79: ++index
+79: index = index + 1
 80: £temporary1427 = string + £temporary1425
 81: £temporary1426 -> £temporary1427 = *£temporary1427
 82: £temporary1426 -> £temporary1427 = input
@@ -4192,7 +4192,7 @@
 86: £temporary1428 = return_value
 87: input = £temporary1428
 88: found = 1
-89: ++g_inChars
+89: g_inChars = g_inChars + 1
 90: goto 60
 91: if precision > 0 goto 94
 92: goto 161
@@ -4200,7 +4200,7 @@
 94: £temporary1432 = string + index
 95: £temporary1431 -> £temporary1432 = *£temporary1432
 96: £temporary1431 -> £temporary1432 = 0
-97: ++g_inChars
+97: g_inChars = g_inChars + 1
 98: goto 161
 99: goto 161
 100: goto 161
@@ -4227,12 +4227,12 @@
 121: £temporary1444 = return_value
 122: input = £temporary1444
 123: found = 1
-124: ++g_inChars
+124: g_inChars = g_inChars + 1
 125: goto 104
-126: ++g_inChars
+126: g_inChars = g_inChars + 1
 127: goto 161
 128: £temporary1447 = precision
-129: --precision
+129: precision = precision - 1
 130: if £temporary1447 > 0 goto 132
 131: goto 154
 132: call header
@@ -4255,19 +4255,19 @@
 149: £temporary1459 = return_value
 150: input = £temporary1459
 151: found = 1
-152: ++g_inChars
+152: g_inChars = g_inChars + 1
 153: goto 128
 154: if precision > 0 goto 157
 155: goto 161
 156: check track map float stack
-157: ++g_inChars
+157: g_inChars = g_inChars + 1
 158: goto 161
 159: goto 161
 160: goto 161
 161: if found != 0 goto 164
 162: goto 166
 163: check track map float stack
-164: ++g_inCount
+164: g_inCount = g_inCount + 1
 165: goto 166
 166: empty
 167: return
@@ -4384,7 +4384,7 @@
 70: if found != 0 goto 73
 71: goto 75
 72: check track map float stack
-73: ++g_inCount
+73: g_inCount = g_inCount + 1
 74: goto 75
 75: call header
 76: parameter input, offset 6
@@ -4498,7 +4498,7 @@
 100: if found != 0 goto 103
 101: goto 105
 102: check track map float stack
-103: ++g_inCount
+103: g_inCount = g_inCount + 1
 104: goto 105
 105: call header
 106: parameter input, offset 6
@@ -4671,7 +4671,7 @@
 159: if found != 0 goto 162
 160: goto 164
 161: check track map float stack
-162: ++g_inCount
+162: g_inCount = g_inCount + 1
 163: goto 164
 164: push float value
 165: return_value = value
@@ -4752,7 +4752,7 @@
 70: if £temporary1617 != -1 goto 73
 71: goto 75
 72: check track map float stack
-73: ++g_inCount
+73: g_inCount = g_inCount + 1
 74: goto 75
 75: goto 429
 76: if star != 0 goto 91
@@ -5030,14 +5030,14 @@
 348: percent = 0
 349: goto 429
 350: not = 0
-351: ++index
+351: index = index + 1
 352: £temporary1744 = format + index
 353: £temporary1743 -> £temporary1744 = *£temporary1744
 354: if £temporary1743 -> £temporary1744 == 94 goto 357
 355: goto 360
 356: check track map float stack
 357: not = 1
-358: ++index
+358: index = index + 1
 359: goto 360
 360: startIndex = index
 361: £temporary1748 = format + index
@@ -5045,7 +5045,7 @@
 363: if £temporary1747 -> £temporary1748 != 93 goto 366
 364: goto 368
 365: check track map float stack
-366: ++index
+366: index = index + 1
 367: goto 361
 368: £temporary1752 = format + index
 369: £temporary1751 -> £temporary1752 = *£temporary1752
@@ -5109,7 +5109,7 @@
 427: goto 429
 428: goto 429
 429: empty
-430: ++index
+430: index = index + 1
 431: goto 8
 432: return_value = g_inCount
 433: return
@@ -5256,17 +5256,17 @@
 11: £temporary1844 = &c
 12: dx = £temporary1844
 13: interrupt 33
-14: ++g_outChars
+14: g_outChars = g_outChars + 1
 15: goto 26
 16: £temporary1846 = int_to_int g_outDevice (Pointer -> Pointer)
 17: outString = £temporary1846
 18: £temporary1847 = g_outChars
-19: ++g_outChars
+19: g_outChars = g_outChars + 1
 20: £temporary1849 = outString + £temporary1847
 21: £temporary1848 -> £temporary1849 = *£temporary1849
 22: £temporary1848 -> £temporary1849 = c
 23: goto 26
-24: ++g_outChars
+24: g_outChars = g_outChars + 1
 25: goto 26
 26: empty
 27: return
@@ -5292,13 +5292,13 @@
 18: call function noellipse-noellipse printChar
 19: post call
 20: empty
-21: ++index
+21: index = index + 1
 22: goto 7
 23: goto 72
 24: index = 0
 25: empty
 26: £temporary1861 = precision
-27: --precision
+27: precision = precision - 1
 28: if £temporary1861 > 0 goto 30
 29: goto 72
 30: £temporary1864 = s + index
@@ -5314,7 +5314,7 @@
 40: call function noellipse-noellipse printChar
 41: post call
 42: empty
-43: ++index
+43: index = index + 1
 44: goto 25
 45: goto 72
 46: goto 72
@@ -5555,7 +5555,7 @@
 20: post call
 21: goto 22
 22: £temporary1968 = precision
-23: --precision
+23: precision = precision - 1
 24: if £temporary1968 > 0 goto 27
 25: goto 48
 26: check track map float stack
@@ -6325,7 +6325,7 @@
 109: £temporary2298 = g_outChars - startChars
 110: field = £temporary2298
 111: £temporary2299 = field
-112: ++field
+112: field = field + 1
 113: if £temporary2299 < width goto 116
 114: goto 271
 115: check track map float stack
@@ -6373,7 +6373,7 @@
 157: parameter 45, offset 6
 158: call function noellipse-noellipse printChar
 159: post call
-160: ++field
+160: field = field + 1
 161: goto 182
 162: if plus != 0 goto 165
 163: goto 171
@@ -6382,7 +6382,7 @@
 166: parameter 43, offset 6
 167: call function noellipse-noellipse printChar
 168: post call
-169: ++field
+169: field = field + 1
 170: goto 182
 171: if space != 0 goto 174
 172: goto 182
@@ -6391,12 +6391,12 @@
 175: parameter 32, offset 6
 176: call function noellipse-noellipse printChar
 177: post call
-178: ++field
+178: field = field + 1
 179: goto 182
 180: goto 182
 181: goto 182
 182: £temporary2318 = field
-183: ++field
+183: field = field + 1
 184: if £temporary2318 < width goto 187
 185: goto 192
 186: check track map float stack
@@ -6453,7 +6453,7 @@
 237: field = £temporary2330
 238: g_outChars = startChars
 239: £temporary2331 = field
-240: ++field
+240: field = field + 1
 241: if £temporary2331 < width goto 244
 242: goto 249
 243: check track map float stack
@@ -6501,13 +6501,13 @@
 285: £temporary2344 = int_to_int £temporary2343 (Signed_Char -> Signed_Int)
 286: £temporary2345 = £temporary2342 + £temporary2344
 287: value = £temporary2345
-288: ++index
+288: index = index + 1
 289: £temporary2346 = index
 290: £temporary2348 = format + £temporary2346
 291: £temporary2347 -> £temporary2348 = *£temporary2348
 292: c = £temporary2347 -> £temporary2348
 293: goto 274
-294: --index
+294: index = index - 1
 295: if period != 0 goto 300
 296: goto 298
 297: check track map float stack
@@ -6542,7 +6542,7 @@
 326: goto 328
 327: goto 328
 328: empty
-329: ++index
+329: index = index + 1
 330: goto 16
 331: if g_outStatus == 1 goto 334
 332: goto 340
@@ -6792,7 +6792,7 @@
 19: £temporary2527 -> £temporary2528 = *£temporary2528
 20: £temporary2527 -> £temporary2528 = tempValue
 21: empty
-22: ++index
+22: index = index + 1
 23: goto 5
 24: empty
 25: return
@@ -6924,7 +6924,7 @@
 18: call header
 19: parameter string_2020index2025u2C20address2025u2C20size2025u0A#, offset 6
 20: £temporary2571 = index
-21: ++index
+21: index = index + 1
 22: parameter £temporary2571, offset 8
 23: parameter heapTop, offset 10
 24: parameter size, offset 12
@@ -6974,7 +6974,7 @@
 30: return
 31: goto 32
 32: empty
-33: ++index
+33: index = index + 1
 34: goto 5
 35: return_value = -1
 36: return
@@ -7014,7 +7014,7 @@
 30: post call
 31: goto 32
 32: empty
-33: --index
+33: index = index - 1
 34: goto 5
 35: £temporary2619 = int_to_int status (Signed_Int -> Signed_Short_Int)
 36: al = £temporary2619
@@ -7041,7 +7041,7 @@
 15: £temporary2633 -> £temporary2634 = *£temporary2634
 16: £temporary2633 -> £temporary2634 = tempValue
 17: empty
-18: ++index
+18: index = index + 1
 19: goto 1
 20: empty
 21: return
@@ -7087,7 +7087,7 @@
 38: update = 1
 39: goto 40
 40: empty
-41: ++index2
+41: index2 = index2 + 1
 42: goto 11
 43: if update != 0 goto 48
 44: goto 46
@@ -7095,7 +7095,7 @@
 46: empty
 47: goto 48
 48: empty
-49: --index1
+49: index1 = index1 - 1
 50: goto 4
 51: empty
 52: return
@@ -7240,7 +7240,7 @@
 68: £temporary2727 = yearDay + £temporary2724 -> £temporary2726
 69: yearDay = £temporary2727
 70: empty
-71: ++mon
+71: mon = mon + 1
 72: goto 59
 73: call header
 74: parameter string_25i2025i0A#, offset 6
@@ -7418,7 +7418,7 @@
 97: £temporary2850 = int_to_int £temporary2847 -> £temporary2849 (Signed_Int -> Signed_Long_Int)
 98: £temporary2851 = totalDays - £temporary2850
 99: totalDays = £temporary2851
-100: ++month
+100: month = month + 1
 101: goto 87
 102: g_timeStruct$tm_mon = month
 103: £temporary2855 = totalDays + 1
@@ -7428,7 +7428,7 @@
 107: return_value = (@30$g_timeStruct,0)
 108: return
 109: goto 110
-110: ++year
+110: year = year + 1
 111: £temporary2859 = int_to_int daysOfYear (Signed_Int -> Signed_Long_Int)
 112: £temporary2860 = totalDays - £temporary2859
 113: totalDays = £temporary2860
@@ -7729,7 +7729,7 @@
 148: if £temporary3009 -> £temporary3010 == 37 goto 151
 149: goto 391
 150: check track map float stack
-151: ++index
+151: index = index + 1
 152: £temporary3012 = index
 153: £temporary3014 = fmt + £temporary3012
 154: £temporary3013 -> £temporary3014 = *£temporary3014
@@ -7999,7 +7999,7 @@
 418: goto 423
 419: goto 420
 420: empty
-421: ++index
+421: index = index + 1
 422: goto 139
 423: call header
 424: parameter s, offset 6
@@ -8025,7 +8025,7 @@
 11: £temporary3188 -> £temporary3189 = *£temporary3189
 12: £temporary3186 -> £temporary3187 = £temporary3188 -> £temporary3189
 13: empty
-14: ++index
+14: index = index + 1
 15: goto 1
 16: £temporary3191 = target + index
 17: £temporary3190 -> £temporary3191 = *£temporary3191
@@ -8051,7 +8051,7 @@
 13: £temporary3200 -> £temporary3201 = *£temporary3201
 14: £temporary3198 -> £temporary3199 = £temporary3200 -> £temporary3201
 15: empty
-16: ++index
+16: index = index + 1
 17: goto 1
 18: empty
 19: if index < size goto 22
@@ -8062,7 +8062,7 @@
 24: £temporary3204 -> £temporary3205 = *£temporary3205
 25: £temporary3204 -> £temporary3205 = 0
 26: empty
-27: ++index
+27: index = index + 1
 28: goto 18
 29: return_value = target
 30: return
@@ -8090,7 +8090,7 @@
 18: £temporary3214 -> £temporary3215 = *£temporary3215
 19: £temporary3212 -> £temporary3213 = £temporary3214 -> £temporary3215
 20: empty
-21: ++index
+21: index = index + 1
 22: goto 7
 23: £temporary3216 = targetLength + index
 24: £temporary3218 = target + £temporary3216
@@ -8125,7 +8125,7 @@
 21: £temporary3231 -> £temporary3232 = *£temporary3232
 22: £temporary3229 -> £temporary3230 = £temporary3231 -> £temporary3232
 23: empty
-24: ++index
+24: index = index + 1
 25: goto 7
 26: £temporary3233 = targetLength + size
 27: £temporary3234 = £temporary3233 - 1
@@ -8195,7 +8195,7 @@
 55: goto 57
 56: goto 57
 57: empty
-58: ++index
+58: index = index + 1
 59: goto 1
 60: empty
 61: return
@@ -8259,7 +8259,7 @@
 56: goto 58
 57: goto 58
 58: empty
-59: ++index
+59: index = index + 1
 60: goto 1
 61: return_value = 0
 62: return
@@ -8288,7 +8288,7 @@
 19: return
 20: goto 21
 21: empty
-22: ++index
+22: index = index + 1
 23: goto 3
 24: return_value = 0
 25: return
@@ -8317,7 +8317,7 @@
 19: result = £temporary3309
 20: goto 21
 21: empty
-22: ++index
+22: index = index + 1
 23: goto 4
 24: return_value = result
 25: return
@@ -8348,7 +8348,7 @@
 21: return
 22: goto 23
 23: empty
-24: ++index
+24: index = index + 1
 25: goto 1
 26: return_value = -1
 27: return
@@ -8379,7 +8379,7 @@
 21: return
 22: goto 23
 23: empty
-24: ++index
+24: index = index + 1
 25: goto 1
 26: return_value = -1
 27: return
@@ -8413,7 +8413,7 @@
 24: return
 25: goto 26
 26: empty
-27: ++index
+27: index = index + 1
 28: goto 1
 29: return_value = 0
 30: return
@@ -8445,7 +8445,7 @@
 22: return
 23: goto 24
 24: empty
-25: ++index
+25: index = index + 1
 26: goto 1
 27: return_value = 0
 28: return
@@ -8461,7 +8461,7 @@
 6: check track map float stack
 7: empty
 8: empty
-9: ++index
+9: index = index + 1
 10: goto 1
 11: return_value = index
 12: return
@@ -8542,7 +8542,7 @@
 39: return
 40: goto 41
 41: empty
-42: ++index
+42: index = index + 1
 43: goto 11
 44: £temporary3396 = string + index
 45: £temporary3395 -> £temporary3396 = *£temporary3396
@@ -8596,7 +8596,7 @@
 93: return
 94: goto 95
 95: empty
-96: ++index
+96: index = index + 1
 97: goto 64
 98: tokenStart = token
 99: £temporary3417 = token + index
@@ -8626,7 +8626,7 @@
 13: £temporary3429 -> £temporary3430 = *£temporary3430
 14: £temporary3427 -> £temporary3428 = £temporary3429 -> £temporary3430
 15: empty
-16: ++index
+16: index = index + 1
 17: goto 5
 18: £temporary3431 = int_to_int target (Pointer -> Pointer)
 19: return_value = £temporary3431
@@ -8654,7 +8654,7 @@
 17: £temporary3440 -> £temporary3441 = *£temporary3441
 18: £temporary3438 -> £temporary3439 = £temporary3440 -> £temporary3441
 19: empty
-20: --index
+20: index = index - 1
 21: goto 9
 22: goto 38
 23: index = 0
@@ -8669,7 +8669,7 @@
 32: £temporary3446 -> £temporary3447 = *£temporary3447
 33: £temporary3444 -> £temporary3445 = £temporary3446 -> £temporary3447
 34: empty
-35: ++index
+35: index = index + 1
 36: goto 24
 37: goto 38
 38: £temporary3448 = int_to_int target (Pointer -> Pointer)
@@ -8710,7 +8710,7 @@
 29: goto 31
 30: goto 31
 31: empty
-32: ++index
+32: index = index + 1
 33: goto 5
 34: return_value = 0
 35: return
@@ -8740,7 +8740,7 @@
 20: return
 21: goto 22
 22: empty
-23: ++index
+23: index = index + 1
 24: goto 5
 25: return_value = 0
 26: return
@@ -8761,7 +8761,7 @@
 11: £temporary3478 -> £temporary3479 = *£temporary3479
 12: £temporary3478 -> £temporary3479 = c
 13: empty
-14: ++index
+14: index = index + 1
 15: goto 5
 16: return_value = block
 17: return
@@ -10629,7 +10629,7 @@
 83: call function noellipse-ellipse fprintf, extra 0
 84: post call
 85: empty
-86: ++index
+86: index = index + 1
 87: goto 55
 88: call header
 89: parameter inFilePtrPtr, offset 6
@@ -10758,7 +10758,7 @@
 212: call function noellipse-ellipse printf, extra 0
 213: post call
 214: empty
-215: ++count
+215: count = count + 1
 216: goto 196
 217: call header
 218: parameter string_0A#, offset 6
@@ -10907,7 +10907,7 @@
 361: call function noellipse-noellipse fwrite
 362: post call
 363: empty
-364: ++index
+364: index = index + 1
 365: goto 345
 366: call header
 367: parameter outFilePtr, offset 6
@@ -10978,7 +10978,7 @@
 432: call function noellipse-ellipse printf, extra 0
 433: post call
 434: empty
-435: ++index
+435: index = index + 1
 436: goto 419
 437: call header
 438: parameter string_0A#, offset 6
@@ -11044,7 +11044,7 @@
 498: call function noellipse-ellipse printf, extra 0
 499: post call
 500: empty
-501: ++index
+501: index = index + 1
 502: goto 478
 503: call header
 504: parameter string_0A#, offset 6
@@ -11150,7 +11150,7 @@
 604: call function noellipse-ellipse printf, extra 0
 605: post call
 606: empty
-607: ++index
+607: index = index + 1
 608: goto 591
 609: call header
 610: parameter string_0A#, offset 6
@@ -11945,7 +11945,7 @@
 0: call header
 1: parameter string_25i20#, offset 6
 2: £temporary5171 = i
-3: ++i
+3: i = i + 1
 4: parameter £temporary5171, offset 8
 5: call function noellipse-ellipse printf, extra 0
 6: post call
@@ -11968,7 +11968,7 @@
 10: call header
 11: parameter string_102420bytes2Dblock20number3A2025i0A#, offset 6
 12: £temporary5178 = count
-13: ++count
+13: count = count + 1
 14: parameter £temporary5178, offset 8
 15: parameter pointer, offset 10
 16: call function noellipse-ellipse printf, extra 0
@@ -12003,7 +12003,7 @@
 23: r = p
 24: goto 25
 25: empty
-26: ++index
+26: index = index + 1
 27: goto 9
 28: call header
 29: call function noellipse-noellipse print_heap
@@ -12223,7 +12223,7 @@
 22: call function noellipse-ellipse printf, extra 0
 23: post call
 24: empty
-25: ++i
+25: i = i + 1
 26: goto 4
 27: empty
 28: return
@@ -12505,7 +12505,7 @@
 181: call function noellipse-ellipse printf, extra 0
 182: post call
 183: empty
-184: ++index
+184: index = index + 1
 185: goto 170
 186: call header
 187: parameter string_0AB20List2023A20#, offset 6
@@ -12533,7 +12533,7 @@
 209: call function noellipse-ellipse printf, extra 0
 210: post call
 211: empty
-212: ++index
+212: index = index + 1
 213: goto 198
 214: call header
 215: parameter string_0AC20List2033A20#, offset 6
@@ -12561,7 +12561,7 @@
 237: call function noellipse-ellipse printf, extra 0
 238: post call
 239: empty
-240: ++index
+240: index = index + 1
 241: goto 226
 242: empty
 243: call header
@@ -12604,7 +12604,7 @@
 280: call function noellipse-ellipse printf, extra 0
 281: post call
 282: empty
-283: ++key
+283: key = key + 1
 284: goto 248
 285: call header
 286: parameter string_0A#, offset 6

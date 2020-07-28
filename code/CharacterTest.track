@@ -8,16 +8,16 @@ character_test$1:	; parameter string_ascii2025i0A#, offset 6
 6:	
 
 character_test$2:	; £temporary3544 = int_to_int c (Signed_Char -> Signed_Int)
-7:		mov a2407, [bp + 6]
-9:		and a2407, 255
-11:		cmp a2407, 0
+7:		mov a2357, [bp + 6]
+9:		and a2357, 255
+11:		cmp a2357, 0
 12:		jge character_test$3
-13:		neg a2407
-15:		neg a2407
+13:		neg a2357
+15:		neg a2357
 17:	
 
 character_test$3:	; parameter £temporary3544, offset 8
-18:		mov [bp + 15], a2407
+18:		mov [bp + 15], a2357
 20:	
 
 character_test$4:	; call function noellipse-ellipse printf, extra 0
@@ -40,32 +40,32 @@ character_test$7:	; parameter string_islower282725c2729203D2025s0A#, offset 6
 35:	
 
 character_test$8:	; £temporary3546 = int_to_int c (Signed_Char -> Signed_Int)
-36:		mov a2408, [bp + 6]
-38:		and a2408, 255
-40:		cmp a2408, 0
+36:		mov a2358, [bp + 6]
+38:		and a2358, 255
+40:		cmp a2358, 0
 41:		jge character_test$9
-42:		neg a2408
-44:		neg a2408
+42:		neg a2358
+44:		neg a2358
 46:	
 
 character_test$9:	; parameter £temporary3546, offset 8
-47:		mov [bp + 15], a2408
+47:		mov [bp + 15], a2358
 49:	
 
 character_test$10:	; call header integral zero 0 stack zero 0
 51:	
 
 character_test$11:	; £temporary3547 = int_to_int c (Signed_Char -> Signed_Int)
-52:		mov a2409, [bp + 6]
-54:		and a2409, 255
-56:		cmp a2409, 0
+52:		mov a2359, [bp + 6]
+54:		and a2359, 255
+56:		cmp a2359, 0
 57:		jge character_test$12
-58:		neg a2409
-60:		neg a2409
+58:		neg a2359
+60:		neg a2359
 62:	
 
 character_test$12:	; parameter £temporary3547, offset 16
-63:		mov [bp + 23], a2409
+63:		mov [bp + 23], a2359
 65:	
 
 character_test$13:	; call function noellipse-noellipse islower
@@ -82,12 +82,12 @@ character_test$15:	; £temporary3548 = return_value
 78:	
 
 character_test$16:	; if £temporary3548 == 0 goto 19
-79:		cmp t2411, 0
+79:		cmp t2361, 0
 80:		je character_test$19
 82:	
 
 character_test$17:	; £temporary3553 = string_Yes#
-83:		mov t2412, string_Yes#
+83:		mov t2362, string_Yes#
 85:	
 
 character_test$18:	; goto 20
@@ -95,11 +95,11 @@ character_test$18:	; goto 20
 88:	
 
 character_test$19:	; £temporary3553 = string_No#
-89:		mov t2413, string_No#
+89:		mov t2363, string_No#
 91:	
 
 character_test$20:	; parameter £temporary3553, offset 10
-92:		mov [bp + 17], t2413
+92:		mov [bp + 17], t2363
 94:	
 
 character_test$21:	; call function noellipse-ellipse printf, extra 0
@@ -122,32 +122,32 @@ character_test$24:	; parameter string_isupper282725c2729203D2025s0A#, offset 6
 109:	
 
 character_test$25:	; £temporary3555 = int_to_int c (Signed_Char -> Signed_Int)
-110:		mov a2414, [bp + 6]
-112:		and a2414, 255
-114:		cmp a2414, 0
+110:		mov a2364, [bp + 6]
+112:		and a2364, 255
+114:		cmp a2364, 0
 115:		jge character_test$26
-116:		neg a2414
-118:		neg a2414
+116:		neg a2364
+118:		neg a2364
 120:	
 
 character_test$26:	; parameter £temporary3555, offset 8
-121:		mov [bp + 15], a2414
+121:		mov [bp + 15], a2364
 123:	
 
 character_test$27:	; call header integral zero 0 stack zero 0
 125:	
 
 character_test$28:	; £temporary3556 = int_to_int c (Signed_Char -> Signed_Int)
-126:		mov a2415, [bp + 6]
-128:		and a2415, 255
-130:		cmp a2415, 0
+126:		mov a2365, [bp + 6]
+128:		and a2365, 255
+130:		cmp a2365, 0
 131:		jge character_test$29
-132:		neg a2415
-134:		neg a2415
+132:		neg a2365
+134:		neg a2365
 136:	
 
 character_test$29:	; parameter £temporary3556, offset 16
-137:		mov [bp + 23], a2415
+137:		mov [bp + 23], a2365
 139:	
 
 character_test$30:	; call function noellipse-noellipse isupper
@@ -164,12 +164,12 @@ character_test$32:	; £temporary3557 = return_value
 152:	
 
 character_test$33:	; if £temporary3557 == 0 goto 36
-153:		cmp t2417, 0
+153:		cmp t2367, 0
 154:		je character_test$36
 156:	
 
 character_test$34:	; £temporary3562 = string_Yes#
-157:		mov t2418, string_Yes#
+157:		mov t2368, string_Yes#
 159:	
 
 character_test$35:	; goto 37
@@ -177,11 +177,11 @@ character_test$35:	; goto 37
 162:	
 
 character_test$36:	; £temporary3562 = string_No#
-163:		mov t2419, string_No#
+163:		mov t2369, string_No#
 165:	
 
 character_test$37:	; parameter £temporary3562, offset 10
-166:		mov [bp + 17], t2419
+166:		mov [bp + 17], t2369
 168:	
 
 character_test$38:	; call function noellipse-ellipse printf, extra 0
@@ -204,32 +204,32 @@ character_test$41:	; parameter string_isalpha282725c2729203D2025s0A#, offset 6
 183:	
 
 character_test$42:	; £temporary3564 = int_to_int c (Signed_Char -> Signed_Int)
-184:		mov a2420, [bp + 6]
-186:		and a2420, 255
-188:		cmp a2420, 0
+184:		mov a2370, [bp + 6]
+186:		and a2370, 255
+188:		cmp a2370, 0
 189:		jge character_test$43
-190:		neg a2420
-192:		neg a2420
+190:		neg a2370
+192:		neg a2370
 194:	
 
 character_test$43:	; parameter £temporary3564, offset 8
-195:		mov [bp + 15], a2420
+195:		mov [bp + 15], a2370
 197:	
 
 character_test$44:	; call header integral zero 0 stack zero 0
 199:	
 
 character_test$45:	; £temporary3565 = int_to_int c (Signed_Char -> Signed_Int)
-200:		mov a2421, [bp + 6]
-202:		and a2421, 255
-204:		cmp a2421, 0
+200:		mov a2371, [bp + 6]
+202:		and a2371, 255
+204:		cmp a2371, 0
 205:		jge character_test$46
-206:		neg a2421
-208:		neg a2421
+206:		neg a2371
+208:		neg a2371
 210:	
 
 character_test$46:	; parameter £temporary3565, offset 16
-211:		mov [bp + 23], a2421
+211:		mov [bp + 23], a2371
 213:	
 
 character_test$47:	; call function noellipse-noellipse isalpha
@@ -246,12 +246,12 @@ character_test$49:	; £temporary3566 = return_value
 226:	
 
 character_test$50:	; if £temporary3566 == 0 goto 53
-227:		cmp t2423, 0
+227:		cmp t2373, 0
 228:		je character_test$53
 230:	
 
 character_test$51:	; £temporary3571 = string_Yes#
-231:		mov t2424, string_Yes#
+231:		mov t2374, string_Yes#
 233:	
 
 character_test$52:	; goto 54
@@ -259,11 +259,11 @@ character_test$52:	; goto 54
 236:	
 
 character_test$53:	; £temporary3571 = string_No#
-237:		mov t2425, string_No#
+237:		mov t2375, string_No#
 239:	
 
 character_test$54:	; parameter £temporary3571, offset 10
-240:		mov [bp + 17], t2425
+240:		mov [bp + 17], t2375
 242:	
 
 character_test$55:	; call function noellipse-ellipse printf, extra 0
@@ -286,32 +286,32 @@ character_test$58:	; parameter string_isdigit282725c2729203D2025s0A#, offset 6
 257:	
 
 character_test$59:	; £temporary3573 = int_to_int c (Signed_Char -> Signed_Int)
-258:		mov a2426, [bp + 6]
-260:		and a2426, 255
-262:		cmp a2426, 0
+258:		mov a2376, [bp + 6]
+260:		and a2376, 255
+262:		cmp a2376, 0
 263:		jge character_test$60
-264:		neg a2426
-266:		neg a2426
+264:		neg a2376
+266:		neg a2376
 268:	
 
 character_test$60:	; parameter £temporary3573, offset 8
-269:		mov [bp + 15], a2426
+269:		mov [bp + 15], a2376
 271:	
 
 character_test$61:	; call header integral zero 0 stack zero 0
 273:	
 
 character_test$62:	; £temporary3574 = int_to_int c (Signed_Char -> Signed_Int)
-274:		mov a2427, [bp + 6]
-276:		and a2427, 255
-278:		cmp a2427, 0
+274:		mov a2377, [bp + 6]
+276:		and a2377, 255
+278:		cmp a2377, 0
 279:		jge character_test$63
-280:		neg a2427
-282:		neg a2427
+280:		neg a2377
+282:		neg a2377
 284:	
 
 character_test$63:	; parameter £temporary3574, offset 16
-285:		mov [bp + 23], a2427
+285:		mov [bp + 23], a2377
 287:	
 
 character_test$64:	; call function noellipse-noellipse isdigit
@@ -328,12 +328,12 @@ character_test$66:	; £temporary3575 = return_value
 300:	
 
 character_test$67:	; if £temporary3575 == 0 goto 70
-301:		cmp t2429, 0
+301:		cmp t2379, 0
 302:		je character_test$70
 304:	
 
 character_test$68:	; £temporary3580 = string_Yes#
-305:		mov t2430, string_Yes#
+305:		mov t2380, string_Yes#
 307:	
 
 character_test$69:	; goto 71
@@ -341,11 +341,11 @@ character_test$69:	; goto 71
 310:	
 
 character_test$70:	; £temporary3580 = string_No#
-311:		mov t2431, string_No#
+311:		mov t2381, string_No#
 313:	
 
 character_test$71:	; parameter £temporary3580, offset 10
-314:		mov [bp + 17], t2431
+314:		mov [bp + 17], t2381
 316:	
 
 character_test$72:	; call function noellipse-ellipse printf, extra 0
@@ -368,32 +368,32 @@ character_test$75:	; parameter string_isalnum282725c2729203D2025s0A#, offset 6
 331:	
 
 character_test$76:	; £temporary3582 = int_to_int c (Signed_Char -> Signed_Int)
-332:		mov a2432, [bp + 6]
-334:		and a2432, 255
-336:		cmp a2432, 0
+332:		mov a2382, [bp + 6]
+334:		and a2382, 255
+336:		cmp a2382, 0
 337:		jge character_test$77
-338:		neg a2432
-340:		neg a2432
+338:		neg a2382
+340:		neg a2382
 342:	
 
 character_test$77:	; parameter £temporary3582, offset 8
-343:		mov [bp + 15], a2432
+343:		mov [bp + 15], a2382
 345:	
 
 character_test$78:	; call header integral zero 0 stack zero 0
 347:	
 
 character_test$79:	; £temporary3583 = int_to_int c (Signed_Char -> Signed_Int)
-348:		mov a2433, [bp + 6]
-350:		and a2433, 255
-352:		cmp a2433, 0
+348:		mov a2383, [bp + 6]
+350:		and a2383, 255
+352:		cmp a2383, 0
 353:		jge character_test$80
-354:		neg a2433
-356:		neg a2433
+354:		neg a2383
+356:		neg a2383
 358:	
 
 character_test$80:	; parameter £temporary3583, offset 16
-359:		mov [bp + 23], a2433
+359:		mov [bp + 23], a2383
 361:	
 
 character_test$81:	; call function noellipse-noellipse isalnum
@@ -410,12 +410,12 @@ character_test$83:	; £temporary3584 = return_value
 374:	
 
 character_test$84:	; if £temporary3584 == 0 goto 87
-375:		cmp t2435, 0
+375:		cmp t2385, 0
 376:		je character_test$87
 378:	
 
 character_test$85:	; £temporary3589 = string_Yes#
-379:		mov t2436, string_Yes#
+379:		mov t2386, string_Yes#
 381:	
 
 character_test$86:	; goto 88
@@ -423,11 +423,11 @@ character_test$86:	; goto 88
 384:	
 
 character_test$87:	; £temporary3589 = string_No#
-385:		mov t2437, string_No#
+385:		mov t2387, string_No#
 387:	
 
 character_test$88:	; parameter £temporary3589, offset 10
-388:		mov [bp + 17], t2437
+388:		mov [bp + 17], t2387
 390:	
 
 character_test$89:	; call function noellipse-ellipse printf, extra 0
@@ -450,32 +450,32 @@ character_test$92:	; parameter string_isxdigit282725c2729203D2025s0A#, offset 6
 405:	
 
 character_test$93:	; £temporary3591 = int_to_int c (Signed_Char -> Signed_Int)
-406:		mov a2438, [bp + 6]
-408:		and a2438, 255
-410:		cmp a2438, 0
+406:		mov a2388, [bp + 6]
+408:		and a2388, 255
+410:		cmp a2388, 0
 411:		jge character_test$94
-412:		neg a2438
-414:		neg a2438
+412:		neg a2388
+414:		neg a2388
 416:	
 
 character_test$94:	; parameter £temporary3591, offset 8
-417:		mov [bp + 15], a2438
+417:		mov [bp + 15], a2388
 419:	
 
 character_test$95:	; call header integral zero 0 stack zero 0
 421:	
 
 character_test$96:	; £temporary3592 = int_to_int c (Signed_Char -> Signed_Int)
-422:		mov a2439, [bp + 6]
-424:		and a2439, 255
-426:		cmp a2439, 0
+422:		mov a2389, [bp + 6]
+424:		and a2389, 255
+426:		cmp a2389, 0
 427:		jge character_test$97
-428:		neg a2439
-430:		neg a2439
+428:		neg a2389
+430:		neg a2389
 432:	
 
 character_test$97:	; parameter £temporary3592, offset 16
-433:		mov [bp + 23], a2439
+433:		mov [bp + 23], a2389
 435:	
 
 character_test$98:	; call function noellipse-noellipse isxdigit
@@ -492,12 +492,12 @@ character_test$100:	; £temporary3593 = return_value
 448:	
 
 character_test$101:	; if £temporary3593 == 0 goto 104
-449:		cmp t2441, 0
+449:		cmp t2391, 0
 450:		je character_test$104
 452:	
 
 character_test$102:	; £temporary3598 = string_Yes#
-453:		mov t2442, string_Yes#
+453:		mov t2392, string_Yes#
 455:	
 
 character_test$103:	; goto 105
@@ -505,11 +505,11 @@ character_test$103:	; goto 105
 458:	
 
 character_test$104:	; £temporary3598 = string_No#
-459:		mov t2443, string_No#
+459:		mov t2393, string_No#
 461:	
 
 character_test$105:	; parameter £temporary3598, offset 10
-462:		mov [bp + 17], t2443
+462:		mov [bp + 17], t2393
 464:	
 
 character_test$106:	; call function noellipse-ellipse printf, extra 0
@@ -532,32 +532,32 @@ character_test$109:	; parameter string_isgraph282725c2729203D2025s0A#, offset 6
 479:	
 
 character_test$110:	; £temporary3600 = int_to_int c (Signed_Char -> Signed_Int)
-480:		mov a2444, [bp + 6]
-482:		and a2444, 255
-484:		cmp a2444, 0
+480:		mov a2394, [bp + 6]
+482:		and a2394, 255
+484:		cmp a2394, 0
 485:		jge character_test$111
-486:		neg a2444
-488:		neg a2444
+486:		neg a2394
+488:		neg a2394
 490:	
 
 character_test$111:	; parameter £temporary3600, offset 8
-491:		mov [bp + 15], a2444
+491:		mov [bp + 15], a2394
 493:	
 
 character_test$112:	; call header integral zero 0 stack zero 0
 495:	
 
 character_test$113:	; £temporary3601 = int_to_int c (Signed_Char -> Signed_Int)
-496:		mov a2445, [bp + 6]
-498:		and a2445, 255
-500:		cmp a2445, 0
+496:		mov a2395, [bp + 6]
+498:		and a2395, 255
+500:		cmp a2395, 0
 501:		jge character_test$114
-502:		neg a2445
-504:		neg a2445
+502:		neg a2395
+504:		neg a2395
 506:	
 
 character_test$114:	; parameter £temporary3601, offset 16
-507:		mov [bp + 23], a2445
+507:		mov [bp + 23], a2395
 509:	
 
 character_test$115:	; call function noellipse-noellipse isgraph
@@ -574,12 +574,12 @@ character_test$117:	; £temporary3602 = return_value
 522:	
 
 character_test$118:	; if £temporary3602 == 0 goto 121
-523:		cmp t2447, 0
+523:		cmp t2397, 0
 524:		je character_test$121
 526:	
 
 character_test$119:	; £temporary3607 = string_Yes#
-527:		mov t2448, string_Yes#
+527:		mov t2398, string_Yes#
 529:	
 
 character_test$120:	; goto 122
@@ -587,11 +587,11 @@ character_test$120:	; goto 122
 532:	
 
 character_test$121:	; £temporary3607 = string_No#
-533:		mov t2449, string_No#
+533:		mov t2399, string_No#
 535:	
 
 character_test$122:	; parameter £temporary3607, offset 10
-536:		mov [bp + 17], t2449
+536:		mov [bp + 17], t2399
 538:	
 
 character_test$123:	; call function noellipse-ellipse printf, extra 0
@@ -614,32 +614,32 @@ character_test$126:	; parameter string_isprint282725c2729203D2025s0A#, offset 6
 553:	
 
 character_test$127:	; £temporary3609 = int_to_int c (Signed_Char -> Signed_Int)
-554:		mov a2450, [bp + 6]
-556:		and a2450, 255
-558:		cmp a2450, 0
+554:		mov a2400, [bp + 6]
+556:		and a2400, 255
+558:		cmp a2400, 0
 559:		jge character_test$128
-560:		neg a2450
-562:		neg a2450
+560:		neg a2400
+562:		neg a2400
 564:	
 
 character_test$128:	; parameter £temporary3609, offset 8
-565:		mov [bp + 15], a2450
+565:		mov [bp + 15], a2400
 567:	
 
 character_test$129:	; call header integral zero 0 stack zero 0
 569:	
 
 character_test$130:	; £temporary3610 = int_to_int c (Signed_Char -> Signed_Int)
-570:		mov a2451, [bp + 6]
-572:		and a2451, 255
-574:		cmp a2451, 0
+570:		mov a2401, [bp + 6]
+572:		and a2401, 255
+574:		cmp a2401, 0
 575:		jge character_test$131
-576:		neg a2451
-578:		neg a2451
+576:		neg a2401
+578:		neg a2401
 580:	
 
 character_test$131:	; parameter £temporary3610, offset 16
-581:		mov [bp + 23], a2451
+581:		mov [bp + 23], a2401
 583:	
 
 character_test$132:	; call function noellipse-noellipse isprint
@@ -656,12 +656,12 @@ character_test$134:	; £temporary3611 = return_value
 596:	
 
 character_test$135:	; if £temporary3611 == 0 goto 138
-597:		cmp t2453, 0
+597:		cmp t2403, 0
 598:		je character_test$138
 600:	
 
 character_test$136:	; £temporary3616 = string_Yes#
-601:		mov t2454, string_Yes#
+601:		mov t2404, string_Yes#
 603:	
 
 character_test$137:	; goto 139
@@ -669,11 +669,11 @@ character_test$137:	; goto 139
 606:	
 
 character_test$138:	; £temporary3616 = string_No#
-607:		mov t2455, string_No#
+607:		mov t2405, string_No#
 609:	
 
 character_test$139:	; parameter £temporary3616, offset 10
-610:		mov [bp + 17], t2455
+610:		mov [bp + 17], t2405
 612:	
 
 character_test$140:	; call function noellipse-ellipse printf, extra 0
@@ -696,32 +696,32 @@ character_test$143:	; parameter string_ispunct282725c2729203D2025s0A#, offset 6
 627:	
 
 character_test$144:	; £temporary3618 = int_to_int c (Signed_Char -> Signed_Int)
-628:		mov a2456, [bp + 6]
-630:		and a2456, 255
-632:		cmp a2456, 0
+628:		mov a2406, [bp + 6]
+630:		and a2406, 255
+632:		cmp a2406, 0
 633:		jge character_test$145
-634:		neg a2456
-636:		neg a2456
+634:		neg a2406
+636:		neg a2406
 638:	
 
 character_test$145:	; parameter £temporary3618, offset 8
-639:		mov [bp + 15], a2456
+639:		mov [bp + 15], a2406
 641:	
 
 character_test$146:	; call header integral zero 0 stack zero 0
 643:	
 
 character_test$147:	; £temporary3619 = int_to_int c (Signed_Char -> Signed_Int)
-644:		mov a2457, [bp + 6]
-646:		and a2457, 255
-648:		cmp a2457, 0
+644:		mov a2407, [bp + 6]
+646:		and a2407, 255
+648:		cmp a2407, 0
 649:		jge character_test$148
-650:		neg a2457
-652:		neg a2457
+650:		neg a2407
+652:		neg a2407
 654:	
 
 character_test$148:	; parameter £temporary3619, offset 16
-655:		mov [bp + 23], a2457
+655:		mov [bp + 23], a2407
 657:	
 
 character_test$149:	; call function noellipse-noellipse ispunct
@@ -738,12 +738,12 @@ character_test$151:	; £temporary3620 = return_value
 670:	
 
 character_test$152:	; if £temporary3620 == 0 goto 155
-671:		cmp t2459, 0
+671:		cmp t2409, 0
 672:		je character_test$155
 674:	
 
 character_test$153:	; £temporary3625 = string_Yes#
-675:		mov t2460, string_Yes#
+675:		mov t2410, string_Yes#
 677:	
 
 character_test$154:	; goto 156
@@ -751,11 +751,11 @@ character_test$154:	; goto 156
 680:	
 
 character_test$155:	; £temporary3625 = string_No#
-681:		mov t2461, string_No#
+681:		mov t2411, string_No#
 683:	
 
 character_test$156:	; parameter £temporary3625, offset 10
-684:		mov [bp + 17], t2461
+684:		mov [bp + 17], t2411
 686:	
 
 character_test$157:	; call function noellipse-ellipse printf, extra 0
@@ -778,32 +778,32 @@ character_test$160:	; parameter string_iscntrl282725c2729203D2025s0A#, offset 6
 701:	
 
 character_test$161:	; £temporary3627 = int_to_int c (Signed_Char -> Signed_Int)
-702:		mov a2462, [bp + 6]
-704:		and a2462, 255
-706:		cmp a2462, 0
+702:		mov a2412, [bp + 6]
+704:		and a2412, 255
+706:		cmp a2412, 0
 707:		jge character_test$162
-708:		neg a2462
-710:		neg a2462
+708:		neg a2412
+710:		neg a2412
 712:	
 
 character_test$162:	; parameter £temporary3627, offset 8
-713:		mov [bp + 15], a2462
+713:		mov [bp + 15], a2412
 715:	
 
 character_test$163:	; call header integral zero 0 stack zero 0
 717:	
 
 character_test$164:	; £temporary3628 = int_to_int c (Signed_Char -> Signed_Int)
-718:		mov a2463, [bp + 6]
-720:		and a2463, 255
-722:		cmp a2463, 0
+718:		mov a2413, [bp + 6]
+720:		and a2413, 255
+722:		cmp a2413, 0
 723:		jge character_test$165
-724:		neg a2463
-726:		neg a2463
+724:		neg a2413
+726:		neg a2413
 728:	
 
 character_test$165:	; parameter £temporary3628, offset 16
-729:		mov [bp + 23], a2463
+729:		mov [bp + 23], a2413
 731:	
 
 character_test$166:	; call function noellipse-noellipse iscntrl
@@ -820,12 +820,12 @@ character_test$168:	; £temporary3629 = return_value
 744:	
 
 character_test$169:	; if £temporary3629 == 0 goto 172
-745:		cmp t2465, 0
+745:		cmp t2415, 0
 746:		je character_test$172
 748:	
 
 character_test$170:	; £temporary3634 = string_Yes#
-749:		mov t2466, string_Yes#
+749:		mov t2416, string_Yes#
 751:	
 
 character_test$171:	; goto 173
@@ -833,11 +833,11 @@ character_test$171:	; goto 173
 754:	
 
 character_test$172:	; £temporary3634 = string_No#
-755:		mov t2467, string_No#
+755:		mov t2417, string_No#
 757:	
 
 character_test$173:	; parameter £temporary3634, offset 10
-758:		mov [bp + 17], t2467
+758:		mov [bp + 17], t2417
 760:	
 
 character_test$174:	; call function noellipse-ellipse printf, extra 0
@@ -860,32 +860,32 @@ character_test$177:	; parameter string_isspace282725c2729203D2025s0A#, offset 6
 775:	
 
 character_test$178:	; £temporary3636 = int_to_int c (Signed_Char -> Signed_Int)
-776:		mov a2468, [bp + 6]
-778:		and a2468, 255
-780:		cmp a2468, 0
+776:		mov a2418, [bp + 6]
+778:		and a2418, 255
+780:		cmp a2418, 0
 781:		jge character_test$179
-782:		neg a2468
-784:		neg a2468
+782:		neg a2418
+784:		neg a2418
 786:	
 
 character_test$179:	; parameter £temporary3636, offset 8
-787:		mov [bp + 15], a2468
+787:		mov [bp + 15], a2418
 789:	
 
 character_test$180:	; call header integral zero 0 stack zero 0
 791:	
 
 character_test$181:	; £temporary3637 = int_to_int c (Signed_Char -> Signed_Int)
-792:		mov a2469, [bp + 6]
-794:		and a2469, 255
-796:		cmp a2469, 0
+792:		mov a2419, [bp + 6]
+794:		and a2419, 255
+796:		cmp a2419, 0
 797:		jge character_test$182
-798:		neg a2469
-800:		neg a2469
+798:		neg a2419
+800:		neg a2419
 802:	
 
 character_test$182:	; parameter £temporary3637, offset 16
-803:		mov [bp + 23], a2469
+803:		mov [bp + 23], a2419
 805:	
 
 character_test$183:	; call function noellipse-noellipse isspace
@@ -902,12 +902,12 @@ character_test$185:	; £temporary3638 = return_value
 818:	
 
 character_test$186:	; if £temporary3638 == 0 goto 189
-819:		cmp t2471, 0
+819:		cmp t2421, 0
 820:		je character_test$189
 822:	
 
 character_test$187:	; £temporary3643 = string_Yes#
-823:		mov t2472, string_Yes#
+823:		mov t2422, string_Yes#
 825:	
 
 character_test$188:	; goto 190
@@ -915,11 +915,11 @@ character_test$188:	; goto 190
 828:	
 
 character_test$189:	; £temporary3643 = string_No#
-829:		mov t2473, string_No#
+829:		mov t2423, string_No#
 831:	
 
 character_test$190:	; parameter £temporary3643, offset 10
-832:		mov [bp + 17], t2473
+832:		mov [bp + 17], t2423
 834:	
 
 character_test$191:	; call function noellipse-ellipse printf, extra 0
@@ -942,32 +942,32 @@ character_test$194:	; parameter string_tolower282725c2729203D202725c270A#, offse
 849:	
 
 character_test$195:	; £temporary3645 = int_to_int c (Signed_Char -> Signed_Int)
-850:		mov a2474, [bp + 6]
-852:		and a2474, 255
-854:		cmp a2474, 0
+850:		mov a2424, [bp + 6]
+852:		and a2424, 255
+854:		cmp a2424, 0
 855:		jge character_test$196
-856:		neg a2474
-858:		neg a2474
+856:		neg a2424
+858:		neg a2424
 860:	
 
 character_test$196:	; parameter £temporary3645, offset 8
-861:		mov [bp + 15], a2474
+861:		mov [bp + 15], a2424
 863:	
 
 character_test$197:	; call header integral zero 0 stack zero 0
 865:	
 
 character_test$198:	; £temporary3646 = int_to_int c (Signed_Char -> Signed_Int)
-866:		mov a2475, [bp + 6]
-868:		and a2475, 255
-870:		cmp a2475, 0
+866:		mov a2425, [bp + 6]
+868:		and a2425, 255
+870:		cmp a2425, 0
 871:		jge character_test$199
-872:		neg a2475
-874:		neg a2475
+872:		neg a2425
+874:		neg a2425
 876:	
 
 character_test$199:	; parameter £temporary3646, offset 16
-877:		mov [bp + 23], a2475
+877:		mov [bp + 23], a2425
 879:	
 
 character_test$200:	; call function noellipse-noellipse tolower
@@ -984,22 +984,22 @@ character_test$202:	; £temporary3647 = return_value
 892:	
 
 character_test$203:	; £temporary3648 = int_to_int £temporary3647 (Signed_Int -> Signed_Char)
-895:		cmp t2477, 0
+895:		cmp t2427, 0
 896:		jge character_test$204
-897:		neg t2477
-899:		neg t2477
+897:		neg t2427
+899:		neg t2427
 901:	
 
 character_test$204:	; £temporary3649 = int_to_int £temporary3648 (Signed_Char -> Signed_Int)
-903:		and t2477, 255
-905:		cmp t2477, 0
+903:		and t2427, 255
+905:		cmp t2427, 0
 906:		jge character_test$205
-907:		neg t2477
-909:		neg t2477
+907:		neg t2427
+909:		neg t2427
 911:	
 
 character_test$205:	; parameter £temporary3649, offset 10
-912:		mov [bp + 17], t2477
+912:		mov [bp + 17], t2427
 914:	
 
 character_test$206:	; call function noellipse-ellipse printf, extra 0
@@ -1022,32 +1022,32 @@ character_test$209:	; parameter string_toupper282725c2729203D202725c270A0A#, off
 929:	
 
 character_test$210:	; £temporary3651 = int_to_int c (Signed_Char -> Signed_Int)
-930:		mov a2478, [bp + 6]
-932:		and a2478, 255
-934:		cmp a2478, 0
+930:		mov a2428, [bp + 6]
+932:		and a2428, 255
+934:		cmp a2428, 0
 935:		jge character_test$211
-936:		neg a2478
-938:		neg a2478
+936:		neg a2428
+938:		neg a2428
 940:	
 
 character_test$211:	; parameter £temporary3651, offset 8
-941:		mov [bp + 15], a2478
+941:		mov [bp + 15], a2428
 943:	
 
 character_test$212:	; call header integral zero 0 stack zero 0
 945:	
 
 character_test$213:	; £temporary3652 = int_to_int c (Signed_Char -> Signed_Int)
-946:		mov a2479, [bp + 6]
-948:		and a2479, 255
-950:		cmp a2479, 0
+946:		mov a2429, [bp + 6]
+948:		and a2429, 255
+950:		cmp a2429, 0
 951:		jge character_test$214
-952:		neg a2479
-954:		neg a2479
+952:		neg a2429
+954:		neg a2429
 956:	
 
 character_test$214:	; parameter £temporary3652, offset 16
-957:		mov [bp + 23], a2479
+957:		mov [bp + 23], a2429
 959:	
 
 character_test$215:	; call function noellipse-noellipse toupper
@@ -1064,22 +1064,22 @@ character_test$217:	; £temporary3653 = return_value
 972:	
 
 character_test$218:	; £temporary3654 = int_to_int £temporary3653 (Signed_Int -> Signed_Char)
-975:		cmp t2481, 0
+975:		cmp t2431, 0
 976:		jge character_test$219
-977:		neg t2481
-979:		neg t2481
+977:		neg t2431
+979:		neg t2431
 981:	
 
 character_test$219:	; £temporary3655 = int_to_int £temporary3654 (Signed_Char -> Signed_Int)
-983:		and t2481, 255
-985:		cmp t2481, 0
+983:		and t2431, 255
+985:		cmp t2431, 0
 986:		jge character_test$220
-987:		neg t2481
-989:		neg t2481
+987:		neg t2431
+989:		neg t2431
 991:	
 
 character_test$220:	; parameter £temporary3655, offset 10
-992:		mov [bp + 17], t2481
+992:		mov [bp + 17], t2431
 994:	
 
 character_test$221:	; call function noellipse-ellipse printf, extra 0
@@ -1095,10 +1095,10 @@ character_test$222:	; post call
 1004:	
 
 character_test$223:	; return
-1005:		mov t2482, [bp]
+1005:		mov t2432, [bp]
 1006:		mov di, [bp + 4]
 1007:		mov bp, [bp + 2]
-1008:		jmp t2482
+1008:		jmp t2432
 1010:	
 
 character_test$224:	; function end character_test

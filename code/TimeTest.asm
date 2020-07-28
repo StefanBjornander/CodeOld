@@ -162,6 +162,8 @@ time_test$41:	; £temporary5601 = £temporary5600 * Array_#
 	mul qword [Array_#]
 
 time_test$42:	; £temporary5602 = weekdays + £temporary5601
+	mov rbx, rbp
+	add rbx, 24
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
@@ -274,6 +276,8 @@ time_test$69:	; £temporary5621 = £temporary5620 * Array_#
 	mul qword [Array_#]
 
 time_test$70:	; £temporary5622 = weekdays + £temporary5621
+	mov rbx, rbp
+	add rbx, 24
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax

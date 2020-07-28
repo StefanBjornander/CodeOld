@@ -138,9 +138,9 @@ strtol$9:	; call function noellipse-ellipse sscanf, extra 16
 
 strtol$10:	; post call
 
-strtol$11:	; if endp == int8$0# goto 16
+strtol$11:	; if endp == int8$0# goto 15
 	cmp qword [rbp + 32], 0
-	je strtol$16
+	je strtol$15
 
 strtol$12:	; £field2535 -> endp = *endp
 	mov rsi, [rbp + 32]
@@ -150,23 +150,21 @@ strtol$13:	; £temporary2536 = int_to_int chars (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
-strtol$14:	; £temporary2537 = s + £temporary2536
+strtol$14:	; £field2535 -> endp = s + £temporary2536
 	mov rbx, [rbp + 24]
 	add rbx, rax
-
-strtol$15:	; £field2535 -> endp = £temporary2537
 	mov [rsi], rbx
 
-strtol$16:	; return_value = value
+strtol$15:	; return_value = value
 	mov rbx, [rbp + 48]
 
-strtol$17:	; return
+strtol$16:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-strtol$18:	; function end strtol
+strtol$17:	; function end strtol
 
 strtoul:	; chars = int4$0#
 	mov dword [rbp + 44], 0
@@ -207,9 +205,9 @@ strtoul$9:	; call function noellipse-ellipse sscanf, extra 16
 
 strtoul$10:	; post call
 
-strtoul$11:	; if endp == int8$0# goto 16
+strtoul$11:	; if endp == int8$0# goto 15
 	cmp qword [rbp + 32], 0
-	je strtoul$16
+	je strtoul$15
 
 strtoul$12:	; £field2549 -> endp = *endp
 	mov rsi, [rbp + 32]
@@ -219,23 +217,21 @@ strtoul$13:	; £temporary2550 = int_to_int chars (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
-strtoul$14:	; £temporary2551 = s + £temporary2550
+strtoul$14:	; £field2549 -> endp = s + £temporary2550
 	mov rbx, [rbp + 24]
 	add rbx, rax
-
-strtoul$15:	; £field2549 -> endp = £temporary2551
 	mov [rsi], rbx
 
-strtoul$16:	; return_value = value
+strtoul$15:	; return_value = value
 	mov rbx, [rbp + 48]
 
-strtoul$17:	; return
+strtoul$16:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-strtoul$18:	; function end strtoul
+strtoul$17:	; function end strtoul
 
 atof:	; call header integral zero 0 stack zero 0
 
@@ -309,9 +305,9 @@ strtod$10:	; call function noellipse-ellipse sscanf, extra 16
 
 strtod$11:	; post call
 
-strtod$12:	; if endp == int8$0# goto 17
+strtod$12:	; if endp == int8$0# goto 16
 	cmp qword [rbp + 32], 0
-	je strtod$17
+	je strtod$16
 
 strtod$13:	; £field2566 -> endp = *endp
 	mov rsi, [rbp + 32]
@@ -321,25 +317,23 @@ strtod$14:	; £temporary2567 = int_to_int chars (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
-strtod$15:	; £temporary2568 = s + £temporary2567
+strtod$15:	; £field2566 -> endp = s + £temporary2567
 	mov rbx, [rbp + 24]
 	add rbx, rax
-
-strtod$16:	; £field2566 -> endp = £temporary2568
 	mov [rsi], rbx
 
-strtod$17:	; push float value
+strtod$16:	; push float value
 	fld qword [rbp + 44]
 
-strtod$18:	; return_value = value
+strtod$17:	; return_value = value
 
-strtod$19:	; return
+strtod$18:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-strtod$20:	; function end strtod
+strtod$19:	; function end strtod
 
 abort:	; rax = int8$60#
 	mov rax, 60
@@ -456,7 +450,7 @@ memswp$20:	; £field2594 -> £temporary2597 = tempValue
 	mov al, [rbp + 64]
 	mov [rsi], al
 
-memswp$21:	; ++index
+memswp$21:	; index = index + int4$1#
 	inc dword [rbp + 60]
 
 memswp$22:	; goto 5
@@ -473,142 +467,149 @@ memswp$24:	; function end memswp
 bsearch:	; firstIndex = int4$0#
 	mov dword [rbp + 56], 0
 
-bsearch$1:	; £temporary2598 = listSize - int4$1#
+bsearch$1:	; lastIndex = listSize - int4$1#
 	mov eax, [rbp + 40]
 	dec eax
-
-bsearch$2:	; lastIndex = £temporary2598
 	mov [rbp + 60], eax
 
-bsearch$3:	; if listSize != int4$0# goto 6
+bsearch$2:	; if listSize != int4$0# goto 5
 	cmp dword [rbp + 40], 0
-	jne bsearch$6
+	jne bsearch$5
 
-bsearch$4:	; return_value = int8$0#
+bsearch$3:	; return_value = int8$0#
 	mov rbx, 0
 
-bsearch$5:	; return
+bsearch$4:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-bsearch$6:	; £temporary2600 = int_to_int valueList (Pointer -> Pointer)
+bsearch$5:	; £temporary2600 = int_to_int valueList (Pointer -> Pointer)
 	mov rbx, [rbp + 32]
 
-bsearch$7:	; £temporary2601 = firstIndex * valueSize
+bsearch$6:	; £temporary2601 = firstIndex * valueSize
 	mov eax, [rbp + 56]
 	xor edx, edx
 	imul dword [rbp + 44]
 
-bsearch$8:	; £temporary2602 = int_to_int £temporary2601 (Signed_Int -> Pointer)
+bsearch$7:	; £temporary2602 = int_to_int £temporary2601 (Signed_Int -> Pointer)
 	mov rcx, 4294967295
 	and rax, rcx
 
-bsearch$9:	; £temporary2603 = £temporary2600 + £temporary2602
+bsearch$8:	; firstValuePtr = £temporary2600 + £temporary2602
 	add rbx, rax
-
-bsearch$10:	; firstValuePtr = £temporary2603
 	mov [rbp + 64], rbx
 
-bsearch$11:	; call header integral zero 0 stack zero 0
+bsearch$9:	; call header integral zero 0 stack zero 0
 
-bsearch$12:	; parameter keyPtr, offset 96
+bsearch$10:	; parameter keyPtr, offset 96
 	mov rax, [rbp + 24]
 	mov [rbp + 96], rax
 
-bsearch$13:	; parameter firstValuePtr, offset 104
+bsearch$11:	; parameter firstValuePtr, offset 104
 	mov rax, [rbp + 64]
 	mov [rbp + 104], rax
 
-bsearch$14:	; call function noellipse-noellipse compare
-	mov qword [rbp + 72], bsearch$15
+bsearch$12:	; call function noellipse-noellipse compare
+	mov qword [rbp + 72], bsearch$13
 	mov [rbp + 80], rbp
 	add rbp, 72
 	mov rax, [rbp + 48]
 	jmp rax
 
-bsearch$15:	; post call
+bsearch$13:	; post call
 
-bsearch$16:	; £temporary2605 = return_value
+bsearch$14:	; £temporary2605 = return_value
 
-bsearch$17:	; firstCompare = £temporary2605
+bsearch$15:	; firstCompare = £temporary2605
 	mov [rbp + 72], ebx
 
-bsearch$18:	; if firstCompare >= int4$0# goto 21
+bsearch$16:	; if firstCompare >= int4$0# goto 19
 	cmp dword [rbp + 72], 0
-	jge bsearch$21
+	jge bsearch$19
 
-bsearch$19:	; return_value = int8$0#
+bsearch$17:	; return_value = int8$0#
 	mov rbx, 0
 
-bsearch$20:	; return
+bsearch$18:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-bsearch$21:	; if firstCompare != int4$0# goto 24
+bsearch$19:	; if firstCompare != int4$0# goto 22
 	cmp dword [rbp + 72], 0
-	jne bsearch$24
+	jne bsearch$22
 
-bsearch$22:	; return_value = firstValuePtr
+bsearch$20:	; return_value = firstValuePtr
 	mov rbx, [rbp + 64]
 
-bsearch$23:	; return
+bsearch$21:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-bsearch$24:	; £temporary2608 = int_to_int valueList (Pointer -> Pointer)
+bsearch$22:	; £temporary2608 = int_to_int valueList (Pointer -> Pointer)
 	mov rbx, [rbp + 32]
 
-bsearch$25:	; £temporary2609 = lastIndex * valueSize
+bsearch$23:	; £temporary2609 = lastIndex * valueSize
 	mov eax, [rbp + 60]
 	xor edx, edx
 	imul dword [rbp + 44]
 
-bsearch$26:	; £temporary2610 = int_to_int £temporary2609 (Signed_Int -> Pointer)
+bsearch$24:	; £temporary2610 = int_to_int £temporary2609 (Signed_Int -> Pointer)
 	mov rcx, 4294967295
 	and rax, rcx
 
-bsearch$27:	; £temporary2611 = £temporary2608 + £temporary2610
+bsearch$25:	; lastValuePtr = £temporary2608 + £temporary2610
 	add rbx, rax
-
-bsearch$28:	; lastValuePtr = £temporary2611
 	mov [rbp + 64], rbx
 
-bsearch$29:	; call header integral zero 0 stack zero 0
+bsearch$26:	; call header integral zero 0 stack zero 0
 
-bsearch$30:	; parameter keyPtr, offset 96
+bsearch$27:	; parameter keyPtr, offset 96
 	mov rax, [rbp + 24]
 	mov [rbp + 96], rax
 
-bsearch$31:	; parameter lastValuePtr, offset 104
+bsearch$28:	; parameter lastValuePtr, offset 104
 	mov rax, [rbp + 64]
 	mov [rbp + 104], rax
 
-bsearch$32:	; call function noellipse-noellipse compare
-	mov qword [rbp + 72], bsearch$33
+bsearch$29:	; call function noellipse-noellipse compare
+	mov qword [rbp + 72], bsearch$30
 	mov [rbp + 80], rbp
 	add rbp, 72
 	mov rax, [rbp + 48]
 	jmp rax
 
-bsearch$33:	; post call
+bsearch$30:	; post call
 
-bsearch$34:	; £temporary2613 = return_value
+bsearch$31:	; £temporary2613 = return_value
 
-bsearch$35:	; lastCompare = £temporary2613
+bsearch$32:	; lastCompare = £temporary2613
 	mov [rbp + 72], ebx
 
-bsearch$36:	; if lastCompare <= int4$0# goto 39
+bsearch$33:	; if lastCompare <= int4$0# goto 36
 	cmp dword [rbp + 72], 0
-	jle bsearch$39
+	jle bsearch$36
 
-bsearch$37:	; return_value = int8$0#
+bsearch$34:	; return_value = int8$0#
 	mov rbx, 0
+
+bsearch$35:	; return
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
+
+bsearch$36:	; if lastCompare != int4$0# goto 39
+	cmp dword [rbp + 72], 0
+	jne bsearch$39
+
+bsearch$37:	; return_value = lastValuePtr
+	mov rbx, [rbp + 64]
 
 bsearch$38:	; return
 	mov rax, [rbp]
@@ -616,104 +617,87 @@ bsearch$38:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-bsearch$39:	; if lastCompare != int4$0# goto 42
-	cmp dword [rbp + 72], 0
-	jne bsearch$42
-
-bsearch$40:	; return_value = lastValuePtr
-	mov rbx, [rbp + 64]
-
-bsearch$41:	; return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
-bsearch$42:	; £temporary2616 = firstIndex + lastIndex
+bsearch$39:	; £temporary2616 = firstIndex + lastIndex
 	mov eax, [rbp + 56]
 	add eax, [rbp + 60]
 
-bsearch$43:	; £temporary2617 = £temporary2616 / int4$2#
+bsearch$40:	; middleIndex = £temporary2616 / int4$2#
 	xor edx, edx
 	idiv dword [int4$2#]
-
-bsearch$44:	; middleIndex = £temporary2617
 	mov [rbp + 64], eax
 
-bsearch$45:	; £temporary2618 = int_to_int valueList (Pointer -> Pointer)
+bsearch$41:	; £temporary2618 = int_to_int valueList (Pointer -> Pointer)
 	mov rbx, [rbp + 32]
 
-bsearch$46:	; £temporary2619 = middleIndex * valueSize
+bsearch$42:	; £temporary2619 = middleIndex * valueSize
 	mov eax, [rbp + 64]
 	xor edx, edx
 	imul dword [rbp + 44]
 
-bsearch$47:	; £temporary2620 = int_to_int £temporary2619 (Signed_Int -> Pointer)
+bsearch$43:	; £temporary2620 = int_to_int £temporary2619 (Signed_Int -> Pointer)
 	mov rcx, 4294967295
 	and rax, rcx
 
-bsearch$48:	; £temporary2621 = £temporary2618 + £temporary2620
+bsearch$44:	; middleValuePtr = £temporary2618 + £temporary2620
 	add rbx, rax
-
-bsearch$49:	; middleValuePtr = £temporary2621
 	mov [rbp + 68], rbx
 
-bsearch$50:	; call header integral zero 0 stack zero 0
+bsearch$45:	; call header integral zero 0 stack zero 0
 
-bsearch$51:	; parameter keyPtr, offset 100
+bsearch$46:	; parameter keyPtr, offset 100
 	mov rax, [rbp + 24]
 	mov [rbp + 100], rax
 
-bsearch$52:	; parameter middleValuePtr, offset 108
+bsearch$47:	; parameter middleValuePtr, offset 108
 	mov rax, [rbp + 68]
 	mov [rbp + 108], rax
 
-bsearch$53:	; call function noellipse-noellipse compare
-	mov qword [rbp + 76], bsearch$54
+bsearch$48:	; call function noellipse-noellipse compare
+	mov qword [rbp + 76], bsearch$49
 	mov [rbp + 84], rbp
 	add rbp, 76
 	mov rax, [rbp + 48]
 	jmp rax
 
-bsearch$54:	; post call
+bsearch$49:	; post call
 
-bsearch$55:	; £temporary2623 = return_value
+bsearch$50:	; £temporary2623 = return_value
 
-bsearch$56:	; middleCompare = £temporary2623
+bsearch$51:	; middleCompare = £temporary2623
 	mov [rbp + 76], ebx
 
-bsearch$57:	; if middleCompare >= int4$0# goto 60
+bsearch$52:	; if middleCompare >= int4$0# goto 55
 	cmp dword [rbp + 76], 0
-	jge bsearch$60
+	jge bsearch$55
 
-bsearch$58:	; lastIndex = middleIndex
+bsearch$53:	; lastIndex = middleIndex
 	mov eax, [rbp + 64]
 	mov [rbp + 60], eax
 
-bsearch$59:	; goto 6
-	jmp bsearch$6
+bsearch$54:	; goto 5
+	jmp bsearch$5
 
-bsearch$60:	; if middleCompare <= int4$0# goto 63
+bsearch$55:	; if middleCompare <= int4$0# goto 58
 	cmp dword [rbp + 76], 0
-	jle bsearch$63
+	jle bsearch$58
 
-bsearch$61:	; firstIndex = middleIndex
+bsearch$56:	; firstIndex = middleIndex
 	mov eax, [rbp + 64]
 	mov [rbp + 56], eax
 
-bsearch$62:	; goto 6
-	jmp bsearch$6
+bsearch$57:	; goto 5
+	jmp bsearch$5
 
-bsearch$63:	; return_value = middleValuePtr
+bsearch$58:	; return_value = middleValuePtr
 	mov rbx, [rbp + 68]
 
-bsearch$64:	; return
+bsearch$59:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-bsearch$65:	; function end bsearch
+bsearch$60:	; function end bsearch
 
 rand:	; £temporary2633 = g_randValue * int8$1664525#
 	mov rax, [@3822$g_randValue]
@@ -723,29 +707,27 @@ rand:	; £temporary2633 = g_randValue * int8$1664525#
 rand$1:	; £temporary2634 = £temporary2633 + int8$1013904223#
 	add rax, 1013904223
 
-rand$2:	; £temporary2635 = £temporary2634 % int8$127#
+rand$2:	; g_randValue = £temporary2634 % int8$127#
 	xor rdx, rdx
 	idiv qword [int8$127#]
+	mov [@3822$g_randValue], rax
 
-rand$3:	; g_randValue = £temporary2635
-	mov [@3822$g_randValue], rdx
-
-rand$4:	; £temporary2636 = int_to_int g_randValue (Signed_Long_Int -> Signed_Int)
+rand$3:	; £temporary2636 = int_to_int g_randValue (Signed_Long_Int -> Signed_Int)
 	mov rbx, [@3822$g_randValue]
 	cmp rbx, 0
-	jge rand$5
+	jge rand$4
 	neg rbx
 	neg ebx
 
-rand$5:	; return_value = £temporary2636
+rand$4:	; return_value = £temporary2636
 
-rand$6:	; return
+rand$5:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-rand$7:	; function end rand
+rand$6:	; function end rand
 
 srand:	; £temporary2637 = int_to_int seed (Unsigned_Int -> Signed_Long_Int)
 	mov eax, [rbp + 24]
@@ -840,7 +822,7 @@ print_heap2$20:	; parameter string_2020index2025u2C20address2025u2C20size2025u0A
 print_heap2$21:	; £temporary2647 = index
 	mov eax, [rbp + 36]
 
-print_heap2$22:	; ++index
+print_heap2$22:	; index = index + int4$1#
 	inc dword [rbp + 36]
 
 print_heap2$23:	; parameter £temporary2647, offset 76
@@ -1008,7 +990,7 @@ atexit$28:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-atexit$29:	; ++index
+atexit$29:	; index = index + int4$1#
 	inc dword [rbp + 32]
 
 atexit$30:	; goto 6
@@ -1134,7 +1116,7 @@ exit$27:	; call function noellipse-noellipse £field2695 -> £temporary2698
 exit$28:	; post call
 	mov rbx, [rbp + 32]
 
-exit$29:	; --index
+exit$29:	; index = index - int4$1#
 	dec dword [rbp + 28]
 
 exit$30:	; goto 6
@@ -1227,7 +1209,7 @@ swap$17:	; £field2721 -> £temporary2724 = tempValue
 	mov al, [rbp + 48]
 	mov [rsi], al
 
-swap$18:	; ++index
+swap$18:	; index = index + int4$1#
 	inc dword [rbp + 44]
 
 swap$19:	; goto 2
@@ -1249,132 +1231,126 @@ qsort$1:	; £temporary2725 = int_to_int valueList (Pointer -> Pointer)
 qsort$2:	; charList = £temporary2725
 	mov [rbp + 52], rax
 
-qsort$3:	; £temporary2726 = listSize - int4$1#
+qsort$3:	; index1 = listSize - int4$1#
 	mov eax, [rbp + 32]
 	dec eax
-
-qsort$4:	; index1 = £temporary2726
 	mov [rbp + 60], eax
 
-qsort$5:	; if index1 <= int4$0# goto 36
+qsort$4:	; if index1 <= int4$0# goto 33
 	cmp dword [rbp + 60], 0
-	jle qsort$36
+	jle qsort$33
 
-qsort$6:	; update = int4$0#
+qsort$5:	; update = int4$0#
 	mov dword [rbp + 48], 0
 
-qsort$7:	; index2 = int4$0#
+qsort$6:	; index2 = int4$0#
 	mov dword [rbp + 64], 0
 
-qsort$8:	; if index2 >= index1 goto 34
+qsort$7:	; if index2 >= index1 goto 31
 	mov eax, [rbp + 64]
 	cmp eax, [rbp + 60]
-	jge qsort$34
+	jge qsort$31
 
-qsort$9:	; £temporary2731 = index2 * valueSize
+qsort$8:	; £temporary2731 = index2 * valueSize
 	mov eax, [rbp + 64]
 	xor edx, edx
 	imul dword [rbp + 36]
 
-qsort$10:	; £temporary2732 = int_to_int £temporary2731 (Signed_Int -> Pointer)
+qsort$9:	; £temporary2732 = int_to_int £temporary2731 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
-qsort$11:	; £temporary2733 = charList + £temporary2732
+qsort$10:	; valuePtr1 = charList + £temporary2732
 	mov rbx, [rbp + 52]
 	add rbx, rax
-
-qsort$12:	; valuePtr1 = £temporary2733
 	mov [rbp + 68], rbx
 
-qsort$13:	; £temporary2735 = index2 + int4$1#
+qsort$11:	; £temporary2735 = index2 + int4$1#
 	mov eax, [rbp + 64]
 	inc eax
 
-qsort$14:	; £temporary2736 = £temporary2735 * valueSize
+qsort$12:	; £temporary2736 = £temporary2735 * valueSize
 	xor edx, edx
 	imul dword [rbp + 36]
 
-qsort$15:	; £temporary2737 = int_to_int £temporary2736 (Signed_Int -> Pointer)
+qsort$13:	; £temporary2737 = int_to_int £temporary2736 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
-qsort$16:	; £temporary2738 = charList + £temporary2737
+qsort$14:	; valuePtr2 = charList + £temporary2737
 	mov rbx, [rbp + 52]
 	add rbx, rax
-
-qsort$17:	; valuePtr2 = £temporary2738
 	mov [rbp + 76], rbx
 
-qsort$18:	; call header integral zero 0 stack zero 0
+qsort$15:	; call header integral zero 0 stack zero 0
 
-qsort$19:	; parameter valuePtr1, offset 108
+qsort$16:	; parameter valuePtr1, offset 108
 	mov rax, [rbp + 68]
 	mov [rbp + 108], rax
 
-qsort$20:	; parameter valuePtr2, offset 116
+qsort$17:	; parameter valuePtr2, offset 116
 	mov rax, [rbp + 76]
 	mov [rbp + 116], rax
 
-qsort$21:	; call function noellipse-noellipse compare
-	mov qword [rbp + 84], qsort$22
+qsort$18:	; call function noellipse-noellipse compare
+	mov qword [rbp + 84], qsort$19
 	mov [rbp + 92], rbp
 	add rbp, 84
 	mov rax, [rbp + 40]
 	jmp rax
 
-qsort$22:	; post call
+qsort$19:	; post call
 
-qsort$23:	; £temporary2740 = return_value
+qsort$20:	; £temporary2740 = return_value
 
-qsort$24:	; if £temporary2740 <= int4$0# goto 32
+qsort$21:	; if £temporary2740 <= int4$0# goto 29
 	cmp ebx, 0
-	jle qsort$32
+	jle qsort$29
 
-qsort$25:	; call header integral zero 0 stack zero 0
+qsort$22:	; call header integral zero 0 stack zero 0
 
-qsort$26:	; parameter valuePtr1, offset 108
+qsort$23:	; parameter valuePtr1, offset 108
 	mov rax, [rbp + 68]
 	mov [rbp + 108], rax
 
-qsort$27:	; parameter valuePtr2, offset 116
+qsort$24:	; parameter valuePtr2, offset 116
 	mov rax, [rbp + 76]
 	mov [rbp + 116], rax
 
-qsort$28:	; parameter valueSize, offset 124
+qsort$25:	; parameter valueSize, offset 124
 	mov eax, [rbp + 36]
 	mov [rbp + 124], eax
 
-qsort$29:	; call function noellipse-noellipse swap
-	mov qword [rbp + 84], qsort$30
+qsort$26:	; call function noellipse-noellipse swap
+	mov qword [rbp + 84], qsort$27
 	mov [rbp + 92], rbp
 	add rbp, 84
 	jmp swap
 
-qsort$30:	; post call
+qsort$27:	; post call
 
-qsort$31:	; update = int4$1#
+qsort$28:	; update = int4$1#
 	mov dword [rbp + 48], 1
 
-qsort$32:	; ++index2
+qsort$29:	; index2 = index2 + int4$1#
 	inc dword [rbp + 64]
 
-qsort$33:	; goto 8
-	jmp qsort$8
+qsort$30:	; goto 7
+	jmp qsort$7
 
-qsort$34:	; --index1
+qsort$31:	; index1 = index1 - int4$1#
 	dec dword [rbp + 60]
 
-qsort$35:	; goto 5
-	jmp qsort$5
+qsort$32:	; goto 4
+	jmp qsort$4
 
-qsort$36:	; return
+qsort$33:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-qsort$37:	; function end qsort
+qsort$34:	; function end qsort
 
 _abs:	; if value >= int4$0# goto 4
 	cmp dword [rbp + 24], 0
@@ -1451,33 +1427,29 @@ div$5:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-div$6:	; £temporary2760 = num / denum
+div$6:	; result$quot = num / denum
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [rbp + 28]
-
-div$7:	; result$quot = £temporary2760
 	mov [rbp + 32], eax
 
-div$8:	; £temporary2762 = num % denum
+div$7:	; result$rem = num % denum
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [rbp + 28]
+	mov [rbp + 36], eax
 
-div$9:	; result$rem = £temporary2762
-	mov [rbp + 36], edx
-
-div$10:	; return_value = result
+div$8:	; return_value = result
 	mov rbx, rbp
 	add rbx, 32
 
-div$11:	; return
+div$9:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-div$12:	; function end div
+div$10:	; function end div
 
 ldiv:	; result.quot = int8$0#
 	mov qword [rbp + 40], 0
@@ -1502,33 +1474,29 @@ ldiv$5:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-ldiv$6:	; £temporary2769 = num / denum
+ldiv$6:	; result$quot = num / denum
 	mov rax, [rbp + 24]
 	xor rdx, rdx
 	idiv qword [rbp + 32]
-
-ldiv$7:	; result$quot = £temporary2769
 	mov [rbp + 40], rax
 
-ldiv$8:	; £temporary2771 = num % denum
+ldiv$7:	; result$rem = num % denum
 	mov rax, [rbp + 24]
 	xor rdx, rdx
 	idiv qword [rbp + 32]
+	mov [rbp + 48], rax
 
-ldiv$9:	; result$rem = £temporary2771
-	mov [rbp + 48], rdx
-
-ldiv$10:	; return_value = result
+ldiv$8:	; return_value = result
 	mov rbx, rbp
 	add rbx, 40
 
-ldiv$11:	; return
+ldiv$9:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-ldiv$12:	; function end ldiv
+ldiv$10:	; function end ldiv
 section .data
 
 $IntegralStorage#:

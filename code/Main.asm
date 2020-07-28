@@ -129,7 +129,7 @@ main$16:	; call function noellipse-ellipse printf, extra 12
 
 main$17:	; post call
 
-main$18:	; ++index
+main$18:	; index = index + int4$1#
 	inc dword [rbp + 36]
 
 main$19:	; goto 7
@@ -209,7 +209,7 @@ main$38:	; call function noellipse-ellipse printf, extra 12
 
 main$39:	; post call
 
-main$40:	; ++index
+main$40:	; index = index + int4$1#
 	inc dword [rbp + 36]
 
 main$41:	; goto 25

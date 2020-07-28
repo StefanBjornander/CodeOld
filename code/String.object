@@ -1881,109 +1881,106 @@ memmove$3:	; charSource = £temporary3433
 13:		mov [bp + 14], ax
 15:	
 
-memmove$4:	; if source >= target goto 15
+memmove$4:	; if source >= target goto 14
 16:		mov ax, [bp + 8]
 17:		cmp ax, [bp + 6]
-18:		jge memmove$15
+18:		jge memmove$14
 20:	
 
-memmove$5:	; £temporary3435 = size - 1
+memmove$5:	; index = size - 1
 21:		mov ax, [bp + 10]
 22:		sub ax, 1
-24:	
+23:		mov [bp + 16], ax
+25:	
 
-memmove$6:	; index = £temporary3435
-25:		mov [bp + 16], ax
-27:	
+memmove$6:	; if index < 0 goto 23
+26:		cmp word [bp + 16], 0
+27:		jl memmove$23
+29:	
 
-memmove$7:	; if index < 0 goto 24
-28:		cmp word [bp + 16], 0
-29:		jl memmove$24
-31:	
+memmove$7:	; £temporary3439 = charTarget + index
+30:		mov si, [bp + 12]
+31:		add si, [bp + 16]
+33:	
 
-memmove$8:	; £temporary3439 = charTarget + index
-32:		mov si, [bp + 12]
-33:		add si, [bp + 16]
+memmove$8:	; £temporary3438 -> £temporary3439 = *£temporary3439
 35:	
 
-memmove$9:	; £temporary3438 -> £temporary3439 = *£temporary3439
-37:	
+memmove$9:	; £temporary3441 = charSource + index
+36:		mov di, [bp + 14]
+37:		add di, [bp + 16]
+39:	
 
-memmove$10:	; £temporary3441 = charSource + index
-38:		mov di, [bp + 14]
-39:		add di, [bp + 16]
+memmove$10:	; £temporary3440 -> £temporary3441 = *£temporary3441
 41:	
 
-memmove$11:	; £temporary3440 -> £temporary3441 = *£temporary3441
-43:	
+memmove$11:	; £temporary3438 -> £temporary3439 = £temporary3440 -> £temporary3441
+42:		mov al, [di]
+43:		mov [si], al
+45:	
 
-memmove$12:	; £temporary3438 -> £temporary3439 = £temporary3440 -> £temporary3441
-44:		mov al, [di]
-45:		mov [si], al
-47:	
+memmove$12:	; --index
+46:		dec word [bp + 16]
+48:	
 
-memmove$13:	; --index
-48:		dec word [bp + 16]
-50:	
+memmove$13:	; goto 6
+49:		jmp memmove$6
+51:	
 
-memmove$14:	; goto 7
-51:		jmp memmove$7
-53:	
+memmove$14:	; index = 0
+52:		mov word [bp + 16], 0
+54:	
 
-memmove$15:	; index = 0
-54:		mov word [bp + 16], 0
-56:	
+memmove$15:	; if index >= size goto 23
+55:		mov ax, [bp + 16]
+56:		cmp ax, [bp + 10]
+57:		jge memmove$23
+59:	
 
-memmove$16:	; if index >= size goto 24
-57:		mov ax, [bp + 16]
-58:		cmp ax, [bp + 10]
-59:		jge memmove$24
-61:	
+memmove$16:	; £temporary3445 = charTarget + index
+60:		mov si, [bp + 12]
+61:		add si, [bp + 16]
+63:	
 
-memmove$17:	; £temporary3445 = charTarget + index
-62:		mov si, [bp + 12]
-63:		add si, [bp + 16]
+memmove$17:	; £temporary3444 -> £temporary3445 = *£temporary3445
 65:	
 
-memmove$18:	; £temporary3444 -> £temporary3445 = *£temporary3445
-67:	
+memmove$18:	; £temporary3447 = charSource + index
+66:		mov di, [bp + 14]
+67:		add di, [bp + 16]
+69:	
 
-memmove$19:	; £temporary3447 = charSource + index
-68:		mov di, [bp + 14]
-69:		add di, [bp + 16]
+memmove$19:	; £temporary3446 -> £temporary3447 = *£temporary3447
 71:	
 
-memmove$20:	; £temporary3446 -> £temporary3447 = *£temporary3447
-73:	
+memmove$20:	; £temporary3444 -> £temporary3445 = £temporary3446 -> £temporary3447
+72:		mov al, [di]
+73:		mov [si], al
+75:	
 
-memmove$21:	; £temporary3444 -> £temporary3445 = £temporary3446 -> £temporary3447
-74:		mov al, [di]
-75:		mov [si], al
-77:	
+memmove$21:	; ++index
+76:		inc word [bp + 16]
+78:	
 
-memmove$22:	; ++index
-78:		inc word [bp + 16]
-80:	
+memmove$22:	; goto 15
+79:		jmp memmove$15
+81:	
 
-memmove$23:	; goto 16
-81:		jmp memmove$16
-83:	
+memmove$23:	; £temporary3448 = int_to_int target (Pointer -> Pointer)
+82:		mov bx, [bp + 6]
+85:	
 
-memmove$24:	; £temporary3448 = int_to_int target (Pointer -> Pointer)
-84:		mov bx, [bp + 6]
+memmove$24:	; return_value = £temporary3448
 87:	
 
-memmove$25:	; return_value = £temporary3448
-89:	
+memmove$25:	; return
+88:		mov ax, [bp]
+89:		mov di, [bp + 4]
+90:		mov bp, [bp + 2]
+91:		jmp ax
+93:	
 
-memmove$26:	; return
-90:		mov ax, [bp]
-91:		mov di, [bp + 4]
-92:		mov bp, [bp + 2]
-93:		jmp ax
-95:	
-
-memmove$27:	; function end memmove
+memmove$26:	; function end memmove
 1:	
 
 memcmp:	; £temporary3449 = int_to_int left (Pointer -> Pointer)

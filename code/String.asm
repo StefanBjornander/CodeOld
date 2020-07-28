@@ -70,7 +70,7 @@ strcpy$12:	; £field3180 -> £temporary3183 = £field3184 -> £temporary3187
 	mov al, [rdi]
 	mov [rsi], al
 
-strcpy$13:	; ++index
+strcpy$13:	; index = index + int4$1#
 	inc dword [rbp + 40]
 
 strcpy$14:	; goto 2
@@ -152,7 +152,7 @@ strncpy$13:	; £field3200 -> £temporary3203 = £field3204 -> £temporary3207
 	mov al, [rdi]
 	mov [rsi], al
 
-strncpy$14:	; ++index
+strncpy$14:	; index = index + int4$1#
 	inc dword [rbp + 44]
 
 strncpy$15:	; goto 2
@@ -177,7 +177,7 @@ strncpy$19:	; £field3210 -> £temporary3213 = *£temporary3213
 strncpy$20:	; £field3210 -> £temporary3213 = int1$0#
 	mov byte [rsi], 0
 
-strncpy$21:	; ++index
+strncpy$21:	; index = index + int4$1#
 	inc dword [rbp + 44]
 
 strncpy$22:	; goto 16
@@ -262,7 +262,7 @@ strcat$19:	; £field3222 -> £temporary3225 = £field3226 -> £temporary3229
 	mov al, [rdi]
 	mov [rsi], al
 
-strcat$20:	; ++index
+strcat$20:	; index = index + int4$1#
 	inc dword [rbp + 40]
 
 strcat$21:	; goto 8
@@ -372,7 +372,7 @@ strncat$21:	; £field3247 -> £temporary3250 = £field3251 -> £temporary3254
 	mov al, [rdi]
 	mov [rsi], al
 
-strncat$22:	; ++index
+strncat$22:	; index = index + int4$1#
 	inc dword [rbp + 44]
 
 strncat$23:	; goto 8
@@ -573,7 +573,7 @@ strcmp$41:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-strcmp$42:	; ++index
+strcmp$42:	; index = index + int4$1#
 	inc dword [rbp + 40]
 
 strcmp$43:	; goto 2
@@ -750,7 +750,7 @@ strncmp$42:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-strncmp$43:	; ++index
+strncmp$43:	; index = index + int4$1#
 	inc dword [rbp + 44]
 
 strncmp$44:	; goto 2
@@ -834,7 +834,7 @@ strchr$17:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-strchr$18:	; ++index
+strchr$18:	; index = index + int4$1#
 	inc dword [rbp + 36]
 
 strchr$19:	; goto 4
@@ -916,7 +916,7 @@ strrchr$16:	; £temporary3377 = &£field3373 -> £temporary3376
 strrchr$17:	; result = £temporary3377
 	mov [rbp + 40], rsi
 
-strrchr$18:	; ++index
+strrchr$18:	; index = index + int4$1#
 	inc dword [rbp + 36]
 
 strrchr$19:	; goto 5
@@ -1004,7 +1004,7 @@ strspn$18:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-strspn$19:	; ++index
+strspn$19:	; index = index + int4$1#
 	inc dword [rbp + 40]
 
 strspn$20:	; goto 2
@@ -1092,7 +1092,7 @@ strcspn$18:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-strcspn$19:	; ++index
+strcspn$19:	; index = index + int4$1#
 	inc dword [rbp + 40]
 
 strcspn$20:	; goto 2
@@ -1192,7 +1192,7 @@ strpbrk$22:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-strpbrk$23:	; ++index
+strpbrk$23:	; index = index + int4$1#
 	inc dword [rbp + 40]
 
 strpbrk$24:	; goto 2
@@ -1282,7 +1282,7 @@ strstr$20:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-strstr$21:	; ++index
+strstr$21:	; index = index + int4$1#
 	inc dword [rbp + 40]
 
 strstr$22:	; goto 2
@@ -1319,7 +1319,7 @@ strlen$5:	; if £field3446 -> £temporary3449 == int1$0# goto 8
 	cmp byte [rsi], 0
 	je strlen$8
 
-strlen$6:	; ++index
+strlen$6:	; index = index + int4$1#
 	inc dword [rbp + 32]
 
 strlen$7:	; goto 2
@@ -1536,7 +1536,7 @@ strtok$33:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-strtok$34:	; ++index
+strtok$34:	; index = index + int4$1#
 	inc dword [rbp + 40]
 
 strtok$35:	; goto 7
@@ -1702,7 +1702,7 @@ strtok$78:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-strtok$79:	; ++index
+strtok$79:	; index = index + int4$1#
 	inc dword [rbp + 40]
 
 strtok$80:	; goto 51
@@ -1785,7 +1785,7 @@ memcpy$12:	; £field3532 -> £temporary3535 = £field3536 -> £temporary3539
 	mov al, [rdi]
 	mov [rsi], al
 
-memcpy$13:	; ++index
+memcpy$13:	; index = index + int4$1#
 	inc dword [rbp + 60]
 
 memcpy$14:	; goto 5
@@ -1816,106 +1816,104 @@ memmove$2:	; £temporary3542 = int_to_int source (Pointer -> Pointer)
 memmove$3:	; charSource = £temporary3542
 	mov [rbp + 52], rax
 
-memmove$4:	; if source >= target goto 17
+memmove$4:	; if source >= target goto 16
 	mov rax, [rbp + 32]
 	cmp rax, [rbp + 24]
-	jge memmove$17
+	jge memmove$16
 
-memmove$5:	; £temporary3544 = size - int4$1#
+memmove$5:	; index = size - int4$1#
 	mov eax, [rbp + 40]
 	dec eax
-
-memmove$6:	; index = £temporary3544
 	mov [rbp + 60], eax
 
-memmove$7:	; if index < int4$0# goto 28
+memmove$6:	; if index < int4$0# goto 27
 	cmp dword [rbp + 60], 0
-	jl memmove$28
+	jl memmove$27
 
-memmove$8:	; £temporary3548 = int_to_int index (Signed_Int -> Pointer)
+memmove$7:	; £temporary3548 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
 
-memmove$9:	; £temporary3550 = charTarget + £temporary3548
+memmove$8:	; £temporary3550 = charTarget + £temporary3548
 	mov rsi, [rbp + 44]
 	add rsi, rax
 
-memmove$10:	; £field3547 -> £temporary3550 = *£temporary3550
+memmove$9:	; £field3547 -> £temporary3550 = *£temporary3550
 
-memmove$11:	; £temporary3552 = int_to_int index (Signed_Int -> Pointer)
+memmove$10:	; £temporary3552 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
 
-memmove$12:	; £temporary3554 = charSource + £temporary3552
+memmove$11:	; £temporary3554 = charSource + £temporary3552
 	mov rdi, [rbp + 52]
 	add rdi, rax
 
-memmove$13:	; £field3551 -> £temporary3554 = *£temporary3554
+memmove$12:	; £field3551 -> £temporary3554 = *£temporary3554
 
-memmove$14:	; £field3547 -> £temporary3550 = £field3551 -> £temporary3554
+memmove$13:	; £field3547 -> £temporary3550 = £field3551 -> £temporary3554
 	mov al, [rdi]
 	mov [rsi], al
 
-memmove$15:	; --index
+memmove$14:	; index = index - int4$1#
 	dec dword [rbp + 60]
 
-memmove$16:	; goto 7
-	jmp memmove$7
+memmove$15:	; goto 6
+	jmp memmove$6
 
-memmove$17:	; index = int4$0#
+memmove$16:	; index = int4$0#
 	mov dword [rbp + 60], 0
 
-memmove$18:	; if index >= size goto 28
+memmove$17:	; if index >= size goto 27
 	mov eax, [rbp + 60]
 	cmp eax, [rbp + 40]
-	jge memmove$28
+	jge memmove$27
 
-memmove$19:	; £temporary3558 = int_to_int index (Signed_Int -> Pointer)
+memmove$18:	; £temporary3558 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
 
-memmove$20:	; £temporary3560 = charTarget + £temporary3558
+memmove$19:	; £temporary3560 = charTarget + £temporary3558
 	mov rsi, [rbp + 44]
 	add rsi, rax
 
-memmove$21:	; £field3557 -> £temporary3560 = *£temporary3560
+memmove$20:	; £field3557 -> £temporary3560 = *£temporary3560
 
-memmove$22:	; £temporary3562 = int_to_int index (Signed_Int -> Pointer)
+memmove$21:	; £temporary3562 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
 
-memmove$23:	; £temporary3564 = charSource + £temporary3562
+memmove$22:	; £temporary3564 = charSource + £temporary3562
 	mov rdi, [rbp + 52]
 	add rdi, rax
 
-memmove$24:	; £field3561 -> £temporary3564 = *£temporary3564
+memmove$23:	; £field3561 -> £temporary3564 = *£temporary3564
 
-memmove$25:	; £field3557 -> £temporary3560 = £field3561 -> £temporary3564
+memmove$24:	; £field3557 -> £temporary3560 = £field3561 -> £temporary3564
 	mov al, [rdi]
 	mov [rsi], al
 
-memmove$26:	; ++index
+memmove$25:	; index = index + int4$1#
 	inc dword [rbp + 60]
 
-memmove$27:	; goto 18
-	jmp memmove$18
+memmove$26:	; goto 17
+	jmp memmove$17
 
-memmove$28:	; £temporary3565 = int_to_int target (Pointer -> Pointer)
+memmove$27:	; £temporary3565 = int_to_int target (Pointer -> Pointer)
 	mov rbx, [rbp + 24]
 
-memmove$29:	; return_value = £temporary3565
+memmove$28:	; return_value = £temporary3565
 
-memmove$30:	; return
+memmove$29:	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
-memmove$31:	; function end memmove
+memmove$30:	; function end memmove
 
 memcmp:	; £temporary3566 = int_to_int left (Pointer -> Pointer)
 	mov rax, [rbp + 24]
@@ -2009,7 +2007,7 @@ memcmp$23:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-memcmp$24:	; ++index
+memcmp$24:	; index = index + int4$1#
 	inc dword [rbp + 60]
 
 memcmp$25:	; goto 5
@@ -2091,7 +2089,7 @@ memchr$17:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-memchr$18:	; ++index
+memchr$18:	; index = index + int4$1#
 	inc dword [rbp + 40]
 
 memchr$19:	; goto 6
@@ -2147,7 +2145,7 @@ memset$9:	; £field3607 -> £temporary3610 = c
 	mov al, [rbp + 48]
 	mov [rsi], al
 
-memset$10:	; ++index
+memset$10:	; index = index + int4$1#
 	inc dword [rbp + 49]
 
 memset$11:	; goto 5
