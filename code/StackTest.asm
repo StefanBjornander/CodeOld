@@ -12,13 +12,13 @@ stack_test$1:	; call header integral zero 0 stack zero 0
 stack_test$2:	; parameter string_25i20#, offset 48
 	mov qword [rbp + 48], string_25i20#
 
-stack_test$3:	; £temporary5264 = i
-	mov eax, [@7418$i]
+stack_test$3:	; £temporary3847 = i
+	mov eax, [@8835$i]
 
 stack_test$4:	; i = i + int4$1#
-	inc dword [@7418$i]
+	inc dword [@8835$i]
 
-stack_test$5:	; parameter £temporary5264, offset 56
+stack_test$5:	; parameter £temporary3847, offset 56
 	mov [rbp + 56], eax
 
 stack_test$6:	; call function noellipse-ellipse printf, extra 4
@@ -65,9 +65,9 @@ heap_test$3:	; call function noellipse-noellipse malloc
 
 heap_test$4:	; post call
 
-heap_test$5:	; £temporary5269 = return_value
+heap_test$5:	; £temporary3850 = return_value
 
-heap_test$6:	; pointer = £temporary5269
+heap_test$6:	; pointer = £temporary3850
 	mov [rbp + 28], rbx
 
 heap_test$7:	; if pointer == int8$0# goto 17
@@ -79,13 +79,13 @@ heap_test$8:	; call header integral zero 0 stack zero 0
 heap_test$9:	; parameter string_102420bytes2Dblock20number3A2025i0A#, offset 60
 	mov qword [rbp + 60], string_102420bytes2Dblock20number3A2025i0A#
 
-heap_test$10:	; £temporary5271 = count
+heap_test$10:	; £temporary3852 = count
 	mov eax, [rbp + 24]
 
 heap_test$11:	; count = count + int4$1#
 	inc dword [rbp + 24]
 
-heap_test$12:	; parameter £temporary5271, offset 68
+heap_test$12:	; parameter £temporary3852, offset 68
 	mov [rbp + 68], eax
 
 heap_test$13:	; parameter pointer, offset 72
@@ -117,7 +117,7 @@ section .data
 $IntegralStorage#:
 	times 8 db 0
 
-@7418$i:
+@8835$i:
 	; initializer Signed_Int
 	dd 0
 

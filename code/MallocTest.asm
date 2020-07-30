@@ -16,10 +16,12 @@ section .text
 malloc_test2:	; empty
 
 malloc_test2$1:	; p = int8$0#
-	mov qword [rbp + 28], 0
+	mov rax, 0
+	mov [rbp + 28], rax
 
 malloc_test2$2:	; r = int8$0#
-	mov qword [rbp + 36], 0
+	mov rax, 0
+	mov [rbp + 36], rax
 
 malloc_test2$3:	; call header integral zero 0 stack zero 0
 
@@ -34,9 +36,9 @@ malloc_test2$5:	; call function noellipse-noellipse malloc
 
 malloc_test2$6:	; post call
 
-malloc_test2$7:	; £temporary5277 = return_value
+malloc_test2$7:	; £temporary3854 = return_value
 
-malloc_test2$8:	; q = £temporary5277
+malloc_test2$8:	; q = £temporary3854
 	mov [rbp + 44], rbx
 
 malloc_test2$9:	; index = int4$0#
@@ -59,9 +61,9 @@ malloc_test2$13:	; call function noellipse-noellipse malloc
 
 malloc_test2$14:	; post call
 
-malloc_test2$15:	; £temporary5280 = return_value
+malloc_test2$15:	; £temporary3857 = return_value
 
-malloc_test2$16:	; p = £temporary5280
+malloc_test2$16:	; p = £temporary3857
 	mov [rbp + 28], rbx
 
 malloc_test2$17:	; if index != int4$5# goto 19
@@ -274,9 +276,9 @@ malloc_test3$3:	; call function noellipse-noellipse calloc
 
 malloc_test3$4:	; post call
 
-malloc_test3$5:	; £temporary5309 = return_value
+malloc_test3$5:	; £temporary3872 = return_value
 
-malloc_test3$6:	; a = £temporary5309
+malloc_test3$6:	; a = £temporary3872
 	mov [rbp + 24], rbx
 
 malloc_test3$7:	; call header integral zero 0 stack zero 0
@@ -295,9 +297,9 @@ malloc_test3$10:	; call function noellipse-noellipse calloc
 
 malloc_test3$11:	; post call
 
-malloc_test3$12:	; £temporary5310 = return_value
+malloc_test3$12:	; £temporary3873 = return_value
 
-malloc_test3$13:	; b = £temporary5310
+malloc_test3$13:	; b = £temporary3873
 	mov [rbp + 32], rbx
 
 malloc_test3$14:	; call header integral zero 0 stack zero 0
@@ -316,9 +318,9 @@ malloc_test3$17:	; call function noellipse-noellipse calloc
 
 malloc_test3$18:	; post call
 
-malloc_test3$19:	; £temporary5311 = return_value
+malloc_test3$19:	; £temporary3874 = return_value
 
-malloc_test3$20:	; c = £temporary5311
+malloc_test3$20:	; c = £temporary3874
 	mov [rbp + 40], rbx
 
 malloc_test3$21:	; call header integral zero 0 stack zero 0
@@ -337,9 +339,9 @@ malloc_test3$24:	; call function noellipse-noellipse calloc
 
 malloc_test3$25:	; post call
 
-malloc_test3$26:	; £temporary5312 = return_value
+malloc_test3$26:	; £temporary3875 = return_value
 
-malloc_test3$27:	; d = £temporary5312
+malloc_test3$27:	; d = £temporary3875
 	mov [rbp + 48], rbx
 
 malloc_test3$28:	; call header integral zero 0 stack zero 0
@@ -358,9 +360,9 @@ malloc_test3$31:	; call function noellipse-noellipse calloc
 
 malloc_test3$32:	; post call
 
-malloc_test3$33:	; £temporary5313 = return_value
+malloc_test3$33:	; £temporary3876 = return_value
 
-malloc_test3$34:	; e = £temporary5313
+malloc_test3$34:	; e = £temporary3876
 	mov [rbp + 56], rbx
 
 malloc_test3$35:	; call header integral zero 0 stack zero 0
@@ -463,16 +465,17 @@ malloc_test3$62:	; function end malloc_test3
 
 rec:	; empty
 
-rec$1:	; £temporary5336 = bp
+rec$1:	; £temporary3884 = bp
 
-rec$2:	; £temporary5337 = int_to_int £temporary5336 (Unsigned_Short_Int -> Unsigned_Int)
+rec$2:	; £temporary3885 = int_to_int £temporary3884 (Unsigned_Short_Int -> Unsigned_Int)
 	and ebp, 65535
 
-rec$3:	; stackTop = £temporary5337
+rec$3:	; stackTop = £temporary3885
 	mov [rbp + 24], ebp
 
 rec$4:	; lowHeapPtr = int8$65534#
-	mov qword [rbp + 28], 65534
+	mov rax, 65534
+	mov [rbp + 28], rax
 
 rec$5:	; call header integral zero 0 stack zero 0
 
@@ -483,10 +486,10 @@ rec$7:	; parameter stackTop, offset 68
 	mov eax, [rbp + 24]
 	mov [rbp + 68], eax
 
-rec$8:	; £field5338 -> lowHeapPtr = *lowHeapPtr
+rec$8:	; £field3886 -> lowHeapPtr = *lowHeapPtr
 	mov rsi, [rbp + 28]
 
-rec$9:	; parameter £field5338 -> lowHeapPtr, offset 72
+rec$9:	; parameter £field3886 -> lowHeapPtr, offset 72
 	mov eax, [rsi]
 	mov [rbp + 72], eax
 
@@ -549,9 +552,9 @@ malloc_test$2:	; call function noellipse-noellipse malloc
 
 malloc_test$3:	; post call
 
-malloc_test$4:	; £temporary5345 = return_value
+malloc_test$4:	; £temporary3890 = return_value
 
-malloc_test$5:	; b = £temporary5345
+malloc_test$5:	; b = £temporary3890
 	mov [rbp + 24], rbx
 
 malloc_test$6:	; call header integral zero 0 stack zero 0
@@ -567,9 +570,9 @@ malloc_test$8:	; call function noellipse-noellipse malloc
 
 malloc_test$9:	; post call
 
-malloc_test$10:	; £temporary5346 = return_value
+malloc_test$10:	; £temporary3891 = return_value
 
-malloc_test$11:	; c = £temporary5346
+malloc_test$11:	; c = £temporary3891
 	mov [rbp + 32], rbx
 
 malloc_test$12:	; call header integral zero 0 stack zero 0
@@ -585,9 +588,9 @@ malloc_test$14:	; call function noellipse-noellipse malloc
 
 malloc_test$15:	; post call
 
-malloc_test$16:	; £temporary5347 = return_value
+malloc_test$16:	; £temporary3892 = return_value
 
-malloc_test$17:	; d = £temporary5347
+malloc_test$17:	; d = £temporary3892
 	mov [rbp + 40], rbx
 
 malloc_test$18:	; call header integral zero 0 stack zero 0
@@ -708,16 +711,17 @@ malloc_test$51:	; function end malloc_test
 
 malloc_test6:	; empty
 
-malloc_test6$1:	; £temporary5365 = bp
+malloc_test6$1:	; £temporary3902 = bp
 
-malloc_test6$2:	; £temporary5366 = int_to_int £temporary5365 (Unsigned_Short_Int -> Unsigned_Int)
+malloc_test6$2:	; £temporary3903 = int_to_int £temporary3902 (Unsigned_Short_Int -> Unsigned_Int)
 	and ebp, 65535
 
-malloc_test6$3:	; stackTop = £temporary5366
+malloc_test6$3:	; stackTop = £temporary3903
 	mov [rbp + 28], ebp
 
 malloc_test6$4:	; lowHeapPtr = int8$65534#
-	mov qword [rbp + 32], 65534
+	mov rax, 65534
+	mov [rbp + 32], rax
 
 malloc_test6$5:	; i = int4$0#
 	mov dword [rbp + 24], 0
@@ -739,9 +743,9 @@ malloc_test6$9:	; call function noellipse-noellipse malloc
 
 malloc_test6$10:	; post call
 
-malloc_test6$11:	; £temporary5369 = return_value
+malloc_test6$11:	; £temporary3906 = return_value
 
-malloc_test6$12:	; p = £temporary5369
+malloc_test6$12:	; p = £temporary3906
 	mov [rbp + 40], rbx
 
 malloc_test6$13:	; call header integral zero 0 stack zero 0
@@ -761,10 +765,10 @@ malloc_test6$17:	; parameter stackTop, offset 92
 	mov eax, [rbp + 28]
 	mov [rbp + 92], eax
 
-malloc_test6$18:	; £field5370 -> lowHeapPtr = *lowHeapPtr
+malloc_test6$18:	; £field3907 -> lowHeapPtr = *lowHeapPtr
 	mov rsi, [rbp + 32]
 
-malloc_test6$19:	; parameter £field5370 -> lowHeapPtr, offset 96
+malloc_test6$19:	; parameter £field3907 -> lowHeapPtr, offset 96
 	mov eax, [rsi]
 	mov [rbp + 96], eax
 

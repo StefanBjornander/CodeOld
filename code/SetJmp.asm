@@ -3,42 +3,42 @@
 
 section .text
 
-setjmp:	; £temporary901 = bp
+setjmp:	; £temporary765 = bp
 
-setjmp$1:	; £temporary902 = int_to_int £temporary901 (Unsigned_Short_Int -> Pointer)
+setjmp$1:	; £temporary766 = int_to_int £temporary765 (Unsigned_Short_Int -> Pointer)
 	mov rax, 65535
 	and rbp, rax
 
-setjmp$2:	; ebp_pointer = £temporary902
+setjmp$2:	; ebp_pointer = £temporary766
 	mov [rbp + 32], rbp
 
-setjmp$3:	; £field903 -> buf = *buf
+setjmp$3:	; £field767 -> buf = *buf
 	mov rsi, [rbp + 24]
 
-setjmp$4:	; £field904 -> ebp_pointer = *ebp_pointer
+setjmp$4:	; £field768 -> ebp_pointer = *ebp_pointer
 	mov rdi, [rbp + 32]
 
-setjmp$5:	; £field903 -> buf = £field904 -> ebp_pointer
+setjmp$5:	; £field767 -> buf = £field768 -> ebp_pointer
 	mov eax, [rdi]
 	mov [rsi], eax
 
-setjmp$6:	; £field905 -> buf = *buf
+setjmp$6:	; £field769 -> buf = *buf
 	mov rsi, [rbp + 24]
 
-setjmp$7:	; £field906 -> ebp_pointer = *ebp_pointer
+setjmp$7:	; £field770 -> ebp_pointer = *ebp_pointer
 	mov rdi, [rbp + 32]
 
-setjmp$8:	; £field905 -> buf = £field906 -> ebp_pointer
+setjmp$8:	; £field769 -> buf = £field770 -> ebp_pointer
 	mov eax, [rdi + 4]
 	mov [rsi + 4], eax
 
-setjmp$9:	; £field907 -> buf = *buf
+setjmp$9:	; £field771 -> buf = *buf
 	mov rsi, [rbp + 24]
 
-setjmp$10:	; £field908 -> ebp_pointer = *ebp_pointer
+setjmp$10:	; £field772 -> ebp_pointer = *ebp_pointer
 	mov rdi, [rbp + 32]
 
-setjmp$11:	; £field907 -> buf = £field908 -> ebp_pointer
+setjmp$11:	; £field771 -> buf = £field772 -> ebp_pointer
 	mov eax, [rdi + 8]
 	mov [rsi + 8], eax
 

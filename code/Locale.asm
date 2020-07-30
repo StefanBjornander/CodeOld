@@ -8,26 +8,27 @@ section .text
 setlocale:	; empty
 
 setlocale$1:	; if g_currStructPtr == int8$0# goto 5
-	cmp qword [@1403$g_currStructPtr], 0
+	cmp qword [@1527$g_currStructPtr], 0
 	je setlocale$5
 
-setlocale$2:	; £field462 -> g_currStructPtr = *g_currStructPtr
-	mov rsi, [@1403$g_currStructPtr]
+setlocale$2:	; £field338 -> g_currStructPtr = *g_currStructPtr
+	mov rsi, [@1527$g_currStructPtr]
 
-setlocale$3:	; £temporary463 = £field462 -> g_currStructPtr
+setlocale$3:	; £temporary339 = £field338 -> g_currStructPtr
 	mov rax, [rsi]
 
 setlocale$4:	; goto 6
 	jmp setlocale$6
 
-setlocale$5:	; £temporary463 = int8$0#
+setlocale$5:	; £temporary339 = int8$0#
 	mov rax, 0
 
-setlocale$6:	; oldName = £temporary463
+setlocale$6:	; oldName = £temporary339
 	mov [rbp + 40], rax
 
 setlocale$7:	; g_currStructPtr = int8$0#
-	mov qword [@1403$g_currStructPtr], 0
+	mov rax, 0
+	mov [@1527$g_currStructPtr], rax
 
 setlocale$8:	; if newName == int8$0# goto 31
 	cmp qword [rbp + 28], 0
@@ -38,7 +39,7 @@ setlocale$9:	; index = int4$0#
 
 setlocale$10:	; if index >= sSize goto 31
 	mov eax, [rbp + 36]
-	cmp eax, [@1402$sSize]
+	cmp eax, [@1526$sSize]
 	jge setlocale$31
 
 setlocale$11:	; call header integral zero 0 stack zero 0
@@ -47,22 +48,22 @@ setlocale$12:	; parameter newName, offset 72
 	mov rax, [rbp + 28]
 	mov [rbp + 72], rax
 
-setlocale$13:	; £temporary468 = int_to_int index (Signed_Int -> Array)
+setlocale$13:	; £temporary344 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-setlocale$14:	; £temporary469 = £temporary468 * Array_#
+setlocale$14:	; £temporary345 = £temporary344 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
-setlocale$15:	; £temporary470 = sArray + £temporary469
-	mov rsi, @1401$sArray
+setlocale$15:	; £temporary346 = sArray + £temporary345
+	mov rsi, @1525$sArray
 	add rsi, rax
 
-setlocale$16:	; £field467 -> £temporary470 = *£temporary470
+setlocale$16:	; £field343 -> £temporary346 = *£temporary346
 
-setlocale$17:	; parameter £field467.name$0 -> £temporary470, offset 80
+setlocale$17:	; parameter £field343.name$0 -> £temporary346, offset 80
 	mov rax, [rsi]
 	mov [rbp + 80], rax
 
@@ -74,31 +75,31 @@ setlocale$18:	; call function noellipse-noellipse strcmp
 
 setlocale$19:	; post call
 
-setlocale$20:	; £temporary471 = return_value
+setlocale$20:	; £temporary347 = return_value
 
-setlocale$21:	; if £temporary471 != int4$0# goto 29
+setlocale$21:	; if £temporary347 != int4$0# goto 29
 	cmp ebx, 0
 	jne setlocale$29
 
-setlocale$22:	; £temporary474 = int_to_int index (Signed_Int -> Array)
+setlocale$22:	; £temporary350 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-setlocale$23:	; £temporary475 = £temporary474 * Array_#
+setlocale$23:	; £temporary351 = £temporary350 * Array_#
 	xor rdx, rdx
 	mul qword [Array_#]
 
-setlocale$24:	; £temporary476 = sArray + £temporary475
-	mov rsi, @1401$sArray
+setlocale$24:	; £temporary352 = sArray + £temporary351
+	mov rsi, @1525$sArray
 	add rsi, rax
 
-setlocale$25:	; £field473 -> £temporary476 = *£temporary476
+setlocale$25:	; £field349 -> £temporary352 = *£temporary352
 
-setlocale$26:	; £temporary477 = &£field473 -> £temporary476
+setlocale$26:	; £temporary353 = &£field349 -> £temporary352
 
-setlocale$27:	; g_currStructPtr = £temporary477
-	mov [@1403$g_currStructPtr], rsi
+setlocale$27:	; g_currStructPtr = £temporary353
+	mov [@1527$g_currStructPtr], rsi
 
 setlocale$28:	; goto 31
 	jmp setlocale$31
@@ -121,22 +122,22 @@ setlocale$32:	; return
 setlocale$33:	; function end setlocale
 
 localeconv:	; if g_currStructPtr == int8$0# goto 4
-	cmp qword [@1403$g_currStructPtr], 0
+	cmp qword [@1527$g_currStructPtr], 0
 	je localeconv$4
 
-localeconv$1:	; £field481 -> g_currStructPtr = *g_currStructPtr
-	mov rsi, [@1403$g_currStructPtr]
+localeconv$1:	; £field355 -> g_currStructPtr = *g_currStructPtr
+	mov rsi, [@1527$g_currStructPtr]
 
-localeconv$2:	; £temporary482 = £field481 -> g_currStructPtr
+localeconv$2:	; £temporary356 = £field355 -> g_currStructPtr
 	mov rbx, [rsi + 8]
 
 localeconv$3:	; goto 5
 	jmp localeconv$5
 
-localeconv$4:	; £temporary482 = int8$0#
+localeconv$4:	; £temporary356 = int8$0#
 	mov rbx, 0
 
-localeconv$5:	; return_value = £temporary482
+localeconv$5:	; return_value = £temporary356
 
 localeconv$6:	; return
 	mov rax, [rbp]
@@ -171,7 +172,7 @@ string_Fri#:
 string_Sat#:
 	db "Sat", 0
 
-@1366$enShortDayList:
+@1490$enShortDayList:
 	dq string_Sun#
 	dq string_Mon#
 	dq string_Tue#
@@ -201,7 +202,7 @@ string_Friday#:
 string_Saturday#:
 	db "Saturday", 0
 
-@1367$enLongDayList:
+@1491$enLongDayList:
 	dq string_Sunday#
 	dq string_Monday#
 	dq string_Tuesday#
@@ -246,7 +247,7 @@ string_Nov#:
 string_Dec#:
 	db "Dec", 0
 
-@1368$enShortMonthList:
+@1492$enShortMonthList:
 	dq string_Jan#
 	dq string_Feb#
 	dq string_Mar#
@@ -293,7 +294,7 @@ string_November#:
 string_December#:
 	db "December", 0
 
-@1369$enLongMonthList:
+@1493$enLongMonthList:
 	dq string_January#
 	dq string_February#
 	dq string_March#
@@ -395,13 +396,13 @@ string_abcdefghijklmnopqrstuvwxyz#:
 string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#:
 	db "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 0
 
-@1392$en_US_utf8:
+@1516$en_US_utf8:
 	dd -5
 	dd -4
-	dq @1366$enShortDayList
-	dq @1367$enLongDayList
-	dq @1368$enShortMonthList
-	dq @1369$enLongMonthList
+	dq @1490$enShortDayList
+	dq @1491$enLongDayList
+	dq @1492$enShortMonthList
+	dq @1493$enLongMonthList
 	dq string_abcdefghijklmnopqrstuvwxyz#
 	dq string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#
 	dq enMessageList
@@ -427,7 +428,7 @@ string_Fre#:
 string_Lor#:
 	db "Lor", 0
 
-@1393$swShortDayList:
+@1517$swShortDayList:
 	dq string_Son#
 	dq string_Man#
 	dq string_Tis#
@@ -457,7 +458,7 @@ string_Fredag#:
 string_Lordag#:
 	db "Lordag", 0
 
-@1394$swLongDayList:
+@1518$swLongDayList:
 	dq string_Sondag#
 	dq string_Mandag#
 	dq string_Tisdag#
@@ -472,7 +473,7 @@ string_Maj#:
 string_Okt#:
 	db "Okt", 0
 
-@1395$swShortMonthList:
+@1519$swShortMonthList:
 	dq string_Jan#
 	dq string_Feb#
 	dq string_Mar#
@@ -507,7 +508,7 @@ string_Augusit#:
 string_Oktober#:
 	db "Oktober", 0
 
-@1396$swLongMonthList:
+@1520$swLongMonthList:
 	dq string_Januari#
 	dq string_Februari#
 	dq string_Mars#
@@ -578,7 +579,7 @@ string_fel20vid20borttagning20av20fil#:
 string_fel20vid20namnbyte20av20fil#:
 	db "fel vid namnbyte av fil", 0
 
-@1397$swMessageList:
+@1521$swMessageList:
 	dq string_inga20fel#
 	dq string_felaktigt20functionsnummer#
 	dq string_hittar20ej20filen#
@@ -599,16 +600,16 @@ string_fel20vid20namnbyte20av20fil#:
 	dq string_fel20vid20borttagning20av20fil#
 	dq string_fel20vid20namnbyte20av20fil#
 
-@1398$sw_EN_utf8:
+@1522$sw_EN_utf8:
 	dd 1
 	dd 2
-	dq @1393$swShortDayList
-	dq @1394$swLongDayList
-	dq @1368$enShortMonthList
-	dq @1396$swLongMonthList
+	dq @1517$swShortDayList
+	dq @1518$swLongDayList
+	dq @1492$enShortMonthList
+	dq @1520$swLongMonthList
 	dq string_abcdefghijklmnopqrstuvwxyz#
 	dq string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#
-	dq @1397$swMessageList
+	dq @1521$swMessageList
 
 string_#:
 	db 0
@@ -622,21 +623,21 @@ string_US#:
 string_SE#:
 	db "SE", 0
 
-@1401$sArray:
+@1525$sArray:
 	dq string_#
-	dq @1398$sw_EN_utf8
+	dq @1522$sw_EN_utf8
 	dq string_C#
-	dq @1392$en_US_utf8
+	dq @1516$en_US_utf8
 	dq string_US#
-	dq @1392$en_US_utf8
+	dq @1516$en_US_utf8
 	dq string_SE#
-	dq @1398$sw_EN_utf8
+	dq @1522$sw_EN_utf8
 
-@1402$sSize:
+@1526$sSize:
 	dd 1
 
-@1403$g_currStructPtr:
-	dq @1401$sArray
+@1527$g_currStructPtr:
+	dq @1525$sArray
 
 Array_#:
 	; initializer Array

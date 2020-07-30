@@ -15,7 +15,8 @@ signal$1:	; return
 signal$2:	; function end signal
 
 raise:	; func = int8$0#
-	mov qword [rbp + 28], 0
+	mov rax, 0
+	mov [rbp + 28], rax
 
 raise$1:	; if func != int8$0# goto 8
 	cmp qword [rbp + 28], 0

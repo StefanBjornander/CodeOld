@@ -100,22 +100,22 @@ main$10:	; parameter index, offset 72
 	mov eax, [rbp + 36]
 	mov [rbp + 72], eax
 
-main$11:	; £temporary60 = int_to_int index (Signed_Int -> Pointer)
+main$11:	; £temporary38 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-main$12:	; £temporary61 = £temporary60 * int8$8#
+main$12:	; £temporary39 = £temporary38 * int8$8#
 	xor rdx, rdx
 	mul qword [int8$8#]
 
-main$13:	; £temporary62 = argv + £temporary61
+main$13:	; £temporary40 = argv + £temporary39
 	mov rsi, [rbp + 28]
 	add rsi, rax
 
-main$14:	; £field59 -> £temporary62 = *£temporary62
+main$14:	; £field37 -> £temporary40 = *£temporary40
 
-main$15:	; parameter £field59 -> £temporary62, offset 76
+main$15:	; parameter £field37 -> £temporary40, offset 76
 	mov rax, [rsi]
 	mov [rbp + 76], rax
 
@@ -152,22 +152,22 @@ main$23:	; post call
 main$24:	; index = int4$0#
 	mov dword [rbp + 36], 0
 
-main$25:	; £temporary66 = int_to_int index (Signed_Int -> Pointer)
+main$25:	; £temporary44 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-main$26:	; £temporary67 = £temporary66 * int8$8#
+main$26:	; £temporary45 = £temporary44 * int8$8#
 	xor rdx, rdx
 	mul qword [int8$8#]
 
-main$27:	; £temporary68 = argv + £temporary67
+main$27:	; £temporary46 = argv + £temporary45
 	mov rsi, [rbp + 28]
 	add rsi, rax
 
-main$28:	; £field65 -> £temporary68 = *£temporary68
+main$28:	; £field43 -> £temporary46 = *£temporary46
 
-main$29:	; if £field65 -> £temporary68 == int8$0# goto 42
+main$29:	; if £field43 -> £temporary46 == int8$0# goto 42
 	cmp qword [rsi], 0
 	je main$42
 
@@ -180,22 +180,22 @@ main$32:	; parameter index, offset 72
 	mov eax, [rbp + 36]
 	mov [rbp + 72], eax
 
-main$33:	; £temporary72 = int_to_int index (Signed_Int -> Pointer)
+main$33:	; £temporary50 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
-main$34:	; £temporary73 = £temporary72 * int8$8#
+main$34:	; £temporary51 = £temporary50 * int8$8#
 	xor rdx, rdx
 	mul qword [int8$8#]
 
-main$35:	; £temporary74 = argv + £temporary73
+main$35:	; £temporary52 = argv + £temporary51
 	mov rsi, [rbp + 28]
 	add rsi, rax
 
-main$36:	; £field71 -> £temporary74 = *£temporary74
+main$36:	; £field49 -> £temporary52 = *£temporary52
 
-main$37:	; parameter £field71 -> £temporary74, offset 76
+main$37:	; parameter £field49 -> £temporary52, offset 76
 	mov rax, [rsi]
 	mov [rbp + 76], rax
 
@@ -276,29 +276,29 @@ main$58:	; call header integral zero 0 stack zero 0
 main$59:	; parameter string_25c2025s2025i2025lf#, offset 97
 	mov qword [rbp + 97], string_25c2025s2025i2025lf#
 
-main$60:	; £temporary80 = &c
+main$60:	; £temporary58 = &c
 	mov rsi, rbp
 	add rsi, 52
 
-main$61:	; parameter £temporary80, offset 105
+main$61:	; parameter £temporary58, offset 105
 	mov [rbp + 105], rsi
 
 main$62:	; parameter s, offset 113
 	mov [rbp + 113], rbp
 	add qword [rbp + 113], 53
 
-main$63:	; £temporary81 = &i
+main$63:	; £temporary59 = &i
 	mov rsi, rbp
 	add rsi, 40
 
-main$64:	; parameter £temporary81, offset 121
+main$64:	; parameter £temporary59, offset 121
 	mov [rbp + 121], rsi
 
-main$65:	; £temporary82 = &d
+main$65:	; £temporary60 = &d
 	mov rsi, rbp
 	add rsi, 44
 
-main$66:	; parameter £temporary82, offset 129
+main$66:	; parameter £temporary60, offset 129
 	mov [rbp + 129], rsi
 
 main$67:	; call function noellipse-ellipse scanf, extra 32
@@ -316,7 +316,7 @@ main$69:	; call header integral zero 0 stack zero 0
 main$70:	; parameter string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#, offset 97
 	mov qword [rbp + 97], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#
 
-main$71:	; £temporary84 = int_to_int c (Signed_Char -> Signed_Int)
+main$71:	; £temporary62 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 52]
 	and eax, 255
 	cmp al, 0
@@ -324,7 +324,7 @@ main$71:	; £temporary84 = int_to_int c (Signed_Char -> Signed_Int)
 	neg al
 	neg eax
 
-main$72:	; parameter £temporary84, offset 105
+main$72:	; parameter £temporary62, offset 105
 	mov [rbp + 105], eax
 
 main$73:	; parameter s, offset 109
@@ -361,10 +361,12 @@ main$80:	; function end main
 main2:	; empty
 
 main2$1:	; a$p = int8$0#
-	mov qword [a], 0
+	mov rax, 0
+	mov [a], rax
 
 main2$2:	; a$q = int8$0#
-	mov qword [a + 8], 0
+	mov rax, 0
+	mov [a + 8], rax
 
 main2$3:	; call header integral zero 0 stack zero 0
 
@@ -516,11 +518,11 @@ mainc$5:	; call header integral zero 0 stack zero 0
 mainc$6:	; parameter string_25c#, offset 49
 	mov qword [rbp + 49], string_25c#
 
-mainc$7:	; £temporary26 = &c
+mainc$7:	; £temporary19 = &c
 	mov rsi, rbp
 	add rsi, 24
 
-mainc$8:	; parameter £temporary26, offset 57
+mainc$8:	; parameter £temporary19, offset 57
 	mov [rbp + 57], rsi
 
 mainc$9:	; call function noellipse-ellipse scanf, extra 8
@@ -538,7 +540,7 @@ mainc$11:	; call header integral zero 0 stack zero 0
 mainc$12:	; parameter string_You20wrote20the20character202725c272E0A#, offset 49
 	mov qword [rbp + 49], string_You20wrote20the20character202725c272E0A#
 
-mainc$13:	; £temporary28 = int_to_int c (Signed_Char -> Signed_Int)
+mainc$13:	; £temporary21 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -546,7 +548,7 @@ mainc$13:	; £temporary28 = int_to_int c (Signed_Char -> Signed_Int)
 	neg al
 	neg eax
 
-mainc$14:	; parameter £temporary28, offset 57
+mainc$14:	; parameter £temporary21, offset 57
 	mov [rbp + 57], eax
 
 mainc$15:	; call function noellipse-ellipse printf, extra 4
@@ -588,11 +590,11 @@ maini$5:	; call header integral zero 0 stack zero 0
 maini$6:	; parameter string_25i#, offset 52
 	mov qword [rbp + 52], string_25i#
 
-maini$7:	; £temporary37 = &i
+maini$7:	; £temporary25 = &i
 	mov rsi, rbp
 	add rsi, 24
 
-maini$8:	; parameter £temporary37, offset 60
+maini$8:	; parameter £temporary25, offset 60
 	mov [rbp + 60], rsi
 
 maini$9:	; call function noellipse-ellipse scanf, extra 8
@@ -743,11 +745,11 @@ main3$5:	; call header integral zero 0 stack zero 0
 main3$6:	; parameter string_25lf#, offset 56
 	mov qword [rbp + 56], string_25lf#
 
-main3$7:	; £temporary113 = &x
+main3$7:	; £temporary69 = &x
 	mov rsi, rbp
 	add rsi, 24
 
-main3$8:	; parameter £temporary113, offset 64
+main3$8:	; parameter £temporary69, offset 64
 	mov [rbp + 64], rsi
 
 main3$9:	; call function noellipse-ellipse scanf, extra 8
@@ -1024,11 +1026,11 @@ assert_test$5:	; call header integral zero 0 stack zero 0
 assert_test$6:	; parameter string_25i#, offset 52
 	mov qword [rbp + 52], string_25i#
 
-assert_test$7:	; £temporary151 = &n
+assert_test$7:	; £temporary93 = &n
 	mov rsi, rbp
 	add rsi, 24
 
-assert_test$8:	; parameter £temporary151, offset 60
+assert_test$8:	; parameter £temporary93, offset 60
 	mov [rbp + 60], rsi
 
 assert_test$9:	; call function noellipse-ellipse scanf, extra 8
@@ -1219,19 +1221,19 @@ string_You20wrote20the20string202225s222E0A#:
 	; initializer String
 	db "You wrote the string ", 34, "%s", 34, ".", 10, 0
 
-@378$ZERO:
+@400$ZERO:
 	; initializer Signed_Int
 	dd 0
 
-@379$ONE:
+@401$ONE:
 	; initializer Signed_Int
 	dd 1
 
-@382$TWO:
+@404$TWO:
 	; initializer Signed_Int
 	dd 2
 
-@383$THREE:
+@405$THREE:
 	; initializer Signed_Int
 	dd 3
 

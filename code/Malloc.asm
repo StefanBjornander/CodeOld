@@ -68,10 +68,10 @@ malloc$14:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-malloc$15:	; £temporary182 = int_to_int memorySize (Signed_Int -> Unsigned_Int)
+malloc$15:	; £temporary110 = int_to_int memorySize (Signed_Int -> Unsigned_Int)
 	mov eax, [rbp + 24]
 
-malloc$16:	; newBlockSize = £temporary182 + int4$12#
+malloc$16:	; newBlockSize = £temporary110 + int4$12#
 	add eax, 12
 	mov [rbp + 28], eax
 
@@ -82,13 +82,16 @@ malloc$18:	; lastAddress = int4$65528#
 	mov dword [rbp + 36], 65528
 
 malloc$19:	; minBlockPtr = int8$0#
-	mov qword [rbp + 40], 0
+	mov rax, 0
+	mov [rbp + 40], rax
 
 malloc$20:	; minPrevBlockPtr = int8$0#
-	mov qword [rbp + 48], 0
+	mov rax, 0
+	mov [rbp + 48], rax
 
 malloc$21:	; prevBlockPtr = int8$0#
-	mov qword [rbp + 56], 0
+	mov rax, 0
+	mov [rbp + 56], rax
 
 malloc$22:	; currBlockPtr = g_firstBlockPtr
 	mov rax, [g_firstBlockPtr]
@@ -98,23 +101,23 @@ malloc$23:	; if currBlockPtr == int8$0# goto 41
 	cmp qword [rbp + 64], 0
 	je malloc$41
 
-malloc$24:	; £temporary185 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
+malloc$24:	; £temporary113 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
 	mov rax, [rbp + 64]
 
-malloc$25:	; currAddress = £temporary185
+malloc$25:	; currAddress = £temporary113
 	mov [rbp + 72], eax
 
-malloc$26:	; £field186 -> currBlockPtr = *currBlockPtr
+malloc$26:	; £field114 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 64]
 
-malloc$27:	; £temporary187 = currAddress + £field186 -> currBlockPtr
+malloc$27:	; £temporary115 = currAddress + £field114 -> currBlockPtr
 	mov eax, [rbp + 72]
 	add eax, [rsi]
 
-malloc$28:	; £temporary188 = £temporary187 + int4$12#
+malloc$28:	; £temporary116 = £temporary115 + int4$12#
 	add eax, 12
 
-malloc$29:	; currGap = lastAddress - £temporary188
+malloc$29:	; currGap = lastAddress - £temporary116
 	mov ebx, [rbp + 36]
 	sub ebx, eax
 	mov [rbp + 76], ebx
@@ -153,10 +156,10 @@ malloc$37:	; prevBlockPtr = currBlockPtr
 	mov rax, [rbp + 64]
 	mov [rbp + 56], rax
 
-malloc$38:	; £field195 -> currBlockPtr = *currBlockPtr
+malloc$38:	; £field123 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 64]
 
-malloc$39:	; currBlockPtr = £field195 -> currBlockPtr
+malloc$39:	; currBlockPtr = £field123 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [rbp + 64], rax
 
@@ -167,38 +170,38 @@ malloc$41:	; if minBlockPtr == int8$0# goto 61
 	cmp qword [rbp + 40], 0
 	je malloc$61
 
-malloc$42:	; £temporary197 = int_to_int minBlockPtr (Pointer -> Unsigned_Int)
+malloc$42:	; £temporary125 = int_to_int minBlockPtr (Pointer -> Unsigned_Int)
 	mov rax, [rbp + 40]
 
-malloc$43:	; £field198 -> minBlockPtr = *minBlockPtr
+malloc$43:	; £field126 -> minBlockPtr = *minBlockPtr
 	mov rsi, [rbp + 40]
 
-malloc$44:	; £temporary199 = £temporary197 + £field198 -> minBlockPtr
+malloc$44:	; £temporary127 = £temporary125 + £field126 -> minBlockPtr
 	add eax, [rsi]
 
-malloc$45:	; newAddress = £temporary199 + int4$12#
+malloc$45:	; newAddress = £temporary127 + int4$12#
 	add eax, 12
 	mov [rbp + 72], eax
 
-malloc$46:	; £temporary201 = int_to_int newAddress (Unsigned_Int -> Pointer)
+malloc$46:	; £temporary129 = int_to_int newAddress (Unsigned_Int -> Pointer)
 	mov eax, [rbp + 72]
 	mov rbx, 4294967295
 	and rax, rbx
 
-malloc$47:	; newBlockPtr = £temporary201
+malloc$47:	; newBlockPtr = £temporary129
 	mov [rbp + 76], rax
 
-malloc$48:	; £field202 -> newBlockPtr = *newBlockPtr
+malloc$48:	; £field130 -> newBlockPtr = *newBlockPtr
 	mov rsi, [rbp + 76]
 
-malloc$49:	; £field202 -> newBlockPtr = memorySize
+malloc$49:	; £field130 -> newBlockPtr = memorySize
 	mov eax, [rbp + 24]
 	mov [rsi], eax
 
-malloc$50:	; £field203 -> newBlockPtr = *newBlockPtr
+malloc$50:	; £field131 -> newBlockPtr = *newBlockPtr
 	mov rsi, [rbp + 76]
 
-malloc$51:	; £field203 -> newBlockPtr = minBlockPtr
+malloc$51:	; £field131 -> newBlockPtr = minBlockPtr
 	mov rax, [rbp + 40]
 	mov [rsi + 4], rax
 
@@ -206,10 +209,10 @@ malloc$52:	; if minPrevBlockPtr == int8$0# goto 56
 	cmp qword [rbp + 48], 0
 	je malloc$56
 
-malloc$53:	; £field205 -> minPrevBlockPtr = *minPrevBlockPtr
+malloc$53:	; £field133 -> minPrevBlockPtr = *minPrevBlockPtr
 	mov rsi, [rbp + 48]
 
-malloc$54:	; £field205 -> minPrevBlockPtr = newBlockPtr
+malloc$54:	; £field133 -> minPrevBlockPtr = newBlockPtr
 	mov rax, [rbp + 76]
 	mov [rsi + 4], rax
 
@@ -220,15 +223,15 @@ malloc$56:	; g_firstBlockPtr = newBlockPtr
 	mov rax, [rbp + 76]
 	mov [g_firstBlockPtr], rax
 
-malloc$57:	; £temporary206 = newAddress + int4$12#
+malloc$57:	; £temporary134 = newAddress + int4$12#
 	mov ebx, [rbp + 72]
 	add ebx, 12
 
-malloc$58:	; £temporary207 = int_to_int £temporary206 (Unsigned_Int -> Pointer)
+malloc$58:	; £temporary135 = int_to_int £temporary134 (Unsigned_Int -> Pointer)
 	mov rax, 4294967295
 	and rbx, rax
 
-malloc$59:	; return_value = £temporary207
+malloc$59:	; return_value = £temporary135
 
 malloc$60:	; return
 	mov rax, [rbp]
@@ -241,12 +244,12 @@ malloc$61:	; newAddress = lastAddress - newBlockSize
 	sub eax, [rbp + 28]
 	mov [rbp + 72], eax
 
-malloc$62:	; £temporary209 = bp
+malloc$62:	; £temporary137 = bp
 
-malloc$63:	; £temporary210 = int_to_int £temporary209 (Unsigned_Short_Int -> Unsigned_Int)
+malloc$63:	; £temporary138 = int_to_int £temporary137 (Unsigned_Short_Int -> Unsigned_Int)
 	and ebp, 65535
 
-malloc$64:	; stackTop = £temporary210
+malloc$64:	; stackTop = £temporary138
 	mov [rbp + 76], ebp
 
 malloc$65:	; if stackTop > newAddress goto 81
@@ -254,35 +257,36 @@ malloc$65:	; if stackTop > newAddress goto 81
 	cmp eax, [rbp + 72]
 	ja malloc$81
 
-malloc$66:	; £temporary212 = int_to_int newAddress (Unsigned_Int -> Pointer)
+malloc$66:	; £temporary140 = int_to_int newAddress (Unsigned_Int -> Pointer)
 	mov eax, [rbp + 72]
 	mov rbx, 4294967295
 	and rax, rbx
 
-malloc$67:	; newBlockPtr = £temporary212
+malloc$67:	; newBlockPtr = £temporary140
 	mov [rbp + 80], rax
 
-malloc$68:	; £field213 -> newBlockPtr = *newBlockPtr
+malloc$68:	; £field141 -> newBlockPtr = *newBlockPtr
 	mov rsi, [rbp + 80]
 
-malloc$69:	; £field213 -> newBlockPtr = memorySize
+malloc$69:	; £field141 -> newBlockPtr = memorySize
 	mov eax, [rbp + 24]
 	mov [rsi], eax
 
-malloc$70:	; £field214 -> newBlockPtr = *newBlockPtr
+malloc$70:	; £field142 -> newBlockPtr = *newBlockPtr
 	mov rsi, [rbp + 80]
 
-malloc$71:	; £field214 -> newBlockPtr = int8$0#
-	mov qword [rsi + 4], 0
+malloc$71:	; £field142 -> newBlockPtr = int8$0#
+	mov rax, 0
+	mov [rsi + 4], rax
 
 malloc$72:	; if prevBlockPtr == int8$0# goto 76
 	cmp qword [rbp + 56], 0
 	je malloc$76
 
-malloc$73:	; £field216 -> prevBlockPtr = *prevBlockPtr
+malloc$73:	; £field144 -> prevBlockPtr = *prevBlockPtr
 	mov rsi, [rbp + 56]
 
-malloc$74:	; £field216 -> prevBlockPtr = newBlockPtr
+malloc$74:	; £field144 -> prevBlockPtr = newBlockPtr
 	mov rax, [rbp + 80]
 	mov [rsi + 4], rax
 
@@ -293,15 +297,15 @@ malloc$76:	; g_firstBlockPtr = newBlockPtr
 	mov rax, [rbp + 80]
 	mov [g_firstBlockPtr], rax
 
-malloc$77:	; £temporary217 = newAddress + int4$12#
+malloc$77:	; £temporary145 = newAddress + int4$12#
 	mov ebx, [rbp + 72]
 	add ebx, 12
 
-malloc$78:	; £temporary218 = int_to_int £temporary217 (Unsigned_Int -> Pointer)
+malloc$78:	; £temporary146 = int_to_int £temporary145 (Unsigned_Int -> Pointer)
 	mov rax, 4294967295
 	and rbx, rax
 
-malloc$79:	; return_value = £temporary218
+malloc$79:	; return_value = £temporary146
 
 malloc$80:	; return
 	mov rax, [rbp]
@@ -322,12 +326,12 @@ malloc$83:	; function end malloc
 
 calloc:	; call header integral zero 0 stack zero 0
 
-calloc$1:	; £temporary224 = number * size
+calloc$1:	; £temporary147 = number * size
 	mov eax, [rbp + 24]
 	xor edx, edx
 	imul dword [rbp + 28]
 
-calloc$2:	; parameter £temporary224, offset 56
+calloc$2:	; parameter £temporary147, offset 56
 	mov [rbp + 56], eax
 
 calloc$3:	; call function noellipse-noellipse malloc
@@ -338,9 +342,9 @@ calloc$3:	; call function noellipse-noellipse malloc
 
 calloc$4:	; post call
 
-calloc$5:	; £temporary225 = return_value
+calloc$5:	; £temporary148 = return_value
 
-calloc$6:	; pointer = £temporary225
+calloc$6:	; pointer = £temporary148
 	mov [rbp + 32], rbx
 
 calloc$7:	; if pointer == int8$0# goto 14
@@ -389,21 +393,22 @@ free$1:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-free$2:	; £temporary233 = int_to_int freeMemoryPtr (Pointer -> Unsigned_Int)
+free$2:	; £temporary152 = int_to_int freeMemoryPtr (Pointer -> Unsigned_Int)
 	mov rax, [rbp + 24]
 
-free$3:	; £temporary234 = £temporary233 - int4$12#
+free$3:	; £temporary153 = £temporary152 - int4$12#
 	sub eax, 12
 
-free$4:	; £temporary235 = int_to_int £temporary234 (Unsigned_Int -> Pointer)
+free$4:	; £temporary154 = int_to_int £temporary153 (Unsigned_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
-free$5:	; freeBlockPtr = £temporary235
+free$5:	; freeBlockPtr = £temporary154
 	mov [rbp + 32], rax
 
 free$6:	; prevBlockPtr = int8$0#
-	mov qword [rbp + 40], 0
+	mov rax, 0
+	mov [rbp + 40], rax
 
 free$7:	; currBlockPtr = g_firstBlockPtr
 	mov rax, [g_firstBlockPtr]
@@ -422,15 +427,16 @@ free$10:	; if prevBlockPtr != int8$0# goto 15
 	cmp qword [rbp + 40], 0
 	jne free$15
 
-free$11:	; £field239 -> currBlockPtr = *currBlockPtr
+free$11:	; £field158 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 48]
 
-free$12:	; if £field239 -> currBlockPtr != int8$0# goto 15
+free$12:	; if £field158 -> currBlockPtr != int8$0# goto 15
 	cmp qword [rsi + 4], 0
 	jne free$15
 
 free$13:	; g_firstBlockPtr = int8$0#
-	mov qword [g_firstBlockPtr], 0
+	mov rax, 0
+	mov [g_firstBlockPtr], rax
 
 free$14:	; goto 27
 	jmp free$27
@@ -439,39 +445,40 @@ free$15:	; if prevBlockPtr != int8$0# goto 19
 	cmp qword [rbp + 40], 0
 	jne free$19
 
-free$16:	; £field243 -> currBlockPtr = *currBlockPtr
+free$16:	; £field162 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 48]
 
-free$17:	; g_firstBlockPtr = £field243 -> currBlockPtr
+free$17:	; g_firstBlockPtr = £field162 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [g_firstBlockPtr], rax
 
 free$18:	; goto 27
 	jmp free$27
 
-free$19:	; £field244 -> currBlockPtr = *currBlockPtr
+free$19:	; £field163 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 48]
 
-free$20:	; if £field244 -> currBlockPtr != int8$0# goto 24
+free$20:	; if £field163 -> currBlockPtr != int8$0# goto 24
 	cmp qword [rsi + 4], 0
 	jne free$24
 
-free$21:	; £field246 -> prevBlockPtr = *prevBlockPtr
+free$21:	; £field165 -> prevBlockPtr = *prevBlockPtr
 	mov rsi, [rbp + 40]
 
-free$22:	; £field246 -> prevBlockPtr = int8$0#
-	mov qword [rsi + 4], 0
+free$22:	; £field165 -> prevBlockPtr = int8$0#
+	mov rax, 0
+	mov [rsi + 4], rax
 
 free$23:	; goto 27
 	jmp free$27
 
-free$24:	; £field247 -> prevBlockPtr = *prevBlockPtr
+free$24:	; £field166 -> prevBlockPtr = *prevBlockPtr
 	mov rsi, [rbp + 40]
 
-free$25:	; £field248 -> currBlockPtr = *currBlockPtr
+free$25:	; £field167 -> currBlockPtr = *currBlockPtr
 	mov rdi, [rbp + 48]
 
-free$26:	; £field247 -> prevBlockPtr = £field248 -> currBlockPtr
+free$26:	; £field166 -> prevBlockPtr = £field167 -> currBlockPtr
 	mov rax, [rdi + 4]
 	mov [rsi + 4], rax
 
@@ -485,10 +492,10 @@ free$28:	; prevBlockPtr = currBlockPtr
 	mov rax, [rbp + 48]
 	mov [rbp + 40], rax
 
-free$29:	; £field249 -> currBlockPtr = *currBlockPtr
+free$29:	; £field168 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 48]
 
-free$30:	; currBlockPtr = £field249 -> currBlockPtr
+free$30:	; currBlockPtr = £field168 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [rbp + 48], rax
 
@@ -609,9 +616,9 @@ realloc$28:	; call function noellipse-noellipse malloc
 
 realloc$29:	; post call
 
-realloc$30:	; £temporary261 = return_value
+realloc$30:	; £temporary180 = return_value
 
-realloc$31:	; return_value = £temporary261
+realloc$31:	; return_value = £temporary180
 
 realloc$32:	; return
 	mov rax, [rbp]
@@ -646,38 +653,38 @@ realloc$39:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-realloc$40:	; £temporary264 = int_to_int newMemorySize (Signed_Int -> Unsigned_Int)
+realloc$40:	; £temporary183 = int_to_int newMemorySize (Signed_Int -> Unsigned_Int)
 	mov eax, [rbp + 32]
 
-realloc$41:	; newBlockSize = £temporary264 + int4$12#
+realloc$41:	; newBlockSize = £temporary183 + int4$12#
 	add eax, 12
 	mov [rbp + 36], eax
 
-realloc$42:	; £temporary266 = int_to_int oldMemoryPtr (Pointer -> Unsigned_Int)
+realloc$42:	; £temporary185 = int_to_int oldMemoryPtr (Pointer -> Unsigned_Int)
 	mov rax, [rbp + 24]
 
-realloc$43:	; £temporary267 = £temporary266 - int4$12#
+realloc$43:	; £temporary186 = £temporary185 - int4$12#
 	sub eax, 12
 
-realloc$44:	; £temporary268 = int_to_int £temporary267 (Unsigned_Int -> Pointer)
+realloc$44:	; £temporary187 = int_to_int £temporary186 (Unsigned_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
-realloc$45:	; oldBlockPtr = £temporary268
+realloc$45:	; oldBlockPtr = £temporary187
 	mov [rbp + 40], rax
 
-realloc$46:	; £field269 -> oldBlockPtr = *oldBlockPtr
+realloc$46:	; £field188 -> oldBlockPtr = *oldBlockPtr
 	mov rsi, [rbp + 40]
 
-realloc$47:	; if newBlockSize > £field269 -> oldBlockPtr goto 52
+realloc$47:	; if newBlockSize > £field188 -> oldBlockPtr goto 52
 	mov eax, [rbp + 36]
 	cmp eax, [rsi]
 	ja realloc$52
 
-realloc$48:	; £field271 -> oldBlockPtr = *oldBlockPtr
+realloc$48:	; £field190 -> oldBlockPtr = *oldBlockPtr
 	mov rsi, [rbp + 40]
 
-realloc$49:	; £field271 -> oldBlockPtr = newBlockSize
+realloc$49:	; £field190 -> oldBlockPtr = newBlockSize
 	mov eax, [rbp + 36]
 	mov [rsi], eax
 
@@ -706,10 +713,10 @@ realloc$55:	; if currBlockPtr != oldBlockPtr goto 63
 	cmp rax, [rbp + 40]
 	jne realloc$63
 
-realloc$56:	; £temporary274 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
+realloc$56:	; £temporary193 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
 	mov rax, [rbp + 52]
 
-realloc$57:	; availableSize = lastAddress - £temporary274
+realloc$57:	; availableSize = lastAddress - £temporary193
 	mov ebx, [rbp + 48]
 	sub ebx, eax
 	mov [rbp + 60], ebx
@@ -719,10 +726,10 @@ realloc$58:	; if availableSize < newBlockSize goto 68
 	cmp eax, [rbp + 36]
 	jb realloc$68
 
-realloc$59:	; £field277 -> oldBlockPtr = *oldBlockPtr
+realloc$59:	; £field196 -> oldBlockPtr = *oldBlockPtr
 	mov rsi, [rbp + 40]
 
-realloc$60:	; £field277 -> oldBlockPtr = newBlockSize
+realloc$60:	; £field196 -> oldBlockPtr = newBlockSize
 	mov eax, [rbp + 36]
 	mov [rsi], eax
 
@@ -735,16 +742,16 @@ realloc$62:	; return
 	mov rbp, [rbp + 8]
 	jmp rax
 
-realloc$63:	; £temporary278 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
+realloc$63:	; £temporary197 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
 	mov rax, [rbp + 52]
 
-realloc$64:	; lastAddress = £temporary278
+realloc$64:	; lastAddress = £temporary197
 	mov [rbp + 48], eax
 
-realloc$65:	; £field279 -> currBlockPtr = *currBlockPtr
+realloc$65:	; £field198 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 52]
 
-realloc$66:	; currBlockPtr = £field279 -> currBlockPtr
+realloc$66:	; currBlockPtr = £field198 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [rbp + 52], rax
 
@@ -765,9 +772,9 @@ realloc$70:	; call function noellipse-noellipse malloc
 
 realloc$71:	; post call
 
-realloc$72:	; £temporary280 = return_value
+realloc$72:	; £temporary199 = return_value
 
-realloc$73:	; newMemoryPtr = £temporary280
+realloc$73:	; newMemoryPtr = £temporary199
 	mov [rbp + 60], rbx
 
 realloc$74:	; if newMemoryPtr == int8$0# goto 87
@@ -857,16 +864,16 @@ print_heap$6:	; call header integral zero 0 stack zero 0
 print_heap$7:	; parameter string_2020Address2025u2C20Size2025u0A#, offset 56
 	mov qword [rbp + 56], string_2020Address2025u2C20Size2025u0A#
 
-print_heap$8:	; £temporary303 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
+print_heap$8:	; £temporary205 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
 	mov rax, [rbp + 24]
 
-print_heap$9:	; parameter £temporary303, offset 64
+print_heap$9:	; parameter £temporary205, offset 64
 	mov [rbp + 64], eax
 
-print_heap$10:	; £field304 -> currBlockPtr = *currBlockPtr
+print_heap$10:	; £field206 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 24]
 
-print_heap$11:	; parameter £field304 -> currBlockPtr, offset 68
+print_heap$11:	; parameter £field206 -> currBlockPtr, offset 68
 	mov eax, [rsi]
 	mov [rbp + 68], eax
 
@@ -880,10 +887,10 @@ print_heap$12:	; call function noellipse-ellipse printf, extra 8
 
 print_heap$13:	; post call
 
-print_heap$14:	; £field306 -> currBlockPtr = *currBlockPtr
+print_heap$14:	; £field208 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 24]
 
-print_heap$15:	; currBlockPtr = £field306 -> currBlockPtr
+print_heap$15:	; currBlockPtr = £field208 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [rbp + 24], rax
 
