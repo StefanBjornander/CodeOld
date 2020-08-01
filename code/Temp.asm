@@ -30,7 +30,8 @@ section .text
 
 @2996$existsTempName$6:	; £temporary987 = £temporary986 * Array_#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mov rax, 4
+	mul rax
 
 @2996$existsTempName$7:	; £temporary988 = g_tempArray + £temporary987
 	mov rbx, @2993$g_tempArray
@@ -196,7 +197,8 @@ section .text
 
 @3003$generateTempName$32:	; £temporary1011 = £temporary1010 * Array_#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mov rax, 4
+	mul rax
 
 @3003$generateTempName$33:	; £temporary1012 = g_tempArray + £temporary1011
 	mov rbx, @2993$g_tempArray
@@ -231,7 +233,8 @@ section .text
 
 @3003$generateTempName$42:	; £temporary1017 = £temporary1016 * Array_#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mov rax, 4
+	mul rax
 
 @3003$generateTempName$43:	; £temporary1018 = g_tempArray + £temporary1017
 	mov rsi, @2993$g_tempArray
@@ -442,10 +445,6 @@ $IntegralStorage#:
 
 @2994$g_tempSize:
 	dd 0
-
-Array_#:
-	; initializer Array
-	dq 4
 
 string_w#:
 	; initializer String
