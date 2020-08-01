@@ -712,7 +712,7 @@ rand$1:	; £temporary2100 = £temporary2099 + int8$1013904223#
 rand$2:	; g_randValue = £temporary2100 % int8$127#
 	xor rdx, rdx
 	idiv qword [int8$127#]
-	mov [@4356$g_randValue], rax
+	mov [@4356$g_randValue], rdx
 
 rand$3:	; £temporary2102 = int_to_int g_randValue (Signed_Long_Int -> Signed_Int)
 	mov rbx, [@4356$g_randValue]
@@ -1439,7 +1439,7 @@ div$7:	; result$rem = num % denum
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [rbp + 28]
-	mov [rbp + 36], eax
+	mov [rbp + 36], edx
 
 div$8:	; return_value = result
 	mov rbx, rbp
@@ -1488,7 +1488,7 @@ ldiv$7:	; result$rem = num % denum
 	mov rax, [rbp + 24]
 	xor rdx, rdx
 	idiv qword [rbp + 32]
-	mov [rbp + 48], rax
+	mov [rbp + 48], rdx
 
 ldiv$8:	; return_value = result
 	mov rbx, rbp

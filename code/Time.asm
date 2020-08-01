@@ -226,7 +226,7 @@ gmtime$4:	; secondsOfDay = time % int8$86400#
 	mov rax, [rbp + 36]
 	xor rdx, rdx
 	idiv qword [int8$86400#]
-	mov [rbp + 44], rax
+	mov [rbp + 44], rdx
 
 gmtime$5:	; £temporary2254 = secondsOfDay / int8$3600#
 	mov rax, [rbp + 44]
