@@ -41,6 +41,7 @@ section .text
 
 @2996$existsTempName$9:	; parameter £field985 -> £temporary988, offset 68
 	mov [rbp + 68], rbp
+	add qword [rbp + 68], 0
 
 @2996$existsTempName$10:	; call function noellipse-noellipse strcmp
 	mov qword [rbp + 36], @2996$existsTempName$11
@@ -208,6 +209,7 @@ section .text
 
 @3003$generateTempName$35:	; parameter £field1009 -> £temporary1012, offset 65
 	mov [rbp + 65], rbp
+	add qword [rbp + 65], 0
 
 @3003$generateTempName$36:	; parameter name, offset 73
 	mov rax, [rbp + 24]
@@ -244,6 +246,7 @@ section .text
 
 @3003$generateTempName$45:	; return_value = £field1015 -> £temporary1018
 	mov rbx, rsi
+	add rbx, 0
 
 @3003$generateTempName$46:	; return
 	mov rax, [rbp]

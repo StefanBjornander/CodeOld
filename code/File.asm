@@ -653,6 +653,7 @@ freopen$138:	; £field835 -> stream = *stream
 
 freopen$139:	; parameter £field835 -> stream, offset 76
 	mov [rbp + 76], rbp
+	add qword [rbp + 76], 0
 
 freopen$140:	; parameter name, offset 84
 	mov rax, [rbp + 24]

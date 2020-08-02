@@ -1118,6 +1118,7 @@ exit$27:	; call function noellipse-noellipse £field2148 -> £temporary2151
 	mov [rbp + 2088], rbp
 	add rbp, 2080
 	mov rsi, rbp
+	add rsi, 0
 	mov rax, [rsi]
 	jmp rax
 
