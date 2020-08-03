@@ -111,7 +111,7 @@ signal_test$1:	; b = int4$1#
 signal_test$2:	; c = a / b
 	mov eax, [rbp + 24]
 	xor edx, edx
-	idiv dword [rbp + 28]
+	idiv dword rbp, 28
 	mov [rbp + 32], eax
 
 signal_test$3:	; call header integral zero 0 stack zero 0

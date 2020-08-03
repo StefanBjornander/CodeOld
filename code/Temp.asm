@@ -34,14 +34,13 @@ section .text
 	mul rax
 
 @2996$existsTempName$7:	; £temporary988 = g_tempArray + £temporary987
-	mov rbx, @2993$g_tempArray
-	add rbx, rax
+	mov rsi, @2993$g_tempArray
+	add rsi, rax
 
 @2996$existsTempName$8:	; £field985 -> £temporary988 = *£temporary988
 
 @2996$existsTempName$9:	; parameter £field985 -> £temporary988, offset 68
-	mov [rbp + 68], rbp
-	add qword [rbp + 68], 0
+	mov [rbp + 68], rsi
 
 @2996$existsTempName$10:	; call function noellipse-noellipse strcmp
 	mov qword [rbp + 36], @2996$existsTempName$11
@@ -67,7 +66,7 @@ section .text
 	jmp rax
 
 @2996$existsTempName$16:	; index = index + int4$1#
-	inc dword [rbp + 32]
+	inc dword rbp, 32
 
 @2996$existsTempName$17:	; goto 2
 	jmp @2996$existsTempName$2
@@ -202,14 +201,13 @@ section .text
 	mul rax
 
 @3003$generateTempName$33:	; £temporary1012 = g_tempArray + £temporary1011
-	mov rbx, @2993$g_tempArray
-	add rbx, rax
+	mov rsi, @2993$g_tempArray
+	add rsi, rax
 
 @3003$generateTempName$34:	; £field1009 -> £temporary1012 = *£temporary1012
 
 @3003$generateTempName$35:	; parameter £field1009 -> £temporary1012, offset 65
-	mov [rbp + 65], rbp
-	add qword [rbp + 65], 0
+	mov [rbp + 65], rsi
 
 @3003$generateTempName$36:	; parameter name, offset 73
 	mov rax, [rbp + 24]
@@ -227,7 +225,7 @@ section .text
 	mov eax, [@2994$g_tempSize]
 
 @3003$generateTempName$40:	; g_tempSize = g_tempSize + int4$1#
-	inc dword [@2994$g_tempSize]
+	inc dword @2994$g_tempSize, 0
 
 @3003$generateTempName$41:	; £temporary1016 = int_to_int £temporary1014 (Signed_Int -> Array)
 	mov rbx, 4294967295
@@ -246,7 +244,6 @@ section .text
 
 @3003$generateTempName$45:	; return_value = £field1015 -> £temporary1018
 	mov rbx, rsi
-	add rbx, 0
 
 @3003$generateTempName$46:	; return
 	mov rax, [rbp]
@@ -298,7 +295,7 @@ section .text
 	jmp rax
 
 @3003$generateTempName$59:	; c = c + int1$1#
-	inc byte [rbp + 40]
+	inc byte rbp, 40
 
 @3003$generateTempName$60:	; goto 2
 	jmp @3003$generateTempName$2

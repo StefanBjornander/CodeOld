@@ -71,7 +71,7 @@ strcpy$12:	; £field2528 -> £temporary2531 = £field2532 -> £temporary2535
 	mov [rsi], al
 
 strcpy$13:	; index = index + int4$1#
-	inc dword [rbp + 40]
+	inc dword rbp, 40
 
 strcpy$14:	; goto 2
 	jmp strcpy$2
@@ -153,7 +153,7 @@ strncpy$13:	; £field2548 -> £temporary2551 = £field2552 -> £temporary2555
 	mov [rsi], al
 
 strncpy$14:	; index = index + int4$1#
-	inc dword [rbp + 44]
+	inc dword rbp, 44
 
 strncpy$15:	; goto 2
 	jmp strncpy$2
@@ -178,7 +178,7 @@ strncpy$20:	; £field2558 -> £temporary2561 = int1$0#
 	mov byte [rsi], 0
 
 strncpy$21:	; index = index + int4$1#
-	inc dword [rbp + 44]
+	inc dword rbp, 44
 
 strncpy$22:	; goto 16
 	jmp strncpy$16
@@ -263,7 +263,7 @@ strcat$19:	; £field2570 -> £temporary2573 = £field2574 -> £temporary2577
 	mov [rsi], al
 
 strcat$20:	; index = index + int4$1#
-	inc dword [rbp + 40]
+	inc dword rbp, 40
 
 strcat$21:	; goto 8
 	jmp strcat$8
@@ -373,7 +373,7 @@ strncat$21:	; £field2594 -> £temporary2597 = £field2598 -> £temporary2601
 	mov [rsi], al
 
 strncat$22:	; index = index + int4$1#
-	inc dword [rbp + 44]
+	inc dword rbp, 44
 
 strncat$23:	; goto 8
 	jmp strncat$8
@@ -574,7 +574,7 @@ strcmp$41:	; return
 	jmp rax
 
 strcmp$42:	; index = index + int4$1#
-	inc dword [rbp + 40]
+	inc dword rbp, 40
 
 strcmp$43:	; goto 2
 	jmp strcmp$2
@@ -751,7 +751,7 @@ strncmp$42:	; return
 	jmp rax
 
 strncmp$43:	; index = index + int4$1#
-	inc dword [rbp + 44]
+	inc dword rbp, 44
 
 strncmp$44:	; goto 2
 	jmp strncmp$2
@@ -835,7 +835,7 @@ strchr$17:	; return
 	jmp rax
 
 strchr$18:	; index = index + int4$1#
-	inc dword [rbp + 36]
+	inc dword rbp, 36
 
 strchr$19:	; goto 4
 	jmp strchr$4
@@ -918,7 +918,7 @@ strrchr$17:	; result = £temporary2723
 	mov [rbp + 40], rsi
 
 strrchr$18:	; index = index + int4$1#
-	inc dword [rbp + 36]
+	inc dword rbp, 36
 
 strrchr$19:	; goto 5
 	jmp strrchr$5
@@ -1006,7 +1006,7 @@ strspn$18:	; return
 	jmp rax
 
 strspn$19:	; index = index + int4$1#
-	inc dword [rbp + 40]
+	inc dword rbp, 40
 
 strspn$20:	; goto 2
 	jmp strspn$2
@@ -1094,7 +1094,7 @@ strcspn$18:	; return
 	jmp rax
 
 strcspn$19:	; index = index + int4$1#
-	inc dword [rbp + 40]
+	inc dword rbp, 40
 
 strcspn$20:	; goto 2
 	jmp strcspn$2
@@ -1194,7 +1194,7 @@ strpbrk$22:	; return
 	jmp rax
 
 strpbrk$23:	; index = index + int4$1#
-	inc dword [rbp + 40]
+	inc dword rbp, 40
 
 strpbrk$24:	; goto 2
 	jmp strpbrk$2
@@ -1284,7 +1284,7 @@ strstr$20:	; return
 	jmp rax
 
 strstr$21:	; index = index + int4$1#
-	inc dword [rbp + 40]
+	inc dword rbp, 40
 
 strstr$22:	; goto 2
 	jmp strstr$2
@@ -1321,7 +1321,7 @@ strlen$5:	; if £field2784 -> £temporary2787 == int1$0# goto 8
 	je strlen$8
 
 strlen$6:	; index = index + int4$1#
-	inc dword [rbp + 32]
+	inc dword rbp, 32
 
 strlen$7:	; goto 2
 	jmp strlen$2
@@ -1394,7 +1394,7 @@ strerror$16:	; £temporary2797 = int_to_int errno (Signed_Int -> Pointer)
 
 strerror$17:	; £temporary2798 = £temporary2797 * int8$8#
 	xor rdx, rdx
-	mul qword [int8$8#]
+	mul qword int8$8#, 0
 
 strerror$18:	; £temporary2799 = messageList + £temporary2798
 	mov rsi, [rbp + 36]
@@ -1538,7 +1538,7 @@ strtok$33:	; return
 	jmp rax
 
 strtok$34:	; index = index + int4$1#
-	inc dword [rbp + 40]
+	inc dword rbp, 40
 
 strtok$35:	; goto 7
 	jmp strtok$7
@@ -1704,7 +1704,7 @@ strtok$78:	; return
 	jmp rax
 
 strtok$79:	; index = index + int4$1#
-	inc dword [rbp + 40]
+	inc dword rbp, 40
 
 strtok$80:	; goto 51
 	jmp strtok$51
@@ -1787,7 +1787,7 @@ memcpy$12:	; £field2866 -> £temporary2869 = £field2870 -> £temporary2873
 	mov [rsi], al
 
 memcpy$13:	; index = index + int4$1#
-	inc dword [rbp + 60]
+	inc dword rbp, 60
 
 memcpy$14:	; goto 5
 	jmp memcpy$5
@@ -1858,7 +1858,7 @@ memmove$13:	; £field2881 -> £temporary2884 = £field2885 -> £temporary2888
 	mov [rsi], al
 
 memmove$14:	; index = index - int4$1#
-	dec dword [rbp + 60]
+	dec dword rbp, 60
 
 memmove$15:	; goto 6
 	jmp memmove$6
@@ -1898,7 +1898,7 @@ memmove$24:	; £field2891 -> £temporary2894 = £field2895 -> £temporary2898
 	mov [rsi], al
 
 memmove$25:	; index = index + int4$1#
-	inc dword [rbp + 60]
+	inc dword rbp, 60
 
 memmove$26:	; goto 17
 	jmp memmove$17
@@ -2009,7 +2009,7 @@ memcmp$23:	; return
 	jmp rax
 
 memcmp$24:	; index = index + int4$1#
-	inc dword [rbp + 60]
+	inc dword rbp, 60
 
 memcmp$25:	; goto 5
 	jmp memcmp$5
@@ -2091,7 +2091,7 @@ memchr$17:	; return
 	jmp rax
 
 memchr$18:	; index = index + int4$1#
-	inc dword [rbp + 40]
+	inc dword rbp, 40
 
 memchr$19:	; goto 6
 	jmp memchr$6
@@ -2147,7 +2147,7 @@ memset$9:	; £field2941 -> £temporary2944 = c
 	mov [rsi], al
 
 memset$10:	; index = index + int4$1#
-	inc dword [rbp + 49]
+	inc dword rbp, 49
 
 memset$11:	; goto 5
 	jmp memset$5

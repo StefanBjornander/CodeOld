@@ -210,7 +210,7 @@ printChar$16:	; syscall
 	syscall 
 
 printChar$17:	; g_outChars = g_outChars + int4$1#
-	inc dword [g_outChars]
+	inc dword g_outChars, 0
 
 printChar$18:	; goto 29
 	jmp printChar$29
@@ -225,7 +225,7 @@ printChar$21:	; £temporary1556 = g_outChars
 	mov eax, [g_outChars]
 
 printChar$22:	; g_outChars = g_outChars + int4$1#
-	inc dword [g_outChars]
+	inc dword g_outChars, 0
 
 printChar$23:	; £temporary1558 = int_to_int £temporary1556 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
@@ -245,7 +245,7 @@ printChar$27:	; goto 29
 	jmp printChar$29
 
 printChar$28:	; g_outChars = g_outChars + int4$1#
-	inc dword [g_outChars]
+	inc dword g_outChars, 0
 
 printChar$29:	; return
 	mov rax, [rbp]
@@ -307,7 +307,7 @@ printString$12:	; call function noellipse-noellipse printChar
 printString$13:	; post call
 
 printString$14:	; index = index + int4$1#
-	inc dword [rbp + 36]
+	inc dword rbp, 36
 
 printString$15:	; goto 3
 	jmp printString$3
@@ -319,7 +319,7 @@ printString$17:	; £temporary1576 = precision
 	mov eax, [rbp + 32]
 
 printString$18:	; precision = precision - int4$1#
-	dec dword [rbp + 32]
+	dec dword rbp, 32
 
 printString$19:	; if £temporary1576 <= int4$0# goto 57
 	cmp eax, 0
@@ -366,7 +366,7 @@ printString$29:	; call function noellipse-noellipse printChar
 printString$30:	; post call
 
 printString$31:	; index = index + int4$1#
-	inc dword [rbp + 36]
+	inc dword rbp, 36
 
 printString$32:	; goto 17
 	jmp printString$17
@@ -464,7 +464,7 @@ printLongIntRec:	; if longValue == int8$0# goto 15
 printLongIntRec$1:	; £temporary1597 = longValue % int8$10#
 	mov rax, [rbp + 24]
 	xor rdx, rdx
-	idiv qword [int8$10#]
+	idiv qword int8$10#, 0
 
 printLongIntRec$2:	; £temporary1598 = int_to_int £temporary1597 (Signed_Long_Int -> Signed_Int)
 	cmp rdx, 0
@@ -480,7 +480,7 @@ printLongIntRec$4:	; call header integral zero 0 stack zero 0
 printLongIntRec$5:	; £temporary1599 = longValue / int8$10#
 	mov rax, [rbp + 24]
 	xor rdx, rdx
-	idiv qword [int8$10#]
+	idiv qword int8$10#, 0
 
 printLongIntRec$6:	; parameter £temporary1599, offset 60
 	mov [rbp + 60], rax
@@ -707,7 +707,7 @@ printUnsignedLongRec:	; if unsignedValue <= int8$0# goto 22
 printUnsignedLongRec$1:	; £temporary1625 = unsignedValue % base
 	mov rax, [rbp + 24]
 	xor rdx, rdx
-	div qword [rbp + 32]
+	div qword rbp, 32
 
 printUnsignedLongRec$2:	; £temporary1626 = int_to_int £temporary1625 (Unsigned_Long_Int -> Signed_Int)
 
@@ -719,7 +719,7 @@ printUnsignedLongRec$4:	; call header integral zero 0 stack zero 0
 printUnsignedLongRec$5:	; £temporary1627 = unsignedValue / base
 	mov rax, [rbp + 24]
 	xor rdx, rdx
-	div qword [rbp + 32]
+	div qword rbp, 32
 
 printUnsignedLongRec$6:	; parameter £temporary1627, offset 72
 	mov [rbp + 72], rax
@@ -934,24 +934,24 @@ printUnsignedLong$41:	; return
 printUnsignedLong$42:	; function end printUnsignedLong
 
 printLongDoubleFraction:	; push float longDoubleValue
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 printLongDoubleFraction$1:	; push float longDoubleValue
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 printLongDoubleFraction$2:	; £temporary1646 = float_to_int longDoubleValue (Long_Double -> Signed_Long_Int)
-	fistp dword [$IntegralStorage#]
+	fistp dword $IntegralStorage#, 0
 	mov rax, [$IntegralStorage#]
 
 printLongDoubleFraction$3:	; £temporary1647 = int_to_float £temporary1646 (Signed_Long_Int -> Long_Double)
 	mov [$IntegralStorage#], rax
-	fild dword [$IntegralStorage#]
+	fild dword $IntegralStorage#, 0
 
 printLongDoubleFraction$4:	; £temporary1648 = longDoubleValue - £temporary1647
 	fsub 
 
 printLongDoubleFraction$5:	; pop float longDoubleValue
-	fstp qword [rbp + 24]
+	fstp qword rbp, 24
 
 printLongDoubleFraction$6:	; if precision != int4$0# goto 8
 	cmp dword [rbp + 36], 0
@@ -985,26 +985,26 @@ printLongDoubleFraction$14:	; £temporary1654 = precision
 	mov eax, [rbp + 36]
 
 printLongDoubleFraction$15:	; precision = precision - int4$1#
-	dec dword [rbp + 36]
+	dec dword rbp, 36
 
 printLongDoubleFraction$16:	; if £temporary1654 <= int4$0# goto 34
 	cmp eax, 0
 	jle printLongDoubleFraction$34
 
 printLongDoubleFraction$17:	; push float float8$10.0#
-	fld qword [float8$10.0#]
+	fld qword float8$10.0#, 0
 
 printLongDoubleFraction$18:	; push float longDoubleValue
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 printLongDoubleFraction$19:	; £temporary1656 = float8$10.0# * longDoubleValue
 	fmul 
 
 printLongDoubleFraction$20:	; top float longDoubleValue10
-	fst qword [rbp + 40]
+	fst qword rbp, 40
 
 printLongDoubleFraction$21:	; £temporary1657 = float_to_int longDoubleValue10 (Long_Double -> Signed_Int)
-	fistp word [$IntegralStorage#]
+	fistp word $IntegralStorage#, 0
 	mov eax, [$IntegralStorage#]
 
 printLongDoubleFraction$22:	; digitValue = £temporary1657
@@ -1034,16 +1034,16 @@ printLongDoubleFraction$27:	; call function noellipse-noellipse printChar
 printLongDoubleFraction$28:	; post call
 
 printLongDoubleFraction$29:	; push float longDoubleValue10
-	fld qword [rbp + 40]
+	fld qword rbp, 40
 
 printLongDoubleFraction$30:	; £temporary1661 = int_to_float digitValue (Signed_Int -> Long_Double)
-	fild word [rbp + 48]
+	fild word rbp, 48
 
 printLongDoubleFraction$31:	; £temporary1662 = longDoubleValue10 - £temporary1661
 	fsub 
 
 printLongDoubleFraction$32:	; pop float longDoubleValue
-	fstp qword [rbp + 24]
+	fstp qword rbp, 24
 
 printLongDoubleFraction$33:	; goto 14
 	jmp printLongDoubleFraction$14
@@ -1057,7 +1057,7 @@ printLongDoubleFraction$34:	; return
 printLongDoubleFraction$35:	; function end printLongDoubleFraction
 
 printLongDoublePlain:	; push float longDoubleValue
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 printLongDoublePlain$1:	; push float float8$0.0#
 	fldz 
@@ -1082,13 +1082,13 @@ printLongDoublePlain$5:	; call function noellipse-noellipse printChar
 printLongDoublePlain$6:	; post call
 
 printLongDoublePlain$7:	; push float longDoubleValue
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 printLongDoublePlain$8:	; £temporary1665 = -longDoubleValue
 	fchs 
 
 printLongDoublePlain$9:	; pop float longDoubleValue
-	fstp qword [rbp + 24]
+	fstp qword rbp, 24
 
 printLongDoublePlain$10:	; plus = int4$0#
 	mov dword [rbp + 32], 0
@@ -1097,10 +1097,10 @@ printLongDoublePlain$11:	; space = int4$0#
 	mov dword [rbp + 36], 0
 
 printLongDoublePlain$12:	; push float longDoubleValue
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 printLongDoublePlain$13:	; £temporary1666 = float_to_int longDoubleValue (Long_Double -> Signed_Long_Int)
-	fistp dword [$IntegralStorage#]
+	fistp dword $IntegralStorage#, 0
 	mov rax, [$IntegralStorage#]
 
 printLongDoublePlain$14:	; longValue = £temporary1666
@@ -1129,24 +1129,24 @@ printLongDoublePlain$19:	; call function noellipse-noellipse printLongInt
 printLongDoublePlain$20:	; post call
 
 printLongDoublePlain$21:	; push float longDoubleValue
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 printLongDoublePlain$22:	; £temporary1668 = int_to_float longValue (Signed_Long_Int -> Long_Double)
-	fild dword [rbp + 48]
+	fild dword rbp, 48
 
 printLongDoublePlain$23:	; £temporary1669 = longDoubleValue - £temporary1668
 	fsub 
 
 printLongDoublePlain$24:	; pop float longDoubleValue
-	fstp qword [rbp + 24]
+	fstp qword rbp, 24
 
 printLongDoublePlain$25:	; call header integral zero 0 stack zero 0
 
 printLongDoublePlain$26:	; push float longDoubleValue
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 printLongDoublePlain$27:	; parameter longDoubleValue, offset 80
-	fstp qword [rbp + 80]
+	fstp qword rbp, 80
 
 printLongDoublePlain$28:	; parameter grid, offset 88
 	mov eax, [rbp + 40]
@@ -1173,7 +1173,7 @@ printLongDoublePlain$32:	; return
 printLongDoublePlain$33:	; function end printLongDoublePlain
 
 printLongDoubleExpo:	; push float value
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 printLongDoubleExpo$1:	; push float float8$0.0#
 	fldz 
@@ -1203,7 +1203,7 @@ printLongDoubleExpo$8:	; push float float8$0.0#
 	fldz 
 
 printLongDoubleExpo$9:	; parameter float8$0.0#, offset 76
-	fstp qword [rbp + 76]
+	fstp qword rbp, 76
 
 printLongDoubleExpo$10:	; parameter precision, offset 84
 	mov eax, [rbp + 44]
@@ -1264,7 +1264,7 @@ printLongDoubleExpo$26:	; goto 80
 	jmp printLongDoubleExpo$80
 
 printLongDoubleExpo$27:	; push float value
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 printLongDoubleExpo$28:	; push float float8$0.0#
 	fldz 
@@ -1289,21 +1289,21 @@ printLongDoubleExpo$32:	; call function noellipse-noellipse printChar
 printLongDoubleExpo$33:	; post call
 
 printLongDoubleExpo$34:	; push float value
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 printLongDoubleExpo$35:	; £temporary1681 = -value
 	fchs 
 
 printLongDoubleExpo$36:	; pop float value
-	fstp qword [rbp + 24]
+	fstp qword rbp, 24
 
 printLongDoubleExpo$37:	; call header integral zero 0 stack zero 0
 
 printLongDoubleExpo$38:	; push float value
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 printLongDoubleExpo$39:	; parameter value, offset 76
-	fstp qword [rbp + 76]
+	fstp qword rbp, 76
 
 printLongDoubleExpo$40:	; call function noellipse-noellipse log10
 	mov qword [rbp + 52], printLongDoubleExpo$41
@@ -1316,29 +1316,29 @@ printLongDoubleExpo$41:	; post call
 printLongDoubleExpo$42:	; £temporary1682 = return_value
 
 printLongDoubleExpo$43:	; £temporary1683 = float_to_int £temporary1682 (Double -> Signed_Int)
-	fistp word [$IntegralStorage#]
+	fistp word $IntegralStorage#, 0
 	mov eax, [$IntegralStorage#]
 
 printLongDoubleExpo$44:	; expo = £temporary1683
 	mov [rbp + 52], eax
 
 printLongDoubleExpo$45:	; push float value
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 printLongDoubleExpo$46:	; call header integral zero 0 stack no zero 1
-	fstp qword [rbp + 56]
+	fstp qword rbp, 56
 
 printLongDoubleExpo$47:	; push float float8$10.0#
-	fld qword [float8$10.0#]
+	fld qword float8$10.0#, 0
 
 printLongDoubleExpo$48:	; parameter float8$10.0#, offset 80
-	fstp qword [rbp + 88]
+	fstp qword rbp, 88
 
 printLongDoubleExpo$49:	; £temporary1684 = int_to_float expo (Signed_Int -> Double)
-	fild word [rbp + 52]
+	fild word rbp, 52
 
 printLongDoubleExpo$50:	; parameter £temporary1684, offset 88
-	fstp qword [rbp + 96]
+	fstp qword rbp, 96
 
 printLongDoubleExpo$51:	; call function noellipse-noellipse pow
 	mov qword [rbp + 64], printLongDoubleExpo$52
@@ -1347,9 +1347,9 @@ printLongDoubleExpo$51:	; call function noellipse-noellipse pow
 	jmp pow
 
 printLongDoubleExpo$52:	; post call
-	fstp qword [rbp + 64]
-	fld qword [rbp + 56]
-	fld qword [rbp + 64]
+	fstp qword rbp, 64
+	fld qword rbp, 56
+	fld qword rbp, 64
 
 printLongDoubleExpo$53:	; £temporary1685 = return_value
 
@@ -1357,15 +1357,15 @@ printLongDoubleExpo$54:	; £temporary1686 = value / £temporary1685
 	fdiv 
 
 printLongDoubleExpo$55:	; pop float value
-	fstp qword [rbp + 24]
+	fstp qword rbp, 24
 
 printLongDoubleExpo$56:	; call header integral zero 0 stack zero 0
 
 printLongDoubleExpo$57:	; push float value
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 printLongDoubleExpo$58:	; parameter value, offset 80
-	fstp qword [rbp + 80]
+	fstp qword rbp, 80
 
 printLongDoubleExpo$59:	; parameter plus, offset 88
 	mov eax, [rbp + 32]
@@ -2170,18 +2170,18 @@ printArgument$176:	; £temporary1812 = int_to_int £temporary1810 (Pointer -> Po
 printArgument$177:	; £field1813 -> £temporary1812 = *£temporary1812
 
 printArgument$178:	; push float £field1813 -> £temporary1812
-	fld qword [rsi]
+	fld qword rsi, 0
 
 printArgument$179:	; pop float longDoubleValue
-	fstp qword [rbp + 98]
+	fstp qword rbp, 98
 
 printArgument$180:	; call header integral zero 0 stack zero 0
 
 printArgument$181:	; push float longDoubleValue
-	fld qword [rbp + 98]
+	fld qword rbp, 98
 
 printArgument$182:	; parameter longDoubleValue, offset 138
-	fstp qword [rbp + 138]
+	fstp qword rbp, 138
 
 printArgument$183:	; parameter int4$0#, offset 146
 	mov dword [rbp + 146], 0
@@ -2218,10 +2218,10 @@ printArgument$192:	; £temporary1819 = int_to_int £temporary1817 (Pointer -> Po
 printArgument$193:	; £field1820 -> £temporary1819 = *£temporary1819
 
 printArgument$194:	; push float £field1820 -> £temporary1819
-	fld qword [rsi]
+	fld qword rsi, 0
 
 printArgument$195:	; pop float longDoubleValue
-	fstp qword [rbp + 98]
+	fstp qword rbp, 98
 
 printArgument$196:	; if negativePtr == int8$0# goto 205
 	cmp qword [rbp + 80], 0
@@ -2231,7 +2231,7 @@ printArgument$197:	; £field1824 -> negativePtr = *negativePtr
 	mov rsi, [rbp + 80]
 
 printArgument$198:	; push float longDoubleValue
-	fld qword [rbp + 98]
+	fld qword rbp, 98
 
 printArgument$199:	; push float float8$0#
 	fldz 
@@ -2261,10 +2261,10 @@ printArgument$205:	; if sign != int4$0# goto 213
 printArgument$206:	; call header integral zero 0 stack zero 0
 
 printArgument$207:	; push float longDoubleValue
-	fld qword [rbp + 98]
+	fld qword rbp, 98
 
 printArgument$208:	; parameter longDoubleValue, offset 138
-	fstp qword [rbp + 138]
+	fstp qword rbp, 138
 
 printArgument$209:	; call function noellipse-noellipse fabs
 	mov qword [rbp + 114], printArgument$210
@@ -2277,7 +2277,7 @@ printArgument$210:	; post call
 printArgument$211:	; £temporary1829 = return_value
 
 printArgument$212:	; pop float longDoubleValue
-	fstp qword [rbp + 98]
+	fstp qword rbp, 98
 
 printArgument$213:	; call header integral zero 0 stack zero 0
 
@@ -2316,10 +2316,10 @@ printArgument$222:	; if c != int1$102# goto 233
 printArgument$223:	; call header integral zero 0 stack zero 0
 
 printArgument$224:	; push float longDoubleValue
-	fld qword [rbp + 98]
+	fld qword rbp, 98
 
 printArgument$225:	; parameter longDoubleValue, offset 138
-	fstp qword [rbp + 138]
+	fstp qword rbp, 138
 
 printArgument$226:	; parameter plus, offset 146
 	mov eax, [rbp + 40]
@@ -2378,10 +2378,10 @@ printArgument$239:	; if £temporary1835 != int4$101# goto 257
 printArgument$240:	; call header integral zero 0 stack zero 0
 
 printArgument$241:	; push float longDoubleValue
-	fld qword [rbp + 98]
+	fld qword rbp, 98
 
 printArgument$242:	; parameter longDoubleValue, offset 138
-	fstp qword [rbp + 138]
+	fstp qword rbp, 138
 
 printArgument$243:	; parameter plus, offset 146
 	mov eax, [rbp + 40]
@@ -2441,10 +2441,10 @@ printArgument$257:	; call header integral zero 0 stack zero 0
 printArgument$258:	; call header integral zero 0 stack zero 0
 
 printArgument$259:	; push float longDoubleValue
-	fld qword [rbp + 98]
+	fld qword rbp, 98
 
 printArgument$260:	; parameter longDoubleValue, offset 138
-	fstp qword [rbp + 138]
+	fstp qword rbp, 138
 
 printArgument$261:	; call function noellipse-noellipse fabs
 	mov qword [rbp + 114], printArgument$262
@@ -2457,7 +2457,7 @@ printArgument$262:	; post call
 printArgument$263:	; £temporary1840 = return_value
 
 printArgument$264:	; parameter £temporary1840, offset 138
-	fstp qword [rbp + 138]
+	fstp qword rbp, 138
 
 printArgument$265:	; call function noellipse-noellipse log10
 	mov qword [rbp + 114], printArgument$266
@@ -2470,7 +2470,7 @@ printArgument$266:	; post call
 printArgument$267:	; £temporary1841 = return_value
 
 printArgument$268:	; £temporary1842 = float_to_int £temporary1841 (Double -> Signed_Int)
-	fistp word [$IntegralStorage#]
+	fistp word $IntegralStorage#, 0
 	mov eax, [$IntegralStorage#]
 
 printArgument$269:	; expo = £temporary1842
@@ -2487,10 +2487,10 @@ printArgument$271:	; if expo > int4$2# goto 282
 printArgument$272:	; call header integral zero 0 stack zero 0
 
 printArgument$273:	; push float longDoubleValue
-	fld qword [rbp + 98]
+	fld qword rbp, 98
 
 printArgument$274:	; parameter longDoubleValue, offset 142
-	fstp qword [rbp + 142]
+	fstp qword rbp, 142
 
 printArgument$275:	; parameter plus, offset 150
 	mov eax, [rbp + 40]
@@ -2522,10 +2522,10 @@ printArgument$281:	; goto 359
 printArgument$282:	; call header integral zero 0 stack zero 0
 
 printArgument$283:	; push float longDoubleValue
-	fld qword [rbp + 98]
+	fld qword rbp, 98
 
 printArgument$284:	; parameter longDoubleValue, offset 142
-	fstp qword [rbp + 142]
+	fstp qword rbp, 142
 
 printArgument$285:	; parameter plus, offset 150
 	mov eax, [rbp + 40]
@@ -3140,7 +3140,7 @@ printFormat$101:	; £temporary1914 = g_outChars - startChars
 	sub eax, [rbp + 101]
 
 printFormat$102:	; field = field + int4$1#
-	inc dword [rbp + 105]
+	inc dword rbp, 105
 
 printFormat$103:	; if £temporary1914 >= width goto 242
 	cmp eax, [rbp + 44]
@@ -3284,7 +3284,7 @@ printFormat$141:	; call function noellipse-noellipse printChar
 printFormat$142:	; post call
 
 printFormat$143:	; field = field + int4$1#
-	inc dword [rbp + 113]
+	inc dword rbp, 113
 
 printFormat$144:	; goto 158
 	jmp printFormat$158
@@ -3307,7 +3307,7 @@ printFormat$148:	; call function noellipse-noellipse printChar
 printFormat$149:	; post call
 
 printFormat$150:	; field = field + int4$1#
-	inc dword [rbp + 113]
+	inc dword rbp, 113
 
 printFormat$151:	; goto 158
 	jmp printFormat$158
@@ -3334,7 +3334,7 @@ printFormat$157:	; £temporary1935 = field + int4$1#
 	inc eax
 
 printFormat$158:	; field = field + int4$1#
-	inc dword [rbp + 113]
+	inc dword rbp, 113
 
 printFormat$159:	; if £temporary1935 >= width goto 165
 	cmp eax, [rbp + 44]
@@ -3531,7 +3531,7 @@ printFormat$213:	; £temporary1952 = field
 	mov eax, [rbp + 109]
 
 printFormat$214:	; field = field + int4$1#
-	inc dword [rbp + 109]
+	inc dword rbp, 109
 
 printFormat$215:	; if £temporary1952 >= width goto 221
 	cmp eax, [rbp + 44]
@@ -3666,7 +3666,7 @@ printFormat$251:	; if £temporary1964 == int4$0# goto 262
 printFormat$252:	; £temporary1965 = value * int4$10#
 	mov eax, [rbp + 101]
 	xor edx, edx
-	imul dword [int4$10#]
+	imul dword int4$10#, 0
 
 printFormat$253:	; £temporary1966 = c - int1$48#
 	mov bl, [rbp + 100]
@@ -3705,7 +3705,7 @@ printFormat$261:	; goto 245
 	jmp printFormat$245
 
 printFormat$262:	; index = index - int4$1#
-	dec dword [rbp + 40]
+	dec dword rbp, 40
 
 printFormat$263:	; if period != int4$0# goto 266
 	cmp dword [rbp + 80], 0
@@ -3789,7 +3789,7 @@ printFormat$286:	; call function noellipse-noellipse printChar
 printFormat$287:	; post call
 
 printFormat$288:	; index = index + int4$1#
-	inc dword [rbp + 40]
+	inc dword rbp, 40
 
 printFormat$289:	; goto 16
 	jmp printFormat$16

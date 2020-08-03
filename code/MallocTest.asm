@@ -75,7 +75,7 @@ malloc_test2$18:	; r = p
 	mov [rbp + 36], rax
 
 malloc_test2$19:	; index = index + int4$1#
-	inc dword [rbp + 24]
+	inc dword rbp, 24
 
 malloc_test2$20:	; goto 10
 	jmp malloc_test2$10
@@ -783,7 +783,7 @@ malloc_test6$20:	; call function noellipse-ellipse printf, extra 20
 malloc_test6$21:	; post call
 
 malloc_test6$22:	; i = i + int4$1#
-	inc dword [rbp + 24]
+	inc dword rbp, 24
 
 malloc_test6$23:	; goto 6
 	jmp malloc_test6$6

@@ -9,7 +9,7 @@
 section .text
 
 divide:	; push float y
-	fld qword [rbp + 32]
+	fld qword rbp, 32
 
 divide$1:	; push float float8$0#
 	fldz 
@@ -21,10 +21,10 @@ divide$2:	; if y == float8$0# goto 8
 	je divide$8
 
 divide$3:	; push float x
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 divide$4:	; push float y
-	fld qword [rbp + 32]
+	fld qword rbp, 32
 
 divide$5:	; £temporary3164 = x / y
 	fdiv 
@@ -101,13 +101,13 @@ invers$1:	; push float float8$1.0#
 	fld1 
 
 invers$2:	; parameter float8$1.0#, offset 56
-	fstp qword [rbp + 56]
+	fstp qword rbp, 56
 
 invers$3:	; push float x
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 invers$4:	; parameter x, offset 64
-	fstp qword [rbp + 64]
+	fstp qword rbp, 64
 
 invers$5:	; call function noellipse-noellipse divide
 	mov qword [rbp + 32], invers$6
@@ -163,18 +163,18 @@ setjmp_test$10:	; parameter string_12E0202F2025f203D2025f0A#, offset 64
 	mov qword [rbp + 64], string_12E0202F2025f203D2025f0A#
 
 setjmp_test$11:	; push float x
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 setjmp_test$12:	; parameter x, offset 72
-	fstp qword [rbp + 72]
+	fstp qword rbp, 72
 
 setjmp_test$13:	; call header integral zero 0 stack zero 0
 
 setjmp_test$14:	; push float x
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 setjmp_test$15:	; parameter x, offset 104
-	fstp qword [rbp + 104]
+	fstp qword rbp, 104
 
 setjmp_test$16:	; call function noellipse-noellipse invers
 	mov qword [rbp + 80], setjmp_test$17
@@ -187,7 +187,7 @@ setjmp_test$17:	; post call
 setjmp_test$18:	; £temporary3174 = return_value
 
 setjmp_test$19:	; parameter £temporary3174, offset 80
-	fstp qword [rbp + 80]
+	fstp qword rbp, 80
 
 setjmp_test$20:	; call function noellipse-ellipse printf, extra 16
 	mov qword [rbp + 40], setjmp_test$21

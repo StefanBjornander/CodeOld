@@ -107,7 +107,7 @@ main$11:	; £temporary38 = int_to_int index (Signed_Int -> Pointer)
 
 main$12:	; £temporary39 = £temporary38 * int8$8#
 	xor rdx, rdx
-	mul qword [int8$8#]
+	mul qword int8$8#, 0
 
 main$13:	; £temporary40 = argv + £temporary39
 	mov rsi, [rbp + 28]
@@ -130,7 +130,7 @@ main$16:	; call function noellipse-ellipse printf, extra 12
 main$17:	; post call
 
 main$18:	; index = index + int4$1#
-	inc dword [rbp + 36]
+	inc dword rbp, 36
 
 main$19:	; goto 7
 	jmp main$7
@@ -159,7 +159,7 @@ main$25:	; £temporary44 = int_to_int index (Signed_Int -> Pointer)
 
 main$26:	; £temporary45 = £temporary44 * int8$8#
 	xor rdx, rdx
-	mul qword [int8$8#]
+	mul qword int8$8#, 0
 
 main$27:	; £temporary46 = argv + £temporary45
 	mov rsi, [rbp + 28]
@@ -187,7 +187,7 @@ main$33:	; £temporary50 = int_to_int index (Signed_Int -> Pointer)
 
 main$34:	; £temporary51 = £temporary50 * int8$8#
 	xor rdx, rdx
-	mul qword [int8$8#]
+	mul qword int8$8#, 0
 
 main$35:	; £temporary52 = argv + £temporary51
 	mov rsi, [rbp + 28]
@@ -210,7 +210,7 @@ main$38:	; call function noellipse-ellipse printf, extra 12
 main$39:	; post call
 
 main$40:	; index = index + int4$1#
-	inc dword [rbp + 36]
+	inc dword rbp, 36
 
 main$41:	; goto 25
 	jmp main$25
@@ -336,10 +336,10 @@ main$74:	; parameter i, offset 117
 	mov [rbp + 117], eax
 
 main$75:	; push float d
-	fld qword [rbp + 44]
+	fld qword rbp, 44
 
 main$76:	; parameter d, offset 121
-	fstp qword [rbp + 121]
+	fstp qword rbp, 121
 
 main$77:	; call function noellipse-ellipse printf, extra 24
 	mov qword [rbp + 73], main$78
@@ -768,10 +768,10 @@ main3$12:	; parameter string_3C25f3E#, offset 56
 	mov qword [rbp + 56], string_3C25f3E#
 
 main3$13:	; push float x
-	fld qword [rbp + 24]
+	fld qword rbp, 24
 
 main3$14:	; parameter x, offset 64
-	fstp qword [rbp + 64]
+	fstp qword rbp, 64
 
 main3$15:	; call function noellipse-ellipse printf, extra 8
 	mov qword [rbp + 32], main3$16
@@ -794,10 +794,10 @@ main3$18:	; function end main3
 mains2:	; call header integral zero 0 stack zero 0
 
 mains2$1:	; push float float8$3.14#
-	fld qword [float8$3.14#]
+	fld qword float8$3.14#, 0
 
 mains2$2:	; parameter float8$3.14#, offset 48
-	fstp qword [rbp + 48]
+	fstp qword rbp, 48
 
 mains2$3:	; call function noellipse-noellipse setjmp_test
 	mov qword [rbp + 24], mains2$4
@@ -827,7 +827,7 @@ mains2$10:	; push float float8$0#
 	fldz 
 
 mains2$11:	; parameter float8$0#, offset 48
-	fstp qword [rbp + 48]
+	fstp qword rbp, 48
 
 mains2$12:	; call function noellipse-noellipse setjmp_test
 	mov qword [rbp + 24], mains2$13
@@ -854,10 +854,10 @@ mains2$17:	; post call
 mains2$18:	; call header integral zero 0 stack zero 0
 
 mains2$19:	; push float float8$2.71#
-	fld qword [float8$2.71#]
+	fld qword float8$2.71#, 0
 
 mains2$20:	; parameter float8$2.71#, offset 48
-	fstp qword [rbp + 48]
+	fstp qword rbp, 48
 
 mains2$21:	; call function noellipse-noellipse setjmp_test
 	mov qword [rbp + 24], mains2$22
@@ -887,7 +887,7 @@ mains2$28:	; push float float8$0#
 	fldz 
 
 mains2$29:	; parameter float8$0#, offset 48
-	fstp qword [rbp + 48]
+	fstp qword rbp, 48
 
 mains2$30:	; call function noellipse-noellipse setjmp_test
 	mov qword [rbp + 24], mains2$31

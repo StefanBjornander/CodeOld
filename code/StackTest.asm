@@ -16,7 +16,7 @@ stack_test$3:	; £temporary3847 = i
 	mov eax, [@8835$i]
 
 stack_test$4:	; i = i + int4$1#
-	inc dword [@8835$i]
+	inc dword @8835$i, 0
 
 stack_test$5:	; parameter £temporary3847, offset 56
 	mov [rbp + 56], eax
@@ -83,7 +83,7 @@ heap_test$10:	; £temporary3852 = count
 	mov eax, [rbp + 24]
 
 heap_test$11:	; count = count + int4$1#
-	inc dword [rbp + 24]
+	inc dword rbp, 24
 
 heap_test$12:	; parameter £temporary3852, offset 68
 	mov [rbp + 68], eax
