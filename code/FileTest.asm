@@ -197,7 +197,7 @@ file_test$48:	; push float float8$0#
 	fldz 
 
 file_test$49:	; pop float inValue
-	fstp qword rbp, 64
+	fstp qword [rbp + 64]
 
 file_test$50:	; call header integral zero 0 stack zero 0
 
@@ -228,10 +228,10 @@ file_test$56:	; post call
 file_test$57:	; call header integral zero 0 stack zero 0
 
 file_test$58:	; push float inValue
-	fld qword rbp, 64
+	fld qword [rbp + 64]
 
 file_test$59:	; parameter £temporary3460, offset 96
-	fstp qword rbp, 96
+	fstp qword [rbp + 96]
 
 file_test$60:	; call function noellipse-noellipse sqrt
 	mov qword [rbp + 72], file_test$61
@@ -244,7 +244,7 @@ file_test$61:	; post call
 file_test$62:	; £temporary3461 = return_value
 
 file_test$63:	; pop float outValue
-	fstp qword rbp, 72
+	fstp qword [rbp + 72]
 
 file_test$64:	; call header integral zero 0 stack zero 0
 
@@ -256,10 +256,10 @@ file_test$66:	; parameter string_25f0A#, offset 112
 	mov qword [rbp + 112], string_25f0A#
 
 file_test$67:	; push float outValue
-	fld qword rbp, 72
+	fld qword [rbp + 72]
 
 file_test$68:	; parameter outValue, offset 120
-	fstp qword rbp, 120
+	fstp qword [rbp + 120]
 
 file_test$69:	; call function noellipse-ellipse fprintf, extra 8
 	mov qword [rbp + 80], file_test$70
@@ -272,7 +272,7 @@ file_test$69:	; call function noellipse-ellipse fprintf, extra 8
 file_test$70:	; post call
 
 file_test$71:	; index = index + int4$1#
-	inc dword rbp, 60
+	inc dword [rbp + 60]
 
 file_test$72:	; goto 47
 	jmp file_test$47
@@ -672,7 +672,7 @@ file_test$183:	; call function noellipse-ellipse printf, extra 16
 file_test$184:	; post call
 
 file_test$185:	; count = count + int4$1#
-	inc dword rbp, 48
+	inc dword [rbp + 48]
 
 file_test$186:	; goto 171
 	jmp file_test$171
@@ -1057,14 +1057,14 @@ file_test$294:	; if index >= size goto 308
 file_test$295:	; £temporary3520 = index * index
 	mov eax, [rbp + 52]
 	xor edx, edx
-	imul dword rbp, 52
+	imul dword [rbp + 52]
 
 file_test$296:	; £temporary3521 = int_to_float £temporary3520 (Signed_Int -> Double)
 	mov [$IntegralStorage#], eax
-	fild word $IntegralStorage#, 0
+	fild word [$IntegralStorage#]
 
 file_test$297:	; pop float value
-	fstp qword rbp, 56
+	fstp qword [rbp + 56]
 
 file_test$298:	; call header integral zero 0 stack zero 0
 
@@ -1094,7 +1094,7 @@ file_test$304:	; call function noellipse-noellipse fwrite
 file_test$305:	; post call
 
 file_test$306:	; index = index + int4$1#
-	inc dword rbp, 52
+	inc dword [rbp + 52]
 
 file_test$307:	; goto 294
 	jmp file_test$294
@@ -1299,10 +1299,10 @@ file_test$363:	; £temporary3541 = arr + £temporary3540
 file_test$364:	; £field3538 -> £temporary3541 = *£temporary3541
 
 file_test$365:	; push float £field3538 -> £temporary3541
-	fld qword rsi, 0
+	fld qword [rsi]
 
 file_test$366:	; parameter £field3538 -> £temporary3541, offset 172
-	fstp qword rbp, 172
+	fstp qword [rbp + 172]
 
 file_test$367:	; call function noellipse-ellipse printf, extra 12
 	mov qword [rbp + 136], file_test$368
@@ -1315,7 +1315,7 @@ file_test$367:	; call function noellipse-ellipse printf, extra 12
 file_test$368:	; post call
 
 file_test$369:	; index = index + int4$1#
-	inc dword rbp, 132
+	inc dword [rbp + 132]
 
 file_test$370:	; goto 357
 	jmp file_test$357
@@ -1488,10 +1488,10 @@ file_test$419:	; parameter index, offset 96
 	mov [rbp + 96], eax
 
 file_test$420:	; push float value
-	fld qword rbp, 56
+	fld qword [rbp + 56]
 
 file_test$421:	; parameter value, offset 100
-	fstp qword rbp, 100
+	fstp qword [rbp + 100]
 
 file_test$422:	; call function noellipse-ellipse printf, extra 12
 	mov qword [rbp + 64], file_test$423
@@ -1504,7 +1504,7 @@ file_test$422:	; call function noellipse-ellipse printf, extra 12
 file_test$423:	; post call
 
 file_test$424:	; index = index + int4$1#
-	inc dword rbp, 52
+	inc dword [rbp + 52]
 
 file_test$425:	; goto 408
 	jmp file_test$408
@@ -1639,7 +1639,7 @@ file_test$463:	; parameter size, offset 84
 file_test$464:	; £temporary3566 = size * int4$8#
 	mov eax, [rbp + 48]
 	xor edx, edx
-	imul dword int4$8#, 0
+	imul dword [int4$8#]
 
 file_test$465:	; parameter £temporary3566, offset 88
 	mov [rbp + 88], eax
@@ -1657,7 +1657,7 @@ file_test$467:	; post call
 file_test$468:	; total = size * int4$8#
 	mov eax, [rbp + 48]
 	xor edx, edx
-	imul dword int4$8#, 0
+	imul dword [int4$8#]
 	mov [rbp + 52], eax
 
 file_test$469:	; call header integral zero 0 stack zero 0
@@ -1728,7 +1728,7 @@ file_test$487:	; £temporary3574 = int_to_int size (Signed_Int -> Pointer)
 
 file_test$488:	; £temporary3576 = £temporary3574 * int8$8#
 	xor rdx, rdx
-	mul qword int8$8#, 0
+	mul qword [int8$8#]
 
 file_test$489:	; endPtr = p + £temporary3576
 	mov rbx, [rbp + 56]
@@ -1811,7 +1811,7 @@ file_test$509:	; £temporary3582 = int_to_int index (Signed_Int -> Pointer)
 
 file_test$510:	; £temporary3583 = £temporary3582 * int8$8#
 	xor rdx, rdx
-	mul qword int8$8#, 0
+	mul qword [int8$8#]
 
 file_test$511:	; £temporary3584 = p + £temporary3583
 	mov rsi, [rbp + 56]
@@ -1820,10 +1820,10 @@ file_test$511:	; £temporary3584 = p + £temporary3583
 file_test$512:	; £field3581 -> £temporary3584 = *£temporary3584
 
 file_test$513:	; push float £field3581 -> £temporary3584
-	fld qword rsi, 0
+	fld qword [rsi]
 
 file_test$514:	; parameter £field3581 -> £temporary3584, offset 112
-	fstp qword rbp, 112
+	fstp qword [rbp + 112]
 
 file_test$515:	; call function noellipse-ellipse printf, extra 12
 	mov qword [rbp + 76], file_test$516
@@ -1836,7 +1836,7 @@ file_test$515:	; call function noellipse-ellipse printf, extra 12
 file_test$516:	; post call
 
 file_test$517:	; index = index + int4$1#
-	inc dword rbp, 72
+	inc dword [rbp + 72]
 
 file_test$518:	; goto 505
 	jmp file_test$505

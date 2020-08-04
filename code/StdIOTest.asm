@@ -585,34 +585,34 @@ stdio_test$161:	; parameter string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A
 	mov qword [rbp + 60], string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A#
 
 stdio_test$162:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$163:	; parameter float8$123.456#, offset 68
-	fstp qword rbp, 68
+	fstp qword [rbp + 68]
 
 stdio_test$164:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$165:	; parameter float8$123.456#, offset 76
-	fstp qword rbp, 76
+	fstp qword [rbp + 76]
 
 stdio_test$166:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$167:	; parameter float8$123.456#, offset 84
-	fstp qword rbp, 84
+	fstp qword [rbp + 84]
 
 stdio_test$168:	; push float float8$123456.1#
-	fld qword float8$123456.1#, 0
+	fld qword [float8$123456.1#]
 
 stdio_test$169:	; parameter float8$123456.1#, offset 92
-	fstp qword rbp, 92
+	fstp qword [rbp + 92]
 
 stdio_test$170:	; push float float8$123456.1#
-	fld qword float8$123456.1#, 0
+	fld qword [float8$123456.1#]
 
 stdio_test$171:	; parameter float8$123456.1#, offset 100
-	fstp qword rbp, 100
+	fstp qword [rbp + 100]
 
 stdio_test$172:	; call function noellipse-ellipse printf, extra 40
 	mov qword [rbp + 36], stdio_test$173
@@ -630,34 +630,34 @@ stdio_test$175:	; parameter string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25l
 	mov qword [rbp + 60], string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A#
 
 stdio_test$176:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$177:	; parameter float8$123.456#, offset 68
-	fstp qword rbp, 68
+	fstp qword [rbp + 68]
 
 stdio_test$178:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$179:	; parameter float8$123.456#, offset 76
-	fstp qword rbp, 76
+	fstp qword [rbp + 76]
 
 stdio_test$180:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$181:	; parameter float8$123.456#, offset 84
-	fstp qword rbp, 84
+	fstp qword [rbp + 84]
 
 stdio_test$182:	; push float float8$123456.1#
-	fld qword float8$123456.1#, 0
+	fld qword [float8$123456.1#]
 
 stdio_test$183:	; parameter float8$123456.1#, offset 92
-	fstp qword rbp, 92
+	fstp qword [rbp + 92]
 
 stdio_test$184:	; push float float8$123456.1#
-	fld qword float8$123456.1#, 0
+	fld qword [float8$123456.1#]
 
 stdio_test$185:	; parameter float8$123456.1#, offset 100
-	fstp qword rbp, 100
+	fstp qword [rbp + 100]
 
 stdio_test$186:	; call function noellipse-ellipse printf, extra 40
 	mov qword [rbp + 36], stdio_test$187
@@ -675,34 +675,34 @@ stdio_test$189:	; parameter string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203
 	mov qword [rbp + 60], string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A#
 
 stdio_test$190:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$191:	; parameter float8$123.456#, offset 68
-	fstp qword rbp, 68
+	fstp qword [rbp + 68]
 
 stdio_test$192:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$193:	; parameter float8$123.456#, offset 76
-	fstp qword rbp, 76
+	fstp qword [rbp + 76]
 
 stdio_test$194:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$195:	; parameter float8$123.456#, offset 84
-	fstp qword rbp, 84
+	fstp qword [rbp + 84]
 
 stdio_test$196:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$197:	; parameter float8$123.456#, offset 92
-	fstp qword rbp, 92
+	fstp qword [rbp + 92]
 
 stdio_test$198:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$199:	; parameter float8$123.456#, offset 100
-	fstp qword rbp, 100
+	fstp qword [rbp + 100]
 
 stdio_test$200:	; call function noellipse-ellipse printf, extra 40
 	mov qword [rbp + 36], stdio_test$201
@@ -720,34 +720,34 @@ stdio_test$203:	; parameter string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3
 	mov qword [rbp + 60], string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A#
 
 stdio_test$204:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$205:	; parameter float8$123.456#, offset 68
-	fstp qword rbp, 68
+	fstp qword [rbp + 68]
 
 stdio_test$206:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$207:	; parameter float8$123.456#, offset 76
-	fstp qword rbp, 76
+	fstp qword [rbp + 76]
 
 stdio_test$208:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$209:	; parameter float8$123.456#, offset 84
-	fstp qword rbp, 84
+	fstp qword [rbp + 84]
 
 stdio_test$210:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$211:	; parameter float8$123.456#, offset 92
-	fstp qword rbp, 92
+	fstp qword [rbp + 92]
 
 stdio_test$212:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$213:	; parameter float8$123.456#, offset 100
-	fstp qword rbp, 100
+	fstp qword [rbp + 100]
 
 stdio_test$214:	; call function noellipse-ellipse printf, extra 40
 	mov qword [rbp + 36], stdio_test$215
@@ -765,34 +765,34 @@ stdio_test$217:	; parameter string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562
 	mov qword [rbp + 60], string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A#
 
 stdio_test$218:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$219:	; parameter float8$123.456#, offset 68
-	fstp qword rbp, 68
+	fstp qword [rbp + 68]
 
 stdio_test$220:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$221:	; parameter float8$123.456#, offset 76
-	fstp qword rbp, 76
+	fstp qword [rbp + 76]
 
 stdio_test$222:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$223:	; parameter float8$123.456#, offset 84
-	fstp qword rbp, 84
+	fstp qword [rbp + 84]
 
 stdio_test$224:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$225:	; parameter float8$123.456#, offset 92
-	fstp qword rbp, 92
+	fstp qword [rbp + 92]
 
 stdio_test$226:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$227:	; parameter float8$123.456#, offset 100
-	fstp qword rbp, 100
+	fstp qword [rbp + 100]
 
 stdio_test$228:	; call function noellipse-ellipse printf, extra 40
 	mov qword [rbp + 36], stdio_test$229
@@ -810,34 +810,34 @@ stdio_test$231:	; parameter string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2
 	mov qword [rbp + 60], string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A#
 
 stdio_test$232:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$233:	; parameter float8$123.456#, offset 68
-	fstp qword rbp, 68
+	fstp qword [rbp + 68]
 
 stdio_test$234:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$235:	; parameter float8$123.456#, offset 76
-	fstp qword rbp, 76
+	fstp qword [rbp + 76]
 
 stdio_test$236:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$237:	; parameter float8$123.456#, offset 84
-	fstp qword rbp, 84
+	fstp qword [rbp + 84]
 
 stdio_test$238:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$239:	; parameter float8$123.456#, offset 92
-	fstp qword rbp, 92
+	fstp qword [rbp + 92]
 
 stdio_test$240:	; push float float8$123.456#
-	fld qword float8$123.456#, 0
+	fld qword [float8$123.456#]
 
 stdio_test$241:	; parameter float8$123.456#, offset 100
-	fstp qword rbp, 100
+	fstp qword [rbp + 100]
 
 stdio_test$242:	; call function noellipse-ellipse printf, extra 40
 	mov qword [rbp + 36], stdio_test$243
@@ -855,34 +855,34 @@ stdio_test$245:	; parameter string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A
 	mov qword [rbp + 60], string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A#
 
 stdio_test$246:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$247:	; parameter float8$minus123.456#, offset 68
-	fstp qword rbp, 68
+	fstp qword [rbp + 68]
 
 stdio_test$248:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$249:	; parameter float8$minus123.456#, offset 76
-	fstp qword rbp, 76
+	fstp qword [rbp + 76]
 
 stdio_test$250:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$251:	; parameter float8$minus123.456#, offset 84
-	fstp qword rbp, 84
+	fstp qword [rbp + 84]
 
 stdio_test$252:	; push float float8$minus0.000000123456#
-	fld qword float8$minus0.000000123456#, 0
+	fld qword [float8$minus0.000000123456#]
 
 stdio_test$253:	; parameter float8$minus0.000000123456#, offset 92
-	fstp qword rbp, 92
+	fstp qword [rbp + 92]
 
 stdio_test$254:	; push float float8$minus0.000000123456#
-	fld qword float8$minus0.000000123456#, 0
+	fld qword [float8$minus0.000000123456#]
 
 stdio_test$255:	; parameter float8$minus0.000000123456#, offset 100
-	fstp qword rbp, 100
+	fstp qword [rbp + 100]
 
 stdio_test$256:	; call function noellipse-ellipse printf, extra 40
 	mov qword [rbp + 36], stdio_test$257
@@ -900,34 +900,34 @@ stdio_test$259:	; parameter string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25l
 	mov qword [rbp + 60], string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A#
 
 stdio_test$260:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$261:	; parameter float8$minus123.456#, offset 68
-	fstp qword rbp, 68
+	fstp qword [rbp + 68]
 
 stdio_test$262:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$263:	; parameter float8$minus123.456#, offset 76
-	fstp qword rbp, 76
+	fstp qword [rbp + 76]
 
 stdio_test$264:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$265:	; parameter float8$minus123.456#, offset 84
-	fstp qword rbp, 84
+	fstp qword [rbp + 84]
 
 stdio_test$266:	; push float float8$minus0.000000123456#
-	fld qword float8$minus0.000000123456#, 0
+	fld qword [float8$minus0.000000123456#]
 
 stdio_test$267:	; parameter float8$minus0.000000123456#, offset 92
-	fstp qword rbp, 92
+	fstp qword [rbp + 92]
 
 stdio_test$268:	; push float float8$minus0.000000123456#
-	fld qword float8$minus0.000000123456#, 0
+	fld qword [float8$minus0.000000123456#]
 
 stdio_test$269:	; parameter float8$minus0.000000123456#, offset 100
-	fstp qword rbp, 100
+	fstp qword [rbp + 100]
 
 stdio_test$270:	; call function noellipse-ellipse printf, extra 40
 	mov qword [rbp + 36], stdio_test$271
@@ -945,34 +945,34 @@ stdio_test$273:	; parameter string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203
 	mov qword [rbp + 60], string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A#
 
 stdio_test$274:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$275:	; parameter float8$minus123.456#, offset 68
-	fstp qword rbp, 68
+	fstp qword [rbp + 68]
 
 stdio_test$276:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$277:	; parameter float8$minus123.456#, offset 76
-	fstp qword rbp, 76
+	fstp qword [rbp + 76]
 
 stdio_test$278:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$279:	; parameter float8$minus123.456#, offset 84
-	fstp qword rbp, 84
+	fstp qword [rbp + 84]
 
 stdio_test$280:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$281:	; parameter float8$minus123.456#, offset 92
-	fstp qword rbp, 92
+	fstp qword [rbp + 92]
 
 stdio_test$282:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$283:	; parameter float8$minus123.456#, offset 100
-	fstp qword rbp, 100
+	fstp qword [rbp + 100]
 
 stdio_test$284:	; call function noellipse-ellipse printf, extra 40
 	mov qword [rbp + 36], stdio_test$285
@@ -990,34 +990,34 @@ stdio_test$287:	; parameter string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3
 	mov qword [rbp + 60], string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A#
 
 stdio_test$288:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$289:	; parameter float8$minus123.456#, offset 68
-	fstp qword rbp, 68
+	fstp qword [rbp + 68]
 
 stdio_test$290:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$291:	; parameter float8$minus123.456#, offset 76
-	fstp qword rbp, 76
+	fstp qword [rbp + 76]
 
 stdio_test$292:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$293:	; parameter float8$minus123.456#, offset 84
-	fstp qword rbp, 84
+	fstp qword [rbp + 84]
 
 stdio_test$294:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$295:	; parameter float8$minus123.456#, offset 92
-	fstp qword rbp, 92
+	fstp qword [rbp + 92]
 
 stdio_test$296:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$297:	; parameter float8$minus123.456#, offset 100
-	fstp qword rbp, 100
+	fstp qword [rbp + 100]
 
 stdio_test$298:	; call function noellipse-ellipse printf, extra 40
 	mov qword [rbp + 36], stdio_test$299
@@ -1035,34 +1035,34 @@ stdio_test$301:	; parameter string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562
 	mov qword [rbp + 60], string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A#
 
 stdio_test$302:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$303:	; parameter float8$minus123.456#, offset 68
-	fstp qword rbp, 68
+	fstp qword [rbp + 68]
 
 stdio_test$304:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$305:	; parameter float8$minus123.456#, offset 76
-	fstp qword rbp, 76
+	fstp qword [rbp + 76]
 
 stdio_test$306:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$307:	; parameter float8$minus123.456#, offset 84
-	fstp qword rbp, 84
+	fstp qword [rbp + 84]
 
 stdio_test$308:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$309:	; parameter float8$minus123.456#, offset 92
-	fstp qword rbp, 92
+	fstp qword [rbp + 92]
 
 stdio_test$310:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$311:	; parameter float8$minus123.456#, offset 100
-	fstp qword rbp, 100
+	fstp qword [rbp + 100]
 
 stdio_test$312:	; call function noellipse-ellipse printf, extra 40
 	mov qword [rbp + 36], stdio_test$313
@@ -1080,34 +1080,34 @@ stdio_test$315:	; parameter string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2
 	mov qword [rbp + 60], string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A#
 
 stdio_test$316:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$317:	; parameter float8$minus123.456#, offset 68
-	fstp qword rbp, 68
+	fstp qword [rbp + 68]
 
 stdio_test$318:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$319:	; parameter float8$minus123.456#, offset 76
-	fstp qword rbp, 76
+	fstp qword [rbp + 76]
 
 stdio_test$320:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$321:	; parameter float8$minus123.456#, offset 84
-	fstp qword rbp, 84
+	fstp qword [rbp + 84]
 
 stdio_test$322:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$323:	; parameter float8$minus123.456#, offset 92
-	fstp qword rbp, 92
+	fstp qword [rbp + 92]
 
 stdio_test$324:	; push float float8$minus123.456#
-	fld qword float8$minus123.456#, 0
+	fld qword [float8$minus123.456#]
 
 stdio_test$325:	; parameter float8$minus123.456#, offset 100
-	fstp qword rbp, 100
+	fstp qword [rbp + 100]
 
 stdio_test$326:	; call function noellipse-ellipse printf, extra 40
 	mov qword [rbp + 36], stdio_test$327

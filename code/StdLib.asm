@@ -272,7 +272,7 @@ strtod$1:	; push float float8$0#
 	fldz 
 
 strtod$2:	; pop float value
-	fstp qword rbp, 44
+	fstp qword [rbp + 44]
 
 strtod$3:	; call header integral zero 0 stack zero 0
 
@@ -325,7 +325,7 @@ strtod$15:	; £field2042 -> endp = s + £temporary2043
 	mov [rsi], rbx
 
 strtod$16:	; push float value
-	fld qword rbp, 44
+	fld qword [rbp + 44]
 
 strtod$17:	; return_value = value
 
@@ -453,7 +453,7 @@ memswp$20:	; £field2066 -> £temporary2069 = tempValue
 	mov [rsi], al
 
 memswp$21:	; index = index + int4$1#
-	inc dword rbp, 60
+	inc dword [rbp + 60]
 
 memswp$22:	; goto 5
 	jmp memswp$5
@@ -493,7 +493,7 @@ bsearch$5:	; £temporary2072 = int_to_int valueList (Pointer -> Pointer)
 bsearch$6:	; £temporary2073 = firstIndex * valueSize
 	mov eax, [rbp + 56]
 	xor edx, edx
-	imul dword rbp, 44
+	imul dword [rbp + 44]
 
 bsearch$7:	; £temporary2074 = int_to_int £temporary2073 (Signed_Int -> Pointer)
 	mov rcx, 4294967295
@@ -559,7 +559,7 @@ bsearch$22:	; £temporary2080 = int_to_int valueList (Pointer -> Pointer)
 bsearch$23:	; £temporary2081 = lastIndex * valueSize
 	mov eax, [rbp + 60]
 	xor edx, edx
-	imul dword rbp, 44
+	imul dword [rbp + 44]
 
 bsearch$24:	; £temporary2082 = int_to_int £temporary2081 (Signed_Int -> Pointer)
 	mov rcx, 4294967295
@@ -625,7 +625,7 @@ bsearch$39:	; £temporary2088 = firstIndex + lastIndex
 
 bsearch$40:	; middleIndex = £temporary2088 / int4$2#
 	xor edx, edx
-	idiv dword int4$2#, 0
+	idiv dword [int4$2#]
 	mov [rbp + 64], eax
 
 bsearch$41:	; £temporary2090 = int_to_int valueList (Pointer -> Pointer)
@@ -634,7 +634,7 @@ bsearch$41:	; £temporary2090 = int_to_int valueList (Pointer -> Pointer)
 bsearch$42:	; £temporary2091 = middleIndex * valueSize
 	mov eax, [rbp + 64]
 	xor edx, edx
-	imul dword rbp, 44
+	imul dword [rbp + 44]
 
 bsearch$43:	; £temporary2092 = int_to_int £temporary2091 (Signed_Int -> Pointer)
 	mov rcx, 4294967295
@@ -704,14 +704,14 @@ bsearch$60:	; function end bsearch
 rand:	; £temporary2099 = g_randValue * int8$1664525#
 	mov rax, [@4356$g_randValue]
 	xor rdx, rdx
-	imul qword int8$1664525#, 0
+	imul qword [int8$1664525#]
 
 rand$1:	; £temporary2100 = £temporary2099 + int8$1013904223#
 	add rax, 1013904223
 
 rand$2:	; g_randValue = £temporary2100 % int8$127#
 	xor rdx, rdx
-	idiv qword int8$127#, 0
+	idiv qword [int8$127#]
 	mov [@4356$g_randValue], rdx
 
 rand$3:	; £temporary2102 = int_to_int g_randValue (Signed_Long_Int -> Signed_Int)
@@ -825,7 +825,7 @@ print_heap2$21:	; £temporary2113 = index
 	mov eax, [rbp + 36]
 
 print_heap2$22:	; index = index + int4$1#
-	inc dword rbp, 36
+	inc dword [rbp + 36]
 
 print_heap2$23:	; parameter £temporary2113, offset 76
 	mov [rbp + 76], eax
@@ -996,7 +996,7 @@ atexit$28:	; return
 	jmp rax
 
 atexit$29:	; index = index + int4$1#
-	inc dword rbp, 32
+	inc dword [rbp + 32]
 
 atexit$30:	; goto 6
 	jmp atexit$6
@@ -1125,7 +1125,7 @@ exit$28:	; post call
 	mov rbx, [rbp + 32]
 
 exit$29:	; index = index - int4$1#
-	dec dword rbp, 28
+	dec dword [rbp + 28]
 
 exit$30:	; goto 6
 	jmp exit$6
@@ -1218,7 +1218,7 @@ swap$17:	; £field2170 -> £temporary2173 = tempValue
 	mov [rsi], al
 
 swap$18:	; index = index + int4$1#
-	inc dword rbp, 44
+	inc dword [rbp + 44]
 
 swap$19:	; goto 2
 	jmp swap$2
@@ -1262,7 +1262,7 @@ qsort$7:	; if index2 >= index1 goto 31
 qsort$8:	; £temporary2180 = index2 * valueSize
 	mov eax, [rbp + 64]
 	xor edx, edx
-	imul dword rbp, 36
+	imul dword [rbp + 36]
 
 qsort$9:	; £temporary2181 = int_to_int £temporary2180 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
@@ -1279,7 +1279,7 @@ qsort$11:	; £temporary2184 = index2 + int4$1#
 
 qsort$12:	; £temporary2185 = £temporary2184 * valueSize
 	xor edx, edx
-	imul dword rbp, 36
+	imul dword [rbp + 36]
 
 qsort$13:	; £temporary2186 = int_to_int £temporary2185 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
@@ -1341,13 +1341,13 @@ qsort$28:	; update = int4$1#
 	mov dword [rbp + 48], 1
 
 qsort$29:	; index2 = index2 + int4$1#
-	inc dword rbp, 64
+	inc dword [rbp + 64]
 
 qsort$30:	; goto 7
 	jmp qsort$7
 
 qsort$31:	; index1 = index1 - int4$1#
-	dec dword rbp, 60
+	dec dword [rbp + 60]
 
 qsort$32:	; goto 4
 	jmp qsort$4
@@ -1438,13 +1438,13 @@ div$5:	; return
 div$6:	; result$quot = num / denum
 	mov eax, [rbp + 24]
 	xor edx, edx
-	idiv dword rbp, 28
+	idiv dword [rbp + 28]
 	mov [rbp + 32], eax
 
 div$7:	; result$rem = num % denum
 	mov eax, [rbp + 24]
 	xor edx, edx
-	idiv dword rbp, 28
+	idiv dword [rbp + 28]
 	mov [rbp + 36], edx
 
 div$8:	; return_value = result
@@ -1487,13 +1487,13 @@ ldiv$5:	; return
 ldiv$6:	; result$quot = num / denum
 	mov rax, [rbp + 24]
 	xor rdx, rdx
-	idiv qword rbp, 32
+	idiv qword [rbp + 32]
 	mov [rbp + 40], rax
 
 ldiv$7:	; result$rem = num % denum
 	mov rax, [rbp + 24]
 	xor rdx, rdx
-	idiv qword rbp, 32
+	idiv qword [rbp + 32]
 	mov [rbp + 48], rdx
 
 ldiv$8:	; return_value = result

@@ -87,7 +87,7 @@ scanChar$17:	; syscall
 	syscall 
 
 scanChar$18:	; g_inChars = g_inChars + int4$1#
-	inc dword g_inChars, 0
+	inc dword [g_inChars]
 
 scanChar$19:	; return_value = c
 	mov bl, [rbp + 24]
@@ -108,7 +108,7 @@ scanChar$23:	; £temporary1042 = g_inChars
 	mov eax, [g_inChars]
 
 scanChar$24:	; g_inChars = g_inChars + int4$1#
-	inc dword g_inChars, 0
+	inc dword [g_inChars]
 
 scanChar$25:	; £temporary1044 = int_to_int £temporary1042 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
@@ -155,13 +155,13 @@ unscanChar$3:	; goto 7
 	jmp unscanChar$7
 
 unscanChar$4:	; g_inChars = g_inChars - int4$1#
-	dec dword g_inChars, 0
+	dec dword [g_inChars]
 
 unscanChar$5:	; goto 7
 	jmp unscanChar$7
 
 unscanChar$6:	; g_inChars = g_inChars - int4$1#
-	dec dword g_inChars, 0
+	dec dword [g_inChars]
 
 unscanChar$7:	; return
 	mov rax, [rbp]
@@ -312,7 +312,7 @@ scanPattern$38:	; £temporary1069 = index
 	mov eax, [rbp + 44]
 
 scanPattern$39:	; index = index + int4$1#
-	inc dword rbp, 44
+	inc dword [rbp + 44]
 
 scanPattern$40:	; £temporary1071 = int_to_int £temporary1069 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
@@ -580,7 +580,7 @@ scanString$32:	; £temporary1109 = index
 	mov eax, [rbp + 36]
 
 scanString$33:	; index = index + int4$1#
-	inc dword rbp, 36
+	inc dword [rbp + 36]
 
 scanString$34:	; £temporary1111 = int_to_int £temporary1109 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
@@ -615,7 +615,7 @@ scanString$43:	; found = int4$1#
 	mov dword [rbp + 41], 1
 
 scanString$44:	; g_inChars = g_inChars + int4$1#
-	inc dword g_inChars, 0
+	inc dword [g_inChars]
 
 scanString$45:	; goto 22
 	jmp scanString$22
@@ -635,7 +635,7 @@ scanString$49:	; £field1116 -> £temporary1119 = int1$0#
 	mov byte [rsi], 0
 
 scanString$50:	; g_inChars = g_inChars + int4$1#
-	inc dword g_inChars, 0
+	inc dword [g_inChars]
 
 scanString$51:	; goto 130
 	jmp scanString$130
@@ -644,7 +644,7 @@ scanString$52:	; £temporary1121 = precision
 	mov eax, [rbp + 32]
 
 scanString$53:	; precision = precision - int4$1#
-	dec dword rbp, 32
+	dec dword [rbp + 32]
 
 scanString$54:	; if £temporary1121 <= int4$0# goto 79
 	cmp eax, 0
@@ -697,7 +697,7 @@ scanString$65:	; £temporary1133 = index
 	mov eax, [rbp + 36]
 
 scanString$66:	; index = index + int4$1#
-	inc dword rbp, 36
+	inc dword [rbp + 36]
 
 scanString$67:	; £temporary1135 = int_to_int £temporary1133 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
@@ -732,7 +732,7 @@ scanString$76:	; found = int4$1#
 	mov dword [rbp + 41], 1
 
 scanString$77:	; g_inChars = g_inChars + int4$1#
-	inc dword g_inChars, 0
+	inc dword [g_inChars]
 
 scanString$78:	; goto 52
 	jmp scanString$52
@@ -756,7 +756,7 @@ scanString$83:	; £field1141 -> £temporary1144 = int1$0#
 	mov byte [rsi], 0
 
 scanString$84:	; g_inChars = g_inChars + int4$1#
-	inc dword g_inChars, 0
+	inc dword [g_inChars]
 
 scanString$85:	; goto 130
 	jmp scanString$130
@@ -827,13 +827,13 @@ scanString$102:	; found = int4$1#
 	mov dword [rbp + 41], 1
 
 scanString$103:	; g_inChars = g_inChars + int4$1#
-	inc dword g_inChars, 0
+	inc dword [g_inChars]
 
 scanString$104:	; goto 87
 	jmp scanString$87
 
 scanString$105:	; g_inChars = g_inChars + int4$1#
-	inc dword g_inChars, 0
+	inc dword [g_inChars]
 
 scanString$106:	; goto 130
 	jmp scanString$130
@@ -842,7 +842,7 @@ scanString$107:	; £temporary1159 = precision
 	mov eax, [rbp + 32]
 
 scanString$108:	; precision = precision - int4$1#
-	dec dword rbp, 32
+	dec dword [rbp + 32]
 
 scanString$109:	; if £temporary1159 <= int4$0# goto 128
 	cmp eax, 0
@@ -910,7 +910,7 @@ scanString$125:	; found = int4$1#
 	mov dword [rbp + 41], 1
 
 scanString$126:	; g_inChars = g_inChars + int4$1#
-	inc dword g_inChars, 0
+	inc dword [g_inChars]
 
 scanString$127:	; goto 107
 	jmp scanString$107
@@ -920,14 +920,14 @@ scanString$128:	; if precision <= int4$0# goto 130
 	jle scanString$130
 
 scanString$129:	; g_inChars = g_inChars + int4$1#
-	inc dword g_inChars, 0
+	inc dword [g_inChars]
 
 scanString$130:	; if found == int4$0# goto 132
 	cmp dword [rbp + 41], 0
 	je scanString$132
 
 scanString$131:	; g_inCount = g_inCount + int4$1#
-	inc dword g_inCount, 0
+	inc dword [g_inCount]
 
 scanString$132:	; return
 	mov rax, [rbp]
@@ -1191,7 +1191,7 @@ scanLongInt$41:	; if £temporary1201 == int4$0# goto 53
 scanLongInt$42:	; £temporary1202 = longValue * int8$10#
 	mov rax, [rbp + 24]
 	xor rdx, rdx
-	imul qword int8$10#, 0
+	imul qword [int8$10#]
 
 scanLongInt$43:	; £temporary1203 = input - int1$48#
 	mov bl, [rbp + 40]
@@ -1246,7 +1246,7 @@ scanLongInt$56:	; if found == int4$0# goto 58
 	je scanLongInt$58
 
 scanLongInt$57:	; g_inCount = g_inCount + int4$1#
-	inc dword g_inCount, 0
+	inc dword [g_inCount]
 
 scanLongInt$58:	; call header integral zero 0 stack zero 0
 
@@ -1498,7 +1498,7 @@ scanUnsignedLongInt$64:	; if digit >= base goto 74
 scanUnsignedLongInt$65:	; £temporary1233 = unsignedLongValue * base
 	mov rax, [rbp + 32]
 	xor rdx, rdx
-	mul qword rbp, 24
+	mul qword [rbp + 24]
 
 scanUnsignedLongInt$66:	; unsignedLongValue = £temporary1233 + digit
 	add rax, [rbp + 40]
@@ -1530,7 +1530,7 @@ scanUnsignedLongInt$74:	; if found == int4$0# goto 76
 	je scanUnsignedLongInt$76
 
 scanUnsignedLongInt$75:	; g_inCount = g_inCount + int4$1#
-	inc dword g_inCount, 0
+	inc dword [g_inCount]
 
 scanUnsignedLongInt$76:	; call header integral zero 0 stack zero 0
 
@@ -1567,13 +1567,13 @@ scanLongDouble$2:	; push float float8$0.0#
 	fldz 
 
 scanLongDouble$3:	; pop float value
-	fstp qword rbp, 32
+	fstp qword [rbp + 32]
 
 scanLongDouble$4:	; push float float8$1.0#
 	fld1 
 
 scanLongDouble$5:	; pop float factor
-	fstp qword rbp, 40
+	fstp qword [rbp + 40]
 
 scanLongDouble$6:	; call header integral zero 0 stack zero 0
 
@@ -1707,10 +1707,10 @@ scanLongDouble$44:	; if £temporary1250 == int4$0# goto 60
 	je scanLongDouble$60
 
 scanLongDouble$45:	; push float float8$10.0#
-	fld qword float8$10.0#, 0
+	fld qword [float8$10.0#]
 
 scanLongDouble$46:	; push float value
-	fld qword rbp, 32
+	fld qword [rbp + 32]
 
 scanLongDouble$47:	; £temporary1251 = float8$10.0# * value
 	fmul 
@@ -1728,13 +1728,13 @@ scanLongDouble$49:	; £temporary1254 = int_to_int £temporary1252 (Signed_Char -
 
 scanLongDouble$50:	; £temporary1253 = int_to_float £temporary1254 (Signed_Int -> Long_Double)
 	mov [$IntegralStorage#], eax
-	fild word $IntegralStorage#, 0
+	fild word [$IntegralStorage#]
 
 scanLongDouble$51:	; £temporary1255 = £temporary1251 + £temporary1253
 	fadd 
 
 scanLongDouble$52:	; pop float value
-	fstp qword rbp, 32
+	fstp qword [rbp + 32]
 
 scanLongDouble$53:	; call header integral zero 0 stack zero 0
 
@@ -1804,22 +1804,22 @@ scanLongDouble$72:	; if £temporary1261 == int4$0# goto 92
 	je scanLongDouble$92
 
 scanLongDouble$73:	; push float factor
-	fld qword rbp, 40
+	fld qword [rbp + 40]
 
 scanLongDouble$74:	; push float float8$10.0#
-	fld qword float8$10.0#, 0
+	fld qword [float8$10.0#]
 
 scanLongDouble$75:	; £temporary1262 = factor / float8$10.0#
 	fdiv 
 
 scanLongDouble$76:	; pop float factor
-	fstp qword rbp, 40
+	fstp qword [rbp + 40]
 
 scanLongDouble$77:	; push float value
-	fld qword rbp, 32
+	fld qword [rbp + 32]
 
 scanLongDouble$78:	; push float factor
-	fld qword rbp, 40
+	fld qword [rbp + 40]
 
 scanLongDouble$79:	; £temporary1263 = input - int1$48#
 	mov al, [rbp + 48]
@@ -1834,7 +1834,7 @@ scanLongDouble$80:	; £temporary1265 = int_to_int £temporary1263 (Signed_Char -
 
 scanLongDouble$81:	; £temporary1264 = int_to_float £temporary1265 (Signed_Int -> Long_Double)
 	mov [$IntegralStorage#], eax
-	fild word $IntegralStorage#, 0
+	fild word [$IntegralStorage#]
 
 scanLongDouble$82:	; £temporary1266 = factor * £temporary1264
 	fmul 
@@ -1843,7 +1843,7 @@ scanLongDouble$83:	; £temporary1267 = value + £temporary1266
 	fadd 
 
 scanLongDouble$84:	; pop float value
-	fstp qword rbp, 32
+	fstp qword [rbp + 32]
 
 scanLongDouble$85:	; call header integral zero 0 stack zero 0
 
@@ -1921,28 +1921,28 @@ scanLongDouble$106:	; £temporary1274 = return_value
 
 scanLongDouble$107:	; £temporary1275 = int_to_float £temporary1274 (Signed_Long_Int -> Double)
 	mov [$IntegralStorage#], rbx
-	fild dword $IntegralStorage#, 0
+	fild dword [$IntegralStorage#]
 
 scanLongDouble$108:	; pop float exponent
-	fstp qword rbp, 49
+	fstp qword [rbp + 49]
 
 scanLongDouble$109:	; push float value
-	fld qword rbp, 32
+	fld qword [rbp + 32]
 
 scanLongDouble$110:	; call header integral zero 0 stack no zero 1
-	fstp qword rbp, 57
+	fstp qword [rbp + 57]
 
 scanLongDouble$111:	; push float float8$10.0#
-	fld qword float8$10.0#, 0
+	fld qword [float8$10.0#]
 
 scanLongDouble$112:	; parameter float8$10.0#, offset 81
-	fstp qword rbp, 89
+	fstp qword [rbp + 89]
 
 scanLongDouble$113:	; push float exponent
-	fld qword rbp, 49
+	fld qword [rbp + 49]
 
 scanLongDouble$114:	; parameter exponent, offset 89
-	fstp qword rbp, 97
+	fstp qword [rbp + 97]
 
 scanLongDouble$115:	; call function noellipse-noellipse pow
 	mov qword [rbp + 65], scanLongDouble$116
@@ -1951,9 +1951,9 @@ scanLongDouble$115:	; call function noellipse-noellipse pow
 	jmp pow
 
 scanLongDouble$116:	; post call
-	fstp qword rbp, 65
-	fld qword rbp, 57
-	fld qword rbp, 65
+	fstp qword [rbp + 65]
+	fld qword [rbp + 57]
+	fld qword [rbp + 65]
 
 scanLongDouble$117:	; £temporary1276 = return_value
 
@@ -1961,7 +1961,7 @@ scanLongDouble$118:	; £temporary1277 = value * £temporary1276
 	fmul 
 
 scanLongDouble$119:	; pop float value
-	fstp qword rbp, 32
+	fstp qword [rbp + 32]
 
 scanLongDouble$120:	; goto 125
 	jmp scanLongDouble$125
@@ -1985,23 +1985,23 @@ scanLongDouble$125:	; if minus == int4$0# goto 129
 	je scanLongDouble$129
 
 scanLongDouble$126:	; push float value
-	fld qword rbp, 32
+	fld qword [rbp + 32]
 
 scanLongDouble$127:	; £temporary1279 = -value
 	fchs 
 
 scanLongDouble$128:	; pop float value
-	fstp qword rbp, 32
+	fstp qword [rbp + 32]
 
 scanLongDouble$129:	; if found == int4$0# goto 131
 	cmp dword [rbp + 28], 0
 	je scanLongDouble$131
 
 scanLongDouble$130:	; g_inCount = g_inCount + int4$1#
-	inc dword g_inCount, 0
+	inc dword [g_inCount]
 
 scanLongDouble$131:	; push float value
-	fld qword rbp, 32
+	fld qword [rbp + 32]
 
 scanLongDouble$132:	; return_value = value
 
@@ -2239,7 +2239,7 @@ scanFormat$62:	; if £temporary1308 == int4$minus1# goto 331
 	je scanFormat$331
 
 scanFormat$63:	; g_inCount = g_inCount + int4$1#
-	inc dword g_inCount, 0
+	inc dword [g_inCount]
 
 scanFormat$64:	; goto 331
 	jmp scanFormat$331
@@ -2775,7 +2775,7 @@ scanFormat$229:	; post call
 scanFormat$230:	; £temporary1437 = return_value
 
 scanFormat$231:	; pop float longDoubleValue
-	fstp qword rbp, 145
+	fstp qword [rbp + 145]
 
 scanFormat$232:	; if star != int4$0# goto 261
 	cmp dword [rbp + 65], 0
@@ -2804,10 +2804,10 @@ scanFormat$239:	; £field1446 -> doublePtr = *doublePtr
 	mov rsi, [rbp + 157]
 
 scanFormat$240:	; push float longDoubleValue
-	fld qword rbp, 145
+	fld qword [rbp + 145]
 
 scanFormat$241:	; pop float £field1446 -> doublePtr
-	fstp qword rsi, 0
+	fstp qword [rsi]
 
 scanFormat$242:	; goto 261
 	jmp scanFormat$261
@@ -2835,10 +2835,10 @@ scanFormat$249:	; £field1454 -> longDoublePtr = *longDoublePtr
 	mov rsi, [rbp + 157]
 
 scanFormat$250:	; push float longDoubleValue
-	fld qword rbp, 145
+	fld qword [rbp + 145]
 
 scanFormat$251:	; pop float £field1454 -> longDoublePtr
-	fstp qword rsi, 0
+	fstp qword [rsi]
 
 scanFormat$252:	; goto 261
 	jmp scanFormat$261
@@ -2862,10 +2862,10 @@ scanFormat$258:	; £field1461 -> floatPtr = *floatPtr
 	mov rsi, [rbp + 157]
 
 scanFormat$259:	; push float longDoubleValue
-	fld qword rbp, 145
+	fld qword [rbp + 145]
 
 scanFormat$260:	; pop float £field1461 -> floatPtr
-	fstp dword rsi, 0
+	fstp dword [rsi]
 
 scanFormat$261:	; percent = int4$0#
 	mov dword [rbp + 49], 0
@@ -2877,7 +2877,7 @@ scanFormat$263:	; not = int4$0#
 	mov dword [rbp + 157], 0
 
 scanFormat$264:	; index = index + int4$1#
-	inc dword rbp, 93
+	inc dword [rbp + 93]
 
 scanFormat$265:	; £temporary1467 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 93]
@@ -2918,7 +2918,7 @@ scanFormat$274:	; if £field1472 -> £temporary1475 == int1$93# goto 277
 	je scanFormat$277
 
 scanFormat$275:	; index = index + int4$1#
-	inc dword rbp, 93
+	inc dword [rbp + 93]
 
 scanFormat$276:	; goto 271
 	jmp scanFormat$271
@@ -3107,7 +3107,7 @@ scanFormat$330:	; star = int4$0#
 	mov dword [rbp + 65], 0
 
 scanFormat$331:	; index = index + int4$1#
-	inc dword rbp, 93
+	inc dword [rbp + 93]
 
 scanFormat$332:	; goto 9
 	jmp scanFormat$9

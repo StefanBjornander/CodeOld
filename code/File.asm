@@ -188,7 +188,7 @@ fopen$21:	; return
 	jmp rax
 
 fopen$22:	; index = index + int4$1#
-	inc dword rbp, 40
+	inc dword [rbp + 40]
 
 fopen$23:	; goto 2
 	jmp fopen$2
@@ -777,7 +777,7 @@ fflush$20:	; return
 	jmp rax
 
 fflush$21:	; index = index + int4$1#
-	inc dword rbp, 32
+	inc dword [rbp + 32]
 
 fflush$22:	; goto 2
 	jmp fflush$2
@@ -896,7 +896,7 @@ fclose$27:	; return
 	jmp rax
 
 fclose$28:	; index = index + int4$1#
-	inc dword rbp, 32
+	inc dword [rbp + 32]
 
 fclose$29:	; goto 9
 	jmp fclose$9
@@ -1154,7 +1154,7 @@ fgets$28:	; £temporary906 = count
 	mov eax, [rbp + 44]
 
 fgets$29:	; count = count + int4$1#
-	inc dword rbp, 44
+	inc dword [rbp + 44]
 
 fgets$30:	; £temporary908 = int_to_int £temporary906 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
@@ -1493,7 +1493,7 @@ fread$5:	; rsi = £temporary941
 fread$6:	; £temporary943 = size * nobj
 	mov eax, [rbp + 32]
 	xor edx, edx
-	imul dword rbp, 36
+	imul dword [rbp + 36]
 
 fread$7:	; £temporary944 = int_to_int £temporary943 (Signed_Int -> Unsigned_Long_Int)
 	mov rbx, 4294967295
@@ -1537,7 +1537,7 @@ fwrite$5:	; rsi = £temporary950
 fwrite$6:	; £temporary952 = size * nobj
 	mov eax, [rbp + 32]
 	xor edx, edx
-	imul dword rbp, 36
+	imul dword [rbp + 36]
 
 fwrite$7:	; £temporary953 = int_to_int £temporary952 (Signed_Int -> Unsigned_Long_Int)
 	mov rbx, 4294967295

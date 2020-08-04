@@ -299,7 +299,7 @@ stdlib_test$9:	; post call
 stdlib_test$10:	; £temporary3935 = return_value
 
 stdlib_test$11:	; pop float x
-	fstp qword rbp, 348
+	fstp qword [rbp + 348]
 
 stdlib_test$12:	; call header integral zero 0 stack zero 0
 
@@ -317,7 +317,7 @@ stdlib_test$15:	; post call
 stdlib_test$16:	; £temporary3936 = return_value
 
 stdlib_test$17:	; pop float y
-	fstp qword rbp, 356
+	fstp qword [rbp + 356]
 
 stdlib_test$18:	; call header integral zero 0 stack zero 0
 
@@ -381,10 +381,10 @@ stdlib_test$37:	; parameter string_atof28221232E4562229203D2025f0A#, offset 404
 	mov qword [rbp + 404], string_atof28221232E4562229203D2025f0A#
 
 stdlib_test$38:	; push float y
-	fld qword rbp, 356
+	fld qword [rbp + 356]
 
 stdlib_test$39:	; parameter y, offset 412
-	fstp qword rbp, 412
+	fstp qword [rbp + 412]
 
 stdlib_test$40:	; call function noellipse-ellipse printf, extra 8
 	mov qword [rbp + 380], stdlib_test$41
@@ -468,10 +468,10 @@ stdlib_test$63:	; parameter string_strtod28221232E456abc222C2026endp29203D202825
 	mov qword [rbp + 404], string_strtod28221232E456abc222C2026endp29203D202825f2C2025s290A#
 
 stdlib_test$64:	; push float x
-	fld qword rbp, 348
+	fld qword [rbp + 348]
 
 stdlib_test$65:	; parameter x, offset 412
-	fstp qword rbp, 412
+	fstp qword [rbp + 412]
 
 stdlib_test$66:	; parameter p, offset 420
 	mov rax, [rbp + 324]
@@ -895,7 +895,7 @@ stdlib_test$174:	; £temporary3978 = int_to_int index (Signed_Int -> Array)
 
 stdlib_test$175:	; £temporary3980 = £temporary3978 * int8$4#
 	xor rdx, rdx
-	mul qword int8$4#, 0
+	mul qword [int8$4#]
 
 stdlib_test$176:	; £temporary3979 = list + £temporary3980
 	mov rbx, rbp
@@ -921,7 +921,7 @@ stdlib_test$179:	; call function noellipse-ellipse printf, extra 4
 stdlib_test$180:	; post call
 
 stdlib_test$181:	; index = index + int4$1#
-	inc dword rbp, 44
+	inc dword [rbp + 44]
 
 stdlib_test$182:	; goto 171
 	jmp stdlib_test$171
@@ -985,7 +985,7 @@ stdlib_test$198:	; £temporary3988 = int_to_int index (Signed_Int -> Array)
 
 stdlib_test$199:	; £temporary3990 = £temporary3988 * int8$4#
 	xor rdx, rdx
-	mul qword int8$4#, 0
+	mul qword [int8$4#]
 
 stdlib_test$200:	; £temporary3989 = list + £temporary3990
 	mov rbx, rbp
@@ -1011,7 +1011,7 @@ stdlib_test$203:	; call function noellipse-ellipse printf, extra 4
 stdlib_test$204:	; post call
 
 stdlib_test$205:	; index = index + int4$1#
-	inc dword rbp, 44
+	inc dword [rbp + 44]
 
 stdlib_test$206:	; goto 195
 	jmp stdlib_test$195
@@ -1075,7 +1075,7 @@ stdlib_test$222:	; £temporary3998 = int_to_int index (Signed_Int -> Array)
 
 stdlib_test$223:	; £temporary4000 = £temporary3998 * int8$4#
 	xor rdx, rdx
-	mul qword int8$4#, 0
+	mul qword [int8$4#]
 
 stdlib_test$224:	; £temporary3999 = list + £temporary4000
 	mov rbx, rbp
@@ -1101,7 +1101,7 @@ stdlib_test$227:	; call function noellipse-ellipse printf, extra 4
 stdlib_test$228:	; post call
 
 stdlib_test$229:	; index = index + int4$1#
-	inc dword rbp, 44
+	inc dword [rbp + 44]
 
 stdlib_test$230:	; goto 219
 	jmp stdlib_test$219
@@ -1177,7 +1177,7 @@ stdlib_test$250:	; £temporary4012 = p - list
 
 stdlib_test$251:	; £temporary4011 = £temporary4012 / int8$4#
 	xor rdx, rdx
-	div qword int8$4#, 0
+	div qword [int8$4#]
 
 stdlib_test$252:	; £temporary4013 = int_to_int £temporary4011 (Pointer -> Signed_Int)
 
@@ -1216,7 +1216,7 @@ stdlib_test$261:	; call function noellipse-ellipse printf, extra 8
 stdlib_test$262:	; post call
 
 stdlib_test$263:	; key = key + int4$1#
-	inc dword rbp, 44
+	inc dword [rbp + 44]
 
 stdlib_test$264:	; goto 236
 	jmp stdlib_test$236

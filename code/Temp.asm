@@ -66,7 +66,7 @@ section .text
 	jmp rax
 
 @2996$existsTempName$16:	; index = index + int4$1#
-	inc dword rbp, 32
+	inc dword [rbp + 32]
 
 @2996$existsTempName$17:	; goto 2
 	jmp @2996$existsTempName$2
@@ -225,7 +225,7 @@ section .text
 	mov eax, [@2994$g_tempSize]
 
 @3003$generateTempName$40:	; g_tempSize = g_tempSize + int4$1#
-	inc dword @2994$g_tempSize, 0
+	inc dword [@2994$g_tempSize]
 
 @3003$generateTempName$41:	; £temporary1016 = int_to_int £temporary1014 (Signed_Int -> Array)
 	mov rbx, 4294967295
@@ -295,7 +295,7 @@ section .text
 	jmp rax
 
 @3003$generateTempName$59:	; c = c + int1$1#
-	inc byte rbp, 40
+	inc byte [rbp + 40]
 
 @3003$generateTempName$60:	; goto 2
 	jmp @3003$generateTempName$2

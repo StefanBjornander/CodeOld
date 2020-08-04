@@ -329,7 +329,7 @@ calloc:	; call header integral zero 0 stack zero 0
 calloc$1:	; £temporary147 = number * size
 	mov eax, [rbp + 24]
 	xor edx, edx
-	imul dword rbp, 28
+	imul dword [rbp + 28]
 
 calloc$2:	; parameter £temporary147, offset 56
 	mov [rbp + 56], eax
