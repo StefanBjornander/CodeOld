@@ -125,8 +125,7 @@ fopen$3:	; £temporary793 = int_to_int index (Signed_Int -> Array)
 
 fopen$4:	; £temporary794 = £temporary793 * Array_#
 	xor rdx, rdx
-	mov rax, 41
-	mul rax
+	mul qword [Array_#]
 
 fopen$5:	; £temporary795 = g_fileArray + £temporary794
 	mov rsi, g_fileArray
@@ -155,8 +154,7 @@ fopen$11:	; £temporary799 = int_to_int index (Signed_Int -> Array)
 
 fopen$12:	; £temporary800 = £temporary799 * Array_#
 	xor rdx, rdx
-	mov rax, 41
-	mul rax
+	mul qword [Array_#]
 
 fopen$13:	; £temporary801 = g_fileArray + £temporary800
 	mov rsi, g_fileArray
@@ -717,8 +715,7 @@ fflush$3:	; £temporary843 = int_to_int index (Signed_Int -> Array)
 
 fflush$4:	; £temporary844 = £temporary843 * Array_#
 	xor rdx, rdx
-	mov rax, 41
-	mul rax
+	mul qword [Array_#]
 
 fflush$5:	; £temporary845 = g_fileArray + £temporary844
 	mov rsi, g_fileArray
@@ -739,8 +736,7 @@ fflush$9:	; £temporary847 = int_to_int index (Signed_Int -> Array)
 
 fflush$10:	; £temporary848 = £temporary847 * Array_#
 	xor rdx, rdx
-	mov rax, 41
-	mul rax
+	mul qword [Array_#]
 
 fflush$11:	; £temporary849 = g_fileArray + £temporary848
 	mov rsi, g_fileArray
@@ -836,8 +832,7 @@ fclose$10:	; £temporary862 = int_to_int index (Signed_Int -> Array)
 
 fclose$11:	; £temporary863 = £temporary862 * Array_#
 	xor rdx, rdx
-	mov rax, 41
-	mul rax
+	mul qword [Array_#]
 
 fclose$12:	; £temporary864 = g_fileArray + £temporary863
 	mov rsi, g_fileArray
@@ -858,8 +853,7 @@ fclose$16:	; £temporary866 = int_to_int index (Signed_Int -> Array)
 
 fclose$17:	; £temporary867 = £temporary866 * Array_#
 	xor rdx, rdx
-	mov rax, 41
-	mul rax
+	mul qword [Array_#]
 
 fclose$18:	; £temporary868 = g_fileArray + £temporary867
 	mov rsi, g_fileArray
@@ -1956,6 +1950,10 @@ stderr:
 
 @2603$READ_WRITE:
 	dd 66
+
+Array_#:
+	; initializer Array
+	dq 41
 
 string_r#:
 	; initializer String

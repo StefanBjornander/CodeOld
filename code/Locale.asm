@@ -55,8 +55,7 @@ setlocale$13:	; £temporary344 = int_to_int index (Signed_Int -> Array)
 
 setlocale$14:	; £temporary345 = £temporary344 * Array_#
 	xor rdx, rdx
-	mov rax, 16
-	mul rax
+	mul qword [Array_#]
 
 setlocale$15:	; £temporary346 = sArray + £temporary345
 	mov rsi, @1525$sArray
@@ -89,8 +88,7 @@ setlocale$22:	; £temporary350 = int_to_int index (Signed_Int -> Array)
 
 setlocale$23:	; £temporary351 = £temporary350 * Array_#
 	xor rdx, rdx
-	mov rax, 16
-	mul rax
+	mul qword [Array_#]
 
 setlocale$24:	; £temporary352 = sArray + £temporary351
 	mov rsi, @1525$sArray
@@ -640,3 +638,7 @@ string_SE#:
 
 @1527$g_currStructPtr:
 	dq @1525$sArray
+
+Array_#:
+	; initializer Array
+	dq 16

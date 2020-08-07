@@ -465,8 +465,7 @@ gmtime$63:	; £temporary2305 = int_to_int month (Signed_Int -> Array)
 
 gmtime$64:	; £temporary2306 = £temporary2305 * Array_#
 	xor rdx, rdx
-	mov rax, 4
-	mul rax
+	mul qword [Array_#]
 
 gmtime$65:	; £temporary2307 = daysOfMonths + £temporary2306
 	mov rbx, rbp
@@ -497,8 +496,7 @@ gmtime$69:	; £temporary2311 = int_to_int month (Signed_Int -> Array)
 
 gmtime$70:	; £temporary2312 = £temporary2311 * Array_#
 	xor rdx, rdx
-	mov rax, 4
-	mul rax
+	mul qword [Array_#]
 
 gmtime$71:	; £temporary2313 = daysOfMonths + £temporary2312
 	mov rbx, rbp
@@ -2353,6 +2351,10 @@ int4$100#:
 int4$400#:
 	; initializer Signed_Int
 	dd 400
+
+Array_#:
+	; initializer Array
+	dq 4
 
 @4759$g_timeString:
 	times 256 db 0

@@ -914,8 +914,7 @@ atexit$7:	; £temporary2122 = int_to_int index (Signed_Int -> Array)
 
 atexit$8:	; £temporary2123 = £temporary2122 * Array_#
 	xor rdx, rdx
-	mov rax, 8
-	mul rax
+	mul qword [Array_#]
 
 atexit$9:	; £temporary2124 = g_funcArray + £temporary2123
 	mov rsi, g_funcArray
@@ -934,8 +933,7 @@ atexit$12:	; £temporary2127 = int_to_int index (Signed_Int -> Array)
 
 atexit$13:	; £temporary2128 = £temporary2127 * Array_#
 	xor rdx, rdx
-	mov rax, 8
-	mul rax
+	mul qword [Array_#]
 
 atexit$14:	; £temporary2129 = g_funcArray + £temporary2128
 	mov rsi, g_funcArray
@@ -963,8 +961,7 @@ atexit$20:	; £temporary2131 = int_to_int index (Signed_Int -> Array)
 
 atexit$21:	; £temporary2132 = £temporary2131 * Array_#
 	xor rdx, rdx
-	mov rax, 8
-	mul rax
+	mul qword [Array_#]
 
 atexit$22:	; £temporary2133 = g_funcArray + £temporary2132
 	mov rsi, g_funcArray
@@ -1042,8 +1039,7 @@ exit$7:	; £temporary2139 = int_to_int index (Signed_Int -> Array)
 
 exit$8:	; £temporary2140 = £temporary2139 * Array_#
 	xor rdx, rdx
-	mov rax, 8
-	mul rax
+	mul qword [Array_#]
 
 exit$9:	; £temporary2141 = g_funcArray + £temporary2140
 	mov rsi, g_funcArray
@@ -1071,8 +1067,7 @@ exit$15:	; £temporary2144 = int_to_int index (Signed_Int -> Array)
 
 exit$16:	; £temporary2145 = £temporary2144 * Array_#
 	xor rdx, rdx
-	mov rax, 8
-	mul rax
+	mul qword [Array_#]
 
 exit$17:	; £temporary2146 = g_funcArray + £temporary2145
 	mov rsi, g_funcArray
@@ -1101,8 +1096,7 @@ exit$22:	; £temporary2149 = int_to_int index (Signed_Int -> Array)
 
 exit$23:	; £temporary2150 = £temporary2149 * Array_#
 	xor rdx, rdx
-	mov rax, 8
-	mul rax
+	mul qword [Array_#]
 
 exit$24:	; £temporary2151 = g_funcArray + £temporary2150
 	mov rbx, g_funcArray
@@ -1558,6 +1552,10 @@ g_funcArray:
 string_Added20function20index2025i3A2025i0A#:
 	; initializer String
 	db "Added function index %i: %i", 10, 0
+
+Array_#:
+	; initializer Array
+	dq 8
 
 string_Called20function20index2025i3A2025i0A#:
 	; initializer String

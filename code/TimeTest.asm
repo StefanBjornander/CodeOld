@@ -159,8 +159,7 @@ time_test$40:	; £temporary4047 = int_to_int s$tm_wday (Signed_Int -> Array)
 
 time_test$41:	; £temporary4048 = £temporary4047 * Array_#
 	xor rdx, rdx
-	mov rax, 8
-	mul rax
+	mul qword [Array_#]
 
 time_test$42:	; £temporary4049 = weekdays + £temporary4048
 	mov rbx, rbp
@@ -274,8 +273,7 @@ time_test$68:	; £temporary4067 = int_to_int s$tm_wday (Signed_Int -> Array)
 
 time_test$69:	; £temporary4068 = £temporary4067 * Array_#
 	xor rdx, rdx
-	mov rax, 8
-	mul rax
+	mul qword [Array_#]
 
 time_test$70:	; £temporary4069 = weekdays + £temporary4068
 	mov rbx, rbp
@@ -559,3 +557,7 @@ string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025
 string_strftime203C25i3E203C25s3E0A#:
 	; initializer String
 	db "strftime <%i> <%s>", 10, 0
+
+Array_#:
+	; initializer Array
+	dq 8

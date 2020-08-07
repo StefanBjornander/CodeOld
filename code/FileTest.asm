@@ -1286,8 +1286,7 @@ file_test$361:	; £temporary3539 = int_to_int index (Signed_Int -> Array)
 
 file_test$362:	; £temporary3540 = £temporary3539 * Array_#
 	xor rdx, rdx
-	mov rax, 8
-	mul rax
+	mul qword [Array_#]
 
 file_test$363:	; £temporary3541 = arr + £temporary3540
 	mov rbx, rbp
@@ -3160,6 +3159,10 @@ string_tempFilePtr20213D20NULL#:
 string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A#:
 	; initializer String
 	db 10, "------------", 10, 0
+
+Array_#:
+	; initializer Array
+	dq 8
 
 int4$8#:
 	; initializer Signed_Int
