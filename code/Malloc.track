@@ -137,8 +137,8 @@ malloc$29:	; currGap = lastAddress - £temporary185
 109:	
 
 malloc$30:	; if newBlockSize > currGap goto 36
-110:		mov a57, [bp + 8]
-111:		cmp a57, [bp + 24]
+110:		mov a57, [bp + 24]
+111:		cmp [bp + 8], a57
 112:		ja malloc$36
 114:	
 
@@ -148,8 +148,8 @@ malloc$31:	; if minGap == 0 goto 33
 118:	
 
 malloc$32:	; if currGap >= minGap goto 36
-119:		mov a58, [bp + 24]
-120:		cmp a58, [bp + 10]
+119:		mov a58, [bp + 10]
+120:		cmp [bp + 24], a58
 121:		jae malloc$36
 123:	
 
@@ -294,8 +294,8 @@ malloc$63:	; stackTop = £temporary206
 235:	
 
 malloc$64:	; if stackTop > newAddress goto 80
-236:		mov a80, [bp + 24]
-237:		cmp a80, [bp + 22]
+236:		mov a80, [bp + 22]
+237:		cmp [bp + 24], a80
 238:		ja malloc$80
 240:	
 
@@ -497,8 +497,8 @@ free$8:	; if currBlockPtr == 0 goto 32
 35:	
 
 free$9:	; if currBlockPtr != freeBlockPtr goto 28
-36:		mov a105, [bp + 12]
-37:		cmp a105, [bp + 8]
+36:		mov a105, [bp + 8]
+37:		cmp [bp + 12], a105
 38:		jne free$28
 40:	
 
@@ -823,8 +823,8 @@ realloc$46:	; £temporary265 -> oldBlockPtr = *oldBlockPtr
 171:	
 
 realloc$47:	; if newBlockSize > £temporary265 -> oldBlockPtr goto 52
-172:		mov a131, [bp + 10]
-173:		cmp a131, [a130]
+172:		mov t131, [a130]
+173:		cmp [bp + 10], t131
 174:		ja realloc$52
 176:	
 
@@ -863,8 +863,8 @@ realloc$54:	; if currBlockPtr == 0 goto 68
 203:	
 
 realloc$55:	; if currBlockPtr != oldBlockPtr goto 63
-204:		mov a137, [bp + 16]
-205:		cmp a137, [bp + 12]
+204:		mov a137, [bp + 12]
+205:		cmp [bp + 16], a137
 206:		jne realloc$63
 208:	
 
@@ -879,8 +879,8 @@ realloc$57:	; availableSize = lastAddress - £temporary270
 217:	
 
 realloc$58:	; if availableSize < newBlockSize goto 68
-218:		mov a140, [bp + 18]
-219:		cmp a140, [bp + 10]
+218:		mov a140, [bp + 10]
+219:		cmp [bp + 18], a140
 220:		jb realloc$68
 222:	
 

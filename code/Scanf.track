@@ -1820,8 +1820,8 @@ scanUnsignedLongInt$63:	; digit = £temporary1535
 249:	
 
 scanUnsignedLongInt$64:	; if digit >= base goto 74
-250:		mov a998, [bp + 14]
-251:		cmp a998, [bp + 6]
+250:		mov a998, [bp + 6]
+251:		cmp [bp + 14], a998
 252:		jae scanUnsignedLongInt$74
 254:	
 

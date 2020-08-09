@@ -534,8 +534,8 @@ main$5:	; index = 0
 63:	
 
 main$6:	; if index >= argc goto 18
-64:		mov a13, [bp + 10]
-65:		cmp a13, [bp + 6]
+64:		mov a13, [bp + 6]
+65:		cmp [bp + 10], a13
 66:		jge main$18
 68:	
 

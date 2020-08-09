@@ -25,8 +25,8 @@ compare$5:	; intValue2 = £temporary5286 -> £temporary5285
 21:	
 
 compare$6:	; if intValue1 >= intValue2 goto 9
-22:		mov ax, [bp + 10]
-23:		cmp ax, [bp + 12]
+22:		mov ax, [bp + 12]
+23:		cmp [bp + 10], ax
 24:		jge compare$9
 26:	
 
@@ -39,8 +39,8 @@ compare$8:	; goto 14
 32:	
 
 compare$9:	; if intValue1 != intValue2 goto 12
-33:		mov ax, [bp + 10]
-34:		cmp ax, [bp + 12]
+33:		mov ax, [bp + 12]
+34:		cmp [bp + 10], ax
 35:		jne compare$12
 37:	
 
@@ -97,8 +97,8 @@ reverse_compare$5:	; intValue2 = £temporary5300 -> £temporary5299
 21:	
 
 reverse_compare$6:	; if intValue1 >= intValue2 goto 9
-22:		mov ax, [bp + 10]
-23:		cmp ax, [bp + 12]
+22:		mov ax, [bp + 12]
+23:		cmp [bp + 10], ax
 24:		jge reverse_compare$9
 26:	
 
@@ -111,8 +111,8 @@ reverse_compare$8:	; goto 14
 32:	
 
 reverse_compare$9:	; if intValue1 != intValue2 goto 12
-33:		mov ax, [bp + 10]
-34:		cmp ax, [bp + 12]
+33:		mov ax, [bp + 12]
+34:		cmp [bp + 10], ax
 35:		jne reverse_compare$12
 37:	
 
@@ -1091,8 +1091,8 @@ stdlib_test$169:	; index = 0
 634:	
 
 stdlib_test$170:	; if index >= size goto 181
-635:		mov ax, [bp + 16]
-636:		cmp ax, [bp + 14]
+635:		mov ax, [bp + 14]
+636:		cmp [bp + 16], ax
 637:		jge stdlib_test$181
 639:	
 
@@ -1199,8 +1199,8 @@ stdlib_test$192:	; index = 0
 724:	
 
 stdlib_test$193:	; if index >= size goto 204
-725:		mov ax, [bp + 16]
-726:		cmp ax, [bp + 14]
+725:		mov ax, [bp + 14]
+726:		cmp [bp + 16], ax
 727:		jge stdlib_test$204
 729:	
 
@@ -1306,8 +1306,8 @@ stdlib_test$215:	; index = 0
 813:	
 
 stdlib_test$216:	; if index >= size goto 227
-814:		mov ax, [bp + 16]
-815:		cmp ax, [bp + 14]
+814:		mov ax, [bp + 14]
+815:		cmp [bp + 16], ax
 816:		jge stdlib_test$227
 818:	
 

@@ -208,8 +208,8 @@ file_test$46:	; index = 0
 167:	
 
 file_test$47:	; if index >= size goto 73
-168:		mov ax, [bp + 16]
-169:		cmp ax, [bp + 14]
+168:		mov ax, [bp + 14]
+169:		cmp [bp + 16], ax
 170:		jge file_test$73
 172:	
 
@@ -760,8 +760,8 @@ file_test$170:	; count = 0
 610:	
 
 file_test$171:	; if count >= size goto 187
-611:		mov ax, [bp + 12]
-612:		cmp ax, [bp + 14]
+611:		mov ax, [bp + 14]
+612:		cmp [bp + 12], ax
 613:		jge file_test$187
 615:	
 
@@ -1316,8 +1316,8 @@ file_test$293:	; index = 0
 1064:	
 
 file_test$294:	; if index >= size goto 308
-1065:		mov ax, [bp + 14]
-1066:		cmp ax, [bp + 12]
+1065:		mov ax, [bp + 12]
+1066:		cmp [bp + 14], ax
 1067:		jge file_test$308
 1069:	
 
@@ -1819,8 +1819,8 @@ file_test$406:	; index = 0
 1470:	
 
 file_test$407:	; if index >= size goto 425
-1471:		mov ax, [bp + 14]
-1472:		cmp ax, [bp + 12]
+1471:		mov ax, [bp + 12]
+1472:		cmp [bp + 14], ax
 1473:		jge file_test$425
 1475:	
 
@@ -2255,8 +2255,8 @@ file_test$502:	; index = 0
 1827:	
 
 file_test$503:	; if index >= size goto 516
-1828:		mov ax, [bp + 20]
-1829:		cmp ax, [bp + 12]
+1828:		mov ax, [bp + 12]
+1829:		cmp [bp + 20], ax
 1830:		jge file_test$516
 1832:	
 

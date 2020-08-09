@@ -39,8 +39,8 @@ setlocale$8:	; index = 0
 30:	
 
 setlocale$9:	; if index >= sSize goto 28
-31:		mov a307, [bp + 10]
-32:		cmp a307, [@21$sSize]
+31:		mov a307, [@21$sSize]
+32:		cmp [bp + 10], a307
 33:		jge setlocale$28
 35:	
 

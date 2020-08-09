@@ -2492,8 +2492,8 @@ feof$24:	; post call
 89:	
 
 feof$25:	; if currPosition != lastPosition goto 28
-90:		mov a766, [bp + 8]
-91:		cmp a766, [bp + 12]
+90:		mov a766, [bp + 12]
+91:		cmp [bp + 8], a766
 92:		jne feof$28
 94:	
 

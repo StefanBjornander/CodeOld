@@ -77,8 +77,8 @@ strncpy:	; index = 0
 4:	
 
 strncpy$1:	; if index >= size goto 12
-5:		mov a2118, [bp + 12]
-6:		cmp a2118, [bp + 10]
+5:		mov a2118, [bp + 10]
+6:		cmp [bp + 12], a2118
 7:		jge strncpy$12
 9:	
 
@@ -125,8 +125,8 @@ strncpy$11:	; goto 1
 41:	
 
 strncpy$12:	; if index >= size goto 18
-42:		mov a2123, [bp + 12]
-43:		cmp a2123, [bp + 10]
+42:		mov a2123, [bp + 10]
+43:		cmp [bp + 12], a2123
 44:		jge strncpy$18
 46:	
 
@@ -498,8 +498,8 @@ strcmp$22:	; £temporary3254 -> £temporary3255 = *£temporary3255
 83:	
 
 strcmp$23:	; if £temporary3252 -> £temporary3253 >= £temporary3254 -> £temporary3255 goto 26
-84:		mov t2164, [a2162]
-85:		cmp t2164, [a2163]
+84:		mov t2164, [a2163]
+85:		cmp [a2162], t2164
 86:		jge strcmp$26
 88:	
 
@@ -531,8 +531,8 @@ strcmp$29:	; £temporary3259 -> £temporary3260 = *£temporary3260
 109:	
 
 strcmp$30:	; if £temporary3257 -> £temporary3258 <= £temporary3259 -> £temporary3260 goto 33
-110:		mov t2169, [a2167]
-111:		cmp t2169, [a2168]
+110:		mov t2169, [a2168]
+111:		cmp [a2167], t2169
 112:		jle strcmp$33
 114:	
 
@@ -563,8 +563,8 @@ strncmp:	; index = 0
 4:	
 
 strncmp$1:	; if index >= size goto 36
-5:		mov a2172, [bp + 12]
-6:		cmp a2172, [bp + 10]
+5:		mov a2172, [bp + 10]
+6:		cmp [bp + 12], a2172
 7:		jge strncmp$36
 9:	
 
@@ -670,8 +670,8 @@ strncmp$23:	; £temporary3280 -> £temporary3281 = *£temporary3281
 88:	
 
 strncmp$24:	; if £temporary3278 -> £temporary3279 >= £temporary3280 -> £temporary3281 goto 27
-89:		mov t2185, [a2183]
-90:		cmp t2185, [a2184]
+89:		mov t2185, [a2184]
+90:		cmp [a2183], t2185
 91:		jge strncmp$27
 93:	
 
@@ -703,8 +703,8 @@ strncmp$30:	; £temporary3285 -> £temporary3286 = *£temporary3286
 114:	
 
 strncmp$31:	; if £temporary3283 -> £temporary3284 <= £temporary3285 -> £temporary3286 goto 34
-115:		mov t2190, [a2188]
-116:		cmp t2190, [a2189]
+115:		mov t2190, [a2189]
+116:		cmp [a2188], t2190
 117:		jle strncmp$34
 119:	
 
@@ -779,8 +779,8 @@ strchr$7:	; £temporary3293 -> £temporary3294 = *£temporary3294
 33:	
 
 strchr$8:	; if £temporary3293 -> £temporary3294 != c goto 14
-34:		mov t2198, [a2197]
-35:		cmp t2198, [bp + 12]
+34:		mov a2198, [bp + 12]
+35:		cmp [a2197], a2198
 36:		jne strchr$14
 38:	
 
@@ -869,8 +869,8 @@ strrchr$8:	; £temporary3304 -> £temporary3305 = *£temporary3305
 36:	
 
 strrchr$9:	; if £temporary3304 -> £temporary3305 != c goto 14
-37:		mov t2206, [a2205]
-38:		cmp t2206, [bp + 14]
+37:		mov a2206, [bp + 14]
+38:		cmp [a2205], a2206
 39:		jne strrchr$14
 41:	
 
@@ -1814,8 +1814,8 @@ memcpy$4:	; index = 0
 18:	
 
 memcpy$5:	; if index >= size goto 13
-19:		mov a2306, [bp + 16]
-20:		cmp a2306, [bp + 10]
+19:		mov a2306, [bp + 10]
+20:		cmp [bp + 16], a2306
 21:		jge memcpy$13
 23:	
 
@@ -1882,8 +1882,8 @@ memmove$3:	; charSource = £temporary3433
 15:	
 
 memmove$4:	; if source >= target goto 14
-16:		mov a2314, [bp + 8]
-17:		cmp a2314, [bp + 6]
+16:		mov a2314, [bp + 6]
+17:		cmp [bp + 8], a2314
 18:		jge memmove$14
 20:	
 
@@ -1932,8 +1932,8 @@ memmove$14:	; index = 0
 54:	
 
 memmove$15:	; if index >= size goto 23
-55:		mov a2319, [bp + 16]
-56:		cmp a2319, [bp + 10]
+55:		mov a2319, [bp + 10]
+56:		cmp [bp + 16], a2319
 57:		jge memmove$23
 59:	
 
@@ -2004,8 +2004,8 @@ memcmp$4:	; index = 0
 18:	
 
 memcmp$5:	; if index >= size goto 22
-19:		mov a2327, [bp + 16]
-20:		cmp a2327, [bp + 10]
+19:		mov a2327, [bp + 10]
+20:		cmp [bp + 16], a2327
 21:		jge memcmp$22
 23:	
 
@@ -2026,8 +2026,8 @@ memcmp$9:	; £temporary3455 -> £temporary3456 = *£temporary3456
 35:	
 
 memcmp$10:	; if £temporary3453 -> £temporary3454 >= £temporary3455 -> £temporary3456 goto 13
-36:		mov t2330, [a2328]
-37:		cmp t2330, [a2329]
+36:		mov t2330, [a2329]
+37:		cmp [a2328], t2330
 38:		jge memcmp$13
 40:	
 
@@ -2059,8 +2059,8 @@ memcmp$16:	; £temporary3460 -> £temporary3461 = *£temporary3461
 61:	
 
 memcmp$17:	; if £temporary3458 -> £temporary3459 <= £temporary3460 -> £temporary3461 goto 20
-62:		mov t2335, [a2333]
-63:		cmp t2335, [a2334]
+62:		mov t2335, [a2334]
+63:		cmp [a2333], t2335
 64:		jle memcmp$20
 66:	
 
@@ -2122,8 +2122,8 @@ memchr$4:	; index = 0
 24:	
 
 memchr$5:	; if index >= size goto 17
-25:		mov a2342, [bp + 12]
-26:		cmp a2342, [bp + 10]
+25:		mov a2342, [bp + 10]
+26:		cmp [bp + 12], a2342
 27:		jge memchr$17
 29:	
 
@@ -2136,8 +2136,8 @@ memchr$7:	; £temporary3467 -> £temporary3468 = *£temporary3468
 35:	
 
 memchr$8:	; if £temporary3467 -> £temporary3468 != c goto 15
-36:		mov t2344, [a2343]
-37:		cmp t2344, [bp + 16]
+36:		mov a2344, [bp + 16]
+37:		cmp [a2343], a2344
 38:		jne memchr$15
 40:	
 
@@ -2212,8 +2212,8 @@ memset$4:	; index = 0
 24:	
 
 memset$5:	; if index >= size goto 11
-25:		mov a2351, [bp + 15]
-26:		cmp a2351, [bp + 10]
+25:		mov a2351, [bp + 10]
+26:		cmp [bp + 15], a2351
 27:		jge memset$11
 29:	
 

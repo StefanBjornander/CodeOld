@@ -68,8 +68,8 @@ main$5:	; index = 0
 x376:	mov word [bp + 10], 0	; 5: -57 70 10 0 0
 
 main$6:	; if index >= argc goto 18
-x381:	mov ax, [bp + 10]	; 3: -117 70 10
-x384:	cmp ax, [bp + 6]	; 3: 59 70 6
+x381:	mov ax, [bp + 6]	; 3: -117 70 6
+x384:	cmp [bp + 10], ax	; 3: 57 70 10
 x387:	jge main$18	; 2: 125 54
 
 main$7:	; call header integral zero 0 stack zero 0
@@ -3879,8 +3879,8 @@ x6869:	add si, [bp + 10]	; 3: 3 118 10
 strchr$7:	; £temporary3293 -> £temporary3294 = *£temporary3294
 
 strchr$8:	; if £temporary3293 -> £temporary3294 != c goto 14
-x6872:	mov al, [si]	; 2: -118 4
-x6874:	cmp al, [bp + 12]	; 3: 58 70 12
+x6872:	mov al, [bp + 12]	; 3: -118 70 12
+x6875:	cmp [si], al	; 2: 56 4
 x6877:	jne strchr$14	; 2: 117 17
 
 strchr$9:	; £temporary3297 = text + index
@@ -7862,8 +7862,8 @@ scanUnsignedLongInt$63:	; digit = £temporary1535
 x11928:	mov [bp + 14], ebx	; 4: 102 -119 94 14
 
 scanUnsignedLongInt$64:	; if digit >= base goto 74
-x11932:	mov eax, [bp + 14]	; 4: 102 -117 70 14
-x11936:	cmp eax, [bp + 6]	; 4: 102 59 70 6
+x11932:	mov eax, [bp + 6]	; 4: 102 -117 70 6
+x11936:	cmp [bp + 14], eax	; 4: 102 57 70 14
 x11940:	jae scanUnsignedLongInt$74	; 2: 115 43
 
 scanUnsignedLongInt$65:	; £temporary1537 = unsignedLongValue * base

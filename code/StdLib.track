@@ -444,8 +444,8 @@ memswp$4:	; index = 0
 18:	
 
 memswp$5:	; if index >= valueSize goto 19
-19:		mov a1577, [bp + 16]
-20:		cmp a1577, [bp + 10]
+19:		mov a1577, [bp + 10]
+20:		cmp [bp + 16], a1577
 21:		jge memswp$19
 23:	
 
@@ -1312,8 +1312,8 @@ swap:	; index = 0
 4:	
 
 swap$1:	; if index >= valueSize goto 15
-5:		mov a1701, [bp + 12]
-6:		cmp a1701, [bp + 10]
+5:		mov a1701, [bp + 10]
+6:		cmp [bp + 12], a1701
 7:		jge swap$15
 9:	
 
@@ -1410,8 +1410,8 @@ qsort$5:	; index2 = 0
 23:	
 
 qsort$6:	; if index2 >= index1 goto 28
-24:		mov a1712, [bp + 20]
-25:		cmp a1712, [bp + 18]
+24:		mov a1712, [bp + 18]
+25:		cmp [bp + 20], a1712
 26:		jge qsort$28
 28:	
 

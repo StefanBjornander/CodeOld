@@ -749,8 +749,8 @@ pow_int$7:	; index = 0
 27:	
 
 pow_int$8:	; if index >= y goto 15
-28:		mov ax, [bp + 26]
-29:		cmp ax, [bp + 14]
+28:		mov ax, [bp + 14]
+29:		cmp [bp + 26], ax
 30:		jge pow_int$15
 32:	
 

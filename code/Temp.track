@@ -5,8 +5,8 @@
 4:	
 
 @27$existsTempName$1:	; if index >= g_tempSize goto 16
-5:		mov a779, [bp + 8]
-6:		cmp a779, [@26$g_tempSize]
+5:		mov a779, [@26$g_tempSize]
+6:		cmp [bp + 8], a779
 7:		jge @27$existsTempName$16
 9:	
 
