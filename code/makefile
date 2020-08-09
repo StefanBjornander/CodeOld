@@ -1,98 +1,98 @@
 main: main.o malloc.o ctype.o errno.o locale.o math.o setjmp.o signal.o file.o temp.o scanf.o printf.o stdlib.o time.o string.o printtest.o charactertest.o floattest.o limitstest.o asserttest.o stringtest.o localetest.o setjmptest.o mathtest.o filetest.o stdiotest.o signaltest.o stacktest.o malloctest.o stdlibtest.o timetest.o
 	ld -o main main.o malloc.o ctype.o errno.o locale.o math.o setjmp.o signal.o file.o temp.o scanf.o printf.o stdlib.o time.o string.o printtest.o charactertest.o floattest.o limitstest.o asserttest.o stringtest.o localetest.o setjmptest.o mathtest.o filetest.o stdiotest.o signaltest.o stacktest.o malloctest.o stdlibtest.o timetest.o
 
-main.o: main.c main.asmNew stddef.h stdlib.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h math.h string.h errno.h assert.h stdio.h stdlib.h limits.h time.h
-	nasm -f elf64 -o main.o main.asmNew
+main.o: main.c main.asm stddef.h stdlib.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h math.h string.h errno.h assert.h stdio.h stdlib.h limits.h time.h
+	nasm -f elf64 -o main.o main.asm
 
-malloc.o: malloc.c malloc.asmNew math.h ctype.h errno.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stdarg.h stddef.h stdlib.h string.h assert.h stdio.h stdlib.h
-	nasm -f elf64 -o malloc.o malloc.asmNew
+malloc.o: malloc.c malloc.asm math.h ctype.h errno.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stdarg.h stddef.h stdlib.h string.h assert.h stdio.h stdlib.h
+	nasm -f elf64 -o malloc.o malloc.asm
 
-ctype.o: ctype.c ctype.asmNew ctype.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h locale.h string.h stddef.h
-	nasm -f elf64 -o ctype.o ctype.asmNew
+ctype.o: ctype.c ctype.asm ctype.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h locale.h string.h stddef.h
+	nasm -f elf64 -o ctype.o ctype.asm
 
-errno.o: errno.c errno.asmNew errno.h
-	nasm -f elf64 -o errno.o errno.asmNew
+errno.o: errno.c errno.asm errno.h
+	nasm -f elf64 -o errno.o errno.asm
 
-locale.o: locale.c locale.asmNew stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stdlib.h string.h locale.h
-	nasm -f elf64 -o locale.o locale.asmNew
+locale.o: locale.c locale.asm stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stdlib.h string.h locale.h
+	nasm -f elf64 -o locale.o locale.asm
 
-math.o: math.c math.asmNew math.h errno.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stddef.h stdlib.h
-	nasm -f elf64 -o math.o math.asmNew
+math.o: math.c math.asm math.h errno.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stddef.h stdlib.h
+	nasm -f elf64 -o math.o math.asm
 
-setjmp.o: setjmp.c setjmp.asmNew setjmp.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h
-	nasm -f elf64 -o setjmp.o setjmp.asmNew
+setjmp.o: setjmp.c setjmp.asm setjmp.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h
+	nasm -f elf64 -o setjmp.o setjmp.asm
 
-signal.o: signal.c signal.asmNew stddef.h signal.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h
-	nasm -f elf64 -o signal.o signal.asmNew
+signal.o: signal.c signal.asm stddef.h signal.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h
+	nasm -f elf64 -o signal.o signal.asm
 
-file.o: file.c file.asmNew stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h errno.h locale.h string.h
-	nasm -f elf64 -o file.o file.asmNew
+file.o: file.c file.asm stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h errno.h locale.h string.h
+	nasm -f elf64 -o file.o file.asm
 
-temp.o: temp.c temp.asmNew stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h string.h file.h
-	nasm -f elf64 -o temp.o temp.asmNew
+temp.o: temp.c temp.asm stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h string.h file.h
+	nasm -f elf64 -o temp.o temp.asm
 
-scanf.o: scanf.c scanf.asmNew math.h ctype.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stddef.h stdarg.h string.h scanf.h printf.h
-	nasm -f elf64 -o scanf.o scanf.asmNew
+scanf.o: scanf.c scanf.asm math.h ctype.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stddef.h stdarg.h string.h scanf.h printf.h
+	nasm -f elf64 -o scanf.o scanf.asm
 
-printf.o: printf.c printf.asmNew math.h ctype.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stddef.h stdarg.h stdlib.h scanf.h printf.h
-	nasm -f elf64 -o printf.o printf.asmNew
+printf.o: printf.c printf.asm math.h ctype.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stddef.h stdarg.h stdlib.h scanf.h printf.h
+	nasm -f elf64 -o printf.o printf.asm
 
-stdlib.o: stdlib.c stdlib.asmNew math.h ctype.h errno.h stdarg.h stddef.h string.h stdlib.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h
-	nasm -f elf64 -o stdlib.o stdlib.asmNew
+stdlib.o: stdlib.c stdlib.asm math.h ctype.h errno.h stdarg.h stddef.h string.h stdlib.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h
+	nasm -f elf64 -o stdlib.o stdlib.asm
 
-time.o: time.c time.asmNew time.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stdlib.h string.h locale.h assert.h stdio.h stdlib.h
-	nasm -f elf64 -o time.o time.asmNew
+time.o: time.c time.asm time.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stdlib.h string.h locale.h assert.h stdio.h stdlib.h
+	nasm -f elf64 -o time.o time.asm
 
-string.o: string.c string.asmNew errno.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stddef.h string.h locale.h
-	nasm -f elf64 -o string.o string.asmNew
+string.o: string.c string.asm errno.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stddef.h string.h locale.h
+	nasm -f elf64 -o string.o string.asm
 
-printtest.o: printtest.c printtest.asmNew stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h
-	nasm -f elf64 -o printtest.o printtest.asmNew
+printtest.o: printtest.c printtest.asm stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h
+	nasm -f elf64 -o printtest.o printtest.asm
 
-charactertest.o: charactertest.c charactertest.asmNew stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h ctype.h
-	nasm -f elf64 -o charactertest.o charactertest.asmNew
+charactertest.o: charactertest.c charactertest.asm stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h ctype.h
+	nasm -f elf64 -o charactertest.o charactertest.asm
 
-floattest.o: floattest.c floattest.asmNew stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h float.h
-	nasm -f elf64 -o floattest.o floattest.asmNew
+floattest.o: floattest.c floattest.asm stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h float.h
+	nasm -f elf64 -o floattest.o floattest.asm
 
-limitstest.o: limitstest.c limitstest.asmNew stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h limits.h
-	nasm -f elf64 -o limitstest.o limitstest.asmNew
+limitstest.o: limitstest.c limitstest.asm stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h limits.h
+	nasm -f elf64 -o limitstest.o limitstest.asm
 
-asserttest.o: asserttest.c asserttest.asmNew stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h assert.h stdio.h stdlib.h
-	nasm -f elf64 -o asserttest.o asserttest.asmNew
+asserttest.o: asserttest.c asserttest.asm stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h assert.h stdio.h stdlib.h
+	nasm -f elf64 -o asserttest.o asserttest.asm
 
-stringtest.o: stringtest.c stringtest.asmNew errno.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h string.h
-	nasm -f elf64 -o stringtest.o stringtest.asmNew
+stringtest.o: stringtest.c stringtest.asm errno.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h string.h
+	nasm -f elf64 -o stringtest.o stringtest.asm
 
-localetest.o: localetest.c localetest.asmNew
-	nasm -f elf64 -o localetest.o localetest.asmNew
+localetest.o: localetest.c localetest.asm
+	nasm -f elf64 -o localetest.o localetest.asm
 
-setjmptest.o: setjmptest.c setjmptest.asmNew stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h setjmp.h
-	nasm -f elf64 -o setjmptest.o setjmptest.asmNew
+setjmptest.o: setjmptest.c setjmptest.asm stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h setjmp.h
+	nasm -f elf64 -o setjmptest.o setjmptest.asm
 
-mathtest.o: mathtest.c mathtest.asmNew math.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h errno.h string.h
-	nasm -f elf64 -o mathtest.o mathtest.asmNew
+mathtest.o: mathtest.c mathtest.asm math.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h errno.h string.h
+	nasm -f elf64 -o mathtest.o mathtest.asm
 
-filetest.o: filetest.c filetest.asmNew math.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h ctype.h errno.h string.h assert.h stdio.h stdlib.h
-	nasm -f elf64 -o filetest.o filetest.asmNew
+filetest.o: filetest.c filetest.asm math.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h ctype.h errno.h string.h assert.h stdio.h stdlib.h
+	nasm -f elf64 -o filetest.o filetest.asm
 
-stdiotest.o: stdiotest.c stdiotest.asmNew stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h
-	nasm -f elf64 -o stdiotest.o stdiotest.asmNew
+stdiotest.o: stdiotest.c stdiotest.asm stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h
+	nasm -f elf64 -o stdiotest.o stdiotest.asm
 
-signaltest.o: signaltest.c signaltest.asmNew stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stdlib.h signal.h
-	nasm -f elf64 -o signaltest.o signaltest.asmNew
+signaltest.o: signaltest.c signaltest.asm stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stdlib.h signal.h
+	nasm -f elf64 -o signaltest.o signaltest.asm
 
-stacktest.o: stacktest.c stacktest.asmNew stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stdlib.h
-	nasm -f elf64 -o stacktest.o stacktest.asmNew
+stacktest.o: stacktest.c stacktest.asm stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stdlib.h
+	nasm -f elf64 -o stacktest.o stacktest.asm
 
-malloctest.o: malloctest.c malloctest.asmNew stddef.h stdlib.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h
-	nasm -f elf64 -o malloctest.o malloctest.asmNew
+malloctest.o: malloctest.c malloctest.asm stddef.h stdlib.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h
+	nasm -f elf64 -o malloctest.o malloctest.asm
 
-stdlibtest.o: stdlibtest.c stdlibtest.asmNew time.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stdlib.h
-	nasm -f elf64 -o stdlibtest.o stdlibtest.asmNew
+stdlibtest.o: stdlibtest.c stdlibtest.asm time.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stdlib.h
+	nasm -f elf64 -o stdlibtest.o stdlibtest.asm
 
-timetest.o: timetest.c timetest.asmNew time.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stdlib.h string.h
-	nasm -f elf64 -o timetest.o timetest.asmNew
+timetest.o: timetest.c timetest.asm time.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stdlib.h string.h
+	nasm -f elf64 -o timetest.o timetest.asm
 
 clear:
 	rm main.o
