@@ -1,0 +1,98 @@
+0: push float denum
+1: push float float8$0#
+2: if denum <= float8$0# goto 19
+3: call header integral zero 0 stack zero 0
+4: push float num
+5: push float denum
+6: £temporary770 = num / denum
+7: parameter £temporary770, offset 28
+8: call function noellipse-noellipse atan
+9: post call
+10: £temporary771 = return_value
+11: pop float y
+12: call header integral zero 0 stack zero 0
+13: parameter string_20A#, offset 36
+14: call function noellipse-ellipse printf, extra 0
+15: post call
+16: push float y
+17: return_value = y
+18: return
+19: push float num
+20: push float float8$0#
+21: if num < float8$0# goto 41
+22: push float denum
+23: push float float8$0#
+24: if denum >= float8$0# goto 41
+25: call header integral zero 0 stack zero 0
+26: parameter string_20A#, offset 28
+27: call function noellipse-ellipse printf, extra 0
+28: post call
+29: push float float8$3.1415926535897932384#
+30: call header integral zero 0 stack no zero 1
+31: push float num
+32: push float denum
+33: £temporary777 = num / denum
+34: parameter £temporary777, offset 28
+35: call function noellipse-noellipse atan
+36: post call
+37: £temporary778 = return_value
+38: £temporary779 = float8$3.1415926535897932384# + £temporary778
+39: return_value = £temporary779
+40: return
+41: push float num
+42: push float float8$0#
+43: if num >= float8$0# goto 63
+44: push float denum
+45: push float float8$0#
+46: if denum >= float8$0# goto 63
+47: call header integral zero 0 stack zero 0
+48: parameter string_30A#, offset 28
+49: call function noellipse-ellipse printf, extra 0
+50: post call
+51: push float float8$minus3.1415926535897932384#
+52: call header integral zero 0 stack no zero 1
+53: push float num
+54: push float denum
+55: £temporary784 = num / denum
+56: parameter £temporary784, offset 28
+57: call function noellipse-noellipse atan
+58: post call
+59: £temporary785 = return_value
+60: £temporary786 = float8$minus3.1415926535897932384# + £temporary785
+61: return_value = £temporary786
+62: return
+63: push float num
+64: push float float8$0#
+65: if num <= float8$0# goto 76
+66: push float denum
+67: push float float8$0#
+68: if denum != float8$0# goto 76
+69: call header integral zero 0 stack zero 0
+70: parameter string_40A#, offset 28
+71: call function noellipse-ellipse printf, extra 0
+72: post call
+73: push float float8$1.5707963267948966192#
+74: return_value = float8$1.5707963267948966192#
+75: return
+76: push float num
+77: push float float8$0#
+78: if num >= float8$0# goto 89
+79: push float denum
+80: push float float8$0#
+81: if denum != float8$0# goto 89
+82: call header integral zero 0 stack zero 0
+83: parameter string_50A#, offset 28
+84: call function noellipse-ellipse printf, extra 0
+85: post call
+86: push float float8$minus1.5707963267948966192#
+87: return_value = float8$minus1.5707963267948966192#
+88: return
+89: call header integral zero 0 stack zero 0
+90: parameter string_60A#, offset 28
+91: call function noellipse-ellipse printf, extra 0
+92: post call
+93: errno = EDOM
+94: push float float8$0#
+95: return_value = float8$0#
+96: return
+97: function end atan2x

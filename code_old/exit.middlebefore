@@ -1,0 +1,42 @@
+0: call header
+1: parameter string_0A#, offset 16
+2: call function noellipse-ellipse printf, extra 0
+3: post call
+4: index = int2$0#
+5: empty
+6: if index >= int2$0# goto <MiddleCode>
+7: goto <MiddleCode>
+8: check track map float stack
+9: empty
+10: £temporary2513 = index * int2$2#
+11: £temporary2514 = g_funcArray + £temporary2513
+12: £temporary2512 -> £temporary2514 = *£temporary2514
+13: if £temporary2512 -> £temporary2514 != int2$0# goto <MiddleCode>
+14: goto <MiddleCode>
+15: check track map float stack
+16: call header
+17: parameter string_Called20function20index2025i3A2025i0A#, offset 16
+18: parameter index, offset 18
+19: £temporary2517 = index * int2$2#
+20: £temporary2518 = g_funcArray + £temporary2517
+21: £temporary2516 -> £temporary2518 = *£temporary2518
+22: parameter £temporary2516 -> £temporary2518, offset 20
+23: call function noellipse-ellipse printf, extra 4
+24: post call
+25: £temporary2521 = index * int2$2#
+26: £temporary2522 = g_funcArray + £temporary2521
+27: £temporary2520 -> £temporary2522 = *£temporary2522
+28: call header
+29: call function noellipse-noellipse £temporary2520 -> £temporary2522
+30: post call
+31: goto <MiddleCode>
+32: empty
+33: --index
+34: goto <MiddleCode>
+35: £temporary2525 = int_to_int status (Signed_Int -> Signed_Short_Int)
+36: al = £temporary2525
+37: ah = int1$76#
+38: interrupt 33
+39: empty
+40: return
+41: function end exit

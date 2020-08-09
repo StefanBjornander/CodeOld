@@ -1,0 +1,31 @@
+0: c = int1$0#
+1: case g_inStatus == 0 goto £temporary1250 = int_to_int g_inDevice (Pointer -> Pointer)
+2: case g_inStatus == 1 goto £temporary1258 = int_to_int g_inDevice (Pointer -> Pointer)
+3: case end g_inStatus
+4: goto <MiddleCode>
+5: £temporary1250 = int_to_int g_inDevice (Pointer -> Pointer)
+6: stream = £temporary1250
+7: £temporary1251 -> stream = *stream, offset 2
+8: handle = £temporary1251 -> stream
+9: ah = int1$63#
+10: bx = handle
+11: cx = int2$1#
+12: £temporary1256 = &c
+13: dx = £temporary1256
+14: interrupt 33
+15: ++g_inChars
+16: return_value = c
+17: return
+18: £temporary1258 = int_to_int g_inDevice (Pointer -> Pointer)
+19: inString = £temporary1258
+20: £temporary1259 = g_inChars
+21: ++g_inChars
+22: £temporary1261 = inString + £temporary1259
+23: £temporary1260 -> £temporary1261 = *£temporary1261
+24: return_value = £temporary1260 -> £temporary1261
+25: return
+26: return_value = int1$0#
+27: return
+28: empty
+29: return
+30: function end scanChar

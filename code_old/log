@@ -1,0 +1,4 @@
+ld -o main.exe Main.o Malloc.o CType.o ErrNo.o Locale.o Math.o SetJmp.o Signal.o File.o Temp.o Scanf.o Printf.o StdLib.o Time.o String.o PrintTest.o CharacterTest.o FloatTest.o LimitsTest.o AssertTest.o StringTest.o LocaleTest.o SetJmpTest.o MathTest.o FileTest.o StdIOTest.o SignalTest.o StackTest.o MallocTest.o StdLibTest.o TimeTest.o
+makefile:2: recipe for target 'main.exe' failed
+ld -o main.exe Main.o Malloc.o CType.o ErrNo.o Locale.o Math.o SetJmp.o Signal.o File.o Temp.o Scanf.o Printf.o StdLib.o Time.o String.o PrintTest.o CharacterTest.o FloatTest.o LimitsTest.o AssertTest.o StringTest.o LocaleTest.o SetJmpTest.o MathTest.o FileTest.o StdIOTest.o SignalTest.o StackTest.o MallocTest.o StdLibTest.o TimeTest.o
+makefile:2: recipe for target 'main.exe' failed

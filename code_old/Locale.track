@@ -1,0 +1,170 @@
+1:	
+
+setlocale:	; if g_currStructPtr == 0 goto 4
+2:		cmp word [@22$g_currStructPtr], 0
+3:		je setlocale$4
+5:	
+
+setlocale$1:	; £temporary458 -> g_currStructPtr = *g_currStructPtr
+6:		mov a304, [@22$g_currStructPtr]
+8:	
+
+setlocale$2:	; £temporary462 = £temporary458 -> g_currStructPtr
+9:		mov t305, [a304]
+11:	
+
+setlocale$3:	; goto 5
+12:		jmp setlocale$5
+14:	
+
+setlocale$4:	; £temporary462 = 0
+15:		mov t306, 0
+17:	
+
+setlocale$5:	; oldName = £temporary462
+18:		mov [bp + 12], t306
+20:	
+
+setlocale$6:	; g_currStructPtr = 0
+21:		mov word [@22$g_currStructPtr], 0
+23:	
+
+setlocale$7:	; if newName == 0 goto 28
+24:		cmp word [bp + 8], 0
+25:		je setlocale$28
+27:	
+
+setlocale$8:	; index = 0
+28:		mov word [bp + 10], 0
+30:	
+
+setlocale$9:	; if index >= sSize goto 28
+31:		mov a307, [@21$sSize]
+32:		cmp [bp + 10], a307
+33:		jge setlocale$28
+35:	
+
+setlocale$10:	; call header integral zero 0 stack zero 0
+37:	
+
+setlocale$11:	; parameter newName, offset 6
+38:		mov a308, [bp + 8]
+39:		mov [bp + 20], a308
+41:	
+
+setlocale$12:	; £temporary467 = index * 4
+42:		mov a309, [bp + 10]
+44:		xor dx, dx
+45:		mul word [int2$4#]
+51:	
+
+setlocale$13:	; £temporary468 = sArray + £temporary467
+52:		mov a313, @20$sArray
+53:		add a313, t312
+55:	
+
+setlocale$14:	; £temporary466 -> £temporary468 = *£temporary468
+57:	
+
+setlocale$15:	; parameter £temporary466.name$0 -> £temporary468, offset 8
+58:		mov t314, [a313]
+59:		mov [bp + 22], t314
+61:	
+
+setlocale$16:	; call function noellipse-noellipse strcmp
+62:		mov word [bp + 14], setlocale$17
+63:		mov [bp + 16], bp
+64:		add bp, 14
+65:		jmp strcmp
+67:	
+
+setlocale$17:	; post call
+69:	
+
+setlocale$18:	; £temporary469 = return_value
+74:	
+
+setlocale$19:	; if £temporary469 != 0 goto 26
+75:		cmp t316, 0
+76:		jne setlocale$26
+78:	
+
+setlocale$20:	; £temporary472 = index * 4
+79:		mov a317, [bp + 10]
+81:		xor dx, dx
+82:		mul word [int2$4#]
+88:	
+
+setlocale$21:	; £temporary473 = sArray + £temporary472
+89:		mov a321, @20$sArray
+90:		add a321, t320
+92:	
+
+setlocale$22:	; £temporary471 -> £temporary473 = *£temporary473
+94:	
+
+setlocale$23:	; £temporary474 = &£temporary471 -> £temporary473
+96:	
+
+setlocale$24:	; g_currStructPtr = £temporary474
+97:		mov [@22$g_currStructPtr], a321
+99:	
+
+setlocale$25:	; goto 28
+100:		jmp setlocale$28
+102:	
+
+setlocale$26:	; ++index
+103:		inc word [bp + 10]
+105:	
+
+setlocale$27:	; goto 9
+106:		jmp setlocale$9
+108:	
+
+setlocale$28:	; return_value = oldName
+109:		mov a322, [bp + 12]
+111:	
+
+setlocale$29:	; return
+112:		mov t323, [bp]
+113:		mov di, [bp + 4]
+114:		mov bp, [bp + 2]
+115:		jmp t323
+117:	
+
+setlocale$30:	; function end setlocale
+1:	
+
+localeconv:	; if g_currStructPtr == 0 goto 4
+2:		cmp word [@22$g_currStructPtr], 0
+3:		je localeconv$4
+5:	
+
+localeconv$1:	; £temporary478 -> g_currStructPtr = *g_currStructPtr, offset 2
+6:		mov a324, [@22$g_currStructPtr]
+8:	
+
+localeconv$2:	; £temporary482 = £temporary478 -> g_currStructPtr
+9:		mov t325, [a324 + 2]
+11:	
+
+localeconv$3:	; goto 5
+12:		jmp localeconv$5
+14:	
+
+localeconv$4:	; £temporary482 = 0
+15:		mov t326, 0
+17:	
+
+localeconv$5:	; return_value = £temporary482
+19:	
+
+localeconv$6:	; return
+20:		mov t327, [bp]
+21:		mov di, [bp + 4]
+22:		mov bp, [bp + 2]
+23:		jmp t327
+25:	
+
+localeconv$7:	; function end localeconv

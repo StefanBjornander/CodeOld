@@ -1,0 +1,349 @@
+0: percent = int4$0#
+1: shortInt = int4$0#
+2: longIntOrDouble = int4$0#
+3: longDouble = int4$0#
+4: star = int4$0#
+5: g_inCount = int4$0#
+6: g_inChars = int4$0#
+7: index = int4$0#
+8: £temporary1482 = format + index
+9: £temporary1481 -> £temporary1482 = *£temporary1482
+10: if £temporary1481 -> £temporary1482 == int1$0# goto 346
+11: £temporary1486 = format + index
+12: £temporary1485 -> £temporary1486 = *£temporary1486
+13: c = £temporary1485 -> £temporary1486
+14: £temporary1487 = int_to_int c (Signed_Char -> Signed_Int)
+15: £temporary1488 = £temporary1487 + int4$1#
+16: d = £temporary1488
+17: if percent == int1$0# goto 338
+18: £temporary1489 = d - int4$1#
+19: case £temporary1489 == int4$104# goto 37
+20: case £temporary1489 == int4$108# goto 39
+21: case £temporary1489 == int4$76# goto 41
+22: case £temporary1489 == int4$42# goto 43
+23: case £temporary1489 == int4$99# goto 45
+24: case £temporary1489 == int4$115# goto 64
+25: case £temporary1489 == int4$100# goto 84
+26: case £temporary1489 == int4$105# goto 84
+27: case £temporary1489 == int4$111# goto 122
+28: case £temporary1489 == int4$120# goto 161
+29: case £temporary1489 == int4$117# goto 200
+30: case £temporary1489 == int4$103# goto 239
+31: case £temporary1489 == int4$102# goto 239
+32: case £temporary1489 == int4$101# goto 239
+33: case £temporary1489 == int4$91# goto 278
+34: case £temporary1489 == int4$110# goto 321
+35: case end £temporary1489
+36: goto 331
+37: shortInt = int4$1#
+38: goto 344
+39: longIntOrDouble = int4$1#
+40: goto 344
+41: longDouble = int4$1#
+42: goto 344
+43: star = int4$1#
+44: goto 344
+45: call header integral zero 0 stack zero 0
+46: call function noellipse-noellipse scanChar
+47: post call
+48: £temporary1490 = return_value
+49: charValue = £temporary1490
+50: if star != int1$0# goto 59
+51: £temporary1493 = arg_list + int4$4#
+52: arg_list = £temporary1493
+53: £temporary1494 = arg_list - int4$4#
+54: £temporary1495 = int_to_int £temporary1494 (Pointer -> Pointer)
+55: £temporary1496 -> £temporary1495 = *£temporary1495
+56: charPtr = £temporary1496 -> £temporary1495
+57: £temporary1497 -> charPtr = *charPtr
+58: £temporary1497 -> charPtr = charValue
+59: percent = int4$0#
+60: £temporary1498 = int_to_int charValue (Signed_Char -> Signed_Int)
+61: if £temporary1498 == int4$minus1# goto 344
+62: ++g_inCount
+63: goto 344
+64: if star != int1$0# goto 77
+65: £temporary1503 = arg_list + int4$4#
+66: arg_list = £temporary1503
+67: £temporary1504 = arg_list - int4$4#
+68: £temporary1505 = int_to_int £temporary1504 (Pointer -> Pointer)
+69: £temporary1506 -> £temporary1505 = *£temporary1505
+70: charPtr = £temporary1506 -> £temporary1505
+71: call header integral zero 0 stack zero 0
+72: parameter charPtr, offset 125
+73: parameter int4$0#, offset 129
+74: call function noellipse-noellipse scanString
+75: post call
+76: goto 82
+77: call header integral zero 0 stack zero 0
+78: parameter int4$0#, offset 125
+79: parameter int4$0#, offset 129
+80: call function noellipse-noellipse scanString
+81: post call
+82: percent = int4$0#
+83: goto 344
+84: call header integral zero 0 stack zero 0
+85: call function noellipse-noellipse scanLongInt
+86: post call
+87: £temporary1509 = return_value
+88: longValue = £temporary1509
+89: if star != int1$0# goto 120
+90: if shortInt == int1$0# goto 101
+91: £temporary1512 = arg_list + int4$4#
+92: arg_list = £temporary1512
+93: £temporary1513 = arg_list - int4$4#
+94: £temporary1514 = int_to_int £temporary1513 (Pointer -> Pointer)
+95: £temporary1515 -> £temporary1514 = *£temporary1514
+96: shortPtr = £temporary1515 -> £temporary1514
+97: £temporary1516 -> shortPtr = *shortPtr
+98: £temporary1517 = int_to_int longValue (Signed_Long_Int -> Signed_Short_Int)
+99: £temporary1516 -> shortPtr = £temporary1517
+100: goto 120
+101: if longIntOrDouble != int1$0# goto 112
+102: £temporary1520 = arg_list + int4$4#
+103: arg_list = £temporary1520
+104: £temporary1521 = arg_list - int4$4#
+105: £temporary1522 = int_to_int £temporary1521 (Pointer -> Pointer)
+106: £temporary1523 -> £temporary1522 = *£temporary1522
+107: intPtr = £temporary1523 -> £temporary1522
+108: £temporary1524 -> intPtr = *intPtr
+109: £temporary1525 = int_to_int longValue (Signed_Long_Int -> Signed_Int)
+110: £temporary1524 -> intPtr = £temporary1525
+111: goto 120
+112: £temporary1526 = arg_list + int4$4#
+113: arg_list = £temporary1526
+114: £temporary1527 = arg_list - int4$4#
+115: £temporary1528 = int_to_int £temporary1527 (Pointer -> Pointer)
+116: £temporary1529 -> £temporary1528 = *£temporary1528
+117: longPtr = £temporary1529 -> £temporary1528
+118: £temporary1530 -> longPtr = *longPtr
+119: £temporary1530 -> longPtr = longValue
+120: percent = int4$0#
+121: goto 344
+122: call header integral zero 0 stack zero 0
+123: parameter int8$8#, offset 125
+124: call function noellipse-noellipse scanUnsignedLongInt
+125: post call
+126: £temporary1532 = return_value
+127: unsignedLongValue = £temporary1532
+128: if star != int1$0# goto 159
+129: if shortInt == int1$0# goto 140
+130: £temporary1535 = arg_list + int4$4#
+131: arg_list = £temporary1535
+132: £temporary1536 = arg_list - int4$4#
+133: £temporary1537 = int_to_int £temporary1536 (Pointer -> Pointer)
+134: £temporary1538 -> £temporary1537 = *£temporary1537
+135: unsignedShortPtr = £temporary1538 -> £temporary1537
+136: £temporary1539 -> unsignedShortPtr = *unsignedShortPtr
+137: £temporary1540 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Short_Int)
+138: £temporary1539 -> unsignedShortPtr = £temporary1540
+139: goto 159
+140: if longIntOrDouble != int1$0# goto 151
+141: £temporary1543 = arg_list + int4$4#
+142: arg_list = £temporary1543
+143: £temporary1544 = arg_list - int4$4#
+144: £temporary1545 = int_to_int £temporary1544 (Pointer -> Pointer)
+145: £temporary1546 -> £temporary1545 = *£temporary1545
+146: unsignedIntPtr = £temporary1546 -> £temporary1545
+147: £temporary1547 -> unsignedIntPtr = *unsignedIntPtr
+148: £temporary1548 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Int)
+149: £temporary1547 -> unsignedIntPtr = £temporary1548
+150: goto 159
+151: £temporary1549 = arg_list + int4$4#
+152: arg_list = £temporary1549
+153: £temporary1550 = arg_list - int4$4#
+154: £temporary1551 = int_to_int £temporary1550 (Pointer -> Pointer)
+155: £temporary1552 -> £temporary1551 = *£temporary1551
+156: unsignedLongPtr = £temporary1552 -> £temporary1551
+157: £temporary1553 -> unsignedLongPtr = *unsignedLongPtr
+158: £temporary1553 -> unsignedLongPtr = unsignedLongValue
+159: percent = int4$0#
+160: goto 344
+161: call header integral zero 0 stack zero 0
+162: parameter int8$16#, offset 125
+163: call function noellipse-noellipse scanUnsignedLongInt
+164: post call
+165: £temporary1555 = return_value
+166: unsignedLongValue = £temporary1555
+167: if star != int1$0# goto 198
+168: if shortInt == int1$0# goto 179
+169: £temporary1558 = arg_list + int4$4#
+170: arg_list = £temporary1558
+171: £temporary1559 = arg_list - int4$4#
+172: £temporary1560 = int_to_int £temporary1559 (Pointer -> Pointer)
+173: £temporary1561 -> £temporary1560 = *£temporary1560
+174: unsignedShortPtr = £temporary1561 -> £temporary1560
+175: £temporary1562 -> unsignedShortPtr = *unsignedShortPtr
+176: £temporary1563 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Short_Int)
+177: £temporary1562 -> unsignedShortPtr = £temporary1563
+178: goto 198
+179: if longIntOrDouble != int1$0# goto 190
+180: £temporary1566 = arg_list + int4$4#
+181: arg_list = £temporary1566
+182: £temporary1567 = arg_list - int4$4#
+183: £temporary1568 = int_to_int £temporary1567 (Pointer -> Pointer)
+184: £temporary1569 -> £temporary1568 = *£temporary1568
+185: unsignedIntPtr = £temporary1569 -> £temporary1568
+186: £temporary1570 -> unsignedIntPtr = *unsignedIntPtr
+187: £temporary1571 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Int)
+188: £temporary1570 -> unsignedIntPtr = £temporary1571
+189: goto 198
+190: £temporary1572 = arg_list + int4$4#
+191: arg_list = £temporary1572
+192: £temporary1573 = arg_list - int4$4#
+193: £temporary1574 = int_to_int £temporary1573 (Pointer -> Pointer)
+194: £temporary1575 -> £temporary1574 = *£temporary1574
+195: unsignedLongPtr = £temporary1575 -> £temporary1574
+196: £temporary1576 -> unsignedLongPtr = *unsignedLongPtr
+197: £temporary1576 -> unsignedLongPtr = unsignedLongValue
+198: percent = int4$0#
+199: goto 344
+200: call header integral zero 0 stack zero 0
+201: parameter int8$0#, offset 125
+202: call function noellipse-noellipse scanUnsignedLongInt
+203: post call
+204: £temporary1578 = return_value
+205: unsignedLongValue = £temporary1578
+206: if star != int1$0# goto 237
+207: if shortInt == int1$0# goto 218
+208: £temporary1581 = arg_list + int4$4#
+209: arg_list = £temporary1581
+210: £temporary1582 = arg_list - int4$4#
+211: £temporary1583 = int_to_int £temporary1582 (Pointer -> Pointer)
+212: £temporary1584 -> £temporary1583 = *£temporary1583
+213: unsignedShortPtr = £temporary1584 -> £temporary1583
+214: £temporary1585 -> unsignedShortPtr = *unsignedShortPtr
+215: £temporary1586 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Short_Int)
+216: £temporary1585 -> unsignedShortPtr = £temporary1586
+217: goto 237
+218: if longIntOrDouble != int1$0# goto 229
+219: £temporary1589 = arg_list + int4$4#
+220: arg_list = £temporary1589
+221: £temporary1590 = arg_list - int4$4#
+222: £temporary1591 = int_to_int £temporary1590 (Pointer -> Pointer)
+223: £temporary1592 -> £temporary1591 = *£temporary1591
+224: unsignedIntPtr = £temporary1592 -> £temporary1591
+225: £temporary1593 -> unsignedIntPtr = *unsignedIntPtr
+226: £temporary1594 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Int)
+227: £temporary1593 -> unsignedIntPtr = £temporary1594
+228: goto 237
+229: £temporary1595 = arg_list + int4$4#
+230: arg_list = £temporary1595
+231: £temporary1596 = arg_list - int4$4#
+232: £temporary1597 = int_to_int £temporary1596 (Pointer -> Pointer)
+233: £temporary1598 -> £temporary1597 = *£temporary1597
+234: unsignedLongPtr = £temporary1598 -> £temporary1597
+235: £temporary1599 -> unsignedLongPtr = *unsignedLongPtr
+236: £temporary1599 -> unsignedLongPtr = unsignedLongValue
+237: percent = int4$0#
+238: goto 344
+239: call header integral zero 0 stack zero 0
+240: call function noellipse-noellipse scanLongDouble
+241: post call
+242: £temporary1601 = return_value
+243: pop float longDoubleValue
+244: if star != int1$0# goto 276
+245: if longIntOrDouble == int1$0# goto 256
+246: £temporary1604 = arg_list + int4$4#
+247: arg_list = £temporary1604
+248: £temporary1605 = arg_list - int4$4#
+249: £temporary1606 = int_to_int £temporary1605 (Pointer -> Pointer)
+250: £temporary1607 -> £temporary1606 = *£temporary1606
+251: doublePtr = £temporary1607 -> £temporary1606
+252: £temporary1608 -> doublePtr = *doublePtr
+253: push float longDoubleValue
+254: pop float £temporary1608 -> doublePtr
+255: goto 276
+256: if longDouble == int1$0# goto 267
+257: £temporary1610 = arg_list + int4$4#
+258: arg_list = £temporary1610
+259: £temporary1611 = arg_list - int4$4#
+260: £temporary1612 = int_to_int £temporary1611 (Pointer -> Pointer)
+261: £temporary1613 -> £temporary1612 = *£temporary1612
+262: longDoublePtr = £temporary1613 -> £temporary1612
+263: £temporary1614 -> longDoublePtr = *longDoublePtr
+264: push float longDoubleValue
+265: pop float £temporary1614 -> longDoublePtr
+266: goto 276
+267: £temporary1615 = arg_list + int4$4#
+268: arg_list = £temporary1615
+269: £temporary1616 = arg_list - int4$4#
+270: £temporary1617 = int_to_int £temporary1616 (Pointer -> Pointer)
+271: £temporary1618 -> £temporary1617 = *£temporary1617
+272: floatPtr = £temporary1618 -> £temporary1617
+273: £temporary1619 -> floatPtr = *floatPtr
+274: push float longDoubleValue
+275: pop float £temporary1619 -> floatPtr
+276: percent = int4$0#
+277: goto 344
+278: not = int4$0#
+279: ++index
+280: £temporary1625 = format + index
+281: £temporary1624 -> £temporary1625 = *£temporary1625
+282: if £temporary1624 -> £temporary1625 != int1$94# goto 285
+283: not = int4$1#
+284: ++index
+285: startIndex = index
+286: £temporary1629 = format + index
+287: £temporary1628 -> £temporary1629 = *£temporary1629
+288: if £temporary1628 -> £temporary1629 == int1$93# goto 291
+289: ++index
+290: goto 286
+291: £temporary1633 = format + index
+292: £temporary1632 -> £temporary1633 = *£temporary1633
+293: £temporary1632 -> £temporary1633 = int1$0#
+294: if star != int1$0# goto 311
+295: £temporary1636 = arg_list + int4$4#
+296: arg_list = £temporary1636
+297: £temporary1637 = arg_list - int4$4#
+298: £temporary1638 = int_to_int £temporary1637 (Pointer -> Pointer)
+299: £temporary1639 -> £temporary1638 = *£temporary1638
+300: string = £temporary1639 -> £temporary1638
+301: call header integral zero 0 stack zero 0
+302: parameter string, offset 137
+303: £temporary1641 = format + startIndex
+304: £temporary1640 -> £temporary1641 = *£temporary1641
+305: £temporary1642 = &£temporary1640 -> £temporary1641
+306: parameter £temporary1642, offset 141
+307: parameter not, offset 145
+308: call function noellipse-noellipse scanPattern
+309: post call
+310: goto 344
+311: call header integral zero 0 stack zero 0
+312: parameter int4$0#, offset 133
+313: £temporary1645 = format + startIndex
+314: £temporary1644 -> £temporary1645 = *£temporary1645
+315: £temporary1646 = &£temporary1644 -> £temporary1645
+316: parameter £temporary1646, offset 137
+317: parameter not, offset 141
+318: call function noellipse-noellipse scanPattern
+319: post call
+320: goto 344
+321: £temporary1648 = arg_list + int4$4#
+322: arg_list = £temporary1648
+323: £temporary1649 = arg_list - int4$4#
+324: £temporary1650 = int_to_int £temporary1649 (Pointer -> Pointer)
+325: £temporary1651 -> £temporary1650 = *£temporary1650
+326: charsPtr = £temporary1651 -> £temporary1650
+327: £temporary1652 -> charsPtr = *charsPtr
+328: £temporary1652 -> charsPtr = g_inChars
+329: percent = int4$0#
+330: goto 344
+331: call header integral zero 0 stack zero 0
+332: parameter string_scanFormat20c203D202725c270A#, offset 125
+333: £temporary1653 = int_to_int c (Signed_Char -> Signed_Int)
+334: parameter £temporary1653, offset 129
+335: call function noellipse-ellipse printf, extra 4
+336: post call
+337: goto 344
+338: if c != int1$37# goto 344
+339: percent = int4$1#
+340: shortInt = int4$0#
+341: longIntOrDouble = int4$0#
+342: longDouble = int4$0#
+343: star = int4$0#
+344: ++index
+345: goto 8
+346: return_value = g_inCount
+347: return
+348: function end scanFormat

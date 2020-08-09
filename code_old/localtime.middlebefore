@@ -1,0 +1,42 @@
+0: call header
+1: parameter timePtr, offset 14
+2: call function noellipse-noellipse gmtime
+3: post call
+4: £temporary2797 = return_value
+5: tmPtr = £temporary2797
+6: call header
+7: call function noellipse-noellipse localeconv
+8: post call
+9: £temporary2798 = return_value
+10: localeConvPtr = £temporary2798
+11: timeZone = int2$0#
+12: if localeConvPtr != int2$0# goto <MiddleCode>
+13: goto <MiddleCode>
+14: check track map float stack
+15: £temporary2800 -> tmPtr = *tmPtr, offset 16
+16: if £temporary2800 -> tmPtr != int1$0# goto <MiddleCode>
+17: goto <MiddleCode>
+18: £temporary2801 -> localeConvPtr = *localeConvPtr
+19: £temporary2804 = £temporary2801 -> localeConvPtr
+20: goto <MiddleCode>
+21: £temporary2802 -> localeConvPtr = *localeConvPtr, offset 2
+22: £temporary2804 = £temporary2802 -> localeConvPtr
+23: empty
+24: timeZone = £temporary2804
+25: goto <MiddleCode>
+26: £temporary2805 -> timePtr = *timePtr
+27: £temporary2806 = int2$3600# * timeZone
+28: £temporary2807 = int_to_int £temporary2806 (Signed_Int -> Unsigned_Long_Int)
+29: £temporary2808 = £temporary2805 -> timePtr + £temporary2807
+30: time = £temporary2808
+31: call header
+32: £temporary2809 = &time
+33: parameter £temporary2809, offset 24
+34: call function noellipse-noellipse gmtime
+35: post call
+36: £temporary2810 = return_value
+37: return_value = £temporary2810
+38: return
+39: empty
+40: return
+41: function end localtime

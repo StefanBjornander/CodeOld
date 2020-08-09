@@ -1,0 +1,31 @@
+0: if tp == 0 goto 28
+1: £temporary2758 -> tp = *tp, offset 10
+2: £temporary2759 = £temporary2758 -> tp - 69
+3: £temporary2760 = £temporary2759 / 4
+4: £temporary2761 = int_to_int £temporary2760 (Signed_Int -> Signed_Long_Int)
+5: leapDays = £temporary2761
+6: £temporary2762 -> tp = *tp, offset 10
+7: £temporary2763 = £temporary2762 -> tp - 70
+8: £temporary2764 = £temporary2763 * 365
+9: £temporary2765 = int_to_int £temporary2764 (Signed_Int -> Signed_Long_Int)
+10: £temporary2766 = £temporary2765 + leapDays
+11: £temporary2767 -> tp = *tp, offset 14
+12: £temporary2768 = int_to_int £temporary2767 -> tp (Signed_Int -> Signed_Long_Int)
+13: totalDays = £temporary2766 + £temporary2768
+14: £temporary2770 = totalDays * 86400
+15: £temporary2771 -> tp = *tp, offset 4
+16: £temporary2772 = int_to_int £temporary2771 -> tp (Signed_Int -> Signed_Long_Int)
+17: £temporary2773 = £temporary2772 * 3600
+18: £temporary2774 = £temporary2770 + £temporary2773
+19: £temporary2775 -> tp = *tp, offset 2
+20: £temporary2776 = int_to_int £temporary2775 -> tp (Signed_Int -> Signed_Long_Int)
+21: £temporary2777 = £temporary2776 * 60
+22: £temporary2778 = £temporary2774 + £temporary2777
+23: £temporary2779 -> tp = *tp
+24: £temporary2780 = int_to_int £temporary2779 -> tp (Signed_Int -> Signed_Long_Int)
+25: £temporary2781 = £temporary2778 + £temporary2780
+26: return_value = £temporary2781
+27: return
+28: return_value = 0
+29: return
+30: function end mktime

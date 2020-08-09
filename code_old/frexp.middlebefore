@@ -1,0 +1,131 @@
+0: if p != int2$0# goto <MiddleCode>
+1: goto <MiddleCode>
+2: check track map float stack
+3: push float x
+4: push float float8$0#
+5: if x == float8$0# goto <MiddleCode>
+6: goto <MiddleCode>
+7: check track map float stack
+8: £temporary501 -> p = *p
+9: £temporary501 -> p = int2$0#
+10: push float float8$0#
+11: return_value = float8$0#
+12: return
+13: goto <MiddleCode>
+14: £temporary502 -> p = *p
+15: call header
+16: call header
+17: push float x
+18: parameter x, offset 22
+19: call function noellipse-noellipse fabs
+20: post call
+21: £temporary503 = return_value
+22: parameter £temporary503, offset 22
+23: call function noellipse-noellipse log
+24: post call
+25: £temporary504 = return_value
+26: call header
+27: push float float8$2#
+28: parameter float8$2#, offset 22
+29: call function noellipse-noellipse log
+30: post call
+31: £temporary505 = return_value
+32: £temporary506 = £temporary504 / £temporary505
+33: £temporary507 = float_to_int £temporary506 (Double -> Signed_Int)
+34: £temporary508 = £temporary507 + int2$1#
+35: £temporary502 -> p = £temporary508
+36: call header
+37: push float x
+38: parameter x, offset 22
+39: call function noellipse-noellipse fabs
+40: post call
+41: £temporary509 = return_value
+42: call header
+43: push float float8$2#
+44: parameter float8$2#, offset 22
+45: £temporary510 -> p = *p
+46: £temporary511 = int_to_float £temporary510 -> p (Signed_Int -> Double)
+47: parameter £temporary511, offset 30
+48: call function noellipse-noellipse pow
+49: post call
+50: £temporary512 = return_value
+51: £temporary513 = £temporary509 / £temporary512
+52: pop float quotient
+53: push float x
+54: push float float8$0#
+55: if x < float8$0# goto <MiddleCode>
+56: goto <MiddleCode>
+57: empty
+58: push float quotient
+59: £temporary515 = -quotient
+60: decrease stack
+61: goto <MiddleCode>
+62: empty
+63: push float quotient
+64: empty
+65: return_value = £temporary516
+66: return
+67: goto <MiddleCode>
+68: push float x
+69: push float float8$0#
+70: if x == float8$0# goto <MiddleCode>
+71: goto <MiddleCode>
+72: check track map float stack
+73: push float float8$0#
+74: return_value = float8$0#
+75: return
+76: goto <MiddleCode>
+77: call header
+78: call header
+79: push float x
+80: parameter x, offset 22
+81: call function noellipse-noellipse fabs
+82: post call
+83: £temporary518 = return_value
+84: parameter £temporary518, offset 22
+85: call function noellipse-noellipse log
+86: post call
+87: £temporary519 = return_value
+88: call header
+89: push float float8$2#
+90: parameter float8$2#, offset 22
+91: call function noellipse-noellipse log
+92: post call
+93: £temporary520 = return_value
+94: £temporary521 = £temporary519 / £temporary520
+95: £temporary522 = float_to_int £temporary521 (Double -> Signed_Int)
+96: £temporary523 = £temporary522 + int2$1#
+97: n = £temporary523
+98: call header
+99: push float x
+100: parameter x, offset 24
+101: call function noellipse-noellipse fabs
+102: post call
+103: £temporary524 = return_value
+104: call header
+105: push float float8$2#
+106: parameter float8$2#, offset 24
+107: £temporary525 = int_to_float n (Signed_Int -> Double)
+108: parameter £temporary525, offset 32
+109: call function noellipse-noellipse pow
+110: post call
+111: £temporary526 = return_value
+112: £temporary527 = £temporary524 / £temporary526
+113: pop float a
+114: push float x
+115: push float float8$0#
+116: if x < float8$0# goto <MiddleCode>
+117: goto <MiddleCode>
+118: empty
+119: push float a
+120: £temporary529 = -a
+121: decrease stack
+122: goto <MiddleCode>
+123: empty
+124: push float a
+125: empty
+126: return_value = £temporary530
+127: return
+128: empty
+129: return
+130: function end frexp

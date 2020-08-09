@@ -1,0 +1,424 @@
+0: percent = int4$0#
+1: shortInt = int4$0#
+2: longIntOrDouble = int4$0#
+3: longDouble = int4$0#
+4: star = int4$0#
+5: g_inCount = int4$0#
+6: g_inChars = int4$0#
+7: index = int4$0#
+8: empty
+9: £temporary1482 = format + index
+10: £temporary1481 -> £temporary1482 = *£temporary1482
+11: if £temporary1481 -> £temporary1482 != int1$0# goto <MiddleCode>
+12: goto <MiddleCode>
+13: check track map float stack
+14: empty
+15: £temporary1486 = format + index
+16: £temporary1485 -> £temporary1486 = *£temporary1486
+17: c = £temporary1485 -> £temporary1486
+18: £temporary1487 = int_to_int c (Signed_Char -> Signed_Int)
+19: £temporary1488 = £temporary1487 + int4$1#
+20: d = £temporary1488
+21: if percent != int1$0# goto <MiddleCode>
+22: goto <MiddleCode>
+23: check track map float stack
+24: £temporary1489 = d - int4$1#
+25: case £temporary1489 == int4$104# goto shortInt = int4$1#
+26: case £temporary1489 == int4$108# goto longIntOrDouble = int4$1#
+27: case £temporary1489 == int4$76# goto longDouble = int4$1#
+28: case £temporary1489 == int4$42# goto star = int4$1#
+29: case £temporary1489 == int4$99# goto call header
+30: case £temporary1489 == int4$115# goto if star != int1$0# goto <MiddleCode>
+31: case £temporary1489 == int4$100# goto call header
+32: case £temporary1489 == int4$105# goto call header
+33: case £temporary1489 == int4$111# goto call header
+34: case £temporary1489 == int4$120# goto call header
+35: case £temporary1489 == int4$117# goto call header
+36: case £temporary1489 == int4$103# goto push float longDoubleValue
+37: case £temporary1489 == int4$102# goto push float longDoubleValue
+38: case £temporary1489 == int4$101# goto push float longDoubleValue
+39: case £temporary1489 == int4$91# goto not = int4$0#
+40: case £temporary1489 == int4$110# goto £temporary1648 = arg_list + int4$4#
+41: case end £temporary1489
+42: goto <MiddleCode>
+43: shortInt = int4$1#
+44: goto <MiddleCode>
+45: longIntOrDouble = int4$1#
+46: goto <MiddleCode>
+47: longDouble = int4$1#
+48: goto <MiddleCode>
+49: star = int4$1#
+50: goto <MiddleCode>
+51: call header
+52: call function noellipse-noellipse scanChar
+53: post call
+54: £temporary1490 = return_value
+55: charValue = £temporary1490
+56: if star != int1$0# goto <MiddleCode>
+57: goto <MiddleCode>
+58: check track map float stack
+59: £temporary1493 = arg_list + int4$4#
+60: arg_list = £temporary1493
+61: £temporary1494 = arg_list - int4$4#
+62: £temporary1495 = int_to_int £temporary1494 (Pointer -> Pointer)
+63: £temporary1496 -> £temporary1495 = *£temporary1495
+64: charPtr = £temporary1496 -> £temporary1495
+65: £temporary1497 -> charPtr = *charPtr
+66: £temporary1497 -> charPtr = charValue
+67: goto <MiddleCode>
+68: percent = int4$0#
+69: £temporary1498 = int_to_int charValue (Signed_Char -> Signed_Int)
+70: if £temporary1498 != int4$minus1# goto <MiddleCode>
+71: goto <MiddleCode>
+72: check track map float stack
+73: ++g_inCount
+74: goto <MiddleCode>
+75: goto <MiddleCode>
+76: if star != int1$0# goto <MiddleCode>
+77: goto <MiddleCode>
+78: check track map float stack
+79: £temporary1503 = arg_list + int4$4#
+80: arg_list = £temporary1503
+81: £temporary1504 = arg_list - int4$4#
+82: £temporary1505 = int_to_int £temporary1504 (Pointer -> Pointer)
+83: £temporary1506 -> £temporary1505 = *£temporary1505
+84: charPtr = £temporary1506 -> £temporary1505
+85: call header
+86: parameter charPtr, offset 125
+87: parameter int4$0#, offset 129
+88: call function noellipse-noellipse scanString
+89: post call
+90: goto <MiddleCode>
+91: call header
+92: parameter int4$0#, offset 125
+93: parameter int4$0#, offset 129
+94: call function noellipse-noellipse scanString
+95: post call
+96: percent = int4$0#
+97: goto <MiddleCode>
+98: call header
+99: call function noellipse-noellipse scanLongInt
+100: post call
+101: £temporary1509 = return_value
+102: longValue = £temporary1509
+103: if star != int1$0# goto <MiddleCode>
+104: goto <MiddleCode>
+105: check track map float stack
+106: if shortInt != int1$0# goto <MiddleCode>
+107: goto <MiddleCode>
+108: check track map float stack
+109: £temporary1512 = arg_list + int4$4#
+110: arg_list = £temporary1512
+111: £temporary1513 = arg_list - int4$4#
+112: £temporary1514 = int_to_int £temporary1513 (Pointer -> Pointer)
+113: £temporary1515 -> £temporary1514 = *£temporary1514
+114: shortPtr = £temporary1515 -> £temporary1514
+115: £temporary1516 -> shortPtr = *shortPtr
+116: £temporary1517 = int_to_int longValue (Signed_Long_Int -> Signed_Short_Int)
+117: £temporary1516 -> shortPtr = £temporary1517
+118: goto <MiddleCode>
+119: if longIntOrDouble != int1$0# goto <MiddleCode>
+120: goto <MiddleCode>
+121: check track map float stack
+122: £temporary1520 = arg_list + int4$4#
+123: arg_list = £temporary1520
+124: £temporary1521 = arg_list - int4$4#
+125: £temporary1522 = int_to_int £temporary1521 (Pointer -> Pointer)
+126: £temporary1523 -> £temporary1522 = *£temporary1522
+127: intPtr = £temporary1523 -> £temporary1522
+128: £temporary1524 -> intPtr = *intPtr
+129: £temporary1525 = int_to_int longValue (Signed_Long_Int -> Signed_Int)
+130: £temporary1524 -> intPtr = £temporary1525
+131: goto <MiddleCode>
+132: £temporary1526 = arg_list + int4$4#
+133: arg_list = £temporary1526
+134: £temporary1527 = arg_list - int4$4#
+135: £temporary1528 = int_to_int £temporary1527 (Pointer -> Pointer)
+136: £temporary1529 -> £temporary1528 = *£temporary1528
+137: longPtr = £temporary1529 -> £temporary1528
+138: £temporary1530 -> longPtr = *longPtr
+139: £temporary1530 -> longPtr = longValue
+140: goto <MiddleCode>
+141: percent = int4$0#
+142: goto <MiddleCode>
+143: call header
+144: parameter int8$8#, offset 125
+145: call function noellipse-noellipse scanUnsignedLongInt
+146: post call
+147: £temporary1532 = return_value
+148: unsignedLongValue = £temporary1532
+149: if star != int1$0# goto <MiddleCode>
+150: goto <MiddleCode>
+151: check track map float stack
+152: if shortInt != int1$0# goto <MiddleCode>
+153: goto <MiddleCode>
+154: check track map float stack
+155: £temporary1535 = arg_list + int4$4#
+156: arg_list = £temporary1535
+157: £temporary1536 = arg_list - int4$4#
+158: £temporary1537 = int_to_int £temporary1536 (Pointer -> Pointer)
+159: £temporary1538 -> £temporary1537 = *£temporary1537
+160: unsignedShortPtr = £temporary1538 -> £temporary1537
+161: £temporary1539 -> unsignedShortPtr = *unsignedShortPtr
+162: £temporary1540 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Short_Int)
+163: £temporary1539 -> unsignedShortPtr = £temporary1540
+164: goto <MiddleCode>
+165: if longIntOrDouble != int1$0# goto <MiddleCode>
+166: goto <MiddleCode>
+167: check track map float stack
+168: £temporary1543 = arg_list + int4$4#
+169: arg_list = £temporary1543
+170: £temporary1544 = arg_list - int4$4#
+171: £temporary1545 = int_to_int £temporary1544 (Pointer -> Pointer)
+172: £temporary1546 -> £temporary1545 = *£temporary1545
+173: unsignedIntPtr = £temporary1546 -> £temporary1545
+174: £temporary1547 -> unsignedIntPtr = *unsignedIntPtr
+175: £temporary1548 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Int)
+176: £temporary1547 -> unsignedIntPtr = £temporary1548
+177: goto <MiddleCode>
+178: £temporary1549 = arg_list + int4$4#
+179: arg_list = £temporary1549
+180: £temporary1550 = arg_list - int4$4#
+181: £temporary1551 = int_to_int £temporary1550 (Pointer -> Pointer)
+182: £temporary1552 -> £temporary1551 = *£temporary1551
+183: unsignedLongPtr = £temporary1552 -> £temporary1551
+184: £temporary1553 -> unsignedLongPtr = *unsignedLongPtr
+185: £temporary1553 -> unsignedLongPtr = unsignedLongValue
+186: goto <MiddleCode>
+187: percent = int4$0#
+188: goto <MiddleCode>
+189: call header
+190: parameter int8$16#, offset 125
+191: call function noellipse-noellipse scanUnsignedLongInt
+192: post call
+193: £temporary1555 = return_value
+194: unsignedLongValue = £temporary1555
+195: if star != int1$0# goto <MiddleCode>
+196: goto <MiddleCode>
+197: check track map float stack
+198: if shortInt != int1$0# goto <MiddleCode>
+199: goto <MiddleCode>
+200: check track map float stack
+201: £temporary1558 = arg_list + int4$4#
+202: arg_list = £temporary1558
+203: £temporary1559 = arg_list - int4$4#
+204: £temporary1560 = int_to_int £temporary1559 (Pointer -> Pointer)
+205: £temporary1561 -> £temporary1560 = *£temporary1560
+206: unsignedShortPtr = £temporary1561 -> £temporary1560
+207: £temporary1562 -> unsignedShortPtr = *unsignedShortPtr
+208: £temporary1563 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Short_Int)
+209: £temporary1562 -> unsignedShortPtr = £temporary1563
+210: goto <MiddleCode>
+211: if longIntOrDouble != int1$0# goto <MiddleCode>
+212: goto <MiddleCode>
+213: check track map float stack
+214: £temporary1566 = arg_list + int4$4#
+215: arg_list = £temporary1566
+216: £temporary1567 = arg_list - int4$4#
+217: £temporary1568 = int_to_int £temporary1567 (Pointer -> Pointer)
+218: £temporary1569 -> £temporary1568 = *£temporary1568
+219: unsignedIntPtr = £temporary1569 -> £temporary1568
+220: £temporary1570 -> unsignedIntPtr = *unsignedIntPtr
+221: £temporary1571 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Int)
+222: £temporary1570 -> unsignedIntPtr = £temporary1571
+223: goto <MiddleCode>
+224: £temporary1572 = arg_list + int4$4#
+225: arg_list = £temporary1572
+226: £temporary1573 = arg_list - int4$4#
+227: £temporary1574 = int_to_int £temporary1573 (Pointer -> Pointer)
+228: £temporary1575 -> £temporary1574 = *£temporary1574
+229: unsignedLongPtr = £temporary1575 -> £temporary1574
+230: £temporary1576 -> unsignedLongPtr = *unsignedLongPtr
+231: £temporary1576 -> unsignedLongPtr = unsignedLongValue
+232: goto <MiddleCode>
+233: percent = int4$0#
+234: goto <MiddleCode>
+235: call header
+236: parameter int8$0#, offset 125
+237: call function noellipse-noellipse scanUnsignedLongInt
+238: post call
+239: £temporary1578 = return_value
+240: unsignedLongValue = £temporary1578
+241: if star != int1$0# goto <MiddleCode>
+242: goto <MiddleCode>
+243: check track map float stack
+244: if shortInt != int1$0# goto <MiddleCode>
+245: goto <MiddleCode>
+246: check track map float stack
+247: £temporary1581 = arg_list + int4$4#
+248: arg_list = £temporary1581
+249: £temporary1582 = arg_list - int4$4#
+250: £temporary1583 = int_to_int £temporary1582 (Pointer -> Pointer)
+251: £temporary1584 -> £temporary1583 = *£temporary1583
+252: unsignedShortPtr = £temporary1584 -> £temporary1583
+253: £temporary1585 -> unsignedShortPtr = *unsignedShortPtr
+254: £temporary1586 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Short_Int)
+255: £temporary1585 -> unsignedShortPtr = £temporary1586
+256: goto <MiddleCode>
+257: if longIntOrDouble != int1$0# goto <MiddleCode>
+258: goto <MiddleCode>
+259: check track map float stack
+260: £temporary1589 = arg_list + int4$4#
+261: arg_list = £temporary1589
+262: £temporary1590 = arg_list - int4$4#
+263: £temporary1591 = int_to_int £temporary1590 (Pointer -> Pointer)
+264: £temporary1592 -> £temporary1591 = *£temporary1591
+265: unsignedIntPtr = £temporary1592 -> £temporary1591
+266: £temporary1593 -> unsignedIntPtr = *unsignedIntPtr
+267: £temporary1594 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Int)
+268: £temporary1593 -> unsignedIntPtr = £temporary1594
+269: goto <MiddleCode>
+270: £temporary1595 = arg_list + int4$4#
+271: arg_list = £temporary1595
+272: £temporary1596 = arg_list - int4$4#
+273: £temporary1597 = int_to_int £temporary1596 (Pointer -> Pointer)
+274: £temporary1598 -> £temporary1597 = *£temporary1597
+275: unsignedLongPtr = £temporary1598 -> £temporary1597
+276: £temporary1599 -> unsignedLongPtr = *unsignedLongPtr
+277: £temporary1599 -> unsignedLongPtr = unsignedLongValue
+278: goto <MiddleCode>
+279: percent = int4$0#
+280: goto <MiddleCode>
+281: push float longDoubleValue
+282: pop float empty X
+283: call header
+284: call function noellipse-noellipse scanLongDouble
+285: post call
+286: £temporary1601 = return_value
+287: top float longDoubleValue
+288: pop float empty X
+289: if star != int1$0# goto <MiddleCode>
+290: goto <MiddleCode>
+291: check track map float stack
+292: if longIntOrDouble != int1$0# goto <MiddleCode>
+293: goto <MiddleCode>
+294: check track map float stack
+295: £temporary1604 = arg_list + int4$4#
+296: arg_list = £temporary1604
+297: £temporary1605 = arg_list - int4$4#
+298: £temporary1606 = int_to_int £temporary1605 (Pointer -> Pointer)
+299: £temporary1607 -> £temporary1606 = *£temporary1606
+300: doublePtr = £temporary1607 -> £temporary1606
+301: £temporary1608 -> doublePtr = *doublePtr
+302: push float £temporary1608 -> doublePtr
+303: pop float empty X
+304: push float longDoubleValue
+305: top float £temporary1608 -> doublePtr
+306: pop float empty X
+307: goto <MiddleCode>
+308: if longDouble != int1$0# goto <MiddleCode>
+309: goto <MiddleCode>
+310: check track map float stack
+311: £temporary1610 = arg_list + int4$4#
+312: arg_list = £temporary1610
+313: £temporary1611 = arg_list - int4$4#
+314: £temporary1612 = int_to_int £temporary1611 (Pointer -> Pointer)
+315: £temporary1613 -> £temporary1612 = *£temporary1612
+316: longDoublePtr = £temporary1613 -> £temporary1612
+317: £temporary1614 -> longDoublePtr = *longDoublePtr
+318: push float £temporary1614 -> longDoublePtr
+319: pop float empty X
+320: push float longDoubleValue
+321: top float £temporary1614 -> longDoublePtr
+322: pop float empty X
+323: goto <MiddleCode>
+324: £temporary1615 = arg_list + int4$4#
+325: arg_list = £temporary1615
+326: £temporary1616 = arg_list - int4$4#
+327: £temporary1617 = int_to_int £temporary1616 (Pointer -> Pointer)
+328: £temporary1618 -> £temporary1617 = *£temporary1617
+329: floatPtr = £temporary1618 -> £temporary1617
+330: £temporary1619 -> floatPtr = *floatPtr
+331: push float £temporary1619 -> floatPtr
+332: pop float empty X
+333: push float longDoubleValue
+334: top float £temporary1619 -> floatPtr
+335: pop float empty X
+336: goto <MiddleCode>
+337: percent = int4$0#
+338: goto <MiddleCode>
+339: not = int4$0#
+340: ++index
+341: £temporary1625 = format + index
+342: £temporary1624 -> £temporary1625 = *£temporary1625
+343: if £temporary1624 -> £temporary1625 == int1$94# goto <MiddleCode>
+344: goto <MiddleCode>
+345: check track map float stack
+346: not = int4$1#
+347: ++index
+348: goto <MiddleCode>
+349: startIndex = index
+350: £temporary1629 = format + index
+351: £temporary1628 -> £temporary1629 = *£temporary1629
+352: if £temporary1628 -> £temporary1629 != int1$93# goto <MiddleCode>
+353: goto <MiddleCode>
+354: check track map float stack
+355: ++index
+356: goto <MiddleCode>
+357: £temporary1633 = format + index
+358: £temporary1632 -> £temporary1633 = *£temporary1633
+359: £temporary1632 -> £temporary1633 = int1$0#
+360: if star != int1$0# goto <MiddleCode>
+361: goto <MiddleCode>
+362: check track map float stack
+363: £temporary1636 = arg_list + int4$4#
+364: arg_list = £temporary1636
+365: £temporary1637 = arg_list - int4$4#
+366: £temporary1638 = int_to_int £temporary1637 (Pointer -> Pointer)
+367: £temporary1639 -> £temporary1638 = *£temporary1638
+368: string = £temporary1639 -> £temporary1638
+369: call header
+370: parameter string, offset 137
+371: £temporary1641 = format + startIndex
+372: £temporary1640 -> £temporary1641 = *£temporary1641
+373: £temporary1642 = &£temporary1640 -> £temporary1641
+374: parameter £temporary1642, offset 141
+375: parameter not, offset 145
+376: call function noellipse-noellipse scanPattern
+377: post call
+378: goto <MiddleCode>
+379: call header
+380: parameter int4$0#, offset 133
+381: £temporary1645 = format + startIndex
+382: £temporary1644 -> £temporary1645 = *£temporary1645
+383: £temporary1646 = &£temporary1644 -> £temporary1645
+384: parameter £temporary1646, offset 137
+385: parameter not, offset 141
+386: call function noellipse-noellipse scanPattern
+387: post call
+388: goto <MiddleCode>
+389: £temporary1648 = arg_list + int4$4#
+390: arg_list = £temporary1648
+391: £temporary1649 = arg_list - int4$4#
+392: £temporary1650 = int_to_int £temporary1649 (Pointer -> Pointer)
+393: £temporary1651 -> £temporary1650 = *£temporary1650
+394: charsPtr = £temporary1651 -> £temporary1650
+395: £temporary1652 -> charsPtr = *charsPtr
+396: £temporary1652 -> charsPtr = g_inChars
+397: percent = int4$0#
+398: goto <MiddleCode>
+399: call header
+400: parameter string_scanFormat20c203D202725c270A#, offset 125
+401: £temporary1653 = int_to_int c (Signed_Char -> Signed_Int)
+402: parameter £temporary1653, offset 129
+403: call function noellipse-ellipse printf, extra 4
+404: post call
+405: goto <MiddleCode>
+406: goto <MiddleCode>
+407: if c == int1$37# goto <MiddleCode>
+408: goto <MiddleCode>
+409: check track map float stack
+410: percent = int4$1#
+411: shortInt = int4$0#
+412: longIntOrDouble = int4$0#
+413: longDouble = int4$0#
+414: star = int4$0#
+415: goto <MiddleCode>
+416: empty
+417: ++index
+418: goto <MiddleCode>
+419: return_value = g_inCount
+420: return
+421: empty
+422: return
+423: function end scanFormat

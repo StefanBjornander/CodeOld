@@ -1,0 +1,235 @@
+1:	
+
+floating_point_error:	; call header integral zero 0 stack zero 0
+3:	
+
+floating_point_error$1:	; parameter string_Floating20point20error3A2025i0A#, offset 6
+4:		mov word [bp + 14], string_Floating20point20error3A2025i0A#
+6:	
+
+floating_point_error$2:	; parameter sig, offset 8
+7:		mov ax, [bp + 6]
+8:		mov [bp + 16], ax
+10:	
+
+floating_point_error$3:	; call function noellipse-ellipse printf, extra 0
+11:		mov word [bp + 8], floating_point_error$4
+12:		mov [bp + 10], bp
+13:		add bp, 8
+14:		mov di, bp
+15:		add di, 2
+16:		jmp printf
+18:	
+
+floating_point_error$4:	; post call
+20:	
+
+floating_point_error$5:	; return
+21:		mov ax, [bp]
+22:		mov di, [bp + 4]
+23:		mov bp, [bp + 2]
+24:		jmp ax
+26:	
+
+floating_point_error$6:	; function end floating_point_error
+1:	
+
+exit_handle1:	; call header integral zero 0 stack zero 0
+3:	
+
+exit_handle1$1:	; parameter string_exit10A#, offset 6
+4:		mov word [bp + 12], string_exit10A#
+6:	
+
+exit_handle1$2:	; call function noellipse-ellipse printf, extra 0
+7:		mov word [bp + 6], exit_handle1$3
+8:		mov [bp + 8], bp
+9:		add bp, 6
+10:		mov di, bp
+11:		jmp printf
+13:	
+
+exit_handle1$3:	; post call
+15:	
+
+exit_handle1$4:	; return
+16:		mov ax, [bp]
+17:		mov di, [bp + 4]
+18:		mov bp, [bp + 2]
+19:		jmp ax
+21:	
+
+exit_handle1$5:	; function end exit_handle1
+1:	
+
+exit_handle2:	; call header integral zero 0 stack zero 0
+3:	
+
+exit_handle2$1:	; parameter string_exit20A#, offset 6
+4:		mov word [bp + 12], string_exit20A#
+6:	
+
+exit_handle2$2:	; call function noellipse-ellipse printf, extra 0
+7:		mov word [bp + 6], exit_handle2$3
+8:		mov [bp + 8], bp
+9:		add bp, 6
+10:		mov di, bp
+11:		jmp printf
+13:	
+
+exit_handle2$3:	; post call
+15:	
+
+exit_handle2$4:	; return
+16:		mov ax, [bp]
+17:		mov di, [bp + 4]
+18:		mov bp, [bp + 2]
+19:		jmp ax
+21:	
+
+exit_handle2$5:	; function end exit_handle2
+1:	
+
+exit_handle3:	; call header integral zero 0 stack zero 0
+3:	
+
+exit_handle3$1:	; parameter string_exit30A#, offset 6
+4:		mov word [bp + 12], string_exit30A#
+6:	
+
+exit_handle3$2:	; call function noellipse-ellipse printf, extra 0
+7:		mov word [bp + 6], exit_handle3$3
+8:		mov [bp + 8], bp
+9:		add bp, 6
+10:		mov di, bp
+11:		jmp printf
+13:	
+
+exit_handle3$3:	; post call
+15:	
+
+exit_handle3$4:	; return
+16:		mov ax, [bp]
+17:		mov di, [bp + 4]
+18:		mov bp, [bp + 2]
+19:		jmp ax
+21:	
+
+exit_handle3$5:	; function end exit_handle3
+1:	
+
+signal_test:	; a = 1
+2:		mov word [bp + 6], 1
+4:	
+
+signal_test$1:	; b = 1
+5:		mov word [bp + 8], 1
+7:	
+
+signal_test$2:	; c = a / b
+8:		mov ax, [bp + 6]
+10:		xor dx, dx
+11:		idiv word [bp + 8]
+12:		mov [bp + 10], ax
+14:	
+
+signal_test$3:	; call header integral zero 0 stack zero 0
+16:	
+
+signal_test$4:	; parameter string_25i0A#, offset 6
+17:		mov word [bp + 18], string_25i0A#
+19:	
+
+signal_test$5:	; parameter c, offset 8
+20:		mov ax, [bp + 10]
+21:		mov [bp + 20], ax
+23:	
+
+signal_test$6:	; call function noellipse-ellipse printf, extra 0
+24:		mov word [bp + 12], signal_test$7
+25:		mov [bp + 14], bp
+26:		add bp, 12
+27:		mov di, bp
+28:		add di, 2
+29:		jmp printf
+31:	
+
+signal_test$7:	; post call
+33:	
+
+signal_test$8:	; call header integral zero 0 stack zero 0
+35:	
+
+signal_test$9:	; parameter exit_handle1, offset 6
+36:		mov word [bp + 18], exit_handle1
+38:	
+
+signal_test$10:	; call function noellipse-noellipse atexit
+39:		mov word [bp + 12], signal_test$11
+40:		mov [bp + 14], bp
+41:		add bp, 12
+42:		jmp atexit
+44:	
+
+signal_test$11:	; post call
+46:	
+
+signal_test$12:	; call header integral zero 0 stack zero 0
+48:	
+
+signal_test$13:	; parameter exit_handle2, offset 6
+49:		mov word [bp + 18], exit_handle2
+51:	
+
+signal_test$14:	; call function noellipse-noellipse atexit
+52:		mov word [bp + 12], signal_test$15
+53:		mov [bp + 14], bp
+54:		add bp, 12
+55:		jmp atexit
+57:	
+
+signal_test$15:	; post call
+59:	
+
+signal_test$16:	; call header integral zero 0 stack zero 0
+61:	
+
+signal_test$17:	; parameter exit_handle3, offset 6
+62:		mov word [bp + 18], exit_handle3
+64:	
+
+signal_test$18:	; call function noellipse-noellipse atexit
+65:		mov word [bp + 12], signal_test$19
+66:		mov [bp + 14], bp
+67:		add bp, 12
+68:		jmp atexit
+70:	
+
+signal_test$19:	; post call
+72:	
+
+signal_test$20:	; call header integral zero 0 stack zero 0
+74:	
+
+signal_test$21:	; parameter 0, offset 6
+75:		mov word [bp + 18], 0
+77:	
+
+signal_test$22:	; call function noellipse-noellipse exit
+78:		mov word [bp + 12], signal_test$23
+79:		mov [bp + 14], bp
+80:		add bp, 12
+81:		jmp exit
+83:	
+
+signal_test$23:	; post call
+85:	
+
+signal_test$24:	; return
+86:		mov ax, [bp]
+87:		mov di, [bp + 4]
+88:		mov bp, [bp + 2]
+89:		jmp ax
+91:	
+
+signal_test$25:	; function end signal_test
