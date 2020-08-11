@@ -1,0 +1,375 @@
+0: £temporary2020 -> format = *format
+1: c = £temporary2020 -> format
+2: case c == int1$100# goto 21
+3: case c == int1$105# goto 21
+4: case c == int1$99# goto 76
+5: case c == int1$115# goto 97
+6: case c == int1$88# goto 118
+7: case c == int1$120# goto 118
+8: case c == int1$98# goto 118
+9: case c == int1$111# goto 118
+10: case c == int1$117# goto 118
+11: case c == int1$71# goto 181
+12: case c == int1$103# goto 181
+13: case c == int1$69# goto 181
+14: case c == int1$101# goto 181
+15: case c == int1$102# goto 181
+16: case c == int1$112# goto 309
+17: case c == int1$110# goto 335
+18: case c == int1$37# goto 359
+19: case end c
+20: goto 372
+21: if shortInt == int2$0# goto 31
+22: £temporary2021 = arg_list + int2$2#
+23: arg_list = £temporary2021
+24: £temporary2022 = arg_list - int2$2#
+25: £temporary2023 = int_to_int £temporary2022 (Signed_Int -> Pointer)
+26: £temporary2024 -> £temporary2023 = *£temporary2023
+27: £temporary2025 = int_to_int £temporary2024 -> £temporary2023 (Signed_Int -> Signed_Short_Int)
+28: £temporary2026 = int_to_int £temporary2025 (Signed_Short_Int -> Signed_Long_Int)
+29: longValue = £temporary2026
+30: goto 46
+31: if longInt == int2$0# goto 39
+32: £temporary2027 = arg_list + int2$4#
+33: arg_list = £temporary2027
+34: £temporary2028 = arg_list - int2$4#
+35: £temporary2029 = int_to_int £temporary2028 (Signed_Int -> Pointer)
+36: £temporary2030 -> £temporary2029 = *£temporary2029
+37: longValue = £temporary2030 -> £temporary2029
+38: goto 46
+39: £temporary2031 = arg_list + int2$2#
+40: arg_list = £temporary2031
+41: £temporary2032 = arg_list - int2$2#
+42: £temporary2033 = int_to_int £temporary2032 (Signed_Int -> Pointer)
+43: £temporary2034 -> £temporary2033 = *£temporary2033
+44: £temporary2035 = int_to_int £temporary2034 -> £temporary2033 (Signed_Int -> Signed_Long_Int)
+45: longValue = £temporary2035
+46: if negativePtr == int2$0# goto 53
+47: £temporary2039 -> negativePtr = *negativePtr
+48: if longValue >= int4$0# goto 51
+49: £temporary2041 = int2$1#
+50: goto 52
+51: £temporary2041 = int2$0#
+52: £temporary2039 -> negativePtr = £temporary2041
+53: if sign != int2$0# goto 60
+54: call header integral zero 0 stack zero 0
+55: parameter longValue, offset 6
+56: call function noellipse-noellipse labs
+57: post call
+58: £temporary2044 = return_value
+59: longValue = £temporary2044
+60: call header integral zero 0 stack zero 0
+61: parameter arg_list, offset 6
+62: parameter widthPtr, offset 8
+63: £temporary2045 = &precision
+64: parameter £temporary2045, offset 10
+65: call function noellipse-noellipse checkWidthAndPrecision
+66: post call
+67: £temporary2046 = return_value
+68: arg_list = £temporary2046
+69: call header integral zero 0 stack zero 0
+70: parameter longValue, offset 6
+71: parameter plus, offset 10
+72: parameter space, offset 12
+73: call function noellipse-noellipse printLongInt
+74: post call
+75: goto 372
+76: £temporary2048 = arg_list + int2$2#
+77: arg_list = £temporary2048
+78: £temporary2049 = arg_list - int2$2#
+79: £temporary2050 = int_to_int £temporary2049 (Signed_Int -> Pointer)
+80: £temporary2051 -> £temporary2050 = *£temporary2050
+81: £temporary2052 = int_to_int £temporary2051 -> £temporary2050 (Signed_Int -> Signed_Char)
+82: charValue = £temporary2052
+83: call header integral zero 0 stack zero 0
+84: parameter arg_list, offset 6
+85: parameter widthPtr, offset 8
+86: £temporary2053 = &precision
+87: parameter £temporary2053, offset 10
+88: call function noellipse-noellipse checkWidthAndPrecision
+89: post call
+90: £temporary2054 = return_value
+91: arg_list = £temporary2054
+92: call header integral zero 0 stack zero 0
+93: parameter charValue, offset 6
+94: call function noellipse-noellipse printChar
+95: post call
+96: goto 372
+97: £temporary2056 = arg_list + int2$2#
+98: arg_list = £temporary2056
+99: £temporary2057 = arg_list - int2$2#
+100: £temporary2058 = int_to_int £temporary2057 (Signed_Int -> Pointer)
+101: £temporary2059 -> £temporary2058 = *£temporary2058
+102: stringValue = £temporary2059 -> £temporary2058
+103: call header integral zero 0 stack zero 0
+104: parameter arg_list, offset 6
+105: parameter widthPtr, offset 8
+106: £temporary2060 = &precision
+107: parameter £temporary2060, offset 10
+108: call function noellipse-noellipse checkWidthAndPrecision
+109: post call
+110: £temporary2061 = return_value
+111: arg_list = £temporary2061
+112: call header integral zero 0 stack zero 0
+113: parameter stringValue, offset 6
+114: parameter precision, offset 8
+115: call function noellipse-noellipse printString
+116: post call
+117: goto 372
+118: if c != int1$117# goto 121
+119: £temporary2077 = int4$10#
+120: goto 130
+121: if c != int1$111# goto 124
+122: £temporary2073 = int4$8#
+123: goto 129
+124: if c != int1$98# goto 127
+125: £temporary2069 = int4$2#
+126: goto 128
+127: £temporary2069 = int4$16#
+128: £temporary2073 = £temporary2069
+129: £temporary2077 = £temporary2073
+130: base = £temporary2077
+131: if shortInt == int2$0# goto 141
+132: £temporary2078 = arg_list + int2$2#
+133: arg_list = £temporary2078
+134: £temporary2079 = arg_list - int2$2#
+135: £temporary2080 = int_to_int £temporary2079 (Signed_Int -> Pointer)
+136: £temporary2081 -> £temporary2080 = *£temporary2080
+137: £temporary2082 = int_to_int £temporary2081 -> £temporary2080 (Unsigned_Int -> Unsigned_Short_Int)
+138: £temporary2083 = int_to_int £temporary2082 (Unsigned_Short_Int -> Unsigned_Long_Int)
+139: value = £temporary2083
+140: goto 156
+141: if longInt == int2$0# goto 149
+142: £temporary2084 = arg_list + int2$4#
+143: arg_list = £temporary2084
+144: £temporary2085 = arg_list - int2$4#
+145: £temporary2086 = int_to_int £temporary2085 (Signed_Int -> Pointer)
+146: £temporary2087 -> £temporary2086 = *£temporary2086
+147: value = £temporary2087 -> £temporary2086
+148: goto 156
+149: £temporary2088 = arg_list + int2$2#
+150: arg_list = £temporary2088
+151: £temporary2089 = arg_list - int2$2#
+152: £temporary2090 = int_to_int £temporary2089 (Signed_Int -> Pointer)
+153: £temporary2091 -> £temporary2090 = *£temporary2090
+154: £temporary2092 = int_to_int £temporary2091 -> £temporary2090 (Unsigned_Int -> Unsigned_Long_Int)
+155: value = £temporary2092
+156: call header integral zero 0 stack zero 0
+157: parameter arg_list, offset 6
+158: parameter widthPtr, offset 8
+159: £temporary2095 = &precision
+160: parameter £temporary2095, offset 10
+161: call function noellipse-noellipse checkWidthAndPrecision
+162: post call
+163: £temporary2096 = return_value
+164: arg_list = £temporary2096
+165: call header integral zero 0 stack zero 0
+166: parameter value, offset 6
+167: parameter plus, offset 10
+168: parameter space, offset 12
+169: parameter grid, offset 14
+170: parameter base, offset 16
+171: call header integral zero 0 stack zero 0
+172: £temporary2097 = int_to_int c (Signed_Char -> Signed_Int)
+173: parameter £temporary2097, offset 26
+174: call function noellipse-noellipse isupper
+175: post call
+176: £temporary2098 = return_value
+177: parameter £temporary2098, offset 20
+178: call function noellipse-noellipse printUnsignedLong
+179: post call
+180: goto 372
+181: if longDouble == int2$0# goto 199
+182: £temporary2100 = arg_list + int2$8#
+183: arg_list = £temporary2100
+184: £temporary2101 = arg_list - int2$8#
+185: £temporary2102 = int_to_int £temporary2101 (Signed_Int -> Pointer)
+186: £temporary2103 -> £temporary2102 = *£temporary2102
+187: push float £temporary2103 -> £temporary2102
+188: pop float longDoubleValue
+189: call header integral zero 0 stack zero 0
+190: push float longDoubleValue
+191: parameter longDoubleValue, offset 6
+192: parameter int2$0#, offset 14
+193: parameter int2$0#, offset 16
+194: parameter int2$0#, offset 18
+195: parameter int2$3#, offset 20
+196: call function noellipse-noellipse printLongDoublePlain
+197: post call
+198: goto 206
+199: £temporary2105 = arg_list + int2$8#
+200: arg_list = £temporary2105
+201: £temporary2106 = arg_list - int2$8#
+202: £temporary2107 = int_to_int £temporary2106 (Signed_Int -> Pointer)
+203: £temporary2108 -> £temporary2107 = *£temporary2107
+204: push float £temporary2108 -> £temporary2107
+205: pop float longDoubleValue
+206: if negativePtr == int2$0# goto 215
+207: £temporary2112 -> negativePtr = *negativePtr
+208: push float longDoubleValue
+209: push 0
+210: if longDoubleValue >= float8$0# goto 213
+211: £temporary2114 = int2$1#
+212: goto 214
+213: £temporary2114 = int2$0#
+214: £temporary2112 -> negativePtr = £temporary2114
+215: if sign != int2$0# goto 223
+216: call header integral zero 0 stack zero 0
+217: push float longDoubleValue
+218: parameter longDoubleValue, offset 6
+219: call function noellipse-noellipse fabs
+220: post call
+221: £temporary2117 = return_value
+222: pop float longDoubleValue
+223: call header integral zero 0 stack zero 0
+224: parameter arg_list, offset 6
+225: parameter widthPtr, offset 8
+226: £temporary2118 = &precision
+227: parameter £temporary2118, offset 10
+228: call function noellipse-noellipse checkWidthAndPrecision
+229: post call
+230: £temporary2119 = return_value
+231: arg_list = £temporary2119
+232: if c != int1$102# goto 243
+233: call header integral zero 0 stack zero 0
+234: push float longDoubleValue
+235: parameter longDoubleValue, offset 6
+236: parameter plus, offset 14
+237: parameter space, offset 16
+238: parameter grid, offset 18
+239: parameter precision, offset 20
+240: call function noellipse-noellipse printLongDoublePlain
+241: post call
+242: goto 372
+243: call header integral zero 0 stack zero 0
+244: £temporary2122 = int_to_int c (Signed_Char -> Signed_Int)
+245: parameter £temporary2122, offset 6
+246: call function noellipse-noellipse tolower
+247: post call
+248: £temporary2123 = return_value
+249: if £temporary2123 != int2$101# goto 267
+250: call header integral zero 0 stack zero 0
+251: push float longDoubleValue
+252: parameter longDoubleValue, offset 6
+253: parameter plus, offset 14
+254: parameter space, offset 16
+255: parameter grid, offset 18
+256: parameter precision, offset 20
+257: call header integral zero 0 stack zero 0
+258: £temporary2125 = int_to_int c (Signed_Char -> Signed_Int)
+259: parameter £temporary2125, offset 28
+260: call function noellipse-noellipse isupper
+261: post call
+262: £temporary2126 = return_value
+263: parameter £temporary2126, offset 22
+264: call function noellipse-noellipse printLongDoubleExpo
+265: post call
+266: goto 372
+267: call header integral zero 0 stack zero 0
+268: call header integral zero 0 stack zero 0
+269: push float longDoubleValue
+270: parameter longDoubleValue, offset 6
+271: call function noellipse-noellipse fabs
+272: post call
+273: £temporary2128 = return_value
+274: parameter £temporary2128, offset 6
+275: call function noellipse-noellipse log10
+276: post call
+277: £temporary2129 = return_value
+278: £temporary2130 = float_to_int £temporary2129 (Double -> Signed_Int)
+279: expo = £temporary2130
+280: if expo < int2$minus3# goto 292
+281: if expo > int2$2# goto 292
+282: call header integral zero 0 stack zero 0
+283: push float longDoubleValue
+284: parameter longDoubleValue, offset 6
+285: parameter plus, offset 14
+286: parameter space, offset 16
+287: parameter grid, offset 18
+288: parameter precision, offset 20
+289: call function noellipse-noellipse printLongDoublePlain
+290: post call
+291: goto 372
+292: call header integral zero 0 stack zero 0
+293: push float longDoubleValue
+294: parameter longDoubleValue, offset 6
+295: parameter plus, offset 14
+296: parameter space, offset 16
+297: parameter grid, offset 18
+298: parameter precision, offset 20
+299: call header integral zero 0 stack zero 0
+300: £temporary2135 = int_to_int c (Signed_Char -> Signed_Int)
+301: parameter £temporary2135, offset 28
+302: call function noellipse-noellipse isupper
+303: post call
+304: £temporary2136 = return_value
+305: parameter £temporary2136, offset 22
+306: call function noellipse-noellipse printLongDoubleExpo
+307: post call
+308: goto 372
+309: £temporary2138 = arg_list + int2$2#
+310: arg_list = £temporary2138
+311: £temporary2139 = arg_list - int2$2#
+312: £temporary2140 = int_to_int £temporary2139 (Signed_Int -> Pointer)
+313: £temporary2141 -> £temporary2140 = *£temporary2140
+314: ptrValue = £temporary2141 -> £temporary2140
+315: call header integral zero 0 stack zero 0
+316: parameter arg_list, offset 6
+317: parameter widthPtr, offset 8
+318: £temporary2142 = &precision
+319: parameter £temporary2142, offset 10
+320: call function noellipse-noellipse checkWidthAndPrecision
+321: post call
+322: £temporary2143 = return_value
+323: arg_list = £temporary2143
+324: call header integral zero 0 stack zero 0
+325: £temporary2144 = int_to_int ptrValue (Pointer -> Unsigned_Long_Int)
+326: parameter £temporary2144, offset 6
+327: parameter int2$0#, offset 10
+328: parameter int2$0#, offset 12
+329: parameter int2$0#, offset 14
+330: parameter int4$10#, offset 16
+331: parameter int2$0#, offset 20
+332: call function noellipse-noellipse printUnsignedLong
+333: post call
+334: goto 372
+335: £temporary2146 = arg_list + int2$2#
+336: arg_list = £temporary2146
+337: £temporary2147 = arg_list - int2$2#
+338: £temporary2148 = int_to_int £temporary2147 (Signed_Int -> Pointer)
+339: £temporary2149 -> £temporary2148 = *£temporary2148
+340: ptrValue = £temporary2149 -> £temporary2148
+341: £temporary2150 = arg_list + int2$2#
+342: arg_list = £temporary2150
+343: £temporary2151 = arg_list - int2$2#
+344: £temporary2152 = int_to_int £temporary2151 (Signed_Int -> Pointer)
+345: £temporary2153 -> £temporary2152 = *£temporary2152
+346: intPtr = £temporary2153 -> £temporary2152
+347: call header integral zero 0 stack zero 0
+348: parameter arg_list, offset 6
+349: parameter widthPtr, offset 8
+350: £temporary2154 = &precision
+351: parameter £temporary2154, offset 10
+352: call function noellipse-noellipse checkWidthAndPrecision
+353: post call
+354: £temporary2155 = return_value
+355: arg_list = £temporary2155
+356: £temporary2156 -> intPtr = *intPtr
+357: £temporary2156 -> intPtr = g_outChars
+358: goto 372
+359: call header integral zero 0 stack zero 0
+360: parameter arg_list, offset 6
+361: parameter widthPtr, offset 8
+362: £temporary2157 = &precision
+363: parameter £temporary2157, offset 10
+364: call function noellipse-noellipse checkWidthAndPrecision
+365: post call
+366: £temporary2158 = return_value
+367: arg_list = £temporary2158
+368: call header integral zero 0 stack zero 0
+369: parameter int1$37#, offset 6
+370: call function noellipse-noellipse printChar
+371: post call
+372: return_value = arg_list
+373: return
+374: function end printArgument

@@ -1,0 +1,112 @@
+0: if p == int2$0# goto 58
+1: push float x
+2: push float float8$0#
+3: if x != float8$0# goto 9
+4: £temporary501 -> p = *p
+5: £temporary501 -> p = int2$0#
+6: push float float8$0#
+7: return_value = float8$0#
+8: return
+9: £temporary502 -> p = *p
+10: call header integral zero 0 stack zero 0
+11: call header integral zero 0 stack zero 0
+12: push float x
+13: parameter x, offset 22
+14: call function noellipse-noellipse fabs
+15: post call
+16: £temporary503 = return_value
+17: parameter £temporary503, offset 22
+18: call function noellipse-noellipse log
+19: post call
+20: £temporary504 = return_value
+21: call header integral zero 0 stack no zero 1
+22: push float float8$2#
+23: parameter float8$2#, offset 22
+24: call function noellipse-noellipse log
+25: post call
+26: £temporary505 = return_value
+27: £temporary506 = £temporary504 / £temporary505
+28: £temporary507 = float_to_int £temporary506 (Double -> Signed_Int)
+29: £temporary508 = £temporary507 + int2$1#
+30: £temporary502 -> p = £temporary508
+31: call header integral zero 0 stack zero 0
+32: push float x
+33: parameter x, offset 22
+34: call function noellipse-noellipse fabs
+35: post call
+36: £temporary509 = return_value
+37: call header integral zero 0 stack no zero 1
+38: push float float8$2#
+39: parameter float8$2#, offset 22
+40: £temporary510 -> p = *p
+41: £temporary511 = int_to_float £temporary510 -> p (Signed_Int -> Double)
+42: parameter £temporary511, offset 30
+43: call function noellipse-noellipse pow
+44: post call
+45: £temporary512 = return_value
+46: £temporary513 = £temporary509 / £temporary512
+47: pop float quotient
+48: push float x
+49: push float float8$0#
+50: if x >= float8$0# goto 55
+51: push float quotient
+52: £temporary515 = -quotient
+53: decrease stack
+54: goto 56
+55: push float quotient
+56: return_value = £temporary516
+57: return
+58: push float x
+59: push float float8$0#
+60: if x != float8$0# goto 64
+61: push float float8$0#
+62: return_value = float8$0#
+63: return
+64: call header integral zero 0 stack zero 0
+65: call header integral zero 0 stack zero 0
+66: push float x
+67: parameter x, offset 22
+68: call function noellipse-noellipse fabs
+69: post call
+70: £temporary518 = return_value
+71: parameter £temporary518, offset 22
+72: call function noellipse-noellipse log
+73: post call
+74: £temporary519 = return_value
+75: call header integral zero 0 stack no zero 1
+76: push float float8$2#
+77: parameter float8$2#, offset 22
+78: call function noellipse-noellipse log
+79: post call
+80: £temporary520 = return_value
+81: £temporary521 = £temporary519 / £temporary520
+82: £temporary522 = float_to_int £temporary521 (Double -> Signed_Int)
+83: £temporary523 = £temporary522 + int2$1#
+84: n = £temporary523
+85: call header integral zero 0 stack zero 0
+86: push float x
+87: parameter x, offset 24
+88: call function noellipse-noellipse fabs
+89: post call
+90: £temporary524 = return_value
+91: call header integral zero 0 stack no zero 1
+92: push float float8$2#
+93: parameter float8$2#, offset 24
+94: £temporary525 = int_to_float n (Signed_Int -> Double)
+95: parameter £temporary525, offset 32
+96: call function noellipse-noellipse pow
+97: post call
+98: £temporary526 = return_value
+99: £temporary527 = £temporary524 / £temporary526
+100: pop float a
+101: push float x
+102: push float float8$0#
+103: if x >= float8$0# goto 108
+104: push float a
+105: £temporary529 = -a
+106: decrease stack
+107: goto 109
+108: push float a
+109: return_value = £temporary530
+110: return
+111: function end frexp

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+clear
+nasm -f elf64 -o main.obj main.asm;ld main.obj -o main.exe
+./main.exe

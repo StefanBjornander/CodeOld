@@ -1,0 +1,119 @@
+0: push float denum
+1: push float float8$0#
+2: if denum > float8$0# goto <MiddleCode>
+3: goto <MiddleCode>
+4: check track map float stack
+5: call header
+6: push float num
+7: push float denum
+8: £temporary770 = num / denum
+9: parameter £temporary770, offset 28
+10: call function noellipse-noellipse atan
+11: post call
+12: £temporary771 = return_value
+13: pop float y
+14: call header
+15: parameter string_20A#, offset 36
+16: call function noellipse-ellipse printf, extra 0
+17: post call
+18: push float y
+19: return_value = y
+20: return
+21: goto <MiddleCode>
+22: push float num
+23: push float float8$0#
+24: if num >= float8$0# goto <MiddleCode>
+25: goto <MiddleCode>
+26: push float denum
+27: push float float8$0#
+28: if denum < float8$0# goto <MiddleCode>
+29: goto <MiddleCode>
+30: check track map float stack
+31: call header
+32: parameter string_20A#, offset 28
+33: call function noellipse-ellipse printf, extra 0
+34: post call
+35: push float float8$3.1415926535897932384#
+36: call header
+37: push float num
+38: push float denum
+39: £temporary777 = num / denum
+40: parameter £temporary777, offset 28
+41: call function noellipse-noellipse atan
+42: post call
+43: £temporary778 = return_value
+44: £temporary779 = float8$3.1415926535897932384# + £temporary778
+45: return_value = £temporary779
+46: return
+47: goto <MiddleCode>
+48: push float num
+49: push float float8$0#
+50: if num < float8$0# goto <MiddleCode>
+51: goto <MiddleCode>
+52: push float denum
+53: push float float8$0#
+54: if denum < float8$0# goto <MiddleCode>
+55: goto <MiddleCode>
+56: check track map float stack
+57: call header
+58: parameter string_30A#, offset 28
+59: call function noellipse-ellipse printf, extra 0
+60: post call
+61: push float float8$minus3.1415926535897932384#
+62: call header
+63: push float num
+64: push float denum
+65: £temporary784 = num / denum
+66: parameter £temporary784, offset 28
+67: call function noellipse-noellipse atan
+68: post call
+69: £temporary785 = return_value
+70: £temporary786 = float8$minus3.1415926535897932384# + £temporary785
+71: return_value = £temporary786
+72: return
+73: goto <MiddleCode>
+74: push float num
+75: push float float8$0#
+76: if num > float8$0# goto <MiddleCode>
+77: goto <MiddleCode>
+78: push float denum
+79: push float float8$0#
+80: if denum == float8$0# goto <MiddleCode>
+81: goto <MiddleCode>
+82: check track map float stack
+83: call header
+84: parameter string_40A#, offset 28
+85: call function noellipse-ellipse printf, extra 0
+86: post call
+87: push float float8$1.5707963267948966192#
+88: return_value = float8$1.5707963267948966192#
+89: return
+90: goto <MiddleCode>
+91: push float num
+92: push float float8$0#
+93: if num < float8$0# goto <MiddleCode>
+94: goto <MiddleCode>
+95: push float denum
+96: push float float8$0#
+97: if denum == float8$0# goto <MiddleCode>
+98: goto <MiddleCode>
+99: check track map float stack
+100: call header
+101: parameter string_50A#, offset 28
+102: call function noellipse-ellipse printf, extra 0
+103: post call
+104: push float float8$minus1.5707963267948966192#
+105: return_value = float8$minus1.5707963267948966192#
+106: return
+107: goto <MiddleCode>
+108: call header
+109: parameter string_60A#, offset 28
+110: call function noellipse-ellipse printf, extra 0
+111: post call
+112: errno = EDOM
+113: push float float8$0#
+114: return_value = float8$0#
+115: return
+116: empty
+117: return
+118: function end atan2x

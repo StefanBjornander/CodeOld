@@ -1161,9 +1161,8 @@ stdlib_test$249:	; if p == int8$0# goto 255
 
 stdlib_test$250:	; £temporary4012 = p - list
 	mov rax, [rbp + 48]
-	mov rbx, rbp
-	add rbx, 24
-	sub rax, rbx
+	sub rax, rbp
+	sub rax, 24
 
 stdlib_test$251:	; £temporary4011 = £temporary4012 / int8$4#
 	xor rdx, rdx

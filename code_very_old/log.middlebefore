@@ -1,0 +1,94 @@
+0: push float x_plus_1
+1: push float float8$0#
+2: if x_plus_1 > float8$0# goto <MiddleCode>
+3: goto <MiddleCode>
+4: check track map float stack
+5: expo = int2$0#
+6: push float x_plus_1
+7: push float float8$0.3678794411714423216036827922#
+8: if x_plus_1 < float8$0.3678794411714423216036827922# goto <MiddleCode>
+9: goto <MiddleCode>
+10: check track map float stack
+11: push float x_plus_1
+12: push float float8$2.7182818284590452353#
+13: £temporary436 = x_plus_1 * float8$2.7182818284590452353#
+14: top float x_plus_1
+15: pop float empty X
+16: --expo
+17: goto <MiddleCode>
+18: push float x_plus_1
+19: push float float8$0.7357588823428846432073655843#
+20: if x_plus_1 > float8$0.7357588823428846432073655843# goto <MiddleCode>
+21: goto <MiddleCode>
+22: check track map float stack
+23: push float x_plus_1
+24: push float float8$2.7182818284590452353#
+25: £temporary439 = x_plus_1 / float8$2.7182818284590452353#
+26: top float x_plus_1
+27: pop float empty X
+28: ++expo
+29: goto <MiddleCode>
+30: push float float8$1#
+31: pop float n
+32: push float float8$1#
+33: pop float plusMinusOne
+34: push float x_plus_1
+35: push float float8$1#
+36: £temporary441 = x_plus_1 - float8$1#
+37: pop float x
+38: push float float8$0#
+39: pop float sum
+40: push float x
+41: pop float power
+42: push float term
+43: pop float empty X
+44: push float plusMinusOne
+45: push float power
+46: push float n
+47: push float n
+48: push 1
+49: n = n + float8$1#
+50: pop float n
+51: £temporary443 = power / £temporary442
+52: £temporary444 = plusMinusOne * £temporary443
+53: top float term
+54: pop float empty X
+55: push float sum
+56: push float term
+57: £temporary445 = sum + term
+58: top float sum
+59: pop float empty X
+60: push float power
+61: push float x
+62: £temporary446 = power * x
+63: top float power
+64: pop float empty X
+65: push float plusMinusOne
+66: push float float8$minus1.0#
+67: £temporary447 = plusMinusOne * float8$minus1.0#
+68: top float plusMinusOne
+69: pop float empty X
+70: check track map float stack
+71: call header
+72: push float term
+73: parameter term, offset 70
+74: call function noellipse-noellipse fabs
+75: post call
+76: £temporary448 = return_value
+77: push float float8$0.000000001#
+78: if £temporary448 > float8$0.000000001# goto <MiddleCode>
+79: goto <MiddleCode>
+80: goto <MiddleCode>
+81: push float sum
+82: £temporary450 = int_to_float expo (Signed_Int -> Double)
+83: £temporary451 = sum + £temporary450
+84: return_value = £temporary451
+85: return
+86: goto <MiddleCode>
+87: errno = int2$6#
+88: push float float8$0#
+89: return_value = float8$0#
+90: return
+91: empty
+92: return
+93: function end log

@@ -1,0 +1,355 @@
+1:	
+
+limits_test:	; call header integral zero 0 stack zero 0
+3:	
+
+limits_test$1:	; parameter string_CHAR_BIT203D2025i0A#, offset 6
+4:		mov word [bp + 12], string_CHAR_BIT203D2025i0A#
+6:	
+
+limits_test$2:	; parameter 8, offset 8
+7:		mov word [bp + 14], 8
+9:	
+
+limits_test$3:	; call function noellipse-ellipse printf, extra 0
+10:		mov word [bp + 6], limits_test$4
+11:		mov [bp + 8], bp
+12:		add bp, 6
+13:		mov di, bp
+14:		add di, 2
+15:		jmp printf
+17:	
+
+limits_test$4:	; post call
+19:	
+
+limits_test$5:	; call header integral zero 0 stack zero 0
+21:	
+
+limits_test$6:	; parameter string_CHAR_MIN203D2025i0A0A#, offset 6
+22:		mov word [bp + 12], string_CHAR_MIN203D2025i0A0A#
+24:	
+
+limits_test$7:	; parameter -128, offset 8
+25:		mov word [bp + 14], -128
+27:	
+
+limits_test$8:	; call function noellipse-ellipse printf, extra 0
+28:		mov word [bp + 6], limits_test$9
+29:		mov [bp + 8], bp
+30:		add bp, 6
+31:		mov di, bp
+32:		add di, 2
+33:		jmp printf
+35:	
+
+limits_test$9:	; post call
+37:	
+
+limits_test$10:	; call header integral zero 0 stack zero 0
+39:	
+
+limits_test$11:	; parameter string_CHAR_MAX203D2025i0A#, offset 6
+40:		mov word [bp + 12], string_CHAR_MAX203D2025i0A#
+42:	
+
+limits_test$12:	; parameter 127, offset 8
+43:		mov word [bp + 14], 127
+45:	
+
+limits_test$13:	; call function noellipse-ellipse printf, extra 0
+46:		mov word [bp + 6], limits_test$14
+47:		mov [bp + 8], bp
+48:		add bp, 6
+49:		mov di, bp
+50:		add di, 2
+51:		jmp printf
+53:	
+
+limits_test$14:	; post call
+55:	
+
+limits_test$15:	; call header integral zero 0 stack zero 0
+57:	
+
+limits_test$16:	; parameter string_UCHAR_MAX203D2025u0A0A#, offset 6
+58:		mov word [bp + 12], string_UCHAR_MAX203D2025u0A0A#
+60:	
+
+limits_test$17:	; parameter 255, offset 8
+61:		mov word [bp + 14], 255
+63:	
+
+limits_test$18:	; call function noellipse-ellipse printf, extra 0
+64:		mov word [bp + 6], limits_test$19
+65:		mov [bp + 8], bp
+66:		add bp, 6
+67:		mov di, bp
+68:		add di, 2
+69:		jmp printf
+71:	
+
+limits_test$19:	; post call
+73:	
+
+limits_test$20:	; call header integral zero 0 stack zero 0
+75:	
+
+limits_test$21:	; parameter string_SHRT_MIN203D2025i0A#, offset 6
+76:		mov word [bp + 12], string_SHRT_MIN203D2025i0A#
+78:	
+
+limits_test$22:	; parameter -128, offset 8
+79:		mov word [bp + 14], -128
+81:	
+
+limits_test$23:	; call function noellipse-ellipse printf, extra 0
+82:		mov word [bp + 6], limits_test$24
+83:		mov [bp + 8], bp
+84:		add bp, 6
+85:		mov di, bp
+86:		add di, 2
+87:		jmp printf
+89:	
+
+limits_test$24:	; post call
+91:	
+
+limits_test$25:	; call header integral zero 0 stack zero 0
+93:	
+
+limits_test$26:	; parameter string_SHRT_MAX203D2025i0A#, offset 6
+94:		mov word [bp + 12], string_SHRT_MAX203D2025i0A#
+96:	
+
+limits_test$27:	; parameter 127, offset 8
+97:		mov word [bp + 14], 127
+99:	
+
+limits_test$28:	; call function noellipse-ellipse printf, extra 0
+100:		mov word [bp + 6], limits_test$29
+101:		mov [bp + 8], bp
+102:		add bp, 6
+103:		mov di, bp
+104:		add di, 2
+105:		jmp printf
+107:	
+
+limits_test$29:	; post call
+109:	
+
+limits_test$30:	; call header integral zero 0 stack zero 0
+111:	
+
+limits_test$31:	; parameter string_USHRT_MAX203D2025u0A0A#, offset 6
+112:		mov word [bp + 12], string_USHRT_MAX203D2025u0A0A#
+114:	
+
+limits_test$32:	; parameter 255, offset 8
+115:		mov word [bp + 14], 255
+117:	
+
+limits_test$33:	; call function noellipse-ellipse printf, extra 0
+118:		mov word [bp + 6], limits_test$34
+119:		mov [bp + 8], bp
+120:		add bp, 6
+121:		mov di, bp
+122:		add di, 2
+123:		jmp printf
+125:	
+
+limits_test$34:	; post call
+127:	
+
+limits_test$35:	; call header integral zero 0 stack zero 0
+129:	
+
+limits_test$36:	; parameter string_INT_MIN203D2025i0A#, offset 6
+130:		mov word [bp + 12], string_INT_MIN203D2025i0A#
+132:	
+
+limits_test$37:	; parameter -32768, offset 8
+133:		mov word [bp + 14], -32768
+135:	
+
+limits_test$38:	; call function noellipse-ellipse printf, extra 0
+136:		mov word [bp + 6], limits_test$39
+137:		mov [bp + 8], bp
+138:		add bp, 6
+139:		mov di, bp
+140:		add di, 2
+141:		jmp printf
+143:	
+
+limits_test$39:	; post call
+145:	
+
+limits_test$40:	; call header integral zero 0 stack zero 0
+147:	
+
+limits_test$41:	; parameter string_INT_MAX203D2025i0A#, offset 6
+148:		mov word [bp + 12], string_INT_MAX203D2025i0A#
+150:	
+
+limits_test$42:	; parameter 32767, offset 8
+151:		mov word [bp + 14], 32767
+153:	
+
+limits_test$43:	; call function noellipse-ellipse printf, extra 0
+154:		mov word [bp + 6], limits_test$44
+155:		mov [bp + 8], bp
+156:		add bp, 6
+157:		mov di, bp
+158:		add di, 2
+159:		jmp printf
+161:	
+
+limits_test$44:	; post call
+163:	
+
+limits_test$45:	; call header integral zero 0 stack zero 0
+165:	
+
+limits_test$46:	; parameter string_UINT_MAX203D2025u0A0A#, offset 6
+166:		mov word [bp + 12], string_UINT_MAX203D2025u0A0A#
+168:	
+
+limits_test$47:	; parameter 65535, offset 8
+169:		mov word [bp + 14], 65535
+171:	
+
+limits_test$48:	; call function noellipse-ellipse printf, extra 0
+172:		mov word [bp + 6], limits_test$49
+173:		mov [bp + 8], bp
+174:		add bp, 6
+175:		mov di, bp
+176:		add di, 2
+177:		jmp printf
+179:	
+
+limits_test$49:	; post call
+181:	
+
+limits_test$50:	; call header integral zero 0 stack zero 0
+183:	
+
+limits_test$51:	; parameter string_LONG_MIN203D2025li0A#, offset 6
+184:		mov word [bp + 12], string_LONG_MIN203D2025li0A#
+186:	
+
+limits_test$52:	; parameter -2147483648, offset 8
+187:		mov dword [bp + 14], -2147483648
+189:	
+
+limits_test$53:	; call function noellipse-ellipse printf, extra 0
+190:		mov word [bp + 6], limits_test$54
+191:		mov [bp + 8], bp
+192:		add bp, 6
+193:		mov di, bp
+194:		add di, 4
+195:		jmp printf
+197:	
+
+limits_test$54:	; post call
+199:	
+
+limits_test$55:	; call header integral zero 0 stack zero 0
+201:	
+
+limits_test$56:	; parameter string_LONG_MAX203D2025li0A#, offset 6
+202:		mov word [bp + 12], string_LONG_MAX203D2025li0A#
+204:	
+
+limits_test$57:	; parameter 2147483647, offset 8
+205:		mov dword [bp + 14], 2147483647
+207:	
+
+limits_test$58:	; call function noellipse-ellipse printf, extra 0
+208:		mov word [bp + 6], limits_test$59
+209:		mov [bp + 8], bp
+210:		add bp, 6
+211:		mov di, bp
+212:		add di, 4
+213:		jmp printf
+215:	
+
+limits_test$59:	; post call
+217:	
+
+limits_test$60:	; call header integral zero 0 stack zero 0
+219:	
+
+limits_test$61:	; parameter string_ULONG_MAX203D2025lu0A#, offset 6
+220:		mov word [bp + 12], string_ULONG_MAX203D2025lu0A#
+222:	
+
+limits_test$62:	; parameter 4294967295, offset 8
+223:		mov dword [bp + 14], -1
+225:	
+
+limits_test$63:	; call function noellipse-ellipse printf, extra 0
+226:		mov word [bp + 6], limits_test$64
+227:		mov [bp + 8], bp
+228:		add bp, 6
+229:		mov di, bp
+230:		add di, 4
+231:		jmp printf
+233:	
+
+limits_test$64:	; post call
+235:	
+
+limits_test$65:	; call header integral zero 0 stack zero 0
+237:	
+
+limits_test$66:	; parameter string_ULONG_MAX203D2025lx0A#, offset 6
+238:		mov word [bp + 12], string_ULONG_MAX203D2025lx0A#
+240:	
+
+limits_test$67:	; parameter 4294967295, offset 8
+241:		mov dword [bp + 14], -1
+243:	
+
+limits_test$68:	; call function noellipse-ellipse printf, extra 0
+244:		mov word [bp + 6], limits_test$69
+245:		mov [bp + 8], bp
+246:		add bp, 6
+247:		mov di, bp
+248:		add di, 4
+249:		jmp printf
+251:	
+
+limits_test$69:	; post call
+253:	
+
+limits_test$70:	; call header integral zero 0 stack zero 0
+255:	
+
+limits_test$71:	; parameter string_ULONG_MAX203D2025lX0A#, offset 6
+256:		mov word [bp + 12], string_ULONG_MAX203D2025lX0A#
+258:	
+
+limits_test$72:	; parameter 4294967295, offset 8
+259:		mov dword [bp + 14], -1
+261:	
+
+limits_test$73:	; call function noellipse-ellipse printf, extra 0
+262:		mov word [bp + 6], limits_test$74
+263:		mov [bp + 8], bp
+264:		add bp, 6
+265:		mov di, bp
+266:		add di, 4
+267:		jmp printf
+269:	
+
+limits_test$74:	; post call
+271:	
+
+limits_test$75:	; return
+272:		mov t2434, [bp]
+273:		mov di, [bp + 4]
+274:		mov bp, [bp + 2]
+275:		jmp t2434
+277:	
+
+limits_test$76:	; function end limits_test
