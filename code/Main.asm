@@ -1156,9 +1156,6 @@ assert_test2$13:	; function end assert_test2
 section .data
 $StackTop:	times 65536 db 0
 
-$IntegralStorage#:
-	times 8 db 0
-
 a:
 	times 16 db 0
 

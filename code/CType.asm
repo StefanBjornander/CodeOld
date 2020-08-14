@@ -1007,6 +1007,3 @@ toupper$35:	; return
 
 toupper$36:	; function end toupper
 section .data
-
-$IntegralStorage#:
-	times 8 db 0

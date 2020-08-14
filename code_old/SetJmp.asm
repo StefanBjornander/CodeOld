@@ -63,6 +63,3 @@ longjmp$1:	; return
 
 longjmp$2:	; function end longjmp
 section .data
-
-$IntegralStorage#:
-	times 8 db 0

@@ -985,9 +985,6 @@ string_test$285:	; return
 string_test$286:	; function end string_test
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 string_Hello2C20World21#:
 	; initializer String
 	db "Hello, World!", 0

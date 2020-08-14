@@ -147,9 +147,6 @@ localeconv$6:	; return
 localeconv$7:	; function end localeconv
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 string_Sun#:
 	db "Sun", 0
 

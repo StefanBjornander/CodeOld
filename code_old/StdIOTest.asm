@@ -1187,9 +1187,6 @@ stdio_test$356:	; return
 stdio_test$357:	; function end stdio_test
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 string_3C25i3E203C25i3E203C25li3E203C25li3E203C25u3E203C25lu3E0A0A#:
 	; initializer String
 	db "<%i> <%i> <%li> <%li> <%u> <%lu>", 10, 10, 0

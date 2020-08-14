@@ -3,9 +3,6 @@
 section .text
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 @1165$NO_ERROR:
 	dd 0
 

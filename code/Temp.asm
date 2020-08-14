@@ -434,9 +434,6 @@ tmpnam$11:	; return
 tmpnam$12:	; function end tmpnam
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 @2993$g_tempArray:
 	times 64 db 0
 

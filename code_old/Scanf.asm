@@ -1724,8 +1724,8 @@ scanLongDouble$49:	; £temporary1254 = int_to_int £temporary1252 (Signed_Char -
 	neg eax
 
 scanLongDouble$50:	; £temporary1253 = int_to_float £temporary1254 (Signed_Int -> Long_Double)
-	mov [$IntegralStorage#], eax
-	fild word [$IntegralStorage#]
+	mov [container4bytes#], eax
+	fild word [container4bytes#]
 
 scanLongDouble$51:	; £temporary1255 = £temporary1251 + £temporary1253
 	fadd 
@@ -1830,8 +1830,8 @@ scanLongDouble$80:	; £temporary1265 = int_to_int £temporary1263 (Signed_Char -
 	neg eax
 
 scanLongDouble$81:	; £temporary1264 = int_to_float £temporary1265 (Signed_Int -> Long_Double)
-	mov [$IntegralStorage#], eax
-	fild word [$IntegralStorage#]
+	mov [container4bytes#], eax
+	fild word [container4bytes#]
 
 scanLongDouble$82:	; £temporary1266 = factor * £temporary1264
 	fmul 
@@ -1917,8 +1917,8 @@ scanLongDouble$105:	; post call
 scanLongDouble$106:	; £temporary1274 = return_value
 
 scanLongDouble$107:	; £temporary1275 = int_to_float £temporary1274 (Signed_Long_Int -> Double)
-	mov [$IntegralStorage#], rbx
-	fild dword [$IntegralStorage#]
+	mov [container8bytes#], rbx
+	fild dword [container8bytes#]
 
 scanLongDouble$108:	; pop float exponent
 	fstp qword [rbp + 49]
@@ -3368,9 +3368,6 @@ vsscanf$10:	; return
 vsscanf$11:	; function end vsscanf
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 g_inStatus:
 	times 4 db 0
 
@@ -3390,6 +3387,14 @@ int8$10#:
 float8$10.0#:
 	; initializer Long_Double
 	dq 10.0
+
+container4bytes#:
+	; initializer zero 4
+	times 4 db 0
+
+container8bytes#:
+	; initializer zero 8
+	times 8 db 0
 
 string_scanFormat20c203D202725c270A#:
 	; initializer String

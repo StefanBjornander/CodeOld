@@ -1900,9 +1900,6 @@ perror$11:	; return
 perror$12:	; function end perror
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 g_fileArray:
 	dd 1
 	dd 0

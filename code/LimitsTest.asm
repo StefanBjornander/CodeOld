@@ -288,9 +288,6 @@ limits_test$75:	; return
 limits_test$76:	; function end limits_test
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 string_CHAR_BIT203D2025i0A#:
 	; initializer String
 	db "CHAR_BIT = %i", 10, 0

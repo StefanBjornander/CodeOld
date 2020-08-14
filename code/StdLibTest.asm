@@ -1233,9 +1233,6 @@ stdlib_test$269:	; return
 stdlib_test$270:	; function end stdlib_test
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 string_div_t20quot2025i20rem2025i0A#:
 	; initializer String
 	db "div_t quot %i rem %i", 10, 0

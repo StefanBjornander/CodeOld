@@ -121,9 +121,6 @@ raise$26:	; return
 raise$27:	; function end raise
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 string_Raise20default0A#:
 	; initializer String
 	db "Raise default", 10, 0

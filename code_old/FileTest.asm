@@ -1060,8 +1060,8 @@ file_test$295:	; £temporary3520 = index * index
 	imul dword [rbp + 52]
 
 file_test$296:	; £temporary3521 = int_to_float £temporary3520 (Signed_Int -> Double)
-	mov [$IntegralStorage#], eax
-	fild word [$IntegralStorage#]
+	mov [container4bytes#], eax
+	fild word [container4bytes#]
 
 file_test$297:	; pop float value
 	fstp qword [rbp + 56]
@@ -2943,9 +2943,6 @@ file_test$842:	; return
 file_test$843:	; function end file_test
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 string_r#:
 	; initializer String
 	db "r", 0
@@ -3157,6 +3154,10 @@ string_tempFilePtr20213D20NULL#:
 string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A#:
 	; initializer String
 	db 10, "------------", 10, 0
+
+container4bytes#:
+	; initializer zero 4
+	times 4 db 0
 
 Array_#:
 	; initializer Array

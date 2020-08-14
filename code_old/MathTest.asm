@@ -2703,8 +2703,8 @@ math_test_2$95:	; push float y
 	fld qword [rbp + 32]
 
 math_test_2$96:	; £temporary3422 = float_to_int y (Double -> Signed_Int)
-	fistp word [$IntegralStorage#]
-	mov eax, [$IntegralStorage#]
+	fistp word [container4bytes#]
+	mov eax, [container4bytes#]
 
 math_test_2$97:	; parameter £temporary3422, offset 80
 	mov [rbp + 80], eax
@@ -2721,8 +2721,8 @@ math_test_2$101:	; push float y
 	fld qword [rbp + 32]
 
 math_test_2$102:	; £temporary3423 = float_to_int y (Double -> Signed_Int)
-	fistp word [$IntegralStorage#]
-	mov eax, [$IntegralStorage#]
+	fistp word [container4bytes#]
+	mov eax, [container4bytes#]
 
 math_test_2$103:	; parameter £temporary3423, offset 116
 	mov [rbp + 116], eax
@@ -2758,9 +2758,6 @@ math_test_2$110:	; return
 
 math_test_2$111:	; function end math_test_2
 section .data
-
-$IntegralStorage#:
-	times 8 db 0
 
 float8$minus6.2831853071795864768#:
 	; initializer Double
@@ -2949,3 +2946,7 @@ string_pow2825f2C2025f29203D2025f2C20errno203D2025i203C25s3E2C20#:
 string_ldexp2825f2C2025i29203D2025f0A0A#:
 	; initializer String
 	db "ldexp(%f, %i) = %f", 10, 10, 0
+
+container4bytes#:
+	; initializer zero 4
+	times 4 db 0

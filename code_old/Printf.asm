@@ -940,12 +940,12 @@ printLongDoubleFraction$1:	; push float longDoubleValue
 	fld qword [rbp + 24]
 
 printLongDoubleFraction$2:	; £temporary1646 = float_to_int longDoubleValue (Long_Double -> Signed_Long_Int)
-	fistp dword [$IntegralStorage#]
-	mov rax, [$IntegralStorage#]
+	fistp dword [container8bytes#]
+	mov rax, [container8bytes#]
 
 printLongDoubleFraction$3:	; £temporary1647 = int_to_float £temporary1646 (Signed_Long_Int -> Long_Double)
-	mov [$IntegralStorage#], rax
-	fild dword [$IntegralStorage#]
+	mov [container8bytes#], rax
+	fild dword [container8bytes#]
 
 printLongDoubleFraction$4:	; £temporary1648 = longDoubleValue - £temporary1647
 	fsub 
@@ -1004,8 +1004,8 @@ printLongDoubleFraction$20:	; top float longDoubleValue10
 	fst qword [rbp + 40]
 
 printLongDoubleFraction$21:	; £temporary1657 = float_to_int longDoubleValue10 (Long_Double -> Signed_Int)
-	fistp word [$IntegralStorage#]
-	mov eax, [$IntegralStorage#]
+	fistp word [container4bytes#]
+	mov eax, [container4bytes#]
 
 printLongDoubleFraction$22:	; digitValue = £temporary1657
 	mov [rbp + 48], eax
@@ -1100,8 +1100,8 @@ printLongDoublePlain$12:	; push float longDoubleValue
 	fld qword [rbp + 24]
 
 printLongDoublePlain$13:	; £temporary1666 = float_to_int longDoubleValue (Long_Double -> Signed_Long_Int)
-	fistp dword [$IntegralStorage#]
-	mov rax, [$IntegralStorage#]
+	fistp dword [container8bytes#]
+	mov rax, [container8bytes#]
 
 printLongDoublePlain$14:	; longValue = £temporary1666
 	mov [rbp + 48], rax
@@ -1316,8 +1316,8 @@ printLongDoubleExpo$41:	; post call
 printLongDoubleExpo$42:	; £temporary1682 = return_value
 
 printLongDoubleExpo$43:	; £temporary1683 = float_to_int £temporary1682 (Double -> Signed_Int)
-	fistp word [$IntegralStorage#]
-	mov eax, [$IntegralStorage#]
+	fistp word [container4bytes#]
+	mov eax, [container4bytes#]
 
 printLongDoubleExpo$44:	; expo = £temporary1683
 	mov [rbp + 52], eax
@@ -2470,8 +2470,8 @@ printArgument$266:	; post call
 printArgument$267:	; £temporary1841 = return_value
 
 printArgument$268:	; £temporary1842 = float_to_int £temporary1841 (Double -> Signed_Int)
-	fistp word [$IntegralStorage#]
-	mov eax, [$IntegralStorage#]
+	fistp word [container4bytes#]
+	mov eax, [container4bytes#]
 
 printArgument$269:	; expo = £temporary1842
 	mov [rbp + 114], eax
@@ -4075,9 +4075,6 @@ vsprintf$10:	; return
 vsprintf$11:	; function end vsprintf
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 g_outStatus:
 	times 4 db 0
 
@@ -4091,9 +4088,17 @@ int8$10#:
 	; initializer Signed_Long_Int
 	dq 10
 
+container8bytes#:
+	; initializer zero 8
+	times 8 db 0
+
 float8$10.0#:
 	; initializer Long_Double
 	dq 10.0
+
+container4bytes#:
+	; initializer zero 4
+	times 4 db 0
 
 int4$10#:
 	; initializer Signed_Int

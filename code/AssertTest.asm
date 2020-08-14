@@ -163,9 +163,6 @@ assert_test2X$12:	; return
 assert_test2X$13:	; function end assert_test2X
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 string_Please20write20a20number2028not20620or207293A20#:
 	; initializer String
 	db "Please write a number (not 6 or 7): ", 0

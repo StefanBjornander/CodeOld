@@ -2163,9 +2163,6 @@ memset$13:	; return
 memset$14:	; function end memset
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 int8$8#:
 	; initializer Pointer
 	dq 8

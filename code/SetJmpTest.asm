@@ -234,9 +234,6 @@ setjmp_test$29:	; return
 setjmp_test$30:	; function end setjmp_test
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 buffer:
 	times 12 db 0
 

@@ -194,9 +194,6 @@ signal_test$24:	; return
 signal_test$25:	; function end signal_test
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 string_Floating20point20error3A2025i0A#:
 	; initializer String
 	db "Floating point error: %i", 10, 0

@@ -913,9 +913,6 @@ print_heap$21:	; return
 print_heap$22:	; function end print_heap
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 g_firstBlockPtr:
 	dq 0
 

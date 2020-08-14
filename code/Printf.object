@@ -1121,13 +1121,13 @@ printLongDoubleFraction$1:	; push float longDoubleValue
 7:	
 
 printLongDoubleFraction$2:	; £temporary1960 = float_to_int longDoubleValue (Long_Double -> Signed_Long_Int)
-8:		fistp dword [$IntegralStorage#]
-9:		mov eax, [$IntegralStorage#]
+8:		fistp dword [container4bytes#]
+9:		mov eax, [container4bytes#]
 11:	
 
 printLongDoubleFraction$3:	; £temporary1961 = int_to_float £temporary1960 (Signed_Long_Int -> Long_Double)
-12:		mov [$IntegralStorage#], eax
-13:		fild dword [$IntegralStorage#]
+12:		mov [container4bytes#], eax
+13:		fild dword [container4bytes#]
 15:	
 
 printLongDoubleFraction$4:	; £temporary1962 = longDoubleValue - £temporary1961
@@ -1204,8 +1204,8 @@ printLongDoubleFraction$20:	; top float longDoubleValue10
 71:	
 
 printLongDoubleFraction$21:	; £temporary1971 = float_to_int longDoubleValue10 (Long_Double -> Signed_Int)
-72:		fistp word [$IntegralStorage#]
-73:		mov ax, [$IntegralStorage#]
+72:		fistp word [container2bytes#]
+73:		mov ax, [container2bytes#]
 75:	
 
 printLongDoubleFraction$22:	; digitValue = £temporary1971
@@ -1328,8 +1328,8 @@ printLongDoublePlain$12:	; push float longDoubleValue
 44:	
 
 printLongDoublePlain$13:	; £temporary1982 = float_to_int longDoubleValue (Long_Double -> Signed_Long_Int)
-45:		fistp dword [$IntegralStorage#]
-46:		mov eax, [$IntegralStorage#]
+45:		fistp dword [container4bytes#]
+46:		mov eax, [container4bytes#]
 48:	
 
 printLongDoublePlain$14:	; longValue = £temporary1982
@@ -1608,8 +1608,8 @@ printLongDoubleExpo$42:	; £temporary2007 = return_value
 144:	
 
 printLongDoubleExpo$43:	; £temporary2008 = float_to_int £temporary2007 (Double -> Signed_Int)
-145:		fistp word [$IntegralStorage#]
-146:		mov ax, [$IntegralStorage#]
+145:		fistp word [container2bytes#]
+146:		mov ax, [container2bytes#]
 148:	
 
 printLongDoubleExpo$44:	; expo = £temporary2008
@@ -3093,8 +3093,8 @@ printArgument$267:	; £temporary2168 = return_value
 968:	
 
 printArgument$268:	; £temporary2169 = float_to_int £temporary2168 (Double -> Signed_Int)
-969:		fistp word [$IntegralStorage#]
-970:		mov ax, [$IntegralStorage#]
+969:		fistp word [container2bytes#]
+970:		mov ax, [container2bytes#]
 972:	
 
 printArgument$269:	; expo = £temporary2169

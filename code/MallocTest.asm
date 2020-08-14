@@ -793,9 +793,6 @@ malloc_test6$24:	; return
 malloc_test6$25:	; function end malloc_test6
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#:
 	; initializer String
 	db "Stack Top: %u, Low Heap: %u", 10, 0
