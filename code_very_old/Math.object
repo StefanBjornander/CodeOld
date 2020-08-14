@@ -1105,8 +1105,8 @@ frexp$27:	; £temporary553 = £temporary551 / £temporary552
 99:	
 
 frexp$28:	; £temporary554 = float_to_int £temporary553 (Double -> Signed_Int)
-100:		fistp word [$IntegralStorage#]
-101:		mov ax, [$IntegralStorage#]
+100:		fistp word [container2bytes#]
+101:		mov ax, [container2bytes#]
 103:	
 
 frexp$29:	; £temporary549 -> p = £temporary554 + 1
@@ -1336,8 +1336,8 @@ frexp$80:	; £temporary571 = £temporary569 / £temporary570
 277:	
 
 frexp$81:	; £temporary572 = float_to_int £temporary571 (Double -> Signed_Int)
-278:		fistp word [$IntegralStorage#]
-279:		mov ax, [$IntegralStorage#]
+278:		fistp word [container2bytes#]
+279:		mov ax, [container2bytes#]
 281:	
 
 frexp$82:	; n = £temporary572 + 1
@@ -5243,13 +5243,13 @@ floor$13:	; push float x
 48:	
 
 floor$14:	; £temporary862 = float_to_int x (Double -> Signed_Long_Int)
-49:		fistp dword [$IntegralStorage#]
-50:		mov eax, [$IntegralStorage#]
+49:		fistp dword [container4bytes#]
+50:		mov eax, [container4bytes#]
 52:	
 
 floor$15:	; £temporary863 = int_to_float £temporary862 (Signed_Long_Int -> Double)
-53:		mov [$IntegralStorage#], eax
-54:		fild dword [$IntegralStorage#]
+53:		mov [container4bytes#], eax
+54:		fild dword [container4bytes#]
 56:	
 
 floor$16:	; return_value = £temporary863
@@ -5335,13 +5335,13 @@ ceil$15:	; £temporary869 = x + 0.999999999999
 54:	
 
 ceil$16:	; £temporary870 = float_to_int £temporary869 (Double -> Signed_Long_Int)
-55:		fistp dword [$IntegralStorage#]
-56:		mov eax, [$IntegralStorage#]
+55:		fistp dword [container4bytes#]
+56:		mov eax, [container4bytes#]
 58:	
 
 ceil$17:	; £temporary871 = int_to_float £temporary870 (Signed_Long_Int -> Double)
-59:		mov [$IntegralStorage#], eax
-60:		fild dword [$IntegralStorage#]
+59:		mov [container4bytes#], eax
+60:		fild dword [container4bytes#]
 62:	
 
 ceil$18:	; return_value = £temporary871
@@ -5404,13 +5404,13 @@ round$10:	; £temporary875 = x + 0.5
 36:	
 
 round$11:	; £temporary880 = float_to_int £temporary879 (Double -> Signed_Long_Int)
-37:		fistp dword [$IntegralStorage#]
-38:		mov eax, [$IntegralStorage#]
+37:		fistp dword [container4bytes#]
+38:		mov eax, [container4bytes#]
 40:	
 
 round$12:	; £temporary881 = int_to_float £temporary880 (Signed_Long_Int -> Double)
-41:		mov [$IntegralStorage#], eax
-42:		fild dword [$IntegralStorage#]
+41:		mov [container4bytes#], eax
+42:		fild dword [container4bytes#]
 44:	
 
 round$13:	; return_value = £temporary881
@@ -5498,13 +5498,13 @@ modf$5:	; £temporary888 = return_value
 19:	
 
 modf$6:	; £temporary889 = float_to_int £temporary888 (Double -> Signed_Long_Int)
-20:		fistp dword [$IntegralStorage#]
-21:		mov eax, [$IntegralStorage#]
+20:		fistp dword [container4bytes#]
+21:		mov eax, [container4bytes#]
 23:	
 
 modf$7:	; £temporary890 = int_to_float £temporary889 (Signed_Long_Int -> Double)
-24:		mov [$IntegralStorage#], eax
-25:		fild dword [$IntegralStorage#]
+24:		mov [container4bytes#], eax
+25:		fild dword [container4bytes#]
 27:	
 
 modf$8:	; pop float integral
@@ -5708,13 +5708,13 @@ fmod$9:	; push float quotient
 33:	
 
 fmod$10:	; £temporary914 = float_to_int quotient (Double -> Signed_Long_Int)
-34:		fistp dword [$IntegralStorage#]
-35:		mov eax, [$IntegralStorage#]
+34:		fistp dword [container4bytes#]
+35:		mov eax, [container4bytes#]
 37:	
 
 fmod$11:	; £temporary915 = int_to_float £temporary914 (Signed_Long_Int -> Double)
-38:		mov [$IntegralStorage#], eax
-39:		fild dword [$IntegralStorage#]
+38:		mov [container4bytes#], eax
+39:		fild dword [container4bytes#]
 41:	
 
 fmod$12:	; £temporary916 = quotient - £temporary915

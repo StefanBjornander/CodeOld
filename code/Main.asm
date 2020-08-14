@@ -1059,8 +1059,8 @@ assert_test$15:	; parameter string_n20213D206#, offset 68
 assert_test$16:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#, offset 76
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
-assert_test$17:	; parameter int4$802#, offset 84
-	mov dword [rbp + 84], 802
+assert_test$17:	; parameter int4$804#, offset 84
+	mov dword [rbp + 84], 804
 
 assert_test$18:	; call function noellipse-ellipse fprintf, extra 20
 	mov qword [rbp + 28], assert_test$19
@@ -1123,8 +1123,8 @@ assert_test2$4:	; parameter string_n20213D207#, offset 68
 assert_test2$5:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#, offset 76
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
-assert_test2$6:	; parameter int4$807#, offset 84
-	mov dword [rbp + 84], 807
+assert_test2$6:	; parameter int4$809#, offset 84
+	mov dword [rbp + 84], 809
 
 assert_test2$7:	; call function noellipse-ellipse fprintf, extra 20
 	mov qword [rbp + 28], assert_test2$8

@@ -1496,9 +1496,6 @@ ldiv$9:	; return
 ldiv$10:	; function end ldiv
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 string_25li25n#:
 	; initializer String
 	db "%li%n", 0

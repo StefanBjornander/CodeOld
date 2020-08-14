@@ -584,8 +584,8 @@ difftime:	; £temporary2326 = time2 - time1
 	sub rax, [rbp + 24]
 
 difftime$1:	; £temporary2327 = int_to_float £temporary2326 (Unsigned_Long_Int -> Double)
-	mov [$IntegralStorage#], rax
-	fild dword [$IntegralStorage#]
+	mov [container8bytes#], rax
+	fild dword [container8bytes#]
 
 difftime$2:	; return_value = £temporary2327
 
@@ -2309,9 +2309,6 @@ strftime$380:	; return
 strftime$381:	; function end strftime
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 int4$4#:
 	; initializer Signed_Int
 	dd 4
@@ -2350,6 +2347,10 @@ int4$400#:
 Array_#:
 	; initializer Array
 	dq 4
+
+container8bytes#:
+	; initializer zero 8
+	times 8 db 0
 
 @4759$g_timeString:
 	times 256 db 0

@@ -137,14 +137,14 @@ time_test$37:	; s = £field4044 -> p
 	add rdi, 104
 	mov al, 36
 
-x4:
+memorycopy4:
 	mov ah, [rsi]
 	mov [rdi], ah
 	inc rsi
 	inc rdi
 	dec al
 	cmp al, 0
-	jne x4
+	jne memorycopy4
 
 time_test$38:	; call header integral zero 0 stack zero 0
 
@@ -249,14 +249,14 @@ time_test$65:	; s = £field4064 -> £temporary4063
 	add rsi, 104
 	mov al, 36
 
-x5:
+memorycopy5:
 	mov ah, [rbx]
 	mov [rsi], ah
 	inc rbx
 	inc rsi
 	dec al
 	cmp al, 0
-	jne x5
+	jne memorycopy5
 
 time_test$66:	; call header integral zero 0 stack zero 0
 

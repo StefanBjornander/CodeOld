@@ -703,14 +703,14 @@ stdlib_test$133:	; i = £temporary3958 -> £temporary3959
 	add rsi, 24
 	mov al, 8
 
-x0:
+memorycopy0:
 	mov ah, [rbx]
 	mov [rsi], ah
 	inc rbx
 	inc rsi
 	dec al
 	cmp al, 0
-	jne x0
+	jne memorycopy0
 
 stdlib_test$134:	; call header integral zero 0 stack zero 0
 
@@ -744,14 +744,14 @@ stdlib_test$141:	; parameter i, offset 56
 	add rdi, 56
 	mov al, 8
 
-x1:
+memorycopy1:
 	mov ah, [rsi]
 	mov [rdi], ah
 	inc rsi
 	inc rdi
 	dec al
 	cmp al, 0
-	jne x1
+	jne memorycopy1
 
 stdlib_test$142:	; call function noellipse-noellipse print_div
 	mov qword [rbp + 32], stdlib_test$143
@@ -784,14 +784,14 @@ stdlib_test$150:	; li = £temporary3964 -> £temporary3965
 	add rsi, 24
 	mov al, 16
 
-x2:
+memorycopy2:
 	mov ah, [rbx]
 	mov [rsi], ah
 	inc rbx
 	inc rsi
 	dec al
 	cmp al, 0
-	jne x2
+	jne memorycopy2
 
 stdlib_test$151:	; call header integral zero 0 stack zero 0
 
@@ -825,14 +825,14 @@ stdlib_test$158:	; parameter li, offset 64
 	add rdi, 64
 	mov al, 16
 
-x3:
+memorycopy3:
 	mov ah, [rsi]
 	mov [rdi], ah
 	inc rsi
 	inc rdi
 	dec al
 	cmp al, 0
-	jne x3
+	jne memorycopy3
 
 stdlib_test$159:	; call function noellipse-noellipse print_ldiv
 	mov qword [rbp + 40], stdlib_test$160

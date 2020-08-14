@@ -12,6 +12,3 @@ locale_test$1:	; return
 
 locale_test$2:	; function end locale_test
 section .data
-
-$IntegralStorage#:
-	times 8 db 0

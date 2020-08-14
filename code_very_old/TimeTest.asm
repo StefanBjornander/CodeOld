@@ -494,9 +494,6 @@ time_test$130:	; return
 time_test$131:	; function end time_test
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 string_Sun#:
 	; initializer String
 	db "Sun", 0

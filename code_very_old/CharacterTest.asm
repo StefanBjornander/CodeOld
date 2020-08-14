@@ -896,9 +896,6 @@ character_test$223:	; return
 character_test$224:	; function end character_test
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 string_ascii2025i0A#:
 	; initializer String
 	db "ascii %i", 10, 0

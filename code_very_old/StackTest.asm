@@ -114,9 +114,6 @@ heap_test$17:	; return
 heap_test$18:	; function end heap_test
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 @8835$i:
 	; initializer Signed_Int
 	dd 0

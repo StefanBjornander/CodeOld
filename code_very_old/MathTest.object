@@ -3495,8 +3495,8 @@ math_test_2$95:	; push float y
 317:	
 
 math_test_2$96:	; £temporary4328 = float_to_int y (Double -> Signed_Int)
-318:		fistp word [$IntegralStorage#]
-319:		mov ax, [$IntegralStorage#]
+318:		fistp word [container2bytes#]
+319:		mov ax, [container2bytes#]
 321:	
 
 math_test_2$97:	; parameter £temporary4328, offset 16
@@ -3519,8 +3519,8 @@ math_test_2$101:	; push float y
 335:	
 
 math_test_2$102:	; £temporary4329 = float_to_int y (Double -> Signed_Int)
-336:		fistp word [$IntegralStorage#]
-337:		mov ax, [$IntegralStorage#]
+336:		fistp word [container2bytes#]
+337:		mov ax, [container2bytes#]
 339:	
 
 math_test_2$103:	; parameter £temporary4329, offset 32

@@ -348,9 +348,6 @@ print_test$104:	; return
 print_test$105:	; function end print_test
 section .data
 
-$IntegralStorage#:
-	times 8 db 0
-
 string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#:
 	; initializer String
 	db "<%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>", 10, 0

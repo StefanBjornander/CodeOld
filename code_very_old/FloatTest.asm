@@ -12,6 +12,3 @@ float_test$1:	; return
 
 float_test$2:	; function end float_test
 section .data
-
-$IntegralStorage#:
-	times 8 db 0

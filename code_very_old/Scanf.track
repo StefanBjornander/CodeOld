@@ -2125,8 +2125,8 @@ scanLongDouble$49:	; £temporary1563 = int_to_int £temporary1561 (Signed_Char -
 197:	
 
 scanLongDouble$50:	; £temporary1562 = int_to_float £temporary1563 (Signed_Int -> Long_Double)
-198:		mov [$IntegralStorage#], a1022
-199:		fild word [$IntegralStorage#]
+198:		mov [container2bytes#], a1022
+199:		fild word [container2bytes#]
 201:	
 
 scanLongDouble$51:	; £temporary1564 = £temporary1560 + £temporary1562
@@ -2262,8 +2262,8 @@ scanLongDouble$80:	; £temporary1574 = int_to_int £temporary1572 (Signed_Char -
 318:	
 
 scanLongDouble$81:	; £temporary1573 = int_to_float £temporary1574 (Signed_Int -> Long_Double)
-319:		mov [$IntegralStorage#], a1030
-320:		fild word [$IntegralStorage#]
+319:		mov [container2bytes#], a1030
+320:		fild word [container2bytes#]
 322:	
 
 scanLongDouble$82:	; £temporary1575 = factor * £temporary1573
@@ -2375,8 +2375,8 @@ scanLongDouble$106:	; £temporary1583 = return_value
 417:	
 
 scanLongDouble$107:	; £temporary1584 = int_to_float £temporary1583 (Signed_Long_Int -> Double)
-418:		mov [$IntegralStorage#], t1038
-419:		fild dword [$IntegralStorage#]
+418:		mov [container4bytes#], t1038
+419:		fild dword [container4bytes#]
 421:	
 
 scanLongDouble$108:	; pop float exponent

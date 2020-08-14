@@ -53,6 +53,8 @@ void main2(void) {
     struct B* q;
   };
 
+  //sin(3.14);
+
   a.p = NULL;
   a.q = NULL;
 
