@@ -429,7 +429,7 @@ _start:
 	; exit int2$0#
 	mov rdi, 0
 	mov rax, 60
-	syscall 
+	syscall
 
  main$80:
 	; function end main
@@ -1031,7 +1031,7 @@ _start:
 
  mains2$10:
 	; push float float8$0#
-	fldz 
+	fldz
 
  mains2$11:
 	; parameter float8$0#, offset 48
@@ -1109,7 +1109,7 @@ _start:
 
  mains2$28:
 	; push float float8$0#
-	fldz 
+	fldz
 
  mains2$29:
 	; parameter float8$0#, offset 48

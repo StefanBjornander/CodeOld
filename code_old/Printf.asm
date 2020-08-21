@@ -257,7 +257,7 @@ section .text
 
  printChar$16:
 	; syscall
-	syscall 
+	syscall
 
  printChar$17:
 	; g_outChars = g_outChars + int4$1#
@@ -1208,7 +1208,7 @@ section .text
 
  printLongDoubleFraction$4:
 	; £temporary1648 = longDoubleValue - £temporary1647
-	fsub 
+	fsub
 
  printLongDoubleFraction$5:
 	; pop float longDoubleValue
@@ -1273,7 +1273,7 @@ section .text
 
  printLongDoubleFraction$19:
 	; £temporary1656 = float8$10.0# * longDoubleValue
-	fmul 
+	fmul
 
  printLongDoubleFraction$20:
 	; top float longDoubleValue10
@@ -1327,7 +1327,7 @@ section .text
 
  printLongDoubleFraction$31:
 	; £temporary1662 = longDoubleValue10 - £temporary1661
-	fsub 
+	fsub
 
  printLongDoubleFraction$32:
 	; pop float longDoubleValue
@@ -1353,13 +1353,13 @@ section .text
 
  printLongDoublePlain$1:
 	; push float float8$0.0#
-	fldz 
+	fldz
 
  printLongDoublePlain$2:
 	; if longDoubleValue >= float8$0.0# goto 12
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe printLongDoublePlain$12
 
  printLongDoublePlain$3:
@@ -1385,7 +1385,7 @@ section .text
 
  printLongDoublePlain$8:
 	; £temporary1665 = -longDoubleValue
-	fchs 
+	fchs
 
  printLongDoublePlain$9:
 	; pop float longDoubleValue
@@ -1450,7 +1450,7 @@ section .text
 
  printLongDoublePlain$23:
 	; £temporary1669 = longDoubleValue - £temporary1668
-	fsub 
+	fsub
 
  printLongDoublePlain$24:
 	; pop float longDoubleValue
@@ -1503,13 +1503,13 @@ section .text
 
  printLongDoubleExpo$1:
 	; push float float8$0.0#
-	fldz 
+	fldz
 
  printLongDoubleExpo$2:
 	; if value != float8$0.0# goto 27
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jne printLongDoubleExpo$27
 
  printLongDoubleExpo$3:
@@ -1534,7 +1534,7 @@ section .text
 
  printLongDoubleExpo$8:
 	; push float float8$0.0#
-	fldz 
+	fldz
 
  printLongDoubleExpo$9:
 	; parameter float8$0.0#, offset 76
@@ -1621,13 +1621,13 @@ section .text
 
  printLongDoubleExpo$28:
 	; push float float8$0.0#
-	fldz 
+	fldz
 
  printLongDoubleExpo$29:
 	; if value >= float8$0.0# goto 37
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe printLongDoubleExpo$37
 
  printLongDoubleExpo$30:
@@ -1653,7 +1653,7 @@ section .text
 
  printLongDoubleExpo$35:
 	; £temporary1681 = -value
-	fchs 
+	fchs
 
  printLongDoubleExpo$36:
 	; pop float value
@@ -1734,7 +1734,7 @@ section .text
 
  printLongDoubleExpo$54:
 	; £temporary1686 = value / £temporary1685
-	fdiv 
+	fdiv
 
  printLongDoubleExpo$55:
 	; pop float value
@@ -2873,13 +2873,13 @@ section .text
 
  printArgument$199:
 	; push float float8$0#
-	fldz 
+	fldz
 
  printArgument$200:
 	; if longDoubleValue >= float8$0# goto 203
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe printArgument$203
 
  printArgument$201:

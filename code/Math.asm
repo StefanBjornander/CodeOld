@@ -36,7 +36,7 @@ section .text
 
  exp:
 	; push float float8$0#
-	fldz 
+	fldz
 
  exp$1:
 	; pop float n
@@ -44,7 +44,7 @@ section .text
 
  exp$2:
 	; push float float8$1#
-	fld1 
+	fld1
 
  exp$3:
 	; pop float faculty
@@ -52,7 +52,7 @@ section .text
 
  exp$4:
 	; push float float8$1#
-	fld1 
+	fld1
 
  exp$5:
 	; pop float power
@@ -60,7 +60,7 @@ section .text
 
  exp$6:
 	; push float float8$0#
-	fldz 
+	fldz
 
  exp$7:
 	; pop float sum
@@ -76,7 +76,7 @@ section .text
 
  exp$10:
 	; £temporary357 = power / faculty
-	fdiv 
+	fdiv
 
  exp$11:
 	; pop float term
@@ -92,7 +92,7 @@ section .text
 
  exp$14:
 	; £temporary358 = sum + term
-	fadd 
+	fadd
 
  exp$15:
 	; pop float sum
@@ -108,7 +108,7 @@ section .text
 
  exp$18:
 	; £temporary359 = power * x
-	fmul 
+	fmul
 
  exp$19:
 	; pop float power
@@ -124,11 +124,11 @@ section .text
 
  exp$22:
 	; push 1
-	fld1 
+	fld1
 
  exp$23:
 	; n = n + float8$1#
-	fadd 
+	fadd
 
  exp$24:
 	; top float n
@@ -136,7 +136,7 @@ section .text
 
  exp$25:
 	; £temporary361 = faculty * £temporary360
-	fmul 
+	fmul
 
  exp$26:
 	; pop float faculty
@@ -175,9 +175,9 @@ section .text
 
  exp$35:
 	; if £temporary362 >= float8$0.000000001# goto 8
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe exp$8
 
  exp$36:
@@ -203,13 +203,13 @@ section .text
 
  log$1:
 	; push float float8$0#
-	fldz 
+	fldz
 
  log$2:
 	; if x_plus_1 <= float8$0# goto 71
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jae log$71
 
  log$3:
@@ -226,9 +226,9 @@ section .text
 
  log$6:
 	; if x_plus_1 >= float8$0.3678794411714423216036827922# goto 13
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe log$13
 
  log$7:
@@ -241,7 +241,7 @@ section .text
 
  log$9:
 	; £temporary367 = x_plus_1 * float8$2.7182818284590452353#
-	fmul 
+	fmul
 
  log$10:
 	; pop float x_plus_1
@@ -265,9 +265,9 @@ section .text
 
  log$15:
 	; if x_plus_1 <= float8$0.7357588823428846432073655843# goto 22
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jae log$22
 
  log$16:
@@ -280,7 +280,7 @@ section .text
 
  log$18:
 	; £temporary370 = x_plus_1 / float8$2.7182818284590452353#
-	fdiv 
+	fdiv
 
  log$19:
 	; pop float x_plus_1
@@ -296,7 +296,7 @@ section .text
 
  log$22:
 	; push float float8$1#
-	fld1 
+	fld1
 
  log$23:
 	; pop float n
@@ -304,7 +304,7 @@ section .text
 
  log$24:
 	; push float float8$1#
-	fld1 
+	fld1
 
  log$25:
 	; pop float plusMinusOne
@@ -316,11 +316,11 @@ section .text
 
  log$27:
 	; push float float8$1#
-	fld1 
+	fld1
 
  log$28:
 	; £temporary372 = x_plus_1 - float8$1#
-	fsub 
+	fsub
 
  log$29:
 	; pop float x
@@ -328,7 +328,7 @@ section .text
 
  log$30:
 	; push float float8$0#
-	fldz 
+	fldz
 
  log$31:
 	; pop float sum
@@ -356,11 +356,11 @@ section .text
 
  log$37:
 	; push 1
-	fld1 
+	fld1
 
  log$38:
 	; n = n + float8$1#
-	fadd 
+	fadd
 
  log$39:
 	; top float n
@@ -368,19 +368,19 @@ section .text
 
  log$40:
 	; push 1
-	fld1 
+	fld1
 
  log$41:
 	; n = n - float8$1#
-	fsub 
+	fsub
 
  log$42:
 	; £temporary374 = power / £temporary373
-	fdiv 
+	fdiv
 
  log$43:
 	; £temporary375 = plusMinusOne * £temporary374
-	fmul 
+	fmul
 
  log$44:
 	; pop float term
@@ -396,7 +396,7 @@ section .text
 
  log$47:
 	; £temporary376 = sum + term
-	fadd 
+	fadd
 
  log$48:
 	; pop float sum
@@ -412,7 +412,7 @@ section .text
 
  log$51:
 	; £temporary377 = power * x
-	fmul 
+	fmul
 
  log$52:
 	; pop float power
@@ -428,7 +428,7 @@ section .text
 
  log$55:
 	; £temporary378 = plusMinusOne * float8$minus1.0#
-	fmul 
+	fmul
 
  log$56:
 	; pop float plusMinusOne
@@ -467,9 +467,9 @@ section .text
 
  log$65:
 	; if £temporary379 > float8$0.000000001# goto 34
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jb log$34
 
  log$66:
@@ -482,7 +482,7 @@ section .text
 
  log$68:
 	; £temporary382 = sum + £temporary381
-	fadd 
+	fadd
 
  log$69:
 	; return_value = £temporary382
@@ -500,7 +500,7 @@ section .text
 
  log$72:
 	; push float float8$0#
-	fldz 
+	fldz
 
  log$73:
 	; return_value = float8$0#
@@ -549,7 +549,7 @@ section .text
 
  log10$7:
 	; £temporary385 = float8$0.4342944820# * £temporary384
-	fmul 
+	fmul
 
  log10$8:
 	; return_value = £temporary385
@@ -570,13 +570,13 @@ section .text
 
  log10_int$1:
 	; push float float8$0#
-	fldz 
+	fldz
 
  log10_int$2:
 	; if x <= float8$0# goto 37
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jae log10_int$37
 
  log10_int$3:
@@ -585,13 +585,13 @@ section .text
 
  log10_int$4:
 	; push float float8$1#
-	fld1 
+	fld1
 
  log10_int$5:
 	; if x != float8$1# goto 8
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jne log10_int$8
 
  log10_int$6:
@@ -611,13 +611,13 @@ section .text
 
  log10_int$9:
 	; push float float8$1#
-	fld1 
+	fld1
 
  log10_int$10:
 	; if x <= float8$1# goto 24
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jae log10_int$24
 
  log10_int$11:
@@ -630,13 +630,13 @@ section .text
 
  log10_int$13:
 	; push float float8$1#
-	fld1 
+	fld1
 
  log10_int$14:
 	; if x <= float8$1# goto 21
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jae log10_int$21
 
  log10_int$15:
@@ -649,7 +649,7 @@ section .text
 
  log10_int$17:
 	; £temporary391 = x / float8$10#
-	fdiv 
+	fdiv
 
  log10_int$18:
 	; pop float x
@@ -688,13 +688,13 @@ section .text
 
  log10_int$26:
 	; push float float8$1#
-	fld1 
+	fld1
 
  log10_int$27:
 	; if x >= float8$1# goto 34
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe log10_int$34
 
  log10_int$28:
@@ -707,7 +707,7 @@ section .text
 
  log10_int$30:
 	; £temporary395 = x * float8$10#
-	fmul 
+	fmul
 
  log10_int$31:
 	; pop float x
@@ -778,7 +778,7 @@ section .text
 
  pow_int$5:
 	; push float float8$1#
-	fld1 
+	fld1
 
  pow_int$6:
 	; pop float product
@@ -804,7 +804,7 @@ section .text
 
  pow_int$11:
 	; £temporary402 = product * x
-	fmul 
+	fmul
 
  pow_int$12:
 	; pop float product
@@ -825,7 +825,7 @@ section .text
 
  pow_int$16:
 	; push float float8$1#
-	fld1 
+	fld1
 
  pow_int$17:
 	; push float product
@@ -833,7 +833,7 @@ section .text
 
  pow_int$18:
 	; £temporary403 = float8$1# / product
-	fdiv 
+	fdiv
 
  pow_int$19:
 	; decrease stack
@@ -865,13 +865,13 @@ section .text
 
  pow$1:
 	; push float float8$0#
-	fldz 
+	fldz
 
  pow$2:
 	; if x <= float8$0# goto 18
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jae pow$18
 
  pow$3:
@@ -911,7 +911,7 @@ section .text
 
  pow$11:
 	; £temporary408 = y * £temporary407
-	fmul 
+	fmul
 
  pow$12:
 	; parameter £temporary408, offset 64
@@ -946,7 +946,7 @@ section .text
 
  pow$19:
 	; push float float8$0#
-	fldz 
+	fldz
 
  pow$20:
 	; return_value = float8$0#
@@ -1003,7 +1003,7 @@ section .text
 
  ldexp$9:
 	; £temporary414 = x * £temporary413
-	fmul 
+	fmul
 
  ldexp$10:
 	; return_value = £temporary414
@@ -1029,13 +1029,13 @@ section .text
 
  frexp$2:
 	; push float float8$0#
-	fldz 
+	fldz
 
  frexp$3:
 	; if x != float8$0# goto 9
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jne frexp$9
 
  frexp$4:
@@ -1048,7 +1048,7 @@ section .text
 
  frexp$6:
 	; push float float8$0#
-	fldz 
+	fldz
 
  frexp$7:
 	; return_value = float8$0#
@@ -1142,7 +1142,7 @@ section .text
 
  frexp$27:
 	; £temporary424 = £temporary422 / £temporary423
-	fdiv 
+	fdiv
 
  frexp$28:
 	; £temporary425 = float_to_int £temporary424 (Double -> Signed_Int)
@@ -1220,7 +1220,7 @@ section .text
 
  frexp$45:
 	; £temporary431 = £temporary427 / £temporary430
-	fdiv 
+	fdiv
 
  frexp$46:
 	; pop float quotient
@@ -1232,13 +1232,13 @@ section .text
 
  frexp$48:
 	; push float float8$0#
-	fldz 
+	fldz
 
  frexp$49:
 	; if x >= float8$0# goto 54
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe frexp$54
 
  frexp$50:
@@ -1247,7 +1247,7 @@ section .text
 
  frexp$51:
 	; £temporary433 = -quotient
-	fchs 
+	fchs
 
  frexp$52:
 	; decrease stack
@@ -1276,18 +1276,18 @@ section .text
 
  frexp$58:
 	; push float float8$0#
-	fldz 
+	fldz
 
  frexp$59:
 	; if x != float8$0# goto 63
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jne frexp$63
 
  frexp$60:
 	; push float float8$0#
-	fldz 
+	fldz
 
  frexp$61:
 	; return_value = float8$0#
@@ -1373,7 +1373,7 @@ section .text
 
  frexp$80:
 	; £temporary439 = £temporary437 / £temporary438
-	fdiv 
+	fdiv
 
  frexp$81:
 	; £temporary440 = float_to_int £temporary439 (Double -> Signed_Int)
@@ -1447,7 +1447,7 @@ section .text
 
  frexp$97:
 	; £temporary445 = £temporary442 / £temporary444
-	fdiv 
+	fdiv
 
  frexp$98:
 	; pop float a
@@ -1459,13 +1459,13 @@ section .text
 
  frexp$100:
 	; push float float8$0#
-	fldz 
+	fldz
 
  frexp$101:
 	; if x >= float8$0# goto 106
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe frexp$106
 
  frexp$102:
@@ -1474,7 +1474,7 @@ section .text
 
  frexp$103:
 	; £temporary447 = -a
-	fchs 
+	fchs
 
  frexp$104:
 	; decrease stack
@@ -1502,7 +1502,7 @@ section .text
 
  sin:
 	; push float float8$0#
-	fldz 
+	fldz
 
  sin$1:
 	; pop float n
@@ -1510,7 +1510,7 @@ section .text
 
  sin$2:
 	; push float float8$1#
-	fld1 
+	fld1
 
  sin$3:
 	; pop float plusMinusOne
@@ -1518,7 +1518,7 @@ section .text
 
  sin$4:
 	; push float float8$1#
-	fld1 
+	fld1
 
  sin$5:
 	; pop float faculty
@@ -1534,7 +1534,7 @@ section .text
 
  sin$8:
 	; push float float8$0#
-	fldz 
+	fldz
 
  sin$9:
 	; pop float sum
@@ -1554,11 +1554,11 @@ section .text
 
  sin$13:
 	; £temporary461 = power / faculty
-	fdiv 
+	fdiv
 
  sin$14:
 	; £temporary462 = plusMinusOne * £temporary461
-	fmul 
+	fmul
 
  sin$15:
 	; pop float term
@@ -1574,7 +1574,7 @@ section .text
 
  sin$18:
 	; £temporary463 = sum + term
-	fadd 
+	fadd
 
  sin$19:
 	; pop float sum
@@ -1590,7 +1590,7 @@ section .text
 
  sin$22:
 	; £temporary464 = plusMinusOne * float8$minus1#
-	fmul 
+	fmul
 
  sin$23:
 	; pop float plusMinusOne
@@ -1610,11 +1610,11 @@ section .text
 
  sin$27:
 	; £temporary465 = x * x
-	fmul 
+	fmul
 
  sin$28:
 	; £temporary466 = power * £temporary465
-	fmul 
+	fmul
 
  sin$29:
 	; pop float power
@@ -1634,7 +1634,7 @@ section .text
 
  sin$33:
 	; £temporary467 = n + float8$2#
-	fadd 
+	fadd
 
  sin$34:
 	; push float n
@@ -1646,15 +1646,15 @@ section .text
 
  sin$36:
 	; £temporary468 = n + float8$3#
-	fadd 
+	fadd
 
  sin$37:
 	; £temporary469 = £temporary467 * £temporary468
-	fmul 
+	fmul
 
  sin$38:
 	; £temporary470 = faculty * £temporary469
-	fmul 
+	fmul
 
  sin$39:
 	; pop float faculty
@@ -1670,7 +1670,7 @@ section .text
 
  sin$42:
 	; £temporary471 = n + float8$2#
-	fadd 
+	fadd
 
  sin$43:
 	; pop float n
@@ -1709,9 +1709,9 @@ section .text
 
  sin$52:
 	; if £temporary472 >= float8$0.000000001# goto 10
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe sin$10
 
  sin$53:
@@ -1733,7 +1733,7 @@ section .text
 
  cos:
 	; push float float8$0#
-	fldz 
+	fldz
 
  cos$1:
 	; pop float n
@@ -1741,7 +1741,7 @@ section .text
 
  cos$2:
 	; push float float8$1#
-	fld1 
+	fld1
 
  cos$3:
 	; pop float plusMinusOne
@@ -1749,7 +1749,7 @@ section .text
 
  cos$4:
 	; push float float8$1#
-	fld1 
+	fld1
 
  cos$5:
 	; pop float faculty
@@ -1757,7 +1757,7 @@ section .text
 
  cos$6:
 	; push float float8$1#
-	fld1 
+	fld1
 
  cos$7:
 	; pop float power
@@ -1765,7 +1765,7 @@ section .text
 
  cos$8:
 	; push float float8$0#
-	fldz 
+	fldz
 
  cos$9:
 	; pop float sum
@@ -1785,11 +1785,11 @@ section .text
 
  cos$13:
 	; £temporary475 = power / faculty
-	fdiv 
+	fdiv
 
  cos$14:
 	; £temporary476 = plusMinusOne * £temporary475
-	fmul 
+	fmul
 
  cos$15:
 	; pop float term
@@ -1805,7 +1805,7 @@ section .text
 
  cos$18:
 	; £temporary477 = sum + term
-	fadd 
+	fadd
 
  cos$19:
 	; pop float sum
@@ -1821,7 +1821,7 @@ section .text
 
  cos$22:
 	; £temporary478 = plusMinusOne * float8$minus1#
-	fmul 
+	fmul
 
  cos$23:
 	; pop float plusMinusOne
@@ -1841,11 +1841,11 @@ section .text
 
  cos$27:
 	; £temporary479 = x * x
-	fmul 
+	fmul
 
  cos$28:
 	; £temporary480 = power * £temporary479
-	fmul 
+	fmul
 
  cos$29:
 	; pop float power
@@ -1861,11 +1861,11 @@ section .text
 
  cos$32:
 	; push float float8$1#
-	fld1 
+	fld1
 
  cos$33:
 	; £temporary481 = n + float8$1#
-	fadd 
+	fadd
 
  cos$34:
 	; push float n
@@ -1877,15 +1877,15 @@ section .text
 
  cos$36:
 	; £temporary482 = n + float8$2#
-	fadd 
+	fadd
 
  cos$37:
 	; £temporary483 = £temporary481 * £temporary482
-	fmul 
+	fmul
 
  cos$38:
 	; £temporary484 = faculty * £temporary483
-	fmul 
+	fmul
 
  cos$39:
 	; pop float faculty
@@ -1901,7 +1901,7 @@ section .text
 
  cos$42:
 	; £temporary485 = n + float8$2#
-	fadd 
+	fadd
 
  cos$43:
 	; pop float n
@@ -1940,9 +1940,9 @@ section .text
 
  cos$52:
 	; if £temporary486 >= float8$0.000000001# goto 10
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe cos$10
 
  cos$53:
@@ -1992,13 +1992,13 @@ section .text
 
  tan$7:
 	; push float float8$0#
-	fldz 
+	fldz
 
  tan$8:
 	; if cos_value == float8$0# goto 19
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	je tan$19
 
  tan$9:
@@ -2031,7 +2031,7 @@ section .text
 
  tan$16:
 	; £temporary492 = £temporary491 / cos_value
-	fdiv 
+	fdiv
 
  tan$17:
 	; return_value = £temporary492
@@ -2049,7 +2049,7 @@ section .text
 
  tan$20:
 	; push float float8$0#
-	fldz 
+	fldz
 
  tan$21:
 	; return_value = float8$0#
@@ -2098,7 +2098,7 @@ section .text
 
  sinh$8:
 	; £temporary496 = -x
-	fchs 
+	fchs
 
  sinh$9:
 	; parameter £temporary496, offset 56
@@ -2122,7 +2122,7 @@ section .text
 
  sinh$13:
 	; £temporary498 = £temporary495 - £temporary497
-	fsub 
+	fsub
 
  sinh$14:
 	; push float float8$2#
@@ -2130,7 +2130,7 @@ section .text
 
  sinh$15:
 	; £temporary499 = £temporary498 / float8$2#
-	fdiv 
+	fdiv
 
  sinh$16:
 	; return_value = £temporary499
@@ -2179,7 +2179,7 @@ section .text
 
  cosh$8:
 	; £temporary503 = -x
-	fchs 
+	fchs
 
  cosh$9:
 	; parameter £temporary503, offset 56
@@ -2203,7 +2203,7 @@ section .text
 
  cosh$13:
 	; £temporary505 = £temporary502 + £temporary504
-	fadd 
+	fadd
 
  cosh$14:
 	; push float float8$2#
@@ -2211,7 +2211,7 @@ section .text
 
  cosh$15:
 	; £temporary506 = £temporary505 / float8$2#
-	fdiv 
+	fdiv
 
  cosh$16:
 	; return_value = £temporary506
@@ -2256,13 +2256,13 @@ section .text
 
  tanh$7:
 	; push float float8$0#
-	fldz 
+	fldz
 
  tanh$8:
 	; if coh == float8$0# goto 21
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	je tanh$21
 
  tanh$9:
@@ -2299,7 +2299,7 @@ section .text
 
  tanh$17:
 	; £temporary512 = sh / coh
-	fdiv 
+	fdiv
 
  tanh$18:
 	; top float y
@@ -2321,7 +2321,7 @@ section .text
 
  tanh$22:
 	; push float float8$0#
-	fldz 
+	fldz
 
  tanh$23:
 	; return_value = float8$0#
@@ -2342,18 +2342,18 @@ section .text
 
  sqrt$1:
 	; push float float8$0#
-	fldz 
+	fldz
 
  sqrt$2:
 	; if v < float8$0# goto 31
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	ja sqrt$31
 
  sqrt$3:
 	; push float float8$1#
-	fld1 
+	fld1
 
  sqrt$4:
 	; pop float x_nplus1
@@ -2381,11 +2381,11 @@ section .text
 
  sqrt$10:
 	; £temporary516 = v / x
-	fdiv 
+	fdiv
 
  sqrt$11:
 	; £temporary517 = x + £temporary516
-	fadd 
+	fadd
 
  sqrt$12:
 	; push float float8$2#
@@ -2393,7 +2393,7 @@ section .text
 
  sqrt$13:
 	; £temporary518 = £temporary517 / float8$2#
-	fdiv 
+	fdiv
 
  sqrt$14:
 	; pop float x_nplus1
@@ -2425,7 +2425,7 @@ section .text
 
  sqrt$21:
 	; £temporary521 = x_nplus1 - x
-	fsub 
+	fsub
 
  sqrt$22:
 	; parameter £temporary521, offset 76
@@ -2450,9 +2450,9 @@ section .text
 
  sqrt$27:
 	; if £temporary522 >= float8$0.000000001# goto 6
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe sqrt$6
 
  sqrt$28:
@@ -2475,7 +2475,7 @@ section .text
 
  sqrt$32:
 	; push float float8$0#
-	fldz 
+	fldz
 
  sqrt$33:
 	; return_value = float8$0#
@@ -2516,13 +2516,13 @@ section .text
 
  asin$6:
 	; push float float8$1#
-	fld1 
+	fld1
 
  asin$7:
 	; if £temporary526 > float8$1# goto 29
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jb asin$29
 
  asin$8:
@@ -2541,7 +2541,7 @@ section .text
 
  asin$12:
 	; push float float8$1#
-	fld1 
+	fld1
 
  asin$13:
 	; push float x
@@ -2549,11 +2549,11 @@ section .text
 
  asin$14:
 	; £temporary528 = float8$1# + x
-	fadd 
+	fadd
 
  asin$15:
 	; push float float8$1#
-	fld1 
+	fld1
 
  asin$16:
 	; push float x
@@ -2561,11 +2561,11 @@ section .text
 
  asin$17:
 	; £temporary529 = float8$1# - x
-	fsub 
+	fsub
 
  asin$18:
 	; £temporary530 = £temporary528 * £temporary529
-	fmul 
+	fmul
 
  asin$19:
 	; parameter £temporary530, offset 88
@@ -2617,7 +2617,7 @@ section .text
 
  asin$30:
 	; push float float8$0#
-	fldz 
+	fldz
 
  asin$31:
 	; return_value = float8$0#
@@ -2658,13 +2658,13 @@ section .text
 
  acos$6:
 	; push float float8$1#
-	fld1 
+	fld1
 
  acos$7:
 	; if £temporary537 > float8$1# goto 29
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jb acos$29
 
  acos$8:
@@ -2675,7 +2675,7 @@ section .text
 
  acos$10:
 	; push float float8$1#
-	fld1 
+	fld1
 
  acos$11:
 	; push float x
@@ -2683,11 +2683,11 @@ section .text
 
  acos$12:
 	; £temporary539 = float8$1# + x
-	fadd 
+	fadd
 
  acos$13:
 	; push float float8$1#
-	fld1 
+	fld1
 
  acos$14:
 	; push float x
@@ -2695,11 +2695,11 @@ section .text
 
  acos$15:
 	; £temporary540 = float8$1# - x
-	fsub 
+	fsub
 
  acos$16:
 	; £temporary541 = £temporary539 * £temporary540
-	fmul 
+	fmul
 
  acos$17:
 	; parameter £temporary541, offset 56
@@ -2759,7 +2759,7 @@ section .text
 
  acos$30:
 	; push float float8$0#
-	fldz 
+	fldz
 
  acos$31:
 	; return_value = float8$0#
@@ -2780,13 +2780,13 @@ section .text
 
  asin2$1:
 	; push float float8$1#
-	fld1 
+	fld1
 
  asin2$2:
 	; if v != float8$1# goto 6
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jne asin2$6
 
  asin2$3:
@@ -2813,9 +2813,9 @@ section .text
 
  asin2$8:
 	; if v != float8$minus1# goto 12
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jne asin2$12
 
  asin2$9:
@@ -2858,18 +2858,18 @@ section .text
 
  asin2$18:
 	; push float float8$1#
-	fld1 
+	fld1
 
  asin2$19:
 	; if £temporary550 >= float8$1# goto 58
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe asin2$58
 
  asin2$20:
 	; push float float8$1#
-	fld1 
+	fld1
 
  asin2$21:
 	; pop float x_nplus1
@@ -2917,7 +2917,7 @@ section .text
 
  asin2$31:
 	; £temporary553 = x - £temporary552
-	fsub 
+	fsub
 
  asin2$32:
 	; push float v
@@ -2955,11 +2955,11 @@ section .text
 
  asin2$39:
 	; £temporary555 = v / £temporary554
-	fdiv 
+	fdiv
 
  asin2$40:
 	; £temporary556 = £temporary553 + £temporary555
-	fadd 
+	fadd
 
  asin2$41:
 	; pop float x_nplus1
@@ -2991,7 +2991,7 @@ section .text
 
  asin2$48:
 	; £temporary559 = x_nplus1 - x
-	fsub 
+	fsub
 
  asin2$49:
 	; parameter £temporary559, offset 76
@@ -3016,9 +3016,9 @@ section .text
 
  asin2$54:
 	; if £temporary560 >= float8$0.000000001# goto 23
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe asin2$23
 
  asin2$55:
@@ -3041,7 +3041,7 @@ section .text
 
  asin2$59:
 	; push float float8$0#
-	fldz 
+	fldz
 
  asin2$60:
 	; return_value = float8$0#
@@ -3062,18 +3062,18 @@ section .text
 
  acos2$1:
 	; push float float8$1#
-	fld1 
+	fld1
 
  acos2$2:
 	; if v != float8$1# goto 6
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jne acos2$6
 
  acos2$3:
 	; push float float8$0#
-	fldz 
+	fldz
 
  acos2$4:
 	; return_value = float8$0#
@@ -3111,18 +3111,18 @@ section .text
 
  acos2$12:
 	; push float float8$1#
-	fld1 
+	fld1
 
  acos2$13:
 	; if £temporary568 > float8$1# goto 56
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jb acos2$56
 
  acos2$14:
 	; push float float8$1#
-	fld1 
+	fld1
 
  acos2$15:
 	; top float x_nplus1
@@ -3166,7 +3166,7 @@ section .text
 
  acos2$24:
 	; £temporary571 = £temporary570 - v
-	fsub 
+	fsub
 
  acos2$25:
 	; call header integral zero 0 stack no zero 2
@@ -3200,11 +3200,11 @@ section .text
 
  acos2$31:
 	; £temporary573 = £temporary571 / £temporary572
-	fdiv 
+	fdiv
 
  acos2$32:
 	; £temporary574 = x_n + £temporary573
-	fadd 
+	fadd
 
  acos2$33:
 	; pop float x_nplus1
@@ -3261,7 +3261,7 @@ section .text
 
  acos2$46:
 	; £temporary576 = x_nplus1 - x_n
-	fsub 
+	fsub
 
  acos2$47:
 	; parameter £temporary576, offset 72
@@ -3286,9 +3286,9 @@ section .text
 
  acos2$52:
 	; if £temporary577 >= float8$0.000000001# goto 16
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe acos2$16
 
  acos2$53:
@@ -3311,7 +3311,7 @@ section .text
 
  acos2$57:
 	; push float float8$0#
-	fldz 
+	fldz
 
  acos2$58:
 	; return_value = float8$0#
@@ -3336,7 +3336,7 @@ section .text
 
  square$2:
 	; £temporary585 = x * x
-	fmul 
+	fmul
 
  square$3:
 	; return_value = £temporary585
@@ -3357,18 +3357,18 @@ section .text
 
  atan$1:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan$2:
 	; if x != float8$0# goto 6
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jne atan$6
 
  atan$3:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan$4:
 	; return_value = float8$0#
@@ -3386,13 +3386,13 @@ section .text
 
  atan$7:
 	; push float float8$1#
-	fld1 
+	fld1
 
  atan$8:
 	; if x != float8$1# goto 12
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jne atan$12
 
  atan$9:
@@ -3419,9 +3419,9 @@ section .text
 
  atan$14:
 	; if x != float8$minus1# goto 18
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jne atan$18
 
  atan$15:
@@ -3440,7 +3440,7 @@ section .text
 
  atan$18:
 	; push float float8$1#
-	fld1 
+	fld1
 
  atan$19:
 	; pop float sign
@@ -3448,7 +3448,7 @@ section .text
 
  atan$20:
 	; push float float8$1#
-	fld1 
+	fld1
 
  atan$21:
 	; pop float denominator
@@ -3464,7 +3464,7 @@ section .text
 
  atan$24:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan$25:
 	; pop float sum
@@ -3484,7 +3484,7 @@ section .text
 
  atan$29:
 	; £temporary589 = sign * product
-	fmul 
+	fmul
 
  atan$30:
 	; push float denominator
@@ -3492,7 +3492,7 @@ section .text
 
  atan$31:
 	; £temporary590 = £temporary589 / denominator
-	fdiv 
+	fdiv
 
  atan$32:
 	; pop float term
@@ -3508,7 +3508,7 @@ section .text
 
  atan$35:
 	; £temporary591 = sum + term
-	fadd 
+	fadd
 
  atan$36:
 	; pop float sum
@@ -3520,7 +3520,7 @@ section .text
 
  atan$38:
 	; £temporary592 = -sign
-	fchs 
+	fchs
 
  atan$39:
 	; pop float sign
@@ -3540,11 +3540,11 @@ section .text
 
  atan$43:
 	; £temporary593 = x * x
-	fmul 
+	fmul
 
  atan$44:
 	; £temporary594 = product * £temporary593
-	fmul 
+	fmul
 
  atan$45:
 	; pop float product
@@ -3560,7 +3560,7 @@ section .text
 
  atan$48:
 	; £temporary595 = denominator + float8$2#
-	fadd 
+	fadd
 
  atan$49:
 	; pop float denominator
@@ -3609,9 +3609,9 @@ section .text
 
  atan$60:
 	; if £temporary598 >= float8$0.000000001# goto 27
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe atan$27
 
  atan$61:
@@ -3637,18 +3637,18 @@ section .text
 
  atanY$1:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atanY$2:
 	; if v != float8$0# goto 6
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jne atanY$6
 
  atanY$3:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atanY$4:
 	; return_value = float8$0#
@@ -3666,13 +3666,13 @@ section .text
 
  atanY$7:
 	; push float float8$1#
-	fld1 
+	fld1
 
  atanY$8:
 	; if v != float8$1# goto 12
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jne atanY$12
 
  atanY$9:
@@ -3699,9 +3699,9 @@ section .text
 
  atanY$14:
 	; if v != float8$minus1# goto 18
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jne atanY$18
 
  atanY$15:
@@ -3748,9 +3748,9 @@ section .text
 
  atanY$25:
 	; if £temporary605 >= float8$0.5# goto 66
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe atanY$66
 
  atanY$26:
@@ -3775,7 +3775,7 @@ section .text
 
  atanY$31:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atanY$32:
 	; pop float sum
@@ -3791,7 +3791,7 @@ section .text
 
  atanY$35:
 	; £temporary608 = £temporary607 * product
-	fmul 
+	fmul
 
  atanY$36:
 	; £temporary609 = int_to_float denominator (Signed_Int -> Double)
@@ -3799,7 +3799,7 @@ section .text
 
  atanY$37:
 	; £temporary610 = £temporary608 / £temporary609
-	fdiv 
+	fdiv
 
  atanY$38:
 	; pop float term
@@ -3815,7 +3815,7 @@ section .text
 
  atanY$41:
 	; £temporary611 = sum + term
-	fadd 
+	fadd
 
  atanY$42:
 	; pop float sum
@@ -3844,11 +3844,11 @@ section .text
 
  atanY$48:
 	; £temporary613 = v * v
-	fmul 
+	fmul
 
  atanY$49:
 	; £temporary614 = product * £temporary613
-	fmul 
+	fmul
 
  atanY$50:
 	; pop float product
@@ -3901,9 +3901,9 @@ section .text
 
  atanY$62:
 	; if £temporary618 >= float8$0.000000001# goto 33
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe atanY$33
 
  atanY$63:
@@ -3946,13 +3946,13 @@ section .text
 
  atanY$72:
 	; push float float8$1#
-	fld1 
+	fld1
 
  atanY$73:
 	; if £temporary621 >= float8$1# goto 135
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe atanY$135
 
  atanY$74:
@@ -3975,7 +3975,7 @@ section .text
 
  atanY$78:
 	; push float float8$1#
-	fld1 
+	fld1
 
  atanY$79:
 	; top float x_nplus1
@@ -4019,7 +4019,7 @@ section .text
 
  atanY$88:
 	; £temporary625 = £temporary624 - v
-	fsub 
+	fsub
 
  atanY$89:
 	; call header integral zero 0 stack no zero 2
@@ -4041,7 +4041,7 @@ section .text
 
  atanY$93:
 	; £temporary626 = float8$2# * x
-	fmul 
+	fmul
 
  atanY$94:
 	; parameter £temporary626, offset 72
@@ -4066,11 +4066,11 @@ section .text
 
  atanY$98:
 	; push float float8$1#
-	fld1 
+	fld1
 
  atanY$99:
 	; £temporary628 = £temporary627 + float8$1#
-	fadd 
+	fadd
 
  atanY$100:
 	; parameter £temporary628, offset 72
@@ -4095,7 +4095,7 @@ section .text
 
  atanY$104:
 	; £temporary630 = £temporary625 * £temporary629
-	fmul 
+	fmul
 
  atanY$105:
 	; push float float8$2#
@@ -4103,11 +4103,11 @@ section .text
 
  atanY$106:
 	; £temporary631 = £temporary630 / float8$2#
-	fdiv 
+	fdiv
 
  atanY$107:
 	; £temporary632 = x - £temporary631
-	fsub 
+	fsub
 
  atanY$108:
 	; pop float x_nplus1
@@ -4164,7 +4164,7 @@ section .text
 
  atanY$121:
 	; £temporary634 = x_nplus1 - x
-	fsub 
+	fsub
 
  atanY$122:
 	; parameter £temporary634, offset 72
@@ -4189,9 +4189,9 @@ section .text
 
  atanY$127:
 	; if £temporary635 >= float8$0.000000001# goto 80
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe atanY$80
 
  atanY$128:
@@ -4232,7 +4232,7 @@ section .text
 
  atanY$136:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atanY$137:
 	; return_value = float8$0#
@@ -4253,18 +4253,18 @@ section .text
 
  atanX$1:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atanX$2:
 	; if v != float8$0# goto 6
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jne atanX$6
 
  atanX$3:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atanX$4:
 	; return_value = float8$0#
@@ -4302,18 +4302,18 @@ section .text
 
  atanX$12:
 	; push float float8$1#
-	fld1 
+	fld1
 
  atanX$13:
 	; if £temporary648 > float8$1# goto 59
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jb atanX$59
 
  atanX$14:
 	; push float float8$1#
-	fld1 
+	fld1
 
  atanX$15:
 	; top float x_nplus1
@@ -4357,7 +4357,7 @@ section .text
 
  atanX$24:
 	; £temporary651 = £temporary650 - v
-	fsub 
+	fsub
 
  atanX$25:
 	; call header integral zero 0 stack no zero 2
@@ -4379,7 +4379,7 @@ section .text
 
  atanX$29:
 	; £temporary652 = float8$2# * x
-	fmul 
+	fmul
 
  atanX$30:
 	; parameter £temporary652, offset 72
@@ -4404,11 +4404,11 @@ section .text
 
  atanX$34:
 	; push float float8$1#
-	fld1 
+	fld1
 
  atanX$35:
 	; £temporary654 = £temporary653 + float8$1#
-	fadd 
+	fadd
 
  atanX$36:
 	; parameter £temporary654, offset 72
@@ -4433,7 +4433,7 @@ section .text
 
  atanX$40:
 	; £temporary656 = £temporary651 * £temporary655
-	fmul 
+	fmul
 
  atanX$41:
 	; push float float8$2#
@@ -4441,11 +4441,11 @@ section .text
 
  atanX$42:
 	; £temporary657 = £temporary656 / float8$2#
-	fdiv 
+	fdiv
 
  atanX$43:
 	; £temporary658 = x - £temporary657
-	fsub 
+	fsub
 
  atanX$44:
 	; pop float x_nplus1
@@ -4467,7 +4467,7 @@ section .text
 
  atanX$49:
 	; £temporary659 = x_nplus1 - x
-	fsub 
+	fsub
 
  atanX$50:
 	; parameter £temporary659, offset 72
@@ -4492,9 +4492,9 @@ section .text
 
  atanX$55:
 	; if £temporary660 >= float8$0.000000001# goto 16
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe atanX$16
 
  atanX$56:
@@ -4517,7 +4517,7 @@ section .text
 
  atanX$60:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atanX$61:
 	; return_value = float8$0#
@@ -4538,13 +4538,13 @@ section .text
 
  atan2$1:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan2$2:
 	; if x <= float8$0# goto 13
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jae atan2$13
 
  atan2$3:
@@ -4560,7 +4560,7 @@ section .text
 
  atan2$6:
 	; £temporary668 = y / x
-	fdiv 
+	fdiv
 
  atan2$7:
 	; parameter £temporary668, offset 64
@@ -4595,13 +4595,13 @@ section .text
 
  atan2$14:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan2$15:
 	; if x >= float8$0# goto 43
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe atan2$43
 
  atan2$16:
@@ -4610,13 +4610,13 @@ section .text
 
  atan2$17:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan2$18:
 	; if y < float8$0# goto 31
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	ja atan2$31
 
  atan2$19:
@@ -4632,7 +4632,7 @@ section .text
 
  atan2$22:
 	; £temporary672 = y / x
-	fdiv 
+	fdiv
 
  atan2$23:
 	; parameter £temporary672, offset 64
@@ -4657,7 +4657,7 @@ section .text
 
  atan2$28:
 	; £temporary674 = £temporary673 + float8$3.1415926535897932384#
-	fadd 
+	fadd
 
  atan2$29:
 	; return_value = £temporary674
@@ -4682,7 +4682,7 @@ section .text
 
  atan2$34:
 	; £temporary675 = y / x
-	fdiv 
+	fdiv
 
  atan2$35:
 	; parameter £temporary675, offset 64
@@ -4707,7 +4707,7 @@ section .text
 
  atan2$40:
 	; £temporary677 = £temporary676 - float8$3.1415926535897932384#
-	fsub 
+	fsub
 
  atan2$41:
 	; return_value = £temporary677
@@ -4725,13 +4725,13 @@ section .text
 
  atan2$44:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan2$45:
 	; if y <= float8$0# goto 49
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jae atan2$49
 
  atan2$46:
@@ -4754,13 +4754,13 @@ section .text
 
  atan2$50:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan2$51:
 	; if y >= float8$0# goto 55
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe atan2$55
 
  atan2$52:
@@ -4783,7 +4783,7 @@ section .text
 
  atan2$56:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan2$57:
 	; return_value = float8$0#
@@ -4804,13 +4804,13 @@ section .text
 
  atan2x$1:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan2x$2:
 	; if denum <= float8$0# goto 19
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jae atan2x$19
 
  atan2x$3:
@@ -4826,7 +4826,7 @@ section .text
 
  atan2x$6:
 	; £temporary684 = num / denum
-	fdiv 
+	fdiv
 
  atan2x$7:
 	; parameter £temporary684, offset 64
@@ -4887,13 +4887,13 @@ section .text
 
  atan2x$20:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan2x$21:
 	; if num < float8$0# goto 41
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	ja atan2x$41
 
  atan2x$22:
@@ -4902,13 +4902,13 @@ section .text
 
  atan2x$23:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan2x$24:
 	; if denum >= float8$0# goto 41
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe atan2x$41
 
  atan2x$25:
@@ -4947,7 +4947,7 @@ section .text
 
  atan2x$33:
 	; £temporary691 = num / denum
-	fdiv 
+	fdiv
 
  atan2x$34:
 	; parameter £temporary691, offset 64
@@ -4971,7 +4971,7 @@ section .text
 
  atan2x$38:
 	; £temporary693 = float8$3.1415926535897932384# + £temporary692
-	fadd 
+	fadd
 
  atan2x$39:
 	; return_value = £temporary693
@@ -4989,13 +4989,13 @@ section .text
 
  atan2x$42:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan2x$43:
 	; if num >= float8$0# goto 63
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe atan2x$63
 
  atan2x$44:
@@ -5004,13 +5004,13 @@ section .text
 
  atan2x$45:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan2x$46:
 	; if denum >= float8$0# goto 63
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe atan2x$63
 
  atan2x$47:
@@ -5049,7 +5049,7 @@ section .text
 
  atan2x$55:
 	; £temporary698 = num / denum
-	fdiv 
+	fdiv
 
  atan2x$56:
 	; parameter £temporary698, offset 64
@@ -5073,7 +5073,7 @@ section .text
 
  atan2x$60:
 	; £temporary700 = float8$minus3.1415926535897932384# + £temporary699
-	fadd 
+	fadd
 
  atan2x$61:
 	; return_value = £temporary700
@@ -5091,13 +5091,13 @@ section .text
 
  atan2x$64:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan2x$65:
 	; if num <= float8$0# goto 76
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jae atan2x$76
 
  atan2x$66:
@@ -5106,13 +5106,13 @@ section .text
 
  atan2x$67:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan2x$68:
 	; if denum != float8$0# goto 76
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jne atan2x$76
 
  atan2x$69:
@@ -5153,13 +5153,13 @@ section .text
 
  atan2x$77:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan2x$78:
 	; if num >= float8$0# goto 89
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe atan2x$89
 
  atan2x$79:
@@ -5168,13 +5168,13 @@ section .text
 
  atan2x$80:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan2x$81:
 	; if denum != float8$0# goto 89
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jne atan2x$89
 
  atan2x$82:
@@ -5233,7 +5233,7 @@ section .text
 
  atan2x$94:
 	; push float float8$0#
-	fldz 
+	fldz
 
  atan2x$95:
 	; return_value = float8$0#
@@ -5254,13 +5254,13 @@ section .text
 
  floor$1:
 	; push float float8$0#
-	fldz 
+	fldz
 
  floor$2:
 	; if x >= float8$0# goto 13
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe floor$13
 
  floor$3:
@@ -5272,7 +5272,7 @@ section .text
 
  floor$5:
 	; £temporary714 = -x
-	fchs 
+	fchs
 
  floor$6:
 	; parameter £temporary714, offset 56
@@ -5293,7 +5293,7 @@ section .text
 
  floor$10:
 	; £temporary716 = -£temporary715
-	fchs 
+	fchs
 
  floor$11:
 	; return_value = £temporary716
@@ -5338,13 +5338,13 @@ section .text
 
  ceil$1:
 	; push float float8$0#
-	fldz 
+	fldz
 
  ceil$2:
 	; if x >= float8$0# goto 13
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe ceil$13
 
  ceil$3:
@@ -5356,7 +5356,7 @@ section .text
 
  ceil$5:
 	; £temporary721 = -x
-	fchs 
+	fchs
 
  ceil$6:
 	; parameter £temporary721, offset 56
@@ -5377,7 +5377,7 @@ section .text
 
  ceil$10:
 	; £temporary723 = -£temporary722
-	fchs 
+	fchs
 
  ceil$11:
 	; return_value = £temporary723
@@ -5399,7 +5399,7 @@ section .text
 
  ceil$15:
 	; £temporary724 = x + float8$0.999999999999#
-	fadd 
+	fadd
 
  ceil$16:
 	; £temporary725 = float_to_int £temporary724 (Double -> Signed_Long_Int)
@@ -5430,13 +5430,13 @@ section .text
 
  round$1:
 	; push float float8$0#
-	fldz 
+	fldz
 
  round$2:
 	; if x >= float8$0# goto 8
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe round$8
 
  round$3:
@@ -5449,7 +5449,7 @@ section .text
 
  round$5:
 	; £temporary729 = x - float8$0.5#
-	fsub 
+	fsub
 
  round$6:
 	; decrease stack
@@ -5468,7 +5468,7 @@ section .text
 
  round$10:
 	; £temporary730 = x + float8$0.5#
-	fadd 
+	fadd
 
  round$11:
 	; £temporary732 = float_to_int £temporary731 (Double -> Signed_Long_Int)
@@ -5499,13 +5499,13 @@ section .text
 
  fabs$1:
 	; push float float8$0#
-	fldz 
+	fldz
 
  fabs$2:
 	; if x >= float8$0# goto 7
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jbe fabs$7
 
  fabs$3:
@@ -5514,7 +5514,7 @@ section .text
 
  fabs$4:
 	; £temporary735 = -x
-	fchs 
+	fchs
 
  fabs$5:
 	; decrease stack
@@ -5593,13 +5593,13 @@ section .text
 
  modf$12:
 	; push float float8$0#
-	fldz 
+	fldz
 
  modf$13:
 	; if x <= float8$0# goto 24
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jae modf$24
 
  modf$14:
@@ -5634,7 +5634,7 @@ section .text
 
  modf$21:
 	; £temporary744 = £temporary743 - integral
-	fsub 
+	fsub
 
  modf$22:
 	; decrease stack
@@ -5675,11 +5675,11 @@ section .text
 
  modf$31:
 	; £temporary746 = £temporary745 - integral
-	fsub 
+	fsub
 
  modf$32:
 	; £temporary747 = -£temporary746
-	fchs 
+	fchs
 
  modf$33:
 	; pop float £field741 -> p
@@ -5691,13 +5691,13 @@ section .text
 
  modf$35:
 	; push float float8$0#
-	fldz 
+	fldz
 
  modf$36:
 	; if x <= float8$0# goto 40
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jae modf$40
 
  modf$37:
@@ -5717,7 +5717,7 @@ section .text
 
  modf$41:
 	; £temporary750 = -integral
-	fchs 
+	fchs
 
  modf$42:
 	; return_value = £temporary751
@@ -5738,13 +5738,13 @@ section .text
 
  fmod$1:
 	; push float float8$0#
-	fldz 
+	fldz
 
  fmod$2:
 	; if y == float8$0# goto 28
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	je fmod$28
 
  fmod$3:
@@ -5757,7 +5757,7 @@ section .text
 
  fmod$5:
 	; £temporary756 = x / y
-	fdiv 
+	fdiv
 
  fmod$6:
 	; pop float quotient
@@ -5786,7 +5786,7 @@ section .text
 
  fmod$12:
 	; £temporary759 = quotient - £temporary758
-	fsub 
+	fsub
 
  fmod$13:
 	; parameter £temporary759, offset 72
@@ -5815,13 +5815,13 @@ section .text
 
  fmod$19:
 	; push float float8$0#
-	fldz 
+	fldz
 
  fmod$20:
 	; if x <= float8$0# goto 24
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	jae fmod$24
 
  fmod$21:
@@ -5841,7 +5841,7 @@ section .text
 
  fmod$25:
 	; £temporary762 = -remainder
-	fchs 
+	fchs
 
  fmod$26:
 	; return_value = £temporary763
@@ -5859,7 +5859,7 @@ section .text
 
  fmod$29:
 	; push float float8$0#
-	fldz 
+	fldz
 
  fmod$30:
 	; return_value = float8$0#

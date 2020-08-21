@@ -102,7 +102,7 @@ section .text
 
  scanChar$17:
 	; syscall
-	syscall 
+	syscall
 
  scanChar$18:
 	; g_inChars = g_inChars + int4$1#
@@ -1998,7 +1998,7 @@ section .text
 
  scanLongDouble$2:
 	; push float float8$0.0#
-	fldz 
+	fldz
 
  scanLongDouble$3:
 	; pop float value
@@ -2006,7 +2006,7 @@ section .text
 
  scanLongDouble$4:
 	; push float float8$1.0#
-	fld1 
+	fld1
 
  scanLongDouble$5:
 	; pop float factor
@@ -2192,7 +2192,7 @@ section .text
 
  scanLongDouble$47:
 	; £temporary1251 = float8$10.0# * value
-	fmul 
+	fmul
 
  scanLongDouble$48:
 	; £temporary1252 = input - int1$48#
@@ -2214,7 +2214,7 @@ section .text
 
  scanLongDouble$51:
 	; £temporary1255 = £temporary1251 + £temporary1253
-	fadd 
+	fadd
 
  scanLongDouble$52:
 	; pop float value
@@ -2317,7 +2317,7 @@ section .text
 
  scanLongDouble$75:
 	; £temporary1262 = factor / float8$10.0#
-	fdiv 
+	fdiv
 
  scanLongDouble$76:
 	; pop float factor
@@ -2351,11 +2351,11 @@ section .text
 
  scanLongDouble$82:
 	; £temporary1266 = factor * £temporary1264
-	fmul 
+	fmul
 
  scanLongDouble$83:
 	; £temporary1267 = value + £temporary1266
-	fadd 
+	fadd
 
  scanLongDouble$84:
 	; pop float value
@@ -2508,7 +2508,7 @@ section .text
 
  scanLongDouble$118:
 	; £temporary1277 = value * £temporary1276
-	fmul 
+	fmul
 
  scanLongDouble$119:
 	; pop float value
@@ -2547,7 +2547,7 @@ section .text
 
  scanLongDouble$127:
 	; £temporary1279 = -value
-	fchs 
+	fchs
 
  scanLongDouble$128:
 	; pop float value

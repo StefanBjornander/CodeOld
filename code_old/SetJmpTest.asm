@@ -14,13 +14,13 @@ section .text
 
  divide$1:
 	; push float float8$0#
-	fldz 
+	fldz
 
  divide$2:
 	; if y == float8$0# goto 8
-	fcompp 
+	fcompp
 	fstsw ax
-	sahf 
+	sahf
 	je divide$8
 
  divide$3:
@@ -33,7 +33,7 @@ section .text
 
  divide$5:
 	; £temporary3164 = x / y
-	fdiv 
+	fdiv
 
  divide$6:
 	; return_value = £temporary3164
@@ -105,7 +105,7 @@ section .text
 
  divide$21:
 	; push float float8$0#
-	fldz 
+	fldz
 
  divide$22:
 	; return_value = float8$0#
@@ -125,7 +125,7 @@ section .text
 
  invers$1:
 	; push float float8$1.0#
-	fld1 
+	fld1
 
  invers$2:
 	; parameter float8$1.0#, offset 56

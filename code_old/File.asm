@@ -57,7 +57,7 @@ section .text
 
  @2605$filecreate$4:
 	; syscall
-	syscall 
+	syscall
 
  @2605$filecreate$5:
 	; return_value = int4$0#
@@ -109,7 +109,7 @@ section .text
 
  @2609$fileopen$5:
 	; syscall
-	syscall 
+	syscall
 
  @2609$fileopen$6:
 	; £temporary788 = rax
@@ -1040,7 +1040,7 @@ section .text
 
  fclose$5:
 	; syscall
-	syscall 
+	syscall
 
  fclose$6:
 	; return_value = int4$0#
@@ -1179,7 +1179,7 @@ section .text
 
  remove$3:
 	; syscall
-	syscall 
+	syscall
 
  remove$4:
 	; return_value = int4$0#
@@ -1215,7 +1215,7 @@ section .text
 
  rename$5:
 	; syscall
-	syscall 
+	syscall
 
  rename$6:
 	; return_value = int4$0#
@@ -1926,7 +1926,7 @@ section .text
 
  fread$9:
 	; syscall
-	syscall 
+	syscall
 
  fread$10:
 	; return_value = int4$0#
@@ -1983,7 +1983,7 @@ section .text
 
  fwrite$9:
 	; syscall
-	syscall 
+	syscall
 
  fwrite$10:
 	; return_value = int4$0#
@@ -2036,7 +2036,7 @@ section .text
 
  fseek$8:
 	; syscall
-	syscall 
+	syscall
 
  fseek$9:
 	; return_value = int4$0#

@@ -243,7 +243,7 @@ section .text
 
  file_test$48:
 	; push float float8$0#
-	fldz 
+	fldz
 
  file_test$49:
 	; pop float inValue

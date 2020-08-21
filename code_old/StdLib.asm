@@ -332,7 +332,7 @@ section .text
 
  strtod$1:
 	; push float float8$0#
-	fldz 
+	fldz
 
  strtod$2:
 	; pop float value
@@ -428,7 +428,7 @@ section .text
 
  abort$2:
 	; syscall
-	syscall 
+	syscall
 
  abort$3:
 	; return
@@ -1431,7 +1431,7 @@ section .text
 
  exit$34:
 	; syscall
-	syscall 
+	syscall
 
  exit$35:
 	; return
