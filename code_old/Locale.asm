@@ -67,9 +67,9 @@ section .text
 	and rax, rbx
 
  setlocale$14:
-	; £temporary345 = £temporary344 * Array_#
+	; £temporary345 = £temporary344 * Array_16#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_16#]
 
  setlocale$15:
 	; £temporary346 = sArray + £temporary345
@@ -109,9 +109,9 @@ section .text
 	and rax, rbx
 
  setlocale$23:
-	; £temporary351 = £temporary350 * Array_#
+	; £temporary351 = £temporary350 * Array_16#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_16#]
 
  setlocale$24:
 	; £temporary352 = sArray + £temporary351
@@ -925,6 +925,6 @@ string_SE#:
 	; initializer Pointer
 	dq @1525$sArray
 
-Array_#:
+Array_16#:
 	; initializer Array
 	dq 16

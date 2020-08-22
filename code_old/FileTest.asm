@@ -1647,9 +1647,9 @@ section .text
 	and rax, rbx
 
  file_test$362:
-	; £temporary3540 = £temporary3539 * Array_#
+	; £temporary3540 = £temporary3539 * Array_8#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_8#]
 
  file_test$363:
 	; £temporary3541 = arr + £temporary3540
@@ -4003,7 +4003,7 @@ container4bytes#:
 	; initializer zero 4
 	times 4 db 0
 
-Array_#:
+Array_8#:
 	; initializer Array
 	dq 8
 

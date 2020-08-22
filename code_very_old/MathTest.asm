@@ -122,7 +122,7 @@ section .text
 
  math_test_1x$21:
 	; push float float8$0#
-	fldz 
+	fldz
 
  math_test_1x$22:
 	; parameter float8$0#, offset 48
@@ -143,7 +143,7 @@ section .text
 
  math_test_1x$26:
 	; push float float8$1#
-	fld1 
+	fld1
 
  math_test_1x$27:
 	; parameter float8$1#, offset 48
@@ -490,7 +490,7 @@ section .text
 
  main_math$6:
 	; push float float8$1.0#
-	fld1 
+	fld1
 
  main_math$7:
 	; parameter float8$1.0#, offset 48
@@ -553,7 +553,7 @@ section .text
 
  main_math$21:
 	; push float float8$0#
-	fldz 
+	fldz
 
  main_math$22:
 	; parameter float8$0#, offset 48
@@ -784,7 +784,7 @@ section .text
 
  main_math$76:
 	; push float float8$1.0#
-	fld1 
+	fld1
 
  main_math$77:
 	; parameter float8$1.0#, offset 48
@@ -842,7 +842,7 @@ section .text
 
  main_math$90:
 	; push float float8$0#
-	fldz 
+	fldz
 
  main_math$91:
 	; parameter float8$0#, offset 48
@@ -871,7 +871,7 @@ section .text
 
  main_math$97:
 	; push float float8$0#
-	fldz 
+	fldz
 
  main_math$98:
 	; parameter float8$0#, offset 48
@@ -900,7 +900,7 @@ section .text
 
  main_math$104:
 	; push float float8$1#
-	fld1 
+	fld1
 
  main_math$105:
 	; parameter float8$1#, offset 48
@@ -929,7 +929,7 @@ section .text
 
  main_math$111:
 	; push float float8$1#
-	fld1 
+	fld1
 
  main_math$112:
 	; parameter float8$1#, offset 48
@@ -958,7 +958,7 @@ section .text
 
  main_math$118:
 	; push float float8$0#
-	fldz 
+	fldz
 
  main_math$119:
 	; parameter float8$0#, offset 48
@@ -966,7 +966,7 @@ section .text
 
  main_math$120:
 	; push float float8$0#
-	fldz 
+	fldz
 
  main_math$121:
 	; parameter float8$0#, offset 56
@@ -995,7 +995,7 @@ section .text
 
  main_math$127:
 	; push float float8$0#
-	fldz 
+	fldz
 
  main_math$128:
 	; parameter float8$0#, offset 56
@@ -1024,7 +1024,7 @@ section .text
 
  main_math$134:
 	; push float float8$0#
-	fldz 
+	fldz
 
  main_math$135:
 	; parameter float8$0#, offset 56
@@ -2962,7 +2962,7 @@ section .text
 
  math_test_1$436:
 	; push float float8$0#
-	fldz 
+	fldz
 
  math_test_1$437:
 	; pop float w

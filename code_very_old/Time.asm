@@ -51,7 +51,7 @@ section .text
 
  time$5:
 	; syscall
-	syscall 
+	syscall
 
  time$6:
 	; if timePtr == int8$0# goto 9

@@ -150,9 +150,9 @@ section .text
 	and rax, rbx
 
  fopen$4:
-	; £temporary794 = £temporary793 * Array_#
+	; £temporary794 = £temporary793 * Array_41#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_41#]
 
  fopen$5:
 	; £temporary795 = g_fileArray + £temporary794
@@ -187,9 +187,9 @@ section .text
 	and rax, rbx
 
  fopen$12:
-	; £temporary800 = £temporary799 * Array_#
+	; £temporary800 = £temporary799 * Array_41#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_41#]
 
  fopen$13:
 	; £temporary801 = g_fileArray + £temporary800
@@ -919,9 +919,9 @@ section .text
 	and rax, rbx
 
  fflush$4:
-	; £temporary844 = £temporary843 * Array_#
+	; £temporary844 = £temporary843 * Array_41#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_41#]
 
  fflush$5:
 	; £temporary845 = g_fileArray + £temporary844
@@ -946,9 +946,9 @@ section .text
 	and rax, rbx
 
  fflush$10:
-	; £temporary848 = £temporary847 * Array_#
+	; £temporary848 = £temporary847 * Array_41#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_41#]
 
  fflush$11:
 	; £temporary849 = g_fileArray + £temporary848
@@ -1069,9 +1069,9 @@ section .text
 	and rax, rbx
 
  fclose$11:
-	; £temporary863 = £temporary862 * Array_#
+	; £temporary863 = £temporary862 * Array_41#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_41#]
 
  fclose$12:
 	; £temporary864 = g_fileArray + £temporary863
@@ -1096,9 +1096,9 @@ section .text
 	and rax, rbx
 
  fclose$17:
-	; £temporary867 = £temporary866 * Array_#
+	; £temporary867 = £temporary866 * Array_41#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_41#]
 
  fclose$18:
 	; £temporary868 = g_fileArray + £temporary867
@@ -2518,7 +2518,7 @@ stderr:
 	; initializer Signed_Int
 	dd 66
 
-Array_#:
+Array_41#:
 	; initializer Array
 	dq 41
 

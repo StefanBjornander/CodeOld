@@ -39,7 +39,7 @@
 38: goto <MiddleCode>
 39: check track map float stack
 40: call header
-41: £temporary1022 = g_tempSize * Array_#
+41: £temporary1022 = g_tempSize * Array_4#
 42: £temporary1023 = g_tempArray + £temporary1022
 43: £field1021 -> £temporary1023 = *£temporary1023
 44: parameter £field1021 -> £temporary1023, offset 19
@@ -48,7 +48,7 @@
 47: post call
 48: £temporary1025 = g_tempSize
 49: g_tempSize = g_tempSize + int2$1#
-50: £temporary1027 = £temporary1025 * Array_#
+50: £temporary1027 = £temporary1025 * Array_4#
 51: £temporary1028 = g_tempArray + £temporary1027
 52: £field1026 -> £temporary1028 = *£temporary1028
 53: return_value = £field1026 -> £temporary1028

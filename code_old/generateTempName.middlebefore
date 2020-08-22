@@ -42,7 +42,7 @@
 41: check track map float stack
 42: call header
 43: £temporary1010 = int_to_int g_tempSize (Signed_Int -> Array)
-44: £temporary1011 = £temporary1010 * Array_#
+44: £temporary1011 = £temporary1010 * Array_4#
 45: £temporary1012 = g_tempArray + £temporary1011
 46: £field1009 -> £temporary1012 = *£temporary1012
 47: parameter £field1009 -> £temporary1012, offset 65
@@ -52,7 +52,7 @@
 51: £temporary1014 = g_tempSize
 52: g_tempSize = g_tempSize + int4$1#
 53: £temporary1016 = int_to_int £temporary1014 (Signed_Int -> Array)
-54: £temporary1017 = £temporary1016 * Array_#
+54: £temporary1017 = £temporary1016 * Array_4#
 55: £temporary1018 = g_tempArray + £temporary1017
 56: £field1015 -> £temporary1018 = *£temporary1018
 57: return_value = £field1015 -> £temporary1018

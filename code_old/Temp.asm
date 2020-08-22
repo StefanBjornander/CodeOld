@@ -35,9 +35,9 @@ section .text
 	and rax, rbx
 
  @2996$existsTempName$6:
-	; £temporary987 = £temporary986 * Array_#
+	; £temporary987 = £temporary986 * Array_4#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_4#]
 
  @2996$existsTempName$7:
 	; £temporary988 = g_tempArray + £temporary987
@@ -248,9 +248,9 @@ section .text
 	and rax, rbx
 
  @3003$generateTempName$32:
-	; £temporary1011 = £temporary1010 * Array_#
+	; £temporary1011 = £temporary1010 * Array_4#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_4#]
 
  @3003$generateTempName$33:
 	; £temporary1012 = g_tempArray + £temporary1011
@@ -293,9 +293,9 @@ section .text
 	and rax, rbx
 
  @3003$generateTempName$42:
-	; £temporary1017 = £temporary1016 * Array_#
+	; £temporary1017 = £temporary1016 * Array_4#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_4#]
 
  @3003$generateTempName$43:
 	; £temporary1018 = g_tempArray + £temporary1017
@@ -564,7 +564,7 @@ section .data
 	; initializer Signed_Int
 	dd 0
 
-Array_#:
+Array_4#:
 	; initializer Array
 	dq 4
 

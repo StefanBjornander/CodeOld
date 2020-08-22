@@ -30,7 +30,7 @@
 29: if £temporary1006 != int4$0# goto 47
 30: call header integral zero 0 stack zero 0
 31: £temporary1010 = int_to_int g_tempSize (Signed_Int -> Array)
-32: £temporary1011 = £temporary1010 * Array_#
+32: £temporary1011 = £temporary1010 * Array_4#
 33: £temporary1012 = g_tempArray + £temporary1011
 34: £field1009 -> £temporary1012 = *£temporary1012
 35: parameter £field1009 -> £temporary1012, offset 65
@@ -40,7 +40,7 @@
 39: £temporary1014 = g_tempSize
 40: g_tempSize = g_tempSize + int4$1#
 41: £temporary1016 = int_to_int £temporary1014 (Signed_Int -> Array)
-42: £temporary1017 = £temporary1016 * Array_#
+42: £temporary1017 = £temporary1016 * Array_4#
 43: £temporary1018 = g_tempArray + £temporary1017
 44: £field1015 -> £temporary1018 = *£temporary1018
 45: return_value = £field1015 -> £temporary1018

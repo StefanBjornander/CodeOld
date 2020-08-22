@@ -574,9 +574,9 @@ section .text
 	and rax, rbx
 
  gmtime$64:
-	; £temporary2306 = £temporary2305 * Array_#
+	; £temporary2306 = £temporary2305 * Array_4#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_4#]
 
  gmtime$65:
 	; £temporary2307 = daysOfMonths + £temporary2306
@@ -609,9 +609,9 @@ section .text
 	and rax, rbx
 
  gmtime$70:
-	; £temporary2312 = £temporary2311 * Array_#
+	; £temporary2312 = £temporary2311 * Array_4#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_4#]
 
  gmtime$71:
 	; £temporary2313 = daysOfMonths + £temporary2312
@@ -2973,7 +2973,7 @@ int4$400#:
 	; initializer Signed_Int
 	dd 400
 
-Array_#:
+Array_4#:
 	; initializer Array
 	dq 4
 

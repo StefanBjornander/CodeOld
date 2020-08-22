@@ -27,7 +27,7 @@
 26: £temporary1018 = return_value
 27: if £temporary1018 != int2$0# goto 43
 28: call header integral zero 0 stack zero 0
-29: £temporary1022 = g_tempSize * Array_#
+29: £temporary1022 = g_tempSize * Array_4#
 30: £temporary1023 = g_tempArray + £temporary1022
 31: £field1021 -> £temporary1023 = *£temporary1023
 32: parameter £field1021 -> £temporary1023, offset 19
@@ -36,7 +36,7 @@
 35: post call
 36: £temporary1025 = g_tempSize
 37: g_tempSize = g_tempSize + int2$1#
-38: £temporary1027 = £temporary1025 * Array_#
+38: £temporary1027 = £temporary1025 * Array_4#
 39: £temporary1028 = g_tempArray + £temporary1027
 40: £field1026 -> £temporary1028 = *£temporary1028
 41: return_value = £field1026 -> £temporary1028

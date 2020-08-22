@@ -198,9 +198,9 @@ section .text
 	and rax, rbx
 
  time_test$41:
-	; £temporary4048 = £temporary4047 * Array_#
+	; £temporary4048 = £temporary4047 * Array_8#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_8#]
 
  time_test$42:
 	; £temporary4049 = weekdays + £temporary4048
@@ -338,9 +338,9 @@ section .text
 	and rax, rbx
 
  time_test$69:
-	; £temporary4068 = £temporary4067 * Array_#
+	; £temporary4068 = £temporary4067 * Array_8#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_8#]
 
  time_test$70:
 	; £temporary4069 = weekdays + £temporary4068
@@ -682,6 +682,6 @@ string_strftime203C25i3E203C25s3E0A#:
 	; initializer String
 	db "strftime <%i> <%s>", 10, 0
 
-Array_#:
+Array_8#:
 	; initializer Array
 	dq 8
