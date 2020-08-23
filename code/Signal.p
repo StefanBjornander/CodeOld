@@ -308,32 +308,32 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Signal.c,2$
 
 void signal ( int sig , handler func ) {
    
-         
-      
-   
-   
+ printf ( "Signal %i function %p\n" , sig , func ) ;
+register_al = ( short ) sig ;
+register_ah = 0x25s ;
+register_dx = func ;
 
 
 
-    
-    
+interrupt ( 0x21s ) ;
+printf ( "Signal done\n" ) ;
   
   
  }
 
 int raise ( int sig ) {
    
-       
-      
-   
+ printf ( "\nRaise signal %i\n" , sig ) ;
+register_al = ( short ) sig ;
+register_ah = 0x35s ;
 
 
-    
-    
+interrupt ( 0x21s ) ;
+handler func = register_bx ;
 
-      
+printf ( "Raise function %p\n" , func ) ;
   
- handler func = ( ( void * ) 0 ) ;
+     
   
  if ( func == ( ( handler ) 0 ) ) {
 printf ( "Raise default\n" ) ;
