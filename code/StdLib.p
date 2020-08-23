@@ -733,17 +733,17 @@ return value ;
 
 void abort ( void ) {
    
- register_ah = 0x4Cs ;
-register_al = -1s ;
+    
+   
 
 
-interrupt ( 0x21s ) ;
+    
   
 
    
-    
-   
-   
+ register_rax = 60L ;
+register_rdi = -1L ;
+syscall ( ) ;
   
  }
 
@@ -1352,17 +1352,17 @@ g_funcArray [ index ] ( ) ;
 }
 
    
- register_al = ( short ) status ;
-register_ah = 0x4Cs ;
+       
+   
 
 
-interrupt ( 0x21s ) ;
+    
   
 
    
-    
-       
-   
+ register_rax = 60L ;
+register_rdi = ( unsigned long ) status ;
+syscall ( ) ;
   
  }
 
