@@ -808,3 +808,19 @@ void assert_test(void) {
 void assert_test2(int n) {
   assert(n != 7);
 }
+
+//int arr[3], brr[3];
+
+  /*int* p;
+
+  if (arr < p) {
+    ++p;
+  }
+
+  if (arr < brr) {
+    ++p;
+  }
+
+  if (arr < 1000) {
+    ++p;
+  }*/

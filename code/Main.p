@@ -1474,3 +1474,19 @@ assert_test2 ( n ) ;
 void assert_test2 ( int n ) {
 if ( ! ( n != 7 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 7" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 809 ) ; abort ( ) ; } ;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
