@@ -280,17 +280,17 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\SetJmp.c,1$
 
 int setjmp ( jmp_buf buf ) {
    
- int * bp_pointer = register_bp ;
-buf [ 0 ] = bp_pointer [ 0 ];
-buf [ 1 ] = bp_pointer [ 1 ];
-buf [ 2 ] = bp_pointer [ 2 ];
-  
-
-   
       
         
         
         
+  
+
+   
+ int * ebp_pointer = register_bp ;
+buf [ 0 ] = ebp_pointer [ 0 ];
+buf [ 1 ] = ebp_pointer [ 1 ];
+buf [ 2 ] = ebp_pointer [ 2 ];
   
 
 return 0 ;
@@ -304,11 +304,11 @@ void longjmp ( jmp_buf buf , int return_value ) {
 
 
    
- register_bx = return_value ;
-register_cx = buf [ 0 ];
-register_bp = buf [ 1 ];
-register_di = buf [ 2 ];
-jump_register ( register_cx ) ;
+    
+     
+     
+     
+    
   
 
 }
