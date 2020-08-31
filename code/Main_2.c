@@ -1,5 +1,5 @@
-#include <StdIO.h>
-#include <StdLib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <Assert.h>
 
 void file_test(void);

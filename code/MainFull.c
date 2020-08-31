@@ -1,6 +1,6 @@
-#include <Math.h> 
+#include <math.h> 
 #include <Time.h>
-#include <StdIO.h>
+#include <stdio.h>
 #include <ErrNo.h>
 #define NDEBUG
 #include <Assert.h>

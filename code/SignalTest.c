@@ -1,5 +1,5 @@
-#include <StdIO.h>
-#include <StdLib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <Signal.h>
 
 /*void signal_handle1(int sig) {

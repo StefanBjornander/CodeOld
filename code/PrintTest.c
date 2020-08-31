@@ -1,4 +1,4 @@
-#include <StdIO.h>
+#include <stdio.h>
 
 void print_test(void) {
   /*printf("<%1i> <%1i> <%1i> <%1i> <%1i> <%1i>\n", 1, 2, 3, 4, 5, 6);

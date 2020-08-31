@@ -1,6 +1,6 @@
-#include <Math.h>
-#include <StdIO.h>
-#include <CType.h>
+#include <math.h>
+#include <stdio.h>
+#include <ctype.h>
 #include <ErrNo.h>
 #include <String.h>
 #include <Assert.h>

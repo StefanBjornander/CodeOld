@@ -1,7 +1,7 @@
-#include <StdDef.h>
-#include <StdLib.h>
-#include <StdIO.h>
-#include <Math.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
 #include <String.h>
 #include <ErrNo.h>
 #include <Assert.h>

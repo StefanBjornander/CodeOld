@@ -6,11 +6,11 @@ void longjmp ( jmp_buf env , int value ) ;
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\SetJmp.c,0$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
    
    
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
    
    
 
@@ -53,9 +53,9 @@ extern double fmod ( double num , double denum ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,3$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\CType.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
    
    
 
@@ -75,9 +75,9 @@ extern int toupper ( int c ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,4$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdArg.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
    
    
 
@@ -89,9 +89,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdArg.h,1$
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,5$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdDef.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
    
    
 
@@ -106,9 +106,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdDef.h,1$
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,6$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\File.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
    
    
 
@@ -186,9 +186,9 @@ void perror ( const char * s ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,7$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Temp.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
    
    
 
@@ -200,9 +200,9 @@ char * tmpnam ( char name [ 4 ] ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,8$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
    
    
 
@@ -230,9 +230,9 @@ int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,9$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
    
    
 
@@ -270,7 +270,7 @@ int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,10$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
        
 
   
@@ -280,17 +280,17 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\SetJmp.c,1$
 
 int setjmp ( jmp_buf buf ) {
    
+ int * bp_pointer = register_bp ;
+buf [ 0 ] = bp_pointer [ 0 ];
+buf [ 1 ] = bp_pointer [ 1 ];
+buf [ 2 ] = bp_pointer [ 2 ];
+  
+
+   
       
         
         
         
-  
-
-   
- int * ebp_pointer = register_bp ;
-buf [ 0 ] = ebp_pointer [ 0 ];
-buf [ 1 ] = ebp_pointer [ 1 ];
-buf [ 2 ] = ebp_pointer [ 2 ];
   
 
 return 0 ;
@@ -304,11 +304,11 @@ void longjmp ( jmp_buf buf , int return_value ) {
 
 
    
-    
-     
-     
-     
-    
+ register_bx = return_value ;
+register_cx = buf [ 0 ];
+register_bp = buf [ 1 ];
+register_di = buf [ 2 ];
+jump_register ( register_cx ) ;
   
 
 }

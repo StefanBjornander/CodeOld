@@ -1,5 +1,5 @@
-#include <StdIO.h>
-#include <StdLib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 void stack_test() {
   static i = 0;

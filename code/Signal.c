@@ -1,6 +1,6 @@
-#include <StdDef.h>
+#include <stddef.h>
 #include <Signal.h>
-#include <StdIO.h>
+#include <stdio.h>
 
 void signal(int sig, handler func) {
 #ifdef __WINDOWS__

@@ -1,4 +1,4 @@
-#include <StdIO.h>
+#include <stdio.h>
 
 void stdio_test(void) {
   { int n = 0;
