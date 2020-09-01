@@ -1,4 +1,8 @@
 Main.asm
+429:
+old  <	; exit int2$0#>
+new  <	; return>
+
 Malloc.asm
 CType.asm
 ErrNo.asm
@@ -27,4 +31,52 @@ SignalTest.asm
 StackTest.asm
 MallocTest.asm
 StdLibTest.asm
+908:
+old  < memorycopy0:>
+new  < label$0:>
+
+915:
+old  <	jne memorycopy0>
+new  <	jne label$0>
+
+957:
+old  < memorycopy1:>
+new  < label$1:>
+
+964:
+old  <	jne memorycopy1>
+new  <	jne label$1>
+
+1006:
+old  < memorycopy2:>
+new  < label$2:>
+
+1013:
+old  <	jne memorycopy2>
+new  <	jne label$2>
+
+1055:
+old  < memorycopy3:>
+new  < label$3:>
+
+1062:
+old  <	jne memorycopy3>
+new  <	jne label$3>
+
 TimeTest.asm
+178:
+old  < memorycopy4:>
+new  < label$4:>
+
+185:
+old  <	jne memorycopy4>
+new  <	jne label$4>
+
+318:
+old  < memorycopy5:>
+new  < label$5:>
+
+325:
+old  <	jne memorycopy5>
+new  <	jne label$5>
+

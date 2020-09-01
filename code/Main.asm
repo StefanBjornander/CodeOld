@@ -426,7 +426,7 @@ _start:
 	; post call
 
  main$79:
-	; exit int2$0#
+	; return
 	mov rdi, 0
 	mov rax, 60
 	syscall
