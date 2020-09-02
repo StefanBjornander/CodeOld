@@ -9,8 +9,8 @@ malloc$1:	; call header integral zero 0 stack zero 0
 7:	
 
 malloc$2:	; parameter stderr, offset 6
-8:		mov a48, [stderr]
-9:		mov [bp + 14], a48
+8:		mov a49, [stderr]
+9:		mov [bp + 14], a49
 11:	
 
 malloc$3:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -60,23 +60,23 @@ malloc$12:	; if memorySize != 0 goto 15
 47:	
 
 malloc$13:	; return_value = 0
-48:		mov a49, 0
+48:		mov a50, 0
 50:	
 
 malloc$14:	; return
-51:		mov t50, [bp]
+51:		mov t51, [bp]
 52:		mov di, [bp + 4]
 53:		mov bp, [bp + 2]
-54:		jmp t50
+54:		jmp t51
 56:	
 
 malloc$15:	; £temporary179 = int_to_int memorySize (Signed_Int -> Unsigned_Int)
-57:		mov a51, [bp + 6]
+57:		mov a52, [bp + 6]
 60:	
 
 malloc$16:	; newBlockSize = £temporary179 + 4
-61:		add a51, 4
-62:		mov [bp + 8], a51
+61:		add a52, 4
+62:		mov [bp + 8], a52
 64:	
 
 malloc$17:	; minGap = 0
@@ -100,8 +100,8 @@ malloc$21:	; prevBlockPtr = 0
 79:	
 
 malloc$22:	; currBlockPtr = g_firstBlockPtr
-80:		mov a52, [g_firstBlockPtr]
-81:		mov [bp + 20], a52
+80:		mov a53, [g_firstBlockPtr]
+81:		mov [bp + 20], a53
 83:	
 
 malloc$23:	; if currBlockPtr == 0 goto 41
@@ -110,35 +110,35 @@ malloc$23:	; if currBlockPtr == 0 goto 41
 87:	
 
 malloc$24:	; £temporary182 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
-88:		mov a53, [bp + 20]
+88:		mov a54, [bp + 20]
 91:	
 
 malloc$25:	; currAddress = £temporary182
-92:		mov [bp + 22], a53
+92:		mov [bp + 22], a54
 94:	
 
 malloc$26:	; £temporary183 -> currBlockPtr = *currBlockPtr
-95:		mov a54, [bp + 20]
+95:		mov a55, [bp + 20]
 97:	
 
 malloc$27:	; £temporary184 = currAddress + £temporary183 -> currBlockPtr
-98:		mov a55, [bp + 22]
-99:		add a55, [a54]
+98:		mov a56, [bp + 22]
+99:		add a56, [a55]
 101:	
 
 malloc$28:	; £temporary185 = £temporary184 + 4
-102:		add a55, 4
+102:		add a56, 4
 104:	
 
 malloc$29:	; currGap = lastAddress - £temporary185
-105:		mov a56, [bp + 12]
-106:		sub a56, a55
-107:		mov [bp + 24], a56
+105:		mov a57, [bp + 12]
+106:		sub a57, a56
+107:		mov [bp + 24], a57
 109:	
 
 malloc$30:	; if newBlockSize > currGap goto 36
-110:		mov a57, [bp + 24]
-111:		cmp [bp + 8], a57
+110:		mov a58, [bp + 24]
+111:		cmp [bp + 8], a58
 112:		ja malloc$36
 114:	
 
@@ -148,43 +148,43 @@ malloc$31:	; if minGap == 0 goto 33
 118:	
 
 malloc$32:	; if currGap >= minGap goto 36
-119:		mov a58, [bp + 10]
-120:		cmp [bp + 24], a58
+119:		mov a59, [bp + 10]
+120:		cmp [bp + 24], a59
 121:		jae malloc$36
 123:	
 
 malloc$33:	; minGap = currGap
-124:		mov a59, [bp + 24]
-125:		mov [bp + 10], a59
+124:		mov a60, [bp + 24]
+125:		mov [bp + 10], a60
 127:	
 
 malloc$34:	; minBlockPtr = currBlockPtr
-128:		mov a60, [bp + 20]
-129:		mov [bp + 14], a60
+128:		mov a61, [bp + 20]
+129:		mov [bp + 14], a61
 131:	
 
 malloc$35:	; minPrevBlockPtr = prevBlockPtr
-132:		mov a61, [bp + 18]
-133:		mov [bp + 16], a61
+132:		mov a62, [bp + 18]
+133:		mov [bp + 16], a62
 135:	
 
 malloc$36:	; lastAddress = currAddress
-136:		mov a62, [bp + 22]
-137:		mov [bp + 12], a62
+136:		mov a63, [bp + 22]
+137:		mov [bp + 12], a63
 139:	
 
 malloc$37:	; prevBlockPtr = currBlockPtr
-140:		mov a63, [bp + 20]
-141:		mov [bp + 18], a63
+140:		mov a64, [bp + 20]
+141:		mov [bp + 18], a64
 143:	
 
 malloc$38:	; £temporary192 -> currBlockPtr = *currBlockPtr, offset 2
-144:		mov a64, [bp + 20]
+144:		mov a65, [bp + 20]
 146:	
 
 malloc$39:	; currBlockPtr = £temporary192 -> currBlockPtr
-147:		mov t65, [a64 + 2]
-148:		mov [bp + 20], t65
+147:		mov t66, [a65 + 2]
+148:		mov [bp + 20], t66
 150:	
 
 malloc$40:	; goto 23
@@ -197,46 +197,46 @@ malloc$41:	; if minBlockPtr == 0 goto 61
 157:	
 
 malloc$42:	; £temporary194 = int_to_int minBlockPtr (Pointer -> Unsigned_Int)
-158:		mov a66, [bp + 14]
+158:		mov a67, [bp + 14]
 161:	
 
 malloc$43:	; £temporary195 -> minBlockPtr = *minBlockPtr
-162:		mov a67, [bp + 14]
+162:		mov a68, [bp + 14]
 164:	
 
 malloc$44:	; £temporary196 = £temporary194 + £temporary195 -> minBlockPtr
-165:		add a66, [a67]
+165:		add a67, [a68]
 167:	
 
 malloc$45:	; newAddress = £temporary196 + 4
-168:		add a66, 4
-169:		mov [bp + 22], a66
+168:		add a67, 4
+169:		mov [bp + 22], a67
 171:	
 
 malloc$46:	; £temporary198 = int_to_int newAddress (Unsigned_Int -> Pointer)
-172:		mov a68, [bp + 22]
+172:		mov a69, [bp + 22]
 175:	
 
 malloc$47:	; newBlockPtr = £temporary198
-176:		mov [bp + 24], a68
+176:		mov [bp + 24], a69
 178:	
 
 malloc$48:	; £temporary199 -> newBlockPtr = *newBlockPtr
-179:		mov a69, [bp + 24]
+179:		mov a70, [bp + 24]
 181:	
 
 malloc$49:	; £temporary199 -> newBlockPtr = memorySize
-182:		mov a70, [bp + 6]
-183:		mov [a69], a70
+182:		mov a71, [bp + 6]
+183:		mov [a70], a71
 185:	
 
 malloc$50:	; £temporary200 -> newBlockPtr = *newBlockPtr, offset 2
-186:		mov a71, [bp + 24]
+186:		mov a72, [bp + 24]
 188:	
 
 malloc$51:	; £temporary200 -> newBlockPtr = minBlockPtr
-189:		mov a72, [bp + 14]
-190:		mov [a71 + 2], a72
+189:		mov a73, [bp + 14]
+190:		mov [a72 + 2], a73
 192:	
 
 malloc$52:	; if minPrevBlockPtr == 0 goto 56
@@ -245,12 +245,12 @@ malloc$52:	; if minPrevBlockPtr == 0 goto 56
 196:	
 
 malloc$53:	; £temporary202 -> minPrevBlockPtr = *minPrevBlockPtr, offset 2
-197:		mov a73, [bp + 16]
+197:		mov a74, [bp + 16]
 199:	
 
 malloc$54:	; £temporary202 -> minPrevBlockPtr = newBlockPtr
-200:		mov a74, [bp + 24]
-201:		mov [a73 + 2], a74
+200:		mov a75, [bp + 24]
+201:		mov [a74 + 2], a75
 203:	
 
 malloc$55:	; goto 57
@@ -258,13 +258,13 @@ malloc$55:	; goto 57
 206:	
 
 malloc$56:	; g_firstBlockPtr = newBlockPtr
-207:		mov a75, [bp + 24]
-208:		mov [g_firstBlockPtr], a75
+207:		mov a76, [bp + 24]
+208:		mov [g_firstBlockPtr], a76
 210:	
 
 malloc$57:	; £temporary203 = newAddress + 4
-211:		mov a76, [bp + 22]
-212:		add a76, 4
+211:		mov a77, [bp + 22]
+212:		add a77, 4
 214:	
 
 malloc$58:	; £temporary204 = int_to_int £temporary203 (Unsigned_Int -> Pointer)
@@ -274,54 +274,54 @@ malloc$59:	; return_value = £temporary204
 219:	
 
 malloc$60:	; return
-220:		mov t77, [bp]
+220:		mov t78, [bp]
 221:		mov di, [bp + 4]
 222:		mov bp, [bp + 2]
-223:		jmp t77
+223:		jmp t78
 225:	
 
 malloc$61:	; newAddress = lastAddress - newBlockSize
-226:		mov a78, [bp + 12]
-227:		sub a78, [bp + 8]
-228:		mov [bp + 22], a78
+226:		mov a79, [bp + 12]
+227:		sub a79, [bp + 8]
+228:		mov [bp + 22], a79
 230:	
 
 malloc$62:	; £temporary206 = bp
 232:	
 
 malloc$63:	; stackTop = £temporary206
-233:		mov [bp + 24], t79
+233:		mov [bp + 24], t80
 235:	
 
 malloc$64:	; if stackTop > newAddress goto 80
-236:		mov a80, [bp + 22]
-237:		cmp [bp + 24], a80
+236:		mov a81, [bp + 22]
+237:		cmp [bp + 24], a81
 238:		ja malloc$80
 240:	
 
 malloc$65:	; £temporary208 = int_to_int newAddress (Unsigned_Int -> Pointer)
-241:		mov a81, [bp + 22]
+241:		mov a82, [bp + 22]
 244:	
 
 malloc$66:	; newBlockPtr = £temporary208
-245:		mov [bp + 26], a81
+245:		mov [bp + 26], a82
 247:	
 
 malloc$67:	; £temporary209 -> newBlockPtr = *newBlockPtr
-248:		mov a82, [bp + 26]
+248:		mov a83, [bp + 26]
 250:	
 
 malloc$68:	; £temporary209 -> newBlockPtr = memorySize
-251:		mov a83, [bp + 6]
-252:		mov [a82], a83
+251:		mov a84, [bp + 6]
+252:		mov [a83], a84
 254:	
 
 malloc$69:	; £temporary210 -> newBlockPtr = *newBlockPtr, offset 2
-255:		mov a84, [bp + 26]
+255:		mov a85, [bp + 26]
 257:	
 
 malloc$70:	; £temporary210 -> newBlockPtr = 0
-258:		mov word [a84 + 2], 0
+258:		mov word [a85 + 2], 0
 260:	
 
 malloc$71:	; if prevBlockPtr == 0 goto 75
@@ -330,12 +330,12 @@ malloc$71:	; if prevBlockPtr == 0 goto 75
 264:	
 
 malloc$72:	; £temporary212 -> prevBlockPtr = *prevBlockPtr, offset 2
-265:		mov a85, [bp + 18]
+265:		mov a86, [bp + 18]
 267:	
 
 malloc$73:	; £temporary212 -> prevBlockPtr = newBlockPtr
-268:		mov a86, [bp + 26]
-269:		mov [a85 + 2], a86
+268:		mov a87, [bp + 26]
+269:		mov [a86 + 2], a87
 271:	
 
 malloc$74:	; goto 76
@@ -343,13 +343,13 @@ malloc$74:	; goto 76
 274:	
 
 malloc$75:	; g_firstBlockPtr = newBlockPtr
-275:		mov a87, [bp + 26]
-276:		mov [g_firstBlockPtr], a87
+275:		mov a88, [bp + 26]
+276:		mov [g_firstBlockPtr], a88
 278:	
 
 malloc$76:	; £temporary213 = newAddress + 4
-279:		mov a88, [bp + 22]
-280:		add a88, 4
+279:		mov a89, [bp + 22]
+280:		add a89, 4
 282:	
 
 malloc$77:	; £temporary214 = int_to_int £temporary213 (Unsigned_Int -> Pointer)
@@ -359,21 +359,21 @@ malloc$78:	; return_value = £temporary214
 287:	
 
 malloc$79:	; return
-288:		mov t89, [bp]
+288:		mov t90, [bp]
 289:		mov di, [bp + 4]
 290:		mov bp, [bp + 2]
-291:		jmp t89
+291:		jmp t90
 293:	
 
 malloc$80:	; return_value = 0
-294:		mov a90, 0
+294:		mov a91, 0
 296:	
 
 malloc$81:	; return
-297:		mov t91, [bp]
+297:		mov t92, [bp]
 298:		mov di, [bp + 4]
 299:		mov bp, [bp + 2]
-300:		jmp t91
+300:		jmp t92
 302:	
 
 malloc$82:	; function end malloc
@@ -383,13 +383,13 @@ calloc:	; call header integral zero 0 stack zero 0
 3:	
 
 calloc$1:	; £temporary220 = number * size
-4:		mov a92, [bp + 6]
+4:		mov a93, [bp + 6]
 6:		xor dx, dx
 7:		imul word [bp + 8]
 13:	
 
 calloc$2:	; parameter £temporary220, offset 6
-14:		mov [bp + 16], t95
+14:		mov [bp + 16], t96
 16:	
 
 calloc$3:	; call function noellipse-noellipse malloc
@@ -406,7 +406,7 @@ calloc$5:	; £temporary221 = return_value
 29:	
 
 calloc$6:	; pointer = £temporary221
-30:		mov [bp + 10], t97
+30:		mov [bp + 10], t98
 32:	
 
 calloc$7:	; if pointer == 0 goto 14
@@ -418,8 +418,8 @@ calloc$8:	; call header integral zero 0 stack zero 0
 38:	
 
 calloc$9:	; parameter pointer, offset 6
-39:		mov a98, [bp + 10]
-40:		mov [bp + 18], a98
+39:		mov a99, [bp + 10]
+40:		mov [bp + 18], a99
 42:	
 
 calloc$10:	; parameter 0, offset 8
@@ -427,8 +427,8 @@ calloc$10:	; parameter 0, offset 8
 45:	
 
 calloc$11:	; parameter size, offset 10
-46:		mov a99, [bp + 8]
-47:		mov [bp + 22], a99
+46:		mov a100, [bp + 8]
+47:		mov [bp + 22], a100
 49:	
 
 calloc$12:	; call function noellipse-noellipse memset
@@ -442,14 +442,14 @@ calloc$13:	; post call
 57:	
 
 calloc$14:	; return_value = pointer
-58:		mov a100, [bp + 10]
+58:		mov a101, [bp + 10]
 60:	
 
 calloc$15:	; return
-61:		mov t101, [bp]
+61:		mov t102, [bp]
 62:		mov di, [bp + 4]
 63:		mov bp, [bp + 2]
-64:		jmp t101
+64:		jmp t102
 66:	
 
 calloc$16:	; function end calloc
@@ -461,25 +461,25 @@ free:	; if freeMemoryPtr != 0 goto 2
 5:	
 
 free$1:	; return
-6:		mov t102, [bp]
+6:		mov t103, [bp]
 7:		mov di, [bp + 4]
 8:		mov bp, [bp + 2]
-9:		jmp t102
+9:		jmp t103
 11:	
 
 free$2:	; £temporary229 = int_to_int freeMemoryPtr (Pointer -> Unsigned_Int)
-12:		mov a103, [bp + 6]
+12:		mov a104, [bp + 6]
 15:	
 
 free$3:	; £temporary230 = £temporary229 - 4
-16:		sub a103, 4
+16:		sub a104, 4
 18:	
 
 free$4:	; £temporary231 = int_to_int £temporary230 (Unsigned_Int -> Pointer)
 21:	
 
 free$5:	; freeBlockPtr = £temporary231
-22:		mov [bp + 8], a103
+22:		mov [bp + 8], a104
 24:	
 
 free$6:	; prevBlockPtr = 0
@@ -487,8 +487,8 @@ free$6:	; prevBlockPtr = 0
 27:	
 
 free$7:	; currBlockPtr = g_firstBlockPtr
-28:		mov a104, [g_firstBlockPtr]
-29:		mov [bp + 12], a104
+28:		mov a105, [g_firstBlockPtr]
+29:		mov [bp + 12], a105
 31:	
 
 free$8:	; if currBlockPtr == 0 goto 32
@@ -497,8 +497,8 @@ free$8:	; if currBlockPtr == 0 goto 32
 35:	
 
 free$9:	; if currBlockPtr != freeBlockPtr goto 28
-36:		mov a105, [bp + 8]
-37:		cmp [bp + 12], a105
+36:		mov a106, [bp + 8]
+37:		cmp [bp + 12], a106
 38:		jne free$28
 40:	
 
@@ -508,11 +508,11 @@ free$10:	; if prevBlockPtr != 0 goto 15
 44:	
 
 free$11:	; £temporary235 -> currBlockPtr = *currBlockPtr, offset 2
-45:		mov a106, [bp + 12]
+45:		mov a107, [bp + 12]
 47:	
 
 free$12:	; if £temporary235 -> currBlockPtr != 0 goto 15
-48:		cmp word [a106 + 2], 0
+48:		cmp word [a107 + 2], 0
 49:		jne free$15
 51:	
 
@@ -530,12 +530,12 @@ free$15:	; if prevBlockPtr != 0 goto 19
 61:	
 
 free$16:	; £temporary239 -> currBlockPtr = *currBlockPtr, offset 2
-62:		mov a107, [bp + 12]
+62:		mov a108, [bp + 12]
 64:	
 
 free$17:	; g_firstBlockPtr = £temporary239 -> currBlockPtr
-65:		mov t108, [a107 + 2]
-66:		mov [g_firstBlockPtr], t108
+65:		mov t109, [a108 + 2]
+66:		mov [g_firstBlockPtr], t109
 68:	
 
 free$18:	; goto 27
@@ -543,20 +543,20 @@ free$18:	; goto 27
 71:	
 
 free$19:	; £temporary240 -> currBlockPtr = *currBlockPtr, offset 2
-72:		mov a109, [bp + 12]
+72:		mov a110, [bp + 12]
 74:	
 
 free$20:	; if £temporary240 -> currBlockPtr != 0 goto 24
-75:		cmp word [a109 + 2], 0
+75:		cmp word [a110 + 2], 0
 76:		jne free$24
 78:	
 
 free$21:	; £temporary242 -> prevBlockPtr = *prevBlockPtr, offset 2
-79:		mov a110, [bp + 10]
+79:		mov a111, [bp + 10]
 81:	
 
 free$22:	; £temporary242 -> prevBlockPtr = 0
-82:		mov word [a110 + 2], 0
+82:		mov word [a111 + 2], 0
 84:	
 
 free$23:	; goto 27
@@ -564,37 +564,37 @@ free$23:	; goto 27
 87:	
 
 free$24:	; £temporary243 -> prevBlockPtr = *prevBlockPtr, offset 2
-88:		mov a111, [bp + 10]
+88:		mov a112, [bp + 10]
 90:	
 
 free$25:	; £temporary244 -> currBlockPtr = *currBlockPtr, offset 2
-91:		mov a112, [bp + 12]
+91:		mov a113, [bp + 12]
 93:	
 
 free$26:	; £temporary243 -> prevBlockPtr = £temporary244 -> currBlockPtr
-94:		mov t113, [a112 + 2]
-95:		mov [a111 + 2], t113
+94:		mov t114, [a113 + 2]
+95:		mov [a112 + 2], t114
 97:	
 
 free$27:	; return
-98:		mov t114, [bp]
+98:		mov t115, [bp]
 99:		mov di, [bp + 4]
 100:		mov bp, [bp + 2]
-101:		jmp t114
+101:		jmp t115
 103:	
 
 free$28:	; prevBlockPtr = currBlockPtr
-104:		mov a115, [bp + 12]
-105:		mov [bp + 10], a115
+104:		mov a116, [bp + 12]
+105:		mov [bp + 10], a116
 107:	
 
 free$29:	; £temporary245 -> currBlockPtr = *currBlockPtr, offset 2
-108:		mov a116, [bp + 12]
+108:		mov a117, [bp + 12]
 110:	
 
 free$30:	; currBlockPtr = £temporary245 -> currBlockPtr
-111:		mov t117, [a116 + 2]
-112:		mov [bp + 12], t117
+111:		mov t118, [a117 + 2]
+112:		mov [bp + 12], t118
 114:	
 
 free$31:	; goto 8
@@ -602,10 +602,10 @@ free$31:	; goto 8
 117:	
 
 free$32:	; return
-118:		mov t118, [bp]
+118:		mov t119, [bp]
 119:		mov di, [bp + 4]
 120:		mov bp, [bp + 2]
-121:		jmp t118
+121:		jmp t119
 123:	
 
 free$33:	; function end free
@@ -620,8 +620,8 @@ realloc$1:	; call header integral zero 0 stack zero 0
 7:	
 
 realloc$2:	; parameter stderr, offset 6
-8:		mov a119, [stderr]
-9:		mov [bp + 16], a119
+8:		mov a120, [stderr]
+9:		mov [bp + 16], a120
 11:	
 
 realloc$3:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -679,8 +679,8 @@ realloc$14:	; call header integral zero 0 stack zero 0
 53:	
 
 realloc$15:	; parameter stderr, offset 6
-54:		mov a120, [stderr]
-55:		mov [bp + 16], a120
+54:		mov a121, [stderr]
+55:		mov [bp + 16], a121
 57:	
 
 realloc$16:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -733,8 +733,8 @@ realloc$26:	; call header integral zero 0 stack zero 0
 95:	
 
 realloc$27:	; parameter newMemorySize, offset 6
-96:		mov a121, [bp + 8]
-97:		mov [bp + 16], a121
+96:		mov a122, [bp + 8]
+97:		mov [bp + 16], a122
 99:	
 
 realloc$28:	; call function noellipse-noellipse malloc
@@ -754,10 +754,10 @@ realloc$31:	; return_value = £temporary257
 114:	
 
 realloc$32:	; return
-115:		mov t124, [bp]
+115:		mov t125, [bp]
 116:		mov di, [bp + 4]
 117:		mov bp, [bp + 2]
-118:		jmp t124
+118:		jmp t125
 120:	
 
 realloc$33:	; if newMemorySize != 0 goto 40
@@ -769,8 +769,8 @@ realloc$34:	; call header integral zero 0 stack zero 0
 126:	
 
 realloc$35:	; parameter oldMemoryPtr, offset 6
-127:		mov a125, [bp + 6]
-128:		mov [bp + 16], a125
+127:		mov a126, [bp + 6]
+128:		mov [bp + 16], a126
 130:	
 
 realloc$36:	; call function noellipse-noellipse free
@@ -784,68 +784,68 @@ realloc$37:	; post call
 138:	
 
 realloc$38:	; return_value = 0
-139:		mov a126, 0
+139:		mov a127, 0
 141:	
 
 realloc$39:	; return
-142:		mov t127, [bp]
+142:		mov t128, [bp]
 143:		mov di, [bp + 4]
 144:		mov bp, [bp + 2]
-145:		jmp t127
+145:		jmp t128
 147:	
 
 realloc$40:	; £temporary260 = int_to_int newMemorySize (Signed_Int -> Unsigned_Int)
-148:		mov a128, [bp + 8]
+148:		mov a129, [bp + 8]
 151:	
 
 realloc$41:	; newBlockSize = £temporary260 + 4
-152:		add a128, 4
-153:		mov [bp + 10], a128
+152:		add a129, 4
+153:		mov [bp + 10], a129
 155:	
 
 realloc$42:	; £temporary262 = int_to_int oldMemoryPtr (Pointer -> Unsigned_Int)
-156:		mov a129, [bp + 6]
+156:		mov a130, [bp + 6]
 159:	
 
 realloc$43:	; £temporary263 = £temporary262 - 4
-160:		sub a129, 4
+160:		sub a130, 4
 162:	
 
 realloc$44:	; £temporary264 = int_to_int £temporary263 (Unsigned_Int -> Pointer)
 165:	
 
 realloc$45:	; oldBlockPtr = £temporary264
-166:		mov [bp + 12], a129
+166:		mov [bp + 12], a130
 168:	
 
 realloc$46:	; £temporary265 -> oldBlockPtr = *oldBlockPtr
-169:		mov a130, [bp + 12]
+169:		mov a131, [bp + 12]
 171:	
 
 realloc$47:	; if newBlockSize > £temporary265 -> oldBlockPtr goto 52
-172:		mov t131, [a130]
-173:		cmp [bp + 10], t131
+172:		mov t132, [a131]
+173:		cmp [bp + 10], t132
 174:		ja realloc$52
 176:	
 
 realloc$48:	; £temporary267 -> oldBlockPtr = *oldBlockPtr
-177:		mov a132, [bp + 12]
+177:		mov a133, [bp + 12]
 179:	
 
 realloc$49:	; £temporary267 -> oldBlockPtr = newBlockSize
-180:		mov a133, [bp + 10]
-181:		mov [a132], a133
+180:		mov a134, [bp + 10]
+181:		mov [a133], a134
 183:	
 
 realloc$50:	; return_value = oldMemoryPtr
-184:		mov a134, [bp + 6]
+184:		mov a135, [bp + 6]
 186:	
 
 realloc$51:	; return
-187:		mov t135, [bp]
+187:		mov t136, [bp]
 188:		mov di, [bp + 4]
 189:		mov bp, [bp + 2]
-190:		jmp t135
+190:		jmp t136
 192:	
 
 realloc$52:	; lastAddress = 65528
@@ -853,8 +853,8 @@ realloc$52:	; lastAddress = 65528
 195:	
 
 realloc$53:	; currBlockPtr = g_firstBlockPtr
-196:		mov a136, [g_firstBlockPtr]
-197:		mov [bp + 16], a136
+196:		mov a137, [g_firstBlockPtr]
+197:		mov [bp + 16], a137
 199:	
 
 realloc$54:	; if currBlockPtr == 0 goto 68
@@ -863,62 +863,62 @@ realloc$54:	; if currBlockPtr == 0 goto 68
 203:	
 
 realloc$55:	; if currBlockPtr != oldBlockPtr goto 63
-204:		mov a137, [bp + 12]
-205:		cmp [bp + 16], a137
+204:		mov a138, [bp + 12]
+205:		cmp [bp + 16], a138
 206:		jne realloc$63
 208:	
 
 realloc$56:	; £temporary270 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
-209:		mov a138, [bp + 16]
+209:		mov a139, [bp + 16]
 212:	
 
 realloc$57:	; availableSize = lastAddress - £temporary270
-213:		mov a139, [bp + 14]
-214:		sub a139, a138
-215:		mov [bp + 18], a139
+213:		mov a140, [bp + 14]
+214:		sub a140, a139
+215:		mov [bp + 18], a140
 217:	
 
 realloc$58:	; if availableSize < newBlockSize goto 68
-218:		mov a140, [bp + 10]
-219:		cmp [bp + 18], a140
+218:		mov a141, [bp + 10]
+219:		cmp [bp + 18], a141
 220:		jb realloc$68
 222:	
 
 realloc$59:	; £temporary273 -> oldBlockPtr = *oldBlockPtr
-223:		mov a141, [bp + 12]
+223:		mov a142, [bp + 12]
 225:	
 
 realloc$60:	; £temporary273 -> oldBlockPtr = newBlockSize
-226:		mov a142, [bp + 10]
-227:		mov [a141], a142
+226:		mov a143, [bp + 10]
+227:		mov [a142], a143
 229:	
 
 realloc$61:	; return_value = oldMemoryPtr
-230:		mov a143, [bp + 6]
+230:		mov a144, [bp + 6]
 232:	
 
 realloc$62:	; return
-233:		mov t144, [bp]
+233:		mov t145, [bp]
 234:		mov di, [bp + 4]
 235:		mov bp, [bp + 2]
-236:		jmp t144
+236:		jmp t145
 238:	
 
 realloc$63:	; £temporary274 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
-239:		mov a145, [bp + 16]
+239:		mov a146, [bp + 16]
 242:	
 
 realloc$64:	; lastAddress = £temporary274
-243:		mov [bp + 14], a145
+243:		mov [bp + 14], a146
 245:	
 
 realloc$65:	; £temporary275 -> currBlockPtr = *currBlockPtr, offset 2
-246:		mov a146, [bp + 16]
+246:		mov a147, [bp + 16]
 248:	
 
 realloc$66:	; currBlockPtr = £temporary275 -> currBlockPtr
-249:		mov t147, [a146 + 2]
-250:		mov [bp + 16], t147
+249:		mov t148, [a147 + 2]
+250:		mov [bp + 16], t148
 252:	
 
 realloc$67:	; goto 54
@@ -929,8 +929,8 @@ realloc$68:	; call header integral zero 0 stack zero 0
 257:	
 
 realloc$69:	; parameter newMemorySize, offset 6
-258:		mov a148, [bp + 8]
-259:		mov [bp + 24], a148
+258:		mov a149, [bp + 8]
+259:		mov [bp + 24], a149
 261:	
 
 realloc$70:	; call function noellipse-noellipse malloc
@@ -947,7 +947,7 @@ realloc$72:	; £temporary276 = return_value
 274:	
 
 realloc$73:	; newMemoryPtr = £temporary276
-275:		mov [bp + 18], t150
+275:		mov [bp + 18], t151
 277:	
 
 realloc$74:	; if newMemoryPtr == 0 goto 87
@@ -959,18 +959,18 @@ realloc$75:	; call header integral zero 0 stack zero 0
 283:	
 
 realloc$76:	; parameter newMemoryPtr, offset 6
-284:		mov a151, [bp + 18]
-285:		mov [bp + 26], a151
+284:		mov a152, [bp + 18]
+285:		mov [bp + 26], a152
 287:	
 
 realloc$77:	; parameter oldMemoryPtr, offset 8
-288:		mov a152, [bp + 6]
-289:		mov [bp + 28], a152
+288:		mov a153, [bp + 6]
+289:		mov [bp + 28], a153
 291:	
 
 realloc$78:	; parameter newMemorySize, offset 10
-292:		mov a153, [bp + 8]
-293:		mov [bp + 30], a153
+292:		mov a154, [bp + 8]
+293:		mov [bp + 30], a154
 295:	
 
 realloc$79:	; call function noellipse-noellipse memcpy
@@ -987,8 +987,8 @@ realloc$81:	; call header integral zero 0 stack zero 0
 305:	
 
 realloc$82:	; parameter oldMemoryPtr, offset 6
-306:		mov a154, [bp + 6]
-307:		mov [bp + 26], a154
+306:		mov a155, [bp + 6]
+307:		mov [bp + 26], a155
 309:	
 
 realloc$83:	; call function noellipse-noellipse free
@@ -1002,33 +1002,33 @@ realloc$84:	; post call
 317:	
 
 realloc$85:	; return_value = newMemoryPtr
-318:		mov a155, [bp + 18]
+318:		mov a156, [bp + 18]
 320:	
 
 realloc$86:	; return
-321:		mov t156, [bp]
+321:		mov t157, [bp]
 322:		mov di, [bp + 4]
 323:		mov bp, [bp + 2]
-324:		jmp t156
+324:		jmp t157
 326:	
 
 realloc$87:	; return_value = 0
-327:		mov a157, 0
+327:		mov a158, 0
 329:	
 
 realloc$88:	; return
-330:		mov t158, [bp]
+330:		mov t159, [bp]
 331:		mov di, [bp + 4]
 332:		mov bp, [bp + 2]
-333:		jmp t158
+333:		jmp t159
 335:	
 
 realloc$89:	; function end realloc
 1:	
 
 print_heap:	; currBlockPtr = g_firstBlockPtr
-2:		mov a159, [g_firstBlockPtr]
-3:		mov [bp + 6], a159
+2:		mov a160, [g_firstBlockPtr]
+3:		mov [bp + 6], a160
 5:	
 
 print_heap$1:	; call header integral zero 0 stack zero 0
@@ -1062,20 +1062,20 @@ print_heap$7:	; parameter string_2020Address2025u2C20Size2025u0A#, offset 6
 28:	
 
 print_heap$8:	; £temporary299 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
-29:		mov a160, [bp + 6]
+29:		mov a161, [bp + 6]
 32:	
 
 print_heap$9:	; parameter £temporary299, offset 8
-33:		mov [bp + 16], a160
+33:		mov [bp + 16], a161
 35:	
 
 print_heap$10:	; £temporary300 -> currBlockPtr = *currBlockPtr
-36:		mov a161, [bp + 6]
+36:		mov a162, [bp + 6]
 38:	
 
 print_heap$11:	; parameter £temporary300 -> currBlockPtr, offset 10
-39:		mov t162, [a161]
-40:		mov [bp + 18], t162
+39:		mov t163, [a162]
+40:		mov [bp + 18], t163
 42:	
 
 print_heap$12:	; call function noellipse-ellipse printf, extra 0
@@ -1091,12 +1091,12 @@ print_heap$13:	; post call
 52:	
 
 print_heap$14:	; £temporary302 -> currBlockPtr = *currBlockPtr, offset 2
-53:		mov a163, [bp + 6]
+53:		mov a164, [bp + 6]
 55:	
 
 print_heap$15:	; currBlockPtr = £temporary302 -> currBlockPtr
-56:		mov t164, [a163 + 2]
-57:		mov [bp + 6], t164
+56:		mov t165, [a164 + 2]
+57:		mov [bp + 6], t165
 59:	
 
 print_heap$16:	; goto 5
@@ -1122,10 +1122,10 @@ print_heap$20:	; post call
 76:	
 
 print_heap$21:	; return
-77:		mov t165, [bp]
+77:		mov t166, [bp]
 78:		mov di, [bp + 4]
 79:		mov bp, [bp + 2]
-80:		jmp t165
+80:		jmp t166
 82:	
 
 print_heap$22:	; function end print_heap

@@ -1,7 +1,7 @@
-#include <StdDef.h>
-#include <StdLib.h>
-#include <StdIO.h>
-#include <Math.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
 #include <String.h>
 #include <ErrNo.h>
 #include <Assert.h>
@@ -149,8 +149,17 @@ void maint() {
   time_test();
 }
 
+/*void main() {
+  static count = 1;
+
+  if (count <= 10) {
+    printf("%d\n", count++);
+    main();
+  }
+}*/
+
 void main(int argc, char* argv[]) {
-  /*{ char a[] = "abc";
+/*{ char a[] = "abc";
     char b = a[2];
     int e = 3;
     int f = a[e];
@@ -808,3 +817,19 @@ void assert_test(void) {
 void assert_test2(int n) {
   assert(n != 7);
 }
+
+//int arr[3], brr[3];
+
+  /*int* p;
+
+  if (arr < p) {
+    ++p;
+  }
+
+  if (arr < brr) {
+    ++p;
+  }
+
+  if (arr < 1000) {
+    ++p;
+  }*/

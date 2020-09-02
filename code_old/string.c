@@ -1,6 +1,6 @@
 #include <ErrNo.h>
-#include <StdIO.h>
-#include <StdDef.h>
+#include <stdio.h>
+#include <stddef.h>
 #include <String.h>
 #include <Locale.h>
 

@@ -441,10 +441,10 @@ print_test$103:	; post call
 337:	
 
 print_test$104:	; return
-338:		mov t2356, [bp]
+338:		mov t2357, [bp]
 339:		mov di, [bp + 4]
 340:		mov bp, [bp + 2]
-341:		jmp t2356
+341:		jmp t2357
 343:	
 
 print_test$105:	; function end print_test

@@ -29,7 +29,7 @@ malloc_test2$6:	; £temporary5184 = return_value
 25:	
 
 malloc_test2$7:	; q = £temporary5184
-26:		mov [bp + 12], t2842
+26:		mov [bp + 12], t2843
 28:	
 
 malloc_test2$8:	; index = 0
@@ -62,7 +62,7 @@ malloc_test2$14:	; £temporary5187 = return_value
 53:	
 
 malloc_test2$15:	; p = £temporary5187
-54:		mov [bp + 8], t2844
+54:		mov [bp + 8], t2845
 56:	
 
 malloc_test2$16:	; if index != 5 goto 18
@@ -71,8 +71,8 @@ malloc_test2$16:	; if index != 5 goto 18
 60:	
 
 malloc_test2$17:	; r = p
-61:		mov a2845, [bp + 8]
-62:		mov [bp + 10], a2845
+61:		mov a2846, [bp + 8]
+62:		mov [bp + 10], a2846
 64:	
 
 malloc_test2$18:	; ++index
@@ -100,8 +100,8 @@ malloc_test2$23:	; call header integral zero 0 stack zero 0
 82:	
 
 malloc_test2$24:	; parameter q, offset 6
-83:		mov a2846, [bp + 12]
-84:		mov [bp + 20], a2846
+83:		mov a2847, [bp + 12]
+84:		mov [bp + 20], a2847
 86:	
 
 malloc_test2$25:	; parameter 50, offset 8
@@ -135,8 +135,8 @@ malloc_test2$31:	; call header integral zero 0 stack zero 0
 109:	
 
 malloc_test2$32:	; parameter r, offset 6
-110:		mov a2847, [bp + 10]
-111:		mov [bp + 20], a2847
+110:		mov a2848, [bp + 10]
+111:		mov [bp + 20], a2848
 113:	
 
 malloc_test2$33:	; parameter 50, offset 8
@@ -170,8 +170,8 @@ malloc_test2$39:	; call header integral zero 0 stack zero 0
 136:	
 
 malloc_test2$40:	; parameter p, offset 6
-137:		mov a2848, [bp + 8]
-138:		mov [bp + 20], a2848
+137:		mov a2849, [bp + 8]
+138:		mov [bp + 20], a2849
 140:	
 
 malloc_test2$41:	; parameter 50, offset 8
@@ -205,8 +205,8 @@ malloc_test2$47:	; call header integral zero 0 stack zero 0
 163:	
 
 malloc_test2$48:	; parameter q, offset 6
-164:		mov a2849, [bp + 12]
-165:		mov [bp + 20], a2849
+164:		mov a2850, [bp + 12]
+165:		mov [bp + 20], a2850
 167:	
 
 malloc_test2$49:	; parameter 200, offset 8
@@ -240,8 +240,8 @@ malloc_test2$55:	; call header integral zero 0 stack zero 0
 190:	
 
 malloc_test2$56:	; parameter r, offset 6
-191:		mov a2850, [bp + 10]
-192:		mov [bp + 20], a2850
+191:		mov a2851, [bp + 10]
+192:		mov [bp + 20], a2851
 194:	
 
 malloc_test2$57:	; parameter 200, offset 8
@@ -275,8 +275,8 @@ malloc_test2$63:	; call header integral zero 0 stack zero 0
 217:	
 
 malloc_test2$64:	; parameter p, offset 6
-218:		mov a2851, [bp + 8]
-219:		mov [bp + 20], a2851
+218:		mov a2852, [bp + 8]
+219:		mov [bp + 20], a2852
 221:	
 
 malloc_test2$65:	; parameter 200, offset 8
@@ -307,10 +307,10 @@ malloc_test2$70:	; post call
 242:	
 
 malloc_test2$71:	; return
-243:		mov t2852, [bp]
+243:		mov t2853, [bp]
 244:		mov di, [bp + 4]
 245:		mov bp, [bp + 2]
-246:		jmp t2852
+246:		jmp t2853
 248:	
 
 malloc_test2$72:	; function end malloc_test2
@@ -341,7 +341,7 @@ malloc_test3$5:	; £temporary5216 = return_value
 22:	
 
 malloc_test3$6:	; a = £temporary5216
-23:		mov [bp + 6], t2854
+23:		mov [bp + 6], t2855
 25:	
 
 malloc_test3$7:	; call header integral zero 0 stack zero 0
@@ -369,7 +369,7 @@ malloc_test3$12:	; £temporary5217 = return_value
 46:	
 
 malloc_test3$13:	; b = £temporary5217
-47:		mov [bp + 8], t2856
+47:		mov [bp + 8], t2857
 49:	
 
 malloc_test3$14:	; call header integral zero 0 stack zero 0
@@ -397,7 +397,7 @@ malloc_test3$19:	; £temporary5218 = return_value
 70:	
 
 malloc_test3$20:	; c = £temporary5218
-71:		mov [bp + 10], t2858
+71:		mov [bp + 10], t2859
 73:	
 
 malloc_test3$21:	; call header integral zero 0 stack zero 0
@@ -425,7 +425,7 @@ malloc_test3$26:	; £temporary5219 = return_value
 94:	
 
 malloc_test3$27:	; d = £temporary5219
-95:		mov [bp + 12], t2860
+95:		mov [bp + 12], t2861
 97:	
 
 malloc_test3$28:	; call header integral zero 0 stack zero 0
@@ -453,7 +453,7 @@ malloc_test3$33:	; £temporary5220 = return_value
 118:	
 
 malloc_test3$34:	; e = £temporary5220
-119:		mov [bp + 14], t2862
+119:		mov [bp + 14], t2863
 121:	
 
 malloc_test3$35:	; call header integral zero 0 stack zero 0
@@ -473,8 +473,8 @@ malloc_test3$38:	; call header integral zero 0 stack zero 0
 133:	
 
 malloc_test3$39:	; parameter a, offset 6
-134:		mov a2863, [bp + 6]
-135:		mov [bp + 22], a2863
+134:		mov a2864, [bp + 6]
+135:		mov [bp + 22], a2864
 137:	
 
 malloc_test3$40:	; call function noellipse-noellipse free
@@ -491,8 +491,8 @@ malloc_test3$42:	; call header integral zero 0 stack zero 0
 147:	
 
 malloc_test3$43:	; parameter b, offset 6
-148:		mov a2864, [bp + 8]
-149:		mov [bp + 22], a2864
+148:		mov a2865, [bp + 8]
+149:		mov [bp + 22], a2865
 151:	
 
 malloc_test3$44:	; call function noellipse-noellipse free
@@ -509,8 +509,8 @@ malloc_test3$46:	; call header integral zero 0 stack zero 0
 161:	
 
 malloc_test3$47:	; parameter c, offset 6
-162:		mov a2865, [bp + 10]
-163:		mov [bp + 22], a2865
+162:		mov a2866, [bp + 10]
+163:		mov [bp + 22], a2866
 165:	
 
 malloc_test3$48:	; call function noellipse-noellipse free
@@ -527,8 +527,8 @@ malloc_test3$50:	; call header integral zero 0 stack zero 0
 175:	
 
 malloc_test3$51:	; parameter d, offset 6
-176:		mov a2866, [bp + 12]
-177:		mov [bp + 22], a2866
+176:		mov a2867, [bp + 12]
+177:		mov [bp + 22], a2867
 179:	
 
 malloc_test3$52:	; call function noellipse-noellipse free
@@ -545,8 +545,8 @@ malloc_test3$54:	; call header integral zero 0 stack zero 0
 189:	
 
 malloc_test3$55:	; parameter e, offset 6
-190:		mov a2867, [bp + 14]
-191:		mov [bp + 22], a2867
+190:		mov a2868, [bp + 14]
+191:		mov [bp + 22], a2868
 193:	
 
 malloc_test3$56:	; call function noellipse-noellipse free
@@ -573,10 +573,10 @@ malloc_test3$60:	; post call
 211:	
 
 malloc_test3$61:	; return
-212:		mov t2868, [bp]
+212:		mov t2869, [bp]
 213:		mov di, [bp + 4]
 214:		mov bp, [bp + 2]
-215:		jmp t2868
+215:		jmp t2869
 217:	
 
 malloc_test3$62:	; function end malloc_test3
@@ -586,7 +586,7 @@ rec:	; £temporary5243 = bp
 3:	
 
 rec$1:	; stackTop = £temporary5243
-4:		mov [bp + 6], t2869
+4:		mov [bp + 6], t2870
 6:	
 
 rec$2:	; lowHeapPtr = 65534
@@ -601,17 +601,17 @@ rec$4:	; parameter string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#, offset 6
 14:	
 
 rec$5:	; parameter stackTop, offset 8
-15:		mov a2870, [bp + 6]
-16:		mov [bp + 18], a2870
+15:		mov a2871, [bp + 6]
+16:		mov [bp + 18], a2871
 18:	
 
 rec$6:	; £temporary5244 -> lowHeapPtr = *lowHeapPtr
-19:		mov a2871, [bp + 8]
+19:		mov a2872, [bp + 8]
 21:	
 
 rec$7:	; parameter £temporary5244 -> lowHeapPtr, offset 10
-22:		mov t2872, [a2871]
-23:		mov [bp + 20], t2872
+22:		mov t2873, [a2872]
+23:		mov [bp + 20], t2873
 25:	
 
 rec$8:	; call function noellipse-ellipse printf, extra 0
@@ -640,10 +640,10 @@ rec$12:	; post call
 45:	
 
 rec$13:	; return
-46:		mov t2873, [bp]
+46:		mov t2874, [bp]
 47:		mov di, [bp + 4]
 48:		mov bp, [bp + 2]
-49:		jmp t2873
+49:		jmp t2874
 51:	
 
 rec$14:	; function end rec
@@ -663,10 +663,10 @@ malloc_test4$2:	; post call
 11:	
 
 malloc_test4$3:	; return
-12:		mov t2874, [bp]
+12:		mov t2875, [bp]
 13:		mov di, [bp + 4]
 14:		mov bp, [bp + 2]
-15:		jmp t2874
+15:		jmp t2875
 17:	
 
 malloc_test4$4:	; function end malloc_test4
@@ -693,7 +693,7 @@ malloc_test$4:	; £temporary5251 = return_value
 19:	
 
 malloc_test$5:	; b = £temporary5251
-20:		mov [bp + 6], t2876
+20:		mov [bp + 6], t2877
 22:	
 
 malloc_test$6:	; call header integral zero 0 stack zero 0
@@ -717,7 +717,7 @@ malloc_test$10:	; £temporary5252 = return_value
 40:	
 
 malloc_test$11:	; c = £temporary5252
-41:		mov [bp + 8], t2878
+41:		mov [bp + 8], t2879
 43:	
 
 malloc_test$12:	; call header integral zero 0 stack zero 0
@@ -741,7 +741,7 @@ malloc_test$16:	; £temporary5253 = return_value
 61:	
 
 malloc_test$17:	; d = £temporary5253
-62:		mov [bp + 10], t2880
+62:		mov [bp + 10], t2881
 64:	
 
 malloc_test$18:	; call header integral zero 0 stack zero 0
@@ -761,8 +761,8 @@ malloc_test$21:	; call header integral zero 0 stack zero 0
 76:	
 
 malloc_test$22:	; parameter c, offset 6
-77:		mov a2881, [bp + 8]
-78:		mov [bp + 18], a2881
+77:		mov a2882, [bp + 8]
+78:		mov [bp + 18], a2882
 80:	
 
 malloc_test$23:	; parameter 40, offset 8
@@ -826,8 +826,8 @@ malloc_test$36:	; call header integral zero 0 stack zero 0
 126:	
 
 malloc_test$37:	; parameter b, offset 6
-127:		mov a2882, [bp + 6]
-128:		mov [bp + 18], a2882
+127:		mov a2883, [bp + 6]
+128:		mov [bp + 18], a2883
 130:	
 
 malloc_test$38:	; call function noellipse-noellipse free
@@ -857,8 +857,8 @@ malloc_test$43:	; call header integral zero 0 stack zero 0
 150:	
 
 malloc_test$44:	; parameter d, offset 6
-151:		mov a2883, [bp + 10]
-152:		mov [bp + 18], a2883
+151:		mov a2884, [bp + 10]
+152:		mov [bp + 18], a2884
 154:	
 
 malloc_test$45:	; call function noellipse-noellipse free
@@ -885,10 +885,10 @@ malloc_test$49:	; post call
 172:	
 
 malloc_test$50:	; return
-173:		mov t2884, [bp]
+173:		mov t2885, [bp]
 174:		mov di, [bp + 4]
 175:		mov bp, [bp + 2]
-176:		jmp t2884
+176:		jmp t2885
 178:	
 
 malloc_test$51:	; function end malloc_test
@@ -898,7 +898,7 @@ malloc_test6:	; £temporary5271 = bp
 3:	
 
 malloc_test6$1:	; stackTop = £temporary5271
-4:		mov [bp + 8], t2885
+4:		mov [bp + 8], t2886
 6:	
 
 malloc_test6$2:	; lowHeapPtr = 65534
@@ -935,7 +935,7 @@ malloc_test6$9:	; £temporary5274 = return_value
 34:	
 
 malloc_test6$10:	; p = £temporary5274
-35:		mov [bp + 12], t2887
+35:		mov [bp + 12], t2888
 37:	
 
 malloc_test6$11:	; call header integral zero 0 stack zero 0
@@ -946,27 +946,27 @@ malloc_test6$12:	; parameter string_Index3A2025i2C20Pointer3A2025u2C20Stack20top
 42:	
 
 malloc_test6$13:	; parameter i, offset 8
-43:		mov a2888, [bp + 6]
-44:		mov [bp + 22], a2888
+43:		mov a2889, [bp + 6]
+44:		mov [bp + 22], a2889
 46:	
 
 malloc_test6$14:	; parameter p, offset 10
-47:		mov a2889, [bp + 12]
-48:		mov [bp + 24], a2889
+47:		mov a2890, [bp + 12]
+48:		mov [bp + 24], a2890
 50:	
 
 malloc_test6$15:	; parameter stackTop, offset 12
-51:		mov a2890, [bp + 8]
-52:		mov [bp + 26], a2890
+51:		mov a2891, [bp + 8]
+52:		mov [bp + 26], a2891
 54:	
 
 malloc_test6$16:	; £temporary5275 -> lowHeapPtr = *lowHeapPtr
-55:		mov a2891, [bp + 10]
+55:		mov a2892, [bp + 10]
 57:	
 
 malloc_test6$17:	; parameter £temporary5275 -> lowHeapPtr, offset 14
-58:		mov t2892, [a2891]
-59:		mov [bp + 28], t2892
+58:		mov t2893, [a2892]
+59:		mov [bp + 28], t2893
 61:	
 
 malloc_test6$18:	; call function noellipse-ellipse printf, extra 0
@@ -990,10 +990,10 @@ malloc_test6$21:	; goto 4
 77:	
 
 malloc_test6$22:	; return
-78:		mov t2893, [bp]
+78:		mov t2894, [bp]
 79:		mov di, [bp + 4]
 80:		mov bp, [bp + 2]
-81:		jmp t2893
+81:		jmp t2894
 83:	
 
 malloc_test6$23:	; function end malloc_test6

@@ -1,6 +1,6 @@
 #include <Time.h>
-#include <StdIO.h>
-#include <StdLib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /*int compare(const void* valuePtr1, const void* valuePtr2) {
   int intValue1 = *((int*)valuePtr1), intValue2 = *((int*)valuePtr2);

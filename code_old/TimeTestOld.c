@@ -1,6 +1,6 @@
 #include <Time.h>
-#include <StdIO.h>
-#include <StdLib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <String.h>
 
 int struct_to_time(struct tm* tp);

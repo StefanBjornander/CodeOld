@@ -1,8 +1,8 @@
-#include <CType.h>
-#include <StdIO.h>
+#include <ctype.h>
+#include <stdio.h>
 #include <Locale.h>
 #include <String.h>
-#include <StdDef.h>
+#include <stddef.h>
 
 //#define PRINT(x,y) { printf(#x " = <%" #y ">\n", (x)); }
 

@@ -1,5 +1,5 @@
-#include <StdIO.h>
-#include <CType.h>
+#include <stdio.h>
+#include <ctype.h>
 
 #define PRINT(f) printf(#f "('%c') = %s\n", c, (f((int) c) != 0) ? "Yes" : "No")
 

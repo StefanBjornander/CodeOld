@@ -1,5 +1,5 @@
 #include <ErrNo.h>
-#include <StdIO.h>
+#include <stdio.h>
 #include <String.h>
 
 #define SIZE 20

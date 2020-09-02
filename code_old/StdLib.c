@@ -1,11 +1,11 @@
-#include <Math.h>
-#include <CType.h>
+#include <math.h>
+#include <ctype.h>
 #include <ErrNo.h>
-#include <StdArg.h>
-#include <StdDef.h>
+#include <stdarg.h>
+#include <stddef.h>
 #include <String.h>
-#include <StdLib.h>
-#include <StdIO.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 extern FILE g_fileArray[];
 

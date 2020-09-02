@@ -1,4 +1,4 @@
-#include <StdIO.h>
+#include <stdio.h>
 
 void main() {
   int i;
@@ -86,7 +86,7 @@ cmp [si + 2], register_ax
 cmp [register_bx + 2], register_ax
 */
 
-#include <StdIO.h>
+#include <stdio.h>
 
 void main() {
   int i;

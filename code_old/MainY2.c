@@ -1,4 +1,4 @@
-#include <StdIO.h>
+#include <stdio.h>
 
 extern void printLongDoublePlain(long double longDoubleValue, BOOL plus, BOOL space, BOOL grid, int precision);
 extern void printLongDoubleFraction(long double longDoubleValue, BOOL grid, int precision);

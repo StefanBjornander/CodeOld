@@ -461,404 +461,414 @@ maint$7:	; function end maint
 5:		fstcw [bp]
 6:		or word [bp], 3072
 7:		fldcw [bp]
-8:		; Initialize Argument List
-9:		mov si, bp
-10:		mov word [bp], $Path
-11:		add bp, 2
-12:		mov ax, 1
-13:		mov bx, 129
-14:	
+8:		mov word [$StackTop], 0
+9:		; Initialize Argument List
+10:		mov si, bp
+11:		mov word [bp], $Path
+12:		add bp, 2
+13:		mov ax, 1
+14:		mov bx, 129
+15:	
 
 $Initialize$1:
-15:		cmp byte [bx], 32
-16:		je $Initialize$2
-17:		cmp byte [bx], 13
-18:		je $Initialize$5
-19:		inc bx
-20:		jmp $Initialize$1
-21:	
+16:		cmp byte [bx], 32
+17:		je $Initialize$2
+18:		cmp byte [bx], 13
+19:		je $Initialize$5
+20:		inc bx
+21:		jmp $Initialize$1
+22:	
 
 $Initialize$2:
-22:		cmp ax, 1
-23:		je $Initialize$3
-24:		mov byte [bx], 0
-25:	
+23:		cmp ax, 1
+24:		je $Initialize$3
+25:		mov byte [bx], 0
+26:	
 
 $Initialize$3:
-26:		inc bx
-27:		cmp byte [bx], 32
-28:		je $Initialize$3
-29:	
+27:		inc bx
+28:		cmp byte [bx], 32
+29:		je $Initialize$3
+30:	
 
 $Initialize$4:
-30:		mov [bp], bx
-31:		add bp, 2
-32:		inc ax
-33:		jmp $Initialize$1
-34:	
+31:		mov [bp], bx
+32:		add bp, 2
+33:		inc ax
+34:		jmp $Initialize$1
+35:	
 
 $Initialize$5:
-35:		mov byte [bx], 0
-36:		mov word [bp], 0
-37:		add bp, 2
-38:		mov [bp + 6], ax
-39:		mov [bp + 8], si
-41:	
+36:		mov byte [bx], 0
+37:		mov word [bp], 0
+38:		add bp, 2
+39:		mov [bp + 6], ax
+40:		mov [bp + 8], si
+42:	
 
 main:	; call header integral zero 0 stack zero 0
-43:	
+44:	
 
 main$1:	; parameter string_argc3A2025i0A#, offset 6
-44:		mov word [bp + 16], string_argc3A2025i0A#
-46:	
+45:		mov word [bp + 16], string_argc3A2025i0A#
+47:	
 
 main$2:	; parameter argc, offset 8
-47:		mov ax, [bp + 6]
-48:		mov [bp + 18], ax
-50:	
+48:		mov ax, [bp + 6]
+49:		mov [bp + 18], ax
+51:	
 
 main$3:	; call function noellipse-ellipse printf, extra 0
-51:		mov word [bp + 10], main$4
-52:		mov [bp + 12], bp
-53:		add bp, 10
-54:		mov di, bp
-55:		add di, 2
-56:		jmp printf
-58:	
+52:		mov word [bp + 10], main$4
+53:		mov [bp + 12], bp
+54:		add bp, 10
+55:		mov di, bp
+56:		add di, 2
+57:		jmp printf
+59:	
 
 main$4:	; post call
-60:	
+61:	
 
 main$5:	; index = 0
-61:		mov word [bp + 10], 0
-63:	
+62:		mov word [bp + 10], 0
+64:	
 
 main$6:	; if index >= argc goto 18
-64:		mov ax, [bp + 6]
-65:		cmp [bp + 10], ax
-66:		jge main$18
-68:	
+65:		mov ax, [bp + 6]
+66:		cmp [bp + 10], ax
+67:		jge main$18
+69:	
 
 main$7:	; call header integral zero 0 stack zero 0
-70:	
+71:	
 
 main$8:	; parameter string_25i3A203C25s3E0A#, offset 6
-71:		mov word [bp + 18], string_25i3A203C25s3E0A#
-73:	
+72:		mov word [bp + 18], string_25i3A203C25s3E0A#
+74:	
 
 main$9:	; parameter index, offset 8
-74:		mov ax, [bp + 10]
-75:		mov [bp + 20], ax
-77:	
+75:		mov ax, [bp + 10]
+76:		mov [bp + 20], ax
+78:	
 
 main$10:	; £temporary60 = index * 2
-78:		mov ax, [bp + 10]
-80:		xor dx, dx
-81:		mul word [int2$2#]
-87:	
+79:		mov ax, [bp + 10]
+81:		xor dx, dx
+82:		mul word [int2$2#]
+88:	
 
 main$11:	; £temporary61 = argv + £temporary60
-88:		mov si, [bp + 8]
-89:		add si, ax
-91:	
+89:		mov si, [bp + 8]
+90:		add si, ax
+92:	
 
 main$12:	; £temporary59 -> £temporary61 = *£temporary61
-93:	
+94:	
 
 main$13:	; parameter £temporary59 -> £temporary61, offset 10
-94:		mov ax, [si]
-95:		mov [bp + 22], ax
-97:	
+95:		mov ax, [si]
+96:		mov [bp + 22], ax
+98:	
 
 main$14:	; call function noellipse-ellipse printf, extra 0
-98:		mov word [bp + 12], main$15
-99:		mov [bp + 14], bp
-100:		add bp, 12
-101:		mov di, bp
-102:		add di, 4
-103:		jmp printf
-105:	
+99:		mov word [bp + 12], main$15
+100:		mov [bp + 14], bp
+101:		add bp, 12
+102:		mov di, bp
+103:		add di, 4
+104:		jmp printf
+106:	
 
 main$15:	; post call
-107:	
+108:	
 
 main$16:	; ++index
-108:		inc word [bp + 10]
-110:	
+109:		inc word [bp + 10]
+111:	
 
 main$17:	; goto 6
-111:		jmp main$6
-113:	
+112:		jmp main$6
+114:	
 
 main$18:	; call header integral zero 0 stack zero 0
-115:	
+116:	
 
 main$19:	; parameter string_0A#, offset 6
-116:		mov word [bp + 18], string_0A#
-118:	
+117:		mov word [bp + 18], string_0A#
+119:	
 
 main$20:	; call function noellipse-ellipse printf, extra 0
-119:		mov word [bp + 12], main$21
-120:		mov [bp + 14], bp
-121:		add bp, 12
-122:		mov di, bp
-123:		jmp printf
-125:	
+120:		mov word [bp + 12], main$21
+121:		mov [bp + 14], bp
+122:		add bp, 12
+123:		mov di, bp
+124:		jmp printf
+126:	
 
 main$21:	; post call
-127:	
+128:	
 
 main$22:	; index = 0
-128:		mov word [bp + 10], 0
-130:	
+129:		mov word [bp + 10], 0
+131:	
 
 main$23:	; £temporary65 = index * 2
-131:		mov ax, [bp + 10]
-133:		xor dx, dx
-134:		mul word [int2$2#]
-140:	
+132:		mov ax, [bp + 10]
+134:		xor dx, dx
+135:		mul word [int2$2#]
+141:	
 
 main$24:	; £temporary66 = argv + £temporary65
-141:		mov si, [bp + 8]
-142:		add si, ax
-144:	
+142:		mov si, [bp + 8]
+143:		add si, ax
+145:	
 
 main$25:	; £temporary64 -> £temporary66 = *£temporary66
-146:	
+147:	
 
 main$26:	; if £temporary64 -> £temporary66 == 0 goto 38
-147:		cmp word [si], 0
-148:		je main$38
-150:	
+148:		cmp word [si], 0
+149:		je main$38
+151:	
 
 main$27:	; call header integral zero 0 stack zero 0
-152:	
+153:	
 
 main$28:	; parameter string_25i3A203C25s3E0A#, offset 6
-153:		mov word [bp + 18], string_25i3A203C25s3E0A#
-155:	
+154:		mov word [bp + 18], string_25i3A203C25s3E0A#
+156:	
 
 main$29:	; parameter index, offset 8
-156:		mov ax, [bp + 10]
-157:		mov [bp + 20], ax
-159:	
+157:		mov ax, [bp + 10]
+158:		mov [bp + 20], ax
+160:	
 
 main$30:	; £temporary70 = index * 2
-160:		mov ax, [bp + 10]
-162:		xor dx, dx
-163:		mul word [int2$2#]
-169:	
+161:		mov ax, [bp + 10]
+163:		xor dx, dx
+164:		mul word [int2$2#]
+170:	
 
 main$31:	; £temporary71 = argv + £temporary70
-170:		mov si, [bp + 8]
-171:		add si, ax
-173:	
+171:		mov si, [bp + 8]
+172:		add si, ax
+174:	
 
 main$32:	; £temporary69 -> £temporary71 = *£temporary71
-175:	
+176:	
 
 main$33:	; parameter £temporary69 -> £temporary71, offset 10
-176:		mov ax, [si]
-177:		mov [bp + 22], ax
-179:	
+177:		mov ax, [si]
+178:		mov [bp + 22], ax
+180:	
 
 main$34:	; call function noellipse-ellipse printf, extra 0
-180:		mov word [bp + 12], main$35
-181:		mov [bp + 14], bp
-182:		add bp, 12
-183:		mov di, bp
-184:		add di, 4
-185:		jmp printf
-187:	
+181:		mov word [bp + 12], main$35
+182:		mov [bp + 14], bp
+183:		add bp, 12
+184:		mov di, bp
+185:		add di, 4
+186:		jmp printf
+188:	
 
 main$35:	; post call
-189:	
+190:	
 
 main$36:	; ++index
-190:		inc word [bp + 10]
-192:	
+191:		inc word [bp + 10]
+193:	
 
 main$37:	; goto 23
-193:		jmp main$23
-195:	
+194:		jmp main$23
+196:	
 
 main$38:	; call header integral zero 0 stack zero 0
-197:	
+198:	
 
 main$39:	; parameter string_0A#, offset 6
-198:		mov word [bp + 18], string_0A#
-200:	
+199:		mov word [bp + 18], string_0A#
+201:	
 
 main$40:	; call function noellipse-ellipse printf, extra 0
-201:		mov word [bp + 12], main$41
-202:		mov [bp + 14], bp
-203:		add bp, 12
-204:		mov di, bp
-205:		jmp printf
-207:	
+202:		mov word [bp + 12], main$41
+203:		mov [bp + 14], bp
+204:		add bp, 12
+205:		mov di, bp
+206:		jmp printf
+208:	
 
 main$41:	; post call
-209:	
+210:	
 
 main$42:	; call header integral zero 0 stack zero 0
-211:	
+212:	
 
 main$43:	; parameter 0, offset 6
-212:		mov word [bp + 49], 0
-214:	
+213:		mov word [bp + 49], 0
+215:	
 
 main$44:	; call function noellipse-noellipse mktime
-215:		mov word [bp + 43], main$45
-216:		mov [bp + 45], bp
-217:		add bp, 43
-218:		jmp mktime
-220:	
+216:		mov word [bp + 43], main$45
+217:		mov [bp + 45], bp
+218:		add bp, 43
+219:		jmp mktime
+221:	
 
 main$45:	; post call
-222:	
+223:	
 
 main$46:	; call header integral zero 0 stack zero 0
-224:	
+225:	
 
 main$47:	; parameter string_Hello210A#, offset 6
-225:		mov word [bp + 49], string_Hello210A#
-227:	
+226:		mov word [bp + 49], string_Hello210A#
+228:	
 
 main$48:	; call function noellipse-ellipse printf, extra 0
-228:		mov word [bp + 43], main$49
-229:		mov [bp + 45], bp
-230:		add bp, 43
-231:		mov di, bp
-232:		jmp printf
-234:	
+229:		mov word [bp + 43], main$49
+230:		mov [bp + 45], bp
+231:		add bp, 43
+232:		mov di, bp
+233:		jmp printf
+235:	
 
 main$49:	; post call
-236:	
+237:	
 
 main$50:	; call header integral zero 0 stack zero 0
-238:	
+239:	
 
 main$51:	; parameter string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#, offset 6
-239:		mov word [bp + 49], string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#
-241:	
+240:		mov word [bp + 49], string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#
+242:	
 
 main$52:	; call function noellipse-ellipse printf, extra 0
-242:		mov word [bp + 43], main$53
-243:		mov [bp + 45], bp
-244:		add bp, 43
-245:		mov di, bp
-246:		jmp printf
-248:	
+243:		mov word [bp + 43], main$53
+244:		mov [bp + 45], bp
+245:		add bp, 43
+246:		mov di, bp
+247:		jmp printf
+249:	
 
 main$53:	; post call
-250:	
+251:	
 
 main$54:	; call header integral zero 0 stack zero 0
-252:	
+253:	
 
 main$55:	; parameter string_25c2025s2025i2025lf#, offset 6
-253:		mov word [bp + 49], string_25c2025s2025i2025lf#
-255:	
+254:		mov word [bp + 49], string_25c2025s2025i2025lf#
+256:	
 
 main$56:	; £temporary77 = &c
-256:		mov si, bp
-257:		add si, 22
-259:	
+257:		mov si, bp
+258:		add si, 22
+260:	
 
 main$57:	; parameter £temporary77, offset 8
-260:		mov [bp + 51], si
-262:	
+261:		mov [bp + 51], si
+263:	
 
 main$58:	; parameter s, offset 10
-263:		mov [bp + 53], bp
-264:		add word [bp + 53], 23
-266:	
+264:		mov [bp + 53], bp
+265:		add word [bp + 53], 23
+267:	
 
 main$59:	; £temporary78 = &i
-267:		mov si, bp
-268:		add si, 12
-270:	
+268:		mov si, bp
+269:		add si, 12
+271:	
 
 main$60:	; parameter £temporary78, offset 12
-271:		mov [bp + 55], si
-273:	
+272:		mov [bp + 55], si
+274:	
 
 main$61:	; £temporary79 = &d
-274:		mov si, bp
-275:		add si, 14
-277:	
+275:		mov si, bp
+276:		add si, 14
+278:	
 
 main$62:	; parameter £temporary79, offset 14
-278:		mov [bp + 57], si
-280:	
+279:		mov [bp + 57], si
+281:	
 
 main$63:	; call function noellipse-ellipse scanf, extra 0
-281:		mov word [bp + 43], main$64
-282:		mov [bp + 45], bp
-283:		add bp, 43
-284:		mov di, bp
-285:		add di, 8
-286:		jmp scanf
-288:	
+282:		mov word [bp + 43], main$64
+283:		mov [bp + 45], bp
+284:		add bp, 43
+285:		mov di, bp
+286:		add di, 8
+287:		jmp scanf
+289:	
 
 main$64:	; post call
-290:	
+291:	
 
 main$65:	; call header integral zero 0 stack zero 0
-292:	
+293:	
 
 main$66:	; parameter string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#, offset 6
-293:		mov word [bp + 49], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#
-295:	
+294:		mov word [bp + 49], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#
+296:	
 
 main$67:	; £temporary81 = int_to_int c (Signed_Char -> Signed_Int)
-296:		mov al, [bp + 22]
-298:		and ax, 255
-300:		cmp al, 0
-301:		jge main$68
-302:		neg al
-304:		neg ax
-306:	
+297:		mov al, [bp + 22]
+299:		and ax, 255
+301:		cmp al, 0
+302:		jge main$68
+303:		neg al
+305:		neg ax
+307:	
 
 main$68:	; parameter £temporary81, offset 8
-307:		mov [bp + 51], ax
-309:	
+308:		mov [bp + 51], ax
+310:	
 
 main$69:	; parameter s, offset 10
-310:		mov [bp + 53], bp
-311:		add word [bp + 53], 23
-313:	
+311:		mov [bp + 53], bp
+312:		add word [bp + 53], 23
+314:	
 
 main$70:	; parameter i, offset 12
-314:		mov ax, [bp + 12]
-315:		mov [bp + 55], ax
-317:	
+315:		mov ax, [bp + 12]
+316:		mov [bp + 55], ax
+318:	
 
 main$71:	; push float d
-318:		fld qword [bp + 14]
-320:	
+319:		fld qword [bp + 14]
+321:	
 
 main$72:	; parameter d, offset 14
-321:		fstp qword [bp + 57]
-323:	
+322:		fstp qword [bp + 57]
+324:	
 
 main$73:	; call function noellipse-ellipse printf, extra 0
-324:		mov word [bp + 43], main$74
-325:		mov [bp + 45], bp
-326:		add bp, 43
-327:		mov di, bp
-328:		add di, 14
-329:		jmp printf
-331:	
+325:		mov word [bp + 43], main$74
+326:		mov [bp + 45], bp
+327:		add bp, 43
+328:		mov di, bp
+329:		add di, 14
+330:		jmp printf
+332:	
 
 main$74:	; post call
-333:	
+334:	
 
-main$75:	; exit 0
-334:		mov al, 0
-335:		mov ah, 76
-336:		int 33
-338:	
+main$75:	; return
+335:		cmp word [bp], 0
+336:		je return_label$0
+337:		mov ax, [bp]
+338:		mov di, [bp + 4]
+339:		mov bp, [bp + 2]
+340:		jmp ax
+341:	
+
+return_label$0:
+342:		mov al, 0
+343:		mov ah, 76
+344:		int 33
+346:	
 
 main$76:	; function end main
 1:	
@@ -1298,8 +1308,8 @@ assert_test$16:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomes
 57:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 59:	
 
-assert_test$17:	; parameter 801, offset 14
-60:		mov word [bp + 22], 801
+assert_test$17:	; parameter 810, offset 14
+60:		mov word [bp + 22], 810
 62:	
 
 assert_test$18:	; call function noellipse-ellipse fprintf, extra 0
@@ -1380,8 +1390,8 @@ assert_test2$5:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomes
 18:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 20:	
 
-assert_test2$6:	; parameter 806, offset 14
-21:		mov word [bp + 22], 806
+assert_test2$6:	; parameter 815, offset 14
+21:		mov word [bp + 22], 815
 23:	
 
 assert_test2$7:	; call function noellipse-ellipse fprintf, extra 0

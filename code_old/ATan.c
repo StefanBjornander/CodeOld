@@ -1,7 +1,7 @@
-#include <Math.h>
+#include <math.h>
 #include <ErrNo.h>
-#include <StdIO.h>
-#include <StdDef.h>
+#include <stdio.h>
+#include <stddef.h>
 #include <StdlIB.h>
 
 double square(double x) {

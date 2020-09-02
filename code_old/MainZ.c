@@ -1,4 +1,4 @@
-#include <StdIO.h>
+#include <stdio.h>
 
 void malloc_test(void);                    // XXX
 void file_test(char*, char*);              // XXX

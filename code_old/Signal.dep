@@ -1,1 +1,1 @@
-StdDef.h Signal.h StdIO.h Math.h CType.h StdArg.h StdDef.h File.h Temp.h Scanf.h Printf.h
+stddef.h Signal.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h

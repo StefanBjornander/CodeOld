@@ -38,11 +38,11 @@ const char * format , const struct tm * timeStruct ) ;
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.c,0$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
    
    
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
    
    
 
@@ -85,9 +85,9 @@ extern double fmod ( double num , double denum ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,3$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\CType.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
    
    
 
@@ -107,9 +107,9 @@ extern int toupper ( int c ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,4$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdArg.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
    
    
 
@@ -121,9 +121,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdArg.h,1$
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,5$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdDef.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
    
    
 
@@ -138,9 +138,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdDef.h,1$
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,6$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\File.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
    
    
 
@@ -218,9 +218,9 @@ void perror ( const char * s ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,7$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Temp.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
    
    
 
@@ -232,9 +232,9 @@ char * tmpnam ( char name [ 4 ] ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,8$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
    
    
 
@@ -262,9 +262,9 @@ int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,9$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
    
    
 
@@ -302,14 +302,14 @@ int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,10$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
        
 
   
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.c,1$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
    
    
 
@@ -436,7 +436,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,1$
    
 
    
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
    
    
 
@@ -453,7 +453,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,1$
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,4$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
    
    
 
@@ -534,34 +534,34 @@ unsigned long time ( unsigned long * timePtr ) {
 unsigned long time ;
 
    
-    
-    
-      
-          
-          
+ register_ah = 0x2As ;
+interrupt ( 0x21s ) ;
+int year = register_cx - 1900 ;
+short month = register_dh - 1s , monthDay = register_dl ;
+printf ( "%i-%i-%i\n" , year , month , monthDay ) ;
 
-   
-    
-            
+register_ah = 0x2Cs ;
+interrupt ( 0x21s ) ;
+short hour = register_ch , min = register_cl , sec = register_dh ;
 
 
-           
-                                 
-        
+const int leapYear = ( year % 4 ) == 0 ;
+const int daysOfMonths [] = { 31 , leapYear ? 29 : 28 , 31 , 30 , 31 , 30 , 30 , 31 , 30 , 31 , 30 , 31 };
+int yearDay = monthDay - 1 , mon ;
 
-             
-     
+for ( mon = 0 ; mon < month ; ++ mon ) {
+yearDay += daysOfMonths [ mon ];
+}
+printf ( "%i %i\n" , yearDay , month ) ;
 
-        
-
-                      
-       
+struct tm s = { sec , min , hour , monthDay , month , year , 0 , yearDay , 0 };
+time = mktime ( & s ) ;
   
 
    
- register_rax = 201L ;
-register_rdi = ( unsigned long ) & time ;
-syscall ( ) ;
+    
+        
+   
   
 
 if ( timePtr != ( ( void * ) 0 ) ) {

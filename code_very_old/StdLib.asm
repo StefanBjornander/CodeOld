@@ -1148,9 +1148,9 @@ section .text
 	and rax, rbx
 
  atexit$8:
-	; £temporary2123 = £temporary2122 * Array_#
+	; £temporary2123 = £temporary2122 * Array_8#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_8#]
 
  atexit$9:
 	; £temporary2124 = g_funcArray + £temporary2123
@@ -1172,9 +1172,9 @@ section .text
 	and rax, rbx
 
  atexit$13:
-	; £temporary2128 = £temporary2127 * Array_#
+	; £temporary2128 = £temporary2127 * Array_8#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_8#]
 
  atexit$14:
 	; £temporary2129 = g_funcArray + £temporary2128
@@ -1208,9 +1208,9 @@ section .text
 	and rax, rbx
 
  atexit$21:
-	; £temporary2132 = £temporary2131 * Array_#
+	; £temporary2132 = £temporary2131 * Array_8#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_8#]
 
  atexit$22:
 	; £temporary2133 = g_funcArray + £temporary2132
@@ -1307,9 +1307,9 @@ section .text
 	and rax, rbx
 
  exit$8:
-	; £temporary2140 = £temporary2139 * Array_#
+	; £temporary2140 = £temporary2139 * Array_8#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_8#]
 
  exit$9:
 	; £temporary2141 = g_funcArray + £temporary2140
@@ -1343,9 +1343,9 @@ section .text
 	and rax, rbx
 
  exit$16:
-	; £temporary2145 = £temporary2144 * Array_#
+	; £temporary2145 = £temporary2144 * Array_8#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_8#]
 
  exit$17:
 	; £temporary2146 = g_funcArray + £temporary2145
@@ -1379,9 +1379,9 @@ section .text
 	and rax, rbx
 
  exit$23:
-	; £temporary2150 = £temporary2149 * Array_#
+	; £temporary2150 = £temporary2149 * Array_8#
 	xor rdx, rdx
-	mul qword [Array_#]
+	mul qword [Array_8#]
 
  exit$24:
 	; £temporary2151 = g_funcArray + £temporary2150
@@ -1944,7 +1944,7 @@ string_Added20function20index2025i3A2025i0A#:
 	; initializer String
 	db "Added function index %i: %i", 10, 0
 
-Array_#:
+Array_8#:
 	; initializer Array
 	dq 8
 

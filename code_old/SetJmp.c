@@ -1,5 +1,5 @@
 #include <SetJmp.h>
-#include <StdIO.h>
+#include <stdio.h>
 
 int setjmp(jmp_buf buf) {
 #ifdef __WINDOWS__

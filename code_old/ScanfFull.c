@@ -1,11 +1,11 @@
-#include <Math.h>
-#include <CType.h>
-#include <StdIO.h>
-#include <StdDef.h>
-#include <StdArg.h>
+#include <math.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <stddef.h>
+#include <stdarg.h>
 #include <String.h>
-#include <Scanf.h>
-#include <Printf.h>
+#include <scanf.h>
+#include <printf.h>
 
 #define PRINT(x,y) { printf(#x " = <%" #y ">\n", (x)); }
 
