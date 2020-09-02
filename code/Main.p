@@ -815,6 +815,15 @@ limits_test ( ) ;
 time_test ( ) ;
 }
 
+
+
+
+
+
+
+
+
+
 void main ( int argc , char * argv [] ) {
 
 
@@ -1467,12 +1476,12 @@ void assert_test ( void ) {
 int n = 0 ;
 printf ( "Please write a number (not 6 or 7): " ) ;
 scanf ( "%i" , & n ) ;
-if ( ! ( n != 6 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 6" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 804 ) ; abort ( ) ; } ;
+if ( ! ( n != 6 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 6" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 813 ) ; abort ( ) ; } ;
 assert_test2 ( n ) ;
 }
 
 void assert_test2 ( int n ) {
-if ( ! ( n != 7 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 7" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 809 ) ; abort ( ) ; } ;
+if ( ! ( n != 7 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 7" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 818 ) ; abort ( ) ; } ;
 }
 
 

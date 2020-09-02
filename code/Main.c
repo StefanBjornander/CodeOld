@@ -149,8 +149,17 @@ void maint() {
   time_test();
 }
 
+/*void main() {
+  static count = 1;
+
+  if (count <= 10) {
+    printf("%d\n", count++);
+    main();
+  }
+}*/
+
 void main(int argc, char* argv[]) {
-  /*{ char a[] = "abc";
+/*{ char a[] = "abc";
     char b = a[2];
     int e = 3;
     int f = a[e];

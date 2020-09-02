@@ -175,14 +175,14 @@ section .text
 	add rdi, 104
 	mov al, 36
 
- label$4:
+ label$5:
 	mov ah, [rsi]
 	mov [rdi], ah
 	inc rsi
 	inc rdi
 	dec al
 	cmp al, 0
-	jne label$4
+	jne label$5
 
  time_test$38:
 	; call header integral zero 0 stack zero 0
@@ -315,14 +315,14 @@ section .text
 	add rsi, 104
 	mov al, 36
 
- label$5:
+ label$6:
 	mov ah, [rbx]
 	mov [rsi], ah
 	inc rbx
 	inc rsi
 	dec al
 	cmp al, 0
-	jne label$5
+	jne label$6
 
  time_test$66:
 	; call header integral zero 0 stack zero 0

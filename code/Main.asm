@@ -1,3 +1,5 @@
+	global _start
+	global main
 	global a
 	global main2
 	global main33
@@ -38,6 +40,7 @@ _start:
 	fstcw [rbp]
 	or word [rbp], 3072
 	fldcw [rbp]
+	mov qword [$StackTop], 0
 	; Initializerialize Command Line Arguments
 	pop rbx
 	mov rax, rbx
@@ -427,6 +430,14 @@ _start:
 
  main$79:
 	; return
+	cmp qword [rbp], 0
+	je label$0
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
+
+ label$0:
 	mov rdi, 0
 	mov rax, 60
 	syscall
@@ -1340,8 +1351,8 @@ _start:
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
  assert_test$17:
-	; parameter int4$804#, offset 84
-	mov dword [rbp + 84], 804
+	; parameter int4$813#, offset 84
+	mov dword [rbp + 84], 813
 
  assert_test$18:
 	; call function noellipse-ellipse fprintf, extra 20
@@ -1422,8 +1433,8 @@ _start:
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
  assert_test2$6:
-	; parameter int4$809#, offset 84
-	mov dword [rbp + 84], 809
+	; parameter int4$818#, offset 84
+	mov dword [rbp + 84], 818
 
  assert_test2$7:
 	; call function noellipse-ellipse fprintf, extra 20
