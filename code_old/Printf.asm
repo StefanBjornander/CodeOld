@@ -74,17 +74,14 @@ section .text
 	; post call
 
  putc$8:
-	; return_value = int4$1#
+	; return int4$1#
 	mov ebx, 1
-
- putc$9:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- putc$10:
+ putc$9:
 	; function end putc
 
  fputc:
@@ -125,17 +122,14 @@ section .text
 	; post call
 
  fputc$8:
-	; return_value = int4$1#
+	; return int4$1#
 	mov ebx, 1
-
- fputc$9:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fputc$10:
+ fputc$9:
 	; function end fputc
 
  putchar:
@@ -176,17 +170,14 @@ section .text
 	; post call
 
  putchar$8:
-	; return_value = int4$1#
+	; return int4$1#
 	mov ebx, 1
-
- putchar$9:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- putchar$10:
+ putchar$9:
 	; function end putchar
 
  printChar:
@@ -802,9 +793,9 @@ section .text
 	; function end printLongInt
 
  digitToChar:
-	; if digit >= int4$10# goto 5
+	; if digit >= int4$10# goto 4
 	cmp dword [rbp + 24], 10
-	jge digitToChar$5
+	jge digitToChar$4
 
  digitToChar$1:
 	; £temporary1615 = digit + int4$48#
@@ -819,73 +810,64 @@ section .text
 	neg bl
 
  digitToChar$3:
-	; return_value = £temporary1616
-
- digitToChar$4:
-	; return
+	; return £temporary1616
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- digitToChar$5:
-	; if capital == int4$0# goto 11
+ digitToChar$4:
+	; if capital == int4$0# goto 9
 	cmp dword [rbp + 28], 0
-	je digitToChar$11
+	je digitToChar$9
 
- digitToChar$6:
+ digitToChar$5:
 	; £temporary1617 = digit - int4$10#
 	mov ebx, [rbp + 24]
 	sub ebx, 10
 
- digitToChar$7:
+ digitToChar$6:
 	; £temporary1618 = £temporary1617 + int4$65#
 	add ebx, 65
 
- digitToChar$8:
+ digitToChar$7:
 	; £temporary1619 = int_to_int £temporary1618 (Signed_Int -> Signed_Char)
 	cmp ebx, 0
-	jge digitToChar$9
+	jge digitToChar$8
 	neg ebx
 	neg bl
 
- digitToChar$9:
-	; return_value = £temporary1619
-
- digitToChar$10:
-	; return
+ digitToChar$8:
+	; return £temporary1619
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- digitToChar$11:
+ digitToChar$9:
 	; £temporary1620 = digit - int4$10#
 	mov ebx, [rbp + 24]
 	sub ebx, 10
 
- digitToChar$12:
+ digitToChar$10:
 	; £temporary1621 = £temporary1620 + int4$97#
 	add ebx, 97
 
- digitToChar$13:
+ digitToChar$11:
 	; £temporary1622 = int_to_int £temporary1621 (Signed_Int -> Signed_Char)
 	cmp ebx, 0
-	jge digitToChar$14
+	jge digitToChar$12
 	neg ebx
 	neg bl
 
- digitToChar$14:
-	; return_value = £temporary1622
-
- digitToChar$15:
-	; return
+ digitToChar$12:
+	; return £temporary1622
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- digitToChar$16:
+ digitToChar$13:
 	; function end digitToChar
 
  printUnsignedLongRec:
@@ -1937,17 +1919,14 @@ section .text
 	mov [rsi], eax
 
  checkWidthAndPrecision$18:
-	; return_value = arg_list
+	; return arg_list
 	mov rbx, [rbp + 24]
-
- checkWidthAndPrecision$19:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- checkWidthAndPrecision$20:
+ checkWidthAndPrecision$19:
 	; function end checkWidthAndPrecision
 
  testY:
@@ -3571,17 +3550,14 @@ section .text
 	; post call
 
  printArgument$359:
-	; return_value = arg_list
+	; return arg_list
 	mov rbx, [rbp + 32]
-
- printArgument$360:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- printArgument$361:
+ printArgument$360:
 	; function end printArgument
 
  printFormat:
@@ -4910,17 +4886,14 @@ section .text
 	mov byte [rsi], 0
 
  printFormat$297:
-	; return_value = g_outChars
+	; return g_outChars
 	mov ebx, [g_outChars]
-
- printFormat$298:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- printFormat$299:
+ printFormat$298:
 	; function end printFormat
 
  printf:
@@ -4968,16 +4941,13 @@ section .text
 	; £temporary1995 = return_value
 
  printf$10:
-	; return_value = £temporary1995
-
- printf$11:
-	; return
+	; return £temporary1995
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- printf$12:
+ printf$11:
 	; function end printf
 
  vprintf:
@@ -5012,16 +4982,13 @@ section .text
 	; £temporary1997 = return_value
 
  vprintf$7:
-	; return_value = £temporary1997
-
- vprintf$8:
-	; return
+	; return £temporary1997
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- vprintf$9:
+ vprintf$8:
 	; function end vprintf
 
  fprintf:
@@ -5074,16 +5041,13 @@ section .text
 	; £temporary2002 = return_value
 
  fprintf$11:
-	; return_value = £temporary2002
-
- fprintf$12:
-	; return
+	; return £temporary2002
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fprintf$13:
+ fprintf$12:
 	; function end fprintf
 
  vfprintf:
@@ -5125,16 +5089,13 @@ section .text
 	; £temporary2005 = return_value
 
  vfprintf$9:
-	; return_value = £temporary2005
-
- vfprintf$10:
-	; return
+	; return £temporary2005
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- vfprintf$11:
+ vfprintf$10:
 	; function end vfprintf
 
  sprintf:
@@ -5187,16 +5148,13 @@ section .text
 	; £temporary2010 = return_value
 
  sprintf$11:
-	; return_value = £temporary2010
-
- sprintf$12:
-	; return
+	; return £temporary2010
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- sprintf$13:
+ sprintf$12:
 	; function end sprintf
 
  vsprintf:
@@ -5238,16 +5196,13 @@ section .text
 	; £temporary2013 = return_value
 
  vsprintf$9:
-	; return_value = £temporary2013
-
- vsprintf$10:
-	; return
+	; return £temporary2013
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- vsprintf$11:
+ vsprintf$10:
 	; function end vsprintf
 section .data
 

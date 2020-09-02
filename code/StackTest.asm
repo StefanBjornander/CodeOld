@@ -16,15 +16,15 @@ section .text
 	mov qword [rbp + 48], string_25i20#
 
  stack_test$3:
-	; £temporary3847 = i
-	mov eax, [@8835$i]
+	; £temporary3851 = i
+	mov eax, [@8838$i]
 
  stack_test$4:
 	; i = i + int4$1#
-	inc dword [@8835$i]
+	inc dword [@8838$i]
 
  stack_test$5:
-	; parameter £temporary3847, offset 56
+	; parameter £temporary3851, offset 56
 	mov [rbp + 56], eax
 
  stack_test$6:
@@ -84,10 +84,10 @@ section .text
 	; post call
 
  heap_test$5:
-	; £temporary3850 = return_value
+	; £temporary3854 = return_value
 
  heap_test$6:
-	; pointer = £temporary3850
+	; pointer = £temporary3854
 	mov [rbp + 28], rbx
 
  heap_test$7:
@@ -103,7 +103,7 @@ section .text
 	mov qword [rbp + 60], string_102420bytes2Dblock20number3A2025i0A#
 
  heap_test$10:
-	; £temporary3852 = count
+	; £temporary3856 = count
 	mov eax, [rbp + 24]
 
  heap_test$11:
@@ -111,7 +111,7 @@ section .text
 	inc dword [rbp + 24]
 
  heap_test$12:
-	; parameter £temporary3852, offset 68
+	; parameter £temporary3856, offset 68
 	mov [rbp + 68], eax
 
  heap_test$13:
@@ -146,7 +146,7 @@ section .text
 	; function end heap_test
 section .data
 
-@8835$i:
+@8838$i:
 	; initializer Signed_Int
 	dd 0
 

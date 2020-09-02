@@ -17,11 +17,11 @@ section .text
 	fldz
 
  divide$2:
-	; if y == float8$0# goto 8
+	; if y == float8$0# goto 7
 	fcompp
 	fstsw ax
 	sahf
-	je divide$8
+	je divide$7
 
  divide$3:
 	; push float x
@@ -36,88 +36,82 @@ section .text
 	fdiv
 
  divide$6:
-	; return_value = £temporary3164
-
- divide$7:
-	; return
+	; return £temporary3164
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- divide$8:
+ divide$7:
 	; p = string_Division20by20Zero2E#
 	mov qword [rbp + 40], string_Division20by20Zero2E#
 
- divide$9:
+ divide$8:
 	; call header integral zero 0 stack zero 0
 
- divide$10:
+ divide$9:
 	; parameter string_longjmp203C25s3E203C25u3E0A#, offset 72
 	mov qword [rbp + 72], string_longjmp203C25s3E203C25u3E0A#
 
- divide$11:
+ divide$10:
 	; parameter p, offset 80
 	mov rax, [rbp + 40]
 	mov [rbp + 80], rax
 
- divide$12:
+ divide$11:
 	; parameter p, offset 88
 	mov rax, [rbp + 40]
 	mov [rbp + 88], rax
 
- divide$13:
+ divide$12:
 	; call function noellipse-ellipse printf, extra 16
-	mov qword [rbp + 48], divide$14
+	mov qword [rbp + 48], divide$13
 	mov [rbp + 56], rbp
 	add rbp, 48
 	mov rdi, rbp
 	add rdi, 16
 	jmp printf
 
- divide$14:
+ divide$13:
 	; post call
 
- divide$15:
+ divide$14:
 	; call header integral zero 0 stack zero 0
 
- divide$16:
+ divide$15:
 	; parameter buffer, offset 72
 	mov qword [rbp + 72], buffer
 
- divide$17:
+ divide$16:
 	; £temporary3166 = int_to_int p (Pointer -> Signed_Int)
 	mov rax, [rbp + 40]
 
- divide$18:
+ divide$17:
 	; parameter £temporary3166, offset 80
 	mov [rbp + 80], eax
 
- divide$19:
+ divide$18:
 	; call function noellipse-noellipse longjmp
-	mov qword [rbp + 48], divide$20
+	mov qword [rbp + 48], divide$19
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp longjmp
 
- divide$20:
+ divide$19:
 	; post call
 
- divide$21:
+ divide$20:
 	; push float float8$0#
 	fldz
 
- divide$22:
-	; return_value = float8$0#
-
- divide$23:
-	; return
+ divide$21:
+	; return float8$0#
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- divide$24:
+ divide$22:
 	; function end divide
 
  invers:
@@ -153,16 +147,13 @@ section .text
 	; £temporary3168 = return_value
 
  invers$8:
-	; return_value = £temporary3168
-
- invers$9:
-	; return
+	; return £temporary3168
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- invers$10:
+ invers$9:
 	; function end invers
 
  setjmp_test:

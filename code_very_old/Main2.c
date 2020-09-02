@@ -1,7 +1,7 @@
 #include <Time.h>
-#include <StdIO.h>
+#include <stdio.h>
 #include <String.h>
-#include <StdLib.h>
+#include <stdlib.h>
 #include <SetJmp.h>
 /*
 void print(int year, int mon, int day, int hour, int min, int sec, int summer)

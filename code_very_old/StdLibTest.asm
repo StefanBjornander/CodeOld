@@ -905,14 +905,14 @@ section .text
 	add rsi, 24
 	mov al, 8
 
- memorycopy0:
+ label$1:
 	mov ah, [rbx]
 	mov [rsi], ah
 	inc rbx
 	inc rsi
 	dec al
 	cmp al, 0
-	jne memorycopy0
+	jne label$1
 
  stdlib_test$134:
 	; call header integral zero 0 stack zero 0
@@ -954,14 +954,14 @@ section .text
 	add rdi, 56
 	mov al, 8
 
- memorycopy1:
+ label$2:
 	mov ah, [rsi]
 	mov [rdi], ah
 	inc rsi
 	inc rdi
 	dec al
 	cmp al, 0
-	jne memorycopy1
+	jne label$2
 
  stdlib_test$142:
 	; call function noellipse-noellipse print_div
@@ -1003,14 +1003,14 @@ section .text
 	add rsi, 24
 	mov al, 16
 
- memorycopy2:
+ label$3:
 	mov ah, [rbx]
 	mov [rsi], ah
 	inc rbx
 	inc rsi
 	dec al
 	cmp al, 0
-	jne memorycopy2
+	jne label$3
 
  stdlib_test$151:
 	; call header integral zero 0 stack zero 0
@@ -1052,14 +1052,14 @@ section .text
 	add rdi, 64
 	mov al, 16
 
- memorycopy3:
+ label$4:
 	mov ah, [rsi]
 	mov [rdi], ah
 	inc rsi
 	inc rdi
 	dec al
 	cmp al, 0
-	jne memorycopy3
+	jne label$4
 
  stdlib_test$159:
 	; call function noellipse-noellipse print_ldiv

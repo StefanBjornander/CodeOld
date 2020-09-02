@@ -1,1 +1,1 @@
-ErrNo.h StdIO.h Math.h CType.h StdArg.h StdDef.h File.h Temp.h Scanf.h Printf.h StdDef.h String.h Locale.h
+ErrNo.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stddef.h String.h Locale.h

@@ -5,37 +5,37 @@ strcpy:	; index = 0
 4:	
 
 strcpy$1:	; £temporary3183 = source + index
-5:		mov a2111, [bp + 8]
-6:		add a2111, [bp + 10]
+5:		mov a2112, [bp + 8]
+6:		add a2112, [bp + 10]
 8:	
 
 strcpy$2:	; £temporary3182 -> £temporary3183 = *£temporary3183
 10:	
 
 strcpy$3:	; if £temporary3182 -> £temporary3183 == 0 goto 11
-11:		cmp byte [a2111], 0
+11:		cmp byte [a2112], 0
 12:		je strcpy$11
 14:	
 
 strcpy$4:	; £temporary3187 = target + index
-15:		mov a2112, [bp + 6]
-16:		add a2112, [bp + 10]
+15:		mov a2113, [bp + 6]
+16:		add a2113, [bp + 10]
 18:	
 
 strcpy$5:	; £temporary3186 -> £temporary3187 = *£temporary3187
 20:	
 
 strcpy$6:	; £temporary3189 = source + index
-21:		mov a2113, [bp + 8]
-22:		add a2113, [bp + 10]
+21:		mov a2114, [bp + 8]
+22:		add a2114, [bp + 10]
 24:	
 
 strcpy$7:	; £temporary3188 -> £temporary3189 = *£temporary3189
 26:	
 
 strcpy$8:	; £temporary3186 -> £temporary3187 = £temporary3188 -> £temporary3189
-27:		mov t2114, [a2113]
-28:		mov [a2112], t2114
+27:		mov t2115, [a2114]
+28:		mov [a2113], t2115
 30:	
 
 strcpy$9:	; ++index
@@ -47,26 +47,26 @@ strcpy$10:	; goto 1
 36:	
 
 strcpy$11:	; £temporary3191 = target + index
-37:		mov a2115, [bp + 6]
-38:		add a2115, [bp + 10]
+37:		mov a2116, [bp + 6]
+38:		add a2116, [bp + 10]
 40:	
 
 strcpy$12:	; £temporary3190 -> £temporary3191 = *£temporary3191
 42:	
 
 strcpy$13:	; £temporary3190 -> £temporary3191 = 0
-43:		mov byte [a2115], 0
+43:		mov byte [a2116], 0
 45:	
 
 strcpy$14:	; return_value = target
-46:		mov a2116, [bp + 6]
+46:		mov a2117, [bp + 6]
 48:	
 
 strcpy$15:	; return
-49:		mov t2117, [bp]
+49:		mov t2118, [bp]
 50:		mov di, [bp + 4]
 51:		mov bp, [bp + 2]
-52:		jmp t2117
+52:		jmp t2118
 54:	
 
 strcpy$16:	; function end strcpy
@@ -77,43 +77,43 @@ strncpy:	; index = 0
 4:	
 
 strncpy$1:	; if index >= size goto 12
-5:		mov a2118, [bp + 10]
-6:		cmp [bp + 12], a2118
+5:		mov a2119, [bp + 10]
+6:		cmp [bp + 12], a2119
 7:		jge strncpy$12
 9:	
 
 strncpy$2:	; £temporary3194 = source + index
-10:		mov a2119, [bp + 8]
-11:		add a2119, [bp + 12]
+10:		mov a2120, [bp + 8]
+11:		add a2120, [bp + 12]
 13:	
 
 strncpy$3:	; £temporary3193 -> £temporary3194 = *£temporary3194
 15:	
 
 strncpy$4:	; if £temporary3193 -> £temporary3194 == 0 goto 12
-16:		cmp byte [a2119], 0
+16:		cmp byte [a2120], 0
 17:		je strncpy$12
 19:	
 
 strncpy$5:	; £temporary3199 = target + index
-20:		mov a2120, [bp + 6]
-21:		add a2120, [bp + 12]
+20:		mov a2121, [bp + 6]
+21:		add a2121, [bp + 12]
 23:	
 
 strncpy$6:	; £temporary3198 -> £temporary3199 = *£temporary3199
 25:	
 
 strncpy$7:	; £temporary3201 = source + index
-26:		mov a2121, [bp + 8]
-27:		add a2121, [bp + 12]
+26:		mov a2122, [bp + 8]
+27:		add a2122, [bp + 12]
 29:	
 
 strncpy$8:	; £temporary3200 -> £temporary3201 = *£temporary3201
 31:	
 
 strncpy$9:	; £temporary3198 -> £temporary3199 = £temporary3200 -> £temporary3201
-32:		mov t2122, [a2121]
-33:		mov [a2120], t2122
+32:		mov t2123, [a2122]
+33:		mov [a2121], t2123
 35:	
 
 strncpy$10:	; ++index
@@ -125,21 +125,21 @@ strncpy$11:	; goto 1
 41:	
 
 strncpy$12:	; if index >= size goto 18
-42:		mov a2123, [bp + 10]
-43:		cmp [bp + 12], a2123
+42:		mov a2124, [bp + 10]
+43:		cmp [bp + 12], a2124
 44:		jge strncpy$18
 46:	
 
 strncpy$13:	; £temporary3205 = target + index
-47:		mov a2124, [bp + 6]
-48:		add a2124, [bp + 12]
+47:		mov a2125, [bp + 6]
+48:		add a2125, [bp + 12]
 50:	
 
 strncpy$14:	; £temporary3204 -> £temporary3205 = *£temporary3205
 52:	
 
 strncpy$15:	; £temporary3204 -> £temporary3205 = 0
-53:		mov byte [a2124], 0
+53:		mov byte [a2125], 0
 55:	
 
 strncpy$16:	; ++index
@@ -151,14 +151,14 @@ strncpy$17:	; goto 12
 61:	
 
 strncpy$18:	; return_value = target
-62:		mov a2125, [bp + 6]
+62:		mov a2126, [bp + 6]
 64:	
 
 strncpy$19:	; return
-65:		mov t2126, [bp]
+65:		mov t2127, [bp]
 66:		mov di, [bp + 4]
 67:		mov bp, [bp + 2]
-68:		jmp t2126
+68:		jmp t2127
 70:	
 
 strncpy$20:	; function end strncpy
@@ -168,8 +168,8 @@ strcat:	; call header integral zero 0 stack zero 0
 3:	
 
 strcat$1:	; parameter target, offset 6
-4:		mov a2127, [bp + 6]
-5:		mov [bp + 18], a2127
+4:		mov a2128, [bp + 6]
+5:		mov [bp + 18], a2128
 7:	
 
 strcat$2:	; call function noellipse-noellipse strlen
@@ -186,7 +186,7 @@ strcat$4:	; £temporary3206 = return_value
 20:	
 
 strcat$5:	; targetLength = £temporary3206
-21:		mov [bp + 12], t2129
+21:		mov [bp + 12], t2130
 23:	
 
 strcat$6:	; index = 0
@@ -194,42 +194,42 @@ strcat$6:	; index = 0
 26:	
 
 strcat$7:	; £temporary3208 = source + index
-27:		mov a2130, [bp + 8]
-28:		add a2130, [bp + 10]
+27:		mov a2131, [bp + 8]
+28:		add a2131, [bp + 10]
 30:	
 
 strcat$8:	; £temporary3207 -> £temporary3208 = *£temporary3208
 32:	
 
 strcat$9:	; if £temporary3207 -> £temporary3208 == 0 goto 18
-33:		cmp byte [a2130], 0
+33:		cmp byte [a2131], 0
 34:		je strcat$18
 36:	
 
 strcat$10:	; £temporary3211 = targetLength + index
-37:		mov a2131, [bp + 12]
-38:		add a2131, [bp + 10]
+37:		mov a2132, [bp + 12]
+38:		add a2132, [bp + 10]
 40:	
 
 strcat$11:	; £temporary3213 = target + £temporary3211
-41:		mov a2132, [bp + 6]
-42:		add a2132, a2131
+41:		mov a2133, [bp + 6]
+42:		add a2133, a2132
 44:	
 
 strcat$12:	; £temporary3212 -> £temporary3213 = *£temporary3213
 46:	
 
 strcat$13:	; £temporary3215 = source + index
-47:		mov a2133, [bp + 8]
-48:		add a2133, [bp + 10]
+47:		mov a2134, [bp + 8]
+48:		add a2134, [bp + 10]
 50:	
 
 strcat$14:	; £temporary3214 -> £temporary3215 = *£temporary3215
 52:	
 
 strcat$15:	; £temporary3212 -> £temporary3213 = £temporary3214 -> £temporary3215
-53:		mov t2134, [a2133]
-54:		mov [a2132], t2134
+53:		mov t2135, [a2134]
+54:		mov [a2133], t2135
 56:	
 
 strcat$16:	; ++index
@@ -241,31 +241,31 @@ strcat$17:	; goto 7
 62:	
 
 strcat$18:	; £temporary3216 = targetLength + index
-63:		mov a2135, [bp + 12]
-64:		add a2135, [bp + 10]
+63:		mov a2136, [bp + 12]
+64:		add a2136, [bp + 10]
 66:	
 
 strcat$19:	; £temporary3218 = target + £temporary3216
-67:		mov a2136, [bp + 6]
-68:		add a2136, a2135
+67:		mov a2137, [bp + 6]
+68:		add a2137, a2136
 70:	
 
 strcat$20:	; £temporary3217 -> £temporary3218 = *£temporary3218
 72:	
 
 strcat$21:	; £temporary3217 -> £temporary3218 = 0
-73:		mov byte [a2136], 0
+73:		mov byte [a2137], 0
 75:	
 
 strcat$22:	; return_value = target
-76:		mov a2137, [bp + 6]
+76:		mov a2138, [bp + 6]
 78:	
 
 strcat$23:	; return
-79:		mov t2138, [bp]
+79:		mov t2139, [bp]
 80:		mov di, [bp + 4]
 81:		mov bp, [bp + 2]
-82:		jmp t2138
+82:		jmp t2139
 84:	
 
 strcat$24:	; function end strcat
@@ -275,8 +275,8 @@ strncat:	; call header integral zero 0 stack zero 0
 3:	
 
 strncat$1:	; parameter target, offset 6
-4:		mov a2139, [bp + 6]
-5:		mov [bp + 20], a2139
+4:		mov a2140, [bp + 6]
+5:		mov [bp + 20], a2140
 7:	
 
 strncat$2:	; call function noellipse-noellipse strlen
@@ -293,7 +293,7 @@ strncat$4:	; £temporary3220 = return_value
 20:	
 
 strncat$5:	; targetLength = £temporary3220
-21:		mov [bp + 14], t2141
+21:		mov [bp + 14], t2142
 23:	
 
 strncat$6:	; index = 0
@@ -301,52 +301,52 @@ strncat$6:	; index = 0
 26:	
 
 strncat$7:	; £temporary3221 = size - 1
-27:		mov a2142, [bp + 10]
-28:		sub a2142, 1
+27:		mov a2143, [bp + 10]
+28:		sub a2143, 1
 30:	
 
 strncat$8:	; if index >= £temporary3221 goto 20
-31:		cmp [bp + 12], a2142
+31:		cmp [bp + 12], a2143
 32:		jge strncat$20
 34:	
 
 strncat$9:	; £temporary3224 = source + index
-35:		mov a2143, [bp + 8]
-36:		add a2143, [bp + 12]
+35:		mov a2144, [bp + 8]
+36:		add a2144, [bp + 12]
 38:	
 
 strncat$10:	; £temporary3223 -> £temporary3224 = *£temporary3224
 40:	
 
 strncat$11:	; if £temporary3223 -> £temporary3224 == 0 goto 20
-41:		cmp byte [a2143], 0
+41:		cmp byte [a2144], 0
 42:		je strncat$20
 44:	
 
 strncat$12:	; £temporary3228 = targetLength + index
-45:		mov a2144, [bp + 14]
-46:		add a2144, [bp + 12]
+45:		mov a2145, [bp + 14]
+46:		add a2145, [bp + 12]
 48:	
 
 strncat$13:	; £temporary3230 = target + £temporary3228
-49:		mov a2145, [bp + 6]
-50:		add a2145, a2144
+49:		mov a2146, [bp + 6]
+50:		add a2146, a2145
 52:	
 
 strncat$14:	; £temporary3229 -> £temporary3230 = *£temporary3230
 54:	
 
 strncat$15:	; £temporary3232 = source + index
-55:		mov a2146, [bp + 8]
-56:		add a2146, [bp + 12]
+55:		mov a2147, [bp + 8]
+56:		add a2147, [bp + 12]
 58:	
 
 strncat$16:	; £temporary3231 -> £temporary3232 = *£temporary3232
 60:	
 
 strncat$17:	; £temporary3229 -> £temporary3230 = £temporary3231 -> £temporary3232
-61:		mov t2147, [a2146]
-62:		mov [a2145], t2147
+61:		mov t2148, [a2147]
+62:		mov [a2146], t2148
 64:	
 
 strncat$18:	; ++index
@@ -358,35 +358,35 @@ strncat$19:	; goto 7
 70:	
 
 strncat$20:	; £temporary3233 = targetLength + size
-71:		mov a2148, [bp + 14]
-72:		add a2148, [bp + 10]
+71:		mov a2149, [bp + 14]
+72:		add a2149, [bp + 10]
 74:	
 
 strncat$21:	; £temporary3234 = £temporary3233 - 1
-75:		sub a2148, 1
+75:		sub a2149, 1
 77:	
 
 strncat$22:	; £temporary3236 = target + £temporary3234
-78:		mov a2149, [bp + 6]
-79:		add a2149, a2148
+78:		mov a2150, [bp + 6]
+79:		add a2150, a2149
 81:	
 
 strncat$23:	; £temporary3235 -> £temporary3236 = *£temporary3236
 83:	
 
 strncat$24:	; £temporary3235 -> £temporary3236 = 0
-84:		mov byte [a2149], 0
+84:		mov byte [a2150], 0
 86:	
 
 strncat$25:	; return_value = target
-87:		mov a2150, [bp + 6]
+87:		mov a2151, [bp + 6]
 89:	
 
 strncat$26:	; return
-90:		mov t2151, [bp]
+90:		mov t2152, [bp]
 91:		mov di, [bp + 4]
 92:		mov bp, [bp + 2]
-93:		jmp t2151
+93:		jmp t2152
 95:	
 
 strncat$27:	; function end strncat
@@ -397,154 +397,154 @@ strcmp:	; index = 0
 4:	
 
 strcmp$1:	; £temporary3240 = left + index
-5:		mov a2152, [bp + 6]
-6:		add a2152, [bp + 10]
+5:		mov a2153, [bp + 6]
+6:		add a2153, [bp + 10]
 8:	
 
 strcmp$2:	; £temporary3239 -> £temporary3240 = *£temporary3240
 10:	
 
 strcmp$3:	; if £temporary3239 -> £temporary3240 != 0 goto 9
-11:		cmp byte [a2152], 0
+11:		cmp byte [a2153], 0
 12:		jne strcmp$9
 14:	
 
 strcmp$4:	; £temporary3243 = right + index
-15:		mov a2153, [bp + 8]
-16:		add a2153, [bp + 10]
+15:		mov a2154, [bp + 8]
+16:		add a2154, [bp + 10]
 18:	
 
 strcmp$5:	; £temporary3242 -> £temporary3243 = *£temporary3243
 20:	
 
 strcmp$6:	; if £temporary3242 -> £temporary3243 != 0 goto 9
-21:		cmp byte [a2153], 0
+21:		cmp byte [a2154], 0
 22:		jne strcmp$9
 24:	
 
 strcmp$7:	; return_value = 0
-25:		mov a2154, 0
+25:		mov a2155, 0
 27:	
 
 strcmp$8:	; return
-28:		mov t2155, [bp]
+28:		mov t2156, [bp]
 29:		mov di, [bp + 4]
 30:		mov bp, [bp + 2]
-31:		jmp t2155
+31:		jmp t2156
 33:	
 
 strcmp$9:	; £temporary3247 = left + index
-34:		mov a2156, [bp + 6]
-35:		add a2156, [bp + 10]
+34:		mov a2157, [bp + 6]
+35:		add a2157, [bp + 10]
 37:	
 
 strcmp$10:	; £temporary3246 -> £temporary3247 = *£temporary3247
 39:	
 
 strcmp$11:	; if £temporary3246 -> £temporary3247 != 0 goto 14
-40:		cmp byte [a2156], 0
+40:		cmp byte [a2157], 0
 41:		jne strcmp$14
 43:	
 
 strcmp$12:	; return_value = -1
-44:		mov a2157, -1
+44:		mov a2158, -1
 46:	
 
 strcmp$13:	; return
-47:		mov t2158, [bp]
+47:		mov t2159, [bp]
 48:		mov di, [bp + 4]
 49:		mov bp, [bp + 2]
-50:		jmp t2158
+50:		jmp t2159
 52:	
 
 strcmp$14:	; £temporary3250 = right + index
-53:		mov a2159, [bp + 8]
-54:		add a2159, [bp + 10]
+53:		mov a2160, [bp + 8]
+54:		add a2160, [bp + 10]
 56:	
 
 strcmp$15:	; £temporary3249 -> £temporary3250 = *£temporary3250
 58:	
 
 strcmp$16:	; if £temporary3249 -> £temporary3250 != 0 goto 19
-59:		cmp byte [a2159], 0
+59:		cmp byte [a2160], 0
 60:		jne strcmp$19
 62:	
 
 strcmp$17:	; return_value = 1
-63:		mov a2160, 1
+63:		mov a2161, 1
 65:	
 
 strcmp$18:	; return
-66:		mov t2161, [bp]
+66:		mov t2162, [bp]
 67:		mov di, [bp + 4]
 68:		mov bp, [bp + 2]
-69:		jmp t2161
+69:		jmp t2162
 71:	
 
 strcmp$19:	; £temporary3253 = left + index
-72:		mov a2162, [bp + 6]
-73:		add a2162, [bp + 10]
+72:		mov a2163, [bp + 6]
+73:		add a2163, [bp + 10]
 75:	
 
 strcmp$20:	; £temporary3252 -> £temporary3253 = *£temporary3253
 77:	
 
 strcmp$21:	; £temporary3255 = right + index
-78:		mov a2163, [bp + 8]
-79:		add a2163, [bp + 10]
+78:		mov a2164, [bp + 8]
+79:		add a2164, [bp + 10]
 81:	
 
 strcmp$22:	; £temporary3254 -> £temporary3255 = *£temporary3255
 83:	
 
 strcmp$23:	; if £temporary3252 -> £temporary3253 >= £temporary3254 -> £temporary3255 goto 26
-84:		mov t2164, [a2163]
-85:		cmp [a2162], t2164
+84:		mov t2165, [a2164]
+85:		cmp [a2163], t2165
 86:		jge strcmp$26
 88:	
 
 strcmp$24:	; return_value = -1
-89:		mov a2165, -1
+89:		mov a2166, -1
 91:	
 
 strcmp$25:	; return
-92:		mov t2166, [bp]
+92:		mov t2167, [bp]
 93:		mov di, [bp + 4]
 94:		mov bp, [bp + 2]
-95:		jmp t2166
+95:		jmp t2167
 97:	
 
 strcmp$26:	; £temporary3258 = left + index
-98:		mov a2167, [bp + 6]
-99:		add a2167, [bp + 10]
+98:		mov a2168, [bp + 6]
+99:		add a2168, [bp + 10]
 101:	
 
 strcmp$27:	; £temporary3257 -> £temporary3258 = *£temporary3258
 103:	
 
 strcmp$28:	; £temporary3260 = right + index
-104:		mov a2168, [bp + 8]
-105:		add a2168, [bp + 10]
+104:		mov a2169, [bp + 8]
+105:		add a2169, [bp + 10]
 107:	
 
 strcmp$29:	; £temporary3259 -> £temporary3260 = *£temporary3260
 109:	
 
 strcmp$30:	; if £temporary3257 -> £temporary3258 <= £temporary3259 -> £temporary3260 goto 33
-110:		mov t2169, [a2168]
-111:		cmp [a2167], t2169
+110:		mov t2170, [a2169]
+111:		cmp [a2168], t2170
 112:		jle strcmp$33
 114:	
 
 strcmp$31:	; return_value = 1
-115:		mov a2170, 1
+115:		mov a2171, 1
 117:	
 
 strcmp$32:	; return
-118:		mov t2171, [bp]
+118:		mov t2172, [bp]
 119:		mov di, [bp + 4]
 120:		mov bp, [bp + 2]
-121:		jmp t2171
+121:		jmp t2172
 123:	
 
 strcmp$33:	; ++index
@@ -563,160 +563,160 @@ strncmp:	; index = 0
 4:	
 
 strncmp$1:	; if index >= size goto 36
-5:		mov a2172, [bp + 10]
-6:		cmp [bp + 12], a2172
+5:		mov a2173, [bp + 10]
+6:		cmp [bp + 12], a2173
 7:		jge strncmp$36
 9:	
 
 strncmp$2:	; £temporary3266 = left + index
-10:		mov a2173, [bp + 6]
-11:		add a2173, [bp + 12]
+10:		mov a2174, [bp + 6]
+11:		add a2174, [bp + 12]
 13:	
 
 strncmp$3:	; £temporary3265 -> £temporary3266 = *£temporary3266
 15:	
 
 strncmp$4:	; if £temporary3265 -> £temporary3266 != 0 goto 10
-16:		cmp byte [a2173], 0
+16:		cmp byte [a2174], 0
 17:		jne strncmp$10
 19:	
 
 strncmp$5:	; £temporary3269 = right + index
-20:		mov a2174, [bp + 8]
-21:		add a2174, [bp + 12]
+20:		mov a2175, [bp + 8]
+21:		add a2175, [bp + 12]
 23:	
 
 strncmp$6:	; £temporary3268 -> £temporary3269 = *£temporary3269
 25:	
 
 strncmp$7:	; if £temporary3268 -> £temporary3269 != 0 goto 10
-26:		cmp byte [a2174], 0
+26:		cmp byte [a2175], 0
 27:		jne strncmp$10
 29:	
 
 strncmp$8:	; return_value = 0
-30:		mov a2175, 0
+30:		mov a2176, 0
 32:	
 
 strncmp$9:	; return
-33:		mov t2176, [bp]
+33:		mov t2177, [bp]
 34:		mov di, [bp + 4]
 35:		mov bp, [bp + 2]
-36:		jmp t2176
+36:		jmp t2177
 38:	
 
 strncmp$10:	; £temporary3273 = left + index
-39:		mov a2177, [bp + 6]
-40:		add a2177, [bp + 12]
+39:		mov a2178, [bp + 6]
+40:		add a2178, [bp + 12]
 42:	
 
 strncmp$11:	; £temporary3272 -> £temporary3273 = *£temporary3273
 44:	
 
 strncmp$12:	; if £temporary3272 -> £temporary3273 != 0 goto 15
-45:		cmp byte [a2177], 0
+45:		cmp byte [a2178], 0
 46:		jne strncmp$15
 48:	
 
 strncmp$13:	; return_value = -1
-49:		mov a2178, -1
+49:		mov a2179, -1
 51:	
 
 strncmp$14:	; return
-52:		mov t2179, [bp]
+52:		mov t2180, [bp]
 53:		mov di, [bp + 4]
 54:		mov bp, [bp + 2]
-55:		jmp t2179
+55:		jmp t2180
 57:	
 
 strncmp$15:	; £temporary3276 = right + index
-58:		mov a2180, [bp + 8]
-59:		add a2180, [bp + 12]
+58:		mov a2181, [bp + 8]
+59:		add a2181, [bp + 12]
 61:	
 
 strncmp$16:	; £temporary3275 -> £temporary3276 = *£temporary3276
 63:	
 
 strncmp$17:	; if £temporary3275 -> £temporary3276 != 0 goto 20
-64:		cmp byte [a2180], 0
+64:		cmp byte [a2181], 0
 65:		jne strncmp$20
 67:	
 
 strncmp$18:	; return_value = 1
-68:		mov a2181, 1
+68:		mov a2182, 1
 70:	
 
 strncmp$19:	; return
-71:		mov t2182, [bp]
+71:		mov t2183, [bp]
 72:		mov di, [bp + 4]
 73:		mov bp, [bp + 2]
-74:		jmp t2182
+74:		jmp t2183
 76:	
 
 strncmp$20:	; £temporary3279 = left + index
-77:		mov a2183, [bp + 6]
-78:		add a2183, [bp + 12]
+77:		mov a2184, [bp + 6]
+78:		add a2184, [bp + 12]
 80:	
 
 strncmp$21:	; £temporary3278 -> £temporary3279 = *£temporary3279
 82:	
 
 strncmp$22:	; £temporary3281 = right + index
-83:		mov a2184, [bp + 8]
-84:		add a2184, [bp + 12]
+83:		mov a2185, [bp + 8]
+84:		add a2185, [bp + 12]
 86:	
 
 strncmp$23:	; £temporary3280 -> £temporary3281 = *£temporary3281
 88:	
 
 strncmp$24:	; if £temporary3278 -> £temporary3279 >= £temporary3280 -> £temporary3281 goto 27
-89:		mov t2185, [a2184]
-90:		cmp [a2183], t2185
+89:		mov t2186, [a2185]
+90:		cmp [a2184], t2186
 91:		jge strncmp$27
 93:	
 
 strncmp$25:	; return_value = -1
-94:		mov a2186, -1
+94:		mov a2187, -1
 96:	
 
 strncmp$26:	; return
-97:		mov t2187, [bp]
+97:		mov t2188, [bp]
 98:		mov di, [bp + 4]
 99:		mov bp, [bp + 2]
-100:		jmp t2187
+100:		jmp t2188
 102:	
 
 strncmp$27:	; £temporary3284 = left + index
-103:		mov a2188, [bp + 6]
-104:		add a2188, [bp + 12]
+103:		mov a2189, [bp + 6]
+104:		add a2189, [bp + 12]
 106:	
 
 strncmp$28:	; £temporary3283 -> £temporary3284 = *£temporary3284
 108:	
 
 strncmp$29:	; £temporary3286 = right + index
-109:		mov a2189, [bp + 8]
-110:		add a2189, [bp + 12]
+109:		mov a2190, [bp + 8]
+110:		add a2190, [bp + 12]
 112:	
 
 strncmp$30:	; £temporary3285 -> £temporary3286 = *£temporary3286
 114:	
 
 strncmp$31:	; if £temporary3283 -> £temporary3284 <= £temporary3285 -> £temporary3286 goto 34
-115:		mov t2190, [a2189]
-116:		cmp [a2188], t2190
+115:		mov t2191, [a2190]
+116:		cmp [a2189], t2191
 117:		jle strncmp$34
 119:	
 
 strncmp$32:	; return_value = 1
-120:		mov a2191, 1
+120:		mov a2192, 1
 122:	
 
 strncmp$33:	; return
-123:		mov t2192, [bp]
+123:		mov t2193, [bp]
 124:		mov di, [bp + 4]
 125:		mov bp, [bp + 2]
-126:		jmp t2192
+126:		jmp t2193
 128:	
 
 strncmp$34:	; ++index
@@ -728,29 +728,29 @@ strncmp$35:	; goto 1
 134:	
 
 strncmp$36:	; return_value = 0
-135:		mov a2193, 0
+135:		mov a2194, 0
 137:	
 
 strncmp$37:	; return
-138:		mov t2194, [bp]
+138:		mov t2195, [bp]
 139:		mov di, [bp + 4]
 140:		mov bp, [bp + 2]
-141:		jmp t2194
+141:		jmp t2195
 143:	
 
 strncmp$38:	; function end strncmp
 1:	
 
 strchr:	; £temporary3288 = int_to_int i (Signed_Int -> Signed_Char)
-2:		mov a2195, [bp + 8]
-5:		cmp a2195, 0
+2:		mov a2196, [bp + 8]
+5:		cmp a2196, 0
 6:		jge strchr$1
-7:		neg a2195
-9:		neg a2195
+7:		neg a2196
+9:		neg a2196
 11:	
 
 strchr$1:	; c = £temporary3288
-12:		mov [bp + 12], a2195
+12:		mov [bp + 12], a2196
 14:	
 
 strchr$2:	; index = 0
@@ -758,35 +758,35 @@ strchr$2:	; index = 0
 17:	
 
 strchr$3:	; £temporary3290 = text + index
-18:		mov a2196, [bp + 6]
-19:		add a2196, [bp + 10]
+18:		mov a2197, [bp + 6]
+19:		add a2197, [bp + 10]
 21:	
 
 strchr$4:	; £temporary3289 -> £temporary3290 = *£temporary3290
 23:	
 
 strchr$5:	; if £temporary3289 -> £temporary3290 == 0 goto 16
-24:		cmp byte [a2196], 0
+24:		cmp byte [a2197], 0
 25:		je strchr$16
 27:	
 
 strchr$6:	; £temporary3294 = text + index
-28:		mov a2197, [bp + 6]
-29:		add a2197, [bp + 10]
+28:		mov a2198, [bp + 6]
+29:		add a2198, [bp + 10]
 31:	
 
 strchr$7:	; £temporary3293 -> £temporary3294 = *£temporary3294
 33:	
 
 strchr$8:	; if £temporary3293 -> £temporary3294 != c goto 14
-34:		mov a2198, [bp + 12]
-35:		cmp [a2197], a2198
+34:		mov a2199, [bp + 12]
+35:		cmp [a2198], a2199
 36:		jne strchr$14
 38:	
 
 strchr$9:	; £temporary3297 = text + index
-39:		mov a2199, [bp + 6]
-40:		add a2199, [bp + 10]
+39:		mov a2200, [bp + 6]
+40:		add a2200, [bp + 10]
 42:	
 
 strchr$10:	; £temporary3296 -> £temporary3297 = *£temporary3297
@@ -799,10 +799,10 @@ strchr$12:	; return_value = £temporary3298
 48:	
 
 strchr$13:	; return
-49:		mov t2200, [bp]
+49:		mov t2201, [bp]
 50:		mov di, [bp + 4]
 51:		mov bp, [bp + 2]
-52:		jmp t2200
+52:		jmp t2201
 54:	
 
 strchr$14:	; ++index
@@ -814,14 +814,14 @@ strchr$15:	; goto 3
 60:	
 
 strchr$16:	; return_value = 0
-61:		mov a2201, 0
+61:		mov a2202, 0
 63:	
 
 strchr$17:	; return
-64:		mov t2202, [bp]
+64:		mov t2203, [bp]
 65:		mov di, [bp + 4]
 66:		mov bp, [bp + 2]
-67:		jmp t2202
+67:		jmp t2203
 69:	
 
 strchr$18:	; function end strchr
@@ -832,15 +832,15 @@ strrchr:	; result = 0
 4:	
 
 strrchr$1:	; £temporary3299 = int_to_int i (Signed_Int -> Signed_Char)
-5:		mov a2203, [bp + 8]
-8:		cmp a2203, 0
+5:		mov a2204, [bp + 8]
+8:		cmp a2204, 0
 9:		jge strrchr$2
-10:		neg a2203
-12:		neg a2203
+10:		neg a2204
+12:		neg a2204
 14:	
 
 strrchr$2:	; c = £temporary3299
-15:		mov [bp + 14], a2203
+15:		mov [bp + 14], a2204
 17:	
 
 strrchr$3:	; index = 0
@@ -848,35 +848,35 @@ strrchr$3:	; index = 0
 20:	
 
 strrchr$4:	; £temporary3301 = text + index
-21:		mov a2204, [bp + 6]
-22:		add a2204, [bp + 10]
+21:		mov a2205, [bp + 6]
+22:		add a2205, [bp + 10]
 24:	
 
 strrchr$5:	; £temporary3300 -> £temporary3301 = *£temporary3301
 26:	
 
 strrchr$6:	; if £temporary3300 -> £temporary3301 == 0 goto 16
-27:		cmp byte [a2204], 0
+27:		cmp byte [a2205], 0
 28:		je strrchr$16
 30:	
 
 strrchr$7:	; £temporary3305 = text + index
-31:		mov a2205, [bp + 6]
-32:		add a2205, [bp + 10]
+31:		mov a2206, [bp + 6]
+32:		add a2206, [bp + 10]
 34:	
 
 strrchr$8:	; £temporary3304 -> £temporary3305 = *£temporary3305
 36:	
 
 strrchr$9:	; if £temporary3304 -> £temporary3305 != c goto 14
-37:		mov a2206, [bp + 14]
-38:		cmp [a2205], a2206
+37:		mov a2207, [bp + 14]
+38:		cmp [a2206], a2207
 39:		jne strrchr$14
 41:	
 
 strrchr$10:	; £temporary3308 = text + index
-42:		mov a2207, [bp + 6]
-43:		add a2207, [bp + 10]
+42:		mov a2208, [bp + 6]
+43:		add a2208, [bp + 10]
 45:	
 
 strrchr$11:	; £temporary3307 -> £temporary3308 = *£temporary3308
@@ -886,7 +886,7 @@ strrchr$12:	; £temporary3309 = &£temporary3307 -> £temporary3308
 49:	
 
 strrchr$13:	; result = £temporary3309
-50:		mov [bp + 12], a2207
+50:		mov [bp + 12], a2208
 52:	
 
 strrchr$14:	; ++index
@@ -898,14 +898,14 @@ strrchr$15:	; goto 4
 58:	
 
 strrchr$16:	; return_value = result
-59:		mov a2208, [bp + 12]
+59:		mov a2209, [bp + 12]
 61:	
 
 strrchr$17:	; return
-62:		mov t2209, [bp]
+62:		mov t2210, [bp]
 63:		mov di, [bp + 4]
 64:		mov bp, [bp + 2]
-65:		jmp t2209
+65:		jmp t2210
 67:	
 
 strrchr$18:	; function end strrchr
@@ -916,15 +916,15 @@ strspn:	; index = 0
 4:	
 
 strspn$1:	; £temporary3311 = mainString + index
-5:		mov a2210, [bp + 6]
-6:		add a2210, [bp + 10]
+5:		mov a2211, [bp + 6]
+6:		add a2211, [bp + 10]
 8:	
 
 strspn$2:	; £temporary3310 -> £temporary3311 = *£temporary3311
 10:	
 
 strspn$3:	; if £temporary3310 -> £temporary3311 == 0 goto 18
-11:		cmp byte [a2210], 0
+11:		cmp byte [a2211], 0
 12:		je strspn$18
 14:	
 
@@ -932,29 +932,29 @@ strspn$4:	; call header integral zero 0 stack zero 0
 16:	
 
 strspn$5:	; parameter charSet, offset 6
-17:		mov a2211, [bp + 8]
-18:		mov [bp + 18], a2211
+17:		mov a2212, [bp + 8]
+18:		mov [bp + 18], a2212
 20:	
 
 strspn$6:	; £temporary3315 = mainString + index
-21:		mov a2212, [bp + 6]
-22:		add a2212, [bp + 10]
+21:		mov a2213, [bp + 6]
+22:		add a2213, [bp + 10]
 24:	
 
 strspn$7:	; £temporary3314 -> £temporary3315 = *£temporary3315
 26:	
 
 strspn$8:	; £temporary3316 = int_to_int £temporary3314 -> £temporary3315 (Signed_Char -> Signed_Int)
-27:		mov t2213, [a2212]
-29:		and t2213, 255
-31:		cmp t2213, 0
+27:		mov t2214, [a2213]
+29:		and t2214, 255
+31:		cmp t2214, 0
 32:		jge strspn$9
-33:		neg t2213
-35:		neg t2213
+33:		neg t2214
+35:		neg t2214
 37:	
 
 strspn$9:	; parameter £temporary3316, offset 8
-38:		mov [bp + 20], t2213
+38:		mov [bp + 20], t2214
 40:	
 
 strspn$10:	; call function noellipse-noellipse strchr
@@ -971,19 +971,19 @@ strspn$12:	; £temporary3317 = return_value
 53:	
 
 strspn$13:	; if £temporary3317 != 0 goto 16
-54:		cmp t2215, 0
+54:		cmp t2216, 0
 55:		jne strspn$16
 57:	
 
 strspn$14:	; return_value = index
-58:		mov a2216, [bp + 10]
+58:		mov a2217, [bp + 10]
 60:	
 
 strspn$15:	; return
-61:		mov t2217, [bp]
+61:		mov t2218, [bp]
 62:		mov di, [bp + 4]
 63:		mov bp, [bp + 2]
-64:		jmp t2217
+64:		jmp t2218
 66:	
 
 strspn$16:	; ++index
@@ -995,14 +995,14 @@ strspn$17:	; goto 1
 72:	
 
 strspn$18:	; return_value = -1
-73:		mov a2218, -1
+73:		mov a2219, -1
 75:	
 
 strspn$19:	; return
-76:		mov t2219, [bp]
+76:		mov t2220, [bp]
 77:		mov di, [bp + 4]
 78:		mov bp, [bp + 2]
-79:		jmp t2219
+79:		jmp t2220
 81:	
 
 strspn$20:	; function end strspn
@@ -1013,15 +1013,15 @@ strcspn:	; index = 0
 4:	
 
 strcspn$1:	; £temporary3322 = mainString + index
-5:		mov a2220, [bp + 6]
-6:		add a2220, [bp + 10]
+5:		mov a2221, [bp + 6]
+6:		add a2221, [bp + 10]
 8:	
 
 strcspn$2:	; £temporary3321 -> £temporary3322 = *£temporary3322
 10:	
 
 strcspn$3:	; if £temporary3321 -> £temporary3322 == 0 goto 18
-11:		cmp byte [a2220], 0
+11:		cmp byte [a2221], 0
 12:		je strcspn$18
 14:	
 
@@ -1029,29 +1029,29 @@ strcspn$4:	; call header integral zero 0 stack zero 0
 16:	
 
 strcspn$5:	; parameter charSet, offset 6
-17:		mov a2221, [bp + 8]
-18:		mov [bp + 18], a2221
+17:		mov a2222, [bp + 8]
+18:		mov [bp + 18], a2222
 20:	
 
 strcspn$6:	; £temporary3326 = mainString + index
-21:		mov a2222, [bp + 6]
-22:		add a2222, [bp + 10]
+21:		mov a2223, [bp + 6]
+22:		add a2223, [bp + 10]
 24:	
 
 strcspn$7:	; £temporary3325 -> £temporary3326 = *£temporary3326
 26:	
 
 strcspn$8:	; £temporary3327 = int_to_int £temporary3325 -> £temporary3326 (Signed_Char -> Signed_Int)
-27:		mov t2223, [a2222]
-29:		and t2223, 255
-31:		cmp t2223, 0
+27:		mov t2224, [a2223]
+29:		and t2224, 255
+31:		cmp t2224, 0
 32:		jge strcspn$9
-33:		neg t2223
-35:		neg t2223
+33:		neg t2224
+35:		neg t2224
 37:	
 
 strcspn$9:	; parameter £temporary3327, offset 8
-38:		mov [bp + 20], t2223
+38:		mov [bp + 20], t2224
 40:	
 
 strcspn$10:	; call function noellipse-noellipse strchr
@@ -1068,19 +1068,19 @@ strcspn$12:	; £temporary3328 = return_value
 53:	
 
 strcspn$13:	; if £temporary3328 == 0 goto 16
-54:		cmp t2225, 0
+54:		cmp t2226, 0
 55:		je strcspn$16
 57:	
 
 strcspn$14:	; return_value = index
-58:		mov a2226, [bp + 10]
+58:		mov a2227, [bp + 10]
 60:	
 
 strcspn$15:	; return
-61:		mov t2227, [bp]
+61:		mov t2228, [bp]
 62:		mov di, [bp + 4]
 63:		mov bp, [bp + 2]
-64:		jmp t2227
+64:		jmp t2228
 66:	
 
 strcspn$16:	; ++index
@@ -1092,14 +1092,14 @@ strcspn$17:	; goto 1
 72:	
 
 strcspn$18:	; return_value = -1
-73:		mov a2228, -1
+73:		mov a2229, -1
 75:	
 
 strcspn$19:	; return
-76:		mov t2229, [bp]
+76:		mov t2230, [bp]
 77:		mov di, [bp + 4]
 78:		mov bp, [bp + 2]
-79:		jmp t2229
+79:		jmp t2230
 81:	
 
 strcspn$20:	; function end strcspn
@@ -1110,15 +1110,15 @@ strpbrk:	; index = 0
 4:	
 
 strpbrk$1:	; £temporary3333 = mainString + index
-5:		mov a2230, [bp + 6]
-6:		add a2230, [bp + 10]
+5:		mov a2231, [bp + 6]
+6:		add a2231, [bp + 10]
 8:	
 
 strpbrk$2:	; £temporary3332 -> £temporary3333 = *£temporary3333
 10:	
 
 strpbrk$3:	; if £temporary3332 -> £temporary3333 == 0 goto 21
-11:		cmp byte [a2230], 0
+11:		cmp byte [a2231], 0
 12:		je strpbrk$21
 14:	
 
@@ -1126,29 +1126,29 @@ strpbrk$4:	; call header integral zero 0 stack zero 0
 16:	
 
 strpbrk$5:	; parameter charSet, offset 6
-17:		mov a2231, [bp + 8]
-18:		mov [bp + 18], a2231
+17:		mov a2232, [bp + 8]
+18:		mov [bp + 18], a2232
 20:	
 
 strpbrk$6:	; £temporary3337 = mainString + index
-21:		mov a2232, [bp + 6]
-22:		add a2232, [bp + 10]
+21:		mov a2233, [bp + 6]
+22:		add a2233, [bp + 10]
 24:	
 
 strpbrk$7:	; £temporary3336 -> £temporary3337 = *£temporary3337
 26:	
 
 strpbrk$8:	; £temporary3338 = int_to_int £temporary3336 -> £temporary3337 (Signed_Char -> Signed_Int)
-27:		mov t2233, [a2232]
-29:		and t2233, 255
-31:		cmp t2233, 0
+27:		mov t2234, [a2233]
+29:		and t2234, 255
+31:		cmp t2234, 0
 32:		jge strpbrk$9
-33:		neg t2233
-35:		neg t2233
+33:		neg t2234
+35:		neg t2234
 37:	
 
 strpbrk$9:	; parameter £temporary3338, offset 8
-38:		mov [bp + 20], t2233
+38:		mov [bp + 20], t2234
 40:	
 
 strpbrk$10:	; call function noellipse-noellipse strchr
@@ -1165,13 +1165,13 @@ strpbrk$12:	; £temporary3339 = return_value
 53:	
 
 strpbrk$13:	; if £temporary3339 == 0 goto 19
-54:		cmp t2235, 0
+54:		cmp t2236, 0
 55:		je strpbrk$19
 57:	
 
 strpbrk$14:	; £temporary3342 = mainString + index
-58:		mov a2236, [bp + 6]
-59:		add a2236, [bp + 10]
+58:		mov a2237, [bp + 6]
+59:		add a2237, [bp + 10]
 61:	
 
 strpbrk$15:	; £temporary3341 -> £temporary3342 = *£temporary3342
@@ -1184,10 +1184,10 @@ strpbrk$17:	; return_value = £temporary3343
 67:	
 
 strpbrk$18:	; return
-68:		mov t2237, [bp]
+68:		mov t2238, [bp]
 69:		mov di, [bp + 4]
 70:		mov bp, [bp + 2]
-71:		jmp t2237
+71:		jmp t2238
 73:	
 
 strpbrk$19:	; ++index
@@ -1199,14 +1199,14 @@ strpbrk$20:	; goto 1
 79:	
 
 strpbrk$21:	; return_value = 0
-80:		mov a2238, 0
+80:		mov a2239, 0
 82:	
 
 strpbrk$22:	; return
-83:		mov t2239, [bp]
+83:		mov t2240, [bp]
 84:		mov di, [bp + 4]
 85:		mov bp, [bp + 2]
-86:		jmp t2239
+86:		jmp t2240
 88:	
 
 strpbrk$23:	; function end strpbrk
@@ -1217,15 +1217,15 @@ strstr:	; index = 0
 4:	
 
 strstr$1:	; £temporary3347 = mainString + index
-5:		mov a2240, [bp + 6]
-6:		add a2240, [bp + 10]
+5:		mov a2241, [bp + 6]
+6:		add a2241, [bp + 10]
 8:	
 
 strstr$2:	; £temporary3346 -> £temporary3347 = *£temporary3347
 10:	
 
 strstr$3:	; if £temporary3346 -> £temporary3347 == 0 goto 19
-11:		cmp byte [a2240], 0
+11:		cmp byte [a2241], 0
 12:		je strstr$19
 14:	
 
@@ -1233,17 +1233,17 @@ strstr$4:	; call header integral zero 0 stack zero 0
 16:	
 
 strstr$5:	; £temporary3350 = mainString + index
-17:		mov a2241, [bp + 6]
-18:		add a2241, [bp + 10]
+17:		mov a2242, [bp + 6]
+18:		add a2242, [bp + 10]
 20:	
 
 strstr$6:	; parameter £temporary3350, offset 6
-21:		mov [bp + 18], a2241
+21:		mov [bp + 18], a2242
 23:	
 
 strstr$7:	; parameter subString, offset 8
-24:		mov a2242, [bp + 8]
-25:		mov [bp + 20], a2242
+24:		mov a2243, [bp + 8]
+25:		mov [bp + 20], a2243
 27:	
 
 strstr$8:	; call function noellipse-noellipse strcmp
@@ -1260,13 +1260,13 @@ strstr$10:	; £temporary3351 = return_value
 40:	
 
 strstr$11:	; if £temporary3351 != 0 goto 17
-41:		cmp t2244, 0
+41:		cmp t2245, 0
 42:		jne strstr$17
 44:	
 
 strstr$12:	; £temporary3354 = mainString + index
-45:		mov a2245, [bp + 6]
-46:		add a2245, [bp + 10]
+45:		mov a2246, [bp + 6]
+46:		add a2246, [bp + 10]
 48:	
 
 strstr$13:	; £temporary3353 -> £temporary3354 = *£temporary3354
@@ -1279,10 +1279,10 @@ strstr$15:	; return_value = £temporary3355
 54:	
 
 strstr$16:	; return
-55:		mov t2246, [bp]
+55:		mov t2247, [bp]
 56:		mov di, [bp + 4]
 57:		mov bp, [bp + 2]
-58:		jmp t2246
+58:		jmp t2247
 60:	
 
 strstr$17:	; ++index
@@ -1294,14 +1294,14 @@ strstr$18:	; goto 1
 66:	
 
 strstr$19:	; return_value = 0
-67:		mov a2247, 0
+67:		mov a2248, 0
 69:	
 
 strstr$20:	; return
-70:		mov t2248, [bp]
+70:		mov t2249, [bp]
 71:		mov di, [bp + 4]
 72:		mov bp, [bp + 2]
-73:		jmp t2248
+73:		jmp t2249
 75:	
 
 strstr$21:	; function end strstr
@@ -1312,15 +1312,15 @@ strlen:	; index = 0
 4:	
 
 strlen$1:	; £temporary3359 = string + index
-5:		mov a2249, [bp + 6]
-6:		add a2249, [bp + 8]
+5:		mov a2250, [bp + 6]
+6:		add a2250, [bp + 8]
 8:	
 
 strlen$2:	; £temporary3358 -> £temporary3359 = *£temporary3359
 10:	
 
 strlen$3:	; if £temporary3358 -> £temporary3359 == 0 goto 6
-11:		cmp byte [a2249], 0
+11:		cmp byte [a2250], 0
 12:		je strlen$6
 14:	
 
@@ -1333,14 +1333,14 @@ strlen$5:	; goto 1
 20:	
 
 strlen$6:	; return_value = index
-21:		mov a2250, [bp + 8]
+21:		mov a2251, [bp + 8]
 23:	
 
 strlen$7:	; return
-24:		mov t2251, [bp]
+24:		mov t2252, [bp]
 25:		mov di, [bp + 4]
 26:		mov bp, [bp + 2]
-27:		jmp t2251
+27:		jmp t2252
 29:	
 
 strlen$8:	; function end strlen
@@ -1363,7 +1363,7 @@ strerror$3:	; £temporary3362 = return_value
 16:	
 
 strerror$4:	; localeConvPtr = £temporary3362
-17:		mov [bp + 8], t2253
+17:		mov [bp + 8], t2254
 19:	
 
 strerror$5:	; if localeConvPtr == 0 goto 9
@@ -1372,11 +1372,11 @@ strerror$5:	; if localeConvPtr == 0 goto 9
 23:	
 
 strerror$6:	; £temporary3364 -> localeConvPtr = *localeConvPtr, offset 16
-24:		mov a2254, [bp + 8]
+24:		mov a2255, [bp + 8]
 26:	
 
 strerror$7:	; £temporary3368 = £temporary3364 -> localeConvPtr
-27:		mov t2255, [a2254 + 16]
+27:		mov t2256, [a2255 + 16]
 29:	
 
 strerror$8:	; goto 10
@@ -1384,11 +1384,11 @@ strerror$8:	; goto 10
 32:	
 
 strerror$9:	; £temporary3368 = 0
-33:		mov t2256, 0
+33:		mov t2257, 0
 35:	
 
 strerror$10:	; messageList = £temporary3368
-36:		mov [bp + 10], t2256
+36:		mov [bp + 10], t2257
 38:	
 
 strerror$11:	; if messageList == 0 goto 14
@@ -1397,7 +1397,7 @@ strerror$11:	; if messageList == 0 goto 14
 42:	
 
 strerror$12:	; £temporary3373 = messageList
-43:		mov t2257, [bp + 10]
+43:		mov t2258, [bp + 10]
 45:	
 
 strerror$13:	; goto 15
@@ -1405,36 +1405,36 @@ strerror$13:	; goto 15
 48:	
 
 strerror$14:	; £temporary3373 = enMessageList
-49:		mov t2258, enMessageList
+49:		mov t2259, enMessageList
 51:	
 
 strerror$15:	; messageList = £temporary3373
-52:		mov [bp + 10], t2258
+52:		mov [bp + 10], t2259
 54:	
 
 strerror$16:	; £temporary3375 = errno * 2
-55:		mov a2259, [bp + 6]
+55:		mov a2260, [bp + 6]
 57:		xor dx, dx
 58:		mul word [int2$2#]
 64:	
 
 strerror$17:	; £temporary3376 = messageList + £temporary3375
-65:		mov a2263, [bp + 10]
-66:		add a2263, t2262
+65:		mov a2264, [bp + 10]
+66:		add a2264, t2263
 68:	
 
 strerror$18:	; £temporary3374 -> £temporary3376 = *£temporary3376
 70:	
 
 strerror$19:	; return_value = £temporary3374 -> £temporary3376
-71:		mov t2264, [a2263]
+71:		mov t2265, [a2264]
 73:	
 
 strerror$20:	; return
-74:		mov t2265, [bp]
+74:		mov t2266, [bp]
 75:		mov di, [bp + 4]
 76:		mov bp, [bp + 2]
-77:		jmp t2265
+77:		jmp t2266
 79:	
 
 strerror$21:	; function end strerror
@@ -1446,23 +1446,23 @@ strtok:	; if string == 0 goto 37
 5:	
 
 strtok$1:	; £temporary3378 -> string = *string
-6:		mov a2266, [bp + 6]
+6:		mov a2267, [bp + 6]
 8:	
 
 strtok$2:	; if £temporary3378 -> string != 0 goto 5
-9:		cmp byte [a2266], 0
+9:		cmp byte [a2267], 0
 10:		jne strtok$5
 12:	
 
 strtok$3:	; return_value = 0
-13:		mov a2267, 0
+13:		mov a2268, 0
 15:	
 
 strtok$4:	; return
-16:		mov t2268, [bp]
+16:		mov t2269, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
-19:		jmp t2268
+19:		jmp t2269
 21:	
 
 strtok$5:	; index = 0
@@ -1470,15 +1470,15 @@ strtok$5:	; index = 0
 24:	
 
 strtok$6:	; £temporary3381 = string + index
-25:		mov a2269, [bp + 6]
-26:		add a2269, [bp + 10]
+25:		mov a2270, [bp + 6]
+26:		add a2270, [bp + 10]
 28:	
 
 strtok$7:	; £temporary3380 -> £temporary3381 = *£temporary3381
 30:	
 
 strtok$8:	; if £temporary3380 -> £temporary3381 == 0 goto 31
-31:		cmp byte [a2269], 0
+31:		cmp byte [a2270], 0
 32:		je strtok$31
 34:	
 
@@ -1486,29 +1486,29 @@ strtok$9:	; call header integral zero 0 stack zero 0
 36:	
 
 strtok$10:	; parameter charSet, offset 6
-37:		mov a2270, [bp + 8]
-38:		mov [bp + 20], a2270
+37:		mov a2271, [bp + 8]
+38:		mov [bp + 20], a2271
 40:	
 
 strtok$11:	; £temporary3385 = string + index
-41:		mov a2271, [bp + 6]
-42:		add a2271, [bp + 10]
+41:		mov a2272, [bp + 6]
+42:		add a2272, [bp + 10]
 44:	
 
 strtok$12:	; £temporary3384 -> £temporary3385 = *£temporary3385
 46:	
 
 strtok$13:	; £temporary3386 = int_to_int £temporary3384 -> £temporary3385 (Signed_Char -> Signed_Int)
-47:		mov t2272, [a2271]
-49:		and t2272, 255
-51:		cmp t2272, 0
+47:		mov t2273, [a2272]
+49:		and t2273, 255
+51:		cmp t2273, 0
 52:		jge strtok$14
-53:		neg t2272
-55:		neg t2272
+53:		neg t2273
+55:		neg t2273
 57:	
 
 strtok$14:	; parameter £temporary3386, offset 8
-58:		mov [bp + 22], t2272
+58:		mov [bp + 22], t2273
 60:	
 
 strtok$15:	; call function noellipse-noellipse strchr
@@ -1525,30 +1525,30 @@ strtok$17:	; £temporary3387 = return_value
 73:	
 
 strtok$18:	; if £temporary3387 == 0 goto 29
-74:		cmp t2274, 0
+74:		cmp t2275, 0
 75:		je strtok$29
 77:	
 
 strtok$19:	; £temporary3390 = string + index
-78:		mov a2275, [bp + 6]
-79:		add a2275, [bp + 10]
+78:		mov a2276, [bp + 6]
+79:		add a2276, [bp + 10]
 81:	
 
 strtok$20:	; £temporary3389 -> £temporary3390 = *£temporary3390
 83:	
 
 strtok$21:	; £temporary3389 -> £temporary3390 = 0
-84:		mov byte [a2275], 0
+84:		mov byte [a2276], 0
 86:	
 
 strtok$22:	; £temporary3391 = index + 1
-87:		mov a2276, [bp + 10]
-88:		add a2276, 1
+87:		mov a2277, [bp + 10]
+88:		add a2277, 1
 90:	
 
 strtok$23:	; £temporary3393 = string + £temporary3391
-91:		mov a2277, [bp + 6]
-92:		add a2277, a2276
+91:		mov a2278, [bp + 6]
+92:		add a2278, a2277
 94:	
 
 strtok$24:	; £temporary3392 -> £temporary3393 = *£temporary3393
@@ -1558,18 +1558,18 @@ strtok$25:	; £temporary3394 = &£temporary3392 -> £temporary3393
 98:	
 
 strtok$26:	; token = £temporary3394
-99:		mov [token], a2277
+99:		mov [token], a2278
 101:	
 
 strtok$27:	; return_value = string
-102:		mov a2278, [bp + 6]
+102:		mov a2279, [bp + 6]
 104:	
 
 strtok$28:	; return
-105:		mov t2279, [bp]
+105:		mov t2280, [bp]
 106:		mov di, [bp + 4]
 107:		mov bp, [bp + 2]
-108:		jmp t2279
+108:		jmp t2280
 110:	
 
 strtok$29:	; ++index
@@ -1581,8 +1581,8 @@ strtok$30:	; goto 6
 116:	
 
 strtok$31:	; £temporary3396 = string + index
-117:		mov a2280, [bp + 6]
-118:		add a2280, [bp + 10]
+117:		mov a2281, [bp + 6]
+118:		add a2281, [bp + 10]
 120:	
 
 strtok$32:	; £temporary3395 -> £temporary3396 = *£temporary3396
@@ -1592,18 +1592,18 @@ strtok$33:	; £temporary3397 = &£temporary3395 -> £temporary3396
 124:	
 
 strtok$34:	; token = £temporary3397
-125:		mov [token], a2280
+125:		mov [token], a2281
 127:	
 
 strtok$35:	; return_value = string
-128:		mov a2281, [bp + 6]
+128:		mov a2282, [bp + 6]
 130:	
 
 strtok$36:	; return
-131:		mov t2282, [bp]
+131:		mov t2283, [bp]
 132:		mov di, [bp + 4]
 133:		mov bp, [bp + 2]
-134:		jmp t2282
+134:		jmp t2283
 136:	
 
 strtok$37:	; if token != 0 goto 40
@@ -1612,31 +1612,31 @@ strtok$37:	; if token != 0 goto 40
 140:	
 
 strtok$38:	; return_value = 0
-141:		mov a2283, 0
+141:		mov a2284, 0
 143:	
 
 strtok$39:	; return
-144:		mov t2284, [bp]
+144:		mov t2285, [bp]
 145:		mov di, [bp + 4]
 146:		mov bp, [bp + 2]
-147:		jmp t2284
+147:		jmp t2285
 149:	
 
 strtok$40:	; if (token,0) != 0 goto 43
-150:		mov a2285, [token]
-151:		cmp byte [a2285], 0
+150:		mov a2286, [token]
+151:		cmp byte [a2286], 0
 152:		jne strtok$43
 154:	
 
 strtok$41:	; return_value = 0
-155:		mov a2286, 0
+155:		mov a2287, 0
 157:	
 
 strtok$42:	; return
-158:		mov t2287, [bp]
+158:		mov t2288, [bp]
 159:		mov di, [bp + 4]
 160:		mov bp, [bp + 2]
-161:		jmp t2287
+161:		jmp t2288
 163:	
 
 strtok$43:	; index = 0
@@ -1644,15 +1644,15 @@ strtok$43:	; index = 0
 166:	
 
 strtok$44:	; £temporary3402 = token + index
-167:		mov a2288, [token]
-168:		add a2288, [bp + 10]
+167:		mov a2289, [token]
+168:		add a2289, [bp + 10]
 170:	
 
 strtok$45:	; £temporary3401 -> £temporary3402 = *£temporary3402
 172:	
 
 strtok$46:	; if £temporary3401 -> £temporary3402 == 0 goto 70
-173:		cmp byte [a2288], 0
+173:		cmp byte [a2289], 0
 174:		je strtok$70
 176:	
 
@@ -1660,29 +1660,29 @@ strtok$47:	; call header integral zero 0 stack zero 0
 178:	
 
 strtok$48:	; parameter charSet, offset 6
-179:		mov a2289, [bp + 8]
-180:		mov [bp + 20], a2289
+179:		mov a2290, [bp + 8]
+180:		mov [bp + 20], a2290
 182:	
 
 strtok$49:	; £temporary3406 = token + index
-183:		mov a2290, [token]
-184:		add a2290, [bp + 10]
+183:		mov a2291, [token]
+184:		add a2291, [bp + 10]
 186:	
 
 strtok$50:	; £temporary3405 -> £temporary3406 = *£temporary3406
 188:	
 
 strtok$51:	; £temporary3407 = int_to_int £temporary3405 -> £temporary3406 (Signed_Char -> Signed_Int)
-189:		mov t2291, [a2290]
-191:		and t2291, 255
-193:		cmp t2291, 0
+189:		mov t2292, [a2291]
+191:		and t2292, 255
+193:		cmp t2292, 0
 194:		jge strtok$52
-195:		neg t2291
-197:		neg t2291
+195:		neg t2292
+197:		neg t2292
 199:	
 
 strtok$52:	; parameter £temporary3407, offset 8
-200:		mov [bp + 22], t2291
+200:		mov [bp + 22], t2292
 202:	
 
 strtok$53:	; call function noellipse-noellipse strchr
@@ -1699,35 +1699,35 @@ strtok$55:	; £temporary3408 = return_value
 215:	
 
 strtok$56:	; if £temporary3408 == 0 goto 68
-216:		cmp t2293, 0
+216:		cmp t2294, 0
 217:		je strtok$68
 219:	
 
 strtok$57:	; tokenStart2 = token
-220:		mov a2294, [token]
-221:		mov [bp + 14], a2294
+220:		mov a2295, [token]
+221:		mov [bp + 14], a2295
 223:	
 
 strtok$58:	; £temporary3411 = token + index
-224:		mov a2295, [token]
-225:		add a2295, [bp + 10]
+224:		mov a2296, [token]
+225:		add a2296, [bp + 10]
 227:	
 
 strtok$59:	; £temporary3410 -> £temporary3411 = *£temporary3411
 229:	
 
 strtok$60:	; £temporary3410 -> £temporary3411 = 0
-230:		mov byte [a2295], 0
+230:		mov byte [a2296], 0
 232:	
 
 strtok$61:	; £temporary3412 = index + 1
-233:		mov a2296, [bp + 10]
-234:		add a2296, 1
+233:		mov a2297, [bp + 10]
+234:		add a2297, 1
 236:	
 
 strtok$62:	; £temporary3414 = token + £temporary3412
-237:		mov a2297, [token]
-238:		add a2297, a2296
+237:		mov a2298, [token]
+238:		add a2298, a2297
 240:	
 
 strtok$63:	; £temporary3413 -> £temporary3414 = *£temporary3414
@@ -1737,18 +1737,18 @@ strtok$64:	; £temporary3415 = &£temporary3413 -> £temporary3414
 244:	
 
 strtok$65:	; token = £temporary3415
-245:		mov [token], a2297
+245:		mov [token], a2298
 247:	
 
 strtok$66:	; return_value = tokenStart2
-248:		mov a2298, [bp + 14]
+248:		mov a2299, [bp + 14]
 250:	
 
 strtok$67:	; return
-251:		mov t2299, [bp]
+251:		mov t2300, [bp]
 252:		mov di, [bp + 4]
 253:		mov bp, [bp + 2]
-254:		jmp t2299
+254:		jmp t2300
 256:	
 
 strtok$68:	; ++index
@@ -1760,13 +1760,13 @@ strtok$69:	; goto 44
 262:	
 
 strtok$70:	; tokenStart = token
-263:		mov a2300, [token]
-264:		mov [bp + 12], a2300
+263:		mov a2301, [token]
+264:		mov [bp + 12], a2301
 266:	
 
 strtok$71:	; £temporary3417 = token + index
-267:		mov a2301, [token]
-268:		add a2301, [bp + 10]
+267:		mov a2302, [token]
+268:		add a2302, [bp + 10]
 270:	
 
 strtok$72:	; £temporary3416 -> £temporary3417 = *£temporary3417
@@ -1776,37 +1776,37 @@ strtok$73:	; £temporary3418 = &£temporary3416 -> £temporary3417
 274:	
 
 strtok$74:	; token = £temporary3418
-275:		mov [token], a2301
+275:		mov [token], a2302
 277:	
 
 strtok$75:	; return_value = tokenStart
-278:		mov a2302, [bp + 12]
+278:		mov a2303, [bp + 12]
 280:	
 
 strtok$76:	; return
-281:		mov t2303, [bp]
+281:		mov t2304, [bp]
 282:		mov di, [bp + 4]
 283:		mov bp, [bp + 2]
-284:		jmp t2303
+284:		jmp t2304
 286:	
 
 strtok$77:	; function end strtok
 1:	
 
 memcpy:	; £temporary3423 = int_to_int target (Pointer -> Pointer)
-2:		mov a2304, [bp + 6]
+2:		mov a2305, [bp + 6]
 5:	
 
 memcpy$1:	; charTarget = £temporary3423
-6:		mov [bp + 12], a2304
+6:		mov [bp + 12], a2305
 8:	
 
 memcpy$2:	; £temporary3424 = int_to_int source (Pointer -> Pointer)
-9:		mov a2305, [bp + 8]
+9:		mov a2306, [bp + 8]
 12:	
 
 memcpy$3:	; charSource = £temporary3424
-13:		mov [bp + 14], a2305
+13:		mov [bp + 14], a2306
 15:	
 
 memcpy$4:	; index = 0
@@ -1814,30 +1814,30 @@ memcpy$4:	; index = 0
 18:	
 
 memcpy$5:	; if index >= size goto 13
-19:		mov a2306, [bp + 10]
-20:		cmp [bp + 16], a2306
+19:		mov a2307, [bp + 10]
+20:		cmp [bp + 16], a2307
 21:		jge memcpy$13
 23:	
 
 memcpy$6:	; £temporary3428 = charTarget + index
-24:		mov a2307, [bp + 12]
-25:		add a2307, [bp + 16]
+24:		mov a2308, [bp + 12]
+25:		add a2308, [bp + 16]
 27:	
 
 memcpy$7:	; £temporary3427 -> £temporary3428 = *£temporary3428
 29:	
 
 memcpy$8:	; £temporary3430 = charSource + index
-30:		mov a2308, [bp + 14]
-31:		add a2308, [bp + 16]
+30:		mov a2309, [bp + 14]
+31:		add a2309, [bp + 16]
 33:	
 
 memcpy$9:	; £temporary3429 -> £temporary3430 = *£temporary3430
 35:	
 
 memcpy$10:	; £temporary3427 -> £temporary3428 = £temporary3429 -> £temporary3430
-36:		mov t2309, [a2308]
-37:		mov [a2307], t2309
+36:		mov t2310, [a2309]
+37:		mov [a2308], t2310
 39:	
 
 memcpy$11:	; ++index
@@ -1849,48 +1849,48 @@ memcpy$12:	; goto 5
 45:	
 
 memcpy$13:	; £temporary3431 = int_to_int target (Pointer -> Pointer)
-46:		mov a2310, [bp + 6]
+46:		mov a2311, [bp + 6]
 49:	
 
 memcpy$14:	; return_value = £temporary3431
 51:	
 
 memcpy$15:	; return
-52:		mov t2311, [bp]
+52:		mov t2312, [bp]
 53:		mov di, [bp + 4]
 54:		mov bp, [bp + 2]
-55:		jmp t2311
+55:		jmp t2312
 57:	
 
 memcpy$16:	; function end memcpy
 1:	
 
 memmove:	; £temporary3432 = int_to_int target (Pointer -> Pointer)
-2:		mov a2312, [bp + 6]
+2:		mov a2313, [bp + 6]
 5:	
 
 memmove$1:	; charTarget = £temporary3432
-6:		mov [bp + 12], a2312
+6:		mov [bp + 12], a2313
 8:	
 
 memmove$2:	; £temporary3433 = int_to_int source (Pointer -> Pointer)
-9:		mov a2313, [bp + 8]
+9:		mov a2314, [bp + 8]
 12:	
 
 memmove$3:	; charSource = £temporary3433
-13:		mov [bp + 14], a2313
+13:		mov [bp + 14], a2314
 15:	
 
 memmove$4:	; if source >= target goto 14
-16:		mov a2314, [bp + 6]
-17:		cmp [bp + 8], a2314
+16:		mov a2315, [bp + 6]
+17:		cmp [bp + 8], a2315
 18:		jge memmove$14
 20:	
 
 memmove$5:	; index = size - 1
-21:		mov a2315, [bp + 10]
-22:		sub a2315, 1
-23:		mov [bp + 16], a2315
+21:		mov a2316, [bp + 10]
+22:		sub a2316, 1
+23:		mov [bp + 16], a2316
 25:	
 
 memmove$6:	; if index < 0 goto 23
@@ -1899,24 +1899,24 @@ memmove$6:	; if index < 0 goto 23
 29:	
 
 memmove$7:	; £temporary3439 = charTarget + index
-30:		mov a2316, [bp + 12]
-31:		add a2316, [bp + 16]
+30:		mov a2317, [bp + 12]
+31:		add a2317, [bp + 16]
 33:	
 
 memmove$8:	; £temporary3438 -> £temporary3439 = *£temporary3439
 35:	
 
 memmove$9:	; £temporary3441 = charSource + index
-36:		mov a2317, [bp + 14]
-37:		add a2317, [bp + 16]
+36:		mov a2318, [bp + 14]
+37:		add a2318, [bp + 16]
 39:	
 
 memmove$10:	; £temporary3440 -> £temporary3441 = *£temporary3441
 41:	
 
 memmove$11:	; £temporary3438 -> £temporary3439 = £temporary3440 -> £temporary3441
-42:		mov t2318, [a2317]
-43:		mov [a2316], t2318
+42:		mov t2319, [a2318]
+43:		mov [a2317], t2319
 45:	
 
 memmove$12:	; --index
@@ -1932,30 +1932,30 @@ memmove$14:	; index = 0
 54:	
 
 memmove$15:	; if index >= size goto 23
-55:		mov a2319, [bp + 10]
-56:		cmp [bp + 16], a2319
+55:		mov a2320, [bp + 10]
+56:		cmp [bp + 16], a2320
 57:		jge memmove$23
 59:	
 
 memmove$16:	; £temporary3445 = charTarget + index
-60:		mov a2320, [bp + 12]
-61:		add a2320, [bp + 16]
+60:		mov a2321, [bp + 12]
+61:		add a2321, [bp + 16]
 63:	
 
 memmove$17:	; £temporary3444 -> £temporary3445 = *£temporary3445
 65:	
 
 memmove$18:	; £temporary3447 = charSource + index
-66:		mov a2321, [bp + 14]
-67:		add a2321, [bp + 16]
+66:		mov a2322, [bp + 14]
+67:		add a2322, [bp + 16]
 69:	
 
 memmove$19:	; £temporary3446 -> £temporary3447 = *£temporary3447
 71:	
 
 memmove$20:	; £temporary3444 -> £temporary3445 = £temporary3446 -> £temporary3447
-72:		mov t2322, [a2321]
-73:		mov [a2320], t2322
+72:		mov t2323, [a2322]
+73:		mov [a2321], t2323
 75:	
 
 memmove$21:	; ++index
@@ -1967,36 +1967,36 @@ memmove$22:	; goto 15
 81:	
 
 memmove$23:	; £temporary3448 = int_to_int target (Pointer -> Pointer)
-82:		mov a2323, [bp + 6]
+82:		mov a2324, [bp + 6]
 85:	
 
 memmove$24:	; return_value = £temporary3448
 87:	
 
 memmove$25:	; return
-88:		mov t2324, [bp]
+88:		mov t2325, [bp]
 89:		mov di, [bp + 4]
 90:		mov bp, [bp + 2]
-91:		jmp t2324
+91:		jmp t2325
 93:	
 
 memmove$26:	; function end memmove
 1:	
 
 memcmp:	; £temporary3449 = int_to_int left (Pointer -> Pointer)
-2:		mov a2325, [bp + 6]
+2:		mov a2326, [bp + 6]
 5:	
 
 memcmp$1:	; charLeft = £temporary3449
-6:		mov [bp + 12], a2325
+6:		mov [bp + 12], a2326
 8:	
 
 memcmp$2:	; £temporary3450 = int_to_int right (Pointer -> Pointer)
-9:		mov a2326, [bp + 8]
+9:		mov a2327, [bp + 8]
 12:	
 
 memcmp$3:	; charRight = £temporary3450
-13:		mov [bp + 14], a2326
+13:		mov [bp + 14], a2327
 15:	
 
 memcmp$4:	; index = 0
@@ -2004,75 +2004,75 @@ memcmp$4:	; index = 0
 18:	
 
 memcmp$5:	; if index >= size goto 22
-19:		mov a2327, [bp + 10]
-20:		cmp [bp + 16], a2327
+19:		mov a2328, [bp + 10]
+20:		cmp [bp + 16], a2328
 21:		jge memcmp$22
 23:	
 
 memcmp$6:	; £temporary3454 = charLeft + index
-24:		mov a2328, [bp + 12]
-25:		add a2328, [bp + 16]
+24:		mov a2329, [bp + 12]
+25:		add a2329, [bp + 16]
 27:	
 
 memcmp$7:	; £temporary3453 -> £temporary3454 = *£temporary3454
 29:	
 
 memcmp$8:	; £temporary3456 = charRight + index
-30:		mov a2329, [bp + 14]
-31:		add a2329, [bp + 16]
+30:		mov a2330, [bp + 14]
+31:		add a2330, [bp + 16]
 33:	
 
 memcmp$9:	; £temporary3455 -> £temporary3456 = *£temporary3456
 35:	
 
 memcmp$10:	; if £temporary3453 -> £temporary3454 >= £temporary3455 -> £temporary3456 goto 13
-36:		mov t2330, [a2329]
-37:		cmp [a2328], t2330
+36:		mov t2331, [a2330]
+37:		cmp [a2329], t2331
 38:		jge memcmp$13
 40:	
 
 memcmp$11:	; return_value = -1
-41:		mov a2331, -1
+41:		mov a2332, -1
 43:	
 
 memcmp$12:	; return
-44:		mov t2332, [bp]
+44:		mov t2333, [bp]
 45:		mov di, [bp + 4]
 46:		mov bp, [bp + 2]
-47:		jmp t2332
+47:		jmp t2333
 49:	
 
 memcmp$13:	; £temporary3459 = charLeft + index
-50:		mov a2333, [bp + 12]
-51:		add a2333, [bp + 16]
+50:		mov a2334, [bp + 12]
+51:		add a2334, [bp + 16]
 53:	
 
 memcmp$14:	; £temporary3458 -> £temporary3459 = *£temporary3459
 55:	
 
 memcmp$15:	; £temporary3461 = charRight + index
-56:		mov a2334, [bp + 14]
-57:		add a2334, [bp + 16]
+56:		mov a2335, [bp + 14]
+57:		add a2335, [bp + 16]
 59:	
 
 memcmp$16:	; £temporary3460 -> £temporary3461 = *£temporary3461
 61:	
 
 memcmp$17:	; if £temporary3458 -> £temporary3459 <= £temporary3460 -> £temporary3461 goto 20
-62:		mov t2335, [a2334]
-63:		cmp [a2333], t2335
+62:		mov t2336, [a2335]
+63:		cmp [a2334], t2336
 64:		jle memcmp$20
 66:	
 
 memcmp$18:	; return_value = 1
-67:		mov a2336, 1
+67:		mov a2337, 1
 69:	
 
 memcmp$19:	; return
-70:		mov t2337, [bp]
+70:		mov t2338, [bp]
 71:		mov di, [bp + 4]
 72:		mov bp, [bp + 2]
-73:		jmp t2337
+73:		jmp t2338
 75:	
 
 memcmp$20:	; ++index
@@ -2084,37 +2084,37 @@ memcmp$21:	; goto 5
 81:	
 
 memcmp$22:	; return_value = 0
-82:		mov a2338, 0
+82:		mov a2339, 0
 84:	
 
 memcmp$23:	; return
-85:		mov t2339, [bp]
+85:		mov t2340, [bp]
 86:		mov di, [bp + 4]
 87:		mov bp, [bp + 2]
-88:		jmp t2339
+88:		jmp t2340
 90:	
 
 memcmp$24:	; function end memcmp
 1:	
 
 memchr:	; £temporary3463 = int_to_int block (Pointer -> Pointer)
-2:		mov a2340, [bp + 6]
+2:		mov a2341, [bp + 6]
 5:	
 
 memchr$1:	; charBlock = £temporary3463
-6:		mov [bp + 14], a2340
+6:		mov [bp + 14], a2341
 8:	
 
 memchr$2:	; £temporary3464 = int_to_int i (Signed_Int -> Signed_Char)
-9:		mov a2341, [bp + 8]
-12:		cmp a2341, 0
+9:		mov a2342, [bp + 8]
+12:		cmp a2342, 0
 13:		jge memchr$3
-14:		neg a2341
-16:		neg a2341
+14:		neg a2342
+16:		neg a2342
 18:	
 
 memchr$3:	; c = £temporary3464
-19:		mov [bp + 16], a2341
+19:		mov [bp + 16], a2342
 21:	
 
 memchr$4:	; index = 0
@@ -2122,28 +2122,28 @@ memchr$4:	; index = 0
 24:	
 
 memchr$5:	; if index >= size goto 17
-25:		mov a2342, [bp + 10]
-26:		cmp [bp + 12], a2342
+25:		mov a2343, [bp + 10]
+26:		cmp [bp + 12], a2343
 27:		jge memchr$17
 29:	
 
 memchr$6:	; £temporary3468 = charBlock + index
-30:		mov a2343, [bp + 14]
-31:		add a2343, [bp + 12]
+30:		mov a2344, [bp + 14]
+31:		add a2344, [bp + 12]
 33:	
 
 memchr$7:	; £temporary3467 -> £temporary3468 = *£temporary3468
 35:	
 
 memchr$8:	; if £temporary3467 -> £temporary3468 != c goto 15
-36:		mov a2344, [bp + 16]
-37:		cmp [a2343], a2344
+36:		mov a2345, [bp + 16]
+37:		cmp [a2344], a2345
 38:		jne memchr$15
 40:	
 
 memchr$9:	; £temporary3471 = charBlock + index
-41:		mov a2345, [bp + 14]
-42:		add a2345, [bp + 12]
+41:		mov a2346, [bp + 14]
+42:		add a2346, [bp + 12]
 44:	
 
 memchr$10:	; £temporary3470 -> £temporary3471 = *£temporary3471
@@ -2159,10 +2159,10 @@ memchr$13:	; return_value = £temporary3473
 53:	
 
 memchr$14:	; return
-54:		mov t2346, [bp]
+54:		mov t2347, [bp]
 55:		mov di, [bp + 4]
 56:		mov bp, [bp + 2]
-57:		jmp t2346
+57:		jmp t2347
 59:	
 
 memchr$15:	; ++index
@@ -2174,37 +2174,37 @@ memchr$16:	; goto 5
 65:	
 
 memchr$17:	; return_value = 0
-66:		mov a2347, 0
+66:		mov a2348, 0
 68:	
 
 memchr$18:	; return
-69:		mov t2348, [bp]
+69:		mov t2349, [bp]
 70:		mov di, [bp + 4]
 71:		mov bp, [bp + 2]
-72:		jmp t2348
+72:		jmp t2349
 74:	
 
 memchr$19:	; function end memchr
 1:	
 
 memset:	; £temporary3474 = int_to_int block (Pointer -> Pointer)
-2:		mov a2349, [bp + 6]
+2:		mov a2350, [bp + 6]
 5:	
 
 memset$1:	; charBlock = £temporary3474
-6:		mov [bp + 12], a2349
+6:		mov [bp + 12], a2350
 8:	
 
 memset$2:	; £temporary3475 = int_to_int i (Signed_Int -> Signed_Char)
-9:		mov a2350, [bp + 8]
-12:		cmp a2350, 0
+9:		mov a2351, [bp + 8]
+12:		cmp a2351, 0
 13:		jge memset$3
-14:		neg a2350
-16:		neg a2350
+14:		neg a2351
+16:		neg a2351
 18:	
 
 memset$3:	; c = £temporary3475
-19:		mov [bp + 14], a2350
+19:		mov [bp + 14], a2351
 21:	
 
 memset$4:	; index = 0
@@ -2212,22 +2212,22 @@ memset$4:	; index = 0
 24:	
 
 memset$5:	; if index >= size goto 11
-25:		mov a2351, [bp + 10]
-26:		cmp [bp + 15], a2351
+25:		mov a2352, [bp + 10]
+26:		cmp [bp + 15], a2352
 27:		jge memset$11
 29:	
 
 memset$6:	; £temporary3479 = charBlock + index
-30:		mov a2352, [bp + 12]
-31:		add a2352, [bp + 15]
+30:		mov a2353, [bp + 12]
+31:		add a2353, [bp + 15]
 33:	
 
 memset$7:	; £temporary3478 -> £temporary3479 = *£temporary3479
 35:	
 
 memset$8:	; £temporary3478 -> £temporary3479 = c
-36:		mov a2353, [bp + 14]
-37:		mov [a2352], a2353
+36:		mov a2354, [bp + 14]
+37:		mov [a2353], a2354
 39:	
 
 memset$9:	; ++index
@@ -2239,14 +2239,14 @@ memset$10:	; goto 5
 45:	
 
 memset$11:	; return_value = block
-46:		mov a2354, [bp + 6]
+46:		mov a2355, [bp + 6]
 48:	
 
 memset$12:	; return
-49:		mov t2355, [bp]
+49:		mov t2356, [bp]
 50:		mov di, [bp + 4]
 51:		mov bp, [bp + 2]
-52:		jmp t2355
+52:		jmp t2356
 54:	
 
 memset$13:	; function end memset

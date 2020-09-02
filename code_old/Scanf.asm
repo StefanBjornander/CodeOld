@@ -40,16 +40,16 @@ section .text
 	je scanChar$5
 
  scanChar$2:
-	; case g_inStatus == int4$1# goto 21
+	; case g_inStatus == int4$1# goto 20
 	cmp eax, 1
-	je scanChar$21
+	je scanChar$20
 
  scanChar$3:
 	; case end g_inStatus
 
  scanChar$4:
-	; goto 30
-	jmp scanChar$30
+	; goto 28
+	jmp scanChar$28
 
  scanChar$5:
 	; £temporary1030 = int_to_int g_inDevice (Pointer -> Pointer)
@@ -109,68 +109,59 @@ section .text
 	inc dword [g_inChars]
 
  scanChar$19:
-	; return_value = c
+	; return c
 	mov bl, [rbp + 24]
-
- scanChar$20:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- scanChar$21:
+ scanChar$20:
 	; £temporary1041 = int_to_int g_inDevice (Pointer -> Pointer)
 	mov rax, [g_inDevice]
 
- scanChar$22:
+ scanChar$21:
 	; inString = £temporary1041
 	mov [rbp + 37], rax
 
- scanChar$23:
+ scanChar$22:
 	; £temporary1042 = g_inChars
 	mov eax, [g_inChars]
 
- scanChar$24:
+ scanChar$23:
 	; g_inChars = g_inChars + int4$1#
 	inc dword [g_inChars]
 
- scanChar$25:
+ scanChar$24:
 	; £temporary1044 = int_to_int £temporary1042 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
- scanChar$26:
+ scanChar$25:
 	; £temporary1046 = inString + £temporary1044
 	mov rsi, [rbp + 37]
 	add rsi, rax
 
- scanChar$27:
+ scanChar$26:
 	; £field1043 -> £temporary1046 = *£temporary1046
 
- scanChar$28:
-	; return_value = £field1043 -> £temporary1046
+ scanChar$27:
+	; return £field1043 -> £temporary1046
 	mov bl, [rsi]
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
+
+ scanChar$28:
+	; return int1$0#
+	mov bl, 0
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
 
  scanChar$29:
-	; return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- scanChar$30:
-	; return_value = int1$0#
-	mov bl, 0
-
- scanChar$31:
-	; return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- scanChar$32:
 	; function end scanChar
 
  unscanChar:
@@ -1224,9 +1215,9 @@ section .text
 	; £temporary1178 = return_value
 
  digitToValue$6:
-	; if £temporary1178 == int4$0# goto 11
+	; if £temporary1178 == int4$0# goto 10
 	cmp ebx, 0
-	je digitToValue$11
+	je digitToValue$10
 
  digitToValue$7:
 	; £temporary1179 = input - int1$48#
@@ -1239,98 +1230,89 @@ section .text
 	and rbx, rax
 
  digitToValue$9:
-	; return_value = £temporary1180
-
- digitToValue$10:
-	; return
+	; return £temporary1180
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- digitToValue$11:
+ digitToValue$10:
 	; call header integral zero 0 stack zero 0
 
- digitToValue$12:
+ digitToValue$11:
 	; £temporary1181 = int_to_int input (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge digitToValue$13
+	jge digitToValue$12
 	neg al
 	neg eax
 
- digitToValue$13:
+ digitToValue$12:
 	; parameter £temporary1181, offset 49
 	mov [rbp + 49], eax
 
- digitToValue$14:
+ digitToValue$13:
 	; call function noellipse-noellipse islower
-	mov qword [rbp + 25], digitToValue$15
+	mov qword [rbp + 25], digitToValue$14
 	mov [rbp + 33], rbp
 	add rbp, 25
 	jmp islower
 
- digitToValue$15:
+ digitToValue$14:
 	; post call
 
- digitToValue$16:
+ digitToValue$15:
 	; £temporary1182 = return_value
 
- digitToValue$17:
-	; if £temporary1182 == int4$0# goto 23
+ digitToValue$16:
+	; if £temporary1182 == int4$0# goto 21
 	cmp ebx, 0
-	je digitToValue$23
+	je digitToValue$21
 
- digitToValue$18:
+ digitToValue$17:
 	; £temporary1183 = input - int1$97#
 	mov bl, [rbp + 24]
 	sub bl, 97
 
- digitToValue$19:
+ digitToValue$18:
 	; £temporary1184 = int_to_int £temporary1183 (Signed_Char -> Unsigned_Long_Int)
 	mov rax, 255
 	and rbx, rax
 
- digitToValue$20:
+ digitToValue$19:
 	; £temporary1185 = £temporary1184 + int8$10#
 	add rbx, 10
 
- digitToValue$21:
-	; return_value = £temporary1185
-
- digitToValue$22:
-	; return
+ digitToValue$20:
+	; return £temporary1185
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- digitToValue$23:
+ digitToValue$21:
 	; £temporary1186 = input - int1$65#
 	mov bl, [rbp + 24]
 	sub bl, 65
 
- digitToValue$24:
+ digitToValue$22:
 	; £temporary1187 = int_to_int £temporary1186 (Signed_Char -> Unsigned_Long_Int)
 	mov rax, 255
 	and rbx, rax
 
- digitToValue$25:
+ digitToValue$23:
 	; £temporary1188 = £temporary1187 + int8$10#
 	add rbx, 10
 
- digitToValue$26:
-	; return_value = £temporary1188
-
- digitToValue$27:
-	; return
+ digitToValue$24:
+	; return £temporary1188
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- digitToValue$28:
+ digitToValue$25:
 	; function end digitToValue
 
  scanLongInt:
@@ -1610,17 +1592,14 @@ section .text
 	; post call
 
  scanLongInt$62:
-	; return_value = longValue
+	; return longValue
 	mov rbx, [rbp + 24]
-
- scanLongInt$63:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- scanLongInt$64:
+ scanLongInt$63:
 	; function end scanLongInt
 
  scanUnsignedLongInt:
@@ -1975,17 +1954,14 @@ section .text
 	; post call
 
  scanUnsignedLongInt$80:
-	; return_value = unsignedLongValue
+	; return unsignedLongValue
 	mov rbx, [rbp + 32]
-
- scanUnsignedLongInt$81:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- scanUnsignedLongInt$82:
+ scanUnsignedLongInt$81:
 	; function end scanUnsignedLongInt
 
  scanLongDouble:
@@ -2567,16 +2543,13 @@ section .text
 	fld qword [rbp + 32]
 
  scanLongDouble$132:
-	; return_value = value
-
- scanLongDouble$133:
-	; return
+	; return value
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- scanLongDouble$134:
+ scanLongDouble$133:
 	; function end scanLongDouble
 
  scanFormat:
@@ -4007,17 +3980,14 @@ section .text
 	jmp scanFormat$9
 
  scanFormat$333:
-	; return_value = g_inCount
+	; return g_inCount
 	mov ebx, [g_inCount]
-
- scanFormat$334:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- scanFormat$335:
+ scanFormat$334:
 	; function end scanFormat
 
  scanf:
@@ -4065,16 +4035,13 @@ section .text
 	; £temporary1517 = return_value
 
  scanf$10:
-	; return_value = £temporary1517
-
- scanf$11:
-	; return
+	; return £temporary1517
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- scanf$12:
+ scanf$11:
 	; function end scanf
 
  vscanf:
@@ -4109,16 +4076,13 @@ section .text
 	; £temporary1519 = return_value
 
  vscanf$7:
-	; return_value = £temporary1519
-
- vscanf$8:
-	; return
+	; return £temporary1519
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- vscanf$9:
+ vscanf$8:
 	; function end vscanf
 
  fscanf:
@@ -4171,16 +4135,13 @@ section .text
 	; £temporary1524 = return_value
 
  fscanf$11:
-	; return_value = £temporary1524
-
- fscanf$12:
-	; return
+	; return £temporary1524
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fscanf$13:
+ fscanf$12:
 	; function end fscanf
 
  vfscanf:
@@ -4222,16 +4183,13 @@ section .text
 	; £temporary1527 = return_value
 
  vfscanf$9:
-	; return_value = £temporary1527
-
- vfscanf$10:
-	; return
+	; return £temporary1527
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- vfscanf$11:
+ vfscanf$10:
 	; function end vfscanf
 
  sscanf:
@@ -4284,16 +4242,13 @@ section .text
 	; £temporary1532 = return_value
 
  sscanf$11:
-	; return_value = £temporary1532
-
- sscanf$12:
-	; return
+	; return £temporary1532
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- sscanf$13:
+ sscanf$12:
 	; function end sscanf
 
  vsscanf:
@@ -4335,16 +4290,13 @@ section .text
 	; £temporary1535 = return_value
 
  vsscanf$9:
-	; return_value = £temporary1535
-
- vsscanf$10:
-	; return
+	; return £temporary1535
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- vsscanf$11:
+ vsscanf$10:
 	; function end vsscanf
 section .data
 

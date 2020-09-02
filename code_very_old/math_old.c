@@ -1,7 +1,7 @@
-#include <Math.h>
+#include <math.h>
 #include <ErrNo.h>
-#include <StdDef.h>
-#include <StdIO.h>
+#include <stddef.h>
+#include <stdio.h>
 
 double sin(double x) {
   int plusMinusOne = 1;  // (-1)^0

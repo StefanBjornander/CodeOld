@@ -42,10 +42,10 @@ section .text
 	; post call
 
  malloc_test2$7:
-	; £temporary3854 = return_value
+	; £temporary3858 = return_value
 
  malloc_test2$8:
-	; q = £temporary3854
+	; q = £temporary3858
 	mov [rbp + 44], rbx
 
  malloc_test2$9:
@@ -75,10 +75,10 @@ section .text
 	; post call
 
  malloc_test2$15:
-	; £temporary3857 = return_value
+	; £temporary3861 = return_value
 
  malloc_test2$16:
-	; p = £temporary3857
+	; p = £temporary3861
 	mov [rbp + 28], rbx
 
  malloc_test2$17:
@@ -354,10 +354,10 @@ section .text
 	; post call
 
  malloc_test3$5:
-	; £temporary3872 = return_value
+	; £temporary3876 = return_value
 
  malloc_test3$6:
-	; a = £temporary3872
+	; a = £temporary3876
 	mov [rbp + 24], rbx
 
  malloc_test3$7:
@@ -382,10 +382,10 @@ section .text
 	; post call
 
  malloc_test3$12:
-	; £temporary3873 = return_value
+	; £temporary3877 = return_value
 
  malloc_test3$13:
-	; b = £temporary3873
+	; b = £temporary3877
 	mov [rbp + 32], rbx
 
  malloc_test3$14:
@@ -410,10 +410,10 @@ section .text
 	; post call
 
  malloc_test3$19:
-	; £temporary3874 = return_value
+	; £temporary3878 = return_value
 
  malloc_test3$20:
-	; c = £temporary3874
+	; c = £temporary3878
 	mov [rbp + 40], rbx
 
  malloc_test3$21:
@@ -438,10 +438,10 @@ section .text
 	; post call
 
  malloc_test3$26:
-	; £temporary3875 = return_value
+	; £temporary3879 = return_value
 
  malloc_test3$27:
-	; d = £temporary3875
+	; d = £temporary3879
 	mov [rbp + 48], rbx
 
  malloc_test3$28:
@@ -466,10 +466,10 @@ section .text
 	; post call
 
  malloc_test3$33:
-	; £temporary3876 = return_value
+	; £temporary3880 = return_value
 
  malloc_test3$34:
-	; e = £temporary3876
+	; e = £temporary3880
 	mov [rbp + 56], rbx
 
  malloc_test3$35:
@@ -602,14 +602,14 @@ section .text
 	; empty
 
  rec$1:
-	; £temporary3884 = bp
+	; £temporary3888 = bp
 
  rec$2:
-	; £temporary3885 = int_to_int £temporary3884 (Unsigned_Short_Int -> Unsigned_Int)
+	; £temporary3889 = int_to_int £temporary3888 (Unsigned_Short_Int -> Unsigned_Int)
 	and ebp, 65535
 
  rec$3:
-	; stackTop = £temporary3885
+	; stackTop = £temporary3889
 	mov [rbp + 24], ebp
 
  rec$4:
@@ -629,11 +629,11 @@ section .text
 	mov [rbp + 68], eax
 
  rec$8:
-	; £field3886 -> lowHeapPtr = *lowHeapPtr
+	; £field3890 -> lowHeapPtr = *lowHeapPtr
 	mov rsi, [rbp + 28]
 
  rec$9:
-	; parameter £field3886 -> lowHeapPtr, offset 72
+	; parameter £field3890 -> lowHeapPtr, offset 72
 	mov eax, [rsi]
 	mov [rbp + 72], eax
 
@@ -713,10 +713,10 @@ section .text
 	; post call
 
  malloc_test$4:
-	; £temporary3890 = return_value
+	; £temporary3894 = return_value
 
  malloc_test$5:
-	; b = £temporary3890
+	; b = £temporary3894
 	mov [rbp + 24], rbx
 
  malloc_test$6:
@@ -737,10 +737,10 @@ section .text
 	; post call
 
  malloc_test$10:
-	; £temporary3891 = return_value
+	; £temporary3895 = return_value
 
  malloc_test$11:
-	; c = £temporary3891
+	; c = £temporary3895
 	mov [rbp + 32], rbx
 
  malloc_test$12:
@@ -761,10 +761,10 @@ section .text
 	; post call
 
  malloc_test$16:
-	; £temporary3892 = return_value
+	; £temporary3896 = return_value
 
  malloc_test$17:
-	; d = £temporary3892
+	; d = £temporary3896
 	mov [rbp + 40], rbx
 
  malloc_test$18:
@@ -921,14 +921,14 @@ section .text
 	; empty
 
  malloc_test6$1:
-	; £temporary3902 = bp
+	; £temporary3906 = bp
 
  malloc_test6$2:
-	; £temporary3903 = int_to_int £temporary3902 (Unsigned_Short_Int -> Unsigned_Int)
+	; £temporary3907 = int_to_int £temporary3906 (Unsigned_Short_Int -> Unsigned_Int)
 	and ebp, 65535
 
  malloc_test6$3:
-	; stackTop = £temporary3903
+	; stackTop = £temporary3907
 	mov [rbp + 28], ebp
 
  malloc_test6$4:
@@ -962,10 +962,10 @@ section .text
 	; post call
 
  malloc_test6$11:
-	; £temporary3906 = return_value
+	; £temporary3910 = return_value
 
  malloc_test6$12:
-	; p = £temporary3906
+	; p = £temporary3910
 	mov [rbp + 40], rbx
 
  malloc_test6$13:
@@ -991,11 +991,11 @@ section .text
 	mov [rbp + 92], eax
 
  malloc_test6$18:
-	; £field3907 -> lowHeapPtr = *lowHeapPtr
+	; £field3911 -> lowHeapPtr = *lowHeapPtr
 	mov rsi, [rbp + 32]
 
  malloc_test6$19:
-	; parameter £field3907 -> lowHeapPtr, offset 96
+	; parameter £field3911 -> lowHeapPtr, offset 96
 	mov eax, [rsi]
 	mov [rbp + 96], eax
 

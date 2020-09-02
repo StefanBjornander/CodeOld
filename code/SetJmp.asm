@@ -4,68 +4,65 @@
 section .text
 
  setjmp:
-	; £temporary765 = bp
+	; £temporary769 = bp
 
  setjmp$1:
-	; £temporary766 = int_to_int £temporary765 (Unsigned_Short_Int -> Pointer)
+	; £temporary770 = int_to_int £temporary769 (Unsigned_Short_Int -> Pointer)
 	mov rax, 65535
 	and rbp, rax
 
  setjmp$2:
-	; ebp_pointer = £temporary766
+	; ebp_pointer = £temporary770
 	mov [rbp + 32], rbp
 
  setjmp$3:
-	; £field767 -> buf = *buf
+	; £field771 -> buf = *buf
 	mov rsi, [rbp + 24]
 
  setjmp$4:
-	; £field768 -> ebp_pointer = *ebp_pointer
+	; £field772 -> ebp_pointer = *ebp_pointer
 	mov rdi, [rbp + 32]
 
  setjmp$5:
-	; £field767 -> buf = £field768 -> ebp_pointer
+	; £field771 -> buf = £field772 -> ebp_pointer
 	mov eax, [rdi]
 	mov [rsi], eax
 
  setjmp$6:
-	; £field769 -> buf = *buf
+	; £field773 -> buf = *buf
 	mov rsi, [rbp + 24]
 
  setjmp$7:
-	; £field770 -> ebp_pointer = *ebp_pointer
+	; £field774 -> ebp_pointer = *ebp_pointer
 	mov rdi, [rbp + 32]
 
  setjmp$8:
-	; £field769 -> buf = £field770 -> ebp_pointer
+	; £field773 -> buf = £field774 -> ebp_pointer
 	mov eax, [rdi + 4]
 	mov [rsi + 4], eax
 
  setjmp$9:
-	; £field771 -> buf = *buf
+	; £field775 -> buf = *buf
 	mov rsi, [rbp + 24]
 
  setjmp$10:
-	; £field772 -> ebp_pointer = *ebp_pointer
+	; £field776 -> ebp_pointer = *ebp_pointer
 	mov rdi, [rbp + 32]
 
  setjmp$11:
-	; £field771 -> buf = £field772 -> ebp_pointer
+	; £field775 -> buf = £field776 -> ebp_pointer
 	mov eax, [rdi + 8]
 	mov [rsi + 8], eax
 
  setjmp$12:
-	; return_value = int4$0#
+	; return int4$0#
 	mov ebx, 0
-
- setjmp$13:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- setjmp$14:
+ setjmp$13:
 	; function end setjmp
 
  longjmp:

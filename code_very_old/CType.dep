@@ -1,1 +1,1 @@
-CType.h StdIO.h Math.h CType.h StdArg.h StdDef.h File.h Temp.h Scanf.h Printf.h Locale.h String.h StdDef.h
+ctype.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h Locale.h String.h stddef.h

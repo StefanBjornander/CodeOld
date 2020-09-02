@@ -1,4 +1,4 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdDef.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
    
    
 
@@ -15,7 +15,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdDef.h,1$
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\MallocTest.c,0$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
    
    
 
@@ -76,11 +76,11 @@ ldiv_t ldiv ( long num , long denum ) ;
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\MallocTest.c,1$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
    
    
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
    
    
 
@@ -123,9 +123,9 @@ extern double fmod ( double num , double denum ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,3$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\CType.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
    
    
 
@@ -145,9 +145,9 @@ extern int toupper ( int c ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,4$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdArg.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
    
    
 
@@ -159,9 +159,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdArg.h,1$
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,5$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdDef.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
    
    
 
@@ -176,9 +176,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdDef.h,1$
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,6$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\File.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
    
    
 
@@ -256,9 +256,9 @@ void perror ( const char * s ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,7$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Temp.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
    
    
 
@@ -270,9 +270,9 @@ char * tmpnam ( char name [ 4 ] ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,8$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
    
    
 
@@ -300,9 +300,9 @@ int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,9$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
    
    
 
@@ -340,7 +340,7 @@ int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIO.h,10$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
        
 
   

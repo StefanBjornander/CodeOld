@@ -1,6 +1,6 @@
-#include <StdIO.h>
+#include <stdio.h>
 #include <String.h>
-#include <File.h>
+#include <file.h>
 
 static char g_tempArray[TMP_MAX][L_tmpnam];
 static int g_tempSize = 0;

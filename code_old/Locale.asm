@@ -141,17 +141,14 @@ section .text
 	jmp setlocale$10
 
  setlocale$31:
-	; return_value = oldName
+	; return oldName
 	mov rbx, [rbp + 40]
-
- setlocale$32:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- setlocale$33:
+ setlocale$32:
 	; function end setlocale
 
  localeconv:
@@ -176,16 +173,13 @@ section .text
 	mov rbx, 0
 
  localeconv$5:
-	; return_value = £temporary356
-
- localeconv$6:
-	; return
+	; return £temporary356
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- localeconv$7:
+ localeconv$6:
 	; function end localeconv
 section .data
 

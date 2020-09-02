@@ -1,5 +1,5 @@
-#include "stdarg.h"
-#include "stdio.h"
+#include <stdarg.h>
+#include <stdio.h>
 
 void f(int num, ...) {
   int i;

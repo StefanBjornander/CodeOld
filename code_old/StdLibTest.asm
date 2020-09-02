@@ -84,16 +84,13 @@ section .text
 	; £temporary3916 = £temporary3915
 
  compare$14:
-	; return_value = £temporary3916
-
- compare$15:
-	; return
+	; return £temporary3916
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- compare$16:
+ compare$15:
 	; function end compare
 
  reverse_compare:
@@ -156,16 +153,13 @@ section .text
 	; £temporary3924 = £temporary3923
 
  reverse_compare$14:
-	; return_value = £temporary3924
-
- reverse_compare$15:
-	; return
+	; return £temporary3924
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- reverse_compare$16:
+ reverse_compare$15:
 	; function end reverse_compare
 
  print_div:

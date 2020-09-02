@@ -39,12 +39,12 @@ section .text
 	mov qword [rbp + 52], string_25i#
 
  assert_testX$7:
-	; £temporary3073 = &n
+	; £temporary3077 = &n
 	mov rsi, rbp
 	add rsi, 24
 
  assert_testX$8:
-	; parameter £temporary3073, offset 60
+	; parameter £temporary3077, offset 60
 	mov [rbp + 60], rsi
 
  assert_testX$9:

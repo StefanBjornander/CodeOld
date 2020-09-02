@@ -57,22 +57,22 @@ section .text
 	; post call
 
  time_test$11:
-	; £temporary4038 = return_value
+	; £temporary4042 = return_value
 
  time_test$12:
-	; now = £temporary4038
+	; now = £temporary4042
 	mov [rbp + 80], rbx
 
  time_test$13:
 	; call header integral zero 0 stack zero 0
 
  time_test$14:
-	; £temporary4039 = &now
+	; £temporary4043 = &now
 	mov rsi, rbp
 	add rsi, 80
 
  time_test$15:
-	; parameter £temporary4039, offset 112
+	; parameter £temporary4043, offset 112
 	mov [rbp + 112], rsi
 
  time_test$16:
@@ -86,10 +86,10 @@ section .text
 	; post call
 
  time_test$18:
-	; £temporary4040 = return_value
+	; £temporary4044 = return_value
 
  time_test$19:
-	; p = £temporary4040
+	; p = £temporary4044
 	mov [rbp + 88], rbx
 
  time_test$20:
@@ -111,10 +111,10 @@ section .text
 	; post call
 
  time_test$24:
-	; £temporary4041 = return_value
+	; £temporary4045 = return_value
 
  time_test$25:
-	; now2 = £temporary4041
+	; now2 = £temporary4045
 	mov [rbp + 96], rbx
 
  time_test$26:
@@ -166,11 +166,11 @@ section .text
 	; post call
 
  time_test$36:
-	; £field4044 -> p = *p
+	; £field4048 -> p = *p
 	mov rsi, [rbp + 88]
 
  time_test$37:
-	; s = £field4044 -> p
+	; s = £field4048 -> p
 	mov rdi, rbp
 	add rdi, 104
 	mov al, 36
@@ -192,46 +192,46 @@ section .text
 	mov qword [rbp + 164], string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 
  time_test$40:
-	; £temporary4047 = int_to_int s$tm_wday (Signed_Int -> Array)
+	; £temporary4051 = int_to_int s$tm_wday (Signed_Int -> Array)
 	mov eax, [rbp + 128]
 	mov rbx, 4294967295
 	and rax, rbx
 
  time_test$41:
-	; £temporary4048 = £temporary4047 * Array_8#
+	; £temporary4052 = £temporary4051 * Array_8#
 	xor rdx, rdx
 	mul qword [Array_8#]
 
  time_test$42:
-	; £temporary4049 = weekdays + £temporary4048
+	; £temporary4053 = weekdays + £temporary4052
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
  time_test$43:
-	; £field4046 -> £temporary4049 = *£temporary4049
+	; £field4050 -> £temporary4053 = *£temporary4053
 
  time_test$44:
-	; parameter £field4046 -> £temporary4049, offset 172
+	; parameter £field4050 -> £temporary4053, offset 172
 	mov rax, [rsi]
 	mov [rbp + 172], rax
 
  time_test$45:
-	; £temporary4051 = s$tm_year + int4$1900#
+	; £temporary4055 = s$tm_year + int4$1900#
 	mov eax, [rbp + 124]
 	add eax, 1900
 
  time_test$46:
-	; parameter £temporary4051, offset 180
+	; parameter £temporary4055, offset 180
 	mov [rbp + 180], eax
 
  time_test$47:
-	; £temporary4053 = s$tm_mon + int4$1#
+	; £temporary4057 = s$tm_mon + int4$1#
 	mov eax, [rbp + 120]
 	inc eax
 
  time_test$48:
-	; parameter £temporary4053, offset 184
+	; parameter £temporary4057, offset 184
 	mov [rbp + 184], eax
 
  time_test$49:
@@ -285,12 +285,12 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  time_test$59:
-	; £temporary4062 = &now
+	; £temporary4066 = &now
 	mov rsi, rbp
 	add rsi, 80
 
  time_test$60:
-	; parameter £temporary4062, offset 164
+	; parameter £temporary4066, offset 164
 	mov [rbp + 164], rsi
 
  time_test$61:
@@ -304,13 +304,13 @@ section .text
 	; post call
 
  time_test$63:
-	; £temporary4063 = return_value
+	; £temporary4067 = return_value
 
  time_test$64:
-	; £field4064 -> £temporary4063 = *£temporary4063
+	; £field4068 -> £temporary4067 = *£temporary4067
 
  time_test$65:
-	; s = £field4064 -> £temporary4063
+	; s = £field4068 -> £temporary4067
 	mov rsi, rbp
 	add rsi, 104
 	mov al, 36
@@ -332,46 +332,46 @@ section .text
 	mov qword [rbp + 164], string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 
  time_test$68:
-	; £temporary4067 = int_to_int s$tm_wday (Signed_Int -> Array)
+	; £temporary4071 = int_to_int s$tm_wday (Signed_Int -> Array)
 	mov eax, [rbp + 128]
 	mov rbx, 4294967295
 	and rax, rbx
 
  time_test$69:
-	; £temporary4068 = £temporary4067 * Array_8#
+	; £temporary4072 = £temporary4071 * Array_8#
 	xor rdx, rdx
 	mul qword [Array_8#]
 
  time_test$70:
-	; £temporary4069 = weekdays + £temporary4068
+	; £temporary4073 = weekdays + £temporary4072
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
  time_test$71:
-	; £field4066 -> £temporary4069 = *£temporary4069
+	; £field4070 -> £temporary4073 = *£temporary4073
 
  time_test$72:
-	; parameter £field4066 -> £temporary4069, offset 172
+	; parameter £field4070 -> £temporary4073, offset 172
 	mov rax, [rsi]
 	mov [rbp + 172], rax
 
  time_test$73:
-	; £temporary4071 = s$tm_year + int4$1900#
+	; £temporary4075 = s$tm_year + int4$1900#
 	mov eax, [rbp + 124]
 	add eax, 1900
 
  time_test$74:
-	; parameter £temporary4071, offset 180
+	; parameter £temporary4075, offset 180
 	mov [rbp + 180], eax
 
  time_test$75:
-	; £temporary4073 = s$tm_mon + int4$1#
+	; £temporary4077 = s$tm_mon + int4$1#
 	mov eax, [rbp + 120]
 	inc eax
 
  time_test$76:
-	; parameter £temporary4073, offset 184
+	; parameter £temporary4077, offset 184
 	mov [rbp + 184], eax
 
  time_test$77:
@@ -433,12 +433,12 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  time_test$89:
-	; £temporary4082 = &s
+	; £temporary4086 = &s
 	mov rsi, rbp
 	add rsi, 104
 
  time_test$90:
-	; parameter £temporary4082, offset 396
+	; parameter £temporary4086, offset 396
 	mov [rbp + 396], rsi
 
  time_test$91:
@@ -452,10 +452,10 @@ section .text
 	; post call
 
  time_test$93:
-	; £temporary4083 = return_value
+	; £temporary4087 = return_value
 
  time_test$94:
-	; parameter £temporary4083, offset 372
+	; parameter £temporary4087, offset 372
 	mov [rbp + 372], rbx
 
  time_test$95:
@@ -480,12 +480,12 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  time_test$100:
-	; £temporary4085 = &now
+	; £temporary4089 = &now
 	mov rsi, rbp
 	add rsi, 80
 
  time_test$101:
-	; parameter £temporary4085, offset 396
+	; parameter £temporary4089, offset 396
 	mov [rbp + 396], rsi
 
  time_test$102:
@@ -499,10 +499,10 @@ section .text
 	; post call
 
  time_test$104:
-	; £temporary4086 = return_value
+	; £temporary4090 = return_value
 
  time_test$105:
-	; parameter £temporary4086, offset 372
+	; parameter £temporary4090, offset 372
 	mov [rbp + 372], rbx
 
  time_test$106:
@@ -561,12 +561,12 @@ section .text
 	mov qword [rbp + 676], string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y#
 
  time_test$118:
-	; £temporary4089 = &s
+	; £temporary4093 = &s
 	mov rsi, rbp
 	add rsi, 104
 
  time_test$119:
-	; parameter £temporary4089, offset 684
+	; parameter £temporary4093, offset 684
 	mov [rbp + 684], rsi
 
  time_test$120:
@@ -580,10 +580,10 @@ section .text
 	; post call
 
  time_test$122:
-	; £temporary4090 = return_value
+	; £temporary4094 = return_value
 
  time_test$123:
-	; i = £temporary4090
+	; i = £temporary4094
 	mov [rbp + 640], ebx
 
  time_test$124:

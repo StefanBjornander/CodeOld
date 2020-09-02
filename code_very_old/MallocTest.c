@@ -1,6 +1,6 @@
-#include <StdDef.h>
-#include <StdLib.h>
-#include <StdIO.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 void print_heap();
 
