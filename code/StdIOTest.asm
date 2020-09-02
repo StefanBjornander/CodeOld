@@ -9,12 +9,12 @@ section .text
 	mov dword [rbp + 24], 0
 
  stdio_test$1:
-	; £temporary3745 = &n
+	; £temporary3741 = &n
 	mov rsi, rbp
 	add rsi, 24
 
  stdio_test$2:
-	; p = £temporary3745
+	; p = £temporary3741
 	mov [rbp + 28], rsi
 
  stdio_test$3:

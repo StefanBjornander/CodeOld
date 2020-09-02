@@ -32,11 +32,11 @@ section .text
 	fld qword [rbp + 32]
 
  divide$5:
-	; £temporary3168 = x / y
+	; £temporary3164 = x / y
 	fdiv
 
  divide$6:
-	; return £temporary3168
+	; return £temporary3164
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -83,11 +83,11 @@ section .text
 	mov qword [rbp + 72], buffer
 
  divide$16:
-	; £temporary3170 = int_to_int p (Pointer -> Signed_Int)
+	; £temporary3166 = int_to_int p (Pointer -> Signed_Int)
 	mov rax, [rbp + 40]
 
  divide$17:
-	; parameter £temporary3170, offset 80
+	; parameter £temporary3166, offset 80
 	mov [rbp + 80], eax
 
  divide$18:
@@ -144,10 +144,10 @@ section .text
 	; post call
 
  invers$7:
-	; £temporary3172 = return_value
+	; £temporary3168 = return_value
 
  invers$8:
-	; return £temporary3172
+	; return £temporary3168
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -177,15 +177,15 @@ section .text
 	; post call
 
  setjmp_test$5:
-	; £temporary3175 = return_value
+	; £temporary3171 = return_value
 
  setjmp_test$6:
-	; £temporary3176 = int_to_int £temporary3175 (Signed_Int -> Pointer)
+	; £temporary3172 = int_to_int £temporary3171 (Signed_Int -> Pointer)
 	mov rax, 4294967295
 	and rbx, rax
 
  setjmp_test$7:
-	; p = £temporary3176
+	; p = £temporary3172
 	mov [rbp + 32], rbx
 
  setjmp_test$8:
@@ -230,10 +230,10 @@ section .text
 	; post call
 
  setjmp_test$18:
-	; £temporary3178 = return_value
+	; £temporary3174 = return_value
 
  setjmp_test$19:
-	; parameter £temporary3178, offset 80
+	; parameter £temporary3174, offset 80
 	fstp qword [rbp + 80]
 
  setjmp_test$20:
