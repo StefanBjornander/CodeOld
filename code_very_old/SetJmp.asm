@@ -55,17 +55,14 @@ section .text
 	mov [rsi + 8], eax
 
  setjmp$12:
-	; return_value = int4$0#
+	; return int4$0#
 	mov ebx, 0
-
- setjmp$13:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- setjmp$14:
+ setjmp$13:
 	; function end setjmp
 
  longjmp:

@@ -41,9 +41,9 @@ section .text
 	mov [rbp + 28], rbx
 
  islower$5:
-	; if localeConvPtr == int8$0# goto 19
+	; if localeConvPtr == int8$0# goto 18
 	cmp qword [rbp + 28], 0
-	je islower$19
+	je islower$18
 
  islower$6:
 	; call header integral zero 0 stack zero 0
@@ -93,48 +93,42 @@ section .text
 	mov ebx, 0
 
  islower$17:
-	; return_value = £temporary215
-
- islower$18:
-	; return
+	; return £temporary215
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- islower$19:
-	; if c < int4$97# goto 23
+ islower$18:
+	; if c < int4$97# goto 22
 	cmp dword [rbp + 24], 97
-	jl islower$23
+	jl islower$22
+
+ islower$19:
+	; if c > int4$122# goto 22
+	cmp dword [rbp + 24], 122
+	jg islower$22
 
  islower$20:
-	; if c > int4$122# goto 23
-	cmp dword [rbp + 24], 122
-	jg islower$23
-
- islower$21:
 	; £temporary219 = int4$1#
 	mov ebx, 1
 
- islower$22:
-	; goto 24
-	jmp islower$24
+ islower$21:
+	; goto 23
+	jmp islower$23
 
- islower$23:
+ islower$22:
 	; £temporary219 = int4$0#
 	mov ebx, 0
 
- islower$24:
-	; return_value = £temporary219
-
- islower$25:
-	; return
+ islower$23:
+	; return £temporary219
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- islower$26:
+ islower$24:
 	; function end islower
 
  islowerX:
@@ -160,16 +154,13 @@ section .text
 	mov ebx, 0
 
  islowerX$5:
-	; return_value = £temporary223
-
- islowerX$6:
-	; return
+	; return £temporary223
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- islowerX$7:
+ islowerX$6:
 	; function end islowerX
 
  isupperX:
@@ -195,16 +186,13 @@ section .text
 	mov ebx, 0
 
  isupperX$5:
-	; return_value = £temporary227
-
- isupperX$6:
-	; return
+	; return £temporary227
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- isupperX$7:
+ isupperX$6:
 	; function end isupperX
 
  isupper:
@@ -228,9 +216,9 @@ section .text
 	mov [rbp + 28], rbx
 
  isupper$5:
-	; if localeConvPtr == int8$0# goto 19
+	; if localeConvPtr == int8$0# goto 18
 	cmp qword [rbp + 28], 0
-	je isupper$19
+	je isupper$18
 
  isupper$6:
 	; call header integral zero 0 stack zero 0
@@ -280,48 +268,42 @@ section .text
 	mov ebx, 0
 
  isupper$17:
-	; return_value = £temporary233
-
- isupper$18:
-	; return
+	; return £temporary233
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- isupper$19:
-	; if c < int4$65# goto 23
+ isupper$18:
+	; if c < int4$65# goto 22
 	cmp dword [rbp + 24], 65
-	jl isupper$23
+	jl isupper$22
+
+ isupper$19:
+	; if c > int4$90# goto 22
+	cmp dword [rbp + 24], 90
+	jg isupper$22
 
  isupper$20:
-	; if c > int4$90# goto 23
-	cmp dword [rbp + 24], 90
-	jg isupper$23
-
- isupper$21:
 	; £temporary237 = int4$1#
 	mov ebx, 1
 
- isupper$22:
-	; goto 24
-	jmp isupper$24
+ isupper$21:
+	; goto 23
+	jmp isupper$23
 
- isupper$23:
+ isupper$22:
 	; £temporary237 = int4$0#
 	mov ebx, 0
 
- isupper$24:
-	; return_value = £temporary237
-
- isupper$25:
-	; return
+ isupper$23:
+	; return £temporary237
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- isupper$26:
+ isupper$24:
 	; function end isupper
 
  isalpha:
@@ -389,16 +371,13 @@ section .text
 	mov ebx, 0
 
  isalpha$15:
-	; return_value = £temporary243
-
- isalpha$16:
-	; return
+	; return £temporary243
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- isalpha$17:
+ isalpha$16:
 	; function end isalpha
 
  isdigit:
@@ -424,16 +403,13 @@ section .text
 	mov ebx, 0
 
  isdigit$5:
-	; return_value = £temporary247
-
- isdigit$6:
-	; return
+	; return £temporary247
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- isdigit$7:
+ isdigit$6:
 	; function end isdigit
 
  isalnum:
@@ -501,16 +477,13 @@ section .text
 	mov ebx, 0
 
  isalnum$15:
-	; return_value = £temporary253
-
- isalnum$16:
-	; return
+	; return £temporary253
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- isalnum$17:
+ isalnum$16:
 	; function end isalnum
 
  isxdigit:
@@ -572,16 +545,13 @@ section .text
 	mov ebx, 0
 
  isxdigit$13:
-	; return_value = £temporary264
-
- isxdigit$14:
-	; return
+	; return £temporary264
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- isxdigit$15:
+ isxdigit$14:
 	; function end isxdigit
 
  isgraph:
@@ -607,16 +577,13 @@ section .text
 	mov ebx, 0
 
  isgraph$5:
-	; return_value = £temporary268
-
- isgraph$6:
-	; return
+	; return £temporary268
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- isgraph$7:
+ isgraph$6:
 	; function end isgraph
 
  isprint:
@@ -663,16 +630,13 @@ section .text
 	mov ebx, 0
 
  isprint$10:
-	; return_value = £temporary273
-
- isprint$11:
-	; return
+	; return £temporary273
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- isprint$12:
+ isprint$11:
 	; function end isprint
 
  ispunct:
@@ -740,16 +704,13 @@ section .text
 	mov ebx, 0
 
  ispunct$15:
-	; return_value = £temporary280
-
- ispunct$16:
-	; return
+	; return £temporary280
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- ispunct$17:
+ ispunct$16:
 	; function end ispunct
 
  iscntrl:
@@ -791,16 +752,13 @@ section .text
 	mov ebx, 0
 
  iscntrl$9:
-	; return_value = £temporary284
-
- iscntrl$10:
-	; return
+	; return £temporary284
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- iscntrl$11:
+ iscntrl$10:
 	; function end iscntrl
 
  isspace:
@@ -846,16 +804,13 @@ section .text
 	mov ebx, 0
 
  isspace$9:
-	; return_value = £temporary296
-
- isspace$10:
-	; return
+	; return £temporary296
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- isspace$11:
+ isspace$10:
 	; function end isspace
 
  tolowerX:
@@ -898,16 +853,13 @@ section .text
 	mov ebx, [rbp + 24]
 
  tolowerX$9:
-	; return_value = £temporary300
-
- tolowerX$10:
-	; return
+	; return £temporary300
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- tolowerX$11:
+ tolowerX$10:
 	; function end tolowerX
 
  tolower:
@@ -932,9 +884,9 @@ section .text
 	; £temporary301 = return_value
 
  tolower$5:
-	; if £temporary301 == int4$0# goto 34
+	; if £temporary301 == int4$0# goto 32
 	cmp ebx, 0
-	je tolower$34
+	je tolower$32
 
  tolower$6:
 	; call header integral zero 0 stack zero 0
@@ -957,9 +909,9 @@ section .text
 	mov [rbp + 28], rbx
 
  tolower$11:
-	; if localeConvPtr == int8$0# goto 31
+	; if localeConvPtr == int8$0# goto 30
 	cmp qword [rbp + 28], 0
-	je tolower$31
+	je tolower$30
 
  tolower$12:
 	; £field304 -> localeConvPtr = *localeConvPtr
@@ -1040,42 +992,33 @@ section .text
 	neg ebx
 
  tolower$29:
-	; return_value = £temporary314
-
- tolower$30:
-	; return
+	; return £temporary314
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- tolower$31:
+ tolower$30:
 	; £temporary315 = c + int4$32#
 	mov ebx, [rbp + 24]
 	add ebx, 32
 
+ tolower$31:
+	; return £temporary315
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
+
  tolower$32:
-	; return_value = £temporary315
+	; return c
+	mov ebx, [rbp + 24]
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
 
  tolower$33:
-	; return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- tolower$34:
-	; return_value = c
-	mov ebx, [rbp + 24]
-
- tolower$35:
-	; return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- tolower$36:
 	; function end tolower
 
  toupperX:
@@ -1118,16 +1061,13 @@ section .text
 	mov ebx, [rbp + 24]
 
  toupperX$9:
-	; return_value = £temporary320
-
- toupperX$10:
-	; return
+	; return £temporary320
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- toupperX$11:
+ toupperX$10:
 	; function end toupperX
 
  toupper:
@@ -1152,9 +1092,9 @@ section .text
 	; £temporary321 = return_value
 
  toupper$5:
-	; if £temporary321 == int4$0# goto 34
+	; if £temporary321 == int4$0# goto 32
 	cmp ebx, 0
-	je toupper$34
+	je toupper$32
 
  toupper$6:
 	; call header integral zero 0 stack zero 0
@@ -1177,9 +1117,9 @@ section .text
 	mov [rbp + 28], rbx
 
  toupper$11:
-	; if localeConvPtr == int8$0# goto 31
+	; if localeConvPtr == int8$0# goto 30
 	cmp qword [rbp + 28], 0
-	je toupper$31
+	je toupper$30
 
  toupper$12:
 	; £field324 -> localeConvPtr = *localeConvPtr
@@ -1260,41 +1200,32 @@ section .text
 	neg ebx
 
  toupper$29:
-	; return_value = £temporary334
-
- toupper$30:
-	; return
+	; return £temporary334
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- toupper$31:
+ toupper$30:
 	; £temporary335 = c - int4$32#
 	mov ebx, [rbp + 24]
 	sub ebx, 32
 
+ toupper$31:
+	; return £temporary335
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
+
  toupper$32:
-	; return_value = £temporary335
+	; return c
+	mov ebx, [rbp + 24]
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
 
  toupper$33:
-	; return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- toupper$34:
-	; return_value = c
-	mov ebx, [rbp + 24]
-
- toupper$35:
-	; return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- toupper$36:
 	; function end toupper
 section .data

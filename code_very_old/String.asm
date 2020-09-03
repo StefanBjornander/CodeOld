@@ -110,17 +110,14 @@ section .text
 	mov byte [rsi], 0
 
  strcpy$19:
-	; return_value = target
+	; return target
 	mov rbx, [rbp + 24]
-
- strcpy$20:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strcpy$21:
+ strcpy$20:
 	; function end strcpy
 
  strncpy:
@@ -229,17 +226,14 @@ section .text
 	jmp strncpy$16
 
  strncpy$23:
-	; return_value = target
+	; return target
 	mov rbx, [rbp + 24]
-
- strncpy$24:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strncpy$25:
+ strncpy$24:
 	; function end strncpy
 
  strcat:
@@ -361,17 +355,14 @@ section .text
 	mov byte [rsi], 0
 
  strcat$27:
-	; return_value = target
+	; return target
 	mov rbx, [rbp + 24]
-
- strcat$28:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strcat$29:
+ strcat$28:
 	; function end strcat
 
  strncat:
@@ -507,17 +498,14 @@ section .text
 	mov byte [rsi], 0
 
  strncat$30:
-	; return_value = target
+	; return target
 	mov rbx, [rbp + 24]
-
- strncat$31:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strncat$32:
+ strncat$31:
 	; function end strncat
 
  strcmp:
@@ -542,9 +530,9 @@ section .text
 	; £field2609 -> £temporary2612 = *£temporary2612
 
  strcmp$5:
-	; if £field2609 -> £temporary2612 != int1$0# goto 12
+	; if £field2609 -> £temporary2612 != int1$0# goto 11
 	cmp byte [rsi], 0
-	jne strcmp$12
+	jne strcmp$11
 
  strcmp$6:
 	; £temporary2615 = int_to_int index (Signed_Int -> Pointer)
@@ -561,180 +549,165 @@ section .text
 	; £field2614 -> £temporary2617 = *£temporary2617
 
  strcmp$9:
-	; if £field2614 -> £temporary2617 != int1$0# goto 12
+	; if £field2614 -> £temporary2617 != int1$0# goto 11
 	cmp byte [rsi], 0
-	jne strcmp$12
+	jne strcmp$11
 
  strcmp$10:
-	; return_value = int4$0#
+	; return int4$0#
 	mov ebx, 0
-
- strcmp$11:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strcmp$12:
+ strcmp$11:
 	; £temporary2621 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strcmp$13:
+ strcmp$12:
 	; £temporary2623 = left + £temporary2621
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- strcmp$14:
+ strcmp$13:
 	; £field2620 -> £temporary2623 = *£temporary2623
 
- strcmp$15:
-	; if £field2620 -> £temporary2623 != int1$0# goto 18
+ strcmp$14:
+	; if £field2620 -> £temporary2623 != int1$0# goto 16
 	cmp byte [rsi], 0
-	jne strcmp$18
+	jne strcmp$16
 
- strcmp$16:
-	; return_value = int4$minus1#
+ strcmp$15:
+	; return int4$minus1#
 	mov ebx, -1
-
- strcmp$17:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strcmp$18:
+ strcmp$16:
 	; £temporary2626 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strcmp$19:
+ strcmp$17:
 	; £temporary2628 = right + £temporary2626
 	mov rsi, [rbp + 32]
 	add rsi, rax
 
- strcmp$20:
+ strcmp$18:
 	; £field2625 -> £temporary2628 = *£temporary2628
 
- strcmp$21:
-	; if £field2625 -> £temporary2628 != int1$0# goto 24
+ strcmp$19:
+	; if £field2625 -> £temporary2628 != int1$0# goto 21
 	cmp byte [rsi], 0
-	jne strcmp$24
+	jne strcmp$21
 
- strcmp$22:
-	; return_value = int4$1#
+ strcmp$20:
+	; return int4$1#
 	mov ebx, 1
-
- strcmp$23:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strcmp$24:
+ strcmp$21:
 	; £temporary2631 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strcmp$25:
+ strcmp$22:
 	; £temporary2633 = left + £temporary2631
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- strcmp$26:
+ strcmp$23:
 	; £field2630 -> £temporary2633 = *£temporary2633
 
- strcmp$27:
+ strcmp$24:
 	; £temporary2635 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strcmp$28:
+ strcmp$25:
 	; £temporary2637 = right + £temporary2635
 	mov rdi, [rbp + 32]
 	add rdi, rax
 
- strcmp$29:
+ strcmp$26:
 	; £field2634 -> £temporary2637 = *£temporary2637
 
- strcmp$30:
-	; if £field2630 -> £temporary2633 >= £field2634 -> £temporary2637 goto 33
+ strcmp$27:
+	; if £field2630 -> £temporary2633 >= £field2634 -> £temporary2637 goto 29
 	mov al, [rdi]
 	cmp [rsi], al
-	jge strcmp$33
+	jge strcmp$29
 
- strcmp$31:
-	; return_value = int4$minus1#
+ strcmp$28:
+	; return int4$minus1#
 	mov ebx, -1
-
- strcmp$32:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strcmp$33:
+ strcmp$29:
 	; £temporary2640 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strcmp$34:
+ strcmp$30:
 	; £temporary2642 = left + £temporary2640
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- strcmp$35:
+ strcmp$31:
 	; £field2639 -> £temporary2642 = *£temporary2642
 
- strcmp$36:
+ strcmp$32:
 	; £temporary2644 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strcmp$37:
+ strcmp$33:
 	; £temporary2646 = right + £temporary2644
 	mov rdi, [rbp + 32]
 	add rdi, rax
 
- strcmp$38:
+ strcmp$34:
 	; £field2643 -> £temporary2646 = *£temporary2646
 
- strcmp$39:
-	; if £field2639 -> £temporary2642 <= £field2643 -> £temporary2646 goto 42
+ strcmp$35:
+	; if £field2639 -> £temporary2642 <= £field2643 -> £temporary2646 goto 37
 	mov al, [rdi]
 	cmp [rsi], al
-	jle strcmp$42
+	jle strcmp$37
 
- strcmp$40:
-	; return_value = int4$1#
+ strcmp$36:
+	; return int4$1#
 	mov ebx, 1
-
- strcmp$41:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strcmp$42:
+ strcmp$37:
 	; index = index + int4$1#
 	inc dword [rbp + 40]
 
- strcmp$43:
+ strcmp$38:
 	; goto 2
 	jmp strcmp$2
 
- strcmp$44:
+ strcmp$39:
 	; function end strcmp
 
  strncmp:
@@ -745,10 +718,10 @@ section .text
 	mov dword [rbp + 44], 0
 
  strncmp$2:
-	; if index >= size goto 45
+	; if index >= size goto 40
 	mov eax, [rbp + 40]
 	cmp [rbp + 44], eax
-	jge strncmp$45
+	jge strncmp$40
 
  strncmp$3:
 	; £temporary2652 = int_to_int index (Signed_Int -> Pointer)
@@ -765,9 +738,9 @@ section .text
 	; £field2651 -> £temporary2654 = *£temporary2654
 
  strncmp$6:
-	; if £field2651 -> £temporary2654 != int1$0# goto 13
+	; if £field2651 -> £temporary2654 != int1$0# goto 12
 	cmp byte [rsi], 0
-	jne strncmp$13
+	jne strncmp$12
 
  strncmp$7:
 	; £temporary2657 = int_to_int index (Signed_Int -> Pointer)
@@ -784,191 +757,173 @@ section .text
 	; £field2656 -> £temporary2659 = *£temporary2659
 
  strncmp$10:
-	; if £field2656 -> £temporary2659 != int1$0# goto 13
+	; if £field2656 -> £temporary2659 != int1$0# goto 12
 	cmp byte [rsi], 0
-	jne strncmp$13
+	jne strncmp$12
 
  strncmp$11:
-	; return_value = int4$0#
+	; return int4$0#
 	mov ebx, 0
-
- strncmp$12:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strncmp$13:
+ strncmp$12:
 	; £temporary2663 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strncmp$14:
+ strncmp$13:
 	; £temporary2665 = left + £temporary2663
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- strncmp$15:
+ strncmp$14:
 	; £field2662 -> £temporary2665 = *£temporary2665
 
- strncmp$16:
-	; if £field2662 -> £temporary2665 != int1$0# goto 19
+ strncmp$15:
+	; if £field2662 -> £temporary2665 != int1$0# goto 17
 	cmp byte [rsi], 0
-	jne strncmp$19
+	jne strncmp$17
 
- strncmp$17:
-	; return_value = int4$minus1#
+ strncmp$16:
+	; return int4$minus1#
 	mov ebx, -1
-
- strncmp$18:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strncmp$19:
+ strncmp$17:
 	; £temporary2668 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strncmp$20:
+ strncmp$18:
 	; £temporary2670 = right + £temporary2668
 	mov rsi, [rbp + 32]
 	add rsi, rax
 
- strncmp$21:
+ strncmp$19:
 	; £field2667 -> £temporary2670 = *£temporary2670
 
- strncmp$22:
-	; if £field2667 -> £temporary2670 != int1$0# goto 25
+ strncmp$20:
+	; if £field2667 -> £temporary2670 != int1$0# goto 22
 	cmp byte [rsi], 0
-	jne strncmp$25
+	jne strncmp$22
 
- strncmp$23:
-	; return_value = int4$1#
+ strncmp$21:
+	; return int4$1#
 	mov ebx, 1
-
- strncmp$24:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strncmp$25:
+ strncmp$22:
 	; £temporary2673 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strncmp$26:
+ strncmp$23:
 	; £temporary2675 = left + £temporary2673
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- strncmp$27:
+ strncmp$24:
 	; £field2672 -> £temporary2675 = *£temporary2675
 
- strncmp$28:
+ strncmp$25:
 	; £temporary2677 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strncmp$29:
+ strncmp$26:
 	; £temporary2679 = right + £temporary2677
 	mov rdi, [rbp + 32]
 	add rdi, rax
 
- strncmp$30:
+ strncmp$27:
 	; £field2676 -> £temporary2679 = *£temporary2679
 
- strncmp$31:
-	; if £field2672 -> £temporary2675 >= £field2676 -> £temporary2679 goto 34
+ strncmp$28:
+	; if £field2672 -> £temporary2675 >= £field2676 -> £temporary2679 goto 30
 	mov al, [rdi]
 	cmp [rsi], al
-	jge strncmp$34
+	jge strncmp$30
 
- strncmp$32:
-	; return_value = int4$minus1#
+ strncmp$29:
+	; return int4$minus1#
 	mov ebx, -1
-
- strncmp$33:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strncmp$34:
+ strncmp$30:
 	; £temporary2682 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strncmp$35:
+ strncmp$31:
 	; £temporary2684 = left + £temporary2682
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- strncmp$36:
+ strncmp$32:
 	; £field2681 -> £temporary2684 = *£temporary2684
 
- strncmp$37:
+ strncmp$33:
 	; £temporary2686 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strncmp$38:
+ strncmp$34:
 	; £temporary2688 = right + £temporary2686
 	mov rdi, [rbp + 32]
 	add rdi, rax
 
- strncmp$39:
+ strncmp$35:
 	; £field2685 -> £temporary2688 = *£temporary2688
 
- strncmp$40:
-	; if £field2681 -> £temporary2684 <= £field2685 -> £temporary2688 goto 43
+ strncmp$36:
+	; if £field2681 -> £temporary2684 <= £field2685 -> £temporary2688 goto 38
 	mov al, [rdi]
 	cmp [rsi], al
-	jle strncmp$43
+	jle strncmp$38
 
- strncmp$41:
-	; return_value = int4$1#
+ strncmp$37:
+	; return int4$1#
 	mov ebx, 1
-
- strncmp$42:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strncmp$43:
+ strncmp$38:
 	; index = index + int4$1#
 	inc dword [rbp + 44]
 
- strncmp$44:
+ strncmp$39:
 	; goto 2
 	jmp strncmp$2
 
- strncmp$45:
-	; return_value = int4$0#
+ strncmp$40:
+	; return int4$0#
 	mov ebx, 0
-
- strncmp$46:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strncmp$47:
+ strncmp$41:
 	; function end strncmp
 
  strchr:
@@ -1005,9 +960,9 @@ section .text
 	; £field2691 -> £temporary2694 = *£temporary2694
 
  strchr$7:
-	; if £field2691 -> £temporary2694 == int1$0# goto 20
+	; if £field2691 -> £temporary2694 == int1$0# goto 19
 	cmp byte [rsi], 0
-	je strchr$20
+	je strchr$19
 
  strchr$8:
 	; £temporary2698 = int_to_int index (Signed_Int -> Pointer)
@@ -1024,10 +979,10 @@ section .text
 	; £field2697 -> £temporary2700 = *£temporary2700
 
  strchr$11:
-	; if £field2697 -> £temporary2700 != c goto 18
+	; if £field2697 -> £temporary2700 != c goto 17
 	mov al, [rbp + 40]
 	cmp [rsi], al
-	jne strchr$18
+	jne strchr$17
 
  strchr$12:
 	; £temporary2703 = int_to_int index (Signed_Int -> Pointer)
@@ -1047,35 +1002,29 @@ section .text
 	; £temporary2706 = &£field2702 -> £temporary2705
 
  strchr$16:
-	; return_value = £temporary2706
-
- strchr$17:
-	; return
+	; return £temporary2706
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strchr$18:
+ strchr$17:
 	; index = index + int4$1#
 	inc dword [rbp + 36]
 
- strchr$19:
+ strchr$18:
 	; goto 4
 	jmp strchr$4
 
- strchr$20:
-	; return_value = int8$0#
+ strchr$19:
+	; return int8$0#
 	mov rbx, 0
-
- strchr$21:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strchr$22:
+ strchr$20:
 	; function end strchr
 
  strrchr:
@@ -1170,17 +1119,14 @@ section .text
 	jmp strrchr$5
 
  strrchr$20:
-	; return_value = result
+	; return result
 	mov rbx, [rbp + 40]
-
- strrchr$21:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strrchr$22:
+ strrchr$21:
 	; function end strrchr
 
  strspn:
@@ -1205,9 +1151,9 @@ section .text
 	; £field2724 -> £temporary2727 = *£temporary2727
 
  strspn$5:
-	; if £field2724 -> £temporary2727 == int1$0# goto 21
+	; if £field2724 -> £temporary2727 == int1$0# goto 20
 	cmp byte [rsi], 0
-	je strspn$21
+	je strspn$20
 
  strspn$6:
 	; call header integral zero 0 stack zero 0
@@ -1258,41 +1204,35 @@ section .text
 	; £temporary2735 = return_value
 
  strspn$16:
-	; if £temporary2735 != int8$0# goto 19
+	; if £temporary2735 != int8$0# goto 18
 	cmp rbx, 0
-	jne strspn$19
+	jne strspn$18
 
  strspn$17:
-	; return_value = index
+	; return index
 	mov ebx, [rbp + 40]
-
- strspn$18:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strspn$19:
+ strspn$18:
 	; index = index + int4$1#
 	inc dword [rbp + 40]
 
- strspn$20:
+ strspn$19:
 	; goto 2
 	jmp strspn$2
 
- strspn$21:
-	; return_value = int4$minus1#
+ strspn$20:
+	; return int4$minus1#
 	mov ebx, -1
-
- strspn$22:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strspn$23:
+ strspn$21:
 	; function end strspn
 
  strcspn:
@@ -1317,9 +1257,9 @@ section .text
 	; £field2737 -> £temporary2740 = *£temporary2740
 
  strcspn$5:
-	; if £field2737 -> £temporary2740 == int1$0# goto 21
+	; if £field2737 -> £temporary2740 == int1$0# goto 20
 	cmp byte [rsi], 0
-	je strcspn$21
+	je strcspn$20
 
  strcspn$6:
 	; call header integral zero 0 stack zero 0
@@ -1370,41 +1310,35 @@ section .text
 	; £temporary2748 = return_value
 
  strcspn$16:
-	; if £temporary2748 == int8$0# goto 19
+	; if £temporary2748 == int8$0# goto 18
 	cmp rbx, 0
-	je strcspn$19
+	je strcspn$18
 
  strcspn$17:
-	; return_value = index
+	; return index
 	mov ebx, [rbp + 40]
-
- strcspn$18:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strcspn$19:
+ strcspn$18:
 	; index = index + int4$1#
 	inc dword [rbp + 40]
 
- strcspn$20:
+ strcspn$19:
 	; goto 2
 	jmp strcspn$2
 
- strcspn$21:
-	; return_value = int4$minus1#
+ strcspn$20:
+	; return int4$minus1#
 	mov ebx, -1
-
- strcspn$22:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strcspn$23:
+ strcspn$21:
 	; function end strcspn
 
  strpbrk:
@@ -1429,9 +1363,9 @@ section .text
 	; £field2750 -> £temporary2753 = *£temporary2753
 
  strpbrk$5:
-	; if £field2750 -> £temporary2753 == int1$0# goto 25
+	; if £field2750 -> £temporary2753 == int1$0# goto 24
 	cmp byte [rsi], 0
-	je strpbrk$25
+	je strpbrk$24
 
  strpbrk$6:
 	; call header integral zero 0 stack zero 0
@@ -1482,9 +1416,9 @@ section .text
 	; £temporary2761 = return_value
 
  strpbrk$16:
-	; if £temporary2761 == int8$0# goto 23
+	; if £temporary2761 == int8$0# goto 22
 	cmp rbx, 0
-	je strpbrk$23
+	je strpbrk$22
 
  strpbrk$17:
 	; £temporary2764 = int_to_int index (Signed_Int -> Pointer)
@@ -1504,35 +1438,29 @@ section .text
 	; £temporary2767 = &£field2763 -> £temporary2766
 
  strpbrk$21:
-	; return_value = £temporary2767
-
- strpbrk$22:
-	; return
+	; return £temporary2767
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strpbrk$23:
+ strpbrk$22:
 	; index = index + int4$1#
 	inc dword [rbp + 40]
 
- strpbrk$24:
+ strpbrk$23:
 	; goto 2
 	jmp strpbrk$2
 
- strpbrk$25:
-	; return_value = int8$0#
+ strpbrk$24:
+	; return int8$0#
 	mov rbx, 0
-
- strpbrk$26:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strpbrk$27:
+ strpbrk$25:
 	; function end strpbrk
 
  strstr:
@@ -1557,9 +1485,9 @@ section .text
 	; £field2768 -> £temporary2771 = *£temporary2771
 
  strstr$5:
-	; if £field2768 -> £temporary2771 == int1$0# goto 23
+	; if £field2768 -> £temporary2771 == int1$0# goto 22
 	cmp byte [rsi], 0
-	je strstr$23
+	je strstr$22
 
  strstr$6:
 	; call header integral zero 0 stack zero 0
@@ -1598,9 +1526,9 @@ section .text
 	; £temporary2777 = return_value
 
  strstr$14:
-	; if £temporary2777 != int4$0# goto 21
+	; if £temporary2777 != int4$0# goto 20
 	cmp ebx, 0
-	jne strstr$21
+	jne strstr$20
 
  strstr$15:
 	; £temporary2780 = int_to_int index (Signed_Int -> Pointer)
@@ -1620,35 +1548,29 @@ section .text
 	; £temporary2783 = &£field2779 -> £temporary2782
 
  strstr$19:
-	; return_value = £temporary2783
-
- strstr$20:
-	; return
+	; return £temporary2783
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strstr$21:
+ strstr$20:
 	; index = index + int4$1#
 	inc dword [rbp + 40]
 
- strstr$22:
+ strstr$21:
 	; goto 2
 	jmp strstr$2
 
- strstr$23:
-	; return_value = int8$0#
+ strstr$22:
+	; return int8$0#
 	mov rbx, 0
-
- strstr$24:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strstr$25:
+ strstr$23:
 	; function end strstr
 
  strlen:
@@ -1686,17 +1608,14 @@ section .text
 	jmp strlen$2
 
  strlen$8:
-	; return_value = index
+	; return index
 	mov ebx, [rbp + 32]
-
- strlen$9:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strlen$10:
+ strlen$9:
 	; function end strlen
 
  strerror:
@@ -1785,434 +1704,410 @@ section .text
 	; £field2796 -> £temporary2799 = *£temporary2799
 
  strerror$20:
-	; return_value = £field2796 -> £temporary2799
+	; return £field2796 -> £temporary2799
 	mov rbx, [rsi]
-
- strerror$21:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strerror$22:
+ strerror$21:
 	; function end strerror
 
  strtok:
 	; empty
 
  strtok$1:
-	; if string == int8$0# goto 43
+	; if string == int8$0# goto 40
 	cmp qword [rbp + 24], 0
-	je strtok$43
+	je strtok$40
 
  strtok$2:
 	; £field2801 -> string = *string
 	mov rsi, [rbp + 24]
 
  strtok$3:
-	; if £field2801 -> string != int1$0# goto 6
+	; if £field2801 -> string != int1$0# goto 5
 	cmp byte [rsi], 0
-	jne strtok$6
+	jne strtok$5
 
  strtok$4:
-	; return_value = int8$0#
+	; return int8$0#
 	mov rbx, 0
-
- strtok$5:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strtok$6:
+ strtok$5:
 	; index = int4$0#
 	mov dword [rbp + 40], 0
 
- strtok$7:
+ strtok$6:
 	; £temporary2804 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strtok$8:
+ strtok$7:
 	; £temporary2806 = string + £temporary2804
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- strtok$9:
+ strtok$8:
 	; £field2803 -> £temporary2806 = *£temporary2806
 
- strtok$10:
-	; if £field2803 -> £temporary2806 == int1$0# goto 36
+ strtok$9:
+	; if £field2803 -> £temporary2806 == int1$0# goto 34
 	cmp byte [rsi], 0
-	je strtok$36
+	je strtok$34
 
- strtok$11:
+ strtok$10:
 	; call header integral zero 0 stack zero 0
 
- strtok$12:
+ strtok$11:
 	; parameter charSet, offset 76
 	mov rax, [rbp + 32]
 	mov [rbp + 76], rax
 
- strtok$13:
+ strtok$12:
 	; £temporary2810 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strtok$14:
+ strtok$13:
 	; £temporary2812 = string + £temporary2810
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- strtok$15:
+ strtok$14:
 	; £field2809 -> £temporary2812 = *£temporary2812
 
- strtok$16:
+ strtok$15:
 	; £temporary2813 = int_to_int £field2809 -> £temporary2812 (Signed_Char -> Signed_Int)
 	mov al, [rsi]
 	and eax, 255
 	cmp al, 0
-	jge strtok$17
+	jge strtok$16
 	neg al
 	neg eax
 
- strtok$17:
+ strtok$16:
 	; parameter £temporary2813, offset 84
 	mov [rbp + 84], eax
 
- strtok$18:
+ strtok$17:
 	; call function noellipse-noellipse strchr
-	mov qword [rbp + 52], strtok$19
+	mov qword [rbp + 52], strtok$18
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp strchr
 
- strtok$19:
+ strtok$18:
 	; post call
 
- strtok$20:
+ strtok$19:
 	; £temporary2814 = return_value
 
- strtok$21:
-	; if £temporary2814 == int8$0# goto 34
+ strtok$20:
+	; if £temporary2814 == int8$0# goto 32
 	cmp rbx, 0
-	je strtok$34
+	je strtok$32
 
- strtok$22:
+ strtok$21:
 	; £temporary2817 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strtok$23:
+ strtok$22:
 	; £temporary2819 = string + £temporary2817
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- strtok$24:
+ strtok$23:
 	; £field2816 -> £temporary2819 = *£temporary2819
 
- strtok$25:
+ strtok$24:
 	; £field2816 -> £temporary2819 = int1$0#
 	mov byte [rsi], 0
 
- strtok$26:
+ strtok$25:
 	; £temporary2820 = index + int4$1#
 	mov eax, [rbp + 40]
 	inc eax
 
- strtok$27:
+ strtok$26:
 	; £temporary2822 = int_to_int £temporary2820 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
- strtok$28:
+ strtok$27:
 	; £temporary2824 = string + £temporary2822
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- strtok$29:
+ strtok$28:
 	; £field2821 -> £temporary2824 = *£temporary2824
 
- strtok$30:
+ strtok$29:
 	; £temporary2825 = &£field2821 -> £temporary2824
 
- strtok$31:
+ strtok$30:
 	; token = £temporary2825
 	mov [token], rsi
 
- strtok$32:
-	; return_value = string
+ strtok$31:
+	; return string
 	mov rbx, [rbp + 24]
-
- strtok$33:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strtok$34:
+ strtok$32:
 	; index = index + int4$1#
 	inc dword [rbp + 40]
 
- strtok$35:
-	; goto 7
-	jmp strtok$7
+ strtok$33:
+	; goto 6
+	jmp strtok$6
 
- strtok$36:
+ strtok$34:
 	; £temporary2827 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strtok$37:
+ strtok$35:
 	; £temporary2829 = string + £temporary2827
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- strtok$38:
+ strtok$36:
 	; £field2826 -> £temporary2829 = *£temporary2829
 
- strtok$39:
+ strtok$37:
 	; £temporary2830 = &£field2826 -> £temporary2829
 
- strtok$40:
+ strtok$38:
 	; token = £temporary2830
 	mov [token], rsi
 
- strtok$41:
-	; return_value = string
+ strtok$39:
+	; return string
 	mov rbx, [rbp + 24]
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
+
+ strtok$40:
+	; if token != int8$0# goto 42
+	cmp qword [token], 0
+	jne strtok$42
+
+ strtok$41:
+	; return int8$0#
+	mov rbx, 0
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
 
  strtok$42:
-	; return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- strtok$43:
-	; if token != int8$0# goto 46
-	cmp qword [token], 0
-	jne strtok$46
-
- strtok$44:
-	; return_value = int8$0#
-	mov rbx, 0
-
- strtok$45:
-	; return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- strtok$46:
 	; £field2832 -> token = *token
 	mov rsi, [token]
 
- strtok$47:
-	; if £field2832 -> token != int1$0# goto 50
+ strtok$43:
+	; if £field2832 -> token != int1$0# goto 45
 	cmp byte [rsi], 0
-	jne strtok$50
+	jne strtok$45
 
- strtok$48:
-	; return_value = int8$0#
+ strtok$44:
+	; return int8$0#
 	mov rbx, 0
-
- strtok$49:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strtok$50:
+ strtok$45:
 	; index = int4$0#
 	mov dword [rbp + 40], 0
 
- strtok$51:
+ strtok$46:
 	; £temporary2835 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strtok$52:
+ strtok$47:
 	; £temporary2837 = token + £temporary2835
 	mov rsi, [token]
 	add rsi, rax
 
- strtok$53:
+ strtok$48:
 	; £field2834 -> £temporary2837 = *£temporary2837
 
- strtok$54:
-	; if £field2834 -> £temporary2837 == int1$0# goto 81
+ strtok$49:
+	; if £field2834 -> £temporary2837 == int1$0# goto 75
 	cmp byte [rsi], 0
-	je strtok$81
+	je strtok$75
 
- strtok$55:
+ strtok$50:
 	; call header integral zero 0 stack zero 0
 
- strtok$56:
+ strtok$51:
 	; parameter charSet, offset 76
 	mov rax, [rbp + 32]
 	mov [rbp + 76], rax
 
- strtok$57:
+ strtok$52:
 	; £temporary2841 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strtok$58:
+ strtok$53:
 	; £temporary2843 = token + £temporary2841
 	mov rsi, [token]
 	add rsi, rax
 
- strtok$59:
+ strtok$54:
 	; £field2840 -> £temporary2843 = *£temporary2843
 
- strtok$60:
+ strtok$55:
 	; £temporary2844 = int_to_int £field2840 -> £temporary2843 (Signed_Char -> Signed_Int)
 	mov al, [rsi]
 	and eax, 255
 	cmp al, 0
-	jge strtok$61
+	jge strtok$56
 	neg al
 	neg eax
 
- strtok$61:
+ strtok$56:
 	; parameter £temporary2844, offset 84
 	mov [rbp + 84], eax
 
- strtok$62:
+ strtok$57:
 	; call function noellipse-noellipse strchr
-	mov qword [rbp + 52], strtok$63
+	mov qword [rbp + 52], strtok$58
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp strchr
 
- strtok$63:
+ strtok$58:
 	; post call
 
- strtok$64:
+ strtok$59:
 	; £temporary2845 = return_value
 
- strtok$65:
-	; if £temporary2845 == int8$0# goto 79
+ strtok$60:
+	; if £temporary2845 == int8$0# goto 73
 	cmp rbx, 0
-	je strtok$79
+	je strtok$73
 
- strtok$66:
+ strtok$61:
 	; tokenStart2 = token
 	mov rax, [token]
 	mov [rbp + 52], rax
 
- strtok$67:
+ strtok$62:
 	; £temporary2848 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strtok$68:
+ strtok$63:
 	; £temporary2850 = token + £temporary2848
 	mov rsi, [token]
 	add rsi, rax
 
- strtok$69:
+ strtok$64:
 	; £field2847 -> £temporary2850 = *£temporary2850
 
- strtok$70:
+ strtok$65:
 	; £field2847 -> £temporary2850 = int1$0#
 	mov byte [rsi], 0
 
- strtok$71:
+ strtok$66:
 	; £temporary2851 = index + int4$1#
 	mov eax, [rbp + 40]
 	inc eax
 
- strtok$72:
+ strtok$67:
 	; £temporary2853 = int_to_int £temporary2851 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
- strtok$73:
+ strtok$68:
 	; £temporary2855 = token + £temporary2853
 	mov rsi, [token]
 	add rsi, rax
 
- strtok$74:
+ strtok$69:
 	; £field2852 -> £temporary2855 = *£temporary2855
 
- strtok$75:
+ strtok$70:
 	; £temporary2856 = &£field2852 -> £temporary2855
 
- strtok$76:
+ strtok$71:
 	; token = £temporary2856
 	mov [token], rsi
 
- strtok$77:
-	; return_value = tokenStart2
+ strtok$72:
+	; return tokenStart2
 	mov rbx, [rbp + 52]
-
- strtok$78:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strtok$79:
+ strtok$73:
 	; index = index + int4$1#
 	inc dword [rbp + 40]
 
- strtok$80:
-	; goto 51
-	jmp strtok$51
+ strtok$74:
+	; goto 46
+	jmp strtok$46
 
- strtok$81:
+ strtok$75:
 	; tokenStart = token
 	mov rax, [token]
 	mov [rbp + 44], rax
 
- strtok$82:
+ strtok$76:
 	; £temporary2858 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strtok$83:
+ strtok$77:
 	; £temporary2860 = token + £temporary2858
 	mov rsi, [token]
 	add rsi, rax
 
- strtok$84:
+ strtok$78:
 	; £field2857 -> £temporary2860 = *£temporary2860
 
- strtok$85:
+ strtok$79:
 	; £temporary2861 = &£field2857 -> £temporary2860
 
- strtok$86:
+ strtok$80:
 	; token = £temporary2861
 	mov [token], rsi
 
- strtok$87:
-	; return_value = tokenStart
+ strtok$81:
+	; return tokenStart
 	mov rbx, [rbp + 44]
-
- strtok$88:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strtok$89:
+ strtok$82:
 	; function end strtok
 
  memcpy:
@@ -2287,16 +2182,13 @@ section .text
 	mov rbx, [rbp + 24]
 
  memcpy$16:
-	; return_value = £temporary2874
-
- memcpy$17:
-	; return
+	; return £temporary2874
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- memcpy$18:
+ memcpy$17:
 	; function end memcpy
 
  memmove:
@@ -2429,16 +2321,13 @@ section .text
 	mov rbx, [rbp + 24]
 
  memmove$28:
-	; return_value = £temporary2899
-
- memmove$29:
-	; return
+	; return £temporary2899
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- memmove$30:
+ memmove$29:
 	; function end memmove
 
  memcmp:
@@ -2462,10 +2351,10 @@ section .text
 	mov dword [rbp + 60], 0
 
  memcmp$5:
-	; if index >= size goto 26
+	; if index >= size goto 24
 	mov eax, [rbp + 40]
 	cmp [rbp + 60], eax
-	jge memcmp$26
+	jge memcmp$24
 
  memcmp$6:
 	; £temporary2905 = int_to_int index (Signed_Int -> Pointer)
@@ -2496,87 +2385,78 @@ section .text
 	; £field2908 -> £temporary2911 = *£temporary2911
 
  memcmp$12:
-	; if £field2904 -> £temporary2907 >= £field2908 -> £temporary2911 goto 15
+	; if £field2904 -> £temporary2907 >= £field2908 -> £temporary2911 goto 14
 	mov al, [rdi]
 	cmp [rsi], al
-	jge memcmp$15
+	jge memcmp$14
 
  memcmp$13:
-	; return_value = int4$minus1#
+	; return int4$minus1#
 	mov ebx, -1
-
- memcmp$14:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- memcmp$15:
+ memcmp$14:
 	; £temporary2914 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
 
- memcmp$16:
+ memcmp$15:
 	; £temporary2916 = charLeft + £temporary2914
 	mov rsi, [rbp + 44]
 	add rsi, rax
 
- memcmp$17:
+ memcmp$16:
 	; £field2913 -> £temporary2916 = *£temporary2916
 
- memcmp$18:
+ memcmp$17:
 	; £temporary2918 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
 
- memcmp$19:
+ memcmp$18:
 	; £temporary2920 = charRight + £temporary2918
 	mov rdi, [rbp + 52]
 	add rdi, rax
 
- memcmp$20:
+ memcmp$19:
 	; £field2917 -> £temporary2920 = *£temporary2920
 
- memcmp$21:
-	; if £field2913 -> £temporary2916 <= £field2917 -> £temporary2920 goto 24
+ memcmp$20:
+	; if £field2913 -> £temporary2916 <= £field2917 -> £temporary2920 goto 22
 	mov al, [rdi]
 	cmp [rsi], al
-	jle memcmp$24
+	jle memcmp$22
 
- memcmp$22:
-	; return_value = int4$1#
+ memcmp$21:
+	; return int4$1#
 	mov ebx, 1
-
- memcmp$23:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- memcmp$24:
+ memcmp$22:
 	; index = index + int4$1#
 	inc dword [rbp + 60]
 
- memcmp$25:
+ memcmp$23:
 	; goto 5
 	jmp memcmp$5
 
- memcmp$26:
-	; return_value = int4$0#
+ memcmp$24:
+	; return int4$0#
 	mov ebx, 0
-
- memcmp$27:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- memcmp$28:
+ memcmp$25:
 	; function end memcmp
 
  memchr:
@@ -2607,10 +2487,10 @@ section .text
 	mov dword [rbp + 40], 0
 
  memchr$6:
-	; if index >= size goto 20
+	; if index >= size goto 19
 	mov eax, [rbp + 36]
 	cmp [rbp + 40], eax
-	jge memchr$20
+	jge memchr$19
 
  memchr$7:
 	; £temporary2927 = int_to_int index (Signed_Int -> Pointer)
@@ -2627,10 +2507,10 @@ section .text
 	; £field2926 -> £temporary2929 = *£temporary2929
 
  memchr$10:
-	; if £field2926 -> £temporary2929 != c goto 18
+	; if £field2926 -> £temporary2929 != c goto 17
 	mov al, [rbp + 52]
 	cmp [rsi], al
-	jne memchr$18
+	jne memchr$17
 
  memchr$11:
 	; £temporary2932 = int_to_int index (Signed_Int -> Pointer)
@@ -2653,35 +2533,29 @@ section .text
 	; £temporary2936 = int_to_int £temporary2935 (Pointer -> Pointer)
 
  memchr$16:
-	; return_value = £temporary2936
-
- memchr$17:
-	; return
+	; return £temporary2936
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- memchr$18:
+ memchr$17:
 	; index = index + int4$1#
 	inc dword [rbp + 40]
 
- memchr$19:
+ memchr$18:
 	; goto 6
 	jmp memchr$6
 
- memchr$20:
-	; return_value = int8$0#
+ memchr$19:
+	; return int8$0#
 	mov rbx, 0
-
- memchr$21:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- memchr$22:
+ memchr$20:
 	; function end memchr
 
  memset:
@@ -2742,17 +2616,14 @@ section .text
 	jmp memset$5
 
  memset$12:
-	; return_value = block
+	; return block
 	mov rbx, [rbp + 24]
-
- memset$13:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- memset$14:
+ memset$13:
 	; function end memset
 section .data
 

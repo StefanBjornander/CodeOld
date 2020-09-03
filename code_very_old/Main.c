@@ -153,7 +153,7 @@ void maint() {
   static count = 1;
 
   if (count <= 10) {
-    printf("%d\n", count++);
+    printf("%d ", count++);
     main();
   }
 }*/

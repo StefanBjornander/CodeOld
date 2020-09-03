@@ -7,6 +7,7 @@
 	extern printf
 	extern atexit
 	extern exit
+	extern $StackTop
 section .text
 
  floating_point_error:

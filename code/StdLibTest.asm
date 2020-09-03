@@ -22,29 +22,30 @@
 	extern ldiv
 	extern qsort
 	extern bsearch
+	extern $StackTop
 section .text
 
  compare:
-	; £temporary3909 = int_to_int valuePtr1 (Pointer -> Pointer)
+	; £temporary3927 = int_to_int valuePtr1 (Pointer -> Pointer)
 	mov rsi, [rbp + 24]
 
  compare$1:
-	; £field3910 -> £temporary3909 = *£temporary3909
+	; £field3928 -> £temporary3927 = *£temporary3927
 
  compare$2:
-	; intValue1 = £field3910 -> £temporary3909
+	; intValue1 = £field3928 -> £temporary3927
 	mov eax, [rsi]
 	mov [rbp + 40], eax
 
  compare$3:
-	; £temporary3911 = int_to_int valuePtr2 (Pointer -> Pointer)
+	; £temporary3929 = int_to_int valuePtr2 (Pointer -> Pointer)
 	mov rsi, [rbp + 32]
 
  compare$4:
-	; £field3912 -> £temporary3911 = *£temporary3911
+	; £field3930 -> £temporary3929 = *£temporary3929
 
  compare$5:
-	; intValue2 = £field3912 -> £temporary3911
+	; intValue2 = £field3930 -> £temporary3929
 	mov eax, [rsi]
 	mov [rbp + 44], eax
 
@@ -55,7 +56,7 @@ section .text
 	jge compare$9
 
  compare$7:
-	; £temporary3916 = int4$minus1#
+	; £temporary3934 = int4$minus1#
 	mov eax, -1
 
  compare$8:
@@ -69,7 +70,7 @@ section .text
 	jne compare$12
 
  compare$10:
-	; £temporary3915 = int4$0#
+	; £temporary3933 = int4$0#
 	mov ebx, 0
 
  compare$11:
@@ -77,14 +78,14 @@ section .text
 	jmp compare$13
 
  compare$12:
-	; £temporary3915 = int4$1#
+	; £temporary3933 = int4$1#
 	mov ebx, 1
 
  compare$13:
-	; £temporary3916 = £temporary3915
+	; £temporary3934 = £temporary3933
 
  compare$14:
-	; return £temporary3916
+	; return £temporary3934
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -94,26 +95,26 @@ section .text
 	; function end compare
 
  reverse_compare:
-	; £temporary3917 = int_to_int valuePtr1 (Pointer -> Pointer)
+	; £temporary3935 = int_to_int valuePtr1 (Pointer -> Pointer)
 	mov rsi, [rbp + 24]
 
  reverse_compare$1:
-	; £field3918 -> £temporary3917 = *£temporary3917
+	; £field3936 -> £temporary3935 = *£temporary3935
 
  reverse_compare$2:
-	; intValue1 = £field3918 -> £temporary3917
+	; intValue1 = £field3936 -> £temporary3935
 	mov eax, [rsi]
 	mov [rbp + 40], eax
 
  reverse_compare$3:
-	; £temporary3919 = int_to_int valuePtr2 (Pointer -> Pointer)
+	; £temporary3937 = int_to_int valuePtr2 (Pointer -> Pointer)
 	mov rsi, [rbp + 32]
 
  reverse_compare$4:
-	; £field3920 -> £temporary3919 = *£temporary3919
+	; £field3938 -> £temporary3937 = *£temporary3937
 
  reverse_compare$5:
-	; intValue2 = £field3920 -> £temporary3919
+	; intValue2 = £field3938 -> £temporary3937
 	mov eax, [rsi]
 	mov [rbp + 44], eax
 
@@ -124,7 +125,7 @@ section .text
 	jge reverse_compare$9
 
  reverse_compare$7:
-	; £temporary3924 = int4$1#
+	; £temporary3942 = int4$1#
 	mov eax, 1
 
  reverse_compare$8:
@@ -138,7 +139,7 @@ section .text
 	jne reverse_compare$12
 
  reverse_compare$10:
-	; £temporary3923 = int4$0#
+	; £temporary3941 = int4$0#
 	mov ebx, 0
 
  reverse_compare$11:
@@ -146,14 +147,14 @@ section .text
 	jmp reverse_compare$13
 
  reverse_compare$12:
-	; £temporary3923 = int4$minus1#
+	; £temporary3941 = int4$minus1#
 	mov ebx, -1
 
  reverse_compare$13:
-	; £temporary3924 = £temporary3923
+	; £temporary3942 = £temporary3941
 
  reverse_compare$14:
-	; return £temporary3924
+	; return £temporary3942
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -350,12 +351,12 @@ section .text
 	mov qword [rbp + 372], string_1232E456abc#
 
  stdlib_test$6:
-	; £temporary3934 = &p
+	; £temporary3952 = &p
 	mov rsi, rbp
 	add rsi, 324
 
  stdlib_test$7:
-	; parameter £temporary3934, offset 380
+	; parameter £temporary3952, offset 380
 	mov [rbp + 380], rsi
 
  stdlib_test$8:
@@ -369,7 +370,7 @@ section .text
 	; post call
 
  stdlib_test$10:
-	; £temporary3935 = return_value
+	; £temporary3953 = return_value
 
  stdlib_test$11:
 	; pop float x
@@ -393,7 +394,7 @@ section .text
 	; post call
 
  stdlib_test$16:
-	; £temporary3936 = return_value
+	; £temporary3954 = return_value
 
  stdlib_test$17:
 	; pop float y
@@ -407,12 +408,12 @@ section .text
 	mov qword [rbp + 388], string_123abc#
 
  stdlib_test$20:
-	; £temporary3937 = &q
+	; £temporary3955 = &q
 	mov rsi, rbp
 	add rsi, 332
 
  stdlib_test$21:
-	; parameter £temporary3937, offset 396
+	; parameter £temporary3955, offset 396
 	mov [rbp + 396], rsi
 
  stdlib_test$22:
@@ -430,10 +431,10 @@ section .text
 	; post call
 
  stdlib_test$25:
-	; £temporary3938 = return_value
+	; £temporary3956 = return_value
 
  stdlib_test$26:
-	; l = £temporary3938
+	; l = £temporary3956
 	mov [rbp + 364], rbx
 
  stdlib_test$27:
@@ -444,12 +445,12 @@ section .text
 	mov qword [rbp + 396], string_123abc#
 
  stdlib_test$29:
-	; £temporary3939 = &r
+	; £temporary3957 = &r
 	mov rsi, rbp
 	add rsi, 340
 
  stdlib_test$30:
-	; parameter £temporary3939, offset 404
+	; parameter £temporary3957, offset 404
 	mov [rbp + 404], rsi
 
  stdlib_test$31:
@@ -467,10 +468,10 @@ section .text
 	; post call
 
  stdlib_test$34:
-	; £temporary3940 = return_value
+	; £temporary3958 = return_value
 
  stdlib_test$35:
-	; ul = £temporary3940
+	; ul = £temporary3958
 	mov [rbp + 372], rbx
 
  stdlib_test$36:
@@ -525,10 +526,10 @@ section .text
 	; post call
 
  stdlib_test$48:
-	; £temporary3942 = return_value
+	; £temporary3960 = return_value
 
  stdlib_test$49:
-	; parameter £temporary3942, offset 412
+	; parameter £temporary3960, offset 412
 	mov [rbp + 412], ebx
 
  stdlib_test$50:
@@ -568,10 +569,10 @@ section .text
 	; post call
 
  stdlib_test$58:
-	; £temporary3944 = return_value
+	; £temporary3962 = return_value
 
  stdlib_test$59:
-	; parameter £temporary3944, offset 412
+	; parameter £temporary3962, offset 412
 	mov [rbp + 412], rbx
 
  stdlib_test$60:
@@ -701,10 +702,10 @@ section .text
 	; post call
 
  stdlib_test$87:
-	; £temporary3949 = return_value
+	; £temporary3967 = return_value
 
  stdlib_test$88:
-	; parameter £temporary3949, offset 56
+	; parameter £temporary3967, offset 56
 	mov [rbp + 56], rbx
 
  stdlib_test$89:
@@ -779,10 +780,10 @@ section .text
 	; post call
 
  stdlib_test$105:
-	; £temporary3953 = return_value
+	; £temporary3971 = return_value
 
  stdlib_test$106:
-	; parameter £temporary3953, offset 56
+	; parameter £temporary3971, offset 56
 	mov [rbp + 56], ebx
 
  stdlib_test$107:
@@ -803,10 +804,10 @@ section .text
 	; post call
 
  stdlib_test$111:
-	; £temporary3954 = return_value
+	; £temporary3972 = return_value
 
  stdlib_test$112:
-	; parameter £temporary3954, offset 60
+	; parameter £temporary3972, offset 60
 	mov [rbp + 60], ebx
 
  stdlib_test$113:
@@ -827,10 +828,10 @@ section .text
 	; post call
 
  stdlib_test$117:
-	; £temporary3955 = return_value
+	; £temporary3973 = return_value
 
  stdlib_test$118:
-	; parameter £temporary3955, offset 64
+	; parameter £temporary3973, offset 64
 	mov [rbp + 64], rbx
 
  stdlib_test$119:
@@ -851,10 +852,10 @@ section .text
 	; post call
 
  stdlib_test$123:
-	; £temporary3956 = return_value
+	; £temporary3974 = return_value
 
  stdlib_test$124:
-	; parameter £temporary3956, offset 72
+	; parameter £temporary3974, offset 72
 	mov [rbp + 72], rbx
 
  stdlib_test$125:
@@ -891,10 +892,10 @@ section .text
 	; post call
 
  stdlib_test$132:
-	; £temporary3958 -> £temporary3959 = return_value
+	; £temporary3976 -> £temporary3977 = return_value
 
  stdlib_test$133:
-	; i = £temporary3958 -> £temporary3959
+	; i = £temporary3976 -> £temporary3977
 	mov rsi, rbp
 	add rsi, 24
 	mov al, 8
@@ -989,10 +990,10 @@ section .text
 	; post call
 
  stdlib_test$149:
-	; £temporary3964 -> £temporary3965 = return_value
+	; £temporary3982 -> £temporary3983 = return_value
 
  stdlib_test$150:
-	; li = £temporary3964 -> £temporary3965
+	; li = £temporary3982 -> £temporary3983
 	mov rsi, rbp
 	add rsi, 24
 	mov al, 16
@@ -1121,27 +1122,27 @@ section .text
 	mov qword [rbp + 72], string_25i20#
 
  stdlib_test$174:
-	; £temporary3978 = int_to_int index (Signed_Int -> Array)
+	; £temporary3996 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  stdlib_test$175:
-	; £temporary3980 = £temporary3978 * int8$4#
+	; £temporary3998 = £temporary3996 * int8$4#
 	xor rdx, rdx
 	mul qword [int8$4#]
 
  stdlib_test$176:
-	; £temporary3979 = list + £temporary3980
+	; £temporary3997 = list + £temporary3998
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
  stdlib_test$177:
-	; £field3981 -> £temporary3979 = *£temporary3979
+	; £field3999 -> £temporary3997 = *£temporary3997
 
  stdlib_test$178:
-	; parameter £field3981 -> £temporary3979, offset 80
+	; parameter £field3999 -> £temporary3997, offset 80
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1233,27 +1234,27 @@ section .text
 	mov qword [rbp + 72], string_25i20#
 
  stdlib_test$198:
-	; £temporary3988 = int_to_int index (Signed_Int -> Array)
+	; £temporary4006 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  stdlib_test$199:
-	; £temporary3990 = £temporary3988 * int8$4#
+	; £temporary4008 = £temporary4006 * int8$4#
 	xor rdx, rdx
 	mul qword [int8$4#]
 
  stdlib_test$200:
-	; £temporary3989 = list + £temporary3990
+	; £temporary4007 = list + £temporary4008
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
  stdlib_test$201:
-	; £field3991 -> £temporary3989 = *£temporary3989
+	; £field4009 -> £temporary4007 = *£temporary4007
 
  stdlib_test$202:
-	; parameter £field3991 -> £temporary3989, offset 80
+	; parameter £field4009 -> £temporary4007, offset 80
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1345,27 +1346,27 @@ section .text
 	mov qword [rbp + 72], string_25i20#
 
  stdlib_test$222:
-	; £temporary3998 = int_to_int index (Signed_Int -> Array)
+	; £temporary4016 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  stdlib_test$223:
-	; £temporary4000 = £temporary3998 * int8$4#
+	; £temporary4018 = £temporary4016 * int8$4#
 	xor rdx, rdx
 	mul qword [int8$4#]
 
  stdlib_test$224:
-	; £temporary3999 = list + £temporary4000
+	; £temporary4017 = list + £temporary4018
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
  stdlib_test$225:
-	; £field4001 -> £temporary3999 = *£temporary3999
+	; £field4019 -> £temporary4017 = *£temporary4017
 
  stdlib_test$226:
-	; parameter £field4001 -> £temporary3999, offset 80
+	; parameter £field4019 -> £temporary4017, offset 80
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1420,12 +1421,12 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  stdlib_test$238:
-	; £temporary4006 = &key
+	; £temporary4024 = &key
 	mov rsi, rbp
 	add rsi, 44
 
  stdlib_test$239:
-	; parameter £temporary4006, offset 72
+	; parameter £temporary4024, offset 72
 	mov [rbp + 72], rsi
 
  stdlib_test$240:
@@ -1457,13 +1458,13 @@ section .text
 	; post call
 
  stdlib_test$246:
-	; £temporary4008 = return_value
+	; £temporary4026 = return_value
 
  stdlib_test$247:
-	; £temporary4009 = int_to_int £temporary4008 (Pointer -> Pointer)
+	; £temporary4027 = int_to_int £temporary4026 (Pointer -> Pointer)
 
  stdlib_test$248:
-	; p = £temporary4009
+	; p = £temporary4027
 	mov [rbp + 48], rbx
 
  stdlib_test$249:
@@ -1472,32 +1473,32 @@ section .text
 	je stdlib_test$255
 
  stdlib_test$250:
-	; £temporary4012 = p - list
+	; £temporary4030 = p - list
 	mov rax, [rbp + 48]
 	sub rax, rbp
 	sub rax, 24
 
  stdlib_test$251:
-	; £temporary4011 = £temporary4012 / int8$4#
+	; £temporary4029 = £temporary4030 / int8$4#
 	xor rdx, rdx
 	div qword [int8$4#]
 
  stdlib_test$252:
-	; £temporary4013 = int_to_int £temporary4011 (Pointer -> Signed_Int)
+	; £temporary4031 = int_to_int £temporary4029 (Pointer -> Signed_Int)
 
  stdlib_test$253:
-	; £temporary4014 = £temporary4013
+	; £temporary4032 = £temporary4031
 
  stdlib_test$254:
 	; goto 256
 	jmp stdlib_test$256
 
  stdlib_test$255:
-	; £temporary4014 = int4$minus1#
+	; £temporary4032 = int4$minus1#
 	mov eax, -1
 
  stdlib_test$256:
-	; index = £temporary4014
+	; index = £temporary4032
 	mov [rbp + 56], eax
 
  stdlib_test$257:

@@ -3,9 +3,10 @@
 	global invers
 	global setjmp_test
 
-	extern printf
 	extern longjmp
 	extern setjmp
+	extern printf
+	extern $StackTop
 section .text
 
  divide:
@@ -32,11 +33,11 @@ section .text
 	fld qword [rbp + 32]
 
  divide$5:
-	; £temporary3164 = x / y
+	; £temporary3183 = x / y
 	fdiv
 
  divide$6:
-	; return £temporary3164
+	; return £temporary3183
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -50,68 +51,39 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  divide$9:
-	; parameter string_longjmp203C25s3E203C25u3E0A#, offset 72
-	mov qword [rbp + 72], string_longjmp203C25s3E203C25u3E0A#
+	; parameter buffer, offset 72
+	mov qword [rbp + 72], buffer
 
  divide$10:
-	; parameter p, offset 80
+	; £temporary3184 = int_to_int p (Pointer -> Signed_Int)
 	mov rax, [rbp + 40]
-	mov [rbp + 80], rax
 
  divide$11:
-	; parameter p, offset 88
-	mov rax, [rbp + 40]
-	mov [rbp + 88], rax
+	; parameter £temporary3184, offset 80
+	mov [rbp + 80], eax
 
  divide$12:
-	; call function noellipse-ellipse printf, extra 16
+	; call function noellipse-noellipse longjmp
 	mov qword [rbp + 48], divide$13
 	mov [rbp + 56], rbp
 	add rbp, 48
-	mov rdi, rbp
-	add rdi, 16
-	jmp printf
+	jmp longjmp
 
  divide$13:
 	; post call
 
  divide$14:
-	; call header integral zero 0 stack zero 0
-
- divide$15:
-	; parameter buffer, offset 72
-	mov qword [rbp + 72], buffer
-
- divide$16:
-	; £temporary3166 = int_to_int p (Pointer -> Signed_Int)
-	mov rax, [rbp + 40]
-
- divide$17:
-	; parameter £temporary3166, offset 80
-	mov [rbp + 80], eax
-
- divide$18:
-	; call function noellipse-noellipse longjmp
-	mov qword [rbp + 48], divide$19
-	mov [rbp + 56], rbp
-	add rbp, 48
-	jmp longjmp
-
- divide$19:
-	; post call
-
- divide$20:
 	; push float float8$0#
 	fldz
 
- divide$21:
+ divide$15:
 	; return float8$0#
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- divide$22:
+ divide$16:
 	; function end divide
 
  invers:
@@ -144,10 +116,10 @@ section .text
 	; post call
 
  invers$7:
-	; £temporary3168 = return_value
+	; £temporary3186 = return_value
 
  invers$8:
-	; return £temporary3168
+	; return £temporary3186
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -177,15 +149,15 @@ section .text
 	; post call
 
  setjmp_test$5:
-	; £temporary3171 = return_value
+	; £temporary3189 = return_value
 
  setjmp_test$6:
-	; £temporary3172 = int_to_int £temporary3171 (Signed_Int -> Pointer)
+	; £temporary3190 = int_to_int £temporary3189 (Signed_Int -> Pointer)
 	mov rax, 4294967295
 	and rbx, rax
 
  setjmp_test$7:
-	; p = £temporary3172
+	; p = £temporary3190
 	mov [rbp + 32], rbx
 
  setjmp_test$8:
@@ -230,10 +202,10 @@ section .text
 	; post call
 
  setjmp_test$18:
-	; £temporary3174 = return_value
+	; £temporary3192 = return_value
 
  setjmp_test$19:
-	; parameter £temporary3174, offset 80
+	; parameter £temporary3192, offset 80
 	fstp qword [rbp + 80]
 
  setjmp_test$20:
@@ -293,16 +265,12 @@ section .text
 section .data
 
 buffer:
-	; initializer zero 12
-	times 12 db 0
+	; initializer zero 24
+	times 24 db 0
 
 string_Division20by20Zero2E#:
 	; initializer String
 	db "Division by Zero.", 0
-
-string_longjmp203C25s3E203C25u3E0A#:
-	; initializer String
-	db "longjmp <%s> <%u>", 10, 0
 
 string_12E0202F2025f203D2025f0A#:
 	; initializer String

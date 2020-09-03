@@ -5,6 +5,7 @@
 	extern fileexists
 	extern strcpy
 	extern fopen
+	extern $StackTop
 section .text
 
  @2996$existsTempName:
@@ -29,26 +30,26 @@ section .text
 	mov [rbp + 60], rax
 
  @2996$existsTempName$5:
-	; £temporary986 = int_to_int index (Signed_Int -> Array)
+	; £temporary1005 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
  @2996$existsTempName$6:
-	; £temporary987 = £temporary986 * Array_4#
+	; £temporary1006 = £temporary1005 * Array_4#
 	xor rdx, rdx
 	mul qword [Array_4#]
 
  @2996$existsTempName$7:
-	; £temporary988 = g_tempArray + £temporary987
+	; £temporary1007 = g_tempArray + £temporary1006
 	mov rsi, @2993$g_tempArray
 	add rsi, rax
 
  @2996$existsTempName$8:
-	; £field985 -> £temporary988 = *£temporary988
+	; £field1004 -> £temporary1007 = *£temporary1007
 
  @2996$existsTempName$9:
-	; parameter £field985 -> £temporary988, offset 68
+	; parameter £field1004 -> £temporary1007, offset 68
 	mov [rbp + 68], rsi
 
  @2996$existsTempName$10:
@@ -62,10 +63,10 @@ section .text
 	; post call
 
  @2996$existsTempName$12:
-	; £temporary989 = return_value
+	; £temporary1008 = return_value
 
  @2996$existsTempName$13:
-	; if £temporary989 != int4$0# goto 15
+	; if £temporary1008 != int4$0# goto 15
 	cmp ebx, 0
 	jne @2996$existsTempName$15
 
@@ -111,44 +112,44 @@ section .text
 	jg @3003$generateTempName$58
 
  @3003$generateTempName$3:
-	; £temporary995 = int_to_int size (Signed_Int -> Pointer)
+	; £temporary1014 = int_to_int size (Signed_Int -> Pointer)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
  @3003$generateTempName$4:
-	; £temporary997 = name + £temporary995
+	; £temporary1016 = name + £temporary1014
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  @3003$generateTempName$5:
-	; £field994 -> £temporary997 = *£temporary997
+	; £field1013 -> £temporary1016 = *£temporary1016
 
  @3003$generateTempName$6:
-	; £field994 -> £temporary997 = c
+	; £field1013 -> £temporary1016 = c
 	mov al, [rbp + 40]
 	mov [rsi], al
 
  @3003$generateTempName$7:
-	; £temporary998 = size + int4$1#
+	; £temporary1017 = size + int4$1#
 	mov eax, [rbp + 32]
 	inc eax
 
  @3003$generateTempName$8:
-	; £temporary1000 = int_to_int £temporary998 (Signed_Int -> Pointer)
+	; £temporary1019 = int_to_int £temporary1017 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
  @3003$generateTempName$9:
-	; £temporary1002 = name + £temporary1000
+	; £temporary1021 = name + £temporary1019
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  @3003$generateTempName$10:
-	; £field999 -> £temporary1002 = *£temporary1002
+	; £field1018 -> £temporary1021 = *£temporary1021
 
  @3003$generateTempName$11:
-	; £field999 -> £temporary1002 = int1$0#
+	; £field1018 -> £temporary1021 = int1$0#
 	mov byte [rsi], 0
 
  @3003$generateTempName$12:
@@ -170,10 +171,10 @@ section .text
 	; post call
 
  @3003$generateTempName$16:
-	; £temporary1003 = return_value
+	; £temporary1022 = return_value
 
  @3003$generateTempName$17:
-	; if £temporary1003 != int4$0# goto 45
+	; if £temporary1022 != int4$0# goto 45
 	cmp ebx, 0
 	jne @3003$generateTempName$45
 
@@ -222,10 +223,10 @@ section .text
 	; post call
 
  @3003$generateTempName$27:
-	; £temporary1006 = return_value
+	; £temporary1025 = return_value
 
  @3003$generateTempName$28:
-	; if £temporary1006 != int4$0# goto 45
+	; if £temporary1025 != int4$0# goto 45
 	cmp ebx, 0
 	jne @3003$generateTempName$45
 
@@ -233,26 +234,26 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  @3003$generateTempName$30:
-	; £temporary1010 = int_to_int g_tempSize (Signed_Int -> Array)
+	; £temporary1029 = int_to_int g_tempSize (Signed_Int -> Array)
 	mov eax, [@2994$g_tempSize]
 	mov rbx, 4294967295
 	and rax, rbx
 
  @3003$generateTempName$31:
-	; £temporary1011 = £temporary1010 * Array_4#
+	; £temporary1030 = £temporary1029 * Array_4#
 	xor rdx, rdx
 	mul qword [Array_4#]
 
  @3003$generateTempName$32:
-	; £temporary1012 = g_tempArray + £temporary1011
+	; £temporary1031 = g_tempArray + £temporary1030
 	mov rsi, @2993$g_tempArray
 	add rsi, rax
 
  @3003$generateTempName$33:
-	; £field1009 -> £temporary1012 = *£temporary1012
+	; £field1028 -> £temporary1031 = *£temporary1031
 
  @3003$generateTempName$34:
-	; parameter £field1009 -> £temporary1012, offset 65
+	; parameter £field1028 -> £temporary1031, offset 65
 	mov [rbp + 65], rsi
 
  @3003$generateTempName$35:
@@ -271,7 +272,7 @@ section .text
 	; post call
 
  @3003$generateTempName$38:
-	; £temporary1014 = g_tempSize
+	; £temporary1033 = g_tempSize
 	mov eax, [@2994$g_tempSize]
 
  @3003$generateTempName$39:
@@ -279,25 +280,25 @@ section .text
 	inc dword [@2994$g_tempSize]
 
  @3003$generateTempName$40:
-	; £temporary1016 = int_to_int £temporary1014 (Signed_Int -> Array)
+	; £temporary1035 = int_to_int £temporary1033 (Signed_Int -> Array)
 	mov rbx, 4294967295
 	and rax, rbx
 
  @3003$generateTempName$41:
-	; £temporary1017 = £temporary1016 * Array_4#
+	; £temporary1036 = £temporary1035 * Array_4#
 	xor rdx, rdx
 	mul qword [Array_4#]
 
  @3003$generateTempName$42:
-	; £temporary1018 = g_tempArray + £temporary1017
+	; £temporary1037 = g_tempArray + £temporary1036
 	mov rsi, @2993$g_tempArray
 	add rsi, rax
 
  @3003$generateTempName$43:
-	; £field1015 -> £temporary1018 = *£temporary1018
+	; £field1034 -> £temporary1037 = *£temporary1037
 
  @3003$generateTempName$44:
-	; return £field1015 -> £temporary1018
+	; return £field1034 -> £temporary1037
 	mov rbx, rsi
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -313,12 +314,12 @@ section .text
 	mov [rbp + 65], rax
 
  @3003$generateTempName$47:
-	; £temporary1019 = size + int4$1#
+	; £temporary1038 = size + int4$1#
 	mov eax, [rbp + 32]
 	inc eax
 
  @3003$generateTempName$48:
-	; parameter £temporary1019, offset 73
+	; parameter £temporary1038, offset 73
 	mov [rbp + 73], eax
 
  @3003$generateTempName$49:
@@ -337,10 +338,10 @@ section .text
 	; post call
 
  @3003$generateTempName$52:
-	; £temporary1020 = return_value
+	; £temporary1039 = return_value
 
  @3003$generateTempName$53:
-	; result = £temporary1020
+	; result = £temporary1039
 	mov [rbp + 41], rbx
 
  @3003$generateTempName$54:
@@ -405,10 +406,10 @@ section .text
 	; post call
 
  tmpfile$7:
-	; £temporary1022 = return_value
+	; £temporary1041 = return_value
 
  tmpfile$8:
-	; if £temporary1022 == int4$0# goto 20
+	; if £temporary1041 == int4$0# goto 20
 	cmp rbx, 0
 	je tmpfile$20
 
@@ -435,10 +436,10 @@ section .text
 	; post call
 
  tmpfile$14:
-	; £temporary1023 = return_value
+	; £temporary1042 = return_value
 
  tmpfile$15:
-	; stream = £temporary1023
+	; stream = £temporary1042
 	mov [rbp + 24], rbx
 
  tmpfile$16:
@@ -447,11 +448,11 @@ section .text
 	je tmpfile$20
 
  tmpfile$17:
-	; £field1027 -> stream = *stream
+	; £field1046 -> stream = *stream
 	mov rsi, [rbp + 24]
 
  tmpfile$18:
-	; £field1027 -> stream = int4$1#
+	; £field1046 -> stream = int4$1#
 	mov dword [rsi + 37], 1
 
  tmpfile$19:
@@ -505,10 +506,10 @@ section .text
 	; post call
 
  tmpnam$7:
-	; £temporary1029 = return_value
+	; £temporary1048 = return_value
 
  tmpnam$8:
-	; return £temporary1029
+	; return £temporary1048
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]

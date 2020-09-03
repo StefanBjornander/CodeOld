@@ -18,17 +18,14 @@
 section .text
 
  clock:
-	; return_value = int8$minus1#
+	; return int8$minus1#
 	mov rbx, -1
-
- clock$1:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- clock$2:
+ clock$1:
 	; function end clock
 
  time:
@@ -68,23 +65,20 @@ section .text
 	mov [rsi], rax
 
  time$9:
-	; return_value = time
+	; return time
 	mov rbx, [rbp + 32]
-
- time$10:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- time$11:
+ time$10:
 	; function end time
 
  mktime:
-	; if tp == int8$0# goto 28
+	; if tp == int8$0# goto 27
 	cmp qword [rbp + 24], 0
-	je mktime$28
+	je mktime$27
 
  mktime$1:
 	; £field2226 -> tp = *tp
@@ -231,27 +225,21 @@ section .text
 	add rbx, rax
 
  mktime$26:
-	; return_value = £temporary2249
+	; return £temporary2249
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
 
  mktime$27:
-	; return
+	; return int8$0#
+	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  mktime$28:
-	; return_value = int8$0#
-	mov rbx, 0
-
- mktime$29:
-	; return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- mktime$30:
 	; function end mktime
 
  gmtime:
@@ -259,9 +247,9 @@ section .text
 	mov dword [rbp + 32], 1970
 
  gmtime$1:
-	; if timePtr == int8$0# goto 88
+	; if timePtr == int8$0# goto 87
 	cmp qword [rbp + 24], 0
-	je gmtime$88
+	je gmtime$87
 
  gmtime$2:
 	; £field2251 -> timePtr = *timePtr
@@ -476,9 +464,9 @@ section .text
 	neg rax
 
  gmtime$42:
-	; if totalDays >= £temporary2284 goto 84
+	; if totalDays >= £temporary2284 goto 83
 	cmp [rbp + 52], rax
-	jge gmtime$84
+	jge gmtime$83
 
  gmtime$43:
 	; g_timeStruct$tm_year = year - int4$1900#
@@ -670,50 +658,44 @@ section .text
 	mov dword [@4747$g_timeStruct + 32], -1
 
  gmtime$82:
-	; return_value = staticaddress$@4747$g_timeStruct$0#
+	; return staticaddress$@4747$g_timeStruct$0#
 	mov rbx, @4747$g_timeStruct
-
- gmtime$83:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- gmtime$84:
+ gmtime$83:
 	; year = year + int4$1#
 	inc dword [rbp + 32]
 
- gmtime$85:
+ gmtime$84:
 	; £temporary2323 = int_to_int daysOfYear (Signed_Int -> Signed_Long_Int)
 	mov eax, [rbp + 64]
 	mov rbx, 4294967295
 	and rax, rbx
 	cmp eax, 0
-	jge gmtime$86
+	jge gmtime$85
 	neg eax
 	neg rax
 
- gmtime$86:
+ gmtime$85:
 	; totalDays = totalDays - £temporary2323
 	sub [rbp + 52], rax
 
- gmtime$87:
+ gmtime$86:
 	; goto 26
 	jmp gmtime$26
 
- gmtime$88:
-	; return_value = int8$0#
+ gmtime$87:
+	; return int8$0#
 	mov rbx, 0
-
- gmtime$89:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- gmtime$90:
+ gmtime$88:
 	; function end gmtime
 
  difftime:
@@ -727,16 +709,13 @@ section .text
 	fild dword [container8bytes#]
 
  difftime$2:
-	; return_value = £temporary2327
-
- difftime$3:
-	; return
+	; return £temporary2327
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- difftime$4:
+ difftime$3:
 	; function end difftime
 
  default_test:
@@ -977,17 +956,14 @@ section .text
 	; post call
 
  asctime$51:
-	; return_value = g_timeString
+	; return g_timeString
 	mov rbx, @4759$g_timeString
-
- asctime$52:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- asctime$53:
+ asctime$52:
 	; function end asctime
 
  ctime:
@@ -1032,16 +1008,13 @@ section .text
 	; £temporary2356 = return_value
 
  ctime$10:
-	; return_value = £temporary2356
-
- ctime$11:
-	; return
+	; return £temporary2356
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- ctime$12:
+ ctime$11:
 	; function end ctime
 
  localtime:
@@ -1178,16 +1151,13 @@ section .text
 	; £temporary2370 = return_value
 
  localtime$31:
-	; return_value = £temporary2370
-
- localtime$32:
-	; return
+	; return £temporary2370
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- localtime$33:
+ localtime$32:
 	; function end localtime
 
  strftime:
@@ -2924,16 +2894,13 @@ section .text
 	; £temporary2521 = return_value
 
  strftime$379:
-	; return_value = £temporary2521
-
- strftime$380:
-	; return
+	; return £temporary2521
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strftime$381:
+ strftime$380:
 	; function end strftime
 section .data
 

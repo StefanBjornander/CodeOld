@@ -642,7 +642,18 @@ return ( ( void * ) 0 ) ;
 }
 
 UINT newBlockSize = ( ( UINT ) ( sizeof ( BLOCK_HEADER ) ) ) + ( ( UINT ) memorySize ) ,
-minGap = 0 , lastAddress = 65528u ;
+minGap = 0 ;
+
+   
+     
+  
+
+   
+
+UINT lastAddress = ( UINT ) ( stack_top + 1048572u ) ;
+
+  
+
 BLOCK_HEADER * minBlockPtr = ( ( void * ) 0 ) , * minPrevBlockPtr = ( ( void * ) 0 ) , * prevBlockPtr = ( ( void * ) 0 ) ,
 * currBlockPtr = g_firstBlockPtr ;
 
@@ -680,7 +691,16 @@ g_firstBlockPtr = newBlockPtr ;
 return ( void * ) ( newAddress + ( ( UINT ) ( sizeof ( BLOCK_HEADER ) ) ) ) ;
 }
 else {
-UINT newAddress = lastAddress - newBlockSize , stackTop = register_bp ;
+UINT newAddress = lastAddress - newBlockSize ;
+
+   
+     
+  
+
+   
+ UINT stackTop = register_rbp ;
+  
+
 
 
 if ( stackTop <= newAddress ) {
@@ -849,8 +869,8 @@ currBlockPtr = currBlockPtr -> next ;
 
 
 void * realloc ( void * oldMemoryPtr , int newMemorySize ) {
-if ( ! ( newMemorySize >= 0 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "newMemorySize >= 0" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Malloc.c" , 239 ) ; abort ( ) ; } ;
-if ( ! ( ( oldMemoryPtr != ( ( void * ) 0 ) ) || ( newMemorySize > 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Malloc.c" , 240 ) ; abort ( ) ; } ;
+if ( ! ( newMemorySize >= 0 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "newMemorySize >= 0" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Malloc.c" , 259 ) ; abort ( ) ; } ;
+if ( ! ( ( oldMemoryPtr != ( ( void * ) 0 ) ) || ( newMemorySize > 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Malloc.c" , 260 ) ; abort ( ) ; } ;
 
 if ( oldMemoryPtr == ( ( void * ) 0 ) ) {
 return malloc ( newMemorySize ) ;
@@ -869,7 +889,16 @@ oldBlockPtr -> size = newBlockSize ;
 return oldMemoryPtr ;
 }
 
-UINT lastAddress = 65528u ;
+   
+     
+  
+
+   
+
+UINT lastAddress = ( UINT ) ( stack_top + 1048572u ) ;
+
+  
+
 BLOCK_HEADER * currBlockPtr = g_firstBlockPtr ;
 
 while ( currBlockPtr != ( ( void * ) 0 ) ) {

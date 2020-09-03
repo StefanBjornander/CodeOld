@@ -60,31 +60,25 @@ section .text
 	syscall
 
  @2605$filecreate$5:
-	; return_value = int4$0#
+	; return int4$0#
 	mov ebx, 0
-
- @2605$filecreate$6:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2605$filecreate$7:
+ @2605$filecreate$6:
 	; function end filecreate
 
  fileexists:
-	; return_value = int4$1#
+	; return int4$1#
 	mov ebx, 1
-
- fileexists$1:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fileexists$2:
+ fileexists$1:
 	; function end fileexists
 
  @2609$fileopen:
@@ -118,17 +112,14 @@ section .text
 	; £temporary789 = int_to_int £temporary788 (Unsigned_Long_Int -> Signed_Int)
 
  @2609$fileopen$8:
-	; return_value = £temporary789
+	; return £temporary789
 	mov ebx, eax
-
- @2609$fileopen$9:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2609$fileopen$10:
+ @2609$fileopen$9:
 	; function end fileopen
 
  fopen:
@@ -139,9 +130,9 @@ section .text
 	mov dword [rbp + 40], 0
 
  fopen$2:
-	; if index >= int4$20# goto 24
+	; if index >= int4$20# goto 23
 	cmp dword [rbp + 40], 20
-	jge fopen$24
+	jge fopen$23
 
  fopen$3:
 	; £temporary793 = int_to_int index (Signed_Int -> Array)
@@ -163,9 +154,9 @@ section .text
 	; £field792 -> £temporary795 = *£temporary795
 
  fopen$7:
-	; if £field792.open$0 -> £temporary795 != int4$0# goto 22
+	; if £field792.open$0 -> £temporary795 != int4$0# goto 21
 	cmp dword [rsi], 0
-	jne fopen$22
+	jne fopen$21
 
  fopen$8:
 	; call header integral zero 0 stack zero 0
@@ -220,35 +211,29 @@ section .text
 	; £temporary803 = return_value
 
  fopen$20:
-	; return_value = £temporary803
-
- fopen$21:
-	; return
+	; return £temporary803
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fopen$22:
+ fopen$21:
 	; index = index + int4$1#
 	inc dword [rbp + 40]
 
- fopen$23:
+ fopen$22:
 	; goto 2
 	jmp fopen$2
 
- fopen$24:
-	; return_value = int8$0#
+ fopen$23:
+	; return int8$0#
 	mov rbx, 0
-
- fopen$25:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fopen$26:
+ fopen$24:
 	; function end fopen
 
  freopen:
@@ -801,9 +786,9 @@ section .text
 	mov [rbp + 48], ebx
 
  freopen$130:
-	; if handle == int4$minus1# goto 147
+	; if handle == int4$minus1# goto 146
 	cmp dword [rbp + 48], -1
-	je freopen$147
+	je freopen$146
 
  freopen$131:
 	; £field832 -> stream = *stream
@@ -866,51 +851,45 @@ section .text
 	mov dword [rsi + 37], 0
 
  freopen$145:
-	; return_value = stream
+	; return stream
 	mov rbx, [rbp + 40]
-
- freopen$146:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- freopen$147:
+ freopen$146:
 	; £field838 -> stream = *stream
 	mov rsi, [rbp + 40]
 
- freopen$148:
+ freopen$147:
 	; £field838 -> stream = int4$0#
 	mov dword [rsi], 0
 
- freopen$149:
-	; return_value = int8$0#
+ freopen$148:
+	; return int8$0#
 	mov rbx, 0
-
- freopen$150:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- freopen$151:
+ freopen$149:
 	; function end freopen
 
  fflush:
-	; if stream != int8$0# goto 23
+	; if stream != int8$0# goto 22
 	cmp qword [rbp + 24], 0
-	jne fflush$23
+	jne fflush$22
 
  fflush$1:
 	; index = int4$0#
 	mov dword [rbp + 32], 0
 
  fflush$2:
-	; if index >= int4$20# goto 23
+	; if index >= int4$20# goto 22
 	cmp dword [rbp + 32], 20
-	jge fflush$23
+	jge fflush$22
 
  fflush$3:
 	; £temporary843 = int_to_int index (Signed_Int -> Array)
@@ -932,9 +911,9 @@ section .text
 	; £field842 -> £temporary845 = *£temporary845
 
  fflush$7:
-	; if £field842.open$0 -> £temporary845 == int4$0# goto 21
+	; if £field842.open$0 -> £temporary845 == int4$0# goto 20
 	cmp dword [rsi], 0
-	je fflush$21
+	je fflush$20
 
  fflush$8:
 	; call header integral zero 0 stack zero 0
@@ -979,47 +958,41 @@ section .text
 	; £temporary851 = return_value
 
  fflush$18:
-	; if £temporary851 != int4$minus1# goto 21
+	; if £temporary851 != int4$minus1# goto 20
 	cmp ebx, -1
-	jne fflush$21
+	jne fflush$20
 
  fflush$19:
-	; return_value = int4$minus1#
+	; return int4$minus1#
 	mov ebx, -1
-
- fflush$20:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fflush$21:
+ fflush$20:
 	; index = index + int4$1#
 	inc dword [rbp + 32]
 
- fflush$22:
+ fflush$21:
 	; goto 2
 	jmp fflush$2
 
- fflush$23:
-	; return_value = int4$0#
+ fflush$22:
+	; return int4$0#
 	mov ebx, 0
-
- fflush$24:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fflush$25:
+ fflush$23:
 	; function end fflush
 
  fclose:
-	; if stream == int8$0# goto 8
+	; if stream == int8$0# goto 7
 	cmp qword [rbp + 24], 0
-	je fclose$8
+	je fclose$7
 
  fclose$1:
 	; rax = int8$3#
@@ -1043,127 +1016,118 @@ section .text
 	syscall
 
  fclose$6:
-	; return_value = int4$0#
+	; return int4$0#
 	mov ebx, 0
-
- fclose$7:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fclose$8:
+ fclose$7:
 	; index = int4$0#
 	mov dword [rbp + 32], 0
 
- fclose$9:
-	; if index >= int4$20# goto 30
+ fclose$8:
+	; if index >= int4$20# goto 28
 	cmp dword [rbp + 32], 20
-	jge fclose$30
+	jge fclose$28
 
- fclose$10:
+ fclose$9:
 	; £temporary862 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
- fclose$11:
+ fclose$10:
 	; £temporary863 = £temporary862 * Array_41#
 	xor rdx, rdx
 	mul qword [Array_41#]
 
- fclose$12:
+ fclose$11:
 	; £temporary864 = g_fileArray + £temporary863
 	mov rsi, g_fileArray
 	add rsi, rax
 
- fclose$13:
+ fclose$12:
 	; £field861 -> £temporary864 = *£temporary864
 
- fclose$14:
-	; if £field861.open$0 -> £temporary864 == int4$0# goto 28
+ fclose$13:
+	; if £field861.open$0 -> £temporary864 == int4$0# goto 26
 	cmp dword [rsi], 0
-	je fclose$28
+	je fclose$26
 
- fclose$15:
+ fclose$14:
 	; call header integral zero 0 stack zero 0
 
- fclose$16:
+ fclose$15:
 	; £temporary866 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
- fclose$17:
+ fclose$16:
 	; £temporary867 = £temporary866 * Array_41#
 	xor rdx, rdx
 	mul qword [Array_41#]
 
- fclose$18:
+ fclose$17:
 	; £temporary868 = g_fileArray + £temporary867
 	mov rsi, g_fileArray
 	add rsi, rax
 
- fclose$19:
+ fclose$18:
 	; £field865 -> £temporary868 = *£temporary868
 
- fclose$20:
+ fclose$19:
 	; £temporary869 = &£field865 -> £temporary868
 
- fclose$21:
+ fclose$20:
 	; parameter £temporary869, offset 60
 	mov [rbp + 60], rsi
 
- fclose$22:
+ fclose$21:
 	; call function noellipse-noellipse fclose
-	mov qword [rbp + 36], fclose$23
+	mov qword [rbp + 36], fclose$22
 	mov [rbp + 44], rbp
 	add rbp, 36
 	jmp fclose
 
- fclose$23:
+ fclose$22:
 	; post call
 
- fclose$24:
+ fclose$23:
 	; £temporary870 = return_value
 
- fclose$25:
-	; if £temporary870 != int4$minus1# goto 28
+ fclose$24:
+	; if £temporary870 != int4$minus1# goto 26
 	cmp ebx, -1
-	jne fclose$28
+	jne fclose$26
 
- fclose$26:
-	; return_value = int4$minus1#
+ fclose$25:
+	; return int4$minus1#
 	mov ebx, -1
-
- fclose$27:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fclose$28:
+ fclose$26:
 	; index = index + int4$1#
 	inc dword [rbp + 32]
 
- fclose$29:
-	; goto 9
-	jmp fclose$9
+ fclose$27:
+	; goto 8
+	jmp fclose$8
 
- fclose$30:
-	; return_value = int4$0#
+ fclose$28:
+	; return int4$0#
 	mov ebx, 0
-
- fclose$31:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fclose$32:
+ fclose$29:
 	; function end fclose
 
  remove:
@@ -1182,17 +1146,14 @@ section .text
 	syscall
 
  remove$4:
-	; return_value = int4$0#
+	; return int4$0#
 	mov ebx, 0
-
- remove$5:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- remove$6:
+ remove$5:
 	; function end remove
 
  rename:
@@ -1218,31 +1179,25 @@ section .text
 	syscall
 
  rename$6:
-	; return_value = int4$0#
+	; return int4$0#
 	mov ebx, 0
-
- rename$7:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- rename$8:
+ rename$7:
 	; function end rename
 
  setvbuf:
-	; return_value = int4$0#
+	; return int4$0#
 	mov ebx, 0
-
- setvbuf$1:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- setvbuf$2:
+ setvbuf$1:
 	; function end setvbuf
 
  setbuf:
@@ -1301,9 +1256,9 @@ section .text
 	; £temporary882 = return_value
 
  fgetc$10:
-	; if £temporary882 <= int4$0# goto 14
+	; if £temporary882 <= int4$0# goto 13
 	cmp ebx, 0
-	jle fgetc$14
+	jle fgetc$13
 
  fgetc$11:
 	; £temporary884 = int_to_int c (Signed_Char -> Signed_Int)
@@ -1315,27 +1270,21 @@ section .text
 	neg ebx
 
  fgetc$12:
-	; return_value = £temporary884
+	; return £temporary884
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
 
  fgetc$13:
-	; return
+	; return int4$minus1#
+	mov ebx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  fgetc$14:
-	; return_value = int4$minus1#
-	mov ebx, -1
-
- fgetc$15:
-	; return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- fgetc$16:
 	; function end fgetc
 
  fgets:
@@ -1507,17 +1456,14 @@ section .text
 	jmp fgets$2
 
  fgets$36:
-	; return_value = text
+	; return text
 	mov rbx, [rbp + 24]
-
- fgets$37:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fgets$38:
+ fgets$37:
 	; function end fgets
 
  fputs:
@@ -1599,16 +1545,13 @@ section .text
 	mov ebx, -1
 
  fputs$18:
-	; return_value = £temporary917
-
- fputs$19:
-	; return
+	; return £temporary917
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fputs$20:
+ fputs$19:
 	; function end fputs
 
  getchar:
@@ -1633,16 +1576,13 @@ section .text
 	; £temporary918 = return_value
 
  getchar$5:
-	; return_value = £temporary918
-
- getchar$6:
-	; return
+	; return £temporary918
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- getchar$7:
+ getchar$6:
 	; function end getchar
 
  gets:
@@ -1676,9 +1616,9 @@ section .text
 	; £temporary919 = return_value
 
  gets$7:
-	; if £temporary919 == int8$0# goto 22
+	; if £temporary919 == int8$0# goto 21
 	cmp rbx, 0
-	je gets$22
+	je gets$21
 
  gets$8:
 	; call header integral zero 0 stack zero 0
@@ -1733,28 +1673,22 @@ section .text
 	mov byte [rsi], 0
 
  gets$20:
-	; return_value = s
+	; return s
 	mov rbx, [rbp + 24]
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
 
  gets$21:
-	; return
+	; return int8$0#
+	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  gets$22:
-	; return_value = int8$0#
-	mov rbx, 0
-
- gets$23:
-	; return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- gets$24:
 	; function end gets
 
  puts:
@@ -1784,9 +1718,9 @@ section .text
 	; £temporary928 = return_value
 
  puts$6:
-	; if £temporary928 == int4$0# goto 15
+	; if £temporary928 == int4$0# goto 14
 	cmp ebx, 0
-	je puts$15
+	je puts$14
 
  puts$7:
 	; call header integral zero 0 stack zero 0
@@ -1814,27 +1748,21 @@ section .text
 	; £temporary930 = return_value
 
  puts$13:
-	; return_value = £temporary930
+	; return £temporary930
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
 
  puts$14:
-	; return
+	; return int4$minus1#
+	mov ebx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  puts$15:
-	; return_value = int4$minus1#
-	mov ebx, -1
-
- puts$16:
-	; return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- puts$17:
 	; function end puts
 
  ungetc:
@@ -1872,17 +1800,14 @@ section .text
 	mov [rsi + 24], al
 
  ungetc$6:
-	; return_value = c
+	; return c
 	mov ebx, [rbp + 24]
-
- ungetc$7:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- ungetc$8:
+ ungetc$7:
 	; function end ungetc
 
  fread:
@@ -1929,17 +1854,14 @@ section .text
 	syscall
 
  fread$10:
-	; return_value = int4$0#
+	; return int4$0#
 	mov ebx, 0
-
- fread$11:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fread$12:
+ fread$11:
 	; function end fread
 
  fwrite:
@@ -1986,17 +1908,14 @@ section .text
 	syscall
 
  fwrite$10:
-	; return_value = int4$0#
+	; return int4$0#
 	mov ebx, 0
-
- fwrite$11:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fwrite$12:
+ fwrite$11:
 	; function end fwrite
 
  fseek:
@@ -2039,17 +1958,14 @@ section .text
 	syscall
 
  fseek$9:
-	; return_value = int4$0#
+	; return int4$0#
 	mov ebx, 0
-
- fseek$10:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fseek$11:
+ fseek$10:
 	; function end fseek
 
  ftell:
@@ -2082,16 +1998,13 @@ section .text
 	; £temporary962 = return_value
 
  ftell$7:
-	; return_value = £temporary962
-
- ftell$8:
-	; return
+	; return £temporary962
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- ftell$9:
+ ftell$8:
 	; function end ftell
 
  rewind:
@@ -2142,17 +2055,14 @@ section .text
 	mov [rsi], ebx
 
  fgetpos$8:
-	; return_value = int4$0#
+	; return int4$0#
 	mov ebx, 0
-
- fgetpos$9:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fgetpos$10:
+ fgetpos$9:
 	; function end fgetpos
 
  fsetpos:
@@ -2193,16 +2103,13 @@ section .text
 	; £temporary970 = int_to_int £temporary969 (Signed_Int -> Signed_Int)
 
  fsetpos$9:
-	; return_value = £temporary970
-
- fsetpos$10:
-	; return
+	; return £temporary970
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- fsetpos$11:
+ fsetpos$10:
 	; function end fsetpos
 
  clearerr:
@@ -2357,17 +2264,14 @@ section .text
 	mov [rbp + 48], eax
 
  feof$30:
-	; return_value = endOfFile
+	; return endOfFile
 	mov ebx, [rbp + 48]
-
- feof$31:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- feof$32:
+ feof$31:
 	; function end feof
 
  ferror:
@@ -2375,17 +2279,14 @@ section .text
 	mov rsi, [rbp + 24]
 
  ferror$1:
-	; return_value = £field980 -> stream
+	; return £field980 -> stream
 	mov ebx, [rsi + 25]
-
- ferror$2:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- ferror$3:
+ ferror$2:
 	; function end ferror
 
  perror:

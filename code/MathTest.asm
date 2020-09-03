@@ -31,6 +31,7 @@
 	extern atan2
 	extern pow
 	extern ldexp
+	extern $StackTop
 section .text
 
  math_test_1x:
@@ -269,10 +270,10 @@ section .text
 	; post call
 
  acos_test$9:
-	; £temporary3198 = return_value
+	; £temporary3216 = return_value
 
  acos_test$10:
-	; parameter £temporary3198, offset 72
+	; parameter £temporary3216, offset 72
 	fstp qword [rbp + 72]
 
  acos_test$11:
@@ -299,10 +300,10 @@ section .text
 	; post call
 
  acos_test$16:
-	; £temporary3199 = return_value
+	; £temporary3217 = return_value
 
  acos_test$17:
-	; parameter £temporary3199, offset 84
+	; parameter £temporary3217, offset 84
 	mov [rbp + 84], rbx
 
  acos_test$18:
@@ -385,10 +386,10 @@ section .text
 	; post call
 
  atan_test$9:
-	; £temporary3205 = return_value
+	; £temporary3223 = return_value
 
  atan_test$10:
-	; parameter £temporary3205, offset 72
+	; parameter £temporary3223, offset 72
 	fstp qword [rbp + 72]
 
  atan_test$11:
@@ -415,10 +416,10 @@ section .text
 	; post call
 
  atan_test$16:
-	; £temporary3206 = return_value
+	; £temporary3224 = return_value
 
  atan_test$17:
-	; parameter £temporary3206, offset 84
+	; parameter £temporary3224, offset 84
 	mov [rbp + 84], rbx
 
  atan_test$18:
@@ -1172,10 +1173,10 @@ section .text
 	; post call
 
  math_test_1$15:
-	; £temporary3276 = return_value
+	; £temporary3294 = return_value
 
  math_test_1$16:
-	; parameter £temporary3276, offset 72
+	; parameter £temporary3294, offset 72
 	fstp qword [rbp + 72]
 
  math_test_1$17:
@@ -1202,10 +1203,10 @@ section .text
 	; post call
 
  math_test_1$22:
-	; £temporary3277 = return_value
+	; £temporary3295 = return_value
 
  math_test_1$23:
-	; parameter £temporary3277, offset 84
+	; parameter £temporary3295, offset 84
 	mov [rbp + 84], rbx
 
  math_test_1$24:
@@ -1278,10 +1279,10 @@ section .text
 	; post call
 
  math_test_1$40:
-	; £temporary3280 = return_value
+	; £temporary3298 = return_value
 
  math_test_1$41:
-	; parameter £temporary3280, offset 72
+	; parameter £temporary3298, offset 72
 	fstp qword [rbp + 72]
 
  math_test_1$42:
@@ -1308,10 +1309,10 @@ section .text
 	; post call
 
  math_test_1$47:
-	; £temporary3281 = return_value
+	; £temporary3299 = return_value
 
  math_test_1$48:
-	; parameter £temporary3281, offset 84
+	; parameter £temporary3299, offset 84
 	mov [rbp + 84], rbx
 
  math_test_1$49:
@@ -1384,10 +1385,10 @@ section .text
 	; post call
 
  math_test_1$65:
-	; £temporary3284 = return_value
+	; £temporary3302 = return_value
 
  math_test_1$66:
-	; parameter £temporary3284, offset 72
+	; parameter £temporary3302, offset 72
 	fstp qword [rbp + 72]
 
  math_test_1$67:
@@ -1414,10 +1415,10 @@ section .text
 	; post call
 
  math_test_1$72:
-	; £temporary3285 = return_value
+	; £temporary3303 = return_value
 
  math_test_1$73:
-	; parameter £temporary3285, offset 84
+	; parameter £temporary3303, offset 84
 	mov [rbp + 84], rbx
 
  math_test_1$74:
@@ -1490,10 +1491,10 @@ section .text
 	; post call
 
  math_test_1$90:
-	; £temporary3288 = return_value
+	; £temporary3306 = return_value
 
  math_test_1$91:
-	; parameter £temporary3288, offset 72
+	; parameter £temporary3306, offset 72
 	fstp qword [rbp + 72]
 
  math_test_1$92:
@@ -1520,10 +1521,10 @@ section .text
 	; post call
 
  math_test_1$97:
-	; £temporary3289 = return_value
+	; £temporary3307 = return_value
 
  math_test_1$98:
-	; parameter £temporary3289, offset 84
+	; parameter £temporary3307, offset 84
 	mov [rbp + 84], rbx
 
  math_test_1$99:
@@ -1596,10 +1597,10 @@ section .text
 	; post call
 
  math_test_1$115:
-	; £temporary3292 = return_value
+	; £temporary3310 = return_value
 
  math_test_1$116:
-	; parameter £temporary3292, offset 72
+	; parameter £temporary3310, offset 72
 	fstp qword [rbp + 72]
 
  math_test_1$117:
@@ -1626,10 +1627,10 @@ section .text
 	; post call
 
  math_test_1$122:
-	; £temporary3293 = return_value
+	; £temporary3311 = return_value
 
  math_test_1$123:
-	; parameter £temporary3293, offset 84
+	; parameter £temporary3311, offset 84
 	mov [rbp + 84], rbx
 
  math_test_1$124:
@@ -1702,10 +1703,10 @@ section .text
 	; post call
 
  math_test_1$140:
-	; £temporary3296 = return_value
+	; £temporary3314 = return_value
 
  math_test_1$141:
-	; parameter £temporary3296, offset 72
+	; parameter £temporary3314, offset 72
 	fstp qword [rbp + 72]
 
  math_test_1$142:
@@ -1732,10 +1733,10 @@ section .text
 	; post call
 
  math_test_1$147:
-	; £temporary3297 = return_value
+	; £temporary3315 = return_value
 
  math_test_1$148:
-	; parameter £temporary3297, offset 84
+	; parameter £temporary3315, offset 84
 	mov [rbp + 84], rbx
 
  math_test_1$149:
@@ -1808,10 +1809,10 @@ section .text
 	; post call
 
  math_test_1$165:
-	; £temporary3300 = return_value
+	; £temporary3318 = return_value
 
  math_test_1$166:
-	; parameter £temporary3300, offset 72
+	; parameter £temporary3318, offset 72
 	fstp qword [rbp + 72]
 
  math_test_1$167:
@@ -1838,10 +1839,10 @@ section .text
 	; post call
 
  math_test_1$172:
-	; £temporary3301 = return_value
+	; £temporary3319 = return_value
 
  math_test_1$173:
-	; parameter £temporary3301, offset 84
+	; parameter £temporary3319, offset 84
 	mov [rbp + 84], rbx
 
  math_test_1$174:
@@ -1914,10 +1915,10 @@ section .text
 	; post call
 
  math_test_1$190:
-	; £temporary3304 = return_value
+	; £temporary3322 = return_value
 
  math_test_1$191:
-	; parameter £temporary3304, offset 72
+	; parameter £temporary3322, offset 72
 	fstp qword [rbp + 72]
 
  math_test_1$192:
@@ -1944,10 +1945,10 @@ section .text
 	; post call
 
  math_test_1$197:
-	; £temporary3305 = return_value
+	; £temporary3323 = return_value
 
  math_test_1$198:
-	; parameter £temporary3305, offset 84
+	; parameter £temporary3323, offset 84
 	mov [rbp + 84], rbx
 
  math_test_1$199:
@@ -2020,10 +2021,10 @@ section .text
 	; post call
 
  math_test_1$215:
-	; £temporary3308 = return_value
+	; £temporary3326 = return_value
 
  math_test_1$216:
-	; parameter £temporary3308, offset 72
+	; parameter £temporary3326, offset 72
 	fstp qword [rbp + 72]
 
  math_test_1$217:
@@ -2050,10 +2051,10 @@ section .text
 	; post call
 
  math_test_1$222:
-	; £temporary3309 = return_value
+	; £temporary3327 = return_value
 
  math_test_1$223:
-	; parameter £temporary3309, offset 84
+	; parameter £temporary3327, offset 84
 	mov [rbp + 84], rbx
 
  math_test_1$224:
@@ -2126,10 +2127,10 @@ section .text
 	; post call
 
  math_test_1$240:
-	; £temporary3312 = return_value
+	; £temporary3330 = return_value
 
  math_test_1$241:
-	; parameter £temporary3312, offset 72
+	; parameter £temporary3330, offset 72
 	fstp qword [rbp + 72]
 
  math_test_1$242:
@@ -2156,10 +2157,10 @@ section .text
 	; post call
 
  math_test_1$247:
-	; £temporary3313 = return_value
+	; £temporary3331 = return_value
 
  math_test_1$248:
-	; parameter £temporary3313, offset 84
+	; parameter £temporary3331, offset 84
 	mov [rbp + 84], rbx
 
  math_test_1$249:
@@ -2232,10 +2233,10 @@ section .text
 	; post call
 
  math_test_1$265:
-	; £temporary3316 = return_value
+	; £temporary3334 = return_value
 
  math_test_1$266:
-	; parameter £temporary3316, offset 72
+	; parameter £temporary3334, offset 72
 	fstp qword [rbp + 72]
 
  math_test_1$267:
@@ -2262,10 +2263,10 @@ section .text
 	; post call
 
  math_test_1$272:
-	; £temporary3317 = return_value
+	; £temporary3335 = return_value
 
  math_test_1$273:
-	; parameter £temporary3317, offset 84
+	; parameter £temporary3335, offset 84
 	mov [rbp + 84], rbx
 
  math_test_1$274:
@@ -2338,10 +2339,10 @@ section .text
 	; post call
 
  math_test_1$290:
-	; £temporary3320 = return_value
+	; £temporary3338 = return_value
 
  math_test_1$291:
-	; parameter £temporary3320, offset 72
+	; parameter £temporary3338, offset 72
 	fstp qword [rbp + 72]
 
  math_test_1$292:
@@ -2368,10 +2369,10 @@ section .text
 	; post call
 
  math_test_1$297:
-	; £temporary3321 = return_value
+	; £temporary3339 = return_value
 
  math_test_1$298:
-	; parameter £temporary3321, offset 84
+	; parameter £temporary3339, offset 84
 	mov [rbp + 84], rbx
 
  math_test_1$299:
@@ -2444,10 +2445,10 @@ section .text
 	; post call
 
  math_test_1$315:
-	; £temporary3324 = return_value
+	; £temporary3342 = return_value
 
  math_test_1$316:
-	; parameter £temporary3324, offset 72
+	; parameter £temporary3342, offset 72
 	fstp qword [rbp + 72]
 
  math_test_1$317:
@@ -2474,10 +2475,10 @@ section .text
 	; post call
 
  math_test_1$322:
-	; £temporary3325 = return_value
+	; £temporary3343 = return_value
 
  math_test_1$323:
-	; parameter £temporary3325, offset 84
+	; parameter £temporary3343, offset 84
 	mov [rbp + 84], rbx
 
  math_test_1$324:
@@ -2550,10 +2551,10 @@ section .text
 	; post call
 
  math_test_1$340:
-	; £temporary3328 = return_value
+	; £temporary3346 = return_value
 
  math_test_1$341:
-	; parameter £temporary3328, offset 72
+	; parameter £temporary3346, offset 72
 	fstp qword [rbp + 72]
 
  math_test_1$342:
@@ -2580,10 +2581,10 @@ section .text
 	; post call
 
  math_test_1$347:
-	; £temporary3329 = return_value
+	; £temporary3347 = return_value
 
  math_test_1$348:
-	; parameter £temporary3329, offset 84
+	; parameter £temporary3347, offset 84
 	mov [rbp + 84], rbx
 
  math_test_1$349:
@@ -2656,10 +2657,10 @@ section .text
 	; post call
 
  math_test_1$365:
-	; £temporary3332 = return_value
+	; £temporary3350 = return_value
 
  math_test_1$366:
-	; parameter £temporary3332, offset 72
+	; parameter £temporary3350, offset 72
 	fstp qword [rbp + 72]
 
  math_test_1$367:
@@ -2686,10 +2687,10 @@ section .text
 	; post call
 
  math_test_1$372:
-	; £temporary3333 = return_value
+	; £temporary3351 = return_value
 
  math_test_1$373:
-	; parameter £temporary3333, offset 84
+	; parameter £temporary3351, offset 84
 	mov [rbp + 84], rbx
 
  math_test_1$374:
@@ -2762,10 +2763,10 @@ section .text
 	; post call
 
  math_test_1$390:
-	; £temporary3336 = return_value
+	; £temporary3354 = return_value
 
  math_test_1$391:
-	; parameter £temporary3336, offset 72
+	; parameter £temporary3354, offset 72
 	fstp qword [rbp + 72]
 
  math_test_1$392:
@@ -2792,10 +2793,10 @@ section .text
 	; post call
 
  math_test_1$397:
-	; £temporary3337 = return_value
+	; £temporary3355 = return_value
 
  math_test_1$398:
-	; parameter £temporary3337, offset 84
+	; parameter £temporary3355, offset 84
 	mov [rbp + 84], rbx
 
  math_test_1$399:
@@ -2847,12 +2848,12 @@ section .text
 	fstp qword [rbp + 60]
 
  math_test_1$410:
-	; £temporary3340 = &j
+	; £temporary3358 = &j
 	mov rsi, rbp
 	add rsi, 32
 
  math_test_1$411:
-	; parameter £temporary3340, offset 68
+	; parameter £temporary3358, offset 68
 	mov [rbp + 68], rsi
 
  math_test_1$412:
@@ -2866,7 +2867,7 @@ section .text
 	; post call
 
  math_test_1$414:
-	; £temporary3341 = return_value
+	; £temporary3359 = return_value
 
  math_test_1$415:
 	; pop float z
@@ -2916,10 +2917,10 @@ section .text
 	; post call
 
  math_test_1$426:
-	; £temporary3342 = return_value
+	; £temporary3360 = return_value
 
  math_test_1$427:
-	; parameter £temporary3342, offset 92
+	; parameter £temporary3360, offset 92
 	mov [rbp + 92], rbx
 
  math_test_1$428:
@@ -2980,12 +2981,12 @@ section .text
 	fstp qword [rbp + 64]
 
  math_test_1$441:
-	; £temporary3346 = &w
+	; £temporary3364 = &w
 	mov rsi, rbp
 	add rsi, 32
 
  math_test_1$442:
-	; parameter £temporary3346, offset 72
+	; parameter £temporary3364, offset 72
 	mov [rbp + 72], rsi
 
  math_test_1$443:
@@ -2999,7 +3000,7 @@ section .text
 	; post call
 
  math_test_1$445:
-	; £temporary3347 = return_value
+	; £temporary3365 = return_value
 
  math_test_1$446:
 	; pop float z
@@ -3052,10 +3053,10 @@ section .text
 	; post call
 
  math_test_1$458:
-	; £temporary3348 = return_value
+	; £temporary3366 = return_value
 
  math_test_1$459:
-	; parameter £temporary3348, offset 100
+	; parameter £temporary3366, offset 100
 	mov [rbp + 100], rbx
 
  math_test_1$460:
@@ -3177,10 +3178,10 @@ section .text
 	; post call
 
  math_test_2$13:
-	; £temporary3409 = return_value
+	; £temporary3427 = return_value
 
  math_test_2$14:
-	; parameter £temporary3409, offset 88
+	; parameter £temporary3427, offset 88
 	fstp qword [rbp + 88]
 
  math_test_2$15:
@@ -3207,10 +3208,10 @@ section .text
 	; post call
 
  math_test_2$20:
-	; £temporary3410 = return_value
+	; £temporary3428 = return_value
 
  math_test_2$21:
-	; parameter £temporary3410, offset 100
+	; parameter £temporary3428, offset 100
 	mov [rbp + 100], rbx
 
  math_test_2$22:
@@ -3299,10 +3300,10 @@ section .text
 	; post call
 
  math_test_2$42:
-	; £temporary3413 = return_value
+	; £temporary3431 = return_value
 
  math_test_2$43:
-	; parameter £temporary3413, offset 88
+	; parameter £temporary3431, offset 88
 	fstp qword [rbp + 88]
 
  math_test_2$44:
@@ -3329,10 +3330,10 @@ section .text
 	; post call
 
  math_test_2$49:
-	; £temporary3414 = return_value
+	; £temporary3432 = return_value
 
  math_test_2$50:
-	; parameter £temporary3414, offset 100
+	; parameter £temporary3432, offset 100
 	mov [rbp + 100], rbx
 
  math_test_2$51:
@@ -3421,10 +3422,10 @@ section .text
 	; post call
 
  math_test_2$71:
-	; £temporary3417 = return_value
+	; £temporary3435 = return_value
 
  math_test_2$72:
-	; parameter £temporary3417, offset 88
+	; parameter £temporary3435, offset 88
 	fstp qword [rbp + 88]
 
  math_test_2$73:
@@ -3451,10 +3452,10 @@ section .text
 	; post call
 
  math_test_2$78:
-	; £temporary3418 = return_value
+	; £temporary3436 = return_value
 
  math_test_2$79:
-	; parameter £temporary3418, offset 100
+	; parameter £temporary3436, offset 100
 	mov [rbp + 100], rbx
 
  math_test_2$80:
@@ -3528,12 +3529,12 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$96:
-	; £temporary3422 = float_to_int y (Double -> Signed_Int)
+	; £temporary3440 = float_to_int y (Double -> Signed_Int)
 	fistp word [container4bytes#]
 	mov eax, [container4bytes#]
 
  math_test_2$97:
-	; parameter £temporary3422, offset 80
+	; parameter £temporary3440, offset 80
 	mov [rbp + 80], eax
 
  math_test_2$98:
@@ -3552,12 +3553,12 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$102:
-	; £temporary3423 = float_to_int y (Double -> Signed_Int)
+	; £temporary3441 = float_to_int y (Double -> Signed_Int)
 	fistp word [container4bytes#]
 	mov eax, [container4bytes#]
 
  math_test_2$103:
-	; parameter £temporary3423, offset 116
+	; parameter £temporary3441, offset 116
 	mov [rbp + 116], eax
 
  math_test_2$104:
@@ -3571,10 +3572,10 @@ section .text
 	; post call
 
  math_test_2$106:
-	; £temporary3424 = return_value
+	; £temporary3442 = return_value
 
  math_test_2$107:
-	; parameter £temporary3424, offset 84
+	; parameter £temporary3442, offset 84
 	fstp qword [rbp + 84]
 
  math_test_2$108:

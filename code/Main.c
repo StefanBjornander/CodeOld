@@ -149,6 +149,12 @@ void maint() {
   time_test();
 }
 
+void mainY() {
+  malloc_test();
+  setjmp_test(10);
+  setjmp_test(0);
+}
+
 /*void main() {
   static count = 1;
 
@@ -159,6 +165,10 @@ void maint() {
 }*/
 
 void main(int argc, char* argv[]) {
+  /*unsigned int *p = stack_top + 1048572;
+  unsigned u = *p;
+  printf("<%p> <%u> <%u>\n", p, (unsigned int) p, u);*/
+
 /*{ char a[] = "abc";
     char b = a[2];
     int e = 3;

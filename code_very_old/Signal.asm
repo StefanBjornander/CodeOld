@@ -22,9 +22,9 @@ section .text
 	mov qword [rbp + 28], 0
 
  raise$1:
-	; if func != int8$0# goto 8
+	; if func != int8$0# goto 7
 	cmp qword [rbp + 28], 0
-	jne raise$8
+	jne raise$7
 
  raise$2:
 	; call header integral zero 0 stack zero 0
@@ -45,110 +45,101 @@ section .text
 	; post call
 
  raise$6:
-	; return_value = int4$1#
+	; return int4$1#
 	mov ebx, 1
-
- raise$7:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- raise$8:
-	; if func != int8$0# goto 15
+ raise$7:
+	; if func != int8$0# goto 13
 	cmp qword [rbp + 28], 0
-	jne raise$15
+	jne raise$13
 
- raise$9:
+ raise$8:
 	; call header integral zero 0 stack zero 0
 
- raise$10:
+ raise$9:
 	; parameter string_Raise20error0A#, offset 60
 	mov qword [rbp + 60], string_Raise20error0A#
 
- raise$11:
+ raise$10:
 	; call function noellipse-ellipse printf, extra 0
-	mov qword [rbp + 36], raise$12
+	mov qword [rbp + 36], raise$11
 	mov [rbp + 44], rbp
 	add rbp, 36
 	mov rdi, rbp
 	jmp printf
 
- raise$12:
+ raise$11:
 	; post call
 
- raise$13:
-	; return_value = int4$0#
+ raise$12:
+	; return int4$0#
 	mov ebx, 0
-
- raise$14:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- raise$15:
+ raise$13:
 	; call header integral zero 0 stack zero 0
 
- raise$16:
+ raise$14:
 	; parameter string_Raise20function2C20calling2025i20with2025i0A#, offset 60
 	mov qword [rbp + 60], string_Raise20function2C20calling2025i20with2025i0A#
 
- raise$17:
+ raise$15:
 	; parameter func, offset 68
 	mov rax, [rbp + 28]
 	mov [rbp + 68], rax
 
- raise$18:
+ raise$16:
 	; parameter sig, offset 76
 	mov eax, [rbp + 24]
 	mov [rbp + 76], eax
 
- raise$19:
+ raise$17:
 	; call function noellipse-ellipse printf, extra 12
-	mov qword [rbp + 36], raise$20
+	mov qword [rbp + 36], raise$18
 	mov [rbp + 44], rbp
 	add rbp, 36
 	mov rdi, rbp
 	add rdi, 12
 	jmp printf
 
- raise$20:
+ raise$18:
 	; post call
 
- raise$21:
+ raise$19:
 	; call header integral zero 0 stack zero 0
 
- raise$22:
+ raise$20:
 	; parameter sig, offset 60
 	mov eax, [rbp + 24]
 	mov [rbp + 60], eax
 
- raise$23:
+ raise$21:
 	; call function noellipse-noellipse func
-	mov qword [rbp + 36], raise$24
+	mov qword [rbp + 36], raise$22
 	mov [rbp + 44], rbp
 	add rbp, 36
 	mov rax, [rbp + 28]
 	jmp rax
 
- raise$24:
+ raise$22:
 	; post call
 
- raise$25:
-	; return_value = int4$1#
+ raise$23:
+	; return int4$1#
 	mov ebx, 1
-
- raise$26:
-	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- raise$27:
+ raise$24:
 	; function end raise
 section .data
 

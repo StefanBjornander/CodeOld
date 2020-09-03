@@ -8,13 +8,13 @@ signal$1:	; parameter string_Signal2025i20function2025p0A#, offset 6
 6:	
 
 signal$2:	; parameter sig, offset 8
-7:		mov a443, [bp + 6]
-8:		mov [bp + 18], a443
+7:		mov a444, [bp + 6]
+8:		mov [bp + 18], a444
 10:	
 
 signal$3:	; parameter func, offset 10
-11:		mov a444, [bp + 8]
-12:		mov [bp + 20], a444
+11:		mov a445, [bp + 8]
+12:		mov [bp + 20], a445
 14:	
 
 signal$4:	; call function noellipse-ellipse printf, extra 0
@@ -29,23 +29,23 @@ signal$4:	; call function noellipse-ellipse printf, extra 0
 signal$5:	; post call
 24:	
 
-signal$6:	; £temporary941 = int_to_int sig (Signed_Int -> Signed_Short_Int)
-25:		mov a445, [bp + 6]
-28:		cmp a445, 0
+signal$6:	; £temporary946 = int_to_int sig (Signed_Int -> Signed_Short_Int)
+25:		mov a446, [bp + 6]
+28:		cmp a446, 0
 29:		jge signal$7
-30:		neg a445
-32:		neg a445
+30:		neg a446
+32:		neg a446
 34:	
 
-signal$7:	; al = £temporary941
+signal$7:	; al = £temporary946
 36:	
 
 signal$8:	; ah = 37
-37:		mov a446, 37
+37:		mov a447, 37
 39:	
 
 signal$9:	; dx = func
-40:		mov a447, [bp + 8]
+40:		mov a448, [bp + 8]
 42:	
 
 signal$10:	; interrupt 33
@@ -71,10 +71,10 @@ signal$14:	; post call
 59:	
 
 signal$15:	; return
-60:		mov t448, [bp]
+60:		mov t449, [bp]
 61:		mov di, [bp + 4]
 62:		mov bp, [bp + 2]
-63:		jmp t448
+63:		jmp t449
 65:	
 
 signal$16:	; function end signal
@@ -88,8 +88,8 @@ raise$1:	; parameter string_0ARaise20signal2025i0A#, offset 6
 6:	
 
 raise$2:	; parameter sig, offset 8
-7:		mov a449, [bp + 6]
-8:		mov [bp + 16], a449
+7:		mov a450, [bp + 6]
+8:		mov [bp + 16], a450
 10:	
 
 raise$3:	; call function noellipse-ellipse printf, extra 0
@@ -104,30 +104,30 @@ raise$3:	; call function noellipse-ellipse printf, extra 0
 raise$4:	; post call
 20:	
 
-raise$5:	; £temporary951 = int_to_int sig (Signed_Int -> Signed_Short_Int)
-21:		mov a450, [bp + 6]
-24:		cmp a450, 0
+raise$5:	; £temporary956 = int_to_int sig (Signed_Int -> Signed_Short_Int)
+21:		mov a451, [bp + 6]
+24:		cmp a451, 0
 25:		jge raise$6
-26:		neg a450
-28:		neg a450
+26:		neg a451
+28:		neg a451
 30:	
 
-raise$6:	; al = £temporary951
+raise$6:	; al = £temporary956
 32:	
 
 raise$7:	; ah = 53
-33:		mov a451, 53
+33:		mov a452, 53
 35:	
 
 raise$8:	; interrupt 33
 36:		int 33
 38:	
 
-raise$9:	; £temporary953 = bx
+raise$9:	; £temporary958 = bx
 40:	
 
-raise$10:	; func = £temporary953
-41:		mov [bp + 8], t452
+raise$10:	; func = £temporary958
+41:		mov [bp + 8], t453
 43:	
 
 raise$11:	; call header integral zero 0 stack zero 0
@@ -138,8 +138,8 @@ raise$12:	; parameter string_Raise20function2025p0A#, offset 6
 48:	
 
 raise$13:	; parameter func, offset 8
-49:		mov a453, [bp + 8]
-50:		mov [bp + 18], a453
+49:		mov a454, [bp + 8]
+50:		mov [bp + 18], a454
 52:	
 
 raise$14:	; call function noellipse-ellipse printf, extra 0
@@ -178,14 +178,14 @@ raise$20:	; post call
 80:	
 
 raise$21:	; return_value = 1
-81:		mov a454, 1
+81:		mov a455, 1
 83:	
 
 raise$22:	; return
-84:		mov t455, [bp]
+84:		mov t456, [bp]
 85:		mov di, [bp + 4]
 86:		mov bp, [bp + 2]
-87:		jmp t455
+87:		jmp t456
 89:	
 
 raise$23:	; if func != 0 goto 30
@@ -212,14 +212,14 @@ raise$27:	; post call
 107:	
 
 raise$28:	; return_value = 0
-108:		mov a456, 0
+108:		mov a457, 0
 110:	
 
 raise$29:	; return
-111:		mov t457, [bp]
+111:		mov t458, [bp]
 112:		mov di, [bp + 4]
 113:		mov bp, [bp + 2]
-114:		jmp t457
+114:		jmp t458
 116:	
 
 raise$30:	; call header integral zero 0 stack zero 0
@@ -230,13 +230,13 @@ raise$31:	; parameter string_Raise20function2C20calling2025i20with2025i0A#, offs
 121:	
 
 raise$32:	; parameter func, offset 8
-122:		mov a458, [bp + 8]
-123:		mov [bp + 18], a458
+122:		mov a459, [bp + 8]
+123:		mov [bp + 18], a459
 125:	
 
 raise$33:	; parameter sig, offset 10
-126:		mov a459, [bp + 6]
-127:		mov [bp + 20], a459
+126:		mov a460, [bp + 6]
+127:		mov [bp + 20], a460
 129:	
 
 raise$34:	; call function noellipse-ellipse printf, extra 0
@@ -255,30 +255,30 @@ raise$36:	; call header integral zero 0 stack zero 0
 141:	
 
 raise$37:	; parameter sig, offset 6
-142:		mov a460, [bp + 6]
-143:		mov [bp + 16], a460
+142:		mov a461, [bp + 6]
+143:		mov [bp + 16], a461
 145:	
 
 raise$38:	; call function noellipse-noellipse func
 146:		mov word [bp + 10], raise$39
 147:		mov [bp + 12], bp
 148:		add bp, 10
-149:		mov a461, [bp + 8]
-150:		jmp a461 a461 func 149 150
+149:		mov a462, [bp + 8]
+150:		jmp a462 a462 func 149 150
 152:	
 
 raise$39:	; post call
 154:	
 
 raise$40:	; return_value = 1
-155:		mov a462, 1
+155:		mov a463, 1
 157:	
 
 raise$41:	; return
-158:		mov t463, [bp]
+158:		mov t464, [bp]
 159:		mov di, [bp + 4]
 160:		mov bp, [bp + 2]
-161:		jmp t463
+161:		jmp t464
 163:	
 
 raise$42:	; function end raise

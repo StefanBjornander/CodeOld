@@ -1,5 +1,6 @@
 	global locale_test
 
+	extern $StackTop
 section .text
 
  locale_test:

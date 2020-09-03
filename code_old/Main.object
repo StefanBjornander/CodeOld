@@ -453,6 +453,71 @@ maint$6:	; return
 27:	
 
 maint$7:	; function end maint
+1:	
+
+mainY:	; call header integral zero 0 stack zero 0
+3:	
+
+mainY$1:	; call function noellipse-noellipse malloc_test
+4:		mov word [bp + 6], mainY$2
+5:		mov [bp + 8], bp
+6:		add bp, 6
+7:		jmp malloc_test
+9:	
+
+mainY$2:	; post call
+11:	
+
+mainY$3:	; call header integral zero 0 stack zero 0
+13:	
+
+mainY$4:	; push float 10
+14:		fld qword [float8$10#]
+16:	
+
+mainY$5:	; parameter 10, offset 6
+17:		fstp qword [bp + 12]
+19:	
+
+mainY$6:	; call function noellipse-noellipse setjmp_test
+20:		mov word [bp + 6], mainY$7
+21:		mov [bp + 8], bp
+22:		add bp, 6
+23:		jmp setjmp_test
+25:	
+
+mainY$7:	; post call
+27:	
+
+mainY$8:	; call header integral zero 0 stack zero 0
+29:	
+
+mainY$9:	; push 0
+30:		fldz
+32:	
+
+mainY$10:	; parameter 0, offset 6
+33:		fstp qword [bp + 12]
+35:	
+
+mainY$11:	; call function noellipse-noellipse setjmp_test
+36:		mov word [bp + 6], mainY$12
+37:		mov [bp + 8], bp
+38:		add bp, 6
+39:		jmp setjmp_test
+41:	
+
+mainY$12:	; post call
+43:	
+
+mainY$13:	; return
+44:		mov ax, [bp]
+45:		mov di, [bp + 4]
+46:		mov bp, [bp + 2]
+47:		jmp ax
+49:	
+
+mainY$14:	; function end mainY
 0:		; Initialize Stack Pointer
 1:		mov bp, $StackTop
 2:		; Initialize Heap Pointer
@@ -552,21 +617,21 @@ main$9:	; parameter index, offset 8
 76:		mov [bp + 20], ax
 78:	
 
-main$10:	; £temporary60 = index * 2
+main$10:	; £temporary65 = index * 2
 79:		mov ax, [bp + 10]
 81:		xor dx, dx
 82:		mul word [int2$2#]
 88:	
 
-main$11:	; £temporary61 = argv + £temporary60
+main$11:	; £temporary66 = argv + £temporary65
 89:		mov si, [bp + 8]
 90:		add si, ax
 92:	
 
-main$12:	; £temporary59 -> £temporary61 = *£temporary61
+main$12:	; £temporary64 -> £temporary66 = *£temporary66
 94:	
 
-main$13:	; parameter £temporary59 -> £temporary61, offset 10
+main$13:	; parameter £temporary64 -> £temporary66, offset 10
 95:		mov ax, [si]
 96:		mov [bp + 22], ax
 98:	
@@ -613,21 +678,21 @@ main$22:	; index = 0
 129:		mov word [bp + 10], 0
 131:	
 
-main$23:	; £temporary65 = index * 2
+main$23:	; £temporary70 = index * 2
 132:		mov ax, [bp + 10]
 134:		xor dx, dx
 135:		mul word [int2$2#]
 141:	
 
-main$24:	; £temporary66 = argv + £temporary65
+main$24:	; £temporary71 = argv + £temporary70
 142:		mov si, [bp + 8]
 143:		add si, ax
 145:	
 
-main$25:	; £temporary64 -> £temporary66 = *£temporary66
+main$25:	; £temporary69 -> £temporary71 = *£temporary71
 147:	
 
-main$26:	; if £temporary64 -> £temporary66 == 0 goto 38
+main$26:	; if £temporary69 -> £temporary71 == 0 goto 38
 148:		cmp word [si], 0
 149:		je main$38
 151:	
@@ -644,21 +709,21 @@ main$29:	; parameter index, offset 8
 158:		mov [bp + 20], ax
 160:	
 
-main$30:	; £temporary70 = index * 2
+main$30:	; £temporary75 = index * 2
 161:		mov ax, [bp + 10]
 163:		xor dx, dx
 164:		mul word [int2$2#]
 170:	
 
-main$31:	; £temporary71 = argv + £temporary70
+main$31:	; £temporary76 = argv + £temporary75
 171:		mov si, [bp + 8]
 172:		add si, ax
 174:	
 
-main$32:	; £temporary69 -> £temporary71 = *£temporary71
+main$32:	; £temporary74 -> £temporary76 = *£temporary76
 176:	
 
-main$33:	; parameter £temporary69 -> £temporary71, offset 10
+main$33:	; parameter £temporary74 -> £temporary76, offset 10
 177:		mov ax, [si]
 178:		mov [bp + 22], ax
 180:	
@@ -761,12 +826,12 @@ main$55:	; parameter string_25c2025s2025i2025lf#, offset 6
 254:		mov word [bp + 49], string_25c2025s2025i2025lf#
 256:	
 
-main$56:	; £temporary77 = &c
+main$56:	; £temporary82 = &c
 257:		mov si, bp
 258:		add si, 22
 260:	
 
-main$57:	; parameter £temporary77, offset 8
+main$57:	; parameter £temporary82, offset 8
 261:		mov [bp + 51], si
 263:	
 
@@ -775,21 +840,21 @@ main$58:	; parameter s, offset 10
 265:		add word [bp + 53], 23
 267:	
 
-main$59:	; £temporary78 = &i
+main$59:	; £temporary83 = &i
 268:		mov si, bp
 269:		add si, 12
 271:	
 
-main$60:	; parameter £temporary78, offset 12
+main$60:	; parameter £temporary83, offset 12
 272:		mov [bp + 55], si
 274:	
 
-main$61:	; £temporary79 = &d
+main$61:	; £temporary84 = &d
 275:		mov si, bp
 276:		add si, 14
 278:	
 
-main$62:	; parameter £temporary79, offset 14
+main$62:	; parameter £temporary84, offset 14
 279:		mov [bp + 57], si
 281:	
 
@@ -812,7 +877,7 @@ main$66:	; parameter string_You20wrote20the20character202725c272C20the20string20
 294:		mov word [bp + 49], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#
 296:	
 
-main$67:	; £temporary81 = int_to_int c (Signed_Char -> Signed_Int)
+main$67:	; £temporary86 = int_to_int c (Signed_Char -> Signed_Int)
 297:		mov al, [bp + 22]
 299:		and ax, 255
 301:		cmp al, 0
@@ -821,7 +886,7 @@ main$67:	; £temporary81 = int_to_int c (Signed_Char -> Signed_Int)
 305:		neg ax
 307:	
 
-main$68:	; parameter £temporary81, offset 8
+main$68:	; parameter £temporary86, offset 8
 308:		mov [bp + 51], ax
 310:	
 
@@ -898,12 +963,12 @@ main3$5:	; parameter string_25lf#, offset 6
 18:		mov word [bp + 20], string_25lf#
 20:	
 
-main3$6:	; £temporary110 = &x
+main3$6:	; £temporary115 = &x
 21:		mov si, bp
 22:		add si, 6
 24:	
 
-main3$7:	; parameter £temporary110, offset 8
+main3$7:	; parameter £temporary115, offset 8
 25:		mov [bp + 22], si
 27:	
 
@@ -1262,12 +1327,12 @@ assert_test$6:	; parameter string_25i#, offset 6
 21:		mov word [bp + 14], string_25i#
 23:	
 
-assert_test$7:	; £temporary148 = &n
+assert_test$7:	; £temporary153 = &n
 24:		mov si, bp
 25:		add si, 6
 27:	
 
-assert_test$8:	; parameter £temporary148, offset 8
+assert_test$8:	; parameter £temporary153, offset 8
 28:		mov [bp + 16], si
 30:	
 
@@ -1308,8 +1373,8 @@ assert_test$16:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomes
 57:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 59:	
 
-assert_test$17:	; parameter 810, offset 14
-60:		mov word [bp + 22], 810
+assert_test$17:	; parameter 820, offset 14
+60:		mov word [bp + 22], 820
 62:	
 
 assert_test$18:	; call function noellipse-ellipse fprintf, extra 0
@@ -1390,8 +1455,8 @@ assert_test2$5:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomes
 18:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 20:	
 
-assert_test2$6:	; parameter 815, offset 14
-21:		mov word [bp + 22], 815
+assert_test2$6:	; parameter 825, offset 14
+21:		mov word [bp + 22], 825
 23:	
 
 assert_test2$7:	; call function noellipse-ellipse fprintf, extra 0

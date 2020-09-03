@@ -1,91 +1,91 @@
 1:	
 
-setjmp:	; £temporary925 = bp
+setjmp:	; £temporary930 = bp
 3:	
 
-setjmp$1:	; bp_pointer = £temporary925
-4:		mov [bp + 8], t423
+setjmp$1:	; bp_pointer = £temporary930
+4:		mov [bp + 8], t424
 6:	
 
-setjmp$2:	; £temporary926 -> buf = *buf
-7:		mov a424, [bp + 6]
+setjmp$2:	; £temporary931 -> buf = *buf
+7:		mov a425, [bp + 6]
 9:	
 
-setjmp$3:	; £temporary927 -> bp_pointer = *bp_pointer
-10:		mov a425, [bp + 8]
+setjmp$3:	; £temporary932 -> bp_pointer = *bp_pointer
+10:		mov a426, [bp + 8]
 12:	
 
-setjmp$4:	; £temporary926 -> buf = £temporary927 -> bp_pointer
-13:		mov t426, [a425]
-14:		mov [a424], t426
+setjmp$4:	; £temporary931 -> buf = £temporary932 -> bp_pointer
+13:		mov t427, [a426]
+14:		mov [a425], t427
 16:	
 
-setjmp$5:	; £temporary928 -> buf = *buf, offset 2
-17:		mov a427, [bp + 6]
+setjmp$5:	; £temporary933 -> buf = *buf, offset 2
+17:		mov a428, [bp + 6]
 19:	
 
-setjmp$6:	; £temporary929 -> bp_pointer = *bp_pointer, offset 2
-20:		mov a428, [bp + 8]
+setjmp$6:	; £temporary934 -> bp_pointer = *bp_pointer, offset 2
+20:		mov a429, [bp + 8]
 22:	
 
-setjmp$7:	; £temporary928 -> buf = £temporary929 -> bp_pointer
-23:		mov t429, [a428 + 2]
-24:		mov [a427 + 2], t429
+setjmp$7:	; £temporary933 -> buf = £temporary934 -> bp_pointer
+23:		mov t430, [a429 + 2]
+24:		mov [a428 + 2], t430
 26:	
 
-setjmp$8:	; £temporary930 -> buf = *buf, offset 4
-27:		mov a430, [bp + 6]
+setjmp$8:	; £temporary935 -> buf = *buf, offset 4
+27:		mov a431, [bp + 6]
 29:	
 
-setjmp$9:	; £temporary931 -> bp_pointer = *bp_pointer, offset 4
-30:		mov a431, [bp + 8]
+setjmp$9:	; £temporary936 -> bp_pointer = *bp_pointer, offset 4
+30:		mov a432, [bp + 8]
 32:	
 
-setjmp$10:	; £temporary930 -> buf = £temporary931 -> bp_pointer
-33:		mov t432, [a431 + 4]
-34:		mov [a430 + 4], t432
+setjmp$10:	; £temporary935 -> buf = £temporary936 -> bp_pointer
+33:		mov t433, [a432 + 4]
+34:		mov [a431 + 4], t433
 36:	
 
 setjmp$11:	; return_value = 0
-37:		mov a433, 0
+37:		mov a434, 0
 39:	
 
 setjmp$12:	; return
-40:		mov t434, [bp]
+40:		mov t435, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t434
+43:		jmp t435
 45:	
 
 setjmp$13:	; function end setjmp
 1:	
 
 longjmp:	; bx = return_value
-2:		mov a435, [bp + 8]
+2:		mov a436, [bp + 8]
 4:	
 
-longjmp$1:	; £temporary934 -> buf = *buf
-5:		mov a436, [bp + 6]
+longjmp$1:	; £temporary939 -> buf = *buf
+5:		mov a437, [bp + 6]
 7:	
 
-longjmp$2:	; cx = £temporary934 -> buf
-8:		mov t437, [a436]
+longjmp$2:	; cx = £temporary939 -> buf
+8:		mov t438, [a437]
 10:	
 
-longjmp$3:	; £temporary936 -> buf = *buf, offset 2
-11:		mov a438, [bp + 6]
+longjmp$3:	; £temporary941 -> buf = *buf, offset 4
+11:		mov a439, [bp + 6]
 13:	
 
-longjmp$4:	; bp = £temporary936 -> buf
-14:		mov t439, [a438 + 2]
+longjmp$4:	; di = £temporary941 -> buf
+14:		mov t440, [a439 + 4]
 16:	
 
-longjmp$5:	; £temporary938 -> buf = *buf, offset 4
-17:		mov a440, [bp + 6]
+longjmp$5:	; £temporary943 -> buf = *buf, offset 2
+17:		mov a441, [bp + 6]
 19:	
 
-longjmp$6:	; di = £temporary938 -> buf
-20:		mov t441, [a440 + 4]
+longjmp$6:	; bp = £temporary943 -> buf
+20:		mov t442, [a441 + 2]
 22:	
 
 longjmp$7:	; jump to 
@@ -93,10 +93,10 @@ longjmp$7:	; jump to
 25:	
 
 longjmp$8:	; return
-26:		mov t442, [bp]
+26:		mov t443, [bp]
 27:		mov di, [bp + 4]
 28:		mov bp, [bp + 2]
-29:		jmp t442
+29:		jmp t443
 31:	
 
 longjmp$9:	; function end longjmp

@@ -1,21 +1,21 @@
 0: if size >= int4$5# goto 58
 1: c = int1$97#
 2: if c > int1$122# goto 58
-3: £temporary995 = int_to_int size (Signed_Int -> Pointer)
-4: £temporary997 = name + £temporary995
-5: £field994 -> £temporary997 = *£temporary997
-6: £field994 -> £temporary997 = c
-7: £temporary998 = size + int4$1#
-8: £temporary1000 = int_to_int £temporary998 (Signed_Int -> Pointer)
-9: £temporary1002 = name + £temporary1000
-10: £field999 -> £temporary1002 = *£temporary1002
-11: £field999 -> £temporary1002 = int1$0#
+3: £temporary1014 = int_to_int size (Signed_Int -> Pointer)
+4: £temporary1016 = name + £temporary1014
+5: £field1013 -> £temporary1016 = *£temporary1016
+6: £field1013 -> £temporary1016 = c
+7: £temporary1017 = size + int4$1#
+8: £temporary1019 = int_to_int £temporary1017 (Signed_Int -> Pointer)
+9: £temporary1021 = name + £temporary1019
+10: £field1018 -> £temporary1021 = *£temporary1021
+11: £field1018 -> £temporary1021 = int1$0#
 12: call header integral zero 0 stack zero 0
 13: parameter name, offset 65
 14: call function noellipse-noellipse fileexists
 15: post call
-16: £temporary1003 = return_value
-17: if £temporary1003 != int4$0# goto 45
+16: £temporary1022 = return_value
+17: if £temporary1022 != int4$0# goto 45
 18: case status == int4$0# goto 22
 19: case status == int4$1# goto 23
 20: case end status
@@ -25,33 +25,33 @@
 24: parameter name, offset 65
 25: call function noellipse-noellipse existsTempName
 26: post call
-27: £temporary1006 = return_value
-28: if £temporary1006 != int4$0# goto 45
+27: £temporary1025 = return_value
+28: if £temporary1025 != int4$0# goto 45
 29: call header integral zero 0 stack zero 0
-30: £temporary1010 = int_to_int g_tempSize (Signed_Int -> Array)
-31: £temporary1011 = £temporary1010 * Array_4#
-32: £temporary1012 = g_tempArray + £temporary1011
-33: £field1009 -> £temporary1012 = *£temporary1012
-34: parameter £field1009 -> £temporary1012, offset 65
+30: £temporary1029 = int_to_int g_tempSize (Signed_Int -> Array)
+31: £temporary1030 = £temporary1029 * Array_4#
+32: £temporary1031 = g_tempArray + £temporary1030
+33: £field1028 -> £temporary1031 = *£temporary1031
+34: parameter £field1028 -> £temporary1031, offset 65
 35: parameter name, offset 73
 36: call function noellipse-noellipse strcpy
 37: post call
-38: £temporary1014 = g_tempSize
+38: £temporary1033 = g_tempSize
 39: g_tempSize = g_tempSize + int4$1#
-40: £temporary1016 = int_to_int £temporary1014 (Signed_Int -> Array)
-41: £temporary1017 = £temporary1016 * Array_4#
-42: £temporary1018 = g_tempArray + £temporary1017
-43: £field1015 -> £temporary1018 = *£temporary1018
-44: return £field1015 -> £temporary1018
+40: £temporary1035 = int_to_int £temporary1033 (Signed_Int -> Array)
+41: £temporary1036 = £temporary1035 * Array_4#
+42: £temporary1037 = g_tempArray + £temporary1036
+43: £field1034 -> £temporary1037 = *£temporary1037
+44: return £field1034 -> £temporary1037
 45: call header integral zero 0 stack zero 0
 46: parameter name, offset 65
-47: £temporary1019 = size + int4$1#
-48: parameter £temporary1019, offset 73
+47: £temporary1038 = size + int4$1#
+48: parameter £temporary1038, offset 73
 49: parameter status, offset 77
 50: call function noellipse-noellipse generateTempName
 51: post call
-52: £temporary1020 = return_value
-53: result = £temporary1020
+52: £temporary1039 = return_value
+53: result = £temporary1039
 54: if result == int8$0# goto 56
 55: return result
 56: c = c + int1$1#

@@ -82,18 +82,18 @@ main$9:	; parameter index, offset 8
 x400:	mov ax, [bp + 10]	; 3: -117 70 10
 x403:	mov [bp + 20], ax	; 3: -119 70 20
 
-main$10:	; £temporary60 = index * 2
+main$10:	; £temporary65 = index * 2
 x406:	mov ax, [bp + 10]	; 3: -117 70 10
 x409:	xor dx, dx	; 2: 49 -46
 x411:	mul word [int2$2#]	; 4: -9 38 20 3
 
-main$11:	; £temporary61 = argv + £temporary60
+main$11:	; £temporary66 = argv + £temporary65
 x415:	mov si, [bp + 8]	; 3: -117 118 8
 x418:	add si, ax	; 2: 1 -58
 
-main$12:	; £temporary59 -> £temporary61 = *£temporary61
+main$12:	; £temporary64 -> £temporary66 = *£temporary66
 
-main$13:	; parameter £temporary59 -> £temporary61, offset 10
+main$13:	; parameter £temporary64 -> £temporary66, offset 10
 x420:	mov ax, [si]	; 2: -117 4
 x422:	mov [bp + 22], ax	; 3: -119 70 22
 
@@ -130,18 +130,18 @@ main$21:	; post call
 main$22:	; index = 0
 x470:	mov word [bp + 10], 0	; 5: -57 70 10 0 0
 
-main$23:	; £temporary65 = index * 2
+main$23:	; £temporary70 = index * 2
 x475:	mov ax, [bp + 10]	; 3: -117 70 10
 x478:	xor dx, dx	; 2: 49 -46
 x480:	mul word [int2$2#]	; 4: -9 38 20 3
 
-main$24:	; £temporary66 = argv + £temporary65
+main$24:	; £temporary71 = argv + £temporary70
 x484:	mov si, [bp + 8]	; 3: -117 118 8
 x487:	add si, ax	; 2: 1 -58
 
-main$25:	; £temporary64 -> £temporary66 = *£temporary66
+main$25:	; £temporary69 -> £temporary71 = *£temporary71
 
-main$26:	; if £temporary64 -> £temporary66 == 0 goto 38
+main$26:	; if £temporary69 -> £temporary71 == 0 goto 38
 x489:	cmp word [si], 0	; 3: -125 60 0
 x492:	je main$38	; 2: 116 54
 
@@ -154,18 +154,18 @@ main$29:	; parameter index, offset 8
 x499:	mov ax, [bp + 10]	; 3: -117 70 10
 x502:	mov [bp + 20], ax	; 3: -119 70 20
 
-main$30:	; £temporary70 = index * 2
+main$30:	; £temporary75 = index * 2
 x505:	mov ax, [bp + 10]	; 3: -117 70 10
 x508:	xor dx, dx	; 2: 49 -46
 x510:	mul word [int2$2#]	; 4: -9 38 20 3
 
-main$31:	; £temporary71 = argv + £temporary70
+main$31:	; £temporary76 = argv + £temporary75
 x514:	mov si, [bp + 8]	; 3: -117 118 8
 x517:	add si, ax	; 2: 1 -58
 
-main$32:	; £temporary69 -> £temporary71 = *£temporary71
+main$32:	; £temporary74 -> £temporary76 = *£temporary76
 
-main$33:	; parameter £temporary69 -> £temporary71, offset 10
+main$33:	; parameter £temporary74 -> £temporary76, offset 10
 x519:	mov ax, [si]	; 2: -117 4
 x521:	mov [bp + 22], ax	; 3: -119 70 22
 
@@ -245,29 +245,29 @@ main$54:	; call header integral zero 0 stack zero 0
 main$55:	; parameter string_25c2025s2025i2025lf#, offset 6
 x630:	mov word [bp + 49], string_25c2025s2025i2025lf#	; 5: -57 70 49 95 3
 
-main$56:	; £temporary77 = &c
+main$56:	; £temporary82 = &c
 x635:	mov si, bp	; 2: -119 -18
 x637:	add si, 22	; 3: -125 -58 22
 
-main$57:	; parameter £temporary77, offset 8
+main$57:	; parameter £temporary82, offset 8
 x640:	mov [bp + 51], si	; 3: -119 118 51
 
 main$58:	; parameter s, offset 10
 x643:	mov [bp + 53], bp	; 3: -119 110 53
 x646:	add word [bp + 53], 23	; 4: -125 70 53 23
 
-main$59:	; £temporary78 = &i
+main$59:	; £temporary83 = &i
 x650:	mov si, bp	; 2: -119 -18
 x652:	add si, 12	; 3: -125 -58 12
 
-main$60:	; parameter £temporary78, offset 12
+main$60:	; parameter £temporary83, offset 12
 x655:	mov [bp + 55], si	; 3: -119 118 55
 
-main$61:	; £temporary79 = &d
+main$61:	; £temporary84 = &d
 x658:	mov si, bp	; 2: -119 -18
 x660:	add si, 14	; 3: -125 -58 14
 
-main$62:	; parameter £temporary79, offset 14
+main$62:	; parameter £temporary84, offset 14
 x663:	mov [bp + 57], si	; 3: -119 118 57
 
 main$63:	; call function noellipse-ellipse scanf, extra 0
@@ -285,7 +285,7 @@ main$65:	; call header integral zero 0 stack zero 0
 main$66:	; parameter string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#, offset 6
 x685:	mov word [bp + 49], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#	; 5: -57 70 49 108 3
 
-main$67:	; £temporary81 = int_to_int c (Signed_Char -> Signed_Int)
+main$67:	; £temporary86 = int_to_int c (Signed_Char -> Signed_Int)
 x690:	mov al, [bp + 22]	; 3: -118 70 22
 x693:	and ax, 255	; 3: 37 -1 0
 x696:	cmp al, 0	; 2: 60 0
@@ -293,7 +293,7 @@ x698:	jge main$68	; 2: 125 4
 x700:	neg al	; 2: -10 -40
 x702:	neg ax	; 2: -9 -40
 
-main$68:	; parameter £temporary81, offset 8
+main$68:	; parameter £temporary86, offset 8
 x704:	mov [bp + 51], ax	; 3: -119 70 51
 
 main$69:	; parameter s, offset 10
@@ -359,13 +359,13 @@ x863:	db "%c %s %i %lf", 0	; 13: 37 99 32 37 115 32 37 105 32 37 108 102 0
 string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#:
 x876:	db "You wrote the character ", 39, "%c", 39, ", the string ", 34, "%s", 34, ", the integer %i, and the double %f.", 10, 0	; 83: 89 111 117 32 119 114 111 116 101 32 116 104 101 32 99 104 97 114 97 99 116 101 114 32 39 37 99 39 44 32 116 104 101 32 115 116 114 105 110 103 32 34 37 115 34 44 32 116 104 101 32 105 110 116 101 103 101 114 32 37 105 44 32 97 110 100 32 116 104 101 32 100 111 117 98 108 101 32 37 102 46 10 0
 
-printf:	; £temporary2432 = &format
+printf:	; £temporary2437 = &format
 x959:	mov si, bp	; 2: -119 -18
 x961:	add si, 6	; 3: -125 -58 6
 
-printf$1:	; £temporary2433 = int_to_int £temporary2432 (Pointer -> Pointer)
+printf$1:	; £temporary2438 = int_to_int £temporary2437 (Pointer -> Pointer)
 
-printf$2:	; arg_list = £temporary2433 + 2
+printf$2:	; arg_list = £temporary2438 + 2
 x964:	add si, 2	; 3: -125 -58 2
 x967:	mov [di + 8], si	; 3: -119 117 8
 
@@ -390,9 +390,9 @@ x999:	jmp vprintf	; 2: -21 11
 
 printf$7:	; post call
 
-printf$8:	; £temporary2435 = return_value
+printf$8:	; £temporary2440 = return_value
 
-printf$9:	; return_value = £temporary2435
+printf$9:	; return_value = £temporary2440
 
 printf$10:	; return
 x1001:	mov ax, [bp]	; 3: -117 70 0
@@ -424,9 +424,9 @@ x1041:	jmp vfprintf	; 3: -23 81 2
 
 vprintf$5:	; post call
 
-vprintf$6:	; £temporary2439 = return_value
+vprintf$6:	; £temporary2444 = return_value
 
-vprintf$7:	; return_value = £temporary2439
+vprintf$7:	; return_value = £temporary2444
 
 vprintf$8:	; return
 x1044:	mov ax, [bp]	; 3: -117 70 0
@@ -454,10 +454,10 @@ x1144:	db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 vfprintf:	; g_outStatus = 0
 x1637:	mov word [g_outStatus], 0	; 6: -57 6 -106 6 0 0
 
-vfprintf$1:	; £temporary2451 = int_to_int outStream (Pointer -> Pointer)
+vfprintf$1:	; £temporary2456 = int_to_int outStream (Pointer -> Pointer)
 x1643:	mov ax, [bp + 6]	; 3: -117 70 6
 
-vfprintf$2:	; g_outDevice = £temporary2451
+vfprintf$2:	; g_outDevice = £temporary2456
 x1646:	mov [g_outDevice], ax	; 3: -93 -104 6
 
 vfprintf$3:	; call header integral zero 0 stack zero 0
@@ -479,9 +479,9 @@ x1673:	jmp printFormat	; 2: -21 15
 
 vfprintf$7:	; post call
 
-vfprintf$8:	; £temporary2452 = return_value
+vfprintf$8:	; £temporary2457 = return_value
 
-vfprintf$9:	; return_value = £temporary2452
+vfprintf$9:	; return_value = £temporary2457
 
 vfprintf$10:	; return
 x1675:	mov ax, [bp]	; 3: -117 70 0
@@ -545,23 +545,23 @@ x1760:	mov word [g_outChars], 0	; 6: -57 6 -22 11 0 0
 printFormat$15:	; index = 0
 x1766:	mov word [bp + 10], 0	; 5: -57 70 10 0 0
 
-printFormat$16:	; £temporary2286 = format + index
+printFormat$16:	; £temporary2291 = format + index
 x1771:	mov si, [bp + 6]	; 3: -117 118 6
 x1774:	add si, [bp + 10]	; 3: 3 118 10
 
-printFormat$17:	; £temporary2285 -> £temporary2286 = *£temporary2286
+printFormat$17:	; £temporary2290 -> £temporary2291 = *£temporary2291
 
-printFormat$18:	; if £temporary2285 -> £temporary2286 == 0 goto 282
+printFormat$18:	; if £temporary2290 -> £temporary2291 == 0 goto 282
 x1777:	cmp byte [si], 0	; 3: -128 60 0
 x1780:	je printFormat$282	; 4: 15 -124 -52 4
 
-printFormat$19:	; £temporary2290 = format + index
+printFormat$19:	; £temporary2295 = format + index
 x1784:	mov si, [bp + 6]	; 3: -117 118 6
 x1787:	add si, [bp + 10]	; 3: 3 118 10
 
-printFormat$20:	; £temporary2289 -> £temporary2290 = *£temporary2290
+printFormat$20:	; £temporary2294 -> £temporary2295 = *£temporary2295
 
-printFormat$21:	; c = £temporary2289 -> £temporary2290
+printFormat$21:	; c = £temporary2294 -> £temporary2295
 x1790:	mov al, [si]	; 2: -118 4
 x1792:	mov [bp + 40], al	; 3: -120 70 40
 
@@ -763,15 +763,15 @@ x2060:	mov [bp + 41], ax	; 3: -119 70 41
 
 printFormat$77:	; call header integral zero 0 stack zero 0
 
-printFormat$78:	; £temporary2294 = format + index
+printFormat$78:	; £temporary2299 = format + index
 x2063:	mov si, [bp + 6]	; 3: -117 118 6
 x2066:	add si, [bp + 10]	; 3: 3 118 10
 
-printFormat$79:	; £temporary2293 -> £temporary2294 = *£temporary2294
+printFormat$79:	; £temporary2298 -> £temporary2299 = *£temporary2299
 
-printFormat$80:	; £temporary2295 = &£temporary2293 -> £temporary2294
+printFormat$80:	; £temporary2300 = &£temporary2298 -> £temporary2299
 
-printFormat$81:	; parameter £temporary2295, offset 6
+printFormat$81:	; parameter £temporary2300, offset 6
 x2069:	mov [bp + 49], si	; 3: -119 118 49
 
 printFormat$82:	; parameter arg_list, offset 8
@@ -790,11 +790,11 @@ printFormat$85:	; parameter grid, offset 14
 x2090:	mov ax, [bp + 26]	; 3: -117 70 26
 x2093:	mov [bp + 57], ax	; 3: -119 70 57
 
-printFormat$86:	; £temporary2296 = &width
+printFormat$86:	; £temporary2301 = &width
 x2096:	mov si, bp	; 2: -119 -18
 x2098:	add si, 12	; 3: -125 -58 12
 
-printFormat$87:	; parameter £temporary2296, offset 16
+printFormat$87:	; parameter £temporary2301, offset 16
 x2101:	mov [bp + 59], si	; 3: -119 118 59
 
 printFormat$88:	; parameter precision, offset 18
@@ -827,19 +827,19 @@ x2149:	jmp printArgument	; 3: -23 -122 3
 
 printFormat$95:	; post call
 
-printFormat$96:	; £temporary2297 = return_value
+printFormat$96:	; £temporary2302 = return_value
 
-printFormat$97:	; arg_list = £temporary2297
+printFormat$97:	; arg_list = £temporary2302
 x2152:	mov [bp + 8], bx	; 3: -119 94 8
 
-printFormat$98:	; £temporary2299 = g_outChars - startChars
+printFormat$98:	; £temporary2304 = g_outChars - startChars
 x2155:	mov ax, [g_outChars]	; 3: -95 -22 11
 x2158:	sub ax, [bp + 41]	; 3: 43 70 41
 
 printFormat$99:	; ++field
 x2161:	inc word [bp + 43]	; 3: -1 70 43
 
-printFormat$100:	; if £temporary2299 >= width goto 235
+printFormat$100:	; if £temporary2304 >= width goto 235
 x2164:	cmp ax, [bp + 12]	; 3: 59 70 12
 x2167:	jge printFormat$235	; 4: 15 -115 102 2
 
@@ -879,15 +879,15 @@ x2216:	mov word [g_outStatus], 2	; 6: -57 6 -106 6 2 0
 
 printFormat$111:	; call header integral zero 0 stack zero 0
 
-printFormat$112:	; £temporary2303 = format + index
+printFormat$112:	; £temporary2308 = format + index
 x2222:	mov si, [bp + 6]	; 3: -117 118 6
 x2225:	add si, [bp + 10]	; 3: 3 118 10
 
-printFormat$113:	; £temporary2302 -> £temporary2303 = *£temporary2303
+printFormat$113:	; £temporary2307 -> £temporary2308 = *£temporary2308
 
-printFormat$114:	; £temporary2304 = &£temporary2302 -> £temporary2303
+printFormat$114:	; £temporary2309 = &£temporary2307 -> £temporary2308
 
-printFormat$115:	; parameter £temporary2304, offset 6
+printFormat$115:	; parameter £temporary2309, offset 6
 x2228:	mov [bp + 53], si	; 3: -119 118 53
 
 printFormat$116:	; parameter arg_list, offset 8
@@ -904,11 +904,11 @@ printFormat$119:	; parameter grid, offset 14
 x2247:	mov ax, [bp + 26]	; 3: -117 70 26
 x2250:	mov [bp + 61], ax	; 3: -119 70 61
 
-printFormat$120:	; £temporary2305 = &width
+printFormat$120:	; £temporary2310 = &width
 x2253:	mov si, bp	; 2: -119 -18
 x2255:	add si, 12	; 3: -125 -58 12
 
-printFormat$121:	; parameter £temporary2305, offset 16
+printFormat$121:	; parameter £temporary2310, offset 16
 x2258:	mov [bp + 63], si	; 3: -119 118 63
 
 printFormat$122:	; parameter precision, offset 18
@@ -930,11 +930,11 @@ x2282:	mov [bp + 71], ax	; 3: -119 70 71
 printFormat$126:	; parameter 0, offset 26
 x2285:	mov word [bp + 73], 0	; 5: -57 70 73 0 0
 
-printFormat$127:	; £temporary2306 = &negative
+printFormat$127:	; £temporary2311 = &negative
 x2290:	mov si, bp	; 2: -119 -18
 x2292:	add si, 45	; 3: -125 -58 45
 
-printFormat$128:	; parameter £temporary2306, offset 28
+printFormat$128:	; parameter £temporary2311, offset 28
 x2295:	mov [bp + 75], si	; 3: -119 118 75
 
 printFormat$129:	; call function noellipse-noellipse printArgument
@@ -1021,14 +1021,14 @@ x2412:	jmp printChar	; 3: -23 -110 9
 
 printFormat$152:	; post call
 
-printFormat$153:	; £temporary2318 = field + 1
+printFormat$153:	; £temporary2323 = field + 1
 x2415:	mov ax, [bp + 47]	; 3: -117 70 47
 x2418:	inc ax	; 1: 64
 
 printFormat$154:	; ++field
 x2419:	inc word [bp + 47]	; 3: -1 70 47
 
-printFormat$155:	; if £temporary2318 >= width goto 161
+printFormat$155:	; if £temporary2323 >= width goto 161
 x2422:	cmp ax, [bp + 12]	; 3: 59 70 12
 x2425:	jge printFormat$161	; 2: 125 20
 
@@ -1050,15 +1050,15 @@ x2445:	jmp printFormat$154	; 2: -21 -28
 
 printFormat$161:	; call header integral zero 0 stack zero 0
 
-printFormat$162:	; £temporary2322 = format + index
+printFormat$162:	; £temporary2327 = format + index
 x2447:	mov si, [bp + 6]	; 3: -117 118 6
 x2450:	add si, [bp + 10]	; 3: 3 118 10
 
-printFormat$163:	; £temporary2321 -> £temporary2322 = *£temporary2322
+printFormat$163:	; £temporary2326 -> £temporary2327 = *£temporary2327
 
-printFormat$164:	; £temporary2323 = &£temporary2321 -> £temporary2322
+printFormat$164:	; £temporary2328 = &£temporary2326 -> £temporary2327
 
-printFormat$165:	; parameter £temporary2323, offset 6
+printFormat$165:	; parameter £temporary2328, offset 6
 x2453:	mov [bp + 55], si	; 3: -119 118 55
 
 printFormat$166:	; parameter arg_list, offset 8
@@ -1108,9 +1108,9 @@ x2528:	jmp printArgument	; 3: -23 11 2
 
 printFormat$178:	; post call
 
-printFormat$179:	; £temporary2324 = return_value
+printFormat$179:	; £temporary2329 = return_value
 
-printFormat$180:	; arg_list = £temporary2324
+printFormat$180:	; arg_list = £temporary2329
 x2531:	mov [bp + 8], bx	; 3: -119 94 8
 
 printFormat$181:	; goto 235
@@ -1129,15 +1129,15 @@ x2549:	mov word [g_outStatus], 2	; 6: -57 6 -106 6 2 0
 
 printFormat$185:	; call header integral zero 0 stack zero 0
 
-printFormat$186:	; £temporary2326 = format + index
+printFormat$186:	; £temporary2331 = format + index
 x2555:	mov si, [bp + 6]	; 3: -117 118 6
 x2558:	add si, [bp + 10]	; 3: 3 118 10
 
-printFormat$187:	; £temporary2325 -> £temporary2326 = *£temporary2326
+printFormat$187:	; £temporary2330 -> £temporary2331 = *£temporary2331
 
-printFormat$188:	; £temporary2327 = &£temporary2325 -> £temporary2326
+printFormat$188:	; £temporary2332 = &£temporary2330 -> £temporary2331
 
-printFormat$189:	; parameter £temporary2327, offset 6
+printFormat$189:	; parameter £temporary2332, offset 6
 x2561:	mov [bp + 51], si	; 3: -119 118 51
 
 printFormat$190:	; parameter arg_list, offset 8
@@ -1156,11 +1156,11 @@ printFormat$193:	; parameter grid, offset 14
 x2582:	mov ax, [bp + 26]	; 3: -117 70 26
 x2585:	mov [bp + 59], ax	; 3: -119 70 59
 
-printFormat$194:	; £temporary2328 = &width
+printFormat$194:	; £temporary2333 = &width
 x2588:	mov si, bp	; 2: -119 -18
 x2590:	add si, 12	; 3: -125 -58 12
 
-printFormat$195:	; parameter £temporary2328, offset 16
+printFormat$195:	; parameter £temporary2333, offset 16
 x2593:	mov [bp + 61], si	; 3: -119 118 61
 
 printFormat$196:	; parameter precision, offset 18
@@ -1206,13 +1206,13 @@ printFormat$206:	; g_outChars = startChars
 x2659:	mov ax, [bp + 41]	; 3: -117 70 41
 x2662:	mov [g_outChars], ax	; 3: -93 -22 11
 
-printFormat$207:	; £temporary2331 = field
+printFormat$207:	; £temporary2336 = field
 x2665:	mov ax, [bp + 45]	; 3: -117 70 45
 
 printFormat$208:	; ++field
 x2668:	inc word [bp + 45]	; 3: -1 70 45
 
-printFormat$209:	; if £temporary2331 >= width goto 215
+printFormat$209:	; if £temporary2336 >= width goto 215
 x2671:	cmp ax, [bp + 12]	; 3: 59 70 12
 x2674:	jge printFormat$215	; 2: 125 20
 
@@ -1234,15 +1234,15 @@ x2694:	jmp printFormat$207	; 2: -21 -31
 
 printFormat$215:	; call header integral zero 0 stack zero 0
 
-printFormat$216:	; £temporary2335 = format + index
+printFormat$216:	; £temporary2340 = format + index
 x2696:	mov si, [bp + 6]	; 3: -117 118 6
 x2699:	add si, [bp + 10]	; 3: 3 118 10
 
-printFormat$217:	; £temporary2334 -> £temporary2335 = *£temporary2335
+printFormat$217:	; £temporary2339 -> £temporary2340 = *£temporary2340
 
-printFormat$218:	; £temporary2336 = &£temporary2334 -> £temporary2335
+printFormat$218:	; £temporary2341 = &£temporary2339 -> £temporary2340
 
-printFormat$219:	; parameter £temporary2336, offset 6
+printFormat$219:	; parameter £temporary2341, offset 6
 x2702:	mov [bp + 53], si	; 3: -119 118 53
 
 printFormat$220:	; parameter arg_list, offset 8
@@ -1294,9 +1294,9 @@ x2779:	jmp printArgument	; 3: -23 16 1
 
 printFormat$232:	; post call
 
-printFormat$233:	; £temporary2337 = return_value
+printFormat$233:	; £temporary2342 = return_value
 
-printFormat$234:	; arg_list = £temporary2337
+printFormat$234:	; arg_list = £temporary2342
 x2782:	mov [bp + 8], bx	; 3: -119 94 8
 
 printFormat$235:	; percent = 0
@@ -1310,7 +1310,7 @@ x2793:	mov word [bp + 41], 0	; 5: -57 70 41 0 0
 
 printFormat$238:	; call header integral zero 0 stack zero 0
 
-printFormat$239:	; £temporary2340 = int_to_int c (Signed_Char -> Signed_Int)
+printFormat$239:	; £temporary2345 = int_to_int c (Signed_Char -> Signed_Int)
 x2798:	mov al, [bp + 40]	; 3: -118 70 40
 x2801:	and ax, 255	; 3: 37 -1 0
 x2804:	cmp al, 0	; 2: 60 0
@@ -1318,7 +1318,7 @@ x2806:	jge printFormat$240	; 2: 125 4
 x2808:	neg al	; 2: -10 -40
 x2810:	neg ax	; 2: -9 -40
 
-printFormat$240:	; parameter £temporary2340, offset 6
+printFormat$240:	; parameter £temporary2345, offset 6
 x2812:	mov [bp + 49], ax	; 3: -119 70 49
 
 printFormat$241:	; call function noellipse-noellipse isdigit
@@ -1329,43 +1329,43 @@ x2826:	jmp isdigit	; 3: -23 66 23
 
 printFormat$242:	; post call
 
-printFormat$243:	; £temporary2341 = return_value
+printFormat$243:	; £temporary2346 = return_value
 
-printFormat$244:	; if £temporary2341 == 0 goto 254
+printFormat$244:	; if £temporary2346 == 0 goto 254
 x2829:	cmp bx, 0	; 3: -125 -5 0
 x2832:	je printFormat$254	; 2: 116 49
 
-printFormat$245:	; £temporary2342 = value * 10
+printFormat$245:	; £temporary2347 = value * 10
 x2834:	mov ax, [bp + 41]	; 3: -117 70 41
 x2837:	xor dx, dx	; 2: 49 -46
 x2839:	imul word [int2$10#]	; 4: -9 46 -20 11
 
-printFormat$246:	; £temporary2343 = c - 48
+printFormat$246:	; £temporary2348 = c - 48
 x2843:	mov bl, [bp + 40]	; 3: -118 94 40
 x2846:	sub bl, 48	; 3: -128 -21 48
 
-printFormat$247:	; £temporary2344 = int_to_int £temporary2343 (Signed_Char -> Signed_Int)
+printFormat$247:	; £temporary2349 = int_to_int £temporary2348 (Signed_Char -> Signed_Int)
 x2849:	and bx, 255	; 4: -127 -29 -1 0
 x2853:	cmp bl, 0	; 3: -128 -5 0
 x2856:	jge printFormat$248	; 2: 125 4
 x2858:	neg bl	; 2: -10 -37
 x2860:	neg bx	; 2: -9 -37
 
-printFormat$248:	; value = £temporary2342 + £temporary2344
+printFormat$248:	; value = £temporary2347 + £temporary2349
 x2862:	add ax, bx	; 2: 1 -40
 x2864:	mov [bp + 41], ax	; 3: -119 70 41
 
-printFormat$249:	; £temporary2346 = index + 1
+printFormat$249:	; £temporary2351 = index + 1
 x2867:	mov ax, [bp + 10]	; 3: -117 70 10
 x2870:	inc ax	; 1: 64
 
-printFormat$250:	; £temporary2348 = format + £temporary2346
+printFormat$250:	; £temporary2353 = format + £temporary2351
 x2871:	mov si, [bp + 6]	; 3: -117 118 6
 x2874:	add si, ax	; 2: 1 -58
 
-printFormat$251:	; £temporary2347 -> £temporary2348 = *£temporary2348
+printFormat$251:	; £temporary2352 -> £temporary2353 = *£temporary2353
 
-printFormat$252:	; c = £temporary2347 -> £temporary2348
+printFormat$252:	; c = £temporary2352 -> £temporary2353
 x2876:	mov al, [si]	; 2: -118 4
 x2878:	mov [bp + 40], al	; 3: -120 70 40
 
@@ -1466,19 +1466,19 @@ printFormat$282:	; if g_outStatus != 1 goto 288
 x3012:	cmp word [g_outStatus], 1	; 5: -125 62 -106 6 1
 x3017:	jne printFormat$288	; 2: 117 16
 
-printFormat$283:	; £temporary2357 = int_to_int g_outDevice (Pointer -> Pointer)
+printFormat$283:	; £temporary2362 = int_to_int g_outDevice (Pointer -> Pointer)
 x3019:	mov ax, [g_outDevice]	; 3: -95 -104 6
 
-printFormat$284:	; outString = £temporary2357
+printFormat$284:	; outString = £temporary2362
 x3022:	mov [bp + 40], ax	; 3: -119 70 40
 
-printFormat$285:	; £temporary2359 = outString + g_outChars
+printFormat$285:	; £temporary2364 = outString + g_outChars
 x3025:	mov si, [bp + 40]	; 3: -117 118 40
 x3028:	add si, [g_outChars]	; 4: 3 54 -22 11
 
-printFormat$286:	; £temporary2358 -> £temporary2359 = *£temporary2359
+printFormat$286:	; £temporary2363 -> £temporary2364 = *£temporary2364
 
-printFormat$287:	; £temporary2358 -> £temporary2359 = 0
+printFormat$287:	; £temporary2363 -> £temporary2364 = 0
 x3032:	mov byte [si], 0	; 3: -58 4 0
 
 printFormat$288:	; return_value = g_outChars
@@ -1498,10 +1498,10 @@ x3050:	db 0, 0	; 2: 0 0
 int2$10#:
 x3052:	dw 10	; 2: 10 0
 
-printArgument:	; £temporary2059 -> format = *format
+printArgument:	; £temporary2064 -> format = *format
 x3054:	mov si, [bp + 6]	; 3: -117 118 6
 
-printArgument$1:	; c = £temporary2059 -> format
+printArgument$1:	; c = £temporary2064 -> format
 x3057:	mov al, [si]	; 2: -118 4
 x3059:	mov [bp + 30], al	; 3: -120 70 30
 
@@ -1586,29 +1586,29 @@ x3170:	je printArgument$30	; 2: 116 42
 printArgument$22:	; arg_list = arg_list + 2
 x3172:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-printArgument$23:	; £temporary2061 = arg_list - 2
+printArgument$23:	; £temporary2066 = arg_list - 2
 x3176:	mov si, [bp + 8]	; 3: -117 118 8
 x3179:	sub si, 2	; 3: -125 -18 2
 
-printArgument$24:	; £temporary2062 = int_to_int £temporary2061 (Signed_Int -> Pointer)
+printArgument$24:	; £temporary2067 = int_to_int £temporary2066 (Signed_Int -> Pointer)
 
-printArgument$25:	; £temporary2063 -> £temporary2062 = *£temporary2062
+printArgument$25:	; £temporary2068 -> £temporary2067 = *£temporary2067
 
-printArgument$26:	; £temporary2064 = int_to_int £temporary2063 -> £temporary2062 (Signed_Int -> Signed_Short_Int)
+printArgument$26:	; £temporary2069 = int_to_int £temporary2068 -> £temporary2067 (Signed_Int -> Signed_Short_Int)
 x3182:	mov ax, [si]	; 2: -117 4
 x3184:	cmp ax, 0	; 3: -125 -8 0
 x3187:	jge printArgument$27	; 2: 125 4
 x3189:	neg ax	; 2: -9 -40
 x3191:	neg al	; 2: -10 -40
 
-printArgument$27:	; £temporary2065 = int_to_int £temporary2064 (Signed_Short_Int -> Signed_Long_Int)
+printArgument$27:	; £temporary2070 = int_to_int £temporary2069 (Signed_Short_Int -> Signed_Long_Int)
 x3193:	and eax, 255	; 6: 102 37 -1 0 0 0
 x3199:	cmp al, 0	; 2: 60 0
 x3201:	jge printArgument$28	; 2: 125 5
 x3203:	neg al	; 2: -10 -40
 x3205:	neg eax	; 3: 102 -9 -40
 
-printArgument$28:	; longValue = £temporary2065
+printArgument$28:	; longValue = £temporary2070
 x3208:	mov [bp + 44], eax	; 4: 102 -119 70 44
 
 printArgument$29:	; goto 43
@@ -1621,15 +1621,15 @@ x3218:	je printArgument$37	; 2: 116 19
 printArgument$31:	; arg_list = arg_list + 4
 x3220:	add word [bp + 8], 4	; 4: -125 70 8 4
 
-printArgument$32:	; £temporary2067 = arg_list - 4
+printArgument$32:	; £temporary2072 = arg_list - 4
 x3224:	mov si, [bp + 8]	; 3: -117 118 8
 x3227:	sub si, 4	; 3: -125 -18 4
 
-printArgument$33:	; £temporary2068 = int_to_int £temporary2067 (Signed_Int -> Pointer)
+printArgument$33:	; £temporary2073 = int_to_int £temporary2072 (Signed_Int -> Pointer)
 
-printArgument$34:	; £temporary2069 -> £temporary2068 = *£temporary2068
+printArgument$34:	; £temporary2074 -> £temporary2073 = *£temporary2073
 
-printArgument$35:	; longValue = £temporary2069 -> £temporary2068
+printArgument$35:	; longValue = £temporary2074 -> £temporary2073
 x3230:	mov eax, [si]	; 3: 102 -117 4
 x3233:	mov [bp + 44], eax	; 4: 102 -119 70 44
 
@@ -1639,15 +1639,15 @@ x3237:	jmp printArgument$43	; 2: -21 32
 printArgument$37:	; arg_list = arg_list + 2
 x3239:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-printArgument$38:	; £temporary2071 = arg_list - 2
+printArgument$38:	; £temporary2076 = arg_list - 2
 x3243:	mov si, [bp + 8]	; 3: -117 118 8
 x3246:	sub si, 2	; 3: -125 -18 2
 
-printArgument$39:	; £temporary2072 = int_to_int £temporary2071 (Signed_Int -> Pointer)
+printArgument$39:	; £temporary2077 = int_to_int £temporary2076 (Signed_Int -> Pointer)
 
-printArgument$40:	; £temporary2073 -> £temporary2072 = *£temporary2072
+printArgument$40:	; £temporary2078 -> £temporary2077 = *£temporary2077
 
-printArgument$41:	; £temporary2074 = int_to_int £temporary2073 -> £temporary2072 (Signed_Int -> Signed_Long_Int)
+printArgument$41:	; £temporary2079 = int_to_int £temporary2078 -> £temporary2077 (Signed_Int -> Signed_Long_Int)
 x3249:	mov ax, [si]	; 2: -117 4
 x3251:	and eax, 65535	; 6: 102 37 -1 -1 0 0
 x3257:	cmp ax, 0	; 3: -125 -8 0
@@ -1655,30 +1655,30 @@ x3260:	jge printArgument$42	; 2: 125 5
 x3262:	neg ax	; 2: -9 -40
 x3264:	neg eax	; 3: 102 -9 -40
 
-printArgument$42:	; longValue = £temporary2074
+printArgument$42:	; longValue = £temporary2079
 x3267:	mov [bp + 44], eax	; 4: 102 -119 70 44
 
 printArgument$43:	; if negativePtr == 0 goto 50
 x3271:	cmp word [bp + 28], 0	; 4: -125 126 28 0
 x3275:	je printArgument$50	; 2: 116 20
 
-printArgument$44:	; £temporary2078 -> negativePtr = *negativePtr
+printArgument$44:	; £temporary2083 -> negativePtr = *negativePtr
 x3277:	mov si, [bp + 28]	; 3: -117 118 28
 
 printArgument$45:	; if longValue >= 0 goto 48
 x3280:	cmp dword [bp + 44], 0	; 5: 102 -125 126 44 0
 x3285:	jge printArgument$48	; 2: 125 5
 
-printArgument$46:	; £temporary2080 = 1
+printArgument$46:	; £temporary2085 = 1
 x3287:	mov ax, 1	; 3: -72 1 0
 
 printArgument$47:	; goto 49
 x3290:	jmp printArgument$49	; 2: -21 3
 
-printArgument$48:	; £temporary2080 = 0
+printArgument$48:	; £temporary2085 = 0
 x3292:	mov ax, 0	; 3: -72 0 0
 
-printArgument$49:	; £temporary2078 -> negativePtr = £temporary2080
+printArgument$49:	; £temporary2083 -> negativePtr = £temporary2085
 x3295:	mov [si], ax	; 2: -119 4
 
 printArgument$50:	; if sign != 0 goto 57
@@ -1699,9 +1699,9 @@ x3322:	jmp labs	; 3: -23 5 5
 
 printArgument$54:	; post call
 
-printArgument$55:	; £temporary2083 = return_value
+printArgument$55:	; £temporary2088 = return_value
 
-printArgument$56:	; longValue = £temporary2083
+printArgument$56:	; longValue = £temporary2088
 x3325:	mov [bp + 44], ebx	; 4: 102 -119 94 44
 
 printArgument$57:	; call header integral zero 0 stack zero 0
@@ -1714,11 +1714,11 @@ printArgument$59:	; parameter widthPtr, offset 8
 x3335:	mov ax, [bp + 16]	; 3: -117 70 16
 x3338:	mov [bp + 56], ax	; 3: -119 70 56
 
-printArgument$60:	; £temporary2084 = &precision
+printArgument$60:	; £temporary2089 = &precision
 x3341:	mov si, bp	; 2: -119 -18
 x3343:	add si, 18	; 3: -125 -58 18
 
-printArgument$61:	; parameter £temporary2084, offset 10
+printArgument$61:	; parameter £temporary2089, offset 10
 x3346:	mov [bp + 58], si	; 3: -119 118 58
 
 printArgument$62:	; call function noellipse-noellipse checkWidthAndPrecision
@@ -1729,9 +1729,9 @@ x3360:	jmp checkWidthAndPrecision	; 3: -23 -2 4
 
 printArgument$63:	; post call
 
-printArgument$64:	; £temporary2085 = return_value
+printArgument$64:	; £temporary2090 = return_value
 
-printArgument$65:	; arg_list = £temporary2085
+printArgument$65:	; arg_list = £temporary2090
 x3363:	mov [bp + 8], bx	; 3: -119 94 8
 
 printArgument$66:	; call header integral zero 0 stack zero 0
@@ -1762,22 +1762,22 @@ x3400:	jmp printArgument$359	; 3: -23 -89 4
 printArgument$73:	; arg_list = arg_list + 2
 x3403:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-printArgument$74:	; £temporary2088 = arg_list - 2
+printArgument$74:	; £temporary2093 = arg_list - 2
 x3407:	mov si, [bp + 8]	; 3: -117 118 8
 x3410:	sub si, 2	; 3: -125 -18 2
 
-printArgument$75:	; £temporary2089 = int_to_int £temporary2088 (Signed_Int -> Pointer)
+printArgument$75:	; £temporary2094 = int_to_int £temporary2093 (Signed_Int -> Pointer)
 
-printArgument$76:	; £temporary2090 -> £temporary2089 = *£temporary2089
+printArgument$76:	; £temporary2095 -> £temporary2094 = *£temporary2094
 
-printArgument$77:	; £temporary2091 = int_to_int £temporary2090 -> £temporary2089 (Signed_Int -> Signed_Char)
+printArgument$77:	; £temporary2096 = int_to_int £temporary2095 -> £temporary2094 (Signed_Int -> Signed_Char)
 x3413:	mov ax, [si]	; 2: -117 4
 x3415:	cmp ax, 0	; 3: -125 -8 0
 x3418:	jge printArgument$78	; 2: 125 4
 x3420:	neg ax	; 2: -9 -40
 x3422:	neg al	; 2: -10 -40
 
-printArgument$78:	; charValue = £temporary2091
+printArgument$78:	; charValue = £temporary2096
 x3424:	mov [bp + 31], al	; 3: -120 70 31
 
 printArgument$79:	; call header integral zero 0 stack zero 0
@@ -1790,11 +1790,11 @@ printArgument$81:	; parameter widthPtr, offset 8
 x3433:	mov ax, [bp + 16]	; 3: -117 70 16
 x3436:	mov [bp + 52], ax	; 3: -119 70 52
 
-printArgument$82:	; £temporary2092 = &precision
+printArgument$82:	; £temporary2097 = &precision
 x3439:	mov si, bp	; 2: -119 -18
 x3441:	add si, 18	; 3: -125 -58 18
 
-printArgument$83:	; parameter £temporary2092, offset 10
+printArgument$83:	; parameter £temporary2097, offset 10
 x3444:	mov [bp + 54], si	; 3: -119 118 54
 
 printArgument$84:	; call function noellipse-noellipse checkWidthAndPrecision
@@ -1805,9 +1805,9 @@ x3458:	jmp checkWidthAndPrecision	; 3: -23 -100 4
 
 printArgument$85:	; post call
 
-printArgument$86:	; £temporary2093 = return_value
+printArgument$86:	; £temporary2098 = return_value
 
-printArgument$87:	; arg_list = £temporary2093
+printArgument$87:	; arg_list = £temporary2098
 x3461:	mov [bp + 8], bx	; 3: -119 94 8
 
 printArgument$88:	; call header integral zero 0 stack zero 0
@@ -1830,15 +1830,15 @@ x3484:	jmp printArgument$359	; 3: -23 83 4
 printArgument$93:	; arg_list = arg_list + 2
 x3487:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-printArgument$94:	; £temporary2096 = arg_list - 2
+printArgument$94:	; £temporary2101 = arg_list - 2
 x3491:	mov si, [bp + 8]	; 3: -117 118 8
 x3494:	sub si, 2	; 3: -125 -18 2
 
-printArgument$95:	; £temporary2097 = int_to_int £temporary2096 (Signed_Int -> Pointer)
+printArgument$95:	; £temporary2102 = int_to_int £temporary2101 (Signed_Int -> Pointer)
 
-printArgument$96:	; £temporary2098 -> £temporary2097 = *£temporary2097
+printArgument$96:	; £temporary2103 -> £temporary2102 = *£temporary2102
 
-printArgument$97:	; stringValue = £temporary2098 -> £temporary2097
+printArgument$97:	; stringValue = £temporary2103 -> £temporary2102
 x3497:	mov ax, [si]	; 2: -117 4
 x3499:	mov [bp + 44], ax	; 3: -119 70 44
 
@@ -1852,11 +1852,11 @@ printArgument$100:	; parameter widthPtr, offset 8
 x3508:	mov ax, [bp + 16]	; 3: -117 70 16
 x3511:	mov [bp + 54], ax	; 3: -119 70 54
 
-printArgument$101:	; £temporary2099 = &precision
+printArgument$101:	; £temporary2104 = &precision
 x3514:	mov si, bp	; 2: -119 -18
 x3516:	add si, 18	; 3: -125 -58 18
 
-printArgument$102:	; parameter £temporary2099, offset 10
+printArgument$102:	; parameter £temporary2104, offset 10
 x3519:	mov [bp + 56], si	; 3: -119 118 56
 
 printArgument$103:	; call function noellipse-noellipse checkWidthAndPrecision
@@ -1867,9 +1867,9 @@ x3533:	jmp checkWidthAndPrecision	; 3: -23 81 4
 
 printArgument$104:	; post call
 
-printArgument$105:	; £temporary2100 = return_value
+printArgument$105:	; £temporary2105 = return_value
 
-printArgument$106:	; arg_list = £temporary2100
+printArgument$106:	; arg_list = £temporary2105
 x3536:	mov [bp + 8], bx	; 3: -119 94 8
 
 printArgument$107:	; call header integral zero 0 stack zero 0
@@ -1897,7 +1897,7 @@ printArgument$113:	; if c != 117 goto 116
 x3568:	cmp byte [bp + 30], 117	; 4: -128 126 30 117
 x3572:	jne printArgument$116	; 2: 117 8
 
-printArgument$114:	; £temporary2116 = 10
+printArgument$114:	; £temporary2121 = 10
 x3574:	mov eax, 10	; 6: 102 -72 10 0 0 0
 
 printArgument$115:	; goto 125
@@ -1907,7 +1907,7 @@ printArgument$116:	; if c != 111 goto 119
 x3582:	cmp byte [bp + 30], 111	; 4: -128 126 30 111
 x3586:	jne printArgument$119	; 2: 117 8
 
-printArgument$117:	; £temporary2112 = 8
+printArgument$117:	; £temporary2117 = 8
 x3588:	mov eax, 8	; 6: 102 -72 8 0 0 0
 
 printArgument$118:	; goto 124
@@ -1917,20 +1917,20 @@ printArgument$119:	; if c != 98 goto 122
 x3596:	cmp byte [bp + 30], 98	; 4: -128 126 30 98
 x3600:	jne printArgument$122	; 2: 117 8
 
-printArgument$120:	; £temporary2108 = 2
+printArgument$120:	; £temporary2113 = 2
 x3602:	mov eax, 2	; 6: 102 -72 2 0 0 0
 
 printArgument$121:	; goto 123
 x3608:	jmp printArgument$123	; 2: -21 6
 
-printArgument$122:	; £temporary2108 = 16
+printArgument$122:	; £temporary2113 = 16
 x3610:	mov eax, 16	; 6: 102 -72 16 0 0 0
 
-printArgument$123:	; £temporary2112 = £temporary2108
+printArgument$123:	; £temporary2117 = £temporary2113
 
-printArgument$124:	; £temporary2116 = £temporary2112
+printArgument$124:	; £temporary2121 = £temporary2117
 
-printArgument$125:	; base = £temporary2116
+printArgument$125:	; base = £temporary2121
 x3616:	mov [bp + 44], eax	; 4: 102 -119 70 44
 
 printArgument$126:	; if shortInt == 0 goto 135
@@ -1940,21 +1940,21 @@ x3624:	je printArgument$135	; 2: 116 24
 printArgument$127:	; arg_list = arg_list + 2
 x3626:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-printArgument$128:	; £temporary2118 = arg_list - 2
+printArgument$128:	; £temporary2123 = arg_list - 2
 x3630:	mov si, [bp + 8]	; 3: -117 118 8
 x3633:	sub si, 2	; 3: -125 -18 2
 
-printArgument$129:	; £temporary2119 = int_to_int £temporary2118 (Signed_Int -> Pointer)
+printArgument$129:	; £temporary2124 = int_to_int £temporary2123 (Signed_Int -> Pointer)
 
-printArgument$130:	; £temporary2120 -> £temporary2119 = *£temporary2119
+printArgument$130:	; £temporary2125 -> £temporary2124 = *£temporary2124
 
-printArgument$131:	; £temporary2121 = int_to_int £temporary2120 -> £temporary2119 (Unsigned_Int -> Unsigned_Short_Int)
+printArgument$131:	; £temporary2126 = int_to_int £temporary2125 -> £temporary2124 (Unsigned_Int -> Unsigned_Short_Int)
 x3636:	mov ax, [si]	; 2: -117 4
 
-printArgument$132:	; £temporary2122 = int_to_int £temporary2121 (Unsigned_Short_Int -> Unsigned_Long_Int)
+printArgument$132:	; £temporary2127 = int_to_int £temporary2126 (Unsigned_Short_Int -> Unsigned_Long_Int)
 x3638:	and eax, 255	; 6: 102 37 -1 0 0 0
 
-printArgument$133:	; value = £temporary2122
+printArgument$133:	; value = £temporary2127
 x3644:	mov [bp + 48], eax	; 4: 102 -119 70 48
 
 printArgument$134:	; goto 148
@@ -1967,15 +1967,15 @@ x3654:	je printArgument$142	; 2: 116 19
 printArgument$136:	; arg_list = arg_list + 4
 x3656:	add word [bp + 8], 4	; 4: -125 70 8 4
 
-printArgument$137:	; £temporary2124 = arg_list - 4
+printArgument$137:	; £temporary2129 = arg_list - 4
 x3660:	mov si, [bp + 8]	; 3: -117 118 8
 x3663:	sub si, 4	; 3: -125 -18 4
 
-printArgument$138:	; £temporary2125 = int_to_int £temporary2124 (Signed_Int -> Pointer)
+printArgument$138:	; £temporary2130 = int_to_int £temporary2129 (Signed_Int -> Pointer)
 
-printArgument$139:	; £temporary2126 -> £temporary2125 = *£temporary2125
+printArgument$139:	; £temporary2131 -> £temporary2130 = *£temporary2130
 
-printArgument$140:	; value = £temporary2126 -> £temporary2125
+printArgument$140:	; value = £temporary2131 -> £temporary2130
 x3666:	mov eax, [si]	; 3: 102 -117 4
 x3669:	mov [bp + 48], eax	; 4: 102 -119 70 48
 
@@ -1985,19 +1985,19 @@ x3673:	jmp printArgument$148	; 2: -21 22
 printArgument$142:	; arg_list = arg_list + 2
 x3675:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-printArgument$143:	; £temporary2128 = arg_list - 2
+printArgument$143:	; £temporary2133 = arg_list - 2
 x3679:	mov si, [bp + 8]	; 3: -117 118 8
 x3682:	sub si, 2	; 3: -125 -18 2
 
-printArgument$144:	; £temporary2129 = int_to_int £temporary2128 (Signed_Int -> Pointer)
+printArgument$144:	; £temporary2134 = int_to_int £temporary2133 (Signed_Int -> Pointer)
 
-printArgument$145:	; £temporary2130 -> £temporary2129 = *£temporary2129
+printArgument$145:	; £temporary2135 -> £temporary2134 = *£temporary2134
 
-printArgument$146:	; £temporary2131 = int_to_int £temporary2130 -> £temporary2129 (Unsigned_Int -> Unsigned_Long_Int)
+printArgument$146:	; £temporary2136 = int_to_int £temporary2135 -> £temporary2134 (Unsigned_Int -> Unsigned_Long_Int)
 x3685:	mov ax, [si]	; 2: -117 4
 x3687:	and eax, 65535	; 6: 102 37 -1 -1 0 0
 
-printArgument$147:	; value = £temporary2131
+printArgument$147:	; value = £temporary2136
 x3693:	mov [bp + 48], eax	; 4: 102 -119 70 48
 
 printArgument$148:	; call header integral zero 0 stack zero 0
@@ -2010,11 +2010,11 @@ printArgument$150:	; parameter widthPtr, offset 8
 x3703:	mov ax, [bp + 16]	; 3: -117 70 16
 x3706:	mov [bp + 60], ax	; 3: -119 70 60
 
-printArgument$151:	; £temporary2134 = &precision
+printArgument$151:	; £temporary2139 = &precision
 x3709:	mov si, bp	; 2: -119 -18
 x3711:	add si, 18	; 3: -125 -58 18
 
-printArgument$152:	; parameter £temporary2134, offset 10
+printArgument$152:	; parameter £temporary2139, offset 10
 x3714:	mov [bp + 62], si	; 3: -119 118 62
 
 printArgument$153:	; call function noellipse-noellipse checkWidthAndPrecision
@@ -2025,9 +2025,9 @@ x3728:	jmp checkWidthAndPrecision	; 3: -23 -114 3
 
 printArgument$154:	; post call
 
-printArgument$155:	; £temporary2135 = return_value
+printArgument$155:	; £temporary2140 = return_value
 
-printArgument$156:	; arg_list = £temporary2135
+printArgument$156:	; arg_list = £temporary2140
 x3731:	mov [bp + 8], bx	; 3: -119 94 8
 
 printArgument$157:	; call header integral zero 0 stack zero 0
@@ -2054,7 +2054,7 @@ x3764:	mov [bp + 68], eax	; 4: 102 -119 70 68
 
 printArgument$163:	; call header integral zero 0 stack zero 0
 
-printArgument$164:	; £temporary2136 = int_to_int c (Signed_Char -> Signed_Int)
+printArgument$164:	; £temporary2141 = int_to_int c (Signed_Char -> Signed_Int)
 x3768:	mov al, [bp + 30]	; 3: -118 70 30
 x3771:	and ax, 255	; 3: 37 -1 0
 x3774:	cmp al, 0	; 2: 60 0
@@ -2062,7 +2062,7 @@ x3776:	jge printArgument$165	; 2: 125 4
 x3778:	neg al	; 2: -10 -40
 x3780:	neg ax	; 2: -9 -40
 
-printArgument$165:	; parameter £temporary2136, offset 26
+printArgument$165:	; parameter £temporary2141, offset 26
 x3782:	mov [bp + 78], ax	; 3: -119 70 78
 
 printArgument$166:	; call function noellipse-noellipse isupper
@@ -2073,9 +2073,9 @@ x3796:	jmp isupper	; 3: -23 -30 5
 
 printArgument$167:	; post call
 
-printArgument$168:	; £temporary2137 = return_value
+printArgument$168:	; £temporary2142 = return_value
 
-printArgument$169:	; parameter £temporary2137, offset 20
+printArgument$169:	; parameter £temporary2142, offset 20
 x3799:	mov [bp + 72], bx	; 3: -119 94 72
 
 printArgument$170:	; call function noellipse-noellipse printUnsignedLong
@@ -2096,15 +2096,15 @@ x3823:	je printArgument$190	; 2: 116 57
 printArgument$174:	; arg_list = arg_list + 8
 x3825:	add word [bp + 8], 8	; 4: -125 70 8 8
 
-printArgument$175:	; £temporary2140 = arg_list - 8
+printArgument$175:	; £temporary2145 = arg_list - 8
 x3829:	mov si, [bp + 8]	; 3: -117 118 8
 x3832:	sub si, 8	; 3: -125 -18 8
 
-printArgument$176:	; £temporary2141 = int_to_int £temporary2140 (Signed_Int -> Pointer)
+printArgument$176:	; £temporary2146 = int_to_int £temporary2145 (Signed_Int -> Pointer)
 
-printArgument$177:	; £temporary2142 -> £temporary2141 = *£temporary2141
+printArgument$177:	; £temporary2147 -> £temporary2146 = *£temporary2146
 
-printArgument$178:	; push float £temporary2142 -> £temporary2141
+printArgument$178:	; push float £temporary2147 -> £temporary2146
 x3835:	fld qword [si]	; 2: -35 4
 
 printArgument$179:	; pop float longDoubleValue
@@ -2144,15 +2144,15 @@ x3880:	jmp printArgument$196	; 2: -21 15
 printArgument$190:	; arg_list = arg_list + 8
 x3882:	add word [bp + 8], 8	; 4: -125 70 8 8
 
-printArgument$191:	; £temporary2145 = arg_list - 8
+printArgument$191:	; £temporary2150 = arg_list - 8
 x3886:	mov si, [bp + 8]	; 3: -117 118 8
 x3889:	sub si, 8	; 3: -125 -18 8
 
-printArgument$192:	; £temporary2146 = int_to_int £temporary2145 (Signed_Int -> Pointer)
+printArgument$192:	; £temporary2151 = int_to_int £temporary2150 (Signed_Int -> Pointer)
 
-printArgument$193:	; £temporary2147 -> £temporary2146 = *£temporary2146
+printArgument$193:	; £temporary2152 -> £temporary2151 = *£temporary2151
 
-printArgument$194:	; push float £temporary2147 -> £temporary2146
+printArgument$194:	; push float £temporary2152 -> £temporary2151
 x3892:	fld qword [si]	; 2: -35 4
 
 printArgument$195:	; pop float longDoubleValue
@@ -2162,7 +2162,7 @@ printArgument$196:	; if negativePtr == 0 goto 205
 x3897:	cmp word [bp + 28], 0	; 4: -125 126 28 0
 x3901:	je printArgument$205	; 2: 116 26
 
-printArgument$197:	; £temporary2151 -> negativePtr = *negativePtr
+printArgument$197:	; £temporary2156 -> negativePtr = *negativePtr
 x3903:	mov si, [bp + 28]	; 3: -117 118 28
 
 printArgument$198:	; push float longDoubleValue
@@ -2177,16 +2177,16 @@ x3913:	fstsw ax	; 3: -101 -33 -32
 x3916:	sahf	; 1: -98
 x3917:	jbe printArgument$203	; 2: 118 5
 
-printArgument$201:	; £temporary2153 = 1
+printArgument$201:	; £temporary2158 = 1
 x3919:	mov ax, 1	; 3: -72 1 0
 
 printArgument$202:	; goto 204
 x3922:	jmp printArgument$204	; 2: -21 3
 
-printArgument$203:	; £temporary2153 = 0
+printArgument$203:	; £temporary2158 = 0
 x3924:	mov ax, 0	; 3: -72 0 0
 
-printArgument$204:	; £temporary2151 -> negativePtr = £temporary2153
+printArgument$204:	; £temporary2156 -> negativePtr = £temporary2158
 x3927:	mov [si], ax	; 2: -119 4
 
 printArgument$205:	; if sign != 0 goto 213
@@ -2209,7 +2209,7 @@ x3952:	jmp fabs	; 3: -23 -125 14
 
 printArgument$210:	; post call
 
-printArgument$211:	; £temporary2156 = return_value
+printArgument$211:	; £temporary2161 = return_value
 
 printArgument$212:	; pop float longDoubleValue
 x3955:	fstp qword [bp + 34]	; 3: -35 94 34
@@ -2224,11 +2224,11 @@ printArgument$215:	; parameter widthPtr, offset 8
 x3964:	mov ax, [bp + 16]	; 3: -117 70 16
 x3967:	mov [bp + 52], ax	; 3: -119 70 52
 
-printArgument$216:	; £temporary2157 = &precision
+printArgument$216:	; £temporary2162 = &precision
 x3970:	mov si, bp	; 2: -119 -18
 x3972:	add si, 18	; 3: -125 -58 18
 
-printArgument$217:	; parameter £temporary2157, offset 10
+printArgument$217:	; parameter £temporary2162, offset 10
 x3975:	mov [bp + 54], si	; 3: -119 118 54
 
 printArgument$218:	; call function noellipse-noellipse checkWidthAndPrecision
@@ -2239,9 +2239,9 @@ x3989:	jmp checkWidthAndPrecision	; 3: -23 -119 2
 
 printArgument$219:	; post call
 
-printArgument$220:	; £temporary2158 = return_value
+printArgument$220:	; £temporary2163 = return_value
 
-printArgument$221:	; arg_list = £temporary2158
+printArgument$221:	; arg_list = £temporary2163
 x3992:	mov [bp + 8], bx	; 3: -119 94 8
 
 printArgument$222:	; if c != 102 goto 233
@@ -2285,7 +2285,7 @@ x4045:	jmp printArgument$359	; 3: -23 34 2
 
 printArgument$233:	; call header integral zero 0 stack zero 0
 
-printArgument$234:	; £temporary2161 = int_to_int c (Signed_Char -> Signed_Int)
+printArgument$234:	; £temporary2166 = int_to_int c (Signed_Char -> Signed_Int)
 x4048:	mov al, [bp + 30]	; 3: -118 70 30
 x4051:	and ax, 255	; 3: 37 -1 0
 x4054:	cmp al, 0	; 2: 60 0
@@ -2293,7 +2293,7 @@ x4056:	jge printArgument$235	; 2: 125 4
 x4058:	neg al	; 2: -10 -40
 x4060:	neg ax	; 2: -9 -40
 
-printArgument$235:	; parameter £temporary2161, offset 6
+printArgument$235:	; parameter £temporary2166, offset 6
 x4062:	mov [bp + 50], ax	; 3: -119 70 50
 
 printArgument$236:	; call function noellipse-noellipse tolower
@@ -2304,9 +2304,9 @@ x4076:	jmp tolower	; 3: -23 41 14
 
 printArgument$237:	; post call
 
-printArgument$238:	; £temporary2162 = return_value
+printArgument$238:	; £temporary2167 = return_value
 
-printArgument$239:	; if £temporary2162 != 101 goto 257
+printArgument$239:	; if £temporary2167 != 101 goto 257
 x4079:	cmp bx, 101	; 3: -125 -5 101
 x4082:	jne printArgument$257	; 2: 117 81
 
@@ -2336,7 +2336,7 @@ x4111:	mov [bp + 64], ax	; 3: -119 70 64
 
 printArgument$247:	; call header integral zero 0 stack zero 0
 
-printArgument$248:	; £temporary2164 = int_to_int c (Signed_Char -> Signed_Int)
+printArgument$248:	; £temporary2169 = int_to_int c (Signed_Char -> Signed_Int)
 x4114:	mov al, [bp + 30]	; 3: -118 70 30
 x4117:	and ax, 255	; 3: 37 -1 0
 x4120:	cmp al, 0	; 2: 60 0
@@ -2344,7 +2344,7 @@ x4122:	jge printArgument$249	; 2: 125 4
 x4124:	neg al	; 2: -10 -40
 x4126:	neg ax	; 2: -9 -40
 
-printArgument$249:	; parameter £temporary2164, offset 28
+printArgument$249:	; parameter £temporary2169, offset 28
 x4128:	mov [bp + 72], ax	; 3: -119 70 72
 
 printArgument$250:	; call function noellipse-noellipse isupper
@@ -2355,9 +2355,9 @@ x4142:	jmp isupper	; 3: -23 -120 4
 
 printArgument$251:	; post call
 
-printArgument$252:	; £temporary2165 = return_value
+printArgument$252:	; £temporary2170 = return_value
 
-printArgument$253:	; parameter £temporary2165, offset 22
+printArgument$253:	; parameter £temporary2170, offset 22
 x4145:	mov [bp + 66], bx	; 3: -119 94 66
 
 printArgument$254:	; call function noellipse-noellipse printLongDoubleExpo
@@ -2389,9 +2389,9 @@ x4182:	jmp fabs	; 3: -23 -99 13
 
 printArgument$262:	; post call
 
-printArgument$263:	; £temporary2167 = return_value
+printArgument$263:	; £temporary2172 = return_value
 
-printArgument$264:	; parameter £temporary2167, offset 6
+printArgument$264:	; parameter £temporary2172, offset 6
 x4185:	fstp qword [bp + 50]	; 3: -35 94 50
 
 printArgument$265:	; call function noellipse-noellipse log10
@@ -2402,13 +2402,13 @@ x4199:	jmp log10	; 3: -23 -74 15
 
 printArgument$266:	; post call
 
-printArgument$267:	; £temporary2168 = return_value
+printArgument$267:	; £temporary2173 = return_value
 
-printArgument$268:	; £temporary2169 = float_to_int £temporary2168 (Double -> Signed_Int)
+printArgument$268:	; £temporary2174 = float_to_int £temporary2173 (Double -> Signed_Int)
 x4202:	fistp word [container2bytes#]	; 4: -33 30 0 18
 x4206:	mov ax, [container2bytes#]	; 3: -95 0 18
 
-printArgument$269:	; expo = £temporary2169
+printArgument$269:	; expo = £temporary2174
 x4209:	mov [bp + 44], ax	; 3: -119 70 44
 
 printArgument$270:	; if expo < -3 goto 282
@@ -2480,7 +2480,7 @@ x4298:	mov [bp + 66], ax	; 3: -119 70 66
 
 printArgument$289:	; call header integral zero 0 stack zero 0
 
-printArgument$290:	; £temporary2174 = int_to_int c (Signed_Char -> Signed_Int)
+printArgument$290:	; £temporary2179 = int_to_int c (Signed_Char -> Signed_Int)
 x4301:	mov al, [bp + 30]	; 3: -118 70 30
 x4304:	and ax, 255	; 3: 37 -1 0
 x4307:	cmp al, 0	; 2: 60 0
@@ -2488,7 +2488,7 @@ x4309:	jge printArgument$291	; 2: 125 4
 x4311:	neg al	; 2: -10 -40
 x4313:	neg ax	; 2: -9 -40
 
-printArgument$291:	; parameter £temporary2174, offset 28
+printArgument$291:	; parameter £temporary2179, offset 28
 x4315:	mov [bp + 74], ax	; 3: -119 70 74
 
 printArgument$292:	; call function noellipse-noellipse isupper
@@ -2499,9 +2499,9 @@ x4329:	jmp isupper	; 3: -23 -51 3
 
 printArgument$293:	; post call
 
-printArgument$294:	; £temporary2175 = return_value
+printArgument$294:	; £temporary2180 = return_value
 
-printArgument$295:	; parameter £temporary2175, offset 22
+printArgument$295:	; parameter £temporary2180, offset 22
 x4332:	mov [bp + 68], bx	; 3: -119 94 68
 
 printArgument$296:	; call function noellipse-noellipse printLongDoubleExpo
@@ -2518,15 +2518,15 @@ x4349:	jmp printArgument$359	; 3: -23 -14 0
 printArgument$299:	; arg_list = arg_list + 2
 x4352:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-printArgument$300:	; £temporary2178 = arg_list - 2
+printArgument$300:	; £temporary2183 = arg_list - 2
 x4356:	mov si, [bp + 8]	; 3: -117 118 8
 x4359:	sub si, 2	; 3: -125 -18 2
 
-printArgument$301:	; £temporary2179 = int_to_int £temporary2178 (Signed_Int -> Pointer)
+printArgument$301:	; £temporary2184 = int_to_int £temporary2183 (Signed_Int -> Pointer)
 
-printArgument$302:	; £temporary2180 -> £temporary2179 = *£temporary2179
+printArgument$302:	; £temporary2185 -> £temporary2184 = *£temporary2184
 
-printArgument$303:	; ptrValue = £temporary2180 -> £temporary2179
+printArgument$303:	; ptrValue = £temporary2185 -> £temporary2184
 x4362:	mov ax, [si]	; 2: -117 4
 x4364:	mov [bp + 42], ax	; 3: -119 70 42
 
@@ -2540,11 +2540,11 @@ printArgument$306:	; parameter widthPtr, offset 8
 x4373:	mov ax, [bp + 16]	; 3: -117 70 16
 x4376:	mov [bp + 52], ax	; 3: -119 70 52
 
-printArgument$307:	; £temporary2181 = &precision
+printArgument$307:	; £temporary2186 = &precision
 x4379:	mov si, bp	; 2: -119 -18
 x4381:	add si, 18	; 3: -125 -58 18
 
-printArgument$308:	; parameter £temporary2181, offset 10
+printArgument$308:	; parameter £temporary2186, offset 10
 x4384:	mov [bp + 54], si	; 3: -119 118 54
 
 printArgument$309:	; call function noellipse-noellipse checkWidthAndPrecision
@@ -2555,18 +2555,18 @@ x4398:	jmp checkWidthAndPrecision	; 3: -23 -16 0
 
 printArgument$310:	; post call
 
-printArgument$311:	; £temporary2182 = return_value
+printArgument$311:	; £temporary2187 = return_value
 
-printArgument$312:	; arg_list = £temporary2182
+printArgument$312:	; arg_list = £temporary2187
 x4401:	mov [bp + 8], bx	; 3: -119 94 8
 
 printArgument$313:	; call header integral zero 0 stack zero 0
 
-printArgument$314:	; £temporary2183 = int_to_int ptrValue (Pointer -> Unsigned_Long_Int)
+printArgument$314:	; £temporary2188 = int_to_int ptrValue (Pointer -> Unsigned_Long_Int)
 x4404:	mov ax, [bp + 42]	; 3: -117 70 42
 x4407:	and eax, 65535	; 6: 102 37 -1 -1 0 0
 
-printArgument$315:	; parameter £temporary2183, offset 6
+printArgument$315:	; parameter £temporary2188, offset 6
 x4413:	mov [bp + 50], eax	; 4: 102 -119 70 50
 
 printArgument$316:	; parameter 0, offset 10
@@ -2598,30 +2598,30 @@ x4459:	jmp printArgument$359	; 3: -23 -124 0
 printArgument$324:	; arg_list = arg_list + 2
 x4462:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-printArgument$325:	; £temporary2186 = arg_list - 2
+printArgument$325:	; £temporary2191 = arg_list - 2
 x4466:	mov si, [bp + 8]	; 3: -117 118 8
 x4469:	sub si, 2	; 3: -125 -18 2
 
-printArgument$326:	; £temporary2187 = int_to_int £temporary2186 (Signed_Int -> Pointer)
+printArgument$326:	; £temporary2192 = int_to_int £temporary2191 (Signed_Int -> Pointer)
 
-printArgument$327:	; £temporary2188 -> £temporary2187 = *£temporary2187
+printArgument$327:	; £temporary2193 -> £temporary2192 = *£temporary2192
 
-printArgument$328:	; ptrValue = £temporary2188 -> £temporary2187
+printArgument$328:	; ptrValue = £temporary2193 -> £temporary2192
 x4472:	mov ax, [si]	; 2: -117 4
 x4474:	mov [bp + 42], ax	; 3: -119 70 42
 
 printArgument$329:	; arg_list = arg_list + 2
 x4477:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-printArgument$330:	; £temporary2190 = arg_list - 2
+printArgument$330:	; £temporary2195 = arg_list - 2
 x4481:	mov si, [bp + 8]	; 3: -117 118 8
 x4484:	sub si, 2	; 3: -125 -18 2
 
-printArgument$331:	; £temporary2191 = int_to_int £temporary2190 (Signed_Int -> Pointer)
+printArgument$331:	; £temporary2196 = int_to_int £temporary2195 (Signed_Int -> Pointer)
 
-printArgument$332:	; £temporary2192 -> £temporary2191 = *£temporary2191
+printArgument$332:	; £temporary2197 -> £temporary2196 = *£temporary2196
 
-printArgument$333:	; intPtr = £temporary2192 -> £temporary2191
+printArgument$333:	; intPtr = £temporary2197 -> £temporary2196
 x4487:	mov ax, [si]	; 2: -117 4
 x4489:	mov [bp + 32], ax	; 3: -119 70 32
 
@@ -2635,11 +2635,11 @@ printArgument$336:	; parameter widthPtr, offset 8
 x4498:	mov ax, [bp + 16]	; 3: -117 70 16
 x4501:	mov [bp + 52], ax	; 3: -119 70 52
 
-printArgument$337:	; £temporary2193 = &precision
+printArgument$337:	; £temporary2198 = &precision
 x4504:	mov si, bp	; 2: -119 -18
 x4506:	add si, 18	; 3: -125 -58 18
 
-printArgument$338:	; parameter £temporary2193, offset 10
+printArgument$338:	; parameter £temporary2198, offset 10
 x4509:	mov [bp + 54], si	; 3: -119 118 54
 
 printArgument$339:	; call function noellipse-noellipse checkWidthAndPrecision
@@ -2651,15 +2651,15 @@ x4524:	jmp checkWidthAndPrecision	; 2: -21 115
 
 printArgument$340:	; post call
 
-printArgument$341:	; £temporary2194 = return_value
+printArgument$341:	; £temporary2199 = return_value
 
-printArgument$342:	; arg_list = £temporary2194
+printArgument$342:	; arg_list = £temporary2199
 x4526:	mov [bp + 8], bx	; 3: -119 94 8
 
-printArgument$343:	; £temporary2195 -> intPtr = *intPtr
+printArgument$343:	; £temporary2200 -> intPtr = *intPtr
 x4529:	mov si, [bp + 32]	; 3: -117 118 32
 
-printArgument$344:	; £temporary2195 -> intPtr = g_outChars
+printArgument$344:	; £temporary2200 -> intPtr = g_outChars
 x4532:	mov ax, [g_outChars]	; 3: -95 -22 11
 x4535:	mov [si], ax	; 2: -119 4
 
@@ -2676,11 +2676,11 @@ printArgument$348:	; parameter widthPtr, offset 8
 x4545:	mov ax, [bp + 16]	; 3: -117 70 16
 x4548:	mov [bp + 52], ax	; 3: -119 70 52
 
-printArgument$349:	; £temporary2196 = &precision
+printArgument$349:	; £temporary2201 = &precision
 x4551:	mov si, bp	; 2: -119 -18
 x4553:	add si, 18	; 3: -125 -58 18
 
-printArgument$350:	; parameter £temporary2196, offset 10
+printArgument$350:	; parameter £temporary2201, offset 10
 x4556:	mov [bp + 54], si	; 3: -119 118 54
 
 printArgument$351:	; call function noellipse-noellipse checkWidthAndPrecision
@@ -2692,9 +2692,9 @@ x4571:	jmp checkWidthAndPrecision	; 2: -21 68
 
 printArgument$352:	; post call
 
-printArgument$353:	; £temporary2197 = return_value
+printArgument$353:	; £temporary2202 = return_value
 
-printArgument$354:	; arg_list = £temporary2197
+printArgument$354:	; arg_list = £temporary2202
 x4573:	mov [bp + 8], bx	; 3: -119 94 8
 
 printArgument$355:	; call header integral zero 0 stack zero 0
@@ -2728,19 +2728,19 @@ labs:	; if value >= 0 goto 4
 x4610:	cmp dword [bp + 6], 0	; 5: 102 -125 126 6 0
 x4615:	jge labs$4	; 2: 125 9
 
-labs$1:	; £temporary2663 = -value
+labs$1:	; £temporary2668 = -value
 x4617:	mov ebx, [bp + 6]	; 4: 102 -117 94 6
 x4621:	neg ebx	; 3: 102 -9 -37
 
-labs$2:	; £temporary2667 = £temporary2663
+labs$2:	; £temporary2672 = £temporary2668
 
 labs$3:	; goto 5
 x4624:	jmp labs$5	; 2: -21 4
 
-labs$4:	; £temporary2667 = value
+labs$4:	; £temporary2672 = value
 x4626:	mov ebx, [bp + 6]	; 4: 102 -117 94 6
 
-labs$5:	; return_value = £temporary2667
+labs$5:	; return_value = £temporary2672
 
 labs$6:	; return
 x4630:	mov ax, [bp]	; 3: -117 70 0
@@ -2754,28 +2754,28 @@ checkWidthAndPrecision:	; if widthPtr == 0 goto 9
 x4641:	cmp word [bp + 8], 0	; 4: -125 126 8 0
 x4645:	je checkWidthAndPrecision$9	; 2: 116 25
 
-checkWidthAndPrecision$1:	; £temporary2041 -> widthPtr = *widthPtr
+checkWidthAndPrecision$1:	; £temporary2046 -> widthPtr = *widthPtr
 x4647:	mov si, [bp + 8]	; 3: -117 118 8
 
-checkWidthAndPrecision$2:	; if £temporary2041 -> widthPtr != -1 goto 9
+checkWidthAndPrecision$2:	; if £temporary2046 -> widthPtr != -1 goto 9
 x4650:	cmp word [si], -1	; 3: -125 60 -1
 x4653:	jne checkWidthAndPrecision$9	; 2: 117 17
 
-checkWidthAndPrecision$3:	; £temporary2044 -> widthPtr = *widthPtr
+checkWidthAndPrecision$3:	; £temporary2049 -> widthPtr = *widthPtr
 x4655:	mov si, [bp + 8]	; 3: -117 118 8
 
 checkWidthAndPrecision$4:	; arg_list = arg_list + 2
 x4658:	add word [bp + 6], 2	; 4: -125 70 6 2
 
-checkWidthAndPrecision$5:	; £temporary2046 = arg_list - 2
+checkWidthAndPrecision$5:	; £temporary2051 = arg_list - 2
 x4662:	mov di, [bp + 6]	; 3: -117 126 6
 x4665:	sub di, 2	; 3: -125 -17 2
 
-checkWidthAndPrecision$6:	; £temporary2047 = int_to_int £temporary2046 (Signed_Int -> Pointer)
+checkWidthAndPrecision$6:	; £temporary2052 = int_to_int £temporary2051 (Signed_Int -> Pointer)
 
-checkWidthAndPrecision$7:	; £temporary2048 -> £temporary2047 = *£temporary2047
+checkWidthAndPrecision$7:	; £temporary2053 -> £temporary2052 = *£temporary2052
 
-checkWidthAndPrecision$8:	; £temporary2044 -> widthPtr = £temporary2048 -> £temporary2047
+checkWidthAndPrecision$8:	; £temporary2049 -> widthPtr = £temporary2053 -> £temporary2052
 x4668:	mov ax, [di]	; 2: -117 5
 x4670:	mov [si], ax	; 2: -119 4
 
@@ -2783,28 +2783,28 @@ checkWidthAndPrecision$9:	; if precisionPtr == 0 goto 18
 x4672:	cmp word [bp + 10], 0	; 4: -125 126 10 0
 x4676:	je checkWidthAndPrecision$18	; 2: 116 25
 
-checkWidthAndPrecision$10:	; £temporary2050 -> precisionPtr = *precisionPtr
+checkWidthAndPrecision$10:	; £temporary2055 -> precisionPtr = *precisionPtr
 x4678:	mov si, [bp + 10]	; 3: -117 118 10
 
-checkWidthAndPrecision$11:	; if £temporary2050 -> precisionPtr != -1 goto 18
+checkWidthAndPrecision$11:	; if £temporary2055 -> precisionPtr != -1 goto 18
 x4681:	cmp word [si], -1	; 3: -125 60 -1
 x4684:	jne checkWidthAndPrecision$18	; 2: 117 17
 
-checkWidthAndPrecision$12:	; £temporary2053 -> precisionPtr = *precisionPtr
+checkWidthAndPrecision$12:	; £temporary2058 -> precisionPtr = *precisionPtr
 x4686:	mov si, [bp + 10]	; 3: -117 118 10
 
 checkWidthAndPrecision$13:	; arg_list = arg_list + 2
 x4689:	add word [bp + 6], 2	; 4: -125 70 6 2
 
-checkWidthAndPrecision$14:	; £temporary2055 = arg_list - 2
+checkWidthAndPrecision$14:	; £temporary2060 = arg_list - 2
 x4693:	mov di, [bp + 6]	; 3: -117 126 6
 x4696:	sub di, 2	; 3: -125 -17 2
 
-checkWidthAndPrecision$15:	; £temporary2056 = int_to_int £temporary2055 (Signed_Int -> Pointer)
+checkWidthAndPrecision$15:	; £temporary2061 = int_to_int £temporary2060 (Signed_Int -> Pointer)
 
-checkWidthAndPrecision$16:	; £temporary2057 -> £temporary2056 = *£temporary2056
+checkWidthAndPrecision$16:	; £temporary2062 -> £temporary2061 = *£temporary2061
 
-checkWidthAndPrecision$17:	; £temporary2053 -> precisionPtr = £temporary2057 -> £temporary2056
+checkWidthAndPrecision$17:	; £temporary2058 -> precisionPtr = £temporary2062 -> £temporary2061
 x4699:	mov ax, [di]	; 2: -117 5
 x4701:	mov [si], ax	; 2: -119 4
 
@@ -2823,11 +2823,11 @@ printLongInt:	; if longValue >= 0 goto 8
 x4717:	cmp dword [bp + 6], 0	; 5: 102 -125 126 6 0
 x4722:	jge printLongInt$8	; 2: 125 31
 
-printLongInt$1:	; £temporary1896 = -longValue
+printLongInt$1:	; £temporary1901 = -longValue
 x4724:	mov eax, [bp + 6]	; 4: 102 -117 70 6
 x4728:	neg eax	; 3: 102 -9 -40
 
-printLongInt$2:	; longValue = £temporary1896
+printLongInt$2:	; longValue = £temporary1901
 x4731:	mov [bp + 6], eax	; 4: 102 -119 70 6
 
 printLongInt$3:	; call header integral zero 0 stack zero 0
@@ -2948,29 +2948,29 @@ printChar$3:	; case end g_outStatus
 printChar$4:	; goto 25
 x4883:	jmp printChar$25	; 2: -21 59
 
-printChar$5:	; £temporary1838 = int_to_int g_outDevice (Pointer -> Pointer)
+printChar$5:	; £temporary1843 = int_to_int g_outDevice (Pointer -> Pointer)
 x4885:	mov ax, [g_outDevice]	; 3: -95 -104 6
 
-printChar$6:	; stream = £temporary1838
+printChar$6:	; stream = £temporary1843
 x4888:	mov [bp + 11], ax	; 3: -119 70 11
 
 printChar$7:	; ah = 64
 x4891:	mov ah, 64	; 2: -76 64
 
-printChar$8:	; £temporary1841 -> stream = *stream, offset 2
+printChar$8:	; £temporary1846 -> stream = *stream, offset 2
 x4893:	mov si, [bp + 11]	; 3: -117 118 11
 
-printChar$9:	; bx = £temporary1841 -> stream
+printChar$9:	; bx = £temporary1846 -> stream
 x4896:	mov bx, [si + 2]	; 3: -117 92 2
 
 printChar$10:	; cx = 1
 x4899:	mov cx, 1	; 3: -71 1 0
 
-printChar$11:	; £temporary1844 = &c
+printChar$11:	; £temporary1849 = &c
 x4902:	mov dx, bp	; 2: -119 -22
 x4904:	add dx, 6	; 3: -125 -62 6
 
-printChar$12:	; dx = £temporary1844
+printChar$12:	; dx = £temporary1849
 
 printChar$13:	; interrupt 33
 x4907:	int 33	; 2: -51 33
@@ -2981,25 +2981,25 @@ x4909:	inc word [g_outChars]	; 4: -1 6 -22 11
 printChar$15:	; goto 25
 x4913:	jmp printChar$25	; 2: -21 29
 
-printChar$16:	; £temporary1846 = int_to_int g_outDevice (Pointer -> Pointer)
+printChar$16:	; £temporary1851 = int_to_int g_outDevice (Pointer -> Pointer)
 x4915:	mov ax, [g_outDevice]	; 3: -95 -104 6
 
-printChar$17:	; outString = £temporary1846
+printChar$17:	; outString = £temporary1851
 x4918:	mov [bp + 9], ax	; 3: -119 70 9
 
-printChar$18:	; £temporary1847 = g_outChars
+printChar$18:	; £temporary1852 = g_outChars
 x4921:	mov ax, [g_outChars]	; 3: -95 -22 11
 
 printChar$19:	; ++g_outChars
 x4924:	inc word [g_outChars]	; 4: -1 6 -22 11
 
-printChar$20:	; £temporary1849 = outString + £temporary1847
+printChar$20:	; £temporary1854 = outString + £temporary1852
 x4928:	mov si, [bp + 9]	; 3: -117 118 9
 x4931:	add si, ax	; 2: 1 -58
 
-printChar$21:	; £temporary1848 -> £temporary1849 = *£temporary1849
+printChar$21:	; £temporary1853 -> £temporary1854 = *£temporary1854
 
-printChar$22:	; £temporary1848 -> £temporary1849 = c
+printChar$22:	; £temporary1853 -> £temporary1854 = c
 x4933:	mov al, [bp + 6]	; 3: -118 70 6
 x4936:	mov [si], al	; 2: -120 4
 
@@ -3021,28 +3021,28 @@ printLongIntRec:	; if longValue == 0 goto 15
 x4955:	cmp dword [bp + 6], 0	; 5: 102 -125 126 6 0
 x4960:	je printLongIntRec$15	; 2: 116 88
 
-printLongIntRec$1:	; £temporary1886 = longValue % 10
+printLongIntRec$1:	; £temporary1891 = longValue % 10
 x4962:	mov eax, [bp + 6]	; 4: 102 -117 70 6
 x4966:	xor edx, edx	; 3: 102 49 -46
 x4969:	idiv dword [int4$10#]	; 5: 102 -9 62 -59 19
 
-printLongIntRec$2:	; £temporary1887 = int_to_int £temporary1886 (Signed_Long_Int -> Signed_Int)
+printLongIntRec$2:	; £temporary1892 = int_to_int £temporary1891 (Signed_Long_Int -> Signed_Int)
 x4974:	cmp edx, 0	; 4: 102 -125 -6 0
 x4978:	jge printLongIntRec$3	; 2: 125 5
 x4980:	neg edx	; 3: 102 -9 -38
 x4983:	neg dx	; 2: -9 -38
 
-printLongIntRec$3:	; digit = £temporary1887
+printLongIntRec$3:	; digit = £temporary1892
 x4985:	mov [bp + 10], dx	; 3: -119 86 10
 
 printLongIntRec$4:	; call header integral zero 0 stack zero 0
 
-printLongIntRec$5:	; £temporary1888 = longValue / 10
+printLongIntRec$5:	; £temporary1893 = longValue / 10
 x4988:	mov eax, [bp + 6]	; 4: 102 -117 70 6
 x4992:	xor edx, edx	; 3: 102 49 -46
 x4995:	idiv dword [int4$10#]	; 5: 102 -9 62 -59 19
 
-printLongIntRec$6:	; parameter £temporary1888, offset 6
+printLongIntRec$6:	; parameter £temporary1893, offset 6
 x5000:	mov [bp + 18], eax	; 4: 102 -119 70 18
 
 printLongIntRec$7:	; call function noellipse-noellipse printLongIntRec
@@ -3056,17 +3056,17 @@ printLongIntRec$8:	; post call
 
 printLongIntRec$9:	; call header integral zero 0 stack zero 0
 
-printLongIntRec$10:	; £temporary1890 = digit + 48
+printLongIntRec$10:	; £temporary1895 = digit + 48
 x5018:	mov ax, [bp + 10]	; 3: -117 70 10
 x5021:	add ax, 48	; 3: -125 -64 48
 
-printLongIntRec$11:	; £temporary1891 = int_to_int £temporary1890 (Signed_Int -> Signed_Char)
+printLongIntRec$11:	; £temporary1896 = int_to_int £temporary1895 (Signed_Int -> Signed_Char)
 x5024:	cmp ax, 0	; 3: -125 -8 0
 x5027:	jge printLongIntRec$12	; 2: 125 4
 x5029:	neg ax	; 2: -9 -40
 x5031:	neg al	; 2: -10 -40
 
-printLongIntRec$12:	; parameter £temporary1891, offset 6
+printLongIntRec$12:	; parameter £temporary1896, offset 6
 x5033:	mov [bp + 18], al	; 3: -120 70 18
 
 printLongIntRec$13:	; call function noellipse-noellipse printChar
@@ -3099,25 +3099,25 @@ x5075:	jne printString$14	; 2: 117 48
 printString$2:	; index = 0
 x5077:	mov word [bp + 10], 0	; 5: -57 70 10 0 0
 
-printString$3:	; £temporary1855 = s + index
+printString$3:	; £temporary1860 = s + index
 x5082:	mov si, [bp + 6]	; 3: -117 118 6
 x5085:	add si, [bp + 10]	; 3: 3 118 10
 
-printString$4:	; £temporary1854 -> £temporary1855 = *£temporary1855
+printString$4:	; £temporary1859 -> £temporary1860 = *£temporary1860
 
-printString$5:	; if £temporary1854 -> £temporary1855 == 0 goto 53
+printString$5:	; if £temporary1859 -> £temporary1860 == 0 goto 53
 x5088:	cmp byte [si], 0	; 3: -128 60 0
 x5091:	je printString$53	; 4: 15 -124 -57 0
 
 printString$6:	; call header integral zero 0 stack zero 0
 
-printString$7:	; £temporary1859 = s + index
+printString$7:	; £temporary1864 = s + index
 x5095:	mov si, [bp + 6]	; 3: -117 118 6
 x5098:	add si, [bp + 10]	; 3: 3 118 10
 
-printString$8:	; £temporary1858 -> £temporary1859 = *£temporary1859
+printString$8:	; £temporary1863 -> £temporary1864 = *£temporary1864
 
-printString$9:	; parameter £temporary1858 -> £temporary1859, offset 6
+printString$9:	; parameter £temporary1863 -> £temporary1864, offset 6
 x5101:	mov al, [si]	; 2: -118 4
 x5103:	mov [bp + 18], al	; 3: -120 70 18
 
@@ -3138,35 +3138,35 @@ x5123:	jmp printString$3	; 2: -21 -43
 printString$14:	; index = 0
 x5125:	mov word [bp + 10], 0	; 5: -57 70 10 0 0
 
-printString$15:	; £temporary1861 = precision
+printString$15:	; £temporary1866 = precision
 x5130:	mov ax, [bp + 8]	; 3: -117 70 8
 
 printString$16:	; --precision
 x5133:	dec word [bp + 8]	; 3: -1 78 8
 
-printString$17:	; if £temporary1861 <= 0 goto 53
+printString$17:	; if £temporary1866 <= 0 goto 53
 x5136:	cmp ax, 0	; 3: -125 -8 0
 x5139:	jle printString$53	; 4: 15 -114 -105 0
 
-printString$18:	; £temporary1864 = s + index
+printString$18:	; £temporary1869 = s + index
 x5143:	mov si, [bp + 6]	; 3: -117 118 6
 x5146:	add si, [bp + 10]	; 3: 3 118 10
 
-printString$19:	; £temporary1863 -> £temporary1864 = *£temporary1864
+printString$19:	; £temporary1868 -> £temporary1869 = *£temporary1869
 
-printString$20:	; if £temporary1863 -> £temporary1864 == 0 goto 53
+printString$20:	; if £temporary1868 -> £temporary1869 == 0 goto 53
 x5149:	cmp byte [si], 0	; 3: -128 60 0
 x5152:	je printString$53	; 4: 15 -124 -118 0
 
 printString$21:	; call header integral zero 0 stack zero 0
 
-printString$22:	; £temporary1869 = s + index
+printString$22:	; £temporary1874 = s + index
 x5156:	mov si, [bp + 6]	; 3: -117 118 6
 x5159:	add si, [bp + 10]	; 3: 3 118 10
 
-printString$23:	; £temporary1868 -> £temporary1869 = *£temporary1869
+printString$23:	; £temporary1873 -> £temporary1874 = *£temporary1874
 
-printString$24:	; parameter £temporary1868 -> £temporary1869, offset 6
+printString$24:	; parameter £temporary1873 -> £temporary1874, offset 6
 x5162:	mov al, [si]	; 2: -118 4
 x5164:	mov [bp + 18], al	; 3: -120 70 18
 
@@ -3281,9 +3281,9 @@ x5317:	jmp localeconv	; 2: -21 93
 
 isupper$2:	; post call
 
-isupper$3:	; £temporary329 = return_value
+isupper$3:	; £temporary334 = return_value
 
-isupper$4:	; localeConvPtr = £temporary329
+isupper$4:	; localeConvPtr = £temporary334
 x5319:	mov [bp + 8], bx	; 3: -119 94 8
 
 isupper$5:	; if localeConvPtr == 0 goto 19
@@ -3292,10 +3292,10 @@ x5326:	je isupper$19	; 2: 116 53
 
 isupper$6:	; call header integral zero 0 stack zero 0
 
-isupper$7:	; £temporary331 -> localeConvPtr = *localeConvPtr, offset 14
+isupper$7:	; £temporary336 -> localeConvPtr = *localeConvPtr, offset 14
 x5328:	mov si, [bp + 8]	; 3: -117 118 8
 
-isupper$8:	; parameter £temporary331 -> localeConvPtr, offset 6
+isupper$8:	; parameter £temporary336 -> localeConvPtr, offset 6
 x5331:	mov ax, [si + 14]	; 3: -117 68 14
 x5334:	mov [bp + 16], ax	; 3: -119 70 16
 
@@ -3311,22 +3311,22 @@ x5354:	jmp strchr	; 3: -23 -51 5
 
 isupper$11:	; post call
 
-isupper$12:	; £temporary332 = return_value
+isupper$12:	; £temporary337 = return_value
 
-isupper$13:	; if £temporary332 == 0 goto 16
+isupper$13:	; if £temporary337 == 0 goto 16
 x5357:	cmp bx, 0	; 3: -125 -5 0
 x5360:	je isupper$16	; 2: 116 5
 
-isupper$14:	; £temporary334 = 1
+isupper$14:	; £temporary339 = 1
 x5362:	mov bx, 1	; 3: -69 1 0
 
 isupper$15:	; goto 17
 x5365:	jmp isupper$17	; 2: -21 3
 
-isupper$16:	; £temporary334 = 0
+isupper$16:	; £temporary339 = 0
 x5367:	mov bx, 0	; 3: -69 0 0
 
-isupper$17:	; return_value = £temporary334
+isupper$17:	; return_value = £temporary339
 
 isupper$18:	; return
 x5370:	mov ax, [bp]	; 3: -117 70 0
@@ -3342,16 +3342,16 @@ isupper$20:	; if c > 90 goto 23
 x5387:	cmp word [bp + 6], 90	; 4: -125 126 6 90
 x5391:	jg isupper$23	; 2: 127 5
 
-isupper$21:	; £temporary338 = 1
+isupper$21:	; £temporary343 = 1
 x5393:	mov bx, 1	; 3: -69 1 0
 
 isupper$22:	; goto 24
 x5396:	jmp isupper$24	; 2: -21 3
 
-isupper$23:	; £temporary338 = 0
+isupper$23:	; £temporary343 = 0
 x5398:	mov bx, 0	; 3: -69 0 0
 
-isupper$24:	; return_value = £temporary338
+isupper$24:	; return_value = £temporary343
 
 isupper$25:	; return
 x5401:	mov ax, [bp]	; 3: -117 70 0
@@ -3365,19 +3365,19 @@ localeconv:	; if g_currStructPtr == 0 goto 4
 x5412:	cmp word [@22$g_currStructPtr], 0	; 5: -125 62 66 21 0
 x5417:	je localeconv$4	; 2: 116 9
 
-localeconv$1:	; £temporary478 -> g_currStructPtr = *g_currStructPtr, offset 2
+localeconv$1:	; £temporary483 -> g_currStructPtr = *g_currStructPtr, offset 2
 x5419:	mov si, [@22$g_currStructPtr]	; 4: -117 54 66 21
 
-localeconv$2:	; £temporary482 = £temporary478 -> g_currStructPtr
+localeconv$2:	; £temporary487 = £temporary483 -> g_currStructPtr
 x5423:	mov bx, [si + 2]	; 3: -117 92 2
 
 localeconv$3:	; goto 5
 x5426:	jmp localeconv$5	; 2: -21 3
 
-localeconv$4:	; £temporary482 = 0
+localeconv$4:	; £temporary487 = 0
 x5428:	mov bx, 0	; 3: -69 0 0
 
-localeconv$5:	; return_value = £temporary482
+localeconv$5:	; return_value = £temporary487
 
 localeconv$6:	; return
 x5431:	mov ax, [bp]	; 3: -117 70 0
@@ -3855,49 +3855,49 @@ x6836:	db "US", 0	; 3: 85 83 0
 string_SE#:
 x6839:	db "SE", 0	; 3: 83 69 0
 
-strchr:	; £temporary3288 = int_to_int i (Signed_Int -> Signed_Char)
+strchr:	; £temporary3293 = int_to_int i (Signed_Int -> Signed_Char)
 x6842:	mov ax, [bp + 8]	; 3: -117 70 8
 x6845:	cmp ax, 0	; 3: -125 -8 0
 x6848:	jge strchr$1	; 2: 125 4
 x6850:	neg ax	; 2: -9 -40
 x6852:	neg al	; 2: -10 -40
 
-strchr$1:	; c = £temporary3288
+strchr$1:	; c = £temporary3293
 x6854:	mov [bp + 12], al	; 3: -120 70 12
 
 strchr$2:	; index = 0
 x6857:	mov word [bp + 10], 0	; 5: -57 70 10 0 0
 
-strchr$3:	; £temporary3290 = text + index
+strchr$3:	; £temporary3295 = text + index
 x6862:	mov si, [bp + 6]	; 3: -117 118 6
 x6865:	add si, [bp + 10]	; 3: 3 118 10
 
-strchr$4:	; £temporary3289 -> £temporary3290 = *£temporary3290
+strchr$4:	; £temporary3294 -> £temporary3295 = *£temporary3295
 
-strchr$5:	; if £temporary3289 -> £temporary3290 == 0 goto 16
+strchr$5:	; if £temporary3294 -> £temporary3295 == 0 goto 16
 x6868:	cmp byte [si], 0	; 3: -128 60 0
 x6871:	je strchr$16	; 2: 116 35
 
-strchr$6:	; £temporary3294 = text + index
+strchr$6:	; £temporary3299 = text + index
 x6873:	mov si, [bp + 6]	; 3: -117 118 6
 x6876:	add si, [bp + 10]	; 3: 3 118 10
 
-strchr$7:	; £temporary3293 -> £temporary3294 = *£temporary3294
+strchr$7:	; £temporary3298 -> £temporary3299 = *£temporary3299
 
-strchr$8:	; if £temporary3293 -> £temporary3294 != c goto 14
+strchr$8:	; if £temporary3298 -> £temporary3299 != c goto 14
 x6879:	mov al, [bp + 12]	; 3: -118 70 12
 x6882:	cmp [si], al	; 2: 56 4
 x6884:	jne strchr$14	; 2: 117 17
 
-strchr$9:	; £temporary3297 = text + index
+strchr$9:	; £temporary3302 = text + index
 x6886:	mov bx, [bp + 6]	; 3: -117 94 6
 x6889:	add bx, [bp + 10]	; 3: 3 94 10
 
-strchr$10:	; £temporary3296 -> £temporary3297 = *£temporary3297
+strchr$10:	; £temporary3301 -> £temporary3302 = *£temporary3302
 
-strchr$11:	; £temporary3298 = &£temporary3296 -> £temporary3297
+strchr$11:	; £temporary3303 = &£temporary3301 -> £temporary3302
 
-strchr$12:	; return_value = £temporary3298
+strchr$12:	; return_value = £temporary3303
 
 strchr$13:	; return
 x6892:	mov ax, [bp]	; 3: -117 70 0
@@ -4000,16 +4000,16 @@ printUnsignedLong$22:	; if capital == 0 goto 25
 x7026:	cmp word [bp + 20], 0	; 4: -125 126 20 0
 x7030:	je printUnsignedLong$25	; 2: 116 4
 
-printUnsignedLong$23:	; £temporary1945 = 88
+printUnsignedLong$23:	; £temporary1950 = 88
 x7032:	mov al, 88	; 2: -80 88
 
 printUnsignedLong$24:	; goto 26
 x7034:	jmp printUnsignedLong$26	; 2: -21 2
 
-printUnsignedLong$25:	; £temporary1945 = 120
+printUnsignedLong$25:	; £temporary1950 = 120
 x7036:	mov al, 120	; 2: -80 120
 
-printUnsignedLong$26:	; parameter £temporary1945, offset 6
+printUnsignedLong$26:	; parameter £temporary1950, offset 6
 x7038:	mov [bp + 28], al	; 3: -120 70 28
 
 printUnsignedLong$27:	; call function noellipse-noellipse printChar
@@ -4075,24 +4075,24 @@ printUnsignedLongRec:	; if unsignedValue <= 0 goto 22
 x7129:	cmp dword [bp + 6], 0	; 5: 102 -125 126 6 0
 x7134:	jbe printUnsignedLongRec$22	; 2: 118 106
 
-printUnsignedLongRec$1:	; £temporary1921 = unsignedValue % base
+printUnsignedLongRec$1:	; £temporary1926 = unsignedValue % base
 x7136:	mov eax, [bp + 6]	; 4: 102 -117 70 6
 x7140:	xor edx, edx	; 3: 102 49 -46
 x7143:	div dword [bp + 10]	; 4: 102 -9 118 10
 
-printUnsignedLongRec$2:	; £temporary1922 = int_to_int £temporary1921 (Unsigned_Long_Int -> Signed_Int)
+printUnsignedLongRec$2:	; £temporary1927 = int_to_int £temporary1926 (Unsigned_Long_Int -> Signed_Int)
 
-printUnsignedLongRec$3:	; digit = £temporary1922
+printUnsignedLongRec$3:	; digit = £temporary1927
 x7147:	mov [bp + 16], dx	; 3: -119 86 16
 
 printUnsignedLongRec$4:	; call header integral zero 0 stack zero 0
 
-printUnsignedLongRec$5:	; £temporary1923 = unsignedValue / base
+printUnsignedLongRec$5:	; £temporary1928 = unsignedValue / base
 x7150:	mov eax, [bp + 6]	; 4: 102 -117 70 6
 x7154:	xor edx, edx	; 3: 102 49 -46
 x7157:	div dword [bp + 10]	; 4: 102 -9 118 10
 
-printUnsignedLongRec$6:	; parameter £temporary1923, offset 6
+printUnsignedLongRec$6:	; parameter £temporary1928, offset 6
 x7161:	mov [bp + 24], eax	; 4: 102 -119 70 24
 
 printUnsignedLongRec$7:	; parameter base, offset 10
@@ -4131,9 +4131,9 @@ x7217:	jmp digitToChar	; 2: -21 34
 
 printUnsignedLongRec$15:	; post call
 
-printUnsignedLongRec$16:	; £temporary1925 = return_value
+printUnsignedLongRec$16:	; £temporary1930 = return_value
 
-printUnsignedLongRec$17:	; c = £temporary1925
+printUnsignedLongRec$17:	; c = £temporary1930
 x7219:	mov [bp + 18], bl	; 3: -120 94 18
 
 printUnsignedLongRec$18:	; call header integral zero 0 stack zero 0
@@ -4162,17 +4162,17 @@ digitToChar:	; if digit >= 10 goto 5
 x7253:	cmp word [bp + 6], 10	; 4: -125 126 6 10
 x7257:	jge digitToChar$5	; 2: 125 26
 
-digitToChar$1:	; £temporary1911 = digit + 48
+digitToChar$1:	; £temporary1916 = digit + 48
 x7259:	mov bx, [bp + 6]	; 3: -117 94 6
 x7262:	add bx, 48	; 3: -125 -61 48
 
-digitToChar$2:	; £temporary1912 = int_to_int £temporary1911 (Signed_Int -> Signed_Char)
+digitToChar$2:	; £temporary1917 = int_to_int £temporary1916 (Signed_Int -> Signed_Char)
 x7265:	cmp bx, 0	; 3: -125 -5 0
 x7268:	jge digitToChar$3	; 2: 125 4
 x7270:	neg bx	; 2: -9 -37
 x7272:	neg bl	; 2: -10 -37
 
-digitToChar$3:	; return_value = £temporary1912
+digitToChar$3:	; return_value = £temporary1917
 
 digitToChar$4:	; return
 x7274:	mov ax, [bp]	; 3: -117 70 0
@@ -4184,20 +4184,20 @@ digitToChar$5:	; if capital == 0 goto 11
 x7285:	cmp word [bp + 8], 0	; 4: -125 126 8 0
 x7289:	je digitToChar$11	; 2: 116 29
 
-digitToChar$6:	; £temporary1913 = digit - 10
+digitToChar$6:	; £temporary1918 = digit - 10
 x7291:	mov bx, [bp + 6]	; 3: -117 94 6
 x7294:	sub bx, 10	; 3: -125 -21 10
 
-digitToChar$7:	; £temporary1914 = £temporary1913 + 65
+digitToChar$7:	; £temporary1919 = £temporary1918 + 65
 x7297:	add bx, 65	; 3: -125 -61 65
 
-digitToChar$8:	; £temporary1915 = int_to_int £temporary1914 (Signed_Int -> Signed_Char)
+digitToChar$8:	; £temporary1920 = int_to_int £temporary1919 (Signed_Int -> Signed_Char)
 x7300:	cmp bx, 0	; 3: -125 -5 0
 x7303:	jge digitToChar$9	; 2: 125 4
 x7305:	neg bx	; 2: -9 -37
 x7307:	neg bl	; 2: -10 -37
 
-digitToChar$9:	; return_value = £temporary1915
+digitToChar$9:	; return_value = £temporary1920
 
 digitToChar$10:	; return
 x7309:	mov ax, [bp]	; 3: -117 70 0
@@ -4205,20 +4205,20 @@ x7312:	mov di, [bp + 4]	; 3: -117 126 4
 x7315:	mov bp, [bp + 2]	; 3: -117 110 2
 x7318:	jmp ax	; 2: -1 -32
 
-digitToChar$11:	; £temporary1916 = digit - 10
+digitToChar$11:	; £temporary1921 = digit - 10
 x7320:	mov bx, [bp + 6]	; 3: -117 94 6
 x7323:	sub bx, 10	; 3: -125 -21 10
 
-digitToChar$12:	; £temporary1917 = £temporary1916 + 97
+digitToChar$12:	; £temporary1922 = £temporary1921 + 97
 x7326:	add bx, 97	; 3: -125 -61 97
 
-digitToChar$13:	; £temporary1918 = int_to_int £temporary1917 (Signed_Int -> Signed_Char)
+digitToChar$13:	; £temporary1923 = int_to_int £temporary1922 (Signed_Int -> Signed_Char)
 x7329:	cmp bx, 0	; 3: -125 -5 0
 x7332:	jge digitToChar$14	; 2: 125 4
 x7334:	neg bx	; 2: -9 -37
 x7336:	neg bl	; 2: -10 -37
 
-digitToChar$14:	; return_value = £temporary1918
+digitToChar$14:	; return_value = £temporary1923
 
 digitToChar$15:	; return
 x7338:	mov ax, [bp]	; 3: -117 70 0
@@ -4256,7 +4256,7 @@ printLongDoublePlain$6:	; post call
 printLongDoublePlain$7:	; push float longDoubleValue
 x7380:	fld qword [bp + 6]	; 3: -35 70 6
 
-printLongDoublePlain$8:	; £temporary1981 = -longDoubleValue
+printLongDoublePlain$8:	; £temporary1986 = -longDoubleValue
 x7383:	fchs	; 2: -39 -32
 
 printLongDoublePlain$9:	; pop float longDoubleValue
@@ -4271,11 +4271,11 @@ x7393:	mov word [bp + 16], 0	; 5: -57 70 16 0 0
 printLongDoublePlain$12:	; push float longDoubleValue
 x7398:	fld qword [bp + 6]	; 3: -35 70 6
 
-printLongDoublePlain$13:	; £temporary1982 = float_to_int longDoubleValue (Long_Double -> Signed_Long_Int)
+printLongDoublePlain$13:	; £temporary1987 = float_to_int longDoubleValue (Long_Double -> Signed_Long_Int)
 x7401:	fistp dword [container4bytes#]	; 4: -37 30 77 29
 x7405:	mov eax, [container4bytes#]	; 4: 102 -95 77 29
 
-printLongDoublePlain$14:	; longValue = £temporary1982
+printLongDoublePlain$14:	; longValue = £temporary1987
 x7409:	mov [bp + 22], eax	; 4: 102 -119 70 22
 
 printLongDoublePlain$15:	; call header integral zero 0 stack zero 0
@@ -4303,10 +4303,10 @@ printLongDoublePlain$20:	; post call
 printLongDoublePlain$21:	; push float longDoubleValue
 x7447:	fld qword [bp + 6]	; 3: -35 70 6
 
-printLongDoublePlain$22:	; £temporary1984 = int_to_float longValue (Signed_Long_Int -> Long_Double)
+printLongDoublePlain$22:	; £temporary1989 = int_to_float longValue (Signed_Long_Int -> Long_Double)
 x7450:	fild dword [bp + 22]	; 3: -37 70 22
 
-printLongDoublePlain$23:	; £temporary1985 = longDoubleValue - £temporary1984
+printLongDoublePlain$23:	; £temporary1990 = longDoubleValue - £temporary1989
 x7453:	fsub	; 2: -34 -23
 
 printLongDoublePlain$24:	; pop float longDoubleValue
@@ -4354,15 +4354,15 @@ x7505:	fld qword [bp + 6]	; 3: -35 70 6
 printLongDoubleFraction$1:	; push float longDoubleValue
 x7508:	fld qword [bp + 6]	; 3: -35 70 6
 
-printLongDoubleFraction$2:	; £temporary1960 = float_to_int longDoubleValue (Long_Double -> Signed_Long_Int)
+printLongDoubleFraction$2:	; £temporary1965 = float_to_int longDoubleValue (Long_Double -> Signed_Long_Int)
 x7511:	fistp dword [container4bytes#]	; 4: -37 30 77 29
 x7515:	mov eax, [container4bytes#]	; 4: 102 -95 77 29
 
-printLongDoubleFraction$3:	; £temporary1961 = int_to_float £temporary1960 (Signed_Long_Int -> Long_Double)
+printLongDoubleFraction$3:	; £temporary1966 = int_to_float £temporary1965 (Signed_Long_Int -> Long_Double)
 x7519:	mov [container4bytes#], eax	; 4: 102 -93 77 29
 x7523:	fild dword [container4bytes#]	; 4: -37 6 77 29
 
-printLongDoubleFraction$4:	; £temporary1962 = longDoubleValue - £temporary1961
+printLongDoubleFraction$4:	; £temporary1967 = longDoubleValue - £temporary1966
 x7527:	fsub	; 2: -34 -23
 
 printLongDoubleFraction$5:	; pop float longDoubleValue
@@ -4396,13 +4396,13 @@ x7570:	jmp printChar	; 3: -23 108 -11
 
 printLongDoubleFraction$13:	; post call
 
-printLongDoubleFraction$14:	; £temporary1968 = precision
+printLongDoubleFraction$14:	; £temporary1973 = precision
 x7573:	mov ax, [bp + 16]	; 3: -117 70 16
 
 printLongDoubleFraction$15:	; --precision
 x7576:	dec word [bp + 16]	; 3: -1 78 16
 
-printLongDoubleFraction$16:	; if £temporary1968 <= 0 goto 34
+printLongDoubleFraction$16:	; if £temporary1973 <= 0 goto 34
 x7579:	cmp ax, 0	; 3: -125 -8 0
 x7582:	jle printLongDoubleFraction$34	; 2: 126 67
 
@@ -4412,32 +4412,32 @@ x7584:	fld qword [float8$10.0#]	; 4: -35 6 -18 29
 printLongDoubleFraction$18:	; push float longDoubleValue
 x7588:	fld qword [bp + 6]	; 3: -35 70 6
 
-printLongDoubleFraction$19:	; £temporary1970 = 10.0 * longDoubleValue
+printLongDoubleFraction$19:	; £temporary1975 = 10.0 * longDoubleValue
 x7591:	fmul	; 2: -34 -55
 
 printLongDoubleFraction$20:	; top float longDoubleValue10
 x7593:	fst qword [bp + 18]	; 3: -35 86 18
 
-printLongDoubleFraction$21:	; £temporary1971 = float_to_int longDoubleValue10 (Long_Double -> Signed_Int)
+printLongDoubleFraction$21:	; £temporary1976 = float_to_int longDoubleValue10 (Long_Double -> Signed_Int)
 x7596:	fistp word [container2bytes#]	; 4: -33 30 0 18
 x7600:	mov ax, [container2bytes#]	; 3: -95 0 18
 
-printLongDoubleFraction$22:	; digitValue = £temporary1971
+printLongDoubleFraction$22:	; digitValue = £temporary1976
 x7603:	mov [bp + 26], ax	; 3: -119 70 26
 
 printLongDoubleFraction$23:	; call header integral zero 0 stack zero 0
 
-printLongDoubleFraction$24:	; £temporary1972 = digitValue + 48
+printLongDoubleFraction$24:	; £temporary1977 = digitValue + 48
 x7606:	mov ax, [bp + 26]	; 3: -117 70 26
 x7609:	add ax, 48	; 3: -125 -64 48
 
-printLongDoubleFraction$25:	; £temporary1973 = int_to_int £temporary1972 (Signed_Int -> Signed_Char)
+printLongDoubleFraction$25:	; £temporary1978 = int_to_int £temporary1977 (Signed_Int -> Signed_Char)
 x7612:	cmp ax, 0	; 3: -125 -8 0
 x7615:	jge printLongDoubleFraction$26	; 2: 125 4
 x7617:	neg ax	; 2: -9 -40
 x7619:	neg al	; 2: -10 -40
 
-printLongDoubleFraction$26:	; parameter £temporary1973, offset 6
+printLongDoubleFraction$26:	; parameter £temporary1978, offset 6
 x7621:	mov [bp + 34], al	; 3: -120 70 34
 
 printLongDoubleFraction$27:	; call function noellipse-noellipse printChar
@@ -4451,10 +4451,10 @@ printLongDoubleFraction$28:	; post call
 printLongDoubleFraction$29:	; push float longDoubleValue10
 x7638:	fld qword [bp + 18]	; 3: -35 70 18
 
-printLongDoubleFraction$30:	; £temporary1975 = int_to_float digitValue (Signed_Int -> Long_Double)
+printLongDoubleFraction$30:	; £temporary1980 = int_to_float digitValue (Signed_Int -> Long_Double)
 x7641:	fild word [bp + 26]	; 3: -33 70 26
 
-printLongDoubleFraction$31:	; £temporary1976 = longDoubleValue10 - £temporary1975
+printLongDoubleFraction$31:	; £temporary1981 = longDoubleValue10 - £temporary1980
 x7644:	fsub	; 2: -34 -23
 
 printLongDoubleFraction$32:	; pop float longDoubleValue
@@ -4489,7 +4489,7 @@ x7681:	jbe fabs$7	; 2: 118 7
 fabs$3:	; push float x
 x7683:	fld qword [bp + 6]	; 3: -35 70 6
 
-fabs$4:	; £temporary883 = -x
+fabs$4:	; £temporary888 = -x
 x7686:	fchs	; 2: -39 -32
 
 fabs$5:	; decrease stack
@@ -4500,7 +4500,7 @@ x7688:	jmp fabs$8	; 2: -21 3
 fabs$7:	; push float x
 x7690:	fld qword [bp + 6]	; 3: -35 70 6
 
-fabs$8:	; return_value = £temporary887
+fabs$8:	; return_value = £temporary892
 
 fabs$9:	; return
 x7693:	mov ax, [bp]	; 3: -117 70 0
@@ -4524,9 +4524,9 @@ x7721:	jmp isupper	; 3: -23 -115 -10
 
 tolower$3:	; post call
 
-tolower$4:	; £temporary417 = return_value
+tolower$4:	; £temporary422 = return_value
 
-tolower$5:	; if £temporary417 == 0 goto 31
+tolower$5:	; if £temporary422 == 0 goto 31
 x7724:	cmp bx, 0	; 3: -125 -5 0
 x7727:	je tolower$31	; 2: 116 122
 
@@ -4540,26 +4540,26 @@ x7740:	jmp localeconv	; 3: -23 -27 -10
 
 tolower$8:	; post call
 
-tolower$9:	; £temporary418 = return_value
+tolower$9:	; £temporary423 = return_value
 
-tolower$10:	; localeConvPtr = £temporary418
+tolower$10:	; localeConvPtr = £temporary423
 x7743:	mov [bp + 8], bx	; 3: -119 94 8
 
 tolower$11:	; if localeConvPtr == 0 goto 28
 x7746:	cmp word [bp + 8], 0	; 4: -125 126 8 0
 x7750:	je tolower$28	; 2: 116 82
 
-tolower$12:	; £temporary420 -> localeConvPtr = *localeConvPtr, offset 12
+tolower$12:	; £temporary425 -> localeConvPtr = *localeConvPtr, offset 12
 x7752:	mov si, [bp + 8]	; 3: -117 118 8
 
-tolower$13:	; lowerCase = £temporary420 -> localeConvPtr
+tolower$13:	; lowerCase = £temporary425 -> localeConvPtr
 x7755:	mov ax, [si + 12]	; 3: -117 68 12
 x7758:	mov [bp + 10], ax	; 3: -119 70 10
 
-tolower$14:	; £temporary421 -> localeConvPtr = *localeConvPtr, offset 14
+tolower$14:	; £temporary426 -> localeConvPtr = *localeConvPtr, offset 14
 x7761:	mov si, [bp + 8]	; 3: -117 118 8
 
-tolower$15:	; upperCase = £temporary421 -> localeConvPtr
+tolower$15:	; upperCase = £temporary426 -> localeConvPtr
 x7764:	mov ax, [si + 14]	; 3: -117 68 14
 x7767:	mov [bp + 12], ax	; 3: -119 70 12
 
@@ -4581,19 +4581,19 @@ x7793:	jmp strchr	; 3: -23 70 -4
 
 tolower$20:	; post call
 
-tolower$21:	; £temporary422 = return_value
+tolower$21:	; £temporary427 = return_value
 
-tolower$22:	; index = £temporary422 - upperCase
+tolower$22:	; index = £temporary427 - upperCase
 x7796:	sub bx, [bp + 12]	; 3: 43 94 12
 x7799:	mov [bp + 14], bx	; 3: -119 94 14
 
-tolower$23:	; £temporary425 = lowerCase + index
+tolower$23:	; £temporary430 = lowerCase + index
 x7802:	mov si, [bp + 10]	; 3: -117 118 10
 x7805:	add si, [bp + 14]	; 3: 3 118 14
 
-tolower$24:	; £temporary424 -> £temporary425 = *£temporary425
+tolower$24:	; £temporary429 -> £temporary430 = *£temporary430
 
-tolower$25:	; £temporary426 = int_to_int £temporary424 -> £temporary425 (Signed_Char -> Signed_Int)
+tolower$25:	; £temporary431 = int_to_int £temporary429 -> £temporary430 (Signed_Char -> Signed_Int)
 x7808:	mov bl, [si]	; 2: -118 28
 x7810:	and bx, 255	; 4: -127 -29 -1 0
 x7814:	cmp bl, 0	; 3: -128 -5 0
@@ -4601,7 +4601,7 @@ x7817:	jge tolower$26	; 2: 125 4
 x7819:	neg bl	; 2: -10 -37
 x7821:	neg bx	; 2: -9 -37
 
-tolower$26:	; return_value = £temporary426
+tolower$26:	; return_value = £temporary431
 
 tolower$27:	; return
 x7823:	mov ax, [bp]	; 3: -117 70 0
@@ -4609,11 +4609,11 @@ x7826:	mov di, [bp + 4]	; 3: -117 126 4
 x7829:	mov bp, [bp + 2]	; 3: -117 110 2
 x7832:	jmp ax	; 2: -1 -32
 
-tolower$28:	; £temporary427 = c + 32
+tolower$28:	; £temporary432 = c + 32
 x7834:	mov bx, [bp + 6]	; 3: -117 94 6
 x7837:	add bx, 32	; 3: -125 -61 32
 
-tolower$29:	; return_value = £temporary427
+tolower$29:	; return_value = £temporary432
 
 tolower$30:	; return
 x7840:	mov ax, [bp]	; 3: -117 70 0
@@ -4687,16 +4687,16 @@ printLongDoubleExpo$15:	; if capital == 0 goto 18
 x7927:	cmp word [bp + 22], 0	; 4: -125 126 22 0
 x7931:	je printLongDoubleExpo$18	; 2: 116 4
 
-printLongDoubleExpo$16:	; £temporary2001 = 69
+printLongDoubleExpo$16:	; £temporary2006 = 69
 x7933:	mov al, 69	; 2: -80 69
 
 printLongDoubleExpo$17:	; goto 19
 x7935:	jmp printLongDoubleExpo$19	; 2: -21 2
 
-printLongDoubleExpo$18:	; £temporary2001 = 101
+printLongDoubleExpo$18:	; £temporary2006 = 101
 x7937:	mov al, 101	; 2: -80 101
 
-printLongDoubleExpo$19:	; parameter £temporary2001, offset 6
+printLongDoubleExpo$19:	; parameter £temporary2006, offset 6
 x7939:	mov [bp + 30], al	; 3: -120 70 30
 
 printLongDoubleExpo$20:	; call function noellipse-noellipse printChar
@@ -4751,7 +4751,7 @@ printLongDoubleExpo$33:	; post call
 printLongDoubleExpo$34:	; push float value
 x8008:	fld qword [bp + 6]	; 3: -35 70 6
 
-printLongDoubleExpo$35:	; £temporary2006 = -value
+printLongDoubleExpo$35:	; £temporary2011 = -value
 x8011:	fchs	; 2: -39 -32
 
 printLongDoubleExpo$36:	; pop float value
@@ -4773,13 +4773,13 @@ x8033:	jmp log10	; 3: -23 -68 0
 
 printLongDoubleExpo$41:	; post call
 
-printLongDoubleExpo$42:	; £temporary2007 = return_value
+printLongDoubleExpo$42:	; £temporary2012 = return_value
 
-printLongDoubleExpo$43:	; £temporary2008 = float_to_int £temporary2007 (Double -> Signed_Int)
+printLongDoubleExpo$43:	; £temporary2013 = float_to_int £temporary2012 (Double -> Signed_Int)
 x8036:	fistp word [container2bytes#]	; 4: -33 30 0 18
 x8040:	mov ax, [container2bytes#]	; 3: -95 0 18
 
-printLongDoubleExpo$44:	; expo = £temporary2008
+printLongDoubleExpo$44:	; expo = £temporary2013
 x8043:	mov [bp + 24], ax	; 3: -119 70 24
 
 printLongDoubleExpo$45:	; push float value
@@ -4794,10 +4794,10 @@ x8052:	fld qword [float8$10.0#]	; 4: -35 6 -18 29
 printLongDoubleExpo$48:	; parameter 10.0, offset 6
 x8056:	fstp qword [bp + 40]	; 3: -35 94 40
 
-printLongDoubleExpo$49:	; £temporary2009 = int_to_float expo (Signed_Int -> Double)
+printLongDoubleExpo$49:	; £temporary2014 = int_to_float expo (Signed_Int -> Double)
 x8059:	fild word [bp + 24]	; 3: -33 70 24
 
-printLongDoubleExpo$50:	; parameter £temporary2009, offset 14
+printLongDoubleExpo$50:	; parameter £temporary2014, offset 14
 x8062:	fstp qword [bp + 48]	; 3: -35 94 48
 
 printLongDoubleExpo$51:	; call function noellipse-noellipse pow
@@ -4811,9 +4811,9 @@ x8079:	fstp qword [bp + 34]	; 3: -35 94 34
 x8082:	fld qword [bp + 26]	; 3: -35 70 26
 x8085:	fld qword [bp + 34]	; 3: -35 70 34
 
-printLongDoubleExpo$53:	; £temporary2010 = return_value
+printLongDoubleExpo$53:	; £temporary2015 = return_value
 
-printLongDoubleExpo$54:	; £temporary2011 = value / £temporary2010
+printLongDoubleExpo$54:	; £temporary2016 = value / £temporary2015
 x8088:	fdiv	; 2: -34 -7
 
 printLongDoubleExpo$55:	; pop float value
@@ -4857,16 +4857,16 @@ printLongDoubleExpo$66:	; if capital == 0 goto 69
 x8137:	cmp word [bp + 22], 0	; 4: -125 126 22 0
 x8141:	je printLongDoubleExpo$69	; 2: 116 4
 
-printLongDoubleExpo$67:	; £temporary2017 = 69
+printLongDoubleExpo$67:	; £temporary2022 = 69
 x8143:	mov al, 69	; 2: -80 69
 
 printLongDoubleExpo$68:	; goto 70
 x8145:	jmp printLongDoubleExpo$70	; 2: -21 2
 
-printLongDoubleExpo$69:	; £temporary2017 = 101
+printLongDoubleExpo$69:	; £temporary2022 = 101
 x8147:	mov al, 101	; 2: -80 101
 
-printLongDoubleExpo$70:	; parameter £temporary2017, offset 6
+printLongDoubleExpo$70:	; parameter £temporary2022, offset 6
 x8149:	mov [bp + 32], al	; 3: -120 70 32
 
 printLongDoubleExpo$71:	; call function noellipse-noellipse printChar
@@ -4879,7 +4879,7 @@ printLongDoubleExpo$72:	; post call
 
 printLongDoubleExpo$73:	; call header integral zero 0 stack zero 0
 
-printLongDoubleExpo$74:	; £temporary2019 = int_to_int expo (Signed_Int -> Signed_Long_Int)
+printLongDoubleExpo$74:	; £temporary2024 = int_to_int expo (Signed_Int -> Signed_Long_Int)
 x8166:	mov ax, [bp + 24]	; 3: -117 70 24
 x8169:	and eax, 65535	; 6: 102 37 -1 -1 0 0
 x8175:	cmp ax, 0	; 3: -125 -8 0
@@ -4887,7 +4887,7 @@ x8178:	jge printLongDoubleExpo$75	; 2: 125 5
 x8180:	neg ax	; 2: -9 -40
 x8182:	neg eax	; 3: 102 -9 -40
 
-printLongDoubleExpo$75:	; parameter £temporary2019, offset 6
+printLongDoubleExpo$75:	; parameter £temporary2024, offset 6
 x8185:	mov [bp + 32], eax	; 4: 102 -119 70 32
 
 printLongDoubleExpo$76:	; parameter 1, offset 10
@@ -4936,12 +4936,12 @@ x8251:	fstp qword [bp + 22]	; 3: -35 94 22
 x8254:	fld qword [bp + 14]	; 3: -35 70 14
 x8257:	fld qword [bp + 22]	; 3: -35 70 22
 
-log10$6:	; £temporary510 = return_value
+log10$6:	; £temporary515 = return_value
 
-log10$7:	; £temporary511 = 0.4342944820 * £temporary510
+log10$7:	; £temporary516 = 0.4342944820 * £temporary515
 x8260:	fmul	; 2: -34 -55
 
-log10$8:	; return_value = £temporary511
+log10$8:	; return_value = £temporary516
 
 log10$9:	; return
 x8262:	mov ax, [bp]	; 3: -117 70 0
@@ -4987,7 +4987,7 @@ x8316:	fld qword [bp + 6]	; 3: -35 70 6
 log$8:	; push float 2.7182818284590452353
 x8319:	fld qword [float8$2.7182818284590452353#]	; 4: -35 6 87 33
 
-log$9:	; £temporary493 = x_plus_1 * 2.7182818284590452353
+log$9:	; £temporary498 = x_plus_1 * 2.7182818284590452353
 x8323:	fmul	; 2: -34 -55
 
 log$10:	; pop float x_plus_1
@@ -5017,7 +5017,7 @@ x8348:	fld qword [bp + 6]	; 3: -35 70 6
 log$17:	; push float 2.7182818284590452353
 x8351:	fld qword [float8$2.7182818284590452353#]	; 4: -35 6 87 33
 
-log$18:	; £temporary496 = x_plus_1 / 2.7182818284590452353
+log$18:	; £temporary501 = x_plus_1 / 2.7182818284590452353
 x8355:	fdiv	; 2: -34 -7
 
 log$19:	; pop float x_plus_1
@@ -5047,7 +5047,7 @@ x8375:	fld qword [bp + 6]	; 3: -35 70 6
 log$27:	; push 1
 x8378:	fld1	; 2: -39 -24
 
-log$28:	; £temporary498 = x_plus_1 - 1
+log$28:	; £temporary503 = x_plus_1 - 1
 x8380:	fsub	; 2: -34 -23
 
 log$29:	; pop float x
@@ -5089,10 +5089,10 @@ x8412:	fld1	; 2: -39 -24
 log$41:	; n = n - 1
 x8414:	fsub	; 2: -34 -23
 
-log$42:	; £temporary500 = power / £temporary499
+log$42:	; £temporary505 = power / £temporary504
 x8416:	fdiv	; 2: -34 -7
 
-log$43:	; £temporary501 = plusMinusOne * £temporary500
+log$43:	; £temporary506 = plusMinusOne * £temporary505
 x8418:	fmul	; 2: -34 -55
 
 log$44:	; pop float term
@@ -5104,7 +5104,7 @@ x8423:	fld qword [bp + 48]	; 3: -35 70 48
 log$46:	; push float term
 x8426:	fld qword [bp + 40]	; 3: -35 70 40
 
-log$47:	; £temporary502 = sum + term
+log$47:	; £temporary507 = sum + term
 x8429:	fadd	; 2: -34 -63
 
 log$48:	; pop float sum
@@ -5116,7 +5116,7 @@ x8434:	fld qword [bp + 56]	; 3: -35 70 56
 log$50:	; push float x
 x8437:	fld qword [bp + 32]	; 3: -35 70 32
 
-log$51:	; £temporary503 = power * x
+log$51:	; £temporary508 = power * x
 x8440:	fmul	; 2: -34 -55
 
 log$52:	; pop float power
@@ -5128,7 +5128,7 @@ x8445:	fld qword [bp + 24]	; 3: -35 70 24
 log$54:	; push float -1.0
 x8448:	fld qword [float8$minus1.0#]	; 4: -35 6 103 33
 
-log$55:	; £temporary504 = plusMinusOne * -1.0
+log$55:	; £temporary509 = plusMinusOne * -1.0
 x8452:	fmul	; 2: -34 -55
 
 log$56:	; pop float plusMinusOne
@@ -5150,12 +5150,12 @@ x8474:	jmp fabs	; 3: -23 -39 -4
 
 log$61:	; post call
 
-log$62:	; £temporary505 = return_value
+log$62:	; £temporary510 = return_value
 
 log$63:	; push float 0.000000001
 x8477:	fld qword [float8$0.000000001#]	; 4: -35 6 111 33
 
-log$64:	; if £temporary505 > 0.000000001 goto 34
+log$64:	; if £temporary510 > 0.000000001 goto 34
 x8481:	fcompp	; 2: -34 -39
 x8483:	fstsw ax	; 3: -101 -33 -32
 x8486:	sahf	; 1: -98
@@ -5164,13 +5164,13 @@ x8487:	jb log$34	; 2: 114 -93
 log$65:	; push float sum
 x8489:	fld qword [bp + 48]	; 3: -35 70 48
 
-log$66:	; £temporary507 = int_to_float expo (Signed_Int -> Double)
+log$66:	; £temporary512 = int_to_float expo (Signed_Int -> Double)
 x8492:	fild word [bp + 14]	; 3: -33 70 14
 
-log$67:	; £temporary508 = sum + £temporary507
+log$67:	; £temporary513 = sum + £temporary512
 x8495:	fadd	; 2: -34 -63
 
-log$68:	; return_value = £temporary508
+log$68:	; return_value = £temporary513
 
 log$69:	; return
 x8497:	mov ax, [bp]	; 3: -117 70 0
@@ -5249,12 +5249,12 @@ x8608:	fstp qword [bp + 30]	; 3: -35 94 30
 x8611:	fld qword [bp + 22]	; 3: -35 70 22
 x8614:	fld qword [bp + 30]	; 3: -35 70 30
 
-pow$10:	; £temporary536 = return_value
+pow$10:	; £temporary541 = return_value
 
-pow$11:	; £temporary537 = y * £temporary536
+pow$11:	; £temporary542 = y * £temporary541
 x8617:	fmul	; 2: -34 -55
 
-pow$12:	; parameter £temporary537, offset 6
+pow$12:	; parameter £temporary542, offset 6
 x8619:	fstp qword [bp + 28]	; 3: -35 94 28
 
 pow$13:	; call function noellipse-noellipse exp
@@ -5266,9 +5266,9 @@ x8634:	jmp exp	; 2: -21 30
 
 pow$14:	; post call
 
-pow$15:	; £temporary538 = return_value
+pow$15:	; £temporary543 = return_value
 
-pow$16:	; return_value = £temporary538
+pow$16:	; return_value = £temporary543
 
 pow$17:	; return
 x8636:	mov ax, [bp]	; 3: -117 70 0
@@ -5322,7 +5322,7 @@ x8686:	fld qword [bp + 30]	; 3: -35 70 30
 exp$9:	; push float faculty
 x8689:	fld qword [bp + 22]	; 3: -35 70 22
 
-exp$10:	; £temporary483 = power / faculty
+exp$10:	; £temporary488 = power / faculty
 x8692:	fdiv	; 2: -34 -7
 
 exp$11:	; pop float term
@@ -5334,7 +5334,7 @@ x8697:	fld qword [bp + 46]	; 3: -35 70 46
 exp$13:	; push float term
 x8700:	fld qword [bp + 38]	; 3: -35 70 38
 
-exp$14:	; £temporary484 = sum + term
+exp$14:	; £temporary489 = sum + term
 x8703:	fadd	; 2: -34 -63
 
 exp$15:	; pop float sum
@@ -5346,7 +5346,7 @@ x8708:	fld qword [bp + 30]	; 3: -35 70 30
 exp$17:	; push float x
 x8711:	fld qword [bp + 6]	; 3: -35 70 6
 
-exp$18:	; £temporary485 = power * x
+exp$18:	; £temporary490 = power * x
 x8714:	fmul	; 2: -34 -55
 
 exp$19:	; pop float power
@@ -5367,7 +5367,7 @@ x8727:	fadd	; 2: -34 -63
 exp$24:	; top float n
 x8729:	fst qword [bp + 14]	; 3: -35 86 14
 
-exp$25:	; £temporary487 = faculty * £temporary486
+exp$25:	; £temporary492 = faculty * £temporary491
 x8732:	fmul	; 2: -34 -55
 
 exp$26:	; pop float faculty
@@ -5389,12 +5389,12 @@ x8754:	jmp fabs	; 3: -23 -63 -5
 
 exp$31:	; post call
 
-exp$32:	; £temporary488 = return_value
+exp$32:	; £temporary493 = return_value
 
 exp$33:	; push float 0.000000001
 x8757:	fld qword [float8$0.000000001#]	; 4: -35 6 111 33
 
-exp$34:	; if £temporary488 >= 0.000000001 goto 8
+exp$34:	; if £temporary493 >= 0.000000001 goto 8
 x8761:	fcompp	; 2: -34 -39
 x8763:	fstsw ax	; 3: -101 -33 -32
 x8766:	sahf	; 1: -98
@@ -5421,16 +5421,16 @@ isdigit$1:	; if c > 57 goto 4
 x8789:	cmp word [bp + 6], 57	; 4: -125 126 6 57
 x8793:	jg isdigit$4	; 2: 127 5
 
-isdigit$2:	; £temporary352 = 1
+isdigit$2:	; £temporary357 = 1
 x8795:	mov bx, 1	; 3: -69 1 0
 
 isdigit$3:	; goto 5
 x8798:	jmp isdigit$5	; 2: -21 3
 
-isdigit$4:	; £temporary352 = 0
+isdigit$4:	; £temporary357 = 0
 x8800:	mov bx, 0	; 3: -69 0 0
 
-isdigit$5:	; return_value = £temporary352
+isdigit$5:	; return_value = £temporary357
 
 isdigit$6:	; return
 x8803:	mov ax, [bp]	; 3: -117 70 0
@@ -5444,52 +5444,52 @@ mktime:	; if tp == 0 goto 28
 x8814:	cmp word [bp + 6], 0	; 4: -125 126 6 0
 x8818:	je mktime$28	; 4: 15 -124 -40 0
 
-mktime$1:	; £temporary2758 -> tp = *tp, offset 10
+mktime$1:	; £temporary2763 -> tp = *tp, offset 10
 x8822:	mov si, [bp + 6]	; 3: -117 118 6
 
-mktime$2:	; £temporary2759 = £temporary2758 -> tp - 69
+mktime$2:	; £temporary2764 = £temporary2763 -> tp - 69
 x8825:	mov ax, [si + 10]	; 3: -117 68 10
 x8828:	sub ax, 69	; 3: -125 -24 69
 
-mktime$3:	; £temporary2760 = £temporary2759 / 4
+mktime$3:	; £temporary2765 = £temporary2764 / 4
 x8831:	xor dx, dx	; 2: 49 -46
 x8833:	idiv word [int2$4#]	; 4: -9 62 95 35
 
-mktime$4:	; £temporary2761 = int_to_int £temporary2760 (Signed_Int -> Signed_Long_Int)
+mktime$4:	; £temporary2766 = int_to_int £temporary2765 (Signed_Int -> Signed_Long_Int)
 x8837:	and eax, 65535	; 6: 102 37 -1 -1 0 0
 x8843:	cmp ax, 0	; 3: -125 -8 0
 x8846:	jge mktime$5	; 2: 125 5
 x8848:	neg ax	; 2: -9 -40
 x8850:	neg eax	; 3: 102 -9 -40
 
-mktime$5:	; leapDays = £temporary2761
+mktime$5:	; leapDays = £temporary2766
 x8853:	mov [bp + 8], eax	; 4: 102 -119 70 8
 
-mktime$6:	; £temporary2762 -> tp = *tp, offset 10
+mktime$6:	; £temporary2767 -> tp = *tp, offset 10
 x8857:	mov si, [bp + 6]	; 3: -117 118 6
 
-mktime$7:	; £temporary2763 = £temporary2762 -> tp - 70
+mktime$7:	; £temporary2768 = £temporary2767 -> tp - 70
 x8860:	mov ax, [si + 10]	; 3: -117 68 10
 x8863:	sub ax, 70	; 3: -125 -24 70
 
-mktime$8:	; £temporary2764 = £temporary2763 * 365
+mktime$8:	; £temporary2769 = £temporary2768 * 365
 x8866:	xor dx, dx	; 2: 49 -46
 x8868:	imul word [int2$365#]	; 4: -9 46 97 35
 
-mktime$9:	; £temporary2765 = int_to_int £temporary2764 (Signed_Int -> Signed_Long_Int)
+mktime$9:	; £temporary2770 = int_to_int £temporary2769 (Signed_Int -> Signed_Long_Int)
 x8872:	and eax, 65535	; 6: 102 37 -1 -1 0 0
 x8878:	cmp ax, 0	; 3: -125 -8 0
 x8881:	jge mktime$10	; 2: 125 5
 x8883:	neg ax	; 2: -9 -40
 x8885:	neg eax	; 3: 102 -9 -40
 
-mktime$10:	; £temporary2766 = £temporary2765 + leapDays
+mktime$10:	; £temporary2771 = £temporary2770 + leapDays
 x8888:	add eax, [bp + 8]	; 4: 102 3 70 8
 
-mktime$11:	; £temporary2767 -> tp = *tp, offset 14
+mktime$11:	; £temporary2772 -> tp = *tp, offset 14
 x8892:	mov si, [bp + 6]	; 3: -117 118 6
 
-mktime$12:	; £temporary2768 = int_to_int £temporary2767 -> tp (Signed_Int -> Signed_Long_Int)
+mktime$12:	; £temporary2773 = int_to_int £temporary2772 -> tp (Signed_Int -> Signed_Long_Int)
 x8895:	mov bx, [si + 14]	; 3: -117 92 14
 x8898:	and ebx, 65535	; 7: 102 -127 -29 -1 -1 0 0
 x8905:	cmp bx, 0	; 3: -125 -5 0
@@ -5497,20 +5497,20 @@ x8908:	jge mktime$13	; 2: 125 5
 x8910:	neg bx	; 2: -9 -37
 x8912:	neg ebx	; 3: 102 -9 -37
 
-mktime$13:	; totalDays = £temporary2766 + £temporary2768
+mktime$13:	; totalDays = £temporary2771 + £temporary2773
 x8915:	add eax, ebx	; 3: 102 1 -40
 x8918:	mov [bp + 12], eax	; 4: 102 -119 70 12
 
-mktime$14:	; £temporary2770 = totalDays * 86400
+mktime$14:	; £temporary2775 = totalDays * 86400
 x8922:	mov eax, [bp + 12]	; 4: 102 -117 70 12
 x8926:	xor edx, edx	; 3: 102 49 -46
 x8929:	imul dword [int4$86400#]	; 5: 102 -9 46 99 35
 x8934:	mov ebx, eax	; 3: 102 -119 -61
 
-mktime$15:	; £temporary2771 -> tp = *tp, offset 4
+mktime$15:	; £temporary2776 -> tp = *tp, offset 4
 x8937:	mov si, [bp + 6]	; 3: -117 118 6
 
-mktime$16:	; £temporary2772 = int_to_int £temporary2771 -> tp (Signed_Int -> Signed_Long_Int)
+mktime$16:	; £temporary2777 = int_to_int £temporary2776 -> tp (Signed_Int -> Signed_Long_Int)
 x8940:	mov ax, [si + 4]	; 3: -117 68 4
 x8943:	and eax, 65535	; 6: 102 37 -1 -1 0 0
 x8949:	cmp ax, 0	; 3: -125 -8 0
@@ -5518,17 +5518,17 @@ x8952:	jge mktime$17	; 2: 125 5
 x8954:	neg ax	; 2: -9 -40
 x8956:	neg eax	; 3: 102 -9 -40
 
-mktime$17:	; £temporary2773 = £temporary2772 * 3600
+mktime$17:	; £temporary2778 = £temporary2777 * 3600
 x8959:	xor edx, edx	; 3: 102 49 -46
 x8962:	imul dword [int4$3600#]	; 5: 102 -9 46 103 35
 
-mktime$18:	; £temporary2774 = £temporary2770 + £temporary2773
+mktime$18:	; £temporary2779 = £temporary2775 + £temporary2778
 x8967:	add ebx, eax	; 3: 102 1 -61
 
-mktime$19:	; £temporary2775 -> tp = *tp, offset 2
+mktime$19:	; £temporary2780 -> tp = *tp, offset 2
 x8970:	mov si, [bp + 6]	; 3: -117 118 6
 
-mktime$20:	; £temporary2776 = int_to_int £temporary2775 -> tp (Signed_Int -> Signed_Long_Int)
+mktime$20:	; £temporary2781 = int_to_int £temporary2780 -> tp (Signed_Int -> Signed_Long_Int)
 x8973:	mov ax, [si + 2]	; 3: -117 68 2
 x8976:	and eax, 65535	; 6: 102 37 -1 -1 0 0
 x8982:	cmp ax, 0	; 3: -125 -8 0
@@ -5536,17 +5536,17 @@ x8985:	jge mktime$21	; 2: 125 5
 x8987:	neg ax	; 2: -9 -40
 x8989:	neg eax	; 3: 102 -9 -40
 
-mktime$21:	; £temporary2777 = £temporary2776 * 60
+mktime$21:	; £temporary2782 = £temporary2781 * 60
 x8992:	xor edx, edx	; 3: 102 49 -46
 x8995:	imul dword [int4$60#]	; 5: 102 -9 46 107 35
 
-mktime$22:	; £temporary2778 = £temporary2774 + £temporary2777
+mktime$22:	; £temporary2783 = £temporary2779 + £temporary2782
 x9000:	add ebx, eax	; 3: 102 1 -61
 
-mktime$23:	; £temporary2779 -> tp = *tp
+mktime$23:	; £temporary2784 -> tp = *tp
 x9003:	mov si, [bp + 6]	; 3: -117 118 6
 
-mktime$24:	; £temporary2780 = int_to_int £temporary2779 -> tp (Signed_Int -> Signed_Long_Int)
+mktime$24:	; £temporary2785 = int_to_int £temporary2784 -> tp (Signed_Int -> Signed_Long_Int)
 x9006:	mov ax, [si]	; 2: -117 4
 x9008:	and eax, 65535	; 6: 102 37 -1 -1 0 0
 x9014:	cmp ax, 0	; 3: -125 -8 0
@@ -5554,10 +5554,10 @@ x9017:	jge mktime$25	; 2: 125 5
 x9019:	neg ax	; 2: -9 -40
 x9021:	neg eax	; 3: 102 -9 -40
 
-mktime$25:	; £temporary2781 = £temporary2778 + £temporary2780
+mktime$25:	; £temporary2786 = £temporary2783 + £temporary2785
 x9024:	add ebx, eax	; 3: 102 1 -61
 
-mktime$26:	; return_value = £temporary2781
+mktime$26:	; return_value = £temporary2786
 
 mktime$27:	; return
 x9027:	mov ax, [bp]	; 3: -117 70 0
@@ -5591,13 +5591,13 @@ x9063:	dd 3600	; 4: 16 14 0 0
 int4$60#:
 x9067:	dd 60	; 4: 60 0 0 0
 
-scanf:	; £temporary1791 = &format
+scanf:	; £temporary1796 = &format
 x9071:	mov si, bp	; 2: -119 -18
 x9073:	add si, 6	; 3: -125 -58 6
 
-scanf$1:	; £temporary1792 = int_to_int £temporary1791 (Pointer -> Pointer)
+scanf$1:	; £temporary1797 = int_to_int £temporary1796 (Pointer -> Pointer)
 
-scanf$2:	; arg_list = £temporary1792 + 2
+scanf$2:	; arg_list = £temporary1797 + 2
 x9076:	add si, 2	; 3: -125 -58 2
 x9079:	mov [di + 8], si	; 3: -119 117 8
 
@@ -5622,9 +5622,9 @@ x9111:	jmp vscanf	; 2: -21 11
 
 scanf$7:	; post call
 
-scanf$8:	; £temporary1794 = return_value
+scanf$8:	; £temporary1799 = return_value
 
-scanf$9:	; return_value = £temporary1794
+scanf$9:	; return_value = £temporary1799
 
 scanf$10:	; return
 x9113:	mov ax, [bp]	; 3: -117 70 0
@@ -5657,9 +5657,9 @@ x9154:	jmp vfscanf	; 2: -21 13
 
 vscanf$5:	; post call
 
-vscanf$6:	; £temporary1798 = return_value
+vscanf$6:	; £temporary1803 = return_value
 
-vscanf$7:	; return_value = £temporary1798
+vscanf$7:	; return_value = £temporary1803
 
 vscanf$8:	; return
 x9156:	mov ax, [bp]	; 3: -117 70 0
@@ -5675,10 +5675,10 @@ x9167:	dw g_fileArray	; 2: 33 4
 vfscanf:	; g_inStatus = 0
 x9169:	mov word [g_inStatus], 0	; 6: -57 6 2 36 0 0
 
-vfscanf$1:	; £temporary1810 = int_to_int inStream (Pointer -> Pointer)
+vfscanf$1:	; £temporary1815 = int_to_int inStream (Pointer -> Pointer)
 x9175:	mov ax, [bp + 6]	; 3: -117 70 6
 
-vfscanf$2:	; g_inDevice = £temporary1810
+vfscanf$2:	; g_inDevice = £temporary1815
 x9178:	mov [g_inDevice], ax	; 3: -93 4 36
 
 vfscanf$3:	; call header integral zero 0 stack zero 0
@@ -5700,9 +5700,9 @@ x9205:	jmp scanFormat	; 2: -21 15
 
 vfscanf$7:	; post call
 
-vfscanf$8:	; £temporary1811 = return_value
+vfscanf$8:	; £temporary1816 = return_value
 
-vfscanf$9:	; return_value = £temporary1811
+vfscanf$9:	; return_value = £temporary1816
 
 vfscanf$10:	; return
 x9207:	mov ax, [bp]	; 3: -117 70 0
@@ -5742,27 +5742,27 @@ x9253:	mov word [g_inChars], 0	; 6: -57 6 42 41 0 0
 scanFormat$7:	; index = 0
 x9259:	mov word [bp + 31], 0	; 5: -57 70 31 0 0
 
-scanFormat$8:	; £temporary1601 = format + index
+scanFormat$8:	; £temporary1606 = format + index
 x9264:	mov si, [bp + 6]	; 3: -117 118 6
 x9267:	add si, [bp + 31]	; 3: 3 118 31
 
-scanFormat$9:	; £temporary1600 -> £temporary1601 = *£temporary1601
+scanFormat$9:	; £temporary1605 -> £temporary1606 = *£temporary1606
 
-scanFormat$10:	; if £temporary1600 -> £temporary1601 == 0 goto 325
+scanFormat$10:	; if £temporary1605 -> £temporary1606 == 0 goto 325
 x9270:	cmp byte [si], 0	; 3: -128 60 0
 x9273:	je scanFormat$325	; 4: 15 -124 -36 4
 
-scanFormat$11:	; £temporary1605 = format + index
+scanFormat$11:	; £temporary1610 = format + index
 x9277:	mov si, [bp + 6]	; 3: -117 118 6
 x9280:	add si, [bp + 31]	; 3: 3 118 31
 
-scanFormat$12:	; £temporary1604 -> £temporary1605 = *£temporary1605
+scanFormat$12:	; £temporary1609 -> £temporary1610 = *£temporary1610
 
-scanFormat$13:	; c = £temporary1604 -> £temporary1605
+scanFormat$13:	; c = £temporary1609 -> £temporary1610
 x9283:	mov al, [si]	; 2: -118 4
 x9285:	mov [bp + 10], al	; 3: -120 70 10
 
-scanFormat$14:	; £temporary1606 = int_to_int c (Signed_Char -> Signed_Int)
+scanFormat$14:	; £temporary1611 = int_to_int c (Signed_Char -> Signed_Int)
 x9288:	mov al, [bp + 10]	; 3: -118 70 10
 x9291:	and ax, 255	; 3: 37 -1 0
 x9294:	cmp al, 0	; 2: 60 0
@@ -5770,7 +5770,7 @@ x9296:	jge scanFormat$15	; 2: 125 4
 x9298:	neg al	; 2: -10 -40
 x9300:	neg ax	; 2: -9 -40
 
-scanFormat$15:	; d = £temporary1606 + 1
+scanFormat$15:	; d = £temporary1611 + 1
 x9302:	inc ax	; 1: 64
 x9303:	mov [bp + 55], ax	; 3: -119 70 55
 
@@ -5778,75 +5778,75 @@ scanFormat$16:	; if percent == 0 goto 317
 x9306:	cmp word [bp + 13], 0	; 4: -125 126 13 0
 x9310:	je scanFormat$317	; 4: 15 -124 -110 4
 
-scanFormat$17:	; £temporary1608 = d - 1
+scanFormat$17:	; £temporary1613 = d - 1
 x9314:	mov ax, [bp + 55]	; 3: -117 70 55
 x9317:	dec ax	; 1: 72
 
-scanFormat$18:	; case £temporary1608 == 104 goto 36
+scanFormat$18:	; case £temporary1613 == 104 goto 36
 x9318:	cmp ax, 104	; 3: -125 -8 104
 x9321:	je scanFormat$36	; 2: 116 100
 
-scanFormat$19:	; case £temporary1608 == 108 goto 38
+scanFormat$19:	; case £temporary1613 == 108 goto 38
 x9323:	cmp ax, 108	; 3: -125 -8 108
 x9326:	je scanFormat$38	; 2: 116 103
 
-scanFormat$20:	; case £temporary1608 == 76 goto 40
+scanFormat$20:	; case £temporary1613 == 76 goto 40
 x9328:	cmp ax, 76	; 3: -125 -8 76
 x9331:	je scanFormat$40	; 2: 116 106
 
-scanFormat$21:	; case £temporary1608 == 42 goto 42
+scanFormat$21:	; case £temporary1613 == 42 goto 42
 x9333:	cmp ax, 42	; 3: -125 -8 42
 x9336:	je scanFormat$42	; 2: 116 109
 
-scanFormat$22:	; case £temporary1608 == 99 goto 44
+scanFormat$22:	; case £temporary1613 == 99 goto 44
 x9338:	cmp ax, 99	; 3: -125 -8 99
 x9341:	je scanFormat$44	; 2: 116 112
 
-scanFormat$23:	; case £temporary1608 == 115 goto 62
+scanFormat$23:	; case £temporary1613 == 115 goto 62
 x9343:	cmp ax, 115	; 3: -125 -8 115
 x9346:	je scanFormat$62	; 4: 15 -124 -72 0
 
-scanFormat$24:	; case £temporary1608 == 100 goto 81
+scanFormat$24:	; case £temporary1613 == 100 goto 81
 x9350:	cmp ax, 100	; 3: -125 -8 100
 x9353:	je scanFormat$81	; 4: 15 -124 1 1
 
-scanFormat$25:	; case £temporary1608 == 105 goto 81
+scanFormat$25:	; case £temporary1613 == 105 goto 81
 x9357:	cmp ax, 105	; 3: -125 -8 105
 x9360:	je scanFormat$81	; 4: 15 -124 -6 0
 
-scanFormat$26:	; case £temporary1608 == 111 goto 116
+scanFormat$26:	; case £temporary1613 == 111 goto 116
 x9364:	cmp ax, 111	; 3: -125 -8 111
 x9367:	je scanFormat$116	; 4: 15 -124 -126 1
 
-scanFormat$27:	; case £temporary1608 == 120 goto 152
+scanFormat$27:	; case £temporary1613 == 120 goto 152
 x9371:	cmp ax, 120	; 3: -125 -8 120
 x9374:	je scanFormat$152	; 4: 15 -124 -4 1
 
-scanFormat$28:	; case £temporary1608 == 117 goto 188
+scanFormat$28:	; case £temporary1613 == 117 goto 188
 x9378:	cmp ax, 117	; 3: -125 -8 117
 x9381:	je scanFormat$188	; 4: 15 -124 118 2
 
-scanFormat$29:	; case £temporary1608 == 103 goto 224
+scanFormat$29:	; case £temporary1613 == 103 goto 224
 x9385:	cmp ax, 103	; 3: -125 -8 103
 x9388:	je scanFormat$224	; 4: 15 -124 -16 2
 
-scanFormat$30:	; case £temporary1608 == 102 goto 224
+scanFormat$30:	; case £temporary1613 == 102 goto 224
 x9392:	cmp ax, 102	; 3: -125 -8 102
 x9395:	je scanFormat$224	; 4: 15 -124 -23 2
 
-scanFormat$31:	; case £temporary1608 == 101 goto 224
+scanFormat$31:	; case £temporary1613 == 101 goto 224
 x9399:	cmp ax, 101	; 3: -125 -8 101
 x9402:	je scanFormat$224	; 4: 15 -124 -30 2
 
-scanFormat$32:	; case £temporary1608 == 91 goto 260
+scanFormat$32:	; case £temporary1613 == 91 goto 260
 x9406:	cmp ax, 91	; 3: -125 -8 91
 x9409:	je scanFormat$260	; 4: 15 -124 79 3
 
-scanFormat$33:	; case £temporary1608 == 110 goto 301
+scanFormat$33:	; case £temporary1613 == 110 goto 301
 x9413:	cmp ax, 110	; 3: -125 -8 110
 x9416:	je scanFormat$301	; 4: 15 -124 -33 3
 
-scanFormat$34:	; case end £temporary1608
+scanFormat$34:	; case end £temporary1613
 
 scanFormat$35:	; goto 310
 x9420:	jmp scanFormat$310	; 3: -23 -6 3
@@ -5885,9 +5885,9 @@ x9466:	jmp scanChar	; 3: -23 68 4
 
 scanFormat$46:	; post call
 
-scanFormat$47:	; £temporary1609 = return_value
+scanFormat$47:	; £temporary1614 = return_value
 
-scanFormat$48:	; charValue = £temporary1609
+scanFormat$48:	; charValue = £temporary1614
 x9469:	mov [bp + 57], bl	; 3: -120 94 57
 
 scanFormat$49:	; if star != 0 goto 57
@@ -5897,29 +5897,29 @@ x9476:	jne scanFormat$57	; 2: 117 23
 scanFormat$50:	; arg_list = arg_list + 2
 x9478:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$51:	; £temporary1613 = arg_list - 2
+scanFormat$51:	; £temporary1618 = arg_list - 2
 x9482:	mov si, [bp + 8]	; 3: -117 118 8
 x9485:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$52:	; £temporary1614 = int_to_int £temporary1613 (Signed_Int -> Pointer)
+scanFormat$52:	; £temporary1619 = int_to_int £temporary1618 (Signed_Int -> Pointer)
 
-scanFormat$53:	; £temporary1615 -> £temporary1614 = *£temporary1614
+scanFormat$53:	; £temporary1620 -> £temporary1619 = *£temporary1619
 
-scanFormat$54:	; charPtr = £temporary1615 -> £temporary1614
+scanFormat$54:	; charPtr = £temporary1620 -> £temporary1619
 x9488:	mov ax, [si]	; 2: -117 4
 x9490:	mov [bp + 11], ax	; 3: -119 70 11
 
-scanFormat$55:	; £temporary1616 -> charPtr = *charPtr
+scanFormat$55:	; £temporary1621 -> charPtr = *charPtr
 x9493:	mov si, [bp + 11]	; 3: -117 118 11
 
-scanFormat$56:	; £temporary1616 -> charPtr = charValue
+scanFormat$56:	; £temporary1621 -> charPtr = charValue
 x9496:	mov al, [bp + 57]	; 3: -118 70 57
 x9499:	mov [si], al	; 2: -120 4
 
 scanFormat$57:	; percent = 0
 x9501:	mov word [bp + 13], 0	; 5: -57 70 13 0 0
 
-scanFormat$58:	; £temporary1617 = int_to_int charValue (Signed_Char -> Signed_Int)
+scanFormat$58:	; £temporary1622 = int_to_int charValue (Signed_Char -> Signed_Int)
 x9506:	mov al, [bp + 57]	; 3: -118 70 57
 x9509:	and ax, 255	; 3: 37 -1 0
 x9512:	cmp al, 0	; 2: 60 0
@@ -5927,7 +5927,7 @@ x9514:	jge scanFormat$59	; 2: 125 4
 x9516:	neg al	; 2: -10 -40
 x9518:	neg ax	; 2: -9 -40
 
-scanFormat$59:	; if £temporary1617 == -1 goto 323
+scanFormat$59:	; if £temporary1622 == -1 goto 323
 x9520:	cmp ax, -1	; 3: -125 -8 -1
 x9523:	je scanFormat$323	; 4: 15 -124 -36 3
 
@@ -5944,15 +5944,15 @@ x9538:	jne scanFormat$74	; 2: 117 42
 scanFormat$63:	; arg_list = arg_list + 2
 x9540:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$64:	; £temporary1623 = arg_list - 2
+scanFormat$64:	; £temporary1628 = arg_list - 2
 x9544:	mov si, [bp + 8]	; 3: -117 118 8
 x9547:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$65:	; £temporary1624 = int_to_int £temporary1623 (Signed_Int -> Pointer)
+scanFormat$65:	; £temporary1629 = int_to_int £temporary1628 (Signed_Int -> Pointer)
 
-scanFormat$66:	; £temporary1625 -> £temporary1624 = *£temporary1624
+scanFormat$66:	; £temporary1630 -> £temporary1629 = *£temporary1629
 
-scanFormat$67:	; charPtr = £temporary1625 -> £temporary1624
+scanFormat$67:	; charPtr = £temporary1630 -> £temporary1629
 x9550:	mov ax, [si]	; 2: -117 4
 x9552:	mov [bp + 11], ax	; 3: -119 70 11
 
@@ -6008,9 +6008,9 @@ x9625:	jmp scanLongInt	; 3: -23 -104 6
 
 scanFormat$83:	; post call
 
-scanFormat$84:	; £temporary1628 = return_value
+scanFormat$84:	; £temporary1633 = return_value
 
-scanFormat$85:	; longValue = £temporary1628
+scanFormat$85:	; longValue = £temporary1633
 x9628:	mov [bp + 23], ebx	; 4: 102 -119 94 23
 
 scanFormat$86:	; if star != 0 goto 114
@@ -6024,29 +6024,29 @@ x9642:	je scanFormat$97	; 2: 116 37
 scanFormat$88:	; arg_list = arg_list + 2
 x9644:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$89:	; £temporary1632 = arg_list - 2
+scanFormat$89:	; £temporary1637 = arg_list - 2
 x9648:	mov si, [bp + 8]	; 3: -117 118 8
 x9651:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$90:	; £temporary1633 = int_to_int £temporary1632 (Signed_Int -> Pointer)
+scanFormat$90:	; £temporary1638 = int_to_int £temporary1637 (Signed_Int -> Pointer)
 
-scanFormat$91:	; £temporary1634 -> £temporary1633 = *£temporary1633
+scanFormat$91:	; £temporary1639 -> £temporary1638 = *£temporary1638
 
-scanFormat$92:	; shortPtr = £temporary1634 -> £temporary1633
+scanFormat$92:	; shortPtr = £temporary1639 -> £temporary1638
 x9654:	mov ax, [si]	; 2: -117 4
 x9656:	mov [bp + 29], ax	; 3: -119 70 29
 
-scanFormat$93:	; £temporary1635 -> shortPtr = *shortPtr
+scanFormat$93:	; £temporary1640 -> shortPtr = *shortPtr
 x9659:	mov si, [bp + 29]	; 3: -117 118 29
 
-scanFormat$94:	; £temporary1636 = int_to_int longValue (Signed_Long_Int -> Signed_Short_Int)
+scanFormat$94:	; £temporary1641 = int_to_int longValue (Signed_Long_Int -> Signed_Short_Int)
 x9662:	mov eax, [bp + 23]	; 4: 102 -117 70 23
 x9666:	cmp eax, 0	; 4: 102 -125 -8 0
 x9670:	jge scanFormat$95	; 2: 125 5
 x9672:	neg eax	; 3: 102 -9 -40
 x9675:	neg al	; 2: -10 -40
 
-scanFormat$95:	; £temporary1635 -> shortPtr = £temporary1636
+scanFormat$95:	; £temporary1640 -> shortPtr = £temporary1641
 x9677:	mov [si], al	; 2: -120 4
 
 scanFormat$96:	; goto 114
@@ -6059,29 +6059,29 @@ x9685:	jne scanFormat$107	; 2: 117 37
 scanFormat$98:	; arg_list = arg_list + 2
 x9687:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$99:	; £temporary1640 = arg_list - 2
+scanFormat$99:	; £temporary1645 = arg_list - 2
 x9691:	mov si, [bp + 8]	; 3: -117 118 8
 x9694:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$100:	; £temporary1641 = int_to_int £temporary1640 (Signed_Int -> Pointer)
+scanFormat$100:	; £temporary1646 = int_to_int £temporary1645 (Signed_Int -> Pointer)
 
-scanFormat$101:	; £temporary1642 -> £temporary1641 = *£temporary1641
+scanFormat$101:	; £temporary1647 -> £temporary1646 = *£temporary1646
 
-scanFormat$102:	; intPtr = £temporary1642 -> £temporary1641
+scanFormat$102:	; intPtr = £temporary1647 -> £temporary1646
 x9697:	mov ax, [si]	; 2: -117 4
 x9699:	mov [bp + 33], ax	; 3: -119 70 33
 
-scanFormat$103:	; £temporary1643 -> intPtr = *intPtr
+scanFormat$103:	; £temporary1648 -> intPtr = *intPtr
 x9702:	mov si, [bp + 33]	; 3: -117 118 33
 
-scanFormat$104:	; £temporary1644 = int_to_int longValue (Signed_Long_Int -> Signed_Int)
+scanFormat$104:	; £temporary1649 = int_to_int longValue (Signed_Long_Int -> Signed_Int)
 x9705:	mov eax, [bp + 23]	; 4: 102 -117 70 23
 x9709:	cmp eax, 0	; 4: 102 -125 -8 0
 x9713:	jge scanFormat$105	; 2: 125 5
 x9715:	neg eax	; 3: 102 -9 -40
 x9718:	neg ax	; 2: -9 -40
 
-scanFormat$105:	; £temporary1643 -> intPtr = £temporary1644
+scanFormat$105:	; £temporary1648 -> intPtr = £temporary1649
 x9720:	mov [si], ax	; 2: -119 4
 
 scanFormat$106:	; goto 114
@@ -6090,22 +6090,22 @@ x9722:	jmp scanFormat$114	; 2: -21 25
 scanFormat$107:	; arg_list = arg_list + 2
 x9724:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$108:	; £temporary1646 = arg_list - 2
+scanFormat$108:	; £temporary1651 = arg_list - 2
 x9728:	mov si, [bp + 8]	; 3: -117 118 8
 x9731:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$109:	; £temporary1647 = int_to_int £temporary1646 (Signed_Int -> Pointer)
+scanFormat$109:	; £temporary1652 = int_to_int £temporary1651 (Signed_Int -> Pointer)
 
-scanFormat$110:	; £temporary1648 -> £temporary1647 = *£temporary1647
+scanFormat$110:	; £temporary1653 -> £temporary1652 = *£temporary1652
 
-scanFormat$111:	; longPtr = £temporary1648 -> £temporary1647
+scanFormat$111:	; longPtr = £temporary1653 -> £temporary1652
 x9734:	mov ax, [si]	; 2: -117 4
 x9736:	mov [bp + 27], ax	; 3: -119 70 27
 
-scanFormat$112:	; £temporary1649 -> longPtr = *longPtr
+scanFormat$112:	; £temporary1654 -> longPtr = *longPtr
 x9739:	mov si, [bp + 27]	; 3: -117 118 27
 
-scanFormat$113:	; £temporary1649 -> longPtr = longValue
+scanFormat$113:	; £temporary1654 -> longPtr = longValue
 x9742:	mov eax, [bp + 23]	; 4: 102 -117 70 23
 x9746:	mov [si], eax	; 3: 102 -119 4
 
@@ -6128,9 +6128,9 @@ x9776:	jmp scanUnsignedLongInt	; 3: -23 88 7
 
 scanFormat$119:	; post call
 
-scanFormat$120:	; £temporary1651 = return_value
+scanFormat$120:	; £temporary1656 = return_value
 
-scanFormat$121:	; unsignedLongValue = £temporary1651
+scanFormat$121:	; unsignedLongValue = £temporary1656
 x9779:	mov [bp + 37], ebx	; 4: 102 -119 94 37
 
 scanFormat$122:	; if star != 0 goto 150
@@ -6144,25 +6144,25 @@ x9793:	je scanFormat$133	; 2: 116 26
 scanFormat$124:	; arg_list = arg_list + 2
 x9795:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$125:	; £temporary1655 = arg_list - 2
+scanFormat$125:	; £temporary1660 = arg_list - 2
 x9799:	mov si, [bp + 8]	; 3: -117 118 8
 x9802:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$126:	; £temporary1656 = int_to_int £temporary1655 (Signed_Int -> Pointer)
+scanFormat$126:	; £temporary1661 = int_to_int £temporary1660 (Signed_Int -> Pointer)
 
-scanFormat$127:	; £temporary1657 -> £temporary1656 = *£temporary1656
+scanFormat$127:	; £temporary1662 -> £temporary1661 = *£temporary1661
 
-scanFormat$128:	; unsignedShortPtr = £temporary1657 -> £temporary1656
+scanFormat$128:	; unsignedShortPtr = £temporary1662 -> £temporary1661
 x9805:	mov ax, [si]	; 2: -117 4
 x9807:	mov [bp + 43], ax	; 3: -119 70 43
 
-scanFormat$129:	; £temporary1658 -> unsignedShortPtr = *unsignedShortPtr
+scanFormat$129:	; £temporary1663 -> unsignedShortPtr = *unsignedShortPtr
 x9810:	mov si, [bp + 43]	; 3: -117 118 43
 
-scanFormat$130:	; £temporary1659 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Short_Int)
+scanFormat$130:	; £temporary1664 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Short_Int)
 x9813:	mov eax, [bp + 37]	; 4: 102 -117 70 37
 
-scanFormat$131:	; £temporary1658 -> unsignedShortPtr = £temporary1659
+scanFormat$131:	; £temporary1663 -> unsignedShortPtr = £temporary1664
 x9817:	mov [si], al	; 2: -120 4
 
 scanFormat$132:	; goto 150
@@ -6175,25 +6175,25 @@ x9825:	jne scanFormat$143	; 2: 117 26
 scanFormat$134:	; arg_list = arg_list + 2
 x9827:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$135:	; £temporary1663 = arg_list - 2
+scanFormat$135:	; £temporary1668 = arg_list - 2
 x9831:	mov si, [bp + 8]	; 3: -117 118 8
 x9834:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$136:	; £temporary1664 = int_to_int £temporary1663 (Signed_Int -> Pointer)
+scanFormat$136:	; £temporary1669 = int_to_int £temporary1668 (Signed_Int -> Pointer)
 
-scanFormat$137:	; £temporary1665 -> £temporary1664 = *£temporary1664
+scanFormat$137:	; £temporary1670 -> £temporary1669 = *£temporary1669
 
-scanFormat$138:	; unsignedIntPtr = £temporary1665 -> £temporary1664
+scanFormat$138:	; unsignedIntPtr = £temporary1670 -> £temporary1669
 x9837:	mov ax, [si]	; 2: -117 4
 x9839:	mov [bp + 45], ax	; 3: -119 70 45
 
-scanFormat$139:	; £temporary1666 -> unsignedIntPtr = *unsignedIntPtr
+scanFormat$139:	; £temporary1671 -> unsignedIntPtr = *unsignedIntPtr
 x9842:	mov si, [bp + 45]	; 3: -117 118 45
 
-scanFormat$140:	; £temporary1667 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Int)
+scanFormat$140:	; £temporary1672 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Int)
 x9845:	mov eax, [bp + 37]	; 4: 102 -117 70 37
 
-scanFormat$141:	; £temporary1666 -> unsignedIntPtr = £temporary1667
+scanFormat$141:	; £temporary1671 -> unsignedIntPtr = £temporary1672
 x9849:	mov [si], ax	; 2: -119 4
 
 scanFormat$142:	; goto 150
@@ -6202,22 +6202,22 @@ x9851:	jmp scanFormat$150	; 2: -21 25
 scanFormat$143:	; arg_list = arg_list + 2
 x9853:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$144:	; £temporary1669 = arg_list - 2
+scanFormat$144:	; £temporary1674 = arg_list - 2
 x9857:	mov si, [bp + 8]	; 3: -117 118 8
 x9860:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$145:	; £temporary1670 = int_to_int £temporary1669 (Signed_Int -> Pointer)
+scanFormat$145:	; £temporary1675 = int_to_int £temporary1674 (Signed_Int -> Pointer)
 
-scanFormat$146:	; £temporary1671 -> £temporary1670 = *£temporary1670
+scanFormat$146:	; £temporary1676 -> £temporary1675 = *£temporary1675
 
-scanFormat$147:	; unsignedLongPtr = £temporary1671 -> £temporary1670
+scanFormat$147:	; unsignedLongPtr = £temporary1676 -> £temporary1675
 x9863:	mov ax, [si]	; 2: -117 4
 x9865:	mov [bp + 41], ax	; 3: -119 70 41
 
-scanFormat$148:	; £temporary1672 -> unsignedLongPtr = *unsignedLongPtr
+scanFormat$148:	; £temporary1677 -> unsignedLongPtr = *unsignedLongPtr
 x9868:	mov si, [bp + 41]	; 3: -117 118 41
 
-scanFormat$149:	; £temporary1672 -> unsignedLongPtr = unsignedLongValue
+scanFormat$149:	; £temporary1677 -> unsignedLongPtr = unsignedLongValue
 x9871:	mov eax, [bp + 37]	; 4: 102 -117 70 37
 x9875:	mov [si], eax	; 3: 102 -119 4
 
@@ -6240,9 +6240,9 @@ x9905:	jmp scanUnsignedLongInt	; 3: -23 -41 6
 
 scanFormat$155:	; post call
 
-scanFormat$156:	; £temporary1674 = return_value
+scanFormat$156:	; £temporary1679 = return_value
 
-scanFormat$157:	; unsignedLongValue = £temporary1674
+scanFormat$157:	; unsignedLongValue = £temporary1679
 x9908:	mov [bp + 37], ebx	; 4: 102 -119 94 37
 
 scanFormat$158:	; if star != 0 goto 186
@@ -6256,25 +6256,25 @@ x9922:	je scanFormat$169	; 2: 116 26
 scanFormat$160:	; arg_list = arg_list + 2
 x9924:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$161:	; £temporary1678 = arg_list - 2
+scanFormat$161:	; £temporary1683 = arg_list - 2
 x9928:	mov si, [bp + 8]	; 3: -117 118 8
 x9931:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$162:	; £temporary1679 = int_to_int £temporary1678 (Signed_Int -> Pointer)
+scanFormat$162:	; £temporary1684 = int_to_int £temporary1683 (Signed_Int -> Pointer)
 
-scanFormat$163:	; £temporary1680 -> £temporary1679 = *£temporary1679
+scanFormat$163:	; £temporary1685 -> £temporary1684 = *£temporary1684
 
-scanFormat$164:	; unsignedShortPtr = £temporary1680 -> £temporary1679
+scanFormat$164:	; unsignedShortPtr = £temporary1685 -> £temporary1684
 x9934:	mov ax, [si]	; 2: -117 4
 x9936:	mov [bp + 43], ax	; 3: -119 70 43
 
-scanFormat$165:	; £temporary1681 -> unsignedShortPtr = *unsignedShortPtr
+scanFormat$165:	; £temporary1686 -> unsignedShortPtr = *unsignedShortPtr
 x9939:	mov si, [bp + 43]	; 3: -117 118 43
 
-scanFormat$166:	; £temporary1682 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Short_Int)
+scanFormat$166:	; £temporary1687 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Short_Int)
 x9942:	mov eax, [bp + 37]	; 4: 102 -117 70 37
 
-scanFormat$167:	; £temporary1681 -> unsignedShortPtr = £temporary1682
+scanFormat$167:	; £temporary1686 -> unsignedShortPtr = £temporary1687
 x9946:	mov [si], al	; 2: -120 4
 
 scanFormat$168:	; goto 186
@@ -6287,25 +6287,25 @@ x9954:	jne scanFormat$179	; 2: 117 26
 scanFormat$170:	; arg_list = arg_list + 2
 x9956:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$171:	; £temporary1686 = arg_list - 2
+scanFormat$171:	; £temporary1691 = arg_list - 2
 x9960:	mov si, [bp + 8]	; 3: -117 118 8
 x9963:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$172:	; £temporary1687 = int_to_int £temporary1686 (Signed_Int -> Pointer)
+scanFormat$172:	; £temporary1692 = int_to_int £temporary1691 (Signed_Int -> Pointer)
 
-scanFormat$173:	; £temporary1688 -> £temporary1687 = *£temporary1687
+scanFormat$173:	; £temporary1693 -> £temporary1692 = *£temporary1692
 
-scanFormat$174:	; unsignedIntPtr = £temporary1688 -> £temporary1687
+scanFormat$174:	; unsignedIntPtr = £temporary1693 -> £temporary1692
 x9966:	mov ax, [si]	; 2: -117 4
 x9968:	mov [bp + 45], ax	; 3: -119 70 45
 
-scanFormat$175:	; £temporary1689 -> unsignedIntPtr = *unsignedIntPtr
+scanFormat$175:	; £temporary1694 -> unsignedIntPtr = *unsignedIntPtr
 x9971:	mov si, [bp + 45]	; 3: -117 118 45
 
-scanFormat$176:	; £temporary1690 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Int)
+scanFormat$176:	; £temporary1695 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Int)
 x9974:	mov eax, [bp + 37]	; 4: 102 -117 70 37
 
-scanFormat$177:	; £temporary1689 -> unsignedIntPtr = £temporary1690
+scanFormat$177:	; £temporary1694 -> unsignedIntPtr = £temporary1695
 x9978:	mov [si], ax	; 2: -119 4
 
 scanFormat$178:	; goto 186
@@ -6314,22 +6314,22 @@ x9980:	jmp scanFormat$186	; 2: -21 25
 scanFormat$179:	; arg_list = arg_list + 2
 x9982:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$180:	; £temporary1692 = arg_list - 2
+scanFormat$180:	; £temporary1697 = arg_list - 2
 x9986:	mov si, [bp + 8]	; 3: -117 118 8
 x9989:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$181:	; £temporary1693 = int_to_int £temporary1692 (Signed_Int -> Pointer)
+scanFormat$181:	; £temporary1698 = int_to_int £temporary1697 (Signed_Int -> Pointer)
 
-scanFormat$182:	; £temporary1694 -> £temporary1693 = *£temporary1693
+scanFormat$182:	; £temporary1699 -> £temporary1698 = *£temporary1698
 
-scanFormat$183:	; unsignedLongPtr = £temporary1694 -> £temporary1693
+scanFormat$183:	; unsignedLongPtr = £temporary1699 -> £temporary1698
 x9992:	mov ax, [si]	; 2: -117 4
 x9994:	mov [bp + 41], ax	; 3: -119 70 41
 
-scanFormat$184:	; £temporary1695 -> unsignedLongPtr = *unsignedLongPtr
+scanFormat$184:	; £temporary1700 -> unsignedLongPtr = *unsignedLongPtr
 x9997:	mov si, [bp + 41]	; 3: -117 118 41
 
-scanFormat$185:	; £temporary1695 -> unsignedLongPtr = unsignedLongValue
+scanFormat$185:	; £temporary1700 -> unsignedLongPtr = unsignedLongValue
 x10000:	mov eax, [bp + 37]	; 4: 102 -117 70 37
 x10004:	mov [si], eax	; 3: 102 -119 4
 
@@ -6352,9 +6352,9 @@ x10034:	jmp scanUnsignedLongInt	; 3: -23 86 6
 
 scanFormat$191:	; post call
 
-scanFormat$192:	; £temporary1697 = return_value
+scanFormat$192:	; £temporary1702 = return_value
 
-scanFormat$193:	; unsignedLongValue = £temporary1697
+scanFormat$193:	; unsignedLongValue = £temporary1702
 x10037:	mov [bp + 37], ebx	; 4: 102 -119 94 37
 
 scanFormat$194:	; if star != 0 goto 222
@@ -6368,25 +6368,25 @@ x10051:	je scanFormat$205	; 2: 116 26
 scanFormat$196:	; arg_list = arg_list + 2
 x10053:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$197:	; £temporary1701 = arg_list - 2
+scanFormat$197:	; £temporary1706 = arg_list - 2
 x10057:	mov si, [bp + 8]	; 3: -117 118 8
 x10060:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$198:	; £temporary1702 = int_to_int £temporary1701 (Signed_Int -> Pointer)
+scanFormat$198:	; £temporary1707 = int_to_int £temporary1706 (Signed_Int -> Pointer)
 
-scanFormat$199:	; £temporary1703 -> £temporary1702 = *£temporary1702
+scanFormat$199:	; £temporary1708 -> £temporary1707 = *£temporary1707
 
-scanFormat$200:	; unsignedShortPtr = £temporary1703 -> £temporary1702
+scanFormat$200:	; unsignedShortPtr = £temporary1708 -> £temporary1707
 x10063:	mov ax, [si]	; 2: -117 4
 x10065:	mov [bp + 43], ax	; 3: -119 70 43
 
-scanFormat$201:	; £temporary1704 -> unsignedShortPtr = *unsignedShortPtr
+scanFormat$201:	; £temporary1709 -> unsignedShortPtr = *unsignedShortPtr
 x10068:	mov si, [bp + 43]	; 3: -117 118 43
 
-scanFormat$202:	; £temporary1705 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Short_Int)
+scanFormat$202:	; £temporary1710 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Short_Int)
 x10071:	mov eax, [bp + 37]	; 4: 102 -117 70 37
 
-scanFormat$203:	; £temporary1704 -> unsignedShortPtr = £temporary1705
+scanFormat$203:	; £temporary1709 -> unsignedShortPtr = £temporary1710
 x10075:	mov [si], al	; 2: -120 4
 
 scanFormat$204:	; goto 222
@@ -6399,25 +6399,25 @@ x10083:	jne scanFormat$215	; 2: 117 26
 scanFormat$206:	; arg_list = arg_list + 2
 x10085:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$207:	; £temporary1709 = arg_list - 2
+scanFormat$207:	; £temporary1714 = arg_list - 2
 x10089:	mov si, [bp + 8]	; 3: -117 118 8
 x10092:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$208:	; £temporary1710 = int_to_int £temporary1709 (Signed_Int -> Pointer)
+scanFormat$208:	; £temporary1715 = int_to_int £temporary1714 (Signed_Int -> Pointer)
 
-scanFormat$209:	; £temporary1711 -> £temporary1710 = *£temporary1710
+scanFormat$209:	; £temporary1716 -> £temporary1715 = *£temporary1715
 
-scanFormat$210:	; unsignedIntPtr = £temporary1711 -> £temporary1710
+scanFormat$210:	; unsignedIntPtr = £temporary1716 -> £temporary1715
 x10095:	mov ax, [si]	; 2: -117 4
 x10097:	mov [bp + 45], ax	; 3: -119 70 45
 
-scanFormat$211:	; £temporary1712 -> unsignedIntPtr = *unsignedIntPtr
+scanFormat$211:	; £temporary1717 -> unsignedIntPtr = *unsignedIntPtr
 x10100:	mov si, [bp + 45]	; 3: -117 118 45
 
-scanFormat$212:	; £temporary1713 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Int)
+scanFormat$212:	; £temporary1718 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Int)
 x10103:	mov eax, [bp + 37]	; 4: 102 -117 70 37
 
-scanFormat$213:	; £temporary1712 -> unsignedIntPtr = £temporary1713
+scanFormat$213:	; £temporary1717 -> unsignedIntPtr = £temporary1718
 x10107:	mov [si], ax	; 2: -119 4
 
 scanFormat$214:	; goto 222
@@ -6426,22 +6426,22 @@ x10109:	jmp scanFormat$222	; 2: -21 25
 scanFormat$215:	; arg_list = arg_list + 2
 x10111:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$216:	; £temporary1715 = arg_list - 2
+scanFormat$216:	; £temporary1720 = arg_list - 2
 x10115:	mov si, [bp + 8]	; 3: -117 118 8
 x10118:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$217:	; £temporary1716 = int_to_int £temporary1715 (Signed_Int -> Pointer)
+scanFormat$217:	; £temporary1721 = int_to_int £temporary1720 (Signed_Int -> Pointer)
 
-scanFormat$218:	; £temporary1717 -> £temporary1716 = *£temporary1716
+scanFormat$218:	; £temporary1722 -> £temporary1721 = *£temporary1721
 
-scanFormat$219:	; unsignedLongPtr = £temporary1717 -> £temporary1716
+scanFormat$219:	; unsignedLongPtr = £temporary1722 -> £temporary1721
 x10121:	mov ax, [si]	; 2: -117 4
 x10123:	mov [bp + 41], ax	; 3: -119 70 41
 
-scanFormat$220:	; £temporary1718 -> unsignedLongPtr = *unsignedLongPtr
+scanFormat$220:	; £temporary1723 -> unsignedLongPtr = *unsignedLongPtr
 x10126:	mov si, [bp + 41]	; 3: -117 118 41
 
-scanFormat$221:	; £temporary1718 -> unsignedLongPtr = unsignedLongValue
+scanFormat$221:	; £temporary1723 -> unsignedLongPtr = unsignedLongValue
 x10129:	mov eax, [bp + 37]	; 4: 102 -117 70 37
 x10133:	mov [si], eax	; 3: 102 -119 4
 
@@ -6461,7 +6461,7 @@ x10155:	jmp scanLongDouble	; 3: -23 -94 8
 
 scanFormat$226:	; post call
 
-scanFormat$227:	; £temporary1720 = return_value
+scanFormat$227:	; £temporary1725 = return_value
 
 scanFormat$228:	; pop float longDoubleValue
 x10158:	fstp qword [bp + 47]	; 3: -35 94 47
@@ -6477,25 +6477,25 @@ x10171:	je scanFormat$240	; 2: 116 25
 scanFormat$231:	; arg_list = arg_list + 2
 x10173:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$232:	; £temporary1724 = arg_list - 2
+scanFormat$232:	; £temporary1729 = arg_list - 2
 x10177:	mov si, [bp + 8]	; 3: -117 118 8
 x10180:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$233:	; £temporary1725 = int_to_int £temporary1724 (Signed_Int -> Pointer)
+scanFormat$233:	; £temporary1730 = int_to_int £temporary1729 (Signed_Int -> Pointer)
 
-scanFormat$234:	; £temporary1726 -> £temporary1725 = *£temporary1725
+scanFormat$234:	; £temporary1731 -> £temporary1730 = *£temporary1730
 
-scanFormat$235:	; doublePtr = £temporary1726 -> £temporary1725
+scanFormat$235:	; doublePtr = £temporary1731 -> £temporary1730
 x10183:	mov ax, [si]	; 2: -117 4
 x10185:	mov [bp + 57], ax	; 3: -119 70 57
 
-scanFormat$236:	; £temporary1727 -> doublePtr = *doublePtr
+scanFormat$236:	; £temporary1732 -> doublePtr = *doublePtr
 x10188:	mov si, [bp + 57]	; 3: -117 118 57
 
 scanFormat$237:	; push float longDoubleValue
 x10191:	fld qword [bp + 47]	; 3: -35 70 47
 
-scanFormat$238:	; pop float £temporary1727 -> doublePtr
+scanFormat$238:	; pop float £temporary1732 -> doublePtr
 x10194:	fstp qword [si]	; 2: -35 28
 
 scanFormat$239:	; goto 258
@@ -6508,25 +6508,25 @@ x10202:	je scanFormat$250	; 2: 116 25
 scanFormat$241:	; arg_list = arg_list + 2
 x10204:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$242:	; £temporary1730 = arg_list - 2
+scanFormat$242:	; £temporary1735 = arg_list - 2
 x10208:	mov si, [bp + 8]	; 3: -117 118 8
 x10211:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$243:	; £temporary1731 = int_to_int £temporary1730 (Signed_Int -> Pointer)
+scanFormat$243:	; £temporary1736 = int_to_int £temporary1735 (Signed_Int -> Pointer)
 
-scanFormat$244:	; £temporary1732 -> £temporary1731 = *£temporary1731
+scanFormat$244:	; £temporary1737 -> £temporary1736 = *£temporary1736
 
-scanFormat$245:	; longDoublePtr = £temporary1732 -> £temporary1731
+scanFormat$245:	; longDoublePtr = £temporary1737 -> £temporary1736
 x10214:	mov ax, [si]	; 2: -117 4
 x10216:	mov [bp + 57], ax	; 3: -119 70 57
 
-scanFormat$246:	; £temporary1733 -> longDoublePtr = *longDoublePtr
+scanFormat$246:	; £temporary1738 -> longDoublePtr = *longDoublePtr
 x10219:	mov si, [bp + 57]	; 3: -117 118 57
 
 scanFormat$247:	; push float longDoubleValue
 x10222:	fld qword [bp + 47]	; 3: -35 70 47
 
-scanFormat$248:	; pop float £temporary1733 -> longDoublePtr
+scanFormat$248:	; pop float £temporary1738 -> longDoublePtr
 x10225:	fstp qword [si]	; 2: -35 28
 
 scanFormat$249:	; goto 258
@@ -6535,25 +6535,25 @@ x10227:	jmp scanFormat$258	; 2: -21 23
 scanFormat$250:	; arg_list = arg_list + 2
 x10229:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$251:	; £temporary1735 = arg_list - 2
+scanFormat$251:	; £temporary1740 = arg_list - 2
 x10233:	mov si, [bp + 8]	; 3: -117 118 8
 x10236:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$252:	; £temporary1736 = int_to_int £temporary1735 (Signed_Int -> Pointer)
+scanFormat$252:	; £temporary1741 = int_to_int £temporary1740 (Signed_Int -> Pointer)
 
-scanFormat$253:	; £temporary1737 -> £temporary1736 = *£temporary1736
+scanFormat$253:	; £temporary1742 -> £temporary1741 = *£temporary1741
 
-scanFormat$254:	; floatPtr = £temporary1737 -> £temporary1736
+scanFormat$254:	; floatPtr = £temporary1742 -> £temporary1741
 x10239:	mov ax, [si]	; 2: -117 4
 x10241:	mov [bp + 57], ax	; 3: -119 70 57
 
-scanFormat$255:	; £temporary1738 -> floatPtr = *floatPtr
+scanFormat$255:	; £temporary1743 -> floatPtr = *floatPtr
 x10244:	mov si, [bp + 57]	; 3: -117 118 57
 
 scanFormat$256:	; push float longDoubleValue
 x10247:	fld qword [bp + 47]	; 3: -35 70 47
 
-scanFormat$257:	; pop float £temporary1738 -> floatPtr
+scanFormat$257:	; pop float £temporary1743 -> floatPtr
 x10250:	fstp dword [si]	; 2: -39 28
 
 scanFormat$258:	; percent = 0
@@ -6568,13 +6568,13 @@ x10260:	mov word [bp + 57], 0	; 5: -57 70 57 0 0
 scanFormat$261:	; ++index
 x10265:	inc word [bp + 31]	; 3: -1 70 31
 
-scanFormat$262:	; £temporary1744 = format + index
+scanFormat$262:	; £temporary1749 = format + index
 x10268:	mov si, [bp + 6]	; 3: -117 118 6
 x10271:	add si, [bp + 31]	; 3: 3 118 31
 
-scanFormat$263:	; £temporary1743 -> £temporary1744 = *£temporary1744
+scanFormat$263:	; £temporary1748 -> £temporary1749 = *£temporary1749
 
-scanFormat$264:	; if £temporary1743 -> £temporary1744 != 94 goto 267
+scanFormat$264:	; if £temporary1748 -> £temporary1749 != 94 goto 267
 x10274:	cmp byte [si], 94	; 3: -128 60 94
 x10277:	jne scanFormat$267	; 2: 117 12
 
@@ -6586,13 +6586,13 @@ x10284:	mov ax, [bp + 31]	; 3: -117 70 31
 x10287:	inc ax	; 1: 64
 x10288:	mov [bp + 59], ax	; 3: -119 70 59
 
-scanFormat$267:	; £temporary1748 = format + index
+scanFormat$267:	; £temporary1753 = format + index
 x10291:	mov si, [bp + 6]	; 3: -117 118 6
 x10294:	add si, [bp + 31]	; 3: 3 118 31
 
-scanFormat$268:	; £temporary1747 -> £temporary1748 = *£temporary1748
+scanFormat$268:	; £temporary1752 -> £temporary1753 = *£temporary1753
 
-scanFormat$269:	; if £temporary1747 -> £temporary1748 == 93 goto 272
+scanFormat$269:	; if £temporary1752 -> £temporary1753 == 93 goto 272
 x10297:	cmp byte [si], 93	; 3: -128 60 93
 x10300:	je scanFormat$272	; 2: 116 5
 
@@ -6602,13 +6602,13 @@ x10302:	inc word [bp + 31]	; 3: -1 70 31
 scanFormat$271:	; goto 267
 x10305:	jmp scanFormat$267	; 2: -21 -16
 
-scanFormat$272:	; £temporary1752 = format + index
+scanFormat$272:	; £temporary1757 = format + index
 x10307:	mov si, [bp + 6]	; 3: -117 118 6
 x10310:	add si, [bp + 31]	; 3: 3 118 31
 
-scanFormat$273:	; £temporary1751 -> £temporary1752 = *£temporary1752
+scanFormat$273:	; £temporary1756 -> £temporary1757 = *£temporary1757
 
-scanFormat$274:	; £temporary1751 -> £temporary1752 = 0
+scanFormat$274:	; £temporary1756 -> £temporary1757 = 0
 x10313:	mov byte [si], 0	; 3: -58 4 0
 
 scanFormat$275:	; if star != 0 goto 291
@@ -6618,15 +6618,15 @@ x10320:	jne scanFormat$291	; 2: 117 53
 scanFormat$276:	; arg_list = arg_list + 2
 x10322:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$277:	; £temporary1756 = arg_list - 2
+scanFormat$277:	; £temporary1761 = arg_list - 2
 x10326:	mov si, [bp + 8]	; 3: -117 118 8
 x10329:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$278:	; £temporary1757 = int_to_int £temporary1756 (Signed_Int -> Pointer)
+scanFormat$278:	; £temporary1762 = int_to_int £temporary1761 (Signed_Int -> Pointer)
 
-scanFormat$279:	; £temporary1758 -> £temporary1757 = *£temporary1757
+scanFormat$279:	; £temporary1763 -> £temporary1762 = *£temporary1762
 
-scanFormat$280:	; string = £temporary1758 -> £temporary1757
+scanFormat$280:	; string = £temporary1763 -> £temporary1762
 x10332:	mov ax, [si]	; 2: -117 4
 x10334:	mov [bp + 61], ax	; 3: -119 70 61
 
@@ -6636,15 +6636,15 @@ scanFormat$282:	; parameter string, offset 6
 x10337:	mov ax, [bp + 61]	; 3: -117 70 61
 x10340:	mov [bp + 69], ax	; 3: -119 70 69
 
-scanFormat$283:	; £temporary1760 = format + startIndex
+scanFormat$283:	; £temporary1765 = format + startIndex
 x10343:	mov si, [bp + 6]	; 3: -117 118 6
 x10346:	add si, [bp + 59]	; 3: 3 118 59
 
-scanFormat$284:	; £temporary1759 -> £temporary1760 = *£temporary1760
+scanFormat$284:	; £temporary1764 -> £temporary1765 = *£temporary1765
 
-scanFormat$285:	; £temporary1761 = &£temporary1759 -> £temporary1760
+scanFormat$285:	; £temporary1766 = &£temporary1764 -> £temporary1765
 
-scanFormat$286:	; parameter £temporary1761, offset 8
+scanFormat$286:	; parameter £temporary1766, offset 8
 x10349:	mov [bp + 71], si	; 3: -119 118 71
 
 scanFormat$287:	; parameter not, offset 10
@@ -6667,15 +6667,15 @@ scanFormat$291:	; call header integral zero 0 stack zero 0
 scanFormat$292:	; parameter 0, offset 6
 x10375:	mov word [bp + 67], 0	; 5: -57 70 67 0 0
 
-scanFormat$293:	; £temporary1764 = format + startIndex
+scanFormat$293:	; £temporary1769 = format + startIndex
 x10380:	mov si, [bp + 6]	; 3: -117 118 6
 x10383:	add si, [bp + 59]	; 3: 3 118 59
 
-scanFormat$294:	; £temporary1763 -> £temporary1764 = *£temporary1764
+scanFormat$294:	; £temporary1768 -> £temporary1769 = *£temporary1769
 
-scanFormat$295:	; £temporary1765 = &£temporary1763 -> £temporary1764
+scanFormat$295:	; £temporary1770 = &£temporary1768 -> £temporary1769
 
-scanFormat$296:	; parameter £temporary1765, offset 8
+scanFormat$296:	; parameter £temporary1770, offset 8
 x10386:	mov [bp + 69], si	; 3: -119 118 69
 
 scanFormat$297:	; parameter not, offset 10
@@ -6696,22 +6696,22 @@ x10409:	jmp scanFormat$323	; 2: -21 104
 scanFormat$301:	; arg_list = arg_list + 2
 x10411:	add word [bp + 8], 2	; 4: -125 70 8 2
 
-scanFormat$302:	; £temporary1768 = arg_list - 2
+scanFormat$302:	; £temporary1773 = arg_list - 2
 x10415:	mov si, [bp + 8]	; 3: -117 118 8
 x10418:	sub si, 2	; 3: -125 -18 2
 
-scanFormat$303:	; £temporary1769 = int_to_int £temporary1768 (Signed_Int -> Pointer)
+scanFormat$303:	; £temporary1774 = int_to_int £temporary1773 (Signed_Int -> Pointer)
 
-scanFormat$304:	; £temporary1770 -> £temporary1769 = *£temporary1769
+scanFormat$304:	; £temporary1775 -> £temporary1774 = *£temporary1774
 
-scanFormat$305:	; charsPtr = £temporary1770 -> £temporary1769
+scanFormat$305:	; charsPtr = £temporary1775 -> £temporary1774
 x10421:	mov ax, [si]	; 2: -117 4
 x10423:	mov [bp + 35], ax	; 3: -119 70 35
 
-scanFormat$306:	; £temporary1771 -> charsPtr = *charsPtr
+scanFormat$306:	; £temporary1776 -> charsPtr = *charsPtr
 x10426:	mov si, [bp + 35]	; 3: -117 118 35
 
-scanFormat$307:	; £temporary1771 -> charsPtr = g_inChars
+scanFormat$307:	; £temporary1776 -> charsPtr = g_inChars
 x10429:	mov ax, [g_inChars]	; 3: -95 42 41
 x10432:	mov [si], ax	; 2: -119 4
 
@@ -6726,7 +6726,7 @@ scanFormat$310:	; call header integral zero 0 stack zero 0
 scanFormat$311:	; parameter string_scanFormat20c203D202725c270A#, offset 6
 x10441:	mov word [bp + 63], string_scanFormat20c203D202725c270A#	; 5: -57 70 63 44 41
 
-scanFormat$312:	; £temporary1772 = int_to_int c (Signed_Char -> Signed_Int)
+scanFormat$312:	; £temporary1777 = int_to_int c (Signed_Char -> Signed_Int)
 x10446:	mov al, [bp + 10]	; 3: -118 70 10
 x10449:	and ax, 255	; 3: 37 -1 0
 x10452:	cmp al, 0	; 2: 60 0
@@ -6734,7 +6734,7 @@ x10454:	jge scanFormat$313	; 2: 125 4
 x10456:	neg al	; 2: -10 -40
 x10458:	neg ax	; 2: -9 -40
 
-scanFormat$313:	; parameter £temporary1772, offset 8
+scanFormat$313:	; parameter £temporary1777, offset 8
 x10460:	mov [bp + 65], ax	; 3: -119 70 65
 
 scanFormat$314:	; call function noellipse-ellipse printf, extra 0
@@ -6812,16 +6812,16 @@ scanChar$3:	; case end g_inStatus
 scanChar$4:	; goto 26
 x10578:	jmp scanChar$26	; 2: -21 79
 
-scanChar$5:	; £temporary1326 = int_to_int g_inDevice (Pointer -> Pointer)
+scanChar$5:	; £temporary1331 = int_to_int g_inDevice (Pointer -> Pointer)
 x10580:	mov ax, [g_inDevice]	; 3: -95 4 36
 
-scanChar$6:	; stream = £temporary1326
+scanChar$6:	; stream = £temporary1331
 x10583:	mov [bp + 7], ax	; 3: -119 70 7
 
-scanChar$7:	; £temporary1327 -> stream = *stream, offset 2
+scanChar$7:	; £temporary1332 -> stream = *stream, offset 2
 x10586:	mov si, [bp + 7]	; 3: -117 118 7
 
-scanChar$8:	; handle = £temporary1327 -> stream
+scanChar$8:	; handle = £temporary1332 -> stream
 x10589:	mov ax, [si + 2]	; 3: -117 68 2
 x10592:	mov [bp + 9], ax	; 3: -119 70 9
 
@@ -6834,11 +6834,11 @@ x10597:	mov bx, [bp + 9]	; 3: -117 94 9
 scanChar$11:	; cx = 1
 x10600:	mov cx, 1	; 3: -71 1 0
 
-scanChar$12:	; £temporary1332 = &c
+scanChar$12:	; £temporary1337 = &c
 x10603:	mov dx, bp	; 2: -119 -22
 x10605:	add dx, 6	; 3: -125 -62 6
 
-scanChar$13:	; dx = £temporary1332
+scanChar$13:	; dx = £temporary1337
 
 scanChar$14:	; interrupt 33
 x10608:	int 33	; 2: -51 33
@@ -6855,25 +6855,25 @@ x10620:	mov di, [bp + 4]	; 3: -117 126 4
 x10623:	mov bp, [bp + 2]	; 3: -117 110 2
 x10626:	jmp ax	; 2: -1 -32
 
-scanChar$18:	; £temporary1334 = int_to_int g_inDevice (Pointer -> Pointer)
+scanChar$18:	; £temporary1339 = int_to_int g_inDevice (Pointer -> Pointer)
 x10628:	mov ax, [g_inDevice]	; 3: -95 4 36
 
-scanChar$19:	; inString = £temporary1334
+scanChar$19:	; inString = £temporary1339
 x10631:	mov [bp + 11], ax	; 3: -119 70 11
 
-scanChar$20:	; £temporary1335 = g_inChars
+scanChar$20:	; £temporary1340 = g_inChars
 x10634:	mov ax, [g_inChars]	; 3: -95 42 41
 
 scanChar$21:	; ++g_inChars
 x10637:	inc word [g_inChars]	; 4: -1 6 42 41
 
-scanChar$22:	; £temporary1337 = inString + £temporary1335
+scanChar$22:	; £temporary1342 = inString + £temporary1340
 x10641:	mov si, [bp + 11]	; 3: -117 118 11
 x10644:	add si, ax	; 2: 1 -58
 
-scanChar$23:	; £temporary1336 -> £temporary1337 = *£temporary1337
+scanChar$23:	; £temporary1341 -> £temporary1342 = *£temporary1342
 
-scanChar$24:	; return_value = £temporary1336 -> £temporary1337
+scanChar$24:	; return_value = £temporary1341 -> £temporary1342
 x10646:	mov bl, [si]	; 2: -118 28
 
 scanChar$25:	; return
@@ -6906,9 +6906,9 @@ x10688:	jmp scanChar	; 3: -23 126 -1
 
 scanString$3:	; post call
 
-scanString$4:	; £temporary1389 = return_value
+scanString$4:	; £temporary1394 = return_value
 
-scanString$5:	; input = £temporary1389
+scanString$5:	; input = £temporary1394
 x10691:	mov [bp + 12], bl	; 3: -120 94 12
 
 scanString$6:	; found = 0
@@ -6916,7 +6916,7 @@ x10694:	mov word [bp + 13], 0	; 5: -57 70 13 0 0
 
 scanString$7:	; call header integral zero 0 stack zero 0
 
-scanString$8:	; £temporary1390 = int_to_int input (Signed_Char -> Signed_Int)
+scanString$8:	; £temporary1395 = int_to_int input (Signed_Char -> Signed_Int)
 x10699:	mov al, [bp + 12]	; 3: -118 70 12
 x10702:	and ax, 255	; 3: 37 -1 0
 x10705:	cmp al, 0	; 2: 60 0
@@ -6924,7 +6924,7 @@ x10707:	jge scanString$9	; 2: 125 4
 x10709:	neg al	; 2: -10 -40
 x10711:	neg ax	; 2: -9 -40
 
-scanString$9:	; parameter £temporary1390, offset 6
+scanString$9:	; parameter £temporary1395, offset 6
 x10713:	mov [bp + 21], ax	; 3: -119 70 21
 
 scanString$10:	; call function noellipse-noellipse isspace
@@ -6935,9 +6935,9 @@ x10727:	jmp isspace	; 3: -23 19 2
 
 scanString$11:	; post call
 
-scanString$12:	; £temporary1391 = return_value
+scanString$12:	; £temporary1396 = return_value
 
-scanString$13:	; if £temporary1391 == 0 goto 20
+scanString$13:	; if £temporary1396 == 0 goto 20
 x10730:	cmp bx, 0	; 3: -125 -5 0
 x10733:	je scanString$20	; 2: 116 19
 
@@ -6951,9 +6951,9 @@ x10746:	jmp scanChar	; 3: -23 68 -1
 
 scanString$16:	; post call
 
-scanString$17:	; £temporary1392 = return_value
+scanString$17:	; £temporary1397 = return_value
 
-scanString$18:	; input = £temporary1392
+scanString$18:	; input = £temporary1397
 x10749:	mov [bp + 12], bl	; 3: -120 94 12
 
 scanString$19:	; goto 7
@@ -6969,7 +6969,7 @@ x10766:	jne scanString$50	; 2: 117 121
 
 scanString$22:	; call header integral zero 0 stack zero 0
 
-scanString$23:	; £temporary1396 = int_to_int input (Signed_Char -> Signed_Int)
+scanString$23:	; £temporary1401 = int_to_int input (Signed_Char -> Signed_Int)
 x10768:	mov al, [bp + 12]	; 3: -118 70 12
 x10771:	and ax, 255	; 3: 37 -1 0
 x10774:	cmp al, 0	; 2: 60 0
@@ -6977,7 +6977,7 @@ x10776:	jge scanString$24	; 2: 125 4
 x10778:	neg al	; 2: -10 -40
 x10780:	neg ax	; 2: -9 -40
 
-scanString$24:	; parameter £temporary1396, offset 6
+scanString$24:	; parameter £temporary1401, offset 6
 x10782:	mov [bp + 21], ax	; 3: -119 70 21
 
 scanString$25:	; call function noellipse-noellipse isspace
@@ -6988,13 +6988,13 @@ x10796:	jmp isspace	; 3: -23 -50 1
 
 scanString$26:	; post call
 
-scanString$27:	; £temporary1397 = return_value
+scanString$27:	; £temporary1402 = return_value
 
-scanString$28:	; if £temporary1397 != 0 goto 45
+scanString$28:	; if £temporary1402 != 0 goto 45
 x10799:	cmp bx, 0	; 3: -125 -5 0
 x10802:	jne scanString$45	; 2: 117 69
 
-scanString$29:	; £temporary1400 = int_to_int input (Signed_Char -> Signed_Int)
+scanString$29:	; £temporary1405 = int_to_int input (Signed_Char -> Signed_Int)
 x10804:	mov al, [bp + 12]	; 3: -118 70 12
 x10807:	and ax, 255	; 3: 37 -1 0
 x10810:	cmp al, 0	; 2: 60 0
@@ -7002,7 +7002,7 @@ x10812:	jge scanString$30	; 2: 125 4
 x10814:	neg al	; 2: -10 -40
 x10816:	neg ax	; 2: -9 -40
 
-scanString$30:	; if £temporary1400 == -1 goto 45
+scanString$30:	; if £temporary1405 == -1 goto 45
 x10818:	cmp ax, -1	; 3: -125 -8 -1
 x10821:	je scanString$45	; 2: 116 50
 
@@ -7010,19 +7010,19 @@ scanString$31:	; if input == 10 goto 45
 x10823:	cmp byte [bp + 12], 10	; 4: -128 126 12 10
 x10827:	je scanString$45	; 2: 116 44
 
-scanString$32:	; £temporary1405 = index
+scanString$32:	; £temporary1410 = index
 x10829:	mov ax, [bp + 10]	; 3: -117 70 10
 
 scanString$33:	; ++index
 x10832:	inc word [bp + 10]	; 3: -1 70 10
 
-scanString$34:	; £temporary1407 = string + £temporary1405
+scanString$34:	; £temporary1412 = string + £temporary1410
 x10835:	mov si, [bp + 6]	; 3: -117 118 6
 x10838:	add si, ax	; 2: 1 -58
 
-scanString$35:	; £temporary1406 -> £temporary1407 = *£temporary1407
+scanString$35:	; £temporary1411 -> £temporary1412 = *£temporary1412
 
-scanString$36:	; £temporary1406 -> £temporary1407 = input
+scanString$36:	; £temporary1411 -> £temporary1412 = input
 x10840:	mov al, [bp + 12]	; 3: -118 70 12
 x10843:	mov [si], al	; 2: -120 4
 
@@ -7036,9 +7036,9 @@ x10856:	jmp scanChar	; 3: -23 -42 -2
 
 scanString$39:	; post call
 
-scanString$40:	; £temporary1408 = return_value
+scanString$40:	; £temporary1413 = return_value
 
-scanString$41:	; input = £temporary1408
+scanString$41:	; input = £temporary1413
 x10859:	mov [bp + 12], bl	; 3: -120 94 12
 
 scanString$42:	; found = 1
@@ -7050,13 +7050,13 @@ x10867:	inc word [g_inChars]	; 4: -1 6 42 41
 scanString$44:	; goto 22
 x10871:	jmp scanString$22	; 2: -21 -105
 
-scanString$45:	; £temporary1411 = string + index
+scanString$45:	; £temporary1416 = string + index
 x10873:	mov si, [bp + 6]	; 3: -117 118 6
 x10876:	add si, [bp + 10]	; 3: 3 118 10
 
-scanString$46:	; £temporary1410 -> £temporary1411 = *£temporary1411
+scanString$46:	; £temporary1415 -> £temporary1416 = *£temporary1416
 
-scanString$47:	; £temporary1410 -> £temporary1411 = 0
+scanString$47:	; £temporary1415 -> £temporary1416 = 0
 x10879:	mov byte [si], 0	; 3: -58 4 0
 
 scanString$48:	; ++g_inChars
@@ -7065,19 +7065,19 @@ x10882:	inc word [g_inChars]	; 4: -1 6 42 41
 scanString$49:	; goto 126
 x10886:	jmp scanString$126	; 3: -23 95 1
 
-scanString$50:	; £temporary1413 = precision
+scanString$50:	; £temporary1418 = precision
 x10889:	mov ax, [bp + 8]	; 3: -117 70 8
 
 scanString$51:	; --precision
 x10892:	dec word [bp + 8]	; 3: -1 78 8
 
-scanString$52:	; if £temporary1413 <= 0 goto 76
+scanString$52:	; if £temporary1418 <= 0 goto 76
 x10895:	cmp ax, 0	; 3: -125 -8 0
 x10898:	jle scanString$76	; 2: 126 105
 
 scanString$53:	; call header integral zero 0 stack zero 0
 
-scanString$54:	; £temporary1415 = int_to_int input (Signed_Char -> Signed_Int)
+scanString$54:	; £temporary1420 = int_to_int input (Signed_Char -> Signed_Int)
 x10900:	mov al, [bp + 12]	; 3: -118 70 12
 x10903:	and ax, 255	; 3: 37 -1 0
 x10906:	cmp al, 0	; 2: 60 0
@@ -7085,7 +7085,7 @@ x10908:	jge scanString$55	; 2: 125 4
 x10910:	neg al	; 2: -10 -40
 x10912:	neg ax	; 2: -9 -40
 
-scanString$55:	; parameter £temporary1415, offset 6
+scanString$55:	; parameter £temporary1420, offset 6
 x10914:	mov [bp + 21], ax	; 3: -119 70 21
 
 scanString$56:	; call function noellipse-noellipse isspace
@@ -7096,13 +7096,13 @@ x10928:	jmp isspace	; 3: -23 74 1
 
 scanString$57:	; post call
 
-scanString$58:	; £temporary1416 = return_value
+scanString$58:	; £temporary1421 = return_value
 
-scanString$59:	; if £temporary1416 != 0 goto 76
+scanString$59:	; if £temporary1421 != 0 goto 76
 x10931:	cmp bx, 0	; 3: -125 -5 0
 x10934:	jne scanString$76	; 2: 117 69
 
-scanString$60:	; £temporary1419 = int_to_int input (Signed_Char -> Signed_Int)
+scanString$60:	; £temporary1424 = int_to_int input (Signed_Char -> Signed_Int)
 x10936:	mov al, [bp + 12]	; 3: -118 70 12
 x10939:	and ax, 255	; 3: 37 -1 0
 x10942:	cmp al, 0	; 2: 60 0
@@ -7110,7 +7110,7 @@ x10944:	jge scanString$61	; 2: 125 4
 x10946:	neg al	; 2: -10 -40
 x10948:	neg ax	; 2: -9 -40
 
-scanString$61:	; if £temporary1419 == -1 goto 76
+scanString$61:	; if £temporary1424 == -1 goto 76
 x10950:	cmp ax, -1	; 3: -125 -8 -1
 x10953:	je scanString$76	; 2: 116 50
 
@@ -7118,19 +7118,19 @@ scanString$62:	; if input == 10 goto 76
 x10955:	cmp byte [bp + 12], 10	; 4: -128 126 12 10
 x10959:	je scanString$76	; 2: 116 44
 
-scanString$63:	; £temporary1425 = index
+scanString$63:	; £temporary1430 = index
 x10961:	mov ax, [bp + 10]	; 3: -117 70 10
 
 scanString$64:	; ++index
 x10964:	inc word [bp + 10]	; 3: -1 70 10
 
-scanString$65:	; £temporary1427 = string + £temporary1425
+scanString$65:	; £temporary1432 = string + £temporary1430
 x10967:	mov si, [bp + 6]	; 3: -117 118 6
 x10970:	add si, ax	; 2: 1 -58
 
-scanString$66:	; £temporary1426 -> £temporary1427 = *£temporary1427
+scanString$66:	; £temporary1431 -> £temporary1432 = *£temporary1432
 
-scanString$67:	; £temporary1426 -> £temporary1427 = input
+scanString$67:	; £temporary1431 -> £temporary1432 = input
 x10972:	mov al, [bp + 12]	; 3: -118 70 12
 x10975:	mov [si], al	; 2: -120 4
 
@@ -7144,9 +7144,9 @@ x10988:	jmp scanChar	; 3: -23 82 -2
 
 scanString$70:	; post call
 
-scanString$71:	; £temporary1428 = return_value
+scanString$71:	; £temporary1433 = return_value
 
-scanString$72:	; input = £temporary1428
+scanString$72:	; input = £temporary1433
 x10991:	mov [bp + 12], bl	; 3: -120 94 12
 
 scanString$73:	; found = 1
@@ -7162,13 +7162,13 @@ scanString$76:	; if precision <= 0 goto 126
 x11005:	cmp word [bp + 8], 0	; 4: -125 126 8 0
 x11009:	jle scanString$126	; 4: 15 -114 -29 0
 
-scanString$77:	; £temporary1432 = string + index
+scanString$77:	; £temporary1437 = string + index
 x11013:	mov si, [bp + 6]	; 3: -117 118 6
 x11016:	add si, [bp + 10]	; 3: 3 118 10
 
-scanString$78:	; £temporary1431 -> £temporary1432 = *£temporary1432
+scanString$78:	; £temporary1436 -> £temporary1437 = *£temporary1437
 
-scanString$79:	; £temporary1431 -> £temporary1432 = 0
+scanString$79:	; £temporary1436 -> £temporary1437 = 0
 x11019:	mov byte [si], 0	; 3: -58 4 0
 
 scanString$80:	; ++g_inChars
@@ -7183,7 +7183,7 @@ x11033:	jne scanString$103	; 2: 117 95
 
 scanString$83:	; call header integral zero 0 stack zero 0
 
-scanString$84:	; £temporary1435 = int_to_int input (Signed_Char -> Signed_Int)
+scanString$84:	; £temporary1440 = int_to_int input (Signed_Char -> Signed_Int)
 x11035:	mov al, [bp + 12]	; 3: -118 70 12
 x11038:	and ax, 255	; 3: 37 -1 0
 x11041:	cmp al, 0	; 2: 60 0
@@ -7191,7 +7191,7 @@ x11043:	jge scanString$85	; 2: 125 4
 x11045:	neg al	; 2: -10 -40
 x11047:	neg ax	; 2: -9 -40
 
-scanString$85:	; parameter £temporary1435, offset 6
+scanString$85:	; parameter £temporary1440, offset 6
 x11049:	mov [bp + 21], ax	; 3: -119 70 21
 
 scanString$86:	; call function noellipse-noellipse isspace
@@ -7202,13 +7202,13 @@ x11063:	jmp isspace	; 3: -23 -61 0
 
 scanString$87:	; post call
 
-scanString$88:	; £temporary1436 = return_value
+scanString$88:	; £temporary1441 = return_value
 
-scanString$89:	; if £temporary1436 != 0 goto 101
+scanString$89:	; if £temporary1441 != 0 goto 101
 x11066:	cmp bx, 0	; 3: -125 -5 0
 x11069:	jne scanString$101	; 2: 117 53
 
-scanString$90:	; £temporary1439 = int_to_int input (Signed_Char -> Signed_Int)
+scanString$90:	; £temporary1444 = int_to_int input (Signed_Char -> Signed_Int)
 x11071:	mov al, [bp + 12]	; 3: -118 70 12
 x11074:	and ax, 255	; 3: 37 -1 0
 x11077:	cmp al, 0	; 2: 60 0
@@ -7216,7 +7216,7 @@ x11079:	jge scanString$91	; 2: 125 4
 x11081:	neg al	; 2: -10 -40
 x11083:	neg ax	; 2: -9 -40
 
-scanString$91:	; if £temporary1439 == -1 goto 101
+scanString$91:	; if £temporary1444 == -1 goto 101
 x11085:	cmp ax, -1	; 3: -125 -8 -1
 x11088:	je scanString$101	; 2: 116 34
 
@@ -7234,9 +7234,9 @@ x11107:	jmp scanChar	; 3: -23 -37 -3
 
 scanString$95:	; post call
 
-scanString$96:	; £temporary1444 = return_value
+scanString$96:	; £temporary1449 = return_value
 
-scanString$97:	; input = £temporary1444
+scanString$97:	; input = £temporary1449
 x11110:	mov [bp + 12], bl	; 3: -120 94 12
 
 scanString$98:	; found = 1
@@ -7254,19 +7254,19 @@ x11124:	inc word [g_inChars]	; 4: -1 6 42 41
 scanString$102:	; goto 126
 x11128:	jmp scanString$126	; 2: -21 110
 
-scanString$103:	; £temporary1447 = precision
+scanString$103:	; £temporary1452 = precision
 x11130:	mov ax, [bp + 8]	; 3: -117 70 8
 
 scanString$104:	; --precision
 x11133:	dec word [bp + 8]	; 3: -1 78 8
 
-scanString$105:	; if £temporary1447 <= 0 goto 124
+scanString$105:	; if £temporary1452 <= 0 goto 124
 x11136:	cmp ax, 0	; 3: -125 -8 0
 x11139:	jle scanString$124	; 2: 126 89
 
 scanString$106:	; call header integral zero 0 stack zero 0
 
-scanString$107:	; £temporary1449 = int_to_int input (Signed_Char -> Signed_Int)
+scanString$107:	; £temporary1454 = int_to_int input (Signed_Char -> Signed_Int)
 x11141:	mov al, [bp + 12]	; 3: -118 70 12
 x11144:	and ax, 255	; 3: 37 -1 0
 x11147:	cmp al, 0	; 2: 60 0
@@ -7274,7 +7274,7 @@ x11149:	jge scanString$108	; 2: 125 4
 x11151:	neg al	; 2: -10 -40
 x11153:	neg ax	; 2: -9 -40
 
-scanString$108:	; parameter £temporary1449, offset 6
+scanString$108:	; parameter £temporary1454, offset 6
 x11155:	mov [bp + 21], ax	; 3: -119 70 21
 
 scanString$109:	; call function noellipse-noellipse isspace
@@ -7286,13 +7286,13 @@ x11170:	jmp isspace	; 2: -21 89
 
 scanString$110:	; post call
 
-scanString$111:	; £temporary1450 = return_value
+scanString$111:	; £temporary1455 = return_value
 
-scanString$112:	; if £temporary1450 != 0 goto 124
+scanString$112:	; if £temporary1455 != 0 goto 124
 x11172:	cmp bx, 0	; 3: -125 -5 0
 x11175:	jne scanString$124	; 2: 117 53
 
-scanString$113:	; £temporary1453 = int_to_int input (Signed_Char -> Signed_Int)
+scanString$113:	; £temporary1458 = int_to_int input (Signed_Char -> Signed_Int)
 x11177:	mov al, [bp + 12]	; 3: -118 70 12
 x11180:	and ax, 255	; 3: 37 -1 0
 x11183:	cmp al, 0	; 2: 60 0
@@ -7300,7 +7300,7 @@ x11185:	jge scanString$114	; 2: 125 4
 x11187:	neg al	; 2: -10 -40
 x11189:	neg ax	; 2: -9 -40
 
-scanString$114:	; if £temporary1453 == -1 goto 124
+scanString$114:	; if £temporary1458 == -1 goto 124
 x11191:	cmp ax, -1	; 3: -125 -8 -1
 x11194:	je scanString$124	; 2: 116 34
 
@@ -7318,9 +7318,9 @@ x11213:	jmp scanChar	; 3: -23 113 -3
 
 scanString$118:	; post call
 
-scanString$119:	; £temporary1459 = return_value
+scanString$119:	; £temporary1464 = return_value
 
-scanString$120:	; input = £temporary1459
+scanString$120:	; input = £temporary1464
 x11216:	mov [bp + 12], bl	; 3: -120 94 12
 
 scanString$121:	; found = 1
@@ -7378,16 +7378,16 @@ isspace$5:	; if c != 11 goto 8
 x11291:	cmp word [bp + 6], 11	; 4: -125 126 6 11
 x11295:	jne isspace$8	; 2: 117 5
 
-isspace$6:	; £temporary408 = 1
+isspace$6:	; £temporary413 = 1
 x11297:	mov bx, 1	; 3: -69 1 0
 
 isspace$7:	; goto 9
 x11300:	jmp isspace$9	; 2: -21 3
 
-isspace$8:	; £temporary408 = 0
+isspace$8:	; £temporary413 = 0
 x11302:	mov bx, 0	; 3: -69 0 0
 
-isspace$9:	; return_value = £temporary408
+isspace$9:	; return_value = £temporary413
 
 isspace$10:	; return
 x11305:	mov ax, [bp]	; 3: -117 70 0
@@ -7416,14 +7416,14 @@ x11345:	jmp scanChar	; 3: -23 -19 -4
 
 scanLongInt$5:	; post call
 
-scanLongInt$6:	; £temporary1486 = return_value
+scanLongInt$6:	; £temporary1491 = return_value
 
-scanLongInt$7:	; input = £temporary1486
+scanLongInt$7:	; input = £temporary1491
 x11348:	mov [bp + 14], bl	; 3: -120 94 14
 
 scanLongInt$8:	; call header integral zero 0 stack zero 0
 
-scanLongInt$9:	; £temporary1487 = int_to_int input (Signed_Char -> Signed_Int)
+scanLongInt$9:	; £temporary1492 = int_to_int input (Signed_Char -> Signed_Int)
 x11351:	mov al, [bp + 14]	; 3: -118 70 14
 x11354:	and ax, 255	; 3: 37 -1 0
 x11357:	cmp al, 0	; 2: 60 0
@@ -7431,7 +7431,7 @@ x11359:	jge scanLongInt$10	; 2: 125 4
 x11361:	neg al	; 2: -10 -40
 x11363:	neg ax	; 2: -9 -40
 
-scanLongInt$10:	; parameter £temporary1487, offset 6
+scanLongInt$10:	; parameter £temporary1492, offset 6
 x11365:	mov [bp + 21], ax	; 3: -119 70 21
 
 scanLongInt$11:	; call function noellipse-noellipse isspace
@@ -7443,9 +7443,9 @@ x11380:	jmp isspace	; 2: -21 -121
 
 scanLongInt$12:	; post call
 
-scanLongInt$13:	; £temporary1488 = return_value
+scanLongInt$13:	; £temporary1493 = return_value
 
-scanLongInt$14:	; if £temporary1488 == 0 goto 21
+scanLongInt$14:	; if £temporary1493 == 0 goto 21
 x11382:	cmp bx, 0	; 3: -125 -5 0
 x11385:	je scanLongInt$21	; 2: 116 19
 
@@ -7459,9 +7459,9 @@ x11398:	jmp scanChar	; 3: -23 -72 -4
 
 scanLongInt$17:	; post call
 
-scanLongInt$18:	; £temporary1489 = return_value
+scanLongInt$18:	; £temporary1494 = return_value
 
-scanLongInt$19:	; input = £temporary1489
+scanLongInt$19:	; input = £temporary1494
 x11401:	mov [bp + 14], bl	; 3: -120 94 14
 
 scanLongInt$20:	; goto 8
@@ -7481,9 +7481,9 @@ x11423:	jmp scanChar	; 3: -23 -97 -4
 
 scanLongInt$24:	; post call
 
-scanLongInt$25:	; £temporary1492 = return_value
+scanLongInt$25:	; £temporary1497 = return_value
 
-scanLongInt$26:	; input = £temporary1492
+scanLongInt$26:	; input = £temporary1497
 x11426:	mov [bp + 14], bl	; 3: -120 94 14
 
 scanLongInt$27:	; goto 35
@@ -7506,14 +7506,14 @@ x11453:	jmp scanChar	; 3: -23 -127 -4
 
 scanLongInt$32:	; post call
 
-scanLongInt$33:	; £temporary1494 = return_value
+scanLongInt$33:	; £temporary1499 = return_value
 
-scanLongInt$34:	; input = £temporary1494
+scanLongInt$34:	; input = £temporary1499
 x11456:	mov [bp + 14], bl	; 3: -120 94 14
 
 scanLongInt$35:	; call header integral zero 0 stack zero 0
 
-scanLongInt$36:	; £temporary1495 = int_to_int input (Signed_Char -> Signed_Int)
+scanLongInt$36:	; £temporary1500 = int_to_int input (Signed_Char -> Signed_Int)
 x11459:	mov al, [bp + 14]	; 3: -118 70 14
 x11462:	and ax, 255	; 3: 37 -1 0
 x11465:	cmp al, 0	; 2: 60 0
@@ -7521,7 +7521,7 @@ x11467:	jge scanLongInt$37	; 2: 125 4
 x11469:	neg al	; 2: -10 -40
 x11471:	neg ax	; 2: -9 -40
 
-scanLongInt$37:	; parameter £temporary1495, offset 6
+scanLongInt$37:	; parameter £temporary1500, offset 6
 x11473:	mov [bp + 21], ax	; 3: -119 70 21
 
 scanLongInt$38:	; call function noellipse-noellipse isdigit
@@ -7532,29 +7532,29 @@ x11487:	jmp isdigit	; 3: -23 109 -11
 
 scanLongInt$39:	; post call
 
-scanLongInt$40:	; £temporary1496 = return_value
+scanLongInt$40:	; £temporary1501 = return_value
 
-scanLongInt$41:	; if £temporary1496 == 0 goto 53
+scanLongInt$41:	; if £temporary1501 == 0 goto 53
 x11490:	cmp bx, 0	; 3: -125 -5 0
 x11493:	je scanLongInt$53	; 2: 116 66
 
-scanLongInt$42:	; £temporary1497 = longValue * 10
+scanLongInt$42:	; £temporary1502 = longValue * 10
 x11495:	mov eax, [bp + 6]	; 4: 102 -117 70 6
 x11499:	xor edx, edx	; 3: 102 49 -46
 x11502:	imul dword [int4$10#]	; 5: 102 -9 46 -59 19
 
-scanLongInt$43:	; £temporary1498 = input - 48
+scanLongInt$43:	; £temporary1503 = input - 48
 x11507:	mov bl, [bp + 14]	; 3: -118 94 14
 x11510:	sub bl, 48	; 3: -128 -21 48
 
-scanLongInt$44:	; £temporary1499 = int_to_int £temporary1498 (Signed_Char -> Signed_Long_Int)
+scanLongInt$44:	; £temporary1504 = int_to_int £temporary1503 (Signed_Char -> Signed_Long_Int)
 x11513:	and ebx, 255	; 7: 102 -127 -29 -1 0 0 0
 x11520:	cmp bl, 0	; 3: -128 -5 0
 x11523:	jge scanLongInt$45	; 2: 125 5
 x11525:	neg bl	; 2: -10 -37
 x11527:	neg ebx	; 3: 102 -9 -37
 
-scanLongInt$45:	; longValue = £temporary1497 + £temporary1499
+scanLongInt$45:	; longValue = £temporary1502 + £temporary1504
 x11530:	add eax, ebx	; 3: 102 1 -40
 x11533:	mov [bp + 6], eax	; 4: 102 -119 70 6
 
@@ -7568,9 +7568,9 @@ x11548:	jmp scanChar	; 3: -23 34 -4
 
 scanLongInt$48:	; post call
 
-scanLongInt$49:	; £temporary1501 = return_value
+scanLongInt$49:	; £temporary1506 = return_value
 
-scanLongInt$50:	; input = £temporary1501
+scanLongInt$50:	; input = £temporary1506
 x11551:	mov [bp + 14], bl	; 3: -120 94 14
 
 scanLongInt$51:	; found = 1
@@ -7583,11 +7583,11 @@ scanLongInt$53:	; if minus == 0 goto 56
 x11561:	cmp word [bp + 10], 0	; 4: -125 126 10 0
 x11565:	je scanLongInt$56	; 2: 116 11
 
-scanLongInt$54:	; £temporary1503 = -longValue
+scanLongInt$54:	; £temporary1508 = -longValue
 x11567:	mov eax, [bp + 6]	; 4: 102 -117 70 6
 x11571:	neg eax	; 3: 102 -9 -40
 
-scanLongInt$55:	; longValue = £temporary1503
+scanLongInt$55:	; longValue = £temporary1508
 x11574:	mov [bp + 6], eax	; 4: 102 -119 70 6
 
 scanLongInt$56:	; if found == 0 goto 58
@@ -7667,9 +7667,9 @@ x11678:	jmp scanChar	; 3: -23 -96 -5
 
 scanUnsignedLongInt$3:	; post call
 
-scanUnsignedLongInt$4:	; £temporary1511 = return_value
+scanUnsignedLongInt$4:	; £temporary1516 = return_value
 
-scanUnsignedLongInt$5:	; input = £temporary1511
+scanUnsignedLongInt$5:	; input = £temporary1516
 x11681:	mov [bp + 18], bl	; 3: -120 94 18
 
 scanUnsignedLongInt$6:	; found = 1
@@ -7677,7 +7677,7 @@ x11684:	mov word [bp + 19], 1	; 5: -57 70 19 1 0
 
 scanUnsignedLongInt$7:	; call header integral zero 0 stack zero 0
 
-scanUnsignedLongInt$8:	; £temporary1512 = int_to_int input (Signed_Char -> Signed_Int)
+scanUnsignedLongInt$8:	; £temporary1517 = int_to_int input (Signed_Char -> Signed_Int)
 x11689:	mov al, [bp + 18]	; 3: -118 70 18
 x11692:	and ax, 255	; 3: 37 -1 0
 x11695:	cmp al, 0	; 2: 60 0
@@ -7685,7 +7685,7 @@ x11697:	jge scanUnsignedLongInt$9	; 2: 125 4
 x11699:	neg al	; 2: -10 -40
 x11701:	neg ax	; 2: -9 -40
 
-scanUnsignedLongInt$9:	; parameter £temporary1512, offset 6
+scanUnsignedLongInt$9:	; parameter £temporary1517, offset 6
 x11703:	mov [bp + 27], ax	; 3: -119 70 27
 
 scanUnsignedLongInt$10:	; call function noellipse-noellipse isspace
@@ -7696,9 +7696,9 @@ x11717:	jmp isspace	; 3: -23 53 -2
 
 scanUnsignedLongInt$11:	; post call
 
-scanUnsignedLongInt$12:	; £temporary1513 = return_value
+scanUnsignedLongInt$12:	; £temporary1518 = return_value
 
-scanUnsignedLongInt$13:	; if £temporary1513 == 0 goto 20
+scanUnsignedLongInt$13:	; if £temporary1518 == 0 goto 20
 x11720:	cmp bx, 0	; 3: -125 -5 0
 x11723:	je scanUnsignedLongInt$20	; 2: 116 19
 
@@ -7712,9 +7712,9 @@ x11736:	jmp scanChar	; 3: -23 102 -5
 
 scanUnsignedLongInt$16:	; post call
 
-scanUnsignedLongInt$17:	; £temporary1514 = return_value
+scanUnsignedLongInt$17:	; £temporary1519 = return_value
 
-scanUnsignedLongInt$18:	; input = £temporary1514
+scanUnsignedLongInt$18:	; input = £temporary1519
 x11739:	mov [bp + 18], bl	; 3: -120 94 18
 
 scanUnsignedLongInt$19:	; goto 7
@@ -7734,14 +7734,14 @@ x11761:	jmp scanChar	; 3: -23 77 -5
 
 scanUnsignedLongInt$23:	; post call
 
-scanUnsignedLongInt$24:	; £temporary1517 = return_value
+scanUnsignedLongInt$24:	; £temporary1522 = return_value
 
-scanUnsignedLongInt$25:	; input = £temporary1517
+scanUnsignedLongInt$25:	; input = £temporary1522
 x11764:	mov [bp + 18], bl	; 3: -120 94 18
 
 scanUnsignedLongInt$26:	; call header integral zero 0 stack zero 0
 
-scanUnsignedLongInt$27:	; £temporary1518 = int_to_int input (Signed_Char -> Signed_Int)
+scanUnsignedLongInt$27:	; £temporary1523 = int_to_int input (Signed_Char -> Signed_Int)
 x11767:	mov al, [bp + 18]	; 3: -118 70 18
 x11770:	and ax, 255	; 3: 37 -1 0
 x11773:	cmp al, 0	; 2: 60 0
@@ -7749,7 +7749,7 @@ x11775:	jge scanUnsignedLongInt$28	; 2: 125 4
 x11777:	neg al	; 2: -10 -40
 x11779:	neg ax	; 2: -9 -40
 
-scanUnsignedLongInt$28:	; parameter £temporary1518, offset 6
+scanUnsignedLongInt$28:	; parameter £temporary1523, offset 6
 x11781:	mov [bp + 27], ax	; 3: -119 70 27
 
 scanUnsignedLongInt$29:	; call function noellipse-noellipse tolower
@@ -7760,9 +7760,9 @@ x11795:	jmp tolower	; 3: -23 2 -16
 
 scanUnsignedLongInt$30:	; post call
 
-scanUnsignedLongInt$31:	; £temporary1519 = return_value
+scanUnsignedLongInt$31:	; £temporary1524 = return_value
 
-scanUnsignedLongInt$32:	; if £temporary1519 != 120 goto 44
+scanUnsignedLongInt$32:	; if £temporary1524 != 120 goto 44
 x11798:	cmp bx, 120	; 3: -125 -5 120
 x11801:	jne scanUnsignedLongInt$44	; 2: 117 42
 
@@ -7770,16 +7770,16 @@ scanUnsignedLongInt$33:	; if base != 0 goto 36
 x11803:	cmp dword [bp + 6], 0	; 5: 102 -125 126 6 0
 x11808:	jne scanUnsignedLongInt$36	; 2: 117 8
 
-scanUnsignedLongInt$34:	; £temporary1525 = 16
+scanUnsignedLongInt$34:	; £temporary1530 = 16
 x11810:	mov eax, 16	; 6: 102 -72 16 0 0 0
 
 scanUnsignedLongInt$35:	; goto 37
 x11816:	jmp scanUnsignedLongInt$37	; 2: -21 4
 
-scanUnsignedLongInt$36:	; £temporary1525 = base
+scanUnsignedLongInt$36:	; £temporary1530 = base
 x11818:	mov eax, [bp + 6]	; 4: 102 -117 70 6
 
-scanUnsignedLongInt$37:	; base = £temporary1525
+scanUnsignedLongInt$37:	; base = £temporary1530
 x11822:	mov [bp + 6], eax	; 4: 102 -119 70 6
 
 scanUnsignedLongInt$38:	; call header integral zero 0 stack zero 0
@@ -7792,9 +7792,9 @@ x11837:	jmp scanChar	; 3: -23 1 -5
 
 scanUnsignedLongInt$40:	; post call
 
-scanUnsignedLongInt$41:	; £temporary1526 = return_value
+scanUnsignedLongInt$41:	; £temporary1531 = return_value
 
-scanUnsignedLongInt$42:	; input = £temporary1526
+scanUnsignedLongInt$42:	; input = £temporary1531
 x11840:	mov [bp + 18], bl	; 3: -120 94 18
 
 scanUnsignedLongInt$43:	; goto 49
@@ -7804,16 +7804,16 @@ scanUnsignedLongInt$44:	; if base != 0 goto 47
 x11845:	cmp dword [bp + 6], 0	; 5: 102 -125 126 6 0
 x11850:	jne scanUnsignedLongInt$47	; 2: 117 8
 
-scanUnsignedLongInt$45:	; £temporary1531 = 8
+scanUnsignedLongInt$45:	; £temporary1536 = 8
 x11852:	mov eax, 8	; 6: 102 -72 8 0 0 0
 
 scanUnsignedLongInt$46:	; goto 48
 x11858:	jmp scanUnsignedLongInt$48	; 2: -21 4
 
-scanUnsignedLongInt$47:	; £temporary1531 = base
+scanUnsignedLongInt$47:	; £temporary1536 = base
 x11860:	mov eax, [bp + 6]	; 4: 102 -117 70 6
 
-scanUnsignedLongInt$48:	; base = £temporary1531
+scanUnsignedLongInt$48:	; base = £temporary1536
 x11864:	mov [bp + 6], eax	; 4: 102 -119 70 6
 
 scanUnsignedLongInt$49:	; if base != 0 goto 51
@@ -7825,7 +7825,7 @@ x11875:	mov dword [bp + 6], 10	; 8: 102 -57 70 6 10 0 0 0
 
 scanUnsignedLongInt$51:	; call header integral zero 0 stack zero 0
 
-scanUnsignedLongInt$52:	; £temporary1533 = int_to_int input (Signed_Char -> Signed_Int)
+scanUnsignedLongInt$52:	; £temporary1538 = int_to_int input (Signed_Char -> Signed_Int)
 x11883:	mov al, [bp + 18]	; 3: -118 70 18
 x11886:	and ax, 255	; 3: 37 -1 0
 x11889:	cmp al, 0	; 2: 60 0
@@ -7833,7 +7833,7 @@ x11891:	jge scanUnsignedLongInt$53	; 2: 125 4
 x11893:	neg al	; 2: -10 -40
 x11895:	neg ax	; 2: -9 -40
 
-scanUnsignedLongInt$53:	; parameter £temporary1533, offset 6
+scanUnsignedLongInt$53:	; parameter £temporary1538, offset 6
 x11897:	mov [bp + 27], ax	; 3: -119 70 27
 
 scanUnsignedLongInt$54:	; call function noellipse-noellipse isxdigit
@@ -7845,9 +7845,9 @@ x11912:	jmp isxdigit	; 2: -21 127
 
 scanUnsignedLongInt$55:	; post call
 
-scanUnsignedLongInt$56:	; £temporary1534 = return_value
+scanUnsignedLongInt$56:	; £temporary1539 = return_value
 
-scanUnsignedLongInt$57:	; if £temporary1534 == 0 goto 74
+scanUnsignedLongInt$57:	; if £temporary1539 == 0 goto 74
 x11914:	cmp bx, 0	; 3: -125 -5 0
 x11917:	je scanUnsignedLongInt$74	; 2: 116 77
 
@@ -7865,9 +7865,9 @@ x11936:	jmp digitToValue	; 3: -23 -86 0
 
 scanUnsignedLongInt$61:	; post call
 
-scanUnsignedLongInt$62:	; £temporary1535 = return_value
+scanUnsignedLongInt$62:	; £temporary1540 = return_value
 
-scanUnsignedLongInt$63:	; digit = £temporary1535
+scanUnsignedLongInt$63:	; digit = £temporary1540
 x11939:	mov [bp + 14], ebx	; 4: 102 -119 94 14
 
 scanUnsignedLongInt$64:	; if digit >= base goto 74
@@ -7875,12 +7875,12 @@ x11943:	mov eax, [bp + 6]	; 4: 102 -117 70 6
 x11947:	cmp [bp + 14], eax	; 4: 102 57 70 14
 x11951:	jae scanUnsignedLongInt$74	; 2: 115 43
 
-scanUnsignedLongInt$65:	; £temporary1537 = unsignedLongValue * base
+scanUnsignedLongInt$65:	; £temporary1542 = unsignedLongValue * base
 x11953:	mov eax, [bp + 10]	; 4: 102 -117 70 10
 x11957:	xor edx, edx	; 3: 102 49 -46
 x11960:	mul dword [bp + 6]	; 4: 102 -9 102 6
 
-scanUnsignedLongInt$66:	; unsignedLongValue = £temporary1537 + digit
+scanUnsignedLongInt$66:	; unsignedLongValue = £temporary1542 + digit
 x11964:	add eax, [bp + 14]	; 4: 102 3 70 14
 x11968:	mov [bp + 10], eax	; 4: 102 -119 70 10
 
@@ -7897,9 +7897,9 @@ x11988:	jmp scanChar	; 3: -23 106 -6
 
 scanUnsignedLongInt$70:	; post call
 
-scanUnsignedLongInt$71:	; £temporary1539 = return_value
+scanUnsignedLongInt$71:	; £temporary1544 = return_value
 
-scanUnsignedLongInt$72:	; input = £temporary1539
+scanUnsignedLongInt$72:	; input = £temporary1544
 x11991:	mov [bp + 18], bl	; 3: -120 94 18
 
 scanUnsignedLongInt$73:	; goto 51
@@ -7951,9 +7951,9 @@ x12058:	jmp isdigit	; 3: -23 50 -13
 
 isxdigit$3:	; post call
 
-isxdigit$4:	; £temporary361 = return_value
+isxdigit$4:	; £temporary366 = return_value
 
-isxdigit$5:	; if £temporary361 != 0 goto 10
+isxdigit$5:	; if £temporary366 != 0 goto 10
 x12061:	cmp bx, 0	; 3: -125 -5 0
 x12064:	jne isxdigit$10	; 2: 117 24
 
@@ -7973,16 +7973,16 @@ isxdigit$9:	; if c > 70 goto 12
 x12084:	cmp word [bp + 6], 70	; 4: -125 126 6 70
 x12088:	jg isxdigit$12	; 2: 127 5
 
-isxdigit$10:	; £temporary371 = 1
+isxdigit$10:	; £temporary376 = 1
 x12090:	mov bx, 1	; 3: -69 1 0
 
 isxdigit$11:	; goto 13
 x12093:	jmp isxdigit$13	; 2: -21 3
 
-isxdigit$12:	; £temporary371 = 0
+isxdigit$12:	; £temporary376 = 0
 x12095:	mov bx, 0	; 3: -69 0 0
 
-isxdigit$13:	; return_value = £temporary371
+isxdigit$13:	; return_value = £temporary376
 
 isxdigit$14:	; return
 x12098:	mov ax, [bp]	; 3: -117 70 0
@@ -7994,7 +7994,7 @@ isxdigit$15:	; function end isxdigit
 
 digitToValue:	; call header integral zero 0 stack zero 0
 
-digitToValue$1:	; £temporary1470 = int_to_int input (Signed_Char -> Signed_Int)
+digitToValue$1:	; £temporary1475 = int_to_int input (Signed_Char -> Signed_Int)
 x12109:	mov al, [bp + 6]	; 3: -118 70 6
 x12112:	and ax, 255	; 3: 37 -1 0
 x12115:	cmp al, 0	; 2: 60 0
@@ -8002,7 +8002,7 @@ x12117:	jge digitToValue$2	; 2: 125 4
 x12119:	neg al	; 2: -10 -40
 x12121:	neg ax	; 2: -9 -40
 
-digitToValue$2:	; parameter £temporary1470, offset 6
+digitToValue$2:	; parameter £temporary1475, offset 6
 x12123:	mov [bp + 13], ax	; 3: -119 70 13
 
 digitToValue$3:	; call function noellipse-noellipse isdigit
@@ -8013,20 +8013,20 @@ x12137:	jmp isdigit	; 3: -23 -29 -14
 
 digitToValue$4:	; post call
 
-digitToValue$5:	; £temporary1471 = return_value
+digitToValue$5:	; £temporary1476 = return_value
 
-digitToValue$6:	; if £temporary1471 == 0 goto 11
+digitToValue$6:	; if £temporary1476 == 0 goto 11
 x12140:	cmp bx, 0	; 3: -125 -5 0
 x12143:	je digitToValue$11	; 2: 116 24
 
-digitToValue$7:	; £temporary1472 = input - 48
+digitToValue$7:	; £temporary1477 = input - 48
 x12145:	mov bl, [bp + 6]	; 3: -118 94 6
 x12148:	sub bl, 48	; 3: -128 -21 48
 
-digitToValue$8:	; £temporary1473 = int_to_int £temporary1472 (Signed_Char -> Unsigned_Long_Int)
+digitToValue$8:	; £temporary1478 = int_to_int £temporary1477 (Signed_Char -> Unsigned_Long_Int)
 x12151:	and ebx, 255	; 7: 102 -127 -29 -1 0 0 0
 
-digitToValue$9:	; return_value = £temporary1473
+digitToValue$9:	; return_value = £temporary1478
 
 digitToValue$10:	; return
 x12158:	mov ax, [bp]	; 3: -117 70 0
@@ -8036,7 +8036,7 @@ x12167:	jmp ax	; 2: -1 -32
 
 digitToValue$11:	; call header integral zero 0 stack zero 0
 
-digitToValue$12:	; £temporary1474 = int_to_int input (Signed_Char -> Signed_Int)
+digitToValue$12:	; £temporary1479 = int_to_int input (Signed_Char -> Signed_Int)
 x12169:	mov al, [bp + 6]	; 3: -118 70 6
 x12172:	and ax, 255	; 3: 37 -1 0
 x12175:	cmp al, 0	; 2: 60 0
@@ -8044,7 +8044,7 @@ x12177:	jge digitToValue$13	; 2: 125 4
 x12179:	neg al	; 2: -10 -40
 x12181:	neg ax	; 2: -9 -40
 
-digitToValue$13:	; parameter £temporary1474, offset 6
+digitToValue$13:	; parameter £temporary1479, offset 6
 x12183:	mov [bp + 13], ax	; 3: -119 70 13
 
 digitToValue$14:	; call function noellipse-noellipse islower
@@ -8056,23 +8056,23 @@ x12198:	jmp islower	; 2: -21 61
 
 digitToValue$15:	; post call
 
-digitToValue$16:	; £temporary1475 = return_value
+digitToValue$16:	; £temporary1480 = return_value
 
-digitToValue$17:	; if £temporary1475 == 0 goto 23
+digitToValue$17:	; if £temporary1480 == 0 goto 23
 x12200:	cmp bx, 0	; 3: -125 -5 0
 x12203:	je digitToValue$23	; 2: 116 28
 
-digitToValue$18:	; £temporary1476 = input - 97
+digitToValue$18:	; £temporary1481 = input - 97
 x12205:	mov bl, [bp + 6]	; 3: -118 94 6
 x12208:	sub bl, 97	; 3: -128 -21 97
 
-digitToValue$19:	; £temporary1477 = int_to_int £temporary1476 (Signed_Char -> Unsigned_Long_Int)
+digitToValue$19:	; £temporary1482 = int_to_int £temporary1481 (Signed_Char -> Unsigned_Long_Int)
 x12211:	and ebx, 255	; 7: 102 -127 -29 -1 0 0 0
 
-digitToValue$20:	; £temporary1478 = £temporary1477 + 10
+digitToValue$20:	; £temporary1483 = £temporary1482 + 10
 x12218:	add ebx, 10	; 4: 102 -125 -61 10
 
-digitToValue$21:	; return_value = £temporary1478
+digitToValue$21:	; return_value = £temporary1483
 
 digitToValue$22:	; return
 x12222:	mov ax, [bp]	; 3: -117 70 0
@@ -8080,17 +8080,17 @@ x12225:	mov di, [bp + 4]	; 3: -117 126 4
 x12228:	mov bp, [bp + 2]	; 3: -117 110 2
 x12231:	jmp ax	; 2: -1 -32
 
-digitToValue$23:	; £temporary1479 = input - 65
+digitToValue$23:	; £temporary1484 = input - 65
 x12233:	mov bl, [bp + 6]	; 3: -118 94 6
 x12236:	sub bl, 65	; 3: -128 -21 65
 
-digitToValue$24:	; £temporary1480 = int_to_int £temporary1479 (Signed_Char -> Unsigned_Long_Int)
+digitToValue$24:	; £temporary1485 = int_to_int £temporary1484 (Signed_Char -> Unsigned_Long_Int)
 x12239:	and ebx, 255	; 7: 102 -127 -29 -1 0 0 0
 
-digitToValue$25:	; £temporary1481 = £temporary1480 + 10
+digitToValue$25:	; £temporary1486 = £temporary1485 + 10
 x12246:	add ebx, 10	; 4: 102 -125 -61 10
 
-digitToValue$26:	; return_value = £temporary1481
+digitToValue$26:	; return_value = £temporary1486
 
 digitToValue$27:	; return
 x12250:	mov ax, [bp]	; 3: -117 70 0
@@ -8110,9 +8110,9 @@ x12272:	jmp localeconv	; 3: -23 49 -27
 
 islower$2:	; post call
 
-islower$3:	; £temporary309 = return_value
+islower$3:	; £temporary314 = return_value
 
-islower$4:	; localeConvPtr = £temporary309
+islower$4:	; localeConvPtr = £temporary314
 x12275:	mov [bp + 8], bx	; 3: -119 94 8
 
 islower$5:	; if localeConvPtr == 0 goto 19
@@ -8121,10 +8121,10 @@ x12282:	je islower$19	; 2: 116 53
 
 islower$6:	; call header integral zero 0 stack zero 0
 
-islower$7:	; £temporary311 -> localeConvPtr = *localeConvPtr, offset 12
+islower$7:	; £temporary316 -> localeConvPtr = *localeConvPtr, offset 12
 x12284:	mov si, [bp + 8]	; 3: -117 118 8
 
-islower$8:	; parameter £temporary311 -> localeConvPtr, offset 6
+islower$8:	; parameter £temporary316 -> localeConvPtr, offset 6
 x12287:	mov ax, [si + 12]	; 3: -117 68 12
 x12290:	mov [bp + 16], ax	; 3: -119 70 16
 
@@ -8140,22 +8140,22 @@ x12310:	jmp strchr	; 3: -23 -95 -22
 
 islower$11:	; post call
 
-islower$12:	; £temporary312 = return_value
+islower$12:	; £temporary317 = return_value
 
-islower$13:	; if £temporary312 == 0 goto 16
+islower$13:	; if £temporary317 == 0 goto 16
 x12313:	cmp bx, 0	; 3: -125 -5 0
 x12316:	je islower$16	; 2: 116 5
 
-islower$14:	; £temporary314 = 1
+islower$14:	; £temporary319 = 1
 x12318:	mov bx, 1	; 3: -69 1 0
 
 islower$15:	; goto 17
 x12321:	jmp islower$17	; 2: -21 3
 
-islower$16:	; £temporary314 = 0
+islower$16:	; £temporary319 = 0
 x12323:	mov bx, 0	; 3: -69 0 0
 
-islower$17:	; return_value = £temporary314
+islower$17:	; return_value = £temporary319
 
 islower$18:	; return
 x12326:	mov ax, [bp]	; 3: -117 70 0
@@ -8171,16 +8171,16 @@ islower$20:	; if c > 122 goto 23
 x12343:	cmp word [bp + 6], 122	; 4: -125 126 6 122
 x12347:	jg islower$23	; 2: 127 5
 
-islower$21:	; £temporary318 = 1
+islower$21:	; £temporary323 = 1
 x12349:	mov bx, 1	; 3: -69 1 0
 
 islower$22:	; goto 24
 x12352:	jmp islower$24	; 2: -21 3
 
-islower$23:	; £temporary318 = 0
+islower$23:	; £temporary323 = 0
 x12354:	mov bx, 0	; 3: -69 0 0
 
-islower$24:	; return_value = £temporary318
+islower$24:	; return_value = £temporary323
 
 islower$25:	; return
 x12357:	mov ax, [bp]	; 3: -117 70 0
@@ -8218,14 +8218,14 @@ x12399:	jmp scanChar	; 3: -23 -49 -8
 
 scanLongDouble$8:	; post call
 
-scanLongDouble$9:	; £temporary1549 = return_value
+scanLongDouble$9:	; £temporary1554 = return_value
 
-scanLongDouble$10:	; input = £temporary1549
+scanLongDouble$10:	; input = £temporary1554
 x12402:	mov [bp + 26], bl	; 3: -120 94 26
 
 scanLongDouble$11:	; call header integral zero 0 stack zero 0
 
-scanLongDouble$12:	; £temporary1550 = int_to_int input (Signed_Char -> Signed_Int)
+scanLongDouble$12:	; £temporary1555 = int_to_int input (Signed_Char -> Signed_Int)
 x12405:	mov al, [bp + 26]	; 3: -118 70 26
 x12408:	and ax, 255	; 3: 37 -1 0
 x12411:	cmp al, 0	; 2: 60 0
@@ -8233,7 +8233,7 @@ x12413:	jge scanLongDouble$13	; 2: 125 4
 x12415:	neg al	; 2: -10 -40
 x12417:	neg ax	; 2: -9 -40
 
-scanLongDouble$13:	; parameter £temporary1550, offset 6
+scanLongDouble$13:	; parameter £temporary1555, offset 6
 x12419:	mov [bp + 33], ax	; 3: -119 70 33
 
 scanLongDouble$14:	; call function noellipse-noellipse isspace
@@ -8244,9 +8244,9 @@ x12433:	jmp isspace	; 3: -23 105 -5
 
 scanLongDouble$15:	; post call
 
-scanLongDouble$16:	; £temporary1551 = return_value
+scanLongDouble$16:	; £temporary1556 = return_value
 
-scanLongDouble$17:	; if £temporary1551 == 0 goto 24
+scanLongDouble$17:	; if £temporary1556 == 0 goto 24
 x12436:	cmp bx, 0	; 3: -125 -5 0
 x12439:	je scanLongDouble$24	; 2: 116 19
 
@@ -8260,9 +8260,9 @@ x12452:	jmp scanChar	; 3: -23 -102 -8
 
 scanLongDouble$20:	; post call
 
-scanLongDouble$21:	; £temporary1552 = return_value
+scanLongDouble$21:	; £temporary1557 = return_value
 
-scanLongDouble$22:	; input = £temporary1552
+scanLongDouble$22:	; input = £temporary1557
 x12455:	mov [bp + 26], bl	; 3: -120 94 26
 
 scanLongDouble$23:	; goto 11
@@ -8282,9 +8282,9 @@ x12477:	jmp scanChar	; 3: -23 -127 -8
 
 scanLongDouble$27:	; post call
 
-scanLongDouble$28:	; £temporary1555 = return_value
+scanLongDouble$28:	; £temporary1560 = return_value
 
-scanLongDouble$29:	; input = £temporary1555
+scanLongDouble$29:	; input = £temporary1560
 x12480:	mov [bp + 26], bl	; 3: -120 94 26
 
 scanLongDouble$30:	; goto 38
@@ -8307,14 +8307,14 @@ x12507:	jmp scanChar	; 3: -23 99 -8
 
 scanLongDouble$35:	; post call
 
-scanLongDouble$36:	; £temporary1557 = return_value
+scanLongDouble$36:	; £temporary1562 = return_value
 
-scanLongDouble$37:	; input = £temporary1557
+scanLongDouble$37:	; input = £temporary1562
 x12510:	mov [bp + 26], bl	; 3: -120 94 26
 
 scanLongDouble$38:	; call header integral zero 0 stack zero 0
 
-scanLongDouble$39:	; £temporary1558 = int_to_int input (Signed_Char -> Signed_Int)
+scanLongDouble$39:	; £temporary1563 = int_to_int input (Signed_Char -> Signed_Int)
 x12513:	mov al, [bp + 26]	; 3: -118 70 26
 x12516:	and ax, 255	; 3: 37 -1 0
 x12519:	cmp al, 0	; 2: 60 0
@@ -8322,7 +8322,7 @@ x12521:	jge scanLongDouble$40	; 2: 125 4
 x12523:	neg al	; 2: -10 -40
 x12525:	neg ax	; 2: -9 -40
 
-scanLongDouble$40:	; parameter £temporary1558, offset 6
+scanLongDouble$40:	; parameter £temporary1563, offset 6
 x12527:	mov [bp + 33], ax	; 3: -119 70 33
 
 scanLongDouble$41:	; call function noellipse-noellipse isdigit
@@ -8333,9 +8333,9 @@ x12541:	jmp isdigit	; 3: -23 79 -15
 
 scanLongDouble$42:	; post call
 
-scanLongDouble$43:	; £temporary1559 = return_value
+scanLongDouble$43:	; £temporary1564 = return_value
 
-scanLongDouble$44:	; if £temporary1559 == 0 goto 60
+scanLongDouble$44:	; if £temporary1564 == 0 goto 60
 x12544:	cmp bx, 0	; 3: -125 -5 0
 x12547:	je scanLongDouble$60	; 2: 116 61
 
@@ -8345,25 +8345,25 @@ x12549:	fld qword [float8$10.0#]	; 4: -35 6 -18 29
 scanLongDouble$46:	; push float value
 x12553:	fld qword [bp + 10]	; 3: -35 70 10
 
-scanLongDouble$47:	; £temporary1560 = 10.0 * value
+scanLongDouble$47:	; £temporary1565 = 10.0 * value
 x12556:	fmul	; 2: -34 -55
 
-scanLongDouble$48:	; £temporary1561 = input - 48
+scanLongDouble$48:	; £temporary1566 = input - 48
 x12558:	mov al, [bp + 26]	; 3: -118 70 26
 x12561:	sub al, 48	; 2: 44 48
 
-scanLongDouble$49:	; £temporary1563 = int_to_int £temporary1561 (Signed_Char -> Signed_Int)
+scanLongDouble$49:	; £temporary1568 = int_to_int £temporary1566 (Signed_Char -> Signed_Int)
 x12563:	and ax, 255	; 3: 37 -1 0
 x12566:	cmp al, 0	; 2: 60 0
 x12568:	jge scanLongDouble$50	; 2: 125 4
 x12570:	neg al	; 2: -10 -40
 x12572:	neg ax	; 2: -9 -40
 
-scanLongDouble$50:	; £temporary1562 = int_to_float £temporary1563 (Signed_Int -> Long_Double)
+scanLongDouble$50:	; £temporary1567 = int_to_float £temporary1568 (Signed_Int -> Long_Double)
 x12574:	mov [container2bytes#], ax	; 3: -93 0 18
 x12577:	fild word [container2bytes#]	; 4: -33 6 0 18
 
-scanLongDouble$51:	; £temporary1564 = £temporary1560 + £temporary1562
+scanLongDouble$51:	; £temporary1569 = £temporary1565 + £temporary1567
 x12581:	fadd	; 2: -34 -63
 
 scanLongDouble$52:	; pop float value
@@ -8379,9 +8379,9 @@ x12597:	jmp scanChar	; 3: -23 9 -8
 
 scanLongDouble$55:	; post call
 
-scanLongDouble$56:	; £temporary1565 = return_value
+scanLongDouble$56:	; £temporary1570 = return_value
 
-scanLongDouble$57:	; input = £temporary1565
+scanLongDouble$57:	; input = £temporary1570
 x12600:	mov [bp + 26], bl	; 3: -120 94 26
 
 scanLongDouble$58:	; found = 1
@@ -8404,14 +8404,14 @@ x12627:	jmp scanChar	; 3: -23 -21 -9
 
 scanLongDouble$63:	; post call
 
-scanLongDouble$64:	; £temporary1568 = return_value
+scanLongDouble$64:	; £temporary1573 = return_value
 
-scanLongDouble$65:	; input = £temporary1568
+scanLongDouble$65:	; input = £temporary1573
 x12630:	mov [bp + 26], bl	; 3: -120 94 26
 
 scanLongDouble$66:	; call header integral zero 0 stack zero 0
 
-scanLongDouble$67:	; £temporary1569 = int_to_int input (Signed_Char -> Signed_Int)
+scanLongDouble$67:	; £temporary1574 = int_to_int input (Signed_Char -> Signed_Int)
 x12633:	mov al, [bp + 26]	; 3: -118 70 26
 x12636:	and ax, 255	; 3: 37 -1 0
 x12639:	cmp al, 0	; 2: 60 0
@@ -8419,7 +8419,7 @@ x12641:	jge scanLongDouble$68	; 2: 125 4
 x12643:	neg al	; 2: -10 -40
 x12645:	neg ax	; 2: -9 -40
 
-scanLongDouble$68:	; parameter £temporary1569, offset 6
+scanLongDouble$68:	; parameter £temporary1574, offset 6
 x12647:	mov [bp + 33], ax	; 3: -119 70 33
 
 scanLongDouble$69:	; call function noellipse-noellipse isdigit
@@ -8430,9 +8430,9 @@ x12661:	jmp isdigit	; 3: -23 -41 -16
 
 scanLongDouble$70:	; post call
 
-scanLongDouble$71:	; £temporary1570 = return_value
+scanLongDouble$71:	; £temporary1575 = return_value
 
-scanLongDouble$72:	; if £temporary1570 == 0 goto 92
+scanLongDouble$72:	; if £temporary1575 == 0 goto 92
 x12664:	cmp bx, 0	; 3: -125 -5 0
 x12667:	je scanLongDouble$92	; 2: 116 72
 
@@ -8442,7 +8442,7 @@ x12669:	fld qword [bp + 18]	; 3: -35 70 18
 scanLongDouble$74:	; push float 10.0
 x12672:	fld qword [float8$10.0#]	; 4: -35 6 -18 29
 
-scanLongDouble$75:	; £temporary1571 = factor / 10.0
+scanLongDouble$75:	; £temporary1576 = factor / 10.0
 x12676:	fdiv	; 2: -34 -7
 
 scanLongDouble$76:	; pop float factor
@@ -8454,25 +8454,25 @@ x12681:	fld qword [bp + 10]	; 3: -35 70 10
 scanLongDouble$78:	; push float factor
 x12684:	fld qword [bp + 18]	; 3: -35 70 18
 
-scanLongDouble$79:	; £temporary1572 = input - 48
+scanLongDouble$79:	; £temporary1577 = input - 48
 x12687:	mov al, [bp + 26]	; 3: -118 70 26
 x12690:	sub al, 48	; 2: 44 48
 
-scanLongDouble$80:	; £temporary1574 = int_to_int £temporary1572 (Signed_Char -> Signed_Int)
+scanLongDouble$80:	; £temporary1579 = int_to_int £temporary1577 (Signed_Char -> Signed_Int)
 x12692:	and ax, 255	; 3: 37 -1 0
 x12695:	cmp al, 0	; 2: 60 0
 x12697:	jge scanLongDouble$81	; 2: 125 4
 x12699:	neg al	; 2: -10 -40
 x12701:	neg ax	; 2: -9 -40
 
-scanLongDouble$81:	; £temporary1573 = int_to_float £temporary1574 (Signed_Int -> Long_Double)
+scanLongDouble$81:	; £temporary1578 = int_to_float £temporary1579 (Signed_Int -> Long_Double)
 x12703:	mov [container2bytes#], ax	; 3: -93 0 18
 x12706:	fild word [container2bytes#]	; 4: -33 6 0 18
 
-scanLongDouble$82:	; £temporary1575 = factor * £temporary1573
+scanLongDouble$82:	; £temporary1580 = factor * £temporary1578
 x12710:	fmul	; 2: -34 -55
 
-scanLongDouble$83:	; £temporary1576 = value + £temporary1575
+scanLongDouble$83:	; £temporary1581 = value + £temporary1580
 x12712:	fadd	; 2: -34 -63
 
 scanLongDouble$84:	; pop float value
@@ -8488,9 +8488,9 @@ x12728:	jmp scanChar	; 3: -23 -122 -9
 
 scanLongDouble$87:	; post call
 
-scanLongDouble$88:	; £temporary1577 = return_value
+scanLongDouble$88:	; £temporary1582 = return_value
 
-scanLongDouble$89:	; input = £temporary1577
+scanLongDouble$89:	; input = £temporary1582
 x12731:	mov [bp + 26], bl	; 3: -120 94 26
 
 scanLongDouble$90:	; found = 1
@@ -8515,7 +8515,7 @@ scanLongDouble$95:	; post call
 
 scanLongDouble$96:	; call header integral zero 0 stack zero 0
 
-scanLongDouble$97:	; £temporary1580 = int_to_int input (Signed_Char -> Signed_Int)
+scanLongDouble$97:	; £temporary1585 = int_to_int input (Signed_Char -> Signed_Int)
 x12761:	mov al, [bp + 26]	; 3: -118 70 26
 x12764:	and ax, 255	; 3: 37 -1 0
 x12767:	cmp al, 0	; 2: 60 0
@@ -8523,7 +8523,7 @@ x12769:	jge scanLongDouble$98	; 2: 125 4
 x12771:	neg al	; 2: -10 -40
 x12773:	neg ax	; 2: -9 -40
 
-scanLongDouble$98:	; parameter £temporary1580, offset 6
+scanLongDouble$98:	; parameter £temporary1585, offset 6
 x12775:	mov [bp + 33], ax	; 3: -119 70 33
 
 scanLongDouble$99:	; call function noellipse-noellipse tolower
@@ -8534,9 +8534,9 @@ x12789:	jmp tolower	; 3: -23 32 -20
 
 scanLongDouble$100:	; post call
 
-scanLongDouble$101:	; £temporary1581 = return_value
+scanLongDouble$101:	; £temporary1586 = return_value
 
-scanLongDouble$102:	; if £temporary1581 != 101 goto 121
+scanLongDouble$102:	; if £temporary1586 != 101 goto 121
 x12792:	cmp bx, 101	; 3: -125 -5 101
 x12795:	jne scanLongDouble$121	; 2: 117 75
 
@@ -8550,9 +8550,9 @@ x12808:	jmp scanLongInt	; 3: -23 41 -6
 
 scanLongDouble$105:	; post call
 
-scanLongDouble$106:	; £temporary1583 = return_value
+scanLongDouble$106:	; £temporary1588 = return_value
 
-scanLongDouble$107:	; £temporary1584 = int_to_float £temporary1583 (Signed_Long_Int -> Double)
+scanLongDouble$107:	; £temporary1589 = int_to_float £temporary1588 (Signed_Long_Int -> Double)
 x12811:	mov [container4bytes#], ebx	; 5: 102 -119 30 77 29
 x12816:	fild dword [container4bytes#]	; 4: -37 6 77 29
 
@@ -8588,9 +8588,9 @@ x12856:	fstp qword [bp + 43]	; 3: -35 94 43
 x12859:	fld qword [bp + 35]	; 3: -35 70 35
 x12862:	fld qword [bp + 43]	; 3: -35 70 43
 
-scanLongDouble$117:	; £temporary1585 = return_value
+scanLongDouble$117:	; £temporary1590 = return_value
 
-scanLongDouble$118:	; £temporary1586 = value * £temporary1585
+scanLongDouble$118:	; £temporary1591 = value * £temporary1590
 x12865:	fmul	; 2: -34 -55
 
 scanLongDouble$119:	; pop float value
@@ -8620,7 +8620,7 @@ x12896:	je scanLongDouble$129	; 2: 116 8
 scanLongDouble$126:	; push float value
 x12898:	fld qword [bp + 10]	; 3: -35 70 10
 
-scanLongDouble$127:	; £temporary1588 = -value
+scanLongDouble$127:	; £temporary1593 = -value
 x12901:	fchs	; 2: -39 -32
 
 scanLongDouble$128:	; pop float value
@@ -8659,14 +8659,14 @@ x12946:	jmp scanChar	; 3: -23 -84 -10
 
 scanPattern$3:	; post call
 
-scanPattern$4:	; £temporary1341 = return_value
+scanPattern$4:	; £temporary1346 = return_value
 
-scanPattern$5:	; input = £temporary1341
+scanPattern$5:	; input = £temporary1346
 x12949:	mov [bp + 14], bl	; 3: -120 94 14
 
 scanPattern$6:	; call header integral zero 0 stack zero 0
 
-scanPattern$7:	; £temporary1342 = int_to_int input (Signed_Char -> Signed_Int)
+scanPattern$7:	; £temporary1347 = int_to_int input (Signed_Char -> Signed_Int)
 x12952:	mov al, [bp + 14]	; 3: -118 70 14
 x12955:	and ax, 255	; 3: 37 -1 0
 x12958:	cmp al, 0	; 2: 60 0
@@ -8674,7 +8674,7 @@ x12960:	jge scanPattern$8	; 2: 125 4
 x12962:	neg al	; 2: -10 -40
 x12964:	neg ax	; 2: -9 -40
 
-scanPattern$8:	; parameter £temporary1342, offset 6
+scanPattern$8:	; parameter £temporary1347, offset 6
 x12966:	mov [bp + 21], ax	; 3: -119 70 21
 
 scanPattern$9:	; call function noellipse-noellipse isspace
@@ -8685,9 +8685,9 @@ x12980:	jmp isspace	; 3: -23 70 -7
 
 scanPattern$10:	; post call
 
-scanPattern$11:	; £temporary1343 = return_value
+scanPattern$11:	; £temporary1348 = return_value
 
-scanPattern$12:	; if £temporary1343 == 0 goto 19
+scanPattern$12:	; if £temporary1348 == 0 goto 19
 x12983:	cmp bx, 0	; 3: -125 -5 0
 x12986:	je scanPattern$19	; 2: 116 19
 
@@ -8701,9 +8701,9 @@ x12999:	jmp scanChar	; 3: -23 119 -10
 
 scanPattern$15:	; post call
 
-scanPattern$16:	; £temporary1344 = return_value
+scanPattern$16:	; £temporary1349 = return_value
 
-scanPattern$17:	; input = £temporary1344
+scanPattern$17:	; input = £temporary1349
 x13002:	mov [bp + 14], bl	; 3: -120 94 14
 
 scanPattern$18:	; goto 6
@@ -8723,7 +8723,7 @@ scanPattern$22:	; parameter pattern, offset 6
 x13021:	mov ax, [bp + 8]	; 3: -117 70 8
 x13024:	mov [bp + 21], ax	; 3: -119 70 21
 
-scanPattern$23:	; £temporary1349 = int_to_int input (Signed_Char -> Signed_Int)
+scanPattern$23:	; £temporary1354 = int_to_int input (Signed_Char -> Signed_Int)
 x13027:	mov al, [bp + 14]	; 3: -118 70 14
 x13030:	and ax, 255	; 3: 37 -1 0
 x13033:	cmp al, 0	; 2: 60 0
@@ -8731,7 +8731,7 @@ x13035:	jge scanPattern$24	; 2: 125 4
 x13037:	neg al	; 2: -10 -40
 x13039:	neg ax	; 2: -9 -40
 
-scanPattern$24:	; parameter £temporary1349, offset 8
+scanPattern$24:	; parameter £temporary1354, offset 8
 x13041:	mov [bp + 23], ax	; 3: -119 70 23
 
 scanPattern$25:	; call function noellipse-noellipse strchr
@@ -8742,9 +8742,9 @@ x13055:	jmp strchr	; 3: -23 -72 -25
 
 scanPattern$26:	; post call
 
-scanPattern$27:	; £temporary1350 = return_value
+scanPattern$27:	; £temporary1355 = return_value
 
-scanPattern$28:	; if £temporary1350 != 0 goto 38
+scanPattern$28:	; if £temporary1355 != 0 goto 38
 x13058:	cmp bx, 0	; 3: -125 -5 0
 x13061:	jne scanPattern$38	; 2: 117 48
 
@@ -8758,7 +8758,7 @@ scanPattern$31:	; parameter pattern, offset 6
 x13069:	mov ax, [bp + 8]	; 3: -117 70 8
 x13072:	mov [bp + 21], ax	; 3: -119 70 21
 
-scanPattern$32:	; £temporary1353 = int_to_int input (Signed_Char -> Signed_Int)
+scanPattern$32:	; £temporary1358 = int_to_int input (Signed_Char -> Signed_Int)
 x13075:	mov al, [bp + 14]	; 3: -118 70 14
 x13078:	and ax, 255	; 3: 37 -1 0
 x13081:	cmp al, 0	; 2: 60 0
@@ -8766,7 +8766,7 @@ x13083:	jge scanPattern$33	; 2: 125 4
 x13085:	neg al	; 2: -10 -40
 x13087:	neg ax	; 2: -9 -40
 
-scanPattern$33:	; parameter £temporary1353, offset 8
+scanPattern$33:	; parameter £temporary1358, offset 8
 x13089:	mov [bp + 23], ax	; 3: -119 70 23
 
 scanPattern$34:	; call function noellipse-noellipse strchr
@@ -8777,25 +8777,25 @@ x13103:	jmp strchr	; 3: -23 -120 -25
 
 scanPattern$35:	; post call
 
-scanPattern$36:	; £temporary1354 = return_value
+scanPattern$36:	; £temporary1359 = return_value
 
-scanPattern$37:	; if £temporary1354 != 0 goto 49
+scanPattern$37:	; if £temporary1359 != 0 goto 49
 x13106:	cmp bx, 0	; 3: -125 -5 0
 x13109:	jne scanPattern$49	; 2: 117 36
 
-scanPattern$38:	; £temporary1360 = index
+scanPattern$38:	; £temporary1365 = index
 x13111:	mov ax, [bp + 12]	; 3: -117 70 12
 
 scanPattern$39:	; ++index
 x13114:	inc word [bp + 12]	; 3: -1 70 12
 
-scanPattern$40:	; £temporary1362 = string + £temporary1360
+scanPattern$40:	; £temporary1367 = string + £temporary1365
 x13117:	mov si, [bp + 6]	; 3: -117 118 6
 x13120:	add si, ax	; 2: 1 -58
 
-scanPattern$41:	; £temporary1361 -> £temporary1362 = *£temporary1362
+scanPattern$41:	; £temporary1366 -> £temporary1367 = *£temporary1367
 
-scanPattern$42:	; £temporary1361 -> £temporary1362 = input
+scanPattern$42:	; £temporary1366 -> £temporary1367 = input
 x13122:	mov al, [bp + 14]	; 3: -118 70 14
 x13125:	mov [si], al	; 2: -120 4
 
@@ -8809,21 +8809,21 @@ x13138:	jmp scanChar	; 3: -23 -20 -11
 
 scanPattern$45:	; post call
 
-scanPattern$46:	; £temporary1363 = return_value
+scanPattern$46:	; £temporary1368 = return_value
 
-scanPattern$47:	; input = £temporary1363
+scanPattern$47:	; input = £temporary1368
 x13141:	mov [bp + 14], bl	; 3: -120 94 14
 
 scanPattern$48:	; goto 20
 x13144:	jmp scanPattern$20	; 3: -23 124 -1
 
-scanPattern$49:	; £temporary1365 = string + index
+scanPattern$49:	; £temporary1370 = string + index
 x13147:	mov si, [bp + 6]	; 3: -117 118 6
 x13150:	add si, [bp + 12]	; 3: 3 118 12
 
-scanPattern$50:	; £temporary1364 -> £temporary1365 = *£temporary1365
+scanPattern$50:	; £temporary1369 -> £temporary1370 = *£temporary1370
 
-scanPattern$51:	; £temporary1364 -> £temporary1365 = 0
+scanPattern$51:	; £temporary1369 -> £temporary1370 = 0
 x13153:	mov byte [si], 0	; 3: -58 4 0
 
 scanPattern$52:	; goto 77
@@ -8839,7 +8839,7 @@ scanPattern$55:	; parameter pattern, offset 6
 x13164:	mov ax, [bp + 8]	; 3: -117 70 8
 x13167:	mov [bp + 21], ax	; 3: -119 70 21
 
-scanPattern$56:	; £temporary1368 = int_to_int input (Signed_Char -> Signed_Int)
+scanPattern$56:	; £temporary1373 = int_to_int input (Signed_Char -> Signed_Int)
 x13170:	mov al, [bp + 14]	; 3: -118 70 14
 x13173:	and ax, 255	; 3: 37 -1 0
 x13176:	cmp al, 0	; 2: 60 0
@@ -8847,7 +8847,7 @@ x13178:	jge scanPattern$57	; 2: 125 4
 x13180:	neg al	; 2: -10 -40
 x13182:	neg ax	; 2: -9 -40
 
-scanPattern$57:	; parameter £temporary1368, offset 8
+scanPattern$57:	; parameter £temporary1373, offset 8
 x13184:	mov [bp + 23], ax	; 3: -119 70 23
 
 scanPattern$58:	; call function noellipse-noellipse strchr
@@ -8858,9 +8858,9 @@ x13198:	jmp strchr	; 3: -23 41 -25
 
 scanPattern$59:	; post call
 
-scanPattern$60:	; £temporary1369 = return_value
+scanPattern$60:	; £temporary1374 = return_value
 
-scanPattern$61:	; if £temporary1369 != 0 goto 71
+scanPattern$61:	; if £temporary1374 != 0 goto 71
 x13201:	cmp bx, 0	; 3: -125 -5 0
 x13204:	jne scanPattern$71	; 2: 117 48
 
@@ -8874,7 +8874,7 @@ scanPattern$64:	; parameter pattern, offset 6
 x13212:	mov ax, [bp + 8]	; 3: -117 70 8
 x13215:	mov [bp + 21], ax	; 3: -119 70 21
 
-scanPattern$65:	; £temporary1372 = int_to_int input (Signed_Char -> Signed_Int)
+scanPattern$65:	; £temporary1377 = int_to_int input (Signed_Char -> Signed_Int)
 x13218:	mov al, [bp + 14]	; 3: -118 70 14
 x13221:	and ax, 255	; 3: 37 -1 0
 x13224:	cmp al, 0	; 2: 60 0
@@ -8882,7 +8882,7 @@ x13226:	jge scanPattern$66	; 2: 125 4
 x13228:	neg al	; 2: -10 -40
 x13230:	neg ax	; 2: -9 -40
 
-scanPattern$66:	; parameter £temporary1372, offset 8
+scanPattern$66:	; parameter £temporary1377, offset 8
 x13232:	mov [bp + 23], ax	; 3: -119 70 23
 
 scanPattern$67:	; call function noellipse-noellipse strchr
@@ -8893,9 +8893,9 @@ x13246:	jmp strchr	; 3: -23 -7 -26
 
 scanPattern$68:	; post call
 
-scanPattern$69:	; £temporary1373 = return_value
+scanPattern$69:	; £temporary1378 = return_value
 
-scanPattern$70:	; if £temporary1373 != 0 goto 77
+scanPattern$70:	; if £temporary1378 != 0 goto 77
 x13249:	cmp bx, 0	; 3: -125 -5 0
 x13252:	jne scanPattern$77	; 2: 117 19
 
@@ -8909,9 +8909,9 @@ x13265:	jmp scanChar	; 3: -23 109 -11
 
 scanPattern$73:	; post call
 
-scanPattern$74:	; £temporary1379 = return_value
+scanPattern$74:	; £temporary1384 = return_value
 
-scanPattern$75:	; input = £temporary1379
+scanPattern$75:	; input = £temporary1384
 x13268:	mov [bp + 14], bl	; 3: -120 94 14
 
 scanPattern$76:	; goto 53

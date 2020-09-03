@@ -1,60 +1,56 @@
 	global setjmp
 	global longjmp
 
+	extern $StackTop
 section .text
 
  setjmp:
-	; £temporary765 = bp
+	; £temporary778 = rbp
 
  setjmp$1:
-	; £temporary766 = int_to_int £temporary765 (Unsigned_Short_Int -> Pointer)
-	mov rax, 65535
-	and rbp, rax
-
- setjmp$2:
-	; ebp_pointer = £temporary766
+	; rbp_pointer = £temporary778
 	mov [rbp + 32], rbp
 
- setjmp$3:
-	; £field767 -> buf = *buf
+ setjmp$2:
+	; £field779 -> buf = *buf
 	mov rsi, [rbp + 24]
+
+ setjmp$3:
+	; £field780 -> rbp_pointer = *rbp_pointer
+	mov rdi, [rbp + 32]
 
  setjmp$4:
-	; £field768 -> ebp_pointer = *ebp_pointer
-	mov rdi, [rbp + 32]
+	; £field779 -> buf = £field780 -> rbp_pointer
+	mov rax, [rdi]
+	mov [rsi], rax
 
  setjmp$5:
-	; £field767 -> buf = £field768 -> ebp_pointer
-	mov eax, [rdi]
-	mov [rsi], eax
+	; £field781 -> buf = *buf
+	mov rsi, [rbp + 24]
 
  setjmp$6:
-	; £field769 -> buf = *buf
-	mov rsi, [rbp + 24]
+	; £field782 -> rbp_pointer = *rbp_pointer
+	mov rdi, [rbp + 32]
 
  setjmp$7:
-	; £field770 -> ebp_pointer = *ebp_pointer
-	mov rdi, [rbp + 32]
+	; £field781 -> buf = £field782 -> rbp_pointer
+	mov rax, [rdi + 8]
+	mov [rsi + 8], rax
 
  setjmp$8:
-	; £field769 -> buf = £field770 -> ebp_pointer
-	mov eax, [rdi + 4]
-	mov [rsi + 4], eax
-
- setjmp$9:
-	; £field771 -> buf = *buf
+	; £field783 -> buf = *buf
 	mov rsi, [rbp + 24]
 
- setjmp$10:
-	; £field772 -> ebp_pointer = *ebp_pointer
+ setjmp$9:
+	; £field784 -> rbp_pointer = *rbp_pointer
 	mov rdi, [rbp + 32]
 
- setjmp$11:
-	; £field771 -> buf = £field772 -> ebp_pointer
-	mov eax, [rdi + 8]
-	mov [rsi + 8], eax
+ setjmp$10:
+	; £field783 -> buf = £field784 -> rbp_pointer
+	mov rax, [rdi + 16]
+	mov [rsi + 16], rax
 
- setjmp$12:
+ setjmp$11:
 	; return int4$0#
 	mov ebx, 0
 	mov rax, [rbp]
@@ -62,19 +58,48 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- setjmp$13:
+ setjmp$12:
 	; function end setjmp
 
  longjmp:
-	; empty
+	; ebx = return_value
+	mov ebx, [rbp + 32]
 
  longjmp$1:
+	; £field787 -> buf = *buf
+	mov rsi, [rbp + 24]
+
+ longjmp$2:
+	; rcx = £field787 -> buf
+	mov rcx, [rsi]
+
+ longjmp$3:
+	; £field789 -> buf = *buf
+	mov rsi, [rbp + 24]
+
+ longjmp$4:
+	; rdi = £field789 -> buf
+	mov rdi, [rsi + 16]
+
+ longjmp$5:
+	; £field791 -> buf = *buf
+	mov rsi, [rbp + 24]
+
+ longjmp$6:
+	; rbp = £field791 -> buf
+	mov rbp, [rsi + 8]
+
+ longjmp$7:
+	; jump to 
+	jmp rcx
+
+ longjmp$8:
 	; return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- longjmp$2:
+ longjmp$9:
 	; function end longjmp
 section .data

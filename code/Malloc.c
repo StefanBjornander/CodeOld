@@ -29,7 +29,18 @@ void* malloc(size_t memorySize) {
   }
 
   UINT newBlockSize = BLOCK_HEADER_SIZE + ((UINT) memorySize),
-       minGap = 0, lastAddress = 65528u;
+       minGap = 0;
+
+#ifdef __WINDOWS__
+  UINT lastAddress = 65528u;
+#endif
+
+#ifdef __LINUX__
+  //UINT lastAddress = (UINT)(stack_top + 65528u);
+  UINT lastAddress = (UINT)(stack_top + 1048572u);
+  //printf("lastAddress %u\n", lastAddress);
+#endif
+
   BLOCK_HEADER *minBlockPtr = NULL, *minPrevBlockPtr = NULL, *prevBlockPtr = NULL,
                *currBlockPtr = g_firstBlockPtr;
 
@@ -67,7 +78,16 @@ void* malloc(size_t memorySize) {
     return (void*) (newAddress + BLOCK_HEADER_SIZE);
   }
   else {
-    UINT newAddress = lastAddress - newBlockSize, stackTop = register_bp;
+    UINT newAddress = lastAddress - newBlockSize;
+
+#ifdef __WINDOWS__
+    UINT stackTop = register_bp;
+#endif
+
+#ifdef __LINUX__
+    UINT stackTop = register_rbp;
+#endif
+
     //printf("B newAddress: %u\n", newAddress);
 
     if (stackTop <= newAddress) {
@@ -256,7 +276,16 @@ void* realloc(void* oldMemoryPtr, size_t newMemorySize) {
     return oldMemoryPtr;
   }
 
+#ifdef __WINDOWS__
   UINT lastAddress = 65528u; // LOW_HEAP_ADDRESS;
+#endif
+
+#ifdef __LINUX__
+  //UINT lastAddress = (UINT)(stack_top + 65528u);
+  UINT lastAddress = (UINT)(stack_top + 1048572u);
+  //printf("lastAddress %u\n", lastAddress);
+#endif
+
   BLOCK_HEADER* currBlockPtr = g_firstBlockPtr;
 
   while (currBlockPtr != NULL) {
