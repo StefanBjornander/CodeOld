@@ -9,7 +9,7 @@ double divide(double x, double y) {
   }
   else {
     char *p = "Division by Zero.";
-    printf("longjmp <%s> <%u>\n", p, p);
+    //printf("longjmp <%s> <%u>\n", p, p);
     longjmp(buffer, p);
     return 0;
   }

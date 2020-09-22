@@ -1,5 +1,6 @@
 	global float_test
 
+	extern $StackTop
 section .text
 
  float_test:

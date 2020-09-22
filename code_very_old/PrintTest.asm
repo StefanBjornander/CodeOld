@@ -1,6 +1,7 @@
 	global print_test
 
 	extern printf
+	extern $StackTop
 section .text
 
  print_test:

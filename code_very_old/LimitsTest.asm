@@ -1,6 +1,7 @@
 	global limits_test
 
 	extern printf
+	extern $StackTop
 section .text
 
  limits_test:

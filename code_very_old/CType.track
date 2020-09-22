@@ -13,11 +13,11 @@ islower$1:	; call function noellipse-noellipse localeconv
 islower$2:	; post call
 11:	
 
-islower$3:	; £temporary309 = return_value
+islower$3:	; £temporary314 = return_value
 16:	
 
-islower$4:	; localeConvPtr = £temporary309
-17:		mov [bp + 8], t168
+islower$4:	; localeConvPtr = £temporary314
+17:		mov [bp + 8], t169
 19:	
 
 islower$5:	; if localeConvPtr == 0 goto 19
@@ -28,18 +28,18 @@ islower$5:	; if localeConvPtr == 0 goto 19
 islower$6:	; call header integral zero 0 stack zero 0
 25:	
 
-islower$7:	; £temporary311 -> localeConvPtr = *localeConvPtr, offset 12
-26:		mov a169, [bp + 8]
+islower$7:	; £temporary316 -> localeConvPtr = *localeConvPtr, offset 12
+26:		mov a170, [bp + 8]
 28:	
 
-islower$8:	; parameter £temporary311 -> localeConvPtr, offset 6
-29:		mov t170, [a169 + 12]
-30:		mov [bp + 16], t170
+islower$8:	; parameter £temporary316 -> localeConvPtr, offset 6
+29:		mov t171, [a170 + 12]
+30:		mov [bp + 16], t171
 32:	
 
 islower$9:	; parameter c, offset 8
-33:		mov a171, [bp + 6]
-34:		mov [bp + 18], a171
+33:		mov a172, [bp + 6]
+34:		mov [bp + 18], a172
 36:	
 
 islower$10:	; call function noellipse-noellipse strchr
@@ -52,34 +52,34 @@ islower$10:	; call function noellipse-noellipse strchr
 islower$11:	; post call
 44:	
 
-islower$12:	; £temporary312 = return_value
+islower$12:	; £temporary317 = return_value
 49:	
 
-islower$13:	; if £temporary312 == 0 goto 16
-50:		cmp t173, 0
+islower$13:	; if £temporary317 == 0 goto 16
+50:		cmp t174, 0
 51:		je islower$16
 53:	
 
-islower$14:	; £temporary314 = 1
-54:		mov t174, 1
+islower$14:	; £temporary319 = 1
+54:		mov t175, 1
 56:	
 
 islower$15:	; goto 17
 57:		jmp islower$17
 59:	
 
-islower$16:	; £temporary314 = 0
-60:		mov t175, 0
+islower$16:	; £temporary319 = 0
+60:		mov t176, 0
 62:	
 
-islower$17:	; return_value = £temporary314
+islower$17:	; return_value = £temporary319
 64:	
 
 islower$18:	; return
-65:		mov t176, [bp]
+65:		mov t177, [bp]
 66:		mov di, [bp + 4]
 67:		mov bp, [bp + 2]
-68:		jmp t176
+68:		jmp t177
 70:	
 
 islower$19:	; if c < 97 goto 23
@@ -92,26 +92,26 @@ islower$20:	; if c > 122 goto 23
 76:		jg islower$23
 78:	
 
-islower$21:	; £temporary318 = 1
-79:		mov t177, 1
+islower$21:	; £temporary323 = 1
+79:		mov t178, 1
 81:	
 
 islower$22:	; goto 24
 82:		jmp islower$24
 84:	
 
-islower$23:	; £temporary318 = 0
-85:		mov t178, 0
+islower$23:	; £temporary323 = 0
+85:		mov t179, 0
 87:	
 
-islower$24:	; return_value = £temporary318
+islower$24:	; return_value = £temporary323
 89:	
 
 islower$25:	; return
-90:		mov t179, [bp]
+90:		mov t180, [bp]
 91:		mov di, [bp + 4]
 92:		mov bp, [bp + 2]
-93:		jmp t179
+93:		jmp t180
 95:	
 
 islower$26:	; function end islower
@@ -127,26 +127,26 @@ islowerX$1:	; if c > 122 goto 4
 7:		jg islowerX$4
 9:	
 
-islowerX$2:	; £temporary324 = 1
-10:		mov t180, 1
+islowerX$2:	; £temporary329 = 1
+10:		mov t181, 1
 12:	
 
 islowerX$3:	; goto 5
 13:		jmp islowerX$5
 15:	
 
-islowerX$4:	; £temporary324 = 0
-16:		mov t181, 0
+islowerX$4:	; £temporary329 = 0
+16:		mov t182, 0
 18:	
 
-islowerX$5:	; return_value = £temporary324
+islowerX$5:	; return_value = £temporary329
 20:	
 
 islowerX$6:	; return
-21:		mov t182, [bp]
+21:		mov t183, [bp]
 22:		mov di, [bp + 4]
 23:		mov bp, [bp + 2]
-24:		jmp t182
+24:		jmp t183
 26:	
 
 islowerX$7:	; function end islowerX
@@ -162,26 +162,26 @@ isupperX$1:	; if c > 90 goto 4
 7:		jg isupperX$4
 9:	
 
-isupperX$2:	; £temporary328 = 1
-10:		mov t183, 1
+isupperX$2:	; £temporary333 = 1
+10:		mov t184, 1
 12:	
 
 isupperX$3:	; goto 5
 13:		jmp isupperX$5
 15:	
 
-isupperX$4:	; £temporary328 = 0
-16:		mov t184, 0
+isupperX$4:	; £temporary333 = 0
+16:		mov t185, 0
 18:	
 
-isupperX$5:	; return_value = £temporary328
+isupperX$5:	; return_value = £temporary333
 20:	
 
 isupperX$6:	; return
-21:		mov t185, [bp]
+21:		mov t186, [bp]
 22:		mov di, [bp + 4]
 23:		mov bp, [bp + 2]
-24:		jmp t185
+24:		jmp t186
 26:	
 
 isupperX$7:	; function end isupperX
@@ -200,11 +200,11 @@ isupper$1:	; call function noellipse-noellipse localeconv
 isupper$2:	; post call
 11:	
 
-isupper$3:	; £temporary329 = return_value
+isupper$3:	; £temporary334 = return_value
 16:	
 
-isupper$4:	; localeConvPtr = £temporary329
-17:		mov [bp + 8], t187
+isupper$4:	; localeConvPtr = £temporary334
+17:		mov [bp + 8], t188
 19:	
 
 isupper$5:	; if localeConvPtr == 0 goto 19
@@ -215,18 +215,18 @@ isupper$5:	; if localeConvPtr == 0 goto 19
 isupper$6:	; call header integral zero 0 stack zero 0
 25:	
 
-isupper$7:	; £temporary331 -> localeConvPtr = *localeConvPtr, offset 14
-26:		mov a188, [bp + 8]
+isupper$7:	; £temporary336 -> localeConvPtr = *localeConvPtr, offset 14
+26:		mov a189, [bp + 8]
 28:	
 
-isupper$8:	; parameter £temporary331 -> localeConvPtr, offset 6
-29:		mov t189, [a188 + 14]
-30:		mov [bp + 16], t189
+isupper$8:	; parameter £temporary336 -> localeConvPtr, offset 6
+29:		mov t190, [a189 + 14]
+30:		mov [bp + 16], t190
 32:	
 
 isupper$9:	; parameter c, offset 8
-33:		mov a190, [bp + 6]
-34:		mov [bp + 18], a190
+33:		mov a191, [bp + 6]
+34:		mov [bp + 18], a191
 36:	
 
 isupper$10:	; call function noellipse-noellipse strchr
@@ -239,34 +239,34 @@ isupper$10:	; call function noellipse-noellipse strchr
 isupper$11:	; post call
 44:	
 
-isupper$12:	; £temporary332 = return_value
+isupper$12:	; £temporary337 = return_value
 49:	
 
-isupper$13:	; if £temporary332 == 0 goto 16
-50:		cmp t192, 0
+isupper$13:	; if £temporary337 == 0 goto 16
+50:		cmp t193, 0
 51:		je isupper$16
 53:	
 
-isupper$14:	; £temporary334 = 1
-54:		mov t193, 1
+isupper$14:	; £temporary339 = 1
+54:		mov t194, 1
 56:	
 
 isupper$15:	; goto 17
 57:		jmp isupper$17
 59:	
 
-isupper$16:	; £temporary334 = 0
-60:		mov t194, 0
+isupper$16:	; £temporary339 = 0
+60:		mov t195, 0
 62:	
 
-isupper$17:	; return_value = £temporary334
+isupper$17:	; return_value = £temporary339
 64:	
 
 isupper$18:	; return
-65:		mov t195, [bp]
+65:		mov t196, [bp]
 66:		mov di, [bp + 4]
 67:		mov bp, [bp + 2]
-68:		jmp t195
+68:		jmp t196
 70:	
 
 isupper$19:	; if c < 65 goto 23
@@ -279,26 +279,26 @@ isupper$20:	; if c > 90 goto 23
 76:		jg isupper$23
 78:	
 
-isupper$21:	; £temporary338 = 1
-79:		mov t196, 1
+isupper$21:	; £temporary343 = 1
+79:		mov t197, 1
 81:	
 
 isupper$22:	; goto 24
 82:		jmp isupper$24
 84:	
 
-isupper$23:	; £temporary338 = 0
-85:		mov t197, 0
+isupper$23:	; £temporary343 = 0
+85:		mov t198, 0
 87:	
 
-isupper$24:	; return_value = £temporary338
+isupper$24:	; return_value = £temporary343
 89:	
 
 isupper$25:	; return
-90:		mov t198, [bp]
+90:		mov t199, [bp]
 91:		mov di, [bp + 4]
 92:		mov bp, [bp + 2]
-93:		jmp t198
+93:		jmp t199
 95:	
 
 isupper$26:	; function end isupper
@@ -308,8 +308,8 @@ isalpha:	; call header integral zero 0 stack zero 0
 3:	
 
 isalpha$1:	; parameter c, offset 6
-4:		mov a199, [bp + 6]
-5:		mov [bp + 14], a199
+4:		mov a200, [bp + 6]
+5:		mov [bp + 14], a200
 7:	
 
 isalpha$2:	; call function noellipse-noellipse islower
@@ -322,11 +322,11 @@ isalpha$2:	; call function noellipse-noellipse islower
 isalpha$3:	; post call
 15:	
 
-isalpha$4:	; £temporary341 = return_value
+isalpha$4:	; £temporary346 = return_value
 20:	
 
-isalpha$5:	; if £temporary341 != 0 goto 12
-21:		cmp t201, 0
+isalpha$5:	; if £temporary346 != 0 goto 12
+21:		cmp t202, 0
 22:		jne isalpha$12
 24:	
 
@@ -334,8 +334,8 @@ isalpha$6:	; call header integral zero 0 stack zero 0
 26:	
 
 isalpha$7:	; parameter c, offset 6
-27:		mov a202, [bp + 6]
-28:		mov [bp + 14], a202
+27:		mov a203, [bp + 6]
+28:		mov [bp + 14], a203
 30:	
 
 isalpha$8:	; call function noellipse-noellipse isupper
@@ -348,34 +348,34 @@ isalpha$8:	; call function noellipse-noellipse isupper
 isalpha$9:	; post call
 38:	
 
-isalpha$10:	; £temporary342 = return_value
+isalpha$10:	; £temporary347 = return_value
 43:	
 
-isalpha$11:	; if £temporary342 == 0 goto 14
-44:		cmp t204, 0
+isalpha$11:	; if £temporary347 == 0 goto 14
+44:		cmp t205, 0
 45:		je isalpha$14
 47:	
 
-isalpha$12:	; £temporary346 = 1
-48:		mov t205, 1
+isalpha$12:	; £temporary351 = 1
+48:		mov t206, 1
 50:	
 
 isalpha$13:	; goto 15
 51:		jmp isalpha$15
 53:	
 
-isalpha$14:	; £temporary346 = 0
-54:		mov t206, 0
+isalpha$14:	; £temporary351 = 0
+54:		mov t207, 0
 56:	
 
-isalpha$15:	; return_value = £temporary346
+isalpha$15:	; return_value = £temporary351
 58:	
 
 isalpha$16:	; return
-59:		mov t207, [bp]
+59:		mov t208, [bp]
 60:		mov di, [bp + 4]
 61:		mov bp, [bp + 2]
-62:		jmp t207
+62:		jmp t208
 64:	
 
 isalpha$17:	; function end isalpha
@@ -391,26 +391,26 @@ isdigit$1:	; if c > 57 goto 4
 7:		jg isdigit$4
 9:	
 
-isdigit$2:	; £temporary352 = 1
-10:		mov t208, 1
+isdigit$2:	; £temporary357 = 1
+10:		mov t209, 1
 12:	
 
 isdigit$3:	; goto 5
 13:		jmp isdigit$5
 15:	
 
-isdigit$4:	; £temporary352 = 0
-16:		mov t209, 0
+isdigit$4:	; £temporary357 = 0
+16:		mov t210, 0
 18:	
 
-isdigit$5:	; return_value = £temporary352
+isdigit$5:	; return_value = £temporary357
 20:	
 
 isdigit$6:	; return
-21:		mov t210, [bp]
+21:		mov t211, [bp]
 22:		mov di, [bp + 4]
 23:		mov bp, [bp + 2]
-24:		jmp t210
+24:		jmp t211
 26:	
 
 isdigit$7:	; function end isdigit
@@ -420,8 +420,8 @@ isalnum:	; call header integral zero 0 stack zero 0
 3:	
 
 isalnum$1:	; parameter c, offset 6
-4:		mov a211, [bp + 6]
-5:		mov [bp + 14], a211
+4:		mov a212, [bp + 6]
+5:		mov [bp + 14], a212
 7:	
 
 isalnum$2:	; call function noellipse-noellipse isalpha
@@ -434,11 +434,11 @@ isalnum$2:	; call function noellipse-noellipse isalpha
 isalnum$3:	; post call
 15:	
 
-isalnum$4:	; £temporary353 = return_value
+isalnum$4:	; £temporary358 = return_value
 20:	
 
-isalnum$5:	; if £temporary353 != 0 goto 12
-21:		cmp t213, 0
+isalnum$5:	; if £temporary358 != 0 goto 12
+21:		cmp t214, 0
 22:		jne isalnum$12
 24:	
 
@@ -446,8 +446,8 @@ isalnum$6:	; call header integral zero 0 stack zero 0
 26:	
 
 isalnum$7:	; parameter c, offset 6
-27:		mov a214, [bp + 6]
-28:		mov [bp + 14], a214
+27:		mov a215, [bp + 6]
+28:		mov [bp + 14], a215
 30:	
 
 isalnum$8:	; call function noellipse-noellipse isdigit
@@ -460,34 +460,34 @@ isalnum$8:	; call function noellipse-noellipse isdigit
 isalnum$9:	; post call
 38:	
 
-isalnum$10:	; £temporary354 = return_value
+isalnum$10:	; £temporary359 = return_value
 43:	
 
-isalnum$11:	; if £temporary354 == 0 goto 14
-44:		cmp t216, 0
+isalnum$11:	; if £temporary359 == 0 goto 14
+44:		cmp t217, 0
 45:		je isalnum$14
 47:	
 
-isalnum$12:	; £temporary358 = 1
-48:		mov t217, 1
+isalnum$12:	; £temporary363 = 1
+48:		mov t218, 1
 50:	
 
 isalnum$13:	; goto 15
 51:		jmp isalnum$15
 53:	
 
-isalnum$14:	; £temporary358 = 0
-54:		mov t218, 0
+isalnum$14:	; £temporary363 = 0
+54:		mov t219, 0
 56:	
 
-isalnum$15:	; return_value = £temporary358
+isalnum$15:	; return_value = £temporary363
 58:	
 
 isalnum$16:	; return
-59:		mov t219, [bp]
+59:		mov t220, [bp]
 60:		mov di, [bp + 4]
 61:		mov bp, [bp + 2]
-62:		jmp t219
+62:		jmp t220
 64:	
 
 isalnum$17:	; function end isalnum
@@ -497,8 +497,8 @@ isxdigit:	; call header integral zero 0 stack zero 0
 3:	
 
 isxdigit$1:	; parameter c, offset 6
-4:		mov a220, [bp + 6]
-5:		mov [bp + 14], a220
+4:		mov a221, [bp + 6]
+5:		mov [bp + 14], a221
 7:	
 
 isxdigit$2:	; call function noellipse-noellipse isdigit
@@ -511,11 +511,11 @@ isxdigit$2:	; call function noellipse-noellipse isdigit
 isxdigit$3:	; post call
 15:	
 
-isxdigit$4:	; £temporary361 = return_value
+isxdigit$4:	; £temporary366 = return_value
 20:	
 
-isxdigit$5:	; if £temporary361 != 0 goto 10
-21:		cmp t222, 0
+isxdigit$5:	; if £temporary366 != 0 goto 10
+21:		cmp t223, 0
 22:		jne isxdigit$10
 24:	
 
@@ -539,26 +539,26 @@ isxdigit$9:	; if c > 70 goto 12
 38:		jg isxdigit$12
 40:	
 
-isxdigit$10:	; £temporary371 = 1
-41:		mov t223, 1
+isxdigit$10:	; £temporary376 = 1
+41:		mov t224, 1
 43:	
 
 isxdigit$11:	; goto 13
 44:		jmp isxdigit$13
 46:	
 
-isxdigit$12:	; £temporary371 = 0
-47:		mov t224, 0
+isxdigit$12:	; £temporary376 = 0
+47:		mov t225, 0
 49:	
 
-isxdigit$13:	; return_value = £temporary371
+isxdigit$13:	; return_value = £temporary376
 51:	
 
 isxdigit$14:	; return
-52:		mov t225, [bp]
+52:		mov t226, [bp]
 53:		mov di, [bp + 4]
 54:		mov bp, [bp + 2]
-55:		jmp t225
+55:		jmp t226
 57:	
 
 isxdigit$15:	; function end isxdigit
@@ -574,26 +574,26 @@ isgraph$1:	; if c > 126 goto 4
 7:		jg isgraph$4
 9:	
 
-isgraph$2:	; £temporary376 = 1
-10:		mov t226, 1
+isgraph$2:	; £temporary381 = 1
+10:		mov t227, 1
 12:	
 
 isgraph$3:	; goto 5
 13:		jmp isgraph$5
 15:	
 
-isgraph$4:	; £temporary376 = 0
-16:		mov t227, 0
+isgraph$4:	; £temporary381 = 0
+16:		mov t228, 0
 18:	
 
-isgraph$5:	; return_value = £temporary376
+isgraph$5:	; return_value = £temporary381
 20:	
 
 isgraph$6:	; return
-21:		mov t228, [bp]
+21:		mov t229, [bp]
 22:		mov di, [bp + 4]
 23:		mov bp, [bp + 2]
-24:		jmp t228
+24:		jmp t229
 26:	
 
 isgraph$7:	; function end isgraph
@@ -603,8 +603,8 @@ isprint:	; call header integral zero 0 stack zero 0
 3:	
 
 isprint$1:	; parameter c, offset 6
-4:		mov a229, [bp + 6]
-5:		mov [bp + 14], a229
+4:		mov a230, [bp + 6]
+5:		mov [bp + 14], a230
 7:	
 
 isprint$2:	; call function noellipse-noellipse isgraph
@@ -617,11 +617,11 @@ isprint$2:	; call function noellipse-noellipse isgraph
 isprint$3:	; post call
 15:	
 
-isprint$4:	; £temporary377 = return_value
+isprint$4:	; £temporary382 = return_value
 20:	
 
-isprint$5:	; if £temporary377 == 0 goto 9
-21:		cmp t231, 0
+isprint$5:	; if £temporary382 == 0 goto 9
+21:		cmp t232, 0
 22:		je isprint$9
 24:	
 
@@ -630,26 +630,26 @@ isprint$6:	; if c == 32 goto 9
 26:		je isprint$9
 28:	
 
-isprint$7:	; £temporary381 = 1
-29:		mov t232, 1
+isprint$7:	; £temporary386 = 1
+29:		mov t233, 1
 31:	
 
 isprint$8:	; goto 10
 32:		jmp isprint$10
 34:	
 
-isprint$9:	; £temporary381 = 0
-35:		mov t233, 0
+isprint$9:	; £temporary386 = 0
+35:		mov t234, 0
 37:	
 
-isprint$10:	; return_value = £temporary381
+isprint$10:	; return_value = £temporary386
 39:	
 
 isprint$11:	; return
-40:		mov t234, [bp]
+40:		mov t235, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t234
+43:		jmp t235
 45:	
 
 isprint$12:	; function end isprint
@@ -659,8 +659,8 @@ ispunct:	; call header integral zero 0 stack zero 0
 3:	
 
 ispunct$1:	; parameter c, offset 6
-4:		mov a235, [bp + 6]
-5:		mov [bp + 14], a235
+4:		mov a236, [bp + 6]
+5:		mov [bp + 14], a236
 7:	
 
 ispunct$2:	; call function noellipse-noellipse isgraph
@@ -673,11 +673,11 @@ ispunct$2:	; call function noellipse-noellipse isgraph
 ispunct$3:	; post call
 15:	
 
-ispunct$4:	; £temporary383 = return_value
+ispunct$4:	; £temporary388 = return_value
 20:	
 
-ispunct$5:	; if £temporary383 == 0 goto 14
-21:		cmp t237, 0
+ispunct$5:	; if £temporary388 == 0 goto 14
+21:		cmp t238, 0
 22:		je ispunct$14
 24:	
 
@@ -685,8 +685,8 @@ ispunct$6:	; call header integral zero 0 stack zero 0
 26:	
 
 ispunct$7:	; parameter c, offset 6
-27:		mov a238, [bp + 6]
-28:		mov [bp + 14], a238
+27:		mov a239, [bp + 6]
+28:		mov [bp + 14], a239
 30:	
 
 ispunct$8:	; call function noellipse-noellipse isalnum
@@ -699,34 +699,34 @@ ispunct$8:	; call function noellipse-noellipse isalnum
 ispunct$9:	; post call
 38:	
 
-ispunct$10:	; £temporary385 = return_value
+ispunct$10:	; £temporary390 = return_value
 43:	
 
-ispunct$11:	; if £temporary385 != 0 goto 14
-44:		cmp t240, 0
+ispunct$11:	; if £temporary390 != 0 goto 14
+44:		cmp t241, 0
 45:		jne ispunct$14
 47:	
 
-ispunct$12:	; £temporary389 = 1
-48:		mov t241, 1
+ispunct$12:	; £temporary394 = 1
+48:		mov t242, 1
 50:	
 
 ispunct$13:	; goto 15
 51:		jmp ispunct$15
 53:	
 
-ispunct$14:	; £temporary389 = 0
-54:		mov t242, 0
+ispunct$14:	; £temporary394 = 0
+54:		mov t243, 0
 56:	
 
-ispunct$15:	; return_value = £temporary389
+ispunct$15:	; return_value = £temporary394
 58:	
 
 ispunct$16:	; return
-59:		mov t243, [bp]
+59:		mov t244, [bp]
 60:		mov di, [bp + 4]
 61:		mov bp, [bp + 2]
-62:		jmp t243
+62:		jmp t244
 64:	
 
 ispunct$17:	; function end ispunct
@@ -736,8 +736,8 @@ iscntrl:	; call header integral zero 0 stack zero 0
 3:	
 
 iscntrl$1:	; parameter c, offset 6
-4:		mov a244, [bp + 6]
-5:		mov [bp + 14], a244
+4:		mov a245, [bp + 6]
+5:		mov [bp + 14], a245
 7:	
 
 iscntrl$2:	; call function noellipse-noellipse isprint
@@ -750,34 +750,34 @@ iscntrl$2:	; call function noellipse-noellipse isprint
 iscntrl$3:	; post call
 15:	
 
-iscntrl$4:	; £temporary392 = return_value
+iscntrl$4:	; £temporary397 = return_value
 20:	
 
-iscntrl$5:	; if £temporary392 != 0 goto 8
-21:		cmp t246, 0
+iscntrl$5:	; if £temporary397 != 0 goto 8
+21:		cmp t247, 0
 22:		jne iscntrl$8
 24:	
 
-iscntrl$6:	; £temporary395 = 1
-25:		mov t247, 1
+iscntrl$6:	; £temporary400 = 1
+25:		mov t248, 1
 27:	
 
 iscntrl$7:	; goto 9
 28:		jmp iscntrl$9
 30:	
 
-iscntrl$8:	; £temporary395 = 0
-31:		mov t248, 0
+iscntrl$8:	; £temporary400 = 0
+31:		mov t249, 0
 33:	
 
-iscntrl$9:	; return_value = £temporary395
+iscntrl$9:	; return_value = £temporary400
 35:	
 
 iscntrl$10:	; return
-36:		mov t249, [bp]
+36:		mov t250, [bp]
 37:		mov di, [bp + 4]
 38:		mov bp, [bp + 2]
-39:		jmp t249
+39:		jmp t250
 41:	
 
 iscntrl$11:	; function end iscntrl
@@ -813,26 +813,26 @@ isspace$5:	; if c != 11 goto 8
 23:		jne isspace$8
 25:	
 
-isspace$6:	; £temporary408 = 1
-26:		mov t250, 1
+isspace$6:	; £temporary413 = 1
+26:		mov t251, 1
 28:	
 
 isspace$7:	; goto 9
 29:		jmp isspace$9
 31:	
 
-isspace$8:	; £temporary408 = 0
-32:		mov t251, 0
+isspace$8:	; £temporary413 = 0
+32:		mov t252, 0
 34:	
 
-isspace$9:	; return_value = £temporary408
+isspace$9:	; return_value = £temporary413
 36:	
 
 isspace$10:	; return
-37:		mov t252, [bp]
+37:		mov t253, [bp]
 38:		mov di, [bp + 4]
 39:		mov bp, [bp + 2]
-40:		jmp t252
+40:		jmp t253
 42:	
 
 isspace$11:	; function end isspace
@@ -842,8 +842,8 @@ tolowerX:	; call header integral zero 0 stack zero 0
 3:	
 
 tolowerX$1:	; parameter c, offset 6
-4:		mov a253, [bp + 6]
-5:		mov [bp + 14], a253
+4:		mov a254, [bp + 6]
+5:		mov [bp + 14], a254
 7:	
 
 tolowerX$2:	; call function noellipse-noellipse isupper
@@ -856,35 +856,35 @@ tolowerX$2:	; call function noellipse-noellipse isupper
 tolowerX$3:	; post call
 15:	
 
-tolowerX$4:	; £temporary409 = return_value
+tolowerX$4:	; £temporary414 = return_value
 20:	
 
-tolowerX$5:	; if £temporary409 == 0 goto 8
-21:		cmp t255, 0
+tolowerX$5:	; if £temporary414 == 0 goto 8
+21:		cmp t256, 0
 22:		je tolowerX$8
 24:	
 
-tolowerX$6:	; £temporary415 = c + 32
-25:		mov a256, [bp + 6]
-26:		add a256, 32
+tolowerX$6:	; £temporary420 = c + 32
+25:		mov a257, [bp + 6]
+26:		add a257, 32
 28:	
 
 tolowerX$7:	; goto 9
 29:		jmp tolowerX$9
 31:	
 
-tolowerX$8:	; £temporary415 = c
-32:		mov t257, [bp + 6]
+tolowerX$8:	; £temporary420 = c
+32:		mov t258, [bp + 6]
 34:	
 
-tolowerX$9:	; return_value = £temporary415
+tolowerX$9:	; return_value = £temporary420
 36:	
 
 tolowerX$10:	; return
-37:		mov t258, [bp]
+37:		mov t259, [bp]
 38:		mov di, [bp + 4]
 39:		mov bp, [bp + 2]
-40:		jmp t258
+40:		jmp t259
 42:	
 
 tolowerX$11:	; function end tolowerX
@@ -894,8 +894,8 @@ tolower:	; call header integral zero 0 stack zero 0
 3:	
 
 tolower$1:	; parameter c, offset 6
-4:		mov a259, [bp + 6]
-5:		mov [bp + 14], a259
+4:		mov a260, [bp + 6]
+5:		mov [bp + 14], a260
 7:	
 
 tolower$2:	; call function noellipse-noellipse isupper
@@ -908,11 +908,11 @@ tolower$2:	; call function noellipse-noellipse isupper
 tolower$3:	; post call
 15:	
 
-tolower$4:	; £temporary417 = return_value
+tolower$4:	; £temporary422 = return_value
 20:	
 
-tolower$5:	; if £temporary417 == 0 goto 31
-21:		cmp t261, 0
+tolower$5:	; if £temporary422 == 0 goto 31
+21:		cmp t262, 0
 22:		je tolower$31
 24:	
 
@@ -929,11 +929,11 @@ tolower$7:	; call function noellipse-noellipse localeconv
 tolower$8:	; post call
 34:	
 
-tolower$9:	; £temporary418 = return_value
+tolower$9:	; £temporary423 = return_value
 39:	
 
-tolower$10:	; localeConvPtr = £temporary418
-40:		mov [bp + 8], t263
+tolower$10:	; localeConvPtr = £temporary423
+40:		mov [bp + 8], t264
 42:	
 
 tolower$11:	; if localeConvPtr == 0 goto 28
@@ -941,35 +941,35 @@ tolower$11:	; if localeConvPtr == 0 goto 28
 44:		je tolower$28
 46:	
 
-tolower$12:	; £temporary420 -> localeConvPtr = *localeConvPtr, offset 12
-47:		mov a264, [bp + 8]
+tolower$12:	; £temporary425 -> localeConvPtr = *localeConvPtr, offset 12
+47:		mov a265, [bp + 8]
 49:	
 
-tolower$13:	; lowerCase = £temporary420 -> localeConvPtr
-50:		mov t265, [a264 + 12]
-51:		mov [bp + 10], t265
+tolower$13:	; lowerCase = £temporary425 -> localeConvPtr
+50:		mov t266, [a265 + 12]
+51:		mov [bp + 10], t266
 53:	
 
-tolower$14:	; £temporary421 -> localeConvPtr = *localeConvPtr, offset 14
-54:		mov a266, [bp + 8]
+tolower$14:	; £temporary426 -> localeConvPtr = *localeConvPtr, offset 14
+54:		mov a267, [bp + 8]
 56:	
 
-tolower$15:	; upperCase = £temporary421 -> localeConvPtr
-57:		mov t267, [a266 + 14]
-58:		mov [bp + 12], t267
+tolower$15:	; upperCase = £temporary426 -> localeConvPtr
+57:		mov t268, [a267 + 14]
+58:		mov [bp + 12], t268
 60:	
 
 tolower$16:	; call header integral zero 0 stack zero 0
 62:	
 
 tolower$17:	; parameter upperCase, offset 6
-63:		mov a268, [bp + 12]
-64:		mov [bp + 20], a268
+63:		mov a269, [bp + 12]
+64:		mov [bp + 20], a269
 66:	
 
 tolower$18:	; parameter c, offset 8
-67:		mov a269, [bp + 6]
-68:		mov [bp + 22], a269
+67:		mov a270, [bp + 6]
+68:		mov [bp + 22], a270
 70:	
 
 tolower$19:	; call function noellipse-noellipse strchr
@@ -982,65 +982,65 @@ tolower$19:	; call function noellipse-noellipse strchr
 tolower$20:	; post call
 78:	
 
-tolower$21:	; £temporary422 = return_value
+tolower$21:	; £temporary427 = return_value
 83:	
 
-tolower$22:	; index = £temporary422 - upperCase
-84:		sub t271, [bp + 12]
-85:		mov [bp + 14], t271
+tolower$22:	; index = £temporary427 - upperCase
+84:		sub t272, [bp + 12]
+85:		mov [bp + 14], t272
 87:	
 
-tolower$23:	; £temporary425 = lowerCase + index
-88:		mov a272, [bp + 10]
-89:		add a272, [bp + 14]
+tolower$23:	; £temporary430 = lowerCase + index
+88:		mov a273, [bp + 10]
+89:		add a273, [bp + 14]
 91:	
 
-tolower$24:	; £temporary424 -> £temporary425 = *£temporary425
+tolower$24:	; £temporary429 -> £temporary430 = *£temporary430
 93:	
 
-tolower$25:	; £temporary426 = int_to_int £temporary424 -> £temporary425 (Signed_Char -> Signed_Int)
-94:		mov t273, [a272]
-96:		and t273, 255
-98:		cmp t273, 0
+tolower$25:	; £temporary431 = int_to_int £temporary429 -> £temporary430 (Signed_Char -> Signed_Int)
+94:		mov t274, [a273]
+96:		and t274, 255
+98:		cmp t274, 0
 99:		jge tolower$26
-100:		neg t273
-102:		neg t273
+100:		neg t274
+102:		neg t274
 104:	
 
-tolower$26:	; return_value = £temporary426
+tolower$26:	; return_value = £temporary431
 106:	
 
 tolower$27:	; return
-107:		mov t274, [bp]
+107:		mov t275, [bp]
 108:		mov di, [bp + 4]
 109:		mov bp, [bp + 2]
-110:		jmp t274
+110:		jmp t275
 112:	
 
-tolower$28:	; £temporary427 = c + 32
-113:		mov a275, [bp + 6]
-114:		add a275, 32
+tolower$28:	; £temporary432 = c + 32
+113:		mov a276, [bp + 6]
+114:		add a276, 32
 116:	
 
-tolower$29:	; return_value = £temporary427
+tolower$29:	; return_value = £temporary432
 118:	
 
 tolower$30:	; return
-119:		mov t276, [bp]
+119:		mov t277, [bp]
 120:		mov di, [bp + 4]
 121:		mov bp, [bp + 2]
-122:		jmp t276
+122:		jmp t277
 124:	
 
 tolower$31:	; return_value = c
-125:		mov a277, [bp + 6]
+125:		mov a278, [bp + 6]
 127:	
 
 tolower$32:	; return
-128:		mov t278, [bp]
+128:		mov t279, [bp]
 129:		mov di, [bp + 4]
 130:		mov bp, [bp + 2]
-131:		jmp t278
+131:		jmp t279
 133:	
 
 tolower$33:	; function end tolower
@@ -1050,8 +1050,8 @@ toupperX:	; call header integral zero 0 stack zero 0
 3:	
 
 toupperX$1:	; parameter c, offset 6
-4:		mov a279, [bp + 6]
-5:		mov [bp + 14], a279
+4:		mov a280, [bp + 6]
+5:		mov [bp + 14], a280
 7:	
 
 toupperX$2:	; call function noellipse-noellipse islower
@@ -1064,35 +1064,35 @@ toupperX$2:	; call function noellipse-noellipse islower
 toupperX$3:	; post call
 15:	
 
-toupperX$4:	; £temporary432 = return_value
+toupperX$4:	; £temporary437 = return_value
 20:	
 
-toupperX$5:	; if £temporary432 == 0 goto 8
-21:		cmp t281, 0
+toupperX$5:	; if £temporary437 == 0 goto 8
+21:		cmp t282, 0
 22:		je toupperX$8
 24:	
 
-toupperX$6:	; £temporary438 = c - 32
-25:		mov a282, [bp + 6]
-26:		sub a282, 32
+toupperX$6:	; £temporary443 = c - 32
+25:		mov a283, [bp + 6]
+26:		sub a283, 32
 28:	
 
 toupperX$7:	; goto 9
 29:		jmp toupperX$9
 31:	
 
-toupperX$8:	; £temporary438 = c
-32:		mov t283, [bp + 6]
+toupperX$8:	; £temporary443 = c
+32:		mov t284, [bp + 6]
 34:	
 
-toupperX$9:	; return_value = £temporary438
+toupperX$9:	; return_value = £temporary443
 36:	
 
 toupperX$10:	; return
-37:		mov t284, [bp]
+37:		mov t285, [bp]
 38:		mov di, [bp + 4]
 39:		mov bp, [bp + 2]
-40:		jmp t284
+40:		jmp t285
 42:	
 
 toupperX$11:	; function end toupperX
@@ -1102,8 +1102,8 @@ toupper:	; call header integral zero 0 stack zero 0
 3:	
 
 toupper$1:	; parameter c, offset 6
-4:		mov a285, [bp + 6]
-5:		mov [bp + 14], a285
+4:		mov a286, [bp + 6]
+5:		mov [bp + 14], a286
 7:	
 
 toupper$2:	; call function noellipse-noellipse islower
@@ -1116,11 +1116,11 @@ toupper$2:	; call function noellipse-noellipse islower
 toupper$3:	; post call
 15:	
 
-toupper$4:	; £temporary440 = return_value
+toupper$4:	; £temporary445 = return_value
 20:	
 
-toupper$5:	; if £temporary440 == 0 goto 31
-21:		cmp t287, 0
+toupper$5:	; if £temporary445 == 0 goto 31
+21:		cmp t288, 0
 22:		je toupper$31
 24:	
 
@@ -1137,11 +1137,11 @@ toupper$7:	; call function noellipse-noellipse localeconv
 toupper$8:	; post call
 34:	
 
-toupper$9:	; £temporary441 = return_value
+toupper$9:	; £temporary446 = return_value
 39:	
 
-toupper$10:	; localeConvPtr = £temporary441
-40:		mov [bp + 8], t289
+toupper$10:	; localeConvPtr = £temporary446
+40:		mov [bp + 8], t290
 42:	
 
 toupper$11:	; if localeConvPtr == 0 goto 28
@@ -1149,35 +1149,35 @@ toupper$11:	; if localeConvPtr == 0 goto 28
 44:		je toupper$28
 46:	
 
-toupper$12:	; £temporary443 -> localeConvPtr = *localeConvPtr, offset 12
-47:		mov a290, [bp + 8]
+toupper$12:	; £temporary448 -> localeConvPtr = *localeConvPtr, offset 12
+47:		mov a291, [bp + 8]
 49:	
 
-toupper$13:	; lowerCase = £temporary443 -> localeConvPtr
-50:		mov t291, [a290 + 12]
-51:		mov [bp + 10], t291
+toupper$13:	; lowerCase = £temporary448 -> localeConvPtr
+50:		mov t292, [a291 + 12]
+51:		mov [bp + 10], t292
 53:	
 
-toupper$14:	; £temporary444 -> localeConvPtr = *localeConvPtr, offset 14
-54:		mov a292, [bp + 8]
+toupper$14:	; £temporary449 -> localeConvPtr = *localeConvPtr, offset 14
+54:		mov a293, [bp + 8]
 56:	
 
-toupper$15:	; upperCase = £temporary444 -> localeConvPtr
-57:		mov t293, [a292 + 14]
-58:		mov [bp + 12], t293
+toupper$15:	; upperCase = £temporary449 -> localeConvPtr
+57:		mov t294, [a293 + 14]
+58:		mov [bp + 12], t294
 60:	
 
 toupper$16:	; call header integral zero 0 stack zero 0
 62:	
 
 toupper$17:	; parameter lowerCase, offset 6
-63:		mov a294, [bp + 10]
-64:		mov [bp + 20], a294
+63:		mov a295, [bp + 10]
+64:		mov [bp + 20], a295
 66:	
 
 toupper$18:	; parameter c, offset 8
-67:		mov a295, [bp + 6]
-68:		mov [bp + 22], a295
+67:		mov a296, [bp + 6]
+68:		mov [bp + 22], a296
 70:	
 
 toupper$19:	; call function noellipse-noellipse strchr
@@ -1190,65 +1190,65 @@ toupper$19:	; call function noellipse-noellipse strchr
 toupper$20:	; post call
 78:	
 
-toupper$21:	; £temporary445 = return_value
+toupper$21:	; £temporary450 = return_value
 83:	
 
-toupper$22:	; index = £temporary445 - lowerCase
-84:		sub t297, [bp + 10]
-85:		mov [bp + 14], t297
+toupper$22:	; index = £temporary450 - lowerCase
+84:		sub t298, [bp + 10]
+85:		mov [bp + 14], t298
 87:	
 
-toupper$23:	; £temporary448 = upperCase + index
-88:		mov a298, [bp + 12]
-89:		add a298, [bp + 14]
+toupper$23:	; £temporary453 = upperCase + index
+88:		mov a299, [bp + 12]
+89:		add a299, [bp + 14]
 91:	
 
-toupper$24:	; £temporary447 -> £temporary448 = *£temporary448
+toupper$24:	; £temporary452 -> £temporary453 = *£temporary453
 93:	
 
-toupper$25:	; £temporary449 = int_to_int £temporary447 -> £temporary448 (Signed_Char -> Signed_Int)
-94:		mov t299, [a298]
-96:		and t299, 255
-98:		cmp t299, 0
+toupper$25:	; £temporary454 = int_to_int £temporary452 -> £temporary453 (Signed_Char -> Signed_Int)
+94:		mov t300, [a299]
+96:		and t300, 255
+98:		cmp t300, 0
 99:		jge toupper$26
-100:		neg t299
-102:		neg t299
+100:		neg t300
+102:		neg t300
 104:	
 
-toupper$26:	; return_value = £temporary449
+toupper$26:	; return_value = £temporary454
 106:	
 
 toupper$27:	; return
-107:		mov t300, [bp]
+107:		mov t301, [bp]
 108:		mov di, [bp + 4]
 109:		mov bp, [bp + 2]
-110:		jmp t300
+110:		jmp t301
 112:	
 
-toupper$28:	; £temporary450 = c - 32
-113:		mov a301, [bp + 6]
-114:		sub a301, 32
+toupper$28:	; £temporary455 = c - 32
+113:		mov a302, [bp + 6]
+114:		sub a302, 32
 116:	
 
-toupper$29:	; return_value = £temporary450
+toupper$29:	; return_value = £temporary455
 118:	
 
 toupper$30:	; return
-119:		mov t302, [bp]
+119:		mov t303, [bp]
 120:		mov di, [bp + 4]
 121:		mov bp, [bp + 2]
-122:		jmp t302
+122:		jmp t303
 124:	
 
 toupper$31:	; return_value = c
-125:		mov a303, [bp + 6]
+125:		mov a304, [bp + 6]
 127:	
 
 toupper$32:	; return
-128:		mov t304, [bp]
+128:		mov t305, [bp]
 129:		mov di, [bp + 4]
 130:		mov bp, [bp + 2]
-131:		jmp t304
+131:		jmp t305
 133:	
 
 toupper$33:	; function end toupper

@@ -270,8 +270,15 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\SetJmpTest.c,0$
        
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\SetJmp.h,1$
- typedef int jmp_buf [ 3 ];
 
+
+
+
+
+
+
+
+typedef char * jmp_buf [ 3 ];
 int setjmp ( jmp_buf env ) ;
 void longjmp ( jmp_buf env , int value ) ;
 
@@ -286,7 +293,7 @@ return x / y ;
 }
 else {
 char * p = "Division by Zero." ;
-printf ( "longjmp <%s> <%u>\n" , p , p ) ;
+
 longjmp ( buffer , p ) ;
 return 0 ;
 }

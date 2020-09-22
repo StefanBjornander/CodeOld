@@ -3,6 +3,7 @@
 	global localeconv
 
 	extern strcmp
+	extern $StackTop
 section .text
 
  setlocale:
@@ -14,11 +15,11 @@ section .text
 	je setlocale$5
 
  setlocale$2:
-	; £field338 -> g_currStructPtr = *g_currStructPtr
+	; £field351 -> g_currStructPtr = *g_currStructPtr
 	mov rsi, [@1527$g_currStructPtr]
 
  setlocale$3:
-	; £temporary339 = £field338 -> g_currStructPtr
+	; £temporary352 = £field351 -> g_currStructPtr
 	mov rax, [rsi]
 
  setlocale$4:
@@ -26,11 +27,11 @@ section .text
 	jmp setlocale$6
 
  setlocale$5:
-	; £temporary339 = int8$0#
+	; £temporary352 = int8$0#
 	mov rax, 0
 
  setlocale$6:
-	; oldName = £temporary339
+	; oldName = £temporary352
 	mov [rbp + 40], rax
 
  setlocale$7:
@@ -61,26 +62,26 @@ section .text
 	mov [rbp + 72], rax
 
  setlocale$13:
-	; £temporary344 = int_to_int index (Signed_Int -> Array)
+	; £temporary357 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
  setlocale$14:
-	; £temporary345 = £temporary344 * Array_16#
+	; £temporary358 = £temporary357 * Array_16#
 	xor rdx, rdx
 	mul qword [Array_16#]
 
  setlocale$15:
-	; £temporary346 = sArray + £temporary345
+	; £temporary359 = sArray + £temporary358
 	mov rsi, @1525$sArray
 	add rsi, rax
 
  setlocale$16:
-	; £field343 -> £temporary346 = *£temporary346
+	; £field356 -> £temporary359 = *£temporary359
 
  setlocale$17:
-	; parameter £field343.name$0 -> £temporary346, offset 80
+	; parameter £field356.name$0 -> £temporary359, offset 80
 	mov rax, [rsi]
 	mov [rbp + 80], rax
 
@@ -95,37 +96,37 @@ section .text
 	; post call
 
  setlocale$20:
-	; £temporary347 = return_value
+	; £temporary360 = return_value
 
  setlocale$21:
-	; if £temporary347 != int4$0# goto 29
+	; if £temporary360 != int4$0# goto 29
 	cmp ebx, 0
 	jne setlocale$29
 
  setlocale$22:
-	; £temporary350 = int_to_int index (Signed_Int -> Array)
+	; £temporary363 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
  setlocale$23:
-	; £temporary351 = £temporary350 * Array_16#
+	; £temporary364 = £temporary363 * Array_16#
 	xor rdx, rdx
 	mul qword [Array_16#]
 
  setlocale$24:
-	; £temporary352 = sArray + £temporary351
+	; £temporary365 = sArray + £temporary364
 	mov rsi, @1525$sArray
 	add rsi, rax
 
  setlocale$25:
-	; £field349 -> £temporary352 = *£temporary352
+	; £field362 -> £temporary365 = *£temporary365
 
  setlocale$26:
-	; £temporary353 = &£field349 -> £temporary352
+	; £temporary366 = &£field362 -> £temporary365
 
  setlocale$27:
-	; g_currStructPtr = £temporary353
+	; g_currStructPtr = £temporary366
 	mov [@1527$g_currStructPtr], rsi
 
  setlocale$28:
@@ -157,11 +158,11 @@ section .text
 	je localeconv$4
 
  localeconv$1:
-	; £field355 -> g_currStructPtr = *g_currStructPtr
+	; £field368 -> g_currStructPtr = *g_currStructPtr
 	mov rsi, [@1527$g_currStructPtr]
 
  localeconv$2:
-	; £temporary356 = £field355 -> g_currStructPtr
+	; £temporary369 = £field368 -> g_currStructPtr
 	mov rbx, [rsi + 8]
 
  localeconv$3:
@@ -169,11 +170,11 @@ section .text
 	jmp localeconv$5
 
  localeconv$4:
-	; £temporary356 = int8$0#
+	; £temporary369 = int8$0#
 	mov rbx, 0
 
  localeconv$5:
-	; return £temporary356
+	; return £temporary369
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]

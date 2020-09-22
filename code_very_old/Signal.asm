@@ -2,6 +2,7 @@
 	global raise
 
 	extern printf
+	extern $StackTop
 section .text
 
  signal:
