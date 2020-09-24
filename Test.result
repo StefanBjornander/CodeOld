@@ -1,4 +1,6544 @@
 Main.asm
+64:
+old  <	mov [rbp + 24], eax>
+new  <	mov [rbp], 0>
+
+65:
+old  <	mov [rbp + 28], rdx>
+new  <	mov [rbp + 24], eax>
+
+66:
+old  <>
+new  <	mov [rbp + 28], rdx>
+
+67:
+old  < main:>
+new  <>
+
+68:
+old  <	; empty>
+new  < main:>
+
+69:
+old  <>
+new  <	; empty>
+
+70:
+old  < main$1:>
+new  <>
+
+71:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main$1:>
+
+72:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+73:
+old  < main$2:>
+new  <>
+
+74:
+old  <	; parameter string_argc3A2025i0A#, offset 60>
+new  < main$2:>
+
+75:
+old  <	mov qword [rbp + 60], string_argc3A2025i0A#>
+new  <	; parameter string_argc3A2025i0A#, offset 60>
+
+76:
+old  <>
+new  <	mov qword [rbp + 60], string_argc3A2025i0A#>
+
+77:
+old  < main$3:>
+new  <>
+
+78:
+old  <	; parameter argc, offset 68>
+new  < main$3:>
+
+79:
+old  <	mov eax, [rbp + 24]>
+new  <	; parameter argc, offset 68>
+
+80:
+old  <	mov [rbp + 68], eax>
+new  <	mov eax, [rbp + 24]>
+
+81:
+old  <>
+new  <	mov [rbp + 68], eax>
+
+82:
+old  < main$4:>
+new  <>
+
+83:
+old  <	; call function noellipse-ellipse printf, extra 4>
+new  < main$4:>
+
+84:
+old  <	mov qword [rbp + 36], main$5>
+new  <	; call function noellipse-ellipse printf, extra 4>
+
+85:
+old  <	mov [rbp + 44], rbp>
+new  <	mov qword [rbp + 36], main$5>
+
+86:
+old  <	add rbp, 36>
+new  <	mov [rbp + 44], rbp>
+
+87:
+old  <	mov rdi, rbp>
+new  <	add rbp, 36>
+
+88:
+old  <	add rdi, 4>
+new  <	mov rdi, rbp>
+
+89:
+old  <	jmp printf>
+new  <	add rdi, 4>
+
+90:
+old  <>
+new  <	jmp printf>
+
+91:
+old  < main$5:>
+new  <>
+
+92:
+old  <	; post call>
+new  < main$5:>
+
+93:
+old  <>
+new  <	; post call>
+
+94:
+old  < main$6:>
+new  <>
+
+95:
+old  <	; index = int4$0#>
+new  < main$6:>
+
+96:
+old  <	mov dword [rbp + 36], 0>
+new  <	; index = int4$0#>
+
+97:
+old  <>
+new  <	mov dword [rbp + 36], 0>
+
+98:
+old  < main$7:>
+new  <>
+
+99:
+old  <	; if index >= argc goto 20>
+new  < main$7:>
+
+100:
+old  <	mov eax, [rbp + 24]>
+new  <	; if index >= argc goto 20>
+
+101:
+old  <	cmp [rbp + 36], eax>
+new  <	mov eax, [rbp + 24]>
+
+102:
+old  <	jge main$20>
+new  <	cmp [rbp + 36], eax>
+
+103:
+old  <>
+new  <	jge main$20>
+
+104:
+old  < main$8:>
+new  <>
+
+105:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main$8:>
+
+106:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+107:
+old  < main$9:>
+new  <>
+
+108:
+old  <	; parameter string_25i3A203C25s3E0A#, offset 64>
+new  < main$9:>
+
+109:
+old  <	mov qword [rbp + 64], string_25i3A203C25s3E0A#>
+new  <	; parameter string_25i3A203C25s3E0A#, offset 64>
+
+110:
+old  <>
+new  <	mov qword [rbp + 64], string_25i3A203C25s3E0A#>
+
+111:
+old  < main$10:>
+new  <>
+
+112:
+old  <	; parameter index, offset 72>
+new  < main$10:>
+
+113:
+old  <	mov eax, [rbp + 36]>
+new  <	; parameter index, offset 72>
+
+114:
+old  <	mov [rbp + 72], eax>
+new  <	mov eax, [rbp + 36]>
+
+115:
+old  <>
+new  <	mov [rbp + 72], eax>
+
+116:
+old  < main$11:>
+new  <>
+
+117:
+old  <	; Â£temporary43 = int_to_int index (Signed_Int -> Pointer)>
+new  < main$11:>
+
+118:
+old  <	mov eax, [rbp + 36]>
+new  <	; Â£temporary43 = int_to_int index (Signed_Int -> Pointer)>
+
+119:
+old  <	mov rbx, 4294967295>
+new  <	mov eax, [rbp + 36]>
+
+120:
+old  <	and rax, rbx>
+new  <	mov rbx, 4294967295>
+
+121:
+old  <>
+new  <	and rax, rbx>
+
+122:
+old  < main$12:>
+new  <>
+
+123:
+old  <	; Â£temporary44 = Â£temporary43 * int8$8#>
+new  < main$12:>
+
+124:
+old  <	xor rdx, rdx>
+new  <	; Â£temporary44 = Â£temporary43 * int8$8#>
+
+125:
+old  <	mul qword [int8$8#]>
+new  <	xor rdx, rdx>
+
+126:
+old  <>
+new  <	mul qword [int8$8#]>
+
+127:
+old  < main$13:>
+new  <>
+
+128:
+old  <	; Â£temporary45 = argv + Â£temporary44>
+new  < main$13:>
+
+129:
+old  <	mov rsi, [rbp + 28]>
+new  <	; Â£temporary45 = argv + Â£temporary44>
+
+130:
+old  <	add rsi, rax>
+new  <	mov rsi, [rbp + 28]>
+
+131:
+old  <>
+new  <	add rsi, rax>
+
+132:
+old  < main$14:>
+new  <>
+
+133:
+old  <	; Â£field42 -> Â£temporary45 = *Â£temporary45>
+new  < main$14:>
+
+134:
+old  <>
+new  <	; Â£field42 -> Â£temporary45 = *Â£temporary45>
+
+135:
+old  < main$15:>
+new  <>
+
+136:
+old  <	; parameter Â£field42 -> Â£temporary45, offset 76>
+new  < main$15:>
+
+137:
+old  <	mov rax, [rsi]>
+new  <	; parameter Â£field42 -> Â£temporary45, offset 76>
+
+138:
+old  <	mov [rbp + 76], rax>
+new  <	mov rax, [rsi]>
+
+139:
+old  <>
+new  <	mov [rbp + 76], rax>
+
+140:
+old  < main$16:>
+new  <>
+
+141:
+old  <	; call function noellipse-ellipse printf, extra 12>
+new  < main$16:>
+
+142:
+old  <	mov qword [rbp + 40], main$17>
+new  <	; call function noellipse-ellipse printf, extra 12>
+
+143:
+old  <	mov [rbp + 48], rbp>
+new  <	mov qword [rbp + 40], main$17>
+
+144:
+old  <	add rbp, 40>
+new  <	mov [rbp + 48], rbp>
+
+145:
+old  <	mov rdi, rbp>
+new  <	add rbp, 40>
+
+146:
+old  <	add rdi, 12>
+new  <	mov rdi, rbp>
+
+147:
+old  <	jmp printf>
+new  <	add rdi, 12>
+
+148:
+old  <>
+new  <	jmp printf>
+
+149:
+old  < main$17:>
+new  <>
+
+150:
+old  <	; post call>
+new  < main$17:>
+
+151:
+old  <>
+new  <	; post call>
+
+152:
+old  < main$18:>
+new  <>
+
+153:
+old  <	; index = index + int4$1#>
+new  < main$18:>
+
+154:
+old  <	inc dword [rbp + 36]>
+new  <	; index = index + int4$1#>
+
+155:
+old  <>
+new  <	inc dword [rbp + 36]>
+
+156:
+old  < main$19:>
+new  <>
+
+157:
+old  <	; goto 7>
+new  < main$19:>
+
+158:
+old  <	jmp main$7>
+new  <	; goto 7>
+
+159:
+old  <>
+new  <	jmp main$7>
+
+160:
+old  < main$20:>
+new  <>
+
+161:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main$20:>
+
+162:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+163:
+old  < main$21:>
+new  <>
+
+164:
+old  <	; parameter string_0A#, offset 64>
+new  < main$21:>
+
+165:
+old  <	mov qword [rbp + 64], string_0A#>
+new  <	; parameter string_0A#, offset 64>
+
+166:
+old  <>
+new  <	mov qword [rbp + 64], string_0A#>
+
+167:
+old  < main$22:>
+new  <>
+
+168:
+old  <	; call function noellipse-ellipse printf, extra 0>
+new  < main$22:>
+
+169:
+old  <	mov qword [rbp + 40], main$23>
+new  <	; call function noellipse-ellipse printf, extra 0>
+
+170:
+old  <	mov [rbp + 48], rbp>
+new  <	mov qword [rbp + 40], main$23>
+
+171:
+old  <	add rbp, 40>
+new  <	mov [rbp + 48], rbp>
+
+172:
+old  <	mov rdi, rbp>
+new  <	add rbp, 40>
+
+173:
+old  <	jmp printf>
+new  <	mov rdi, rbp>
+
+174:
+old  <>
+new  <	jmp printf>
+
+175:
+old  < main$23:>
+new  <>
+
+176:
+old  <	; post call>
+new  < main$23:>
+
+177:
+old  <>
+new  <	; post call>
+
+178:
+old  < main$24:>
+new  <>
+
+179:
+old  <	; index = int4$0#>
+new  < main$24:>
+
+180:
+old  <	mov dword [rbp + 36], 0>
+new  <	; index = int4$0#>
+
+181:
+old  <>
+new  <	mov dword [rbp + 36], 0>
+
+182:
+old  < main$25:>
+new  <>
+
+183:
+old  <	; Â£temporary49 = int_to_int index (Signed_Int -> Pointer)>
+new  < main$25:>
+
+184:
+old  <	mov eax, [rbp + 36]>
+new  <	; Â£temporary49 = int_to_int index (Signed_Int -> Pointer)>
+
+185:
+old  <	mov rbx, 4294967295>
+new  <	mov eax, [rbp + 36]>
+
+186:
+old  <	and rax, rbx>
+new  <	mov rbx, 4294967295>
+
+187:
+old  <>
+new  <	and rax, rbx>
+
+188:
+old  < main$26:>
+new  <>
+
+189:
+old  <	; Â£temporary50 = Â£temporary49 * int8$8#>
+new  < main$26:>
+
+190:
+old  <	xor rdx, rdx>
+new  <	; Â£temporary50 = Â£temporary49 * int8$8#>
+
+191:
+old  <	mul qword [int8$8#]>
+new  <	xor rdx, rdx>
+
+192:
+old  <>
+new  <	mul qword [int8$8#]>
+
+193:
+old  < main$27:>
+new  <>
+
+194:
+old  <	; Â£temporary51 = argv + Â£temporary50>
+new  < main$27:>
+
+195:
+old  <	mov rsi, [rbp + 28]>
+new  <	; Â£temporary51 = argv + Â£temporary50>
+
+196:
+old  <	add rsi, rax>
+new  <	mov rsi, [rbp + 28]>
+
+197:
+old  <>
+new  <	add rsi, rax>
+
+198:
+old  < main$28:>
+new  <>
+
+199:
+old  <	; Â£field48 -> Â£temporary51 = *Â£temporary51>
+new  < main$28:>
+
+200:
+old  <>
+new  <	; Â£field48 -> Â£temporary51 = *Â£temporary51>
+
+201:
+old  < main$29:>
+new  <>
+
+202:
+old  <	; if Â£field48 -> Â£temporary51 == int8$0# goto 42>
+new  < main$29:>
+
+203:
+old  <	cmp qword [rsi], 0>
+new  <	; if Â£field48 -> Â£temporary51 == int8$0# goto 42>
+
+204:
+old  <	je main$42>
+new  <	cmp qword [rsi], 0>
+
+205:
+old  <>
+new  <	je main$42>
+
+206:
+old  < main$30:>
+new  <>
+
+207:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main$30:>
+
+208:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+209:
+old  < main$31:>
+new  <>
+
+210:
+old  <	; parameter string_25i3A203C25s3E0A#, offset 64>
+new  < main$31:>
+
+211:
+old  <	mov qword [rbp + 64], string_25i3A203C25s3E0A#>
+new  <	; parameter string_25i3A203C25s3E0A#, offset 64>
+
+212:
+old  <>
+new  <	mov qword [rbp + 64], string_25i3A203C25s3E0A#>
+
+213:
+old  < main$32:>
+new  <>
+
+214:
+old  <	; parameter index, offset 72>
+new  < main$32:>
+
+215:
+old  <	mov eax, [rbp + 36]>
+new  <	; parameter index, offset 72>
+
+216:
+old  <	mov [rbp + 72], eax>
+new  <	mov eax, [rbp + 36]>
+
+217:
+old  <>
+new  <	mov [rbp + 72], eax>
+
+218:
+old  < main$33:>
+new  <>
+
+219:
+old  <	; Â£temporary55 = int_to_int index (Signed_Int -> Pointer)>
+new  < main$33:>
+
+220:
+old  <	mov eax, [rbp + 36]>
+new  <	; Â£temporary55 = int_to_int index (Signed_Int -> Pointer)>
+
+221:
+old  <	mov rbx, 4294967295>
+new  <	mov eax, [rbp + 36]>
+
+222:
+old  <	and rax, rbx>
+new  <	mov rbx, 4294967295>
+
+223:
+old  <>
+new  <	and rax, rbx>
+
+224:
+old  < main$34:>
+new  <>
+
+225:
+old  <	; Â£temporary56 = Â£temporary55 * int8$8#>
+new  < main$34:>
+
+226:
+old  <	xor rdx, rdx>
+new  <	; Â£temporary56 = Â£temporary55 * int8$8#>
+
+227:
+old  <	mul qword [int8$8#]>
+new  <	xor rdx, rdx>
+
+228:
+old  <>
+new  <	mul qword [int8$8#]>
+
+229:
+old  < main$35:>
+new  <>
+
+230:
+old  <	; Â£temporary57 = argv + Â£temporary56>
+new  < main$35:>
+
+231:
+old  <	mov rsi, [rbp + 28]>
+new  <	; Â£temporary57 = argv + Â£temporary56>
+
+232:
+old  <	add rsi, rax>
+new  <	mov rsi, [rbp + 28]>
+
+233:
+old  <>
+new  <	add rsi, rax>
+
+234:
+old  < main$36:>
+new  <>
+
+235:
+old  <	; Â£field54 -> Â£temporary57 = *Â£temporary57>
+new  < main$36:>
+
+236:
+old  <>
+new  <	; Â£field54 -> Â£temporary57 = *Â£temporary57>
+
+237:
+old  < main$37:>
+new  <>
+
+238:
+old  <	; parameter Â£field54 -> Â£temporary57, offset 76>
+new  < main$37:>
+
+239:
+old  <	mov rax, [rsi]>
+new  <	; parameter Â£field54 -> Â£temporary57, offset 76>
+
+240:
+old  <	mov [rbp + 76], rax>
+new  <	mov rax, [rsi]>
+
+241:
+old  <>
+new  <	mov [rbp + 76], rax>
+
+242:
+old  < main$38:>
+new  <>
+
+243:
+old  <	; call function noellipse-ellipse printf, extra 12>
+new  < main$38:>
+
+244:
+old  <	mov qword [rbp + 40], main$39>
+new  <	; call function noellipse-ellipse printf, extra 12>
+
+245:
+old  <	mov [rbp + 48], rbp>
+new  <	mov qword [rbp + 40], main$39>
+
+246:
+old  <	add rbp, 40>
+new  <	mov [rbp + 48], rbp>
+
+247:
+old  <	mov rdi, rbp>
+new  <	add rbp, 40>
+
+248:
+old  <	add rdi, 12>
+new  <	mov rdi, rbp>
+
+249:
+old  <	jmp printf>
+new  <	add rdi, 12>
+
+250:
+old  <>
+new  <	jmp printf>
+
+251:
+old  < main$39:>
+new  <>
+
+252:
+old  <	; post call>
+new  < main$39:>
+
+253:
+old  <>
+new  <	; post call>
+
+254:
+old  < main$40:>
+new  <>
+
+255:
+old  <	; index = index + int4$1#>
+new  < main$40:>
+
+256:
+old  <	inc dword [rbp + 36]>
+new  <	; index = index + int4$1#>
+
+257:
+old  <>
+new  <	inc dword [rbp + 36]>
+
+258:
+old  < main$41:>
+new  <>
+
+259:
+old  <	; goto 25>
+new  < main$41:>
+
+260:
+old  <	jmp main$25>
+new  <	; goto 25>
+
+261:
+old  <>
+new  <	jmp main$25>
+
+262:
+old  < main$42:>
+new  <>
+
+263:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main$42:>
+
+264:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+265:
+old  < main$43:>
+new  <>
+
+266:
+old  <	; parameter string_0A#, offset 64>
+new  < main$43:>
+
+267:
+old  <	mov qword [rbp + 64], string_0A#>
+new  <	; parameter string_0A#, offset 64>
+
+268:
+old  <>
+new  <	mov qword [rbp + 64], string_0A#>
+
+269:
+old  < main$44:>
+new  <>
+
+270:
+old  <	; call function noellipse-ellipse printf, extra 0>
+new  < main$44:>
+
+271:
+old  <	mov qword [rbp + 40], main$45>
+new  <	; call function noellipse-ellipse printf, extra 0>
+
+272:
+old  <	mov [rbp + 48], rbp>
+new  <	mov qword [rbp + 40], main$45>
+
+273:
+old  <	add rbp, 40>
+new  <	mov [rbp + 48], rbp>
+
+274:
+old  <	mov rdi, rbp>
+new  <	add rbp, 40>
+
+275:
+old  <	jmp printf>
+new  <	mov rdi, rbp>
+
+276:
+old  <>
+new  <	jmp printf>
+
+277:
+old  < main$45:>
+new  <>
+
+278:
+old  <	; post call>
+new  < main$45:>
+
+279:
+old  <>
+new  <	; post call>
+
+280:
+old  < main$46:>
+new  <>
+
+281:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main$46:>
+
+282:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+283:
+old  < main$47:>
+new  <>
+
+284:
+old  <	; parameter int8$0#, offset 97>
+new  < main$47:>
+
+285:
+old  <	mov qword [rbp + 97], 0>
+new  <	; parameter int8$0#, offset 97>
+
+286:
+old  <>
+new  <	mov qword [rbp + 97], 0>
+
+287:
+old  < main$48:>
+new  <>
+
+288:
+old  <	; call function noellipse-noellipse mktime>
+new  < main$48:>
+
+289:
+old  <	mov qword [rbp + 73], main$49>
+new  <	; call function noellipse-noellipse mktime>
+
+290:
+old  <	mov [rbp + 81], rbp>
+new  <	mov qword [rbp + 73], main$49>
+
+291:
+old  <	add rbp, 73>
+new  <	mov [rbp + 81], rbp>
+
+292:
+old  <	jmp mktime>
+new  <	add rbp, 73>
+
+293:
+old  <>
+new  <	jmp mktime>
+
+294:
+old  < main$49:>
+new  <>
+
+295:
+old  <	; post call>
+new  < main$49:>
+
+296:
+old  <>
+new  <	; post call>
+
+297:
+old  < main$50:>
+new  <>
+
+298:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main$50:>
+
+299:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+300:
+old  < main$51:>
+new  <>
+
+301:
+old  <	; parameter string_Hello210A#, offset 97>
+new  < main$51:>
+
+302:
+old  <	mov qword [rbp + 97], string_Hello210A#>
+new  <	; parameter string_Hello210A#, offset 97>
+
+303:
+old  <>
+new  <	mov qword [rbp + 97], string_Hello210A#>
+
+304:
+old  < main$52:>
+new  <>
+
+305:
+old  <	; call function noellipse-ellipse printf, extra 0>
+new  < main$52:>
+
+306:
+old  <	mov qword [rbp + 73], main$53>
+new  <	; call function noellipse-ellipse printf, extra 0>
+
+307:
+old  <	mov [rbp + 81], rbp>
+new  <	mov qword [rbp + 73], main$53>
+
+308:
+old  <	add rbp, 73>
+new  <	mov [rbp + 81], rbp>
+
+309:
+old  <	mov rdi, rbp>
+new  <	add rbp, 73>
+
+310:
+old  <	jmp printf>
+new  <	mov rdi, rbp>
+
+311:
+old  <>
+new  <	jmp printf>
+
+312:
+old  < main$53:>
+new  <>
+
+313:
+old  <	; post call>
+new  < main$53:>
+
+314:
+old  <>
+new  <	; post call>
+
+315:
+old  < main$54:>
+new  <>
+
+316:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main$54:>
+
+317:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+318:
+old  < main$55:>
+new  <>
+
+319:
+old  <	; parameter string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#, offset 97>
+new  < main$55:>
+
+320:
+old  <	mov qword [rbp + 97], string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#>
+new  <	; parameter string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#, offset 97>
+
+321:
+old  <>
+new  <	mov qword [rbp + 97], string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#>
+
+322:
+old  < main$56:>
+new  <>
+
+323:
+old  <	; call function noellipse-ellipse printf, extra 0>
+new  < main$56:>
+
+324:
+old  <	mov qword [rbp + 73], main$57>
+new  <	; call function noellipse-ellipse printf, extra 0>
+
+325:
+old  <	mov [rbp + 81], rbp>
+new  <	mov qword [rbp + 73], main$57>
+
+326:
+old  <	add rbp, 73>
+new  <	mov [rbp + 81], rbp>
+
+327:
+old  <	mov rdi, rbp>
+new  <	add rbp, 73>
+
+328:
+old  <	jmp printf>
+new  <	mov rdi, rbp>
+
+329:
+old  <>
+new  <	jmp printf>
+
+330:
+old  < main$57:>
+new  <>
+
+331:
+old  <	; post call>
+new  < main$57:>
+
+332:
+old  <>
+new  <	; post call>
+
+333:
+old  < main$58:>
+new  <>
+
+334:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main$58:>
+
+335:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+336:
+old  < main$59:>
+new  <>
+
+337:
+old  <	; parameter string_25c2025s2025i2025lf#, offset 97>
+new  < main$59:>
+
+338:
+old  <	mov qword [rbp + 97], string_25c2025s2025i2025lf#>
+new  <	; parameter string_25c2025s2025i2025lf#, offset 97>
+
+339:
+old  <>
+new  <	mov qword [rbp + 97], string_25c2025s2025i2025lf#>
+
+340:
+old  < main$60:>
+new  <>
+
+341:
+old  <	; Â£temporary63 = &c>
+new  < main$60:>
+
+342:
+old  <	mov rsi, rbp>
+new  <	; Â£temporary63 = &c>
+
+343:
+old  <	add rsi, 52>
+new  <	mov rsi, rbp>
+
+344:
+old  <>
+new  <	add rsi, 52>
+
+345:
+old  < main$61:>
+new  <>
+
+346:
+old  <	; parameter Â£temporary63, offset 105>
+new  < main$61:>
+
+347:
+old  <	mov [rbp + 105], rsi>
+new  <	; parameter Â£temporary63, offset 105>
+
+348:
+old  <>
+new  <	mov [rbp + 105], rsi>
+
+349:
+old  < main$62:>
+new  <>
+
+350:
+old  <	; parameter s, offset 113>
+new  < main$62:>
+
+351:
+old  <	mov [rbp + 113], rbp>
+new  <	; parameter s, offset 113>
+
+352:
+old  <	add qword [rbp + 113], 53>
+new  <	mov [rbp + 113], rbp>
+
+353:
+old  <>
+new  <	add qword [rbp + 113], 53>
+
+354:
+old  < main$63:>
+new  <>
+
+355:
+old  <	; Â£temporary64 = &i>
+new  < main$63:>
+
+356:
+old  <	mov rsi, rbp>
+new  <	; Â£temporary64 = &i>
+
+357:
+old  <	add rsi, 40>
+new  <	mov rsi, rbp>
+
+358:
+old  <>
+new  <	add rsi, 40>
+
+359:
+old  < main$64:>
+new  <>
+
+360:
+old  <	; parameter Â£temporary64, offset 121>
+new  < main$64:>
+
+361:
+old  <	mov [rbp + 121], rsi>
+new  <	; parameter Â£temporary64, offset 121>
+
+362:
+old  <>
+new  <	mov [rbp + 121], rsi>
+
+363:
+old  < main$65:>
+new  <>
+
+364:
+old  <	; Â£temporary65 = &d>
+new  < main$65:>
+
+365:
+old  <	mov rsi, rbp>
+new  <	; Â£temporary65 = &d>
+
+366:
+old  <	add rsi, 44>
+new  <	mov rsi, rbp>
+
+367:
+old  <>
+new  <	add rsi, 44>
+
+368:
+old  < main$66:>
+new  <>
+
+369:
+old  <	; parameter Â£temporary65, offset 129>
+new  < main$66:>
+
+370:
+old  <	mov [rbp + 129], rsi>
+new  <	; parameter Â£temporary65, offset 129>
+
+371:
+old  <>
+new  <	mov [rbp + 129], rsi>
+
+372:
+old  < main$67:>
+new  <>
+
+373:
+old  <	; call function noellipse-ellipse scanf, extra 32>
+new  < main$67:>
+
+374:
+old  <	mov qword [rbp + 73], main$68>
+new  <	; call function noellipse-ellipse scanf, extra 32>
+
+375:
+old  <	mov [rbp + 81], rbp>
+new  <	mov qword [rbp + 73], main$68>
+
+376:
+old  <	add rbp, 73>
+new  <	mov [rbp + 81], rbp>
+
+377:
+old  <	mov rdi, rbp>
+new  <	add rbp, 73>
+
+378:
+old  <	add rdi, 32>
+new  <	mov rdi, rbp>
+
+379:
+old  <	jmp scanf>
+new  <	add rdi, 32>
+
+380:
+old  <>
+new  <	jmp scanf>
+
+381:
+old  < main$68:>
+new  <>
+
+382:
+old  <	; post call>
+new  < main$68:>
+
+383:
+old  <>
+new  <	; post call>
+
+384:
+old  < main$69:>
+new  <>
+
+385:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main$69:>
+
+386:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+387:
+old  < main$70:>
+new  <>
+
+388:
+old  <	; parameter string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#, offset 97>
+new  < main$70:>
+
+389:
+old  <	mov qword [rbp + 97], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#>
+new  <	; parameter string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#, offset 97>
+
+390:
+old  <>
+new  <	mov qword [rbp + 97], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#>
+
+391:
+old  < main$71:>
+new  <>
+
+392:
+old  <	; Â£temporary67 = int_to_int c (Signed_Char -> Signed_Int)>
+new  < main$71:>
+
+393:
+old  <	mov al, [rbp + 52]>
+new  <	; Â£temporary67 = int_to_int c (Signed_Char -> Signed_Int)>
+
+394:
+old  <	and eax, 255>
+new  <	mov al, [rbp + 52]>
+
+395:
+old  <	cmp al, 0>
+new  <	and eax, 255>
+
+396:
+old  <	jge main$72>
+new  <	cmp al, 0>
+
+397:
+old  <	neg al>
+new  <	jge main$72>
+
+398:
+old  <	neg eax>
+new  <	neg al>
+
+399:
+old  <>
+new  <	neg eax>
+
+400:
+old  < main$72:>
+new  <>
+
+401:
+old  <	; parameter Â£temporary67, offset 105>
+new  < main$72:>
+
+402:
+old  <	mov [rbp + 105], eax>
+new  <	; parameter Â£temporary67, offset 105>
+
+403:
+old  <>
+new  <	mov [rbp + 105], eax>
+
+404:
+old  < main$73:>
+new  <>
+
+405:
+old  <	; parameter s, offset 109>
+new  < main$73:>
+
+406:
+old  <	mov [rbp + 109], rbp>
+new  <	; parameter s, offset 109>
+
+407:
+old  <	add qword [rbp + 109], 53>
+new  <	mov [rbp + 109], rbp>
+
+408:
+old  <>
+new  <	add qword [rbp + 109], 53>
+
+409:
+old  < main$74:>
+new  <>
+
+410:
+old  <	; parameter i, offset 117>
+new  < main$74:>
+
+411:
+old  <	mov eax, [rbp + 40]>
+new  <	; parameter i, offset 117>
+
+412:
+old  <	mov [rbp + 117], eax>
+new  <	mov eax, [rbp + 40]>
+
+413:
+old  <>
+new  <	mov [rbp + 117], eax>
+
+414:
+old  < main$75:>
+new  <>
+
+415:
+old  <	; push float d>
+new  < main$75:>
+
+416:
+old  <	fld qword [rbp + 44]>
+new  <	; push float d>
+
+417:
+old  <>
+new  <	fld qword [rbp + 44]>
+
+418:
+old  < main$76:>
+new  <>
+
+419:
+old  <	; parameter d, offset 121>
+new  < main$76:>
+
+420:
+old  <	fstp qword [rbp + 121]>
+new  <	; parameter d, offset 121>
+
+421:
+old  <>
+new  <	fstp qword [rbp + 121]>
+
+422:
+old  < main$77:>
+new  <>
+
+423:
+old  <	; call function noellipse-ellipse printf, extra 24>
+new  < main$77:>
+
+424:
+old  <	mov qword [rbp + 73], main$78>
+new  <	; call function noellipse-ellipse printf, extra 24>
+
+425:
+old  <	mov [rbp + 81], rbp>
+new  <	mov qword [rbp + 73], main$78>
+
+426:
+old  <	add rbp, 73>
+new  <	mov [rbp + 81], rbp>
+
+427:
+old  <	mov rdi, rbp>
+new  <	add rbp, 73>
+
+428:
+old  <	add rdi, 24>
+new  <	mov rdi, rbp>
+
+429:
+old  <	jmp printf>
+new  <	add rdi, 24>
+
+430:
+old  <>
+new  <	jmp printf>
+
+431:
+old  < main$78:>
+new  <>
+
+432:
+old  <	; post call>
+new  < main$78:>
+
+433:
+old  <>
+new  <	; post call>
+
+434:
+old  < main$79:>
+new  <>
+
+435:
+old  <	; return>
+new  < main$79:>
+
+436:
+old  <	cmp qword [rbp], 0>
+new  <	; return>
+
+437:
+old  <	je label$0>
+new  <	cmp qword [rbp], 0>
+
+438:
+old  <	mov rax, [rbp]>
+new  <	je label$0>
+
+439:
+old  <	mov rdi, [rbp + 16]>
+new  <	mov rax, [rbp]>
+
+440:
+old  <	mov rbp, [rbp + 8]>
+new  <	mov rdi, [rbp + 16]>
+
+441:
+old  <	jmp rax>
+new  <	mov rbp, [rbp + 8]>
+
+442:
+old  <>
+new  <	jmp rax>
+
+443:
+old  < label$0:>
+new  <>
+
+444:
+old  <	mov rdi, 0>
+new  < label$0:>
+
+445:
+old  <	mov rax, 60>
+new  <	mov rdi, 0>
+
+446:
+old  <	syscall>
+new  <	mov rax, 60>
+
+447:
+old  <>
+new  <	syscall>
+
+448:
+old  < main$80:>
+new  <>
+
+449:
+old  <	; function end main>
+new  < main$80:>
+
+450:
+old  <>
+new  <	; function end main>
+
+451:
+old  < main2:>
+new  <>
+
+452:
+old  <	; empty>
+new  < main2:>
+
+453:
+old  <>
+new  <	; empty>
+
+454:
+old  < main2$1:>
+new  <>
+
+455:
+old  <	; a$p = int8$0#>
+new  < main2$1:>
+
+456:
+old  <	mov qword [a], 0>
+new  <	; a$p = int8$0#>
+
+457:
+old  <>
+new  <	mov qword [a], 0>
+
+458:
+old  < main2$2:>
+new  <>
+
+459:
+old  <	; a$q = int8$0#>
+new  < main2$2:>
+
+460:
+old  <	mov qword [a + 8], 0>
+new  <	; a$q = int8$0#>
+
+461:
+old  <>
+new  <	mov qword [a + 8], 0>
+
+462:
+old  < main2$3:>
+new  <>
+
+463:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main2$3:>
+
+464:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+465:
+old  < main2$4:>
+new  <>
+
+466:
+old  <	; parameter string_test12Etxt#, offset 48>
+new  < main2$4:>
+
+467:
+old  <	mov qword [rbp + 48], string_test12Etxt#>
+new  <	; parameter string_test12Etxt#, offset 48>
+
+468:
+old  <>
+new  <	mov qword [rbp + 48], string_test12Etxt#>
+
+469:
+old  < main2$5:>
+new  <>
+
+470:
+old  <	; parameter string_test22Etxt#, offset 56>
+new  < main2$5:>
+
+471:
+old  <	mov qword [rbp + 56], string_test22Etxt#>
+new  <	; parameter string_test22Etxt#, offset 56>
+
+472:
+old  <>
+new  <	mov qword [rbp + 56], string_test22Etxt#>
+
+473:
+old  < main2$6:>
+new  <>
+
+474:
+old  <	; call function noellipse-noellipse file_test>
+new  < main2$6:>
+
+475:
+old  <	mov qword [rbp + 24], main2$7>
+new  <	; call function noellipse-noellipse file_test>
+
+476:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], main2$7>
+
+477:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+478:
+old  <	jmp file_test>
+new  <	add rbp, 24>
+
+479:
+old  <>
+new  <	jmp file_test>
+
+480:
+old  < main2$7:>
+new  <>
+
+481:
+old  <	; post call>
+new  < main2$7:>
+
+482:
+old  <>
+new  <	; post call>
+
+483:
+old  < main2$8:>
+new  <>
+
+484:
+old  <	; return>
+new  < main2$8:>
+
+485:
+old  <	mov rax, [rbp]>
+new  <	; return>
+
+486:
+old  <	mov rdi, [rbp + 16]>
+new  <	mov rax, [rbp]>
+
+487:
+old  <	mov rbp, [rbp + 8]>
+new  <	mov rdi, [rbp + 16]>
+
+488:
+old  <	jmp rax>
+new  <	mov rbp, [rbp + 8]>
+
+489:
+old  <>
+new  <	jmp rax>
+
+490:
+old  < main2$9:>
+new  <>
+
+491:
+old  <	; function end main2>
+new  < main2$9:>
+
+492:
+old  <>
+new  <	; function end main2>
+
+493:
+old  < main33:>
+new  <>
+
+494:
+old  <	; s[0] = int1$72#>
+new  < main33:>
+
+495:
+old  <	mov byte [rbp + 24], 72>
+new  <	; s[0] = int1$72#>
+
+496:
+old  <>
+new  <	mov byte [rbp + 24], 72>
+
+497:
+old  < main33$1:>
+new  <>
+
+498:
+old  <	; s[1] = int1$101#>
+new  < main33$1:>
+
+499:
+old  <	mov byte [rbp + 25], 101>
+new  <	; s[1] = int1$101#>
+
+500:
+old  <>
+new  <	mov byte [rbp + 25], 101>
+
+501:
+old  < main33$2:>
+new  <>
+
+502:
+old  <	; s[2] = int1$108#>
+new  < main33$2:>
+
+503:
+old  <	mov byte [rbp + 26], 108>
+new  <	; s[2] = int1$108#>
+
+504:
+old  <>
+new  <	mov byte [rbp + 26], 108>
+
+505:
+old  < main33$3:>
+new  <>
+
+506:
+old  <	; s[3] = int1$108#>
+new  < main33$3:>
+
+507:
+old  <	mov byte [rbp + 27], 108>
+new  <	; s[3] = int1$108#>
+
+508:
+old  <>
+new  <	mov byte [rbp + 27], 108>
+
+509:
+old  < main33$4:>
+new  <>
+
+510:
+old  <	; s[4] = int1$111#>
+new  < main33$4:>
+
+511:
+old  <	mov byte [rbp + 28], 111>
+new  <	; s[4] = int1$111#>
+
+512:
+old  <>
+new  <	mov byte [rbp + 28], 111>
+
+513:
+old  < main33$5:>
+new  <>
+
+514:
+old  <	; s[5] = int1$48#>
+new  < main33$5:>
+
+515:
+old  <	mov byte [rbp + 29], 48>
+new  <	; s[5] = int1$48#>
+
+516:
+old  <>
+new  <	mov byte [rbp + 29], 48>
+
+517:
+old  < main33$6:>
+new  <>
+
+518:
+old  <	; t[0] = int1$87#>
+new  < main33$6:>
+
+519:
+old  <	mov byte [rbp + 44], 87>
+new  <	; t[0] = int1$87#>
+
+520:
+old  <>
+new  <	mov byte [rbp + 44], 87>
+
+521:
+old  < main33$7:>
+new  <>
+
+522:
+old  <	; t[1] = int1$111#>
+new  < main33$7:>
+
+523:
+old  <	mov byte [rbp + 45], 111>
+new  <	; t[1] = int1$111#>
+
+524:
+old  <>
+new  <	mov byte [rbp + 45], 111>
+
+525:
+old  < main33$8:>
+new  <>
+
+526:
+old  <	; t[2] = int1$114#>
+new  < main33$8:>
+
+527:
+old  <	mov byte [rbp + 46], 114>
+new  <	; t[2] = int1$114#>
+
+528:
+old  <>
+new  <	mov byte [rbp + 46], 114>
+
+529:
+old  < main33$9:>
+new  <>
+
+530:
+old  <	; t[3] = int1$108#>
+new  < main33$9:>
+
+531:
+old  <	mov byte [rbp + 47], 108>
+new  <	; t[3] = int1$108#>
+
+532:
+old  <>
+new  <	mov byte [rbp + 47], 108>
+
+533:
+old  < main33$10:>
+new  <>
+
+534:
+old  <	; t[4] = int1$100#>
+new  < main33$10:>
+
+535:
+old  <	mov byte [rbp + 48], 100>
+new  <	; t[4] = int1$100#>
+
+536:
+old  <>
+new  <	mov byte [rbp + 48], 100>
+
+537:
+old  < main33$11:>
+new  <>
+
+538:
+old  <	; t[5] = int1$48#>
+new  < main33$11:>
+
+539:
+old  <	mov byte [rbp + 49], 48>
+new  <	; t[5] = int1$48#>
+
+540:
+old  <>
+new  <	mov byte [rbp + 49], 48>
+
+541:
+old  < main33$12:>
+new  <>
+
+542:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main33$12:>
+
+543:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+544:
+old  < main33$13:>
+new  <>
+
+545:
+old  <	; parameter string_3C25s3E203C25s3E0A#, offset 88>
+new  < main33$13:>
+
+546:
+old  <	mov qword [rbp + 88], string_3C25s3E203C25s3E0A#>
+new  <	; parameter string_3C25s3E203C25s3E0A#, offset 88>
+
+547:
+old  <>
+new  <	mov qword [rbp + 88], string_3C25s3E203C25s3E0A#>
+
+548:
+old  < main33$14:>
+new  <>
+
+549:
+old  <	; parameter s, offset 96>
+new  < main33$14:>
+
+550:
+old  <	mov [rbp + 96], rbp>
+new  <	; parameter s, offset 96>
+
+551:
+old  <	add qword [rbp + 96], 24>
+new  <	mov [rbp + 96], rbp>
+
+552:
+old  <>
+new  <	add qword [rbp + 96], 24>
+
+553:
+old  < main33$15:>
+new  <>
+
+554:
+old  <	; parameter t, offset 104>
+new  < main33$15:>
+
+555:
+old  <	mov [rbp + 104], rbp>
+new  <	; parameter t, offset 104>
+
+556:
+old  <	add qword [rbp + 104], 44>
+new  <	mov [rbp + 104], rbp>
+
+557:
+old  <>
+new  <	add qword [rbp + 104], 44>
+
+558:
+old  < main33$16:>
+new  <>
+
+559:
+old  <	; call function noellipse-ellipse printf, extra 16>
+new  < main33$16:>
+
+560:
+old  <	mov qword [rbp + 64], main33$17>
+new  <	; call function noellipse-ellipse printf, extra 16>
+
+561:
+old  <	mov [rbp + 72], rbp>
+new  <	mov qword [rbp + 64], main33$17>
+
+562:
+old  <	add rbp, 64>
+new  <	mov [rbp + 72], rbp>
+
+563:
+old  <	mov rdi, rbp>
+new  <	add rbp, 64>
+
+564:
+old  <	add rdi, 16>
+new  <	mov rdi, rbp>
+
+565:
+old  <	jmp printf>
+new  <	add rdi, 16>
+
+566:
+old  <>
+new  <	jmp printf>
+
+567:
+old  < main33$17:>
+new  <>
+
+568:
+old  <	; post call>
+new  < main33$17:>
+
+569:
+old  <>
+new  <	; post call>
+
+570:
+old  < main33$18:>
+new  <>
+
+571:
+old  <	; return>
+new  < main33$18:>
+
+572:
+old  <	mov rax, [rbp]>
+new  <	; return>
+
+573:
+old  <	mov rdi, [rbp + 16]>
+new  <	mov rax, [rbp]>
+
+574:
+old  <	mov rbp, [rbp + 8]>
+new  <	mov rdi, [rbp + 16]>
+
+575:
+old  <	jmp rax>
+new  <	mov rbp, [rbp + 8]>
+
+576:
+old  <>
+new  <	jmp rax>
+
+577:
+old  < main33$19:>
+new  <>
+
+578:
+old  <	; function end main33>
+new  < main33$19:>
+
+579:
+old  <>
+new  <	; function end main33>
+
+580:
+old  < main34:>
+new  <>
+
+581:
+old  <	; g_outDevice = stdout>
+new  < main34:>
+
+582:
+old  <	mov rax, [stdout]>
+new  <	; g_outDevice = stdout>
+
+583:
+old  <	mov [g_outDevice], rax>
+new  <	mov rax, [stdout]>
+
+584:
+old  <>
+new  <	mov [g_outDevice], rax>
+
+585:
+old  < main34$1:>
+new  <>
+
+586:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main34$1:>
+
+587:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+588:
+old  < main34$2:>
+new  <>
+
+589:
+old  <	; parameter int1$88#, offset 48>
+new  < main34$2:>
+
+590:
+old  <	mov byte [rbp + 48], 88>
+new  <	; parameter int1$88#, offset 48>
+
+591:
+old  <>
+new  <	mov byte [rbp + 48], 88>
+
+592:
+old  < main34$3:>
+new  <>
+
+593:
+old  <	; call function noellipse-noellipse printChar>
+new  < main34$3:>
+
+594:
+old  <	mov qword [rbp + 24], main34$4>
+new  <	; call function noellipse-noellipse printChar>
+
+595:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], main34$4>
+
+596:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+597:
+old  <	jmp printChar>
+new  <	add rbp, 24>
+
+598:
+old  <>
+new  <	jmp printChar>
+
+599:
+old  < main34$4:>
+new  <>
+
+600:
+old  <	; post call>
+new  < main34$4:>
+
+601:
+old  <>
+new  <	; post call>
+
+602:
+old  < main34$5:>
+new  <>
+
+603:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main34$5:>
+
+604:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+605:
+old  < main34$6:>
+new  <>
+
+606:
+old  <	; parameter int1$10#, offset 48>
+new  < main34$6:>
+
+607:
+old  <	mov byte [rbp + 48], 10>
+new  <	; parameter int1$10#, offset 48>
+
+608:
+old  <>
+new  <	mov byte [rbp + 48], 10>
+
+609:
+old  < main34$7:>
+new  <>
+
+610:
+old  <	; call function noellipse-noellipse printChar>
+new  < main34$7:>
+
+611:
+old  <	mov qword [rbp + 24], main34$8>
+new  <	; call function noellipse-noellipse printChar>
+
+612:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], main34$8>
+
+613:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+614:
+old  <	jmp printChar>
+new  <	add rbp, 24>
+
+615:
+old  <>
+new  <	jmp printChar>
+
+616:
+old  < main34$8:>
+new  <>
+
+617:
+old  <	; post call>
+new  < main34$8:>
+
+618:
+old  <>
+new  <	; post call>
+
+619:
+old  < main34$9:>
+new  <>
+
+620:
+old  <	; return>
+new  < main34$9:>
+
+621:
+old  <	mov rax, [rbp]>
+new  <	; return>
+
+622:
+old  <	mov rdi, [rbp + 16]>
+new  <	mov rax, [rbp]>
+
+623:
+old  <	mov rbp, [rbp + 8]>
+new  <	mov rdi, [rbp + 16]>
+
+624:
+old  <	jmp rax>
+new  <	mov rbp, [rbp + 8]>
+
+625:
+old  <>
+new  <	jmp rax>
+
+626:
+old  < main34$10:>
+new  <>
+
+627:
+old  <	; function end main34>
+new  < main34$10:>
+
+628:
+old  <>
+new  <	; function end main34>
+
+629:
+old  < mainc:>
+new  <>
+
+630:
+old  <	; empty>
+new  < mainc:>
+
+631:
+old  <>
+new  <	; empty>
+
+632:
+old  < mainc$1:>
+new  <>
+
+633:
+old  <	; call header integral zero 0 stack zero 0>
+new  < mainc$1:>
+
+634:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+635:
+old  < mainc$2:>
+new  <>
+
+636:
+old  <	; parameter string_Please20write20a20character3A20#, offset 49>
+new  < mainc$2:>
+
+637:
+old  <	mov qword [rbp + 49], string_Please20write20a20character3A20#>
+new  <	; parameter string_Please20write20a20character3A20#, offset 49>
+
+638:
+old  <>
+new  <	mov qword [rbp + 49], string_Please20write20a20character3A20#>
+
+639:
+old  < mainc$3:>
+new  <>
+
+640:
+old  <	; call function noellipse-ellipse printf, extra 0>
+new  < mainc$3:>
+
+641:
+old  <	mov qword [rbp + 25], mainc$4>
+new  <	; call function noellipse-ellipse printf, extra 0>
+
+642:
+old  <	mov [rbp + 33], rbp>
+new  <	mov qword [rbp + 25], mainc$4>
+
+643:
+old  <	add rbp, 25>
+new  <	mov [rbp + 33], rbp>
+
+644:
+old  <	mov rdi, rbp>
+new  <	add rbp, 25>
+
+645:
+old  <	jmp printf>
+new  <	mov rdi, rbp>
+
+646:
+old  <>
+new  <	jmp printf>
+
+647:
+old  < mainc$4:>
+new  <>
+
+648:
+old  <	; post call>
+new  < mainc$4:>
+
+649:
+old  <>
+new  <	; post call>
+
+650:
+old  < mainc$5:>
+new  <>
+
+651:
+old  <	; call header integral zero 0 stack zero 0>
+new  < mainc$5:>
+
+652:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+653:
+old  < mainc$6:>
+new  <>
+
+654:
+old  <	; parameter string_25c#, offset 49>
+new  < mainc$6:>
+
+655:
+old  <	mov qword [rbp + 49], string_25c#>
+new  <	; parameter string_25c#, offset 49>
+
+656:
+old  <>
+new  <	mov qword [rbp + 49], string_25c#>
+
+657:
+old  < mainc$7:>
+new  <>
+
+658:
+old  <	; Â£temporary19 = &c>
+new  < mainc$7:>
+
+659:
+old  <	mov rsi, rbp>
+new  <	; Â£temporary19 = &c>
+
+660:
+old  <	add rsi, 24>
+new  <	mov rsi, rbp>
+
+661:
+old  <>
+new  <	add rsi, 24>
+
+662:
+old  < mainc$8:>
+new  <>
+
+663:
+old  <	; parameter Â£temporary19, offset 57>
+new  < mainc$8:>
+
+664:
+old  <	mov [rbp + 57], rsi>
+new  <	; parameter Â£temporary19, offset 57>
+
+665:
+old  <>
+new  <	mov [rbp + 57], rsi>
+
+666:
+old  < mainc$9:>
+new  <>
+
+667:
+old  <	; call function noellipse-ellipse scanf, extra 8>
+new  < mainc$9:>
+
+668:
+old  <	mov qword [rbp + 25], mainc$10>
+new  <	; call function noellipse-ellipse scanf, extra 8>
+
+669:
+old  <	mov [rbp + 33], rbp>
+new  <	mov qword [rbp + 25], mainc$10>
+
+670:
+old  <	add rbp, 25>
+new  <	mov [rbp + 33], rbp>
+
+671:
+old  <	mov rdi, rbp>
+new  <	add rbp, 25>
+
+672:
+old  <	add rdi, 8>
+new  <	mov rdi, rbp>
+
+673:
+old  <	jmp scanf>
+new  <	add rdi, 8>
+
+674:
+old  <>
+new  <	jmp scanf>
+
+675:
+old  < mainc$10:>
+new  <>
+
+676:
+old  <	; post call>
+new  < mainc$10:>
+
+677:
+old  <>
+new  <	; post call>
+
+678:
+old  < mainc$11:>
+new  <>
+
+679:
+old  <	; call header integral zero 0 stack zero 0>
+new  < mainc$11:>
+
+680:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+681:
+old  < mainc$12:>
+new  <>
+
+682:
+old  <	; parameter string_You20wrote20the20character202725c272E0A#, offset 49>
+new  < mainc$12:>
+
+683:
+old  <	mov qword [rbp + 49], string_You20wrote20the20character202725c272E0A#>
+new  <	; parameter string_You20wrote20the20character202725c272E0A#, offset 49>
+
+684:
+old  <>
+new  <	mov qword [rbp + 49], string_You20wrote20the20character202725c272E0A#>
+
+685:
+old  < mainc$13:>
+new  <>
+
+686:
+old  <	; Â£temporary21 = int_to_int c (Signed_Char -> Signed_Int)>
+new  < mainc$13:>
+
+687:
+old  <	mov al, [rbp + 24]>
+new  <	; Â£temporary21 = int_to_int c (Signed_Char -> Signed_Int)>
+
+688:
+old  <	and eax, 255>
+new  <	mov al, [rbp + 24]>
+
+689:
+old  <	cmp al, 0>
+new  <	and eax, 255>
+
+690:
+old  <	jge mainc$14>
+new  <	cmp al, 0>
+
+691:
+old  <	neg al>
+new  <	jge mainc$14>
+
+692:
+old  <	neg eax>
+new  <	neg al>
+
+693:
+old  <>
+new  <	neg eax>
+
+694:
+old  < mainc$14:>
+new  <>
+
+695:
+old  <	; parameter Â£temporary21, offset 57>
+new  < mainc$14:>
+
+696:
+old  <	mov [rbp + 57], eax>
+new  <	; parameter Â£temporary21, offset 57>
+
+697:
+old  <>
+new  <	mov [rbp + 57], eax>
+
+698:
+old  < mainc$15:>
+new  <>
+
+699:
+old  <	; call function noellipse-ellipse printf, extra 4>
+new  < mainc$15:>
+
+700:
+old  <	mov qword [rbp + 25], mainc$16>
+new  <	; call function noellipse-ellipse printf, extra 4>
+
+701:
+old  <	mov [rbp + 33], rbp>
+new  <	mov qword [rbp + 25], mainc$16>
+
+702:
+old  <	add rbp, 25>
+new  <	mov [rbp + 33], rbp>
+
+703:
+old  <	mov rdi, rbp>
+new  <	add rbp, 25>
+
+704:
+old  <	add rdi, 4>
+new  <	mov rdi, rbp>
+
+705:
+old  <	jmp printf>
+new  <	add rdi, 4>
+
+706:
+old  <>
+new  <	jmp printf>
+
+707:
+old  < mainc$16:>
+new  <>
+
+708:
+old  <	; post call>
+new  < mainc$16:>
+
+709:
+old  <>
+new  <	; post call>
+
+710:
+old  < mainc$17:>
+new  <>
+
+711:
+old  <	; return>
+new  < mainc$17:>
+
+712:
+old  <	mov rax, [rbp]>
+new  <	; return>
+
+713:
+old  <	mov rdi, [rbp + 16]>
+new  <	mov rax, [rbp]>
+
+714:
+old  <	mov rbp, [rbp + 8]>
+new  <	mov rdi, [rbp + 16]>
+
+715:
+old  <	jmp rax>
+new  <	mov rbp, [rbp + 8]>
+
+716:
+old  <>
+new  <	jmp rax>
+
+717:
+old  < mainc$18:>
+new  <>
+
+718:
+old  <	; function end mainc>
+new  < mainc$18:>
+
+719:
+old  <>
+new  <	; function end mainc>
+
+720:
+old  < maini:>
+new  <>
+
+721:
+old  <	; empty>
+new  < maini:>
+
+722:
+old  <>
+new  <	; empty>
+
+723:
+old  < maini$1:>
+new  <>
+
+724:
+old  <	; call header integral zero 0 stack zero 0>
+new  < maini$1:>
+
+725:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+726:
+old  < maini$2:>
+new  <>
+
+727:
+old  <	; parameter string_Please20write20an20integer3A20#, offset 52>
+new  < maini$2:>
+
+728:
+old  <	mov qword [rbp + 52], string_Please20write20an20integer3A20#>
+new  <	; parameter string_Please20write20an20integer3A20#, offset 52>
+
+729:
+old  <>
+new  <	mov qword [rbp + 52], string_Please20write20an20integer3A20#>
+
+730:
+old  < maini$3:>
+new  <>
+
+731:
+old  <	; call function noellipse-ellipse printf, extra 0>
+new  < maini$3:>
+
+732:
+old  <	mov qword [rbp + 28], maini$4>
+new  <	; call function noellipse-ellipse printf, extra 0>
+
+733:
+old  <	mov [rbp + 36], rbp>
+new  <	mov qword [rbp + 28], maini$4>
+
+734:
+old  <	add rbp, 28>
+new  <	mov [rbp + 36], rbp>
+
+735:
+old  <	mov rdi, rbp>
+new  <	add rbp, 28>
+
+736:
+old  <	jmp printf>
+new  <	mov rdi, rbp>
+
+737:
+old  <>
+new  <	jmp printf>
+
+738:
+old  < maini$4:>
+new  <>
+
+739:
+old  <	; post call>
+new  < maini$4:>
+
+740:
+old  <>
+new  <	; post call>
+
+741:
+old  < maini$5:>
+new  <>
+
+742:
+old  <	; call header integral zero 0 stack zero 0>
+new  < maini$5:>
+
+743:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+744:
+old  < maini$6:>
+new  <>
+
+745:
+old  <	; parameter string_25i#, offset 52>
+new  < maini$6:>
+
+746:
+old  <	mov qword [rbp + 52], string_25i#>
+new  <	; parameter string_25i#, offset 52>
+
+747:
+old  <>
+new  <	mov qword [rbp + 52], string_25i#>
+
+748:
+old  < maini$7:>
+new  <>
+
+749:
+old  <	; Â£temporary25 = &i>
+new  < maini$7:>
+
+750:
+old  <	mov rsi, rbp>
+new  <	; Â£temporary25 = &i>
+
+751:
+old  <	add rsi, 24>
+new  <	mov rsi, rbp>
+
+752:
+old  <>
+new  <	add rsi, 24>
+
+753:
+old  < maini$8:>
+new  <>
+
+754:
+old  <	; parameter Â£temporary25, offset 60>
+new  < maini$8:>
+
+755:
+old  <	mov [rbp + 60], rsi>
+new  <	; parameter Â£temporary25, offset 60>
+
+756:
+old  <>
+new  <	mov [rbp + 60], rsi>
+
+757:
+old  < maini$9:>
+new  <>
+
+758:
+old  <	; call function noellipse-ellipse scanf, extra 8>
+new  < maini$9:>
+
+759:
+old  <	mov qword [rbp + 28], maini$10>
+new  <	; call function noellipse-ellipse scanf, extra 8>
+
+760:
+old  <	mov [rbp + 36], rbp>
+new  <	mov qword [rbp + 28], maini$10>
+
+761:
+old  <	add rbp, 28>
+new  <	mov [rbp + 36], rbp>
+
+762:
+old  <	mov rdi, rbp>
+new  <	add rbp, 28>
+
+763:
+old  <	add rdi, 8>
+new  <	mov rdi, rbp>
+
+764:
+old  <	jmp scanf>
+new  <	add rdi, 8>
+
+765:
+old  <>
+new  <	jmp scanf>
+
+766:
+old  < maini$10:>
+new  <>
+
+767:
+old  <	; post call>
+new  < maini$10:>
+
+768:
+old  <>
+new  <	; post call>
+
+769:
+old  < maini$11:>
+new  <>
+
+770:
+old  <	; call header integral zero 0 stack zero 0>
+new  < maini$11:>
+
+771:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+772:
+old  < maini$12:>
+new  <>
+
+773:
+old  <	; parameter string_You20wrote20the20integer2025i2E0A#, offset 52>
+new  < maini$12:>
+
+774:
+old  <	mov qword [rbp + 52], string_You20wrote20the20integer2025i2E0A#>
+new  <	; parameter string_You20wrote20the20integer2025i2E0A#, offset 52>
+
+775:
+old  <>
+new  <	mov qword [rbp + 52], string_You20wrote20the20integer2025i2E0A#>
+
+776:
+old  < maini$13:>
+new  <>
+
+777:
+old  <	; parameter i, offset 60>
+new  < maini$13:>
+
+778:
+old  <	mov eax, [rbp + 24]>
+new  <	; parameter i, offset 60>
+
+779:
+old  <	mov [rbp + 60], eax>
+new  <	mov eax, [rbp + 24]>
+
+780:
+old  <>
+new  <	mov [rbp + 60], eax>
+
+781:
+old  < maini$14:>
+new  <>
+
+782:
+old  <	; call function noellipse-ellipse printf, extra 4>
+new  < maini$14:>
+
+783:
+old  <	mov qword [rbp + 28], maini$15>
+new  <	; call function noellipse-ellipse printf, extra 4>
+
+784:
+old  <	mov [rbp + 36], rbp>
+new  <	mov qword [rbp + 28], maini$15>
+
+785:
+old  <	add rbp, 28>
+new  <	mov [rbp + 36], rbp>
+
+786:
+old  <	mov rdi, rbp>
+new  <	add rbp, 28>
+
+787:
+old  <	add rdi, 4>
+new  <	mov rdi, rbp>
+
+788:
+old  <	jmp printf>
+new  <	add rdi, 4>
+
+789:
+old  <>
+new  <	jmp printf>
+
+790:
+old  < maini$15:>
+new  <>
+
+791:
+old  <	; post call>
+new  < maini$15:>
+
+792:
+old  <>
+new  <	; post call>
+
+793:
+old  < maini$16:>
+new  <>
+
+794:
+old  <	; return>
+new  < maini$16:>
+
+795:
+old  <	mov rax, [rbp]>
+new  <	; return>
+
+796:
+old  <	mov rdi, [rbp + 16]>
+new  <	mov rax, [rbp]>
+
+797:
+old  <	mov rbp, [rbp + 8]>
+new  <	mov rdi, [rbp + 16]>
+
+798:
+old  <	jmp rax>
+new  <	mov rbp, [rbp + 8]>
+
+799:
+old  <>
+new  <	jmp rax>
+
+800:
+old  < maini$17:>
+new  <>
+
+801:
+old  <	; function end maini>
+new  < maini$17:>
+
+802:
+old  <>
+new  <	; function end maini>
+
+803:
+old  < mains:>
+new  <>
+
+804:
+old  <	; empty>
+new  < mains:>
+
+805:
+old  <>
+new  <	; empty>
+
+806:
+old  < mains$1:>
+new  <>
+
+807:
+old  <	; call header integral zero 0 stack zero 0>
+new  < mains$1:>
+
+808:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+809:
+old  < mains$2:>
+new  <>
+
+810:
+old  <	; parameter string_Please20write20a20string3A20#, offset 68>
+new  < mains$2:>
+
+811:
+old  <	mov qword [rbp + 68], string_Please20write20a20string3A20#>
+new  <	; parameter string_Please20write20a20string3A20#, offset 68>
+
+812:
+old  <>
+new  <	mov qword [rbp + 68], string_Please20write20a20string3A20#>
+
+813:
+old  < mains$3:>
+new  <>
+
+814:
+old  <	; call function noellipse-ellipse printf, extra 0>
+new  < mains$3:>
+
+815:
+old  <	mov qword [rbp + 44], mains$4>
+new  <	; call function noellipse-ellipse printf, extra 0>
+
+816:
+old  <	mov [rbp + 52], rbp>
+new  <	mov qword [rbp + 44], mains$4>
+
+817:
+old  <	add rbp, 44>
+new  <	mov [rbp + 52], rbp>
+
+818:
+old  <	mov rdi, rbp>
+new  <	add rbp, 44>
+
+819:
+old  <	jmp printf>
+new  <	mov rdi, rbp>
+
+820:
+old  <>
+new  <	jmp printf>
+
+821:
+old  < mains$4:>
+new  <>
+
+822:
+old  <	; post call>
+new  < mains$4:>
+
+823:
+old  <>
+new  <	; post call>
+
+824:
+old  < mains$5:>
+new  <>
+
+825:
+old  <	; call header integral zero 0 stack zero 0>
+new  < mains$5:>
+
+826:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+827:
+old  < mains$6:>
+new  <>
+
+828:
+old  <	; parameter string_25s#, offset 68>
+new  < mains$6:>
+
+829:
+old  <	mov qword [rbp + 68], string_25s#>
+new  <	; parameter string_25s#, offset 68>
+
+830:
+old  <>
+new  <	mov qword [rbp + 68], string_25s#>
+
+831:
+old  < mains$7:>
+new  <>
+
+832:
+old  <	; parameter s, offset 76>
+new  < mains$7:>
+
+833:
+old  <	mov [rbp + 76], rbp>
+new  <	; parameter s, offset 76>
+
+834:
+old  <	add qword [rbp + 76], 24>
+new  <	mov [rbp + 76], rbp>
+
+835:
+old  <>
+new  <	add qword [rbp + 76], 24>
+
+836:
+old  < mains$8:>
+new  <>
+
+837:
+old  <	; call function noellipse-ellipse scanf, extra 8>
+new  < mains$8:>
+
+838:
+old  <	mov qword [rbp + 44], mains$9>
+new  <	; call function noellipse-ellipse scanf, extra 8>
+
+839:
+old  <	mov [rbp + 52], rbp>
+new  <	mov qword [rbp + 44], mains$9>
+
+840:
+old  <	add rbp, 44>
+new  <	mov [rbp + 52], rbp>
+
+841:
+old  <	mov rdi, rbp>
+new  <	add rbp, 44>
+
+842:
+old  <	add rdi, 8>
+new  <	mov rdi, rbp>
+
+843:
+old  <	jmp scanf>
+new  <	add rdi, 8>
+
+844:
+old  <>
+new  <	jmp scanf>
+
+845:
+old  < mains$9:>
+new  <>
+
+846:
+old  <	; post call>
+new  < mains$9:>
+
+847:
+old  <>
+new  <	; post call>
+
+848:
+old  < mains$10:>
+new  <>
+
+849:
+old  <	; call header integral zero 0 stack zero 0>
+new  < mains$10:>
+
+850:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+851:
+old  < mains$11:>
+new  <>
+
+852:
+old  <	; parameter string_You20wrote20the20string202225s222E0A#, offset 68>
+new  < mains$11:>
+
+853:
+old  <	mov qword [rbp + 68], string_You20wrote20the20string202225s222E0A#>
+new  <	; parameter string_You20wrote20the20string202225s222E0A#, offset 68>
+
+854:
+old  <>
+new  <	mov qword [rbp + 68], string_You20wrote20the20string202225s222E0A#>
+
+855:
+old  < mains$12:>
+new  <>
+
+856:
+old  <	; parameter s, offset 76>
+new  < mains$12:>
+
+857:
+old  <	mov [rbp + 76], rbp>
+new  <	; parameter s, offset 76>
+
+858:
+old  <	add qword [rbp + 76], 24>
+new  <	mov [rbp + 76], rbp>
+
+859:
+old  <>
+new  <	add qword [rbp + 76], 24>
+
+860:
+old  < mains$13:>
+new  <>
+
+861:
+old  <	; call function noellipse-ellipse printf, extra 8>
+new  < mains$13:>
+
+862:
+old  <	mov qword [rbp + 44], mains$14>
+new  <	; call function noellipse-ellipse printf, extra 8>
+
+863:
+old  <	mov [rbp + 52], rbp>
+new  <	mov qword [rbp + 44], mains$14>
+
+864:
+old  <	add rbp, 44>
+new  <	mov [rbp + 52], rbp>
+
+865:
+old  <	mov rdi, rbp>
+new  <	add rbp, 44>
+
+866:
+old  <	add rdi, 8>
+new  <	mov rdi, rbp>
+
+867:
+old  <	jmp printf>
+new  <	add rdi, 8>
+
+868:
+old  <>
+new  <	jmp printf>
+
+869:
+old  < mains$14:>
+new  <>
+
+870:
+old  <	; post call>
+new  < mains$14:>
+
+871:
+old  <>
+new  <	; post call>
+
+872:
+old  < mains$15:>
+new  <>
+
+873:
+old  <	; return>
+new  < mains$15:>
+
+874:
+old  <	mov rax, [rbp]>
+new  <	; return>
+
+875:
+old  <	mov rdi, [rbp + 16]>
+new  <	mov rax, [rbp]>
+
+876:
+old  <	mov rbp, [rbp + 8]>
+new  <	mov rdi, [rbp + 16]>
+
+877:
+old  <	jmp rax>
+new  <	mov rbp, [rbp + 8]>
+
+878:
+old  <>
+new  <	jmp rax>
+
+879:
+old  < mains$16:>
+new  <>
+
+880:
+old  <	; function end mains>
+new  < mains$16:>
+
+881:
+old  <>
+new  <	; function end mains>
+
+882:
+old  < maint:>
+new  <>
+
+883:
+old  <	; call header integral zero 0 stack zero 0>
+new  < maint:>
+
+884:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+885:
+old  < maint$1:>
+new  <>
+
+886:
+old  <	; call function noellipse-noellipse limits_test>
+new  < maint$1:>
+
+887:
+old  <	mov qword [rbp + 24], maint$2>
+new  <	; call function noellipse-noellipse limits_test>
+
+888:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], maint$2>
+
+889:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+890:
+old  <	jmp limits_test>
+new  <	add rbp, 24>
+
+891:
+old  <>
+new  <	jmp limits_test>
+
+892:
+old  < maint$2:>
+new  <>
+
+893:
+old  <	; post call>
+new  < maint$2:>
+
+894:
+old  <>
+new  <	; post call>
+
+895:
+old  < maint$3:>
+new  <>
+
+896:
+old  <	; call header integral zero 0 stack zero 0>
+new  < maint$3:>
+
+897:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+898:
+old  < maint$4:>
+new  <>
+
+899:
+old  <	; call function noellipse-noellipse time_test>
+new  < maint$4:>
+
+900:
+old  <	mov qword [rbp + 24], maint$5>
+new  <	; call function noellipse-noellipse time_test>
+
+901:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], maint$5>
+
+902:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+903:
+old  <	jmp time_test>
+new  <	add rbp, 24>
+
+904:
+old  <>
+new  <	jmp time_test>
+
+905:
+old  < maint$5:>
+new  <>
+
+906:
+old  <	; post call>
+new  < maint$5:>
+
+907:
+old  <>
+new  <	; post call>
+
+908:
+old  < maint$6:>
+new  <>
+
+909:
+old  <	; return>
+new  < maint$6:>
+
+910:
+old  <	mov rax, [rbp]>
+new  <	; return>
+
+911:
+old  <	mov rdi, [rbp + 16]>
+new  <	mov rax, [rbp]>
+
+912:
+old  <	mov rbp, [rbp + 8]>
+new  <	mov rdi, [rbp + 16]>
+
+913:
+old  <	jmp rax>
+new  <	mov rbp, [rbp + 8]>
+
+914:
+old  <>
+new  <	jmp rax>
+
+915:
+old  < maint$7:>
+new  <>
+
+916:
+old  <	; function end maint>
+new  < maint$7:>
+
+917:
+old  <>
+new  <	; function end maint>
+
+918:
+old  < mainY:>
+new  <>
+
+919:
+old  <	; call header integral zero 0 stack zero 0>
+new  < mainY:>
+
+920:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+921:
+old  < mainY$1:>
+new  <>
+
+922:
+old  <	; call function noellipse-noellipse malloc_test>
+new  < mainY$1:>
+
+923:
+old  <	mov qword [rbp + 24], mainY$2>
+new  <	; call function noellipse-noellipse malloc_test>
+
+924:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], mainY$2>
+
+925:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+926:
+old  <	jmp malloc_test>
+new  <	add rbp, 24>
+
+927:
+old  <>
+new  <	jmp malloc_test>
+
+928:
+old  < mainY$2:>
+new  <>
+
+929:
+old  <	; post call>
+new  < mainY$2:>
+
+930:
+old  <>
+new  <	; post call>
+
+931:
+old  < mainY$3:>
+new  <>
+
+932:
+old  <	; call header integral zero 0 stack zero 0>
+new  < mainY$3:>
+
+933:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+934:
+old  < mainY$4:>
+new  <>
+
+935:
+old  <	; push float float8$10#>
+new  < mainY$4:>
+
+936:
+old  <	fld qword [float8$10#]>
+new  <	; push float float8$10#>
+
+937:
+old  <>
+new  <	fld qword [float8$10#]>
+
+938:
+old  < mainY$5:>
+new  <>
+
+939:
+old  <	; parameter float8$10#, offset 48>
+new  < mainY$5:>
+
+940:
+old  <	fstp qword [rbp + 48]>
+new  <	; parameter float8$10#, offset 48>
+
+941:
+old  <>
+new  <	fstp qword [rbp + 48]>
+
+942:
+old  < mainY$6:>
+new  <>
+
+943:
+old  <	; call function noellipse-noellipse setjmp_test>
+new  < mainY$6:>
+
+944:
+old  <	mov qword [rbp + 24], mainY$7>
+new  <	; call function noellipse-noellipse setjmp_test>
+
+945:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], mainY$7>
+
+946:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+947:
+old  <	jmp setjmp_test>
+new  <	add rbp, 24>
+
+948:
+old  <>
+new  <	jmp setjmp_test>
+
+949:
+old  < mainY$7:>
+new  <>
+
+950:
+old  <	; post call>
+new  < mainY$7:>
+
+951:
+old  <>
+new  <	; post call>
+
+952:
+old  < mainY$8:>
+new  <>
+
+953:
+old  <	; call header integral zero 0 stack zero 0>
+new  < mainY$8:>
+
+954:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+955:
+old  < mainY$9:>
+new  <>
+
+956:
+old  <	; push float float8$0#>
+new  < mainY$9:>
+
+957:
+old  <	fldz>
+new  <	; push float float8$0#>
+
+958:
+old  <>
+new  <	fldz>
+
+959:
+old  < mainY$10:>
+new  <>
+
+960:
+old  <	; parameter float8$0#, offset 48>
+new  < mainY$10:>
+
+961:
+old  <	fstp qword [rbp + 48]>
+new  <	; parameter float8$0#, offset 48>
+
+962:
+old  <>
+new  <	fstp qword [rbp + 48]>
+
+963:
+old  < mainY$11:>
+new  <>
+
+964:
+old  <	; call function noellipse-noellipse setjmp_test>
+new  < mainY$11:>
+
+965:
+old  <	mov qword [rbp + 24], mainY$12>
+new  <	; call function noellipse-noellipse setjmp_test>
+
+966:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], mainY$12>
+
+967:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+968:
+old  <	jmp setjmp_test>
+new  <	add rbp, 24>
+
+969:
+old  <>
+new  <	jmp setjmp_test>
+
+970:
+old  < mainY$12:>
+new  <>
+
+971:
+old  <	; post call>
+new  < mainY$12:>
+
+972:
+old  <>
+new  <	; post call>
+
+973:
+old  < mainY$13:>
+new  <>
+
+974:
+old  <	; return>
+new  < mainY$13:>
+
+975:
+old  <	mov rax, [rbp]>
+new  <	; return>
+
+976:
+old  <	mov rdi, [rbp + 16]>
+new  <	mov rax, [rbp]>
+
+977:
+old  <	mov rbp, [rbp + 8]>
+new  <	mov rdi, [rbp + 16]>
+
+978:
+old  <	jmp rax>
+new  <	mov rbp, [rbp + 8]>
+
+979:
+old  <>
+new  <	jmp rax>
+
+980:
+old  < mainY$14:>
+new  <>
+
+981:
+old  <	; function end mainY>
+new  < mainY$14:>
+
+982:
+old  <>
+new  <	; function end mainY>
+
+983:
+old  < main3:>
+new  <>
+
+984:
+old  <	; empty>
+new  < main3:>
+
+985:
+old  <>
+new  <	; empty>
+
+986:
+old  < main3$1:>
+new  <>
+
+987:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main3$1:>
+
+988:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+989:
+old  < main3$2:>
+new  <>
+
+990:
+old  <	; parameter string_3A20#, offset 56>
+new  < main3$2:>
+
+991:
+old  <	mov qword [rbp + 56], string_3A20#>
+new  <	; parameter string_3A20#, offset 56>
+
+992:
+old  <>
+new  <	mov qword [rbp + 56], string_3A20#>
+
+993:
+old  < main3$3:>
+new  <>
+
+994:
+old  <	; call function noellipse-ellipse printf, extra 0>
+new  < main3$3:>
+
+995:
+old  <	mov qword [rbp + 32], main3$4>
+new  <	; call function noellipse-ellipse printf, extra 0>
+
+996:
+old  <	mov [rbp + 40], rbp>
+new  <	mov qword [rbp + 32], main3$4>
+
+997:
+old  <	add rbp, 32>
+new  <	mov [rbp + 40], rbp>
+
+998:
+old  <	mov rdi, rbp>
+new  <	add rbp, 32>
+
+999:
+old  <	jmp printf>
+new  <	mov rdi, rbp>
+
+1000:
+old  <>
+new  <	jmp printf>
+
+1001:
+old  < main3$4:>
+new  <>
+
+1002:
+old  <	; post call>
+new  < main3$4:>
+
+1003:
+old  <>
+new  <	; post call>
+
+1004:
+old  < main3$5:>
+new  <>
+
+1005:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main3$5:>
+
+1006:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1007:
+old  < main3$6:>
+new  <>
+
+1008:
+old  <	; parameter string_25lf#, offset 56>
+new  < main3$6:>
+
+1009:
+old  <	mov qword [rbp + 56], string_25lf#>
+new  <	; parameter string_25lf#, offset 56>
+
+1010:
+old  <>
+new  <	mov qword [rbp + 56], string_25lf#>
+
+1011:
+old  < main3$7:>
+new  <>
+
+1012:
+old  <	; Â£temporary74 = &x>
+new  < main3$7:>
+
+1013:
+old  <	mov rsi, rbp>
+new  <	; Â£temporary74 = &x>
+
+1014:
+old  <	add rsi, 24>
+new  <	mov rsi, rbp>
+
+1015:
+old  <>
+new  <	add rsi, 24>
+
+1016:
+old  < main3$8:>
+new  <>
+
+1017:
+old  <	; parameter Â£temporary74, offset 64>
+new  < main3$8:>
+
+1018:
+old  <	mov [rbp + 64], rsi>
+new  <	; parameter Â£temporary74, offset 64>
+
+1019:
+old  <>
+new  <	mov [rbp + 64], rsi>
+
+1020:
+old  < main3$9:>
+new  <>
+
+1021:
+old  <	; call function noellipse-ellipse scanf, extra 8>
+new  < main3$9:>
+
+1022:
+old  <	mov qword [rbp + 32], main3$10>
+new  <	; call function noellipse-ellipse scanf, extra 8>
+
+1023:
+old  <	mov [rbp + 40], rbp>
+new  <	mov qword [rbp + 32], main3$10>
+
+1024:
+old  <	add rbp, 32>
+new  <	mov [rbp + 40], rbp>
+
+1025:
+old  <	mov rdi, rbp>
+new  <	add rbp, 32>
+
+1026:
+old  <	add rdi, 8>
+new  <	mov rdi, rbp>
+
+1027:
+old  <	jmp scanf>
+new  <	add rdi, 8>
+
+1028:
+old  <>
+new  <	jmp scanf>
+
+1029:
+old  < main3$10:>
+new  <>
+
+1030:
+old  <	; post call>
+new  < main3$10:>
+
+1031:
+old  <>
+new  <	; post call>
+
+1032:
+old  < main3$11:>
+new  <>
+
+1033:
+old  <	; call header integral zero 0 stack zero 0>
+new  < main3$11:>
+
+1034:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1035:
+old  < main3$12:>
+new  <>
+
+1036:
+old  <	; parameter string_3C25f3E#, offset 56>
+new  < main3$12:>
+
+1037:
+old  <	mov qword [rbp + 56], string_3C25f3E#>
+new  <	; parameter string_3C25f3E#, offset 56>
+
+1038:
+old  <>
+new  <	mov qword [rbp + 56], string_3C25f3E#>
+
+1039:
+old  < main3$13:>
+new  <>
+
+1040:
+old  <	; push float x>
+new  < main3$13:>
+
+1041:
+old  <	fld qword [rbp + 24]>
+new  <	; push float x>
+
+1042:
+old  <>
+new  <	fld qword [rbp + 24]>
+
+1043:
+old  < main3$14:>
+new  <>
+
+1044:
+old  <	; parameter x, offset 64>
+new  < main3$14:>
+
+1045:
+old  <	fstp qword [rbp + 64]>
+new  <	; parameter x, offset 64>
+
+1046:
+old  <>
+new  <	fstp qword [rbp + 64]>
+
+1047:
+old  < main3$15:>
+new  <>
+
+1048:
+old  <	; call function noellipse-ellipse printf, extra 8>
+new  < main3$15:>
+
+1049:
+old  <	mov qword [rbp + 32], main3$16>
+new  <	; call function noellipse-ellipse printf, extra 8>
+
+1050:
+old  <	mov [rbp + 40], rbp>
+new  <	mov qword [rbp + 32], main3$16>
+
+1051:
+old  <	add rbp, 32>
+new  <	mov [rbp + 40], rbp>
+
+1052:
+old  <	mov rdi, rbp>
+new  <	add rbp, 32>
+
+1053:
+old  <	add rdi, 8>
+new  <	mov rdi, rbp>
+
+1054:
+old  <	jmp printf>
+new  <	add rdi, 8>
+
+1055:
+old  <>
+new  <	jmp printf>
+
+1056:
+old  < main3$16:>
+new  <>
+
+1057:
+old  <	; post call>
+new  < main3$16:>
+
+1058:
+old  <>
+new  <	; post call>
+
+1059:
+old  < main3$17:>
+new  <>
+
+1060:
+old  <	; return>
+new  < main3$17:>
+
+1061:
+old  <	mov rax, [rbp]>
+new  <	; return>
+
+1062:
+old  <	mov rdi, [rbp + 16]>
+new  <	mov rax, [rbp]>
+
+1063:
+old  <	mov rbp, [rbp + 8]>
+new  <	mov rdi, [rbp + 16]>
+
+1064:
+old  <	jmp rax>
+new  <	mov rbp, [rbp + 8]>
+
+1065:
+old  <>
+new  <	jmp rax>
+
+1066:
+old  < main3$18:>
+new  <>
+
+1067:
+old  <	; function end main3>
+new  < main3$18:>
+
+1068:
+old  <>
+new  <	; function end main3>
+
+1069:
+old  < mains2:>
+new  <>
+
+1070:
+old  <	; call header integral zero 0 stack zero 0>
+new  < mains2:>
+
+1071:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1072:
+old  < mains2$1:>
+new  <>
+
+1073:
+old  <	; push float float8$3.14#>
+new  < mains2$1:>
+
+1074:
+old  <	fld qword [float8$3.14#]>
+new  <	; push float float8$3.14#>
+
+1075:
+old  <>
+new  <	fld qword [float8$3.14#]>
+
+1076:
+old  < mains2$2:>
+new  <>
+
+1077:
+old  <	; parameter float8$3.14#, offset 48>
+new  < mains2$2:>
+
+1078:
+old  <	fstp qword [rbp + 48]>
+new  <	; parameter float8$3.14#, offset 48>
+
+1079:
+old  <>
+new  <	fstp qword [rbp + 48]>
+
+1080:
+old  < mains2$3:>
+new  <>
+
+1081:
+old  <	; call function noellipse-noellipse setjmp_test>
+new  < mains2$3:>
+
+1082:
+old  <	mov qword [rbp + 24], mains2$4>
+new  <	; call function noellipse-noellipse setjmp_test>
+
+1083:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], mains2$4>
+
+1084:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+1085:
+old  <	jmp setjmp_test>
+new  <	add rbp, 24>
+
+1086:
+old  <>
+new  <	jmp setjmp_test>
+
+1087:
+old  < mains2$4:>
+new  <>
+
+1088:
+old  <	; post call>
+new  < mains2$4:>
+
+1089:
+old  <>
+new  <	; post call>
+
+1090:
+old  < mains2$5:>
+new  <>
+
+1091:
+old  <	; call header integral zero 0 stack zero 0>
+new  < mains2$5:>
+
+1092:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1093:
+old  < mains2$6:>
+new  <>
+
+1094:
+old  <	; parameter string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#, offset 48>
+new  < mains2$6:>
+
+1095:
+old  <	mov qword [rbp + 48], string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#>
+new  <	; parameter string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#, offset 48>
+
+1096:
+old  <>
+new  <	mov qword [rbp + 48], string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#>
+
+1097:
+old  < mains2$7:>
+new  <>
+
+1098:
+old  <	; call function noellipse-ellipse printf, extra 0>
+new  < mains2$7:>
+
+1099:
+old  <	mov qword [rbp + 24], mains2$8>
+new  <	; call function noellipse-ellipse printf, extra 0>
+
+1100:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], mains2$8>
+
+1101:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+1102:
+old  <	mov rdi, rbp>
+new  <	add rbp, 24>
+
+1103:
+old  <	jmp printf>
+new  <	mov rdi, rbp>
+
+1104:
+old  <>
+new  <	jmp printf>
+
+1105:
+old  < mains2$8:>
+new  <>
+
+1106:
+old  <	; post call>
+new  < mains2$8:>
+
+1107:
+old  <>
+new  <	; post call>
+
+1108:
+old  < mains2$9:>
+new  <>
+
+1109:
+old  <	; call header integral zero 0 stack zero 0>
+new  < mains2$9:>
+
+1110:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1111:
+old  < mains2$10:>
+new  <>
+
+1112:
+old  <	; push float float8$0#>
+new  < mains2$10:>
+
+1113:
+old  <	fldz>
+new  <	; push float float8$0#>
+
+1114:
+old  <>
+new  <	fldz>
+
+1115:
+old  < mains2$11:>
+new  <>
+
+1116:
+old  <	; parameter float8$0#, offset 48>
+new  < mains2$11:>
+
+1117:
+old  <	fstp qword [rbp + 48]>
+new  <	; parameter float8$0#, offset 48>
+
+1118:
+old  <>
+new  <	fstp qword [rbp + 48]>
+
+1119:
+old  < mains2$12:>
+new  <>
+
+1120:
+old  <	; call function noellipse-noellipse setjmp_test>
+new  < mains2$12:>
+
+1121:
+old  <	mov qword [rbp + 24], mains2$13>
+new  <	; call function noellipse-noellipse setjmp_test>
+
+1122:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], mains2$13>
+
+1123:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+1124:
+old  <	jmp setjmp_test>
+new  <	add rbp, 24>
+
+1125:
+old  <>
+new  <	jmp setjmp_test>
+
+1126:
+old  < mains2$13:>
+new  <>
+
+1127:
+old  <	; post call>
+new  < mains2$13:>
+
+1128:
+old  <>
+new  <	; post call>
+
+1129:
+old  < mains2$14:>
+new  <>
+
+1130:
+old  <	; call header integral zero 0 stack zero 0>
+new  < mains2$14:>
+
+1131:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1132:
+old  < mains2$15:>
+new  <>
+
+1133:
+old  <	; parameter string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#, offset 48>
+new  < mains2$15:>
+
+1134:
+old  <	mov qword [rbp + 48], string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#>
+new  <	; parameter string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#, offset 48>
+
+1135:
+old  <>
+new  <	mov qword [rbp + 48], string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#>
+
+1136:
+old  < mains2$16:>
+new  <>
+
+1137:
+old  <	; call function noellipse-ellipse printf, extra 0>
+new  < mains2$16:>
+
+1138:
+old  <	mov qword [rbp + 24], mains2$17>
+new  <	; call function noellipse-ellipse printf, extra 0>
+
+1139:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], mains2$17>
+
+1140:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+1141:
+old  <	mov rdi, rbp>
+new  <	add rbp, 24>
+
+1142:
+old  <	jmp printf>
+new  <	mov rdi, rbp>
+
+1143:
+old  <>
+new  <	jmp printf>
+
+1144:
+old  < mains2$17:>
+new  <>
+
+1145:
+old  <	; post call>
+new  < mains2$17:>
+
+1146:
+old  <>
+new  <	; post call>
+
+1147:
+old  < mains2$18:>
+new  <>
+
+1148:
+old  <	; call header integral zero 0 stack zero 0>
+new  < mains2$18:>
+
+1149:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1150:
+old  < mains2$19:>
+new  <>
+
+1151:
+old  <	; push float float8$2.71#>
+new  < mains2$19:>
+
+1152:
+old  <	fld qword [float8$2.71#]>
+new  <	; push float float8$2.71#>
+
+1153:
+old  <>
+new  <	fld qword [float8$2.71#]>
+
+1154:
+old  < mains2$20:>
+new  <>
+
+1155:
+old  <	; parameter float8$2.71#, offset 48>
+new  < mains2$20:>
+
+1156:
+old  <	fstp qword [rbp + 48]>
+new  <	; parameter float8$2.71#, offset 48>
+
+1157:
+old  <>
+new  <	fstp qword [rbp + 48]>
+
+1158:
+old  < mains2$21:>
+new  <>
+
+1159:
+old  <	; call function noellipse-noellipse setjmp_test>
+new  < mains2$21:>
+
+1160:
+old  <	mov qword [rbp + 24], mains2$22>
+new  <	; call function noellipse-noellipse setjmp_test>
+
+1161:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], mains2$22>
+
+1162:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+1163:
+old  <	jmp setjmp_test>
+new  <	add rbp, 24>
+
+1164:
+old  <>
+new  <	jmp setjmp_test>
+
+1165:
+old  < mains2$22:>
+new  <>
+
+1166:
+old  <	; post call>
+new  < mains2$22:>
+
+1167:
+old  <>
+new  <	; post call>
+
+1168:
+old  < mains2$23:>
+new  <>
+
+1169:
+old  <	; call header integral zero 0 stack zero 0>
+new  < mains2$23:>
+
+1170:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1171:
+old  < mains2$24:>
+new  <>
+
+1172:
+old  <	; parameter string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#, offset 48>
+new  < mains2$24:>
+
+1173:
+old  <	mov qword [rbp + 48], string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#>
+new  <	; parameter string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#, offset 48>
+
+1174:
+old  <>
+new  <	mov qword [rbp + 48], string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#>
+
+1175:
+old  < mains2$25:>
+new  <>
+
+1176:
+old  <	; call function noellipse-ellipse printf, extra 0>
+new  < mains2$25:>
+
+1177:
+old  <	mov qword [rbp + 24], mains2$26>
+new  <	; call function noellipse-ellipse printf, extra 0>
+
+1178:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], mains2$26>
+
+1179:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+1180:
+old  <	mov rdi, rbp>
+new  <	add rbp, 24>
+
+1181:
+old  <	jmp printf>
+new  <	mov rdi, rbp>
+
+1182:
+old  <>
+new  <	jmp printf>
+
+1183:
+old  < mains2$26:>
+new  <>
+
+1184:
+old  <	; post call>
+new  < mains2$26:>
+
+1185:
+old  <>
+new  <	; post call>
+
+1186:
+old  < mains2$27:>
+new  <>
+
+1187:
+old  <	; call header integral zero 0 stack zero 0>
+new  < mains2$27:>
+
+1188:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1189:
+old  < mains2$28:>
+new  <>
+
+1190:
+old  <	; push float float8$0#>
+new  < mains2$28:>
+
+1191:
+old  <	fldz>
+new  <	; push float float8$0#>
+
+1192:
+old  <>
+new  <	fldz>
+
+1193:
+old  < mains2$29:>
+new  <>
+
+1194:
+old  <	; parameter float8$0#, offset 48>
+new  < mains2$29:>
+
+1195:
+old  <	fstp qword [rbp + 48]>
+new  <	; parameter float8$0#, offset 48>
+
+1196:
+old  <>
+new  <	fstp qword [rbp + 48]>
+
+1197:
+old  < mains2$30:>
+new  <>
+
+1198:
+old  <	; call function noellipse-noellipse setjmp_test>
+new  < mains2$30:>
+
+1199:
+old  <	mov qword [rbp + 24], mains2$31>
+new  <	; call function noellipse-noellipse setjmp_test>
+
+1200:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], mains2$31>
+
+1201:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+1202:
+old  <	jmp setjmp_test>
+new  <	add rbp, 24>
+
+1203:
+old  <>
+new  <	jmp setjmp_test>
+
+1204:
+old  < mains2$31:>
+new  <>
+
+1205:
+old  <	; post call>
+new  < mains2$31:>
+
+1206:
+old  <>
+new  <	; post call>
+
+1207:
+old  < mains2$32:>
+new  <>
+
+1208:
+old  <	; return>
+new  < mains2$32:>
+
+1209:
+old  <	mov rax, [rbp]>
+new  <	; return>
+
+1210:
+old  <	mov rdi, [rbp + 16]>
+new  <	mov rax, [rbp]>
+
+1211:
+old  <	mov rbp, [rbp + 8]>
+new  <	mov rdi, [rbp + 16]>
+
+1212:
+old  <	jmp rax>
+new  <	mov rbp, [rbp + 8]>
+
+1213:
+old  <>
+new  <	jmp rax>
+
+1214:
+old  < mains2$33:>
+new  <>
+
+1215:
+old  <	; function end mains2>
+new  < mains2$33:>
+
+1216:
+old  <>
+new  <	; function end mains2>
+
+1217:
+old  < char_main:>
+new  <>
+
+1218:
+old  <	; call header integral zero 0 stack zero 0>
+new  < char_main:>
+
+1219:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1220:
+old  < char_main$1:>
+new  <>
+
+1221:
+old  <	; parameter int1$97#, offset 48>
+new  < char_main$1:>
+
+1222:
+old  <	mov byte [rbp + 48], 97>
+new  <	; parameter int1$97#, offset 48>
+
+1223:
+old  <>
+new  <	mov byte [rbp + 48], 97>
+
+1224:
+old  < char_main$2:>
+new  <>
+
+1225:
+old  <	; call function noellipse-noellipse character_test>
+new  < char_main$2:>
+
+1226:
+old  <	mov qword [rbp + 24], char_main$3>
+new  <	; call function noellipse-noellipse character_test>
+
+1227:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], char_main$3>
+
+1228:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+1229:
+old  <	jmp character_test>
+new  <	add rbp, 24>
+
+1230:
+old  <>
+new  <	jmp character_test>
+
+1231:
+old  < char_main$3:>
+new  <>
+
+1232:
+old  <	; post call>
+new  < char_main$3:>
+
+1233:
+old  <>
+new  <	; post call>
+
+1234:
+old  < char_main$4:>
+new  <>
+
+1235:
+old  <	; call header integral zero 0 stack zero 0>
+new  < char_main$4:>
+
+1236:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1237:
+old  < char_main$5:>
+new  <>
+
+1238:
+old  <	; parameter int1$66#, offset 48>
+new  < char_main$5:>
+
+1239:
+old  <	mov byte [rbp + 48], 66>
+new  <	; parameter int1$66#, offset 48>
+
+1240:
+old  <>
+new  <	mov byte [rbp + 48], 66>
+
+1241:
+old  < char_main$6:>
+new  <>
+
+1242:
+old  <	; call function noellipse-noellipse character_test>
+new  < char_main$6:>
+
+1243:
+old  <	mov qword [rbp + 24], char_main$7>
+new  <	; call function noellipse-noellipse character_test>
+
+1244:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], char_main$7>
+
+1245:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+1246:
+old  <	jmp character_test>
+new  <	add rbp, 24>
+
+1247:
+old  <>
+new  <	jmp character_test>
+
+1248:
+old  < char_main$7:>
+new  <>
+
+1249:
+old  <	; post call>
+new  < char_main$7:>
+
+1250:
+old  <>
+new  <	; post call>
+
+1251:
+old  < char_main$8:>
+new  <>
+
+1252:
+old  <	; call header integral zero 0 stack zero 0>
+new  < char_main$8:>
+
+1253:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1254:
+old  < char_main$9:>
+new  <>
+
+1255:
+old  <	; parameter int1$49#, offset 48>
+new  < char_main$9:>
+
+1256:
+old  <	mov byte [rbp + 48], 49>
+new  <	; parameter int1$49#, offset 48>
+
+1257:
+old  <>
+new  <	mov byte [rbp + 48], 49>
+
+1258:
+old  < char_main$10:>
+new  <>
+
+1259:
+old  <	; call function noellipse-noellipse character_test>
+new  < char_main$10:>
+
+1260:
+old  <	mov qword [rbp + 24], char_main$11>
+new  <	; call function noellipse-noellipse character_test>
+
+1261:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], char_main$11>
+
+1262:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+1263:
+old  <	jmp character_test>
+new  <	add rbp, 24>
+
+1264:
+old  <>
+new  <	jmp character_test>
+
+1265:
+old  < char_main$11:>
+new  <>
+
+1266:
+old  <	; post call>
+new  < char_main$11:>
+
+1267:
+old  <>
+new  <	; post call>
+
+1268:
+old  < char_main$12:>
+new  <>
+
+1269:
+old  <	; call header integral zero 0 stack zero 0>
+new  < char_main$12:>
+
+1270:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1271:
+old  < char_main$13:>
+new  <>
+
+1272:
+old  <	; parameter int1$46#, offset 48>
+new  < char_main$13:>
+
+1273:
+old  <	mov byte [rbp + 48], 46>
+new  <	; parameter int1$46#, offset 48>
+
+1274:
+old  <>
+new  <	mov byte [rbp + 48], 46>
+
+1275:
+old  < char_main$14:>
+new  <>
+
+1276:
+old  <	; call function noellipse-noellipse character_test>
+new  < char_main$14:>
+
+1277:
+old  <	mov qword [rbp + 24], char_main$15>
+new  <	; call function noellipse-noellipse character_test>
+
+1278:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], char_main$15>
+
+1279:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+1280:
+old  <	jmp character_test>
+new  <	add rbp, 24>
+
+1281:
+old  <>
+new  <	jmp character_test>
+
+1282:
+old  < char_main$15:>
+new  <>
+
+1283:
+old  <	; post call>
+new  < char_main$15:>
+
+1284:
+old  <>
+new  <	; post call>
+
+1285:
+old  < char_main$16:>
+new  <>
+
+1286:
+old  <	; call header integral zero 0 stack zero 0>
+new  < char_main$16:>
+
+1287:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1288:
+old  < char_main$17:>
+new  <>
+
+1289:
+old  <	; parameter int1$10#, offset 48>
+new  < char_main$17:>
+
+1290:
+old  <	mov byte [rbp + 48], 10>
+new  <	; parameter int1$10#, offset 48>
+
+1291:
+old  <>
+new  <	mov byte [rbp + 48], 10>
+
+1292:
+old  < char_main$18:>
+new  <>
+
+1293:
+old  <	; call function noellipse-noellipse character_test>
+new  < char_main$18:>
+
+1294:
+old  <	mov qword [rbp + 24], char_main$19>
+new  <	; call function noellipse-noellipse character_test>
+
+1295:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], char_main$19>
+
+1296:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+1297:
+old  <	jmp character_test>
+new  <	add rbp, 24>
+
+1298:
+old  <>
+new  <	jmp character_test>
+
+1299:
+old  < char_main$19:>
+new  <>
+
+1300:
+old  <	; post call>
+new  < char_main$19:>
+
+1301:
+old  <>
+new  <	; post call>
+
+1302:
+old  < char_main$20:>
+new  <>
+
+1303:
+old  <	; call header integral zero 0 stack zero 0>
+new  < char_main$20:>
+
+1304:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1305:
+old  < char_main$21:>
+new  <>
+
+1306:
+old  <	; parameter int1$102#, offset 48>
+new  < char_main$21:>
+
+1307:
+old  <	mov byte [rbp + 48], 102>
+new  <	; parameter int1$102#, offset 48>
+
+1308:
+old  <>
+new  <	mov byte [rbp + 48], 102>
+
+1309:
+old  < char_main$22:>
+new  <>
+
+1310:
+old  <	; call function noellipse-noellipse character_test>
+new  < char_main$22:>
+
+1311:
+old  <	mov qword [rbp + 24], char_main$23>
+new  <	; call function noellipse-noellipse character_test>
+
+1312:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], char_main$23>
+
+1313:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+1314:
+old  <	jmp character_test>
+new  <	add rbp, 24>
+
+1315:
+old  <>
+new  <	jmp character_test>
+
+1316:
+old  < char_main$23:>
+new  <>
+
+1317:
+old  <	; post call>
+new  < char_main$23:>
+
+1318:
+old  <>
+new  <	; post call>
+
+1319:
+old  < char_main$24:>
+new  <>
+
+1320:
+old  <	; call header integral zero 0 stack zero 0>
+new  < char_main$24:>
+
+1321:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1322:
+old  < char_main$25:>
+new  <>
+
+1323:
+old  <	; parameter int1$103#, offset 48>
+new  < char_main$25:>
+
+1324:
+old  <	mov byte [rbp + 48], 103>
+new  <	; parameter int1$103#, offset 48>
+
+1325:
+old  <>
+new  <	mov byte [rbp + 48], 103>
+
+1326:
+old  < char_main$26:>
+new  <>
+
+1327:
+old  <	; call function noellipse-noellipse character_test>
+new  < char_main$26:>
+
+1328:
+old  <	mov qword [rbp + 24], char_main$27>
+new  <	; call function noellipse-noellipse character_test>
+
+1329:
+old  <	mov [rbp + 32], rbp>
+new  <	mov qword [rbp + 24], char_main$27>
+
+1330:
+old  <	add rbp, 24>
+new  <	mov [rbp + 32], rbp>
+
+1331:
+old  <	jmp character_test>
+new  <	add rbp, 24>
+
+1332:
+old  <>
+new  <	jmp character_test>
+
+1333:
+old  < char_main$27:>
+new  <>
+
+1334:
+old  <	; post call>
+new  < char_main$27:>
+
+1335:
+old  <>
+new  <	; post call>
+
+1336:
+old  < char_main$28:>
+new  <>
+
+1337:
+old  <	; return>
+new  < char_main$28:>
+
+1338:
+old  <	mov rax, [rbp]>
+new  <	; return>
+
+1339:
+old  <	mov rdi, [rbp + 16]>
+new  <	mov rax, [rbp]>
+
+1340:
+old  <	mov rbp, [rbp + 8]>
+new  <	mov rdi, [rbp + 16]>
+
+1341:
+old  <	jmp rax>
+new  <	mov rbp, [rbp + 8]>
+
+1342:
+old  <>
+new  <	jmp rax>
+
+1343:
+old  < char_main$29:>
+new  <>
+
+1344:
+old  <	; function end char_main>
+new  < char_main$29:>
+
+1345:
+old  <>
+new  <	; function end char_main>
+
+1346:
+old  < assert_test:>
+new  <>
+
+1347:
+old  <	; n = int4$0#>
+new  < assert_test:>
+
+1348:
+old  <	mov dword [rbp + 24], 0>
+new  <	; n = int4$0#>
+
+1349:
+old  <>
+new  <	mov dword [rbp + 24], 0>
+
+1350:
+old  < assert_test$1:>
+new  <>
+
+1351:
+old  <	; call header integral zero 0 stack zero 0>
+new  < assert_test$1:>
+
+1352:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1353:
+old  < assert_test$2:>
+new  <>
+
+1354:
+old  <	; parameter string_Please20write20a20number2028not20620or207293A20#, offset 52>
+new  < assert_test$2:>
+
+1355:
+old  <	mov qword [rbp + 52], string_Please20write20a20number2028not20620or207293A20#>
+new  <	; parameter string_Please20write20a20number2028not20620or207293A20#, offset 52>
+
+1356:
+old  <>
+new  <	mov qword [rbp + 52], string_Please20write20a20number2028not20620or207293A20#>
+
+1357:
+old  < assert_test$3:>
+new  <>
+
+1358:
+old  <	; call function noellipse-ellipse printf, extra 0>
+new  < assert_test$3:>
+
+1359:
+old  <	mov qword [rbp + 28], assert_test$4>
+new  <	; call function noellipse-ellipse printf, extra 0>
+
+1360:
+old  <	mov [rbp + 36], rbp>
+new  <	mov qword [rbp + 28], assert_test$4>
+
+1361:
+old  <	add rbp, 28>
+new  <	mov [rbp + 36], rbp>
+
+1362:
+old  <	mov rdi, rbp>
+new  <	add rbp, 28>
+
+1363:
+old  <	jmp printf>
+new  <	mov rdi, rbp>
+
+1364:
+old  <>
+new  <	jmp printf>
+
+1365:
+old  < assert_test$4:>
+new  <>
+
+1366:
+old  <	; post call>
+new  < assert_test$4:>
+
+1367:
+old  <>
+new  <	; post call>
+
+1368:
+old  < assert_test$5:>
+new  <>
+
+1369:
+old  <	; call header integral zero 0 stack zero 0>
+new  < assert_test$5:>
+
+1370:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1371:
+old  < assert_test$6:>
+new  <>
+
+1372:
+old  <	; parameter string_25i#, offset 52>
+new  < assert_test$6:>
+
+1373:
+old  <	mov qword [rbp + 52], string_25i#>
+new  <	; parameter string_25i#, offset 52>
+
+1374:
+old  <>
+new  <	mov qword [rbp + 52], string_25i#>
+
+1375:
+old  < assert_test$7:>
+new  <>
+
+1376:
+old  <	; Â£temporary98 = &n>
+new  < assert_test$7:>
+
+1377:
+old  <	mov rsi, rbp>
+new  <	; Â£temporary98 = &n>
+
+1378:
+old  <	add rsi, 24>
+new  <	mov rsi, rbp>
+
+1379:
+old  <>
+new  <	add rsi, 24>
+
+1380:
+old  < assert_test$8:>
+new  <>
+
+1381:
+old  <	; parameter Â£temporary98, offset 60>
+new  < assert_test$8:>
+
+1382:
+old  <	mov [rbp + 60], rsi>
+new  <	; parameter Â£temporary98, offset 60>
+
+1383:
+old  <>
+new  <	mov [rbp + 60], rsi>
+
+1384:
+old  < assert_test$9:>
+new  <>
+
+1385:
+old  <	; call function noellipse-ellipse scanf, extra 8>
+new  < assert_test$9:>
+
+1386:
+old  <	mov qword [rbp + 28], assert_test$10>
+new  <	; call function noellipse-ellipse scanf, extra 8>
+
+1387:
+old  <	mov [rbp + 36], rbp>
+new  <	mov qword [rbp + 28], assert_test$10>
+
+1388:
+old  <	add rbp, 28>
+new  <	mov [rbp + 36], rbp>
+
+1389:
+old  <	mov rdi, rbp>
+new  <	add rbp, 28>
+
+1390:
+old  <	add rdi, 8>
+new  <	mov rdi, rbp>
+
+1391:
+old  <	jmp scanf>
+new  <	add rdi, 8>
+
+1392:
+old  <>
+new  <	jmp scanf>
+
+1393:
+old  < assert_test$10:>
+new  <>
+
+1394:
+old  <	; post call>
+new  < assert_test$10:>
+
+1395:
+old  <>
+new  <	; post call>
+
+1396:
+old  < assert_test$11:>
+new  <>
+
+1397:
+old  <	; if n != int4$6# goto 23>
+new  < assert_test$11:>
+
+1398:
+old  <	cmp dword [rbp + 24], 6>
+new  <	; if n != int4$6# goto 23>
+
+1399:
+old  <	jne assert_test$23>
+new  <	cmp dword [rbp + 24], 6>
+
+1400:
+old  <>
+new  <	jne assert_test$23>
+
+1401:
+old  < assert_test$12:>
+new  <>
+
+1402:
+old  <	; call header integral zero 0 stack zero 0>
+new  < assert_test$12:>
+
+1403:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1404:
+old  < assert_test$13:>
+new  <>
+
+1405:
+old  <	; parameter stderr, offset 52>
+new  < assert_test$13:>
+
+1406:
+old  <	mov rax, [stderr]>
+new  <	; parameter stderr, offset 52>
+
+1407:
+old  <	mov [rbp + 52], rax>
+new  <	mov rax, [stderr]>
+
+1408:
+old  <>
+new  <	mov [rbp + 52], rax>
+
+1409:
+old  < assert_test$14:>
+new  <>
+
+1410:
+old  <	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 60>
+new  < assert_test$14:>
+
+1411:
+old  <	mov qword [rbp + 60], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#>
+new  <	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 60>
+
+1412:
+old  <>
+new  <	mov qword [rbp + 60], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#>
+
+1413:
+old  < assert_test$15:>
+new  <>
+
+1414:
+old  <	; parameter string_n20213D206#, offset 68>
+new  < assert_test$15:>
+
+1415:
+old  <	mov qword [rbp + 68], string_n20213D206#>
+new  <	; parameter string_n20213D206#, offset 68>
+
+1416:
+old  <>
+new  <	mov qword [rbp + 68], string_n20213D206#>
+
+1417:
+old  < assert_test$16:>
+new  <>
+
+1418:
+old  <	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#, offset 76>
+new  < assert_test$16:>
+
+1419:
+old  <	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#>
+new  <	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#, offset 76>
+
+1420:
+old  <>
+new  <	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#>
+
+1421:
+old  < assert_test$17:>
+new  <>
+
+1422:
+old  <	; parameter int4$823#, offset 84>
+new  < assert_test$17:>
+
+1423:
+old  <	mov dword [rbp + 84], 823>
+new  <	; parameter int4$823#, offset 84>
+
+1424:
+old  <>
+new  <	mov dword [rbp + 84], 823>
+
+1425:
+old  < assert_test$18:>
+new  <>
+
+1426:
+old  <	; call function noellipse-ellipse fprintf, extra 20>
+new  < assert_test$18:>
+
+1427:
+old  <	mov qword [rbp + 28], assert_test$19>
+new  <	; call function noellipse-ellipse fprintf, extra 20>
+
+1428:
+old  <	mov [rbp + 36], rbp>
+new  <	mov qword [rbp + 28], assert_test$19>
+
+1429:
+old  <	add rbp, 28>
+new  <	mov [rbp + 36], rbp>
+
+1430:
+old  <	mov rdi, rbp>
+new  <	add rbp, 28>
+
+1431:
+old  <	add rdi, 20>
+new  <	mov rdi, rbp>
+
+1432:
+old  <	jmp fprintf>
+new  <	add rdi, 20>
+
+1433:
+old  <>
+new  <	jmp fprintf>
+
+1434:
+old  < assert_test$19:>
+new  <>
+
+1435:
+old  <	; post call>
+new  < assert_test$19:>
+
+1436:
+old  <>
+new  <	; post call>
+
+1437:
+old  < assert_test$20:>
+new  <>
+
+1438:
+old  <	; call header integral zero 0 stack zero 0>
+new  < assert_test$20:>
+
+1439:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1440:
+old  < assert_test$21:>
+new  <>
+
+1441:
+old  <	; call function noellipse-noellipse abort>
+new  < assert_test$21:>
+
+1442:
+old  <	mov qword [rbp + 28], assert_test$22>
+new  <	; call function noellipse-noellipse abort>
+
+1443:
+old  <	mov [rbp + 36], rbp>
+new  <	mov qword [rbp + 28], assert_test$22>
+
+1444:
+old  <	add rbp, 28>
+new  <	mov [rbp + 36], rbp>
+
+1445:
+old  <	jmp abort>
+new  <	add rbp, 28>
+
+1446:
+old  <>
+new  <	jmp abort>
+
+1447:
+old  < assert_test$22:>
+new  <>
+
+1448:
+old  <	; post call>
+new  < assert_test$22:>
+
+1449:
+old  <>
+new  <	; post call>
+
+1450:
+old  < assert_test$23:>
+new  <>
+
+1451:
+old  <	; call header integral zero 0 stack zero 0>
+new  < assert_test$23:>
+
+1452:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1453:
+old  < assert_test$24:>
+new  <>
+
+1454:
+old  <	; parameter n, offset 52>
+new  < assert_test$24:>
+
+1455:
+old  <	mov eax, [rbp + 24]>
+new  <	; parameter n, offset 52>
+
+1456:
+old  <	mov [rbp + 52], eax>
+new  <	mov eax, [rbp + 24]>
+
+1457:
+old  <>
+new  <	mov [rbp + 52], eax>
+
+1458:
+old  < assert_test$25:>
+new  <>
+
+1459:
+old  <	; call function noellipse-noellipse assert_test2>
+new  < assert_test$25:>
+
+1460:
+old  <	mov qword [rbp + 28], assert_test$26>
+new  <	; call function noellipse-noellipse assert_test2>
+
+1461:
+old  <	mov [rbp + 36], rbp>
+new  <	mov qword [rbp + 28], assert_test$26>
+
+1462:
+old  <	add rbp, 28>
+new  <	mov [rbp + 36], rbp>
+
+1463:
+old  <	jmp assert_test2>
+new  <	add rbp, 28>
+
+1464:
+old  <>
+new  <	jmp assert_test2>
+
+1465:
+old  < assert_test$26:>
+new  <>
+
+1466:
+old  <	; post call>
+new  < assert_test$26:>
+
+1467:
+old  <>
+new  <	; post call>
+
+1468:
+old  < assert_test$27:>
+new  <>
+
+1469:
+old  <	; return>
+new  < assert_test$27:>
+
+1470:
+old  <	mov rax, [rbp]>
+new  <	; return>
+
+1471:
+old  <	mov rdi, [rbp + 16]>
+new  <	mov rax, [rbp]>
+
+1472:
+old  <	mov rbp, [rbp + 8]>
+new  <	mov rdi, [rbp + 16]>
+
+1473:
+old  <	jmp rax>
+new  <	mov rbp, [rbp + 8]>
+
+1474:
+old  <>
+new  <	jmp rax>
+
+1475:
+old  < assert_test$28:>
+new  <>
+
+1476:
+old  <	; function end assert_test>
+new  < assert_test$28:>
+
+1477:
+old  <>
+new  <	; function end assert_test>
+
+1478:
+old  < assert_test2:>
+new  <>
+
+1479:
+old  <	; if n != int4$7# goto 12>
+new  < assert_test2:>
+
+1480:
+old  <	cmp dword [rbp + 24], 7>
+new  <	; if n != int4$7# goto 12>
+
+1481:
+old  <	jne assert_test2$12>
+new  <	cmp dword [rbp + 24], 7>
+
+1482:
+old  <>
+new  <	jne assert_test2$12>
+
+1483:
+old  < assert_test2$1:>
+new  <>
+
+1484:
+old  <	; call header integral zero 0 stack zero 0>
+new  < assert_test2$1:>
+
+1485:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1486:
+old  < assert_test2$2:>
+new  <>
+
+1487:
+old  <	; parameter stderr, offset 52>
+new  < assert_test2$2:>
+
+1488:
+old  <	mov rax, [stderr]>
+new  <	; parameter stderr, offset 52>
+
+1489:
+old  <	mov [rbp + 52], rax>
+new  <	mov rax, [stderr]>
+
+1490:
+old  <>
+new  <	mov [rbp + 52], rax>
+
+1491:
+old  < assert_test2$3:>
+new  <>
+
+1492:
+old  <	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 60>
+new  < assert_test2$3:>
+
+1493:
+old  <	mov qword [rbp + 60], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#>
+new  <	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 60>
+
+1494:
+old  <>
+new  <	mov qword [rbp + 60], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#>
+
+1495:
+old  < assert_test2$4:>
+new  <>
+
+1496:
+old  <	; parameter string_n20213D207#, offset 68>
+new  < assert_test2$4:>
+
+1497:
+old  <	mov qword [rbp + 68], string_n20213D207#>
+new  <	; parameter string_n20213D207#, offset 68>
+
+1498:
+old  <>
+new  <	mov qword [rbp + 68], string_n20213D207#>
+
+1499:
+old  < assert_test2$5:>
+new  <>
+
+1500:
+old  <	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#, offset 76>
+new  < assert_test2$5:>
+
+1501:
+old  <	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#>
+new  <	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#, offset 76>
+
+1502:
+old  <>
+new  <	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#>
+
+1503:
+old  < assert_test2$6:>
+new  <>
+
+1504:
+old  <	; parameter int4$828#, offset 84>
+new  < assert_test2$6:>
+
+1505:
+old  <	mov dword [rbp + 84], 828>
+new  <	; parameter int4$828#, offset 84>
+
+1506:
+old  <>
+new  <	mov dword [rbp + 84], 828>
+
+1507:
+old  < assert_test2$7:>
+new  <>
+
+1508:
+old  <	; call function noellipse-ellipse fprintf, extra 20>
+new  < assert_test2$7:>
+
+1509:
+old  <	mov qword [rbp + 28], assert_test2$8>
+new  <	; call function noellipse-ellipse fprintf, extra 20>
+
+1510:
+old  <	mov [rbp + 36], rbp>
+new  <	mov qword [rbp + 28], assert_test2$8>
+
+1511:
+old  <	add rbp, 28>
+new  <	mov [rbp + 36], rbp>
+
+1512:
+old  <	mov rdi, rbp>
+new  <	add rbp, 28>
+
+1513:
+old  <	add rdi, 20>
+new  <	mov rdi, rbp>
+
+1514:
+old  <	jmp fprintf>
+new  <	add rdi, 20>
+
+1515:
+old  <>
+new  <	jmp fprintf>
+
+1516:
+old  < assert_test2$8:>
+new  <>
+
+1517:
+old  <	; post call>
+new  < assert_test2$8:>
+
+1518:
+old  <>
+new  <	; post call>
+
+1519:
+old  < assert_test2$9:>
+new  <>
+
+1520:
+old  <	; call header integral zero 0 stack zero 0>
+new  < assert_test2$9:>
+
+1521:
+old  <>
+new  <	; call header integral zero 0 stack zero 0>
+
+1522:
+old  < assert_test2$10:>
+new  <>
+
+1523:
+old  <	; call function noellipse-noellipse abort>
+new  < assert_test2$10:>
+
+1524:
+old  <	mov qword [rbp + 28], assert_test2$11>
+new  <	; call function noellipse-noellipse abort>
+
+1525:
+old  <	mov [rbp + 36], rbp>
+new  <	mov qword [rbp + 28], assert_test2$11>
+
+1526:
+old  <	add rbp, 28>
+new  <	mov [rbp + 36], rbp>
+
+1527:
+old  <	jmp abort>
+new  <	add rbp, 28>
+
+1528:
+old  <>
+new  <	jmp abort>
+
+1529:
+old  < assert_test2$11:>
+new  <>
+
+1530:
+old  <	; post call>
+new  < assert_test2$11:>
+
+1531:
+old  <>
+new  <	; post call>
+
+1532:
+old  < assert_test2$12:>
+new  <>
+
+1533:
+old  <	; return>
+new  < assert_test2$12:>
+
+1534:
+old  <	mov rax, [rbp]>
+new  <	; return>
+
+1535:
+old  <	mov rdi, [rbp + 16]>
+new  <	mov rax, [rbp]>
+
+1536:
+old  <	mov rbp, [rbp + 8]>
+new  <	mov rdi, [rbp + 16]>
+
+1537:
+old  <	jmp rax>
+new  <	mov rbp, [rbp + 8]>
+
+1538:
+old  <>
+new  <	jmp rax>
+
+1539:
+old  < assert_test2$13:>
+new  <>
+
+1540:
+old  <	; function end assert_test2>
+new  < assert_test2$13:>
+
+1541:
+old  <section .data>
+new  <	; function end assert_test2>
+
+1542:
+old  <$StackTop:	times 1048576 db 0>
+new  <section .data>
+
+1543:
+old  <>
+new  <$StackTop:	times 1048576 db 0>
+
+1544:
+old  <a:>
+new  <>
+
+1545:
+old  <	; initializer zero 16>
+new  <a:>
+
+1546:
+old  <	times 16 db 0>
+new  <	; initializer zero 16>
+
+1547:
+old  <>
+new  <	times 16 db 0>
+
+1548:
+old  <string_test12Etxt#:>
+new  <>
+
+1549:
+old  <	; initializer String>
+new  <string_test12Etxt#:>
+
+1550:
+old  <	db "test1.txt", 0>
+new  <	; initializer String>
+
+1551:
+old  <>
+new  <	db "test1.txt", 0>
+
+1552:
+old  <string_test22Etxt#:>
+new  <>
+
+1553:
+old  <	; initializer String>
+new  <string_test22Etxt#:>
+
+1554:
+old  <	db "test2.txt", 0>
+new  <	; initializer String>
+
+1555:
+old  <>
+new  <	db "test2.txt", 0>
+
+1556:
+old  <string_Hello#:>
+new  <>
+
+1557:
+old  <	; initializer String>
+new  <string_Hello#:>
+
+1558:
+old  <	db "Hello", 0>
+new  <	; initializer String>
+
+1559:
+old  <>
+new  <	db "Hello", 0>
+
+1560:
+old  <string_World#:>
+new  <>
+
+1561:
+old  <	; initializer String>
+new  <string_World#:>
+
+1562:
+old  <	db "World", 0>
+new  <	; initializer String>
+
+1563:
+old  <>
+new  <	db "World", 0>
+
+1564:
+old  <string_3C25s3E203C25s3E0A#:>
+new  <>
+
+1565:
+old  <	; initializer String>
+new  <string_3C25s3E203C25s3E0A#:>
+
+1566:
+old  <	db "<%s> <%s>", 10, 0>
+new  <	; initializer String>
+
+1567:
+old  <>
+new  <	db "<%s> <%s>", 10, 0>
+
+1568:
+old  <string_Please20write20a20character3A20#:>
+new  <>
+
+1569:
+old  <	; initializer String>
+new  <string_Please20write20a20character3A20#:>
+
+1570:
+old  <	db "Please write a character: ", 0>
+new  <	; initializer String>
+
+1571:
+old  <>
+new  <	db "Please write a character: ", 0>
+
+1572:
+old  <string_25c#:>
+new  <>
+
+1573:
+old  <	; initializer String>
+new  <string_25c#:>
+
+1574:
+old  <	db "%c", 0>
+new  <	; initializer String>
+
+1575:
+old  <>
+new  <	db "%c", 0>
+
+1576:
+old  <string_You20wrote20the20character202725c272E0A#:>
+new  <>
+
+1577:
+old  <	; initializer String>
+new  <string_You20wrote20the20character202725c272E0A#:>
+
+1578:
+old  <	db "You wrote the character ", 39, "%c", 39, ".", 10, 0>
+new  <	; initializer String>
+
+1579:
+old  <>
+new  <	db "You wrote the character ", 39, "%c", 39, ".", 10, 0>
+
+1580:
+old  <string_Please20write20an20integer3A20#:>
+new  <>
+
+1581:
+old  <	; initializer String>
+new  <string_Please20write20an20integer3A20#:>
+
+1582:
+old  <	db "Please write an integer: ", 0>
+new  <	; initializer String>
+
+1583:
+old  <>
+new  <	db "Please write an integer: ", 0>
+
+1584:
+old  <string_25i#:>
+new  <>
+
+1585:
+old  <	; initializer String>
+new  <string_25i#:>
+
+1586:
+old  <	db "%i", 0>
+new  <	; initializer String>
+
+1587:
+old  <>
+new  <	db "%i", 0>
+
+1588:
+old  <string_You20wrote20the20integer2025i2E0A#:>
+new  <>
+
+1589:
+old  <	; initializer String>
+new  <string_You20wrote20the20integer2025i2E0A#:>
+
+1590:
+old  <	db "You wrote the integer %i.", 10, 0>
+new  <	; initializer String>
+
+1591:
+old  <>
+new  <	db "You wrote the integer %i.", 10, 0>
+
+1592:
+old  <string_Please20write20a20string3A20#:>
+new  <>
+
+1593:
+old  <	; initializer String>
+new  <string_Please20write20a20string3A20#:>
+
+1594:
+old  <	db "Please write a string: ", 0>
+new  <	; initializer String>
+
+1595:
+old  <>
+new  <	db "Please write a string: ", 0>
+
+1596:
+old  <string_25s#:>
+new  <>
+
+1597:
+old  <	; initializer String>
+new  <string_25s#:>
+
+1598:
+old  <	db "%s", 0>
+new  <	; initializer String>
+
+1599:
+old  <>
+new  <	db "%s", 0>
+
+1600:
+old  <string_You20wrote20the20string202225s222E0A#:>
+new  <>
+
+1601:
+old  <	; initializer String>
+new  <string_You20wrote20the20string202225s222E0A#:>
+
+1602:
+old  <	db "You wrote the string ", 34, "%s", 34, ".", 10, 0>
+new  <	; initializer String>
+
+1603:
+old  <>
+new  <	db "You wrote the string ", 34, "%s", 34, ".", 10, 0>
+
+1604:
+old  <float8$10#:>
+new  <>
+
+1605:
+old  <	; initializer Double>
+new  <float8$10#:>
+
+1606:
+old  <	dq 10.0>
+new  <	; initializer Double>
+
+1607:
+old  <>
+new  <	dq 10.0>
+
+1608:
+old  <@400$ZERO:>
+new  <>
+
+1609:
+old  <	; initializer Signed_Int>
+new  <@400$ZERO:>
+
+1610:
+old  <	dd 0>
+new  <	; initializer Signed_Int>
+
+1611:
+old  <>
+new  <	dd 0>
+
+1612:
+old  <@401$ONE:>
+new  <>
+
+1613:
+old  <	; initializer Signed_Int>
+new  <@401$ONE:>
+
+1614:
+old  <	dd 1>
+new  <	; initializer Signed_Int>
+
+1615:
+old  <>
+new  <	dd 1>
+
+1616:
+old  <@404$TWO:>
+new  <>
+
+1617:
+old  <	; initializer Signed_Int>
+new  <@404$TWO:>
+
+1618:
+old  <	dd 2>
+new  <	; initializer Signed_Int>
+
+1619:
+old  <>
+new  <	dd 2>
+
+1620:
+old  <@405$THREE:>
+new  <>
+
+1621:
+old  <	; initializer Signed_Int>
+new  <@405$THREE:>
+
+1622:
+old  <	dd 3>
+new  <	; initializer Signed_Int>
+
+1623:
+old  <>
+new  <	dd 3>
+
+1624:
+old  <string_argc3A2025i0A#:>
+new  <>
+
+1625:
+old  <	; initializer String>
+new  <string_argc3A2025i0A#:>
+
+1626:
+old  <	db "argc: %i", 10, 0>
+new  <	; initializer String>
+
+1627:
+old  <>
+new  <	db "argc: %i", 10, 0>
+
+1628:
+old  <string_25i3A203C25s3E0A#:>
+new  <>
+
+1629:
+old  <	; initializer String>
+new  <string_25i3A203C25s3E0A#:>
+
+1630:
+old  <	db "%i: <%s>", 10, 0>
+new  <	; initializer String>
+
+1631:
+old  <>
+new  <	db "%i: <%s>", 10, 0>
+
+1632:
+old  <string_0A#:>
+new  <>
+
+1633:
+old  <	; initializer String>
+new  <string_0A#:>
+
+1634:
+old  <	db 10, 0>
+new  <	; initializer String>
+
+1635:
+old  <>
+new  <	db 10, 0>
+
+1636:
+old  <string_Hello210A#:>
+new  <>
+
+1637:
+old  <	; initializer String>
+new  <string_Hello210A#:>
+
+1638:
+old  <	db "Hello!", 10, 0>
+new  <	; initializer String>
+
+1639:
+old  <>
+new  <	db "Hello!", 10, 0>
+
+1640:
+old  <string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#:>
+new  <>
+
+1641:
+old  <	; initializer String>
+new  <string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#:>
+
+1642:
+old  <	db "Please write a character, a string, an integer, and a double: ", 0>
+new  <	; initializer String>
+
+1643:
+old  <>
+new  <	db "Please write a character, a string, an integer, and a double: ", 0>
+
+1644:
+old  <string_25c2025s2025i2025lf#:>
+new  <>
+
+1645:
+old  <	; initializer String>
+new  <string_25c2025s2025i2025lf#:>
+
+1646:
+old  <	db "%c %s %i %lf", 0>
+new  <	; initializer String>
+
+1647:
+old  <>
+new  <	db "%c %s %i %lf", 0>
+
+1648:
+old  <string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#:>
+new  <>
+
+1649:
+old  <	; initializer String>
+new  <string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#:>
+
+1650:
+old  <	db "You wrote the character ", 39, "%c", 39, ", the string ", 34, "%s", 34, ", the integer %i, and the double %f.", 10, 0>
+new  <	; initializer String>
+
+1651:
+old  <>
+new  <	db "You wrote the character ", 39, "%c", 39, ", the string ", 34, "%s", 34, ", the integer %i, and the double %f.", 10, 0>
+
+1652:
+old  <int8$8#:>
+new  <>
+
+1653:
+old  <	; initializer Pointer>
+new  <int8$8#:>
+
+1654:
+old  <	dq 8>
+new  <	; initializer Pointer>
+
+1655:
+old  <>
+new  <	dq 8>
+
+1656:
+old  <string_3A20#:>
+new  <>
+
+1657:
+old  <	; initializer String>
+new  <string_3A20#:>
+
+1658:
+old  <	db ": ", 0>
+new  <	; initializer String>
+
+1659:
+old  <>
+new  <	db ": ", 0>
+
+1660:
+old  <string_25lf#:>
+new  <>
+
+1661:
+old  <	; initializer String>
+new  <string_25lf#:>
+
+1662:
+old  <	db "%lf", 0>
+new  <	; initializer String>
+
+1663:
+old  <>
+new  <	db "%lf", 0>
+
+1664:
+old  <string_3C25f3E#:>
+new  <>
+
+1665:
+old  <	; initializer String>
+new  <string_3C25f3E#:>
+
+1666:
+old  <	db "<%f>", 0>
+new  <	; initializer String>
+
+1667:
+old  <>
+new  <	db "<%f>", 0>
+
+1668:
+old  <string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#:>
+new  <>
+
+1669:
+old  <	; initializer String>
+new  <string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#:>
+
+1670:
+old  <	db "---------------------------------------------", 10, 0>
+new  <	; initializer String>
+
+1671:
+old  <>
+new  <	db "---------------------------------------------", 10, 0>
+
+1672:
+old  <float8$3.14#:>
+new  <>
+
+1673:
+old  <	; initializer Double>
+new  <float8$3.14#:>
+
+1674:
+old  <	dq 3.14>
+new  <	; initializer Double>
+
+1675:
+old  <>
+new  <	dq 3.14>
+
+1676:
+old  <float8$2.71#:>
+new  <>
+
+1677:
+old  <	; initializer Double>
+new  <float8$2.71#:>
+
+1678:
+old  <	dq 2.71>
+new  <	; initializer Double>
+
+1679:
+old  <>
+new  <	dq 2.71>
+
+1680:
+old  <string_Please20write20a20number2028not20620or207293A20#:>
+new  <>
+
+1681:
+old  <	; initializer String>
+new  <string_Please20write20a20number2028not20620or207293A20#:>
+
+1682:
+old  <	db "Please write a number (not 6 or 7): ", 0>
+new  <	; initializer String>
+
+1683:
+old  <>
+new  <	db "Please write a number (not 6 or 7): ", 0>
+
+1684:
+old  <string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:>
+new  <>
+
+1685:
+old  <	; initializer String>
+new  <string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:>
+
+1686:
+old  <	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0>
+new  <	; initializer String>
+
+1687:
+old  <>
+new  <	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0>
+
+1688:
+old  <string_n20213D206#:>
+new  <>
+
+1689:
+old  <	; initializer String>
+new  <string_n20213D206#:>
+
+1690:
+old  <	db "n != 6", 0>
+new  <	; initializer String>
+
+1691:
+old  <>
+new  <	db "n != 6", 0>
+
+1692:
+old  <string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#:>
+new  <>
+
+1693:
+old  <	; initializer String>
+new  <string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#:>
+
+1694:
+old  <	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c", 0>
+new  <	; initializer String>
+
+1695:
+old  <>
+new  <	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c", 0>
+
+1696:
+old  <string_n20213D207#:>
+new  <>
+
+1697:
+old  <	; initializer String>
+new  <string_n20213D207#:>
+
+1698:
+old  <	db "n != 7", 0>
+new  <	; initializer String>
+
 Malloc.asm
 CType.asm
 ErrNo.asm

@@ -831,6 +831,14 @@ setjmp_test ( 0 ) ;
 
 
 void main ( int argc , char * argv [] ) {
+int index ;
+for ( index = 127 ; index < 255 ; ++ index ) {
+char c = * ( ( char * ) index ) ;
+printf ( "%i: %i <%c>\n" , index , ( int ) c , c ) ;
+}
+}
+
+void mainX ( int argc , char * argv [] ) {
 
 
 
@@ -1486,12 +1494,12 @@ void assert_test ( void ) {
 int n = 0 ;
 printf ( "Please write a number (not 6 or 7): " ) ;
 scanf ( "%i" , & n ) ;
-if ( ! ( n != 6 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 6" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 823 ) ; abort ( ) ; } ;
+if ( ! ( n != 6 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 6" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 831 ) ; abort ( ) ; } ;
 assert_test2 ( n ) ;
 }
 
 void assert_test2 ( int n ) {
-if ( ! ( n != 7 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 7" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 828 ) ; abort ( ) ; } ;
+if ( ! ( n != 7 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 7" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 836 ) ; abort ( ) ; } ;
 }
 
 

@@ -165,6 +165,14 @@ void mainY() {
 }*/
 
 void main(int argc, char* argv[]) {
+  int index;
+  for (index = 127; index < 255; ++index) {
+    char c = *((char*) index);
+    printf("%i: %i <%c>\n", index, (int) c, c);
+  }
+}
+
+void mainX(int argc, char* argv[]) {
   /*unsigned int *p = stack_top + 1048572;
   unsigned u = *p;
   printf("<%p> <%u> <%u>\n", p, (unsigned int) p, u);*/

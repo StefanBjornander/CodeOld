@@ -61,7 +61,7 @@ _start:
  $args$exit:
 	mov qword [rbp], 0
 	add rbp, 8
-	mov [rbp], 0
+	mov qword [rbp], 0
 	mov [rbp + 24], eax
 	mov [rbp + 28], rdx
 
