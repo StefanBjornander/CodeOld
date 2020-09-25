@@ -120,7 +120,7 @@
 13: empty
 14: return
 15: function end mainY
-0: index = 127
+0: index = 129
 1: empty
 2: if index < 255 goto 5
 3: goto 21

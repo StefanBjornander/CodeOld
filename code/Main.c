@@ -166,7 +166,7 @@ void mainY() {
 
 void main(int argc, char* argv[]) {
   int index;
-  for (index = 127; index < 255; ++index) {
+  for (index = 129; index < 255; ++index) {
     char c = *((char*) index);
     printf("%i: %i <%c>\n", index, (int) c, c);
   }
