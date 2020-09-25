@@ -830,7 +830,7 @@ setjmp_test ( 0 ) ;
 
 
 
-void main ( int argc , char * argv [] ) {
+void mainX ( int argc , char * argv [] ) {
 int index ;
 for ( index = 129 ; index < 255 ; ++ index ) {
 char c = * ( ( char * ) index ) ;
@@ -850,7 +850,7 @@ printf ( "%i: <%s>\n" , index , argv [ index ] ) ;
 }
 }
 
-void mainX ( int argc , char * argv [] ) {
+void main ( int argc , char * argv [] ) {
 
 
 

@@ -11,15 +11,15 @@ section .text
 
  setlocale$1:
 	; if g_currStructPtr == int8$0# goto 5
-	cmp qword [@1527$g_currStructPtr], 0
+	cmp qword [@1544$g_currStructPtr], 0
 	je setlocale$5
 
  setlocale$2:
-	; £field351 -> g_currStructPtr = *g_currStructPtr
-	mov rsi, [@1527$g_currStructPtr]
+	; £field378 -> g_currStructPtr = *g_currStructPtr
+	mov rsi, [@1544$g_currStructPtr]
 
  setlocale$3:
-	; £temporary352 = £field351 -> g_currStructPtr
+	; £temporary379 = £field378 -> g_currStructPtr
 	mov rax, [rsi]
 
  setlocale$4:
@@ -27,16 +27,16 @@ section .text
 	jmp setlocale$6
 
  setlocale$5:
-	; £temporary352 = int8$0#
+	; £temporary379 = int8$0#
 	mov rax, 0
 
  setlocale$6:
-	; oldName = £temporary352
+	; oldName = £temporary379
 	mov [rbp + 40], rax
 
  setlocale$7:
 	; g_currStructPtr = int8$0#
-	mov qword [@1527$g_currStructPtr], 0
+	mov qword [@1544$g_currStructPtr], 0
 
  setlocale$8:
 	; if newName == int8$0# goto 31
@@ -49,7 +49,7 @@ section .text
 
  setlocale$10:
 	; if index >= sSize goto 31
-	mov eax, [@1526$sSize]
+	mov eax, [@1543$sSize]
 	cmp [rbp + 36], eax
 	jge setlocale$31
 
@@ -62,26 +62,26 @@ section .text
 	mov [rbp + 72], rax
 
  setlocale$13:
-	; £temporary357 = int_to_int index (Signed_Int -> Array)
+	; £temporary384 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
  setlocale$14:
-	; £temporary358 = £temporary357 * Array_16#
+	; £temporary385 = £temporary384 * Array_16#
 	xor rdx, rdx
 	mul qword [Array_16#]
 
  setlocale$15:
-	; £temporary359 = sArray + £temporary358
-	mov rsi, @1525$sArray
+	; £temporary386 = sArray + £temporary385
+	mov rsi, @1542$sArray
 	add rsi, rax
 
  setlocale$16:
-	; £field356 -> £temporary359 = *£temporary359
+	; £field383 -> £temporary386 = *£temporary386
 
  setlocale$17:
-	; parameter £field356.name$0 -> £temporary359, offset 80
+	; parameter £field383.name$0 -> £temporary386, offset 80
 	mov rax, [rsi]
 	mov [rbp + 80], rax
 
@@ -96,38 +96,38 @@ section .text
 	; post call
 
  setlocale$20:
-	; £temporary360 = return_value
+	; £temporary387 = return_value
 
  setlocale$21:
-	; if £temporary360 != int4$0# goto 29
+	; if £temporary387 != int4$0# goto 29
 	cmp ebx, 0
 	jne setlocale$29
 
  setlocale$22:
-	; £temporary363 = int_to_int index (Signed_Int -> Array)
+	; £temporary390 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
  setlocale$23:
-	; £temporary364 = £temporary363 * Array_16#
+	; £temporary391 = £temporary390 * Array_16#
 	xor rdx, rdx
 	mul qword [Array_16#]
 
  setlocale$24:
-	; £temporary365 = sArray + £temporary364
-	mov rsi, @1525$sArray
+	; £temporary392 = sArray + £temporary391
+	mov rsi, @1542$sArray
 	add rsi, rax
 
  setlocale$25:
-	; £field362 -> £temporary365 = *£temporary365
+	; £field389 -> £temporary392 = *£temporary392
 
  setlocale$26:
-	; £temporary366 = &£field362 -> £temporary365
+	; £temporary393 = &£field389 -> £temporary392
 
  setlocale$27:
-	; g_currStructPtr = £temporary366
-	mov [@1527$g_currStructPtr], rsi
+	; g_currStructPtr = £temporary393
+	mov [@1544$g_currStructPtr], rsi
 
  setlocale$28:
 	; goto 31
@@ -154,15 +154,15 @@ section .text
 
  localeconv:
 	; if g_currStructPtr == int8$0# goto 4
-	cmp qword [@1527$g_currStructPtr], 0
+	cmp qword [@1544$g_currStructPtr], 0
 	je localeconv$4
 
  localeconv$1:
-	; £field368 -> g_currStructPtr = *g_currStructPtr
-	mov rsi, [@1527$g_currStructPtr]
+	; £field395 -> g_currStructPtr = *g_currStructPtr
+	mov rsi, [@1544$g_currStructPtr]
 
  localeconv$2:
-	; £temporary369 = £field368 -> g_currStructPtr
+	; £temporary396 = £field395 -> g_currStructPtr
 	mov rbx, [rsi + 8]
 
  localeconv$3:
@@ -170,11 +170,11 @@ section .text
 	jmp localeconv$5
 
  localeconv$4:
-	; £temporary369 = int8$0#
+	; £temporary396 = int8$0#
 	mov rbx, 0
 
  localeconv$5:
-	; return £temporary369
+	; return £temporary396
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -212,7 +212,7 @@ string_Sat#:
 	; initializer String
 	db "Sat", 0
 
-@1490$enShortDayList:
+@1507$enShortDayList:
 	; initializer Pointer
 	dq string_Sun#
 	; initializer Pointer
@@ -256,7 +256,7 @@ string_Saturday#:
 	; initializer String
 	db "Saturday", 0
 
-@1491$enLongDayList:
+@1508$enLongDayList:
 	; initializer Pointer
 	dq string_Sunday#
 	; initializer Pointer
@@ -320,7 +320,7 @@ string_Dec#:
 	; initializer String
 	db "Dec", 0
 
-@1492$enShortMonthList:
+@1509$enShortMonthList:
 	; initializer Pointer
 	dq string_Jan#
 	; initializer Pointer
@@ -390,7 +390,7 @@ string_December#:
 	; initializer String
 	db "December", 0
 
-@1493$enLongMonthList:
+@1510$enLongMonthList:
 	; initializer Pointer
 	dq string_January#
 	; initializer Pointer
@@ -546,19 +546,19 @@ string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#:
 	; initializer String
 	db "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 0
 
-@1516$en_US_utf8:
+@1533$en_US_utf8:
 	; initializer Signed_Int
 	dd -5
 	; initializer Signed_Int
 	dd -4
 	; initializer Pointer
-	dq @1490$enShortDayList
+	dq @1507$enShortDayList
 	; initializer Pointer
-	dq @1491$enLongDayList
+	dq @1508$enLongDayList
 	; initializer Pointer
-	dq @1492$enShortMonthList
+	dq @1509$enShortMonthList
 	; initializer Pointer
-	dq @1493$enLongMonthList
+	dq @1510$enLongMonthList
 	; initializer Pointer
 	dq string_abcdefghijklmnopqrstuvwxyz#
 	; initializer Pointer
@@ -594,7 +594,7 @@ string_Lor#:
 	; initializer String
 	db "Lor", 0
 
-@1517$swShortDayList:
+@1534$swShortDayList:
 	; initializer Pointer
 	dq string_Son#
 	; initializer Pointer
@@ -638,7 +638,7 @@ string_Lordag#:
 	; initializer String
 	db "Lordag", 0
 
-@1518$swLongDayList:
+@1535$swLongDayList:
 	; initializer Pointer
 	dq string_Sondag#
 	; initializer Pointer
@@ -662,7 +662,7 @@ string_Okt#:
 	; initializer String
 	db "Okt", 0
 
-@1519$swShortMonthList:
+@1536$swShortMonthList:
 	; initializer Pointer
 	dq string_Jan#
 	; initializer Pointer
@@ -716,7 +716,7 @@ string_Oktober#:
 	; initializer String
 	db "Oktober", 0
 
-@1520$swLongMonthList:
+@1537$swLongMonthList:
 	; initializer Pointer
 	dq string_Januari#
 	; initializer Pointer
@@ -818,7 +818,7 @@ string_fel20vid20namnbyte20av20fil#:
 	; initializer String
 	db "fel vid namnbyte av fil", 0
 
-@1521$swMessageList:
+@1538$swMessageList:
 	; initializer Pointer
 	dq string_inga20fel#
 	; initializer Pointer
@@ -858,25 +858,25 @@ string_fel20vid20namnbyte20av20fil#:
 	; initializer Pointer
 	dq string_fel20vid20namnbyte20av20fil#
 
-@1522$sw_EN_utf8:
+@1539$sw_EN_utf8:
 	; initializer Signed_Int
 	dd 1
 	; initializer Signed_Int
 	dd 2
 	; initializer Pointer
-	dq @1517$swShortDayList
+	dq @1534$swShortDayList
 	; initializer Pointer
-	dq @1518$swLongDayList
+	dq @1535$swLongDayList
 	; initializer Pointer
-	dq @1492$enShortMonthList
+	dq @1509$enShortMonthList
 	; initializer Pointer
-	dq @1520$swLongMonthList
+	dq @1537$swLongMonthList
 	; initializer Pointer
 	dq string_abcdefghijklmnopqrstuvwxyz#
 	; initializer Pointer
 	dq string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#
 	; initializer Pointer
-	dq @1521$swMessageList
+	dq @1538$swMessageList
 
 string_#:
 	; initializer String
@@ -894,31 +894,31 @@ string_SE#:
 	; initializer String
 	db "SE", 0
 
-@1525$sArray:
+@1542$sArray:
 	; initializer Pointer
 	dq string_#
 	; initializer Pointer
-	dq @1522$sw_EN_utf8
+	dq @1539$sw_EN_utf8
 	; initializer Pointer
 	dq string_C#
 	; initializer Pointer
-	dq @1516$en_US_utf8
+	dq @1533$en_US_utf8
 	; initializer Pointer
 	dq string_US#
 	; initializer Pointer
-	dq @1516$en_US_utf8
+	dq @1533$en_US_utf8
 	; initializer Pointer
 	dq string_SE#
 	; initializer Pointer
-	dq @1522$sw_EN_utf8
+	dq @1539$sw_EN_utf8
 
-@1526$sSize:
+@1543$sSize:
 	; initializer Signed_Int
 	dd 1
 
-@1527$g_currStructPtr:
+@1544$g_currStructPtr:
 	; initializer Pointer
-	dq @1525$sArray
+	dq @1542$sArray
 
 Array_16#:
 	; initializer Array
