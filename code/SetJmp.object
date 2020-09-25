@@ -1,47 +1,47 @@
 1:	
 
-setjmp:	; £temporary941 = bp
+setjmp:	; £temporary967 = bp
 3:	
 
-setjmp$1:	; bp_pointer = £temporary941
+setjmp$1:	; bp_pointer = £temporary967
 4:		mov [bp + 8], bp
 6:	
 
-setjmp$2:	; £temporary942 -> buf = *buf
+setjmp$2:	; £temporary968 -> buf = *buf
 7:		mov si, [bp + 6]
 9:	
 
-setjmp$3:	; £temporary943 -> bp_pointer = *bp_pointer
+setjmp$3:	; £temporary969 -> bp_pointer = *bp_pointer
 10:		mov di, [bp + 8]
 12:	
 
-setjmp$4:	; £temporary942 -> buf = £temporary943 -> bp_pointer
+setjmp$4:	; £temporary968 -> buf = £temporary969 -> bp_pointer
 13:		mov ax, [di]
 14:		mov [si], ax
 16:	
 
-setjmp$5:	; £temporary944 -> buf = *buf, offset 2
+setjmp$5:	; £temporary970 -> buf = *buf, offset 2
 17:		mov si, [bp + 6]
 19:	
 
-setjmp$6:	; £temporary945 -> bp_pointer = *bp_pointer, offset 2
+setjmp$6:	; £temporary971 -> bp_pointer = *bp_pointer, offset 2
 20:		mov di, [bp + 8]
 22:	
 
-setjmp$7:	; £temporary944 -> buf = £temporary945 -> bp_pointer
+setjmp$7:	; £temporary970 -> buf = £temporary971 -> bp_pointer
 23:		mov ax, [di + 2]
 24:		mov [si + 2], ax
 26:	
 
-setjmp$8:	; £temporary946 -> buf = *buf, offset 4
+setjmp$8:	; £temporary972 -> buf = *buf, offset 4
 27:		mov si, [bp + 6]
 29:	
 
-setjmp$9:	; £temporary947 -> bp_pointer = *bp_pointer, offset 4
+setjmp$9:	; £temporary973 -> bp_pointer = *bp_pointer, offset 4
 30:		mov di, [bp + 8]
 32:	
 
-setjmp$10:	; £temporary946 -> buf = £temporary947 -> bp_pointer
+setjmp$10:	; £temporary972 -> buf = £temporary973 -> bp_pointer
 33:		mov ax, [di + 4]
 34:		mov [si + 4], ax
 36:	
@@ -64,27 +64,27 @@ longjmp:	; bx = return_value
 2:		mov bx, [bp + 8]
 4:	
 
-longjmp$1:	; £temporary950 -> buf = *buf
+longjmp$1:	; £temporary976 -> buf = *buf
 5:		mov si, [bp + 6]
 7:	
 
-longjmp$2:	; cx = £temporary950 -> buf
+longjmp$2:	; cx = £temporary976 -> buf
 8:		mov cx, [si]
 10:	
 
-longjmp$3:	; £temporary952 -> buf = *buf, offset 4
+longjmp$3:	; £temporary978 -> buf = *buf, offset 4
 11:		mov si, [bp + 6]
 13:	
 
-longjmp$4:	; di = £temporary952 -> buf
+longjmp$4:	; di = £temporary978 -> buf
 14:		mov di, [si + 4]
 16:	
 
-longjmp$5:	; £temporary954 -> buf = *buf, offset 2
+longjmp$5:	; £temporary980 -> buf = *buf, offset 2
 17:		mov si, [bp + 6]
 19:	
 
-longjmp$6:	; bp = £temporary954 -> buf
+longjmp$6:	; bp = £temporary980 -> buf
 20:		mov bp, [si + 2]
 22:	
 
