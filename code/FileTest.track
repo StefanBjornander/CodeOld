@@ -4,8 +4,8 @@ file_test:	; call header integral zero 0 stack zero 0
 3:	
 
 file_test$1:	; parameter inFilePtrName, offset 6
-4:		mov a2625, [bp + 6]
-5:		mov [bp + 16], a2625
+4:		mov a2631, [bp + 6]
+5:		mov [bp + 16], a2631
 7:	
 
 file_test$2:	; parameter string_r#, offset 8
@@ -22,11 +22,11 @@ file_test$3:	; call function noellipse-noellipse fopen
 file_test$4:	; post call
 18:	
 
-file_test$5:	; £temporary4370 = return_value
+file_test$5:	; £temporary4381 = return_value
 23:	
 
-file_test$6:	; inFilePtrPtr = £temporary4370
-24:		mov [bp + 10], t2627
+file_test$6:	; inFilePtrPtr = £temporary4381
+24:		mov [bp + 10], t2633
 26:	
 
 file_test$7:	; if inFilePtrPtr != 0 goto 19
@@ -38,8 +38,8 @@ file_test$8:	; call header integral zero 0 stack zero 0
 32:	
 
 file_test$9:	; parameter stderr, offset 6
-33:		mov a2628, [stderr]
-34:		mov [bp + 18], a2628
+33:		mov a2634, [stderr]
+34:		mov [bp + 18], a2634
 36:	
 
 file_test$10:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -87,8 +87,8 @@ file_test$19:	; call header integral zero 0 stack zero 0
 70:	
 
 file_test$20:	; parameter outFilePtrName, offset 6
-71:		mov a2629, [bp + 8]
-72:		mov [bp + 18], a2629
+71:		mov a2635, [bp + 8]
+72:		mov [bp + 18], a2635
 74:	
 
 file_test$21:	; parameter string_w#, offset 8
@@ -105,11 +105,11 @@ file_test$22:	; call function noellipse-noellipse fopen
 file_test$23:	; post call
 85:	
 
-file_test$24:	; £temporary4375 = return_value
+file_test$24:	; £temporary4386 = return_value
 90:	
 
-file_test$25:	; outFilePtrPtr = £temporary4375
-91:		mov [bp + 12], t2631
+file_test$25:	; outFilePtrPtr = £temporary4386
+91:		mov [bp + 12], t2637
 93:	
 
 file_test$26:	; if outFilePtrPtr != 0 goto 38
@@ -121,8 +121,8 @@ file_test$27:	; call header integral zero 0 stack zero 0
 99:	
 
 file_test$28:	; parameter stderr, offset 6
-100:		mov a2632, [stderr]
-101:		mov [bp + 20], a2632
+100:		mov a2638, [stderr]
+101:		mov [bp + 20], a2638
 103:	
 
 file_test$29:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -174,21 +174,21 @@ file_test$39:	; call header integral zero 0 stack zero 0
 140:	
 
 file_test$40:	; parameter inFilePtrPtr, offset 6
-141:		mov a2633, [bp + 10]
-142:		mov [bp + 24], a2633
+141:		mov a2639, [bp + 10]
+142:		mov [bp + 24], a2639
 144:	
 
 file_test$41:	; parameter string_25i#, offset 8
 145:		mov word [bp + 26], string_25i#
 147:	
 
-file_test$42:	; £temporary4380 = &size
-148:		mov t2634, bp
-149:		add t2634, 14
+file_test$42:	; £temporary4391 = &size
+148:		mov t2640, bp
+149:		add t2640, 14
 151:	
 
-file_test$43:	; parameter £temporary4380, offset 10
-152:		mov [bp + 28], t2634
+file_test$43:	; parameter £temporary4391, offset 10
+152:		mov [bp + 28], t2640
 154:	
 
 file_test$44:	; call function noellipse-ellipse fscanf, extra 0
@@ -208,8 +208,8 @@ file_test$46:	; index = 0
 167:	
 
 file_test$47:	; if index >= size goto 73
-168:		mov a2635, [bp + 14]
-169:		cmp [bp + 16], a2635
+168:		mov a2641, [bp + 14]
+169:		cmp [bp + 16], a2641
 170:		jge file_test$73
 172:	
 
@@ -225,21 +225,21 @@ file_test$50:	; call header integral zero 0 stack zero 0
 180:	
 
 file_test$51:	; parameter inFilePtrPtr, offset 6
-181:		mov a2636, [bp + 10]
-182:		mov [bp + 32], a2636
+181:		mov a2642, [bp + 10]
+182:		mov [bp + 32], a2642
 184:	
 
 file_test$52:	; parameter string_25lf#, offset 8
 185:		mov word [bp + 34], string_25lf#
 187:	
 
-file_test$53:	; £temporary4384 = &inValue
-188:		mov t2637, bp
-189:		add t2637, 18
+file_test$53:	; £temporary4395 = &inValue
+188:		mov t2643, bp
+189:		add t2643, 18
 191:	
 
-file_test$54:	; parameter £temporary4384, offset 10
-192:		mov [bp + 36], t2637
+file_test$54:	; parameter £temporary4395, offset 10
+192:		mov [bp + 36], t2643
 194:	
 
 file_test$55:	; call function noellipse-ellipse fscanf, extra 0
@@ -261,7 +261,7 @@ file_test$58:	; push float inValue
 207:		fld qword [bp + 18]
 209:	
 
-file_test$59:	; parameter £temporary4386, offset 6
+file_test$59:	; parameter £temporary4397, offset 6
 210:		fstp qword [bp + 32]
 212:	
 
@@ -275,7 +275,7 @@ file_test$60:	; call function noellipse-noellipse sqrt
 file_test$61:	; post call
 220:	
 
-file_test$62:	; £temporary4387 = return_value
+file_test$62:	; £temporary4398 = return_value
 222:	
 
 file_test$63:	; pop float outValue
@@ -286,8 +286,8 @@ file_test$64:	; call header integral zero 0 stack zero 0
 227:	
 
 file_test$65:	; parameter outFilePtrPtr, offset 6
-228:		mov a2638, [bp + 12]
-229:		mov [bp + 40], a2638
+228:		mov a2644, [bp + 12]
+229:		mov [bp + 40], a2644
 231:	
 
 file_test$66:	; parameter string_25f0A#, offset 8
@@ -326,8 +326,8 @@ file_test$73:	; call header integral zero 0 stack zero 0
 258:	
 
 file_test$74:	; parameter inFilePtrPtr, offset 6
-259:		mov a2639, [bp + 10]
-260:		mov [bp + 24], a2639
+259:		mov a2645, [bp + 10]
+260:		mov [bp + 24], a2645
 262:	
 
 file_test$75:	; call function noellipse-noellipse fclose
@@ -344,8 +344,8 @@ file_test$77:	; call header integral zero 0 stack zero 0
 272:	
 
 file_test$78:	; parameter outFilePtrPtr, offset 6
-273:		mov a2640, [bp + 12]
-274:		mov [bp + 24], a2640
+273:		mov a2646, [bp + 12]
+274:		mov [bp + 24], a2646
 276:	
 
 file_test$79:	; call function noellipse-noellipse fclose
@@ -370,13 +370,13 @@ file_test$83:	; call header integral zero 0 stack zero 0
 292:	
 
 file_test$84:	; parameter sourceFilePtr, offset 6
-293:		mov a2641, [bp + 10]
-294:		mov [bp + 20], a2641
+293:		mov a2647, [bp + 10]
+294:		mov [bp + 20], a2647
 296:	
 
 file_test$85:	; parameter targetFilePtr, offset 8
-297:		mov a2642, [bp + 12]
-298:		mov [bp + 22], a2642
+297:		mov a2648, [bp + 12]
+298:		mov [bp + 22], a2648
 300:	
 
 file_test$86:	; call function noellipse-noellipse rename
@@ -389,11 +389,11 @@ file_test$86:	; call function noellipse-noellipse rename
 file_test$87:	; post call
 308:	
 
-file_test$88:	; £temporary4391 = return_value
+file_test$88:	; £temporary4402 = return_value
 313:	
 
-file_test$89:	; if £temporary4391 != 0 goto 97
-314:		cmp t2644, 0
+file_test$89:	; if £temporary4402 != 0 goto 97
+314:		cmp t2650, 0
 315:		jne file_test$97
 317:	
 
@@ -405,13 +405,13 @@ file_test$91:	; parameter string_2225s2220has20been20renamed20to202225s222E0A#, 
 322:	
 
 file_test$92:	; parameter sourceFilePtr, offset 8
-323:		mov a2645, [bp + 10]
-324:		mov [bp + 22], a2645
+323:		mov a2651, [bp + 10]
+324:		mov [bp + 22], a2651
 326:	
 
 file_test$93:	; parameter targetFilePtr, offset 10
-327:		mov a2646, [bp + 12]
-328:		mov [bp + 24], a2646
+327:		mov a2652, [bp + 12]
+328:		mov [bp + 24], a2652
 330:	
 
 file_test$94:	; call function noellipse-ellipse printf, extra 0
@@ -438,16 +438,16 @@ file_test$98:	; parameter string_Error2025i3A2025s2E0A#, offset 6
 348:	
 
 file_test$99:	; parameter errno, offset 8
-349:		mov a2647, [errno]
-350:		mov [bp + 22], a2647
+349:		mov a2653, [errno]
+350:		mov [bp + 22], a2653
 352:	
 
 file_test$100:	; call header integral zero 0 stack zero 0
 354:	
 
 file_test$101:	; parameter errno, offset 16
-355:		mov a2648, [errno]
-356:		mov [bp + 30], a2648
+355:		mov a2654, [errno]
+356:		mov [bp + 30], a2654
 358:	
 
 file_test$102:	; call function noellipse-noellipse strerror
@@ -460,11 +460,11 @@ file_test$102:	; call function noellipse-noellipse strerror
 file_test$103:	; post call
 366:	
 
-file_test$104:	; £temporary4394 = return_value
+file_test$104:	; £temporary4405 = return_value
 371:	
 
-file_test$105:	; parameter £temporary4394, offset 10
-372:		mov [bp + 24], t2650
+file_test$105:	; parameter £temporary4405, offset 10
+372:		mov [bp + 24], t2656
 374:	
 
 file_test$106:	; call function noellipse-ellipse printf, extra 0
@@ -487,8 +487,8 @@ file_test$109:	; call header integral zero 0 stack zero 0
 389:	
 
 file_test$110:	; parameter targetFilePtr, offset 6
-390:		mov a2651, [bp + 10]
-391:		mov [bp + 18], a2651
+390:		mov a2657, [bp + 10]
+391:		mov [bp + 18], a2657
 393:	
 
 file_test$111:	; call function noellipse-noellipse remove
@@ -501,11 +501,11 @@ file_test$111:	; call function noellipse-noellipse remove
 file_test$112:	; post call
 401:	
 
-file_test$113:	; £temporary4396 = return_value
+file_test$113:	; £temporary4407 = return_value
 406:	
 
-file_test$114:	; if £temporary4396 != 0 goto 121
-407:		cmp t2653, 0
+file_test$114:	; if £temporary4407 != 0 goto 121
+407:		cmp t2659, 0
 408:		jne file_test$121
 410:	
 
@@ -517,8 +517,8 @@ file_test$116:	; parameter string_2225s2220has20been20removed2E0A#, offset 6
 415:	
 
 file_test$117:	; parameter targetFilePtr, offset 8
-416:		mov a2654, [bp + 10]
-417:		mov [bp + 20], a2654
+416:		mov a2660, [bp + 10]
+417:		mov [bp + 20], a2660
 419:	
 
 file_test$118:	; call function noellipse-ellipse printf, extra 0
@@ -545,16 +545,16 @@ file_test$122:	; parameter string_Error2025i3A2025s2E0A#, offset 6
 437:	
 
 file_test$123:	; parameter errno, offset 8
-438:		mov a2655, [errno]
-439:		mov [bp + 20], a2655
+438:		mov a2661, [errno]
+439:		mov [bp + 20], a2661
 441:	
 
 file_test$124:	; call header integral zero 0 stack zero 0
 443:	
 
 file_test$125:	; parameter errno, offset 16
-444:		mov a2656, [errno]
-445:		mov [bp + 28], a2656
+444:		mov a2662, [errno]
+445:		mov [bp + 28], a2662
 447:	
 
 file_test$126:	; call function noellipse-noellipse strerror
@@ -567,11 +567,11 @@ file_test$126:	; call function noellipse-noellipse strerror
 file_test$127:	; post call
 455:	
 
-file_test$128:	; £temporary4399 = return_value
+file_test$128:	; £temporary4410 = return_value
 460:	
 
-file_test$129:	; parameter £temporary4399, offset 10
-461:		mov [bp + 22], t2658
+file_test$129:	; parameter £temporary4410, offset 10
+461:		mov [bp + 22], t2664
 463:	
 
 file_test$130:	; call function noellipse-ellipse printf, extra 0
@@ -607,11 +607,11 @@ file_test$135:	; call function noellipse-noellipse fopen
 file_test$136:	; post call
 489:	
 
-file_test$137:	; £temporary4401 = return_value
+file_test$137:	; £temporary4412 = return_value
 494:	
 
-file_test$138:	; inFilePtr = £temporary4401
-495:		mov [bp + 10], t2660
+file_test$138:	; inFilePtr = £temporary4412
+495:		mov [bp + 10], t2666
 497:	
 
 file_test$139:	; if inFilePtr != 0 goto 151
@@ -623,8 +623,8 @@ file_test$140:	; call header integral zero 0 stack zero 0
 503:	
 
 file_test$141:	; parameter stderr, offset 6
-504:		mov a2661, [stderr]
-505:		mov [bp + 18], a2661
+504:		mov a2667, [stderr]
+505:		mov [bp + 18], a2667
 507:	
 
 file_test$142:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -726,21 +726,21 @@ file_test$163:	; call header integral zero 0 stack zero 0
 583:	
 
 file_test$164:	; parameter inFilePtr, offset 6
-584:		mov a2662, [bp + 10]
-585:		mov [bp + 22], a2662
+584:		mov a2668, [bp + 10]
+585:		mov [bp + 22], a2668
 587:	
 
 file_test$165:	; parameter string_25i#, offset 8
 588:		mov word [bp + 24], string_25i#
 590:	
 
-file_test$166:	; £temporary4408 = &size
-591:		mov t2663, bp
-592:		add t2663, 14
+file_test$166:	; £temporary4419 = &size
+591:		mov t2669, bp
+592:		add t2669, 14
 594:	
 
-file_test$167:	; parameter £temporary4408, offset 10
-595:		mov [bp + 26], t2663
+file_test$167:	; parameter £temporary4419, offset 10
+595:		mov [bp + 26], t2669
 597:	
 
 file_test$168:	; call function noellipse-ellipse fscanf, extra 0
@@ -760,8 +760,8 @@ file_test$170:	; count = 0
 610:	
 
 file_test$171:	; if count >= size goto 187
-611:		mov a2664, [bp + 14]
-612:		cmp [bp + 12], a2664
+611:		mov a2670, [bp + 14]
+612:		cmp [bp + 12], a2670
 613:		jge file_test$187
 615:	
 
@@ -769,8 +769,8 @@ file_test$172:	; call header integral zero 0 stack zero 0
 617:	
 
 file_test$173:	; parameter inFilePtr, offset 6
-618:		mov a2665, [bp + 10]
-619:		mov [bp + 62], a2665
+618:		mov a2671, [bp + 10]
+619:		mov [bp + 62], a2671
 621:	
 
 file_test$174:	; parameter string_25s25s#, offset 8
@@ -858,8 +858,8 @@ file_test$191:	; call header integral zero 0 stack zero 0
 687:	
 
 file_test$192:	; parameter inFilePtr, offset 6
-688:		mov a2666, [bp + 10]
-689:		mov [bp + 22], a2666
+688:		mov a2672, [bp + 10]
+689:		mov [bp + 22], a2672
 691:	
 
 file_test$193:	; call function noellipse-noellipse fclose
@@ -884,8 +884,8 @@ file_test$197:	; call header integral zero 0 stack zero 0
 707:	
 
 file_test$198:	; parameter sourceFilePtr, offset 6
-708:		mov a2667, [bp + 10]
-709:		mov [bp + 20], a2667
+708:		mov a2673, [bp + 10]
+709:		mov [bp + 20], a2673
 711:	
 
 file_test$199:	; parameter string_r#, offset 8
@@ -902,11 +902,11 @@ file_test$200:	; call function noellipse-noellipse fopen
 file_test$201:	; post call
 722:	
 
-file_test$202:	; £temporary4416 = return_value
+file_test$202:	; £temporary4427 = return_value
 727:	
 
-file_test$203:	; inFilePtr = £temporary4416
-728:		mov [bp + 14], t2669
+file_test$203:	; inFilePtr = £temporary4427
+728:		mov [bp + 14], t2675
 730:	
 
 file_test$204:	; if inFilePtr != 0 goto 216
@@ -918,8 +918,8 @@ file_test$205:	; call header integral zero 0 stack zero 0
 736:	
 
 file_test$206:	; parameter stderr, offset 6
-737:		mov a2670, [stderr]
-738:		mov [bp + 22], a2670
+737:		mov a2676, [stderr]
+738:		mov [bp + 22], a2676
 740:	
 
 file_test$207:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -967,8 +967,8 @@ file_test$216:	; call header integral zero 0 stack zero 0
 774:	
 
 file_test$217:	; parameter targetFilePtr, offset 6
-775:		mov a2671, [bp + 12]
-776:		mov [bp + 22], a2671
+775:		mov a2677, [bp + 12]
+776:		mov [bp + 22], a2677
 778:	
 
 file_test$218:	; parameter string_w#, offset 8
@@ -985,11 +985,11 @@ file_test$219:	; call function noellipse-noellipse fopen
 file_test$220:	; post call
 789:	
 
-file_test$221:	; £temporary4421 = return_value
+file_test$221:	; £temporary4432 = return_value
 794:	
 
-file_test$222:	; outFilePtr = £temporary4421
-795:		mov [bp + 16], t2673
+file_test$222:	; outFilePtr = £temporary4432
+795:		mov [bp + 16], t2679
 797:	
 
 file_test$223:	; if outFilePtr != 0 goto 235
@@ -1001,8 +1001,8 @@ file_test$224:	; call header integral zero 0 stack zero 0
 803:	
 
 file_test$225:	; parameter stderr, offset 6
-804:		mov a2674, [stderr]
-805:		mov [bp + 24], a2674
+804:		mov a2680, [stderr]
+805:		mov [bp + 24], a2680
 807:	
 
 file_test$226:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -1050,8 +1050,8 @@ file_test$235:	; call header integral zero 0 stack zero 0
 841:	
 
 file_test$236:	; parameter inFilePtr, offset 6
-842:		mov a2675, [bp + 14]
-843:		mov [bp + 24], a2675
+842:		mov a2681, [bp + 14]
+843:		mov [bp + 24], a2681
 845:	
 
 file_test$237:	; call function noellipse-noellipse fgetc
@@ -1064,53 +1064,53 @@ file_test$237:	; call function noellipse-noellipse fgetc
 file_test$238:	; post call
 853:	
 
-file_test$239:	; £temporary4426 = return_value
+file_test$239:	; £temporary4437 = return_value
 858:	
 
-file_test$240:	; £temporary4427 = int_to_int £temporary4426 (Signed_Int -> Signed_Char)
-861:		cmp t2677, 0
+file_test$240:	; £temporary4438 = int_to_int £temporary4437 (Signed_Int -> Signed_Char)
+861:		cmp t2683, 0
 862:		jge file_test$241
-863:		neg t2677
-865:		neg t2677
+863:		neg t2683
+865:		neg t2683
 867:	
 
-file_test$241:	; c = £temporary4427
-868:		mov [bp + 18], t2677
+file_test$241:	; c = £temporary4438
+868:		mov [bp + 18], t2683
 870:	
 
-file_test$242:	; £temporary4428 = int_to_int c (Signed_Char -> Signed_Int)
-871:		mov a2678, [bp + 18]
-873:		and a2678, 255
-875:		cmp a2678, 0
+file_test$242:	; £temporary4439 = int_to_int c (Signed_Char -> Signed_Int)
+871:		mov a2684, [bp + 18]
+873:		and a2684, 255
+875:		cmp a2684, 0
 876:		jge file_test$243
-877:		neg a2678
-879:		neg a2678
+877:		neg a2684
+879:		neg a2684
 881:	
 
-file_test$243:	; if £temporary4428 == -1 goto 257
-882:		cmp a2678, -1
+file_test$243:	; if £temporary4439 == -1 goto 257
+882:		cmp a2684, -1
 883:		je file_test$257
 885:	
 
 file_test$244:	; call header integral zero 0 stack zero 0
 887:	
 
-file_test$245:	; £temporary4430 = int_to_int c (Signed_Char -> Signed_Int)
-888:		mov a2679, [bp + 18]
-890:		and a2679, 255
-892:		cmp a2679, 0
+file_test$245:	; £temporary4441 = int_to_int c (Signed_Char -> Signed_Int)
+888:		mov a2685, [bp + 18]
+890:		and a2685, 255
+892:		cmp a2685, 0
 893:		jge file_test$246
-894:		neg a2679
-896:		neg a2679
+894:		neg a2685
+896:		neg a2685
 898:	
 
-file_test$246:	; parameter £temporary4430, offset 6
-899:		mov [bp + 25], a2679
+file_test$246:	; parameter £temporary4441, offset 6
+899:		mov [bp + 25], a2685
 901:	
 
 file_test$247:	; parameter outFilePtr, offset 8
-902:		mov a2680, [bp + 16]
-903:		mov [bp + 27], a2680
+902:		mov a2686, [bp + 16]
+903:		mov [bp + 27], a2686
 905:	
 
 file_test$248:	; call function noellipse-noellipse putc
@@ -1136,8 +1136,8 @@ file_test$252:	; parameter 10, offset 6
 922:	
 
 file_test$253:	; parameter outFilePtr, offset 8
-923:		mov a2681, [bp + 16]
-924:		mov [bp + 27], a2681
+923:		mov a2687, [bp + 16]
+924:		mov [bp + 27], a2687
 926:	
 
 file_test$254:	; call function noellipse-noellipse putc
@@ -1158,8 +1158,8 @@ file_test$257:	; call header integral zero 0 stack zero 0
 939:	
 
 file_test$258:	; parameter inFilePtr, offset 6
-940:		mov a2682, [bp + 14]
-941:		mov [bp + 24], a2682
+940:		mov a2688, [bp + 14]
+941:		mov [bp + 24], a2688
 943:	
 
 file_test$259:	; call function noellipse-noellipse fclose
@@ -1176,8 +1176,8 @@ file_test$261:	; call header integral zero 0 stack zero 0
 953:	
 
 file_test$262:	; parameter outFilePtr, offset 6
-954:		mov a2683, [bp + 16]
-955:		mov [bp + 24], a2683
+954:		mov a2689, [bp + 16]
+955:		mov [bp + 24], a2689
 957:	
 
 file_test$263:	; call function noellipse-noellipse fclose
@@ -1211,11 +1211,11 @@ file_test$268:	; call function noellipse-noellipse fopen
 file_test$269:	; post call
 981:	
 
-file_test$270:	; £temporary4437 = return_value
+file_test$270:	; £temporary4448 = return_value
 986:	
 
-file_test$271:	; outFilePtr = £temporary4437
-987:		mov [bp + 10], t2685
+file_test$271:	; outFilePtr = £temporary4448
+987:		mov [bp + 10], t2691
 989:	
 
 file_test$272:	; if outFilePtr != 0 goto 284
@@ -1227,8 +1227,8 @@ file_test$273:	; call header integral zero 0 stack zero 0
 995:	
 
 file_test$274:	; parameter stderr, offset 6
-996:		mov a2686, [stderr]
-997:		mov [bp + 18], a2686
+996:		mov a2692, [stderr]
+997:		mov [bp + 18], a2692
 999:	
 
 file_test$275:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -1279,13 +1279,13 @@ file_test$284:	; size = 10
 file_test$285:	; call header integral zero 0 stack zero 0
 1036:	
 
-file_test$286:	; £temporary4442 = &size
-1037:		mov t2687, bp
-1038:		add t2687, 12
+file_test$286:	; £temporary4453 = &size
+1037:		mov t2693, bp
+1038:		add t2693, 12
 1040:	
 
-file_test$287:	; parameter £temporary4442, offset 6
-1041:		mov [bp + 20], t2687
+file_test$287:	; parameter £temporary4453, offset 6
+1041:		mov [bp + 20], t2693
 1043:	
 
 file_test$288:	; parameter 2, offset 8
@@ -1297,8 +1297,8 @@ file_test$289:	; parameter 1, offset 10
 1049:	
 
 file_test$290:	; parameter outFilePtr, offset 12
-1050:		mov a2688, [bp + 10]
-1051:		mov [bp + 26], a2688
+1050:		mov a2694, [bp + 10]
+1051:		mov [bp + 26], a2694
 1053:	
 
 file_test$291:	; call function noellipse-noellipse fwrite
@@ -1316,19 +1316,19 @@ file_test$293:	; index = 0
 1064:	
 
 file_test$294:	; if index >= size goto 308
-1065:		mov a2689, [bp + 12]
-1066:		cmp [bp + 14], a2689
+1065:		mov a2695, [bp + 12]
+1066:		cmp [bp + 14], a2695
 1067:		jge file_test$308
 1069:	
 
-file_test$295:	; £temporary4446 = index * index
-1070:		mov a2690, [bp + 14]
+file_test$295:	; £temporary4457 = index * index
+1070:		mov a2696, [bp + 14]
 1072:		xor dx, dx
 1073:		imul word [bp + 14]
 1079:	
 
-file_test$296:	; £temporary4447 = int_to_float £temporary4446 (Signed_Int -> Double)
-1080:		mov [container2bytes#], t2693
+file_test$296:	; £temporary4458 = int_to_float £temporary4457 (Signed_Int -> Double)
+1080:		mov [container2bytes#], t2699
 1081:		fild word [container2bytes#]
 1083:	
 
@@ -1339,13 +1339,13 @@ file_test$297:	; pop float value
 file_test$298:	; call header integral zero 0 stack zero 0
 1088:	
 
-file_test$299:	; £temporary4448 = &value
-1089:		mov t2694, bp
-1090:		add t2694, 16
+file_test$299:	; £temporary4459 = &value
+1089:		mov t2700, bp
+1090:		add t2700, 16
 1092:	
 
-file_test$300:	; parameter £temporary4448, offset 6
-1093:		mov [bp + 30], t2694
+file_test$300:	; parameter £temporary4459, offset 6
+1093:		mov [bp + 30], t2700
 1095:	
 
 file_test$301:	; parameter 8, offset 8
@@ -1357,8 +1357,8 @@ file_test$302:	; parameter 1, offset 10
 1101:	
 
 file_test$303:	; parameter outFilePtr, offset 12
-1102:		mov a2695, [bp + 10]
-1103:		mov [bp + 36], a2695
+1102:		mov a2701, [bp + 10]
+1103:		mov [bp + 36], a2701
 1105:	
 
 file_test$304:	; call function noellipse-noellipse fwrite
@@ -1383,8 +1383,8 @@ file_test$308:	; call header integral zero 0 stack zero 0
 1121:	
 
 file_test$309:	; parameter outFilePtr, offset 6
-1122:		mov a2696, [bp + 10]
-1123:		mov [bp + 22], a2696
+1122:		mov a2702, [bp + 10]
+1123:		mov [bp + 22], a2702
 1125:	
 
 file_test$310:	; call function noellipse-noellipse fclose
@@ -1418,11 +1418,11 @@ file_test$315:	; call function noellipse-noellipse fopen
 file_test$316:	; post call
 1149:	
 
-file_test$317:	; £temporary4451 = return_value
+file_test$317:	; £temporary4462 = return_value
 1154:	
 
-file_test$318:	; inFilePtr = £temporary4451
-1155:		mov [bp + 10], t2698
+file_test$318:	; inFilePtr = £temporary4462
+1155:		mov [bp + 10], t2704
 1157:	
 
 file_test$319:	; if inFilePtr != 0 goto 331
@@ -1434,8 +1434,8 @@ file_test$320:	; call header integral zero 0 stack zero 0
 1163:	
 
 file_test$321:	; parameter stderr, offset 6
-1164:		mov a2699, [stderr]
-1165:		mov [bp + 18], a2699
+1164:		mov a2705, [stderr]
+1165:		mov [bp + 18], a2705
 1167:	
 
 file_test$322:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -1482,13 +1482,13 @@ file_test$330:	; post call
 file_test$331:	; call header integral zero 0 stack zero 0
 1201:	
 
-file_test$332:	; £temporary4456 = &size
-1202:		mov t2700, bp
-1203:		add t2700, 12
+file_test$332:	; £temporary4467 = &size
+1202:		mov t2706, bp
+1203:		add t2706, 12
 1205:	
 
-file_test$333:	; parameter £temporary4456, offset 6
-1206:		mov [bp + 20], t2700
+file_test$333:	; parameter £temporary4467, offset 6
+1206:		mov [bp + 20], t2706
 1208:	
 
 file_test$334:	; parameter 2, offset 8
@@ -1500,8 +1500,8 @@ file_test$335:	; parameter 1, offset 10
 1214:	
 
 file_test$336:	; parameter inFilePtr, offset 12
-1215:		mov a2701, [bp + 10]
-1216:		mov [bp + 26], a2701
+1215:		mov a2707, [bp + 10]
+1216:		mov [bp + 26], a2707
 1218:	
 
 file_test$337:	; call function noellipse-noellipse fread
@@ -1522,8 +1522,8 @@ file_test$340:	; parameter string_size12025i0A#, offset 6
 1231:	
 
 file_test$341:	; parameter size, offset 8
-1232:		mov a2702, [bp + 12]
-1233:		mov [bp + 22], a2702
+1232:		mov a2708, [bp + 12]
+1233:		mov [bp + 22], a2708
 1235:	
 
 file_test$342:	; call function noellipse-ellipse printf, extra 0
@@ -1541,13 +1541,13 @@ file_test$343:	; post call
 file_test$344:	; call header integral zero 0 stack zero 0
 1247:	
 
-file_test$345:	; £temporary4459 = &arr
-1248:		mov t2703, bp
-1249:		add t2703, 14
+file_test$345:	; £temporary4470 = &arr
+1248:		mov t2709, bp
+1249:		add t2709, 14
 1251:	
 
-file_test$346:	; parameter £temporary4459, offset 6
-1252:		mov [bp + 100], t2703
+file_test$346:	; parameter £temporary4470, offset 6
+1252:		mov [bp + 100], t2709
 1254:	
 
 file_test$347:	; parameter 80, offset 8
@@ -1559,8 +1559,8 @@ file_test$348:	; parameter 1, offset 10
 1260:	
 
 file_test$349:	; parameter inFilePtr, offset 12
-1261:		mov a2704, [bp + 10]
-1262:		mov [bp + 106], a2704
+1261:		mov a2710, [bp + 10]
+1262:		mov [bp + 106], a2710
 1264:	
 
 file_test$350:	; call function noellipse-noellipse fread
@@ -1577,8 +1577,8 @@ file_test$352:	; call header integral zero 0 stack zero 0
 1274:	
 
 file_test$353:	; parameter inFilePtr, offset 6
-1275:		mov a2705, [bp + 10]
-1276:		mov [bp + 100], a2705
+1275:		mov a2711, [bp + 10]
+1276:		mov [bp + 100], a2711
 1278:	
 
 file_test$354:	; call function noellipse-noellipse fclose
@@ -1608,30 +1608,30 @@ file_test$359:	; parameter string_index12025i3A20value2025f0A#, offset 6
 1298:	
 
 file_test$360:	; parameter index, offset 8
-1299:		mov a2706, [bp + 94]
-1300:		mov [bp + 104], a2706
+1299:		mov a2712, [bp + 94]
+1300:		mov [bp + 104], a2712
 1302:	
 
-file_test$361:	; £temporary4465 = index * 8
-1303:		mov a2707, [bp + 94]
+file_test$361:	; £temporary4476 = index * 8
+1303:		mov a2713, [bp + 94]
 1305:		xor dx, dx
 1306:		mul word [int2$8#]
 1312:	
 
-file_test$362:	; £temporary4466 = arr + £temporary4465
-1313:		mov a2711, bp
-1314:		add a2711, 14
-1315:		add a2711, t2710
+file_test$362:	; £temporary4477 = arr + £temporary4476
+1313:		mov a2717, bp
+1314:		add a2717, 14
+1315:		add a2717, t2716
 1317:	
 
-file_test$363:	; £temporary4464 -> £temporary4466 = *£temporary4466
+file_test$363:	; £temporary4475 -> £temporary4477 = *£temporary4477
 1319:	
 
-file_test$364:	; push float £temporary4464 -> £temporary4466
-1320:		fld qword [a2711]
+file_test$364:	; push float £temporary4475 -> £temporary4477
+1320:		fld qword [a2717]
 1322:	
 
-file_test$365:	; parameter £temporary4464 -> £temporary4466, offset 10
+file_test$365:	; parameter £temporary4475 -> £temporary4477, offset 10
 1323:		fstp qword [bp + 106]
 1325:	
 
@@ -1694,11 +1694,11 @@ file_test$377:	; call function noellipse-noellipse fopen
 file_test$378:	; post call
 1371:	
 
-file_test$379:	; £temporary4469 = return_value
+file_test$379:	; £temporary4480 = return_value
 1376:	
 
-file_test$380:	; inFilePtr = £temporary4469
-1377:		mov [bp + 10], t2713
+file_test$380:	; inFilePtr = £temporary4480
+1377:		mov [bp + 10], t2719
 1379:	
 
 file_test$381:	; if inFilePtr != 0 goto 393
@@ -1710,8 +1710,8 @@ file_test$382:	; call header integral zero 0 stack zero 0
 1385:	
 
 file_test$383:	; parameter stderr, offset 6
-1386:		mov a2714, [stderr]
-1387:		mov [bp + 18], a2714
+1386:		mov a2720, [stderr]
+1387:		mov [bp + 18], a2720
 1389:	
 
 file_test$384:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -1758,13 +1758,13 @@ file_test$392:	; post call
 file_test$393:	; call header integral zero 0 stack zero 0
 1423:	
 
-file_test$394:	; £temporary4474 = &size
-1424:		mov t2715, bp
-1425:		add t2715, 12
+file_test$394:	; £temporary4485 = &size
+1424:		mov t2721, bp
+1425:		add t2721, 12
 1427:	
 
-file_test$395:	; parameter £temporary4474, offset 6
-1428:		mov [bp + 20], t2715
+file_test$395:	; parameter £temporary4485, offset 6
+1428:		mov [bp + 20], t2721
 1430:	
 
 file_test$396:	; parameter 2, offset 8
@@ -1776,8 +1776,8 @@ file_test$397:	; parameter 1, offset 10
 1436:	
 
 file_test$398:	; parameter inFilePtr, offset 12
-1437:		mov a2716, [bp + 10]
-1438:		mov [bp + 26], a2716
+1437:		mov a2722, [bp + 10]
+1438:		mov [bp + 26], a2722
 1440:	
 
 file_test$399:	; call function noellipse-noellipse fread
@@ -1798,8 +1798,8 @@ file_test$402:	; parameter string_size22025i0A#, offset 6
 1453:	
 
 file_test$403:	; parameter size, offset 8
-1454:		mov a2717, [bp + 12]
-1455:		mov [bp + 22], a2717
+1454:		mov a2723, [bp + 12]
+1455:		mov [bp + 22], a2723
 1457:	
 
 file_test$404:	; call function noellipse-ellipse printf, extra 0
@@ -1819,21 +1819,21 @@ file_test$406:	; index = 0
 1470:	
 
 file_test$407:	; if index >= size goto 425
-1471:		mov a2718, [bp + 12]
-1472:		cmp [bp + 14], a2718
+1471:		mov a2724, [bp + 12]
+1472:		cmp [bp + 14], a2724
 1473:		jge file_test$425
 1475:	
 
 file_test$408:	; call header integral zero 0 stack zero 0
 1477:	
 
-file_test$409:	; £temporary4479 = &value
-1478:		mov t2719, bp
-1479:		add t2719, 16
+file_test$409:	; £temporary4490 = &value
+1478:		mov t2725, bp
+1479:		add t2725, 16
 1481:	
 
-file_test$410:	; parameter £temporary4479, offset 6
-1482:		mov [bp + 30], t2719
+file_test$410:	; parameter £temporary4490, offset 6
+1482:		mov [bp + 30], t2725
 1484:	
 
 file_test$411:	; parameter 8, offset 8
@@ -1845,8 +1845,8 @@ file_test$412:	; parameter 1, offset 10
 1490:	
 
 file_test$413:	; parameter inFilePtr, offset 12
-1491:		mov a2720, [bp + 10]
-1492:		mov [bp + 36], a2720
+1491:		mov a2726, [bp + 10]
+1492:		mov [bp + 36], a2726
 1494:	
 
 file_test$414:	; call function noellipse-noellipse fread
@@ -1867,8 +1867,8 @@ file_test$417:	; parameter string_index22025i3A20value2025f0A#, offset 6
 1507:	
 
 file_test$418:	; parameter index, offset 8
-1508:		mov a2721, [bp + 14]
-1509:		mov [bp + 32], a2721
+1508:		mov a2727, [bp + 14]
+1509:		mov [bp + 32], a2727
 1511:	
 
 file_test$419:	; push float value
@@ -1921,8 +1921,8 @@ file_test$429:	; call header integral zero 0 stack zero 0
 1549:	
 
 file_test$430:	; parameter inFilePtr, offset 6
-1550:		mov a2722, [bp + 10]
-1551:		mov [bp + 22], a2722
+1550:		mov a2728, [bp + 10]
+1551:		mov [bp + 22], a2728
 1553:	
 
 file_test$431:	; call function noellipse-noellipse fclose
@@ -1956,11 +1956,11 @@ file_test$436:	; call function noellipse-noellipse fopen
 file_test$437:	; post call
 1577:	
 
-file_test$438:	; £temporary4484 = return_value
+file_test$438:	; £temporary4495 = return_value
 1582:	
 
-file_test$439:	; inFilePtr = £temporary4484
-1583:		mov [bp + 10], t2724
+file_test$439:	; inFilePtr = £temporary4495
+1583:		mov [bp + 10], t2730
 1585:	
 
 file_test$440:	; if inFilePtr != 0 goto 452
@@ -1972,8 +1972,8 @@ file_test$441:	; call header integral zero 0 stack zero 0
 1591:	
 
 file_test$442:	; parameter stderr, offset 6
-1592:		mov a2725, [stderr]
-1593:		mov [bp + 18], a2725
+1592:		mov a2731, [stderr]
+1593:		mov [bp + 18], a2731
 1595:	
 
 file_test$443:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -2020,13 +2020,13 @@ file_test$451:	; post call
 file_test$452:	; call header integral zero 0 stack zero 0
 1629:	
 
-file_test$453:	; £temporary4489 = &size
-1630:		mov t2726, bp
-1631:		add t2726, 12
+file_test$453:	; £temporary4500 = &size
+1630:		mov t2732, bp
+1631:		add t2732, 12
 1633:	
 
-file_test$454:	; parameter £temporary4489, offset 6
-1634:		mov [bp + 20], t2726
+file_test$454:	; parameter £temporary4500, offset 6
+1634:		mov [bp + 20], t2732
 1636:	
 
 file_test$455:	; parameter 2, offset 8
@@ -2038,8 +2038,8 @@ file_test$456:	; parameter 1, offset 10
 1642:	
 
 file_test$457:	; parameter inFilePtr, offset 12
-1643:		mov a2727, [bp + 10]
-1644:		mov [bp + 26], a2727
+1643:		mov a2733, [bp + 10]
+1644:		mov [bp + 26], a2733
 1646:	
 
 file_test$458:	; call function noellipse-noellipse fread
@@ -2060,18 +2060,18 @@ file_test$461:	; parameter string_size32025i20total2025i0A#, offset 6
 1659:	
 
 file_test$462:	; parameter size, offset 8
-1660:		mov a2728, [bp + 12]
-1661:		mov [bp + 22], a2728
+1660:		mov a2734, [bp + 12]
+1661:		mov [bp + 22], a2734
 1663:	
 
-file_test$463:	; £temporary4491 = size * 8
-1664:		mov a2729, [bp + 12]
+file_test$463:	; £temporary4502 = size * 8
+1664:		mov a2735, [bp + 12]
 1666:		xor dx, dx
 1667:		imul word [int2$8#]
 1673:	
 
-file_test$464:	; parameter £temporary4491, offset 10
-1674:		mov [bp + 24], t2732
+file_test$464:	; parameter £temporary4502, offset 10
+1674:		mov [bp + 24], t2738
 1676:	
 
 file_test$465:	; call function noellipse-ellipse printf, extra 0
@@ -2087,7 +2087,7 @@ file_test$466:	; post call
 1686:	
 
 file_test$467:	; total = size * 8
-1687:		mov a2733, [bp + 12]
+1687:		mov a2739, [bp + 12]
 1689:		xor dx, dx
 1690:		imul word [int2$8#]
 1691:		mov [bp + 14], ax
@@ -2097,8 +2097,8 @@ file_test$468:	; call header integral zero 0 stack zero 0
 1695:	
 
 file_test$469:	; parameter total, offset 6
-1696:		mov a2736, [bp + 14]
-1697:		mov [bp + 22], a2736
+1696:		mov a2742, [bp + 14]
+1697:		mov [bp + 22], a2742
 1699:	
 
 file_test$470:	; call function noellipse-noellipse malloc
@@ -2111,11 +2111,11 @@ file_test$470:	; call function noellipse-noellipse malloc
 file_test$471:	; post call
 1707:	
 
-file_test$472:	; £temporary4494 = return_value
+file_test$472:	; £temporary4505 = return_value
 1712:	
 
-file_test$473:	; p = £temporary4494
-1713:		mov [bp + 16], t2738
+file_test$473:	; p = £temporary4505
+1713:		mov [bp + 16], t2744
 1715:	
 
 file_test$474:	; if p != 0 goto 486
@@ -2127,8 +2127,8 @@ file_test$475:	; call header integral zero 0 stack zero 0
 1721:	
 
 file_test$476:	; parameter stderr, offset 6
-1722:		mov a2739, [stderr]
-1723:		mov [bp + 24], a2739
+1722:		mov a2745, [stderr]
+1723:		mov [bp + 24], a2745
 1725:	
 
 file_test$477:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -2172,16 +2172,16 @@ file_test$484:	; call function noellipse-noellipse abort
 file_test$485:	; post call
 1757:	
 
-file_test$486:	; £temporary4499 = size * 8
-1758:		mov a2740, [bp + 12]
+file_test$486:	; £temporary4510 = size * 8
+1758:		mov a2746, [bp + 12]
 1760:		xor dx, dx
 1761:		mul word [int2$8#]
 1767:	
 
-file_test$487:	; endPtr = p + £temporary4499
-1768:		mov a2744, [bp + 16]
-1769:		add a2744, t2743
-1770:		mov [bp + 18], a2744
+file_test$487:	; endPtr = p + £temporary4510
+1768:		mov a2750, [bp + 16]
+1769:		add a2750, t2749
+1770:		mov [bp + 18], a2750
 1772:	
 
 file_test$488:	; call header integral zero 0 stack zero 0
@@ -2192,18 +2192,18 @@ file_test$489:	; parameter string_malloc2025u2025u2025u0A#, offset 6
 1777:	
 
 file_test$490:	; parameter p, offset 8
-1778:		mov a2745, [bp + 16]
-1779:		mov [bp + 28], a2745
+1778:		mov a2751, [bp + 16]
+1779:		mov [bp + 28], a2751
 1781:	
 
 file_test$491:	; parameter total, offset 10
-1782:		mov a2746, [bp + 14]
-1783:		mov [bp + 30], a2746
+1782:		mov a2752, [bp + 14]
+1783:		mov [bp + 30], a2752
 1785:	
 
 file_test$492:	; parameter endPtr, offset 12
-1786:		mov a2747, [bp + 18]
-1787:		mov [bp + 32], a2747
+1786:		mov a2753, [bp + 18]
+1787:		mov [bp + 32], a2753
 1789:	
 
 file_test$493:	; call function noellipse-ellipse printf, extra 0
@@ -2222,13 +2222,13 @@ file_test$495:	; call header integral zero 0 stack zero 0
 1801:	
 
 file_test$496:	; parameter p, offset 6
-1802:		mov a2748, [bp + 16]
-1803:		mov [bp + 26], a2748
+1802:		mov a2754, [bp + 16]
+1803:		mov [bp + 26], a2754
 1805:	
 
 file_test$497:	; parameter total, offset 8
-1806:		mov a2749, [bp + 14]
-1807:		mov [bp + 28], a2749
+1806:		mov a2755, [bp + 14]
+1807:		mov [bp + 28], a2755
 1809:	
 
 file_test$498:	; parameter 1, offset 10
@@ -2236,8 +2236,8 @@ file_test$498:	; parameter 1, offset 10
 1812:	
 
 file_test$499:	; parameter inFilePtr, offset 12
-1813:		mov a2750, [bp + 10]
-1814:		mov [bp + 32], a2750
+1813:		mov a2756, [bp + 10]
+1814:		mov [bp + 32], a2756
 1816:	
 
 file_test$500:	; call function noellipse-noellipse fread
@@ -2255,8 +2255,8 @@ file_test$502:	; index = 0
 1827:	
 
 file_test$503:	; if index >= size goto 516
-1828:		mov a2751, [bp + 12]
-1829:		cmp [bp + 20], a2751
+1828:		mov a2757, [bp + 12]
+1829:		cmp [bp + 20], a2757
 1830:		jge file_test$516
 1832:	
 
@@ -2268,29 +2268,29 @@ file_test$505:	; parameter string_index32025i3A20value2025f0A#, offset 6
 1837:	
 
 file_test$506:	; parameter index, offset 8
-1838:		mov a2752, [bp + 20]
-1839:		mov [bp + 30], a2752
+1838:		mov a2758, [bp + 20]
+1839:		mov [bp + 30], a2758
 1841:	
 
-file_test$507:	; £temporary4506 = index * 8
-1842:		mov a2753, [bp + 20]
+file_test$507:	; £temporary4517 = index * 8
+1842:		mov a2759, [bp + 20]
 1844:		xor dx, dx
 1845:		mul word [int2$8#]
 1851:	
 
-file_test$508:	; £temporary4507 = p + £temporary4506
-1852:		mov a2757, [bp + 16]
-1853:		add a2757, t2756
+file_test$508:	; £temporary4518 = p + £temporary4517
+1852:		mov a2763, [bp + 16]
+1853:		add a2763, t2762
 1855:	
 
-file_test$509:	; £temporary4505 -> £temporary4507 = *£temporary4507
+file_test$509:	; £temporary4516 -> £temporary4518 = *£temporary4518
 1857:	
 
-file_test$510:	; push float £temporary4505 -> £temporary4507
-1858:		fld qword [a2757]
+file_test$510:	; push float £temporary4516 -> £temporary4518
+1858:		fld qword [a2763]
 1860:	
 
-file_test$511:	; parameter £temporary4505 -> £temporary4507, offset 10
+file_test$511:	; parameter £temporary4516 -> £temporary4518, offset 10
 1861:		fstp qword [bp + 32]
 1863:	
 
@@ -2336,8 +2336,8 @@ file_test$520:	; call header integral zero 0 stack zero 0
 1895:	
 
 file_test$521:	; parameter p, offset 6
-1896:		mov a2758, [bp + 16]
-1897:		mov [bp + 28], a2758
+1896:		mov a2764, [bp + 16]
+1897:		mov [bp + 28], a2764
 1899:	
 
 file_test$522:	; call function noellipse-noellipse free
@@ -2354,8 +2354,8 @@ file_test$524:	; call header integral zero 0 stack zero 0
 1909:	
 
 file_test$525:	; parameter inFilePtr, offset 6
-1910:		mov a2759, [bp + 10]
-1911:		mov [bp + 28], a2759
+1910:		mov a2765, [bp + 10]
+1911:		mov [bp + 28], a2765
 1913:	
 
 file_test$526:	; call function noellipse-noellipse fclose
@@ -2605,11 +2605,11 @@ file_test$585:	; call function noellipse-noellipse fopen
 file_test$586:	; post call
 2099:	
 
-file_test$587:	; £temporary4572 = return_value
+file_test$587:	; £temporary4583 = return_value
 2104:	
 
-file_test$588:	; outFilePtr = £temporary4572
-2105:		mov [bp + 210], t2761
+file_test$588:	; outFilePtr = £temporary4583
+2105:		mov [bp + 210], t2767
 2107:	
 
 file_test$589:	; if outFilePtr != 0 goto 601
@@ -2621,8 +2621,8 @@ file_test$590:	; call header integral zero 0 stack zero 0
 2113:	
 
 file_test$591:	; parameter stderr, offset 6
-2114:		mov a2762, [stderr]
-2115:		mov [bp + 218], a2762
+2114:		mov a2768, [stderr]
+2115:		mov [bp + 218], a2768
 2117:	
 
 file_test$592:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -2683,8 +2683,8 @@ file_test$604:	; parameter 1, offset 10
 2161:	
 
 file_test$605:	; parameter outFilePtr, offset 12
-2162:		mov a2763, [bp + 210]
-2163:		mov [bp + 224], a2763
+2162:		mov a2769, [bp + 210]
+2163:		mov [bp + 224], a2769
 2165:	
 
 file_test$606:	; call function noellipse-noellipse fwrite
@@ -2701,8 +2701,8 @@ file_test$608:	; call header integral zero 0 stack zero 0
 2175:	
 
 file_test$609:	; parameter outFilePtr, offset 6
-2176:		mov a2764, [bp + 210]
-2177:		mov [bp + 218], a2764
+2176:		mov a2770, [bp + 210]
+2177:		mov [bp + 218], a2770
 2179:	
 
 file_test$610:	; call function noellipse-noellipse fclose
@@ -2736,11 +2736,11 @@ file_test$615:	; call function noellipse-noellipse fopen
 file_test$616:	; post call
 2203:	
 
-file_test$617:	; £temporary4579 = return_value
+file_test$617:	; £temporary4590 = return_value
 2208:	
 
-file_test$618:	; inFilePtr = £temporary4579
-2209:		mov [bp + 212], t2766
+file_test$618:	; inFilePtr = £temporary4590
+2209:		mov [bp + 212], t2772
 2211:	
 
 file_test$619:	; if inFilePtr != 0 goto 631
@@ -2752,8 +2752,8 @@ file_test$620:	; call header integral zero 0 stack zero 0
 2217:	
 
 file_test$621:	; parameter stderr, offset 6
-2218:		mov a2767, [stderr]
-2219:		mov [bp + 220], a2767
+2218:		mov a2773, [stderr]
+2219:		mov [bp + 220], a2773
 2221:	
 
 file_test$622:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -2801,8 +2801,8 @@ file_test$631:	; call header integral zero 0 stack zero 0
 2255:	
 
 file_test$632:	; parameter inFilePtr, offset 6
-2256:		mov a2768, [bp + 212]
-2257:		mov [bp + 220], a2768
+2256:		mov a2774, [bp + 212]
+2257:		mov [bp + 220], a2774
 2259:	
 
 file_test$633:	; call function noellipse-noellipse feof
@@ -2815,24 +2815,24 @@ file_test$633:	; call function noellipse-noellipse feof
 file_test$634:	; post call
 2267:	
 
-file_test$635:	; £temporary4584 = return_value
+file_test$635:	; £temporary4595 = return_value
 2272:	
 
-file_test$636:	; if £temporary4584 != 0 goto 656
-2273:		cmp t2770, 0
+file_test$636:	; if £temporary4595 != 0 goto 656
+2273:		cmp t2776, 0
 2274:		jne file_test$656
 2276:	
 
 file_test$637:	; call header integral zero 0 stack zero 0
 2278:	
 
-file_test$638:	; £temporary4587 = &person
-2279:		mov t2771, bp
-2280:		add t2771, 160
+file_test$638:	; £temporary4598 = &person
+2279:		mov t2777, bp
+2280:		add t2777, 160
 2282:	
 
-file_test$639:	; parameter £temporary4587, offset 6
-2283:		mov [bp + 220], t2771
+file_test$639:	; parameter £temporary4598, offset 6
+2283:		mov [bp + 220], t2777
 2285:	
 
 file_test$640:	; parameter 50, offset 8
@@ -2844,8 +2844,8 @@ file_test$641:	; parameter 1, offset 10
 2291:	
 
 file_test$642:	; parameter inFilePtr, offset 12
-2292:		mov a2772, [bp + 212]
-2293:		mov [bp + 226], a2772
+2292:		mov a2778, [bp + 212]
+2293:		mov [bp + 226], a2778
 2295:	
 
 file_test$643:	; call function noellipse-noellipse fread
@@ -2890,8 +2890,8 @@ file_test$651:	; parameter string_Phone203A2025d0A#, offset 6
 2327:	
 
 file_test$652:	; parameter person$phone, offset 8
-2328:		mov a2773, [bp + 208]
-2329:		mov [bp + 222], a2773
+2328:		mov a2779, [bp + 208]
+2329:		mov [bp + 222], a2779
 2331:	
 
 file_test$653:	; call function noellipse-ellipse printf, extra 0
@@ -2914,8 +2914,8 @@ file_test$656:	; call header integral zero 0 stack zero 0
 2346:	
 
 file_test$657:	; parameter inFilePtr, offset 6
-2347:		mov a2774, [bp + 212]
-2348:		mov [bp + 220], a2774
+2347:		mov a2780, [bp + 212]
+2348:		mov [bp + 220], a2780
 2350:	
 
 file_test$658:	; call function noellipse-noellipse fclose
@@ -2949,11 +2949,11 @@ file_test$663:	; call function noellipse-noellipse fopen
 file_test$664:	; post call
 2374:	
 
-file_test$665:	; £temporary4594 = return_value
+file_test$665:	; £temporary4605 = return_value
 2379:	
 
-file_test$666:	; inFilePtr = £temporary4594
-2380:		mov [bp + 10], t2776
+file_test$666:	; inFilePtr = £temporary4605
+2380:		mov [bp + 10], t2782
 2382:	
 
 file_test$667:	; if inFilePtr != 0 goto 679
@@ -2965,8 +2965,8 @@ file_test$668:	; call header integral zero 0 stack zero 0
 2388:	
 
 file_test$669:	; parameter stderr, offset 6
-2389:		mov a2777, [stderr]
-2390:		mov [bp + 18], a2777
+2389:		mov a2783, [stderr]
+2390:		mov [bp + 18], a2783
 2392:	
 
 file_test$670:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -3014,8 +3014,8 @@ file_test$679:	; call header integral zero 0 stack zero 0
 2426:	
 
 file_test$680:	; parameter inFilePtr, offset 6
-2427:		mov a2778, [bp + 10]
-2428:		mov [bp + 18], a2778
+2427:		mov a2784, [bp + 10]
+2428:		mov [bp + 18], a2784
 2430:	
 
 file_test$681:	; parameter -1, offset 8
@@ -3040,8 +3040,8 @@ file_test$685:	; call header integral zero 0 stack zero 0
 2446:	
 
 file_test$686:	; parameter inFilePtr, offset 6
-2447:		mov a2779, [bp + 10]
-2448:		mov [bp + 20], a2779
+2447:		mov a2785, [bp + 10]
+2448:		mov [bp + 20], a2785
 2450:	
 
 file_test$687:	; call function noellipse-noellipse ftell
@@ -3054,14 +3054,14 @@ file_test$687:	; call function noellipse-noellipse ftell
 file_test$688:	; post call
 2458:	
 
-file_test$689:	; £temporary4600 = return_value
+file_test$689:	; £temporary4611 = return_value
 2463:	
 
-file_test$690:	; £temporary4601 = int_to_int £temporary4600 (Signed_Int -> Unsigned_Int)
+file_test$690:	; £temporary4612 = int_to_int £temporary4611 (Signed_Int -> Unsigned_Int)
 2466:	
 
-file_test$691:	; u = £temporary4601
-2467:		mov [bp + 12], t2781
+file_test$691:	; u = £temporary4612
+2467:		mov [bp + 12], t2787
 2469:	
 
 file_test$692:	; if u < 0 goto 713
@@ -3073,8 +3073,8 @@ file_test$693:	; call header integral zero 0 stack zero 0
 2475:	
 
 file_test$694:	; parameter inFilePtr, offset 6
-2476:		mov a2782, [bp + 10]
-2477:		mov [bp + 20], a2782
+2476:		mov a2788, [bp + 10]
+2477:		mov [bp + 20], a2788
 2479:	
 
 file_test$695:	; call function noellipse-noellipse fgetc
@@ -3087,34 +3087,34 @@ file_test$695:	; call function noellipse-noellipse fgetc
 file_test$696:	; post call
 2487:	
 
-file_test$697:	; £temporary4603 = return_value
+file_test$697:	; £temporary4614 = return_value
 2492:	
 
-file_test$698:	; £temporary4604 = int_to_int £temporary4603 (Signed_Int -> Signed_Char)
-2495:		cmp t2784, 0
+file_test$698:	; £temporary4615 = int_to_int £temporary4614 (Signed_Int -> Signed_Char)
+2495:		cmp t2790, 0
 2496:		jge file_test$699
-2497:		neg t2784
-2499:		neg t2784
+2497:		neg t2790
+2499:		neg t2790
 2501:	
 
-file_test$699:	; c = £temporary4604
-2502:		mov [bp + 14], t2784
+file_test$699:	; c = £temporary4615
+2502:		mov [bp + 14], t2790
 2504:	
 
 file_test$700:	; call header integral zero 0 stack zero 0
 2506:	
 
-file_test$701:	; £temporary4605 = int_to_int c (Signed_Char -> Signed_Int)
-2507:		mov a2785, [bp + 14]
-2509:		and a2785, 255
-2511:		cmp a2785, 0
+file_test$701:	; £temporary4616 = int_to_int c (Signed_Char -> Signed_Int)
+2507:		mov a2791, [bp + 14]
+2509:		and a2791, 255
+2511:		cmp a2791, 0
 2512:		jge file_test$702
-2513:		neg a2785
-2515:		neg a2785
+2513:		neg a2791
+2515:		neg a2791
 2517:	
 
-file_test$702:	; parameter £temporary4605, offset 6
-2518:		mov [bp + 21], a2785
+file_test$702:	; parameter £temporary4616, offset 6
+2518:		mov [bp + 21], a2791
 2520:	
 
 file_test$703:	; call function noellipse-noellipse putchar
@@ -3136,8 +3136,8 @@ file_test$706:	; call header integral zero 0 stack zero 0
 2534:	
 
 file_test$707:	; parameter inFilePtr, offset 6
-2535:		mov a2786, [bp + 10]
-2536:		mov [bp + 21], a2786
+2535:		mov a2792, [bp + 10]
+2536:		mov [bp + 21], a2792
 2538:	
 
 file_test$708:	; parameter -2, offset 8
@@ -3184,8 +3184,8 @@ file_test$717:	; call header integral zero 0 stack zero 0
 2571:	
 
 file_test$718:	; parameter inFilePtr, offset 6
-2572:		mov a2787, [bp + 10]
-2573:		mov [bp + 20], a2787
+2572:		mov a2793, [bp + 10]
+2573:		mov [bp + 20], a2793
 2575:	
 
 file_test$719:	; call function noellipse-noellipse fclose
@@ -3222,28 +3222,28 @@ file_test$725:	; call function noellipse-noellipse fileexists
 file_test$726:	; post call
 2601:	
 
-file_test$727:	; £temporary4611 = return_value
+file_test$727:	; £temporary4622 = return_value
 2606:	
 
-file_test$728:	; if £temporary4611 == 0 goto 731
-2607:		cmp t2789, 0
+file_test$728:	; if £temporary4622 == 0 goto 731
+2607:		cmp t2795, 0
 2608:		je file_test$731
 2610:	
 
-file_test$729:	; £temporary4616 = string_Yes#
-2611:		mov t2790, string_Yes#
+file_test$729:	; £temporary4627 = string_Yes#
+2611:		mov t2796, string_Yes#
 2613:	
 
 file_test$730:	; goto 732
 2614:		jmp file_test$732
 2616:	
 
-file_test$731:	; £temporary4616 = string_No#
-2617:		mov t2791, string_No#
+file_test$731:	; £temporary4627 = string_No#
+2617:		mov t2797, string_No#
 2619:	
 
-file_test$732:	; parameter £temporary4616, offset 8
-2620:		mov [bp + 18], t2791
+file_test$732:	; parameter £temporary4627, offset 8
+2620:		mov [bp + 18], t2797
 2622:	
 
 file_test$733:	; call function noellipse-ellipse printf, extra 0
@@ -3282,28 +3282,28 @@ file_test$739:	; call function noellipse-noellipse fileexists
 file_test$740:	; post call
 2650:	
 
-file_test$741:	; £temporary4618 = return_value
+file_test$741:	; £temporary4629 = return_value
 2655:	
 
-file_test$742:	; if £temporary4618 == 0 goto 745
-2656:		cmp t2793, 0
+file_test$742:	; if £temporary4629 == 0 goto 745
+2656:		cmp t2799, 0
 2657:		je file_test$745
 2659:	
 
-file_test$743:	; £temporary4623 = string_Yes#
-2660:		mov t2794, string_Yes#
+file_test$743:	; £temporary4634 = string_Yes#
+2660:		mov t2800, string_Yes#
 2662:	
 
 file_test$744:	; goto 746
 2663:		jmp file_test$746
 2665:	
 
-file_test$745:	; £temporary4623 = string_No#
-2666:		mov t2795, string_No#
+file_test$745:	; £temporary4634 = string_No#
+2666:		mov t2801, string_No#
 2668:	
 
-file_test$746:	; parameter £temporary4623, offset 8
-2669:		mov [bp + 18], t2795
+file_test$746:	; parameter £temporary4634, offset 8
+2669:		mov [bp + 18], t2801
 2671:	
 
 file_test$747:	; call function noellipse-ellipse printf, extra 0
@@ -3339,11 +3339,11 @@ file_test$752:	; call function noellipse-noellipse fopen
 file_test$753:	; post call
 2697:	
 
-file_test$754:	; £temporary4625 = return_value
+file_test$754:	; £temporary4636 = return_value
 2702:	
 
-file_test$755:	; inOutFilePtr = £temporary4625
-2703:		mov [bp + 12], t2797
+file_test$755:	; inOutFilePtr = £temporary4636
+2703:		mov [bp + 12], t2803
 2705:	
 
 file_test$756:	; if inOutFilePtr != 0 goto 768
@@ -3355,8 +3355,8 @@ file_test$757:	; call header integral zero 0 stack zero 0
 2711:	
 
 file_test$758:	; parameter stderr, offset 6
-2712:		mov a2798, [stderr]
-2713:		mov [bp + 20], a2798
+2712:		mov a2804, [stderr]
+2713:		mov [bp + 20], a2804
 2715:	
 
 file_test$759:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -3413,11 +3413,11 @@ file_test$769:	; call function noellipse-noellipse tmpfile
 file_test$770:	; post call
 2757:	
 
-file_test$771:	; £temporary4630 = return_value
+file_test$771:	; £temporary4641 = return_value
 2762:	
 
-file_test$772:	; tempFilePtr = £temporary4630
-2763:		mov [bp + 10], t2800
+file_test$772:	; tempFilePtr = £temporary4641
+2763:		mov [bp + 10], t2806
 2765:	
 
 file_test$773:	; if tempFilePtr != 0 goto 785
@@ -3429,8 +3429,8 @@ file_test$774:	; call header integral zero 0 stack zero 0
 2771:	
 
 file_test$775:	; parameter stderr, offset 6
-2772:		mov a2801, [stderr]
-2773:		mov [bp + 20], a2801
+2772:		mov a2807, [stderr]
+2773:		mov [bp + 20], a2807
 2775:	
 
 file_test$776:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -3478,8 +3478,8 @@ file_test$785:	; call header integral zero 0 stack zero 0
 2809:	
 
 file_test$786:	; parameter inOutFilePtr, offset 6
-2810:		mov a2802, [bp + 12]
-2811:		mov [bp + 20], a2802
+2810:		mov a2808, [bp + 12]
+2811:		mov [bp + 20], a2808
 2813:	
 
 file_test$787:	; call function noellipse-noellipse fgetc
@@ -3492,31 +3492,31 @@ file_test$787:	; call function noellipse-noellipse fgetc
 file_test$788:	; post call
 2821:	
 
-file_test$789:	; £temporary4635 = return_value
+file_test$789:	; £temporary4646 = return_value
 2826:	
 
-file_test$790:	; £temporary4636 = int_to_int £temporary4635 (Signed_Int -> Signed_Char)
-2829:		cmp t2804, 0
+file_test$790:	; £temporary4647 = int_to_int £temporary4646 (Signed_Int -> Signed_Char)
+2829:		cmp t2810, 0
 2830:		jge file_test$791
-2831:		neg t2804
-2833:		neg t2804
+2831:		neg t2810
+2833:		neg t2810
 2835:	
 
-file_test$791:	; c = £temporary4636
-2836:		mov [bp + 14], t2804
+file_test$791:	; c = £temporary4647
+2836:		mov [bp + 14], t2810
 2838:	
 
-file_test$792:	; £temporary4637 = int_to_int c (Signed_Char -> Signed_Int)
-2839:		mov a2805, [bp + 14]
-2841:		and a2805, 255
-2843:		cmp a2805, 0
+file_test$792:	; £temporary4648 = int_to_int c (Signed_Char -> Signed_Int)
+2839:		mov a2811, [bp + 14]
+2841:		and a2811, 255
+2843:		cmp a2811, 0
 2844:		jge file_test$793
-2845:		neg a2805
-2847:		neg a2805
+2845:		neg a2811
+2847:		neg a2811
 2849:	
 
-file_test$793:	; if £temporary4637 == -1 goto 806
-2850:		cmp a2805, -1
+file_test$793:	; if £temporary4648 == -1 goto 806
+2850:		cmp a2811, -1
 2851:		je file_test$806
 2853:	
 
@@ -3526,17 +3526,17 @@ file_test$794:	; call header integral zero 0 stack zero 0
 file_test$795:	; call header integral zero 0 stack zero 0
 2857:	
 
-file_test$796:	; £temporary4639 = int_to_int c (Signed_Char -> Signed_Int)
-2858:		mov a2806, [bp + 14]
-2860:		and a2806, 255
-2862:		cmp a2806, 0
+file_test$796:	; £temporary4650 = int_to_int c (Signed_Char -> Signed_Int)
+2858:		mov a2812, [bp + 14]
+2860:		and a2812, 255
+2862:		cmp a2812, 0
 2863:		jge file_test$797
-2864:		neg a2806
-2866:		neg a2806
+2864:		neg a2812
+2866:		neg a2812
 2868:	
 
-file_test$797:	; parameter £temporary4639, offset 6
-2869:		mov [bp + 21], a2806
+file_test$797:	; parameter £temporary4650, offset 6
+2869:		mov [bp + 21], a2812
 2871:	
 
 file_test$798:	; call function noellipse-noellipse toupper
@@ -3549,16 +3549,16 @@ file_test$798:	; call function noellipse-noellipse toupper
 file_test$799:	; post call
 2879:	
 
-file_test$800:	; £temporary4640 = return_value
+file_test$800:	; £temporary4651 = return_value
 2884:	
 
-file_test$801:	; parameter £temporary4640, offset 6
-2885:		mov [bp + 21], t2808
+file_test$801:	; parameter £temporary4651, offset 6
+2885:		mov [bp + 21], t2814
 2887:	
 
 file_test$802:	; parameter tempFilePtr, offset 8
-2888:		mov a2809, [bp + 10]
-2889:		mov [bp + 23], a2809
+2888:		mov a2815, [bp + 10]
+2889:		mov [bp + 23], a2815
 2891:	
 
 file_test$803:	; call function noellipse-noellipse putc
@@ -3579,8 +3579,8 @@ file_test$806:	; call header integral zero 0 stack zero 0
 2904:	
 
 file_test$807:	; parameter tempFilePtr, offset 6
-2905:		mov a2810, [bp + 10]
-2906:		mov [bp + 20], a2810
+2905:		mov a2816, [bp + 10]
+2906:		mov [bp + 20], a2816
 2908:	
 
 file_test$808:	; call function noellipse-noellipse rewind
@@ -3597,8 +3597,8 @@ file_test$810:	; call header integral zero 0 stack zero 0
 2918:	
 
 file_test$811:	; parameter inOutFilePtr, offset 6
-2919:		mov a2811, [bp + 12]
-2920:		mov [bp + 20], a2811
+2919:		mov a2817, [bp + 12]
+2920:		mov [bp + 20], a2817
 2922:	
 
 file_test$812:	; parameter string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A#, offset 8
@@ -3620,8 +3620,8 @@ file_test$815:	; call header integral zero 0 stack zero 0
 2936:	
 
 file_test$816:	; parameter tempFilePtr, offset 6
-2937:		mov a2812, [bp + 10]
-2938:		mov [bp + 20], a2812
+2937:		mov a2818, [bp + 10]
+2938:		mov [bp + 20], a2818
 2940:	
 
 file_test$817:	; call function noellipse-noellipse fgetc
@@ -3634,53 +3634,53 @@ file_test$817:	; call function noellipse-noellipse fgetc
 file_test$818:	; post call
 2948:	
 
-file_test$819:	; £temporary4645 = return_value
+file_test$819:	; £temporary4656 = return_value
 2953:	
 
-file_test$820:	; £temporary4646 = int_to_int £temporary4645 (Signed_Int -> Signed_Char)
-2956:		cmp t2814, 0
+file_test$820:	; £temporary4657 = int_to_int £temporary4656 (Signed_Int -> Signed_Char)
+2956:		cmp t2820, 0
 2957:		jge file_test$821
-2958:		neg t2814
-2960:		neg t2814
+2958:		neg t2820
+2960:		neg t2820
 2962:	
 
-file_test$821:	; c = £temporary4646
-2963:		mov [bp + 14], t2814
+file_test$821:	; c = £temporary4657
+2963:		mov [bp + 14], t2820
 2965:	
 
-file_test$822:	; £temporary4647 = int_to_int c (Signed_Char -> Signed_Int)
-2966:		mov a2815, [bp + 14]
-2968:		and a2815, 255
-2970:		cmp a2815, 0
+file_test$822:	; £temporary4658 = int_to_int c (Signed_Char -> Signed_Int)
+2966:		mov a2821, [bp + 14]
+2968:		and a2821, 255
+2970:		cmp a2821, 0
 2971:		jge file_test$823
-2972:		neg a2815
-2974:		neg a2815
+2972:		neg a2821
+2974:		neg a2821
 2976:	
 
-file_test$823:	; if £temporary4647 == -1 goto 831
-2977:		cmp a2815, -1
+file_test$823:	; if £temporary4658 == -1 goto 831
+2977:		cmp a2821, -1
 2978:		je file_test$831
 2980:	
 
 file_test$824:	; call header integral zero 0 stack zero 0
 2982:	
 
-file_test$825:	; £temporary4649 = int_to_int c (Signed_Char -> Signed_Int)
-2983:		mov a2816, [bp + 14]
-2985:		and a2816, 255
-2987:		cmp a2816, 0
+file_test$825:	; £temporary4660 = int_to_int c (Signed_Char -> Signed_Int)
+2983:		mov a2822, [bp + 14]
+2985:		and a2822, 255
+2987:		cmp a2822, 0
 2988:		jge file_test$826
-2989:		neg a2816
-2991:		neg a2816
+2989:		neg a2822
+2991:		neg a2822
 2993:	
 
-file_test$826:	; parameter £temporary4649, offset 6
-2994:		mov [bp + 21], a2816
+file_test$826:	; parameter £temporary4660, offset 6
+2994:		mov [bp + 21], a2822
 2996:	
 
 file_test$827:	; parameter inOutFilePtr, offset 8
-2997:		mov a2817, [bp + 12]
-2998:		mov [bp + 23], a2817
+2997:		mov a2823, [bp + 12]
+2998:		mov [bp + 23], a2823
 3000:	
 
 file_test$828:	; call function noellipse-noellipse putc
@@ -3701,8 +3701,8 @@ file_test$831:	; call header integral zero 0 stack zero 0
 3013:	
 
 file_test$832:	; parameter inOutFilePtr, offset 6
-3014:		mov a2818, [bp + 12]
-3015:		mov [bp + 20], a2818
+3014:		mov a2824, [bp + 12]
+3015:		mov [bp + 20], a2824
 3017:	
 
 file_test$833:	; call function noellipse-noellipse fclose
@@ -3719,8 +3719,8 @@ file_test$835:	; call header integral zero 0 stack zero 0
 3027:	
 
 file_test$836:	; parameter tempFilePtr, offset 6
-3028:		mov a2819, [bp + 10]
-3029:		mov [bp + 20], a2819
+3028:		mov a2825, [bp + 10]
+3029:		mov [bp + 20], a2825
 3031:	
 
 file_test$837:	; call function noellipse-noellipse fclose
@@ -3734,10 +3734,10 @@ file_test$838:	; post call
 3039:	
 
 file_test$839:	; return
-3040:		mov t2820, [bp]
+3040:		mov t2826, [bp]
 3041:		mov di, [bp + 4]
 3042:		mov bp, [bp + 2]
-3043:		jmp t2820
+3043:		jmp t2826
 3045:	
 
 file_test$840:	; function end file_test

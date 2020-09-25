@@ -19,6 +19,15 @@ maint
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 mainY
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
+mainX
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a13 a13 index 9 15,t14 t14 £temporary64 15 16)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a13 a13 index si 9 15,t14 t14 £temporary64 al 15 16)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
 main
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
@@ -27,39 +36,39 @@ main
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a20 a20 argv 89 90 95,t21 t21 £temporary64 95 96)
-  (a20 a20 argv 89 90 95,t19 t19 £temporary65 ax 86 90)>
+  (a26 a26 argv 89 90 95,t27 t27 £temporary75 95 96)
+  (a26 a26 argv 89 90 95,t25 t25 £temporary76 ax 86 90)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a20 a20 argv si 89 90 95,t21 t21 £temporary64 ax 95 96)
-  (a20 a20 argv si 89 90 95,t19 t19 £temporary65 ax 86 90)>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a26 a26 argv 142 143 148,t25 t25 £temporary70 ax 139 143)>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+  (a26 a26 argv si 89 90 95,t27 t27 £temporary75 ax 95 96)
+  (a26 a26 argv si 89 90 95,t25 t25 £temporary76 ax 86 90)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a32 a32 argv 171 172 177,t33 t33 £temporary74 177 178)
-  (a32 a32 argv 171 172 177,t31 t31 £temporary75 ax 168 172)>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a32 a32 argv si 171 172 177,t33 t33 £temporary74 ax 177 178)
-  (a32 a32 argv si 171 172 177,t31 t31 £temporary75 ax 168 172)>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+  (a32 a32 argv 142 143 148,t31 t31 £temporary81 ax 139 143)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a20 a20 argv si 89 90 95,t21 t21 £temporary64 ax 95 96)
-  (a20 a20 argv si 89 90 95,t19 t19 £temporary65 ax 86 90)>
+  (a38 a38 argv 171 172 177,t39 t39 £temporary85 177 178)
+  (a38 a38 argv 171 172 177,t37 t37 £temporary86 ax 168 172)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a26 a26 argv si 142 143 148,t25 t25 £temporary70 ax 139 143)>
+  (a38 a38 argv si 171 172 177,t39 t39 £temporary85 ax 177 178)
+  (a38 a38 argv si 171 172 177,t37 t37 £temporary86 ax 168 172)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a32 a32 argv si 171 172 177,t33 t33 £temporary74 ax 177 178)
-  (a32 a32 argv si 171 172 177,t31 t31 £temporary75 ax 168 172)>
+  (a26 a26 argv si 89 90 95,t27 t27 £temporary75 ax 95 96)
+  (a26 a26 argv si 89 90 95,t25 t25 £temporary76 ax 86 90)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a32 a32 argv si 142 143 148,t31 t31 £temporary81 ax 139 143)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a38 a38 argv si 171 172 177,t39 t39 £temporary85 ax 177 178)
+  (a38 a38 argv si 171 172 177,t37 t37 £temporary86 ax 168 172)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 main3
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>

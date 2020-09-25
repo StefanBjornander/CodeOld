@@ -5,24 +5,24 @@ setlocale:	; if g_currStructPtr == 0 goto 4
 3:		je setlocale$4
 5:	
 
-setlocale$1:	; £temporary463 -> g_currStructPtr = *g_currStructPtr
-6:		mov a306, [@22$g_currStructPtr]
+setlocale$1:	; £temporary474 -> g_currStructPtr = *g_currStructPtr
+6:		mov a312, [@22$g_currStructPtr]
 8:	
 
-setlocale$2:	; £temporary467 = £temporary463 -> g_currStructPtr
-9:		mov t307, [a306]
+setlocale$2:	; £temporary478 = £temporary474 -> g_currStructPtr
+9:		mov t313, [a312]
 11:	
 
 setlocale$3:	; goto 5
 12:		jmp setlocale$5
 14:	
 
-setlocale$4:	; £temporary467 = 0
-15:		mov t308, 0
+setlocale$4:	; £temporary478 = 0
+15:		mov t314, 0
 17:	
 
-setlocale$5:	; oldName = £temporary467
-18:		mov [bp + 12], t308
+setlocale$5:	; oldName = £temporary478
+18:		mov [bp + 12], t314
 20:	
 
 setlocale$6:	; g_currStructPtr = 0
@@ -39,8 +39,8 @@ setlocale$8:	; index = 0
 30:	
 
 setlocale$9:	; if index >= sSize goto 28
-31:		mov a309, [@21$sSize]
-32:		cmp [bp + 10], a309
+31:		mov a315, [@21$sSize]
+32:		cmp [bp + 10], a315
 33:		jge setlocale$28
 35:	
 
@@ -48,27 +48,27 @@ setlocale$10:	; call header integral zero 0 stack zero 0
 37:	
 
 setlocale$11:	; parameter newName, offset 6
-38:		mov a310, [bp + 8]
-39:		mov [bp + 20], a310
+38:		mov a316, [bp + 8]
+39:		mov [bp + 20], a316
 41:	
 
-setlocale$12:	; £temporary472 = index * 4
-42:		mov a311, [bp + 10]
+setlocale$12:	; £temporary483 = index * 4
+42:		mov a317, [bp + 10]
 44:		xor dx, dx
 45:		mul word [int2$4#]
 51:	
 
-setlocale$13:	; £temporary473 = sArray + £temporary472
-52:		mov a315, @20$sArray
-53:		add a315, t314
+setlocale$13:	; £temporary484 = sArray + £temporary483
+52:		mov a321, @20$sArray
+53:		add a321, t320
 55:	
 
-setlocale$14:	; £temporary471 -> £temporary473 = *£temporary473
+setlocale$14:	; £temporary482 -> £temporary484 = *£temporary484
 57:	
 
-setlocale$15:	; parameter £temporary471.name$0 -> £temporary473, offset 8
-58:		mov t316, [a315]
-59:		mov [bp + 22], t316
+setlocale$15:	; parameter £temporary482.name$0 -> £temporary484, offset 8
+58:		mov t322, [a321]
+59:		mov [bp + 22], t322
 61:	
 
 setlocale$16:	; call function noellipse-noellipse strcmp
@@ -81,33 +81,33 @@ setlocale$16:	; call function noellipse-noellipse strcmp
 setlocale$17:	; post call
 69:	
 
-setlocale$18:	; £temporary474 = return_value
+setlocale$18:	; £temporary485 = return_value
 74:	
 
-setlocale$19:	; if £temporary474 != 0 goto 26
-75:		cmp t318, 0
+setlocale$19:	; if £temporary485 != 0 goto 26
+75:		cmp t324, 0
 76:		jne setlocale$26
 78:	
 
-setlocale$20:	; £temporary477 = index * 4
-79:		mov a319, [bp + 10]
+setlocale$20:	; £temporary488 = index * 4
+79:		mov a325, [bp + 10]
 81:		xor dx, dx
 82:		mul word [int2$4#]
 88:	
 
-setlocale$21:	; £temporary478 = sArray + £temporary477
-89:		mov a323, @20$sArray
-90:		add a323, t322
+setlocale$21:	; £temporary489 = sArray + £temporary488
+89:		mov a329, @20$sArray
+90:		add a329, t328
 92:	
 
-setlocale$22:	; £temporary476 -> £temporary478 = *£temporary478
+setlocale$22:	; £temporary487 -> £temporary489 = *£temporary489
 94:	
 
-setlocale$23:	; £temporary479 = &£temporary476 -> £temporary478
+setlocale$23:	; £temporary490 = &£temporary487 -> £temporary489
 96:	
 
-setlocale$24:	; g_currStructPtr = £temporary479
-97:		mov [@22$g_currStructPtr], a323
+setlocale$24:	; g_currStructPtr = £temporary490
+97:		mov [@22$g_currStructPtr], a329
 99:	
 
 setlocale$25:	; goto 28
@@ -123,14 +123,14 @@ setlocale$27:	; goto 9
 108:	
 
 setlocale$28:	; return_value = oldName
-109:		mov a324, [bp + 12]
+109:		mov a330, [bp + 12]
 111:	
 
 setlocale$29:	; return
-112:		mov t325, [bp]
+112:		mov t331, [bp]
 113:		mov di, [bp + 4]
 114:		mov bp, [bp + 2]
-115:		jmp t325
+115:		jmp t331
 117:	
 
 setlocale$30:	; function end setlocale
@@ -141,30 +141,30 @@ localeconv:	; if g_currStructPtr == 0 goto 4
 3:		je localeconv$4
 5:	
 
-localeconv$1:	; £temporary483 -> g_currStructPtr = *g_currStructPtr, offset 2
-6:		mov a326, [@22$g_currStructPtr]
+localeconv$1:	; £temporary494 -> g_currStructPtr = *g_currStructPtr, offset 2
+6:		mov a332, [@22$g_currStructPtr]
 8:	
 
-localeconv$2:	; £temporary487 = £temporary483 -> g_currStructPtr
-9:		mov t327, [a326 + 2]
+localeconv$2:	; £temporary498 = £temporary494 -> g_currStructPtr
+9:		mov t333, [a332 + 2]
 11:	
 
 localeconv$3:	; goto 5
 12:		jmp localeconv$5
 14:	
 
-localeconv$4:	; £temporary487 = 0
-15:		mov t328, 0
+localeconv$4:	; £temporary498 = 0
+15:		mov t334, 0
 17:	
 
-localeconv$5:	; return_value = £temporary487
+localeconv$5:	; return_value = £temporary498
 19:	
 
 localeconv$6:	; return
-20:		mov t329, [bp]
+20:		mov t335, [bp]
 21:		mov di, [bp + 4]
 22:		mov bp, [bp + 2]
-23:		jmp t329
+23:		jmp t335
 25:	
 
 localeconv$7:	; function end localeconv

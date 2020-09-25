@@ -518,6 +518,95 @@ mainY$13:	; return
 49:	
 
 mainY$14:	; function end mainY
+1:	
+
+mainX:	; index = 127
+2:		mov word [bp + 10], 127
+4:	
+
+mainX$1:	; if index >= 255 goto 16
+5:		cmp word [bp + 10], 255
+6:		jge mainX$16
+8:	
+
+mainX$2:	; £temporary63 = int_to_int index (Signed_Int -> Pointer)
+9:		mov si, [bp + 10]
+12:	
+
+mainX$3:	; £temporary64 -> £temporary63 = *£temporary63
+14:	
+
+mainX$4:	; c = £temporary64 -> £temporary63
+15:		mov al, [si]
+16:		mov [bp + 12], al
+18:	
+
+mainX$5:	; call header integral zero 0 stack zero 0
+20:	
+
+mainX$6:	; parameter string_25i3A2025i203C25c3E0A#, offset 6
+21:		mov word [bp + 19], string_25i3A2025i203C25c3E0A#
+23:	
+
+mainX$7:	; parameter index, offset 8
+24:		mov ax, [bp + 10]
+25:		mov [bp + 21], ax
+27:	
+
+mainX$8:	; £temporary65 = int_to_int c (Signed_Char -> Signed_Int)
+28:		mov al, [bp + 12]
+30:		and ax, 255
+32:		cmp al, 0
+33:		jge mainX$9
+34:		neg al
+36:		neg ax
+38:	
+
+mainX$9:	; parameter £temporary65, offset 10
+39:		mov [bp + 23], ax
+41:	
+
+mainX$10:	; £temporary66 = int_to_int c (Signed_Char -> Signed_Int)
+42:		mov al, [bp + 12]
+44:		and ax, 255
+46:		cmp al, 0
+47:		jge mainX$11
+48:		neg al
+50:		neg ax
+52:	
+
+mainX$11:	; parameter £temporary66, offset 12
+53:		mov [bp + 25], ax
+55:	
+
+mainX$12:	; call function noellipse-ellipse printf, extra 0
+56:		mov word [bp + 13], mainX$13
+57:		mov [bp + 15], bp
+58:		add bp, 13
+59:		mov di, bp
+60:		add di, 6
+61:		jmp printf
+63:	
+
+mainX$13:	; post call
+65:	
+
+mainX$14:	; ++index
+66:		inc word [bp + 10]
+68:	
+
+mainX$15:	; goto 1
+69:		jmp mainX$1
+71:	
+
+mainX$16:	; return
+72:		mov ax, [bp]
+73:		mov di, [bp + 4]
+74:		mov bp, [bp + 2]
+75:		jmp ax
+77:	
+
+mainX$17:	; function end mainX
 0:		; Initialize Stack Pointer
 1:		mov bp, $StackTop
 2:		; Initialize Heap Pointer
@@ -538,7 +627,7 @@ mainY$14:	; function end mainY
 $Initialize$1:
 16:		cmp byte [bx], 32
 17:		je $Initialize$2
-18:		cmp byte [bx], 13
+18:		cmp byte [bx], 0
 19:		je $Initialize$5
 20:		inc bx
 21:		jmp $Initialize$1
@@ -617,21 +706,21 @@ main$9:	; parameter index, offset 8
 76:		mov [bp + 20], ax
 78:	
 
-main$10:	; £temporary65 = index * 2
+main$10:	; £temporary76 = index * 2
 79:		mov ax, [bp + 10]
 81:		xor dx, dx
 82:		mul word [int2$2#]
 88:	
 
-main$11:	; £temporary66 = argv + £temporary65
+main$11:	; £temporary77 = argv + £temporary76
 89:		mov si, [bp + 8]
 90:		add si, ax
 92:	
 
-main$12:	; £temporary64 -> £temporary66 = *£temporary66
+main$12:	; £temporary75 -> £temporary77 = *£temporary77
 94:	
 
-main$13:	; parameter £temporary64 -> £temporary66, offset 10
+main$13:	; parameter £temporary75 -> £temporary77, offset 10
 95:		mov ax, [si]
 96:		mov [bp + 22], ax
 98:	
@@ -678,21 +767,21 @@ main$22:	; index = 0
 129:		mov word [bp + 10], 0
 131:	
 
-main$23:	; £temporary70 = index * 2
+main$23:	; £temporary81 = index * 2
 132:		mov ax, [bp + 10]
 134:		xor dx, dx
 135:		mul word [int2$2#]
 141:	
 
-main$24:	; £temporary71 = argv + £temporary70
+main$24:	; £temporary82 = argv + £temporary81
 142:		mov si, [bp + 8]
 143:		add si, ax
 145:	
 
-main$25:	; £temporary69 -> £temporary71 = *£temporary71
+main$25:	; £temporary80 -> £temporary82 = *£temporary82
 147:	
 
-main$26:	; if £temporary69 -> £temporary71 == 0 goto 38
+main$26:	; if £temporary80 -> £temporary82 == 0 goto 38
 148:		cmp word [si], 0
 149:		je main$38
 151:	
@@ -709,21 +798,21 @@ main$29:	; parameter index, offset 8
 158:		mov [bp + 20], ax
 160:	
 
-main$30:	; £temporary75 = index * 2
+main$30:	; £temporary86 = index * 2
 161:		mov ax, [bp + 10]
 163:		xor dx, dx
 164:		mul word [int2$2#]
 170:	
 
-main$31:	; £temporary76 = argv + £temporary75
+main$31:	; £temporary87 = argv + £temporary86
 171:		mov si, [bp + 8]
 172:		add si, ax
 174:	
 
-main$32:	; £temporary74 -> £temporary76 = *£temporary76
+main$32:	; £temporary85 -> £temporary87 = *£temporary87
 176:	
 
-main$33:	; parameter £temporary74 -> £temporary76, offset 10
+main$33:	; parameter £temporary85 -> £temporary87, offset 10
 177:		mov ax, [si]
 178:		mov [bp + 22], ax
 180:	
@@ -826,12 +915,12 @@ main$55:	; parameter string_25c2025s2025i2025lf#, offset 6
 254:		mov word [bp + 49], string_25c2025s2025i2025lf#
 256:	
 
-main$56:	; £temporary82 = &c
+main$56:	; £temporary93 = &c
 257:		mov si, bp
 258:		add si, 22
 260:	
 
-main$57:	; parameter £temporary82, offset 8
+main$57:	; parameter £temporary93, offset 8
 261:		mov [bp + 51], si
 263:	
 
@@ -840,21 +929,21 @@ main$58:	; parameter s, offset 10
 265:		add word [bp + 53], 23
 267:	
 
-main$59:	; £temporary83 = &i
+main$59:	; £temporary94 = &i
 268:		mov si, bp
 269:		add si, 12
 271:	
 
-main$60:	; parameter £temporary83, offset 12
+main$60:	; parameter £temporary94, offset 12
 272:		mov [bp + 55], si
 274:	
 
-main$61:	; £temporary84 = &d
+main$61:	; £temporary95 = &d
 275:		mov si, bp
 276:		add si, 14
 278:	
 
-main$62:	; parameter £temporary84, offset 14
+main$62:	; parameter £temporary95, offset 14
 279:		mov [bp + 57], si
 281:	
 
@@ -877,7 +966,7 @@ main$66:	; parameter string_You20wrote20the20character202725c272C20the20string20
 294:		mov word [bp + 49], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#
 296:	
 
-main$67:	; £temporary86 = int_to_int c (Signed_Char -> Signed_Int)
+main$67:	; £temporary97 = int_to_int c (Signed_Char -> Signed_Int)
 297:		mov al, [bp + 22]
 299:		and ax, 255
 301:		cmp al, 0
@@ -886,7 +975,7 @@ main$67:	; £temporary86 = int_to_int c (Signed_Char -> Signed_Int)
 305:		neg ax
 307:	
 
-main$68:	; parameter £temporary86, offset 8
+main$68:	; parameter £temporary97, offset 8
 308:		mov [bp + 51], ax
 310:	
 
@@ -963,12 +1052,12 @@ main3$5:	; parameter string_25lf#, offset 6
 18:		mov word [bp + 20], string_25lf#
 20:	
 
-main3$6:	; £temporary115 = &x
+main3$6:	; £temporary126 = &x
 21:		mov si, bp
 22:		add si, 6
 24:	
 
-main3$7:	; parameter £temporary115, offset 8
+main3$7:	; parameter £temporary126, offset 8
 25:		mov [bp + 22], si
 27:	
 
@@ -1327,12 +1416,12 @@ assert_test$6:	; parameter string_25i#, offset 6
 21:		mov word [bp + 14], string_25i#
 23:	
 
-assert_test$7:	; £temporary153 = &n
+assert_test$7:	; £temporary164 = &n
 24:		mov si, bp
 25:		add si, 6
 27:	
 
-assert_test$8:	; parameter £temporary153, offset 8
+assert_test$8:	; parameter £temporary164, offset 8
 28:		mov [bp + 16], si
 30:	
 
@@ -1373,8 +1462,8 @@ assert_test$16:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomes
 57:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 59:	
 
-assert_test$17:	; parameter 820, offset 14
-60:		mov word [bp + 22], 820
+assert_test$17:	; parameter 828, offset 14
+60:		mov word [bp + 22], 828
 62:	
 
 assert_test$18:	; call function noellipse-ellipse fprintf, extra 0
@@ -1455,8 +1544,8 @@ assert_test2$5:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomes
 18:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 20:	
 
-assert_test2$6:	; parameter 825, offset 14
-21:		mov word [bp + 22], 825
+assert_test2$6:	; parameter 833, offset 14
+21:		mov word [bp + 22], 833
 23:	
 
 assert_test2$7:	; call function noellipse-ellipse fprintf, extra 0
