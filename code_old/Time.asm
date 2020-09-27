@@ -282,7 +282,7 @@ section .text
 	neg eax
 
  gmtime$7:
-	; g_timeStruct$tm_hour = £temporary2301
+	; g_timeStruct.tm_hour = £temporary2301
 	mov [@4764$g_timeStruct + 8], eax
 
  gmtime$8:
@@ -305,7 +305,7 @@ section .text
 	neg eax
 
  gmtime$11:
-	; g_timeStruct$tm_min = £temporary2305
+	; g_timeStruct.tm_min = £temporary2305
 	mov [@4764$g_timeStruct + 4], eax
 
  gmtime$12:
@@ -328,7 +328,7 @@ section .text
 	neg edx
 
  gmtime$15:
-	; g_timeStruct$tm_sec = £temporary2309
+	; g_timeStruct.tm_sec = £temporary2309
 	mov [@4764$g_timeStruct], edx
 
  gmtime$16:
@@ -356,7 +356,7 @@ section .text
 	neg eax
 
  gmtime$20:
-	; g_timeStruct$tm_wday = £temporary2314
+	; g_timeStruct.tm_wday = £temporary2314
 	mov [@4764$g_timeStruct + 24], eax
 
  gmtime$21:
@@ -381,7 +381,7 @@ section .text
 	neg edx
 
  gmtime$25:
-	; g_timeStruct$tm_wday = £temporary2318
+	; g_timeStruct.tm_wday = £temporary2318
 	mov [@4764$g_timeStruct + 24], edx
 
  gmtime$26:
@@ -470,7 +470,7 @@ section .text
 	jge gmtime$83
 
  gmtime$43:
-	; g_timeStruct$tm_year = year - int4$1900#
+	; g_timeStruct.tm_year = year - int4$1900#
 	mov eax, [rbp + 32]
 	sub eax, 1900
 	mov [@4764$g_timeStruct + 20], eax
@@ -484,7 +484,7 @@ section .text
 	neg eax
 
  gmtime$45:
-	; g_timeStruct$tm_yday = £temporary2335
+	; g_timeStruct.tm_yday = £temporary2335
 	mov [@4764$g_timeStruct + 28], eax
 
  gmtime$46:
@@ -634,7 +634,7 @@ section .text
 	jmp gmtime$63
 
  gmtime$77:
-	; g_timeStruct$tm_mon = month
+	; g_timeStruct.tm_mon = month
 	mov eax, [rbp + 116]
 	mov [@4764$g_timeStruct + 16], eax
 
@@ -651,11 +651,11 @@ section .text
 	neg eax
 
  gmtime$80:
-	; g_timeStruct$tm_mday = £temporary2366
+	; g_timeStruct.tm_mday = £temporary2366
 	mov [@4764$g_timeStruct + 12], eax
 
  gmtime$81:
-	; g_timeStruct$tm_isdst = int4$minus1#
+	; g_timeStruct.tm_isdst = int4$minus1#
 	mov dword [@4764$g_timeStruct + 32], -1
 
  gmtime$82:

@@ -2910,7 +2910,7 @@ section .text
 	mov qword [rbp + 288], string_Name20203A2025s0A#
 
  file_test$650:
-	; parameter person$name, offset 296
+	; parameter person.name, offset 296
 	mov [rbp + 296], rbp
 	add qword [rbp + 296], 196
 
@@ -2934,7 +2934,7 @@ section .text
 	mov qword [rbp + 288], string_Phone203A2025d0A#
 
  file_test$655:
-	; parameter person$phone, offset 296
+	; parameter person.phone, offset 296
 	mov eax, [rbp + 244]
 	mov [rbp + 296], eax
 

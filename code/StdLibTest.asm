@@ -171,12 +171,12 @@ section .text
 	mov qword [rbp + 56], string_div_t20quot2025i20rem2025i0A#
 
  print_div$2:
-	; parameter d$quot, offset 64
+	; parameter d.quot, offset 64
 	mov eax, [rbp + 24]
 	mov [rbp + 64], eax
 
  print_div$3:
-	; parameter d$rem, offset 68
+	; parameter d.rem, offset 68
 	mov eax, [rbp + 28]
 	mov [rbp + 68], eax
 
@@ -210,12 +210,12 @@ section .text
 	mov qword [rbp + 64], string_ldiv_t20quot2025li20rem2025li0A#
 
  print_ldiv$2:
-	; parameter ld$quot, offset 72
+	; parameter ld.quot, offset 72
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
  print_ldiv$3:
-	; parameter ld$rem, offset 80
+	; parameter ld.rem, offset 80
 	mov rax, [rbp + 32]
 	mov [rbp + 80], rax
 
@@ -917,12 +917,12 @@ section .text
 	mov qword [rbp + 56], string_div_t28102C20329203D202825i2C2025i292C0A#
 
  stdlib_test$136:
-	; parameter i$quot, offset 64
+	; parameter i.quot, offset 64
 	mov eax, [rbp + 24]
 	mov [rbp + 64], eax
 
  stdlib_test$137:
-	; parameter i$rem, offset 68
+	; parameter i.rem, offset 68
 	mov eax, [rbp + 28]
 	mov [rbp + 68], eax
 
@@ -1015,12 +1015,12 @@ section .text
 	mov qword [rbp + 64], string_ldiv_t28102C20329203D202825li2C2025li290A#
 
  stdlib_test$153:
-	; parameter li$quot, offset 72
+	; parameter li.quot, offset 72
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
  stdlib_test$154:
-	; parameter li$rem, offset 80
+	; parameter li.rem, offset 80
 	mov rax, [rbp + 32]
 	mov [rbp + 80], rax
 

@@ -41,26 +41,26 @@
 	extern $StackTop
 section .text
 
- @2605$filecreate:
+ @2622$filecreate:
 	; rax = int8$85#
 	mov rax, 85
 
- @2605$filecreate$1:
-	; £temporary800 = int_to_int name (Pointer -> Unsigned_Long_Int)
+ @2622$filecreate$1:
+	; £temporary827 = int_to_int name (Pointer -> Unsigned_Long_Int)
 	mov rdi, [rbp + 24]
 
- @2605$filecreate$2:
-	; rdi = £temporary800
+ @2622$filecreate$2:
+	; rdi = £temporary827
 
- @2605$filecreate$3:
+ @2622$filecreate$3:
 	; rsi = int8$511#
 	mov rsi, 511
 
- @2605$filecreate$4:
+ @2622$filecreate$4:
 	; syscall
 	syscall
 
- @2605$filecreate$5:
+ @2622$filecreate$5:
 	; return int4$0#
 	mov ebx, 0
 	mov rax, [rbp]
@@ -68,7 +68,7 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2605$filecreate$6:
+ @2622$filecreate$6:
 	; function end filecreate
 
  fileexists:
@@ -82,45 +82,45 @@ section .text
  fileexists$1:
 	; function end fileexists
 
- @2609$fileopen:
+ @2626$fileopen:
 	; rax = int8$2#
 	mov rax, 2
 
- @2609$fileopen$1:
-	; £temporary804 = int_to_int name (Pointer -> Unsigned_Long_Int)
+ @2626$fileopen$1:
+	; £temporary831 = int_to_int name (Pointer -> Unsigned_Long_Int)
 	mov rdi, [rbp + 24]
 
- @2609$fileopen$2:
-	; rdi = £temporary804
+ @2626$fileopen$2:
+	; rdi = £temporary831
 
- @2609$fileopen$3:
-	; £temporary806 = int_to_int mode (Unsigned_Short_Int -> Unsigned_Long_Int)
+ @2626$fileopen$3:
+	; £temporary833 = int_to_int mode (Unsigned_Short_Int -> Unsigned_Long_Int)
 	mov si, [rbp + 32]
 	mov rbx, 65535
 	and rsi, rbx
 
- @2609$fileopen$4:
-	; rsi = £temporary806
+ @2626$fileopen$4:
+	; rsi = £temporary833
 
- @2609$fileopen$5:
+ @2626$fileopen$5:
 	; syscall
 	syscall
 
- @2609$fileopen$6:
-	; £temporary807 = rax
+ @2626$fileopen$6:
+	; £temporary834 = rax
 
- @2609$fileopen$7:
-	; £temporary808 = int_to_int £temporary807 (Unsigned_Long_Int -> Signed_Int)
+ @2626$fileopen$7:
+	; £temporary835 = int_to_int £temporary834 (Unsigned_Long_Int -> Signed_Int)
 
- @2609$fileopen$8:
-	; return £temporary808
+ @2626$fileopen$8:
+	; return £temporary835
 	mov ebx, eax
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2609$fileopen$9:
+ @2626$fileopen$9:
 	; function end fileopen
 
  fopen:
@@ -136,26 +136,26 @@ section .text
 	jge fopen$23
 
  fopen$3:
-	; £temporary812 = int_to_int index (Signed_Int -> Array)
+	; £temporary839 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
  fopen$4:
-	; £temporary813 = £temporary812 * Array_41#
+	; £temporary840 = £temporary839 * Array_41#
 	xor rdx, rdx
 	mul qword [Array_41#]
 
  fopen$5:
-	; £temporary814 = g_fileArray + £temporary813
+	; £temporary841 = g_fileArray + £temporary840
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fopen$6:
-	; £field811 -> £temporary814 = *£temporary814
+	; £field838 -> £temporary841 = *£temporary841
 
  fopen$7:
-	; if £field811.open$0 -> £temporary814 != int4$0# goto 21
+	; if £field838.open$0 -> £temporary841 != int4$0# goto 21
 	cmp dword [rsi], 0
 	jne fopen$21
 
@@ -173,29 +173,29 @@ section .text
 	mov [rbp + 76], rax
 
  fopen$11:
-	; £temporary818 = int_to_int index (Signed_Int -> Array)
+	; £temporary845 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
  fopen$12:
-	; £temporary819 = £temporary818 * Array_41#
+	; £temporary846 = £temporary845 * Array_41#
 	xor rdx, rdx
 	mul qword [Array_41#]
 
  fopen$13:
-	; £temporary820 = g_fileArray + £temporary819
+	; £temporary847 = g_fileArray + £temporary846
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fopen$14:
-	; £field817 -> £temporary820 = *£temporary820
+	; £field844 -> £temporary847 = *£temporary847
 
  fopen$15:
-	; £temporary821 = &£field817 -> £temporary820
+	; £temporary848 = &£field844 -> £temporary847
 
  fopen$16:
-	; parameter £temporary821, offset 84
+	; parameter £temporary848, offset 84
 	mov [rbp + 84], rsi
 
  fopen$17:
@@ -209,10 +209,10 @@ section .text
 	; post call
 
  fopen$19:
-	; £temporary822 = return_value
+	; £temporary849 = return_value
 
  fopen$20:
-	; return £temporary822
+	; return £temporary849
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -264,10 +264,10 @@ section .text
 	; post call
 
  freopen$6:
-	; £temporary823 = return_value
+	; £temporary850 = return_value
 
  freopen$7:
-	; if £temporary823 != int4$0# goto 16
+	; if £temporary850 != int4$0# goto 16
 	cmp ebx, 0
 	jne freopen$16
 
@@ -288,16 +288,16 @@ section .text
 	mov qword [rbp + 52], freopen$12
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2609$fileopen
+	jmp @2626$fileopen
 
  freopen$12:
 	; post call
 
  freopen$13:
-	; £temporary825 = return_value
+	; £temporary852 = return_value
 
  freopen$14:
-	; handle = £temporary825
+	; handle = £temporary852
 	mov [rbp + 48], ebx
 
  freopen$15:
@@ -327,10 +327,10 @@ section .text
 	; post call
 
  freopen$21:
-	; £temporary826 = return_value
+	; £temporary853 = return_value
 
  freopen$22:
-	; if £temporary826 != int4$0# goto 30
+	; if £temporary853 != int4$0# goto 30
 	cmp ebx, 0
 	jne freopen$30
 
@@ -347,16 +347,16 @@ section .text
 	mov qword [rbp + 52], freopen$26
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2605$filecreate
+	jmp @2622$filecreate
 
  freopen$26:
 	; post call
 
  freopen$27:
-	; £temporary828 = return_value
+	; £temporary855 = return_value
 
  freopen$28:
-	; handle = £temporary828
+	; handle = £temporary855
 	mov [rbp + 48], ebx
 
  freopen$29:
@@ -386,10 +386,10 @@ section .text
 	; post call
 
  freopen$35:
-	; £temporary829 = return_value
+	; £temporary856 = return_value
 
  freopen$36:
-	; if £temporary829 != int4$0# goto 59
+	; if £temporary856 != int4$0# goto 59
 	cmp ebx, 0
 	jne freopen$59
 
@@ -410,16 +410,16 @@ section .text
 	mov qword [rbp + 52], freopen$41
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2609$fileopen
+	jmp @2626$fileopen
 
  freopen$41:
 	; post call
 
  freopen$42:
-	; £temporary831 = return_value
+	; £temporary858 = return_value
 
  freopen$43:
-	; handle = £temporary831
+	; handle = £temporary858
 	mov [rbp + 48], ebx
 
  freopen$44:
@@ -470,16 +470,16 @@ section .text
 	mov qword [rbp + 52], freopen$55
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2605$filecreate
+	jmp @2622$filecreate
 
  freopen$55:
 	; post call
 
  freopen$56:
-	; £temporary834 = return_value
+	; £temporary861 = return_value
 
  freopen$57:
-	; handle = £temporary834
+	; handle = £temporary861
 	mov [rbp + 48], ebx
 
  freopen$58:
@@ -509,10 +509,10 @@ section .text
 	; post call
 
  freopen$64:
-	; £temporary835 = return_value
+	; £temporary862 = return_value
 
  freopen$65:
-	; if £temporary835 != int4$0# goto 74
+	; if £temporary862 != int4$0# goto 74
 	cmp ebx, 0
 	jne freopen$74
 
@@ -533,16 +533,16 @@ section .text
 	mov qword [rbp + 52], freopen$70
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2609$fileopen
+	jmp @2626$fileopen
 
  freopen$70:
 	; post call
 
  freopen$71:
-	; £temporary837 = return_value
+	; £temporary864 = return_value
 
  freopen$72:
-	; handle = £temporary837
+	; handle = £temporary864
 	mov [rbp + 48], ebx
 
  freopen$73:
@@ -572,10 +572,10 @@ section .text
 	; post call
 
  freopen$79:
-	; £temporary838 = return_value
+	; £temporary865 = return_value
 
  freopen$80:
-	; if £temporary838 != int4$0# goto 102
+	; if £temporary865 != int4$0# goto 102
 	cmp ebx, 0
 	jne freopen$102
 
@@ -598,10 +598,10 @@ section .text
 	; post call
 
  freopen$85:
-	; £temporary840 = return_value
+	; £temporary867 = return_value
 
  freopen$86:
-	; if £temporary840 == int4$0# goto 95
+	; if £temporary867 == int4$0# goto 95
 	cmp ebx, 0
 	je freopen$95
 
@@ -622,16 +622,16 @@ section .text
 	mov qword [rbp + 52], freopen$91
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2609$fileopen
+	jmp @2626$fileopen
 
  freopen$91:
 	; post call
 
  freopen$92:
-	; £temporary841 = return_value
+	; £temporary868 = return_value
 
  freopen$93:
-	; handle = £temporary841
+	; handle = £temporary868
 	mov [rbp + 48], ebx
 
  freopen$94:
@@ -651,16 +651,16 @@ section .text
 	mov qword [rbp + 52], freopen$98
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2605$filecreate
+	jmp @2622$filecreate
 
  freopen$98:
 	; post call
 
  freopen$99:
-	; £temporary842 = return_value
+	; £temporary869 = return_value
 
  freopen$100:
-	; handle = £temporary842
+	; handle = £temporary869
 	mov [rbp + 48], ebx
 
  freopen$101:
@@ -690,10 +690,10 @@ section .text
 	; post call
 
  freopen$107:
-	; £temporary844 = return_value
+	; £temporary871 = return_value
 
  freopen$108:
-	; if £temporary844 != int4$0# goto 130
+	; if £temporary871 != int4$0# goto 130
 	cmp ebx, 0
 	jne freopen$130
 
@@ -714,16 +714,16 @@ section .text
 	mov qword [rbp + 52], freopen$113
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2609$fileopen
+	jmp @2626$fileopen
 
  freopen$113:
 	; post call
 
  freopen$114:
-	; £temporary846 = return_value
+	; £temporary873 = return_value
 
  freopen$115:
-	; handle = £temporary846
+	; handle = £temporary873
 	mov [rbp + 48], ebx
 
  freopen$116:
@@ -774,16 +774,16 @@ section .text
 	mov qword [rbp + 52], freopen$127
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2605$filecreate
+	jmp @2622$filecreate
 
  freopen$127:
 	; post call
 
  freopen$128:
-	; £temporary849 = return_value
+	; £temporary876 = return_value
 
  freopen$129:
-	; handle = £temporary849
+	; handle = £temporary876
 	mov [rbp + 48], ebx
 
  freopen$130:
@@ -792,39 +792,39 @@ section .text
 	je freopen$146
 
  freopen$131:
-	; £field851 -> stream = *stream
+	; £field878 -> stream = *stream
 	mov rsi, [rbp + 40]
 
  freopen$132:
-	; £field851 -> stream = int4$1#
+	; £field878 -> stream = int4$1#
 	mov dword [rsi], 1
 
  freopen$133:
-	; £field852 -> stream = *stream
+	; £field879 -> stream = *stream
 	mov rsi, [rbp + 40]
 
  freopen$134:
-	; £field852 -> stream = handle
+	; £field879 -> stream = handle
 	mov eax, [rbp + 48]
 	mov [rsi + 4], eax
 
  freopen$135:
-	; £field853 -> stream = *stream
+	; £field880 -> stream = *stream
 	mov rsi, [rbp + 40]
 
  freopen$136:
-	; £field853 -> stream = int4$0#
+	; £field880 -> stream = int4$0#
 	mov dword [rsi + 33], 0
 
  freopen$137:
 	; call header integral zero 0 stack zero 0
 
  freopen$138:
-	; £field854 -> stream = *stream
+	; £field881 -> stream = *stream
 	mov rsi, [rbp + 40]
 
  freopen$139:
-	; parameter £field854 -> stream, offset 76
+	; parameter £field881 -> stream, offset 76
 	mov [rbp + 76], rsi
 	add qword [rbp + 76], 8
 
@@ -844,11 +844,11 @@ section .text
 	; post call
 
  freopen$143:
-	; £field856 -> stream = *stream
+	; £field883 -> stream = *stream
 	mov rsi, [rbp + 40]
 
  freopen$144:
-	; £field856 -> stream = int4$0#
+	; £field883 -> stream = int4$0#
 	mov dword [rsi + 37], 0
 
  freopen$145:
@@ -860,11 +860,11 @@ section .text
 	jmp rax
 
  freopen$146:
-	; £field857 -> stream = *stream
+	; £field884 -> stream = *stream
 	mov rsi, [rbp + 40]
 
  freopen$147:
-	; £field857 -> stream = int4$0#
+	; £field884 -> stream = int4$0#
 	mov dword [rsi], 0
 
  freopen$148:
@@ -893,26 +893,26 @@ section .text
 	jge fflush$22
 
  fflush$3:
-	; £temporary862 = int_to_int index (Signed_Int -> Array)
+	; £temporary889 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
  fflush$4:
-	; £temporary863 = £temporary862 * Array_41#
+	; £temporary890 = £temporary889 * Array_41#
 	xor rdx, rdx
 	mul qword [Array_41#]
 
  fflush$5:
-	; £temporary864 = g_fileArray + £temporary863
+	; £temporary891 = g_fileArray + £temporary890
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fflush$6:
-	; £field861 -> £temporary864 = *£temporary864
+	; £field888 -> £temporary891 = *£temporary891
 
  fflush$7:
-	; if £field861.open$0 -> £temporary864 == int4$0# goto 20
+	; if £field888.open$0 -> £temporary891 == int4$0# goto 20
 	cmp dword [rsi], 0
 	je fflush$20
 
@@ -920,29 +920,29 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  fflush$9:
-	; £temporary866 = int_to_int index (Signed_Int -> Array)
+	; £temporary893 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
  fflush$10:
-	; £temporary867 = £temporary866 * Array_41#
+	; £temporary894 = £temporary893 * Array_41#
 	xor rdx, rdx
 	mul qword [Array_41#]
 
  fflush$11:
-	; £temporary868 = g_fileArray + £temporary867
+	; £temporary895 = g_fileArray + £temporary894
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fflush$12:
-	; £field865 -> £temporary868 = *£temporary868
+	; £field892 -> £temporary895 = *£temporary895
 
  fflush$13:
-	; £temporary869 = &£field865 -> £temporary868
+	; £temporary896 = &£field892 -> £temporary895
 
  fflush$14:
-	; parameter £temporary869, offset 60
+	; parameter £temporary896, offset 60
 	mov [rbp + 60], rsi
 
  fflush$15:
@@ -956,10 +956,10 @@ section .text
 	; post call
 
  fflush$17:
-	; £temporary870 = return_value
+	; £temporary897 = return_value
 
  fflush$18:
-	; if £temporary870 != int4$minus1# goto 20
+	; if £temporary897 != int4$minus1# goto 20
 	cmp ebx, -1
 	jne fflush$20
 
@@ -1000,17 +1000,17 @@ section .text
 	mov rax, 3
 
  fclose$2:
-	; £field876 -> stream = *stream
+	; £field903 -> stream = *stream
 	mov rsi, [rbp + 24]
 
  fclose$3:
-	; £temporary877 = int_to_int £field876 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary904 = int_to_int £field903 -> stream (Unsigned_Int -> Unsigned_Long_Int)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
 
  fclose$4:
-	; rdi = £temporary877
+	; rdi = £temporary904
 
  fclose$5:
 	; syscall
@@ -1034,26 +1034,26 @@ section .text
 	jge fclose$28
 
  fclose$9:
-	; £temporary881 = int_to_int index (Signed_Int -> Array)
+	; £temporary908 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
  fclose$10:
-	; £temporary882 = £temporary881 * Array_41#
+	; £temporary909 = £temporary908 * Array_41#
 	xor rdx, rdx
 	mul qword [Array_41#]
 
  fclose$11:
-	; £temporary883 = g_fileArray + £temporary882
+	; £temporary910 = g_fileArray + £temporary909
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fclose$12:
-	; £field880 -> £temporary883 = *£temporary883
+	; £field907 -> £temporary910 = *£temporary910
 
  fclose$13:
-	; if £field880.open$0 -> £temporary883 == int4$0# goto 26
+	; if £field907.open$0 -> £temporary910 == int4$0# goto 26
 	cmp dword [rsi], 0
 	je fclose$26
 
@@ -1061,29 +1061,29 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  fclose$15:
-	; £temporary885 = int_to_int index (Signed_Int -> Array)
+	; £temporary912 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
  fclose$16:
-	; £temporary886 = £temporary885 * Array_41#
+	; £temporary913 = £temporary912 * Array_41#
 	xor rdx, rdx
 	mul qword [Array_41#]
 
  fclose$17:
-	; £temporary887 = g_fileArray + £temporary886
+	; £temporary914 = g_fileArray + £temporary913
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fclose$18:
-	; £field884 -> £temporary887 = *£temporary887
+	; £field911 -> £temporary914 = *£temporary914
 
  fclose$19:
-	; £temporary888 = &£field884 -> £temporary887
+	; £temporary915 = &£field911 -> £temporary914
 
  fclose$20:
-	; parameter £temporary888, offset 60
+	; parameter £temporary915, offset 60
 	mov [rbp + 60], rsi
 
  fclose$21:
@@ -1097,10 +1097,10 @@ section .text
 	; post call
 
  fclose$23:
-	; £temporary889 = return_value
+	; £temporary916 = return_value
 
  fclose$24:
-	; if £temporary889 != int4$minus1# goto 26
+	; if £temporary916 != int4$minus1# goto 26
 	cmp ebx, -1
 	jne fclose$26
 
@@ -1136,11 +1136,11 @@ section .text
 	mov rax, 88
 
  remove$1:
-	; £temporary894 = int_to_int name (Pointer -> Unsigned_Long_Int)
+	; £temporary921 = int_to_int name (Pointer -> Unsigned_Long_Int)
 	mov rdi, [rbp + 24]
 
  remove$2:
-	; rdi = £temporary894
+	; rdi = £temporary921
 
  remove$3:
 	; syscall
@@ -1162,18 +1162,18 @@ section .text
 	mov rax, 82
 
  rename$1:
-	; £temporary897 = int_to_int oldName (Pointer -> Unsigned_Long_Int)
+	; £temporary924 = int_to_int oldName (Pointer -> Unsigned_Long_Int)
 	mov rdi, [rbp + 24]
 
  rename$2:
-	; rdi = £temporary897
+	; rdi = £temporary924
 
  rename$3:
-	; £temporary899 = int_to_int newName (Pointer -> Unsigned_Long_Int)
+	; £temporary926 = int_to_int newName (Pointer -> Unsigned_Long_Int)
 	mov rsi, [rbp + 32]
 
  rename$4:
-	; rsi = £temporary899
+	; rsi = £temporary926
 
  rename$5:
 	; syscall
@@ -1222,12 +1222,12 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  fgetc$2:
-	; £temporary900 = &c
+	; £temporary927 = &c
 	mov rsi, rbp
 	add rsi, 32
 
  fgetc$3:
-	; parameter £temporary900, offset 57
+	; parameter £temporary927, offset 57
 	mov [rbp + 57], rsi
 
  fgetc$4:
@@ -1254,15 +1254,15 @@ section .text
 	; post call
 
  fgetc$9:
-	; £temporary901 = return_value
+	; £temporary928 = return_value
 
  fgetc$10:
-	; if £temporary901 <= int4$0# goto 13
+	; if £temporary928 <= int4$0# goto 13
 	cmp ebx, 0
 	jle fgetc$13
 
  fgetc$11:
-	; £temporary903 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary930 = int_to_int c (Signed_Char -> Signed_Int)
 	mov bl, [rbp + 32]
 	and ebx, 255
 	cmp bl, 0
@@ -1271,7 +1271,7 @@ section .text
 	neg ebx
 
  fgetc$12:
-	; return £temporary903
+	; return £temporary930
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1297,12 +1297,12 @@ section .text
 	mov byte [rbp + 48], 0
 
  fgets$2:
-	; £temporary905 = size - int4$1#
+	; £temporary932 = size - int4$1#
 	mov eax, [rbp + 32]
 	dec eax
 
  fgets$3:
-	; if count >= £temporary905 goto 36
+	; if count >= £temporary932 goto 36
 	cmp [rbp + 44], eax
 	jge fgets$36
 
@@ -1323,12 +1323,12 @@ section .text
 	mov qword [rbp + 82], string_25c#
 
  fgets$8:
-	; £temporary907 = &currChar
+	; £temporary934 = &currChar
 	mov rsi, rbp
 	add rsi, 49
 
  fgets$9:
-	; parameter £temporary907, offset 90
+	; parameter £temporary934, offset 90
 	mov [rbp + 90], rsi
 
  fgets$10:
@@ -1354,21 +1354,21 @@ section .text
 	jne fgets$19
 
  fgets$14:
-	; £temporary913 = int_to_int count (Signed_Int -> Pointer)
+	; £temporary940 = int_to_int count (Signed_Int -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  fgets$15:
-	; £temporary915 = text + £temporary913
+	; £temporary942 = text + £temporary940
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  fgets$16:
-	; £field912 -> £temporary915 = *£temporary915
+	; £field939 -> £temporary942 = *£temporary942
 
  fgets$17:
-	; £field912 -> £temporary915 = int1$0#
+	; £field939 -> £temporary942 = int1$0#
 	mov byte [rsi], 0
 
  fgets$18:
@@ -1376,7 +1376,7 @@ section .text
 	jmp fgets$36
 
  fgets$19:
-	; £temporary916 = int_to_int currChar (Signed_Char -> Signed_Int)
+	; £temporary943 = int_to_int currChar (Signed_Char -> Signed_Int)
 	mov al, [rbp + 49]
 	and eax, 255
 	cmp al, 0
@@ -1385,26 +1385,26 @@ section .text
 	neg eax
 
  fgets$20:
-	; if £temporary916 != int4$minus1# goto 26
+	; if £temporary943 != int4$minus1# goto 26
 	cmp eax, -1
 	jne fgets$26
 
  fgets$21:
-	; £temporary919 = int_to_int count (Signed_Int -> Pointer)
+	; £temporary946 = int_to_int count (Signed_Int -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  fgets$22:
-	; £temporary921 = text + £temporary919
+	; £temporary948 = text + £temporary946
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  fgets$23:
-	; £field918 -> £temporary921 = *£temporary921
+	; £field945 -> £temporary948 = *£temporary948
 
  fgets$24:
-	; £field918 -> £temporary921 = int1$0#
+	; £field945 -> £temporary948 = int1$0#
 	mov byte [rsi], 0
 
  fgets$25:
@@ -1422,7 +1422,7 @@ section .text
 	je fgets$34
 
  fgets$28:
-	; £temporary925 = count
+	; £temporary952 = count
 	mov eax, [rbp + 44]
 
  fgets$29:
@@ -1430,20 +1430,20 @@ section .text
 	inc dword [rbp + 44]
 
  fgets$30:
-	; £temporary927 = int_to_int £temporary925 (Signed_Int -> Pointer)
+	; £temporary954 = int_to_int £temporary952 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
  fgets$31:
-	; £temporary929 = text + £temporary927
+	; £temporary956 = text + £temporary954
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  fgets$32:
-	; £field926 -> £temporary929 = *£temporary929
+	; £field953 -> £temporary956 = *£temporary956
 
  fgets$33:
-	; £field926 -> £temporary929 = currChar
+	; £field953 -> £temporary956 = currChar
 	mov al, [rbp + 49]
 	mov [rsi], al
 
@@ -1486,10 +1486,10 @@ section .text
 	; post call
 
  fputs$4:
-	; £temporary931 = return_value
+	; £temporary958 = return_value
 
  fputs$5:
-	; size = £temporary931 + int4$1#
+	; size = £temporary958 + int4$1#
 	inc ebx
 	mov [rbp + 40], ebx
 
@@ -1526,15 +1526,15 @@ section .text
 	; post call
 
  fputs$13:
-	; £temporary934 = return_value
+	; £temporary961 = return_value
 
  fputs$14:
-	; if £temporary934 != size goto 17
+	; if £temporary961 != size goto 17
 	cmp ebx, [rbp + 40]
 	jne fputs$17
 
  fputs$15:
-	; £temporary936 = int4$0#
+	; £temporary963 = int4$0#
 	mov ebx, 0
 
  fputs$16:
@@ -1542,11 +1542,11 @@ section .text
 	jmp fputs$18
 
  fputs$17:
-	; £temporary936 = int4$minus1#
+	; £temporary963 = int4$minus1#
 	mov ebx, -1
 
  fputs$18:
-	; return £temporary936
+	; return £temporary963
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1574,10 +1574,10 @@ section .text
 	; post call
 
  getchar$4:
-	; £temporary937 = return_value
+	; £temporary964 = return_value
 
  getchar$5:
-	; return £temporary937
+	; return £temporary964
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1614,10 +1614,10 @@ section .text
 	; post call
 
  gets$6:
-	; £temporary938 = return_value
+	; £temporary965 = return_value
 
  gets$7:
-	; if £temporary938 == int8$0# goto 21
+	; if £temporary965 == int8$0# goto 21
 	cmp rbx, 0
 	je gets$21
 
@@ -1640,10 +1640,10 @@ section .text
 	; post call
 
  gets$12:
-	; £temporary940 = return_value
+	; £temporary967 = return_value
 
  gets$13:
-	; size = £temporary940
+	; size = £temporary967
 	mov [rbp + 32], ebx
 
  gets$14:
@@ -1652,25 +1652,25 @@ section .text
 	jle gets$20
 
  gets$15:
-	; £temporary942 = size - int4$1#
+	; £temporary969 = size - int4$1#
 	mov eax, [rbp + 32]
 	dec eax
 
  gets$16:
-	; £temporary944 = int_to_int £temporary942 (Signed_Int -> Pointer)
+	; £temporary971 = int_to_int £temporary969 (Signed_Int -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
  gets$17:
-	; £temporary946 = s + £temporary944
+	; £temporary973 = s + £temporary971
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  gets$18:
-	; £field943 -> £temporary946 = *£temporary946
+	; £field970 -> £temporary973 = *£temporary973
 
  gets$19:
-	; £field943 -> £temporary946 = int1$0#
+	; £field970 -> £temporary973 = int1$0#
 	mov byte [rsi], 0
 
  gets$20:
@@ -1716,10 +1716,10 @@ section .text
 	; post call
 
  puts$5:
-	; £temporary947 = return_value
+	; £temporary974 = return_value
 
  puts$6:
-	; if £temporary947 == int4$0# goto 14
+	; if £temporary974 == int4$0# goto 14
 	cmp ebx, 0
 	je puts$14
 
@@ -1746,10 +1746,10 @@ section .text
 	; post call
 
  puts$12:
-	; £temporary949 = return_value
+	; £temporary976 = return_value
 
  puts$13:
-	; return £temporary949
+	; return £temporary976
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1767,11 +1767,11 @@ section .text
 	; function end puts
 
  ungetc:
-	; £field950 -> stream = *stream
+	; £field977 -> stream = *stream
 	mov rsi, [rbp + 28]
 
  ungetc$1:
-	; £temporary951 = int_to_int £field950 -> stream (Signed_Char -> Signed_Int)
+	; £temporary978 = int_to_int £field977 -> stream (Signed_Char -> Signed_Int)
 	mov al, [rsi + 24]
 	and eax, 255
 	cmp al, 0
@@ -1780,16 +1780,16 @@ section .text
 	neg eax
 
  ungetc$2:
-	; if £temporary951 == int4$minus1# goto 6
+	; if £temporary978 == int4$minus1# goto 6
 	cmp eax, -1
 	je ungetc$6
 
  ungetc$3:
-	; £field953 -> stream = *stream
+	; £field980 -> stream = *stream
 	mov rsi, [rbp + 28]
 
  ungetc$4:
-	; £temporary954 = int_to_int c (Signed_Int -> Signed_Char)
+	; £temporary981 = int_to_int c (Signed_Int -> Signed_Char)
 	mov eax, [rbp + 24]
 	cmp eax, 0
 	jge ungetc$5
@@ -1797,7 +1797,7 @@ section .text
 	neg al
 
  ungetc$5:
-	; £field953 -> stream = £temporary954
+	; £field980 -> stream = £temporary981
 	mov [rsi + 24], al
 
  ungetc$6:
@@ -1816,38 +1816,38 @@ section .text
 	mov rax, 0
 
  fread$1:
-	; £field957 -> stream = *stream
+	; £field984 -> stream = *stream
 	mov rsi, [rbp + 40]
 
  fread$2:
-	; £temporary958 = int_to_int £field957 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary985 = int_to_int £field984 -> stream (Unsigned_Int -> Unsigned_Long_Int)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
 
  fread$3:
-	; rdi = £temporary958
+	; rdi = £temporary985
 
  fread$4:
-	; £temporary960 = int_to_int ptr (Pointer -> Unsigned_Long_Int)
+	; £temporary987 = int_to_int ptr (Pointer -> Unsigned_Long_Int)
 	mov rsi, [rbp + 24]
 
  fread$5:
-	; rsi = £temporary960
+	; rsi = £temporary987
 
  fread$6:
-	; £temporary962 = size * nobj
+	; £temporary989 = size * nobj
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [rbp + 36]
 
  fread$7:
-	; £temporary963 = int_to_int £temporary962 (Signed_Int -> Unsigned_Long_Int)
+	; £temporary990 = int_to_int £temporary989 (Signed_Int -> Unsigned_Long_Int)
 	mov rbx, 4294967295
 	and rax, rbx
 
  fread$8:
-	; rdx = £temporary963
+	; rdx = £temporary990
 	mov rdx, rax
 
  fread$9:
@@ -1870,38 +1870,38 @@ section .text
 	mov rax, 0
 
  fwrite$1:
-	; £field966 -> stream = *stream
+	; £field993 -> stream = *stream
 	mov rsi, [rbp + 40]
 
  fwrite$2:
-	; £temporary967 = int_to_int £field966 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary994 = int_to_int £field993 -> stream (Unsigned_Int -> Unsigned_Long_Int)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
 
  fwrite$3:
-	; rdi = £temporary967
+	; rdi = £temporary994
 
  fwrite$4:
-	; £temporary969 = int_to_int ptr (Pointer -> Unsigned_Long_Int)
+	; £temporary996 = int_to_int ptr (Pointer -> Unsigned_Long_Int)
 	mov rsi, [rbp + 24]
 
  fwrite$5:
-	; rsi = £temporary969
+	; rsi = £temporary996
 
  fwrite$6:
-	; £temporary971 = size * nobj
+	; £temporary998 = size * nobj
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [rbp + 36]
 
  fwrite$7:
-	; £temporary972 = int_to_int £temporary971 (Signed_Int -> Unsigned_Long_Int)
+	; £temporary999 = int_to_int £temporary998 (Signed_Int -> Unsigned_Long_Int)
 	mov rbx, 4294967295
 	and rax, rbx
 
  fwrite$8:
-	; rdx = £temporary972
+	; rdx = £temporary999
 	mov rdx, rax
 
  fwrite$9:
@@ -1924,35 +1924,35 @@ section .text
 	mov rax, 8
 
  fseek$1:
-	; £field975 -> stream = *stream
+	; £field1002 -> stream = *stream
 	mov rsi, [rbp + 24]
 
  fseek$2:
-	; £temporary976 = int_to_int £field975 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary1003 = int_to_int £field1002 -> stream (Unsigned_Int -> Unsigned_Long_Int)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
 
  fseek$3:
-	; rdi = £temporary976
+	; rdi = £temporary1003
 
  fseek$4:
-	; £temporary978 = int_to_int offset (Signed_Int -> Unsigned_Long_Int)
+	; £temporary1005 = int_to_int offset (Signed_Int -> Unsigned_Long_Int)
 	mov esi, [rbp + 32]
 	mov rbx, 4294967295
 	and rsi, rbx
 
  fseek$5:
-	; rsi = £temporary978
+	; rsi = £temporary1005
 
  fseek$6:
-	; £temporary980 = int_to_int origin (Signed_Int -> Unsigned_Long_Int)
+	; £temporary1007 = int_to_int origin (Signed_Int -> Unsigned_Long_Int)
 	mov edx, [rbp + 36]
 	mov rbx, 4294967295
 	and rdx, rbx
 
  fseek$7:
-	; rdx = £temporary980
+	; rdx = £temporary1007
 
  fseek$8:
 	; syscall
@@ -1996,10 +1996,10 @@ section .text
 	; post call
 
  ftell$6:
-	; £temporary981 = return_value
+	; £temporary1008 = return_value
 
  ftell$7:
-	; return £temporary981
+	; return £temporary1008
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2022,7 +2022,7 @@ section .text
 	; function end rewind
 
  fgetpos:
-	; £field984 -> ptr = *ptr
+	; £field1011 -> ptr = *ptr
 	mov rsi, [rbp + 32]
 
  fgetpos$1:
@@ -2046,13 +2046,13 @@ section .text
 	mov rsi, [rbp + 40]
 
  fgetpos$5:
-	; £temporary985 = return_value
+	; £temporary1012 = return_value
 
  fgetpos$6:
-	; £temporary986 = int_to_int £temporary985 (Signed_Int -> Signed_Int)
+	; £temporary1013 = int_to_int £temporary1012 (Signed_Int -> Signed_Int)
 
  fgetpos$7:
-	; £field984 -> ptr = £temporary986
+	; £field1011 -> ptr = £temporary1013
 	mov [rsi], ebx
 
  fgetpos$8:
@@ -2075,11 +2075,11 @@ section .text
 	mov [rbp + 64], rax
 
  fsetpos$2:
-	; £field987 -> ptr = *ptr
+	; £field1014 -> ptr = *ptr
 	mov rsi, [rbp + 32]
 
  fsetpos$3:
-	; parameter £field987 -> ptr, offset 72
+	; parameter £field1014 -> ptr, offset 72
 	mov eax, [rsi]
 	mov [rbp + 72], eax
 
@@ -2098,13 +2098,13 @@ section .text
 	; post call
 
  fsetpos$7:
-	; £temporary988 = return_value
+	; £temporary1015 = return_value
 
  fsetpos$8:
-	; £temporary989 = int_to_int £temporary988 (Signed_Int -> Signed_Int)
+	; £temporary1016 = int_to_int £temporary1015 (Signed_Int -> Signed_Int)
 
  fsetpos$9:
-	; return £temporary989
+	; return £temporary1016
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2114,7 +2114,7 @@ section .text
 	; function end fsetpos
 
  clearerr:
-	; £field990 -> stream = *stream
+	; £field1017 -> stream = *stream
 	mov rsi, [rbp + 24]
 
  clearerr$1:
@@ -2122,7 +2122,7 @@ section .text
 	mov dword [errno], 0
 
  clearerr$2:
-	; £field990 -> stream = errno
+	; £field1017 -> stream = errno
 	mov eax, [errno]
 	mov [rsi + 25], eax
 
@@ -2163,15 +2163,15 @@ section .text
 	; post call
 
  feof$6:
-	; £temporary991 = return_value
+	; £temporary1018 = return_value
 
  feof$7:
-	; £temporary992 = int_to_int £temporary991 (Signed_Int -> Unsigned_Long_Int)
+	; £temporary1019 = int_to_int £temporary1018 (Signed_Int -> Unsigned_Long_Int)
 	mov rax, 4294967295
 	and rbx, rax
 
  feof$8:
-	; currPosition = £temporary992
+	; currPosition = £temporary1019
 	mov [rbp + 32], rbx
 
  feof$9:
@@ -2201,15 +2201,15 @@ section .text
 	; post call
 
  feof$15:
-	; £temporary993 = return_value
+	; £temporary1020 = return_value
 
  feof$16:
-	; £temporary994 = int_to_int £temporary993 (Signed_Int -> Unsigned_Long_Int)
+	; £temporary1021 = int_to_int £temporary1020 (Signed_Int -> Unsigned_Long_Int)
 	mov rax, 4294967295
 	and rbx, rax
 
  feof$17:
-	; lastPosition = £temporary994
+	; lastPosition = £temporary1021
 	mov [rbp + 40], rbx
 
  feof$18:
@@ -2221,11 +2221,11 @@ section .text
 	mov [rbp + 72], rax
 
  feof$20:
-	; £temporary995 = int_to_int currPosition (Unsigned_Long_Int -> Signed_Int)
+	; £temporary1022 = int_to_int currPosition (Unsigned_Long_Int -> Signed_Int)
 	mov rax, [rbp + 32]
 
  feof$21:
-	; parameter £temporary995, offset 80
+	; parameter £temporary1022, offset 80
 	mov [rbp + 80], eax
 
  feof$22:
@@ -2249,7 +2249,7 @@ section .text
 	jne feof$28
 
  feof$26:
-	; £temporary998 = int4$1#
+	; £temporary1025 = int4$1#
 	mov eax, 1
 
  feof$27:
@@ -2257,11 +2257,11 @@ section .text
 	jmp feof$29
 
  feof$28:
-	; £temporary998 = int4$0#
+	; £temporary1025 = int4$0#
 	mov eax, 0
 
  feof$29:
-	; endOfFile = £temporary998
+	; endOfFile = £temporary1025
 	mov [rbp + 48], eax
 
  feof$30:
@@ -2276,11 +2276,11 @@ section .text
 	; function end feof
 
  ferror:
-	; £field999 -> stream = *stream
+	; £field1026 -> stream = *stream
 	mov rsi, [rbp + 24]
 
  ferror$1:
-	; return £field999 -> stream
+	; return £field1026 -> stream
 	mov ebx, [rsi + 25]
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -2321,10 +2321,10 @@ section .text
 	; post call
 
  perror$7:
-	; £temporary1000 = return_value
+	; £temporary1027 = return_value
 
  perror$8:
-	; parameter £temporary1000, offset 72
+	; parameter £temporary1027, offset 72
 	mov [rbp + 72], rbx
 
  perror$9:
@@ -2384,39 +2384,39 @@ stderr:
 	; initializer Pointer
 	dq g_fileArray + 82
 
-@2595$EEXIST:
+@2612$EEXIST:
 	; initializer Signed_Int
 	dd 0
 
-@2596$ENOENT:
+@2613$ENOENT:
 	; initializer Signed_Int
 	dd 1
 
-@2597$EACCES:
+@2614$EACCES:
 	; initializer Signed_Int
 	dd 2
 
-@2598$SEEK_SET:
+@2615$SEEK_SET:
 	; initializer Signed_Int
 	dd 0
 
-@2599$SEEK_CUR:
+@2616$SEEK_CUR:
 	; initializer Signed_Int
 	dd 1
 
-@2600$SEEK_END:
+@2617$SEEK_END:
 	; initializer Signed_Int
 	dd 2
 
-@2601$READ:
+@2618$READ:
 	; initializer Signed_Int
 	dd 64
 
-@2602$WRITE:
+@2619$WRITE:
 	; initializer Signed_Int
 	dd 65
 
-@2603$READ_WRITE:
+@2620$READ_WRITE:
 	; initializer Signed_Int
 	dd 66
 

@@ -25,7 +25,7 @@ section .text
 	mov qword [rbp + 49], string_ascii2025i0A#
 
  character_test$2:
-	; £temporary2996 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3023 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -34,7 +34,7 @@ section .text
 	neg eax
 
  character_test$3:
-	; parameter £temporary2996, offset 57
+	; parameter £temporary3023, offset 57
 	mov [rbp + 57], eax
 
  character_test$4:
@@ -57,7 +57,7 @@ section .text
 	mov qword [rbp + 49], string_islower282725c2729203D2025s0A#
 
  character_test$8:
-	; £temporary2998 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3025 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -66,14 +66,14 @@ section .text
 	neg eax
 
  character_test$9:
-	; parameter £temporary2998, offset 57
+	; parameter £temporary3025, offset 57
 	mov [rbp + 57], eax
 
  character_test$10:
 	; call header integral zero 0 stack zero 0
 
  character_test$11:
-	; £temporary2999 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3026 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -82,7 +82,7 @@ section .text
 	neg eax
 
  character_test$12:
-	; parameter £temporary2999, offset 85
+	; parameter £temporary3026, offset 85
 	mov [rbp + 85], eax
 
  character_test$13:
@@ -96,15 +96,15 @@ section .text
 	; post call
 
  character_test$15:
-	; £temporary3000 = return_value
+	; £temporary3027 = return_value
 
  character_test$16:
-	; if £temporary3000 == int4$0# goto 19
+	; if £temporary3027 == int4$0# goto 19
 	cmp ebx, 0
 	je character_test$19
 
  character_test$17:
-	; £temporary3002 = string_Yes#
+	; £temporary3029 = string_Yes#
 	mov rax, string_Yes#
 
  character_test$18:
@@ -112,11 +112,11 @@ section .text
 	jmp character_test$20
 
  character_test$19:
-	; £temporary3002 = string_No#
+	; £temporary3029 = string_No#
 	mov rax, string_No#
 
  character_test$20:
-	; parameter £temporary3002, offset 61
+	; parameter £temporary3029, offset 61
 	mov [rbp + 61], rax
 
  character_test$21:
@@ -139,7 +139,7 @@ section .text
 	mov qword [rbp + 49], string_isupper282725c2729203D2025s0A#
 
  character_test$25:
-	; £temporary3004 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3031 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -148,14 +148,14 @@ section .text
 	neg eax
 
  character_test$26:
-	; parameter £temporary3004, offset 57
+	; parameter £temporary3031, offset 57
 	mov [rbp + 57], eax
 
  character_test$27:
 	; call header integral zero 0 stack zero 0
 
  character_test$28:
-	; £temporary3005 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3032 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -164,7 +164,7 @@ section .text
 	neg eax
 
  character_test$29:
-	; parameter £temporary3005, offset 85
+	; parameter £temporary3032, offset 85
 	mov [rbp + 85], eax
 
  character_test$30:
@@ -178,15 +178,15 @@ section .text
 	; post call
 
  character_test$32:
-	; £temporary3006 = return_value
+	; £temporary3033 = return_value
 
  character_test$33:
-	; if £temporary3006 == int4$0# goto 36
+	; if £temporary3033 == int4$0# goto 36
 	cmp ebx, 0
 	je character_test$36
 
  character_test$34:
-	; £temporary3008 = string_Yes#
+	; £temporary3035 = string_Yes#
 	mov rax, string_Yes#
 
  character_test$35:
@@ -194,11 +194,11 @@ section .text
 	jmp character_test$37
 
  character_test$36:
-	; £temporary3008 = string_No#
+	; £temporary3035 = string_No#
 	mov rax, string_No#
 
  character_test$37:
-	; parameter £temporary3008, offset 61
+	; parameter £temporary3035, offset 61
 	mov [rbp + 61], rax
 
  character_test$38:
@@ -221,7 +221,7 @@ section .text
 	mov qword [rbp + 49], string_isalpha282725c2729203D2025s0A#
 
  character_test$42:
-	; £temporary3010 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3037 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -230,14 +230,14 @@ section .text
 	neg eax
 
  character_test$43:
-	; parameter £temporary3010, offset 57
+	; parameter £temporary3037, offset 57
 	mov [rbp + 57], eax
 
  character_test$44:
 	; call header integral zero 0 stack zero 0
 
  character_test$45:
-	; £temporary3011 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3038 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -246,7 +246,7 @@ section .text
 	neg eax
 
  character_test$46:
-	; parameter £temporary3011, offset 85
+	; parameter £temporary3038, offset 85
 	mov [rbp + 85], eax
 
  character_test$47:
@@ -260,15 +260,15 @@ section .text
 	; post call
 
  character_test$49:
-	; £temporary3012 = return_value
+	; £temporary3039 = return_value
 
  character_test$50:
-	; if £temporary3012 == int4$0# goto 53
+	; if £temporary3039 == int4$0# goto 53
 	cmp ebx, 0
 	je character_test$53
 
  character_test$51:
-	; £temporary3014 = string_Yes#
+	; £temporary3041 = string_Yes#
 	mov rax, string_Yes#
 
  character_test$52:
@@ -276,11 +276,11 @@ section .text
 	jmp character_test$54
 
  character_test$53:
-	; £temporary3014 = string_No#
+	; £temporary3041 = string_No#
 	mov rax, string_No#
 
  character_test$54:
-	; parameter £temporary3014, offset 61
+	; parameter £temporary3041, offset 61
 	mov [rbp + 61], rax
 
  character_test$55:
@@ -303,7 +303,7 @@ section .text
 	mov qword [rbp + 49], string_isdigit282725c2729203D2025s0A#
 
  character_test$59:
-	; £temporary3016 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3043 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -312,14 +312,14 @@ section .text
 	neg eax
 
  character_test$60:
-	; parameter £temporary3016, offset 57
+	; parameter £temporary3043, offset 57
 	mov [rbp + 57], eax
 
  character_test$61:
 	; call header integral zero 0 stack zero 0
 
  character_test$62:
-	; £temporary3017 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3044 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -328,7 +328,7 @@ section .text
 	neg eax
 
  character_test$63:
-	; parameter £temporary3017, offset 85
+	; parameter £temporary3044, offset 85
 	mov [rbp + 85], eax
 
  character_test$64:
@@ -342,15 +342,15 @@ section .text
 	; post call
 
  character_test$66:
-	; £temporary3018 = return_value
+	; £temporary3045 = return_value
 
  character_test$67:
-	; if £temporary3018 == int4$0# goto 70
+	; if £temporary3045 == int4$0# goto 70
 	cmp ebx, 0
 	je character_test$70
 
  character_test$68:
-	; £temporary3020 = string_Yes#
+	; £temporary3047 = string_Yes#
 	mov rax, string_Yes#
 
  character_test$69:
@@ -358,11 +358,11 @@ section .text
 	jmp character_test$71
 
  character_test$70:
-	; £temporary3020 = string_No#
+	; £temporary3047 = string_No#
 	mov rax, string_No#
 
  character_test$71:
-	; parameter £temporary3020, offset 61
+	; parameter £temporary3047, offset 61
 	mov [rbp + 61], rax
 
  character_test$72:
@@ -385,7 +385,7 @@ section .text
 	mov qword [rbp + 49], string_isalnum282725c2729203D2025s0A#
 
  character_test$76:
-	; £temporary3022 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3049 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -394,14 +394,14 @@ section .text
 	neg eax
 
  character_test$77:
-	; parameter £temporary3022, offset 57
+	; parameter £temporary3049, offset 57
 	mov [rbp + 57], eax
 
  character_test$78:
 	; call header integral zero 0 stack zero 0
 
  character_test$79:
-	; £temporary3023 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3050 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -410,7 +410,7 @@ section .text
 	neg eax
 
  character_test$80:
-	; parameter £temporary3023, offset 85
+	; parameter £temporary3050, offset 85
 	mov [rbp + 85], eax
 
  character_test$81:
@@ -424,15 +424,15 @@ section .text
 	; post call
 
  character_test$83:
-	; £temporary3024 = return_value
+	; £temporary3051 = return_value
 
  character_test$84:
-	; if £temporary3024 == int4$0# goto 87
+	; if £temporary3051 == int4$0# goto 87
 	cmp ebx, 0
 	je character_test$87
 
  character_test$85:
-	; £temporary3026 = string_Yes#
+	; £temporary3053 = string_Yes#
 	mov rax, string_Yes#
 
  character_test$86:
@@ -440,11 +440,11 @@ section .text
 	jmp character_test$88
 
  character_test$87:
-	; £temporary3026 = string_No#
+	; £temporary3053 = string_No#
 	mov rax, string_No#
 
  character_test$88:
-	; parameter £temporary3026, offset 61
+	; parameter £temporary3053, offset 61
 	mov [rbp + 61], rax
 
  character_test$89:
@@ -467,7 +467,7 @@ section .text
 	mov qword [rbp + 49], string_isxdigit282725c2729203D2025s0A#
 
  character_test$93:
-	; £temporary3028 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3055 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -476,14 +476,14 @@ section .text
 	neg eax
 
  character_test$94:
-	; parameter £temporary3028, offset 57
+	; parameter £temporary3055, offset 57
 	mov [rbp + 57], eax
 
  character_test$95:
 	; call header integral zero 0 stack zero 0
 
  character_test$96:
-	; £temporary3029 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3056 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -492,7 +492,7 @@ section .text
 	neg eax
 
  character_test$97:
-	; parameter £temporary3029, offset 85
+	; parameter £temporary3056, offset 85
 	mov [rbp + 85], eax
 
  character_test$98:
@@ -506,15 +506,15 @@ section .text
 	; post call
 
  character_test$100:
-	; £temporary3030 = return_value
+	; £temporary3057 = return_value
 
  character_test$101:
-	; if £temporary3030 == int4$0# goto 104
+	; if £temporary3057 == int4$0# goto 104
 	cmp ebx, 0
 	je character_test$104
 
  character_test$102:
-	; £temporary3032 = string_Yes#
+	; £temporary3059 = string_Yes#
 	mov rax, string_Yes#
 
  character_test$103:
@@ -522,11 +522,11 @@ section .text
 	jmp character_test$105
 
  character_test$104:
-	; £temporary3032 = string_No#
+	; £temporary3059 = string_No#
 	mov rax, string_No#
 
  character_test$105:
-	; parameter £temporary3032, offset 61
+	; parameter £temporary3059, offset 61
 	mov [rbp + 61], rax
 
  character_test$106:
@@ -549,7 +549,7 @@ section .text
 	mov qword [rbp + 49], string_isgraph282725c2729203D2025s0A#
 
  character_test$110:
-	; £temporary3034 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3061 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -558,14 +558,14 @@ section .text
 	neg eax
 
  character_test$111:
-	; parameter £temporary3034, offset 57
+	; parameter £temporary3061, offset 57
 	mov [rbp + 57], eax
 
  character_test$112:
 	; call header integral zero 0 stack zero 0
 
  character_test$113:
-	; £temporary3035 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3062 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -574,7 +574,7 @@ section .text
 	neg eax
 
  character_test$114:
-	; parameter £temporary3035, offset 85
+	; parameter £temporary3062, offset 85
 	mov [rbp + 85], eax
 
  character_test$115:
@@ -588,15 +588,15 @@ section .text
 	; post call
 
  character_test$117:
-	; £temporary3036 = return_value
+	; £temporary3063 = return_value
 
  character_test$118:
-	; if £temporary3036 == int4$0# goto 121
+	; if £temporary3063 == int4$0# goto 121
 	cmp ebx, 0
 	je character_test$121
 
  character_test$119:
-	; £temporary3038 = string_Yes#
+	; £temporary3065 = string_Yes#
 	mov rax, string_Yes#
 
  character_test$120:
@@ -604,11 +604,11 @@ section .text
 	jmp character_test$122
 
  character_test$121:
-	; £temporary3038 = string_No#
+	; £temporary3065 = string_No#
 	mov rax, string_No#
 
  character_test$122:
-	; parameter £temporary3038, offset 61
+	; parameter £temporary3065, offset 61
 	mov [rbp + 61], rax
 
  character_test$123:
@@ -631,7 +631,7 @@ section .text
 	mov qword [rbp + 49], string_isprint282725c2729203D2025s0A#
 
  character_test$127:
-	; £temporary3040 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3067 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -640,14 +640,14 @@ section .text
 	neg eax
 
  character_test$128:
-	; parameter £temporary3040, offset 57
+	; parameter £temporary3067, offset 57
 	mov [rbp + 57], eax
 
  character_test$129:
 	; call header integral zero 0 stack zero 0
 
  character_test$130:
-	; £temporary3041 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3068 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -656,7 +656,7 @@ section .text
 	neg eax
 
  character_test$131:
-	; parameter £temporary3041, offset 85
+	; parameter £temporary3068, offset 85
 	mov [rbp + 85], eax
 
  character_test$132:
@@ -670,15 +670,15 @@ section .text
 	; post call
 
  character_test$134:
-	; £temporary3042 = return_value
+	; £temporary3069 = return_value
 
  character_test$135:
-	; if £temporary3042 == int4$0# goto 138
+	; if £temporary3069 == int4$0# goto 138
 	cmp ebx, 0
 	je character_test$138
 
  character_test$136:
-	; £temporary3044 = string_Yes#
+	; £temporary3071 = string_Yes#
 	mov rax, string_Yes#
 
  character_test$137:
@@ -686,11 +686,11 @@ section .text
 	jmp character_test$139
 
  character_test$138:
-	; £temporary3044 = string_No#
+	; £temporary3071 = string_No#
 	mov rax, string_No#
 
  character_test$139:
-	; parameter £temporary3044, offset 61
+	; parameter £temporary3071, offset 61
 	mov [rbp + 61], rax
 
  character_test$140:
@@ -713,7 +713,7 @@ section .text
 	mov qword [rbp + 49], string_ispunct282725c2729203D2025s0A#
 
  character_test$144:
-	; £temporary3046 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3073 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -722,14 +722,14 @@ section .text
 	neg eax
 
  character_test$145:
-	; parameter £temporary3046, offset 57
+	; parameter £temporary3073, offset 57
 	mov [rbp + 57], eax
 
  character_test$146:
 	; call header integral zero 0 stack zero 0
 
  character_test$147:
-	; £temporary3047 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3074 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -738,7 +738,7 @@ section .text
 	neg eax
 
  character_test$148:
-	; parameter £temporary3047, offset 85
+	; parameter £temporary3074, offset 85
 	mov [rbp + 85], eax
 
  character_test$149:
@@ -752,15 +752,15 @@ section .text
 	; post call
 
  character_test$151:
-	; £temporary3048 = return_value
+	; £temporary3075 = return_value
 
  character_test$152:
-	; if £temporary3048 == int4$0# goto 155
+	; if £temporary3075 == int4$0# goto 155
 	cmp ebx, 0
 	je character_test$155
 
  character_test$153:
-	; £temporary3050 = string_Yes#
+	; £temporary3077 = string_Yes#
 	mov rax, string_Yes#
 
  character_test$154:
@@ -768,11 +768,11 @@ section .text
 	jmp character_test$156
 
  character_test$155:
-	; £temporary3050 = string_No#
+	; £temporary3077 = string_No#
 	mov rax, string_No#
 
  character_test$156:
-	; parameter £temporary3050, offset 61
+	; parameter £temporary3077, offset 61
 	mov [rbp + 61], rax
 
  character_test$157:
@@ -795,7 +795,7 @@ section .text
 	mov qword [rbp + 49], string_iscntrl282725c2729203D2025s0A#
 
  character_test$161:
-	; £temporary3052 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3079 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -804,14 +804,14 @@ section .text
 	neg eax
 
  character_test$162:
-	; parameter £temporary3052, offset 57
+	; parameter £temporary3079, offset 57
 	mov [rbp + 57], eax
 
  character_test$163:
 	; call header integral zero 0 stack zero 0
 
  character_test$164:
-	; £temporary3053 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3080 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -820,7 +820,7 @@ section .text
 	neg eax
 
  character_test$165:
-	; parameter £temporary3053, offset 85
+	; parameter £temporary3080, offset 85
 	mov [rbp + 85], eax
 
  character_test$166:
@@ -834,15 +834,15 @@ section .text
 	; post call
 
  character_test$168:
-	; £temporary3054 = return_value
+	; £temporary3081 = return_value
 
  character_test$169:
-	; if £temporary3054 == int4$0# goto 172
+	; if £temporary3081 == int4$0# goto 172
 	cmp ebx, 0
 	je character_test$172
 
  character_test$170:
-	; £temporary3056 = string_Yes#
+	; £temporary3083 = string_Yes#
 	mov rax, string_Yes#
 
  character_test$171:
@@ -850,11 +850,11 @@ section .text
 	jmp character_test$173
 
  character_test$172:
-	; £temporary3056 = string_No#
+	; £temporary3083 = string_No#
 	mov rax, string_No#
 
  character_test$173:
-	; parameter £temporary3056, offset 61
+	; parameter £temporary3083, offset 61
 	mov [rbp + 61], rax
 
  character_test$174:
@@ -877,7 +877,7 @@ section .text
 	mov qword [rbp + 49], string_isspace282725c2729203D2025s0A#
 
  character_test$178:
-	; £temporary3058 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3085 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -886,14 +886,14 @@ section .text
 	neg eax
 
  character_test$179:
-	; parameter £temporary3058, offset 57
+	; parameter £temporary3085, offset 57
 	mov [rbp + 57], eax
 
  character_test$180:
 	; call header integral zero 0 stack zero 0
 
  character_test$181:
-	; £temporary3059 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3086 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -902,7 +902,7 @@ section .text
 	neg eax
 
  character_test$182:
-	; parameter £temporary3059, offset 85
+	; parameter £temporary3086, offset 85
 	mov [rbp + 85], eax
 
  character_test$183:
@@ -916,15 +916,15 @@ section .text
 	; post call
 
  character_test$185:
-	; £temporary3060 = return_value
+	; £temporary3087 = return_value
 
  character_test$186:
-	; if £temporary3060 == int4$0# goto 189
+	; if £temporary3087 == int4$0# goto 189
 	cmp ebx, 0
 	je character_test$189
 
  character_test$187:
-	; £temporary3062 = string_Yes#
+	; £temporary3089 = string_Yes#
 	mov rax, string_Yes#
 
  character_test$188:
@@ -932,11 +932,11 @@ section .text
 	jmp character_test$190
 
  character_test$189:
-	; £temporary3062 = string_No#
+	; £temporary3089 = string_No#
 	mov rax, string_No#
 
  character_test$190:
-	; parameter £temporary3062, offset 61
+	; parameter £temporary3089, offset 61
 	mov [rbp + 61], rax
 
  character_test$191:
@@ -959,7 +959,7 @@ section .text
 	mov qword [rbp + 49], string_tolower282725c2729203D202725c270A#
 
  character_test$195:
-	; £temporary3064 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3091 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -968,14 +968,14 @@ section .text
 	neg eax
 
  character_test$196:
-	; parameter £temporary3064, offset 57
+	; parameter £temporary3091, offset 57
 	mov [rbp + 57], eax
 
  character_test$197:
 	; call header integral zero 0 stack zero 0
 
  character_test$198:
-	; £temporary3065 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3092 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -984,7 +984,7 @@ section .text
 	neg eax
 
  character_test$199:
-	; parameter £temporary3065, offset 85
+	; parameter £temporary3092, offset 85
 	mov [rbp + 85], eax
 
  character_test$200:
@@ -998,17 +998,17 @@ section .text
 	; post call
 
  character_test$202:
-	; £temporary3066 = return_value
+	; £temporary3093 = return_value
 
  character_test$203:
-	; £temporary3067 = int_to_int £temporary3066 (Signed_Int -> Signed_Char)
+	; £temporary3094 = int_to_int £temporary3093 (Signed_Int -> Signed_Char)
 	cmp ebx, 0
 	jge character_test$204
 	neg ebx
 	neg bl
 
  character_test$204:
-	; £temporary3068 = int_to_int £temporary3067 (Signed_Char -> Signed_Int)
+	; £temporary3095 = int_to_int £temporary3094 (Signed_Char -> Signed_Int)
 	and ebx, 255
 	cmp bl, 0
 	jge character_test$205
@@ -1016,7 +1016,7 @@ section .text
 	neg ebx
 
  character_test$205:
-	; parameter £temporary3068, offset 61
+	; parameter £temporary3095, offset 61
 	mov [rbp + 61], ebx
 
  character_test$206:
@@ -1039,7 +1039,7 @@ section .text
 	mov qword [rbp + 49], string_toupper282725c2729203D202725c270A0A#
 
  character_test$210:
-	; £temporary3070 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3097 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -1048,14 +1048,14 @@ section .text
 	neg eax
 
  character_test$211:
-	; parameter £temporary3070, offset 57
+	; parameter £temporary3097, offset 57
 	mov [rbp + 57], eax
 
  character_test$212:
 	; call header integral zero 0 stack zero 0
 
  character_test$213:
-	; £temporary3071 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3098 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -1064,7 +1064,7 @@ section .text
 	neg eax
 
  character_test$214:
-	; parameter £temporary3071, offset 85
+	; parameter £temporary3098, offset 85
 	mov [rbp + 85], eax
 
  character_test$215:
@@ -1078,17 +1078,17 @@ section .text
 	; post call
 
  character_test$217:
-	; £temporary3072 = return_value
+	; £temporary3099 = return_value
 
  character_test$218:
-	; £temporary3073 = int_to_int £temporary3072 (Signed_Int -> Signed_Char)
+	; £temporary3100 = int_to_int £temporary3099 (Signed_Int -> Signed_Char)
 	cmp ebx, 0
 	jge character_test$219
 	neg ebx
 	neg bl
 
  character_test$219:
-	; £temporary3074 = int_to_int £temporary3073 (Signed_Char -> Signed_Int)
+	; £temporary3101 = int_to_int £temporary3100 (Signed_Char -> Signed_Int)
 	and ebx, 255
 	cmp bl, 0
 	jge character_test$220
@@ -1096,7 +1096,7 @@ section .text
 	neg ebx
 
  character_test$220:
-	; parameter £temporary3074, offset 61
+	; parameter £temporary3101, offset 61
 	mov [rbp + 61], ebx
 
  character_test$221:

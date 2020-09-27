@@ -61,10 +61,10 @@ section .text
 	; post call
 
  string_test$9:
-	; £temporary3104 = return_value
+	; £temporary3131 = return_value
 
  string_test$10:
-	; parameter £temporary3104, offset 284
+	; parameter £temporary3131, offset 284
 	mov [rbp + 284], ebx
 
  string_test$11:
@@ -130,12 +130,12 @@ section .text
 	; post call
 
  string_test$24:
-	; £field3108 -> u = *u
+	; £field3135 -> u = *u
 	mov rsi, rbp
 	add rsi, 136
 
  string_test$25:
-	; £field3108 -> u = int1$0#
+	; £field3135 -> u = int1$0#
 	mov byte [rsi + 5], 0
 
  string_test$26:
@@ -208,10 +208,10 @@ section .text
 	; post call
 
  string_test$41:
-	; £temporary3111 = return_value
+	; £temporary3138 = return_value
 
  string_test$42:
-	; i = £temporary3111
+	; i = £temporary3138
 	mov [rbp + 24], ebx
 
  string_test$43:
@@ -241,26 +241,26 @@ section .text
 	; post call
 
  string_test$49:
-	; £temporary3113 = i + int4$2#
+	; £temporary3140 = i + int4$2#
 	mov eax, [rbp + 24]
 	add eax, 2
 
  string_test$50:
-	; £temporary3115 = int_to_int £temporary3113 (Signed_Int -> Array)
+	; £temporary3142 = int_to_int £temporary3140 (Signed_Int -> Array)
 	mov rbx, 4294967295
 	and rax, rbx
 
  string_test$51:
-	; £temporary3117 = u + £temporary3115
+	; £temporary3144 = u + £temporary3142
 	mov rsi, rbp
 	add rsi, 136
 	add rsi, rax
 
  string_test$52:
-	; £field3114 -> £temporary3117 = *£temporary3117
+	; £field3141 -> £temporary3144 = *£temporary3144
 
  string_test$53:
-	; £field3114 -> £temporary3117 = int1$0#
+	; £field3141 -> £temporary3144 = int1$0#
 	mov byte [rsi], 0
 
  string_test$54:
@@ -323,10 +323,10 @@ section .text
 	; post call
 
  string_test$67:
-	; £temporary3119 = return_value
+	; £temporary3146 = return_value
 
  string_test$68:
-	; parameter £temporary3119, offset 276
+	; parameter £temporary3146, offset 276
 	mov [rbp + 276], ebx
 
  string_test$69:
@@ -376,10 +376,10 @@ section .text
 	; post call
 
  string_test$79:
-	; £temporary3121 = return_value
+	; £temporary3148 = return_value
 
  string_test$80:
-	; parameter £temporary3121, offset 276
+	; parameter £temporary3148, offset 276
 	mov [rbp + 276], ebx
 
  string_test$81:
@@ -417,10 +417,10 @@ section .text
 	; post call
 
  string_test$88:
-	; £temporary3123 = return_value
+	; £temporary3150 = return_value
 
  string_test$89:
-	; p = £temporary3123
+	; p = £temporary3150
 	mov [rbp + 236], rbx
 
  string_test$90:
@@ -436,26 +436,26 @@ section .text
 	je string_test$97
 
  string_test$93:
-	; £temporary3126 = p - s
+	; £temporary3153 = p - s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$94:
-	; £temporary3127 = int_to_int £temporary3126 (Pointer -> Signed_Int)
+	; £temporary3154 = int_to_int £temporary3153 (Pointer -> Signed_Int)
 
  string_test$95:
-	; £temporary3128 = £temporary3127
+	; £temporary3155 = £temporary3154
 
  string_test$96:
 	; goto 98
 	jmp string_test$98
 
  string_test$97:
-	; £temporary3128 = int4$minus1#
+	; £temporary3155 = int4$minus1#
 	mov eax, -1
 
  string_test$98:
-	; parameter £temporary3128, offset 276
+	; parameter £temporary3155, offset 276
 	mov [rbp + 276], eax
 
  string_test$99:
@@ -493,10 +493,10 @@ section .text
 	; post call
 
  string_test$106:
-	; £temporary3130 = return_value
+	; £temporary3157 = return_value
 
  string_test$107:
-	; p = £temporary3130
+	; p = £temporary3157
 	mov [rbp + 236], rbx
 
  string_test$108:
@@ -512,26 +512,26 @@ section .text
 	je string_test$115
 
  string_test$111:
-	; £temporary3133 = p - s
+	; £temporary3160 = p - s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$112:
-	; £temporary3134 = int_to_int £temporary3133 (Pointer -> Signed_Int)
+	; £temporary3161 = int_to_int £temporary3160 (Pointer -> Signed_Int)
 
  string_test$113:
-	; £temporary3135 = £temporary3134
+	; £temporary3162 = £temporary3161
 
  string_test$114:
 	; goto 116
 	jmp string_test$116
 
  string_test$115:
-	; £temporary3135 = int4$minus1#
+	; £temporary3162 = int4$minus1#
 	mov eax, -1
 
  string_test$116:
-	; parameter £temporary3135, offset 276
+	; parameter £temporary3162, offset 276
 	mov [rbp + 276], eax
 
  string_test$117:
@@ -569,10 +569,10 @@ section .text
 	; post call
 
  string_test$124:
-	; £temporary3137 = return_value
+	; £temporary3164 = return_value
 
  string_test$125:
-	; p = £temporary3137
+	; p = £temporary3164
 	mov [rbp + 236], rbx
 
  string_test$126:
@@ -588,26 +588,26 @@ section .text
 	je string_test$133
 
  string_test$129:
-	; £temporary3140 = p - s
+	; £temporary3167 = p - s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$130:
-	; £temporary3141 = int_to_int £temporary3140 (Pointer -> Signed_Int)
+	; £temporary3168 = int_to_int £temporary3167 (Pointer -> Signed_Int)
 
  string_test$131:
-	; £temporary3142 = £temporary3141
+	; £temporary3169 = £temporary3168
 
  string_test$132:
 	; goto 134
 	jmp string_test$134
 
  string_test$133:
-	; £temporary3142 = int4$minus1#
+	; £temporary3169 = int4$minus1#
 	mov eax, -1
 
  string_test$134:
-	; parameter £temporary3142, offset 276
+	; parameter £temporary3169, offset 276
 	mov [rbp + 276], eax
 
  string_test$135:
@@ -645,10 +645,10 @@ section .text
 	; post call
 
  string_test$142:
-	; £temporary3144 = return_value
+	; £temporary3171 = return_value
 
  string_test$143:
-	; p = £temporary3144
+	; p = £temporary3171
 	mov [rbp + 236], rbx
 
  string_test$144:
@@ -664,26 +664,26 @@ section .text
 	je string_test$151
 
  string_test$147:
-	; £temporary3147 = p - s
+	; £temporary3174 = p - s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$148:
-	; £temporary3148 = int_to_int £temporary3147 (Pointer -> Signed_Int)
+	; £temporary3175 = int_to_int £temporary3174 (Pointer -> Signed_Int)
 
  string_test$149:
-	; £temporary3149 = £temporary3148
+	; £temporary3176 = £temporary3175
 
  string_test$150:
 	; goto 152
 	jmp string_test$152
 
  string_test$151:
-	; £temporary3149 = int4$minus1#
+	; £temporary3176 = int4$minus1#
 	mov eax, -1
 
  string_test$152:
-	; parameter £temporary3149, offset 276
+	; parameter £temporary3176, offset 276
 	mov [rbp + 276], eax
 
  string_test$153:
@@ -777,12 +777,12 @@ section .text
 	; post call
 
  string_test$173:
-	; £field3154 -> u = *u
+	; £field3181 -> u = *u
 	mov rsi, rbp
 	add rsi, 136
 
  string_test$174:
-	; £field3154 -> u = int1$0#
+	; £field3181 -> u = int1$0#
 	mov byte [rsi + 21], 0
 
  string_test$175:
@@ -846,10 +846,10 @@ section .text
 	; post call
 
  string_test$188:
-	; £temporary3156 = return_value
+	; £temporary3183 = return_value
 
  string_test$189:
-	; p = £temporary3156
+	; p = £temporary3183
 	mov [rbp + 236], rbx
 
  string_test$190:
@@ -865,26 +865,26 @@ section .text
 	je string_test$197
 
  string_test$193:
-	; £temporary3159 = p - s
+	; £temporary3186 = p - s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$194:
-	; £temporary3160 = int_to_int £temporary3159 (Pointer -> Signed_Int)
+	; £temporary3187 = int_to_int £temporary3186 (Pointer -> Signed_Int)
 
  string_test$195:
-	; £temporary3161 = £temporary3160
+	; £temporary3188 = £temporary3187
 
  string_test$196:
 	; goto 198
 	jmp string_test$198
 
  string_test$197:
-	; £temporary3161 = int4$minus1#
+	; £temporary3188 = int4$minus1#
 	mov eax, -1
 
  string_test$198:
-	; parameter £temporary3161, offset 276
+	; parameter £temporary3188, offset 276
 	mov [rbp + 276], eax
 
  string_test$199:
@@ -926,10 +926,10 @@ section .text
 	; post call
 
  string_test$207:
-	; £temporary3163 = return_value
+	; £temporary3190 = return_value
 
  string_test$208:
-	; p = £temporary3163
+	; p = £temporary3190
 	mov [rbp + 236], rbx
 
  string_test$209:
@@ -945,26 +945,26 @@ section .text
 	je string_test$216
 
  string_test$212:
-	; £temporary3166 = p - s
+	; £temporary3193 = p - s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$213:
-	; £temporary3167 = int_to_int £temporary3166 (Pointer -> Signed_Int)
+	; £temporary3194 = int_to_int £temporary3193 (Pointer -> Signed_Int)
 
  string_test$214:
-	; £temporary3168 = £temporary3167
+	; £temporary3195 = £temporary3194
 
  string_test$215:
 	; goto 217
 	jmp string_test$217
 
  string_test$216:
-	; £temporary3168 = int4$minus1#
+	; £temporary3195 = int4$minus1#
 	mov eax, -1
 
  string_test$217:
-	; parameter £temporary3168, offset 276
+	; parameter £temporary3195, offset 276
 	mov [rbp + 276], eax
 
  string_test$218:
@@ -1014,10 +1014,10 @@ section .text
 	; post call
 
  string_test$228:
-	; £temporary3170 = return_value
+	; £temporary3197 = return_value
 
  string_test$229:
-	; parameter £temporary3170, offset 276
+	; parameter £temporary3197, offset 276
 	mov [rbp + 276], ebx
 
  string_test$230:
@@ -1062,10 +1062,10 @@ section .text
 	; post call
 
  string_test$239:
-	; £temporary3172 = return_value
+	; £temporary3199 = return_value
 
  string_test$240:
-	; parameter £temporary3172, offset 276
+	; parameter £temporary3199, offset 276
 	mov [rbp + 276], ebx
 
  string_test$241:
@@ -1110,10 +1110,10 @@ section .text
 	; post call
 
  string_test$250:
-	; £temporary3174 = return_value
+	; £temporary3201 = return_value
 
  string_test$251:
-	; parameter £temporary3174, offset 276
+	; parameter £temporary3201, offset 276
 	mov [rbp + 276], ebx
 
  string_test$252:
@@ -1154,10 +1154,10 @@ section .text
 	; post call
 
  string_test$260:
-	; £temporary3176 = return_value
+	; £temporary3203 = return_value
 
  string_test$261:
-	; parameter £temporary3176, offset 276
+	; parameter £temporary3203, offset 276
 	mov [rbp + 276], rbx
 
  string_test$262:
@@ -1195,10 +1195,10 @@ section .text
 	; post call
 
  string_test$269:
-	; £temporary3178 = return_value
+	; £temporary3205 = return_value
 
  string_test$270:
-	; p = £temporary3178
+	; p = £temporary3205
 	mov [rbp + 236], rbx
 
  string_test$271:
@@ -1252,10 +1252,10 @@ section .text
 	; post call
 
  string_test$282:
-	; £temporary3181 = return_value
+	; £temporary3208 = return_value
 
  string_test$283:
-	; p = £temporary3181
+	; p = £temporary3208
 	mov [rbp + 236], rbx
 
  string_test$284:

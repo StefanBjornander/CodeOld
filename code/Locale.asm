@@ -81,7 +81,7 @@ section .text
 	; £field383 -> £temporary386 = *£temporary386
 
  setlocale$17:
-	; parameter £field383.name$0 -> £temporary386, offset 80
+	; parameter £field383.name -> £temporary386, offset 80
 	mov rax, [rsi]
 	mov [rbp + 80], rax
 

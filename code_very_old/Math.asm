@@ -76,7 +76,7 @@ section .text
 	fld qword [rbp + 40]
 
  exp$10:
-	; £temporary370 = power / faculty
+	; £temporary397 = power / faculty
 	fdiv
 
  exp$11:
@@ -92,7 +92,7 @@ section .text
 	fld qword [rbp + 56]
 
  exp$14:
-	; £temporary371 = sum + term
+	; £temporary398 = sum + term
 	fadd
 
  exp$15:
@@ -108,7 +108,7 @@ section .text
 	fld qword [rbp + 24]
 
  exp$18:
-	; £temporary372 = power * x
+	; £temporary399 = power * x
 	fmul
 
  exp$19:
@@ -136,7 +136,7 @@ section .text
 	fst qword [rbp + 32]
 
  exp$25:
-	; £temporary374 = faculty * £temporary373
+	; £temporary401 = faculty * £temporary400
 	fmul
 
  exp$26:
@@ -168,14 +168,14 @@ section .text
 	; post call
 
  exp$33:
-	; £temporary375 = return_value
+	; £temporary402 = return_value
 
  exp$34:
 	; push float float8$0.000000001#
 	fld qword [float8$0.000000001#]
 
  exp$35:
-	; if £temporary375 >= float8$0.000000001# goto 8
+	; if £temporary402 >= float8$0.000000001# goto 8
 	fcompp
 	fstsw ax
 	sahf
@@ -238,7 +238,7 @@ section .text
 	fld qword [float8$2.7182818284590452353#]
 
  log$9:
-	; £temporary380 = x_plus_1 * float8$2.7182818284590452353#
+	; £temporary407 = x_plus_1 * float8$2.7182818284590452353#
 	fmul
 
  log$10:
@@ -277,7 +277,7 @@ section .text
 	fld qword [float8$2.7182818284590452353#]
 
  log$18:
-	; £temporary383 = x_plus_1 / float8$2.7182818284590452353#
+	; £temporary410 = x_plus_1 / float8$2.7182818284590452353#
 	fdiv
 
  log$19:
@@ -317,7 +317,7 @@ section .text
 	fld1
 
  log$28:
-	; £temporary385 = x_plus_1 - float8$1#
+	; £temporary412 = x_plus_1 - float8$1#
 	fsub
 
  log$29:
@@ -373,11 +373,11 @@ section .text
 	fsub
 
  log$42:
-	; £temporary387 = power / £temporary386
+	; £temporary414 = power / £temporary413
 	fdiv
 
  log$43:
-	; £temporary388 = plusMinusOne * £temporary387
+	; £temporary415 = plusMinusOne * £temporary414
 	fmul
 
  log$44:
@@ -393,7 +393,7 @@ section .text
 	fld qword [rbp + 60]
 
  log$47:
-	; £temporary389 = sum + term
+	; £temporary416 = sum + term
 	fadd
 
  log$48:
@@ -409,7 +409,7 @@ section .text
 	fld qword [rbp + 52]
 
  log$51:
-	; £temporary390 = power * x
+	; £temporary417 = power * x
 	fmul
 
  log$52:
@@ -425,7 +425,7 @@ section .text
 	fld qword [float8$minus1.0#]
 
  log$55:
-	; £temporary391 = plusMinusOne * float8$minus1.0#
+	; £temporary418 = plusMinusOne * float8$minus1.0#
 	fmul
 
  log$56:
@@ -457,14 +457,14 @@ section .text
 	; post call
 
  log$63:
-	; £temporary392 = return_value
+	; £temporary419 = return_value
 
  log$64:
 	; push float float8$0.000000001#
 	fld qword [float8$0.000000001#]
 
  log$65:
-	; if £temporary392 > float8$0.000000001# goto 34
+	; if £temporary419 > float8$0.000000001# goto 34
 	fcompp
 	fstsw ax
 	sahf
@@ -475,15 +475,15 @@ section .text
 	fld qword [rbp + 68]
 
  log$67:
-	; £temporary394 = int_to_float expo (Signed_Int -> Double)
+	; £temporary421 = int_to_float expo (Signed_Int -> Double)
 	fild word [rbp + 32]
 
  log$68:
-	; £temporary395 = sum + £temporary394
+	; £temporary422 = sum + £temporary421
 	fadd
 
  log$69:
-	; return £temporary395
+	; return £temporary422
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -537,14 +537,14 @@ section .text
 	fld qword [rbp + 40]
 
  log10$6:
-	; £temporary397 = return_value
+	; £temporary424 = return_value
 
  log10$7:
-	; £temporary398 = float8$0.4342944820# * £temporary397
+	; £temporary425 = float8$0.4342944820# * £temporary424
 	fmul
 
  log10$8:
-	; return £temporary398
+	; return £temporary425
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -634,7 +634,7 @@ section .text
 	fld qword [float8$10#]
 
  log10_int$16:
-	; £temporary404 = x / float8$10#
+	; £temporary431 = x / float8$10#
 	fdiv
 
  log10_int$17:
@@ -650,12 +650,12 @@ section .text
 	jmp log10_int$11
 
  log10_int$20:
-	; £temporary406 = count - int4$1#
+	; £temporary433 = count - int4$1#
 	mov ebx, [rbp + 32]
 	dec ebx
 
  log10_int$21:
-	; return £temporary406
+	; return £temporary433
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -689,7 +689,7 @@ section .text
 	fld qword [float8$10#]
 
  log10_int$28:
-	; £temporary408 = x * float8$10#
+	; £temporary435 = x * float8$10#
 	fmul
 
  log10_int$29:
@@ -705,12 +705,12 @@ section .text
 	jmp log10_int$23
 
  log10_int$32:
-	; £temporary410 = -count
+	; £temporary437 = -count
 	mov ebx, [rbp + 32]
 	neg ebx
 
  log10_int$33:
-	; return £temporary410
+	; return £temporary437
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -741,12 +741,12 @@ section .text
 	jge pow_int$5
 
  pow_int$2:
-	; £temporary412 = -y
+	; £temporary439 = -y
 	mov eax, [rbp + 32]
 	neg eax
 
  pow_int$3:
-	; y = £temporary412
+	; y = £temporary439
 	mov [rbp + 32], eax
 
  pow_int$4:
@@ -780,7 +780,7 @@ section .text
 	fld qword [rbp + 24]
 
  pow_int$11:
-	; £temporary415 = product * x
+	; £temporary442 = product * x
 	fmul
 
  pow_int$12:
@@ -809,7 +809,7 @@ section .text
 	fld qword [rbp + 40]
 
  pow_int$18:
-	; £temporary416 = float8$1# / product
+	; £temporary443 = float8$1# / product
 	fdiv
 
  pow_int$19:
@@ -824,7 +824,7 @@ section .text
 	fld qword [rbp + 40]
 
  pow_int$22:
-	; return £temporary418
+	; return £temporary445
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -881,14 +881,14 @@ section .text
 	fld qword [rbp + 48]
 
  pow$10:
-	; £temporary420 = return_value
+	; £temporary447 = return_value
 
  pow$11:
-	; £temporary421 = y * £temporary420
+	; £temporary448 = y * £temporary447
 	fmul
 
  pow$12:
-	; parameter £temporary421, offset 64
+	; parameter £temporary448, offset 64
 	fstp qword [rbp + 64]
 
  pow$13:
@@ -902,10 +902,10 @@ section .text
 	; post call
 
  pow$15:
-	; £temporary422 = return_value
+	; £temporary449 = return_value
 
  pow$16:
-	; return £temporary422
+	; return £temporary449
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -946,11 +946,11 @@ section .text
 	fstp qword [rbp + 68]
 
  ldexp$4:
-	; £temporary425 = int_to_float n (Signed_Int -> Double)
+	; £temporary452 = int_to_float n (Signed_Int -> Double)
 	fild word [rbp + 32]
 
  ldexp$5:
-	; parameter £temporary425, offset 68
+	; parameter £temporary452, offset 68
 	fstp qword [rbp + 76]
 
  ldexp$6:
@@ -967,14 +967,14 @@ section .text
 	fld qword [rbp + 44]
 
  ldexp$8:
-	; £temporary426 = return_value
+	; £temporary453 = return_value
 
  ldexp$9:
-	; £temporary427 = x * £temporary426
+	; £temporary454 = x * £temporary453
 	fmul
 
  ldexp$10:
-	; return £temporary427
+	; return £temporary454
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1004,11 +1004,11 @@ section .text
 	jne frexp$8
 
  frexp$4:
-	; £field432 -> p = *p
+	; £field459 -> p = *p
 	mov rsi, [rbp + 32]
 
  frexp$5:
-	; £field432 -> p = int4$0#
+	; £field459 -> p = int4$0#
 	mov dword [rsi], 0
 
  frexp$6:
@@ -1023,7 +1023,7 @@ section .text
 	jmp rax
 
  frexp$8:
-	; £field433 -> p = *p
+	; £field460 -> p = *p
 	mov rsi, [rbp + 32]
 
  frexp$9:
@@ -1052,10 +1052,10 @@ section .text
 	; post call
 
  frexp$15:
-	; £temporary434 = return_value
+	; £temporary461 = return_value
 
  frexp$16:
-	; parameter £temporary434, offset 64
+	; parameter £temporary461, offset 64
 	fstp qword [rbp + 72]
 
  frexp$17:
@@ -1070,7 +1070,7 @@ section .text
 	mov rsi, [rbp + 40]
 
  frexp$19:
-	; £temporary435 = return_value
+	; £temporary462 = return_value
 
  frexp$20:
 	; call header integral no zero 1 stack no zero 1
@@ -1100,19 +1100,19 @@ section .text
 	fld qword [rbp + 56]
 
  frexp$25:
-	; £temporary436 = return_value
+	; £temporary463 = return_value
 
  frexp$26:
-	; £temporary437 = £temporary435 / £temporary436
+	; £temporary464 = £temporary462 / £temporary463
 	fdiv
 
  frexp$27:
-	; £temporary438 = float_to_int £temporary437 (Double -> Signed_Int)
+	; £temporary465 = float_to_int £temporary464 (Double -> Signed_Int)
 	fistp word [container4bytes#]
 	mov eax, [container4bytes#]
 
  frexp$28:
-	; £field433 -> p = £temporary438 + int4$1#
+	; £field460 -> p = £temporary465 + int4$1#
 	inc eax
 	mov [rsi], eax
 
@@ -1138,7 +1138,7 @@ section .text
 	; post call
 
  frexp$34:
-	; £temporary440 = return_value
+	; £temporary467 = return_value
 
  frexp$35:
 	; call header integral zero 0 stack no zero 1
@@ -1153,15 +1153,15 @@ section .text
 	fstp qword [rbp + 72]
 
  frexp$38:
-	; £field441 -> p = *p
+	; £field468 -> p = *p
 	mov rsi, [rbp + 32]
 
  frexp$39:
-	; £temporary442 = int_to_float £field441 -> p (Signed_Int -> Double)
+	; £temporary469 = int_to_float £field468 -> p (Signed_Int -> Double)
 	fild word [rsi]
 
  frexp$40:
-	; parameter £temporary442, offset 72
+	; parameter £temporary469, offset 72
 	fstp qword [rbp + 80]
 
  frexp$41:
@@ -1178,10 +1178,10 @@ section .text
 	fld qword [rbp + 48]
 
  frexp$43:
-	; £temporary443 = return_value
+	; £temporary470 = return_value
 
  frexp$44:
-	; £temporary444 = £temporary440 / £temporary443
+	; £temporary471 = £temporary467 / £temporary470
 	fdiv
 
  frexp$45:
@@ -1208,7 +1208,7 @@ section .text
 	fld qword [rbp + 40]
 
  frexp$50:
-	; £temporary446 = -quotient
+	; £temporary473 = -quotient
 	fchs
 
  frexp$51:
@@ -1223,7 +1223,7 @@ section .text
 	fld qword [rbp + 40]
 
  frexp$54:
-	; return £temporary447
+	; return £temporary474
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1280,10 +1280,10 @@ section .text
 	; post call
 
  frexp$66:
-	; £temporary449 = return_value
+	; £temporary476 = return_value
 
  frexp$67:
-	; parameter £temporary449, offset 64
+	; parameter £temporary476, offset 64
 	fstp qword [rbp + 64]
 
  frexp$68:
@@ -1297,7 +1297,7 @@ section .text
 	; post call
 
  frexp$70:
-	; £temporary450 = return_value
+	; £temporary477 = return_value
 
  frexp$71:
 	; call header integral zero 0 stack no zero 1
@@ -1325,19 +1325,19 @@ section .text
 	fld qword [rbp + 48]
 
  frexp$76:
-	; £temporary451 = return_value
+	; £temporary478 = return_value
 
  frexp$77:
-	; £temporary452 = £temporary450 / £temporary451
+	; £temporary479 = £temporary477 / £temporary478
 	fdiv
 
  frexp$78:
-	; £temporary453 = float_to_int £temporary452 (Double -> Signed_Int)
+	; £temporary480 = float_to_int £temporary479 (Double -> Signed_Int)
 	fistp word [container4bytes#]
 	mov eax, [container4bytes#]
 
  frexp$79:
-	; n = £temporary453 + int4$1#
+	; n = £temporary480 + int4$1#
 	inc eax
 	mov [rbp + 40], eax
 
@@ -1363,7 +1363,7 @@ section .text
 	; post call
 
  frexp$85:
-	; £temporary455 = return_value
+	; £temporary482 = return_value
 
  frexp$86:
 	; call header integral zero 0 stack no zero 1
@@ -1378,11 +1378,11 @@ section .text
 	fstp qword [rbp + 76]
 
  frexp$89:
-	; £temporary456 = int_to_float n (Signed_Int -> Double)
+	; £temporary483 = int_to_float n (Signed_Int -> Double)
 	fild word [rbp + 40]
 
  frexp$90:
-	; parameter £temporary456, offset 76
+	; parameter £temporary483, offset 76
 	fstp qword [rbp + 84]
 
  frexp$91:
@@ -1399,10 +1399,10 @@ section .text
 	fld qword [rbp + 52]
 
  frexp$93:
-	; £temporary457 = return_value
+	; £temporary484 = return_value
 
  frexp$94:
-	; £temporary458 = £temporary455 / £temporary457
+	; £temporary485 = £temporary482 / £temporary484
 	fdiv
 
  frexp$95:
@@ -1429,7 +1429,7 @@ section .text
 	fld qword [rbp + 44]
 
  frexp$100:
-	; £temporary460 = -a
+	; £temporary487 = -a
 	fchs
 
  frexp$101:
@@ -1444,7 +1444,7 @@ section .text
 	fld qword [rbp + 44]
 
  frexp$104:
-	; return £temporary461
+	; return £temporary488
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1506,11 +1506,11 @@ section .text
 	fld qword [rbp + 48]
 
  sin$13:
-	; £temporary474 = power / faculty
+	; £temporary501 = power / faculty
 	fdiv
 
  sin$14:
-	; £temporary475 = plusMinusOne * £temporary474
+	; £temporary502 = plusMinusOne * £temporary501
 	fmul
 
  sin$15:
@@ -1526,7 +1526,7 @@ section .text
 	fld qword [rbp + 64]
 
  sin$18:
-	; £temporary476 = sum + term
+	; £temporary503 = sum + term
 	fadd
 
  sin$19:
@@ -1542,7 +1542,7 @@ section .text
 	fld qword [float8$minus1#]
 
  sin$22:
-	; £temporary477 = plusMinusOne * float8$minus1#
+	; £temporary504 = plusMinusOne * float8$minus1#
 	fmul
 
  sin$23:
@@ -1562,11 +1562,11 @@ section .text
 	fld qword [rbp + 24]
 
  sin$27:
-	; £temporary478 = x * x
+	; £temporary505 = x * x
 	fmul
 
  sin$28:
-	; £temporary479 = power * £temporary478
+	; £temporary506 = power * £temporary505
 	fmul
 
  sin$29:
@@ -1586,7 +1586,7 @@ section .text
 	fld qword [float8$2#]
 
  sin$33:
-	; £temporary480 = n + float8$2#
+	; £temporary507 = n + float8$2#
 	fadd
 
  sin$34:
@@ -1598,15 +1598,15 @@ section .text
 	fld qword [float8$3#]
 
  sin$36:
-	; £temporary481 = n + float8$3#
+	; £temporary508 = n + float8$3#
 	fadd
 
  sin$37:
-	; £temporary482 = £temporary480 * £temporary481
+	; £temporary509 = £temporary507 * £temporary508
 	fmul
 
  sin$38:
-	; £temporary483 = faculty * £temporary482
+	; £temporary510 = faculty * £temporary509
 	fmul
 
  sin$39:
@@ -1622,7 +1622,7 @@ section .text
 	fld qword [float8$2#]
 
  sin$42:
-	; £temporary484 = n + float8$2#
+	; £temporary511 = n + float8$2#
 	fadd
 
  sin$43:
@@ -1654,14 +1654,14 @@ section .text
 	; post call
 
  sin$50:
-	; £temporary485 = return_value
+	; £temporary512 = return_value
 
  sin$51:
 	; push float float8$0.000000001#
 	fld qword [float8$0.000000001#]
 
  sin$52:
-	; if £temporary485 >= float8$0.000000001# goto 10
+	; if £temporary512 >= float8$0.000000001# goto 10
 	fcompp
 	fstsw ax
 	sahf
@@ -1734,11 +1734,11 @@ section .text
 	fld qword [rbp + 48]
 
  cos$13:
-	; £temporary488 = power / faculty
+	; £temporary515 = power / faculty
 	fdiv
 
  cos$14:
-	; £temporary489 = plusMinusOne * £temporary488
+	; £temporary516 = plusMinusOne * £temporary515
 	fmul
 
  cos$15:
@@ -1754,7 +1754,7 @@ section .text
 	fld qword [rbp + 64]
 
  cos$18:
-	; £temporary490 = sum + term
+	; £temporary517 = sum + term
 	fadd
 
  cos$19:
@@ -1770,7 +1770,7 @@ section .text
 	fld qword [float8$minus1#]
 
  cos$22:
-	; £temporary491 = plusMinusOne * float8$minus1#
+	; £temporary518 = plusMinusOne * float8$minus1#
 	fmul
 
  cos$23:
@@ -1790,11 +1790,11 @@ section .text
 	fld qword [rbp + 24]
 
  cos$27:
-	; £temporary492 = x * x
+	; £temporary519 = x * x
 	fmul
 
  cos$28:
-	; £temporary493 = power * £temporary492
+	; £temporary520 = power * £temporary519
 	fmul
 
  cos$29:
@@ -1814,7 +1814,7 @@ section .text
 	fld1
 
  cos$33:
-	; £temporary494 = n + float8$1#
+	; £temporary521 = n + float8$1#
 	fadd
 
  cos$34:
@@ -1826,15 +1826,15 @@ section .text
 	fld qword [float8$2#]
 
  cos$36:
-	; £temporary495 = n + float8$2#
+	; £temporary522 = n + float8$2#
 	fadd
 
  cos$37:
-	; £temporary496 = £temporary494 * £temporary495
+	; £temporary523 = £temporary521 * £temporary522
 	fmul
 
  cos$38:
-	; £temporary497 = faculty * £temporary496
+	; £temporary524 = faculty * £temporary523
 	fmul
 
  cos$39:
@@ -1850,7 +1850,7 @@ section .text
 	fld qword [float8$2#]
 
  cos$42:
-	; £temporary498 = n + float8$2#
+	; £temporary525 = n + float8$2#
 	fadd
 
  cos$43:
@@ -1882,14 +1882,14 @@ section .text
 	; post call
 
  cos$50:
-	; £temporary499 = return_value
+	; £temporary526 = return_value
 
  cos$51:
 	; push float float8$0.000000001#
 	fld qword [float8$0.000000001#]
 
  cos$52:
-	; if £temporary499 >= float8$0.000000001# goto 10
+	; if £temporary526 >= float8$0.000000001# goto 10
 	fcompp
 	fstsw ax
 	sahf
@@ -1931,7 +1931,7 @@ section .text
 	; post call
 
  tan$5:
-	; £temporary502 = return_value
+	; £temporary529 = return_value
 
  tan$6:
 	; top float cos_value
@@ -1970,18 +1970,18 @@ section .text
 	; post call
 
  tan$14:
-	; £temporary504 = return_value
+	; £temporary531 = return_value
 
  tan$15:
 	; push float cos_value
 	fld qword [rbp + 32]
 
  tan$16:
-	; £temporary505 = £temporary504 / cos_value
+	; £temporary532 = £temporary531 / cos_value
 	fdiv
 
  tan$17:
-	; return £temporary505
+	; return £temporary532
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2027,7 +2027,7 @@ section .text
 	; post call
 
  sinh$5:
-	; £temporary508 = return_value
+	; £temporary535 = return_value
 
  sinh$6:
 	; call header integral zero 0 stack no zero 1
@@ -2038,11 +2038,11 @@ section .text
 	fld qword [rbp + 24]
 
  sinh$8:
-	; £temporary509 = -x
+	; £temporary536 = -x
 	fchs
 
  sinh$9:
-	; parameter £temporary509, offset 56
+	; parameter £temporary536, offset 56
 	fstp qword [rbp + 64]
 
  sinh$10:
@@ -2059,10 +2059,10 @@ section .text
 	fld qword [rbp + 40]
 
  sinh$12:
-	; £temporary510 = return_value
+	; £temporary537 = return_value
 
  sinh$13:
-	; £temporary511 = £temporary508 - £temporary510
+	; £temporary538 = £temporary535 - £temporary537
 	fsub
 
  sinh$14:
@@ -2070,11 +2070,11 @@ section .text
 	fld qword [float8$2#]
 
  sinh$15:
-	; £temporary512 = £temporary511 / float8$2#
+	; £temporary539 = £temporary538 / float8$2#
 	fdiv
 
  sinh$16:
-	; return £temporary512
+	; return £temporary539
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2105,7 +2105,7 @@ section .text
 	; post call
 
  cosh$5:
-	; £temporary515 = return_value
+	; £temporary542 = return_value
 
  cosh$6:
 	; call header integral zero 0 stack no zero 1
@@ -2116,11 +2116,11 @@ section .text
 	fld qword [rbp + 24]
 
  cosh$8:
-	; £temporary516 = -x
+	; £temporary543 = -x
 	fchs
 
  cosh$9:
-	; parameter £temporary516, offset 56
+	; parameter £temporary543, offset 56
 	fstp qword [rbp + 64]
 
  cosh$10:
@@ -2137,10 +2137,10 @@ section .text
 	fld qword [rbp + 40]
 
  cosh$12:
-	; £temporary517 = return_value
+	; £temporary544 = return_value
 
  cosh$13:
-	; £temporary518 = £temporary515 + £temporary517
+	; £temporary545 = £temporary542 + £temporary544
 	fadd
 
  cosh$14:
@@ -2148,11 +2148,11 @@ section .text
 	fld qword [float8$2#]
 
  cosh$15:
-	; £temporary519 = £temporary518 / float8$2#
+	; £temporary546 = £temporary545 / float8$2#
 	fdiv
 
  cosh$16:
-	; return £temporary519
+	; return £temporary546
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2183,7 +2183,7 @@ section .text
 	; post call
 
  tanh$5:
-	; £temporary522 = return_value
+	; £temporary549 = return_value
 
  tanh$6:
 	; top float coh
@@ -2222,7 +2222,7 @@ section .text
 	; post call
 
  tanh$14:
-	; £temporary524 = return_value
+	; £temporary551 = return_value
 
  tanh$15:
 	; top float sh
@@ -2233,7 +2233,7 @@ section .text
 	fld qword [rbp + 32]
 
  tanh$17:
-	; £temporary525 = sh / coh
+	; £temporary552 = sh / coh
 	fdiv
 
  tanh$18:
@@ -2309,11 +2309,11 @@ section .text
 	fld qword [rbp + 40]
 
  sqrt$10:
-	; £temporary529 = v / x
+	; £temporary556 = v / x
 	fdiv
 
  sqrt$11:
-	; £temporary530 = x + £temporary529
+	; £temporary557 = x + £temporary556
 	fadd
 
  sqrt$12:
@@ -2321,7 +2321,7 @@ section .text
 	fld qword [float8$2#]
 
  sqrt$13:
-	; £temporary531 = £temporary530 / float8$2#
+	; £temporary558 = £temporary557 / float8$2#
 	fdiv
 
  sqrt$14:
@@ -2332,12 +2332,12 @@ section .text
 	; check track map float stack
 
  sqrt$16:
-	; £temporary532 = count + int4$1#
+	; £temporary559 = count + int4$1#
 	mov eax, [rbp + 48]
 	inc eax
 
  sqrt$17:
-	; if £temporary532 >= int4$1000# goto 28
+	; if £temporary559 >= int4$1000# goto 28
 	cmp eax, 1000
 	jge sqrt$28
 
@@ -2353,11 +2353,11 @@ section .text
 	fld qword [rbp + 40]
 
  sqrt$21:
-	; £temporary534 = x_nplus1 - x
+	; £temporary561 = x_nplus1 - x
 	fsub
 
  sqrt$22:
-	; parameter £temporary534, offset 76
+	; parameter £temporary561, offset 76
 	fstp qword [rbp + 76]
 
  sqrt$23:
@@ -2371,14 +2371,14 @@ section .text
 	; post call
 
  sqrt$25:
-	; £temporary535 = return_value
+	; £temporary562 = return_value
 
  sqrt$26:
 	; push float float8$0.000000001#
 	fld qword [float8$0.000000001#]
 
  sqrt$27:
-	; if £temporary535 >= float8$0.000000001# goto 6
+	; if £temporary562 >= float8$0.000000001# goto 6
 	fcompp
 	fstsw ax
 	sahf
@@ -2435,14 +2435,14 @@ section .text
 	; post call
 
  asin$5:
-	; £temporary539 = return_value
+	; £temporary566 = return_value
 
  asin$6:
 	; push float float8$1#
 	fld1
 
  asin$7:
-	; if £temporary539 > float8$1# goto 28
+	; if £temporary566 > float8$1# goto 28
 	fcompp
 	fstsw ax
 	sahf
@@ -2471,7 +2471,7 @@ section .text
 	fld qword [rbp + 24]
 
  asin$14:
-	; £temporary541 = float8$1# + x
+	; £temporary568 = float8$1# + x
 	fadd
 
  asin$15:
@@ -2483,15 +2483,15 @@ section .text
 	fld qword [rbp + 24]
 
  asin$17:
-	; £temporary542 = float8$1# - x
+	; £temporary569 = float8$1# - x
 	fsub
 
  asin$18:
-	; £temporary543 = £temporary541 * £temporary542
+	; £temporary570 = £temporary568 * £temporary569
 	fmul
 
  asin$19:
-	; parameter £temporary543, offset 88
+	; parameter £temporary570, offset 88
 	fstp qword [rbp + 88]
 
  asin$20:
@@ -2505,10 +2505,10 @@ section .text
 	; post call
 
  asin$22:
-	; £temporary544 = return_value
+	; £temporary571 = return_value
 
  asin$23:
-	; parameter £temporary544, offset 64
+	; parameter £temporary571, offset 64
 	fstp qword [rbp + 64]
 
  asin$24:
@@ -2522,10 +2522,10 @@ section .text
 	; post call
 
  asin$26:
-	; £temporary545 = return_value
+	; £temporary572 = return_value
 
  asin$27:
-	; return £temporary545
+	; return £temporary572
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2571,14 +2571,14 @@ section .text
 	; post call
 
  acos$5:
-	; £temporary550 = return_value
+	; £temporary577 = return_value
 
  acos$6:
 	; push float float8$1#
 	fld1
 
  acos$7:
-	; if £temporary550 > float8$1# goto 28
+	; if £temporary577 > float8$1# goto 28
 	fcompp
 	fstsw ax
 	sahf
@@ -2599,7 +2599,7 @@ section .text
 	fld qword [rbp + 24]
 
  acos$12:
-	; £temporary552 = float8$1# + x
+	; £temporary579 = float8$1# + x
 	fadd
 
  acos$13:
@@ -2611,15 +2611,15 @@ section .text
 	fld qword [rbp + 24]
 
  acos$15:
-	; £temporary553 = float8$1# - x
+	; £temporary580 = float8$1# - x
 	fsub
 
  acos$16:
-	; £temporary554 = £temporary552 * £temporary553
+	; £temporary581 = £temporary579 * £temporary580
 	fmul
 
  acos$17:
-	; parameter £temporary554, offset 56
+	; parameter £temporary581, offset 56
 	fstp qword [rbp + 56]
 
  acos$18:
@@ -2633,10 +2633,10 @@ section .text
 	; post call
 
  acos$20:
-	; £temporary555 = return_value
+	; £temporary582 = return_value
 
  acos$21:
-	; parameter £temporary555, offset 56
+	; parameter £temporary582, offset 56
 	fstp qword [rbp + 56]
 
  acos$22:
@@ -2658,10 +2658,10 @@ section .text
 	; post call
 
  acos$26:
-	; £temporary556 = return_value
+	; £temporary583 = return_value
 
  acos$27:
-	; return £temporary556
+	; return £temporary583
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2759,14 +2759,14 @@ section .text
 	; post call
 
  asin2$15:
-	; £temporary563 = return_value
+	; £temporary590 = return_value
 
  asin2$16:
 	; push float float8$1#
 	fld1
 
  asin2$17:
-	; if £temporary563 >= float8$1# goto 55
+	; if £temporary590 >= float8$1# goto 55
 	fcompp
 	fstsw ax
 	sahf
@@ -2818,10 +2818,10 @@ section .text
 	fld qword [rbp + 60]
 
  asin2$28:
-	; £temporary565 = return_value
+	; £temporary592 = return_value
 
  asin2$29:
-	; £temporary566 = x - £temporary565
+	; £temporary593 = x - £temporary592
 	fsub
 
  asin2$30:
@@ -2856,14 +2856,14 @@ section .text
 	fld qword [rbp + 68]
 
  asin2$36:
-	; £temporary567 = return_value
+	; £temporary594 = return_value
 
  asin2$37:
-	; £temporary568 = v / £temporary567
+	; £temporary595 = v / £temporary594
 	fdiv
 
  asin2$38:
-	; £temporary569 = £temporary566 + £temporary568
+	; £temporary596 = £temporary593 + £temporary595
 	fadd
 
  asin2$39:
@@ -2874,12 +2874,12 @@ section .text
 	; check track map float stack
 
  asin2$41:
-	; £temporary570 = count + int4$1#
+	; £temporary597 = count + int4$1#
 	mov eax, [rbp + 48]
 	inc eax
 
  asin2$42:
-	; if £temporary570 >= int4$1000# goto 53
+	; if £temporary597 >= int4$1000# goto 53
 	cmp eax, 1000
 	jge asin2$53
 
@@ -2895,11 +2895,11 @@ section .text
 	fld qword [rbp + 40]
 
  asin2$46:
-	; £temporary572 = x_nplus1 - x
+	; £temporary599 = x_nplus1 - x
 	fsub
 
  asin2$47:
-	; parameter £temporary572, offset 76
+	; parameter £temporary599, offset 76
 	fstp qword [rbp + 76]
 
  asin2$48:
@@ -2913,14 +2913,14 @@ section .text
 	; post call
 
  asin2$50:
-	; £temporary573 = return_value
+	; £temporary600 = return_value
 
  asin2$51:
 	; push float float8$0.000000001#
 	fld qword [float8$0.000000001#]
 
  asin2$52:
-	; if £temporary573 >= float8$0.000000001# goto 21
+	; if £temporary600 >= float8$0.000000001# goto 21
 	fcompp
 	fstsw ax
 	sahf
@@ -3003,14 +3003,14 @@ section .text
 	; post call
 
  acos2$10:
-	; £temporary581 = return_value
+	; £temporary608 = return_value
 
  acos2$11:
 	; push float float8$1#
 	fld1
 
  acos2$12:
-	; if £temporary581 > float8$1# goto 54
+	; if £temporary608 > float8$1# goto 54
 	fcompp
 	fstsw ax
 	sahf
@@ -3054,14 +3054,14 @@ section .text
 	fld qword [rbp + 56]
 
  acos2$21:
-	; £temporary583 = return_value
+	; £temporary610 = return_value
 
  acos2$22:
 	; push float v
 	fld qword [rbp + 24]
 
  acos2$23:
-	; £temporary584 = £temporary583 - v
+	; £temporary611 = £temporary610 - v
 	fsub
 
  acos2$24:
@@ -3092,14 +3092,14 @@ section .text
 	fld qword [rbp + 64]
 
  acos2$29:
-	; £temporary585 = return_value
+	; £temporary612 = return_value
 
  acos2$30:
-	; £temporary586 = £temporary584 / £temporary585
+	; £temporary613 = £temporary611 / £temporary612
 	fdiv
 
  acos2$31:
-	; £temporary587 = x_n + £temporary586
+	; £temporary614 = x_n + £temporary613
 	fadd
 
  acos2$32:
@@ -3156,11 +3156,11 @@ section .text
 	fld qword [rbp + 40]
 
  acos2$45:
-	; £temporary589 = x_nplus1 - x_n
+	; £temporary616 = x_nplus1 - x_n
 	fsub
 
  acos2$46:
-	; parameter £temporary589, offset 72
+	; parameter £temporary616, offset 72
 	fstp qword [rbp + 72]
 
  acos2$47:
@@ -3174,14 +3174,14 @@ section .text
 	; post call
 
  acos2$49:
-	; £temporary590 = return_value
+	; £temporary617 = return_value
 
  acos2$50:
 	; push float float8$0.000000001#
 	fld qword [float8$0.000000001#]
 
  acos2$51:
-	; if £temporary590 >= float8$0.000000001# goto 15
+	; if £temporary617 >= float8$0.000000001# goto 15
 	fcompp
 	fstsw ax
 	sahf
@@ -3225,11 +3225,11 @@ section .text
 	fld qword [rbp + 24]
 
  square$2:
-	; £temporary598 = x * x
+	; £temporary625 = x * x
 	fmul
 
  square$3:
-	; return £temporary598
+	; return £temporary625
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -3361,7 +3361,7 @@ section .text
 	fld qword [rbp + 48]
 
  atan$26:
-	; £temporary602 = sign * product
+	; £temporary629 = sign * product
 	fmul
 
  atan$27:
@@ -3369,7 +3369,7 @@ section .text
 	fld qword [rbp + 40]
 
  atan$28:
-	; £temporary603 = £temporary602 / denominator
+	; £temporary630 = £temporary629 / denominator
 	fdiv
 
  atan$29:
@@ -3385,7 +3385,7 @@ section .text
 	fld qword [rbp + 56]
 
  atan$32:
-	; £temporary604 = sum + term
+	; £temporary631 = sum + term
 	fadd
 
  atan$33:
@@ -3397,7 +3397,7 @@ section .text
 	fld qword [rbp + 32]
 
  atan$35:
-	; £temporary605 = -sign
+	; £temporary632 = -sign
 	fchs
 
  atan$36:
@@ -3417,11 +3417,11 @@ section .text
 	fld qword [rbp + 24]
 
  atan$40:
-	; £temporary606 = x * x
+	; £temporary633 = x * x
 	fmul
 
  atan$41:
-	; £temporary607 = product * £temporary606
+	; £temporary634 = product * £temporary633
 	fmul
 
  atan$42:
@@ -3437,7 +3437,7 @@ section .text
 	fld qword [float8$2#]
 
  atan$45:
-	; £temporary608 = denominator + float8$2#
+	; £temporary635 = denominator + float8$2#
 	fadd
 
  atan$46:
@@ -3448,12 +3448,12 @@ section .text
 	; check track map float stack
 
  atan$48:
-	; £temporary609 = count + int4$1#
+	; £temporary636 = count + int4$1#
 	mov eax, [rbp + 72]
 	inc eax
 
  atan$49:
-	; if £temporary609 >= int4$1000# goto 58
+	; if £temporary636 >= int4$1000# goto 58
 	cmp eax, 1000
 	jge atan$58
 
@@ -3479,14 +3479,14 @@ section .text
 	; post call
 
  atan$55:
-	; £temporary611 = return_value
+	; £temporary638 = return_value
 
  atan$56:
 	; push float float8$0.000000001#
 	fld qword [float8$0.000000001#]
 
  atan$57:
-	; if £temporary611 >= float8$0.000000001# goto 24
+	; if £temporary638 >= float8$0.000000001# goto 24
 	fcompp
 	fstsw ax
 	sahf
@@ -3606,14 +3606,14 @@ section .text
 	; post call
 
  atanY$20:
-	; £temporary618 = return_value
+	; £temporary645 = return_value
 
  atanY$21:
 	; push float float8$0.5#
 	fld qword [float8$0.5#]
 
  atanY$22:
-	; if £temporary618 >= float8$0.5# goto 62
+	; if £temporary645 >= float8$0.5# goto 62
 	fcompp
 	fstsw ax
 	sahf
@@ -3648,7 +3648,7 @@ section .text
 	fstp qword [rbp + 60]
 
  atanY$30:
-	; £temporary620 = int_to_float sign (Signed_Int -> Double)
+	; £temporary647 = int_to_float sign (Signed_Int -> Double)
 	fild word [rbp + 32]
 
  atanY$31:
@@ -3656,15 +3656,15 @@ section .text
 	fld qword [rbp + 44]
 
  atanY$32:
-	; £temporary621 = £temporary620 * product
+	; £temporary648 = £temporary647 * product
 	fmul
 
  atanY$33:
-	; £temporary622 = int_to_float denominator (Signed_Int -> Double)
+	; £temporary649 = int_to_float denominator (Signed_Int -> Double)
 	fild word [rbp + 36]
 
  atanY$34:
-	; £temporary623 = £temporary621 / £temporary622
+	; £temporary650 = £temporary648 / £temporary649
 	fdiv
 
  atanY$35:
@@ -3680,7 +3680,7 @@ section .text
 	fld qword [rbp + 52]
 
  atanY$38:
-	; £temporary624 = sum + term
+	; £temporary651 = sum + term
 	fadd
 
  atanY$39:
@@ -3688,12 +3688,12 @@ section .text
 	fstp qword [rbp + 60]
 
  atanY$40:
-	; £temporary625 = -sign
+	; £temporary652 = -sign
 	mov eax, [rbp + 32]
 	neg eax
 
  atanY$41:
-	; sign = £temporary625
+	; sign = £temporary652
 	mov [rbp + 32], eax
 
  atanY$42:
@@ -3709,11 +3709,11 @@ section .text
 	fld qword [rbp + 24]
 
  atanY$45:
-	; £temporary626 = v * v
+	; £temporary653 = v * v
 	fmul
 
  atanY$46:
-	; £temporary627 = product * £temporary626
+	; £temporary654 = product * £temporary653
 	fmul
 
  atanY$47:
@@ -3728,12 +3728,12 @@ section .text
 	; check track map float stack
 
  atanY$50:
-	; £temporary629 = count + int4$1#
+	; £temporary656 = count + int4$1#
 	mov eax, [rbp + 40]
 	inc eax
 
  atanY$51:
-	; if £temporary629 >= int4$1000# goto 60
+	; if £temporary656 >= int4$1000# goto 60
 	cmp eax, 1000
 	jge atanY$60
 
@@ -3759,14 +3759,14 @@ section .text
 	; post call
 
  atanY$57:
-	; £temporary631 = return_value
+	; £temporary658 = return_value
 
  atanY$58:
 	; push float float8$0.000000001#
 	fld qword [float8$0.000000001#]
 
  atanY$59:
-	; if £temporary631 >= float8$0.000000001# goto 30
+	; if £temporary658 >= float8$0.000000001# goto 30
 	fcompp
 	fstsw ax
 	sahf
@@ -3805,14 +3805,14 @@ section .text
 	; post call
 
  atanY$67:
-	; £temporary634 = return_value
+	; £temporary661 = return_value
 
  atanY$68:
 	; push float float8$1#
 	fld1
 
  atanY$69:
-	; if £temporary634 >= float8$1# goto 130
+	; if £temporary661 >= float8$1# goto 130
 	fcompp
 	fstsw ax
 	sahf
@@ -3874,14 +3874,14 @@ section .text
 	fld qword [rbp + 56]
 
  atanY$82:
-	; £temporary637 = return_value
+	; £temporary664 = return_value
 
  atanY$83:
 	; push float v
 	fld qword [rbp + 24]
 
  atanY$84:
-	; £temporary638 = £temporary637 - v
+	; £temporary665 = £temporary664 - v
 	fsub
 
  atanY$85:
@@ -3903,11 +3903,11 @@ section .text
 	fld qword [rbp + 40]
 
  atanY$89:
-	; £temporary639 = float8$2# * x
+	; £temporary666 = float8$2# * x
 	fmul
 
  atanY$90:
-	; parameter £temporary639, offset 72
+	; parameter £temporary666, offset 72
 	fstp qword [rbp + 104]
 
  atanY$91:
@@ -3925,18 +3925,18 @@ section .text
 	fld qword [rbp + 64]
 
  atanY$93:
-	; £temporary640 = return_value
+	; £temporary667 = return_value
 
  atanY$94:
 	; push float float8$1#
 	fld1
 
  atanY$95:
-	; £temporary641 = £temporary640 + float8$1#
+	; £temporary668 = £temporary667 + float8$1#
 	fadd
 
  atanY$96:
-	; parameter £temporary641, offset 72
+	; parameter £temporary668, offset 72
 	fstp qword [rbp + 88]
 
  atanY$97:
@@ -3954,10 +3954,10 @@ section .text
 	fld qword [rbp + 64]
 
  atanY$99:
-	; £temporary642 = return_value
+	; £temporary669 = return_value
 
  atanY$100:
-	; £temporary643 = £temporary638 * £temporary642
+	; £temporary670 = £temporary665 * £temporary669
 	fmul
 
  atanY$101:
@@ -3965,11 +3965,11 @@ section .text
 	fld qword [float8$2#]
 
  atanY$102:
-	; £temporary644 = £temporary643 / float8$2#
+	; £temporary671 = £temporary670 / float8$2#
 	fdiv
 
  atanY$103:
-	; £temporary645 = x - £temporary644
+	; £temporary672 = x - £temporary671
 	fsub
 
  atanY$104:
@@ -4026,11 +4026,11 @@ section .text
 	fld qword [rbp + 40]
 
  atanY$117:
-	; £temporary647 = x_nplus1 - x
+	; £temporary674 = x_nplus1 - x
 	fsub
 
  atanY$118:
-	; parameter £temporary647, offset 72
+	; parameter £temporary674, offset 72
 	fstp qword [rbp + 72]
 
  atanY$119:
@@ -4044,14 +4044,14 @@ section .text
 	; post call
 
  atanY$121:
-	; £temporary648 = return_value
+	; £temporary675 = return_value
 
  atanY$122:
 	; push float float8$0.000000001#
 	fld qword [float8$0.000000001#]
 
  atanY$123:
-	; if £temporary648 >= float8$0.000000001# goto 76
+	; if £temporary675 >= float8$0.000000001# goto 76
 	fcompp
 	fstsw ax
 	sahf
@@ -4152,14 +4152,14 @@ section .text
 	; post call
 
  atanX$10:
-	; £temporary661 = return_value
+	; £temporary688 = return_value
 
  atanX$11:
 	; push float float8$1#
 	fld1
 
  atanX$12:
-	; if £temporary661 > float8$1# goto 57
+	; if £temporary688 > float8$1# goto 57
 	fcompp
 	fstsw ax
 	sahf
@@ -4203,14 +4203,14 @@ section .text
 	fld qword [rbp + 56]
 
  atanX$21:
-	; £temporary663 = return_value
+	; £temporary690 = return_value
 
  atanX$22:
 	; push float v
 	fld qword [rbp + 24]
 
  atanX$23:
-	; £temporary664 = £temporary663 - v
+	; £temporary691 = £temporary690 - v
 	fsub
 
  atanX$24:
@@ -4232,11 +4232,11 @@ section .text
 	fld qword [rbp + 40]
 
  atanX$28:
-	; £temporary665 = float8$2# * x
+	; £temporary692 = float8$2# * x
 	fmul
 
  atanX$29:
-	; parameter £temporary665, offset 72
+	; parameter £temporary692, offset 72
 	fstp qword [rbp + 104]
 
  atanX$30:
@@ -4254,18 +4254,18 @@ section .text
 	fld qword [rbp + 64]
 
  atanX$32:
-	; £temporary666 = return_value
+	; £temporary693 = return_value
 
  atanX$33:
 	; push float float8$1#
 	fld1
 
  atanX$34:
-	; £temporary667 = £temporary666 + float8$1#
+	; £temporary694 = £temporary693 + float8$1#
 	fadd
 
  atanX$35:
-	; parameter £temporary667, offset 72
+	; parameter £temporary694, offset 72
 	fstp qword [rbp + 88]
 
  atanX$36:
@@ -4283,10 +4283,10 @@ section .text
 	fld qword [rbp + 64]
 
  atanX$38:
-	; £temporary668 = return_value
+	; £temporary695 = return_value
 
  atanX$39:
-	; £temporary669 = £temporary664 * £temporary668
+	; £temporary696 = £temporary691 * £temporary695
 	fmul
 
  atanX$40:
@@ -4294,11 +4294,11 @@ section .text
 	fld qword [float8$2#]
 
  atanX$41:
-	; £temporary670 = £temporary669 / float8$2#
+	; £temporary697 = £temporary696 / float8$2#
 	fdiv
 
  atanX$42:
-	; £temporary671 = x - £temporary670
+	; £temporary698 = x - £temporary697
 	fsub
 
  atanX$43:
@@ -4320,11 +4320,11 @@ section .text
 	fld qword [rbp + 40]
 
  atanX$48:
-	; £temporary672 = x_nplus1 - x
+	; £temporary699 = x_nplus1 - x
 	fsub
 
  atanX$49:
-	; parameter £temporary672, offset 72
+	; parameter £temporary699, offset 72
 	fstp qword [rbp + 72]
 
  atanX$50:
@@ -4338,14 +4338,14 @@ section .text
 	; post call
 
  atanX$52:
-	; £temporary673 = return_value
+	; £temporary700 = return_value
 
  atanX$53:
 	; push float float8$0.000000001#
 	fld qword [float8$0.000000001#]
 
  atanX$54:
-	; if £temporary673 >= float8$0.000000001# goto 15
+	; if £temporary700 >= float8$0.000000001# goto 15
 	fcompp
 	fstsw ax
 	sahf
@@ -4407,11 +4407,11 @@ section .text
 	fld qword [rbp + 32]
 
  atan2$6:
-	; £temporary681 = y / x
+	; £temporary708 = y / x
 	fdiv
 
  atan2$7:
-	; parameter £temporary681, offset 64
+	; parameter £temporary708, offset 64
 	fstp qword [rbp + 64]
 
  atan2$8:
@@ -4425,10 +4425,10 @@ section .text
 	; post call
 
  atan2$10:
-	; £temporary682 = return_value
+	; £temporary709 = return_value
 
  atan2$11:
-	; return £temporary682
+	; return £temporary709
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -4476,11 +4476,11 @@ section .text
 	fld qword [rbp + 32]
 
  atan2$21:
-	; £temporary685 = y / x
+	; £temporary712 = y / x
 	fdiv
 
  atan2$22:
-	; parameter £temporary685, offset 64
+	; parameter £temporary712, offset 64
 	fstp qword [rbp + 64]
 
  atan2$23:
@@ -4494,18 +4494,18 @@ section .text
 	; post call
 
  atan2$25:
-	; £temporary686 = return_value
+	; £temporary713 = return_value
 
  atan2$26:
 	; push float float8$3.1415926535897932384#
 	fld qword [float8$3.1415926535897932384#]
 
  atan2$27:
-	; £temporary687 = £temporary686 + float8$3.1415926535897932384#
+	; £temporary714 = £temporary713 + float8$3.1415926535897932384#
 	fadd
 
  atan2$28:
-	; return £temporary687
+	; return £temporary714
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -4523,11 +4523,11 @@ section .text
 	fld qword [rbp + 32]
 
  atan2$32:
-	; £temporary688 = y / x
+	; £temporary715 = y / x
 	fdiv
 
  atan2$33:
-	; parameter £temporary688, offset 64
+	; parameter £temporary715, offset 64
 	fstp qword [rbp + 64]
 
  atan2$34:
@@ -4541,18 +4541,18 @@ section .text
 	; post call
 
  atan2$36:
-	; £temporary689 = return_value
+	; £temporary716 = return_value
 
  atan2$37:
 	; push float float8$3.1415926535897932384#
 	fld qword [float8$3.1415926535897932384#]
 
  atan2$38:
-	; £temporary690 = £temporary689 - float8$3.1415926535897932384#
+	; £temporary717 = £temporary716 - float8$3.1415926535897932384#
 	fsub
 
  atan2$39:
-	; return £temporary690
+	; return £temporary717
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -4655,11 +4655,11 @@ section .text
 	fld qword [rbp + 32]
 
  atan2x$6:
-	; £temporary697 = num / denum
+	; £temporary724 = num / denum
 	fdiv
 
  atan2x$7:
-	; parameter £temporary697, offset 64
+	; parameter £temporary724, offset 64
 	fstp qword [rbp + 64]
 
  atan2x$8:
@@ -4673,7 +4673,7 @@ section .text
 	; post call
 
  atan2x$10:
-	; £temporary698 = return_value
+	; £temporary725 = return_value
 
  atan2x$11:
 	; pop float y
@@ -4773,11 +4773,11 @@ section .text
 	fld qword [rbp + 32]
 
  atan2x$32:
-	; £temporary704 = num / denum
+	; £temporary731 = num / denum
 	fdiv
 
  atan2x$33:
-	; parameter £temporary704, offset 64
+	; parameter £temporary731, offset 64
 	fstp qword [rbp + 72]
 
  atan2x$34:
@@ -4794,14 +4794,14 @@ section .text
 	fld qword [rbp + 48]
 
  atan2x$36:
-	; £temporary705 = return_value
+	; £temporary732 = return_value
 
  atan2x$37:
-	; £temporary706 = float8$3.1415926535897932384# + £temporary705
+	; £temporary733 = float8$3.1415926535897932384# + £temporary732
 	fadd
 
  atan2x$38:
-	; return £temporary706
+	; return £temporary733
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -4872,11 +4872,11 @@ section .text
 	fld qword [rbp + 32]
 
  atan2x$53:
-	; £temporary711 = num / denum
+	; £temporary738 = num / denum
 	fdiv
 
  atan2x$54:
-	; parameter £temporary711, offset 64
+	; parameter £temporary738, offset 64
 	fstp qword [rbp + 72]
 
  atan2x$55:
@@ -4893,14 +4893,14 @@ section .text
 	fld qword [rbp + 48]
 
  atan2x$57:
-	; £temporary712 = return_value
+	; £temporary739 = return_value
 
  atan2x$58:
-	; £temporary713 = float8$minus3.1415926535897932384# + £temporary712
+	; £temporary740 = float8$minus3.1415926535897932384# + £temporary739
 	fadd
 
  atan2x$59:
-	; return £temporary713
+	; return £temporary740
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -5083,11 +5083,11 @@ section .text
 	fld qword [rbp + 24]
 
  floor$5:
-	; £temporary727 = -x
+	; £temporary754 = -x
 	fchs
 
  floor$6:
-	; parameter £temporary727, offset 56
+	; parameter £temporary754, offset 56
 	fstp qword [rbp + 56]
 
  floor$7:
@@ -5101,14 +5101,14 @@ section .text
 	; post call
 
  floor$9:
-	; £temporary728 = return_value
+	; £temporary755 = return_value
 
  floor$10:
-	; £temporary729 = -£temporary728
+	; £temporary756 = -£temporary755
 	fchs
 
  floor$11:
-	; return £temporary729
+	; return £temporary756
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -5119,17 +5119,17 @@ section .text
 	fld qword [rbp + 24]
 
  floor$13:
-	; £temporary730 = float_to_int x (Double -> Signed_Long_Int)
+	; £temporary757 = float_to_int x (Double -> Signed_Long_Int)
 	fistp dword [container8bytes#]
 	mov rax, [container8bytes#]
 
  floor$14:
-	; £temporary731 = int_to_float £temporary730 (Signed_Long_Int -> Double)
+	; £temporary758 = int_to_float £temporary757 (Signed_Long_Int -> Double)
 	mov [container8bytes#], rax
 	fild dword [container8bytes#]
 
  floor$15:
-	; return £temporary731
+	; return £temporary758
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -5161,11 +5161,11 @@ section .text
 	fld qword [rbp + 24]
 
  ceil$5:
-	; £temporary734 = -x
+	; £temporary761 = -x
 	fchs
 
  ceil$6:
-	; parameter £temporary734, offset 56
+	; parameter £temporary761, offset 56
 	fstp qword [rbp + 56]
 
  ceil$7:
@@ -5179,14 +5179,14 @@ section .text
 	; post call
 
  ceil$9:
-	; £temporary735 = return_value
+	; £temporary762 = return_value
 
  ceil$10:
-	; £temporary736 = -£temporary735
+	; £temporary763 = -£temporary762
 	fchs
 
  ceil$11:
-	; return £temporary736
+	; return £temporary763
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -5201,21 +5201,21 @@ section .text
 	fld qword [float8$0.999999999999#]
 
  ceil$14:
-	; £temporary737 = x + float8$0.999999999999#
+	; £temporary764 = x + float8$0.999999999999#
 	fadd
 
  ceil$15:
-	; £temporary738 = float_to_int £temporary737 (Double -> Signed_Long_Int)
+	; £temporary765 = float_to_int £temporary764 (Double -> Signed_Long_Int)
 	fistp dword [container8bytes#]
 	mov rax, [container8bytes#]
 
  ceil$16:
-	; £temporary739 = int_to_float £temporary738 (Signed_Long_Int -> Double)
+	; £temporary766 = int_to_float £temporary765 (Signed_Long_Int -> Double)
 	mov [container8bytes#], rax
 	fild dword [container8bytes#]
 
  ceil$17:
-	; return £temporary739
+	; return £temporary766
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -5248,7 +5248,7 @@ section .text
 	fld qword [float8$0.5#]
 
  round$5:
-	; £temporary742 = x - float8$0.5#
+	; £temporary769 = x - float8$0.5#
 	fsub
 
  round$6:
@@ -5267,21 +5267,21 @@ section .text
 	fld qword [float8$0.5#]
 
  round$10:
-	; £temporary743 = x + float8$0.5#
+	; £temporary770 = x + float8$0.5#
 	fadd
 
  round$11:
-	; £temporary745 = float_to_int £temporary744 (Double -> Signed_Long_Int)
+	; £temporary772 = float_to_int £temporary771 (Double -> Signed_Long_Int)
 	fistp dword [container8bytes#]
 	mov rax, [container8bytes#]
 
  round$12:
-	; £temporary746 = int_to_float £temporary745 (Signed_Long_Int -> Double)
+	; £temporary773 = int_to_float £temporary772 (Signed_Long_Int -> Double)
 	mov [container8bytes#], rax
 	fild dword [container8bytes#]
 
  round$13:
-	; return £temporary746
+	; return £temporary773
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -5310,7 +5310,7 @@ section .text
 	fld qword [rbp + 24]
 
  fabs$4:
-	; £temporary748 = -x
+	; £temporary775 = -x
 	fchs
 
  fabs$5:
@@ -5325,7 +5325,7 @@ section .text
 	fld qword [rbp + 24]
 
  fabs$8:
-	; return £temporary749
+	; return £temporary776
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -5356,15 +5356,15 @@ section .text
 	; post call
 
  modf$5:
-	; £temporary750 = return_value
+	; £temporary777 = return_value
 
  modf$6:
-	; £temporary751 = float_to_int £temporary750 (Double -> Signed_Long_Int)
+	; £temporary778 = float_to_int £temporary777 (Double -> Signed_Long_Int)
 	fistp dword [container8bytes#]
 	mov rax, [container8bytes#]
 
  modf$7:
-	; £temporary752 = int_to_float £temporary751 (Signed_Long_Int -> Double)
+	; £temporary779 = int_to_float £temporary778 (Signed_Long_Int -> Double)
 	mov [container8bytes#], rax
 	fild dword [container8bytes#]
 
@@ -5378,7 +5378,7 @@ section .text
 	je modf$34
 
  modf$10:
-	; £field754 -> p = *p
+	; £field781 -> p = *p
 	mov rsi, [rbp + 32]
 
  modf$11:
@@ -5420,14 +5420,14 @@ section .text
 	mov rsi, [rbp + 48]
 
  modf$19:
-	; £temporary756 = return_value
+	; £temporary783 = return_value
 
  modf$20:
 	; push float integral
 	fld qword [rbp + 40]
 
  modf$21:
-	; £temporary757 = £temporary756 - integral
+	; £temporary784 = £temporary783 - integral
 	fsub
 
  modf$22:
@@ -5461,22 +5461,22 @@ section .text
 	mov rsi, [rbp + 48]
 
  modf$29:
-	; £temporary758 = return_value
+	; £temporary785 = return_value
 
  modf$30:
 	; push float integral
 	fld qword [rbp + 40]
 
  modf$31:
-	; £temporary759 = £temporary758 - integral
+	; £temporary786 = £temporary785 - integral
 	fsub
 
  modf$32:
-	; £temporary760 = -£temporary759
+	; £temporary787 = -£temporary786
 	fchs
 
  modf$33:
-	; pop float £field754 -> p
+	; pop float £field781 -> p
 	fstp qword [rsi]
 
  modf$34:
@@ -5510,11 +5510,11 @@ section .text
 	fld qword [rbp + 40]
 
  modf$41:
-	; £temporary763 = -integral
+	; £temporary790 = -integral
 	fchs
 
  modf$42:
-	; return £temporary764
+	; return £temporary791
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -5547,7 +5547,7 @@ section .text
 	fld qword [rbp + 32]
 
  fmod$5:
-	; £temporary769 = x / y
+	; £temporary796 = x / y
 	fdiv
 
  fmod$6:
@@ -5566,21 +5566,21 @@ section .text
 	fld qword [rbp + 40]
 
  fmod$10:
-	; £temporary770 = float_to_int quotient (Double -> Signed_Long_Int)
+	; £temporary797 = float_to_int quotient (Double -> Signed_Long_Int)
 	fistp dword [container8bytes#]
 	mov rax, [container8bytes#]
 
  fmod$11:
-	; £temporary771 = int_to_float £temporary770 (Signed_Long_Int -> Double)
+	; £temporary798 = int_to_float £temporary797 (Signed_Long_Int -> Double)
 	mov [container8bytes#], rax
 	fild dword [container8bytes#]
 
  fmod$12:
-	; £temporary772 = quotient - £temporary771
+	; £temporary799 = quotient - £temporary798
 	fsub
 
  fmod$13:
-	; parameter £temporary772, offset 72
+	; parameter £temporary799, offset 72
 	fstp qword [rbp + 72]
 
  fmod$14:
@@ -5594,7 +5594,7 @@ section .text
 	; post call
 
  fmod$16:
-	; £temporary773 = return_value
+	; £temporary800 = return_value
 
  fmod$17:
 	; pop float remainder
@@ -5631,11 +5631,11 @@ section .text
 	fld qword [rbp + 48]
 
  fmod$25:
-	; £temporary775 = -remainder
+	; £temporary802 = -remainder
 	fchs
 
  fmod$26:
-	; return £temporary776
+	; return £temporary803
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]

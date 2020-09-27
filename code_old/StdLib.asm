@@ -1748,14 +1748,14 @@ section .text
 	jmp rax
 
  div$5:
-	; result$quot = num / denum
+	; result.quot = num / denum
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [rbp + 28]
 	mov [rbp + 32], eax
 
  div$6:
-	; result$rem = num % denum
+	; result.rem = num % denum
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [rbp + 28]
@@ -1800,14 +1800,14 @@ section .text
 	jmp rax
 
  ldiv$5:
-	; result$quot = num / denum
+	; result.quot = num / denum
 	mov rax, [rbp + 24]
 	xor rdx, rdx
 	idiv qword [rbp + 32]
 	mov [rbp + 40], rax
 
  ldiv$6:
-	; result$rem = num % denum
+	; result.rem = num % denum
 	mov rax, [rbp + 24]
 	xor rdx, rdx
 	idiv qword [rbp + 32]

@@ -155,7 +155,7 @@ section .text
 	; £field838 -> £temporary841 = *£temporary841
 
  fopen$7:
-	; if £field838.open$0 -> £temporary841 != int4$0# goto 21
+	; if £field838.open -> £temporary841 != int4$0# goto 21
 	cmp dword [rsi], 0
 	jne fopen$21
 
@@ -912,7 +912,7 @@ section .text
 	; £field888 -> £temporary891 = *£temporary891
 
  fflush$7:
-	; if £field888.open$0 -> £temporary891 == int4$0# goto 20
+	; if £field888.open -> £temporary891 == int4$0# goto 20
 	cmp dword [rsi], 0
 	je fflush$20
 
@@ -1053,7 +1053,7 @@ section .text
 	; £field907 -> £temporary910 = *£temporary910
 
  fclose$13:
-	; if £field907.open$0 -> £temporary910 == int4$0# goto 26
+	; if £field907.open -> £temporary910 == int4$0# goto 26
 	cmp dword [rsi], 0
 	je fclose$26
 

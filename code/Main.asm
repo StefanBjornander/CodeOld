@@ -454,11 +454,11 @@ _start:
 	; empty
 
  main2$1:
-	; a$p = int8$0#
+	; a.p = int8$0#
 	mov qword [a], 0
 
  main2$2:
-	; a$q = int8$0#
+	; a.q = int8$0#
 	mov qword [a + 8], 0
 
  main2$3:

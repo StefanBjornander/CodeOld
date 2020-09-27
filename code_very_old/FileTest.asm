@@ -52,10 +52,10 @@ section .text
 	; post call
 
  file_test$5:
-	; £temporary3462 = return_value
+	; £temporary3489 = return_value
 
  file_test$6:
-	; inFilePtrPtr = £temporary3462
+	; inFilePtrPtr = £temporary3489
 	mov [rbp + 40], rbx
 
  file_test$7:
@@ -135,10 +135,10 @@ section .text
 	; post call
 
  file_test$24:
-	; £temporary3467 = return_value
+	; £temporary3494 = return_value
 
  file_test$25:
-	; outFilePtrPtr = £temporary3467
+	; outFilePtrPtr = £temporary3494
 	mov [rbp + 48], rbx
 
  file_test$26:
@@ -212,12 +212,12 @@ section .text
 	mov qword [rbp + 96], string_25i#
 
  file_test$42:
-	; £temporary3472 = &size
+	; £temporary3499 = &size
 	mov rsi, rbp
 	add rsi, 56
 
  file_test$43:
-	; parameter £temporary3472, offset 104
+	; parameter £temporary3499, offset 104
 	mov [rbp + 104], rsi
 
  file_test$44:
@@ -263,12 +263,12 @@ section .text
 	mov qword [rbp + 104], string_25lf#
 
  file_test$53:
-	; £temporary3476 = &inValue
+	; £temporary3503 = &inValue
 	mov rsi, rbp
 	add rsi, 64
 
  file_test$54:
-	; parameter £temporary3476, offset 112
+	; parameter £temporary3503, offset 112
 	mov [rbp + 112], rsi
 
  file_test$55:
@@ -291,7 +291,7 @@ section .text
 	fld qword [rbp + 64]
 
  file_test$59:
-	; parameter £temporary3478, offset 96
+	; parameter £temporary3505, offset 96
 	fstp qword [rbp + 96]
 
  file_test$60:
@@ -305,7 +305,7 @@ section .text
 	; post call
 
  file_test$62:
-	; £temporary3479 = return_value
+	; £temporary3506 = return_value
 
  file_test$63:
 	; pop float outValue
@@ -419,10 +419,10 @@ section .text
 	; post call
 
  file_test$88:
-	; £temporary3483 = return_value
+	; £temporary3510 = return_value
 
  file_test$89:
-	; if £temporary3483 != int4$0# goto 97
+	; if £temporary3510 != int4$0# goto 97
 	cmp ebx, 0
 	jne file_test$97
 
@@ -490,10 +490,10 @@ section .text
 	; post call
 
  file_test$104:
-	; £temporary3486 = return_value
+	; £temporary3513 = return_value
 
  file_test$105:
-	; parameter £temporary3486, offset 92
+	; parameter £temporary3513, offset 92
 	mov [rbp + 92], rbx
 
  file_test$106:
@@ -531,10 +531,10 @@ section .text
 	; post call
 
  file_test$113:
-	; £temporary3488 = return_value
+	; £temporary3515 = return_value
 
  file_test$114:
-	; if £temporary3488 != int4$0# goto 121
+	; if £temporary3515 != int4$0# goto 121
 	cmp ebx, 0
 	jne file_test$121
 
@@ -597,10 +597,10 @@ section .text
 	; post call
 
  file_test$128:
-	; £temporary3491 = return_value
+	; £temporary3518 = return_value
 
  file_test$129:
-	; parameter £temporary3491, offset 84
+	; parameter £temporary3518, offset 84
 	mov [rbp + 84], rbx
 
  file_test$130:
@@ -637,10 +637,10 @@ section .text
 	; post call
 
  file_test$137:
-	; £temporary3493 = return_value
+	; £temporary3520 = return_value
 
  file_test$138:
-	; inFilePtr = £temporary3493
+	; inFilePtr = £temporary3520
 	mov [rbp + 40], rbx
 
  file_test$139:
@@ -764,12 +764,12 @@ section .text
 	mov qword [rbp + 88], string_25i#
 
  file_test$166:
-	; £temporary3500 = &size
+	; £temporary3527 = &size
 	mov rsi, rbp
 	add rsi, 52
 
  file_test$167:
-	; parameter £temporary3500, offset 96
+	; parameter £temporary3527, offset 96
 	mov [rbp + 96], rsi
 
  file_test$168:
@@ -932,10 +932,10 @@ section .text
 	; post call
 
  file_test$202:
-	; £temporary3508 = return_value
+	; £temporary3535 = return_value
 
  file_test$203:
-	; inFilePtr = £temporary3508
+	; inFilePtr = £temporary3535
 	mov [rbp + 56], rbx
 
  file_test$204:
@@ -1015,10 +1015,10 @@ section .text
 	; post call
 
  file_test$221:
-	; £temporary3513 = return_value
+	; £temporary3540 = return_value
 
  file_test$222:
-	; outFilePtr = £temporary3513
+	; outFilePtr = £temporary3540
 	mov [rbp + 64], rbx
 
  file_test$223:
@@ -1094,21 +1094,21 @@ section .text
 	; post call
 
  file_test$239:
-	; £temporary3518 = return_value
+	; £temporary3545 = return_value
 
  file_test$240:
-	; £temporary3519 = int_to_int £temporary3518 (Signed_Int -> Signed_Char)
+	; £temporary3546 = int_to_int £temporary3545 (Signed_Int -> Signed_Char)
 	cmp ebx, 0
 	jge file_test$241
 	neg ebx
 	neg bl
 
  file_test$241:
-	; c = £temporary3519
+	; c = £temporary3546
 	mov [rbp + 72], bl
 
  file_test$242:
-	; £temporary3520 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3547 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 72]
 	and eax, 255
 	cmp al, 0
@@ -1117,7 +1117,7 @@ section .text
 	neg eax
 
  file_test$243:
-	; if £temporary3520 == int4$minus1# goto 257
+	; if £temporary3547 == int4$minus1# goto 257
 	cmp eax, -1
 	je file_test$257
 
@@ -1125,7 +1125,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  file_test$245:
-	; £temporary3522 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3549 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 72]
 	and eax, 255
 	cmp al, 0
@@ -1134,7 +1134,7 @@ section .text
 	neg eax
 
  file_test$246:
-	; parameter £temporary3522, offset 97
+	; parameter £temporary3549, offset 97
 	mov [rbp + 97], eax
 
  file_test$247:
@@ -1241,10 +1241,10 @@ section .text
 	; post call
 
  file_test$270:
-	; £temporary3529 = return_value
+	; £temporary3556 = return_value
 
  file_test$271:
-	; outFilePtr = £temporary3529
+	; outFilePtr = £temporary3556
 	mov [rbp + 40], rbx
 
  file_test$272:
@@ -1309,12 +1309,12 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  file_test$286:
-	; £temporary3534 = &size
+	; £temporary3561 = &size
 	mov rsi, rbp
 	add rsi, 48
 
  file_test$287:
-	; parameter £temporary3534, offset 76
+	; parameter £temporary3561, offset 76
 	mov [rbp + 76], rsi
 
  file_test$288:
@@ -1351,13 +1351,13 @@ section .text
 	jge file_test$308
 
  file_test$295:
-	; £temporary3538 = index * index
+	; £temporary3565 = index * index
 	mov eax, [rbp + 52]
 	xor edx, edx
 	imul dword [rbp + 52]
 
  file_test$296:
-	; £temporary3539 = int_to_float £temporary3538 (Signed_Int -> Double)
+	; £temporary3566 = int_to_float £temporary3565 (Signed_Int -> Double)
 	mov [container4bytes#], eax
 	fild word [container4bytes#]
 
@@ -1369,12 +1369,12 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  file_test$299:
-	; £temporary3540 = &value
+	; £temporary3567 = &value
 	mov rsi, rbp
 	add rsi, 56
 
  file_test$300:
-	; parameter £temporary3540, offset 88
+	; parameter £temporary3567, offset 88
 	mov [rbp + 88], rsi
 
  file_test$301:
@@ -1448,10 +1448,10 @@ section .text
 	; post call
 
  file_test$317:
-	; £temporary3543 = return_value
+	; £temporary3570 = return_value
 
  file_test$318:
-	; inFilePtr = £temporary3543
+	; inFilePtr = £temporary3570
 	mov [rbp + 40], rbx
 
  file_test$319:
@@ -1512,12 +1512,12 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  file_test$332:
-	; £temporary3548 = &size
+	; £temporary3575 = &size
 	mov rsi, rbp
 	add rsi, 48
 
  file_test$333:
-	; parameter £temporary3548, offset 76
+	; parameter £temporary3575, offset 76
 	mov [rbp + 76], rsi
 
  file_test$334:
@@ -1571,12 +1571,12 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  file_test$345:
-	; £temporary3551 = &arr
+	; £temporary3578 = &arr
 	mov rsi, rbp
 	add rsi, 52
 
  file_test$346:
-	; parameter £temporary3551, offset 156
+	; parameter £temporary3578, offset 156
 	mov [rbp + 156], rsi
 
  file_test$347:
@@ -1642,31 +1642,31 @@ section .text
 	mov [rbp + 168], eax
 
  file_test$361:
-	; £temporary3557 = int_to_int index (Signed_Int -> Array)
+	; £temporary3584 = int_to_int index (Signed_Int -> Array)
 	mov eax, [rbp + 132]
 	mov rbx, 4294967295
 	and rax, rbx
 
  file_test$362:
-	; £temporary3558 = £temporary3557 * Array_8#
+	; £temporary3585 = £temporary3584 * Array_8#
 	xor rdx, rdx
 	mul qword [Array_8#]
 
  file_test$363:
-	; £temporary3559 = arr + £temporary3558
+	; £temporary3586 = arr + £temporary3585
 	mov rsi, rbp
 	add rsi, 52
 	add rsi, rax
 
  file_test$364:
-	; £field3556 -> £temporary3559 = *£temporary3559
+	; £field3583 -> £temporary3586 = *£temporary3586
 
  file_test$365:
-	; push float £field3556 -> £temporary3559
+	; push float £field3583 -> £temporary3586
 	fld qword [rsi]
 
  file_test$366:
-	; parameter £field3556 -> £temporary3559, offset 172
+	; parameter £field3583 -> £temporary3586, offset 172
 	fstp qword [rbp + 172]
 
  file_test$367:
@@ -1729,10 +1729,10 @@ section .text
 	; post call
 
  file_test$380:
-	; £temporary3562 = return_value
+	; £temporary3589 = return_value
 
  file_test$381:
-	; inFilePtr = £temporary3562
+	; inFilePtr = £temporary3589
 	mov [rbp + 40], rbx
 
  file_test$382:
@@ -1793,12 +1793,12 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  file_test$395:
-	; £temporary3567 = &size
+	; £temporary3594 = &size
 	mov rsi, rbp
 	add rsi, 48
 
  file_test$396:
-	; parameter £temporary3567, offset 76
+	; parameter £temporary3594, offset 76
 	mov [rbp + 76], rsi
 
  file_test$397:
@@ -1862,12 +1862,12 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  file_test$410:
-	; £temporary3572 = &value
+	; £temporary3599 = &value
 	mov rsi, rbp
 	add rsi, 56
 
  file_test$411:
-	; parameter £temporary3572, offset 88
+	; parameter £temporary3599, offset 88
 	mov [rbp + 88], rsi
 
  file_test$412:
@@ -1991,10 +1991,10 @@ section .text
 	; post call
 
  file_test$439:
-	; £temporary3577 = return_value
+	; £temporary3604 = return_value
 
  file_test$440:
-	; inFilePtr = £temporary3577
+	; inFilePtr = £temporary3604
 	mov [rbp + 40], rbx
 
  file_test$441:
@@ -2055,12 +2055,12 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  file_test$454:
-	; £temporary3582 = &size
+	; £temporary3609 = &size
 	mov rsi, rbp
 	add rsi, 48
 
  file_test$455:
-	; parameter £temporary3582, offset 76
+	; parameter £temporary3609, offset 76
 	mov [rbp + 76], rsi
 
  file_test$456:
@@ -2099,13 +2099,13 @@ section .text
 	mov [rbp + 84], eax
 
  file_test$464:
-	; £temporary3584 = size * int4$8#
+	; £temporary3611 = size * int4$8#
 	mov eax, [rbp + 48]
 	xor edx, edx
 	imul dword [int4$8#]
 
  file_test$465:
-	; parameter £temporary3584, offset 88
+	; parameter £temporary3611, offset 88
 	mov [rbp + 88], eax
 
  file_test$466:
@@ -2146,10 +2146,10 @@ section .text
 	; post call
 
  file_test$473:
-	; £temporary3587 = return_value
+	; £temporary3614 = return_value
 
  file_test$474:
-	; p = £temporary3587
+	; p = £temporary3614
 	mov [rbp + 56], rbx
 
  file_test$475:
@@ -2207,18 +2207,18 @@ section .text
 	; post call
 
  file_test$487:
-	; £temporary3592 = int_to_int size (Signed_Int -> Pointer)
+	; £temporary3619 = int_to_int size (Signed_Int -> Pointer)
 	mov eax, [rbp + 48]
 	mov rbx, 4294967295
 	and rax, rbx
 
  file_test$488:
-	; £temporary3594 = £temporary3592 * int8$8#
+	; £temporary3621 = £temporary3619 * int8$8#
 	xor rdx, rdx
 	mul qword [int8$8#]
 
  file_test$489:
-	; endPtr = p + £temporary3594
+	; endPtr = p + £temporary3621
 	mov rbx, [rbp + 56]
 	add rbx, rax
 	mov [rbp + 64], rbx
@@ -2312,30 +2312,30 @@ section .text
 	mov [rbp + 108], eax
 
  file_test$509:
-	; £temporary3600 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary3627 = int_to_int index (Signed_Int -> Pointer)
 	mov eax, [rbp + 72]
 	mov rbx, 4294967295
 	and rax, rbx
 
  file_test$510:
-	; £temporary3601 = £temporary3600 * int8$8#
+	; £temporary3628 = £temporary3627 * int8$8#
 	xor rdx, rdx
 	mul qword [int8$8#]
 
  file_test$511:
-	; £temporary3602 = p + £temporary3601
+	; £temporary3629 = p + £temporary3628
 	mov rsi, [rbp + 56]
 	add rsi, rax
 
  file_test$512:
-	; £field3599 -> £temporary3602 = *£temporary3602
+	; £field3626 -> £temporary3629 = *£temporary3629
 
  file_test$513:
-	; push float £field3599 -> £temporary3602
+	; push float £field3626 -> £temporary3629
 	fld qword [rsi]
 
  file_test$514:
-	; parameter £field3599 -> £temporary3602, offset 112
+	; parameter £field3626 -> £temporary3629, offset 112
 	fstp qword [rbp + 112]
 
  file_test$515:
@@ -2650,10 +2650,10 @@ section .text
 	; post call
 
  file_test$590:
-	; £temporary3667 = return_value
+	; £temporary3694 = return_value
 
  file_test$591:
-	; outFilePtr = £temporary3667
+	; outFilePtr = £temporary3694
 	mov [rbp + 248], rbx
 
  file_test$592:
@@ -2781,10 +2781,10 @@ section .text
 	; post call
 
  file_test$620:
-	; £temporary3674 = return_value
+	; £temporary3701 = return_value
 
  file_test$621:
-	; inFilePtr = £temporary3674
+	; inFilePtr = £temporary3701
 	mov [rbp + 256], rbx
 
  file_test$622:
@@ -2860,10 +2860,10 @@ section .text
 	; post call
 
  file_test$638:
-	; £temporary3679 = return_value
+	; £temporary3706 = return_value
 
  file_test$639:
-	; if £temporary3679 != int4$0# goto 659
+	; if £temporary3706 != int4$0# goto 659
 	cmp ebx, 0
 	jne file_test$659
 
@@ -2871,12 +2871,12 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  file_test$641:
-	; £temporary3682 = &person
+	; £temporary3709 = &person
 	mov rsi, rbp
 	add rsi, 196
 
  file_test$642:
-	; parameter £temporary3682, offset 288
+	; parameter £temporary3709, offset 288
 	mov [rbp + 288], rsi
 
  file_test$643:
@@ -2994,10 +2994,10 @@ section .text
 	; post call
 
  file_test$668:
-	; £temporary3689 = return_value
+	; £temporary3716 = return_value
 
  file_test$669:
-	; inFilePtr = £temporary3689
+	; inFilePtr = £temporary3716
 	mov [rbp + 40], rbx
 
  file_test$670:
@@ -3099,13 +3099,13 @@ section .text
 	; post call
 
  file_test$692:
-	; £temporary3695 = return_value
+	; £temporary3722 = return_value
 
  file_test$693:
-	; £temporary3696 = int_to_int £temporary3695 (Signed_Int -> Unsigned_Int)
+	; £temporary3723 = int_to_int £temporary3722 (Signed_Int -> Unsigned_Int)
 
  file_test$694:
-	; u = £temporary3696
+	; u = £temporary3723
 	mov [rbp + 48], ebx
 
  file_test$695:
@@ -3132,24 +3132,24 @@ section .text
 	; post call
 
  file_test$700:
-	; £temporary3698 = return_value
+	; £temporary3725 = return_value
 
  file_test$701:
-	; £temporary3699 = int_to_int £temporary3698 (Signed_Int -> Signed_Char)
+	; £temporary3726 = int_to_int £temporary3725 (Signed_Int -> Signed_Char)
 	cmp ebx, 0
 	jge file_test$702
 	neg ebx
 	neg bl
 
  file_test$702:
-	; c = £temporary3699
+	; c = £temporary3726
 	mov [rbp + 52], bl
 
  file_test$703:
 	; call header integral zero 0 stack zero 0
 
  file_test$704:
-	; £temporary3700 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3727 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 52]
 	and eax, 255
 	cmp al, 0
@@ -3158,7 +3158,7 @@ section .text
 	neg eax
 
  file_test$705:
-	; parameter £temporary3700, offset 77
+	; parameter £temporary3727, offset 77
 	mov [rbp + 77], eax
 
  file_test$706:
@@ -3267,15 +3267,15 @@ section .text
 	; post call
 
  file_test$730:
-	; £temporary3706 = return_value
+	; £temporary3733 = return_value
 
  file_test$731:
-	; if £temporary3706 == int4$0# goto 734
+	; if £temporary3733 == int4$0# goto 734
 	cmp ebx, 0
 	je file_test$734
 
  file_test$732:
-	; £temporary3708 = string_Yes#
+	; £temporary3735 = string_Yes#
 	mov rax, string_Yes#
 
  file_test$733:
@@ -3283,11 +3283,11 @@ section .text
 	jmp file_test$735
 
  file_test$734:
-	; £temporary3708 = string_No#
+	; £temporary3735 = string_No#
 	mov rax, string_No#
 
  file_test$735:
-	; parameter £temporary3708, offset 72
+	; parameter £temporary3735, offset 72
 	mov [rbp + 72], rax
 
  file_test$736:
@@ -3327,15 +3327,15 @@ section .text
 	; post call
 
  file_test$744:
-	; £temporary3710 = return_value
+	; £temporary3737 = return_value
 
  file_test$745:
-	; if £temporary3710 == int4$0# goto 748
+	; if £temporary3737 == int4$0# goto 748
 	cmp ebx, 0
 	je file_test$748
 
  file_test$746:
-	; £temporary3712 = string_Yes#
+	; £temporary3739 = string_Yes#
 	mov rax, string_Yes#
 
  file_test$747:
@@ -3343,11 +3343,11 @@ section .text
 	jmp file_test$749
 
  file_test$748:
-	; £temporary3712 = string_No#
+	; £temporary3739 = string_No#
 	mov rax, string_No#
 
  file_test$749:
-	; parameter £temporary3712, offset 72
+	; parameter £temporary3739, offset 72
 	mov [rbp + 72], rax
 
  file_test$750:
@@ -3384,10 +3384,10 @@ section .text
 	; post call
 
  file_test$757:
-	; £temporary3714 = return_value
+	; £temporary3741 = return_value
 
  file_test$758:
-	; inOutFilePtr = £temporary3714
+	; inOutFilePtr = £temporary3741
 	mov [rbp + 48], rbx
 
  file_test$759:
@@ -3458,10 +3458,10 @@ section .text
 	; post call
 
  file_test$774:
-	; £temporary3719 = return_value
+	; £temporary3746 = return_value
 
  file_test$775:
-	; tempFilePtr = £temporary3719
+	; tempFilePtr = £temporary3746
 	mov [rbp + 40], rbx
 
  file_test$776:
@@ -3537,21 +3537,21 @@ section .text
 	; post call
 
  file_test$792:
-	; £temporary3724 = return_value
+	; £temporary3751 = return_value
 
  file_test$793:
-	; £temporary3725 = int_to_int £temporary3724 (Signed_Int -> Signed_Char)
+	; £temporary3752 = int_to_int £temporary3751 (Signed_Int -> Signed_Char)
 	cmp ebx, 0
 	jge file_test$794
 	neg ebx
 	neg bl
 
  file_test$794:
-	; c = £temporary3725
+	; c = £temporary3752
 	mov [rbp + 56], bl
 
  file_test$795:
-	; £temporary3726 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3753 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 56]
 	and eax, 255
 	cmp al, 0
@@ -3560,7 +3560,7 @@ section .text
 	neg eax
 
  file_test$796:
-	; if £temporary3726 == int4$minus1# goto 809
+	; if £temporary3753 == int4$minus1# goto 809
 	cmp eax, -1
 	je file_test$809
 
@@ -3571,7 +3571,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  file_test$799:
-	; £temporary3728 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3755 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 56]
 	and eax, 255
 	cmp al, 0
@@ -3580,7 +3580,7 @@ section .text
 	neg eax
 
  file_test$800:
-	; parameter £temporary3728, offset 81
+	; parameter £temporary3755, offset 81
 	mov [rbp + 81], eax
 
  file_test$801:
@@ -3594,10 +3594,10 @@ section .text
 	; post call
 
  file_test$803:
-	; £temporary3729 = return_value
+	; £temporary3756 = return_value
 
  file_test$804:
-	; parameter £temporary3729, offset 81
+	; parameter £temporary3756, offset 81
 	mov [rbp + 81], ebx
 
  file_test$805:
@@ -3679,21 +3679,21 @@ section .text
 	; post call
 
  file_test$822:
-	; £temporary3734 = return_value
+	; £temporary3761 = return_value
 
  file_test$823:
-	; £temporary3735 = int_to_int £temporary3734 (Signed_Int -> Signed_Char)
+	; £temporary3762 = int_to_int £temporary3761 (Signed_Int -> Signed_Char)
 	cmp ebx, 0
 	jge file_test$824
 	neg ebx
 	neg bl
 
  file_test$824:
-	; c = £temporary3735
+	; c = £temporary3762
 	mov [rbp + 56], bl
 
  file_test$825:
-	; £temporary3736 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3763 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 56]
 	and eax, 255
 	cmp al, 0
@@ -3702,7 +3702,7 @@ section .text
 	neg eax
 
  file_test$826:
-	; if £temporary3736 == int4$minus1# goto 834
+	; if £temporary3763 == int4$minus1# goto 834
 	cmp eax, -1
 	je file_test$834
 
@@ -3710,7 +3710,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  file_test$828:
-	; £temporary3738 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3765 = int_to_int c (Signed_Char -> Signed_Int)
 	mov al, [rbp + 56]
 	and eax, 255
 	cmp al, 0
@@ -3719,7 +3719,7 @@ section .text
 	neg eax
 
  file_test$829:
-	; parameter £temporary3738, offset 81
+	; parameter £temporary3765, offset 81
 	mov [rbp + 81], eax
 
  file_test$830:
