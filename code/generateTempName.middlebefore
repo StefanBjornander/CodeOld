@@ -9,13 +9,13 @@
 8: check track map float stack
 9: £temporary1038 = size * int2$1#
 10: £temporary1039 = name + £temporary1038
-11: £field1037 -> £temporary1039 = *£temporary1039
-12: £field1037 -> £temporary1039 = c
+11: £temporary1037 -> £temporary1039 = *£temporary1039
+12: £temporary1037 -> £temporary1039 = c
 13: £temporary1040 = size + int2$1#
 14: £temporary1042 = £temporary1040 * int2$1#
 15: £temporary1043 = name + £temporary1042
-16: £field1041 -> £temporary1043 = *£temporary1043
-17: £field1041 -> £temporary1043 = int1$0#
+16: £temporary1041 -> £temporary1043 = *£temporary1043
+17: £temporary1041 -> £temporary1043 = int1$0#
 18: call header
 19: parameter name, offset 19
 20: call function noellipse-noellipse fileexists
@@ -40,8 +40,8 @@
 39: call header
 40: £temporary1051 = g_tempSize * Array_4#
 41: £temporary1052 = g_tempArray + £temporary1051
-42: £field1050 -> £temporary1052 = *£temporary1052
-43: parameter £field1050 -> £temporary1052, offset 19
+42: £temporary1050 -> £temporary1052 = *£temporary1052
+43: parameter £temporary1050 -> £temporary1052, offset 19
 44: parameter name, offset 21
 45: call function noellipse-noellipse strcpy
 46: post call
@@ -49,8 +49,8 @@
 48: g_tempSize = g_tempSize + int2$1#
 49: £temporary1056 = £temporary1054 * Array_4#
 50: £temporary1057 = g_tempArray + £temporary1056
-51: £field1055 -> £temporary1057 = *£temporary1057
-52: return £field1055 -> £temporary1057
+51: £temporary1055 -> £temporary1057 = *£temporary1057
+52: return £temporary1055 -> £temporary1057
 53: goto <MiddleCode>
 54: goto <MiddleCode>
 55: goto <MiddleCode>

@@ -46,10 +46,10 @@ section .text
 	add rsi, rax
 
  @3013$existsTempName$8:
-	; £field1031 -> £temporary1034 = *£temporary1034
+	; £temporary1031 -> £temporary1034 = *£temporary1034
 
  @3013$existsTempName$9:
-	; parameter £field1031 -> £temporary1034, offset 68
+	; parameter £temporary1031 -> £temporary1034, offset 68
 	mov [rbp + 68], rsi
 
  @3013$existsTempName$10:
@@ -123,10 +123,10 @@ section .text
 	add rsi, rax
 
  @3020$generateTempName$5:
-	; £field1040 -> £temporary1043 = *£temporary1043
+	; £temporary1040 -> £temporary1043 = *£temporary1043
 
  @3020$generateTempName$6:
-	; £field1040 -> £temporary1043 = c
+	; £temporary1040 -> £temporary1043 = c
 	mov al, [rbp + 40]
 	mov [rsi], al
 
@@ -146,10 +146,10 @@ section .text
 	add rsi, rax
 
  @3020$generateTempName$10:
-	; £field1045 -> £temporary1048 = *£temporary1048
+	; £temporary1045 -> £temporary1048 = *£temporary1048
 
  @3020$generateTempName$11:
-	; £field1045 -> £temporary1048 = int1$0#
+	; £temporary1045 -> £temporary1048 = int1$0#
 	mov byte [rsi], 0
 
  @3020$generateTempName$12:
@@ -250,10 +250,10 @@ section .text
 	add rsi, rax
 
  @3020$generateTempName$33:
-	; £field1055 -> £temporary1058 = *£temporary1058
+	; £temporary1055 -> £temporary1058 = *£temporary1058
 
  @3020$generateTempName$34:
-	; parameter £field1055 -> £temporary1058, offset 65
+	; parameter £temporary1055 -> £temporary1058, offset 65
 	mov [rbp + 65], rsi
 
  @3020$generateTempName$35:
@@ -295,10 +295,10 @@ section .text
 	add rsi, rax
 
  @3020$generateTempName$43:
-	; £field1061 -> £temporary1064 = *£temporary1064
+	; £temporary1061 -> £temporary1064 = *£temporary1064
 
  @3020$generateTempName$44:
-	; return £field1061 -> £temporary1064
+	; return £temporary1061 -> £temporary1064
 	mov rbx, rsi
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -448,11 +448,11 @@ section .text
 	je tmpfile$20
 
  tmpfile$17:
-	; £field1073 -> stream = *stream
+	; £temporary1073 -> stream = *stream
 	mov rsi, [rbp + 24]
 
  tmpfile$18:
-	; £field1073 -> stream = int4$1#
+	; £temporary1073 -> stream = int4$1#
 	mov dword [rsi + 37], 1
 
  tmpfile$19:

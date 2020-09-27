@@ -1659,14 +1659,14 @@ section .text
 	add rsi, rax
 
  file_test$364:
-	; £field3583 -> £temporary3586 = *£temporary3586
+	; £temporary3583 -> £temporary3586 = *£temporary3586
 
  file_test$365:
-	; push float £field3583 -> £temporary3586
+	; push float £temporary3583 -> £temporary3586
 	fld qword [rsi]
 
  file_test$366:
-	; parameter £field3583 -> £temporary3586, offset 172
+	; parameter £temporary3583 -> £temporary3586, offset 172
 	fstp qword [rbp + 172]
 
  file_test$367:
@@ -2328,14 +2328,14 @@ section .text
 	add rsi, rax
 
  file_test$512:
-	; £field3626 -> £temporary3629 = *£temporary3629
+	; £temporary3626 -> £temporary3629 = *£temporary3629
 
  file_test$513:
-	; push float £field3626 -> £temporary3629
+	; push float £temporary3626 -> £temporary3629
 	fld qword [rsi]
 
  file_test$514:
-	; parameter £field3626 -> £temporary3629, offset 112
+	; parameter £temporary3626 -> £temporary3629, offset 112
 	fstp qword [rbp + 112]
 
  file_test$515:

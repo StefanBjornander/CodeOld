@@ -630,11 +630,11 @@ section .text
 	mov [rbp + 68], eax
 
  rec$8:
-	; £field3931 -> lowHeapPtr = *lowHeapPtr
+	; £temporary3931 -> lowHeapPtr = *lowHeapPtr
 	mov rsi, [rbp + 28]
 
  rec$9:
-	; parameter £field3931 -> lowHeapPtr, offset 72
+	; parameter £temporary3931 -> lowHeapPtr, offset 72
 	mov eax, [rsi]
 	mov [rbp + 72], eax
 
@@ -992,11 +992,11 @@ section .text
 	mov [rbp + 92], eax
 
  malloc_test6$18:
-	; £field3952 -> lowHeapPtr = *lowHeapPtr
+	; £temporary3952 -> lowHeapPtr = *lowHeapPtr
 	mov rsi, [rbp + 32]
 
  malloc_test6$19:
-	; parameter £field3952 -> lowHeapPtr, offset 96
+	; parameter £temporary3952 -> lowHeapPtr, offset 96
 	mov eax, [rsi]
 	mov [rbp + 96], eax
 

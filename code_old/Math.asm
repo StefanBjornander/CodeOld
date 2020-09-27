@@ -1004,11 +1004,11 @@ section .text
 	jne frexp$8
 
  frexp$4:
-	; £field459 -> p = *p
+	; £temporary459 -> p = *p
 	mov rsi, [rbp + 32]
 
  frexp$5:
-	; £field459 -> p = int4$0#
+	; £temporary459 -> p = int4$0#
 	mov dword [rsi], 0
 
  frexp$6:
@@ -1023,7 +1023,7 @@ section .text
 	jmp rax
 
  frexp$8:
-	; £field460 -> p = *p
+	; £temporary460 -> p = *p
 	mov rsi, [rbp + 32]
 
  frexp$9:
@@ -1112,7 +1112,7 @@ section .text
 	mov eax, [container4bytes#]
 
  frexp$28:
-	; £field460 -> p = £temporary465 + int4$1#
+	; £temporary460 -> p = £temporary465 + int4$1#
 	inc eax
 	mov [rsi], eax
 
@@ -1153,11 +1153,11 @@ section .text
 	fstp qword [rbp + 72]
 
  frexp$38:
-	; £field468 -> p = *p
+	; £temporary468 -> p = *p
 	mov rsi, [rbp + 32]
 
  frexp$39:
-	; £temporary469 = int_to_float £field468 -> p (Signed_Int -> Double)
+	; £temporary469 = int_to_float £temporary468 -> p (Signed_Int -> Double)
 	fild word [rsi]
 
  frexp$40:
@@ -5378,7 +5378,7 @@ section .text
 	je modf$34
 
  modf$10:
-	; £field781 -> p = *p
+	; £temporary781 -> p = *p
 	mov rsi, [rbp + 32]
 
  modf$11:
@@ -5476,7 +5476,7 @@ section .text
 	fchs
 
  modf$33:
-	; pop float £field781 -> p
+	; pop float £temporary781 -> p
 	fstp qword [rsi]
 
  modf$34:

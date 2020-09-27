@@ -220,11 +220,11 @@ section .text
 	mov rax, 1
 
  printChar$9:
-	; £field1594 -> stream = *stream
+	; £temporary1594 -> stream = *stream
 	mov rsi, [rbp + 37]
 
  printChar$10:
-	; £temporary1595 = int_to_int £field1594 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary1595 = int_to_int £temporary1594 -> stream (Unsigned_Int -> Unsigned_Long_Int)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
@@ -286,10 +286,10 @@ section .text
 	add rsi, rax
 
  printChar$25:
-	; £field1603 -> £temporary1606 = *£temporary1606
+	; £temporary1603 -> £temporary1606 = *£temporary1606
 
  printChar$26:
-	; £field1603 -> £temporary1606 = c
+	; £temporary1603 -> £temporary1606 = c
 	mov al, [rbp + 24]
 	mov [rsi], al
 
@@ -337,10 +337,10 @@ section .text
 	add rsi, rax
 
  printString$5:
-	; £field1611 -> £temporary1614 = *£temporary1614
+	; £temporary1611 -> £temporary1614 = *£temporary1614
 
  printString$6:
-	; if £field1611 -> £temporary1614 == int1$0# goto 57
+	; if £temporary1611 -> £temporary1614 == int1$0# goto 57
 	cmp byte [rsi], 0
 	je printString$57
 
@@ -359,10 +359,10 @@ section .text
 	add rsi, rax
 
  printString$10:
-	; £field1617 -> £temporary1620 = *£temporary1620
+	; £temporary1617 -> £temporary1620 = *£temporary1620
 
  printString$11:
-	; parameter £field1617 -> £temporary1620, offset 64
+	; parameter £temporary1617 -> £temporary1620, offset 64
 	mov al, [rsi]
 	mov [rbp + 64], al
 
@@ -413,10 +413,10 @@ section .text
 	add rsi, rax
 
  printString$22:
-	; £field1624 -> £temporary1627 = *£temporary1627
+	; £temporary1624 -> £temporary1627 = *£temporary1627
 
  printString$23:
-	; if £field1624 -> £temporary1627 == int1$0# goto 57
+	; if £temporary1624 -> £temporary1627 == int1$0# goto 57
 	cmp byte [rsi], 0
 	je printString$57
 
@@ -435,10 +435,10 @@ section .text
 	add rsi, rax
 
  printString$27:
-	; £field1631 -> £temporary1634 = *£temporary1634
+	; £temporary1631 -> £temporary1634 = *£temporary1634
 
  printString$28:
-	; parameter £field1631 -> £temporary1634, offset 64
+	; parameter £temporary1631 -> £temporary1634, offset 64
 	mov al, [rsi]
 	mov [rbp + 64], al
 
@@ -1849,16 +1849,16 @@ section .text
 	je checkWidthAndPrecision$9
 
  checkWidthAndPrecision$1:
-	; £field1745 -> widthPtr = *widthPtr
+	; £temporary1745 -> widthPtr = *widthPtr
 	mov rsi, [rbp + 32]
 
  checkWidthAndPrecision$2:
-	; if £field1745 -> widthPtr != int4$minus1# goto 9
+	; if £temporary1745 -> widthPtr != int4$minus1# goto 9
 	cmp dword [rsi], -1
 	jne checkWidthAndPrecision$9
 
  checkWidthAndPrecision$3:
-	; £field1748 -> widthPtr = *widthPtr
+	; £temporary1748 -> widthPtr = *widthPtr
 	mov rsi, [rbp + 32]
 
  checkWidthAndPrecision$4:
@@ -1874,10 +1874,10 @@ section .text
 	; £temporary1753 = int_to_int £temporary1751 (Pointer -> Pointer)
 
  checkWidthAndPrecision$7:
-	; £field1754 -> £temporary1753 = *£temporary1753
+	; £temporary1754 -> £temporary1753 = *£temporary1753
 
  checkWidthAndPrecision$8:
-	; £field1748 -> widthPtr = £field1754 -> £temporary1753
+	; £temporary1748 -> widthPtr = £temporary1754 -> £temporary1753
 	mov eax, [rdi]
 	mov [rsi], eax
 
@@ -1887,16 +1887,16 @@ section .text
 	je checkWidthAndPrecision$18
 
  checkWidthAndPrecision$10:
-	; £field1756 -> precisionPtr = *precisionPtr
+	; £temporary1756 -> precisionPtr = *precisionPtr
 	mov rsi, [rbp + 40]
 
  checkWidthAndPrecision$11:
-	; if £field1756 -> precisionPtr != int4$minus1# goto 18
+	; if £temporary1756 -> precisionPtr != int4$minus1# goto 18
 	cmp dword [rsi], -1
 	jne checkWidthAndPrecision$18
 
  checkWidthAndPrecision$12:
-	; £field1759 -> precisionPtr = *precisionPtr
+	; £temporary1759 -> precisionPtr = *precisionPtr
 	mov rsi, [rbp + 40]
 
  checkWidthAndPrecision$13:
@@ -1912,10 +1912,10 @@ section .text
 	; £temporary1764 = int_to_int £temporary1762 (Pointer -> Pointer)
 
  checkWidthAndPrecision$16:
-	; £field1765 -> £temporary1764 = *£temporary1764
+	; £temporary1765 -> £temporary1764 = *£temporary1764
 
  checkWidthAndPrecision$17:
-	; £field1759 -> precisionPtr = £field1765 -> £temporary1764
+	; £temporary1759 -> precisionPtr = £temporary1765 -> £temporary1764
 	mov eax, [rdi]
 	mov [rsi], eax
 
@@ -1979,11 +1979,11 @@ section .text
 	; function end testX
 
  printArgument:
-	; £field1767 -> format = *format
+	; £temporary1767 -> format = *format
 	mov rsi, [rbp + 24]
 
  printArgument$1:
-	; c = £field1767 -> format
+	; c = £temporary1767 -> format
 	mov al, [rsi]
 	mov [rbp + 88], al
 
@@ -2098,10 +2098,10 @@ section .text
 	; £temporary1772 = int_to_int £temporary1770 (Pointer -> Pointer)
 
  printArgument$25:
-	; £field1773 -> £temporary1772 = *£temporary1772
+	; £temporary1773 -> £temporary1772 = *£temporary1772
 
  printArgument$26:
-	; £temporary1774 = int_to_int £field1773 -> £temporary1772 (Signed_Int -> Signed_Short_Int)
+	; £temporary1774 = int_to_int £temporary1773 -> £temporary1772 (Signed_Int -> Signed_Short_Int)
 	mov eax, [rsi]
 	cmp eax, 0
 	jge printArgument$27
@@ -2143,10 +2143,10 @@ section .text
 	; £temporary1780 = int_to_int £temporary1778 (Pointer -> Pointer)
 
  printArgument$34:
-	; £field1781 -> £temporary1780 = *£temporary1780
+	; £temporary1781 -> £temporary1780 = *£temporary1780
 
  printArgument$35:
-	; longValue = £field1781 -> £temporary1780
+	; longValue = £temporary1781 -> £temporary1780
 	mov rax, [rsi]
 	mov [rbp + 114], rax
 
@@ -2167,10 +2167,10 @@ section .text
 	; £temporary1786 = int_to_int £temporary1784 (Pointer -> Pointer)
 
  printArgument$40:
-	; £field1787 -> £temporary1786 = *£temporary1786
+	; £temporary1787 -> £temporary1786 = *£temporary1786
 
  printArgument$41:
-	; £temporary1788 = int_to_int £field1787 -> £temporary1786 (Signed_Int -> Signed_Long_Int)
+	; £temporary1788 = int_to_int £temporary1787 -> £temporary1786 (Signed_Int -> Signed_Long_Int)
 	mov eax, [rsi]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2189,7 +2189,7 @@ section .text
 	je printArgument$50
 
  printArgument$44:
-	; £field1792 -> negativePtr = *negativePtr
+	; £temporary1792 -> negativePtr = *negativePtr
 	mov rsi, [rbp + 80]
 
  printArgument$45:
@@ -2210,7 +2210,7 @@ section .text
 	mov eax, 0
 
  printArgument$49:
-	; £field1792 -> negativePtr = £temporary1794
+	; £temporary1792 -> negativePtr = £temporary1794
 	mov [rsi], eax
 
  printArgument$50:
@@ -2327,10 +2327,10 @@ section .text
 	; £temporary1805 = int_to_int £temporary1803 (Pointer -> Pointer)
 
  printArgument$76:
-	; £field1806 -> £temporary1805 = *£temporary1805
+	; £temporary1806 -> £temporary1805 = *£temporary1805
 
  printArgument$77:
-	; £temporary1807 = int_to_int £field1806 -> £temporary1805 (Signed_Int -> Signed_Char)
+	; £temporary1807 = int_to_int £temporary1806 -> £temporary1805 (Signed_Int -> Signed_Char)
 	mov eax, [rsi]
 	cmp eax, 0
 	jge printArgument$78
@@ -2415,10 +2415,10 @@ section .text
 	; £temporary1815 = int_to_int £temporary1813 (Pointer -> Pointer)
 
  printArgument$96:
-	; £field1816 -> £temporary1815 = *£temporary1815
+	; £temporary1816 -> £temporary1815 = *£temporary1815
 
  printArgument$97:
-	; stringValue = £field1816 -> £temporary1815
+	; stringValue = £temporary1816 -> £temporary1815
 	mov rax, [rsi]
 	mov [rbp + 114], rax
 
@@ -2559,10 +2559,10 @@ section .text
 	; £temporary1830 = int_to_int £temporary1828 (Pointer -> Pointer)
 
  printArgument$130:
-	; £field1831 -> £temporary1830 = *£temporary1830
+	; £temporary1831 -> £temporary1830 = *£temporary1830
 
  printArgument$131:
-	; £temporary1832 = int_to_int £field1831 -> £temporary1830 (Unsigned_Int -> Unsigned_Short_Int)
+	; £temporary1832 = int_to_int £temporary1831 -> £temporary1830 (Unsigned_Int -> Unsigned_Short_Int)
 	mov eax, [rsi]
 
  printArgument$132:
@@ -2596,10 +2596,10 @@ section .text
 	; £temporary1838 = int_to_int £temporary1836 (Pointer -> Pointer)
 
  printArgument$139:
-	; £field1839 -> £temporary1838 = *£temporary1838
+	; £temporary1839 -> £temporary1838 = *£temporary1838
 
  printArgument$140:
-	; value = £field1839 -> £temporary1838
+	; value = £temporary1839 -> £temporary1838
 	mov rax, [rsi]
 	mov [rbp + 122], rax
 
@@ -2620,10 +2620,10 @@ section .text
 	; £temporary1844 = int_to_int £temporary1842 (Pointer -> Pointer)
 
  printArgument$145:
-	; £field1845 -> £temporary1844 = *£temporary1844
+	; £temporary1845 -> £temporary1844 = *£temporary1844
 
  printArgument$146:
-	; £temporary1846 = int_to_int £field1845 -> £temporary1844 (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary1846 = int_to_int £temporary1845 -> £temporary1844 (Unsigned_Int -> Unsigned_Long_Int)
 	mov eax, [rsi]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2764,10 +2764,10 @@ section .text
 	; £temporary1858 = int_to_int £temporary1856 (Pointer -> Pointer)
 
  printArgument$177:
-	; £field1859 -> £temporary1858 = *£temporary1858
+	; £temporary1859 -> £temporary1858 = *£temporary1858
 
  printArgument$178:
-	; push float £field1859 -> £temporary1858
+	; push float £temporary1859 -> £temporary1858
 	fld qword [rsi]
 
  printArgument$179:
@@ -2828,10 +2828,10 @@ section .text
 	; £temporary1865 = int_to_int £temporary1863 (Pointer -> Pointer)
 
  printArgument$193:
-	; £field1866 -> £temporary1865 = *£temporary1865
+	; £temporary1866 -> £temporary1865 = *£temporary1865
 
  printArgument$194:
-	; push float £field1866 -> £temporary1865
+	; push float £temporary1866 -> £temporary1865
 	fld qword [rsi]
 
  printArgument$195:
@@ -2844,7 +2844,7 @@ section .text
 	je printArgument$205
 
  printArgument$197:
-	; £field1870 -> negativePtr = *negativePtr
+	; £temporary1870 -> negativePtr = *negativePtr
 	mov rsi, [rbp + 80]
 
  printArgument$198:
@@ -2875,7 +2875,7 @@ section .text
 	mov eax, 0
 
  printArgument$204:
-	; £field1870 -> negativePtr = £temporary1872
+	; £temporary1870 -> negativePtr = £temporary1872
 	mov [rsi], eax
 
  printArgument$205:
@@ -3311,10 +3311,10 @@ section .text
 	; £temporary1900 = int_to_int £temporary1898 (Pointer -> Pointer)
 
  printArgument$302:
-	; £field1901 -> £temporary1900 = *£temporary1900
+	; £temporary1901 -> £temporary1900 = *£temporary1900
 
  printArgument$303:
-	; ptrValue = £field1901 -> £temporary1900
+	; ptrValue = £temporary1901 -> £temporary1900
 	mov rax, [rsi]
 	mov [rbp + 106], rax
 
@@ -3415,10 +3415,10 @@ section .text
 	; £temporary1910 = int_to_int £temporary1908 (Pointer -> Pointer)
 
  printArgument$327:
-	; £field1911 -> £temporary1910 = *£temporary1910
+	; £temporary1911 -> £temporary1910 = *£temporary1910
 
  printArgument$328:
-	; ptrValue = £field1911 -> £temporary1910
+	; ptrValue = £temporary1911 -> £temporary1910
 	mov rax, [rsi]
 	mov [rbp + 106], rax
 
@@ -3435,10 +3435,10 @@ section .text
 	; £temporary1916 = int_to_int £temporary1914 (Pointer -> Pointer)
 
  printArgument$332:
-	; £field1917 -> £temporary1916 = *£temporary1916
+	; £temporary1917 -> £temporary1916 = *£temporary1916
 
  printArgument$333:
-	; intPtr = £field1917 -> £temporary1916
+	; intPtr = £temporary1917 -> £temporary1916
 	mov rax, [rsi]
 	mov [rbp + 90], rax
 
@@ -3482,11 +3482,11 @@ section .text
 	mov [rbp + 32], rbx
 
  printArgument$343:
-	; £field1920 -> intPtr = *intPtr
+	; £temporary1920 -> intPtr = *intPtr
 	mov rsi, [rbp + 90]
 
  printArgument$344:
-	; £field1920 -> intPtr = g_outChars
+	; £temporary1920 -> intPtr = g_outChars
 	mov eax, [g_outChars]
 	mov [rsi], eax
 
@@ -3637,10 +3637,10 @@ section .text
 	add rsi, rax
 
  printFormat$18:
-	; £field1940 -> £temporary1943 = *£temporary1943
+	; £temporary1940 -> £temporary1943 = *£temporary1943
 
  printFormat$19:
-	; if £field1940 -> £temporary1943 == int1$0# goto 290
+	; if £temporary1940 -> £temporary1943 == int1$0# goto 290
 	cmp byte [rsi], 0
 	je printFormat$290
 
@@ -3656,10 +3656,10 @@ section .text
 	add rsi, rax
 
  printFormat$22:
-	; £field1946 -> £temporary1949 = *£temporary1949
+	; £temporary1946 -> £temporary1949 = *£temporary1949
 
  printFormat$23:
-	; c = £field1946 -> £temporary1949
+	; c = £temporary1946 -> £temporary1949
 	mov al, [rsi]
 	mov [rbp + 100], al
 
@@ -3929,10 +3929,10 @@ section .text
 	add rsi, rax
 
  printFormat$82:
-	; £field1952 -> £temporary1955 = *£temporary1955
+	; £temporary1952 -> £temporary1955 = *£temporary1955
 
  printFormat$83:
-	; £temporary1956 = &£field1952 -> £temporary1955
+	; £temporary1956 = &£temporary1952 -> £temporary1955
 
  printFormat$84:
 	; parameter £temporary1956, offset 129
@@ -4085,10 +4085,10 @@ section .text
 	add rsi, rax
 
  printFormat$117:
-	; £field1963 -> £temporary1966 = *£temporary1966
+	; £temporary1963 -> £temporary1966 = *£temporary1966
 
  printFormat$118:
-	; £temporary1967 = &£field1963 -> £temporary1966
+	; £temporary1967 = &£temporary1963 -> £temporary1966
 
  printFormat$119:
 	; parameter £temporary1967, offset 137
@@ -4312,10 +4312,10 @@ section .text
 	add rsi, rax
 
  printFormat$168:
-	; £field1984 -> £temporary1987 = *£temporary1987
+	; £temporary1984 -> £temporary1987 = *£temporary1987
 
  printFormat$169:
-	; £temporary1988 = &£field1984 -> £temporary1987
+	; £temporary1988 = &£temporary1984 -> £temporary1987
 
  printFormat$170:
 	; parameter £temporary1988, offset 141
@@ -4421,10 +4421,10 @@ section .text
 	add rsi, rax
 
  printFormat$193:
-	; £field1990 -> £temporary1993 = *£temporary1993
+	; £temporary1990 -> £temporary1993 = *£temporary1993
 
  printFormat$194:
-	; £temporary1994 = &£field1990 -> £temporary1993
+	; £temporary1994 = &£temporary1990 -> £temporary1993
 
  printFormat$195:
 	; parameter £temporary1994, offset 133
@@ -4562,10 +4562,10 @@ section .text
 	add rsi, rax
 
  printFormat$224:
-	; £field2001 -> £temporary2004 = *£temporary2004
+	; £temporary2001 -> £temporary2004 = *£temporary2004
 
  printFormat$225:
-	; £temporary2005 = &£field2001 -> £temporary2004
+	; £temporary2005 = &£temporary2001 -> £temporary2004
 
  printFormat$226:
 	; parameter £temporary2005, offset 137
@@ -4726,10 +4726,10 @@ section .text
 	add rsi, rax
 
  printFormat$259:
-	; £field2016 -> £temporary2019 = *£temporary2019
+	; £temporary2016 -> £temporary2019 = *£temporary2019
 
  printFormat$260:
-	; c = £field2016 -> £temporary2019
+	; c = £temporary2016 -> £temporary2019
 	mov al, [rsi]
 	mov [rbp + 100], al
 
@@ -4880,10 +4880,10 @@ section .text
 	add rsi, rax
 
  printFormat$295:
-	; £field2029 -> £temporary2032 = *£temporary2032
+	; £temporary2029 -> £temporary2032 = *£temporary2032
 
  printFormat$296:
-	; £field2029 -> £temporary2032 = int1$0#
+	; £temporary2029 -> £temporary2032 = int1$0#
 	mov byte [rsi], 0
 
  printFormat$297:

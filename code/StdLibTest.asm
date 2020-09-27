@@ -16,7 +16,7 @@
 	extern atol
 	extern getenv
 	extern system
-	extern _abs
+	extern @abs
 	extern labs
 	extern div
 	extern ldiv
@@ -30,10 +30,10 @@ section .text
 	mov rsi, [rbp + 24]
 
  compare$1:
-	; £field3955 -> £temporary3954 = *£temporary3954
+	; £temporary3955 -> £temporary3954 = *£temporary3954
 
  compare$2:
-	; intValue1 = £field3955 -> £temporary3954
+	; intValue1 = £temporary3955 -> £temporary3954
 	mov eax, [rsi]
 	mov [rbp + 40], eax
 
@@ -42,10 +42,10 @@ section .text
 	mov rsi, [rbp + 32]
 
  compare$4:
-	; £field3957 -> £temporary3956 = *£temporary3956
+	; £temporary3957 -> £temporary3956 = *£temporary3956
 
  compare$5:
-	; intValue2 = £field3957 -> £temporary3956
+	; intValue2 = £temporary3957 -> £temporary3956
 	mov eax, [rsi]
 	mov [rbp + 44], eax
 
@@ -99,10 +99,10 @@ section .text
 	mov rsi, [rbp + 24]
 
  reverse_compare$1:
-	; £field3963 -> £temporary3962 = *£temporary3962
+	; £temporary3963 -> £temporary3962 = *£temporary3962
 
  reverse_compare$2:
-	; intValue1 = £field3963 -> £temporary3962
+	; intValue1 = £temporary3963 -> £temporary3962
 	mov eax, [rsi]
 	mov [rbp + 40], eax
 
@@ -111,10 +111,10 @@ section .text
 	mov rsi, [rbp + 32]
 
  reverse_compare$4:
-	; £field3965 -> £temporary3964 = *£temporary3964
+	; £temporary3965 -> £temporary3964 = *£temporary3964
 
  reverse_compare$5:
-	; intValue2 = £field3965 -> £temporary3964
+	; intValue2 = £temporary3965 -> £temporary3964
 	mov eax, [rsi]
 	mov [rbp + 44], eax
 
@@ -770,11 +770,11 @@ section .text
 	mov dword [rbp + 80], -3
 
  stdlib_test$103:
-	; call function noellipse-noellipse abs
+	; call function noellipse-noellipse @abs
 	mov qword [rbp + 56], stdlib_test$104
 	mov [rbp + 64], rbp
 	add rbp, 56
-	jmp _abs
+	jmp @abs
 
  stdlib_test$104:
 	; post call
@@ -794,11 +794,11 @@ section .text
 	mov dword [rbp + 84], 3
 
  stdlib_test$109:
-	; call function noellipse-noellipse abs
+	; call function noellipse-noellipse @abs
 	mov qword [rbp + 60], stdlib_test$110
 	mov [rbp + 68], rbp
 	add rbp, 60
-	jmp _abs
+	jmp @abs
 
  stdlib_test$110:
 	; post call
@@ -1139,10 +1139,10 @@ section .text
 	add rsi, rax
 
  stdlib_test$177:
-	; £field4026 -> £temporary4024 = *£temporary4024
+	; £temporary4026 -> £temporary4024 = *£temporary4024
 
  stdlib_test$178:
-	; parameter £field4026 -> £temporary4024, offset 80
+	; parameter £temporary4026 -> £temporary4024, offset 80
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1251,10 +1251,10 @@ section .text
 	add rsi, rax
 
  stdlib_test$201:
-	; £field4036 -> £temporary4034 = *£temporary4034
+	; £temporary4036 -> £temporary4034 = *£temporary4034
 
  stdlib_test$202:
-	; parameter £field4036 -> £temporary4034, offset 80
+	; parameter £temporary4036 -> £temporary4034, offset 80
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1363,10 +1363,10 @@ section .text
 	add rsi, rax
 
  stdlib_test$225:
-	; £field4046 -> £temporary4044 = *£temporary4044
+	; £temporary4046 -> £temporary4044 = *£temporary4044
 
  stdlib_test$226:
-	; parameter £field4046 -> £temporary4044, offset 80
+	; parameter £temporary4046 -> £temporary4044, offset 80
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 

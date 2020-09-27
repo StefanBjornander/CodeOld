@@ -15,11 +15,11 @@ section .text
 	je setlocale$5
 
  setlocale$2:
-	; £field378 -> g_currStructPtr = *g_currStructPtr
+	; £temporary378 -> g_currStructPtr = *g_currStructPtr
 	mov rsi, [@1544$g_currStructPtr]
 
  setlocale$3:
-	; £temporary379 = £field378 -> g_currStructPtr
+	; £temporary379 = £temporary378 -> g_currStructPtr
 	mov rax, [rsi]
 
  setlocale$4:
@@ -78,10 +78,10 @@ section .text
 	add rsi, rax
 
  setlocale$16:
-	; £field383 -> £temporary386 = *£temporary386
+	; £temporary383 -> £temporary386 = *£temporary386
 
  setlocale$17:
-	; parameter £field383.name$0 -> £temporary386, offset 80
+	; parameter £temporary383.name -> £temporary386, offset 80
 	mov rax, [rsi]
 	mov [rbp + 80], rax
 
@@ -120,10 +120,10 @@ section .text
 	add rsi, rax
 
  setlocale$25:
-	; £field389 -> £temporary392 = *£temporary392
+	; £temporary389 -> £temporary392 = *£temporary392
 
  setlocale$26:
-	; £temporary393 = &£field389 -> £temporary392
+	; £temporary393 = &£temporary389 -> £temporary392
 
  setlocale$27:
 	; g_currStructPtr = £temporary393
@@ -158,11 +158,11 @@ section .text
 	je localeconv$4
 
  localeconv$1:
-	; £field395 -> g_currStructPtr = *g_currStructPtr
+	; £temporary395 -> g_currStructPtr = *g_currStructPtr
 	mov rsi, [@1544$g_currStructPtr]
 
  localeconv$2:
-	; £temporary396 = £field395 -> g_currStructPtr
+	; £temporary396 = £temporary395 -> g_currStructPtr
 	mov rbx, [rsi + 8]
 
  localeconv$3:

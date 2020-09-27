@@ -57,11 +57,11 @@ section .text
 	je time$9
 
  time$7:
-	; £field2269 -> timePtr = *timePtr
+	; £temporary2269 -> timePtr = *timePtr
 	mov rsi, [rbp + 24]
 
  time$8:
-	; £field2269 -> timePtr = time
+	; £temporary2269 -> timePtr = time
 	mov rax, [rbp + 32]
 	mov [rsi], rax
 
@@ -82,11 +82,11 @@ section .text
 	je mktime$27
 
  mktime$1:
-	; £field2272 -> tp = *tp
+	; £temporary2272 -> tp = *tp
 	mov rsi, [rbp + 24]
 
  mktime$2:
-	; £temporary2273 = £field2272 -> tp - int4$69#
+	; £temporary2273 = £temporary2272 -> tp - int4$69#
 	mov eax, [rsi + 20]
 	sub eax, 69
 
@@ -109,11 +109,11 @@ section .text
 	mov [rbp + 32], rax
 
  mktime$6:
-	; £field2276 -> tp = *tp
+	; £temporary2276 -> tp = *tp
 	mov rsi, [rbp + 24]
 
  mktime$7:
-	; £temporary2277 = £field2276 -> tp - int4$70#
+	; £temporary2277 = £temporary2276 -> tp - int4$70#
 	mov eax, [rsi + 20]
 	sub eax, 70
 
@@ -136,11 +136,11 @@ section .text
 	add rax, [rbp + 32]
 
  mktime$11:
-	; £field2281 -> tp = *tp
+	; £temporary2281 -> tp = *tp
 	mov rsi, [rbp + 24]
 
  mktime$12:
-	; £temporary2282 = int_to_int £field2281 -> tp (Signed_Int -> Signed_Long_Int)
+	; £temporary2282 = int_to_int £temporary2281 -> tp (Signed_Int -> Signed_Long_Int)
 	mov ebx, [rsi + 28]
 	mov rcx, 4294967295
 	and rbx, rcx
@@ -162,11 +162,11 @@ section .text
 	mov rbx, rax
 
  mktime$15:
-	; £field2285 -> tp = *tp
+	; £temporary2285 -> tp = *tp
 	mov rsi, [rbp + 24]
 
  mktime$16:
-	; £temporary2286 = int_to_int £field2285 -> tp (Signed_Int -> Signed_Long_Int)
+	; £temporary2286 = int_to_int £temporary2285 -> tp (Signed_Int -> Signed_Long_Int)
 	mov eax, [rsi + 8]
 	mov rcx, 4294967295
 	and rax, rcx
@@ -185,11 +185,11 @@ section .text
 	add rbx, rax
 
  mktime$19:
-	; £field2289 -> tp = *tp
+	; £temporary2289 -> tp = *tp
 	mov rsi, [rbp + 24]
 
  mktime$20:
-	; £temporary2290 = int_to_int £field2289 -> tp (Signed_Int -> Signed_Long_Int)
+	; £temporary2290 = int_to_int £temporary2289 -> tp (Signed_Int -> Signed_Long_Int)
 	mov eax, [rsi + 4]
 	mov rcx, 4294967295
 	and rax, rcx
@@ -208,11 +208,11 @@ section .text
 	add rbx, rax
 
  mktime$23:
-	; £field2293 -> tp = *tp
+	; £temporary2293 -> tp = *tp
 	mov rsi, [rbp + 24]
 
  mktime$24:
-	; £temporary2294 = int_to_int £field2293 -> tp (Signed_Int -> Signed_Long_Int)
+	; £temporary2294 = int_to_int £temporary2293 -> tp (Signed_Int -> Signed_Long_Int)
 	mov eax, [rsi]
 	mov rcx, 4294967295
 	and rax, rcx
@@ -253,11 +253,11 @@ section .text
 	je gmtime$87
 
  gmtime$2:
-	; £field2297 -> timePtr = *timePtr
+	; £temporary2297 -> timePtr = *timePtr
 	mov rsi, [rbp + 24]
 
  gmtime$3:
-	; time = £field2297 -> timePtr
+	; time = £temporary2297 -> timePtr
 	mov rax, [rsi]
 	mov [rbp + 36], rax
 
@@ -282,7 +282,7 @@ section .text
 	neg eax
 
  gmtime$7:
-	; g_timeStruct$tm_hour = £temporary2301
+	; g_timeStruct.tm_hour = £temporary2301
 	mov [@4764$g_timeStruct + 8], eax
 
  gmtime$8:
@@ -305,7 +305,7 @@ section .text
 	neg eax
 
  gmtime$11:
-	; g_timeStruct$tm_min = £temporary2305
+	; g_timeStruct.tm_min = £temporary2305
 	mov [@4764$g_timeStruct + 4], eax
 
  gmtime$12:
@@ -328,7 +328,7 @@ section .text
 	neg edx
 
  gmtime$15:
-	; g_timeStruct$tm_sec = £temporary2309
+	; g_timeStruct.tm_sec = £temporary2309
 	mov [@4764$g_timeStruct], edx
 
  gmtime$16:
@@ -356,7 +356,7 @@ section .text
 	neg eax
 
  gmtime$20:
-	; g_timeStruct$tm_wday = £temporary2314
+	; g_timeStruct.tm_wday = £temporary2314
 	mov [@4764$g_timeStruct + 24], eax
 
  gmtime$21:
@@ -381,7 +381,7 @@ section .text
 	neg edx
 
  gmtime$25:
-	; g_timeStruct$tm_wday = £temporary2318
+	; g_timeStruct.tm_wday = £temporary2318
 	mov [@4764$g_timeStruct + 24], edx
 
  gmtime$26:
@@ -470,7 +470,7 @@ section .text
 	jge gmtime$83
 
  gmtime$43:
-	; g_timeStruct$tm_year = year - int4$1900#
+	; g_timeStruct.tm_year = year - int4$1900#
 	mov eax, [rbp + 32]
 	sub eax, 1900
 	mov [@4764$g_timeStruct + 20], eax
@@ -484,7 +484,7 @@ section .text
 	neg eax
 
  gmtime$45:
-	; g_timeStruct$tm_yday = £temporary2335
+	; g_timeStruct.tm_yday = £temporary2335
 	mov [@4764$g_timeStruct + 28], eax
 
  gmtime$46:
@@ -574,10 +574,10 @@ section .text
 	add rsi, rax
 
  gmtime$66:
-	; £field2350 -> £temporary2353 = *£temporary2353
+	; £temporary2350 -> £temporary2353 = *£temporary2353
 
  gmtime$67:
-	; £temporary2354 = int_to_int £field2350 -> £temporary2353 (Signed_Int -> Signed_Long_Int)
+	; £temporary2354 = int_to_int £temporary2350 -> £temporary2353 (Signed_Int -> Signed_Long_Int)
 	mov eax, [rsi]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -609,10 +609,10 @@ section .text
 	add rsi, rax
 
  gmtime$72:
-	; £field2356 -> £temporary2359 = *£temporary2359
+	; £temporary2356 -> £temporary2359 = *£temporary2359
 
  gmtime$73:
-	; £temporary2360 = int_to_int £field2356 -> £temporary2359 (Signed_Int -> Signed_Long_Int)
+	; £temporary2360 = int_to_int £temporary2356 -> £temporary2359 (Signed_Int -> Signed_Long_Int)
 	mov eax, [rsi]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -634,7 +634,7 @@ section .text
 	jmp gmtime$63
 
  gmtime$77:
-	; g_timeStruct$tm_mon = month
+	; g_timeStruct.tm_mon = month
 	mov eax, [rbp + 116]
 	mov [@4764$g_timeStruct + 16], eax
 
@@ -651,11 +651,11 @@ section .text
 	neg eax
 
  gmtime$80:
-	; g_timeStruct$tm_mday = £temporary2366
+	; g_timeStruct.tm_mday = £temporary2366
 	mov [@4764$g_timeStruct + 12], eax
 
  gmtime$81:
-	; g_timeStruct$tm_isdst = int4$minus1#
+	; g_timeStruct.tm_isdst = int4$minus1#
 	mov dword [@4764$g_timeStruct + 32], -1
 
  gmtime$82:
@@ -742,11 +742,11 @@ section .text
 	je asctime$5
 
  asctime$2:
-	; £field2375 -> localeConvPtr = *localeConvPtr
+	; £temporary2375 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 32]
 
  asctime$3:
-	; £temporary2376 = £field2375 -> localeConvPtr
+	; £temporary2376 = £temporary2375 -> localeConvPtr
 	mov rax, [rsi + 8]
 
  asctime$4:
@@ -767,11 +767,11 @@ section .text
 	je asctime$11
 
  asctime$8:
-	; £field2378 -> localeConvPtr = *localeConvPtr
+	; £temporary2378 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 32]
 
  asctime$9:
-	; £temporary2379 = £field2378 -> localeConvPtr
+	; £temporary2379 = £temporary2378 -> localeConvPtr
 	mov rax, [rsi + 24]
 
  asctime$10:
@@ -840,11 +840,11 @@ section .text
 	mov qword [rbp + 88], string_25s2025s20252i202502i3A2502i3A2502i202504i#
 
  asctime$26:
-	; £field2384 -> tp = *tp
+	; £temporary2384 -> tp = *tp
 	mov rsi, [rbp + 24]
 
  asctime$27:
-	; £temporary2386 = int_to_int £field2384 -> tp (Signed_Int -> Pointer)
+	; £temporary2386 = int_to_int £temporary2384 -> tp (Signed_Int -> Pointer)
 	mov eax, [rsi + 24]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -860,19 +860,19 @@ section .text
 	add rsi, rax
 
  asctime$30:
-	; £field2385 -> £temporary2388 = *£temporary2388
+	; £temporary2385 -> £temporary2388 = *£temporary2388
 
  asctime$31:
-	; parameter £field2385 -> £temporary2388, offset 96
+	; parameter £temporary2385 -> £temporary2388, offset 96
 	mov rax, [rsi]
 	mov [rbp + 96], rax
 
  asctime$32:
-	; £field2389 -> tp = *tp
+	; £temporary2389 -> tp = *tp
 	mov rsi, [rbp + 24]
 
  asctime$33:
-	; £temporary2391 = int_to_int £field2389 -> tp (Signed_Int -> Pointer)
+	; £temporary2391 = int_to_int £temporary2389 -> tp (Signed_Int -> Pointer)
 	mov eax, [rsi + 16]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -888,55 +888,55 @@ section .text
 	add rsi, rax
 
  asctime$36:
-	; £field2390 -> £temporary2393 = *£temporary2393
+	; £temporary2390 -> £temporary2393 = *£temporary2393
 
  asctime$37:
-	; parameter £field2390 -> £temporary2393, offset 104
+	; parameter £temporary2390 -> £temporary2393, offset 104
 	mov rax, [rsi]
 	mov [rbp + 104], rax
 
  asctime$38:
-	; £field2394 -> tp = *tp
+	; £temporary2394 -> tp = *tp
 	mov rsi, [rbp + 24]
 
  asctime$39:
-	; parameter £field2394 -> tp, offset 112
+	; parameter £temporary2394 -> tp, offset 112
 	mov eax, [rsi + 12]
 	mov [rbp + 112], eax
 
  asctime$40:
-	; £field2395 -> tp = *tp
+	; £temporary2395 -> tp = *tp
 	mov rsi, [rbp + 24]
 
  asctime$41:
-	; parameter £field2395 -> tp, offset 116
+	; parameter £temporary2395 -> tp, offset 116
 	mov eax, [rsi + 8]
 	mov [rbp + 116], eax
 
  asctime$42:
-	; £field2396 -> tp = *tp
+	; £temporary2396 -> tp = *tp
 	mov rsi, [rbp + 24]
 
  asctime$43:
-	; parameter £field2396 -> tp, offset 120
+	; parameter £temporary2396 -> tp, offset 120
 	mov eax, [rsi + 4]
 	mov [rbp + 120], eax
 
  asctime$44:
-	; £field2397 -> tp = *tp
+	; £temporary2397 -> tp = *tp
 	mov rsi, [rbp + 24]
 
  asctime$45:
-	; parameter £field2397 -> tp, offset 124
+	; parameter £temporary2397 -> tp, offset 124
 	mov eax, [rsi]
 	mov [rbp + 124], eax
 
  asctime$46:
-	; £field2398 -> tp = *tp
+	; £temporary2398 -> tp = *tp
 	mov rsi, [rbp + 24]
 
  asctime$47:
-	; £temporary2399 = £field2398 -> tp + int4$1900#
+	; £temporary2399 = £temporary2398 -> tp + int4$1900#
 	mov eax, [rsi + 20]
 	add eax, 1900
 
@@ -1073,20 +1073,20 @@ section .text
 	je localtime$21
 
  localtime$13:
-	; £field2406 -> tmPtr = *tmPtr
+	; £temporary2406 -> tmPtr = *tmPtr
 	mov rsi, [rbp + 32]
 
  localtime$14:
-	; if £field2406 -> tmPtr == int4$0# goto 18
+	; if £temporary2406 -> tmPtr == int4$0# goto 18
 	cmp dword [rsi + 32], 0
 	je localtime$18
 
  localtime$15:
-	; £field2407 -> localeConvPtr = *localeConvPtr
+	; £temporary2407 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 40]
 
  localtime$16:
-	; £temporary2410 = £field2407 -> localeConvPtr
+	; £temporary2410 = £temporary2407 -> localeConvPtr
 	mov eax, [rsi]
 
  localtime$17:
@@ -1094,11 +1094,11 @@ section .text
 	jmp localtime$20
 
  localtime$18:
-	; £field2408 -> localeConvPtr = *localeConvPtr
+	; £temporary2408 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 40]
 
  localtime$19:
-	; £temporary2410 = £field2408 -> localeConvPtr
+	; £temporary2410 = £temporary2408 -> localeConvPtr
 	mov eax, [rsi + 4]
 
  localtime$20:
@@ -1106,7 +1106,7 @@ section .text
 	mov [rbp + 48], eax
 
  localtime$21:
-	; £field2411 -> timePtr = *timePtr
+	; £temporary2411 -> timePtr = *timePtr
 	mov rsi, [rbp + 24]
 
  localtime$22:
@@ -1121,7 +1121,7 @@ section .text
 	and rax, rbx
 
  localtime$24:
-	; time = £field2411 -> timePtr + £temporary2413
+	; time = £temporary2411 -> timePtr + £temporary2413
 	mov rbx, [rsi]
 	add rbx, rax
 	mov [rbp + 52], rbx
@@ -1187,11 +1187,11 @@ section .text
 	je strftime$9
 
  strftime$6:
-	; £field2420 -> localeConvPtr = *localeConvPtr
+	; £temporary2420 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 52]
 
  strftime$7:
-	; £temporary2421 = £field2420 -> localeConvPtr
+	; £temporary2421 = £temporary2420 -> localeConvPtr
 	mov rax, [rsi + 8]
 
  strftime$8:
@@ -1212,11 +1212,11 @@ section .text
 	je strftime$15
 
  strftime$12:
-	; £field2423 -> localeConvPtr = *localeConvPtr
+	; £temporary2423 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 52]
 
  strftime$13:
-	; £temporary2424 = £field2423 -> localeConvPtr
+	; £temporary2424 = £temporary2423 -> localeConvPtr
 	mov rax, [rsi + 24]
 
  strftime$14:
@@ -1237,11 +1237,11 @@ section .text
 	je strftime$21
 
  strftime$18:
-	; £field2426 -> localeConvPtr = *localeConvPtr
+	; £temporary2426 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 52]
 
  strftime$19:
-	; £temporary2427 = £field2426 -> localeConvPtr
+	; £temporary2427 = £temporary2426 -> localeConvPtr
 	mov rax, [rsi + 16]
 
  strftime$20:
@@ -1262,11 +1262,11 @@ section .text
 	je strftime$27
 
  strftime$24:
-	; £field2429 -> localeConvPtr = *localeConvPtr
+	; £temporary2429 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 52]
 
  strftime$25:
-	; £temporary2430 = £field2429 -> localeConvPtr
+	; £temporary2430 = £temporary2429 -> localeConvPtr
 	mov rax, [rsi + 32]
 
  strftime$26:
@@ -1388,11 +1388,11 @@ section .text
 	mov [rbp + 84], rax
 
  strftime$54:
-	; £field2440 -> tp = *tp
+	; £temporary2440 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$55:
-	; £temporary2441 = £field2440 -> tp - int4$69#
+	; £temporary2441 = £temporary2440 -> tp - int4$69#
 	mov eax, [rsi + 20]
 	sub eax, 69
 
@@ -1403,11 +1403,11 @@ section .text
 	mov [rbp + 92], eax
 
  strftime$57:
-	; £field2443 -> tp = *tp
+	; £temporary2443 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$58:
-	; £temporary2444 = £field2443 -> tp - int4$70#
+	; £temporary2444 = £temporary2443 -> tp - int4$70#
 	mov eax, [rsi + 20]
 	sub eax, 70
 
@@ -1421,11 +1421,11 @@ section .text
 	add eax, [rbp + 92]
 
  strftime$61:
-	; £field2447 -> tp = *tp
+	; £temporary2447 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$62:
-	; £temporary2448 = £temporary2446 + £field2447 -> tp
+	; £temporary2448 = £temporary2446 + £temporary2447 -> tp
 	add eax, [rsi + 28]
 
  strftime$63:
@@ -1626,10 +1626,10 @@ section .text
 	add rsi, rax
 
  strftime$102:
-	; £field2465 -> £temporary2468 = *£temporary2468
+	; £temporary2465 -> £temporary2468 = *£temporary2468
 
  strftime$103:
-	; if £field2465 -> £temporary2468 == int1$0# goto 374
+	; if £temporary2465 -> £temporary2468 == int1$0# goto 374
 	cmp byte [rsi], 0
 	je strftime$374
 
@@ -1645,10 +1645,10 @@ section .text
 	add rsi, rax
 
  strftime$106:
-	; £field2471 -> £temporary2474 = *£temporary2474
+	; £temporary2471 -> £temporary2474 = *£temporary2474
 
  strftime$107:
-	; if £field2471 -> £temporary2474 != int1$37# goto 348
+	; if £temporary2471 -> £temporary2474 != int1$37# goto 348
 	cmp byte [rsi], 37
 	jne strftime$348
 
@@ -1668,121 +1668,121 @@ section .text
 	add rsi, rax
 
  strftime$111:
-	; £field2477 -> £temporary2480 = *£temporary2480
+	; £temporary2477 -> £temporary2480 = *£temporary2480
 
  strftime$112:
-	; case £field2477 -> £temporary2480 == int1$97# goto 136
+	; case £temporary2477 -> £temporary2480 == int1$97# goto 136
 	mov al, [rsi]
 	cmp al, 97
 	je strftime$136
 
  strftime$113:
-	; case £field2477 -> £temporary2480 == int1$65# goto 147
+	; case £temporary2477 -> £temporary2480 == int1$65# goto 147
 	cmp al, 65
 	je strftime$147
 
  strftime$114:
-	; case £field2477 -> £temporary2480 == int1$98# goto 158
+	; case £temporary2477 -> £temporary2480 == int1$98# goto 158
 	cmp al, 98
 	je strftime$158
 
  strftime$115:
-	; case £field2477 -> £temporary2480 == int1$66# goto 169
+	; case £temporary2477 -> £temporary2480 == int1$66# goto 169
 	cmp al, 66
 	je strftime$169
 
  strftime$116:
-	; case £field2477 -> £temporary2480 == int1$99# goto 180
+	; case £temporary2477 -> £temporary2480 == int1$99# goto 180
 	cmp al, 99
 	je strftime$180
 
  strftime$117:
-	; case £field2477 -> £temporary2480 == int1$100# goto 200
+	; case £temporary2477 -> £temporary2480 == int1$100# goto 200
 	cmp al, 100
 	je strftime$200
 
  strftime$118:
-	; case £field2477 -> £temporary2480 == int1$72# goto 208
+	; case £temporary2477 -> £temporary2480 == int1$72# goto 208
 	cmp al, 72
 	je strftime$208
 
  strftime$119:
-	; case £field2477 -> £temporary2480 == int1$73# goto 216
+	; case £temporary2477 -> £temporary2480 == int1$73# goto 216
 	cmp al, 73
 	je strftime$216
 
  strftime$120:
-	; case £field2477 -> £temporary2480 == int1$106# goto 225
+	; case £temporary2477 -> £temporary2480 == int1$106# goto 225
 	cmp al, 106
 	je strftime$225
 
  strftime$121:
-	; case £field2477 -> £temporary2480 == int1$109# goto 233
+	; case £temporary2477 -> £temporary2480 == int1$109# goto 233
 	cmp al, 109
 	je strftime$233
 
  strftime$122:
-	; case £field2477 -> £temporary2480 == int1$77# goto 242
+	; case £temporary2477 -> £temporary2480 == int1$77# goto 242
 	cmp al, 77
 	je strftime$242
 
  strftime$123:
-	; case £field2477 -> £temporary2480 == int1$112# goto 250
+	; case £temporary2477 -> £temporary2480 == int1$112# goto 250
 	cmp al, 112
 	je strftime$250
 
  strftime$124:
-	; case £field2477 -> £temporary2480 == int1$83# goto 262
+	; case £temporary2477 -> £temporary2480 == int1$83# goto 262
 	cmp al, 83
 	je strftime$262
 
  strftime$125:
-	; case £field2477 -> £temporary2480 == int1$85# goto 270
+	; case £temporary2477 -> £temporary2480 == int1$85# goto 270
 	cmp al, 85
 	je strftime$270
 
  strftime$126:
-	; case £field2477 -> £temporary2480 == int1$119# goto 277
+	; case £temporary2477 -> £temporary2480 == int1$119# goto 277
 	cmp al, 119
 	je strftime$277
 
  strftime$127:
-	; case £field2477 -> £temporary2480 == int1$87# goto 285
+	; case £temporary2477 -> £temporary2480 == int1$87# goto 285
 	cmp al, 87
 	je strftime$285
 
  strftime$128:
-	; case £field2477 -> £temporary2480 == int1$120# goto 292
+	; case £temporary2477 -> £temporary2480 == int1$120# goto 292
 	cmp al, 120
 	je strftime$292
 
  strftime$129:
-	; case £field2477 -> £temporary2480 == int1$88# goto 306
+	; case £temporary2477 -> £temporary2480 == int1$88# goto 306
 	cmp al, 88
 	je strftime$306
 
  strftime$130:
-	; case £field2477 -> £temporary2480 == int1$121# goto 318
+	; case £temporary2477 -> £temporary2480 == int1$121# goto 318
 	cmp al, 121
 	je strftime$318
 
  strftime$131:
-	; case £field2477 -> £temporary2480 == int1$89# goto 327
+	; case £temporary2477 -> £temporary2480 == int1$89# goto 327
 	cmp al, 89
 	je strftime$327
 
  strftime$132:
-	; case £field2477 -> £temporary2480 == int1$90# goto 336
+	; case £temporary2477 -> £temporary2480 == int1$90# goto 336
 	cmp al, 90
 	je strftime$336
 
  strftime$133:
-	; case £field2477 -> £temporary2480 == int1$37# goto 342
+	; case £temporary2477 -> £temporary2480 == int1$37# goto 342
 	cmp al, 37
 	je strftime$342
 
  strftime$134:
-	; case end £field2477 -> £temporary2480
+	; case end £temporary2477 -> £temporary2480
 
  strftime$135:
 	; goto 355
@@ -1797,11 +1797,11 @@ section .text
 	add qword [rbp + 160], 116
 
  strftime$138:
-	; £field2481 -> tp = *tp
+	; £temporary2481 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$139:
-	; £temporary2483 = int_to_int £field2481 -> tp (Signed_Int -> Pointer)
+	; £temporary2483 = int_to_int £temporary2481 -> tp (Signed_Int -> Pointer)
 	mov eax, [rsi + 24]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1817,10 +1817,10 @@ section .text
 	add rsi, rax
 
  strftime$142:
-	; £field2482 -> £temporary2485 = *£temporary2485
+	; £temporary2482 -> £temporary2485 = *£temporary2485
 
  strftime$143:
-	; parameter £field2482 -> £temporary2485, offset 168
+	; parameter £temporary2482 -> £temporary2485, offset 168
 	mov rax, [rsi]
 	mov [rbp + 168], rax
 
@@ -1847,11 +1847,11 @@ section .text
 	add qword [rbp + 160], 116
 
  strftime$149:
-	; £field2487 -> tp = *tp
+	; £temporary2487 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$150:
-	; £temporary2489 = int_to_int £field2487 -> tp (Signed_Int -> Pointer)
+	; £temporary2489 = int_to_int £temporary2487 -> tp (Signed_Int -> Pointer)
 	mov eax, [rsi + 24]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1867,10 +1867,10 @@ section .text
 	add rsi, rax
 
  strftime$153:
-	; £field2488 -> £temporary2491 = *£temporary2491
+	; £temporary2488 -> £temporary2491 = *£temporary2491
 
  strftime$154:
-	; parameter £field2488 -> £temporary2491, offset 168
+	; parameter £temporary2488 -> £temporary2491, offset 168
 	mov rax, [rsi]
 	mov [rbp + 168], rax
 
@@ -1897,11 +1897,11 @@ section .text
 	add qword [rbp + 160], 116
 
  strftime$160:
-	; £field2493 -> tp = *tp
+	; £temporary2493 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$161:
-	; £temporary2495 = int_to_int £field2493 -> tp (Signed_Int -> Pointer)
+	; £temporary2495 = int_to_int £temporary2493 -> tp (Signed_Int -> Pointer)
 	mov eax, [rsi + 16]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1917,10 +1917,10 @@ section .text
 	add rsi, rax
 
  strftime$164:
-	; £field2494 -> £temporary2497 = *£temporary2497
+	; £temporary2494 -> £temporary2497 = *£temporary2497
 
  strftime$165:
-	; parameter £field2494 -> £temporary2497, offset 168
+	; parameter £temporary2494 -> £temporary2497, offset 168
 	mov rax, [rsi]
 	mov [rbp + 168], rax
 
@@ -1947,11 +1947,11 @@ section .text
 	add qword [rbp + 160], 116
 
  strftime$171:
-	; £field2499 -> tp = *tp
+	; £temporary2499 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$172:
-	; £temporary2501 = int_to_int £field2499 -> tp (Signed_Int -> Pointer)
+	; £temporary2501 = int_to_int £temporary2499 -> tp (Signed_Int -> Pointer)
 	mov eax, [rsi + 16]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1967,10 +1967,10 @@ section .text
 	add rsi, rax
 
  strftime$175:
-	; £field2500 -> £temporary2503 = *£temporary2503
+	; £temporary2500 -> £temporary2503 = *£temporary2503
 
  strftime$176:
-	; parameter £field2500 -> £temporary2503, offset 168
+	; parameter £temporary2500 -> £temporary2503, offset 168
 	mov rax, [rsi]
 	mov [rbp + 168], rax
 
@@ -2001,11 +2001,11 @@ section .text
 	mov qword [rbp + 168], string_2504d2D2502d2D2502d202502d3A2502d3A2502d#
 
  strftime$183:
-	; £field2505 -> tp = *tp
+	; £temporary2505 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$184:
-	; £temporary2506 = £field2505 -> tp + int4$1900#
+	; £temporary2506 = £temporary2505 -> tp + int4$1900#
 	mov eax, [rsi + 20]
 	add eax, 1900
 
@@ -2014,11 +2014,11 @@ section .text
 	mov [rbp + 176], eax
 
  strftime$186:
-	; £field2507 -> tp = *tp
+	; £temporary2507 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$187:
-	; £temporary2508 = £field2507 -> tp + int4$1#
+	; £temporary2508 = £temporary2507 -> tp + int4$1#
 	mov eax, [rsi + 16]
 	inc eax
 
@@ -2027,38 +2027,38 @@ section .text
 	mov [rbp + 180], eax
 
  strftime$189:
-	; £field2509 -> tp = *tp
+	; £temporary2509 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$190:
-	; parameter £field2509 -> tp, offset 184
+	; parameter £temporary2509 -> tp, offset 184
 	mov eax, [rsi + 12]
 	mov [rbp + 184], eax
 
  strftime$191:
-	; £field2510 -> tp = *tp
+	; £temporary2510 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$192:
-	; parameter £field2510 -> tp, offset 188
+	; parameter £temporary2510 -> tp, offset 188
 	mov eax, [rsi + 8]
 	mov [rbp + 188], eax
 
  strftime$193:
-	; £field2511 -> tp = *tp
+	; £temporary2511 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$194:
-	; parameter £field2511 -> tp, offset 192
+	; parameter £temporary2511 -> tp, offset 192
 	mov eax, [rsi + 4]
 	mov [rbp + 192], eax
 
  strftime$195:
-	; £field2512 -> tp = *tp
+	; £temporary2512 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$196:
-	; parameter £field2512 -> tp, offset 196
+	; parameter £temporary2512 -> tp, offset 196
 	mov eax, [rsi]
 	mov [rbp + 196], eax
 
@@ -2091,11 +2091,11 @@ section .text
 	mov qword [rbp + 168], string_2502d#
 
  strftime$203:
-	; £field2514 -> tp = *tp
+	; £temporary2514 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$204:
-	; parameter £field2514 -> tp, offset 176
+	; parameter £temporary2514 -> tp, offset 176
 	mov eax, [rsi + 12]
 	mov [rbp + 176], eax
 
@@ -2128,11 +2128,11 @@ section .text
 	mov qword [rbp + 168], string_2502d#
 
  strftime$211:
-	; £field2516 -> tp = *tp
+	; £temporary2516 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$212:
-	; parameter £field2516 -> tp, offset 176
+	; parameter £temporary2516 -> tp, offset 176
 	mov eax, [rsi + 8]
 	mov [rbp + 176], eax
 
@@ -2165,11 +2165,11 @@ section .text
 	mov qword [rbp + 168], string_2502d#
 
  strftime$219:
-	; £field2518 -> tp = *tp
+	; £temporary2518 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$220:
-	; £temporary2519 = £field2518 -> tp % int4$12#
+	; £temporary2519 = £temporary2518 -> tp % int4$12#
 	mov eax, [rsi + 8]
 	xor edx, edx
 	idiv dword [int4$12#]
@@ -2207,11 +2207,11 @@ section .text
 	mov qword [rbp + 168], string_2503d#
 
  strftime$228:
-	; £field2521 -> tp = *tp
+	; £temporary2521 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$229:
-	; parameter £field2521 -> tp, offset 176
+	; parameter £temporary2521 -> tp, offset 176
 	mov eax, [rsi + 28]
 	mov [rbp + 176], eax
 
@@ -2244,11 +2244,11 @@ section .text
 	mov qword [rbp + 168], string_2502d#
 
  strftime$236:
-	; £field2523 -> tp = *tp
+	; £temporary2523 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$237:
-	; £temporary2524 = £field2523 -> tp + int4$1#
+	; £temporary2524 = £temporary2523 -> tp + int4$1#
 	mov eax, [rsi + 16]
 	inc eax
 
@@ -2285,11 +2285,11 @@ section .text
 	mov qword [rbp + 168], string_2502d#
 
  strftime$245:
-	; £field2526 -> tp = *tp
+	; £temporary2526 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$246:
-	; parameter £field2526 -> tp, offset 176
+	; parameter £temporary2526 -> tp, offset 176
 	mov eax, [rsi + 4]
 	mov [rbp + 176], eax
 
@@ -2322,11 +2322,11 @@ section .text
 	mov qword [rbp + 168], string_25s#
 
  strftime$253:
-	; £field2528 -> tp = *tp
+	; £temporary2528 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$254:
-	; if £field2528 -> tp >= int4$12# goto 257
+	; if £temporary2528 -> tp >= int4$12# goto 257
 	cmp dword [rsi + 8], 12
 	jge strftime$257
 
@@ -2375,11 +2375,11 @@ section .text
 	mov qword [rbp + 168], string_2502d#
 
  strftime$265:
-	; £field2532 -> tp = *tp
+	; £temporary2532 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$266:
-	; parameter £field2532 -> tp, offset 176
+	; parameter £temporary2532 -> tp, offset 176
 	mov eax, [rsi]
 	mov [rbp + 176], eax
 
@@ -2445,11 +2445,11 @@ section .text
 	mov qword [rbp + 168], string_2502d#
 
  strftime$280:
-	; £field2535 -> tp = *tp
+	; £temporary2535 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$281:
-	; parameter £field2535 -> tp, offset 176
+	; parameter £temporary2535 -> tp, offset 176
 	mov eax, [rsi + 24]
 	mov [rbp + 176], eax
 
@@ -2515,11 +2515,11 @@ section .text
 	mov qword [rbp + 168], string_2504d2D2502d2D2502d#
 
  strftime$295:
-	; £field2538 -> tp = *tp
+	; £temporary2538 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$296:
-	; £temporary2539 = £field2538 -> tp + int4$1900#
+	; £temporary2539 = £temporary2538 -> tp + int4$1900#
 	mov eax, [rsi + 20]
 	add eax, 1900
 
@@ -2528,11 +2528,11 @@ section .text
 	mov [rbp + 176], eax
 
  strftime$298:
-	; £field2540 -> tp = *tp
+	; £temporary2540 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$299:
-	; £temporary2541 = £field2540 -> tp + int4$1#
+	; £temporary2541 = £temporary2540 -> tp + int4$1#
 	mov eax, [rsi + 16]
 	inc eax
 
@@ -2541,11 +2541,11 @@ section .text
 	mov [rbp + 180], eax
 
  strftime$301:
-	; £field2542 -> tp = *tp
+	; £temporary2542 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$302:
-	; parameter £field2542 -> tp, offset 184
+	; parameter £temporary2542 -> tp, offset 184
 	mov eax, [rsi + 12]
 	mov [rbp + 184], eax
 
@@ -2578,29 +2578,29 @@ section .text
 	mov qword [rbp + 168], string_2502d3A2502d3A2502d#
 
  strftime$309:
-	; £field2544 -> tp = *tp
+	; £temporary2544 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$310:
-	; parameter £field2544 -> tp, offset 176
+	; parameter £temporary2544 -> tp, offset 176
 	mov eax, [rsi + 8]
 	mov [rbp + 176], eax
 
  strftime$311:
-	; £field2545 -> tp = *tp
+	; £temporary2545 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$312:
-	; parameter £field2545 -> tp, offset 180
+	; parameter £temporary2545 -> tp, offset 180
 	mov eax, [rsi + 4]
 	mov [rbp + 180], eax
 
  strftime$313:
-	; £field2546 -> tp = *tp
+	; £temporary2546 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$314:
-	; parameter £field2546 -> tp, offset 184
+	; parameter £temporary2546 -> tp, offset 184
 	mov eax, [rsi]
 	mov [rbp + 184], eax
 
@@ -2633,11 +2633,11 @@ section .text
 	mov qword [rbp + 168], string_2502d#
 
  strftime$321:
-	; £field2548 -> tp = *tp
+	; £temporary2548 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$322:
-	; £temporary2549 = £field2548 -> tp % int4$100#
+	; £temporary2549 = £temporary2548 -> tp % int4$100#
 	mov eax, [rsi + 20]
 	xor edx, edx
 	idiv dword [int4$100#]
@@ -2675,11 +2675,11 @@ section .text
 	mov qword [rbp + 168], string_2504d#
 
  strftime$330:
-	; £field2551 -> tp = *tp
+	; £temporary2551 -> tp = *tp
 	mov rsi, [rbp + 44]
 
  strftime$331:
-	; £temporary2552 = £field2551 -> tp + int4$1900#
+	; £temporary2552 = £temporary2551 -> tp + int4$1900#
 	mov eax, [rsi + 20]
 	add eax, 1900
 
@@ -2756,7 +2756,7 @@ section .text
 	jmp strftime$355
 
  strftime$348:
-	; £field2556 -> add = *add
+	; £temporary2556 -> add = *add
 	mov rsi, rbp
 	add rsi, 116
 
@@ -2772,20 +2772,20 @@ section .text
 	add rdi, rax
 
  strftime$351:
-	; £field2557 -> £temporary2560 = *£temporary2560
+	; £temporary2557 -> £temporary2560 = *£temporary2560
 
  strftime$352:
-	; £field2556 -> add = £field2557 -> £temporary2560
+	; £temporary2556 -> add = £temporary2557 -> £temporary2560
 	mov al, [rdi]
 	mov [rsi], al
 
  strftime$353:
-	; £field2561 -> add = *add
+	; £temporary2561 -> add = *add
 	mov rsi, rbp
 	add rsi, 116
 
  strftime$354:
-	; £field2561 -> add = int1$0#
+	; £temporary2561 -> add = int1$0#
 	mov byte [rsi + 1], 0
 
  strftime$355:

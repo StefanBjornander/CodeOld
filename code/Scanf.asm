@@ -61,11 +61,11 @@ section .text
 	mov [rbp + 25], rax
 
  scanChar$7:
-	; £field1077 -> stream = *stream
+	; £temporary1077 -> stream = *stream
 	mov rsi, [rbp + 25]
 
  scanChar$8:
-	; handle = £field1077 -> stream
+	; handle = £temporary1077 -> stream
 	mov eax, [rsi + 4]
 	mov [rbp + 33], eax
 
@@ -74,11 +74,11 @@ section .text
 	mov rax, 0
 
  scanChar$10:
-	; £field1080 -> stream = *stream
+	; £temporary1080 -> stream = *stream
 	mov rsi, [rbp + 25]
 
  scanChar$11:
-	; £temporary1081 = int_to_int £field1080 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary1081 = int_to_int £temporary1080 -> stream (Unsigned_Int -> Unsigned_Long_Int)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
@@ -144,10 +144,10 @@ section .text
 	add rsi, rax
 
  scanChar$26:
-	; £field1089 -> £temporary1092 = *£temporary1092
+	; £temporary1089 -> £temporary1092 = *£temporary1092
 
  scanChar$27:
-	; return £field1089 -> £temporary1092
+	; return £temporary1089 -> £temporary1092
 	mov bl, [rsi]
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -399,10 +399,10 @@ section .text
 	add rsi, rax
 
  scanPattern$42:
-	; £field1116 -> £temporary1119 = *£temporary1119
+	; £temporary1116 -> £temporary1119 = *£temporary1119
 
  scanPattern$43:
-	; £field1116 -> £temporary1119 = input
+	; £temporary1116 -> £temporary1119 = input
 	mov al, [rbp + 48]
 	mov [rsi], al
 
@@ -442,10 +442,10 @@ section .text
 	add rsi, rax
 
  scanPattern$52:
-	; £field1121 -> £temporary1124 = *£temporary1124
+	; £temporary1121 -> £temporary1124 = *£temporary1124
 
  scanPattern$53:
-	; £field1121 -> £temporary1124 = int1$0#
+	; £temporary1121 -> £temporary1124 = int1$0#
 	mov byte [rsi], 0
 
  scanPattern$54:
@@ -742,10 +742,10 @@ section .text
 	add rsi, rax
 
  scanString$36:
-	; £field1156 -> £temporary1159 = *£temporary1159
+	; £temporary1156 -> £temporary1159 = *£temporary1159
 
  scanString$37:
-	; £field1156 -> £temporary1159 = input
+	; £temporary1156 -> £temporary1159 = input
 	mov al, [rbp + 40]
 	mov [rsi], al
 
@@ -793,10 +793,10 @@ section .text
 	add rsi, rax
 
  scanString$48:
-	; £field1162 -> £temporary1165 = *£temporary1165
+	; £temporary1162 -> £temporary1165 = *£temporary1165
 
  scanString$49:
-	; £field1162 -> £temporary1165 = int1$0#
+	; £temporary1162 -> £temporary1165 = int1$0#
 	mov byte [rsi], 0
 
  scanString$50:
@@ -892,10 +892,10 @@ section .text
 	add rsi, rax
 
  scanString$69:
-	; £field1180 -> £temporary1183 = *£temporary1183
+	; £temporary1180 -> £temporary1183 = *£temporary1183
 
  scanString$70:
-	; £field1180 -> £temporary1183 = input
+	; £temporary1180 -> £temporary1183 = input
 	mov al, [rbp + 40]
 	mov [rsi], al
 
@@ -948,10 +948,10 @@ section .text
 	add rsi, rax
 
  scanString$82:
-	; £field1187 -> £temporary1190 = *£temporary1190
+	; £temporary1187 -> £temporary1190 = *£temporary1190
 
  scanString$83:
-	; £field1187 -> £temporary1190 = int1$0#
+	; £temporary1187 -> £temporary1190 = int1$0#
 	mov byte [rsi], 0
 
  scanString$84:
@@ -2600,10 +2600,10 @@ section .text
 	add rsi, rax
 
  scanFormat$11:
-	; £field1331 -> £temporary1334 = *£temporary1334
+	; £temporary1331 -> £temporary1334 = *£temporary1334
 
  scanFormat$12:
-	; if £field1331 -> £temporary1334 == int1$0# goto 333
+	; if £temporary1331 -> £temporary1334 == int1$0# goto 333
 	cmp byte [rsi], 0
 	je scanFormat$333
 
@@ -2619,10 +2619,10 @@ section .text
 	add rsi, rax
 
  scanFormat$15:
-	; £field1337 -> £temporary1340 = *£temporary1340
+	; £temporary1337 -> £temporary1340 = *£temporary1340
 
  scanFormat$16:
-	; c = £field1337 -> £temporary1340
+	; c = £temporary1337 -> £temporary1340
 	mov al, [rsi]
 	mov [rbp + 40], al
 
@@ -2807,19 +2807,19 @@ section .text
 	; £temporary1351 = int_to_int £temporary1349 (Pointer -> Pointer)
 
  scanFormat$56:
-	; £field1352 -> £temporary1351 = *£temporary1351
+	; £temporary1352 -> £temporary1351 = *£temporary1351
 
  scanFormat$57:
-	; charPtr = £field1352 -> £temporary1351
+	; charPtr = £temporary1352 -> £temporary1351
 	mov rax, [rsi]
 	mov [rbp + 41], rax
 
  scanFormat$58:
-	; £field1353 -> charPtr = *charPtr
+	; £temporary1353 -> charPtr = *charPtr
 	mov rsi, [rbp + 41]
 
  scanFormat$59:
-	; £field1353 -> charPtr = charValue
+	; £temporary1353 -> charPtr = charValue
 	mov al, [rbp + 157]
 	mov [rsi], al
 
@@ -2867,10 +2867,10 @@ section .text
 	; £temporary1363 = int_to_int £temporary1361 (Pointer -> Pointer)
 
  scanFormat$69:
-	; £field1364 -> £temporary1363 = *£temporary1363
+	; £temporary1364 -> £temporary1363 = *£temporary1363
 
  scanFormat$70:
-	; charPtr = £field1364 -> £temporary1363
+	; charPtr = £temporary1364 -> £temporary1363
 	mov rax, [rsi]
 	mov [rbp + 41], rax
 
@@ -2972,15 +2972,15 @@ section .text
 	; £temporary1374 = int_to_int £temporary1372 (Pointer -> Pointer)
 
  scanFormat$94:
-	; £field1375 -> £temporary1374 = *£temporary1374
+	; £temporary1375 -> £temporary1374 = *£temporary1374
 
  scanFormat$95:
-	; shortPtr = £field1375 -> £temporary1374
+	; shortPtr = £temporary1375 -> £temporary1374
 	mov rax, [rsi]
 	mov [rbp + 85], rax
 
  scanFormat$96:
-	; £field1376 -> shortPtr = *shortPtr
+	; £temporary1376 -> shortPtr = *shortPtr
 	mov rsi, [rbp + 85]
 
  scanFormat$97:
@@ -2992,7 +2992,7 @@ section .text
 	neg ax
 
  scanFormat$98:
-	; £field1376 -> shortPtr = £temporary1377
+	; £temporary1376 -> shortPtr = £temporary1377
 	mov [rsi], ax
 
  scanFormat$99:
@@ -3017,15 +3017,15 @@ section .text
 	; £temporary1384 = int_to_int £temporary1382 (Pointer -> Pointer)
 
  scanFormat$104:
-	; £field1385 -> £temporary1384 = *£temporary1384
+	; £temporary1385 -> £temporary1384 = *£temporary1384
 
  scanFormat$105:
-	; intPtr = £field1385 -> £temporary1384
+	; intPtr = £temporary1385 -> £temporary1384
 	mov rax, [rsi]
 	mov [rbp + 97], rax
 
  scanFormat$106:
-	; £field1386 -> intPtr = *intPtr
+	; £temporary1386 -> intPtr = *intPtr
 	mov rsi, [rbp + 97]
 
  scanFormat$107:
@@ -3037,7 +3037,7 @@ section .text
 	neg eax
 
  scanFormat$108:
-	; £field1386 -> intPtr = £temporary1387
+	; £temporary1386 -> intPtr = £temporary1387
 	mov [rsi], eax
 
  scanFormat$109:
@@ -3057,19 +3057,19 @@ section .text
 	; £temporary1392 = int_to_int £temporary1390 (Pointer -> Pointer)
 
  scanFormat$113:
-	; £field1393 -> £temporary1392 = *£temporary1392
+	; £temporary1393 -> £temporary1392 = *£temporary1392
 
  scanFormat$114:
-	; longPtr = £field1393 -> £temporary1392
+	; longPtr = £temporary1393 -> £temporary1392
 	mov rax, [rsi]
 	mov [rbp + 77], rax
 
  scanFormat$115:
-	; £field1394 -> longPtr = *longPtr
+	; £temporary1394 -> longPtr = *longPtr
 	mov rsi, [rbp + 77]
 
  scanFormat$116:
-	; £field1394 -> longPtr = longValue
+	; £temporary1394 -> longPtr = longValue
 	mov rax, [rbp + 69]
 	mov [rsi], rax
 
@@ -3128,15 +3128,15 @@ section .text
 	; £temporary1403 = int_to_int £temporary1401 (Pointer -> Pointer)
 
  scanFormat$130:
-	; £field1404 -> £temporary1403 = *£temporary1403
+	; £temporary1404 -> £temporary1403 = *£temporary1403
 
  scanFormat$131:
-	; unsignedShortPtr = £field1404 -> £temporary1403
+	; unsignedShortPtr = £temporary1404 -> £temporary1403
 	mov rax, [rsi]
 	mov [rbp + 129], rax
 
  scanFormat$132:
-	; £field1405 -> unsignedShortPtr = *unsignedShortPtr
+	; £temporary1405 -> unsignedShortPtr = *unsignedShortPtr
 	mov rsi, [rbp + 129]
 
  scanFormat$133:
@@ -3144,7 +3144,7 @@ section .text
 	mov rax, [rbp + 113]
 
  scanFormat$134:
-	; £field1405 -> unsignedShortPtr = £temporary1406
+	; £temporary1405 -> unsignedShortPtr = £temporary1406
 	mov [rsi], ax
 
  scanFormat$135:
@@ -3169,15 +3169,15 @@ section .text
 	; £temporary1413 = int_to_int £temporary1411 (Pointer -> Pointer)
 
  scanFormat$140:
-	; £field1414 -> £temporary1413 = *£temporary1413
+	; £temporary1414 -> £temporary1413 = *£temporary1413
 
  scanFormat$141:
-	; unsignedIntPtr = £field1414 -> £temporary1413
+	; unsignedIntPtr = £temporary1414 -> £temporary1413
 	mov rax, [rsi]
 	mov [rbp + 137], rax
 
  scanFormat$142:
-	; £field1415 -> unsignedIntPtr = *unsignedIntPtr
+	; £temporary1415 -> unsignedIntPtr = *unsignedIntPtr
 	mov rsi, [rbp + 137]
 
  scanFormat$143:
@@ -3185,7 +3185,7 @@ section .text
 	mov rax, [rbp + 113]
 
  scanFormat$144:
-	; £field1415 -> unsignedIntPtr = £temporary1416
+	; £temporary1415 -> unsignedIntPtr = £temporary1416
 	mov [rsi], eax
 
  scanFormat$145:
@@ -3205,19 +3205,19 @@ section .text
 	; £temporary1421 = int_to_int £temporary1419 (Pointer -> Pointer)
 
  scanFormat$149:
-	; £field1422 -> £temporary1421 = *£temporary1421
+	; £temporary1422 -> £temporary1421 = *£temporary1421
 
  scanFormat$150:
-	; unsignedLongPtr = £field1422 -> £temporary1421
+	; unsignedLongPtr = £temporary1422 -> £temporary1421
 	mov rax, [rsi]
 	mov [rbp + 121], rax
 
  scanFormat$151:
-	; £field1423 -> unsignedLongPtr = *unsignedLongPtr
+	; £temporary1423 -> unsignedLongPtr = *unsignedLongPtr
 	mov rsi, [rbp + 121]
 
  scanFormat$152:
-	; £field1423 -> unsignedLongPtr = unsignedLongValue
+	; £temporary1423 -> unsignedLongPtr = unsignedLongValue
 	mov rax, [rbp + 113]
 	mov [rsi], rax
 
@@ -3276,15 +3276,15 @@ section .text
 	; £temporary1432 = int_to_int £temporary1430 (Pointer -> Pointer)
 
  scanFormat$166:
-	; £field1433 -> £temporary1432 = *£temporary1432
+	; £temporary1433 -> £temporary1432 = *£temporary1432
 
  scanFormat$167:
-	; unsignedShortPtr = £field1433 -> £temporary1432
+	; unsignedShortPtr = £temporary1433 -> £temporary1432
 	mov rax, [rsi]
 	mov [rbp + 129], rax
 
  scanFormat$168:
-	; £field1434 -> unsignedShortPtr = *unsignedShortPtr
+	; £temporary1434 -> unsignedShortPtr = *unsignedShortPtr
 	mov rsi, [rbp + 129]
 
  scanFormat$169:
@@ -3292,7 +3292,7 @@ section .text
 	mov rax, [rbp + 113]
 
  scanFormat$170:
-	; £field1434 -> unsignedShortPtr = £temporary1435
+	; £temporary1434 -> unsignedShortPtr = £temporary1435
 	mov [rsi], ax
 
  scanFormat$171:
@@ -3317,15 +3317,15 @@ section .text
 	; £temporary1442 = int_to_int £temporary1440 (Pointer -> Pointer)
 
  scanFormat$176:
-	; £field1443 -> £temporary1442 = *£temporary1442
+	; £temporary1443 -> £temporary1442 = *£temporary1442
 
  scanFormat$177:
-	; unsignedIntPtr = £field1443 -> £temporary1442
+	; unsignedIntPtr = £temporary1443 -> £temporary1442
 	mov rax, [rsi]
 	mov [rbp + 137], rax
 
  scanFormat$178:
-	; £field1444 -> unsignedIntPtr = *unsignedIntPtr
+	; £temporary1444 -> unsignedIntPtr = *unsignedIntPtr
 	mov rsi, [rbp + 137]
 
  scanFormat$179:
@@ -3333,7 +3333,7 @@ section .text
 	mov rax, [rbp + 113]
 
  scanFormat$180:
-	; £field1444 -> unsignedIntPtr = £temporary1445
+	; £temporary1444 -> unsignedIntPtr = £temporary1445
 	mov [rsi], eax
 
  scanFormat$181:
@@ -3353,19 +3353,19 @@ section .text
 	; £temporary1450 = int_to_int £temporary1448 (Pointer -> Pointer)
 
  scanFormat$185:
-	; £field1451 -> £temporary1450 = *£temporary1450
+	; £temporary1451 -> £temporary1450 = *£temporary1450
 
  scanFormat$186:
-	; unsignedLongPtr = £field1451 -> £temporary1450
+	; unsignedLongPtr = £temporary1451 -> £temporary1450
 	mov rax, [rsi]
 	mov [rbp + 121], rax
 
  scanFormat$187:
-	; £field1452 -> unsignedLongPtr = *unsignedLongPtr
+	; £temporary1452 -> unsignedLongPtr = *unsignedLongPtr
 	mov rsi, [rbp + 121]
 
  scanFormat$188:
-	; £field1452 -> unsignedLongPtr = unsignedLongValue
+	; £temporary1452 -> unsignedLongPtr = unsignedLongValue
 	mov rax, [rbp + 113]
 	mov [rsi], rax
 
@@ -3424,15 +3424,15 @@ section .text
 	; £temporary1461 = int_to_int £temporary1459 (Pointer -> Pointer)
 
  scanFormat$202:
-	; £field1462 -> £temporary1461 = *£temporary1461
+	; £temporary1462 -> £temporary1461 = *£temporary1461
 
  scanFormat$203:
-	; unsignedShortPtr = £field1462 -> £temporary1461
+	; unsignedShortPtr = £temporary1462 -> £temporary1461
 	mov rax, [rsi]
 	mov [rbp + 129], rax
 
  scanFormat$204:
-	; £field1463 -> unsignedShortPtr = *unsignedShortPtr
+	; £temporary1463 -> unsignedShortPtr = *unsignedShortPtr
 	mov rsi, [rbp + 129]
 
  scanFormat$205:
@@ -3440,7 +3440,7 @@ section .text
 	mov rax, [rbp + 113]
 
  scanFormat$206:
-	; £field1463 -> unsignedShortPtr = £temporary1464
+	; £temporary1463 -> unsignedShortPtr = £temporary1464
 	mov [rsi], ax
 
  scanFormat$207:
@@ -3465,15 +3465,15 @@ section .text
 	; £temporary1471 = int_to_int £temporary1469 (Pointer -> Pointer)
 
  scanFormat$212:
-	; £field1472 -> £temporary1471 = *£temporary1471
+	; £temporary1472 -> £temporary1471 = *£temporary1471
 
  scanFormat$213:
-	; unsignedIntPtr = £field1472 -> £temporary1471
+	; unsignedIntPtr = £temporary1472 -> £temporary1471
 	mov rax, [rsi]
 	mov [rbp + 137], rax
 
  scanFormat$214:
-	; £field1473 -> unsignedIntPtr = *unsignedIntPtr
+	; £temporary1473 -> unsignedIntPtr = *unsignedIntPtr
 	mov rsi, [rbp + 137]
 
  scanFormat$215:
@@ -3481,7 +3481,7 @@ section .text
 	mov rax, [rbp + 113]
 
  scanFormat$216:
-	; £field1473 -> unsignedIntPtr = £temporary1474
+	; £temporary1473 -> unsignedIntPtr = £temporary1474
 	mov [rsi], eax
 
  scanFormat$217:
@@ -3501,19 +3501,19 @@ section .text
 	; £temporary1479 = int_to_int £temporary1477 (Pointer -> Pointer)
 
  scanFormat$221:
-	; £field1480 -> £temporary1479 = *£temporary1479
+	; £temporary1480 -> £temporary1479 = *£temporary1479
 
  scanFormat$222:
-	; unsignedLongPtr = £field1480 -> £temporary1479
+	; unsignedLongPtr = £temporary1480 -> £temporary1479
 	mov rax, [rsi]
 	mov [rbp + 121], rax
 
  scanFormat$223:
-	; £field1481 -> unsignedLongPtr = *unsignedLongPtr
+	; £temporary1481 -> unsignedLongPtr = *unsignedLongPtr
 	mov rsi, [rbp + 121]
 
  scanFormat$224:
-	; £field1481 -> unsignedLongPtr = unsignedLongValue
+	; £temporary1481 -> unsignedLongPtr = unsignedLongValue
 	mov rax, [rbp + 113]
 	mov [rsi], rax
 
@@ -3568,15 +3568,15 @@ section .text
 	; £temporary1490 = int_to_int £temporary1488 (Pointer -> Pointer)
 
  scanFormat$237:
-	; £field1491 -> £temporary1490 = *£temporary1490
+	; £temporary1491 -> £temporary1490 = *£temporary1490
 
  scanFormat$238:
-	; doublePtr = £field1491 -> £temporary1490
+	; doublePtr = £temporary1491 -> £temporary1490
 	mov rax, [rsi]
 	mov [rbp + 157], rax
 
  scanFormat$239:
-	; £field1492 -> doublePtr = *doublePtr
+	; £temporary1492 -> doublePtr = *doublePtr
 	mov rsi, [rbp + 157]
 
  scanFormat$240:
@@ -3584,7 +3584,7 @@ section .text
 	fld qword [rbp + 145]
 
  scanFormat$241:
-	; pop float £field1492 -> doublePtr
+	; pop float £temporary1492 -> doublePtr
 	fstp qword [rsi]
 
  scanFormat$242:
@@ -3609,15 +3609,15 @@ section .text
 	; £temporary1498 = int_to_int £temporary1496 (Pointer -> Pointer)
 
  scanFormat$247:
-	; £field1499 -> £temporary1498 = *£temporary1498
+	; £temporary1499 -> £temporary1498 = *£temporary1498
 
  scanFormat$248:
-	; longDoublePtr = £field1499 -> £temporary1498
+	; longDoublePtr = £temporary1499 -> £temporary1498
 	mov rax, [rsi]
 	mov [rbp + 157], rax
 
  scanFormat$249:
-	; £field1500 -> longDoublePtr = *longDoublePtr
+	; £temporary1500 -> longDoublePtr = *longDoublePtr
 	mov rsi, [rbp + 157]
 
  scanFormat$250:
@@ -3625,7 +3625,7 @@ section .text
 	fld qword [rbp + 145]
 
  scanFormat$251:
-	; pop float £field1500 -> longDoublePtr
+	; pop float £temporary1500 -> longDoublePtr
 	fstp qword [rsi]
 
  scanFormat$252:
@@ -3645,15 +3645,15 @@ section .text
 	; £temporary1505 = int_to_int £temporary1503 (Pointer -> Pointer)
 
  scanFormat$256:
-	; £field1506 -> £temporary1505 = *£temporary1505
+	; £temporary1506 -> £temporary1505 = *£temporary1505
 
  scanFormat$257:
-	; floatPtr = £field1506 -> £temporary1505
+	; floatPtr = £temporary1506 -> £temporary1505
 	mov rax, [rsi]
 	mov [rbp + 157], rax
 
  scanFormat$258:
-	; £field1507 -> floatPtr = *floatPtr
+	; £temporary1507 -> floatPtr = *floatPtr
 	mov rsi, [rbp + 157]
 
  scanFormat$259:
@@ -3661,7 +3661,7 @@ section .text
 	fld qword [rbp + 145]
 
  scanFormat$260:
-	; pop float £field1507 -> floatPtr
+	; pop float £temporary1507 -> floatPtr
 	fstp dword [rsi]
 
  scanFormat$261:
@@ -3692,10 +3692,10 @@ section .text
 	add rsi, rax
 
  scanFormat$267:
-	; £field1512 -> £temporary1515 = *£temporary1515
+	; £temporary1512 -> £temporary1515 = *£temporary1515
 
  scanFormat$268:
-	; if £field1512 -> £temporary1515 != int1$94# goto 271
+	; if £temporary1512 -> £temporary1515 != int1$94# goto 271
 	cmp byte [rsi], 94
 	jne scanFormat$271
 
@@ -3721,10 +3721,10 @@ section .text
 	add rsi, rax
 
  scanFormat$273:
-	; £field1518 -> £temporary1521 = *£temporary1521
+	; £temporary1518 -> £temporary1521 = *£temporary1521
 
  scanFormat$274:
-	; if £field1518 -> £temporary1521 == int1$93# goto 277
+	; if £temporary1518 -> £temporary1521 == int1$93# goto 277
 	cmp byte [rsi], 93
 	je scanFormat$277
 
@@ -3748,10 +3748,10 @@ section .text
 	add rsi, rax
 
  scanFormat$279:
-	; £field1524 -> £temporary1527 = *£temporary1527
+	; £temporary1524 -> £temporary1527 = *£temporary1527
 
  scanFormat$280:
-	; £field1524 -> £temporary1527 = int1$0#
+	; £temporary1524 -> £temporary1527 = int1$0#
 	mov byte [rsi], 0
 
  scanFormat$281:
@@ -3772,10 +3772,10 @@ section .text
 	; £temporary1534 = int_to_int £temporary1532 (Pointer -> Pointer)
 
  scanFormat$285:
-	; £field1535 -> £temporary1534 = *£temporary1534
+	; £temporary1535 -> £temporary1534 = *£temporary1534
 
  scanFormat$286:
-	; string = £field1535 -> £temporary1534
+	; string = £temporary1535 -> £temporary1534
 	mov rax, [rsi]
 	mov [rbp + 165], rax
 
@@ -3799,10 +3799,10 @@ section .text
 	add rsi, rax
 
  scanFormat$291:
-	; £field1536 -> £temporary1539 = *£temporary1539
+	; £temporary1536 -> £temporary1539 = *£temporary1539
 
  scanFormat$292:
-	; £temporary1540 = &£field1536 -> £temporary1539
+	; £temporary1540 = &£temporary1536 -> £temporary1539
 
  scanFormat$293:
 	; parameter £temporary1540, offset 205
@@ -3846,10 +3846,10 @@ section .text
 	add rsi, rax
 
  scanFormat$302:
-	; £field1542 -> £temporary1545 = *£temporary1545
+	; £temporary1542 -> £temporary1545 = *£temporary1545
 
  scanFormat$303:
-	; £temporary1546 = &£field1542 -> £temporary1545
+	; £temporary1546 = &£temporary1542 -> £temporary1545
 
  scanFormat$304:
 	; parameter £temporary1546, offset 197
@@ -3887,19 +3887,19 @@ section .text
 	; £temporary1552 = int_to_int £temporary1550 (Pointer -> Pointer)
 
  scanFormat$312:
-	; £field1553 -> £temporary1552 = *£temporary1552
+	; £temporary1553 -> £temporary1552 = *£temporary1552
 
  scanFormat$313:
-	; charsPtr = £field1553 -> £temporary1552
+	; charsPtr = £temporary1553 -> £temporary1552
 	mov rax, [rsi]
 	mov [rbp + 105], rax
 
  scanFormat$314:
-	; £field1554 -> charsPtr = *charsPtr
+	; £temporary1554 -> charsPtr = *charsPtr
 	mov rsi, [rbp + 105]
 
  scanFormat$315:
-	; £field1554 -> charsPtr = g_inChars
+	; £temporary1554 -> charsPtr = g_inChars
 	mov eax, [g_inChars]
 	mov [rsi], eax
 

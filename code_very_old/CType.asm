@@ -50,11 +50,11 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  islower$7:
-	; £field252 -> localeConvPtr = *localeConvPtr
+	; £temporary252 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 28]
 
  islower$8:
-	; parameter £field252 -> localeConvPtr, offset 60
+	; parameter £temporary252 -> localeConvPtr, offset 60
 	mov rax, [rsi + 40]
 	mov [rbp + 60], rax
 
@@ -225,11 +225,11 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  isupper$7:
-	; £field270 -> localeConvPtr = *localeConvPtr
+	; £temporary270 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 28]
 
  isupper$8:
-	; parameter £field270 -> localeConvPtr, offset 60
+	; parameter £temporary270 -> localeConvPtr, offset 60
 	mov rax, [rsi + 48]
 	mov [rbp + 60], rax
 
@@ -915,20 +915,20 @@ section .text
 	je tolower$30
 
  tolower$12:
-	; £field344 -> localeConvPtr = *localeConvPtr
+	; £temporary344 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 28]
 
  tolower$13:
-	; lowerCase = £field344 -> localeConvPtr
+	; lowerCase = £temporary344 -> localeConvPtr
 	mov rax, [rsi + 40]
 	mov [rbp + 36], rax
 
  tolower$14:
-	; £field345 -> localeConvPtr = *localeConvPtr
+	; £temporary345 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 28]
 
  tolower$15:
-	; upperCase = £field345 -> localeConvPtr
+	; upperCase = £temporary345 -> localeConvPtr
 	mov rax, [rsi + 48]
 	mov [rbp + 44], rax
 
@@ -981,10 +981,10 @@ section .text
 	add rsi, rax
 
  tolower$27:
-	; £field350 -> £temporary353 = *£temporary353
+	; £temporary350 -> £temporary353 = *£temporary353
 
  tolower$28:
-	; £temporary354 = int_to_int £field350 -> £temporary353 (Signed_Char -> Signed_Int)
+	; £temporary354 = int_to_int £temporary350 -> £temporary353 (Signed_Char -> Signed_Int)
 	mov bl, [rsi]
 	and ebx, 255
 	cmp bl, 0
@@ -1123,20 +1123,20 @@ section .text
 	je toupper$30
 
  toupper$12:
-	; £field364 -> localeConvPtr = *localeConvPtr
+	; £temporary364 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 28]
 
  toupper$13:
-	; lowerCase = £field364 -> localeConvPtr
+	; lowerCase = £temporary364 -> localeConvPtr
 	mov rax, [rsi + 40]
 	mov [rbp + 36], rax
 
  toupper$14:
-	; £field365 -> localeConvPtr = *localeConvPtr
+	; £temporary365 -> localeConvPtr = *localeConvPtr
 	mov rsi, [rbp + 28]
 
  toupper$15:
-	; upperCase = £field365 -> localeConvPtr
+	; upperCase = £temporary365 -> localeConvPtr
 	mov rax, [rsi + 48]
 	mov [rbp + 44], rax
 
@@ -1189,10 +1189,10 @@ section .text
 	add rsi, rax
 
  toupper$27:
-	; £field370 -> £temporary373 = *£temporary373
+	; £temporary370 -> £temporary373 = *£temporary373
 
  toupper$28:
-	; £temporary374 = int_to_int £field370 -> £temporary373 (Signed_Char -> Signed_Int)
+	; £temporary374 = int_to_int £temporary370 -> £temporary373 (Signed_Char -> Signed_Int)
 	mov bl, [rsi]
 	and ebx, 255
 	cmp bl, 0

@@ -167,11 +167,11 @@ section .text
 	; post call
 
  time_test$36:
-	; £field4089 -> p = *p
+	; £temporary4089 -> p = *p
 	mov rsi, [rbp + 88]
 
  time_test$37:
-	; s = £field4089 -> p
+	; s = £temporary4089 -> p
 	mov rdi, rbp
 	add rdi, 104
 	mov al, 36
@@ -193,7 +193,7 @@ section .text
 	mov qword [rbp + 164], string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 
  time_test$40:
-	; £temporary4092 = int_to_int s$tm_wday (Signed_Int -> Array)
+	; £temporary4092 = int_to_int s.tm_wday (Signed_Int -> Array)
 	mov eax, [rbp + 128]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -210,15 +210,15 @@ section .text
 	add rsi, rax
 
  time_test$43:
-	; £field4091 -> £temporary4094 = *£temporary4094
+	; £temporary4091 -> £temporary4094 = *£temporary4094
 
  time_test$44:
-	; parameter £field4091 -> £temporary4094, offset 172
+	; parameter £temporary4091 -> £temporary4094, offset 172
 	mov rax, [rsi]
 	mov [rbp + 172], rax
 
  time_test$45:
-	; £temporary4096 = s$tm_year + int4$1900#
+	; £temporary4096 = s.tm_year + int4$1900#
 	mov eax, [rbp + 124]
 	add eax, 1900
 
@@ -227,7 +227,7 @@ section .text
 	mov [rbp + 180], eax
 
  time_test$47:
-	; £temporary4098 = s$tm_mon + int4$1#
+	; £temporary4098 = s.tm_mon + int4$1#
 	mov eax, [rbp + 120]
 	inc eax
 
@@ -236,37 +236,37 @@ section .text
 	mov [rbp + 184], eax
 
  time_test$49:
-	; parameter s$tm_mday, offset 188
+	; parameter s.tm_mday, offset 188
 	mov eax, [rbp + 116]
 	mov [rbp + 188], eax
 
  time_test$50:
-	; parameter s$tm_hour, offset 192
+	; parameter s.tm_hour, offset 192
 	mov eax, [rbp + 112]
 	mov [rbp + 192], eax
 
  time_test$51:
-	; parameter s$tm_min, offset 196
+	; parameter s.tm_min, offset 196
 	mov eax, [rbp + 108]
 	mov [rbp + 196], eax
 
  time_test$52:
-	; parameter s$tm_sec, offset 200
+	; parameter s.tm_sec, offset 200
 	mov eax, [rbp + 104]
 	mov [rbp + 200], eax
 
  time_test$53:
-	; parameter s$tm_yday, offset 204
+	; parameter s.tm_yday, offset 204
 	mov eax, [rbp + 132]
 	mov [rbp + 204], eax
 
  time_test$54:
-	; parameter s$tm_wday, offset 208
+	; parameter s.tm_wday, offset 208
 	mov eax, [rbp + 128]
 	mov [rbp + 208], eax
 
  time_test$55:
-	; parameter s$tm_isdst, offset 212
+	; parameter s.tm_isdst, offset 212
 	mov eax, [rbp + 136]
 	mov [rbp + 212], eax
 
@@ -308,10 +308,10 @@ section .text
 	; £temporary4108 = return_value
 
  time_test$64:
-	; £field4109 -> £temporary4108 = *£temporary4108
+	; £temporary4109 -> £temporary4108 = *£temporary4108
 
  time_test$65:
-	; s = £field4109 -> £temporary4108
+	; s = £temporary4109 -> £temporary4108
 	mov rsi, rbp
 	add rsi, 104
 	mov al, 36
@@ -333,7 +333,7 @@ section .text
 	mov qword [rbp + 164], string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 
  time_test$68:
-	; £temporary4112 = int_to_int s$tm_wday (Signed_Int -> Array)
+	; £temporary4112 = int_to_int s.tm_wday (Signed_Int -> Array)
 	mov eax, [rbp + 128]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -350,15 +350,15 @@ section .text
 	add rsi, rax
 
  time_test$71:
-	; £field4111 -> £temporary4114 = *£temporary4114
+	; £temporary4111 -> £temporary4114 = *£temporary4114
 
  time_test$72:
-	; parameter £field4111 -> £temporary4114, offset 172
+	; parameter £temporary4111 -> £temporary4114, offset 172
 	mov rax, [rsi]
 	mov [rbp + 172], rax
 
  time_test$73:
-	; £temporary4116 = s$tm_year + int4$1900#
+	; £temporary4116 = s.tm_year + int4$1900#
 	mov eax, [rbp + 124]
 	add eax, 1900
 
@@ -367,7 +367,7 @@ section .text
 	mov [rbp + 180], eax
 
  time_test$75:
-	; £temporary4118 = s$tm_mon + int4$1#
+	; £temporary4118 = s.tm_mon + int4$1#
 	mov eax, [rbp + 120]
 	inc eax
 
@@ -376,37 +376,37 @@ section .text
 	mov [rbp + 184], eax
 
  time_test$77:
-	; parameter s$tm_mday, offset 188
+	; parameter s.tm_mday, offset 188
 	mov eax, [rbp + 116]
 	mov [rbp + 188], eax
 
  time_test$78:
-	; parameter s$tm_hour, offset 192
+	; parameter s.tm_hour, offset 192
 	mov eax, [rbp + 112]
 	mov [rbp + 192], eax
 
  time_test$79:
-	; parameter s$tm_min, offset 196
+	; parameter s.tm_min, offset 196
 	mov eax, [rbp + 108]
 	mov [rbp + 196], eax
 
  time_test$80:
-	; parameter s$tm_sec, offset 200
+	; parameter s.tm_sec, offset 200
 	mov eax, [rbp + 104]
 	mov [rbp + 200], eax
 
  time_test$81:
-	; parameter s$tm_yday, offset 204
+	; parameter s.tm_yday, offset 204
 	mov eax, [rbp + 132]
 	mov [rbp + 204], eax
 
  time_test$82:
-	; parameter s$tm_wday, offset 208
+	; parameter s.tm_wday, offset 208
 	mov eax, [rbp + 128]
 	mov [rbp + 208], eax
 
  time_test$83:
-	; parameter s$tm_isdst, offset 212
+	; parameter s.tm_isdst, offset 212
 	mov eax, [rbp + 136]
 	mov [rbp + 212], eax
 

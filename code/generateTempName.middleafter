@@ -2,12 +2,12 @@
 1: c = int1$97#
 2: if c > int1$122# goto 54
 3: £temporary1039 = name + size
-4: £field1037 -> £temporary1039 = *£temporary1039
-5: £field1037 -> £temporary1039 = c
+4: £temporary1037 -> £temporary1039 = *£temporary1039
+5: £temporary1037 -> £temporary1039 = c
 6: £temporary1040 = size + int2$1#
 7: £temporary1043 = name + £temporary1040
-8: £field1041 -> £temporary1043 = *£temporary1043
-9: £field1041 -> £temporary1043 = int1$0#
+8: £temporary1041 -> £temporary1043 = *£temporary1043
+9: £temporary1041 -> £temporary1043 = int1$0#
 10: call header integral zero 0 stack zero 0
 11: parameter name, offset 19
 12: call function noellipse-noellipse fileexists
@@ -28,8 +28,8 @@
 27: call header integral zero 0 stack zero 0
 28: £temporary1051 = g_tempSize * Array_4#
 29: £temporary1052 = g_tempArray + £temporary1051
-30: £field1050 -> £temporary1052 = *£temporary1052
-31: parameter £field1050 -> £temporary1052, offset 19
+30: £temporary1050 -> £temporary1052 = *£temporary1052
+31: parameter £temporary1050 -> £temporary1052, offset 19
 32: parameter name, offset 21
 33: call function noellipse-noellipse strcpy
 34: post call
@@ -37,8 +37,8 @@
 36: g_tempSize = g_tempSize + int2$1#
 37: £temporary1056 = £temporary1054 * Array_4#
 38: £temporary1057 = g_tempArray + £temporary1056
-39: £field1055 -> £temporary1057 = *£temporary1057
-40: return £field1055 -> £temporary1057
+39: £temporary1055 -> £temporary1057 = *£temporary1057
+40: return £temporary1055 -> £temporary1057
 41: call header integral zero 0 stack zero 0
 42: parameter name, offset 19
 43: £temporary1058 = size + int2$1#

@@ -167,11 +167,11 @@ section .text
 	; post call
 
  time_test$36:
-	; £field4089 -> p = *p
+	; £temporary4089 -> p = *p
 	mov rsi, [rbp + 88]
 
  time_test$37:
-	; s = £field4089 -> p
+	; s = £temporary4089 -> p
 	mov rdi, rbp
 	add rdi, 104
 	mov al, 36
@@ -210,10 +210,10 @@ section .text
 	add rsi, rax
 
  time_test$43:
-	; £field4091 -> £temporary4094 = *£temporary4094
+	; £temporary4091 -> £temporary4094 = *£temporary4094
 
  time_test$44:
-	; parameter £field4091 -> £temporary4094, offset 172
+	; parameter £temporary4091 -> £temporary4094, offset 172
 	mov rax, [rsi]
 	mov [rbp + 172], rax
 
@@ -308,10 +308,10 @@ section .text
 	; £temporary4108 = return_value
 
  time_test$64:
-	; £field4109 -> £temporary4108 = *£temporary4108
+	; £temporary4109 -> £temporary4108 = *£temporary4108
 
  time_test$65:
-	; s = £field4109 -> £temporary4108
+	; s = £temporary4109 -> £temporary4108
 	mov rsi, rbp
 	add rsi, 104
 	mov al, 36
@@ -350,10 +350,10 @@ section .text
 	add rsi, rax
 
  time_test$71:
-	; £field4111 -> £temporary4114 = *£temporary4114
+	; £temporary4111 -> £temporary4114 = *£temporary4114
 
  time_test$72:
-	; parameter £field4111 -> £temporary4114, offset 172
+	; parameter £temporary4111 -> £temporary4114, offset 172
 	mov rax, [rsi]
 	mov [rbp + 172], rax
 

@@ -30,10 +30,10 @@ section .text
 	mov rsi, [rbp + 24]
 
  compare$1:
-	; £field3955 -> £temporary3954 = *£temporary3954
+	; £temporary3955 -> £temporary3954 = *£temporary3954
 
  compare$2:
-	; intValue1 = £field3955 -> £temporary3954
+	; intValue1 = £temporary3955 -> £temporary3954
 	mov eax, [rsi]
 	mov [rbp + 40], eax
 
@@ -42,10 +42,10 @@ section .text
 	mov rsi, [rbp + 32]
 
  compare$4:
-	; £field3957 -> £temporary3956 = *£temporary3956
+	; £temporary3957 -> £temporary3956 = *£temporary3956
 
  compare$5:
-	; intValue2 = £field3957 -> £temporary3956
+	; intValue2 = £temporary3957 -> £temporary3956
 	mov eax, [rsi]
 	mov [rbp + 44], eax
 
@@ -99,10 +99,10 @@ section .text
 	mov rsi, [rbp + 24]
 
  reverse_compare$1:
-	; £field3963 -> £temporary3962 = *£temporary3962
+	; £temporary3963 -> £temporary3962 = *£temporary3962
 
  reverse_compare$2:
-	; intValue1 = £field3963 -> £temporary3962
+	; intValue1 = £temporary3963 -> £temporary3962
 	mov eax, [rsi]
 	mov [rbp + 40], eax
 
@@ -111,10 +111,10 @@ section .text
 	mov rsi, [rbp + 32]
 
  reverse_compare$4:
-	; £field3965 -> £temporary3964 = *£temporary3964
+	; £temporary3965 -> £temporary3964 = *£temporary3964
 
  reverse_compare$5:
-	; intValue2 = £field3965 -> £temporary3964
+	; intValue2 = £temporary3965 -> £temporary3964
 	mov eax, [rsi]
 	mov [rbp + 44], eax
 
@@ -171,12 +171,12 @@ section .text
 	mov qword [rbp + 56], string_div_t20quot2025i20rem2025i0A#
 
  print_div$2:
-	; parameter d$quot, offset 64
+	; parameter d.quot, offset 64
 	mov eax, [rbp + 24]
 	mov [rbp + 64], eax
 
  print_div$3:
-	; parameter d$rem, offset 68
+	; parameter d.rem, offset 68
 	mov eax, [rbp + 28]
 	mov [rbp + 68], eax
 
@@ -210,12 +210,12 @@ section .text
 	mov qword [rbp + 64], string_ldiv_t20quot2025li20rem2025li0A#
 
  print_ldiv$2:
-	; parameter ld$quot, offset 72
+	; parameter ld.quot, offset 72
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
  print_ldiv$3:
-	; parameter ld$rem, offset 80
+	; parameter ld.rem, offset 80
 	mov rax, [rbp + 32]
 	mov [rbp + 80], rax
 
@@ -917,12 +917,12 @@ section .text
 	mov qword [rbp + 56], string_div_t28102C20329203D202825i2C2025i292C0A#
 
  stdlib_test$136:
-	; parameter i$quot, offset 64
+	; parameter i.quot, offset 64
 	mov eax, [rbp + 24]
 	mov [rbp + 64], eax
 
  stdlib_test$137:
-	; parameter i$rem, offset 68
+	; parameter i.rem, offset 68
 	mov eax, [rbp + 28]
 	mov [rbp + 68], eax
 
@@ -1015,12 +1015,12 @@ section .text
 	mov qword [rbp + 64], string_ldiv_t28102C20329203D202825li2C2025li290A#
 
  stdlib_test$153:
-	; parameter li$quot, offset 72
+	; parameter li.quot, offset 72
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
  stdlib_test$154:
-	; parameter li$rem, offset 80
+	; parameter li.rem, offset 80
 	mov rax, [rbp + 32]
 	mov [rbp + 80], rax
 
@@ -1139,10 +1139,10 @@ section .text
 	add rsi, rax
 
  stdlib_test$177:
-	; £field4026 -> £temporary4024 = *£temporary4024
+	; £temporary4026 -> £temporary4024 = *£temporary4024
 
  stdlib_test$178:
-	; parameter £field4026 -> £temporary4024, offset 80
+	; parameter £temporary4026 -> £temporary4024, offset 80
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1251,10 +1251,10 @@ section .text
 	add rsi, rax
 
  stdlib_test$201:
-	; £field4036 -> £temporary4034 = *£temporary4034
+	; £temporary4036 -> £temporary4034 = *£temporary4034
 
  stdlib_test$202:
-	; parameter £field4036 -> £temporary4034, offset 80
+	; parameter £temporary4036 -> £temporary4034, offset 80
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1363,10 +1363,10 @@ section .text
 	add rsi, rax
 
  stdlib_test$225:
-	; £field4046 -> £temporary4044 = *£temporary4044
+	; £temporary4046 -> £temporary4044 = *£temporary4044
 
  stdlib_test$226:
-	; parameter £field4046 -> £temporary4044, offset 80
+	; parameter £temporary4046 -> £temporary4044, offset 80
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 

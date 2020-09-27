@@ -132,10 +132,10 @@ _start:
 	add rsi, rax
 
  main$14:
-	; £field69 -> £temporary72 = *£temporary72
+	; £temporary69 -> £temporary72 = *£temporary72
 
  main$15:
-	; parameter £field69 -> £temporary72, offset 76
+	; parameter £temporary69 -> £temporary72, offset 76
 	mov rax, [rsi]
 	mov [rbp + 76], rax
 
@@ -198,10 +198,10 @@ _start:
 	add rsi, rax
 
  main$28:
-	; £field75 -> £temporary78 = *£temporary78
+	; £temporary75 -> £temporary78 = *£temporary78
 
  main$29:
-	; if £field75 -> £temporary78 == int8$0# goto 42
+	; if £temporary75 -> £temporary78 == int8$0# goto 42
 	cmp qword [rsi], 0
 	je main$42
 
@@ -234,10 +234,10 @@ _start:
 	add rsi, rax
 
  main$36:
-	; £field81 -> £temporary84 = *£temporary84
+	; £temporary81 -> £temporary84 = *£temporary84
 
  main$37:
-	; parameter £field81 -> £temporary84, offset 76
+	; parameter £temporary81 -> £temporary84, offset 76
 	mov rax, [rsi]
 	mov [rbp + 76], rax
 
@@ -1001,10 +1001,10 @@ _start:
 	and rsi, rax
 
  mainX$4:
-	; £field42 -> £temporary41 = *£temporary41
+	; £temporary42 -> £temporary41 = *£temporary41
 
  mainX$5:
-	; c = £field42 -> £temporary41
+	; c = £temporary42 -> £temporary41
 	mov al, [rsi]
 	mov [rbp + 40], al
 
@@ -1129,10 +1129,10 @@ _start:
 	add rsi, rax
 
  mainX$30:
-	; £field49 -> £temporary52 = *£temporary52
+	; £temporary49 -> £temporary52 = *£temporary52
 
  mainX$31:
-	; parameter £field49 -> £temporary52, offset 76
+	; parameter £temporary49 -> £temporary52, offset 76
 	mov rax, [rsi]
 	mov [rbp + 76], rax
 
@@ -1195,10 +1195,10 @@ _start:
 	add rsi, rax
 
  mainX$44:
-	; £field55 -> £temporary58 = *£temporary58
+	; £temporary55 -> £temporary58 = *£temporary58
 
  mainX$45:
-	; if £field55 -> £temporary58 == int8$0# goto 58
+	; if £temporary55 -> £temporary58 == int8$0# goto 58
 	cmp qword [rsi], 0
 	je mainX$58
 
@@ -1231,10 +1231,10 @@ _start:
 	add rsi, rax
 
  mainX$52:
-	; £field61 -> £temporary64 = *£temporary64
+	; £temporary61 -> £temporary64 = *£temporary64
 
  mainX$53:
-	; parameter £field61 -> £temporary64, offset 76
+	; parameter £temporary61 -> £temporary64, offset 76
 	mov rax, [rsi]
 	mov [rbp + 76], rax
 

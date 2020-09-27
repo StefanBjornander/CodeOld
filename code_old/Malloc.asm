@@ -140,11 +140,11 @@ section .text
 	mov [rbp + 72], eax
 
  malloc$28:
-	; £field150 -> currBlockPtr = *currBlockPtr
+	; £temporary150 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 64]
 
  malloc$29:
-	; £temporary151 = currAddress + £field150 -> currBlockPtr
+	; £temporary151 = currAddress + £temporary150 -> currBlockPtr
 	mov eax, [rbp + 72]
 	add eax, [rsi]
 
@@ -201,11 +201,11 @@ section .text
 	mov [rbp + 56], rax
 
  malloc$40:
-	; £field159 -> currBlockPtr = *currBlockPtr
+	; £temporary159 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 64]
 
  malloc$41:
-	; currBlockPtr = £field159 -> currBlockPtr
+	; currBlockPtr = £temporary159 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [rbp + 64], rax
 
@@ -223,11 +223,11 @@ section .text
 	mov rax, [rbp + 40]
 
  malloc$45:
-	; £field162 -> minBlockPtr = *minBlockPtr
+	; £temporary162 -> minBlockPtr = *minBlockPtr
 	mov rsi, [rbp + 40]
 
  malloc$46:
-	; £temporary163 = £temporary161 + £field162 -> minBlockPtr
+	; £temporary163 = £temporary161 + £temporary162 -> minBlockPtr
 	add eax, [rsi]
 
  malloc$47:
@@ -246,20 +246,20 @@ section .text
 	mov [rbp + 76], rax
 
  malloc$50:
-	; £field166 -> newBlockPtr = *newBlockPtr
+	; £temporary166 -> newBlockPtr = *newBlockPtr
 	mov rsi, [rbp + 76]
 
  malloc$51:
-	; £field166 -> newBlockPtr = memorySize
+	; £temporary166 -> newBlockPtr = memorySize
 	mov eax, [rbp + 24]
 	mov [rsi], eax
 
  malloc$52:
-	; £field167 -> newBlockPtr = *newBlockPtr
+	; £temporary167 -> newBlockPtr = *newBlockPtr
 	mov rsi, [rbp + 76]
 
  malloc$53:
-	; £field167 -> newBlockPtr = minBlockPtr
+	; £temporary167 -> newBlockPtr = minBlockPtr
 	mov rax, [rbp + 40]
 	mov [rsi + 4], rax
 
@@ -269,11 +269,11 @@ section .text
 	je malloc$58
 
  malloc$55:
-	; £field169 -> minPrevBlockPtr = *minPrevBlockPtr
+	; £temporary169 -> minPrevBlockPtr = *minPrevBlockPtr
 	mov rsi, [rbp + 48]
 
  malloc$56:
-	; £field169 -> minPrevBlockPtr = newBlockPtr
+	; £temporary169 -> minPrevBlockPtr = newBlockPtr
 	mov rax, [rbp + 76]
 	mov [rsi + 4], rax
 
@@ -336,20 +336,20 @@ section .text
 	mov [rbp + 80], rax
 
  malloc$69:
-	; £field177 -> newBlockPtr = *newBlockPtr
+	; £temporary177 -> newBlockPtr = *newBlockPtr
 	mov rsi, [rbp + 80]
 
  malloc$70:
-	; £field177 -> newBlockPtr = memorySize
+	; £temporary177 -> newBlockPtr = memorySize
 	mov eax, [rbp + 24]
 	mov [rsi], eax
 
  malloc$71:
-	; £field178 -> newBlockPtr = *newBlockPtr
+	; £temporary178 -> newBlockPtr = *newBlockPtr
 	mov rsi, [rbp + 80]
 
  malloc$72:
-	; £field178 -> newBlockPtr = int8$0#
+	; £temporary178 -> newBlockPtr = int8$0#
 	mov qword [rsi + 4], 0
 
  malloc$73:
@@ -358,11 +358,11 @@ section .text
 	je malloc$77
 
  malloc$74:
-	; £field180 -> prevBlockPtr = *prevBlockPtr
+	; £temporary180 -> prevBlockPtr = *prevBlockPtr
 	mov rsi, [rbp + 56]
 
  malloc$75:
-	; £field180 -> prevBlockPtr = newBlockPtr
+	; £temporary180 -> prevBlockPtr = newBlockPtr
 	mov rax, [rbp + 80]
 	mov [rsi + 4], rax
 
@@ -531,11 +531,11 @@ section .text
 	jne free$15
 
  free$11:
-	; £field194 -> currBlockPtr = *currBlockPtr
+	; £temporary194 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 48]
 
  free$12:
-	; if £field194 -> currBlockPtr != int8$0# goto 15
+	; if £temporary194 -> currBlockPtr != int8$0# goto 15
 	cmp qword [rsi + 4], 0
 	jne free$15
 
@@ -553,11 +553,11 @@ section .text
 	jne free$19
 
  free$16:
-	; £field198 -> currBlockPtr = *currBlockPtr
+	; £temporary198 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 48]
 
  free$17:
-	; g_firstBlockPtr = £field198 -> currBlockPtr
+	; g_firstBlockPtr = £temporary198 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [g_firstBlockPtr], rax
 
@@ -566,20 +566,20 @@ section .text
 	jmp free$27
 
  free$19:
-	; £field199 -> currBlockPtr = *currBlockPtr
+	; £temporary199 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 48]
 
  free$20:
-	; if £field199 -> currBlockPtr != int8$0# goto 24
+	; if £temporary199 -> currBlockPtr != int8$0# goto 24
 	cmp qword [rsi + 4], 0
 	jne free$24
 
  free$21:
-	; £field201 -> prevBlockPtr = *prevBlockPtr
+	; £temporary201 -> prevBlockPtr = *prevBlockPtr
 	mov rsi, [rbp + 40]
 
  free$22:
-	; £field201 -> prevBlockPtr = int8$0#
+	; £temporary201 -> prevBlockPtr = int8$0#
 	mov qword [rsi + 4], 0
 
  free$23:
@@ -587,15 +587,15 @@ section .text
 	jmp free$27
 
  free$24:
-	; £field202 -> prevBlockPtr = *prevBlockPtr
+	; £temporary202 -> prevBlockPtr = *prevBlockPtr
 	mov rsi, [rbp + 40]
 
  free$25:
-	; £field203 -> currBlockPtr = *currBlockPtr
+	; £temporary203 -> currBlockPtr = *currBlockPtr
 	mov rdi, [rbp + 48]
 
  free$26:
-	; £field202 -> prevBlockPtr = £field203 -> currBlockPtr
+	; £temporary202 -> prevBlockPtr = £temporary203 -> currBlockPtr
 	mov rax, [rdi + 4]
 	mov [rsi + 4], rax
 
@@ -612,11 +612,11 @@ section .text
 	mov [rbp + 40], rax
 
  free$29:
-	; £field204 -> currBlockPtr = *currBlockPtr
+	; £temporary204 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 48]
 
  free$30:
-	; currBlockPtr = £field204 -> currBlockPtr
+	; currBlockPtr = £temporary204 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [rbp + 48], rax
 
@@ -838,21 +838,21 @@ section .text
 	mov [rbp + 40], rax
 
  realloc$44:
-	; £field224 -> oldBlockPtr = *oldBlockPtr
+	; £temporary224 -> oldBlockPtr = *oldBlockPtr
 	mov rsi, [rbp + 40]
 
  realloc$45:
-	; if newBlockSize > £field224 -> oldBlockPtr goto 49
+	; if newBlockSize > £temporary224 -> oldBlockPtr goto 49
 	mov eax, [rsi]
 	cmp [rbp + 36], eax
 	ja realloc$49
 
  realloc$46:
-	; £field226 -> oldBlockPtr = *oldBlockPtr
+	; £temporary226 -> oldBlockPtr = *oldBlockPtr
 	mov rsi, [rbp + 40]
 
  realloc$47:
-	; £field226 -> oldBlockPtr = newBlockSize
+	; £temporary226 -> oldBlockPtr = newBlockSize
 	mov eax, [rbp + 36]
 	mov [rsi], eax
 
@@ -912,11 +912,11 @@ section .text
 	jb realloc$67
 
  realloc$59:
-	; £field236 -> oldBlockPtr = *oldBlockPtr
+	; £temporary236 -> oldBlockPtr = *oldBlockPtr
 	mov rsi, [rbp + 40]
 
  realloc$60:
-	; £field236 -> oldBlockPtr = newBlockSize
+	; £temporary236 -> oldBlockPtr = newBlockSize
 	mov eax, [rbp + 36]
 	mov [rsi], eax
 
@@ -937,11 +937,11 @@ section .text
 	mov [rbp + 48], eax
 
  realloc$64:
-	; £field238 -> currBlockPtr = *currBlockPtr
+	; £temporary238 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 52]
 
  realloc$65:
-	; currBlockPtr = £field238 -> currBlockPtr
+	; currBlockPtr = £temporary238 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [rbp + 52], rax
 
@@ -1088,11 +1088,11 @@ section .text
 	mov [rbp + 64], eax
 
  print_heap$10:
-	; £field246 -> currBlockPtr = *currBlockPtr
+	; £temporary246 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 24]
 
  print_heap$11:
-	; parameter £field246 -> currBlockPtr, offset 68
+	; parameter £temporary246 -> currBlockPtr, offset 68
 	mov eax, [rsi]
 	mov [rbp + 68], eax
 
@@ -1109,11 +1109,11 @@ section .text
 	; post call
 
  print_heap$14:
-	; £field248 -> currBlockPtr = *currBlockPtr
+	; £temporary248 -> currBlockPtr = *currBlockPtr
 	mov rsi, [rbp + 24]
 
  print_heap$15:
-	; currBlockPtr = £field248 -> currBlockPtr
+	; currBlockPtr = £temporary248 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [rbp + 24], rax
 

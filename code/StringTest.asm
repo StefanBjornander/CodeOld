@@ -130,12 +130,12 @@ section .text
 	; post call
 
  string_test$24:
-	; £field3135 -> u = *u
+	; £temporary3135 -> u = *u
 	mov rsi, rbp
 	add rsi, 136
 
  string_test$25:
-	; £field3135 -> u = int1$0#
+	; £temporary3135 -> u = int1$0#
 	mov byte [rsi + 5], 0
 
  string_test$26:
@@ -257,10 +257,10 @@ section .text
 	add rsi, rax
 
  string_test$52:
-	; £field3141 -> £temporary3144 = *£temporary3144
+	; £temporary3141 -> £temporary3144 = *£temporary3144
 
  string_test$53:
-	; £field3141 -> £temporary3144 = int1$0#
+	; £temporary3141 -> £temporary3144 = int1$0#
 	mov byte [rsi], 0
 
  string_test$54:
@@ -777,12 +777,12 @@ section .text
 	; post call
 
  string_test$173:
-	; £field3181 -> u = *u
+	; £temporary3181 -> u = *u
 	mov rsi, rbp
 	add rsi, 136
 
  string_test$174:
-	; £field3181 -> u = int1$0#
+	; £temporary3181 -> u = int1$0#
 	mov byte [rsi + 21], 0
 
  string_test$175:

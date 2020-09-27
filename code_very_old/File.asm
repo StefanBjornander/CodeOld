@@ -152,10 +152,10 @@ section .text
 	add rsi, rax
 
  fopen$6:
-	; £field838 -> £temporary841 = *£temporary841
+	; £temporary838 -> £temporary841 = *£temporary841
 
  fopen$7:
-	; if £field838.open$0 -> £temporary841 != int4$0# goto 21
+	; if £temporary838.open -> £temporary841 != int4$0# goto 21
 	cmp dword [rsi], 0
 	jne fopen$21
 
@@ -189,10 +189,10 @@ section .text
 	add rsi, rax
 
  fopen$14:
-	; £field844 -> £temporary847 = *£temporary847
+	; £temporary844 -> £temporary847 = *£temporary847
 
  fopen$15:
-	; £temporary848 = &£field844 -> £temporary847
+	; £temporary848 = &£temporary844 -> £temporary847
 
  fopen$16:
 	; parameter £temporary848, offset 84
@@ -792,39 +792,39 @@ section .text
 	je freopen$146
 
  freopen$131:
-	; £field878 -> stream = *stream
+	; £temporary878 -> stream = *stream
 	mov rsi, [rbp + 40]
 
  freopen$132:
-	; £field878 -> stream = int4$1#
+	; £temporary878 -> stream = int4$1#
 	mov dword [rsi], 1
 
  freopen$133:
-	; £field879 -> stream = *stream
+	; £temporary879 -> stream = *stream
 	mov rsi, [rbp + 40]
 
  freopen$134:
-	; £field879 -> stream = handle
+	; £temporary879 -> stream = handle
 	mov eax, [rbp + 48]
 	mov [rsi + 4], eax
 
  freopen$135:
-	; £field880 -> stream = *stream
+	; £temporary880 -> stream = *stream
 	mov rsi, [rbp + 40]
 
  freopen$136:
-	; £field880 -> stream = int4$0#
+	; £temporary880 -> stream = int4$0#
 	mov dword [rsi + 33], 0
 
  freopen$137:
 	; call header integral zero 0 stack zero 0
 
  freopen$138:
-	; £field881 -> stream = *stream
+	; £temporary881 -> stream = *stream
 	mov rsi, [rbp + 40]
 
  freopen$139:
-	; parameter £field881 -> stream, offset 76
+	; parameter £temporary881 -> stream, offset 76
 	mov [rbp + 76], rsi
 	add qword [rbp + 76], 8
 
@@ -844,11 +844,11 @@ section .text
 	; post call
 
  freopen$143:
-	; £field883 -> stream = *stream
+	; £temporary883 -> stream = *stream
 	mov rsi, [rbp + 40]
 
  freopen$144:
-	; £field883 -> stream = int4$0#
+	; £temporary883 -> stream = int4$0#
 	mov dword [rsi + 37], 0
 
  freopen$145:
@@ -860,11 +860,11 @@ section .text
 	jmp rax
 
  freopen$146:
-	; £field884 -> stream = *stream
+	; £temporary884 -> stream = *stream
 	mov rsi, [rbp + 40]
 
  freopen$147:
-	; £field884 -> stream = int4$0#
+	; £temporary884 -> stream = int4$0#
 	mov dword [rsi], 0
 
  freopen$148:
@@ -909,10 +909,10 @@ section .text
 	add rsi, rax
 
  fflush$6:
-	; £field888 -> £temporary891 = *£temporary891
+	; £temporary888 -> £temporary891 = *£temporary891
 
  fflush$7:
-	; if £field888.open$0 -> £temporary891 == int4$0# goto 20
+	; if £temporary888.open -> £temporary891 == int4$0# goto 20
 	cmp dword [rsi], 0
 	je fflush$20
 
@@ -936,10 +936,10 @@ section .text
 	add rsi, rax
 
  fflush$12:
-	; £field892 -> £temporary895 = *£temporary895
+	; £temporary892 -> £temporary895 = *£temporary895
 
  fflush$13:
-	; £temporary896 = &£field892 -> £temporary895
+	; £temporary896 = &£temporary892 -> £temporary895
 
  fflush$14:
 	; parameter £temporary896, offset 60
@@ -1000,11 +1000,11 @@ section .text
 	mov rax, 3
 
  fclose$2:
-	; £field903 -> stream = *stream
+	; £temporary903 -> stream = *stream
 	mov rsi, [rbp + 24]
 
  fclose$3:
-	; £temporary904 = int_to_int £field903 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary904 = int_to_int £temporary903 -> stream (Unsigned_Int -> Unsigned_Long_Int)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
@@ -1050,10 +1050,10 @@ section .text
 	add rsi, rax
 
  fclose$12:
-	; £field907 -> £temporary910 = *£temporary910
+	; £temporary907 -> £temporary910 = *£temporary910
 
  fclose$13:
-	; if £field907.open$0 -> £temporary910 == int4$0# goto 26
+	; if £temporary907.open -> £temporary910 == int4$0# goto 26
 	cmp dword [rsi], 0
 	je fclose$26
 
@@ -1077,10 +1077,10 @@ section .text
 	add rsi, rax
 
  fclose$18:
-	; £field911 -> £temporary914 = *£temporary914
+	; £temporary911 -> £temporary914 = *£temporary914
 
  fclose$19:
-	; £temporary915 = &£field911 -> £temporary914
+	; £temporary915 = &£temporary911 -> £temporary914
 
  fclose$20:
 	; parameter £temporary915, offset 60
@@ -1365,10 +1365,10 @@ section .text
 	add rsi, rax
 
  fgets$16:
-	; £field939 -> £temporary942 = *£temporary942
+	; £temporary939 -> £temporary942 = *£temporary942
 
  fgets$17:
-	; £field939 -> £temporary942 = int1$0#
+	; £temporary939 -> £temporary942 = int1$0#
 	mov byte [rsi], 0
 
  fgets$18:
@@ -1401,10 +1401,10 @@ section .text
 	add rsi, rax
 
  fgets$23:
-	; £field945 -> £temporary948 = *£temporary948
+	; £temporary945 -> £temporary948 = *£temporary948
 
  fgets$24:
-	; £field945 -> £temporary948 = int1$0#
+	; £temporary945 -> £temporary948 = int1$0#
 	mov byte [rsi], 0
 
  fgets$25:
@@ -1440,10 +1440,10 @@ section .text
 	add rsi, rax
 
  fgets$32:
-	; £field953 -> £temporary956 = *£temporary956
+	; £temporary953 -> £temporary956 = *£temporary956
 
  fgets$33:
-	; £field953 -> £temporary956 = currChar
+	; £temporary953 -> £temporary956 = currChar
 	mov al, [rbp + 49]
 	mov [rsi], al
 
@@ -1667,10 +1667,10 @@ section .text
 	add rsi, rax
 
  gets$18:
-	; £field970 -> £temporary973 = *£temporary973
+	; £temporary970 -> £temporary973 = *£temporary973
 
  gets$19:
-	; £field970 -> £temporary973 = int1$0#
+	; £temporary970 -> £temporary973 = int1$0#
 	mov byte [rsi], 0
 
  gets$20:
@@ -1767,11 +1767,11 @@ section .text
 	; function end puts
 
  ungetc:
-	; £field977 -> stream = *stream
+	; £temporary977 -> stream = *stream
 	mov rsi, [rbp + 28]
 
  ungetc$1:
-	; £temporary978 = int_to_int £field977 -> stream (Signed_Char -> Signed_Int)
+	; £temporary978 = int_to_int £temporary977 -> stream (Signed_Char -> Signed_Int)
 	mov al, [rsi + 24]
 	and eax, 255
 	cmp al, 0
@@ -1785,7 +1785,7 @@ section .text
 	je ungetc$6
 
  ungetc$3:
-	; £field980 -> stream = *stream
+	; £temporary980 -> stream = *stream
 	mov rsi, [rbp + 28]
 
  ungetc$4:
@@ -1797,7 +1797,7 @@ section .text
 	neg al
 
  ungetc$5:
-	; £field980 -> stream = £temporary981
+	; £temporary980 -> stream = £temporary981
 	mov [rsi + 24], al
 
  ungetc$6:
@@ -1816,11 +1816,11 @@ section .text
 	mov rax, 0
 
  fread$1:
-	; £field984 -> stream = *stream
+	; £temporary984 -> stream = *stream
 	mov rsi, [rbp + 40]
 
  fread$2:
-	; £temporary985 = int_to_int £field984 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary985 = int_to_int £temporary984 -> stream (Unsigned_Int -> Unsigned_Long_Int)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
@@ -1870,11 +1870,11 @@ section .text
 	mov rax, 0
 
  fwrite$1:
-	; £field993 -> stream = *stream
+	; £temporary993 -> stream = *stream
 	mov rsi, [rbp + 40]
 
  fwrite$2:
-	; £temporary994 = int_to_int £field993 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary994 = int_to_int £temporary993 -> stream (Unsigned_Int -> Unsigned_Long_Int)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
@@ -1924,11 +1924,11 @@ section .text
 	mov rax, 8
 
  fseek$1:
-	; £field1002 -> stream = *stream
+	; £temporary1002 -> stream = *stream
 	mov rsi, [rbp + 24]
 
  fseek$2:
-	; £temporary1003 = int_to_int £field1002 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary1003 = int_to_int £temporary1002 -> stream (Unsigned_Int -> Unsigned_Long_Int)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
@@ -2022,7 +2022,7 @@ section .text
 	; function end rewind
 
  fgetpos:
-	; £field1011 -> ptr = *ptr
+	; £temporary1011 -> ptr = *ptr
 	mov rsi, [rbp + 32]
 
  fgetpos$1:
@@ -2052,7 +2052,7 @@ section .text
 	; £temporary1013 = int_to_int £temporary1012 (Signed_Int -> Signed_Int)
 
  fgetpos$7:
-	; £field1011 -> ptr = £temporary1013
+	; £temporary1011 -> ptr = £temporary1013
 	mov [rsi], ebx
 
  fgetpos$8:
@@ -2075,11 +2075,11 @@ section .text
 	mov [rbp + 64], rax
 
  fsetpos$2:
-	; £field1014 -> ptr = *ptr
+	; £temporary1014 -> ptr = *ptr
 	mov rsi, [rbp + 32]
 
  fsetpos$3:
-	; parameter £field1014 -> ptr, offset 72
+	; parameter £temporary1014 -> ptr, offset 72
 	mov eax, [rsi]
 	mov [rbp + 72], eax
 
@@ -2114,7 +2114,7 @@ section .text
 	; function end fsetpos
 
  clearerr:
-	; £field1017 -> stream = *stream
+	; £temporary1017 -> stream = *stream
 	mov rsi, [rbp + 24]
 
  clearerr$1:
@@ -2122,7 +2122,7 @@ section .text
 	mov dword [errno], 0
 
  clearerr$2:
-	; £field1017 -> stream = errno
+	; £temporary1017 -> stream = errno
 	mov eax, [errno]
 	mov [rsi + 25], eax
 
@@ -2276,11 +2276,11 @@ section .text
 	; function end feof
 
  ferror:
-	; £field1026 -> stream = *stream
+	; £temporary1026 -> stream = *stream
 	mov rsi, [rbp + 24]
 
  ferror$1:
-	; return £field1026 -> stream
+	; return £temporary1026 -> stream
 	mov ebx, [rsi + 25]
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
