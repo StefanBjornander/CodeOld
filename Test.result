@@ -21,6 +21,14 @@ AssertTest.asm
 StringTest.asm
 SetJmpTest.asm
 MathTest.asm
+2939:
+old  <	; if errno == NO_ERROR goto 436>
+new  <	; if errno == int4$0# goto 436>
+
+3075:
+old  <	; if errno == NO_ERROR goto 468>
+new  <	; if errno == int4$0# goto 468>
+
 FileTest.asm
 StdIOTest.asm
 SignalTest.asm

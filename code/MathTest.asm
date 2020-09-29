@@ -2936,7 +2936,7 @@ section .text
 	; post call
 
  math_test_1$430:
-	; if errno == NO_ERROR goto 436
+	; if errno == int4$0# goto 436
 	cmp dword [errno], 0
 	je math_test_1$436
 
@@ -3072,7 +3072,7 @@ section .text
 	; post call
 
  math_test_1$462:
-	; if errno == NO_ERROR goto 468
+	; if errno == int4$0# goto 468
 	cmp dword [errno], 0
 	je math_test_1$468
 
