@@ -17,7 +17,7 @@
 	global exit
 	global swap
 	global qsort
-	global _abs
+	global @abs
 	global labs
 	global div
 	global ldiv
@@ -1659,36 +1659,36 @@ section .text
  qsort$34:
 	; function end qsort
 
- _abs:
+ @abs:
 	; if value >= int4$0# goto 4
 	cmp dword [rbp + 24], 0
-	jge _abs$4
+	jge @abs$4
 
- _abs$1:
+ @abs$1:
 	; £temporary2241 = -value
 	mov ebx, [rbp + 24]
 	neg ebx
 
- _abs$2:
+ @abs$2:
 	; £temporary2242 = £temporary2241
 
- _abs$3:
+ @abs$3:
 	; goto 5
-	jmp _abs$5
+	jmp @abs$5
 
- _abs$4:
+ @abs$4:
 	; £temporary2242 = value
 	mov ebx, [rbp + 24]
 
- _abs$5:
+ @abs$5:
 	; return £temporary2242
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- _abs$6:
-	; function end abs
+ @abs$6:
+	; function end @abs
 
  labs:
 	; if value >= int8$0# goto 4

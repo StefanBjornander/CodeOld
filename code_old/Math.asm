@@ -476,7 +476,7 @@ section .text
 
  log$67:
 	; £temporary421 = int_to_float expo (Signed_Int -> Double)
-	fild word [rbp + 32]
+	fild dword [rbp + 32]
 
  log$68:
 	; £temporary422 = sum + £temporary421
@@ -947,7 +947,7 @@ section .text
 
  ldexp$4:
 	; £temporary452 = int_to_float n (Signed_Int -> Double)
-	fild word [rbp + 32]
+	fild dword [rbp + 32]
 
  ldexp$5:
 	; parameter £temporary452, offset 68
@@ -1108,7 +1108,7 @@ section .text
 
  frexp$27:
 	; £temporary465 = float_to_int £temporary464 (Double -> Signed_Int)
-	fistp word [container4bytes#]
+	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  frexp$28:
@@ -1158,7 +1158,7 @@ section .text
 
  frexp$39:
 	; £temporary469 = int_to_float £temporary468 -> p (Signed_Int -> Double)
-	fild word [rsi]
+	fild dword [rsi]
 
  frexp$40:
 	; parameter £temporary469, offset 72
@@ -1333,7 +1333,7 @@ section .text
 
  frexp$78:
 	; £temporary480 = float_to_int £temporary479 (Double -> Signed_Int)
-	fistp word [container4bytes#]
+	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  frexp$79:
@@ -1379,7 +1379,7 @@ section .text
 
  frexp$89:
 	; £temporary483 = int_to_float n (Signed_Int -> Double)
-	fild word [rbp + 40]
+	fild dword [rbp + 40]
 
  frexp$90:
 	; parameter £temporary483, offset 76
@@ -3649,7 +3649,7 @@ section .text
 
  atanY$30:
 	; £temporary647 = int_to_float sign (Signed_Int -> Double)
-	fild word [rbp + 32]
+	fild dword [rbp + 32]
 
  atanY$31:
 	; push float product
@@ -3661,7 +3661,7 @@ section .text
 
  atanY$33:
 	; £temporary649 = int_to_float denominator (Signed_Int -> Double)
-	fild word [rbp + 36]
+	fild dword [rbp + 36]
 
  atanY$34:
 	; £temporary650 = £temporary648 / £temporary649
@@ -5120,13 +5120,13 @@ section .text
 
  floor$13:
 	; £temporary757 = float_to_int x (Double -> Signed_Long_Int)
-	fistp dword [container8bytes#]
+	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
  floor$14:
 	; £temporary758 = int_to_float £temporary757 (Signed_Long_Int -> Double)
 	mov [container8bytes#], rax
-	fild dword [container8bytes#]
+	fild qword [container8bytes#]
 
  floor$15:
 	; return £temporary758
@@ -5206,13 +5206,13 @@ section .text
 
  ceil$15:
 	; £temporary765 = float_to_int £temporary764 (Double -> Signed_Long_Int)
-	fistp dword [container8bytes#]
+	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
  ceil$16:
 	; £temporary766 = int_to_float £temporary765 (Signed_Long_Int -> Double)
 	mov [container8bytes#], rax
-	fild dword [container8bytes#]
+	fild qword [container8bytes#]
 
  ceil$17:
 	; return £temporary766
@@ -5272,13 +5272,13 @@ section .text
 
  round$11:
 	; £temporary772 = float_to_int £temporary771 (Double -> Signed_Long_Int)
-	fistp dword [container8bytes#]
+	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
  round$12:
 	; £temporary773 = int_to_float £temporary772 (Signed_Long_Int -> Double)
 	mov [container8bytes#], rax
-	fild dword [container8bytes#]
+	fild qword [container8bytes#]
 
  round$13:
 	; return £temporary773
@@ -5360,13 +5360,13 @@ section .text
 
  modf$6:
 	; £temporary778 = float_to_int £temporary777 (Double -> Signed_Long_Int)
-	fistp dword [container8bytes#]
+	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
  modf$7:
 	; £temporary779 = int_to_float £temporary778 (Signed_Long_Int -> Double)
 	mov [container8bytes#], rax
-	fild dword [container8bytes#]
+	fild qword [container8bytes#]
 
  modf$8:
 	; pop float integral
@@ -5567,13 +5567,13 @@ section .text
 
  fmod$10:
 	; £temporary797 = float_to_int quotient (Double -> Signed_Long_Int)
-	fistp dword [container8bytes#]
+	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
  fmod$11:
 	; £temporary798 = int_to_float £temporary797 (Signed_Long_Int -> Double)
 	mov [container8bytes#], rax
-	fild dword [container8bytes#]
+	fild qword [container8bytes#]
 
  fmod$12:
 	; £temporary799 = quotient - £temporary798

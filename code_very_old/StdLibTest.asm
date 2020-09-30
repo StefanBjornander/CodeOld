@@ -16,7 +16,7 @@
 	extern atol
 	extern getenv
 	extern system
-	extern _abs
+	extern @abs
 	extern labs
 	extern div
 	extern ldiv
@@ -770,11 +770,11 @@ section .text
 	mov dword [rbp + 80], -3
 
  stdlib_test$103:
-	; call function noellipse-noellipse abs
+	; call function noellipse-noellipse @abs
 	mov qword [rbp + 56], stdlib_test$104
 	mov [rbp + 64], rbp
 	add rbp, 56
-	jmp _abs
+	jmp @abs
 
  stdlib_test$104:
 	; post call
@@ -794,11 +794,11 @@ section .text
 	mov dword [rbp + 84], 3
 
  stdlib_test$109:
-	; call function noellipse-noellipse abs
+	; call function noellipse-noellipse @abs
 	mov qword [rbp + 60], stdlib_test$110
 	mov [rbp + 68], rbp
 	add rbp, 60
-	jmp _abs
+	jmp @abs
 
  stdlib_test$110:
 	; post call

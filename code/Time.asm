@@ -707,7 +707,7 @@ section .text
  difftime$1:
 	; £temporary2373 = int_to_float £temporary2372 (Unsigned_Long_Int -> Double)
 	mov [container8bytes#], rax
-	fild dword [container8bytes#]
+	fild qword [container8bytes#]
 
  difftime$2:
 	; return £temporary2373

@@ -1359,7 +1359,7 @@ section .text
  file_test$296:
 	; £temporary3566 = int_to_float £temporary3565 (Signed_Int -> Double)
 	mov [container4bytes#], eax
-	fild word [container4bytes#]
+	fild dword [container4bytes#]
 
  file_test$297:
 	; pop float value

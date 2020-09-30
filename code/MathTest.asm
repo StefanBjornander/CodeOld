@@ -3530,7 +3530,7 @@ section .text
 
  math_test_2$96:
 	; £temporary3467 = float_to_int y (Double -> Signed_Int)
-	fistp word [container4bytes#]
+	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  math_test_2$97:
@@ -3554,7 +3554,7 @@ section .text
 
  math_test_2$102:
 	; £temporary3468 = float_to_int y (Double -> Signed_Int)
-	fistp word [container4bytes#]
+	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  math_test_2$103:

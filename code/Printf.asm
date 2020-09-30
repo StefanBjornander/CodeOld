@@ -1181,13 +1181,13 @@ section .text
 
  printLongDoubleFraction$2:
 	; £temporary1692 = float_to_int longDoubleValue (Long_Double -> Signed_Long_Int)
-	fistp dword [container8bytes#]
+	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
  printLongDoubleFraction$3:
 	; £temporary1693 = int_to_float £temporary1692 (Signed_Long_Int -> Long_Double)
 	mov [container8bytes#], rax
-	fild dword [container8bytes#]
+	fild qword [container8bytes#]
 
  printLongDoubleFraction$4:
 	; £temporary1694 = longDoubleValue - £temporary1693
@@ -1264,7 +1264,7 @@ section .text
 
  printLongDoubleFraction$21:
 	; £temporary1703 = float_to_int longDoubleValue10 (Long_Double -> Signed_Int)
-	fistp word [container4bytes#]
+	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  printLongDoubleFraction$22:
@@ -1306,7 +1306,7 @@ section .text
 
  printLongDoubleFraction$30:
 	; £temporary1707 = int_to_float digitValue (Signed_Int -> Long_Double)
-	fild word [rbp + 48]
+	fild dword [rbp + 48]
 
  printLongDoubleFraction$31:
 	; £temporary1708 = longDoubleValue10 - £temporary1707
@@ -1388,7 +1388,7 @@ section .text
 
  printLongDoublePlain$13:
 	; £temporary1712 = float_to_int longDoubleValue (Long_Double -> Signed_Long_Int)
-	fistp dword [container8bytes#]
+	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
  printLongDoublePlain$14:
@@ -1429,7 +1429,7 @@ section .text
 
  printLongDoublePlain$22:
 	; £temporary1714 = int_to_float longValue (Signed_Long_Int -> Long_Double)
-	fild dword [rbp + 48]
+	fild qword [rbp + 48]
 
  printLongDoublePlain$23:
 	; £temporary1715 = longDoubleValue - £temporary1714
@@ -1668,7 +1668,7 @@ section .text
 
  printLongDoubleExpo$43:
 	; £temporary1729 = float_to_int £temporary1728 (Double -> Signed_Int)
-	fistp word [container4bytes#]
+	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  printLongDoubleExpo$44:
@@ -1693,7 +1693,7 @@ section .text
 
  printLongDoubleExpo$49:
 	; £temporary1730 = int_to_float expo (Signed_Int -> Double)
-	fild word [rbp + 52]
+	fild dword [rbp + 52]
 
  printLongDoubleExpo$50:
 	; parameter £temporary1730, offset 88
@@ -3158,7 +3158,7 @@ section .text
 
  printArgument$268:
 	; £temporary1888 = float_to_int £temporary1887 (Double -> Signed_Int)
-	fistp word [container4bytes#]
+	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  printArgument$269:
