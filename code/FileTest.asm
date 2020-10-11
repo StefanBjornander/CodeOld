@@ -1097,7 +1097,7 @@ section .text
 	; £temporary3545 = return_value
 
  file_test$240:
-	; £temporary3546 = int_to_int £temporary3545 (Signed_Int -> Signed_Char)
+	; £temporary3546 = int_to_int £temporary3545 (SignedInt -> SignedChar)
 	cmp ebx, 0
 	jge file_test$241
 	neg ebx
@@ -1108,7 +1108,7 @@ section .text
 	mov [rbp + 72], bl
 
  file_test$242:
-	; £temporary3547 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3547 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 72]
 	and eax, 255
 	cmp al, 0
@@ -1125,7 +1125,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  file_test$245:
-	; £temporary3549 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3549 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 72]
 	and eax, 255
 	cmp al, 0
@@ -1357,7 +1357,7 @@ section .text
 	imul dword [rbp + 52]
 
  file_test$296:
-	; £temporary3566 = int_to_float £temporary3565 (Signed_Int -> Double)
+	; £temporary3566 = int_to_float £temporary3565 (SignedInt -> Double)
 	mov [container4bytes#], eax
 	fild dword [container4bytes#]
 
@@ -1642,7 +1642,7 @@ section .text
 	mov [rbp + 168], eax
 
  file_test$361:
-	; £temporary3584 = int_to_int index (Signed_Int -> Array)
+	; £temporary3584 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 132]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2207,7 +2207,7 @@ section .text
 	; post call
 
  file_test$487:
-	; £temporary3619 = int_to_int size (Signed_Int -> Pointer)
+	; £temporary3619 = int_to_int size (SignedInt -> Pointer)
 	mov eax, [rbp + 48]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2312,7 +2312,7 @@ section .text
 	mov [rbp + 108], eax
 
  file_test$509:
-	; £temporary3627 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary3627 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 72]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -3102,7 +3102,7 @@ section .text
 	; £temporary3722 = return_value
 
  file_test$693:
-	; £temporary3723 = int_to_int £temporary3722 (Signed_Int -> Unsigned_Int)
+	; £temporary3723 = int_to_int £temporary3722 (SignedInt -> Unsigned_Int)
 
  file_test$694:
 	; u = £temporary3723
@@ -3135,7 +3135,7 @@ section .text
 	; £temporary3725 = return_value
 
  file_test$701:
-	; £temporary3726 = int_to_int £temporary3725 (Signed_Int -> Signed_Char)
+	; £temporary3726 = int_to_int £temporary3725 (SignedInt -> SignedChar)
 	cmp ebx, 0
 	jge file_test$702
 	neg ebx
@@ -3149,7 +3149,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  file_test$704:
-	; £temporary3727 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3727 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 52]
 	and eax, 255
 	cmp al, 0
@@ -3540,7 +3540,7 @@ section .text
 	; £temporary3751 = return_value
 
  file_test$793:
-	; £temporary3752 = int_to_int £temporary3751 (Signed_Int -> Signed_Char)
+	; £temporary3752 = int_to_int £temporary3751 (SignedInt -> SignedChar)
 	cmp ebx, 0
 	jge file_test$794
 	neg ebx
@@ -3551,7 +3551,7 @@ section .text
 	mov [rbp + 56], bl
 
  file_test$795:
-	; £temporary3753 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3753 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 56]
 	and eax, 255
 	cmp al, 0
@@ -3571,7 +3571,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  file_test$799:
-	; £temporary3755 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3755 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 56]
 	and eax, 255
 	cmp al, 0
@@ -3682,7 +3682,7 @@ section .text
 	; £temporary3761 = return_value
 
  file_test$823:
-	; £temporary3762 = int_to_int £temporary3761 (Signed_Int -> Signed_Char)
+	; £temporary3762 = int_to_int £temporary3761 (SignedInt -> SignedChar)
 	cmp ebx, 0
 	jge file_test$824
 	neg ebx
@@ -3693,7 +3693,7 @@ section .text
 	mov [rbp + 56], bl
 
  file_test$825:
-	; £temporary3763 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3763 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 56]
 	and eax, 255
 	cmp al, 0
@@ -3710,7 +3710,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  file_test$828:
-	; £temporary3765 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3765 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 56]
 	and eax, 255
 	cmp al, 0
@@ -4009,7 +4009,7 @@ Array_8#:
 	dq 8
 
 int4$8#:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 8
 
 int8$8#:

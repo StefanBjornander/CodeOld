@@ -246,7 +246,7 @@ section .text
 	add eax, 2
 
  string_test$50:
-	; £temporary3142 = int_to_int £temporary3140 (Signed_Int -> Array)
+	; £temporary3142 = int_to_int £temporary3140 (SignedInt -> Array)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -441,7 +441,7 @@ section .text
 	sub rax, [rbp + 28]
 
  string_test$94:
-	; £temporary3154 = int_to_int £temporary3153 (Pointer -> Signed_Int)
+	; £temporary3154 = int_to_int £temporary3153 (Pointer -> SignedInt)
 
  string_test$95:
 	; £temporary3155 = £temporary3154
@@ -517,7 +517,7 @@ section .text
 	sub rax, [rbp + 28]
 
  string_test$112:
-	; £temporary3161 = int_to_int £temporary3160 (Pointer -> Signed_Int)
+	; £temporary3161 = int_to_int £temporary3160 (Pointer -> SignedInt)
 
  string_test$113:
 	; £temporary3162 = £temporary3161
@@ -593,7 +593,7 @@ section .text
 	sub rax, [rbp + 28]
 
  string_test$130:
-	; £temporary3168 = int_to_int £temporary3167 (Pointer -> Signed_Int)
+	; £temporary3168 = int_to_int £temporary3167 (Pointer -> SignedInt)
 
  string_test$131:
 	; £temporary3169 = £temporary3168
@@ -669,7 +669,7 @@ section .text
 	sub rax, [rbp + 28]
 
  string_test$148:
-	; £temporary3175 = int_to_int £temporary3174 (Pointer -> Signed_Int)
+	; £temporary3175 = int_to_int £temporary3174 (Pointer -> SignedInt)
 
  string_test$149:
 	; £temporary3176 = £temporary3175
@@ -870,7 +870,7 @@ section .text
 	sub rax, [rbp + 28]
 
  string_test$194:
-	; £temporary3187 = int_to_int £temporary3186 (Pointer -> Signed_Int)
+	; £temporary3187 = int_to_int £temporary3186 (Pointer -> SignedInt)
 
  string_test$195:
 	; £temporary3188 = £temporary3187
@@ -950,7 +950,7 @@ section .text
 	sub rax, [rbp + 28]
 
  string_test$213:
-	; £temporary3194 = int_to_int £temporary3193 (Pointer -> Signed_Int)
+	; £temporary3194 = int_to_int £temporary3193 (Pointer -> SignedInt)
 
  string_test$214:
 	; £temporary3195 = £temporary3194

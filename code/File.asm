@@ -46,7 +46,7 @@ section .text
 	mov rax, 85
 
  @2622$filecreate$1:
-	; £temporary827 = int_to_int name (Pointer -> Unsigned_Long_Int)
+	; £temporary827 = int_to_int name (Pointer -> UnsignedLongInt)
 	mov rdi, [rbp + 24]
 
  @2622$filecreate$2:
@@ -87,14 +87,14 @@ section .text
 	mov rax, 2
 
  @2626$fileopen$1:
-	; £temporary831 = int_to_int name (Pointer -> Unsigned_Long_Int)
+	; £temporary831 = int_to_int name (Pointer -> UnsignedLongInt)
 	mov rdi, [rbp + 24]
 
  @2626$fileopen$2:
 	; rdi = £temporary831
 
  @2626$fileopen$3:
-	; £temporary833 = int_to_int mode (Unsigned_Short_Int -> Unsigned_Long_Int)
+	; £temporary833 = int_to_int mode (UnsignedShortInt -> UnsignedLongInt)
 	mov si, [rbp + 32]
 	mov rbx, 65535
 	and rsi, rbx
@@ -110,7 +110,7 @@ section .text
 	; £temporary834 = rax
 
  @2626$fileopen$7:
-	; £temporary835 = int_to_int £temporary834 (Unsigned_Long_Int -> Signed_Int)
+	; £temporary835 = int_to_int £temporary834 (UnsignedLongInt -> SignedInt)
 
  @2626$fileopen$8:
 	; return £temporary835
@@ -136,7 +136,7 @@ section .text
 	jge fopen$23
 
  fopen$3:
-	; £temporary839 = int_to_int index (Signed_Int -> Array)
+	; £temporary839 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -173,7 +173,7 @@ section .text
 	mov [rbp + 76], rax
 
  fopen$11:
-	; £temporary845 = int_to_int index (Signed_Int -> Array)
+	; £temporary845 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -893,7 +893,7 @@ section .text
 	jge fflush$22
 
  fflush$3:
-	; £temporary889 = int_to_int index (Signed_Int -> Array)
+	; £temporary889 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -920,7 +920,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  fflush$9:
-	; £temporary893 = int_to_int index (Signed_Int -> Array)
+	; £temporary893 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1004,7 +1004,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  fclose$3:
-	; £temporary904 = int_to_int £temporary903 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary904 = int_to_int £temporary903 -> stream (Unsigned_Int -> UnsignedLongInt)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
@@ -1034,7 +1034,7 @@ section .text
 	jge fclose$28
 
  fclose$9:
-	; £temporary908 = int_to_int index (Signed_Int -> Array)
+	; £temporary908 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1061,7 +1061,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  fclose$15:
-	; £temporary912 = int_to_int index (Signed_Int -> Array)
+	; £temporary912 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1136,7 +1136,7 @@ section .text
 	mov rax, 88
 
  remove$1:
-	; £temporary921 = int_to_int name (Pointer -> Unsigned_Long_Int)
+	; £temporary921 = int_to_int name (Pointer -> UnsignedLongInt)
 	mov rdi, [rbp + 24]
 
  remove$2:
@@ -1162,14 +1162,14 @@ section .text
 	mov rax, 82
 
  rename$1:
-	; £temporary924 = int_to_int oldName (Pointer -> Unsigned_Long_Int)
+	; £temporary924 = int_to_int oldName (Pointer -> UnsignedLongInt)
 	mov rdi, [rbp + 24]
 
  rename$2:
 	; rdi = £temporary924
 
  rename$3:
-	; £temporary926 = int_to_int newName (Pointer -> Unsigned_Long_Int)
+	; £temporary926 = int_to_int newName (Pointer -> UnsignedLongInt)
 	mov rsi, [rbp + 32]
 
  rename$4:
@@ -1262,7 +1262,7 @@ section .text
 	jle fgetc$13
 
  fgetc$11:
-	; £temporary930 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary930 = int_to_int c (SignedChar -> SignedInt)
 	mov bl, [rbp + 32]
 	and ebx, 255
 	cmp bl, 0
@@ -1354,7 +1354,7 @@ section .text
 	jne fgets$19
 
  fgets$14:
-	; £temporary940 = int_to_int count (Signed_Int -> Pointer)
+	; £temporary940 = int_to_int count (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1376,7 +1376,7 @@ section .text
 	jmp fgets$36
 
  fgets$19:
-	; £temporary943 = int_to_int currChar (Signed_Char -> Signed_Int)
+	; £temporary943 = int_to_int currChar (SignedChar -> SignedInt)
 	mov al, [rbp + 49]
 	and eax, 255
 	cmp al, 0
@@ -1390,7 +1390,7 @@ section .text
 	jne fgets$26
 
  fgets$21:
-	; £temporary946 = int_to_int count (Signed_Int -> Pointer)
+	; £temporary946 = int_to_int count (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1430,7 +1430,7 @@ section .text
 	inc dword [rbp + 44]
 
  fgets$30:
-	; £temporary954 = int_to_int £temporary952 (Signed_Int -> Pointer)
+	; £temporary954 = int_to_int £temporary952 (SignedInt -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -1657,7 +1657,7 @@ section .text
 	dec eax
 
  gets$16:
-	; £temporary971 = int_to_int £temporary969 (Signed_Int -> Pointer)
+	; £temporary971 = int_to_int £temporary969 (SignedInt -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -1771,7 +1771,7 @@ section .text
 	mov rsi, [rbp + 28]
 
  ungetc$1:
-	; £temporary978 = int_to_int £temporary977 -> stream (Signed_Char -> Signed_Int)
+	; £temporary978 = int_to_int £temporary977 -> stream (SignedChar -> SignedInt)
 	mov al, [rsi + 24]
 	and eax, 255
 	cmp al, 0
@@ -1789,7 +1789,7 @@ section .text
 	mov rsi, [rbp + 28]
 
  ungetc$4:
-	; £temporary981 = int_to_int c (Signed_Int -> Signed_Char)
+	; £temporary981 = int_to_int c (SignedInt -> SignedChar)
 	mov eax, [rbp + 24]
 	cmp eax, 0
 	jge ungetc$5
@@ -1820,7 +1820,7 @@ section .text
 	mov rsi, [rbp + 40]
 
  fread$2:
-	; £temporary985 = int_to_int £temporary984 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary985 = int_to_int £temporary984 -> stream (Unsigned_Int -> UnsignedLongInt)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
@@ -1829,7 +1829,7 @@ section .text
 	; rdi = £temporary985
 
  fread$4:
-	; £temporary987 = int_to_int ptr (Pointer -> Unsigned_Long_Int)
+	; £temporary987 = int_to_int ptr (Pointer -> UnsignedLongInt)
 	mov rsi, [rbp + 24]
 
  fread$5:
@@ -1842,7 +1842,7 @@ section .text
 	imul dword [rbp + 36]
 
  fread$7:
-	; £temporary990 = int_to_int £temporary989 (Signed_Int -> Unsigned_Long_Int)
+	; £temporary990 = int_to_int £temporary989 (SignedInt -> UnsignedLongInt)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -1874,7 +1874,7 @@ section .text
 	mov rsi, [rbp + 40]
 
  fwrite$2:
-	; £temporary994 = int_to_int £temporary993 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary994 = int_to_int £temporary993 -> stream (Unsigned_Int -> UnsignedLongInt)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
@@ -1883,7 +1883,7 @@ section .text
 	; rdi = £temporary994
 
  fwrite$4:
-	; £temporary996 = int_to_int ptr (Pointer -> Unsigned_Long_Int)
+	; £temporary996 = int_to_int ptr (Pointer -> UnsignedLongInt)
 	mov rsi, [rbp + 24]
 
  fwrite$5:
@@ -1896,7 +1896,7 @@ section .text
 	imul dword [rbp + 36]
 
  fwrite$7:
-	; £temporary999 = int_to_int £temporary998 (Signed_Int -> Unsigned_Long_Int)
+	; £temporary999 = int_to_int £temporary998 (SignedInt -> UnsignedLongInt)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -1928,7 +1928,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  fseek$2:
-	; £temporary1003 = int_to_int £temporary1002 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary1003 = int_to_int £temporary1002 -> stream (Unsigned_Int -> UnsignedLongInt)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
@@ -1937,7 +1937,7 @@ section .text
 	; rdi = £temporary1003
 
  fseek$4:
-	; £temporary1005 = int_to_int offset (Signed_Int -> Unsigned_Long_Int)
+	; £temporary1005 = int_to_int offset (SignedInt -> UnsignedLongInt)
 	mov esi, [rbp + 32]
 	mov rbx, 4294967295
 	and rsi, rbx
@@ -1946,7 +1946,7 @@ section .text
 	; rsi = £temporary1005
 
  fseek$6:
-	; £temporary1007 = int_to_int origin (Signed_Int -> Unsigned_Long_Int)
+	; £temporary1007 = int_to_int origin (SignedInt -> UnsignedLongInt)
 	mov edx, [rbp + 36]
 	mov rbx, 4294967295
 	and rdx, rbx
@@ -2049,7 +2049,7 @@ section .text
 	; £temporary1012 = return_value
 
  fgetpos$6:
-	; £temporary1013 = int_to_int £temporary1012 (Signed_Int -> Signed_Int)
+	; £temporary1013 = int_to_int £temporary1012 (SignedInt -> SignedInt)
 
  fgetpos$7:
 	; £temporary1011 -> ptr = £temporary1013
@@ -2101,7 +2101,7 @@ section .text
 	; £temporary1015 = return_value
 
  fsetpos$8:
-	; £temporary1016 = int_to_int £temporary1015 (Signed_Int -> Signed_Int)
+	; £temporary1016 = int_to_int £temporary1015 (SignedInt -> SignedInt)
 
  fsetpos$9:
 	; return £temporary1016
@@ -2166,7 +2166,7 @@ section .text
 	; £temporary1018 = return_value
 
  feof$7:
-	; £temporary1019 = int_to_int £temporary1018 (Signed_Int -> Unsigned_Long_Int)
+	; £temporary1019 = int_to_int £temporary1018 (SignedInt -> UnsignedLongInt)
 	mov rax, 4294967295
 	and rbx, rax
 
@@ -2204,7 +2204,7 @@ section .text
 	; £temporary1020 = return_value
 
  feof$16:
-	; £temporary1021 = int_to_int £temporary1020 (Signed_Int -> Unsigned_Long_Int)
+	; £temporary1021 = int_to_int £temporary1020 (SignedInt -> UnsignedLongInt)
 	mov rax, 4294967295
 	and rbx, rax
 
@@ -2221,7 +2221,7 @@ section .text
 	mov [rbp + 72], rax
 
  feof$20:
-	; £temporary1022 = int_to_int currPosition (Unsigned_Long_Int -> Signed_Int)
+	; £temporary1022 = int_to_int currPosition (UnsignedLongInt -> SignedInt)
 	mov rax, [rbp + 32]
 
  feof$21:
@@ -2351,19 +2351,19 @@ section .text
 section .data
 
 g_fileArray:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 1
 	; initializer Unsigned_Int
 	dd 0
 	; initializer zero 33
 	times 33 db 0
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 1
 	; initializer Unsigned_Int
 	dd 1
 	; initializer zero 33
 	times 33 db 0
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 1
 	; initializer Unsigned_Int
 	dd 2
@@ -2385,39 +2385,39 @@ stderr:
 	dq g_fileArray + 82
 
 @2612$EEXIST:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 0
 
 @2613$ENOENT:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 1
 
 @2614$EACCES:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 2
 
 @2615$SEEK_SET:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 0
 
 @2616$SEEK_CUR:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 1
 
 @2617$SEEK_END:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 2
 
 @2618$READ:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 64
 
 @2619$WRITE:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 65
 
 @2620$READ_WRITE:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 66
 
 Array_41#:

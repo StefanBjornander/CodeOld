@@ -82,7 +82,7 @@ section .text
 	jmp rax
 
  malloc$14:
-	; £temporary142 = int_to_int memorySize (Signed_Int -> Unsigned_Int)
+	; £temporary142 = int_to_int memorySize (SignedInt -> Unsigned_Int)
 	mov eax, [rbp + 24]
 
  malloc$15:
@@ -313,7 +313,7 @@ section .text
 	; £temporary173 = rbp
 
  malloc$64:
-	; £temporary174 = int_to_int £temporary173 (Unsigned_Long_Int -> Unsigned_Int)
+	; £temporary174 = int_to_int £temporary173 (UnsignedLongInt -> Unsigned_Int)
 
  malloc$65:
 	; stackTop = £temporary174
@@ -812,7 +812,7 @@ section .text
 	jmp rax
 
  realloc$38:
-	; £temporary219 = int_to_int newMemorySize (Signed_Int -> Unsigned_Int)
+	; £temporary219 = int_to_int newMemorySize (SignedInt -> Unsigned_Int)
 	mov eax, [rbp + 32]
 
  realloc$39:

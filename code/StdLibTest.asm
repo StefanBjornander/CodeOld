@@ -1122,7 +1122,7 @@ section .text
 	mov qword [rbp + 72], string_25i20#
 
  stdlib_test$174:
-	; £temporary4023 = int_to_int index (Signed_Int -> Array)
+	; £temporary4023 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1234,7 +1234,7 @@ section .text
 	mov qword [rbp + 72], string_25i20#
 
  stdlib_test$198:
-	; £temporary4033 = int_to_int index (Signed_Int -> Array)
+	; £temporary4033 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1346,7 +1346,7 @@ section .text
 	mov qword [rbp + 72], string_25i20#
 
  stdlib_test$222:
-	; £temporary4043 = int_to_int index (Signed_Int -> Array)
+	; £temporary4043 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1484,7 +1484,7 @@ section .text
 	div qword [int8$4#]
 
  stdlib_test$252:
-	; £temporary4058 = int_to_int £temporary4056 (Pointer -> Signed_Int)
+	; £temporary4058 = int_to_int £temporary4056 (Pointer -> SignedInt)
 
  stdlib_test$253:
 	; £temporary4059 = £temporary4058

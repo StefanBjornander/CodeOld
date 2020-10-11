@@ -62,7 +62,7 @@ section .text
 	mov [rbp + 72], rax
 
  setlocale$13:
-	; £temporary384 = int_to_int index (Signed_Int -> Array)
+	; £temporary384 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -104,7 +104,7 @@ section .text
 	jne setlocale$29
 
  setlocale$22:
-	; £temporary390 = int_to_int index (Signed_Int -> Array)
+	; £temporary390 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -547,9 +547,9 @@ string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#:
 	db "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 0
 
 @1533$en_US_utf8:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd -5
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd -4
 	; initializer Pointer
 	dq @1507$enShortDayList
@@ -859,9 +859,9 @@ string_fel20vid20namnbyte20av20fil#:
 	dq string_fel20vid20namnbyte20av20fil#
 
 @1539$sw_EN_utf8:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 1
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 2
 	; initializer Pointer
 	dq @1534$swShortDayList
@@ -913,7 +913,7 @@ string_SE#:
 	dq @1539$sw_EN_utf8
 
 @1543$sSize:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 1
 
 @1544$g_currStructPtr:

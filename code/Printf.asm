@@ -53,7 +53,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  putc$4:
-	; £temporary1583 = int_to_int i (Signed_Int -> Signed_Char)
+	; £temporary1583 = int_to_int i (SignedInt -> SignedChar)
 	mov eax, [rbp + 24]
 	cmp eax, 0
 	jge putc$5
@@ -101,7 +101,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  fputc$4:
-	; £temporary1586 = int_to_int i (Signed_Int -> Signed_Char)
+	; £temporary1586 = int_to_int i (SignedInt -> SignedChar)
 	mov eax, [rbp + 24]
 	cmp eax, 0
 	jge fputc$5
@@ -149,7 +149,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  putchar$4:
-	; £temporary1589 = int_to_int i (Signed_Int -> Signed_Char)
+	; £temporary1589 = int_to_int i (SignedInt -> SignedChar)
 	mov eax, [rbp + 24]
 	cmp eax, 0
 	jge putchar$5
@@ -224,7 +224,7 @@ section .text
 	mov rsi, [rbp + 37]
 
  printChar$10:
-	; £temporary1595 = int_to_int £temporary1594 -> stream (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary1595 = int_to_int £temporary1594 -> stream (Unsigned_Int -> UnsignedLongInt)
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
@@ -238,7 +238,7 @@ section .text
 	add rsi, 24
 
  printChar$13:
-	; £temporary1598 = int_to_int £temporary1597 (Pointer -> Unsigned_Long_Int)
+	; £temporary1598 = int_to_int £temporary1597 (Pointer -> UnsignedLongInt)
 
  printChar$14:
 	; rsi = £temporary1598
@@ -276,7 +276,7 @@ section .text
 	inc dword [g_outChars]
 
  printChar$23:
-	; £temporary1604 = int_to_int £temporary1602 (Signed_Int -> Pointer)
+	; £temporary1604 = int_to_int £temporary1602 (SignedInt -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -326,7 +326,7 @@ section .text
 	mov dword [rbp + 36], 0
 
  printString$3:
-	; £temporary1612 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary1612 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -348,7 +348,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  printString$8:
-	; £temporary1618 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary1618 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -402,7 +402,7 @@ section .text
 	jle printString$57
 
  printString$20:
-	; £temporary1625 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary1625 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -424,7 +424,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  printString$25:
-	; £temporary1632 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary1632 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -584,7 +584,7 @@ section .text
 	idiv qword [int8$10#]
 
  printLongIntRec$2:
-	; £temporary1644 = int_to_int £temporary1643 (Signed_Long_Int -> Signed_Int)
+	; £temporary1644 = int_to_int £temporary1643 (Signed_Long_Int -> SignedInt)
 	cmp rdx, 0
 	jge printLongIntRec$3
 	neg rdx
@@ -626,7 +626,7 @@ section .text
 	add eax, 48
 
  printLongIntRec$11:
-	; £temporary1648 = int_to_int £temporary1647 (Signed_Int -> Signed_Char)
+	; £temporary1648 = int_to_int £temporary1647 (SignedInt -> SignedChar)
 	cmp eax, 0
 	jge printLongIntRec$12
 	neg eax
@@ -804,7 +804,7 @@ section .text
 	add ebx, 48
 
  digitToChar$2:
-	; £temporary1662 = int_to_int £temporary1661 (Signed_Int -> Signed_Char)
+	; £temporary1662 = int_to_int £temporary1661 (SignedInt -> SignedChar)
 	cmp ebx, 0
 	jge digitToChar$3
 	neg ebx
@@ -832,7 +832,7 @@ section .text
 	add ebx, 65
 
  digitToChar$7:
-	; £temporary1665 = int_to_int £temporary1664 (Signed_Int -> Signed_Char)
+	; £temporary1665 = int_to_int £temporary1664 (SignedInt -> SignedChar)
 	cmp ebx, 0
 	jge digitToChar$8
 	neg ebx
@@ -855,7 +855,7 @@ section .text
 	add ebx, 97
 
  digitToChar$11:
-	; £temporary1668 = int_to_int £temporary1667 (Signed_Int -> Signed_Char)
+	; £temporary1668 = int_to_int £temporary1667 (SignedInt -> SignedChar)
 	cmp ebx, 0
 	jge digitToChar$12
 	neg ebx
@@ -883,7 +883,7 @@ section .text
 	div qword [rbp + 32]
 
  printUnsignedLongRec$2:
-	; £temporary1672 = int_to_int £temporary1671 (Unsigned_Long_Int -> Signed_Int)
+	; £temporary1672 = int_to_int £temporary1671 (UnsignedLongInt -> SignedInt)
 
  printUnsignedLongRec$3:
 	; digit = £temporary1672
@@ -1180,12 +1180,12 @@ section .text
 	fld qword [rbp + 24]
 
  printLongDoubleFraction$2:
-	; £temporary1692 = float_to_int longDoubleValue (Long_Double -> Signed_Long_Int)
+	; £temporary1692 = float_to_int longDoubleValue (LongDouble -> Signed_Long_Int)
 	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
  printLongDoubleFraction$3:
-	; £temporary1693 = int_to_float £temporary1692 (Signed_Long_Int -> Long_Double)
+	; £temporary1693 = int_to_float £temporary1692 (Signed_Long_Int -> LongDouble)
 	mov [container8bytes#], rax
 	fild qword [container8bytes#]
 
@@ -1263,7 +1263,7 @@ section .text
 	fst qword [rbp + 40]
 
  printLongDoubleFraction$21:
-	; £temporary1703 = float_to_int longDoubleValue10 (Long_Double -> Signed_Int)
+	; £temporary1703 = float_to_int longDoubleValue10 (LongDouble -> SignedInt)
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
@@ -1280,7 +1280,7 @@ section .text
 	add eax, 48
 
  printLongDoubleFraction$25:
-	; £temporary1705 = int_to_int £temporary1704 (Signed_Int -> Signed_Char)
+	; £temporary1705 = int_to_int £temporary1704 (SignedInt -> SignedChar)
 	cmp eax, 0
 	jge printLongDoubleFraction$26
 	neg eax
@@ -1305,7 +1305,7 @@ section .text
 	fld qword [rbp + 40]
 
  printLongDoubleFraction$30:
-	; £temporary1707 = int_to_float digitValue (Signed_Int -> Long_Double)
+	; £temporary1707 = int_to_float digitValue (SignedInt -> LongDouble)
 	fild dword [rbp + 48]
 
  printLongDoubleFraction$31:
@@ -1387,7 +1387,7 @@ section .text
 	fld qword [rbp + 24]
 
  printLongDoublePlain$13:
-	; £temporary1712 = float_to_int longDoubleValue (Long_Double -> Signed_Long_Int)
+	; £temporary1712 = float_to_int longDoubleValue (LongDouble -> Signed_Long_Int)
 	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
@@ -1428,7 +1428,7 @@ section .text
 	fld qword [rbp + 24]
 
  printLongDoublePlain$22:
-	; £temporary1714 = int_to_float longValue (Signed_Long_Int -> Long_Double)
+	; £temporary1714 = int_to_float longValue (Signed_Long_Int -> LongDouble)
 	fild qword [rbp + 48]
 
  printLongDoublePlain$23:
@@ -1667,7 +1667,7 @@ section .text
 	; £temporary1728 = return_value
 
  printLongDoubleExpo$43:
-	; £temporary1729 = float_to_int £temporary1728 (Double -> Signed_Int)
+	; £temporary1729 = float_to_int £temporary1728 (Double -> SignedInt)
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
@@ -1692,7 +1692,7 @@ section .text
 	fstp qword [rbp + 88]
 
  printLongDoubleExpo$49:
-	; £temporary1730 = int_to_float expo (Signed_Int -> Double)
+	; £temporary1730 = int_to_float expo (SignedInt -> Double)
 	fild dword [rbp + 52]
 
  printLongDoubleExpo$50:
@@ -1802,7 +1802,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  printLongDoubleExpo$74:
-	; £temporary1737 = int_to_int expo (Signed_Int -> Signed_Long_Int)
+	; £temporary1737 = int_to_int expo (SignedInt -> Signed_Long_Int)
 	mov eax, [rbp + 52]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2101,7 +2101,7 @@ section .text
 	; £temporary1773 -> £temporary1772 = *£temporary1772
 
  printArgument$26:
-	; £temporary1774 = int_to_int £temporary1773 -> £temporary1772 (Signed_Int -> Signed_Short_Int)
+	; £temporary1774 = int_to_int £temporary1773 -> £temporary1772 (SignedInt -> SignedShortInt)
 	mov eax, [rsi]
 	cmp eax, 0
 	jge printArgument$27
@@ -2109,7 +2109,7 @@ section .text
 	neg ax
 
  printArgument$27:
-	; £temporary1775 = int_to_int £temporary1774 (Signed_Short_Int -> Signed_Long_Int)
+	; £temporary1775 = int_to_int £temporary1774 (SignedShortInt -> Signed_Long_Int)
 	mov rbx, 65535
 	and rax, rbx
 	cmp ax, 0
@@ -2170,7 +2170,7 @@ section .text
 	; £temporary1787 -> £temporary1786 = *£temporary1786
 
  printArgument$41:
-	; £temporary1788 = int_to_int £temporary1787 -> £temporary1786 (Signed_Int -> Signed_Long_Int)
+	; £temporary1788 = int_to_int £temporary1787 -> £temporary1786 (SignedInt -> Signed_Long_Int)
 	mov eax, [rsi]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2330,7 +2330,7 @@ section .text
 	; £temporary1806 -> £temporary1805 = *£temporary1805
 
  printArgument$77:
-	; £temporary1807 = int_to_int £temporary1806 -> £temporary1805 (Signed_Int -> Signed_Char)
+	; £temporary1807 = int_to_int £temporary1806 -> £temporary1805 (SignedInt -> SignedChar)
 	mov eax, [rsi]
 	cmp eax, 0
 	jge printArgument$78
@@ -2562,11 +2562,11 @@ section .text
 	; £temporary1831 -> £temporary1830 = *£temporary1830
 
  printArgument$131:
-	; £temporary1832 = int_to_int £temporary1831 -> £temporary1830 (Unsigned_Int -> Unsigned_Short_Int)
+	; £temporary1832 = int_to_int £temporary1831 -> £temporary1830 (Unsigned_Int -> UnsignedShortInt)
 	mov eax, [rsi]
 
  printArgument$132:
-	; £temporary1833 = int_to_int £temporary1832 (Unsigned_Short_Int -> Unsigned_Long_Int)
+	; £temporary1833 = int_to_int £temporary1832 (UnsignedShortInt -> UnsignedLongInt)
 	mov rbx, 65535
 	and rax, rbx
 
@@ -2623,7 +2623,7 @@ section .text
 	; £temporary1845 -> £temporary1844 = *£temporary1844
 
  printArgument$146:
-	; £temporary1846 = int_to_int £temporary1845 -> £temporary1844 (Unsigned_Int -> Unsigned_Long_Int)
+	; £temporary1846 = int_to_int £temporary1845 -> £temporary1844 (Unsigned_Int -> UnsignedLongInt)
 	mov eax, [rsi]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2703,7 +2703,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  printArgument$164:
-	; £temporary1851 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary1851 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 88]
 	and eax, 255
 	cmp al, 0
@@ -3004,7 +3004,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  printArgument$234:
-	; £temporary1880 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary1880 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 88]
 	and eax, 255
 	cmp al, 0
@@ -3069,7 +3069,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  printArgument$248:
-	; £temporary1883 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary1883 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 88]
 	and eax, 255
 	cmp al, 0
@@ -3157,7 +3157,7 @@ section .text
 	; £temporary1887 = return_value
 
  printArgument$268:
-	; £temporary1888 = float_to_int £temporary1887 (Double -> Signed_Int)
+	; £temporary1888 = float_to_int £temporary1887 (Double -> SignedInt)
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
@@ -3255,7 +3255,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  printArgument$290:
-	; £temporary1893 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary1893 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 88]
 	and eax, 255
 	cmp al, 0
@@ -3361,7 +3361,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  printArgument$314:
-	; £temporary1904 = int_to_int ptrValue (Pointer -> Unsigned_Long_Int)
+	; £temporary1904 = int_to_int ptrValue (Pointer -> UnsignedLongInt)
 	mov rax, [rbp + 106]
 
  printArgument$315:
@@ -3626,7 +3626,7 @@ section .text
 	mov dword [rbp + 40], 0
 
  printFormat$16:
-	; £temporary1941 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary1941 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -3645,7 +3645,7 @@ section .text
 	je printFormat$290
 
  printFormat$20:
-	; £temporary1947 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary1947 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -3918,7 +3918,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  printFormat$80:
-	; £temporary1953 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary1953 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -4074,7 +4074,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  printFormat$115:
-	; £temporary1964 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary1964 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -4301,7 +4301,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  printFormat$166:
-	; £temporary1985 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary1985 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -4410,7 +4410,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  printFormat$191:
-	; £temporary1991 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary1991 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -4551,7 +4551,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  printFormat$222:
-	; £temporary2002 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2002 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -4656,7 +4656,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  printFormat$246:
-	; £temporary2009 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary2009 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 100]
 	and eax, 255
 	cmp al, 0
@@ -4698,7 +4698,7 @@ section .text
 	sub bl, 48
 
  printFormat$254:
-	; £temporary2013 = int_to_int £temporary2012 (Signed_Char -> Signed_Int)
+	; £temporary2013 = int_to_int £temporary2012 (SignedChar -> SignedInt)
 	and ebx, 255
 	cmp bl, 0
 	jge printFormat$255
@@ -4716,7 +4716,7 @@ section .text
 	inc eax
 
  printFormat$257:
-	; £temporary2017 = int_to_int £temporary2015 (Signed_Int -> Pointer)
+	; £temporary2017 = int_to_int £temporary2015 (SignedInt -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -4869,7 +4869,7 @@ section .text
 	mov [rbp + 100], rax
 
  printFormat$293:
-	; £temporary2030 = int_to_int g_outChars (Signed_Int -> Pointer)
+	; £temporary2030 = int_to_int g_outChars (SignedInt -> Pointer)
 	mov eax, [g_outChars]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -5228,7 +5228,7 @@ container8bytes#:
 	times 8 db 0
 
 float8$10.0#:
-	; initializer Long_Double
+	; initializer LongDouble
 	dq 10.0
 
 container4bytes#:
@@ -5236,5 +5236,5 @@ container4bytes#:
 	times 4 db 0
 
 int4$10#:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 10

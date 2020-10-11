@@ -30,7 +30,7 @@ section .text
 	mov [rbp + 60], rax
 
  @3013$existsTempName$5:
-	; £temporary1032 = int_to_int index (Signed_Int -> Array)
+	; £temporary1032 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -112,7 +112,7 @@ section .text
 	jg @3020$generateTempName$58
 
  @3020$generateTempName$3:
-	; £temporary1041 = int_to_int size (Signed_Int -> Pointer)
+	; £temporary1041 = int_to_int size (SignedInt -> Pointer)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -136,7 +136,7 @@ section .text
 	inc eax
 
  @3020$generateTempName$8:
-	; £temporary1046 = int_to_int £temporary1044 (Signed_Int -> Pointer)
+	; £temporary1046 = int_to_int £temporary1044 (SignedInt -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -234,7 +234,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  @3020$generateTempName$30:
-	; £temporary1056 = int_to_int g_tempSize (Signed_Int -> Array)
+	; £temporary1056 = int_to_int g_tempSize (SignedInt -> Array)
 	mov eax, [@3011$g_tempSize]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -280,7 +280,7 @@ section .text
 	inc dword [@3011$g_tempSize]
 
  @3020$generateTempName$40:
-	; £temporary1062 = int_to_int £temporary1060 (Signed_Int -> Array)
+	; £temporary1062 = int_to_int £temporary1060 (SignedInt -> Array)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -532,7 +532,7 @@ section .data
 	times 64 db 0
 
 @3011$g_tempSize:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 0
 
 Array_4#:
