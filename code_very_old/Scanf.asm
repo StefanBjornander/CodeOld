@@ -2187,7 +2187,7 @@ section .text
  scanLongDouble$50:
 	; £temporary1299 = int_to_float £temporary1300 (Signed_Int -> Long_Double)
 	mov [container4bytes#], eax
-	fild word [container4bytes#]
+	fild dword [container4bytes#]
 
  scanLongDouble$51:
 	; £temporary1301 = £temporary1297 + £temporary1299
@@ -2324,7 +2324,7 @@ section .text
  scanLongDouble$81:
 	; £temporary1310 = int_to_float £temporary1311 (Signed_Int -> Long_Double)
 	mov [container4bytes#], eax
-	fild word [container4bytes#]
+	fild dword [container4bytes#]
 
  scanLongDouble$82:
 	; £temporary1312 = factor * £temporary1310
@@ -2437,7 +2437,7 @@ section .text
  scanLongDouble$107:
 	; £temporary1321 = int_to_float £temporary1320 (Signed_Long_Int -> Double)
 	mov [container8bytes#], rbx
-	fild dword [container8bytes#]
+	fild qword [container8bytes#]
 
  scanLongDouble$108:
 	; pop float exponent

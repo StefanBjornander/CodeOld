@@ -58,7 +58,7 @@ section .text
 	; £temporary2060 = return_value
 
  atoi$7:
-	; £temporary2061 = int_to_int £temporary2060 (Signed_Long_Int -> Signed_Int)
+	; £temporary2061 = int_to_int £temporary2060 (Signed_Long_Int -> SignedInt)
 	cmp rbx, 0
 	jge atoi$8
 	neg rbx
@@ -173,7 +173,7 @@ section .text
 	mov rsi, [rbp + 32]
 
  strtol$13:
-	; £temporary2068 = int_to_int chars (Signed_Int -> Pointer)
+	; £temporary2068 = int_to_int chars (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -255,7 +255,7 @@ section .text
 	mov rsi, [rbp + 32]
 
  strtoul$13:
-	; £temporary2078 = int_to_int chars (Signed_Int -> Pointer)
+	; £temporary2078 = int_to_int chars (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -376,7 +376,7 @@ section .text
 	mov rsi, [rbp + 32]
 
  strtod$14:
-	; £temporary2089 = int_to_int chars (Signed_Int -> Pointer)
+	; £temporary2089 = int_to_int chars (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -472,7 +472,7 @@ section .text
 	jge memswp$23
 
  memswp$6:
-	; £temporary2101 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2101 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -491,7 +491,7 @@ section .text
 	mov [rbp + 64], al
 
  memswp$10:
-	; £temporary2105 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2105 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -505,7 +505,7 @@ section .text
 	; £temporary2104 -> £temporary2107 = *£temporary2107
 
  memswp$13:
-	; £temporary2109 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2109 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -524,7 +524,7 @@ section .text
 	mov [rsi], al
 
  memswp$17:
-	; £temporary2113 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2113 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -594,7 +594,7 @@ section .text
 	imul dword [rbp + 44]
 
  bsearch$6:
-	; £temporary2120 = int_to_int £temporary2119 (Signed_Int -> Pointer)
+	; £temporary2120 = int_to_int £temporary2119 (SignedInt -> Pointer)
 	mov rcx, 4294967295
 	and rax, rcx
 
@@ -671,7 +671,7 @@ section .text
 	imul dword [rbp + 44]
 
  bsearch$21:
-	; £temporary2128 = int_to_int £temporary2127 (Signed_Int -> Pointer)
+	; £temporary2128 = int_to_int £temporary2127 (SignedInt -> Pointer)
 	mov rcx, 4294967295
 	and rax, rcx
 
@@ -759,7 +759,7 @@ section .text
 	imul dword [rbp + 44]
 
  bsearch$38:
-	; £temporary2138 = int_to_int £temporary2137 (Signed_Int -> Pointer)
+	; £temporary2138 = int_to_int £temporary2137 (SignedInt -> Pointer)
 	mov rcx, 4294967295
 	and rax, rcx
 
@@ -855,7 +855,7 @@ section .text
 	mov [@4373$g_randValue], rdx
 
  rand$3:
-	; £temporary2148 = int_to_int g_randValue (Signed_Long_Int -> Signed_Int)
+	; £temporary2148 = int_to_int g_randValue (Signed_Long_Int -> SignedInt)
 	mov rbx, [@4373$g_randValue]
 	cmp rbx, 0
 	jge rand$4
@@ -1098,7 +1098,7 @@ section .text
 	jge atexit$30
 
  atexit$7:
-	; £temporary2168 = int_to_int index (Signed_Int -> Array)
+	; £temporary2168 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1122,7 +1122,7 @@ section .text
 	jne atexit$28
 
  atexit$12:
-	; £temporary2173 = int_to_int index (Signed_Int -> Array)
+	; £temporary2173 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1158,7 +1158,7 @@ section .text
 	mov [rbp + 68], eax
 
  atexit$20:
-	; £temporary2177 = int_to_int index (Signed_Int -> Array)
+	; £temporary2177 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1251,7 +1251,7 @@ section .text
 	jl exit$31
 
  exit$7:
-	; £temporary2185 = int_to_int index (Signed_Int -> Array)
+	; £temporary2185 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 28]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1287,7 +1287,7 @@ section .text
 	mov [rbp + 64], eax
 
  exit$15:
-	; £temporary2190 = int_to_int index (Signed_Int -> Array)
+	; £temporary2190 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 28]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1323,7 +1323,7 @@ section .text
 	; post call
 
  exit$22:
-	; £temporary2195 = int_to_int index (Signed_Int -> Array)
+	; £temporary2195 = int_to_int index (SignedInt -> Array)
 	mov eax, [rbp + 28]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1371,7 +1371,7 @@ section .text
 	mov rax, 60
 
  exit$32:
-	; £temporary2201 = int_to_int status (Signed_Int -> Unsigned_Long_Int)
+	; £temporary2201 = int_to_int status (SignedInt -> UnsignedLongInt)
 	mov edi, [rbp + 24]
 	mov rbx, 4294967295
 	and rdi, rbx
@@ -1407,7 +1407,7 @@ section .text
 	jge swap$20
 
  swap$3:
-	; £temporary2205 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2205 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1426,7 +1426,7 @@ section .text
 	mov [rbp + 48], al
 
  swap$7:
-	; £temporary2209 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2209 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1440,7 +1440,7 @@ section .text
 	; £temporary2208 -> £temporary2211 = *£temporary2211
 
  swap$10:
-	; £temporary2213 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2213 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1459,7 +1459,7 @@ section .text
 	mov [rsi], al
 
  swap$14:
-	; £temporary2217 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2217 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1538,7 +1538,7 @@ section .text
 	imul dword [rbp + 36]
 
  qsort$9:
-	; £temporary2227 = int_to_int £temporary2226 (Signed_Int -> Pointer)
+	; £temporary2227 = int_to_int £temporary2226 (SignedInt -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -1559,7 +1559,7 @@ section .text
 	imul dword [rbp + 36]
 
  qsort$13:
-	; £temporary2232 = int_to_int £temporary2231 (Signed_Int -> Pointer)
+	; £temporary2232 = int_to_int £temporary2231 (SignedInt -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -1839,7 +1839,7 @@ string_25lf25n#:
 	db "%lf%n", 0
 
 int4$2#:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 2
 
 @4373$g_randValue:

@@ -963,14 +963,14 @@ section .text
 	sub rbx, [rbp + 44]
 
  tolower$23:
-	; £temporary349 = int_to_int £temporary348 (Pointer -> Signed_Int)
+	; £temporary349 = int_to_int £temporary348 (Pointer -> SignedInt)
 
  tolower$24:
 	; index = £temporary349
 	mov [rbp + 52], ebx
 
  tolower$25:
-	; £temporary351 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary351 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 52]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -984,7 +984,7 @@ section .text
 	; £temporary350 -> £temporary353 = *£temporary353
 
  tolower$28:
-	; £temporary354 = int_to_int £temporary350 -> £temporary353 (Signed_Char -> Signed_Int)
+	; £temporary354 = int_to_int £temporary350 -> £temporary353 (SignedChar -> SignedInt)
 	mov bl, [rsi]
 	and ebx, 255
 	cmp bl, 0
@@ -1171,14 +1171,14 @@ section .text
 	sub rbx, [rbp + 36]
 
  toupper$23:
-	; £temporary369 = int_to_int £temporary368 (Pointer -> Signed_Int)
+	; £temporary369 = int_to_int £temporary368 (Pointer -> SignedInt)
 
  toupper$24:
 	; index = £temporary369
 	mov [rbp + 52], ebx
 
  toupper$25:
-	; £temporary371 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary371 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 52]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1192,7 +1192,7 @@ section .text
 	; £temporary370 -> £temporary373 = *£temporary373
 
  toupper$28:
-	; £temporary374 = int_to_int £temporary370 -> £temporary373 (Signed_Char -> Signed_Int)
+	; £temporary374 = int_to_int £temporary370 -> £temporary373 (SignedChar -> SignedInt)
 	mov bl, [rsi]
 	and ebx, 255
 	cmp bl, 0

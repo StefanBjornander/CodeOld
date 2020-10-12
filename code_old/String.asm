@@ -33,7 +33,7 @@ section .text
 	mov dword [rbp + 40], 0
 
  strcpy$2:
-	; £temporary2569 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2569 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -52,7 +52,7 @@ section .text
 	je strcpy$15
 
  strcpy$6:
-	; £temporary2575 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2575 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -66,7 +66,7 @@ section .text
 	; £temporary2574 -> £temporary2577 = *£temporary2577
 
  strcpy$9:
-	; £temporary2579 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2579 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -93,7 +93,7 @@ section .text
 	jmp strcpy$2
 
  strcpy$15:
-	; £temporary2583 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2583 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -135,7 +135,7 @@ section .text
 	jge strncpy$16
 
  strncpy$3:
-	; £temporary2588 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2588 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -154,7 +154,7 @@ section .text
 	je strncpy$16
 
  strncpy$7:
-	; £temporary2595 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2595 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -168,7 +168,7 @@ section .text
 	; £temporary2594 -> £temporary2597 = *£temporary2597
 
  strncpy$10:
-	; £temporary2599 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2599 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -201,7 +201,7 @@ section .text
 	jge strncpy$23
 
  strncpy$17:
-	; £temporary2605 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2605 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -270,7 +270,7 @@ section .text
 	mov dword [rbp + 40], 0
 
  strcat$8:
-	; £temporary2610 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2610 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -294,7 +294,7 @@ section .text
 	add eax, [rbp + 40]
 
  strcat$13:
-	; £temporary2617 = int_to_int £temporary2615 (Signed_Int -> Pointer)
+	; £temporary2617 = int_to_int £temporary2615 (SignedInt -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -307,7 +307,7 @@ section .text
 	; £temporary2616 -> £temporary2619 = *£temporary2619
 
  strcat$16:
-	; £temporary2621 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2621 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -339,7 +339,7 @@ section .text
 	add eax, [rbp + 40]
 
  strcat$23:
-	; £temporary2626 = int_to_int £temporary2624 (Signed_Int -> Pointer)
+	; £temporary2626 = int_to_int £temporary2624 (SignedInt -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -409,7 +409,7 @@ section .text
 	jge strncat$24
 
  strncat$10:
-	; £temporary2633 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2633 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -433,7 +433,7 @@ section .text
 	add eax, [rbp + 44]
 
  strncat$15:
-	; £temporary2641 = int_to_int £temporary2639 (Signed_Int -> Pointer)
+	; £temporary2641 = int_to_int £temporary2639 (SignedInt -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -446,7 +446,7 @@ section .text
 	; £temporary2640 -> £temporary2643 = *£temporary2643
 
  strncat$18:
-	; £temporary2645 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2645 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -482,7 +482,7 @@ section .text
 	dec eax
 
  strncat$26:
-	; £temporary2651 = int_to_int £temporary2649 (Signed_Int -> Pointer)
+	; £temporary2651 = int_to_int £temporary2649 (SignedInt -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -517,7 +517,7 @@ section .text
 	mov dword [rbp + 40], 0
 
  strcmp$2:
-	; £temporary2656 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2656 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -536,7 +536,7 @@ section .text
 	jne strcmp$11
 
  strcmp$6:
-	; £temporary2661 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2661 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -563,7 +563,7 @@ section .text
 	jmp rax
 
  strcmp$11:
-	; £temporary2667 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2667 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -590,7 +590,7 @@ section .text
 	jmp rax
 
  strcmp$16:
-	; £temporary2672 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2672 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -617,7 +617,7 @@ section .text
 	jmp rax
 
  strcmp$21:
-	; £temporary2677 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2677 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -631,7 +631,7 @@ section .text
 	; £temporary2676 -> £temporary2679 = *£temporary2679
 
  strcmp$24:
-	; £temporary2681 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2681 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -659,7 +659,7 @@ section .text
 	jmp rax
 
  strcmp$29:
-	; £temporary2686 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2686 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -673,7 +673,7 @@ section .text
 	; £temporary2685 -> £temporary2688 = *£temporary2688
 
  strcmp$32:
-	; £temporary2690 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2690 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -725,7 +725,7 @@ section .text
 	jge strncmp$40
 
  strncmp$3:
-	; £temporary2698 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2698 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -744,7 +744,7 @@ section .text
 	jne strncmp$12
 
  strncmp$7:
-	; £temporary2703 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2703 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -771,7 +771,7 @@ section .text
 	jmp rax
 
  strncmp$12:
-	; £temporary2709 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2709 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -798,7 +798,7 @@ section .text
 	jmp rax
 
  strncmp$17:
-	; £temporary2714 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2714 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -825,7 +825,7 @@ section .text
 	jmp rax
 
  strncmp$22:
-	; £temporary2719 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2719 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -839,7 +839,7 @@ section .text
 	; £temporary2718 -> £temporary2721 = *£temporary2721
 
  strncmp$25:
-	; £temporary2723 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2723 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -867,7 +867,7 @@ section .text
 	jmp rax
 
  strncmp$30:
-	; £temporary2728 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2728 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -881,7 +881,7 @@ section .text
 	; £temporary2727 -> £temporary2730 = *£temporary2730
 
  strncmp$33:
-	; £temporary2732 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2732 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -931,7 +931,7 @@ section .text
 	; empty
 
  strchr$1:
-	; £temporary2736 = int_to_int i (Signed_Int -> Signed_Char)
+	; £temporary2736 = int_to_int i (SignedInt -> SignedChar)
 	mov eax, [rbp + 32]
 	cmp eax, 0
 	jge strchr$2
@@ -947,7 +947,7 @@ section .text
 	mov dword [rbp + 36], 0
 
  strchr$4:
-	; £temporary2738 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2738 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -966,7 +966,7 @@ section .text
 	je strchr$19
 
  strchr$8:
-	; £temporary2744 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2744 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -986,7 +986,7 @@ section .text
 	jne strchr$17
 
  strchr$12:
-	; £temporary2749 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2749 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1036,7 +1036,7 @@ section .text
 	mov qword [rbp + 40], 0
 
  strrchr$2:
-	; £temporary2753 = int_to_int i (Signed_Int -> Signed_Char)
+	; £temporary2753 = int_to_int i (SignedInt -> SignedChar)
 	mov eax, [rbp + 32]
 	cmp eax, 0
 	jge strrchr$3
@@ -1052,7 +1052,7 @@ section .text
 	mov dword [rbp + 36], 0
 
  strrchr$5:
-	; £temporary2755 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2755 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1071,7 +1071,7 @@ section .text
 	je strrchr$20
 
  strrchr$9:
-	; £temporary2761 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2761 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1091,7 +1091,7 @@ section .text
 	jne strrchr$18
 
  strrchr$13:
-	; £temporary2766 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2766 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1138,7 +1138,7 @@ section .text
 	mov dword [rbp + 40], 0
 
  strspn$2:
-	; £temporary2771 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2771 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1165,7 +1165,7 @@ section .text
 	mov [rbp + 68], rax
 
  strspn$8:
-	; £temporary2777 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2777 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1179,7 +1179,7 @@ section .text
 	; £temporary2776 -> £temporary2779 = *£temporary2779
 
  strspn$11:
-	; £temporary2780 = int_to_int £temporary2776 -> £temporary2779 (Signed_Char -> Signed_Int)
+	; £temporary2780 = int_to_int £temporary2776 -> £temporary2779 (SignedChar -> SignedInt)
 	mov al, [rsi]
 	and eax, 255
 	cmp al, 0
@@ -1244,7 +1244,7 @@ section .text
 	mov dword [rbp + 40], 0
 
  strcspn$2:
-	; £temporary2784 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2784 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1271,7 +1271,7 @@ section .text
 	mov [rbp + 68], rax
 
  strcspn$8:
-	; £temporary2790 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2790 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1285,7 +1285,7 @@ section .text
 	; £temporary2789 -> £temporary2792 = *£temporary2792
 
  strcspn$11:
-	; £temporary2793 = int_to_int £temporary2789 -> £temporary2792 (Signed_Char -> Signed_Int)
+	; £temporary2793 = int_to_int £temporary2789 -> £temporary2792 (SignedChar -> SignedInt)
 	mov al, [rsi]
 	and eax, 255
 	cmp al, 0
@@ -1350,7 +1350,7 @@ section .text
 	mov dword [rbp + 40], 0
 
  strpbrk$2:
-	; £temporary2797 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2797 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1377,7 +1377,7 @@ section .text
 	mov [rbp + 68], rax
 
  strpbrk$8:
-	; £temporary2803 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2803 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1391,7 +1391,7 @@ section .text
 	; £temporary2802 -> £temporary2805 = *£temporary2805
 
  strpbrk$11:
-	; £temporary2806 = int_to_int £temporary2802 -> £temporary2805 (Signed_Char -> Signed_Int)
+	; £temporary2806 = int_to_int £temporary2802 -> £temporary2805 (SignedChar -> SignedInt)
 	mov al, [rsi]
 	and eax, 255
 	cmp al, 0
@@ -1422,7 +1422,7 @@ section .text
 	je strpbrk$22
 
  strpbrk$17:
-	; £temporary2810 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2810 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1472,7 +1472,7 @@ section .text
 	mov dword [rbp + 40], 0
 
  strstr$2:
-	; £temporary2815 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2815 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1494,7 +1494,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  strstr$7:
-	; £temporary2820 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2820 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1532,7 +1532,7 @@ section .text
 	jne strstr$20
 
  strstr$15:
-	; £temporary2826 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2826 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1582,7 +1582,7 @@ section .text
 	mov dword [rbp + 32], 0
 
  strlen$2:
-	; £temporary2831 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2831 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1686,7 +1686,7 @@ section .text
 	mov [rbp + 36], rax
 
  strerror$16:
-	; £temporary2843 = int_to_int errno (Signed_Int -> Pointer)
+	; £temporary2843 = int_to_int errno (SignedInt -> Pointer)
 	mov eax, [rbp + 24]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1745,7 +1745,7 @@ section .text
 	mov dword [rbp + 40], 0
 
  strtok$6:
-	; £temporary2850 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2850 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1772,7 +1772,7 @@ section .text
 	mov [rbp + 76], rax
 
  strtok$12:
-	; £temporary2856 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2856 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1786,7 +1786,7 @@ section .text
 	; £temporary2855 -> £temporary2858 = *£temporary2858
 
  strtok$15:
-	; £temporary2859 = int_to_int £temporary2855 -> £temporary2858 (Signed_Char -> Signed_Int)
+	; £temporary2859 = int_to_int £temporary2855 -> £temporary2858 (SignedChar -> SignedInt)
 	mov al, [rsi]
 	and eax, 255
 	cmp al, 0
@@ -1817,7 +1817,7 @@ section .text
 	je strtok$32
 
  strtok$21:
-	; £temporary2863 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2863 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1840,7 +1840,7 @@ section .text
 	inc eax
 
  strtok$26:
-	; £temporary2868 = int_to_int £temporary2866 (Signed_Int -> Pointer)
+	; £temporary2868 = int_to_int £temporary2866 (SignedInt -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -1876,7 +1876,7 @@ section .text
 	jmp strtok$6
 
  strtok$34:
-	; £temporary2873 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2873 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1939,7 +1939,7 @@ section .text
 	mov dword [rbp + 40], 0
 
  strtok$46:
-	; £temporary2881 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2881 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1966,7 +1966,7 @@ section .text
 	mov [rbp + 76], rax
 
  strtok$52:
-	; £temporary2887 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2887 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1980,7 +1980,7 @@ section .text
 	; £temporary2886 -> £temporary2889 = *£temporary2889
 
  strtok$55:
-	; £temporary2890 = int_to_int £temporary2886 -> £temporary2889 (Signed_Char -> Signed_Int)
+	; £temporary2890 = int_to_int £temporary2886 -> £temporary2889 (SignedChar -> SignedInt)
 	mov al, [rsi]
 	and eax, 255
 	cmp al, 0
@@ -2016,7 +2016,7 @@ section .text
 	mov [rbp + 52], rax
 
  strtok$62:
-	; £temporary2894 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2894 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2039,7 +2039,7 @@ section .text
 	inc eax
 
  strtok$67:
-	; £temporary2899 = int_to_int £temporary2897 (Signed_Int -> Pointer)
+	; £temporary2899 = int_to_int £temporary2897 (SignedInt -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -2080,7 +2080,7 @@ section .text
 	mov [rbp + 44], rax
 
  strtok$76:
-	; £temporary2904 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2904 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2138,7 +2138,7 @@ section .text
 	jge memcpy$15
 
  memcpy$6:
-	; £temporary2913 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2913 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2152,7 +2152,7 @@ section .text
 	; £temporary2912 -> £temporary2915 = *£temporary2915
 
  memcpy$9:
-	; £temporary2917 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2917 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2226,7 +2226,7 @@ section .text
 	jl memmove$27
 
  memmove$7:
-	; £temporary2928 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2928 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2240,7 +2240,7 @@ section .text
 	; £temporary2927 -> £temporary2930 = *£temporary2930
 
  memmove$10:
-	; £temporary2932 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2932 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2277,7 +2277,7 @@ section .text
 	jge memmove$27
 
  memmove$18:
-	; £temporary2938 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2938 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2291,7 +2291,7 @@ section .text
 	; £temporary2937 -> £temporary2940 = *£temporary2940
 
  memmove$21:
-	; £temporary2942 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2942 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2358,7 +2358,7 @@ section .text
 	jge memcmp$24
 
  memcmp$6:
-	; £temporary2951 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2951 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2372,7 +2372,7 @@ section .text
 	; £temporary2950 -> £temporary2953 = *£temporary2953
 
  memcmp$9:
-	; £temporary2955 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2955 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2400,7 +2400,7 @@ section .text
 	jmp rax
 
  memcmp$14:
-	; £temporary2960 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2960 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2414,7 +2414,7 @@ section .text
 	; £temporary2959 -> £temporary2962 = *£temporary2962
 
  memcmp$17:
-	; £temporary2964 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2964 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2472,7 +2472,7 @@ section .text
 	mov [rbp + 44], rax
 
  memchr$3:
-	; £temporary2969 = int_to_int i (Signed_Int -> Signed_Char)
+	; £temporary2969 = int_to_int i (SignedInt -> SignedChar)
 	mov eax, [rbp + 32]
 	cmp eax, 0
 	jge memchr$4
@@ -2494,7 +2494,7 @@ section .text
 	jge memchr$19
 
  memchr$7:
-	; £temporary2973 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2973 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2514,7 +2514,7 @@ section .text
 	jne memchr$17
 
  memchr$11:
-	; £temporary2978 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2978 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2568,7 +2568,7 @@ section .text
 	mov [rbp + 40], rax
 
  memset$2:
-	; £temporary2984 = int_to_int i (Signed_Int -> Signed_Char)
+	; £temporary2984 = int_to_int i (SignedInt -> SignedChar)
 	mov eax, [rbp + 32]
 	cmp eax, 0
 	jge memset$3
@@ -2590,7 +2590,7 @@ section .text
 	jge memset$12
 
  memset$6:
-	; £temporary2988 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2988 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 49]
 	mov rbx, 4294967295
 	and rax, rbx

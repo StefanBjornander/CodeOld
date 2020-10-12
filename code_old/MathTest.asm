@@ -3529,7 +3529,7 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$96:
-	; £temporary3467 = float_to_int y (Double -> Signed_Int)
+	; £temporary3467 = float_to_int y (Double -> SignedInt)
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
@@ -3553,7 +3553,7 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$102:
-	; £temporary3468 = float_to_int y (Double -> Signed_Int)
+	; £temporary3468 = float_to_int y (Double -> SignedInt)
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 

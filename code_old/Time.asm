@@ -42,7 +42,7 @@ section .text
 	add rdi, 32
 
  time$3:
-	; £temporary2267 = int_to_int £temporary2266 (Pointer -> Unsigned_Long_Int)
+	; £temporary2267 = int_to_int £temporary2266 (Pointer -> UnsignedLongInt)
 
  time$4:
 	; rdi = £temporary2267
@@ -96,7 +96,7 @@ section .text
 	idiv dword [int4$4#]
 
  mktime$4:
-	; £temporary2275 = int_to_int £temporary2274 (Signed_Int -> Signed_Long_Int)
+	; £temporary2275 = int_to_int £temporary2274 (SignedInt -> Signed_Long_Int)
 	mov rbx, 4294967295
 	and rax, rbx
 	cmp eax, 0
@@ -123,7 +123,7 @@ section .text
 	imul dword [int4$365#]
 
  mktime$9:
-	; £temporary2279 = int_to_int £temporary2278 (Signed_Int -> Signed_Long_Int)
+	; £temporary2279 = int_to_int £temporary2278 (SignedInt -> Signed_Long_Int)
 	mov rbx, 4294967295
 	and rax, rbx
 	cmp eax, 0
@@ -140,7 +140,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  mktime$12:
-	; £temporary2282 = int_to_int £temporary2281 -> tp (Signed_Int -> Signed_Long_Int)
+	; £temporary2282 = int_to_int £temporary2281 -> tp (SignedInt -> Signed_Long_Int)
 	mov ebx, [rsi + 28]
 	mov rcx, 4294967295
 	and rbx, rcx
@@ -166,7 +166,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  mktime$16:
-	; £temporary2286 = int_to_int £temporary2285 -> tp (Signed_Int -> Signed_Long_Int)
+	; £temporary2286 = int_to_int £temporary2285 -> tp (SignedInt -> Signed_Long_Int)
 	mov eax, [rsi + 8]
 	mov rcx, 4294967295
 	and rax, rcx
@@ -189,7 +189,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  mktime$20:
-	; £temporary2290 = int_to_int £temporary2289 -> tp (Signed_Int -> Signed_Long_Int)
+	; £temporary2290 = int_to_int £temporary2289 -> tp (SignedInt -> Signed_Long_Int)
 	mov eax, [rsi + 4]
 	mov rcx, 4294967295
 	and rax, rcx
@@ -212,7 +212,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  mktime$24:
-	; £temporary2294 = int_to_int £temporary2293 -> tp (Signed_Int -> Signed_Long_Int)
+	; £temporary2294 = int_to_int £temporary2293 -> tp (SignedInt -> Signed_Long_Int)
 	mov eax, [rsi]
 	mov rcx, 4294967295
 	and rax, rcx
@@ -275,7 +275,7 @@ section .text
 	idiv qword [int8$3600#]
 
  gmtime$6:
-	; £temporary2301 = int_to_int £temporary2300 (Signed_Long_Int -> Signed_Int)
+	; £temporary2301 = int_to_int £temporary2300 (Signed_Long_Int -> SignedInt)
 	cmp rax, 0
 	jge gmtime$7
 	neg rax
@@ -298,7 +298,7 @@ section .text
 	idiv qword [int8$60#]
 
  gmtime$10:
-	; £temporary2305 = int_to_int £temporary2304 (Signed_Long_Int -> Signed_Int)
+	; £temporary2305 = int_to_int £temporary2304 (Signed_Long_Int -> SignedInt)
 	cmp rax, 0
 	jge gmtime$11
 	neg rax
@@ -321,7 +321,7 @@ section .text
 	idiv qword [int8$60#]
 
  gmtime$14:
-	; £temporary2309 = int_to_int £temporary2308 (Signed_Long_Int -> Signed_Int)
+	; £temporary2309 = int_to_int £temporary2308 (Signed_Long_Int -> SignedInt)
 	cmp rdx, 0
 	jge gmtime$15
 	neg rdx
@@ -349,7 +349,7 @@ section .text
 	add rax, 4
 
  gmtime$19:
-	; £temporary2314 = int_to_int £temporary2313 (Signed_Long_Int -> Signed_Int)
+	; £temporary2314 = int_to_int £temporary2313 (Signed_Long_Int -> SignedInt)
 	cmp rax, 0
 	jge gmtime$20
 	neg rax
@@ -374,7 +374,7 @@ section .text
 	idiv qword [int8$7#]
 
  gmtime$24:
-	; £temporary2318 = int_to_int £temporary2317 (Signed_Long_Int -> Signed_Int)
+	; £temporary2318 = int_to_int £temporary2317 (Signed_Long_Int -> SignedInt)
 	cmp rdx, 0
 	jge gmtime$25
 	neg rdx
@@ -455,7 +455,7 @@ section .text
 	mov [rbp + 64], eax
 
  gmtime$41:
-	; £temporary2330 = int_to_int daysOfYear (Signed_Int -> Signed_Long_Int)
+	; £temporary2330 = int_to_int daysOfYear (SignedInt -> Signed_Long_Int)
 	mov eax, [rbp + 64]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -476,7 +476,7 @@ section .text
 	mov [@4764$g_timeStruct + 20], eax
 
  gmtime$44:
-	; £temporary2335 = int_to_int totalDays (Signed_Long_Int -> Signed_Int)
+	; £temporary2335 = int_to_int totalDays (Signed_Long_Int -> SignedInt)
 	mov rax, [rbp + 52]
 	cmp rax, 0
 	jge gmtime$45
@@ -557,7 +557,7 @@ section .text
 	mov dword [rbp + 116], 0
 
  gmtime$63:
-	; £temporary2351 = int_to_int month (Signed_Int -> Array)
+	; £temporary2351 = int_to_int month (SignedInt -> Array)
 	mov eax, [rbp + 116]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -577,7 +577,7 @@ section .text
 	; £temporary2350 -> £temporary2353 = *£temporary2353
 
  gmtime$67:
-	; £temporary2354 = int_to_int £temporary2350 -> £temporary2353 (Signed_Int -> Signed_Long_Int)
+	; £temporary2354 = int_to_int £temporary2350 -> £temporary2353 (SignedInt -> Signed_Long_Int)
 	mov eax, [rsi]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -592,7 +592,7 @@ section .text
 	jl gmtime$77
 
  gmtime$69:
-	; £temporary2357 = int_to_int month (Signed_Int -> Array)
+	; £temporary2357 = int_to_int month (SignedInt -> Array)
 	mov eax, [rbp + 116]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -612,7 +612,7 @@ section .text
 	; £temporary2356 -> £temporary2359 = *£temporary2359
 
  gmtime$73:
-	; £temporary2360 = int_to_int £temporary2356 -> £temporary2359 (Signed_Int -> Signed_Long_Int)
+	; £temporary2360 = int_to_int £temporary2356 -> £temporary2359 (SignedInt -> Signed_Long_Int)
 	mov eax, [rsi]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -644,7 +644,7 @@ section .text
 	inc rax
 
  gmtime$79:
-	; £temporary2366 = int_to_int £temporary2365 (Signed_Long_Int -> Signed_Int)
+	; £temporary2366 = int_to_int £temporary2365 (Signed_Long_Int -> SignedInt)
 	cmp rax, 0
 	jge gmtime$80
 	neg rax
@@ -671,7 +671,7 @@ section .text
 	inc dword [rbp + 32]
 
  gmtime$84:
-	; £temporary2369 = int_to_int daysOfYear (Signed_Int -> Signed_Long_Int)
+	; £temporary2369 = int_to_int daysOfYear (SignedInt -> Signed_Long_Int)
 	mov eax, [rbp + 64]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -705,7 +705,7 @@ section .text
 	sub rax, [rbp + 24]
 
  difftime$1:
-	; £temporary2373 = int_to_float £temporary2372 (Unsigned_Long_Int -> Double)
+	; £temporary2373 = int_to_float £temporary2372 (UnsignedLongInt -> Double)
 	mov [container8bytes#], rax
 	fild qword [container8bytes#]
 
@@ -844,7 +844,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  asctime$27:
-	; £temporary2386 = int_to_int £temporary2384 -> tp (Signed_Int -> Pointer)
+	; £temporary2386 = int_to_int £temporary2384 -> tp (SignedInt -> Pointer)
 	mov eax, [rsi + 24]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -872,7 +872,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  asctime$33:
-	; £temporary2391 = int_to_int £temporary2389 -> tp (Signed_Int -> Pointer)
+	; £temporary2391 = int_to_int £temporary2389 -> tp (SignedInt -> Pointer)
 	mov eax, [rsi + 16]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1116,7 +1116,7 @@ section .text
 	imul dword [int4$3600#]
 
  localtime$23:
-	; £temporary2413 = int_to_int £temporary2412 (Signed_Int -> Unsigned_Long_Int)
+	; £temporary2413 = int_to_int £temporary2412 (SignedInt -> UnsignedLongInt)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -1429,7 +1429,7 @@ section .text
 	add eax, [rsi + 28]
 
  strftime$63:
-	; £temporary2449 = int_to_int £temporary2448 (Signed_Int -> Signed_Long_Int)
+	; £temporary2449 = int_to_int £temporary2448 (SignedInt -> Signed_Long_Int)
 	mov rbx, 4294967295
 	and rax, rbx
 	cmp eax, 0
@@ -1481,7 +1481,7 @@ section .text
 	add rax, 4
 
  strftime$73:
-	; £temporary2453 = int_to_int £temporary2452 (Signed_Long_Int -> Signed_Int)
+	; £temporary2453 = int_to_int £temporary2452 (Signed_Long_Int -> SignedInt)
 	cmp rax, 0
 	jge strftime$74
 	neg rax
@@ -1506,7 +1506,7 @@ section .text
 	idiv qword [int8$7#]
 
  strftime$78:
-	; £temporary2456 = int_to_int £temporary2455 (Signed_Long_Int -> Signed_Int)
+	; £temporary2456 = int_to_int £temporary2455 (Signed_Long_Int -> SignedInt)
 	cmp rdx, 0
 	jge strftime$79
 	neg rdx
@@ -1551,7 +1551,7 @@ section .text
 	add rax, 3
 
  strftime$87:
-	; £temporary2460 = int_to_int £temporary2459 (Signed_Long_Int -> Signed_Int)
+	; £temporary2460 = int_to_int £temporary2459 (Signed_Long_Int -> SignedInt)
 	cmp rax, 0
 	jge strftime$88
 	neg rax
@@ -1576,7 +1576,7 @@ section .text
 	idiv qword [int8$7#]
 
  strftime$92:
-	; £temporary2463 = int_to_int £temporary2462 (Signed_Long_Int -> Signed_Int)
+	; £temporary2463 = int_to_int £temporary2462 (Signed_Long_Int -> SignedInt)
 	cmp rdx, 0
 	jge strftime$93
 	neg rdx
@@ -1615,7 +1615,7 @@ section .text
 	mov dword [rbp + 112], 0
 
  strftime$100:
-	; £temporary2466 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2466 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 112]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1634,7 +1634,7 @@ section .text
 	je strftime$374
 
  strftime$104:
-	; £temporary2472 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2472 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 112]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1658,7 +1658,7 @@ section .text
 	inc eax
 
  strftime$109:
-	; £temporary2478 = int_to_int £temporary2476 (Signed_Int -> Pointer)
+	; £temporary2478 = int_to_int £temporary2476 (SignedInt -> Pointer)
 	mov rbx, 4294967295
 	and rax, rbx
 
@@ -1801,7 +1801,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$139:
-	; £temporary2483 = int_to_int £temporary2481 -> tp (Signed_Int -> Pointer)
+	; £temporary2483 = int_to_int £temporary2481 -> tp (SignedInt -> Pointer)
 	mov eax, [rsi + 24]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1851,7 +1851,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$150:
-	; £temporary2489 = int_to_int £temporary2487 -> tp (Signed_Int -> Pointer)
+	; £temporary2489 = int_to_int £temporary2487 -> tp (SignedInt -> Pointer)
 	mov eax, [rsi + 24]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1901,7 +1901,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$161:
-	; £temporary2495 = int_to_int £temporary2493 -> tp (Signed_Int -> Pointer)
+	; £temporary2495 = int_to_int £temporary2493 -> tp (SignedInt -> Pointer)
 	mov eax, [rsi + 16]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1951,7 +1951,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$172:
-	; £temporary2501 = int_to_int £temporary2499 -> tp (Signed_Int -> Pointer)
+	; £temporary2501 = int_to_int £temporary2499 -> tp (SignedInt -> Pointer)
 	mov eax, [rsi + 16]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2761,7 +2761,7 @@ section .text
 	add rsi, 116
 
  strftime$349:
-	; £temporary2558 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary2558 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 112]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2906,11 +2906,11 @@ section .text
 section .data
 
 int4$4#:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 4
 
 int4$365#:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 365
 
 int8$86400#:
@@ -2934,11 +2934,11 @@ int8$7#:
 	dq 7
 
 int4$100#:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 100
 
 int4$400#:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 400
 
 Array_4#:
@@ -3194,7 +3194,7 @@ int8$8#:
 	dq 8
 
 int4$3600#:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 3600
 
 string_#:
@@ -3254,5 +3254,5 @@ string_25#:
 	db "%", 0
 
 int4$12#:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 12

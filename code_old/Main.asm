@@ -116,7 +116,7 @@ _start:
 	mov [rbp + 72], eax
 
  main$11:
-	; £temporary70 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary70 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -182,7 +182,7 @@ _start:
 	mov dword [rbp + 36], 0
 
  main$25:
-	; £temporary76 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary76 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -218,7 +218,7 @@ _start:
 	mov [rbp + 72], eax
 
  main$33:
-	; £temporary82 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary82 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -391,7 +391,7 @@ _start:
 	mov qword [rbp + 97], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#
 
  main$71:
-	; £temporary94 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary94 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 52]
 	and eax, 255
 	cmp al, 0
@@ -685,7 +685,7 @@ _start:
 	mov qword [rbp + 49], string_You20wrote20the20character202725c272E0A#
 
  mainc$13:
-	; £temporary21 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary21 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -995,7 +995,7 @@ _start:
 	jge mainX$17
 
  mainX$3:
-	; £temporary41 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary41 = int_to_int index (SignedInt -> Pointer)
 	mov esi, [rbp + 36]
 	mov rax, 4294967295
 	and rsi, rax
@@ -1021,7 +1021,7 @@ _start:
 	mov [rbp + 73], eax
 
  mainX$9:
-	; £temporary43 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary43 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
@@ -1034,7 +1034,7 @@ _start:
 	mov [rbp + 77], eax
 
  mainX$11:
-	; £temporary44 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary44 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
@@ -1113,7 +1113,7 @@ _start:
 	mov [rbp + 72], eax
 
  mainX$27:
-	; £temporary50 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary50 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1179,7 +1179,7 @@ _start:
 	mov dword [rbp + 36], 0
 
  mainX$41:
-	; £temporary56 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary56 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1215,7 +1215,7 @@ _start:
 	mov [rbp + 72], eax
 
  mainX$49:
-	; £temporary62 = int_to_int index (Signed_Int -> Pointer)
+	; £temporary62 = int_to_int index (SignedInt -> Pointer)
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1914,19 +1914,19 @@ int8$8#:
 	dq 8
 
 @417$ZERO:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 0
 
 @418$ONE:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 1
 
 @421$TWO:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 2
 
 @422$THREE:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 3
 
 string_argc3A2025i0A#:
