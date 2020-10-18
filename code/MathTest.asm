@@ -33,8 +33,6 @@
 	extern ldexp
 	extern $StackTop
 
-section .text
-
 
 section .data
 

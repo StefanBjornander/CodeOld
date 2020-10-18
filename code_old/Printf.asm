@@ -36,8 +36,6 @@
 	extern isdigit
 	extern $StackTop
 
-section .text
-
 
 section .data
 

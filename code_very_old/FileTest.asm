@@ -27,6 +27,352 @@
 	extern toupper
 	extern rewind
 	extern $StackTop
+
+section .text
+
+
+section .data
+
+string_r#:
+	; initializer String
+	db "r", 0
+
+section .data
+
+string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+	; initializer String
+	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
+
+section .data
+
+string_inFilePtrPtr20213D20NULL#:
+	; initializer String
+	db "inFilePtrPtr != NULL", 0
+
+section .data
+
+string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
+	; initializer String
+	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
+
+section .data
+
+string_w#:
+	; initializer String
+	db "w", 0
+
+section .data
+
+string_outFilePtrPtr20213D20NULL#:
+	; initializer String
+	db "outFilePtrPtr != NULL", 0
+
+section .data
+
+string_25i#:
+	; initializer String
+	db "%i", 0
+
+section .data
+
+string_25lf#:
+	; initializer String
+	db "%lf", 0
+
+section .data
+
+string_25f0A#:
+	; initializer String
+	db "%f", 10, 0
+
+section .data
+
+string_X#:
+	; initializer String
+	db "X", 0
+
+section .data
+
+string_Y#:
+	; initializer String
+	db "Y", 0
+
+section .data
+
+string_2225s2220has20been20renamed20to202225s222E0A#:
+	; initializer String
+	db 34, "%s", 34, " has been renamed to ", 34, "%s", 34, ".", 10, 0
+
+section .data
+
+string_Error2025i3A2025s2E0A#:
+	; initializer String
+	db "Error %i: %s.", 10, 0
+
+section .data
+
+string_Z#:
+	; initializer String
+	db "Z", 0
+
+section .data
+
+string_2225s2220has20been20removed2E0A#:
+	; initializer String
+	db 34, "%s", 34, " has been removed.", 10, 0
+
+section .data
+
+string_PBook2Etxt#:
+	; initializer String
+	db "PBook.txt", 0
+
+section .data
+
+string_inFilePtr20213D20NULL#:
+	; initializer String
+	db "inFilePtr != NULL", 0
+
+section .data
+
+string_0A252D24s20252D24s0A#:
+	; initializer String
+	db 10, "%-24s %-24s", 10, 0
+
+section .data
+
+string_Name#:
+	; initializer String
+	db "Name", 0
+
+section .data
+
+string_Phone#:
+	; initializer String
+	db "Phone", 0
+
+section .data
+
+string_252D24s20252D24s0A#:
+	; initializer String
+	db "%-24s %-24s", 10, 0
+
+section .data
+
+string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#:
+	; initializer String
+	db "========================", 0
+
+section .data
+
+string_25s25s#:
+	; initializer String
+	db "%s%s", 0
+
+section .data
+
+string_0A#:
+	; initializer String
+	db 10, 0
+
+section .data
+
+string_Flow12Etxt#:
+	; initializer String
+	db "Flow1.txt", 0
+
+section .data
+
+string_Flow22Etxt#:
+	; initializer String
+	db "Flow2.txt", 0
+
+section .data
+
+string_outFilePtr20213D20NULL#:
+	; initializer String
+	db "outFilePtr != NULL", 0
+
+section .data
+
+string_Test2Ebin#:
+	; initializer String
+	db "Test.bin", 0
+
+section .data
+
+string_size12025i0A#:
+	; initializer String
+	db "size1 %i", 10, 0
+
+section .data
+
+string_index12025i3A20value2025f0A#:
+	; initializer String
+	db "index1 %i: value %f", 10, 0
+
+section .data
+
+string_size22025i0A#:
+	; initializer String
+	db "size2 %i", 10, 0
+
+section .data
+
+string_index22025i3A20value2025f0A#:
+	; initializer String
+	db "index2 %i: value %f", 10, 0
+
+section .data
+
+string_size32025i20total2025i0A#:
+	; initializer String
+	db "size3 %i total %i", 10, 0
+
+section .data
+
+string_p20213D20NULL#:
+	; initializer String
+	db "p != NULL", 0
+
+section .data
+
+string_malloc2025u2025u2025u0A#:
+	; initializer String
+	db "malloc %u %u %u", 10, 0
+
+section .data
+
+string_index32025i3A20value2025f0A#:
+	; initializer String
+	db "index3 %i: value %f", 10, 0
+
+section .data
+
+string_Adam20Bertilsson#:
+	; initializer String
+	db "Adam Bertilsson", 0
+
+section .data
+
+string_Bertil20Ceasarsson#:
+	; initializer String
+	db "Bertil Ceasarsson", 0
+
+section .data
+
+string_Ceasar20Davidsson#:
+	; initializer String
+	db "Ceasar Davidsson", 0
+
+section .data
+
+string_Block2Ebin#:
+	; initializer String
+	db "Block.bin", 0
+
+section .data
+
+string_Name20203A2025s0A#:
+	; initializer String
+	db "Name  : %s", 10, 0
+
+section .data
+
+string_Phone203A2025d0A#:
+	; initializer String
+	db "Phone : %d", 10, 0
+
+section .data
+
+string_Test12Etxt#:
+	; initializer String
+	db "Test1.txt", 0
+
+section .data
+
+string_0A0A#:
+	; initializer String
+	db 10, 10, 0
+
+section .data
+
+string_fileexists20X2025s0A#:
+	; initializer String
+	db "fileexists X %s", 10, 0
+
+section .data
+
+string_Yes#:
+	; initializer String
+	db "Yes", 0
+
+section .data
+
+string_No#:
+	; initializer String
+	db "No", 0
+
+section .data
+
+string_fileexists20Y2025s0A0A#:
+	; initializer String
+	db "fileexists Y %s", 10, 10, 0
+
+section .data
+
+string_PBookX2Etxt#:
+	; initializer String
+	db "PBookX.txt", 0
+
+section .data
+
+string_r2B#:
+	; initializer String
+	db "r+", 0
+
+section .data
+
+string_inOutFilePtr20213D20NULL#:
+	; initializer String
+	db "inOutFilePtr != NULL", 0
+
+section .data
+
+string_tempFilePtr20213D20NULL#:
+	; initializer String
+	db "tempFilePtr != NULL", 0
+
+section .data
+
+string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A#:
+	; initializer String
+	db 10, "------------", 10, 0
+
+section .data
+
+container4bytes#:
+	; initializer zero 4
+	times 4 db 0
+
+section .data
+
+Array_8#:
+	; initializer Array
+	dq 8
+
+section .data
+
+int4$8#:
+	; initializer SignedInt
+	dd 8
+
+section .data
+
+int8$8#:
+	; initializer Pointer
+	dq 8
+
 section .text
 
  file_test:
@@ -3786,232 +4132,3 @@ section .text
 
  file_test$843:
 	; function end file_test
-section .data
-
-string_r#:
-	; initializer String
-	db "r", 0
-
-string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
-	; initializer String
-	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
-
-string_inFilePtrPtr20213D20NULL#:
-	; initializer String
-	db "inFilePtrPtr != NULL", 0
-
-string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
-	; initializer String
-	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
-
-string_w#:
-	; initializer String
-	db "w", 0
-
-string_outFilePtrPtr20213D20NULL#:
-	; initializer String
-	db "outFilePtrPtr != NULL", 0
-
-string_25i#:
-	; initializer String
-	db "%i", 0
-
-string_25lf#:
-	; initializer String
-	db "%lf", 0
-
-string_25f0A#:
-	; initializer String
-	db "%f", 10, 0
-
-string_X#:
-	; initializer String
-	db "X", 0
-
-string_Y#:
-	; initializer String
-	db "Y", 0
-
-string_2225s2220has20been20renamed20to202225s222E0A#:
-	; initializer String
-	db 34, "%s", 34, " has been renamed to ", 34, "%s", 34, ".", 10, 0
-
-string_Error2025i3A2025s2E0A#:
-	; initializer String
-	db "Error %i: %s.", 10, 0
-
-string_Z#:
-	; initializer String
-	db "Z", 0
-
-string_2225s2220has20been20removed2E0A#:
-	; initializer String
-	db 34, "%s", 34, " has been removed.", 10, 0
-
-string_PBook2Etxt#:
-	; initializer String
-	db "PBook.txt", 0
-
-string_inFilePtr20213D20NULL#:
-	; initializer String
-	db "inFilePtr != NULL", 0
-
-string_0A252D24s20252D24s0A#:
-	; initializer String
-	db 10, "%-24s %-24s", 10, 0
-
-string_Name#:
-	; initializer String
-	db "Name", 0
-
-string_Phone#:
-	; initializer String
-	db "Phone", 0
-
-string_252D24s20252D24s0A#:
-	; initializer String
-	db "%-24s %-24s", 10, 0
-
-string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#:
-	; initializer String
-	db "========================", 0
-
-string_25s25s#:
-	; initializer String
-	db "%s%s", 0
-
-string_0A#:
-	; initializer String
-	db 10, 0
-
-string_Flow12Etxt#:
-	; initializer String
-	db "Flow1.txt", 0
-
-string_Flow22Etxt#:
-	; initializer String
-	db "Flow2.txt", 0
-
-string_outFilePtr20213D20NULL#:
-	; initializer String
-	db "outFilePtr != NULL", 0
-
-string_Test2Ebin#:
-	; initializer String
-	db "Test.bin", 0
-
-string_size12025i0A#:
-	; initializer String
-	db "size1 %i", 10, 0
-
-string_index12025i3A20value2025f0A#:
-	; initializer String
-	db "index1 %i: value %f", 10, 0
-
-string_size22025i0A#:
-	; initializer String
-	db "size2 %i", 10, 0
-
-string_index22025i3A20value2025f0A#:
-	; initializer String
-	db "index2 %i: value %f", 10, 0
-
-string_size32025i20total2025i0A#:
-	; initializer String
-	db "size3 %i total %i", 10, 0
-
-string_p20213D20NULL#:
-	; initializer String
-	db "p != NULL", 0
-
-string_malloc2025u2025u2025u0A#:
-	; initializer String
-	db "malloc %u %u %u", 10, 0
-
-string_index32025i3A20value2025f0A#:
-	; initializer String
-	db "index3 %i: value %f", 10, 0
-
-string_Adam20Bertilsson#:
-	; initializer String
-	db "Adam Bertilsson", 0
-
-string_Bertil20Ceasarsson#:
-	; initializer String
-	db "Bertil Ceasarsson", 0
-
-string_Ceasar20Davidsson#:
-	; initializer String
-	db "Ceasar Davidsson", 0
-
-string_Block2Ebin#:
-	; initializer String
-	db "Block.bin", 0
-
-string_Name20203A2025s0A#:
-	; initializer String
-	db "Name  : %s", 10, 0
-
-string_Phone203A2025d0A#:
-	; initializer String
-	db "Phone : %d", 10, 0
-
-string_Test12Etxt#:
-	; initializer String
-	db "Test1.txt", 0
-
-string_0A0A#:
-	; initializer String
-	db 10, 10, 0
-
-string_fileexists20X2025s0A#:
-	; initializer String
-	db "fileexists X %s", 10, 0
-
-string_Yes#:
-	; initializer String
-	db "Yes", 0
-
-string_No#:
-	; initializer String
-	db "No", 0
-
-string_fileexists20Y2025s0A0A#:
-	; initializer String
-	db "fileexists Y %s", 10, 10, 0
-
-string_PBookX2Etxt#:
-	; initializer String
-	db "PBookX.txt", 0
-
-string_r2B#:
-	; initializer String
-	db "r+", 0
-
-string_inOutFilePtr20213D20NULL#:
-	; initializer String
-	db "inOutFilePtr != NULL", 0
-
-string_tempFilePtr20213D20NULL#:
-	; initializer String
-	db "tempFilePtr != NULL", 0
-
-string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A#:
-	; initializer String
-	db 10, "------------", 10, 0
-
-container4bytes#:
-	; initializer zero 4
-	times 4 db 0
-
-Array_8#:
-	; initializer Array
-	dq 8
-
-int4$8#:
-	; initializer SignedInt
-	dd 8
-
-int8$8#:
-	; initializer Pointer
-	dq 8

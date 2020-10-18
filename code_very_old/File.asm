@@ -39,28 +39,128 @@
 	extern strerror
 	extern printf
 	extern $StackTop
+
 section .text
 
- @2622$filecreate:
+
+section .data
+
+g_fileArray:
+	; initializer SignedInt
+	dd 1
+	; initializer Unsigned_Int
+	dd 0
+	; initializer zero 33
+	times 33 db 0
+	; initializer SignedInt
+	dd 1
+	; initializer Unsigned_Int
+	dd 1
+	; initializer zero 33
+	times 33 db 0
+	; initializer SignedInt
+	dd 1
+	; initializer Unsigned_Int
+	dd 2
+	; initializer zero 33
+	times 33 db 0
+	; initializer zero 697
+	times 697 db 0
+
+section .data
+
+stdin:
+	; initializer Pointer
+	dq g_fileArray
+
+section .data
+
+stdout:
+	; initializer Pointer
+	dq g_fileArray + 41
+
+section .data
+
+stderr:
+	; initializer Pointer
+	dq g_fileArray + 82
+
+section .data
+
+@2614$EEXIST:
+	; initializer SignedInt
+	dd 0
+
+section .data
+
+@2615$ENOENT:
+	; initializer SignedInt
+	dd 1
+
+section .data
+
+@2616$EACCES:
+	; initializer SignedInt
+	dd 2
+
+section .data
+
+@2617$SEEK_SET:
+	; initializer SignedInt
+	dd 0
+
+section .data
+
+@2618$SEEK_CUR:
+	; initializer SignedInt
+	dd 1
+
+section .data
+
+@2619$SEEK_END:
+	; initializer SignedInt
+	dd 2
+
+section .data
+
+@2620$READ:
+	; initializer SignedInt
+	dd 64
+
+section .data
+
+@2621$WRITE:
+	; initializer SignedInt
+	dd 65
+
+section .data
+
+@2622$READ_WRITE:
+	; initializer SignedInt
+	dd 66
+
+section .text
+
+ @2624$filecreate:
 	; rax = int8$85#
 	mov rax, 85
 
- @2622$filecreate$1:
+ @2624$filecreate$1:
 	; £temporary827 = int_to_int name (Pointer -> UnsignedLongInt)
 	mov rdi, [rbp + 24]
 
- @2622$filecreate$2:
+ @2624$filecreate$2:
 	; rdi = £temporary827
 
- @2622$filecreate$3:
+ @2624$filecreate$3:
 	; rsi = int8$511#
 	mov rsi, 511
 
- @2622$filecreate$4:
+ @2624$filecreate$4:
 	; syscall
 	syscall
 
- @2622$filecreate$5:
+ @2624$filecreate$5:
 	; return int4$0#
 	mov ebx, 0
 	mov rax, [rbp]
@@ -68,8 +168,10 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2622$filecreate$6:
+ @2624$filecreate$6:
 	; function end filecreate
+
+section .text
 
  fileexists:
 	; return int4$1#
@@ -82,37 +184,39 @@ section .text
  fileexists$1:
 	; function end fileexists
 
- @2626$fileopen:
+section .text
+
+ @2628$fileopen:
 	; rax = int8$2#
 	mov rax, 2
 
- @2626$fileopen$1:
+ @2628$fileopen$1:
 	; £temporary831 = int_to_int name (Pointer -> UnsignedLongInt)
 	mov rdi, [rbp + 24]
 
- @2626$fileopen$2:
+ @2628$fileopen$2:
 	; rdi = £temporary831
 
- @2626$fileopen$3:
+ @2628$fileopen$3:
 	; £temporary833 = int_to_int mode (UnsignedShortInt -> UnsignedLongInt)
 	mov si, [rbp + 32]
 	mov rbx, 65535
 	and rsi, rbx
 
- @2626$fileopen$4:
+ @2628$fileopen$4:
 	; rsi = £temporary833
 
- @2626$fileopen$5:
+ @2628$fileopen$5:
 	; syscall
 	syscall
 
- @2626$fileopen$6:
+ @2628$fileopen$6:
 	; £temporary834 = rax
 
- @2626$fileopen$7:
+ @2628$fileopen$7:
 	; £temporary835 = int_to_int £temporary834 (UnsignedLongInt -> SignedInt)
 
- @2626$fileopen$8:
+ @2628$fileopen$8:
 	; return £temporary835
 	mov ebx, eax
 	mov rax, [rbp]
@@ -120,8 +224,16 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2626$fileopen$9:
+ @2628$fileopen$9:
 	; function end fileopen
+
+section .data
+
+Array_41#:
+	; initializer Array
+	dq 41
+
+section .text
 
  fopen:
 	; empty
@@ -237,6 +349,44 @@ section .text
  fopen$24:
 	; function end fopen
 
+section .data
+
+string_r#:
+	; initializer String
+	db "r", 0
+
+section .data
+
+string_w#:
+	; initializer String
+	db "w", 0
+
+section .data
+
+string_a#:
+	; initializer String
+	db "a", 0
+
+section .data
+
+string_r2B#:
+	; initializer String
+	db "r+", 0
+
+section .data
+
+string_w2B#:
+	; initializer String
+	db "w+", 0
+
+section .data
+
+string_a2B#:
+	; initializer String
+	db "a+", 0
+
+section .text
+
  freopen:
 	; handle = int4$minus1#
 	mov dword [rbp + 48], -1
@@ -288,7 +438,7 @@ section .text
 	mov qword [rbp + 52], freopen$12
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2626$fileopen
+	jmp @2628$fileopen
 
  freopen$12:
 	; post call
@@ -347,7 +497,7 @@ section .text
 	mov qword [rbp + 52], freopen$26
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2622$filecreate
+	jmp @2624$filecreate
 
  freopen$26:
 	; post call
@@ -410,7 +560,7 @@ section .text
 	mov qword [rbp + 52], freopen$41
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2626$fileopen
+	jmp @2628$fileopen
 
  freopen$41:
 	; post call
@@ -470,7 +620,7 @@ section .text
 	mov qword [rbp + 52], freopen$55
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2622$filecreate
+	jmp @2624$filecreate
 
  freopen$55:
 	; post call
@@ -533,7 +683,7 @@ section .text
 	mov qword [rbp + 52], freopen$70
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2626$fileopen
+	jmp @2628$fileopen
 
  freopen$70:
 	; post call
@@ -622,7 +772,7 @@ section .text
 	mov qword [rbp + 52], freopen$91
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2626$fileopen
+	jmp @2628$fileopen
 
  freopen$91:
 	; post call
@@ -651,7 +801,7 @@ section .text
 	mov qword [rbp + 52], freopen$98
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2622$filecreate
+	jmp @2624$filecreate
 
  freopen$98:
 	; post call
@@ -714,7 +864,7 @@ section .text
 	mov qword [rbp + 52], freopen$113
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2626$fileopen
+	jmp @2628$fileopen
 
  freopen$113:
 	; post call
@@ -774,7 +924,7 @@ section .text
 	mov qword [rbp + 52], freopen$127
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2622$filecreate
+	jmp @2624$filecreate
 
  freopen$127:
 	; post call
@@ -877,6 +1027,8 @@ section .text
 
  freopen$149:
 	; function end freopen
+
+section .text
 
  fflush:
 	; if stream != int8$0# goto 22
@@ -989,6 +1141,8 @@ section .text
 
  fflush$23:
 	; function end fflush
+
+section .text
 
  fclose:
 	; if stream == int8$0# goto 7
@@ -1131,6 +1285,8 @@ section .text
  fclose$29:
 	; function end fclose
 
+section .text
+
  remove:
 	; rax = int8$88#
 	mov rax, 88
@@ -1156,6 +1312,8 @@ section .text
 
  remove$5:
 	; function end remove
+
+section .text
 
  rename:
 	; rax = int8$82#
@@ -1190,6 +1348,8 @@ section .text
  rename$7:
 	; function end rename
 
+section .text
+
  setvbuf:
 	; return int4$0#
 	mov ebx, 0
@@ -1200,6 +1360,8 @@ section .text
 
  setvbuf$1:
 	; function end setvbuf
+
+section .text
 
  setbuf:
 	; empty
@@ -1213,6 +1375,8 @@ section .text
 
  setbuf$2:
 	; function end setbuf
+
+section .text
 
  fgetc:
 	; c = int1$0#
@@ -1287,6 +1451,14 @@ section .text
 
  fgetc$14:
 	; function end fgetc
+
+section .data
+
+string_25c#:
+	; initializer String
+	db "%c", 0
+
+section .text
 
  fgets:
 	; count = int4$0#
@@ -1467,6 +1639,8 @@ section .text
  fgets$37:
 	; function end fgets
 
+section .text
+
  fputs:
 	; call header integral zero 0 stack zero 0
 
@@ -1555,6 +1729,8 @@ section .text
  fputs$19:
 	; function end fputs
 
+section .text
+
  getchar:
 	; call header integral zero 0 stack zero 0
 
@@ -1585,6 +1761,8 @@ section .text
 
  getchar$6:
 	; function end getchar
+
+section .text
 
  gets:
 	; call header integral zero 0 stack zero 0
@@ -1692,6 +1870,8 @@ section .text
  gets$22:
 	; function end gets
 
+section .text
+
  puts:
 	; call header integral zero 0 stack zero 0
 
@@ -1766,6 +1946,8 @@ section .text
  puts$15:
 	; function end puts
 
+section .text
+
  ungetc:
 	; £temporary977 -> stream = *stream
 	mov rsi, [rbp + 28]
@@ -1810,6 +1992,8 @@ section .text
 
  ungetc$7:
 	; function end ungetc
+
+section .text
 
  fread:
 	; rax = int8$0#
@@ -1865,6 +2049,8 @@ section .text
  fread$11:
 	; function end fread
 
+section .text
+
  fwrite:
 	; rax = int8$0#
 	mov rax, 0
@@ -1919,6 +2105,8 @@ section .text
  fwrite$11:
 	; function end fwrite
 
+section .text
+
  fseek:
 	; rax = int8$8#
 	mov rax, 8
@@ -1969,6 +2157,8 @@ section .text
  fseek$10:
 	; function end fseek
 
+section .text
+
  ftell:
 	; call header integral zero 0 stack zero 0
 
@@ -2008,6 +2198,8 @@ section .text
  ftell$8:
 	; function end ftell
 
+section .text
+
  rewind:
 	; empty
 
@@ -2020,6 +2212,8 @@ section .text
 
  rewind$2:
 	; function end rewind
+
+section .text
 
  fgetpos:
 	; £temporary1011 -> ptr = *ptr
@@ -2065,6 +2259,8 @@ section .text
 
  fgetpos$9:
 	; function end fgetpos
+
+section .text
 
  fsetpos:
 	; call header integral zero 0 stack zero 0
@@ -2113,6 +2309,8 @@ section .text
  fsetpos$10:
 	; function end fsetpos
 
+section .text
+
  clearerr:
 	; £temporary1017 -> stream = *stream
 	mov rsi, [rbp + 24]
@@ -2135,6 +2333,8 @@ section .text
 
  clearerr$4:
 	; function end clearerr
+
+section .text
 
  feof:
 	; call header integral zero 0 stack zero 0
@@ -2275,6 +2475,8 @@ section .text
  feof$31:
 	; function end feof
 
+section .text
+
  ferror:
 	; £temporary1026 -> stream = *stream
 	mov rsi, [rbp + 24]
@@ -2289,6 +2491,14 @@ section .text
 
  ferror$2:
 	; function end ferror
+
+section .data
+
+string_25s3A2025s2E0A#:
+	; initializer String
+	db "%s: %s.", 10, 0
+
+section .text
 
  perror:
 	; call header integral zero 0 stack zero 0
@@ -2348,110 +2558,3 @@ section .text
 
  perror$12:
 	; function end perror
-section .data
-
-g_fileArray:
-	; initializer SignedInt
-	dd 1
-	; initializer Unsigned_Int
-	dd 0
-	; initializer zero 33
-	times 33 db 0
-	; initializer SignedInt
-	dd 1
-	; initializer Unsigned_Int
-	dd 1
-	; initializer zero 33
-	times 33 db 0
-	; initializer SignedInt
-	dd 1
-	; initializer Unsigned_Int
-	dd 2
-	; initializer zero 33
-	times 33 db 0
-	; initializer zero 697
-	times 697 db 0
-
-stdin:
-	; initializer Pointer
-	dq g_fileArray
-
-stdout:
-	; initializer Pointer
-	dq g_fileArray + 41
-
-stderr:
-	; initializer Pointer
-	dq g_fileArray + 82
-
-@2612$EEXIST:
-	; initializer SignedInt
-	dd 0
-
-@2613$ENOENT:
-	; initializer SignedInt
-	dd 1
-
-@2614$EACCES:
-	; initializer SignedInt
-	dd 2
-
-@2615$SEEK_SET:
-	; initializer SignedInt
-	dd 0
-
-@2616$SEEK_CUR:
-	; initializer SignedInt
-	dd 1
-
-@2617$SEEK_END:
-	; initializer SignedInt
-	dd 2
-
-@2618$READ:
-	; initializer SignedInt
-	dd 64
-
-@2619$WRITE:
-	; initializer SignedInt
-	dd 65
-
-@2620$READ_WRITE:
-	; initializer SignedInt
-	dd 66
-
-Array_41#:
-	; initializer Array
-	dq 41
-
-string_r#:
-	; initializer String
-	db "r", 0
-
-string_w#:
-	; initializer String
-	db "w", 0
-
-string_a#:
-	; initializer String
-	db "a", 0
-
-string_r2B#:
-	; initializer String
-	db "r+", 0
-
-string_w2B#:
-	; initializer String
-	db "w+", 0
-
-string_a2B#:
-	; initializer String
-	db "a+", 0
-
-string_25c#:
-	; initializer String
-	db "%c", 0
-
-string_25s3A2025s2E0A#:
-	; initializer String
-	db "%s: %s.", 10, 0

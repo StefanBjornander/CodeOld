@@ -21,6 +21,130 @@
 	extern strerror
 	extern strtok
 	extern $StackTop
+
+section .text
+
+
+section .data
+
+string_Hello2C20World21#:
+	; initializer String
+	db "Hello, World!", 0
+
+section .data
+
+string_strlen282225s2229203D2025i0A#:
+	; initializer String
+	db "strlen(", 34, "%s", 34, ") = %i", 10, 0
+
+section .data
+
+string_t203D202225s222C20u203D202225s220A#:
+	; initializer String
+	db "t = ", 34, "%s", 34, ", u = ", 34, "%s", 34, 10, 0
+
+section .data
+
+string_abc#:
+	; initializer String
+	db "abc", 0
+
+section .data
+
+string_strcmp28s2C20u29203D2025i0A#:
+	; initializer String
+	db "strcmp(s, u) = %i", 10, 0
+
+section .data
+
+string_strncmp28s2C20u2C20229203D2025i0A#:
+	; initializer String
+	db "strncmp(s, u, 2) = %i", 10, 0
+
+section .data
+
+string_strchr28s2C2027l2729203D2025i0A#:
+	; initializer String
+	db "strchr(s, ", 39, "l", 39, ") = %i", 10, 0
+
+section .data
+
+string_strrchr28s2C2027l2729203D2025i0A#:
+	; initializer String
+	db "strrchr(s, ", 39, "l", 39, ") = %i", 10, 0
+
+section .data
+
+string_strchr28s2C2027x2729203D2025i0A#:
+	; initializer String
+	db "strchr(s, ", 39, "x", 39, ") = %i", 10, 0
+
+section .data
+
+string_strrchr28s2C2027x2729203D2025i0A#:
+	; initializer String
+	db "strrchr(s, ", 39, "x", 39, ") = %i", 10, 0
+
+section .data
+
+string_s203D202225s222C20t203D202225s222C20u203D202225s220A#:
+	; initializer String
+	db "s = ", 34, "%s", 34, ", t = ", 34, "%s", 34, ", u = ", 34, "%s", 34, 10, 0
+
+section .data
+
+string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A#:
+	; initializer String
+	db "memchr(s, ", 39, "l", 39, ", SIZE * sizeof(char)) = %i", 10, 0
+
+section .data
+
+string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A#:
+	; initializer String
+	db "memchr(s, ", 39, "x", 39, ", SIZE * sizeof(char)) = %i", 10, 0
+
+section .data
+
+string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A#:
+	; initializer String
+	db "memcmp(s, t, SIZE * sizeof(char)) = %i", 10, 0
+
+section .data
+
+string_strspn28s2C2022Hello2C20C2229203D2025i0A#:
+	; initializer String
+	db "strspn(s, ", 34, "Hello, C", 34, ") = %i", 10, 0
+
+section .data
+
+string_Hello2C20C#:
+	; initializer String
+	db "Hello, C", 0
+
+section .data
+
+string_strcspn28s2C2022Hello2C20C2229203D2025i0A#:
+	; initializer String
+	db "strcspn(s, ", 34, "Hello, C", 34, ") = %i", 10, 0
+
+section .data
+
+string_strerror28errno29203D202225s220A#:
+	; initializer String
+	db "strerror(errno) = ", 34, "%s", 34, 10, 0
+
+section .data
+
+string_2C#:
+	; initializer String
+	db ",", 0
+
+section .data
+
+string_strtok28s2C20222C2229203D202225s220A#:
+	; initializer String
+	db "strtok(s, ", 34, ",", 34, ") = ", 34, "%s", 34, 10, 0
+
 section .text
 
  string_test:
@@ -1271,84 +1395,3 @@ section .text
 
  string_test$286:
 	; function end string_test
-section .data
-
-string_Hello2C20World21#:
-	; initializer String
-	db "Hello, World!", 0
-
-string_strlen282225s2229203D2025i0A#:
-	; initializer String
-	db "strlen(", 34, "%s", 34, ") = %i", 10, 0
-
-string_t203D202225s222C20u203D202225s220A#:
-	; initializer String
-	db "t = ", 34, "%s", 34, ", u = ", 34, "%s", 34, 10, 0
-
-string_abc#:
-	; initializer String
-	db "abc", 0
-
-string_strcmp28s2C20u29203D2025i0A#:
-	; initializer String
-	db "strcmp(s, u) = %i", 10, 0
-
-string_strncmp28s2C20u2C20229203D2025i0A#:
-	; initializer String
-	db "strncmp(s, u, 2) = %i", 10, 0
-
-string_strchr28s2C2027l2729203D2025i0A#:
-	; initializer String
-	db "strchr(s, ", 39, "l", 39, ") = %i", 10, 0
-
-string_strrchr28s2C2027l2729203D2025i0A#:
-	; initializer String
-	db "strrchr(s, ", 39, "l", 39, ") = %i", 10, 0
-
-string_strchr28s2C2027x2729203D2025i0A#:
-	; initializer String
-	db "strchr(s, ", 39, "x", 39, ") = %i", 10, 0
-
-string_strrchr28s2C2027x2729203D2025i0A#:
-	; initializer String
-	db "strrchr(s, ", 39, "x", 39, ") = %i", 10, 0
-
-string_s203D202225s222C20t203D202225s222C20u203D202225s220A#:
-	; initializer String
-	db "s = ", 34, "%s", 34, ", t = ", 34, "%s", 34, ", u = ", 34, "%s", 34, 10, 0
-
-string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A#:
-	; initializer String
-	db "memchr(s, ", 39, "l", 39, ", SIZE * sizeof(char)) = %i", 10, 0
-
-string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A#:
-	; initializer String
-	db "memchr(s, ", 39, "x", 39, ", SIZE * sizeof(char)) = %i", 10, 0
-
-string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A#:
-	; initializer String
-	db "memcmp(s, t, SIZE * sizeof(char)) = %i", 10, 0
-
-string_strspn28s2C2022Hello2C20C2229203D2025i0A#:
-	; initializer String
-	db "strspn(s, ", 34, "Hello, C", 34, ") = %i", 10, 0
-
-string_Hello2C20C#:
-	; initializer String
-	db "Hello, C", 0
-
-string_strcspn28s2C2022Hello2C20C2229203D2025i0A#:
-	; initializer String
-	db "strcspn(s, ", 34, "Hello, C", 34, ") = %i", 10, 0
-
-string_strerror28errno29203D202225s220A#:
-	; initializer String
-	db "strerror(errno) = ", 34, "%s", 34, 10, 0
-
-string_2C#:
-	; initializer String
-	db ",", 0
-
-string_strtok28s2C20222C2229203D202225s220A#:
-	; initializer String
-	db "strtok(s, ", 34, ",", 34, ") = ", 34, "%s", 34, 10, 0

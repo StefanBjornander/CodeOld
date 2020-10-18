@@ -7,6 +7,22 @@
 	extern setjmp
 	extern printf
 	extern $StackTop
+
+section .text
+
+
+section .data
+
+buffer:
+	; initializer zero 24
+	times 24 db 0
+
+section .data
+
+string_Division20by20Zero2E#:
+	; initializer String
+	db "Division by Zero.", 0
+
 section .text
 
  divide:
@@ -86,6 +102,8 @@ section .text
  divide$16:
 	; function end divide
 
+section .text
+
  invers:
 	; call header integral zero 0 stack zero 0
 
@@ -127,6 +145,20 @@ section .text
 
  invers$9:
 	; function end invers
+
+section .data
+
+string_12E0202F2025f203D2025f0A#:
+	; initializer String
+	db "1.0 / %f = %f", 10, 0
+
+section .data
+
+string_p203D203C25s3E203C25u3E0A#:
+	; initializer String
+	db "p = <%s> <%u>", 10, 0
+
+section .text
 
  setjmp_test:
 	; empty
@@ -262,20 +294,3 @@ section .text
 
  setjmp_test$30:
 	; function end setjmp_test
-section .data
-
-buffer:
-	; initializer zero 24
-	times 24 db 0
-
-string_Division20by20Zero2E#:
-	; initializer String
-	db "Division by Zero.", 0
-
-string_12E0202F2025f203D2025f0A#:
-	; initializer String
-	db "1.0 / %f = %f", 10, 0
-
-string_p203D203C25s3E203C25u3E0A#:
-	; initializer String
-	db "p = <%s> <%u>", 10, 0

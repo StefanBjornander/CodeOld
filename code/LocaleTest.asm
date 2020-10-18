@@ -2,8 +2,6 @@
 
 	extern $StackTop
 
-section .text
-
 
 section .text
 

@@ -28,8 +28,6 @@
 	extern rewind
 	extern $StackTop
 
-section .text
-
 
 section .data
 

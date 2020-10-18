@@ -16,6 +16,10 @@
 	extern strlen
 	extern strcat
 	extern $StackTop
+
+section .text
+
+
 section .text
 
  clock:
@@ -28,6 +32,8 @@ section .text
 
  clock$1:
 	; function end clock
+
+section .text
 
  time:
 	; empty
@@ -75,6 +81,38 @@ section .text
 
  time$10:
 	; function end time
+
+section .data
+
+int4$4#:
+	; initializer SignedInt
+	dd 4
+
+section .data
+
+int4$365#:
+	; initializer SignedInt
+	dd 365
+
+section .data
+
+int8$86400#:
+	; initializer Signed_Long_Int
+	dq 86400
+
+section .data
+
+int8$3600#:
+	; initializer Signed_Long_Int
+	dq 3600
+
+section .data
+
+int8$60#:
+	; initializer Signed_Long_Int
+	dq 60
+
+section .text
 
  mktime:
 	; if tp == int8$0# goto 27
@@ -243,6 +281,38 @@ section .text
  mktime$28:
 	; function end mktime
 
+section .data
+
+@4766$g_timeStruct:
+	; initializer zero 36
+	times 36 db 0
+
+section .data
+
+int8$7#:
+	; initializer Signed_Long_Int
+	dq 7
+
+section .data
+
+int4$100#:
+	; initializer SignedInt
+	dd 100
+
+section .data
+
+int4$400#:
+	; initializer SignedInt
+	dd 400
+
+section .data
+
+Array_4#:
+	; initializer Array
+	dq 4
+
+section .text
+
  gmtime:
 	; year = int4$1970#
 	mov dword [rbp + 32], 1970
@@ -283,7 +353,7 @@ section .text
 
  gmtime$7:
 	; g_timeStruct.tm_hour = £temporary2301
-	mov [@4764$g_timeStruct + 8], eax
+	mov [@4766$g_timeStruct + 8], eax
 
  gmtime$8:
 	; £temporary2303 = secondsOfDay % int8$3600#
@@ -306,7 +376,7 @@ section .text
 
  gmtime$11:
 	; g_timeStruct.tm_min = £temporary2305
-	mov [@4764$g_timeStruct + 4], eax
+	mov [@4766$g_timeStruct + 4], eax
 
  gmtime$12:
 	; £temporary2307 = secondsOfDay % int8$3600#
@@ -329,7 +399,7 @@ section .text
 
  gmtime$15:
 	; g_timeStruct.tm_sec = £temporary2309
-	mov [@4764$g_timeStruct], edx
+	mov [@4766$g_timeStruct], edx
 
  gmtime$16:
 	; totalDays = time / int8$86400#
@@ -357,7 +427,7 @@ section .text
 
  gmtime$20:
 	; g_timeStruct.tm_wday = £temporary2314
-	mov [@4764$g_timeStruct + 24], eax
+	mov [@4766$g_timeStruct + 24], eax
 
  gmtime$21:
 	; goto 26
@@ -382,7 +452,7 @@ section .text
 
  gmtime$25:
 	; g_timeStruct.tm_wday = £temporary2318
-	mov [@4764$g_timeStruct + 24], edx
+	mov [@4766$g_timeStruct + 24], edx
 
  gmtime$26:
 	; £temporary2319 = year % int4$4#
@@ -473,7 +543,7 @@ section .text
 	; g_timeStruct.tm_year = year - int4$1900#
 	mov eax, [rbp + 32]
 	sub eax, 1900
-	mov [@4764$g_timeStruct + 20], eax
+	mov [@4766$g_timeStruct + 20], eax
 
  gmtime$44:
 	; £temporary2335 = int_to_int totalDays (Signed_Long_Int -> SignedInt)
@@ -485,7 +555,7 @@ section .text
 
  gmtime$45:
 	; g_timeStruct.tm_yday = £temporary2335
-	mov [@4764$g_timeStruct + 28], eax
+	mov [@4766$g_timeStruct + 28], eax
 
  gmtime$46:
 	; daysOfMonths[0] = int4$31#
@@ -636,7 +706,7 @@ section .text
  gmtime$77:
 	; g_timeStruct.tm_mon = month
 	mov eax, [rbp + 116]
-	mov [@4764$g_timeStruct + 16], eax
+	mov [@4766$g_timeStruct + 16], eax
 
  gmtime$78:
 	; £temporary2365 = totalDays + int8$1#
@@ -652,15 +722,15 @@ section .text
 
  gmtime$80:
 	; g_timeStruct.tm_mday = £temporary2366
-	mov [@4764$g_timeStruct + 12], eax
+	mov [@4766$g_timeStruct + 12], eax
 
  gmtime$81:
 	; g_timeStruct.tm_isdst = int4$minus1#
-	mov dword [@4764$g_timeStruct + 32], -1
+	mov dword [@4766$g_timeStruct + 32], -1
 
  gmtime$82:
-	; return staticaddress$@4764$g_timeStruct$0#
-	mov rbx, @4764$g_timeStruct
+	; return staticaddress$@4766$g_timeStruct$0#
+	mov rbx, @4766$g_timeStruct
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -699,6 +769,14 @@ section .text
  gmtime$88:
 	; function end gmtime
 
+section .data
+
+container8bytes#:
+	; initializer zero 8
+	times 8 db 0
+
+section .text
+
  difftime:
 	; £temporary2372 = time2 - time1
 	mov rax, [rbp + 32]
@@ -719,6 +797,328 @@ section .text
  difftime$3:
 	; function end difftime
 
+section .data
+
+@4778$g_timeString:
+	; initializer zero 256
+	times 256 db 0
+
+section .data
+
+string_Sun#:
+	; initializer String
+	db "Sun", 0
+
+section .data
+
+string_Mon#:
+	; initializer String
+	db "Mon", 0
+
+section .data
+
+string_Tue#:
+	; initializer String
+	db "Tue", 0
+
+section .data
+
+string_Wed#:
+	; initializer String
+	db "Wed", 0
+
+section .data
+
+string_Thu#:
+	; initializer String
+	db "Thu", 0
+
+section .data
+
+string_Fri#:
+	; initializer String
+	db "Fri", 0
+
+section .data
+
+string_Sat#:
+	; initializer String
+	db "Sat", 0
+
+section .data
+
+@4779$g_defaultShortDayList:
+	; initializer Pointer
+	dq string_Sun#
+	; initializer Pointer
+	dq string_Mon#
+	; initializer Pointer
+	dq string_Tue#
+	; initializer Pointer
+	dq string_Wed#
+	; initializer Pointer
+	dq string_Thu#
+	; initializer Pointer
+	dq string_Fri#
+	; initializer Pointer
+	dq string_Sat#
+
+section .data
+
+string_Sunday#:
+	; initializer String
+	db "Sunday", 0
+
+section .data
+
+string_Monday#:
+	; initializer String
+	db "Monday", 0
+
+section .data
+
+string_Tuesday#:
+	; initializer String
+	db "Tuesday", 0
+
+section .data
+
+string_Wednesday#:
+	; initializer String
+	db "Wednesday", 0
+
+section .data
+
+string_Thursday#:
+	; initializer String
+	db "Thursday", 0
+
+section .data
+
+string_Friday#:
+	; initializer String
+	db "Friday", 0
+
+section .data
+
+string_Saturday#:
+	; initializer String
+	db "Saturday", 0
+
+section .data
+
+@4780$g_defaultLongDayList:
+	; initializer Pointer
+	dq string_Sunday#
+	; initializer Pointer
+	dq string_Monday#
+	; initializer Pointer
+	dq string_Tuesday#
+	; initializer Pointer
+	dq string_Wednesday#
+	; initializer Pointer
+	dq string_Thursday#
+	; initializer Pointer
+	dq string_Friday#
+	; initializer Pointer
+	dq string_Saturday#
+
+section .data
+
+string_Jan#:
+	; initializer String
+	db "Jan", 0
+
+section .data
+
+string_Feb#:
+	; initializer String
+	db "Feb", 0
+
+section .data
+
+string_Mar#:
+	; initializer String
+	db "Mar", 0
+
+section .data
+
+string_Apr#:
+	; initializer String
+	db "Apr", 0
+
+section .data
+
+string_May#:
+	; initializer String
+	db "May", 0
+
+section .data
+
+string_Jun#:
+	; initializer String
+	db "Jun", 0
+
+section .data
+
+string_Jul#:
+	; initializer String
+	db "Jul", 0
+
+section .data
+
+string_Aug#:
+	; initializer String
+	db "Aug", 0
+
+section .data
+
+string_Sep#:
+	; initializer String
+	db "Sep", 0
+
+section .data
+
+string_Oct#:
+	; initializer String
+	db "Oct", 0
+
+section .data
+
+string_Nov#:
+	; initializer String
+	db "Nov", 0
+
+section .data
+
+string_Dec#:
+	; initializer String
+	db "Dec", 0
+
+section .data
+
+@4781$g_defaultShortMonthList:
+	; initializer Pointer
+	dq string_Jan#
+	; initializer Pointer
+	dq string_Feb#
+	; initializer Pointer
+	dq string_Mar#
+	; initializer Pointer
+	dq string_Apr#
+	; initializer Pointer
+	dq string_May#
+	; initializer Pointer
+	dq string_Jun#
+	; initializer Pointer
+	dq string_Jul#
+	; initializer Pointer
+	dq string_Aug#
+	; initializer Pointer
+	dq string_Sep#
+	; initializer Pointer
+	dq string_Oct#
+	; initializer Pointer
+	dq string_Nov#
+	; initializer Pointer
+	dq string_Dec#
+
+section .data
+
+string_January#:
+	; initializer String
+	db "January", 0
+
+section .data
+
+string_February#:
+	; initializer String
+	db "February", 0
+
+section .data
+
+string_March#:
+	; initializer String
+	db "March", 0
+
+section .data
+
+string_April#:
+	; initializer String
+	db "April", 0
+
+section .data
+
+string_June#:
+	; initializer String
+	db "June", 0
+
+section .data
+
+string_July#:
+	; initializer String
+	db "July", 0
+
+section .data
+
+string_August#:
+	; initializer String
+	db "August", 0
+
+section .data
+
+string_September#:
+	; initializer String
+	db "September", 0
+
+section .data
+
+string_October#:
+	; initializer String
+	db "October", 0
+
+section .data
+
+string_November#:
+	; initializer String
+	db "November", 0
+
+section .data
+
+string_December#:
+	; initializer String
+	db "December", 0
+
+section .data
+
+@4782$g_defaultLongMonthList:
+	; initializer Pointer
+	dq string_January#
+	; initializer Pointer
+	dq string_February#
+	; initializer Pointer
+	dq string_March#
+	; initializer Pointer
+	dq string_April#
+	; initializer Pointer
+	dq string_May#
+	; initializer Pointer
+	dq string_June#
+	; initializer Pointer
+	dq string_July#
+	; initializer Pointer
+	dq string_August#
+	; initializer Pointer
+	dq string_September#
+	; initializer Pointer
+	dq string_October#
+	; initializer Pointer
+	dq string_November#
+	; initializer Pointer
+	dq string_December#
+
+section .text
+
  default_test:
 	; empty
 
@@ -731,6 +1131,20 @@ section .text
 
  default_test$2:
 	; function end default_test
+
+section .data
+
+string_25s2025s20252i202502i3A2502i3A2502i202504i#:
+	; initializer String
+	db "%s %s %2i %02i:%02i:%02i %04i", 0
+
+section .data
+
+int8$8#:
+	; initializer Pointer
+	dq 8
+
+section .text
 
  asctime:
 	; localeConvPtr = int8$0#
@@ -801,7 +1215,7 @@ section .text
 
  asctime$16:
 	; £temporary2381 = g_defaultShortDayList
-	mov rax, @4777$g_defaultShortDayList
+	mov rax, @4779$g_defaultShortDayList
 
  asctime$17:
 	; shortDayList = £temporary2381
@@ -822,7 +1236,7 @@ section .text
 
  asctime$21:
 	; £temporary2383 = g_defaultShortMonthList
-	mov rax, @4779$g_defaultShortMonthList
+	mov rax, @4781$g_defaultShortMonthList
 
  asctime$22:
 	; shortMonthList = £temporary2383
@@ -833,7 +1247,7 @@ section .text
 
  asctime$24:
 	; parameter g_timeString, offset 80
-	mov qword [rbp + 80], @4776$g_timeString
+	mov qword [rbp + 80], @4778$g_timeString
 
  asctime$25:
 	; parameter string_25s2025s20252i202502i3A2502i3A2502i202504i#, offset 88
@@ -958,7 +1372,7 @@ section .text
 
  asctime$51:
 	; return g_timeString
-	mov rbx, @4776$g_timeString
+	mov rbx, @4778$g_timeString
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -966,6 +1380,8 @@ section .text
 
  asctime$52:
 	; function end asctime
+
+section .text
 
  ctime:
 	; call header integral zero 0 stack zero 0
@@ -1017,6 +1433,14 @@ section .text
 
  ctime$11:
 	; function end ctime
+
+section .data
+
+int4$3600#:
+	; initializer SignedInt
+	dd 3600
+
+section .text
 
  localtime:
 	; call header integral zero 0 stack zero 0
@@ -1160,6 +1584,98 @@ section .text
 
  localtime$32:
 	; function end localtime
+
+section .data
+
+string_#:
+	; initializer String
+	db 0
+
+section .data
+
+string_leap20days2025i2C20total20days2025lu0A#:
+	; initializer String
+	db "leap days %i, total days %lu", 10, 0
+
+section .data
+
+string_yearDaySunday2025i0A#:
+	; initializer String
+	db "yearDaySunday %i", 10, 0
+
+section .data
+
+string_yearDayMonday2025i0A#:
+	; initializer String
+	db "yearDayMonday %i", 10, 0
+
+section .data
+
+string_2504d2D2502d2D2502d202502d3A2502d3A2502d#:
+	; initializer String
+	db "%04d-%02d-%02d %02d:%02d:%02d", 0
+
+section .data
+
+string_2502d#:
+	; initializer String
+	db "%02d", 0
+
+section .data
+
+string_2503d#:
+	; initializer String
+	db "%03d", 0
+
+section .data
+
+string_25s#:
+	; initializer String
+	db "%s", 0
+
+section .data
+
+string_AM#:
+	; initializer String
+	db "AM", 0
+
+section .data
+
+string_PM#:
+	; initializer String
+	db "PM", 0
+
+section .data
+
+string_2504d2D2502d2D2502d#:
+	; initializer String
+	db "%04d-%02d-%02d", 0
+
+section .data
+
+string_2502d3A2502d3A2502d#:
+	; initializer String
+	db "%02d:%02d:%02d", 0
+
+section .data
+
+string_2504d#:
+	; initializer String
+	db "%04d", 0
+
+section .data
+
+string_25#:
+	; initializer String
+	db "%", 0
+
+section .data
+
+int4$12#:
+	; initializer SignedInt
+	dd 12
+
+section .text
 
  strftime:
 	; call header integral zero 0 stack zero 0
@@ -1318,7 +1834,7 @@ section .text
 
  strftime$37:
 	; £temporary2433 = g_defaultShortDayList
-	mov rax, @4777$g_defaultShortDayList
+	mov rax, @4779$g_defaultShortDayList
 
  strftime$38:
 	; shortDayList = £temporary2433
@@ -1339,7 +1855,7 @@ section .text
 
  strftime$42:
 	; £temporary2435 = g_defaultLongDayList
-	mov rax, @4778$g_defaultLongDayList
+	mov rax, @4780$g_defaultLongDayList
 
  strftime$43:
 	; longDayList = £temporary2435
@@ -1360,7 +1876,7 @@ section .text
 
  strftime$47:
 	; £temporary2437 = g_defaultShortMonthList
-	mov rax, @4779$g_defaultShortMonthList
+	mov rax, @4781$g_defaultShortMonthList
 
  strftime$48:
 	; shortMonthList = £temporary2437
@@ -1381,7 +1897,7 @@ section .text
 
  strftime$52:
 	; £temporary2439 = g_defaultLongMonthList
-	mov rax, @4780$g_defaultLongMonthList
+	mov rax, @4782$g_defaultLongMonthList
 
  strftime$53:
 	; longMonthList = £temporary2439
@@ -2903,356 +3419,3 @@ section .text
 
  strftime$380:
 	; function end strftime
-section .data
-
-int4$4#:
-	; initializer SignedInt
-	dd 4
-
-int4$365#:
-	; initializer SignedInt
-	dd 365
-
-int8$86400#:
-	; initializer Signed_Long_Int
-	dq 86400
-
-int8$3600#:
-	; initializer Signed_Long_Int
-	dq 3600
-
-int8$60#:
-	; initializer Signed_Long_Int
-	dq 60
-
-@4764$g_timeStruct:
-	; initializer zero 36
-	times 36 db 0
-
-int8$7#:
-	; initializer Signed_Long_Int
-	dq 7
-
-int4$100#:
-	; initializer SignedInt
-	dd 100
-
-int4$400#:
-	; initializer SignedInt
-	dd 400
-
-Array_4#:
-	; initializer Array
-	dq 4
-
-container8bytes#:
-	; initializer zero 8
-	times 8 db 0
-
-@4776$g_timeString:
-	; initializer zero 256
-	times 256 db 0
-
-string_Sun#:
-	; initializer String
-	db "Sun", 0
-
-string_Mon#:
-	; initializer String
-	db "Mon", 0
-
-string_Tue#:
-	; initializer String
-	db "Tue", 0
-
-string_Wed#:
-	; initializer String
-	db "Wed", 0
-
-string_Thu#:
-	; initializer String
-	db "Thu", 0
-
-string_Fri#:
-	; initializer String
-	db "Fri", 0
-
-string_Sat#:
-	; initializer String
-	db "Sat", 0
-
-@4777$g_defaultShortDayList:
-	; initializer Pointer
-	dq string_Sun#
-	; initializer Pointer
-	dq string_Mon#
-	; initializer Pointer
-	dq string_Tue#
-	; initializer Pointer
-	dq string_Wed#
-	; initializer Pointer
-	dq string_Thu#
-	; initializer Pointer
-	dq string_Fri#
-	; initializer Pointer
-	dq string_Sat#
-
-string_Sunday#:
-	; initializer String
-	db "Sunday", 0
-
-string_Monday#:
-	; initializer String
-	db "Monday", 0
-
-string_Tuesday#:
-	; initializer String
-	db "Tuesday", 0
-
-string_Wednesday#:
-	; initializer String
-	db "Wednesday", 0
-
-string_Thursday#:
-	; initializer String
-	db "Thursday", 0
-
-string_Friday#:
-	; initializer String
-	db "Friday", 0
-
-string_Saturday#:
-	; initializer String
-	db "Saturday", 0
-
-@4778$g_defaultLongDayList:
-	; initializer Pointer
-	dq string_Sunday#
-	; initializer Pointer
-	dq string_Monday#
-	; initializer Pointer
-	dq string_Tuesday#
-	; initializer Pointer
-	dq string_Wednesday#
-	; initializer Pointer
-	dq string_Thursday#
-	; initializer Pointer
-	dq string_Friday#
-	; initializer Pointer
-	dq string_Saturday#
-
-string_Jan#:
-	; initializer String
-	db "Jan", 0
-
-string_Feb#:
-	; initializer String
-	db "Feb", 0
-
-string_Mar#:
-	; initializer String
-	db "Mar", 0
-
-string_Apr#:
-	; initializer String
-	db "Apr", 0
-
-string_May#:
-	; initializer String
-	db "May", 0
-
-string_Jun#:
-	; initializer String
-	db "Jun", 0
-
-string_Jul#:
-	; initializer String
-	db "Jul", 0
-
-string_Aug#:
-	; initializer String
-	db "Aug", 0
-
-string_Sep#:
-	; initializer String
-	db "Sep", 0
-
-string_Oct#:
-	; initializer String
-	db "Oct", 0
-
-string_Nov#:
-	; initializer String
-	db "Nov", 0
-
-string_Dec#:
-	; initializer String
-	db "Dec", 0
-
-@4779$g_defaultShortMonthList:
-	; initializer Pointer
-	dq string_Jan#
-	; initializer Pointer
-	dq string_Feb#
-	; initializer Pointer
-	dq string_Mar#
-	; initializer Pointer
-	dq string_Apr#
-	; initializer Pointer
-	dq string_May#
-	; initializer Pointer
-	dq string_Jun#
-	; initializer Pointer
-	dq string_Jul#
-	; initializer Pointer
-	dq string_Aug#
-	; initializer Pointer
-	dq string_Sep#
-	; initializer Pointer
-	dq string_Oct#
-	; initializer Pointer
-	dq string_Nov#
-	; initializer Pointer
-	dq string_Dec#
-
-string_January#:
-	; initializer String
-	db "January", 0
-
-string_February#:
-	; initializer String
-	db "February", 0
-
-string_March#:
-	; initializer String
-	db "March", 0
-
-string_April#:
-	; initializer String
-	db "April", 0
-
-string_June#:
-	; initializer String
-	db "June", 0
-
-string_July#:
-	; initializer String
-	db "July", 0
-
-string_August#:
-	; initializer String
-	db "August", 0
-
-string_September#:
-	; initializer String
-	db "September", 0
-
-string_October#:
-	; initializer String
-	db "October", 0
-
-string_November#:
-	; initializer String
-	db "November", 0
-
-string_December#:
-	; initializer String
-	db "December", 0
-
-@4780$g_defaultLongMonthList:
-	; initializer Pointer
-	dq string_January#
-	; initializer Pointer
-	dq string_February#
-	; initializer Pointer
-	dq string_March#
-	; initializer Pointer
-	dq string_April#
-	; initializer Pointer
-	dq string_May#
-	; initializer Pointer
-	dq string_June#
-	; initializer Pointer
-	dq string_July#
-	; initializer Pointer
-	dq string_August#
-	; initializer Pointer
-	dq string_September#
-	; initializer Pointer
-	dq string_October#
-	; initializer Pointer
-	dq string_November#
-	; initializer Pointer
-	dq string_December#
-
-string_25s2025s20252i202502i3A2502i3A2502i202504i#:
-	; initializer String
-	db "%s %s %2i %02i:%02i:%02i %04i", 0
-
-int8$8#:
-	; initializer Pointer
-	dq 8
-
-int4$3600#:
-	; initializer SignedInt
-	dd 3600
-
-string_#:
-	; initializer String
-	db 0
-
-string_leap20days2025i2C20total20days2025lu0A#:
-	; initializer String
-	db "leap days %i, total days %lu", 10, 0
-
-string_yearDaySunday2025i0A#:
-	; initializer String
-	db "yearDaySunday %i", 10, 0
-
-string_yearDayMonday2025i0A#:
-	; initializer String
-	db "yearDayMonday %i", 10, 0
-
-string_2504d2D2502d2D2502d202502d3A2502d3A2502d#:
-	; initializer String
-	db "%04d-%02d-%02d %02d:%02d:%02d", 0
-
-string_2502d#:
-	; initializer String
-	db "%02d", 0
-
-string_2503d#:
-	; initializer String
-	db "%03d", 0
-
-string_25s#:
-	; initializer String
-	db "%s", 0
-
-string_AM#:
-	; initializer String
-	db "AM", 0
-
-string_PM#:
-	; initializer String
-	db "PM", 0
-
-string_2504d2D2502d2D2502d#:
-	; initializer String
-	db "%04d-%02d-%02d", 0
-
-string_2502d3A2502d3A2502d#:
-	; initializer String
-	db "%02d:%02d:%02d", 0
-
-string_2504d#:
-	; initializer String
-	db "%04d", 0
-
-string_25#:
-	; initializer String
-	db "%", 0
-
-int4$12#:
-	; initializer SignedInt
-	dd 12

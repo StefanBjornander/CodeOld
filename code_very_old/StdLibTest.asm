@@ -23,6 +23,10 @@
 	extern qsort
 	extern bsearch
 	extern $StackTop
+
+section .text
+
+
 section .text
 
  compare:
@@ -94,6 +98,8 @@ section .text
  compare$15:
 	; function end compare
 
+section .text
+
  reverse_compare:
 	; £temporary3962 = int_to_int valuePtr1 (Pointer -> Pointer)
 	mov rsi, [rbp + 24]
@@ -163,6 +169,14 @@ section .text
  reverse_compare$15:
 	; function end reverse_compare
 
+section .data
+
+string_div_t20quot2025i20rem2025i0A#:
+	; initializer String
+	db "div_t quot %i rem %i", 10, 0
+
+section .text
+
  print_div:
 	; call header integral zero 0 stack zero 0
 
@@ -201,6 +215,14 @@ section .text
 
  print_div$7:
 	; function end print_div
+
+section .data
+
+string_ldiv_t20quot2025li20rem2025li0A#:
+	; initializer String
+	db "ldiv_t quot %li rem %li", 10, 0
+
+section .text
 
  print_ldiv:
 	; call header integral zero 0 stack zero 0
@@ -241,6 +263,14 @@ section .text
  print_ldiv$7:
 	; function end print_ldiv
 
+section .data
+
+string_exit10A#:
+	; initializer String
+	db "exit1", 10, 0
+
+section .text
+
  exit_handle1x:
 	; call header integral zero 0 stack zero 0
 
@@ -268,6 +298,14 @@ section .text
 
  exit_handle1x$5:
 	; function end exit_handle1x
+
+section .data
+
+string_exit20A#:
+	; initializer String
+	db "exit2", 10, 0
+
+section .text
 
  exit_handle2x:
 	; call header integral zero 0 stack zero 0
@@ -297,6 +335,14 @@ section .text
  exit_handle2x$5:
 	; function end exit_handle2x
 
+section .data
+
+string_exit30A#:
+	; initializer String
+	db "exit3", 10, 0
+
+section .text
+
  exit_handle3x:
 	; call header integral zero 0 stack zero 0
 
@@ -324,6 +370,158 @@ section .text
 
  exit_handle3x$5:
 	; function end exit_handle3x
+
+section .data
+
+string_1232E456abc#:
+	; initializer String
+	db "123.456abc", 0
+
+section .data
+
+string_1232E456#:
+	; initializer String
+	db "123.456", 0
+
+section .data
+
+string_123abc#:
+	; initializer String
+	db "123abc", 0
+
+section .data
+
+string_atof28221232E4562229203D2025f0A#:
+	; initializer String
+	db "atof(", 34, "123.456", 34, ") = %f", 10, 0
+
+section .data
+
+string_atoi28221232229203D2025i0A#:
+	; initializer String
+	db "atoi(", 34, "123", 34, ") = %i", 10, 0
+
+section .data
+
+string_123#:
+	; initializer String
+	db "123", 0
+
+section .data
+
+string_atol28221232229203D2025li0A0A#:
+	; initializer String
+	db "atol(", 34, "123", 34, ") = %li", 10, 10, 0
+
+section .data
+
+string_strtod28221232E456abc222C2026endp29203D202825f2C2025s290A#:
+	; initializer String
+	db "strtod(", 34, "123.456abc", 34, ", &endp) = (%f, %s)", 10, 0
+
+section .data
+
+string_strtol2822123abc222C2026endp29203D202825li2C2025s290A#:
+	; initializer String
+	db "strtol(", 34, "123abc", 34, ", &endp) = (%li, %s)", 10, 0
+
+section .data
+
+string_strtoul2822123abc222C2026endp29203D202825lu2C2025s290A#:
+	; initializer String
+	db "strtoul(", 34, "123abc", 34, ", &endp) = (%lu, %s)", 10, 0
+
+section .data
+
+string_0Agetenv2822path2229203D2025s0A#:
+	; initializer String
+	db 10, "getenv(", 34, "path", 34, ") = %s", 10, 0
+
+section .data
+
+string_path#:
+	; initializer String
+	db "path", 0
+
+section .data
+
+string_system2822dir22290A#:
+	; initializer String
+	db "system(", 34, "dir", 34, ")", 10, 0
+
+section .data
+
+string_dir#:
+	; initializer String
+	db "dir", 0
+
+section .data
+
+string_abs282D329203D2025i2C20abs28329203D2025i2C20labs282D3l29203D2025li2C20labs283l29203D2025li0A#:
+	; initializer String
+	db "abs(-3) = %i, abs(3) = %i, labs(-3l) = %li, labs(3l) = %li", 10, 0
+
+section .data
+
+string_div_t28102C20329203D202825i2C2025i292C0A#:
+	; initializer String
+	db "div_t(10, 3) = (%i, %i),", 10, 0
+
+section .data
+
+string_ldiv_t28102C20329203D202825li2C2025li290A#:
+	; initializer String
+	db "ldiv_t(10, 3) = (%li, %li)", 10, 0
+
+section .data
+
+string_0AA20List2013A20#:
+	; initializer String
+	db 10, "A List 1: ", 0
+
+section .data
+
+string_25i20#:
+	; initializer String
+	db "%i ", 0
+
+section .data
+
+string_0AB20List2023A20#:
+	; initializer String
+	db 10, "B List 2: ", 0
+
+section .data
+
+string_0AC20List2033A20#:
+	; initializer String
+	db 10, "C List 3: ", 0
+
+section .data
+
+string_0A0ASearch3A0A#:
+	; initializer String
+	db 10, 10, "Search:", 10, 0
+
+section .data
+
+string_20202825i2C2025i290A#:
+	; initializer String
+	db "  (%i, %i)", 10, 0
+
+section .data
+
+string_0A#:
+	; initializer String
+	db 10, 0
+
+section .data
+
+int8$4#:
+	; initializer Pointer
+	dq 4
+
+section .text
 
  stdlib_test:
 	; empty
@@ -1565,124 +1763,3 @@ section .text
 
  stdlib_test$270:
 	; function end stdlib_test
-section .data
-
-string_div_t20quot2025i20rem2025i0A#:
-	; initializer String
-	db "div_t quot %i rem %i", 10, 0
-
-string_ldiv_t20quot2025li20rem2025li0A#:
-	; initializer String
-	db "ldiv_t quot %li rem %li", 10, 0
-
-string_exit10A#:
-	; initializer String
-	db "exit1", 10, 0
-
-string_exit20A#:
-	; initializer String
-	db "exit2", 10, 0
-
-string_exit30A#:
-	; initializer String
-	db "exit3", 10, 0
-
-string_1232E456abc#:
-	; initializer String
-	db "123.456abc", 0
-
-string_1232E456#:
-	; initializer String
-	db "123.456", 0
-
-string_123abc#:
-	; initializer String
-	db "123abc", 0
-
-string_atof28221232E4562229203D2025f0A#:
-	; initializer String
-	db "atof(", 34, "123.456", 34, ") = %f", 10, 0
-
-string_atoi28221232229203D2025i0A#:
-	; initializer String
-	db "atoi(", 34, "123", 34, ") = %i", 10, 0
-
-string_123#:
-	; initializer String
-	db "123", 0
-
-string_atol28221232229203D2025li0A0A#:
-	; initializer String
-	db "atol(", 34, "123", 34, ") = %li", 10, 10, 0
-
-string_strtod28221232E456abc222C2026endp29203D202825f2C2025s290A#:
-	; initializer String
-	db "strtod(", 34, "123.456abc", 34, ", &endp) = (%f, %s)", 10, 0
-
-string_strtol2822123abc222C2026endp29203D202825li2C2025s290A#:
-	; initializer String
-	db "strtol(", 34, "123abc", 34, ", &endp) = (%li, %s)", 10, 0
-
-string_strtoul2822123abc222C2026endp29203D202825lu2C2025s290A#:
-	; initializer String
-	db "strtoul(", 34, "123abc", 34, ", &endp) = (%lu, %s)", 10, 0
-
-string_0Agetenv2822path2229203D2025s0A#:
-	; initializer String
-	db 10, "getenv(", 34, "path", 34, ") = %s", 10, 0
-
-string_path#:
-	; initializer String
-	db "path", 0
-
-string_system2822dir22290A#:
-	; initializer String
-	db "system(", 34, "dir", 34, ")", 10, 0
-
-string_dir#:
-	; initializer String
-	db "dir", 0
-
-string_abs282D329203D2025i2C20abs28329203D2025i2C20labs282D3l29203D2025li2C20labs283l29203D2025li0A#:
-	; initializer String
-	db "abs(-3) = %i, abs(3) = %i, labs(-3l) = %li, labs(3l) = %li", 10, 0
-
-string_div_t28102C20329203D202825i2C2025i292C0A#:
-	; initializer String
-	db "div_t(10, 3) = (%i, %i),", 10, 0
-
-string_ldiv_t28102C20329203D202825li2C2025li290A#:
-	; initializer String
-	db "ldiv_t(10, 3) = (%li, %li)", 10, 0
-
-string_0AA20List2013A20#:
-	; initializer String
-	db 10, "A List 1: ", 0
-
-string_25i20#:
-	; initializer String
-	db "%i ", 0
-
-string_0AB20List2023A20#:
-	; initializer String
-	db 10, "B List 2: ", 0
-
-string_0AC20List2033A20#:
-	; initializer String
-	db 10, "C List 3: ", 0
-
-string_0A0ASearch3A0A#:
-	; initializer String
-	db 10, 10, "Search:", 10, 0
-
-string_20202825i2C2025i290A#:
-	; initializer String
-	db "  (%i, %i)", 10, 0
-
-string_0A#:
-	; initializer String
-	db 10, 0
-
-int8$4#:
-	; initializer Pointer
-	dq 4

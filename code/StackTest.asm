@@ -5,8 +5,6 @@
 	extern malloc
 	extern $StackTop
 
-section .text
-
 
 section .data
 

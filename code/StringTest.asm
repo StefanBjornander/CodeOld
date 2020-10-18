@@ -22,8 +22,6 @@
 	extern strtok
 	extern $StackTop
 
-section .text
-
 
 section .data
 

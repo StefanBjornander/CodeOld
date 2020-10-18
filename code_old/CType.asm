@@ -20,8 +20,6 @@
 	extern strchr
 	extern $StackTop
 
-section .text
-
 
 section .text
 
