@@ -26,6 +26,10 @@
 	extern printf
 	extern errno
 	extern $StackTop
+
+section .text
+
+
 section .text
 
  atoi:
@@ -74,6 +78,8 @@ section .text
  atoi$9:
 	; function end atoi
 
+section .text
+
  atol:
 	; call header integral zero 0 stack zero 0
 
@@ -112,6 +118,14 @@ section .text
 
  atol$8:
 	; function end atol
+
+section .data
+
+string_25li25n#:
+	; initializer String
+	db "%li%n", 0
+
+section .text
 
  strtol:
 	; chars = int4$0#
@@ -195,6 +209,14 @@ section .text
  strtol$16:
 	; function end strtol
 
+section .data
+
+string_25lu25n#:
+	; initializer String
+	db "%lu%n", 0
+
+section .text
+
  strtoul:
 	; chars = int4$0#
 	mov dword [rbp + 44], 0
@@ -277,6 +299,8 @@ section .text
  strtoul$16:
 	; function end strtoul
 
+section .text
+
  atof:
 	; call header integral zero 0 stack zero 0
 
@@ -311,6 +335,14 @@ section .text
 
  atof$7:
 	; function end atof
+
+section .data
+
+string_25lf25n#:
+	; initializer String
+	db "%lf%n", 0
+
+section .text
 
  strtod:
 	; chars = int4$0#
@@ -401,6 +433,8 @@ section .text
  strtod$18:
 	; function end strtod
 
+section .text
+
  abort:
 	; rax = int8$60#
 	mov rax, 60
@@ -423,6 +457,8 @@ section .text
  abort$4:
 	; function end abort
 
+section .text
+
  getenv:
 	; return int8$0#
 	mov rbx, 0
@@ -434,6 +470,8 @@ section .text
  getenv$1:
 	; function end getenv
 
+section .text
+
  system:
 	; return int4$minus1#
 	mov ebx, -1
@@ -444,6 +482,8 @@ section .text
 
  system$1:
 	; function end system
+
+section .text
 
  memswp:
 	; £temporary2096 = int_to_int value1 (Pointer -> Pointer)
@@ -559,6 +599,14 @@ section .text
 
  memswp$24:
 	; function end memswp
+
+section .data
+
+int4$2#:
+	; initializer SignedInt
+	dd 2
+
+section .text
 
  bsearch:
 	; firstIndex = int4$0#
@@ -838,9 +886,29 @@ section .text
  bsearch$54:
 	; function end bsearch
 
+section .data
+
+@4375$g_randValue:
+	; initializer zero 8
+	times 8 db 0
+
+section .data
+
+int8$1664525#:
+	; initializer Signed_Long_Int
+	dq 1664525
+
+section .data
+
+int8$127#:
+	; initializer Signed_Long_Int
+	dq 127
+
+section .text
+
  rand:
 	; £temporary2145 = g_randValue * int8$1664525#
-	mov rax, [@4373$g_randValue]
+	mov rax, [@4375$g_randValue]
 	xor rdx, rdx
 	imul qword [int8$1664525#]
 
@@ -852,11 +920,11 @@ section .text
 	; g_randValue = £temporary2146 % int8$127#
 	xor rdx, rdx
 	idiv qword [int8$127#]
-	mov [@4373$g_randValue], rdx
+	mov [@4375$g_randValue], rdx
 
  rand$3:
 	; £temporary2148 = int_to_int g_randValue (Signed_Long_Int -> SignedInt)
-	mov rbx, [@4373$g_randValue]
+	mov rbx, [@4375$g_randValue]
 	cmp rbx, 0
 	jge rand$4
 	neg rbx
@@ -872,6 +940,8 @@ section .text
  rand$5:
 	; function end rand
 
+section .text
+
  srand:
 	; £temporary2149 = int_to_int seed (Unsigned_Int -> Signed_Long_Int)
 	mov eax, [rbp + 24]
@@ -880,7 +950,7 @@ section .text
 
  srand$1:
 	; g_randValue = £temporary2149
-	mov [@4373$g_randValue], rax
+	mov [@4375$g_randValue], rax
 
  srand$2:
 	; return
@@ -891,6 +961,26 @@ section .text
 
  srand$3:
 	; function end srand
+
+section .data
+
+string_stack20top2025u2C20heap20top2025u2C20heap20bottom2025u0A#:
+	; initializer String
+	db "stack top %u, heap top %u, heap bottom %u", 10, 0
+
+section .data
+
+string_2020index2025u2C20address2025u2C20size2025u0A#:
+	; initializer String
+	db "  index %u, address %u, size %u", 10, 0
+
+section .data
+
+string_0A#:
+	; initializer String
+	db 10, 0
+
+section .text
 
  print_heap2:
 	; £temporary2150 -> int8$32764# = *int8$32764#
@@ -1067,6 +1157,28 @@ section .text
  print_heap2$37:
 	; function end print_heap2
 
+section .data
+
+g_funcArray:
+	; initializer Pointer
+	dq 0
+	; initializer zero 2040
+	times 2040 db 0
+
+section .data
+
+string_Added20function20index2025i3A2025i0A#:
+	; initializer String
+	db "Added function index %i: %i", 10, 0
+
+section .data
+
+Array_8#:
+	; initializer Array
+	dq 8
+
+section .text
+
  atexit:
 	; empty
 
@@ -1219,6 +1331,14 @@ section .text
 
  atexit$31:
 	; function end atexit
+
+section .data
+
+string_Called20function20index2025i3A2025i0A#:
+	; initializer String
+	db "Called function index %i: %i", 10, 0
+
+section .text
 
  exit:
 	; empty
@@ -1393,6 +1513,8 @@ section .text
  exit$36:
 	; function end exit
 
+section .text
+
  swap:
 	; empty
 
@@ -1494,6 +1616,8 @@ section .text
 
  swap$21:
 	; function end swap
+
+section .text
 
  qsort:
 	; empty
@@ -1659,6 +1783,8 @@ section .text
  qsort$34:
 	; function end qsort
 
+section .text
+
  @abs:
 	; if value >= int4$0# goto 4
 	cmp dword [rbp + 24], 0
@@ -1690,6 +1816,8 @@ section .text
  @abs$6:
 	; function end @abs
 
+section .text
+
  labs:
 	; if value >= int8$0# goto 4
 	cmp qword [rbp + 24], 0
@@ -1720,6 +1848,8 @@ section .text
 
  labs$6:
 	; function end labs
+
+section .text
 
  div:
 	; result.quot = int4$0#
@@ -1773,6 +1903,8 @@ section .text
  div$8:
 	; function end div
 
+section .text
+
  ldiv:
 	; result.quot = int8$0#
 	mov qword [rbp + 40], 0
@@ -1824,62 +1956,3 @@ section .text
 
  ldiv$8:
 	; function end ldiv
-section .data
-
-string_25li25n#:
-	; initializer String
-	db "%li%n", 0
-
-string_25lu25n#:
-	; initializer String
-	db "%lu%n", 0
-
-string_25lf25n#:
-	; initializer String
-	db "%lf%n", 0
-
-int4$2#:
-	; initializer SignedInt
-	dd 2
-
-@4373$g_randValue:
-	; initializer zero 8
-	times 8 db 0
-
-int8$1664525#:
-	; initializer Signed_Long_Int
-	dq 1664525
-
-int8$127#:
-	; initializer Signed_Long_Int
-	dq 127
-
-string_stack20top2025u2C20heap20top2025u2C20heap20bottom2025u0A#:
-	; initializer String
-	db "stack top %u, heap top %u, heap bottom %u", 10, 0
-
-string_2020index2025u2C20address2025u2C20size2025u0A#:
-	; initializer String
-	db "  index %u, address %u, size %u", 10, 0
-
-string_0A#:
-	; initializer String
-	db 10, 0
-
-g_funcArray:
-	; initializer Pointer
-	dq 0
-	; initializer zero 2040
-	times 2040 db 0
-
-string_Added20function20index2025i3A2025i0A#:
-	; initializer String
-	db "Added function index %i: %i", 10, 0
-
-Array_8#:
-	; initializer Array
-	dq 8
-
-string_Called20function20index2025i3A2025i0A#:
-	; initializer String
-	db "Called function index %i: %i", 10, 0

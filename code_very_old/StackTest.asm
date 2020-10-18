@@ -148,7 +148,7 @@ section .text
 section .data
 
 @8849$i:
-	; initializer Signed_Int
+	; initializer SignedInt
 	dd 0
 
 string_25i20#:

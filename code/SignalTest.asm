@@ -8,6 +8,16 @@
 	extern atexit
 	extern exit
 	extern $StackTop
+
+section .text
+
+
+section .data
+
+string_Floating20point20error3A2025i0A#:
+	; initializer String
+	db "Floating point error: %i", 10, 0
+
 section .text
 
  floating_point_error:
@@ -44,6 +54,14 @@ section .text
  floating_point_error$6:
 	; function end floating_point_error
 
+section .data
+
+string_exit10A#:
+	; initializer String
+	db "exit1", 10, 0
+
+section .text
+
  exit_handle1:
 	; call header integral zero 0 stack zero 0
 
@@ -71,6 +89,14 @@ section .text
 
  exit_handle1$5:
 	; function end exit_handle1
+
+section .data
+
+string_exit20A#:
+	; initializer String
+	db "exit2", 10, 0
+
+section .text
 
  exit_handle2:
 	; call header integral zero 0 stack zero 0
@@ -100,6 +126,14 @@ section .text
  exit_handle2$5:
 	; function end exit_handle2
 
+section .data
+
+string_exit30A#:
+	; initializer String
+	db "exit3", 10, 0
+
+section .text
+
  exit_handle3:
 	; call header integral zero 0 stack zero 0
 
@@ -127,6 +161,14 @@ section .text
 
  exit_handle3$5:
 	; function end exit_handle3
+
+section .data
+
+string_25i0A#:
+	; initializer String
+	db "%i", 10, 0
+
+section .text
 
  signal_test:
 	; a = int4$1#
@@ -244,24 +286,3 @@ section .text
 
  signal_test$25:
 	; function end signal_test
-section .data
-
-string_Floating20point20error3A2025i0A#:
-	; initializer String
-	db "Floating point error: %i", 10, 0
-
-string_exit10A#:
-	; initializer String
-	db "exit1", 10, 0
-
-string_exit20A#:
-	; initializer String
-	db "exit2", 10, 0
-
-string_exit30A#:
-	; initializer String
-	db "exit3", 10, 0
-
-string_25i0A#:
-	; initializer String
-	db "%i", 10, 0

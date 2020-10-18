@@ -12,6 +12,34 @@
 	extern memcpy
 	extern printf
 	extern $StackTop
+
+section .text
+
+
+section .data
+
+g_firstBlockPtr:
+	; initializer Pointer
+	dq 0
+
+section .data
+
+string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+	; initializer String
+	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
+
+section .data
+
+string_memorySize203E3D200#:
+	; initializer String
+	db "memorySize >= 0", 0
+
+section .data
+
+string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#:
+	; initializer String
+	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c", 0
+
 section .text
 
  malloc:
@@ -403,6 +431,8 @@ section .text
  malloc$82:
 	; function end malloc
 
+section .text
+
  calloc:
 	; call header integral zero 0 stack zero 0
 
@@ -475,6 +505,8 @@ section .text
 
  calloc$15:
 	; function end calloc
+
+section .text
 
  free:
 	; if freeMemoryPtr != int8$0# goto 2
@@ -633,6 +665,20 @@ section .text
 
  free$33:
 	; function end free
+
+section .data
+
+string_newMemorySize203E3D200#:
+	; initializer String
+	db "newMemorySize >= 0", 0
+
+section .data
+
+string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#:
+	; initializer String
+	db "( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )", 0
+
+section .text
 
  realloc:
 	; if newMemorySize >= int4$0# goto 12
@@ -1044,6 +1090,26 @@ section .text
  realloc$86:
 	; function end realloc
 
+section .data
+
+string_Heap3A0A#:
+	; initializer String
+	db "Heap:", 10, 0
+
+section .data
+
+string_2020Address2025u2C20Size2025u0A#:
+	; initializer String
+	db "  Address %u, Size %u", 10, 0
+
+section .data
+
+string_0A#:
+	; initializer String
+	db 10, 0
+
+section .text
+
  print_heap:
 	; currBlockPtr = g_firstBlockPtr
 	mov rax, [g_firstBlockPtr]
@@ -1148,40 +1214,3 @@ section .text
 
  print_heap$22:
 	; function end print_heap
-section .data
-
-g_firstBlockPtr:
-	; initializer Pointer
-	dq 0
-
-string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
-	; initializer String
-	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
-
-string_memorySize203E3D200#:
-	; initializer String
-	db "memorySize >= 0", 0
-
-string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#:
-	; initializer String
-	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c", 0
-
-string_newMemorySize203E3D200#:
-	; initializer String
-	db "newMemorySize >= 0", 0
-
-string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#:
-	; initializer String
-	db "( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )", 0
-
-string_Heap3A0A#:
-	; initializer String
-	db "Heap:", 10, 0
-
-string_2020Address2025u2C20Size2025u0A#:
-	; initializer String
-	db "  Address %u, Size %u", 10, 0
-
-string_0A#:
-	; initializer String
-	db 10, 0

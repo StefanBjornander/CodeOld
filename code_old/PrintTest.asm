@@ -2,6 +2,46 @@
 
 	extern printf
 	extern $StackTop
+
+section .text
+
+
+section .data
+
+string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#:
+	; initializer String
+	db "<%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>", 10, 0
+
+section .data
+
+string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#:
+	; initializer String
+	db "<%08i> <%+08i> <% 08i> <%0 8i>", 10, 0
+
+section .data
+
+string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A#:
+	; initializer String
+	db "<%12.3f> <%+12.3f> <% 12.3f> <%-12.3f> <%+-12.3f> <%-+12.3f> <% -12.3f> <%- 12.3f>", 10, 0
+
+section .data
+
+string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A#:
+	; initializer String
+	db "<%012.3f> <%+012.3f> <% 012.3f> <%0 12.3f>", 10, 0
+
+section .data
+
+float8$123.456#:
+	; initializer Double
+	dq 123.456
+
+section .data
+
+float8$minus123.456#:
+	; initializer Double
+	dq -123.456
+
 section .text
 
  print_test:
@@ -453,28 +493,3 @@ section .text
 
  print_test$105:
 	; function end print_test
-section .data
-
-string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#:
-	; initializer String
-	db "<%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>", 10, 0
-
-string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#:
-	; initializer String
-	db "<%08i> <%+08i> <% 08i> <%0 8i>", 10, 0
-
-string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A#:
-	; initializer String
-	db "<%12.3f> <%+12.3f> <% 12.3f> <%-12.3f> <%+-12.3f> <%-+12.3f> <% -12.3f> <%- 12.3f>", 10, 0
-
-string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A#:
-	; initializer String
-	db "<%012.3f> <%+012.3f> <% 012.3f> <%0 12.3f>", 10, 0
-
-float8$123.456#:
-	; initializer Double
-	dq 123.456
-
-float8$minus123.456#:
-	; initializer Double
-	dq -123.456

@@ -23,6 +23,10 @@
 	extern localeconv
 	extern enMessageList
 	extern $StackTop
+
+section .text
+
+
 section .text
 
  strcpy:
@@ -120,6 +124,8 @@ section .text
 
  strcpy$20:
 	; function end strcpy
+
+section .text
 
  strncpy:
 	; empty
@@ -236,6 +242,8 @@ section .text
 
  strncpy$24:
 	; function end strncpy
+
+section .text
 
  strcat:
 	; empty
@@ -365,6 +373,8 @@ section .text
 
  strcat$28:
 	; function end strcat
+
+section .text
 
  strncat:
 	; empty
@@ -508,6 +518,8 @@ section .text
 
  strncat$31:
 	; function end strncat
+
+section .text
 
  strcmp:
 	; empty
@@ -710,6 +722,8 @@ section .text
 
  strcmp$39:
 	; function end strcmp
+
+section .text
 
  strncmp:
 	; empty
@@ -927,6 +941,8 @@ section .text
  strncmp$41:
 	; function end strncmp
 
+section .text
+
  strchr:
 	; empty
 
@@ -1027,6 +1043,8 @@ section .text
 
  strchr$20:
 	; function end strchr
+
+section .text
 
  strrchr:
 	; empty
@@ -1129,6 +1147,8 @@ section .text
 
  strrchr$21:
 	; function end strrchr
+
+section .text
 
  strspn:
 	; empty
@@ -1236,6 +1256,8 @@ section .text
  strspn$21:
 	; function end strspn
 
+section .text
+
  strcspn:
 	; empty
 
@@ -1341,6 +1363,8 @@ section .text
 
  strcspn$21:
 	; function end strcspn
+
+section .text
 
  strpbrk:
 	; empty
@@ -1464,6 +1488,8 @@ section .text
  strpbrk$25:
 	; function end strpbrk
 
+section .text
+
  strstr:
 	; empty
 
@@ -1574,6 +1600,8 @@ section .text
  strstr$23:
 	; function end strstr
 
+section .text
+
  strlen:
 	; empty
 
@@ -1618,6 +1646,14 @@ section .text
 
  strlen$9:
 	; function end strlen
+
+section .data
+
+int8$8#:
+	; initializer Pointer
+	dq 8
+
+section .text
 
  strerror:
 	; call header integral zero 0 stack zero 0
@@ -1714,6 +1750,14 @@ section .text
 
  strerror$21:
 	; function end strerror
+
+section .data
+
+token:
+	; initializer Pointer
+	dq 0
+
+section .text
 
  strtok:
 	; empty
@@ -2111,6 +2155,8 @@ section .text
  strtok$82:
 	; function end strtok
 
+section .text
+
  memcpy:
 	; £temporary2908 = int_to_int target (Pointer -> Pointer)
 	mov rax, [rbp + 24]
@@ -2191,6 +2237,8 @@ section .text
 
  memcpy$17:
 	; function end memcpy
+
+section .text
 
  memmove:
 	; £temporary2921 = int_to_int target (Pointer -> Pointer)
@@ -2331,6 +2379,8 @@ section .text
  memmove$29:
 	; function end memmove
 
+section .text
+
  memcmp:
 	; £temporary2946 = int_to_int left (Pointer -> Pointer)
 	mov rax, [rbp + 24]
@@ -2460,6 +2510,8 @@ section .text
  memcmp$25:
 	; function end memcmp
 
+section .text
+
  memchr:
 	; empty
 
@@ -2559,6 +2611,8 @@ section .text
  memchr$20:
 	; function end memchr
 
+section .text
+
  memset:
 	; £temporary2983 = int_to_int block (Pointer -> Pointer)
 	mov rax, [rbp + 24]
@@ -2626,12 +2680,3 @@ section .text
 
  memset$13:
 	; function end memset
-section .data
-
-int8$8#:
-	; initializer Pointer
-	dq 8
-
-token:
-	; initializer Pointer
-	dq 0

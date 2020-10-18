@@ -1,6 +1,10 @@
 	global locale_test
 
 	extern $StackTop
+
+section .text
+
+
 section .text
 
  locale_test:
@@ -15,4 +19,3 @@ section .text
 
  locale_test$2:
 	; function end locale_test
-section .data

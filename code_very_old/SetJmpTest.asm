@@ -55,7 +55,7 @@ section .text
 	mov qword [rbp + 72], buffer
 
  divide$10:
-	; £temporary3211 = int_to_int p (Pointer -> Signed_Int)
+	; £temporary3211 = int_to_int p (Pointer -> SignedInt)
 	mov rax, [rbp + 40]
 
  divide$11:
@@ -152,7 +152,7 @@ section .text
 	; £temporary3216 = return_value
 
  setjmp_test$6:
-	; £temporary3217 = int_to_int £temporary3216 (Signed_Int -> Pointer)
+	; £temporary3217 = int_to_int £temporary3216 (SignedInt -> Pointer)
 	mov rax, 4294967295
 	and rbx, rax
 

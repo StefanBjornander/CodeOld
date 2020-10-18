@@ -8,6 +8,10 @@
 #include <Limits.h>
 #include <Time.h>
 
+static void* malloc(size_t memorySize) {
+  return NULL;
+}
+
 void math_test_1(double x);   // ok
 void file_test(char*, char*); // ok
 void signal_test(void);       // ok

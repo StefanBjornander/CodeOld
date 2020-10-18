@@ -606,7 +606,7 @@ section .text
 	; £temporary3929 = bp
 
  rec$2:
-	; £temporary3930 = int_to_int £temporary3929 (Unsigned_Short_Int -> Unsigned_Int)
+	; £temporary3930 = int_to_int £temporary3929 (UnsignedShortInt -> Unsigned_Int)
 	and ebp, 65535
 
  rec$3:
@@ -925,7 +925,7 @@ section .text
 	; £temporary3947 = bp
 
  malloc_test6$2:
-	; £temporary3948 = int_to_int £temporary3947 (Unsigned_Short_Int -> Unsigned_Int)
+	; £temporary3948 = int_to_int £temporary3947 (UnsignedShortInt -> Unsigned_Int)
 	and ebp, 65535
 
  malloc_test6$3:

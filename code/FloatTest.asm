@@ -1,6 +1,10 @@
 	global float_test
 
 	extern $StackTop
+
+section .text
+
+
 section .text
 
  float_test:
@@ -15,4 +19,3 @@ section .text
 
  float_test$2:
 	; function end float_test
-section .data

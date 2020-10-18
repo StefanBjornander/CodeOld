@@ -28,6 +28,34 @@
 	extern printf
 	extern stdin
 	extern $StackTop
+
+section .text
+
+
+section .data
+
+g_inStatus:
+	; initializer zero 4
+	times 4 db 0
+
+section .data
+
+g_inChars:
+	; initializer zero 4
+	times 4 db 0
+
+section .data
+
+g_inDevice:
+	; initializer zero 8
+	times 8 db 0
+
+section .data
+
+g_inCount:
+	; initializer zero 4
+	times 4 db 0
+
 section .text
 
  scanChar:
@@ -165,6 +193,8 @@ section .text
  scanChar$29:
 	; function end scanChar
 
+section .text
+
  unscanChar:
 	; case g_inStatus == int4$0# goto 4
 	mov eax, [g_inStatus]
@@ -204,6 +234,8 @@ section .text
 
  unscanChar$8:
 	; function end unscanChar
+
+section .text
 
  scanPattern:
 	; index = int4$0#
@@ -573,6 +605,8 @@ section .text
 
  scanPattern$80:
 	; function end scanPattern
+
+section .text
 
  scanString:
 	; index = int4$0#
@@ -1186,6 +1220,8 @@ section .text
  scanString$133:
 	; function end scanString
 
+section .text
+
  digitToValue:
 	; call header integral zero 0 stack zero 0
 
@@ -1315,6 +1351,14 @@ section .text
 
  digitToValue$25:
 	; function end digitToValue
+
+section .data
+
+int8$10#:
+	; initializer Signed_Long_Int
+	dq 10
+
+section .text
 
  scanLongInt:
 	; longValue = int8$0#
@@ -1602,6 +1646,8 @@ section .text
 
  scanLongInt$63:
 	; function end scanLongInt
+
+section .text
 
  scanUnsignedLongInt:
 	; unsignedLongValue = int8$0#
@@ -1964,6 +2010,26 @@ section .text
 
  scanUnsignedLongInt$81:
 	; function end scanUnsignedLongInt
+
+section .data
+
+float8$10.0#:
+	; initializer LongDouble
+	dq 10.0
+
+section .data
+
+container4bytes#:
+	; initializer zero 4
+	times 4 db 0
+
+section .data
+
+container8bytes#:
+	; initializer zero 8
+	times 8 db 0
+
+section .text
 
  scanLongDouble:
 	; minus = int4$0#
@@ -2552,6 +2618,14 @@ section .text
 
  scanLongDouble$133:
 	; function end scanLongDouble
+
+section .data
+
+string_scanFormat20c203D202725c270A#:
+	; initializer String
+	db "scanFormat c = ", 39, "%c", 39, 10, 0
+
+section .text
 
  scanFormat:
 	; empty
@@ -3991,6 +4065,8 @@ section .text
  scanFormat$334:
 	; function end scanFormat
 
+section .text
+
  scanf:
 	; empty
 
@@ -4045,6 +4121,8 @@ section .text
  scanf$11:
 	; function end scanf
 
+section .text
+
  vscanf:
 	; call header integral zero 0 stack zero 0
 
@@ -4085,6 +4163,8 @@ section .text
 
  vscanf$8:
 	; function end vscanf
+
+section .text
 
  fscanf:
 	; empty
@@ -4145,6 +4225,8 @@ section .text
  fscanf$12:
 	; function end fscanf
 
+section .text
+
  vfscanf:
 	; g_inStatus = int4$0#
 	mov dword [g_inStatus], 0
@@ -4192,6 +4274,8 @@ section .text
 
  vfscanf$10:
 	; function end vfscanf
+
+section .text
 
  sscanf:
 	; empty
@@ -4252,6 +4336,8 @@ section .text
  sscanf$12:
 	; function end sscanf
 
+section .text
+
  vsscanf:
 	; g_inStatus = int4$1#
 	mov dword [g_inStatus], 1
@@ -4299,40 +4385,3 @@ section .text
 
  vsscanf$10:
 	; function end vsscanf
-section .data
-
-g_inStatus:
-	; initializer zero 4
-	times 4 db 0
-
-g_inChars:
-	; initializer zero 4
-	times 4 db 0
-
-g_inDevice:
-	; initializer zero 8
-	times 8 db 0
-
-g_inCount:
-	; initializer zero 4
-	times 4 db 0
-
-int8$10#:
-	; initializer Signed_Long_Int
-	dq 10
-
-float8$10.0#:
-	; initializer LongDouble
-	dq 10.0
-
-container4bytes#:
-	; initializer zero 4
-	times 4 db 0
-
-container8bytes#:
-	; initializer zero 8
-	times 8 db 0
-
-string_scanFormat20c203D202725c270A#:
-	; initializer String
-	db "scanFormat c = ", 39, "%c", 39, 10, 0

@@ -8,6 +8,40 @@
 	extern abort
 	extern assert_test2
 	extern $StackTop
+
+section .text
+
+
+section .data
+
+string_Please20write20a20number2028not20620or207293A20#:
+	; initializer String
+	db "Please write a number (not 6 or 7): ", 0
+
+section .data
+
+string_25i#:
+	; initializer String
+	db "%i", 0
+
+section .data
+
+string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+	; initializer String
+	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
+
+section .data
+
+string_n20213D206#:
+	; initializer String
+	db "n != 6", 0
+
+section .data
+
+string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CAssertTest2Ec#:
+	; initializer String
+	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\AssertTest.c", 0
+
 section .text
 
  assert_testX:
@@ -142,6 +176,14 @@ section .text
  assert_testX$28:
 	; function end assert_testX
 
+section .data
+
+string_n20213D207#:
+	; initializer String
+	db "n != 7", 0
+
+section .text
+
  assert_test2X:
 	; if n != int4$7# goto 12
 	cmp dword [rbp + 24], 7
@@ -205,28 +247,3 @@ section .text
 
  assert_test2X$13:
 	; function end assert_test2X
-section .data
-
-string_Please20write20a20number2028not20620or207293A20#:
-	; initializer String
-	db "Please write a number (not 6 or 7): ", 0
-
-string_25i#:
-	; initializer String
-	db "%i", 0
-
-string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
-	; initializer String
-	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
-
-string_n20213D206#:
-	; initializer String
-	db "n != 6", 0
-
-string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CAssertTest2Ec#:
-	; initializer String
-	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\AssertTest.c", 0
-
-string_n20213D207#:
-	; initializer String
-	db "n != 7", 0

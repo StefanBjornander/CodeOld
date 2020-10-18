@@ -33,6 +33,16 @@
 	extern errno
 	extern printf
 	extern $StackTop
+
+section .text
+
+
+section .data
+
+float8$0.000000001#:
+	; initializer Double
+	dq 0.000000001
+
 section .text
 
  exp:
@@ -194,6 +204,32 @@ section .text
 
  exp$38:
 	; function end exp
+
+section .data
+
+float8$0.3678794411714423216036827922#:
+	; initializer Double
+	dq 0.3678794411714423216036827922
+
+section .data
+
+float8$2.7182818284590452353#:
+	; initializer Double
+	dq 2.7182818284590452353
+
+section .data
+
+float8$0.7357588823428846432073655843#:
+	; initializer Double
+	dq 0.7357588823428846432073655843
+
+section .data
+
+float8$minus1.0#:
+	; initializer Double
+	dq -1.0
+
+section .text
 
  log:
 	; push float x_plus_1
@@ -507,6 +543,14 @@ section .text
  log$73:
 	; function end log
 
+section .data
+
+float8$0.4342944820#:
+	; initializer Double
+	dq 0.4342944820
+
+section .text
+
  log10:
 	; push float float8$0.4342944820#
 	fld qword [float8$0.4342944820#]
@@ -552,6 +596,14 @@ section .text
 
  log10$9:
 	; function end log10
+
+section .data
+
+float8$10#:
+	; initializer Double
+	dq 10.0
+
+section .text
 
  log10_int:
 	; push float x
@@ -731,6 +783,8 @@ section .text
  log10_int$36:
 	; function end log10_int
 
+section .text
+
  pow_int:
 	; minus = int4$0#
 	mov dword [rbp + 36], 0
@@ -833,6 +887,8 @@ section .text
  pow_int$23:
 	; function end pow_int
 
+section .text
+
  pow:
 	; push float x
 	fld qword [rbp + 24]
@@ -929,6 +985,14 @@ section .text
  pow$20:
 	; function end pow
 
+section .data
+
+float8$2#:
+	; initializer Double
+	dq 2.0
+
+section .text
+
  ldexp:
 	; push float x
 	fld qword [rbp + 24]
@@ -982,6 +1046,14 @@ section .text
 
  ldexp$11:
 	; function end ldexp
+
+section .data
+
+container4bytes#:
+	; initializer zero 4
+	times 4 db 0
+
+section .text
 
  frexp:
 	; if p == int8$0# goto 55
@@ -1453,6 +1525,20 @@ section .text
  frexp$105:
 	; function end frexp
 
+section .data
+
+float8$minus1#:
+	; initializer Double
+	dq -1.0
+
+section .data
+
+float8$3#:
+	; initializer Double
+	dq 3.0
+
+section .text
+
  sin:
 	; push float float8$0#
 	fldz
@@ -1680,6 +1766,8 @@ section .text
 
  sin$55:
 	; function end sin
+
+section .text
 
  cos:
 	; push float float8$0#
@@ -1909,6 +1997,8 @@ section .text
  cos$55:
 	; function end cos
 
+section .text
+
  tan:
 	; call header integral zero 0 stack zero 0
 
@@ -2005,6 +2095,8 @@ section .text
  tan$21:
 	; function end tan
 
+section .text
+
  sinh:
 	; call header integral zero 0 stack zero 0
 
@@ -2083,6 +2175,8 @@ section .text
  sinh$17:
 	; function end sinh
 
+section .text
+
  cosh:
 	; call header integral zero 0 stack zero 0
 
@@ -2160,6 +2254,8 @@ section .text
 
  cosh$17:
 	; function end cosh
+
+section .text
 
  tanh:
 	; call header integral zero 0 stack zero 0
@@ -2264,6 +2360,8 @@ section .text
 
  tanh$23:
 	; function end tanh
+
+section .text
 
  sqrt:
 	; push float v
@@ -2413,6 +2511,8 @@ section .text
  sqrt$33:
 	; function end sqrt
 
+section .text
+
  asin:
 	; call header integral zero 0 stack zero 0
 
@@ -2549,6 +2649,8 @@ section .text
  asin$31:
 	; function end asin
 
+section .text
+
  acos:
 	; call header integral zero 0 stack zero 0
 
@@ -2684,6 +2786,20 @@ section .text
 
  acos$31:
 	; function end acos
+
+section .data
+
+float8$1.5707963267948966192#:
+	; initializer Double
+	dq 1.5707963267948966192
+
+section .data
+
+float8$minus1.5707963267948966192#:
+	; initializer Double
+	dq -1.5707963267948966192
+
+section .text
 
  asin2:
 	; push float v
@@ -2955,6 +3071,14 @@ section .text
  asin2$58:
 	; function end asin2
 
+section .data
+
+string_x_n2025f2C20x_nplus12025f0A#:
+	; initializer String
+	db "x_n %f, x_nplus1 %f", 10, 0
+
+section .text
+
  acos2:
 	; push float v
 	fld qword [rbp + 24]
@@ -3216,6 +3340,8 @@ section .text
  acos2$57:
 	; function end acos2
 
+section .text
+
  square:
 	; push float x
 	fld qword [rbp + 24]
@@ -3237,6 +3363,20 @@ section .text
 
  square$4:
 	; function end square
+
+section .data
+
+float8$0.7853981633974483096#:
+	; initializer Double
+	dq 0.7853981633974483096
+
+section .data
+
+float8$minus0.7853981633974483096#:
+	; initializer Double
+	dq -0.7853981633974483096
+
+section .text
 
  atan:
 	; push float x
@@ -3505,6 +3645,32 @@ section .text
 
  atan$60:
 	; function end atan
+
+section .data
+
+string_atan2050A#:
+	; initializer String
+	db "atan 5", 10, 0
+
+section .data
+
+string_atan20x2025f20x_nplus12025f0A#:
+	; initializer String
+	db "atan x %f x_nplus1 %f", 10, 0
+
+section .data
+
+string_atan2070A#:
+	; initializer String
+	db "atan 7", 10, 0
+
+section .data
+
+float8$0.5#:
+	; initializer Double
+	dq 0.5
+
+section .text
 
  atanY:
 	; push float v
@@ -4104,6 +4270,8 @@ section .text
  atanY$133:
 	; function end atanY
 
+section .text
+
  atanX:
 	; push float v
 	fld qword [rbp + 24]
@@ -4380,6 +4548,14 @@ section .text
  atanX$60:
 	; function end atanX
 
+section .data
+
+float8$3.1415926535897932384#:
+	; initializer Double
+	dq 3.1415926535897932384
+
+section .text
+
  atan2:
 	; push float x
 	fld qword [rbp + 32]
@@ -4627,6 +4803,44 @@ section .text
 
  atan2$53:
 	; function end atan2
+
+section .data
+
+string_20A#:
+	; initializer String
+	db "2", 10, 0
+
+section .data
+
+string_30A#:
+	; initializer String
+	db "3", 10, 0
+
+section .data
+
+string_40A#:
+	; initializer String
+	db "4", 10, 0
+
+section .data
+
+string_50A#:
+	; initializer String
+	db "5", 10, 0
+
+section .data
+
+string_60A#:
+	; initializer String
+	db "6", 10, 0
+
+section .data
+
+float8$minus3.1415926535897932384#:
+	; initializer Double
+	dq -3.1415926535897932384
+
+section .text
 
  atan2x:
 	; push float denum
@@ -5060,6 +5274,14 @@ section .text
  atan2x$91:
 	; function end atan2x
 
+section .data
+
+container8bytes#:
+	; initializer zero 8
+	times 8 db 0
+
+section .text
+
  floor:
 	; push float x
 	fld qword [rbp + 24]
@@ -5137,6 +5359,14 @@ section .text
 
  floor$16:
 	; function end floor
+
+section .data
+
+float8$0.999999999999#:
+	; initializer Double
+	dq 0.999999999999
+
+section .text
 
  ceil:
 	; push float x
@@ -5224,6 +5454,8 @@ section .text
  ceil$18:
 	; function end ceil
 
+section .text
+
  round:
 	; push float x
 	fld qword [rbp + 24]
@@ -5290,6 +5522,8 @@ section .text
  round$14:
 	; function end round
 
+section .text
+
  fabs:
 	; push float x
 	fld qword [rbp + 24]
@@ -5333,6 +5567,8 @@ section .text
 
  fabs$9:
 	; function end fabs
+
+section .text
 
  modf:
 	; call header integral zero 0 stack zero 0
@@ -5523,6 +5759,8 @@ section .text
  modf$43:
 	; function end modf
 
+section .text
+
  fmod:
 	; push float y
 	fld qword [rbp + 32]
@@ -5658,120 +5896,3 @@ section .text
 
  fmod$30:
 	; function end fmod
-section .data
-
-float8$0.000000001#:
-	; initializer Double
-	dq 0.000000001
-
-float8$0.3678794411714423216036827922#:
-	; initializer Double
-	dq 0.3678794411714423216036827922
-
-float8$2.7182818284590452353#:
-	; initializer Double
-	dq 2.7182818284590452353
-
-float8$0.7357588823428846432073655843#:
-	; initializer Double
-	dq 0.7357588823428846432073655843
-
-float8$minus1.0#:
-	; initializer Double
-	dq -1.0
-
-float8$0.4342944820#:
-	; initializer Double
-	dq 0.4342944820
-
-float8$10#:
-	; initializer Double
-	dq 10.0
-
-float8$2#:
-	; initializer Double
-	dq 2.0
-
-container4bytes#:
-	; initializer zero 4
-	times 4 db 0
-
-float8$minus1#:
-	; initializer Double
-	dq -1.0
-
-float8$3#:
-	; initializer Double
-	dq 3.0
-
-float8$1.5707963267948966192#:
-	; initializer Double
-	dq 1.5707963267948966192
-
-float8$minus1.5707963267948966192#:
-	; initializer Double
-	dq -1.5707963267948966192
-
-string_x_n2025f2C20x_nplus12025f0A#:
-	; initializer String
-	db "x_n %f, x_nplus1 %f", 10, 0
-
-float8$0.7853981633974483096#:
-	; initializer Double
-	dq 0.7853981633974483096
-
-float8$minus0.7853981633974483096#:
-	; initializer Double
-	dq -0.7853981633974483096
-
-string_atan2050A#:
-	; initializer String
-	db "atan 5", 10, 0
-
-string_atan20x2025f20x_nplus12025f0A#:
-	; initializer String
-	db "atan x %f x_nplus1 %f", 10, 0
-
-string_atan2070A#:
-	; initializer String
-	db "atan 7", 10, 0
-
-float8$0.5#:
-	; initializer Double
-	dq 0.5
-
-float8$3.1415926535897932384#:
-	; initializer Double
-	dq 3.1415926535897932384
-
-string_20A#:
-	; initializer String
-	db "2", 10, 0
-
-string_30A#:
-	; initializer String
-	db "3", 10, 0
-
-string_40A#:
-	; initializer String
-	db "4", 10, 0
-
-string_50A#:
-	; initializer String
-	db "5", 10, 0
-
-string_60A#:
-	; initializer String
-	db "6", 10, 0
-
-float8$minus3.1415926535897932384#:
-	; initializer Double
-	dq -3.1415926535897932384
-
-container8bytes#:
-	; initializer zero 8
-	times 8 db 0
-
-float8$0.999999999999#:
-	; initializer Double
-	dq 0.999999999999

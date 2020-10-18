@@ -193,7 +193,7 @@ section .text
 	mov qword [rbp + 164], string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 
  time_test$40:
-	; £temporary4092 = int_to_int s.tm_wday (Signed_Int -> Array)
+	; £temporary4092 = int_to_int s.tm_wday (SignedInt -> Array)
 	mov eax, [rbp + 128]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -333,7 +333,7 @@ section .text
 	mov qword [rbp + 164], string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 
  time_test$68:
-	; £temporary4112 = int_to_int s.tm_wday (Signed_Int -> Array)
+	; £temporary4112 = int_to_int s.tm_wday (SignedInt -> Array)
 	mov eax, [rbp + 128]
 	mov rbx, 4294967295
 	and rax, rbx

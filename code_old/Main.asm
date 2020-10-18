@@ -1,6 +1,3 @@
-	global $StackTop
-	global _start
-	global main
 	global a
 	global main2
 	global main33
@@ -11,6 +8,7 @@
 	global maint
 	global mainY
 	global mainX
+	global main
 	global main3
 	global mains2
 	global char_main
@@ -32,9 +30,13 @@
 	extern stderr
 	extern fprintf
 	extern abort
-section .text
+
+	global $StackTop
 	global _start
+
+section .text
 _start:
+section .text
 	; Initializerialize Stack Pointer
 	mov rbp, $StackTop
 	; Initializerialize Heap Pointer
@@ -45,6 +47,8 @@ _start:
 	or word [rbp], 3072
 	fldcw [rbp]
 	mov qword [$StackTop], 0
+
+section .text
 	; Initialize Command Line Arguments
 	pop rbx
 	mov rax, rbx
@@ -65,6 +69,7 @@ _start:
 	mov qword [rbp], 0
 	mov [rbp + 24], eax
 	mov [rbp + 28], rdx
+section .text
 
  main:
 	; empty
@@ -450,6 +455,39 @@ _start:
  main$80:
 	; function end main
 
+section .text
+
+ @337$malloc:
+	; return int8$0#
+	mov rbx, 0
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
+
+ @337$malloc$1:
+	; function end malloc
+
+section .data
+
+a:
+	; initializer zero 16
+	times 16 db 0
+
+section .data
+
+string_test12Etxt#:
+	; initializer String
+	db "test1.txt", 0
+
+section .data
+
+string_test22Etxt#:
+	; initializer String
+	db "test2.txt", 0
+
+section .text
+
  main2:
 	; empty
 
@@ -491,6 +529,26 @@ _start:
 
  main2$9:
 	; function end main2
+
+section .data
+
+string_Hello#:
+	; initializer String
+	db "Hello", 0
+
+section .data
+
+string_World#:
+	; initializer String
+	db "World", 0
+
+section .data
+
+string_3C25s3E203C25s3E0A#:
+	; initializer String
+	db "<%s> <%s>", 10, 0
+
+section .text
 
  main33:
 	; s[0] = int1$72#
@@ -579,6 +637,8 @@ _start:
  main33$19:
 	; function end main33
 
+section .text
+
  main34:
 	; g_outDevice = stdout
 	mov rax, [stdout]
@@ -627,6 +687,26 @@ _start:
 
  main34$10:
 	; function end main34
+
+section .data
+
+string_Please20write20a20character3A20#:
+	; initializer String
+	db "Please write a character: ", 0
+
+section .data
+
+string_25c#:
+	; initializer String
+	db "%c", 0
+
+section .data
+
+string_You20wrote20the20character202725c272E0A#:
+	; initializer String
+	db "You wrote the character ", 39, "%c", 39, ".", 10, 0
+
+section .text
 
  mainc:
 	; empty
@@ -719,6 +799,26 @@ _start:
  mainc$18:
 	; function end mainc
 
+section .data
+
+string_Please20write20an20integer3A20#:
+	; initializer String
+	db "Please write an integer: ", 0
+
+section .data
+
+string_25i#:
+	; initializer String
+	db "%i", 0
+
+section .data
+
+string_You20wrote20the20integer2025i2E0A#:
+	; initializer String
+	db "You wrote the integer %i.", 10, 0
+
+section .text
+
  maini:
 	; empty
 
@@ -802,6 +902,26 @@ _start:
  maini$17:
 	; function end maini
 
+section .data
+
+string_Please20write20a20string3A20#:
+	; initializer String
+	db "Please write a string: ", 0
+
+section .data
+
+string_25s#:
+	; initializer String
+	db "%s", 0
+
+section .data
+
+string_You20wrote20the20string202225s222E0A#:
+	; initializer String
+	db "You wrote the string ", 34, "%s", 34, ".", 10, 0
+
+section .text
+
  mains:
 	; empty
 
@@ -881,6 +1001,8 @@ _start:
  mains$16:
 	; function end mains
 
+section .text
+
  maint:
 	; call header integral zero 0 stack zero 0
 
@@ -916,6 +1038,14 @@ _start:
 
  maint$7:
 	; function end maint
+
+section .data
+
+float8$10#:
+	; initializer Double
+	dq 10.0
+
+section .text
 
  mainY:
 	; call header integral zero 0 stack zero 0
@@ -981,6 +1111,38 @@ _start:
 
  mainY$14:
 	; function end mainY
+
+section .data
+
+string_25i3A2025i203C25c3E0A#:
+	; initializer String
+	db "%i: %i <%c>", 10, 0
+
+section .data
+
+string_0Aargc3A2025i0A#:
+	; initializer String
+	db 10, "argc: %i", 10, 0
+
+section .data
+
+string_25i3A203C25s3E0A#:
+	; initializer String
+	db "%i: <%s>", 10, 0
+
+section .data
+
+string_0A#:
+	; initializer String
+	db 10, 0
+
+section .data
+
+int8$8#:
+	; initializer Pointer
+	dq 8
+
+section .text
 
  mainX:
 	; empty
@@ -1268,6 +1430,80 @@ _start:
  mainX$59:
 	; function end mainX
 
+section .data
+
+@419$ZERO:
+	; initializer SignedInt
+	dd 0
+
+section .data
+
+@420$ONE:
+	; initializer SignedInt
+	dd 1
+
+section .data
+
+@423$TWO:
+	; initializer SignedInt
+	dd 2
+
+section .data
+
+@424$THREE:
+	; initializer SignedInt
+	dd 3
+
+section .data
+
+string_argc3A2025i0A#:
+	; initializer String
+	db "argc: %i", 10, 0
+
+section .data
+
+string_Hello210A#:
+	; initializer String
+	db "Hello!", 10, 0
+
+section .data
+
+string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#:
+	; initializer String
+	db "Please write a character, a string, an integer, and a double: ", 0
+
+section .data
+
+string_25c2025s2025i2025lf#:
+	; initializer String
+	db "%c %s %i %lf", 0
+
+section .data
+
+string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#:
+	; initializer String
+	db "You wrote the character ", 39, "%c", 39, ", the string ", 34, "%s", 34, ", the integer %i, and the double %f.", 10, 0
+
+section .data
+
+string_3A20#:
+	; initializer String
+	db ": ", 0
+
+section .data
+
+string_25lf#:
+	; initializer String
+	db "%lf", 0
+
+section .data
+
+string_3C25f3E#:
+	; initializer String
+	db "<%f>", 0
+
+section .text
+
  main3:
 	; empty
 
@@ -1353,6 +1589,26 @@ _start:
 
  main3$18:
 	; function end main3
+
+section .data
+
+string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#:
+	; initializer String
+	db "---------------------------------------------", 10, 0
+
+section .data
+
+float8$3.14#:
+	; initializer Double
+	dq 3.14
+
+section .data
+
+float8$2.71#:
+	; initializer Double
+	dq 2.71
+
+section .text
 
  mains2:
 	; call header integral zero 0 stack zero 0
@@ -1502,6 +1758,8 @@ _start:
  mains2$33:
 	; function end mains2
 
+section .text
+
  char_main:
 	; call header integral zero 0 stack zero 0
 
@@ -1631,6 +1889,32 @@ _start:
  char_main$29:
 	; function end char_main
 
+section .data
+
+string_Please20write20a20number2028not20620or207293A20#:
+	; initializer String
+	db "Please write a number (not 6 or 7): ", 0
+
+section .data
+
+string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+	; initializer String
+	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
+
+section .data
+
+string_n20213D206#:
+	; initializer String
+	db "n != 6", 0
+
+section .data
+
+string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#:
+	; initializer String
+	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c", 0
+
+section .text
+
  assert_test:
 	; n = int4$0#
 	mov dword [rbp + 24], 0
@@ -1707,8 +1991,8 @@ _start:
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
  assert_test$17:
-	; parameter int4$843#, offset 84
-	mov dword [rbp + 84], 843
+	; parameter int4$847#, offset 84
+	mov dword [rbp + 84], 847
 
  assert_test$18:
 	; call function noellipse-ellipse fprintf, extra 20
@@ -1763,6 +2047,14 @@ _start:
  assert_test$28:
 	; function end assert_test
 
+section .data
+
+string_n20213D207#:
+	; initializer String
+	db "n != 7", 0
+
+section .text
+
  assert_test2:
 	; if n != int4$7# goto 12
 	cmp dword [rbp + 24], 7
@@ -1789,8 +2081,8 @@ _start:
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
  assert_test2$6:
-	; parameter int4$848#, offset 84
-	mov dword [rbp + 84], 848
+	; parameter int4$852#, offset 84
+	mov dword [rbp + 84], 852
 
  assert_test2$7:
 	; call function noellipse-ellipse fprintf, extra 20
@@ -1826,169 +2118,6 @@ _start:
 
  assert_test2$13:
 	; function end assert_test2
+
 section .data
 $StackTop:	times 1048576 db 0
-
-a:
-	; initializer zero 16
-	times 16 db 0
-
-string_test12Etxt#:
-	; initializer String
-	db "test1.txt", 0
-
-string_test22Etxt#:
-	; initializer String
-	db "test2.txt", 0
-
-string_Hello#:
-	; initializer String
-	db "Hello", 0
-
-string_World#:
-	; initializer String
-	db "World", 0
-
-string_3C25s3E203C25s3E0A#:
-	; initializer String
-	db "<%s> <%s>", 10, 0
-
-string_Please20write20a20character3A20#:
-	; initializer String
-	db "Please write a character: ", 0
-
-string_25c#:
-	; initializer String
-	db "%c", 0
-
-string_You20wrote20the20character202725c272E0A#:
-	; initializer String
-	db "You wrote the character ", 39, "%c", 39, ".", 10, 0
-
-string_Please20write20an20integer3A20#:
-	; initializer String
-	db "Please write an integer: ", 0
-
-string_25i#:
-	; initializer String
-	db "%i", 0
-
-string_You20wrote20the20integer2025i2E0A#:
-	; initializer String
-	db "You wrote the integer %i.", 10, 0
-
-string_Please20write20a20string3A20#:
-	; initializer String
-	db "Please write a string: ", 0
-
-string_25s#:
-	; initializer String
-	db "%s", 0
-
-string_You20wrote20the20string202225s222E0A#:
-	; initializer String
-	db "You wrote the string ", 34, "%s", 34, ".", 10, 0
-
-float8$10#:
-	; initializer Double
-	dq 10.0
-
-string_25i3A2025i203C25c3E0A#:
-	; initializer String
-	db "%i: %i <%c>", 10, 0
-
-string_0Aargc3A2025i0A#:
-	; initializer String
-	db 10, "argc: %i", 10, 0
-
-string_25i3A203C25s3E0A#:
-	; initializer String
-	db "%i: <%s>", 10, 0
-
-string_0A#:
-	; initializer String
-	db 10, 0
-
-int8$8#:
-	; initializer Pointer
-	dq 8
-
-@417$ZERO:
-	; initializer SignedInt
-	dd 0
-
-@418$ONE:
-	; initializer SignedInt
-	dd 1
-
-@421$TWO:
-	; initializer SignedInt
-	dd 2
-
-@422$THREE:
-	; initializer SignedInt
-	dd 3
-
-string_argc3A2025i0A#:
-	; initializer String
-	db "argc: %i", 10, 0
-
-string_Hello210A#:
-	; initializer String
-	db "Hello!", 10, 0
-
-string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#:
-	; initializer String
-	db "Please write a character, a string, an integer, and a double: ", 0
-
-string_25c2025s2025i2025lf#:
-	; initializer String
-	db "%c %s %i %lf", 0
-
-string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#:
-	; initializer String
-	db "You wrote the character ", 39, "%c", 39, ", the string ", 34, "%s", 34, ", the integer %i, and the double %f.", 10, 0
-
-string_3A20#:
-	; initializer String
-	db ": ", 0
-
-string_25lf#:
-	; initializer String
-	db "%lf", 0
-
-string_3C25f3E#:
-	; initializer String
-	db "<%f>", 0
-
-string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#:
-	; initializer String
-	db "---------------------------------------------", 10, 0
-
-float8$3.14#:
-	; initializer Double
-	dq 3.14
-
-float8$2.71#:
-	; initializer Double
-	dq 2.71
-
-string_Please20write20a20number2028not20620or207293A20#:
-	; initializer String
-	db "Please write a number (not 6 or 7): ", 0
-
-string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
-	; initializer String
-	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
-
-string_n20213D206#:
-	; initializer String
-	db "n != 6", 0
-
-string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#:
-	; initializer String
-	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c", 0
-
-string_n20213D207#:
-	; initializer String
-	db "n != 7", 0

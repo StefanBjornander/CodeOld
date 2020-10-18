@@ -4,6 +4,22 @@
 	extern printf
 	extern malloc
 	extern $StackTop
+
+section .text
+
+
+section .data
+
+@8851$i:
+	; initializer SignedInt
+	dd 0
+
+section .data
+
+string_25i20#:
+	; initializer String
+	db "%i ", 0
+
 section .text
 
  stack_test:
@@ -18,11 +34,11 @@ section .text
 
  stack_test$3:
 	; £temporary3892 = i
-	mov eax, [@8849$i]
+	mov eax, [@8851$i]
 
  stack_test$4:
 	; i = i + int4$1#
-	inc dword [@8849$i]
+	inc dword [@8851$i]
 
  stack_test$5:
 	; parameter £temporary3892, offset 56
@@ -62,6 +78,14 @@ section .text
 
  stack_test$12:
 	; function end stack_test
+
+section .data
+
+string_102420bytes2Dblock20number3A2025i0A#:
+	; initializer String
+	db "1024 bytes-block number: %i", 10, 0
+
+section .text
 
  heap_test:
 	; count = int4$0#
@@ -145,16 +169,3 @@ section .text
 
  heap_test$18:
 	; function end heap_test
-section .data
-
-@8849$i:
-	; initializer SignedInt
-	dd 0
-
-string_25i20#:
-	; initializer String
-	db "%i ", 0
-
-string_102420bytes2Dblock20number3A2025i0A#:
-	; initializer String
-	db "1024 bytes-block number: %i", 10, 0

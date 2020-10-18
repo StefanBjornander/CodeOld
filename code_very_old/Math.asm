@@ -475,7 +475,7 @@ section .text
 	fld qword [rbp + 68]
 
  log$67:
-	; £temporary421 = int_to_float expo (Signed_Int -> Double)
+	; £temporary421 = int_to_float expo (SignedInt -> Double)
 	fild dword [rbp + 32]
 
  log$68:
@@ -946,7 +946,7 @@ section .text
 	fstp qword [rbp + 68]
 
  ldexp$4:
-	; £temporary452 = int_to_float n (Signed_Int -> Double)
+	; £temporary452 = int_to_float n (SignedInt -> Double)
 	fild dword [rbp + 32]
 
  ldexp$5:
@@ -1107,7 +1107,7 @@ section .text
 	fdiv
 
  frexp$27:
-	; £temporary465 = float_to_int £temporary464 (Double -> Signed_Int)
+	; £temporary465 = float_to_int £temporary464 (Double -> SignedInt)
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
@@ -1157,7 +1157,7 @@ section .text
 	mov rsi, [rbp + 32]
 
  frexp$39:
-	; £temporary469 = int_to_float £temporary468 -> p (Signed_Int -> Double)
+	; £temporary469 = int_to_float £temporary468 -> p (SignedInt -> Double)
 	fild dword [rsi]
 
  frexp$40:
@@ -1332,7 +1332,7 @@ section .text
 	fdiv
 
  frexp$78:
-	; £temporary480 = float_to_int £temporary479 (Double -> Signed_Int)
+	; £temporary480 = float_to_int £temporary479 (Double -> SignedInt)
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
@@ -1378,7 +1378,7 @@ section .text
 	fstp qword [rbp + 76]
 
  frexp$89:
-	; £temporary483 = int_to_float n (Signed_Int -> Double)
+	; £temporary483 = int_to_float n (SignedInt -> Double)
 	fild dword [rbp + 40]
 
  frexp$90:
@@ -3648,7 +3648,7 @@ section .text
 	fstp qword [rbp + 60]
 
  atanY$30:
-	; £temporary647 = int_to_float sign (Signed_Int -> Double)
+	; £temporary647 = int_to_float sign (SignedInt -> Double)
 	fild dword [rbp + 32]
 
  atanY$31:
@@ -3660,7 +3660,7 @@ section .text
 	fmul
 
  atanY$33:
-	; £temporary649 = int_to_float denominator (Signed_Int -> Double)
+	; £temporary649 = int_to_float denominator (SignedInt -> Double)
 	fild dword [rbp + 36]
 
  atanY$34:

@@ -19,6 +19,10 @@
 	extern localeconv
 	extern strchr
 	extern $StackTop
+
+section .text
+
+
 section .text
 
  islower:
@@ -132,6 +136,8 @@ section .text
  islower$24:
 	; function end islower
 
+section .text
+
  islowerX:
 	; if c < int4$97# goto 4
 	cmp dword [rbp + 24], 97
@@ -164,6 +170,8 @@ section .text
  islowerX$6:
 	; function end islowerX
 
+section .text
+
  isupperX:
 	; if c < int4$65# goto 4
 	cmp dword [rbp + 24], 65
@@ -195,6 +203,8 @@ section .text
 
  isupperX$6:
 	; function end isupperX
+
+section .text
 
  isupper:
 	; call header integral zero 0 stack zero 0
@@ -307,6 +317,8 @@ section .text
  isupper$24:
 	; function end isupper
 
+section .text
+
  isalpha:
 	; call header integral zero 0 stack zero 0
 
@@ -381,6 +393,8 @@ section .text
  isalpha$16:
 	; function end isalpha
 
+section .text
+
  isdigit:
 	; if c < int4$48# goto 4
 	cmp dword [rbp + 24], 48
@@ -412,6 +426,8 @@ section .text
 
  isdigit$6:
 	; function end isdigit
+
+section .text
 
  isalnum:
 	; call header integral zero 0 stack zero 0
@@ -487,6 +503,8 @@ section .text
  isalnum$16:
 	; function end isalnum
 
+section .text
+
  isxdigit:
 	; call header integral zero 0 stack zero 0
 
@@ -555,6 +573,8 @@ section .text
  isxdigit$14:
 	; function end isxdigit
 
+section .text
+
  isgraph:
 	; if c < int4$32# goto 4
 	cmp dword [rbp + 24], 32
@@ -586,6 +606,8 @@ section .text
 
  isgraph$6:
 	; function end isgraph
+
+section .text
 
  isprint:
 	; call header integral zero 0 stack zero 0
@@ -639,6 +661,8 @@ section .text
 
  isprint$11:
 	; function end isprint
+
+section .text
 
  ispunct:
 	; call header integral zero 0 stack zero 0
@@ -714,6 +738,8 @@ section .text
  ispunct$16:
 	; function end ispunct
 
+section .text
+
  iscntrl:
 	; call header integral zero 0 stack zero 0
 
@@ -761,6 +787,8 @@ section .text
 
  iscntrl$10:
 	; function end iscntrl
+
+section .text
 
  isspace:
 	; if c == int4$32# goto 6
@@ -814,6 +842,8 @@ section .text
  isspace$10:
 	; function end isspace
 
+section .text
+
  tolowerX:
 	; call header integral zero 0 stack zero 0
 
@@ -862,6 +892,8 @@ section .text
 
  tolowerX$10:
 	; function end tolowerX
+
+section .text
 
  tolower:
 	; call header integral zero 0 stack zero 0
@@ -1022,6 +1054,8 @@ section .text
  tolower$33:
 	; function end tolower
 
+section .text
+
  toupperX:
 	; call header integral zero 0 stack zero 0
 
@@ -1070,6 +1104,8 @@ section .text
 
  toupperX$10:
 	; function end toupperX
+
+section .text
 
  toupper:
 	; call header integral zero 0 stack zero 0
@@ -1229,4 +1265,3 @@ section .text
 
  toupper$33:
 	; function end toupper
-section .data

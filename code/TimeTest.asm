@@ -10,6 +10,100 @@
 	extern ctime
 	extern strftime
 	extern $StackTop
+
+section .text
+
+
+section .data
+
+string_Sun#:
+	; initializer String
+	db "Sun", 0
+
+section .data
+
+string_Mon#:
+	; initializer String
+	db "Mon", 0
+
+section .data
+
+string_Tue#:
+	; initializer String
+	db "Tue", 0
+
+section .data
+
+string_Wed#:
+	; initializer String
+	db "Wed", 0
+
+section .data
+
+string_Thu#:
+	; initializer String
+	db "Thu", 0
+
+section .data
+
+string_Fri#:
+	; initializer String
+	db "Fri", 0
+
+section .data
+
+string_Sat#:
+	; initializer String
+	db "Sat", 0
+
+section .data
+
+string_now2013A2025lu0A#:
+	; initializer String
+	db "now 1: %lu", 10, 0
+
+section .data
+
+string_now2023A2025lu0A#:
+	; initializer String
+	db "now 2: %lu", 10, 0
+
+section .data
+
+string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#:
+	; initializer String
+	db "   gm time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i", 10, 0
+
+section .data
+
+string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#:
+	; initializer String
+	db "local time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i", 10, 0
+
+section .data
+
+string_asctime203C25s3E2C20ctime203C25s3E0A#:
+	; initializer String
+	db "asctime <%s>, ctime <%s>", 10, 0
+
+section .data
+
+string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y#:
+	; initializer String
+	db "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y", 0
+
+section .data
+
+string_strftime203C25i3E203C25s3E0A#:
+	; initializer String
+	db "strftime <%i> <%s>", 10, 0
+
+section .data
+
+Array_8#:
+	; initializer Array
+	dq 8
+
 section .text
 
  time_test:
@@ -625,64 +719,3 @@ section .text
 
  time_test$131:
 	; function end time_test
-section .data
-
-string_Sun#:
-	; initializer String
-	db "Sun", 0
-
-string_Mon#:
-	; initializer String
-	db "Mon", 0
-
-string_Tue#:
-	; initializer String
-	db "Tue", 0
-
-string_Wed#:
-	; initializer String
-	db "Wed", 0
-
-string_Thu#:
-	; initializer String
-	db "Thu", 0
-
-string_Fri#:
-	; initializer String
-	db "Fri", 0
-
-string_Sat#:
-	; initializer String
-	db "Sat", 0
-
-string_now2013A2025lu0A#:
-	; initializer String
-	db "now 1: %lu", 10, 0
-
-string_now2023A2025lu0A#:
-	; initializer String
-	db "now 2: %lu", 10, 0
-
-string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#:
-	; initializer String
-	db "   gm time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i", 10, 0
-
-string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#:
-	; initializer String
-	db "local time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i", 10, 0
-
-string_asctime203C25s3E2C20ctime203C25s3E0A#:
-	; initializer String
-	db "asctime <%s>, ctime <%s>", 10, 0
-
-string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y#:
-	; initializer String
-	db "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y", 0
-
-string_strftime203C25i3E203C25s3E0A#:
-	; initializer String
-	db "strftime <%i> <%s>", 10, 0
-
-Array_8#:
-	; initializer Array
-	dq 8

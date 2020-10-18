@@ -32,6 +32,52 @@
 	extern pow
 	extern ldexp
 	extern $StackTop
+
+section .text
+
+
+section .data
+
+float8$minus6.2831853071795864768#:
+	; initializer Double
+	dq -6.2831853071795864768
+
+section .data
+
+float8$minus3.1415926535897932384#:
+	; initializer Double
+	dq -3.1415926535897932384
+
+section .data
+
+float8$minus1.5707963267948966192#:
+	; initializer Double
+	dq -1.5707963267948966192
+
+section .data
+
+float8$minus1#:
+	; initializer Double
+	dq -1.0
+
+section .data
+
+float8$1.5707963267948966192#:
+	; initializer Double
+	dq 1.5707963267948966192
+
+section .data
+
+float8$3.1415926535897932384#:
+	; initializer Double
+	dq 3.1415926535897932384
+
+section .data
+
+float8$6.2831853071795864768#:
+	; initializer Double
+	dq 6.2831853071795864768
+
 section .text
 
  math_test_1x:
@@ -233,6 +279,20 @@ section .text
  math_test_1x$46:
 	; function end math_test_1x
 
+section .data
+
+string_2020acos2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "  acos(%f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_Error20message#:
+	; initializer String
+	db "Error message", 0
+
+section .text
+
  acos_test:
 	; call header integral zero 0 stack zero 0
 
@@ -349,6 +409,14 @@ section .text
  acos_test$26:
 	; function end acos_test
 
+section .data
+
+string_2020atan2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "  atan(%f) = %f, errno = %i <%s>, ", 0
+
+section .text
+
  atan_test:
 	; call header integral zero 0 stack zero 0
 
@@ -464,6 +532,92 @@ section .text
 
  atan_test$26:
 	; function end atan_test
+
+section .data
+
+float8$1.000001#:
+	; initializer Double
+	dq 1.000001
+
+section .data
+
+float8$0.999999#:
+	; initializer Double
+	dq 0.999999
+
+section .data
+
+float8$0.000001#:
+	; initializer Double
+	dq 0.000001
+
+section .data
+
+float8$minus0.000001#:
+	; initializer Double
+	dq -0.000001
+
+section .data
+
+float8$minus0.999999#:
+	; initializer Double
+	dq -0.999999
+
+section .data
+
+float8$minus1.0#:
+	; initializer Double
+	dq -1.0
+
+section .data
+
+float8$minus1.000001#:
+	; initializer Double
+	dq -1.000001
+
+section .data
+
+float8$2.0#:
+	; initializer Double
+	dq 2.0
+
+section .data
+
+float8$3.0#:
+	; initializer Double
+	dq 3.0
+
+section .data
+
+float8$4.0#:
+	; initializer Double
+	dq 4.0
+
+section .data
+
+float8$minus2.0#:
+	; initializer Double
+	dq -2.0
+
+section .data
+
+float8$2#:
+	; initializer Double
+	dq 2.0
+
+section .data
+
+float8$minus2#:
+	; initializer Double
+	dq -2.0
+
+section .data
+
+float8$minus4.0#:
+	; initializer Double
+	dq -4.0
+
+section .text
 
  main_math:
 	; call header integral zero 0 stack zero 0
@@ -1108,6 +1262,122 @@ section .text
 
  main_math$153:
 	; function end main_math
+
+section .data
+
+string_3C25f3E0A#:
+	; initializer String
+	db "<%f>", 10, 0
+
+section .data
+
+string_2020sin2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "  sin(%f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_2020cos2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "  cos(%f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_2020tan2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "  tan(%f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_2020asin2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "  asin(%f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_2020exp2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "  exp(%f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_2020log2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "  log(%f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_2020log102825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "  log10(%f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_2020sinh2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "  sinh(%f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_2020cosh2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "  cosh(%f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_2020tanh2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "  tanh(%f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_2020sqrt2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "  sqrt(%f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_2020floor2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "  floor(%f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_2020ceil2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "  ceil(%f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_2020fabs2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "  fabs(%f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_frexp2028z2C20j29203D202825f2C2025i292C20errno203D2025i203C25s3E0A#:
+	; initializer String
+	db "frexp (z, j) = (%f, %i), errno = %i <%s>", 10, 0
+
+section .data
+
+string_Error20message3A#:
+	; initializer String
+	db "Error message:", 0
+
+section .data
+
+string_modf2028z2C20w29203D202825f2C2025f292C20errno203D2025i203C25s3E0A#:
+	; initializer String
+	db "modf (z, w) = (%f, %f), errno = %i <%s>", 10, 0
+
+section .data
+
+string_0A#:
+	; initializer String
+	db 10, 0
+
+section .text
 
  math_test_1:
 	; call header integral zero 0 stack zero 0
@@ -3125,6 +3395,38 @@ section .text
  math_test_1$473:
 	; function end math_test_1
 
+section .data
+
+string_fmod2825f2C2025f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "fmod(%f, %f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_atan22825f2C2025f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "atan2(%f, %f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_pow2825f2C2025f29203D2025f2C20errno203D2025i203C25s3E2C20#:
+	; initializer String
+	db "pow(%f, %f) = %f, errno = %i <%s>, ", 0
+
+section .data
+
+string_ldexp2825f2C2025i29203D2025f0A0A#:
+	; initializer String
+	db "ldexp(%f, %i) = %f", 10, 10, 0
+
+section .data
+
+container4bytes#:
+	; initializer zero 4
+	times 4 db 0
+
+section .text
+
  math_test_2:
 	; call header integral zero 0 stack zero 0
 
@@ -3599,196 +3901,3 @@ section .text
 
  math_test_2$111:
 	; function end math_test_2
-section .data
-
-float8$minus6.2831853071795864768#:
-	; initializer Double
-	dq -6.2831853071795864768
-
-float8$minus3.1415926535897932384#:
-	; initializer Double
-	dq -3.1415926535897932384
-
-float8$minus1.5707963267948966192#:
-	; initializer Double
-	dq -1.5707963267948966192
-
-float8$minus1#:
-	; initializer Double
-	dq -1.0
-
-float8$1.5707963267948966192#:
-	; initializer Double
-	dq 1.5707963267948966192
-
-float8$3.1415926535897932384#:
-	; initializer Double
-	dq 3.1415926535897932384
-
-float8$6.2831853071795864768#:
-	; initializer Double
-	dq 6.2831853071795864768
-
-string_2020acos2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "  acos(%f) = %f, errno = %i <%s>, ", 0
-
-string_Error20message#:
-	; initializer String
-	db "Error message", 0
-
-string_2020atan2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "  atan(%f) = %f, errno = %i <%s>, ", 0
-
-float8$1.000001#:
-	; initializer Double
-	dq 1.000001
-
-float8$0.999999#:
-	; initializer Double
-	dq 0.999999
-
-float8$0.000001#:
-	; initializer Double
-	dq 0.000001
-
-float8$minus0.000001#:
-	; initializer Double
-	dq -0.000001
-
-float8$minus0.999999#:
-	; initializer Double
-	dq -0.999999
-
-float8$minus1.0#:
-	; initializer Double
-	dq -1.0
-
-float8$minus1.000001#:
-	; initializer Double
-	dq -1.000001
-
-float8$2.0#:
-	; initializer Double
-	dq 2.0
-
-float8$3.0#:
-	; initializer Double
-	dq 3.0
-
-float8$4.0#:
-	; initializer Double
-	dq 4.0
-
-float8$minus2.0#:
-	; initializer Double
-	dq -2.0
-
-float8$2#:
-	; initializer Double
-	dq 2.0
-
-float8$minus2#:
-	; initializer Double
-	dq -2.0
-
-float8$minus4.0#:
-	; initializer Double
-	dq -4.0
-
-string_3C25f3E0A#:
-	; initializer String
-	db "<%f>", 10, 0
-
-string_2020sin2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "  sin(%f) = %f, errno = %i <%s>, ", 0
-
-string_2020cos2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "  cos(%f) = %f, errno = %i <%s>, ", 0
-
-string_2020tan2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "  tan(%f) = %f, errno = %i <%s>, ", 0
-
-string_2020asin2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "  asin(%f) = %f, errno = %i <%s>, ", 0
-
-string_2020exp2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "  exp(%f) = %f, errno = %i <%s>, ", 0
-
-string_2020log2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "  log(%f) = %f, errno = %i <%s>, ", 0
-
-string_2020log102825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "  log10(%f) = %f, errno = %i <%s>, ", 0
-
-string_2020sinh2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "  sinh(%f) = %f, errno = %i <%s>, ", 0
-
-string_2020cosh2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "  cosh(%f) = %f, errno = %i <%s>, ", 0
-
-string_2020tanh2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "  tanh(%f) = %f, errno = %i <%s>, ", 0
-
-string_2020sqrt2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "  sqrt(%f) = %f, errno = %i <%s>, ", 0
-
-string_2020floor2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "  floor(%f) = %f, errno = %i <%s>, ", 0
-
-string_2020ceil2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "  ceil(%f) = %f, errno = %i <%s>, ", 0
-
-string_2020fabs2825f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "  fabs(%f) = %f, errno = %i <%s>, ", 0
-
-string_frexp2028z2C20j29203D202825f2C2025i292C20errno203D2025i203C25s3E0A#:
-	; initializer String
-	db "frexp (z, j) = (%f, %i), errno = %i <%s>", 10, 0
-
-string_Error20message3A#:
-	; initializer String
-	db "Error message:", 0
-
-string_modf2028z2C20w29203D202825f2C2025f292C20errno203D2025i203C25s3E0A#:
-	; initializer String
-	db "modf (z, w) = (%f, %f), errno = %i <%s>", 10, 0
-
-string_0A#:
-	; initializer String
-	db 10, 0
-
-string_fmod2825f2C2025f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "fmod(%f, %f) = %f, errno = %i <%s>, ", 0
-
-string_atan22825f2C2025f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "atan2(%f, %f) = %f, errno = %i <%s>, ", 0
-
-string_pow2825f2C2025f29203D2025f2C20errno203D2025i203C25s3E2C20#:
-	; initializer String
-	db "pow(%f, %f) = %f, errno = %i <%s>, ", 0
-
-string_ldexp2825f2C2025i29203D2025f0A0A#:
-	; initializer String
-	db "ldexp(%f, %i) = %f", 10, 10, 0
-
-container4bytes#:
-	; initializer zero 4
-	times 4 db 0

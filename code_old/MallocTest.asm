@@ -12,6 +12,10 @@
 	extern free
 	extern printf
 	extern $StackTop
+
+section .text
+
+
 section .text
 
  malloc_test2:
@@ -333,6 +337,8 @@ section .text
  malloc_test2$73:
 	; function end malloc_test2
 
+section .text
+
  malloc_test3:
 	; call header integral zero 0 stack zero 0
 
@@ -599,6 +605,14 @@ section .text
  malloc_test3$62:
 	; function end malloc_test3
 
+section .data
+
+string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#:
+	; initializer String
+	db "Stack Top: %u, Low Heap: %u", 10, 0
+
+section .text
+
  rec:
 	; empty
 
@@ -673,6 +687,8 @@ section .text
  rec$16:
 	; function end rec
 
+section .text
+
  malloc_test4:
 	; call header integral zero 0 stack zero 0
 
@@ -695,6 +711,8 @@ section .text
 
  malloc_test4$4:
 	; function end malloc_test4
+
+section .text
 
  malloc_test:
 	; call header integral zero 0 stack zero 0
@@ -918,6 +936,14 @@ section .text
  malloc_test$51:
 	; function end malloc_test
 
+section .data
+
+string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#:
+	; initializer String
+	db "Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u", 10, 0
+
+section .text
+
  malloc_test6:
 	; empty
 
@@ -1029,12 +1055,3 @@ section .text
 
  malloc_test6$25:
 	; function end malloc_test6
-section .data
-
-string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#:
-	; initializer String
-	db "Stack Top: %u, Low Heap: %u", 10, 0
-
-string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#:
-	; initializer String
-	db "Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u", 10, 0

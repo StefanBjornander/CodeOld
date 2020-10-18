@@ -3,6 +3,208 @@
 	extern printf
 	extern scanf
 	extern $StackTop
+
+section .text
+
+
+section .data
+
+string_3C25i3E203C25i3E203C25li3E203C25li3E203C25u3E203C25lu3E0A0A#:
+	; initializer String
+	db "<%i> <%i> <%li> <%li> <%u> <%lu>", 10, 10, 0
+
+section .data
+
+string_3C256i3E203C256i3E203C256li3E203C256li3E203C256u3E203C256lu3E0A#:
+	; initializer String
+	db "<%6i> <%6i> <%6li> <%6li> <%6u> <%6lu>", 10, 0
+
+section .data
+
+string_3C252B6i3E203C252B6i3E203C252B6li3E203C252B6li3E203C252B6u3E203C252B6lu3E0A#:
+	; initializer String
+	db "<%+6i> <%+6i> <%+6li> <%+6li> <%+6u> <%+6lu>", 10, 0
+
+section .data
+
+string_3C252D6i3E203C252D6i3E203C252D6li3E203C252D6li3E203C252D6u3E203C252D6lu3E0A#:
+	; initializer String
+	db "<%-6i> <%-6i> <%-6li> <%-6li> <%-6u> <%-6lu>", 10, 0
+
+section .data
+
+string_3C252B2D6i3E203C252B2D6i3E203C252B2D6li3E203C252B2D6li3E203C252B2D6u3E203C252B2D6lu3E0A0A#:
+	; initializer String
+	db "<%+-6i> <%+-6i> <%+-6li> <%+-6li> <%+-6u> <%+-6lu>", 10, 10, 0
+
+section .data
+
+string_3C2506i3E203C2506i3E203C2506li3E203C2506li3E203C2506u3E203C2506lu3E0A#:
+	; initializer String
+	db "<%06i> <%06i> <%06li> <%06li> <%06u> <%06lu>", 10, 0
+
+section .data
+
+string_3C252B06i3E203C252B06i3E203C252B06li3E203C252B06li3E203C252B06u3E203C252B06lu3E0A#:
+	; initializer String
+	db "<%+06i> <%+06i> <%+06li> <%+06li> <%+06u> <%+06lu>", 10, 0
+
+section .data
+
+string_3C252D06i3E203C252D06i3E203C252D06li3E203C252D06li3E203C252D06u3E203C252D06lu3E0A#:
+	; initializer String
+	db "<%-06i> <%-06i> <%-06li> <%-06li> <%-06u> <%-06lu>", 10, 0
+
+section .data
+
+string_3C252B2D06i3E203C252B2D06i3E203C252B2D06li3E203C252B2D06li3E203C252B2D06u3E203C252B2D06lu3E0A0A#:
+	; initializer String
+	db "<%+-06i> <%+-06i> <%+-06li> <%+-06li> <%+-06u> <%+-06lu>", 10, 10, 0
+
+section .data
+
+string_3C25206i3E203C25206i3E203C25206li3E203C25206li3E203C25206u3E203C25206lu3E0A#:
+	; initializer String
+	db "<% 6i> <% 6i> <% 6li> <% 6li> <% 6u> <% 6lu>", 10, 0
+
+section .data
+
+string_3C252B206i3E203C252B206i3E203C252B206li3E203C252B206li3E203C252B206u3E203C252B206lu3E0A#:
+	; initializer String
+	db "<%+ 6i> <%+ 6i> <%+ 6li> <%+ 6li> <%+ 6u> <%+ 6lu>", 10, 0
+
+section .data
+
+string_3C252D206i3E203C252D206i3E203C252D206li3E203C252D206li3E203C252D206u3E203C252D206lu3E0A#:
+	; initializer String
+	db "<%- 6i> <%- 6i> <%- 6li> <%- 6li> <%- 6u> <%- 6lu>", 10, 0
+
+section .data
+
+string_3C252B2D206i3E203C252B2D206i3E203C252B2D206li3E203C252B2D206li3E203C252B2D206u3E203C252B2D206lu3E0A0A#:
+	; initializer String
+	db "<%+- 6i> <%+- 6i> <%+- 6li> <%+- 6li> <%+- 6u> <%+- 6lu>", 10, 10, 0
+
+section .data
+
+string_3C25x3E203C25X3E203C25o3E203C25lx3E203C25lX3E203C25lo3E0A#:
+	; initializer String
+	db "<%x> <%X> <%o> <%lx> <%lX> <%lo>", 10, 0
+
+section .data
+
+string_3C2523x3E203C2523X3E203C2523o3E203C2523lx3E203C2523lX3E203C2523lo3E0A#:
+	; initializer String
+	db "<%#x> <%#X> <%#o> <%#lx> <%#lX> <%#lo>", 10, 0
+
+section .data
+
+string_3C25253E203C25s3E203C25c3E203C25p3E0A0A#:
+	; initializer String
+	db "<%%> <%s> <%c> <%p>", 10, 10, 0
+
+section .data
+
+string_Hello2C20World21#:
+	; initializer String
+	db "Hello, World!", 0
+
+section .data
+
+string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A#:
+	; initializer String
+	db "<%f> <%e> <%E> <%g> <%G>", 10, 0
+
+section .data
+
+string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A#:
+	; initializer String
+	db "<%lf> <%le> <%lE> <%lg> <%lG>", 10, 0
+
+section .data
+
+string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A#:
+	; initializer String
+	db "<%#f> <%#e> <%#E> <%#g> <%#G>", 10, 0
+
+section .data
+
+string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A#:
+	; initializer String
+	db "<%#lf> <%#le> <%#lE> <%#lg> <%#lG>", 10, 0
+
+section .data
+
+string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A#:
+	; initializer String
+	db "<%6.3f> <%6.3e> <%6.3E> <%6.3g> <%6.3G>", 10, 0
+
+section .data
+
+string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A#:
+	; initializer String
+	db "<%6.3lf> <%6.3le> <%6.3lE> <%6.3lg> <%6.3lG>", 10, 10, 0
+
+section .data
+
+string_Please20write20the20patterns205Babc5D3A20#:
+	; initializer String
+	db "Please write the patterns [abc]: ", 0
+
+section .data
+
+string_255Babc5D#:
+	; initializer String
+	db "%[abc]", 0
+
+section .data
+
+string_0A3C25s3E0A#:
+	; initializer String
+	db 10, "<%s>", 10, 0
+
+section .data
+
+string_Please20write20the20patterns205B5Eabc5D3A20#:
+	; initializer String
+	db "Please write the patterns [^abc]: ", 0
+
+section .data
+
+string_255B5Eabc5D#:
+	; initializer String
+	db "%[^abc]", 0
+
+section .data
+
+string_0A3C25s3E#:
+	; initializer String
+	db 10, "<%s>", 0
+
+section .data
+
+float8$123.456#:
+	; initializer Double
+	dq 123.456
+
+section .data
+
+float8$123456.1#:
+	; initializer Double
+	dq 123456.1
+
+section .data
+
+float8$minus123.456#:
+	; initializer Double
+	dq -123.456
+
+section .data
+
+float8$minus0.000000123456#:
+	; initializer Double
+	dq -0.000000123456
+
 section .text
 
  stdio_test:
@@ -1544,136 +1746,3 @@ section .text
 
  stdio_test$357:
 	; function end stdio_test
-section .data
-
-string_3C25i3E203C25i3E203C25li3E203C25li3E203C25u3E203C25lu3E0A0A#:
-	; initializer String
-	db "<%i> <%i> <%li> <%li> <%u> <%lu>", 10, 10, 0
-
-string_3C256i3E203C256i3E203C256li3E203C256li3E203C256u3E203C256lu3E0A#:
-	; initializer String
-	db "<%6i> <%6i> <%6li> <%6li> <%6u> <%6lu>", 10, 0
-
-string_3C252B6i3E203C252B6i3E203C252B6li3E203C252B6li3E203C252B6u3E203C252B6lu3E0A#:
-	; initializer String
-	db "<%+6i> <%+6i> <%+6li> <%+6li> <%+6u> <%+6lu>", 10, 0
-
-string_3C252D6i3E203C252D6i3E203C252D6li3E203C252D6li3E203C252D6u3E203C252D6lu3E0A#:
-	; initializer String
-	db "<%-6i> <%-6i> <%-6li> <%-6li> <%-6u> <%-6lu>", 10, 0
-
-string_3C252B2D6i3E203C252B2D6i3E203C252B2D6li3E203C252B2D6li3E203C252B2D6u3E203C252B2D6lu3E0A0A#:
-	; initializer String
-	db "<%+-6i> <%+-6i> <%+-6li> <%+-6li> <%+-6u> <%+-6lu>", 10, 10, 0
-
-string_3C2506i3E203C2506i3E203C2506li3E203C2506li3E203C2506u3E203C2506lu3E0A#:
-	; initializer String
-	db "<%06i> <%06i> <%06li> <%06li> <%06u> <%06lu>", 10, 0
-
-string_3C252B06i3E203C252B06i3E203C252B06li3E203C252B06li3E203C252B06u3E203C252B06lu3E0A#:
-	; initializer String
-	db "<%+06i> <%+06i> <%+06li> <%+06li> <%+06u> <%+06lu>", 10, 0
-
-string_3C252D06i3E203C252D06i3E203C252D06li3E203C252D06li3E203C252D06u3E203C252D06lu3E0A#:
-	; initializer String
-	db "<%-06i> <%-06i> <%-06li> <%-06li> <%-06u> <%-06lu>", 10, 0
-
-string_3C252B2D06i3E203C252B2D06i3E203C252B2D06li3E203C252B2D06li3E203C252B2D06u3E203C252B2D06lu3E0A0A#:
-	; initializer String
-	db "<%+-06i> <%+-06i> <%+-06li> <%+-06li> <%+-06u> <%+-06lu>", 10, 10, 0
-
-string_3C25206i3E203C25206i3E203C25206li3E203C25206li3E203C25206u3E203C25206lu3E0A#:
-	; initializer String
-	db "<% 6i> <% 6i> <% 6li> <% 6li> <% 6u> <% 6lu>", 10, 0
-
-string_3C252B206i3E203C252B206i3E203C252B206li3E203C252B206li3E203C252B206u3E203C252B206lu3E0A#:
-	; initializer String
-	db "<%+ 6i> <%+ 6i> <%+ 6li> <%+ 6li> <%+ 6u> <%+ 6lu>", 10, 0
-
-string_3C252D206i3E203C252D206i3E203C252D206li3E203C252D206li3E203C252D206u3E203C252D206lu3E0A#:
-	; initializer String
-	db "<%- 6i> <%- 6i> <%- 6li> <%- 6li> <%- 6u> <%- 6lu>", 10, 0
-
-string_3C252B2D206i3E203C252B2D206i3E203C252B2D206li3E203C252B2D206li3E203C252B2D206u3E203C252B2D206lu3E0A0A#:
-	; initializer String
-	db "<%+- 6i> <%+- 6i> <%+- 6li> <%+- 6li> <%+- 6u> <%+- 6lu>", 10, 10, 0
-
-string_3C25x3E203C25X3E203C25o3E203C25lx3E203C25lX3E203C25lo3E0A#:
-	; initializer String
-	db "<%x> <%X> <%o> <%lx> <%lX> <%lo>", 10, 0
-
-string_3C2523x3E203C2523X3E203C2523o3E203C2523lx3E203C2523lX3E203C2523lo3E0A#:
-	; initializer String
-	db "<%#x> <%#X> <%#o> <%#lx> <%#lX> <%#lo>", 10, 0
-
-string_3C25253E203C25s3E203C25c3E203C25p3E0A0A#:
-	; initializer String
-	db "<%%> <%s> <%c> <%p>", 10, 10, 0
-
-string_Hello2C20World21#:
-	; initializer String
-	db "Hello, World!", 0
-
-string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A#:
-	; initializer String
-	db "<%f> <%e> <%E> <%g> <%G>", 10, 0
-
-string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A#:
-	; initializer String
-	db "<%lf> <%le> <%lE> <%lg> <%lG>", 10, 0
-
-string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A#:
-	; initializer String
-	db "<%#f> <%#e> <%#E> <%#g> <%#G>", 10, 0
-
-string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A#:
-	; initializer String
-	db "<%#lf> <%#le> <%#lE> <%#lg> <%#lG>", 10, 0
-
-string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A#:
-	; initializer String
-	db "<%6.3f> <%6.3e> <%6.3E> <%6.3g> <%6.3G>", 10, 0
-
-string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A#:
-	; initializer String
-	db "<%6.3lf> <%6.3le> <%6.3lE> <%6.3lg> <%6.3lG>", 10, 10, 0
-
-string_Please20write20the20patterns205Babc5D3A20#:
-	; initializer String
-	db "Please write the patterns [abc]: ", 0
-
-string_255Babc5D#:
-	; initializer String
-	db "%[abc]", 0
-
-string_0A3C25s3E0A#:
-	; initializer String
-	db 10, "<%s>", 10, 0
-
-string_Please20write20the20patterns205B5Eabc5D3A20#:
-	; initializer String
-	db "Please write the patterns [^abc]: ", 0
-
-string_255B5Eabc5D#:
-	; initializer String
-	db "%[^abc]", 0
-
-string_0A3C25s3E#:
-	; initializer String
-	db 10, "<%s>", 0
-
-float8$123.456#:
-	; initializer Double
-	dq 123.456
-
-float8$123456.1#:
-	; initializer Double
-	dq 123456.1
-
-float8$minus123.456#:
-	; initializer Double
-	dq -123.456
-
-float8$minus0.000000123456#:
-	; initializer Double
-	dq -0.000000123456

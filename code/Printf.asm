@@ -35,6 +35,28 @@
 	extern tolower
 	extern isdigit
 	extern $StackTop
+
+section .text
+
+
+section .data
+
+g_outStatus:
+	; initializer zero 4
+	times 4 db 0
+
+section .data
+
+g_outChars:
+	; initializer zero 4
+	times 4 db 0
+
+section .data
+
+g_outDevice:
+	; initializer zero 8
+	times 8 db 0
+
 section .text
 
  putc:
@@ -85,6 +107,8 @@ section .text
  putc$9:
 	; function end putc
 
+section .text
+
  fputc:
 	; g_outStatus = int4$0#
 	mov dword [g_outStatus], 0
@@ -133,6 +157,8 @@ section .text
  fputc$9:
 	; function end fputc
 
+section .text
+
  putchar:
 	; g_outStatus = int4$0#
 	mov dword [g_outStatus], 0
@@ -180,6 +206,8 @@ section .text
 
  putchar$9:
 	; function end putchar
+
+section .text
 
  printChar:
 	; empty
@@ -310,6 +338,8 @@ section .text
 
  printChar$30:
 	; function end printChar
+
+section .text
 
  printString:
 	; if s == int8$0# goto 33
@@ -572,6 +602,14 @@ section .text
  printString$58:
 	; function end printString
 
+section .data
+
+int8$10#:
+	; initializer Signed_Long_Int
+	dq 10
+
+section .text
+
  printLongIntRec:
 	; if longValue == int8$0# goto 15
 	cmp qword [rbp + 24], 0
@@ -655,6 +693,8 @@ section .text
 
  printLongIntRec$16:
 	; function end printLongIntRec
+
+section .text
 
  printLongInt:
 	; if longValue >= int8$0# goto 8
@@ -793,6 +833,8 @@ section .text
  printLongInt$30:
 	; function end printLongInt
 
+section .text
+
  digitToChar:
 	; if digit >= int4$10# goto 4
 	cmp dword [rbp + 24], 10
@@ -870,6 +912,8 @@ section .text
 
  digitToChar$13:
 	; function end digitToChar
+
+section .text
 
  printUnsignedLongRec:
 	; if unsignedValue <= int8$0# goto 22
@@ -979,6 +1023,8 @@ section .text
 
  printUnsignedLongRec$23:
 	; function end printUnsignedLongRec
+
+section .text
 
  printUnsignedLong:
 	; if plus == int4$0# goto 5
@@ -1171,6 +1217,26 @@ section .text
  printUnsignedLong$42:
 	; function end printUnsignedLong
 
+section .data
+
+container8bytes#:
+	; initializer zero 8
+	times 8 db 0
+
+section .data
+
+float8$10.0#:
+	; initializer LongDouble
+	dq 10.0
+
+section .data
+
+container4bytes#:
+	; initializer zero 4
+	times 4 db 0
+
+section .text
+
  printLongDoubleFraction:
 	; push float longDoubleValue
 	fld qword [rbp + 24]
@@ -1330,6 +1396,8 @@ section .text
  printLongDoubleFraction$35:
 	; function end printLongDoubleFraction
 
+section .text
+
  printLongDoublePlain:
 	; push float longDoubleValue
 	fld qword [rbp + 24]
@@ -1479,6 +1547,8 @@ section .text
 
  printLongDoublePlain$33:
 	; function end printLongDoublePlain
+
+section .text
 
  printLongDoubleExpo:
 	; push float value
@@ -1843,6 +1913,8 @@ section .text
  printLongDoubleExpo$81:
 	; function end printLongDoubleExpo
 
+section .text
+
  checkWidthAndPrecision:
 	; if widthPtr == int8$0# goto 9
 	cmp qword [rbp + 32], 0
@@ -1930,6 +2002,8 @@ section .text
  checkWidthAndPrecision$19:
 	; function end checkWidthAndPrecision
 
+section .text
+
  testY:
 	; empty
 
@@ -1942,6 +2016,8 @@ section .text
 
  testY$2:
 	; function end testY
+
+section .text
 
  testX:
 	; empty
@@ -1977,6 +2053,8 @@ section .text
 
  testX$7:
 	; function end testX
+
+section .text
 
  printArgument:
 	; £temporary1767 -> format = *format
@@ -3561,6 +3639,14 @@ section .text
  printArgument$360:
 	; function end printArgument
 
+section .data
+
+int4$10#:
+	; initializer SignedInt
+	dd 10
+
+section .text
+
  printFormat:
 	; width = int4$0#
 	mov dword [rbp + 44], 0
@@ -4897,6 +4983,8 @@ section .text
  printFormat$298:
 	; function end printFormat
 
+section .text
+
  printf:
 	; empty
 
@@ -4951,6 +5039,8 @@ section .text
  printf$11:
 	; function end printf
 
+section .text
+
  vprintf:
 	; call header integral zero 0 stack zero 0
 
@@ -4991,6 +5081,8 @@ section .text
 
  vprintf$8:
 	; function end vprintf
+
+section .text
 
  fprintf:
 	; empty
@@ -5051,6 +5143,8 @@ section .text
  fprintf$12:
 	; function end fprintf
 
+section .text
+
  vfprintf:
 	; g_outStatus = int4$0#
 	mov dword [g_outStatus], 0
@@ -5098,6 +5192,8 @@ section .text
 
  vfprintf$10:
 	; function end vfprintf
+
+section .text
 
  sprintf:
 	; empty
@@ -5158,6 +5254,8 @@ section .text
  sprintf$12:
 	; function end sprintf
 
+section .text
+
  vsprintf:
 	; g_outStatus = int4$1#
 	mov dword [g_outStatus], 1
@@ -5205,36 +5303,3 @@ section .text
 
  vsprintf$10:
 	; function end vsprintf
-section .data
-
-g_outStatus:
-	; initializer zero 4
-	times 4 db 0
-
-g_outChars:
-	; initializer zero 4
-	times 4 db 0
-
-g_outDevice:
-	; initializer zero 8
-	times 8 db 0
-
-int8$10#:
-	; initializer Signed_Long_Int
-	dq 10
-
-container8bytes#:
-	; initializer zero 8
-	times 8 db 0
-
-float8$10.0#:
-	; initializer LongDouble
-	dq 10.0
-
-container4bytes#:
-	; initializer zero 4
-	times 4 db 0
-
-int4$10#:
-	; initializer SignedInt
-	dd 10

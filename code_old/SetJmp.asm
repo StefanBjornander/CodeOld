@@ -2,6 +2,10 @@
 	global longjmp
 
 	extern $StackTop
+
+section .text
+
+
 section .text
 
  setjmp:
@@ -61,6 +65,8 @@ section .text
  setjmp$12:
 	; function end setjmp
 
+section .text
+
  longjmp:
 	; ebx = return_value
 	mov ebx, [rbp + 32]
@@ -102,4 +108,3 @@ section .text
 
  longjmp$9:
 	; function end longjmp
-section .data

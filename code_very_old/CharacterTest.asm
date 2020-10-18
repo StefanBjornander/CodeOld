@@ -25,7 +25,7 @@ section .text
 	mov qword [rbp + 49], string_ascii2025i0A#
 
  character_test$2:
-	; £temporary3023 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3023 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -57,7 +57,7 @@ section .text
 	mov qword [rbp + 49], string_islower282725c2729203D2025s0A#
 
  character_test$8:
-	; £temporary3025 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3025 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -73,7 +73,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  character_test$11:
-	; £temporary3026 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3026 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -139,7 +139,7 @@ section .text
 	mov qword [rbp + 49], string_isupper282725c2729203D2025s0A#
 
  character_test$25:
-	; £temporary3031 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3031 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -155,7 +155,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  character_test$28:
-	; £temporary3032 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3032 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -221,7 +221,7 @@ section .text
 	mov qword [rbp + 49], string_isalpha282725c2729203D2025s0A#
 
  character_test$42:
-	; £temporary3037 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3037 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -237,7 +237,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  character_test$45:
-	; £temporary3038 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3038 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -303,7 +303,7 @@ section .text
 	mov qword [rbp + 49], string_isdigit282725c2729203D2025s0A#
 
  character_test$59:
-	; £temporary3043 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3043 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -319,7 +319,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  character_test$62:
-	; £temporary3044 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3044 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -385,7 +385,7 @@ section .text
 	mov qword [rbp + 49], string_isalnum282725c2729203D2025s0A#
 
  character_test$76:
-	; £temporary3049 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3049 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -401,7 +401,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  character_test$79:
-	; £temporary3050 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3050 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -467,7 +467,7 @@ section .text
 	mov qword [rbp + 49], string_isxdigit282725c2729203D2025s0A#
 
  character_test$93:
-	; £temporary3055 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3055 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -483,7 +483,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  character_test$96:
-	; £temporary3056 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3056 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -549,7 +549,7 @@ section .text
 	mov qword [rbp + 49], string_isgraph282725c2729203D2025s0A#
 
  character_test$110:
-	; £temporary3061 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3061 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -565,7 +565,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  character_test$113:
-	; £temporary3062 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3062 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -631,7 +631,7 @@ section .text
 	mov qword [rbp + 49], string_isprint282725c2729203D2025s0A#
 
  character_test$127:
-	; £temporary3067 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3067 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -647,7 +647,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  character_test$130:
-	; £temporary3068 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3068 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -713,7 +713,7 @@ section .text
 	mov qword [rbp + 49], string_ispunct282725c2729203D2025s0A#
 
  character_test$144:
-	; £temporary3073 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3073 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -729,7 +729,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  character_test$147:
-	; £temporary3074 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3074 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -795,7 +795,7 @@ section .text
 	mov qword [rbp + 49], string_iscntrl282725c2729203D2025s0A#
 
  character_test$161:
-	; £temporary3079 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3079 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -811,7 +811,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  character_test$164:
-	; £temporary3080 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3080 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -877,7 +877,7 @@ section .text
 	mov qword [rbp + 49], string_isspace282725c2729203D2025s0A#
 
  character_test$178:
-	; £temporary3085 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3085 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -893,7 +893,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  character_test$181:
-	; £temporary3086 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3086 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -959,7 +959,7 @@ section .text
 	mov qword [rbp + 49], string_tolower282725c2729203D202725c270A#
 
  character_test$195:
-	; £temporary3091 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3091 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -975,7 +975,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  character_test$198:
-	; £temporary3092 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3092 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -1001,14 +1001,14 @@ section .text
 	; £temporary3093 = return_value
 
  character_test$203:
-	; £temporary3094 = int_to_int £temporary3093 (Signed_Int -> Signed_Char)
+	; £temporary3094 = int_to_int £temporary3093 (SignedInt -> SignedChar)
 	cmp ebx, 0
 	jge character_test$204
 	neg ebx
 	neg bl
 
  character_test$204:
-	; £temporary3095 = int_to_int £temporary3094 (Signed_Char -> Signed_Int)
+	; £temporary3095 = int_to_int £temporary3094 (SignedChar -> SignedInt)
 	and ebx, 255
 	cmp bl, 0
 	jge character_test$205
@@ -1039,7 +1039,7 @@ section .text
 	mov qword [rbp + 49], string_toupper282725c2729203D202725c270A0A#
 
  character_test$210:
-	; £temporary3097 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3097 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -1055,7 +1055,7 @@ section .text
 	; call header integral zero 0 stack zero 0
 
  character_test$213:
-	; £temporary3098 = int_to_int c (Signed_Char -> Signed_Int)
+	; £temporary3098 = int_to_int c (SignedChar -> SignedInt)
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -1081,14 +1081,14 @@ section .text
 	; £temporary3099 = return_value
 
  character_test$218:
-	; £temporary3100 = int_to_int £temporary3099 (Signed_Int -> Signed_Char)
+	; £temporary3100 = int_to_int £temporary3099 (SignedInt -> SignedChar)
 	cmp ebx, 0
 	jge character_test$219
 	neg ebx
 	neg bl
 
  character_test$219:
-	; £temporary3101 = int_to_int £temporary3100 (Signed_Char -> Signed_Int)
+	; £temporary3101 = int_to_int £temporary3100 (SignedChar -> SignedInt)
 	and ebx, 255
 	cmp bl, 0
 	jge character_test$220
