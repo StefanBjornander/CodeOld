@@ -1,60 +1,56 @@
-0: SignedGreaterThanEqual 58 size 5
+0: SignedGreaterThanEqual 54 size 5
 1: Assign c 97
-2: SignedGreaterThan 58 c 122
-3: IntegralToIntegral £temporary1041 size
-4: BinaryAdd £temporary1043 name £temporary1041
-5: Dereference £temporary1040 -> £temporary1043 £temporary1043 0
-6: Assign £temporary1040 -> £temporary1043 c
-7: BinaryAdd £temporary1044 size 1
-8: IntegralToIntegral £temporary1046 £temporary1044
-9: BinaryAdd £temporary1048 name £temporary1046
-10: Dereference £temporary1045 -> £temporary1048 £temporary1048 0
-11: Assign £temporary1045 -> £temporary1048 0
-12: PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-13: Parameter pointer name 65
-14: Call fileexists 41 0
-15: PostCall 41
-16: GetReturnValue £temporary1049
-17: NotEqual 45 £temporary1049 0
-18: Case 22 status 0
-19: Case 23 status 1
-20: CaseEnd status
-21: Goto 45
-22: Return name
-23: PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-24: Parameter pointer name 65
-25: Call existsTempName 41 0
-26: PostCall 41
-27: GetReturnValue £temporary1052
-28: NotEqual 45 £temporary1052 0
-29: PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-30: IntegralToIntegral £temporary1056 g_tempSize
-31: UnsignedMultiply £temporary1057 £temporary1056 4
-32: BinaryAdd £temporary1058 g_tempArray £temporary1057
-33: Dereference £temporary1055 -> £temporary1058 £temporary1058 0
-34: Parameter pointer £temporary1055 -> £temporary1058 65
-35: Parameter pointer name 73
-36: Call strcpy 41 0
-37: PostCall 41
-38: Assign £temporary1060 g_tempSize
-39: BinaryAdd g_tempSize g_tempSize 1
-40: IntegralToIntegral £temporary1062 £temporary1060
-41: UnsignedMultiply £temporary1063 £temporary1062 4
-42: BinaryAdd £temporary1064 g_tempArray £temporary1063
-43: Dereference £temporary1061 -> £temporary1064 £temporary1064 0
-44: Return £temporary1061 -> £temporary1064
-45: PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-46: Parameter pointer name 65
-47: BinaryAdd £temporary1065 size 1
-48: Parameter signedint £temporary1065 73
-49: Parameter signedint status 77
-50: Call generateTempName 41 0
-51: PostCall 41
-52: GetReturnValue £temporary1066
-53: Assign result £temporary1066
-54: Equal 56 result 0
-55: Return result
-56: BinaryAdd c c 1
-57: Goto 2
-58: Return 0
-59: FunctionEnd generateTempName
+2: SignedGreaterThan 54 c 122
+3: BinaryAdd £temporary1039 name size
+4: Dereference £temporary1037 -> £temporary1039 £temporary1039 0
+5: Assign £temporary1037 -> £temporary1039 c
+6: BinaryAdd £temporary1040 size 1
+7: BinaryAdd £temporary1043 name £temporary1040
+8: Dereference £temporary1041 -> £temporary1043 £temporary1043 0
+9: Assign £temporary1041 -> £temporary1043 0
+10: PreCall 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+11: Parameter pointer name 19
+12: Call fileexists 13 0
+13: PostCall 13
+14: GetReturnValue £temporary1044
+15: NotEqual 41 £temporary1044 0
+16: Case 20 status 0
+17: Case 21 status 1
+18: CaseEnd status
+19: Goto 41
+20: Return name
+21: PreCall 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+22: Parameter pointer name 19
+23: Call existsTempName 13 0
+24: PostCall 13
+25: GetReturnValue £temporary1047
+26: NotEqual 41 £temporary1047 0
+27: PreCall 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+28: UnsignedMultiply £temporary1051 g_tempSize 4
+29: BinaryAdd £temporary1052 g_tempArray £temporary1051
+30: Dereference £temporary1050 -> £temporary1052 £temporary1052 0
+31: Parameter pointer £temporary1050 -> £temporary1052 19
+32: Parameter pointer name 21
+33: Call strcpy 13 0
+34: PostCall 13
+35: Assign £temporary1054 g_tempSize
+36: BinaryAdd g_tempSize g_tempSize 1
+37: UnsignedMultiply £temporary1056 £temporary1054 4
+38: BinaryAdd £temporary1057 g_tempArray £temporary1056
+39: Dereference £temporary1055 -> £temporary1057 £temporary1057 0
+40: Return £temporary1055 -> £temporary1057
+41: PreCall 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+42: Parameter pointer name 19
+43: BinaryAdd £temporary1058 size 1
+44: Parameter signedint £temporary1058 21
+45: Parameter signedint status 23
+46: Call generateTempName 13 0
+47: PostCall 13
+48: GetReturnValue £temporary1059
+49: Assign result £temporary1059
+50: Equal 52 result 0
+51: Return result
+52: BinaryAdd c c 1
+53: Goto 2
+54: Return 0
+55: FunctionEnd generateTempName
