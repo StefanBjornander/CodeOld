@@ -1,60 +1,60 @@
-0: if size >= int4$5# goto 58
-1: c = int1$97#
-2: if c > int1$122# goto 58
-3: £temporary1041 = int_to_int size (SignedInt -> Pointer)
-4: £temporary1043 = name + £temporary1041
-5: £temporary1040 -> £temporary1043 = *£temporary1043
-6: £temporary1040 -> £temporary1043 = c
-7: £temporary1044 = size + int4$1#
-8: £temporary1046 = int_to_int £temporary1044 (SignedInt -> Pointer)
-9: £temporary1048 = name + £temporary1046
-10: £temporary1045 -> £temporary1048 = *£temporary1048
-11: £temporary1045 -> £temporary1048 = int1$0#
-12: call header integral zero 0 stack zero 0
-13: parameter name, offset 65
-14: call function noellipse-noellipse fileexists
-15: post call
-16: £temporary1049 = return_value
-17: if £temporary1049 != int4$0# goto 45
-18: case status == int4$0# goto 22
-19: case status == int4$1# goto 23
-20: case end status
-21: goto 45
-22: return name
-23: call header integral zero 0 stack zero 0
-24: parameter name, offset 65
-25: call function noellipse-noellipse existsTempName
-26: post call
-27: £temporary1052 = return_value
-28: if £temporary1052 != int4$0# goto 45
-29: call header integral zero 0 stack zero 0
-30: £temporary1056 = int_to_int g_tempSize (SignedInt -> Array)
-31: £temporary1057 = £temporary1056 * Array_4#
-32: £temporary1058 = g_tempArray + £temporary1057
-33: £temporary1055 -> £temporary1058 = *£temporary1058
-34: parameter £temporary1055 -> £temporary1058, offset 65
-35: parameter name, offset 73
-36: call function noellipse-noellipse strcpy
-37: post call
-38: £temporary1060 = g_tempSize
-39: g_tempSize = g_tempSize + int4$1#
-40: £temporary1062 = int_to_int £temporary1060 (SignedInt -> Array)
-41: £temporary1063 = £temporary1062 * Array_4#
-42: £temporary1064 = g_tempArray + £temporary1063
-43: £temporary1061 -> £temporary1064 = *£temporary1064
-44: return £temporary1061 -> £temporary1064
-45: call header integral zero 0 stack zero 0
-46: parameter name, offset 65
-47: £temporary1065 = size + int4$1#
-48: parameter £temporary1065, offset 73
-49: parameter status, offset 77
-50: call function noellipse-noellipse generateTempName
-51: post call
-52: £temporary1066 = return_value
-53: result = £temporary1066
-54: if result == int8$0# goto 56
-55: return result
-56: c = c + int1$1#
-57: goto 2
-58: return int8$0#
-59: function end generateTempName
+0: SignedGreaterThanEqual 58 size 5
+1: Assign c 97
+2: SignedGreaterThan 58 c 122
+3: IntegralToIntegral £temporary1041 size
+4: BinaryAdd £temporary1043 name £temporary1041
+5: Dereference £temporary1040 -> £temporary1043 £temporary1043 0
+6: Assign £temporary1040 -> £temporary1043 c
+7: BinaryAdd £temporary1044 size 1
+8: IntegralToIntegral £temporary1046 £temporary1044
+9: BinaryAdd £temporary1048 name £temporary1046
+10: Dereference £temporary1045 -> £temporary1048 £temporary1048 0
+11: Assign £temporary1045 -> £temporary1048 0
+12: PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+13: Parameter pointer name 65
+14: Call fileexists 41 0
+15: PostCall 41
+16: GetReturnValue £temporary1049
+17: NotEqual 45 £temporary1049 0
+18: Case 22 status 0
+19: Case 23 status 1
+20: CaseEnd status
+21: Goto 45
+22: Return name
+23: PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+24: Parameter pointer name 65
+25: Call existsTempName 41 0
+26: PostCall 41
+27: GetReturnValue £temporary1052
+28: NotEqual 45 £temporary1052 0
+29: PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+30: IntegralToIntegral £temporary1056 g_tempSize
+31: UnsignedMultiply £temporary1057 £temporary1056 4
+32: BinaryAdd £temporary1058 g_tempArray £temporary1057
+33: Dereference £temporary1055 -> £temporary1058 £temporary1058 0
+34: Parameter pointer £temporary1055 -> £temporary1058 65
+35: Parameter pointer name 73
+36: Call strcpy 41 0
+37: PostCall 41
+38: Assign £temporary1060 g_tempSize
+39: BinaryAdd g_tempSize g_tempSize 1
+40: IntegralToIntegral £temporary1062 £temporary1060
+41: UnsignedMultiply £temporary1063 £temporary1062 4
+42: BinaryAdd £temporary1064 g_tempArray £temporary1063
+43: Dereference £temporary1061 -> £temporary1064 £temporary1064 0
+44: Return £temporary1061 -> £temporary1064
+45: PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+46: Parameter pointer name 65
+47: BinaryAdd £temporary1065 size 1
+48: Parameter signedint £temporary1065 73
+49: Parameter signedint status 77
+50: Call generateTempName 41 0
+51: PostCall 41
+52: GetReturnValue £temporary1066
+53: Assign result £temporary1066
+54: Equal 56 result 0
+55: Return result
+56: BinaryAdd c c 1
+57: Goto 2
+58: Return 0
+59: FunctionEnd generateTempName

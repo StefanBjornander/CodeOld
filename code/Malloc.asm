@@ -17,60 +17,60 @@
 section .data
 
 g_firstBlockPtr:
-	; initializer Pointer
+	; Initializer Pointer 0
 	dq 0
 
 section .data
 
 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
-	; initializer String
+	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
 string_memorySize203E3D200#:
-	; initializer String
+	; Initializer String memorySize >= 0
 	db "memorySize >= 0", 0
 
 section .data
 
 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#:
-	; initializer String
+	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c", 0
 
 section .text
 
  malloc:
-	; if memorySize >= int4$0# goto 12
+	; SignedGreaterThanEqual 12 memorySize 0
 	cmp dword [rbp + 24], 0
 	jge malloc$12
 
  malloc$1:
-	; call header integral zero 0 stack zero 0
+	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc$2:
-	; parameter stderr, offset 52
+	; Parameter pointer stderr 52
 	mov rax, [stderr]
 	mov [rbp + 52], rax
 
  malloc$3:
-	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 60
+	; Parameter pointer "Assertion failed: "%s" in file %s at line %i\n" 60
 	mov qword [rbp + 60], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  malloc$4:
-	; parameter string_memorySize203E3D200#, offset 68
+	; Parameter pointer "memorySize >= 0" 68
 	mov qword [rbp + 68], string_memorySize203E3D200#
 
  malloc$5:
-	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#, offset 76
+	; Parameter pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c" 76
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  malloc$6:
-	; parameter int4$25#, offset 84
+	; Parameter signedint 25 84
 	mov dword [rbp + 84], 25
 
  malloc$7:
-	; call function noellipse-ellipse fprintf, extra 20
+	; Call fprintf 28 20
 	mov qword [rbp + 28], malloc$8
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -79,28 +79,28 @@ section .text
 	jmp fprintf
 
  malloc$8:
-	; post call
+	; PostCall 28
 
  malloc$9:
-	; call header integral zero 0 stack zero 0
+	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc$10:
-	; call function noellipse-noellipse abort
+	; Call abort 28 0
 	mov qword [rbp + 28], malloc$11
 	mov [rbp + 36], rbp
 	add rbp, 28
 	jmp abort
 
  malloc$11:
-	; post call
+	; PostCall 28
 
  malloc$12:
-	; if memorySize != int4$0# goto 14
+	; NotEqual 14 memorySize 0
 	cmp dword [rbp + 24], 0
 	jne malloc$14
 
  malloc$13:
-	; return int8$0#
+	; Return 0
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -108,318 +108,318 @@ section .text
 	jmp rax
 
  malloc$14:
-	; £temporary142 = int_to_int memorySize (SignedInt -> Unsigned_Int)
+	; IntegralToIntegral £temporary142 memorySize
 	mov eax, [rbp + 24]
 
  malloc$15:
-	; newBlockSize = £temporary142 + int4$12#
+	; BinaryAdd newBlockSize £temporary142 12
 	add eax, 12
 	mov [rbp + 28], eax
 
  malloc$16:
-	; minGap = int4$0#
+	; Assign minGap 0
 	mov dword [rbp + 32], 0
 
  malloc$17:
-	; stack_top
+	; StackTop £temporary144
 	mov rax, $StackTop
 
  malloc$18:
-	; £temporary145 = £temporary144 + int8$1048572#
+	; BinaryAdd £temporary145 £temporary144 1048572
 	add rax, 1048572
 
  malloc$19:
-	; £temporary147 = int_to_int £temporary145 (Pointer -> Unsigned_Int)
+	; IntegralToIntegral £temporary147 £temporary145
 
  malloc$20:
-	; lastAddress = £temporary147
+	; Assign lastAddress £temporary147
 	mov [rbp + 36], eax
 
  malloc$21:
-	; minBlockPtr = int8$0#
+	; Assign minBlockPtr 0
 	mov qword [rbp + 40], 0
 
  malloc$22:
-	; minPrevBlockPtr = int8$0#
+	; Assign minPrevBlockPtr 0
 	mov qword [rbp + 48], 0
 
  malloc$23:
-	; prevBlockPtr = int8$0#
+	; Assign prevBlockPtr 0
 	mov qword [rbp + 56], 0
 
  malloc$24:
-	; currBlockPtr = g_firstBlockPtr
+	; Assign currBlockPtr g_firstBlockPtr
 	mov rax, [g_firstBlockPtr]
 	mov [rbp + 64], rax
 
  malloc$25:
-	; if currBlockPtr == int8$0# goto 43
+	; Equal 43 currBlockPtr 0
 	cmp qword [rbp + 64], 0
 	je malloc$43
 
  malloc$26:
-	; £temporary149 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
+	; IntegralToIntegral £temporary149 currBlockPtr
 	mov rax, [rbp + 64]
 
  malloc$27:
-	; currAddress = £temporary149
+	; Assign currAddress £temporary149
 	mov [rbp + 72], eax
 
  malloc$28:
-	; £temporary150 -> currBlockPtr = *currBlockPtr
+	; Dereference £temporary150 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 64]
 
  malloc$29:
-	; £temporary151 = currAddress + £temporary150 -> currBlockPtr
+	; BinaryAdd £temporary151 currAddress £temporary150 -> currBlockPtr
 	mov eax, [rbp + 72]
 	add eax, [rsi]
 
  malloc$30:
-	; £temporary152 = £temporary151 + int4$12#
+	; BinaryAdd £temporary152 £temporary151 12
 	add eax, 12
 
  malloc$31:
-	; currGap = lastAddress - £temporary152
+	; BinarySubtract currGap lastAddress £temporary152
 	mov ebx, [rbp + 36]
 	sub ebx, eax
 	mov [rbp + 76], ebx
 
  malloc$32:
-	; if newBlockSize > currGap goto 38
+	; UnsignedGreaterThan 38 newBlockSize currGap
 	mov eax, [rbp + 76]
 	cmp [rbp + 28], eax
 	ja malloc$38
 
  malloc$33:
-	; if minGap == int4$0# goto 35
+	; Equal 35 minGap 0
 	cmp dword [rbp + 32], 0
 	je malloc$35
 
  malloc$34:
-	; if currGap >= minGap goto 38
+	; UnsignedGreaterThanEqual 38 currGap minGap
 	mov eax, [rbp + 32]
 	cmp [rbp + 76], eax
 	jae malloc$38
 
  malloc$35:
-	; minGap = currGap
+	; Assign minGap currGap
 	mov eax, [rbp + 76]
 	mov [rbp + 32], eax
 
  malloc$36:
-	; minBlockPtr = currBlockPtr
+	; Assign minBlockPtr currBlockPtr
 	mov rax, [rbp + 64]
 	mov [rbp + 40], rax
 
  malloc$37:
-	; minPrevBlockPtr = prevBlockPtr
+	; Assign minPrevBlockPtr prevBlockPtr
 	mov rax, [rbp + 56]
 	mov [rbp + 48], rax
 
  malloc$38:
-	; lastAddress = currAddress
+	; Assign lastAddress currAddress
 	mov eax, [rbp + 72]
 	mov [rbp + 36], eax
 
  malloc$39:
-	; prevBlockPtr = currBlockPtr
+	; Assign prevBlockPtr currBlockPtr
 	mov rax, [rbp + 64]
 	mov [rbp + 56], rax
 
  malloc$40:
-	; £temporary159 -> currBlockPtr = *currBlockPtr
+	; Dereference £temporary159 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 64]
 
  malloc$41:
-	; currBlockPtr = £temporary159 -> currBlockPtr
+	; Assign currBlockPtr £temporary159 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [rbp + 64], rax
 
  malloc$42:
-	; goto 25
+	; Goto 25
 	jmp malloc$25
 
  malloc$43:
-	; if minBlockPtr == int8$0# goto 62
+	; Equal 62 minBlockPtr 0
 	cmp qword [rbp + 40], 0
 	je malloc$62
 
  malloc$44:
-	; £temporary161 = int_to_int minBlockPtr (Pointer -> Unsigned_Int)
+	; IntegralToIntegral £temporary161 minBlockPtr
 	mov rax, [rbp + 40]
 
  malloc$45:
-	; £temporary162 -> minBlockPtr = *minBlockPtr
+	; Dereference £temporary162 -> minBlockPtr minBlockPtr 0
 	mov rsi, [rbp + 40]
 
  malloc$46:
-	; £temporary163 = £temporary161 + £temporary162 -> minBlockPtr
+	; BinaryAdd £temporary163 £temporary161 £temporary162 -> minBlockPtr
 	add eax, [rsi]
 
  malloc$47:
-	; newAddress = £temporary163 + int4$12#
+	; BinaryAdd newAddress £temporary163 12
 	add eax, 12
 	mov [rbp + 72], eax
 
  malloc$48:
-	; £temporary165 = int_to_int newAddress (Unsigned_Int -> Pointer)
+	; IntegralToIntegral £temporary165 newAddress
 	mov eax, [rbp + 72]
 	mov rbx, 4294967295
 	and rax, rbx
 
  malloc$49:
-	; newBlockPtr = £temporary165
+	; Assign newBlockPtr £temporary165
 	mov [rbp + 76], rax
 
  malloc$50:
-	; £temporary166 -> newBlockPtr = *newBlockPtr
+	; Dereference £temporary166 -> newBlockPtr newBlockPtr 0
 	mov rsi, [rbp + 76]
 
  malloc$51:
-	; £temporary166 -> newBlockPtr = memorySize
+	; Assign £temporary166 -> newBlockPtr memorySize
 	mov eax, [rbp + 24]
 	mov [rsi], eax
 
  malloc$52:
-	; £temporary167 -> newBlockPtr = *newBlockPtr
+	; Dereference £temporary167 -> newBlockPtr newBlockPtr 0
 	mov rsi, [rbp + 76]
 
  malloc$53:
-	; £temporary167 -> newBlockPtr = minBlockPtr
+	; Assign £temporary167 -> newBlockPtr minBlockPtr
 	mov rax, [rbp + 40]
 	mov [rsi + 4], rax
 
  malloc$54:
-	; if minPrevBlockPtr == int8$0# goto 58
+	; Equal 58 minPrevBlockPtr 0
 	cmp qword [rbp + 48], 0
 	je malloc$58
 
  malloc$55:
-	; £temporary169 -> minPrevBlockPtr = *minPrevBlockPtr
+	; Dereference £temporary169 -> minPrevBlockPtr minPrevBlockPtr 0
 	mov rsi, [rbp + 48]
 
  malloc$56:
-	; £temporary169 -> minPrevBlockPtr = newBlockPtr
+	; Assign £temporary169 -> minPrevBlockPtr newBlockPtr
 	mov rax, [rbp + 76]
 	mov [rsi + 4], rax
 
  malloc$57:
-	; goto 59
+	; Goto 59
 	jmp malloc$59
 
  malloc$58:
-	; g_firstBlockPtr = newBlockPtr
+	; Assign g_firstBlockPtr newBlockPtr
 	mov rax, [rbp + 76]
 	mov [g_firstBlockPtr], rax
 
  malloc$59:
-	; £temporary170 = newAddress + int4$12#
+	; BinaryAdd £temporary170 newAddress 12
 	mov ebx, [rbp + 72]
 	add ebx, 12
 
  malloc$60:
-	; £temporary171 = int_to_int £temporary170 (Unsigned_Int -> Pointer)
+	; IntegralToIntegral £temporary171 £temporary170
 	mov rax, 4294967295
 	and rbx, rax
 
  malloc$61:
-	; return £temporary171
+	; Return £temporary171
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  malloc$62:
-	; newAddress = lastAddress - newBlockSize
+	; BinarySubtract newAddress lastAddress newBlockSize
 	mov eax, [rbp + 36]
 	sub eax, [rbp + 28]
 	mov [rbp + 72], eax
 
  malloc$63:
-	; £temporary173 = rbp
+	; InspectRegister £temporary173 rbp
 
  malloc$64:
-	; £temporary174 = int_to_int £temporary173 (UnsignedLongInt -> Unsigned_Int)
+	; IntegralToIntegral £temporary174 £temporary173
 
  malloc$65:
-	; stackTop = £temporary174
+	; Assign stackTop £temporary174
 	mov [rbp + 76], ebp
 
  malloc$66:
-	; if stackTop > newAddress goto 81
+	; UnsignedGreaterThan 81 stackTop newAddress
 	mov eax, [rbp + 72]
 	cmp [rbp + 76], eax
 	ja malloc$81
 
  malloc$67:
-	; £temporary176 = int_to_int newAddress (Unsigned_Int -> Pointer)
+	; IntegralToIntegral £temporary176 newAddress
 	mov eax, [rbp + 72]
 	mov rbx, 4294967295
 	and rax, rbx
 
  malloc$68:
-	; newBlockPtr = £temporary176
+	; Assign newBlockPtr £temporary176
 	mov [rbp + 80], rax
 
  malloc$69:
-	; £temporary177 -> newBlockPtr = *newBlockPtr
+	; Dereference £temporary177 -> newBlockPtr newBlockPtr 0
 	mov rsi, [rbp + 80]
 
  malloc$70:
-	; £temporary177 -> newBlockPtr = memorySize
+	; Assign £temporary177 -> newBlockPtr memorySize
 	mov eax, [rbp + 24]
 	mov [rsi], eax
 
  malloc$71:
-	; £temporary178 -> newBlockPtr = *newBlockPtr
+	; Dereference £temporary178 -> newBlockPtr newBlockPtr 0
 	mov rsi, [rbp + 80]
 
  malloc$72:
-	; £temporary178 -> newBlockPtr = int8$0#
+	; Assign £temporary178 -> newBlockPtr 0
 	mov qword [rsi + 4], 0
 
  malloc$73:
-	; if prevBlockPtr == int8$0# goto 77
+	; Equal 77 prevBlockPtr 0
 	cmp qword [rbp + 56], 0
 	je malloc$77
 
  malloc$74:
-	; £temporary180 -> prevBlockPtr = *prevBlockPtr
+	; Dereference £temporary180 -> prevBlockPtr prevBlockPtr 0
 	mov rsi, [rbp + 56]
 
  malloc$75:
-	; £temporary180 -> prevBlockPtr = newBlockPtr
+	; Assign £temporary180 -> prevBlockPtr newBlockPtr
 	mov rax, [rbp + 80]
 	mov [rsi + 4], rax
 
  malloc$76:
-	; goto 78
+	; Goto 78
 	jmp malloc$78
 
  malloc$77:
-	; g_firstBlockPtr = newBlockPtr
+	; Assign g_firstBlockPtr newBlockPtr
 	mov rax, [rbp + 80]
 	mov [g_firstBlockPtr], rax
 
  malloc$78:
-	; £temporary181 = newAddress + int4$12#
+	; BinaryAdd £temporary181 newAddress 12
 	mov ebx, [rbp + 72]
 	add ebx, 12
 
  malloc$79:
-	; £temporary182 = int_to_int £temporary181 (Unsigned_Int -> Pointer)
+	; IntegralToIntegral £temporary182 £temporary181
 	mov rax, 4294967295
 	and rbx, rax
 
  malloc$80:
-	; return £temporary182
+	; Return £temporary182
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  malloc$81:
-	; return int8$0#
+	; Return 0
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -427,74 +427,74 @@ section .text
 	jmp rax
 
  malloc$82:
-	; function end malloc
+	; FunctionEnd malloc
 
 section .text
 
  calloc:
-	; call header integral zero 0 stack zero 0
+	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  calloc$1:
-	; £temporary183 = number * size
+	; SignedMultiply £temporary183 number size
 	mov eax, [rbp + 24]
 	xor edx, edx
 	imul dword [rbp + 28]
 
  calloc$2:
-	; parameter £temporary183, offset 56
+	; Parameter signedint £temporary183 56
 	mov [rbp + 56], eax
 
  calloc$3:
-	; call function noellipse-noellipse malloc
+	; Call malloc 32 0
 	mov qword [rbp + 32], calloc$4
 	mov [rbp + 40], rbp
 	add rbp, 32
 	jmp malloc
 
  calloc$4:
-	; post call
+	; PostCall 32
 
  calloc$5:
-	; £temporary184 = return_value
+	; GetReturnValue £temporary184
 
  calloc$6:
-	; pointer = £temporary184
+	; Assign pointer £temporary184
 	mov [rbp + 32], rbx
 
  calloc$7:
-	; if pointer == int8$0# goto 14
+	; Equal 14 pointer 0
 	cmp qword [rbp + 32], 0
 	je calloc$14
 
  calloc$8:
-	; call header integral zero 0 stack zero 0
+	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  calloc$9:
-	; parameter pointer, offset 64
+	; Parameter pointer pointer 64
 	mov rax, [rbp + 32]
 	mov [rbp + 64], rax
 
  calloc$10:
-	; parameter int4$0#, offset 72
+	; Parameter signedint 0 72
 	mov dword [rbp + 72], 0
 
  calloc$11:
-	; parameter size, offset 76
+	; Parameter signedint size 76
 	mov eax, [rbp + 28]
 	mov [rbp + 76], eax
 
  calloc$12:
-	; call function noellipse-noellipse memset
+	; Call memset 40 0
 	mov qword [rbp + 40], calloc$13
 	mov [rbp + 48], rbp
 	add rbp, 40
 	jmp memset
 
  calloc$13:
-	; post call
+	; PostCall 40
 
  calloc$14:
-	; return pointer
+	; Return pointer
 	mov rbx, [rbp + 32]
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -502,213 +502,213 @@ section .text
 	jmp rax
 
  calloc$15:
-	; function end calloc
+	; FunctionEnd calloc
 
 section .text
 
  free:
-	; if freeMemoryPtr != int8$0# goto 2
+	; NotEqual 2 freeMemoryPtr 0
 	cmp qword [rbp + 24], 0
 	jne free$2
 
  free$1:
-	; return
+	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  free$2:
-	; £temporary188 = int_to_int freeMemoryPtr (Pointer -> Unsigned_Int)
+	; IntegralToIntegral £temporary188 freeMemoryPtr
 	mov rax, [rbp + 24]
 
  free$3:
-	; £temporary189 = £temporary188 - int4$12#
+	; BinarySubtract £temporary189 £temporary188 12
 	sub eax, 12
 
  free$4:
-	; £temporary190 = int_to_int £temporary189 (Unsigned_Int -> Pointer)
+	; IntegralToIntegral £temporary190 £temporary189
 	mov rbx, 4294967295
 	and rax, rbx
 
  free$5:
-	; freeBlockPtr = £temporary190
+	; Assign freeBlockPtr £temporary190
 	mov [rbp + 32], rax
 
  free$6:
-	; prevBlockPtr = int8$0#
+	; Assign prevBlockPtr 0
 	mov qword [rbp + 40], 0
 
  free$7:
-	; currBlockPtr = g_firstBlockPtr
+	; Assign currBlockPtr g_firstBlockPtr
 	mov rax, [g_firstBlockPtr]
 	mov [rbp + 48], rax
 
  free$8:
-	; if currBlockPtr == int8$0# goto 32
+	; Equal 32 currBlockPtr 0
 	cmp qword [rbp + 48], 0
 	je free$32
 
  free$9:
-	; if currBlockPtr != freeBlockPtr goto 28
+	; NotEqual 28 currBlockPtr freeBlockPtr
 	mov rax, [rbp + 32]
 	cmp [rbp + 48], rax
 	jne free$28
 
  free$10:
-	; if prevBlockPtr != int8$0# goto 15
+	; NotEqual 15 prevBlockPtr 0
 	cmp qword [rbp + 40], 0
 	jne free$15
 
  free$11:
-	; £temporary194 -> currBlockPtr = *currBlockPtr
+	; Dereference £temporary194 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 48]
 
  free$12:
-	; if £temporary194 -> currBlockPtr != int8$0# goto 15
+	; NotEqual 15 £temporary194 -> currBlockPtr 0
 	cmp qword [rsi + 4], 0
 	jne free$15
 
  free$13:
-	; g_firstBlockPtr = int8$0#
+	; Assign g_firstBlockPtr 0
 	mov qword [g_firstBlockPtr], 0
 
  free$14:
-	; goto 27
+	; Goto 27
 	jmp free$27
 
  free$15:
-	; if prevBlockPtr != int8$0# goto 19
+	; NotEqual 19 prevBlockPtr 0
 	cmp qword [rbp + 40], 0
 	jne free$19
 
  free$16:
-	; £temporary198 -> currBlockPtr = *currBlockPtr
+	; Dereference £temporary198 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 48]
 
  free$17:
-	; g_firstBlockPtr = £temporary198 -> currBlockPtr
+	; Assign g_firstBlockPtr £temporary198 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [g_firstBlockPtr], rax
 
  free$18:
-	; goto 27
+	; Goto 27
 	jmp free$27
 
  free$19:
-	; £temporary199 -> currBlockPtr = *currBlockPtr
+	; Dereference £temporary199 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 48]
 
  free$20:
-	; if £temporary199 -> currBlockPtr != int8$0# goto 24
+	; NotEqual 24 £temporary199 -> currBlockPtr 0
 	cmp qword [rsi + 4], 0
 	jne free$24
 
  free$21:
-	; £temporary201 -> prevBlockPtr = *prevBlockPtr
+	; Dereference £temporary201 -> prevBlockPtr prevBlockPtr 0
 	mov rsi, [rbp + 40]
 
  free$22:
-	; £temporary201 -> prevBlockPtr = int8$0#
+	; Assign £temporary201 -> prevBlockPtr 0
 	mov qword [rsi + 4], 0
 
  free$23:
-	; goto 27
+	; Goto 27
 	jmp free$27
 
  free$24:
-	; £temporary202 -> prevBlockPtr = *prevBlockPtr
+	; Dereference £temporary202 -> prevBlockPtr prevBlockPtr 0
 	mov rsi, [rbp + 40]
 
  free$25:
-	; £temporary203 -> currBlockPtr = *currBlockPtr
+	; Dereference £temporary203 -> currBlockPtr currBlockPtr 0
 	mov rdi, [rbp + 48]
 
  free$26:
-	; £temporary202 -> prevBlockPtr = £temporary203 -> currBlockPtr
+	; Assign £temporary202 -> prevBlockPtr £temporary203 -> currBlockPtr
 	mov rax, [rdi + 4]
 	mov [rsi + 4], rax
 
  free$27:
-	; return
+	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  free$28:
-	; prevBlockPtr = currBlockPtr
+	; Assign prevBlockPtr currBlockPtr
 	mov rax, [rbp + 48]
 	mov [rbp + 40], rax
 
  free$29:
-	; £temporary204 -> currBlockPtr = *currBlockPtr
+	; Dereference £temporary204 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 48]
 
  free$30:
-	; currBlockPtr = £temporary204 -> currBlockPtr
+	; Assign currBlockPtr £temporary204 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [rbp + 48], rax
 
  free$31:
-	; goto 8
+	; Goto 8
 	jmp free$8
 
  free$32:
-	; return
+	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  free$33:
-	; function end free
+	; FunctionEnd free
 
 section .data
 
 string_newMemorySize203E3D200#:
-	; initializer String
+	; Initializer String newMemorySize >= 0
 	db "newMemorySize >= 0", 0
 
 section .data
 
 string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#:
-	; initializer String
+	; Initializer String ( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )
 	db "( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )", 0
 
 section .text
 
  realloc:
-	; if newMemorySize >= int4$0# goto 12
+	; SignedGreaterThanEqual 12 newMemorySize 0
 	cmp dword [rbp + 32], 0
 	jge realloc$12
 
  realloc$1:
-	; call header integral zero 0 stack zero 0
+	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$2:
-	; parameter stderr, offset 60
+	; Parameter pointer stderr 60
 	mov rax, [stderr]
 	mov [rbp + 60], rax
 
  realloc$3:
-	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 68
+	; Parameter pointer "Assertion failed: "%s" in file %s at line %i\n" 68
 	mov qword [rbp + 68], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  realloc$4:
-	; parameter string_newMemorySize203E3D200#, offset 76
+	; Parameter pointer "newMemorySize >= 0" 76
 	mov qword [rbp + 76], string_newMemorySize203E3D200#
 
  realloc$5:
-	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#, offset 84
+	; Parameter pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c" 84
 	mov qword [rbp + 84], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  realloc$6:
-	; parameter int4$259#, offset 92
+	; Parameter signedint 259 92
 	mov dword [rbp + 92], 259
 
  realloc$7:
-	; call function noellipse-ellipse fprintf, extra 20
+	; Call fprintf 36 20
 	mov qword [rbp + 36], realloc$8
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -717,57 +717,57 @@ section .text
 	jmp fprintf
 
  realloc$8:
-	; post call
+	; PostCall 36
 
  realloc$9:
-	; call header integral zero 0 stack zero 0
+	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$10:
-	; call function noellipse-noellipse abort
+	; Call abort 36 0
 	mov qword [rbp + 36], realloc$11
 	mov [rbp + 44], rbp
 	add rbp, 36
 	jmp abort
 
  realloc$11:
-	; post call
+	; PostCall 36
 
  realloc$12:
-	; if oldMemoryPtr != int8$0# goto 25
+	; NotEqual 25 oldMemoryPtr 0
 	cmp qword [rbp + 24], 0
 	jne realloc$25
 
  realloc$13:
-	; if newMemorySize > int4$0# goto 25
+	; SignedGreaterThan 25 newMemorySize 0
 	cmp dword [rbp + 32], 0
 	jg realloc$25
 
  realloc$14:
-	; call header integral zero 0 stack zero 0
+	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$15:
-	; parameter stderr, offset 60
+	; Parameter pointer stderr 60
 	mov rax, [stderr]
 	mov [rbp + 60], rax
 
  realloc$16:
-	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 68
+	; Parameter pointer "Assertion failed: "%s" in file %s at line %i\n" 68
 	mov qword [rbp + 68], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  realloc$17:
-	; parameter string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#, offset 76
+	; Parameter pointer "( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )" 76
 	mov qword [rbp + 76], string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#
 
  realloc$18:
-	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#, offset 84
+	; Parameter pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c" 84
 	mov qword [rbp + 84], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  realloc$19:
-	; parameter int4$260#, offset 92
+	; Parameter signedint 260 92
 	mov dword [rbp + 92], 260
 
  realloc$20:
-	; call function noellipse-ellipse fprintf, extra 20
+	; Call fprintf 36 20
 	mov qword [rbp + 36], realloc$21
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -776,79 +776,79 @@ section .text
 	jmp fprintf
 
  realloc$21:
-	; post call
+	; PostCall 36
 
  realloc$22:
-	; call header integral zero 0 stack zero 0
+	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$23:
-	; call function noellipse-noellipse abort
+	; Call abort 36 0
 	mov qword [rbp + 36], realloc$24
 	mov [rbp + 44], rbp
 	add rbp, 36
 	jmp abort
 
  realloc$24:
-	; post call
+	; PostCall 36
 
  realloc$25:
-	; if oldMemoryPtr != int8$0# goto 32
+	; NotEqual 32 oldMemoryPtr 0
 	cmp qword [rbp + 24], 0
 	jne realloc$32
 
  realloc$26:
-	; call header integral zero 0 stack zero 0
+	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$27:
-	; parameter newMemorySize, offset 60
+	; Parameter signedint newMemorySize 60
 	mov eax, [rbp + 32]
 	mov [rbp + 60], eax
 
  realloc$28:
-	; call function noellipse-noellipse malloc
+	; Call malloc 36 0
 	mov qword [rbp + 36], realloc$29
 	mov [rbp + 44], rbp
 	add rbp, 36
 	jmp malloc
 
  realloc$29:
-	; post call
+	; PostCall 36
 
  realloc$30:
-	; £temporary216 = return_value
+	; GetReturnValue £temporary216
 
  realloc$31:
-	; return £temporary216
+	; Return £temporary216
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  realloc$32:
-	; if newMemorySize != int4$0# goto 38
+	; NotEqual 38 newMemorySize 0
 	cmp dword [rbp + 32], 0
 	jne realloc$38
 
  realloc$33:
-	; call header integral zero 0 stack zero 0
+	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$34:
-	; parameter oldMemoryPtr, offset 60
+	; Parameter pointer oldMemoryPtr 60
 	mov rax, [rbp + 24]
 	mov [rbp + 60], rax
 
  realloc$35:
-	; call function noellipse-noellipse free
+	; Call free 36 0
 	mov qword [rbp + 36], realloc$36
 	mov [rbp + 44], rbp
 	add rbp, 36
 	jmp free
 
  realloc$36:
-	; post call
+	; PostCall 36
 
  realloc$37:
-	; return int8$0#
+	; Return 0
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -856,52 +856,52 @@ section .text
 	jmp rax
 
  realloc$38:
-	; £temporary219 = int_to_int newMemorySize (SignedInt -> Unsigned_Int)
+	; IntegralToIntegral £temporary219 newMemorySize
 	mov eax, [rbp + 32]
 
  realloc$39:
-	; newBlockSize = £temporary219 + int4$12#
+	; BinaryAdd newBlockSize £temporary219 12
 	add eax, 12
 	mov [rbp + 36], eax
 
  realloc$40:
-	; £temporary221 = int_to_int oldMemoryPtr (Pointer -> Unsigned_Int)
+	; IntegralToIntegral £temporary221 oldMemoryPtr
 	mov rax, [rbp + 24]
 
  realloc$41:
-	; £temporary222 = £temporary221 - int4$12#
+	; BinarySubtract £temporary222 £temporary221 12
 	sub eax, 12
 
  realloc$42:
-	; £temporary223 = int_to_int £temporary222 (Unsigned_Int -> Pointer)
+	; IntegralToIntegral £temporary223 £temporary222
 	mov rbx, 4294967295
 	and rax, rbx
 
  realloc$43:
-	; oldBlockPtr = £temporary223
+	; Assign oldBlockPtr £temporary223
 	mov [rbp + 40], rax
 
  realloc$44:
-	; £temporary224 -> oldBlockPtr = *oldBlockPtr
+	; Dereference £temporary224 -> oldBlockPtr oldBlockPtr 0
 	mov rsi, [rbp + 40]
 
  realloc$45:
-	; if newBlockSize > £temporary224 -> oldBlockPtr goto 49
+	; UnsignedGreaterThan 49 newBlockSize £temporary224 -> oldBlockPtr
 	mov eax, [rsi]
 	cmp [rbp + 36], eax
 	ja realloc$49
 
  realloc$46:
-	; £temporary226 -> oldBlockPtr = *oldBlockPtr
+	; Dereference £temporary226 -> oldBlockPtr oldBlockPtr 0
 	mov rsi, [rbp + 40]
 
  realloc$47:
-	; £temporary226 -> oldBlockPtr = newBlockSize
+	; Assign £temporary226 -> oldBlockPtr newBlockSize
 	mov eax, [rbp + 36]
 	mov [rsi], eax
 
  realloc$48:
-	; return oldMemoryPtr
+	; Return oldMemoryPtr
 	mov rbx, [rbp + 24]
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -909,63 +909,63 @@ section .text
 	jmp rax
 
  realloc$49:
-	; stack_top
+	; StackTop £temporary227
 	mov rax, $StackTop
 
  realloc$50:
-	; £temporary228 = £temporary227 + int8$1048572#
+	; BinaryAdd £temporary228 £temporary227 1048572
 	add rax, 1048572
 
  realloc$51:
-	; £temporary230 = int_to_int £temporary228 (Pointer -> Unsigned_Int)
+	; IntegralToIntegral £temporary230 £temporary228
 
  realloc$52:
-	; lastAddress = £temporary230
+	; Assign lastAddress £temporary230
 	mov [rbp + 48], eax
 
  realloc$53:
-	; currBlockPtr = g_firstBlockPtr
+	; Assign currBlockPtr g_firstBlockPtr
 	mov rax, [g_firstBlockPtr]
 	mov [rbp + 52], rax
 
  realloc$54:
-	; if currBlockPtr == int8$0# goto 67
+	; Equal 67 currBlockPtr 0
 	cmp qword [rbp + 52], 0
 	je realloc$67
 
  realloc$55:
-	; if currBlockPtr != oldBlockPtr goto 62
+	; NotEqual 62 currBlockPtr oldBlockPtr
 	mov rax, [rbp + 40]
 	cmp [rbp + 52], rax
 	jne realloc$62
 
  realloc$56:
-	; £temporary233 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
+	; IntegralToIntegral £temporary233 currBlockPtr
 	mov rax, [rbp + 52]
 
  realloc$57:
-	; availableSize = lastAddress - £temporary233
+	; BinarySubtract availableSize lastAddress £temporary233
 	mov ebx, [rbp + 48]
 	sub ebx, eax
 	mov [rbp + 60], ebx
 
  realloc$58:
-	; if availableSize < newBlockSize goto 67
+	; UnsignedLessThan 67 availableSize newBlockSize
 	mov eax, [rbp + 36]
 	cmp [rbp + 60], eax
 	jb realloc$67
 
  realloc$59:
-	; £temporary236 -> oldBlockPtr = *oldBlockPtr
+	; Dereference £temporary236 -> oldBlockPtr oldBlockPtr 0
 	mov rsi, [rbp + 40]
 
  realloc$60:
-	; £temporary236 -> oldBlockPtr = newBlockSize
+	; Assign £temporary236 -> oldBlockPtr newBlockSize
 	mov eax, [rbp + 36]
 	mov [rsi], eax
 
  realloc$61:
-	; return oldMemoryPtr
+	; Return oldMemoryPtr
 	mov rbx, [rbp + 24]
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -973,104 +973,104 @@ section .text
 	jmp rax
 
  realloc$62:
-	; £temporary237 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
+	; IntegralToIntegral £temporary237 currBlockPtr
 	mov rax, [rbp + 52]
 
  realloc$63:
-	; lastAddress = £temporary237
+	; Assign lastAddress £temporary237
 	mov [rbp + 48], eax
 
  realloc$64:
-	; £temporary238 -> currBlockPtr = *currBlockPtr
+	; Dereference £temporary238 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 52]
 
  realloc$65:
-	; currBlockPtr = £temporary238 -> currBlockPtr
+	; Assign currBlockPtr £temporary238 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [rbp + 52], rax
 
  realloc$66:
-	; goto 54
+	; Goto 54
 	jmp realloc$54
 
  realloc$67:
-	; call header integral zero 0 stack zero 0
+	; PreCall 60 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$68:
-	; parameter newMemorySize, offset 84
+	; Parameter signedint newMemorySize 84
 	mov eax, [rbp + 32]
 	mov [rbp + 84], eax
 
  realloc$69:
-	; call function noellipse-noellipse malloc
+	; Call malloc 60 0
 	mov qword [rbp + 60], realloc$70
 	mov [rbp + 68], rbp
 	add rbp, 60
 	jmp malloc
 
  realloc$70:
-	; post call
+	; PostCall 60
 
  realloc$71:
-	; £temporary239 = return_value
+	; GetReturnValue £temporary239
 
  realloc$72:
-	; newMemoryPtr = £temporary239
+	; Assign newMemoryPtr £temporary239
 	mov [rbp + 60], rbx
 
  realloc$73:
-	; if newMemoryPtr == int8$0# goto 85
+	; Equal 85 newMemoryPtr 0
 	cmp qword [rbp + 60], 0
 	je realloc$85
 
  realloc$74:
-	; call header integral zero 0 stack zero 0
+	; PreCall 68 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$75:
-	; parameter newMemoryPtr, offset 92
+	; Parameter pointer newMemoryPtr 92
 	mov rax, [rbp + 60]
 	mov [rbp + 92], rax
 
  realloc$76:
-	; parameter oldMemoryPtr, offset 100
+	; Parameter pointer oldMemoryPtr 100
 	mov rax, [rbp + 24]
 	mov [rbp + 100], rax
 
  realloc$77:
-	; parameter newMemorySize, offset 108
+	; Parameter signedint newMemorySize 108
 	mov eax, [rbp + 32]
 	mov [rbp + 108], eax
 
  realloc$78:
-	; call function noellipse-noellipse memcpy
+	; Call memcpy 68 0
 	mov qword [rbp + 68], realloc$79
 	mov [rbp + 76], rbp
 	add rbp, 68
 	jmp memcpy
 
  realloc$79:
-	; post call
+	; PostCall 68
 
  realloc$80:
-	; call header integral zero 0 stack zero 0
+	; PreCall 68 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$81:
-	; parameter oldMemoryPtr, offset 92
+	; Parameter pointer oldMemoryPtr 92
 	mov rax, [rbp + 24]
 	mov [rbp + 92], rax
 
  realloc$82:
-	; call function noellipse-noellipse free
+	; Call free 68 0
 	mov qword [rbp + 68], realloc$83
 	mov [rbp + 76], rbp
 	add rbp, 68
 	jmp free
 
  realloc$83:
-	; post call
+	; PostCall 68
 
  realloc$84:
-	; return newMemoryPtr
+	; Return newMemoryPtr
 	mov rbx, [rbp + 60]
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1078,7 +1078,7 @@ section .text
 	jmp rax
 
  realloc$85:
-	; return int8$0#
+	; Return 0
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1086,42 +1086,42 @@ section .text
 	jmp rax
 
  realloc$86:
-	; function end realloc
+	; FunctionEnd realloc
 
 section .data
 
 string_Heap3A0A#:
-	; initializer String
+	; Initializer String Heap:\n
 	db "Heap:", 10, 0
 
 section .data
 
 string_2020Address2025u2C20Size2025u0A#:
-	; initializer String
+	; Initializer String   Address %u, Size %u\n
 	db "  Address %u, Size %u", 10, 0
 
 section .data
 
 string_0A#:
-	; initializer String
+	; Initializer String \n
 	db 10, 0
 
 section .text
 
  print_heap:
-	; currBlockPtr = g_firstBlockPtr
+	; Assign currBlockPtr g_firstBlockPtr
 	mov rax, [g_firstBlockPtr]
 	mov [rbp + 24], rax
 
  print_heap$1:
-	; call header integral zero 0 stack zero 0
+	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  print_heap$2:
-	; parameter string_Heap3A0A#, offset 56
+	; Parameter pointer "Heap:\n" 56
 	mov qword [rbp + 56], string_Heap3A0A#
 
  print_heap$3:
-	; call function noellipse-ellipse printf, extra 0
+	; Call printf 32 0
 	mov qword [rbp + 32], print_heap$4
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1129,39 +1129,39 @@ section .text
 	jmp printf
 
  print_heap$4:
-	; post call
+	; PostCall 32
 
  print_heap$5:
-	; if currBlockPtr == int8$0# goto 17
+	; Equal 17 currBlockPtr 0
 	cmp qword [rbp + 24], 0
 	je print_heap$17
 
  print_heap$6:
-	; call header integral zero 0 stack zero 0
+	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  print_heap$7:
-	; parameter string_2020Address2025u2C20Size2025u0A#, offset 56
+	; Parameter pointer "  Address %u, Size %u\n" 56
 	mov qword [rbp + 56], string_2020Address2025u2C20Size2025u0A#
 
  print_heap$8:
-	; £temporary245 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
+	; IntegralToIntegral £temporary245 currBlockPtr
 	mov rax, [rbp + 24]
 
  print_heap$9:
-	; parameter £temporary245, offset 64
+	; Parameter unsigned int £temporary245 64
 	mov [rbp + 64], eax
 
  print_heap$10:
-	; £temporary246 -> currBlockPtr = *currBlockPtr
+	; Dereference £temporary246 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 24]
 
  print_heap$11:
-	; parameter £temporary246 -> currBlockPtr, offset 68
+	; Parameter unsigned int £temporary246 -> currBlockPtr 68
 	mov eax, [rsi]
 	mov [rbp + 68], eax
 
  print_heap$12:
-	; call function noellipse-ellipse printf, extra 8
+	; Call printf 32 8
 	mov qword [rbp + 32], print_heap$13
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1170,30 +1170,30 @@ section .text
 	jmp printf
 
  print_heap$13:
-	; post call
+	; PostCall 32
 
  print_heap$14:
-	; £temporary248 -> currBlockPtr = *currBlockPtr
+	; Dereference £temporary248 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 24]
 
  print_heap$15:
-	; currBlockPtr = £temporary248 -> currBlockPtr
+	; Assign currBlockPtr £temporary248 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [rbp + 24], rax
 
  print_heap$16:
-	; goto 5
+	; Goto 5
 	jmp print_heap$5
 
  print_heap$17:
-	; call header integral zero 0 stack zero 0
+	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  print_heap$18:
-	; parameter string_0A#, offset 56
+	; Parameter pointer "\n" 56
 	mov qword [rbp + 56], string_0A#
 
  print_heap$19:
-	; call function noellipse-ellipse printf, extra 0
+	; Call printf 32 0
 	mov qword [rbp + 32], print_heap$20
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1201,14 +1201,14 @@ section .text
 	jmp printf
 
  print_heap$20:
-	; post call
+	; PostCall 32
 
  print_heap$21:
-	; return
+	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  print_heap$22:
-	; function end print_heap
+	; FunctionEnd print_heap

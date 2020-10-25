@@ -1,81 +1,81 @@
-0: if size < int4$5# goto <MiddleCode>
-1: goto <MiddleCode>
-2: check track map float stack
-3: empty
-4: c = int1$97#
-5: empty
-6: if c <= int1$122# goto <MiddleCode>
-7: goto <MiddleCode>
-8: check track map float stack
-9: £temporary1041 = int_to_int size (SignedInt -> Pointer)
-10: £temporary1042 = £temporary1041 * int8$1#
-11: £temporary1043 = name + £temporary1042
-12: £temporary1040 -> £temporary1043 = *£temporary1043
-13: £temporary1040 -> £temporary1043 = c
-14: £temporary1044 = size + int4$1#
-15: £temporary1046 = int_to_int £temporary1044 (SignedInt -> Pointer)
-16: £temporary1047 = £temporary1046 * int8$1#
-17: £temporary1048 = name + £temporary1047
-18: £temporary1045 -> £temporary1048 = *£temporary1048
-19: £temporary1045 -> £temporary1048 = int1$0#
-20: call header
-21: parameter name, offset 65
-22: call function noellipse-noellipse fileexists
-23: post call
-24: £temporary1049 = return_value
-25: if £temporary1049 != int4$0# goto <MiddleCode>
-26: goto <MiddleCode>
-27: check track map float stack
-28: case status == int4$0# goto return name
-29: case status == int4$1# goto call header
-30: case end status
-31: goto <MiddleCode>
-32: return name
-33: call header
-34: parameter name, offset 65
-35: call function noellipse-noellipse existsTempName
-36: post call
-37: £temporary1052 = return_value
-38: if £temporary1052 != int4$0# goto <MiddleCode>
-39: goto <MiddleCode>
-40: check track map float stack
-41: call header
-42: £temporary1056 = int_to_int g_tempSize (SignedInt -> Array)
-43: £temporary1057 = £temporary1056 * Array_4#
-44: £temporary1058 = g_tempArray + £temporary1057
-45: £temporary1055 -> £temporary1058 = *£temporary1058
-46: parameter £temporary1055 -> £temporary1058, offset 65
-47: parameter name, offset 73
-48: call function noellipse-noellipse strcpy
-49: post call
-50: £temporary1060 = g_tempSize
-51: g_tempSize = g_tempSize + int4$1#
-52: £temporary1062 = int_to_int £temporary1060 (SignedInt -> Array)
-53: £temporary1063 = £temporary1062 * Array_4#
-54: £temporary1064 = g_tempArray + £temporary1063
-55: £temporary1061 -> £temporary1064 = *£temporary1064
-56: return £temporary1061 -> £temporary1064
-57: goto <MiddleCode>
-58: goto <MiddleCode>
-59: goto <MiddleCode>
-60: call header
-61: parameter name, offset 65
-62: £temporary1065 = size + int4$1#
-63: parameter £temporary1065, offset 73
-64: parameter status, offset 77
-65: call function noellipse-noellipse generateTempName
-66: post call
-67: £temporary1066 = return_value
-68: result = £temporary1066
-69: if result != int8$0# goto <MiddleCode>
-70: goto <MiddleCode>
-71: check track map float stack
-72: return result
-73: goto <MiddleCode>
-74: empty
-75: c = c + int1$1#
-76: goto <MiddleCode>
-77: goto <MiddleCode>
-78: return int8$0#
-79: empty
-80: function end generateTempName
+0: SignedLessThan Empty size 5
+1: Goto Return 0
+2: CheckTrackMapFloatStack
+3: Empty
+4: Assign c 97
+5: Empty
+6: SignedLessThanEqual IntegralToIntegral £temporary1041 size c 122
+7: Goto Return 0
+8: CheckTrackMapFloatStack
+9: IntegralToIntegral £temporary1041 size
+10: UnsignedMultiply £temporary1042 £temporary1041 1
+11: BinaryAdd £temporary1043 name £temporary1042
+12: Dereference £temporary1040 -> £temporary1043 £temporary1043 0
+13: Assign £temporary1040 -> £temporary1043 c
+14: BinaryAdd £temporary1044 size 1
+15: IntegralToIntegral £temporary1046 £temporary1044
+16: UnsignedMultiply £temporary1047 £temporary1046 1
+17: BinaryAdd £temporary1048 name £temporary1047
+18: Dereference £temporary1045 -> £temporary1048 £temporary1048 0
+19: Assign £temporary1045 -> £temporary1048 0
+20: PreCall 41
+21: Parameter pointer name 65
+22: Call fileexists 41 0
+23: PostCall 41
+24: GetReturnValue £temporary1049
+25: NotEqual PreCall 41 £temporary1049 0
+26: Goto Case Return name status 0
+27: CheckTrackMapFloatStack
+28: Case Return name status 0
+29: Case PreCall 41 status 1
+30: CaseEnd status
+31: Goto PreCall 41
+32: Return name
+33: PreCall 41
+34: Parameter pointer name 65
+35: Call existsTempName 41 0
+36: PostCall 41
+37: GetReturnValue £temporary1052
+38: NotEqual Goto PreCall 41 £temporary1052 0
+39: Goto PreCall 41
+40: CheckTrackMapFloatStack
+41: PreCall 41
+42: IntegralToIntegral £temporary1056 g_tempSize
+43: UnsignedMultiply £temporary1057 £temporary1056 4
+44: BinaryAdd £temporary1058 g_tempArray £temporary1057
+45: Dereference £temporary1055 -> £temporary1058 £temporary1058 0
+46: Parameter pointer £temporary1055 -> £temporary1058 65
+47: Parameter pointer name 73
+48: Call strcpy 41 0
+49: PostCall 41
+50: Assign £temporary1060 g_tempSize
+51: BinaryAdd g_tempSize g_tempSize 1
+52: IntegralToIntegral £temporary1062 £temporary1060
+53: UnsignedMultiply £temporary1063 £temporary1062 4
+54: BinaryAdd £temporary1064 g_tempArray £temporary1063
+55: Dereference £temporary1061 -> £temporary1064 £temporary1064 0
+56: Return £temporary1061 -> £temporary1064
+57: Goto Goto PreCall 41
+58: Goto PreCall 41
+59: Goto PreCall 41
+60: PreCall 41
+61: Parameter pointer name 65
+62: BinaryAdd £temporary1065 size 1
+63: Parameter signedint £temporary1065 73
+64: Parameter signedint status 77
+65: Call generateTempName 41 0
+66: PostCall 41
+67: GetReturnValue £temporary1066
+68: Assign result £temporary1066
+69: NotEqual Return result result 0
+70: Goto Empty
+71: CheckTrackMapFloatStack
+72: Return result
+73: Goto Empty
+74: Empty
+75: BinaryAdd c c 1
+76: Goto Empty
+77: Goto Return 0
+78: Return 0
+79: Empty
+80: FunctionEnd generateTempName
