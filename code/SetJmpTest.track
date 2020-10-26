@@ -31,10 +31,10 @@ divide$6:	; return_value = £temporary3999
 24:	
 
 divide$7:	; return
-25:		mov t2540, [bp]
+25:		mov t2542, [bp]
 26:		mov di, [bp + 4]
 27:		mov bp, [bp + 2]
-28:		jmp t2540
+28:		jmp t2542
 30:	
 
 divide$8:	; p = string_Division20by20Zero2E#
@@ -49,8 +49,8 @@ divide$10:	; parameter buffer, offset 6
 38:	
 
 divide$11:	; parameter p, offset 8
-39:		mov a2541, [bp + 22]
-40:		mov [bp + 32], a2541
+39:		mov a2543, [bp + 22]
+40:		mov [bp + 32], a2543
 42:	
 
 divide$12:	; call function noellipse-noellipse longjmp
@@ -71,10 +71,10 @@ divide$15:	; return_value = 0
 55:	
 
 divide$16:	; return
-56:		mov t2542, [bp]
+56:		mov t2544, [bp]
 57:		mov di, [bp + 4]
 58:		mov bp, [bp + 2]
-59:		jmp t2542
+59:		jmp t2544
 61:	
 
 divide$17:	; function end divide
@@ -116,10 +116,10 @@ invers$8:	; return_value = £temporary4003
 27:	
 
 invers$9:	; return
-28:		mov t2543, [bp]
+28:		mov t2545, [bp]
 29:		mov di, [bp + 4]
 30:		mov bp, [bp + 2]
-31:		jmp t2543
+31:		jmp t2545
 33:	
 
 invers$10:	; function end invers
@@ -146,7 +146,7 @@ setjmp_test$4:	; £temporary4006 = return_value
 19:	
 
 setjmp_test$5:	; p = £temporary4006
-20:		mov [bp + 14], t2545
+20:		mov [bp + 14], t2547
 22:	
 
 setjmp_test$6:	; if p != 0 goto 21
@@ -221,13 +221,13 @@ setjmp_test$22:	; parameter string_p203D203C25s3E203C25u3E0A#, offset 6
 76:	
 
 setjmp_test$23:	; parameter p, offset 8
-77:		mov a2546, [bp + 14]
-78:		mov [bp + 24], a2546
+77:		mov a2548, [bp + 14]
+78:		mov [bp + 24], a2548
 80:	
 
 setjmp_test$24:	; parameter p, offset 10
-81:		mov a2547, [bp + 14]
-82:		mov [bp + 26], a2547
+81:		mov a2549, [bp + 14]
+82:		mov [bp + 26], a2549
 84:	
 
 setjmp_test$25:	; call function noellipse-ellipse printf, extra 0
@@ -243,10 +243,10 @@ setjmp_test$26:	; post call
 94:	
 
 setjmp_test$27:	; return
-95:		mov t2548, [bp]
+95:		mov t2550, [bp]
 96:		mov di, [bp + 4]
 97:		mov bp, [bp + 2]
-98:		jmp t2548
+98:		jmp t2550
 100:	
 
 setjmp_test$28:	; function end setjmp_test

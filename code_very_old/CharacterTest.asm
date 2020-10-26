@@ -16,8 +16,6 @@
 	extern toupper
 	extern $StackTop
 
-section .text
-
 
 section .data
 

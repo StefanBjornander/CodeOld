@@ -8,15 +8,15 @@ stack_test$1:	; parameter string_25i20#, offset 6
 6:	
 
 stack_test$2:	; £temporary5209 = i
-7:		mov t2861, [@36$i]
+7:		mov t2863, [@37$i]
 9:	
 
 stack_test$3:	; ++i
-10:		inc word [@36$i]
+10:		inc word [@37$i]
 12:	
 
 stack_test$4:	; parameter £temporary5209, offset 8
-13:		mov [bp + 14], t2861
+13:		mov [bp + 14], t2863
 15:	
 
 stack_test$5:	; call function noellipse-ellipse printf, extra 0
@@ -45,10 +45,10 @@ stack_test$9:	; post call
 35:	
 
 stack_test$10:	; return
-36:		mov t2862, [bp]
+36:		mov t2864, [bp]
 37:		mov di, [bp + 4]
 38:		mov bp, [bp + 2]
-39:		jmp t2862
+39:		jmp t2864
 41:	
 
 stack_test$11:	; function end stack_test
@@ -79,7 +79,7 @@ heap_test$5:	; £temporary5214 = return_value
 22:	
 
 heap_test$6:	; pointer = £temporary5214
-23:		mov [bp + 8], t2864
+23:		mov [bp + 8], t2866
 25:	
 
 heap_test$7:	; if pointer == 0 goto 17
@@ -95,7 +95,7 @@ heap_test$9:	; parameter string_102420bytes2Dblock20number3A2025i0A#, offset 6
 34:	
 
 heap_test$10:	; £temporary5216 = count
-35:		mov t2865, [bp + 6]
+35:		mov t2867, [bp + 6]
 37:	
 
 heap_test$11:	; ++count
@@ -103,12 +103,12 @@ heap_test$11:	; ++count
 40:	
 
 heap_test$12:	; parameter £temporary5216, offset 8
-41:		mov [bp + 18], t2865
+41:		mov [bp + 18], t2867
 43:	
 
 heap_test$13:	; parameter pointer, offset 10
-44:		mov a2866, [bp + 8]
-45:		mov [bp + 20], a2866
+44:		mov a2868, [bp + 8]
+45:		mov [bp + 20], a2868
 47:	
 
 heap_test$14:	; call function noellipse-ellipse printf, extra 0
@@ -128,10 +128,10 @@ heap_test$16:	; goto 1
 60:	
 
 heap_test$17:	; return
-61:		mov t2867, [bp]
+61:		mov t2869, [bp]
 62:		mov di, [bp + 4]
 63:		mov bp, [bp + 2]
-64:		jmp t2867
+64:		jmp t2869
 66:	
 
 heap_test$18:	; function end heap_test

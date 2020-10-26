@@ -5,13 +5,13 @@ scanChar:	; c = 0
 4:	
 
 scanChar$1:	; case g_inStatus == 0 goto 5
-5:		mov a873, [g_inStatus]
-6:		cmp a873, 0
+5:		mov a875, [g_inStatus]
+6:		cmp a875, 0
 7:		je scanChar$5
 9:	
 
 scanChar$2:	; case g_inStatus == 1 goto 18
-10:		cmp a873, 1
+10:		cmp a875, 1
 11:		je scanChar$18
 13:	
 
@@ -23,37 +23,37 @@ scanChar$4:	; goto 26
 18:	
 
 scanChar$5:	; £temporary1368 = int_to_int g_inDevice (Pointer -> Pointer)
-19:		mov a874, [g_inDevice]
+19:		mov a876, [g_inDevice]
 22:	
 
 scanChar$6:	; stream = £temporary1368
-23:		mov [bp + 7], a874
+23:		mov [bp + 7], a876
 25:	
 
 scanChar$7:	; £temporary1369 -> stream = *stream, offset 2
-26:		mov a875, [bp + 7]
+26:		mov a877, [bp + 7]
 28:	
 
 scanChar$8:	; handle = £temporary1369 -> stream
-29:		mov t876, [a875 + 2]
-30:		mov [bp + 9], t876
+29:		mov t878, [a877 + 2]
+30:		mov [bp + 9], t878
 32:	
 
 scanChar$9:	; ah = 63
-33:		mov a877, 63
+33:		mov a879, 63
 35:	
 
 scanChar$10:	; bx = handle
-36:		mov a878, [bp + 9]
+36:		mov a880, [bp + 9]
 38:	
 
 scanChar$11:	; cx = 1
-39:		mov a879, 1
+39:		mov a881, 1
 41:	
 
 scanChar$12:	; £temporary1374 = &c
-42:		mov t880, bp
-43:		add t880, 6
+42:		mov t882, bp
+43:		add t882, 6
 45:	
 
 scanChar$13:	; dx = £temporary1374
@@ -68,26 +68,26 @@ scanChar$15:	; ++g_inChars
 53:	
 
 scanChar$16:	; return_value = c
-54:		mov a881, [bp + 6]
+54:		mov a883, [bp + 6]
 56:	
 
 scanChar$17:	; return
-57:		mov t882, [bp]
+57:		mov t884, [bp]
 58:		mov di, [bp + 4]
 59:		mov bp, [bp + 2]
-60:		jmp t882
+60:		jmp t884
 62:	
 
 scanChar$18:	; £temporary1376 = int_to_int g_inDevice (Pointer -> Pointer)
-63:		mov a883, [g_inDevice]
+63:		mov a885, [g_inDevice]
 66:	
 
 scanChar$19:	; inString = £temporary1376
-67:		mov [bp + 11], a883
+67:		mov [bp + 11], a885
 69:	
 
 scanChar$20:	; £temporary1377 = g_inChars
-70:		mov t884, [g_inChars]
+70:		mov t886, [g_inChars]
 72:	
 
 scanChar$21:	; ++g_inChars
@@ -95,46 +95,46 @@ scanChar$21:	; ++g_inChars
 75:	
 
 scanChar$22:	; £temporary1379 = inString + £temporary1377
-76:		mov a885, [bp + 11]
-77:		add a885, t884
+76:		mov a887, [bp + 11]
+77:		add a887, t886
 79:	
 
 scanChar$23:	; £temporary1378 -> £temporary1379 = *£temporary1379
 81:	
 
 scanChar$24:	; return_value = £temporary1378 -> £temporary1379
-82:		mov t886, [a885]
+82:		mov t888, [a887]
 84:	
 
 scanChar$25:	; return
-85:		mov t887, [bp]
+85:		mov t889, [bp]
 86:		mov di, [bp + 4]
 87:		mov bp, [bp + 2]
-88:		jmp t887
+88:		jmp t889
 90:	
 
 scanChar$26:	; return_value = 0
-91:		mov a888, 0
+91:		mov a890, 0
 93:	
 
 scanChar$27:	; return
-94:		mov t889, [bp]
+94:		mov t891, [bp]
 95:		mov di, [bp + 4]
 96:		mov bp, [bp + 2]
-97:		jmp t889
+97:		jmp t891
 99:	
 
 scanChar$28:	; function end scanChar
 1:	
 
 unscanChar:	; case g_inStatus == 0 goto 4
-2:		mov a890, [g_inStatus]
-3:		cmp a890, 0
+2:		mov a892, [g_inStatus]
+3:		cmp a892, 0
 4:		je unscanChar$4
 6:	
 
 unscanChar$1:	; case g_inStatus == 1 goto 6
-7:		cmp a890, 1
+7:		cmp a892, 1
 8:		je unscanChar$6
 10:	
 
@@ -158,10 +158,10 @@ unscanChar$6:	; --g_inChars
 24:	
 
 unscanChar$7:	; return
-25:		mov t891, [bp]
+25:		mov t893, [bp]
 26:		mov di, [bp + 4]
 27:		mov bp, [bp + 2]
-28:		jmp t891
+28:		jmp t893
 30:	
 
 unscanChar$8:	; function end unscanChar
@@ -188,23 +188,23 @@ scanPattern$4:	; £temporary1383 = return_value
 19:	
 
 scanPattern$5:	; input = £temporary1383
-20:		mov [bp + 14], t893
+20:		mov [bp + 14], t895
 22:	
 
 scanPattern$6:	; call header integral zero 0 stack zero 0
 24:	
 
 scanPattern$7:	; £temporary1384 = int_to_int input (Signed_Char -> Signed_Int)
-25:		mov a894, [bp + 14]
-27:		and a894, 255
-29:		cmp a894, 0
+25:		mov a896, [bp + 14]
+27:		and a896, 255
+29:		cmp a896, 0
 30:		jge scanPattern$8
-31:		neg a894
-33:		neg a894
+31:		neg a896
+33:		neg a896
 35:	
 
 scanPattern$8:	; parameter £temporary1384, offset 6
-36:		mov [bp + 21], a894
+36:		mov [bp + 21], a896
 38:	
 
 scanPattern$9:	; call function noellipse-noellipse isspace
@@ -221,7 +221,7 @@ scanPattern$11:	; £temporary1385 = return_value
 51:	
 
 scanPattern$12:	; if £temporary1385 == 0 goto 19
-52:		cmp t896, 0
+52:		cmp t898, 0
 53:		je scanPattern$19
 55:	
 
@@ -242,7 +242,7 @@ scanPattern$16:	; £temporary1386 = return_value
 70:	
 
 scanPattern$17:	; input = £temporary1386
-71:		mov [bp + 14], t898
+71:		mov [bp + 14], t900
 73:	
 
 scanPattern$18:	; goto 6
@@ -263,21 +263,21 @@ scanPattern$21:	; call header integral zero 0 stack zero 0
 86:	
 
 scanPattern$22:	; parameter pattern, offset 6
-87:		mov a899, [bp + 8]
-88:		mov [bp + 21], a899
+87:		mov a901, [bp + 8]
+88:		mov [bp + 21], a901
 90:	
 
 scanPattern$23:	; £temporary1391 = int_to_int input (Signed_Char -> Signed_Int)
-91:		mov a900, [bp + 14]
-93:		and a900, 255
-95:		cmp a900, 0
+91:		mov a902, [bp + 14]
+93:		and a902, 255
+95:		cmp a902, 0
 96:		jge scanPattern$24
-97:		neg a900
-99:		neg a900
+97:		neg a902
+99:		neg a902
 101:	
 
 scanPattern$24:	; parameter £temporary1391, offset 8
-102:		mov [bp + 23], a900
+102:		mov [bp + 23], a902
 104:	
 
 scanPattern$25:	; call function noellipse-noellipse strchr
@@ -294,7 +294,7 @@ scanPattern$27:	; £temporary1392 = return_value
 117:	
 
 scanPattern$28:	; if £temporary1392 != 0 goto 38
-118:		cmp t902, 0
+118:		cmp t904, 0
 119:		jne scanPattern$38
 121:	
 
@@ -307,21 +307,21 @@ scanPattern$30:	; call header integral zero 0 stack zero 0
 127:	
 
 scanPattern$31:	; parameter pattern, offset 6
-128:		mov a903, [bp + 8]
-129:		mov [bp + 21], a903
+128:		mov a905, [bp + 8]
+129:		mov [bp + 21], a905
 131:	
 
 scanPattern$32:	; £temporary1395 = int_to_int input (Signed_Char -> Signed_Int)
-132:		mov a904, [bp + 14]
-134:		and a904, 255
-136:		cmp a904, 0
+132:		mov a906, [bp + 14]
+134:		and a906, 255
+136:		cmp a906, 0
 137:		jge scanPattern$33
-138:		neg a904
-140:		neg a904
+138:		neg a906
+140:		neg a906
 142:	
 
 scanPattern$33:	; parameter £temporary1395, offset 8
-143:		mov [bp + 23], a904
+143:		mov [bp + 23], a906
 145:	
 
 scanPattern$34:	; call function noellipse-noellipse strchr
@@ -338,12 +338,12 @@ scanPattern$36:	; £temporary1396 = return_value
 158:	
 
 scanPattern$37:	; if £temporary1396 != 0 goto 49
-159:		cmp t906, 0
+159:		cmp t908, 0
 160:		jne scanPattern$49
 162:	
 
 scanPattern$38:	; £temporary1402 = index
-163:		mov t907, [bp + 12]
+163:		mov t909, [bp + 12]
 165:	
 
 scanPattern$39:	; ++index
@@ -351,16 +351,16 @@ scanPattern$39:	; ++index
 168:	
 
 scanPattern$40:	; £temporary1404 = string + £temporary1402
-169:		mov a908, [bp + 6]
-170:		add a908, t907
+169:		mov a910, [bp + 6]
+170:		add a910, t909
 172:	
 
 scanPattern$41:	; £temporary1403 -> £temporary1404 = *£temporary1404
 174:	
 
 scanPattern$42:	; £temporary1403 -> £temporary1404 = input
-175:		mov a909, [bp + 14]
-176:		mov [a908], a909
+175:		mov a911, [bp + 14]
+176:		mov [a910], a911
 178:	
 
 scanPattern$43:	; call header integral zero 0 stack zero 0
@@ -380,7 +380,7 @@ scanPattern$46:	; £temporary1405 = return_value
 193:	
 
 scanPattern$47:	; input = £temporary1405
-194:		mov [bp + 14], t911
+194:		mov [bp + 14], t913
 196:	
 
 scanPattern$48:	; goto 20
@@ -388,15 +388,15 @@ scanPattern$48:	; goto 20
 199:	
 
 scanPattern$49:	; £temporary1407 = string + index
-200:		mov a912, [bp + 6]
-201:		add a912, [bp + 12]
+200:		mov a914, [bp + 6]
+201:		add a914, [bp + 12]
 203:	
 
 scanPattern$50:	; £temporary1406 -> £temporary1407 = *£temporary1407
 205:	
 
 scanPattern$51:	; £temporary1406 -> £temporary1407 = 0
-206:		mov byte [a912], 0
+206:		mov byte [a914], 0
 208:	
 
 scanPattern$52:	; goto 77
@@ -412,21 +412,21 @@ scanPattern$54:	; call header integral zero 0 stack zero 0
 217:	
 
 scanPattern$55:	; parameter pattern, offset 6
-218:		mov a913, [bp + 8]
-219:		mov [bp + 21], a913
+218:		mov a915, [bp + 8]
+219:		mov [bp + 21], a915
 221:	
 
 scanPattern$56:	; £temporary1410 = int_to_int input (Signed_Char -> Signed_Int)
-222:		mov a914, [bp + 14]
-224:		and a914, 255
-226:		cmp a914, 0
+222:		mov a916, [bp + 14]
+224:		and a916, 255
+226:		cmp a916, 0
 227:		jge scanPattern$57
-228:		neg a914
-230:		neg a914
+228:		neg a916
+230:		neg a916
 232:	
 
 scanPattern$57:	; parameter £temporary1410, offset 8
-233:		mov [bp + 23], a914
+233:		mov [bp + 23], a916
 235:	
 
 scanPattern$58:	; call function noellipse-noellipse strchr
@@ -443,7 +443,7 @@ scanPattern$60:	; £temporary1411 = return_value
 248:	
 
 scanPattern$61:	; if £temporary1411 != 0 goto 71
-249:		cmp t916, 0
+249:		cmp t918, 0
 250:		jne scanPattern$71
 252:	
 
@@ -456,21 +456,21 @@ scanPattern$63:	; call header integral zero 0 stack zero 0
 258:	
 
 scanPattern$64:	; parameter pattern, offset 6
-259:		mov a917, [bp + 8]
-260:		mov [bp + 21], a917
+259:		mov a919, [bp + 8]
+260:		mov [bp + 21], a919
 262:	
 
 scanPattern$65:	; £temporary1414 = int_to_int input (Signed_Char -> Signed_Int)
-263:		mov a918, [bp + 14]
-265:		and a918, 255
-267:		cmp a918, 0
+263:		mov a920, [bp + 14]
+265:		and a920, 255
+267:		cmp a920, 0
 268:		jge scanPattern$66
-269:		neg a918
-271:		neg a918
+269:		neg a920
+271:		neg a920
 273:	
 
 scanPattern$66:	; parameter £temporary1414, offset 8
-274:		mov [bp + 23], a918
+274:		mov [bp + 23], a920
 276:	
 
 scanPattern$67:	; call function noellipse-noellipse strchr
@@ -487,7 +487,7 @@ scanPattern$69:	; £temporary1415 = return_value
 289:	
 
 scanPattern$70:	; if £temporary1415 != 0 goto 77
-290:		cmp t920, 0
+290:		cmp t922, 0
 291:		jne scanPattern$77
 293:	
 
@@ -508,7 +508,7 @@ scanPattern$74:	; £temporary1421 = return_value
 308:	
 
 scanPattern$75:	; input = £temporary1421
-309:		mov [bp + 14], t922
+309:		mov [bp + 14], t924
 311:	
 
 scanPattern$76:	; goto 53
@@ -516,10 +516,10 @@ scanPattern$76:	; goto 53
 314:	
 
 scanPattern$77:	; return
-315:		mov t923, [bp]
+315:		mov t925, [bp]
 316:		mov di, [bp + 4]
 317:		mov bp, [bp + 2]
-318:		jmp t923
+318:		jmp t925
 320:	
 
 scanPattern$78:	; function end scanPattern
@@ -546,7 +546,7 @@ scanString$4:	; £temporary1431 = return_value
 19:	
 
 scanString$5:	; input = £temporary1431
-20:		mov [bp + 12], t925
+20:		mov [bp + 12], t927
 22:	
 
 scanString$6:	; found = 0
@@ -557,16 +557,16 @@ scanString$7:	; call header integral zero 0 stack zero 0
 27:	
 
 scanString$8:	; £temporary1432 = int_to_int input (Signed_Char -> Signed_Int)
-28:		mov a926, [bp + 12]
-30:		and a926, 255
-32:		cmp a926, 0
+28:		mov a928, [bp + 12]
+30:		and a928, 255
+32:		cmp a928, 0
 33:		jge scanString$9
-34:		neg a926
-36:		neg a926
+34:		neg a928
+36:		neg a928
 38:	
 
 scanString$9:	; parameter £temporary1432, offset 6
-39:		mov [bp + 21], a926
+39:		mov [bp + 21], a928
 41:	
 
 scanString$10:	; call function noellipse-noellipse isspace
@@ -583,7 +583,7 @@ scanString$12:	; £temporary1433 = return_value
 54:	
 
 scanString$13:	; if £temporary1433 == 0 goto 20
-55:		cmp t928, 0
+55:		cmp t930, 0
 56:		je scanString$20
 58:	
 
@@ -604,7 +604,7 @@ scanString$17:	; £temporary1434 = return_value
 73:	
 
 scanString$18:	; input = £temporary1434
-74:		mov [bp + 12], t930
+74:		mov [bp + 12], t932
 76:	
 
 scanString$19:	; goto 7
@@ -625,16 +625,16 @@ scanString$22:	; call header integral zero 0 stack zero 0
 89:	
 
 scanString$23:	; £temporary1438 = int_to_int input (Signed_Char -> Signed_Int)
-90:		mov a931, [bp + 12]
-92:		and a931, 255
-94:		cmp a931, 0
+90:		mov a933, [bp + 12]
+92:		and a933, 255
+94:		cmp a933, 0
 95:		jge scanString$24
-96:		neg a931
-98:		neg a931
+96:		neg a933
+98:		neg a933
 100:	
 
 scanString$24:	; parameter £temporary1438, offset 6
-101:		mov [bp + 21], a931
+101:		mov [bp + 21], a933
 103:	
 
 scanString$25:	; call function noellipse-noellipse isspace
@@ -651,21 +651,21 @@ scanString$27:	; £temporary1439 = return_value
 116:	
 
 scanString$28:	; if £temporary1439 != 0 goto 45
-117:		cmp t933, 0
+117:		cmp t935, 0
 118:		jne scanString$45
 120:	
 
 scanString$29:	; £temporary1442 = int_to_int input (Signed_Char -> Signed_Int)
-121:		mov a934, [bp + 12]
-123:		and a934, 255
-125:		cmp a934, 0
+121:		mov a936, [bp + 12]
+123:		and a936, 255
+125:		cmp a936, 0
 126:		jge scanString$30
-127:		neg a934
-129:		neg a934
+127:		neg a936
+129:		neg a936
 131:	
 
 scanString$30:	; if £temporary1442 == -1 goto 45
-132:		cmp a934, -1
+132:		cmp a936, -1
 133:		je scanString$45
 135:	
 
@@ -675,7 +675,7 @@ scanString$31:	; if input == 10 goto 45
 139:	
 
 scanString$32:	; £temporary1447 = index
-140:		mov t935, [bp + 10]
+140:		mov t937, [bp + 10]
 142:	
 
 scanString$33:	; ++index
@@ -683,16 +683,16 @@ scanString$33:	; ++index
 145:	
 
 scanString$34:	; £temporary1449 = string + £temporary1447
-146:		mov a936, [bp + 6]
-147:		add a936, t935
+146:		mov a938, [bp + 6]
+147:		add a938, t937
 149:	
 
 scanString$35:	; £temporary1448 -> £temporary1449 = *£temporary1449
 151:	
 
 scanString$36:	; £temporary1448 -> £temporary1449 = input
-152:		mov a937, [bp + 12]
-153:		mov [a936], a937
+152:		mov a939, [bp + 12]
+153:		mov [a938], a939
 155:	
 
 scanString$37:	; call header integral zero 0 stack zero 0
@@ -712,7 +712,7 @@ scanString$40:	; £temporary1450 = return_value
 170:	
 
 scanString$41:	; input = £temporary1450
-171:		mov [bp + 12], t939
+171:		mov [bp + 12], t941
 173:	
 
 scanString$42:	; found = 1
@@ -728,15 +728,15 @@ scanString$44:	; goto 22
 182:	
 
 scanString$45:	; £temporary1453 = string + index
-183:		mov a940, [bp + 6]
-184:		add a940, [bp + 10]
+183:		mov a942, [bp + 6]
+184:		add a942, [bp + 10]
 186:	
 
 scanString$46:	; £temporary1452 -> £temporary1453 = *£temporary1453
 188:	
 
 scanString$47:	; £temporary1452 -> £temporary1453 = 0
-189:		mov byte [a940], 0
+189:		mov byte [a942], 0
 191:	
 
 scanString$48:	; ++g_inChars
@@ -748,7 +748,7 @@ scanString$49:	; goto 126
 197:	
 
 scanString$50:	; £temporary1455 = precision
-198:		mov t941, [bp + 8]
+198:		mov t943, [bp + 8]
 200:	
 
 scanString$51:	; --precision
@@ -756,7 +756,7 @@ scanString$51:	; --precision
 203:	
 
 scanString$52:	; if £temporary1455 <= 0 goto 76
-204:		cmp t941, 0
+204:		cmp t943, 0
 205:		jle scanString$76
 207:	
 
@@ -764,16 +764,16 @@ scanString$53:	; call header integral zero 0 stack zero 0
 209:	
 
 scanString$54:	; £temporary1457 = int_to_int input (Signed_Char -> Signed_Int)
-210:		mov a942, [bp + 12]
-212:		and a942, 255
-214:		cmp a942, 0
+210:		mov a944, [bp + 12]
+212:		and a944, 255
+214:		cmp a944, 0
 215:		jge scanString$55
-216:		neg a942
-218:		neg a942
+216:		neg a944
+218:		neg a944
 220:	
 
 scanString$55:	; parameter £temporary1457, offset 6
-221:		mov [bp + 21], a942
+221:		mov [bp + 21], a944
 223:	
 
 scanString$56:	; call function noellipse-noellipse isspace
@@ -790,21 +790,21 @@ scanString$58:	; £temporary1458 = return_value
 236:	
 
 scanString$59:	; if £temporary1458 != 0 goto 76
-237:		cmp t944, 0
+237:		cmp t946, 0
 238:		jne scanString$76
 240:	
 
 scanString$60:	; £temporary1461 = int_to_int input (Signed_Char -> Signed_Int)
-241:		mov a945, [bp + 12]
-243:		and a945, 255
-245:		cmp a945, 0
+241:		mov a947, [bp + 12]
+243:		and a947, 255
+245:		cmp a947, 0
 246:		jge scanString$61
-247:		neg a945
-249:		neg a945
+247:		neg a947
+249:		neg a947
 251:	
 
 scanString$61:	; if £temporary1461 == -1 goto 76
-252:		cmp a945, -1
+252:		cmp a947, -1
 253:		je scanString$76
 255:	
 
@@ -814,7 +814,7 @@ scanString$62:	; if input == 10 goto 76
 259:	
 
 scanString$63:	; £temporary1467 = index
-260:		mov t946, [bp + 10]
+260:		mov t948, [bp + 10]
 262:	
 
 scanString$64:	; ++index
@@ -822,16 +822,16 @@ scanString$64:	; ++index
 265:	
 
 scanString$65:	; £temporary1469 = string + £temporary1467
-266:		mov a947, [bp + 6]
-267:		add a947, t946
+266:		mov a949, [bp + 6]
+267:		add a949, t948
 269:	
 
 scanString$66:	; £temporary1468 -> £temporary1469 = *£temporary1469
 271:	
 
 scanString$67:	; £temporary1468 -> £temporary1469 = input
-272:		mov a948, [bp + 12]
-273:		mov [a947], a948
+272:		mov a950, [bp + 12]
+273:		mov [a949], a950
 275:	
 
 scanString$68:	; call header integral zero 0 stack zero 0
@@ -851,7 +851,7 @@ scanString$71:	; £temporary1470 = return_value
 290:	
 
 scanString$72:	; input = £temporary1470
-291:		mov [bp + 12], t950
+291:		mov [bp + 12], t952
 293:	
 
 scanString$73:	; found = 1
@@ -872,15 +872,15 @@ scanString$76:	; if precision <= 0 goto 126
 306:	
 
 scanString$77:	; £temporary1474 = string + index
-307:		mov a951, [bp + 6]
-308:		add a951, [bp + 10]
+307:		mov a953, [bp + 6]
+308:		add a953, [bp + 10]
 310:	
 
 scanString$78:	; £temporary1473 -> £temporary1474 = *£temporary1474
 312:	
 
 scanString$79:	; £temporary1473 -> £temporary1474 = 0
-313:		mov byte [a951], 0
+313:		mov byte [a953], 0
 315:	
 
 scanString$80:	; ++g_inChars
@@ -900,16 +900,16 @@ scanString$83:	; call header integral zero 0 stack zero 0
 327:	
 
 scanString$84:	; £temporary1477 = int_to_int input (Signed_Char -> Signed_Int)
-328:		mov a952, [bp + 12]
-330:		and a952, 255
-332:		cmp a952, 0
+328:		mov a954, [bp + 12]
+330:		and a954, 255
+332:		cmp a954, 0
 333:		jge scanString$85
-334:		neg a952
-336:		neg a952
+334:		neg a954
+336:		neg a954
 338:	
 
 scanString$85:	; parameter £temporary1477, offset 6
-339:		mov [bp + 21], a952
+339:		mov [bp + 21], a954
 341:	
 
 scanString$86:	; call function noellipse-noellipse isspace
@@ -926,21 +926,21 @@ scanString$88:	; £temporary1478 = return_value
 354:	
 
 scanString$89:	; if £temporary1478 != 0 goto 101
-355:		cmp t954, 0
+355:		cmp t956, 0
 356:		jne scanString$101
 358:	
 
 scanString$90:	; £temporary1481 = int_to_int input (Signed_Char -> Signed_Int)
-359:		mov a955, [bp + 12]
-361:		and a955, 255
-363:		cmp a955, 0
+359:		mov a957, [bp + 12]
+361:		and a957, 255
+363:		cmp a957, 0
 364:		jge scanString$91
-365:		neg a955
-367:		neg a955
+365:		neg a957
+367:		neg a957
 369:	
 
 scanString$91:	; if £temporary1481 == -1 goto 101
-370:		cmp a955, -1
+370:		cmp a957, -1
 371:		je scanString$101
 373:	
 
@@ -966,7 +966,7 @@ scanString$96:	; £temporary1486 = return_value
 392:	
 
 scanString$97:	; input = £temporary1486
-393:		mov [bp + 12], t957
+393:		mov [bp + 12], t959
 395:	
 
 scanString$98:	; found = 1
@@ -990,7 +990,7 @@ scanString$102:	; goto 126
 410:	
 
 scanString$103:	; £temporary1489 = precision
-411:		mov t958, [bp + 8]
+411:		mov t960, [bp + 8]
 413:	
 
 scanString$104:	; --precision
@@ -998,7 +998,7 @@ scanString$104:	; --precision
 416:	
 
 scanString$105:	; if £temporary1489 <= 0 goto 124
-417:		cmp t958, 0
+417:		cmp t960, 0
 418:		jle scanString$124
 420:	
 
@@ -1006,16 +1006,16 @@ scanString$106:	; call header integral zero 0 stack zero 0
 422:	
 
 scanString$107:	; £temporary1491 = int_to_int input (Signed_Char -> Signed_Int)
-423:		mov a959, [bp + 12]
-425:		and a959, 255
-427:		cmp a959, 0
+423:		mov a961, [bp + 12]
+425:		and a961, 255
+427:		cmp a961, 0
 428:		jge scanString$108
-429:		neg a959
-431:		neg a959
+429:		neg a961
+431:		neg a961
 433:	
 
 scanString$108:	; parameter £temporary1491, offset 6
-434:		mov [bp + 21], a959
+434:		mov [bp + 21], a961
 436:	
 
 scanString$109:	; call function noellipse-noellipse isspace
@@ -1032,21 +1032,21 @@ scanString$111:	; £temporary1492 = return_value
 449:	
 
 scanString$112:	; if £temporary1492 != 0 goto 124
-450:		cmp t961, 0
+450:		cmp t963, 0
 451:		jne scanString$124
 453:	
 
 scanString$113:	; £temporary1495 = int_to_int input (Signed_Char -> Signed_Int)
-454:		mov a962, [bp + 12]
-456:		and a962, 255
-458:		cmp a962, 0
+454:		mov a964, [bp + 12]
+456:		and a964, 255
+458:		cmp a964, 0
 459:		jge scanString$114
-460:		neg a962
-462:		neg a962
+460:		neg a964
+462:		neg a964
 464:	
 
 scanString$114:	; if £temporary1495 == -1 goto 124
-465:		cmp a962, -1
+465:		cmp a964, -1
 466:		je scanString$124
 468:	
 
@@ -1072,7 +1072,7 @@ scanString$119:	; £temporary1501 = return_value
 487:	
 
 scanString$120:	; input = £temporary1501
-488:		mov [bp + 12], t964
+488:		mov [bp + 12], t966
 490:	
 
 scanString$121:	; found = 1
@@ -1106,10 +1106,10 @@ scanString$127:	; ++g_inCount
 513:	
 
 scanString$128:	; return
-514:		mov t965, [bp]
+514:		mov t967, [bp]
 515:		mov di, [bp + 4]
 516:		mov bp, [bp + 2]
-517:		jmp t965
+517:		jmp t967
 519:	
 
 scanString$129:	; function end scanString
@@ -1119,16 +1119,16 @@ digitToValue:	; call header integral zero 0 stack zero 0
 3:	
 
 digitToValue$1:	; £temporary1512 = int_to_int input (Signed_Char -> Signed_Int)
-4:		mov a966, [bp + 6]
-6:		and a966, 255
-8:		cmp a966, 0
+4:		mov a968, [bp + 6]
+6:		and a968, 255
+8:		cmp a968, 0
 9:		jge digitToValue$2
-10:		neg a966
-12:		neg a966
+10:		neg a968
+12:		neg a968
 14:	
 
 digitToValue$2:	; parameter £temporary1512, offset 6
-15:		mov [bp + 13], a966
+15:		mov [bp + 13], a968
 17:	
 
 digitToValue$3:	; call function noellipse-noellipse isdigit
@@ -1145,43 +1145,43 @@ digitToValue$5:	; £temporary1513 = return_value
 30:	
 
 digitToValue$6:	; if £temporary1513 == 0 goto 11
-31:		cmp t968, 0
+31:		cmp t970, 0
 32:		je digitToValue$11
 34:	
 
 digitToValue$7:	; £temporary1514 = input - 48
-35:		mov a969, [bp + 6]
-36:		sub a969, 48
+35:		mov a971, [bp + 6]
+36:		sub a971, 48
 38:	
 
 digitToValue$8:	; £temporary1515 = int_to_int £temporary1514 (Signed_Char -> Unsigned_Long_Int)
-40:		and a969, 255
+40:		and a971, 255
 42:	
 
 digitToValue$9:	; return_value = £temporary1515
 44:	
 
 digitToValue$10:	; return
-45:		mov t970, [bp]
+45:		mov t972, [bp]
 46:		mov di, [bp + 4]
 47:		mov bp, [bp + 2]
-48:		jmp t970
+48:		jmp t972
 50:	
 
 digitToValue$11:	; call header integral zero 0 stack zero 0
 52:	
 
 digitToValue$12:	; £temporary1516 = int_to_int input (Signed_Char -> Signed_Int)
-53:		mov a971, [bp + 6]
-55:		and a971, 255
-57:		cmp a971, 0
+53:		mov a973, [bp + 6]
+55:		and a973, 255
+57:		cmp a973, 0
 58:		jge digitToValue$13
-59:		neg a971
-61:		neg a971
+59:		neg a973
+61:		neg a973
 63:	
 
 digitToValue$13:	; parameter £temporary1516, offset 6
-64:		mov [bp + 13], a971
+64:		mov [bp + 13], a973
 66:	
 
 digitToValue$14:	; call function noellipse-noellipse islower
@@ -1198,54 +1198,54 @@ digitToValue$16:	; £temporary1517 = return_value
 79:	
 
 digitToValue$17:	; if £temporary1517 == 0 goto 23
-80:		cmp t973, 0
+80:		cmp t975, 0
 81:		je digitToValue$23
 83:	
 
 digitToValue$18:	; £temporary1518 = input - 97
-84:		mov a974, [bp + 6]
-85:		sub a974, 97
+84:		mov a976, [bp + 6]
+85:		sub a976, 97
 87:	
 
 digitToValue$19:	; £temporary1519 = int_to_int £temporary1518 (Signed_Char -> Unsigned_Long_Int)
-89:		and a974, 255
+89:		and a976, 255
 91:	
 
 digitToValue$20:	; £temporary1520 = £temporary1519 + 10
-92:		add a974, 10
+92:		add a976, 10
 94:	
 
 digitToValue$21:	; return_value = £temporary1520
 96:	
 
 digitToValue$22:	; return
-97:		mov t975, [bp]
+97:		mov t977, [bp]
 98:		mov di, [bp + 4]
 99:		mov bp, [bp + 2]
-100:		jmp t975
+100:		jmp t977
 102:	
 
 digitToValue$23:	; £temporary1521 = input - 65
-103:		mov a976, [bp + 6]
-104:		sub a976, 65
+103:		mov a978, [bp + 6]
+104:		sub a978, 65
 106:	
 
 digitToValue$24:	; £temporary1522 = int_to_int £temporary1521 (Signed_Char -> Unsigned_Long_Int)
-108:		and a976, 255
+108:		and a978, 255
 110:	
 
 digitToValue$25:	; £temporary1523 = £temporary1522 + 10
-111:		add a976, 10
+111:		add a978, 10
 113:	
 
 digitToValue$26:	; return_value = £temporary1523
 115:	
 
 digitToValue$27:	; return
-116:		mov t977, [bp]
+116:		mov t979, [bp]
 117:		mov di, [bp + 4]
 118:		mov bp, [bp + 2]
-119:		jmp t977
+119:		jmp t979
 121:	
 
 digitToValue$28:	; function end digitToValue
@@ -1280,23 +1280,23 @@ scanLongInt$6:	; £temporary1528 = return_value
 25:	
 
 scanLongInt$7:	; input = £temporary1528
-26:		mov [bp + 14], t979
+26:		mov [bp + 14], t981
 28:	
 
 scanLongInt$8:	; call header integral zero 0 stack zero 0
 30:	
 
 scanLongInt$9:	; £temporary1529 = int_to_int input (Signed_Char -> Signed_Int)
-31:		mov a980, [bp + 14]
-33:		and a980, 255
-35:		cmp a980, 0
+31:		mov a982, [bp + 14]
+33:		and a982, 255
+35:		cmp a982, 0
 36:		jge scanLongInt$10
-37:		neg a980
-39:		neg a980
+37:		neg a982
+39:		neg a982
 41:	
 
 scanLongInt$10:	; parameter £temporary1529, offset 6
-42:		mov [bp + 21], a980
+42:		mov [bp + 21], a982
 44:	
 
 scanLongInt$11:	; call function noellipse-noellipse isspace
@@ -1313,7 +1313,7 @@ scanLongInt$13:	; £temporary1530 = return_value
 57:	
 
 scanLongInt$14:	; if £temporary1530 == 0 goto 21
-58:		cmp t982, 0
+58:		cmp t984, 0
 59:		je scanLongInt$21
 61:	
 
@@ -1334,7 +1334,7 @@ scanLongInt$18:	; £temporary1531 = return_value
 76:	
 
 scanLongInt$19:	; input = £temporary1531
-77:		mov [bp + 14], t984
+77:		mov [bp + 14], t986
 79:	
 
 scanLongInt$20:	; goto 8
@@ -1363,7 +1363,7 @@ scanLongInt$25:	; £temporary1534 = return_value
 101:	
 
 scanLongInt$26:	; input = £temporary1534
-102:		mov [bp + 14], t986
+102:		mov [bp + 14], t988
 104:	
 
 scanLongInt$27:	; goto 35
@@ -1396,23 +1396,23 @@ scanLongInt$33:	; £temporary1536 = return_value
 129:	
 
 scanLongInt$34:	; input = £temporary1536
-130:		mov [bp + 14], t988
+130:		mov [bp + 14], t990
 132:	
 
 scanLongInt$35:	; call header integral zero 0 stack zero 0
 134:	
 
 scanLongInt$36:	; £temporary1537 = int_to_int input (Signed_Char -> Signed_Int)
-135:		mov a989, [bp + 14]
-137:		and a989, 255
-139:		cmp a989, 0
+135:		mov a991, [bp + 14]
+137:		and a991, 255
+139:		cmp a991, 0
 140:		jge scanLongInt$37
-141:		neg a989
-143:		neg a989
+141:		neg a991
+143:		neg a991
 145:	
 
 scanLongInt$37:	; parameter £temporary1537, offset 6
-146:		mov [bp + 21], a989
+146:		mov [bp + 21], a991
 148:	
 
 scanLongInt$38:	; call function noellipse-noellipse isdigit
@@ -1429,32 +1429,32 @@ scanLongInt$40:	; £temporary1538 = return_value
 161:	
 
 scanLongInt$41:	; if £temporary1538 == 0 goto 53
-162:		cmp t991, 0
+162:		cmp t993, 0
 163:		je scanLongInt$53
 165:	
 
 scanLongInt$42:	; £temporary1539 = longValue * 10
-166:		mov a992, [bp + 6]
+166:		mov a994, [bp + 6]
 168:		xor edx, edx
 169:		imul dword [int4$10#]
 175:	
 
 scanLongInt$43:	; £temporary1540 = input - 48
-176:		mov a996, [bp + 14]
-177:		sub a996, 48
+176:		mov a998, [bp + 14]
+177:		sub a998, 48
 179:	
 
 scanLongInt$44:	; £temporary1541 = int_to_int £temporary1540 (Signed_Char -> Signed_Long_Int)
-181:		and a996, 255
-183:		cmp a996, 0
+181:		and a998, 255
+183:		cmp a998, 0
 184:		jge scanLongInt$45
-185:		neg a996
-187:		neg a996
+185:		neg a998
+187:		neg a998
 189:	
 
 scanLongInt$45:	; longValue = £temporary1539 + £temporary1541
-190:		add t995, a996
-191:		mov [bp + 6], t995
+190:		add t997, a998
+191:		mov [bp + 6], t997
 193:	
 
 scanLongInt$46:	; call header integral zero 0 stack zero 0
@@ -1474,7 +1474,7 @@ scanLongInt$49:	; £temporary1543 = return_value
 208:	
 
 scanLongInt$50:	; input = £temporary1543
-209:		mov [bp + 14], t998
+209:		mov [bp + 14], t1000
 211:	
 
 scanLongInt$51:	; found = 1
@@ -1491,12 +1491,12 @@ scanLongInt$53:	; if minus == 0 goto 56
 221:	
 
 scanLongInt$54:	; £temporary1545 = -longValue
-222:		mov a999, [bp + 6]
-223:		neg a999
+222:		mov a1001, [bp + 6]
+223:		neg a1001
 225:	
 
 scanLongInt$55:	; longValue = £temporary1545
-226:		mov [bp + 6], a999
+226:		mov [bp + 6], a1001
 228:	
 
 scanLongInt$56:	; if found == 0 goto 58
@@ -1512,8 +1512,8 @@ scanLongInt$58:	; call header integral zero 0 stack zero 0
 237:	
 
 scanLongInt$59:	; parameter input, offset 6
-238:		mov a1000, [bp + 14]
-239:		mov [bp + 21], a1000
+238:		mov a1002, [bp + 14]
+239:		mov [bp + 21], a1002
 241:	
 
 scanLongInt$60:	; call function noellipse-noellipse unscanChar
@@ -1527,14 +1527,14 @@ scanLongInt$61:	; post call
 249:	
 
 scanLongInt$62:	; return_value = longValue
-250:		mov a1001, [bp + 6]
+250:		mov a1003, [bp + 6]
 252:	
 
 scanLongInt$63:	; return
-253:		mov t1002, [bp]
+253:		mov t1004, [bp]
 254:		mov di, [bp + 4]
 255:		mov bp, [bp + 2]
-256:		jmp t1002
+256:		jmp t1004
 258:	
 
 scanLongInt$64:	; function end scanLongInt
@@ -1561,7 +1561,7 @@ scanUnsignedLongInt$4:	; £temporary1553 = return_value
 19:	
 
 scanUnsignedLongInt$5:	; input = £temporary1553
-20:		mov [bp + 18], t1004
+20:		mov [bp + 18], t1006
 22:	
 
 scanUnsignedLongInt$6:	; found = 1
@@ -1572,16 +1572,16 @@ scanUnsignedLongInt$7:	; call header integral zero 0 stack zero 0
 27:	
 
 scanUnsignedLongInt$8:	; £temporary1554 = int_to_int input (Signed_Char -> Signed_Int)
-28:		mov a1005, [bp + 18]
-30:		and a1005, 255
-32:		cmp a1005, 0
+28:		mov a1007, [bp + 18]
+30:		and a1007, 255
+32:		cmp a1007, 0
 33:		jge scanUnsignedLongInt$9
-34:		neg a1005
-36:		neg a1005
+34:		neg a1007
+36:		neg a1007
 38:	
 
 scanUnsignedLongInt$9:	; parameter £temporary1554, offset 6
-39:		mov [bp + 27], a1005
+39:		mov [bp + 27], a1007
 41:	
 
 scanUnsignedLongInt$10:	; call function noellipse-noellipse isspace
@@ -1598,7 +1598,7 @@ scanUnsignedLongInt$12:	; £temporary1555 = return_value
 54:	
 
 scanUnsignedLongInt$13:	; if £temporary1555 == 0 goto 20
-55:		cmp t1007, 0
+55:		cmp t1009, 0
 56:		je scanUnsignedLongInt$20
 58:	
 
@@ -1619,7 +1619,7 @@ scanUnsignedLongInt$17:	; £temporary1556 = return_value
 73:	
 
 scanUnsignedLongInt$18:	; input = £temporary1556
-74:		mov [bp + 18], t1009
+74:		mov [bp + 18], t1011
 76:	
 
 scanUnsignedLongInt$19:	; goto 7
@@ -1648,23 +1648,23 @@ scanUnsignedLongInt$24:	; £temporary1559 = return_value
 98:	
 
 scanUnsignedLongInt$25:	; input = £temporary1559
-99:		mov [bp + 18], t1011
+99:		mov [bp + 18], t1013
 101:	
 
 scanUnsignedLongInt$26:	; call header integral zero 0 stack zero 0
 103:	
 
 scanUnsignedLongInt$27:	; £temporary1560 = int_to_int input (Signed_Char -> Signed_Int)
-104:		mov a1012, [bp + 18]
-106:		and a1012, 255
-108:		cmp a1012, 0
+104:		mov a1014, [bp + 18]
+106:		and a1014, 255
+108:		cmp a1014, 0
 109:		jge scanUnsignedLongInt$28
-110:		neg a1012
-112:		neg a1012
+110:		neg a1014
+112:		neg a1014
 114:	
 
 scanUnsignedLongInt$28:	; parameter £temporary1560, offset 6
-115:		mov [bp + 27], a1012
+115:		mov [bp + 27], a1014
 117:	
 
 scanUnsignedLongInt$29:	; call function noellipse-noellipse tolower
@@ -1681,7 +1681,7 @@ scanUnsignedLongInt$31:	; £temporary1561 = return_value
 130:	
 
 scanUnsignedLongInt$32:	; if £temporary1561 != 120 goto 44
-131:		cmp t1014, 120
+131:		cmp t1016, 120
 132:		jne scanUnsignedLongInt$44
 134:	
 
@@ -1691,7 +1691,7 @@ scanUnsignedLongInt$33:	; if base != 0 goto 36
 138:	
 
 scanUnsignedLongInt$34:	; £temporary1567 = 16
-139:		mov t1015, 16
+139:		mov t1017, 16
 141:	
 
 scanUnsignedLongInt$35:	; goto 37
@@ -1699,11 +1699,11 @@ scanUnsignedLongInt$35:	; goto 37
 144:	
 
 scanUnsignedLongInt$36:	; £temporary1567 = base
-145:		mov t1016, [bp + 6]
+145:		mov t1018, [bp + 6]
 147:	
 
 scanUnsignedLongInt$37:	; base = £temporary1567
-148:		mov [bp + 6], t1016
+148:		mov [bp + 6], t1018
 150:	
 
 scanUnsignedLongInt$38:	; call header integral zero 0 stack zero 0
@@ -1723,7 +1723,7 @@ scanUnsignedLongInt$41:	; £temporary1568 = return_value
 165:	
 
 scanUnsignedLongInt$42:	; input = £temporary1568
-166:		mov [bp + 18], t1018
+166:		mov [bp + 18], t1020
 168:	
 
 scanUnsignedLongInt$43:	; goto 49
@@ -1736,7 +1736,7 @@ scanUnsignedLongInt$44:	; if base != 0 goto 47
 175:	
 
 scanUnsignedLongInt$45:	; £temporary1573 = 8
-176:		mov t1019, 8
+176:		mov t1021, 8
 178:	
 
 scanUnsignedLongInt$46:	; goto 48
@@ -1744,11 +1744,11 @@ scanUnsignedLongInt$46:	; goto 48
 181:	
 
 scanUnsignedLongInt$47:	; £temporary1573 = base
-182:		mov t1020, [bp + 6]
+182:		mov t1022, [bp + 6]
 184:	
 
 scanUnsignedLongInt$48:	; base = £temporary1573
-185:		mov [bp + 6], t1020
+185:		mov [bp + 6], t1022
 187:	
 
 scanUnsignedLongInt$49:	; if base != 0 goto 51
@@ -1764,16 +1764,16 @@ scanUnsignedLongInt$51:	; call header integral zero 0 stack zero 0
 196:	
 
 scanUnsignedLongInt$52:	; £temporary1575 = int_to_int input (Signed_Char -> Signed_Int)
-197:		mov a1021, [bp + 18]
-199:		and a1021, 255
-201:		cmp a1021, 0
+197:		mov a1023, [bp + 18]
+199:		and a1023, 255
+201:		cmp a1023, 0
 202:		jge scanUnsignedLongInt$53
-203:		neg a1021
-205:		neg a1021
+203:		neg a1023
+205:		neg a1023
 207:	
 
 scanUnsignedLongInt$53:	; parameter £temporary1575, offset 6
-208:		mov [bp + 27], a1021
+208:		mov [bp + 27], a1023
 210:	
 
 scanUnsignedLongInt$54:	; call function noellipse-noellipse isxdigit
@@ -1790,7 +1790,7 @@ scanUnsignedLongInt$56:	; £temporary1576 = return_value
 223:	
 
 scanUnsignedLongInt$57:	; if £temporary1576 == 0 goto 74
-224:		cmp t1023, 0
+224:		cmp t1025, 0
 225:		je scanUnsignedLongInt$74
 227:	
 
@@ -1798,8 +1798,8 @@ scanUnsignedLongInt$58:	; call header integral zero 0 stack zero 0
 229:	
 
 scanUnsignedLongInt$59:	; parameter input, offset 6
-230:		mov a1024, [bp + 18]
-231:		mov [bp + 27], a1024
+230:		mov a1026, [bp + 18]
+231:		mov [bp + 27], a1026
 233:	
 
 scanUnsignedLongInt$60:	; call function noellipse-noellipse digitToValue
@@ -1816,24 +1816,24 @@ scanUnsignedLongInt$62:	; £temporary1577 = return_value
 246:	
 
 scanUnsignedLongInt$63:	; digit = £temporary1577
-247:		mov [bp + 14], t1026
+247:		mov [bp + 14], t1028
 249:	
 
 scanUnsignedLongInt$64:	; if digit >= base goto 74
-250:		mov a1027, [bp + 6]
-251:		cmp [bp + 14], a1027
+250:		mov a1029, [bp + 6]
+251:		cmp [bp + 14], a1029
 252:		jae scanUnsignedLongInt$74
 254:	
 
 scanUnsignedLongInt$65:	; £temporary1579 = unsignedLongValue * base
-255:		mov a1028, [bp + 10]
+255:		mov a1030, [bp + 10]
 257:		xor edx, edx
 258:		mul dword [bp + 6]
 264:	
 
 scanUnsignedLongInt$66:	; unsignedLongValue = £temporary1579 + digit
-265:		add t1031, [bp + 14]
-266:		mov [bp + 10], t1031
+265:		add t1033, [bp + 14]
+266:		mov [bp + 10], t1033
 268:	
 
 scanUnsignedLongInt$67:	; found = 1
@@ -1857,7 +1857,7 @@ scanUnsignedLongInt$71:	; £temporary1581 = return_value
 286:	
 
 scanUnsignedLongInt$72:	; input = £temporary1581
-287:		mov [bp + 18], t1033
+287:		mov [bp + 18], t1035
 289:	
 
 scanUnsignedLongInt$73:	; goto 51
@@ -1877,8 +1877,8 @@ scanUnsignedLongInt$76:	; call header integral zero 0 stack zero 0
 301:	
 
 scanUnsignedLongInt$77:	; parameter input, offset 6
-302:		mov a1034, [bp + 18]
-303:		mov [bp + 27], a1034
+302:		mov a1036, [bp + 18]
+303:		mov [bp + 27], a1036
 305:	
 
 scanUnsignedLongInt$78:	; call function noellipse-noellipse unscanChar
@@ -1892,14 +1892,14 @@ scanUnsignedLongInt$79:	; post call
 313:	
 
 scanUnsignedLongInt$80:	; return_value = unsignedLongValue
-314:		mov a1035, [bp + 10]
+314:		mov a1037, [bp + 10]
 316:	
 
 scanUnsignedLongInt$81:	; return
-317:		mov t1036, [bp]
+317:		mov t1038, [bp]
 318:		mov di, [bp + 4]
 319:		mov bp, [bp + 2]
-320:		jmp t1036
+320:		jmp t1038
 322:	
 
 scanUnsignedLongInt$82:	; function end scanUnsignedLongInt
@@ -1946,23 +1946,23 @@ scanLongDouble$9:	; £temporary1591 = return_value
 34:	
 
 scanLongDouble$10:	; input = £temporary1591
-35:		mov [bp + 26], t1038
+35:		mov [bp + 26], t1040
 37:	
 
 scanLongDouble$11:	; call header integral zero 0 stack zero 0
 39:	
 
 scanLongDouble$12:	; £temporary1592 = int_to_int input (Signed_Char -> Signed_Int)
-40:		mov a1039, [bp + 26]
-42:		and a1039, 255
-44:		cmp a1039, 0
+40:		mov a1041, [bp + 26]
+42:		and a1041, 255
+44:		cmp a1041, 0
 45:		jge scanLongDouble$13
-46:		neg a1039
-48:		neg a1039
+46:		neg a1041
+48:		neg a1041
 50:	
 
 scanLongDouble$13:	; parameter £temporary1592, offset 6
-51:		mov [bp + 33], a1039
+51:		mov [bp + 33], a1041
 53:	
 
 scanLongDouble$14:	; call function noellipse-noellipse isspace
@@ -1979,7 +1979,7 @@ scanLongDouble$16:	; £temporary1593 = return_value
 66:	
 
 scanLongDouble$17:	; if £temporary1593 == 0 goto 24
-67:		cmp t1041, 0
+67:		cmp t1043, 0
 68:		je scanLongDouble$24
 70:	
 
@@ -2000,7 +2000,7 @@ scanLongDouble$21:	; £temporary1594 = return_value
 85:	
 
 scanLongDouble$22:	; input = £temporary1594
-86:		mov [bp + 26], t1043
+86:		mov [bp + 26], t1045
 88:	
 
 scanLongDouble$23:	; goto 11
@@ -2029,7 +2029,7 @@ scanLongDouble$28:	; £temporary1597 = return_value
 110:	
 
 scanLongDouble$29:	; input = £temporary1597
-111:		mov [bp + 26], t1045
+111:		mov [bp + 26], t1047
 113:	
 
 scanLongDouble$30:	; goto 38
@@ -2062,23 +2062,23 @@ scanLongDouble$36:	; £temporary1599 = return_value
 138:	
 
 scanLongDouble$37:	; input = £temporary1599
-139:		mov [bp + 26], t1047
+139:		mov [bp + 26], t1049
 141:	
 
 scanLongDouble$38:	; call header integral zero 0 stack zero 0
 143:	
 
 scanLongDouble$39:	; £temporary1600 = int_to_int input (Signed_Char -> Signed_Int)
-144:		mov a1048, [bp + 26]
-146:		and a1048, 255
-148:		cmp a1048, 0
+144:		mov a1050, [bp + 26]
+146:		and a1050, 255
+148:		cmp a1050, 0
 149:		jge scanLongDouble$40
-150:		neg a1048
-152:		neg a1048
+150:		neg a1050
+152:		neg a1050
 154:	
 
 scanLongDouble$40:	; parameter £temporary1600, offset 6
-155:		mov [bp + 33], a1048
+155:		mov [bp + 33], a1050
 157:	
 
 scanLongDouble$41:	; call function noellipse-noellipse isdigit
@@ -2095,7 +2095,7 @@ scanLongDouble$43:	; £temporary1601 = return_value
 170:	
 
 scanLongDouble$44:	; if £temporary1601 == 0 goto 60
-171:		cmp t1050, 0
+171:		cmp t1052, 0
 172:		je scanLongDouble$60
 174:	
 
@@ -2112,20 +2112,20 @@ scanLongDouble$47:	; £temporary1602 = 10.0 * value
 183:	
 
 scanLongDouble$48:	; £temporary1603 = input - 48
-184:		mov a1051, [bp + 26]
-185:		sub a1051, 48
+184:		mov a1053, [bp + 26]
+185:		sub a1053, 48
 187:	
 
 scanLongDouble$49:	; £temporary1605 = int_to_int £temporary1603 (Signed_Char -> Signed_Int)
-189:		and a1051, 255
-191:		cmp a1051, 0
+189:		and a1053, 255
+191:		cmp a1053, 0
 192:		jge scanLongDouble$50
-193:		neg a1051
-195:		neg a1051
+193:		neg a1053
+195:		neg a1053
 197:	
 
 scanLongDouble$50:	; £temporary1604 = int_to_float £temporary1605 (Signed_Int -> Long_Double)
-198:		mov [container2bytes#], a1051
+198:		mov [container2bytes#], a1053
 199:		fild word [container2bytes#]
 201:	
 
@@ -2154,7 +2154,7 @@ scanLongDouble$56:	; £temporary1607 = return_value
 222:	
 
 scanLongDouble$57:	; input = £temporary1607
-223:		mov [bp + 26], t1053
+223:		mov [bp + 26], t1055
 225:	
 
 scanLongDouble$58:	; found = 1
@@ -2187,23 +2187,23 @@ scanLongDouble$64:	; £temporary1610 = return_value
 250:	
 
 scanLongDouble$65:	; input = £temporary1610
-251:		mov [bp + 26], t1055
+251:		mov [bp + 26], t1057
 253:	
 
 scanLongDouble$66:	; call header integral zero 0 stack zero 0
 255:	
 
 scanLongDouble$67:	; £temporary1611 = int_to_int input (Signed_Char -> Signed_Int)
-256:		mov a1056, [bp + 26]
-258:		and a1056, 255
-260:		cmp a1056, 0
+256:		mov a1058, [bp + 26]
+258:		and a1058, 255
+260:		cmp a1058, 0
 261:		jge scanLongDouble$68
-262:		neg a1056
-264:		neg a1056
+262:		neg a1058
+264:		neg a1058
 266:	
 
 scanLongDouble$68:	; parameter £temporary1611, offset 6
-267:		mov [bp + 33], a1056
+267:		mov [bp + 33], a1058
 269:	
 
 scanLongDouble$69:	; call function noellipse-noellipse isdigit
@@ -2220,7 +2220,7 @@ scanLongDouble$71:	; £temporary1612 = return_value
 282:	
 
 scanLongDouble$72:	; if £temporary1612 == 0 goto 92
-283:		cmp t1058, 0
+283:		cmp t1060, 0
 284:		je scanLongDouble$92
 286:	
 
@@ -2249,20 +2249,20 @@ scanLongDouble$78:	; push float factor
 304:	
 
 scanLongDouble$79:	; £temporary1614 = input - 48
-305:		mov a1059, [bp + 26]
-306:		sub a1059, 48
+305:		mov a1061, [bp + 26]
+306:		sub a1061, 48
 308:	
 
 scanLongDouble$80:	; £temporary1616 = int_to_int £temporary1614 (Signed_Char -> Signed_Int)
-310:		and a1059, 255
-312:		cmp a1059, 0
+310:		and a1061, 255
+312:		cmp a1061, 0
 313:		jge scanLongDouble$81
-314:		neg a1059
-316:		neg a1059
+314:		neg a1061
+316:		neg a1061
 318:	
 
 scanLongDouble$81:	; £temporary1615 = int_to_float £temporary1616 (Signed_Int -> Long_Double)
-319:		mov [container2bytes#], a1059
+319:		mov [container2bytes#], a1061
 320:		fild word [container2bytes#]
 322:	
 
@@ -2295,7 +2295,7 @@ scanLongDouble$88:	; £temporary1619 = return_value
 346:	
 
 scanLongDouble$89:	; input = £temporary1619
-347:		mov [bp + 26], t1061
+347:		mov [bp + 26], t1063
 349:	
 
 scanLongDouble$90:	; found = 1
@@ -2310,8 +2310,8 @@ scanLongDouble$92:	; call header integral zero 0 stack zero 0
 357:	
 
 scanLongDouble$93:	; parameter input, offset 6
-358:		mov a1062, [bp + 26]
-359:		mov [bp + 33], a1062
+358:		mov a1064, [bp + 26]
+359:		mov [bp + 33], a1064
 361:	
 
 scanLongDouble$94:	; call function noellipse-noellipse unscanChar
@@ -2328,16 +2328,16 @@ scanLongDouble$96:	; call header integral zero 0 stack zero 0
 371:	
 
 scanLongDouble$97:	; £temporary1622 = int_to_int input (Signed_Char -> Signed_Int)
-372:		mov a1063, [bp + 26]
-374:		and a1063, 255
-376:		cmp a1063, 0
+372:		mov a1065, [bp + 26]
+374:		and a1065, 255
+376:		cmp a1065, 0
 377:		jge scanLongDouble$98
-378:		neg a1063
-380:		neg a1063
+378:		neg a1065
+380:		neg a1065
 382:	
 
 scanLongDouble$98:	; parameter £temporary1622, offset 6
-383:		mov [bp + 33], a1063
+383:		mov [bp + 33], a1065
 385:	
 
 scanLongDouble$99:	; call function noellipse-noellipse tolower
@@ -2354,7 +2354,7 @@ scanLongDouble$101:	; £temporary1623 = return_value
 398:	
 
 scanLongDouble$102:	; if £temporary1623 != 101 goto 121
-399:		cmp t1065, 101
+399:		cmp t1067, 101
 400:		jne scanLongDouble$121
 402:	
 
@@ -2375,7 +2375,7 @@ scanLongDouble$106:	; £temporary1625 = return_value
 417:	
 
 scanLongDouble$107:	; £temporary1626 = int_to_float £temporary1625 (Signed_Long_Int -> Double)
-418:		mov [container4bytes#], t1067
+418:		mov [container4bytes#], t1069
 419:		fild dword [container4bytes#]
 421:	
 
@@ -2439,8 +2439,8 @@ scanLongDouble$121:	; call header integral zero 0 stack zero 0
 466:	
 
 scanLongDouble$122:	; parameter input, offset 6
-467:		mov a1068, [bp + 26]
-468:		mov [bp + 33], a1068
+467:		mov a1070, [bp + 26]
+468:		mov [bp + 33], a1070
 470:	
 
 scanLongDouble$123:	; call function noellipse-noellipse unscanChar
@@ -2487,10 +2487,10 @@ scanLongDouble$132:	; return_value = value
 503:	
 
 scanLongDouble$133:	; return
-504:		mov t1069, [bp]
+504:		mov t1071, [bp]
 505:		mov di, [bp + 4]
 506:		mov bp, [bp + 2]
-507:		jmp t1069
+507:		jmp t1071
 509:	
 
 scanLongDouble$134:	; function end scanLongDouble
@@ -2529,43 +2529,43 @@ scanFormat$7:	; index = 0
 25:	
 
 scanFormat$8:	; £temporary1643 = format + index
-26:		mov a1070, [bp + 6]
-27:		add a1070, [bp + 31]
+26:		mov a1072, [bp + 6]
+27:		add a1072, [bp + 31]
 29:	
 
 scanFormat$9:	; £temporary1642 -> £temporary1643 = *£temporary1643
 31:	
 
 scanFormat$10:	; if £temporary1642 -> £temporary1643 == 0 goto 325
-32:		cmp byte [a1070], 0
+32:		cmp byte [a1072], 0
 33:		je scanFormat$325
 35:	
 
 scanFormat$11:	; £temporary1647 = format + index
-36:		mov a1071, [bp + 6]
-37:		add a1071, [bp + 31]
+36:		mov a1073, [bp + 6]
+37:		add a1073, [bp + 31]
 39:	
 
 scanFormat$12:	; £temporary1646 -> £temporary1647 = *£temporary1647
 41:	
 
 scanFormat$13:	; c = £temporary1646 -> £temporary1647
-42:		mov t1072, [a1071]
-43:		mov [bp + 10], t1072
+42:		mov t1074, [a1073]
+43:		mov [bp + 10], t1074
 45:	
 
 scanFormat$14:	; £temporary1648 = int_to_int c (Signed_Char -> Signed_Int)
-46:		mov a1073, [bp + 10]
-48:		and a1073, 255
-50:		cmp a1073, 0
+46:		mov a1075, [bp + 10]
+48:		and a1075, 255
+50:		cmp a1075, 0
 51:		jge scanFormat$15
-52:		neg a1073
-54:		neg a1073
+52:		neg a1075
+54:		neg a1075
 56:	
 
 scanFormat$15:	; d = £temporary1648 + 1
-57:		add a1073, 1
-58:		mov [bp + 55], a1073
+57:		add a1075, 1
+58:		mov [bp + 55], a1075
 60:	
 
 scanFormat$16:	; if percent == 0 goto 317
@@ -2574,87 +2574,87 @@ scanFormat$16:	; if percent == 0 goto 317
 64:	
 
 scanFormat$17:	; £temporary1650 = d - 1
-65:		mov a1074, [bp + 55]
-66:		sub a1074, 1
+65:		mov a1076, [bp + 55]
+66:		sub a1076, 1
 68:	
 
 scanFormat$18:	; case £temporary1650 == 104 goto 36
-69:		cmp a1074, 104
+69:		cmp a1076, 104
 70:		je scanFormat$36
 72:	
 
 scanFormat$19:	; case £temporary1650 == 108 goto 38
-73:		cmp a1074, 108
+73:		cmp a1076, 108
 74:		je scanFormat$38
 76:	
 
 scanFormat$20:	; case £temporary1650 == 76 goto 40
-77:		cmp a1074, 76
+77:		cmp a1076, 76
 78:		je scanFormat$40
 80:	
 
 scanFormat$21:	; case £temporary1650 == 42 goto 42
-81:		cmp a1074, 42
+81:		cmp a1076, 42
 82:		je scanFormat$42
 84:	
 
 scanFormat$22:	; case £temporary1650 == 99 goto 44
-85:		cmp a1074, 99
+85:		cmp a1076, 99
 86:		je scanFormat$44
 88:	
 
 scanFormat$23:	; case £temporary1650 == 115 goto 62
-89:		cmp a1074, 115
+89:		cmp a1076, 115
 90:		je scanFormat$62
 92:	
 
 scanFormat$24:	; case £temporary1650 == 100 goto 81
-93:		cmp a1074, 100
+93:		cmp a1076, 100
 94:		je scanFormat$81
 96:	
 
 scanFormat$25:	; case £temporary1650 == 105 goto 81
-97:		cmp a1074, 105
+97:		cmp a1076, 105
 98:		je scanFormat$81
 100:	
 
 scanFormat$26:	; case £temporary1650 == 111 goto 116
-101:		cmp a1074, 111
+101:		cmp a1076, 111
 102:		je scanFormat$116
 104:	
 
 scanFormat$27:	; case £temporary1650 == 120 goto 152
-105:		cmp a1074, 120
+105:		cmp a1076, 120
 106:		je scanFormat$152
 108:	
 
 scanFormat$28:	; case £temporary1650 == 117 goto 188
-109:		cmp a1074, 117
+109:		cmp a1076, 117
 110:		je scanFormat$188
 112:	
 
 scanFormat$29:	; case £temporary1650 == 103 goto 224
-113:		cmp a1074, 103
+113:		cmp a1076, 103
 114:		je scanFormat$224
 116:	
 
 scanFormat$30:	; case £temporary1650 == 102 goto 224
-117:		cmp a1074, 102
+117:		cmp a1076, 102
 118:		je scanFormat$224
 120:	
 
 scanFormat$31:	; case £temporary1650 == 101 goto 224
-121:		cmp a1074, 101
+121:		cmp a1076, 101
 122:		je scanFormat$224
 124:	
 
 scanFormat$32:	; case £temporary1650 == 91 goto 260
-125:		cmp a1074, 91
+125:		cmp a1076, 91
 126:		je scanFormat$260
 128:	
 
 scanFormat$33:	; case £temporary1650 == 110 goto 301
-129:		cmp a1074, 110
+129:		cmp a1076, 110
 130:		je scanFormat$301
 132:	
 
@@ -2714,7 +2714,7 @@ scanFormat$47:	; £temporary1651 = return_value
 176:	
 
 scanFormat$48:	; charValue = £temporary1651
-177:		mov [bp + 57], t1076
+177:		mov [bp + 57], t1078
 179:	
 
 scanFormat$49:	; if star != 0 goto 57
@@ -2727,8 +2727,8 @@ scanFormat$50:	; arg_list = arg_list + 2
 186:	
 
 scanFormat$51:	; £temporary1655 = arg_list - 2
-187:		mov a1077, [bp + 8]
-188:		sub a1077, 2
+187:		mov a1079, [bp + 8]
+188:		sub a1079, 2
 190:	
 
 scanFormat$52:	; £temporary1656 = int_to_int £temporary1655 (Signed_Int -> Pointer)
@@ -2738,17 +2738,17 @@ scanFormat$53:	; £temporary1657 -> £temporary1656 = *£temporary1656
 195:	
 
 scanFormat$54:	; charPtr = £temporary1657 -> £temporary1656
-196:		mov t1078, [a1077]
-197:		mov [bp + 11], t1078
+196:		mov t1080, [a1079]
+197:		mov [bp + 11], t1080
 199:	
 
 scanFormat$55:	; £temporary1658 -> charPtr = *charPtr
-200:		mov a1079, [bp + 11]
+200:		mov a1081, [bp + 11]
 202:	
 
 scanFormat$56:	; £temporary1658 -> charPtr = charValue
-203:		mov a1080, [bp + 57]
-204:		mov [a1079], a1080
+203:		mov a1082, [bp + 57]
+204:		mov [a1081], a1082
 206:	
 
 scanFormat$57:	; percent = 0
@@ -2756,16 +2756,16 @@ scanFormat$57:	; percent = 0
 209:	
 
 scanFormat$58:	; £temporary1659 = int_to_int charValue (Signed_Char -> Signed_Int)
-210:		mov a1081, [bp + 57]
-212:		and a1081, 255
-214:		cmp a1081, 0
+210:		mov a1083, [bp + 57]
+212:		and a1083, 255
+214:		cmp a1083, 0
 215:		jge scanFormat$59
-216:		neg a1081
-218:		neg a1081
+216:		neg a1083
+218:		neg a1083
 220:	
 
 scanFormat$59:	; if £temporary1659 == -1 goto 323
-221:		cmp a1081, -1
+221:		cmp a1083, -1
 222:		je scanFormat$323
 224:	
 
@@ -2787,8 +2787,8 @@ scanFormat$63:	; arg_list = arg_list + 2
 237:	
 
 scanFormat$64:	; £temporary1665 = arg_list - 2
-238:		mov a1082, [bp + 8]
-239:		sub a1082, 2
+238:		mov a1084, [bp + 8]
+239:		sub a1084, 2
 241:	
 
 scanFormat$65:	; £temporary1666 = int_to_int £temporary1665 (Signed_Int -> Pointer)
@@ -2798,16 +2798,16 @@ scanFormat$66:	; £temporary1667 -> £temporary1666 = *£temporary1666
 246:	
 
 scanFormat$67:	; charPtr = £temporary1667 -> £temporary1666
-247:		mov t1083, [a1082]
-248:		mov [bp + 11], t1083
+247:		mov t1085, [a1084]
+248:		mov [bp + 11], t1085
 250:	
 
 scanFormat$68:	; call header integral zero 0 stack zero 0
 252:	
 
 scanFormat$69:	; parameter charPtr, offset 6
-253:		mov a1084, [bp + 11]
-254:		mov [bp + 63], a1084
+253:		mov a1086, [bp + 11]
+254:		mov [bp + 63], a1086
 256:	
 
 scanFormat$70:	; parameter 0, offset 8
@@ -2874,7 +2874,7 @@ scanFormat$84:	; £temporary1670 = return_value
 307:	
 
 scanFormat$85:	; longValue = £temporary1670
-308:		mov [bp + 23], t1086
+308:		mov [bp + 23], t1088
 310:	
 
 scanFormat$86:	; if star != 0 goto 114
@@ -2892,8 +2892,8 @@ scanFormat$88:	; arg_list = arg_list + 2
 321:	
 
 scanFormat$89:	; £temporary1674 = arg_list - 2
-322:		mov a1087, [bp + 8]
-323:		sub a1087, 2
+322:		mov a1089, [bp + 8]
+323:		sub a1089, 2
 325:	
 
 scanFormat$90:	; £temporary1675 = int_to_int £temporary1674 (Signed_Int -> Pointer)
@@ -2903,24 +2903,24 @@ scanFormat$91:	; £temporary1676 -> £temporary1675 = *£temporary1675
 330:	
 
 scanFormat$92:	; shortPtr = £temporary1676 -> £temporary1675
-331:		mov t1088, [a1087]
-332:		mov [bp + 29], t1088
+331:		mov t1090, [a1089]
+332:		mov [bp + 29], t1090
 334:	
 
 scanFormat$93:	; £temporary1677 -> shortPtr = *shortPtr
-335:		mov a1089, [bp + 29]
+335:		mov a1091, [bp + 29]
 337:	
 
 scanFormat$94:	; £temporary1678 = int_to_int longValue (Signed_Long_Int -> Signed_Short_Int)
-338:		mov a1090, [bp + 23]
-341:		cmp a1090, 0
+338:		mov a1092, [bp + 23]
+341:		cmp a1092, 0
 342:		jge scanFormat$95
-343:		neg a1090
-345:		neg a1090
+343:		neg a1092
+345:		neg a1092
 347:	
 
 scanFormat$95:	; £temporary1677 -> shortPtr = £temporary1678
-348:		mov [a1089], a1090
+348:		mov [a1091], a1092
 350:	
 
 scanFormat$96:	; goto 114
@@ -2937,8 +2937,8 @@ scanFormat$98:	; arg_list = arg_list + 2
 360:	
 
 scanFormat$99:	; £temporary1682 = arg_list - 2
-361:		mov a1091, [bp + 8]
-362:		sub a1091, 2
+361:		mov a1093, [bp + 8]
+362:		sub a1093, 2
 364:	
 
 scanFormat$100:	; £temporary1683 = int_to_int £temporary1682 (Signed_Int -> Pointer)
@@ -2948,24 +2948,24 @@ scanFormat$101:	; £temporary1684 -> £temporary1683 = *£temporary1683
 369:	
 
 scanFormat$102:	; intPtr = £temporary1684 -> £temporary1683
-370:		mov t1092, [a1091]
-371:		mov [bp + 33], t1092
+370:		mov t1094, [a1093]
+371:		mov [bp + 33], t1094
 373:	
 
 scanFormat$103:	; £temporary1685 -> intPtr = *intPtr
-374:		mov a1093, [bp + 33]
+374:		mov a1095, [bp + 33]
 376:	
 
 scanFormat$104:	; £temporary1686 = int_to_int longValue (Signed_Long_Int -> Signed_Int)
-377:		mov a1094, [bp + 23]
-380:		cmp a1094, 0
+377:		mov a1096, [bp + 23]
+380:		cmp a1096, 0
 381:		jge scanFormat$105
-382:		neg a1094
-384:		neg a1094
+382:		neg a1096
+384:		neg a1096
 386:	
 
 scanFormat$105:	; £temporary1685 -> intPtr = £temporary1686
-387:		mov [a1093], a1094
+387:		mov [a1095], a1096
 389:	
 
 scanFormat$106:	; goto 114
@@ -2977,8 +2977,8 @@ scanFormat$107:	; arg_list = arg_list + 2
 395:	
 
 scanFormat$108:	; £temporary1688 = arg_list - 2
-396:		mov a1095, [bp + 8]
-397:		sub a1095, 2
+396:		mov a1097, [bp + 8]
+397:		sub a1097, 2
 399:	
 
 scanFormat$109:	; £temporary1689 = int_to_int £temporary1688 (Signed_Int -> Pointer)
@@ -2988,17 +2988,17 @@ scanFormat$110:	; £temporary1690 -> £temporary1689 = *£temporary1689
 404:	
 
 scanFormat$111:	; longPtr = £temporary1690 -> £temporary1689
-405:		mov t1096, [a1095]
-406:		mov [bp + 27], t1096
+405:		mov t1098, [a1097]
+406:		mov [bp + 27], t1098
 408:	
 
 scanFormat$112:	; £temporary1691 -> longPtr = *longPtr
-409:		mov a1097, [bp + 27]
+409:		mov a1099, [bp + 27]
 411:	
 
 scanFormat$113:	; £temporary1691 -> longPtr = longValue
-412:		mov a1098, [bp + 23]
-413:		mov [a1097], a1098
+412:		mov a1100, [bp + 23]
+413:		mov [a1099], a1100
 415:	
 
 scanFormat$114:	; percent = 0
@@ -3030,7 +3030,7 @@ scanFormat$120:	; £temporary1693 = return_value
 439:	
 
 scanFormat$121:	; unsignedLongValue = £temporary1693
-440:		mov [bp + 37], t1100
+440:		mov [bp + 37], t1102
 442:	
 
 scanFormat$122:	; if star != 0 goto 150
@@ -3048,8 +3048,8 @@ scanFormat$124:	; arg_list = arg_list + 2
 453:	
 
 scanFormat$125:	; £temporary1697 = arg_list - 2
-454:		mov a1101, [bp + 8]
-455:		sub a1101, 2
+454:		mov a1103, [bp + 8]
+455:		sub a1103, 2
 457:	
 
 scanFormat$126:	; £temporary1698 = int_to_int £temporary1697 (Signed_Int -> Pointer)
@@ -3059,20 +3059,20 @@ scanFormat$127:	; £temporary1699 -> £temporary1698 = *£temporary1698
 462:	
 
 scanFormat$128:	; unsignedShortPtr = £temporary1699 -> £temporary1698
-463:		mov t1102, [a1101]
-464:		mov [bp + 43], t1102
+463:		mov t1104, [a1103]
+464:		mov [bp + 43], t1104
 466:	
 
 scanFormat$129:	; £temporary1700 -> unsignedShortPtr = *unsignedShortPtr
-467:		mov a1103, [bp + 43]
+467:		mov a1105, [bp + 43]
 469:	
 
 scanFormat$130:	; £temporary1701 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Short_Int)
-470:		mov a1104, [bp + 37]
+470:		mov a1106, [bp + 37]
 473:	
 
 scanFormat$131:	; £temporary1700 -> unsignedShortPtr = £temporary1701
-474:		mov [a1103], a1104
+474:		mov [a1105], a1106
 476:	
 
 scanFormat$132:	; goto 150
@@ -3089,8 +3089,8 @@ scanFormat$134:	; arg_list = arg_list + 2
 486:	
 
 scanFormat$135:	; £temporary1705 = arg_list - 2
-487:		mov a1105, [bp + 8]
-488:		sub a1105, 2
+487:		mov a1107, [bp + 8]
+488:		sub a1107, 2
 490:	
 
 scanFormat$136:	; £temporary1706 = int_to_int £temporary1705 (Signed_Int -> Pointer)
@@ -3100,20 +3100,20 @@ scanFormat$137:	; £temporary1707 -> £temporary1706 = *£temporary1706
 495:	
 
 scanFormat$138:	; unsignedIntPtr = £temporary1707 -> £temporary1706
-496:		mov t1106, [a1105]
-497:		mov [bp + 45], t1106
+496:		mov t1108, [a1107]
+497:		mov [bp + 45], t1108
 499:	
 
 scanFormat$139:	; £temporary1708 -> unsignedIntPtr = *unsignedIntPtr
-500:		mov a1107, [bp + 45]
+500:		mov a1109, [bp + 45]
 502:	
 
 scanFormat$140:	; £temporary1709 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Int)
-503:		mov a1108, [bp + 37]
+503:		mov a1110, [bp + 37]
 506:	
 
 scanFormat$141:	; £temporary1708 -> unsignedIntPtr = £temporary1709
-507:		mov [a1107], a1108
+507:		mov [a1109], a1110
 509:	
 
 scanFormat$142:	; goto 150
@@ -3125,8 +3125,8 @@ scanFormat$143:	; arg_list = arg_list + 2
 515:	
 
 scanFormat$144:	; £temporary1711 = arg_list - 2
-516:		mov a1109, [bp + 8]
-517:		sub a1109, 2
+516:		mov a1111, [bp + 8]
+517:		sub a1111, 2
 519:	
 
 scanFormat$145:	; £temporary1712 = int_to_int £temporary1711 (Signed_Int -> Pointer)
@@ -3136,17 +3136,17 @@ scanFormat$146:	; £temporary1713 -> £temporary1712 = *£temporary1712
 524:	
 
 scanFormat$147:	; unsignedLongPtr = £temporary1713 -> £temporary1712
-525:		mov t1110, [a1109]
-526:		mov [bp + 41], t1110
+525:		mov t1112, [a1111]
+526:		mov [bp + 41], t1112
 528:	
 
 scanFormat$148:	; £temporary1714 -> unsignedLongPtr = *unsignedLongPtr
-529:		mov a1111, [bp + 41]
+529:		mov a1113, [bp + 41]
 531:	
 
 scanFormat$149:	; £temporary1714 -> unsignedLongPtr = unsignedLongValue
-532:		mov a1112, [bp + 37]
-533:		mov [a1111], a1112
+532:		mov a1114, [bp + 37]
+533:		mov [a1113], a1114
 535:	
 
 scanFormat$150:	; percent = 0
@@ -3178,7 +3178,7 @@ scanFormat$156:	; £temporary1716 = return_value
 559:	
 
 scanFormat$157:	; unsignedLongValue = £temporary1716
-560:		mov [bp + 37], t1114
+560:		mov [bp + 37], t1116
 562:	
 
 scanFormat$158:	; if star != 0 goto 186
@@ -3196,8 +3196,8 @@ scanFormat$160:	; arg_list = arg_list + 2
 573:	
 
 scanFormat$161:	; £temporary1720 = arg_list - 2
-574:		mov a1115, [bp + 8]
-575:		sub a1115, 2
+574:		mov a1117, [bp + 8]
+575:		sub a1117, 2
 577:	
 
 scanFormat$162:	; £temporary1721 = int_to_int £temporary1720 (Signed_Int -> Pointer)
@@ -3207,20 +3207,20 @@ scanFormat$163:	; £temporary1722 -> £temporary1721 = *£temporary1721
 582:	
 
 scanFormat$164:	; unsignedShortPtr = £temporary1722 -> £temporary1721
-583:		mov t1116, [a1115]
-584:		mov [bp + 43], t1116
+583:		mov t1118, [a1117]
+584:		mov [bp + 43], t1118
 586:	
 
 scanFormat$165:	; £temporary1723 -> unsignedShortPtr = *unsignedShortPtr
-587:		mov a1117, [bp + 43]
+587:		mov a1119, [bp + 43]
 589:	
 
 scanFormat$166:	; £temporary1724 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Short_Int)
-590:		mov a1118, [bp + 37]
+590:		mov a1120, [bp + 37]
 593:	
 
 scanFormat$167:	; £temporary1723 -> unsignedShortPtr = £temporary1724
-594:		mov [a1117], a1118
+594:		mov [a1119], a1120
 596:	
 
 scanFormat$168:	; goto 186
@@ -3237,8 +3237,8 @@ scanFormat$170:	; arg_list = arg_list + 2
 606:	
 
 scanFormat$171:	; £temporary1728 = arg_list - 2
-607:		mov a1119, [bp + 8]
-608:		sub a1119, 2
+607:		mov a1121, [bp + 8]
+608:		sub a1121, 2
 610:	
 
 scanFormat$172:	; £temporary1729 = int_to_int £temporary1728 (Signed_Int -> Pointer)
@@ -3248,20 +3248,20 @@ scanFormat$173:	; £temporary1730 -> £temporary1729 = *£temporary1729
 615:	
 
 scanFormat$174:	; unsignedIntPtr = £temporary1730 -> £temporary1729
-616:		mov t1120, [a1119]
-617:		mov [bp + 45], t1120
+616:		mov t1122, [a1121]
+617:		mov [bp + 45], t1122
 619:	
 
 scanFormat$175:	; £temporary1731 -> unsignedIntPtr = *unsignedIntPtr
-620:		mov a1121, [bp + 45]
+620:		mov a1123, [bp + 45]
 622:	
 
 scanFormat$176:	; £temporary1732 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Int)
-623:		mov a1122, [bp + 37]
+623:		mov a1124, [bp + 37]
 626:	
 
 scanFormat$177:	; £temporary1731 -> unsignedIntPtr = £temporary1732
-627:		mov [a1121], a1122
+627:		mov [a1123], a1124
 629:	
 
 scanFormat$178:	; goto 186
@@ -3273,8 +3273,8 @@ scanFormat$179:	; arg_list = arg_list + 2
 635:	
 
 scanFormat$180:	; £temporary1734 = arg_list - 2
-636:		mov a1123, [bp + 8]
-637:		sub a1123, 2
+636:		mov a1125, [bp + 8]
+637:		sub a1125, 2
 639:	
 
 scanFormat$181:	; £temporary1735 = int_to_int £temporary1734 (Signed_Int -> Pointer)
@@ -3284,17 +3284,17 @@ scanFormat$182:	; £temporary1736 -> £temporary1735 = *£temporary1735
 644:	
 
 scanFormat$183:	; unsignedLongPtr = £temporary1736 -> £temporary1735
-645:		mov t1124, [a1123]
-646:		mov [bp + 41], t1124
+645:		mov t1126, [a1125]
+646:		mov [bp + 41], t1126
 648:	
 
 scanFormat$184:	; £temporary1737 -> unsignedLongPtr = *unsignedLongPtr
-649:		mov a1125, [bp + 41]
+649:		mov a1127, [bp + 41]
 651:	
 
 scanFormat$185:	; £temporary1737 -> unsignedLongPtr = unsignedLongValue
-652:		mov a1126, [bp + 37]
-653:		mov [a1125], a1126
+652:		mov a1128, [bp + 37]
+653:		mov [a1127], a1128
 655:	
 
 scanFormat$186:	; percent = 0
@@ -3326,7 +3326,7 @@ scanFormat$192:	; £temporary1739 = return_value
 679:	
 
 scanFormat$193:	; unsignedLongValue = £temporary1739
-680:		mov [bp + 37], t1128
+680:		mov [bp + 37], t1130
 682:	
 
 scanFormat$194:	; if star != 0 goto 222
@@ -3344,8 +3344,8 @@ scanFormat$196:	; arg_list = arg_list + 2
 693:	
 
 scanFormat$197:	; £temporary1743 = arg_list - 2
-694:		mov a1129, [bp + 8]
-695:		sub a1129, 2
+694:		mov a1131, [bp + 8]
+695:		sub a1131, 2
 697:	
 
 scanFormat$198:	; £temporary1744 = int_to_int £temporary1743 (Signed_Int -> Pointer)
@@ -3355,20 +3355,20 @@ scanFormat$199:	; £temporary1745 -> £temporary1744 = *£temporary1744
 702:	
 
 scanFormat$200:	; unsignedShortPtr = £temporary1745 -> £temporary1744
-703:		mov t1130, [a1129]
-704:		mov [bp + 43], t1130
+703:		mov t1132, [a1131]
+704:		mov [bp + 43], t1132
 706:	
 
 scanFormat$201:	; £temporary1746 -> unsignedShortPtr = *unsignedShortPtr
-707:		mov a1131, [bp + 43]
+707:		mov a1133, [bp + 43]
 709:	
 
 scanFormat$202:	; £temporary1747 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Short_Int)
-710:		mov a1132, [bp + 37]
+710:		mov a1134, [bp + 37]
 713:	
 
 scanFormat$203:	; £temporary1746 -> unsignedShortPtr = £temporary1747
-714:		mov [a1131], a1132
+714:		mov [a1133], a1134
 716:	
 
 scanFormat$204:	; goto 222
@@ -3385,8 +3385,8 @@ scanFormat$206:	; arg_list = arg_list + 2
 726:	
 
 scanFormat$207:	; £temporary1751 = arg_list - 2
-727:		mov a1133, [bp + 8]
-728:		sub a1133, 2
+727:		mov a1135, [bp + 8]
+728:		sub a1135, 2
 730:	
 
 scanFormat$208:	; £temporary1752 = int_to_int £temporary1751 (Signed_Int -> Pointer)
@@ -3396,20 +3396,20 @@ scanFormat$209:	; £temporary1753 -> £temporary1752 = *£temporary1752
 735:	
 
 scanFormat$210:	; unsignedIntPtr = £temporary1753 -> £temporary1752
-736:		mov t1134, [a1133]
-737:		mov [bp + 45], t1134
+736:		mov t1136, [a1135]
+737:		mov [bp + 45], t1136
 739:	
 
 scanFormat$211:	; £temporary1754 -> unsignedIntPtr = *unsignedIntPtr
-740:		mov a1135, [bp + 45]
+740:		mov a1137, [bp + 45]
 742:	
 
 scanFormat$212:	; £temporary1755 = int_to_int unsignedLongValue (Unsigned_Long_Int -> Signed_Int)
-743:		mov a1136, [bp + 37]
+743:		mov a1138, [bp + 37]
 746:	
 
 scanFormat$213:	; £temporary1754 -> unsignedIntPtr = £temporary1755
-747:		mov [a1135], a1136
+747:		mov [a1137], a1138
 749:	
 
 scanFormat$214:	; goto 222
@@ -3421,8 +3421,8 @@ scanFormat$215:	; arg_list = arg_list + 2
 755:	
 
 scanFormat$216:	; £temporary1757 = arg_list - 2
-756:		mov a1137, [bp + 8]
-757:		sub a1137, 2
+756:		mov a1139, [bp + 8]
+757:		sub a1139, 2
 759:	
 
 scanFormat$217:	; £temporary1758 = int_to_int £temporary1757 (Signed_Int -> Pointer)
@@ -3432,17 +3432,17 @@ scanFormat$218:	; £temporary1759 -> £temporary1758 = *£temporary1758
 764:	
 
 scanFormat$219:	; unsignedLongPtr = £temporary1759 -> £temporary1758
-765:		mov t1138, [a1137]
-766:		mov [bp + 41], t1138
+765:		mov t1140, [a1139]
+766:		mov [bp + 41], t1140
 768:	
 
 scanFormat$220:	; £temporary1760 -> unsignedLongPtr = *unsignedLongPtr
-769:		mov a1139, [bp + 41]
+769:		mov a1141, [bp + 41]
 771:	
 
 scanFormat$221:	; £temporary1760 -> unsignedLongPtr = unsignedLongValue
-772:		mov a1140, [bp + 37]
-773:		mov [a1139], a1140
+772:		mov a1142, [bp + 37]
+773:		mov [a1141], a1142
 775:	
 
 scanFormat$222:	; percent = 0
@@ -3488,8 +3488,8 @@ scanFormat$231:	; arg_list = arg_list + 2
 807:	
 
 scanFormat$232:	; £temporary1766 = arg_list - 2
-808:		mov a1141, [bp + 8]
-809:		sub a1141, 2
+808:		mov a1143, [bp + 8]
+809:		sub a1143, 2
 811:	
 
 scanFormat$233:	; £temporary1767 = int_to_int £temporary1766 (Signed_Int -> Pointer)
@@ -3499,12 +3499,12 @@ scanFormat$234:	; £temporary1768 -> £temporary1767 = *£temporary1767
 816:	
 
 scanFormat$235:	; doublePtr = £temporary1768 -> £temporary1767
-817:		mov t1142, [a1141]
-818:		mov [bp + 57], t1142
+817:		mov t1144, [a1143]
+818:		mov [bp + 57], t1144
 820:	
 
 scanFormat$236:	; £temporary1769 -> doublePtr = *doublePtr
-821:		mov a1143, [bp + 57]
+821:		mov a1145, [bp + 57]
 823:	
 
 scanFormat$237:	; push float longDoubleValue
@@ -3512,7 +3512,7 @@ scanFormat$237:	; push float longDoubleValue
 826:	
 
 scanFormat$238:	; pop float £temporary1769 -> doublePtr
-827:		fstp qword [a1143]
+827:		fstp qword [a1145]
 829:	
 
 scanFormat$239:	; goto 258
@@ -3529,8 +3529,8 @@ scanFormat$241:	; arg_list = arg_list + 2
 839:	
 
 scanFormat$242:	; £temporary1772 = arg_list - 2
-840:		mov a1144, [bp + 8]
-841:		sub a1144, 2
+840:		mov a1146, [bp + 8]
+841:		sub a1146, 2
 843:	
 
 scanFormat$243:	; £temporary1773 = int_to_int £temporary1772 (Signed_Int -> Pointer)
@@ -3540,12 +3540,12 @@ scanFormat$244:	; £temporary1774 -> £temporary1773 = *£temporary1773
 848:	
 
 scanFormat$245:	; longDoublePtr = £temporary1774 -> £temporary1773
-849:		mov t1145, [a1144]
-850:		mov [bp + 57], t1145
+849:		mov t1147, [a1146]
+850:		mov [bp + 57], t1147
 852:	
 
 scanFormat$246:	; £temporary1775 -> longDoublePtr = *longDoublePtr
-853:		mov a1146, [bp + 57]
+853:		mov a1148, [bp + 57]
 855:	
 
 scanFormat$247:	; push float longDoubleValue
@@ -3553,7 +3553,7 @@ scanFormat$247:	; push float longDoubleValue
 858:	
 
 scanFormat$248:	; pop float £temporary1775 -> longDoublePtr
-859:		fstp qword [a1146]
+859:		fstp qword [a1148]
 861:	
 
 scanFormat$249:	; goto 258
@@ -3565,8 +3565,8 @@ scanFormat$250:	; arg_list = arg_list + 2
 867:	
 
 scanFormat$251:	; £temporary1777 = arg_list - 2
-868:		mov a1147, [bp + 8]
-869:		sub a1147, 2
+868:		mov a1149, [bp + 8]
+869:		sub a1149, 2
 871:	
 
 scanFormat$252:	; £temporary1778 = int_to_int £temporary1777 (Signed_Int -> Pointer)
@@ -3576,12 +3576,12 @@ scanFormat$253:	; £temporary1779 -> £temporary1778 = *£temporary1778
 876:	
 
 scanFormat$254:	; floatPtr = £temporary1779 -> £temporary1778
-877:		mov t1148, [a1147]
-878:		mov [bp + 57], t1148
+877:		mov t1150, [a1149]
+878:		mov [bp + 57], t1150
 880:	
 
 scanFormat$255:	; £temporary1780 -> floatPtr = *floatPtr
-881:		mov a1149, [bp + 57]
+881:		mov a1151, [bp + 57]
 883:	
 
 scanFormat$256:	; push float longDoubleValue
@@ -3589,7 +3589,7 @@ scanFormat$256:	; push float longDoubleValue
 886:	
 
 scanFormat$257:	; pop float £temporary1780 -> floatPtr
-887:		fstp dword [a1149]
+887:		fstp dword [a1151]
 889:	
 
 scanFormat$258:	; percent = 0
@@ -3609,15 +3609,15 @@ scanFormat$261:	; ++index
 901:	
 
 scanFormat$262:	; £temporary1786 = format + index
-902:		mov a1150, [bp + 6]
-903:		add a1150, [bp + 31]
+902:		mov a1152, [bp + 6]
+903:		add a1152, [bp + 31]
 905:	
 
 scanFormat$263:	; £temporary1785 -> £temporary1786 = *£temporary1786
 907:	
 
 scanFormat$264:	; if £temporary1785 -> £temporary1786 != 94 goto 267
-908:		cmp byte [a1150], 94
+908:		cmp byte [a1152], 94
 909:		jne scanFormat$267
 911:	
 
@@ -3626,21 +3626,21 @@ scanFormat$265:	; not = 1
 914:	
 
 scanFormat$266:	; startIndex = index + 1
-915:		mov a1151, [bp + 31]
-916:		add a1151, 1
-917:		mov [bp + 59], a1151
+915:		mov a1153, [bp + 31]
+916:		add a1153, 1
+917:		mov [bp + 59], a1153
 919:	
 
 scanFormat$267:	; £temporary1790 = format + index
-920:		mov a1152, [bp + 6]
-921:		add a1152, [bp + 31]
+920:		mov a1154, [bp + 6]
+921:		add a1154, [bp + 31]
 923:	
 
 scanFormat$268:	; £temporary1789 -> £temporary1790 = *£temporary1790
 925:	
 
 scanFormat$269:	; if £temporary1789 -> £temporary1790 == 93 goto 272
-926:		cmp byte [a1152], 93
+926:		cmp byte [a1154], 93
 927:		je scanFormat$272
 929:	
 
@@ -3653,15 +3653,15 @@ scanFormat$271:	; goto 267
 935:	
 
 scanFormat$272:	; £temporary1794 = format + index
-936:		mov a1153, [bp + 6]
-937:		add a1153, [bp + 31]
+936:		mov a1155, [bp + 6]
+937:		add a1155, [bp + 31]
 939:	
 
 scanFormat$273:	; £temporary1793 -> £temporary1794 = *£temporary1794
 941:	
 
 scanFormat$274:	; £temporary1793 -> £temporary1794 = 0
-942:		mov byte [a1153], 0
+942:		mov byte [a1155], 0
 944:	
 
 scanFormat$275:	; if star != 0 goto 291
@@ -3674,8 +3674,8 @@ scanFormat$276:	; arg_list = arg_list + 2
 951:	
 
 scanFormat$277:	; £temporary1798 = arg_list - 2
-952:		mov a1154, [bp + 8]
-953:		sub a1154, 2
+952:		mov a1156, [bp + 8]
+953:		sub a1156, 2
 955:	
 
 scanFormat$278:	; £temporary1799 = int_to_int £temporary1798 (Signed_Int -> Pointer)
@@ -3685,21 +3685,21 @@ scanFormat$279:	; £temporary1800 -> £temporary1799 = *£temporary1799
 960:	
 
 scanFormat$280:	; string = £temporary1800 -> £temporary1799
-961:		mov t1155, [a1154]
-962:		mov [bp + 61], t1155
+961:		mov t1157, [a1156]
+962:		mov [bp + 61], t1157
 964:	
 
 scanFormat$281:	; call header integral zero 0 stack zero 0
 966:	
 
 scanFormat$282:	; parameter string, offset 6
-967:		mov a1156, [bp + 61]
-968:		mov [bp + 69], a1156
+967:		mov a1158, [bp + 61]
+968:		mov [bp + 69], a1158
 970:	
 
 scanFormat$283:	; £temporary1802 = format + startIndex
-971:		mov a1157, [bp + 6]
-972:		add a1157, [bp + 59]
+971:		mov a1159, [bp + 6]
+972:		add a1159, [bp + 59]
 974:	
 
 scanFormat$284:	; £temporary1801 -> £temporary1802 = *£temporary1802
@@ -3709,12 +3709,12 @@ scanFormat$285:	; £temporary1803 = &£temporary1801 -> £temporary1802
 978:	
 
 scanFormat$286:	; parameter £temporary1803, offset 8
-979:		mov [bp + 71], a1157
+979:		mov [bp + 71], a1159
 981:	
 
 scanFormat$287:	; parameter not, offset 10
-982:		mov a1158, [bp + 57]
-983:		mov [bp + 73], a1158
+982:		mov a1160, [bp + 57]
+983:		mov [bp + 73], a1160
 985:	
 
 scanFormat$288:	; call function noellipse-noellipse scanPattern
@@ -3739,8 +3739,8 @@ scanFormat$292:	; parameter 0, offset 6
 1001:	
 
 scanFormat$293:	; £temporary1806 = format + startIndex
-1002:		mov a1159, [bp + 6]
-1003:		add a1159, [bp + 59]
+1002:		mov a1161, [bp + 6]
+1003:		add a1161, [bp + 59]
 1005:	
 
 scanFormat$294:	; £temporary1805 -> £temporary1806 = *£temporary1806
@@ -3750,12 +3750,12 @@ scanFormat$295:	; £temporary1807 = &£temporary1805 -> £temporary1806
 1009:	
 
 scanFormat$296:	; parameter £temporary1807, offset 8
-1010:		mov [bp + 69], a1159
+1010:		mov [bp + 69], a1161
 1012:	
 
 scanFormat$297:	; parameter not, offset 10
-1013:		mov a1160, [bp + 57]
-1014:		mov [bp + 71], a1160
+1013:		mov a1162, [bp + 57]
+1014:		mov [bp + 71], a1162
 1016:	
 
 scanFormat$298:	; call function noellipse-noellipse scanPattern
@@ -3777,8 +3777,8 @@ scanFormat$301:	; arg_list = arg_list + 2
 1030:	
 
 scanFormat$302:	; £temporary1810 = arg_list - 2
-1031:		mov a1161, [bp + 8]
-1032:		sub a1161, 2
+1031:		mov a1163, [bp + 8]
+1032:		sub a1163, 2
 1034:	
 
 scanFormat$303:	; £temporary1811 = int_to_int £temporary1810 (Signed_Int -> Pointer)
@@ -3788,17 +3788,17 @@ scanFormat$304:	; £temporary1812 -> £temporary1811 = *£temporary1811
 1039:	
 
 scanFormat$305:	; charsPtr = £temporary1812 -> £temporary1811
-1040:		mov t1162, [a1161]
-1041:		mov [bp + 35], t1162
+1040:		mov t1164, [a1163]
+1041:		mov [bp + 35], t1164
 1043:	
 
 scanFormat$306:	; £temporary1813 -> charsPtr = *charsPtr
-1044:		mov a1163, [bp + 35]
+1044:		mov a1165, [bp + 35]
 1046:	
 
 scanFormat$307:	; £temporary1813 -> charsPtr = g_inChars
-1047:		mov a1164, [g_inChars]
-1048:		mov [a1163], a1164
+1047:		mov a1166, [g_inChars]
+1048:		mov [a1165], a1166
 1050:	
 
 scanFormat$308:	; percent = 0
@@ -3817,16 +3817,16 @@ scanFormat$311:	; parameter string_scanFormat20c203D202725c270A#, offset 6
 1061:	
 
 scanFormat$312:	; £temporary1814 = int_to_int c (Signed_Char -> Signed_Int)
-1062:		mov a1165, [bp + 10]
-1064:		and a1165, 255
-1066:		cmp a1165, 0
+1062:		mov a1167, [bp + 10]
+1064:		and a1167, 255
+1066:		cmp a1167, 0
 1067:		jge scanFormat$313
-1068:		neg a1165
-1070:		neg a1165
+1068:		neg a1167
+1070:		neg a1167
 1072:	
 
 scanFormat$313:	; parameter £temporary1814, offset 8
-1073:		mov [bp + 65], a1165
+1073:		mov [bp + 65], a1167
 1075:	
 
 scanFormat$314:	; call function noellipse-ellipse printf, extra 0
@@ -3879,43 +3879,43 @@ scanFormat$324:	; goto 8
 1113:	
 
 scanFormat$325:	; return_value = g_inCount
-1114:		mov a1166, [g_inCount]
+1114:		mov a1168, [g_inCount]
 1116:	
 
 scanFormat$326:	; return
-1117:		mov t1167, [bp]
+1117:		mov t1169, [bp]
 1118:		mov di, [bp + 4]
 1119:		mov bp, [bp + 2]
-1120:		jmp t1167
+1120:		jmp t1169
 1122:	
 
 scanFormat$327:	; function end scanFormat
 1:	
 
 scanf:	; £temporary1833 = &format
-2:		mov t1168, bp
-3:		add t1168, 6
+2:		mov t1170, bp
+3:		add t1170, 6
 5:	
 
 scanf$1:	; £temporary1834 = int_to_int £temporary1833 (Pointer -> Pointer)
 8:	
 
 scanf$2:	; arg_list = £temporary1834 + 2
-9:		add t1168, 2
-10:		mov [di + 8], t1168
+9:		add t1170, 2
+10:		mov [di + 8], t1170
 12:	
 
 scanf$3:	; call header integral zero 0 stack zero 0
 14:	
 
 scanf$4:	; parameter format, offset 6
-15:		mov a1169, [bp + 6]
-16:		mov [di + 16], a1169
+15:		mov a1171, [bp + 6]
+16:		mov [di + 16], a1171
 18:	
 
 scanf$5:	; parameter arg_list, offset 8
-19:		mov a1170, [di + 8]
-20:		mov [di + 18], a1170
+19:		mov a1172, [di + 8]
+20:		mov [di + 18], a1172
 22:	
 
 scanf$6:	; call function ellipse-noellipse vscanf
@@ -3937,10 +3937,10 @@ scanf$9:	; return_value = £temporary1836
 39:	
 
 scanf$10:	; return
-40:		mov t1173, [bp]
+40:		mov t1175, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t1173
+43:		jmp t1175
 45:	
 
 scanf$11:	; function end scanf
@@ -3950,18 +3950,18 @@ vscanf:	; call header integral zero 0 stack zero 0
 3:	
 
 vscanf$1:	; parameter stdin, offset 6
-4:		mov a1174, [stdin]
-5:		mov [bp + 16], a1174
+4:		mov a1176, [stdin]
+5:		mov [bp + 16], a1176
 7:	
 
 vscanf$2:	; parameter format, offset 8
-8:		mov a1175, [bp + 6]
-9:		mov [bp + 18], a1175
+8:		mov a1177, [bp + 6]
+9:		mov [bp + 18], a1177
 11:	
 
 vscanf$3:	; parameter arg_list, offset 10
-12:		mov a1176, [bp + 8]
-13:		mov [bp + 20], a1176
+12:		mov a1178, [bp + 8]
+13:		mov [bp + 20], a1178
 15:	
 
 vscanf$4:	; call function noellipse-noellipse vfscanf
@@ -3981,44 +3981,44 @@ vscanf$7:	; return_value = £temporary1840
 30:	
 
 vscanf$8:	; return
-31:		mov t1179, [bp]
+31:		mov t1181, [bp]
 32:		mov di, [bp + 4]
 33:		mov bp, [bp + 2]
-34:		jmp t1179
+34:		jmp t1181
 36:	
 
 vscanf$9:	; function end vscanf
 1:	
 
 fscanf:	; £temporary1844 = &format
-2:		mov t1180, bp
-3:		add t1180, 8
+2:		mov t1182, bp
+3:		add t1182, 8
 5:	
 
 fscanf$1:	; £temporary1845 = int_to_int £temporary1844 (Pointer -> Pointer)
 8:	
 
 fscanf$2:	; arg_list = £temporary1845 + 2
-9:		add t1180, 2
-10:		mov [di + 10], t1180
+9:		add t1182, 2
+10:		mov [di + 10], t1182
 12:	
 
 fscanf$3:	; call header integral zero 0 stack zero 0
 14:	
 
 fscanf$4:	; parameter inStream, offset 6
-15:		mov a1181, [bp + 6]
-16:		mov [di + 18], a1181
+15:		mov a1183, [bp + 6]
+16:		mov [di + 18], a1183
 18:	
 
 fscanf$5:	; parameter format, offset 8
-19:		mov a1182, [bp + 8]
-20:		mov [di + 20], a1182
+19:		mov a1184, [bp + 8]
+20:		mov [di + 20], a1184
 22:	
 
 fscanf$6:	; parameter arg_list, offset 10
-23:		mov a1183, [di + 10]
-24:		mov [di + 22], a1183
+23:		mov a1185, [di + 10]
+24:		mov [di + 22], a1185
 26:	
 
 fscanf$7:	; call function ellipse-noellipse vfscanf
@@ -4040,10 +4040,10 @@ fscanf$10:	; return_value = £temporary1847
 43:	
 
 fscanf$11:	; return
-44:		mov t1186, [bp]
+44:		mov t1188, [bp]
 45:		mov di, [bp + 4]
 46:		mov bp, [bp + 2]
-47:		jmp t1186
+47:		jmp t1188
 49:	
 
 fscanf$12:	; function end fscanf
@@ -4054,24 +4054,24 @@ vfscanf:	; g_inStatus = 0
 4:	
 
 vfscanf$1:	; £temporary1852 = int_to_int inStream (Pointer -> Pointer)
-5:		mov a1187, [bp + 6]
+5:		mov a1189, [bp + 6]
 8:	
 
 vfscanf$2:	; g_inDevice = £temporary1852
-9:		mov [g_inDevice], a1187
+9:		mov [g_inDevice], a1189
 11:	
 
 vfscanf$3:	; call header integral zero 0 stack zero 0
 13:	
 
 vfscanf$4:	; parameter format, offset 6
-14:		mov a1188, [bp + 8]
-15:		mov [bp + 18], a1188
+14:		mov a1190, [bp + 8]
+15:		mov [bp + 18], a1190
 17:	
 
 vfscanf$5:	; parameter arg_list, offset 8
-18:		mov a1189, [bp + 10]
-19:		mov [bp + 20], a1189
+18:		mov a1191, [bp + 10]
+19:		mov [bp + 20], a1191
 21:	
 
 vfscanf$6:	; call function noellipse-noellipse scanFormat
@@ -4091,44 +4091,44 @@ vfscanf$9:	; return_value = £temporary1853
 36:	
 
 vfscanf$10:	; return
-37:		mov t1192, [bp]
+37:		mov t1194, [bp]
 38:		mov di, [bp + 4]
 39:		mov bp, [bp + 2]
-40:		jmp t1192
+40:		jmp t1194
 42:	
 
 vfscanf$11:	; function end vfscanf
 1:	
 
 sscanf:	; £temporary1856 = &format
-2:		mov t1193, bp
-3:		add t1193, 8
+2:		mov t1195, bp
+3:		add t1195, 8
 5:	
 
 sscanf$1:	; £temporary1857 = int_to_int £temporary1856 (Pointer -> Pointer)
 8:	
 
 sscanf$2:	; arg_list = £temporary1857 + 2
-9:		add t1193, 2
-10:		mov [di + 10], t1193
+9:		add t1195, 2
+10:		mov [di + 10], t1195
 12:	
 
 sscanf$3:	; call header integral zero 0 stack zero 0
 14:	
 
 sscanf$4:	; parameter inString, offset 6
-15:		mov a1194, [bp + 6]
-16:		mov [di + 18], a1194
+15:		mov a1196, [bp + 6]
+16:		mov [di + 18], a1196
 18:	
 
 sscanf$5:	; parameter format, offset 8
-19:		mov a1195, [bp + 8]
-20:		mov [di + 20], a1195
+19:		mov a1197, [bp + 8]
+20:		mov [di + 20], a1197
 22:	
 
 sscanf$6:	; parameter arg_list, offset 10
-23:		mov a1196, [di + 10]
-24:		mov [di + 22], a1196
+23:		mov a1198, [di + 10]
+24:		mov [di + 22], a1198
 26:	
 
 sscanf$7:	; call function ellipse-noellipse vsscanf
@@ -4150,10 +4150,10 @@ sscanf$10:	; return_value = £temporary1859
 43:	
 
 sscanf$11:	; return
-44:		mov t1199, [bp]
+44:		mov t1201, [bp]
 45:		mov di, [bp + 4]
 46:		mov bp, [bp + 2]
-47:		jmp t1199
+47:		jmp t1201
 49:	
 
 sscanf$12:	; function end sscanf
@@ -4164,24 +4164,24 @@ vsscanf:	; g_inStatus = 1
 4:	
 
 vsscanf$1:	; £temporary1864 = int_to_int inString (Pointer -> Pointer)
-5:		mov a1200, [bp + 6]
+5:		mov a1202, [bp + 6]
 8:	
 
 vsscanf$2:	; g_inDevice = £temporary1864
-9:		mov [g_inDevice], a1200
+9:		mov [g_inDevice], a1202
 11:	
 
 vsscanf$3:	; call header integral zero 0 stack zero 0
 13:	
 
 vsscanf$4:	; parameter format, offset 6
-14:		mov a1201, [bp + 8]
-15:		mov [bp + 18], a1201
+14:		mov a1203, [bp + 8]
+15:		mov [bp + 18], a1203
 17:	
 
 vsscanf$5:	; parameter arg_list, offset 8
-18:		mov a1202, [bp + 10]
-19:		mov [bp + 20], a1202
+18:		mov a1204, [bp + 10]
+19:		mov [bp + 20], a1204
 21:	
 
 vsscanf$6:	; call function noellipse-noellipse scanFormat
@@ -4201,10 +4201,10 @@ vsscanf$9:	; return_value = £temporary1865
 36:	
 
 vsscanf$10:	; return
-37:		mov t1205, [bp]
+37:		mov t1207, [bp]
 38:		mov di, [bp + 4]
 39:		mov bp, [bp + 2]
-40:		jmp t1205
+40:		jmp t1207
 42:	
 
 vsscanf$11:	; function end vsscanf

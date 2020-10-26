@@ -7,8 +7,6 @@
 	extern fopen
 	extern $StackTop
 
-section .text
-
 
 section .data
 

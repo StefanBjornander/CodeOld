@@ -1,5 +1,19 @@
 1:	
 
+@0$malloc:	; return_value = 0
+2:		mov bx, 0
+4:	
+
+@0$malloc$1:	; return
+5:		mov ax, [bp]
+6:		mov di, [bp + 4]
+7:		mov bp, [bp + 2]
+8:		jmp ax
+10:	
+
+@0$malloc$2:	; function end malloc
+1:	
+
 main2:	; a$p = 0
 2:		mov word [a], 0
 4:	
@@ -1642,8 +1656,8 @@ assert_test$16:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomes
 57:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 59:	
 
-assert_test$17:	; parameter 840, offset 14
-60:		mov word [bp + 22], 840
+assert_test$17:	; parameter 844, offset 14
+60:		mov word [bp + 22], 844
 62:	
 
 assert_test$18:	; call function noellipse-ellipse fprintf, extra 0
@@ -1724,8 +1738,8 @@ assert_test2$5:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomes
 18:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 20:	
 
-assert_test2$6:	; parameter 845, offset 14
-21:		mov word [bp + 22], 845
+assert_test2$6:	; parameter 849, offset 14
+21:		mov word [bp + 22], 849
 23:	
 
 assert_test2$7:	; call function noellipse-ellipse fprintf, extra 0

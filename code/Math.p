@@ -1,10 +1,10 @@
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-   
-   
 
-    
-    
-    
+
+
+
+
+
 
 extern double exp ( double value ) ;
 extern double log ( double value ) ;
@@ -39,13 +39,12 @@ extern double fabs ( double value ) ;
 extern double modf ( double value , double * integralPart ) ;
 extern double fmod ( double num , double denum ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,0$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,1$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ErrNo.h,1$
-   
-   
+
+
 
 
 
@@ -106,62 +105,60 @@ FTELL , FSIZE , FREMOVE , FRENAME , FTEMPNAME , FTEMPFILE };
 
 extern int errno ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,1$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,2$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-   
-   
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-   
-   
 
-    
-    
-    
 
-       
-       
-       
-       
-          
-          
 
-          
-           
 
-       
-       
-       
 
-       
-       
-       
 
-       
 
-       
-       
-       
-          
 
-       
-       
-       
-       
 
-           
-          
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
-       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-   
-   
+
+
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -177,51 +174,48 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
-   
-   
-
-     
-                         
-                    
-               
-      
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
 
-          
 
-    
-    
 
-    
-    
-    
 
-  
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-   
-   
 
-    
-    
 
-    
 
-    
+
+
+
+
+
+
 
 typedef unsigned int UINT ;
 
@@ -240,22 +234,22 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-   
-    
-    
-    
-    
 
-    
 
-    
-    
-    
-    
-    
-  
 
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -288,32 +282,30 @@ int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-   
-   
 
-    
-    
+
+
+
+
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
-   
-   
 
-    
-    
 
-    
+
+
+
+
+
 
 extern int g_inStatus , g_inChars ;
 extern void * g_inDevice ;
@@ -332,16 +324,15 @@ int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
 int sscanf ( char * inString , char * format , ... ) ;
 int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-   
-   
 
-    
-    
+
+
+
+
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -372,37 +363,34 @@ int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
 int sprintf ( char * outString , char * format , ... ) ;
 int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-       
 
-  
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,2$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
-   
-   
 
-          
-
-    
-    
-
-    
-    
-    
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,3$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdlIB.h,1$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
 
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,4$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdlIB.h,1$
+
+
+
+
 
 double atof ( char * s ) ;
 int atoi ( char * s ) ;
@@ -424,8 +412,8 @@ void exit ( int status ) ;
 typedef void ( * FUNC_PTR ) ( void ) ;
 int atexit ( FUNC_PTR fcn ) ;
 
-    
-    
+
+
 
 int abs ( int value ) ;
 long labs ( long value ) ;
@@ -455,10 +443,9 @@ long quot , rem ;
 } ldiv_t ;
 
 ldiv_t ldiv ( long num , long denum ) ;
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,4$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,5$
 
 double exp ( double x ) {
 double n = 0 , faculty = 1 , power = 1 , term , sum = 0 ;
@@ -906,7 +893,7 @@ do {
 x_n = x_nplus1 ;
 x_nplus1 = x_n + ( ( cos ( x_n ) - v ) / sin ( x_n ) ) ;
 
-printf ( "x_n %f, x_nplus1 %f\n" , x_n , x_nplus1 ) ;
+printf ( "\170\137\156\040\045\146\054\040\170\137\156\160\154\165\163\061\040\045\146\012" , x_n , x_nplus1 ) ;
 } while ( fabs ( x_nplus1 - x_n ) >= 1e-9 ) ;
 
 return x_nplus1 ;
@@ -980,16 +967,16 @@ denominator += 2 ;
 return sum ;
 }
 else if ( fabs ( v ) < 1 ) {
-printf ( "atan 5\n" ) ;
+printf ( "\141\164\141\156\040\065\012" ) ;
 double x_nplus1 = 1 , x ;
 
 do {
 x = x_nplus1 ;
 x_nplus1 = x - ( ( tan ( x ) - v ) * square ( cos ( 2 * x ) + 1 ) ) / 2 ;
-printf ( "atan x %f x_nplus1 %f\n" , x , x_nplus1 ) ;
+printf ( "\141\164\141\156\040\170\040\045\146\040\170\137\156\160\154\165\163\061\040\045\146\012" , x , x_nplus1 ) ;
 } while ( fabs ( x_nplus1 - x ) >= 1e-9 ) ;
 
-printf ( "atan 7\n" ) ;
+printf ( "\141\164\141\156\040\067\012" ) ;
 return x_nplus1 ;
 }
 else {
@@ -1048,27 +1035,27 @@ double atan2x ( double num , double denum ) {
 if ( denum > 0 ) {
 
 double y = atan ( num / denum ) ;
-printf ( "2\n" ) ;
+printf ( "\062\012" ) ;
 return y ;
 }
 else if ( ( num >= 0 ) && ( denum < 0 ) ) {
-printf ( "2\n" ) ;
+printf ( "\062\012" ) ;
 return 3.1415926535897932384 + atan ( num / denum ) ;
 }
 else if ( ( num < 0 ) && ( denum < 0 ) ) {
-printf ( "3\n" ) ;
+printf ( "\063\012" ) ;
 return ( - 3.1415926535897932384 ) + atan ( num / denum ) ;
 }
 else if ( ( num > 0 ) && ( denum == 0 ) ) {
-printf ( "4\n" ) ;
+printf ( "\064\012" ) ;
 return 3.1415926535897932384 / 2 ;
 }
 else if ( ( num < 0 ) && ( denum == 0 ) ) {
-printf ( "5\n" ) ;
+printf ( "\065\012" ) ;
 return ( - 3.1415926535897932384 ) / 2 ;
 }
 else {
-printf ( "6\n" ) ;
+printf ( "\066\012" ) ;
 errno = EDOM ;
 return 0 ;
 }
@@ -1119,3 +1106,4 @@ errno = EDOM ;
 return 0 ;
 }
 }
+

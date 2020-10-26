@@ -151,10 +151,10 @@ exp$36:	; return_value = sum
 114:	
 
 exp$37:	; return
-115:		mov t357, [bp]
+115:		mov t359, [bp]
 116:		mov di, [bp + 4]
 117:		mov bp, [bp + 2]
-118:		jmp t357
+118:		jmp t359
 120:	
 
 exp$38:	; function end exp
@@ -448,10 +448,10 @@ log$68:	; return_value = £temporary550
 219:	
 
 log$69:	; return
-220:		mov t358, [bp]
+220:		mov t360, [bp]
 221:		mov di, [bp + 4]
 222:		mov bp, [bp + 2]
-223:		jmp t358
+223:		jmp t360
 225:	
 
 log$70:	; errno = 6
@@ -466,10 +466,10 @@ log$72:	; return_value = 0
 233:	
 
 log$73:	; return
-234:		mov t359, [bp]
+234:		mov t361, [bp]
 235:		mov di, [bp + 4]
 236:		mov bp, [bp + 2]
-237:		jmp t359
+237:		jmp t361
 239:	
 
 log$74:	; function end log
@@ -515,10 +515,10 @@ log10$8:	; return_value = £temporary553
 31:	
 
 log10$9:	; return
-32:		mov t360, [bp]
+32:		mov t362, [bp]
 33:		mov di, [bp + 4]
 34:		mov bp, [bp + 2]
-35:		jmp t360
+35:		jmp t362
 37:	
 
 log10$10:	; function end log10
@@ -555,14 +555,14 @@ log10_int$5:	; if x != 1 goto 8
 25:	
 
 log10_int$6:	; return_value = 0
-26:		mov a361, 0
+26:		mov a363, 0
 28:	
 
 log10_int$7:	; return
-29:		mov t362, [bp]
+29:		mov t364, [bp]
 30:		mov di, [bp + 4]
 31:		mov bp, [bp + 2]
-32:		jmp t362
+32:		jmp t364
 34:	
 
 log10_int$8:	; push float x
@@ -624,18 +624,18 @@ log10_int$20:	; goto 12
 79:	
 
 log10_int$21:	; £temporary561 = count - 1
-80:		mov a363, [bp + 14]
-81:		sub a363, 1
+80:		mov a365, [bp + 14]
+81:		sub a365, 1
 83:	
 
 log10_int$22:	; return_value = £temporary561
 85:	
 
 log10_int$23:	; return
-86:		mov t364, [bp]
+86:		mov t366, [bp]
 87:		mov di, [bp + 4]
 88:		mov bp, [bp + 2]
-89:		jmp t364
+89:		jmp t366
 91:	
 
 log10_int$24:	; count = 0
@@ -682,18 +682,18 @@ log10_int$33:	; goto 25
 124:	
 
 log10_int$34:	; £temporary565 = -count
-125:		mov a365, [bp + 14]
-126:		neg a365
+125:		mov a367, [bp + 14]
+126:		neg a367
 128:	
 
 log10_int$35:	; return_value = £temporary565
 130:	
 
 log10_int$36:	; return
-131:		mov t366, [bp]
+131:		mov t368, [bp]
 132:		mov di, [bp + 4]
 133:		mov bp, [bp + 2]
-134:		jmp t366
+134:		jmp t368
 136:	
 
 log10_int$37:	; errno = 6
@@ -701,14 +701,14 @@ log10_int$37:	; errno = 6
 139:	
 
 log10_int$38:	; return_value = 0
-140:		mov a367, 0
+140:		mov a369, 0
 142:	
 
 log10_int$39:	; return
-143:		mov t368, [bp]
+143:		mov t370, [bp]
 144:		mov di, [bp + 4]
 145:		mov bp, [bp + 2]
-146:		jmp t368
+146:		jmp t370
 148:	
 
 log10_int$40:	; function end log10_int
@@ -724,12 +724,12 @@ pow_int$1:	; if y >= 0 goto 5
 8:	
 
 pow_int$2:	; £temporary567 = -y
-9:		mov a369, [bp + 14]
-10:		neg a369
+9:		mov a371, [bp + 14]
+10:		neg a371
 12:	
 
 pow_int$3:	; y = £temporary567
-13:		mov [bp + 14], a369
+13:		mov [bp + 14], a371
 15:	
 
 pow_int$4:	; minus = 1
@@ -749,8 +749,8 @@ pow_int$7:	; index = 0
 27:	
 
 pow_int$8:	; if index >= y goto 15
-28:		mov a370, [bp + 14]
-29:		cmp [bp + 26], a370
+28:		mov a372, [bp + 14]
+29:		cmp [bp + 26], a372
 30:		jge pow_int$15
 32:	
 
@@ -810,10 +810,10 @@ pow_int$22:	; return_value = £temporary576
 73:	
 
 pow_int$23:	; return
-74:		mov t371, [bp]
+74:		mov t373, [bp]
 75:		mov di, [bp + 4]
 76:		mov bp, [bp + 2]
-77:		jmp t371
+77:		jmp t373
 79:	
 
 pow_int$24:	; function end pow_int
@@ -894,10 +894,10 @@ pow$16:	; return_value = £temporary580
 58:	
 
 pow$17:	; return
-59:		mov t372, [bp]
+59:		mov t374, [bp]
 60:		mov di, [bp + 4]
 61:		mov bp, [bp + 2]
-62:		jmp t372
+62:		jmp t374
 64:	
 
 pow$18:	; errno = 6
@@ -912,10 +912,10 @@ pow$20:	; return_value = 0
 72:	
 
 pow$21:	; return
-73:		mov t373, [bp]
+73:		mov t375, [bp]
 74:		mov di, [bp + 4]
 75:		mov bp, [bp + 2]
-76:		jmp t373
+76:		jmp t375
 78:	
 
 pow$22:	; function end pow
@@ -969,10 +969,10 @@ ldexp$10:	; return_value = £temporary585
 37:	
 
 ldexp$11:	; return
-38:		mov t374, [bp]
+38:		mov t376, [bp]
 39:		mov di, [bp + 4]
 40:		mov bp, [bp + 2]
-41:		jmp t374
+41:		jmp t376
 43:	
 
 ldexp$12:	; function end ldexp
@@ -999,11 +999,11 @@ frexp$3:	; if x != 0 goto 9
 17:	
 
 frexp$4:	; £temporary590 -> p = *p
-18:		mov a375, [bp + 14]
+18:		mov a377, [bp + 14]
 20:	
 
 frexp$5:	; £temporary590 -> p = 0
-21:		mov word [a375], 0
+21:		mov word [a377], 0
 23:	
 
 frexp$6:	; push 0
@@ -1014,18 +1014,18 @@ frexp$7:	; return_value = 0
 28:	
 
 frexp$8:	; return
-29:		mov t376, [bp]
+29:		mov t378, [bp]
 30:		mov di, [bp + 4]
 31:		mov bp, [bp + 2]
-32:		jmp t376
+32:		jmp t378
 34:	
 
 frexp$9:	; £temporary591 -> p = *p
-35:		mov a377, [bp + 14]
+35:		mov a379, [bp + 14]
 37:	
 
 frexp$10:	; call header integral no zero 1 stack zero 0
-38:		mov [bp + 16], a377
+38:		mov [bp + 16], a379
 40:	
 
 frexp$11:	; call header integral zero 0 stack zero 0
@@ -1064,14 +1064,14 @@ frexp$18:	; call function noellipse-noellipse log
 67:	
 
 frexp$19:	; post call
-68:		mov a377, [bp + 16]
+68:		mov a379, [bp + 16]
 70:	
 
 frexp$20:	; £temporary593 = return_value
 72:	
 
 frexp$21:	; call header integral no zero 1 stack no zero 1
-73:		mov [bp + 16], a377
+73:		mov [bp + 16], a379
 74:		fstp qword [bp + 18]
 76:	
 
@@ -1091,7 +1091,7 @@ frexp$24:	; call function noellipse-noellipse log
 88:	
 
 frexp$25:	; post call
-89:		mov a377, [bp + 16]
+89:		mov a379, [bp + 16]
 90:		fstp qword [bp + 26]
 91:		fld qword [bp + 18]
 92:		fld qword [bp + 26]
@@ -1106,12 +1106,12 @@ frexp$27:	; £temporary595 = £temporary593 / £temporary594
 
 frexp$28:	; £temporary596 = float_to_int £temporary595 (Double -> Signed_Int)
 100:		fistp word [container2bytes#]
-101:		mov t378, [container2bytes#]
+101:		mov t380, [container2bytes#]
 103:	
 
 frexp$29:	; £temporary591 -> p = £temporary596 + 1
-104:		add t378, 1
-105:		mov [a377], t378
+104:		add t380, 1
+105:		mov [a379], t380
 107:	
 
 frexp$30:	; call header integral zero 0 stack zero 0
@@ -1151,11 +1151,11 @@ frexp$38:	; parameter 2, offset 6
 134:	
 
 frexp$39:	; £temporary599 -> p = *p
-135:		mov a379, [bp + 14]
+135:		mov a381, [bp + 14]
 137:	
 
 frexp$40:	; £temporary600 = int_to_float £temporary599 -> p (Signed_Int -> Double)
-138:		fild word [a379]
+138:		fild word [a381]
 140:	
 
 frexp$41:	; parameter £temporary600, offset 14
@@ -1224,10 +1224,10 @@ frexp$55:	; return_value = £temporary608
 190:	
 
 frexp$56:	; return
-191:		mov t380, [bp]
+191:		mov t382, [bp]
 192:		mov di, [bp + 4]
 193:		mov bp, [bp + 2]
-194:		jmp t380
+194:		jmp t382
 196:	
 
 frexp$57:	; push float x
@@ -1253,10 +1253,10 @@ frexp$61:	; return_value = 0
 213:	
 
 frexp$62:	; return
-214:		mov t381, [bp]
+214:		mov t383, [bp]
 215:		mov di, [bp + 4]
 216:		mov bp, [bp + 2]
-217:		jmp t381
+217:		jmp t383
 219:	
 
 frexp$63:	; call header integral zero 0 stack zero 0
@@ -1337,12 +1337,12 @@ frexp$80:	; £temporary613 = £temporary611 / £temporary612
 
 frexp$81:	; £temporary614 = float_to_int £temporary613 (Double -> Signed_Int)
 278:		fistp word [container2bytes#]
-279:		mov t382, [container2bytes#]
+279:		mov t384, [container2bytes#]
 281:	
 
 frexp$82:	; n = £temporary614 + 1
-282:		add t382, 1
-283:		mov [bp + 16], t382
+282:		add t384, 1
+283:		mov [bp + 16], t384
 285:	
 
 frexp$83:	; call header integral zero 0 stack zero 0
@@ -1451,10 +1451,10 @@ frexp$107:	; return_value = £temporary625
 365:	
 
 frexp$108:	; return
-366:		mov t383, [bp]
+366:		mov t385, [bp]
 367:		mov di, [bp + 4]
 368:		mov bp, [bp + 2]
-369:		jmp t383
+369:		jmp t385
 371:	
 
 frexp$109:	; function end frexp
@@ -1679,10 +1679,10 @@ sin$53:	; return_value = sum
 165:	
 
 sin$54:	; return
-166:		mov t384, [bp]
+166:		mov t386, [bp]
 167:		mov di, [bp + 4]
 168:		mov bp, [bp + 2]
-169:		jmp t384
+169:		jmp t386
 171:	
 
 sin$55:	; function end sin
@@ -1907,10 +1907,10 @@ cos$53:	; return_value = sum
 165:	
 
 cos$54:	; return
-166:		mov t385, [bp]
+166:		mov t387, [bp]
 167:		mov di, [bp + 4]
 168:		mov bp, [bp + 2]
-169:		jmp t385
+169:		jmp t387
 171:	
 
 cos$55:	; function end cos
@@ -1991,10 +1991,10 @@ tan$17:	; return_value = £temporary669
 57:	
 
 tan$18:	; return
-58:		mov t386, [bp]
+58:		mov t388, [bp]
 59:		mov di, [bp + 4]
 60:		mov bp, [bp + 2]
-61:		jmp t386
+61:		jmp t388
 63:	
 
 tan$19:	; errno = 6
@@ -2009,10 +2009,10 @@ tan$21:	; return_value = 0
 71:	
 
 tan$22:	; return
-72:		mov t387, [bp]
+72:		mov t389, [bp]
 73:		mov di, [bp + 4]
 74:		mov bp, [bp + 2]
-75:		jmp t387
+75:		jmp t389
 77:	
 
 tan$23:	; function end tan
@@ -2090,10 +2090,10 @@ sinh$16:	; return_value = £temporary676
 55:	
 
 sinh$17:	; return
-56:		mov t388, [bp]
+56:		mov t390, [bp]
 57:		mov di, [bp + 4]
 58:		mov bp, [bp + 2]
-59:		jmp t388
+59:		jmp t390
 61:	
 
 sinh$18:	; function end sinh
@@ -2171,10 +2171,10 @@ cosh$16:	; return_value = £temporary683
 55:	
 
 cosh$17:	; return
-56:		mov t389, [bp]
+56:		mov t391, [bp]
 57:		mov di, [bp + 4]
 58:		mov bp, [bp + 2]
-59:		jmp t389
+59:		jmp t391
 61:	
 
 cosh$18:	; function end cosh
@@ -2263,10 +2263,10 @@ tanh$19:	; return_value = y
 63:	
 
 tanh$20:	; return
-64:		mov t390, [bp]
+64:		mov t392, [bp]
 65:		mov di, [bp + 4]
 66:		mov bp, [bp + 2]
-67:		jmp t390
+67:		jmp t392
 69:	
 
 tanh$21:	; errno = 6
@@ -2281,10 +2281,10 @@ tanh$23:	; return_value = 0
 77:	
 
 tanh$24:	; return
-78:		mov t391, [bp]
+78:		mov t393, [bp]
 79:		mov di, [bp + 4]
 80:		mov bp, [bp + 2]
-81:		jmp t391
+81:		jmp t393
 83:	
 
 tanh$25:	; function end tanh
@@ -2354,12 +2354,12 @@ sqrt$14:	; pop float x_nplus1
 49:	
 
 sqrt$15:	; £temporary696 = count + 1
-50:		mov a392, [bp + 30]
-51:		add a392, 1
+50:		mov a394, [bp + 30]
+51:		add a394, 1
 53:	
 
 sqrt$16:	; if £temporary696 >= 1000 goto 27
-54:		cmp a392, 1000
+54:		cmp a394, 1000
 55:		jge sqrt$27
 57:	
 
@@ -2414,10 +2414,10 @@ sqrt$28:	; return_value = x_nplus1
 95:	
 
 sqrt$29:	; return
-96:		mov t393, [bp]
+96:		mov t395, [bp]
 97:		mov di, [bp + 4]
 98:		mov bp, [bp + 2]
-99:		jmp t393
+99:		jmp t395
 101:	
 
 sqrt$30:	; errno = 6
@@ -2432,10 +2432,10 @@ sqrt$32:	; return_value = 0
 109:	
 
 sqrt$33:	; return
-110:		mov t394, [bp]
+110:		mov t396, [bp]
 111:		mov di, [bp + 4]
 112:		mov bp, [bp + 2]
-113:		jmp t394
+113:		jmp t396
 115:	
 
 sqrt$34:	; function end sqrt
@@ -2556,10 +2556,10 @@ asin$27:	; return_value = £temporary709
 87:	
 
 asin$28:	; return
-88:		mov t395, [bp]
+88:		mov t397, [bp]
 89:		mov di, [bp + 4]
 90:		mov bp, [bp + 2]
-91:		jmp t395
+91:		jmp t397
 93:	
 
 asin$29:	; errno = 6
@@ -2574,10 +2574,10 @@ asin$31:	; return_value = 0
 101:	
 
 asin$32:	; return
-102:		mov t396, [bp]
+102:		mov t398, [bp]
 103:		mov di, [bp + 4]
 104:		mov bp, [bp + 2]
-105:		jmp t396
+105:		jmp t398
 107:	
 
 asin$33:	; function end asin
@@ -2698,10 +2698,10 @@ acos$27:	; return_value = £temporary720
 87:	
 
 acos$28:	; return
-88:		mov t397, [bp]
+88:		mov t399, [bp]
 89:		mov di, [bp + 4]
 90:		mov bp, [bp + 2]
-91:		jmp t397
+91:		jmp t399
 93:	
 
 acos$29:	; errno = 6
@@ -2716,10 +2716,10 @@ acos$31:	; return_value = 0
 101:	
 
 acos$32:	; return
-102:		mov t398, [bp]
+102:		mov t400, [bp]
 103:		mov di, [bp + 4]
 104:		mov bp, [bp + 2]
-105:		jmp t398
+105:		jmp t400
 107:	
 
 acos$33:	; function end acos
@@ -2748,10 +2748,10 @@ asin2$4:	; return_value = 1.5707963267948966192
 18:	
 
 asin2$5:	; return
-19:		mov t399, [bp]
+19:		mov t401, [bp]
 20:		mov di, [bp + 4]
 21:		mov bp, [bp + 2]
-22:		jmp t399
+22:		jmp t401
 24:	
 
 asin2$6:	; push float v
@@ -2777,10 +2777,10 @@ asin2$10:	; return_value = -1.5707963267948966192
 41:	
 
 asin2$11:	; return
-42:		mov t400, [bp]
+42:		mov t402, [bp]
 43:		mov di, [bp + 4]
 44:		mov bp, [bp + 2]
-45:		jmp t400
+45:		jmp t402
 47:	
 
 asin2$12:	; call header integral zero 0 stack zero 0
@@ -2917,12 +2917,12 @@ asin2$41:	; pop float x_nplus1
 150:	
 
 asin2$42:	; £temporary734 = count + 1
-151:		mov a401, [bp + 30]
-152:		add a401, 1
+151:		mov a403, [bp + 30]
+152:		add a403, 1
 154:	
 
 asin2$43:	; if £temporary734 >= 1000 goto 54
-155:		cmp a401, 1000
+155:		cmp a403, 1000
 156:		jge asin2$54
 158:	
 
@@ -2977,10 +2977,10 @@ asin2$55:	; return_value = x_nplus1
 196:	
 
 asin2$56:	; return
-197:		mov t402, [bp]
+197:		mov t404, [bp]
 198:		mov di, [bp + 4]
 199:		mov bp, [bp + 2]
-200:		jmp t402
+200:		jmp t404
 202:	
 
 asin2$57:	; errno = 6
@@ -2995,10 +2995,10 @@ asin2$59:	; return_value = 0
 210:	
 
 asin2$60:	; return
-211:		mov t403, [bp]
+211:		mov t405, [bp]
 212:		mov di, [bp + 4]
 213:		mov bp, [bp + 2]
-214:		jmp t403
+214:		jmp t405
 216:	
 
 asin2$61:	; function end asin2
@@ -3027,10 +3027,10 @@ acos2$4:	; return_value = 0
 18:	
 
 acos2$5:	; return
-19:		mov t404, [bp]
+19:		mov t406, [bp]
 20:		mov di, [bp + 4]
 21:		mov bp, [bp + 2]
-22:		jmp t404
+22:		jmp t406
 24:	
 
 acos2$6:	; call header integral zero 0 stack zero 0
@@ -3244,10 +3244,10 @@ acos2$53:	; return_value = x_nplus1
 186:	
 
 acos2$54:	; return
-187:		mov t405, [bp]
+187:		mov t407, [bp]
 188:		mov di, [bp + 4]
 189:		mov bp, [bp + 2]
-190:		jmp t405
+190:		jmp t407
 192:	
 
 acos2$55:	; errno = 6
@@ -3262,10 +3262,10 @@ acos2$57:	; return_value = 0
 200:	
 
 acos2$58:	; return
-201:		mov t406, [bp]
+201:		mov t408, [bp]
 202:		mov di, [bp + 4]
 203:		mov bp, [bp + 2]
-204:		jmp t406
+204:		jmp t408
 206:	
 
 acos2$59:	; function end acos2
@@ -3287,10 +3287,10 @@ square$3:	; return_value = £temporary763
 12:	
 
 square$4:	; return
-13:		mov t407, [bp]
+13:		mov t409, [bp]
 14:		mov di, [bp + 4]
 15:		mov bp, [bp + 2]
-16:		jmp t407
+16:		jmp t409
 18:	
 
 square$5:	; function end square
@@ -3319,10 +3319,10 @@ atan$4:	; return_value = 0
 18:	
 
 atan$5:	; return
-19:		mov t408, [bp]
+19:		mov t410, [bp]
 20:		mov di, [bp + 4]
 21:		mov bp, [bp + 2]
-22:		jmp t408
+22:		jmp t410
 24:	
 
 atan$6:	; push float x
@@ -3348,10 +3348,10 @@ atan$10:	; return_value = 0.7853981633974483096
 41:	
 
 atan$11:	; return
-42:		mov t409, [bp]
+42:		mov t411, [bp]
 43:		mov di, [bp + 4]
 44:		mov bp, [bp + 2]
-45:		jmp t409
+45:		jmp t411
 47:	
 
 atan$12:	; push float x
@@ -3377,10 +3377,10 @@ atan$16:	; return_value = -0.7853981633974483096
 64:	
 
 atan$17:	; return
-65:		mov t410, [bp]
+65:		mov t412, [bp]
 66:		mov di, [bp + 4]
 67:		mov bp, [bp + 2]
-68:		jmp t410
+68:		jmp t412
 70:	
 
 atan$18:	; push 1
@@ -3512,12 +3512,12 @@ atan$49:	; pop float denominator
 166:	
 
 atan$50:	; £temporary774 = count + 1
-167:		mov a411, [bp + 54]
-168:		add a411, 1
+167:		mov a413, [bp + 54]
+168:		add a413, 1
 170:	
 
 atan$51:	; if £temporary774 >= 1000 goto 60
-171:		cmp a411, 1000
+171:		cmp a413, 1000
 172:		jge atan$60
 174:	
 
@@ -3564,10 +3564,10 @@ atan$61:	; return_value = sum
 206:	
 
 atan$62:	; return
-207:		mov t412, [bp]
+207:		mov t414, [bp]
 208:		mov di, [bp + 4]
 209:		mov bp, [bp + 2]
-210:		jmp t412
+210:		jmp t414
 212:	
 
 atan$63:	; function end atan
@@ -3596,10 +3596,10 @@ atanY$4:	; return_value = 0
 18:	
 
 atanY$5:	; return
-19:		mov t413, [bp]
+19:		mov t415, [bp]
 20:		mov di, [bp + 4]
 21:		mov bp, [bp + 2]
-22:		jmp t413
+22:		jmp t415
 24:	
 
 atanY$6:	; push float v
@@ -3625,10 +3625,10 @@ atanY$10:	; return_value = 0.7853981633974483096
 41:	
 
 atanY$11:	; return
-42:		mov t414, [bp]
+42:		mov t416, [bp]
 43:		mov di, [bp + 4]
 44:		mov bp, [bp + 2]
-45:		jmp t414
+45:		jmp t416
 47:	
 
 atanY$12:	; push float v
@@ -3654,10 +3654,10 @@ atanY$16:	; return_value = -0.7853981633974483096
 64:	
 
 atanY$17:	; return
-65:		mov t415, [bp]
+65:		mov t417, [bp]
 66:		mov di, [bp + 4]
 67:		mov bp, [bp + 2]
-68:		jmp t415
+68:		jmp t417
 70:	
 
 atanY$18:	; call header integral zero 0 stack zero 0
@@ -3764,12 +3764,12 @@ atanY$42:	; pop float sum
 148:	
 
 atanY$43:	; £temporary790 = -sign
-149:		mov a416, [bp + 14]
-150:		neg a416
+149:		mov a418, [bp + 14]
+150:		neg a418
 152:	
 
 atanY$44:	; sign = £temporary790
-153:		mov [bp + 14], a416
+153:		mov [bp + 14], a418
 155:	
 
 atanY$45:	; push float product
@@ -3801,12 +3801,12 @@ atanY$51:	; denominator = denominator + 2
 176:	
 
 atanY$52:	; £temporary794 = count + 1
-177:		mov a417, [bp + 18]
-178:		add a417, 1
+177:		mov a419, [bp + 18]
+178:		add a419, 1
 180:	
 
 atanY$53:	; if £temporary794 >= 1000 goto 62
-181:		cmp a417, 1000
+181:		cmp a419, 1000
 182:		jge atanY$62
 184:	
 
@@ -3853,10 +3853,10 @@ atanY$63:	; return_value = sum
 216:	
 
 atanY$64:	; return
-217:		mov t418, [bp]
+217:		mov t420, [bp]
 218:		mov di, [bp + 4]
 219:		mov bp, [bp + 2]
-220:		jmp t418
+220:		jmp t420
 222:	
 
 atanY$65:	; call header integral zero 0 stack zero 0
@@ -4156,10 +4156,10 @@ atanY$131:	; return_value = x_nplus1
 451:	
 
 atanY$132:	; return
-452:		mov t419, [bp]
+452:		mov t421, [bp]
 453:		mov di, [bp + 4]
 454:		mov bp, [bp + 2]
-455:		jmp t419
+455:		jmp t421
 457:	
 
 atanY$133:	; errno = 6
@@ -4174,10 +4174,10 @@ atanY$135:	; return_value = 0
 465:	
 
 atanY$136:	; return
-466:		mov t420, [bp]
+466:		mov t422, [bp]
 467:		mov di, [bp + 4]
 468:		mov bp, [bp + 2]
-469:		jmp t420
+469:		jmp t422
 471:	
 
 atanY$137:	; function end atanY
@@ -4206,10 +4206,10 @@ atanX$4:	; return_value = 0
 18:	
 
 atanX$5:	; return
-19:		mov t421, [bp]
+19:		mov t423, [bp]
 20:		mov di, [bp + 4]
 21:		mov bp, [bp + 2]
-22:		jmp t421
+22:		jmp t423
 24:	
 
 atanX$6:	; call header integral zero 0 stack zero 0
@@ -4438,10 +4438,10 @@ atanX$56:	; return_value = x_nplus1
 198:	
 
 atanX$57:	; return
-199:		mov t422, [bp]
+199:		mov t424, [bp]
 200:		mov di, [bp + 4]
 201:		mov bp, [bp + 2]
-202:		jmp t422
+202:		jmp t424
 204:	
 
 atanX$58:	; errno = 6
@@ -4456,10 +4456,10 @@ atanX$60:	; return_value = 0
 212:	
 
 atanX$61:	; return
-213:		mov t423, [bp]
+213:		mov t425, [bp]
 214:		mov di, [bp + 4]
 215:		mov bp, [bp + 2]
-216:		jmp t423
+216:		jmp t425
 218:	
 
 atanX$62:	; function end atanX
@@ -4516,10 +4516,10 @@ atan2$11:	; return_value = £temporary850
 39:	
 
 atan2$12:	; return
-40:		mov t424, [bp]
+40:		mov t426, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t424
+43:		jmp t426
 45:	
 
 atan2$13:	; push float x
@@ -4596,10 +4596,10 @@ atan2$29:	; return_value = £temporary855
 101:	
 
 atan2$30:	; return
-102:		mov t425, [bp]
+102:		mov t427, [bp]
 103:		mov di, [bp + 4]
 104:		mov bp, [bp + 2]
-105:		jmp t425
+105:		jmp t427
 107:	
 
 atan2$31:	; call header integral zero 0 stack zero 0
@@ -4646,10 +4646,10 @@ atan2$41:	; return_value = £temporary858
 139:	
 
 atan2$42:	; return
-140:		mov t426, [bp]
+140:		mov t428, [bp]
 141:		mov di, [bp + 4]
 142:		mov bp, [bp + 2]
-143:		jmp t426
+143:		jmp t428
 145:	
 
 atan2$43:	; push float y
@@ -4675,10 +4675,10 @@ atan2$47:	; return_value = 1.5707963267948966192
 162:	
 
 atan2$48:	; return
-163:		mov t427, [bp]
+163:		mov t429, [bp]
 164:		mov di, [bp + 4]
 165:		mov bp, [bp + 2]
-166:		jmp t427
+166:		jmp t429
 168:	
 
 atan2$49:	; push float y
@@ -4704,10 +4704,10 @@ atan2$53:	; return_value = -1.5707963267948966192
 185:	
 
 atan2$54:	; return
-186:		mov t428, [bp]
+186:		mov t430, [bp]
 187:		mov di, [bp + 4]
 188:		mov bp, [bp + 2]
-189:		jmp t428
+189:		jmp t430
 191:	
 
 atan2$55:	; errno = 6
@@ -4722,10 +4722,10 @@ atan2$57:	; return_value = 0
 199:	
 
 atan2$58:	; return
-200:		mov t429, [bp]
+200:		mov t431, [bp]
 201:		mov di, [bp + 4]
 202:		mov bp, [bp + 2]
-203:		jmp t429
+203:		jmp t431
 205:	
 
 atan2$59:	; function end atan2
@@ -4808,10 +4808,10 @@ atan2x$17:	; return_value = y
 59:	
 
 atan2x$18:	; return
-60:		mov t430, [bp]
+60:		mov t432, [bp]
 61:		mov di, [bp + 4]
 62:		mov bp, [bp + 2]
-63:		jmp t430
+63:		jmp t432
 65:	
 
 atan2x$19:	; push float num
@@ -4910,10 +4910,10 @@ atan2x$39:	; return_value = £temporary874
 139:	
 
 atan2x$40:	; return
-140:		mov t431, [bp]
+140:		mov t433, [bp]
 141:		mov di, [bp + 4]
 142:		mov bp, [bp + 2]
-143:		jmp t431
+143:		jmp t433
 145:	
 
 atan2x$41:	; push float num
@@ -5012,10 +5012,10 @@ atan2x$61:	; return_value = £temporary881
 219:	
 
 atan2x$62:	; return
-220:		mov t432, [bp]
+220:		mov t434, [bp]
 221:		mov di, [bp + 4]
 222:		mov bp, [bp + 2]
-223:		jmp t432
+223:		jmp t434
 225:	
 
 atan2x$63:	; push float num
@@ -5074,10 +5074,10 @@ atan2x$74:	; return_value = 1.5707963267948966192
 268:	
 
 atan2x$75:	; return
-269:		mov t433, [bp]
+269:		mov t435, [bp]
 270:		mov di, [bp + 4]
 271:		mov bp, [bp + 2]
-272:		jmp t433
+272:		jmp t435
 274:	
 
 atan2x$76:	; push float num
@@ -5136,10 +5136,10 @@ atan2x$87:	; return_value = -1.5707963267948966192
 317:	
 
 atan2x$88:	; return
-318:		mov t434, [bp]
+318:		mov t436, [bp]
 319:		mov di, [bp + 4]
 320:		mov bp, [bp + 2]
-321:		jmp t434
+321:		jmp t436
 323:	
 
 atan2x$89:	; call header integral zero 0 stack zero 0
@@ -5172,10 +5172,10 @@ atan2x$95:	; return_value = 0
 345:	
 
 atan2x$96:	; return
-346:		mov t435, [bp]
+346:		mov t437, [bp]
 347:		mov di, [bp + 4]
 348:		mov bp, [bp + 2]
-349:		jmp t435
+349:		jmp t437
 351:	
 
 atan2x$97:	; function end atan2x
@@ -5232,10 +5232,10 @@ floor$11:	; return_value = £temporary903
 39:	
 
 floor$12:	; return
-40:		mov t436, [bp]
+40:		mov t438, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t436
+43:		jmp t438
 45:	
 
 floor$13:	; push float x
@@ -5244,11 +5244,11 @@ floor$13:	; push float x
 
 floor$14:	; £temporary904 = float_to_int x (Double -> Signed_Long_Int)
 49:		fistp dword [container4bytes#]
-50:		mov t437, [container4bytes#]
+50:		mov t439, [container4bytes#]
 52:	
 
 floor$15:	; £temporary905 = int_to_float £temporary904 (Signed_Long_Int -> Double)
-53:		mov [container4bytes#], t437
+53:		mov [container4bytes#], t439
 54:		fild dword [container4bytes#]
 56:	
 
@@ -5256,10 +5256,10 @@ floor$16:	; return_value = £temporary905
 58:	
 
 floor$17:	; return
-59:		mov t438, [bp]
+59:		mov t440, [bp]
 60:		mov di, [bp + 4]
 61:		mov bp, [bp + 2]
-62:		jmp t438
+62:		jmp t440
 64:	
 
 floor$18:	; function end floor
@@ -5316,10 +5316,10 @@ ceil$11:	; return_value = £temporary910
 39:	
 
 ceil$12:	; return
-40:		mov t439, [bp]
+40:		mov t441, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t439
+43:		jmp t441
 45:	
 
 ceil$13:	; push float x
@@ -5336,11 +5336,11 @@ ceil$15:	; £temporary911 = x + 0.999999999999
 
 ceil$16:	; £temporary912 = float_to_int £temporary911 (Double -> Signed_Long_Int)
 55:		fistp dword [container4bytes#]
-56:		mov t440, [container4bytes#]
+56:		mov t442, [container4bytes#]
 58:	
 
 ceil$17:	; £temporary913 = int_to_float £temporary912 (Signed_Long_Int -> Double)
-59:		mov [container4bytes#], t440
+59:		mov [container4bytes#], t442
 60:		fild dword [container4bytes#]
 62:	
 
@@ -5348,10 +5348,10 @@ ceil$18:	; return_value = £temporary913
 64:	
 
 ceil$19:	; return
-65:		mov t441, [bp]
+65:		mov t443, [bp]
 66:		mov di, [bp + 4]
 67:		mov bp, [bp + 2]
-68:		jmp t441
+68:		jmp t443
 70:	
 
 ceil$20:	; function end ceil
@@ -5405,11 +5405,11 @@ round$10:	; £temporary917 = x + 0.5
 
 round$11:	; £temporary922 = float_to_int £temporary921 (Double -> Signed_Long_Int)
 37:		fistp dword [container4bytes#]
-38:		mov t442, [container4bytes#]
+38:		mov t444, [container4bytes#]
 40:	
 
 round$12:	; £temporary923 = int_to_float £temporary922 (Signed_Long_Int -> Double)
-41:		mov [container4bytes#], t442
+41:		mov [container4bytes#], t444
 42:		fild dword [container4bytes#]
 44:	
 
@@ -5417,10 +5417,10 @@ round$13:	; return_value = £temporary923
 46:	
 
 round$14:	; return
-47:		mov t443, [bp]
+47:		mov t445, [bp]
 48:		mov di, [bp + 4]
 49:		mov bp, [bp + 2]
-50:		jmp t443
+50:		jmp t445
 52:	
 
 round$15:	; function end round
@@ -5464,10 +5464,10 @@ fabs$8:	; return_value = £temporary929
 29:	
 
 fabs$9:	; return
-30:		mov t444, [bp]
+30:		mov t446, [bp]
 31:		mov di, [bp + 4]
 32:		mov bp, [bp + 2]
-33:		jmp t444
+33:		jmp t446
 35:	
 
 fabs$10:	; function end fabs
@@ -5499,11 +5499,11 @@ modf$5:	; £temporary930 = return_value
 
 modf$6:	; £temporary931 = float_to_int £temporary930 (Double -> Signed_Long_Int)
 20:		fistp dword [container4bytes#]
-21:		mov t445, [container4bytes#]
+21:		mov t447, [container4bytes#]
 23:	
 
 modf$7:	; £temporary932 = int_to_float £temporary931 (Signed_Long_Int -> Double)
-24:		mov [container4bytes#], t445
+24:		mov [container4bytes#], t447
 25:		fild dword [container4bytes#]
 27:	
 
@@ -5517,7 +5517,7 @@ modf$9:	; if p == 0 goto 34
 34:	
 
 modf$10:	; £temporary934 -> p = *p
-35:		mov a446, [bp + 14]
+35:		mov a448, [bp + 14]
 37:	
 
 modf$11:	; push float x
@@ -5536,7 +5536,7 @@ modf$13:	; if x <= 0 goto 24
 49:	
 
 modf$14:	; call header integral no zero 1 stack zero 0
-50:		mov [bp + 24], a446
+50:		mov [bp + 24], a448
 52:	
 
 modf$15:	; push float x
@@ -5555,7 +5555,7 @@ modf$17:	; call function noellipse-noellipse fabs
 64:	
 
 modf$18:	; post call
-65:		mov a446, [bp + 24]
+65:		mov a448, [bp + 24]
 67:	
 
 modf$19:	; £temporary936 = return_value
@@ -5577,7 +5577,7 @@ modf$23:	; goto 33
 80:	
 
 modf$24:	; call header integral no zero 1 stack zero 0
-81:		mov [bp + 24], a446
+81:		mov [bp + 24], a448
 83:	
 
 modf$25:	; push float x
@@ -5596,7 +5596,7 @@ modf$27:	; call function noellipse-noellipse fabs
 95:	
 
 modf$28:	; post call
-96:		mov a446, [bp + 24]
+96:		mov a448, [bp + 24]
 98:	
 
 modf$29:	; £temporary938 = return_value
@@ -5615,7 +5615,7 @@ modf$32:	; £temporary940 = -£temporary939
 109:	
 
 modf$33:	; pop float £temporary934 -> p
-110:		fstp qword [a446]
+110:		fstp qword [a448]
 112:	
 
 modf$34:	; push float x
@@ -5656,10 +5656,10 @@ modf$42:	; return_value = £temporary950
 140:	
 
 modf$43:	; return
-141:		mov t447, [bp]
+141:		mov t449, [bp]
 142:		mov di, [bp + 4]
 143:		mov bp, [bp + 2]
-144:		jmp t447
+144:		jmp t449
 146:	
 
 modf$44:	; function end modf
@@ -5709,11 +5709,11 @@ fmod$9:	; push float quotient
 
 fmod$10:	; £temporary956 = float_to_int quotient (Double -> Signed_Long_Int)
 34:		fistp dword [container4bytes#]
-35:		mov t448, [container4bytes#]
+35:		mov t450, [container4bytes#]
 37:	
 
 fmod$11:	; £temporary957 = int_to_float £temporary956 (Signed_Long_Int -> Double)
-38:		mov [container4bytes#], t448
+38:		mov [container4bytes#], t450
 39:		fild dword [container4bytes#]
 41:	
 
@@ -5780,10 +5780,10 @@ fmod$26:	; return_value = £temporary965
 88:	
 
 fmod$27:	; return
-89:		mov t449, [bp]
+89:		mov t451, [bp]
 90:		mov di, [bp + 4]
 91:		mov bp, [bp + 2]
-92:		jmp t449
+92:		jmp t451
 94:	
 
 fmod$28:	; errno = 6
@@ -5798,10 +5798,10 @@ fmod$30:	; return_value = 0
 102:	
 
 fmod$31:	; return
-103:		mov t450, [bp]
+103:		mov t452, [bp]
 104:		mov di, [bp + 4]
 105:		mov bp, [bp + 2]
-106:		jmp t450
+106:		jmp t452
 108:	
 
 fmod$32:	; function end fmod

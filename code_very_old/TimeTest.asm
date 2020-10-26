@@ -11,8 +11,6 @@
 	extern strftime
 	extern $StackTop
 
-section .text
-
 
 section .data
 

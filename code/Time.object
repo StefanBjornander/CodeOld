@@ -659,7 +659,7 @@ gmtime$6:	; £temporary2829 = int_to_int £temporary2828 (Signed_Long_Int -> Sig
 41:	
 
 gmtime$7:	; g_timeStruct$tm_hour = £temporary2829
-42:		mov [@30$g_timeStruct + 4], ax
+42:		mov [@31$g_timeStruct + 4], ax
 44:	
 
 gmtime$8:	; £temporary2831 = secondsOfDay % 3600
@@ -682,7 +682,7 @@ gmtime$10:	; £temporary2833 = int_to_int £temporary2832 (Signed_Long_Int -> Si
 73:	
 
 gmtime$11:	; g_timeStruct$tm_min = £temporary2833
-74:		mov [@30$g_timeStruct + 2], ax
+74:		mov [@31$g_timeStruct + 2], ax
 76:	
 
 gmtime$12:	; £temporary2835 = secondsOfDay % 3600
@@ -705,7 +705,7 @@ gmtime$14:	; £temporary2837 = int_to_int £temporary2836 (Signed_Long_Int -> Si
 105:	
 
 gmtime$15:	; g_timeStruct$tm_sec = £temporary2837
-106:		mov [@30$g_timeStruct], dx
+106:		mov [@31$g_timeStruct], dx
 108:	
 
 gmtime$16:	; totalDays = time / 86400
@@ -733,7 +733,7 @@ gmtime$19:	; £temporary2842 = int_to_int £temporary2841 (Signed_Long_Int -> Si
 132:	
 
 gmtime$20:	; g_timeStruct$tm_wday = £temporary2842
-133:		mov [@30$g_timeStruct + 12], ax
+133:		mov [@31$g_timeStruct + 12], ax
 135:	
 
 gmtime$21:	; goto 26
@@ -758,7 +758,7 @@ gmtime$24:	; £temporary2846 = int_to_int £temporary2845 (Signed_Long_Int -> Si
 160:	
 
 gmtime$25:	; g_timeStruct$tm_wday = £temporary2846
-161:		mov [@30$g_timeStruct + 12], dx
+161:		mov [@31$g_timeStruct + 12], dx
 163:	
 
 gmtime$26:	; £temporary2847 = year % 4
@@ -848,7 +848,7 @@ gmtime$42:	; if totalDays >= £temporary2861 goto 82
 gmtime$43:	; g_timeStruct$tm_year = year - 1900
 249:		mov ax, [bp + 8]
 250:		sub ax, 1900
-251:		mov [@30$g_timeStruct], ax
+251:		mov [@31$g_timeStruct], ax
 253:	
 
 gmtime$44:	; £temporary2866 = int_to_int totalDays (Signed_Long_Int -> Signed_Int)
@@ -860,7 +860,7 @@ gmtime$44:	; £temporary2866 = int_to_int totalDays (Signed_Long_Int -> Signed_I
 263:	
 
 gmtime$45:	; g_timeStruct$tm_yday = £temporary2866
-264:		mov [@30$g_timeStruct + 14], ax
+264:		mov [@31$g_timeStruct + 14], ax
 266:	
 
 gmtime$46:	; daysOfMonths[0] = 31
@@ -999,7 +999,7 @@ gmtime$74:	; goto 63
 
 gmtime$75:	; g_timeStruct$tm_mon = month
 388:		mov ax, [bp + 50]
-389:		mov [@30$g_timeStruct + 8], ax
+389:		mov [@31$g_timeStruct + 8], ax
 391:	
 
 gmtime$76:	; £temporary2897 = totalDays + 1
@@ -1015,15 +1015,15 @@ gmtime$77:	; £temporary2898 = int_to_int £temporary2897 (Signed_Long_Int -> Si
 404:	
 
 gmtime$78:	; g_timeStruct$tm_mday = £temporary2898
-405:		mov [@30$g_timeStruct + 6], ax
+405:		mov [@31$g_timeStruct + 6], ax
 407:	
 
 gmtime$79:	; g_timeStruct$tm_isdst = -1
-408:		mov word [@30$g_timeStruct + 16], -1
+408:		mov word [@31$g_timeStruct + 16], -1
 410:	
 
-gmtime$80:	; return_value = (@30$g_timeStruct,0)
-411:		mov bx, @30$g_timeStruct
+gmtime$80:	; return_value = (@31$g_timeStruct,0)
+411:		mov bx, @31$g_timeStruct
 413:	
 
 gmtime$81:	; return
@@ -1172,7 +1172,7 @@ asctime$15:	; goto 17
 52:	
 
 asctime$16:	; £temporary2922 = g_defaultShortDayList
-53:		mov ax, @32$g_defaultShortDayList
+53:		mov ax, @33$g_defaultShortDayList
 55:	
 
 asctime$17:	; shortDayList = £temporary2922
@@ -1193,7 +1193,7 @@ asctime$20:	; goto 22
 68:	
 
 asctime$21:	; £temporary2927 = g_defaultShortMonthList
-69:		mov ax, @34$g_defaultShortMonthList
+69:		mov ax, @35$g_defaultShortMonthList
 71:	
 
 asctime$22:	; shortMonthList = £temporary2927
@@ -1204,7 +1204,7 @@ asctime$23:	; call header integral zero 0 stack zero 0
 76:	
 
 asctime$24:	; parameter g_timeString, offset 6
-77:		mov word [bp + 20], @31$g_timeString
+77:		mov word [bp + 20], @32$g_timeString
 79:	
 
 asctime$25:	; parameter string_25s2025s20252i202502i3A2502i3A2502i202504i#, offset 8
@@ -1319,7 +1319,7 @@ asctime$48:	; post call
 176:	
 
 asctime$49:	; return_value = g_timeString
-177:		mov bx, @31$g_timeString
+177:		mov bx, @32$g_timeString
 179:	
 
 asctime$50:	; return
@@ -1687,7 +1687,7 @@ strftime$36:	; goto 38
 122:	
 
 strftime$37:	; £temporary3006 = g_defaultShortDayList
-123:		mov ax, @32$g_defaultShortDayList
+123:		mov ax, @33$g_defaultShortDayList
 125:	
 
 strftime$38:	; shortDayList = £temporary3006
@@ -1708,7 +1708,7 @@ strftime$41:	; goto 43
 138:	
 
 strftime$42:	; £temporary3011 = g_defaultLongDayList
-139:		mov ax, @33$g_defaultLongDayList
+139:		mov ax, @34$g_defaultLongDayList
 141:	
 
 strftime$43:	; longDayList = £temporary3011
@@ -1729,7 +1729,7 @@ strftime$46:	; goto 48
 154:	
 
 strftime$47:	; £temporary3016 = g_defaultShortMonthList
-155:		mov ax, @34$g_defaultShortMonthList
+155:		mov ax, @35$g_defaultShortMonthList
 157:	
 
 strftime$48:	; shortMonthList = £temporary3016
@@ -1750,7 +1750,7 @@ strftime$51:	; goto 53
 170:	
 
 strftime$52:	; £temporary3021 = g_defaultLongMonthList
-171:		mov ax, @35$g_defaultLongMonthList
+171:		mov ax, @36$g_defaultLongMonthList
 173:	
 
 strftime$53:	; longMonthList = £temporary3021

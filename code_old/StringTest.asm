@@ -26,171 +26,171 @@
 section .data
 
 string_Hello2C20World21#:
-	; initializer String
+	; Initializer String Hello, World!
 	db "Hello, World!", 0
 
 section .data
 
 string_strlen282225s2229203D2025i0A#:
-	; initializer String
+	; Initializer String strlen("%s") = %i\n
 	db "strlen(", 34, "%s", 34, ") = %i", 10, 0
 
 section .data
 
 string_t203D202225s222C20u203D202225s220A#:
-	; initializer String
+	; Initializer String t = "%s", u = "%s"\n
 	db "t = ", 34, "%s", 34, ", u = ", 34, "%s", 34, 10, 0
 
 section .data
 
 string_abc#:
-	; initializer String
+	; Initializer String abc
 	db "abc", 0
 
 section .data
 
 string_strcmp28s2C20u29203D2025i0A#:
-	; initializer String
+	; Initializer String strcmp(s, u) = %i\n
 	db "strcmp(s, u) = %i", 10, 0
 
 section .data
 
 string_strncmp28s2C20u2C20229203D2025i0A#:
-	; initializer String
+	; Initializer String strncmp(s, u, 2) = %i\n
 	db "strncmp(s, u, 2) = %i", 10, 0
 
 section .data
 
 string_strchr28s2C2027l2729203D2025i0A#:
-	; initializer String
+	; Initializer String strchr(s, 'l') = %i\n
 	db "strchr(s, ", 39, "l", 39, ") = %i", 10, 0
 
 section .data
 
 string_strrchr28s2C2027l2729203D2025i0A#:
-	; initializer String
+	; Initializer String strrchr(s, 'l') = %i\n
 	db "strrchr(s, ", 39, "l", 39, ") = %i", 10, 0
 
 section .data
 
 string_strchr28s2C2027x2729203D2025i0A#:
-	; initializer String
+	; Initializer String strchr(s, 'x') = %i\n
 	db "strchr(s, ", 39, "x", 39, ") = %i", 10, 0
 
 section .data
 
 string_strrchr28s2C2027x2729203D2025i0A#:
-	; initializer String
+	; Initializer String strrchr(s, 'x') = %i\n
 	db "strrchr(s, ", 39, "x", 39, ") = %i", 10, 0
 
 section .data
 
 string_s203D202225s222C20t203D202225s222C20u203D202225s220A#:
-	; initializer String
+	; Initializer String s = "%s", t = "%s", u = "%s"\n
 	db "s = ", 34, "%s", 34, ", t = ", 34, "%s", 34, ", u = ", 34, "%s", 34, 10, 0
 
 section .data
 
 string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A#:
-	; initializer String
+	; Initializer String memchr(s, 'l', SIZE * sizeof(char)) = %i\n
 	db "memchr(s, ", 39, "l", 39, ", SIZE * sizeof(char)) = %i", 10, 0
 
 section .data
 
 string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A#:
-	; initializer String
+	; Initializer String memchr(s, 'x', SIZE * sizeof(char)) = %i\n
 	db "memchr(s, ", 39, "x", 39, ", SIZE * sizeof(char)) = %i", 10, 0
 
 section .data
 
 string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A#:
-	; initializer String
+	; Initializer String memcmp(s, t, SIZE * sizeof(char)) = %i\n
 	db "memcmp(s, t, SIZE * sizeof(char)) = %i", 10, 0
 
 section .data
 
 string_strspn28s2C2022Hello2C20C2229203D2025i0A#:
-	; initializer String
+	; Initializer String strspn(s, "Hello, C") = %i\n
 	db "strspn(s, ", 34, "Hello, C", 34, ") = %i", 10, 0
 
 section .data
 
 string_Hello2C20C#:
-	; initializer String
+	; Initializer String Hello, C
 	db "Hello, C", 0
 
 section .data
 
 string_strcspn28s2C2022Hello2C20C2229203D2025i0A#:
-	; initializer String
+	; Initializer String strcspn(s, "Hello, C") = %i\n
 	db "strcspn(s, ", 34, "Hello, C", 34, ") = %i", 10, 0
 
 section .data
 
 string_strerror28errno29203D202225s220A#:
-	; initializer String
+	; Initializer String strerror(errno) = "%s"\n
 	db "strerror(errno) = ", 34, "%s", 34, 10, 0
 
 section .data
 
 string_2C#:
-	; initializer String
+	; Initializer String ,
 	db ",", 0
 
 section .data
 
 string_strtok28s2C20222C2229203D202225s220A#:
-	; initializer String
+	; Initializer String strtok(s, ",") = "%s"\n
 	db "strtok(s, ", 34, ",", 34, ") = ", 34, "%s", 34, 10, 0
 
 section .text
 
  string_test:
-	; empty
+	; Empty
 
  string_test$1:
-	; s = string_Hello2C20World21#
+	; Assign s "Hello, World!"
 	mov qword [rbp + 28], string_Hello2C20World21#
 
  string_test$2:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$3:
-	; parameter string_strlen282225s2229203D2025i0A#, offset 268
+	; Parameter pointer "strlen("%s") = %i\n" 268
 	mov qword [rbp + 268], string_strlen282225s2229203D2025i0A#
 
  string_test$4:
-	; parameter s, offset 276
+	; Parameter pointer s 276
 	mov rax, [rbp + 28]
 	mov [rbp + 276], rax
 
  string_test$5:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$6:
-	; parameter s, offset 308
+	; Parameter pointer s 308
 	mov rax, [rbp + 28]
 	mov [rbp + 308], rax
 
  string_test$7:
-	; call function noellipse-noellipse strlen
+	; Call strlen 284 0
 	mov qword [rbp + 284], string_test$8
 	mov [rbp + 292], rbp
 	add rbp, 284
 	jmp strlen
 
  string_test$8:
-	; post call
+	; PostCall 284
 
  string_test$9:
-	; £temporary3131 = return_value
+	; GetReturnValue £temporary3131
 
  string_test$10:
-	; parameter £temporary3131, offset 284
+	; Parameter signedint £temporary3131 284
 	mov [rbp + 284], ebx
 
  string_test$11:
-	; call function noellipse-ellipse printf, extra 12
+	; Call printf 244 12
 	mov qword [rbp + 244], string_test$12
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -199,86 +199,86 @@ section .text
 	jmp printf
 
  string_test$12:
-	; post call
+	; PostCall 244
 
  string_test$13:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$14:
-	; parameter t, offset 268
+	; Parameter pointer t 268
 	mov [rbp + 268], rbp
 	add qword [rbp + 268], 36
 
  string_test$15:
-	; parameter s, offset 276
+	; Parameter pointer s 276
 	mov rax, [rbp + 28]
 	mov [rbp + 276], rax
 
  string_test$16:
-	; call function noellipse-noellipse strcpy
+	; Call strcpy 244 0
 	mov qword [rbp + 244], string_test$17
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strcpy
 
  string_test$17:
-	; post call
+	; PostCall 244
 
  string_test$18:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$19:
-	; parameter u, offset 268
+	; Parameter pointer u 268
 	mov [rbp + 268], rbp
 	add qword [rbp + 268], 136
 
  string_test$20:
-	; parameter s, offset 276
+	; Parameter pointer s 276
 	mov rax, [rbp + 28]
 	mov [rbp + 276], rax
 
  string_test$21:
-	; parameter int4$5#, offset 284
+	; Parameter signedint 5 284
 	mov dword [rbp + 284], 5
 
  string_test$22:
-	; call function noellipse-noellipse strncpy
+	; Call strncpy 244 0
 	mov qword [rbp + 244], string_test$23
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strncpy
 
  string_test$23:
-	; post call
+	; PostCall 244
 
  string_test$24:
-	; £temporary3135 -> u = *u
+	; Dereference £temporary3135 -> u u 0
 	mov rsi, rbp
 	add rsi, 136
 
  string_test$25:
-	; £temporary3135 -> u = int1$0#
+	; Assign £temporary3135 -> u 0
 	mov byte [rsi + 5], 0
 
  string_test$26:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$27:
-	; parameter string_t203D202225s222C20u203D202225s220A#, offset 268
+	; Parameter pointer "t = "%s", u = "%s"\n" 268
 	mov qword [rbp + 268], string_t203D202225s222C20u203D202225s220A#
 
  string_test$28:
-	; parameter t, offset 276
+	; Parameter pointer t 276
 	mov [rbp + 276], rbp
 	add qword [rbp + 276], 36
 
  string_test$29:
-	; parameter u, offset 284
+	; Parameter pointer u 284
 	mov [rbp + 284], rbp
 	add qword [rbp + 284], 136
 
  string_test$30:
-	; call function noellipse-ellipse printf, extra 16
+	; Call printf 244 16
 	mov qword [rbp + 244], string_test$31
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -287,123 +287,123 @@ section .text
 	jmp printf
 
  string_test$31:
-	; post call
+	; PostCall 244
 
  string_test$32:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$33:
-	; parameter t, offset 268
+	; Parameter pointer t 268
 	mov [rbp + 268], rbp
 	add qword [rbp + 268], 36
 
  string_test$34:
-	; parameter string_abc#, offset 276
+	; Parameter pointer "abc" 276
 	mov qword [rbp + 276], string_abc#
 
  string_test$35:
-	; call function noellipse-noellipse strcat
+	; Call strcat 244 0
 	mov qword [rbp + 244], string_test$36
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strcat
 
  string_test$36:
-	; post call
+	; PostCall 244
 
  string_test$37:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$38:
-	; parameter u, offset 268
+	; Parameter pointer u 268
 	mov [rbp + 268], rbp
 	add qword [rbp + 268], 136
 
  string_test$39:
-	; call function noellipse-noellipse strlen
+	; Call strlen 244 0
 	mov qword [rbp + 244], string_test$40
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strlen
 
  string_test$40:
-	; post call
+	; PostCall 244
 
  string_test$41:
-	; £temporary3138 = return_value
+	; GetReturnValue £temporary3138
 
  string_test$42:
-	; i = £temporary3138
+	; Assign i £temporary3138
 	mov [rbp + 24], ebx
 
  string_test$43:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$44:
-	; parameter u, offset 268
+	; Parameter pointer u 268
 	mov [rbp + 268], rbp
 	add qword [rbp + 268], 136
 
  string_test$45:
-	; parameter string_abc#, offset 276
+	; Parameter pointer "abc" 276
 	mov qword [rbp + 276], string_abc#
 
  string_test$46:
-	; parameter int4$2#, offset 284
+	; Parameter signedint 2 284
 	mov dword [rbp + 284], 2
 
  string_test$47:
-	; call function noellipse-noellipse strncat
+	; Call strncat 244 0
 	mov qword [rbp + 244], string_test$48
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strncat
 
  string_test$48:
-	; post call
+	; PostCall 244
 
  string_test$49:
-	; £temporary3140 = i + int4$2#
+	; BinaryAdd £temporary3140 i 2
 	mov eax, [rbp + 24]
 	add eax, 2
 
  string_test$50:
-	; £temporary3142 = int_to_int £temporary3140 (SignedInt -> Array)
+	; IntegralToIntegral £temporary3142 £temporary3140
 	mov rbx, 4294967295
 	and rax, rbx
 
  string_test$51:
-	; £temporary3144 = u + £temporary3142
+	; BinaryAdd £temporary3144 u £temporary3142
 	mov rsi, rbp
 	add rsi, 136
 	add rsi, rax
 
  string_test$52:
-	; £temporary3141 -> £temporary3144 = *£temporary3144
+	; Dereference £temporary3141 -> £temporary3144 £temporary3144 0
 
  string_test$53:
-	; £temporary3141 -> £temporary3144 = int1$0#
+	; Assign £temporary3141 -> £temporary3144 0
 	mov byte [rsi], 0
 
  string_test$54:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$55:
-	; parameter string_t203D202225s222C20u203D202225s220A#, offset 268
+	; Parameter pointer "t = "%s", u = "%s"\n" 268
 	mov qword [rbp + 268], string_t203D202225s222C20u203D202225s220A#
 
  string_test$56:
-	; parameter t, offset 276
+	; Parameter pointer t 276
 	mov [rbp + 276], rbp
 	add qword [rbp + 276], 36
 
  string_test$57:
-	; parameter u, offset 284
+	; Parameter pointer u 284
 	mov [rbp + 284], rbp
 	add qword [rbp + 284], 136
 
  string_test$58:
-	; call function noellipse-ellipse printf, extra 16
+	; Call printf 244 16
 	mov qword [rbp + 244], string_test$59
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -412,47 +412,47 @@ section .text
 	jmp printf
 
  string_test$59:
-	; post call
+	; PostCall 244
 
  string_test$60:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$61:
-	; parameter string_strcmp28s2C20u29203D2025i0A#, offset 268
+	; Parameter pointer "strcmp(s, u) = %i\n" 268
 	mov qword [rbp + 268], string_strcmp28s2C20u29203D2025i0A#
 
  string_test$62:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$63:
-	; parameter s, offset 300
+	; Parameter pointer s 300
 	mov rax, [rbp + 28]
 	mov [rbp + 300], rax
 
  string_test$64:
-	; parameter u, offset 308
+	; Parameter pointer u 308
 	mov [rbp + 308], rbp
 	add qword [rbp + 308], 136
 
  string_test$65:
-	; call function noellipse-noellipse strcmp
+	; Call strcmp 276 0
 	mov qword [rbp + 276], string_test$66
 	mov [rbp + 284], rbp
 	add rbp, 276
 	jmp strcmp
 
  string_test$66:
-	; post call
+	; PostCall 276
 
  string_test$67:
-	; £temporary3146 = return_value
+	; GetReturnValue £temporary3146
 
  string_test$68:
-	; parameter £temporary3146, offset 276
+	; Parameter signedint £temporary3146 276
 	mov [rbp + 276], ebx
 
  string_test$69:
-	; call function noellipse-ellipse printf, extra 4
+	; Call printf 244 4
 	mov qword [rbp + 244], string_test$70
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -461,51 +461,51 @@ section .text
 	jmp printf
 
  string_test$70:
-	; post call
+	; PostCall 244
 
  string_test$71:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$72:
-	; parameter string_strncmp28s2C20u2C20229203D2025i0A#, offset 268
+	; Parameter pointer "strncmp(s, u, 2) = %i\n" 268
 	mov qword [rbp + 268], string_strncmp28s2C20u2C20229203D2025i0A#
 
  string_test$73:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$74:
-	; parameter s, offset 300
+	; Parameter pointer s 300
 	mov rax, [rbp + 28]
 	mov [rbp + 300], rax
 
  string_test$75:
-	; parameter u, offset 308
+	; Parameter pointer u 308
 	mov [rbp + 308], rbp
 	add qword [rbp + 308], 136
 
  string_test$76:
-	; parameter int4$2#, offset 316
+	; Parameter signedint 2 316
 	mov dword [rbp + 316], 2
 
  string_test$77:
-	; call function noellipse-noellipse strncmp
+	; Call strncmp 276 0
 	mov qword [rbp + 276], string_test$78
 	mov [rbp + 284], rbp
 	add rbp, 276
 	jmp strncmp
 
  string_test$78:
-	; post call
+	; PostCall 276
 
  string_test$79:
-	; £temporary3148 = return_value
+	; GetReturnValue £temporary3148
 
  string_test$80:
-	; parameter £temporary3148, offset 276
+	; Parameter signedint £temporary3148 276
 	mov [rbp + 276], ebx
 
  string_test$81:
-	; call function noellipse-ellipse printf, extra 4
+	; Call printf 244 4
 	mov qword [rbp + 244], string_test$82
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -514,74 +514,74 @@ section .text
 	jmp printf
 
  string_test$82:
-	; post call
+	; PostCall 244
 
  string_test$83:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$84:
-	; parameter s, offset 268
+	; Parameter pointer s 268
 	mov rax, [rbp + 28]
 	mov [rbp + 268], rax
 
  string_test$85:
-	; parameter int4$108#, offset 276
+	; Parameter signedint 108 276
 	mov dword [rbp + 276], 108
 
  string_test$86:
-	; call function noellipse-noellipse strchr
+	; Call strchr 244 0
 	mov qword [rbp + 244], string_test$87
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strchr
 
  string_test$87:
-	; post call
+	; PostCall 244
 
  string_test$88:
-	; £temporary3150 = return_value
+	; GetReturnValue £temporary3150
 
  string_test$89:
-	; p = £temporary3150
+	; Assign p £temporary3150
 	mov [rbp + 236], rbx
 
  string_test$90:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$91:
-	; parameter string_strchr28s2C2027l2729203D2025i0A#, offset 268
+	; Parameter pointer "strchr(s, 'l') = %i\n" 268
 	mov qword [rbp + 268], string_strchr28s2C2027l2729203D2025i0A#
 
  string_test$92:
-	; if p == int8$0# goto 97
+	; Equal 97 p 0
 	cmp qword [rbp + 236], 0
 	je string_test$97
 
  string_test$93:
-	; £temporary3153 = p - s
+	; BinarySubtract £temporary3153 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$94:
-	; £temporary3154 = int_to_int £temporary3153 (Pointer -> SignedInt)
+	; IntegralToIntegral £temporary3154 £temporary3153
 
  string_test$95:
-	; £temporary3155 = £temporary3154
+	; Assign £temporary3155 £temporary3154
 
  string_test$96:
-	; goto 98
+	; Goto 98
 	jmp string_test$98
 
  string_test$97:
-	; £temporary3155 = int4$minus1#
+	; Assign £temporary3155 -1
 	mov eax, -1
 
  string_test$98:
-	; parameter £temporary3155, offset 276
+	; Parameter signedint £temporary3155 276
 	mov [rbp + 276], eax
 
  string_test$99:
-	; call function noellipse-ellipse printf, extra 4
+	; Call printf 244 4
 	mov qword [rbp + 244], string_test$100
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -590,74 +590,74 @@ section .text
 	jmp printf
 
  string_test$100:
-	; post call
+	; PostCall 244
 
  string_test$101:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$102:
-	; parameter s, offset 268
+	; Parameter pointer s 268
 	mov rax, [rbp + 28]
 	mov [rbp + 268], rax
 
  string_test$103:
-	; parameter int4$108#, offset 276
+	; Parameter signedint 108 276
 	mov dword [rbp + 276], 108
 
  string_test$104:
-	; call function noellipse-noellipse strrchr
+	; Call strrchr 244 0
 	mov qword [rbp + 244], string_test$105
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strrchr
 
  string_test$105:
-	; post call
+	; PostCall 244
 
  string_test$106:
-	; £temporary3157 = return_value
+	; GetReturnValue £temporary3157
 
  string_test$107:
-	; p = £temporary3157
+	; Assign p £temporary3157
 	mov [rbp + 236], rbx
 
  string_test$108:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$109:
-	; parameter string_strrchr28s2C2027l2729203D2025i0A#, offset 268
+	; Parameter pointer "strrchr(s, 'l') = %i\n" 268
 	mov qword [rbp + 268], string_strrchr28s2C2027l2729203D2025i0A#
 
  string_test$110:
-	; if p == int8$0# goto 115
+	; Equal 115 p 0
 	cmp qword [rbp + 236], 0
 	je string_test$115
 
  string_test$111:
-	; £temporary3160 = p - s
+	; BinarySubtract £temporary3160 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$112:
-	; £temporary3161 = int_to_int £temporary3160 (Pointer -> SignedInt)
+	; IntegralToIntegral £temporary3161 £temporary3160
 
  string_test$113:
-	; £temporary3162 = £temporary3161
+	; Assign £temporary3162 £temporary3161
 
  string_test$114:
-	; goto 116
+	; Goto 116
 	jmp string_test$116
 
  string_test$115:
-	; £temporary3162 = int4$minus1#
+	; Assign £temporary3162 -1
 	mov eax, -1
 
  string_test$116:
-	; parameter £temporary3162, offset 276
+	; Parameter signedint £temporary3162 276
 	mov [rbp + 276], eax
 
  string_test$117:
-	; call function noellipse-ellipse printf, extra 4
+	; Call printf 244 4
 	mov qword [rbp + 244], string_test$118
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -666,74 +666,74 @@ section .text
 	jmp printf
 
  string_test$118:
-	; post call
+	; PostCall 244
 
  string_test$119:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$120:
-	; parameter s, offset 268
+	; Parameter pointer s 268
 	mov rax, [rbp + 28]
 	mov [rbp + 268], rax
 
  string_test$121:
-	; parameter int4$120#, offset 276
+	; Parameter signedint 120 276
 	mov dword [rbp + 276], 120
 
  string_test$122:
-	; call function noellipse-noellipse strchr
+	; Call strchr 244 0
 	mov qword [rbp + 244], string_test$123
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strchr
 
  string_test$123:
-	; post call
+	; PostCall 244
 
  string_test$124:
-	; £temporary3164 = return_value
+	; GetReturnValue £temporary3164
 
  string_test$125:
-	; p = £temporary3164
+	; Assign p £temporary3164
 	mov [rbp + 236], rbx
 
  string_test$126:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$127:
-	; parameter string_strchr28s2C2027x2729203D2025i0A#, offset 268
+	; Parameter pointer "strchr(s, 'x') = %i\n" 268
 	mov qword [rbp + 268], string_strchr28s2C2027x2729203D2025i0A#
 
  string_test$128:
-	; if p == int8$0# goto 133
+	; Equal 133 p 0
 	cmp qword [rbp + 236], 0
 	je string_test$133
 
  string_test$129:
-	; £temporary3167 = p - s
+	; BinarySubtract £temporary3167 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$130:
-	; £temporary3168 = int_to_int £temporary3167 (Pointer -> SignedInt)
+	; IntegralToIntegral £temporary3168 £temporary3167
 
  string_test$131:
-	; £temporary3169 = £temporary3168
+	; Assign £temporary3169 £temporary3168
 
  string_test$132:
-	; goto 134
+	; Goto 134
 	jmp string_test$134
 
  string_test$133:
-	; £temporary3169 = int4$minus1#
+	; Assign £temporary3169 -1
 	mov eax, -1
 
  string_test$134:
-	; parameter £temporary3169, offset 276
+	; Parameter signedint £temporary3169 276
 	mov [rbp + 276], eax
 
  string_test$135:
-	; call function noellipse-ellipse printf, extra 4
+	; Call printf 244 4
 	mov qword [rbp + 244], string_test$136
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -742,74 +742,74 @@ section .text
 	jmp printf
 
  string_test$136:
-	; post call
+	; PostCall 244
 
  string_test$137:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$138:
-	; parameter s, offset 268
+	; Parameter pointer s 268
 	mov rax, [rbp + 28]
 	mov [rbp + 268], rax
 
  string_test$139:
-	; parameter int4$120#, offset 276
+	; Parameter signedint 120 276
 	mov dword [rbp + 276], 120
 
  string_test$140:
-	; call function noellipse-noellipse strrchr
+	; Call strrchr 244 0
 	mov qword [rbp + 244], string_test$141
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strrchr
 
  string_test$141:
-	; post call
+	; PostCall 244
 
  string_test$142:
-	; £temporary3171 = return_value
+	; GetReturnValue £temporary3171
 
  string_test$143:
-	; p = £temporary3171
+	; Assign p £temporary3171
 	mov [rbp + 236], rbx
 
  string_test$144:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$145:
-	; parameter string_strrchr28s2C2027x2729203D2025i0A#, offset 268
+	; Parameter pointer "strrchr(s, 'x') = %i\n" 268
 	mov qword [rbp + 268], string_strrchr28s2C2027x2729203D2025i0A#
 
  string_test$146:
-	; if p == int8$0# goto 151
+	; Equal 151 p 0
 	cmp qword [rbp + 236], 0
 	je string_test$151
 
  string_test$147:
-	; £temporary3174 = p - s
+	; BinarySubtract £temporary3174 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$148:
-	; £temporary3175 = int_to_int £temporary3174 (Pointer -> SignedInt)
+	; IntegralToIntegral £temporary3175 £temporary3174
 
  string_test$149:
-	; £temporary3176 = £temporary3175
+	; Assign £temporary3176 £temporary3175
 
  string_test$150:
-	; goto 152
+	; Goto 152
 	jmp string_test$152
 
  string_test$151:
-	; £temporary3176 = int4$minus1#
+	; Assign £temporary3176 -1
 	mov eax, -1
 
  string_test$152:
-	; parameter £temporary3176, offset 276
+	; Parameter signedint £temporary3176 276
 	mov [rbp + 276], eax
 
  string_test$153:
-	; call function noellipse-ellipse printf, extra 4
+	; Call printf 244 4
 	mov qword [rbp + 244], string_test$154
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -818,119 +818,119 @@ section .text
 	jmp printf
 
  string_test$154:
-	; post call
+	; PostCall 244
 
  string_test$155:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$156:
-	; parameter s, offset 268
+	; Parameter pointer s 268
 	mov rax, [rbp + 28]
 	mov [rbp + 268], rax
 
  string_test$157:
-	; parameter string_Hello2C20World21#, offset 276
+	; Parameter pointer "Hello, World!" 276
 	mov qword [rbp + 276], string_Hello2C20World21#
 
  string_test$158:
-	; parameter int4$20#, offset 284
+	; Parameter signedint 20 284
 	mov dword [rbp + 284], 20
 
  string_test$159:
-	; call function noellipse-noellipse memcpy
+	; Call memcpy 244 0
 	mov qword [rbp + 244], string_test$160
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp memcpy
 
  string_test$160:
-	; post call
+	; PostCall 244
 
  string_test$161:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$162:
-	; parameter t, offset 268
+	; Parameter pointer t 268
 	mov [rbp + 268], rbp
 	add qword [rbp + 268], 36
 
  string_test$163:
-	; parameter string_Hello2C20World21#, offset 276
+	; Parameter pointer "Hello, World!" 276
 	mov qword [rbp + 276], string_Hello2C20World21#
 
  string_test$164:
-	; parameter int4$20#, offset 284
+	; Parameter signedint 20 284
 	mov dword [rbp + 284], 20
 
  string_test$165:
-	; call function noellipse-noellipse memmove
+	; Call memmove 244 0
 	mov qword [rbp + 244], string_test$166
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp memmove
 
  string_test$166:
-	; post call
+	; PostCall 244
 
  string_test$167:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$168:
-	; parameter u, offset 268
+	; Parameter pointer u 268
 	mov [rbp + 268], rbp
 	add qword [rbp + 268], 136
 
  string_test$169:
-	; parameter int4$88#, offset 276
+	; Parameter signedint 88 276
 	mov dword [rbp + 276], 88
 
  string_test$170:
-	; parameter int4$20#, offset 280
+	; Parameter signedint 20 280
 	mov dword [rbp + 280], 20
 
  string_test$171:
-	; call function noellipse-noellipse memset
+	; Call memset 244 0
 	mov qword [rbp + 244], string_test$172
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp memset
 
  string_test$172:
-	; post call
+	; PostCall 244
 
  string_test$173:
-	; £temporary3181 -> u = *u
+	; Dereference £temporary3181 -> u u 0
 	mov rsi, rbp
 	add rsi, 136
 
  string_test$174:
-	; £temporary3181 -> u = int1$0#
+	; Assign £temporary3181 -> u 0
 	mov byte [rsi + 21], 0
 
  string_test$175:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$176:
-	; parameter string_s203D202225s222C20t203D202225s222C20u203D202225s220A#, offset 268
+	; Parameter pointer "s = "%s", t = "%s", u = "%s"\n" 268
 	mov qword [rbp + 268], string_s203D202225s222C20t203D202225s222C20u203D202225s220A#
 
  string_test$177:
-	; parameter s, offset 276
+	; Parameter pointer s 276
 	mov rax, [rbp + 28]
 	mov [rbp + 276], rax
 
  string_test$178:
-	; parameter t, offset 284
+	; Parameter pointer t 284
 	mov [rbp + 284], rbp
 	add qword [rbp + 284], 36
 
  string_test$179:
-	; parameter u, offset 292
+	; Parameter pointer u 292
 	mov [rbp + 292], rbp
 	add qword [rbp + 292], 136
 
  string_test$180:
-	; call function noellipse-ellipse printf, extra 24
+	; Call printf 244 24
 	mov qword [rbp + 244], string_test$181
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -939,78 +939,78 @@ section .text
 	jmp printf
 
  string_test$181:
-	; post call
+	; PostCall 244
 
  string_test$182:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$183:
-	; parameter s, offset 268
+	; Parameter pointer s 268
 	mov rax, [rbp + 28]
 	mov [rbp + 268], rax
 
  string_test$184:
-	; parameter int4$108#, offset 276
+	; Parameter signedint 108 276
 	mov dword [rbp + 276], 108
 
  string_test$185:
-	; parameter int4$20#, offset 280
+	; Parameter signedint 20 280
 	mov dword [rbp + 280], 20
 
  string_test$186:
-	; call function noellipse-noellipse memchr
+	; Call memchr 244 0
 	mov qword [rbp + 244], string_test$187
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp memchr
 
  string_test$187:
-	; post call
+	; PostCall 244
 
  string_test$188:
-	; £temporary3183 = return_value
+	; GetReturnValue £temporary3183
 
  string_test$189:
-	; p = £temporary3183
+	; Assign p £temporary3183
 	mov [rbp + 236], rbx
 
  string_test$190:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$191:
-	; parameter string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A#, offset 268
+	; Parameter pointer "memchr(s, 'l', SIZE * sizeof(char)) = %i\n" 268
 	mov qword [rbp + 268], string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A#
 
  string_test$192:
-	; if p == int8$0# goto 197
+	; Equal 197 p 0
 	cmp qword [rbp + 236], 0
 	je string_test$197
 
  string_test$193:
-	; £temporary3186 = p - s
+	; BinarySubtract £temporary3186 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$194:
-	; £temporary3187 = int_to_int £temporary3186 (Pointer -> SignedInt)
+	; IntegralToIntegral £temporary3187 £temporary3186
 
  string_test$195:
-	; £temporary3188 = £temporary3187
+	; Assign £temporary3188 £temporary3187
 
  string_test$196:
-	; goto 198
+	; Goto 198
 	jmp string_test$198
 
  string_test$197:
-	; £temporary3188 = int4$minus1#
+	; Assign £temporary3188 -1
 	mov eax, -1
 
  string_test$198:
-	; parameter £temporary3188, offset 276
+	; Parameter signedint £temporary3188 276
 	mov [rbp + 276], eax
 
  string_test$199:
-	; call function noellipse-ellipse printf, extra 4
+	; Call printf 244 4
 	mov qword [rbp + 244], string_test$200
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -1019,78 +1019,78 @@ section .text
 	jmp printf
 
  string_test$200:
-	; post call
+	; PostCall 244
 
  string_test$201:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$202:
-	; parameter s, offset 268
+	; Parameter pointer s 268
 	mov rax, [rbp + 28]
 	mov [rbp + 268], rax
 
  string_test$203:
-	; parameter int4$120#, offset 276
+	; Parameter signedint 120 276
 	mov dword [rbp + 276], 120
 
  string_test$204:
-	; parameter int4$20#, offset 280
+	; Parameter signedint 20 280
 	mov dword [rbp + 280], 20
 
  string_test$205:
-	; call function noellipse-noellipse memchr
+	; Call memchr 244 0
 	mov qword [rbp + 244], string_test$206
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp memchr
 
  string_test$206:
-	; post call
+	; PostCall 244
 
  string_test$207:
-	; £temporary3190 = return_value
+	; GetReturnValue £temporary3190
 
  string_test$208:
-	; p = £temporary3190
+	; Assign p £temporary3190
 	mov [rbp + 236], rbx
 
  string_test$209:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$210:
-	; parameter string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A#, offset 268
+	; Parameter pointer "memchr(s, 'x', SIZE * sizeof(char)) = %i\n" 268
 	mov qword [rbp + 268], string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A#
 
  string_test$211:
-	; if p == int8$0# goto 216
+	; Equal 216 p 0
 	cmp qword [rbp + 236], 0
 	je string_test$216
 
  string_test$212:
-	; £temporary3193 = p - s
+	; BinarySubtract £temporary3193 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$213:
-	; £temporary3194 = int_to_int £temporary3193 (Pointer -> SignedInt)
+	; IntegralToIntegral £temporary3194 £temporary3193
 
  string_test$214:
-	; £temporary3195 = £temporary3194
+	; Assign £temporary3195 £temporary3194
 
  string_test$215:
-	; goto 217
+	; Goto 217
 	jmp string_test$217
 
  string_test$216:
-	; £temporary3195 = int4$minus1#
+	; Assign £temporary3195 -1
 	mov eax, -1
 
  string_test$217:
-	; parameter £temporary3195, offset 276
+	; Parameter signedint £temporary3195 276
 	mov [rbp + 276], eax
 
  string_test$218:
-	; call function noellipse-ellipse printf, extra 4
+	; Call printf 244 4
 	mov qword [rbp + 244], string_test$219
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -1099,51 +1099,51 @@ section .text
 	jmp printf
 
  string_test$219:
-	; post call
+	; PostCall 244
 
  string_test$220:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$221:
-	; parameter string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A#, offset 268
+	; Parameter pointer "memcmp(s, t, SIZE * sizeof(char)) = %i\n" 268
 	mov qword [rbp + 268], string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A#
 
  string_test$222:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$223:
-	; parameter s, offset 300
+	; Parameter pointer s 300
 	mov rax, [rbp + 28]
 	mov [rbp + 300], rax
 
  string_test$224:
-	; parameter t, offset 308
+	; Parameter pointer t 308
 	mov [rbp + 308], rbp
 	add qword [rbp + 308], 36
 
  string_test$225:
-	; parameter int4$20#, offset 316
+	; Parameter signedint 20 316
 	mov dword [rbp + 316], 20
 
  string_test$226:
-	; call function noellipse-noellipse memcmp
+	; Call memcmp 276 0
 	mov qword [rbp + 276], string_test$227
 	mov [rbp + 284], rbp
 	add rbp, 276
 	jmp memcmp
 
  string_test$227:
-	; post call
+	; PostCall 276
 
  string_test$228:
-	; £temporary3197 = return_value
+	; GetReturnValue £temporary3197
 
  string_test$229:
-	; parameter £temporary3197, offset 276
+	; Parameter signedint £temporary3197 276
 	mov [rbp + 276], ebx
 
  string_test$230:
-	; call function noellipse-ellipse printf, extra 4
+	; Call printf 244 4
 	mov qword [rbp + 244], string_test$231
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -1152,46 +1152,46 @@ section .text
 	jmp printf
 
  string_test$231:
-	; post call
+	; PostCall 244
 
  string_test$232:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$233:
-	; parameter string_strspn28s2C2022Hello2C20C2229203D2025i0A#, offset 268
+	; Parameter pointer "strspn(s, "Hello, C") = %i\n" 268
 	mov qword [rbp + 268], string_strspn28s2C2022Hello2C20C2229203D2025i0A#
 
  string_test$234:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$235:
-	; parameter s, offset 300
+	; Parameter pointer s 300
 	mov rax, [rbp + 28]
 	mov [rbp + 300], rax
 
  string_test$236:
-	; parameter string_Hello2C20C#, offset 308
+	; Parameter pointer "Hello, C" 308
 	mov qword [rbp + 308], string_Hello2C20C#
 
  string_test$237:
-	; call function noellipse-noellipse strspn
+	; Call strspn 276 0
 	mov qword [rbp + 276], string_test$238
 	mov [rbp + 284], rbp
 	add rbp, 276
 	jmp strspn
 
  string_test$238:
-	; post call
+	; PostCall 276
 
  string_test$239:
-	; £temporary3199 = return_value
+	; GetReturnValue £temporary3199
 
  string_test$240:
-	; parameter £temporary3199, offset 276
+	; Parameter signedint £temporary3199 276
 	mov [rbp + 276], ebx
 
  string_test$241:
-	; call function noellipse-ellipse printf, extra 4
+	; Call printf 244 4
 	mov qword [rbp + 244], string_test$242
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -1200,46 +1200,46 @@ section .text
 	jmp printf
 
  string_test$242:
-	; post call
+	; PostCall 244
 
  string_test$243:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$244:
-	; parameter string_strcspn28s2C2022Hello2C20C2229203D2025i0A#, offset 268
+	; Parameter pointer "strcspn(s, "Hello, C") = %i\n" 268
 	mov qword [rbp + 268], string_strcspn28s2C2022Hello2C20C2229203D2025i0A#
 
  string_test$245:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$246:
-	; parameter s, offset 300
+	; Parameter pointer s 300
 	mov rax, [rbp + 28]
 	mov [rbp + 300], rax
 
  string_test$247:
-	; parameter string_Hello2C20C#, offset 308
+	; Parameter pointer "Hello, C" 308
 	mov qword [rbp + 308], string_Hello2C20C#
 
  string_test$248:
-	; call function noellipse-noellipse strcspn
+	; Call strcspn 276 0
 	mov qword [rbp + 276], string_test$249
 	mov [rbp + 284], rbp
 	add rbp, 276
 	jmp strcspn
 
  string_test$249:
-	; post call
+	; PostCall 276
 
  string_test$250:
-	; £temporary3201 = return_value
+	; GetReturnValue £temporary3201
 
  string_test$251:
-	; parameter £temporary3201, offset 276
+	; Parameter signedint £temporary3201 276
 	mov [rbp + 276], ebx
 
  string_test$252:
-	; call function noellipse-ellipse printf, extra 4
+	; Call printf 244 4
 	mov qword [rbp + 244], string_test$253
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -1248,42 +1248,42 @@ section .text
 	jmp printf
 
  string_test$253:
-	; post call
+	; PostCall 244
 
  string_test$254:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$255:
-	; parameter string_strerror28errno29203D202225s220A#, offset 268
+	; Parameter pointer "strerror(errno) = "%s"\n" 268
 	mov qword [rbp + 268], string_strerror28errno29203D202225s220A#
 
  string_test$256:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$257:
-	; parameter errno, offset 300
+	; Parameter signedint errno 300
 	mov eax, [errno]
 	mov [rbp + 300], eax
 
  string_test$258:
-	; call function noellipse-noellipse strerror
+	; Call strerror 276 0
 	mov qword [rbp + 276], string_test$259
 	mov [rbp + 284], rbp
 	add rbp, 276
 	jmp strerror
 
  string_test$259:
-	; post call
+	; PostCall 276
 
  string_test$260:
-	; £temporary3203 = return_value
+	; GetReturnValue £temporary3203
 
  string_test$261:
-	; parameter £temporary3203, offset 276
+	; Parameter pointer £temporary3203 276
 	mov [rbp + 276], rbx
 
  string_test$262:
-	; call function noellipse-ellipse printf, extra 8
+	; Call printf 244 8
 	mov qword [rbp + 244], string_test$263
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -1292,56 +1292,56 @@ section .text
 	jmp printf
 
  string_test$263:
-	; post call
+	; PostCall 244
 
  string_test$264:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$265:
-	; parameter s, offset 268
+	; Parameter pointer s 268
 	mov rax, [rbp + 28]
 	mov [rbp + 268], rax
 
  string_test$266:
-	; parameter string_2C#, offset 276
+	; Parameter pointer "," 276
 	mov qword [rbp + 276], string_2C#
 
  string_test$267:
-	; call function noellipse-noellipse strtok
+	; Call strtok 244 0
 	mov qword [rbp + 244], string_test$268
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strtok
 
  string_test$268:
-	; post call
+	; PostCall 244
 
  string_test$269:
-	; £temporary3205 = return_value
+	; GetReturnValue £temporary3205
 
  string_test$270:
-	; p = £temporary3205
+	; Assign p £temporary3205
 	mov [rbp + 236], rbx
 
  string_test$271:
-	; if p == int8$0# goto 285
+	; Equal 285 p 0
 	cmp qword [rbp + 236], 0
 	je string_test$285
 
  string_test$272:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$273:
-	; parameter string_strtok28s2C20222C2229203D202225s220A#, offset 268
+	; Parameter pointer "strtok(s, ",") = "%s"\n" 268
 	mov qword [rbp + 268], string_strtok28s2C20222C2229203D202225s220A#
 
  string_test$274:
-	; parameter p, offset 276
+	; Parameter pointer p 276
 	mov rax, [rbp + 236]
 	mov [rbp + 276], rax
 
  string_test$275:
-	; call function noellipse-ellipse printf, extra 8
+	; Call printf 244 8
 	mov qword [rbp + 244], string_test$276
 	mov [rbp + 252], rbp
 	add rbp, 244
@@ -1350,46 +1350,46 @@ section .text
 	jmp printf
 
  string_test$276:
-	; post call
+	; PostCall 244
 
  string_test$277:
-	; call header integral zero 0 stack zero 0
+	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$278:
-	; parameter int8$0#, offset 268
+	; Parameter pointer 0 268
 	mov qword [rbp + 268], 0
 
  string_test$279:
-	; parameter string_2C#, offset 276
+	; Parameter pointer "," 276
 	mov qword [rbp + 276], string_2C#
 
  string_test$280:
-	; call function noellipse-noellipse strtok
+	; Call strtok 244 0
 	mov qword [rbp + 244], string_test$281
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strtok
 
  string_test$281:
-	; post call
+	; PostCall 244
 
  string_test$282:
-	; £temporary3208 = return_value
+	; GetReturnValue £temporary3208
 
  string_test$283:
-	; p = £temporary3208
+	; Assign p £temporary3208
 	mov [rbp + 236], rbx
 
  string_test$284:
-	; goto 271
+	; Goto 271
 	jmp string_test$271
 
  string_test$285:
-	; return
+	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  string_test$286:
-	; function end string_test
+	; FunctionEnd string_test

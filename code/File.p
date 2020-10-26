@@ -1,14 +1,14 @@
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-   
-   
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-   
-   
 
-    
-    
-    
+
+
+
+
+
 
 extern double exp ( double value ) ;
 extern double log ( double value ) ;
@@ -43,13 +43,12 @@ extern double fabs ( double value ) ;
 extern double modf ( double value , double * integralPart ) ;
 extern double fmod ( double num , double denum ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-   
-   
+
+
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -65,51 +64,48 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
-   
-   
-
-     
-                         
-                    
-               
-      
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
 
-          
 
-    
-    
 
-    
-    
-    
 
-  
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-   
-   
 
-    
-    
 
-    
 
-    
+
+
+
+
+
+
 
 typedef unsigned int UINT ;
 
@@ -128,22 +124,22 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-   
-    
-    
-    
-    
 
-    
 
-    
-    
-    
-    
-    
-  
 
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -176,32 +172,30 @@ int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-   
-   
 
-    
-    
+
+
+
+
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
-   
-   
 
-    
-    
 
-    
+
+
+
+
+
 
 extern int g_inStatus , g_inChars ;
 extern void * g_inDevice ;
@@ -220,16 +214,15 @@ int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
 int sscanf ( char * inString , char * format , ... ) ;
 int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-   
-   
 
-    
-    
+
+
+
+
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -260,18 +253,16 @@ int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
 int sprintf ( char * outString , char * format , ... ) ;
 int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-       
 
-  
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\File.c,0$
-       
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\File.c,1$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ErrNo.h,1$
-   
-   
+
+
 
 
 
@@ -332,20 +323,19 @@ FTELL , FSIZE , FREMOVE , FRENAME , FTEMPNAME , FTEMPFILE };
 
 extern int errno ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\File.c,1$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\File.c,2$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Locale.h,1$
-   
-   
 
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
 
 struct lconv {
 int summerTimeZone , winterTimeZone ;
@@ -362,15 +352,14 @@ extern char * enMessageList [];
 extern char * setlocale ( int flag , char * name ) ;
 extern struct lconv * localeconv ( void ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\File.c,2$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\File.c,3$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,1$
-   
-   
 
-    
+
+
+
 
 extern char * strcpy ( char * target , const char * source ) ;
 extern char * strncpy ( char * target , const char * source , int size ) ;
@@ -393,10 +382,9 @@ extern int memcmp ( const void * left , const void * right , int size ) ;
 extern void * memchr ( const void * block , int i , int size ) ;
 extern void * memset ( void * block , int i , int size ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\File.c,3$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\File.c,4$
 
 FILE g_fileArray [ 20 ] = {{ 1 , 0 } , { 1 , 1 } , { 1 , 2 }};
 FILE * stdin = & g_fileArray [ 0 ] , * stdout = & g_fileArray [ 1 ] , * stderr = & g_fileArray [ 2 ];
@@ -405,16 +393,16 @@ enum { EEXIST , ENOENT , EACCES };
 enum { SEEK_SET = 0 , SEEK_CUR = 1 , SEEK_END = 2 };
 enum { READ = 0x40 , WRITE = 0x41 , READ_WRITE = 0x42 };
 
-                           
 
-    
 
-                        
+
+
+
 
 static int filecreate ( const char * name ) {
 
-   
- register_ah = 0x3Cs ;
+
+register_ah = 0x3Cs ;
 register_cx = 0x00 ;
 register_dx = name ;
 interrupt ( 0x21s ) ;
@@ -426,34 +414,34 @@ return -1 ;
 }
 
 return handle ;
-  
 
-   
-    
-       
-   
-   
-  
-  
- }
+
+
+
+
+
+
+
+
+}
 
 int fileexists ( const char * name ) {
-   
- register_ah = 0x43s ;
+
+register_ah = 0x43s ;
 register_al = 0x00s ;
 register_dx = name ;
 interrupt ( 0x21s ) ;
 return ! carry_flag ;
-  
 
-   
-   
-  
- }
+
+
+
+
+}
 
 static int fileopen ( const char * name , unsigned short mode ) {
-   
- register_ah = 0x3Ds ;
+
+register_ah = 0x3Ds ;
 register_al = mode ;
 register_dx = name ;
 interrupt ( 0x21s ) ;
@@ -465,16 +453,16 @@ return -1 ;
 else {
 return register_ax ;
 }
-  
 
-   
-    
-       
-       
-   
-  
-  
- }
+
+
+
+
+
+
+
+
+}
 
 FILE * fopen ( const char * name , const char * mode ) {
 
@@ -495,13 +483,13 @@ FILE * freopen ( const char * name , const char * mode , FILE * stream ) {
 
 int handle = -1 ;
 
-if ( strcmp ( mode , "r" ) == 0 ) {
+if ( strcmp ( mode , "\162" ) == 0 ) {
 handle = fileopen ( name , ( unsigned short ) READ ) ;
 }
-else if ( strcmp ( mode , "w" ) == 0 ) {
+else if ( strcmp ( mode , "\167" ) == 0 ) {
 handle = filecreate ( name ) ;
 }
-else if ( strcmp ( mode , "a" ) == 0 ) {
+else if ( strcmp ( mode , "\141" ) == 0 ) {
 handle = fileopen ( name , ( unsigned short ) WRITE ) ;
 
 if ( handle != -1 ) {
@@ -511,10 +499,10 @@ else {
 handle = filecreate ( name ) ;
 }
 }
-else if ( strcmp ( mode , "r+" ) == 0 ) {
+else if ( strcmp ( mode , "\162\053" ) == 0 ) {
 handle = fileopen ( name , ( unsigned short ) READ_WRITE ) ;
 }
-else if ( strcmp ( mode , "w+" ) == 0 ) {
+else if ( strcmp ( mode , "\167\053" ) == 0 ) {
 if ( fileexists ( name ) ) {
 handle = fileopen ( name , ( unsigned short ) READ_WRITE ) ;
 }
@@ -522,7 +510,7 @@ else {
 handle = filecreate ( name ) ;
 }
 }
-else if ( strcmp ( mode , "a+" ) == 0 ) {
+else if ( strcmp ( mode , "\141\053" ) == 0 ) {
 handle = fileopen ( name , ( unsigned short ) READ_WRITE ) ;
 
 if ( handle != -1 ) {
@@ -570,8 +558,8 @@ return 0 ;
 
 int fclose ( FILE * stream ) {
 if ( stream != ( ( void * ) 0 ) ) {
-   
- register_ah = 0x3Es ;
+
+register_ah = 0x3Es ;
 register_bx = stream -> handle ;
 interrupt ( 0x21s ) ;
 
@@ -586,15 +574,15 @@ remove ( stream -> name ) ;
 
 stream -> open = 0 ;
 return 0 ;
-  
 
-   
-    
-         
-   
-  
-  
- }
+
+
+
+
+
+
+
+}
 else {
 int index ;
 
@@ -611,8 +599,8 @@ return 0 ;
 }
 
 int remove ( const char * name ) {
-   
- register_ah = 0x41s ;
+
+register_ah = 0x41s ;
 register_cl = 0s ;
 register_dx = name ;
 interrupt ( 0x21s ) ;
@@ -623,19 +611,19 @@ return -1 ;
 }
 
 return 0 ;
-  
 
-   
-    
-       
-   
-  
-  
- }
+
+
+
+
+
+
+
+}
 
 int rename ( const char * oldName , const char * newName ) {
-   
- register_ah = 0x56s ;
+
+register_ah = 0x56s ;
 register_cl = 0s ;
 register_dx = oldName ;
 register_di = newName ;
@@ -645,14 +633,14 @@ if ( carry_flag ) {
 errno = FRENAME ;
 return -1 ;
 }
-  
 
-   
-    
-       
-       
-   
-  
+
+
+
+
+
+
+
 
 return 0 ;
 }
@@ -824,7 +812,7 @@ void setbuf ( FILE * , char * ) {
 
 
 int fgetc ( FILE * stream ) {
-char c = '\0' ;
+char c = '\000' ;
 
 if ( fread ( & c , sizeof ( char ) , 1 , stream ) > 0 ) {
 return ( int ) c ;
@@ -835,23 +823,23 @@ return -1 ;
 
 char * fgets ( char * text , int size , FILE * stream ) {
 int count = 0 ;
-char prevChar = '\0' ;
+char prevChar = '\000' ;
 
 while ( ( count < ( size - 1 ) ) ) {
-char currChar = '\0' ;
-fscanf ( stream , "%c" , & currChar ) ;
+char currChar = '\000' ;
+fscanf ( stream , "\045\143" , & currChar ) ;
 
-if ( ( prevChar == '\r' ) && ( currChar == '\n' ) ) {
-text [ count ] = '\0' ;
+if ( ( prevChar == '\015' ) && ( currChar == '\012' ) ) {
+text [ count ] = '\000' ;
 break ;
 }
 
 if ( currChar == -1 ) {
-text [ count ] = '\0' ;
+text [ count ] = '\000' ;
 break ;
 }
 
-if ( ( currChar != '\r' ) && ( currChar != '\n' ) ) {
+if ( ( currChar != '\015' ) && ( currChar != '\012' ) ) {
 text [ count ++] = currChar ;
 }
 
@@ -882,7 +870,7 @@ if ( fgets ( s , -1 , stdin ) != ( ( void * ) 0 ) ) {
 int size = strlen ( s ) ;
 
 if ( size > 0 ) {
-s [ size - 1 ] = '\0' ;
+s [ size - 1 ] = '\000' ;
 }
 
 return s ;
@@ -900,7 +888,7 @@ return ( ( void * ) 0 ) ;
 
 int puts ( const char * s ) {
 if ( fputs ( s , stdout ) != 0 ) {
-return fputc ( '\n' , stdout ) ;
+return fputc ( '\012' , stdout ) ;
 }
 
 return -1 ;
@@ -924,8 +912,8 @@ int fread ( void * ptr , int size , int nobj , FILE * stream ) {
 
 
 
-   
- register_bx = stream -> handle ;
+
+register_bx = stream -> handle ;
 register_cx = size * nobj ;
 register_ah = 0x3Fs ;
 register_dx = ptr ;
@@ -938,21 +926,21 @@ return 0 ;
 else {
 return register_ax ;
 }
-  
 
-   
-    
-         
-       
-           
-   
-  
-  
- }
+
+
+
+
+
+
+
+
+
+}
 
 int fwrite ( const void * ptr , int size , int nobj , FILE * stream ) {
-   
- register_bx = stream -> handle ;
+
+register_bx = stream -> handle ;
 register_cx = size * nobj ;
 register_ah = 0x40s ;
 register_dx = ptr ;
@@ -965,22 +953,22 @@ return 0 ;
 else {
 return register_ax ;
 }
-  
 
 
-   
-    
-         
-       
-           
-   
-  
-  
- }
+
+
+
+
+
+
+
+
+
+}
 
 int fseek ( FILE * stream , int offset , int origin ) {
-   
- register_al = ( short ) origin ;
+
+register_al = ( short ) origin ;
 register_ah = 0x42s ;
 register_bx = stream -> handle ;
 register_cx = 0 ;
@@ -995,17 +983,17 @@ else {
 stream -> errno = FSEEK ;
 return -1 ;
 }
-  
 
-   
-    
-         
-       
-       
-   
-  
-  
- }
+
+
+
+
+
+
+
+
+
+}
 
 int ftell ( FILE * stream ) {
 return fseek ( stream , 0 , SEEK_CUR ) ;
@@ -1048,5 +1036,6 @@ return stream -> errno ;
 
 
 void perror ( const char * s ) {
-printf ( "%s: %s.\n" , s , strerror ( errno ) ) ;
+printf ( "\045\163\072\040\045\163\056\012" , s , strerror ( errno ) ) ;
 }
+

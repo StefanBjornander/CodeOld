@@ -30,12 +30,12 @@ assert_testX$6:	; parameter string_25i#, offset 6
 23:	
 
 assert_testX$7:	; £temporary3799 = &n
-24:		mov t2464, bp
-25:		add t2464, 6
+24:		mov t2466, bp
+25:		add t2466, 6
 27:	
 
 assert_testX$8:	; parameter £temporary3799, offset 8
-28:		mov [bp + 16], t2464
+28:		mov [bp + 16], t2466
 30:	
 
 assert_testX$9:	; call function noellipse-ellipse scanf, extra 0
@@ -59,8 +59,8 @@ assert_testX$12:	; call header integral zero 0 stack zero 0
 46:	
 
 assert_testX$13:	; parameter stderr, offset 6
-47:		mov a2465, [stderr]
-48:		mov [bp + 14], a2465
+47:		mov a2467, [stderr]
+48:		mov [bp + 14], a2467
 50:	
 
 assert_testX$14:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -108,8 +108,8 @@ assert_testX$23:	; call header integral zero 0 stack zero 0
 84:	
 
 assert_testX$24:	; parameter n, offset 6
-85:		mov a2466, [bp + 6]
-86:		mov [bp + 14], a2466
+85:		mov a2468, [bp + 6]
+86:		mov [bp + 14], a2468
 88:	
 
 assert_testX$25:	; call function noellipse-noellipse assert_test2
@@ -123,10 +123,10 @@ assert_testX$26:	; post call
 96:	
 
 assert_testX$27:	; return
-97:		mov t2467, [bp]
+97:		mov t2469, [bp]
 98:		mov di, [bp + 4]
 99:		mov bp, [bp + 2]
-100:		jmp t2467
+100:		jmp t2469
 102:	
 
 assert_testX$28:	; function end assert_testX
@@ -141,8 +141,8 @@ assert_test2X$1:	; call header integral zero 0 stack zero 0
 7:	
 
 assert_test2X$2:	; parameter stderr, offset 6
-8:		mov a2468, [stderr]
-9:		mov [bp + 14], a2468
+8:		mov a2470, [stderr]
+9:		mov [bp + 14], a2470
 11:	
 
 assert_test2X$3:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
@@ -187,10 +187,10 @@ assert_test2X$11:	; post call
 43:	
 
 assert_test2X$12:	; return
-44:		mov t2469, [bp]
+44:		mov t2471, [bp]
 45:		mov di, [bp + 4]
 46:		mov bp, [bp + 2]
-47:		jmp t2469
+47:		jmp t2471
 49:	
 
 assert_test2X$13:	; function end assert_test2X

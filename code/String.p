@@ -1,6 +1,6 @@
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ErrNo.h,1$
-   
-   
+
+
 
 
 
@@ -61,21 +61,20 @@ FTELL , FSIZE , FREMOVE , FRENAME , FTEMPNAME , FTEMPFILE };
 
 extern int errno ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.c,0$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.c,1$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-   
-   
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-   
-   
 
-    
-    
-    
+
+
+
+
+
 
 extern double exp ( double value ) ;
 extern double log ( double value ) ;
@@ -110,13 +109,12 @@ extern double fabs ( double value ) ;
 extern double modf ( double value , double * integralPart ) ;
 extern double fmod ( double num , double denum ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-   
-   
+
+
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -132,51 +130,48 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
-   
-   
-
-     
-                         
-                    
-               
-      
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
 
-          
 
-    
-    
 
-    
-    
-    
 
-  
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-   
-   
 
-    
-    
 
-    
 
-    
+
+
+
+
+
+
 
 typedef unsigned int UINT ;
 
@@ -195,22 +190,22 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-   
-    
-    
-    
-    
 
-    
 
-    
-    
-    
-    
-    
-  
 
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -243,32 +238,30 @@ int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-   
-   
 
-    
-    
+
+
+
+
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
-   
-   
 
-    
-    
 
-    
+
+
+
+
+
 
 extern int g_inStatus , g_inChars ;
 extern void * g_inDevice ;
@@ -287,16 +280,15 @@ int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
 int sscanf ( char * inString , char * format , ... ) ;
 int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-   
-   
 
-    
-    
+
+
+
+
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -327,37 +319,34 @@ int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
 int sprintf ( char * outString , char * format , ... ) ;
 int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-       
 
-  
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.c,1$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
-   
-   
 
-          
-
-    
-    
-
-    
-    
-    
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.c,2$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,1$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.c,3$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,1$
+
+
+
+
 
 extern char * strcpy ( char * target , const char * source ) ;
 extern char * strncpy ( char * target , const char * source , int size ) ;
@@ -380,20 +369,19 @@ extern int memcmp ( const void * left , const void * right , int size ) ;
 extern void * memchr ( const void * block , int i , int size ) ;
 extern void * memset ( void * block , int i , int size ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.c,3$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.c,4$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Locale.h,1$
-   
-   
 
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
 
 struct lconv {
 int summerTimeZone , winterTimeZone ;
@@ -410,31 +398,30 @@ extern char * enMessageList [];
 extern char * setlocale ( int flag , char * name ) ;
 extern struct lconv * localeconv ( void ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.c,4$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.c,5$
 
 char * strcpy ( char * target , const char * source ) {
 int index ;
 
-for ( index = 0 ; source [ index ] != '\0' ; ++ index ) {
+for ( index = 0 ; source [ index ] != '\000' ; ++ index ) {
 target [ index ] = source [ index ];
 }
 
-target [ index ] = '\0' ;
+target [ index ] = '\000' ;
 return target ;
 }
 
 char * strncpy ( char * target , const char * source , int size ) {
 int index ;
 
-for ( index = 0 ; ( index < size ) && ( source [ index ] != '\0' ) ; ++ index ) {
+for ( index = 0 ; ( index < size ) && ( source [ index ] != '\000' ) ; ++ index ) {
 target [ index ] = source [ index ];
 }
 
 for ( ; index < size ; ++ index ) {
-target [ index ] = '\0' ;
+target [ index ] = '\000' ;
 }
 
 return target ;
@@ -444,11 +431,11 @@ char * strcat ( char * target , const char * source ) {
 int index ;
 int targetLength = strlen ( target ) ;
 
-for ( index = 0 ; source [ index ] != '\0' ; ++ index ) {
+for ( index = 0 ; source [ index ] != '\000' ; ++ index ) {
 target [ targetLength + index ] = source [ index ];
 }
 
-target [ targetLength + index ] = '\0' ;
+target [ targetLength + index ] = '\000' ;
 return target ;
 }
 
@@ -456,11 +443,11 @@ char * strncat ( char * target , const char * source , int size ) {
 int index ;
 int targetLength = strlen ( target ) ;
 
-for ( index = 0 ; ( index < ( size - 1 ) ) && ( source [ index ] != '\0' ) ; ++ index ) {
+for ( index = 0 ; ( index < ( size - 1 ) ) && ( source [ index ] != '\000' ) ; ++ index ) {
 target [ targetLength + index ] = source [ index ];
 }
 
-target [ targetLength + size - 1 ] = '\0' ;
+target [ targetLength + size - 1 ] = '\000' ;
 return target ;
 }
 
@@ -468,13 +455,13 @@ int strcmp ( const char * left , const char * right ) {
 int index ;
 
 for ( index = 0 ; 1 ; ++ index ) {
-if ( ( left [ index ] == '\0' ) && ( right [ index ] == '\0' ) ) {
+if ( ( left [ index ] == '\000' ) && ( right [ index ] == '\000' ) ) {
 return 0 ;
 }
-else if ( left [ index ] == '\0' ) {
+else if ( left [ index ] == '\000' ) {
 return -1 ;
 }
-else if ( right [ index ] == '\0' ) {
+else if ( right [ index ] == '\000' ) {
 return 1 ;
 }
 else if ( left [ index ] < right [ index ] ) {
@@ -492,13 +479,13 @@ int strncmp ( const char * left , const char * right , int size ) {
 int index ;
 
 for ( index = 0 ; index < size ; ++ index ) {
-if ( ( left [ index ] == '\0' ) && ( right [ index ] == '\0' ) ) {
+if ( ( left [ index ] == '\000' ) && ( right [ index ] == '\000' ) ) {
 return 0 ;
 }
-else if ( left [ index ] == '\0' ) {
+else if ( left [ index ] == '\000' ) {
 return -1 ;
 }
-else if ( right [ index ] == '\0' ) {
+else if ( right [ index ] == '\000' ) {
 return 1 ;
 }
 else if ( left [ index ] < right [ index ] ) {
@@ -516,7 +503,7 @@ char * strchr ( const char * text , int i ) {
 int index ;
 char c = ( char ) i ;
 
-for ( index = 0 ; text [ index ] != '\0' ; ++ index ) {
+for ( index = 0 ; text [ index ] != '\000' ; ++ index ) {
 if ( text [ index ] == c ) {
 return & text [ index ];
 }
@@ -530,7 +517,7 @@ int index ;
 char * result = ( ( void * ) 0 ) ;
 char c = ( char ) i ;
 
-for ( index = 0 ; text [ index ] != '\0' ; ++ index ) {
+for ( index = 0 ; text [ index ] != '\000' ; ++ index ) {
 if ( text [ index ] == c ) {
 result = & text [ index ];
 }
@@ -542,7 +529,7 @@ return result ;
 int strspn ( const char * mainString , const char * charSet ) {
 int index ;
 
-for ( index = 0 ; mainString [ index ] != '\0' ; ++ index ) {
+for ( index = 0 ; mainString [ index ] != '\000' ; ++ index ) {
 if ( strchr ( charSet , mainString [ index ] ) == ( ( void * ) 0 ) ) {
 return index ;
 }
@@ -554,7 +541,7 @@ return -1 ;
 int strcspn ( const char * mainString , const char * charSet ) {
 int index ;
 
-for ( index = 0 ; mainString [ index ] != '\0' ; ++ index ) {
+for ( index = 0 ; mainString [ index ] != '\000' ; ++ index ) {
 if ( strchr ( charSet , mainString [ index ] ) != ( ( void * ) 0 ) ) {
 return index ;
 }
@@ -566,7 +553,7 @@ return -1 ;
 char * strpbrk ( const char * mainString , const char * charSet ) {
 int index ;
 
-for ( index = 0 ; mainString [ index ] != '\0' ; ++ index ) {
+for ( index = 0 ; mainString [ index ] != '\000' ; ++ index ) {
 if ( strchr ( charSet , mainString [ index ] ) != ( ( void * ) 0 ) ) {
 return & mainString [ index ];
 }
@@ -578,7 +565,7 @@ return ( ( void * ) 0 ) ;
 char * strstr ( const char * mainString , const char * subString ) {
 int index ;
 
-for ( index = 0 ; mainString [ index ] != '\0' ; ++ index ) {
+for ( index = 0 ; mainString [ index ] != '\000' ; ++ index ) {
 if ( strcmp ( mainString + index , subString ) == 0 ) {
 return & mainString [ index ];
 }
@@ -590,7 +577,7 @@ return ( ( void * ) 0 ) ;
 int strlen ( const char * string ) {
 int index ;
 
-for ( index = 0 ; string [ index ] != '\0' ; ++ index ) {
+for ( index = 0 ; string [ index ] != '\000' ; ++ index ) {
 
 }
 
@@ -663,13 +650,13 @@ int index ;
 char * tokenStart ;
 
 if ( string != ( ( void * ) 0 ) ) {
-if ( string [ 0 ] == '\0' ) {
+if ( string [ 0 ] == '\000' ) {
 return ( ( void * ) 0 ) ;
 }
 
-for ( index = 0 ; string [ index ] != '\0' ; ++ index ) {
+for ( index = 0 ; string [ index ] != '\000' ; ++ index ) {
 if ( strchr ( charSet , string [ index ] ) != ( ( void * ) 0 ) ) {
-string [ index ] = '\0' ;
+string [ index ] = '\000' ;
 token = & string [ index + 1 ];
 return string ;
 }
@@ -682,14 +669,14 @@ else if ( token == ( ( void * ) 0 ) ) {
 return ( ( void * ) 0 ) ;
 }
 else {
-if ( token [ 0 ] == '\0' ) {
+if ( token [ 0 ] == '\000' ) {
 return ( ( void * ) 0 ) ;
 }
 
-for ( index = 0 ; token [ index ] != '\0' ; ++ index ) {
+for ( index = 0 ; token [ index ] != '\000' ; ++ index ) {
 if ( strchr ( charSet , token [ index ] ) != ( ( void * ) 0 ) ) {
 char * tokenStart2 = token ;
-token [ index ] = '\0' ;
+token [ index ] = '\000' ;
 token = & token [ index + 1 ];
 return tokenStart2 ;
 }

@@ -3365,11 +3365,11 @@ x5418:	jmp ax	; 2: -1 -32
 isupper$26:	; function end isupper
 
 localeconv:	; if g_currStructPtr == 0 goto 4
-x5420:	cmp word [@22$g_currStructPtr], 0	; 5: -125 62 74 21 0
+x5420:	cmp word [@23$g_currStructPtr], 0	; 5: -125 62 74 21 0
 x5425:	je localeconv$4	; 2: 116 9
 
 localeconv$1:	; £temporary520 -> g_currStructPtr = *g_currStructPtr, offset 2
-x5427:	mov si, [@22$g_currStructPtr]	; 4: -117 54 74 21
+x5427:	mov si, [@23$g_currStructPtr]	; 4: -117 54 74 21
 
 localeconv$2:	; £temporary524 = £temporary520 -> g_currStructPtr
 x5431:	mov bx, [si + 2]	; 3: -117 92 2
@@ -3390,34 +3390,34 @@ x5448:	jmp ax	; 2: -1 -32
 
 localeconv$7:	; function end localeconv
 
-@22$g_currStructPtr:
-x5450:	dw @20$sArray	; 2: 76 21
+@23$g_currStructPtr:
+x5450:	dw @21$sArray	; 2: 76 21
 
-@20$sArray:
+@21$sArray:
 x5452:	dw string_# ; 2: 92 21
-x5454:	dw @19$sw_EN_utf8	; 2: 93 21
+x5454:	dw @20$sw_EN_utf8	; 2: 93 21
 x5456:	dw string_C# ; 2: 74 24
-x5458:	dw @13$en_US_utf8	; 2: 76 24
+x5458:	dw @14$en_US_utf8	; 2: 76 24
 x5460:	dw string_US# ; 2: -68 26
-x5462:	dw @13$en_US_utf8	; 2: 76 24
+x5462:	dw @14$en_US_utf8	; 2: 76 24
 x5464:	dw string_SE# ; 2: -65 26
-x5466:	dw @19$sw_EN_utf8	; 2: 93 21
+x5466:	dw @20$sw_EN_utf8	; 2: 93 21
 
 string_#:
 x5468:	db 0	; 1: 0
 
-@19$sw_EN_utf8:
+@20$sw_EN_utf8:
 x5469:	dw 1	; 2: 1 0
 x5471:	dw 2	; 2: 2 0
-x5473:	dw @14$swShortDayList ; 2: 111 21
-x5475:	dw @15$swLongDayList ; 2: -103 21
-x5477:	dw @11$enShortMonthList ; 2: -39 21
-x5479:	dw @17$swLongMonthList ; 2: 33 22
+x5473:	dw @15$swShortDayList ; 2: 111 21
+x5475:	dw @16$swLongDayList ; 2: -103 21
+x5477:	dw @12$enShortMonthList ; 2: -39 21
+x5479:	dw @18$swLongMonthList ; 2: 33 22
 x5481:	dw string_abcdefghijklmnopqrstuvwxyz# ; 2: -113 22
 x5483:	dw string_ABCDEFGHIJKLMNOPQRSTUVWXYZ# ; 2: -86 22
-x5485:	dw @18$swMessageList ; 2: -59 22
+x5485:	dw @19$swMessageList ; 2: -59 22
 
-@14$swShortDayList:
+@15$swShortDayList:
 x5487:	dw string_Son# ; 2: 125 21
 x5489:	dw string_Man# ; 2: -127 21
 x5491:	dw string_Tis# ; 2: -123 21
@@ -3447,7 +3447,7 @@ x5521:	db "Fre", 0	; 4: 70 114 101 0
 string_Lor#:
 x5525:	db "Lor", 0	; 4: 76 111 114 0
 
-@15$swLongDayList:
+@16$swLongDayList:
 x5529:	dw string_Sondag# ; 2: -89 21
 x5531:	dw string_Mandag# ; 2: -82 21
 x5533:	dw string_Tisdag# ; 2: -75 21
@@ -3477,7 +3477,7 @@ x5579:	db "Fredag", 0	; 7: 70 114 101 100 97 103 0
 string_Lordag#:
 x5586:	db "Lordag", 0	; 7: 76 111 114 100 97 103 0
 
-@11$enShortMonthList:
+@12$enShortMonthList:
 x5593:	dw string_Jan# ; 2: -15 21
 x5595:	dw string_Feb# ; 2: -11 21
 x5597:	dw string_Mar# ; 2: -7 21
@@ -3527,7 +3527,7 @@ x5657:	db "Nov", 0	; 4: 78 111 118 0
 string_Dec#:
 x5661:	db "Dec", 0	; 4: 68 101 99 0
 
-@17$swLongMonthList:
+@18$swLongMonthList:
 x5665:	dw string_Januari# ; 2: 57 22
 x5667:	dw string_Februari# ; 2: 65 22
 x5669:	dw string_Mars# ; 2: 74 22
@@ -3583,7 +3583,7 @@ x5775:	db "abcdefghijklmnopqrstuvwxyz", 0	; 27: 97 98 99 100 101 102 103 104 105
 string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#:
 x5802:	db "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 0	; 27: 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 0
 
-@18$swMessageList:
+@19$swMessageList:
 x5829:	dw string_inga20fel# ; 2: -21 22
 x5831:	dw string_felaktigt20functionsnummer# ; 2: -12 22
 x5833:	dw string_hittar20ej20filen# ; 2: 14 23
@@ -3664,18 +3664,18 @@ x6194:	db "fel vid namnbyte av fil", 0	; 24: 102 101 108 32 118 105 100 32 110 9
 string_C#:
 x6218:	db "C", 0	; 2: 67 0
 
-@13$en_US_utf8:
+@14$en_US_utf8:
 x6220:	dw -5	; 2: -5 -1
 x6222:	dw -4	; 2: -4 -1
-x6224:	dw @9$enShortDayList ; 2: 94 24
-x6226:	dw @10$enLongDayList ; 2: -120 24
-x6228:	dw @11$enShortMonthList ; 2: -39 21
-x6230:	dw @12$enLongMonthList ; 2: -49 24
+x6224:	dw @10$enShortDayList ; 2: 94 24
+x6226:	dw @11$enLongDayList ; 2: -120 24
+x6228:	dw @12$enShortMonthList ; 2: -39 21
+x6230:	dw @13$enLongMonthList ; 2: -49 24
 x6232:	dw string_abcdefghijklmnopqrstuvwxyz# ; 2: -113 22
 x6234:	dw string_ABCDEFGHIJKLMNOPQRSTUVWXYZ# ; 2: -86 22
 x6236:	dw enMessageList ; 2: 23 25
 
-@9$enShortDayList:
+@10$enShortDayList:
 x6238:	dw string_Sun# ; 2: 108 24
 x6240:	dw string_Mon# ; 2: 112 24
 x6242:	dw string_Tue# ; 2: 116 24
@@ -3705,7 +3705,7 @@ x6272:	db "Fri", 0	; 4: 70 114 105 0
 string_Sat#:
 x6276:	db "Sat", 0	; 4: 83 97 116 0
 
-@10$enLongDayList:
+@11$enLongDayList:
 x6280:	dw string_Sunday# ; 2: -106 24
 x6282:	dw string_Monday# ; 2: -99 24
 x6284:	dw string_Tuesday# ; 2: -92 24
@@ -3735,7 +3735,7 @@ x6335:	db "Friday", 0	; 7: 70 114 105 100 97 121 0
 string_Saturday#:
 x6342:	db "Saturday", 0	; 9: 83 97 116 117 114 100 97 121 0
 
-@12$enLongMonthList:
+@13$enLongMonthList:
 x6351:	dw string_January# ; 2: -25 24
 x6353:	dw string_February# ; 2: -17 24
 x6355:	dw string_March# ; 2: -8 24

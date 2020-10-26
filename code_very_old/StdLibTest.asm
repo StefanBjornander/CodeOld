@@ -24,8 +24,6 @@
 	extern bsearch
 	extern $StackTop
 
-section .text
-
 
 section .text
 

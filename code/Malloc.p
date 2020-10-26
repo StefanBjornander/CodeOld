@@ -1,10 +1,10 @@
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-   
-   
 
-    
-    
-    
+
+
+
+
+
 
 extern double exp ( double value ) ;
 extern double log ( double value ) ;
@@ -39,13 +39,12 @@ extern double fabs ( double value ) ;
 extern double modf ( double value , double * integralPart ) ;
 extern double fmod ( double num , double denum ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,0$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,1$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-   
-   
+
+
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -61,13 +60,12 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,1$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,2$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ErrNo.h,1$
-   
-   
+
+
 
 
 
@@ -128,122 +126,117 @@ FTELL , FSIZE , FREMOVE , FRENAME , FTEMPNAME , FTEMPFILE };
 
 extern int errno ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,2$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,3$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-   
-   
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-   
-   
 
-    
-    
-    
 
-       
-       
-       
-       
-          
-          
 
-          
-           
 
-       
-       
-       
 
-       
-       
-       
 
-       
 
-       
-       
-       
-          
 
-       
-       
-       
-       
 
-           
-          
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-   
-   
 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
 
-     
-                         
-                    
-               
-      
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
 
-          
 
-    
-    
 
-    
-    
-    
 
-  
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-   
-   
 
-    
-    
 
-    
 
-    
+
+
+
+
+
+
 
 typedef unsigned int UINT ;
 
@@ -262,22 +255,22 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-   
-    
-    
-    
-    
 
-    
 
-    
-    
-    
-    
-    
-  
 
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -310,32 +303,30 @@ int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-   
-   
 
-    
-    
+
+
+
+
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
-   
-   
 
-    
-    
 
-    
+
+
+
+
+
 
 extern int g_inStatus , g_inChars ;
 extern void * g_inDevice ;
@@ -354,16 +345,15 @@ int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
 int sscanf ( char * inString , char * format , ... ) ;
 int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-   
-   
 
-    
-    
+
+
+
+
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -394,51 +384,47 @@ int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
 int sprintf ( char * outString , char * format , ... ) ;
 int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-       
 
-  
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,3$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
-   
-   
 
-     
-                         
-                    
-               
-      
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
 
-          
 
-    
-    
 
-    
-    
-    
 
-  
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,5$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
 
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,6$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
+
+
+
+
 
 double atof ( char * s ) ;
 int atoi ( char * s ) ;
@@ -460,8 +446,8 @@ void exit ( int status ) ;
 typedef void ( * FUNC_PTR ) ( void ) ;
 int atexit ( FUNC_PTR fcn ) ;
 
-    
-    
+
+
 
 int abs ( int value ) ;
 long labs ( long value ) ;
@@ -491,15 +477,14 @@ long quot , rem ;
 } ldiv_t ;
 
 ldiv_t ldiv ( long num , long denum ) ;
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,6$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,7$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,1$
-   
-   
 
-    
+
+
+
 
 extern char * strcpy ( char * target , const char * source ) ;
 extern char * strncpy ( char * target , const char * source , int size ) ;
@@ -522,104 +507,100 @@ extern int memcmp ( const void * left , const void * right , int size ) ;
 extern void * memchr ( const void * block , int i , int size ) ;
 extern void * memset ( void * block , int i , int size ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,7$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,1$
-   
-   
-
-   
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-   
-   
-
-       
-       
-       
-       
-       
-       
-       
-       
-
-  
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
-   
-   
-
-          
-
-       
-       
-       
-
-           
-              
-               
-
-     
-       
-
-         
-        
-
-     
-      
-
-         
-      
-
-    
-    
-
-      
-      
-
-       
-           
-          
-       
-
-             
-                 
-
-                   
-               
-
-      
-      
-
-  
-    
-  
-
-         
-
-  
-    
-  
-
-         
-  
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,5$
-       
-              
-     
-            
-  
-      
-  
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,8$
-       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,1$
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,5$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,6$
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,9$
 
 typedef struct block_header {
 UINT size ;
@@ -627,7 +608,7 @@ struct block_header * next ;
 } BLOCK_HEADER ;
 
 BLOCK_HEADER * g_firstBlockPtr = ( ( void * ) 0 ) ;
-              
+
 
 
 
@@ -635,7 +616,7 @@ BLOCK_HEADER * g_firstBlockPtr = ( ( void * ) 0 ) ;
 
 
 void * malloc ( int memorySize ) {
-if ( ! ( memorySize >= 0 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "memorySize >= 0" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Malloc.c" , 25 ) ; abort ( ) ; } ;
+if ( ! ( memorySize >= 0 ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\155\145\155\157\162\171\123\151\172\145\040\076\075\040\060" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\115\141\154\154\157\143\056\143" , 25 ) ; abort ( ) ; } ;
 
 if ( memorySize == 0 ) {
 return ( ( void * ) 0 ) ;
@@ -644,15 +625,15 @@ return ( ( void * ) 0 ) ;
 UINT newBlockSize = ( ( UINT ) ( sizeof ( BLOCK_HEADER ) ) ) + ( ( UINT ) memorySize ) ,
 minGap = 0 ;
 
-   
- UINT lastAddress = 65528u ;
-  
 
-   
+UINT lastAddress = 65528u ;
 
-           
 
-  
+
+
+
+
+
 
 BLOCK_HEADER * minBlockPtr = ( ( void * ) 0 ) , * minPrevBlockPtr = ( ( void * ) 0 ) , * prevBlockPtr = ( ( void * ) 0 ) ,
 * currBlockPtr = g_firstBlockPtr ;
@@ -693,13 +674,13 @@ return ( void * ) ( newAddress + ( ( UINT ) ( sizeof ( BLOCK_HEADER ) ) ) ) ;
 else {
 UINT newAddress = lastAddress - newBlockSize ;
 
-   
- UINT stackTop = register_bp ;
-  
 
-   
-     
-  
+UINT stackTop = register_bp ;
+
+
+
+
+
 
 
 
@@ -869,8 +850,8 @@ currBlockPtr = currBlockPtr -> next ;
 
 
 void * realloc ( void * oldMemoryPtr , int newMemorySize ) {
-if ( ! ( newMemorySize >= 0 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "newMemorySize >= 0" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Malloc.c" , 259 ) ; abort ( ) ; } ;
-if ( ! ( ( oldMemoryPtr != ( ( void * ) 0 ) ) || ( newMemorySize > 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Malloc.c" , 260 ) ; abort ( ) ; } ;
+if ( ! ( newMemorySize >= 0 ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\156\145\167\115\145\155\157\162\171\123\151\172\145\040\076\075\040\060" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\115\141\154\154\157\143\056\143" , 259 ) ; abort ( ) ; } ;
+if ( ! ( ( oldMemoryPtr != ( ( void * ) 0 ) ) || ( newMemorySize > 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\050\040\157\154\144\115\145\155\157\162\171\120\164\162\040\041\075\040\116\125\114\114\040\051\040\174\174\040\050\040\156\145\167\115\145\155\157\162\171\123\151\172\145\040\076\040\060\040\051" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\115\141\154\154\157\143\056\143" , 260 ) ; abort ( ) ; } ;
 
 if ( oldMemoryPtr == ( ( void * ) 0 ) ) {
 return malloc ( newMemorySize ) ;
@@ -889,15 +870,15 @@ oldBlockPtr -> size = newBlockSize ;
 return oldMemoryPtr ;
 }
 
-   
- UINT lastAddress = 65528u ;
-  
 
-   
+UINT lastAddress = 65528u ;
 
-           
 
-  
+
+
+
+
+
 
 BLOCK_HEADER * currBlockPtr = g_firstBlockPtr ;
 
@@ -931,14 +912,15 @@ return ( ( void * ) 0 ) ;
 
 void print_heap ( ) {
 BLOCK_HEADER * currBlockPtr = g_firstBlockPtr ;
-printf ( "Heap:\n" ) ;
+printf ( "\110\145\141\160\072\012" ) ;
 
 while ( currBlockPtr != ( ( void * ) 0 ) ) {
-printf ( "  Address %u, Size %u\n" , ( UINT ) currBlockPtr , currBlockPtr -> size ) ;
+printf ( "\040\040\101\144\144\162\145\163\163\040\045\165\054\040\123\151\172\145\040\045\165\012" , ( UINT ) currBlockPtr , currBlockPtr -> size ) ;
 currBlockPtr = currBlockPtr -> next ;
 }
-printf ( "\n" ) ;
+printf ( "\012" ) ;
 
 
 
 }
+

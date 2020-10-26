@@ -9,8 +9,6 @@
 	extern assert_test2
 	extern $StackTop
 
-section .text
-
 
 section .data
 
