@@ -47,11 +47,11 @@ section .text
 	fld qword [rbp + 32]
 
  divide$5:
-	; SignedDivide £temporary3210 x y
+	; SignedDivide £temporary3066 x y
 	fdiv
 
  divide$6:
-	; Return £temporary3210
+	; Return £temporary3066
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -69,11 +69,11 @@ section .text
 	mov qword [rbp + 72], buffer
 
  divide$10:
-	; IntegralToIntegral £temporary3211 p
+	; IntegralToIntegral £temporary3067 p
 	mov rax, [rbp + 40]
 
  divide$11:
-	; Parameter signedint £temporary3211 80
+	; Parameter signedint £temporary3067 80
 	mov [rbp + 80], eax
 
  divide$12:
@@ -132,10 +132,10 @@ section .text
 	; PostCall 32
 
  invers$7:
-	; GetReturnValue £temporary3213
+	; GetReturnValue £temporary3069
 
  invers$8:
-	; Return £temporary3213
+	; Return £temporary3069
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -179,15 +179,15 @@ section .text
 	; PostCall 40
 
  setjmp_test$5:
-	; GetReturnValue £temporary3216
+	; GetReturnValue £temporary3072
 
  setjmp_test$6:
-	; IntegralToIntegral £temporary3217 £temporary3216
+	; IntegralToIntegral £temporary3073 £temporary3072
 	mov rax, 4294967295
 	and rbx, rax
 
  setjmp_test$7:
-	; Assign p £temporary3217
+	; Assign p £temporary3073
 	mov [rbp + 32], rbx
 
  setjmp_test$8:
@@ -232,10 +232,10 @@ section .text
 	; PostCall 80
 
  setjmp_test$18:
-	; GetReturnValue £temporary3219
+	; GetReturnValue £temporary3075
 
  setjmp_test$19:
-	; Parameter double £temporary3219 80
+	; Parameter double £temporary3075 80
 	fstp qword [rbp + 80]
 
  setjmp_test$20:

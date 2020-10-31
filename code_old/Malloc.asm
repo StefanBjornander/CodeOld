@@ -66,8 +66,8 @@ section .text
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  malloc$6:
-	; Parameter signedint 25 84
-	mov dword [rbp + 84], 25
+	; Parameter signedint 26 84
+	mov dword [rbp + 84], 26
 
  malloc$7:
 	; Call fprintf 28 20
@@ -704,8 +704,8 @@ section .text
 	mov qword [rbp + 84], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  realloc$6:
-	; Parameter signedint 259 92
-	mov dword [rbp + 92], 259
+	; Parameter signedint 260 92
+	mov dword [rbp + 92], 260
 
  realloc$7:
 	; Call fprintf 36 20
@@ -763,8 +763,8 @@ section .text
 	mov qword [rbp + 84], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  realloc$19:
-	; Parameter signedint 260 92
-	mov dword [rbp + 92], 260
+	; Parameter signedint 261 92
+	mov dword [rbp + 92], 261
 
  realloc$20:
 	; Call fprintf 36 20

@@ -8,7 +8,7 @@
 
 section .data
 
-@8851$i:
+@8665$i:
 	; Initializer SignedInt 0
 	dd 0
 
@@ -31,15 +31,15 @@ section .text
 	mov qword [rbp + 48], string_25i20#
 
  stack_test$3:
-	; Assign £temporary3892 i
-	mov eax, [@8851$i]
+	; Assign £temporary3704 i
+	mov eax, [@8665$i]
 
  stack_test$4:
 	; BinaryAdd i i 1
-	inc dword [@8851$i]
+	inc dword [@8665$i]
 
  stack_test$5:
-	; Parameter signedint £temporary3892 56
+	; Parameter signedint £temporary3704 56
 	mov [rbp + 56], eax
 
  stack_test$6:
@@ -107,10 +107,10 @@ section .text
 	; PostCall 36
 
  heap_test$5:
-	; GetReturnValue £temporary3895
+	; GetReturnValue £temporary3707
 
  heap_test$6:
-	; Assign pointer £temporary3895
+	; Assign pointer £temporary3707
 	mov [rbp + 28], rbx
 
  heap_test$7:
@@ -126,7 +126,7 @@ section .text
 	mov qword [rbp + 60], string_102420bytes2Dblock20number3A2025i0A#
 
  heap_test$10:
-	; Assign £temporary3897 count
+	; Assign £temporary3709 count
 	mov eax, [rbp + 24]
 
  heap_test$11:
@@ -134,7 +134,7 @@ section .text
 	inc dword [rbp + 24]
 
  heap_test$12:
-	; Parameter signedint £temporary3897 68
+	; Parameter signedint £temporary3709 68
 	mov [rbp + 68], eax
 
  heap_test$13:

@@ -189,6 +189,10 @@ void mainX(int argc, char* argv[]) {
 }
 
 void main(int argc, char* argv[]) {
+  main_math();
+}
+
+void mainX2(int argc, char* argv[]) {
   /*unsigned int *p = stack_top + 1048572;
   unsigned u = *p;
   printf("<%p> <%u> <%u>\n", p, (unsigned int) p, u);*/

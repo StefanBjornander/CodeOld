@@ -1,56 +1,56 @@
-0: if size >= int2$5# goto 54
-1: c = int1$97#
-2: if c > int1$122# goto 54
-3: £temporary1039 = name + size
-4: £temporary1037 -> £temporary1039 = *£temporary1039
-5: £temporary1037 -> £temporary1039 = c
-6: £temporary1040 = size + int2$1#
-7: £temporary1043 = name + £temporary1040
-8: £temporary1041 -> £temporary1043 = *£temporary1043
-9: £temporary1041 -> £temporary1043 = int1$0#
-10: call header integral zero 0 stack zero 0
-11: parameter name, offset 19
-12: call function noellipse-noellipse fileexists
-13: post call
-14: £temporary1044 = return_value
-15: if £temporary1044 != int2$0# goto 41
-16: case status == int2$0# goto 20
-17: case status == int2$1# goto 21
-18: case end status
-19: goto 41
-20: return name
-21: call header integral zero 0 stack zero 0
-22: parameter name, offset 19
-23: call function noellipse-noellipse existsTempName
-24: post call
-25: £temporary1047 = return_value
-26: if £temporary1047 != int2$0# goto 41
-27: call header integral zero 0 stack zero 0
-28: £temporary1051 = g_tempSize * Array_4#
-29: £temporary1052 = g_tempArray + £temporary1051
-30: £temporary1050 -> £temporary1052 = *£temporary1052
-31: parameter £temporary1050 -> £temporary1052, offset 19
-32: parameter name, offset 21
-33: call function noellipse-noellipse strcpy
-34: post call
-35: £temporary1054 = g_tempSize
-36: g_tempSize = g_tempSize + int2$1#
-37: £temporary1056 = £temporary1054 * Array_4#
-38: £temporary1057 = g_tempArray + £temporary1056
-39: £temporary1055 -> £temporary1057 = *£temporary1057
-40: return £temporary1055 -> £temporary1057
-41: call header integral zero 0 stack zero 0
-42: parameter name, offset 19
-43: £temporary1058 = size + int2$1#
-44: parameter £temporary1058, offset 21
-45: parameter status, offset 23
-46: call function noellipse-noellipse generateTempName
-47: post call
-48: £temporary1059 = return_value
-49: result = £temporary1059
-50: if result == int2$0# goto 52
-51: return result
-52: c = c + int1$1#
-53: goto 2
-54: return int2$0#
-55: function end generateTempName
+0: SignedGreaterThanEqual 54 size 5
+1: Assign c 97
+2: SignedGreaterThan 54 c 122
+3: BinaryAdd £temporary1039 name size
+4: Dereference £temporary1037 -> £temporary1039 £temporary1039 0
+5: Assign £temporary1037 -> £temporary1039 c
+6: BinaryAdd £temporary1040 size 1
+7: BinaryAdd £temporary1043 name £temporary1040
+8: Dereference £temporary1041 -> £temporary1043 £temporary1043 0
+9: Assign £temporary1041 -> £temporary1043 0
+10: PreCall 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+11: Parameter pointer name 19
+12: Call fileexists 13 0
+13: PostCall 13
+14: GetReturnValue £temporary1044
+15: NotEqual 41 £temporary1044 0
+16: Case 20 status 0
+17: Case 21 status 1
+18: CaseEnd status
+19: Goto 41
+20: Return name
+21: PreCall 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+22: Parameter pointer name 19
+23: Call existsTempName 13 0
+24: PostCall 13
+25: GetReturnValue £temporary1047
+26: NotEqual 41 £temporary1047 0
+27: PreCall 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+28: UnsignedMultiply £temporary1051 g_tempSize 4
+29: BinaryAdd £temporary1052 g_tempArray £temporary1051
+30: Dereference £temporary1050 -> £temporary1052 £temporary1052 0
+31: Parameter pointer £temporary1050 -> £temporary1052 19
+32: Parameter pointer name 21
+33: Call strcpy 13 0
+34: PostCall 13
+35: Assign £temporary1054 g_tempSize
+36: BinaryAdd g_tempSize g_tempSize 1
+37: UnsignedMultiply £temporary1056 £temporary1054 4
+38: BinaryAdd £temporary1057 g_tempArray £temporary1056
+39: Dereference £temporary1055 -> £temporary1057 £temporary1057 0
+40: Return £temporary1055 -> £temporary1057
+41: PreCall 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+42: Parameter pointer name 19
+43: BinaryAdd £temporary1058 size 1
+44: Parameter signedint £temporary1058 21
+45: Parameter signedint status 23
+46: Call generateTempName 13 0
+47: PostCall 13
+48: GetReturnValue £temporary1059
+49: Assign result £temporary1059
+50: Equal 52 result 0
+51: Return result
+52: BinaryAdd c c 1
+53: Goto 2
+54: Return 0
+55: FunctionEnd generateTempName

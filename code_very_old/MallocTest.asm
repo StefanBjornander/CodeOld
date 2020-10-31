@@ -17,641 +17,641 @@
 section .text
 
  malloc_test2:
-	; empty
+	; Empty
 
  malloc_test2$1:
-	; p = int8$0#
+	; Assign p 0
 	mov qword [rbp + 28], 0
 
  malloc_test2$2:
-	; r = int8$0#
+	; Assign r 0
 	mov qword [rbp + 36], 0
 
  malloc_test2$3:
-	; call header integral zero 0 stack zero 0
+	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$4:
-	; parameter int4$96#, offset 68
+	; Parameter signedint 96 68
 	mov dword [rbp + 68], 96
 
  malloc_test2$5:
-	; call function noellipse-noellipse malloc
+	; Call malloc 44 0
 	mov qword [rbp + 44], malloc_test2$6
 	mov [rbp + 52], rbp
 	add rbp, 44
 	jmp malloc
 
  malloc_test2$6:
-	; post call
+	; PostCall 44
 
  malloc_test2$7:
-	; £temporary3899 = return_value
+	; GetReturnValue £temporary3899
 
  malloc_test2$8:
-	; q = £temporary3899
+	; Assign q £temporary3899
 	mov [rbp + 44], rbx
 
  malloc_test2$9:
-	; index = int4$0#
+	; Assign index 0
 	mov dword [rbp + 24], 0
 
  malloc_test2$10:
-	; if index >= int4$10# goto 21
+	; SignedGreaterThanEqual 21 index 10
 	cmp dword [rbp + 24], 10
 	jge malloc_test2$21
 
  malloc_test2$11:
-	; call header integral zero 0 stack zero 0
+	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$12:
-	; parameter int4$96#, offset 76
+	; Parameter signedint 96 76
 	mov dword [rbp + 76], 96
 
  malloc_test2$13:
-	; call function noellipse-noellipse malloc
+	; Call malloc 52 0
 	mov qword [rbp + 52], malloc_test2$14
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp malloc
 
  malloc_test2$14:
-	; post call
+	; PostCall 52
 
  malloc_test2$15:
-	; £temporary3902 = return_value
+	; GetReturnValue £temporary3902
 
  malloc_test2$16:
-	; p = £temporary3902
+	; Assign p £temporary3902
 	mov [rbp + 28], rbx
 
  malloc_test2$17:
-	; if index != int4$5# goto 19
+	; NotEqual 19 index 5
 	cmp dword [rbp + 24], 5
 	jne malloc_test2$19
 
  malloc_test2$18:
-	; r = p
+	; Assign r p
 	mov rax, [rbp + 28]
 	mov [rbp + 36], rax
 
  malloc_test2$19:
-	; index = index + int4$1#
+	; BinaryAdd index index 1
 	inc dword [rbp + 24]
 
  malloc_test2$20:
-	; goto 10
+	; Goto 10
 	jmp malloc_test2$10
 
  malloc_test2$21:
-	; call header integral zero 0 stack zero 0
+	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$22:
-	; call function noellipse-noellipse print_heap
+	; Call print_heap 52 0
 	mov qword [rbp + 52], malloc_test2$23
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp print_heap
 
  malloc_test2$23:
-	; post call
+	; PostCall 52
 
  malloc_test2$24:
-	; call header integral zero 0 stack zero 0
+	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$25:
-	; parameter q, offset 76
+	; Parameter pointer q 76
 	mov rax, [rbp + 44]
 	mov [rbp + 76], rax
 
  malloc_test2$26:
-	; parameter int4$50#, offset 84
+	; Parameter signedint 50 84
 	mov dword [rbp + 84], 50
 
  malloc_test2$27:
-	; call function noellipse-noellipse realloc
+	; Call realloc 52 0
 	mov qword [rbp + 52], malloc_test2$28
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp realloc
 
  malloc_test2$28:
-	; post call
+	; PostCall 52
 
  malloc_test2$29:
-	; call header integral zero 0 stack zero 0
+	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$30:
-	; call function noellipse-noellipse print_heap
+	; Call print_heap 52 0
 	mov qword [rbp + 52], malloc_test2$31
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp print_heap
 
  malloc_test2$31:
-	; post call
+	; PostCall 52
 
  malloc_test2$32:
-	; call header integral zero 0 stack zero 0
+	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$33:
-	; parameter r, offset 76
+	; Parameter pointer r 76
 	mov rax, [rbp + 36]
 	mov [rbp + 76], rax
 
  malloc_test2$34:
-	; parameter int4$50#, offset 84
+	; Parameter signedint 50 84
 	mov dword [rbp + 84], 50
 
  malloc_test2$35:
-	; call function noellipse-noellipse realloc
+	; Call realloc 52 0
 	mov qword [rbp + 52], malloc_test2$36
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp realloc
 
  malloc_test2$36:
-	; post call
+	; PostCall 52
 
  malloc_test2$37:
-	; call header integral zero 0 stack zero 0
+	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$38:
-	; call function noellipse-noellipse print_heap
+	; Call print_heap 52 0
 	mov qword [rbp + 52], malloc_test2$39
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp print_heap
 
  malloc_test2$39:
-	; post call
+	; PostCall 52
 
  malloc_test2$40:
-	; call header integral zero 0 stack zero 0
+	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$41:
-	; parameter p, offset 76
+	; Parameter pointer p 76
 	mov rax, [rbp + 28]
 	mov [rbp + 76], rax
 
  malloc_test2$42:
-	; parameter int4$50#, offset 84
+	; Parameter signedint 50 84
 	mov dword [rbp + 84], 50
 
  malloc_test2$43:
-	; call function noellipse-noellipse realloc
+	; Call realloc 52 0
 	mov qword [rbp + 52], malloc_test2$44
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp realloc
 
  malloc_test2$44:
-	; post call
+	; PostCall 52
 
  malloc_test2$45:
-	; call header integral zero 0 stack zero 0
+	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$46:
-	; call function noellipse-noellipse print_heap
+	; Call print_heap 52 0
 	mov qword [rbp + 52], malloc_test2$47
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp print_heap
 
  malloc_test2$47:
-	; post call
+	; PostCall 52
 
  malloc_test2$48:
-	; call header integral zero 0 stack zero 0
+	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$49:
-	; parameter q, offset 76
+	; Parameter pointer q 76
 	mov rax, [rbp + 44]
 	mov [rbp + 76], rax
 
  malloc_test2$50:
-	; parameter int4$200#, offset 84
+	; Parameter signedint 200 84
 	mov dword [rbp + 84], 200
 
  malloc_test2$51:
-	; call function noellipse-noellipse realloc
+	; Call realloc 52 0
 	mov qword [rbp + 52], malloc_test2$52
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp realloc
 
  malloc_test2$52:
-	; post call
+	; PostCall 52
 
  malloc_test2$53:
-	; call header integral zero 0 stack zero 0
+	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$54:
-	; call function noellipse-noellipse print_heap
+	; Call print_heap 52 0
 	mov qword [rbp + 52], malloc_test2$55
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp print_heap
 
  malloc_test2$55:
-	; post call
+	; PostCall 52
 
  malloc_test2$56:
-	; call header integral zero 0 stack zero 0
+	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$57:
-	; parameter r, offset 76
+	; Parameter pointer r 76
 	mov rax, [rbp + 36]
 	mov [rbp + 76], rax
 
  malloc_test2$58:
-	; parameter int4$200#, offset 84
+	; Parameter signedint 200 84
 	mov dword [rbp + 84], 200
 
  malloc_test2$59:
-	; call function noellipse-noellipse realloc
+	; Call realloc 52 0
 	mov qword [rbp + 52], malloc_test2$60
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp realloc
 
  malloc_test2$60:
-	; post call
+	; PostCall 52
 
  malloc_test2$61:
-	; call header integral zero 0 stack zero 0
+	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$62:
-	; call function noellipse-noellipse print_heap
+	; Call print_heap 52 0
 	mov qword [rbp + 52], malloc_test2$63
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp print_heap
 
  malloc_test2$63:
-	; post call
+	; PostCall 52
 
  malloc_test2$64:
-	; call header integral zero 0 stack zero 0
+	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$65:
-	; parameter p, offset 76
+	; Parameter pointer p 76
 	mov rax, [rbp + 28]
 	mov [rbp + 76], rax
 
  malloc_test2$66:
-	; parameter int4$200#, offset 84
+	; Parameter signedint 200 84
 	mov dword [rbp + 84], 200
 
  malloc_test2$67:
-	; call function noellipse-noellipse realloc
+	; Call realloc 52 0
 	mov qword [rbp + 52], malloc_test2$68
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp realloc
 
  malloc_test2$68:
-	; post call
+	; PostCall 52
 
  malloc_test2$69:
-	; call header integral zero 0 stack zero 0
+	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$70:
-	; call function noellipse-noellipse print_heap
+	; Call print_heap 52 0
 	mov qword [rbp + 52], malloc_test2$71
 	mov [rbp + 60], rbp
 	add rbp, 52
 	jmp print_heap
 
  malloc_test2$71:
-	; post call
+	; PostCall 52
 
  malloc_test2$72:
-	; return
+	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  malloc_test2$73:
-	; function end malloc_test2
+	; FunctionEnd malloc_test2
 
 section .text
 
  malloc_test3:
-	; call header integral zero 0 stack zero 0
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$1:
-	; parameter int4$96#, offset 48
+	; Parameter signedint 96 48
 	mov dword [rbp + 48], 96
 
  malloc_test3$2:
-	; parameter int4$1#, offset 52
+	; Parameter signedint 1 52
 	mov dword [rbp + 52], 1
 
  malloc_test3$3:
-	; call function noellipse-noellipse calloc
+	; Call calloc 24 0
 	mov qword [rbp + 24], malloc_test3$4
 	mov [rbp + 32], rbp
 	add rbp, 24
 	jmp calloc
 
  malloc_test3$4:
-	; post call
+	; PostCall 24
 
  malloc_test3$5:
-	; £temporary3917 = return_value
+	; GetReturnValue £temporary3917
 
  malloc_test3$6:
-	; a = £temporary3917
+	; Assign a £temporary3917
 	mov [rbp + 24], rbx
 
  malloc_test3$7:
-	; call header integral zero 0 stack zero 0
+	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$8:
-	; parameter int4$96#, offset 56
+	; Parameter signedint 96 56
 	mov dword [rbp + 56], 96
 
  malloc_test3$9:
-	; parameter int4$1#, offset 60
+	; Parameter signedint 1 60
 	mov dword [rbp + 60], 1
 
  malloc_test3$10:
-	; call function noellipse-noellipse calloc
+	; Call calloc 32 0
 	mov qword [rbp + 32], malloc_test3$11
 	mov [rbp + 40], rbp
 	add rbp, 32
 	jmp calloc
 
  malloc_test3$11:
-	; post call
+	; PostCall 32
 
  malloc_test3$12:
-	; £temporary3918 = return_value
+	; GetReturnValue £temporary3918
 
  malloc_test3$13:
-	; b = £temporary3918
+	; Assign b £temporary3918
 	mov [rbp + 32], rbx
 
  malloc_test3$14:
-	; call header integral zero 0 stack zero 0
+	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$15:
-	; parameter int4$96#, offset 64
+	; Parameter signedint 96 64
 	mov dword [rbp + 64], 96
 
  malloc_test3$16:
-	; parameter int4$1#, offset 68
+	; Parameter signedint 1 68
 	mov dword [rbp + 68], 1
 
  malloc_test3$17:
-	; call function noellipse-noellipse calloc
+	; Call calloc 40 0
 	mov qword [rbp + 40], malloc_test3$18
 	mov [rbp + 48], rbp
 	add rbp, 40
 	jmp calloc
 
  malloc_test3$18:
-	; post call
+	; PostCall 40
 
  malloc_test3$19:
-	; £temporary3919 = return_value
+	; GetReturnValue £temporary3919
 
  malloc_test3$20:
-	; c = £temporary3919
+	; Assign c £temporary3919
 	mov [rbp + 40], rbx
 
  malloc_test3$21:
-	; call header integral zero 0 stack zero 0
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$22:
-	; parameter int4$96#, offset 72
+	; Parameter signedint 96 72
 	mov dword [rbp + 72], 96
 
  malloc_test3$23:
-	; parameter int4$1#, offset 76
+	; Parameter signedint 1 76
 	mov dword [rbp + 76], 1
 
  malloc_test3$24:
-	; call function noellipse-noellipse calloc
+	; Call calloc 48 0
 	mov qword [rbp + 48], malloc_test3$25
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp calloc
 
  malloc_test3$25:
-	; post call
+	; PostCall 48
 
  malloc_test3$26:
-	; £temporary3920 = return_value
+	; GetReturnValue £temporary3920
 
  malloc_test3$27:
-	; d = £temporary3920
+	; Assign d £temporary3920
 	mov [rbp + 48], rbx
 
  malloc_test3$28:
-	; call header integral zero 0 stack zero 0
+	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$29:
-	; parameter int4$96#, offset 80
+	; Parameter signedint 96 80
 	mov dword [rbp + 80], 96
 
  malloc_test3$30:
-	; parameter int4$1#, offset 84
+	; Parameter signedint 1 84
 	mov dword [rbp + 84], 1
 
  malloc_test3$31:
-	; call function noellipse-noellipse calloc
+	; Call calloc 56 0
 	mov qword [rbp + 56], malloc_test3$32
 	mov [rbp + 64], rbp
 	add rbp, 56
 	jmp calloc
 
  malloc_test3$32:
-	; post call
+	; PostCall 56
 
  malloc_test3$33:
-	; £temporary3921 = return_value
+	; GetReturnValue £temporary3921
 
  malloc_test3$34:
-	; e = £temporary3921
+	; Assign e £temporary3921
 	mov [rbp + 56], rbx
 
  malloc_test3$35:
-	; call header integral zero 0 stack zero 0
+	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$36:
-	; call function noellipse-noellipse print_heap
+	; Call print_heap 64 0
 	mov qword [rbp + 64], malloc_test3$37
 	mov [rbp + 72], rbp
 	add rbp, 64
 	jmp print_heap
 
  malloc_test3$37:
-	; post call
+	; PostCall 64
 
  malloc_test3$38:
-	; call header integral zero 0 stack zero 0
+	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$39:
-	; parameter a, offset 88
+	; Parameter pointer a 88
 	mov rax, [rbp + 24]
 	mov [rbp + 88], rax
 
  malloc_test3$40:
-	; call function noellipse-noellipse free
+	; Call free 64 0
 	mov qword [rbp + 64], malloc_test3$41
 	mov [rbp + 72], rbp
 	add rbp, 64
 	jmp free
 
  malloc_test3$41:
-	; post call
+	; PostCall 64
 
  malloc_test3$42:
-	; call header integral zero 0 stack zero 0
+	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$43:
-	; parameter b, offset 88
+	; Parameter pointer b 88
 	mov rax, [rbp + 32]
 	mov [rbp + 88], rax
 
  malloc_test3$44:
-	; call function noellipse-noellipse free
+	; Call free 64 0
 	mov qword [rbp + 64], malloc_test3$45
 	mov [rbp + 72], rbp
 	add rbp, 64
 	jmp free
 
  malloc_test3$45:
-	; post call
+	; PostCall 64
 
  malloc_test3$46:
-	; call header integral zero 0 stack zero 0
+	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$47:
-	; parameter c, offset 88
+	; Parameter pointer c 88
 	mov rax, [rbp + 40]
 	mov [rbp + 88], rax
 
  malloc_test3$48:
-	; call function noellipse-noellipse free
+	; Call free 64 0
 	mov qword [rbp + 64], malloc_test3$49
 	mov [rbp + 72], rbp
 	add rbp, 64
 	jmp free
 
  malloc_test3$49:
-	; post call
+	; PostCall 64
 
  malloc_test3$50:
-	; call header integral zero 0 stack zero 0
+	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$51:
-	; parameter d, offset 88
+	; Parameter pointer d 88
 	mov rax, [rbp + 48]
 	mov [rbp + 88], rax
 
  malloc_test3$52:
-	; call function noellipse-noellipse free
+	; Call free 64 0
 	mov qword [rbp + 64], malloc_test3$53
 	mov [rbp + 72], rbp
 	add rbp, 64
 	jmp free
 
  malloc_test3$53:
-	; post call
+	; PostCall 64
 
  malloc_test3$54:
-	; call header integral zero 0 stack zero 0
+	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$55:
-	; parameter e, offset 88
+	; Parameter pointer e 88
 	mov rax, [rbp + 56]
 	mov [rbp + 88], rax
 
  malloc_test3$56:
-	; call function noellipse-noellipse free
+	; Call free 64 0
 	mov qword [rbp + 64], malloc_test3$57
 	mov [rbp + 72], rbp
 	add rbp, 64
 	jmp free
 
  malloc_test3$57:
-	; post call
+	; PostCall 64
 
  malloc_test3$58:
-	; call header integral zero 0 stack zero 0
+	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$59:
-	; call function noellipse-noellipse print_heap
+	; Call print_heap 64 0
 	mov qword [rbp + 64], malloc_test3$60
 	mov [rbp + 72], rbp
 	add rbp, 64
 	jmp print_heap
 
  malloc_test3$60:
-	; post call
+	; PostCall 64
 
  malloc_test3$61:
-	; return
+	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  malloc_test3$62:
-	; function end malloc_test3
+	; FunctionEnd malloc_test3
 
 section .data
 
 string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#:
-	; initializer String
+	; Initializer String Stack Top: %u, Low Heap: %u\n
 	db "Stack Top: %u, Low Heap: %u", 10, 0
 
 section .text
 
  rec:
-	; empty
+	; Empty
 
  rec$1:
-	; £temporary3929 = bp
+	; InspectRegister £temporary3929 bp
 
  rec$2:
-	; £temporary3930 = int_to_int £temporary3929 (UnsignedShortInt -> Unsigned_Int)
+	; IntegralToIntegral £temporary3930 £temporary3929
 	and ebp, 65535
 
  rec$3:
-	; stackTop = £temporary3930
+	; Assign stackTop £temporary3930
 	mov [rbp + 24], ebp
 
  rec$4:
-	; lowHeapPtr = int8$65534#
+	; Assign lowHeapPtr 65534
 	mov qword [rbp + 28], 65534
 
  rec$5:
-	; call header integral zero 0 stack zero 0
+	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  rec$6:
-	; parameter string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#, offset 60
+	; Parameter pointer "Stack Top: %u, Low Heap: %u\n" 60
 	mov qword [rbp + 60], string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#
 
  rec$7:
-	; parameter stackTop, offset 68
+	; Parameter unsigned int stackTop 68
 	mov eax, [rbp + 24]
 	mov [rbp + 68], eax
 
  rec$8:
-	; £temporary3931 -> lowHeapPtr = *lowHeapPtr
+	; Dereference £temporary3931 -> lowHeapPtr lowHeapPtr 0
 	mov rsi, [rbp + 28]
 
  rec$9:
-	; parameter £temporary3931 -> lowHeapPtr, offset 72
+	; Parameter unsigned int £temporary3931 -> lowHeapPtr 72
 	mov eax, [rsi]
 	mov [rbp + 72], eax
 
  rec$10:
-	; call function noellipse-ellipse printf, extra 8
+	; Call printf 36 8
 	mov qword [rbp + 36], rec$11
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -660,372 +660,372 @@ section .text
 	jmp printf
 
  rec$11:
-	; post call
+	; PostCall 36
 
  rec$12:
-	; call header integral zero 0 stack zero 0
+	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  rec$13:
-	; call function noellipse-noellipse rec
+	; Call rec 36 0
 	mov qword [rbp + 36], rec$14
 	mov [rbp + 44], rbp
 	add rbp, 36
 	jmp rec
 
  rec$14:
-	; post call
+	; PostCall 36
 
  rec$15:
-	; return
+	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  rec$16:
-	; function end rec
+	; FunctionEnd rec
 
 section .text
 
  malloc_test4:
-	; call header integral zero 0 stack zero 0
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test4$1:
-	; call function noellipse-noellipse rec
+	; Call rec 24 0
 	mov qword [rbp + 24], malloc_test4$2
 	mov [rbp + 32], rbp
 	add rbp, 24
 	jmp rec
 
  malloc_test4$2:
-	; post call
+	; PostCall 24
 
  malloc_test4$3:
-	; return
+	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  malloc_test4$4:
-	; function end malloc_test4
+	; FunctionEnd malloc_test4
 
 section .text
 
  malloc_test:
-	; call header integral zero 0 stack zero 0
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$1:
-	; parameter int4$96#, offset 48
+	; Parameter signedint 96 48
 	mov dword [rbp + 48], 96
 
  malloc_test$2:
-	; call function noellipse-noellipse malloc
+	; Call malloc 24 0
 	mov qword [rbp + 24], malloc_test$3
 	mov [rbp + 32], rbp
 	add rbp, 24
 	jmp malloc
 
  malloc_test$3:
-	; post call
+	; PostCall 24
 
  malloc_test$4:
-	; £temporary3935 = return_value
+	; GetReturnValue £temporary3935
 
  malloc_test$5:
-	; b = £temporary3935
+	; Assign b £temporary3935
 	mov [rbp + 24], rbx
 
  malloc_test$6:
-	; call header integral zero 0 stack zero 0
+	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$7:
-	; parameter int4$96#, offset 56
+	; Parameter signedint 96 56
 	mov dword [rbp + 56], 96
 
  malloc_test$8:
-	; call function noellipse-noellipse malloc
+	; Call malloc 32 0
 	mov qword [rbp + 32], malloc_test$9
 	mov [rbp + 40], rbp
 	add rbp, 32
 	jmp malloc
 
  malloc_test$9:
-	; post call
+	; PostCall 32
 
  malloc_test$10:
-	; £temporary3936 = return_value
+	; GetReturnValue £temporary3936
 
  malloc_test$11:
-	; c = £temporary3936
+	; Assign c £temporary3936
 	mov [rbp + 32], rbx
 
  malloc_test$12:
-	; call header integral zero 0 stack zero 0
+	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$13:
-	; parameter int4$96#, offset 64
+	; Parameter signedint 96 64
 	mov dword [rbp + 64], 96
 
  malloc_test$14:
-	; call function noellipse-noellipse malloc
+	; Call malloc 40 0
 	mov qword [rbp + 40], malloc_test$15
 	mov [rbp + 48], rbp
 	add rbp, 40
 	jmp malloc
 
  malloc_test$15:
-	; post call
+	; PostCall 40
 
  malloc_test$16:
-	; £temporary3937 = return_value
+	; GetReturnValue £temporary3937
 
  malloc_test$17:
-	; d = £temporary3937
+	; Assign d £temporary3937
 	mov [rbp + 40], rbx
 
  malloc_test$18:
-	; call header integral zero 0 stack zero 0
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$19:
-	; call function noellipse-noellipse print_heap
+	; Call print_heap 48 0
 	mov qword [rbp + 48], malloc_test$20
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp print_heap
 
  malloc_test$20:
-	; post call
+	; PostCall 48
 
  malloc_test$21:
-	; call header integral zero 0 stack zero 0
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$22:
-	; parameter c, offset 72
+	; Parameter pointer c 72
 	mov rax, [rbp + 32]
 	mov [rbp + 72], rax
 
  malloc_test$23:
-	; parameter int4$40#, offset 80
+	; Parameter signedint 40 80
 	mov dword [rbp + 80], 40
 
  malloc_test$24:
-	; call function noellipse-noellipse realloc
+	; Call realloc 48 0
 	mov qword [rbp + 48], malloc_test$25
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp realloc
 
  malloc_test$25:
-	; post call
+	; PostCall 48
 
  malloc_test$26:
-	; call header integral zero 0 stack zero 0
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$27:
-	; call function noellipse-noellipse print_heap
+	; Call print_heap 48 0
 	mov qword [rbp + 48], malloc_test$28
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp print_heap
 
  malloc_test$28:
-	; post call
+	; PostCall 48
 
  malloc_test$29:
-	; call header integral zero 0 stack zero 0
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$30:
-	; parameter int4$40#, offset 72
+	; Parameter signedint 40 72
 	mov dword [rbp + 72], 40
 
  malloc_test$31:
-	; call function noellipse-noellipse malloc
+	; Call malloc 48 0
 	mov qword [rbp + 48], malloc_test$32
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp malloc
 
  malloc_test$32:
-	; post call
+	; PostCall 48
 
  malloc_test$33:
-	; call header integral zero 0 stack zero 0
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$34:
-	; call function noellipse-noellipse print_heap
+	; Call print_heap 48 0
 	mov qword [rbp + 48], malloc_test$35
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp print_heap
 
  malloc_test$35:
-	; post call
+	; PostCall 48
 
  malloc_test$36:
-	; call header integral zero 0 stack zero 0
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$37:
-	; parameter b, offset 72
+	; Parameter pointer b 72
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
  malloc_test$38:
-	; call function noellipse-noellipse free
+	; Call free 48 0
 	mov qword [rbp + 48], malloc_test$39
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp free
 
  malloc_test$39:
-	; post call
+	; PostCall 48
 
  malloc_test$40:
-	; call header integral zero 0 stack zero 0
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$41:
-	; call function noellipse-noellipse print_heap
+	; Call print_heap 48 0
 	mov qword [rbp + 48], malloc_test$42
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp print_heap
 
  malloc_test$42:
-	; post call
+	; PostCall 48
 
  malloc_test$43:
-	; call header integral zero 0 stack zero 0
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$44:
-	; parameter d, offset 72
+	; Parameter pointer d 72
 	mov rax, [rbp + 40]
 	mov [rbp + 72], rax
 
  malloc_test$45:
-	; call function noellipse-noellipse free
+	; Call free 48 0
 	mov qword [rbp + 48], malloc_test$46
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp free
 
  malloc_test$46:
-	; post call
+	; PostCall 48
 
  malloc_test$47:
-	; call header integral zero 0 stack zero 0
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$48:
-	; call function noellipse-noellipse print_heap
+	; Call print_heap 48 0
 	mov qword [rbp + 48], malloc_test$49
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp print_heap
 
  malloc_test$49:
-	; post call
+	; PostCall 48
 
  malloc_test$50:
-	; return
+	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  malloc_test$51:
-	; function end malloc_test
+	; FunctionEnd malloc_test
 
 section .data
 
 string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#:
-	; initializer String
+	; Initializer String Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u\n
 	db "Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u", 10, 0
 
 section .text
 
  malloc_test6:
-	; empty
+	; Empty
 
  malloc_test6$1:
-	; £temporary3947 = bp
+	; InspectRegister £temporary3947 bp
 
  malloc_test6$2:
-	; £temporary3948 = int_to_int £temporary3947 (UnsignedShortInt -> Unsigned_Int)
+	; IntegralToIntegral £temporary3948 £temporary3947
 	and ebp, 65535
 
  malloc_test6$3:
-	; stackTop = £temporary3948
+	; Assign stackTop £temporary3948
 	mov [rbp + 28], ebp
 
  malloc_test6$4:
-	; lowHeapPtr = int8$65534#
+	; Assign lowHeapPtr 65534
 	mov qword [rbp + 32], 65534
 
  malloc_test6$5:
-	; i = int4$0#
+	; Assign i 0
 	mov dword [rbp + 24], 0
 
  malloc_test6$6:
-	; if i >= int4$1000# goto 24
+	; SignedGreaterThanEqual 24 i 1000
 	cmp dword [rbp + 24], 1000
 	jge malloc_test6$24
 
  malloc_test6$7:
-	; call header integral zero 0 stack zero 0
+	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test6$8:
-	; parameter int4$96#, offset 64
+	; Parameter signedint 96 64
 	mov dword [rbp + 64], 96
 
  malloc_test6$9:
-	; call function noellipse-noellipse malloc
+	; Call malloc 40 0
 	mov qword [rbp + 40], malloc_test6$10
 	mov [rbp + 48], rbp
 	add rbp, 40
 	jmp malloc
 
  malloc_test6$10:
-	; post call
+	; PostCall 40
 
  malloc_test6$11:
-	; £temporary3951 = return_value
+	; GetReturnValue £temporary3951
 
  malloc_test6$12:
-	; p = £temporary3951
+	; Assign p £temporary3951
 	mov [rbp + 40], rbx
 
  malloc_test6$13:
-	; call header integral zero 0 stack zero 0
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test6$14:
-	; parameter string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#, offset 72
+	; Parameter pointer "Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u\n" 72
 	mov qword [rbp + 72], string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#
 
  malloc_test6$15:
-	; parameter i, offset 80
+	; Parameter signedint i 80
 	mov eax, [rbp + 24]
 	mov [rbp + 80], eax
 
  malloc_test6$16:
-	; parameter p, offset 84
+	; Parameter pointer p 84
 	mov rax, [rbp + 40]
 	mov [rbp + 84], rax
 
  malloc_test6$17:
-	; parameter stackTop, offset 92
+	; Parameter unsigned int stackTop 92
 	mov eax, [rbp + 28]
 	mov [rbp + 92], eax
 
  malloc_test6$18:
-	; £temporary3952 -> lowHeapPtr = *lowHeapPtr
+	; Dereference £temporary3952 -> lowHeapPtr lowHeapPtr 0
 	mov rsi, [rbp + 32]
 
  malloc_test6$19:
-	; parameter £temporary3952 -> lowHeapPtr, offset 96
+	; Parameter unsigned int £temporary3952 -> lowHeapPtr 96
 	mov eax, [rsi]
 	mov [rbp + 96], eax
 
  malloc_test6$20:
-	; call function noellipse-ellipse printf, extra 20
+	; Call printf 48 20
 	mov qword [rbp + 48], malloc_test6$21
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -1034,22 +1034,22 @@ section .text
 	jmp printf
 
  malloc_test6$21:
-	; post call
+	; PostCall 48
 
  malloc_test6$22:
-	; i = i + int4$1#
+	; BinaryAdd i i 1
 	inc dword [rbp + 24]
 
  malloc_test6$23:
-	; goto 6
+	; Goto 6
 	jmp malloc_test6$6
 
  malloc_test6$24:
-	; return
+	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  malloc_test6$25:
-	; function end malloc_test6
+	; FunctionEnd malloc_test6

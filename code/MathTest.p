@@ -6,38 +6,40 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
 
 
 
-extern double exp ( double value ) ;
-extern double log ( double value ) ;
-extern double log10 ( double value ) ;
-extern int log10_int ( double value ) ;
-extern double pow ( double base , double exponent ) ;
-extern double pow_int ( double base , int exponent ) ;
 
-extern double ldexp ( double value , int exponent ) ;
-extern double frexp ( double value , int * exponent ) ;
 
-extern double sin ( double value ) ;
-extern double cos ( double value ) ;
-extern double tan ( double value ) ;
 
-extern double sinh ( double value ) ;
-extern double cosh ( double value ) ;
-extern double tanh ( double value ) ;
 
-extern double sqrt ( double value ) ;
 
-extern double asin ( double value ) ;
-extern double acos ( double value ) ;
-extern double atan ( double value ) ;
-extern double atan2 ( double num , double denum ) ;
+extern double exp ( double x ) ;
+extern double log ( double x ) ;
+extern double log10 ( double x ) ;
 
-extern double floor ( double value ) ;
-extern double ceil ( double value ) ;
-extern double round ( double value ) ;
-extern double fabs ( double value ) ;
+extern double pow ( double x , double y ) ;
+extern double ldexp ( double x , int exponent ) ;
+extern double frexp ( double x , int * exponent ) ;
 
-extern double modf ( double value , double * integralPart ) ;
-extern double fmod ( double num , double denum ) ;
+extern double sqrt ( double x ) ;
+extern double modf ( double x , double * integral ) ;
+extern double fmod ( double x , double y ) ;
+
+extern double sin ( double x ) ;
+extern double cos ( double x ) ;
+extern double tan ( double x ) ;
+
+extern double sinh ( double x ) ;
+extern double cosh ( double x ) ;
+extern double tanh ( double x ) ;
+
+extern double asin ( double x ) ;
+extern double acos ( double x ) ;
+extern double atan ( double x ) ;
+extern double atan2 ( double x , double y ) ;
+
+extern double floor ( double x ) ;
+extern double ceil ( double x ) ;
+extern double round ( double x ) ;
+extern double fabs ( double x ) ;
 
 
 
@@ -47,6 +49,8 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
 
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
+
+
 
 
 
@@ -413,15 +417,15 @@ void math_test_2 ( double x , double y ) ;
 void math_test_int ( double x , int i ) ;
 
 void math_test_1x ( ) {
-math_test_1 ( -2 * 3.1415926535897932384 ) ;
-math_test_1 ( - 3.1415926535897932384 ) ;
-math_test_1 ( - 3.1415926535897932384 / 2 ) ;
+math_test_1 ( -2 * 3.14 ) ;
+math_test_1 ( - 3.14 ) ;
+math_test_1 ( - 3.14 / 2 ) ;
 math_test_1 ( -1 ) ;
 math_test_1 ( 0 ) ;
 math_test_1 ( 1 ) ;
-math_test_1 ( 3.1415926535897932384 / 2 ) ;
-math_test_1 ( 3.1415926535897932384 ) ;
-math_test_1 ( 2 * 3.1415926535897932384 ) ;
+math_test_1 ( 3.14 / 2 ) ;
+math_test_1 ( 3.14 ) ;
+math_test_1 ( 2 * 3.14 ) ;
 }
 
 void acos_test ( double x ) {
@@ -445,13 +449,13 @@ math_test_1 ( -0.999999 ) ;
 math_test_1 ( -1.0 ) ;
 math_test_1 ( -1.000001 ) ;
 
-math_test_1 ( 2 * 3.1415926535897932384 ) ;
-math_test_1 ( 3.1415926535897932384 ) ;
-math_test_1 ( 3.1415926535897932384 / 2 ) ;
+math_test_1 ( 2 * 3.14 ) ;
+math_test_1 ( 3.14 ) ;
+math_test_1 ( 3.14 / 2 ) ;
 
-math_test_1 ( - 3.1415926535897932384 / 2 ) ;
-math_test_1 ( - 3.1415926535897932384 ) ;
-math_test_1 ( -2 * 3.1415926535897932384 ) ;
+math_test_1 ( - 3.14 / 2 ) ;
+math_test_1 ( - 3.14 ) ;
+math_test_1 ( -2 * 3.14 ) ;
 
 math_test_2 ( 1.0 , 2.0 ) ;
 math_test_2 ( 3.0 , 4.0 ) ;

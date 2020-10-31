@@ -34,10 +34,10 @@ string_test$6:	; call function noellipse-noellipse strlen
 string_test$7:	; post call
 27:	
 
-string_test$8:	; £temporary3825 = return_value
+string_test$8:	; £temporary3660 = return_value
 32:	
 
-string_test$9:	; parameter £temporary3825, offset 10
+string_test$9:	; parameter £temporary3660, offset 10
 33:		mov [bp + 222], bx
 35:	
 
@@ -103,12 +103,12 @@ string_test$21:	; call function noellipse-noellipse strncpy
 string_test$22:	; post call
 84:	
 
-string_test$23:	; £temporary3829 -> u = *u, offset 5
+string_test$23:	; £temporary3664 -> u = *u, offset 5
 85:		mov si, bp
 86:		add si, 110
 88:	
 
-string_test$24:	; £temporary3829 -> u = 0
+string_test$24:	; £temporary3664 -> u = 0
 89:		mov byte [si + 5], 0
 91:	
 
@@ -181,10 +181,10 @@ string_test$38:	; call function noellipse-noellipse strlen
 string_test$39:	; post call
 145:	
 
-string_test$40:	; £temporary3832 = return_value
+string_test$40:	; £temporary3667 = return_value
 150:	
 
-string_test$41:	; i = £temporary3832
+string_test$41:	; i = £temporary3667
 151:		mov [bp + 6], bx
 153:	
 
@@ -214,21 +214,21 @@ string_test$46:	; call function noellipse-noellipse strncat
 string_test$47:	; post call
 173:	
 
-string_test$48:	; £temporary3834 = i + 2
+string_test$48:	; £temporary3669 = i + 2
 174:		mov ax, [bp + 6]
 175:		add ax, 2
 177:	
 
-string_test$49:	; £temporary3836 = u + £temporary3834
+string_test$49:	; £temporary3671 = u + £temporary3669
 178:		mov si, bp
 179:		add si, 110
 180:		add si, ax
 182:	
 
-string_test$50:	; £temporary3835 -> £temporary3836 = *£temporary3836
+string_test$50:	; £temporary3670 -> £temporary3671 = *£temporary3671
 184:	
 
-string_test$51:	; £temporary3835 -> £temporary3836 = 0
+string_test$51:	; £temporary3670 -> £temporary3671 = 0
 185:		mov byte [si], 0
 187:	
 
@@ -291,10 +291,10 @@ string_test$63:	; call function noellipse-noellipse strcmp
 string_test$64:	; post call
 233:	
 
-string_test$65:	; £temporary3838 = return_value
+string_test$65:	; £temporary3673 = return_value
 238:	
 
-string_test$66:	; parameter £temporary3838, offset 8
+string_test$66:	; parameter £temporary3673, offset 8
 239:		mov [bp + 220], bx
 241:	
 
@@ -344,10 +344,10 @@ string_test$75:	; call function noellipse-noellipse strncmp
 string_test$76:	; post call
 277:	
 
-string_test$77:	; £temporary3840 = return_value
+string_test$77:	; £temporary3675 = return_value
 282:	
 
-string_test$78:	; parameter £temporary3840, offset 8
+string_test$78:	; parameter £temporary3675, offset 8
 283:		mov [bp + 220], bx
 285:	
 
@@ -385,10 +385,10 @@ string_test$84:	; call function noellipse-noellipse strchr
 string_test$85:	; post call
 312:	
 
-string_test$86:	; £temporary3842 = return_value
+string_test$86:	; £temporary3677 = return_value
 317:	
 
-string_test$87:	; p = £temporary3842
+string_test$87:	; p = £temporary3677
 318:		mov [bp + 210], bx
 320:	
 
@@ -404,7 +404,7 @@ string_test$90:	; if p == 0 goto 93
 327:		je string_test$93
 329:	
 
-string_test$91:	; £temporary3848 = p - s
+string_test$91:	; £temporary3683 = p - s
 330:		mov ax, [bp + 210]
 331:		sub ax, [bp + 8]
 333:	
@@ -413,11 +413,11 @@ string_test$92:	; goto 94
 334:		jmp string_test$94
 336:	
 
-string_test$93:	; £temporary3848 = -1
+string_test$93:	; £temporary3683 = -1
 337:		mov ax, -1
 339:	
 
-string_test$94:	; parameter £temporary3848, offset 8
+string_test$94:	; parameter £temporary3683, offset 8
 340:		mov [bp + 220], ax
 342:	
 
@@ -455,10 +455,10 @@ string_test$100:	; call function noellipse-noellipse strrchr
 string_test$101:	; post call
 369:	
 
-string_test$102:	; £temporary3850 = return_value
+string_test$102:	; £temporary3685 = return_value
 374:	
 
-string_test$103:	; p = £temporary3850
+string_test$103:	; p = £temporary3685
 375:		mov [bp + 210], bx
 377:	
 
@@ -474,7 +474,7 @@ string_test$106:	; if p == 0 goto 109
 384:		je string_test$109
 386:	
 
-string_test$107:	; £temporary3856 = p - s
+string_test$107:	; £temporary3691 = p - s
 387:		mov ax, [bp + 210]
 388:		sub ax, [bp + 8]
 390:	
@@ -483,11 +483,11 @@ string_test$108:	; goto 110
 391:		jmp string_test$110
 393:	
 
-string_test$109:	; £temporary3856 = -1
+string_test$109:	; £temporary3691 = -1
 394:		mov ax, -1
 396:	
 
-string_test$110:	; parameter £temporary3856, offset 8
+string_test$110:	; parameter £temporary3691, offset 8
 397:		mov [bp + 220], ax
 399:	
 
@@ -525,10 +525,10 @@ string_test$116:	; call function noellipse-noellipse strchr
 string_test$117:	; post call
 426:	
 
-string_test$118:	; £temporary3858 = return_value
+string_test$118:	; £temporary3693 = return_value
 431:	
 
-string_test$119:	; p = £temporary3858
+string_test$119:	; p = £temporary3693
 432:		mov [bp + 210], bx
 434:	
 
@@ -544,7 +544,7 @@ string_test$122:	; if p == 0 goto 125
 441:		je string_test$125
 443:	
 
-string_test$123:	; £temporary3864 = p - s
+string_test$123:	; £temporary3699 = p - s
 444:		mov ax, [bp + 210]
 445:		sub ax, [bp + 8]
 447:	
@@ -553,11 +553,11 @@ string_test$124:	; goto 126
 448:		jmp string_test$126
 450:	
 
-string_test$125:	; £temporary3864 = -1
+string_test$125:	; £temporary3699 = -1
 451:		mov ax, -1
 453:	
 
-string_test$126:	; parameter £temporary3864, offset 8
+string_test$126:	; parameter £temporary3699, offset 8
 454:		mov [bp + 220], ax
 456:	
 
@@ -595,10 +595,10 @@ string_test$132:	; call function noellipse-noellipse strrchr
 string_test$133:	; post call
 483:	
 
-string_test$134:	; £temporary3866 = return_value
+string_test$134:	; £temporary3701 = return_value
 488:	
 
-string_test$135:	; p = £temporary3866
+string_test$135:	; p = £temporary3701
 489:		mov [bp + 210], bx
 491:	
 
@@ -614,7 +614,7 @@ string_test$138:	; if p == 0 goto 141
 498:		je string_test$141
 500:	
 
-string_test$139:	; £temporary3872 = p - s
+string_test$139:	; £temporary3707 = p - s
 501:		mov ax, [bp + 210]
 502:		sub ax, [bp + 8]
 504:	
@@ -623,11 +623,11 @@ string_test$140:	; goto 142
 505:		jmp string_test$142
 507:	
 
-string_test$141:	; £temporary3872 = -1
+string_test$141:	; £temporary3707 = -1
 508:		mov ax, -1
 510:	
 
-string_test$142:	; parameter £temporary3872, offset 8
+string_test$142:	; parameter £temporary3707, offset 8
 511:		mov [bp + 220], ax
 513:	
 
@@ -721,12 +721,12 @@ string_test$161:	; call function noellipse-noellipse memset
 string_test$162:	; post call
 583:	
 
-string_test$163:	; £temporary3877 -> u = *u, offset 19
+string_test$163:	; £temporary3712 -> u = *u, offset 19
 584:		mov si, bp
 585:		add si, 110
 587:	
 
-string_test$164:	; £temporary3877 -> u = 0
+string_test$164:	; £temporary3712 -> u = 0
 588:		mov byte [si + 19], 0
 590:	
 
@@ -790,10 +790,10 @@ string_test$176:	; call function noellipse-noellipse memchr
 string_test$177:	; post call
 637:	
 
-string_test$178:	; £temporary3879 = return_value
+string_test$178:	; £temporary3714 = return_value
 642:	
 
-string_test$179:	; p = £temporary3879
+string_test$179:	; p = £temporary3714
 643:		mov [bp + 210], bx
 645:	
 
@@ -809,7 +809,7 @@ string_test$182:	; if p == 0 goto 185
 652:		je string_test$185
 654:	
 
-string_test$183:	; £temporary3885 = p - s
+string_test$183:	; £temporary3720 = p - s
 655:		mov ax, [bp + 210]
 656:		sub ax, [bp + 8]
 658:	
@@ -818,11 +818,11 @@ string_test$184:	; goto 186
 659:		jmp string_test$186
 661:	
 
-string_test$185:	; £temporary3885 = -1
+string_test$185:	; £temporary3720 = -1
 662:		mov ax, -1
 664:	
 
-string_test$186:	; parameter £temporary3885, offset 8
+string_test$186:	; parameter £temporary3720, offset 8
 665:		mov [bp + 220], ax
 667:	
 
@@ -864,10 +864,10 @@ string_test$193:	; call function noellipse-noellipse memchr
 string_test$194:	; post call
 697:	
 
-string_test$195:	; £temporary3887 = return_value
+string_test$195:	; £temporary3722 = return_value
 702:	
 
-string_test$196:	; p = £temporary3887
+string_test$196:	; p = £temporary3722
 703:		mov [bp + 210], bx
 705:	
 
@@ -883,7 +883,7 @@ string_test$199:	; if p == 0 goto 202
 712:		je string_test$202
 714:	
 
-string_test$200:	; £temporary3893 = p - s
+string_test$200:	; £temporary3728 = p - s
 715:		mov ax, [bp + 210]
 716:		sub ax, [bp + 8]
 718:	
@@ -892,11 +892,11 @@ string_test$201:	; goto 203
 719:		jmp string_test$203
 721:	
 
-string_test$202:	; £temporary3893 = -1
+string_test$202:	; £temporary3728 = -1
 722:		mov ax, -1
 724:	
 
-string_test$203:	; parameter £temporary3893, offset 8
+string_test$203:	; parameter £temporary3728, offset 8
 725:		mov [bp + 220], ax
 727:	
 
@@ -946,10 +946,10 @@ string_test$212:	; call function noellipse-noellipse memcmp
 string_test$213:	; post call
 763:	
 
-string_test$214:	; £temporary3895 = return_value
+string_test$214:	; £temporary3730 = return_value
 768:	
 
-string_test$215:	; parameter £temporary3895, offset 8
+string_test$215:	; parameter £temporary3730, offset 8
 769:		mov [bp + 220], bx
 771:	
 
@@ -994,10 +994,10 @@ string_test$223:	; call function noellipse-noellipse strspn
 string_test$224:	; post call
 803:	
 
-string_test$225:	; £temporary3897 = return_value
+string_test$225:	; £temporary3732 = return_value
 808:	
 
-string_test$226:	; parameter £temporary3897, offset 8
+string_test$226:	; parameter £temporary3732, offset 8
 809:		mov [bp + 220], bx
 811:	
 
@@ -1042,10 +1042,10 @@ string_test$234:	; call function noellipse-noellipse strcspn
 string_test$235:	; post call
 843:	
 
-string_test$236:	; £temporary3899 = return_value
+string_test$236:	; £temporary3734 = return_value
 848:	
 
-string_test$237:	; parameter £temporary3899, offset 8
+string_test$237:	; parameter £temporary3734, offset 8
 849:		mov [bp + 220], bx
 851:	
 
@@ -1086,10 +1086,10 @@ string_test$244:	; call function noellipse-noellipse strerror
 string_test$245:	; post call
 880:	
 
-string_test$246:	; £temporary3901 = return_value
+string_test$246:	; £temporary3736 = return_value
 885:	
 
-string_test$247:	; parameter £temporary3901, offset 8
+string_test$247:	; parameter £temporary3736, offset 8
 886:		mov [bp + 220], bx
 888:	
 
@@ -1127,10 +1127,10 @@ string_test$253:	; call function noellipse-noellipse strtok
 string_test$254:	; post call
 915:	
 
-string_test$255:	; £temporary3903 = return_value
+string_test$255:	; £temporary3738 = return_value
 920:	
 
-string_test$256:	; p = £temporary3903
+string_test$256:	; p = £temporary3738
 921:		mov [bp + 210], bx
 923:	
 
@@ -1184,10 +1184,10 @@ string_test$266:	; call function noellipse-noellipse strtok
 string_test$267:	; post call
 962:	
 
-string_test$268:	; £temporary3906 = return_value
+string_test$268:	; £temporary3741 = return_value
 967:	
 
-string_test$269:	; p = £temporary3906
+string_test$269:	; p = £temporary3741
 968:		mov [bp + 210], bx
 970:	
 

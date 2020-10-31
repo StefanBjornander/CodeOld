@@ -16,7 +16,7 @@
 int g_outStatus, g_outChars;
 void* g_outDevice;
 
-#define DEFAULT_PRECISION 9
+#define DEFAULT_PRECISION 6
 
 int putc(int i, FILE* stream) {
   g_outStatus = DEVICE;

@@ -1,100 +1,92 @@
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-   
-   
 
-    
-    
-    
 
-extern double exp ( double value ) ;
-extern double log ( double value ) ;
-extern double log10 ( double value ) ;
-extern int log10_int ( double value ) ;
-extern double pow ( double base , double exponent ) ;
-extern double pow_int ( double base , int exponent ) ;
 
-extern double ldexp ( double value , int exponent ) ;
-extern double frexp ( double value , int * exponent ) ;
 
-extern double sin ( double value ) ;
-extern double cos ( double value ) ;
-extern double tan ( double value ) ;
 
-extern double sinh ( double value ) ;
-extern double cosh ( double value ) ;
-extern double tanh ( double value ) ;
 
-extern double sqrt ( double value ) ;
 
-extern double asin ( double value ) ;
-extern double acos ( double value ) ;
-extern double atan ( double value ) ;
-extern double atan2 ( double num , double denum ) ;
+extern double exp ( double x ) ;
+extern double log ( double x ) ;
+extern double log10 ( double x ) ;
 
-extern double floor ( double value ) ;
-extern double ceil ( double value ) ;
-extern double round ( double value ) ;
-extern double fabs ( double value ) ;
+extern double pow ( double x , double y ) ;
+extern double ldexp ( double x , int exponent ) ;
+extern double frexp ( double x , int * exponent ) ;
 
-extern double modf ( double value , double * integralPart ) ;
-extern double fmod ( double num , double denum ) ;
+extern double sqrt ( double x ) ;
+extern double modf ( double x , double * integral ) ;
+extern double fmod ( double x , double y ) ;
 
-  
+extern double sin ( double x ) ;
+extern double cos ( double x ) ;
+extern double tan ( double x ) ;
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,0$
-       
+extern double sinh ( double x ) ;
+extern double cosh ( double x ) ;
+extern double tanh ( double x ) ;
+
+extern double asin ( double x ) ;
+extern double acos ( double x ) ;
+extern double atan ( double x ) ;
+extern double atan2 ( double x , double y ) ;
+
+extern double floor ( double x ) ;
+extern double ceil ( double x ) ;
+extern double round ( double x ) ;
+extern double fabs ( double x ) ;
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,1$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-   
-   
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-   
-   
 
-    
-    
-    
 
-       
-       
-       
-       
-          
-          
 
-          
-           
 
-       
-       
-       
 
-       
-       
-       
 
-       
 
-       
-       
-       
-          
 
-       
-       
-       
-       
 
-           
-          
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
-       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-   
-   
+
+
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -110,51 +102,48 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
-   
-   
-
-     
-                         
-                    
-               
-      
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
 
-          
 
-    
-    
 
-    
-    
-    
 
-  
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-   
-   
 
-    
-    
 
-    
 
-    
+
+
+
+
+
+
 
 typedef unsigned int UINT ;
 
@@ -173,22 +162,22 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-   
-    
-    
-    
-    
 
-    
 
-    
-    
-    
-    
-    
-  
 
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -221,32 +210,30 @@ int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-   
-   
 
-    
-    
+
+
+
+
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
-   
-   
 
-    
-    
 
-    
+
+
+
+
+
 
 extern int g_inStatus , g_inChars ;
 extern void * g_inDevice ;
@@ -265,16 +252,15 @@ int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
 int sscanf ( char * inString , char * format , ... ) ;
 int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-   
-   
 
-    
-    
+
+
+
+
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -305,40 +291,37 @@ int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
 int sprintf ( char * outString , char * format , ... ) ;
 int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-       
 
-  
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,1$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-   
-   
 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,2$
-       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,3$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ErrNo.h,1$
-   
-   
+
+
 
 
 
@@ -399,15 +382,14 @@ FTELL , FSIZE , FREMOVE , FRENAME , FTEMPNAME , FTEMPFILE };
 
 extern int errno ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,3$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,4$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,1$
-   
-   
 
-    
+
+
+
 
 extern char * strcpy ( char * target , const char * source ) ;
 extern char * strncpy ( char * target , const char * source , int size ) ;
@@ -430,37 +412,35 @@ extern int memcmp ( const void * left , const void * right , int size ) ;
 extern void * memchr ( const void * block , int i , int size ) ;
 extern void * memset ( void * block , int i , int size ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,4$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,5$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,1$
-   
-   
 
-   
+
+
+
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-   
-   
 
-       
-       
-       
-       
-       
-       
-       
-       
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,4$
-       
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,5$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
-   
-   
 
-          
+
+
+
 
 double atof ( char * s ) ;
 int atoi ( char * s ) ;
@@ -482,8 +462,8 @@ void exit ( int status ) ;
 typedef void ( * FUNC_PTR ) ( void ) ;
 int atexit ( FUNC_PTR fcn ) ;
 
-    
-    
+
+
 
 int abs ( int value ) ;
 long labs ( long value ) ;
@@ -513,94 +493,92 @@ long quot , rem ;
 } ldiv_t ;
 
 ldiv_t ldiv ( long num , long denum ) ;
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,5$
-       
-              
-     
-            
-  
-      
-  
 
-  
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,6$
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,5$
-       
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,6$
 
 void file_test ( char * inFilePtrName , char * outFilePtrName ) {
-{ FILE * inFilePtrPtr = fopen ( inFilePtrName , "r" ) ;
-if ( ! ( inFilePtrPtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtrPtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 10 ) ; abort ( ) ; } ;
-FILE * outFilePtrPtr = fopen ( outFilePtrName , "w" ) ;
-if ( ! ( outFilePtrPtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "outFilePtrPtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 12 ) ; abort ( ) ; } ;
+{ FILE * inFilePtrPtr = fopen ( inFilePtrName , "\162" ) ;
+if ( ! ( inFilePtrPtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\151\156\106\151\154\145\120\164\162\120\164\162\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 10 ) ; abort ( ) ; } ;
+FILE * outFilePtrPtr = fopen ( outFilePtrName , "\167" ) ;
+if ( ! ( outFilePtrPtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\157\165\164\106\151\154\145\120\164\162\120\164\162\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 12 ) ; abort ( ) ; } ;
 
 int size = 0 , index ;
-fscanf ( inFilePtrPtr , "%i" , & size ) ;
+fscanf ( inFilePtrPtr , "\045\151" , & size ) ;
 
 for ( index = 0 ; index < size ; ++ index ) {
 double inValue = 0 ;
-fscanf ( inFilePtrPtr , "%lf" , & inValue ) ;
+fscanf ( inFilePtrPtr , "\045\154\146" , & inValue ) ;
 double outValue = sqrt ( ( double ) inValue ) ;
-fprintf ( outFilePtrPtr , "%f\n" , outValue ) ;
+fprintf ( outFilePtrPtr , "\045\146\012" , outValue ) ;
 }
 
 fclose ( inFilePtrPtr ) ;
 fclose ( outFilePtrPtr ) ;
 }
 
-{ char * sourceFilePtr = "X" ;
-char * targetFilePtr = "Y" ;
+{ char * sourceFilePtr = "\130" ;
+char * targetFilePtr = "\131" ;
 
 if ( rename ( sourceFilePtr , targetFilePtr ) == 0 ) {
-printf ( "\"%s\" has been renamed to \"%s\".\n" , sourceFilePtr , targetFilePtr ) ;
+printf ( "\042\045\163\042\040\150\141\163\040\142\145\145\156\040\162\145\156\141\155\145\144\040\164\157\040\042\045\163\042\056\012" , sourceFilePtr , targetFilePtr ) ;
 }
 else {
-printf ( "Error %i: %s.\n" , errno , strerror ( errno ) ) ;
+printf ( "\105\162\162\157\162\040\045\151\072\040\045\163\056\012" , errno , strerror ( errno ) ) ;
 }
 }
 
-{ char * targetFilePtr = "Z" ;
+{ char * targetFilePtr = "\132" ;
 
 if ( remove ( targetFilePtr ) == 0 ) {
-printf ( "\"%s\" has been removed.\n" , targetFilePtr ) ;
+printf ( "\042\045\163\042\040\150\141\163\040\142\145\145\156\040\162\145\155\157\166\145\144\056\012" , targetFilePtr ) ;
 }
 else {
-printf ( "Error %i: %s.\n" , errno , strerror ( errno ) ) ;
+printf ( "\105\162\162\157\162\040\045\151\072\040\045\163\056\012" , errno , strerror ( errno ) ) ;
 }
 }
 
-{ FILE * inFilePtr = fopen ( "PBook.txt" , "r" ) ;
-if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 50 ) ; abort ( ) ; } ;
+{ FILE * inFilePtr = fopen ( "\120\102\157\157\153\056\164\170\164" , "\162" ) ;
+if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\151\156\106\151\154\145\120\164\162\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 50 ) ; abort ( ) ; } ;
 
 
-printf ( "\n%-24s %-24s\n" , "Name" , "Phone" ) ;
-printf ( "%-24s %-24s\n" , "========================" ,
-"========================" ) ;
+printf ( "\012\045\055\062\064\163\040\045\055\062\064\163\012" , "\116\141\155\145" , "\120\150\157\156\145" ) ;
+printf ( "\045\055\062\064\163\040\045\055\062\064\163\012" , "\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075" ,
+"\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075\075" ) ;
 
 int count , size ;
-fscanf ( inFilePtr , "%i" , & size ) ;
+fscanf ( inFilePtr , "\045\151" , & size ) ;
 
 
 for ( count = 0 ; count < size ; ++ count ) {
 char name [ 20 ] , phone [ 20 ];
 
-fscanf ( inFilePtr , "%s%s" , name , phone ) ;
-printf ( "%-24s %-24s\n" , name , phone ) ;
+fscanf ( inFilePtr , "\045\163\045\163" , name , phone ) ;
+printf ( "\045\055\062\064\163\040\045\055\062\064\163\012" , name , phone ) ;
 }
 
-printf ( "\n" ) ;
+printf ( "\012" ) ;
 fclose ( inFilePtr ) ;
 }
 
-{ char * sourceFilePtr = "Flow1.txt" ;
-char * targetFilePtr = "Flow2.txt" ;
+{ char * sourceFilePtr = "\106\154\157\167\061\056\164\170\164" ;
+char * targetFilePtr = "\106\154\157\167\062\056\164\170\164" ;
 
-FILE * inFilePtr = fopen ( sourceFilePtr , "r" ) ;
-if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 76 ) ; abort ( ) ; } ;
+FILE * inFilePtr = fopen ( sourceFilePtr , "\162" ) ;
+if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\151\156\106\151\154\145\120\164\162\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 76 ) ; abort ( ) ; } ;
 
-FILE * outFilePtr = fopen ( targetFilePtr , "w" ) ;
-if ( ! ( outFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "outFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 79 ) ; abort ( ) ; } ;
+FILE * outFilePtr = fopen ( targetFilePtr , "\167" ) ;
+if ( ! ( outFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\157\165\164\106\151\154\145\120\164\162\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 79 ) ; abort ( ) ; } ;
 
 while ( 1 ) {
 char c = ( char ) fgetc ( inFilePtr ) ;
@@ -611,8 +589,8 @@ break ;
 
 putc ( c , outFilePtr ) ;
 
-if ( c == '\n' ) {
-putc ( '\n' , outFilePtr ) ;
+if ( c == '\012' ) {
+putc ( '\012' , outFilePtr ) ;
 }
 }
 
@@ -620,8 +598,8 @@ fclose ( inFilePtr ) ;
 fclose ( outFilePtr ) ;
 }
 
-{ FILE * outFilePtr = fopen ( "Test.bin" , "w" ) ;
-if ( ! ( outFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "outFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 100 ) ; abort ( ) ; } ;
+{ FILE * outFilePtr = fopen ( "\124\145\163\164\056\142\151\156" , "\167" ) ;
+if ( ! ( outFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\157\165\164\106\151\154\145\120\164\162\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 100 ) ; abort ( ) ; } ;
 
 int size = 10 ;
 fwrite ( & size , sizeof size , 1 , outFilePtr ) ;
@@ -635,12 +613,12 @@ fwrite ( & value , sizeof value , 1 , outFilePtr ) ;
 fclose ( outFilePtr ) ;
 }
 
-{ FILE * inFilePtr = fopen ( "Test.bin" , "r" ) ;
-if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 115 ) ; abort ( ) ; } ;
+{ FILE * inFilePtr = fopen ( "\124\145\163\164\056\142\151\156" , "\162" ) ;
+if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\151\156\106\151\154\145\120\164\162\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 115 ) ; abort ( ) ; } ;
 
 int size ;
 fread ( & size , sizeof size , 1 , inFilePtr ) ;
-printf ( "size1 %i\n" , size ) ;
+printf ( "\163\151\172\145\061\040\045\151\012" , size ) ;
 
 double arr [ 10 ];
 fread ( & arr , sizeof arr , 1 , inFilePtr ) ;
@@ -648,49 +626,49 @@ fclose ( inFilePtr ) ;
 
 int index ;
 for ( index = 0 ; index < 10 ; ++ index ) {
-printf ( "index1 %i: value %f\n" , index , arr [ index ] ) ;
+printf ( "\151\156\144\145\170\061\040\045\151\072\040\166\141\154\165\145\040\045\146\012" , index , arr [ index ] ) ;
 }
-printf ( "\n" ) ;
+printf ( "\012" ) ;
 }
 
-{ FILE * inFilePtr = fopen ( "Test.bin" , "r" ) ;
-if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 133 ) ; abort ( ) ; } ;
+{ FILE * inFilePtr = fopen ( "\124\145\163\164\056\142\151\156" , "\162" ) ;
+if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\151\156\106\151\154\145\120\164\162\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 133 ) ; abort ( ) ; } ;
 
 int size ;
 fread ( & size , sizeof size , 1 , inFilePtr ) ;
-printf ( "size2 %i\n" , size ) ;
+printf ( "\163\151\172\145\062\040\045\151\012" , size ) ;
 
 int index ;
 for ( index = 0 ; index < size ; ++ index ) {
 double value ;
 fread ( & value , sizeof value , 1 , inFilePtr ) ;
-printf ( "index2 %i: value %f\n" , index , value ) ;
+printf ( "\151\156\144\145\170\062\040\045\151\072\040\166\141\154\165\145\040\045\146\012" , index , value ) ;
 }
 
-printf ( "\n" ) ;
+printf ( "\012" ) ;
 fclose ( inFilePtr ) ;
 }
 
-{ FILE * inFilePtr = fopen ( "Test.bin" , "r" ) ;
-if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 151 ) ; abort ( ) ; } ;
+{ FILE * inFilePtr = fopen ( "\124\145\163\164\056\142\151\156" , "\162" ) ;
+if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\151\156\106\151\154\145\120\164\162\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 151 ) ; abort ( ) ; } ;
 
 int size ;
 fread ( & size , sizeof size , 1 , inFilePtr ) ;
-printf ( "size3 %i total %i\n" , size , size * sizeof ( double ) ) ;
+printf ( "\163\151\172\145\063\040\045\151\040\164\157\164\141\154\040\045\151\012" , size , size * sizeof ( double ) ) ;
 
 int total = size * sizeof ( double ) ;
 double * p = malloc ( total ) ;
-if ( ! ( p != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "p != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 159 ) ; abort ( ) ; } ;
+if ( ! ( p != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\160\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 159 ) ; abort ( ) ; } ;
 double * endPtr = p + size ;
-printf ( "malloc %u %u %u\n" , p , total , endPtr ) ;
+printf ( "\155\141\154\154\157\143\040\045\165\040\045\165\040\045\165\012" , p , total , endPtr ) ;
 fread ( p , total , 1 , inFilePtr ) ;
 
 int index ;
 for ( index = 0 ; index < size ; ++ index ) {
-printf ( "index3 %i: value %f\n" , index , p [ index ] ) ;
+printf ( "\151\156\144\145\170\063\040\045\151\072\040\166\141\154\165\145\040\045\146\012" , index , p [ index ] ) ;
 }
 
-printf ( "\n" ) ;
+printf ( "\012" ) ;
 free ( p ) ;
 fclose ( inFilePtr ) ;
 }
@@ -700,32 +678,32 @@ char name [ 48 ];
 int phone ;
 };
 
-struct _Person personVector []={{ "Adam Bertilsson" , 12345 } ,
-{ "Bertil Ceasarsson" , 23456 } ,
-{ "Ceasar Davidsson" , 24567 }};
+struct _Person personVector []={{ "\101\144\141\155\040\102\145\162\164\151\154\163\163\157\156" , 12345 } ,
+{ "\102\145\162\164\151\154\040\103\145\141\163\141\162\163\163\157\156" , 23456 } ,
+{ "\103\145\141\163\141\162\040\104\141\166\151\144\163\163\157\156" , 24567 }};
 struct _Person person ;
 
-FILE * outFilePtr = fopen ( "Block.bin" , "w" ) ;
-if ( ! ( outFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "outFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 185 ) ; abort ( ) ; } ;
+FILE * outFilePtr = fopen ( "\102\154\157\143\153\056\142\151\156" , "\167" ) ;
+if ( ! ( outFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\157\165\164\106\151\154\145\120\164\162\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 185 ) ; abort ( ) ; } ;
 
 fwrite ( personVector , sizeof personVector , 1 , outFilePtr ) ;
 fclose ( outFilePtr ) ;
 
-FILE * inFilePtr = fopen ( "Block.bin" , "r" ) ;
-if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 191 ) ; abort ( ) ; } ;
+FILE * inFilePtr = fopen ( "\102\154\157\143\153\056\142\151\156" , "\162" ) ;
+if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\151\156\106\151\154\145\120\164\162\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 191 ) ; abort ( ) ; } ;
 
 while ( ! feof ( inFilePtr ) ) {
 fread ( & person , sizeof ( struct _Person ) , 1 , inFilePtr ) ;
 
-printf ( "Name  : %s\n" , person . name ) ;
-printf ( "Phone : %d\n" , person . phone ) ;
+printf ( "\116\141\155\145\040\040\072\040\045\163\012" , person . name ) ;
+printf ( "\120\150\157\156\145\040\072\040\045\144\012" , person . phone ) ;
 }
 
 fclose ( inFilePtr ) ;
 }
 
-{ FILE * inFilePtr = fopen ( "Test1.txt" , "r" ) ;
-if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 204 ) ; abort ( ) ; } ;
+{ FILE * inFilePtr = fopen ( "\124\145\163\164\061\056\164\170\164" , "\162" ) ;
+if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\151\156\106\151\154\145\120\164\162\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 204 ) ; abort ( ) ; } ;
 fseek ( inFilePtr , -1 , SEEK_END ) ;
 
 unsigned int u ;
@@ -740,19 +718,19 @@ break ;
 fseek ( inFilePtr , -2 , SEEK_CUR ) ;
 }
 
-printf ( "\n\n" ) ;
+printf ( "\012\012" ) ;
 fclose ( inFilePtr ) ;
 }
 
-printf ( "fileexists X %s\n" , fileexists ( "X" ) ? "Yes" : "No" ) ;
-printf ( "fileexists Y %s\n\n" , fileexists ( "Y" ) ? "Yes" : "No" ) ;
+printf ( "\146\151\154\145\145\170\151\163\164\163\040\130\040\045\163\012" , fileexists ( "\130" ) ? "\131\145\163" : "\116\157" ) ;
+printf ( "\146\151\154\145\145\170\151\163\164\163\040\131\040\045\163\012\012" , fileexists ( "\131" ) ? "\131\145\163" : "\116\157" ) ;
 
 { FILE * tempFilePtr ;
-FILE * inOutFilePtr = fopen ( "PBookX.txt" , "r+" ) ;
-if ( ! ( inOutFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inOutFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 228 ) ; abort ( ) ; } ;
+FILE * inOutFilePtr = fopen ( "\120\102\157\157\153\130\056\164\170\164" , "\162\053" ) ;
+if ( ! ( inOutFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\151\156\117\165\164\106\151\154\145\120\164\162\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 228 ) ; abort ( ) ; } ;
 
 tempFilePtr = tmpfile ( ) ;
-if ( ! ( tempFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "tempFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 231 ) ; abort ( ) ; } ;
+if ( ! ( tempFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\164\145\155\160\106\151\154\145\120\164\162\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 231 ) ; abort ( ) ; } ;
 
 while ( 1 ) {
 char c = ( char ) fgetc ( inOutFilePtr ) ;
@@ -767,7 +745,7 @@ putc ( toupper ( c ) , tempFilePtr ) ;
 }
 
 rewind ( tempFilePtr ) ;
-fprintf ( inOutFilePtr , "\n------------\n" ) ;
+fprintf ( inOutFilePtr , "\012\055\055\055\055\055\055\055\055\055\055\055\055\012" ) ;
 
 while ( 1 ) {
 char c = ( char ) fgetc ( tempFilePtr ) ;
@@ -783,3 +761,4 @@ fclose ( inOutFilePtr ) ;
 fclose ( tempFilePtr ) ;
 }
 }
+

@@ -36,7 +36,7 @@
 
 section .text
 
- @337$malloc:
+ @334$malloc:
 	; Return 0
 	mov rbx, 0
 	mov rax, [rbp]
@@ -44,7 +44,7 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @337$malloc$1:
+ @334$malloc$1:
 	; FunctionEnd malloc
 
 section .data
@@ -1011,25 +1011,25 @@ section .text
 
 section .data
 
-@419$ZERO:
+@416$ZERO:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@420$ONE:
+@417$ONE:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@423$TWO:
+@420$TWO:
 	; Initializer SignedInt 2
 	dd 2
 
 section .data
 
-@424$THREE:
+@421$THREE:
 	; Initializer SignedInt 3
 	dd 3
 
@@ -1988,8 +1988,8 @@ section .text
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
  assert_test$17:
-	; Parameter signedint 847 84
-	mov dword [rbp + 84], 847
+	; Parameter signedint 848 84
+	mov dword [rbp + 84], 848
 
  assert_test$18:
 	; Call fprintf 28 20
@@ -2078,8 +2078,8 @@ section .text
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
  assert_test2$6:
-	; Parameter signedint 852 84
-	mov dword [rbp + 84], 852
+	; Parameter signedint 853 84
+	mov dword [rbp + 84], 853
 
  assert_test2$7:
 	; Call fprintf 28 20

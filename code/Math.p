@@ -6,43 +6,45 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
 
 
 
-extern double exp ( double value ) ;
-extern double log ( double value ) ;
-extern double log10 ( double value ) ;
-extern int log10_int ( double value ) ;
-extern double pow ( double base , double exponent ) ;
-extern double pow_int ( double base , int exponent ) ;
 
-extern double ldexp ( double value , int exponent ) ;
-extern double frexp ( double value , int * exponent ) ;
 
-extern double sin ( double value ) ;
-extern double cos ( double value ) ;
-extern double tan ( double value ) ;
 
-extern double sinh ( double value ) ;
-extern double cosh ( double value ) ;
-extern double tanh ( double value ) ;
 
-extern double sqrt ( double value ) ;
 
-extern double asin ( double value ) ;
-extern double acos ( double value ) ;
-extern double atan ( double value ) ;
-extern double atan2 ( double num , double denum ) ;
+extern double exp ( double x ) ;
+extern double log ( double x ) ;
+extern double log10 ( double x ) ;
 
-extern double floor ( double value ) ;
-extern double ceil ( double value ) ;
-extern double round ( double value ) ;
-extern double fabs ( double value ) ;
+extern double pow ( double x , double y ) ;
+extern double ldexp ( double x , int exponent ) ;
+extern double frexp ( double x , int * exponent ) ;
 
-extern double modf ( double value , double * integralPart ) ;
-extern double fmod ( double num , double denum ) ;
+extern double sqrt ( double x ) ;
+extern double modf ( double x , double * integral ) ;
+extern double fmod ( double x , double y ) ;
+
+extern double sin ( double x ) ;
+extern double cos ( double x ) ;
+extern double tan ( double x ) ;
+
+extern double sinh ( double x ) ;
+extern double cosh ( double x ) ;
+extern double tanh ( double x ) ;
+
+extern double asin ( double x ) ;
+extern double acos ( double x ) ;
+extern double atan ( double x ) ;
+extern double atan2 ( double x , double y ) ;
+
+extern double floor ( double x ) ;
+extern double ceil ( double x ) ;
+extern double round ( double x ) ;
+extern double fabs ( double x ) ;
 
 
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,1$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ErrNo.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\errno.h,1$
 
 
 
@@ -113,6 +115,8 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
 
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
+
+
 
 
 
@@ -386,7 +390,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
 
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,4$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdlIB.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
 
 
 
@@ -447,343 +451,259 @@ ldiv_t ldiv ( long num , long denum ) ;
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,5$
 
+
+
+
 double exp ( double x ) {
-double n = 0 , faculty = 1 , power = 1 , term , sum = 0 ;
+double i = 0 , term , sum = 0 , faculty = 1 , power = 1 ;
 
 do {
 term = power / faculty ;
 sum += term ;
 power *= x ;
-faculty *= ++ n ;
+faculty *= i ;
 } while ( fabs ( term ) >= 1e-9 ) ;
 
 return sum ;
 }
 
+double log ( double x ) {
+if ( x > 0 ) {
+int n = 0 ;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-double log ( double x_plus_1 ) {
-if ( x_plus_1 > 0 ) {
-int expo = 0 ;
-
-
-while ( x_plus_1 < ( 1 / 2.7182818284590452353 ) ) {
-x_plus_1 *= 2.7182818284590452353 ;
--- expo ;
+if ( x > 1 ) {
+while ( x > 1 ) {
+x /= 2.71 ;
+++ n ;
+}
+}
+else if ( x < ( 1 / 2.71 ) ) {
+while ( x < ( 1 / 2.71 ) ) {
+x *= 2.71 ;
+-- n ;
+}
 }
 
-
-while ( x_plus_1 > ( 2 / 2.7182818284590452353 ) ) {
-x_plus_1 /= 2.7182818284590452353 ;
-++ expo ;
-}
-
-
-double n = 1 , plusMinusOne = 1 , x = x_plus_1 - 1 ,
-term , sum = 0 , power = x ;
-
-
-
-
+double i = 1 , term = 1 , sum = 0 , sign = 1 ,
+x_minus_1 = x - 1 , power = x_minus_1 ;
 
 do {
-term = plusMinusOne * ( power / n ++ ) ;
+term = sign * power / i ;
 sum += term ;
-power *= x ;
-plusMinusOne *= -1.0 ;
+power *= x_minus_1 ;
+sign *= -1.0 ;
+} while ( fabs ( term ) >= 1e-9 ) ;
 
-} while ( fabs ( term ) > 1e-9 ) ;
-
-return ( sum + expo ) ;
+return sum + n ;
 }
 else {
 errno = EDOM ;
 return 0 ;
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 double log10 ( double x ) {
-return 0.4342944820 * log ( x ) ;
-
-
-
-
-
-
-
-
-
-}
-
-int log10_int ( double x ) {
-if ( x > 0 ) {
-if ( x == 1 ) {
-return 0 ;
-}
-else if ( x > 1 ) {
-int count = 0 ;
-
-while ( x > 1 ) {
-x /= 10 ;
-++ count ;
-}
-
-return ( count - 1 ) ;
-}
-else {
-int count = 0 ;
-
-while ( x < 1 ) {
-x *= 10 ;
-++ count ;
-}
-
-return - count ;
-}
-}
-else {
-errno = EDOM ;
-return 0 ;
-}
-}
-
-double pow_int ( double x , int y ) {
-int minus = 0 ;
-
-if ( y < 0 ) {
-y = - y ;
-minus = 1 ;
-}
-
-double product = 1 ;
-int index ;
-for ( index = 0 ; index < y ; ++ index ) {
-product *= x ;
-}
-
-return minus ? ( 1 / product ) : product ;
+return log ( x ) / 2.30 ;
 }
 
 double pow ( double x , double y ) {
 if ( x > 0 ) {
-
-
-
-
-
-
-
-
-
-
-
 return exp ( y * log ( x ) ) ;
 }
+else if ( ( x == 0 ) && ( y > 0 ) ) {
+return 0 ;
+}
+else if ( ( x < 0 ) && ( floor ( y ) == ceil ( y ) ) ) {
+long long_y = ( long ) y ;
+
+if ( ( long_y % 2 ) == 0 ) {
+return exp ( y * log ( - x ) ) ;
+}
 else {
-
+return - exp ( y * log ( - x ) ) ;
+}
+}
+else {
 errno = EDOM ;
-
 return 0 ;
 }
 }
 
 double ldexp ( double x , int n ) {
-return x * pow ( 2 , ( double ) n ) ;
+return x * pow ( 2 , n ) ;
+}
+
+
+
+static log2 ( double x ) {
+return log ( x ) / 0.6931471805599453094172321 ;
 }
 
 double frexp ( double x , int * p ) {
+if ( x != 0 ) {
+int exponent = ( int ) ( log2 ( fabs ( x ) ) + 1 ) ;
+
 if ( p != ( ( void * ) 0 ) ) {
-if ( x == 0 ) {
+* p = exponent ;
+}
+
+return ( x / pow ( 2 , exponent ) ) ;
+}
+else {
+if ( p != ( ( void * ) 0 ) ) {
 * p = 0 ;
-return 0 ;
 }
-else {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* p = ( int ) ( log ( fabs ( x ) ) / log ( 2 ) ) + 1 ;
-
-
-
-double quotient = fabs ( x ) / pow ( 2 , * p ) ;
-return ( x < 0 ) ? - quotient : quotient ;
-}
-}
-else {
-if ( x == 0 ) {
 
 return 0 ;
 }
-else {
-
-int n = ( int ) ( log ( fabs ( x ) ) / log ( 2 ) ) + 1 ;
-double a = fabs ( x ) / pow ( 2 , n ) ;
-return ( x < 0 ) ? - a : a ;
 }
+
+double sqrt ( double x ) {
+if ( x >= 0 ) {
+double root_i , root_i_plus_1 = 1 ;
+
+do {
+root_i = root_i_plus_1 ;
+root_i_plus_1 = ( root_i + ( x / root_i ) ) / 2 ;
+} while ( fabs ( root_i_plus_1 - root_i ) >= 1e-9 ) ;
+
+return root_i_plus_1 ;
+}
+else {
+errno = EDOM ;
+return 0 ;
+}
+}
+
+double modf ( double x , double * p ) {
+double abs_x = fabs ( x ) ,
+integral = ( double ) ( ( long ) abs_x ) ,
+fractional = abs_x - integral ;
+
+if ( p != ( ( void * ) 0 ) ) {
+* p = ( x > 0 ) ? fractional : - fractional ;
+}
+
+return ( x > 0 ) ? integral : - integral ;
+}
+
+double fmod ( double x , double y ) {
+if ( y != 0 ) {
+double quotient = x / y ,
+remainder = fabs ( quotient - ( ( double ) ( ( long ) quotient ) ) ) ;
+return ( x > 0 ) ? remainder : - remainder ;
+}
+else {
+errno = EDOM ;
+return 0 ;
 }
 }
 
 double sin ( double x ) {
-double n = 0 , plusMinusOne = 1 , faculty = 1 , power = x , term , sum = 0 ;
+if ( fabs ( x ) > ( 2 * 3.14 ) ) {
+x = fmod ( x , 2 * 3.14 ) ;
+}
+
+double i = 0 , term , sum = 0 , sign = 1 , power = x , faculty = 1 ;
 
 do {
-term = plusMinusOne * ( power / faculty ) ;
+term = sign * power / faculty ;
 sum += term ;
-plusMinusOne *= -1 ;
+sign *= -1 ;
 power *= x * x ;
-faculty *= ( n + 2 ) * ( n + 3 ) ;
-n += 2 ;
+faculty *= ++ i * ++ i ;
 } while ( fabs ( term ) >= 1e-9 ) ;
 
 return sum ;
 }
 
 double cos ( double x ) {
-double n = 0 , plusMinusOne = 1 , faculty = 1 , power = 1 , term , sum = 0 ;
+if ( fabs ( x ) > ( 2 * 3.14 ) ) {
+x = fmod ( x , 2 * 3.14 ) ;
+}
+
+double i = 0 , term , sum = 0 , sign = 1 , power = 1 , faculty = 1 ;
 
 do {
-term = plusMinusOne * ( power / faculty ) ;
+term = sign * power / faculty ;
 sum += term ;
-plusMinusOne *= -1 ;
+sign *= -1 ;
 power *= x * x ;
-faculty *= ( n + 1 ) * ( n + 2 ) ;
-n += 2 ;
+faculty *= ++ i * ++ i ;
 } while ( fabs ( term ) >= 1e-9 ) ;
 
 return sum ;
 }
 
 double tan ( double x ) {
-double cos_value = cos ( x ) ;
+double cos_x = cos ( x ) ;
 
-if ( cos_value != 0 ) {
-return sin ( x ) / cos_value ;
+if ( cos_x != 0 ) {
+return ( sin ( x ) / cos_x ) ;
+}
+else {
+errno = EDOM ;
+return 0 ;
+}
+}
+
+double asin ( double x ) {
+if ( x == 1 ) {
+return 3.14 / 2 ;
+}
+else if ( x == -1 ) {
+return - 3.14 / 2 ;
+}
+else if ( fabs ( x ) < 1 ) {
+return atan ( x / sqrt ( 1 - ( x * x ) ) ) ;
+}
+else {
+errno = EDOM ;
+return 0 ;
+}
+}
+
+double acos ( double x ) {
+if ( x == 0 ) {
+return 3.14 / 2 ;
+}
+else if ( fabs ( x ) < 1 ) {
+return atan ( x / sqrt ( 1 - ( x * x ) ) ) ;
+}
+else {
+errno = EDOM ;
+return 0 ;
+}
+}
+
+double atan ( double x ) {
+if ( x < 0 ) {
+return - atan ( - x ) ;
+}
+else if ( x > 1 ) {
+return 3.14 / 2 - atan ( 1 / x ) ;
+}
+else if ( x > 0.5 ) {
+return 2 * atan ( x / ( 1 + sqrt ( 1 + ( x * x ) ) ) ) ;
+}
+else {
+double term , sum = 0 , sign = 1 , denominator = 1 , product = x ;
+
+do {
+term = sign * product / denominator ;
+sum += term ;
+sign = - sign ;
+product *= x * x ;
+denominator += 2 ;
+} while ( fabs ( term ) >= 1e-9 ) ;
+
+return sum ;
+}
+}
+
+double atan2 ( double x , double y ) {
+if ( y != 0 ) {
+return atan ( x / y ) ;
 }
 else {
 errno = EDOM ;
@@ -800,265 +720,7 @@ return ( exp ( x ) + exp ( - x ) ) / 2 ;
 }
 
 double tanh ( double x ) {
-double coh = cosh ( x ) ;
-
-if ( coh != 0 ) {
-double sh = sinh ( x ) ;
-double y = sh / coh ;
-
-return y ;
-}
-else {
-errno = EDOM ;
-return 0 ;
-}
-}
-
-double sqrt ( double v ) {
-if ( v >= 0 ) {
-double x_nplus1 = 1 , x ;
-int count = 0 ;
-
-do {
-x = x_nplus1 ;
-x_nplus1 = ( x + ( v / x ) ) / 2 ;
-} while ( ( ( ++ count ) < 1000 ) && ( fabs ( x_nplus1 - x ) >= 1e-9 ) ) ;
-
-return x_nplus1 ;
-}
-else {
-errno = EDOM ;
-return 0 ;
-}
-}
-
-
-
-
-double asin ( double x ) {
-if ( fabs ( x ) <= 1 ) {
-return atan2 ( x , sqrt ( ( 1 + x ) * ( 1 - x ) ) ) ;
-}
-else {
-errno = EDOM ;
-return 0 ;
-}
-}
-
-double acos ( double x ) {
-if ( fabs ( x ) <= 1 ) {
-return atan2 ( sqrt ( ( 1 + x ) * ( 1 - x ) ) , x ) ;
-}
-else {
-errno = EDOM ;
-return 0 ;
-}
-}
-
-double asin2 ( double v ) {
-
-
-if ( v == 1 ) {
-return 3.1415926535897932384 / 2 ;
-}
-else if ( v == -1 ) {
-return - 3.1415926535897932384 / 2 ;
-}
-else if ( fabs ( v ) < 1 ) {
-double x_nplus1 = 1 , x ;
-int count = 0 ;
-
-do {
-x = x_nplus1 ;
-x_nplus1 = x - tan ( x ) + ( v / cos ( x ) ) ;
-
-} while ( ( ( ++ count ) < 1000 ) && ( fabs ( x_nplus1 - x ) >= 1e-9 ) ) ;
-
-return x_nplus1 ;
-}
-else {
-errno = EDOM ;
-return 0 ;
-}
-}
-
-double acos2 ( double v ) {
-if ( v == 1 ) {
-return 0 ;
-}
-else if ( fabs ( v ) <= 1 ) {
-double x_nplus1 = 1 , x_n ;
-
-do {
-x_n = x_nplus1 ;
-x_nplus1 = x_n + ( ( cos ( x_n ) - v ) / sin ( x_n ) ) ;
-
-printf ( "\170\137\156\040\045\146\054\040\170\137\156\160\154\165\163\061\040\045\146\012" , x_n , x_nplus1 ) ;
-} while ( fabs ( x_nplus1 - x_n ) >= 1e-9 ) ;
-
-return x_nplus1 ;
-}
-else {
-errno = EDOM ;
-return 0 ;
-}
-}
-
-double square ( double x ) {
-return x * x ;
-}
-
-double atan ( double x ) {
-if ( x == 0 ) {
-return 0 ;
-}
-else if ( x == 1 ) {
-return 3.1415926535897932384 / 4 ;
-}
-else if ( x == -1 ) {
-return - 3.1415926535897932384 / 4 ;
-}
-else {
-double sign = 1 , denominator = 1 , product = x , term , sum = 0 ;
-int count = 0 ;
-
-do {
-term = sign * product / denominator ;
-sum += term ;
-sign = - sign ;
-product *= x * x ;
-denominator += 2 ;
-
-} while ( ( ( ++ count ) < 1000 ) && ( fabs ( term ) >= 1e-9 ) ) ;
-
-return sum ;
-}
-}
-
-double atanY ( double v ) {
-
-
-if ( v == 0 ) {
-
-return 0 ;
-}
-else if ( v == 1 ) {
-
-return 3.1415926535897932384 / 4 ;
-}
-else if ( v == -1 ) {
-
-return - 3.1415926535897932384 / 4 ;
-}
-else if ( fabs ( v ) < 0.5 ) {
-
-int sign = 1 , denominator = 1 , count = 0 ;
-double product = v , term , sum = 0 ;
-
-do {
-term = sign * product / denominator ;
-sum += term ;
-sign = - sign ;
-product *= v * v ;
-denominator += 2 ;
-
-} while ( ( ( ++ count ) < 1000 ) && ( fabs ( term ) >= 1e-9 ) ) ;
-
-return sum ;
-}
-else if ( fabs ( v ) < 1 ) {
-printf ( "\141\164\141\156\040\065\012" ) ;
-double x_nplus1 = 1 , x ;
-
-do {
-x = x_nplus1 ;
-x_nplus1 = x - ( ( tan ( x ) - v ) * square ( cos ( 2 * x ) + 1 ) ) / 2 ;
-printf ( "\141\164\141\156\040\170\040\045\146\040\170\137\156\160\154\165\163\061\040\045\146\012" , x , x_nplus1 ) ;
-} while ( fabs ( x_nplus1 - x ) >= 1e-9 ) ;
-
-printf ( "\141\164\141\156\040\067\012" ) ;
-return x_nplus1 ;
-}
-else {
-errno = EDOM ;
-return 0 ;
-}
-}
-
-double atanX ( double v ) {
-if ( v == 0 ) {
-return 0 ;
-}
-else if ( fabs ( v ) <= 1 ) {
-double x_nplus1 = 1 , x ;
-
-do {
-x = x_nplus1 ;
-x_nplus1 = x - ( ( tan ( x ) - v ) * square ( cos ( 2 * x ) + 1 ) ) / 2 ;
-} while ( fabs ( x_nplus1 - x ) >= 1e-9 ) ;
-
-return x_nplus1 ;
-}
-else {
-errno = EDOM ;
-return 0 ;
-}
-}
-
-double atan2 ( double y , double x ) {
-if ( x > 0 ) {
-return atan ( y / x ) ;
-}
-else if ( x < 0 ) {
-if ( y >= 0 ) {
-return atan ( y / x ) + 3.1415926535897932384 ;
-}
-else {
-return atan ( y / x ) - 3.1415926535897932384 ;
-}
-}
-else {
-if ( y > 0 ) {
-return ( 3.1415926535897932384 / 2 ) ;
-}
-else if ( y < 0 ) {
-return ( - 3.1415926535897932384 / 2 ) ;
-}
-else {
-errno = EDOM ;
-return 0 ;
-}
-}
-}
-
-double atan2x ( double num , double denum ) {
-if ( denum > 0 ) {
-
-double y = atan ( num / denum ) ;
-printf ( "\062\012" ) ;
-return y ;
-}
-else if ( ( num >= 0 ) && ( denum < 0 ) ) {
-printf ( "\062\012" ) ;
-return 3.1415926535897932384 + atan ( num / denum ) ;
-}
-else if ( ( num < 0 ) && ( denum < 0 ) ) {
-printf ( "\063\012" ) ;
-return ( - 3.1415926535897932384 ) + atan ( num / denum ) ;
-}
-else if ( ( num > 0 ) && ( denum == 0 ) ) {
-printf ( "\064\012" ) ;
-return 3.1415926535897932384 / 2 ;
-}
-else if ( ( num < 0 ) && ( denum == 0 ) ) {
-printf ( "\065\012" ) ;
-return ( - 3.1415926535897932384 ) / 2 ;
-}
-else {
-printf ( "\066\012" ) ;
-errno = EDOM ;
-return 0 ;
-}
+return sinh ( x ) / cosh ( x ) ;
 }
 
 double floor ( double x ) {
@@ -1066,7 +728,7 @@ if ( x < 0 ) {
 return - ceil ( - x ) ;
 }
 
-return ( double ) ( long ) x ;
+return ( double ) ( ( long ) x ) ;
 }
 
 double ceil ( double x ) {
@@ -1074,36 +736,14 @@ if ( x < 0 ) {
 return - floor ( - x ) ;
 }
 
-return ( double ) ( long ) ( x + 0.999999999999 ) ;
+return ( double ) ( ( long ) ( x + 0.999999999999 ) ) ;
 }
 
 double round ( double x ) {
-return ( double ) ( long ) ( ( x < 0 ) ? ( x - 0.5 ) : ( x + 0.5 ) ) ;
+return ( double ) ( ( long ) ( ( x < 0 ) ? ( x - 0.5 ) : ( x + 0.5 ) ) ) ;
 }
 
 double fabs ( double x ) {
 return ( x < 0 ) ? - x : x ;
-}
-
-double modf ( double x , double * p ) {
-double integral = ( double ) ( long ) fabs ( x ) ;
-
-if ( p != ( ( void * ) 0 ) ) {
-* p = ( x > 0 ) ? ( fabs ( x ) - integral ) : - ( fabs ( x ) - integral ) ;
-}
-
-return ( x > 0 ) ? integral : - integral ;
-}
-
-double fmod ( double x , double y ) {
-if ( y != 0 ) {
-double quotient = x / y ;
-double remainder = fabs ( quotient - ( double ) ( long ) quotient ) ;
-return ( x > 0 ) ? remainder : - remainder ;
-}
-else {
-errno = EDOM ;
-return 0 ;
-}
 }
 

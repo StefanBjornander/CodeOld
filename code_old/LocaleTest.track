@@ -4,10 +4,10 @@ locale_test:	; empty
 3:	
 
 locale_test$1:	; return
-4:		mov t2539, [bp]
+4:		mov t2507, [bp]
 5:		mov di, [bp + 4]
 6:		mov bp, [bp + 2]
-7:		jmp t2539
+7:		jmp t2507
 9:	
 
 locale_test$2:	; function end locale_test

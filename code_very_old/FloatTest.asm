@@ -6,14 +6,14 @@
 section .text
 
  float_test:
-	; empty
+	; Empty
 
  float_test$1:
-	; return
+	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  float_test$2:
-	; function end float_test
+	; FunctionEnd float_test

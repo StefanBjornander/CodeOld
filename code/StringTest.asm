@@ -183,10 +183,10 @@ section .text
 	; PostCall 284
 
  string_test$9:
-	; GetReturnValue £temporary3131
+	; GetReturnValue £temporary2987
 
  string_test$10:
-	; Parameter signedint £temporary3131 284
+	; Parameter signedint £temporary2987 284
 	mov [rbp + 284], ebx
 
  string_test$11:
@@ -252,12 +252,12 @@ section .text
 	; PostCall 244
 
  string_test$24:
-	; Dereference £temporary3135 -> u u 0
+	; Dereference £temporary2991 -> u u 0
 	mov rsi, rbp
 	add rsi, 136
 
  string_test$25:
-	; Assign £temporary3135 -> u 0
+	; Assign £temporary2991 -> u 0
 	mov byte [rsi + 5], 0
 
  string_test$26:
@@ -330,10 +330,10 @@ section .text
 	; PostCall 244
 
  string_test$41:
-	; GetReturnValue £temporary3138
+	; GetReturnValue £temporary2994
 
  string_test$42:
-	; Assign i £temporary3138
+	; Assign i £temporary2994
 	mov [rbp + 24], ebx
 
  string_test$43:
@@ -363,26 +363,26 @@ section .text
 	; PostCall 244
 
  string_test$49:
-	; BinaryAdd £temporary3140 i 2
+	; BinaryAdd £temporary2996 i 2
 	mov eax, [rbp + 24]
 	add eax, 2
 
  string_test$50:
-	; IntegralToIntegral £temporary3142 £temporary3140
+	; IntegralToIntegral £temporary2998 £temporary2996
 	mov rbx, 4294967295
 	and rax, rbx
 
  string_test$51:
-	; BinaryAdd £temporary3144 u £temporary3142
+	; BinaryAdd £temporary3000 u £temporary2998
 	mov rsi, rbp
 	add rsi, 136
 	add rsi, rax
 
  string_test$52:
-	; Dereference £temporary3141 -> £temporary3144 £temporary3144 0
+	; Dereference £temporary2997 -> £temporary3000 £temporary3000 0
 
  string_test$53:
-	; Assign £temporary3141 -> £temporary3144 0
+	; Assign £temporary2997 -> £temporary3000 0
 	mov byte [rsi], 0
 
  string_test$54:
@@ -445,10 +445,10 @@ section .text
 	; PostCall 276
 
  string_test$67:
-	; GetReturnValue £temporary3146
+	; GetReturnValue £temporary3002
 
  string_test$68:
-	; Parameter signedint £temporary3146 276
+	; Parameter signedint £temporary3002 276
 	mov [rbp + 276], ebx
 
  string_test$69:
@@ -498,10 +498,10 @@ section .text
 	; PostCall 276
 
  string_test$79:
-	; GetReturnValue £temporary3148
+	; GetReturnValue £temporary3004
 
  string_test$80:
-	; Parameter signedint £temporary3148 276
+	; Parameter signedint £temporary3004 276
 	mov [rbp + 276], ebx
 
  string_test$81:
@@ -539,10 +539,10 @@ section .text
 	; PostCall 244
 
  string_test$88:
-	; GetReturnValue £temporary3150
+	; GetReturnValue £temporary3006
 
  string_test$89:
-	; Assign p £temporary3150
+	; Assign p £temporary3006
 	mov [rbp + 236], rbx
 
  string_test$90:
@@ -558,26 +558,26 @@ section .text
 	je string_test$97
 
  string_test$93:
-	; BinarySubtract £temporary3153 p s
+	; BinarySubtract £temporary3009 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$94:
-	; IntegralToIntegral £temporary3154 £temporary3153
+	; IntegralToIntegral £temporary3010 £temporary3009
 
  string_test$95:
-	; Assign £temporary3155 £temporary3154
+	; Assign £temporary3011 £temporary3010
 
  string_test$96:
 	; Goto 98
 	jmp string_test$98
 
  string_test$97:
-	; Assign £temporary3155 -1
+	; Assign £temporary3011 -1
 	mov eax, -1
 
  string_test$98:
-	; Parameter signedint £temporary3155 276
+	; Parameter signedint £temporary3011 276
 	mov [rbp + 276], eax
 
  string_test$99:
@@ -615,10 +615,10 @@ section .text
 	; PostCall 244
 
  string_test$106:
-	; GetReturnValue £temporary3157
+	; GetReturnValue £temporary3013
 
  string_test$107:
-	; Assign p £temporary3157
+	; Assign p £temporary3013
 	mov [rbp + 236], rbx
 
  string_test$108:
@@ -634,26 +634,26 @@ section .text
 	je string_test$115
 
  string_test$111:
-	; BinarySubtract £temporary3160 p s
+	; BinarySubtract £temporary3016 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$112:
-	; IntegralToIntegral £temporary3161 £temporary3160
+	; IntegralToIntegral £temporary3017 £temporary3016
 
  string_test$113:
-	; Assign £temporary3162 £temporary3161
+	; Assign £temporary3018 £temporary3017
 
  string_test$114:
 	; Goto 116
 	jmp string_test$116
 
  string_test$115:
-	; Assign £temporary3162 -1
+	; Assign £temporary3018 -1
 	mov eax, -1
 
  string_test$116:
-	; Parameter signedint £temporary3162 276
+	; Parameter signedint £temporary3018 276
 	mov [rbp + 276], eax
 
  string_test$117:
@@ -691,10 +691,10 @@ section .text
 	; PostCall 244
 
  string_test$124:
-	; GetReturnValue £temporary3164
+	; GetReturnValue £temporary3020
 
  string_test$125:
-	; Assign p £temporary3164
+	; Assign p £temporary3020
 	mov [rbp + 236], rbx
 
  string_test$126:
@@ -710,26 +710,26 @@ section .text
 	je string_test$133
 
  string_test$129:
-	; BinarySubtract £temporary3167 p s
+	; BinarySubtract £temporary3023 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$130:
-	; IntegralToIntegral £temporary3168 £temporary3167
+	; IntegralToIntegral £temporary3024 £temporary3023
 
  string_test$131:
-	; Assign £temporary3169 £temporary3168
+	; Assign £temporary3025 £temporary3024
 
  string_test$132:
 	; Goto 134
 	jmp string_test$134
 
  string_test$133:
-	; Assign £temporary3169 -1
+	; Assign £temporary3025 -1
 	mov eax, -1
 
  string_test$134:
-	; Parameter signedint £temporary3169 276
+	; Parameter signedint £temporary3025 276
 	mov [rbp + 276], eax
 
  string_test$135:
@@ -767,10 +767,10 @@ section .text
 	; PostCall 244
 
  string_test$142:
-	; GetReturnValue £temporary3171
+	; GetReturnValue £temporary3027
 
  string_test$143:
-	; Assign p £temporary3171
+	; Assign p £temporary3027
 	mov [rbp + 236], rbx
 
  string_test$144:
@@ -786,26 +786,26 @@ section .text
 	je string_test$151
 
  string_test$147:
-	; BinarySubtract £temporary3174 p s
+	; BinarySubtract £temporary3030 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$148:
-	; IntegralToIntegral £temporary3175 £temporary3174
+	; IntegralToIntegral £temporary3031 £temporary3030
 
  string_test$149:
-	; Assign £temporary3176 £temporary3175
+	; Assign £temporary3032 £temporary3031
 
  string_test$150:
 	; Goto 152
 	jmp string_test$152
 
  string_test$151:
-	; Assign £temporary3176 -1
+	; Assign £temporary3032 -1
 	mov eax, -1
 
  string_test$152:
-	; Parameter signedint £temporary3176 276
+	; Parameter signedint £temporary3032 276
 	mov [rbp + 276], eax
 
  string_test$153:
@@ -899,12 +899,12 @@ section .text
 	; PostCall 244
 
  string_test$173:
-	; Dereference £temporary3181 -> u u 0
+	; Dereference £temporary3037 -> u u 0
 	mov rsi, rbp
 	add rsi, 136
 
  string_test$174:
-	; Assign £temporary3181 -> u 0
+	; Assign £temporary3037 -> u 0
 	mov byte [rsi + 21], 0
 
  string_test$175:
@@ -968,10 +968,10 @@ section .text
 	; PostCall 244
 
  string_test$188:
-	; GetReturnValue £temporary3183
+	; GetReturnValue £temporary3039
 
  string_test$189:
-	; Assign p £temporary3183
+	; Assign p £temporary3039
 	mov [rbp + 236], rbx
 
  string_test$190:
@@ -987,26 +987,26 @@ section .text
 	je string_test$197
 
  string_test$193:
-	; BinarySubtract £temporary3186 p s
+	; BinarySubtract £temporary3042 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$194:
-	; IntegralToIntegral £temporary3187 £temporary3186
+	; IntegralToIntegral £temporary3043 £temporary3042
 
  string_test$195:
-	; Assign £temporary3188 £temporary3187
+	; Assign £temporary3044 £temporary3043
 
  string_test$196:
 	; Goto 198
 	jmp string_test$198
 
  string_test$197:
-	; Assign £temporary3188 -1
+	; Assign £temporary3044 -1
 	mov eax, -1
 
  string_test$198:
-	; Parameter signedint £temporary3188 276
+	; Parameter signedint £temporary3044 276
 	mov [rbp + 276], eax
 
  string_test$199:
@@ -1048,10 +1048,10 @@ section .text
 	; PostCall 244
 
  string_test$207:
-	; GetReturnValue £temporary3190
+	; GetReturnValue £temporary3046
 
  string_test$208:
-	; Assign p £temporary3190
+	; Assign p £temporary3046
 	mov [rbp + 236], rbx
 
  string_test$209:
@@ -1067,26 +1067,26 @@ section .text
 	je string_test$216
 
  string_test$212:
-	; BinarySubtract £temporary3193 p s
+	; BinarySubtract £temporary3049 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
  string_test$213:
-	; IntegralToIntegral £temporary3194 £temporary3193
+	; IntegralToIntegral £temporary3050 £temporary3049
 
  string_test$214:
-	; Assign £temporary3195 £temporary3194
+	; Assign £temporary3051 £temporary3050
 
  string_test$215:
 	; Goto 217
 	jmp string_test$217
 
  string_test$216:
-	; Assign £temporary3195 -1
+	; Assign £temporary3051 -1
 	mov eax, -1
 
  string_test$217:
-	; Parameter signedint £temporary3195 276
+	; Parameter signedint £temporary3051 276
 	mov [rbp + 276], eax
 
  string_test$218:
@@ -1136,10 +1136,10 @@ section .text
 	; PostCall 276
 
  string_test$228:
-	; GetReturnValue £temporary3197
+	; GetReturnValue £temporary3053
 
  string_test$229:
-	; Parameter signedint £temporary3197 276
+	; Parameter signedint £temporary3053 276
 	mov [rbp + 276], ebx
 
  string_test$230:
@@ -1184,10 +1184,10 @@ section .text
 	; PostCall 276
 
  string_test$239:
-	; GetReturnValue £temporary3199
+	; GetReturnValue £temporary3055
 
  string_test$240:
-	; Parameter signedint £temporary3199 276
+	; Parameter signedint £temporary3055 276
 	mov [rbp + 276], ebx
 
  string_test$241:
@@ -1232,10 +1232,10 @@ section .text
 	; PostCall 276
 
  string_test$250:
-	; GetReturnValue £temporary3201
+	; GetReturnValue £temporary3057
 
  string_test$251:
-	; Parameter signedint £temporary3201 276
+	; Parameter signedint £temporary3057 276
 	mov [rbp + 276], ebx
 
  string_test$252:
@@ -1276,10 +1276,10 @@ section .text
 	; PostCall 276
 
  string_test$260:
-	; GetReturnValue £temporary3203
+	; GetReturnValue £temporary3059
 
  string_test$261:
-	; Parameter pointer £temporary3203 276
+	; Parameter pointer £temporary3059 276
 	mov [rbp + 276], rbx
 
  string_test$262:
@@ -1317,10 +1317,10 @@ section .text
 	; PostCall 244
 
  string_test$269:
-	; GetReturnValue £temporary3205
+	; GetReturnValue £temporary3061
 
  string_test$270:
-	; Assign p £temporary3205
+	; Assign p £temporary3061
 	mov [rbp + 236], rbx
 
  string_test$271:
@@ -1374,10 +1374,10 @@ section .text
 	; PostCall 244
 
  string_test$282:
-	; GetReturnValue £temporary3208
+	; GetReturnValue £temporary3064
 
  string_test$283:
-	; Assign p £temporary3208
+	; Assign p £temporary3064
 	mov [rbp + 236], rbx
 
  string_test$284:
