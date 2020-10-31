@@ -455,13 +455,13 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,5$
 
 
 double exp ( double x ) {
-double i = 0 , term , sum = 0 , faculty = 1 , power = 1 ;
+double index = 1 , term , sum = 1 , faculty = 1 , power = x ;
 
 do {
 term = power / faculty ;
 sum += term ;
 power *= x ;
-faculty *= i ;
+faculty *= ++ index ;
 } while ( fabs ( term ) >= 1e-9 ) ;
 
 return sum ;
@@ -473,22 +473,22 @@ int n = 0 ;
 
 if ( x > 1 ) {
 while ( x > 1 ) {
-x /= 2.71 ;
+x /= 2.7182818284590452353602874 ;
 ++ n ;
 }
 }
-else if ( x < ( 1 / 2.71 ) ) {
-while ( x < ( 1 / 2.71 ) ) {
-x *= 2.71 ;
+else if ( x < ( 1 / 2.7182818284590452353602874 ) ) {
+while ( x < ( 1 / 2.7182818284590452353602874 ) ) {
+x *= 2.7182818284590452353602874 ;
 -- n ;
 }
 }
 
-double i = 1 , term = 1 , sum = 0 , sign = 1 ,
+double index = 1 , term , sum = 0 , sign = 1 ,
 x_minus_1 = x - 1 , power = x_minus_1 ;
 
 do {
-term = sign * power / i ;
+term = sign * power / index ++;
 sum += term ;
 power *= x_minus_1 ;
 sign *= -1.0 ;
@@ -503,7 +503,7 @@ return 0 ;
 }
 
 double log10 ( double x ) {
-return log ( x ) / 2.30 ;
+return log ( x ) / 2.3025850929940456840179914 ;
 }
 
 double pow ( double x , double y ) {
@@ -600,36 +600,36 @@ return 0 ;
 }
 
 double sin ( double x ) {
-if ( fabs ( x ) > ( 2 * 3.14 ) ) {
-x = fmod ( x , 2 * 3.14 ) ;
+if ( fabs ( x ) > ( 2 * 3.1415926535897932384626433 ) ) {
+x = fmod ( x , 2 * 3.1415926535897932384626433 ) ;
 }
 
-double i = 0 , term , sum = 0 , sign = 1 , power = x , faculty = 1 ;
+double index = 1 , term , sum = 0 , sign = 1 , power = x , faculty = 1 ;
 
 do {
 term = sign * power / faculty ;
 sum += term ;
 sign *= -1 ;
 power *= x * x ;
-faculty *= ++ i * ++ i ;
+faculty *= ++ index * ++ index ;
 } while ( fabs ( term ) >= 1e-9 ) ;
 
 return sum ;
 }
 
 double cos ( double x ) {
-if ( fabs ( x ) > ( 2 * 3.14 ) ) {
-x = fmod ( x , 2 * 3.14 ) ;
+if ( fabs ( x ) > ( 2 * 3.1415926535897932384626433 ) ) {
+x = fmod ( x , 2 * 3.1415926535897932384626433 ) ;
 }
 
-double i = 0 , term , sum = 0 , sign = 1 , power = 1 , faculty = 1 ;
+double index = 0 , term , sum = 0 , sign = 1 , power = 1 , faculty = 1 ;
 
 do {
 term = sign * power / faculty ;
 sum += term ;
 sign *= -1 ;
 power *= x * x ;
-faculty *= ++ i * ++ i ;
+faculty *= ++ index * ++ index ;
 } while ( fabs ( term ) >= 1e-9 ) ;
 
 return sum ;
@@ -649,10 +649,10 @@ return 0 ;
 
 double asin ( double x ) {
 if ( x == 1 ) {
-return 3.14 / 2 ;
+return 3.1415926535897932384626433 / 2 ;
 }
 else if ( x == -1 ) {
-return - 3.14 / 2 ;
+return - 3.1415926535897932384626433 / 2 ;
 }
 else if ( fabs ( x ) < 1 ) {
 return atan ( x / sqrt ( 1 - ( x * x ) ) ) ;
@@ -665,7 +665,7 @@ return 0 ;
 
 double acos ( double x ) {
 if ( x == 0 ) {
-return 3.14 / 2 ;
+return 3.1415926535897932384626433 / 2 ;
 }
 else if ( fabs ( x ) < 1 ) {
 return atan ( x / sqrt ( 1 - ( x * x ) ) ) ;
@@ -681,7 +681,7 @@ if ( x < 0 ) {
 return - atan ( - x ) ;
 }
 else if ( x > 1 ) {
-return 3.14 / 2 - atan ( 1 / x ) ;
+return 3.1415926535897932384626433 / 2 - atan ( 1 / x ) ;
 }
 else if ( x > 0.5 ) {
 return 2 * atan ( x / ( 1 + sqrt ( 1 + ( x * x ) ) ) ) ;

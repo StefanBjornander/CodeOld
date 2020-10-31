@@ -321,10 +321,10 @@ section .text
 	; PostCall 72
 
  acos_test$9:
-	; GetReturnValue £temporary3099
+	; GetReturnValue £temporary3109
 
  acos_test$10:
-	; Parameter double £temporary3099 72
+	; Parameter double £temporary3109 72
 	fstp qword [rbp + 72]
 
  acos_test$11:
@@ -403,10 +403,10 @@ section .text
 	; PostCall 72
 
  atan_test$9:
-	; GetReturnValue £temporary3104
+	; GetReturnValue £temporary3114
 
  atan_test$10:
-	; Parameter double £temporary3104 72
+	; Parameter double £temporary3114 72
 	fstp qword [rbp + 72]
 
  atan_test$11:
@@ -1262,9 +1262,9 @@ string_2020fabs2825f29203D2025f2C20errno203D2025i0A#:
 
 section .data
 
-string_frexp2028z2C20j29203D202825f2C2025i292C20errno203D2025i0A#:
-	; Initializer String frexp (z, j) = (%f, %i), errno = %i\n
-	db "frexp (z, j) = (%f, %i), errno = %i", 10, 0
+string_frexp202825f2C20p29203D202825f2C2025i292C20errno203D2025i0A#:
+	; Initializer String frexp (%f, p) = (%f, %i), errno = %i\n
+	db "frexp (%f, p) = (%f, %i), errno = %i", 10, 0
 
 section .data
 
@@ -1274,9 +1274,9 @@ string_Error20message3A#:
 
 section .data
 
-string_modf2028z2C20w29203D202825f2C2025f292C20errno203D2025i0A#:
-	; Initializer String modf (z, w) = (%f, %f), errno = %i\n
-	db "modf (z, w) = (%f, %f), errno = %i", 10, 0
+string_modf202825f2C20p29203D202825f2C2025f292C20errno203D2025i0A#:
+	; Initializer String modf (%f, p) = (%f, %f), errno = %i\n
+	db "modf (%f, p) = (%f, %f), errno = %i", 10, 0
 
 section .data
 
@@ -1350,10 +1350,10 @@ section .text
 	; PostCall 72
 
  math_test_1$15:
-	; GetReturnValue £temporary3173
+	; GetReturnValue £temporary3183
 
  math_test_1$16:
-	; Parameter double £temporary3173 72
+	; Parameter double £temporary3183 72
 	fstp qword [rbp + 72]
 
  math_test_1$17:
@@ -1414,10 +1414,10 @@ section .text
 	; PostCall 72
 
  math_test_1$30:
-	; GetReturnValue £temporary3175
+	; GetReturnValue £temporary3185
 
  math_test_1$31:
-	; Parameter double £temporary3175 72
+	; Parameter double £temporary3185 72
 	fstp qword [rbp + 72]
 
  math_test_1$32:
@@ -1478,10 +1478,10 @@ section .text
 	; PostCall 72
 
  math_test_1$45:
-	; GetReturnValue £temporary3177
+	; GetReturnValue £temporary3187
 
  math_test_1$46:
-	; Parameter double £temporary3177 72
+	; Parameter double £temporary3187 72
 	fstp qword [rbp + 72]
 
  math_test_1$47:
@@ -1542,10 +1542,10 @@ section .text
 	; PostCall 72
 
  math_test_1$60:
-	; GetReturnValue £temporary3179
+	; GetReturnValue £temporary3189
 
  math_test_1$61:
-	; Parameter double £temporary3179 72
+	; Parameter double £temporary3189 72
 	fstp qword [rbp + 72]
 
  math_test_1$62:
@@ -1606,10 +1606,10 @@ section .text
 	; PostCall 72
 
  math_test_1$75:
-	; GetReturnValue £temporary3181
+	; GetReturnValue £temporary3191
 
  math_test_1$76:
-	; Parameter double £temporary3181 72
+	; Parameter double £temporary3191 72
 	fstp qword [rbp + 72]
 
  math_test_1$77:
@@ -1670,10 +1670,10 @@ section .text
 	; PostCall 72
 
  math_test_1$90:
-	; GetReturnValue £temporary3183
+	; GetReturnValue £temporary3193
 
  math_test_1$91:
-	; Parameter double £temporary3183 72
+	; Parameter double £temporary3193 72
 	fstp qword [rbp + 72]
 
  math_test_1$92:
@@ -1734,10 +1734,10 @@ section .text
 	; PostCall 72
 
  math_test_1$105:
-	; GetReturnValue £temporary3185
+	; GetReturnValue £temporary3195
 
  math_test_1$106:
-	; Parameter double £temporary3185 72
+	; Parameter double £temporary3195 72
 	fstp qword [rbp + 72]
 
  math_test_1$107:
@@ -1798,10 +1798,10 @@ section .text
 	; PostCall 72
 
  math_test_1$120:
-	; GetReturnValue £temporary3187
+	; GetReturnValue £temporary3197
 
  math_test_1$121:
-	; Parameter double £temporary3187 72
+	; Parameter double £temporary3197 72
 	fstp qword [rbp + 72]
 
  math_test_1$122:
@@ -1862,10 +1862,10 @@ section .text
 	; PostCall 72
 
  math_test_1$135:
-	; GetReturnValue £temporary3189
+	; GetReturnValue £temporary3199
 
  math_test_1$136:
-	; Parameter double £temporary3189 72
+	; Parameter double £temporary3199 72
 	fstp qword [rbp + 72]
 
  math_test_1$137:
@@ -1926,10 +1926,10 @@ section .text
 	; PostCall 72
 
  math_test_1$150:
-	; GetReturnValue £temporary3191
+	; GetReturnValue £temporary3201
 
  math_test_1$151:
-	; Parameter double £temporary3191 72
+	; Parameter double £temporary3201 72
 	fstp qword [rbp + 72]
 
  math_test_1$152:
@@ -1990,10 +1990,10 @@ section .text
 	; PostCall 72
 
  math_test_1$165:
-	; GetReturnValue £temporary3193
+	; GetReturnValue £temporary3203
 
  math_test_1$166:
-	; Parameter double £temporary3193 72
+	; Parameter double £temporary3203 72
 	fstp qword [rbp + 72]
 
  math_test_1$167:
@@ -2054,10 +2054,10 @@ section .text
 	; PostCall 72
 
  math_test_1$180:
-	; GetReturnValue £temporary3195
+	; GetReturnValue £temporary3205
 
  math_test_1$181:
-	; Parameter double £temporary3195 72
+	; Parameter double £temporary3205 72
 	fstp qword [rbp + 72]
 
  math_test_1$182:
@@ -2118,10 +2118,10 @@ section .text
 	; PostCall 72
 
  math_test_1$195:
-	; GetReturnValue £temporary3197
+	; GetReturnValue £temporary3207
 
  math_test_1$196:
-	; Parameter double £temporary3197 72
+	; Parameter double £temporary3207 72
 	fstp qword [rbp + 72]
 
  math_test_1$197:
@@ -2182,10 +2182,10 @@ section .text
 	; PostCall 72
 
  math_test_1$210:
-	; GetReturnValue £temporary3199
+	; GetReturnValue £temporary3209
 
  math_test_1$211:
-	; Parameter double £temporary3199 72
+	; Parameter double £temporary3209 72
 	fstp qword [rbp + 72]
 
  math_test_1$212:
@@ -2246,10 +2246,10 @@ section .text
 	; PostCall 72
 
  math_test_1$225:
-	; GetReturnValue £temporary3201
+	; GetReturnValue £temporary3211
 
  math_test_1$226:
-	; Parameter double £temporary3201 72
+	; Parameter double £temporary3211 72
 	fstp qword [rbp + 72]
 
  math_test_1$227:
@@ -2310,10 +2310,10 @@ section .text
 	; PostCall 72
 
  math_test_1$240:
-	; GetReturnValue £temporary3203
+	; GetReturnValue £temporary3213
 
  math_test_1$241:
-	; Parameter double £temporary3203 72
+	; Parameter double £temporary3213 72
 	fstp qword [rbp + 72]
 
  math_test_1$242:
@@ -2353,12 +2353,12 @@ section .text
 	fstp qword [rbp + 60]
 
  math_test_1$250:
-	; Address £temporary3205 j
+	; Address £temporary3215 j
 	mov rsi, rbp
 	add rsi, 32
 
  math_test_1$251:
-	; Parameter pointer £temporary3205 68
+	; Parameter pointer £temporary3215 68
 	mov [rbp + 68], rsi
 
  math_test_1$252:
@@ -2372,7 +2372,7 @@ section .text
 	; PostCall 36
 
  math_test_1$254:
-	; GetReturnValue £temporary3206
+	; GetReturnValue £temporary3216
 
  math_test_1$255:
 	; PopFloat z
@@ -2382,202 +2382,218 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$257:
-	; Parameter pointer "frexp (z, j) = (%f, %i), errno = %i\n" 68
-	mov qword [rbp + 68], string_frexp2028z2C20j29203D202825f2C2025i292C20errno203D2025i0A#
+	; Parameter pointer "frexp (%f, p) = (%f, %i), errno = %i\n" 68
+	mov qword [rbp + 68], string_frexp202825f2C20p29203D202825f2C2025i292C20errno203D2025i0A#
 
  math_test_1$258:
-	; PushFloat z
-	fld qword [rbp + 36]
-
- math_test_1$259:
-	; Parameter double z 76
-	fstp qword [rbp + 76]
-
- math_test_1$260:
-	; Parameter signedint j 84
-	mov eax, [rbp + 32]
-	mov [rbp + 84], eax
-
- math_test_1$261:
-	; Parameter signedint errno 88
-	mov eax, [errno]
-	mov [rbp + 88], eax
-
- math_test_1$262:
-	; Call printf 44 16
-	mov qword [rbp + 44], math_test_1$263
-	mov [rbp + 52], rbp
-	add rbp, 44
-	mov rdi, rbp
-	add rdi, 16
-	jmp printf
-
- math_test_1$263:
-	; PostCall 44
-
- math_test_1$264:
-	; Equal 270 errno 0
-	cmp dword [errno], 0
-	je math_test_1$270
-
- math_test_1$265:
-	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- math_test_1$266:
-	; Parameter pointer "Error message:" 68
-	mov qword [rbp + 68], string_Error20message3A#
-
- math_test_1$267:
-	; Call perror 44 0
-	mov qword [rbp + 44], math_test_1$268
-	mov [rbp + 52], rbp
-	add rbp, 44
-	jmp perror
-
- math_test_1$268:
-	; PostCall 44
-
- math_test_1$269:
-	; Assign errno 0
-	mov dword [errno], 0
-
- math_test_1$270:
-	; PushFloat 0
-	fldz
-
- math_test_1$271:
-	; PopFloat w
-	fstp qword [rbp + 32]
-
- math_test_1$272:
-	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- math_test_1$273:
 	; PushFloat x
 	fld qword [rbp + 24]
 
- math_test_1$274:
-	; Parameter double x 64
-	fstp qword [rbp + 64]
+ math_test_1$259:
+	; Parameter double x 76
+	fstp qword [rbp + 76]
 
- math_test_1$275:
-	; Address £temporary3210 w
-	mov rsi, rbp
-	add rsi, 32
-
- math_test_1$276:
-	; Parameter pointer £temporary3210 72
-	mov [rbp + 72], rsi
-
- math_test_1$277:
-	; Call modf 40 0
-	mov qword [rbp + 40], math_test_1$278
-	mov [rbp + 48], rbp
-	add rbp, 40
-	jmp modf
-
- math_test_1$278:
-	; PostCall 40
-
- math_test_1$279:
-	; GetReturnValue £temporary3211
-
- math_test_1$280:
-	; PopFloat z
-	fstp qword [rbp + 40]
-
- math_test_1$281:
-	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- math_test_1$282:
-	; Parameter pointer "modf (z, w) = (%f, %f), errno = %i\n" 72
-	mov qword [rbp + 72], string_modf2028z2C20w29203D202825f2C2025f292C20errno203D2025i0A#
-
- math_test_1$283:
+ math_test_1$260:
 	; PushFloat z
-	fld qword [rbp + 40]
+	fld qword [rbp + 36]
 
- math_test_1$284:
-	; Parameter double z 80
-	fstp qword [rbp + 80]
+ math_test_1$261:
+	; Parameter double z 84
+	fstp qword [rbp + 84]
 
- math_test_1$285:
-	; PushFloat w
-	fld qword [rbp + 32]
+ math_test_1$262:
+	; Parameter signedint j 92
+	mov eax, [rbp + 32]
+	mov [rbp + 92], eax
 
- math_test_1$286:
-	; Parameter double w 88
-	fstp qword [rbp + 88]
-
- math_test_1$287:
+ math_test_1$263:
 	; Parameter signedint errno 96
 	mov eax, [errno]
 	mov [rbp + 96], eax
 
+ math_test_1$264:
+	; Call printf 44 24
+	mov qword [rbp + 44], math_test_1$265
+	mov [rbp + 52], rbp
+	add rbp, 44
+	mov rdi, rbp
+	add rdi, 24
+	jmp printf
+
+ math_test_1$265:
+	; PostCall 44
+
+ math_test_1$266:
+	; Equal 272 errno 0
+	cmp dword [errno], 0
+	je math_test_1$272
+
+ math_test_1$267:
+	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ math_test_1$268:
+	; Parameter pointer "Error message:" 68
+	mov qword [rbp + 68], string_Error20message3A#
+
+ math_test_1$269:
+	; Call perror 44 0
+	mov qword [rbp + 44], math_test_1$270
+	mov [rbp + 52], rbp
+	add rbp, 44
+	jmp perror
+
+ math_test_1$270:
+	; PostCall 44
+
+ math_test_1$271:
+	; Assign errno 0
+	mov dword [errno], 0
+
+ math_test_1$272:
+	; PushFloat 0
+	fldz
+
+ math_test_1$273:
+	; PopFloat w
+	fstp qword [rbp + 32]
+
+ math_test_1$274:
+	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ math_test_1$275:
+	; PushFloat x
+	fld qword [rbp + 24]
+
+ math_test_1$276:
+	; Parameter double x 64
+	fstp qword [rbp + 64]
+
+ math_test_1$277:
+	; Address £temporary3220 w
+	mov rsi, rbp
+	add rsi, 32
+
+ math_test_1$278:
+	; Parameter pointer £temporary3220 72
+	mov [rbp + 72], rsi
+
+ math_test_1$279:
+	; Call modf 40 0
+	mov qword [rbp + 40], math_test_1$280
+	mov [rbp + 48], rbp
+	add rbp, 40
+	jmp modf
+
+ math_test_1$280:
+	; PostCall 40
+
+ math_test_1$281:
+	; GetReturnValue £temporary3221
+
+ math_test_1$282:
+	; PopFloat z
+	fstp qword [rbp + 40]
+
+ math_test_1$283:
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ math_test_1$284:
+	; Parameter pointer "modf (%f, p) = (%f, %f), errno = %i\n" 72
+	mov qword [rbp + 72], string_modf202825f2C20p29203D202825f2C2025f292C20errno203D2025i0A#
+
+ math_test_1$285:
+	; PushFloat x
+	fld qword [rbp + 24]
+
+ math_test_1$286:
+	; Parameter double x 80
+	fstp qword [rbp + 80]
+
+ math_test_1$287:
+	; PushFloat z
+	fld qword [rbp + 40]
+
  math_test_1$288:
-	; Call printf 48 20
-	mov qword [rbp + 48], math_test_1$289
+	; Parameter double z 88
+	fstp qword [rbp + 88]
+
+ math_test_1$289:
+	; PushFloat w
+	fld qword [rbp + 32]
+
+ math_test_1$290:
+	; Parameter double w 96
+	fstp qword [rbp + 96]
+
+ math_test_1$291:
+	; Parameter signedint errno 104
+	mov eax, [errno]
+	mov [rbp + 104], eax
+
+ math_test_1$292:
+	; Call printf 48 28
+	mov qword [rbp + 48], math_test_1$293
 	mov [rbp + 56], rbp
 	add rbp, 48
 	mov rdi, rbp
-	add rdi, 20
+	add rdi, 28
 	jmp printf
 
- math_test_1$289:
+ math_test_1$293:
 	; PostCall 48
 
- math_test_1$290:
-	; Equal 296 errno 0
+ math_test_1$294:
+	; Equal 300 errno 0
 	cmp dword [errno], 0
-	je math_test_1$296
+	je math_test_1$300
 
- math_test_1$291:
+ math_test_1$295:
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- math_test_1$292:
+ math_test_1$296:
 	; Parameter pointer "Error message:" 72
 	mov qword [rbp + 72], string_Error20message3A#
 
- math_test_1$293:
+ math_test_1$297:
 	; Call perror 48 0
-	mov qword [rbp + 48], math_test_1$294
+	mov qword [rbp + 48], math_test_1$298
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp perror
 
- math_test_1$294:
+ math_test_1$298:
 	; PostCall 48
 
- math_test_1$295:
+ math_test_1$299:
 	; Assign errno 0
 	mov dword [errno], 0
 
- math_test_1$296:
+ math_test_1$300:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- math_test_1$297:
+ math_test_1$301:
 	; Parameter pointer "\n" 56
 	mov qword [rbp + 56], string_0A#
 
- math_test_1$298:
+ math_test_1$302:
 	; Call printf 32 0
-	mov qword [rbp + 32], math_test_1$299
+	mov qword [rbp + 32], math_test_1$303
 	mov [rbp + 40], rbp
 	add rbp, 32
 	mov rdi, rbp
 	jmp printf
 
- math_test_1$299:
+ math_test_1$303:
 	; PostCall 32
 
- math_test_1$300:
+ math_test_1$304:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- math_test_1$301:
+ math_test_1$305:
 	; FunctionEnd math_test_1
 
 section .data
@@ -2665,10 +2681,10 @@ section .text
 	; PostCall 88
 
  math_test_2$13:
-	; GetReturnValue £temporary3272
+	; GetReturnValue £temporary3284
 
  math_test_2$14:
-	; Parameter double £temporary3272 88
+	; Parameter double £temporary3284 88
 	fstp qword [rbp + 88]
 
  math_test_2$15:
@@ -2745,10 +2761,10 @@ section .text
 	; PostCall 88
 
  math_test_2$32:
-	; GetReturnValue £temporary3274
+	; GetReturnValue £temporary3286
 
  math_test_2$33:
-	; Parameter double £temporary3274 88
+	; Parameter double £temporary3286 88
 	fstp qword [rbp + 88]
 
  math_test_2$34:
@@ -2825,10 +2841,10 @@ section .text
 	; PostCall 88
 
  math_test_2$51:
-	; GetReturnValue £temporary3276
+	; GetReturnValue £temporary3288
 
  math_test_2$52:
-	; Parameter double £temporary3276 88
+	; Parameter double £temporary3288 88
 	fstp qword [rbp + 88]
 
  math_test_2$53:
@@ -2890,12 +2906,12 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$66:
-	; FloatingToIntegral £temporary3279 y
+	; FloatingToIntegral £temporary3291 y
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  math_test_2$67:
-	; Parameter signedint £temporary3279 80
+	; Parameter signedint £temporary3291 80
 	mov [rbp + 80], eax
 
  math_test_2$68:
@@ -2914,12 +2930,12 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$72:
-	; FloatingToIntegral £temporary3280 y
+	; FloatingToIntegral £temporary3292 y
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  math_test_2$73:
-	; Parameter signedint £temporary3280 116
+	; Parameter signedint £temporary3292 116
 	mov [rbp + 116], eax
 
  math_test_2$74:
@@ -2933,10 +2949,10 @@ section .text
 	; PostCall 84
 
  math_test_2$76:
-	; GetReturnValue £temporary3281
+	; GetReturnValue £temporary3293
 
  math_test_2$77:
-	; Parameter double £temporary3281 84
+	; Parameter double £temporary3293 84
 	fstp qword [rbp + 84]
 
  math_test_2$78:

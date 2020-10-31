@@ -8,13 +8,13 @@
 #define EPSILON   1e-9
 
 double exp(double x) {
-  double i = 0, term, sum = 1, faculty = 1, power = x;
+  double index = 1, term, sum = 1, faculty = 1, power = x;
 
   do {
     term = power / faculty;
     sum += term;
     power *= x;
-    faculty *= ++i;
+    faculty *= ++index;
   } while (fabs(term) >= EPSILON);
 
   return sum;
@@ -37,11 +37,11 @@ double log(double x) {
       }
     }
 
-    double i = 1, term = 1, sum = 0, sign = 1,
+    double index = 1, term, sum = 0, sign = 1,
            x_minus_1 = x - 1, power = x_minus_1;
 
     do {
-      term = sign * power / i;
+      term = sign * power / index++;
       sum += term;
       power *= x_minus_1;
       sign *= -1.0;
@@ -94,6 +94,7 @@ static log2(double x) {
 
 double frexp(double x, int* p) {
   if (x != 0)  {
+    printf("%f %f %f\n", x, fabs(x), log2(fabs(x)));
     int exponent = (int) (log2(fabs(x)) + 1);
 
     if (p != NULL) {
@@ -134,10 +135,10 @@ double modf(double x, double* p) {
     fractional = abs_x - integral;
 
   if (p != NULL)  {
-    *p = (x > 0) ? fractional : -fractional;
+    *p = (x > 0) ? integral : -integral;
   }
 
-  return (x > 0) ? integral : -integral;
+  return (x > 0) ? fractional : -fractional; 
 }
 
 double fmod(double x, double y) {
@@ -157,14 +158,14 @@ double sin(double x) {
     x = fmod(x, 2 * PI);
   }
 
-  double i = 0, term, sum = 0, sign = 1, power = x, faculty = 1;
+  double index = 1, term, sum = 0, sign = 1, power = x, faculty = 1;
 
   do {
     term = sign * power / faculty;
     sum += term;
     sign *= -1;
     power *= x * x;
-    faculty *= ++i * ++i;
+    faculty *= ++index * ++index;
   } while (fabs(term) >= EPSILON);
 
   return sum;
@@ -175,14 +176,14 @@ double cos(double x) {
     x = fmod(x, 2 * PI);
   }
 
-  double i = 0, term, sum = 0, sign = 1, power = 1, faculty = 1;
+  double index = 0, term, sum = 0, sign = 1, power = 1, faculty = 1;
 
   do {
     term = sign * power / faculty;
     sum += term;
     sign *= -1;
     power *= x * x;
-    faculty *= ++i * ++i;
+    faculty *= ++index * ++index;
   } while (fabs(term) >= EPSILON);
 
   return sum;

@@ -7,48 +7,48 @@
 section .text
 
  setjmp:
-	; InspectRegister £temporary661 rbp
+	; InspectRegister £temporary671 rbp
 
  setjmp$1:
-	; Assign rbp_pointer £temporary661
+	; Assign rbp_pointer £temporary671
 	mov [rbp + 32], rbp
 
  setjmp$2:
-	; Dereference £temporary662 -> buf buf 0
+	; Dereference £temporary672 -> buf buf 0
 	mov rsi, [rbp + 24]
 
  setjmp$3:
-	; Dereference £temporary663 -> rbp_pointer rbp_pointer 0
+	; Dereference £temporary673 -> rbp_pointer rbp_pointer 0
 	mov rdi, [rbp + 32]
 
  setjmp$4:
-	; Assign £temporary662 -> buf £temporary663 -> rbp_pointer
+	; Assign £temporary672 -> buf £temporary673 -> rbp_pointer
 	mov rax, [rdi]
 	mov [rsi], rax
 
  setjmp$5:
-	; Dereference £temporary664 -> buf buf 0
+	; Dereference £temporary674 -> buf buf 0
 	mov rsi, [rbp + 24]
 
  setjmp$6:
-	; Dereference £temporary665 -> rbp_pointer rbp_pointer 0
+	; Dereference £temporary675 -> rbp_pointer rbp_pointer 0
 	mov rdi, [rbp + 32]
 
  setjmp$7:
-	; Assign £temporary664 -> buf £temporary665 -> rbp_pointer
+	; Assign £temporary674 -> buf £temporary675 -> rbp_pointer
 	mov rax, [rdi + 8]
 	mov [rsi + 8], rax
 
  setjmp$8:
-	; Dereference £temporary666 -> buf buf 0
+	; Dereference £temporary676 -> buf buf 0
 	mov rsi, [rbp + 24]
 
  setjmp$9:
-	; Dereference £temporary667 -> rbp_pointer rbp_pointer 0
+	; Dereference £temporary677 -> rbp_pointer rbp_pointer 0
 	mov rdi, [rbp + 32]
 
  setjmp$10:
-	; Assign £temporary666 -> buf £temporary667 -> rbp_pointer
+	; Assign £temporary676 -> buf £temporary677 -> rbp_pointer
 	mov rax, [rdi + 16]
 	mov [rsi + 16], rax
 
@@ -70,27 +70,27 @@ section .text
 	mov ebx, [rbp + 32]
 
  longjmp$1:
-	; Dereference £temporary670 -> buf buf 0
+	; Dereference £temporary680 -> buf buf 0
 	mov rsi, [rbp + 24]
 
  longjmp$2:
-	; AssignRegister rcx £temporary670 -> buf
+	; AssignRegister rcx £temporary680 -> buf
 	mov rcx, [rsi]
 
  longjmp$3:
-	; Dereference £temporary672 -> buf buf 0
+	; Dereference £temporary682 -> buf buf 0
 	mov rsi, [rbp + 24]
 
  longjmp$4:
-	; AssignRegister rdi £temporary672 -> buf
+	; AssignRegister rdi £temporary682 -> buf
 	mov rdi, [rsi + 16]
 
  longjmp$5:
-	; Dereference £temporary674 -> buf buf 0
+	; Dereference £temporary684 -> buf buf 0
 	mov rsi, [rbp + 24]
 
  longjmp$6:
-	; AssignRegister rbp £temporary674 -> buf
+	; AssignRegister rbp £temporary684 -> buf
 	mov rbp, [rsi + 8]
 
  longjmp$7:

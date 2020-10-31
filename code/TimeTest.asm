@@ -150,22 +150,22 @@ section .text
 	; PostCall 80
 
  time_test$11:
-	; GetReturnValue £temporary3895
+	; GetReturnValue £temporary3907
 
  time_test$12:
-	; Assign now £temporary3895
+	; Assign now £temporary3907
 	mov [rbp + 80], rbx
 
  time_test$13:
 	; PreCall 88 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  time_test$14:
-	; Address £temporary3896 now
+	; Address £temporary3908 now
 	mov rsi, rbp
 	add rsi, 80
 
  time_test$15:
-	; Parameter pointer £temporary3896 112
+	; Parameter pointer £temporary3908 112
 	mov [rbp + 112], rsi
 
  time_test$16:
@@ -179,10 +179,10 @@ section .text
 	; PostCall 88
 
  time_test$18:
-	; GetReturnValue £temporary3897
+	; GetReturnValue £temporary3909
 
  time_test$19:
-	; Assign p £temporary3897
+	; Assign p £temporary3909
 	mov [rbp + 88], rbx
 
  time_test$20:
@@ -204,10 +204,10 @@ section .text
 	; PostCall 96
 
  time_test$24:
-	; GetReturnValue £temporary3898
+	; GetReturnValue £temporary3910
 
  time_test$25:
-	; Assign now2 £temporary3898
+	; Assign now2 £temporary3910
 	mov [rbp + 96], rbx
 
  time_test$26:
@@ -259,11 +259,11 @@ section .text
 	; PostCall 104
 
  time_test$36:
-	; Dereference £temporary3901 -> p p 0
+	; Dereference £temporary3913 -> p p 0
 	mov rsi, [rbp + 88]
 
  time_test$37:
-	; Assign s £temporary3901 -> p
+	; Assign s £temporary3913 -> p
 	mov rdi, rbp
 	add rdi, 104
 	mov al, 36
@@ -285,46 +285,46 @@ section .text
 	mov qword [rbp + 164], string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 
  time_test$40:
-	; IntegralToIntegral £temporary3904 s.tm_wday
+	; IntegralToIntegral £temporary3916 s.tm_wday
 	mov eax, [rbp + 128]
 	mov rbx, 4294967295
 	and rax, rbx
 
  time_test$41:
-	; UnsignedMultiply £temporary3905 £temporary3904 8
+	; UnsignedMultiply £temporary3917 £temporary3916 8
 	xor rdx, rdx
 	mul qword [Array_8#]
 
  time_test$42:
-	; BinaryAdd £temporary3906 weekdays £temporary3905
+	; BinaryAdd £temporary3918 weekdays £temporary3917
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
  time_test$43:
-	; Dereference £temporary3903 -> £temporary3906 £temporary3906 0
+	; Dereference £temporary3915 -> £temporary3918 £temporary3918 0
 
  time_test$44:
-	; Parameter pointer £temporary3903 -> £temporary3906 172
+	; Parameter pointer £temporary3915 -> £temporary3918 172
 	mov rax, [rsi]
 	mov [rbp + 172], rax
 
  time_test$45:
-	; BinaryAdd £temporary3908 s.tm_year 1900
+	; BinaryAdd £temporary3920 s.tm_year 1900
 	mov eax, [rbp + 124]
 	add eax, 1900
 
  time_test$46:
-	; Parameter signedint £temporary3908 180
+	; Parameter signedint £temporary3920 180
 	mov [rbp + 180], eax
 
  time_test$47:
-	; BinaryAdd £temporary3910 s.tm_mon 1
+	; BinaryAdd £temporary3922 s.tm_mon 1
 	mov eax, [rbp + 120]
 	inc eax
 
  time_test$48:
-	; Parameter signedint £temporary3910 184
+	; Parameter signedint £temporary3922 184
 	mov [rbp + 184], eax
 
  time_test$49:
@@ -378,12 +378,12 @@ section .text
 	; PreCall 140 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  time_test$59:
-	; Address £temporary3919 now
+	; Address £temporary3931 now
 	mov rsi, rbp
 	add rsi, 80
 
  time_test$60:
-	; Parameter pointer £temporary3919 164
+	; Parameter pointer £temporary3931 164
 	mov [rbp + 164], rsi
 
  time_test$61:
@@ -397,13 +397,13 @@ section .text
 	; PostCall 140
 
  time_test$63:
-	; GetReturnValue £temporary3920
+	; GetReturnValue £temporary3932
 
  time_test$64:
-	; Dereference £temporary3921 -> £temporary3920 £temporary3920 0
+	; Dereference £temporary3933 -> £temporary3932 £temporary3932 0
 
  time_test$65:
-	; Assign s £temporary3921 -> £temporary3920
+	; Assign s £temporary3933 -> £temporary3932
 	mov rsi, rbp
 	add rsi, 104
 	mov al, 36
@@ -425,46 +425,46 @@ section .text
 	mov qword [rbp + 164], string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 
  time_test$68:
-	; IntegralToIntegral £temporary3924 s.tm_wday
+	; IntegralToIntegral £temporary3936 s.tm_wday
 	mov eax, [rbp + 128]
 	mov rbx, 4294967295
 	and rax, rbx
 
  time_test$69:
-	; UnsignedMultiply £temporary3925 £temporary3924 8
+	; UnsignedMultiply £temporary3937 £temporary3936 8
 	xor rdx, rdx
 	mul qword [Array_8#]
 
  time_test$70:
-	; BinaryAdd £temporary3926 weekdays £temporary3925
+	; BinaryAdd £temporary3938 weekdays £temporary3937
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
  time_test$71:
-	; Dereference £temporary3923 -> £temporary3926 £temporary3926 0
+	; Dereference £temporary3935 -> £temporary3938 £temporary3938 0
 
  time_test$72:
-	; Parameter pointer £temporary3923 -> £temporary3926 172
+	; Parameter pointer £temporary3935 -> £temporary3938 172
 	mov rax, [rsi]
 	mov [rbp + 172], rax
 
  time_test$73:
-	; BinaryAdd £temporary3928 s.tm_year 1900
+	; BinaryAdd £temporary3940 s.tm_year 1900
 	mov eax, [rbp + 124]
 	add eax, 1900
 
  time_test$74:
-	; Parameter signedint £temporary3928 180
+	; Parameter signedint £temporary3940 180
 	mov [rbp + 180], eax
 
  time_test$75:
-	; BinaryAdd £temporary3930 s.tm_mon 1
+	; BinaryAdd £temporary3942 s.tm_mon 1
 	mov eax, [rbp + 120]
 	inc eax
 
  time_test$76:
-	; Parameter signedint £temporary3930 184
+	; Parameter signedint £temporary3942 184
 	mov [rbp + 184], eax
 
  time_test$77:
@@ -526,12 +526,12 @@ section .text
 	; PreCall 340 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  time_test$89:
-	; Address £temporary3939 s
+	; Address £temporary3951 s
 	mov rsi, rbp
 	add rsi, 104
 
  time_test$90:
-	; Parameter pointer £temporary3939 396
+	; Parameter pointer £temporary3951 396
 	mov [rbp + 396], rsi
 
  time_test$91:
@@ -545,10 +545,10 @@ section .text
 	; PostCall 372
 
  time_test$93:
-	; GetReturnValue £temporary3940
+	; GetReturnValue £temporary3952
 
  time_test$94:
-	; Parameter pointer £temporary3940 372
+	; Parameter pointer £temporary3952 372
 	mov [rbp + 372], rbx
 
  time_test$95:
@@ -573,12 +573,12 @@ section .text
 	; PreCall 340 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  time_test$100:
-	; Address £temporary3942 now
+	; Address £temporary3954 now
 	mov rsi, rbp
 	add rsi, 80
 
  time_test$101:
-	; Parameter pointer £temporary3942 396
+	; Parameter pointer £temporary3954 396
 	mov [rbp + 396], rsi
 
  time_test$102:
@@ -592,10 +592,10 @@ section .text
 	; PostCall 372
 
  time_test$104:
-	; GetReturnValue £temporary3943
+	; GetReturnValue £temporary3955
 
  time_test$105:
-	; Parameter pointer £temporary3943 372
+	; Parameter pointer £temporary3955 372
 	mov [rbp + 372], rbx
 
  time_test$106:
@@ -654,12 +654,12 @@ section .text
 	mov qword [rbp + 676], string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y#
 
  time_test$118:
-	; Address £temporary3946 s
+	; Address £temporary3958 s
 	mov rsi, rbp
 	add rsi, 104
 
  time_test$119:
-	; Parameter pointer £temporary3946 684
+	; Parameter pointer £temporary3958 684
 	mov [rbp + 684], rsi
 
  time_test$120:
@@ -673,10 +673,10 @@ section .text
 	; PostCall 640
 
  time_test$122:
-	; GetReturnValue £temporary3947
+	; GetReturnValue £temporary3959
 
  time_test$123:
-	; Assign i £temporary3947
+	; Assign i £temporary3959
 	mov [rbp + 640], ebx
 
  time_test$124:

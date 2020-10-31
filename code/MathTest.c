@@ -88,15 +88,15 @@ void math_test_1(double x) {
   PRINT(fabs);
 
   { int j = 0;
-  double z = frexp(x, &j);
-  printf("frexp (z, j) = (%f, %i), errno = %i\n", z, j, errno);
-  if (errno != 0) { perror("Error message:"); errno = 0; }
+    double z = frexp(x, &j);
+    printf("frexp (%f, p) = (%f, %i), errno = %i\n", x, z, j, errno);
+    if (errno != 0) { perror("Error message:"); errno = 0; }
   }
 
   { double w = 0;
-  double z = modf(x, &w);
-  printf("modf (z, w) = (%f, %f), errno = %i\n", z, w, errno);
-  if (errno != 0) { perror("Error message:"); errno = 0; }
+    double z = modf(x, &w);
+    printf("modf (%f, p) = (%f, %f), errno = %i\n", x, z, w, errno);
+    if (errno != 0) { perror("Error message:"); errno = 0; }
   }
 
   printf("\n");

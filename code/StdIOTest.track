@@ -4,13 +4,13 @@ stdio_test:	; n = 0
 2:		mov word [bp + 6], 0
 4:	
 
-stdio_test$1:	; £temporary4796 = &n
-5:		mov t2816, bp
-6:		add t2816, 6
+stdio_test$1:	; £temporary4688 = &n
+5:		mov t2748, bp
+6:		add t2748, 6
 8:	
 
-stdio_test$2:	; p = £temporary4796
-9:		mov [bp + 8], t2816
+stdio_test$2:	; p = £temporary4688
+9:		mov [bp + 8], t2748
 11:	
 
 stdio_test$3:	; call header integral zero 0 stack zero 0
@@ -674,8 +674,8 @@ stdio_test$156:	; parameter 88, offset 10
 517:	
 
 stdio_test$157:	; parameter p, offset 12
-518:		mov a2817, [bp + 8]
-519:		mov [bp + 22], a2817
+518:		mov a2749, [bp + 8]
+519:		mov [bp + 22], a2749
 521:	
 
 stdio_test$158:	; call function noellipse-ellipse printf, extra 0
@@ -1531,10 +1531,10 @@ stdio_test$355:	; post call
 1175:	
 
 stdio_test$356:	; return
-1176:		mov t2818, [bp]
+1176:		mov t2750, [bp]
 1177:		mov di, [bp + 4]
 1178:		mov bp, [bp + 2]
-1179:		jmp t2818
+1179:		jmp t2750
 1181:	
 
 stdio_test$357:	; function end stdio_test

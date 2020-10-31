@@ -763,7 +763,7 @@ void printLongDoubleFraction ( long double longDoubleValue , int grid , int prec
 longDoubleValue -= ( long ) longDoubleValue ;
 
 if ( precision == 0 ) {
-precision = 9 ;
+precision = 6 ;
 }
 
 if ( grid || ( precision > 0 ) ) {
