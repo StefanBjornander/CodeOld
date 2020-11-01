@@ -321,10 +321,10 @@ section .text
 	; PostCall 72
 
  acos_test$9:
-	; GetReturnValue £temporary3109
+	; GetReturnValue £temporary3111
 
  acos_test$10:
-	; Parameter double £temporary3109 72
+	; Parameter double £temporary3111 72
 	fstp qword [rbp + 72]
 
  acos_test$11:
@@ -403,10 +403,10 @@ section .text
 	; PostCall 72
 
  atan_test$9:
-	; GetReturnValue £temporary3114
+	; GetReturnValue £temporary3116
 
  atan_test$10:
-	; Parameter double £temporary3114 72
+	; Parameter double £temporary3116 72
 	fstp qword [rbp + 72]
 
  atan_test$11:
@@ -439,6 +439,18 @@ section .text
 
  atan_test$16:
 	; FunctionEnd atan_test
+
+section .data
+
+float8$0.333333333#:
+	; Initializer Double 0.333333333
+	dq 0.333333333
+
+section .data
+
+float8$0.75#:
+	; Initializer Double 0.75
+	dq 0.75
 
 section .data
 
@@ -530,11 +542,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$1:
-	; PushFloat 1.000010
-	fld qword [float8$1.000010#]
+	; PushFloat 0.333333333
+	fld qword [float8$0.333333333#]
 
  main_math$2:
-	; Parameter double 1.000010 48
+	; Parameter double 0.333333333 48
 	fstp qword [rbp + 48]
 
  main_math$3:
@@ -551,11 +563,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$6:
-	; PushFloat 1.0
-	fld1
+	; PushFloat 0.75
+	fld qword [float8$0.75#]
 
  main_math$7:
-	; Parameter double 1.0 48
+	; Parameter double 0.75 48
 	fstp qword [rbp + 48]
 
  main_math$8:
@@ -572,11 +584,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$11:
-	; PushFloat 0.999999
-	fld qword [float8$0.999999#]
+	; PushFloat 1.000010
+	fld qword [float8$1.000010#]
 
  main_math$12:
-	; Parameter double 0.999999 48
+	; Parameter double 1.000010 48
 	fstp qword [rbp + 48]
 
  main_math$13:
@@ -593,11 +605,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$16:
-	; PushFloat 0.000010
-	fld qword [float8$0.000010#]
+	; PushFloat 1.0
+	fld1
 
  main_math$17:
-	; Parameter double 0.000010 48
+	; Parameter double 1.0 48
 	fstp qword [rbp + 48]
 
  main_math$18:
@@ -614,11 +626,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$21:
-	; PushFloat 0
-	fldz
+	; PushFloat 0.999999
+	fld qword [float8$0.999999#]
 
  main_math$22:
-	; Parameter double 0 48
+	; Parameter double 0.999999 48
 	fstp qword [rbp + 48]
 
  main_math$23:
@@ -635,11 +647,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$26:
-	; PushFloat -0.000010
-	fld qword [float8$minus0.000010#]
+	; PushFloat 0.000010
+	fld qword [float8$0.000010#]
 
  main_math$27:
-	; Parameter double -0.000010 48
+	; Parameter double 0.000010 48
 	fstp qword [rbp + 48]
 
  main_math$28:
@@ -656,11 +668,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$31:
-	; PushFloat -0.999999
-	fld qword [float8$minus0.999999#]
+	; PushFloat 0
+	fldz
 
  main_math$32:
-	; Parameter double -0.999999 48
+	; Parameter double 0 48
 	fstp qword [rbp + 48]
 
  main_math$33:
@@ -677,11 +689,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$36:
-	; PushFloat -1.0
-	fld qword [float8$minus1.0#]
+	; PushFloat -0.000010
+	fld qword [float8$minus0.000010#]
 
  main_math$37:
-	; Parameter double -1.0 48
+	; Parameter double -0.000010 48
 	fstp qword [rbp + 48]
 
  main_math$38:
@@ -698,11 +710,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$41:
-	; PushFloat -1.000010
-	fld qword [float8$minus1.000010#]
+	; PushFloat -0.999999
+	fld qword [float8$minus0.999999#]
 
  main_math$42:
-	; Parameter double -1.000010 48
+	; Parameter double -0.999999 48
 	fstp qword [rbp + 48]
 
  main_math$43:
@@ -719,11 +731,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$46:
-	; PushFloat 6.2831853071795864769252866
-	fld qword [float8$6.2831853071795864769252866#]
+	; PushFloat -1.0
+	fld qword [float8$minus1.0#]
 
  main_math$47:
-	; Parameter double 6.2831853071795864769252866 48
+	; Parameter double -1.0 48
 	fstp qword [rbp + 48]
 
  main_math$48:
@@ -740,11 +752,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$51:
-	; PushFloat 3.1415926535897932384626433
-	fld qword [float8$3.1415926535897932384626433#]
+	; PushFloat -1.000010
+	fld qword [float8$minus1.000010#]
 
  main_math$52:
-	; Parameter double 3.1415926535897932384626433 48
+	; Parameter double -1.000010 48
 	fstp qword [rbp + 48]
 
  main_math$53:
@@ -761,11 +773,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$56:
-	; PushFloat 1.57079632679489661923132165
-	fld qword [float8$1.57079632679489661923132165#]
+	; PushFloat 6.2831853071795864769252866
+	fld qword [float8$6.2831853071795864769252866#]
 
  main_math$57:
-	; Parameter double 1.57079632679489661923132165 48
+	; Parameter double 6.2831853071795864769252866 48
 	fstp qword [rbp + 48]
 
  main_math$58:
@@ -782,11 +794,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$61:
-	; PushFloat -1.57079632679489661923132165
-	fld qword [float8$minus1.57079632679489661923132165#]
+	; PushFloat 3.1415926535897932384626433
+	fld qword [float8$3.1415926535897932384626433#]
 
  main_math$62:
-	; Parameter double -1.57079632679489661923132165 48
+	; Parameter double 3.1415926535897932384626433 48
 	fstp qword [rbp + 48]
 
  main_math$63:
@@ -803,11 +815,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$66:
-	; PushFloat -3.1415926535897932384626433
-	fld qword [float8$minus3.1415926535897932384626433#]
+	; PushFloat 1.57079632679489661923132165
+	fld qword [float8$1.57079632679489661923132165#]
 
  main_math$67:
-	; Parameter double -3.1415926535897932384626433 48
+	; Parameter double 1.57079632679489661923132165 48
 	fstp qword [rbp + 48]
 
  main_math$68:
@@ -824,11 +836,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$71:
-	; PushFloat -6.2831853071795864769252866
-	fld qword [float8$minus6.2831853071795864769252866#]
+	; PushFloat -1.57079632679489661923132165
+	fld qword [float8$minus1.57079632679489661923132165#]
 
  main_math$72:
-	; Parameter double -6.2831853071795864769252866 48
+	; Parameter double -1.57079632679489661923132165 48
 	fstp qword [rbp + 48]
 
  main_math$73:
@@ -845,329 +857,371 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$76:
-	; PushFloat 1.0
-	fld1
+	; PushFloat -3.1415926535897932384626433
+	fld qword [float8$minus3.1415926535897932384626433#]
 
  main_math$77:
-	; Parameter double 1.0 48
+	; Parameter double -3.1415926535897932384626433 48
 	fstp qword [rbp + 48]
 
  main_math$78:
+	; Call math_test_1 24 0
+	mov qword [rbp + 24], main_math$79
+	mov [rbp + 32], rbp
+	add rbp, 24
+	jmp math_test_1
+
+ main_math$79:
+	; PostCall 24
+
+ main_math$80:
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ main_math$81:
+	; PushFloat -6.2831853071795864769252866
+	fld qword [float8$minus6.2831853071795864769252866#]
+
+ main_math$82:
+	; Parameter double -6.2831853071795864769252866 48
+	fstp qword [rbp + 48]
+
+ main_math$83:
+	; Call math_test_1 24 0
+	mov qword [rbp + 24], main_math$84
+	mov [rbp + 32], rbp
+	add rbp, 24
+	jmp math_test_1
+
+ main_math$84:
+	; PostCall 24
+
+ main_math$85:
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ main_math$86:
+	; PushFloat 1.0
+	fld1
+
+ main_math$87:
+	; Parameter double 1.0 48
+	fstp qword [rbp + 48]
+
+ main_math$88:
 	; PushFloat 2.0
 	fld qword [float8$2.0#]
 
- main_math$79:
+ main_math$89:
 	; Parameter double 2.0 56
 	fstp qword [rbp + 56]
 
- main_math$80:
+ main_math$90:
 	; Call math_test_2 24 0
-	mov qword [rbp + 24], main_math$81
+	mov qword [rbp + 24], main_math$91
 	mov [rbp + 32], rbp
 	add rbp, 24
 	jmp math_test_2
 
- main_math$81:
+ main_math$91:
 	; PostCall 24
 
- main_math$82:
+ main_math$92:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- main_math$83:
+ main_math$93:
 	; PushFloat 3.0
 	fld qword [float8$3.0#]
 
- main_math$84:
+ main_math$94:
 	; Parameter double 3.0 48
 	fstp qword [rbp + 48]
 
- main_math$85:
+ main_math$95:
 	; PushFloat 4.0
 	fld qword [float8$4.0#]
 
- main_math$86:
+ main_math$96:
 	; Parameter double 4.0 56
 	fstp qword [rbp + 56]
 
- main_math$87:
-	; Call math_test_2 24 0
-	mov qword [rbp + 24], main_math$88
-	mov [rbp + 32], rbp
-	add rbp, 24
-	jmp math_test_2
-
- main_math$88:
-	; PostCall 24
-
- main_math$89:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- main_math$90:
-	; PushFloat 0
-	fldz
-
- main_math$91:
-	; Parameter double 0 48
-	fstp qword [rbp + 48]
-
- main_math$92:
-	; PushFloat 2.0
-	fld qword [float8$2.0#]
-
- main_math$93:
-	; Parameter double 2.0 56
-	fstp qword [rbp + 56]
-
- main_math$94:
-	; Call math_test_2 24 0
-	mov qword [rbp + 24], main_math$95
-	mov [rbp + 32], rbp
-	add rbp, 24
-	jmp math_test_2
-
- main_math$95:
-	; PostCall 24
-
- main_math$96:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
  main_math$97:
-	; PushFloat 0
-	fldz
+	; Call math_test_2 24 0
+	mov qword [rbp + 24], main_math$98
+	mov [rbp + 32], rbp
+	add rbp, 24
+	jmp math_test_2
 
  main_math$98:
+	; PostCall 24
+
+ main_math$99:
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ main_math$100:
+	; PushFloat 0
+	fldz
+
+ main_math$101:
 	; Parameter double 0 48
 	fstp qword [rbp + 48]
 
- main_math$99:
-	; PushFloat -2.0
-	fld qword [float8$minus2.0#]
-
- main_math$100:
-	; Parameter double -2.0 56
-	fstp qword [rbp + 56]
-
- main_math$101:
-	; Call math_test_2 24 0
-	mov qword [rbp + 24], main_math$102
-	mov [rbp + 32], rbp
-	add rbp, 24
-	jmp math_test_2
-
  main_math$102:
-	; PostCall 24
-
- main_math$103:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- main_math$104:
-	; PushFloat 1
-	fld1
-
- main_math$105:
-	; Parameter double 1 48
-	fstp qword [rbp + 48]
-
- main_math$106:
 	; PushFloat 2.0
 	fld qword [float8$2.0#]
 
- main_math$107:
+ main_math$103:
 	; Parameter double 2.0 56
 	fstp qword [rbp + 56]
 
- main_math$108:
+ main_math$104:
 	; Call math_test_2 24 0
-	mov qword [rbp + 24], main_math$109
+	mov qword [rbp + 24], main_math$105
 	mov [rbp + 32], rbp
 	add rbp, 24
 	jmp math_test_2
 
- main_math$109:
+ main_math$105:
 	; PostCall 24
 
- main_math$110:
+ main_math$106:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- main_math$111:
-	; PushFloat 1
-	fld1
-
- main_math$112:
-	; Parameter double 1 48
-	fstp qword [rbp + 48]
-
- main_math$113:
-	; PushFloat -2.0
-	fld qword [float8$minus2.0#]
-
- main_math$114:
-	; Parameter double -2.0 56
-	fstp qword [rbp + 56]
-
- main_math$115:
-	; Call math_test_2 24 0
-	mov qword [rbp + 24], main_math$116
-	mov [rbp + 32], rbp
-	add rbp, 24
-	jmp math_test_2
-
- main_math$116:
-	; PostCall 24
-
- main_math$117:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- main_math$118:
+ main_math$107:
 	; PushFloat 0
 	fldz
 
- main_math$119:
+ main_math$108:
 	; Parameter double 0 48
 	fstp qword [rbp + 48]
 
+ main_math$109:
+	; PushFloat -2.0
+	fld qword [float8$minus2.0#]
+
+ main_math$110:
+	; Parameter double -2.0 56
+	fstp qword [rbp + 56]
+
+ main_math$111:
+	; Call math_test_2 24 0
+	mov qword [rbp + 24], main_math$112
+	mov [rbp + 32], rbp
+	add rbp, 24
+	jmp math_test_2
+
+ main_math$112:
+	; PostCall 24
+
+ main_math$113:
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ main_math$114:
+	; PushFloat 1
+	fld1
+
+ main_math$115:
+	; Parameter double 1 48
+	fstp qword [rbp + 48]
+
+ main_math$116:
+	; PushFloat 2.0
+	fld qword [float8$2.0#]
+
+ main_math$117:
+	; Parameter double 2.0 56
+	fstp qword [rbp + 56]
+
+ main_math$118:
+	; Call math_test_2 24 0
+	mov qword [rbp + 24], main_math$119
+	mov [rbp + 32], rbp
+	add rbp, 24
+	jmp math_test_2
+
+ main_math$119:
+	; PostCall 24
+
  main_math$120:
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ main_math$121:
+	; PushFloat 1
+	fld1
+
+ main_math$122:
+	; Parameter double 1 48
+	fstp qword [rbp + 48]
+
+ main_math$123:
+	; PushFloat -2.0
+	fld qword [float8$minus2.0#]
+
+ main_math$124:
+	; Parameter double -2.0 56
+	fstp qword [rbp + 56]
+
+ main_math$125:
+	; Call math_test_2 24 0
+	mov qword [rbp + 24], main_math$126
+	mov [rbp + 32], rbp
+	add rbp, 24
+	jmp math_test_2
+
+ main_math$126:
+	; PostCall 24
+
+ main_math$127:
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ main_math$128:
 	; PushFloat 0
 	fldz
 
- main_math$121:
+ main_math$129:
+	; Parameter double 0 48
+	fstp qword [rbp + 48]
+
+ main_math$130:
+	; PushFloat 0
+	fldz
+
+ main_math$131:
 	; Parameter double 0 56
 	fstp qword [rbp + 56]
 
- main_math$122:
+ main_math$132:
 	; Call math_test_2 24 0
-	mov qword [rbp + 24], main_math$123
+	mov qword [rbp + 24], main_math$133
 	mov [rbp + 32], rbp
 	add rbp, 24
 	jmp math_test_2
 
- main_math$123:
+ main_math$133:
 	; PostCall 24
 
- main_math$124:
+ main_math$134:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- main_math$125:
+ main_math$135:
 	; PushFloat 2
 	fld qword [float8$2#]
 
- main_math$126:
+ main_math$136:
 	; Parameter double 2 48
 	fstp qword [rbp + 48]
 
- main_math$127:
+ main_math$137:
 	; PushFloat 0
 	fldz
 
- main_math$128:
+ main_math$138:
 	; Parameter double 0 56
 	fstp qword [rbp + 56]
 
- main_math$129:
+ main_math$139:
 	; Call math_test_2 24 0
-	mov qword [rbp + 24], main_math$130
+	mov qword [rbp + 24], main_math$140
 	mov [rbp + 32], rbp
 	add rbp, 24
 	jmp math_test_2
 
- main_math$130:
+ main_math$140:
 	; PostCall 24
 
- main_math$131:
+ main_math$141:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- main_math$132:
+ main_math$142:
 	; PushFloat -2
 	fld qword [float8$minus2#]
 
- main_math$133:
+ main_math$143:
 	; Parameter double -2 48
 	fstp qword [rbp + 48]
 
- main_math$134:
+ main_math$144:
 	; PushFloat 0
 	fldz
 
- main_math$135:
+ main_math$145:
 	; Parameter double 0 56
 	fstp qword [rbp + 56]
 
- main_math$136:
+ main_math$146:
 	; Call math_test_2 24 0
-	mov qword [rbp + 24], main_math$137
+	mov qword [rbp + 24], main_math$147
 	mov [rbp + 32], rbp
 	add rbp, 24
 	jmp math_test_2
 
- main_math$137:
+ main_math$147:
 	; PostCall 24
 
- main_math$138:
+ main_math$148:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- main_math$139:
+ main_math$149:
 	; PushFloat -1.0
 	fld qword [float8$minus1.0#]
 
- main_math$140:
+ main_math$150:
 	; Parameter double -1.0 48
 	fstp qword [rbp + 48]
 
- main_math$141:
+ main_math$151:
 	; PushFloat -1.0
 	fld qword [float8$minus1.0#]
 
- main_math$142:
+ main_math$152:
 	; Parameter double -1.0 56
 	fstp qword [rbp + 56]
 
- main_math$143:
+ main_math$153:
 	; Call math_test_2 24 0
-	mov qword [rbp + 24], main_math$144
+	mov qword [rbp + 24], main_math$154
 	mov [rbp + 32], rbp
 	add rbp, 24
 	jmp math_test_2
 
- main_math$144:
+ main_math$154:
 	; PostCall 24
 
- main_math$145:
+ main_math$155:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- main_math$146:
+ main_math$156:
 	; PushFloat -2.0
 	fld qword [float8$minus2.0#]
 
- main_math$147:
+ main_math$157:
 	; Parameter double -2.0 48
 	fstp qword [rbp + 48]
 
- main_math$148:
+ main_math$158:
 	; PushFloat -4.0
 	fld qword [float8$minus4.0#]
 
- main_math$149:
+ main_math$159:
 	; Parameter double -4.0 56
 	fstp qword [rbp + 56]
 
- main_math$150:
+ main_math$160:
 	; Call math_test_2 24 0
-	mov qword [rbp + 24], main_math$151
+	mov qword [rbp + 24], main_math$161
 	mov [rbp + 32], rbp
 	add rbp, 24
 	jmp math_test_2
 
- main_math$151:
+ main_math$161:
 	; PostCall 24
 
- main_math$152:
+ main_math$162:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- main_math$153:
+ main_math$163:
 	; FunctionEnd main_math
 
 section .data
@@ -1350,10 +1404,10 @@ section .text
 	; PostCall 72
 
  math_test_1$15:
-	; GetReturnValue £temporary3183
+	; GetReturnValue £temporary3189
 
  math_test_1$16:
-	; Parameter double £temporary3183 72
+	; Parameter double £temporary3189 72
 	fstp qword [rbp + 72]
 
  math_test_1$17:
@@ -1414,10 +1468,10 @@ section .text
 	; PostCall 72
 
  math_test_1$30:
-	; GetReturnValue £temporary3185
+	; GetReturnValue £temporary3191
 
  math_test_1$31:
-	; Parameter double £temporary3185 72
+	; Parameter double £temporary3191 72
 	fstp qword [rbp + 72]
 
  math_test_1$32:
@@ -1478,10 +1532,10 @@ section .text
 	; PostCall 72
 
  math_test_1$45:
-	; GetReturnValue £temporary3187
+	; GetReturnValue £temporary3193
 
  math_test_1$46:
-	; Parameter double £temporary3187 72
+	; Parameter double £temporary3193 72
 	fstp qword [rbp + 72]
 
  math_test_1$47:
@@ -1542,10 +1596,10 @@ section .text
 	; PostCall 72
 
  math_test_1$60:
-	; GetReturnValue £temporary3189
+	; GetReturnValue £temporary3195
 
  math_test_1$61:
-	; Parameter double £temporary3189 72
+	; Parameter double £temporary3195 72
 	fstp qword [rbp + 72]
 
  math_test_1$62:
@@ -1606,10 +1660,10 @@ section .text
 	; PostCall 72
 
  math_test_1$75:
-	; GetReturnValue £temporary3191
+	; GetReturnValue £temporary3197
 
  math_test_1$76:
-	; Parameter double £temporary3191 72
+	; Parameter double £temporary3197 72
 	fstp qword [rbp + 72]
 
  math_test_1$77:
@@ -1670,10 +1724,10 @@ section .text
 	; PostCall 72
 
  math_test_1$90:
-	; GetReturnValue £temporary3193
+	; GetReturnValue £temporary3199
 
  math_test_1$91:
-	; Parameter double £temporary3193 72
+	; Parameter double £temporary3199 72
 	fstp qword [rbp + 72]
 
  math_test_1$92:
@@ -1734,10 +1788,10 @@ section .text
 	; PostCall 72
 
  math_test_1$105:
-	; GetReturnValue £temporary3195
+	; GetReturnValue £temporary3201
 
  math_test_1$106:
-	; Parameter double £temporary3195 72
+	; Parameter double £temporary3201 72
 	fstp qword [rbp + 72]
 
  math_test_1$107:
@@ -1798,10 +1852,10 @@ section .text
 	; PostCall 72
 
  math_test_1$120:
-	; GetReturnValue £temporary3197
+	; GetReturnValue £temporary3203
 
  math_test_1$121:
-	; Parameter double £temporary3197 72
+	; Parameter double £temporary3203 72
 	fstp qword [rbp + 72]
 
  math_test_1$122:
@@ -1862,10 +1916,10 @@ section .text
 	; PostCall 72
 
  math_test_1$135:
-	; GetReturnValue £temporary3199
+	; GetReturnValue £temporary3205
 
  math_test_1$136:
-	; Parameter double £temporary3199 72
+	; Parameter double £temporary3205 72
 	fstp qword [rbp + 72]
 
  math_test_1$137:
@@ -1926,10 +1980,10 @@ section .text
 	; PostCall 72
 
  math_test_1$150:
-	; GetReturnValue £temporary3201
+	; GetReturnValue £temporary3207
 
  math_test_1$151:
-	; Parameter double £temporary3201 72
+	; Parameter double £temporary3207 72
 	fstp qword [rbp + 72]
 
  math_test_1$152:
@@ -1990,10 +2044,10 @@ section .text
 	; PostCall 72
 
  math_test_1$165:
-	; GetReturnValue £temporary3203
+	; GetReturnValue £temporary3209
 
  math_test_1$166:
-	; Parameter double £temporary3203 72
+	; Parameter double £temporary3209 72
 	fstp qword [rbp + 72]
 
  math_test_1$167:
@@ -2054,10 +2108,10 @@ section .text
 	; PostCall 72
 
  math_test_1$180:
-	; GetReturnValue £temporary3205
+	; GetReturnValue £temporary3211
 
  math_test_1$181:
-	; Parameter double £temporary3205 72
+	; Parameter double £temporary3211 72
 	fstp qword [rbp + 72]
 
  math_test_1$182:
@@ -2118,10 +2172,10 @@ section .text
 	; PostCall 72
 
  math_test_1$195:
-	; GetReturnValue £temporary3207
+	; GetReturnValue £temporary3213
 
  math_test_1$196:
-	; Parameter double £temporary3207 72
+	; Parameter double £temporary3213 72
 	fstp qword [rbp + 72]
 
  math_test_1$197:
@@ -2182,10 +2236,10 @@ section .text
 	; PostCall 72
 
  math_test_1$210:
-	; GetReturnValue £temporary3209
+	; GetReturnValue £temporary3215
 
  math_test_1$211:
-	; Parameter double £temporary3209 72
+	; Parameter double £temporary3215 72
 	fstp qword [rbp + 72]
 
  math_test_1$212:
@@ -2246,10 +2300,10 @@ section .text
 	; PostCall 72
 
  math_test_1$225:
-	; GetReturnValue £temporary3211
+	; GetReturnValue £temporary3217
 
  math_test_1$226:
-	; Parameter double £temporary3211 72
+	; Parameter double £temporary3217 72
 	fstp qword [rbp + 72]
 
  math_test_1$227:
@@ -2310,10 +2364,10 @@ section .text
 	; PostCall 72
 
  math_test_1$240:
-	; GetReturnValue £temporary3213
+	; GetReturnValue £temporary3219
 
  math_test_1$241:
-	; Parameter double £temporary3213 72
+	; Parameter double £temporary3219 72
 	fstp qword [rbp + 72]
 
  math_test_1$242:
@@ -2353,12 +2407,12 @@ section .text
 	fstp qword [rbp + 60]
 
  math_test_1$250:
-	; Address £temporary3215 j
+	; Address £temporary3221 j
 	mov rsi, rbp
 	add rsi, 32
 
  math_test_1$251:
-	; Parameter pointer £temporary3215 68
+	; Parameter pointer £temporary3221 68
 	mov [rbp + 68], rsi
 
  math_test_1$252:
@@ -2372,7 +2426,7 @@ section .text
 	; PostCall 36
 
  math_test_1$254:
-	; GetReturnValue £temporary3216
+	; GetReturnValue £temporary3222
 
  math_test_1$255:
 	; PopFloat z
@@ -2469,12 +2523,12 @@ section .text
 	fstp qword [rbp + 64]
 
  math_test_1$277:
-	; Address £temporary3220 w
+	; Address £temporary3226 w
 	mov rsi, rbp
 	add rsi, 32
 
  math_test_1$278:
-	; Parameter pointer £temporary3220 72
+	; Parameter pointer £temporary3226 72
 	mov [rbp + 72], rsi
 
  math_test_1$279:
@@ -2488,7 +2542,7 @@ section .text
 	; PostCall 40
 
  math_test_1$281:
-	; GetReturnValue £temporary3221
+	; GetReturnValue £temporary3227
 
  math_test_1$282:
 	; PopFloat z
@@ -2681,10 +2735,10 @@ section .text
 	; PostCall 88
 
  math_test_2$13:
-	; GetReturnValue £temporary3284
+	; GetReturnValue £temporary3290
 
  math_test_2$14:
-	; Parameter double £temporary3284 88
+	; Parameter double £temporary3290 88
 	fstp qword [rbp + 88]
 
  math_test_2$15:
@@ -2761,10 +2815,10 @@ section .text
 	; PostCall 88
 
  math_test_2$32:
-	; GetReturnValue £temporary3286
+	; GetReturnValue £temporary3292
 
  math_test_2$33:
-	; Parameter double £temporary3286 88
+	; Parameter double £temporary3292 88
 	fstp qword [rbp + 88]
 
  math_test_2$34:
@@ -2841,10 +2895,10 @@ section .text
 	; PostCall 88
 
  math_test_2$51:
-	; GetReturnValue £temporary3288
+	; GetReturnValue £temporary3294
 
  math_test_2$52:
-	; Parameter double £temporary3288 88
+	; Parameter double £temporary3294 88
 	fstp qword [rbp + 88]
 
  math_test_2$53:
@@ -2906,12 +2960,12 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$66:
-	; FloatingToIntegral £temporary3291 y
+	; FloatingToIntegral £temporary3297 y
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  math_test_2$67:
-	; Parameter signedint £temporary3291 80
+	; Parameter signedint £temporary3297 80
 	mov [rbp + 80], eax
 
  math_test_2$68:
@@ -2930,12 +2984,12 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$72:
-	; FloatingToIntegral £temporary3292 y
+	; FloatingToIntegral £temporary3298 y
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  math_test_2$73:
-	; Parameter signedint £temporary3292 116
+	; Parameter signedint £temporary3298 116
 	mov [rbp + 116], eax
 
  math_test_2$74:
@@ -2949,10 +3003,10 @@ section .text
 	; PostCall 84
 
  math_test_2$76:
-	; GetReturnValue £temporary3293
+	; GetReturnValue £temporary3299
 
  math_test_2$77:
-	; Parameter double £temporary3293 84
+	; Parameter double £temporary3299 84
 	fstp qword [rbp + 84]
 
  math_test_2$78:

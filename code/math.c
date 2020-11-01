@@ -94,8 +94,11 @@ static log2(double x) {
 
 double frexp(double x, int* p) {
   if (x != 0)  {
-    printf("%f %f %f\n", x, fabs(x), log2(fabs(x)));
-    int exponent = (int) (log2(fabs(x)) + 1);
+    int exponent = (int) log2(fabs(x));
+
+    if (pow(2, exponent) < x) {
+      ++exponent;
+    }
 
     if (p != NULL) {
       *p = exponent;
@@ -143,8 +146,7 @@ double modf(double x, double* p) {
 
 double fmod(double x, double y) {
   if (y != 0) {
-    double quotient = x / y,
-           remainder = fabs(quotient - ((double) ((long) quotient)));
+    double remainder = fabs(x - (y * ((int) (x / y))));
     return (x > 0) ? remainder : -remainder;
   }
   else {
@@ -205,10 +207,10 @@ double asin(double x) {
   if (x == 1) {
     return PI / 2;
   }
-  else if (x == -1) {
-    return -PI / 2;
+  else if (x < 0) {
+    return -asin(-x);
   }
-  else if (fabs(x) < 1) {
+  else if (x < 1) {
     return atan(x / sqrt(1 - (x * x)));
   }
   else {
@@ -221,8 +223,11 @@ double acos(double x) {
   if (x == 0) {
     return PI / 2;
   }
-  else if (fabs(x) < 1) {
-    return atan(x / sqrt(1 - (x * x)));
+  else if (x < 0) {
+    return PI - acos(-x);
+  }
+  else if (x <= 1) {
+    return atan(sqrt(1 - (x * x)) / x);
   }
   else {
     errno = EDOM;

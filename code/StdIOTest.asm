@@ -210,12 +210,12 @@ section .text
 	mov dword [rbp + 24], 0
 
  stdio_test$1:
-	; Address £temporary3610 n
+	; Address £temporary3616 n
 	mov rsi, rbp
 	add rsi, 24
 
  stdio_test$2:
-	; Assign p £temporary3610
+	; Assign p £temporary3616
 	mov [rbp + 28], rsi
 
  stdio_test$3:
