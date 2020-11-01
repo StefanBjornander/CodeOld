@@ -4,10 +4,10 @@ float_test:	; empty
 3:	
 
 float_test$1:	; return
-4:		mov t2431, [bp]
+4:		mov t2437, [bp]
 5:		mov di, [bp + 4]
 6:		mov bp, [bp + 2]
-7:		jmp t2431
+7:		jmp t2437
 9:	
 
 float_test$2:	; function end float_test

@@ -1,37 +1,37 @@
 1:	
 
-compare:	; £temporary5048 = int_to_int valuePtr1 (Pointer -> Pointer)
-2:		mov a2821, [bp + 6]
+compare:	; £temporary5088 = int_to_int valuePtr1 (Pointer -> Pointer)
+2:		mov a2827, [bp + 6]
 5:	
 
-compare$1:	; £temporary5049 -> £temporary5048 = *£temporary5048
+compare$1:	; £temporary5089 -> £temporary5088 = *£temporary5088
 7:	
 
-compare$2:	; intValue1 = £temporary5049 -> £temporary5048
-8:		mov t2822, [a2821]
-9:		mov [bp + 10], t2822
+compare$2:	; intValue1 = £temporary5089 -> £temporary5088
+8:		mov t2828, [a2827]
+9:		mov [bp + 10], t2828
 11:	
 
-compare$3:	; £temporary5050 = int_to_int valuePtr2 (Pointer -> Pointer)
-12:		mov a2823, [bp + 8]
+compare$3:	; £temporary5090 = int_to_int valuePtr2 (Pointer -> Pointer)
+12:		mov a2829, [bp + 8]
 15:	
 
-compare$4:	; £temporary5051 -> £temporary5050 = *£temporary5050
+compare$4:	; £temporary5091 -> £temporary5090 = *£temporary5090
 17:	
 
-compare$5:	; intValue2 = £temporary5051 -> £temporary5050
-18:		mov t2824, [a2823]
-19:		mov [bp + 12], t2824
+compare$5:	; intValue2 = £temporary5091 -> £temporary5090
+18:		mov t2830, [a2829]
+19:		mov [bp + 12], t2830
 21:	
 
 compare$6:	; if intValue1 >= intValue2 goto 9
-22:		mov a2825, [bp + 12]
-23:		cmp [bp + 10], a2825
+22:		mov a2831, [bp + 12]
+23:		cmp [bp + 10], a2831
 24:		jge compare$9
 26:	
 
-compare$7:	; £temporary5061 = -1
-27:		mov t2826, -1
+compare$7:	; £temporary5101 = -1
+27:		mov t2832, -1
 29:	
 
 compare$8:	; goto 14
@@ -39,71 +39,71 @@ compare$8:	; goto 14
 32:	
 
 compare$9:	; if intValue1 != intValue2 goto 12
-33:		mov a2827, [bp + 12]
-34:		cmp [bp + 10], a2827
+33:		mov a2833, [bp + 12]
+34:		cmp [bp + 10], a2833
 35:		jne compare$12
 37:	
 
-compare$10:	; £temporary5057 = 0
-38:		mov t2828, 0
+compare$10:	; £temporary5097 = 0
+38:		mov t2834, 0
 40:	
 
 compare$11:	; goto 13
 41:		jmp compare$13
 43:	
 
-compare$12:	; £temporary5057 = 1
-44:		mov t2829, 1
+compare$12:	; £temporary5097 = 1
+44:		mov t2835, 1
 46:	
 
-compare$13:	; £temporary5061 = £temporary5057
+compare$13:	; £temporary5101 = £temporary5097
 48:	
 
-compare$14:	; return_value = £temporary5061
+compare$14:	; return_value = £temporary5101
 50:	
 
 compare$15:	; return
-51:		mov t2831, [bp]
+51:		mov t2837, [bp]
 52:		mov di, [bp + 4]
 53:		mov bp, [bp + 2]
-54:		jmp t2831
+54:		jmp t2837
 56:	
 
 compare$16:	; function end compare
 1:	
 
-reverse_compare:	; £temporary5062 = int_to_int valuePtr1 (Pointer -> Pointer)
-2:		mov a2832, [bp + 6]
+reverse_compare:	; £temporary5102 = int_to_int valuePtr1 (Pointer -> Pointer)
+2:		mov a2838, [bp + 6]
 5:	
 
-reverse_compare$1:	; £temporary5063 -> £temporary5062 = *£temporary5062
+reverse_compare$1:	; £temporary5103 -> £temporary5102 = *£temporary5102
 7:	
 
-reverse_compare$2:	; intValue1 = £temporary5063 -> £temporary5062
-8:		mov t2833, [a2832]
-9:		mov [bp + 10], t2833
+reverse_compare$2:	; intValue1 = £temporary5103 -> £temporary5102
+8:		mov t2839, [a2838]
+9:		mov [bp + 10], t2839
 11:	
 
-reverse_compare$3:	; £temporary5064 = int_to_int valuePtr2 (Pointer -> Pointer)
-12:		mov a2834, [bp + 8]
+reverse_compare$3:	; £temporary5104 = int_to_int valuePtr2 (Pointer -> Pointer)
+12:		mov a2840, [bp + 8]
 15:	
 
-reverse_compare$4:	; £temporary5065 -> £temporary5064 = *£temporary5064
+reverse_compare$4:	; £temporary5105 -> £temporary5104 = *£temporary5104
 17:	
 
-reverse_compare$5:	; intValue2 = £temporary5065 -> £temporary5064
-18:		mov t2835, [a2834]
-19:		mov [bp + 12], t2835
+reverse_compare$5:	; intValue2 = £temporary5105 -> £temporary5104
+18:		mov t2841, [a2840]
+19:		mov [bp + 12], t2841
 21:	
 
 reverse_compare$6:	; if intValue1 >= intValue2 goto 9
-22:		mov a2836, [bp + 12]
-23:		cmp [bp + 10], a2836
+22:		mov a2842, [bp + 12]
+23:		cmp [bp + 10], a2842
 24:		jge reverse_compare$9
 26:	
 
-reverse_compare$7:	; £temporary5075 = 1
-27:		mov t2837, 1
+reverse_compare$7:	; £temporary5115 = 1
+27:		mov t2843, 1
 29:	
 
 reverse_compare$8:	; goto 14
@@ -111,34 +111,34 @@ reverse_compare$8:	; goto 14
 32:	
 
 reverse_compare$9:	; if intValue1 != intValue2 goto 12
-33:		mov a2838, [bp + 12]
-34:		cmp [bp + 10], a2838
+33:		mov a2844, [bp + 12]
+34:		cmp [bp + 10], a2844
 35:		jne reverse_compare$12
 37:	
 
-reverse_compare$10:	; £temporary5071 = 0
-38:		mov t2839, 0
+reverse_compare$10:	; £temporary5111 = 0
+38:		mov t2845, 0
 40:	
 
 reverse_compare$11:	; goto 13
 41:		jmp reverse_compare$13
 43:	
 
-reverse_compare$12:	; £temporary5071 = -1
-44:		mov t2840, -1
+reverse_compare$12:	; £temporary5111 = -1
+44:		mov t2846, -1
 46:	
 
-reverse_compare$13:	; £temporary5075 = £temporary5071
+reverse_compare$13:	; £temporary5115 = £temporary5111
 48:	
 
-reverse_compare$14:	; return_value = £temporary5075
+reverse_compare$14:	; return_value = £temporary5115
 50:	
 
 reverse_compare$15:	; return
-51:		mov t2842, [bp]
+51:		mov t2848, [bp]
 52:		mov di, [bp + 4]
 53:		mov bp, [bp + 2]
-54:		jmp t2842
+54:		jmp t2848
 56:	
 
 reverse_compare$16:	; function end reverse_compare
@@ -152,13 +152,13 @@ print_div$1:	; parameter string_div_t20quot2025i20rem2025i0A#, offset 6
 6:	
 
 print_div$2:	; parameter d$quot, offset 8
-7:		mov a2843, [bp + 6]
-8:		mov [bp + 18], a2843
+7:		mov a2849, [bp + 6]
+8:		mov [bp + 18], a2849
 10:	
 
 print_div$3:	; parameter d$rem, offset 10
-11:		mov a2844, [bp + 8]
-12:		mov [bp + 20], a2844
+11:		mov a2850, [bp + 8]
+12:		mov [bp + 20], a2850
 14:	
 
 print_div$4:	; call function noellipse-ellipse printf, extra 0
@@ -174,10 +174,10 @@ print_div$5:	; post call
 24:	
 
 print_div$6:	; return
-25:		mov t2845, [bp]
+25:		mov t2851, [bp]
 26:		mov di, [bp + 4]
 27:		mov bp, [bp + 2]
-28:		jmp t2845
+28:		jmp t2851
 30:	
 
 print_div$7:	; function end print_div
@@ -191,13 +191,13 @@ print_ldiv$1:	; parameter string_ldiv_t20quot2025li20rem2025li0A#, offset 6
 6:	
 
 print_ldiv$2:	; parameter ld$quot, offset 8
-7:		mov a2846, [bp + 6]
-8:		mov [bp + 22], a2846
+7:		mov a2852, [bp + 6]
+8:		mov [bp + 22], a2852
 10:	
 
 print_ldiv$3:	; parameter ld$rem, offset 12
-11:		mov a2847, [bp + 10]
-12:		mov [bp + 26], a2847
+11:		mov a2853, [bp + 10]
+12:		mov [bp + 26], a2853
 14:	
 
 print_ldiv$4:	; call function noellipse-ellipse printf, extra 0
@@ -213,10 +213,10 @@ print_ldiv$5:	; post call
 24:	
 
 print_ldiv$6:	; return
-25:		mov t2848, [bp]
+25:		mov t2854, [bp]
 26:		mov di, [bp + 4]
 27:		mov bp, [bp + 2]
-28:		jmp t2848
+28:		jmp t2854
 30:	
 
 print_ldiv$7:	; function end print_ldiv
@@ -241,10 +241,10 @@ exit_handle1x$3:	; post call
 15:	
 
 exit_handle1x$4:	; return
-16:		mov t2849, [bp]
+16:		mov t2855, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
-19:		jmp t2849
+19:		jmp t2855
 21:	
 
 exit_handle1x$5:	; function end exit_handle1x
@@ -269,10 +269,10 @@ exit_handle2x$3:	; post call
 15:	
 
 exit_handle2x$4:	; return
-16:		mov t2850, [bp]
+16:		mov t2856, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
-19:		jmp t2850
+19:		jmp t2856
 21:	
 
 exit_handle2x$5:	; function end exit_handle2x
@@ -297,10 +297,10 @@ exit_handle3x$3:	; post call
 15:	
 
 exit_handle3x$4:	; return
-16:		mov t2851, [bp]
+16:		mov t2857, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
-19:		jmp t2851
+19:		jmp t2857
 21:	
 
 exit_handle3x$5:	; function end exit_handle3x
@@ -328,13 +328,13 @@ stdlib_test$4:	; parameter string_1232E456abc#, offset 6
 16:		mov word [bp + 318], string_1232E456abc#
 18:	
 
-stdlib_test$5:	; £temporary5094 = &p
-19:		mov t2852, bp
-20:		add t2852, 306
+stdlib_test$5:	; £temporary5134 = &p
+19:		mov t2858, bp
+20:		add t2858, 306
 22:	
 
-stdlib_test$6:	; parameter £temporary5094, offset 8
-23:		mov [bp + 320], t2852
+stdlib_test$6:	; parameter £temporary5134, offset 8
+23:		mov [bp + 320], t2858
 25:	
 
 stdlib_test$7:	; call function noellipse-noellipse strtod
@@ -347,7 +347,7 @@ stdlib_test$7:	; call function noellipse-noellipse strtod
 stdlib_test$8:	; post call
 33:	
 
-stdlib_test$9:	; £temporary5095 = return_value
+stdlib_test$9:	; £temporary5135 = return_value
 35:	
 
 stdlib_test$10:	; pop float x
@@ -371,7 +371,7 @@ stdlib_test$13:	; call function noellipse-noellipse atof
 stdlib_test$14:	; post call
 51:	
 
-stdlib_test$15:	; £temporary5096 = return_value
+stdlib_test$15:	; £temporary5136 = return_value
 53:	
 
 stdlib_test$16:	; pop float y
@@ -385,13 +385,13 @@ stdlib_test$18:	; parameter string_123abc#, offset 6
 59:		mov word [bp + 334], string_123abc#
 61:	
 
-stdlib_test$19:	; £temporary5097 = &q
-62:		mov t2853, bp
-63:		add t2853, 308
+stdlib_test$19:	; £temporary5137 = &q
+62:		mov t2859, bp
+63:		add t2859, 308
 65:	
 
-stdlib_test$20:	; parameter £temporary5097, offset 8
-66:		mov [bp + 336], t2853
+stdlib_test$20:	; parameter £temporary5137, offset 8
+66:		mov [bp + 336], t2859
 68:	
 
 stdlib_test$21:	; parameter 8, offset 10
@@ -408,11 +408,11 @@ stdlib_test$22:	; call function noellipse-noellipse strtol
 stdlib_test$23:	; post call
 79:	
 
-stdlib_test$24:	; £temporary5098 = return_value
+stdlib_test$24:	; £temporary5138 = return_value
 84:	
 
-stdlib_test$25:	; l = £temporary5098
-85:		mov [bp + 328], t2855
+stdlib_test$25:	; l = £temporary5138
+85:		mov [bp + 328], t2861
 87:	
 
 stdlib_test$26:	; call header integral zero 0 stack zero 0
@@ -422,13 +422,13 @@ stdlib_test$27:	; parameter string_123abc#, offset 6
 90:		mov word [bp + 338], string_123abc#
 92:	
 
-stdlib_test$28:	; £temporary5099 = &r
-93:		mov t2856, bp
-94:		add t2856, 310
+stdlib_test$28:	; £temporary5139 = &r
+93:		mov t2862, bp
+94:		add t2862, 310
 96:	
 
-stdlib_test$29:	; parameter £temporary5099, offset 8
-97:		mov [bp + 340], t2856
+stdlib_test$29:	; parameter £temporary5139, offset 8
+97:		mov [bp + 340], t2862
 99:	
 
 stdlib_test$30:	; parameter 8, offset 10
@@ -445,11 +445,11 @@ stdlib_test$31:	; call function noellipse-noellipse strtoul
 stdlib_test$32:	; post call
 110:	
 
-stdlib_test$33:	; £temporary5100 = return_value
+stdlib_test$33:	; £temporary5140 = return_value
 115:	
 
-stdlib_test$34:	; ul = £temporary5100
-116:		mov [bp + 332], t2858
+stdlib_test$34:	; ul = £temporary5140
+116:		mov [bp + 332], t2864
 118:	
 
 stdlib_test$35:	; call header integral zero 0 stack zero 0
@@ -503,11 +503,11 @@ stdlib_test$45:	; call function noellipse-noellipse atoi
 stdlib_test$46:	; post call
 157:	
 
-stdlib_test$47:	; £temporary5102 = return_value
+stdlib_test$47:	; £temporary5142 = return_value
 162:	
 
-stdlib_test$48:	; parameter £temporary5102, offset 8
-163:		mov [bp + 344], t2860
+stdlib_test$48:	; parameter £temporary5142, offset 8
+163:		mov [bp + 344], t2866
 165:	
 
 stdlib_test$49:	; call function noellipse-ellipse printf, extra 0
@@ -546,11 +546,11 @@ stdlib_test$55:	; call function noellipse-noellipse atol
 stdlib_test$56:	; post call
 193:	
 
-stdlib_test$57:	; £temporary5104 = return_value
+stdlib_test$57:	; £temporary5144 = return_value
 198:	
 
-stdlib_test$58:	; parameter £temporary5104, offset 8
-199:		mov [bp + 344], t2862
+stdlib_test$58:	; parameter £temporary5144, offset 8
+199:		mov [bp + 344], t2868
 201:	
 
 stdlib_test$59:	; call function noellipse-ellipse printf, extra 0
@@ -581,8 +581,8 @@ stdlib_test$64:	; parameter x, offset 8
 222:	
 
 stdlib_test$65:	; parameter p, offset 16
-223:		mov a2863, [bp + 306]
-224:		mov [bp + 352], a2863
+223:		mov a2869, [bp + 306]
+224:		mov [bp + 352], a2869
 226:	
 
 stdlib_test$66:	; call function noellipse-ellipse printf, extra 0
@@ -605,13 +605,13 @@ stdlib_test$69:	; parameter string_strtol2822123abc222C2026endp29203D202825li2C2
 241:	
 
 stdlib_test$70:	; parameter l, offset 8
-242:		mov a2864, [bp + 328]
-243:		mov [bp + 344], a2864
+242:		mov a2870, [bp + 328]
+243:		mov [bp + 344], a2870
 245:	
 
 stdlib_test$71:	; parameter q, offset 12
-246:		mov a2865, [bp + 308]
-247:		mov [bp + 348], a2865
+246:		mov a2871, [bp + 308]
+247:		mov [bp + 348], a2871
 249:	
 
 stdlib_test$72:	; call function noellipse-ellipse printf, extra 0
@@ -634,13 +634,13 @@ stdlib_test$75:	; parameter string_strtoul2822123abc222C2026endp29203D202825lu2C
 264:	
 
 stdlib_test$76:	; parameter ul, offset 8
-265:		mov a2866, [bp + 332]
-266:		mov [bp + 344], a2866
+265:		mov a2872, [bp + 332]
+266:		mov [bp + 344], a2872
 268:	
 
 stdlib_test$77:	; parameter r, offset 12
-269:		mov a2867, [bp + 310]
-270:		mov [bp + 348], a2867
+269:		mov a2873, [bp + 310]
+270:		mov [bp + 348], a2873
 272:	
 
 stdlib_test$78:	; call function noellipse-ellipse printf, extra 0
@@ -679,11 +679,11 @@ stdlib_test$84:	; call function noellipse-noellipse getenv
 stdlib_test$85:	; post call
 300:	
 
-stdlib_test$86:	; £temporary5109 = return_value
+stdlib_test$86:	; £temporary5149 = return_value
 305:	
 
-stdlib_test$87:	; parameter £temporary5109, offset 8
-306:		mov [bp + 14], t2869
+stdlib_test$87:	; parameter £temporary5149, offset 8
+306:		mov [bp + 14], t2875
 308:	
 
 stdlib_test$88:	; call function noellipse-ellipse printf, extra 0
@@ -757,11 +757,11 @@ stdlib_test$102:	; call function noellipse-noellipse abs
 stdlib_test$103:	; post call
 363:	
 
-stdlib_test$104:	; £temporary5113 = return_value
+stdlib_test$104:	; £temporary5153 = return_value
 368:	
 
-stdlib_test$105:	; parameter £temporary5113, offset 8
-369:		mov [bp + 14], t2871
+stdlib_test$105:	; parameter £temporary5153, offset 8
+369:		mov [bp + 14], t2877
 371:	
 
 stdlib_test$106:	; call header integral zero 0 stack zero 0
@@ -781,11 +781,11 @@ stdlib_test$108:	; call function noellipse-noellipse abs
 stdlib_test$109:	; post call
 384:	
 
-stdlib_test$110:	; £temporary5114 = return_value
+stdlib_test$110:	; £temporary5154 = return_value
 389:	
 
-stdlib_test$111:	; parameter £temporary5114, offset 10
-390:		mov [bp + 16], t2873
+stdlib_test$111:	; parameter £temporary5154, offset 10
+390:		mov [bp + 16], t2879
 392:	
 
 stdlib_test$112:	; call header integral zero 0 stack zero 0
@@ -805,11 +805,11 @@ stdlib_test$114:	; call function noellipse-noellipse labs
 stdlib_test$115:	; post call
 405:	
 
-stdlib_test$116:	; £temporary5115 = return_value
+stdlib_test$116:	; £temporary5155 = return_value
 410:	
 
-stdlib_test$117:	; parameter £temporary5115, offset 12
-411:		mov [bp + 18], t2875
+stdlib_test$117:	; parameter £temporary5155, offset 12
+411:		mov [bp + 18], t2881
 413:	
 
 stdlib_test$118:	; call header integral zero 0 stack zero 0
@@ -829,11 +829,11 @@ stdlib_test$120:	; call function noellipse-noellipse labs
 stdlib_test$121:	; post call
 426:	
 
-stdlib_test$122:	; £temporary5116 = return_value
+stdlib_test$122:	; £temporary5156 = return_value
 431:	
 
-stdlib_test$123:	; parameter £temporary5116, offset 16
-432:		mov [bp + 22], t2877
+stdlib_test$123:	; parameter £temporary5156, offset 16
+432:		mov [bp + 22], t2883
 434:	
 
 stdlib_test$124:	; call function noellipse-ellipse printf, extra 0
@@ -869,22 +869,22 @@ stdlib_test$129:	; call function noellipse-noellipse div
 stdlib_test$130:	; post call
 460:	
 
-stdlib_test$131:	; £temporary5118 -> £temporary5119 = return_value
+stdlib_test$131:	; £temporary5158 -> £temporary5159 = return_value
 462:	
 
-stdlib_test$132:	; i = £temporary5118 -> £temporary5119
-463:		mov t2879, bp
-464:		add t2879, 6
-465:		mov t2880, 4
+stdlib_test$132:	; i = £temporary5158 -> £temporary5159
+463:		mov t2885, bp
+464:		add t2885, 6
+465:		mov t2886, 4
 466:	
 
 stdlib_test$132$Loop:
-467:		mov t2881, [t2878]
-468:		mov [t2879], t2881
-469:		inc t2878
-470:		inc t2879
-471:		dec t2880
-472:		cmp t2880, 0
+467:		mov t2887, [t2884]
+468:		mov [t2885], t2887
+469:		inc t2884
+470:		inc t2885
+471:		dec t2886
+472:		cmp t2886, 0
 473:		jne stdlib_test$132$Loop
 475:	
 
@@ -896,13 +896,13 @@ stdlib_test$134:	; parameter string_div_t28102C20329203D202825i2C2025i292C0A#, o
 480:	
 
 stdlib_test$135:	; parameter i$quot, offset 8
-481:		mov a2882, [bp + 6]
-482:		mov [bp + 18], a2882
+481:		mov a2888, [bp + 6]
+482:		mov [bp + 18], a2888
 484:	
 
 stdlib_test$136:	; parameter i$rem, offset 10
-485:		mov a2883, [bp + 8]
-486:		mov [bp + 20], a2883
+485:		mov a2889, [bp + 8]
+486:		mov [bp + 20], a2889
 488:	
 
 stdlib_test$137:	; call function noellipse-ellipse printf, extra 0
@@ -921,20 +921,20 @@ stdlib_test$139:	; call header integral zero 0 stack zero 0
 500:	
 
 stdlib_test$140:	; parameter i, offset 6
-501:		mov t2884, bp
-502:		add t2884, 6
-503:		mov t2885, bp
-504:		add t2885, 16
-505:		mov t2886, 4
+501:		mov t2890, bp
+502:		add t2890, 6
+503:		mov t2891, bp
+504:		add t2891, 16
+505:		mov t2892, 4
 506:	
 
 stdlib_test$140$Loop:
-507:		mov t2887, [t2884]
-508:		mov [t2885], t2887
-509:		inc t2884
-510:		inc t2885
-511:		dec t2886
-512:		cmp t2886, 0
+507:		mov t2893, [t2890]
+508:		mov [t2891], t2893
+509:		inc t2890
+510:		inc t2891
+511:		dec t2892
+512:		cmp t2892, 0
 513:		jne stdlib_test$140$Loop
 515:	
 
@@ -969,22 +969,22 @@ stdlib_test$146:	; call function noellipse-noellipse ldiv
 stdlib_test$147:	; post call
 539:	
 
-stdlib_test$148:	; £temporary5124 -> £temporary5125 = return_value
+stdlib_test$148:	; £temporary5164 -> £temporary5165 = return_value
 541:	
 
-stdlib_test$149:	; li = £temporary5124 -> £temporary5125
-542:		mov t2889, bp
-543:		add t2889, 6
-544:		mov t2890, 8
+stdlib_test$149:	; li = £temporary5164 -> £temporary5165
+542:		mov t2895, bp
+543:		add t2895, 6
+544:		mov t2896, 8
 545:	
 
 stdlib_test$149$Loop:
-546:		mov t2891, [t2888]
-547:		mov [t2889], t2891
-548:		inc t2888
-549:		inc t2889
-550:		dec t2890
-551:		cmp t2890, 0
+546:		mov t2897, [t2894]
+547:		mov [t2895], t2897
+548:		inc t2894
+549:		inc t2895
+550:		dec t2896
+551:		cmp t2896, 0
 552:		jne stdlib_test$149$Loop
 554:	
 
@@ -996,13 +996,13 @@ stdlib_test$151:	; parameter string_ldiv_t28102C20329203D202825li2C2025li290A#, 
 559:	
 
 stdlib_test$152:	; parameter li$quot, offset 8
-560:		mov a2892, [bp + 6]
-561:		mov [bp + 22], a2892
+560:		mov a2898, [bp + 6]
+561:		mov [bp + 22], a2898
 563:	
 
 stdlib_test$153:	; parameter li$rem, offset 12
-564:		mov a2893, [bp + 10]
-565:		mov [bp + 26], a2893
+564:		mov a2899, [bp + 10]
+565:		mov [bp + 26], a2899
 567:	
 
 stdlib_test$154:	; call function noellipse-ellipse printf, extra 0
@@ -1021,20 +1021,20 @@ stdlib_test$156:	; call header integral zero 0 stack zero 0
 579:	
 
 stdlib_test$157:	; parameter li, offset 6
-580:		mov t2894, bp
-581:		add t2894, 6
-582:		mov t2895, bp
-583:		add t2895, 20
-584:		mov t2896, 8
+580:		mov t2900, bp
+581:		add t2900, 6
+582:		mov t2901, bp
+583:		add t2901, 20
+584:		mov t2902, 8
 585:	
 
 stdlib_test$157$Loop:
-586:		mov t2897, [t2894]
-587:		mov [t2895], t2897
-588:		inc t2894
-589:		inc t2895
-590:		dec t2896
-591:		cmp t2896, 0
+586:		mov t2903, [t2900]
+587:		mov [t2901], t2903
+588:		inc t2900
+589:		inc t2901
+590:		dec t2902
+591:		cmp t2902, 0
 592:		jne stdlib_test$157$Loop
 594:	
 
@@ -1091,8 +1091,8 @@ stdlib_test$169:	; index = 0
 634:	
 
 stdlib_test$170:	; if index >= size goto 181
-635:		mov a2898, [bp + 14]
-636:		cmp [bp + 16], a2898
+635:		mov a2904, [bp + 14]
+636:		cmp [bp + 16], a2904
 637:		jge stdlib_test$181
 639:	
 
@@ -1103,25 +1103,25 @@ stdlib_test$172:	; parameter string_25i20#, offset 6
 642:		mov word [bp + 24], string_25i20#
 644:	
 
-stdlib_test$173:	; £temporary5138 = index * 2
-645:		mov a2899, [bp + 16]
+stdlib_test$173:	; £temporary5178 = index * 2
+645:		mov a2905, [bp + 16]
 647:		xor dx, dx
 648:		mul word [int2$2#]
 654:	
 
-stdlib_test$174:	; £temporary5139 = £temporary5138 + list
-655:		mov a2903, bp
-656:		add a2903, 6
-657:		add t2902, a2903
+stdlib_test$174:	; £temporary5179 = £temporary5178 + list
+655:		mov a2909, bp
+656:		add a2909, 6
+657:		add t2908, a2909
 659:	
 
-stdlib_test$175:	; £temporary5140 -> £temporary5139 = *£temporary5139
+stdlib_test$175:	; £temporary5180 -> £temporary5179 = *£temporary5179
 661:	
 
-stdlib_test$176:	; parameter £temporary5140 -> £temporary5139, offset 8
-662:		mov t2904, ax
-663:		mov t2905, [t2904]
-664:		mov [bp + 26], t2905
+stdlib_test$176:	; parameter £temporary5180 -> £temporary5179, offset 8
+662:		mov t2910, ax
+663:		mov t2911, [t2910]
+664:		mov [bp + 26], t2911
 666:	
 
 stdlib_test$177:	; call function noellipse-ellipse printf, extra 0
@@ -1171,8 +1171,8 @@ stdlib_test$186:	; parameter list, offset 6
 702:	
 
 stdlib_test$187:	; parameter size, offset 8
-703:		mov a2906, [bp + 14]
-704:		mov [bp + 26], a2906
+703:		mov a2912, [bp + 14]
+704:		mov [bp + 26], a2912
 706:	
 
 stdlib_test$188:	; parameter 2, offset 10
@@ -1199,8 +1199,8 @@ stdlib_test$192:	; index = 0
 724:	
 
 stdlib_test$193:	; if index >= size goto 204
-725:		mov a2907, [bp + 14]
-726:		cmp [bp + 16], a2907
+725:		mov a2913, [bp + 14]
+726:		cmp [bp + 16], a2913
 727:		jge stdlib_test$204
 729:	
 
@@ -1211,24 +1211,24 @@ stdlib_test$195:	; parameter string_25i20#, offset 6
 732:		mov word [bp + 24], string_25i20#
 734:	
 
-stdlib_test$196:	; £temporary5147 = index * 2
-735:		mov a2908, [bp + 16]
+stdlib_test$196:	; £temporary5187 = index * 2
+735:		mov a2914, [bp + 16]
 737:		xor dx, dx
 738:		mul word [int2$2#]
 744:	
 
-stdlib_test$197:	; £temporary5148 = list + £temporary5147
-745:		mov a2912, bp
-746:		add a2912, 6
-747:		add a2912, t2911
+stdlib_test$197:	; £temporary5188 = list + £temporary5187
+745:		mov a2918, bp
+746:		add a2918, 6
+747:		add a2918, t2917
 749:	
 
-stdlib_test$198:	; £temporary5149 -> £temporary5148 = *£temporary5148
+stdlib_test$198:	; £temporary5189 -> £temporary5188 = *£temporary5188
 751:	
 
-stdlib_test$199:	; parameter £temporary5149 -> £temporary5148, offset 8
-752:		mov t2913, [a2912]
-753:		mov [bp + 26], t2913
+stdlib_test$199:	; parameter £temporary5189 -> £temporary5188, offset 8
+752:		mov t2919, [a2918]
+753:		mov [bp + 26], t2919
 755:	
 
 stdlib_test$200:	; call function noellipse-ellipse printf, extra 0
@@ -1278,8 +1278,8 @@ stdlib_test$209:	; parameter list, offset 6
 791:	
 
 stdlib_test$210:	; parameter size, offset 8
-792:		mov a2914, [bp + 14]
-793:		mov [bp + 26], a2914
+792:		mov a2920, [bp + 14]
+793:		mov [bp + 26], a2920
 795:	
 
 stdlib_test$211:	; parameter 2, offset 10
@@ -1306,8 +1306,8 @@ stdlib_test$215:	; index = 0
 813:	
 
 stdlib_test$216:	; if index >= size goto 227
-814:		mov a2915, [bp + 14]
-815:		cmp [bp + 16], a2915
+814:		mov a2921, [bp + 14]
+815:		cmp [bp + 16], a2921
 816:		jge stdlib_test$227
 818:	
 
@@ -1318,24 +1318,24 @@ stdlib_test$218:	; parameter string_25i20#, offset 6
 821:		mov word [bp + 24], string_25i20#
 823:	
 
-stdlib_test$219:	; £temporary5156 = index * 2
-824:		mov a2916, [bp + 16]
+stdlib_test$219:	; £temporary5196 = index * 2
+824:		mov a2922, [bp + 16]
 826:		xor dx, dx
 827:		mul word [int2$2#]
 833:	
 
-stdlib_test$220:	; £temporary5157 = list + £temporary5156
-834:		mov a2920, bp
-835:		add a2920, 6
-836:		add a2920, t2919
+stdlib_test$220:	; £temporary5197 = list + £temporary5196
+834:		mov a2926, bp
+835:		add a2926, 6
+836:		add a2926, t2925
 838:	
 
-stdlib_test$221:	; £temporary5158 -> £temporary5157 = *£temporary5157
+stdlib_test$221:	; £temporary5198 -> £temporary5197 = *£temporary5197
 840:	
 
-stdlib_test$222:	; parameter £temporary5158 -> £temporary5157, offset 8
-841:		mov t2921, [a2920]
-842:		mov [bp + 26], t2921
+stdlib_test$222:	; parameter £temporary5198 -> £temporary5197, offset 8
+841:		mov t2927, [a2926]
+842:		mov [bp + 26], t2927
 844:	
 
 stdlib_test$223:	; call function noellipse-ellipse printf, extra 0
@@ -1388,13 +1388,13 @@ stdlib_test$232:	; if key >= 6 goto 259
 stdlib_test$233:	; call header integral zero 0 stack zero 0
 883:	
 
-stdlib_test$234:	; £temporary5163 = &key
-884:		mov t2922, bp
-885:		add t2922, 16
+stdlib_test$234:	; £temporary5203 = &key
+884:		mov t2928, bp
+885:		add t2928, 16
 887:	
 
-stdlib_test$235:	; parameter £temporary5163, offset 6
-888:		mov [bp + 24], t2922
+stdlib_test$235:	; parameter £temporary5203, offset 6
+888:		mov [bp + 24], t2928
 890:	
 
 stdlib_test$236:	; parameter list, offset 8
@@ -1403,8 +1403,8 @@ stdlib_test$236:	; parameter list, offset 8
 894:	
 
 stdlib_test$237:	; parameter size, offset 10
-895:		mov a2923, [bp + 14]
-896:		mov [bp + 28], a2923
+895:		mov a2929, [bp + 14]
+896:		mov [bp + 28], a2929
 898:	
 
 stdlib_test$238:	; parameter 2, offset 12
@@ -1425,14 +1425,14 @@ stdlib_test$240:	; call function noellipse-noellipse bsearch
 stdlib_test$241:	; post call
 912:	
 
-stdlib_test$242:	; £temporary5165 = return_value
+stdlib_test$242:	; £temporary5205 = return_value
 917:	
 
-stdlib_test$243:	; £temporary5166 = int_to_int £temporary5165 (Pointer -> Pointer)
+stdlib_test$243:	; £temporary5206 = int_to_int £temporary5205 (Pointer -> Pointer)
 920:	
 
-stdlib_test$244:	; p = £temporary5166
-921:		mov [bp + 18], t2925
+stdlib_test$244:	; p = £temporary5206
+921:		mov [bp + 18], t2931
 923:	
 
 stdlib_test$245:	; if p == 0 goto 249
@@ -1440,14 +1440,14 @@ stdlib_test$245:	; if p == 0 goto 249
 925:		je stdlib_test$249
 927:	
 
-stdlib_test$246:	; £temporary5168 = p - list
-928:		mov a2926, [bp + 18]
-929:		mov a2927, bp
-930:		add a2927, 6
-931:		sub a2926, a2927
+stdlib_test$246:	; £temporary5208 = p - list
+928:		mov a2932, [bp + 18]
+929:		mov a2933, bp
+930:		add a2933, 6
+931:		sub a2932, a2933
 933:	
 
-stdlib_test$247:	; £temporary5173 = £temporary5168 / 2
+stdlib_test$247:	; £temporary5213 = £temporary5208 / 2
 935:		xor dx, dx
 936:		div word [int2$2#]
 942:	
@@ -1456,12 +1456,12 @@ stdlib_test$248:	; goto 250
 943:		jmp stdlib_test$250
 945:	
 
-stdlib_test$249:	; £temporary5173 = -1
-946:		mov t2931, -1
+stdlib_test$249:	; £temporary5213 = -1
+946:		mov t2937, -1
 948:	
 
-stdlib_test$250:	; index = £temporary5173
-949:		mov [bp + 20], t2931
+stdlib_test$250:	; index = £temporary5213
+949:		mov [bp + 20], t2937
 951:	
 
 stdlib_test$251:	; call header integral zero 0 stack zero 0
@@ -1472,13 +1472,13 @@ stdlib_test$252:	; parameter string_20202825i2C2025i290A#, offset 6
 956:	
 
 stdlib_test$253:	; parameter key, offset 8
-957:		mov a2932, [bp + 16]
-958:		mov [bp + 30], a2932
+957:		mov a2938, [bp + 16]
+958:		mov [bp + 30], a2938
 960:	
 
 stdlib_test$254:	; parameter index, offset 10
-961:		mov a2933, [bp + 20]
-962:		mov [bp + 32], a2933
+961:		mov a2939, [bp + 20]
+962:		mov [bp + 32], a2939
 964:	
 
 stdlib_test$255:	; call function noellipse-ellipse printf, extra 0
@@ -1520,10 +1520,10 @@ stdlib_test$262:	; post call
 994:	
 
 stdlib_test$263:	; return
-995:		mov t2934, [bp]
+995:		mov t2940, [bp]
 996:		mov di, [bp + 4]
 997:		mov bp, [bp + 2]
-998:		jmp t2934
+998:		jmp t2940
 1000:	
 
 stdlib_test$264:	; function end stdlib_test

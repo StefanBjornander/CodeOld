@@ -15,6 +15,7 @@ pow
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
 ldexp
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 log2
@@ -24,9 +25,9 @@ frexp
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a378 a378 p 63 67,a379 a379 exponent 66 67)>
+  (a379 a379 p 96 100,a380 a380 exponent 99 100)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a378 a378 p si 63 67,a379 a379 exponent ax 66 67)>
+  (a379 a379 p si 96 100,a380 a380 exponent ax 99 100)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
@@ -57,12 +58,17 @@ acos
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
 atan
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 atan2
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 sinh

@@ -4,8 +4,8 @@ atoi:	; call header integral zero 0 stack zero 0
 3:	
 
 atoi$1:	; parameter s, offset 6
-4:		mov a1536, [bp + 6]
-5:		mov [bp + 14], a1536
+4:		mov a1542, [bp + 6]
+5:		mov [bp + 14], a1542
 7:	
 
 atoi$2:	; parameter 0, offset 8
@@ -26,24 +26,24 @@ atoi$4:	; call function noellipse-noellipse strtol
 atoi$5:	; post call
 21:	
 
-atoi$6:	; £temporary2347 = return_value
+atoi$6:	; £temporary2381 = return_value
 26:	
 
-atoi$7:	; £temporary2348 = int_to_int £temporary2347 (Signed_Long_Int -> Signed_Int)
-29:		cmp t1538, 0
+atoi$7:	; £temporary2382 = int_to_int £temporary2381 (Signed_Long_Int -> Signed_Int)
+29:		cmp t1544, 0
 30:		jge atoi$8
-31:		neg t1538
-33:		neg t1538
+31:		neg t1544
+33:		neg t1544
 35:	
 
-atoi$8:	; return_value = £temporary2348
+atoi$8:	; return_value = £temporary2382
 37:	
 
 atoi$9:	; return
-38:		mov t1539, [bp]
+38:		mov t1545, [bp]
 39:		mov di, [bp + 4]
 40:		mov bp, [bp + 2]
-41:		jmp t1539
+41:		jmp t1545
 43:	
 
 atoi$10:	; function end atoi
@@ -53,8 +53,8 @@ atol:	; call header integral zero 0 stack zero 0
 3:	
 
 atol$1:	; parameter s, offset 6
-4:		mov a1540, [bp + 6]
-5:		mov [bp + 14], a1540
+4:		mov a1546, [bp + 6]
+5:		mov [bp + 14], a1546
 7:	
 
 atol$2:	; parameter 0, offset 8
@@ -75,17 +75,17 @@ atol$4:	; call function noellipse-noellipse strtol
 atol$5:	; post call
 21:	
 
-atol$6:	; £temporary2352 = return_value
+atol$6:	; £temporary2386 = return_value
 26:	
 
-atol$7:	; return_value = £temporary2352
+atol$7:	; return_value = £temporary2386
 28:	
 
 atol$8:	; return
-29:		mov t1543, [bp]
+29:		mov t1549, [bp]
 30:		mov di, [bp + 4]
 31:		mov bp, [bp + 2]
-32:		jmp t1543
+32:		jmp t1549
 34:	
 
 atol$9:	; function end atol
@@ -103,30 +103,30 @@ strtol$2:	; call header integral zero 0 stack zero 0
 9:	
 
 strtol$3:	; parameter s, offset 6
-10:		mov a1544, [bp + 6]
-11:		mov [bp + 24], a1544
+10:		mov a1550, [bp + 6]
+11:		mov [bp + 24], a1550
 13:	
 
 strtol$4:	; parameter string_25li25n#, offset 8
 14:		mov word [bp + 26], string_25li25n#
 16:	
 
-strtol$5:	; £temporary2356 = &value
-17:		mov t1545, bp
-18:		add t1545, 14
+strtol$5:	; £temporary2390 = &value
+17:		mov t1551, bp
+18:		add t1551, 14
 20:	
 
-strtol$6:	; parameter £temporary2356, offset 10
-21:		mov [bp + 28], t1545
+strtol$6:	; parameter £temporary2390, offset 10
+21:		mov [bp + 28], t1551
 23:	
 
-strtol$7:	; £temporary2357 = &chars
-24:		mov t1546, bp
-25:		add t1546, 12
+strtol$7:	; £temporary2391 = &chars
+24:		mov t1552, bp
+25:		add t1552, 12
 27:	
 
-strtol$8:	; parameter £temporary2357, offset 12
-28:		mov [bp + 30], t1546
+strtol$8:	; parameter £temporary2391, offset 12
+28:		mov [bp + 30], t1552
 30:	
 
 strtol$9:	; call function noellipse-ellipse sscanf, extra 0
@@ -146,25 +146,25 @@ strtol$11:	; if endp == 0 goto 14
 42:		je strtol$14
 44:	
 
-strtol$12:	; £temporary2360 -> endp = *endp
-45:		mov a1547, [bp + 8]
+strtol$12:	; £temporary2394 -> endp = *endp
+45:		mov a1553, [bp + 8]
 47:	
 
-strtol$13:	; £temporary2360 -> endp = s + chars
-48:		mov a1548, [bp + 6]
-49:		add a1548, [bp + 12]
-50:		mov [a1547], a1548
+strtol$13:	; £temporary2394 -> endp = s + chars
+48:		mov a1554, [bp + 6]
+49:		add a1554, [bp + 12]
+50:		mov [a1553], a1554
 52:	
 
 strtol$14:	; return_value = value
-53:		mov a1549, [bp + 14]
+53:		mov a1555, [bp + 14]
 55:	
 
 strtol$15:	; return
-56:		mov t1550, [bp]
+56:		mov t1556, [bp]
 57:		mov di, [bp + 4]
 58:		mov bp, [bp + 2]
-59:		jmp t1550
+59:		jmp t1556
 61:	
 
 strtol$16:	; function end strtol
@@ -182,30 +182,30 @@ strtoul$2:	; call header integral zero 0 stack zero 0
 9:	
 
 strtoul$3:	; parameter s, offset 6
-10:		mov a1551, [bp + 6]
-11:		mov [bp + 24], a1551
+10:		mov a1557, [bp + 6]
+11:		mov [bp + 24], a1557
 13:	
 
 strtoul$4:	; parameter string_25lu25n#, offset 8
 14:		mov word [bp + 26], string_25lu25n#
 16:	
 
-strtoul$5:	; £temporary2368 = &value
-17:		mov t1552, bp
-18:		add t1552, 14
+strtoul$5:	; £temporary2402 = &value
+17:		mov t1558, bp
+18:		add t1558, 14
 20:	
 
-strtoul$6:	; parameter £temporary2368, offset 10
-21:		mov [bp + 28], t1552
+strtoul$6:	; parameter £temporary2402, offset 10
+21:		mov [bp + 28], t1558
 23:	
 
-strtoul$7:	; £temporary2369 = &chars
-24:		mov t1553, bp
-25:		add t1553, 12
+strtoul$7:	; £temporary2403 = &chars
+24:		mov t1559, bp
+25:		add t1559, 12
 27:	
 
-strtoul$8:	; parameter £temporary2369, offset 12
-28:		mov [bp + 30], t1553
+strtoul$8:	; parameter £temporary2403, offset 12
+28:		mov [bp + 30], t1559
 30:	
 
 strtoul$9:	; call function noellipse-ellipse sscanf, extra 0
@@ -225,25 +225,25 @@ strtoul$11:	; if endp == 0 goto 14
 42:		je strtoul$14
 44:	
 
-strtoul$12:	; £temporary2372 -> endp = *endp
-45:		mov a1554, [bp + 8]
+strtoul$12:	; £temporary2406 -> endp = *endp
+45:		mov a1560, [bp + 8]
 47:	
 
-strtoul$13:	; £temporary2372 -> endp = s + chars
-48:		mov a1555, [bp + 6]
-49:		add a1555, [bp + 12]
-50:		mov [a1554], a1555
+strtoul$13:	; £temporary2406 -> endp = s + chars
+48:		mov a1561, [bp + 6]
+49:		add a1561, [bp + 12]
+50:		mov [a1560], a1561
 52:	
 
 strtoul$14:	; return_value = value
-53:		mov a1556, [bp + 14]
+53:		mov a1562, [bp + 14]
 55:	
 
 strtoul$15:	; return
-56:		mov t1557, [bp]
+56:		mov t1563, [bp]
 57:		mov di, [bp + 4]
 58:		mov bp, [bp + 2]
-59:		jmp t1557
+59:		jmp t1563
 61:	
 
 strtoul$16:	; function end strtoul
@@ -253,8 +253,8 @@ atof:	; call header integral zero 0 stack zero 0
 3:	
 
 atof$1:	; parameter s, offset 6
-4:		mov a1558, [bp + 6]
-5:		mov [bp + 14], a1558
+4:		mov a1564, [bp + 6]
+5:		mov [bp + 14], a1564
 7:	
 
 atof$2:	; parameter 0, offset 8
@@ -271,17 +271,17 @@ atof$3:	; call function noellipse-noellipse strtod
 atof$4:	; post call
 18:	
 
-atof$5:	; £temporary2380 = return_value
+atof$5:	; £temporary2414 = return_value
 20:	
 
-atof$6:	; return_value = £temporary2380
+atof$6:	; return_value = £temporary2414
 22:	
 
 atof$7:	; return
-23:		mov t1559, [bp]
+23:		mov t1565, [bp]
 24:		mov di, [bp + 4]
 25:		mov bp, [bp + 2]
-26:		jmp t1559
+26:		jmp t1565
 28:	
 
 atof$8:	; function end atof
@@ -303,30 +303,30 @@ strtod$3:	; call header integral zero 0 stack zero 0
 12:	
 
 strtod$4:	; parameter s, offset 6
-13:		mov a1560, [bp + 6]
-14:		mov [bp + 26], a1560
+13:		mov a1566, [bp + 6]
+14:		mov [bp + 26], a1566
 16:	
 
 strtod$5:	; parameter string_25lf25n#, offset 8
 17:		mov word [bp + 28], string_25lf25n#
 19:	
 
-strtod$6:	; £temporary2383 = &value
-20:		mov t1561, bp
-21:		add t1561, 12
+strtod$6:	; £temporary2417 = &value
+20:		mov t1567, bp
+21:		add t1567, 12
 23:	
 
-strtod$7:	; parameter £temporary2383, offset 10
-24:		mov [bp + 30], t1561
+strtod$7:	; parameter £temporary2417, offset 10
+24:		mov [bp + 30], t1567
 26:	
 
-strtod$8:	; £temporary2384 = &chars
-27:		mov t1562, bp
-28:		add t1562, 10
+strtod$8:	; £temporary2418 = &chars
+27:		mov t1568, bp
+28:		add t1568, 10
 30:	
 
-strtod$9:	; parameter £temporary2384, offset 12
-31:		mov [bp + 32], t1562
+strtod$9:	; parameter £temporary2418, offset 12
+31:		mov [bp + 32], t1568
 33:	
 
 strtod$10:	; call function noellipse-ellipse sscanf, extra 0
@@ -346,14 +346,14 @@ strtod$12:	; if endp == 0 goto 15
 45:		je strtod$15
 47:	
 
-strtod$13:	; £temporary2387 -> endp = *endp
-48:		mov a1563, [bp + 8]
+strtod$13:	; £temporary2421 -> endp = *endp
+48:		mov a1569, [bp + 8]
 50:	
 
-strtod$14:	; £temporary2387 -> endp = s + chars
-51:		mov a1564, [bp + 6]
-52:		add a1564, [bp + 10]
-53:		mov [a1563], a1564
+strtod$14:	; £temporary2421 -> endp = s + chars
+51:		mov a1570, [bp + 6]
+52:		add a1570, [bp + 10]
+53:		mov [a1569], a1570
 55:	
 
 strtod$15:	; push float value
@@ -364,21 +364,21 @@ strtod$16:	; return_value = value
 60:	
 
 strtod$17:	; return
-61:		mov t1565, [bp]
+61:		mov t1571, [bp]
 62:		mov di, [bp + 4]
 63:		mov bp, [bp + 2]
-64:		jmp t1565
+64:		jmp t1571
 66:	
 
 strtod$18:	; function end strtod
 1:	
 
 abort:	; ah = 76
-2:		mov a1566, 76
+2:		mov a1572, 76
 4:	
 
 abort$1:	; al = -1
-5:		mov a1567, -1
+5:		mov a1573, -1
 7:	
 
 abort$2:	; interrupt 33
@@ -386,57 +386,57 @@ abort$2:	; interrupt 33
 10:	
 
 abort$3:	; return
-11:		mov t1568, [bp]
+11:		mov t1574, [bp]
 12:		mov di, [bp + 4]
 13:		mov bp, [bp + 2]
-14:		jmp t1568
+14:		jmp t1574
 16:	
 
 abort$4:	; function end abort
 1:	
 
 getenv:	; return_value = 0
-2:		mov a1569, 0
+2:		mov a1575, 0
 4:	
 
 getenv$1:	; return
-5:		mov t1570, [bp]
+5:		mov t1576, [bp]
 6:		mov di, [bp + 4]
 7:		mov bp, [bp + 2]
-8:		jmp t1570
+8:		jmp t1576
 10:	
 
 getenv$2:	; function end getenv
 1:	
 
 system:	; return_value = -1
-2:		mov a1571, -1
+2:		mov a1577, -1
 4:	
 
 system$1:	; return
-5:		mov t1572, [bp]
+5:		mov t1578, [bp]
 6:		mov di, [bp + 4]
 7:		mov bp, [bp + 2]
-8:		jmp t1572
+8:		jmp t1578
 10:	
 
 system$2:	; function end system
 1:	
 
-memswp:	; £temporary2397 = int_to_int value1 (Pointer -> Pointer)
-2:		mov a1573, [bp + 6]
+memswp:	; £temporary2431 = int_to_int value1 (Pointer -> Pointer)
+2:		mov a1579, [bp + 6]
 5:	
 
-memswp$1:	; charValue1 = £temporary2397
-6:		mov [bp + 12], a1573
+memswp$1:	; charValue1 = £temporary2431
+6:		mov [bp + 12], a1579
 8:	
 
-memswp$2:	; £temporary2398 = int_to_int value2 (Pointer -> Pointer)
-9:		mov a1574, [bp + 8]
+memswp$2:	; £temporary2432 = int_to_int value2 (Pointer -> Pointer)
+9:		mov a1580, [bp + 8]
 12:	
 
-memswp$3:	; charValue2 = £temporary2398
-13:		mov [bp + 14], a1574
+memswp$3:	; charValue2 = £temporary2432
+13:		mov [bp + 14], a1580
 15:	
 
 memswp$4:	; index = 0
@@ -444,56 +444,56 @@ memswp$4:	; index = 0
 18:	
 
 memswp$5:	; if index >= valueSize goto 19
-19:		mov a1575, [bp + 10]
-20:		cmp [bp + 16], a1575
+19:		mov a1581, [bp + 10]
+20:		cmp [bp + 16], a1581
 21:		jge memswp$19
 23:	
 
-memswp$6:	; £temporary2402 = charValue1 + index
-24:		mov a1576, [bp + 12]
-25:		add a1576, [bp + 16]
+memswp$6:	; £temporary2436 = charValue1 + index
+24:		mov a1582, [bp + 12]
+25:		add a1582, [bp + 16]
 27:	
 
-memswp$7:	; £temporary2401 -> £temporary2402 = *£temporary2402
+memswp$7:	; £temporary2435 -> £temporary2436 = *£temporary2436
 29:	
 
-memswp$8:	; tempValue = £temporary2401 -> £temporary2402
-30:		mov t1577, [a1576]
-31:		mov [bp + 18], t1577
+memswp$8:	; tempValue = £temporary2435 -> £temporary2436
+30:		mov t1583, [a1582]
+31:		mov [bp + 18], t1583
 33:	
 
-memswp$9:	; £temporary2404 = charValue1 + index
-34:		mov a1578, [bp + 12]
-35:		add a1578, [bp + 16]
+memswp$9:	; £temporary2438 = charValue1 + index
+34:		mov a1584, [bp + 12]
+35:		add a1584, [bp + 16]
 37:	
 
-memswp$10:	; £temporary2403 -> £temporary2404 = *£temporary2404
+memswp$10:	; £temporary2437 -> £temporary2438 = *£temporary2438
 39:	
 
-memswp$11:	; £temporary2406 = charValue2 + index
-40:		mov a1579, [bp + 14]
-41:		add a1579, [bp + 16]
+memswp$11:	; £temporary2440 = charValue2 + index
+40:		mov a1585, [bp + 14]
+41:		add a1585, [bp + 16]
 43:	
 
-memswp$12:	; £temporary2405 -> £temporary2406 = *£temporary2406
+memswp$12:	; £temporary2439 -> £temporary2440 = *£temporary2440
 45:	
 
-memswp$13:	; £temporary2403 -> £temporary2404 = £temporary2405 -> £temporary2406
-46:		mov t1580, [a1579]
-47:		mov [a1578], t1580
+memswp$13:	; £temporary2437 -> £temporary2438 = £temporary2439 -> £temporary2440
+46:		mov t1586, [a1585]
+47:		mov [a1584], t1586
 49:	
 
-memswp$14:	; £temporary2408 = charValue2 + index
-50:		mov a1581, [bp + 14]
-51:		add a1581, [bp + 16]
+memswp$14:	; £temporary2442 = charValue2 + index
+50:		mov a1587, [bp + 14]
+51:		add a1587, [bp + 16]
 53:	
 
-memswp$15:	; £temporary2407 -> £temporary2408 = *£temporary2408
+memswp$15:	; £temporary2441 -> £temporary2442 = *£temporary2442
 55:	
 
-memswp$16:	; £temporary2407 -> £temporary2408 = tempValue
-56:		mov a1582, [bp + 18]
-57:		mov [a1581], a1582
+memswp$16:	; £temporary2441 -> £temporary2442 = tempValue
+56:		mov a1588, [bp + 18]
+57:		mov [a1587], a1588
 59:	
 
 memswp$17:	; ++index
@@ -505,10 +505,10 @@ memswp$18:	; goto 5
 65:	
 
 memswp$19:	; return
-66:		mov t1583, [bp]
+66:		mov t1589, [bp]
 67:		mov di, [bp + 4]
 68:		mov bp, [bp + 2]
-69:		jmp t1583
+69:		jmp t1589
 71:	
 
 memswp$20:	; function end memswp
@@ -519,9 +519,9 @@ bsearch:	; firstIndex = 0
 4:	
 
 bsearch$1:	; lastIndex = listSize - 1
-5:		mov a1584, [bp + 10]
-6:		sub a1584, 1
-7:		mov [bp + 18], a1584
+5:		mov a1590, [bp + 10]
+6:		sub a1590, 1
+7:		mov [bp + 18], a1590
 9:	
 
 bsearch$2:	; if listSize != 0 goto 5
@@ -530,60 +530,60 @@ bsearch$2:	; if listSize != 0 goto 5
 13:	
 
 bsearch$3:	; return_value = 0
-14:		mov a1585, 0
+14:		mov a1591, 0
 16:	
 
 bsearch$4:	; return
-17:		mov t1586, [bp]
+17:		mov t1592, [bp]
 18:		mov di, [bp + 4]
 19:		mov bp, [bp + 2]
-20:		jmp t1586
+20:		jmp t1592
 22:	
 
-bsearch$5:	; £temporary2411 = int_to_int valueList (Pointer -> Pointer)
-23:		mov a1587, [bp + 8]
+bsearch$5:	; £temporary2445 = int_to_int valueList (Pointer -> Pointer)
+23:		mov a1593, [bp + 8]
 26:	
 
-bsearch$6:	; £temporary2412 = firstIndex * valueSize
-27:		mov a1588, [bp + 16]
+bsearch$6:	; £temporary2446 = firstIndex * valueSize
+27:		mov a1594, [bp + 16]
 29:		xor dx, dx
 30:		imul word [bp + 12]
 36:	
 
-bsearch$7:	; firstValuePtr = £temporary2411 + £temporary2412
-37:		add a1587, t1591
-38:		mov [bp + 20], a1587
+bsearch$7:	; firstValuePtr = £temporary2445 + £temporary2446
+37:		add a1593, t1597
+38:		mov [bp + 20], a1593
 40:	
 
 bsearch$8:	; call header integral zero 0 stack zero 0
 42:	
 
 bsearch$9:	; parameter keyPtr, offset 6
-43:		mov a1592, [bp + 6]
-44:		mov [bp + 28], a1592
+43:		mov a1598, [bp + 6]
+44:		mov [bp + 28], a1598
 46:	
 
 bsearch$10:	; parameter firstValuePtr, offset 8
-47:		mov a1593, [bp + 20]
-48:		mov [bp + 30], a1593
+47:		mov a1599, [bp + 20]
+48:		mov [bp + 30], a1599
 50:	
 
 bsearch$11:	; call function noellipse-noellipse compare
 51:		mov word [bp + 22], bsearch$12
 52:		mov [bp + 24], bp
 53:		add bp, 22
-54:		mov a1594, [bp + 14]
-55:		jmp a1594 a1594 compare 54 55
+54:		mov a1600, [bp + 14]
+55:		jmp a1600 a1600 compare 54 55
 57:	
 
 bsearch$12:	; post call
 59:	
 
-bsearch$13:	; £temporary2414 = return_value
+bsearch$13:	; £temporary2448 = return_value
 64:	
 
-bsearch$14:	; firstCompare = £temporary2414
-65:		mov [bp + 22], t1596
+bsearch$14:	; firstCompare = £temporary2448
+65:		mov [bp + 22], t1602
 67:	
 
 bsearch$15:	; if firstCompare >= 0 goto 18
@@ -592,14 +592,14 @@ bsearch$15:	; if firstCompare >= 0 goto 18
 71:	
 
 bsearch$16:	; return_value = 0
-72:		mov a1597, 0
+72:		mov a1603, 0
 74:	
 
 bsearch$17:	; return
-75:		mov t1598, [bp]
+75:		mov t1604, [bp]
 76:		mov di, [bp + 4]
 77:		mov bp, [bp + 2]
-78:		jmp t1598
+78:		jmp t1604
 80:	
 
 bsearch$18:	; if firstCompare != 0 goto 21
@@ -608,60 +608,60 @@ bsearch$18:	; if firstCompare != 0 goto 21
 84:	
 
 bsearch$19:	; return_value = firstValuePtr
-85:		mov a1599, [bp + 20]
+85:		mov a1605, [bp + 20]
 87:	
 
 bsearch$20:	; return
-88:		mov t1600, [bp]
+88:		mov t1606, [bp]
 89:		mov di, [bp + 4]
 90:		mov bp, [bp + 2]
-91:		jmp t1600
+91:		jmp t1606
 93:	
 
-bsearch$21:	; £temporary2417 = int_to_int valueList (Pointer -> Pointer)
-94:		mov a1601, [bp + 8]
+bsearch$21:	; £temporary2451 = int_to_int valueList (Pointer -> Pointer)
+94:		mov a1607, [bp + 8]
 97:	
 
-bsearch$22:	; £temporary2418 = lastIndex * valueSize
-98:		mov a1602, [bp + 18]
+bsearch$22:	; £temporary2452 = lastIndex * valueSize
+98:		mov a1608, [bp + 18]
 100:		xor dx, dx
 101:		imul word [bp + 12]
 107:	
 
-bsearch$23:	; lastValuePtr = £temporary2417 + £temporary2418
-108:		add a1601, t1605
-109:		mov [bp + 20], a1601
+bsearch$23:	; lastValuePtr = £temporary2451 + £temporary2452
+108:		add a1607, t1611
+109:		mov [bp + 20], a1607
 111:	
 
 bsearch$24:	; call header integral zero 0 stack zero 0
 113:	
 
 bsearch$25:	; parameter keyPtr, offset 6
-114:		mov a1606, [bp + 6]
-115:		mov [bp + 28], a1606
+114:		mov a1612, [bp + 6]
+115:		mov [bp + 28], a1612
 117:	
 
 bsearch$26:	; parameter lastValuePtr, offset 8
-118:		mov a1607, [bp + 20]
-119:		mov [bp + 30], a1607
+118:		mov a1613, [bp + 20]
+119:		mov [bp + 30], a1613
 121:	
 
 bsearch$27:	; call function noellipse-noellipse compare
 122:		mov word [bp + 22], bsearch$28
 123:		mov [bp + 24], bp
 124:		add bp, 22
-125:		mov a1608, [bp + 14]
-126:		jmp a1608 a1608 compare 125 126
+125:		mov a1614, [bp + 14]
+126:		jmp a1614 a1614 compare 125 126
 128:	
 
 bsearch$28:	; post call
 130:	
 
-bsearch$29:	; £temporary2420 = return_value
+bsearch$29:	; £temporary2454 = return_value
 135:	
 
-bsearch$30:	; lastCompare = £temporary2420
-136:		mov [bp + 22], t1610
+bsearch$30:	; lastCompare = £temporary2454
+136:		mov [bp + 22], t1616
 138:	
 
 bsearch$31:	; if lastCompare <= 0 goto 34
@@ -670,14 +670,14 @@ bsearch$31:	; if lastCompare <= 0 goto 34
 142:	
 
 bsearch$32:	; return_value = 0
-143:		mov a1611, 0
+143:		mov a1617, 0
 145:	
 
 bsearch$33:	; return
-146:		mov t1612, [bp]
+146:		mov t1618, [bp]
 147:		mov di, [bp + 4]
 148:		mov bp, [bp + 2]
-149:		jmp t1612
+149:		jmp t1618
 151:	
 
 bsearch$34:	; if lastCompare != 0 goto 37
@@ -686,71 +686,71 @@ bsearch$34:	; if lastCompare != 0 goto 37
 155:	
 
 bsearch$35:	; return_value = lastValuePtr
-156:		mov a1613, [bp + 20]
+156:		mov a1619, [bp + 20]
 158:	
 
 bsearch$36:	; return
-159:		mov t1614, [bp]
+159:		mov t1620, [bp]
 160:		mov di, [bp + 4]
 161:		mov bp, [bp + 2]
-162:		jmp t1614
+162:		jmp t1620
 164:	
 
-bsearch$37:	; £temporary2423 = firstIndex + lastIndex
-165:		mov a1615, [bp + 16]
-166:		add a1615, [bp + 18]
+bsearch$37:	; £temporary2457 = firstIndex + lastIndex
+165:		mov a1621, [bp + 16]
+166:		add a1621, [bp + 18]
 168:	
 
-bsearch$38:	; middleIndex = £temporary2423 / 2
+bsearch$38:	; middleIndex = £temporary2457 / 2
 170:		xor dx, dx
 171:		idiv word [int2$2#]
 172:		mov [bp + 20], ax
 174:	
 
-bsearch$39:	; £temporary2425 = int_to_int valueList (Pointer -> Pointer)
-175:		mov a1618, [bp + 8]
+bsearch$39:	; £temporary2459 = int_to_int valueList (Pointer -> Pointer)
+175:		mov a1624, [bp + 8]
 178:	
 
-bsearch$40:	; £temporary2426 = middleIndex * valueSize
-179:		mov a1619, [bp + 20]
+bsearch$40:	; £temporary2460 = middleIndex * valueSize
+179:		mov a1625, [bp + 20]
 181:		xor dx, dx
 182:		imul word [bp + 12]
 188:	
 
-bsearch$41:	; middleValuePtr = £temporary2425 + £temporary2426
-189:		add a1618, t1622
-190:		mov [bp + 22], a1618
+bsearch$41:	; middleValuePtr = £temporary2459 + £temporary2460
+189:		add a1624, t1628
+190:		mov [bp + 22], a1624
 192:	
 
 bsearch$42:	; call header integral zero 0 stack zero 0
 194:	
 
 bsearch$43:	; parameter keyPtr, offset 6
-195:		mov a1623, [bp + 6]
-196:		mov [bp + 30], a1623
+195:		mov a1629, [bp + 6]
+196:		mov [bp + 30], a1629
 198:	
 
 bsearch$44:	; parameter middleValuePtr, offset 8
-199:		mov a1624, [bp + 22]
-200:		mov [bp + 32], a1624
+199:		mov a1630, [bp + 22]
+200:		mov [bp + 32], a1630
 202:	
 
 bsearch$45:	; call function noellipse-noellipse compare
 203:		mov word [bp + 24], bsearch$46
 204:		mov [bp + 26], bp
 205:		add bp, 24
-206:		mov a1625, [bp + 14]
-207:		jmp a1625 a1625 compare 206 207
+206:		mov a1631, [bp + 14]
+207:		jmp a1631 a1631 compare 206 207
 209:	
 
 bsearch$46:	; post call
 211:	
 
-bsearch$47:	; £temporary2428 = return_value
+bsearch$47:	; £temporary2462 = return_value
 216:	
 
-bsearch$48:	; middleCompare = £temporary2428
-217:		mov [bp + 24], t1627
+bsearch$48:	; middleCompare = £temporary2462
+217:		mov [bp + 24], t1633
 219:	
 
 bsearch$49:	; if middleCompare >= 0 goto 52
@@ -759,8 +759,8 @@ bsearch$49:	; if middleCompare >= 0 goto 52
 223:	
 
 bsearch$50:	; lastIndex = middleIndex
-224:		mov a1628, [bp + 20]
-225:		mov [bp + 18], a1628
+224:		mov a1634, [bp + 20]
+225:		mov [bp + 18], a1634
 227:	
 
 bsearch$51:	; goto 5
@@ -773,8 +773,8 @@ bsearch$52:	; if middleCompare <= 0 goto 55
 234:	
 
 bsearch$53:	; firstIndex = middleIndex
-235:		mov a1629, [bp + 20]
-236:		mov [bp + 16], a1629
+235:		mov a1635, [bp + 20]
+236:		mov [bp + 16], a1635
 238:	
 
 bsearch$54:	; goto 5
@@ -782,88 +782,88 @@ bsearch$54:	; goto 5
 241:	
 
 bsearch$55:	; return_value = middleValuePtr
-242:		mov a1630, [bp + 22]
+242:		mov a1636, [bp + 22]
 244:	
 
 bsearch$56:	; return
-245:		mov t1631, [bp]
+245:		mov t1637, [bp]
 246:		mov di, [bp + 4]
 247:		mov bp, [bp + 2]
-248:		jmp t1631
+248:		jmp t1637
 250:	
 
 bsearch$57:	; function end bsearch
 1:	
 
-rand:	; £temporary2438 = g_randValue * 1664525
-2:		mov a1632, [@31$g_randValue]
+rand:	; £temporary2472 = g_randValue * 1664525
+2:		mov a1638, [@31$g_randValue]
 4:		xor edx, edx
 5:		imul dword [int4$1664525#]
 11:	
 
-rand$1:	; £temporary2439 = £temporary2438 + 1013904223
-12:		add t1635, 1013904223
+rand$1:	; £temporary2473 = £temporary2472 + 1013904223
+12:		add t1641, 1013904223
 14:	
 
-rand$2:	; g_randValue = £temporary2439 % 127
+rand$2:	; g_randValue = £temporary2473 % 127
 16:		xor edx, edx
 17:		idiv dword [int4$127#]
 18:		mov [@31$g_randValue], edx
 20:	
 
-rand$3:	; £temporary2441 = int_to_int g_randValue (Signed_Long_Int -> Signed_Int)
-21:		mov a1637, [@31$g_randValue]
-24:		cmp a1637, 0
+rand$3:	; £temporary2475 = int_to_int g_randValue (Signed_Long_Int -> Signed_Int)
+21:		mov a1643, [@31$g_randValue]
+24:		cmp a1643, 0
 25:		jge rand$4
-26:		neg a1637
-28:		neg a1637
+26:		neg a1643
+28:		neg a1643
 30:	
 
-rand$4:	; return_value = £temporary2441
+rand$4:	; return_value = £temporary2475
 32:	
 
 rand$5:	; return
-33:		mov t1638, [bp]
+33:		mov t1644, [bp]
 34:		mov di, [bp + 4]
 35:		mov bp, [bp + 2]
-36:		jmp t1638
+36:		jmp t1644
 38:	
 
 rand$6:	; function end rand
 1:	
 
-srand:	; £temporary2442 = int_to_int seed (Unsigned_Int -> Signed_Long_Int)
-2:		mov a1639, [bp + 6]
-4:		and a1639, 65535
+srand:	; £temporary2476 = int_to_int seed (Unsigned_Int -> Signed_Long_Int)
+2:		mov a1645, [bp + 6]
+4:		and a1645, 65535
 6:	
 
-srand$1:	; g_randValue = £temporary2442
-7:		mov [@31$g_randValue], a1639
+srand$1:	; g_randValue = £temporary2476
+7:		mov [@31$g_randValue], a1645
 9:	
 
 srand$2:	; return
-10:		mov t1640, [bp]
+10:		mov t1646, [bp]
 11:		mov di, [bp + 4]
 12:		mov bp, [bp + 2]
-13:		jmp t1640
+13:		jmp t1646
 15:	
 
 srand$3:	; function end srand
 1:	
 
 print_heap2:	; heapBottom = (int2$32764#,0)
-2:		mov t1641, [int2$32764#]
-3:		mov [bp + 6], t1641
+2:		mov t1647, [int2$32764#]
+3:		mov [bp + 6], t1647
 5:	
 
 print_heap2$1:	; topStack = (int2$32766#,0)
-6:		mov t1642, [int2$32766#]
-7:		mov [bp + 8], t1642
+6:		mov t1648, [int2$32766#]
+7:		mov [bp + 8], t1648
 9:	
 
 print_heap2$2:	; heapTop = (int2$32762#,0)
-10:		mov t1643, [int2$32762#]
-11:		mov [bp + 10], t1643
+10:		mov t1649, [int2$32762#]
+11:		mov [bp + 10], t1649
 13:	
 
 print_heap2$3:	; index = 0
@@ -878,18 +878,18 @@ print_heap2$5:	; parameter string_stack20top2025u2C20heap20top2025u2C20heap20bot
 21:	
 
 print_heap2$6:	; parameter topStack, offset 8
-22:		mov a1644, [bp + 8]
-23:		mov [bp + 22], a1644
+22:		mov a1650, [bp + 8]
+23:		mov [bp + 22], a1650
 25:	
 
 print_heap2$7:	; parameter heapTop, offset 10
-26:		mov a1645, [bp + 10]
-27:		mov [bp + 24], a1645
+26:		mov a1651, [bp + 10]
+27:		mov [bp + 24], a1651
 29:	
 
 print_heap2$8:	; parameter heapBottom, offset 12
-30:		mov a1646, [bp + 6]
-31:		mov [bp + 26], a1646
+30:		mov a1652, [bp + 6]
+31:		mov [bp + 26], a1652
 33:	
 
 print_heap2$9:	; call function noellipse-ellipse printf, extra 0
@@ -909,20 +909,20 @@ print_heap2$11:	; if heapTop == 0 goto 29
 45:		je print_heap2$29
 47:	
 
-print_heap2$12:	; £temporary2448 = int_to_int heapTop (Unsigned_Int -> Pointer)
-48:		mov a1647, [bp + 10]
+print_heap2$12:	; £temporary2482 = int_to_int heapTop (Unsigned_Int -> Pointer)
+48:		mov a1653, [bp + 10]
 51:	
 
-print_heap2$13:	; £temporary2449 = £temporary2448 + 2
-52:		add a1647, 2
+print_heap2$13:	; £temporary2483 = £temporary2482 + 2
+52:		add a1653, 2
 54:	
 
-print_heap2$14:	; £temporary2450 -> £temporary2449 = *£temporary2449
+print_heap2$14:	; £temporary2484 -> £temporary2483 = *£temporary2483
 56:	
 
-print_heap2$15:	; size = £temporary2450 -> £temporary2449
-57:		mov t1648, [a1647]
-58:		mov [bp + 14], t1648
+print_heap2$15:	; size = £temporary2484 -> £temporary2483
+57:		mov t1654, [a1653]
+58:		mov [bp + 14], t1654
 60:	
 
 print_heap2$16:	; call header integral zero 0 stack zero 0
@@ -932,26 +932,26 @@ print_heap2$17:	; parameter string_2020index2025u2C20address2025u2C20size2025u0A
 63:		mov word [bp + 22], string_2020index2025u2C20address2025u2C20size2025u0A#
 65:	
 
-print_heap2$18:	; £temporary2451 = index
-66:		mov t1649, [bp + 12]
+print_heap2$18:	; £temporary2485 = index
+66:		mov t1655, [bp + 12]
 68:	
 
 print_heap2$19:	; ++index
 69:		inc word [bp + 12]
 71:	
 
-print_heap2$20:	; parameter £temporary2451, offset 8
-72:		mov [bp + 24], t1649
+print_heap2$20:	; parameter £temporary2485, offset 8
+72:		mov [bp + 24], t1655
 74:	
 
 print_heap2$21:	; parameter heapTop, offset 10
-75:		mov a1650, [bp + 10]
-76:		mov [bp + 26], a1650
+75:		mov a1656, [bp + 10]
+76:		mov [bp + 26], a1656
 78:	
 
 print_heap2$22:	; parameter size, offset 12
-79:		mov a1651, [bp + 14]
-80:		mov [bp + 28], a1651
+79:		mov a1657, [bp + 14]
+80:		mov [bp + 28], a1657
 82:	
 
 print_heap2$23:	; call function noellipse-ellipse printf, extra 0
@@ -966,16 +966,16 @@ print_heap2$23:	; call function noellipse-ellipse printf, extra 0
 print_heap2$24:	; post call
 92:	
 
-print_heap2$25:	; £temporary2453 = int_to_int heapTop (Unsigned_Int -> Pointer)
-93:		mov a1652, [bp + 10]
+print_heap2$25:	; £temporary2487 = int_to_int heapTop (Unsigned_Int -> Pointer)
+93:		mov a1658, [bp + 10]
 96:	
 
-print_heap2$26:	; £temporary2454 -> £temporary2453 = *£temporary2453
+print_heap2$26:	; £temporary2488 -> £temporary2487 = *£temporary2487
 98:	
 
-print_heap2$27:	; heapTop = £temporary2454 -> £temporary2453
-99:		mov t1653, [a1652]
-100:		mov [bp + 10], t1653
+print_heap2$27:	; heapTop = £temporary2488 -> £temporary2487
+99:		mov t1659, [a1658]
+100:		mov [bp + 10], t1659
 102:	
 
 print_heap2$28:	; goto 11
@@ -1001,10 +1001,10 @@ print_heap2$32:	; post call
 119:	
 
 print_heap2$33:	; return
-120:		mov t1654, [bp]
+120:		mov t1660, [bp]
 121:		mov di, [bp + 4]
 122:		mov bp, [bp + 2]
-123:		jmp t1654
+123:		jmp t1660
 125:	
 
 print_heap2$34:	; function end print_heap2
@@ -1037,42 +1037,42 @@ atexit$5:	; if index >= 256 goto 27
 20:		jge atexit$27
 22:	
 
-atexit$6:	; £temporary2469 = index * 2
-23:		mov a1655, [bp + 8]
+atexit$6:	; £temporary2503 = index * 2
+23:		mov a1661, [bp + 8]
 25:		xor dx, dx
 26:		mul word [int2$2#]
 32:	
 
-atexit$7:	; £temporary2470 = g_funcArray + £temporary2469
-33:		mov a1659, g_funcArray
-34:		add a1659, t1658
+atexit$7:	; £temporary2504 = g_funcArray + £temporary2503
+33:		mov a1665, g_funcArray
+34:		add a1665, t1664
 36:	
 
-atexit$8:	; £temporary2468 -> £temporary2470 = *£temporary2470
+atexit$8:	; £temporary2502 -> £temporary2504 = *£temporary2504
 38:	
 
-atexit$9:	; if £temporary2468 -> £temporary2470 != 0 goto 25
-39:		cmp word [a1659], 0
+atexit$9:	; if £temporary2502 -> £temporary2504 != 0 goto 25
+39:		cmp word [a1665], 0
 40:		jne atexit$25
 42:	
 
-atexit$10:	; £temporary2473 = index * 2
-43:		mov a1660, [bp + 8]
+atexit$10:	; £temporary2507 = index * 2
+43:		mov a1666, [bp + 8]
 45:		xor dx, dx
 46:		mul word [int2$2#]
 52:	
 
-atexit$11:	; £temporary2474 = g_funcArray + £temporary2473
-53:		mov a1664, g_funcArray
-54:		add a1664, t1663
+atexit$11:	; £temporary2508 = g_funcArray + £temporary2507
+53:		mov a1670, g_funcArray
+54:		add a1670, t1669
 56:	
 
-atexit$12:	; £temporary2472 -> £temporary2474 = *£temporary2474
+atexit$12:	; £temporary2506 -> £temporary2508 = *£temporary2508
 58:	
 
-atexit$13:	; £temporary2472 -> £temporary2474 = fcn
-59:		mov a1665, [bp + 6]
-60:		mov [a1664], a1665
+atexit$13:	; £temporary2506 -> £temporary2508 = fcn
+59:		mov a1671, [bp + 6]
+60:		mov [a1670], a1671
 62:	
 
 atexit$14:	; call header integral zero 0 stack zero 0
@@ -1083,27 +1083,27 @@ atexit$15:	; parameter string_Added20function20index2025i3A2025i0A#, offset 6
 67:	
 
 atexit$16:	; parameter index, offset 8
-68:		mov a1666, [bp + 8]
-69:		mov [bp + 18], a1666
+68:		mov a1672, [bp + 8]
+69:		mov [bp + 18], a1672
 71:	
 
-atexit$17:	; £temporary2476 = index * 2
-72:		mov a1667, [bp + 8]
+atexit$17:	; £temporary2510 = index * 2
+72:		mov a1673, [bp + 8]
 74:		xor dx, dx
 75:		mul word [int2$2#]
 81:	
 
-atexit$18:	; £temporary2477 = g_funcArray + £temporary2476
-82:		mov a1671, g_funcArray
-83:		add a1671, t1670
+atexit$18:	; £temporary2511 = g_funcArray + £temporary2510
+82:		mov a1677, g_funcArray
+83:		add a1677, t1676
 85:	
 
-atexit$19:	; £temporary2475 -> £temporary2477 = *£temporary2477
+atexit$19:	; £temporary2509 -> £temporary2511 = *£temporary2511
 87:	
 
-atexit$20:	; parameter £temporary2475 -> £temporary2477, offset 10
-88:		mov t1672, [a1671]
-89:		mov [bp + 20], t1672
+atexit$20:	; parameter £temporary2509 -> £temporary2511, offset 10
+88:		mov t1678, [a1677]
+89:		mov [bp + 20], t1678
 91:	
 
 atexit$21:	; call function noellipse-ellipse printf, extra 0
@@ -1119,14 +1119,14 @@ atexit$22:	; post call
 101:	
 
 atexit$23:	; return_value = 0
-102:		mov a1673, 0
+102:		mov a1679, 0
 104:	
 
 atexit$24:	; return
-105:		mov t1674, [bp]
+105:		mov t1680, [bp]
 106:		mov di, [bp + 4]
 107:		mov bp, [bp + 2]
-108:		jmp t1674
+108:		jmp t1680
 110:	
 
 atexit$25:	; ++index
@@ -1138,14 +1138,14 @@ atexit$26:	; goto 5
 116:	
 
 atexit$27:	; return_value = -1
-117:		mov a1675, -1
+117:		mov a1681, -1
 119:	
 
 atexit$28:	; return
-120:		mov t1676, [bp]
+120:		mov t1682, [bp]
 121:		mov di, [bp + 4]
 122:		mov bp, [bp + 2]
-123:		jmp t1676
+123:		jmp t1682
 125:	
 
 atexit$29:	; function end atexit
@@ -1178,22 +1178,22 @@ exit$5:	; if index < 0 goto 27
 20:		jl exit$27
 22:	
 
-exit$6:	; £temporary2487 = index * 2
-23:		mov a1677, [bp + 8]
+exit$6:	; £temporary2521 = index * 2
+23:		mov a1683, [bp + 8]
 25:		xor dx, dx
 26:		mul word [int2$2#]
 32:	
 
-exit$7:	; £temporary2488 = g_funcArray + £temporary2487
-33:		mov a1681, g_funcArray
-34:		add a1681, t1680
+exit$7:	; £temporary2522 = g_funcArray + £temporary2521
+33:		mov a1687, g_funcArray
+34:		add a1687, t1686
 36:	
 
-exit$8:	; £temporary2486 -> £temporary2488 = *£temporary2488
+exit$8:	; £temporary2520 -> £temporary2522 = *£temporary2522
 38:	
 
-exit$9:	; if £temporary2486 -> £temporary2488 == 0 goto 25
-39:		cmp word [a1681], 0
+exit$9:	; if £temporary2520 -> £temporary2522 == 0 goto 25
+39:		cmp word [a1687], 0
 40:		je exit$25
 42:	
 
@@ -1205,27 +1205,27 @@ exit$11:	; parameter string_Called20function20index2025i3A2025i0A#, offset 6
 47:	
 
 exit$12:	; parameter index, offset 8
-48:		mov a1682, [bp + 8]
-49:		mov [bp + 18], a1682
+48:		mov a1688, [bp + 8]
+49:		mov [bp + 18], a1688
 51:	
 
-exit$13:	; £temporary2491 = index * 2
-52:		mov a1683, [bp + 8]
+exit$13:	; £temporary2525 = index * 2
+52:		mov a1689, [bp + 8]
 54:		xor dx, dx
 55:		mul word [int2$2#]
 61:	
 
-exit$14:	; £temporary2492 = g_funcArray + £temporary2491
-62:		mov a1687, g_funcArray
-63:		add a1687, t1686
+exit$14:	; £temporary2526 = g_funcArray + £temporary2525
+62:		mov a1693, g_funcArray
+63:		add a1693, t1692
 65:	
 
-exit$15:	; £temporary2490 -> £temporary2492 = *£temporary2492
+exit$15:	; £temporary2524 -> £temporary2526 = *£temporary2526
 67:	
 
-exit$16:	; parameter £temporary2490 -> £temporary2492, offset 10
-68:		mov t1688, [a1687]
-69:		mov [bp + 20], t1688
+exit$16:	; parameter £temporary2524 -> £temporary2526, offset 10
+68:		mov t1694, [a1693]
+69:		mov [bp + 20], t1694
 71:	
 
 exit$17:	; call function noellipse-ellipse printf, extra 0
@@ -1240,31 +1240,31 @@ exit$17:	; call function noellipse-ellipse printf, extra 0
 exit$18:	; post call
 81:	
 
-exit$19:	; £temporary2495 = index * 2
-82:		mov a1689, [bp + 8]
+exit$19:	; £temporary2529 = index * 2
+82:		mov a1695, [bp + 8]
 84:		xor dx, dx
 85:		mul word [int2$2#]
 91:	
 
-exit$20:	; £temporary2496 = g_funcArray + £temporary2495
-92:		mov a1693, g_funcArray
-93:		add a1693, t1692
+exit$20:	; £temporary2530 = g_funcArray + £temporary2529
+92:		mov a1699, g_funcArray
+93:		add a1699, t1698
 95:	
 
-exit$21:	; £temporary2494 -> £temporary2496 = *£temporary2496
-96:		mov t1694, [a1693]
-97:		mov [bp + 10], t1694
+exit$21:	; £temporary2528 -> £temporary2530 = *£temporary2530
+96:		mov t1700, [a1699]
+97:		mov [bp + 10], t1700
 99:	
 
 exit$22:	; call header integral zero 0 stack zero 0
 101:	
 
-exit$23:	; call function noellipse-noellipse £temporary2494 -> £temporary2496
+exit$23:	; call function noellipse-noellipse £temporary2528 -> £temporary2530
 102:		mov word [bp + 12], exit$24
 103:		mov [bp + 14], bp
 104:		add bp, 12
-105:		mov t1695, [bp + 10]
-106:		jmp t1695 t1695 £temporary2494 105 106
+105:		mov t1701, [bp + 10]
+106:		jmp t1701 t1701 £temporary2528 105 106
 108:	
 
 exit$24:	; post call
@@ -1278,19 +1278,19 @@ exit$26:	; goto 5
 114:		jmp exit$5
 116:	
 
-exit$27:	; £temporary2499 = int_to_int status (Signed_Int -> Signed_Short_Int)
-117:		mov a1696, [bp + 6]
-120:		cmp a1696, 0
+exit$27:	; £temporary2533 = int_to_int status (Signed_Int -> Signed_Short_Int)
+117:		mov a1702, [bp + 6]
+120:		cmp a1702, 0
 121:		jge exit$28
-122:		neg a1696
-124:		neg a1696
+122:		neg a1702
+124:		neg a1702
 126:	
 
-exit$28:	; al = £temporary2499
+exit$28:	; al = £temporary2533
 128:	
 
 exit$29:	; ah = 76
-129:		mov a1697, 76
+129:		mov a1703, 76
 131:	
 
 exit$30:	; interrupt 33
@@ -1298,10 +1298,10 @@ exit$30:	; interrupt 33
 134:	
 
 exit$31:	; return
-135:		mov t1698, [bp]
+135:		mov t1704, [bp]
 136:		mov di, [bp + 4]
 137:		mov bp, [bp + 2]
-138:		jmp t1698
+138:		jmp t1704
 140:	
 
 exit$32:	; function end exit
@@ -1312,56 +1312,56 @@ swap:	; index = 0
 4:	
 
 swap$1:	; if index >= valueSize goto 15
-5:		mov a1699, [bp + 10]
-6:		cmp [bp + 12], a1699
+5:		mov a1705, [bp + 10]
+6:		cmp [bp + 12], a1705
 7:		jge swap$15
 9:	
 
-swap$2:	; £temporary2508 = leftValuePtr + index
-10:		mov a1700, [bp + 6]
-11:		add a1700, [bp + 12]
+swap$2:	; £temporary2542 = leftValuePtr + index
+10:		mov a1706, [bp + 6]
+11:		add a1706, [bp + 12]
 13:	
 
-swap$3:	; £temporary2507 -> £temporary2508 = *£temporary2508
+swap$3:	; £temporary2541 -> £temporary2542 = *£temporary2542
 15:	
 
-swap$4:	; tempValue = £temporary2507 -> £temporary2508
-16:		mov t1701, [a1700]
-17:		mov [bp + 14], t1701
+swap$4:	; tempValue = £temporary2541 -> £temporary2542
+16:		mov t1707, [a1706]
+17:		mov [bp + 14], t1707
 19:	
 
-swap$5:	; £temporary2510 = leftValuePtr + index
-20:		mov a1702, [bp + 6]
-21:		add a1702, [bp + 12]
+swap$5:	; £temporary2544 = leftValuePtr + index
+20:		mov a1708, [bp + 6]
+21:		add a1708, [bp + 12]
 23:	
 
-swap$6:	; £temporary2509 -> £temporary2510 = *£temporary2510
+swap$6:	; £temporary2543 -> £temporary2544 = *£temporary2544
 25:	
 
-swap$7:	; £temporary2512 = rightValuePtr + index
-26:		mov a1703, [bp + 8]
-27:		add a1703, [bp + 12]
+swap$7:	; £temporary2546 = rightValuePtr + index
+26:		mov a1709, [bp + 8]
+27:		add a1709, [bp + 12]
 29:	
 
-swap$8:	; £temporary2511 -> £temporary2512 = *£temporary2512
+swap$8:	; £temporary2545 -> £temporary2546 = *£temporary2546
 31:	
 
-swap$9:	; £temporary2509 -> £temporary2510 = £temporary2511 -> £temporary2512
-32:		mov t1704, [a1703]
-33:		mov [a1702], t1704
+swap$9:	; £temporary2543 -> £temporary2544 = £temporary2545 -> £temporary2546
+32:		mov t1710, [a1709]
+33:		mov [a1708], t1710
 35:	
 
-swap$10:	; £temporary2514 = rightValuePtr + index
-36:		mov a1705, [bp + 8]
-37:		add a1705, [bp + 12]
+swap$10:	; £temporary2548 = rightValuePtr + index
+36:		mov a1711, [bp + 8]
+37:		add a1711, [bp + 12]
 39:	
 
-swap$11:	; £temporary2513 -> £temporary2514 = *£temporary2514
+swap$11:	; £temporary2547 -> £temporary2548 = *£temporary2548
 41:	
 
-swap$12:	; £temporary2513 -> £temporary2514 = tempValue
-42:		mov a1706, [bp + 14]
-43:		mov [a1705], a1706
+swap$12:	; £temporary2547 -> £temporary2548 = tempValue
+42:		mov a1712, [bp + 14]
+43:		mov [a1711], a1712
 45:	
 
 swap$13:	; ++index
@@ -1373,27 +1373,27 @@ swap$14:	; goto 1
 51:	
 
 swap$15:	; return
-52:		mov t1707, [bp]
+52:		mov t1713, [bp]
 53:		mov di, [bp + 4]
 54:		mov bp, [bp + 2]
-55:		jmp t1707
+55:		jmp t1713
 57:	
 
 swap$16:	; function end swap
 1:	
 
-qsort:	; £temporary2515 = int_to_int valueList (Pointer -> Pointer)
-2:		mov a1708, [bp + 6]
+qsort:	; £temporary2549 = int_to_int valueList (Pointer -> Pointer)
+2:		mov a1714, [bp + 6]
 5:	
 
-qsort$1:	; charList = £temporary2515
-6:		mov [bp + 16], a1708
+qsort$1:	; charList = £temporary2549
+6:		mov [bp + 16], a1714
 8:	
 
 qsort$2:	; index1 = listSize - 1
-9:		mov a1709, [bp + 8]
-10:		sub a1709, 1
-11:		mov [bp + 18], a1709
+9:		mov a1715, [bp + 8]
+10:		sub a1715, 1
+11:		mov [bp + 18], a1715
 13:	
 
 qsort$3:	; if index1 <= 0 goto 30
@@ -1410,68 +1410,68 @@ qsort$5:	; index2 = 0
 23:	
 
 qsort$6:	; if index2 >= index1 goto 28
-24:		mov a1710, [bp + 18]
-25:		cmp [bp + 20], a1710
+24:		mov a1716, [bp + 18]
+25:		cmp [bp + 20], a1716
 26:		jge qsort$28
 28:	
 
-qsort$7:	; £temporary2521 = index2 * valueSize
-29:		mov a1711, [bp + 20]
+qsort$7:	; £temporary2555 = index2 * valueSize
+29:		mov a1717, [bp + 20]
 31:		xor dx, dx
 32:		imul word [bp + 10]
 38:	
 
-qsort$8:	; valuePtr1 = charList + £temporary2521
-39:		mov a1715, [bp + 16]
-40:		add a1715, t1714
-41:		mov [bp + 22], a1715
+qsort$8:	; valuePtr1 = charList + £temporary2555
+39:		mov a1721, [bp + 16]
+40:		add a1721, t1720
+41:		mov [bp + 22], a1721
 43:	
 
-qsort$9:	; £temporary2523 = index2 + 1
-44:		mov a1716, [bp + 20]
-45:		add a1716, 1
+qsort$9:	; £temporary2557 = index2 + 1
+44:		mov a1722, [bp + 20]
+45:		add a1722, 1
 47:	
 
-qsort$10:	; £temporary2524 = £temporary2523 * valueSize
+qsort$10:	; £temporary2558 = £temporary2557 * valueSize
 49:		xor dx, dx
 50:		imul word [bp + 10]
 56:	
 
-qsort$11:	; valuePtr2 = charList + £temporary2524
-57:		mov a1720, [bp + 16]
-58:		add a1720, t1719
-59:		mov [bp + 24], a1720
+qsort$11:	; valuePtr2 = charList + £temporary2558
+57:		mov a1726, [bp + 16]
+58:		add a1726, t1725
+59:		mov [bp + 24], a1726
 61:	
 
 qsort$12:	; call header integral zero 0 stack zero 0
 63:	
 
 qsort$13:	; parameter valuePtr1, offset 6
-64:		mov a1721, [bp + 22]
-65:		mov [bp + 32], a1721
+64:		mov a1727, [bp + 22]
+65:		mov [bp + 32], a1727
 67:	
 
 qsort$14:	; parameter valuePtr2, offset 8
-68:		mov a1722, [bp + 24]
-69:		mov [bp + 34], a1722
+68:		mov a1728, [bp + 24]
+69:		mov [bp + 34], a1728
 71:	
 
 qsort$15:	; call function noellipse-noellipse compare
 72:		mov word [bp + 26], qsort$16
 73:		mov [bp + 28], bp
 74:		add bp, 26
-75:		mov a1723, [bp + 12]
-76:		jmp a1723 a1723 compare 75 76
+75:		mov a1729, [bp + 12]
+76:		jmp a1729 a1729 compare 75 76
 78:	
 
 qsort$16:	; post call
 80:	
 
-qsort$17:	; £temporary2526 = return_value
+qsort$17:	; £temporary2560 = return_value
 85:	
 
-qsort$18:	; if £temporary2526 <= 0 goto 26
-86:		cmp t1725, 0
+qsort$18:	; if £temporary2560 <= 0 goto 26
+86:		cmp t1731, 0
 87:		jle qsort$26
 89:	
 
@@ -1479,18 +1479,18 @@ qsort$19:	; call header integral zero 0 stack zero 0
 91:	
 
 qsort$20:	; parameter valuePtr1, offset 6
-92:		mov a1726, [bp + 22]
-93:		mov [bp + 32], a1726
+92:		mov a1732, [bp + 22]
+93:		mov [bp + 32], a1732
 95:	
 
 qsort$21:	; parameter valuePtr2, offset 8
-96:		mov a1727, [bp + 24]
-97:		mov [bp + 34], a1727
+96:		mov a1733, [bp + 24]
+97:		mov [bp + 34], a1733
 99:	
 
 qsort$22:	; parameter valueSize, offset 10
-100:		mov a1728, [bp + 10]
-101:		mov [bp + 36], a1728
+100:		mov a1734, [bp + 10]
+101:		mov [bp + 36], a1734
 103:	
 
 qsort$23:	; call function noellipse-noellipse swap
@@ -1524,10 +1524,10 @@ qsort$29:	; goto 3
 126:	
 
 qsort$30:	; return
-127:		mov t1729, [bp]
+127:		mov t1735, [bp]
 128:		mov di, [bp + 4]
 129:		mov bp, [bp + 2]
-130:		jmp t1729
+130:		jmp t1735
 132:	
 
 qsort$31:	; function end qsort
@@ -1538,30 +1538,30 @@ abs:	; if value >= 0 goto 4
 3:		jge abs$4
 5:	
 
-abs$1:	; £temporary2537 = -value
-6:		mov a1730, [bp + 6]
-7:		neg a1730
+abs$1:	; £temporary2571 = -value
+6:		mov a1736, [bp + 6]
+7:		neg a1736
 9:	
 
-abs$2:	; £temporary2541 = £temporary2537
+abs$2:	; £temporary2575 = £temporary2571
 11:	
 
 abs$3:	; goto 5
 12:		jmp abs$5
 14:	
 
-abs$4:	; £temporary2541 = value
-15:		mov t1732, [bp + 6]
+abs$4:	; £temporary2575 = value
+15:		mov t1738, [bp + 6]
 17:	
 
-abs$5:	; return_value = £temporary2541
+abs$5:	; return_value = £temporary2575
 19:	
 
 abs$6:	; return
-20:		mov t1733, [bp]
+20:		mov t1739, [bp]
 21:		mov di, [bp + 4]
 22:		mov bp, [bp + 2]
-23:		jmp t1733
+23:		jmp t1739
 25:	
 
 abs$7:	; function end abs
@@ -1572,30 +1572,30 @@ labs:	; if value >= 0 goto 4
 3:		jge labs$4
 5:	
 
-labs$1:	; £temporary2543 = -value
-6:		mov a1734, [bp + 6]
-7:		neg a1734
+labs$1:	; £temporary2577 = -value
+6:		mov a1740, [bp + 6]
+7:		neg a1740
 9:	
 
-labs$2:	; £temporary2547 = £temporary2543
+labs$2:	; £temporary2581 = £temporary2577
 11:	
 
 labs$3:	; goto 5
 12:		jmp labs$5
 14:	
 
-labs$4:	; £temporary2547 = value
-15:		mov t1736, [bp + 6]
+labs$4:	; £temporary2581 = value
+15:		mov t1742, [bp + 6]
 17:	
 
-labs$5:	; return_value = £temporary2547
+labs$5:	; return_value = £temporary2581
 19:	
 
 labs$6:	; return
-20:		mov t1737, [bp]
+20:		mov t1743, [bp]
 21:		mov di, [bp + 4]
 22:		mov bp, [bp + 2]
-23:		jmp t1737
+23:		jmp t1743
 25:	
 
 labs$7:	; function end labs
@@ -1619,41 +1619,41 @@ div$3:	; errno = 6
 14:	
 
 div$4:	; return_value = result
-15:		mov t1738, bp
-16:		add t1738, 10
+15:		mov t1744, bp
+16:		add t1744, 10
 18:	
 
 div$5:	; return
-19:		mov t1739, [bp]
+19:		mov t1745, [bp]
 20:		mov di, [bp + 4]
 21:		mov bp, [bp + 2]
-22:		jmp t1739
+22:		jmp t1745
 24:	
 
 div$6:	; result$quot = num / denum
-25:		mov a1740, [bp + 6]
+25:		mov a1746, [bp + 6]
 27:		xor dx, dx
 28:		idiv word [bp + 8]
 29:		mov [bp + 10], ax
 31:	
 
 div$7:	; result$rem = num % denum
-32:		mov a1743, [bp + 6]
+32:		mov a1749, [bp + 6]
 34:		xor dx, dx
 35:		idiv word [bp + 8]
 36:		mov [bp + 12], dx
 38:	
 
 div$8:	; return_value = result
-39:		mov t1745, bp
-40:		add t1745, 10
+39:		mov t1751, bp
+40:		add t1751, 10
 42:	
 
 div$9:	; return
-43:		mov t1746, [bp]
+43:		mov t1752, [bp]
 44:		mov di, [bp + 4]
 45:		mov bp, [bp + 2]
-46:		jmp t1746
+46:		jmp t1752
 48:	
 
 div$10:	; function end div
@@ -1677,41 +1677,41 @@ ldiv$3:	; errno = 6
 14:	
 
 ldiv$4:	; return_value = result
-15:		mov t1747, bp
-16:		add t1747, 14
+15:		mov t1753, bp
+16:		add t1753, 14
 18:	
 
 ldiv$5:	; return
-19:		mov t1748, [bp]
+19:		mov t1754, [bp]
 20:		mov di, [bp + 4]
 21:		mov bp, [bp + 2]
-22:		jmp t1748
+22:		jmp t1754
 24:	
 
 ldiv$6:	; result$quot = num / denum
-25:		mov a1749, [bp + 6]
+25:		mov a1755, [bp + 6]
 27:		xor edx, edx
 28:		idiv dword [bp + 10]
 29:		mov [bp + 14], eax
 31:	
 
 ldiv$7:	; result$rem = num % denum
-32:		mov a1752, [bp + 6]
+32:		mov a1758, [bp + 6]
 34:		xor edx, edx
 35:		idiv dword [bp + 10]
 36:		mov [bp + 18], edx
 38:	
 
 ldiv$8:	; return_value = result
-39:		mov t1754, bp
-40:		add t1754, 14
+39:		mov t1760, bp
+40:		add t1760, 14
 42:	
 
 ldiv$9:	; return
-43:		mov t1755, [bp]
+43:		mov t1761, [bp]
 44:		mov di, [bp + 4]
 45:		mov bp, [bp + 2]
-46:		jmp t1755
+46:		jmp t1761
 48:	
 
 ldiv$10:	; function end ldiv

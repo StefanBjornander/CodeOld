@@ -8,9 +8,6 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
 
 
 
-
-
-
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
 extern double log10 ( double x ) ;
@@ -115,9 +112,6 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
 
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-
-
-
 
 
 
@@ -454,6 +448,13 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,5$
 
 
 
+
+
+
+
+
+
+
 double exp ( double x ) {
 double index = 1 , term , sum = 1 , faculty = 1 , power = x ;
 
@@ -473,13 +474,13 @@ int n = 0 ;
 
 if ( x > 1 ) {
 while ( x > 1 ) {
-x /= 2.7182818284590452353602874 ;
+x /= 2.718281828 ;
 ++ n ;
 }
 }
-else if ( x < ( 1 / 2.7182818284590452353602874 ) ) {
-while ( x < ( 1 / 2.7182818284590452353602874 ) ) {
-x *= 2.7182818284590452353602874 ;
+else if ( x < 0.3678794412 ) {
+while ( x < 0.3678794412 ) {
+x *= 2.718281828 ;
 -- n ;
 }
 }
@@ -503,12 +504,15 @@ return 0 ;
 }
 
 double log10 ( double x ) {
-return log ( x ) / 2.3025850929940456840179914 ;
+return log ( x ) / 2.302585092 ;
 }
 
 double pow ( double x , double y ) {
 if ( x > 0 ) {
 return exp ( y * log ( x ) ) ;
+}
+else if ( ( x == 0 ) && ( y == 0 ) ) {
+return 1 ;
 }
 else if ( ( x == 0 ) && ( y > 0 ) ) {
 return 0 ;
@@ -533,15 +537,17 @@ double ldexp ( double x , int n ) {
 return x * pow ( 2 , n ) ;
 }
 
-
-
 static log2 ( double x ) {
-return log ( x ) / 0.6931471805599453094172321 ;
+return log ( x ) / 0.6931471805 ;
 }
 
 double frexp ( double x , int * p ) {
 if ( x != 0 ) {
-int exponent = ( int ) ( log2 ( fabs ( x ) ) + 1 ) ;
+int exponent = ( int ) log2 ( fabs ( x ) ) ;
+
+if ( pow ( 2 , exponent ) < x ) {
+++ exponent ;
+}
 
 if ( p != ( ( void * ) 0 ) ) {
 * p = exponent ;
@@ -581,16 +587,15 @@ integral = ( double ) ( ( long ) abs_x ) ,
 fractional = abs_x - integral ;
 
 if ( p != ( ( void * ) 0 ) ) {
-* p = ( x > 0 ) ? fractional : - fractional ;
+* p = ( x > 0 ) ? integral : - integral ;
 }
 
-return ( x > 0 ) ? integral : - integral ;
+return ( x > 0 ) ? fractional : - fractional ;
 }
 
 double fmod ( double x , double y ) {
 if ( y != 0 ) {
-double quotient = x / y ,
-remainder = fabs ( quotient - ( ( double ) ( ( long ) quotient ) ) ) ;
+double remainder = fabs ( x - ( y * ( ( int ) ( x / y ) ) ) ) ;
 return ( x > 0 ) ? remainder : - remainder ;
 }
 else {
@@ -600,8 +605,8 @@ return 0 ;
 }
 
 double sin ( double x ) {
-if ( fabs ( x ) > ( 2 * 3.1415926535897932384626433 ) ) {
-x = fmod ( x , 2 * 3.1415926535897932384626433 ) ;
+if ( fabs ( x ) > ( 2 * 3.141592653 ) ) {
+x = fmod ( x , 2 * 3.141592653 ) ;
 }
 
 double index = 1 , term , sum = 0 , sign = 1 , power = x , faculty = 1 ;
@@ -618,8 +623,8 @@ return sum ;
 }
 
 double cos ( double x ) {
-if ( fabs ( x ) > ( 2 * 3.1415926535897932384626433 ) ) {
-x = fmod ( x , 2 * 3.1415926535897932384626433 ) ;
+if ( fabs ( x ) > ( 2 * 3.141592653 ) ) {
+x = fmod ( x , 2 * 3.141592653 ) ;
 }
 
 double index = 0 , term , sum = 0 , sign = 1 , power = 1 , faculty = 1 ;
@@ -649,12 +654,12 @@ return 0 ;
 
 double asin ( double x ) {
 if ( x == 1 ) {
-return 3.1415926535897932384626433 / 2 ;
+return 3.141592653 / 2 ;
 }
-else if ( x == -1 ) {
-return - 3.1415926535897932384626433 / 2 ;
+else if ( x < 0 ) {
+return - asin ( - x ) ;
 }
-else if ( fabs ( x ) < 1 ) {
+else if ( x < 1 ) {
 return atan ( x / sqrt ( 1 - ( x * x ) ) ) ;
 }
 else {
@@ -665,10 +670,13 @@ return 0 ;
 
 double acos ( double x ) {
 if ( x == 0 ) {
-return 3.1415926535897932384626433 / 2 ;
+return 3.141592653 / 2 ;
 }
-else if ( fabs ( x ) < 1 ) {
-return atan ( x / sqrt ( 1 - ( x * x ) ) ) ;
+else if ( x < 0 ) {
+return 3.141592653 - acos ( - x ) ;
+}
+else if ( x <= 1 ) {
+return atan ( sqrt ( 1 - ( x * x ) ) / x ) ;
 }
 else {
 errno = EDOM ;
@@ -681,7 +689,7 @@ if ( x < 0 ) {
 return - atan ( - x ) ;
 }
 else if ( x > 1 ) {
-return 3.1415926535897932384626433 / 2 - atan ( 1 / x ) ;
+return 3.141592653 / 2 - atan ( 1 / x ) ;
 }
 else if ( x > 0.5 ) {
 return 2 * atan ( x / ( 1 + sqrt ( 1 + ( x * x ) ) ) ) ;
@@ -702,8 +710,20 @@ return sum ;
 }
 
 double atan2 ( double x , double y ) {
-if ( y != 0 ) {
+if ( y > 0 ) {
 return atan ( x / y ) ;
+}
+else if ( ( x >= 0 ) && ( y < 0 ) ) {
+return 3.141592653 + atan ( x / y ) ;
+}
+else if ( ( x < 0 ) && ( y < 0 ) ) {
+return ( - 3.141592653 ) + atan ( x / y ) ;
+}
+else if ( ( x > 0 ) && ( y == 0 ) ) {
+return 3.141592653 / 2 ;
+}
+else if ( ( x < 0 ) && ( y == 0 ) ) {
+return ( - 3.141592653 ) / 2 ;
 }
 else {
 errno = EDOM ;

@@ -1,26 +1,26 @@
 1:	
 
 @25$filecreate:	; ah = 60
-2:		mov a461, 60
+2:		mov a467, 60
 4:	
 
 @25$filecreate$1:	; cx = 0
-5:		mov a462, 0
+5:		mov a468, 0
 7:	
 
 @25$filecreate$2:	; dx = name
-8:		mov a463, [bp + 6]
+8:		mov a469, [bp + 6]
 10:	
 
 @25$filecreate$3:	; interrupt 33
 11:		int 33
 13:	
 
-@25$filecreate$4:	; £temporary857 = ax
+@25$filecreate$4:	; £temporary891 = ax
 15:	
 
-@25$filecreate$5:	; handle = £temporary857
-16:		mov [bp + 8], t464
+@25$filecreate$5:	; handle = £temporary891
+16:		mov [bp + 8], t470
 18:	
 
 @25$filecreate$6:	; if notcarry goto 10
@@ -32,40 +32,40 @@
 24:	
 
 @25$filecreate$8:	; return_value = -1
-25:		mov a465, -1
+25:		mov a471, -1
 27:	
 
 @25$filecreate$9:	; return
-28:		mov t466, [bp]
+28:		mov t472, [bp]
 29:		mov di, [bp + 4]
 30:		mov bp, [bp + 2]
-31:		jmp t466
+31:		jmp t472
 33:	
 
 @25$filecreate$10:	; return_value = handle
-34:		mov a467, [bp + 8]
+34:		mov a473, [bp + 8]
 36:	
 
 @25$filecreate$11:	; return
-37:		mov t468, [bp]
+37:		mov t474, [bp]
 38:		mov di, [bp + 4]
 39:		mov bp, [bp + 2]
-40:		jmp t468
+40:		jmp t474
 42:	
 
 @25$filecreate$12:	; function end filecreate
 1:	
 
 fileexists:	; ah = 67
-2:		mov a469, 67
+2:		mov a475, 67
 4:	
 
 fileexists$1:	; al = 0
-5:		mov a470, 0
+5:		mov a476, 0
 7:	
 
 fileexists$2:	; dx = name
-8:		mov a471, [bp + 6]
+8:		mov a477, [bp + 6]
 10:	
 
 fileexists$3:	; interrupt 33
@@ -76,41 +76,41 @@ fileexists$4:	; if carry goto 7
 14:		jc fileexists$7
 16:	
 
-fileexists$5:	; £temporary864 = 1
-17:		mov t472, 1
+fileexists$5:	; £temporary898 = 1
+17:		mov t478, 1
 19:	
 
 fileexists$6:	; goto 8
 20:		jmp fileexists$8
 22:	
 
-fileexists$7:	; £temporary864 = 0
-23:		mov t473, 0
+fileexists$7:	; £temporary898 = 0
+23:		mov t479, 0
 25:	
 
-fileexists$8:	; return_value = £temporary864
+fileexists$8:	; return_value = £temporary898
 27:	
 
 fileexists$9:	; return
-28:		mov t474, [bp]
+28:		mov t480, [bp]
 29:		mov di, [bp + 4]
 30:		mov bp, [bp + 2]
-31:		jmp t474
+31:		jmp t480
 33:	
 
 fileexists$10:	; function end fileexists
 1:	
 
 @26$fileopen:	; ah = 61
-2:		mov a475, 61
+2:		mov a481, 61
 4:	
 
 @26$fileopen$1:	; al = mode
-5:		mov a476, [bp + 8]
+5:		mov a482, [bp + 8]
 7:	
 
 @26$fileopen$2:	; dx = name
-8:		mov a477, [bp + 6]
+8:		mov a483, [bp + 6]
 10:	
 
 @26$fileopen$3:	; interrupt 33
@@ -126,28 +126,28 @@ fileexists$10:	; function end fileexists
 19:	
 
 @26$fileopen$6:	; return_value = -1
-20:		mov a478, -1
+20:		mov a484, -1
 22:	
 
 @26$fileopen$7:	; return
-23:		mov t479, [bp]
+23:		mov t485, [bp]
 24:		mov di, [bp + 4]
 25:		mov bp, [bp + 2]
-26:		jmp t479
+26:		jmp t485
 28:	
 
-@26$fileopen$8:	; £temporary869 = ax
+@26$fileopen$8:	; £temporary903 = ax
 30:	
 
-@26$fileopen$9:	; return_value = £temporary869
-31:		mov t481, t480
+@26$fileopen$9:	; return_value = £temporary903
+31:		mov t487, t486
 33:	
 
 @26$fileopen$10:	; return
-34:		mov t482, [bp]
+34:		mov t488, [bp]
 35:		mov di, [bp + 4]
 36:		mov bp, [bp + 2]
-37:		jmp t482
+37:		jmp t488
 39:	
 
 @26$fileopen$11:	; function end fileopen
@@ -162,22 +162,22 @@ fopen$1:	; if index >= 20 goto 21
 6:		jge fopen$21
 8:	
 
-fopen$2:	; £temporary873 = index * 29
-9:		mov a483, [bp + 10]
+fopen$2:	; £temporary907 = index * 29
+9:		mov a489, [bp + 10]
 11:		xor dx, dx
 12:		mul word [int2$29#]
 18:	
 
-fopen$3:	; £temporary874 = g_fileArray + £temporary873
-19:		mov a487, g_fileArray
-20:		add a487, t486
+fopen$3:	; £temporary908 = g_fileArray + £temporary907
+19:		mov a493, g_fileArray
+20:		add a493, t492
 22:	
 
-fopen$4:	; £temporary872 -> £temporary874 = *£temporary874
+fopen$4:	; £temporary906 -> £temporary908 = *£temporary908
 24:	
 
-fopen$5:	; if £temporary872.open$0 -> £temporary874 != 0 goto 19
-25:		cmp word [a487], 0
+fopen$5:	; if £temporary906.open$0 -> £temporary908 != 0 goto 19
+25:		cmp word [a493], 0
 26:		jne fopen$19
 28:	
 
@@ -185,34 +185,34 @@ fopen$6:	; call header integral zero 0 stack zero 0
 30:	
 
 fopen$7:	; parameter name, offset 6
-31:		mov a488, [bp + 6]
-32:		mov [bp + 18], a488
+31:		mov a494, [bp + 6]
+32:		mov [bp + 18], a494
 34:	
 
 fopen$8:	; parameter mode, offset 8
-35:		mov a489, [bp + 8]
-36:		mov [bp + 20], a489
+35:		mov a495, [bp + 8]
+36:		mov [bp + 20], a495
 38:	
 
-fopen$9:	; £temporary878 = index * 29
-39:		mov a490, [bp + 10]
+fopen$9:	; £temporary912 = index * 29
+39:		mov a496, [bp + 10]
 41:		xor dx, dx
 42:		mul word [int2$29#]
 48:	
 
-fopen$10:	; £temporary879 = g_fileArray + £temporary878
-49:		mov a494, g_fileArray
-50:		add a494, t493
+fopen$10:	; £temporary913 = g_fileArray + £temporary912
+49:		mov a500, g_fileArray
+50:		add a500, t499
 52:	
 
-fopen$11:	; £temporary877 -> £temporary879 = *£temporary879
+fopen$11:	; £temporary911 -> £temporary913 = *£temporary913
 54:	
 
-fopen$12:	; £temporary880 = &£temporary877 -> £temporary879
+fopen$12:	; £temporary914 = &£temporary911 -> £temporary913
 56:	
 
-fopen$13:	; parameter £temporary880, offset 10
-57:		mov [bp + 22], a494
+fopen$13:	; parameter £temporary914, offset 10
+57:		mov [bp + 22], a500
 59:	
 
 fopen$14:	; call function noellipse-noellipse freopen
@@ -225,17 +225,17 @@ fopen$14:	; call function noellipse-noellipse freopen
 fopen$15:	; post call
 67:	
 
-fopen$16:	; £temporary881 = return_value
+fopen$16:	; £temporary915 = return_value
 72:	
 
-fopen$17:	; return_value = £temporary881
+fopen$17:	; return_value = £temporary915
 74:	
 
 fopen$18:	; return
-75:		mov t497, [bp]
+75:		mov t503, [bp]
 76:		mov di, [bp + 4]
 77:		mov bp, [bp + 2]
-78:		jmp t497
+78:		jmp t503
 80:	
 
 fopen$19:	; ++index
@@ -247,14 +247,14 @@ fopen$20:	; goto 1
 86:	
 
 fopen$21:	; return_value = 0
-87:		mov a498, 0
+87:		mov a504, 0
 89:	
 
 fopen$22:	; return
-90:		mov t499, [bp]
+90:		mov t505, [bp]
 91:		mov di, [bp + 4]
 92:		mov bp, [bp + 2]
-93:		jmp t499
+93:		jmp t505
 95:	
 
 fopen$23:	; function end fopen
@@ -268,8 +268,8 @@ freopen$1:	; call header integral zero 0 stack zero 0
 6:	
 
 freopen$2:	; parameter mode, offset 6
-7:		mov a500, [bp + 8]
-8:		mov [bp + 20], a500
+7:		mov a506, [bp + 8]
+8:		mov [bp + 20], a506
 10:	
 
 freopen$3:	; parameter string_r#, offset 8
@@ -286,11 +286,11 @@ freopen$4:	; call function noellipse-noellipse strcmp
 freopen$5:	; post call
 21:	
 
-freopen$6:	; £temporary885 = return_value
+freopen$6:	; £temporary919 = return_value
 26:	
 
-freopen$7:	; if £temporary885 != 0 goto 16
-27:		cmp t502, 0
+freopen$7:	; if £temporary919 != 0 goto 16
+27:		cmp t508, 0
 28:		jne freopen$16
 30:	
 
@@ -298,8 +298,8 @@ freopen$8:	; call header integral zero 0 stack zero 0
 32:	
 
 freopen$9:	; parameter name, offset 6
-33:		mov a503, [bp + 6]
-34:		mov [bp + 20], a503
+33:		mov a509, [bp + 6]
+34:		mov [bp + 20], a509
 36:	
 
 freopen$10:	; parameter 64, offset 8
@@ -316,11 +316,11 @@ freopen$11:	; call function noellipse-noellipse fileopen
 freopen$12:	; post call
 47:	
 
-freopen$13:	; £temporary887 = return_value
+freopen$13:	; £temporary921 = return_value
 52:	
 
-freopen$14:	; handle = £temporary887
-53:		mov [bp + 12], t505
+freopen$14:	; handle = £temporary921
+53:		mov [bp + 12], t511
 55:	
 
 freopen$15:	; goto 130
@@ -331,8 +331,8 @@ freopen$16:	; call header integral zero 0 stack zero 0
 60:	
 
 freopen$17:	; parameter mode, offset 6
-61:		mov a506, [bp + 8]
-62:		mov [bp + 20], a506
+61:		mov a512, [bp + 8]
+62:		mov [bp + 20], a512
 64:	
 
 freopen$18:	; parameter string_w#, offset 8
@@ -349,11 +349,11 @@ freopen$19:	; call function noellipse-noellipse strcmp
 freopen$20:	; post call
 75:	
 
-freopen$21:	; £temporary888 = return_value
+freopen$21:	; £temporary922 = return_value
 80:	
 
-freopen$22:	; if £temporary888 != 0 goto 30
-81:		cmp t508, 0
+freopen$22:	; if £temporary922 != 0 goto 30
+81:		cmp t514, 0
 82:		jne freopen$30
 84:	
 
@@ -361,8 +361,8 @@ freopen$23:	; call header integral zero 0 stack zero 0
 86:	
 
 freopen$24:	; parameter name, offset 6
-87:		mov a509, [bp + 6]
-88:		mov [bp + 20], a509
+87:		mov a515, [bp + 6]
+88:		mov [bp + 20], a515
 90:	
 
 freopen$25:	; call function noellipse-noellipse filecreate
@@ -375,11 +375,11 @@ freopen$25:	; call function noellipse-noellipse filecreate
 freopen$26:	; post call
 98:	
 
-freopen$27:	; £temporary890 = return_value
+freopen$27:	; £temporary924 = return_value
 103:	
 
-freopen$28:	; handle = £temporary890
-104:		mov [bp + 12], t511
+freopen$28:	; handle = £temporary924
+104:		mov [bp + 12], t517
 106:	
 
 freopen$29:	; goto 130
@@ -390,8 +390,8 @@ freopen$30:	; call header integral zero 0 stack zero 0
 111:	
 
 freopen$31:	; parameter mode, offset 6
-112:		mov a512, [bp + 8]
-113:		mov [bp + 20], a512
+112:		mov a518, [bp + 8]
+113:		mov [bp + 20], a518
 115:	
 
 freopen$32:	; parameter string_a#, offset 8
@@ -408,11 +408,11 @@ freopen$33:	; call function noellipse-noellipse strcmp
 freopen$34:	; post call
 126:	
 
-freopen$35:	; £temporary891 = return_value
+freopen$35:	; £temporary925 = return_value
 131:	
 
-freopen$36:	; if £temporary891 != 0 goto 59
-132:		cmp t514, 0
+freopen$36:	; if £temporary925 != 0 goto 59
+132:		cmp t520, 0
 133:		jne freopen$59
 135:	
 
@@ -420,8 +420,8 @@ freopen$37:	; call header integral zero 0 stack zero 0
 137:	
 
 freopen$38:	; parameter name, offset 6
-138:		mov a515, [bp + 6]
-139:		mov [bp + 20], a515
+138:		mov a521, [bp + 6]
+139:		mov [bp + 20], a521
 141:	
 
 freopen$39:	; parameter 65, offset 8
@@ -438,11 +438,11 @@ freopen$40:	; call function noellipse-noellipse fileopen
 freopen$41:	; post call
 152:	
 
-freopen$42:	; £temporary893 = return_value
+freopen$42:	; £temporary927 = return_value
 157:	
 
-freopen$43:	; handle = £temporary893
-158:		mov [bp + 12], t517
+freopen$43:	; handle = £temporary927
+158:		mov [bp + 12], t523
 160:	
 
 freopen$44:	; if handle == -1 goto 52
@@ -454,8 +454,8 @@ freopen$45:	; call header integral zero 0 stack zero 0
 166:	
 
 freopen$46:	; parameter stream, offset 6
-167:		mov a518, [bp + 10]
-168:		mov [bp + 20], a518
+167:		mov a524, [bp + 10]
+168:		mov [bp + 20], a524
 170:	
 
 freopen$47:	; parameter 0, offset 8
@@ -484,8 +484,8 @@ freopen$52:	; call header integral zero 0 stack zero 0
 189:	
 
 freopen$53:	; parameter name, offset 6
-190:		mov a519, [bp + 6]
-191:		mov [bp + 20], a519
+190:		mov a525, [bp + 6]
+191:		mov [bp + 20], a525
 193:	
 
 freopen$54:	; call function noellipse-noellipse filecreate
@@ -498,11 +498,11 @@ freopen$54:	; call function noellipse-noellipse filecreate
 freopen$55:	; post call
 201:	
 
-freopen$56:	; £temporary896 = return_value
+freopen$56:	; £temporary930 = return_value
 206:	
 
-freopen$57:	; handle = £temporary896
-207:		mov [bp + 12], t521
+freopen$57:	; handle = £temporary930
+207:		mov [bp + 12], t527
 209:	
 
 freopen$58:	; goto 130
@@ -513,8 +513,8 @@ freopen$59:	; call header integral zero 0 stack zero 0
 214:	
 
 freopen$60:	; parameter mode, offset 6
-215:		mov a522, [bp + 8]
-216:		mov [bp + 20], a522
+215:		mov a528, [bp + 8]
+216:		mov [bp + 20], a528
 218:	
 
 freopen$61:	; parameter string_r2B#, offset 8
@@ -531,11 +531,11 @@ freopen$62:	; call function noellipse-noellipse strcmp
 freopen$63:	; post call
 229:	
 
-freopen$64:	; £temporary897 = return_value
+freopen$64:	; £temporary931 = return_value
 234:	
 
-freopen$65:	; if £temporary897 != 0 goto 74
-235:		cmp t524, 0
+freopen$65:	; if £temporary931 != 0 goto 74
+235:		cmp t530, 0
 236:		jne freopen$74
 238:	
 
@@ -543,8 +543,8 @@ freopen$66:	; call header integral zero 0 stack zero 0
 240:	
 
 freopen$67:	; parameter name, offset 6
-241:		mov a525, [bp + 6]
-242:		mov [bp + 20], a525
+241:		mov a531, [bp + 6]
+242:		mov [bp + 20], a531
 244:	
 
 freopen$68:	; parameter 66, offset 8
@@ -561,11 +561,11 @@ freopen$69:	; call function noellipse-noellipse fileopen
 freopen$70:	; post call
 255:	
 
-freopen$71:	; £temporary899 = return_value
+freopen$71:	; £temporary933 = return_value
 260:	
 
-freopen$72:	; handle = £temporary899
-261:		mov [bp + 12], t527
+freopen$72:	; handle = £temporary933
+261:		mov [bp + 12], t533
 263:	
 
 freopen$73:	; goto 130
@@ -576,8 +576,8 @@ freopen$74:	; call header integral zero 0 stack zero 0
 268:	
 
 freopen$75:	; parameter mode, offset 6
-269:		mov a528, [bp + 8]
-270:		mov [bp + 20], a528
+269:		mov a534, [bp + 8]
+270:		mov [bp + 20], a534
 272:	
 
 freopen$76:	; parameter string_w2B#, offset 8
@@ -594,11 +594,11 @@ freopen$77:	; call function noellipse-noellipse strcmp
 freopen$78:	; post call
 283:	
 
-freopen$79:	; £temporary900 = return_value
+freopen$79:	; £temporary934 = return_value
 288:	
 
-freopen$80:	; if £temporary900 != 0 goto 102
-289:		cmp t530, 0
+freopen$80:	; if £temporary934 != 0 goto 102
+289:		cmp t536, 0
 290:		jne freopen$102
 292:	
 
@@ -606,8 +606,8 @@ freopen$81:	; call header integral zero 0 stack zero 0
 294:	
 
 freopen$82:	; parameter name, offset 6
-295:		mov a531, [bp + 6]
-296:		mov [bp + 20], a531
+295:		mov a537, [bp + 6]
+296:		mov [bp + 20], a537
 298:	
 
 freopen$83:	; call function noellipse-noellipse fileexists
@@ -620,11 +620,11 @@ freopen$83:	; call function noellipse-noellipse fileexists
 freopen$84:	; post call
 306:	
 
-freopen$85:	; £temporary902 = return_value
+freopen$85:	; £temporary936 = return_value
 311:	
 
-freopen$86:	; if £temporary902 == 0 goto 95
-312:		cmp t533, 0
+freopen$86:	; if £temporary936 == 0 goto 95
+312:		cmp t539, 0
 313:		je freopen$95
 315:	
 
@@ -632,8 +632,8 @@ freopen$87:	; call header integral zero 0 stack zero 0
 317:	
 
 freopen$88:	; parameter name, offset 6
-318:		mov a534, [bp + 6]
-319:		mov [bp + 20], a534
+318:		mov a540, [bp + 6]
+319:		mov [bp + 20], a540
 321:	
 
 freopen$89:	; parameter 66, offset 8
@@ -650,11 +650,11 @@ freopen$90:	; call function noellipse-noellipse fileopen
 freopen$91:	; post call
 332:	
 
-freopen$92:	; £temporary903 = return_value
+freopen$92:	; £temporary937 = return_value
 337:	
 
-freopen$93:	; handle = £temporary903
-338:		mov [bp + 12], t536
+freopen$93:	; handle = £temporary937
+338:		mov [bp + 12], t542
 340:	
 
 freopen$94:	; goto 130
@@ -665,8 +665,8 @@ freopen$95:	; call header integral zero 0 stack zero 0
 345:	
 
 freopen$96:	; parameter name, offset 6
-346:		mov a537, [bp + 6]
-347:		mov [bp + 20], a537
+346:		mov a543, [bp + 6]
+347:		mov [bp + 20], a543
 349:	
 
 freopen$97:	; call function noellipse-noellipse filecreate
@@ -679,11 +679,11 @@ freopen$97:	; call function noellipse-noellipse filecreate
 freopen$98:	; post call
 357:	
 
-freopen$99:	; £temporary904 = return_value
+freopen$99:	; £temporary938 = return_value
 362:	
 
-freopen$100:	; handle = £temporary904
-363:		mov [bp + 12], t539
+freopen$100:	; handle = £temporary938
+363:		mov [bp + 12], t545
 365:	
 
 freopen$101:	; goto 130
@@ -694,8 +694,8 @@ freopen$102:	; call header integral zero 0 stack zero 0
 370:	
 
 freopen$103:	; parameter mode, offset 6
-371:		mov a540, [bp + 8]
-372:		mov [bp + 20], a540
+371:		mov a546, [bp + 8]
+372:		mov [bp + 20], a546
 374:	
 
 freopen$104:	; parameter string_a2B#, offset 8
@@ -712,11 +712,11 @@ freopen$105:	; call function noellipse-noellipse strcmp
 freopen$106:	; post call
 385:	
 
-freopen$107:	; £temporary906 = return_value
+freopen$107:	; £temporary940 = return_value
 390:	
 
-freopen$108:	; if £temporary906 != 0 goto 130
-391:		cmp t542, 0
+freopen$108:	; if £temporary940 != 0 goto 130
+391:		cmp t548, 0
 392:		jne freopen$130
 394:	
 
@@ -724,8 +724,8 @@ freopen$109:	; call header integral zero 0 stack zero 0
 396:	
 
 freopen$110:	; parameter name, offset 6
-397:		mov a543, [bp + 6]
-398:		mov [bp + 20], a543
+397:		mov a549, [bp + 6]
+398:		mov [bp + 20], a549
 400:	
 
 freopen$111:	; parameter 66, offset 8
@@ -742,11 +742,11 @@ freopen$112:	; call function noellipse-noellipse fileopen
 freopen$113:	; post call
 411:	
 
-freopen$114:	; £temporary908 = return_value
+freopen$114:	; £temporary942 = return_value
 416:	
 
-freopen$115:	; handle = £temporary908
-417:		mov [bp + 12], t545
+freopen$115:	; handle = £temporary942
+417:		mov [bp + 12], t551
 419:	
 
 freopen$116:	; if handle == -1 goto 124
@@ -758,8 +758,8 @@ freopen$117:	; call header integral zero 0 stack zero 0
 425:	
 
 freopen$118:	; parameter stream, offset 6
-426:		mov a546, [bp + 10]
-427:		mov [bp + 20], a546
+426:		mov a552, [bp + 10]
+427:		mov [bp + 20], a552
 429:	
 
 freopen$119:	; parameter 0, offset 8
@@ -788,8 +788,8 @@ freopen$124:	; call header integral zero 0 stack zero 0
 448:	
 
 freopen$125:	; parameter name, offset 6
-449:		mov a547, [bp + 6]
-450:		mov [bp + 20], a547
+449:		mov a553, [bp + 6]
+450:		mov [bp + 20], a553
 452:	
 
 freopen$126:	; call function noellipse-noellipse filecreate
@@ -802,11 +802,11 @@ freopen$126:	; call function noellipse-noellipse filecreate
 freopen$127:	; post call
 460:	
 
-freopen$128:	; £temporary911 = return_value
+freopen$128:	; £temporary945 = return_value
 465:	
 
-freopen$129:	; handle = £temporary911
-466:		mov [bp + 12], t549
+freopen$129:	; handle = £temporary945
+466:		mov [bp + 12], t555
 468:	
 
 freopen$130:	; if handle == -1 goto 147
@@ -814,46 +814,46 @@ freopen$130:	; if handle == -1 goto 147
 470:		je freopen$147
 472:	
 
-freopen$131:	; £temporary913 -> stream = *stream
-473:		mov a550, [bp + 10]
+freopen$131:	; £temporary947 -> stream = *stream
+473:		mov a556, [bp + 10]
 475:	
 
-freopen$132:	; £temporary913 -> stream = 1
-476:		mov word [a550], 1
+freopen$132:	; £temporary947 -> stream = 1
+476:		mov word [a556], 1
 478:	
 
-freopen$133:	; £temporary914 -> stream = *stream, offset 2
-479:		mov a551, [bp + 10]
+freopen$133:	; £temporary948 -> stream = *stream, offset 2
+479:		mov a557, [bp + 10]
 481:	
 
-freopen$134:	; £temporary914 -> stream = handle
-482:		mov a552, [bp + 12]
-483:		mov [a551 + 2], a552
+freopen$134:	; £temporary948 -> stream = handle
+482:		mov a558, [bp + 12]
+483:		mov [a557 + 2], a558
 485:	
 
-freopen$135:	; £temporary915 -> stream = *stream, offset 25
-486:		mov a553, [bp + 10]
+freopen$135:	; £temporary949 -> stream = *stream, offset 25
+486:		mov a559, [bp + 10]
 488:	
 
-freopen$136:	; £temporary915 -> stream = 0
-489:		mov word [a553 + 25], 0
+freopen$136:	; £temporary949 -> stream = 0
+489:		mov word [a559 + 25], 0
 491:	
 
 freopen$137:	; call header integral zero 0 stack zero 0
 493:	
 
-freopen$138:	; £temporary916 -> stream = *stream, offset 4
-494:		mov a554, [bp + 10]
+freopen$138:	; £temporary950 -> stream = *stream, offset 4
+494:		mov a560, [bp + 10]
 496:	
 
-freopen$139:	; parameter £temporary916 -> stream, offset 6
-497:		mov [bp + 20], a554
+freopen$139:	; parameter £temporary950 -> stream, offset 6
+497:		mov [bp + 20], a560
 498:		add word [bp + 20], 4
 500:	
 
 freopen$140:	; parameter name, offset 8
-501:		mov a555, [bp + 6]
-502:		mov [bp + 22], a555
+501:		mov a561, [bp + 6]
+502:		mov [bp + 22], a561
 504:	
 
 freopen$141:	; call function noellipse-noellipse strcpy
@@ -866,42 +866,42 @@ freopen$141:	; call function noellipse-noellipse strcpy
 freopen$142:	; post call
 512:	
 
-freopen$143:	; £temporary918 -> stream = *stream, offset 27
-513:		mov a556, [bp + 10]
+freopen$143:	; £temporary952 -> stream = *stream, offset 27
+513:		mov a562, [bp + 10]
 515:	
 
-freopen$144:	; £temporary918 -> stream = 0
-516:		mov word [a556 + 27], 0
+freopen$144:	; £temporary952 -> stream = 0
+516:		mov word [a562 + 27], 0
 518:	
 
 freopen$145:	; return_value = stream
-519:		mov a557, [bp + 10]
+519:		mov a563, [bp + 10]
 521:	
 
 freopen$146:	; return
-522:		mov t558, [bp]
+522:		mov t564, [bp]
 523:		mov di, [bp + 4]
 524:		mov bp, [bp + 2]
-525:		jmp t558
+525:		jmp t564
 527:	
 
-freopen$147:	; £temporary919 -> stream = *stream
-528:		mov a559, [bp + 10]
+freopen$147:	; £temporary953 -> stream = *stream
+528:		mov a565, [bp + 10]
 530:	
 
-freopen$148:	; £temporary919 -> stream = 0
-531:		mov word [a559], 0
+freopen$148:	; £temporary953 -> stream = 0
+531:		mov word [a565], 0
 533:	
 
 freopen$149:	; return_value = 0
-534:		mov a560, 0
+534:		mov a566, 0
 536:	
 
 freopen$150:	; return
-537:		mov t561, [bp]
+537:		mov t567, [bp]
 538:		mov di, [bp + 4]
 539:		mov bp, [bp + 2]
-540:		jmp t561
+540:		jmp t567
 542:	
 
 freopen$151:	; function end freopen
@@ -921,47 +921,47 @@ fflush$2:	; if index >= 20 goto 21
 10:		jge fflush$21
 12:	
 
-fflush$3:	; £temporary959 = index * 29
-13:		mov a562, [bp + 8]
+fflush$3:	; £temporary993 = index * 29
+13:		mov a568, [bp + 8]
 15:		xor dx, dx
 16:		mul word [int2$29#]
 22:	
 
-fflush$4:	; £temporary960 = g_fileArray + £temporary959
-23:		mov a566, g_fileArray
-24:		add a566, t565
+fflush$4:	; £temporary994 = g_fileArray + £temporary993
+23:		mov a572, g_fileArray
+24:		add a572, t571
 26:	
 
-fflush$5:	; £temporary958 -> £temporary960 = *£temporary960
+fflush$5:	; £temporary992 -> £temporary994 = *£temporary994
 28:	
 
-fflush$6:	; if £temporary958.open$0 -> £temporary960 == 0 goto 19
-29:		cmp word [a566], 0
+fflush$6:	; if £temporary992.open$0 -> £temporary994 == 0 goto 19
+29:		cmp word [a572], 0
 30:		je fflush$19
 32:	
 
 fflush$7:	; call header integral zero 0 stack zero 0
 34:	
 
-fflush$8:	; £temporary962 = index * 29
-35:		mov a567, [bp + 8]
+fflush$8:	; £temporary996 = index * 29
+35:		mov a573, [bp + 8]
 37:		xor dx, dx
 38:		mul word [int2$29#]
 44:	
 
-fflush$9:	; £temporary963 = g_fileArray + £temporary962
-45:		mov a571, g_fileArray
-46:		add a571, t570
+fflush$9:	; £temporary997 = g_fileArray + £temporary996
+45:		mov a577, g_fileArray
+46:		add a577, t576
 48:	
 
-fflush$10:	; £temporary961 -> £temporary963 = *£temporary963
+fflush$10:	; £temporary995 -> £temporary997 = *£temporary997
 50:	
 
-fflush$11:	; £temporary964 = &£temporary961 -> £temporary963
+fflush$11:	; £temporary998 = &£temporary995 -> £temporary997
 52:	
 
-fflush$12:	; parameter £temporary964, offset 6
-53:		mov [bp + 16], a571
+fflush$12:	; parameter £temporary998, offset 6
+53:		mov [bp + 16], a577
 55:	
 
 fflush$13:	; call function noellipse-noellipse fflush
@@ -974,23 +974,23 @@ fflush$13:	; call function noellipse-noellipse fflush
 fflush$14:	; post call
 63:	
 
-fflush$15:	; £temporary965 = return_value
+fflush$15:	; £temporary999 = return_value
 68:	
 
-fflush$16:	; if £temporary965 != -1 goto 19
-69:		cmp t573, -1
+fflush$16:	; if £temporary999 != -1 goto 19
+69:		cmp t579, -1
 70:		jne fflush$19
 72:	
 
 fflush$17:	; return_value = -1
-73:		mov a574, -1
+73:		mov a580, -1
 75:	
 
 fflush$18:	; return
-76:		mov t575, [bp]
+76:		mov t581, [bp]
 77:		mov di, [bp + 4]
 78:		mov bp, [bp + 2]
-79:		jmp t575
+79:		jmp t581
 81:	
 
 fflush$19:	; ++index
@@ -1002,14 +1002,14 @@ fflush$20:	; goto 2
 87:	
 
 fflush$21:	; return_value = 0
-88:		mov a576, 0
+88:		mov a582, 0
 90:	
 
 fflush$22:	; return
-91:		mov t577, [bp]
+91:		mov t583, [bp]
 92:		mov di, [bp + 4]
 93:		mov bp, [bp + 2]
-94:		jmp t577
+94:		jmp t583
 96:	
 
 fflush$23:	; function end fflush
@@ -1021,15 +1021,15 @@ fclose:	; if stream == 0 goto 20
 5:	
 
 fclose$1:	; ah = 62
-6:		mov a578, 62
+6:		mov a584, 62
 8:	
 
-fclose$2:	; £temporary972 -> stream = *stream, offset 2
-9:		mov a579, [bp + 6]
+fclose$2:	; £temporary1006 -> stream = *stream, offset 2
+9:		mov a585, [bp + 6]
 11:	
 
-fclose$3:	; bx = £temporary972 -> stream
-12:		mov t580, [a579 + 2]
+fclose$3:	; bx = £temporary1006 -> stream
+12:		mov t586, [a585 + 2]
 14:	
 
 fclose$4:	; interrupt 33
@@ -1045,34 +1045,34 @@ fclose$6:	; errno = 11
 23:	
 
 fclose$7:	; return_value = -1
-24:		mov a581, -1
+24:		mov a587, -1
 26:	
 
 fclose$8:	; return
-27:		mov t582, [bp]
+27:		mov t588, [bp]
 28:		mov di, [bp + 4]
 29:		mov bp, [bp + 2]
-30:		jmp t582
+30:		jmp t588
 32:	
 
-fclose$9:	; £temporary974 -> stream = *stream, offset 27
-33:		mov a583, [bp + 6]
+fclose$9:	; £temporary1008 -> stream = *stream, offset 27
+33:		mov a589, [bp + 6]
 35:	
 
-fclose$10:	; if £temporary974 -> stream == 0 goto 16
-36:		cmp word [a583 + 27], 0
+fclose$10:	; if £temporary1008 -> stream == 0 goto 16
+36:		cmp word [a589 + 27], 0
 37:		je fclose$16
 39:	
 
 fclose$11:	; call header integral zero 0 stack zero 0
 41:	
 
-fclose$12:	; £temporary975 -> stream = *stream, offset 4
-42:		mov a584, [bp + 6]
+fclose$12:	; £temporary1009 -> stream = *stream, offset 4
+42:		mov a590, [bp + 6]
 44:	
 
-fclose$13:	; parameter £temporary975 -> stream, offset 6
-45:		mov [bp + 14], a584
+fclose$13:	; parameter £temporary1009 -> stream, offset 6
+45:		mov [bp + 14], a590
 46:		add word [bp + 14], 4
 48:	
 
@@ -1086,23 +1086,23 @@ fclose$14:	; call function noellipse-noellipse remove
 fclose$15:	; post call
 56:	
 
-fclose$16:	; £temporary978 -> stream = *stream
-57:		mov a585, [bp + 6]
+fclose$16:	; £temporary1012 -> stream = *stream
+57:		mov a591, [bp + 6]
 59:	
 
-fclose$17:	; £temporary978 -> stream = 0
-60:		mov word [a585], 0
+fclose$17:	; £temporary1012 -> stream = 0
+60:		mov word [a591], 0
 62:	
 
 fclose$18:	; return_value = 0
-63:		mov a586, 0
+63:		mov a592, 0
 65:	
 
 fclose$19:	; return
-66:		mov t587, [bp]
+66:		mov t593, [bp]
 67:		mov di, [bp + 4]
 68:		mov bp, [bp + 2]
-69:		jmp t587
+69:		jmp t593
 71:	
 
 fclose$20:	; index = 0
@@ -1114,47 +1114,47 @@ fclose$21:	; if index >= 20 goto 40
 76:		jge fclose$40
 78:	
 
-fclose$22:	; £temporary982 = index * 29
-79:		mov a588, [bp + 8]
+fclose$22:	; £temporary1016 = index * 29
+79:		mov a594, [bp + 8]
 81:		xor dx, dx
 82:		mul word [int2$29#]
 88:	
 
-fclose$23:	; £temporary983 = g_fileArray + £temporary982
-89:		mov a592, g_fileArray
-90:		add a592, t591
+fclose$23:	; £temporary1017 = g_fileArray + £temporary1016
+89:		mov a598, g_fileArray
+90:		add a598, t597
 92:	
 
-fclose$24:	; £temporary981 -> £temporary983 = *£temporary983
+fclose$24:	; £temporary1015 -> £temporary1017 = *£temporary1017
 94:	
 
-fclose$25:	; if £temporary981.open$0 -> £temporary983 == 0 goto 38
-95:		cmp word [a592], 0
+fclose$25:	; if £temporary1015.open$0 -> £temporary1017 == 0 goto 38
+95:		cmp word [a598], 0
 96:		je fclose$38
 98:	
 
 fclose$26:	; call header integral zero 0 stack zero 0
 100:	
 
-fclose$27:	; £temporary985 = index * 29
-101:		mov a593, [bp + 8]
+fclose$27:	; £temporary1019 = index * 29
+101:		mov a599, [bp + 8]
 103:		xor dx, dx
 104:		mul word [int2$29#]
 110:	
 
-fclose$28:	; £temporary986 = g_fileArray + £temporary985
-111:		mov a597, g_fileArray
-112:		add a597, t596
+fclose$28:	; £temporary1020 = g_fileArray + £temporary1019
+111:		mov a603, g_fileArray
+112:		add a603, t602
 114:	
 
-fclose$29:	; £temporary984 -> £temporary986 = *£temporary986
+fclose$29:	; £temporary1018 -> £temporary1020 = *£temporary1020
 116:	
 
-fclose$30:	; £temporary987 = &£temporary984 -> £temporary986
+fclose$30:	; £temporary1021 = &£temporary1018 -> £temporary1020
 118:	
 
-fclose$31:	; parameter £temporary987, offset 6
-119:		mov [bp + 16], a597
+fclose$31:	; parameter £temporary1021, offset 6
+119:		mov [bp + 16], a603
 121:	
 
 fclose$32:	; call function noellipse-noellipse fclose
@@ -1167,23 +1167,23 @@ fclose$32:	; call function noellipse-noellipse fclose
 fclose$33:	; post call
 129:	
 
-fclose$34:	; £temporary988 = return_value
+fclose$34:	; £temporary1022 = return_value
 134:	
 
-fclose$35:	; if £temporary988 != -1 goto 38
-135:		cmp t599, -1
+fclose$35:	; if £temporary1022 != -1 goto 38
+135:		cmp t605, -1
 136:		jne fclose$38
 138:	
 
 fclose$36:	; return_value = -1
-139:		mov a600, -1
+139:		mov a606, -1
 141:	
 
 fclose$37:	; return
-142:		mov t601, [bp]
+142:		mov t607, [bp]
 143:		mov di, [bp + 4]
 144:		mov bp, [bp + 2]
-145:		jmp t601
+145:		jmp t607
 147:	
 
 fclose$38:	; ++index
@@ -1195,29 +1195,29 @@ fclose$39:	; goto 21
 153:	
 
 fclose$40:	; return_value = 0
-154:		mov a602, 0
+154:		mov a608, 0
 156:	
 
 fclose$41:	; return
-157:		mov t603, [bp]
+157:		mov t609, [bp]
 158:		mov di, [bp + 4]
 159:		mov bp, [bp + 2]
-160:		jmp t603
+160:		jmp t609
 162:	
 
 fclose$42:	; function end fclose
 1:	
 
 remove:	; ah = 65
-2:		mov a604, 65
+2:		mov a610, 65
 4:	
 
 remove$1:	; cl = 0
-5:		mov a605, 0
+5:		mov a611, 0
 7:	
 
 remove$2:	; dx = name
-8:		mov a606, [bp + 6]
+8:		mov a612, [bp + 6]
 10:	
 
 remove$3:	; interrupt 33
@@ -1233,44 +1233,44 @@ remove$5:	; errno = 18
 19:	
 
 remove$6:	; return_value = -1
-20:		mov a607, -1
+20:		mov a613, -1
 22:	
 
 remove$7:	; return
-23:		mov t608, [bp]
+23:		mov t614, [bp]
 24:		mov di, [bp + 4]
 25:		mov bp, [bp + 2]
-26:		jmp t608
+26:		jmp t614
 28:	
 
 remove$8:	; return_value = 0
-29:		mov a609, 0
+29:		mov a615, 0
 31:	
 
 remove$9:	; return
-32:		mov t610, [bp]
+32:		mov t616, [bp]
 33:		mov di, [bp + 4]
 34:		mov bp, [bp + 2]
-35:		jmp t610
+35:		jmp t616
 37:	
 
 remove$10:	; function end remove
 1:	
 
 rename:	; ah = 86
-2:		mov a611, 86
+2:		mov a617, 86
 4:	
 
 rename$1:	; cl = 0
-5:		mov a612, 0
+5:		mov a618, 0
 7:	
 
 rename$2:	; dx = oldName
-8:		mov a613, [bp + 6]
+8:		mov a619, [bp + 6]
 10:	
 
 rename$3:	; di = newName
-11:		mov a614, [bp + 8]
+11:		mov a620, [bp + 8]
 13:	
 
 rename$4:	; interrupt 33
@@ -1286,39 +1286,39 @@ rename$6:	; errno = 19
 22:	
 
 rename$7:	; return_value = -1
-23:		mov a615, -1
+23:		mov a621, -1
 25:	
 
 rename$8:	; return
-26:		mov t616, [bp]
+26:		mov t622, [bp]
 27:		mov di, [bp + 4]
 28:		mov bp, [bp + 2]
-29:		jmp t616
+29:		jmp t622
 31:	
 
 rename$9:	; return_value = 0
-32:		mov a617, 0
+32:		mov a623, 0
 34:	
 
 rename$10:	; return
-35:		mov t618, [bp]
+35:		mov t624, [bp]
 36:		mov di, [bp + 4]
 37:		mov bp, [bp + 2]
-38:		jmp t618
+38:		jmp t624
 40:	
 
 rename$11:	; function end rename
 1:	
 
 setvbuf:	; return_value = 0
-2:		mov a619, 0
+2:		mov a625, 0
 4:	
 
 setvbuf$1:	; return
-5:		mov t620, [bp]
+5:		mov t626, [bp]
 6:		mov di, [bp + 4]
 7:		mov bp, [bp + 2]
-8:		jmp t620
+8:		jmp t626
 10:	
 
 setvbuf$2:	; function end setvbuf
@@ -1328,10 +1328,10 @@ setbuf:	; empty
 3:	
 
 setbuf$1:	; return
-4:		mov t621, [bp]
+4:		mov t627, [bp]
 5:		mov di, [bp + 4]
 6:		mov bp, [bp + 2]
-7:		jmp t621
+7:		jmp t627
 9:	
 
 setbuf$2:	; function end setbuf
@@ -1344,13 +1344,13 @@ fgetc:	; c = 0
 fgetc$1:	; call header integral zero 0 stack zero 0
 6:	
 
-fgetc$2:	; £temporary1002 = &c
-7:		mov t622, bp
-8:		add t622, 8
+fgetc$2:	; £temporary1036 = &c
+7:		mov t628, bp
+8:		add t628, 8
 10:	
 
-fgetc$3:	; parameter £temporary1002, offset 6
-11:		mov [bp + 15], t622
+fgetc$3:	; parameter £temporary1036, offset 6
+11:		mov [bp + 15], t628
 13:	
 
 fgetc$4:	; parameter 1, offset 8
@@ -1362,8 +1362,8 @@ fgetc$5:	; parameter 1, offset 10
 19:	
 
 fgetc$6:	; parameter stream, offset 12
-20:		mov a623, [bp + 6]
-21:		mov [bp + 21], a623
+20:		mov a629, [bp + 6]
+21:		mov [bp + 21], a629
 23:	
 
 fgetc$7:	; call function noellipse-noellipse fread
@@ -1376,42 +1376,42 @@ fgetc$7:	; call function noellipse-noellipse fread
 fgetc$8:	; post call
 31:	
 
-fgetc$9:	; £temporary1003 = return_value
+fgetc$9:	; £temporary1037 = return_value
 36:	
 
-fgetc$10:	; if £temporary1003 <= 0 goto 14
-37:		cmp t625, 0
+fgetc$10:	; if £temporary1037 <= 0 goto 14
+37:		cmp t631, 0
 38:		jle fgetc$14
 40:	
 
-fgetc$11:	; £temporary1005 = int_to_int c (Signed_Char -> Signed_Int)
-41:		mov a626, [bp + 8]
-43:		and a626, 255
-45:		cmp a626, 0
+fgetc$11:	; £temporary1039 = int_to_int c (Signed_Char -> Signed_Int)
+41:		mov a632, [bp + 8]
+43:		and a632, 255
+45:		cmp a632, 0
 46:		jge fgetc$12
-47:		neg a626
-49:		neg a626
+47:		neg a632
+49:		neg a632
 51:	
 
-fgetc$12:	; return_value = £temporary1005
+fgetc$12:	; return_value = £temporary1039
 53:	
 
 fgetc$13:	; return
-54:		mov t627, [bp]
+54:		mov t633, [bp]
 55:		mov di, [bp + 4]
 56:		mov bp, [bp + 2]
-57:		jmp t627
+57:		jmp t633
 59:	
 
 fgetc$14:	; return_value = -1
-60:		mov a628, -1
+60:		mov a634, -1
 62:	
 
 fgetc$15:	; return
-63:		mov t629, [bp]
+63:		mov t635, [bp]
 64:		mov di, [bp + 4]
 65:		mov bp, [bp + 2]
-66:		jmp t629
+66:		jmp t635
 68:	
 
 fgetc$16:	; function end fgetc
@@ -1425,13 +1425,13 @@ fgets$1:	; prevChar = 0
 5:		mov byte [bp + 14], 0
 7:	
 
-fgets$2:	; £temporary1011 = size - 1
-8:		mov a630, [bp + 8]
-9:		sub a630, 1
+fgets$2:	; £temporary1045 = size - 1
+8:		mov a636, [bp + 8]
+9:		sub a636, 1
 11:	
 
-fgets$3:	; if count >= £temporary1011 goto 33
-12:		cmp [bp + 12], a630
+fgets$3:	; if count >= £temporary1045 goto 33
+12:		cmp [bp + 12], a636
 13:		jge fgets$33
 15:	
 
@@ -1443,21 +1443,21 @@ fgets$5:	; call header integral zero 0 stack zero 0
 20:	
 
 fgets$6:	; parameter stream, offset 6
-21:		mov a631, [bp + 10]
-22:		mov [bp + 22], a631
+21:		mov a637, [bp + 10]
+22:		mov [bp + 22], a637
 24:	
 
 fgets$7:	; parameter string_25c#, offset 8
 25:		mov word [bp + 24], string_25c#
 27:	
 
-fgets$8:	; £temporary1013 = &currChar
-28:		mov t632, bp
-29:		add t632, 15
+fgets$8:	; £temporary1047 = &currChar
+28:		mov t638, bp
+29:		add t638, 15
 31:	
 
-fgets$9:	; parameter £temporary1013, offset 10
-32:		mov [bp + 26], t632
+fgets$9:	; parameter £temporary1047, offset 10
+32:		mov [bp + 26], t638
 34:	
 
 fgets$10:	; call function noellipse-ellipse fscanf, extra 0
@@ -1482,46 +1482,46 @@ fgets$13:	; if currChar != 10 goto 18
 50:		jne fgets$18
 52:	
 
-fgets$14:	; £temporary1019 = text + count
-53:		mov a633, [bp + 6]
-54:		add a633, [bp + 12]
+fgets$14:	; £temporary1053 = text + count
+53:		mov a639, [bp + 6]
+54:		add a639, [bp + 12]
 56:	
 
-fgets$15:	; £temporary1018 -> £temporary1019 = *£temporary1019
+fgets$15:	; £temporary1052 -> £temporary1053 = *£temporary1053
 58:	
 
-fgets$16:	; £temporary1018 -> £temporary1019 = 0
-59:		mov byte [a633], 0
+fgets$16:	; £temporary1052 -> £temporary1053 = 0
+59:		mov byte [a639], 0
 61:	
 
 fgets$17:	; goto 33
 62:		jmp fgets$33
 64:	
 
-fgets$18:	; £temporary1020 = int_to_int currChar (Signed_Char -> Signed_Int)
-65:		mov a634, [bp + 15]
-67:		and a634, 255
-69:		cmp a634, 0
+fgets$18:	; £temporary1054 = int_to_int currChar (Signed_Char -> Signed_Int)
+65:		mov a640, [bp + 15]
+67:		and a640, 255
+69:		cmp a640, 0
 70:		jge fgets$19
-71:		neg a634
-73:		neg a634
+71:		neg a640
+73:		neg a640
 75:	
 
-fgets$19:	; if £temporary1020 != -1 goto 24
-76:		cmp a634, -1
+fgets$19:	; if £temporary1054 != -1 goto 24
+76:		cmp a640, -1
 77:		jne fgets$24
 79:	
 
-fgets$20:	; £temporary1023 = text + count
-80:		mov a635, [bp + 6]
-81:		add a635, [bp + 12]
+fgets$20:	; £temporary1057 = text + count
+80:		mov a641, [bp + 6]
+81:		add a641, [bp + 12]
 83:	
 
-fgets$21:	; £temporary1022 -> £temporary1023 = *£temporary1023
+fgets$21:	; £temporary1056 -> £temporary1057 = *£temporary1057
 85:	
 
-fgets$22:	; £temporary1022 -> £temporary1023 = 0
-86:		mov byte [a635], 0
+fgets$22:	; £temporary1056 -> £temporary1057 = 0
+86:		mov byte [a641], 0
 88:	
 
 fgets$23:	; goto 33
@@ -1538,30 +1538,30 @@ fgets$25:	; if currChar == 10 goto 31
 97:		je fgets$31
 99:	
 
-fgets$26:	; £temporary1027 = count
-100:		mov t636, [bp + 12]
+fgets$26:	; £temporary1061 = count
+100:		mov t642, [bp + 12]
 102:	
 
 fgets$27:	; ++count
 103:		inc word [bp + 12]
 105:	
 
-fgets$28:	; £temporary1029 = text + £temporary1027
-106:		mov a637, [bp + 6]
-107:		add a637, t636
+fgets$28:	; £temporary1063 = text + £temporary1061
+106:		mov a643, [bp + 6]
+107:		add a643, t642
 109:	
 
-fgets$29:	; £temporary1028 -> £temporary1029 = *£temporary1029
+fgets$29:	; £temporary1062 -> £temporary1063 = *£temporary1063
 111:	
 
-fgets$30:	; £temporary1028 -> £temporary1029 = currChar
-112:		mov a638, [bp + 15]
-113:		mov [a637], a638
+fgets$30:	; £temporary1062 -> £temporary1063 = currChar
+112:		mov a644, [bp + 15]
+113:		mov [a643], a644
 115:	
 
 fgets$31:	; prevChar = currChar
-116:		mov a639, [bp + 15]
-117:		mov [bp + 14], a639
+116:		mov a645, [bp + 15]
+117:		mov [bp + 14], a645
 119:	
 
 fgets$32:	; goto 2
@@ -1569,14 +1569,14 @@ fgets$32:	; goto 2
 122:	
 
 fgets$33:	; return_value = text
-123:		mov a640, [bp + 6]
+123:		mov a646, [bp + 6]
 125:	
 
 fgets$34:	; return
-126:		mov t641, [bp]
+126:		mov t647, [bp]
 127:		mov di, [bp + 4]
 128:		mov bp, [bp + 2]
-129:		jmp t641
+129:		jmp t647
 131:	
 
 fgets$35:	; function end fgets
@@ -1586,8 +1586,8 @@ fputs:	; call header integral zero 0 stack zero 0
 3:	
 
 fputs$1:	; parameter s, offset 6
-4:		mov a642, [bp + 6]
-5:		mov [bp + 16], a642
+4:		mov a648, [bp + 6]
+5:		mov [bp + 16], a648
 7:	
 
 fputs$2:	; call function noellipse-noellipse strlen
@@ -1600,15 +1600,15 @@ fputs$2:	; call function noellipse-noellipse strlen
 fputs$3:	; post call
 15:	
 
-fputs$4:	; £temporary1034 = return_value
+fputs$4:	; £temporary1068 = return_value
 20:	
 
-fputs$5:	; £temporary1035 = £temporary1034 + 1
-21:		add t644, 1
+fputs$5:	; £temporary1069 = £temporary1068 + 1
+21:		add t650, 1
 23:	
 
-fputs$6:	; size = £temporary1035 * 1
-24:		mov t645, t644
+fputs$6:	; size = £temporary1069 * 1
+24:		mov t651, t650
 26:		xor dx, dx
 27:		imul word [int2$1#]
 28:		mov [bp + 10], ax
@@ -1618,13 +1618,13 @@ fputs$7:	; call header integral zero 0 stack zero 0
 32:	
 
 fputs$8:	; parameter s, offset 6
-33:		mov a648, [bp + 6]
-34:		mov [bp + 18], a648
+33:		mov a654, [bp + 6]
+34:		mov [bp + 18], a654
 36:	
 
 fputs$9:	; parameter size, offset 8
-37:		mov a649, [bp + 10]
-38:		mov [bp + 20], a649
+37:		mov a655, [bp + 10]
+38:		mov [bp + 20], a655
 40:	
 
 fputs$10:	; parameter 1, offset 10
@@ -1632,8 +1632,8 @@ fputs$10:	; parameter 1, offset 10
 43:	
 
 fputs$11:	; parameter stream, offset 12
-44:		mov a650, [bp + 8]
-45:		mov [bp + 24], a650
+44:		mov a656, [bp + 8]
+45:		mov [bp + 24], a656
 47:	
 
 fputs$12:	; call function noellipse-noellipse fwrite
@@ -1646,34 +1646,34 @@ fputs$12:	; call function noellipse-noellipse fwrite
 fputs$13:	; post call
 55:	
 
-fputs$14:	; £temporary1037 = return_value
+fputs$14:	; £temporary1071 = return_value
 60:	
 
-fputs$15:	; if £temporary1037 != size goto 18
-61:		cmp t652, [bp + 10]
+fputs$15:	; if £temporary1071 != size goto 18
+61:		cmp t658, [bp + 10]
 62:		jne fputs$18
 64:	
 
-fputs$16:	; £temporary1042 = 0
-65:		mov t653, 0
+fputs$16:	; £temporary1076 = 0
+65:		mov t659, 0
 67:	
 
 fputs$17:	; goto 19
 68:		jmp fputs$19
 70:	
 
-fputs$18:	; £temporary1042 = -1
-71:		mov t654, -1
+fputs$18:	; £temporary1076 = -1
+71:		mov t660, -1
 73:	
 
-fputs$19:	; return_value = £temporary1042
+fputs$19:	; return_value = £temporary1076
 75:	
 
 fputs$20:	; return
-76:		mov t655, [bp]
+76:		mov t661, [bp]
 77:		mov di, [bp + 4]
 78:		mov bp, [bp + 2]
-79:		jmp t655
+79:		jmp t661
 81:	
 
 fputs$21:	; function end fputs
@@ -1683,8 +1683,8 @@ getchar:	; call header integral zero 0 stack zero 0
 3:	
 
 getchar$1:	; parameter stdin, offset 6
-4:		mov a656, [stdin]
-5:		mov [bp + 12], a656
+4:		mov a662, [stdin]
+5:		mov [bp + 12], a662
 7:	
 
 getchar$2:	; call function noellipse-noellipse fgetc
@@ -1697,17 +1697,17 @@ getchar$2:	; call function noellipse-noellipse fgetc
 getchar$3:	; post call
 15:	
 
-getchar$4:	; £temporary1048 = return_value
+getchar$4:	; £temporary1082 = return_value
 20:	
 
-getchar$5:	; return_value = £temporary1048
+getchar$5:	; return_value = £temporary1082
 22:	
 
 getchar$6:	; return
-23:		mov t659, [bp]
+23:		mov t665, [bp]
 24:		mov di, [bp + 4]
 25:		mov bp, [bp + 2]
-26:		jmp t659
+26:		jmp t665
 28:	
 
 getchar$7:	; function end getchar
@@ -1717,8 +1717,8 @@ gets:	; call header integral zero 0 stack zero 0
 3:	
 
 gets$1:	; parameter s, offset 6
-4:		mov a660, [bp + 6]
-5:		mov [bp + 14], a660
+4:		mov a666, [bp + 6]
+5:		mov [bp + 14], a666
 7:	
 
 gets$2:	; parameter -1, offset 8
@@ -1726,8 +1726,8 @@ gets$2:	; parameter -1, offset 8
 10:	
 
 gets$3:	; parameter stdin, offset 10
-11:		mov a661, [stdin]
-12:		mov [bp + 18], a661
+11:		mov a667, [stdin]
+12:		mov [bp + 18], a667
 14:	
 
 gets$4:	; call function noellipse-noellipse fgets
@@ -1740,11 +1740,11 @@ gets$4:	; call function noellipse-noellipse fgets
 gets$5:	; post call
 22:	
 
-gets$6:	; £temporary1050 = return_value
+gets$6:	; £temporary1084 = return_value
 27:	
 
-gets$7:	; if £temporary1050 == 0 goto 21
-28:		cmp t663, 0
+gets$7:	; if £temporary1084 == 0 goto 21
+28:		cmp t669, 0
 29:		je gets$21
 31:	
 
@@ -1752,8 +1752,8 @@ gets$8:	; call header integral zero 0 stack zero 0
 33:	
 
 gets$9:	; parameter s, offset 6
-34:		mov a664, [bp + 6]
-35:		mov [bp + 14], a664
+34:		mov a670, [bp + 6]
+35:		mov [bp + 14], a670
 37:	
 
 gets$10:	; call function noellipse-noellipse strlen
@@ -1766,11 +1766,11 @@ gets$10:	; call function noellipse-noellipse strlen
 gets$11:	; post call
 45:	
 
-gets$12:	; £temporary1052 = return_value
+gets$12:	; £temporary1086 = return_value
 50:	
 
-gets$13:	; size = £temporary1052
-51:		mov [bp + 8], t666
+gets$13:	; size = £temporary1086
+51:		mov [bp + 8], t672
 53:	
 
 gets$14:	; if size <= 0 goto 19
@@ -1778,43 +1778,43 @@ gets$14:	; if size <= 0 goto 19
 55:		jle gets$19
 57:	
 
-gets$15:	; £temporary1054 = size - 1
-58:		mov a667, [bp + 8]
-59:		sub a667, 1
+gets$15:	; £temporary1088 = size - 1
+58:		mov a673, [bp + 8]
+59:		sub a673, 1
 61:	
 
-gets$16:	; £temporary1056 = s + £temporary1054
-62:		mov a668, [bp + 6]
-63:		add a668, a667
+gets$16:	; £temporary1090 = s + £temporary1088
+62:		mov a674, [bp + 6]
+63:		add a674, a673
 65:	
 
-gets$17:	; £temporary1055 -> £temporary1056 = *£temporary1056
+gets$17:	; £temporary1089 -> £temporary1090 = *£temporary1090
 67:	
 
-gets$18:	; £temporary1055 -> £temporary1056 = 0
-68:		mov byte [a668], 0
+gets$18:	; £temporary1089 -> £temporary1090 = 0
+68:		mov byte [a674], 0
 70:	
 
 gets$19:	; return_value = s
-71:		mov a669, [bp + 6]
+71:		mov a675, [bp + 6]
 73:	
 
 gets$20:	; return
-74:		mov t670, [bp]
+74:		mov t676, [bp]
 75:		mov di, [bp + 4]
 76:		mov bp, [bp + 2]
-77:		jmp t670
+77:		jmp t676
 79:	
 
 gets$21:	; return_value = 0
-80:		mov a671, 0
+80:		mov a677, 0
 82:	
 
 gets$22:	; return
-83:		mov t672, [bp]
+83:		mov t678, [bp]
 84:		mov di, [bp + 4]
 85:		mov bp, [bp + 2]
-86:		jmp t672
+86:		jmp t678
 88:	
 
 gets$23:	; function end gets
@@ -1824,13 +1824,13 @@ puts:	; call header integral zero 0 stack zero 0
 3:	
 
 puts$1:	; parameter s, offset 6
-4:		mov a673, [bp + 6]
-5:		mov [bp + 14], a673
+4:		mov a679, [bp + 6]
+5:		mov [bp + 14], a679
 7:	
 
 puts$2:	; parameter stdout, offset 8
-8:		mov a674, [stdout]
-9:		mov [bp + 16], a674
+8:		mov a680, [stdout]
+9:		mov [bp + 16], a680
 11:	
 
 puts$3:	; call function noellipse-noellipse fputs
@@ -1843,11 +1843,11 @@ puts$3:	; call function noellipse-noellipse fputs
 puts$4:	; post call
 19:	
 
-puts$5:	; £temporary1061 = return_value
+puts$5:	; £temporary1095 = return_value
 24:	
 
-puts$6:	; if £temporary1061 == 0 goto 15
-25:		cmp t676, 0
+puts$6:	; if £temporary1095 == 0 goto 15
+25:		cmp t682, 0
 26:		je puts$15
 28:	
 
@@ -1859,8 +1859,8 @@ puts$8:	; parameter 10, offset 6
 33:	
 
 puts$9:	; parameter stdout, offset 8
-34:		mov a677, [stdout]
-35:		mov [bp + 16], a677
+34:		mov a683, [stdout]
+35:		mov [bp + 16], a683
 37:	
 
 puts$10:	; call function noellipse-noellipse fputc
@@ -1873,105 +1873,105 @@ puts$10:	; call function noellipse-noellipse fputc
 puts$11:	; post call
 45:	
 
-puts$12:	; £temporary1063 = return_value
+puts$12:	; £temporary1097 = return_value
 50:	
 
-puts$13:	; return_value = £temporary1063
+puts$13:	; return_value = £temporary1097
 52:	
 
 puts$14:	; return
-53:		mov t680, [bp]
+53:		mov t686, [bp]
 54:		mov di, [bp + 4]
 55:		mov bp, [bp + 2]
-56:		jmp t680
+56:		jmp t686
 58:	
 
 puts$15:	; return_value = -1
-59:		mov a681, -1
+59:		mov a687, -1
 61:	
 
 puts$16:	; return
-62:		mov t682, [bp]
+62:		mov t688, [bp]
 63:		mov di, [bp + 4]
 64:		mov bp, [bp + 2]
-65:		jmp t682
+65:		jmp t688
 67:	
 
 puts$17:	; function end puts
 1:	
 
-ungetc:	; £temporary1068 -> stream = *stream, offset 20
-2:		mov a683, [bp + 8]
+ungetc:	; £temporary1102 -> stream = *stream, offset 20
+2:		mov a689, [bp + 8]
 4:	
 
-ungetc$1:	; £temporary1069 = int_to_int £temporary1068 -> stream (Signed_Char -> Signed_Int)
-5:		mov t684, [a683 + 20]
-7:		and t684, 255
-9:		cmp t684, 0
+ungetc$1:	; £temporary1103 = int_to_int £temporary1102 -> stream (Signed_Char -> Signed_Int)
+5:		mov t690, [a689 + 20]
+7:		and t690, 255
+9:		cmp t690, 0
 10:		jge ungetc$2
-11:		neg t684
-13:		neg t684
+11:		neg t690
+13:		neg t690
 15:	
 
-ungetc$2:	; if £temporary1069 == -1 goto 6
-16:		cmp t684, -1
+ungetc$2:	; if £temporary1103 == -1 goto 6
+16:		cmp t690, -1
 17:		je ungetc$6
 19:	
 
-ungetc$3:	; £temporary1071 -> stream = *stream, offset 20
-20:		mov a685, [bp + 8]
+ungetc$3:	; £temporary1105 -> stream = *stream, offset 20
+20:		mov a691, [bp + 8]
 22:	
 
-ungetc$4:	; £temporary1072 = int_to_int c (Signed_Int -> Signed_Char)
-23:		mov a686, [bp + 6]
-26:		cmp a686, 0
+ungetc$4:	; £temporary1106 = int_to_int c (Signed_Int -> Signed_Char)
+23:		mov a692, [bp + 6]
+26:		cmp a692, 0
 27:		jge ungetc$5
-28:		neg a686
-30:		neg a686
+28:		neg a692
+30:		neg a692
 32:	
 
-ungetc$5:	; £temporary1071 -> stream = £temporary1072
-33:		mov [a685 + 20], a686
+ungetc$5:	; £temporary1105 -> stream = £temporary1106
+33:		mov [a691 + 20], a692
 35:	
 
 ungetc$6:	; return_value = c
-36:		mov a687, [bp + 6]
+36:		mov a693, [bp + 6]
 38:	
 
 ungetc$7:	; return
-39:		mov t688, [bp]
+39:		mov t694, [bp]
 40:		mov di, [bp + 4]
 41:		mov bp, [bp + 2]
-42:		jmp t688
+42:		jmp t694
 44:	
 
 ungetc$8:	; function end ungetc
 1:	
 
-fread:	; £temporary1074 -> stream = *stream, offset 2
-2:		mov a689, [bp + 12]
+fread:	; £temporary1108 -> stream = *stream, offset 2
+2:		mov a695, [bp + 12]
 4:	
 
-fread$1:	; bx = £temporary1074 -> stream
-5:		mov t690, [a689 + 2]
+fread$1:	; bx = £temporary1108 -> stream
+5:		mov t696, [a695 + 2]
 7:	
 
-fread$2:	; £temporary1076 = size * nobj
-8:		mov a691, [bp + 8]
+fread$2:	; £temporary1110 = size * nobj
+8:		mov a697, [bp + 8]
 10:		xor dx, dx
 11:		imul word [bp + 10]
 17:	
 
-fread$3:	; cx = £temporary1076
-18:		mov t695, t694
+fread$3:	; cx = £temporary1110
+18:		mov t701, t700
 20:	
 
 fread$4:	; ah = 63
-21:		mov a696, 63
+21:		mov a702, 63
 23:	
 
 fread$5:	; dx = ptr
-24:		mov a697, [bp + 6]
+24:		mov a703, [bp + 6]
 26:	
 
 fread$6:	; interrupt 33
@@ -1982,71 +1982,71 @@ fread$7:	; if notcarry goto 13
 30:		jnc fread$13
 32:	
 
-fread$8:	; £temporary1080 -> stream = *stream, offset 21
-33:		mov a698, [bp + 12]
+fread$8:	; £temporary1114 -> stream = *stream, offset 21
+33:		mov a704, [bp + 12]
 35:	
 
 fread$9:	; errno = 14
 36:		mov word [errno], 14
 38:	
 
-fread$10:	; £temporary1080 -> stream = errno
-39:		mov a699, [errno]
-40:		mov [a698 + 21], a699
+fread$10:	; £temporary1114 -> stream = errno
+39:		mov a705, [errno]
+40:		mov [a704 + 21], a705
 42:	
 
 fread$11:	; return_value = 0
-43:		mov a700, 0
+43:		mov a706, 0
 45:	
 
 fread$12:	; return
-46:		mov t701, [bp]
+46:		mov t707, [bp]
 47:		mov di, [bp + 4]
 48:		mov bp, [bp + 2]
-49:		jmp t701
+49:		jmp t707
 51:	
 
-fread$13:	; £temporary1081 = ax
+fread$13:	; £temporary1115 = ax
 53:	
 
-fread$14:	; return_value = £temporary1081
-54:		mov t703, t702
+fread$14:	; return_value = £temporary1115
+54:		mov t709, t708
 56:	
 
 fread$15:	; return
-57:		mov t704, [bp]
+57:		mov t710, [bp]
 58:		mov di, [bp + 4]
 59:		mov bp, [bp + 2]
-60:		jmp t704
+60:		jmp t710
 62:	
 
 fread$16:	; function end fread
 1:	
 
-fwrite:	; £temporary1083 -> stream = *stream, offset 2
-2:		mov a705, [bp + 12]
+fwrite:	; £temporary1117 -> stream = *stream, offset 2
+2:		mov a711, [bp + 12]
 4:	
 
-fwrite$1:	; bx = £temporary1083 -> stream
-5:		mov t706, [a705 + 2]
+fwrite$1:	; bx = £temporary1117 -> stream
+5:		mov t712, [a711 + 2]
 7:	
 
-fwrite$2:	; £temporary1085 = size * nobj
-8:		mov a707, [bp + 8]
+fwrite$2:	; £temporary1119 = size * nobj
+8:		mov a713, [bp + 8]
 10:		xor dx, dx
 11:		imul word [bp + 10]
 17:	
 
-fwrite$3:	; cx = £temporary1085
-18:		mov t711, t710
+fwrite$3:	; cx = £temporary1119
+18:		mov t717, t716
 20:	
 
 fwrite$4:	; ah = 64
-21:		mov a712, 64
+21:		mov a718, 64
 23:	
 
 fwrite$5:	; dx = ptr
-24:		mov a713, [bp + 6]
+24:		mov a719, [bp + 6]
 26:	
 
 fwrite$6:	; interrupt 33
@@ -2057,79 +2057,79 @@ fwrite$7:	; if notcarry goto 13
 30:		jnc fwrite$13
 32:	
 
-fwrite$8:	; £temporary1089 -> stream = *stream, offset 21
-33:		mov a714, [bp + 12]
+fwrite$8:	; £temporary1123 -> stream = *stream, offset 21
+33:		mov a720, [bp + 12]
 35:	
 
 fwrite$9:	; errno = 13
 36:		mov word [errno], 13
 38:	
 
-fwrite$10:	; £temporary1089 -> stream = errno
-39:		mov a715, [errno]
-40:		mov [a714 + 21], a715
+fwrite$10:	; £temporary1123 -> stream = errno
+39:		mov a721, [errno]
+40:		mov [a720 + 21], a721
 42:	
 
 fwrite$11:	; return_value = 0
-43:		mov a716, 0
+43:		mov a722, 0
 45:	
 
 fwrite$12:	; return
-46:		mov t717, [bp]
+46:		mov t723, [bp]
 47:		mov di, [bp + 4]
 48:		mov bp, [bp + 2]
-49:		jmp t717
+49:		jmp t723
 51:	
 
-fwrite$13:	; £temporary1090 = ax
+fwrite$13:	; £temporary1124 = ax
 53:	
 
-fwrite$14:	; return_value = £temporary1090
-54:		mov t719, t718
+fwrite$14:	; return_value = £temporary1124
+54:		mov t725, t724
 56:	
 
 fwrite$15:	; return
-57:		mov t720, [bp]
+57:		mov t726, [bp]
 58:		mov di, [bp + 4]
 59:		mov bp, [bp + 2]
-60:		jmp t720
+60:		jmp t726
 62:	
 
 fwrite$16:	; function end fwrite
 1:	
 
-fseek:	; £temporary1092 = int_to_int origin (Signed_Int -> Signed_Short_Int)
-2:		mov a721, [bp + 10]
-5:		cmp a721, 0
+fseek:	; £temporary1126 = int_to_int origin (Signed_Int -> Signed_Short_Int)
+2:		mov a727, [bp + 10]
+5:		cmp a727, 0
 6:		jge fseek$1
-7:		neg a721
-9:		neg a721
+7:		neg a727
+9:		neg a727
 11:	
 
-fseek$1:	; al = £temporary1092
+fseek$1:	; al = £temporary1126
 13:	
 
 fseek$2:	; ah = 66
-14:		mov a722, 66
+14:		mov a728, 66
 16:	
 
-fseek$3:	; £temporary1095 -> stream = *stream, offset 2
-17:		mov a723, [bp + 6]
+fseek$3:	; £temporary1129 -> stream = *stream, offset 2
+17:		mov a729, [bp + 6]
 19:	
 
-fseek$4:	; bx = £temporary1095 -> stream
-20:		mov t724, [a723 + 2]
+fseek$4:	; bx = £temporary1129 -> stream
+20:		mov t730, [a729 + 2]
 22:	
 
 fseek$5:	; cx = 0
-23:		mov a725, 0
+23:		mov a731, 0
 25:	
 
-fseek$6:	; £temporary1098 = int_to_int offset (Signed_Int -> Signed_Int)
-26:		mov a726, [bp + 8]
+fseek$6:	; £temporary1132 = int_to_int offset (Signed_Int -> Signed_Int)
+26:		mov a732, [bp + 8]
 29:	
 
-fseek$7:	; dx = £temporary1098
+fseek$7:	; dx = £temporary1132
 31:	
 
 fseek$8:	; interrupt 33
@@ -2140,49 +2140,49 @@ fseek$9:	; if carry goto 16
 35:		jc fseek$16
 37:	
 
-fseek$10:	; £temporary1101 -> stream = *stream, offset 23
-38:		mov a727, [bp + 6]
+fseek$10:	; £temporary1135 -> stream = *stream, offset 23
+38:		mov a733, [bp + 6]
 40:	
 
-fseek$11:	; £temporary1102 = ax
+fseek$11:	; £temporary1136 = ax
 42:	
 
-fseek$12:	; £temporary1101 -> stream = £temporary1102
-43:		mov [a727 + 23], t728
+fseek$12:	; £temporary1135 -> stream = £temporary1136
+43:		mov [a733 + 23], t734
 45:	
 
-fseek$13:	; £temporary1103 -> stream = *stream, offset 23
-46:		mov a729, [bp + 6]
+fseek$13:	; £temporary1137 -> stream = *stream, offset 23
+46:		mov a735, [bp + 6]
 48:	
 
-fseek$14:	; return_value = £temporary1103 -> stream
-49:		mov t730, [a729 + 23]
+fseek$14:	; return_value = £temporary1137 -> stream
+49:		mov t736, [a735 + 23]
 51:	
 
 fseek$15:	; return
-52:		mov t731, [bp]
+52:		mov t737, [bp]
 53:		mov di, [bp + 4]
 54:		mov bp, [bp + 2]
-55:		jmp t731
+55:		jmp t737
 57:	
 
-fseek$16:	; £temporary1104 -> stream = *stream, offset 21
-58:		mov a732, [bp + 6]
+fseek$16:	; £temporary1138 -> stream = *stream, offset 21
+58:		mov a738, [bp + 6]
 60:	
 
-fseek$17:	; £temporary1104 -> stream = 15
-61:		mov word [a732 + 21], 15
+fseek$17:	; £temporary1138 -> stream = 15
+61:		mov word [a738 + 21], 15
 63:	
 
 fseek$18:	; return_value = -1
-64:		mov a733, -1
+64:		mov a739, -1
 66:	
 
 fseek$19:	; return
-67:		mov t734, [bp]
+67:		mov t740, [bp]
 68:		mov di, [bp + 4]
 69:		mov bp, [bp + 2]
-70:		jmp t734
+70:		jmp t740
 72:	
 
 fseek$20:	; function end fseek
@@ -2192,8 +2192,8 @@ ftell:	; call header integral zero 0 stack zero 0
 3:	
 
 ftell$1:	; parameter stream, offset 6
-4:		mov a735, [bp + 6]
-5:		mov [bp + 14], a735
+4:		mov a741, [bp + 6]
+5:		mov [bp + 14], a741
 7:	
 
 ftell$2:	; parameter 0, offset 8
@@ -2214,17 +2214,17 @@ ftell$4:	; call function noellipse-noellipse fseek
 ftell$5:	; post call
 21:	
 
-ftell$6:	; £temporary1105 = return_value
+ftell$6:	; £temporary1139 = return_value
 26:	
 
-ftell$7:	; return_value = £temporary1105
+ftell$7:	; return_value = £temporary1139
 28:	
 
 ftell$8:	; return
-29:		mov t738, [bp]
+29:		mov t744, [bp]
 30:		mov di, [bp + 4]
 31:		mov bp, [bp + 2]
-32:		jmp t738
+32:		jmp t744
 34:	
 
 ftell$9:	; function end ftell
@@ -2234,8 +2234,8 @@ rewind:	; call header integral zero 0 stack zero 0
 3:	
 
 rewind$1:	; parameter stream, offset 6
-4:		mov a739, [bp + 6]
-5:		mov [bp + 14], a739
+4:		mov a745, [bp + 6]
+5:		mov [bp + 14], a745
 7:	
 
 rewind$2:	; parameter 0, offset 8
@@ -2257,26 +2257,26 @@ rewind$5:	; post call
 21:	
 
 rewind$6:	; return
-22:		mov t740, [bp]
+22:		mov t746, [bp]
 23:		mov di, [bp + 4]
 24:		mov bp, [bp + 2]
-25:		jmp t740
+25:		jmp t746
 27:	
 
 rewind$7:	; function end rewind
 1:	
 
-fgetpos:	; £temporary1114 -> ptr = *ptr
-2:		mov a741, [bp + 8]
+fgetpos:	; £temporary1148 -> ptr = *ptr
+2:		mov a747, [bp + 8]
 4:	
 
 fgetpos$1:	; call header integral no zero 1 stack zero 0
-5:		mov [bp + 10], a741
+5:		mov [bp + 10], a747
 7:	
 
 fgetpos$2:	; parameter stream, offset 6
-8:		mov a742, [bp + 6]
-9:		mov [bp + 18], a742
+8:		mov a748, [bp + 6]
+9:		mov [bp + 18], a748
 11:	
 
 fgetpos$3:	; call function noellipse-noellipse ftell
@@ -2287,28 +2287,28 @@ fgetpos$3:	; call function noellipse-noellipse ftell
 17:	
 
 fgetpos$4:	; post call
-18:		mov a741, [bp + 10]
+18:		mov a747, [bp + 10]
 20:	
 
-fgetpos$5:	; £temporary1115 = return_value
+fgetpos$5:	; £temporary1149 = return_value
 25:	
 
-fgetpos$6:	; £temporary1116 = int_to_int £temporary1115 (Signed_Int -> Signed_Int)
+fgetpos$6:	; £temporary1150 = int_to_int £temporary1149 (Signed_Int -> Signed_Int)
 28:	
 
-fgetpos$7:	; £temporary1114 -> ptr = £temporary1116
-29:		mov [a741], t744
+fgetpos$7:	; £temporary1148 -> ptr = £temporary1150
+29:		mov [a747], t750
 31:	
 
 fgetpos$8:	; return_value = 0
-32:		mov a745, 0
+32:		mov a751, 0
 34:	
 
 fgetpos$9:	; return
-35:		mov t746, [bp]
+35:		mov t752, [bp]
 36:		mov di, [bp + 4]
 37:		mov bp, [bp + 2]
-38:		jmp t746
+38:		jmp t752
 40:	
 
 fgetpos$10:	; function end fgetpos
@@ -2318,17 +2318,17 @@ fsetpos:	; call header integral zero 0 stack zero 0
 3:	
 
 fsetpos$1:	; parameter stream, offset 6
-4:		mov a747, [bp + 6]
-5:		mov [bp + 16], a747
+4:		mov a753, [bp + 6]
+5:		mov [bp + 16], a753
 7:	
 
-fsetpos$2:	; £temporary1118 -> ptr = *ptr
-8:		mov a748, [bp + 8]
+fsetpos$2:	; £temporary1152 -> ptr = *ptr
+8:		mov a754, [bp + 8]
 10:	
 
-fsetpos$3:	; parameter £temporary1118 -> ptr, offset 8
-11:		mov t749, [a748]
-12:		mov [bp + 18], t749
+fsetpos$3:	; parameter £temporary1152 -> ptr, offset 8
+11:		mov t755, [a754]
+12:		mov [bp + 18], t755
 14:	
 
 fsetpos$4:	; parameter 0, offset 10
@@ -2345,43 +2345,43 @@ fsetpos$5:	; call function noellipse-noellipse fseek
 fsetpos$6:	; post call
 25:	
 
-fsetpos$7:	; £temporary1119 = return_value
+fsetpos$7:	; £temporary1153 = return_value
 30:	
 
-fsetpos$8:	; £temporary1120 = int_to_int £temporary1119 (Signed_Int -> Signed_Int)
+fsetpos$8:	; £temporary1154 = int_to_int £temporary1153 (Signed_Int -> Signed_Int)
 33:	
 
-fsetpos$9:	; return_value = £temporary1120
+fsetpos$9:	; return_value = £temporary1154
 35:	
 
 fsetpos$10:	; return
-36:		mov t752, [bp]
+36:		mov t758, [bp]
 37:		mov di, [bp + 4]
 38:		mov bp, [bp + 2]
-39:		jmp t752
+39:		jmp t758
 41:	
 
 fsetpos$11:	; function end fsetpos
 1:	
 
-clearerr:	; £temporary1124 -> stream = *stream, offset 21
-2:		mov a753, [bp + 6]
+clearerr:	; £temporary1158 -> stream = *stream, offset 21
+2:		mov a759, [bp + 6]
 4:	
 
 clearerr$1:	; errno = 0
 5:		mov word [errno], 0
 7:	
 
-clearerr$2:	; £temporary1124 -> stream = errno
-8:		mov a754, [errno]
-9:		mov [a753 + 21], a754
+clearerr$2:	; £temporary1158 -> stream = errno
+8:		mov a760, [errno]
+9:		mov [a759 + 21], a760
 11:	
 
 clearerr$3:	; return
-12:		mov t755, [bp]
+12:		mov t761, [bp]
 13:		mov di, [bp + 4]
 14:		mov bp, [bp + 2]
-15:		jmp t755
+15:		jmp t761
 17:	
 
 clearerr$4:	; function end clearerr
@@ -2391,8 +2391,8 @@ feof:	; call header integral zero 0 stack zero 0
 3:	
 
 feof$1:	; parameter stream, offset 6
-4:		mov a756, [bp + 6]
-5:		mov [bp + 14], a756
+4:		mov a762, [bp + 6]
+5:		mov [bp + 14], a762
 7:	
 
 feof$2:	; parameter 0, offset 8
@@ -2413,23 +2413,23 @@ feof$4:	; call function noellipse-noellipse fseek
 feof$5:	; post call
 21:	
 
-feof$6:	; £temporary1125 = return_value
+feof$6:	; £temporary1159 = return_value
 26:	
 
-feof$7:	; £temporary1126 = int_to_int £temporary1125 (Signed_Int -> Unsigned_Long_Int)
-28:		and t758, 65535
+feof$7:	; £temporary1160 = int_to_int £temporary1159 (Signed_Int -> Unsigned_Long_Int)
+28:		and t764, 65535
 30:	
 
-feof$8:	; currPosition = £temporary1126
-31:		mov [bp + 8], t758
+feof$8:	; currPosition = £temporary1160
+31:		mov [bp + 8], t764
 33:	
 
 feof$9:	; call header integral zero 0 stack zero 0
 35:	
 
 feof$10:	; parameter stream, offset 6
-36:		mov a759, [bp + 6]
-37:		mov [bp + 18], a759
+36:		mov a765, [bp + 6]
+37:		mov [bp + 18], a765
 39:	
 
 feof$11:	; parameter 0, offset 8
@@ -2450,31 +2450,31 @@ feof$13:	; call function noellipse-noellipse fseek
 feof$14:	; post call
 53:	
 
-feof$15:	; £temporary1127 = return_value
+feof$15:	; £temporary1161 = return_value
 58:	
 
-feof$16:	; £temporary1128 = int_to_int £temporary1127 (Signed_Int -> Unsigned_Long_Int)
-60:		and t761, 65535
+feof$16:	; £temporary1162 = int_to_int £temporary1161 (Signed_Int -> Unsigned_Long_Int)
+60:		and t767, 65535
 62:	
 
-feof$17:	; lastPosition = £temporary1128
-63:		mov [bp + 12], t761
+feof$17:	; lastPosition = £temporary1162
+63:		mov [bp + 12], t767
 65:	
 
 feof$18:	; call header integral zero 0 stack zero 0
 67:	
 
 feof$19:	; parameter stream, offset 6
-68:		mov a762, [bp + 6]
-69:		mov [bp + 22], a762
+68:		mov a768, [bp + 6]
+69:		mov [bp + 22], a768
 71:	
 
-feof$20:	; £temporary1129 = int_to_int currPosition (Unsigned_Long_Int -> Signed_Int)
-72:		mov a763, [bp + 8]
+feof$20:	; £temporary1163 = int_to_int currPosition (Unsigned_Long_Int -> Signed_Int)
+72:		mov a769, [bp + 8]
 75:	
 
-feof$21:	; parameter £temporary1129, offset 8
-76:		mov [bp + 24], a763
+feof$21:	; parameter £temporary1163, offset 8
+76:		mov [bp + 24], a769
 78:	
 
 feof$22:	; parameter 0, offset 10
@@ -2492,54 +2492,54 @@ feof$24:	; post call
 89:	
 
 feof$25:	; if currPosition != lastPosition goto 28
-90:		mov a764, [bp + 12]
-91:		cmp [bp + 8], a764
+90:		mov a770, [bp + 12]
+91:		cmp [bp + 8], a770
 92:		jne feof$28
 94:	
 
-feof$26:	; £temporary1132 = 1
-95:		mov t765, 1
+feof$26:	; £temporary1166 = 1
+95:		mov t771, 1
 97:	
 
 feof$27:	; goto 29
 98:		jmp feof$29
 100:	
 
-feof$28:	; £temporary1132 = 0
-101:		mov t766, 0
+feof$28:	; £temporary1166 = 0
+101:		mov t772, 0
 103:	
 
-feof$29:	; endOfFile = £temporary1132
-104:		mov [bp + 16], t766
+feof$29:	; endOfFile = £temporary1166
+104:		mov [bp + 16], t772
 106:	
 
 feof$30:	; return_value = endOfFile
-107:		mov a767, [bp + 16]
+107:		mov a773, [bp + 16]
 109:	
 
 feof$31:	; return
-110:		mov t768, [bp]
+110:		mov t774, [bp]
 111:		mov di, [bp + 4]
 112:		mov bp, [bp + 2]
-113:		jmp t768
+113:		jmp t774
 115:	
 
 feof$32:	; function end feof
 1:	
 
-ferror:	; £temporary1142 -> stream = *stream, offset 21
-2:		mov a769, [bp + 6]
+ferror:	; £temporary1176 -> stream = *stream, offset 21
+2:		mov a775, [bp + 6]
 4:	
 
-ferror$1:	; return_value = £temporary1142 -> stream
-5:		mov t770, [a769 + 21]
+ferror$1:	; return_value = £temporary1176 -> stream
+5:		mov t776, [a775 + 21]
 7:	
 
 ferror$2:	; return
-8:		mov t771, [bp]
+8:		mov t777, [bp]
 9:		mov di, [bp + 4]
 10:		mov bp, [bp + 2]
-11:		jmp t771
+11:		jmp t777
 13:	
 
 ferror$3:	; function end ferror
@@ -2553,16 +2553,16 @@ perror$1:	; parameter string_25s3A2025s2E0A#, offset 6
 6:	
 
 perror$2:	; parameter s, offset 8
-7:		mov a772, [bp + 6]
-8:		mov [bp + 16], a772
+7:		mov a778, [bp + 6]
+8:		mov [bp + 16], a778
 10:	
 
 perror$3:	; call header integral zero 0 stack zero 0
 12:	
 
 perror$4:	; parameter errno, offset 16
-13:		mov a773, [errno]
-14:		mov [bp + 24], a773
+13:		mov a779, [errno]
+14:		mov [bp + 24], a779
 16:	
 
 perror$5:	; call function noellipse-noellipse strerror
@@ -2575,11 +2575,11 @@ perror$5:	; call function noellipse-noellipse strerror
 perror$6:	; post call
 24:	
 
-perror$7:	; £temporary1143 = return_value
+perror$7:	; £temporary1177 = return_value
 29:	
 
-perror$8:	; parameter £temporary1143, offset 10
-30:		mov [bp + 18], t775
+perror$8:	; parameter £temporary1177, offset 10
+30:		mov [bp + 18], t781
 32:	
 
 perror$9:	; call function noellipse-ellipse printf, extra 0
@@ -2595,10 +2595,10 @@ perror$10:	; post call
 42:	
 
 perror$11:	; return
-43:		mov t776, [bp]
+43:		mov t782, [bp]
 44:		mov di, [bp + 4]
 45:		mov bp, [bp + 2]
-46:		jmp t776
+46:		jmp t782
 48:	
 
 perror$12:	; function end perror

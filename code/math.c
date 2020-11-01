@@ -4,7 +4,14 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-#define E_INVERSE (1 / E)
+#define LN_10     2.302585092
+#define LN_2      0.6931471805
+#define E_INVERSE 0.3678794412
+
+//#define LN_10 2.3025850929940456840179914
+//#define LN_2 0.6931471805599453094172321
+
+//#define E_INVERSE (1 / E)
 #define EPSILON   1e-9
 
 double exp(double x) {
@@ -63,6 +70,9 @@ double pow(double x, double y) {
   if (x > 0)  {
     return exp(y * log(x));
   }
+  else if ((x == 0) && (y == 0)) {
+    return 1;
+  }
   else if ((x == 0) && (y > 0)) {
     return 0;
   }
@@ -85,8 +95,6 @@ double pow(double x, double y) {
 double ldexp(double x, int n) {
   return x * pow(2, n);
 }
-
-#define LN_2 0.6931471805599453094172321
 
 static log2(double x) {
   return log(x) / LN_2;
@@ -261,8 +269,20 @@ double atan(double x) {
 }
 
 double atan2(double x, double y) {
-  if (y != 0) {
+  if (y > 0) {
     return atan(x / y);
+  }
+  else if ((x >= 0) && (y < 0))  {
+    return PI + atan(x / y);
+  }
+  else if ((x < 0) && (y < 0)) {
+    return (-PI) + atan(x / y);
+  }
+  else if ((x > 0) && (y == 0))  {
+    return PI / 2;
+  }
+  else if ((x < 0) && (y == 0))  {
+    return (-PI) / 2;
   }
   else {
     errno = EDOM;
@@ -283,21 +303,19 @@ double tanh(double x) {
 }
 
 double floor(double x) {
-  if (x >= 0) {
-    return (double) ((long) x);
+  if (x < 0) {
+    return -ceil(-x);
   }
-  else {
-    return -(double) ((long) -x);
-  }
+
+  return (double) ((long) x);
 }
 
 double ceil(double x) {
-  if (x >= 0) {
-    return (double)((long) (x + 0.999999999999));
+  if (x < 0) {
+    return -floor(-x);
   }
-  else {
-    return -(double) ((long) (-x + 0.999999999999));
-  }
+
+  return (double) ((long) (x + 0.999999999999));
 }
 
 double round(double x) {

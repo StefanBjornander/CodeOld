@@ -88,9 +88,6 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
 
 
 
-
-
-
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
 extern double log10 ( double x ) ;
