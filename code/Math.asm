@@ -3593,73 +3593,63 @@ section .text
 	fldz
 
  floor$2:
-	; SignedGreaterThanEqual 12 x 0
+	; SignedLessThan 7 x 0
 	fcompp
 	fstsw ax
 	sahf
-	jbe floor$12
+	ja floor$7
 
  floor$3:
-	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- floor$4:
 	; PushFloat x
 	fld qword [rbp + 24]
 
+ floor$4:
+	; FloatingToIntegral £temporary650 x
+	fistp qword [container8bytes#]
+	mov rax, [container8bytes#]
+
  floor$5:
-	; UnarySubtract £temporary650 x
-	fchs
+	; IntegralToFloating £temporary651 £temporary650
+	mov [container8bytes#], rax
+	fild qword [container8bytes#]
 
  floor$6:
-	; Parameter double £temporary650 56
-	fstp qword [rbp + 56]
-
- floor$7:
-	; Call ceil 32 0
-	mov qword [rbp + 32], floor$8
-	mov [rbp + 40], rbp
-	add rbp, 32
-	jmp ceil
-
- floor$8:
-	; PostCall 32
-
- floor$9:
-	; GetReturnValue £temporary651
-
- floor$10:
-	; UnarySubtract £temporary652 £temporary651
-	fchs
-
- floor$11:
-	; Return £temporary652
+	; Return £temporary651
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- floor$12:
+ floor$7:
 	; PushFloat x
 	fld qword [rbp + 24]
 
- floor$13:
-	; FloatingToIntegral £temporary653 x
+ floor$8:
+	; UnarySubtract £temporary652 x
+	fchs
+
+ floor$9:
+	; FloatingToIntegral £temporary653 £temporary652
 	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
- floor$14:
+ floor$10:
 	; IntegralToFloating £temporary654 £temporary653
 	mov [container8bytes#], rax
 	fild qword [container8bytes#]
 
- floor$15:
-	; Return £temporary654
+ floor$11:
+	; UnarySubtract £temporary655 £temporary654
+	fchs
+
+ floor$12:
+	; Return £temporary655
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- floor$16:
+ floor$13:
 	; FunctionEnd floor
 
 section .data
@@ -3679,81 +3669,79 @@ section .text
 	fldz
 
  ceil$2:
-	; SignedGreaterThanEqual 12 x 0
+	; SignedLessThan 9 x 0
 	fcompp
 	fstsw ax
 	sahf
-	jbe ceil$12
+	ja ceil$9
 
  ceil$3:
-	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- ceil$4:
 	; PushFloat x
 	fld qword [rbp + 24]
 
+ ceil$4:
+	; PushFloat 0.999999999999
+	fld qword [float8$0.999999999999#]
+
  ceil$5:
-	; UnarySubtract £temporary657 x
-	fchs
+	; BinaryAdd £temporary657 x 0.999999999999
+	fadd
 
  ceil$6:
-	; Parameter double £temporary657 56
-	fstp qword [rbp + 56]
+	; FloatingToIntegral £temporary658 £temporary657
+	fistp qword [container8bytes#]
+	mov rax, [container8bytes#]
 
  ceil$7:
-	; Call floor 32 0
-	mov qword [rbp + 32], ceil$8
-	mov [rbp + 40], rbp
-	add rbp, 32
-	jmp floor
+	; IntegralToFloating £temporary659 £temporary658
+	mov [container8bytes#], rax
+	fild qword [container8bytes#]
 
  ceil$8:
-	; PostCall 32
-
- ceil$9:
-	; GetReturnValue £temporary658
-
- ceil$10:
-	; UnarySubtract £temporary659 £temporary658
-	fchs
-
- ceil$11:
 	; Return £temporary659
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- ceil$12:
+ ceil$9:
 	; PushFloat x
 	fld qword [rbp + 24]
 
- ceil$13:
+ ceil$10:
+	; UnarySubtract £temporary660 x
+	fchs
+
+ ceil$11:
 	; PushFloat 0.999999999999
 	fld qword [float8$0.999999999999#]
 
- ceil$14:
-	; BinaryAdd £temporary660 x 0.999999999999
+ ceil$12:
+	; BinaryAdd £temporary661 £temporary660 0.999999999999
 	fadd
 
- ceil$15:
-	; FloatingToIntegral £temporary661 £temporary660
+ ceil$13:
+	; FloatingToIntegral £temporary662 £temporary661
 	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
- ceil$16:
-	; IntegralToFloating £temporary662 £temporary661
+ ceil$14:
+	; IntegralToFloating £temporary663 £temporary662
 	mov [container8bytes#], rax
 	fild qword [container8bytes#]
 
- ceil$17:
-	; Return £temporary662
+ ceil$15:
+	; UnarySubtract £temporary664 £temporary663
+	fchs
+
+ ceil$16:
+	; Return £temporary664
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- ceil$18:
+ ceil$17:
 	; FunctionEnd ceil
 
 section .text
@@ -3782,7 +3770,7 @@ section .text
 	fld qword [float8$0.5#]
 
  round$5:
-	; BinarySubtract £temporary665 x 0.5
+	; BinarySubtract £temporary666 x 0.5
 	fsub
 
  round$6:
@@ -3801,21 +3789,21 @@ section .text
 	fld qword [float8$0.5#]
 
  round$10:
-	; BinaryAdd £temporary666 x 0.5
+	; BinaryAdd £temporary667 x 0.5
 	fadd
 
  round$11:
-	; FloatingToIntegral £temporary668 £temporary667
+	; FloatingToIntegral £temporary669 £temporary668
 	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
  round$12:
-	; IntegralToFloating £temporary669 £temporary668
+	; IntegralToFloating £temporary670 £temporary669
 	mov [container8bytes#], rax
 	fild qword [container8bytes#]
 
  round$13:
-	; Return £temporary669
+	; Return £temporary670
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -3846,7 +3834,7 @@ section .text
 	fld qword [rbp + 24]
 
  fabs$4:
-	; UnarySubtract £temporary671 x
+	; UnarySubtract £temporary672 x
 	fchs
 
  fabs$5:
@@ -3861,7 +3849,7 @@ section .text
 	fld qword [rbp + 24]
 
  fabs$8:
-	; Return £temporary672
+	; Return £temporary673
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]

@@ -283,19 +283,21 @@ double tanh(double x) {
 }
 
 double floor(double x) {
-  if (x < 0) {
-    return -ceil(-x);
+  if (x >= 0) {
+    return (double) ((long) x);
   }
-
-  return (double) ((long) x);
+  else {
+    return -(double) ((long) -x);
+  }
 }
 
 double ceil(double x) {
-  if (x < 0) {
-    return -floor(-x);
+  if (x >= 0) {
+    return (double)((long) (x + 0.999999999999));
   }
-
-  return (double) ((long) (x + 0.999999999999));
+  else {
+    return -(double) ((long) (-x + 0.999999999999));
+  }
 }
 
 double round(double x) {

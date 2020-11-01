@@ -31,7 +31,7 @@ section .text
 	mov qword [rbp + 48], string_25i20#
 
  stack_test$3:
-	; Assign £temporary3722 i
+	; Assign £temporary3723 i
 	mov eax, [@8664$i]
 
  stack_test$4:
@@ -39,7 +39,7 @@ section .text
 	inc dword [@8664$i]
 
  stack_test$5:
-	; Parameter signedint £temporary3722 56
+	; Parameter signedint £temporary3723 56
 	mov [rbp + 56], eax
 
  stack_test$6:
@@ -107,10 +107,10 @@ section .text
 	; PostCall 36
 
  heap_test$5:
-	; GetReturnValue £temporary3725
+	; GetReturnValue £temporary3726
 
  heap_test$6:
-	; Assign pointer £temporary3725
+	; Assign pointer £temporary3726
 	mov [rbp + 28], rbx
 
  heap_test$7:
@@ -126,7 +126,7 @@ section .text
 	mov qword [rbp + 60], string_102420bytes2Dblock20number3A2025i0A#
 
  heap_test$10:
-	; Assign £temporary3727 count
+	; Assign £temporary3728 count
 	mov eax, [rbp + 24]
 
  heap_test$11:
@@ -134,7 +134,7 @@ section .text
 	inc dword [rbp + 24]
 
  heap_test$12:
-	; Parameter signedint £temporary3727 68
+	; Parameter signedint £temporary3728 68
 	mov [rbp + 68], eax
 
  heap_test$13:
