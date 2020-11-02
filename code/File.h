@@ -5,7 +5,6 @@
 #define FILENAME_MAX 16
 
 #define fpos_t int
-//#define CARRY_FLAG 0x01us
 #define EOF -1
 
 typedef unsigned int UINT;
@@ -21,23 +20,23 @@ typedef struct {
 
 extern FILE *stdin, *stdout, *stderr;
 
-extern enum {EEXIST, ENOENT, EACCES};
-extern enum {SEEK_SET, SEEK_CUR, SEEK_END};
-extern enum {READ, WRITE, READ_WRITE};
+extern enum { EEXIST, ENOENT, EACCES };
+extern enum { SEEK_SET, SEEK_CUR, SEEK_END };
+extern enum { READ, WRITE, READ_WRITE };
 
 #ifdef __LINUX__
-  #define O_RDONLY    0x0000L      /* open for reading only */
-  #define O_WRONLY    0x0001L      /* open for writing only */
-  #define O_CREAT     0x0200L      /* create if nonexistant */
-  #define O_TRUNC     0x0400L      /* truncate to zero length */
+#define O_RDONLY    0x0000L      /* open for reading only */
+#define O_WRONLY    0x0001L      /* open for writing only */
+#define O_CREAT     0x0200L      /* create if nonexistant */
+#define O_TRUNC     0x0400L      /* truncate to zero length */
 
-  #define FILE_DESC_STDOUT 1
+#define FILE_DESC_STDOUT 1
 
-  #define SYS_EXIT 1
-  #define SYS_READ 3
-  #define SYS_WRITE 4
-  #define SYS_OPEN 5
-  #define SYS_CLOSE 6
+#define SYS_EXIT 1
+#define SYS_READ 3
+#define SYS_WRITE 4
+#define SYS_OPEN 5
+#define SYS_CLOSE 6
 #endif
 
 #define getc(stream) fgetc(stream)
@@ -71,6 +70,5 @@ void clearerr(FILE* stream);
 BOOL feof(FILE* stream);
 int ferror(FILE* stream);
 void perror(const char* s);
-
 
 #endif

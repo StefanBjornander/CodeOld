@@ -1,8 +1,8 @@
-#include <errno.h>
+#include <ErrNo.h>
 #include <stdio.h>
 #include <stddef.h>
-#include <string.h>
-#include <locale.h>
+#include <String.h>
+#include <Locale.h>
 
 char* strcpy(char* target, const char* source) {
   size_t index;
@@ -73,6 +73,8 @@ int strcmp(const char* left, const char* right) {
       return 1;
     }
   }
+
+  //return 0;
 }
 
 int strncmp(const char* left, const char* right, size_t size) {
@@ -183,6 +185,14 @@ size_t strlen(const char* string) {
 
   return index;
 }
+/*
+static char* g_defaultMessageList[] = {"no error", "function number invalid",
+                                       "file not found", "path not found", "no handle available", "access denied",
+                                       "out of domain", "out of range","invalid multibyte sequence",
+                                       "error while opening", "error while flushing", "error while closing",
+                                       "error while writing", "error while reading", "error while seeking",
+                                       "error while telling", "error while removing file", "error while renaming file"};
+*/
 
 extern char* enMessageList[];
 
@@ -191,6 +201,48 @@ char* strerror(int errno) {
   char** messageList = (localeConvPtr != NULL) ? localeConvPtr->messageList : NULL;
   messageList = (messageList != NULL) ? messageList : enMessageList;
   return messageList[errno];
+
+/*
+  switch (error) {
+    case EDOM:
+      return "out of domain";
+
+    case ERANGE:
+      return "out of range";
+
+    case EILSEQ:
+      return "invalid multibyte sequence";
+
+    case FOPEN:
+      return "error while opening";
+
+    case FFLUSH:
+      return "error while flushing";
+
+    case FCLOSE:
+      return "error while closing";
+
+    case FWRITE:
+      return "error while writing";
+
+    case FREAD:
+      return "error while reading";
+
+    case FSEEK:
+      return "error while seeking";
+
+    case FTELL:
+      return "error while telling";
+
+    case FREMOVE:
+      return "error while removing file";
+
+    case FRENAME:
+      return "error while renaming file";
+
+    default:
+      return "no error";
+  }*/
 }
 
 char* token = NULL;

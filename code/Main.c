@@ -159,12 +159,12 @@ void mainY() {
   setjmp_test(0);
 }
 
-/*void main() {
+/*void mainX() {
   static count = 1;
 
   if (count <= 10) {
     printf("%d ", count++);
-    main();
+    mainX();
   }
 }*/
 
@@ -189,7 +189,9 @@ void mainX(int argc, char* argv[]) {
 }
 
 void main(int argc, char* argv[]) {
-  main_math();
+  //printf("%f\n", tan(PI / 2));
+  printf("%f\n", tan(-PI / 2));
+  //main_math();
 }
 
 void mainX2(int argc, char* argv[]) {

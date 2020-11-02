@@ -39,7 +39,48 @@ int putchar(int i) {
   return 1;
 }
 
+//----------------------------------------------------------------------------------------------------------------------
+/*
 void printChar(char c) {
+  int handle;
+  char* outString;
+
+  FILE* stream = (FILE*) g_outDevice;
+  handle = stream->handle;
+
+  load_register(register_ah, 0x40);
+  load_register(register_bx, handle);
+  load_register(register_cx, 1);
+  load_register(register_dx, &c);
+  interrupt(0x21s);
+  ++g_outChars;
+}
+
+void printChar(char c) {
+  FILE* stream = (FILE*) g_outDevice;
+  int handle = stream->handle;
+
+  load_register(register_ah, 0x40s);
+  load_register(register_bx, handle);
+  load_register(register_cx, 1);
+  load_register(register_dx, &c);
+  interrupt(0x21s);
+}
+*/
+
+/*_start: mov rax, 1
+          mov rdi, 1
+          mov rsi, text
+          mov rdx, 2
+          syscall*/
+
+void printChar(char c) {
+  /*load_register(register_ah, 0x40s);
+  load_register(register_bx, 1);
+  load_register(register_cx, 1);
+  load_register(register_dx, &c);
+  interrupt(0x21s);*/
+
   int handle;
   char* outString;
 
@@ -51,6 +92,10 @@ void printChar(char c) {
         register_bx = stream->handle;
         register_cx = 1;
         register_dx = &c;
+        /*load_register(register_ah, 0x40s);
+        load_register(register_bx, handle);
+        load_register(register_cx, 1);
+        load_register(register_dx, &c);*/
         interrupt(0x21s);
 #endif
 
@@ -102,6 +147,48 @@ void printString(char* s, int precision) {
   }
 }
 
+//----------------------------------------------------------------------------------------------------------------------
+
+/*
+void printIntRec(int intValue) {
+  if (intValue != 0) {
+    //printChar('A');
+    int digit = intValue % 10s;
+    //printChar('B');
+    printIntRec(intValue / 10s);
+    //printChar('C');
+    printChar(digit + '0');
+    //printChar('D');
+  }
+}
+
+void printInt(int intValue, BOOL plus, BOOL space) {
+  //printChar('U');
+
+  if (intValue < 0l) {
+    printChar('-');
+    intValue = -intValue;
+  }
+  else if (plus) {
+    printChar('+');
+  }
+  else if (space) {
+    printChar(' ');
+  }
+
+  if (intValue == 0l) {
+    printChar('0');
+  }
+  else {
+    //printChar('S');
+    printIntRec(intValue);
+    //printChar('T');
+  }
+
+  //printChar('V');
+}
+*/
+
 void printLongIntRec(long longValue) {
   if (longValue != 0) {
     int digit = (int) (longValue % 10L);
@@ -124,12 +211,15 @@ void printLongInt(long longValue, BOOL plus, BOOL space) {
   }
 
   if (longValue == 0L) {
+    //printf("zero");
     printChar('0');
   }
   else {
     printLongIntRec(longValue);
   }
 }
+
+//----------------------------------------------------------------------------------------------------------------------
 
 char digitToChar(int digit, BOOL capital) {
   if (digit < 10) {
@@ -143,8 +233,7 @@ char digitToChar(int digit, BOOL capital) {
   }
 }
 
-void printUnsignedLongRec(unsigned long unsignedValue,
-                          unsigned long base, BOOL capital) {
+void printUnsignedLongRec(unsigned long unsignedValue, unsigned long base, BOOL capital) {
   if (unsignedValue > 0ul) {
     int digit = (int) (unsignedValue % base);
     printUnsignedLongRec(unsignedValue / base, base, capital);
@@ -155,14 +244,17 @@ void printUnsignedLongRec(unsigned long unsignedValue,
 
 void printUnsignedLong(unsigned long unsignedValue, BOOL plus, BOOL space,
                        BOOL grid, unsigned long base, BOOL capital) {
+  //printChar('1');
   if (plus) {
     printChar('+');
   }
   
+  //printChar('2');
   if (space) {
     printChar(' ');
   }
 
+  //printChar('3');
   if (grid) {
     if (base == 8ul) {
       printChar('0');
@@ -170,20 +262,25 @@ void printUnsignedLong(unsigned long unsignedValue, BOOL plus, BOOL space,
 
     if (base == 16ul) {
       printChar('0');
+      //printChar('x');
       printChar(capital ? 'X' : 'x');
     }
   }
 
+  //printChar('4');
   if (unsignedValue == 0ul) {
     printChar('0');
   }
   else {
+    //printChar('5');
     printUnsignedLongRec(unsignedValue, base, capital);
+    //printChar('6');
   }
 }
 
-void printLongDoubleFraction(long double longDoubleValue,
-                             BOOL grid, int precision) {
+//----------------------------------------------------------------------------------------------------------------------
+
+void printLongDoubleFraction(long double longDoubleValue, BOOL grid, int precision) {
   longDoubleValue -= (long) longDoubleValue;
 
   if (precision == 0) {
@@ -202,8 +299,7 @@ void printLongDoubleFraction(long double longDoubleValue,
   }
 }
 
-void printLongDoublePlain(long double longDoubleValue, BOOL plus,
-                          BOOL space, BOOL grid, int precision) {
+void printLongDoublePlain(long double longDoubleValue, BOOL plus, BOOL space, BOOL grid, int precision) {
   if (longDoubleValue < 0.0L) {
     printChar('Z');
     printChar('-');
@@ -218,12 +314,15 @@ void printLongDoublePlain(long double longDoubleValue, BOOL plus,
   printLongDoubleFraction(longDoubleValue, grid, precision);
 }
 
+//----------------------------------------------------------------------------------------------------------------------
+
 void printLongDoubleExpo(long double value, BOOL plus, BOOL space,
                          BOOL grid, int precision, BOOL capital) {
   if (value == 0.0L) {
     printChar('0');
     printLongDoubleFraction(0.0L, precision, grid);
     printChar(capital ? 'E' : 'e');
+    //printChar('e');
     printChar('0');
   }
   else {
@@ -237,12 +336,54 @@ void printLongDoubleExpo(long double value, BOOL plus, BOOL space,
 
     printLongDoublePlain(value, plus, space, grid, precision);
     printChar(capital ? 'E' : 'e');
+    //printChar('e');
+    //printChar('e');
     printLongInt(expo, TRUE, FALSE);
   }
 }
 
-va_list checkWidthAndPrecision(va_list arg_list, int* widthPtr,
-                               int* precisionPtr) {
+/*void printLongDoubleExpoX(long double longDoubleValue, BOOL plus, BOOL space,
+                          BOOL grid, int precision, BOOL capital) {
+  double logValue;
+
+  if (longDoubleValue < 0.0L) {
+    printChar('-');
+    longDoubleValue = -longDoubleValue;
+  }
+
+  if (longDoubleValue == 0.0L) {
+    printChar('0');
+    printLongDoubleFraction(0.0L, precision, grid);
+
+    printChar(capital ? 'E' : 'e');
+    printChar('0');
+  }
+  else if (longDoubleValue >= 1.0L) {
+    double x = 1.001 * log10((double) longDoubleValue);
+    logValue = (double)((int)x);
+    longDoubleValue /= pow(10.0, logValue);
+
+    printChar((char) (longDoubleValue + '0'));
+    printLongDoubleFraction(longDoubleValue, precision, grid);
+
+    printChar(capital ? 'E' : 'e');
+    printLongInt((long) logValue, TRUE, FALSE);
+  }
+  else { // 0.005 => 5 * 10^-3
+    logValue = floor(0.999 * log10((double)longDoubleValue));
+    longDoubleValue /= pow(10.0, logValue);
+
+    printChar((char) (longDoubleValue + '0'));
+    printLongDoubleFraction(longDoubleValue, precision, grid);
+
+    printChar(capital ? 'E' : 'e');
+    printLongInt((long) logValue, TRUE, FALSE);
+  }
+}*/
+
+//----------------------------------------------------------------------------------------------------------------------
+
+va_list checkWidthAndPrecision(va_list arg_list, int* widthPtr, int* precisionPtr) {
   if ((widthPtr != NULL) && (*widthPtr == -1)) {
     *widthPtr = va_arg(arg_list, int);
   }
@@ -254,12 +395,28 @@ va_list checkWidthAndPrecision(va_list arg_list, int* widthPtr,
   return arg_list;
 }
 
+void testY() {
+//  int i = 1;
+}
+
+void testX() {
+  int i, j;
+
+  if (j == 1) {
+    i = 1;
+  }
+  else {
+    i = 2;
+  }
+
+  j = i;
+}
+
 va_list printArgument(char* format, va_list arg_list, BOOL plus, BOOL space,
                       BOOL grid, int* widthPtr, int precision, BOOL shortInt,
-                      BOOL longInt, BOOL longDouble, BOOL sign,
-                      BOOL* negativePtr) {
+                      BOOL longInt, BOOL longDouble, BOOL sign, BOOL* negativePtr) {
   char c = format[0], charValue;
-  int *intPtr;
+  int /*logValue, */ *intPtr;
   long double longDoubleValue;
   void* ptrValue;
 
@@ -276,10 +433,37 @@ va_list printArgument(char* format, va_list arg_list, BOOL plus, BOOL space,
         }
         else {
           longValue = (long) va_arg(arg_list, int);
+          /*printChar('<');
+          printLongInt(longValue, FALSE, FALSE);
+          printChar('>');*/
         }
 
         if (negativePtr != NULL) {
+          /*printChar('A');
+          printUnsignedLong((unsigned long) negativePtr, FALSE, FALSE, FALSE, 10, FALSE);
+          printChar('\n');
+
+          printChar('B');
+          printUnsignedLong((unsigned long) &longValue, FALSE, FALSE, FALSE, 10, FALSE);
+          printChar('\n');
+
+          printChar('C');
+          printLongInt(longValue, FALSE, FALSE);
+          printChar('\n');*/
+
           *negativePtr = (longValue < 0);
+
+          /*printChar('D');
+          printLongInt(longValue, FALSE, FALSE);
+          printChar('\n');
+
+          printChar('E');
+          printUnsignedLong((unsigned long) &longValue, FALSE, FALSE, FALSE, 10, FALSE);
+          printChar('\n');
+
+          printChar('F');
+          printUnsignedLong((unsigned long) negativePtr, FALSE, FALSE, FALSE, 10, FALSE);
+          printChar('\n');*/
         }
 
         if (!sign) {
@@ -309,13 +493,11 @@ va_list printArgument(char* format, va_list arg_list, BOOL plus, BOOL space,
     case 'b':
     case 'x':
     case 'X': {
-        unsigned long base = ((c == 'u') ? 10ul : ((c == 'o') ? 8ul :
-                                                  ((c == 'b') ? 2ul : 16ul)));
+        unsigned long base = ((c == 'u') ? 10ul : ((c == 'o') ? 8ul : ((c == 'b') ? 2ul : 16ul)));
         unsigned long value;
 
         if (shortInt) {
-          value = (unsigned long) (unsigned short)
-                  va_arg(arg_list, unsigned int);
+          value = (unsigned long) (unsigned short) va_arg(arg_list, unsigned int);
         }
         else if (longInt) {
           value = va_arg(arg_list, unsigned long);
@@ -356,18 +538,16 @@ va_list printArgument(char* format, va_list arg_list, BOOL plus, BOOL space,
         printLongDoublePlain(longDoubleValue, plus, space, grid, precision);
       }
       else if (tolower(c) == 'e') {
-        printLongDoubleExpo(longDoubleValue, plus, space,
-                            grid, precision, isupper(c));
+        printLongDoubleExpo(longDoubleValue, plus, space, grid, precision, isupper(c));
       }
       else {
-        int expo = (int) log10(fabs(longDoubleValue));
+        int expo = (int) log10(fabs(longDoubleValue)); // log10_int
 
         if ((expo >= -3) && (expo <= 2)) {
           printLongDoublePlain(longDoubleValue, plus, space, grid, precision);
         }
         else {
-          printLongDoubleExpo(longDoubleValue, plus, space,
-                              grid, precision, isupper(c));
+          printLongDoubleExpo(longDoubleValue, plus, space, grid, precision, isupper(c));
         }
       }
       break;
@@ -375,8 +555,7 @@ va_list printArgument(char* format, va_list arg_list, BOOL plus, BOOL space,
     case 'p':
       ptrValue = va_arg(arg_list, void*);
       arg_list = checkWidthAndPrecision(arg_list, widthPtr, &precision);
-      printUnsignedLong((unsigned long) ptrValue, FALSE,
-                        FALSE, FALSE, 10u, FALSE);
+      printUnsignedLong((unsigned long) ptrValue, FALSE, FALSE, FALSE, 10u, FALSE);
       break;
 
     case 'n':
@@ -395,8 +574,18 @@ va_list printArgument(char* format, va_list arg_list, BOOL plus, BOOL space,
   return arg_list;
 }
 
+/*int printFormat2(char* format, va_list arg_list) {
+  int index;
+
+  for (index = 0; format[index] != '\0'; ++index) {
+    printChar(format[index]);
+  }
+
+  return index;
+}*/
+
 int printFormat(char* format, va_list arg_list) {
-  int index, width = 0, precision = 0;
+  int index, /*count = 0,*/ width = 0, precision = 0;
   BOOL percent = FALSE, plus = FALSE, minus = FALSE, space = FALSE,
        zero = FALSE, grid = FALSE, widthStar = FALSE,
        period = FALSE, precisionStar = FALSE,
@@ -472,11 +661,10 @@ int printFormat(char* format, va_list arg_list) {
         case '%': {
             if (minus) {
               int startChars = g_outChars;
-              arg_list = printArgument(&format[index], arg_list, plus, space,
-                                       grid, &width, precision, shortInt,
-                                       longInt, longDouble, TRUE, NULL);
+              arg_list = printArgument(&format[index], arg_list, plus, space, grid, &width,
+                                       precision, shortInt, longInt, longDouble, TRUE, NULL);
 
-              int field = g_outChars - startChars;
+              int field = g_outChars - startChars; // fill after
 
               while (field++ < width) {
                 printChar(' ');
@@ -486,14 +674,41 @@ int printFormat(char* format, va_list arg_list) {
               int startChars = g_outChars, oldOutStatus = g_outStatus;
               BOOL negative = FALSE;
             
+              /*printChar('X');
+              printUnsignedLong((unsigned long) &negative, FALSE, FALSE, FALSE, 10, FALSE);
+              printChar(' ');*/
+
               g_outStatus = BLANK;
-              printArgument(&format[index], arg_list, FALSE, FALSE, grid,
-                            &width, precision, shortInt, longInt,
-                            longDouble, FALSE, &negative);
+              printArgument(&format[index], arg_list, FALSE, FALSE, grid, &width,
+                            precision, shortInt, longInt, longDouble, FALSE, &negative);
               g_outStatus = oldOutStatus;
 
               int field = g_outChars - startChars;
               g_outChars = startChars;
+
+              /*printChar('X');
+              printLongInt(g_outChars, FALSE, FALSE);
+              printChar(' ');
+
+              printChar('Y');
+              printLongInt(startChars, FALSE, FALSE);
+              printChar(' ');
+
+              printChar('F');
+              printChar('i');
+              printChar('e');
+              printChar('l');
+              printChar('d');
+              printLongInt(field, FALSE, FALSE);
+              printChar(' ');
+
+              printChar('W');
+              printChar('i');
+              printChar('d');
+              printChar('t');
+              printChar('h');
+              printLongInt(width, FALSE, FALSE);
+              printChar(' ');*/
 
               if (negative) {               
                 printChar('X');
@@ -513,17 +728,18 @@ int printFormat(char* format, va_list arg_list) {
                 printChar('0');
               }
 
-              arg_list = printArgument(&format[index], arg_list, FALSE, FALSE,
-                                       grid, NULL, precision, shortInt,
-                                       longInt, longDouble, FALSE, NULL);
+              arg_list = printArgument(&format[index], arg_list, FALSE, FALSE, grid, NULL,
+                                       precision, shortInt, longInt, longDouble, FALSE, NULL);
             }
             else {
               int startChars = g_outChars, oldOutStatus = g_outStatus;
 
+              //char charX = va_arg(arg_list, char);
+              //printChar(charX);
+
               g_outStatus = BLANK;
-              printArgument(&format[index], arg_list, plus, space, grid,
-                            &width, precision, shortInt, longInt,
-                            longDouble, TRUE, NULL);              
+              printArgument(&format[index], arg_list, plus, space, grid, &width,
+                            precision, shortInt, longInt, longDouble, TRUE, NULL);              
               g_outStatus = oldOutStatus;
 
               int field = g_outChars - startChars;
@@ -533,9 +749,11 @@ int printFormat(char* format, va_list arg_list) {
                 printChar(' ');
               }
 
-              arg_list = printArgument(&format[index], arg_list, plus, space,
-                                       grid, NULL, precision, shortInt,
-                                       longInt, longDouble, TRUE, NULL);
+              //c = va_arg(arg_list, char);
+              //printChar(c);
+
+              arg_list = printArgument(&format[index], arg_list, plus, space, grid, NULL,
+                                       precision, shortInt, longInt, longDouble, TRUE, NULL);
             }
 
             percent = FALSE;
@@ -545,6 +763,10 @@ int printFormat(char* format, va_list arg_list) {
         default: {
             int value = 0;
             while (isdigit(c)) {
+              /*printChar('\'');
+              printChar(c);
+              printChar('\'');*/
+
               value = (10 * value) + (c - '0');
               c = format[++index];
             }
@@ -552,6 +774,10 @@ int printFormat(char* format, va_list arg_list) {
             
             if (!period) {
               width = value;
+
+              /*printChar('<');
+              printLongInt(width, FALSE, FALSE);
+              printChar('>');*/
             }
             else {
               precision = value;
@@ -590,6 +816,12 @@ int printFormat(char* format, va_list arg_list) {
 
   return g_outChars;
 }
+
+/*int printf2(char* format) {
+  va_list arg_list;
+  va_start(arg_list, format);
+  return vprintf(format, arg_list);
+}*/
 
 int printf(char* format, ...) {
   va_list arg_list;

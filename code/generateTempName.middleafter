@@ -1,19 +1,19 @@
 0: SignedGreaterThanEqual 54 size 5
 1: Assign c 97
 2: SignedGreaterThan 54 c 122
-3: BinaryAdd £temporary930 name size
-4: Dereference £temporary928 -> £temporary930 £temporary930 0
-5: Assign £temporary928 -> £temporary930 c
-6: BinaryAdd £temporary931 size 1
-7: BinaryAdd £temporary934 name £temporary931
-8: Dereference £temporary932 -> £temporary934 £temporary934 0
-9: Assign £temporary932 -> £temporary934 0
+3: BinaryAdd £temporary917 name size
+4: Dereference £temporary915 -> £temporary917 £temporary917 0
+5: Assign £temporary915 -> £temporary917 c
+6: BinaryAdd £temporary918 size 1
+7: BinaryAdd £temporary921 name £temporary918
+8: Dereference £temporary919 -> £temporary921 £temporary921 0
+9: Assign £temporary919 -> £temporary921 0
 10: PreCall 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 11: Parameter pointer name 19
 12: Call fileexists 13 0
 13: PostCall 13
-14: GetReturnValue £temporary935
-15: NotEqual 41 £temporary935 0
+14: GetReturnValue £temporary922
+15: NotEqual 41 £temporary922 0
 16: Case 20 status 0
 17: Case 21 status 1
 18: CaseEnd status
@@ -23,31 +23,31 @@
 22: Parameter pointer name 19
 23: Call existsTempName 13 0
 24: PostCall 13
-25: GetReturnValue £temporary938
-26: NotEqual 41 £temporary938 0
+25: GetReturnValue £temporary925
+26: NotEqual 41 £temporary925 0
 27: PreCall 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-28: UnsignedMultiply £temporary942 g_tempSize 4
-29: BinaryAdd £temporary943 g_tempArray £temporary942
-30: Dereference £temporary941 -> £temporary943 £temporary943 0
-31: Parameter pointer £temporary941 -> £temporary943 19
+28: UnsignedMultiply £temporary929 g_tempSize 4
+29: BinaryAdd £temporary930 g_tempArray £temporary929
+30: Dereference £temporary928 -> £temporary930 £temporary930 0
+31: Parameter pointer £temporary928 -> £temporary930 19
 32: Parameter pointer name 21
 33: Call strcpy 13 0
 34: PostCall 13
-35: Assign £temporary945 g_tempSize
+35: Assign £temporary932 g_tempSize
 36: BinaryAdd g_tempSize g_tempSize 1
-37: UnsignedMultiply £temporary947 £temporary945 4
-38: BinaryAdd £temporary948 g_tempArray £temporary947
-39: Dereference £temporary946 -> £temporary948 £temporary948 0
-40: Return £temporary946 -> £temporary948
+37: UnsignedMultiply £temporary934 £temporary932 4
+38: BinaryAdd £temporary935 g_tempArray £temporary934
+39: Dereference £temporary933 -> £temporary935 £temporary935 0
+40: Return £temporary933 -> £temporary935
 41: PreCall 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 42: Parameter pointer name 19
-43: BinaryAdd £temporary949 size 1
-44: Parameter signedint £temporary949 21
+43: BinaryAdd £temporary936 size 1
+44: Parameter signedint £temporary936 21
 45: Parameter signedint status 23
 46: Call generateTempName 13 0
 47: PostCall 13
-48: GetReturnValue £temporary950
-49: Assign result £temporary950
+48: GetReturnValue £temporary937
+49: Assign result £temporary937
 50: Equal 52 result 0
 51: Return result
 52: BinaryAdd c c 1

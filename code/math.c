@@ -1,17 +1,9 @@
 #include <math.h>
 #include <errno.h>
-#include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
 
-#define LN_10     2.302585092
-#define LN_2      0.6931471805
-#define E_INVERSE 0.3678794412
-
-//#define LN_10 2.3025850929940456840179914
-//#define LN_2 0.6931471805599453094172321
-
-//#define E_INVERSE (1 / E)
+#define E_INVERSE (1 / E)
 #define EPSILON   1e-9
 
 double exp(double x) {
@@ -53,7 +45,7 @@ double log(double x) {
       power *= x_minus_1;
       sign *= -1.0;
     } while (fabs(term) >= EPSILON);
-    
+
     return sum + n;
   }
   else {
@@ -61,6 +53,8 @@ double log(double x) {
     return 0;
   }
 }
+
+#define LN_10 2.3025850929940456840179914
 
 double log10(double x) {
   return log(x) / LN_10;
@@ -95,6 +89,8 @@ double pow(double x, double y) {
 double ldexp(double x, int n) {
   return x * pow(2, n);
 }
+
+#define LN_2 0.6931471805599453094172321
 
 static log2(double x) {
   return log(x) / LN_2;
@@ -200,10 +196,10 @@ double cos(double x) {
 }
 
 double tan(double x) {
-  double cos_x = cos(x);
+  double cos_of_x = cos(x);
 
-  if (cos_x != 0) {
-    return (sin(x) / cos_x);
+  if (cos_of_x != 0) {
+    return (sin(x) / cos_of_x);
   }
   else {
     errno = EDOM;

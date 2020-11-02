@@ -3,16 +3,16 @@
 int setjmp(jmp_buf buf) {
 #ifdef __WINDOWS__
   int* bp_pointer = register_bp;
-  buf[0] = bp_pointer[0];
-  buf[1] = bp_pointer[1];
-  buf[2] = bp_pointer[2];
+  buf[0] = bp_pointer[0]; // return address
+  buf[1] = bp_pointer[1]; // normal stack 
+  buf[2] = bp_pointer[2]; // ellipse stack 
 #endif
 
 #ifdef __LINUX__
   long int* rbp_pointer = register_rbp;
-  buf[0] = rbp_pointer[0];
-  buf[1] = rbp_pointer[1];
-  buf[2] = rbp_pointer[2];
+  buf[0] = rbp_pointer[0]; // return address
+  buf[1] = rbp_pointer[1]; // normal stack 
+  buf[2] = rbp_pointer[2]; // ellipse stack 
 #endif
   return 0;
 }
@@ -20,17 +20,17 @@ int setjmp(jmp_buf buf) {
 void longjmp(jmp_buf buf, int return_value) {
 #ifdef __WINDOWS__
   register_bx = return_value;
-  register_cx = buf[0];
-  register_di = buf[2];
-  register_bp = buf[1];
+  register_cx = buf[0]; // return address
+  register_di = buf[2]; // ellipse stack
+  register_bp = buf[1]; // normal stack
   jump_register(register_cx);
 #endif
 
 #ifdef __LINUX__
   register_ebx = return_value;
-  register_rcx = buf[0];
-  register_rdi = buf[2];
-  register_rbp = buf[1];
+  register_rcx = buf[0]; // return address
+  register_rdi = buf[2]; // ellipse stack
+  register_rbp = buf[1]; // normal stack
   jump_register(register_rcx);
 #endif
 }
