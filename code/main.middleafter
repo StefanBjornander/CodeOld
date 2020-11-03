@@ -1,0 +1,13 @@
+0: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter pointer stderr 48
+2: Parameter pointer "Assertion failed: "%s" in file %s at line %i\n" 56
+3: Parameter pointer "1 > 2" 64
+4: Parameter pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c" 72
+5: Parameter signedint 199 80
+6: Call fprintf 24 20
+7: PostCall 24
+8: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+9: Call abort 24 0
+10: PostCall 24
+11: Return
+12: FunctionEnd main

@@ -47,11 +47,11 @@ section .text
 	fld qword [rbp + 32]
 
  divide$5:
-	; SignedDivide £temporary3061 x y
+	; SignedDivide £temporary3066 x y
 	fdiv
 
  divide$6:
-	; Return £temporary3061
+	; Return £temporary3066
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -69,11 +69,11 @@ section .text
 	mov qword [rbp + 72], buffer
 
  divide$10:
-	; IntegralToIntegral £temporary3062 p
+	; IntegralToIntegral £temporary3067 p
 	mov rax, [rbp + 40]
 
  divide$11:
-	; Parameter signedint £temporary3062 80
+	; Parameter signedint £temporary3067 80
 	mov [rbp + 80], eax
 
  divide$12:
@@ -132,10 +132,10 @@ section .text
 	; PostCall 32
 
  invers$7:
-	; GetReturnValue £temporary3064
+	; GetReturnValue £temporary3069
 
  invers$8:
-	; Return £temporary3064
+	; Return £temporary3069
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -159,136 +159,133 @@ string_p203D203C25s3E203C25u3E0A#:
 section .text
 
  setjmp_test:
-	; Empty
-
- setjmp_test$1:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- setjmp_test$2:
+ setjmp_test$1:
 	; Parameter pointer buffer 64
 	mov qword [rbp + 64], buffer
 
- setjmp_test$3:
+ setjmp_test$2:
 	; Call setjmp 40 0
-	mov qword [rbp + 40], setjmp_test$4
+	mov qword [rbp + 40], setjmp_test$3
 	mov [rbp + 48], rbp
 	add rbp, 40
 	jmp setjmp
 
- setjmp_test$4:
+ setjmp_test$3:
 	; PostCall 40
 
- setjmp_test$5:
-	; GetReturnValue £temporary3067
+ setjmp_test$4:
+	; GetReturnValue £temporary3072
 
- setjmp_test$6:
-	; IntegralToIntegral £temporary3068 £temporary3067
+ setjmp_test$5:
+	; IntegralToIntegral £temporary3073 £temporary3072
 	mov rax, 4294967295
 	and rbx, rax
 
- setjmp_test$7:
-	; Assign p £temporary3068
+ setjmp_test$6:
+	; Assign p £temporary3073
 	mov [rbp + 32], rbx
 
- setjmp_test$8:
-	; NotEqual 23 p 0
+ setjmp_test$7:
+	; NotEqual 22 p 0
 	cmp qword [rbp + 32], 0
-	jne setjmp_test$23
+	jne setjmp_test$22
 
- setjmp_test$9:
+ setjmp_test$8:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- setjmp_test$10:
+ setjmp_test$9:
 	; Parameter pointer "1.0 / %f = %f\n" 64
 	mov qword [rbp + 64], string_12E0202F2025f203D2025f0A#
 
- setjmp_test$11:
+ setjmp_test$10:
 	; PushFloat x
 	fld qword [rbp + 24]
 
- setjmp_test$12:
+ setjmp_test$11:
 	; Parameter double x 72
 	fstp qword [rbp + 72]
 
- setjmp_test$13:
+ setjmp_test$12:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- setjmp_test$14:
+ setjmp_test$13:
 	; PushFloat x
 	fld qword [rbp + 24]
 
- setjmp_test$15:
+ setjmp_test$14:
 	; Parameter double x 104
 	fstp qword [rbp + 104]
 
- setjmp_test$16:
+ setjmp_test$15:
 	; Call invers 80 0
-	mov qword [rbp + 80], setjmp_test$17
+	mov qword [rbp + 80], setjmp_test$16
 	mov [rbp + 88], rbp
 	add rbp, 80
 	jmp invers
 
- setjmp_test$17:
+ setjmp_test$16:
 	; PostCall 80
 
- setjmp_test$18:
-	; GetReturnValue £temporary3070
+ setjmp_test$17:
+	; GetReturnValue £temporary3075
 
- setjmp_test$19:
-	; Parameter double £temporary3070 80
+ setjmp_test$18:
+	; Parameter double £temporary3075 80
 	fstp qword [rbp + 80]
 
- setjmp_test$20:
+ setjmp_test$19:
 	; Call printf 40 16
-	mov qword [rbp + 40], setjmp_test$21
+	mov qword [rbp + 40], setjmp_test$20
 	mov [rbp + 48], rbp
 	add rbp, 40
 	mov rdi, rbp
 	add rdi, 16
 	jmp printf
 
- setjmp_test$21:
+ setjmp_test$20:
 	; PostCall 40
 
- setjmp_test$22:
-	; Goto 29
-	jmp setjmp_test$29
+ setjmp_test$21:
+	; Goto 28
+	jmp setjmp_test$28
 
- setjmp_test$23:
+ setjmp_test$22:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- setjmp_test$24:
+ setjmp_test$23:
 	; Parameter pointer "p = <%s> <%u>\n" 64
 	mov qword [rbp + 64], string_p203D203C25s3E203C25u3E0A#
 
- setjmp_test$25:
+ setjmp_test$24:
 	; Parameter pointer p 72
 	mov rax, [rbp + 32]
 	mov [rbp + 72], rax
 
- setjmp_test$26:
+ setjmp_test$25:
 	; Parameter pointer p 80
 	mov rax, [rbp + 32]
 	mov [rbp + 80], rax
 
- setjmp_test$27:
+ setjmp_test$26:
 	; Call printf 40 16
-	mov qword [rbp + 40], setjmp_test$28
+	mov qword [rbp + 40], setjmp_test$27
 	mov [rbp + 48], rbp
 	add rbp, 40
 	mov rdi, rbp
 	add rdi, 16
 	jmp printf
 
- setjmp_test$28:
+ setjmp_test$27:
 	; PostCall 40
 
- setjmp_test$29:
+ setjmp_test$28:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- setjmp_test$30:
+ setjmp_test$29:
 	; FunctionEnd setjmp_test

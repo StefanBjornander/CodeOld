@@ -50,7 +50,7 @@ string_Sat#:
 
 section .data
 
-@1494$enShortDayList:
+@1498$enShortDayList:
 	; Initializer Pointer string_Sun#
 	dq string_Sun#
 	; Initializer Pointer string_Mon#
@@ -110,7 +110,7 @@ string_Saturday#:
 
 section .data
 
-@1495$enLongDayList:
+@1499$enLongDayList:
 	; Initializer Pointer string_Sunday#
 	dq string_Sunday#
 	; Initializer Pointer string_Monday#
@@ -200,7 +200,7 @@ string_Dec#:
 
 section .data
 
-@1496$enShortMonthList:
+@1500$enShortMonthList:
 	; Initializer Pointer string_Jan#
 	dq string_Jan#
 	; Initializer Pointer string_Feb#
@@ -294,7 +294,7 @@ string_December#:
 
 section .data
 
-@1497$enLongMonthList:
+@1501$enLongMonthList:
 	; Initializer Pointer string_January#
 	dq string_January#
 	; Initializer Pointer string_February#
@@ -498,19 +498,19 @@ string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#:
 
 section .data
 
-@1520$en_US_utf8:
+@1524$en_US_utf8:
 	; Initializer SignedInt -5
 	dd -5
 	; Initializer SignedInt -4
 	dd -4
-	; Initializer Pointer @1494$enShortDayList
-	dq @1494$enShortDayList
-	; Initializer Pointer @1495$enLongDayList
-	dq @1495$enLongDayList
-	; Initializer Pointer @1496$enShortMonthList
-	dq @1496$enShortMonthList
-	; Initializer Pointer @1497$enLongMonthList
-	dq @1497$enLongMonthList
+	; Initializer Pointer @1498$enShortDayList
+	dq @1498$enShortDayList
+	; Initializer Pointer @1499$enLongDayList
+	dq @1499$enLongDayList
+	; Initializer Pointer @1500$enShortMonthList
+	dq @1500$enShortMonthList
+	; Initializer Pointer @1501$enLongMonthList
+	dq @1501$enLongMonthList
 	; Initializer Pointer string_abcdefghijklmnopqrstuvwxyz#
 	dq string_abcdefghijklmnopqrstuvwxyz#
 	; Initializer Pointer string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#
@@ -562,7 +562,7 @@ string_Lor#:
 
 section .data
 
-@1521$swShortDayList:
+@1525$swShortDayList:
 	; Initializer Pointer string_Son#
 	dq string_Son#
 	; Initializer Pointer string_Man#
@@ -622,7 +622,7 @@ string_Lordag#:
 
 section .data
 
-@1522$swLongDayList:
+@1526$swLongDayList:
 	; Initializer Pointer string_Sondag#
 	dq string_Sondag#
 	; Initializer Pointer string_Mandag#
@@ -652,7 +652,7 @@ string_Okt#:
 
 section .data
 
-@1523$swShortMonthList:
+@1527$swShortMonthList:
 	; Initializer Pointer string_Jan#
 	dq string_Jan#
 	; Initializer Pointer string_Feb#
@@ -722,7 +722,7 @@ string_Oktober#:
 
 section .data
 
-@1524$swLongMonthList:
+@1528$swLongMonthList:
 	; Initializer Pointer string_Januari#
 	dq string_Januari#
 	; Initializer Pointer string_Februari#
@@ -864,7 +864,7 @@ string_fel20vid20namnbyte20av20fil#:
 
 section .data
 
-@1525$swMessageList:
+@1529$swMessageList:
 	; Initializer Pointer string_inga20fel#
 	dq string_inga20fel#
 	; Initializer Pointer string_felaktigt20functionsnummer#
@@ -906,25 +906,25 @@ section .data
 
 section .data
 
-@1526$sw_EN_utf8:
+@1530$sw_EN_utf8:
 	; Initializer SignedInt 1
 	dd 1
 	; Initializer SignedInt 2
 	dd 2
-	; Initializer Pointer @1521$swShortDayList
-	dq @1521$swShortDayList
-	; Initializer Pointer @1522$swLongDayList
-	dq @1522$swLongDayList
-	; Initializer Pointer @1496$enShortMonthList
-	dq @1496$enShortMonthList
-	; Initializer Pointer @1524$swLongMonthList
-	dq @1524$swLongMonthList
+	; Initializer Pointer @1525$swShortDayList
+	dq @1525$swShortDayList
+	; Initializer Pointer @1526$swLongDayList
+	dq @1526$swLongDayList
+	; Initializer Pointer @1500$enShortMonthList
+	dq @1500$enShortMonthList
+	; Initializer Pointer @1528$swLongMonthList
+	dq @1528$swLongMonthList
 	; Initializer Pointer string_abcdefghijklmnopqrstuvwxyz#
 	dq string_abcdefghijklmnopqrstuvwxyz#
 	; Initializer Pointer string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#
 	dq string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#
-	; Initializer Pointer @1525$swMessageList
-	dq @1525$swMessageList
+	; Initializer Pointer @1529$swMessageList
+	dq @1529$swMessageList
 
 section .data
 
@@ -952,35 +952,35 @@ string_SE#:
 
 section .data
 
-@1529$sArray:
+@1533$sArray:
 	; Initializer Pointer string_#
 	dq string_#
-	; Initializer Pointer @1526$sw_EN_utf8
-	dq @1526$sw_EN_utf8
+	; Initializer Pointer @1530$sw_EN_utf8
+	dq @1530$sw_EN_utf8
 	; Initializer Pointer string_C#
 	dq string_C#
-	; Initializer Pointer @1520$en_US_utf8
-	dq @1520$en_US_utf8
+	; Initializer Pointer @1524$en_US_utf8
+	dq @1524$en_US_utf8
 	; Initializer Pointer string_US#
 	dq string_US#
-	; Initializer Pointer @1520$en_US_utf8
-	dq @1520$en_US_utf8
+	; Initializer Pointer @1524$en_US_utf8
+	dq @1524$en_US_utf8
 	; Initializer Pointer string_SE#
 	dq string_SE#
-	; Initializer Pointer @1526$sw_EN_utf8
-	dq @1526$sw_EN_utf8
+	; Initializer Pointer @1530$sw_EN_utf8
+	dq @1530$sw_EN_utf8
 
 section .data
 
-@1530$sSize:
+@1534$sSize:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@1531$g_currStructPtr:
-	; Initializer Pointer @1529$sArray
-	dq @1529$sArray
+@1535$g_currStructPtr:
+	; Initializer Pointer @1533$sArray
+	dq @1533$sArray
 
 section .data
 
@@ -991,141 +991,138 @@ Array_16#:
 section .text
 
  setlocale:
-	; Empty
+	; Equal 4 g_currStructPtr 0
+	cmp qword [@1535$g_currStructPtr], 0
+	je setlocale$4
 
  setlocale$1:
-	; Equal 5 g_currStructPtr 0
-	cmp qword [@1531$g_currStructPtr], 0
-	je setlocale$5
+	; Dereference £temporary371 -> g_currStructPtr g_currStructPtr 0
+	mov rsi, [@1535$g_currStructPtr]
 
  setlocale$2:
-	; Dereference £temporary366 -> g_currStructPtr g_currStructPtr 0
-	mov rsi, [@1531$g_currStructPtr]
-
- setlocale$3:
-	; Assign £temporary367 £temporary366 -> g_currStructPtr
+	; Assign £temporary372 £temporary371 -> g_currStructPtr
 	mov rax, [rsi]
 
- setlocale$4:
-	; Goto 6
-	jmp setlocale$6
+ setlocale$3:
+	; Goto 5
+	jmp setlocale$5
 
- setlocale$5:
-	; Assign £temporary367 0
+ setlocale$4:
+	; Assign £temporary372 0
 	mov rax, 0
 
- setlocale$6:
-	; Assign oldName £temporary367
+ setlocale$5:
+	; Assign oldName £temporary372
 	mov [rbp + 40], rax
 
- setlocale$7:
+ setlocale$6:
 	; Assign g_currStructPtr 0
-	mov qword [@1531$g_currStructPtr], 0
+	mov qword [@1535$g_currStructPtr], 0
+
+ setlocale$7:
+	; Equal 30 newName 0
+	cmp qword [rbp + 28], 0
+	je setlocale$30
 
  setlocale$8:
-	; Equal 31 newName 0
-	cmp qword [rbp + 28], 0
-	je setlocale$31
-
- setlocale$9:
 	; Assign index 0
 	mov dword [rbp + 36], 0
 
- setlocale$10:
-	; SignedGreaterThanEqual 31 index sSize
-	mov eax, [@1530$sSize]
+ setlocale$9:
+	; SignedGreaterThanEqual 30 index sSize
+	mov eax, [@1534$sSize]
 	cmp [rbp + 36], eax
-	jge setlocale$31
+	jge setlocale$30
 
- setlocale$11:
+ setlocale$10:
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- setlocale$12:
+ setlocale$11:
 	; Parameter pointer newName 72
 	mov rax, [rbp + 28]
 	mov [rbp + 72], rax
 
- setlocale$13:
-	; IntegralToIntegral £temporary372 index
+ setlocale$12:
+	; IntegralToIntegral £temporary377 index
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
- setlocale$14:
-	; UnsignedMultiply £temporary373 £temporary372 16
+ setlocale$13:
+	; UnsignedMultiply £temporary378 £temporary377 16
 	xor rdx, rdx
 	mul qword [Array_16#]
 
- setlocale$15:
-	; BinaryAdd £temporary374 sArray £temporary373
-	mov rsi, @1529$sArray
+ setlocale$14:
+	; BinaryAdd £temporary379 sArray £temporary378
+	mov rsi, @1533$sArray
 	add rsi, rax
 
- setlocale$16:
-	; Dereference £temporary371 -> £temporary374 £temporary374 0
+ setlocale$15:
+	; Dereference £temporary376 -> £temporary379 £temporary379 0
 
- setlocale$17:
-	; Parameter pointer £temporary371.name -> £temporary374 80
+ setlocale$16:
+	; Parameter pointer £temporary376.name -> £temporary379 80
 	mov rax, [rsi]
 	mov [rbp + 80], rax
 
- setlocale$18:
+ setlocale$17:
 	; Call strcmp 48 0
-	mov qword [rbp + 48], setlocale$19
+	mov qword [rbp + 48], setlocale$18
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp strcmp
 
- setlocale$19:
+ setlocale$18:
 	; PostCall 48
 
+ setlocale$19:
+	; GetReturnValue £temporary380
+
  setlocale$20:
-	; GetReturnValue £temporary375
+	; NotEqual 28 £temporary380 0
+	cmp ebx, 0
+	jne setlocale$28
 
  setlocale$21:
-	; NotEqual 29 £temporary375 0
-	cmp ebx, 0
-	jne setlocale$29
-
- setlocale$22:
-	; IntegralToIntegral £temporary378 index
+	; IntegralToIntegral £temporary383 index
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
- setlocale$23:
-	; UnsignedMultiply £temporary379 £temporary378 16
+ setlocale$22:
+	; UnsignedMultiply £temporary384 £temporary383 16
 	xor rdx, rdx
 	mul qword [Array_16#]
 
- setlocale$24:
-	; BinaryAdd £temporary380 sArray £temporary379
-	mov rsi, @1529$sArray
+ setlocale$23:
+	; BinaryAdd £temporary385 sArray £temporary384
+	mov rsi, @1533$sArray
 	add rsi, rax
 
+ setlocale$24:
+	; Dereference £temporary382 -> £temporary385 £temporary385 0
+
  setlocale$25:
-	; Dereference £temporary377 -> £temporary380 £temporary380 0
+	; Address £temporary386 £temporary382 -> £temporary385
 
  setlocale$26:
-	; Address £temporary381 £temporary377 -> £temporary380
+	; Assign g_currStructPtr £temporary386
+	mov [@1535$g_currStructPtr], rsi
 
  setlocale$27:
-	; Assign g_currStructPtr £temporary381
-	mov [@1531$g_currStructPtr], rsi
+	; Goto 30
+	jmp setlocale$30
 
  setlocale$28:
-	; Goto 31
-	jmp setlocale$31
-
- setlocale$29:
 	; BinaryAdd index index 1
 	inc dword [rbp + 36]
 
- setlocale$30:
-	; Goto 10
-	jmp setlocale$10
+ setlocale$29:
+	; Goto 9
+	jmp setlocale$9
 
- setlocale$31:
+ setlocale$30:
 	; Return oldName
 	mov rbx, [rbp + 40]
 	mov rax, [rbp]
@@ -1133,22 +1130,22 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- setlocale$32:
+ setlocale$31:
 	; FunctionEnd setlocale
 
 section .text
 
  localeconv:
 	; Equal 4 g_currStructPtr 0
-	cmp qword [@1531$g_currStructPtr], 0
+	cmp qword [@1535$g_currStructPtr], 0
 	je localeconv$4
 
  localeconv$1:
-	; Dereference £temporary383 -> g_currStructPtr g_currStructPtr 0
-	mov rsi, [@1531$g_currStructPtr]
+	; Dereference £temporary388 -> g_currStructPtr g_currStructPtr 0
+	mov rsi, [@1535$g_currStructPtr]
 
  localeconv$2:
-	; Assign £temporary384 £temporary383 -> g_currStructPtr
+	; Assign £temporary389 £temporary388 -> g_currStructPtr
 	mov rbx, [rsi + 8]
 
  localeconv$3:
@@ -1156,11 +1153,11 @@ section .text
 	jmp localeconv$5
 
  localeconv$4:
-	; Assign £temporary384 0
+	; Assign £temporary389 0
 	mov rbx, 0
 
  localeconv$5:
-	; Return £temporary384
+	; Return £temporary389
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]

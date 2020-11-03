@@ -1,0 +1,33 @@
+0: Goto Empty
+1: CheckTrackMapFloatStack
+2: PreCall 24
+3: Parameter pointer stderr 48
+4: Parameter pointer "Assertion failed: "%s" in file %s at line %i\n" 56
+5: Parameter pointer "1 < 2" 64
+6: Parameter pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c" 72
+7: Parameter signedint 198 80
+8: Call fprintf 24 20
+9: PostCall 24
+10: PreCall 24
+11: Call abort 24 0
+12: PostCall 24
+13: Goto Empty
+14: Empty
+15: Goto PreCall 24
+16: CheckTrackMapFloatStack
+17: PreCall 24
+18: Parameter pointer stderr 48
+19: Parameter pointer "Assertion failed: "%s" in file %s at line %i\n" 56
+20: Parameter pointer "1 > 2" 64
+21: Parameter pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c" 72
+22: Parameter signedint 199 80
+23: Call fprintf 24 20
+24: PostCall 24
+25: PreCall 24
+26: Call abort 24 0
+27: PostCall 24
+28: Goto Empty
+29: Empty
+30: Empty
+31: Return
+32: FunctionEnd main

@@ -4,74 +4,78 @@
 3: Empty
 4: Assign c 97
 5: Empty
-6: SignedLessThanEqual UnsignedMultiply £temporary916 size 1 c 122
+6: SignedLessThanEqual IntegralToIntegral £temporary924 size c 122
 7: Goto Return 0
 8: CheckTrackMapFloatStack
-9: UnsignedMultiply £temporary916 size 1
-10: BinaryAdd £temporary917 name £temporary916
-11: Dereference £temporary915 -> £temporary917 £temporary917 0
-12: Assign £temporary915 -> £temporary917 c
-13: BinaryAdd £temporary918 size 1
-14: UnsignedMultiply £temporary920 £temporary918 1
-15: BinaryAdd £temporary921 name £temporary920
-16: Dereference £temporary919 -> £temporary921 £temporary921 0
-17: Assign £temporary919 -> £temporary921 0
-18: PreCall 13
-19: Parameter pointer name 19
-20: Call fileexists 13 0
-21: PostCall 13
-22: GetReturnValue £temporary922
-23: NotEqual PreCall 13 £temporary922 0
-24: Goto Case Return name status 0
-25: CheckTrackMapFloatStack
-26: Case Return name status 0
-27: Case PreCall 13 status 1
-28: CaseEnd status
-29: Goto PreCall 13
-30: Return name
-31: PreCall 13
-32: Parameter pointer name 19
-33: Call existsTempName 13 0
-34: PostCall 13
-35: GetReturnValue £temporary925
-36: NotEqual Goto PreCall 13 £temporary925 0
-37: Goto PreCall 13
-38: CheckTrackMapFloatStack
-39: PreCall 13
-40: UnsignedMultiply £temporary929 g_tempSize 4
-41: BinaryAdd £temporary930 g_tempArray £temporary929
-42: Dereference £temporary928 -> £temporary930 £temporary930 0
-43: Parameter pointer £temporary928 -> £temporary930 19
-44: Parameter pointer name 21
-45: Call strcpy 13 0
-46: PostCall 13
-47: Assign £temporary932 g_tempSize
-48: BinaryAdd g_tempSize g_tempSize 1
-49: UnsignedMultiply £temporary934 £temporary932 4
-50: BinaryAdd £temporary935 g_tempArray £temporary934
-51: Dereference £temporary933 -> £temporary935 £temporary935 0
-52: Return £temporary933 -> £temporary935
-53: Goto Goto PreCall 13
-54: Goto PreCall 13
-55: Goto PreCall 13
-56: PreCall 13
-57: Parameter pointer name 19
-58: BinaryAdd £temporary936 size 1
-59: Parameter signedint £temporary936 21
-60: Parameter signedint status 23
-61: Call generateTempName 13 0
-62: PostCall 13
-63: GetReturnValue £temporary937
-64: Assign result £temporary937
-65: NotEqual Return result result 0
-66: Goto Empty
-67: CheckTrackMapFloatStack
-68: Return result
-69: Goto Empty
-70: Empty
-71: BinaryAdd c c 1
-72: Goto Empty
-73: Goto Return 0
-74: Return 0
-75: Empty
-76: FunctionEnd generateTempName
+9: IntegralToIntegral £temporary924 size
+10: UnsignedMultiply £temporary925 £temporary924 1
+11: BinaryAdd £temporary926 name £temporary925
+12: Dereference £temporary923 -> £temporary926 £temporary926 0
+13: Assign £temporary923 -> £temporary926 c
+14: BinaryAdd £temporary927 size 1
+15: IntegralToIntegral £temporary929 £temporary927
+16: UnsignedMultiply £temporary930 £temporary929 1
+17: BinaryAdd £temporary931 name £temporary930
+18: Dereference £temporary928 -> £temporary931 £temporary931 0
+19: Assign £temporary928 -> £temporary931 0
+20: PreCall 41
+21: Parameter pointer name 65
+22: Call fileexists 41 0
+23: PostCall 41
+24: GetReturnValue £temporary932
+25: NotEqual PreCall 41 £temporary932 0
+26: Goto Case Return name status 0
+27: CheckTrackMapFloatStack
+28: Case Return name status 0
+29: Case PreCall 41 status 1
+30: CaseEnd status
+31: Goto PreCall 41
+32: Return name
+33: PreCall 41
+34: Parameter pointer name 65
+35: Call existsTempName 41 0
+36: PostCall 41
+37: GetReturnValue £temporary935
+38: NotEqual Goto PreCall 41 £temporary935 0
+39: Goto PreCall 41
+40: CheckTrackMapFloatStack
+41: PreCall 41
+42: IntegralToIntegral £temporary939 g_tempSize
+43: UnsignedMultiply £temporary940 £temporary939 4
+44: BinaryAdd £temporary941 g_tempArray £temporary940
+45: Dereference £temporary938 -> £temporary941 £temporary941 0
+46: Parameter pointer £temporary938 -> £temporary941 65
+47: Parameter pointer name 73
+48: Call strcpy 41 0
+49: PostCall 41
+50: Assign £temporary943 g_tempSize
+51: BinaryAdd g_tempSize g_tempSize 1
+52: IntegralToIntegral £temporary945 £temporary943
+53: UnsignedMultiply £temporary946 £temporary945 4
+54: BinaryAdd £temporary947 g_tempArray £temporary946
+55: Dereference £temporary944 -> £temporary947 £temporary947 0
+56: Return £temporary944 -> £temporary947
+57: Goto Goto PreCall 41
+58: Goto PreCall 41
+59: Goto PreCall 41
+60: PreCall 41
+61: Parameter pointer name 65
+62: BinaryAdd £temporary948 size 1
+63: Parameter signedint £temporary948 73
+64: Parameter signedint status 77
+65: Call generateTempName 41 0
+66: PostCall 41
+67: GetReturnValue £temporary949
+68: Assign result £temporary949
+69: NotEqual Return result result 0
+70: Goto Empty
+71: CheckTrackMapFloatStack
+72: Return result
+73: Goto Empty
+74: Empty
+75: BinaryAdd c c 1
+76: Goto Empty
+77: Goto Return 0
+78: Return 0
+79: Empty
+80: FunctionEnd generateTempName
