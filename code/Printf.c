@@ -113,7 +113,6 @@ void printLongIntRec(long longValue) {
 void printLongInt(long longValue, BOOL plus, BOOL space) {
   if (longValue < 0L) {
     longValue = -longValue;
-    printChar('Y');
     printChar('-');
   }
   else if (space) {
@@ -205,7 +204,6 @@ void printLongDoubleFraction(long double longDoubleValue,
 void printLongDoublePlain(long double longDoubleValue, BOOL plus,
                           BOOL space, BOOL grid, int precision) {
   if (longDoubleValue < 0.0L) {
-    printChar('Z');
     printChar('-');
     longDoubleValue = -longDoubleValue;
     plus = FALSE;

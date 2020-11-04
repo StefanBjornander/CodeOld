@@ -29,7 +29,7 @@ signal$4:	; call function noellipse-ellipse printf, extra 0
 signal$5:	; post call
 24:	
 
-signal$6:	; £temporary855 = int_to_int sig (Signed_Int -> Signed_Short_Int)
+signal$6:	; £temporary849 = int_to_int sig (Signed_Int -> Signed_Short_Int)
 25:		mov ax, [bp + 6]
 28:		cmp ax, 0
 29:		jge signal$7
@@ -37,7 +37,7 @@ signal$6:	; £temporary855 = int_to_int sig (Signed_Int -> Signed_Short_Int)
 32:		neg al
 34:	
 
-signal$7:	; al = £temporary855
+signal$7:	; al = £temporary849
 36:	
 
 signal$8:	; ah = 37
@@ -104,7 +104,7 @@ raise$3:	; call function noellipse-ellipse printf, extra 0
 raise$4:	; post call
 20:	
 
-raise$5:	; £temporary865 = int_to_int sig (Signed_Int -> Signed_Short_Int)
+raise$5:	; £temporary859 = int_to_int sig (Signed_Int -> Signed_Short_Int)
 21:		mov ax, [bp + 6]
 24:		cmp ax, 0
 25:		jge raise$6
@@ -112,7 +112,7 @@ raise$5:	; £temporary865 = int_to_int sig (Signed_Int -> Signed_Short_Int)
 28:		neg al
 30:	
 
-raise$6:	; al = £temporary865
+raise$6:	; al = £temporary859
 32:	
 
 raise$7:	; ah = 53
@@ -123,10 +123,10 @@ raise$8:	; interrupt 33
 36:		int 33
 38:	
 
-raise$9:	; £temporary867 = bx
+raise$9:	; £temporary861 = bx
 40:	
 
-raise$10:	; func = £temporary867
+raise$10:	; func = £temporary861
 41:		mov [bp + 8], bx
 43:	
 
