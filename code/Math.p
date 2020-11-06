@@ -1,9 +1,9 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+   
+   
 
-
-
-
-
+    
+    
 
 
 
@@ -38,12 +38,13 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
+  
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,1$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\errno.h,1$
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,0$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\errno.h,0$
+   
+   
 
 
 
@@ -104,30 +105,32 @@ FTELL , FSIZE , FREMOVE , FRENAME , FTEMPNAME , FTEMPFILE };
 
 extern int errno ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+   
+   
+
+          
+
+    
+    
+
+    
+    
+    
+
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,2$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
+   
+   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,3$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
-
-
-
-
+          
 
 double atof ( char * s ) ;
 int atoi ( char * s ) ;
@@ -149,8 +152,8 @@ void exit ( int status ) ;
 typedef void ( * FUNC_PTR ) ( void ) ;
 int atexit ( FUNC_PTR fcn ) ;
 
-
-
+    
+    
 
 int abs ( int value ) ;
 long labs ( long value ) ;
@@ -180,12 +183,13 @@ long quot , rem ;
 } ldiv_t ;
 
 ldiv_t ldiv ( long num , long denum ) ;
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,3$
+       
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,4$
-
-
-
+    
+    
 
 double exp ( double x ) {
 double index = 1 , term , sum = 1 , faculty = 1 , power = x ;
@@ -206,13 +210,13 @@ int n = 0 ;
 
 if ( x > 1 ) {
 while ( x > 1 ) {
-x /= 2.718281828 ;
+x /= 2.71 ;
 ++ n ;
 }
 }
-else if ( x < ( 1 / 2.718281828 ) ) {
-while ( x < ( 1 / 2.718281828 ) ) {
-x *= 2.718281828 ;
+else if ( x < 0.368 ) {
+while ( x < 0.368 ) {
+x *= 2.71 ;
 -- n ;
 }
 }
@@ -235,7 +239,7 @@ return 0 ;
 }
 }
 
-
+    
 
 double log10 ( double x ) {
 return log ( x ) / 2.3025850929940456840179914 ;
@@ -271,7 +275,7 @@ double ldexp ( double x , int n ) {
 return x * pow ( 2 , n ) ;
 }
 
-
+    
 
 static log2 ( double x ) {
 return log ( x ) / 0.6931471805599453094172321 ;
@@ -341,8 +345,8 @@ return 0 ;
 }
 
 double sin ( double x ) {
-if ( fabs ( x ) > ( 2 * 3.141592653 ) ) {
-x = fmod ( x , 2 * 3.141592653 ) ;
+if ( fabs ( x ) > ( 2 * 3.14 ) ) {
+x = fmod ( x , 2 * 3.14 ) ;
 }
 
 double index = 1 , term , sum = 0 , sign = 1 , power = x , faculty = 1 ;
@@ -359,8 +363,8 @@ return sum ;
 }
 
 double cos ( double x ) {
-if ( fabs ( x ) > ( 2 * 3.141592653 ) ) {
-x = fmod ( x , 2 * 3.141592653 ) ;
+if ( fabs ( x ) > ( 2 * 3.14 ) ) {
+x = fmod ( x , 2 * 3.14 ) ;
 }
 
 double index = 0 , term , sum = 0 , sign = 1 , power = 1 , faculty = 1 ;
@@ -390,7 +394,7 @@ return 0 ;
 
 double asin ( double x ) {
 if ( x == 1 ) {
-return 3.141592653 / 2 ;
+return 3.14 / 2 ;
 }
 else if ( x < 0 ) {
 return - asin ( - x ) ;
@@ -406,10 +410,10 @@ return 0 ;
 
 double acos ( double x ) {
 if ( x == 0 ) {
-return 3.141592653 / 2 ;
+return 3.14 / 2 ;
 }
 else if ( x < 0 ) {
-return 3.141592653 - acos ( - x ) ;
+return 3.14 - acos ( - x ) ;
 }
 else if ( x <= 1 ) {
 return atan ( sqrt ( 1 - ( x * x ) ) / x ) ;
@@ -425,7 +429,7 @@ if ( x < 0 ) {
 return - atan ( - x ) ;
 }
 else if ( x > 1 ) {
-return 3.141592653 / 2 - atan ( 1 / x ) ;
+return 3.14 / 2 - atan ( 1 / x ) ;
 }
 else if ( x > 0.5 ) {
 return 2 * atan ( x / ( 1 + sqrt ( 1 + ( x * x ) ) ) ) ;
@@ -450,16 +454,16 @@ if ( y > 0 ) {
 return atan ( x / y ) ;
 }
 else if ( ( x >= 0 ) && ( y < 0 ) ) {
-return 3.141592653 + atan ( x / y ) ;
+return 3.14 + atan ( x / y ) ;
 }
 else if ( ( x < 0 ) && ( y < 0 ) ) {
-return ( - 3.141592653 ) + atan ( x / y ) ;
+return ( - 3.14 ) + atan ( x / y ) ;
 }
 else if ( ( x > 0 ) && ( y == 0 ) ) {
-return 3.141592653 / 2 ;
+return 3.14 / 2 ;
 }
 else if ( ( x < 0 ) && ( y == 0 ) ) {
-return ( - 3.141592653 ) / 2 ;
+return ( - 3.14 ) / 2 ;
 }
 else {
 errno = EDOM ;
@@ -502,4 +506,3 @@ return ( double ) ( ( long ) ( ( x < 0 ) ? ( x - 0.5 ) : ( x + 0.5 ) ) ) ;
 double fabs ( double x ) {
 return ( x < 0 ) ? - x : x ;
 }
-

@@ -213,11 +213,11 @@ log$10:	; push float x
 41:		fld qword [bp + 6]
 43:	
 
-log$11:	; push float 2.718281828
-44:		fld qword [float8$2.718281828#]
+log$11:	; push float 2.71
+44:		fld qword [float8$2.71#]
 46:	
 
-log$12:	; £temporary531 = x / 2.718281828
+log$12:	; £temporary531 = x / 2.71
 47:		fdiv
 49:	
 
@@ -237,11 +237,11 @@ log$16:	; push float x
 59:		fld qword [bp + 6]
 61:	
 
-log$17:	; push float 0.3678794412335673385519170678
-62:		fld qword [float8$0.3678794412335673385519170678#]
+log$17:	; push float 0.368
+62:		fld qword [float8$0.368#]
 64:	
 
-log$18:	; if x >= 0.3678794412335673385519170678 goto 28
+log$18:	; if x >= 0.368 goto 28
 65:		fcompp
 66:		fstsw ax
 67:		sahf
@@ -252,11 +252,11 @@ log$19:	; push float x
 71:		fld qword [bp + 6]
 73:	
 
-log$20:	; push float 0.3678794412335673385519170678
-74:		fld qword [float8$0.3678794412335673385519170678#]
+log$20:	; push float 0.368
+74:		fld qword [float8$0.368#]
 76:	
 
-log$21:	; if x >= 0.3678794412335673385519170678 goto 28
+log$21:	; if x >= 0.368 goto 28
 77:		fcompp
 78:		fstsw ax
 79:		sahf
@@ -267,11 +267,11 @@ log$22:	; push float x
 83:		fld qword [bp + 6]
 85:	
 
-log$23:	; push float 2.718281828
-86:		fld qword [float8$2.718281828#]
+log$23:	; push float 2.71
+86:		fld qword [float8$2.71#]
 88:	
 
-log$24:	; £temporary535 = x * 2.718281828
+log$24:	; £temporary535 = x * 2.71
 89:		fmul
 91:	
 
@@ -1763,11 +1763,11 @@ sin$4:	; post call
 sin$5:	; £temporary658 = return_value
 19:	
 
-sin$6:	; push float 6.283185306
-20:		fld qword [float8$6.283185306#]
+sin$6:	; push float 6.28
+20:		fld qword [float8$6.28#]
 22:	
 
-sin$7:	; if £temporary658 <= 6.283185306 goto 17
+sin$7:	; if £temporary658 <= 6.28 goto 17
 23:		fcompp
 24:		fstsw ax
 25:		sahf
@@ -1785,11 +1785,11 @@ sin$10:	; parameter x, offset 6
 34:		fstp qword [bp + 20]
 36:	
 
-sin$11:	; push float 6.283185306
-37:		fld qword [float8$6.283185306#]
+sin$11:	; push float 6.28
+37:		fld qword [float8$6.28#]
 39:	
 
-sin$12:	; parameter 6.283185306, offset 14
+sin$12:	; parameter 6.28, offset 14
 40:		fstp qword [bp + 28]
 42:	
 
@@ -2054,11 +2054,11 @@ cos$4:	; post call
 cos$5:	; £temporary677 = return_value
 19:	
 
-cos$6:	; push float 6.283185306
-20:		fld qword [float8$6.283185306#]
+cos$6:	; push float 6.28
+20:		fld qword [float8$6.28#]
 22:	
 
-cos$7:	; if £temporary677 <= 6.283185306 goto 17
+cos$7:	; if £temporary677 <= 6.28 goto 17
 23:		fcompp
 24:		fstsw ax
 25:		sahf
@@ -2076,11 +2076,11 @@ cos$10:	; parameter x, offset 6
 34:		fstp qword [bp + 20]
 36:	
 
-cos$11:	; push float 6.283185306
-37:		fld qword [float8$6.283185306#]
+cos$11:	; push float 6.28
+37:		fld qword [float8$6.28#]
 39:	
 
-cos$12:	; parameter 6.283185306, offset 14
+cos$12:	; parameter 6.28, offset 14
 40:		fstp qword [bp + 28]
 42:	
 
@@ -2442,11 +2442,11 @@ asin$2:	; if x != 1 goto 6
 11:		jne asin$6
 13:	
 
-asin$3:	; push float 1.5707963265
-14:		fld qword [float8$1.5707963265#]
+asin$3:	; push float 1.57
+14:		fld qword [float8$1.57#]
 16:	
 
-asin$4:	; return_value = 1.5707963265
+asin$4:	; return_value = 1.57
 18:	
 
 asin$5:	; return
@@ -2646,11 +2646,11 @@ acos$2:	; if x != 0 goto 6
 11:		jne acos$6
 13:	
 
-acos$3:	; push float 1.5707963265
-14:		fld qword [float8$1.5707963265#]
+acos$3:	; push float 1.57
+14:		fld qword [float8$1.57#]
 16:	
 
-acos$4:	; return_value = 1.5707963265
+acos$4:	; return_value = 1.57
 18:	
 
 acos$5:	; return
@@ -2675,8 +2675,8 @@ acos$8:	; if x >= 0 goto 20
 34:		jbe acos$20
 36:	
 
-acos$9:	; push float 3.141592653
-37:		fld qword [float8$3.141592653#]
+acos$9:	; push float 3.14
+37:		fld qword [float8$3.14#]
 39:	
 
 acos$10:	; call header integral zero 0 stack no zero 1
@@ -2711,7 +2711,7 @@ acos$15:	; post call
 acos$16:	; £temporary719 = return_value
 64:	
 
-acos$17:	; £temporary720 = 3.141592653 - £temporary719
+acos$17:	; £temporary720 = 3.14 - £temporary719
 65:		fsub
 67:	
 
@@ -2911,8 +2911,8 @@ atan$15:	; if x <= 1 goto 28
 55:		jae atan$28
 57:	
 
-atan$16:	; push float 1.5707963265
-58:		fld qword [float8$1.5707963265#]
+atan$16:	; push float 1.57
+58:		fld qword [float8$1.57#]
 60:	
 
 atan$17:	; call header integral zero 0 stack no zero 1
@@ -2951,7 +2951,7 @@ atan$23:	; post call
 atan$24:	; £temporary736 = return_value
 88:	
 
-atan$25:	; £temporary737 = 1.5707963265 - £temporary736
+atan$25:	; £temporary737 = 1.57 - £temporary736
 89:		fsub
 91:	
 
@@ -3347,8 +3347,8 @@ atan2$18:	; if y >= 0 goto 31
 67:		jbe atan2$31
 69:	
 
-atan2$19:	; push float 3.141592653
-70:		fld qword [float8$3.141592653#]
+atan2$19:	; push float 3.14
+70:		fld qword [float8$3.14#]
 72:	
 
 atan2$20:	; call header integral zero 0 stack no zero 1
@@ -3387,7 +3387,7 @@ atan2$26:	; post call
 atan2$27:	; £temporary767 = return_value
 100:	
 
-atan2$28:	; £temporary768 = 3.141592653 + £temporary767
+atan2$28:	; £temporary768 = 3.14 + £temporary767
 101:		fadd
 103:	
 
@@ -3431,8 +3431,8 @@ atan2$36:	; if y >= 0 goto 49
 133:		jbe atan2$49
 135:	
 
-atan2$37:	; push float -3.141592653
-136:		fld qword [float8$minus3.141592653#]
+atan2$37:	; push float -3.14
+136:		fld qword [float8$minus3.14#]
 138:	
 
 atan2$38:	; call header integral zero 0 stack no zero 1
@@ -3471,7 +3471,7 @@ atan2$44:	; post call
 atan2$45:	; £temporary773 = return_value
 166:	
 
-atan2$46:	; £temporary774 = -3.141592653 + £temporary773
+atan2$46:	; £temporary774 = -3.14 + £temporary773
 167:		fadd
 169:	
 
@@ -3515,11 +3515,11 @@ atan2$54:	; if y != 0 goto 58
 199:		jne atan2$58
 201:	
 
-atan2$55:	; push float 1.5707963265
-202:		fld qword [float8$1.5707963265#]
+atan2$55:	; push float 1.57
+202:		fld qword [float8$1.57#]
 204:	
 
-atan2$56:	; return_value = 1.5707963265
+atan2$56:	; return_value = 1.57
 206:	
 
 atan2$57:	; return
@@ -3559,11 +3559,11 @@ atan2$63:	; if y != 0 goto 67
 234:		jne atan2$67
 236:	
 
-atan2$64:	; push float -1.5707963265
-237:		fld qword [float8$minus1.5707963265#]
+atan2$64:	; push float -1.57
+237:		fld qword [float8$minus1.57#]
 239:	
 
-atan2$65:	; return_value = -1.5707963265
+atan2$65:	; return_value = -1.57
 241:	
 
 atan2$66:	; return

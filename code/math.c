@@ -3,7 +3,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-#define E_INVERSE (1 / E)
+#define E_INVERSE 0.368 // (1 / E)
 #define EPSILON   1e-9
 
 double exp(double x) {
