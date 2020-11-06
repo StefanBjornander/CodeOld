@@ -1,80 +1,77 @@
-0: PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-1: Parameter pointer "argc: %i\n" 60
-2: Parameter signedint argc 68
-3: Call printf 36 4
-4: PostCall 36
+0: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter pointer "argc: %i\n" 16
+2: Parameter signedint argc 18
+3: Call printf 10 2
+4: PostCall 10
 5: Assign index 0
-6: SignedGreaterThanEqual 19 index argc
-7: PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-8: Parameter pointer "%i: <%s>\n" 64
-9: Parameter signedint index 72
-10: IntegralToIntegral £temporary79 index
-11: UnsignedMultiply £temporary80 £temporary79 8
-12: BinaryAdd £temporary81 argv £temporary80
-13: Dereference £temporary78 -> £temporary81 £temporary81 0
-14: Parameter pointer £temporary78 -> £temporary81 76
-15: Call printf 40 12
-16: PostCall 40
-17: BinaryAdd index index 1
-18: Goto 6
-19: PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-20: Parameter pointer "\n" 64
-21: Call printf 40 0
-22: PostCall 40
-23: Assign index 0
-24: IntegralToIntegral £temporary85 index
-25: UnsignedMultiply £temporary86 £temporary85 8
-26: BinaryAdd £temporary87 argv £temporary86
-27: Dereference £temporary84 -> £temporary87 £temporary87 0
-28: Equal 41 £temporary84 -> £temporary87 0
-29: PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-30: Parameter pointer "%i: <%s>\n" 64
-31: Parameter signedint index 72
-32: IntegralToIntegral £temporary91 index
-33: UnsignedMultiply £temporary92 £temporary91 8
-34: BinaryAdd £temporary93 argv £temporary92
-35: Dereference £temporary90 -> £temporary93 £temporary93 0
-36: Parameter pointer £temporary90 -> £temporary93 76
-37: Call printf 40 12
-38: PostCall 40
-39: BinaryAdd index index 1
-40: Goto 24
-41: PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-42: Parameter pointer "\n" 64
-43: Call printf 40 0
-44: PostCall 40
-45: PreCall 73 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-46: Parameter pointer 0 97
-47: Call mktime 73 0
-48: PostCall 73
-49: PreCall 73 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-50: Parameter pointer "Hello!\n" 97
-51: Call printf 73 0
-52: PostCall 73
-53: PreCall 73 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-54: Parameter pointer "Please write a character, a string, an integer, and a double: " 97
-55: Call printf 73 0
-56: PostCall 73
-57: PreCall 73 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-58: Parameter pointer "%c %s %i %lf" 97
-59: Address £temporary99 c
-60: Parameter pointer £temporary99 105
-61: Parameter pointer s 113
-62: Address £temporary100 i
-63: Parameter pointer £temporary100 121
-64: Address £temporary101 d
-65: Parameter pointer £temporary101 129
-66: Call scanf 73 32
-67: PostCall 73
-68: PreCall 73 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-69: Parameter pointer "You wrote the character '%c', the string "%s", the integer %i, and the double %f.\n" 97
-70: IntegralToIntegral £temporary103 c
-71: Parameter signedint £temporary103 105
-72: Parameter pointer s 109
-73: Parameter signedint i 117
-74: PushFloat d
-75: Parameter double d 121
-76: Call printf 73 24
-77: PostCall 73
-78: Return
-79: FunctionEnd main
+6: SignedGreaterThanEqual 18 index argc
+7: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+8: Parameter pointer "%i: <%s>\n" 18
+9: Parameter signedint index 20
+10: UnsignedMultiply £temporary76 index 2
+11: BinaryAdd £temporary77 argv £temporary76
+12: Dereference £temporary75 -> £temporary77 £temporary77 0
+13: Parameter pointer £temporary75 -> £temporary77 22
+14: Call printf 12 4
+15: PostCall 12
+16: BinaryAdd index index 1
+17: Goto 6
+18: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+19: Parameter pointer "\n" 18
+20: Call printf 12 0
+21: PostCall 12
+22: Assign index 0
+23: UnsignedMultiply £temporary81 index 2
+24: BinaryAdd £temporary82 argv £temporary81
+25: Dereference £temporary80 -> £temporary82 £temporary82 0
+26: Equal 38 £temporary80 -> £temporary82 0
+27: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+28: Parameter pointer "%i: <%s>\n" 18
+29: Parameter signedint index 20
+30: UnsignedMultiply £temporary86 index 2
+31: BinaryAdd £temporary87 argv £temporary86
+32: Dereference £temporary85 -> £temporary87 £temporary87 0
+33: Parameter pointer £temporary85 -> £temporary87 22
+34: Call printf 12 4
+35: PostCall 12
+36: BinaryAdd index index 1
+37: Goto 23
+38: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+39: Parameter pointer "\n" 18
+40: Call printf 12 0
+41: PostCall 12
+42: PreCall 43 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+43: Parameter pointer 0 49
+44: Call mktime 43 0
+45: PostCall 43
+46: PreCall 43 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+47: Parameter pointer "Hello!\n" 49
+48: Call printf 43 0
+49: PostCall 43
+50: PreCall 43 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+51: Parameter pointer "Please write a character, a string, an integer, and a double: " 49
+52: Call printf 43 0
+53: PostCall 43
+54: PreCall 43 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+55: Parameter pointer "%c %s %i %lf" 49
+56: Address £temporary93 c
+57: Parameter pointer £temporary93 51
+58: Parameter pointer s 53
+59: Address £temporary94 i
+60: Parameter pointer £temporary94 55
+61: Address £temporary95 d
+62: Parameter pointer £temporary95 57
+63: Call scanf 43 8
+64: PostCall 43
+65: PreCall 43 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+66: Parameter pointer "You wrote the character '%c', the string "%s", the integer %i, and the double %f.\n" 49
+67: IntegralToIntegral £temporary97 c
+68: Parameter signedint £temporary97 51
+69: Parameter pointer s 53
+70: Parameter signedint i 55
+71: PushFloat d
+72: Parameter double d 57
+73: Call printf 43 14
+74: PostCall 43
+75: Return
+76: FunctionEnd main
