@@ -1,100 +1,92 @@
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-   
-   
 
-    
-    
-    
 
-extern double exp ( double value ) ;
-extern double log ( double value ) ;
-extern double log10 ( double value ) ;
-extern int log10_int ( double value ) ;
-extern double pow ( double base , double exponent ) ;
-extern double pow_int ( double base , int exponent ) ;
 
-extern double ldexp ( double value , int exponent ) ;
-extern double frexp ( double value , int * exponent ) ;
 
-extern double sin ( double value ) ;
-extern double cos ( double value ) ;
-extern double tan ( double value ) ;
 
-extern double sinh ( double value ) ;
-extern double cosh ( double value ) ;
-extern double tanh ( double value ) ;
 
-extern double sqrt ( double value ) ;
 
-extern double asin ( double value ) ;
-extern double acos ( double value ) ;
-extern double atan ( double value ) ;
-extern double atan2 ( double num , double denum ) ;
+extern double exp ( double x ) ;
+extern double log ( double x ) ;
+extern double log10 ( double x ) ;
 
-extern double floor ( double value ) ;
-extern double ceil ( double value ) ;
-extern double round ( double value ) ;
-extern double fabs ( double value ) ;
+extern double pow ( double x , double y ) ;
+extern double ldexp ( double x , int exponent ) ;
+extern double frexp ( double x , int * exponent ) ;
 
-extern double modf ( double value , double * integralPart ) ;
-extern double fmod ( double num , double denum ) ;
+extern double sqrt ( double x ) ;
+extern double modf ( double x , double * integral ) ;
+extern double fmod ( double x , double y ) ;
 
-  
+extern double sin ( double x ) ;
+extern double cos ( double x ) ;
+extern double tan ( double x ) ;
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\MathTest.c,0$
-       
+extern double sinh ( double x ) ;
+extern double cosh ( double x ) ;
+extern double tanh ( double x ) ;
+
+extern double asin ( double x ) ;
+extern double acos ( double x ) ;
+extern double atan ( double x ) ;
+extern double atan2 ( double x , double y ) ;
+
+extern double floor ( double x ) ;
+extern double ceil ( double x ) ;
+extern double round ( double x ) ;
+extern double fabs ( double x ) ;
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\MathTest.c,1$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-   
-   
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-   
-   
 
-    
-    
-    
 
-       
-       
-       
-       
-          
-          
 
-          
-           
 
-       
-       
-       
 
-       
-       
-       
 
-       
 
-       
-       
-       
-          
 
-       
-       
-       
-       
 
-           
-          
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
-       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-   
-   
+
+
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -110,51 +102,48 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
-   
-   
-
-     
-                         
-                    
-               
-      
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
 
-          
 
-    
-    
 
-    
-    
-    
 
-  
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-   
-   
 
-    
-    
 
-    
 
-    
+
+
+
+
+
+
 
 typedef unsigned int UINT ;
 
@@ -173,22 +162,22 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-   
-    
-    
-    
-    
 
-    
 
-    
-    
-    
-    
-    
-  
 
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -221,32 +210,30 @@ int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-   
-   
 
-    
-    
+
+
+
+
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
-   
-   
 
-    
-    
 
-    
+
+
+
+
+
 
 extern int g_inStatus , g_inChars ;
 extern void * g_inDevice ;
@@ -265,16 +252,15 @@ int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
 int sscanf ( char * inString , char * format , ... ) ;
 int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-   
-   
 
-    
-    
+
+
+
+
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -305,18 +291,16 @@ int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
 int sprintf ( char * outString , char * format , ... ) ;
 int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-       
 
-  
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\MathTest.c,1$
-       
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\MathTest.c,2$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ErrNo.h,1$
-   
-   
+
+
 
 
 
@@ -377,15 +361,14 @@ FTELL , FSIZE , FREMOVE , FRENAME , FTEMPNAME , FTEMPFILE };
 
 extern int errno ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\MathTest.c,2$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\MathTest.c,3$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,1$
-   
-   
 
-    
+
+
+
 
 extern char * strcpy ( char * target , const char * source ) ;
 extern char * strncpy ( char * target , const char * source , int size ) ;
@@ -408,16 +391,15 @@ extern int memcmp ( const void * left , const void * right , int size ) ;
 extern void * memchr ( const void * block , int i , int size ) ;
 extern void * memset ( void * block , int i , int size ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\MathTest.c,3$
-       
 
-                             
-         
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\MathTest.c,4$
 
-                                
-        
+
+
+
+
+
 
 
 void math_test_1 ( double x ) ;
@@ -425,23 +407,23 @@ void math_test_2 ( double x , double y ) ;
 void math_test_int ( double x , int i ) ;
 
 void math_test_1x ( ) {
-math_test_1 ( -2 * 3.1415926535897932384 ) ;
-math_test_1 ( - 3.1415926535897932384 ) ;
-math_test_1 ( - 3.1415926535897932384 / 2 ) ;
+math_test_1 ( -2 * 3.1415926535897932384626433 ) ;
+math_test_1 ( - 3.1415926535897932384626433 ) ;
+math_test_1 ( - 3.1415926535897932384626433 / 2 ) ;
 math_test_1 ( -1 ) ;
 math_test_1 ( 0 ) ;
 math_test_1 ( 1 ) ;
-math_test_1 ( 3.1415926535897932384 / 2 ) ;
-math_test_1 ( 3.1415926535897932384 ) ;
-math_test_1 ( 2 * 3.1415926535897932384 ) ;
+math_test_1 ( 3.1415926535897932384626433 / 2 ) ;
+math_test_1 ( 3.1415926535897932384626433 ) ;
+math_test_1 ( 2 * 3.1415926535897932384626433 ) ;
 }
 
 void acos_test ( double x ) {
-{ printf ( "  acos(%f) = %f, errno = %i <%s>, " , x , acos ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\141\143\157\163\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , acos ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
 }
 
 void atan_test ( double x ) {
-{ printf ( "  atan(%f) = %f, errno = %i <%s>, " , x , atan ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\141\164\141\156\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , atan ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
 }
 
 void main_math ( void ) {
@@ -457,13 +439,13 @@ math_test_1 ( -0.999999 ) ;
 math_test_1 ( -1.0 ) ;
 math_test_1 ( -1.000001 ) ;
 
-math_test_1 ( 2 * 3.1415926535897932384 ) ;
-math_test_1 ( 3.1415926535897932384 ) ;
-math_test_1 ( 3.1415926535897932384 / 2 ) ;
+math_test_1 ( 2 * 3.1415926535897932384626433 ) ;
+math_test_1 ( 3.1415926535897932384626433 ) ;
+math_test_1 ( 3.1415926535897932384626433 / 2 ) ;
 
-math_test_1 ( - 3.1415926535897932384 / 2 ) ;
-math_test_1 ( - 3.1415926535897932384 ) ;
-math_test_1 ( -2 * 3.1415926535897932384 ) ;
+math_test_1 ( - 3.1415926535897932384626433 / 2 ) ;
+math_test_1 ( - 3.1415926535897932384626433 ) ;
+math_test_1 ( -2 * 3.1415926535897932384626433 ) ;
 
 math_test_2 ( 1.0 , 2.0 ) ;
 math_test_2 ( 3.0 , 4.0 ) ;
@@ -479,48 +461,48 @@ math_test_2 ( -2.0 , -4.0 ) ;
 }
 
 void math_test_1 ( double x ) {
-printf ( "<%f>\n" , x ) ;
-{ printf ( "  sin(%f) = %f, errno = %i <%s>, " , x , sin ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
-{ printf ( "  cos(%f) = %f, errno = %i <%s>, " , x , cos ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
-{ printf ( "  tan(%f) = %f, errno = %i <%s>, " , x , tan ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
+printf ( "\074\045\146\076\012" , x ) ;
+{ printf ( "\040\040\163\151\156\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , sin ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\143\157\163\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , cos ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\164\141\156\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , tan ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
 
-{ printf ( "  asin(%f) = %f, errno = %i <%s>, " , x , asin ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
-{ printf ( "  acos(%f) = %f, errno = %i <%s>, " , x , acos ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
-{ printf ( "  atan(%f) = %f, errno = %i <%s>, " , x , atan ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\141\163\151\156\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , asin ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\141\143\157\163\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , acos ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\141\164\141\156\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , atan ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
 
-{ printf ( "  exp(%f) = %f, errno = %i <%s>, " , x , exp ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
-{ printf ( "  log(%f) = %f, errno = %i <%s>, " , x , log ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
-{ printf ( "  log10(%f) = %f, errno = %i <%s>, " , x , log10 ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\145\170\160\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , exp ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\154\157\147\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , log ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\154\157\147\061\060\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , log10 ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
 
-{ printf ( "  sinh(%f) = %f, errno = %i <%s>, " , x , sinh ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
-{ printf ( "  cosh(%f) = %f, errno = %i <%s>, " , x , cosh ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
-{ printf ( "  tanh(%f) = %f, errno = %i <%s>, " , x , tanh ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\163\151\156\150\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , sinh ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\143\157\163\150\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , cosh ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\164\141\156\150\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , tanh ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
 
-{ printf ( "  sqrt(%f) = %f, errno = %i <%s>, " , x , sqrt ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
-{ printf ( "  floor(%f) = %f, errno = %i <%s>, " , x , floor ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
-{ printf ( "  ceil(%f) = %f, errno = %i <%s>, " , x , ceil ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
-{ printf ( "  fabs(%f) = %f, errno = %i <%s>, " , x , fabs ( x ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\163\161\162\164\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , sqrt ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\146\154\157\157\162\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , floor ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\143\145\151\154\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , ceil ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
+{ printf ( "\040\040\146\141\142\163\050\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , fabs ( x ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ; } ;
 
 { int j = 0 ;
 double z = frexp ( x , & j ) ;
-printf ( "frexp (z, j) = (%f, %i), errno = %i <%s>\n" , z , j , errno , strerror ( errno ) ) ;
-if ( errno != NO_ERROR ) { perror ( "Error message:" ) ; errno = 0 ; }
+printf ( "\146\162\145\170\160\040\050\172\054\040\152\051\040\075\040\050\045\146\054\040\045\151\051\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\012" , z , j , errno , strerror ( errno ) ) ;
+if ( errno != NO_ERROR ) { perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145\072" ) ; errno = 0 ; }
 }
 
 { double w = 0 ;
 double z = modf ( x , & w ) ;
-printf ( "modf (z, w) = (%f, %f), errno = %i <%s>\n" , z , w , errno , strerror ( errno ) ) ;
-if ( errno != NO_ERROR ) { perror ( "Error message:" ) ; errno = 0 ; }
+printf ( "\155\157\144\146\040\050\172\054\040\167\051\040\075\040\050\045\146\054\040\045\146\051\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\012" , z , w , errno , strerror ( errno ) ) ;
+if ( errno != NO_ERROR ) { perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145\072" ) ; errno = 0 ; }
 }
 
-printf ( "\n" ) ;
+printf ( "\012" ) ;
 }
 
 void math_test_2 ( double x , double y ) {
-{ printf ( "fmod(%f, %f) = %f, errno = %i <%s>, " , x , y , fmod ( x , y ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ;} ;
-{ printf ( "atan2(%f, %f) = %f, errno = %i <%s>, " , x , y , atan2 ( x , y ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ;} ;
-{ printf ( "pow(%f, %f) = %f, errno = %i <%s>, " , x , y , pow ( x , y ) , errno , strerror ( errno ) ) ; perror ( "Error message" ) ; errno = 0 ;} ;
-printf ( "\n" ) ;
-printf ( "ldexp(%f, %i) = %f\n\n" , x , ( int ) y , ldexp ( x , y ) ) ;
+{ printf ( "\146\155\157\144\050\045\146\054\040\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , y , fmod ( x , y ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ;} ;
+{ printf ( "\141\164\141\156\062\050\045\146\054\040\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , y , atan2 ( x , y ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ;} ;
+{ printf ( "\160\157\167\050\045\146\054\040\045\146\051\040\075\040\045\146\054\040\145\162\162\156\157\040\075\040\045\151\040\074\045\163\076\054\040" , x , y , pow ( x , y ) , errno , strerror ( errno ) ) ; perror ( "\105\162\162\157\162\040\155\145\163\163\141\147\145" ) ; errno = 0 ;} ;
+printf ( "\012" ) ;
+printf ( "\154\144\145\170\160\050\045\146\054\040\045\151\051\040\075\040\045\146\012\012" , x , ( int ) y , ldexp ( x , y ) ) ;
 }
 

@@ -1,20 +1,20 @@
 #include <math.h>
 #include <errno.h>
-#include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
 
+//#define E_INVERSE 0.368
 #define E_INVERSE (1 / E)
 #define EPSILON   1e-9
 
 double exp(double x) {
-  double i = 0, term, sum = 0, faculty = 1, power = 1;
+  double index = 1, term, sum = 1, faculty = 1, power = x;
 
   do {
     term = power / faculty;
     sum += term;
     power *= x;
-    faculty *= i;
+    faculty *= ++index;
   } while (fabs(term) >= EPSILON);
 
   return sum;
@@ -37,16 +37,16 @@ double log(double x) {
       }
     }
 
-    double i = 1, term = 1, sum = 0, sign = 1,
+    double index = 1, term, sum = 0, sign = 1,
            x_minus_1 = x - 1, power = x_minus_1;
 
     do {
-      term = sign * power / i;
+      term = sign * power / index++;
       sum += term;
       power *= x_minus_1;
       sign *= -1.0;
     } while (fabs(term) >= EPSILON);
-    
+
     return sum + n;
   }
   else {
@@ -55,6 +55,7 @@ double log(double x) {
   }
 }
 
+//#define LN_10 2.30
 #define LN_10 2.3025850929940456840179914
 
 double log10(double x) {
@@ -64,6 +65,9 @@ double log10(double x) {
 double pow(double x, double y) {
   if (x > 0)  {
     return exp(y * log(x));
+  }
+  else if ((x == 0) && (y == 0)) {
+    return 1;
   }
   else if ((x == 0) && (y > 0)) {
     return 0;
@@ -88,6 +92,7 @@ double ldexp(double x, int n) {
   return x * pow(2, n);
 }
 
+//#define LN_2 0.693
 #define LN_2 0.6931471805599453094172321
 
 static log2(double x) {
@@ -96,7 +101,11 @@ static log2(double x) {
 
 double frexp(double x, int* p) {
   if (x != 0)  {
-    int exponent = (int) (log2(fabs(x)) + 1);
+    int exponent = (int) log2(fabs(x));
+
+    if (pow(2, exponent) < x) {
+      ++exponent;
+    }
 
     if (p != NULL) {
       *p = exponent;
@@ -136,16 +145,15 @@ double modf(double x, double* p) {
     fractional = abs_x - integral;
 
   if (p != NULL)  {
-    *p = (x > 0) ? fractional : -fractional;
+    *p = (x > 0) ? integral : -integral;
   }
 
-  return (x > 0) ? integral : -integral;
+  return (x > 0) ? fractional : -fractional; 
 }
 
 double fmod(double x, double y) {
   if (y != 0) {
-    double quotient = x / y,
-           remainder = fabs(quotient - ((double) ((long) quotient)));
+    double remainder = fabs(x - (y * ((int) (x / y))));
     return (x > 0) ? remainder : -remainder;
   }
   else {
@@ -159,14 +167,14 @@ double sin(double x) {
     x = fmod(x, 2 * PI);
   }
 
-  double i = 0, term, sum = 0, sign = 1, power = x, faculty = 1;
+  double index = 1, term, sum = 0, sign = 1, power = x, faculty = 1;
 
   do {
     term = sign * power / faculty;
     sum += term;
     sign *= -1;
     power *= x * x;
-    faculty *= ++i * ++i;
+    faculty *= ++index * ++index;
   } while (fabs(term) >= EPSILON);
 
   return sum;
@@ -177,24 +185,24 @@ double cos(double x) {
     x = fmod(x, 2 * PI);
   }
 
-  double i = 0, term, sum = 0, sign = 1, power = 1, faculty = 1;
+  double index = 0, term, sum = 0, sign = 1, power = 1, faculty = 1;
 
   do {
     term = sign * power / faculty;
     sum += term;
     sign *= -1;
     power *= x * x;
-    faculty *= ++i * ++i;
+    faculty *= ++index * ++index;
   } while (fabs(term) >= EPSILON);
 
   return sum;
 }
 
 double tan(double x) {
-  double cos_x = cos(x);
+  double cos_of_x = cos(x);
 
-  if (cos_x != 0) {
-    return (sin(x) / cos_x);
+  if (cos_of_x != 0) {
+    return (sin(x) / cos_of_x);
   }
   else {
     errno = EDOM;
@@ -206,10 +214,10 @@ double asin(double x) {
   if (x == 1) {
     return PI / 2;
   }
-  else if (x == -1) {
-    return -PI / 2;
+  else if (x < 0) {
+    return -asin(-x);
   }
-  else if (fabs(x) < 1) {
+  else if (x < 1) {
     return atan(x / sqrt(1 - (x * x)));
   }
   else {
@@ -222,8 +230,11 @@ double acos(double x) {
   if (x == 0) {
     return PI / 2;
   }
-  else if (fabs(x) < 1) {
-    return atan(x / sqrt(1 - (x * x)));
+  else if (x < 0) {
+    return PI - acos(-x);
+  }
+  else if (x <= 1) {
+    return atan(sqrt(1 - (x * x)) / x);
   }
   else {
     errno = EDOM;
@@ -257,8 +268,20 @@ double atan(double x) {
 }
 
 double atan2(double x, double y) {
-  if (y != 0) {
+  if (y > 0) {
     return atan(x / y);
+  }
+  else if ((x >= 0) && (y < 0))  {
+    return PI + atan(x / y);
+  }
+  else if ((x < 0) && (y < 0)) {
+    return (-PI) + atan(x / y);
+  }
+  else if ((x > 0) && (y == 0))  {
+    return PI / 2;
+  }
+  else if ((x < 0) && (y == 0))  {
+    return (-PI) / 2;
   }
   else {
     errno = EDOM;

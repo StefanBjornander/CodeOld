@@ -629,10 +629,10 @@ ispunct$8:	; call function noellipse-noellipse isalnum
 ispunct$9:	; post call
 38:	
 
-ispunct$10:	; £temporary438 = return_value
+ispunct$10:	; £temporary437 = return_value
 43:	
 
-ispunct$11:	; if £temporary438 != 0 goto 14
+ispunct$11:	; if £temporary437 != 0 goto 14
 44:		cmp bx, 0
 45:		jne ispunct$14
 47:	

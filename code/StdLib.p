@@ -1,12 +1,12 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
 
 
 
 
-    
-    
+
+
+
+
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -38,13 +38,12 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,0$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
-   
-   
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
+
+
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -60,13 +59,12 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,1$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\errno.h,0$
-   
-   
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,2$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\errno.h,1$
+
+
 
 
 
@@ -127,46 +125,43 @@ FTELL , FSIZE , FREMOVE , FRENAME , FTEMPNAME , FTEMPFILE };
 
 extern int errno ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,2$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
-   
-   
-
-     
-                         
-                    
-               
-      
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,3$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
 
-          
 
-    
-    
 
-    
-    
-    
 
-  
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\string.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,5$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\string.h,1$
+
+
+
+
 
 extern char * strcpy ( char * target , const char * source ) ;
 extern char * strncpy ( char * target , const char * source , int size ) ;
@@ -189,15 +184,14 @@ extern int memcmp ( const void * left , const void * right , int size ) ;
 extern void * memchr ( const void * block , int i , int size ) ;
 extern void * memset ( void * block , int i , int size ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,5$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
-   
-   
 
-          
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,6$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
+
+
+
+
 
 double atof ( char * s ) ;
 int atoi ( char * s ) ;
@@ -219,8 +213,8 @@ void exit ( int status ) ;
 typedef void ( * FUNC_PTR ) ( void ) ;
 int atexit ( FUNC_PTR fcn ) ;
 
-    
-    
+
+
 
 int abs ( int value ) ;
 long labs ( long value ) ;
@@ -250,120 +244,115 @@ long quot , rem ;
 } ldiv_t ;
 
 ldiv_t ldiv ( long num , long denum ) ;
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,6$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
-   
-   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,7$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
 
 
 
 
-    
-    
 
-       
-       
-       
 
-          
-          
-           
 
-       
-           
-          
 
-       
-       
-       
 
-       
-       
-       
 
-       
-       
-       
-          
 
-       
-       
-       
-       
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
-   
-   
 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
 
-     
-                         
-                    
-               
-      
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
 
-          
 
-    
-    
 
-    
-    
-    
 
-  
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
 
-    
-    
 
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
+
+
+
+
+
+
+
+
 
 typedef unsigned int UINT ;
 
@@ -382,22 +371,22 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-   
-    
-    
-    
-    
 
-    
 
-    
-    
-    
-    
-    
-  
 
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -429,32 +418,30 @@ int feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
-   
-   
 
-    
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
+
+
+
+
+
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
-   
-   
 
-    
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
 
-    
+
+
+
+
+
+
 
 extern int g_inStatus , g_inChars ;
 extern void * g_inDevice ;
@@ -473,16 +460,15 @@ int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
 int sscanf ( char * inString , char * format , ... ) ;
 int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
-   
-   
 
-    
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
+
+
+
+
+
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -517,15 +503,13 @@ int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
 int sprintf ( char * outString , char * format , ... ) ;
 int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-       
 
-  
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,7$
-       
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,8$
 
 extern FILE g_fileArray [];
 
@@ -540,7 +524,7 @@ return strtol ( s , ( char ** ) ( ( void * ) 0 ) , 10 ) ;
 long strtol ( char * s , char ** endp , int ) {
 int chars = 0 ;
 long value = 0 ;
-sscanf ( s , "%li%n" , & value , & chars ) ;
+sscanf ( s , "\045\154\151\045\156" , & value , & chars ) ;
 
 if ( endp != ( ( void * ) 0 ) ) {
 * endp = s + chars ;
@@ -552,7 +536,7 @@ return value ;
 unsigned long strtoul ( char * s , char ** endp , int ) {
 int chars = 0 ;
 unsigned long value = 0 ;
-sscanf ( s , "%lu%n" , & value , & chars ) ;
+sscanf ( s , "\045\154\165\045\156" , & value , & chars ) ;
 
 if ( endp != ( ( void * ) 0 ) ) {
 * endp = s + chars ;
@@ -566,9 +550,9 @@ return strtod ( s , ( char ** ) ( ( void * ) 0 ) ) ;
 }
 
 double strtod ( char * s , char ** endp ) {
-int chars = '\0' ;
+int chars = '\000' ;
 double value = 0 ;
-sscanf ( s , "%lf%n" , & value , & chars ) ;
+sscanf ( s , "\045\154\146\045\156" , & value , & chars ) ;
 
 if ( endp != ( ( void * ) 0 ) ) {
 * endp = s + chars ;
@@ -578,18 +562,18 @@ return value ;
 }
 
 void abort ( void ) {
-   
- register_ah = 0x4Cs ;
+
+register_ah = 0x4Cs ;
 register_al = -1s ;
 interrupt ( 0x21s ) ;
-  
 
-   
-    
-   
-   
-  
- }
+
+
+
+
+
+
+}
 
 char * getenv ( const char * ) {
 return ( ( void * ) 0 ) ;
@@ -662,9 +646,9 @@ return middleValuePtr ;
 
 static long g_randValue ;
 
-    
-    
-    
+
+
+
 
 int rand ( void ) {
 g_randValue = ( ( 1664525l * g_randValue ) + 1013904223l ) % 127 ;
@@ -675,10 +659,10 @@ void srand ( unsigned int seed ) {
 g_randValue = ( long ) seed ;
 }
 
-    
-    
-    
-            
+
+
+
+
 
 FUNC_PTR g_funcArray [ 256 ] = { ( ( void * ) 0 ) };
 
@@ -704,18 +688,18 @@ g_funcArray [ index ] ( ) ;
 }
 }
 
-   
- register_al = ( short ) status ;
+
+register_al = ( short ) status ;
 register_ah = 0x4Cs ;
 interrupt ( 0x21s ) ;
-  
 
-   
-    
-       
-   
-  
- }
+
+
+
+
+
+
+}
 
 void swap ( char * leftValuePtr , char * rightValuePtr , int valueSize ) {
 int index ;

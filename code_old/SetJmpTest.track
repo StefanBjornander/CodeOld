@@ -23,18 +23,18 @@ divide$4:	; push float y
 17:		fld qword [bp + 14]
 19:	
 
-divide$5:	; £temporary3834 = x / y
+divide$5:	; £temporary3804 = x / y
 20:		fdiv
 22:	
 
-divide$6:	; return_value = £temporary3834
+divide$6:	; return_value = £temporary3804
 24:	
 
 divide$7:	; return
-25:		mov t2508, [bp]
+25:		mov t2459, [bp]
 26:		mov di, [bp + 4]
 27:		mov bp, [bp + 2]
-28:		jmp t2508
+28:		jmp t2459
 30:	
 
 divide$8:	; p = string_Division20by20Zero2E#
@@ -49,8 +49,8 @@ divide$10:	; parameter buffer, offset 6
 38:	
 
 divide$11:	; parameter p, offset 8
-39:		mov a2509, [bp + 22]
-40:		mov [bp + 32], a2509
+39:		mov a2460, [bp + 22]
+40:		mov [bp + 32], a2460
 42:	
 
 divide$12:	; call function noellipse-noellipse longjmp
@@ -71,10 +71,10 @@ divide$15:	; return_value = 0
 55:	
 
 divide$16:	; return
-56:		mov t2510, [bp]
+56:		mov t2461, [bp]
 57:		mov di, [bp + 4]
 58:		mov bp, [bp + 2]
-59:		jmp t2510
+59:		jmp t2461
 61:	
 
 divide$17:	; function end divide
@@ -109,17 +109,17 @@ invers$5:	; call function noellipse-noellipse divide
 invers$6:	; post call
 23:	
 
-invers$7:	; £temporary3838 = return_value
+invers$7:	; £temporary3808 = return_value
 25:	
 
-invers$8:	; return_value = £temporary3838
+invers$8:	; return_value = £temporary3808
 27:	
 
 invers$9:	; return
-28:		mov t2511, [bp]
+28:		mov t2462, [bp]
 29:		mov di, [bp + 4]
 30:		mov bp, [bp + 2]
-31:		jmp t2511
+31:		jmp t2462
 33:	
 
 invers$10:	; function end invers
@@ -142,11 +142,11 @@ setjmp_test$2:	; call function noellipse-noellipse setjmp
 setjmp_test$3:	; post call
 14:	
 
-setjmp_test$4:	; £temporary3841 = return_value
+setjmp_test$4:	; £temporary3811 = return_value
 19:	
 
-setjmp_test$5:	; p = £temporary3841
-20:		mov [bp + 14], t2513
+setjmp_test$5:	; p = £temporary3811
+20:		mov [bp + 14], t2464
 22:	
 
 setjmp_test$6:	; if p != 0 goto 21
@@ -190,10 +190,10 @@ setjmp_test$14:	; call function noellipse-noellipse invers
 setjmp_test$15:	; post call
 53:	
 
-setjmp_test$16:	; £temporary3843 = return_value
+setjmp_test$16:	; £temporary3813 = return_value
 55:	
 
-setjmp_test$17:	; parameter £temporary3843, offset 16
+setjmp_test$17:	; parameter £temporary3813, offset 16
 56:		fstp qword [bp + 32]
 58:	
 
@@ -221,13 +221,13 @@ setjmp_test$22:	; parameter string_p203D203C25s3E203C25u3E0A#, offset 6
 76:	
 
 setjmp_test$23:	; parameter p, offset 8
-77:		mov a2514, [bp + 14]
-78:		mov [bp + 24], a2514
+77:		mov a2465, [bp + 14]
+78:		mov [bp + 24], a2465
 80:	
 
 setjmp_test$24:	; parameter p, offset 10
-81:		mov a2515, [bp + 14]
-82:		mov [bp + 26], a2515
+81:		mov a2466, [bp + 14]
+82:		mov [bp + 26], a2466
 84:	
 
 setjmp_test$25:	; call function noellipse-ellipse printf, extra 0
@@ -243,10 +243,10 @@ setjmp_test$26:	; post call
 94:	
 
 setjmp_test$27:	; return
-95:		mov t2516, [bp]
+95:		mov t2467, [bp]
 96:		mov di, [bp + 4]
 97:		mov bp, [bp + 2]
-98:		jmp t2516
+98:		jmp t2467
 100:	
 
 setjmp_test$28:	; function end setjmp_test

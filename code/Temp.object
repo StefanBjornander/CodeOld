@@ -1,362 +1,362 @@
 1:	
 
-@29$existsTempName:	; index = 0
+@23$existsTempName:	; index = 0
 2:		mov word [bp + 8], 0
 4:	
 
-@29$existsTempName$1:	; if index >= g_tempSize goto 16
-5:		mov ax, [@28$g_tempSize]
+@23$existsTempName$1:	; if index >= g_tempSize goto 16
+5:		mov ax, [@22$g_tempSize]
 6:		cmp [bp + 8], ax
-7:		jge @29$existsTempName$16
+7:		jge @23$existsTempName$16
 9:	
 
-@29$existsTempName$2:	; call header integral zero 0 stack zero 0
+@23$existsTempName$2:	; call header integral zero 0 stack zero 0
 11:	
 
-@29$existsTempName$3:	; parameter name, offset 6
+@23$existsTempName$3:	; parameter name, offset 6
 12:		mov ax, [bp + 6]
 13:		mov [bp + 16], ax
 15:	
 
-@29$existsTempName$4:	; £temporary1180 = index * 2
+@23$existsTempName$4:	; £temporary1180 = index * 2
 16:		mov ax, [bp + 8]
 18:		xor dx, dx
 19:		mul word [int2$2#]
 25:	
 
-@29$existsTempName$5:	; £temporary1181 = g_tempArray + £temporary1180
-26:		mov si, @27$g_tempArray
+@23$existsTempName$5:	; £temporary1181 = g_tempArray + £temporary1180
+26:		mov si, @21$g_tempArray
 27:		add si, ax
 29:	
 
-@29$existsTempName$6:	; £temporary1179 -> £temporary1181 = *£temporary1181
+@23$existsTempName$6:	; £temporary1179 -> £temporary1181 = *£temporary1181
 31:	
 
-@29$existsTempName$7:	; parameter £temporary1179 -> £temporary1181, offset 8
+@23$existsTempName$7:	; parameter £temporary1179 -> £temporary1181, offset 8
 32:		mov ax, [si]
 33:		mov [bp + 18], ax
 35:	
 
-@29$existsTempName$8:	; call function noellipse-noellipse strcmp
-36:		mov word [bp + 10], @29$existsTempName$9
+@23$existsTempName$8:	; call function noellipse-noellipse strcmp
+36:		mov word [bp + 10], @23$existsTempName$9
 37:		mov [bp + 12], bp
 38:		add bp, 10
 39:		jmp strcmp
 41:	
 
-@29$existsTempName$9:	; post call
+@23$existsTempName$9:	; post call
 43:	
 
-@29$existsTempName$10:	; £temporary1182 = return_value
+@23$existsTempName$10:	; £temporary1182 = return_value
 48:	
 
-@29$existsTempName$11:	; if £temporary1182 != 0 goto 14
+@23$existsTempName$11:	; if £temporary1182 != 0 goto 14
 49:		cmp bx, 0
-50:		jne @29$existsTempName$14
+50:		jne @23$existsTempName$14
 52:	
 
-@29$existsTempName$12:	; return_value = 1
+@23$existsTempName$12:	; return_value = 1
 53:		mov bx, 1
 55:	
 
-@29$existsTempName$13:	; return
+@23$existsTempName$13:	; return
 56:		mov ax, [bp]
 57:		mov di, [bp + 4]
 58:		mov bp, [bp + 2]
 59:		jmp ax
 61:	
 
-@29$existsTempName$14:	; ++index
+@23$existsTempName$14:	; ++index
 62:		inc word [bp + 8]
 64:	
 
-@29$existsTempName$15:	; goto 1
-65:		jmp @29$existsTempName$1
+@23$existsTempName$15:	; goto 1
+65:		jmp @23$existsTempName$1
 67:	
 
-@29$existsTempName$16:	; return_value = 0
+@23$existsTempName$16:	; return_value = 0
 68:		mov bx, 0
 70:	
 
-@29$existsTempName$17:	; return
+@23$existsTempName$17:	; return
 71:		mov ax, [bp]
 72:		mov di, [bp + 4]
 73:		mov bp, [bp + 2]
 74:		jmp ax
 76:	
 
-@29$existsTempName$18:	; function end existsTempName
+@23$existsTempName$18:	; function end existsTempName
 1:	
 
-@30$generateTempName:	; if size >= 3 goto 57
+@24$generateTempName:	; if size >= 3 goto 57
 2:		cmp word [bp + 8], 3
-3:		jge @30$generateTempName$57
+3:		jge @24$generateTempName$57
 5:	
 
-@30$generateTempName$1:	; c = 97
+@24$generateTempName$1:	; c = 97
 6:		mov byte [bp + 12], 97
 8:	
 
-@30$generateTempName$2:	; if c > 122 goto 57
+@24$generateTempName$2:	; if c > 122 goto 57
 9:		cmp byte [bp + 12], 122
-10:		jg @30$generateTempName$57
+10:		jg @24$generateTempName$57
 12:	
 
-@30$generateTempName$3:	; £temporary1190 = name + size
+@24$generateTempName$3:	; £temporary1190 = name + size
 13:		mov si, [bp + 6]
 14:		add si, [bp + 8]
 16:	
 
-@30$generateTempName$4:	; £temporary1189 -> £temporary1190 = *£temporary1190
+@24$generateTempName$4:	; £temporary1189 -> £temporary1190 = *£temporary1190
 18:	
 
-@30$generateTempName$5:	; £temporary1189 -> £temporary1190 = c
+@24$generateTempName$5:	; £temporary1189 -> £temporary1190 = c
 19:		mov al, [bp + 12]
 20:		mov [si], al
 22:	
 
-@30$generateTempName$6:	; £temporary1191 = size + 1
+@24$generateTempName$6:	; £temporary1191 = size + 1
 23:		mov ax, [bp + 8]
 24:		add ax, 1
 26:	
 
-@30$generateTempName$7:	; £temporary1193 = name + £temporary1191
+@24$generateTempName$7:	; £temporary1193 = name + £temporary1191
 27:		mov si, [bp + 6]
 28:		add si, ax
 30:	
 
-@30$generateTempName$8:	; £temporary1192 -> £temporary1193 = *£temporary1193
+@24$generateTempName$8:	; £temporary1192 -> £temporary1193 = *£temporary1193
 32:	
 
-@30$generateTempName$9:	; £temporary1192 -> £temporary1193 = 0
+@24$generateTempName$9:	; £temporary1192 -> £temporary1193 = 0
 33:		mov byte [si], 0
 35:	
 
-@30$generateTempName$10:	; call header integral zero 0 stack zero 0
+@24$generateTempName$10:	; call header integral zero 0 stack zero 0
 37:	
 
-@30$generateTempName$11:	; parameter name, offset 6
+@24$generateTempName$11:	; parameter name, offset 6
 38:		mov ax, [bp + 6]
 39:		mov [bp + 19], ax
 41:	
 
-@30$generateTempName$12:	; call function noellipse-noellipse fileexists
-42:		mov word [bp + 13], @30$generateTempName$13
+@24$generateTempName$12:	; call function noellipse-noellipse fileexists
+42:		mov word [bp + 13], @24$generateTempName$13
 43:		mov [bp + 15], bp
 44:		add bp, 13
 45:		jmp fileexists
 47:	
 
-@30$generateTempName$13:	; post call
+@24$generateTempName$13:	; post call
 49:	
 
-@30$generateTempName$14:	; £temporary1194 = return_value
+@24$generateTempName$14:	; £temporary1194 = return_value
 54:	
 
-@30$generateTempName$15:	; if £temporary1194 != 0 goto 43
+@24$generateTempName$15:	; if £temporary1194 != 0 goto 43
 55:		cmp bx, 0
-56:		jne @30$generateTempName$43
+56:		jne @24$generateTempName$43
 58:	
 
-@30$generateTempName$16:	; case status == 0 goto 20
+@24$generateTempName$16:	; case status == 0 goto 20
 59:		mov ax, [bp + 10]
 60:		cmp ax, 0
-61:		je @30$generateTempName$20
+61:		je @24$generateTempName$20
 63:	
 
-@30$generateTempName$17:	; case status == 1 goto 22
+@24$generateTempName$17:	; case status == 1 goto 22
 64:		cmp ax, 1
-65:		je @30$generateTempName$22
+65:		je @24$generateTempName$22
 67:	
 
-@30$generateTempName$18:	; case end status
+@24$generateTempName$18:	; case end status
 69:	
 
-@30$generateTempName$19:	; goto 43
-70:		jmp @30$generateTempName$43
+@24$generateTempName$19:	; goto 43
+70:		jmp @24$generateTempName$43
 72:	
 
-@30$generateTempName$20:	; return_value = name
+@24$generateTempName$20:	; return_value = name
 73:		mov bx, [bp + 6]
 75:	
 
-@30$generateTempName$21:	; return
+@24$generateTempName$21:	; return
 76:		mov ax, [bp]
 77:		mov di, [bp + 4]
 78:		mov bp, [bp + 2]
 79:		jmp ax
 81:	
 
-@30$generateTempName$22:	; call header integral zero 0 stack zero 0
+@24$generateTempName$22:	; call header integral zero 0 stack zero 0
 83:	
 
-@30$generateTempName$23:	; parameter name, offset 6
+@24$generateTempName$23:	; parameter name, offset 6
 84:		mov ax, [bp + 6]
 85:		mov [bp + 19], ax
 87:	
 
-@30$generateTempName$24:	; call function noellipse-noellipse existsTempName
-88:		mov word [bp + 13], @30$generateTempName$25
+@24$generateTempName$24:	; call function noellipse-noellipse existsTempName
+88:		mov word [bp + 13], @24$generateTempName$25
 89:		mov [bp + 15], bp
 90:		add bp, 13
-91:		jmp @29$existsTempName
+91:		jmp @23$existsTempName
 93:	
 
-@30$generateTempName$25:	; post call
+@24$generateTempName$25:	; post call
 95:	
 
-@30$generateTempName$26:	; £temporary1197 = return_value
+@24$generateTempName$26:	; £temporary1197 = return_value
 100:	
 
-@30$generateTempName$27:	; if £temporary1197 != 0 goto 43
+@24$generateTempName$27:	; if £temporary1197 != 0 goto 43
 101:		cmp bx, 0
-102:		jne @30$generateTempName$43
+102:		jne @24$generateTempName$43
 104:	
 
-@30$generateTempName$28:	; call header integral zero 0 stack zero 0
+@24$generateTempName$28:	; call header integral zero 0 stack zero 0
 106:	
 
-@30$generateTempName$29:	; £temporary1201 = g_tempSize * 2
-107:		mov ax, [@28$g_tempSize]
+@24$generateTempName$29:	; £temporary1201 = g_tempSize * 2
+107:		mov ax, [@22$g_tempSize]
 109:		xor dx, dx
 110:		mul word [int2$2#]
 116:	
 
-@30$generateTempName$30:	; £temporary1202 = g_tempArray + £temporary1201
-117:		mov si, @27$g_tempArray
+@24$generateTempName$30:	; £temporary1202 = g_tempArray + £temporary1201
+117:		mov si, @21$g_tempArray
 118:		add si, ax
 120:	
 
-@30$generateTempName$31:	; £temporary1200 -> £temporary1202 = *£temporary1202
+@24$generateTempName$31:	; £temporary1200 -> £temporary1202 = *£temporary1202
 122:	
 
-@30$generateTempName$32:	; parameter £temporary1200 -> £temporary1202, offset 6
+@24$generateTempName$32:	; parameter £temporary1200 -> £temporary1202, offset 6
 123:		mov ax, [si]
 124:		mov [bp + 19], ax
 126:	
 
-@30$generateTempName$33:	; parameter name, offset 8
+@24$generateTempName$33:	; parameter name, offset 8
 127:		mov ax, [bp + 6]
 128:		mov [bp + 21], ax
 130:	
 
-@30$generateTempName$34:	; call function noellipse-noellipse strcpy
-131:		mov word [bp + 13], @30$generateTempName$35
+@24$generateTempName$34:	; call function noellipse-noellipse strcpy
+131:		mov word [bp + 13], @24$generateTempName$35
 132:		mov [bp + 15], bp
 133:		add bp, 13
 134:		jmp strcpy
 136:	
 
-@30$generateTempName$35:	; post call
+@24$generateTempName$35:	; post call
 138:	
 
-@30$generateTempName$36:	; £temporary1204 = g_tempSize
-139:		mov ax, [@28$g_tempSize]
+@24$generateTempName$36:	; £temporary1204 = g_tempSize
+139:		mov ax, [@22$g_tempSize]
 141:	
 
-@30$generateTempName$37:	; ++g_tempSize
-142:		inc word [@28$g_tempSize]
+@24$generateTempName$37:	; ++g_tempSize
+142:		inc word [@22$g_tempSize]
 144:	
 
-@30$generateTempName$38:	; £temporary1206 = £temporary1204 * 2
+@24$generateTempName$38:	; £temporary1206 = £temporary1204 * 2
 146:		xor dx, dx
 147:		mul word [int2$2#]
 153:	
 
-@30$generateTempName$39:	; £temporary1207 = g_tempArray + £temporary1206
-154:		mov si, @27$g_tempArray
+@24$generateTempName$39:	; £temporary1207 = g_tempArray + £temporary1206
+154:		mov si, @21$g_tempArray
 155:		add si, ax
 157:	
 
-@30$generateTempName$40:	; £temporary1205 -> £temporary1207 = *£temporary1207
+@24$generateTempName$40:	; £temporary1205 -> £temporary1207 = *£temporary1207
 159:	
 
-@30$generateTempName$41:	; return_value = £temporary1205 -> £temporary1207
+@24$generateTempName$41:	; return_value = £temporary1205 -> £temporary1207
 160:		mov bx, [si]
 162:	
 
-@30$generateTempName$42:	; return
+@24$generateTempName$42:	; return
 163:		mov ax, [bp]
 164:		mov di, [bp + 4]
 165:		mov bp, [bp + 2]
 166:		jmp ax
 168:	
 
-@30$generateTempName$43:	; call header integral zero 0 stack zero 0
+@24$generateTempName$43:	; call header integral zero 0 stack zero 0
 170:	
 
-@30$generateTempName$44:	; parameter name, offset 6
+@24$generateTempName$44:	; parameter name, offset 6
 171:		mov ax, [bp + 6]
 172:		mov [bp + 19], ax
 174:	
 
-@30$generateTempName$45:	; £temporary1208 = size + 1
+@24$generateTempName$45:	; £temporary1208 = size + 1
 175:		mov ax, [bp + 8]
 176:		add ax, 1
 178:	
 
-@30$generateTempName$46:	; parameter £temporary1208, offset 8
+@24$generateTempName$46:	; parameter £temporary1208, offset 8
 179:		mov [bp + 21], ax
 181:	
 
-@30$generateTempName$47:	; parameter status, offset 10
+@24$generateTempName$47:	; parameter status, offset 10
 182:		mov ax, [bp + 10]
 183:		mov [bp + 23], ax
 185:	
 
-@30$generateTempName$48:	; call function noellipse-noellipse generateTempName
-186:		mov word [bp + 13], @30$generateTempName$49
+@24$generateTempName$48:	; call function noellipse-noellipse generateTempName
+186:		mov word [bp + 13], @24$generateTempName$49
 187:		mov [bp + 15], bp
 188:		add bp, 13
-189:		jmp @30$generateTempName
+189:		jmp @24$generateTempName
 191:	
 
-@30$generateTempName$49:	; post call
+@24$generateTempName$49:	; post call
 193:	
 
-@30$generateTempName$50:	; £temporary1209 = return_value
+@24$generateTempName$50:	; £temporary1209 = return_value
 198:	
 
-@30$generateTempName$51:	; result = £temporary1209
+@24$generateTempName$51:	; result = £temporary1209
 199:		mov [bp + 13], bx
 201:	
 
-@30$generateTempName$52:	; if result == 0 goto 55
+@24$generateTempName$52:	; if result == 0 goto 55
 202:		cmp word [bp + 13], 0
-203:		je @30$generateTempName$55
+203:		je @24$generateTempName$55
 205:	
 
-@30$generateTempName$53:	; return_value = result
+@24$generateTempName$53:	; return_value = result
 206:		mov bx, [bp + 13]
 208:	
 
-@30$generateTempName$54:	; return
+@24$generateTempName$54:	; return
 209:		mov ax, [bp]
 210:		mov di, [bp + 4]
 211:		mov bp, [bp + 2]
 212:		jmp ax
 214:	
 
-@30$generateTempName$55:	; ++c
+@24$generateTempName$55:	; ++c
 215:		inc byte [bp + 12]
 217:	
 
-@30$generateTempName$56:	; goto 2
-218:		jmp @30$generateTempName$2
+@24$generateTempName$56:	; goto 2
+218:		jmp @24$generateTempName$2
 220:	
 
-@30$generateTempName$57:	; return_value = 0
+@24$generateTempName$57:	; return_value = 0
 221:		mov bx, 0
 223:	
 
-@30$generateTempName$58:	; return
+@24$generateTempName$58:	; return
 224:		mov ax, [bp]
 225:		mov di, [bp + 4]
 226:		mov bp, [bp + 2]
 227:		jmp ax
 229:	
 
-@30$generateTempName$59:	; function end generateTempName
+@24$generateTempName$59:	; function end generateTempName
 1:	
 
 tmpfile:	; call header integral zero 0 stack zero 0
@@ -379,7 +379,7 @@ tmpfile$4:	; call function noellipse-noellipse generateTempName
 14:		mov word [bp + 12], tmpfile$5
 15:		mov [bp + 14], bp
 16:		add bp, 12
-17:		jmp @30$generateTempName
+17:		jmp @24$generateTempName
 19:	
 
 tmpfile$5:	; post call
@@ -461,7 +461,7 @@ tmpfile$22:	; function end tmpfile
 1:	
 
 tmpnam:	; if g_tempSize >= 16 goto 10
-2:		cmp word [@28$g_tempSize], 16
+2:		cmp word [@22$g_tempSize], 16
 3:		jge tmpnam$10
 5:	
 
@@ -485,7 +485,7 @@ tmpnam$5:	; call function noellipse-noellipse generateTempName
 18:		mov word [bp + 8], tmpnam$6
 19:		mov [bp + 10], bp
 20:		add bp, 8
-21:		jmp @30$generateTempName
+21:		jmp @24$generateTempName
 23:	
 
 tmpnam$6:	; post call

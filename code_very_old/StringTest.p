@@ -1,6 +1,6 @@
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ErrNo.h,1$
-   
-   
+
+
 
 
 
@@ -61,62 +61,57 @@ FTELL , FSIZE , FREMOVE , FRENAME , FTEMPNAME , FTEMPFILE };
 
 extern int errno ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StringTest.c,0$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StringTest.c,1$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-   
-   
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-   
-   
 
-    
-    
-    
 
-extern double exp ( double value ) ;
-extern double log ( double value ) ;
-extern double log10 ( double value ) ;
-extern int log10_int ( double value ) ;
-extern double pow ( double base , double exponent ) ;
-extern double pow_int ( double base , int exponent ) ;
 
-extern double ldexp ( double value , int exponent ) ;
-extern double frexp ( double value , int * exponent ) ;
 
-extern double sin ( double value ) ;
-extern double cos ( double value ) ;
-extern double tan ( double value ) ;
 
-extern double sinh ( double value ) ;
-extern double cosh ( double value ) ;
-extern double tanh ( double value ) ;
 
-extern double sqrt ( double value ) ;
 
-extern double asin ( double value ) ;
-extern double acos ( double value ) ;
-extern double atan ( double value ) ;
-extern double atan2 ( double num , double denum ) ;
+extern double exp ( double x ) ;
+extern double log ( double x ) ;
+extern double log10 ( double x ) ;
 
-extern double floor ( double value ) ;
-extern double ceil ( double value ) ;
-extern double round ( double value ) ;
-extern double fabs ( double value ) ;
+extern double pow ( double x , double y ) ;
+extern double ldexp ( double x , int exponent ) ;
+extern double frexp ( double x , int * exponent ) ;
 
-extern double modf ( double value , double * integralPart ) ;
-extern double fmod ( double num , double denum ) ;
+extern double sqrt ( double x ) ;
+extern double modf ( double x , double * integral ) ;
+extern double fmod ( double x , double y ) ;
 
-  
+extern double sin ( double x ) ;
+extern double cos ( double x ) ;
+extern double tan ( double x ) ;
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
-       
+extern double sinh ( double x ) ;
+extern double cosh ( double x ) ;
+extern double tanh ( double x ) ;
+
+extern double asin ( double x ) ;
+extern double acos ( double x ) ;
+extern double atan ( double x ) ;
+extern double atan2 ( double x , double y ) ;
+
+extern double floor ( double x ) ;
+extern double ceil ( double x ) ;
+extern double round ( double x ) ;
+extern double fabs ( double x ) ;
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-   
-   
+
+
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -132,51 +127,48 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
-   
-   
-
-     
-                         
-                    
-               
-      
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
 
-          
 
-    
-    
 
-    
-    
-    
 
-  
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-   
-   
 
-    
-    
 
-    
 
-    
+
+
+
+
+
+
 
 typedef unsigned int UINT ;
 
@@ -195,22 +187,22 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-   
-    
-    
-    
-    
 
-    
 
-    
-    
-    
-    
-    
-  
 
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -243,32 +235,30 @@ int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-   
-   
 
-    
-    
+
+
+
+
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
-   
-   
 
-    
-    
 
-    
+
+
+
+
+
 
 extern int g_inStatus , g_inChars ;
 extern void * g_inDevice ;
@@ -287,16 +277,15 @@ int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
 int sscanf ( char * inString , char * format , ... ) ;
 int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-   
-   
 
-    
-    
+
+
+
+
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -327,20 +316,18 @@ int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
 int sprintf ( char * outString , char * format , ... ) ;
 int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-       
 
-  
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StringTest.c,1$
-       
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StringTest.c,2$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,1$
-   
-   
 
-    
+
+
+
 
 extern char * strcpy ( char * target , const char * source ) ;
 extern char * strncpy ( char * target , const char * source , int size ) ;
@@ -363,66 +350,66 @@ extern int memcmp ( const void * left , const void * right , int size ) ;
 extern void * memchr ( const void * block , int i , int size ) ;
 extern void * memset ( void * block , int i , int size ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StringTest.c,2$
-       
 
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StringTest.c,3$
+
+
 
 void string_test ( void ) {
 int i ;
-char * s = "Hello, World!" , t [ 100 ] , u [ 100 ] , * p ;
-printf ( "strlen(\"%s\") = %i\n" , s , strlen ( s ) ) ;
+char * s = "\110\145\154\154\157\054\040\127\157\162\154\144\041" , t [ 100 ] , u [ 100 ] , * p ;
+printf ( "\163\164\162\154\145\156\050\042\045\163\042\051\040\075\040\045\151\012" , s , strlen ( s ) ) ;
 
 strcpy ( t , s ) ;
 strncpy ( u , s , 5 ) ;
-u [ 5 ] = '\0' ;
-printf ( "t = \"%s\", u = \"%s\"\n" , t , u ) ;
+u [ 5 ] = '\000' ;
+printf ( "\164\040\075\040\042\045\163\042\054\040\165\040\075\040\042\045\163\042\012" , t , u ) ;
 
-strcat ( t , "abc" ) ;
+strcat ( t , "\141\142\143" ) ;
 i = strlen ( u ) ;
-strncat ( u , "abc" , 2 ) ;
-u [ i + 2 ] = '\0' ;
-printf ( "t = \"%s\", u = \"%s\"\n" , t , u ) ;
+strncat ( u , "\141\142\143" , 2 ) ;
+u [ i + 2 ] = '\000' ;
+printf ( "\164\040\075\040\042\045\163\042\054\040\165\040\075\040\042\045\163\042\012" , t , u ) ;
 
-printf ( "strcmp(s, u) = %i\n" , strcmp ( s , u ) ) ;
-printf ( "strncmp(s, u, 2) = %i\n" , strncmp ( s , u , 2 ) ) ;
+printf ( "\163\164\162\143\155\160\050\163\054\040\165\051\040\075\040\045\151\012" , strcmp ( s , u ) ) ;
+printf ( "\163\164\162\156\143\155\160\050\163\054\040\165\054\040\062\051\040\075\040\045\151\012" , strncmp ( s , u , 2 ) ) ;
 
-p = strchr ( s , 'l' ) ;
-printf ( "strchr(s, 'l') = %i\n" , ( p != ( ( void * ) 0 ) ) ? ( p - s ) : -1 ) ;
+p = strchr ( s , '\154' ) ;
+printf ( "\163\164\162\143\150\162\050\163\054\040\047\154\047\051\040\075\040\045\151\012" , ( p != ( ( void * ) 0 ) ) ? ( p - s ) : -1 ) ;
 
-p = strrchr ( s , 'l' ) ;
-printf ( "strrchr(s, 'l') = %i\n" , ( p != ( ( void * ) 0 ) ) ? ( p - s ) : -1 ) ;
+p = strrchr ( s , '\154' ) ;
+printf ( "\163\164\162\162\143\150\162\050\163\054\040\047\154\047\051\040\075\040\045\151\012" , ( p != ( ( void * ) 0 ) ) ? ( p - s ) : -1 ) ;
 
-p = strchr ( s , 'x' ) ;
-printf ( "strchr(s, 'x') = %i\n" , ( p != ( ( void * ) 0 ) ) ? ( p - s ) : -1 ) ;
+p = strchr ( s , '\170' ) ;
+printf ( "\163\164\162\143\150\162\050\163\054\040\047\170\047\051\040\075\040\045\151\012" , ( p != ( ( void * ) 0 ) ) ? ( p - s ) : -1 ) ;
 
-p = strrchr ( s , 'x' ) ;
-printf ( "strrchr(s, 'x') = %i\n" , ( p != ( ( void * ) 0 ) ) ? ( p - s ) : -1 ) ;
+p = strrchr ( s , '\170' ) ;
+printf ( "\163\164\162\162\143\150\162\050\163\054\040\047\170\047\051\040\075\040\045\151\012" , ( p != ( ( void * ) 0 ) ) ? ( p - s ) : -1 ) ;
 
-memcpy ( s , "Hello, World!" , 20 * sizeof ( char ) ) ;
-memmove ( t , "Hello, World!" , 20 * sizeof ( char ) ) ;
-memset ( u , 'X' , 20 * sizeof ( char ) ) ;
-u [ 20 - 1 ] = '\0' ;
-printf ( "s = \"%s\", t = \"%s\", u = \"%s\"\n" , s , t , u ) ;
+memcpy ( s , "\110\145\154\154\157\054\040\127\157\162\154\144\041" , 20 * sizeof ( char ) ) ;
+memmove ( t , "\110\145\154\154\157\054\040\127\157\162\154\144\041" , 20 * sizeof ( char ) ) ;
+memset ( u , '\130' , 20 * sizeof ( char ) ) ;
+u [ 20 - 1 ] = '\000' ;
+printf ( "\163\040\075\040\042\045\163\042\054\040\164\040\075\040\042\045\163\042\054\040\165\040\075\040\042\045\163\042\012" , s , t , u ) ;
 
-p = memchr ( s , 'l' , 20 * sizeof ( char ) ) ;
-printf ( "memchr(s, 'l', SIZE * sizeof(char)) = %i\n" , ( p != ( ( void * ) 0 ) ) ? ( p - s ) : -1 ) ;
+p = memchr ( s , '\154' , 20 * sizeof ( char ) ) ;
+printf ( "\155\145\155\143\150\162\050\163\054\040\047\154\047\054\040\123\111\132\105\040\052\040\163\151\172\145\157\146\050\143\150\141\162\051\051\040\075\040\045\151\012" , ( p != ( ( void * ) 0 ) ) ? ( p - s ) : -1 ) ;
 
-p = memchr ( s , 'x' , 20 * sizeof ( char ) ) ;
-printf ( "memchr(s, 'x', SIZE * sizeof(char)) = %i\n" , ( p != ( ( void * ) 0 ) ) ? ( p - s ) : -1 ) ;
+p = memchr ( s , '\170' , 20 * sizeof ( char ) ) ;
+printf ( "\155\145\155\143\150\162\050\163\054\040\047\170\047\054\040\123\111\132\105\040\052\040\163\151\172\145\157\146\050\143\150\141\162\051\051\040\075\040\045\151\012" , ( p != ( ( void * ) 0 ) ) ? ( p - s ) : -1 ) ;
 
-printf ( "memcmp(s, t, SIZE * sizeof(char)) = %i\n" , memcmp ( s , t , 20 * sizeof ( char ) ) ) ;
+printf ( "\155\145\155\143\155\160\050\163\054\040\164\054\040\123\111\132\105\040\052\040\163\151\172\145\157\146\050\143\150\141\162\051\051\040\075\040\045\151\012" , memcmp ( s , t , 20 * sizeof ( char ) ) ) ;
 
-printf ( "strspn(s, \"Hello, C\") = %i\n" , strspn ( s , "Hello, C" ) ) ;
-printf ( "strcspn(s, \"Hello, C\") = %i\n" , strcspn ( s , "Hello, C" ) ) ;
+printf ( "\163\164\162\163\160\156\050\163\054\040\042\110\145\154\154\157\054\040\103\042\051\040\075\040\045\151\012" , strspn ( s , "\110\145\154\154\157\054\040\103" ) ) ;
+printf ( "\163\164\162\143\163\160\156\050\163\054\040\042\110\145\154\154\157\054\040\103\042\051\040\075\040\045\151\012" , strcspn ( s , "\110\145\154\154\157\054\040\103" ) ) ;
 
-printf ( "strerror(errno) = \"%s\"\n" , strerror ( errno ) ) ;
+printf ( "\163\164\162\145\162\162\157\162\050\145\162\162\156\157\051\040\075\040\042\045\163\042\012" , strerror ( errno ) ) ;
 
-p = strtok ( s , "," ) ;
+p = strtok ( s , "\054" ) ;
 while ( p != ( ( void * ) 0 ) ) {
-printf ( "strtok(s, \",\") = \"%s\"\n" , p ) ;
-p = strtok ( ( ( void * ) 0 ) , "," ) ;
+printf ( "\163\164\162\164\157\153\050\163\054\040\042\054\042\051\040\075\040\042\045\163\042\012" , p ) ;
+p = strtok ( ( ( void * ) 0 ) , "\054" ) ;
 }
 }
+

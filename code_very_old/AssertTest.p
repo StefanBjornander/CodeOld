@@ -1,55 +1,51 @@
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-   
-   
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-   
-   
 
-    
-    
-    
 
-extern double exp ( double value ) ;
-extern double log ( double value ) ;
-extern double log10 ( double value ) ;
-extern int log10_int ( double value ) ;
-extern double pow ( double base , double exponent ) ;
-extern double pow_int ( double base , int exponent ) ;
 
-extern double ldexp ( double value , int exponent ) ;
-extern double frexp ( double value , int * exponent ) ;
 
-extern double sin ( double value ) ;
-extern double cos ( double value ) ;
-extern double tan ( double value ) ;
 
-extern double sinh ( double value ) ;
-extern double cosh ( double value ) ;
-extern double tanh ( double value ) ;
 
-extern double sqrt ( double value ) ;
 
-extern double asin ( double value ) ;
-extern double acos ( double value ) ;
-extern double atan ( double value ) ;
-extern double atan2 ( double num , double denum ) ;
+extern double exp ( double x ) ;
+extern double log ( double x ) ;
+extern double log10 ( double x ) ;
 
-extern double floor ( double value ) ;
-extern double ceil ( double value ) ;
-extern double round ( double value ) ;
-extern double fabs ( double value ) ;
+extern double pow ( double x , double y ) ;
+extern double ldexp ( double x , int exponent ) ;
+extern double frexp ( double x , int * exponent ) ;
 
-extern double modf ( double value , double * integralPart ) ;
-extern double fmod ( double num , double denum ) ;
+extern double sqrt ( double x ) ;
+extern double modf ( double x , double * integral ) ;
+extern double fmod ( double x , double y ) ;
 
-  
+extern double sin ( double x ) ;
+extern double cos ( double x ) ;
+extern double tan ( double x ) ;
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
-       
+extern double sinh ( double x ) ;
+extern double cosh ( double x ) ;
+extern double tanh ( double x ) ;
+
+extern double asin ( double x ) ;
+extern double acos ( double x ) ;
+extern double atan ( double x ) ;
+extern double atan2 ( double x , double y ) ;
+
+extern double floor ( double x ) ;
+extern double ceil ( double x ) ;
+extern double round ( double x ) ;
+extern double fabs ( double x ) ;
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-   
-   
+
+
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -65,51 +61,48 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
-   
-   
-
-     
-                         
-                    
-               
-      
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
 
-          
 
-    
-    
 
-    
-    
-    
 
-  
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-   
-   
 
-    
-    
 
-    
 
-    
+
+
+
+
+
+
 
 typedef unsigned int UINT ;
 
@@ -128,22 +121,22 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-   
-    
-    
-    
-    
 
-    
 
-    
-    
-    
-    
-    
-  
 
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -176,32 +169,30 @@ int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-   
-   
 
-    
-    
+
+
+
+
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
-   
-   
 
-    
-    
 
-    
+
+
+
+
+
 
 extern int g_inStatus , g_inChars ;
 extern void * g_inDevice ;
@@ -220,16 +211,15 @@ int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
 int sscanf ( char * inString , char * format , ... ) ;
 int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-       
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-   
-   
 
-    
-    
+
+
+
+
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -260,42 +250,39 @@ int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
 int sprintf ( char * outString , char * format , ... ) ;
 int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-       
 
-  
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\AssertTest.c,0$
-       
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\AssertTest.c,1$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,1$
-   
-   
 
-   
+
+
+
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-   
-   
 
-       
-       
-       
-       
-       
-       
-       
-       
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,4$
-       
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,5$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
-   
-   
 
-          
+
+
+
 
 double atof ( char * s ) ;
 int atoi ( char * s ) ;
@@ -317,8 +304,8 @@ void exit ( int status ) ;
 typedef void ( * FUNC_PTR ) ( void ) ;
 int atexit ( FUNC_PTR fcn ) ;
 
-    
-    
+
+
 
 int abs ( int value ) ;
 long labs ( long value ) ;
@@ -348,32 +335,31 @@ long quot , rem ;
 } ldiv_t ;
 
 ldiv_t ldiv ( long num , long denum ) ;
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,5$
-       
-              
-     
-            
-  
-      
-  
 
-  
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,6$
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\AssertTest.c,1$
-       
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\AssertTest.c,2$
 
 void assert_test2 ( int n ) ;
 
 void assert_testX ( void ) {
 int n = 0 ;
-printf ( "Please write a number (not 6 or 7): " ) ;
-scanf ( "%i" , & n ) ;
-if ( ! ( n != 6 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 6" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\AssertTest.c" , 10 ) ; abort ( ) ; } ;
+printf ( "\120\154\145\141\163\145\040\167\162\151\164\145\040\141\040\156\165\155\142\145\162\040\050\156\157\164\040\066\040\157\162\040\067\051\072\040" ) ;
+scanf ( "\045\151" , & n ) ;
+if ( ! ( n != 6 ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\156\040\041\075\040\066" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\101\163\163\145\162\164\124\145\163\164\056\143" , 10 ) ; abort ( ) ; } ;
 assert_test2 ( n ) ;
 }
 
 void assert_test2X ( int n ) {
-if ( ! ( n != 7 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 7" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\AssertTest.c" , 15 ) ; abort ( ) ; } ;
+if ( ! ( n != 7 ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\156\040\041\075\040\067" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\101\163\163\145\162\164\124\145\163\164\056\143" , 15 ) ; abort ( ) ; } ;
 }
+

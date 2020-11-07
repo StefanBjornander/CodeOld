@@ -7,128 +7,101 @@
 #include <scanf.h>
 #include <printf.h>
 
+#define PRINT(x,y) { printf(#x " = <%" #y ">\n", (x)); }
+
 int g_inStatus, g_inChars;
 void* g_inDevice;
+int g_inCount;
 
-char scanChar(void)
-{
+/*
+char scanChar(void) {
+  char c;
+  load_register(register_ah, 0x01);
+  interrupt(0x21s);
+  store_register(c, register_al);
+  return c;
+}
+*/
+
+char scanChar(void) {
+  char c = '\0';
+  FILE* stream;
+  int handle;
+  char* inString;
+
   switch (g_inStatus) {
-    case DEVICE: {
-      char c;
-      FILE* stream = (FILE*) g_inDevice;
-      int handle = stream->handle;
+    case DEVICE:
+      stream = (FILE*) g_inDevice;
+      
+      /*if ((g_inDevice != stdin) && feof(stream)) {
+        return ((char) EOF);
+      }
+      else {*/
+        handle = stream->handle;
+        //printf("<handle %i> ", handle);
+        //printf("Test1\n");
+        /*load_register(register_ah, 0x3Fs);
+        load_register(register_bx, handle);
+        load_register(register_cx, 1);
+        load_register(register_dx, &c);*/
+#ifdef __WINDOWS__
+        register_ah = 0x3Fs;
+        register_bx = handle;
+        register_cx = 1;
+        register_dx = &c;
+        interrupt(0x21s);
+        //printf("Test2\n");
+        //int i = (int) c;
+        //printf("<char '%c' %i %i>\n", c, c, i);
+#endif
+
+#ifdef __LINUX__
+        register_rax = 0x00L;
+        register_rdi = (unsigned long) stream->handle;
+        register_rsi = (unsigned long) &c;
+        register_rdx = 1L;
+        syscall();
+#endif
+
+        ++g_inChars;
+        return c;
+      //}
+
+    case STRING:
+      inString = (char*) g_inDevice;
+      return inString[g_inChars++];
+
+    default:
+      return '\0';
+  }
+}
+
+void unscanChar(char /* c */) {
+//  FILE* stream;
+//  int handle;
+
+  switch (g_inStatus) {
+    case DEVICE:
+/*      stream = (FILE*) g_inDevice;
+      handle = stream->handle;
   
       load_register(register_ah, 0x3F);
       load_register(register_bx, handle);
       load_register(register_cx, 1);
       load_register(register_dx, &c);
       interrupt(0x21s);
-
-//      printChar(c);
-      ++g_inChars;
-      return c;
-
-/*
-      { int size;
-        short flagbyte();
-        load_flagbyte(flagbyte());
-        store_register(size, register_ax);
-        return ((carry_flag) || (size == 0)) ? EOF : handle;
-      }
-
-
-/*      load_register(register_ah, 0x01s);
-      interrupt(0x21s);
-      store_register(c, register_al);
-
-      if ((c == '\r') && (g_inDevice == stdin)) {
-        printChar('\n');
-      }
-      */
-
-
-//      return getc(stdin);
-    }
-
-    case STRING: {
-        char* inString = (char*) g_inDevice;
-        return inString[g_inChars++];
-      }
-  }
-
-  return ' ';
-}
-/*
-void unscanChar(char input)
-{
-  switch (g_inStatus) {
-    case DEVICE: {
-      char c;
-      load_register(register_ah, 0x01s);
-      interrupt(0x21s);
-      store_register(c, register_al);
+*/
       --g_inChars;
-
-//      ungetc(input, stdin);
-    }
+      break;
 
     case STRING:
       --g_inChars;
+      break;
   }
-}
-*/
-void scanString(char* string, int precision)
-{
-  int index = 0;
-  char input = scanChar();
-
-  while (isspace(input)) {
-    input = scanChar();
-  }
-
-  while (((precision == -1) || (--precision > 0)) && !isspace(input)) {
-    if (string != NULL) {
-      string[index++] = input;
-    }
-
-    input = scanChar();
-  }
-
-  if (string != NULL) {
-    string[index] = '\0';
-  }
-}
-
-BOOL exists(char c, char* s)
-{
-  int index;
-
-  for (index = 0; !((index > 0) && s[index] == ']'); ++index) {
-    if (s[index] == c) {
-      return TRUE;
-    }
-  }
-
-  return FALSE;
 }
 
 /*
-char* strchr(char* text, char c)
-{
-  int index;
-
-  for (index = 0; text[index] != '\0'; ++index) {
-    if (text[index] == c) {
-      return &text[index];
-    }
-  }
-
-  return NULL;
-}
-*/
-
-void matchString(char* string, int precision, char* mask, BOOL normal)
-{
+void scanString(char* string, int precision) {
   int index = 0;
   char input = scanChar();
 
@@ -136,135 +109,124 @@ void matchString(char* string, int precision, char* mask, BOOL normal)
     input = scanChar();
   }
 
-  while ((precision == -1) || (precision-- > 0) && !isspace(input)) {
-    char s[] = {input, '\0'};
-    BOOL exists = (strchr(mask, input) != NULL);
-
-    if ((normal && exists) || (!normal && !exists)) {
-      if (string != NULL) {
-        string[index++] = input;
-      }
-    }
-    else {
-      break;
-    }
-
+  while (!isspace(input) && (input != EOF)) {
+    string[index++] = input;
     input = scanChar();
   }
 
-//  unscanChar(input);
+  string[index] = '\0';
+  printString(string, 0);
+  printString("Hello", 0);
+}
+*/
+
+void scanPattern(char* string, char* pattern, BOOL not) {
+  int index = 0;
+  char input = scanChar();
+
+  while (isspace(input)) {
+    input = scanChar();
+  }
 
   if (string != NULL) {
+    while ((!not && strchr(pattern, input)) ||
+           (not && !strchr(pattern, input))) {
+      //printf("1: <%c>\n", input);
+      string[index++] = input;
+      input = scanChar();
+    }
+
     string[index] = '\0';
+    //printf("2: <%c>\n", input);
+  }
+  else {
+    while ((!not && strchr(pattern, input)) ||
+           (not && !strchr(pattern, input))) {
+      input = scanChar();
+    }
   }
 }
 
-long digitToValue(char input)
-{
+void scanString(char* string, int precision) {
+  int index = 0;
+  char input = scanChar();
+  BOOL found = FALSE;
+
+  while (isspace(input)) {
+    input = scanChar();
+  }
+
+  if (string != NULL) {
+    if (precision == 0) {
+              while (!isspace(input) && (input != EOF) && (input != '\n')) {
+        string[index++] = input;
+        input = scanChar();
+        found = TRUE;
+        ++g_inChars;
+      }
+
+      string[index] = '\0';
+      ++g_inChars;
+    }
+    else {
+      while ((precision-- > 0) && (!isspace(input) && (input != EOF) && (input != '\n'))) {
+        string[index++] = input;
+        input = scanChar();
+        found = TRUE;
+        ++g_inChars;
+      }
+
+      if (precision > 0) {
+        string[index] = '\0';
+        ++g_inChars;
+      }
+    }
+  }
+  else {
+    if (precision == 0) {
+      while (!isspace(input) && (input != EOF) && (input != '\n')) {
+        input = scanChar();
+        found = TRUE;
+        ++g_inChars;
+      }
+
+      ++g_inChars;
+    }
+    else {
+      while ((precision-- > 0) && (!isspace(input) && (input != EOF) && (input != '\n'))) {
+        input = scanChar();
+        found = TRUE;
+        ++g_inChars;
+      }
+
+      if (precision > 0) {
+        ++g_inChars;
+      }
+    }
+  }
+
+  if (found) {
+    ++g_inCount;
+  }
+}
+
+//----------------------------------------------------------------------------------------------------------------------
+
+unsigned long digitToValue(char input) {
   if (isdigit(input)) {
     return (input - '0');
   }
-  else {
-    return (islower(input) ? (input - 'a' + 10) : (input - 'A' + 10));
-  }
-}
-
-long scanLongInt(long base)
-{
-  long longValue = 0;
-  BOOL minus = FALSE;
-  char input = scanChar();
-
-  while (isspace(input)) {
-    input = scanChar();
-  }
-
-  if (input == '+') {
-    input = scanChar();
-  }
-  else if (input == '-') {
-    minus = TRUE;
-    input = scanChar();
-  }
-
-  if (input == '0') {
-    input = scanChar();
-
-    if (tolower(input) == 'x') {
-      base = (base == 0) ? 16 : base;
-      input = scanChar();
-    }
-    else {
-      base = (base == 0) ? 8 : base; 
-    }
-  }
-
-  if (base == 0) {
-    base = 10;
-  }
-
-  while (isalnum(input)) {
-    long digit = digitToValue(input);
-
-    if (digit < base) {
-      longValue *= base;
-      longValue += digit;
-      input = scanChar();
-    }
-    else {
-      break;
-    }
-  }
-
-  if (minus) {
-    longValue = -longValue;
-  }
-
-  return longValue;
-}
-
-unsigned long scanUnsignedLongInt(unsigned long base)
-{
-  unsigned long longValue = 0;
-  char input = scanChar();
-
-  while (isspace(input)) {
-    input = scanChar();
-  }
-
-  while (isalnum(input)) {
-    int digit = isdigit(input) ? (input - '0') : (islower(input) ? (input - 'a' + 10) : (input - 'A' + 10));
-
-    if (digit < base) {
-      longValue = (longValue * base) + digitToValue(input);
-      input = scanChar();
-    }
-    else {
-      break;
-    }
-  }
-
-  return longValue;
-}
-
-long double stringToDecimal(char* inputPtr)
-{
-  char input = scanChar();
-
-  if (isdigit(input)) {
-    double x = ((long double) (input - '0') + stringToDecimal(inputPtr));
-    return x / 10.0;
+  else if (islower(input)) {
+    return ((input - 'a') + 10ul);
   }
   else {
-    *inputPtr = input;
-    return 0;
+    return ((input - 'A') + 10ul);
   }
 }
 
-long double scanLongDouble(doublePtr)
-{
-  BOOL minus = FALSE;
-  long double doubleValue = 0;
+long scanLongInt(void) {
+  long longValue = 0l;
+  BOOL minus = FALSE, found = FALSE;
   char input = scanChar();
 
   while (isspace(input)) {
@@ -280,67 +242,150 @@ long double scanLongDouble(doublePtr)
   }
 
   while (isdigit(input)) {
-    doubleValue *= 10;
-    doubleValue += input - '0';
+    longValue = (10l * longValue) + (input - '0');
     input = scanChar();
+    found = TRUE;
+  }
+
+  if (minus) {
+    longValue = -longValue;
+  }
+
+  if (found) {
+    ++g_inCount;
+  }
+
+  unscanChar(input);
+  return longValue;
+}
+
+unsigned long scanUnsignedLongInt(unsigned long base) {
+  unsigned long unsignedLongValue = 0ul, digit;
+  char input = scanChar();
+  BOOL found = TRUE;
+
+  while (isspace(input)) {
+    input = scanChar();
+  }
+
+  if (input == '0') {
+    input = scanChar();
+
+    if (tolower(input) == 'x') {
+      base = (base == 0ul) ? 16ul : base;
+      input = scanChar();
+    }
+    else {
+      base = (base == 0ul) ? 8ul : base;
+    }
+  }
+
+  if (base == 0ul) {
+    base = 10ul;
+  }
+
+  while (isxdigit(input)) {
+    digit = digitToValue(input);
+   
+    if (digit >= base) {
+      break;
+    }
+
+    unsignedLongValue = (unsignedLongValue * base) + digit;
+    found = TRUE;
+    input = scanChar();
+  }
+
+  if (found) {
+    ++g_inCount;
+  }
+
+  unscanChar(input);
+  return unsignedLongValue;
+}
+
+//----------------------------------------------------------------------------------------------------------------------
+
+long double scanLongDouble(void) {
+  BOOL minus = FALSE, found = FALSE;
+  long double value = 0.0L, factor = 1.0L;
+  char input = scanChar();
+
+  while (isspace(input)) {
+    input = scanChar();
+  }
+
+  if (input == '+') {
+    input = scanChar();
+  }
+  else if (input == '-') {
+    minus = TRUE;
+    input = scanChar();
+  }
+
+  while (isdigit(input)) {
+    value = (10.0L * value) + ((long double) (input - '0'));
+    input = scanChar();
+    found = TRUE;
   }
 
   if (input == '.') {
-    doubleValue += stringToDecimal(&input);
-  }
-/*
-  if (tolower(input) == 'e') {
-    long expValue = 0;
-    BOOL expMinus = FALSE;
     input = scanChar();
 
-    if (input == '+') {
-      input = scanChar();
-    }
-    else if (input == '-') {
-      expMinus = TRUE;
-      input = scanChar();
-    }
-
     while (isdigit(input)) {
-      expValue = (10 * expValue) + (input - '0');
+      factor /= 10.0L;
+      value += factor * ((long double) (input - '0'));
       input = scanChar();
+      found = TRUE;
     }
-
-    printChar('A');
-    if (expMinus) {
-      expValue = -expValue;
-    }
-
-    printChar('B');
-//    doubleValue *= pow(10.0, (double) expValue);
-    printChar('C');
   }
-*/
+
+  unscanChar(input);
+
+  if (tolower(input) == 'e') {
+    double exponent = (double) scanLongInt();
+    value *= pow(10.0, exponent);
+  }
+  else {
+    unscanChar(input);
+  }
 
   if (minus) {
-    doubleValue = -doubleValue;
+    value = -value;
   }
 
-  return = doubleValue;
+  if (found) {
+    ++g_inCount;
+  }
+
+  return value;
 }
 
-int scanFormat(char* format, va_list arg_list)
-{
-	int index, count = 0, precision;
-  BOOL percent =
-    FALSE, star, shortInt, longIntOrDouble, longDouble;
+//----------------------------------------------------------------------------------------------------------------------
+
+int scanFormat(char* format, va_list arg_list) {
+  char c, *charPtr;
+  BOOL percent = FALSE, shortInt = FALSE, longIntOrDouble = FALSE, longDouble = FALSE, star = FALSE;
+
+  long longValue, *longPtr;
+  short* shortPtr;
+  int index, *intPtr, *charsPtr;
+
+  unsigned long unsignedLongValue, *unsignedLongPtr;
+  unsigned short* unsignedShortPtr;
+  unsigned int* unsignedIntPtr;
+
+  long double longDoubleValue;
+
+  g_inCount = 0;
   g_inChars = 0;
 
   for (index = 0; format[index] != '\0'; ++index) {
-    char c = format[index];
+    c = format[index];
+    int d = c + 1;
 
     if (percent) {
-      switch (c) {
-        case '*':
-          star = TRUE;
-          break;
-
+      switch (d - 1) {
         case 'h':
           shortInt = TRUE;
           break;
@@ -353,79 +398,118 @@ int scanFormat(char* format, va_list arg_list)
           longDouble = TRUE;
           break;
 
-        case 'i':
-        case 'd':
-        case 'o':
-        case 'x':
-        case 'p': {
-            long longValue, base = ((c == 'i') ? 0 : ((c == 'o') ? 8 : ((c == 'x') ? 16 : 10)));
-            scanLongInt(&longValue, base);
-
-            if (!star) {
-              if (shortInt) {
-                short* shortPtr = va_arg(arg_list, short*);
-                *shortPtr = (short) longValue;
-              }
-              else if (!longIntOrDouble) {
-                int* intPtr = va_arg(arg_list, int*);
-                *intPtr = (int) longValue;
-              }
-              else {
-                long* longPtr = va_arg(arg_list, long*);
-                *longPtr = longValue;
-              }
-              ++count;
-            }
-            percent = FALSE;
-          }
-          break;
-
-        case 'u': {
-            unsigned long longValue;
-            scanUnsignedLongInt(&longValue, 10);
-
-            if (!star) {
-              if (shortInt) {
-                unsigned short* shortPtr = va_arg(arg_list, unsigned short*);
-                *shortPtr = (unsigned short) longValue;
-              }
-              else if (!longIntOrDouble) {
-                unsigned int* intPtr = va_arg(arg_list, unsigned int*);
-                *intPtr = (unsigned int) longValue;
-              }
-              else {
-                unsigned long* longPtr = va_arg(arg_list, unsigned long*);
-                *longPtr = longValue;
-              }
-
-              ++count;
-            }
-          }
-
-          percent = FALSE;
+        case '*':
+          star = TRUE;
           break;
 
         case 'c': {
             char charValue = scanChar();
 
             if (!star) {
-              char* charPtr = va_arg(arg_list, char*);
+              charPtr = va_arg(arg_list, char*);
               *charPtr = charValue;
-              ++count;
+            }
+
+            percent = FALSE;
+
+            if (charValue != EOF) {
+              ++g_inCount;
+            }
+          }
+          break;
+
+        case 's':
+          if (!star) {
+            charPtr = va_arg(arg_list, char*);
+            scanString(charPtr, 0);
+          }
+          else {
+            scanString(NULL, 0);
+          }
+
+          percent = FALSE;
+          break;
+
+        case 'i':
+        case 'd':
+          longValue = scanLongInt();
+
+          if (!star) {
+            if (shortInt) {
+              shortPtr = va_arg(arg_list, short*);
+              *shortPtr = (short) longValue;
+            }
+            else if (!longIntOrDouble) {
+              intPtr = va_arg(arg_list, int*);
+              *intPtr = (int) longValue;
+            }
+            else {
+              longPtr = va_arg(arg_list, long*);
+              *longPtr = longValue;
             }
           }
 
           percent = FALSE;
           break;
 
-        case 's':
+        case 'o':
+          unsignedLongValue = scanUnsignedLongInt(8ul);
+
           if (!star) {
-            char* charPtr = va_arg(arg_list, char*);
-            scanString(charPtr, precision);
-            ++count;
+            if (shortInt) {
+              unsignedShortPtr = va_arg(arg_list, unsigned short*);
+              *unsignedShortPtr = (short) unsignedLongValue;
+            }
+            else if (!longIntOrDouble) {
+              unsignedIntPtr = va_arg(arg_list, unsigned int*);
+              *unsignedIntPtr = (int) unsignedLongValue;
+            }
+            else {
+              unsignedLongPtr = va_arg(arg_list, unsigned long*);
+              *unsignedLongPtr = unsignedLongValue;
+            }
           }
-          else {
-            scanString(NULL, precision);
+
+          percent = FALSE;
+          break;
+
+        case 'x':
+          unsignedLongValue = scanUnsignedLongInt(16ul);
+
+          if (!star) {
+            if (shortInt) {
+              unsignedShortPtr = va_arg(arg_list, unsigned short*);
+              *unsignedShortPtr = (short) unsignedLongValue;
+            }
+            else if (!longIntOrDouble) {
+              unsignedIntPtr = va_arg(arg_list, unsigned int*);
+              *unsignedIntPtr = (int) unsignedLongValue;
+            }
+            else {
+              unsignedLongPtr = va_arg(arg_list, unsigned long*);
+              *unsignedLongPtr = unsignedLongValue;
+            }
+          }
+
+          percent = FALSE;
+          break;
+
+        case 'u':
+          unsignedLongValue = scanUnsignedLongInt(0ul);
+
+          if (!star) {
+            if (shortInt) {
+              unsignedShortPtr = va_arg(arg_list, unsigned short*);
+              *unsignedShortPtr = (short) unsignedLongValue;
+            }
+            else if (!longIntOrDouble) {
+              unsignedIntPtr = va_arg(arg_list, unsigned int*);
+              *unsignedIntPtr = (int) unsignedLongValue;
+            }
+            else {
+              unsignedLongPtr = va_arg(arg_list, unsigned long*);
+              *unsignedLongPtr = unsignedLongValue;
+            }
           }
 
           percent = FALSE;
@@ -433,160 +517,110 @@ int scanFormat(char* format, va_list arg_list)
 
         case 'e':
         case 'f':
-        case 'g': {
-            long double longDoubleValue;
-            scanLongDouble(&longDoubleValue);
+        case 'g':
+          longDoubleValue = scanLongDouble();
 
-/*            printLongDoublePlain(longDoubleValue, FALSE,
-              FALSE,
-              FALSE, 6);*/
-
-            if (!star) {
-              if (longIntOrDouble) {
-                double* doublePtr = va_arg(arg_list, double*);
-                *doublePtr = (double) longDoubleValue;
-              }
-              else if (longDouble) {
-                long double* longDoublePtr = va_arg(arg_list, long double*);
-                *longDoublePtr = longDoubleValue;
-              }
-              else {
-                float* floatPtr = va_arg(arg_list, float*);
-                *floatPtr = (float) longDoubleValue;
-              }
-
-              ++count;
+          if (!star) {
+            if (longIntOrDouble) {
+              double* doublePtr = va_arg(arg_list, double*);
+              *doublePtr = (double) longDoubleValue;
+            }
+            else if (longDouble) {
+              long double* longDoublePtr = va_arg(arg_list, long double*);
+              *longDoublePtr = longDoubleValue;
+            }
+            else {
+              float* floatPtr = va_arg(arg_list, float*);
+              *floatPtr = (float) longDoubleValue;
             }
           }
 
-          percent = FALSE;
-          break;
-
-        case 'n': {
-            int* intPtr = va_arg(arg_list, int*);
-            *intPtr = g_inChars;
-          }
           percent = FALSE;
           break;
 
         case '[': {
-            BOOL normal = 
-              TRUE;
+            BOOL not = FALSE;
+            ++index;
 
-            if (format[++index] == '^') {
-              normal = FALSE;
+            if (format[index] == '^') {
+              not = TRUE;
               ++index;
             }
 
-            if (!star) {
-              char* charPtr = va_arg(arg_list, char*);
-              matchString(charPtr, precision, &format[index], normal);
-              ++count;
-            }
-            else {
-              matchString(NULL, precision, &format[index], normal);
-            }
-
-            ++index;
+            int startIndex = index;
             while (format[index] != ']') {
               ++index;
             }
-          }
+            format[index] = '\0';
 
+            if (!star) {
+              char* string = va_arg(arg_list, char*);
+              scanPattern(string, &format[startIndex], not);
+            }
+            else {
+              scanPattern(NULL, &format[startIndex], not);
+            }
+          }
+          break;
+
+        case 'n':
+          charsPtr = va_arg(arg_list, int*);
+          *charsPtr = g_inChars;
           percent = FALSE;
           break;
 
-        case '%': {
-            char input = scanChar();
-
-            while (isspace(input)) {
-              input = scanChar();
-            }
-
-            if (input != '%') {
-              return -1;
-            }
-          }
-          break;
-
         default:
-          if (isdigit(c)) {
-/*            char* endPtr;
-            long longValue = strtoul(&format[index], &endPtr, 10);
-            index += endPtr - &format[index] - 1;
-            precision = (int) longValue;*/
-
-            precision = 0;
-            while (isdigit(c)) {
-              precision = (10 * precision) + (c - '0');
-              c = format[++index];
-            }
-            --index;
-          }
+          printf("scanFormat c = '%c'\n", c);
           break;
       }
     }
     else {
       if (c == '%') {
         percent = TRUE;
-        star = FALSE;
-        precision = -1;
         shortInt = FALSE;
         longIntOrDouble = FALSE;
         longDouble = FALSE;
-      }
-      else if ((c != ' ') && (c != '\t')) {
-        char input = scanChar();
-
-        while (isspace(input)) {
-          input = scanChar();
-        }
-
-        if (c != scanChar()) {
-          return -1;
-        }
+        star = FALSE;
       }
     }
   }
 
-  return count;
+//  PRINT(g_inCount, i);
+  return g_inCount;
 }
 
-int scanf(char* format, ...)
-{
+int scanf(char* format, ...) {
   va_list arg_list;
   va_start(arg_list, format);
   return vscanf(format, arg_list);
 }
 
-int vscanf(char* format, va_list arg_list)
-{
+int vscanf(char* format, va_list arg_list) {
+  //printf("vscanf\n");
   return vfscanf(stdin, format, arg_list);
 }
 
-int fscanf(FILE* inStream, char* format, ...)
-{
+int fscanf(FILE* inStream, char* format, ...) {
+  //printf("fscanf inStream->handle: %i, stdin->handle: %i\n", inStream->handle, stdin->handle);
   va_list arg_list;
   va_start(arg_list, format);
   return vfscanf(inStream, format, arg_list);
 }
 
-int vfscanf(FILE* inStream, char* format, va_list arg_list)
-{
+int vfscanf(FILE* inStream, char* format, va_list arg_list) {
   g_inStatus = DEVICE;
   g_inDevice = (void*) inStream;
+  //printf("vfscanf inStream->handle: %i, stdin->handle: %i\n", inStream->handle, stdin->handle);
   return scanFormat(format, arg_list);
 }
 
-int sscanf(char* inString, char* format, ...)
-{
+int sscanf(char* inString, char* format, ...) {
   va_list arg_list;
   va_start(arg_list, format);
   return vsscanf(inString, format, arg_list);
 }
 
-int vsscanf(char* inString, char* format, va_list arg_list)
-{
+int vsscanf(char* inString, char* format, va_list arg_list) {
   g_inStatus = STRING;
   g_inDevice = (void*) inString;
   return scanFormat(format, arg_list);

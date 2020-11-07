@@ -29,12 +29,12 @@ assert_testX$6:	; parameter string_25i#, offset 6
 21:		mov word [bp + 14], string_25i#
 23:	
 
-assert_testX$7:	; £temporary3799 = &n
+assert_testX$7:	; £temporary3634 = &n
 24:		mov si, bp
 25:		add si, 6
 27:	
 
-assert_testX$8:	; parameter £temporary3799, offset 8
+assert_testX$8:	; parameter £temporary3634, offset 8
 28:		mov [bp + 16], si
 30:	
 

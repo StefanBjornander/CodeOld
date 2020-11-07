@@ -11,7 +11,6 @@
 	global bsearch
 	global rand
 	global srand
-	global print_heap2
 	global g_funcArray
 	global atexit
 	global exit
@@ -23,7 +22,6 @@
 	global ldiv
 
 	extern sscanf
-	extern printf
 	extern errno
 	extern $StackTop
 
@@ -57,17 +55,17 @@ section .text
 	; PostCall 32
 
  atoi$6:
-	; GetReturnValue £temporary1914
+	; GetReturnValue £temporary1943
 
  atoi$7:
-	; IntegralToIntegral £temporary1915 £temporary1914
+	; IntegralToIntegral £temporary1944 £temporary1943
 	cmp rbx, 0
 	jge atoi$8
 	neg rbx
 	neg ebx
 
  atoi$8:
-	; Return £temporary1915
+	; Return £temporary1944
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -105,10 +103,10 @@ section .text
 	; PostCall 32
 
  atol$6:
-	; GetReturnValue £temporary1916
+	; GetReturnValue £temporary1945
 
  atol$7:
-	; Return £temporary1916
+	; Return £temporary1945
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -146,21 +144,21 @@ section .text
 	mov qword [rbp + 88], string_25li25n#
 
  strtol$5:
-	; Address £temporary1917 value
+	; Address £temporary1946 value
 	mov rsi, rbp
 	add rsi, 48
 
  strtol$6:
-	; Parameter pointer £temporary1917 96
+	; Parameter pointer £temporary1946 96
 	mov [rbp + 96], rsi
 
  strtol$7:
-	; Address £temporary1918 chars
+	; Address £temporary1947 chars
 	mov rsi, rbp
 	add rsi, 44
 
  strtol$8:
-	; Parameter pointer £temporary1918 104
+	; Parameter pointer £temporary1947 104
 	mov [rbp + 104], rsi
 
  strtol$9:
@@ -181,17 +179,17 @@ section .text
 	je strtol$15
 
  strtol$12:
-	; Dereference £temporary1921 -> endp endp 0
+	; Dereference £temporary1950 -> endp endp 0
 	mov rsi, [rbp + 32]
 
  strtol$13:
-	; IntegralToIntegral £temporary1922 chars
+	; IntegralToIntegral £temporary1951 chars
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  strtol$14:
-	; BinaryAdd £temporary1921 -> endp s £temporary1922
+	; BinaryAdd £temporary1950 -> endp s £temporary1951
 	mov rbx, [rbp + 24]
 	add rbx, rax
 	mov [rsi], rbx
@@ -236,21 +234,21 @@ section .text
 	mov qword [rbp + 88], string_25lu25n#
 
  strtoul$5:
-	; Address £temporary1927 value
+	; Address £temporary1956 value
 	mov rsi, rbp
 	add rsi, 48
 
  strtoul$6:
-	; Parameter pointer £temporary1927 96
+	; Parameter pointer £temporary1956 96
 	mov [rbp + 96], rsi
 
  strtoul$7:
-	; Address £temporary1928 chars
+	; Address £temporary1957 chars
 	mov rsi, rbp
 	add rsi, 44
 
  strtoul$8:
-	; Parameter pointer £temporary1928 104
+	; Parameter pointer £temporary1957 104
 	mov [rbp + 104], rsi
 
  strtoul$9:
@@ -271,17 +269,17 @@ section .text
 	je strtoul$15
 
  strtoul$12:
-	; Dereference £temporary1931 -> endp endp 0
+	; Dereference £temporary1960 -> endp endp 0
 	mov rsi, [rbp + 32]
 
  strtoul$13:
-	; IntegralToIntegral £temporary1932 chars
+	; IntegralToIntegral £temporary1961 chars
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  strtoul$14:
-	; BinaryAdd £temporary1931 -> endp s £temporary1932
+	; BinaryAdd £temporary1960 -> endp s £temporary1961
 	mov rbx, [rbp + 24]
 	add rbx, rax
 	mov [rsi], rbx
@@ -322,10 +320,10 @@ section .text
 	; PostCall 32
 
  atof$5:
-	; GetReturnValue £temporary1937
+	; GetReturnValue £temporary1966
 
  atof$6:
-	; Return £temporary1937
+	; Return £temporary1966
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -367,21 +365,21 @@ section .text
 	mov qword [rbp + 84], string_25lf25n#
 
  strtod$6:
-	; Address £temporary1938 value
+	; Address £temporary1967 value
 	mov rsi, rbp
 	add rsi, 44
 
  strtod$7:
-	; Parameter pointer £temporary1938 92
+	; Parameter pointer £temporary1967 92
 	mov [rbp + 92], rsi
 
  strtod$8:
-	; Address £temporary1939 chars
+	; Address £temporary1968 chars
 	mov rsi, rbp
 	add rsi, 40
 
  strtod$9:
-	; Parameter pointer £temporary1939 100
+	; Parameter pointer £temporary1968 100
 	mov [rbp + 100], rsi
 
  strtod$10:
@@ -402,17 +400,17 @@ section .text
 	je strtod$16
 
  strtod$13:
-	; Dereference £temporary1942 -> endp endp 0
+	; Dereference £temporary1971 -> endp endp 0
 	mov rsi, [rbp + 32]
 
  strtod$14:
-	; IntegralToIntegral £temporary1943 chars
+	; IntegralToIntegral £temporary1972 chars
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
  strtod$15:
-	; BinaryAdd £temporary1942 -> endp s £temporary1943
+	; BinaryAdd £temporary1971 -> endp s £temporary1972
 	mov rbx, [rbp + 24]
 	add rbx, rax
 	mov [rsi], rbx
@@ -484,19 +482,19 @@ section .text
 section .text
 
  memswp:
-	; IntegralToIntegral £temporary1950 value1
+	; IntegralToIntegral £temporary1979 value1
 	mov rax, [rbp + 24]
 
  memswp$1:
-	; Assign charValue1 £temporary1950
+	; Assign charValue1 £temporary1979
 	mov [rbp + 44], rax
 
  memswp$2:
-	; IntegralToIntegral £temporary1951 value2
+	; IntegralToIntegral £temporary1980 value2
 	mov rax, [rbp + 32]
 
  memswp$3:
-	; Assign charValue2 £temporary1951
+	; Assign charValue2 £temporary1980
 	mov [rbp + 52], rax
 
  memswp$4:
@@ -510,73 +508,73 @@ section .text
 	jge memswp$23
 
  memswp$6:
-	; IntegralToIntegral £temporary1955 index
+	; IntegralToIntegral £temporary1984 index
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
 
  memswp$7:
-	; BinaryAdd £temporary1957 charValue1 £temporary1955
+	; BinaryAdd £temporary1986 charValue1 £temporary1984
 	mov rsi, [rbp + 44]
 	add rsi, rax
 
  memswp$8:
-	; Dereference £temporary1954 -> £temporary1957 £temporary1957 0
+	; Dereference £temporary1983 -> £temporary1986 £temporary1986 0
 
  memswp$9:
-	; Assign tempValue £temporary1954 -> £temporary1957
+	; Assign tempValue £temporary1983 -> £temporary1986
 	mov al, [rsi]
 	mov [rbp + 64], al
 
  memswp$10:
-	; IntegralToIntegral £temporary1959 index
+	; IntegralToIntegral £temporary1988 index
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
 
  memswp$11:
-	; BinaryAdd £temporary1961 charValue1 £temporary1959
+	; BinaryAdd £temporary1990 charValue1 £temporary1988
 	mov rsi, [rbp + 44]
 	add rsi, rax
 
  memswp$12:
-	; Dereference £temporary1958 -> £temporary1961 £temporary1961 0
+	; Dereference £temporary1987 -> £temporary1990 £temporary1990 0
 
  memswp$13:
-	; IntegralToIntegral £temporary1963 index
+	; IntegralToIntegral £temporary1992 index
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
 
  memswp$14:
-	; BinaryAdd £temporary1965 charValue2 £temporary1963
+	; BinaryAdd £temporary1994 charValue2 £temporary1992
 	mov rdi, [rbp + 52]
 	add rdi, rax
 
  memswp$15:
-	; Dereference £temporary1962 -> £temporary1965 £temporary1965 0
+	; Dereference £temporary1991 -> £temporary1994 £temporary1994 0
 
  memswp$16:
-	; Assign £temporary1958 -> £temporary1961 £temporary1962 -> £temporary1965
+	; Assign £temporary1987 -> £temporary1990 £temporary1991 -> £temporary1994
 	mov al, [rdi]
 	mov [rsi], al
 
  memswp$17:
-	; IntegralToIntegral £temporary1967 index
+	; IntegralToIntegral £temporary1996 index
 	mov eax, [rbp + 60]
 	mov rbx, 4294967295
 	and rax, rbx
 
  memswp$18:
-	; BinaryAdd £temporary1969 charValue2 £temporary1967
+	; BinaryAdd £temporary1998 charValue2 £temporary1996
 	mov rsi, [rbp + 52]
 	add rsi, rax
 
  memswp$19:
-	; Dereference £temporary1966 -> £temporary1969 £temporary1969 0
+	; Dereference £temporary1995 -> £temporary1998 £temporary1998 0
 
  memswp$20:
-	; Assign £temporary1966 -> £temporary1969 tempValue
+	; Assign £temporary1995 -> £temporary1998 tempValue
 	mov al, [rbp + 64]
 	mov [rsi], al
 
@@ -630,22 +628,22 @@ section .text
 	jmp rax
 
  bsearch$4:
-	; IntegralToIntegral £temporary1972 valueList
+	; IntegralToIntegral £temporary2001 valueList
 	mov rbx, [rbp + 32]
 
  bsearch$5:
-	; SignedMultiply £temporary1973 firstIndex valueSize
+	; SignedMultiply £temporary2002 firstIndex valueSize
 	mov eax, [rbp + 56]
 	xor edx, edx
 	imul dword [rbp + 44]
 
  bsearch$6:
-	; IntegralToIntegral £temporary1974 £temporary1973
+	; IntegralToIntegral £temporary2003 £temporary2002
 	mov rcx, 4294967295
 	and rax, rcx
 
  bsearch$7:
-	; BinaryAdd firstValuePtr £temporary1972 £temporary1974
+	; BinaryAdd firstValuePtr £temporary2001 £temporary2003
 	add rbx, rax
 	mov [rbp + 64], rbx
 
@@ -674,10 +672,10 @@ section .text
 	; PostCall 72
 
  bsearch$13:
-	; GetReturnValue £temporary1977
+	; GetReturnValue £temporary2006
 
  bsearch$14:
-	; Assign firstCompare £temporary1977
+	; Assign firstCompare £temporary2006
 	mov [rbp + 72], ebx
 
  bsearch$15:
@@ -707,22 +705,22 @@ section .text
 	jmp rax
 
  bsearch$19:
-	; IntegralToIntegral £temporary1980 valueList
+	; IntegralToIntegral £temporary2009 valueList
 	mov rbx, [rbp + 32]
 
  bsearch$20:
-	; SignedMultiply £temporary1981 lastIndex valueSize
+	; SignedMultiply £temporary2010 lastIndex valueSize
 	mov eax, [rbp + 60]
 	xor edx, edx
 	imul dword [rbp + 44]
 
  bsearch$21:
-	; IntegralToIntegral £temporary1982 £temporary1981
+	; IntegralToIntegral £temporary2011 £temporary2010
 	mov rcx, 4294967295
 	and rax, rcx
 
  bsearch$22:
-	; BinaryAdd lastValuePtr £temporary1980 £temporary1982
+	; BinaryAdd lastValuePtr £temporary2009 £temporary2011
 	add rbx, rax
 	mov [rbp + 64], rbx
 
@@ -751,10 +749,10 @@ section .text
 	; PostCall 72
 
  bsearch$28:
-	; GetReturnValue £temporary1985
+	; GetReturnValue £temporary2014
 
  bsearch$29:
-	; Assign lastCompare £temporary1985
+	; Assign lastCompare £temporary2014
 	mov [rbp + 72], ebx
 
  bsearch$30:
@@ -784,33 +782,33 @@ section .text
 	jmp rax
 
  bsearch$34:
-	; BinaryAdd £temporary1988 firstIndex lastIndex
+	; BinaryAdd £temporary2017 firstIndex lastIndex
 	mov eax, [rbp + 56]
 	add eax, [rbp + 60]
 
  bsearch$35:
-	; SignedDivide middleIndex £temporary1988 2
+	; SignedDivide middleIndex £temporary2017 2
 	xor edx, edx
 	idiv dword [int4$2#]
 	mov [rbp + 64], eax
 
  bsearch$36:
-	; IntegralToIntegral £temporary1990 valueList
+	; IntegralToIntegral £temporary2019 valueList
 	mov rbx, [rbp + 32]
 
  bsearch$37:
-	; SignedMultiply £temporary1991 middleIndex valueSize
+	; SignedMultiply £temporary2020 middleIndex valueSize
 	mov eax, [rbp + 64]
 	xor edx, edx
 	imul dword [rbp + 44]
 
  bsearch$38:
-	; IntegralToIntegral £temporary1992 £temporary1991
+	; IntegralToIntegral £temporary2021 £temporary2020
 	mov rcx, 4294967295
 	and rax, rcx
 
  bsearch$39:
-	; BinaryAdd middleValuePtr £temporary1990 £temporary1992
+	; BinaryAdd middleValuePtr £temporary2019 £temporary2021
 	add rbx, rax
 	mov [rbp + 68], rbx
 
@@ -839,10 +837,10 @@ section .text
 	; PostCall 76
 
  bsearch$45:
-	; GetReturnValue £temporary1995
+	; GetReturnValue £temporary2024
 
  bsearch$46:
-	; Assign middleCompare £temporary1995
+	; Assign middleCompare £temporary2024
 	mov [rbp + 76], ebx
 
  bsearch$47:
@@ -886,7 +884,7 @@ section .text
 
 section .data
 
-@4296$g_randValue:
+@3946$g_randValue:
 	; InitializerZero 8
 	times 8 db 0
 
@@ -905,31 +903,31 @@ int8$127#:
 section .text
 
  rand:
-	; SignedMultiply £temporary1999 g_randValue 1664525
-	mov rax, [@4296$g_randValue]
+	; SignedMultiply £temporary2028 g_randValue 1664525
+	mov rax, [@3946$g_randValue]
 	xor rdx, rdx
 	imul qword [int8$1664525#]
 
  rand$1:
-	; BinaryAdd £temporary2000 £temporary1999 1013904223
+	; BinaryAdd £temporary2029 £temporary2028 1013904223
 	add rax, 1013904223
 
  rand$2:
-	; SignedModulo g_randValue £temporary2000 127
+	; SignedModulo g_randValue £temporary2029 127
 	xor rdx, rdx
 	idiv qword [int8$127#]
-	mov [@4296$g_randValue], rdx
+	mov [@3946$g_randValue], rdx
 
  rand$3:
-	; IntegralToIntegral £temporary2002 g_randValue
-	mov rbx, [@4296$g_randValue]
+	; IntegralToIntegral £temporary2031 g_randValue
+	mov rbx, [@3946$g_randValue]
 	cmp rbx, 0
 	jge rand$4
 	neg rbx
 	neg ebx
 
  rand$4:
-	; Return £temporary2002
+	; Return £temporary2031
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -941,14 +939,14 @@ section .text
 section .text
 
  srand:
-	; IntegralToIntegral £temporary2003 seed
+	; IntegralToIntegral £temporary2032 seed
 	mov eax, [rbp + 24]
 	mov rbx, 4294967295
 	and rax, rbx
 
  srand$1:
-	; Assign g_randValue £temporary2003
-	mov [@4296$g_randValue], rax
+	; Assign g_randValue £temporary2032
+	mov [@3946$g_randValue], rax
 
  srand$2:
 	; Return
@@ -962,212 +960,11 @@ section .text
 
 section .data
 
-string_stack20top2025u2C20heap20top2025u2C20heap20bottom2025u0A#:
-	; Initializer String stack top %u, heap top %u, heap bottom %u\n
-	db "stack top %u, heap top %u, heap bottom %u", 10, 0
-
-section .data
-
-string_2020index2025u2C20address2025u2C20size2025u0A#:
-	; Initializer String   index %u, address %u, size %u\n
-	db "  index %u, address %u, size %u", 10, 0
-
-section .data
-
-string_0A#:
-	; Initializer String \n
-	db 10, 0
-
-section .text
-
- print_heap2:
-	; Dereference £temporary2004 -> 32764 32764 0
-	mov rsi, 32764
-
- print_heap2$1:
-	; Assign heapBottom £temporary2004 -> 32764
-	mov eax, [rsi]
-	mov [rbp + 24], eax
-
- print_heap2$2:
-	; Dereference £temporary2005 -> 32766 32766 0
-	mov rsi, 32766
-
- print_heap2$3:
-	; Assign topStack £temporary2005 -> 32766
-	mov eax, [rsi]
-	mov [rbp + 28], eax
-
- print_heap2$4:
-	; Dereference £temporary2006 -> 32762 32762 0
-	mov rsi, 32762
-
- print_heap2$5:
-	; Assign heapTop £temporary2006 -> 32762
-	mov eax, [rsi]
-	mov [rbp + 32], eax
-
- print_heap2$6:
-	; Assign index 0
-	mov dword [rbp + 36], 0
-
- print_heap2$7:
-	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- print_heap2$8:
-	; Parameter pointer "stack top %u, heap top %u, heap bottom %u\n" 64
-	mov qword [rbp + 64], string_stack20top2025u2C20heap20top2025u2C20heap20bottom2025u0A#
-
- print_heap2$9:
-	; Parameter unsigned int topStack 72
-	mov eax, [rbp + 28]
-	mov [rbp + 72], eax
-
- print_heap2$10:
-	; Parameter unsigned int heapTop 76
-	mov eax, [rbp + 32]
-	mov [rbp + 76], eax
-
- print_heap2$11:
-	; Parameter unsigned int heapBottom 80
-	mov eax, [rbp + 24]
-	mov [rbp + 80], eax
-
- print_heap2$12:
-	; Call printf 40 12
-	mov qword [rbp + 40], print_heap2$13
-	mov [rbp + 48], rbp
-	add rbp, 40
-	mov rdi, rbp
-	add rdi, 12
-	jmp printf
-
- print_heap2$13:
-	; PostCall 40
-
- print_heap2$14:
-	; Equal 32 heapTop 0
-	cmp dword [rbp + 32], 0
-	je print_heap2$32
-
- print_heap2$15:
-	; IntegralToIntegral £temporary2009 heapTop
-	mov esi, [rbp + 32]
-	mov rax, 4294967295
-	and rsi, rax
-
- print_heap2$16:
-	; BinaryAdd £temporary2010 £temporary2009 4
-	add rsi, 4
-
- print_heap2$17:
-	; Dereference £temporary2012 -> £temporary2010 £temporary2010 0
-
- print_heap2$18:
-	; Assign size £temporary2012 -> £temporary2010
-	mov eax, [rsi]
-	mov [rbp + 40], eax
-
- print_heap2$19:
-	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- print_heap2$20:
-	; Parameter pointer "  index %u, address %u, size %u\n" 68
-	mov qword [rbp + 68], string_2020index2025u2C20address2025u2C20size2025u0A#
-
- print_heap2$21:
-	; Assign £temporary2013 index
-	mov eax, [rbp + 36]
-
- print_heap2$22:
-	; BinaryAdd index index 1
-	inc dword [rbp + 36]
-
- print_heap2$23:
-	; Parameter unsigned int £temporary2013 76
-	mov [rbp + 76], eax
-
- print_heap2$24:
-	; Parameter unsigned int heapTop 80
-	mov eax, [rbp + 32]
-	mov [rbp + 80], eax
-
- print_heap2$25:
-	; Parameter unsigned int size 84
-	mov eax, [rbp + 40]
-	mov [rbp + 84], eax
-
- print_heap2$26:
-	; Call printf 44 12
-	mov qword [rbp + 44], print_heap2$27
-	mov [rbp + 52], rbp
-	add rbp, 44
-	mov rdi, rbp
-	add rdi, 12
-	jmp printf
-
- print_heap2$27:
-	; PostCall 44
-
- print_heap2$28:
-	; IntegralToIntegral £temporary2015 heapTop
-	mov esi, [rbp + 32]
-	mov rax, 4294967295
-	and rsi, rax
-
- print_heap2$29:
-	; Dereference £temporary2016 -> £temporary2015 £temporary2015 0
-
- print_heap2$30:
-	; Assign heapTop £temporary2016 -> £temporary2015
-	mov eax, [rsi]
-	mov [rbp + 32], eax
-
- print_heap2$31:
-	; Goto 14
-	jmp print_heap2$14
-
- print_heap2$32:
-	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- print_heap2$33:
-	; Parameter pointer "\n" 64
-	mov qword [rbp + 64], string_0A#
-
- print_heap2$34:
-	; Call printf 40 0
-	mov qword [rbp + 40], print_heap2$35
-	mov [rbp + 48], rbp
-	add rbp, 40
-	mov rdi, rbp
-	jmp printf
-
- print_heap2$35:
-	; PostCall 40
-
- print_heap2$36:
-	; Return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- print_heap2$37:
-	; FunctionEnd print_heap2
-
-section .data
-
 g_funcArray:
 	; Initializer Pointer 0
 	dq 0
 	; InitializerZero 2040
 	times 2040 db 0
-
-section .data
-
-string_Added20function20index2025i3A2025i0A#:
-	; Initializer String Added function index %i: %i\n
-	db "Added function index %i: %i", 10, 0
 
 section .data
 
@@ -1178,132 +975,63 @@ Array_8#:
 section .text
 
  atexit:
-	; Empty
-
- atexit$1:
-	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- atexit$2:
-	; Parameter pointer "\n" 60
-	mov qword [rbp + 60], string_0A#
-
- atexit$3:
-	; Call printf 36 0
-	mov qword [rbp + 36], atexit$4
-	mov [rbp + 44], rbp
-	add rbp, 36
-	mov rdi, rbp
-	jmp printf
-
- atexit$4:
-	; PostCall 36
-
- atexit$5:
 	; Assign index 0
 	mov dword [rbp + 32], 0
 
- atexit$6:
-	; SignedGreaterThanEqual 30 index 256
+ atexit$1:
+	; SignedGreaterThanEqual 15 index 256
 	cmp dword [rbp + 32], 256
-	jge atexit$30
+	jge atexit$15
+
+ atexit$2:
+	; IntegralToIntegral £temporary2036 index
+	mov eax, [rbp + 32]
+	mov rbx, 4294967295
+	and rax, rbx
+
+ atexit$3:
+	; UnsignedMultiply £temporary2037 £temporary2036 8
+	xor rdx, rdx
+	mul qword [Array_8#]
+
+ atexit$4:
+	; BinaryAdd £temporary2038 g_funcArray £temporary2037
+	mov rsi, g_funcArray
+	add rsi, rax
+
+ atexit$5:
+	; Dereference £temporary2035 -> £temporary2038 £temporary2038 0
+
+ atexit$6:
+	; NotEqual 13 £temporary2035 -> £temporary2038 0
+	cmp qword [rsi], 0
+	jne atexit$13
 
  atexit$7:
-	; IntegralToIntegral £temporary2022 index
+	; IntegralToIntegral £temporary2041 index
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
  atexit$8:
-	; UnsignedMultiply £temporary2023 £temporary2022 8
+	; UnsignedMultiply £temporary2042 £temporary2041 8
 	xor rdx, rdx
 	mul qword [Array_8#]
 
  atexit$9:
-	; BinaryAdd £temporary2024 g_funcArray £temporary2023
+	; BinaryAdd £temporary2043 g_funcArray £temporary2042
 	mov rsi, g_funcArray
 	add rsi, rax
 
  atexit$10:
-	; Dereference £temporary2021 -> £temporary2024 £temporary2024 0
+	; Dereference £temporary2040 -> £temporary2043 £temporary2043 0
 
  atexit$11:
-	; NotEqual 28 £temporary2021 -> £temporary2024 0
-	cmp qword [rsi], 0
-	jne atexit$28
-
- atexit$12:
-	; IntegralToIntegral £temporary2027 index
-	mov eax, [rbp + 32]
-	mov rbx, 4294967295
-	and rax, rbx
-
- atexit$13:
-	; UnsignedMultiply £temporary2028 £temporary2027 8
-	xor rdx, rdx
-	mul qword [Array_8#]
-
- atexit$14:
-	; BinaryAdd £temporary2029 g_funcArray £temporary2028
-	mov rsi, g_funcArray
-	add rsi, rax
-
- atexit$15:
-	; Dereference £temporary2026 -> £temporary2029 £temporary2029 0
-
- atexit$16:
-	; Assign £temporary2026 -> £temporary2029 fcn
+	; Assign £temporary2040 -> £temporary2043 fcn
 	mov rax, [rbp + 24]
 	mov [rsi], rax
 
- atexit$17:
-	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- atexit$18:
-	; Parameter pointer "Added function index %i: %i\n" 60
-	mov qword [rbp + 60], string_Added20function20index2025i3A2025i0A#
-
- atexit$19:
-	; Parameter signedint index 68
-	mov eax, [rbp + 32]
-	mov [rbp + 68], eax
-
- atexit$20:
-	; IntegralToIntegral £temporary2031 index
-	mov eax, [rbp + 32]
-	mov rbx, 4294967295
-	and rax, rbx
-
- atexit$21:
-	; UnsignedMultiply £temporary2032 £temporary2031 8
-	xor rdx, rdx
-	mul qword [Array_8#]
-
- atexit$22:
-	; BinaryAdd £temporary2033 g_funcArray £temporary2032
-	mov rsi, g_funcArray
-	add rsi, rax
-
- atexit$23:
-	; Dereference £temporary2030 -> £temporary2033 £temporary2033 0
-
- atexit$24:
-	; Parameter pointer £temporary2030 -> £temporary2033 72
-	mov rax, [rsi]
-	mov [rbp + 72], rax
-
- atexit$25:
-	; Call printf 36 12
-	mov qword [rbp + 36], atexit$26
-	mov [rbp + 44], rbp
-	add rbp, 36
-	mov rdi, rbp
-	add rdi, 12
-	jmp printf
-
- atexit$26:
-	; PostCall 36
-
- atexit$27:
+ atexit$12:
 	; Return 0
 	mov ebx, 0
 	mov rax, [rbp]
@@ -1311,15 +1039,15 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- atexit$28:
+ atexit$13:
 	; BinaryAdd index index 1
 	inc dword [rbp + 32]
 
- atexit$29:
-	; Goto 6
-	jmp atexit$6
+ atexit$14:
+	; Goto 1
+	jmp atexit$1
 
- atexit$30:
+ atexit$15:
 	; Return -1
 	mov ebx, -1
 	mov rax, [rbp]
@@ -1327,449 +1055,373 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- atexit$31:
+ atexit$16:
 	; FunctionEnd atexit
-
-section .data
-
-string_Called20function20index2025i3A2025i0A#:
-	; Initializer String Called function index %i: %i\n
-	db "Called function index %i: %i", 10, 0
 
 section .text
 
  exit:
-	; Empty
-
- exit$1:
-	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- exit$2:
-	; Parameter pointer "\n" 56
-	mov qword [rbp + 56], string_0A#
-
- exit$3:
-	; Call printf 32 0
-	mov qword [rbp + 32], exit$4
-	mov [rbp + 40], rbp
-	add rbp, 32
-	mov rdi, rbp
-	jmp printf
-
- exit$4:
-	; PostCall 32
-
- exit$5:
 	; Assign index 257
 	mov dword [rbp + 28], 257
 
- exit$6:
-	; SignedLessThan 31 index 0
+ exit$1:
+	; SignedLessThan 16 index 0
 	cmp dword [rbp + 28], 0
-	jl exit$31
+	jl exit$16
+
+ exit$2:
+	; IntegralToIntegral £temporary2047 index
+	mov eax, [rbp + 28]
+	mov rbx, 4294967295
+	and rax, rbx
+
+ exit$3:
+	; UnsignedMultiply £temporary2048 £temporary2047 8
+	xor rdx, rdx
+	mul qword [Array_8#]
+
+ exit$4:
+	; BinaryAdd £temporary2049 g_funcArray £temporary2048
+	mov rsi, g_funcArray
+	add rsi, rax
+
+ exit$5:
+	; Dereference £temporary2046 -> £temporary2049 £temporary2049 0
+
+ exit$6:
+	; Equal 14 £temporary2046 -> £temporary2049 0
+	cmp qword [rsi], 0
+	je exit$14
 
  exit$7:
-	; IntegralToIntegral £temporary2039 index
+	; IntegralToIntegral £temporary2052 index
 	mov eax, [rbp + 28]
 	mov rbx, 4294967295
 	and rax, rbx
 
  exit$8:
-	; UnsignedMultiply £temporary2040 £temporary2039 8
+	; UnsignedMultiply £temporary2053 £temporary2052 8
 	xor rdx, rdx
 	mul qword [Array_8#]
 
  exit$9:
-	; BinaryAdd £temporary2041 g_funcArray £temporary2040
-	mov rsi, g_funcArray
-	add rsi, rax
-
- exit$10:
-	; Dereference £temporary2038 -> £temporary2041 £temporary2041 0
-
- exit$11:
-	; Equal 29 £temporary2038 -> £temporary2041 0
-	cmp qword [rsi], 0
-	je exit$29
-
- exit$12:
-	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- exit$13:
-	; Parameter pointer "Called function index %i: %i\n" 56
-	mov qword [rbp + 56], string_Called20function20index2025i3A2025i0A#
-
- exit$14:
-	; Parameter signedint index 64
-	mov eax, [rbp + 28]
-	mov [rbp + 64], eax
-
- exit$15:
-	; IntegralToIntegral £temporary2044 index
-	mov eax, [rbp + 28]
-	mov rbx, 4294967295
-	and rax, rbx
-
- exit$16:
-	; UnsignedMultiply £temporary2045 £temporary2044 8
-	xor rdx, rdx
-	mul qword [Array_8#]
-
- exit$17:
-	; BinaryAdd £temporary2046 g_funcArray £temporary2045
-	mov rsi, g_funcArray
-	add rsi, rax
-
- exit$18:
-	; Dereference £temporary2043 -> £temporary2046 £temporary2046 0
-
- exit$19:
-	; Parameter pointer £temporary2043 -> £temporary2046 68
-	mov rax, [rsi]
-	mov [rbp + 68], rax
-
- exit$20:
-	; Call printf 32 12
-	mov qword [rbp + 32], exit$21
-	mov [rbp + 40], rbp
-	add rbp, 32
-	mov rdi, rbp
-	add rdi, 12
-	jmp printf
-
- exit$21:
-	; PostCall 32
-
- exit$22:
-	; IntegralToIntegral £temporary2049 index
-	mov eax, [rbp + 28]
-	mov rbx, 4294967295
-	and rax, rbx
-
- exit$23:
-	; UnsignedMultiply £temporary2050 £temporary2049 8
-	xor rdx, rdx
-	mul qword [Array_8#]
-
- exit$24:
-	; BinaryAdd £temporary2051 g_funcArray £temporary2050
+	; BinaryAdd £temporary2054 g_funcArray £temporary2053
 	mov rbx, g_funcArray
 	add rbx, rax
 
- exit$25:
-	; Dereference £temporary2048 -> £temporary2051 £temporary2051 0
+ exit$10:
+	; Dereference £temporary2051 -> £temporary2054 £temporary2054 0
 
- exit$26:
+ exit$11:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 	mov [rbp + 32], rbx
 
- exit$27:
-	; Call £temporary2048 -> £temporary2051 32 0
-	mov qword [rbp + 2080], exit$28
+ exit$12:
+	; Call £temporary2051 -> £temporary2054 32 0
+	mov qword [rbp + 2080], exit$13
 	mov [rbp + 2088], rbp
 	add rbp, 2080
 	mov rsi, rbp
 	mov rax, [rsi]
 	jmp rax
 
- exit$28:
+ exit$13:
 	; PostCall 32
 	mov rbx, [rbp + 32]
 
- exit$29:
+ exit$14:
 	; BinarySubtract index index 1
 	dec dword [rbp + 28]
 
- exit$30:
-	; Goto 6
-	jmp exit$6
+ exit$15:
+	; Goto 1
+	jmp exit$1
 
- exit$31:
+ exit$16:
 	; AssignRegister rax 60
 	mov rax, 60
 
- exit$32:
-	; IntegralToIntegral £temporary2055 status
+ exit$17:
+	; IntegralToIntegral £temporary2058 status
 	mov edi, [rbp + 24]
 	mov rbx, 4294967295
 	and rdi, rbx
 
- exit$33:
-	; AssignRegister rdi £temporary2055
+ exit$18:
+	; AssignRegister rdi £temporary2058
 
- exit$34:
+ exit$19:
 	; SysCall
 	syscall
 
- exit$35:
+ exit$20:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- exit$36:
+ exit$21:
 	; FunctionEnd exit
 
 section .text
 
  swap:
-	; Empty
-
- swap$1:
 	; Assign index 0
 	mov dword [rbp + 44], 0
 
- swap$2:
-	; SignedGreaterThanEqual 20 index valueSize
+ swap$1:
+	; SignedGreaterThanEqual 19 index valueSize
 	mov eax, [rbp + 40]
 	cmp [rbp + 44], eax
-	jge swap$20
+	jge swap$19
 
- swap$3:
-	; IntegralToIntegral £temporary2059 index
+ swap$2:
+	; IntegralToIntegral £temporary2062 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- swap$4:
-	; BinaryAdd £temporary2061 leftValuePtr £temporary2059
+ swap$3:
+	; BinaryAdd £temporary2064 leftValuePtr £temporary2062
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- swap$5:
-	; Dereference £temporary2058 -> £temporary2061 £temporary2061 0
+ swap$4:
+	; Dereference £temporary2061 -> £temporary2064 £temporary2064 0
 
- swap$6:
-	; Assign tempValue £temporary2058 -> £temporary2061
+ swap$5:
+	; Assign tempValue £temporary2061 -> £temporary2064
 	mov al, [rsi]
 	mov [rbp + 48], al
 
- swap$7:
-	; IntegralToIntegral £temporary2063 index
+ swap$6:
+	; IntegralToIntegral £temporary2066 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- swap$8:
-	; BinaryAdd £temporary2065 leftValuePtr £temporary2063
+ swap$7:
+	; BinaryAdd £temporary2068 leftValuePtr £temporary2066
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- swap$9:
-	; Dereference £temporary2062 -> £temporary2065 £temporary2065 0
+ swap$8:
+	; Dereference £temporary2065 -> £temporary2068 £temporary2068 0
 
- swap$10:
-	; IntegralToIntegral £temporary2067 index
+ swap$9:
+	; IntegralToIntegral £temporary2070 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- swap$11:
-	; BinaryAdd £temporary2069 rightValuePtr £temporary2067
+ swap$10:
+	; BinaryAdd £temporary2072 rightValuePtr £temporary2070
 	mov rdi, [rbp + 32]
 	add rdi, rax
 
- swap$12:
-	; Dereference £temporary2066 -> £temporary2069 £temporary2069 0
+ swap$11:
+	; Dereference £temporary2069 -> £temporary2072 £temporary2072 0
 
- swap$13:
-	; Assign £temporary2062 -> £temporary2065 £temporary2066 -> £temporary2069
+ swap$12:
+	; Assign £temporary2065 -> £temporary2068 £temporary2069 -> £temporary2072
 	mov al, [rdi]
 	mov [rsi], al
 
- swap$14:
-	; IntegralToIntegral £temporary2071 index
+ swap$13:
+	; IntegralToIntegral £temporary2074 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- swap$15:
-	; BinaryAdd £temporary2073 rightValuePtr £temporary2071
+ swap$14:
+	; BinaryAdd £temporary2076 rightValuePtr £temporary2074
 	mov rsi, [rbp + 32]
 	add rsi, rax
 
- swap$16:
-	; Dereference £temporary2070 -> £temporary2073 £temporary2073 0
+ swap$15:
+	; Dereference £temporary2073 -> £temporary2076 £temporary2076 0
 
- swap$17:
-	; Assign £temporary2070 -> £temporary2073 tempValue
+ swap$16:
+	; Assign £temporary2073 -> £temporary2076 tempValue
 	mov al, [rbp + 48]
 	mov [rsi], al
 
- swap$18:
+ swap$17:
 	; BinaryAdd index index 1
 	inc dword [rbp + 44]
 
- swap$19:
-	; Goto 2
-	jmp swap$2
+ swap$18:
+	; Goto 1
+	jmp swap$1
 
- swap$20:
+ swap$19:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- swap$21:
+ swap$20:
 	; FunctionEnd swap
 
 section .text
 
  qsort:
-	; Empty
-
- qsort$1:
-	; IntegralToIntegral £temporary2074 valueList
+	; IntegralToIntegral £temporary2077 valueList
 	mov rax, [rbp + 24]
 
- qsort$2:
-	; Assign charList £temporary2074
+ qsort$1:
+	; Assign charList £temporary2077
 	mov [rbp + 52], rax
 
- qsort$3:
+ qsort$2:
 	; BinarySubtract index1 listSize 1
 	mov eax, [rbp + 32]
 	dec eax
 	mov [rbp + 60], eax
 
- qsort$4:
+ qsort$3:
 	; SignedLessThanEqual 33 index1 0
 	cmp dword [rbp + 60], 0
 	jle qsort$33
 
- qsort$5:
+ qsort$4:
 	; Assign update 0
 	mov dword [rbp + 48], 0
 
- qsort$6:
+ qsort$5:
 	; Assign index2 0
 	mov dword [rbp + 64], 0
 
- qsort$7:
-	; SignedGreaterThanEqual 31 index2 index1
+ qsort$6:
+	; SignedGreaterThanEqual 30 index2 index1
 	mov eax, [rbp + 60]
 	cmp [rbp + 64], eax
-	jge qsort$31
+	jge qsort$30
 
- qsort$8:
-	; SignedMultiply £temporary2080 index2 valueSize
+ qsort$7:
+	; SignedMultiply £temporary2083 index2 valueSize
 	mov eax, [rbp + 64]
 	xor edx, edx
 	imul dword [rbp + 36]
 
- qsort$9:
-	; IntegralToIntegral £temporary2081 £temporary2080
+ qsort$8:
+	; IntegralToIntegral £temporary2084 £temporary2083
 	mov rbx, 4294967295
 	and rax, rbx
 
- qsort$10:
-	; BinaryAdd valuePtr1 charList £temporary2081
+ qsort$9:
+	; BinaryAdd valuePtr1 charList £temporary2084
 	mov rbx, [rbp + 52]
 	add rbx, rax
 	mov [rbp + 68], rbx
 
- qsort$11:
-	; BinaryAdd £temporary2084 index2 1
+ qsort$10:
+	; BinaryAdd £temporary2087 index2 1
 	mov eax, [rbp + 64]
 	inc eax
 
- qsort$12:
-	; SignedMultiply £temporary2085 £temporary2084 valueSize
+ qsort$11:
+	; SignedMultiply £temporary2088 £temporary2087 valueSize
 	xor edx, edx
 	imul dword [rbp + 36]
 
- qsort$13:
-	; IntegralToIntegral £temporary2086 £temporary2085
+ qsort$12:
+	; IntegralToIntegral £temporary2089 £temporary2088
 	mov rbx, 4294967295
 	and rax, rbx
 
- qsort$14:
-	; BinaryAdd valuePtr2 charList £temporary2086
+ qsort$13:
+	; BinaryAdd valuePtr2 charList £temporary2089
 	mov rbx, [rbp + 52]
 	add rbx, rax
 	mov [rbp + 76], rbx
 
- qsort$15:
+ qsort$14:
 	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- qsort$16:
+ qsort$15:
 	; Parameter pointer valuePtr1 108
 	mov rax, [rbp + 68]
 	mov [rbp + 108], rax
 
- qsort$17:
+ qsort$16:
 	; Parameter pointer valuePtr2 116
 	mov rax, [rbp + 76]
 	mov [rbp + 116], rax
 
- qsort$18:
+ qsort$17:
 	; Call compare 84 0
-	mov qword [rbp + 84], qsort$19
+	mov qword [rbp + 84], qsort$18
 	mov [rbp + 92], rbp
 	add rbp, 84
 	mov rax, [rbp + 40]
 	jmp rax
 
- qsort$19:
+ qsort$18:
 	; PostCall 84
 
+ qsort$19:
+	; GetReturnValue £temporary2092
+
  qsort$20:
-	; GetReturnValue £temporary2089
+	; SignedLessThanEqual 28 £temporary2092 0
+	cmp ebx, 0
+	jle qsort$28
 
  qsort$21:
-	; SignedLessThanEqual 29 £temporary2089 0
-	cmp ebx, 0
-	jle qsort$29
-
- qsort$22:
 	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- qsort$23:
+ qsort$22:
 	; Parameter pointer valuePtr1 108
 	mov rax, [rbp + 68]
 	mov [rbp + 108], rax
 
- qsort$24:
+ qsort$23:
 	; Parameter pointer valuePtr2 116
 	mov rax, [rbp + 76]
 	mov [rbp + 116], rax
 
- qsort$25:
+ qsort$24:
 	; Parameter signedint valueSize 124
 	mov eax, [rbp + 36]
 	mov [rbp + 124], eax
 
- qsort$26:
+ qsort$25:
 	; Call swap 84 0
-	mov qword [rbp + 84], qsort$27
+	mov qword [rbp + 84], qsort$26
 	mov [rbp + 92], rbp
 	add rbp, 84
 	jmp swap
 
- qsort$27:
+ qsort$26:
 	; PostCall 84
 
- qsort$28:
+ qsort$27:
 	; Assign update 1
 	mov dword [rbp + 48], 1
 
- qsort$29:
+ qsort$28:
 	; BinaryAdd index2 index2 1
 	inc dword [rbp + 64]
 
+ qsort$29:
+	; Goto 6
+	jmp qsort$6
+
  qsort$30:
-	; Goto 7
-	jmp qsort$7
+	; Equal 33 update 0
+	cmp dword [rbp + 48], 0
+	je qsort$33
 
  qsort$31:
 	; BinarySubtract index1 index1 1
 	dec dword [rbp + 60]
 
  qsort$32:
-	; Goto 4
-	jmp qsort$4
+	; Goto 3
+	jmp qsort$3
 
  qsort$33:
 	; Return
@@ -1789,23 +1441,23 @@ section .text
 	jge @abs$4
 
  @abs$1:
-	; UnarySubtract £temporary2095 value
+	; UnarySubtract £temporary2098 value
 	mov ebx, [rbp + 24]
 	neg ebx
 
  @abs$2:
-	; Assign £temporary2096 £temporary2095
+	; Assign £temporary2099 £temporary2098
 
  @abs$3:
 	; Goto 5
 	jmp @abs$5
 
  @abs$4:
-	; Assign £temporary2096 value
+	; Assign £temporary2099 value
 	mov ebx, [rbp + 24]
 
  @abs$5:
-	; Return £temporary2096
+	; Return £temporary2099
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1822,23 +1474,23 @@ section .text
 	jge labs$4
 
  labs$1:
-	; UnarySubtract £temporary2098 value
+	; UnarySubtract £temporary2101 value
 	mov rbx, [rbp + 24]
 	neg rbx
 
  labs$2:
-	; Assign £temporary2099 £temporary2098
+	; Assign £temporary2102 £temporary2101
 
  labs$3:
 	; Goto 5
 	jmp labs$5
 
  labs$4:
-	; Assign £temporary2099 value
+	; Assign £temporary2102 value
 	mov rbx, [rbp + 24]
 
  labs$5:
-	; Return £temporary2099
+	; Return £temporary2102
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]

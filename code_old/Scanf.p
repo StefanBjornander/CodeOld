@@ -1,10 +1,12 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+   
+   
 
 
 
 
-
-
+    
+    
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -36,12 +38,13 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
+  
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,1$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,0$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
+   
+   
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -57,114 +60,120 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,2$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-
-
-
-
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+   
+   
 
 
 
 
+    
+    
 
+       
+       
+       
 
+          
+          
+           
 
+       
+           
+          
 
+       
+       
+       
 
+       
+       
+       
 
+       
+       
+       
+          
 
+       
+       
+       
+       
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
+   
+   
 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
+   
+   
 
+     
+                         
+                    
+               
+      
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+   
+   
 
+          
 
+    
+    
 
+    
+    
+    
 
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
+   
+   
 
+    
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-
-
-
-
-
-
-
-
-
+    
+    
 
 typedef unsigned int UINT ;
 
@@ -183,22 +192,22 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
+   
+    
+    
+    
+    
 
+    
 
+    
+    
+    
+    
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+          
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -230,31 +239,32 @@ int feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
+   
+   
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-
-
-
-
-
+    
+    
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
+    
+    
 
-
-
-
-
-
-
+    
 
 extern int g_inStatus , g_inChars ;
 extern void * g_inDevice ;
@@ -273,15 +283,16 @@ int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
 int sscanf ( char * inString , char * format , ... ) ;
 int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-
-
-
-
-
+    
+    
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -296,12 +307,16 @@ void printString ( char * s , int precision ) ;
 void printString2 ( char * s ) ;
 void printIntRec ( int intValue ) ;
 void printInt ( int intValue , int plus , int space ) ;
-void printDoublePlain ( double doubleValue , int plus , int space , int grid , int precision ) ;
-void printLongDoublePlain ( long double doubleValue , int plus , int space , int grid , int precision ) ;
+void printDoublePlain ( double doubleValue , int plus , int space ,
+int grid , int precision ) ;
+void printLongDoublePlain ( long double doubleValue , int plus ,
+int space , int grid , int precision ) ;
 void printInt ( int intValue , int plus , int space ) ;
 void printLongInt ( long longIntValue , int plus , int space ) ;
-void printLongDoubleFraction ( long double longDoubleValue , int grid , int precision ) ;
-void printLongDoublePlain ( long double longDoubleValue , int plus , int space , int grid , int precision ) ;
+void printLongDoubleFraction ( long double longDoubleValue ,
+int grid , int precision ) ;
+void printLongDoublePlain ( long double longDoubleValue , int plus ,
+int space , int grid , int precision ) ;
 int printFormat ( char * format , char * arg_list ) ;
 
 int printf2 ( char * format ) ;
@@ -312,47 +327,51 @@ int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
 int sprintf ( char * outString , char * format , ... ) ;
 int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+       
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,2$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+   
+   
 
+          
+
+    
+    
+
+    
+    
+    
+
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,3$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
+   
+   
 
+     
+                         
+                    
+               
+      
 
-
-
-
-
-
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,4$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,0$
+   
+   
 
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,5$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,1$
-
-
-
-
+    
 
 extern char * strcpy ( char * target , const char * source ) ;
 extern char * strncpy ( char * target , const char * source , int size ) ;
@@ -375,96 +394,93 @@ extern int memcmp ( const void * left , const void * right , int size ) ;
 extern void * memchr ( const void * block , int i , int size ) ;
 extern void * memset ( void * block , int i , int size ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,5$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
+   
+   
+
+    
+    
+
+    
+
+     
+    
+
+     
+      
+          
+     
+        
+      
+
+         
+          
+             
+              
+             
+              
+
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,6$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
+   
+   
 
+    
+    
 
+     
+    
 
+          
+          
+      
 
+      
+      
+          
+       
+      
+            
+           
+      
+         
+         
+            
+            
+      
+      
+         
+         
+          
 
+       
+         
+          
+             
+              
+             
+              
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,7$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
+       
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,8$
-
-
+                        
 
 int g_inStatus , g_inChars ;
 void * g_inDevice ;
 int g_inCount ;
 
-
-
-
-
-
-
-
-
-
-
 char scanChar ( void ) {
-char c = '\000' ;
+char c = '\0' ;
 FILE * stream ;
 int handle ;
 char * inString ;
@@ -473,64 +489,38 @@ switch ( g_inStatus ) {
 case 0 :
 stream = ( FILE * ) g_inDevice ;
 
-
-
-
-
 handle = stream -> handle ;
-
-
-
-
-
-
-
-register_ah = 0x3Fs ;
+   
+ register_ah = 0x3Fs ;
 register_bx = handle ;
 register_cx = 1 ;
 register_dx = & c ;
 interrupt ( 0x21s ) ;
+  
 
-
-
-
-
-
-
-
-
-
-
-
+   
+    
+         
+        
+   
+   
+  
 
 ++ g_inChars ;
 return c ;
-
 
 case 1 :
 inString = ( char * ) g_inDevice ;
 return inString [ g_inChars ++];
 
 default :
-return '\000' ;
+return '\0' ;
 }
 }
 
 void unscanChar ( char ) {
-
-
-
 switch ( g_inStatus ) {
 case 0 :
-
-
-
-
-
-
-
-
-
 -- g_inChars ;
 break ;
 
@@ -539,26 +529,6 @@ case 1 :
 break ;
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 void scanPattern ( char * string , char * pattern , int not ) {
 int index = 0 ;
@@ -571,13 +541,11 @@ input = scanChar ( ) ;
 if ( string != ( ( void * ) 0 ) ) {
 while ( ( ! not && strchr ( pattern , input ) ) ||
 ( not && ! strchr ( pattern , input ) ) ) {
-
 string [ index ++] = input ;
 input = scanChar ( ) ;
 }
 
-string [ index ] = '\000' ;
-
+string [ index ] = '\0' ;
 }
 else {
 while ( ( ! not && strchr ( pattern , input ) ) ||
@@ -598,18 +566,19 @@ input = scanChar ( ) ;
 
 if ( string != ( ( void * ) 0 ) ) {
 if ( precision == 0 ) {
-while ( ! isspace ( input ) && ( input != -1 ) && ( input != '\012' ) ) {
+while ( ! isspace ( input ) && ( input != -1 ) && ( input != '\n' ) ) {
 string [ index ++] = input ;
 input = scanChar ( ) ;
 found = 1 ;
 ++ g_inChars ;
 }
 
-string [ index ] = '\000' ;
+string [ index ] = '\0' ;
 ++ g_inChars ;
 }
 else {
-while ( ( precision -- > 0 ) && ( ! isspace ( input ) && ( input != -1 ) && ( input != '\012' ) ) ) {
+while ( ( precision -- > 0 ) && ( ! isspace ( input ) &&
+( input != -1 ) && ( input != '\n' ) ) ) {
 string [ index ++] = input ;
 input = scanChar ( ) ;
 found = 1 ;
@@ -617,14 +586,15 @@ found = 1 ;
 }
 
 if ( precision > 0 ) {
-string [ index ] = '\000' ;
+string [ index ] = '\0' ;
 ++ g_inChars ;
 }
 }
 }
 else {
 if ( precision == 0 ) {
-while ( ! isspace ( input ) && ( input != -1 ) && ( input != '\012' ) ) {
+while ( ! isspace ( input ) && ( input != -1 ) &&
+( input != '\n' ) ) {
 input = scanChar ( ) ;
 found = 1 ;
 ++ g_inChars ;
@@ -633,7 +603,8 @@ found = 1 ;
 ++ g_inChars ;
 }
 else {
-while ( ( precision -- > 0 ) && ( ! isspace ( input ) && ( input != -1 ) && ( input != '\012' ) ) ) {
+while ( ( precision -- > 0 ) && ( ! isspace ( input ) &&
+( input != -1 ) && ( input != '\n' ) ) ) {
 input = scanChar ( ) ;
 found = 1 ;
 ++ g_inChars ;
@@ -650,17 +621,15 @@ if ( found ) {
 }
 }
 
-
-
 unsigned long digitToValue ( char input ) {
 if ( isdigit ( input ) ) {
-return ( input - '\060' ) ;
+return ( input - '0' ) ;
 }
 else if ( islower ( input ) ) {
-return ( ( input - '\141' ) + 10ul ) ;
+return ( ( input - 'a' ) + 10ul ) ;
 }
 else {
-return ( ( input - '\101' ) + 10ul ) ;
+return ( ( input - 'A' ) + 10ul ) ;
 }
 }
 
@@ -673,16 +642,16 @@ while ( isspace ( input ) ) {
 input = scanChar ( ) ;
 }
 
-if ( input == '\053' ) {
+if ( input == '+' ) {
 input = scanChar ( ) ;
 }
-else if ( input == '\055' ) {
+else if ( input == '-' ) {
 minus = 1 ;
 input = scanChar ( ) ;
 }
 
 while ( isdigit ( input ) ) {
-longValue = ( 10l * longValue ) + ( input - '\060' ) ;
+longValue = ( 10l * longValue ) + ( input - '0' ) ;
 input = scanChar ( ) ;
 found = 1 ;
 }
@@ -708,10 +677,10 @@ while ( isspace ( input ) ) {
 input = scanChar ( ) ;
 }
 
-if ( input == '\060' ) {
+if ( input == '0' ) {
 input = scanChar ( ) ;
 
-if ( tolower ( input ) == '\170' ) {
+if ( tolower ( input ) == 'x' ) {
 base = ( base == 0ul ) ? 16ul : base ;
 input = scanChar ( ) ;
 }
@@ -744,8 +713,6 @@ unscanChar ( input ) ;
 return unsignedLongValue ;
 }
 
-
-
 long double scanLongDouble ( void ) {
 int minus = 0 , found = 0 ;
 long double value = 0.0L , factor = 1.0L ;
@@ -755,26 +722,26 @@ while ( isspace ( input ) ) {
 input = scanChar ( ) ;
 }
 
-if ( input == '\053' ) {
+if ( input == '+' ) {
 input = scanChar ( ) ;
 }
-else if ( input == '\055' ) {
+else if ( input == '-' ) {
 minus = 1 ;
 input = scanChar ( ) ;
 }
 
 while ( isdigit ( input ) ) {
-value = ( 10.0L * value ) + ( ( long double ) ( input - '\060' ) ) ;
+value = ( 10.0L * value ) + ( ( long double ) ( input - '0' ) ) ;
 input = scanChar ( ) ;
 found = 1 ;
 }
 
-if ( input == '\056' ) {
+if ( input == '.' ) {
 input = scanChar ( ) ;
 
 while ( isdigit ( input ) ) {
 factor /= 10.0L ;
-value += factor * ( ( long double ) ( input - '\060' ) ) ;
+value += factor * ( ( long double ) ( input - '0' ) ) ;
 input = scanChar ( ) ;
 found = 1 ;
 }
@@ -782,7 +749,7 @@ found = 1 ;
 
 unscanChar ( input ) ;
 
-if ( tolower ( input ) == '\145' ) {
+if ( tolower ( input ) == 'e' ) {
 double exponent = ( double ) scanLongInt ( ) ;
 value *= pow ( 10.0 , exponent ) ;
 }
@@ -801,11 +768,10 @@ if ( found ) {
 return value ;
 }
 
-
-
 int scanFormat ( char * format , char * arg_list ) {
 char c , * charPtr ;
-int percent = 0 , shortInt = 0 , longIntOrDouble = 0 , longDouble = 0 , star = 0 ;
+int percent = 0 , shortInt = 0 , longIntOrDouble = 0 ,
+longDouble = 0 , star = 0 ;
 
 long longValue , * longPtr ;
 short * shortPtr ;
@@ -820,29 +786,29 @@ long double longDoubleValue ;
 g_inCount = 0 ;
 g_inChars = 0 ;
 
-for ( index = 0 ; format [ index ] != '\000' ; ++ index ) {
+for ( index = 0 ; format [ index ] != '\0' ; ++ index ) {
 c = format [ index ];
 int d = c + 1 ;
 
 if ( percent ) {
 switch ( d - 1 ) {
-case '\150' :
+case 'h' :
 shortInt = 1 ;
 break ;
 
-case '\154' :
+case 'l' :
 longIntOrDouble = 1 ;
 break ;
 
-case '\114' :
+case 'L' :
 longDouble = 1 ;
 break ;
 
-case '\052' :
+case '*' :
 star = 1 ;
 break ;
 
-case '\143' : {
+case 'c' : {
 char charValue = scanChar ( ) ;
 
 if ( ! star ) {
@@ -858,7 +824,7 @@ if ( charValue != -1 ) {
 }
 break ;
 
-case '\163' :
+case 's' :
 if ( ! star ) {
 charPtr = ( * ( ( arg_list += sizeof ( char * ) ) , ( ( char * * ) ( arg_list - sizeof ( char * ) ) ) ) ) ;
 scanString ( charPtr , 0 ) ;
@@ -870,8 +836,8 @@ scanString ( ( ( void * ) 0 ) , 0 ) ;
 percent = 0 ;
 break ;
 
-case '\151' :
-case '\144' :
+case 'i' :
+case 'd' :
 longValue = scanLongInt ( ) ;
 
 if ( ! star ) {
@@ -892,7 +858,7 @@ longPtr = ( * ( ( arg_list += sizeof ( long * ) ) , ( ( long * * ) ( arg_list - 
 percent = 0 ;
 break ;
 
-case '\157' :
+case 'o' :
 unsignedLongValue = scanUnsignedLongInt ( 8ul ) ;
 
 if ( ! star ) {
@@ -913,7 +879,7 @@ unsignedLongPtr = ( * ( ( arg_list += sizeof ( unsigned long * ) ) , ( ( unsigne
 percent = 0 ;
 break ;
 
-case '\170' :
+case 'x' :
 unsignedLongValue = scanUnsignedLongInt ( 16ul ) ;
 
 if ( ! star ) {
@@ -934,7 +900,7 @@ unsignedLongPtr = ( * ( ( arg_list += sizeof ( unsigned long * ) ) , ( ( unsigne
 percent = 0 ;
 break ;
 
-case '\165' :
+case 'u' :
 unsignedLongValue = scanUnsignedLongInt ( 0ul ) ;
 
 if ( ! star ) {
@@ -955,9 +921,9 @@ unsignedLongPtr = ( * ( ( arg_list += sizeof ( unsigned long * ) ) , ( ( unsigne
 percent = 0 ;
 break ;
 
-case '\145' :
-case '\146' :
-case '\147' :
+case 'e' :
+case 'f' :
+case 'g' :
 longDoubleValue = scanLongDouble ( ) ;
 
 if ( ! star ) {
@@ -978,20 +944,20 @@ float * floatPtr = ( * ( ( arg_list += sizeof ( float * ) ) , ( ( float * * ) ( 
 percent = 0 ;
 break ;
 
-case '\133' : {
+case '[' : {
 int not = 0 ;
 ++ index ;
 
-if ( format [ index ] == '\136' ) {
+if ( format [ index ] == '^' ) {
 not = 1 ;
 ++ index ;
 }
 
 int startIndex = index ;
-while ( format [ index ] != '\135' ) {
+while ( format [ index ] != ']' ) {
 ++ index ;
 }
-format [ index ] = '\000' ;
+format [ index ] = '\0' ;
 
 if ( ! star ) {
 char * string = ( * ( ( arg_list += sizeof ( char * ) ) , ( ( char * * ) ( arg_list - sizeof ( char * ) ) ) ) ) ;
@@ -1003,19 +969,19 @@ scanPattern ( ( ( void * ) 0 ) , & format [ startIndex ] , not ) ;
 }
 break ;
 
-case '\156' :
+case 'n' :
 charsPtr = ( * ( ( arg_list += sizeof ( int * ) ) , ( ( int * * ) ( arg_list - sizeof ( int * ) ) ) ) ) ;
 * charsPtr = g_inChars ;
 percent = 0 ;
 break ;
 
 default :
-printf ( "\163\143\141\156\106\157\162\155\141\164\040\143\040\075\040\047\045\143\047\012" , c ) ;
+printf ( "scanFormat c = '%c'\n" , c ) ;
 break ;
 }
 }
 else {
-if ( c == '\045' ) {
+if ( c == '%' ) {
 percent = 1 ;
 shortInt = 0 ;
 longIntOrDouble = 0 ;
@@ -1024,7 +990,6 @@ star = 0 ;
 }
 }
 }
-
 
 return g_inCount ;
 }
@@ -1036,12 +1001,10 @@ return vscanf ( format , arg_list ) ;
 }
 
 int vscanf ( char * format , char * arg_list ) {
-
 return vfscanf ( stdin , format , arg_list ) ;
 }
 
 int fscanf ( FILE * inStream , char * format , ... ) {
-
 char * arg_list ;
 ( arg_list = ( ( char * ) & format ) + sizeof ( format ) ) ;
 return vfscanf ( inStream , format , arg_list ) ;
@@ -1050,7 +1013,6 @@ return vfscanf ( inStream , format , arg_list ) ;
 int vfscanf ( FILE * inStream , char * format , char * arg_list ) {
 g_inStatus = 0 ;
 g_inDevice = ( void * ) inStream ;
-
 return scanFormat ( format , arg_list ) ;
 }
 

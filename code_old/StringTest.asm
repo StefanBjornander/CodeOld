@@ -146,1250 +146,1247 @@ string_strtok28s2C20222C2229203D202225s220A#:
 section .text
 
  string_test:
-	; Empty
-
- string_test$1:
 	; Assign s "Hello, World!"
 	mov qword [rbp + 28], string_Hello2C20World21#
 
- string_test$2:
+ string_test$1:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$3:
+ string_test$2:
 	; Parameter pointer "strlen("%s") = %i\n" 268
 	mov qword [rbp + 268], string_strlen282225s2229203D2025i0A#
 
- string_test$4:
+ string_test$3:
 	; Parameter pointer s 276
 	mov rax, [rbp + 28]
 	mov [rbp + 276], rax
 
- string_test$5:
+ string_test$4:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$6:
+ string_test$5:
 	; Parameter pointer s 308
 	mov rax, [rbp + 28]
 	mov [rbp + 308], rax
 
- string_test$7:
+ string_test$6:
 	; Call strlen 284 0
-	mov qword [rbp + 284], string_test$8
+	mov qword [rbp + 284], string_test$7
 	mov [rbp + 292], rbp
 	add rbp, 284
 	jmp strlen
 
- string_test$8:
+ string_test$7:
 	; PostCall 284
 
- string_test$9:
+ string_test$8:
 	; GetReturnValue £temporary2985
 
- string_test$10:
+ string_test$9:
 	; Parameter signedint £temporary2985 284
 	mov [rbp + 284], ebx
 
- string_test$11:
+ string_test$10:
 	; Call printf 244 12
-	mov qword [rbp + 244], string_test$12
+	mov qword [rbp + 244], string_test$11
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 12
 	jmp printf
 
- string_test$12:
+ string_test$11:
 	; PostCall 244
 
- string_test$13:
+ string_test$12:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$14:
+ string_test$13:
 	; Parameter pointer t 268
 	mov [rbp + 268], rbp
 	add qword [rbp + 268], 36
 
- string_test$15:
+ string_test$14:
 	; Parameter pointer s 276
 	mov rax, [rbp + 28]
 	mov [rbp + 276], rax
 
- string_test$16:
+ string_test$15:
 	; Call strcpy 244 0
-	mov qword [rbp + 244], string_test$17
+	mov qword [rbp + 244], string_test$16
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strcpy
 
- string_test$17:
+ string_test$16:
 	; PostCall 244
 
- string_test$18:
+ string_test$17:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$19:
+ string_test$18:
 	; Parameter pointer u 268
 	mov [rbp + 268], rbp
 	add qword [rbp + 268], 136
 
- string_test$20:
+ string_test$19:
 	; Parameter pointer s 276
 	mov rax, [rbp + 28]
 	mov [rbp + 276], rax
 
- string_test$21:
+ string_test$20:
 	; Parameter signedint 5 284
 	mov dword [rbp + 284], 5
 
- string_test$22:
+ string_test$21:
 	; Call strncpy 244 0
-	mov qword [rbp + 244], string_test$23
+	mov qword [rbp + 244], string_test$22
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strncpy
 
- string_test$23:
+ string_test$22:
 	; PostCall 244
 
- string_test$24:
+ string_test$23:
 	; Dereference £temporary2989 -> u u 0
 	mov rsi, rbp
 	add rsi, 136
 
- string_test$25:
+ string_test$24:
 	; Assign £temporary2989 -> u 0
 	mov byte [rsi + 5], 0
 
- string_test$26:
+ string_test$25:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$27:
+ string_test$26:
 	; Parameter pointer "t = "%s", u = "%s"\n" 268
 	mov qword [rbp + 268], string_t203D202225s222C20u203D202225s220A#
 
- string_test$28:
+ string_test$27:
 	; Parameter pointer t 276
 	mov [rbp + 276], rbp
 	add qword [rbp + 276], 36
 
- string_test$29:
+ string_test$28:
 	; Parameter pointer u 284
 	mov [rbp + 284], rbp
 	add qword [rbp + 284], 136
 
- string_test$30:
+ string_test$29:
 	; Call printf 244 16
-	mov qword [rbp + 244], string_test$31
+	mov qword [rbp + 244], string_test$30
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 16
 	jmp printf
 
- string_test$31:
+ string_test$30:
 	; PostCall 244
 
- string_test$32:
+ string_test$31:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$33:
+ string_test$32:
 	; Parameter pointer t 268
 	mov [rbp + 268], rbp
 	add qword [rbp + 268], 36
 
- string_test$34:
+ string_test$33:
 	; Parameter pointer "abc" 276
 	mov qword [rbp + 276], string_abc#
 
- string_test$35:
+ string_test$34:
 	; Call strcat 244 0
-	mov qword [rbp + 244], string_test$36
+	mov qword [rbp + 244], string_test$35
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strcat
 
- string_test$36:
+ string_test$35:
 	; PostCall 244
 
- string_test$37:
+ string_test$36:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$38:
+ string_test$37:
 	; Parameter pointer u 268
 	mov [rbp + 268], rbp
 	add qword [rbp + 268], 136
 
- string_test$39:
+ string_test$38:
 	; Call strlen 244 0
-	mov qword [rbp + 244], string_test$40
+	mov qword [rbp + 244], string_test$39
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strlen
 
- string_test$40:
+ string_test$39:
 	; PostCall 244
 
- string_test$41:
+ string_test$40:
 	; GetReturnValue £temporary2992
 
- string_test$42:
+ string_test$41:
 	; Assign i £temporary2992
 	mov [rbp + 24], ebx
 
- string_test$43:
+ string_test$42:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$44:
+ string_test$43:
 	; Parameter pointer u 268
 	mov [rbp + 268], rbp
 	add qword [rbp + 268], 136
 
- string_test$45:
+ string_test$44:
 	; Parameter pointer "abc" 276
 	mov qword [rbp + 276], string_abc#
 
- string_test$46:
+ string_test$45:
 	; Parameter signedint 2 284
 	mov dword [rbp + 284], 2
 
- string_test$47:
+ string_test$46:
 	; Call strncat 244 0
-	mov qword [rbp + 244], string_test$48
+	mov qword [rbp + 244], string_test$47
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strncat
 
- string_test$48:
+ string_test$47:
 	; PostCall 244
 
- string_test$49:
+ string_test$48:
 	; BinaryAdd £temporary2994 i 2
 	mov eax, [rbp + 24]
 	add eax, 2
 
- string_test$50:
+ string_test$49:
 	; IntegralToIntegral £temporary2996 £temporary2994
 	mov rbx, 4294967295
 	and rax, rbx
 
- string_test$51:
+ string_test$50:
 	; BinaryAdd £temporary2998 u £temporary2996
 	mov rsi, rbp
 	add rsi, 136
 	add rsi, rax
 
- string_test$52:
+ string_test$51:
 	; Dereference £temporary2995 -> £temporary2998 £temporary2998 0
 
- string_test$53:
+ string_test$52:
 	; Assign £temporary2995 -> £temporary2998 0
 	mov byte [rsi], 0
 
- string_test$54:
+ string_test$53:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$55:
+ string_test$54:
 	; Parameter pointer "t = "%s", u = "%s"\n" 268
 	mov qword [rbp + 268], string_t203D202225s222C20u203D202225s220A#
 
- string_test$56:
+ string_test$55:
 	; Parameter pointer t 276
 	mov [rbp + 276], rbp
 	add qword [rbp + 276], 36
 
- string_test$57:
+ string_test$56:
 	; Parameter pointer u 284
 	mov [rbp + 284], rbp
 	add qword [rbp + 284], 136
 
- string_test$58:
+ string_test$57:
 	; Call printf 244 16
-	mov qword [rbp + 244], string_test$59
+	mov qword [rbp + 244], string_test$58
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 16
 	jmp printf
 
- string_test$59:
+ string_test$58:
 	; PostCall 244
 
- string_test$60:
+ string_test$59:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$61:
+ string_test$60:
 	; Parameter pointer "strcmp(s, u) = %i\n" 268
 	mov qword [rbp + 268], string_strcmp28s2C20u29203D2025i0A#
 
- string_test$62:
+ string_test$61:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$63:
+ string_test$62:
 	; Parameter pointer s 300
 	mov rax, [rbp + 28]
 	mov [rbp + 300], rax
 
- string_test$64:
+ string_test$63:
 	; Parameter pointer u 308
 	mov [rbp + 308], rbp
 	add qword [rbp + 308], 136
 
- string_test$65:
+ string_test$64:
 	; Call strcmp 276 0
-	mov qword [rbp + 276], string_test$66
+	mov qword [rbp + 276], string_test$65
 	mov [rbp + 284], rbp
 	add rbp, 276
 	jmp strcmp
 
- string_test$66:
+ string_test$65:
 	; PostCall 276
 
- string_test$67:
+ string_test$66:
 	; GetReturnValue £temporary3000
 
- string_test$68:
+ string_test$67:
 	; Parameter signedint £temporary3000 276
 	mov [rbp + 276], ebx
 
- string_test$69:
+ string_test$68:
 	; Call printf 244 4
-	mov qword [rbp + 244], string_test$70
+	mov qword [rbp + 244], string_test$69
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 4
 	jmp printf
 
- string_test$70:
+ string_test$69:
 	; PostCall 244
 
- string_test$71:
+ string_test$70:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$72:
+ string_test$71:
 	; Parameter pointer "strncmp(s, u, 2) = %i\n" 268
 	mov qword [rbp + 268], string_strncmp28s2C20u2C20229203D2025i0A#
 
- string_test$73:
+ string_test$72:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$74:
+ string_test$73:
 	; Parameter pointer s 300
 	mov rax, [rbp + 28]
 	mov [rbp + 300], rax
 
- string_test$75:
+ string_test$74:
 	; Parameter pointer u 308
 	mov [rbp + 308], rbp
 	add qword [rbp + 308], 136
 
- string_test$76:
+ string_test$75:
 	; Parameter signedint 2 316
 	mov dword [rbp + 316], 2
 
- string_test$77:
+ string_test$76:
 	; Call strncmp 276 0
-	mov qword [rbp + 276], string_test$78
+	mov qword [rbp + 276], string_test$77
 	mov [rbp + 284], rbp
 	add rbp, 276
 	jmp strncmp
 
- string_test$78:
+ string_test$77:
 	; PostCall 276
 
- string_test$79:
+ string_test$78:
 	; GetReturnValue £temporary3002
 
- string_test$80:
+ string_test$79:
 	; Parameter signedint £temporary3002 276
 	mov [rbp + 276], ebx
 
- string_test$81:
+ string_test$80:
 	; Call printf 244 4
-	mov qword [rbp + 244], string_test$82
+	mov qword [rbp + 244], string_test$81
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 4
 	jmp printf
 
- string_test$82:
+ string_test$81:
 	; PostCall 244
 
- string_test$83:
+ string_test$82:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$84:
+ string_test$83:
 	; Parameter pointer s 268
 	mov rax, [rbp + 28]
 	mov [rbp + 268], rax
 
- string_test$85:
+ string_test$84:
 	; Parameter signedint 108 276
 	mov dword [rbp + 276], 108
 
- string_test$86:
+ string_test$85:
 	; Call strchr 244 0
-	mov qword [rbp + 244], string_test$87
+	mov qword [rbp + 244], string_test$86
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strchr
 
- string_test$87:
+ string_test$86:
 	; PostCall 244
 
- string_test$88:
+ string_test$87:
 	; GetReturnValue £temporary3004
 
- string_test$89:
+ string_test$88:
 	; Assign p £temporary3004
 	mov [rbp + 236], rbx
 
- string_test$90:
+ string_test$89:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$91:
+ string_test$90:
 	; Parameter pointer "strchr(s, 'l') = %i\n" 268
 	mov qword [rbp + 268], string_strchr28s2C2027l2729203D2025i0A#
 
- string_test$92:
-	; Equal 97 p 0
+ string_test$91:
+	; Equal 96 p 0
 	cmp qword [rbp + 236], 0
-	je string_test$97
+	je string_test$96
 
- string_test$93:
+ string_test$92:
 	; BinarySubtract £temporary3007 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
- string_test$94:
+ string_test$93:
 	; IntegralToIntegral £temporary3008 £temporary3007
 
- string_test$95:
+ string_test$94:
 	; Assign £temporary3009 £temporary3008
 
- string_test$96:
-	; Goto 98
-	jmp string_test$98
+ string_test$95:
+	; Goto 97
+	jmp string_test$97
 
- string_test$97:
+ string_test$96:
 	; Assign £temporary3009 -1
 	mov eax, -1
 
- string_test$98:
+ string_test$97:
 	; Parameter signedint £temporary3009 276
 	mov [rbp + 276], eax
 
- string_test$99:
+ string_test$98:
 	; Call printf 244 4
-	mov qword [rbp + 244], string_test$100
+	mov qword [rbp + 244], string_test$99
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 4
 	jmp printf
 
- string_test$100:
+ string_test$99:
 	; PostCall 244
 
- string_test$101:
+ string_test$100:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$102:
+ string_test$101:
 	; Parameter pointer s 268
 	mov rax, [rbp + 28]
 	mov [rbp + 268], rax
 
- string_test$103:
+ string_test$102:
 	; Parameter signedint 108 276
 	mov dword [rbp + 276], 108
 
- string_test$104:
+ string_test$103:
 	; Call strrchr 244 0
-	mov qword [rbp + 244], string_test$105
+	mov qword [rbp + 244], string_test$104
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strrchr
 
- string_test$105:
+ string_test$104:
 	; PostCall 244
 
- string_test$106:
+ string_test$105:
 	; GetReturnValue £temporary3011
 
- string_test$107:
+ string_test$106:
 	; Assign p £temporary3011
 	mov [rbp + 236], rbx
 
- string_test$108:
+ string_test$107:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$109:
+ string_test$108:
 	; Parameter pointer "strrchr(s, 'l') = %i\n" 268
 	mov qword [rbp + 268], string_strrchr28s2C2027l2729203D2025i0A#
 
- string_test$110:
-	; Equal 115 p 0
+ string_test$109:
+	; Equal 114 p 0
 	cmp qword [rbp + 236], 0
-	je string_test$115
+	je string_test$114
 
- string_test$111:
+ string_test$110:
 	; BinarySubtract £temporary3014 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
- string_test$112:
+ string_test$111:
 	; IntegralToIntegral £temporary3015 £temporary3014
 
- string_test$113:
+ string_test$112:
 	; Assign £temporary3016 £temporary3015
 
- string_test$114:
-	; Goto 116
-	jmp string_test$116
+ string_test$113:
+	; Goto 115
+	jmp string_test$115
 
- string_test$115:
+ string_test$114:
 	; Assign £temporary3016 -1
 	mov eax, -1
 
- string_test$116:
+ string_test$115:
 	; Parameter signedint £temporary3016 276
 	mov [rbp + 276], eax
 
- string_test$117:
+ string_test$116:
 	; Call printf 244 4
-	mov qword [rbp + 244], string_test$118
+	mov qword [rbp + 244], string_test$117
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 4
 	jmp printf
 
- string_test$118:
+ string_test$117:
 	; PostCall 244
 
- string_test$119:
+ string_test$118:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$120:
+ string_test$119:
 	; Parameter pointer s 268
 	mov rax, [rbp + 28]
 	mov [rbp + 268], rax
 
- string_test$121:
+ string_test$120:
 	; Parameter signedint 120 276
 	mov dword [rbp + 276], 120
 
- string_test$122:
+ string_test$121:
 	; Call strchr 244 0
-	mov qword [rbp + 244], string_test$123
+	mov qword [rbp + 244], string_test$122
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strchr
 
- string_test$123:
+ string_test$122:
 	; PostCall 244
 
- string_test$124:
+ string_test$123:
 	; GetReturnValue £temporary3018
 
- string_test$125:
+ string_test$124:
 	; Assign p £temporary3018
 	mov [rbp + 236], rbx
 
- string_test$126:
+ string_test$125:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$127:
+ string_test$126:
 	; Parameter pointer "strchr(s, 'x') = %i\n" 268
 	mov qword [rbp + 268], string_strchr28s2C2027x2729203D2025i0A#
 
- string_test$128:
-	; Equal 133 p 0
+ string_test$127:
+	; Equal 132 p 0
 	cmp qword [rbp + 236], 0
-	je string_test$133
+	je string_test$132
 
- string_test$129:
+ string_test$128:
 	; BinarySubtract £temporary3021 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
- string_test$130:
+ string_test$129:
 	; IntegralToIntegral £temporary3022 £temporary3021
 
- string_test$131:
+ string_test$130:
 	; Assign £temporary3023 £temporary3022
 
- string_test$132:
-	; Goto 134
-	jmp string_test$134
+ string_test$131:
+	; Goto 133
+	jmp string_test$133
 
- string_test$133:
+ string_test$132:
 	; Assign £temporary3023 -1
 	mov eax, -1
 
- string_test$134:
+ string_test$133:
 	; Parameter signedint £temporary3023 276
 	mov [rbp + 276], eax
 
- string_test$135:
+ string_test$134:
 	; Call printf 244 4
-	mov qword [rbp + 244], string_test$136
+	mov qword [rbp + 244], string_test$135
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 4
 	jmp printf
 
- string_test$136:
+ string_test$135:
 	; PostCall 244
 
- string_test$137:
+ string_test$136:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$138:
+ string_test$137:
 	; Parameter pointer s 268
 	mov rax, [rbp + 28]
 	mov [rbp + 268], rax
 
- string_test$139:
+ string_test$138:
 	; Parameter signedint 120 276
 	mov dword [rbp + 276], 120
 
- string_test$140:
+ string_test$139:
 	; Call strrchr 244 0
-	mov qword [rbp + 244], string_test$141
+	mov qword [rbp + 244], string_test$140
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strrchr
 
- string_test$141:
+ string_test$140:
 	; PostCall 244
 
- string_test$142:
+ string_test$141:
 	; GetReturnValue £temporary3025
 
- string_test$143:
+ string_test$142:
 	; Assign p £temporary3025
 	mov [rbp + 236], rbx
 
- string_test$144:
+ string_test$143:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$145:
+ string_test$144:
 	; Parameter pointer "strrchr(s, 'x') = %i\n" 268
 	mov qword [rbp + 268], string_strrchr28s2C2027x2729203D2025i0A#
 
- string_test$146:
-	; Equal 151 p 0
+ string_test$145:
+	; Equal 150 p 0
 	cmp qword [rbp + 236], 0
-	je string_test$151
+	je string_test$150
 
- string_test$147:
+ string_test$146:
 	; BinarySubtract £temporary3028 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
- string_test$148:
+ string_test$147:
 	; IntegralToIntegral £temporary3029 £temporary3028
 
- string_test$149:
+ string_test$148:
 	; Assign £temporary3030 £temporary3029
 
- string_test$150:
-	; Goto 152
-	jmp string_test$152
+ string_test$149:
+	; Goto 151
+	jmp string_test$151
 
- string_test$151:
+ string_test$150:
 	; Assign £temporary3030 -1
 	mov eax, -1
 
- string_test$152:
+ string_test$151:
 	; Parameter signedint £temporary3030 276
 	mov [rbp + 276], eax
 
- string_test$153:
+ string_test$152:
 	; Call printf 244 4
-	mov qword [rbp + 244], string_test$154
+	mov qword [rbp + 244], string_test$153
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 4
 	jmp printf
 
- string_test$154:
+ string_test$153:
 	; PostCall 244
 
- string_test$155:
+ string_test$154:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$156:
+ string_test$155:
 	; Parameter pointer s 268
 	mov rax, [rbp + 28]
 	mov [rbp + 268], rax
 
- string_test$157:
+ string_test$156:
 	; Parameter pointer "Hello, World!" 276
 	mov qword [rbp + 276], string_Hello2C20World21#
 
- string_test$158:
+ string_test$157:
 	; Parameter signedint 20 284
 	mov dword [rbp + 284], 20
 
- string_test$159:
+ string_test$158:
 	; Call memcpy 244 0
-	mov qword [rbp + 244], string_test$160
+	mov qword [rbp + 244], string_test$159
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp memcpy
 
- string_test$160:
+ string_test$159:
 	; PostCall 244
 
- string_test$161:
+ string_test$160:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$162:
+ string_test$161:
 	; Parameter pointer t 268
 	mov [rbp + 268], rbp
 	add qword [rbp + 268], 36
 
- string_test$163:
+ string_test$162:
 	; Parameter pointer "Hello, World!" 276
 	mov qword [rbp + 276], string_Hello2C20World21#
 
- string_test$164:
+ string_test$163:
 	; Parameter signedint 20 284
 	mov dword [rbp + 284], 20
 
- string_test$165:
+ string_test$164:
 	; Call memmove 244 0
-	mov qword [rbp + 244], string_test$166
+	mov qword [rbp + 244], string_test$165
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp memmove
 
- string_test$166:
+ string_test$165:
 	; PostCall 244
 
- string_test$167:
+ string_test$166:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$168:
+ string_test$167:
 	; Parameter pointer u 268
 	mov [rbp + 268], rbp
 	add qword [rbp + 268], 136
 
- string_test$169:
+ string_test$168:
 	; Parameter signedint 88 276
 	mov dword [rbp + 276], 88
 
- string_test$170:
+ string_test$169:
 	; Parameter signedint 20 280
 	mov dword [rbp + 280], 20
 
- string_test$171:
+ string_test$170:
 	; Call memset 244 0
-	mov qword [rbp + 244], string_test$172
+	mov qword [rbp + 244], string_test$171
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp memset
 
- string_test$172:
+ string_test$171:
 	; PostCall 244
 
- string_test$173:
+ string_test$172:
 	; Dereference £temporary3035 -> u u 0
 	mov rsi, rbp
 	add rsi, 136
 
- string_test$174:
+ string_test$173:
 	; Assign £temporary3035 -> u 0
 	mov byte [rsi + 21], 0
 
- string_test$175:
+ string_test$174:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$176:
+ string_test$175:
 	; Parameter pointer "s = "%s", t = "%s", u = "%s"\n" 268
 	mov qword [rbp + 268], string_s203D202225s222C20t203D202225s222C20u203D202225s220A#
 
- string_test$177:
+ string_test$176:
 	; Parameter pointer s 276
 	mov rax, [rbp + 28]
 	mov [rbp + 276], rax
 
- string_test$178:
+ string_test$177:
 	; Parameter pointer t 284
 	mov [rbp + 284], rbp
 	add qword [rbp + 284], 36
 
- string_test$179:
+ string_test$178:
 	; Parameter pointer u 292
 	mov [rbp + 292], rbp
 	add qword [rbp + 292], 136
 
- string_test$180:
+ string_test$179:
 	; Call printf 244 24
-	mov qword [rbp + 244], string_test$181
+	mov qword [rbp + 244], string_test$180
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 24
 	jmp printf
 
- string_test$181:
+ string_test$180:
 	; PostCall 244
 
- string_test$182:
+ string_test$181:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$183:
+ string_test$182:
 	; Parameter pointer s 268
 	mov rax, [rbp + 28]
 	mov [rbp + 268], rax
 
- string_test$184:
+ string_test$183:
 	; Parameter signedint 108 276
 	mov dword [rbp + 276], 108
 
- string_test$185:
+ string_test$184:
 	; Parameter signedint 20 280
 	mov dword [rbp + 280], 20
 
- string_test$186:
+ string_test$185:
 	; Call memchr 244 0
-	mov qword [rbp + 244], string_test$187
+	mov qword [rbp + 244], string_test$186
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp memchr
 
- string_test$187:
+ string_test$186:
 	; PostCall 244
 
- string_test$188:
+ string_test$187:
 	; GetReturnValue £temporary3037
 
- string_test$189:
+ string_test$188:
 	; Assign p £temporary3037
 	mov [rbp + 236], rbx
 
- string_test$190:
+ string_test$189:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$191:
+ string_test$190:
 	; Parameter pointer "memchr(s, 'l', SIZE * sizeof(char)) = %i\n" 268
 	mov qword [rbp + 268], string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A#
 
- string_test$192:
-	; Equal 197 p 0
+ string_test$191:
+	; Equal 196 p 0
 	cmp qword [rbp + 236], 0
-	je string_test$197
+	je string_test$196
 
- string_test$193:
+ string_test$192:
 	; BinarySubtract £temporary3040 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
- string_test$194:
+ string_test$193:
 	; IntegralToIntegral £temporary3041 £temporary3040
 
- string_test$195:
+ string_test$194:
 	; Assign £temporary3042 £temporary3041
 
- string_test$196:
-	; Goto 198
-	jmp string_test$198
+ string_test$195:
+	; Goto 197
+	jmp string_test$197
 
- string_test$197:
+ string_test$196:
 	; Assign £temporary3042 -1
 	mov eax, -1
 
- string_test$198:
+ string_test$197:
 	; Parameter signedint £temporary3042 276
 	mov [rbp + 276], eax
 
- string_test$199:
+ string_test$198:
 	; Call printf 244 4
-	mov qword [rbp + 244], string_test$200
+	mov qword [rbp + 244], string_test$199
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 4
 	jmp printf
 
- string_test$200:
+ string_test$199:
 	; PostCall 244
 
- string_test$201:
+ string_test$200:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$202:
+ string_test$201:
 	; Parameter pointer s 268
 	mov rax, [rbp + 28]
 	mov [rbp + 268], rax
 
- string_test$203:
+ string_test$202:
 	; Parameter signedint 120 276
 	mov dword [rbp + 276], 120
 
- string_test$204:
+ string_test$203:
 	; Parameter signedint 20 280
 	mov dword [rbp + 280], 20
 
- string_test$205:
+ string_test$204:
 	; Call memchr 244 0
-	mov qword [rbp + 244], string_test$206
+	mov qword [rbp + 244], string_test$205
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp memchr
 
- string_test$206:
+ string_test$205:
 	; PostCall 244
 
- string_test$207:
+ string_test$206:
 	; GetReturnValue £temporary3044
 
- string_test$208:
+ string_test$207:
 	; Assign p £temporary3044
 	mov [rbp + 236], rbx
 
- string_test$209:
+ string_test$208:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$210:
+ string_test$209:
 	; Parameter pointer "memchr(s, 'x', SIZE * sizeof(char)) = %i\n" 268
 	mov qword [rbp + 268], string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A#
 
- string_test$211:
-	; Equal 216 p 0
+ string_test$210:
+	; Equal 215 p 0
 	cmp qword [rbp + 236], 0
-	je string_test$216
+	je string_test$215
 
- string_test$212:
+ string_test$211:
 	; BinarySubtract £temporary3047 p s
 	mov rax, [rbp + 236]
 	sub rax, [rbp + 28]
 
- string_test$213:
+ string_test$212:
 	; IntegralToIntegral £temporary3048 £temporary3047
 
- string_test$214:
+ string_test$213:
 	; Assign £temporary3049 £temporary3048
 
- string_test$215:
-	; Goto 217
-	jmp string_test$217
+ string_test$214:
+	; Goto 216
+	jmp string_test$216
 
- string_test$216:
+ string_test$215:
 	; Assign £temporary3049 -1
 	mov eax, -1
 
- string_test$217:
+ string_test$216:
 	; Parameter signedint £temporary3049 276
 	mov [rbp + 276], eax
 
- string_test$218:
+ string_test$217:
 	; Call printf 244 4
-	mov qword [rbp + 244], string_test$219
+	mov qword [rbp + 244], string_test$218
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 4
 	jmp printf
 
- string_test$219:
+ string_test$218:
 	; PostCall 244
 
- string_test$220:
+ string_test$219:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$221:
+ string_test$220:
 	; Parameter pointer "memcmp(s, t, SIZE * sizeof(char)) = %i\n" 268
 	mov qword [rbp + 268], string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A#
 
- string_test$222:
+ string_test$221:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$223:
+ string_test$222:
 	; Parameter pointer s 300
 	mov rax, [rbp + 28]
 	mov [rbp + 300], rax
 
- string_test$224:
+ string_test$223:
 	; Parameter pointer t 308
 	mov [rbp + 308], rbp
 	add qword [rbp + 308], 36
 
- string_test$225:
+ string_test$224:
 	; Parameter signedint 20 316
 	mov dword [rbp + 316], 20
 
- string_test$226:
+ string_test$225:
 	; Call memcmp 276 0
-	mov qword [rbp + 276], string_test$227
+	mov qword [rbp + 276], string_test$226
 	mov [rbp + 284], rbp
 	add rbp, 276
 	jmp memcmp
 
- string_test$227:
+ string_test$226:
 	; PostCall 276
 
- string_test$228:
+ string_test$227:
 	; GetReturnValue £temporary3051
 
- string_test$229:
+ string_test$228:
 	; Parameter signedint £temporary3051 276
 	mov [rbp + 276], ebx
 
- string_test$230:
+ string_test$229:
 	; Call printf 244 4
-	mov qword [rbp + 244], string_test$231
+	mov qword [rbp + 244], string_test$230
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 4
 	jmp printf
 
- string_test$231:
+ string_test$230:
 	; PostCall 244
 
- string_test$232:
+ string_test$231:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$233:
+ string_test$232:
 	; Parameter pointer "strspn(s, "Hello, C") = %i\n" 268
 	mov qword [rbp + 268], string_strspn28s2C2022Hello2C20C2229203D2025i0A#
 
- string_test$234:
+ string_test$233:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$235:
+ string_test$234:
 	; Parameter pointer s 300
 	mov rax, [rbp + 28]
 	mov [rbp + 300], rax
 
- string_test$236:
+ string_test$235:
 	; Parameter pointer "Hello, C" 308
 	mov qword [rbp + 308], string_Hello2C20C#
 
- string_test$237:
+ string_test$236:
 	; Call strspn 276 0
-	mov qword [rbp + 276], string_test$238
+	mov qword [rbp + 276], string_test$237
 	mov [rbp + 284], rbp
 	add rbp, 276
 	jmp strspn
 
- string_test$238:
+ string_test$237:
 	; PostCall 276
 
- string_test$239:
+ string_test$238:
 	; GetReturnValue £temporary3053
 
- string_test$240:
+ string_test$239:
 	; Parameter signedint £temporary3053 276
 	mov [rbp + 276], ebx
 
- string_test$241:
+ string_test$240:
 	; Call printf 244 4
-	mov qword [rbp + 244], string_test$242
+	mov qword [rbp + 244], string_test$241
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 4
 	jmp printf
 
- string_test$242:
+ string_test$241:
 	; PostCall 244
 
- string_test$243:
+ string_test$242:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$244:
+ string_test$243:
 	; Parameter pointer "strcspn(s, "Hello, C") = %i\n" 268
 	mov qword [rbp + 268], string_strcspn28s2C2022Hello2C20C2229203D2025i0A#
 
- string_test$245:
+ string_test$244:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$246:
+ string_test$245:
 	; Parameter pointer s 300
 	mov rax, [rbp + 28]
 	mov [rbp + 300], rax
 
- string_test$247:
+ string_test$246:
 	; Parameter pointer "Hello, C" 308
 	mov qword [rbp + 308], string_Hello2C20C#
 
- string_test$248:
+ string_test$247:
 	; Call strcspn 276 0
-	mov qword [rbp + 276], string_test$249
+	mov qword [rbp + 276], string_test$248
 	mov [rbp + 284], rbp
 	add rbp, 276
 	jmp strcspn
 
- string_test$249:
+ string_test$248:
 	; PostCall 276
 
- string_test$250:
+ string_test$249:
 	; GetReturnValue £temporary3055
 
- string_test$251:
+ string_test$250:
 	; Parameter signedint £temporary3055 276
 	mov [rbp + 276], ebx
 
- string_test$252:
+ string_test$251:
 	; Call printf 244 4
-	mov qword [rbp + 244], string_test$253
+	mov qword [rbp + 244], string_test$252
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 4
 	jmp printf
 
- string_test$253:
+ string_test$252:
 	; PostCall 244
 
- string_test$254:
+ string_test$253:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$255:
+ string_test$254:
 	; Parameter pointer "strerror(errno) = "%s"\n" 268
 	mov qword [rbp + 268], string_strerror28errno29203D202225s220A#
 
- string_test$256:
+ string_test$255:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$257:
+ string_test$256:
 	; Parameter signedint errno 300
 	mov eax, [errno]
 	mov [rbp + 300], eax
 
- string_test$258:
+ string_test$257:
 	; Call strerror 276 0
-	mov qword [rbp + 276], string_test$259
+	mov qword [rbp + 276], string_test$258
 	mov [rbp + 284], rbp
 	add rbp, 276
 	jmp strerror
 
- string_test$259:
+ string_test$258:
 	; PostCall 276
 
- string_test$260:
+ string_test$259:
 	; GetReturnValue £temporary3057
 
- string_test$261:
+ string_test$260:
 	; Parameter pointer £temporary3057 276
 	mov [rbp + 276], rbx
 
- string_test$262:
+ string_test$261:
 	; Call printf 244 8
-	mov qword [rbp + 244], string_test$263
+	mov qword [rbp + 244], string_test$262
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 8
 	jmp printf
 
- string_test$263:
+ string_test$262:
 	; PostCall 244
 
- string_test$264:
+ string_test$263:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$265:
+ string_test$264:
 	; Parameter pointer s 268
 	mov rax, [rbp + 28]
 	mov [rbp + 268], rax
 
- string_test$266:
+ string_test$265:
 	; Parameter pointer "," 276
 	mov qword [rbp + 276], string_2C#
 
- string_test$267:
+ string_test$266:
 	; Call strtok 244 0
-	mov qword [rbp + 244], string_test$268
+	mov qword [rbp + 244], string_test$267
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strtok
 
- string_test$268:
+ string_test$267:
 	; PostCall 244
 
- string_test$269:
+ string_test$268:
 	; GetReturnValue £temporary3059
 
- string_test$270:
+ string_test$269:
 	; Assign p £temporary3059
 	mov [rbp + 236], rbx
 
- string_test$271:
-	; Equal 285 p 0
+ string_test$270:
+	; Equal 284 p 0
 	cmp qword [rbp + 236], 0
-	je string_test$285
+	je string_test$284
 
- string_test$272:
+ string_test$271:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$273:
+ string_test$272:
 	; Parameter pointer "strtok(s, ",") = "%s"\n" 268
 	mov qword [rbp + 268], string_strtok28s2C20222C2229203D202225s220A#
 
- string_test$274:
+ string_test$273:
 	; Parameter pointer p 276
 	mov rax, [rbp + 236]
 	mov [rbp + 276], rax
 
- string_test$275:
+ string_test$274:
 	; Call printf 244 8
-	mov qword [rbp + 244], string_test$276
+	mov qword [rbp + 244], string_test$275
 	mov [rbp + 252], rbp
 	add rbp, 244
 	mov rdi, rbp
 	add rdi, 8
 	jmp printf
 
- string_test$276:
+ string_test$275:
 	; PostCall 244
 
- string_test$277:
+ string_test$276:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- string_test$278:
+ string_test$277:
 	; Parameter pointer 0 268
 	mov qword [rbp + 268], 0
 
- string_test$279:
+ string_test$278:
 	; Parameter pointer "," 276
 	mov qword [rbp + 276], string_2C#
 
- string_test$280:
+ string_test$279:
 	; Call strtok 244 0
-	mov qword [rbp + 244], string_test$281
+	mov qword [rbp + 244], string_test$280
 	mov [rbp + 252], rbp
 	add rbp, 244
 	jmp strtok
 
- string_test$281:
+ string_test$280:
 	; PostCall 244
 
- string_test$282:
+ string_test$281:
 	; GetReturnValue £temporary3062
 
- string_test$283:
+ string_test$282:
 	; Assign p £temporary3062
 	mov [rbp + 236], rbx
 
- string_test$284:
-	; Goto 271
-	jmp string_test$271
+ string_test$283:
+	; Goto 270
+	jmp string_test$270
 
- string_test$285:
+ string_test$284:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- string_test$286:
+ string_test$285:
 	; FunctionEnd string_test

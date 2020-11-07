@@ -1039,54 +1039,54 @@ ldexp$11:	; return
 ldexp$12:	; function end ldexp
 1:	
 
-@24$log2:	; call header integral zero 0 stack zero 0
+@18$log2:	; call header integral zero 0 stack zero 0
 3:	
 
-@24$log2$1:	; push float x
+@18$log2$1:	; push float x
 4:		fld qword [bp + 6]
 6:	
 
-@24$log2$2:	; parameter x, offset 6
+@18$log2$2:	; parameter x, offset 6
 7:		fstp qword [bp + 20]
 9:	
 
-@24$log2$3:	; call function noellipse-noellipse log
-10:		mov word [bp + 14], @24$log2$4
+@18$log2$3:	; call function noellipse-noellipse log
+10:		mov word [bp + 14], @18$log2$4
 11:		mov [bp + 16], bp
 12:		add bp, 14
 13:		jmp log
 15:	
 
-@24$log2$4:	; post call
+@18$log2$4:	; post call
 17:	
 
-@24$log2$5:	; £temporary592 = return_value
+@18$log2$5:	; £temporary592 = return_value
 19:	
 
-@24$log2$6:	; push float 0.6931471805599453094172321
+@18$log2$6:	; push float 0.6931471805599453094172321
 20:		fld qword [float8$0.6931471805599453094172321#]
 22:	
 
-@24$log2$7:	; £temporary593 = £temporary592 / 0.6931471805599453094172321
+@18$log2$7:	; £temporary593 = £temporary592 / 0.6931471805599453094172321
 23:		fdiv
 25:	
 
-@24$log2$8:	; £temporary594 = float_to_int £temporary593 (Double -> Signed_Int)
+@18$log2$8:	; £temporary594 = float_to_int £temporary593 (Double -> Signed_Int)
 26:		fistp word [container2bytes#]
 27:		mov bx, [container2bytes#]
 29:	
 
-@24$log2$9:	; return_value = £temporary594
+@18$log2$9:	; return_value = £temporary594
 31:	
 
-@24$log2$10:	; return
+@18$log2$10:	; return
 32:		mov ax, [bp]
 33:		mov di, [bp + 4]
 34:		mov bp, [bp + 2]
 35:		jmp ax
 37:	
 
-@24$log2$11:	; function end log2
+@18$log2$11:	; function end log2
 1:	
 
 frexp:	; push float x
@@ -1139,7 +1139,7 @@ frexp$11:	; call function noellipse-noellipse log2
 37:		mov word [bp + 16], frexp$12
 38:		mov [bp + 18], bp
 39:		add bp, 16
-40:		jmp @24$log2
+40:		jmp @18$log2
 42:	
 
 frexp$12:	; post call

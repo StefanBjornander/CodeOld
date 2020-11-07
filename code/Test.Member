@@ -1011,8 +1011,8 @@
 8: parameter c, offset 6
 9: call function noellipse-noellipse isalnum
 10: post call
-11: £temporary438 = return_value
-12: if £temporary438 != 0 goto 16
+11: £temporary437 = return_value
+12: if £temporary437 != 0 goto 16
 13: goto 14
 14: £temporary442 = 1
 15: goto 17
@@ -6873,7 +6873,7 @@
 104: £temporary2713 = int_to_int £temporary2712 (Signed_Long_Int -> Signed_Int)
 105: g_timeStruct$tm_mday = £temporary2713
 106: g_timeStruct$tm_isdst = -1
-107: return_value = (@32$g_timeStruct,0)
+107: return_value = (@26$g_timeStruct,0)
 108: return
 109: goto 110
 110: year = year + 1

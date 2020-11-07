@@ -796,7 +796,7 @@ bsearch$57:	; function end bsearch
 1:	
 
 rand:	; £temporary2467 = g_randValue * 1664525
-2:		mov eax, [@31$g_randValue]
+2:		mov eax, [@25$g_randValue]
 4:		xor edx, edx
 5:		imul dword [int4$1664525#]
 11:	
@@ -808,11 +808,11 @@ rand$1:	; £temporary2468 = £temporary2467 + 1013904223
 rand$2:	; g_randValue = £temporary2468 % 127
 16:		xor edx, edx
 17:		idiv dword [int4$127#]
-18:		mov [@31$g_randValue], edx
+18:		mov [@25$g_randValue], edx
 20:	
 
 rand$3:	; £temporary2470 = int_to_int g_randValue (Signed_Long_Int -> Signed_Int)
-21:		mov ebx, [@31$g_randValue]
+21:		mov ebx, [@25$g_randValue]
 24:		cmp ebx, 0
 25:		jge rand$4
 26:		neg ebx
@@ -838,7 +838,7 @@ srand:	; £temporary2471 = int_to_int seed (Unsigned_Int -> Signed_Long_Int)
 6:	
 
 srand$1:	; g_randValue = £temporary2471
-7:		mov [@31$g_randValue], eax
+7:		mov [@25$g_randValue], eax
 9:	
 
 srand$2:	; return

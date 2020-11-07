@@ -8,11 +8,11 @@ stack_test$1:	; parameter string_25i20#, offset 6
 6:	
 
 stack_test$2:	; £temporary4909 = i
-7:		mov ax, [@38$i]
+7:		mov ax, [@32$i]
 9:	
 
 stack_test$3:	; ++i
-10:		inc word [@38$i]
+10:		inc word [@32$i]
 12:	
 
 stack_test$4:	; parameter £temporary4909, offset 8

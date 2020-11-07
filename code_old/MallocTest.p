@@ -1,24 +1,25 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+   
+   
 
+          
 
+    
+    
 
+    
+    
+    
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\MallocTest.c,0$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
+   
+   
 
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\MallocTest.c,1$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
-
-
-
-
+          
 
 double atof ( char * s ) ;
 int atoi ( char * s ) ;
@@ -40,8 +41,8 @@ void exit ( int status ) ;
 typedef void ( * FUNC_PTR ) ( void ) ;
 int atexit ( FUNC_PTR fcn ) ;
 
-
-
+    
+    
 
 int abs ( int value ) ;
 long labs ( long value ) ;
@@ -71,20 +72,23 @@ long quot , rem ;
 } ldiv_t ;
 
 ldiv_t ldiv ( long num , long denum ) ;
+  
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\MallocTest.c,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
+   
+   
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+   
+   
 
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\MallocTest.c,2$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
 
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-
-
-
-
-
-
+    
+    
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -116,12 +120,13 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
+  
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
+   
+   
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -137,48 +142,50 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
+   
+   
+
+     
+                         
+                    
+               
+      
+
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+   
+   
 
+          
 
+    
+    
 
+    
+    
+    
 
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
+   
+   
 
+    
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-
-
-
-
-
-
-
-
-
+    
+    
 
 typedef unsigned int UINT ;
 
@@ -197,22 +204,22 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
+   
+    
+    
+    
+    
 
+    
 
+    
+    
+    
+    
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+          
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -244,31 +251,32 @@ int feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
+   
+   
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-
-
-
-
-
+    
+    
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
+    
+    
 
-
-
-
-
-
-
+    
 
 extern int g_inStatus , g_inChars ;
 extern void * g_inDevice ;
@@ -287,15 +295,16 @@ int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
 int sscanf ( char * inString , char * format , ... ) ;
 int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-
-
-
-
-
+    
+    
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -310,12 +319,16 @@ void printString ( char * s , int precision ) ;
 void printString2 ( char * s ) ;
 void printIntRec ( int intValue ) ;
 void printInt ( int intValue , int plus , int space ) ;
-void printDoublePlain ( double doubleValue , int plus , int space , int grid , int precision ) ;
-void printLongDoublePlain ( long double doubleValue , int plus , int space , int grid , int precision ) ;
+void printDoublePlain ( double doubleValue , int plus , int space ,
+int grid , int precision ) ;
+void printLongDoublePlain ( long double doubleValue , int plus ,
+int space , int grid , int precision ) ;
 void printInt ( int intValue , int plus , int space ) ;
 void printLongInt ( long longIntValue , int plus , int space ) ;
-void printLongDoubleFraction ( long double longDoubleValue , int grid , int precision ) ;
-void printLongDoublePlain ( long double longDoubleValue , int plus , int space , int grid , int precision ) ;
+void printLongDoubleFraction ( long double longDoubleValue ,
+int grid , int precision ) ;
+void printLongDoublePlain ( long double longDoubleValue , int plus ,
+int space , int grid , int precision ) ;
 int printFormat ( char * format , char * arg_list ) ;
 
 int printf2 ( char * format ) ;
@@ -326,17 +339,19 @@ int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
 int sprintf ( char * outString , char * format , ... ) ;
 int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+       
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
+  
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\MallocTest.c,3$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\MallocTest.c,2$
+       
 
 void print_heap ( ) ;
 
-
+                        
 
 void malloc_test2 ( void ) {
 int index ;
@@ -384,14 +399,14 @@ free ( e ) ;
 print_heap ( ) ;
 }
 
-
+    
 
 void rec ( ) {
 unsigned int stackTop ;
 
 stackTop = register_bp ;
 unsigned int * lowHeapPtr = ( unsigned int * ) 65534u ;
-printf ( "\123\164\141\143\153\040\124\157\160\072\040\045\165\054\040\114\157\167\040\110\145\141\160\072\040\045\165\012" , stackTop , * lowHeapPtr ) ;
+printf ( "Stack Top: %u, Low Heap: %u\n" , stackTop , * lowHeapPtr ) ;
 rec ( ) ;
 }
 
@@ -429,7 +444,6 @@ unsigned int * lowHeapPtr = ( unsigned int * ) 65534u ;
 
 for ( i = 0 ; i < 1000 ; ++ i ) {
 void * p = malloc ( 96 ) ;
-printf ( "\111\156\144\145\170\072\040\045\151\054\040\120\157\151\156\164\145\162\072\040\045\165\054\040\123\164\141\143\153\040\164\157\160\072\040\045\165\054\040\114\157\167\040\110\145\141\160\072\040\045\165\012" , i , p , stackTop , * lowHeapPtr ) ;
+printf ( "Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u\n" , i , p , stackTop , * lowHeapPtr ) ;
 }
 }
-

@@ -9,14 +9,14 @@
 #define LC_ALL      0x1F
 
 struct lconv {
-int summerTimeZone, winterTimeZone;
-char **shortDayList;
-char **longDayList;
-char **shortMonthList;
-char **longMonthList;
-char *lowerCase;
-char *upperCase;
-char **messageList;
+  int summerTimeZone, winterTimeZone;
+  char **shortDayList;
+  char **longDayList;
+  char **shortMonthList;
+  char **longMonthList;
+  char *lowerCase;
+  char *upperCase;
+  char **messageList;
 };
 
 extern char* enMessageList[];

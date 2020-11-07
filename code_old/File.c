@@ -1,10 +1,11 @@
 #include <stdio.h>
-#include <ErrNo.h>
-#include <Locale.h>
-#include <String.h>
+#include <errno.h>
+#include <locale.h>
+#include <string.h>
 
 FILE g_fileArray[FOPEN_MAX] = {{TRUE, 0}, {TRUE, 1}, {TRUE, 2}};
-FILE *stdin = &g_fileArray[0], *stdout = &g_fileArray[1], *stderr = &g_fileArray[2];
+FILE *stdin = &g_fileArray[0], *stdout = &g_fileArray[1],
+     *stderr = &g_fileArray[2];
 
 enum {EEXIST, ENOENT, EACCES};
 enum {SEEK_SET = 0, SEEK_CUR = 1, SEEK_END = 2};
@@ -17,7 +18,6 @@ enum {READ = 0x40, WRITE = 0x41, READ_WRITE = 0x42};
 #define PRINT(x,y) { printf(#x " = <%" #y ">\n", (x)); }
 
 static int filecreate(const char* name) {
-  //printf("create <%s>\n", name);
 #ifdef __WINDOWS__
   register_ah = 0x3Cs;
   register_cx = 0x00;
@@ -82,13 +82,10 @@ static int fileopen(const char* name, unsigned short mode) {
 }
 
 FILE* fopen(const char* name, const char* mode) {
-  //printf("fopen <%s> <%s>\n", name, mode);
   int index;
   for (index = 0; index < FOPEN_MAX; ++index) {
-    //printf("index %i: %i\n", index, g_fileArray[index].open);
 
     if (!g_fileArray[index].open) {
-      //printf("open name %s index %i\n", name, index);
       return freopen(name, mode, &g_fileArray[index]);
     }
   }
@@ -97,7 +94,6 @@ FILE* fopen(const char* name, const char* mode) {
 }
 
 FILE* freopen(const char* name, const char* mode, FILE* stream) {
-  //printf("freopen name %s, mode %s\n", name, mode);
   int handle = -1;
 
   if (strcmp(mode, "r") == 0) {
@@ -144,9 +140,6 @@ FILE* freopen(const char* name, const char* mode, FILE* stream) {
     stream->size = 0l; // filesize(handle);
     strcpy(stream->name, name);
     stream->temporary = FALSE;
-    /*printf("open %i, handle %i, size %li, name <%s>, name <%s>, temporary %i\n",
-           stream->open, stream->handle, stream->size, name, stream->name,
-           stream->temporary);*/
     return stream;
   }
   else {
@@ -262,171 +255,14 @@ int rename(const char* oldName, const char* newName) {
   return 0;
 }
 
-int setvbuf(FILE* /* stream */, char* /* buffer */, int /* mode */, size_t /* size */) {
+int setvbuf(FILE* /* stream */, char* /* buffer */,
+            int /* mode */, size_t /* size */) {
   return 0;
-
-/*
-  if (buffer != NULL) {
-    buffer = malloc(size);
-
-    if (buffer == NULL) {
-      return -1;
-    }
-  }
-
-  stream->buffer = buffer;
-  stream->bufferMode = mode;
-  stream->bufferMaxSize = size;
-  return 0;*/
 }
 
 void setbuf(FILE* /* stream */, char* /* buffer */) {
-/*
-  if (buffer == NULL) {
-    free(stream->buffer);
-    stream->buffer = NULL;
-    stream->bufferMode = _IONBF;
-  }
-  else {
-    setvbuf(stream, buffer, _IOFBF, BUFSIZ);
-  }*/
+  // Empty.
 }
-/*
-static int physicalRead(char* buffer, int size, FILE* stream) {
-  load_register(register_ah, 0x3F);
-  load_register(register_bx, stream->handle);
-  load_register(register_cx, size);
-  load_register(DS, 0x00);
-  load_register(register_dx, buffer);
-  interrupt(0x21s);
-
-  if (getFlag(CARRY_FLAG)) {
-    stream->errno = errno = FREAD;
-  }
-
-  return //storeRegister(register_ax);
-}
-
-static int bufferedRead(char* buffer, int size, FILE* stream) {
-  if (size > 0) {
-    int putBackSize = 0, bufferedSize = 0;
-
-    if (stream->putBack != EOF) {
-      memcpy(buffer, &stream->putBack, sizeof (char));
-      buffer += sizeof (char);
-      putBackSize = sizeof (char);
-      size -= sizeof (char);
-    }
-
-    if (size > 0) {
-      if (stream->bufferSize >= size) {
-        memcpy(buffer, stream->buffer, size);
-        memmove(stream->buffer, stream->buffer + size, stream->bufferSize - size);
-        stream->bufferSize -= size;
-        return putBackSize + size;
-      }
-      else {
-        memcpy(buffer, stream->buffer, stream->bufferSize);
-        bufferedSize = stream->bufferSize;
-        buffer += stream->bufferSize;
-        size -= stream->bufferSize;
-        stream->bufferSize = 0;
-
-        if (size > 0) {
-          return putBackSize + bufferedSize +  physicalRead(buffer, size, stream);
-        }
-        else {
-          return putBackSize + bufferedSize;
-        }
-      }
-    }
-    else {
-      return putBackSize;
-    }
-  }
-  else {
-    return 0;
-  }
-}
-
-static int physicalWrite(const char* buffer, int size, FILE* stream) {
-  load_register(register_ah, 0x40);
-  load_register(register_bx, stream->handle);
-  load_register(register_cx, size);
-  load_register(DS, 0x00);
-  load_register(register_dx, buffer);
-  interrupt(0x21s);
-
-  if (getFlag(CARRY_FLAG)) {
-    stream->errno = errno = FWRITE;
-  }
-
-  return //storeRegister(register_ax);
-}
-
-static int bufferedWrite(const char* buffer, int size, FILE* stream) {
-  int origionalSize = size;
-  BOOL lastNewLine = FALSE;
-  stream->putBack = EOF;
-
-  if (size > 0) {
-    switch (stream->bufferMode) {
-      case _IONBF:
-        return physicalWrite(buffer, size, stream);
-
-      case _IOLBF:
-        while (size > 0) {
-          if (stream->bufferSize == stream->bufferMaxSize) {
-            fflush(stream);
-          }
-          else if (lastNewLine) {
-            fflush(stream);
-            lastNewLine = FALSE;
-          }
-          else {
-            if (*buffer == '\n') {
-              lastNewLine = TRUE;
-            }
-
-            *stream->buffer++ = *buffer++;
-            --size;
-          }
-        }
-
-        return origionalSize;
-
-      case _IOFBF:
-        if (size <= (stream->bufferMaxSize - stream->bufferSize)) {
-          memcpy(stream->buffer + stream->bufferSize, buffer, size);
-          stream->bufferSize += size;
-          return size;
-        }
-        else {
-          memcpy(stream->buffer + stream->bufferSize, buffer, stream->bufferMaxSize - stream->bufferSize);
-          size -= stream->bufferMaxSize - stream->bufferSize;
-          buffer += stream->bufferMaxSize - stream->bufferSize;
-
-          while (size > 0) {
-            fflush(stream);
-            
-            if (size < stream->bufferMaxSize) {
-              memcpy(stream->buffer, buffer, size);
-              return origionalSize;
-            }
-            else {
-              memcpy(stream->buffer, buffer, stream->bufferMaxSize);
-              size -= stream->bufferMaxSize;
-              buffer += stream->bufferMaxSize;
-            }
-          }
-        }
-        break;
-    }
-  }
-
-  return 0;
-}
-*/
 
 int fgetc(FILE* stream) {
   char c = '\0';
@@ -466,13 +302,6 @@ char* fgets(char* text, int size, FILE* stream) {
   return text;
 }
 
-/*
-int fputc(int i, FILE* stream) {
-  char c = (char) i;
-  return (fwrite(&c, sizeof (char), 1, stream) > 0) ? 0 : EOF;
-}
-*/
-
 int fputs(const char* s, FILE* stream) {
   int size = (strlen(s) + 1) * sizeof (char);
   return (fwrite(s, size, 1, stream) == size) ? 0 : EOF;
@@ -497,12 +326,6 @@ char* gets(char* s) {
   }
 }
 
-/*
-int putchar(int c) {
-  return fputc(c, stdout);
-}
-*/
-
 int puts(const char* s) {
   if (fputs(s, stdout) != 0) {
     return fputc('\n', stdout);
@@ -520,15 +343,6 @@ int ungetc(int c, FILE* stream) {
 }
 
 size_t fread(void* ptr, size_t size, size_t nobj, FILE* stream) {
-/*  if (((size * nobj) > 0) && (stream->ungetc != EOF)) {
-    char c = stream->ungetc;
-    memcpy(ptr, &c, 1);
-    stream->ungetc = EOF;
-    return fread(((char*) ptr) + 1, (size * nobj) - 1, 1, stream);
-  }*/
-
-  //printf("fread handle %i, size %i, ptr %u\n", stream->handle, size * nobj, ptr);
-
 #ifdef __WINDOWS__
   register_bx = stream->handle;
   register_cx = size * nobj;
@@ -571,7 +385,6 @@ size_t fwrite(const void* ptr, size_t size, size_t nobj, FILE* stream) {
     return register_ax;
   }
 #endif
-
 
 #ifdef __LINUX__
   register_rax = 0L;
@@ -646,11 +459,6 @@ BOOL feof(FILE* stream) {
 int ferror(FILE* stream) {
   return stream->errno;
 }
-
-/*char* strerror(int errno) {
-  struct lconv* localeConvPtr = localeconv();
-  return (localeConvPtr != NULL) ? localeConvPtr->messageList[errno] : "<NULL>";
-}*/
 
 void perror(const char* s) {
   printf("%s: %s.\n", s, strerror(errno));

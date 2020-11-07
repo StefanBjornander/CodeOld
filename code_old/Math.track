@@ -1,15 +1,15 @@
 1:	
 
-exp:	; push 0
-2:		fldz
+exp:	; push 1
+2:		fld1
 4:	
 
-exp$1:	; pop float i
+exp$1:	; pop float index
 5:		fstp qword [bp + 14]
 7:	
 
-exp$2:	; push 0
-8:		fldz
+exp$2:	; push 1
+8:		fld1
 10:	
 
 exp$3:	; pop float sum
@@ -24,124 +24,140 @@ exp$5:	; pop float faculty
 17:		fstp qword [bp + 38]
 19:	
 
-exp$6:	; push 1
-20:		fld1
+exp$6:	; push float x
+20:		fld qword [bp + 6]
 22:	
 
-exp$7:	; top float power
-23:		fst qword [bp + 46]
+exp$7:	; pop float power
+23:		fstp qword [bp + 46]
 25:	
 
-exp$8:	; push float faculty
-26:		fld qword [bp + 38]
+exp$8:	; push float power
+26:		fld qword [bp + 46]
 28:	
 
-exp$9:	; £temporary525 = power / faculty
-29:		fdiv
+exp$9:	; push float faculty
+29:		fld qword [bp + 38]
 31:	
 
-exp$10:	; pop float term
-32:		fstp qword [bp + 22]
+exp$10:	; £temporary520 = power / faculty
+32:		fdiv
 34:	
 
-exp$11:	; push float sum
-35:		fld qword [bp + 30]
+exp$11:	; pop float term
+35:		fstp qword [bp + 22]
 37:	
 
-exp$12:	; push float term
-38:		fld qword [bp + 22]
+exp$12:	; push float sum
+38:		fld qword [bp + 30]
 40:	
 
-exp$13:	; £temporary526 = sum + term
-41:		fadd
+exp$13:	; push float term
+41:		fld qword [bp + 22]
 43:	
 
-exp$14:	; pop float sum
-44:		fstp qword [bp + 30]
+exp$14:	; £temporary521 = sum + term
+44:		fadd
 46:	
 
-exp$15:	; push float power
-47:		fld qword [bp + 46]
+exp$15:	; pop float sum
+47:		fstp qword [bp + 30]
 49:	
 
-exp$16:	; push float x
-50:		fld qword [bp + 6]
+exp$16:	; push float power
+50:		fld qword [bp + 46]
 52:	
 
-exp$17:	; £temporary527 = power * x
-53:		fmul
+exp$17:	; push float x
+53:		fld qword [bp + 6]
 55:	
 
-exp$18:	; pop float power
-56:		fstp qword [bp + 46]
+exp$18:	; £temporary522 = power * x
+56:		fmul
 58:	
 
-exp$19:	; push float faculty
-59:		fld qword [bp + 38]
+exp$19:	; pop float power
+59:		fstp qword [bp + 46]
 61:	
 
-exp$20:	; push float i
-62:		fld qword [bp + 14]
+exp$20:	; push float faculty
+62:		fld qword [bp + 38]
 64:	
 
-exp$21:	; £temporary528 = faculty * i
-65:		fmul
+exp$21:	; push float index
+65:		fld qword [bp + 14]
 67:	
 
-exp$22:	; pop float faculty
-68:		fstp qword [bp + 38]
+exp$22:	; push 1
+68:		fld1
 70:	
 
-exp$23:	; call header integral zero 0 stack zero 0
-72:	
+exp$23:	; index = index + 1
+71:		fadd
+73:	
 
-exp$24:	; push float term
-73:		fld qword [bp + 22]
-75:	
+exp$24:	; top float index
+74:		fst qword [bp + 14]
+76:	
 
-exp$25:	; parameter term, offset 6
-76:		fstp qword [bp + 60]
-78:	
+exp$25:	; £temporary524 = faculty * £temporary523
+77:		fmul
+79:	
 
-exp$26:	; call function noellipse-noellipse fabs
-79:		mov word [bp + 54], exp$27
-80:		mov [bp + 56], bp
-81:		add bp, 54
-82:		jmp fabs
+exp$26:	; pop float faculty
+80:		fstp qword [bp + 38]
+82:	
+
+exp$27:	; call header integral zero 0 stack zero 0
 84:	
 
-exp$27:	; post call
-86:	
+exp$28:	; push float term
+85:		fld qword [bp + 22]
+87:	
 
-exp$28:	; £temporary529 = return_value
-88:	
+exp$29:	; parameter term, offset 6
+88:		fstp qword [bp + 60]
+90:	
 
-exp$29:	; push float 0.000000001
-89:		fld qword [float8$0.000000001#]
-91:	
+exp$30:	; call function noellipse-noellipse fabs
+91:		mov word [bp + 54], exp$31
+92:		mov [bp + 56], bp
+93:		add bp, 54
+94:		jmp fabs
+96:	
 
-exp$30:	; if £temporary529 >= 0.000000001 goto 8
-92:		fcompp
-93:		fstsw ax
-94:		sahf
-95:		jbe exp$8
-97:	
+exp$31:	; post call
+98:	
 
-exp$31:	; push float sum
-98:		fld qword [bp + 30]
+exp$32:	; £temporary525 = return_value
 100:	
 
-exp$32:	; return_value = sum
-102:	
+exp$33:	; push float 0.000000001
+101:		fld qword [float8$0.000000001#]
+103:	
 
-exp$33:	; return
-103:		mov t359, [bp]
-104:		mov di, [bp + 4]
-105:		mov bp, [bp + 2]
-106:		jmp t359
-108:	
+exp$34:	; if £temporary525 >= 0.000000001 goto 8
+104:		fcompp
+105:		fstsw ax
+106:		sahf
+107:		jbe exp$8
+109:	
 
-exp$34:	; function end exp
+exp$35:	; push float sum
+110:		fld qword [bp + 30]
+112:	
+
+exp$36:	; return_value = sum
+114:	
+
+exp$37:	; return
+115:		mov t345, [bp]
+116:		mov di, [bp + 4]
+117:		mov bp, [bp + 2]
+118:		jmp t345
+120:	
+
+exp$38:	; function end exp
 1:	
 
 log:	; push float x
@@ -152,11 +168,11 @@ log$1:	; push 0
 5:		fldz
 7:	
 
-log$2:	; if x <= 0 goto 72
+log$2:	; if x <= 0 goto 76
 8:		fcompp
 9:		fstsw ax
 10:		sahf
-11:		jae log$72
+11:		jae log$76
 13:	
 
 log$3:	; n = 0
@@ -201,7 +217,7 @@ log$11:	; push float 2.7182818284590452353602874
 44:		fld qword [float8$2.7182818284590452353602874#]
 46:	
 
-log$12:	; £temporary535 = x / 2.7182818284590452353602874
+log$12:	; £temporary531 = x / 2.7182818284590452353602874
 47:		fdiv
 49:	
 
@@ -255,7 +271,7 @@ log$23:	; push float 2.7182818284590452353602874
 86:		fld qword [float8$2.7182818284590452353602874#]
 88:	
 
-log$24:	; £temporary539 = x * 2.7182818284590452353602874
+log$24:	; £temporary535 = x * 2.7182818284590452353602874
 89:		fmul
 91:	
 
@@ -275,202 +291,218 @@ log$28:	; push 1
 101:		fld1
 103:	
 
-log$29:	; pop float i
+log$29:	; pop float index
 104:		fstp qword [bp + 16]
 106:	
 
-log$30:	; push 1
-107:		fld1
+log$30:	; push 0
+107:		fldz
 109:	
 
-log$31:	; pop float term
-110:		fstp qword [bp + 24]
+log$31:	; pop float sum
+110:		fstp qword [bp + 32]
 112:	
 
-log$32:	; push 0
-113:		fldz
+log$32:	; push 1
+113:		fld1
 115:	
 
-log$33:	; pop float sum
-116:		fstp qword [bp + 32]
+log$33:	; pop float sign
+116:		fstp qword [bp + 40]
 118:	
 
-log$34:	; push 1
-119:		fld1
+log$34:	; push float x
+119:		fld qword [bp + 6]
 121:	
 
-log$35:	; pop float sign
-122:		fstp qword [bp + 40]
+log$35:	; push 1
+122:		fld1
 124:	
 
-log$36:	; push float x
-125:		fld qword [bp + 6]
+log$36:	; £temporary537 = x - 1
+125:		fsub
 127:	
 
-log$37:	; push 1
-128:		fld1
+log$37:	; pop float x_minus_1
+128:		fstp qword [bp + 48]
 130:	
 
-log$38:	; £temporary541 = x - 1
-131:		fsub
+log$38:	; push float x_minus_1
+131:		fld qword [bp + 48]
 133:	
 
-log$39:	; top float x_minus_1
-134:		fst qword [bp + 48]
+log$39:	; pop float power
+134:		fstp qword [bp + 56]
 136:	
 
-log$40:	; pop float power
-137:		fstp qword [bp + 56]
+log$40:	; push float sign
+137:		fld qword [bp + 40]
 139:	
 
-log$41:	; push float sign
-140:		fld qword [bp + 40]
+log$41:	; push float power
+140:		fld qword [bp + 56]
 142:	
 
-log$42:	; push float power
-143:		fld qword [bp + 56]
+log$42:	; £temporary538 = sign * power
+143:		fmul
 145:	
 
-log$43:	; £temporary542 = sign * power
-146:		fmul
+log$43:	; push float index
+146:		fld qword [bp + 16]
 148:	
 
-log$44:	; push float i
-149:		fld qword [bp + 16]
+log$44:	; push 1
+149:		fld1
 151:	
 
-log$45:	; £temporary543 = £temporary542 / i
-152:		fdiv
+log$45:	; index = index + 1
+152:		fadd
 154:	
 
-log$46:	; pop float term
-155:		fstp qword [bp + 24]
+log$46:	; top float index
+155:		fst qword [bp + 16]
 157:	
 
-log$47:	; push float sum
-158:		fld qword [bp + 32]
+log$47:	; push 1
+158:		fld1
 160:	
 
-log$48:	; push float term
-161:		fld qword [bp + 24]
+log$48:	; index = index - 1
+161:		fsub
 163:	
 
-log$49:	; £temporary544 = sum + term
-164:		fadd
+log$49:	; £temporary540 = £temporary538 / £temporary539
+164:		fdiv
 166:	
 
-log$50:	; pop float sum
-167:		fstp qword [bp + 32]
+log$50:	; pop float term
+167:		fstp qword [bp + 24]
 169:	
 
-log$51:	; push float power
-170:		fld qword [bp + 56]
+log$51:	; push float sum
+170:		fld qword [bp + 32]
 172:	
 
-log$52:	; push float x_minus_1
-173:		fld qword [bp + 48]
+log$52:	; push float term
+173:		fld qword [bp + 24]
 175:	
 
-log$53:	; £temporary545 = power * x_minus_1
-176:		fmul
+log$53:	; £temporary541 = sum + term
+176:		fadd
 178:	
 
-log$54:	; pop float power
-179:		fstp qword [bp + 56]
+log$54:	; pop float sum
+179:		fstp qword [bp + 32]
 181:	
 
-log$55:	; push float sign
-182:		fld qword [bp + 40]
+log$55:	; push float power
+182:		fld qword [bp + 56]
 184:	
 
-log$56:	; push float -1.0
-185:		fld qword [float8$minus1.0#]
+log$56:	; push float x_minus_1
+185:		fld qword [bp + 48]
 187:	
 
-log$57:	; £temporary546 = sign * -1.0
+log$57:	; £temporary542 = power * x_minus_1
 188:		fmul
 190:	
 
-log$58:	; pop float sign
-191:		fstp qword [bp + 40]
+log$58:	; pop float power
+191:		fstp qword [bp + 56]
 193:	
 
-log$59:	; call header integral zero 0 stack zero 0
-195:	
+log$59:	; push float sign
+194:		fld qword [bp + 40]
+196:	
 
-log$60:	; push float term
-196:		fld qword [bp + 24]
-198:	
+log$60:	; push float -1.0
+197:		fld qword [float8$minus1.0#]
+199:	
 
-log$61:	; parameter term, offset 6
-199:		fstp qword [bp + 70]
-201:	
+log$61:	; £temporary543 = sign * -1.0
+200:		fmul
+202:	
 
-log$62:	; call function noellipse-noellipse fabs
-202:		mov word [bp + 64], log$63
-203:		mov [bp + 66], bp
-204:		add bp, 64
-205:		jmp fabs
+log$62:	; pop float sign
+203:		fstp qword [bp + 40]
+205:	
+
+log$63:	; call header integral zero 0 stack zero 0
 207:	
 
-log$63:	; post call
-209:	
+log$64:	; push float term
+208:		fld qword [bp + 24]
+210:	
 
-log$64:	; £temporary547 = return_value
-211:	
+log$65:	; parameter term, offset 6
+211:		fstp qword [bp + 70]
+213:	
 
-log$65:	; push float 0.000000001
-212:		fld qword [float8$0.000000001#]
-214:	
+log$66:	; call function noellipse-noellipse fabs
+214:		mov word [bp + 64], log$67
+215:		mov [bp + 66], bp
+216:		add bp, 64
+217:		jmp fabs
+219:	
 
-log$66:	; if £temporary547 >= 0.000000001 goto 41
-215:		fcompp
-216:		fstsw ax
-217:		sahf
-218:		jbe log$41
-220:	
+log$67:	; post call
+221:	
 
-log$67:	; push float sum
-221:		fld qword [bp + 32]
+log$68:	; £temporary544 = return_value
 223:	
 
-log$68:	; £temporary549 = int_to_float n (Signed_Int -> Double)
-224:		fild word [bp + 14]
+log$69:	; push float 0.000000001
+224:		fld qword [float8$0.000000001#]
 226:	
 
-log$69:	; £temporary550 = sum + £temporary549
-227:		fadd
-229:	
+log$70:	; if £temporary544 >= 0.000000001 goto 40
+227:		fcompp
+228:		fstsw ax
+229:		sahf
+230:		jbe log$40
+232:	
 
-log$70:	; return_value = £temporary550
-231:	
+log$71:	; push float sum
+233:		fld qword [bp + 32]
+235:	
 
-log$71:	; return
-232:		mov t360, [bp]
-233:		mov di, [bp + 4]
-234:		mov bp, [bp + 2]
-235:		jmp t360
-237:	
+log$72:	; £temporary546 = int_to_float n (Signed_Int -> Double)
+236:		fild word [bp + 14]
+238:	
 
-log$72:	; errno = 6
-238:		mov word [errno], 6
-240:	
+log$73:	; £temporary547 = sum + £temporary546
+239:		fadd
+241:	
 
-log$73:	; push 0
-241:		fldz
+log$74:	; return_value = £temporary547
 243:	
 
-log$74:	; return_value = 0
-245:	
-
 log$75:	; return
-246:		mov t361, [bp]
-247:		mov di, [bp + 4]
-248:		mov bp, [bp + 2]
-249:		jmp t361
-251:	
+244:		mov t346, [bp]
+245:		mov di, [bp + 4]
+246:		mov bp, [bp + 2]
+247:		jmp t346
+249:	
 
-log$76:	; function end log
+log$76:	; errno = 6
+250:		mov word [errno], 6
+252:	
+
+log$77:	; push 0
+253:		fldz
+255:	
+
+log$78:	; return_value = 0
+257:	
+
+log$79:	; return
+258:		mov t347, [bp]
+259:		mov di, [bp + 4]
+260:		mov bp, [bp + 2]
+261:		jmp t347
+263:	
+
+log$80:	; function end log
 1:	
 
 log10:	; call header integral zero 0 stack zero 0
@@ -494,25 +526,25 @@ log10$3:	; call function noellipse-noellipse log
 log10$4:	; post call
 17:	
 
-log10$5:	; £temporary552 = return_value
+log10$5:	; £temporary549 = return_value
 19:	
 
 log10$6:	; push float 2.3025850929940456840179914
 20:		fld qword [float8$2.3025850929940456840179914#]
 22:	
 
-log10$7:	; £temporary553 = £temporary552 / 2.3025850929940456840179914
+log10$7:	; £temporary550 = £temporary549 / 2.3025850929940456840179914
 23:		fdiv
 25:	
 
-log10$8:	; return_value = £temporary553
+log10$8:	; return_value = £temporary550
 27:	
 
 log10$9:	; return
-28:		mov t362, [bp]
+28:		mov t348, [bp]
 29:		mov di, [bp + 4]
 30:		mov bp, [bp + 2]
-31:		jmp t362
+31:		jmp t348
 33:	
 
 log10$10:	; function end log10
@@ -565,14 +597,14 @@ pow$9:	; post call
 36:		fld qword [bp + 30]
 38:	
 
-pow$10:	; £temporary556 = return_value
+pow$10:	; £temporary553 = return_value
 40:	
 
-pow$11:	; £temporary557 = y * £temporary556
+pow$11:	; £temporary554 = y * £temporary553
 41:		fmul
 43:	
 
-pow$12:	; parameter £temporary557, offset 6
+pow$12:	; parameter £temporary554, offset 6
 44:		fstp qword [bp + 28]
 46:	
 
@@ -586,17 +618,17 @@ pow$13:	; call function noellipse-noellipse exp
 pow$14:	; post call
 54:	
 
-pow$15:	; £temporary558 = return_value
+pow$15:	; £temporary555 = return_value
 56:	
 
-pow$16:	; return_value = £temporary558
+pow$16:	; return_value = £temporary555
 58:	
 
 pow$17:	; return
-59:		mov t363, [bp]
+59:		mov t349, [bp]
 60:		mov di, [bp + 4]
 61:		mov bp, [bp + 2]
-62:		jmp t363
+62:		jmp t349
 64:	
 
 pow$18:	; push float x
@@ -622,25 +654,25 @@ pow$22:	; push 0
 80:		fldz
 82:	
 
-pow$23:	; if y <= 0 goto 27
+pow$23:	; if y != 0 goto 27
 83:		fcompp
 84:		fstsw ax
 85:		sahf
-86:		jae pow$27
+86:		jne pow$27
 88:	
 
-pow$24:	; push 0
-89:		fldz
+pow$24:	; push 1
+89:		fld1
 91:	
 
-pow$25:	; return_value = 0
+pow$25:	; return_value = 1
 93:	
 
 pow$26:	; return
-94:		mov t364, [bp]
+94:		mov t350, [bp]
 95:		mov di, [bp + 4]
 96:		mov bp, [bp + 2]
-97:		jmp t364
+97:		jmp t350
 99:	
 
 pow$27:	; push float x
@@ -651,259 +683,303 @@ pow$28:	; push 0
 103:		fldz
 105:	
 
-pow$29:	; if x >= 0 goto 81
+pow$29:	; if x != 0 goto 36
 106:		fcompp
 107:		fstsw ax
 108:		sahf
-109:		jbe pow$81
+109:		jne pow$36
 111:	
 
-pow$30:	; call header integral zero 0 stack zero 0
-113:	
+pow$30:	; push float y
+112:		fld qword [bp + 14]
+114:	
 
-pow$31:	; push float y
-114:		fld qword [bp + 14]
-116:	
+pow$31:	; push 0
+115:		fldz
+117:	
 
-pow$32:	; parameter y, offset 6
-117:		fstp qword [bp + 28]
-119:	
+pow$32:	; if y <= 0 goto 36
+118:		fcompp
+119:		fstsw ax
+120:		sahf
+121:		jae pow$36
+123:	
 
-pow$33:	; call function noellipse-noellipse floor
-120:		mov word [bp + 22], pow$34
-121:		mov [bp + 24], bp
-122:		add bp, 22
-123:		jmp floor
-125:	
+pow$33:	; push 0
+124:		fldz
+126:	
 
-pow$34:	; post call
-127:	
+pow$34:	; return_value = 0
+128:	
 
-pow$35:	; £temporary563 = return_value
-129:	
+pow$35:	; return
+129:		mov t351, [bp]
+130:		mov di, [bp + 4]
+131:		mov bp, [bp + 2]
+132:		jmp t351
+134:	
 
-pow$36:	; call header integral zero 0 stack no zero 1
-130:		fstp qword [bp + 22]
-132:	
+pow$36:	; push float x
+135:		fld qword [bp + 6]
+137:	
 
-pow$37:	; push float y
-133:		fld qword [bp + 14]
-135:	
+pow$37:	; push 0
+138:		fldz
+140:	
 
-pow$38:	; parameter y, offset 6
-136:		fstp qword [bp + 36]
-138:	
+pow$38:	; if x >= 0 goto 90
+141:		fcompp
+142:		fstsw ax
+143:		sahf
+144:		jbe pow$90
+146:	
 
-pow$39:	; call function noellipse-noellipse ceil
-139:		mov word [bp + 30], pow$40
-140:		mov [bp + 32], bp
-141:		add bp, 30
-142:		jmp ceil
-144:	
+pow$39:	; call header integral zero 0 stack zero 0
+148:	
 
-pow$40:	; post call
-145:		fstp qword [bp + 30]
-146:		fld qword [bp + 22]
-147:		fld qword [bp + 30]
-149:	
-
-pow$41:	; £temporary564 = return_value
+pow$40:	; push float y
+149:		fld qword [bp + 14]
 151:	
 
-pow$42:	; if £temporary563 != £temporary564 goto 81
-152:		fcompp
-153:		fstsw ax
-154:		sahf
-155:		jne pow$81
-157:	
+pow$41:	; parameter y, offset 6
+152:		fstp qword [bp + 28]
+154:	
 
-pow$43:	; push float y
-158:		fld qword [bp + 14]
+pow$42:	; call function noellipse-noellipse floor
+155:		mov word [bp + 22], pow$43
+156:		mov [bp + 24], bp
+157:		add bp, 22
+158:		jmp floor
 160:	
 
-pow$44:	; £temporary567 = float_to_int y (Double -> Signed_Long_Int)
-161:		fistp dword [container4bytes#]
-162:		mov t365, [container4bytes#]
+pow$43:	; post call
+162:	
+
+pow$44:	; £temporary563 = return_value
 164:	
 
-pow$45:	; long_y = £temporary567
-165:		mov [bp + 22], t365
+pow$45:	; call header integral zero 0 stack no zero 1
+165:		fstp qword [bp + 22]
 167:	
 
-pow$46:	; £temporary568 = long_y % 2
-168:		mov a366, [bp + 22]
-170:		xor edx, edx
-171:		idiv dword [int4$2#]
-177:	
+pow$46:	; push float y
+168:		fld qword [bp + 14]
+170:	
 
-pow$47:	; if £temporary568 != 0 goto 64
-178:		cmp t368, 0
-179:		jne pow$64
-181:	
+pow$47:	; parameter y, offset 6
+171:		fstp qword [bp + 36]
+173:	
 
-pow$48:	; call header integral zero 0 stack zero 0
-183:	
+pow$48:	; call function noellipse-noellipse ceil
+174:		mov word [bp + 30], pow$49
+175:		mov [bp + 32], bp
+176:		add bp, 30
+177:		jmp ceil
+179:	
 
-pow$49:	; push float y
-184:		fld qword [bp + 14]
+pow$49:	; post call
+180:		fstp qword [bp + 30]
+181:		fld qword [bp + 22]
+182:		fld qword [bp + 30]
+184:	
+
+pow$50:	; £temporary564 = return_value
 186:	
 
-pow$50:	; call header integral zero 0 stack no zero 1
-187:		fstp qword [bp + 26]
-189:	
-
-pow$51:	; push float x
-190:		fld qword [bp + 6]
+pow$51:	; if £temporary563 != £temporary564 goto 90
+187:		fcompp
+188:		fstsw ax
+189:		sahf
+190:		jne pow$90
 192:	
 
-pow$52:	; £temporary570 = -x
-193:		fchs
+pow$52:	; push float y
+193:		fld qword [bp + 14]
 195:	
 
-pow$53:	; parameter £temporary570, offset 6
-196:		fstp qword [bp + 40]
-198:	
+pow$53:	; £temporary567 = float_to_int y (Double -> Signed_Long_Int)
+196:		fistp dword [container4bytes#]
+197:		mov t352, [container4bytes#]
+199:	
 
-pow$54:	; call function noellipse-noellipse log
-199:		mov word [bp + 34], pow$55
-200:		mov [bp + 36], bp
-201:		add bp, 34
-202:		jmp log
-204:	
+pow$54:	; long_y = £temporary567
+200:		mov [bp + 22], t352
+202:	
 
-pow$55:	; post call
-205:		fstp qword [bp + 34]
-206:		fld qword [bp + 26]
-207:		fld qword [bp + 34]
-209:	
+pow$55:	; £temporary568 = long_y % 2
+203:		mov a353, [bp + 22]
+205:		xor edx, edx
+206:		idiv dword [int4$2#]
+212:	
 
-pow$56:	; £temporary571 = return_value
-211:	
+pow$56:	; if £temporary568 != 0 goto 73
+213:		cmp t355, 0
+214:		jne pow$73
+216:	
 
-pow$57:	; £temporary572 = y * £temporary571
-212:		fmul
-214:	
+pow$57:	; call header integral zero 0 stack zero 0
+218:	
 
-pow$58:	; parameter £temporary572, offset 6
-215:		fstp qword [bp + 32]
-217:	
+pow$58:	; push float y
+219:		fld qword [bp + 14]
+221:	
 
-pow$59:	; call function noellipse-noellipse exp
-218:		mov word [bp + 26], pow$60
-219:		mov [bp + 28], bp
-220:		add bp, 26
-221:		jmp exp
-223:	
+pow$59:	; call header integral zero 0 stack no zero 1
+222:		fstp qword [bp + 26]
+224:	
 
-pow$60:	; post call
-225:	
-
-pow$61:	; £temporary573 = return_value
+pow$60:	; push float x
+225:		fld qword [bp + 6]
 227:	
 
-pow$62:	; return_value = £temporary573
-229:	
+pow$61:	; £temporary570 = -x
+228:		fchs
+230:	
 
-pow$63:	; return
-230:		mov t369, [bp]
-231:		mov di, [bp + 4]
-232:		mov bp, [bp + 2]
-233:		jmp t369
-235:	
+pow$62:	; parameter £temporary570, offset 6
+231:		fstp qword [bp + 40]
+233:	
 
-pow$64:	; call header integral zero 0 stack zero 0
-237:	
+pow$63:	; call function noellipse-noellipse log
+234:		mov word [bp + 34], pow$64
+235:		mov [bp + 36], bp
+236:		add bp, 34
+237:		jmp log
+239:	
 
-pow$65:	; push float y
-238:		fld qword [bp + 14]
-240:	
+pow$64:	; post call
+240:		fstp qword [bp + 34]
+241:		fld qword [bp + 26]
+242:		fld qword [bp + 34]
+244:	
 
-pow$66:	; call header integral zero 0 stack no zero 1
-241:		fstp qword [bp + 26]
-243:	
-
-pow$67:	; push float x
-244:		fld qword [bp + 6]
+pow$65:	; £temporary571 = return_value
 246:	
 
-pow$68:	; £temporary574 = -x
-247:		fchs
+pow$66:	; £temporary572 = y * £temporary571
+247:		fmul
 249:	
 
-pow$69:	; parameter £temporary574, offset 6
-250:		fstp qword [bp + 40]
+pow$67:	; parameter £temporary572, offset 6
+250:		fstp qword [bp + 32]
 252:	
 
-pow$70:	; call function noellipse-noellipse log
-253:		mov word [bp + 34], pow$71
-254:		mov [bp + 36], bp
-255:		add bp, 34
-256:		jmp log
+pow$68:	; call function noellipse-noellipse exp
+253:		mov word [bp + 26], pow$69
+254:		mov [bp + 28], bp
+255:		add bp, 26
+256:		jmp exp
 258:	
 
-pow$71:	; post call
-259:		fstp qword [bp + 34]
-260:		fld qword [bp + 26]
-261:		fld qword [bp + 34]
-263:	
+pow$69:	; post call
+260:	
 
-pow$72:	; £temporary575 = return_value
-265:	
+pow$70:	; £temporary573 = return_value
+262:	
 
-pow$73:	; £temporary576 = y * £temporary575
-266:		fmul
-268:	
+pow$71:	; return_value = £temporary573
+264:	
 
-pow$74:	; parameter £temporary576, offset 6
-269:		fstp qword [bp + 32]
-271:	
+pow$72:	; return
+265:		mov t356, [bp]
+266:		mov di, [bp + 4]
+267:		mov bp, [bp + 2]
+268:		jmp t356
+270:	
 
-pow$75:	; call function noellipse-noellipse exp
-272:		mov word [bp + 26], pow$76
-273:		mov [bp + 28], bp
-274:		add bp, 26
-275:		jmp exp
-277:	
+pow$73:	; call header integral zero 0 stack zero 0
+272:	
 
-pow$76:	; post call
-279:	
+pow$74:	; push float y
+273:		fld qword [bp + 14]
+275:	
 
-pow$77:	; £temporary577 = return_value
+pow$75:	; call header integral zero 0 stack no zero 1
+276:		fstp qword [bp + 26]
+278:	
+
+pow$76:	; push float x
+279:		fld qword [bp + 6]
 281:	
 
-pow$78:	; £temporary578 = -£temporary577
+pow$77:	; £temporary574 = -x
 282:		fchs
 284:	
 
-pow$79:	; return_value = £temporary578
-286:	
+pow$78:	; parameter £temporary574, offset 6
+285:		fstp qword [bp + 40]
+287:	
 
-pow$80:	; return
-287:		mov t370, [bp]
-288:		mov di, [bp + 4]
-289:		mov bp, [bp + 2]
-290:		jmp t370
-292:	
+pow$79:	; call function noellipse-noellipse log
+288:		mov word [bp + 34], pow$80
+289:		mov [bp + 36], bp
+290:		add bp, 34
+291:		jmp log
+293:	
 
-pow$81:	; errno = 6
-293:		mov word [errno], 6
-295:	
-
-pow$82:	; push 0
-296:		fldz
+pow$80:	; post call
+294:		fstp qword [bp + 34]
+295:		fld qword [bp + 26]
+296:		fld qword [bp + 34]
 298:	
 
-pow$83:	; return_value = 0
+pow$81:	; £temporary575 = return_value
 300:	
 
-pow$84:	; return
-301:		mov t371, [bp]
-302:		mov di, [bp + 4]
-303:		mov bp, [bp + 2]
-304:		jmp t371
+pow$82:	; £temporary576 = y * £temporary575
+301:		fmul
+303:	
+
+pow$83:	; parameter £temporary576, offset 6
+304:		fstp qword [bp + 32]
 306:	
 
-pow$85:	; function end pow
+pow$84:	; call function noellipse-noellipse exp
+307:		mov word [bp + 26], pow$85
+308:		mov [bp + 28], bp
+309:		add bp, 26
+310:		jmp exp
+312:	
+
+pow$85:	; post call
+314:	
+
+pow$86:	; £temporary577 = return_value
+316:	
+
+pow$87:	; £temporary578 = -£temporary577
+317:		fchs
+319:	
+
+pow$88:	; return_value = £temporary578
+321:	
+
+pow$89:	; return
+322:		mov t357, [bp]
+323:		mov di, [bp + 4]
+324:		mov bp, [bp + 2]
+325:		jmp t357
+327:	
+
+pow$90:	; errno = 6
+328:		mov word [errno], 6
+330:	
+
+pow$91:	; push 0
+331:		fldz
+333:	
+
+pow$92:	; return_value = 0
+335:	
+
+pow$93:	; return
+336:		mov t358, [bp]
+337:		mov di, [bp + 4]
+338:		mov bp, [bp + 2]
+339:		jmp t358
+341:	
+
+pow$94:	; function end pow
 1:	
 
 ldexp:	; push float x
@@ -954,10 +1030,10 @@ ldexp$10:	; return_value = £temporary589
 37:	
 
 ldexp$11:	; return
-38:		mov t372, [bp]
+38:		mov t359, [bp]
 39:		mov di, [bp + 4]
 40:		mov bp, [bp + 2]
-41:		jmp t372
+41:		jmp t359
 43:	
 
 ldexp$12:	; function end ldexp
@@ -997,17 +1073,17 @@ ldexp$12:	; function end ldexp
 
 @24$log2$8:	; £temporary594 = float_to_int £temporary593 (Double -> Signed_Int)
 26:		fistp word [container2bytes#]
-27:		mov t373, [container2bytes#]
+27:		mov t360, [container2bytes#]
 29:	
 
 @24$log2$9:	; return_value = £temporary594
 31:	
 
 @24$log2$10:	; return
-32:		mov t374, [bp]
+32:		mov t361, [bp]
 33:		mov di, [bp + 4]
 34:		mov bp, [bp + 2]
-35:		jmp t374
+35:		jmp t361
 37:	
 
 @24$log2$11:	; function end log2
@@ -1021,11 +1097,11 @@ frexp$1:	; push 0
 5:		fldz
 7:	
 
-frexp$2:	; if x == 0 goto 32
+frexp$2:	; if x == 0 goto 42
 8:		fcompp
 9:		fstsw ax
 10:		sahf
-11:		je frexp$32
+11:		je frexp$42
 13:	
 
 frexp$3:	; call header integral zero 0 stack zero 0
@@ -1072,113 +1148,156 @@ frexp$12:	; post call
 frexp$13:	; £temporary598 = return_value
 49:	
 
-frexp$14:	; £temporary599 = £temporary598 + 1
-50:		add t376, 1
+frexp$14:	; £temporary599 = int_to_int £temporary598 (Signed_Int -> Signed_Int)
 52:	
 
-frexp$15:	; £temporary600 = int_to_int £temporary599 (Signed_Int -> Signed_Int)
+frexp$15:	; exponent = £temporary599
+53:		mov [bp + 16], t363
 55:	
 
-frexp$16:	; exponent = £temporary600
-56:		mov [bp + 16], t376
-58:	
+frexp$16:	; call header integral zero 0 stack zero 0
+57:	
 
-frexp$17:	; if p == 0 goto 20
-59:		cmp word [bp + 14], 0
-60:		je frexp$20
-62:	
+frexp$17:	; push float 2
+58:		fld qword [float8$2#]
+60:	
 
-frexp$18:	; £temporary602 -> p = *p
-63:		mov a377, [bp + 14]
-65:	
+frexp$18:	; parameter 2, offset 6
+61:		fstp qword [bp + 24]
+63:	
 
-frexp$19:	; £temporary602 -> p = exponent
-66:		mov a378, [bp + 16]
-67:		mov [a377], a378
+frexp$19:	; £temporary600 = int_to_float exponent (Signed_Int -> Double)
+64:		fild word [bp + 16]
+66:	
+
+frexp$20:	; parameter £temporary600, offset 14
+67:		fstp qword [bp + 32]
 69:	
 
-frexp$20:	; push float x
-70:		fld qword [bp + 6]
-72:	
-
-frexp$21:	; call header integral zero 0 stack no zero 1
-73:		fstp qword [bp + 18]
+frexp$21:	; call function noellipse-noellipse pow
+70:		mov word [bp + 18], frexp$22
+71:		mov [bp + 20], bp
+72:		add bp, 18
+73:		jmp pow
 75:	
 
-frexp$22:	; push float 2
-76:		fld qword [float8$2#]
-78:	
+frexp$22:	; post call
+77:	
 
-frexp$23:	; parameter 2, offset 6
-79:		fstp qword [bp + 32]
-81:	
+frexp$23:	; £temporary601 = return_value
+79:	
 
-frexp$24:	; £temporary603 = int_to_float exponent (Signed_Int -> Double)
-82:		fild word [bp + 16]
-84:	
+frexp$24:	; push float x
+80:		fld qword [bp + 6]
+82:	
 
-frexp$25:	; parameter £temporary603, offset 14
-85:		fstp qword [bp + 40]
-87:	
+frexp$25:	; if £temporary601 >= x goto 27
+83:		fcompp
+84:		fstsw ax
+85:		sahf
+86:		jbe frexp$27
+88:	
 
-frexp$26:	; call function noellipse-noellipse pow
-88:		mov word [bp + 26], frexp$27
-89:		mov [bp + 28], bp
-90:		add bp, 26
-91:		jmp pow
-93:	
+frexp$26:	; ++exponent
+89:		inc word [bp + 16]
+91:	
 
-frexp$27:	; post call
-94:		fstp qword [bp + 26]
-95:		fld qword [bp + 18]
-96:		fld qword [bp + 26]
+frexp$27:	; if p == 0 goto 30
+92:		cmp word [bp + 14], 0
+93:		je frexp$30
+95:	
+
+frexp$28:	; £temporary605 -> p = *p
+96:		mov a364, [bp + 14]
 98:	
 
-frexp$28:	; £temporary604 = return_value
-100:	
+frexp$29:	; £temporary605 -> p = exponent
+99:		mov a365, [bp + 16]
+100:		mov [a364], a365
+102:	
 
-frexp$29:	; £temporary605 = x / £temporary604
-101:		fdiv
-103:	
-
-frexp$30:	; return_value = £temporary605
+frexp$30:	; push float x
+103:		fld qword [bp + 6]
 105:	
 
-frexp$31:	; return
-106:		mov t379, [bp]
-107:		mov di, [bp + 4]
-108:		mov bp, [bp + 2]
-109:		jmp t379
+frexp$31:	; call header integral zero 0 stack no zero 1
+106:		fstp qword [bp + 18]
+108:	
+
+frexp$32:	; push float 2
+109:		fld qword [float8$2#]
 111:	
 
-frexp$32:	; if p == 0 goto 35
-112:		cmp word [bp + 14], 0
-113:		je frexp$35
-115:	
+frexp$33:	; parameter 2, offset 6
+112:		fstp qword [bp + 32]
+114:	
 
-frexp$33:	; £temporary607 -> p = *p
-116:		mov a380, [bp + 14]
-118:	
+frexp$34:	; £temporary606 = int_to_float exponent (Signed_Int -> Double)
+115:		fild word [bp + 16]
+117:	
 
-frexp$34:	; £temporary607 -> p = 0
-119:		mov word [a380], 0
-121:	
+frexp$35:	; parameter £temporary606, offset 14
+118:		fstp qword [bp + 40]
+120:	
 
-frexp$35:	; push 0
-122:		fldz
-124:	
-
-frexp$36:	; return_value = 0
+frexp$36:	; call function noellipse-noellipse pow
+121:		mov word [bp + 26], frexp$37
+122:		mov [bp + 28], bp
+123:		add bp, 26
+124:		jmp pow
 126:	
 
-frexp$37:	; return
-127:		mov t381, [bp]
-128:		mov di, [bp + 4]
-129:		mov bp, [bp + 2]
-130:		jmp t381
-132:	
+frexp$37:	; post call
+127:		fstp qword [bp + 26]
+128:		fld qword [bp + 18]
+129:		fld qword [bp + 26]
+131:	
 
-frexp$38:	; function end frexp
+frexp$38:	; £temporary607 = return_value
+133:	
+
+frexp$39:	; £temporary608 = x / £temporary607
+134:		fdiv
+136:	
+
+frexp$40:	; return_value = £temporary608
+138:	
+
+frexp$41:	; return
+139:		mov t366, [bp]
+140:		mov di, [bp + 4]
+141:		mov bp, [bp + 2]
+142:		jmp t366
+144:	
+
+frexp$42:	; if p == 0 goto 45
+145:		cmp word [bp + 14], 0
+146:		je frexp$45
+148:	
+
+frexp$43:	; £temporary610 -> p = *p
+149:		mov a367, [bp + 14]
+151:	
+
+frexp$44:	; £temporary610 -> p = 0
+152:		mov word [a367], 0
+154:	
+
+frexp$45:	; push 0
+155:		fldz
+157:	
+
+frexp$46:	; return_value = 0
+159:	
+
+frexp$47:	; return
+160:		mov t368, [bp]
+161:		mov di, [bp + 4]
+162:		mov bp, [bp + 2]
+163:		jmp t368
+165:	
+
+frexp$48:	; function end frexp
 1:	
 
 sqrt:	; push float x
@@ -1189,129 +1308,137 @@ sqrt$1:	; push 0
 5:		fldz
 7:	
 
-sqrt$2:	; if x < 0 goto 26
+sqrt$2:	; if x < 0 goto 28
 8:		fcompp
 9:		fstsw ax
 10:		sahf
-11:		ja sqrt$26
+11:		ja sqrt$28
 13:	
 
 sqrt$3:	; push 1
 14:		fld1
 16:	
 
-sqrt$4:	; top float root_i_plus_1
-17:		fst qword [bp + 22]
+sqrt$4:	; pop float root_i_plus_1
+17:		fstp qword [bp + 22]
 19:	
 
-sqrt$5:	; top float root_i
-20:		fst qword [bp + 14]
+sqrt$5:	; push float root_i_plus_1
+20:		fld qword [bp + 22]
 22:	
 
-sqrt$6:	; push float x
-23:		fld qword [bp + 6]
+sqrt$6:	; pop float root_i
+23:		fstp qword [bp + 14]
 25:	
 
 sqrt$7:	; push float root_i
 26:		fld qword [bp + 14]
 28:	
 
-sqrt$8:	; £temporary613 = x / root_i
-29:		fdiv
+sqrt$8:	; push float x
+29:		fld qword [bp + 6]
 31:	
 
-sqrt$9:	; £temporary614 = root_i + £temporary613
-32:		fadd
+sqrt$9:	; push float root_i
+32:		fld qword [bp + 14]
 34:	
 
-sqrt$10:	; push float 2
-35:		fld qword [float8$2#]
+sqrt$10:	; £temporary618 = x / root_i
+35:		fdiv
 37:	
 
-sqrt$11:	; £temporary615 = £temporary614 / 2
-38:		fdiv
+sqrt$11:	; £temporary619 = root_i + £temporary618
+38:		fadd
 40:	
 
-sqrt$12:	; pop float root_i_plus_1
-41:		fstp qword [bp + 22]
+sqrt$12:	; push float 2
+41:		fld qword [float8$2#]
 43:	
 
-sqrt$13:	; call header integral zero 0 stack zero 0
-45:	
+sqrt$13:	; £temporary620 = £temporary619 / 2
+44:		fdiv
+46:	
 
-sqrt$14:	; push float root_i_plus_1
-46:		fld qword [bp + 22]
-48:	
+sqrt$14:	; pop float root_i_plus_1
+47:		fstp qword [bp + 22]
+49:	
 
-sqrt$15:	; push float root_i
-49:		fld qword [bp + 14]
+sqrt$15:	; call header integral zero 0 stack zero 0
 51:	
 
-sqrt$16:	; £temporary616 = root_i_plus_1 - root_i
-52:		fsub
+sqrt$16:	; push float root_i_plus_1
+52:		fld qword [bp + 22]
 54:	
 
-sqrt$17:	; parameter £temporary616, offset 6
-55:		fstp qword [bp + 36]
+sqrt$17:	; push float root_i
+55:		fld qword [bp + 14]
 57:	
 
-sqrt$18:	; call function noellipse-noellipse fabs
-58:		mov word [bp + 30], sqrt$19
-59:		mov [bp + 32], bp
-60:		add bp, 30
-61:		jmp fabs
+sqrt$18:	; £temporary621 = root_i_plus_1 - root_i
+58:		fsub
+60:	
+
+sqrt$19:	; parameter £temporary621, offset 6
+61:		fstp qword [bp + 36]
 63:	
 
-sqrt$19:	; post call
-65:	
+sqrt$20:	; call function noellipse-noellipse fabs
+64:		mov word [bp + 30], sqrt$21
+65:		mov [bp + 32], bp
+66:		add bp, 30
+67:		jmp fabs
+69:	
 
-sqrt$20:	; £temporary617 = return_value
-67:	
+sqrt$21:	; post call
+71:	
 
-sqrt$21:	; push float 0.000000001
-68:		fld qword [float8$0.000000001#]
-70:	
+sqrt$22:	; £temporary622 = return_value
+73:	
 
-sqrt$22:	; if £temporary617 >= 0.000000001 goto 5
-71:		fcompp
-72:		fstsw ax
-73:		sahf
-74:		jbe sqrt$5
+sqrt$23:	; push float 0.000000001
+74:		fld qword [float8$0.000000001#]
 76:	
 
-sqrt$23:	; push float root_i_plus_1
-77:		fld qword [bp + 22]
-79:	
+sqrt$24:	; if £temporary622 >= 0.000000001 goto 5
+77:		fcompp
+78:		fstsw ax
+79:		sahf
+80:		jbe sqrt$5
+82:	
 
-sqrt$24:	; return_value = root_i_plus_1
-81:	
+sqrt$25:	; push float root_i_plus_1
+83:		fld qword [bp + 22]
+85:	
 
-sqrt$25:	; return
-82:		mov t382, [bp]
-83:		mov di, [bp + 4]
-84:		mov bp, [bp + 2]
-85:		jmp t382
+sqrt$26:	; return_value = root_i_plus_1
 87:	
 
-sqrt$26:	; errno = 6
-88:		mov word [errno], 6
-90:	
-
-sqrt$27:	; push 0
-91:		fldz
+sqrt$27:	; return
+88:		mov t369, [bp]
+89:		mov di, [bp + 4]
+90:		mov bp, [bp + 2]
+91:		jmp t369
 93:	
 
-sqrt$28:	; return_value = 0
-95:	
+sqrt$28:	; errno = 6
+94:		mov word [errno], 6
+96:	
 
-sqrt$29:	; return
-96:		mov t383, [bp]
-97:		mov di, [bp + 4]
-98:		mov bp, [bp + 2]
-99:		jmp t383
+sqrt$29:	; push 0
+97:		fldz
+99:	
+
+sqrt$30:	; return_value = 0
 101:	
 
-sqrt$30:	; function end sqrt
+sqrt$31:	; return
+102:		mov t370, [bp]
+103:		mov di, [bp + 4]
+104:		mov bp, [bp + 2]
+105:		jmp t370
+107:	
+
+sqrt$32:	; function end sqrt
 1:	
 
 modf:	; call header integral zero 0 stack zero 0
@@ -1335,135 +1462,139 @@ modf$3:	; call function noellipse-noellipse fabs
 modf$4:	; post call
 17:	
 
-modf$5:	; £temporary620 = return_value
+modf$5:	; £temporary625 = return_value
 19:	
 
-modf$6:	; top float abs_x
-20:		fst qword [bp + 16]
+modf$6:	; pop float abs_x
+20:		fstp qword [bp + 16]
 22:	
 
-modf$7:	; £temporary621 = float_to_int abs_x (Double -> Signed_Long_Int)
-23:		fistp dword [container4bytes#]
-24:		mov t384, [container4bytes#]
-26:	
+modf$7:	; push float abs_x
+23:		fld qword [bp + 16]
+25:	
 
-modf$8:	; £temporary622 = int_to_float £temporary621 (Signed_Long_Int -> Double)
-27:		mov [container4bytes#], t384
-28:		fild dword [container4bytes#]
-30:	
+modf$8:	; £temporary626 = float_to_int abs_x (Double -> Signed_Long_Int)
+26:		fistp dword [container4bytes#]
+27:		mov t371, [container4bytes#]
+29:	
 
-modf$9:	; pop float integral
-31:		fstp qword [bp + 24]
+modf$9:	; £temporary627 = int_to_float £temporary626 (Signed_Long_Int -> Double)
+30:		mov [container4bytes#], t371
+31:		fild dword [container4bytes#]
 33:	
 
-modf$10:	; push float abs_x
-34:		fld qword [bp + 16]
+modf$10:	; pop float integral
+34:		fstp qword [bp + 24]
 36:	
 
-modf$11:	; push float integral
-37:		fld qword [bp + 24]
+modf$11:	; push float abs_x
+37:		fld qword [bp + 16]
 39:	
 
-modf$12:	; £temporary623 = abs_x - integral
-40:		fsub
+modf$12:	; push float integral
+40:		fld qword [bp + 24]
 42:	
 
-modf$13:	; pop float fractional
-43:		fstp qword [bp + 32]
+modf$13:	; £temporary628 = abs_x - integral
+43:		fsub
 45:	
 
-modf$14:	; if p == 0 goto 25
-46:		cmp word [bp + 14], 0
-47:		je modf$25
-49:	
+modf$14:	; pop float fractional
+46:		fstp qword [bp + 32]
+48:	
 
-modf$15:	; £temporary625 -> p = *p
-50:		mov a385, [bp + 14]
+modf$15:	; if p == 0 goto 26
+49:		cmp word [bp + 14], 0
+50:		je modf$26
 52:	
 
-modf$16:	; push float x
-53:		fld qword [bp + 6]
+modf$16:	; £temporary630 -> p = *p
+53:		mov a372, [bp + 14]
 55:	
 
-modf$17:	; push 0
-56:		fldz
+modf$17:	; push float x
+56:		fld qword [bp + 6]
 58:	
 
-modf$18:	; if x <= 0 goto 22
-59:		fcompp
-60:		fstsw ax
-61:		sahf
-62:		jae modf$22
-64:	
+modf$18:	; push 0
+59:		fldz
+61:	
 
-modf$19:	; push float fractional
-65:		fld qword [bp + 32]
+modf$19:	; if x <= 0 goto 23
+62:		fcompp
+63:		fstsw ax
+64:		sahf
+65:		jae modf$23
 67:	
 
-modf$20:	; decrease stack
-69:	
+modf$20:	; push float integral
+68:		fld qword [bp + 24]
+70:	
 
-modf$21:	; goto 24
-70:		jmp modf$24
+modf$21:	; decrease stack
 72:	
 
-modf$22:	; push float fractional
-73:		fld qword [bp + 32]
+modf$22:	; goto 25
+73:		jmp modf$25
 75:	
 
-modf$23:	; £temporary627 = -fractional
-76:		fchs
+modf$23:	; push float integral
+76:		fld qword [bp + 24]
 78:	
 
-modf$24:	; pop float £temporary625 -> p
-79:		fstp qword [a385]
+modf$24:	; £temporary632 = -integral
+79:		fchs
 81:	
 
-modf$25:	; push float x
-82:		fld qword [bp + 6]
+modf$25:	; pop float £temporary630 -> p
+82:		fstp qword [a372]
 84:	
 
-modf$26:	; push 0
-85:		fldz
+modf$26:	; push float x
+85:		fld qword [bp + 6]
 87:	
 
-modf$27:	; if x <= 0 goto 31
-88:		fcompp
-89:		fstsw ax
-90:		sahf
-91:		jae modf$31
-93:	
+modf$27:	; push 0
+88:		fldz
+90:	
 
-modf$28:	; push float integral
-94:		fld qword [bp + 24]
+modf$28:	; if x <= 0 goto 32
+91:		fcompp
+92:		fstsw ax
+93:		sahf
+94:		jae modf$32
 96:	
 
-modf$29:	; decrease stack
-98:	
+modf$29:	; push float fractional
+97:		fld qword [bp + 32]
+99:	
 
-modf$30:	; goto 33
-99:		jmp modf$33
+modf$30:	; decrease stack
 101:	
 
-modf$31:	; push float integral
-102:		fld qword [bp + 24]
+modf$31:	; goto 34
+102:		jmp modf$34
 104:	
 
-modf$32:	; £temporary633 = -integral
-105:		fchs
+modf$32:	; push float fractional
+105:		fld qword [bp + 32]
 107:	
 
-modf$33:	; return_value = £temporary637
-109:	
+modf$33:	; £temporary638 = -fractional
+108:		fchs
+110:	
 
-modf$34:	; return
-110:		mov t386, [bp]
-111:		mov di, [bp + 4]
-112:		mov bp, [bp + 2]
-113:		jmp t386
-115:	
+modf$34:	; return_value = £temporary642
+112:	
 
-modf$35:	; function end modf
+modf$35:	; return
+113:		mov t373, [bp]
+114:		mov di, [bp + 4]
+115:		mov bp, [bp + 2]
+116:		jmp t373
+118:	
+
+modf$36:	; function end modf
 1:	
 
 fmod:	; push float y
@@ -1481,66 +1612,66 @@ fmod$2:	; if y == 0 goto 28
 11:		je fmod$28
 13:	
 
-fmod$3:	; push float x
-14:		fld qword [bp + 6]
-16:	
+fmod$3:	; call header integral zero 0 stack zero 0
+15:	
 
-fmod$4:	; push float y
-17:		fld qword [bp + 14]
-19:	
+fmod$4:	; push float x
+16:		fld qword [bp + 6]
+18:	
 
-fmod$5:	; £temporary640 = x / y
-20:		fdiv
-22:	
+fmod$5:	; push float y
+19:		fld qword [bp + 14]
+21:	
 
-fmod$6:	; pop float quotient
-23:		fstp qword [bp + 22]
-25:	
+fmod$6:	; push float x
+22:		fld qword [bp + 6]
+24:	
 
-fmod$7:	; call header integral zero 0 stack zero 0
+fmod$7:	; push float y
+25:		fld qword [bp + 14]
 27:	
 
-fmod$8:	; push float quotient
-28:		fld qword [bp + 22]
+fmod$8:	; £temporary645 = x / y
+28:		fdiv
 30:	
 
-fmod$9:	; push float quotient
-31:		fld qword [bp + 22]
-33:	
+fmod$9:	; £temporary646 = float_to_int £temporary645 (Double -> Signed_Int)
+31:		fistp word [container2bytes#]
+32:		mov t374, [container2bytes#]
+34:	
 
-fmod$10:	; £temporary641 = float_to_int quotient (Double -> Signed_Long_Int)
-34:		fistp dword [container4bytes#]
-35:		mov t387, [container4bytes#]
-37:	
+fmod$10:	; £temporary647 = int_to_float £temporary646 (Signed_Int -> Double)
+35:		mov [container2bytes#], t374
+36:		fild word [container2bytes#]
+38:	
 
-fmod$11:	; £temporary642 = int_to_float £temporary641 (Signed_Long_Int -> Double)
-38:		mov [container4bytes#], t387
-39:		fild dword [container4bytes#]
+fmod$11:	; £temporary648 = y * £temporary647
+39:		fmul
 41:	
 
-fmod$12:	; £temporary643 = quotient - £temporary642
+fmod$12:	; £temporary649 = x - £temporary648
 42:		fsub
 44:	
 
-fmod$13:	; parameter £temporary643, offset 6
-45:		fstp qword [bp + 36]
+fmod$13:	; parameter £temporary649, offset 6
+45:		fstp qword [bp + 28]
 47:	
 
 fmod$14:	; call function noellipse-noellipse fabs
-48:		mov word [bp + 30], fmod$15
-49:		mov [bp + 32], bp
-50:		add bp, 30
+48:		mov word [bp + 22], fmod$15
+49:		mov [bp + 24], bp
+50:		add bp, 22
 51:		jmp fabs
 53:	
 
 fmod$15:	; post call
 55:	
 
-fmod$16:	; £temporary644 = return_value
+fmod$16:	; £temporary650 = return_value
 57:	
 
 fmod$17:	; pop float remainder
-58:		fstp qword [bp + 30]
+58:		fstp qword [bp + 22]
 60:	
 
 fmod$18:	; push float x
@@ -1559,7 +1690,7 @@ fmod$20:	; if x <= 0 goto 24
 72:	
 
 fmod$21:	; push float remainder
-73:		fld qword [bp + 30]
+73:		fld qword [bp + 22]
 75:	
 
 fmod$22:	; decrease stack
@@ -1570,21 +1701,21 @@ fmod$23:	; goto 26
 80:	
 
 fmod$24:	; push float remainder
-81:		fld qword [bp + 30]
+81:		fld qword [bp + 22]
 83:	
 
-fmod$25:	; £temporary646 = -remainder
+fmod$25:	; £temporary652 = -remainder
 84:		fchs
 86:	
 
-fmod$26:	; return_value = £temporary650
+fmod$26:	; return_value = £temporary656
 88:	
 
 fmod$27:	; return
-89:		mov t388, [bp]
+89:		mov t375, [bp]
 90:		mov di, [bp + 4]
 91:		mov bp, [bp + 2]
-92:		jmp t388
+92:		jmp t375
 94:	
 
 fmod$28:	; errno = 6
@@ -1599,10 +1730,10 @@ fmod$30:	; return_value = 0
 102:	
 
 fmod$31:	; return
-103:		mov t389, [bp]
+103:		mov t376, [bp]
 104:		mov di, [bp + 4]
 105:		mov bp, [bp + 2]
-106:		jmp t389
+106:		jmp t376
 108:	
 
 fmod$32:	; function end fmod
@@ -1629,14 +1760,14 @@ sin$3:	; call function noellipse-noellipse fabs
 sin$4:	; post call
 17:	
 
-sin$5:	; £temporary652 = return_value
+sin$5:	; £temporary658 = return_value
 19:	
 
 sin$6:	; push float 6.2831853071795864769252866
 20:		fld qword [float8$6.2831853071795864769252866#]
 22:	
 
-sin$7:	; if £temporary652 <= 6.2831853071795864769252866 goto 17
+sin$7:	; if £temporary658 <= 6.2831853071795864769252866 goto 17
 23:		fcompp
 24:		fstsw ax
 25:		sahf
@@ -1672,18 +1803,18 @@ sin$13:	; call function noellipse-noellipse fmod
 sin$14:	; post call
 50:	
 
-sin$15:	; £temporary654 = return_value
+sin$15:	; £temporary660 = return_value
 52:	
 
 sin$16:	; pop float x
 53:		fstp qword [bp + 6]
 55:	
 
-sin$17:	; push 0
-56:		fldz
+sin$17:	; push 1
+56:		fld1
 58:	
 
-sin$18:	; pop float i
+sin$18:	; pop float index
 59:		fstp qword [bp + 14]
 61:	
 
@@ -1727,7 +1858,7 @@ sin$28:	; push float power
 89:		fld qword [bp + 46]
 91:	
 
-sin$29:	; £temporary655 = sign * power
+sin$29:	; £temporary661 = sign * power
 92:		fmul
 94:	
 
@@ -1735,7 +1866,7 @@ sin$30:	; push float faculty
 95:		fld qword [bp + 54]
 97:	
 
-sin$31:	; £temporary656 = £temporary655 / faculty
+sin$31:	; £temporary662 = £temporary661 / faculty
 98:		fdiv
 100:	
 
@@ -1751,7 +1882,7 @@ sin$34:	; push float term
 107:		fld qword [bp + 22]
 109:	
 
-sin$35:	; £temporary657 = sum + term
+sin$35:	; £temporary663 = sum + term
 110:		fadd
 112:	
 
@@ -1767,7 +1898,7 @@ sin$38:	; push float -1
 119:		fld qword [float8$minus1#]
 121:	
 
-sin$39:	; £temporary658 = sign * -1
+sin$39:	; £temporary664 = sign * -1
 122:		fmul
 124:	
 
@@ -1787,11 +1918,11 @@ sin$43:	; push float x
 134:		fld qword [bp + 6]
 136:	
 
-sin$44:	; £temporary659 = x * x
+sin$44:	; £temporary665 = x * x
 137:		fmul
 139:	
 
-sin$45:	; £temporary660 = power * £temporary659
+sin$45:	; £temporary666 = power * £temporary665
 140:		fmul
 142:	
 
@@ -1803,7 +1934,7 @@ sin$47:	; push float faculty
 146:		fld qword [bp + 54]
 148:	
 
-sin$48:	; push float i
+sin$48:	; push float index
 149:		fld qword [bp + 14]
 151:	
 
@@ -1811,15 +1942,15 @@ sin$49:	; push 1
 152:		fld1
 154:	
 
-sin$50:	; i = i + 1
+sin$50:	; index = index + 1
 155:		fadd
 157:	
 
-sin$51:	; top float i
+sin$51:	; top float index
 158:		fst qword [bp + 14]
 160:	
 
-sin$52:	; push float i
+sin$52:	; push float index
 161:		fld qword [bp + 14]
 163:	
 
@@ -1827,19 +1958,19 @@ sin$53:	; push 1
 164:		fld1
 166:	
 
-sin$54:	; i = i + 1
+sin$54:	; index = index + 1
 167:		fadd
 169:	
 
-sin$55:	; top float i
+sin$55:	; top float index
 170:		fst qword [bp + 14]
 172:	
 
-sin$56:	; £temporary663 = £temporary661 * £temporary662
+sin$56:	; £temporary669 = £temporary667 * £temporary668
 173:		fmul
 175:	
 
-sin$57:	; £temporary664 = faculty * £temporary663
+sin$57:	; £temporary670 = faculty * £temporary669
 176:		fmul
 178:	
 
@@ -1868,14 +1999,14 @@ sin$62:	; call function noellipse-noellipse fabs
 sin$63:	; post call
 197:	
 
-sin$64:	; £temporary665 = return_value
+sin$64:	; £temporary671 = return_value
 199:	
 
 sin$65:	; push float 0.000000001
 200:		fld qword [float8$0.000000001#]
 202:	
 
-sin$66:	; if £temporary665 >= 0.000000001 goto 27
+sin$66:	; if £temporary671 >= 0.000000001 goto 27
 203:		fcompp
 204:		fstsw ax
 205:		sahf
@@ -1890,10 +2021,10 @@ sin$68:	; return_value = sum
 213:	
 
 sin$69:	; return
-214:		mov t390, [bp]
+214:		mov t377, [bp]
 215:		mov di, [bp + 4]
 216:		mov bp, [bp + 2]
-217:		jmp t390
+217:		jmp t377
 219:	
 
 sin$70:	; function end sin
@@ -1920,14 +2051,14 @@ cos$3:	; call function noellipse-noellipse fabs
 cos$4:	; post call
 17:	
 
-cos$5:	; £temporary671 = return_value
+cos$5:	; £temporary677 = return_value
 19:	
 
 cos$6:	; push float 6.2831853071795864769252866
 20:		fld qword [float8$6.2831853071795864769252866#]
 22:	
 
-cos$7:	; if £temporary671 <= 6.2831853071795864769252866 goto 17
+cos$7:	; if £temporary677 <= 6.2831853071795864769252866 goto 17
 23:		fcompp
 24:		fstsw ax
 25:		sahf
@@ -1963,7 +2094,7 @@ cos$13:	; call function noellipse-noellipse fmod
 cos$14:	; post call
 50:	
 
-cos$15:	; £temporary673 = return_value
+cos$15:	; £temporary679 = return_value
 52:	
 
 cos$16:	; pop float x
@@ -1974,7 +2105,7 @@ cos$17:	; push 0
 56:		fldz
 58:	
 
-cos$18:	; pop float i
+cos$18:	; pop float index
 59:		fstp qword [bp + 14]
 61:	
 
@@ -2018,7 +2149,7 @@ cos$28:	; push float power
 89:		fld qword [bp + 46]
 91:	
 
-cos$29:	; £temporary674 = sign * power
+cos$29:	; £temporary680 = sign * power
 92:		fmul
 94:	
 
@@ -2026,7 +2157,7 @@ cos$30:	; push float faculty
 95:		fld qword [bp + 54]
 97:	
 
-cos$31:	; £temporary675 = £temporary674 / faculty
+cos$31:	; £temporary681 = £temporary680 / faculty
 98:		fdiv
 100:	
 
@@ -2042,7 +2173,7 @@ cos$34:	; push float term
 107:		fld qword [bp + 22]
 109:	
 
-cos$35:	; £temporary676 = sum + term
+cos$35:	; £temporary682 = sum + term
 110:		fadd
 112:	
 
@@ -2058,7 +2189,7 @@ cos$38:	; push float -1
 119:		fld qword [float8$minus1#]
 121:	
 
-cos$39:	; £temporary677 = sign * -1
+cos$39:	; £temporary683 = sign * -1
 122:		fmul
 124:	
 
@@ -2078,11 +2209,11 @@ cos$43:	; push float x
 134:		fld qword [bp + 6]
 136:	
 
-cos$44:	; £temporary678 = x * x
+cos$44:	; £temporary684 = x * x
 137:		fmul
 139:	
 
-cos$45:	; £temporary679 = power * £temporary678
+cos$45:	; £temporary685 = power * £temporary684
 140:		fmul
 142:	
 
@@ -2094,7 +2225,7 @@ cos$47:	; push float faculty
 146:		fld qword [bp + 54]
 148:	
 
-cos$48:	; push float i
+cos$48:	; push float index
 149:		fld qword [bp + 14]
 151:	
 
@@ -2102,15 +2233,15 @@ cos$49:	; push 1
 152:		fld1
 154:	
 
-cos$50:	; i = i + 1
+cos$50:	; index = index + 1
 155:		fadd
 157:	
 
-cos$51:	; top float i
+cos$51:	; top float index
 158:		fst qword [bp + 14]
 160:	
 
-cos$52:	; push float i
+cos$52:	; push float index
 161:		fld qword [bp + 14]
 163:	
 
@@ -2118,19 +2249,19 @@ cos$53:	; push 1
 164:		fld1
 166:	
 
-cos$54:	; i = i + 1
+cos$54:	; index = index + 1
 167:		fadd
 169:	
 
-cos$55:	; top float i
+cos$55:	; top float index
 170:		fst qword [bp + 14]
 172:	
 
-cos$56:	; £temporary682 = £temporary680 * £temporary681
+cos$56:	; £temporary688 = £temporary686 * £temporary687
 173:		fmul
 175:	
 
-cos$57:	; £temporary683 = faculty * £temporary682
+cos$57:	; £temporary689 = faculty * £temporary688
 176:		fmul
 178:	
 
@@ -2159,14 +2290,14 @@ cos$62:	; call function noellipse-noellipse fabs
 cos$63:	; post call
 197:	
 
-cos$64:	; £temporary684 = return_value
+cos$64:	; £temporary690 = return_value
 199:	
 
 cos$65:	; push float 0.000000001
 200:		fld qword [float8$0.000000001#]
 202:	
 
-cos$66:	; if £temporary684 >= 0.000000001 goto 27
+cos$66:	; if £temporary690 >= 0.000000001 goto 27
 203:		fcompp
 204:		fstsw ax
 205:		sahf
@@ -2181,10 +2312,10 @@ cos$68:	; return_value = sum
 213:	
 
 cos$69:	; return
-214:		mov t391, [bp]
+214:		mov t378, [bp]
 215:		mov di, [bp + 4]
 216:		mov bp, [bp + 2]
-217:		jmp t391
+217:		jmp t378
 219:	
 
 cos$70:	; function end cos
@@ -2211,85 +2342,89 @@ tan$3:	; call function noellipse-noellipse cos
 tan$4:	; post call
 17:	
 
-tan$5:	; £temporary690 = return_value
+tan$5:	; £temporary696 = return_value
 19:	
 
-tan$6:	; top float cos_x
-20:		fst qword [bp + 14]
+tan$6:	; pop float cos_of_x
+20:		fstp qword [bp + 14]
 22:	
 
-tan$7:	; push 0
-23:		fldz
+tan$7:	; push float cos_of_x
+23:		fld qword [bp + 14]
 25:	
 
-tan$8:	; if cos_x == 0 goto 19
-26:		fcompp
-27:		fstsw ax
-28:		sahf
-29:		je tan$19
-31:	
+tan$8:	; push 0
+26:		fldz
+28:	
 
-tan$9:	; call header integral zero 0 stack zero 0
-33:	
+tan$9:	; if cos_of_x == 0 goto 20
+29:		fcompp
+30:		fstsw ax
+31:		sahf
+32:		je tan$20
+34:	
 
-tan$10:	; push float x
-34:		fld qword [bp + 6]
+tan$10:	; call header integral zero 0 stack zero 0
 36:	
 
-tan$11:	; parameter x, offset 6
-37:		fstp qword [bp + 28]
+tan$11:	; push float x
+37:		fld qword [bp + 6]
 39:	
 
-tan$12:	; call function noellipse-noellipse sin
-40:		mov word [bp + 22], tan$13
-41:		mov [bp + 24], bp
-42:		add bp, 22
-43:		jmp sin
-45:	
+tan$12:	; parameter x, offset 6
+40:		fstp qword [bp + 28]
+42:	
 
-tan$13:	; post call
-47:	
+tan$13:	; call function noellipse-noellipse sin
+43:		mov word [bp + 22], tan$14
+44:		mov [bp + 24], bp
+45:		add bp, 22
+46:		jmp sin
+48:	
 
-tan$14:	; £temporary692 = return_value
-49:	
+tan$14:	; post call
+50:	
 
-tan$15:	; push float cos_x
-50:		fld qword [bp + 14]
+tan$15:	; £temporary698 = return_value
 52:	
 
-tan$16:	; £temporary693 = £temporary692 / cos_x
-53:		fdiv
+tan$16:	; push float cos_of_x
+53:		fld qword [bp + 14]
 55:	
 
-tan$17:	; return_value = £temporary693
-57:	
+tan$17:	; £temporary699 = £temporary698 / cos_of_x
+56:		fdiv
+58:	
 
-tan$18:	; return
-58:		mov t392, [bp]
-59:		mov di, [bp + 4]
-60:		mov bp, [bp + 2]
-61:		jmp t392
-63:	
+tan$18:	; return_value = £temporary699
+60:	
 
-tan$19:	; errno = 6
-64:		mov word [errno], 6
+tan$19:	; return
+61:		mov t379, [bp]
+62:		mov di, [bp + 4]
+63:		mov bp, [bp + 2]
+64:		jmp t379
 66:	
 
-tan$20:	; push 0
-67:		fldz
+tan$20:	; errno = 6
+67:		mov word [errno], 6
 69:	
 
-tan$21:	; return_value = 0
-71:	
+tan$21:	; push 0
+70:		fldz
+72:	
 
-tan$22:	; return
-72:		mov t393, [bp]
-73:		mov di, [bp + 4]
-74:		mov bp, [bp + 2]
-75:		jmp t393
-77:	
+tan$22:	; return_value = 0
+74:	
 
-tan$23:	; function end tan
+tan$23:	; return
+75:		mov t380, [bp]
+76:		mov di, [bp + 4]
+77:		mov bp, [bp + 2]
+78:		jmp t380
+80:	
+
+tan$24:	; function end tan
 1:	
 
 asin:	; push float x
@@ -2315,177 +2450,185 @@ asin$4:	; return_value = 1.57079632679489661923132165
 18:	
 
 asin$5:	; return
-19:		mov t394, [bp]
+19:		mov t381, [bp]
 20:		mov di, [bp + 4]
 21:		mov bp, [bp + 2]
-22:		jmp t394
+22:		jmp t381
 24:	
 
 asin$6:	; push float x
 25:		fld qword [bp + 6]
 27:	
 
-asin$7:	; push float -1
-28:		fld qword [float8$minus1#]
+asin$7:	; push 0
+28:		fldz
 30:	
 
-asin$8:	; if x != -1 goto 12
+asin$8:	; if x >= 0 goto 19
 31:		fcompp
 32:		fstsw ax
 33:		sahf
-34:		jne asin$12
+34:		jbe asin$19
 36:	
 
-asin$9:	; push float -1.57079632679489661923132165
-37:		fld qword [float8$minus1.57079632679489661923132165#]
-39:	
+asin$9:	; call header integral zero 0 stack zero 0
+38:	
 
-asin$10:	; return_value = -1.57079632679489661923132165
+asin$10:	; push float x
+39:		fld qword [bp + 6]
 41:	
 
-asin$11:	; return
-42:		mov t395, [bp]
-43:		mov di, [bp + 4]
-44:		mov bp, [bp + 2]
-45:		jmp t395
+asin$11:	; £temporary704 = -x
+42:		fchs
+44:	
+
+asin$12:	; parameter £temporary704, offset 6
+45:		fstp qword [bp + 20]
 47:	
 
-asin$12:	; call header integral zero 0 stack zero 0
-49:	
+asin$13:	; call function noellipse-noellipse asin
+48:		mov word [bp + 14], asin$14
+49:		mov [bp + 16], bp
+50:		add bp, 14
+51:		jmp asin
+53:	
 
-asin$13:	; push float x
-50:		fld qword [bp + 6]
-52:	
-
-asin$14:	; parameter x, offset 6
-53:		fstp qword [bp + 20]
+asin$14:	; post call
 55:	
 
-asin$15:	; call function noellipse-noellipse fabs
-56:		mov word [bp + 14], asin$16
-57:		mov [bp + 16], bp
-58:		add bp, 14
-59:		jmp fabs
-61:	
+asin$15:	; £temporary705 = return_value
+57:	
 
-asin$16:	; post call
-63:	
+asin$16:	; £temporary706 = -£temporary705
+58:		fchs
+60:	
 
-asin$17:	; £temporary698 = return_value
-65:	
+asin$17:	; return_value = £temporary706
+62:	
 
-asin$18:	; push 1
-66:		fld1
+asin$18:	; return
+63:		mov t382, [bp]
+64:		mov di, [bp + 4]
+65:		mov bp, [bp + 2]
+66:		jmp t382
 68:	
 
-asin$19:	; if £temporary698 >= 1 goto 39
-69:		fcompp
-70:		fstsw ax
-71:		sahf
-72:		jbe asin$39
+asin$19:	; push float x
+69:		fld qword [bp + 6]
+71:	
+
+asin$20:	; push 1
+72:		fld1
 74:	
 
-asin$20:	; call header integral zero 0 stack zero 0
-76:	
+asin$21:	; if x >= 1 goto 41
+75:		fcompp
+76:		fstsw ax
+77:		sahf
+78:		jbe asin$41
+80:	
 
-asin$21:	; push float x
-77:		fld qword [bp + 6]
-79:	
-
-asin$22:	; call header integral zero 0 stack no zero 1
-80:		fstp qword [bp + 14]
+asin$22:	; call header integral zero 0 stack zero 0
 82:	
 
-asin$23:	; push 1
-83:		fld1
+asin$23:	; push float x
+83:		fld qword [bp + 6]
 85:	
 
-asin$24:	; push float x
-86:		fld qword [bp + 6]
+asin$24:	; call header integral zero 0 stack no zero 1
+86:		fstp qword [bp + 14]
 88:	
 
-asin$25:	; push float x
-89:		fld qword [bp + 6]
+asin$25:	; push 1
+89:		fld1
 91:	
 
-asin$26:	; £temporary700 = x * x
-92:		fmul
+asin$26:	; push float x
+92:		fld qword [bp + 6]
 94:	
 
-asin$27:	; £temporary701 = 1 - £temporary700
-95:		fsub
+asin$27:	; push float x
+95:		fld qword [bp + 6]
 97:	
 
-asin$28:	; parameter £temporary701, offset 6
-98:		fstp qword [bp + 28]
+asin$28:	; £temporary708 = x * x
+98:		fmul
 100:	
 
-asin$29:	; call function noellipse-noellipse sqrt
-101:		mov word [bp + 22], asin$30
-102:		mov [bp + 24], bp
-103:		add bp, 22
-104:		jmp sqrt
+asin$29:	; £temporary709 = 1 - £temporary708
+101:		fsub
+103:	
+
+asin$30:	; parameter £temporary709, offset 6
+104:		fstp qword [bp + 28]
 106:	
 
-asin$30:	; post call
-107:		fstp qword [bp + 22]
-108:		fld qword [bp + 14]
-109:		fld qword [bp + 22]
-111:	
+asin$31:	; call function noellipse-noellipse sqrt
+107:		mov word [bp + 22], asin$32
+108:		mov [bp + 24], bp
+109:		add bp, 22
+110:		jmp sqrt
+112:	
 
-asin$31:	; £temporary702 = return_value
-113:	
+asin$32:	; post call
+113:		fstp qword [bp + 22]
+114:		fld qword [bp + 14]
+115:		fld qword [bp + 22]
+117:	
 
-asin$32:	; £temporary703 = x / £temporary702
-114:		fdiv
-116:	
-
-asin$33:	; parameter £temporary703, offset 6
-117:		fstp qword [bp + 20]
+asin$33:	; £temporary710 = return_value
 119:	
 
-asin$34:	; call function noellipse-noellipse atan
-120:		mov word [bp + 14], asin$35
-121:		mov [bp + 16], bp
-122:		add bp, 14
-123:		jmp atan
+asin$34:	; £temporary711 = x / £temporary710
+120:		fdiv
+122:	
+
+asin$35:	; parameter £temporary711, offset 6
+123:		fstp qword [bp + 20]
 125:	
 
-asin$35:	; post call
-127:	
-
-asin$36:	; £temporary704 = return_value
-129:	
-
-asin$37:	; return_value = £temporary704
+asin$36:	; call function noellipse-noellipse atan
+126:		mov word [bp + 14], asin$37
+127:		mov [bp + 16], bp
+128:		add bp, 14
+129:		jmp atan
 131:	
 
-asin$38:	; return
-132:		mov t396, [bp]
-133:		mov di, [bp + 4]
-134:		mov bp, [bp + 2]
-135:		jmp t396
+asin$37:	; post call
+133:	
+
+asin$38:	; £temporary712 = return_value
+135:	
+
+asin$39:	; return_value = £temporary712
 137:	
 
-asin$39:	; errno = 6
-138:		mov word [errno], 6
-140:	
-
-asin$40:	; push 0
-141:		fldz
+asin$40:	; return
+138:		mov t383, [bp]
+139:		mov di, [bp + 4]
+140:		mov bp, [bp + 2]
+141:		jmp t383
 143:	
 
-asin$41:	; return_value = 0
-145:	
+asin$41:	; errno = 6
+144:		mov word [errno], 6
+146:	
 
-asin$42:	; return
-146:		mov t397, [bp]
-147:		mov di, [bp + 4]
-148:		mov bp, [bp + 2]
-149:		jmp t397
+asin$42:	; push 0
+147:		fldz
+149:	
+
+asin$43:	; return_value = 0
 151:	
 
-asin$43:	; function end asin
+asin$44:	; return
+152:		mov t384, [bp]
+153:		mov di, [bp + 4]
+154:		mov bp, [bp + 2]
+155:		jmp t384
+157:	
+
+asin$45:	; function end asin
 1:	
 
 acos:	; push float x
@@ -2511,148 +2654,189 @@ acos$4:	; return_value = 1.57079632679489661923132165
 18:	
 
 acos$5:	; return
-19:		mov t398, [bp]
+19:		mov t385, [bp]
 20:		mov di, [bp + 4]
 21:		mov bp, [bp + 2]
-22:		jmp t398
+22:		jmp t385
 24:	
 
-acos$6:	; call header integral zero 0 stack zero 0
-26:	
+acos$6:	; push float x
+25:		fld qword [bp + 6]
+27:	
 
-acos$7:	; push float x
-27:		fld qword [bp + 6]
-29:	
+acos$7:	; push 0
+28:		fldz
+30:	
 
-acos$8:	; parameter x, offset 6
-30:		fstp qword [bp + 20]
-32:	
+acos$8:	; if x >= 0 goto 20
+31:		fcompp
+32:		fstsw ax
+33:		sahf
+34:		jbe acos$20
+36:	
 
-acos$9:	; call function noellipse-noellipse fabs
-33:		mov word [bp + 14], acos$10
-34:		mov [bp + 16], bp
-35:		add bp, 14
-36:		jmp fabs
-38:	
+acos$9:	; push float 3.1415926535897932384626433
+37:		fld qword [float8$3.1415926535897932384626433#]
+39:	
 
-acos$10:	; post call
-40:	
-
-acos$11:	; £temporary709 = return_value
+acos$10:	; call header integral zero 0 stack no zero 1
+40:		fstp qword [bp + 14]
 42:	
 
-acos$12:	; push 1
-43:		fld1
+acos$11:	; push float x
+43:		fld qword [bp + 6]
 45:	
 
-acos$13:	; if £temporary709 >= 1 goto 33
-46:		fcompp
-47:		fstsw ax
-48:		sahf
-49:		jbe acos$33
+acos$12:	; £temporary718 = -x
+46:		fchs
+48:	
+
+acos$13:	; parameter £temporary718, offset 6
+49:		fstp qword [bp + 28]
 51:	
 
-acos$14:	; call header integral zero 0 stack zero 0
-53:	
+acos$14:	; call function noellipse-noellipse acos
+52:		mov word [bp + 22], acos$15
+53:		mov [bp + 24], bp
+54:		add bp, 22
+55:		jmp acos
+57:	
 
-acos$15:	; push float x
-54:		fld qword [bp + 6]
-56:	
-
-acos$16:	; call header integral zero 0 stack no zero 1
-57:		fstp qword [bp + 14]
-59:	
-
-acos$17:	; push 1
-60:		fld1
+acos$15:	; post call
+58:		fstp qword [bp + 22]
+59:		fld qword [bp + 14]
+60:		fld qword [bp + 22]
 62:	
 
-acos$18:	; push float x
-63:		fld qword [bp + 6]
-65:	
+acos$16:	; £temporary719 = return_value
+64:	
 
-acos$19:	; push float x
-66:		fld qword [bp + 6]
-68:	
+acos$17:	; £temporary720 = 3.1415926535897932384626433 - £temporary719
+65:		fsub
+67:	
 
-acos$20:	; £temporary711 = x * x
-69:		fmul
-71:	
+acos$18:	; return_value = £temporary720
+69:	
 
-acos$21:	; £temporary712 = 1 - £temporary711
-72:		fsub
-74:	
+acos$19:	; return
+70:		mov t386, [bp]
+71:		mov di, [bp + 4]
+72:		mov bp, [bp + 2]
+73:		jmp t386
+75:	
 
-acos$22:	; parameter £temporary712, offset 6
-75:		fstp qword [bp + 28]
-77:	
+acos$20:	; push float x
+76:		fld qword [bp + 6]
+78:	
 
-acos$23:	; call function noellipse-noellipse sqrt
-78:		mov word [bp + 22], acos$24
-79:		mov [bp + 24], bp
-80:		add bp, 22
-81:		jmp sqrt
-83:	
+acos$21:	; push 1
+79:		fld1
+81:	
 
-acos$24:	; post call
-84:		fstp qword [bp + 22]
-85:		fld qword [bp + 14]
-86:		fld qword [bp + 22]
-88:	
+acos$22:	; if x > 1 goto 42
+82:		fcompp
+83:		fstsw ax
+84:		sahf
+85:		jb acos$42
+87:	
 
-acos$25:	; £temporary713 = return_value
-90:	
+acos$23:	; call header integral zero 0 stack zero 0
+89:	
 
-acos$26:	; £temporary714 = x / £temporary713
-91:		fdiv
-93:	
+acos$24:	; call header integral zero 0 stack zero 0
+91:	
 
-acos$27:	; parameter £temporary714, offset 6
-94:		fstp qword [bp + 20]
-96:	
+acos$25:	; push 1
+92:		fld1
+94:	
 
-acos$28:	; call function noellipse-noellipse atan
-97:		mov word [bp + 14], acos$29
-98:		mov [bp + 16], bp
-99:		add bp, 14
-100:		jmp atan
-102:	
+acos$26:	; push float x
+95:		fld qword [bp + 6]
+97:	
 
-acos$29:	; post call
-104:	
+acos$27:	; push float x
+98:		fld qword [bp + 6]
+100:	
 
-acos$30:	; £temporary715 = return_value
+acos$28:	; £temporary722 = x * x
+101:		fmul
+103:	
+
+acos$29:	; £temporary723 = 1 - £temporary722
+104:		fsub
 106:	
 
-acos$31:	; return_value = £temporary715
-108:	
+acos$30:	; parameter £temporary723, offset 6
+107:		fstp qword [bp + 20]
+109:	
 
-acos$32:	; return
-109:		mov t399, [bp]
-110:		mov di, [bp + 4]
-111:		mov bp, [bp + 2]
-112:		jmp t399
-114:	
+acos$31:	; call function noellipse-noellipse sqrt
+110:		mov word [bp + 14], acos$32
+111:		mov [bp + 16], bp
+112:		add bp, 14
+113:		jmp sqrt
+115:	
 
-acos$33:	; errno = 6
-115:		mov word [errno], 6
+acos$32:	; post call
 117:	
 
-acos$34:	; push 0
-118:		fldz
-120:	
+acos$33:	; £temporary724 = return_value
+119:	
 
-acos$35:	; return_value = 0
+acos$34:	; push float x
+120:		fld qword [bp + 6]
 122:	
 
-acos$36:	; return
-123:		mov t400, [bp]
-124:		mov di, [bp + 4]
-125:		mov bp, [bp + 2]
-126:		jmp t400
+acos$35:	; £temporary725 = £temporary724 / x
+123:		fdiv
+125:	
+
+acos$36:	; parameter £temporary725, offset 6
+126:		fstp qword [bp + 20]
 128:	
 
-acos$37:	; function end acos
+acos$37:	; call function noellipse-noellipse atan
+129:		mov word [bp + 14], acos$38
+130:		mov [bp + 16], bp
+131:		add bp, 14
+132:		jmp atan
+134:	
+
+acos$38:	; post call
+136:	
+
+acos$39:	; £temporary726 = return_value
+138:	
+
+acos$40:	; return_value = £temporary726
+140:	
+
+acos$41:	; return
+141:		mov t387, [bp]
+142:		mov di, [bp + 4]
+143:		mov bp, [bp + 2]
+144:		jmp t387
+146:	
+
+acos$42:	; errno = 6
+147:		mov word [errno], 6
+149:	
+
+acos$43:	; push 0
+150:		fldz
+152:	
+
+acos$44:	; return_value = 0
+154:	
+
+acos$45:	; return
+155:		mov t388, [bp]
+156:		mov di, [bp + 4]
+157:		mov bp, [bp + 2]
+158:		jmp t388
+160:	
+
+acos$46:	; function end acos
 1:	
 
 atan:	; push float x
@@ -2677,11 +2861,11 @@ atan$4:	; push float x
 16:		fld qword [bp + 6]
 18:	
 
-atan$5:	; £temporary720 = -x
+atan$5:	; £temporary731 = -x
 19:		fchs
 21:	
 
-atan$6:	; parameter £temporary720, offset 6
+atan$6:	; parameter £temporary731, offset 6
 22:		fstp qword [bp + 20]
 24:	
 
@@ -2695,21 +2879,21 @@ atan$7:	; call function noellipse-noellipse atan
 atan$8:	; post call
 32:	
 
-atan$9:	; £temporary721 = return_value
+atan$9:	; £temporary732 = return_value
 34:	
 
-atan$10:	; £temporary722 = -£temporary721
+atan$10:	; £temporary733 = -£temporary732
 35:		fchs
 37:	
 
-atan$11:	; return_value = £temporary722
+atan$11:	; return_value = £temporary733
 39:	
 
 atan$12:	; return
-40:		mov t401, [bp]
+40:		mov t389, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t401
+43:		jmp t389
 45:	
 
 atan$13:	; push float x
@@ -2743,11 +2927,11 @@ atan$19:	; push float x
 67:		fld qword [bp + 6]
 69:	
 
-atan$20:	; £temporary724 = 1 / x
+atan$20:	; £temporary735 = 1 / x
 70:		fdiv
 72:	
 
-atan$21:	; parameter £temporary724, offset 6
+atan$21:	; parameter £temporary735, offset 6
 73:		fstp qword [bp + 28]
 75:	
 
@@ -2764,21 +2948,21 @@ atan$23:	; post call
 84:		fld qword [bp + 22]
 86:	
 
-atan$24:	; £temporary725 = return_value
+atan$24:	; £temporary736 = return_value
 88:	
 
-atan$25:	; £temporary726 = 1.57079632679489661923132165 - £temporary725
+atan$25:	; £temporary737 = 1.57079632679489661923132165 - £temporary736
 89:		fsub
 91:	
 
-atan$26:	; return_value = £temporary726
+atan$26:	; return_value = £temporary737
 93:	
 
 atan$27:	; return
-94:		mov t402, [bp]
+94:		mov t390, [bp]
 95:		mov di, [bp + 4]
 96:		mov bp, [bp + 2]
-97:		jmp t402
+97:		jmp t390
 99:	
 
 atan$28:	; push float x
@@ -2813,267 +2997,265 @@ atan$34:	; push 1
 123:	
 
 atan$35:	; call header integral zero 0 stack no zero 3
-124:		fstp qword [bp + 14]
-125:		fstp qword [bp + 22]
-126:		fstp qword [bp + 30]
-128:	
+124:		fstp qword [bp + 22]
+125:		fstp qword [bp + 30]
+127:	
 
 atan$36:	; push 1
-129:		fld1
-131:	
+128:		fld1
+130:	
 
 atan$37:	; push float x
-132:		fld qword [bp + 6]
-134:	
+131:		fld qword [bp + 6]
+133:	
 
 atan$38:	; push float x
-135:		fld qword [bp + 6]
-137:	
+134:		fld qword [bp + 6]
+136:	
 
-atan$39:	; £temporary728 = x * x
-138:		fmul
-140:	
+atan$39:	; £temporary739 = x * x
+137:		fmul
+139:	
 
-atan$40:	; £temporary729 = 1 + £temporary728
-141:		fadd
-143:	
+atan$40:	; £temporary740 = 1 + £temporary739
+140:		fadd
+142:	
 
-atan$41:	; parameter £temporary729, offset 6
-144:		fstp qword [bp + 52]
-146:	
+atan$41:	; parameter £temporary740, offset 6
+143:		fstp qword [bp + 44]
+145:	
 
 atan$42:	; call function noellipse-noellipse sqrt
-147:		mov word [bp + 46], atan$43
-148:		mov [bp + 48], bp
-149:		add bp, 46
-150:		jmp sqrt
-152:	
+146:		mov word [bp + 46], atan$43
+147:		mov [bp + 48], bp
+148:		add bp, 46
+149:		jmp sqrt
+151:	
 
 atan$43:	; post call
-153:		fstp qword [bp + 38]
-154:		fld qword [bp + 30]
-155:		fld qword [bp + 22]
-156:		fld qword [bp + 14]
-157:		fld qword [bp + 38]
+152:		fstp qword [bp + 38]
+153:		fld qword [bp + 30]
+154:		fld qword [bp + 22]
+155:		fld qword [bp + 38]
+157:	
+
+atan$44:	; £temporary741 = return_value
 159:	
 
-atan$44:	; £temporary730 = return_value
-161:	
+atan$45:	; £temporary742 = 1 + £temporary741
+160:		fadd
+162:	
 
-atan$45:	; £temporary731 = 1 + £temporary730
-162:		fadd
-164:	
+atan$46:	; £temporary743 = x / £temporary742
+163:		fdiv
+165:	
 
-atan$46:	; £temporary732 = x / £temporary731
-165:		fdiv
-167:	
-
-atan$47:	; parameter £temporary732, offset 6
-168:		fstp qword [bp + 28]
-170:	
+atan$47:	; parameter £temporary743, offset 6
+166:		fstp qword [bp + 28]
+168:	
 
 atan$48:	; call function noellipse-noellipse atan
-171:		mov word [bp + 22], atan$49
-172:		mov [bp + 24], bp
-173:		add bp, 22
-174:		jmp atan
-176:	
+169:		mov word [bp + 22], atan$49
+170:		mov [bp + 24], bp
+171:		add bp, 22
+172:		jmp atan
+174:	
 
 atan$49:	; post call
-177:		fstp qword [bp + 22]
-178:		fld qword [bp + 14]
-179:		fld qword [bp + 22]
+175:		fstp qword [bp + 22]
+176:		fld qword [bp + 14]
+177:		fld qword [bp + 22]
+179:	
+
+atan$50:	; £temporary744 = return_value
 181:	
 
-atan$50:	; £temporary733 = return_value
-183:	
+atan$51:	; £temporary745 = 2 * £temporary744
+182:		fmul
+184:	
 
-atan$51:	; £temporary734 = 2 * £temporary733
-184:		fmul
+atan$52:	; return_value = £temporary745
 186:	
 
-atan$52:	; return_value = £temporary734
-188:	
-
 atan$53:	; return
-189:		mov t403, [bp]
-190:		mov di, [bp + 4]
-191:		mov bp, [bp + 2]
-192:		jmp t403
-194:	
+187:		mov t391, [bp]
+188:		mov di, [bp + 4]
+189:		mov bp, [bp + 2]
+190:		jmp t391
+192:	
 
 atan$54:	; push 0
-195:		fldz
-197:	
+193:		fldz
+195:	
 
 atan$55:	; pop float sum
-198:		fstp qword [bp + 22]
-200:	
+196:		fstp qword [bp + 22]
+198:	
 
 atan$56:	; push 1
-201:		fld1
-203:	
+199:		fld1
+201:	
 
 atan$57:	; pop float sign
-204:		fstp qword [bp + 30]
-206:	
+202:		fstp qword [bp + 30]
+204:	
 
 atan$58:	; push 1
-207:		fld1
-209:	
+205:		fld1
+207:	
 
 atan$59:	; pop float denominator
-210:		fstp qword [bp + 38]
-212:	
+208:		fstp qword [bp + 38]
+210:	
 
 atan$60:	; push float x
-213:		fld qword [bp + 6]
-215:	
+211:		fld qword [bp + 6]
+213:	
 
 atan$61:	; pop float product
-216:		fstp qword [bp + 46]
-218:	
+214:		fstp qword [bp + 46]
+216:	
 
 atan$62:	; push float sign
-219:		fld qword [bp + 30]
-221:	
+217:		fld qword [bp + 30]
+219:	
 
 atan$63:	; push float product
-222:		fld qword [bp + 46]
-224:	
+220:		fld qword [bp + 46]
+222:	
 
-atan$64:	; £temporary735 = sign * product
-225:		fmul
-227:	
+atan$64:	; £temporary746 = sign * product
+223:		fmul
+225:	
 
 atan$65:	; push float denominator
-228:		fld qword [bp + 38]
-230:	
+226:		fld qword [bp + 38]
+228:	
 
-atan$66:	; £temporary736 = £temporary735 / denominator
-231:		fdiv
-233:	
+atan$66:	; £temporary747 = £temporary746 / denominator
+229:		fdiv
+231:	
 
 atan$67:	; pop float term
-234:		fstp qword [bp + 14]
-236:	
+232:		fstp qword [bp + 14]
+234:	
 
 atan$68:	; push float sum
-237:		fld qword [bp + 22]
-239:	
+235:		fld qword [bp + 22]
+237:	
 
 atan$69:	; push float term
-240:		fld qword [bp + 14]
-242:	
+238:		fld qword [bp + 14]
+240:	
 
-atan$70:	; £temporary737 = sum + term
-243:		fadd
-245:	
+atan$70:	; £temporary748 = sum + term
+241:		fadd
+243:	
 
 atan$71:	; pop float sum
-246:		fstp qword [bp + 22]
-248:	
+244:		fstp qword [bp + 22]
+246:	
 
 atan$72:	; push float sign
-249:		fld qword [bp + 30]
-251:	
+247:		fld qword [bp + 30]
+249:	
 
-atan$73:	; £temporary738 = -sign
-252:		fchs
-254:	
+atan$73:	; £temporary749 = -sign
+250:		fchs
+252:	
 
 atan$74:	; pop float sign
-255:		fstp qword [bp + 30]
-257:	
+253:		fstp qword [bp + 30]
+255:	
 
 atan$75:	; push float product
-258:		fld qword [bp + 46]
-260:	
+256:		fld qword [bp + 46]
+258:	
 
 atan$76:	; push float x
-261:		fld qword [bp + 6]
-263:	
+259:		fld qword [bp + 6]
+261:	
 
 atan$77:	; push float x
-264:		fld qword [bp + 6]
-266:	
+262:		fld qword [bp + 6]
+264:	
 
-atan$78:	; £temporary739 = x * x
-267:		fmul
-269:	
+atan$78:	; £temporary750 = x * x
+265:		fmul
+267:	
 
-atan$79:	; £temporary740 = product * £temporary739
-270:		fmul
-272:	
+atan$79:	; £temporary751 = product * £temporary750
+268:		fmul
+270:	
 
 atan$80:	; pop float product
-273:		fstp qword [bp + 46]
-275:	
+271:		fstp qword [bp + 46]
+273:	
 
 atan$81:	; push float denominator
-276:		fld qword [bp + 38]
-278:	
+274:		fld qword [bp + 38]
+276:	
 
 atan$82:	; push float 2
-279:		fld qword [float8$2#]
-281:	
+277:		fld qword [float8$2#]
+279:	
 
-atan$83:	; £temporary741 = denominator + 2
-282:		fadd
-284:	
+atan$83:	; £temporary752 = denominator + 2
+280:		fadd
+282:	
 
 atan$84:	; pop float denominator
-285:		fstp qword [bp + 38]
-287:	
+283:		fstp qword [bp + 38]
+285:	
 
 atan$85:	; call header integral zero 0 stack zero 0
-289:	
+287:	
 
 atan$86:	; push float term
-290:		fld qword [bp + 14]
-292:	
+288:		fld qword [bp + 14]
+290:	
 
 atan$87:	; parameter term, offset 6
-293:		fstp qword [bp + 60]
-295:	
+291:		fstp qword [bp + 60]
+293:	
 
 atan$88:	; call function noellipse-noellipse fabs
-296:		mov word [bp + 54], atan$89
-297:		mov [bp + 56], bp
-298:		add bp, 54
-299:		jmp fabs
-301:	
+294:		mov word [bp + 54], atan$89
+295:		mov [bp + 56], bp
+296:		add bp, 54
+297:		jmp fabs
+299:	
 
 atan$89:	; post call
+301:	
+
+atan$90:	; £temporary753 = return_value
 303:	
 
-atan$90:	; £temporary742 = return_value
-305:	
-
 atan$91:	; push float 0.000000001
-306:		fld qword [float8$0.000000001#]
-308:	
+304:		fld qword [float8$0.000000001#]
+306:	
 
-atan$92:	; if £temporary742 >= 0.000000001 goto 62
-309:		fcompp
-310:		fstsw ax
-311:		sahf
-312:		jbe atan$62
-314:	
+atan$92:	; if £temporary753 >= 0.000000001 goto 62
+307:		fcompp
+308:		fstsw ax
+309:		sahf
+310:		jbe atan$62
+312:	
 
 atan$93:	; push float sum
-315:		fld qword [bp + 22]
-317:	
+313:		fld qword [bp + 22]
+315:	
 
 atan$94:	; return_value = sum
-319:	
+317:	
 
 atan$95:	; return
-320:		mov t404, [bp]
-321:		mov di, [bp + 4]
-322:		mov bp, [bp + 2]
-323:		jmp t404
-325:	
+318:		mov t392, [bp]
+319:		mov di, [bp + 4]
+320:		mov bp, [bp + 2]
+321:		jmp t392
+323:	
 
 atan$96:	; function end atan
 1:	
@@ -3086,11 +3268,11 @@ atan2$1:	; push 0
 5:		fldz
 7:	
 
-atan2$2:	; if y == 0 goto 13
+atan2$2:	; if y <= 0 goto 13
 8:		fcompp
 9:		fstsw ax
 10:		sahf
-11:		je atan2$13
+11:		jae atan2$13
 13:	
 
 atan2$3:	; call header integral zero 0 stack zero 0
@@ -3104,11 +3286,11 @@ atan2$5:	; push float y
 19:		fld qword [bp + 14]
 21:	
 
-atan2$6:	; £temporary750 = x / y
+atan2$6:	; £temporary761 = x / y
 22:		fdiv
 24:	
 
-atan2$7:	; parameter £temporary750, offset 6
+atan2$7:	; parameter £temporary761, offset 6
 25:		fstp qword [bp + 28]
 27:	
 
@@ -3122,38 +3304,294 @@ atan2$8:	; call function noellipse-noellipse atan
 atan2$9:	; post call
 35:	
 
-atan2$10:	; £temporary751 = return_value
+atan2$10:	; £temporary762 = return_value
 37:	
 
-atan2$11:	; return_value = £temporary751
+atan2$11:	; return_value = £temporary762
 39:	
 
 atan2$12:	; return
-40:		mov t405, [bp]
+40:		mov t393, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t405
+43:		jmp t393
 45:	
 
-atan2$13:	; errno = 6
-46:		mov word [errno], 6
+atan2$13:	; push float x
+46:		fld qword [bp + 6]
 48:	
 
 atan2$14:	; push 0
 49:		fldz
 51:	
 
-atan2$15:	; return_value = 0
-53:	
+atan2$15:	; if x < 0 goto 31
+52:		fcompp
+53:		fstsw ax
+54:		sahf
+55:		ja atan2$31
+57:	
 
-atan2$16:	; return
-54:		mov t406, [bp]
-55:		mov di, [bp + 4]
-56:		mov bp, [bp + 2]
-57:		jmp t406
-59:	
+atan2$16:	; push float y
+58:		fld qword [bp + 14]
+60:	
 
-atan2$17:	; function end atan2
+atan2$17:	; push 0
+61:		fldz
+63:	
+
+atan2$18:	; if y >= 0 goto 31
+64:		fcompp
+65:		fstsw ax
+66:		sahf
+67:		jbe atan2$31
+69:	
+
+atan2$19:	; push float 3.1415926535897932384626433
+70:		fld qword [float8$3.1415926535897932384626433#]
+72:	
+
+atan2$20:	; call header integral zero 0 stack no zero 1
+73:		fstp qword [bp + 22]
+75:	
+
+atan2$21:	; push float x
+76:		fld qword [bp + 6]
+78:	
+
+atan2$22:	; push float y
+79:		fld qword [bp + 14]
+81:	
+
+atan2$23:	; £temporary766 = x / y
+82:		fdiv
+84:	
+
+atan2$24:	; parameter £temporary766, offset 6
+85:		fstp qword [bp + 36]
+87:	
+
+atan2$25:	; call function noellipse-noellipse atan
+88:		mov word [bp + 30], atan2$26
+89:		mov [bp + 32], bp
+90:		add bp, 30
+91:		jmp atan
+93:	
+
+atan2$26:	; post call
+94:		fstp qword [bp + 30]
+95:		fld qword [bp + 22]
+96:		fld qword [bp + 30]
+98:	
+
+atan2$27:	; £temporary767 = return_value
+100:	
+
+atan2$28:	; £temporary768 = 3.1415926535897932384626433 + £temporary767
+101:		fadd
+103:	
+
+atan2$29:	; return_value = £temporary768
+105:	
+
+atan2$30:	; return
+106:		mov t394, [bp]
+107:		mov di, [bp + 4]
+108:		mov bp, [bp + 2]
+109:		jmp t394
+111:	
+
+atan2$31:	; push float x
+112:		fld qword [bp + 6]
+114:	
+
+atan2$32:	; push 0
+115:		fldz
+117:	
+
+atan2$33:	; if x >= 0 goto 49
+118:		fcompp
+119:		fstsw ax
+120:		sahf
+121:		jbe atan2$49
+123:	
+
+atan2$34:	; push float y
+124:		fld qword [bp + 14]
+126:	
+
+atan2$35:	; push 0
+127:		fldz
+129:	
+
+atan2$36:	; if y >= 0 goto 49
+130:		fcompp
+131:		fstsw ax
+132:		sahf
+133:		jbe atan2$49
+135:	
+
+atan2$37:	; push float -3.1415926535897932384626433
+136:		fld qword [float8$minus3.1415926535897932384626433#]
+138:	
+
+atan2$38:	; call header integral zero 0 stack no zero 1
+139:		fstp qword [bp + 22]
+141:	
+
+atan2$39:	; push float x
+142:		fld qword [bp + 6]
+144:	
+
+atan2$40:	; push float y
+145:		fld qword [bp + 14]
+147:	
+
+atan2$41:	; £temporary772 = x / y
+148:		fdiv
+150:	
+
+atan2$42:	; parameter £temporary772, offset 6
+151:		fstp qword [bp + 36]
+153:	
+
+atan2$43:	; call function noellipse-noellipse atan
+154:		mov word [bp + 30], atan2$44
+155:		mov [bp + 32], bp
+156:		add bp, 30
+157:		jmp atan
+159:	
+
+atan2$44:	; post call
+160:		fstp qword [bp + 30]
+161:		fld qword [bp + 22]
+162:		fld qword [bp + 30]
+164:	
+
+atan2$45:	; £temporary773 = return_value
+166:	
+
+atan2$46:	; £temporary774 = -3.1415926535897932384626433 + £temporary773
+167:		fadd
+169:	
+
+atan2$47:	; return_value = £temporary774
+171:	
+
+atan2$48:	; return
+172:		mov t395, [bp]
+173:		mov di, [bp + 4]
+174:		mov bp, [bp + 2]
+175:		jmp t395
+177:	
+
+atan2$49:	; push float x
+178:		fld qword [bp + 6]
+180:	
+
+atan2$50:	; push 0
+181:		fldz
+183:	
+
+atan2$51:	; if x <= 0 goto 58
+184:		fcompp
+185:		fstsw ax
+186:		sahf
+187:		jae atan2$58
+189:	
+
+atan2$52:	; push float y
+190:		fld qword [bp + 14]
+192:	
+
+atan2$53:	; push 0
+193:		fldz
+195:	
+
+atan2$54:	; if y != 0 goto 58
+196:		fcompp
+197:		fstsw ax
+198:		sahf
+199:		jne atan2$58
+201:	
+
+atan2$55:	; push float 1.57079632679489661923132165
+202:		fld qword [float8$1.57079632679489661923132165#]
+204:	
+
+atan2$56:	; return_value = 1.57079632679489661923132165
+206:	
+
+atan2$57:	; return
+207:		mov t396, [bp]
+208:		mov di, [bp + 4]
+209:		mov bp, [bp + 2]
+210:		jmp t396
+212:	
+
+atan2$58:	; push float x
+213:		fld qword [bp + 6]
+215:	
+
+atan2$59:	; push 0
+216:		fldz
+218:	
+
+atan2$60:	; if x >= 0 goto 67
+219:		fcompp
+220:		fstsw ax
+221:		sahf
+222:		jbe atan2$67
+224:	
+
+atan2$61:	; push float y
+225:		fld qword [bp + 14]
+227:	
+
+atan2$62:	; push 0
+228:		fldz
+230:	
+
+atan2$63:	; if y != 0 goto 67
+231:		fcompp
+232:		fstsw ax
+233:		sahf
+234:		jne atan2$67
+236:	
+
+atan2$64:	; push float -1.57079632679489661923132165
+237:		fld qword [float8$minus1.57079632679489661923132165#]
+239:	
+
+atan2$65:	; return_value = -1.57079632679489661923132165
+241:	
+
+atan2$66:	; return
+242:		mov t397, [bp]
+243:		mov di, [bp + 4]
+244:		mov bp, [bp + 2]
+245:		jmp t397
+247:	
+
+atan2$67:	; errno = 6
+248:		mov word [errno], 6
+250:	
+
+atan2$68:	; push 0
+251:		fldz
+253:	
+
+atan2$69:	; return_value = 0
+255:	
+
+atan2$70:	; return
+256:		mov t398, [bp]
+257:		mov di, [bp + 4]
+258:		mov bp, [bp + 2]
+259:		jmp t398
+261:	
+
+atan2$71:	; function end atan2
 1:	
 
 sinh:	; call header integral zero 0 stack zero 0
@@ -3177,7 +3615,7 @@ sinh$3:	; call function noellipse-noellipse exp
 sinh$4:	; post call
 17:	
 
-sinh$5:	; £temporary753 = return_value
+sinh$5:	; £temporary784 = return_value
 19:	
 
 sinh$6:	; call header integral zero 0 stack no zero 1
@@ -3188,11 +3626,11 @@ sinh$7:	; push float x
 23:		fld qword [bp + 6]
 25:	
 
-sinh$8:	; £temporary754 = -x
+sinh$8:	; £temporary785 = -x
 26:		fchs
 28:	
 
-sinh$9:	; parameter £temporary754, offset 6
+sinh$9:	; parameter £temporary785, offset 6
 29:		fstp qword [bp + 28]
 31:	
 
@@ -3209,10 +3647,10 @@ sinh$11:	; post call
 40:		fld qword [bp + 22]
 42:	
 
-sinh$12:	; £temporary755 = return_value
+sinh$12:	; £temporary786 = return_value
 44:	
 
-sinh$13:	; £temporary756 = £temporary753 - £temporary755
+sinh$13:	; £temporary787 = £temporary784 - £temporary786
 45:		fsub
 47:	
 
@@ -3220,18 +3658,18 @@ sinh$14:	; push float 2
 48:		fld qword [float8$2#]
 50:	
 
-sinh$15:	; £temporary757 = £temporary756 / 2
+sinh$15:	; £temporary788 = £temporary787 / 2
 51:		fdiv
 53:	
 
-sinh$16:	; return_value = £temporary757
+sinh$16:	; return_value = £temporary788
 55:	
 
 sinh$17:	; return
-56:		mov t407, [bp]
+56:		mov t399, [bp]
 57:		mov di, [bp + 4]
 58:		mov bp, [bp + 2]
-59:		jmp t407
+59:		jmp t399
 61:	
 
 sinh$18:	; function end sinh
@@ -3258,7 +3696,7 @@ cosh$3:	; call function noellipse-noellipse exp
 cosh$4:	; post call
 17:	
 
-cosh$5:	; £temporary760 = return_value
+cosh$5:	; £temporary791 = return_value
 19:	
 
 cosh$6:	; call header integral zero 0 stack no zero 1
@@ -3269,11 +3707,11 @@ cosh$7:	; push float x
 23:		fld qword [bp + 6]
 25:	
 
-cosh$8:	; £temporary761 = -x
+cosh$8:	; £temporary792 = -x
 26:		fchs
 28:	
 
-cosh$9:	; parameter £temporary761, offset 6
+cosh$9:	; parameter £temporary792, offset 6
 29:		fstp qword [bp + 28]
 31:	
 
@@ -3290,10 +3728,10 @@ cosh$11:	; post call
 40:		fld qword [bp + 22]
 42:	
 
-cosh$12:	; £temporary762 = return_value
+cosh$12:	; £temporary793 = return_value
 44:	
 
-cosh$13:	; £temporary763 = £temporary760 + £temporary762
+cosh$13:	; £temporary794 = £temporary791 + £temporary793
 45:		fadd
 47:	
 
@@ -3301,18 +3739,18 @@ cosh$14:	; push float 2
 48:		fld qword [float8$2#]
 50:	
 
-cosh$15:	; £temporary764 = £temporary763 / 2
+cosh$15:	; £temporary795 = £temporary794 / 2
 51:		fdiv
 53:	
 
-cosh$16:	; return_value = £temporary764
+cosh$16:	; return_value = £temporary795
 55:	
 
 cosh$17:	; return
-56:		mov t408, [bp]
+56:		mov t400, [bp]
 57:		mov di, [bp + 4]
 58:		mov bp, [bp + 2]
-59:		jmp t408
+59:		jmp t400
 61:	
 
 cosh$18:	; function end cosh
@@ -3339,7 +3777,7 @@ tanh$3:	; call function noellipse-noellipse sinh
 tanh$4:	; post call
 17:	
 
-tanh$5:	; £temporary767 = return_value
+tanh$5:	; £temporary798 = return_value
 19:	
 
 tanh$6:	; call header integral zero 0 stack no zero 1
@@ -3367,21 +3805,21 @@ tanh$10:	; post call
 37:		fld qword [bp + 22]
 39:	
 
-tanh$11:	; £temporary768 = return_value
+tanh$11:	; £temporary799 = return_value
 41:	
 
-tanh$12:	; £temporary769 = £temporary767 / £temporary768
+tanh$12:	; £temporary800 = £temporary798 / £temporary799
 42:		fdiv
 44:	
 
-tanh$13:	; return_value = £temporary769
+tanh$13:	; return_value = £temporary800
 46:	
 
 tanh$14:	; return
-47:		mov t409, [bp]
+47:		mov t401, [bp]
 48:		mov di, [bp + 4]
 49:		mov bp, [bp + 2]
-50:		jmp t409
+50:		jmp t401
 52:	
 
 tanh$15:	; function end tanh
@@ -3409,11 +3847,11 @@ floor$4:	; push float x
 16:		fld qword [bp + 6]
 18:	
 
-floor$5:	; £temporary773 = -x
+floor$5:	; £temporary804 = -x
 19:		fchs
 21:	
 
-floor$6:	; parameter £temporary773, offset 6
+floor$6:	; parameter £temporary804, offset 6
 22:		fstp qword [bp + 20]
 24:	
 
@@ -3427,45 +3865,45 @@ floor$7:	; call function noellipse-noellipse ceil
 floor$8:	; post call
 32:	
 
-floor$9:	; £temporary774 = return_value
+floor$9:	; £temporary805 = return_value
 34:	
 
-floor$10:	; £temporary775 = -£temporary774
+floor$10:	; £temporary806 = -£temporary805
 35:		fchs
 37:	
 
-floor$11:	; return_value = £temporary775
+floor$11:	; return_value = £temporary806
 39:	
 
 floor$12:	; return
-40:		mov t410, [bp]
+40:		mov t402, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t410
+43:		jmp t402
 45:	
 
 floor$13:	; push float x
 46:		fld qword [bp + 6]
 48:	
 
-floor$14:	; £temporary776 = float_to_int x (Double -> Signed_Long_Int)
+floor$14:	; £temporary807 = float_to_int x (Double -> Signed_Long_Int)
 49:		fistp dword [container4bytes#]
-50:		mov t411, [container4bytes#]
+50:		mov t403, [container4bytes#]
 52:	
 
-floor$15:	; £temporary777 = int_to_float £temporary776 (Signed_Long_Int -> Double)
-53:		mov [container4bytes#], t411
+floor$15:	; £temporary808 = int_to_float £temporary807 (Signed_Long_Int -> Double)
+53:		mov [container4bytes#], t403
 54:		fild dword [container4bytes#]
 56:	
 
-floor$16:	; return_value = £temporary777
+floor$16:	; return_value = £temporary808
 58:	
 
 floor$17:	; return
-59:		mov t412, [bp]
+59:		mov t404, [bp]
 60:		mov di, [bp + 4]
 61:		mov bp, [bp + 2]
-62:		jmp t412
+62:		jmp t404
 64:	
 
 floor$18:	; function end floor
@@ -3493,11 +3931,11 @@ ceil$4:	; push float x
 16:		fld qword [bp + 6]
 18:	
 
-ceil$5:	; £temporary780 = -x
+ceil$5:	; £temporary811 = -x
 19:		fchs
 21:	
 
-ceil$6:	; parameter £temporary780, offset 6
+ceil$6:	; parameter £temporary811, offset 6
 22:		fstp qword [bp + 20]
 24:	
 
@@ -3511,21 +3949,21 @@ ceil$7:	; call function noellipse-noellipse floor
 ceil$8:	; post call
 32:	
 
-ceil$9:	; £temporary781 = return_value
+ceil$9:	; £temporary812 = return_value
 34:	
 
-ceil$10:	; £temporary782 = -£temporary781
+ceil$10:	; £temporary813 = -£temporary812
 35:		fchs
 37:	
 
-ceil$11:	; return_value = £temporary782
+ceil$11:	; return_value = £temporary813
 39:	
 
 ceil$12:	; return
-40:		mov t413, [bp]
+40:		mov t405, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t413
+43:		jmp t405
 45:	
 
 ceil$13:	; push float x
@@ -3536,28 +3974,28 @@ ceil$14:	; push float 0.999999999999
 49:		fld qword [float8$0.999999999999#]
 51:	
 
-ceil$15:	; £temporary783 = x + 0.999999999999
+ceil$15:	; £temporary814 = x + 0.999999999999
 52:		fadd
 54:	
 
-ceil$16:	; £temporary784 = float_to_int £temporary783 (Double -> Signed_Long_Int)
+ceil$16:	; £temporary815 = float_to_int £temporary814 (Double -> Signed_Long_Int)
 55:		fistp dword [container4bytes#]
-56:		mov t414, [container4bytes#]
+56:		mov t406, [container4bytes#]
 58:	
 
-ceil$17:	; £temporary785 = int_to_float £temporary784 (Signed_Long_Int -> Double)
-59:		mov [container4bytes#], t414
+ceil$17:	; £temporary816 = int_to_float £temporary815 (Signed_Long_Int -> Double)
+59:		mov [container4bytes#], t406
 60:		fild dword [container4bytes#]
 62:	
 
-ceil$18:	; return_value = £temporary785
+ceil$18:	; return_value = £temporary816
 64:	
 
 ceil$19:	; return
-65:		mov t415, [bp]
+65:		mov t407, [bp]
 66:		mov di, [bp + 4]
 67:		mov bp, [bp + 2]
-68:		jmp t415
+68:		jmp t407
 70:	
 
 ceil$20:	; function end ceil
@@ -3586,7 +4024,7 @@ round$4:	; push float 0.5
 17:		fld qword [float8$0.5#]
 19:	
 
-round$5:	; £temporary788 = x - 0.5
+round$5:	; £temporary819 = x - 0.5
 20:		fsub
 22:	
 
@@ -3605,28 +4043,28 @@ round$9:	; push float 0.5
 31:		fld qword [float8$0.5#]
 33:	
 
-round$10:	; £temporary789 = x + 0.5
+round$10:	; £temporary820 = x + 0.5
 34:		fadd
 36:	
 
-round$11:	; £temporary794 = float_to_int £temporary793 (Double -> Signed_Long_Int)
+round$11:	; £temporary825 = float_to_int £temporary824 (Double -> Signed_Long_Int)
 37:		fistp dword [container4bytes#]
-38:		mov t416, [container4bytes#]
+38:		mov t408, [container4bytes#]
 40:	
 
-round$12:	; £temporary795 = int_to_float £temporary794 (Signed_Long_Int -> Double)
-41:		mov [container4bytes#], t416
+round$12:	; £temporary826 = int_to_float £temporary825 (Signed_Long_Int -> Double)
+41:		mov [container4bytes#], t408
 42:		fild dword [container4bytes#]
 44:	
 
-round$13:	; return_value = £temporary795
+round$13:	; return_value = £temporary826
 46:	
 
 round$14:	; return
-47:		mov t417, [bp]
+47:		mov t409, [bp]
 48:		mov di, [bp + 4]
 49:		mov bp, [bp + 2]
-50:		jmp t417
+50:		jmp t409
 52:	
 
 round$15:	; function end round
@@ -3651,7 +4089,7 @@ fabs$3:	; push float x
 14:		fld qword [bp + 6]
 16:	
 
-fabs$4:	; £temporary797 = -x
+fabs$4:	; £temporary828 = -x
 17:		fchs
 19:	
 
@@ -3666,14 +4104,14 @@ fabs$7:	; push float x
 25:		fld qword [bp + 6]
 27:	
 
-fabs$8:	; return_value = £temporary801
+fabs$8:	; return_value = £temporary832
 29:	
 
 fabs$9:	; return
-30:		mov t418, [bp]
+30:		mov t410, [bp]
 31:		mov di, [bp + 4]
 32:		mov bp, [bp + 2]
-33:		jmp t418
+33:		jmp t410
 35:	
 
 fabs$10:	; function end fabs
