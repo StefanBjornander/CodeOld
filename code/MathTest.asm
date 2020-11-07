@@ -35,21 +35,21 @@
 
 section .data
 
-float8$minus6.28#:
-	; Initializer Double -6.28
-	dq -6.28
+float8$minus6.2831853071795864769252866#:
+	; Initializer Double -6.2831853071795864769252866
+	dq -6.2831853071795864769252866
 
 section .data
 
-float8$minus3.14#:
-	; Initializer Double -3.14
-	dq -3.14
+float8$minus3.1415926535897932384626433#:
+	; Initializer Double -3.1415926535897932384626433
+	dq -3.1415926535897932384626433
 
 section .data
 
-float8$minus1.57#:
-	; Initializer Double -1.57
-	dq -1.57
+float8$minus1.57079632679489661923132165#:
+	; Initializer Double -1.57079632679489661923132165
+	dq -1.57079632679489661923132165
 
 section .data
 
@@ -59,21 +59,21 @@ float8$minus1#:
 
 section .data
 
-float8$1.57#:
-	; Initializer Double 1.57
-	dq 1.57
+float8$1.57079632679489661923132165#:
+	; Initializer Double 1.57079632679489661923132165
+	dq 1.57079632679489661923132165
 
 section .data
 
-float8$3.14#:
-	; Initializer Double 3.14
-	dq 3.14
+float8$3.1415926535897932384626433#:
+	; Initializer Double 3.1415926535897932384626433
+	dq 3.1415926535897932384626433
 
 section .data
 
-float8$6.28#:
-	; Initializer Double 6.28
-	dq 6.28
+float8$6.2831853071795864769252866#:
+	; Initializer Double 6.2831853071795864769252866
+	dq 6.2831853071795864769252866
 
 section .text
 
@@ -81,11 +81,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1x$1:
-	; PushFloat -6.28
-	fld qword [float8$minus6.28#]
+	; PushFloat -6.2831853071795864769252866
+	fld qword [float8$minus6.2831853071795864769252866#]
 
  math_test_1x$2:
-	; Parameter double -6.28 48
+	; Parameter double -6.2831853071795864769252866 48
 	fstp qword [rbp + 48]
 
  math_test_1x$3:
@@ -102,11 +102,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1x$6:
-	; PushFloat -3.14
-	fld qword [float8$minus3.14#]
+	; PushFloat -3.1415926535897932384626433
+	fld qword [float8$minus3.1415926535897932384626433#]
 
  math_test_1x$7:
-	; Parameter double -3.14 48
+	; Parameter double -3.1415926535897932384626433 48
 	fstp qword [rbp + 48]
 
  math_test_1x$8:
@@ -123,11 +123,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1x$11:
-	; PushFloat -1.57
-	fld qword [float8$minus1.57#]
+	; PushFloat -1.57079632679489661923132165
+	fld qword [float8$minus1.57079632679489661923132165#]
 
  math_test_1x$12:
-	; Parameter double -1.57 48
+	; Parameter double -1.57079632679489661923132165 48
 	fstp qword [rbp + 48]
 
  math_test_1x$13:
@@ -207,11 +207,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1x$31:
-	; PushFloat 1.57
-	fld qword [float8$1.57#]
+	; PushFloat 1.57079632679489661923132165
+	fld qword [float8$1.57079632679489661923132165#]
 
  math_test_1x$32:
-	; Parameter double 1.57 48
+	; Parameter double 1.57079632679489661923132165 48
 	fstp qword [rbp + 48]
 
  math_test_1x$33:
@@ -228,11 +228,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1x$36:
-	; PushFloat 3.14
-	fld qword [float8$3.14#]
+	; PushFloat 3.1415926535897932384626433
+	fld qword [float8$3.1415926535897932384626433#]
 
  math_test_1x$37:
-	; Parameter double 3.14 48
+	; Parameter double 3.1415926535897932384626433 48
 	fstp qword [rbp + 48]
 
  math_test_1x$38:
@@ -249,11 +249,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1x$41:
-	; PushFloat 6.28
-	fld qword [float8$6.28#]
+	; PushFloat 6.2831853071795864769252866
+	fld qword [float8$6.2831853071795864769252866#]
 
  math_test_1x$42:
-	; Parameter double 6.28 48
+	; Parameter double 6.2831853071795864769252866 48
 	fstp qword [rbp + 48]
 
  math_test_1x$43:
@@ -773,11 +773,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$56:
-	; PushFloat 6.28
-	fld qword [float8$6.28#]
+	; PushFloat 6.2831853071795864769252866
+	fld qword [float8$6.2831853071795864769252866#]
 
  main_math$57:
-	; Parameter double 6.28 48
+	; Parameter double 6.2831853071795864769252866 48
 	fstp qword [rbp + 48]
 
  main_math$58:
@@ -794,11 +794,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$61:
-	; PushFloat 3.14
-	fld qword [float8$3.14#]
+	; PushFloat 3.1415926535897932384626433
+	fld qword [float8$3.1415926535897932384626433#]
 
  main_math$62:
-	; Parameter double 3.14 48
+	; Parameter double 3.1415926535897932384626433 48
 	fstp qword [rbp + 48]
 
  main_math$63:
@@ -815,11 +815,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$66:
-	; PushFloat 1.57
-	fld qword [float8$1.57#]
+	; PushFloat 1.57079632679489661923132165
+	fld qword [float8$1.57079632679489661923132165#]
 
  main_math$67:
-	; Parameter double 1.57 48
+	; Parameter double 1.57079632679489661923132165 48
 	fstp qword [rbp + 48]
 
  main_math$68:
@@ -836,11 +836,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$71:
-	; PushFloat -1.57
-	fld qword [float8$minus1.57#]
+	; PushFloat -1.57079632679489661923132165
+	fld qword [float8$minus1.57079632679489661923132165#]
 
  main_math$72:
-	; Parameter double -1.57 48
+	; Parameter double -1.57079632679489661923132165 48
 	fstp qword [rbp + 48]
 
  main_math$73:
@@ -857,11 +857,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$76:
-	; PushFloat -3.14
-	fld qword [float8$minus3.14#]
+	; PushFloat -3.1415926535897932384626433
+	fld qword [float8$minus3.1415926535897932384626433#]
 
  main_math$77:
-	; Parameter double -3.14 48
+	; Parameter double -3.1415926535897932384626433 48
 	fstp qword [rbp + 48]
 
  main_math$78:
@@ -878,11 +878,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main_math$81:
-	; PushFloat -6.28
-	fld qword [float8$minus6.28#]
+	; PushFloat -6.2831853071795864769252866
+	fld qword [float8$minus6.2831853071795864769252866#]
 
  main_math$82:
-	; Parameter double -6.28 48
+	; Parameter double -6.2831853071795864769252866 48
 	fstp qword [rbp + 48]
 
  main_math$83:

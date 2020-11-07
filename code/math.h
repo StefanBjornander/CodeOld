@@ -1,11 +1,11 @@
 #ifndef __MATH_H__
 #define __MATH_H__
 
-#define PI 3.14
-#define E  2.71
+//#define PI 3.14
+//#define E  2.71
 
-//#define PI 3.1415926535897932384626433
-//#define E  2.7182818284590452353602874
+#define PI 3.1415926535897932384626433
+#define E  2.7182818284590452353602874
 
 extern double exp(double x);
 extern double log(double x);

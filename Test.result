@@ -13056,15 +13056,15 @@ new  <section .data>
 
 199:
 old  <section .text>
-new  <float8$2.71#:>
+new  <float8$2.7182818284590452353602874#:>
 
 200:
 old  <>
-new  <	; Initializer Double 2.71>
+new  <	; Initializer Double 2.7182818284590452353602874>
 
 201:
 old  < log:>
-new  <	dq 2.71>
+new  <	dq 2.7182818284590452353602874>
 
 202:
 old  <	; PushFloat x>
@@ -13076,15 +13076,15 @@ new  <section .data>
 
 205:
 old  < log$1:>
-new  <float8$0.368#:>
+new  <float8$0.3678794411714423215955237798#:>
 
 206:
 old  <	; PushFloat 0>
-new  <	; Initializer Double 0.368>
+new  <	; Initializer Double 0.3678794411714423215955237798>
 
 207:
 old  <	fldz>
-new  <	dq 0.368>
+new  <	dq 0.3678794411714423215955237798>
 
 209:
 old  < log$2:>
@@ -13328,11 +13328,11 @@ new  < log$11:>
 
 271:
 old  <	; Goto 7>
-new  <	; PushFloat 2.71>
+new  <	; PushFloat 2.7182818284590452353602874>
 
 272:
 old  <	jmp log$7>
-new  <	fld qword [float8$2.71#]>
+new  <	fld qword [float8$2.7182818284590452353602874#]>
 
 274:
 old  < log$16:>
@@ -13340,7 +13340,7 @@ new  < log$12:>
 
 275:
 old  <	; PushFloat x>
-new  <	; SignedDivide Â£temporary401 x 2.71>
+new  <	; SignedDivide Â£temporary401 x 2.7182818284590452353602874>
 
 276:
 old  <	fld qword [rbp + 24]>
@@ -13412,11 +13412,11 @@ new  < log$17:>
 
 295:
 old  <	fld qword [float8$0.3678794411714423215955237798#]>
-new  <	; PushFloat 0.368>
+new  <	; PushFloat 0.3678794411714423215955237798>
 
 296:
 old  <>
-new  <	fld qword [float8$0.368#]>
+new  <	fld qword [float8$0.3678794411714423215955237798#]>
 
 297:
 old  < log$21:>
@@ -13428,7 +13428,7 @@ new  < log$18:>
 
 299:
 old  <	fcompp>
-new  <	; SignedGreaterThanEqual 28 x 0.368>
+new  <	; SignedGreaterThanEqual 28 x 0.3678794411714423215955237798>
 
 300:
 old  <	fstsw ax>
@@ -13472,11 +13472,11 @@ new  < log$20:>
 
 310:
 old  <	fld qword [float8$2.7182818284590452353602874#]>
-new  <	; PushFloat 0.368>
+new  <	; PushFloat 0.3678794411714423215955237798>
 
 311:
 old  <>
-new  <	fld qword [float8$0.368#]>
+new  <	fld qword [float8$0.3678794411714423215955237798#]>
 
 312:
 old  < log$24:>
@@ -13488,7 +13488,7 @@ new  < log$21:>
 
 314:
 old  <	fmul>
-new  <	; SignedGreaterThanEqual 28 x 0.368>
+new  <	; SignedGreaterThanEqual 28 x 0.3678794411714423215955237798>
 
 315:
 old  <>
@@ -13524,11 +13524,11 @@ new  < log$23:>
 
 325:
 old  <	; Goto 19>
-new  <	; PushFloat 2.71>
+new  <	; PushFloat 2.7182818284590452353602874>
 
 326:
 old  <	jmp log$19>
-new  <	fld qword [float8$2.71#]>
+new  <	fld qword [float8$2.7182818284590452353602874#]>
 
 328:
 old  < log$28:>
@@ -13536,7 +13536,7 @@ new  < log$24:>
 
 329:
 old  <	; PushFloat 1>
-new  <	; SignedMultiply Â£temporary405 x 2.71>
+new  <	; SignedMultiply Â£temporary405 x 2.7182818284590452353602874>
 
 330:
 old  <	fld1>
@@ -19000,15 +19000,15 @@ new  <>
 
 1802:
 old  <	; PushFloat power>
-new  <float8$6.28#:>
+new  <float8$6.2831853071795864769252866#:>
 
 1803:
 old  <	fld qword [rbp + 64]>
-new  <	; Initializer Double 6.28>
+new  <	; Initializer Double 6.2831853071795864769252866>
 
 1804:
 old  <>
-new  <	dq 6.28>
+new  <	dq 6.2831853071795864769252866>
 
 1805:
 old  < sin$29:>
@@ -19136,11 +19136,11 @@ new  < sin$6:>
 
 1839:
 old  <	fld qword [rbp + 56]>
-new  <	; PushFloat 6.28>
+new  <	; PushFloat 6.2831853071795864769252866>
 
 1840:
 old  <>
-new  <	fld qword [float8$6.28#]>
+new  <	fld qword [float8$6.2831853071795864769252866#]>
 
 1841:
 old  < sin$38:>
@@ -19152,7 +19152,7 @@ new  < sin$7:>
 
 1843:
 old  <	fld qword [float8$minus1#]>
-new  <	; SignedLessThanEqual 17 Â£temporary519 6.28>
+new  <	; SignedLessThanEqual 17 Â£temporary519 6.2831853071795864769252866>
 
 1844:
 old  <>
@@ -19220,11 +19220,11 @@ new  < sin$11:>
 
 1861:
 old  < sin$43:>
-new  <	; PushFloat 6.28>
+new  <	; PushFloat 6.2831853071795864769252866>
 
 1862:
 old  <	; PushFloat x>
-new  <	fld qword [float8$6.28#]>
+new  <	fld qword [float8$6.2831853071795864769252866#]>
 
 1863:
 old  <	fld qword [rbp + 24]>
@@ -19236,7 +19236,7 @@ new  < sin$12:>
 
 1865:
 old  < sin$44:>
-new  <	; Parameter double 6.28 64>
+new  <	; Parameter double 6.2831853071795864769252866 64>
 
 1866:
 old  <	; SignedMultiply Â£temporary522 x x>
@@ -20188,11 +20188,11 @@ new  < cos$6:>
 
 2132:
 old  <	fld qword [rbp + 56]>
-new  <	; PushFloat 6.28>
+new  <	; PushFloat 6.2831853071795864769252866>
 
 2133:
 old  <>
-new  <	fld qword [float8$6.28#]>
+new  <	fld qword [float8$6.2831853071795864769252866#]>
 
 2134:
 old  < cos$38:>
@@ -20204,7 +20204,7 @@ new  < cos$7:>
 
 2136:
 old  <	fld qword [float8$minus1#]>
-new  <	; SignedLessThanEqual 17 Â£temporary538 6.28>
+new  <	; SignedLessThanEqual 17 Â£temporary538 6.2831853071795864769252866>
 
 2137:
 old  <>
@@ -20272,11 +20272,11 @@ new  < cos$11:>
 
 2154:
 old  < cos$43:>
-new  <	; PushFloat 6.28>
+new  <	; PushFloat 6.2831853071795864769252866>
 
 2155:
 old  <	; PushFloat x>
-new  <	fld qword [float8$6.28#]>
+new  <	fld qword [float8$6.2831853071795864769252866#]>
 
 2156:
 old  <	fld qword [rbp + 24]>
@@ -20288,7 +20288,7 @@ new  < cos$12:>
 
 2158:
 old  < cos$44:>
-new  <	; Parameter double 6.28 64>
+new  <	; Parameter double 6.2831853071795864769252866 64>
 
 2159:
 old  <	; SignedMultiply Â£temporary541 x x>
@@ -21572,15 +21572,15 @@ new  <>
 
 2502:
 old  <	fstp qword [rbp + 64]>
-new  <float8$1.57#:>
+new  <float8$1.57079632679489661923132165#:>
 
 2503:
 old  <>
-new  <	; Initializer Double 1.57>
+new  <	; Initializer Double 1.57079632679489661923132165>
 
 2504:
 old  < asin$27:>
-new  <	dq 1.57>
+new  <	dq 1.57079632679489661923132165>
 
 2505:
 old  <	; Call sqrt 32 0>
@@ -21660,11 +21660,11 @@ new  < asin$3:>
 
 2524:
 old  < asin$31:>
-new  <	; PushFloat 1.57>
+new  <	; PushFloat 1.57079632679489661923132165>
 
 2525:
 old  <	; Parameter double Â£temporary566 56>
-new  <	fld qword [float8$1.57#]>
+new  <	fld qword [float8$1.57079632679489661923132165#]>
 
 2526:
 old  <	fstp qword [rbp + 56]>
@@ -21676,7 +21676,7 @@ new  < asin$4:>
 
 2528:
 old  < asin$32:>
-new  <	; Return 1.57>
+new  <	; Return 1.57079632679489661923132165>
 
 2529:
 old  <	; Call atan 32 0>
@@ -22352,15 +22352,15 @@ new  <>
 
 2702:
 old  <	; Return Â£temporary578>
-new  <float8$3.14#:>
+new  <float8$3.1415926535897932384626433#:>
 
 2703:
 old  <	mov rax, [rbp]>
-new  <	; Initializer Double 3.14>
+new  <	; Initializer Double 3.1415926535897932384626433>
 
 2704:
 old  <	mov rdi, [rbp + 16]>
-new  <	dq 3.14>
+new  <	dq 3.1415926535897932384626433>
 
 2705:
 old  <	mov rbp, [rbp + 8]>
@@ -22416,11 +22416,11 @@ new  < acos$3:>
 
 2724:
 old  <	; FunctionEnd acos>
-new  <	; PushFloat 1.57>
+new  <	; PushFloat 1.57079632679489661923132165>
 
 2725:
 old  <>
-new  <	fld qword [float8$1.57#]>
+new  <	fld qword [float8$1.57079632679489661923132165#]>
 
 2726:
 old  <section .data>
@@ -22432,7 +22432,7 @@ new  < acos$4:>
 
 2728:
 old  <float8$0.5#:>
-new  <	; Return 1.57>
+new  <	; Return 1.57079632679489661923132165>
 
 2729:
 old  <	; Initializer Double 0.5>
@@ -22476,11 +22476,11 @@ new  < acos$8:>
 
 2750:
 old  <	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0>
-new  <	; PushFloat 3.14>
+new  <	; PushFloat 3.1415926535897932384626433>
 
 2751:
 old  <>
-new  <	fld qword [float8$3.14#]>
+new  <	fld qword [float8$3.1415926535897932384626433#]>
 
 2752:
 old  < atan$4:>
@@ -22620,7 +22620,7 @@ new  < acos$16:>
 
 2786:
 old  <	jmp rax>
-new  <	; BinarySubtract Â£temporary581 3.14 Â£temporary580>
+new  <	; BinarySubtract Â£temporary581 3.1415926535897932384626433 Â£temporary580>
 
 2787:
 old  <>
@@ -23364,11 +23364,11 @@ new  < atan$15:>
 
 2982:
 old  <	fld1>
-new  <	; PushFloat 1.57>
+new  <	; PushFloat 1.57079632679489661923132165>
 
 2983:
 old  <>
-new  <	fld qword [float8$1.57#]>
+new  <	fld qword [float8$1.57079632679489661923132165#]>
 
 2984:
 old  < atan$54:>
@@ -23520,7 +23520,7 @@ new  < atan$24:>
 
 3022:
 old  <	fdiv>
-new  <	; BinarySubtract Â£temporary598 1.57 Â£temporary597>
+new  <	; BinarySubtract Â£temporary598 1.57079632679489661923132165 Â£temporary597>
 
 3023:
 old  <>
@@ -24616,15 +24616,15 @@ new  <>
 
 3326:
 old  <	; GetReturnValue Â£temporary623>
-new  <float8$minus3.14#:>
+new  <float8$minus3.1415926535897932384626433#:>
 
 3327:
 old  <>
-new  <	; Initializer Double -3.14>
+new  <	; Initializer Double -3.1415926535897932384626433>
 
 3328:
 old  < cosh$6:>
-new  <	dq -3.14>
+new  <	dq -3.1415926535897932384626433>
 
 3329:
 old  <	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1>
@@ -24636,15 +24636,15 @@ new  <section .data>
 
 3332:
 old  < cosh$7:>
-new  <float8$minus1.57#:>
+new  <float8$minus1.57079632679489661923132165#:>
 
 3333:
 old  <	; PushFloat x>
-new  <	; Initializer Double -1.57>
+new  <	; Initializer Double -1.57079632679489661923132165>
 
 3334:
 old  <	fld qword [rbp + 24]>
-new  <	dq -1.57>
+new  <	dq -1.57079632679489661923132165>
 
 3336:
 old  < cosh$8:>
@@ -24972,11 +24972,11 @@ new  < atan2$18:>
 
 3423:
 old  <	mov [rbp + 48], rbp>
-new  <	; PushFloat 3.14>
+new  <	; PushFloat 3.1415926535897932384626433>
 
 3424:
 old  <	add rbp, 40>
-new  <	fld qword [float8$3.14#]>
+new  <	fld qword [float8$3.1415926535897932384626433#]>
 
 3425:
 old  <	jmp cosh>
@@ -25132,7 +25132,7 @@ new  < atan2$27:>
 
 3463:
 old  <	fstsw ax>
-new  <	; BinaryAdd Â£temporary629 3.14 Â£temporary628>
+new  <	; BinaryAdd Â£temporary629 3.1415926535897932384626433 Â£temporary628>
 
 3464:
 old  <	sahf>
@@ -25292,11 +25292,11 @@ new  < atan2$35:>
 
 3504:
 old  <	jmp rax>
-new  <	; PushFloat -3.14>
+new  <	; PushFloat -3.1415926535897932384626433>
 
 3505:
 old  <>
-new  <	fld qword [float8$minus3.14#]>
+new  <	fld qword [float8$minus3.1415926535897932384626433#]>
 
 3506:
 old  < floor$12:>
@@ -25444,7 +25444,7 @@ new  < atan2$44:>
 
 3544:
 old  <	fldz>
-new  <	; BinaryAdd Â£temporary635 -3.14 Â£temporary634>
+new  <	; BinaryAdd Â£temporary635 -3.1415926535897932384626433 Â£temporary634>
 
 3545:
 old  <>
@@ -25608,11 +25608,11 @@ new  < atan2$52:>
 
 3585:
 old  < ceil$11:>
-new  <	; PushFloat 1.57>
+new  <	; PushFloat 1.57079632679489661923132165>
 
 3586:
 old  <	; Return Â£temporary645>
-new  <	fld qword [float8$1.57#]>
+new  <	fld qword [float8$1.57079632679489661923132165#]>
 
 3587:
 old  <	mov rax, [rbp]>
@@ -25624,7 +25624,7 @@ new  < atan2$53:>
 
 3589:
 old  <	mov rbp, [rbp + 8]>
-new  <	; Return 1.57>
+new  <	; Return 1.57079632679489661923132165>
 
 3590:
 old  <	jmp rax>
@@ -25768,11 +25768,11 @@ new  < atan2$60:>
 
 3626:
 old  < round:>
-new  <	; PushFloat -1.57>
+new  <	; PushFloat -1.57079632679489661923132165>
 
 3627:
 old  <	; PushFloat x>
-new  <	fld qword [float8$minus1.57#]>
+new  <	fld qword [float8$minus1.57079632679489661923132165#]>
 
 3628:
 old  <	fld qword [rbp + 24]>
@@ -25784,7 +25784,7 @@ new  < atan2$61:>
 
 3630:
 old  < round$1:>
-new  <	; Return -1.57>
+new  <	; Return -1.57079632679489661923132165>
 
 3631:
 old  <	; PushFloat 0>
@@ -98104,15 +98104,15 @@ new  <>
 
 38:
 old  <>
-new  <float8$minus6.28#:>
+new  <float8$minus6.2831853071795864769252866#:>
 
 39:
 old  <float8$minus6.2831853071795864769252866#:>
-new  <	; Initializer Double -6.28>
+new  <	; Initializer Double -6.2831853071795864769252866>
 
 40:
 old  <	; Initializer Double -6.2831853071795864769252866>
-new  <	dq -6.28>
+new  <	dq -6.2831853071795864769252866>
 
 41:
 old  <	dq -6.2831853071795864769252866>
@@ -98128,15 +98128,15 @@ new  <>
 
 44:
 old  <>
-new  <float8$minus3.14#:>
+new  <float8$minus3.1415926535897932384626433#:>
 
 45:
 old  <float8$minus3.1415926535897932384626433#:>
-new  <	; Initializer Double -3.14>
+new  <	; Initializer Double -3.1415926535897932384626433>
 
 46:
 old  <	; Initializer Double -3.1415926535897932384626433>
-new  <	dq -3.14>
+new  <	dq -3.1415926535897932384626433>
 
 47:
 old  <	dq -3.1415926535897932384626433>
@@ -98152,15 +98152,15 @@ new  <>
 
 50:
 old  <>
-new  <float8$minus1.57#:>
+new  <float8$minus1.57079632679489661923132165#:>
 
 51:
 old  <float8$minus1.57079632679489661923132165#:>
-new  <	; Initializer Double -1.57>
+new  <	; Initializer Double -1.57079632679489661923132165>
 
 52:
 old  <	; Initializer Double -1.57079632679489661923132165>
-new  <	dq -1.57>
+new  <	dq -1.57079632679489661923132165>
 
 53:
 old  <	dq -1.57079632679489661923132165>
@@ -98200,15 +98200,15 @@ new  <>
 
 62:
 old  <>
-new  <float8$1.57#:>
+new  <float8$1.57079632679489661923132165#:>
 
 63:
 old  <float8$1.57079632679489661923132165#:>
-new  <	; Initializer Double 1.57>
+new  <	; Initializer Double 1.57079632679489661923132165>
 
 64:
 old  <	; Initializer Double 1.57079632679489661923132165>
-new  <	dq 1.57>
+new  <	dq 1.57079632679489661923132165>
 
 65:
 old  <	dq 1.57079632679489661923132165>
@@ -98224,15 +98224,15 @@ new  <>
 
 68:
 old  <>
-new  <float8$3.14#:>
+new  <float8$3.1415926535897932384626433#:>
 
 69:
 old  <float8$3.1415926535897932384626433#:>
-new  <	; Initializer Double 3.14>
+new  <	; Initializer Double 3.1415926535897932384626433>
 
 70:
 old  <	; Initializer Double 3.1415926535897932384626433>
-new  <	dq 3.14>
+new  <	dq 3.1415926535897932384626433>
 
 71:
 old  <	dq 3.1415926535897932384626433>
@@ -98248,15 +98248,15 @@ new  <>
 
 74:
 old  <>
-new  <float8$6.28#:>
+new  <float8$6.2831853071795864769252866#:>
 
 75:
 old  <float8$6.2831853071795864769252866#:>
-new  <	; Initializer Double 6.28>
+new  <	; Initializer Double 6.2831853071795864769252866>
 
 76:
 old  <	; Initializer Double 6.2831853071795864769252866>
-new  <	dq 6.28>
+new  <	dq 6.2831853071795864769252866>
 
 77:
 old  <	dq 6.2831853071795864769252866>
@@ -98288,11 +98288,11 @@ new  < math_test_1x$1:>
 
 84:
 old  < math_test_1x$1:>
-new  <	; PushFloat -6.28>
+new  <	; PushFloat -6.2831853071795864769252866>
 
 85:
 old  <	; PushFloat -6.2831853071795864769252866>
-new  <	fld qword [float8$minus6.28#]>
+new  <	fld qword [float8$minus6.2831853071795864769252866#]>
 
 86:
 old  <	fld qword [float8$minus6.2831853071795864769252866#]>
@@ -98304,7 +98304,7 @@ new  < math_test_1x$2:>
 
 88:
 old  < math_test_1x$2:>
-new  <	; Parameter double -6.28 48>
+new  <	; Parameter double -6.2831853071795864769252866 48>
 
 89:
 old  <	; Parameter double -6.2831853071795864769252866 48>
@@ -98372,11 +98372,11 @@ new  < math_test_1x$6:>
 
 105:
 old  < math_test_1x$6:>
-new  <	; PushFloat -3.14>
+new  <	; PushFloat -3.1415926535897932384626433>
 
 106:
 old  <	; PushFloat -3.1415926535897932384626433>
-new  <	fld qword [float8$minus3.14#]>
+new  <	fld qword [float8$minus3.1415926535897932384626433#]>
 
 107:
 old  <	fld qword [float8$minus3.1415926535897932384626433#]>
@@ -98388,7 +98388,7 @@ new  < math_test_1x$7:>
 
 109:
 old  < math_test_1x$7:>
-new  <	; Parameter double -3.14 48>
+new  <	; Parameter double -3.1415926535897932384626433 48>
 
 110:
 old  <	; Parameter double -3.1415926535897932384626433 48>
@@ -98456,11 +98456,11 @@ new  < math_test_1x$11:>
 
 126:
 old  < math_test_1x$11:>
-new  <	; PushFloat -1.57>
+new  <	; PushFloat -1.57079632679489661923132165>
 
 127:
 old  <	; PushFloat -1.57079632679489661923132165>
-new  <	fld qword [float8$minus1.57#]>
+new  <	fld qword [float8$minus1.57079632679489661923132165#]>
 
 128:
 old  <	fld qword [float8$minus1.57079632679489661923132165#]>
@@ -98472,7 +98472,7 @@ new  < math_test_1x$12:>
 
 130:
 old  < math_test_1x$12:>
-new  <	; Parameter double -1.57 48>
+new  <	; Parameter double -1.57079632679489661923132165 48>
 
 131:
 old  <	; Parameter double -1.57079632679489661923132165 48>
@@ -98792,11 +98792,11 @@ new  < math_test_1x$31:>
 
 210:
 old  < math_test_1x$31:>
-new  <	; PushFloat 1.57>
+new  <	; PushFloat 1.57079632679489661923132165>
 
 211:
 old  <	; PushFloat 1.57079632679489661923132165>
-new  <	fld qword [float8$1.57#]>
+new  <	fld qword [float8$1.57079632679489661923132165#]>
 
 212:
 old  <	fld qword [float8$1.57079632679489661923132165#]>
@@ -98808,7 +98808,7 @@ new  < math_test_1x$32:>
 
 214:
 old  < math_test_1x$32:>
-new  <	; Parameter double 1.57 48>
+new  <	; Parameter double 1.57079632679489661923132165 48>
 
 215:
 old  <	; Parameter double 1.57079632679489661923132165 48>
@@ -98876,11 +98876,11 @@ new  < math_test_1x$36:>
 
 231:
 old  < math_test_1x$36:>
-new  <	; PushFloat 3.14>
+new  <	; PushFloat 3.1415926535897932384626433>
 
 232:
 old  <	; PushFloat 3.1415926535897932384626433>
-new  <	fld qword [float8$3.14#]>
+new  <	fld qword [float8$3.1415926535897932384626433#]>
 
 233:
 old  <	fld qword [float8$3.1415926535897932384626433#]>
@@ -98892,7 +98892,7 @@ new  < math_test_1x$37:>
 
 235:
 old  < math_test_1x$37:>
-new  <	; Parameter double 3.14 48>
+new  <	; Parameter double 3.1415926535897932384626433 48>
 
 236:
 old  <	; Parameter double 3.1415926535897932384626433 48>
@@ -98960,11 +98960,11 @@ new  < math_test_1x$41:>
 
 252:
 old  < math_test_1x$41:>
-new  <	; PushFloat 6.28>
+new  <	; PushFloat 6.2831853071795864769252866>
 
 253:
 old  <	; PushFloat 6.2831853071795864769252866>
-new  <	fld qword [float8$6.28#]>
+new  <	fld qword [float8$6.2831853071795864769252866#]>
 
 254:
 old  <	fld qword [float8$6.2831853071795864769252866#]>
@@ -98976,7 +98976,7 @@ new  < math_test_1x$42:>
 
 256:
 old  < math_test_1x$42:>
-new  <	; Parameter double 6.28 48>
+new  <	; Parameter double 6.2831853071795864769252866 48>
 
 257:
 old  <	; Parameter double 6.2831853071795864769252866 48>
@@ -100956,11 +100956,11 @@ new  < main_math$56:>
 
 776:
 old  <	fstp qword [rbp + 48]>
-new  <	; PushFloat 6.28>
+new  <	; PushFloat 6.2831853071795864769252866>
 
 777:
 old  <>
-new  <	fld qword [float8$6.28#]>
+new  <	fld qword [float8$6.2831853071795864769252866#]>
 
 778:
 old  < main_math$38:>
@@ -100972,7 +100972,7 @@ new  < main_math$57:>
 
 780:
 old  <	mov qword [rbp + 24], main_math$39>
-new  <	; Parameter double 6.28 48>
+new  <	; Parameter double 6.2831853071795864769252866 48>
 
 781:
 old  <	mov [rbp + 32], rbp>
@@ -101040,11 +101040,11 @@ new  < main_math$61:>
 
 797:
 old  <	fstp qword [rbp + 48]>
-new  <	; PushFloat 3.14>
+new  <	; PushFloat 3.1415926535897932384626433>
 
 798:
 old  <>
-new  <	fld qword [float8$3.14#]>
+new  <	fld qword [float8$3.1415926535897932384626433#]>
 
 799:
 old  < main_math$43:>
@@ -101056,7 +101056,7 @@ new  < main_math$62:>
 
 801:
 old  <	mov qword [rbp + 24], main_math$44>
-new  <	; Parameter double 3.14 48>
+new  <	; Parameter double 3.1415926535897932384626433 48>
 
 802:
 old  <	mov [rbp + 32], rbp>
@@ -101124,11 +101124,11 @@ new  < main_math$66:>
 
 818:
 old  <	fstp qword [rbp + 48]>
-new  <	; PushFloat 1.57>
+new  <	; PushFloat 1.57079632679489661923132165>
 
 819:
 old  <>
-new  <	fld qword [float8$1.57#]>
+new  <	fld qword [float8$1.57079632679489661923132165#]>
 
 820:
 old  < main_math$48:>
@@ -101140,7 +101140,7 @@ new  < main_math$67:>
 
 822:
 old  <	mov qword [rbp + 24], main_math$49>
-new  <	; Parameter double 1.57 48>
+new  <	; Parameter double 1.57079632679489661923132165 48>
 
 823:
 old  <	mov [rbp + 32], rbp>
@@ -101208,11 +101208,11 @@ new  < main_math$71:>
 
 839:
 old  <	fstp qword [rbp + 48]>
-new  <	; PushFloat -1.57>
+new  <	; PushFloat -1.57079632679489661923132165>
 
 840:
 old  <>
-new  <	fld qword [float8$minus1.57#]>
+new  <	fld qword [float8$minus1.57079632679489661923132165#]>
 
 841:
 old  < main_math$53:>
@@ -101224,7 +101224,7 @@ new  < main_math$72:>
 
 843:
 old  <	mov qword [rbp + 24], main_math$54>
-new  <	; Parameter double -1.57 48>
+new  <	; Parameter double -1.57079632679489661923132165 48>
 
 844:
 old  <	mov [rbp + 32], rbp>
@@ -101292,11 +101292,11 @@ new  < main_math$76:>
 
 860:
 old  <	fstp qword [rbp + 48]>
-new  <	; PushFloat -3.14>
+new  <	; PushFloat -3.1415926535897932384626433>
 
 861:
 old  <>
-new  <	fld qword [float8$minus3.14#]>
+new  <	fld qword [float8$minus3.1415926535897932384626433#]>
 
 862:
 old  < main_math$58:>
@@ -101308,7 +101308,7 @@ new  < main_math$77:>
 
 864:
 old  <	mov qword [rbp + 24], main_math$59>
-new  <	; Parameter double -3.14 48>
+new  <	; Parameter double -3.1415926535897932384626433 48>
 
 865:
 old  <	mov [rbp + 32], rbp>
@@ -101376,11 +101376,11 @@ new  < main_math$81:>
 
 881:
 old  <	fstp qword [rbp + 48]>
-new  <	; PushFloat -6.28>
+new  <	; PushFloat -6.2831853071795864769252866>
 
 882:
 old  <>
-new  <	fld qword [float8$minus6.28#]>
+new  <	fld qword [float8$minus6.2831853071795864769252866#]>
 
 883:
 old  < main_math$63:>
@@ -101392,7 +101392,7 @@ new  < main_math$82:>
 
 885:
 old  <	mov qword [rbp + 24], main_math$64>
-new  <	; Parameter double -6.28 48>
+new  <	; Parameter double -6.2831853071795864769252866 48>
 
 886:
 old  <	mov [rbp + 32], rbp>

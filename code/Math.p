@@ -2,11 +2,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
    
 
+
+
+
     
     
-
-
-
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -188,7 +188,8 @@ ldiv_t ldiv ( long num , long denum ) ;
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,3$
        
 
-    
+
+        
     
 
 double exp ( double x ) {
@@ -210,13 +211,13 @@ int n = 0 ;
 
 if ( x > 1 ) {
 while ( x > 1 ) {
-x /= 2.71 ;
+x /= 2.7182818284590452353602874 ;
 ++ n ;
 }
 }
-else if ( x < 0.368 ) {
-while ( x < 0.368 ) {
-x *= 2.71 ;
+else if ( x < ( 1 / 2.7182818284590452353602874 ) ) {
+while ( x < ( 1 / 2.7182818284590452353602874 ) ) {
+x *= 2.7182818284590452353602874 ;
 -- n ;
 }
 }
@@ -238,6 +239,7 @@ errno = EDOM ;
 return 0 ;
 }
 }
+
 
     
 
@@ -274,6 +276,7 @@ return 0 ;
 double ldexp ( double x , int n ) {
 return x * pow ( 2 , n ) ;
 }
+
 
     
 
@@ -345,8 +348,8 @@ return 0 ;
 }
 
 double sin ( double x ) {
-if ( fabs ( x ) > ( 2 * 3.14 ) ) {
-x = fmod ( x , 2 * 3.14 ) ;
+if ( fabs ( x ) > ( 2 * 3.1415926535897932384626433 ) ) {
+x = fmod ( x , 2 * 3.1415926535897932384626433 ) ;
 }
 
 double index = 1 , term , sum = 0 , sign = 1 , power = x , faculty = 1 ;
@@ -363,8 +366,8 @@ return sum ;
 }
 
 double cos ( double x ) {
-if ( fabs ( x ) > ( 2 * 3.14 ) ) {
-x = fmod ( x , 2 * 3.14 ) ;
+if ( fabs ( x ) > ( 2 * 3.1415926535897932384626433 ) ) {
+x = fmod ( x , 2 * 3.1415926535897932384626433 ) ;
 }
 
 double index = 0 , term , sum = 0 , sign = 1 , power = 1 , faculty = 1 ;
@@ -394,7 +397,7 @@ return 0 ;
 
 double asin ( double x ) {
 if ( x == 1 ) {
-return 3.14 / 2 ;
+return 3.1415926535897932384626433 / 2 ;
 }
 else if ( x < 0 ) {
 return - asin ( - x ) ;
@@ -410,10 +413,10 @@ return 0 ;
 
 double acos ( double x ) {
 if ( x == 0 ) {
-return 3.14 / 2 ;
+return 3.1415926535897932384626433 / 2 ;
 }
 else if ( x < 0 ) {
-return 3.14 - acos ( - x ) ;
+return 3.1415926535897932384626433 - acos ( - x ) ;
 }
 else if ( x <= 1 ) {
 return atan ( sqrt ( 1 - ( x * x ) ) / x ) ;
@@ -429,7 +432,7 @@ if ( x < 0 ) {
 return - atan ( - x ) ;
 }
 else if ( x > 1 ) {
-return 3.14 / 2 - atan ( 1 / x ) ;
+return 3.1415926535897932384626433 / 2 - atan ( 1 / x ) ;
 }
 else if ( x > 0.5 ) {
 return 2 * atan ( x / ( 1 + sqrt ( 1 + ( x * x ) ) ) ) ;
@@ -454,16 +457,16 @@ if ( y > 0 ) {
 return atan ( x / y ) ;
 }
 else if ( ( x >= 0 ) && ( y < 0 ) ) {
-return 3.14 + atan ( x / y ) ;
+return 3.1415926535897932384626433 + atan ( x / y ) ;
 }
 else if ( ( x < 0 ) && ( y < 0 ) ) {
-return ( - 3.14 ) + atan ( x / y ) ;
+return ( - 3.1415926535897932384626433 ) + atan ( x / y ) ;
 }
 else if ( ( x > 0 ) && ( y == 0 ) ) {
-return 3.14 / 2 ;
+return 3.1415926535897932384626433 / 2 ;
 }
 else if ( ( x < 0 ) && ( y == 0 ) ) {
-return ( - 3.14 ) / 2 ;
+return ( - 3.1415926535897932384626433 ) / 2 ;
 }
 else {
 errno = EDOM ;

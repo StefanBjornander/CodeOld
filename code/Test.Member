@@ -1265,7 +1265,7 @@
 0: push float x
 1: push 0
 2: if x > 0 goto 5
-3: goto 101
+3: goto 105
 4: check track map float stack
 5: n = 0
 6: push float x
@@ -1276,101 +1276,105 @@
 11: push float x
 12: push 1
 13: if x > 1 goto 16
-14: goto 43
+14: goto 47
 15: check track map float stack
 16: push float x
-17: push float 2.71
-18: £temporary531 = x / 2.71
+17: push float 2.7182818284590452353602874
+18: £temporary531 = x / 2.7182818284590452353602874
 19: top float x
 20: pop float empty X
 21: n = n + 1
 22: goto 11
-23: goto 43
+23: goto 47
 24: push float x
-25: push float 0.368
-26: if x < 0.368 goto 29
-27: goto 43
-28: check track map float stack
-29: push float x
-30: push float 0.368
-31: if x < 0.368 goto 34
-32: goto 43
-33: check track map float stack
-34: push float x
-35: push float 2.71
-36: £temporary535 = x * 2.71
-37: top float x
-38: pop float empty X
-39: n = n - 1
-40: goto 29
-41: goto 43
-42: goto 43
-43: push 1
-44: pop float index
-45: push 0
-46: pop float sum
+25: push float 2.7182818284590452353602874
+26: pop float empty X
+27: push float 0.3678794411714423215955237798
+28: if x < 0.3678794411714423215955237798 goto 31
+29: goto 47
+30: check track map float stack
+31: push float x
+32: push float 2.7182818284590452353602874
+33: pop float empty X
+34: push float 0.3678794411714423215955237798
+35: if x < 0.3678794411714423215955237798 goto 38
+36: goto 47
+37: check track map float stack
+38: push float x
+39: push float 2.7182818284590452353602874
+40: £temporary535 = x * 2.7182818284590452353602874
+41: top float x
+42: pop float empty X
+43: n = n - 1
+44: goto 31
+45: goto 47
+46: goto 47
 47: push 1
-48: pop float sign
-49: push float x
-50: push 1
-51: £temporary537 = x - 1
-52: pop float x_minus_1
-53: push float x_minus_1
-54: pop float power
-55: push float term
-56: pop float empty X
-57: push float sign
-58: push float power
-59: £temporary538 = sign * power
-60: push float index
-61: push 1
-62: index = index + 1
-63: top float index
-64: push 1
-65: index = index - 1
-66: £temporary540 = £temporary538 / £temporary539
-67: top float term
-68: pop float empty X
-69: push float sum
-70: push float term
-71: £temporary541 = sum + term
-72: top float sum
-73: pop float empty X
-74: push float power
-75: push float x_minus_1
-76: £temporary542 = power * x_minus_1
-77: top float power
-78: pop float empty X
-79: push float sign
-80: push float -1.0
-81: £temporary543 = sign * -1.0
-82: top float sign
-83: pop float empty X
-84: call header
-85: push float term
-86: parameter term, offset 6
-87: call function noellipse-noellipse fabs
-88: post call
-89: £temporary544 = return_value
-90: push float 0.000000001
-91: if £temporary544 >= 0.000000001 goto 55
-92: goto 95
-93: check track map float stack
-94: goto 55
-95: push float sum
-96: £temporary546 = int_to_float n (Signed_Int -> Double)
-97: £temporary547 = sum + £temporary546
-98: return_value = £temporary547
-99: return
-100: goto 106
-101: errno = 6
-102: push 0
-103: return_value = 0
-104: return
-105: goto 106
-106: empty
-107: return
-108: function end log
+48: pop float index
+49: push 0
+50: pop float sum
+51: push 1
+52: pop float sign
+53: push float x
+54: push 1
+55: £temporary537 = x - 1
+56: pop float x_minus_1
+57: push float x_minus_1
+58: pop float power
+59: push float term
+60: pop float empty X
+61: push float sign
+62: push float power
+63: £temporary538 = sign * power
+64: push float index
+65: push 1
+66: index = index + 1
+67: top float index
+68: push 1
+69: index = index - 1
+70: £temporary540 = £temporary538 / £temporary539
+71: top float term
+72: pop float empty X
+73: push float sum
+74: push float term
+75: £temporary541 = sum + term
+76: top float sum
+77: pop float empty X
+78: push float power
+79: push float x_minus_1
+80: £temporary542 = power * x_minus_1
+81: top float power
+82: pop float empty X
+83: push float sign
+84: push float -1.0
+85: £temporary543 = sign * -1.0
+86: top float sign
+87: pop float empty X
+88: call header
+89: push float term
+90: parameter term, offset 6
+91: call function noellipse-noellipse fabs
+92: post call
+93: £temporary544 = return_value
+94: push float 0.000000001
+95: if £temporary544 >= 0.000000001 goto 59
+96: goto 99
+97: check track map float stack
+98: goto 59
+99: push float sum
+100: £temporary546 = int_to_float n (Signed_Int -> Double)
+101: £temporary547 = sum + £temporary546
+102: return_value = £temporary547
+103: return
+104: goto 110
+105: errno = 6
+106: push 0
+107: return_value = 0
+108: return
+109: goto 110
+110: empty
+111: return
+112: function end log
 0: call header
 1: push float x
 2: parameter x, offset 6
@@ -1747,10 +1751,10 @@
 3: call function noellipse-noellipse fabs
 4: post call
 5: £temporary658 = return_value
-6: push float 3.14
+6: push float 3.1415926535897932384626433
 7: pop float empty X
-8: push float 6.28
-9: if £temporary658 > 6.28 goto 12
+8: push float 6.2831853071795864769252866
+9: if £temporary658 > 6.2831853071795864769252866 goto 12
 10: goto 27
 11: check track map float stack
 12: push float x
@@ -1758,10 +1762,10 @@
 14: call header
 15: push float x
 16: parameter x, offset 6
-17: push float 3.14
+17: push float 3.1415926535897932384626433
 18: pop float empty X
-19: push float 6.28
-20: parameter 6.28, offset 14
+19: push float 6.2831853071795864769252866
+20: parameter 6.2831853071795864769252866, offset 14
 21: call function noellipse-noellipse fmod
 22: post call
 23: £temporary660 = return_value
@@ -1840,10 +1844,10 @@
 3: call function noellipse-noellipse fabs
 4: post call
 5: £temporary677 = return_value
-6: push float 3.14
+6: push float 3.1415926535897932384626433
 7: pop float empty X
-8: push float 6.28
-9: if £temporary677 > 6.28 goto 12
+8: push float 6.2831853071795864769252866
+9: if £temporary677 > 6.2831853071795864769252866 goto 12
 10: goto 27
 11: check track map float stack
 12: push float x
@@ -1851,10 +1855,10 @@
 14: call header
 15: push float x
 16: parameter x, offset 6
-17: push float 3.14
+17: push float 3.1415926535897932384626433
 18: pop float empty X
-19: push float 6.28
-20: parameter 6.28, offset 14
+19: push float 6.2831853071795864769252866
+20: parameter 6.2831853071795864769252866, offset 14
 21: call function noellipse-noellipse fmod
 22: post call
 23: £temporary679 = return_value
@@ -1963,10 +1967,10 @@
 2: if x == 1 goto 5
 3: goto 11
 4: check track map float stack
-5: push float 3.14
+5: push float 3.1415926535897932384626433
 6: pop float empty X
-7: push float 1.57
-8: return_value = 1.57
+7: push float 1.57079632679489661923132165
+8: return_value = 1.57079632679489661923132165
 9: return
 10: goto 59
 11: push float x
@@ -2025,10 +2029,10 @@
 2: if x == 0 goto 5
 3: goto 11
 4: check track map float stack
-5: push float 3.14
+5: push float 3.1415926535897932384626433
 6: pop float empty X
-7: push float 1.57
-8: return_value = 1.57
+7: push float 1.57079632679489661923132165
+8: return_value = 1.57079632679489661923132165
 9: return
 10: goto 60
 11: push float x
@@ -2036,7 +2040,7 @@
 13: if x < 0 goto 16
 14: goto 28
 15: check track map float stack
-16: push float 3.14
+16: push float 3.1415926535897932384626433
 17: call header
 18: push float x
 19: £temporary718 = -x
@@ -2044,7 +2048,7 @@
 21: call function noellipse-noellipse acos
 22: post call
 23: £temporary719 = return_value
-24: £temporary720 = 3.14 - £temporary719
+24: £temporary720 = 3.1415926535897932384626433 - £temporary719
 25: return_value = £temporary720
 26: return
 27: goto 60
@@ -2104,9 +2108,9 @@
 18: if x > 1 goto 21
 19: goto 36
 20: check track map float stack
-21: push float 3.14
+21: push float 3.1415926535897932384626433
 22: pop float empty X
-23: push float 1.57
+23: push float 1.57079632679489661923132165
 24: call header
 25: push 1
 26: push float x
@@ -2115,7 +2119,7 @@
 29: call function noellipse-noellipse atan
 30: post call
 31: £temporary736 = return_value
-32: £temporary737 = 1.57 - £temporary736
+32: £temporary737 = 1.57079632679489661923132165 - £temporary736
 33: return_value = £temporary737
 34: return
 35: goto 122
@@ -2233,7 +2237,7 @@
 22: if y < 0 goto 25
 23: goto 38
 24: check track map float stack
-25: push float 3.14
+25: push float 3.1415926535897932384626433
 26: call header
 27: push float x
 28: push float y
@@ -2242,7 +2246,7 @@
 31: call function noellipse-noellipse atan
 32: post call
 33: £temporary767 = return_value
-34: £temporary768 = 3.14 + £temporary767
+34: £temporary768 = 3.1415926535897932384626433 + £temporary767
 35: return_value = £temporary768
 36: return
 37: goto 103
@@ -2255,9 +2259,9 @@
 44: if y < 0 goto 47
 45: goto 62
 46: check track map float stack
-47: push float 3.14
+47: push float 3.1415926535897932384626433
 48: pop float empty X
-49: push float -3.14
+49: push float -3.1415926535897932384626433
 50: call header
 51: push float x
 52: push float y
@@ -2266,7 +2270,7 @@
 55: call function noellipse-noellipse atan
 56: post call
 57: £temporary773 = return_value
-58: £temporary774 = -3.14 + £temporary773
+58: £temporary774 = -3.1415926535897932384626433 + £temporary773
 59: return_value = £temporary774
 60: return
 61: goto 103
@@ -2279,10 +2283,10 @@
 68: if y == 0 goto 71
 69: goto 77
 70: check track map float stack
-71: push float 3.14
+71: push float 3.1415926535897932384626433
 72: pop float empty X
-73: push float 1.57
-74: return_value = 1.57
+73: push float 1.57079632679489661923132165
+74: return_value = 1.57079632679489661923132165
 75: return
 76: goto 103
 77: push float x
@@ -2294,12 +2298,12 @@
 83: if y == 0 goto 86
 84: goto 94
 85: check track map float stack
-86: push float 3.14
+86: push float 3.1415926535897932384626433
 87: pop float empty X
-88: push float -3.14
+88: push float -3.1415926535897932384626433
 89: pop float empty X
-90: push float -1.57
-91: return_value = -1.57
+90: push float -1.57079632679489661923132165
+91: return_value = -1.57079632679489661923132165
 92: return
 93: goto 103
 94: errno = 6
@@ -8559,4 +8563,3400 @@
 255: parameter £temporary3498, offset 8
 256: call header
 257: £temporary3499 = int_to_int c (Signed_Char -> Signed_Int)
-258: paramete
+258: parameter £temporary3499, offset 16
+259: call function noellipse-noellipse toupper
+260: post call
+261: £temporary3500 = return_value
+262: £temporary3501 = int_to_int £temporary3500 (Signed_Int -> Signed_Char)
+263: £temporary3502 = int_to_int £temporary3501 (Signed_Char -> Signed_Int)
+264: parameter £temporary3502, offset 10
+265: call function noellipse-ellipse printf, extra 0
+266: post call
+267: empty
+268: return
+269: function end character_test
+0: empty
+1: return
+2: function end float_test
+0: call header
+1: parameter string_CHAR_BIT203D2025i0A#, offset 6
+2: parameter 8, offset 8
+3: call function noellipse-ellipse printf, extra 0
+4: post call
+5: call header
+6: parameter string_CHAR_MIN203D2025i0A0A#, offset 6
+7: parameter -128, offset 8
+8: call function noellipse-ellipse printf, extra 0
+9: post call
+10: call header
+11: parameter string_CHAR_MAX203D2025i0A#, offset 6
+12: parameter 127, offset 8
+13: call function noellipse-ellipse printf, extra 0
+14: post call
+15: call header
+16: parameter string_UCHAR_MAX203D2025u0A0A#, offset 6
+17: parameter 255, offset 8
+18: call function noellipse-ellipse printf, extra 0
+19: post call
+20: call header
+21: parameter string_SHRT_MIN203D2025i0A#, offset 6
+22: parameter -128, offset 8
+23: call function noellipse-ellipse printf, extra 0
+24: post call
+25: call header
+26: parameter string_SHRT_MAX203D2025i0A#, offset 6
+27: parameter 127, offset 8
+28: call function noellipse-ellipse printf, extra 0
+29: post call
+30: call header
+31: parameter string_USHRT_MAX203D2025u0A0A#, offset 6
+32: parameter 255, offset 8
+33: call function noellipse-ellipse printf, extra 0
+34: post call
+35: call header
+36: parameter string_INT_MIN203D2025i0A#, offset 6
+37: parameter -32768, offset 8
+38: call function noellipse-ellipse printf, extra 0
+39: post call
+40: call header
+41: parameter string_INT_MAX203D2025i0A#, offset 6
+42: parameter 32767, offset 8
+43: call function noellipse-ellipse printf, extra 0
+44: post call
+45: call header
+46: parameter string_UINT_MAX203D2025u0A0A#, offset 6
+47: parameter 65535, offset 8
+48: call function noellipse-ellipse printf, extra 0
+49: post call
+50: call header
+51: parameter string_LONG_MIN203D2025li0A#, offset 6
+52: parameter -2147483648, offset 8
+53: call function noellipse-ellipse printf, extra 0
+54: post call
+55: call header
+56: parameter string_LONG_MAX203D2025li0A#, offset 6
+57: parameter 2147483647, offset 8
+58: call function noellipse-ellipse printf, extra 0
+59: post call
+60: call header
+61: parameter string_ULONG_MAX203D2025lu0A#, offset 6
+62: parameter 4294967295, offset 8
+63: call function noellipse-ellipse printf, extra 0
+64: post call
+65: call header
+66: parameter string_ULONG_MAX203D2025lx0A#, offset 6
+67: parameter 4294967295, offset 8
+68: call function noellipse-ellipse printf, extra 0
+69: post call
+70: call header
+71: parameter string_ULONG_MAX203D2025lX0A#, offset 6
+72: parameter 4294967295, offset 8
+73: call function noellipse-ellipse printf, extra 0
+74: post call
+75: empty
+76: return
+77: function end limits_test
+0: n = 0
+1: call header
+2: parameter string_Please20write20a20number2028not20620or207293A20#, offset 6
+3: call function noellipse-ellipse printf, extra 0
+4: post call
+5: call header
+6: parameter string_25i#, offset 6
+7: £temporary3604 = &n
+8: parameter £temporary3604, offset 8
+9: call function noellipse-ellipse scanf, extra 0
+10: post call
+11: if n != 6 goto 26
+12: goto 14
+13: check track map float stack
+14: call header
+15: parameter stderr, offset 6
+16: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+17: parameter string_n20213D206#, offset 10
+18: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CAssertTest2Ec#, offset 12
+19: parameter 10, offset 14
+20: call function noellipse-ellipse fprintf, extra 0
+21: post call
+22: call header
+23: call function noellipse-noellipse abort
+24: post call
+25: goto 26
+26: empty
+27: call header
+28: parameter n, offset 6
+29: call function noellipse-noellipse assert_test2
+30: post call
+31: empty
+32: return
+33: function end assert_testX
+0: if n != 7 goto 15
+1: goto 3
+2: check track map float stack
+3: call header
+4: parameter stderr, offset 6
+5: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+6: parameter string_n20213D207#, offset 10
+7: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CAssertTest2Ec#, offset 12
+8: parameter 15, offset 14
+9: call function noellipse-ellipse fprintf, extra 0
+10: post call
+11: call header
+12: call function noellipse-noellipse abort
+13: post call
+14: goto 15
+15: empty
+16: empty
+17: return
+18: function end assert_test2X
+0: s = string_Hello2C20World21#
+1: call header
+2: parameter string_strlen282225s2229203D2025i0A#, offset 6
+3: parameter s, offset 8
+4: call header
+5: parameter s, offset 16
+6: call function noellipse-noellipse strlen
+7: post call
+8: £temporary3630 = return_value
+9: parameter £temporary3630, offset 10
+10: call function noellipse-ellipse printf, extra 0
+11: post call
+12: call header
+13: parameter t, offset 6
+14: parameter s, offset 8
+15: call function noellipse-noellipse strcpy
+16: post call
+17: call header
+18: parameter u, offset 6
+19: parameter s, offset 8
+20: parameter 5, offset 10
+21: call function noellipse-noellipse strncpy
+22: post call
+23: £temporary3634 -> u = *u, offset 5
+24: £temporary3634 -> u = 0
+25: call header
+26: parameter string_t203D202225s222C20u203D202225s220A#, offset 6
+27: parameter t, offset 8
+28: parameter u, offset 10
+29: call function noellipse-ellipse printf, extra 0
+30: post call
+31: call header
+32: parameter t, offset 6
+33: parameter string_abc#, offset 8
+34: call function noellipse-noellipse strcat
+35: post call
+36: call header
+37: parameter u, offset 6
+38: call function noellipse-noellipse strlen
+39: post call
+40: £temporary3637 = return_value
+41: i = £temporary3637
+42: call header
+43: parameter u, offset 6
+44: parameter string_abc#, offset 8
+45: parameter 2, offset 10
+46: call function noellipse-noellipse strncat
+47: post call
+48: £temporary3639 = i + 2
+49: £temporary3641 = u + £temporary3639
+50: £temporary3640 -> £temporary3641 = *£temporary3641
+51: £temporary3640 -> £temporary3641 = 0
+52: call header
+53: parameter string_t203D202225s222C20u203D202225s220A#, offset 6
+54: parameter t, offset 8
+55: parameter u, offset 10
+56: call function noellipse-ellipse printf, extra 0
+57: post call
+58: call header
+59: parameter string_strcmp28s2C20u29203D2025i0A#, offset 6
+60: call header
+61: parameter s, offset 14
+62: parameter u, offset 16
+63: call function noellipse-noellipse strcmp
+64: post call
+65: £temporary3643 = return_value
+66: parameter £temporary3643, offset 8
+67: call function noellipse-ellipse printf, extra 0
+68: post call
+69: call header
+70: parameter string_strncmp28s2C20u2C20229203D2025i0A#, offset 6
+71: call header
+72: parameter s, offset 14
+73: parameter u, offset 16
+74: parameter 2, offset 18
+75: call function noellipse-noellipse strncmp
+76: post call
+77: £temporary3645 = return_value
+78: parameter £temporary3645, offset 8
+79: call function noellipse-ellipse printf, extra 0
+80: post call
+81: call header
+82: parameter s, offset 6
+83: parameter 108, offset 8
+84: call function noellipse-noellipse strchr
+85: post call
+86: £temporary3647 = return_value
+87: p = £temporary3647
+88: call header
+89: parameter string_strchr28s2C2027l2729203D2025i0A#, offset 6
+90: if p != 0 goto 92
+91: goto 96
+92: empty
+93: £temporary3649 = p - s
+94: £temporary3653 = £temporary3649
+95: goto 98
+96: empty
+97: £temporary3653 = -1
+98: empty
+99: parameter £temporary3653, offset 8
+100: call function noellipse-ellipse printf, extra 0
+101: post call
+102: call header
+103: parameter s, offset 6
+104: parameter 108, offset 8
+105: call function noellipse-noellipse strrchr
+106: post call
+107: £temporary3655 = return_value
+108: p = £temporary3655
+109: call header
+110: parameter string_strrchr28s2C2027l2729203D2025i0A#, offset 6
+111: if p != 0 goto 113
+112: goto 117
+113: empty
+114: £temporary3657 = p - s
+115: £temporary3661 = £temporary3657
+116: goto 119
+117: empty
+118: £temporary3661 = -1
+119: empty
+120: parameter £temporary3661, offset 8
+121: call function noellipse-ellipse printf, extra 0
+122: post call
+123: call header
+124: parameter s, offset 6
+125: parameter 120, offset 8
+126: call function noellipse-noellipse strchr
+127: post call
+128: £temporary3663 = return_value
+129: p = £temporary3663
+130: call header
+131: parameter string_strchr28s2C2027x2729203D2025i0A#, offset 6
+132: if p != 0 goto 134
+133: goto 138
+134: empty
+135: £temporary3665 = p - s
+136: £temporary3669 = £temporary3665
+137: goto 140
+138: empty
+139: £temporary3669 = -1
+140: empty
+141: parameter £temporary3669, offset 8
+142: call function noellipse-ellipse printf, extra 0
+143: post call
+144: call header
+145: parameter s, offset 6
+146: parameter 120, offset 8
+147: call function noellipse-noellipse strrchr
+148: post call
+149: £temporary3671 = return_value
+150: p = £temporary3671
+151: call header
+152: parameter string_strrchr28s2C2027x2729203D2025i0A#, offset 6
+153: if p != 0 goto 155
+154: goto 159
+155: empty
+156: £temporary3673 = p - s
+157: £temporary3677 = £temporary3673
+158: goto 161
+159: empty
+160: £temporary3677 = -1
+161: empty
+162: parameter £temporary3677, offset 8
+163: call function noellipse-ellipse printf, extra 0
+164: post call
+165: call header
+166: parameter s, offset 6
+167: parameter string_Hello2C20World21#, offset 8
+168: parameter 20, offset 10
+169: call function noellipse-noellipse memcpy
+170: post call
+171: call header
+172: parameter t, offset 6
+173: parameter string_Hello2C20World21#, offset 8
+174: parameter 20, offset 10
+175: call function noellipse-noellipse memmove
+176: post call
+177: call header
+178: parameter u, offset 6
+179: parameter 88, offset 8
+180: parameter 20, offset 10
+181: call function noellipse-noellipse memset
+182: post call
+183: £temporary3682 -> u = *u, offset 19
+184: £temporary3682 -> u = 0
+185: call header
+186: parameter string_s203D202225s222C20t203D202225s222C20u203D202225s220A#, offset 6
+187: parameter s, offset 8
+188: parameter t, offset 10
+189: parameter u, offset 12
+190: call function noellipse-ellipse printf, extra 0
+191: post call
+192: call header
+193: parameter s, offset 6
+194: parameter 108, offset 8
+195: parameter 20, offset 10
+196: call function noellipse-noellipse memchr
+197: post call
+198: £temporary3684 = return_value
+199: p = £temporary3684
+200: call header
+201: parameter string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A#, offset 6
+202: if p != 0 goto 204
+203: goto 208
+204: empty
+205: £temporary3686 = p - s
+206: £temporary3690 = £temporary3686
+207: goto 210
+208: empty
+209: £temporary3690 = -1
+210: empty
+211: parameter £temporary3690, offset 8
+212: call function noellipse-ellipse printf, extra 0
+213: post call
+214: call header
+215: parameter s, offset 6
+216: parameter 120, offset 8
+217: parameter 20, offset 10
+218: call function noellipse-noellipse memchr
+219: post call
+220: £temporary3692 = return_value
+221: p = £temporary3692
+222: call header
+223: parameter string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A#, offset 6
+224: if p != 0 goto 226
+225: goto 230
+226: empty
+227: £temporary3694 = p - s
+228: £temporary3698 = £temporary3694
+229: goto 232
+230: empty
+231: £temporary3698 = -1
+232: empty
+233: parameter £temporary3698, offset 8
+234: call function noellipse-ellipse printf, extra 0
+235: post call
+236: call header
+237: parameter string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A#, offset 6
+238: call header
+239: parameter s, offset 14
+240: parameter t, offset 16
+241: parameter 20, offset 18
+242: call function noellipse-noellipse memcmp
+243: post call
+244: £temporary3700 = return_value
+245: parameter £temporary3700, offset 8
+246: call function noellipse-ellipse printf, extra 0
+247: post call
+248: call header
+249: parameter string_strspn28s2C2022Hello2C20C2229203D2025i0A#, offset 6
+250: call header
+251: parameter s, offset 14
+252: parameter string_Hello2C20C#, offset 16
+253: call function noellipse-noellipse strspn
+254: post call
+255: £temporary3702 = return_value
+256: parameter £temporary3702, offset 8
+257: call function noellipse-ellipse printf, extra 0
+258: post call
+259: call header
+260: parameter string_strcspn28s2C2022Hello2C20C2229203D2025i0A#, offset 6
+261: call header
+262: parameter s, offset 14
+263: parameter string_Hello2C20C#, offset 16
+264: call function noellipse-noellipse strcspn
+265: post call
+266: £temporary3704 = return_value
+267: parameter £temporary3704, offset 8
+268: call function noellipse-ellipse printf, extra 0
+269: post call
+270: call header
+271: parameter string_strerror28errno29203D202225s220A#, offset 6
+272: call header
+273: parameter errno, offset 14
+274: call function noellipse-noellipse strerror
+275: post call
+276: £temporary3706 = return_value
+277: parameter £temporary3706, offset 8
+278: call function noellipse-ellipse printf, extra 0
+279: post call
+280: call header
+281: parameter s, offset 6
+282: parameter string_2C#, offset 8
+283: call function noellipse-noellipse strtok
+284: post call
+285: £temporary3708 = return_value
+286: p = £temporary3708
+287: if p != 0 goto 290
+288: goto 303
+289: check track map float stack
+290: call header
+291: parameter string_strtok28s2C20222C2229203D202225s220A#, offset 6
+292: parameter p, offset 8
+293: call function noellipse-ellipse printf, extra 0
+294: post call
+295: call header
+296: parameter 0, offset 6
+297: parameter string_2C#, offset 8
+298: call function noellipse-noellipse strtok
+299: post call
+300: £temporary3711 = return_value
+301: p = £temporary3711
+302: goto 287
+303: empty
+304: return
+305: function end string_test
+0: empty
+1: return
+2: function end locale_test
+0: push float y
+1: push 0
+2: if y != 0 goto 5
+3: goto 11
+4: check track map float stack
+5: push float x
+6: push float y
+7: £temporary3804 = x / y
+8: return_value = £temporary3804
+9: return
+10: goto 21
+11: p = string_Division20by20Zero2E#
+12: call header
+13: parameter buffer, offset 6
+14: parameter p, offset 8
+15: call function noellipse-noellipse longjmp
+16: post call
+17: push 0
+18: return_value = 0
+19: return
+20: goto 21
+21: empty
+22: return
+23: function end divide
+0: call header
+1: push float 1.0
+2: parameter 1.0, offset 6
+3: push float x
+4: parameter x, offset 14
+5: call function noellipse-noellipse divide
+6: post call
+7: £temporary3808 = return_value
+8: return_value = £temporary3808
+9: return
+10: empty
+11: return
+12: function end invers
+0: call header
+1: parameter buffer, offset 6
+2: call function noellipse-noellipse setjmp
+3: post call
+4: £temporary3811 = return_value
+5: p = £temporary3811
+6: if p == 0 goto 9
+7: goto 23
+8: check track map float stack
+9: call header
+10: parameter string_12E0202F2025f203D2025f0A#, offset 6
+11: push float x
+12: parameter x, offset 8
+13: call header
+14: push float x
+15: parameter x, offset 22
+16: call function noellipse-noellipse invers
+17: post call
+18: £temporary3813 = return_value
+19: parameter £temporary3813, offset 16
+20: call function noellipse-ellipse printf, extra 0
+21: post call
+22: goto 30
+23: call header
+24: parameter string_p203D203C25s3E203C25u3E0A#, offset 6
+25: parameter p, offset 8
+26: parameter p, offset 10
+27: call function noellipse-ellipse printf, extra 0
+28: post call
+29: goto 30
+30: empty
+31: return
+32: function end setjmp_test
+0: call header
+1: push float 3.1415926535897932384626433
+2: pop float empty X
+3: push float -6.2831853071795864769252866
+4: parameter -6.2831853071795864769252866, offset 6
+5: call function noellipse-noellipse math_test_1
+6: post call
+7: call header
+8: push float 3.1415926535897932384626433
+9: pop float empty X
+10: push float -3.1415926535897932384626433
+11: parameter -3.1415926535897932384626433, offset 6
+12: call function noellipse-noellipse math_test_1
+13: post call
+14: call header
+15: push float 3.1415926535897932384626433
+16: pop float empty X
+17: push float -3.1415926535897932384626433
+18: pop float empty X
+19: push float -1.57079632679489661923132165
+20: parameter -1.57079632679489661923132165, offset 6
+21: call function noellipse-noellipse math_test_1
+22: post call
+23: call header
+24: push float -1
+25: parameter -1, offset 6
+26: call function noellipse-noellipse math_test_1
+27: post call
+28: call header
+29: push 0
+30: parameter 0, offset 6
+31: call function noellipse-noellipse math_test_1
+32: post call
+33: call header
+34: push 1
+35: parameter 1, offset 6
+36: call function noellipse-noellipse math_test_1
+37: post call
+38: call header
+39: push float 3.1415926535897932384626433
+40: pop float empty X
+41: push float 1.57079632679489661923132165
+42: parameter 1.57079632679489661923132165, offset 6
+43: call function noellipse-noellipse math_test_1
+44: post call
+45: call header
+46: push float 3.1415926535897932384626433
+47: parameter 3.1415926535897932384626433, offset 6
+48: call function noellipse-noellipse math_test_1
+49: post call
+50: call header
+51: push float 3.1415926535897932384626433
+52: pop float empty X
+53: push float 6.2831853071795864769252866
+54: parameter 6.2831853071795864769252866, offset 6
+55: call function noellipse-noellipse math_test_1
+56: post call
+57: empty
+58: return
+59: function end math_test_1x
+0: call header
+1: parameter string_2020acos2825f29203D2025f2C20errno203D2025i0A#, offset 6
+2: push float x
+3: parameter x, offset 8
+4: call header
+5: push float x
+6: parameter x, offset 22
+7: call function noellipse-noellipse acos
+8: post call
+9: £temporary3842 = return_value
+10: parameter £temporary3842, offset 16
+11: parameter errno, offset 24
+12: call function noellipse-ellipse printf, extra 0
+13: post call
+14: errno = 0
+15: empty
+16: return
+17: function end acos_test
+0: call header
+1: parameter string_2020atan2825f29203D2025f2C20errno203D2025i0A#, offset 6
+2: push float x
+3: parameter x, offset 8
+4: call header
+5: push float x
+6: parameter x, offset 22
+7: call function noellipse-noellipse atan
+8: post call
+9: £temporary3849 = return_value
+10: parameter £temporary3849, offset 16
+11: parameter errno, offset 24
+12: call function noellipse-ellipse printf, extra 0
+13: post call
+14: errno = 0
+15: empty
+16: return
+17: function end atan_test
+0: call header
+1: push float 0.333333333
+2: parameter 0.333333333, offset 6
+3: call function noellipse-noellipse math_test_1
+4: post call
+5: call header
+6: push float 0.75
+7: parameter 0.75, offset 6
+8: call function noellipse-noellipse math_test_1
+9: post call
+10: call header
+11: push float 1.000010
+12: parameter 1.000010, offset 6
+13: call function noellipse-noellipse math_test_1
+14: post call
+15: call header
+16: push float 1.0
+17: parameter 1.0, offset 6
+18: call function noellipse-noellipse math_test_1
+19: post call
+20: call header
+21: push float 0.999999
+22: parameter 0.999999, offset 6
+23: call function noellipse-noellipse math_test_1
+24: post call
+25: call header
+26: push float 0.000010
+27: parameter 0.000010, offset 6
+28: call function noellipse-noellipse math_test_1
+29: post call
+30: call header
+31: push 0
+32: parameter 0, offset 6
+33: call function noellipse-noellipse math_test_1
+34: post call
+35: call header
+36: push float -0.000010
+37: parameter -0.000010, offset 6
+38: call function noellipse-noellipse math_test_1
+39: post call
+40: call header
+41: push float -0.999999
+42: parameter -0.999999, offset 6
+43: call function noellipse-noellipse math_test_1
+44: post call
+45: call header
+46: push float -1.0
+47: parameter -1.0, offset 6
+48: call function noellipse-noellipse math_test_1
+49: post call
+50: call header
+51: push float -1.000010
+52: parameter -1.000010, offset 6
+53: call function noellipse-noellipse math_test_1
+54: post call
+55: call header
+56: push float 3.1415926535897932384626433
+57: pop float empty X
+58: push float 6.2831853071795864769252866
+59: parameter 6.2831853071795864769252866, offset 6
+60: call function noellipse-noellipse math_test_1
+61: post call
+62: call header
+63: push float 3.1415926535897932384626433
+64: parameter 3.1415926535897932384626433, offset 6
+65: call function noellipse-noellipse math_test_1
+66: post call
+67: call header
+68: push float 3.1415926535897932384626433
+69: pop float empty X
+70: push float 1.57079632679489661923132165
+71: parameter 1.57079632679489661923132165, offset 6
+72: call function noellipse-noellipse math_test_1
+73: post call
+74: call header
+75: push float 3.1415926535897932384626433
+76: pop float empty X
+77: push float -3.1415926535897932384626433
+78: pop float empty X
+79: push float -1.57079632679489661923132165
+80: parameter -1.57079632679489661923132165, offset 6
+81: call function noellipse-noellipse math_test_1
+82: post call
+83: call header
+84: push float 3.1415926535897932384626433
+85: pop float empty X
+86: push float -3.1415926535897932384626433
+87: parameter -3.1415926535897932384626433, offset 6
+88: call function noellipse-noellipse math_test_1
+89: post call
+90: call header
+91: push float 3.1415926535897932384626433
+92: pop float empty X
+93: push float -6.2831853071795864769252866
+94: parameter -6.2831853071795864769252866, offset 6
+95: call function noellipse-noellipse math_test_1
+96: post call
+97: call header
+98: push float 1.0
+99: parameter 1.0, offset 6
+100: push float 2.0
+101: parameter 2.0, offset 14
+102: call function noellipse-noellipse math_test_2
+103: post call
+104: call header
+105: push float 3.0
+106: parameter 3.0, offset 6
+107: push float 4.0
+108: parameter 4.0, offset 14
+109: call function noellipse-noellipse math_test_2
+110: post call
+111: call header
+112: push 0
+113: parameter 0, offset 6
+114: push float 2.0
+115: parameter 2.0, offset 14
+116: call function noellipse-noellipse math_test_2
+117: post call
+118: call header
+119: push 0
+120: parameter 0, offset 6
+121: push float -2.0
+122: parameter -2.0, offset 14
+123: call function noellipse-noellipse math_test_2
+124: post call
+125: call header
+126: push 1
+127: parameter 1, offset 6
+128: push float 2.0
+129: parameter 2.0, offset 14
+130: call function noellipse-noellipse math_test_2
+131: post call
+132: call header
+133: push 1
+134: parameter 1, offset 6
+135: push float -2.0
+136: parameter -2.0, offset 14
+137: call function noellipse-noellipse math_test_2
+138: post call
+139: call header
+140: push 0
+141: parameter 0, offset 6
+142: push 0
+143: parameter 0, offset 14
+144: call function noellipse-noellipse math_test_2
+145: post call
+146: call header
+147: push float 2
+148: parameter 2, offset 6
+149: push 0
+150: parameter 0, offset 14
+151: call function noellipse-noellipse math_test_2
+152: post call
+153: call header
+154: push float -2
+155: parameter -2, offset 6
+156: push 0
+157: parameter 0, offset 14
+158: call function noellipse-noellipse math_test_2
+159: post call
+160: call header
+161: push float -1.0
+162: parameter -1.0, offset 6
+163: push float -1.0
+164: parameter -1.0, offset 14
+165: call function noellipse-noellipse math_test_2
+166: post call
+167: call header
+168: push float -2.0
+169: parameter -2.0, offset 6
+170: push float -4.0
+171: parameter -4.0, offset 14
+172: call function noellipse-noellipse math_test_2
+173: post call
+174: empty
+175: return
+176: function end main_math
+0: call header
+1: parameter string_3C25f3E0A#, offset 6
+2: push float x
+3: parameter x, offset 8
+4: call function noellipse-ellipse printf, extra 0
+5: post call
+6: call header
+7: parameter string_2020sin2825f29203D2025f2C20errno203D2025i0A#, offset 6
+8: push float x
+9: parameter x, offset 8
+10: call header
+11: push float x
+12: parameter x, offset 22
+13: call function noellipse-noellipse sin
+14: post call
+15: £temporary3924 = return_value
+16: parameter £temporary3924, offset 16
+17: parameter errno, offset 24
+18: call function noellipse-ellipse printf, extra 0
+19: post call
+20: errno = 0
+21: call header
+22: parameter string_2020cos2825f29203D2025f2C20errno203D2025i0A#, offset 6
+23: push float x
+24: parameter x, offset 8
+25: call header
+26: push float x
+27: parameter x, offset 22
+28: call function noellipse-noellipse cos
+29: post call
+30: £temporary3926 = return_value
+31: parameter £temporary3926, offset 16
+32: parameter errno, offset 24
+33: call function noellipse-ellipse printf, extra 0
+34: post call
+35: errno = 0
+36: call header
+37: parameter string_2020tan2825f29203D2025f2C20errno203D2025i0A#, offset 6
+38: push float x
+39: parameter x, offset 8
+40: call header
+41: push float x
+42: parameter x, offset 22
+43: call function noellipse-noellipse tan
+44: post call
+45: £temporary3928 = return_value
+46: parameter £temporary3928, offset 16
+47: parameter errno, offset 24
+48: call function noellipse-ellipse printf, extra 0
+49: post call
+50: errno = 0
+51: call header
+52: parameter string_2020asin2825f29203D2025f2C20errno203D2025i0A#, offset 6
+53: push float x
+54: parameter x, offset 8
+55: call header
+56: push float x
+57: parameter x, offset 22
+58: call function noellipse-noellipse asin
+59: post call
+60: £temporary3930 = return_value
+61: parameter £temporary3930, offset 16
+62: parameter errno, offset 24
+63: call function noellipse-ellipse printf, extra 0
+64: post call
+65: errno = 0
+66: call header
+67: parameter string_2020acos2825f29203D2025f2C20errno203D2025i0A#, offset 6
+68: push float x
+69: parameter x, offset 8
+70: call header
+71: push float x
+72: parameter x, offset 22
+73: call function noellipse-noellipse acos
+74: post call
+75: £temporary3932 = return_value
+76: parameter £temporary3932, offset 16
+77: parameter errno, offset 24
+78: call function noellipse-ellipse printf, extra 0
+79: post call
+80: errno = 0
+81: call header
+82: parameter string_2020atan2825f29203D2025f2C20errno203D2025i0A#, offset 6
+83: push float x
+84: parameter x, offset 8
+85: call header
+86: push float x
+87: parameter x, offset 22
+88: call function noellipse-noellipse atan
+89: post call
+90: £temporary3934 = return_value
+91: parameter £temporary3934, offset 16
+92: parameter errno, offset 24
+93: call function noellipse-ellipse printf, extra 0
+94: post call
+95: errno = 0
+96: call header
+97: parameter string_2020exp2825f29203D2025f2C20errno203D2025i0A#, offset 6
+98: push float x
+99: parameter x, offset 8
+100: call header
+101: push float x
+102: parameter x, offset 22
+103: call function noellipse-noellipse exp
+104: post call
+105: £temporary3936 = return_value
+106: parameter £temporary3936, offset 16
+107: parameter errno, offset 24
+108: call function noellipse-ellipse printf, extra 0
+109: post call
+110: errno = 0
+111: call header
+112: parameter string_2020log2825f29203D2025f2C20errno203D2025i0A#, offset 6
+113: push float x
+114: parameter x, offset 8
+115: call header
+116: push float x
+117: parameter x, offset 22
+118: call function noellipse-noellipse log
+119: post call
+120: £temporary3938 = return_value
+121: parameter £temporary3938, offset 16
+122: parameter errno, offset 24
+123: call function noellipse-ellipse printf, extra 0
+124: post call
+125: errno = 0
+126: call header
+127: parameter string_2020log102825f29203D2025f2C20errno203D2025i0A#, offset 6
+128: push float x
+129: parameter x, offset 8
+130: call header
+131: push float x
+132: parameter x, offset 22
+133: call function noellipse-noellipse log10
+134: post call
+135: £temporary3940 = return_value
+136: parameter £temporary3940, offset 16
+137: parameter errno, offset 24
+138: call function noellipse-ellipse printf, extra 0
+139: post call
+140: errno = 0
+141: call header
+142: parameter string_2020sinh2825f29203D2025f2C20errno203D2025i0A#, offset 6
+143: push float x
+144: parameter x, offset 8
+145: call header
+146: push float x
+147: parameter x, offset 22
+148: call function noellipse-noellipse sinh
+149: post call
+150: £temporary3942 = return_value
+151: parameter £temporary3942, offset 16
+152: parameter errno, offset 24
+153: call function noellipse-ellipse printf, extra 0
+154: post call
+155: errno = 0
+156: call header
+157: parameter string_2020cosh2825f29203D2025f2C20errno203D2025i0A#, offset 6
+158: push float x
+159: parameter x, offset 8
+160: call header
+161: push float x
+162: parameter x, offset 22
+163: call function noellipse-noellipse cosh
+164: post call
+165: £temporary3944 = return_value
+166: parameter £temporary3944, offset 16
+167: parameter errno, offset 24
+168: call function noellipse-ellipse printf, extra 0
+169: post call
+170: errno = 0
+171: call header
+172: parameter string_2020tanh2825f29203D2025f2C20errno203D2025i0A#, offset 6
+173: push float x
+174: parameter x, offset 8
+175: call header
+176: push float x
+177: parameter x, offset 22
+178: call function noellipse-noellipse tanh
+179: post call
+180: £temporary3946 = return_value
+181: parameter £temporary3946, offset 16
+182: parameter errno, offset 24
+183: call function noellipse-ellipse printf, extra 0
+184: post call
+185: errno = 0
+186: call header
+187: parameter string_2020sqrt2825f29203D2025f2C20errno203D2025i0A#, offset 6
+188: push float x
+189: parameter x, offset 8
+190: call header
+191: push float x
+192: parameter x, offset 22
+193: call function noellipse-noellipse sqrt
+194: post call
+195: £temporary3948 = return_value
+196: parameter £temporary3948, offset 16
+197: parameter errno, offset 24
+198: call function noellipse-ellipse printf, extra 0
+199: post call
+200: errno = 0
+201: call header
+202: parameter string_2020floor2825f29203D2025f2C20errno203D2025i0A#, offset 6
+203: push float x
+204: parameter x, offset 8
+205: call header
+206: push float x
+207: parameter x, offset 22
+208: call function noellipse-noellipse floor
+209: post call
+210: £temporary3950 = return_value
+211: parameter £temporary3950, offset 16
+212: parameter errno, offset 24
+213: call function noellipse-ellipse printf, extra 0
+214: post call
+215: errno = 0
+216: call header
+217: parameter string_2020ceil2825f29203D2025f2C20errno203D2025i0A#, offset 6
+218: push float x
+219: parameter x, offset 8
+220: call header
+221: push float x
+222: parameter x, offset 22
+223: call function noellipse-noellipse ceil
+224: post call
+225: £temporary3952 = return_value
+226: parameter £temporary3952, offset 16
+227: parameter errno, offset 24
+228: call function noellipse-ellipse printf, extra 0
+229: post call
+230: errno = 0
+231: call header
+232: parameter string_2020fabs2825f29203D2025f2C20errno203D2025i0A#, offset 6
+233: push float x
+234: parameter x, offset 8
+235: call header
+236: push float x
+237: parameter x, offset 22
+238: call function noellipse-noellipse fabs
+239: post call
+240: £temporary3954 = return_value
+241: parameter £temporary3954, offset 16
+242: parameter errno, offset 24
+243: call function noellipse-ellipse printf, extra 0
+244: post call
+245: errno = 0
+246: j = 0
+247: call header
+248: push float x
+249: parameter x, offset 6
+250: £temporary3956 = &j
+251: parameter £temporary3956, offset 14
+252: call function noellipse-noellipse frexp
+253: post call
+254: £temporary3957 = return_value
+255: pop float z
+256: call header
+257: parameter string_frexp202825f2C20p29203D202825f2C2025i292C20errno203D2025i0A#, offset 6
+258: push float x
+259: parameter x, offset 8
+260: push float z
+261: parameter z, offset 16
+262: parameter j, offset 24
+263: parameter errno, offset 26
+264: call function noellipse-ellipse printf, extra 0
+265: post call
+266: if errno != 0 goto 269
+267: goto 275
+268: check track map float stack
+269: call header
+270: parameter string_Error20message3A#, offset 6
+271: call function noellipse-noellipse perror
+272: post call
+273: errno = 0
+274: goto 275
+275: push 0
+276: pop float w
+277: call header
+278: push float x
+279: parameter x, offset 6
+280: push float w
+281: pop float empty X
+282: £temporary3961 = &w
+283: parameter £temporary3961, offset 14
+284: call function noellipse-noellipse modf
+285: post call
+286: £temporary3962 = return_value
+287: pop float z
+288: call header
+289: parameter string_modf202825f2C20p29203D202825f2C2025f292C20errno203D2025i0A#, offset 6
+290: push float x
+291: parameter x, offset 8
+292: push float z
+293: parameter z, offset 16
+294: push float w
+295: parameter w, offset 24
+296: parameter errno, offset 32
+297: call function noellipse-ellipse printf, extra 0
+298: post call
+299: if errno != 0 goto 302
+300: goto 308
+301: check track map float stack
+302: call header
+303: parameter string_Error20message3A#, offset 6
+304: call function noellipse-noellipse perror
+305: post call
+306: errno = 0
+307: goto 308
+308: call header
+309: parameter string_0A#, offset 6
+310: call function noellipse-ellipse printf, extra 0
+311: post call
+312: empty
+313: return
+314: function end math_test_1
+0: call header
+1: parameter string_fmod2825f2C2025f29203D2025f2C20errno203D2025i0A#, offset 6
+2: push float x
+3: parameter x, offset 8
+4: push float y
+5: parameter y, offset 16
+6: call header
+7: push float x
+8: parameter x, offset 30
+9: push float y
+10: parameter y, offset 38
+11: call function noellipse-noellipse fmod
+12: post call
+13: £temporary4068 = return_value
+14: parameter £temporary4068, offset 24
+15: parameter errno, offset 32
+16: call function noellipse-ellipse printf, extra 0
+17: post call
+18: errno = 0
+19: call header
+20: parameter string_atan22825f2C2025f29203D2025f2C20errno203D2025i0A#, offset 6
+21: push float x
+22: parameter x, offset 8
+23: push float y
+24: parameter y, offset 16
+25: call header
+26: push float x
+27: parameter x, offset 30
+28: push float y
+29: parameter y, offset 38
+30: call function noellipse-noellipse atan2
+31: post call
+32: £temporary4070 = return_value
+33: parameter £temporary4070, offset 24
+34: parameter errno, offset 32
+35: call function noellipse-ellipse printf, extra 0
+36: post call
+37: errno = 0
+38: call header
+39: parameter string_pow2825f2C2025f29203D2025f2C20errno203D2025i0A#, offset 6
+40: push float x
+41: parameter x, offset 8
+42: push float y
+43: parameter y, offset 16
+44: call header
+45: push float x
+46: parameter x, offset 30
+47: push float y
+48: parameter y, offset 38
+49: call function noellipse-noellipse pow
+50: post call
+51: £temporary4072 = return_value
+52: parameter £temporary4072, offset 24
+53: parameter errno, offset 32
+54: call function noellipse-ellipse printf, extra 0
+55: post call
+56: errno = 0
+57: call header
+58: parameter string_0A#, offset 6
+59: call function noellipse-ellipse printf, extra 0
+60: post call
+61: call header
+62: parameter string_ldexp2825f2C2025i29203D2025f0A0A#, offset 6
+63: push float x
+64: parameter x, offset 8
+65: push float y
+66: £temporary4075 = float_to_int y (Double -> Signed_Int)
+67: parameter £temporary4075, offset 16
+68: call header
+69: push float x
+70: parameter x, offset 24
+71: push float y
+72: £temporary4076 = float_to_int y (Double -> Signed_Int)
+73: parameter £temporary4076, offset 32
+74: call function noellipse-noellipse ldexp
+75: post call
+76: £temporary4077 = return_value
+77: parameter £temporary4077, offset 18
+78: call function noellipse-ellipse printf, extra 0
+79: post call
+80: empty
+81: return
+82: function end math_test_2
+0: call header
+1: parameter inFilePtrName, offset 6
+2: parameter string_r#, offset 8
+3: call function noellipse-noellipse fopen
+4: post call
+5: £temporary4107 = return_value
+6: inFilePtrPtr = £temporary4107
+7: if inFilePtrPtr != 0 goto 22
+8: goto 10
+9: check track map float stack
+10: call header
+11: parameter stderr, offset 6
+12: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+13: parameter string_inFilePtrPtr20213D20NULL#, offset 10
+14: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
+15: parameter 10, offset 14
+16: call function noellipse-ellipse fprintf, extra 0
+17: post call
+18: call header
+19: call function noellipse-noellipse abort
+20: post call
+21: goto 22
+22: empty
+23: call header
+24: parameter outFilePtrName, offset 6
+25: parameter string_w#, offset 8
+26: call function noellipse-noellipse fopen
+27: post call
+28: £temporary4112 = return_value
+29: outFilePtrPtr = £temporary4112
+30: if outFilePtrPtr != 0 goto 45
+31: goto 33
+32: check track map float stack
+33: call header
+34: parameter stderr, offset 6
+35: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+36: parameter string_outFilePtrPtr20213D20NULL#, offset 10
+37: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
+38: parameter 12, offset 14
+39: call function noellipse-ellipse fprintf, extra 0
+40: post call
+41: call header
+42: call function noellipse-noellipse abort
+43: post call
+44: goto 45
+45: empty
+46: size = 0
+47: call header
+48: parameter inFilePtrPtr, offset 6
+49: parameter string_25i#, offset 8
+50: £temporary4117 = &size
+51: parameter £temporary4117, offset 10
+52: call function noellipse-ellipse fscanf, extra 0
+53: post call
+54: index = 0
+55: empty
+56: if index < size goto 59
+57: goto 88
+58: check track map float stack
+59: empty
+60: push 0
+61: pop float inValue
+62: call header
+63: parameter inFilePtrPtr, offset 6
+64: parameter string_25lf#, offset 8
+65: push float inValue
+66: pop float empty X
+67: £temporary4121 = &inValue
+68: parameter £temporary4121, offset 10
+69: call function noellipse-ellipse fscanf, extra 0
+70: post call
+71: call header
+72: push float inValue
+73: parameter £temporary4123, offset 6
+74: call function noellipse-noellipse sqrt
+75: post call
+76: £temporary4124 = return_value
+77: pop float outValue
+78: call header
+79: parameter outFilePtrPtr, offset 6
+80: parameter string_25f0A#, offset 8
+81: push float outValue
+82: parameter outValue, offset 10
+83: call function noellipse-ellipse fprintf, extra 0
+84: post call
+85: empty
+86: index = index + 1
+87: goto 55
+88: call header
+89: parameter inFilePtrPtr, offset 6
+90: call function noellipse-noellipse fclose
+91: post call
+92: call header
+93: parameter outFilePtrPtr, offset 6
+94: call function noellipse-noellipse fclose
+95: post call
+96: sourceFilePtr = string_X#
+97: targetFilePtr = string_Y#
+98: call header
+99: parameter sourceFilePtr, offset 6
+100: parameter targetFilePtr, offset 8
+101: call function noellipse-noellipse rename
+102: post call
+103: £temporary4128 = return_value
+104: if £temporary4128 == 0 goto 107
+105: goto 114
+106: check track map float stack
+107: call header
+108: parameter string_2225s2220has20been20renamed20to202225s222E0A#, offset 6
+109: parameter sourceFilePtr, offset 8
+110: parameter targetFilePtr, offset 10
+111: call function noellipse-ellipse printf, extra 0
+112: post call
+113: goto 126
+114: call header
+115: parameter string_Error2025i3A2025s2E0A#, offset 6
+116: parameter errno, offset 8
+117: call header
+118: parameter errno, offset 16
+119: call function noellipse-noellipse strerror
+120: post call
+121: £temporary4131 = return_value
+122: parameter £temporary4131, offset 10
+123: call function noellipse-ellipse printf, extra 0
+124: post call
+125: goto 126
+126: targetFilePtr = string_Z#
+127: call header
+128: parameter targetFilePtr, offset 6
+129: call function noellipse-noellipse remove
+130: post call
+131: £temporary4133 = return_value
+132: if £temporary4133 == 0 goto 135
+133: goto 141
+134: check track map float stack
+135: call header
+136: parameter string_2225s2220has20been20removed2E0A#, offset 6
+137: parameter targetFilePtr, offset 8
+138: call function noellipse-ellipse printf, extra 0
+139: post call
+140: goto 153
+141: call header
+142: parameter string_Error2025i3A2025s2E0A#, offset 6
+143: parameter errno, offset 8
+144: call header
+145: parameter errno, offset 16
+146: call function noellipse-noellipse strerror
+147: post call
+148: £temporary4136 = return_value
+149: parameter £temporary4136, offset 10
+150: call function noellipse-ellipse printf, extra 0
+151: post call
+152: goto 153
+153: call header
+154: parameter string_PBook2Etxt#, offset 6
+155: parameter string_r#, offset 8
+156: call function noellipse-noellipse fopen
+157: post call
+158: £temporary4138 = return_value
+159: inFilePtr = £temporary4138
+160: if inFilePtr != 0 goto 175
+161: goto 163
+162: check track map float stack
+163: call header
+164: parameter stderr, offset 6
+165: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+166: parameter string_inFilePtr20213D20NULL#, offset 10
+167: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
+168: parameter 50, offset 14
+169: call function noellipse-ellipse fprintf, extra 0
+170: post call
+171: call header
+172: call function noellipse-noellipse abort
+173: post call
+174: goto 175
+175: empty
+176: call header
+177: parameter string_0A252D24s20252D24s0A#, offset 6
+178: parameter string_Name#, offset 8
+179: parameter string_Phone#, offset 10
+180: call function noellipse-ellipse printf, extra 0
+181: post call
+182: call header
+183: parameter string_252D24s20252D24s0A#, offset 6
+184: parameter string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#, offset 8
+185: parameter string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#, offset 10
+186: call function noellipse-ellipse printf, extra 0
+187: post call
+188: call header
+189: parameter inFilePtr, offset 6
+190: parameter string_25i#, offset 8
+191: £temporary4145 = &size
+192: parameter £temporary4145, offset 10
+193: call function noellipse-ellipse fscanf, extra 0
+194: post call
+195: count = 0
+196: empty
+197: if count < size goto 200
+198: goto 217
+199: check track map float stack
+200: empty
+201: call header
+202: parameter inFilePtr, offset 6
+203: parameter string_25s25s#, offset 8
+204: parameter name, offset 10
+205: parameter phone, offset 12
+206: call function noellipse-ellipse fscanf, extra 0
+207: post call
+208: call header
+209: parameter string_252D24s20252D24s0A#, offset 6
+210: parameter name, offset 8
+211: parameter phone, offset 10
+212: call function noellipse-ellipse printf, extra 0
+213: post call
+214: empty
+215: count = count + 1
+216: goto 196
+217: call header
+218: parameter string_0A#, offset 6
+219: call function noellipse-ellipse printf, extra 0
+220: post call
+221: call header
+222: parameter inFilePtr, offset 6
+223: call function noellipse-noellipse fclose
+224: post call
+225: sourceFilePtr = string_Flow12Etxt#
+226: targetFilePtr = string_Flow22Etxt#
+227: call header
+228: parameter sourceFilePtr, offset 6
+229: parameter string_r#, offset 8
+230: call function noellipse-noellipse fopen
+231: post call
+232: £temporary4153 = return_value
+233: inFilePtr = £temporary4153
+234: if inFilePtr != 0 goto 249
+235: goto 237
+236: check track map float stack
+237: call header
+238: parameter stderr, offset 6
+239: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+240: parameter string_inFilePtr20213D20NULL#, offset 10
+241: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
+242: parameter 76, offset 14
+243: call function noellipse-ellipse fprintf, extra 0
+244: post call
+245: call header
+246: call function noellipse-noellipse abort
+247: post call
+248: goto 249
+249: empty
+250: call header
+251: parameter targetFilePtr, offset 6
+252: parameter string_w#, offset 8
+253: call function noellipse-noellipse fopen
+254: post call
+255: £temporary4158 = return_value
+256: outFilePtr = £temporary4158
+257: if outFilePtr != 0 goto 272
+258: goto 260
+259: check track map float stack
+260: call header
+261: parameter stderr, offset 6
+262: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+263: parameter string_outFilePtr20213D20NULL#, offset 10
+264: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
+265: parameter 79, offset 14
+266: call function noellipse-ellipse fprintf, extra 0
+267: post call
+268: call header
+269: call function noellipse-noellipse abort
+270: post call
+271: goto 272
+272: empty
+273: goto 275
+274: check track map float stack
+275: call header
+276: parameter inFilePtr, offset 6
+277: call function noellipse-noellipse fgetc
+278: post call
+279: £temporary4163 = return_value
+280: £temporary4164 = int_to_int £temporary4163 (Signed_Int -> Signed_Char)
+281: c = £temporary4164
+282: £temporary4165 = int_to_int c (Signed_Char -> Signed_Int)
+283: if £temporary4165 == -1 goto 286
+284: goto 288
+285: check track map float stack
+286: goto 304
+287: goto 288
+288: call header
+289: £temporary4167 = int_to_int c (Signed_Char -> Signed_Int)
+290: parameter £temporary4167, offset 6
+291: parameter outFilePtr, offset 8
+292: call function noellipse-noellipse putc
+293: post call
+294: if c == 10 goto 297
+295: goto 273
+296: check track map float stack
+297: call header
+298: parameter 10, offset 6
+299: parameter outFilePtr, offset 8
+300: call function noellipse-noellipse putc
+301: post call
+302: goto 273
+303: goto 273
+304: call header
+305: parameter inFilePtr, offset 6
+306: call function noellipse-noellipse fclose
+307: post call
+308: call header
+309: parameter outFilePtr, offset 6
+310: call function noellipse-noellipse fclose
+311: post call
+312: call header
+313: parameter string_Test2Ebin#, offset 6
+314: parameter string_w#, offset 8
+315: call function noellipse-noellipse fopen
+316: post call
+317: £temporary4174 = return_value
+318: outFilePtr = £temporary4174
+319: if outFilePtr != 0 goto 334
+320: goto 322
+321: check track map float stack
+322: call header
+323: parameter stderr, offset 6
+324: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+325: parameter string_outFilePtr20213D20NULL#, offset 10
+326: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
+327: parameter 100, offset 14
+328: call function noellipse-ellipse fprintf, extra 0
+329: post call
+330: call header
+331: call function noellipse-noellipse abort
+332: post call
+333: goto 334
+334: empty
+335: size = 10
+336: call header
+337: £temporary4179 = &size
+338: parameter £temporary4179, offset 6
+339: parameter 2, offset 8
+340: parameter 1, offset 10
+341: parameter outFilePtr, offset 12
+342: call function noellipse-noellipse fwrite
+343: post call
+344: index = 0
+345: empty
+346: if index < size goto 349
+347: goto 366
+348: check track map float stack
+349: empty
+350: £temporary4183 = index * index
+351: £temporary4184 = int_to_float £temporary4183 (Signed_Int -> Double)
+352: pop float value
+353: call header
+354: push float value
+355: pop float empty X
+356: £temporary4185 = &value
+357: parameter £temporary4185, offset 6
+358: parameter 8, offset 8
+359: parameter 1, offset 10
+360: parameter outFilePtr, offset 12
+361: call function noellipse-noellipse fwrite
+362: post call
+363: empty
+364: index = index + 1
+365: goto 345
+366: call header
+367: parameter outFilePtr, offset 6
+368: call function noellipse-noellipse fclose
+369: post call
+370: call header
+371: parameter string_Test2Ebin#, offset 6
+372: parameter string_r#, offset 8
+373: call function noellipse-noellipse fopen
+374: post call
+375: £temporary4188 = return_value
+376: inFilePtr = £temporary4188
+377: if inFilePtr != 0 goto 392
+378: goto 380
+379: check track map float stack
+380: call header
+381: parameter stderr, offset 6
+382: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+383: parameter string_inFilePtr20213D20NULL#, offset 10
+384: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
+385: parameter 115, offset 14
+386: call function noellipse-ellipse fprintf, extra 0
+387: post call
+388: call header
+389: call function noellipse-noellipse abort
+390: post call
+391: goto 392
+392: empty
+393: call header
+394: £temporary4193 = &size
+395: parameter £temporary4193, offset 6
+396: parameter 2, offset 8
+397: parameter 1, offset 10
+398: parameter inFilePtr, offset 12
+399: call function noellipse-noellipse fread
+400: post call
+401: call header
+402: parameter string_size12025i0A#, offset 6
+403: parameter size, offset 8
+404: call function noellipse-ellipse printf, extra 0
+405: post call
+406: call header
+407: £temporary4196 = &arr
+408: parameter £temporary4196, offset 6
+409: parameter 80, offset 8
+410: parameter 1, offset 10
+411: parameter inFilePtr, offset 12
+412: call function noellipse-noellipse fread
+413: post call
+414: call header
+415: parameter inFilePtr, offset 6
+416: call function noellipse-noellipse fclose
+417: post call
+418: index = 0
+419: empty
+420: if index < 10 goto 423
+421: goto 437
+422: check track map float stack
+423: empty
+424: call header
+425: parameter string_index12025i3A20value2025f0A#, offset 6
+426: parameter index, offset 8
+427: £temporary4202 = index * 8
+428: £temporary4203 = arr + £temporary4202
+429: £temporary4201 -> £temporary4203 = *£temporary4203
+430: push float £temporary4201 -> £temporary4203
+431: parameter £temporary4201 -> £temporary4203, offset 10
+432: call function noellipse-ellipse printf, extra 0
+433: post call
+434: empty
+435: index = index + 1
+436: goto 419
+437: call header
+438: parameter string_0A#, offset 6
+439: call function noellipse-ellipse printf, extra 0
+440: post call
+441: call header
+442: parameter string_Test2Ebin#, offset 6
+443: parameter string_r#, offset 8
+444: call function noellipse-noellipse fopen
+445: post call
+446: £temporary4206 = return_value
+447: inFilePtr = £temporary4206
+448: if inFilePtr != 0 goto 463
+449: goto 451
+450: check track map float stack
+451: call header
+452: parameter stderr, offset 6
+453: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+454: parameter string_inFilePtr20213D20NULL#, offset 10
+455: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
+456: parameter 133, offset 14
+457: call function noellipse-ellipse fprintf, extra 0
+458: post call
+459: call header
+460: call function noellipse-noellipse abort
+461: post call
+462: goto 463
+463: empty
+464: call header
+465: £temporary4211 = &size
+466: parameter £temporary4211, offset 6
+467: parameter 2, offset 8
+468: parameter 1, offset 10
+469: parameter inFilePtr, offset 12
+470: call function noellipse-noellipse fread
+471: post call
+472: call header
+473: parameter string_size22025i0A#, offset 6
+474: parameter size, offset 8
+475: call function noellipse-ellipse printf, extra 0
+476: post call
+477: index = 0
+478: empty
+479: if index < size goto 482
+480: goto 503
+481: check track map float stack
+482: empty
+483: call header
+484: push float value
+485: pop float empty X
+486: £temporary4216 = &value
+487: parameter £temporary4216, offset 6
+488: parameter 8, offset 8
+489: parameter 1, offset 10
+490: parameter inFilePtr, offset 12
+491: call function noellipse-noellipse fread
+492: post call
+493: call header
+494: parameter string_index22025i3A20value2025f0A#, offset 6
+495: parameter index, offset 8
+496: push float value
+497: parameter value, offset 10
+498: call function noellipse-ellipse printf, extra 0
+499: post call
+500: empty
+501: index = index + 1
+502: goto 478
+503: call header
+504: parameter string_0A#, offset 6
+505: call function noellipse-ellipse printf, extra 0
+506: post call
+507: call header
+508: parameter inFilePtr, offset 6
+509: call function noellipse-noellipse fclose
+510: post call
+511: call header
+512: parameter string_Test2Ebin#, offset 6
+513: parameter string_r#, offset 8
+514: call function noellipse-noellipse fopen
+515: post call
+516: £temporary4221 = return_value
+517: inFilePtr = £temporary4221
+518: if inFilePtr != 0 goto 533
+519: goto 521
+520: check track map float stack
+521: call header
+522: parameter stderr, offset 6
+523: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+524: parameter string_inFilePtr20213D20NULL#, offset 10
+525: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
+526: parameter 151, offset 14
+527: call function noellipse-ellipse fprintf, extra 0
+528: post call
+529: call header
+530: call function noellipse-noellipse abort
+531: post call
+532: goto 533
+533: empty
+534: call header
+535: £temporary4226 = &size
+536: parameter £temporary4226, offset 6
+537: parameter 2, offset 8
+538: parameter 1, offset 10
+539: parameter inFilePtr, offset 12
+540: call function noellipse-noellipse fread
+541: post call
+542: call header
+543: parameter string_size32025i20total2025i0A#, offset 6
+544: parameter size, offset 8
+545: £temporary4228 = size * 8
+546: parameter £temporary4228, offset 10
+547: call function noellipse-ellipse printf, extra 0
+548: post call
+549: £temporary4230 = size * 8
+550: total = £temporary4230
+551: call header
+552: parameter total, offset 6
+553: call function noellipse-noellipse malloc
+554: post call
+555: £temporary4231 = return_value
+556: p = £temporary4231
+557: if p != 0 goto 572
+558: goto 560
+559: check track map float stack
+560: call header
+561: parameter stderr, offset 6
+562: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+563: parameter string_p20213D20NULL#, offset 10
+564: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
+565: parameter 159, offset 14
+566: call function noellipse-ellipse fprintf, extra 0
+567: post call
+568: call header
+569: call function noellipse-noellipse abort
+570: post call
+571: goto 572
+572: empty
+573: £temporary4236 = size * 8
+574: £temporary4237 = p + £temporary4236
+575: endPtr = £temporary4237
+576: call header
+577: parameter string_malloc2025u2025u2025u0A#, offset 6
+578: parameter p, offset 8
+579: parameter total, offset 10
+580: parameter endPtr, offset 12
+581: call function noellipse-ellipse printf, extra 0
+582: post call
+583: call header
+584: parameter p, offset 6
+585: parameter total, offset 8
+586: parameter 1, offset 10
+587: parameter inFilePtr, offset 12
+588: call function noellipse-noellipse fread
+589: post call
+590: index = 0
+591: empty
+592: if index < size goto 595
+593: goto 609
+594: check track map float stack
+595: empty
+596: call header
+597: parameter string_index32025i3A20value2025f0A#, offset 6
+598: parameter index, offset 8
+599: £temporary4243 = index * 8
+600: £temporary4244 = p + £temporary4243
+601: £temporary4242 -> £temporary4244 = *£temporary4244
+602: push float £temporary4242 -> £temporary4244
+603: parameter £temporary4242 -> £temporary4244, offset 10
+604: call function noellipse-ellipse printf, extra 0
+605: post call
+606: empty
+607: index = index + 1
+608: goto 591
+609: call header
+610: parameter string_0A#, offset 6
+611: call function noellipse-ellipse printf, extra 0
+612: post call
+613: call header
+614: parameter p, offset 6
+615: call function noellipse-noellipse free
+616: post call
+617: call header
+618: parameter inFilePtr, offset 6
+619: call function noellipse-noellipse fclose
+620: post call
+621: personVector[0]$name[0] = 65
+622: personVector[0]$name[1] = 100
+623: personVector[0]$name[2] = 97
+624: personVector[0]$name[3] = 109
+625: personVector[0]$name[4] = 32
+626: personVector[0]$name[5] = 66
+627: personVector[0]$name[6] = 101
+628: personVector[0]$name[7] = 114
+629: personVector[0]$name[8] = 116
+630: personVector[0]$name[9] = 105
+631: personVector[0]$name[10] = 108
+632: personVector[0]$name[11] = 115
+633: personVector[0]$name[12] = 115
+634: personVector[0]$name[13] = 111
+635: personVector[0]$name[14] = 110
+636: personVector[0]$name[15] = 0
+637: personVector[0]$phone = 12345
+638: personVector[1]$name[0] = 66
+639: personVector[1]$name[1] = 101
+640: personVector[1]$name[2] = 114
+641: personVector[1]$name[3] = 116
+642: personVector[1]$name[4] = 105
+643: personVector[1]$name[5] = 108
+644: personVector[1]$name[6] = 32
+645: personVector[1]$name[7] = 67
+646: personVector[1]$name[8] = 101
+647: personVector[1]$name[9] = 97
+648: personVector[1]$name[10] = 115
+649: personVector[1]$name[11] = 97
+650: personVector[1]$name[12] = 114
+651: personVector[1]$name[13] = 115
+652: personVector[1]$name[14] = 115
+653: personVector[1]$name[15] = 111
+654: personVector[1]$name[16] = 110
+655: personVector[1]$name[17] = 0
+656: personVector[1]$phone = 23456
+657: personVector[2]$name[0] = 67
+658: personVector[2]$name[1] = 101
+659: personVector[2]$name[2] = 97
+660: personVector[2]$name[3] = 115
+661: personVector[2]$name[4] = 97
+662: personVector[2]$name[5] = 114
+663: personVector[2]$name[6] = 32
+664: personVector[2]$name[7] = 68
+665: personVector[2]$name[8] = 97
+666: personVector[2]$name[9] = 118
+667: personVector[2]$name[10] = 105
+668: personVector[2]$name[11] = 100
+669: personVector[2]$name[12] = 115
+670: personVector[2]$name[13] = 115
+671: personVector[2]$name[14] = 111
+672: personVector[2]$name[15] = 110
+673: personVector[2]$name[16] = 0
+674: personVector[2]$phone = 24567
+675: call header
+676: parameter string_Block2Ebin#, offset 6
+677: parameter string_w#, offset 8
+678: call function noellipse-noellipse fopen
+679: post call
+680: £temporary4309 = return_value
+681: outFilePtr = £temporary4309
+682: if outFilePtr != 0 goto 697
+683: goto 685
+684: check track map float stack
+685: call header
+686: parameter stderr, offset 6
+687: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+688: parameter string_outFilePtr20213D20NULL#, offset 10
+689: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
+690: parameter 185, offset 14
+691: call function noellipse-ellipse fprintf, extra 0
+692: post call
+693: call header
+694: call function noellipse-noellipse abort
+695: post call
+696: goto 697
+697: empty
+698: call header
+699: parameter personVector, offset 6
+700: parameter 150, offset 8
+701: parameter 1, offset 10
+702: parameter outFilePtr, offset 12
+703: call function noellipse-noellipse fwrite
+704: post call
+705: call header
+706: parameter outFilePtr, offset 6
+707: call function noellipse-noellipse fclose
+708: post call
+709: call header
+710: parameter string_Block2Ebin#, offset 6
+711: parameter string_r#, offset 8
+712: call function noellipse-noellipse fopen
+713: post call
+714: £temporary4316 = return_value
+715: inFilePtr = £temporary4316
+716: if inFilePtr != 0 goto 731
+717: goto 719
+718: check track map float stack
+719: call header
+720: parameter stderr, offset 6
+721: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+722: parameter string_inFilePtr20213D20NULL#, offset 10
+723: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
+724: parameter 191, offset 14
+725: call function noellipse-ellipse fprintf, extra 0
+726: post call
+727: call header
+728: call function noellipse-noellipse abort
+729: post call
+730: goto 731
+731: empty
+732: call header
+733: parameter inFilePtr, offset 6
+734: call function noellipse-noellipse feof
+735: post call
+736: £temporary4321 = return_value
+737: if £temporary4321 != 0 goto 759
+738: goto 740
+739: check track map float stack
+740: call header
+741: £temporary4324 = &person
+742: parameter £temporary4324, offset 6
+743: parameter 50, offset 8
+744: parameter 1, offset 10
+745: parameter inFilePtr, offset 12
+746: call function noellipse-noellipse fread
+747: post call
+748: call header
+749: parameter string_Name20203A2025s0A#, offset 6
+750: parameter person$name, offset 8
+751: call function noellipse-ellipse printf, extra 0
+752: post call
+753: call header
+754: parameter string_Phone203A2025d0A#, offset 6
+755: parameter person$phone, offset 8
+756: call function noellipse-ellipse printf, extra 0
+757: post call
+758: goto 732
+759: call header
+760: parameter inFilePtr, offset 6
+761: call function noellipse-noellipse fclose
+762: post call
+763: call header
+764: parameter string_Test12Etxt#, offset 6
+765: parameter string_r#, offset 8
+766: call function noellipse-noellipse fopen
+767: post call
+768: £temporary4331 = return_value
+769: inFilePtr = £temporary4331
+770: if inFilePtr != 0 goto 785
+771: goto 773
+772: check track map float stack
+773: call header
+774: parameter stderr, offset 6
+775: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+776: parameter string_inFilePtr20213D20NULL#, offset 10
+777: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
+778: parameter 204, offset 14
+779: call function noellipse-ellipse fprintf, extra 0
+780: post call
+781: call header
+782: call function noellipse-noellipse abort
+783: post call
+784: goto 785
+785: empty
+786: call header
+787: parameter inFilePtr, offset 6
+788: parameter -1, offset 8
+789: parameter 2, offset 10
+790: call function noellipse-noellipse fseek
+791: post call
+792: call header
+793: parameter inFilePtr, offset 6
+794: call function noellipse-noellipse ftell
+795: post call
+796: £temporary4337 = return_value
+797: £temporary4338 = int_to_int £temporary4337 (Signed_Int -> Unsigned_Int)
+798: u = £temporary4338
+799: if u >= 0 goto 802
+800: goto 826
+801: check track map float stack
+802: call header
+803: parameter inFilePtr, offset 6
+804: call function noellipse-noellipse fgetc
+805: post call
+806: £temporary4340 = return_value
+807: £temporary4341 = int_to_int £temporary4340 (Signed_Int -> Signed_Char)
+808: c = £temporary4341
+809: call header
+810: £temporary4342 = int_to_int c (Signed_Char -> Signed_Int)
+811: parameter £temporary4342, offset 6
+812: call function noellipse-noellipse putchar
+813: post call
+814: if u == 0 goto 817
+815: goto 819
+816: check track map float stack
+817: goto 826
+818: goto 819
+819: call header
+820: parameter inFilePtr, offset 6
+821: parameter -2, offset 8
+822: parameter 1, offset 10
+823: call function noellipse-noellipse fseek
+824: post call
+825: goto 792
+826: call header
+827: parameter string_0A0A#, offset 6
+828: call function noellipse-ellipse printf, extra 0
+829: post call
+830: call header
+831: parameter inFilePtr, offset 6
+832: call function noellipse-noellipse fclose
+833: post call
+834: call header
+835: parameter string_fileexists20X2025s0A#, offset 6
+836: call header
+837: parameter string_X#, offset 14
+838: call function noellipse-noellipse fileexists
+839: post call
+840: £temporary4348 = return_value
+841: if £temporary4348 != 0 goto 843
+842: goto 846
+843: empty
+844: £temporary4353 = string_Yes#
+845: goto 848
+846: empty
+847: £temporary4353 = string_No#
+848: empty
+849: parameter £temporary4353, offset 8
+850: call function noellipse-ellipse printf, extra 0
+851: post call
+852: call header
+853: parameter string_fileexists20Y2025s0A0A#, offset 6
+854: call header
+855: parameter string_Y#, offset 14
+856: call function noellipse-noellipse fileexists
+857: post call
+858: £temporary4355 = return_value
+859: if £temporary4355 != 0 goto 861
+860: goto 864
+861: empty
+862: £temporary4360 = string_Yes#
+863: goto 866
+864: empty
+865: £temporary4360 = string_No#
+866: empty
+867: parameter £temporary4360, offset 8
+868: call function noellipse-ellipse printf, extra 0
+869: post call
+870: call header
+871: parameter string_PBookX2Etxt#, offset 6
+872: parameter string_r2B#, offset 8
+873: call function noellipse-noellipse fopen
+874: post call
+875: £temporary4362 = return_value
+876: inOutFilePtr = £temporary4362
+877: if inOutFilePtr != 0 goto 892
+878: goto 880
+879: check track map float stack
+880: call header
+881: parameter stderr, offset 6
+882: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+883: parameter string_inOutFilePtr20213D20NULL#, offset 10
+884: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
+885: parameter 228, offset 14
+886: call function noellipse-ellipse fprintf, extra 0
+887: post call
+888: call header
+889: call function noellipse-noellipse abort
+890: post call
+891: goto 892
+892: empty
+893: call header
+894: call function noellipse-noellipse tmpfile
+895: post call
+896: £temporary4367 = return_value
+897: tempFilePtr = £temporary4367
+898: if tempFilePtr != 0 goto 913
+899: goto 901
+900: check track map float stack
+901: call header
+902: parameter stderr, offset 6
+903: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+904: parameter string_tempFilePtr20213D20NULL#, offset 10
+905: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
+906: parameter 231, offset 14
+907: call function noellipse-ellipse fprintf, extra 0
+908: post call
+909: call header
+910: call function noellipse-noellipse abort
+911: post call
+912: goto 913
+913: empty
+914: goto 916
+915: check track map float stack
+916: call header
+917: parameter inOutFilePtr, offset 6
+918: call function noellipse-noellipse fgetc
+919: post call
+920: £temporary4372 = return_value
+921: £temporary4373 = int_to_int £temporary4372 (Signed_Int -> Signed_Char)
+922: c = £temporary4373
+923: £temporary4374 = int_to_int c (Signed_Char -> Signed_Int)
+924: if £temporary4374 == -1 goto 927
+925: goto 929
+926: check track map float stack
+927: goto 941
+928: goto 929
+929: call header
+930: call header
+931: £temporary4376 = int_to_int c (Signed_Char -> Signed_Int)
+932: parameter £temporary4376, offset 6
+933: call function noellipse-noellipse toupper
+934: post call
+935: £temporary4377 = return_value
+936: parameter £temporary4377, offset 6
+937: parameter tempFilePtr, offset 8
+938: call function noellipse-noellipse putc
+939: post call
+940: goto 914
+941: call header
+942: parameter tempFilePtr, offset 6
+943: call function noellipse-noellipse rewind
+944: post call
+945: call header
+946: parameter inOutFilePtr, offset 6
+947: parameter string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A#, offset 8
+948: call function noellipse-ellipse fprintf, extra 0
+949: post call
+950: goto 952
+951: check track map float stack
+952: call header
+953: parameter tempFilePtr, offset 6
+954: call function noellipse-noellipse fgetc
+955: post call
+956: £temporary4382 = return_value
+957: £temporary4383 = int_to_int £temporary4382 (Signed_Int -> Signed_Char)
+958: c = £temporary4383
+959: £temporary4384 = int_to_int c (Signed_Char -> Signed_Int)
+960: if £temporary4384 == -1 goto 963
+961: goto 965
+962: check track map float stack
+963: goto 972
+964: goto 965
+965: call header
+966: £temporary4386 = int_to_int c (Signed_Char -> Signed_Int)
+967: parameter £temporary4386, offset 6
+968: parameter inOutFilePtr, offset 8
+969: call function noellipse-noellipse putc
+970: post call
+971: goto 950
+972: call header
+973: parameter inOutFilePtr, offset 6
+974: call function noellipse-noellipse fclose
+975: post call
+976: call header
+977: parameter tempFilePtr, offset 6
+978: call function noellipse-noellipse fclose
+979: post call
+980: empty
+981: return
+982: function end file_test
+0: n = 0
+1: £temporary4661 = &n
+2: p = £temporary4661
+3: call header
+4: parameter string_3C25i3E203C25i3E203C25li3E203C25li3E203C25u3E203C25lu3E0A0A#, offset 6
+5: parameter 123, offset 8
+6: parameter -123, offset 10
+7: parameter 123, offset 12
+8: parameter -123, offset 16
+9: parameter 123, offset 20
+10: parameter 123, offset 22
+11: call function noellipse-ellipse printf, extra 0
+12: post call
+13: call header
+14: parameter string_3C256i3E203C256i3E203C256li3E203C256li3E203C256u3E203C256lu3E0A#, offset 6
+15: parameter 123, offset 8
+16: parameter -123, offset 10
+17: parameter 123, offset 12
+18: parameter -123, offset 16
+19: parameter 123, offset 20
+20: parameter 123, offset 22
+21: call function noellipse-ellipse printf, extra 0
+22: post call
+23: call header
+24: parameter string_3C252B6i3E203C252B6i3E203C252B6li3E203C252B6li3E203C252B6u3E203C252B6lu3E0A#, offset 6
+25: parameter 123, offset 8
+26: parameter -123, offset 10
+27: parameter 123, offset 12
+28: parameter -123, offset 16
+29: parameter 123, offset 20
+30: parameter 123, offset 22
+31: call function noellipse-ellipse printf, extra 0
+32: post call
+33: call header
+34: parameter string_3C252D6i3E203C252D6i3E203C252D6li3E203C252D6li3E203C252D6u3E203C252D6lu3E0A#, offset 6
+35: parameter 123, offset 8
+36: parameter -123, offset 10
+37: parameter 123, offset 12
+38: parameter -123, offset 16
+39: parameter 123, offset 20
+40: parameter 123, offset 22
+41: call function noellipse-ellipse printf, extra 0
+42: post call
+43: call header
+44: parameter string_3C252B2D6i3E203C252B2D6i3E203C252B2D6li3E203C252B2D6li3E203C252B2D6u3E203C252B2D6lu3E0A0A#, offset 6
+45: parameter 123, offset 8
+46: parameter -123, offset 10
+47: parameter 123, offset 12
+48: parameter -123, offset 16
+49: parameter 123, offset 20
+50: parameter 123, offset 22
+51: call function noellipse-ellipse printf, extra 0
+52: post call
+53: call header
+54: parameter string_3C2506i3E203C2506i3E203C2506li3E203C2506li3E203C2506u3E203C2506lu3E0A#, offset 6
+55: parameter 123, offset 8
+56: parameter -123, offset 10
+57: parameter 123, offset 12
+58: parameter -123, offset 16
+59: parameter 123, offset 20
+60: parameter 123, offset 22
+61: call function noellipse-ellipse printf, extra 0
+62: post call
+63: call header
+64: parameter string_3C252B06i3E203C252B06i3E203C252B06li3E203C252B06li3E203C252B06u3E203C252B06lu3E0A#, offset 6
+65: parameter 123, offset 8
+66: parameter -123, offset 10
+67: parameter 123, offset 12
+68: parameter -123, offset 16
+69: parameter 123, offset 20
+70: parameter 123, offset 22
+71: call function noellipse-ellipse printf, extra 0
+72: post call
+73: call header
+74: parameter string_3C252D06i3E203C252D06i3E203C252D06li3E203C252D06li3E203C252D06u3E203C252D06lu3E0A#, offset 6
+75: parameter 123, offset 8
+76: parameter -123, offset 10
+77: parameter 123, offset 12
+78: parameter -123, offset 16
+79: parameter 123, offset 20
+80: parameter 123, offset 22
+81: call function noellipse-ellipse printf, extra 0
+82: post call
+83: call header
+84: parameter string_3C252B2D06i3E203C252B2D06i3E203C252B2D06li3E203C252B2D06li3E203C252B2D06u3E203C252B2D06lu3E0A0A#, offset 6
+85: parameter 123, offset 8
+86: parameter -123, offset 10
+87: parameter 123, offset 12
+88: parameter -123, offset 16
+89: parameter 123, offset 20
+90: parameter 123, offset 22
+91: call function noellipse-ellipse printf, extra 0
+92: post call
+93: call header
+94: parameter string_3C25206i3E203C25206i3E203C25206li3E203C25206li3E203C25206u3E203C25206lu3E0A#, offset 6
+95: parameter 123, offset 8
+96: parameter -123, offset 10
+97: parameter 123, offset 12
+98: parameter -123, offset 16
+99: parameter 123, offset 20
+100: parameter 123, offset 22
+101: call function noellipse-ellipse printf, extra 0
+102: post call
+103: call header
+104: parameter string_3C252B206i3E203C252B206i3E203C252B206li3E203C252B206li3E203C252B206u3E203C252B206lu3E0A#, offset 6
+105: parameter 123, offset 8
+106: parameter -123, offset 10
+107: parameter 123, offset 12
+108: parameter -123, offset 16
+109: parameter 123, offset 20
+110: parameter 123, offset 22
+111: call function noellipse-ellipse printf, extra 0
+112: post call
+113: call header
+114: parameter string_3C252D206i3E203C252D206i3E203C252D206li3E203C252D206li3E203C252D206u3E203C252D206lu3E0A#, offset 6
+115: parameter 123, offset 8
+116: parameter -123, offset 10
+117: parameter 123, offset 12
+118: parameter -123, offset 16
+119: parameter 123, offset 20
+120: parameter 123, offset 22
+121: call function noellipse-ellipse printf, extra 0
+122: post call
+123: call header
+124: parameter string_3C252B2D206i3E203C252B2D206i3E203C252B2D206li3E203C252B2D206li3E203C252B2D206u3E203C252B2D206lu3E0A0A#, offset 6
+125: parameter 123, offset 8
+126: parameter -123, offset 10
+127: parameter 123, offset 12
+128: parameter -123, offset 16
+129: parameter 123, offset 20
+130: parameter 123, offset 22
+131: call function noellipse-ellipse printf, extra 0
+132: post call
+133: call header
+134: parameter string_3C25x3E203C25X3E203C25o3E203C25lx3E203C25lX3E203C25lo3E0A#, offset 6
+135: parameter 123, offset 8
+136: parameter 123, offset 10
+137: parameter 123, offset 12
+138: parameter 123, offset 14
+139: parameter 123, offset 18
+140: parameter 123, offset 22
+141: call function noellipse-ellipse printf, extra 0
+142: post call
+143: call header
+144: parameter string_3C2523x3E203C2523X3E203C2523o3E203C2523lx3E203C2523lX3E203C2523lo3E0A#, offset 6
+145: parameter 123, offset 8
+146: parameter 123, offset 10
+147: parameter 123, offset 12
+148: parameter 123, offset 14
+149: parameter 123, offset 18
+150: parameter 123, offset 22
+151: call function noellipse-ellipse printf, extra 0
+152: post call
+153: call header
+154: parameter string_3C25253E203C25s3E203C25c3E203C25p3E0A0A#, offset 6
+155: parameter string_Hello2C20World21#, offset 8
+156: parameter 88, offset 10
+157: parameter p, offset 12
+158: call function noellipse-ellipse printf, extra 0
+159: post call
+160: call header
+161: parameter string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A#, offset 6
+162: push float 123.456
+163: parameter 123.456, offset 8
+164: push float 123.456
+165: parameter 123.456, offset 16
+166: push float 123.456
+167: parameter 123.456, offset 24
+168: push float 123456.1
+169: parameter 123456.1, offset 32
+170: push float 123456.1
+171: parameter 123456.1, offset 40
+172: call function noellipse-ellipse printf, extra 0
+173: post call
+174: call header
+175: parameter string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A#, offset 6
+176: push float 123.456
+177: parameter 123.456, offset 8
+178: push float 123.456
+179: parameter 123.456, offset 16
+180: push float 123.456
+181: parameter 123.456, offset 24
+182: push float 123456.1
+183: parameter 123456.1, offset 32
+184: push float 123456.1
+185: parameter 123456.1, offset 40
+186: call function noellipse-ellipse printf, extra 0
+187: post call
+188: call header
+189: parameter string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A#, offset 6
+190: push float 123.456
+191: parameter 123.456, offset 8
+192: push float 123.456
+193: parameter 123.456, offset 16
+194: push float 123.456
+195: parameter 123.456, offset 24
+196: push float 123.456
+197: parameter 123.456, offset 32
+198: push float 123.456
+199: parameter 123.456, offset 40
+200: call function noellipse-ellipse printf, extra 0
+201: post call
+202: call header
+203: parameter string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A#, offset 6
+204: push float 123.456
+205: parameter 123.456, offset 8
+206: push float 123.456
+207: parameter 123.456, offset 16
+208: push float 123.456
+209: parameter 123.456, offset 24
+210: push float 123.456
+211: parameter 123.456, offset 32
+212: push float 123.456
+213: parameter 123.456, offset 40
+214: call function noellipse-ellipse printf, extra 0
+215: post call
+216: call header
+217: parameter string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A#, offset 6
+218: push float 123.456
+219: parameter 123.456, offset 8
+220: push float 123.456
+221: parameter 123.456, offset 16
+222: push float 123.456
+223: parameter 123.456, offset 24
+224: push float 123.456
+225: parameter 123.456, offset 32
+226: push float 123.456
+227: parameter 123.456, offset 40
+228: call function noellipse-ellipse printf, extra 0
+229: post call
+230: call header
+231: parameter string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A#, offset 6
+232: push float 123.456
+233: parameter 123.456, offset 8
+234: push float 123.456
+235: parameter 123.456, offset 16
+236: push float 123.456
+237: parameter 123.456, offset 24
+238: push float 123.456
+239: parameter 123.456, offset 32
+240: push float 123.456
+241: parameter 123.456, offset 40
+242: call function noellipse-ellipse printf, extra 0
+243: post call
+244: call header
+245: parameter string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A#, offset 6
+246: push float -123.456
+247: parameter -123.456, offset 8
+248: push float -123.456
+249: parameter -123.456, offset 16
+250: push float -123.456
+251: parameter -123.456, offset 24
+252: push float -0.000000123456
+253: parameter -0.000000123456, offset 32
+254: push float -0.000000123456
+255: parameter -0.000000123456, offset 40
+256: call function noellipse-ellipse printf, extra 0
+257: post call
+258: call header
+259: parameter string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A#, offset 6
+260: push float -123.456
+261: parameter -123.456, offset 8
+262: push float -123.456
+263: parameter -123.456, offset 16
+264: push float -123.456
+265: parameter -123.456, offset 24
+266: push float -0.000000123456
+267: parameter -0.000000123456, offset 32
+268: push float -0.000000123456
+269: parameter -0.000000123456, offset 40
+270: call function noellipse-ellipse printf, extra 0
+271: post call
+272: call header
+273: parameter string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A#, offset 6
+274: push float -123.456
+275: parameter -123.456, offset 8
+276: push float -123.456
+277: parameter -123.456, offset 16
+278: push float -123.456
+279: parameter -123.456, offset 24
+280: push float -123.456
+281: parameter -123.456, offset 32
+282: push float -123.456
+283: parameter -123.456, offset 40
+284: call function noellipse-ellipse printf, extra 0
+285: post call
+286: call header
+287: parameter string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A#, offset 6
+288: push float -123.456
+289: parameter -123.456, offset 8
+290: push float -123.456
+291: parameter -123.456, offset 16
+292: push float -123.456
+293: parameter -123.456, offset 24
+294: push float -123.456
+295: parameter -123.456, offset 32
+296: push float -123.456
+297: parameter -123.456, offset 40
+298: call function noellipse-ellipse printf, extra 0
+299: post call
+300: call header
+301: parameter string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A#, offset 6
+302: push float -123.456
+303: parameter -123.456, offset 8
+304: push float -123.456
+305: parameter -123.456, offset 16
+306: push float -123.456
+307: parameter -123.456, offset 24
+308: push float -123.456
+309: parameter -123.456, offset 32
+310: push float -123.456
+311: parameter -123.456, offset 40
+312: call function noellipse-ellipse printf, extra 0
+313: post call
+314: call header
+315: parameter string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A#, offset 6
+316: push float -123.456
+317: parameter -123.456, offset 8
+318: push float -123.456
+319: parameter -123.456, offset 16
+320: push float -123.456
+321: parameter -123.456, offset 24
+322: push float -123.456
+323: parameter -123.456, offset 32
+324: push float -123.456
+325: parameter -123.456, offset 40
+326: call function noellipse-ellipse printf, extra 0
+327: post call
+328: call header
+329: parameter string_Please20write20the20patterns205Babc5D3A20#, offset 6
+330: call function noellipse-ellipse printf, extra 0
+331: post call
+332: call header
+333: parameter string_255Babc5D#, offset 6
+334: parameter s, offset 8
+335: call function noellipse-ellipse scanf, extra 0
+336: post call
+337: call header
+338: parameter string_0A3C25s3E0A#, offset 6
+339: parameter s, offset 8
+340: call function noellipse-ellipse printf, extra 0
+341: post call
+342: call header
+343: parameter string_Please20write20the20patterns205B5Eabc5D3A20#, offset 6
+344: call function noellipse-ellipse printf, extra 0
+345: post call
+346: call header
+347: parameter string_255B5Eabc5D#, offset 6
+348: parameter s, offset 8
+349: call function noellipse-ellipse scanf, extra 0
+350: post call
+351: call header
+352: parameter string_0A3C25s3E#, offset 6
+353: parameter s, offset 8
+354: call function noellipse-ellipse printf, extra 0
+355: post call
+356: empty
+357: return
+358: function end stdio_test
+0: call header
+1: parameter string_Floating20point20error3A2025i0A#, offset 6
+2: parameter sig, offset 8
+3: call function noellipse-ellipse printf, extra 0
+4: post call
+5: empty
+6: return
+7: function end floating_point_error
+0: call header
+1: parameter string_exit10A#, offset 6
+2: call function noellipse-ellipse printf, extra 0
+3: post call
+4: empty
+5: return
+6: function end exit_handle1
+0: call header
+1: parameter string_exit20A#, offset 6
+2: call function noellipse-ellipse printf, extra 0
+3: post call
+4: empty
+5: return
+6: function end exit_handle2
+0: call header
+1: parameter string_exit30A#, offset 6
+2: call function noellipse-ellipse printf, extra 0
+3: post call
+4: empty
+5: return
+6: function end exit_handle3
+0: a = 1
+1: b = 1
+2: £temporary4897 = a / b
+3: c = £temporary4897
+4: call header
+5: parameter string_25i0A#, offset 6
+6: parameter c, offset 8
+7: call function noellipse-ellipse printf, extra 0
+8: post call
+9: call header
+10: parameter exit_handle1, offset 6
+11: call function noellipse-noellipse atexit
+12: post call
+13: call header
+14: parameter exit_handle2, offset 6
+15: call function noellipse-noellipse atexit
+16: post call
+17: call header
+18: parameter exit_handle3, offset 6
+19: call function noellipse-noellipse atexit
+20: post call
+21: call header
+22: parameter 0, offset 6
+23: call function noellipse-noellipse exit
+24: post call
+25: empty
+26: return
+27: function end signal_test
+0: call header
+1: parameter string_25i20#, offset 6
+2: £temporary4909 = i
+3: i = i + 1
+4: parameter £temporary4909, offset 8
+5: call function noellipse-ellipse printf, extra 0
+6: post call
+7: call header
+8: call function noellipse-noellipse stack_test
+9: post call
+10: empty
+11: return
+12: function end stack_test
+0: count = 0
+1: call header
+2: parameter 1024, offset 6
+3: call function noellipse-noellipse malloc
+4: post call
+5: £temporary4914 = return_value
+6: pointer = £temporary4914
+7: if pointer != 0 goto 10
+8: goto 19
+9: check track map float stack
+10: call header
+11: parameter string_102420bytes2Dblock20number3A2025i0A#, offset 6
+12: £temporary4916 = count
+13: count = count + 1
+14: parameter £temporary4916, offset 8
+15: parameter pointer, offset 10
+16: call function noellipse-ellipse printf, extra 0
+17: post call
+18: goto 1
+19: empty
+20: return
+21: function end heap_test
+0: p = 0
+1: r = 0
+2: call header
+3: parameter 96, offset 6
+4: call function noellipse-noellipse malloc
+5: post call
+6: £temporary4922 = return_value
+7: q = £temporary4922
+8: index = 0
+9: empty
+10: if index < 10 goto 13
+11: goto 28
+12: check track map float stack
+13: empty
+14: call header
+15: parameter 96, offset 6
+16: call function noellipse-noellipse malloc
+17: post call
+18: £temporary4925 = return_value
+19: p = £temporary4925
+20: if index == 5 goto 23
+21: goto 25
+22: check track map float stack
+23: r = p
+24: goto 25
+25: empty
+26: index = index + 1
+27: goto 9
+28: call header
+29: call function noellipse-noellipse print_heap
+30: post call
+31: call header
+32: parameter q, offset 6
+33: parameter 50, offset 8
+34: call function noellipse-noellipse realloc
+35: post call
+36: call header
+37: call function noellipse-noellipse print_heap
+38: post call
+39: call header
+40: parameter r, offset 6
+41: parameter 50, offset 8
+42: call function noellipse-noellipse realloc
+43: post call
+44: call header
+45: call function noellipse-noellipse print_heap
+46: post call
+47: call header
+48: parameter p, offset 6
+49: parameter 50, offset 8
+50: call function noellipse-noellipse realloc
+51: post call
+52: call header
+53: call function noellipse-noellipse print_heap
+54: post call
+55: call header
+56: parameter q, offset 6
+57: parameter 200, offset 8
+58: call function noellipse-noellipse realloc
+59: post call
+60: call header
+61: call function noellipse-noellipse print_heap
+62: post call
+63: call header
+64: parameter r, offset 6
+65: parameter 200, offset 8
+66: call function noellipse-noellipse realloc
+67: post call
+68: call header
+69: call function noellipse-noellipse print_heap
+70: post call
+71: call header
+72: parameter p, offset 6
+73: parameter 200, offset 8
+74: call function noellipse-noellipse realloc
+75: post call
+76: call header
+77: call function noellipse-noellipse print_heap
+78: post call
+79: empty
+80: return
+81: function end malloc_test2
+0: call header
+1: parameter 96, offset 6
+2: parameter 1, offset 8
+3: call function noellipse-noellipse calloc
+4: post call
+5: £temporary4954 = return_value
+6: a = £temporary4954
+7: call header
+8: parameter 96, offset 6
+9: parameter 1, offset 8
+10: call function noellipse-noellipse calloc
+11: post call
+12: £temporary4955 = return_value
+13: b = £temporary4955
+14: call header
+15: parameter 96, offset 6
+16: parameter 1, offset 8
+17: call function noellipse-noellipse calloc
+18: post call
+19: £temporary4956 = return_value
+20: c = £temporary4956
+21: call header
+22: parameter 96, offset 6
+23: parameter 1, offset 8
+24: call function noellipse-noellipse calloc
+25: post call
+26: £temporary4957 = return_value
+27: d = £temporary4957
+28: call header
+29: parameter 96, offset 6
+30: parameter 1, offset 8
+31: call function noellipse-noellipse calloc
+32: post call
+33: £temporary4958 = return_value
+34: e = £temporary4958
+35: call header
+36: call function noellipse-noellipse print_heap
+37: post call
+38: call header
+39: parameter a, offset 6
+40: call function noellipse-noellipse free
+41: post call
+42: call header
+43: parameter b, offset 6
+44: call function noellipse-noellipse free
+45: post call
+46: call header
+47: parameter c, offset 6
+48: call function noellipse-noellipse free
+49: post call
+50: call header
+51: parameter d, offset 6
+52: call function noellipse-noellipse free
+53: post call
+54: call header
+55: parameter e, offset 6
+56: call function noellipse-noellipse free
+57: post call
+58: call header
+59: call function noellipse-noellipse print_heap
+60: post call
+61: empty
+62: return
+63: function end malloc_test3
+0: £temporary4981 = bp
+1: stackTop = £temporary4981
+2: lowHeapPtr = 65534
+3: call header
+4: parameter string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#, offset 6
+5: parameter stackTop, offset 8
+6: £temporary4982 -> lowHeapPtr = *lowHeapPtr
+7: parameter £temporary4982 -> lowHeapPtr, offset 10
+8: call function noellipse-ellipse printf, extra 0
+9: post call
+10: call header
+11: call function noellipse-noellipse rec
+12: post call
+13: empty
+14: return
+15: function end rec
+0: call header
+1: call function noellipse-noellipse rec
+2: post call
+3: empty
+4: return
+5: function end malloc_test4
+0: call header
+1: parameter 96, offset 6
+2: call function noellipse-noellipse malloc
+3: post call
+4: £temporary4989 = return_value
+5: b = £temporary4989
+6: call header
+7: parameter 96, offset 6
+8: call function noellipse-noellipse malloc
+9: post call
+10: £temporary4990 = return_value
+11: c = £temporary4990
+12: call header
+13: parameter 96, offset 6
+14: call function noellipse-noellipse malloc
+15: post call
+16: £temporary4991 = return_value
+17: d = £temporary4991
+18: call header
+19: call function noellipse-noellipse print_heap
+20: post call
+21: call header
+22: parameter c, offset 6
+23: parameter 40, offset 8
+24: call function noellipse-noellipse realloc
+25: post call
+26: call header
+27: call function noellipse-noellipse print_heap
+28: post call
+29: call header
+30: parameter 40, offset 6
+31: call function noellipse-noellipse malloc
+32: post call
+33: call header
+34: call function noellipse-noellipse print_heap
+35: post call
+36: call header
+37: parameter b, offset 6
+38: call function noellipse-noellipse free
+39: post call
+40: call header
+41: call function noellipse-noellipse print_heap
+42: post call
+43: call header
+44: parameter d, offset 6
+45: call function noellipse-noellipse free
+46: post call
+47: call header
+48: call function noellipse-noellipse print_heap
+49: post call
+50: empty
+51: return
+52: function end malloc_test
+0: £temporary5009 = bp
+1: stackTop = £temporary5009
+2: lowHeapPtr = 65534
+3: i = 0
+4: empty
+5: if i < 1000 goto 8
+6: goto 27
+7: check track map float stack
+8: empty
+9: call header
+10: parameter 96, offset 6
+11: call function noellipse-noellipse malloc
+12: post call
+13: £temporary5012 = return_value
+14: p = £temporary5012
+15: call header
+16: parameter string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#, offset 6
+17: parameter i, offset 8
+18: parameter p, offset 10
+19: parameter stackTop, offset 12
+20: £temporary5013 -> lowHeapPtr = *lowHeapPtr
+21: parameter £temporary5013 -> lowHeapPtr, offset 14
+22: call function noellipse-ellipse printf, extra 0
+23: post call
+24: empty
+25: i = i + 1
+26: goto 4
+27: empty
+28: return
+29: function end malloc_test6
+0: £temporary5021 = int_to_int valuePtr1 (Pointer -> Pointer)
+1: £temporary5022 -> £temporary5021 = *£temporary5021
+2: intValue1 = £temporary5022 -> £temporary5021
+3: £temporary5023 = int_to_int valuePtr2 (Pointer -> Pointer)
+4: £temporary5024 -> £temporary5023 = *£temporary5023
+5: intValue2 = £temporary5024 -> £temporary5023
+6: if intValue1 < intValue2 goto 8
+7: goto 11
+8: empty
+9: £temporary5034 = -1
+10: goto 21
+11: empty
+12: if intValue1 == intValue2 goto 14
+13: goto 17
+14: empty
+15: £temporary5030 = 0
+16: goto 19
+17: empty
+18: £temporary5030 = 1
+19: empty
+20: £temporary5034 = £temporary5030
+21: empty
+22: return_value = £temporary5034
+23: return
+24: empty
+25: return
+26: function end compare
+0: £temporary5035 = int_to_int valuePtr1 (Pointer -> Pointer)
+1: £temporary5036 -> £temporary5035 = *£temporary5035
+2: intValue1 = £temporary5036 -> £temporary5035
+3: £temporary5037 = int_to_int valuePtr2 (Pointer -> Pointer)
+4: £temporary5038 -> £temporary5037 = *£temporary5037
+5: intValue2 = £temporary5038 -> £temporary5037
+6: if intValue1 < intValue2 goto 8
+7: goto 11
+8: empty
+9: £temporary5048 = 1
+10: goto 21
+11: empty
+12: if intValue1 == intValue2 goto 14
+13: goto 17
+14: empty
+15: £temporary5044 = 0
+16: goto 19
+17: empty
+18: £temporary5044 = -1
+19: empty
+20: £temporary5048 = £temporary5044
+21: empty
+22: return_value = £temporary5048
+23: return
+24: empty
+25: return
+26: function end reverse_compare
+0: call header
+1: parameter string_div_t20quot2025i20rem2025i0A#, offset 6
+2: parameter d$quot, offset 8
+3: parameter d$rem, offset 10
+4: call function noellipse-ellipse printf, extra 0
+5: post call
+6: empty
+7: return
+8: function end print_div
+0: call header
+1: parameter string_ldiv_t20quot2025li20rem2025li0A#, offset 6
+2: parameter ld$quot, offset 8
+3: parameter ld$rem, offset 12
+4: call function noellipse-ellipse printf, extra 0
+5: post call
+6: empty
+7: return
+8: function end print_ldiv
+0: call header
+1: parameter string_exit10A#, offset 6
+2: call function noellipse-ellipse printf, extra 0
+3: post call
+4: empty
+5: return
+6: function end exit_handle1x
+0: call header
+1: parameter string_exit20A#, offset 6
+2: call function noellipse-ellipse printf, extra 0
+3: post call
+4: empty
+5: return
+6: function end exit_handle2x
+0: call header
+1: parameter string_exit30A#, offset 6
+2: call function noellipse-ellipse printf, extra 0
+3: post call
+4: empty
+5: return
+6: function end exit_handle3x
+0: p = s
+1: q = t
+2: r = w
+3: call header
+4: parameter string_1232E456abc#, offset 6
+5: £temporary5067 = &p
+6: parameter £temporary5067, offset 8
+7: call function noellipse-noellipse strtod
+8: post call
+9: £temporary5068 = return_value
+10: pop float x
+11: call header
+12: parameter string_1232E456#, offset 6
+13: call function noellipse-noellipse atof
+14: post call
+15: £temporary5069 = return_value
+16: pop float y
+17: call header
+18: parameter string_123abc#, offset 6
+19: £temporary5070 = &q
+20: parameter £temporary5070, offset 8
+21: parameter 8, offset 10
+22: call function noellipse-noellipse strtol
+23: post call
+24: £temporary5071 = return_value
+25: l = £temporary5071
+26: call header
+27: parameter string_123abc#, offset 6
+28: £temporary5072 = &r
+29: parameter £temporary5072, offset 8
+30: parameter 8, offset 10
+31: call function noellipse-noellipse strtoul
+32: post call
+33: £temporary5073 = return_value
+34: ul = £temporary5073
+35: call header
+36: parameter string_atof28221232E4562229203D2025f0A#, offset 6
+37: push float y
+38: parameter y, offset 8
+39: call function noellipse-ellipse printf, extra 0
+40: post call
+41: call header
+42: parameter string_atoi28221232229203D2025i0A#, offset 6
+43: call header
+44: parameter string_123#, offset 14
+45: call function noellipse-noellipse atoi
+46: post call
+47: £temporary5075 = return_value
+48: parameter £temporary5075, offset 8
+49: call function noellipse-ellipse printf, extra 0
+50: post call
+51: call header
+52: parameter string_atol28221232229203D2025li0A0A#, offset 6
+53: call header
+54: parameter string_123#, offset 14
+55: call function noellipse-noellipse atol
+56: post call
+57: £temporary5077 = return_value
+58: parameter £temporary5077, offset 8
+59: call function noellipse-ellipse printf, extra 0
+60: post call
+61: call header
+62: parameter string_strtod28221232E456abc222C2026endp29203D202825f2C2025s290A#, offset 6
+63: push float x
+64: parameter x, offset 8
+65: parameter p, offset 16
+66: call function noellipse-ellipse printf, extra 0
+67: post call
+68: call header
+69: parameter string_strtol2822123abc222C2026endp29203D202825li2C2025s290A#, offset 6
+70: parameter l, offset 8
+71: parameter q, offset 12
+72: call function noellipse-ellipse printf, extra 0
+73: post call
+74: call header
+75: parameter string_strtoul2822123abc222C2026endp29203D202825lu2C2025s290A#, offset 6
+76: parameter ul, offset 8
+77: parameter r, offset 12
+78: call function noellipse-ellipse printf, extra 0
+79: post call
+80: call header
+81: parameter string_0Agetenv2822path2229203D2025s0A#, offset 6
+82: call header
+83: parameter string_path#, offset 14
+84: call function noellipse-noellipse getenv
+85: post call
+86: £temporary5082 = return_value
+87: parameter £temporary5082, offset 8
+88: call function noellipse-ellipse printf, extra 0
+89: post call
+90: call header
+91: parameter string_system2822dir22290A#, offset 6
+92: call function noellipse-ellipse printf, extra 0
+93: post call
+94: call header
+95: parameter string_dir#, offset 6
+96: call function noellipse-noellipse system
+97: post call
+98: call header
+99: parameter string_abs282D329203D2025i2C20abs28329203D2025i2C20labs282D3l29203D2025li2C20labs283l29203D2025li0A#, offset 6
+100: call header
+101: parameter -3, offset 14
+102: call function noellipse-noellipse abs
+103: post call
+104: £temporary5086 = return_value
+105: parameter £temporary5086, offset 8
+106: call header
+107: parameter 3, offset 16
+108: call function noellipse-noellipse abs
+109: post call
+110: £temporary5087 = return_value
+111: parameter £temporary5087, offset 10
+112: call header
+113: parameter -3, offset 18
+114: call function noellipse-noellipse labs
+115: post call
+116: £temporary5088 = return_value
+117: parameter £temporary5088, offset 12
+118: call header
+119: parameter 3, offset 22
+120: call function noellipse-noellipse labs
+121: post call
+122: £temporary5089 = return_value
+123: parameter £temporary5089, offset 16
+124: call function noellipse-ellipse printf, extra 0
+125: post call
+126: call header
+127: parameter 10, offset 6
+128: parameter 3, offset 8
+129: call function noellipse-noellipse div
+130: post call
+131: £temporary5091 -> £temporary5092 = return_value
+132: i = £temporary5091 -> £temporary5092
+133: call header
+134: parameter string_div_t28102C20329203D202825i2C2025i292C0A#, offset 6
+135: parameter i$quot, offset 8
+136: parameter i$rem, offset 10
+137: call function noellipse-ellipse printf, extra 0
+138: post call
+139: call header
+140: parameter i, offset 6
+141: call function noellipse-noellipse print_div
+142: post call
+143: call header
+144: parameter 10, offset 6
+145: parameter 3, offset 10
+146: call function noellipse-noellipse ldiv
+147: post call
+148: £temporary5097 -> £temporary5098 = return_value
+149: li = £temporary5097 -> £temporary5098
+150: call header
+151: parameter string_ldiv_t28102C20329203D202825li2C2025li290A#, offset 6
+152: parameter li$quot, offset 8
+153: parameter li$rem, offset 12
+154: call function noellipse-ellipse printf, extra 0
+155: post call
+156: call header
+157: parameter li, offset 6
+158: call function noellipse-noellipse print_ldiv
+159: post call
+160: list[0] = 3
+161: list[1] = 4
+162: list[2] = 2
+163: list[3] = 1
+164: size = 4
+165: call header
+166: parameter string_0AA20List2013A20#, offset 6
+167: call function noellipse-ellipse printf, extra 0
+168: post call
+169: index = 0
+170: empty
+171: if index < size goto 174
+172: goto 186
+173: check track map float stack
+174: empty
+175: call header
+176: parameter string_25i20#, offset 6
+177: £temporary5111 = index * 2
+178: £temporary5112 = £temporary5111 + list
+179: £temporary5113 -> £temporary5112 = *£temporary5112
+180: parameter £temporary5113 -> £temporary5112, offset 8
+181: call function noellipse-ellipse printf, extra 0
+182: post call
+183: empty
+184: index = index + 1
+185: goto 170
+186: call header
+187: parameter string_0AB20List2023A20#, offset 6
+188: call function noellipse-ellipse printf, extra 0
+189: post call
+190: call header
+191: parameter list, offset 6
+192: parameter size, offset 8
+193: parameter 2, offset 10
+194: parameter reverse_compare, offset 12
+195: call function noellipse-ellipse qsort, extra 0
+196: post call
+197: index = 0
+198: empty
+199: if index < size goto 202
+200: goto 214
+201: check track map float stack
+202: empty
+203: call header
+204: parameter string_25i20#, offset 6
+205: £temporary5120 = index * 2
+206: £temporary5121 = list + £temporary5120
+207: £temporary5122 -> £temporary5121 = *£temporary5121
+208: parameter £temporary5122 -> £temporary5121, offset 8
+209: call function noellipse-ellipse printf, extra 0
+210: post call
+211: empty
+212: index = index + 1
+213: goto 198
+214: call header
+215: parameter string_0AC20List2033A20#, offset 6
+216: call function noellipse-ellipse printf, extra 0
+217: post call
+218: call header
+219: parameter list, offset 6
+220: parameter size, offset 8
+221: parameter 2, offset 10
+222: parameter compare, offset 12
+223: call function noellipse-ellipse qsort, extra 0
+224: post call
+225: index = 0
+226: empty
+227: if index < size goto 230
+228: goto 242
+229: check track map float stack
+230: empty
+231: call header
+232: parameter string_25i20#, offset 6
+233: £temporary5129 = index * 2
+234: £temporary5130 = list + £temporary5129
+235: £temporary5131 -> £temporary5130 = *£temporary5130
+236: parameter £temporary5131 -> £temporary5130, offset 8
+237: call function noellipse-ellipse printf, extra 0
+238: post call
+239: empty
+240: index = index + 1
+241: goto 226
+242: empty
+243: call header
+244: parameter string_0A0ASearch3A0A#, offset 6
+245: call function noellipse-ellipse printf, extra 0
+246: post call
+247: key = 0
+248: empty
+249: if key < 6 goto 252
+250: goto 285
+251: check track map float stack
+252: empty
+253: call header
+254: £temporary5136 = &key
+255: parameter £temporary5136, offset 6
+256: parameter list, offset 8
+257: parameter size, offset 10
+258: parameter 2, offset 12
+259: parameter compare, offset 14
+260: call function noellipse-noellipse bsearch
+261: post call
+262: £temporary5138 = return_value
+263: £temporary5139 = int_to_int £temporary5138 (Pointer -> Pointer)
+264: p = £temporary5139
+265: if p != 0 goto 267
+266: goto 272
+267: empty
+268: £temporary5141 = p - list
+269: £temporary5142 = £temporary5141 / 2
+270: £temporary5146 = £temporary5142
+271: goto 274
+272: empty
+273: £temporary5146 = -1
+274: empty
+275: index = £temporary5146
+276: call header
+277: parameter string_20202825i2C2025i290A#, offset 6
+278: parameter key, offset 8
+279: parameter index, offset 10
+280: call function noellipse-ellipse printf, extra 0
+281: post call
+282: empty
+283: key = key + 1
+284: goto 248
+285: call header
+286: parameter string_0A#, offset 6
+287: call function noellipse-ellipse printf, extra 0
+288: post call
+289: empty
+290: return
+291: function end stdlib_test
+0: weekdays[0] = string_Sun#
+1: weekdays[1] = string_Mon#
+2: weekdays[2] = string_Tue#
+3: weekdays[3] = string_Wed#
+4: weekdays[4] = string_Thu#
+5: weekdays[5] = string_Fri#
+6: weekdays[6] = string_Sat#
+7: call header
+8: parameter 0, offset 6
+9: call function noellipse-noellipse time
+10: post call
+11: £temporary5245 = return_value
+12: now = £temporary5245
+13: call header
+14: £temporary5246 = &now
+15: parameter £temporary5246, offset 6
+16: call function noellipse-noellipse gmtime
+17: post call
+18: £temporary5247 = return_value
+19: p = £temporary5247
+20: call header
+21: parameter p, offset 6
+22: call function noellipse-noellipse mktime
+23: post call
+24: £temporary5248 = return_value
+25: now2 = £temporary5248
+26: call header
+27: parameter string_now2013A2025lu0A#, offset 6
+28: parameter now, offset 8
+29: call function noellipse-ellipse printf, extra 0
+30: post call
+31: call header
+32: parameter string_now2023A2025lu0A#, offset 6
+33: parameter now2, offset 8
+34: call function noellipse-ellipse printf, extra 0
+35: post call
+36: £temporary5251 -> p = *p
+37: s = £temporary5251 -> p
+38: call header
+39: parameter string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#, offset 6
+40: £temporary5254 = s$tm_wday * 2
+41: £temporary5255 = weekdays + £temporary5254
+42: £temporary5253 -> £temporary5255 = *£temporary5255
+43: parameter £temporary5253 -> £temporary5255, offset 8
+44: £temporary5257 = 1900 + s$tm_year
+45: parameter £temporary5257, offset 10
+46: £temporary5259 = s$tm_mon + 1
+47: parameter £temporary5259, offset 12
+48: parameter s$tm_mday, offset 14
+49: parameter s$tm_hour, offset 16
+50: parameter s$tm_min, offset 18
+51: parameter s$tm_sec, offset 20
+52: parameter s$tm_yday, offset 22
+53: parameter s$tm_wday, offset 24
+54: parameter s$tm_isdst, offset 26
+55: call function noellipse-ellipse printf, extra 0
+56: post call
+57: call header
+58: £temporary5268 = &now
+59: parameter £temporary5268, offset 6
+60: call function noellipse-noellipse localtime
+61: post call
+62: £temporary5269 = return_value
+63: £temporary5270 -> £temporary5269 = *£temporary5269
+64: s = £temporary5270 -> £temporary5269
+65: call header
+66: parameter string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#, offset 6
+67: £temporary5273 = s$tm_wday * 2
+68: £temporary5274 = weekdays + £temporary5273
+69: £temporary5272 -> £temporary5274 = *£temporary5274
+70: parameter £temporary5272 -> £temporary5274, offset 8
+71: £temporary5276 = 1900 + s$tm_year
+72: parameter £temporary5276, offset 10
+73: £temporary5278 = s$tm_mon + 1
+74: parameter £temporary5278, offset 12
+75: parameter s$tm_mday, offset 14
+76: parameter s$tm_hour, offset 16
+77: parameter s$tm_min, offset 18
+78: parameter s$tm_sec, offset 20
+79: parameter s$tm_yday, offset 22
+80: parameter s$tm_wday, offset 24
+81: parameter s$tm_isdst, offset 26
+82: call function noellipse-ellipse printf, extra 0
+83: post call
+84: call header
+85: parameter buffer1, offset 6
+86: call header
+87: £temporary5287 = &s
+88: parameter £temporary5287, offset 112
+89: call function noellipse-noellipse asctime
+90: post call
+91: £temporary5288 = return_value
+92: parameter £temporary5288, offset 8
+93: call function noellipse-noellipse strcpy
+94: post call
+95: call header
+96: parameter buffer2, offset 6
+97: call header
+98: £temporary5290 = &now
+99: parameter £temporary5290, offset 112
+100: call function noellipse-noellipse ctime
+101: post call
+102: £temporary5291 = return_value
+103: parameter £temporary5291, offset 8
+104: call function noellipse-noellipse strcpy
+105: post call
+106: call header
+107: parameter string_asctime203C25s3E2C20ctime203C25s3E0A#, offset 6
+108: parameter buffer1, offset 8
+109: parameter buffer2, offset 10
+110: call function noellipse-ellipse printf, extra 0
+111: post call
+112: call header
+113: parameter buffer, offset 6
+114: parameter 300, offset 8
+115: parameter string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y#, offset 10
+116: £temporary5294 = &s
+117: parameter £temporary5294, offset 12
+118: call function noellipse-noellipse strftime
+119: post call
+120: £temporary5295 = return_value
+121: i = £temporary5295
+122: call header
+123: parameter string_strftime203C25i3E203C25s3E0A#, offset 6
+124: parameter i, offset 8
+125: parameter buffer, offset 10
+126: call function noellipse-ellipse printf, extra 0
+127: post call
+128: empty
+129: return
+130: function end time_test

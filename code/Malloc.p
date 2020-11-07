@@ -2,11 +2,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
    
 
+
+
+
     
     
-
-
-
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -139,11 +139,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
    
 
+
+
+
     
     
-
-
-
 
        
        
@@ -645,12 +645,12 @@ UINT newBlockSize = ( ( UINT ) ( sizeof ( BLOCK_HEADER ) ) ) + ( ( UINT ) memory
 minGap = 0 ;
 
    
-     
+ UINT lastAddress = 65528u ;
   
 
    
 
-UINT lastAddress = ( UINT ) ( stack_top + 1048572u ) ;
+           
 
   
 
@@ -694,11 +694,11 @@ else {
 UINT newAddress = lastAddress - newBlockSize ;
 
    
-     
+ UINT stackTop = register_bp ;
   
 
    
- UINT stackTop = register_rbp ;
+     
   
 
 
@@ -890,12 +890,12 @@ return oldMemoryPtr ;
 }
 
    
-     
+ UINT lastAddress = 65528u ;
   
 
    
 
-UINT lastAddress = ( UINT ) ( stack_top + 1048572u ) ;
+           
 
   
 

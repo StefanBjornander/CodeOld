@@ -2,11 +2,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
    
 
+
+
+
     
     
-
-
-
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -50,11 +50,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
    
 
+
+
+
     
     
-
-
-
 
        
        
@@ -421,15 +421,15 @@ void math_test_2 ( double x , double y ) ;
 void math_test_int ( double x , int i ) ;
 
 void math_test_1x ( ) {
-math_test_1 ( -2 * 3.14 ) ;
-math_test_1 ( - 3.14 ) ;
-math_test_1 ( - 3.14 / 2 ) ;
+math_test_1 ( -2 * 3.1415926535897932384626433 ) ;
+math_test_1 ( - 3.1415926535897932384626433 ) ;
+math_test_1 ( - 3.1415926535897932384626433 / 2 ) ;
 math_test_1 ( -1 ) ;
 math_test_1 ( 0 ) ;
 math_test_1 ( 1 ) ;
-math_test_1 ( 3.14 / 2 ) ;
-math_test_1 ( 3.14 ) ;
-math_test_1 ( 2 * 3.14 ) ;
+math_test_1 ( 3.1415926535897932384626433 / 2 ) ;
+math_test_1 ( 3.1415926535897932384626433 ) ;
+math_test_1 ( 2 * 3.1415926535897932384626433 ) ;
 }
 
 void acos_test ( double x ) {
@@ -455,13 +455,13 @@ math_test_1 ( -0.999999 ) ;
 math_test_1 ( -1.0 ) ;
 math_test_1 ( -1.000010 ) ;
 
-math_test_1 ( 2 * 3.14 ) ;
-math_test_1 ( 3.14 ) ;
-math_test_1 ( 3.14 / 2 ) ;
+math_test_1 ( 2 * 3.1415926535897932384626433 ) ;
+math_test_1 ( 3.1415926535897932384626433 ) ;
+math_test_1 ( 3.1415926535897932384626433 / 2 ) ;
 
-math_test_1 ( - 3.14 / 2 ) ;
-math_test_1 ( - 3.14 ) ;
-math_test_1 ( -2 * 3.14 ) ;
+math_test_1 ( - 3.1415926535897932384626433 / 2 ) ;
+math_test_1 ( - 3.1415926535897932384626433 ) ;
+math_test_1 ( -2 * 3.1415926535897932384626433 ) ;
 
 math_test_2 ( 1.0 , 2.0 ) ;
 math_test_2 ( 3.0 , 4.0 ) ;

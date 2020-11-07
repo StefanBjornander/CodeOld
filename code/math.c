@@ -3,7 +3,8 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-#define E_INVERSE 0.368 // (1 / E)
+//#define E_INVERSE 0.368
+#define E_INVERSE (1 / E)
 #define EPSILON   1e-9
 
 double exp(double x) {
@@ -54,6 +55,7 @@ double log(double x) {
   }
 }
 
+//#define LN_10 2.30
 #define LN_10 2.3025850929940456840179914
 
 double log10(double x) {
@@ -90,6 +92,7 @@ double ldexp(double x, int n) {
   return x * pow(2, n);
 }
 
+//#define LN_2 0.693
 #define LN_2 0.6931471805599453094172321
 
 static log2(double x) {

@@ -3,11 +3,11 @@
 math_test_1x:	; call header integral zero 0 stack zero 0
 3:	
 
-math_test_1x$1:	; push float -6.283185306
-4:		fld qword [float8$minus6.283185306#]
+math_test_1x$1:	; push float -6.2831853071795864769252866
+4:		fld qword [float8$minus6.2831853071795864769252866#]
 6:	
 
-math_test_1x$2:	; parameter -6.283185306, offset 6
+math_test_1x$2:	; parameter -6.2831853071795864769252866, offset 6
 7:		fstp qword [bp + 12]
 9:	
 
@@ -24,11 +24,11 @@ math_test_1x$4:	; post call
 math_test_1x$5:	; call header integral zero 0 stack zero 0
 19:	
 
-math_test_1x$6:	; push float -3.141592653
-20:		fld qword [float8$minus3.141592653#]
+math_test_1x$6:	; push float -3.1415926535897932384626433
+20:		fld qword [float8$minus3.1415926535897932384626433#]
 22:	
 
-math_test_1x$7:	; parameter -3.141592653, offset 6
+math_test_1x$7:	; parameter -3.1415926535897932384626433, offset 6
 23:		fstp qword [bp + 12]
 25:	
 
@@ -45,11 +45,11 @@ math_test_1x$9:	; post call
 math_test_1x$10:	; call header integral zero 0 stack zero 0
 35:	
 
-math_test_1x$11:	; push float -1.5707963265
-36:		fld qword [float8$minus1.5707963265#]
+math_test_1x$11:	; push float -1.57079632679489661923132165
+36:		fld qword [float8$minus1.57079632679489661923132165#]
 38:	
 
-math_test_1x$12:	; parameter -1.5707963265, offset 6
+math_test_1x$12:	; parameter -1.57079632679489661923132165, offset 6
 39:		fstp qword [bp + 12]
 41:	
 
@@ -129,11 +129,11 @@ math_test_1x$29:	; post call
 math_test_1x$30:	; call header integral zero 0 stack zero 0
 99:	
 
-math_test_1x$31:	; push float 1.5707963265
-100:		fld qword [float8$1.5707963265#]
+math_test_1x$31:	; push float 1.57079632679489661923132165
+100:		fld qword [float8$1.57079632679489661923132165#]
 102:	
 
-math_test_1x$32:	; parameter 1.5707963265, offset 6
+math_test_1x$32:	; parameter 1.57079632679489661923132165, offset 6
 103:		fstp qword [bp + 12]
 105:	
 
@@ -150,11 +150,11 @@ math_test_1x$34:	; post call
 math_test_1x$35:	; call header integral zero 0 stack zero 0
 115:	
 
-math_test_1x$36:	; push float 3.141592653
-116:		fld qword [float8$3.141592653#]
+math_test_1x$36:	; push float 3.1415926535897932384626433
+116:		fld qword [float8$3.1415926535897932384626433#]
 118:	
 
-math_test_1x$37:	; parameter 3.141592653, offset 6
+math_test_1x$37:	; parameter 3.1415926535897932384626433, offset 6
 119:		fstp qword [bp + 12]
 121:	
 
@@ -171,11 +171,11 @@ math_test_1x$39:	; post call
 math_test_1x$40:	; call header integral zero 0 stack zero 0
 131:	
 
-math_test_1x$41:	; push float 6.283185306
-132:		fld qword [float8$6.283185306#]
+math_test_1x$41:	; push float 6.2831853071795864769252866
+132:		fld qword [float8$6.2831853071795864769252866#]
 134:	
 
-math_test_1x$42:	; parameter 6.283185306, offset 6
+math_test_1x$42:	; parameter 6.2831853071795864769252866, offset 6
 135:		fstp qword [bp + 12]
 137:	
 
@@ -581,11 +581,11 @@ main_math$54:	; post call
 main_math$55:	; call header integral zero 0 stack zero 0
 179:	
 
-main_math$56:	; push float 6.283185306
-180:		fld qword [float8$6.283185306#]
+main_math$56:	; push float 6.2831853071795864769252866
+180:		fld qword [float8$6.2831853071795864769252866#]
 182:	
 
-main_math$57:	; parameter 6.283185306, offset 6
+main_math$57:	; parameter 6.2831853071795864769252866, offset 6
 183:		fstp qword [bp + 12]
 185:	
 
@@ -602,11 +602,11 @@ main_math$59:	; post call
 main_math$60:	; call header integral zero 0 stack zero 0
 195:	
 
-main_math$61:	; push float 3.141592653
-196:		fld qword [float8$3.141592653#]
+main_math$61:	; push float 3.1415926535897932384626433
+196:		fld qword [float8$3.1415926535897932384626433#]
 198:	
 
-main_math$62:	; parameter 3.141592653, offset 6
+main_math$62:	; parameter 3.1415926535897932384626433, offset 6
 199:		fstp qword [bp + 12]
 201:	
 
@@ -623,11 +623,11 @@ main_math$64:	; post call
 main_math$65:	; call header integral zero 0 stack zero 0
 211:	
 
-main_math$66:	; push float 1.5707963265
-212:		fld qword [float8$1.5707963265#]
+main_math$66:	; push float 1.57079632679489661923132165
+212:		fld qword [float8$1.57079632679489661923132165#]
 214:	
 
-main_math$67:	; parameter 1.5707963265, offset 6
+main_math$67:	; parameter 1.57079632679489661923132165, offset 6
 215:		fstp qword [bp + 12]
 217:	
 
@@ -644,11 +644,11 @@ main_math$69:	; post call
 main_math$70:	; call header integral zero 0 stack zero 0
 227:	
 
-main_math$71:	; push float -1.5707963265
-228:		fld qword [float8$minus1.5707963265#]
+main_math$71:	; push float -1.57079632679489661923132165
+228:		fld qword [float8$minus1.57079632679489661923132165#]
 230:	
 
-main_math$72:	; parameter -1.5707963265, offset 6
+main_math$72:	; parameter -1.57079632679489661923132165, offset 6
 231:		fstp qword [bp + 12]
 233:	
 
@@ -665,11 +665,11 @@ main_math$74:	; post call
 main_math$75:	; call header integral zero 0 stack zero 0
 243:	
 
-main_math$76:	; push float -3.141592653
-244:		fld qword [float8$minus3.141592653#]
+main_math$76:	; push float -3.1415926535897932384626433
+244:		fld qword [float8$minus3.1415926535897932384626433#]
 246:	
 
-main_math$77:	; parameter -3.141592653, offset 6
+main_math$77:	; parameter -3.1415926535897932384626433, offset 6
 247:		fstp qword [bp + 12]
 249:	
 
@@ -686,11 +686,11 @@ main_math$79:	; post call
 main_math$80:	; call header integral zero 0 stack zero 0
 259:	
 
-main_math$81:	; push float -6.283185306
-260:		fld qword [float8$minus6.283185306#]
+main_math$81:	; push float -6.2831853071795864769252866
+260:		fld qword [float8$minus6.2831853071795864769252866#]
 262:	
 
-main_math$82:	; parameter -6.283185306, offset 6
+main_math$82:	; parameter -6.2831853071795864769252866, offset 6
 263:		fstp qword [bp + 12]
 265:	
 

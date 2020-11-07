@@ -46,11 +46,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
    
 
+
+
+
     
     
-
-
-
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -535,32 +535,32 @@ unsigned long time ( unsigned long * timePtr ) {
 unsigned long time ;
 
    
-    
-    
-      
-          
+ register_ah = 0x2As ;
+interrupt ( 0x21s ) ;
+int year = register_cx - 1900 ;
+short month = register_dh - 1s , monthDay = register_dl ;
 
-   
-    
-            
+register_ah = 0x2Cs ;
+interrupt ( 0x21s ) ;
+short hour = register_ch , min = register_cl , sec = register_dh ;
 
-           
-                 
-               
-        
+const int leapYear = ( year % 4 ) == 0 ;
+const int daysOfMonths [] = { 31 , leapYear ? 29 : 28 , 31 , 30 ,
+31 , 30 , 30 , 31 , 30 , 31 , 30 , 31 };
+int yearDay = monthDay - 1 , mon ;
 
-             
-     
+for ( mon = 0 ; mon < month ; ++ mon ) {
+yearDay += daysOfMonths [ mon ];
+}
 
-
-                      
-       
+struct tm s = { sec , min , hour , monthDay , month , year , 0 , yearDay , 0 };
+time = mktime ( & s ) ;
   
 
    
- register_rax = 201L ;
-register_rdi = ( unsigned long ) & time ;
-syscall ( ) ;
+    
+        
+   
   
 
 if ( timePtr != ( ( void * ) 0 ) ) {
