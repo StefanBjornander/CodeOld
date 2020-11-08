@@ -1,0 +1,65 @@
+0: NotEqual 16 base 0
+1: Assign chars 0
+2: Assign value 0
+3: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: Parameter pointer s 24
+5: Parameter pointer "%li%n" 26
+6: Address £temporary1954 value
+7: Parameter pointer £temporary1954 28
+8: Address £temporary1955 chars
+9: Parameter pointer £temporary1955 30
+10: Call sscanf 18 4
+11: PostCall 18
+12: Equal 15 endp 0
+13: Dereference £temporary1958 -> endp endp 0
+14: BinaryAdd £temporary1958 -> endp s chars
+15: Return value
+16: SignedLessThanEqual 63 base 0
+17: SignedGreaterThan 63 base 36
+18: Assign minus 0
+19: Dereference £temporary1964 -> s s 0
+20: NotEqual 23 £temporary1964 -> s 43
+21: BinaryAdd s s 1
+22: Goto 27
+23: Dereference £temporary1967 -> s s 0
+24: NotEqual 27 £temporary1967 -> s 45
+25: Assign minus 1
+26: BinaryAdd s s 1
+27: Assign value 0
+28: Assign index 0
+29: BinaryAdd £temporary1973 s index
+30: Dereference £temporary1971 -> £temporary1973 £temporary1973 0
+31: Assign c £temporary1971 -> £temporary1973
+32: PreCall 21 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+33: Parameter signedchar c 27
+34: Parameter signedint base 28
+35: Call isbasedigit 21 0
+36: PostCall 21
+37: GetReturnValue £temporary1974
+38: Equal 51 £temporary1974 0
+39: IntegralToIntegral £temporary1977 base
+40: SignedMultiply value value £temporary1977
+41: PreCall 21 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+42: Parameter signedchar c 27
+43: Call tobasevalue 21 0
+44: PostCall 21
+45: GetReturnValue £temporary1979
+46: Assign digit £temporary1979
+47: IntegralToIntegral £temporary1980 digit
+48: BinaryAdd value value £temporary1980
+49: BinaryAdd index index 1
+50: Goto 29
+51: Equal 57 endp 0
+52: Dereference £temporary1984 -> endp endp 0
+53: BinaryAdd £temporary1987 s index
+54: Dereference £temporary1985 -> £temporary1987 £temporary1987 0
+55: Address £temporary1988 £temporary1985 -> £temporary1987
+56: Assign £temporary1984 -> endp £temporary1988
+57: Equal 61 minus 0
+58: UnarySubtract £temporary1989 value
+59: Assign £temporary1991 £temporary1989
+60: Goto 62
+61: Assign £temporary1991 value
+62: Return £temporary1991
+63: Return 0
+64: FunctionEnd strtol

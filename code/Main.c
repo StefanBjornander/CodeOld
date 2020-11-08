@@ -26,6 +26,7 @@ void string_test(void);       // ok
 void setjmp_test(double x);   // ok
 void stdio_test(void);        // ok
 void stdlib_test(void);       // ok
+void strtol_test(void);       // ok
 void heap_test(void);         // ok
 void stack_test(void);        // ok
 void character_test(char c);  // ok
@@ -199,7 +200,11 @@ void maina() {
   assert(1 > 2);
 }
 
-void main(int argc, char* argv[]) {
+void main() {
+  strtol_test();
+}
+
+void mainX4(int argc, char* argv[]) {
   /*unsigned int *p = stack_top + 1048572;
   unsigned u = *p;
   printf("<%p> <%u> <%u>\n", p, (unsigned int) p, u);*/

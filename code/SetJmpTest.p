@@ -261,7 +261,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
 
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\SetJmpTest.c,1$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\SetJmp.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\setjmp.h,1$
 typedef void * jmp_buf [ 3 ];
 int setjmp ( jmp_buf env ) ;
 void longjmp ( jmp_buf env , int value ) ;
@@ -270,39 +270,38 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\SetJmpTest.c,2$
 
 jmp_buf buffer ;
 
+double inverse ( double x ) ;
+double divide ( double x , double y ) ;
+
+static void main ( ) {
+char * message ;
+double x ;
+
+printf ( "\120\154\145\141\163\145\040\151\156\160\165\164\040\141\040\166\141\154\165\145\072\040" ) ;
+scanf ( "\045\154\146" , & x ) ;
+
+if ( ( message = setjmp ( buffer ) ) == 0 ) {
+printf ( "\061\056\060\040\057\040\045\146\040\075\040\045\146\012" , x , inverse ( x ) ) ;
+}
+else {
+printf ( "\045\163\012" , message ) ;
+}
+}
+
+double inverse ( double x ) {
+return divide ( 1 , x ) ;
+}
+
 double divide ( double x , double y ) {
 if ( y != 0 ) {
 return x / y ;
 }
 else {
-char * p = "\104\151\166\151\163\151\157\156\040\142\171\040\132\145\162\157\056" ;
-
-longjmp ( buffer , p ) ;
+longjmp ( buffer , "\104\151\166\151\163\151\157\156\040\142\171\040\132\145\162\157\056" ) ;
 return 0 ;
 }
 }
 
-double invers ( double x ) {
-return divide ( 1.0 , x ) ;
-}
-
 void setjmp_test ( double x ) {
-char * p ;
-
-if ( ( p = setjmp ( buffer ) ) == 0 ) {
-printf ( "\061\056\060\040\057\040\045\146\040\075\040\045\146\012" , x , invers ( x ) ) ;
-}
-else {
-printf ( "\160\040\075\040\074\045\163\076\040\074\045\165\076\012" , p , p ) ;
-}
-
-
-
-
-
-
-
-
-
 }
 

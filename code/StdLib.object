@@ -26,17 +26,17 @@ atoi$4:	; call function noellipse-noellipse strtol
 atoi$5:	; post call
 21:	
 
-atoi$6:	; £temporary2376 = return_value
+atoi$6:	; £temporary2377 = return_value
 26:	
 
-atoi$7:	; £temporary2377 = int_to_int £temporary2376 (Signed_Long_Int -> Signed_Int)
+atoi$7:	; £temporary2378 = int_to_int £temporary2377 (Signed_Long_Int -> Signed_Int)
 29:		cmp ebx, 0
 30:		jge atoi$8
 31:		neg ebx
 33:		neg bx
 35:	
 
-atoi$8:	; return_value = £temporary2377
+atoi$8:	; return_value = £temporary2378
 37:	
 
 atoi$9:	; return
@@ -75,10 +75,10 @@ atol$4:	; call function noellipse-noellipse strtol
 atol$5:	; post call
 21:	
 
-atol$6:	; £temporary2381 = return_value
+atol$6:	; £temporary2382 = return_value
 26:	
 
-atol$7:	; return_value = £temporary2381
+atol$7:	; return_value = £temporary2382
 28:	
 
 atol$8:	; return
@@ -91,162 +91,1665 @@ atol$8:	; return
 atol$9:	; function end atol
 1:	
 
-strtol:	; chars = 0
-2:		mov word [bp + 12], 0
-4:	
+@24$isbasedigit:	; call header integral zero 0 stack zero 0
+3:	
 
-strtol$1:	; value = 0
-5:		mov dword [bp + 14], 0
-7:	
+@24$isbasedigit$1:	; £temporary2386 = int_to_int c (Signed_Char -> Signed_Int)
+4:		mov al, [bp + 6]
+6:		and ax, 255
+8:		cmp al, 0
+9:		jge @24$isbasedigit$2
+10:		neg al
+12:		neg ax
+14:	
 
-strtol$2:	; call header integral zero 0 stack zero 0
-9:	
+@24$isbasedigit$2:	; parameter £temporary2386, offset 6
+15:		mov [bp + 17], ax
+17:	
 
-strtol$3:	; parameter s, offset 6
-10:		mov ax, [bp + 6]
-11:		mov [bp + 24], ax
-13:	
-
-strtol$4:	; parameter string_25li25n#, offset 8
-14:		mov word [bp + 26], string_25li25n#
-16:	
-
-strtol$5:	; £temporary2385 = &value
-17:		mov si, bp
-18:		add si, 14
-20:	
-
-strtol$6:	; parameter £temporary2385, offset 10
-21:		mov [bp + 28], si
+@24$isbasedigit$3:	; call function noellipse-noellipse isdigit
+18:		mov word [bp + 11], @24$isbasedigit$4
+19:		mov [bp + 13], bp
+20:		add bp, 11
+21:		jmp isdigit
 23:	
 
-strtol$7:	; £temporary2386 = &chars
-24:		mov si, bp
-25:		add si, 12
-27:	
+@24$isbasedigit$4:	; post call
+25:	
 
-strtol$8:	; parameter £temporary2386, offset 12
-28:		mov [bp + 30], si
+@24$isbasedigit$5:	; £temporary2387 = return_value
 30:	
 
-strtol$9:	; call function noellipse-ellipse sscanf, extra 0
-31:		mov word [bp + 18], strtol$10
-32:		mov [bp + 20], bp
-33:		add bp, 18
-34:		mov di, bp
-35:		add di, 4
-36:		jmp sscanf
+@24$isbasedigit$6:	; if £temporary2387 == 0 goto 17
+31:		cmp bx, 0
+32:		je @24$isbasedigit$17
+34:	
+
+@24$isbasedigit$7:	; £temporary2388 = c - 48
+35:		mov al, [bp + 6]
+36:		sub al, 48
 38:	
 
-strtol$10:	; post call
-40:	
+@24$isbasedigit$8:	; £temporary2389 = int_to_int £temporary2388 (Signed_Char -> Signed_Int)
+40:		and ax, 255
+42:		cmp al, 0
+43:		jge @24$isbasedigit$9
+44:		neg al
+46:		neg ax
+48:	
 
-strtol$11:	; if endp == 0 goto 14
-41:		cmp word [bp + 8], 0
-42:		je strtol$14
-44:	
+@24$isbasedigit$9:	; value = £temporary2389
+49:		mov [bp + 11], ax
+51:	
 
-strtol$12:	; £temporary2389 -> endp = *endp
-45:		mov si, [bp + 8]
-47:	
-
-strtol$13:	; £temporary2389 -> endp = s + chars
-48:		mov ax, [bp + 6]
-49:		add ax, [bp + 12]
-50:		mov [si], ax
-52:	
-
-strtol$14:	; return_value = value
-53:		mov ebx, [bp + 14]
+@24$isbasedigit$10:	; if value < 0 goto 14
+52:		cmp word [bp + 11], 0
+53:		jl @24$isbasedigit$14
 55:	
 
-strtol$15:	; return
-56:		mov ax, [bp]
-57:		mov di, [bp + 4]
-58:		mov bp, [bp + 2]
-59:		jmp ax
-61:	
+@24$isbasedigit$11:	; if value >= base goto 14
+56:		mov ax, [bp + 7]
+57:		cmp [bp + 11], ax
+58:		jge @24$isbasedigit$14
+60:	
 
-strtol$16:	; function end strtol
+@24$isbasedigit$12:	; £temporary2393 = 1
+61:		mov bx, 1
+63:	
+
+@24$isbasedigit$13:	; goto 15
+64:		jmp @24$isbasedigit$15
+66:	
+
+@24$isbasedigit$14:	; £temporary2393 = 0
+67:		mov bx, 0
+69:	
+
+@24$isbasedigit$15:	; return_value = £temporary2393
+71:	
+
+@24$isbasedigit$16:	; return
+72:		mov ax, [bp]
+73:		mov di, [bp + 4]
+74:		mov bp, [bp + 2]
+75:		jmp ax
+77:	
+
+@24$isbasedigit$17:	; call header integral zero 0 stack zero 0
+79:	
+
+@24$isbasedigit$18:	; £temporary2394 = int_to_int c (Signed_Char -> Signed_Int)
+80:		mov al, [bp + 6]
+82:		and ax, 255
+84:		cmp al, 0
+85:		jge @24$isbasedigit$19
+86:		neg al
+88:		neg ax
+90:	
+
+@24$isbasedigit$19:	; parameter £temporary2394, offset 6
+91:		mov [bp + 17], ax
+93:	
+
+@24$isbasedigit$20:	; call function noellipse-noellipse islower
+94:		mov word [bp + 11], @24$isbasedigit$21
+95:		mov [bp + 13], bp
+96:		add bp, 11
+97:		jmp islower
+99:	
+
+@24$isbasedigit$21:	; post call
+101:	
+
+@24$isbasedigit$22:	; £temporary2395 = return_value
+106:	
+
+@24$isbasedigit$23:	; if £temporary2395 == 0 goto 34
+107:		cmp bx, 0
+108:		je @24$isbasedigit$34
+110:	
+
+@24$isbasedigit$24:	; £temporary2396 = c - 97
+111:		mov al, [bp + 6]
+112:		sub al, 97
+114:	
+
+@24$isbasedigit$25:	; £temporary2397 = int_to_int £temporary2396 (Signed_Char -> Signed_Int)
+116:		and ax, 255
+118:		cmp al, 0
+119:		jge @24$isbasedigit$26
+120:		neg al
+122:		neg ax
+124:	
+
+@24$isbasedigit$26:	; value = £temporary2397 + 10
+125:		add ax, 10
+126:		mov [bp + 11], ax
+128:	
+
+@24$isbasedigit$27:	; if value < 0 goto 31
+129:		cmp word [bp + 11], 0
+130:		jl @24$isbasedigit$31
+132:	
+
+@24$isbasedigit$28:	; if value >= base goto 31
+133:		mov ax, [bp + 7]
+134:		cmp [bp + 11], ax
+135:		jge @24$isbasedigit$31
+137:	
+
+@24$isbasedigit$29:	; £temporary2402 = 1
+138:		mov bx, 1
+140:	
+
+@24$isbasedigit$30:	; goto 32
+141:		jmp @24$isbasedigit$32
+143:	
+
+@24$isbasedigit$31:	; £temporary2402 = 0
+144:		mov bx, 0
+146:	
+
+@24$isbasedigit$32:	; return_value = £temporary2402
+148:	
+
+@24$isbasedigit$33:	; return
+149:		mov ax, [bp]
+150:		mov di, [bp + 4]
+151:		mov bp, [bp + 2]
+152:		jmp ax
+154:	
+
+@24$isbasedigit$34:	; call header integral zero 0 stack zero 0
+156:	
+
+@24$isbasedigit$35:	; £temporary2403 = int_to_int c (Signed_Char -> Signed_Int)
+157:		mov al, [bp + 6]
+159:		and ax, 255
+161:		cmp al, 0
+162:		jge @24$isbasedigit$36
+163:		neg al
+165:		neg ax
+167:	
+
+@24$isbasedigit$36:	; parameter £temporary2403, offset 6
+168:		mov [bp + 17], ax
+170:	
+
+@24$isbasedigit$37:	; call function noellipse-noellipse isupper
+171:		mov word [bp + 11], @24$isbasedigit$38
+172:		mov [bp + 13], bp
+173:		add bp, 11
+174:		jmp isupper
+176:	
+
+@24$isbasedigit$38:	; post call
+178:	
+
+@24$isbasedigit$39:	; £temporary2404 = return_value
+183:	
+
+@24$isbasedigit$40:	; if £temporary2404 == 0 goto 51
+184:		cmp bx, 0
+185:		je @24$isbasedigit$51
+187:	
+
+@24$isbasedigit$41:	; £temporary2405 = c - 65
+188:		mov al, [bp + 6]
+189:		sub al, 65
+191:	
+
+@24$isbasedigit$42:	; £temporary2406 = int_to_int £temporary2405 (Signed_Char -> Signed_Int)
+193:		and ax, 255
+195:		cmp al, 0
+196:		jge @24$isbasedigit$43
+197:		neg al
+199:		neg ax
+201:	
+
+@24$isbasedigit$43:	; value = £temporary2406 + 10
+202:		add ax, 10
+203:		mov [bp + 11], ax
+205:	
+
+@24$isbasedigit$44:	; if value < 0 goto 48
+206:		cmp word [bp + 11], 0
+207:		jl @24$isbasedigit$48
+209:	
+
+@24$isbasedigit$45:	; if value >= base goto 48
+210:		mov ax, [bp + 7]
+211:		cmp [bp + 11], ax
+212:		jge @24$isbasedigit$48
+214:	
+
+@24$isbasedigit$46:	; £temporary2411 = 1
+215:		mov bx, 1
+217:	
+
+@24$isbasedigit$47:	; goto 49
+218:		jmp @24$isbasedigit$49
+220:	
+
+@24$isbasedigit$48:	; £temporary2411 = 0
+221:		mov bx, 0
+223:	
+
+@24$isbasedigit$49:	; return_value = £temporary2411
+225:	
+
+@24$isbasedigit$50:	; return
+226:		mov ax, [bp]
+227:		mov di, [bp + 4]
+228:		mov bp, [bp + 2]
+229:		jmp ax
+231:	
+
+@24$isbasedigit$51:	; return_value = 0
+232:		mov bx, 0
+234:	
+
+@24$isbasedigit$52:	; return
+235:		mov ax, [bp]
+236:		mov di, [bp + 4]
+237:		mov bp, [bp + 2]
+238:		jmp ax
+240:	
+
+@24$isbasedigit$53:	; function end isbasedigit
 1:	
 
-strtoul:	; chars = 0
-2:		mov word [bp + 12], 0
-4:	
+@25$tobasevalue:	; call header integral zero 0 stack zero 0
+3:	
 
-strtoul$1:	; value = 0
-5:		mov dword [bp + 14], 0
-7:	
+@25$tobasevalue$1:	; £temporary2418 = int_to_int c (Signed_Char -> Signed_Int)
+4:		mov al, [bp + 6]
+6:		and ax, 255
+8:		cmp al, 0
+9:		jge @25$tobasevalue$2
+10:		neg al
+12:		neg ax
+14:	
 
-strtoul$2:	; call header integral zero 0 stack zero 0
-9:	
+@25$tobasevalue$2:	; parameter £temporary2418, offset 6
+15:		mov [bp + 13], ax
+17:	
 
-strtoul$3:	; parameter s, offset 6
-10:		mov ax, [bp + 6]
-11:		mov [bp + 24], ax
-13:	
-
-strtoul$4:	; parameter string_25lu25n#, offset 8
-14:		mov word [bp + 26], string_25lu25n#
-16:	
-
-strtoul$5:	; £temporary2397 = &value
-17:		mov si, bp
-18:		add si, 14
-20:	
-
-strtoul$6:	; parameter £temporary2397, offset 10
-21:		mov [bp + 28], si
+@25$tobasevalue$3:	; call function noellipse-noellipse isdigit
+18:		mov word [bp + 7], @25$tobasevalue$4
+19:		mov [bp + 9], bp
+20:		add bp, 7
+21:		jmp isdigit
 23:	
 
-strtoul$7:	; £temporary2398 = &chars
-24:		mov si, bp
-25:		add si, 12
-27:	
+@25$tobasevalue$4:	; post call
+25:	
 
-strtoul$8:	; parameter £temporary2398, offset 12
-28:		mov [bp + 30], si
+@25$tobasevalue$5:	; £temporary2419 = return_value
 30:	
 
-strtoul$9:	; call function noellipse-ellipse sscanf, extra 0
-31:		mov word [bp + 18], strtoul$10
-32:		mov [bp + 20], bp
-33:		add bp, 18
-34:		mov di, bp
-35:		add di, 4
-36:		jmp sscanf
+@25$tobasevalue$6:	; if £temporary2419 == 0 goto 11
+31:		cmp bx, 0
+32:		je @25$tobasevalue$11
+34:	
+
+@25$tobasevalue$7:	; £temporary2420 = c - 48
+35:		mov bl, [bp + 6]
+36:		sub bl, 48
 38:	
 
-strtoul$10:	; post call
-40:	
+@25$tobasevalue$8:	; £temporary2421 = int_to_int £temporary2420 (Signed_Char -> Signed_Int)
+40:		and bx, 255
+42:		cmp bl, 0
+43:		jge @25$tobasevalue$9
+44:		neg bl
+46:		neg bx
+48:	
 
-strtoul$11:	; if endp == 0 goto 14
-41:		cmp word [bp + 8], 0
-42:		je strtoul$14
+@25$tobasevalue$9:	; return_value = £temporary2421
+50:	
+
+@25$tobasevalue$10:	; return
+51:		mov ax, [bp]
+52:		mov di, [bp + 4]
+53:		mov bp, [bp + 2]
+54:		jmp ax
+56:	
+
+@25$tobasevalue$11:	; call header integral zero 0 stack zero 0
+58:	
+
+@25$tobasevalue$12:	; £temporary2422 = int_to_int c (Signed_Char -> Signed_Int)
+59:		mov al, [bp + 6]
+61:		and ax, 255
+63:		cmp al, 0
+64:		jge @25$tobasevalue$13
+65:		neg al
+67:		neg ax
+69:	
+
+@25$tobasevalue$13:	; parameter £temporary2422, offset 6
+70:		mov [bp + 13], ax
+72:	
+
+@25$tobasevalue$14:	; call function noellipse-noellipse islower
+73:		mov word [bp + 7], @25$tobasevalue$15
+74:		mov [bp + 9], bp
+75:		add bp, 7
+76:		jmp islower
+78:	
+
+@25$tobasevalue$15:	; post call
+80:	
+
+@25$tobasevalue$16:	; £temporary2423 = return_value
+85:	
+
+@25$tobasevalue$17:	; if £temporary2423 == 0 goto 23
+86:		cmp bx, 0
+87:		je @25$tobasevalue$23
+89:	
+
+@25$tobasevalue$18:	; £temporary2424 = c - 97
+90:		mov bl, [bp + 6]
+91:		sub bl, 97
+93:	
+
+@25$tobasevalue$19:	; £temporary2425 = int_to_int £temporary2424 (Signed_Char -> Signed_Int)
+95:		and bx, 255
+97:		cmp bl, 0
+98:		jge @25$tobasevalue$20
+99:		neg bl
+101:		neg bx
+103:	
+
+@25$tobasevalue$20:	; £temporary2426 = £temporary2425 + 10
+104:		add bx, 10
+106:	
+
+@25$tobasevalue$21:	; return_value = £temporary2426
+108:	
+
+@25$tobasevalue$22:	; return
+109:		mov ax, [bp]
+110:		mov di, [bp + 4]
+111:		mov bp, [bp + 2]
+112:		jmp ax
+114:	
+
+@25$tobasevalue$23:	; call header integral zero 0 stack zero 0
+116:	
+
+@25$tobasevalue$24:	; £temporary2427 = int_to_int c (Signed_Char -> Signed_Int)
+117:		mov al, [bp + 6]
+119:		and ax, 255
+121:		cmp al, 0
+122:		jge @25$tobasevalue$25
+123:		neg al
+125:		neg ax
+127:	
+
+@25$tobasevalue$25:	; parameter £temporary2427, offset 6
+128:		mov [bp + 13], ax
+130:	
+
+@25$tobasevalue$26:	; call function noellipse-noellipse isupper
+131:		mov word [bp + 7], @25$tobasevalue$27
+132:		mov [bp + 9], bp
+133:		add bp, 7
+134:		jmp isupper
+136:	
+
+@25$tobasevalue$27:	; post call
+138:	
+
+@25$tobasevalue$28:	; £temporary2428 = return_value
+143:	
+
+@25$tobasevalue$29:	; if £temporary2428 == 0 goto 35
+144:		cmp bx, 0
+145:		je @25$tobasevalue$35
+147:	
+
+@25$tobasevalue$30:	; £temporary2429 = c - 65
+148:		mov bl, [bp + 6]
+149:		sub bl, 65
+151:	
+
+@25$tobasevalue$31:	; £temporary2430 = int_to_int £temporary2429 (Signed_Char -> Signed_Int)
+153:		and bx, 255
+155:		cmp bl, 0
+156:		jge @25$tobasevalue$32
+157:		neg bl
+159:		neg bx
+161:	
+
+@25$tobasevalue$32:	; £temporary2431 = £temporary2430 + 10
+162:		add bx, 10
+164:	
+
+@25$tobasevalue$33:	; return_value = £temporary2431
+166:	
+
+@25$tobasevalue$34:	; return
+167:		mov ax, [bp]
+168:		mov di, [bp + 4]
+169:		mov bp, [bp + 2]
+170:		jmp ax
+172:	
+
+@25$tobasevalue$35:	; return_value = 0
+173:		mov bx, 0
+175:	
+
+@25$tobasevalue$36:	; return
+176:		mov ax, [bp]
+177:		mov di, [bp + 4]
+178:		mov bp, [bp + 2]
+179:		jmp ax
+181:	
+
+@25$tobasevalue$37:	; function end tobasevalue
+1:	
+
+strtol:	; if base != 0 goto 17
+2:		cmp word [bp + 10], 0
+3:		jne strtol$17
+5:	
+
+strtol$1:	; chars = 0
+6:		mov word [bp + 12], 0
+8:	
+
+strtol$2:	; value = 0
+9:		mov dword [bp + 14], 0
+11:	
+
+strtol$3:	; call header integral zero 0 stack zero 0
+13:	
+
+strtol$4:	; parameter s, offset 6
+14:		mov ax, [bp + 6]
+15:		mov [bp + 24], ax
+17:	
+
+strtol$5:	; parameter string_25li25n#, offset 8
+18:		mov word [bp + 26], string_25li25n#
+20:	
+
+strtol$6:	; £temporary2439 = &value
+21:		mov si, bp
+22:		add si, 14
+24:	
+
+strtol$7:	; parameter £temporary2439, offset 10
+25:		mov [bp + 28], si
+27:	
+
+strtol$8:	; £temporary2440 = &chars
+28:		mov si, bp
+29:		add si, 12
+31:	
+
+strtol$9:	; parameter £temporary2440, offset 12
+32:		mov [bp + 30], si
+34:	
+
+strtol$10:	; call function noellipse-ellipse sscanf, extra 0
+35:		mov word [bp + 18], strtol$11
+36:		mov [bp + 20], bp
+37:		add bp, 18
+38:		mov di, bp
+39:		add di, 4
+40:		jmp sscanf
+42:	
+
+strtol$11:	; post call
 44:	
 
-strtoul$12:	; £temporary2401 -> endp = *endp
-45:		mov si, [bp + 8]
+strtol$12:	; if endp == 0 goto 15
+45:		cmp word [bp + 8], 0
+46:		je strtol$15
+48:	
+
+strtol$13:	; £temporary2443 -> endp = *endp
+49:		mov si, [bp + 8]
+51:	
+
+strtol$14:	; £temporary2443 -> endp = s + chars
+52:		mov ax, [bp + 6]
+53:		add ax, [bp + 12]
+54:		mov [si], ax
+56:	
+
+strtol$15:	; return_value = value
+57:		mov ebx, [bp + 14]
+59:	
+
+strtol$16:	; return
+60:		mov ax, [bp]
+61:		mov di, [bp + 4]
+62:		mov bp, [bp + 2]
+63:		jmp ax
+65:	
+
+strtol$17:	; if base <= 0 goto 65
+66:		cmp word [bp + 10], 0
+67:		jle strtol$65
+69:	
+
+strtol$18:	; if base > 36 goto 65
+70:		cmp word [bp + 10], 36
+71:		jg strtol$65
+73:	
+
+strtol$19:	; minus = 0
+74:		mov word [bp + 12], 0
+76:	
+
+strtol$20:	; £temporary2448 -> s = *s
+77:		mov si, [bp + 6]
+79:	
+
+strtol$21:	; if £temporary2448 -> s != 43 goto 24
+80:		cmp byte [si], 43
+81:		jne strtol$24
+83:	
+
+strtol$22:	; ++s
+84:		inc word [bp + 6]
+86:	
+
+strtol$23:	; goto 28
+87:		jmp strtol$28
+89:	
+
+strtol$24:	; £temporary2451 -> s = *s
+90:		mov si, [bp + 6]
+92:	
+
+strtol$25:	; if £temporary2451 -> s != 45 goto 28
+93:		cmp byte [si], 45
+94:		jne strtol$28
+96:	
+
+strtol$26:	; minus = 1
+97:		mov word [bp + 12], 1
+99:	
+
+strtol$27:	; ++s
+100:		inc word [bp + 6]
+102:	
+
+strtol$28:	; value = 0
+103:		mov dword [bp + 14], 0
+105:	
+
+strtol$29:	; index = 0
+106:		mov word [bp + 18], 0
+108:	
+
+strtol$30:	; £temporary2456 = s + index
+109:		mov si, [bp + 6]
+110:		add si, [bp + 18]
+112:	
+
+strtol$31:	; £temporary2455 -> £temporary2456 = *£temporary2456
+114:	
+
+strtol$32:	; c = £temporary2455 -> £temporary2456
+115:		mov al, [si]
+116:		mov [bp + 20], al
+118:	
+
+strtol$33:	; call header integral zero 0 stack zero 0
+120:	
+
+strtol$34:	; parameter c, offset 6
+121:		mov al, [bp + 20]
+122:		mov [bp + 27], al
+124:	
+
+strtol$35:	; parameter base, offset 7
+125:		mov ax, [bp + 10]
+126:		mov [bp + 28], ax
+128:	
+
+strtol$36:	; call function noellipse-noellipse isbasedigit
+129:		mov word [bp + 21], strtol$37
+130:		mov [bp + 23], bp
+131:		add bp, 21
+132:		jmp @24$isbasedigit
+134:	
+
+strtol$37:	; post call
+136:	
+
+strtol$38:	; £temporary2457 = return_value
+141:	
+
+strtol$39:	; if £temporary2457 == 0 goto 52
+142:		cmp bx, 0
+143:		je strtol$52
+145:	
+
+strtol$40:	; £temporary2460 = int_to_int base (Signed_Int -> Signed_Long_Int)
+146:		mov bx, [bp + 10]
+148:		and ebx, 65535
+150:		cmp bx, 0
+151:		jge strtol$41
+152:		neg bx
+154:		neg ebx
+156:	
+
+strtol$41:	; value = value * £temporary2460
+157:		mov eax, [bp + 14]
+159:		xor edx, edx
+160:		imul ebx
+161:		mov [bp + 14], eax
+163:	
+
+strtol$42:	; call header integral zero 0 stack zero 0
+165:	
+
+strtol$43:	; parameter c, offset 6
+166:		mov al, [bp + 20]
+167:		mov [bp + 27], al
+169:	
+
+strtol$44:	; call function noellipse-noellipse tobasevalue
+170:		mov word [bp + 21], strtol$45
+171:		mov [bp + 23], bp
+172:		add bp, 21
+173:		jmp @25$tobasevalue
+175:	
+
+strtol$45:	; post call
+177:	
+
+strtol$46:	; £temporary2462 = return_value
+182:	
+
+strtol$47:	; digit = £temporary2462
+183:		mov [bp + 21], bx
+185:	
+
+strtol$48:	; £temporary2463 = int_to_int digit (Signed_Int -> Signed_Long_Int)
+186:		mov ax, [bp + 21]
+188:		and eax, 65535
+190:		cmp ax, 0
+191:		jge strtol$49
+192:		neg ax
+194:		neg eax
+196:	
+
+strtol$49:	; value = value + £temporary2463
+197:		add [bp + 14], eax
+199:	
+
+strtol$50:	; ++index
+200:		inc word [bp + 18]
+202:	
+
+strtol$51:	; goto 30
+203:		jmp strtol$30
+205:	
+
+strtol$52:	; if endp == 0 goto 58
+206:		cmp word [bp + 8], 0
+207:		je strtol$58
+209:	
+
+strtol$53:	; £temporary2467 -> endp = *endp
+210:		mov si, [bp + 8]
+212:	
+
+strtol$54:	; £temporary2469 = s + index
+213:		mov di, [bp + 6]
+214:		add di, [bp + 18]
+216:	
+
+strtol$55:	; £temporary2468 -> £temporary2469 = *£temporary2469
+218:	
+
+strtol$56:	; £temporary2470 = &£temporary2468 -> £temporary2469
+220:	
+
+strtol$57:	; £temporary2467 -> endp = £temporary2470
+221:		mov [si], di
+223:	
+
+strtol$58:	; if minus == 0 goto 62
+224:		cmp word [bp + 12], 0
+225:		je strtol$62
+227:	
+
+strtol$59:	; £temporary2471 = -value
+228:		mov ebx, [bp + 14]
+229:		neg ebx
+231:	
+
+strtol$60:	; £temporary2476 = £temporary2471
+233:	
+
+strtol$61:	; goto 63
+234:		jmp strtol$63
+236:	
+
+strtol$62:	; £temporary2476 = value
+237:		mov ebx, [bp + 14]
+239:	
+
+strtol$63:	; return_value = £temporary2476
+241:	
+
+strtol$64:	; return
+242:		mov ax, [bp]
+243:		mov di, [bp + 4]
+244:		mov bp, [bp + 2]
+245:		jmp ax
+247:	
+
+strtol$65:	; return_value = 0
+248:		mov ebx, 0
+250:	
+
+strtol$66:	; return
+251:		mov ax, [bp]
+252:		mov di, [bp + 4]
+253:		mov bp, [bp + 2]
+254:		jmp ax
+256:	
+
+strtol$67:	; function end strtol
+1:	
+
+strtol_test:	; text[0] = 43
+2:		mov byte [bp + 6], 43
+4:	
+
+strtol_test$1:	; text[1] = 49
+5:		mov byte [bp + 7], 49
+7:	
+
+strtol_test$2:	; text[2] = 50
+8:		mov byte [bp + 8], 50
+10:	
+
+strtol_test$3:	; text[3] = 51
+11:		mov byte [bp + 9], 51
+13:	
+
+strtol_test$4:	; text[4] = 97
+14:		mov byte [bp + 10], 97
+16:	
+
+strtol_test$5:	; text[5] = 98
+17:		mov byte [bp + 11], 98
+19:	
+
+strtol_test$6:	; text[6] = 99
+20:		mov byte [bp + 12], 99
+22:	
+
+strtol_test$7:	; text[7] = 0
+23:		mov byte [bp + 13], 0
+25:	
+
+strtol_test$8:	; call header integral zero 0 stack zero 0
+27:	
+
+strtol_test$9:	; parameter text, offset 6
+28:		mov [bp + 22], bp
+29:		add word [bp + 22], 6
+31:	
+
+strtol_test$10:	; £temporary2494 = &pointer
+32:		mov si, bp
+33:		add si, 14
+35:	
+
+strtol_test$11:	; parameter £temporary2494, offset 8
+36:		mov [bp + 24], si
+38:	
+
+strtol_test$12:	; parameter 9, offset 10
+39:		mov word [bp + 26], 9
+41:	
+
+strtol_test$13:	; call function noellipse-noellipse strtol
+42:		mov word [bp + 16], strtol_test$14
+43:		mov [bp + 18], bp
+44:		add bp, 16
+45:		jmp strtol
 47:	
 
-strtoul$13:	; £temporary2401 -> endp = s + chars
-48:		mov ax, [bp + 6]
-49:		add ax, [bp + 12]
-50:		mov [si], ax
-52:	
+strtol_test$14:	; post call
+49:	
 
-strtoul$14:	; return_value = value
-53:		mov ebx, [bp + 14]
-55:	
+strtol_test$15:	; £temporary2495 = return_value
+54:	
 
-strtoul$15:	; return
-56:		mov ax, [bp]
-57:		mov di, [bp + 4]
-58:		mov bp, [bp + 2]
-59:		jmp ax
-61:	
+strtol_test$16:	; value = £temporary2495
+55:		mov [bp + 16], ebx
+57:	
 
-strtoul$16:	; function end strtoul
+strtol_test$17:	; call header integral zero 0 stack zero 0
+59:	
+
+strtol_test$18:	; parameter string_3C25s3E203C25li3E203C25s3E0A0A#, offset 6
+60:		mov word [bp + 26], string_3C25s3E203C25li3E203C25s3E0A0A#
+62:	
+
+strtol_test$19:	; parameter text, offset 8
+63:		mov [bp + 28], bp
+64:		add word [bp + 28], 6
+66:	
+
+strtol_test$20:	; parameter value, offset 10
+67:		mov eax, [bp + 16]
+68:		mov [bp + 30], eax
+70:	
+
+strtol_test$21:	; parameter pointer, offset 14
+71:		mov ax, [bp + 14]
+72:		mov [bp + 34], ax
+74:	
+
+strtol_test$22:	; call function noellipse-ellipse printf, extra 0
+75:		mov word [bp + 20], strtol_test$23
+76:		mov [bp + 22], bp
+77:		add bp, 20
+78:		mov di, bp
+79:		add di, 8
+80:		jmp printf
+82:	
+
+strtol_test$23:	; post call
+84:	
+
+strtol_test$24:	; text[0] = 43
+85:		mov byte [bp + 6], 43
+87:	
+
+strtol_test$25:	; text[1] = 49
+88:		mov byte [bp + 7], 49
+90:	
+
+strtol_test$26:	; text[2] = 50
+91:		mov byte [bp + 8], 50
+93:	
+
+strtol_test$27:	; text[3] = 51
+94:		mov byte [bp + 9], 51
+96:	
+
+strtol_test$28:	; text[4] = 97
+97:		mov byte [bp + 10], 97
+99:	
+
+strtol_test$29:	; text[5] = 98
+100:		mov byte [bp + 11], 98
+102:	
+
+strtol_test$30:	; text[6] = 99
+103:		mov byte [bp + 12], 99
+105:	
+
+strtol_test$31:	; text[7] = 0
+106:		mov byte [bp + 13], 0
+108:	
+
+strtol_test$32:	; call header integral zero 0 stack zero 0
+110:	
+
+strtol_test$33:	; parameter text, offset 6
+111:		mov [bp + 22], bp
+112:		add word [bp + 22], 6
+114:	
+
+strtol_test$34:	; £temporary2505 = &pointer
+115:		mov si, bp
+116:		add si, 14
+118:	
+
+strtol_test$35:	; parameter £temporary2505, offset 8
+119:		mov [bp + 24], si
+121:	
+
+strtol_test$36:	; parameter 10, offset 10
+122:		mov word [bp + 26], 10
+124:	
+
+strtol_test$37:	; call function noellipse-noellipse strtol
+125:		mov word [bp + 16], strtol_test$38
+126:		mov [bp + 18], bp
+127:		add bp, 16
+128:		jmp strtol
+130:	
+
+strtol_test$38:	; post call
+132:	
+
+strtol_test$39:	; £temporary2506 = return_value
+137:	
+
+strtol_test$40:	; value = £temporary2506
+138:		mov [bp + 16], ebx
+140:	
+
+strtol_test$41:	; call header integral zero 0 stack zero 0
+142:	
+
+strtol_test$42:	; parameter string_3C25s3E203C25li3E203C25s3E0A0A#, offset 6
+143:		mov word [bp + 26], string_3C25s3E203C25li3E203C25s3E0A0A#
+145:	
+
+strtol_test$43:	; parameter text, offset 8
+146:		mov [bp + 28], bp
+147:		add word [bp + 28], 6
+149:	
+
+strtol_test$44:	; parameter value, offset 10
+150:		mov eax, [bp + 16]
+151:		mov [bp + 30], eax
+153:	
+
+strtol_test$45:	; parameter pointer, offset 14
+154:		mov ax, [bp + 14]
+155:		mov [bp + 34], ax
+157:	
+
+strtol_test$46:	; call function noellipse-ellipse printf, extra 0
+158:		mov word [bp + 20], strtol_test$47
+159:		mov [bp + 22], bp
+160:		add bp, 20
+161:		mov di, bp
+162:		add di, 8
+163:		jmp printf
+165:	
+
+strtol_test$47:	; post call
+167:	
+
+strtol_test$48:	; text[0] = 43
+168:		mov byte [bp + 6], 43
+170:	
+
+strtol_test$49:	; text[1] = 49
+171:		mov byte [bp + 7], 49
+173:	
+
+strtol_test$50:	; text[2] = 50
+174:		mov byte [bp + 8], 50
+176:	
+
+strtol_test$51:	; text[3] = 51
+177:		mov byte [bp + 9], 51
+179:	
+
+strtol_test$52:	; text[4] = 97
+180:		mov byte [bp + 10], 97
+182:	
+
+strtol_test$53:	; text[5] = 98
+183:		mov byte [bp + 11], 98
+185:	
+
+strtol_test$54:	; text[6] = 99
+186:		mov byte [bp + 12], 99
+188:	
+
+strtol_test$55:	; text[7] = 0
+189:		mov byte [bp + 13], 0
+191:	
+
+strtol_test$56:	; call header integral zero 0 stack zero 0
+193:	
+
+strtol_test$57:	; parameter text, offset 6
+194:		mov [bp + 22], bp
+195:		add word [bp + 22], 6
+197:	
+
+strtol_test$58:	; £temporary2516 = &pointer
+198:		mov si, bp
+199:		add si, 14
+201:	
+
+strtol_test$59:	; parameter £temporary2516, offset 8
+202:		mov [bp + 24], si
+204:	
+
+strtol_test$60:	; parameter 11, offset 10
+205:		mov word [bp + 26], 11
+207:	
+
+strtol_test$61:	; call function noellipse-noellipse strtol
+208:		mov word [bp + 16], strtol_test$62
+209:		mov [bp + 18], bp
+210:		add bp, 16
+211:		jmp strtol
+213:	
+
+strtol_test$62:	; post call
+215:	
+
+strtol_test$63:	; £temporary2517 = return_value
+220:	
+
+strtol_test$64:	; value = £temporary2517
+221:		mov [bp + 16], ebx
+223:	
+
+strtol_test$65:	; call header integral zero 0 stack zero 0
+225:	
+
+strtol_test$66:	; parameter string_3C25s3E203C25li3E203C25s3E0A0A#, offset 6
+226:		mov word [bp + 26], string_3C25s3E203C25li3E203C25s3E0A0A#
+228:	
+
+strtol_test$67:	; parameter text, offset 8
+229:		mov [bp + 28], bp
+230:		add word [bp + 28], 6
+232:	
+
+strtol_test$68:	; parameter value, offset 10
+233:		mov eax, [bp + 16]
+234:		mov [bp + 30], eax
+236:	
+
+strtol_test$69:	; parameter pointer, offset 14
+237:		mov ax, [bp + 14]
+238:		mov [bp + 34], ax
+240:	
+
+strtol_test$70:	; call function noellipse-ellipse printf, extra 0
+241:		mov word [bp + 20], strtol_test$71
+242:		mov [bp + 22], bp
+243:		add bp, 20
+244:		mov di, bp
+245:		add di, 8
+246:		jmp printf
+248:	
+
+strtol_test$71:	; post call
+250:	
+
+strtol_test$72:	; text[0] = 45
+251:		mov byte [bp + 6], 45
+253:	
+
+strtol_test$73:	; text[1] = 49
+254:		mov byte [bp + 7], 49
+256:	
+
+strtol_test$74:	; text[2] = 50
+257:		mov byte [bp + 8], 50
+259:	
+
+strtol_test$75:	; text[3] = 51
+260:		mov byte [bp + 9], 51
+262:	
+
+strtol_test$76:	; text[4] = 97
+263:		mov byte [bp + 10], 97
+265:	
+
+strtol_test$77:	; text[5] = 98
+266:		mov byte [bp + 11], 98
+268:	
+
+strtol_test$78:	; text[6] = 99
+269:		mov byte [bp + 12], 99
+271:	
+
+strtol_test$79:	; text[7] = 0
+272:		mov byte [bp + 13], 0
+274:	
+
+strtol_test$80:	; call header integral zero 0 stack zero 0
+276:	
+
+strtol_test$81:	; parameter text, offset 6
+277:		mov [bp + 22], bp
+278:		add word [bp + 22], 6
+280:	
+
+strtol_test$82:	; £temporary2527 = &pointer
+281:		mov si, bp
+282:		add si, 14
+284:	
+
+strtol_test$83:	; parameter £temporary2527, offset 8
+285:		mov [bp + 24], si
+287:	
+
+strtol_test$84:	; parameter 9, offset 10
+288:		mov word [bp + 26], 9
+290:	
+
+strtol_test$85:	; call function noellipse-noellipse strtol
+291:		mov word [bp + 16], strtol_test$86
+292:		mov [bp + 18], bp
+293:		add bp, 16
+294:		jmp strtol
+296:	
+
+strtol_test$86:	; post call
+298:	
+
+strtol_test$87:	; £temporary2528 = return_value
+303:	
+
+strtol_test$88:	; value = £temporary2528
+304:		mov [bp + 16], ebx
+306:	
+
+strtol_test$89:	; call header integral zero 0 stack zero 0
+308:	
+
+strtol_test$90:	; parameter string_3C25s3E203C25li3E203C25s3E0A0A#, offset 6
+309:		mov word [bp + 26], string_3C25s3E203C25li3E203C25s3E0A0A#
+311:	
+
+strtol_test$91:	; parameter text, offset 8
+312:		mov [bp + 28], bp
+313:		add word [bp + 28], 6
+315:	
+
+strtol_test$92:	; parameter value, offset 10
+316:		mov eax, [bp + 16]
+317:		mov [bp + 30], eax
+319:	
+
+strtol_test$93:	; parameter pointer, offset 14
+320:		mov ax, [bp + 14]
+321:		mov [bp + 34], ax
+323:	
+
+strtol_test$94:	; call function noellipse-ellipse printf, extra 0
+324:		mov word [bp + 20], strtol_test$95
+325:		mov [bp + 22], bp
+326:		add bp, 20
+327:		mov di, bp
+328:		add di, 8
+329:		jmp printf
+331:	
+
+strtol_test$95:	; post call
+333:	
+
+strtol_test$96:	; text[0] = 45
+334:		mov byte [bp + 6], 45
+336:	
+
+strtol_test$97:	; text[1] = 49
+337:		mov byte [bp + 7], 49
+339:	
+
+strtol_test$98:	; text[2] = 50
+340:		mov byte [bp + 8], 50
+342:	
+
+strtol_test$99:	; text[3] = 51
+343:		mov byte [bp + 9], 51
+345:	
+
+strtol_test$100:	; text[4] = 97
+346:		mov byte [bp + 10], 97
+348:	
+
+strtol_test$101:	; text[5] = 98
+349:		mov byte [bp + 11], 98
+351:	
+
+strtol_test$102:	; text[6] = 99
+352:		mov byte [bp + 12], 99
+354:	
+
+strtol_test$103:	; text[7] = 0
+355:		mov byte [bp + 13], 0
+357:	
+
+strtol_test$104:	; call header integral zero 0 stack zero 0
+359:	
+
+strtol_test$105:	; parameter text, offset 6
+360:		mov [bp + 22], bp
+361:		add word [bp + 22], 6
+363:	
+
+strtol_test$106:	; £temporary2538 = &pointer
+364:		mov si, bp
+365:		add si, 14
+367:	
+
+strtol_test$107:	; parameter £temporary2538, offset 8
+368:		mov [bp + 24], si
+370:	
+
+strtol_test$108:	; parameter 10, offset 10
+371:		mov word [bp + 26], 10
+373:	
+
+strtol_test$109:	; call function noellipse-noellipse strtol
+374:		mov word [bp + 16], strtol_test$110
+375:		mov [bp + 18], bp
+376:		add bp, 16
+377:		jmp strtol
+379:	
+
+strtol_test$110:	; post call
+381:	
+
+strtol_test$111:	; £temporary2539 = return_value
+386:	
+
+strtol_test$112:	; value = £temporary2539
+387:		mov [bp + 16], ebx
+389:	
+
+strtol_test$113:	; call header integral zero 0 stack zero 0
+391:	
+
+strtol_test$114:	; parameter string_3C25s3E203C25li3E203C25s3E0A0A#, offset 6
+392:		mov word [bp + 26], string_3C25s3E203C25li3E203C25s3E0A0A#
+394:	
+
+strtol_test$115:	; parameter text, offset 8
+395:		mov [bp + 28], bp
+396:		add word [bp + 28], 6
+398:	
+
+strtol_test$116:	; parameter value, offset 10
+399:		mov eax, [bp + 16]
+400:		mov [bp + 30], eax
+402:	
+
+strtol_test$117:	; parameter pointer, offset 14
+403:		mov ax, [bp + 14]
+404:		mov [bp + 34], ax
+406:	
+
+strtol_test$118:	; call function noellipse-ellipse printf, extra 0
+407:		mov word [bp + 20], strtol_test$119
+408:		mov [bp + 22], bp
+409:		add bp, 20
+410:		mov di, bp
+411:		add di, 8
+412:		jmp printf
+414:	
+
+strtol_test$119:	; post call
+416:	
+
+strtol_test$120:	; text[0] = 45
+417:		mov byte [bp + 6], 45
+419:	
+
+strtol_test$121:	; text[1] = 49
+420:		mov byte [bp + 7], 49
+422:	
+
+strtol_test$122:	; text[2] = 50
+423:		mov byte [bp + 8], 50
+425:	
+
+strtol_test$123:	; text[3] = 51
+426:		mov byte [bp + 9], 51
+428:	
+
+strtol_test$124:	; text[4] = 97
+429:		mov byte [bp + 10], 97
+431:	
+
+strtol_test$125:	; text[5] = 98
+432:		mov byte [bp + 11], 98
+434:	
+
+strtol_test$126:	; text[6] = 99
+435:		mov byte [bp + 12], 99
+437:	
+
+strtol_test$127:	; text[7] = 0
+438:		mov byte [bp + 13], 0
+440:	
+
+strtol_test$128:	; call header integral zero 0 stack zero 0
+442:	
+
+strtol_test$129:	; parameter text, offset 6
+443:		mov [bp + 22], bp
+444:		add word [bp + 22], 6
+446:	
+
+strtol_test$130:	; £temporary2549 = &pointer
+447:		mov si, bp
+448:		add si, 14
+450:	
+
+strtol_test$131:	; parameter £temporary2549, offset 8
+451:		mov [bp + 24], si
+453:	
+
+strtol_test$132:	; parameter 11, offset 10
+454:		mov word [bp + 26], 11
+456:	
+
+strtol_test$133:	; call function noellipse-noellipse strtol
+457:		mov word [bp + 16], strtol_test$134
+458:		mov [bp + 18], bp
+459:		add bp, 16
+460:		jmp strtol
+462:	
+
+strtol_test$134:	; post call
+464:	
+
+strtol_test$135:	; £temporary2550 = return_value
+469:	
+
+strtol_test$136:	; value = £temporary2550
+470:		mov [bp + 16], ebx
+472:	
+
+strtol_test$137:	; call header integral zero 0 stack zero 0
+474:	
+
+strtol_test$138:	; parameter string_3C25s3E203C25li3E203C25s3E0A0A#, offset 6
+475:		mov word [bp + 26], string_3C25s3E203C25li3E203C25s3E0A0A#
+477:	
+
+strtol_test$139:	; parameter text, offset 8
+478:		mov [bp + 28], bp
+479:		add word [bp + 28], 6
+481:	
+
+strtol_test$140:	; parameter value, offset 10
+482:		mov eax, [bp + 16]
+483:		mov [bp + 30], eax
+485:	
+
+strtol_test$141:	; parameter pointer, offset 14
+486:		mov ax, [bp + 14]
+487:		mov [bp + 34], ax
+489:	
+
+strtol_test$142:	; call function noellipse-ellipse printf, extra 0
+490:		mov word [bp + 20], strtol_test$143
+491:		mov [bp + 22], bp
+492:		add bp, 20
+493:		mov di, bp
+494:		add di, 8
+495:		jmp printf
+497:	
+
+strtol_test$143:	; post call
+499:	
+
+strtol_test$144:	; return
+500:		mov ax, [bp]
+501:		mov di, [bp + 4]
+502:		mov bp, [bp + 2]
+503:		jmp ax
+505:	
+
+strtol_test$145:	; function end strtol_test
+1:	
+
+strtoul:	; if base != 0 goto 17
+2:		cmp word [bp + 10], 0
+3:		jne strtoul$17
+5:	
+
+strtoul$1:	; chars = 0
+6:		mov word [bp + 12], 0
+8:	
+
+strtoul$2:	; value = 0
+9:		mov dword [bp + 14], 0
+11:	
+
+strtoul$3:	; call header integral zero 0 stack zero 0
+13:	
+
+strtoul$4:	; parameter s, offset 6
+14:		mov ax, [bp + 6]
+15:		mov [bp + 24], ax
+17:	
+
+strtoul$5:	; parameter string_25lu25n#, offset 8
+18:		mov word [bp + 26], string_25lu25n#
+20:	
+
+strtoul$6:	; £temporary2601 = &value
+21:		mov si, bp
+22:		add si, 14
+24:	
+
+strtoul$7:	; parameter £temporary2601, offset 10
+25:		mov [bp + 28], si
+27:	
+
+strtoul$8:	; £temporary2602 = &chars
+28:		mov si, bp
+29:		add si, 12
+31:	
+
+strtoul$9:	; parameter £temporary2602, offset 12
+32:		mov [bp + 30], si
+34:	
+
+strtoul$10:	; call function noellipse-ellipse sscanf, extra 0
+35:		mov word [bp + 18], strtoul$11
+36:		mov [bp + 20], bp
+37:		add bp, 18
+38:		mov di, bp
+39:		add di, 4
+40:		jmp sscanf
+42:	
+
+strtoul$11:	; post call
+44:	
+
+strtoul$12:	; if endp == 0 goto 15
+45:		cmp word [bp + 8], 0
+46:		je strtoul$15
+48:	
+
+strtoul$13:	; £temporary2605 -> endp = *endp
+49:		mov si, [bp + 8]
+51:	
+
+strtoul$14:	; £temporary2605 -> endp = s + chars
+52:		mov ax, [bp + 6]
+53:		add ax, [bp + 12]
+54:		mov [si], ax
+56:	
+
+strtoul$15:	; return_value = value
+57:		mov ebx, [bp + 14]
+59:	
+
+strtoul$16:	; return
+60:		mov ax, [bp]
+61:		mov di, [bp + 4]
+62:		mov bp, [bp + 2]
+63:		jmp ax
+65:	
+
+strtoul$17:	; if base <= 0 goto 53
+66:		cmp word [bp + 10], 0
+67:		jle strtoul$53
+69:	
+
+strtoul$18:	; if base > 36 goto 53
+70:		cmp word [bp + 10], 36
+71:		jg strtoul$53
+73:	
+
+strtoul$19:	; £temporary2610 -> s = *s
+74:		mov si, [bp + 6]
+76:	
+
+strtoul$20:	; if £temporary2610 -> s != 43 goto 22
+77:		cmp byte [si], 43
+78:		jne strtoul$22
+80:	
+
+strtoul$21:	; ++s
+81:		inc word [bp + 6]
+83:	
+
+strtoul$22:	; value = 0
+84:		mov dword [bp + 12], 0
+86:	
+
+strtoul$23:	; index = 0
+87:		mov word [bp + 16], 0
+89:	
+
+strtoul$24:	; £temporary2615 = s + index
+90:		mov si, [bp + 6]
+91:		add si, [bp + 16]
+93:	
+
+strtoul$25:	; £temporary2614 -> £temporary2615 = *£temporary2615
+95:	
+
+strtoul$26:	; c = £temporary2614 -> £temporary2615
+96:		mov al, [si]
+97:		mov [bp + 18], al
+99:	
+
+strtoul$27:	; call header integral zero 0 stack zero 0
+101:	
+
+strtoul$28:	; parameter c, offset 6
+102:		mov al, [bp + 18]
+103:		mov [bp + 25], al
+105:	
+
+strtoul$29:	; parameter base, offset 7
+106:		mov ax, [bp + 10]
+107:		mov [bp + 26], ax
+109:	
+
+strtoul$30:	; call function noellipse-noellipse isbasedigit
+110:		mov word [bp + 19], strtoul$31
+111:		mov [bp + 21], bp
+112:		add bp, 19
+113:		jmp @24$isbasedigit
+115:	
+
+strtoul$31:	; post call
+117:	
+
+strtoul$32:	; £temporary2616 = return_value
+122:	
+
+strtoul$33:	; if £temporary2616 == 0 goto 45
+123:		cmp bx, 0
+124:		je strtoul$45
+126:	
+
+strtoul$34:	; £temporary2619 = int_to_int base (Signed_Int -> Unsigned_Long_Int)
+127:		mov bx, [bp + 10]
+129:		and ebx, 65535
+131:	
+
+strtoul$35:	; value = value * £temporary2619
+132:		mov eax, [bp + 12]
+134:		xor edx, edx
+135:		mul ebx
+136:		mov [bp + 12], eax
+138:	
+
+strtoul$36:	; call header integral zero 0 stack zero 0
+140:	
+
+strtoul$37:	; parameter c, offset 6
+141:		mov al, [bp + 18]
+142:		mov [bp + 25], al
+144:	
+
+strtoul$38:	; call function noellipse-noellipse tobasevalue
+145:		mov word [bp + 19], strtoul$39
+146:		mov [bp + 21], bp
+147:		add bp, 19
+148:		jmp @25$tobasevalue
+150:	
+
+strtoul$39:	; post call
+152:	
+
+strtoul$40:	; £temporary2621 = return_value
+157:	
+
+strtoul$41:	; £temporary2622 = int_to_int £temporary2621 (Signed_Int -> Unsigned_Long_Int)
+159:		and ebx, 65535
+161:	
+
+strtoul$42:	; value = value + £temporary2622
+162:		add [bp + 12], ebx
+164:	
+
+strtoul$43:	; ++index
+165:		inc word [bp + 16]
+167:	
+
+strtoul$44:	; goto 24
+168:		jmp strtoul$24
+170:	
+
+strtoul$45:	; if endp == 0 goto 51
+171:		cmp word [bp + 8], 0
+172:		je strtoul$51
+174:	
+
+strtoul$46:	; £temporary2626 -> endp = *endp
+175:		mov si, [bp + 8]
+177:	
+
+strtoul$47:	; £temporary2628 = s + index
+178:		mov di, [bp + 6]
+179:		add di, [bp + 16]
+181:	
+
+strtoul$48:	; £temporary2627 -> £temporary2628 = *£temporary2628
+183:	
+
+strtoul$49:	; £temporary2629 = &£temporary2627 -> £temporary2628
+185:	
+
+strtoul$50:	; £temporary2626 -> endp = £temporary2629
+186:		mov [si], di
+188:	
+
+strtoul$51:	; return_value = value
+189:		mov ebx, [bp + 12]
+191:	
+
+strtoul$52:	; return
+192:		mov ax, [bp]
+193:		mov di, [bp + 4]
+194:		mov bp, [bp + 2]
+195:		jmp ax
+197:	
+
+strtoul$53:	; return_value = 0
+198:		mov ebx, 0
+200:	
+
+strtoul$54:	; return
+201:		mov ax, [bp]
+202:		mov di, [bp + 4]
+203:		mov bp, [bp + 2]
+204:		jmp ax
+206:	
+
+strtoul$55:	; function end strtoul
 1:	
 
 atof:	; call header integral zero 0 stack zero 0
@@ -271,10 +1774,10 @@ atof$3:	; call function noellipse-noellipse strtod
 atof$4:	; post call
 18:	
 
-atof$5:	; £temporary2409 = return_value
+atof$5:	; £temporary2639 = return_value
 20:	
 
-atof$6:	; return_value = £temporary2409
+atof$6:	; return_value = £temporary2639
 22:	
 
 atof$7:	; return
@@ -311,21 +1814,21 @@ strtod$5:	; parameter string_25lf25n#, offset 8
 17:		mov word [bp + 28], string_25lf25n#
 19:	
 
-strtod$6:	; £temporary2412 = &value
+strtod$6:	; £temporary2642 = &value
 20:		mov si, bp
 21:		add si, 12
 23:	
 
-strtod$7:	; parameter £temporary2412, offset 10
+strtod$7:	; parameter £temporary2642, offset 10
 24:		mov [bp + 30], si
 26:	
 
-strtod$8:	; £temporary2413 = &chars
+strtod$8:	; £temporary2643 = &chars
 27:		mov si, bp
 28:		add si, 10
 30:	
 
-strtod$9:	; parameter £temporary2413, offset 12
+strtod$9:	; parameter £temporary2643, offset 12
 31:		mov [bp + 32], si
 33:	
 
@@ -346,11 +1849,11 @@ strtod$12:	; if endp == 0 goto 15
 45:		je strtod$15
 47:	
 
-strtod$13:	; £temporary2416 -> endp = *endp
+strtod$13:	; £temporary2646 -> endp = *endp
 48:		mov si, [bp + 8]
 50:	
 
-strtod$14:	; £temporary2416 -> endp = s + chars
+strtod$14:	; £temporary2646 -> endp = s + chars
 51:		mov ax, [bp + 6]
 52:		add ax, [bp + 10]
 53:		mov [si], ax
@@ -423,97 +1926,6 @@ system$1:	; return
 system$2:	; function end system
 1:	
 
-memswp:	; £temporary2426 = int_to_int value1 (Pointer -> Pointer)
-2:		mov ax, [bp + 6]
-5:	
-
-memswp$1:	; charValue1 = £temporary2426
-6:		mov [bp + 12], ax
-8:	
-
-memswp$2:	; £temporary2427 = int_to_int value2 (Pointer -> Pointer)
-9:		mov ax, [bp + 8]
-12:	
-
-memswp$3:	; charValue2 = £temporary2427
-13:		mov [bp + 14], ax
-15:	
-
-memswp$4:	; index = 0
-16:		mov word [bp + 16], 0
-18:	
-
-memswp$5:	; if index >= valueSize goto 19
-19:		mov ax, [bp + 10]
-20:		cmp [bp + 16], ax
-21:		jge memswp$19
-23:	
-
-memswp$6:	; £temporary2431 = charValue1 + index
-24:		mov si, [bp + 12]
-25:		add si, [bp + 16]
-27:	
-
-memswp$7:	; £temporary2430 -> £temporary2431 = *£temporary2431
-29:	
-
-memswp$8:	; tempValue = £temporary2430 -> £temporary2431
-30:		mov al, [si]
-31:		mov [bp + 18], al
-33:	
-
-memswp$9:	; £temporary2433 = charValue1 + index
-34:		mov si, [bp + 12]
-35:		add si, [bp + 16]
-37:	
-
-memswp$10:	; £temporary2432 -> £temporary2433 = *£temporary2433
-39:	
-
-memswp$11:	; £temporary2435 = charValue2 + index
-40:		mov di, [bp + 14]
-41:		add di, [bp + 16]
-43:	
-
-memswp$12:	; £temporary2434 -> £temporary2435 = *£temporary2435
-45:	
-
-memswp$13:	; £temporary2432 -> £temporary2433 = £temporary2434 -> £temporary2435
-46:		mov al, [di]
-47:		mov [si], al
-49:	
-
-memswp$14:	; £temporary2437 = charValue2 + index
-50:		mov si, [bp + 14]
-51:		add si, [bp + 16]
-53:	
-
-memswp$15:	; £temporary2436 -> £temporary2437 = *£temporary2437
-55:	
-
-memswp$16:	; £temporary2436 -> £temporary2437 = tempValue
-56:		mov al, [bp + 18]
-57:		mov [si], al
-59:	
-
-memswp$17:	; ++index
-60:		inc word [bp + 16]
-62:	
-
-memswp$18:	; goto 5
-63:		jmp memswp$5
-65:	
-
-memswp$19:	; return
-66:		mov ax, [bp]
-67:		mov di, [bp + 4]
-68:		mov bp, [bp + 2]
-69:		jmp ax
-71:	
-
-memswp$20:	; function end memswp
-1:	
-
 bsearch:	; firstIndex = 0
 2:		mov word [bp + 16], 0
 4:	
@@ -540,17 +1952,17 @@ bsearch$4:	; return
 20:		jmp ax
 22:	
 
-bsearch$5:	; £temporary2440 = int_to_int valueList (Pointer -> Pointer)
+bsearch$5:	; £temporary2658 = int_to_int valueList (Pointer -> Pointer)
 23:		mov bx, [bp + 8]
 26:	
 
-bsearch$6:	; £temporary2441 = firstIndex * valueSize
+bsearch$6:	; £temporary2659 = firstIndex * valueSize
 27:		mov ax, [bp + 16]
 29:		xor dx, dx
 30:		imul word [bp + 12]
 36:	
 
-bsearch$7:	; firstValuePtr = £temporary2440 + £temporary2441
+bsearch$7:	; firstValuePtr = £temporary2658 + £temporary2659
 37:		add bx, ax
 38:		mov [bp + 20], bx
 40:	
@@ -579,10 +1991,10 @@ bsearch$11:	; call function noellipse-noellipse compare
 bsearch$12:	; post call
 59:	
 
-bsearch$13:	; £temporary2443 = return_value
+bsearch$13:	; £temporary2661 = return_value
 64:	
 
-bsearch$14:	; firstCompare = £temporary2443
+bsearch$14:	; firstCompare = £temporary2661
 65:		mov [bp + 22], bx
 67:	
 
@@ -618,17 +2030,17 @@ bsearch$20:	; return
 91:		jmp ax
 93:	
 
-bsearch$21:	; £temporary2446 = int_to_int valueList (Pointer -> Pointer)
+bsearch$21:	; £temporary2664 = int_to_int valueList (Pointer -> Pointer)
 94:		mov bx, [bp + 8]
 97:	
 
-bsearch$22:	; £temporary2447 = lastIndex * valueSize
+bsearch$22:	; £temporary2665 = lastIndex * valueSize
 98:		mov ax, [bp + 18]
 100:		xor dx, dx
 101:		imul word [bp + 12]
 107:	
 
-bsearch$23:	; lastValuePtr = £temporary2446 + £temporary2447
+bsearch$23:	; lastValuePtr = £temporary2664 + £temporary2665
 108:		add bx, ax
 109:		mov [bp + 20], bx
 111:	
@@ -657,10 +2069,10 @@ bsearch$27:	; call function noellipse-noellipse compare
 bsearch$28:	; post call
 130:	
 
-bsearch$29:	; £temporary2449 = return_value
+bsearch$29:	; £temporary2667 = return_value
 135:	
 
-bsearch$30:	; lastCompare = £temporary2449
+bsearch$30:	; lastCompare = £temporary2667
 136:		mov [bp + 22], bx
 138:	
 
@@ -696,28 +2108,28 @@ bsearch$36:	; return
 162:		jmp ax
 164:	
 
-bsearch$37:	; £temporary2452 = firstIndex + lastIndex
+bsearch$37:	; £temporary2670 = firstIndex + lastIndex
 165:		mov ax, [bp + 16]
 166:		add ax, [bp + 18]
 168:	
 
-bsearch$38:	; middleIndex = £temporary2452 / 2
+bsearch$38:	; middleIndex = £temporary2670 / 2
 170:		xor dx, dx
 171:		idiv word [int2$2#]
 172:		mov [bp + 20], ax
 174:	
 
-bsearch$39:	; £temporary2454 = int_to_int valueList (Pointer -> Pointer)
+bsearch$39:	; £temporary2672 = int_to_int valueList (Pointer -> Pointer)
 175:		mov bx, [bp + 8]
 178:	
 
-bsearch$40:	; £temporary2455 = middleIndex * valueSize
+bsearch$40:	; £temporary2673 = middleIndex * valueSize
 179:		mov ax, [bp + 20]
 181:		xor dx, dx
 182:		imul word [bp + 12]
 188:	
 
-bsearch$41:	; middleValuePtr = £temporary2454 + £temporary2455
+bsearch$41:	; middleValuePtr = £temporary2672 + £temporary2673
 189:		add bx, ax
 190:		mov [bp + 22], bx
 192:	
@@ -746,10 +2158,10 @@ bsearch$45:	; call function noellipse-noellipse compare
 bsearch$46:	; post call
 211:	
 
-bsearch$47:	; £temporary2457 = return_value
+bsearch$47:	; £temporary2675 = return_value
 216:	
 
-bsearch$48:	; middleCompare = £temporary2457
+bsearch$48:	; middleCompare = £temporary2675
 217:		mov [bp + 24], bx
 219:	
 
@@ -795,31 +2207,31 @@ bsearch$56:	; return
 bsearch$57:	; function end bsearch
 1:	
 
-rand:	; £temporary2467 = g_randValue * 1664525
-2:		mov eax, [@25$g_randValue]
+rand:	; £temporary2685 = g_randValue * 1664525
+2:		mov eax, [@26$g_randValue]
 4:		xor edx, edx
 5:		imul dword [int4$1664525#]
 11:	
 
-rand$1:	; £temporary2468 = £temporary2467 + 1013904223
+rand$1:	; £temporary2686 = £temporary2685 + 1013904223
 12:		add eax, 1013904223
 14:	
 
-rand$2:	; g_randValue = £temporary2468 % 127
+rand$2:	; g_randValue = £temporary2686 % 127
 16:		xor edx, edx
 17:		idiv dword [int4$127#]
-18:		mov [@25$g_randValue], edx
+18:		mov [@26$g_randValue], edx
 20:	
 
-rand$3:	; £temporary2470 = int_to_int g_randValue (Signed_Long_Int -> Signed_Int)
-21:		mov ebx, [@25$g_randValue]
+rand$3:	; £temporary2688 = int_to_int g_randValue (Signed_Long_Int -> Signed_Int)
+21:		mov ebx, [@26$g_randValue]
 24:		cmp ebx, 0
 25:		jge rand$4
 26:		neg ebx
 28:		neg bx
 30:	
 
-rand$4:	; return_value = £temporary2470
+rand$4:	; return_value = £temporary2688
 32:	
 
 rand$5:	; return
@@ -832,13 +2244,13 @@ rand$5:	; return
 rand$6:	; function end rand
 1:	
 
-srand:	; £temporary2471 = int_to_int seed (Unsigned_Int -> Signed_Long_Int)
+srand:	; £temporary2689 = int_to_int seed (Unsigned_Int -> Signed_Long_Int)
 2:		mov ax, [bp + 6]
 4:		and eax, 65535
 6:	
 
-srand$1:	; g_randValue = £temporary2471
-7:		mov [@25$g_randValue], eax
+srand$1:	; g_randValue = £temporary2689
+7:		mov [@26$g_randValue], eax
 9:	
 
 srand$2:	; return
@@ -860,40 +2272,40 @@ atexit$1:	; if index >= 256 goto 14
 6:		jge atexit$14
 8:	
 
-atexit$2:	; £temporary2475 = index * 2
+atexit$2:	; £temporary2693 = index * 2
 9:		mov ax, [bp + 8]
 11:		xor dx, dx
 12:		mul word [int2$2#]
 18:	
 
-atexit$3:	; £temporary2476 = g_funcArray + £temporary2475
+atexit$3:	; £temporary2694 = g_funcArray + £temporary2693
 19:		mov si, g_funcArray
 20:		add si, ax
 22:	
 
-atexit$4:	; £temporary2474 -> £temporary2476 = *£temporary2476
+atexit$4:	; £temporary2692 -> £temporary2694 = *£temporary2694
 24:	
 
-atexit$5:	; if £temporary2474 -> £temporary2476 != 0 goto 12
+atexit$5:	; if £temporary2692 -> £temporary2694 != 0 goto 12
 25:		cmp word [si], 0
 26:		jne atexit$12
 28:	
 
-atexit$6:	; £temporary2479 = index * 2
+atexit$6:	; £temporary2697 = index * 2
 29:		mov ax, [bp + 8]
 31:		xor dx, dx
 32:		mul word [int2$2#]
 38:	
 
-atexit$7:	; £temporary2480 = g_funcArray + £temporary2479
+atexit$7:	; £temporary2698 = g_funcArray + £temporary2697
 39:		mov si, g_funcArray
 40:		add si, ax
 42:	
 
-atexit$8:	; £temporary2478 -> £temporary2480 = *£temporary2480
+atexit$8:	; £temporary2696 -> £temporary2698 = *£temporary2698
 44:	
 
-atexit$9:	; £temporary2478 -> £temporary2480 = fcn
+atexit$9:	; £temporary2696 -> £temporary2698 = fcn
 45:		mov ax, [bp + 6]
 46:		mov [si], ax
 48:	
@@ -940,37 +2352,37 @@ exit$1:	; if index < 0 goto 14
 6:		jl exit$14
 8:	
 
-exit$2:	; £temporary2484 = index * 2
+exit$2:	; £temporary2702 = index * 2
 9:		mov ax, [bp + 8]
 11:		xor dx, dx
 12:		mul word [int2$2#]
 18:	
 
-exit$3:	; £temporary2485 = g_funcArray + £temporary2484
+exit$3:	; £temporary2703 = g_funcArray + £temporary2702
 19:		mov si, g_funcArray
 20:		add si, ax
 22:	
 
-exit$4:	; £temporary2483 -> £temporary2485 = *£temporary2485
+exit$4:	; £temporary2701 -> £temporary2703 = *£temporary2703
 24:	
 
-exit$5:	; if £temporary2483 -> £temporary2485 == 0 goto 12
+exit$5:	; if £temporary2701 -> £temporary2703 == 0 goto 12
 25:		cmp word [si], 0
 26:		je exit$12
 28:	
 
-exit$6:	; £temporary2488 = index * 2
+exit$6:	; £temporary2706 = index * 2
 29:		mov ax, [bp + 8]
 31:		xor dx, dx
 32:		mul word [int2$2#]
 38:	
 
-exit$7:	; £temporary2489 = g_funcArray + £temporary2488
+exit$7:	; £temporary2707 = g_funcArray + £temporary2706
 39:		mov si, g_funcArray
 40:		add si, ax
 42:	
 
-exit$8:	; £temporary2487 -> £temporary2489 = *£temporary2489
+exit$8:	; £temporary2705 -> £temporary2707 = *£temporary2707
 43:		mov ax, [si]
 44:		mov [bp + 10], ax
 46:	
@@ -978,7 +2390,7 @@ exit$8:	; £temporary2487 -> £temporary2489 = *£temporary2489
 exit$9:	; call header integral zero 0 stack zero 0
 48:	
 
-exit$10:	; call function noellipse-noellipse £temporary2487 -> £temporary2489
+exit$10:	; call function noellipse-noellipse £temporary2705 -> £temporary2707
 49:		mov word [bp + 12], exit$11
 50:		mov [bp + 14], bp
 51:		add bp, 12
@@ -997,7 +2409,7 @@ exit$13:	; goto 1
 61:		jmp exit$1
 63:	
 
-exit$14:	; £temporary2492 = int_to_int status (Signed_Int -> Signed_Short_Int)
+exit$14:	; £temporary2710 = int_to_int status (Signed_Int -> Signed_Short_Int)
 64:		mov ax, [bp + 6]
 67:		cmp ax, 0
 68:		jge exit$15
@@ -1005,7 +2417,7 @@ exit$14:	; £temporary2492 = int_to_int status (Signed_Int -> Signed_Short_Int)
 71:		neg al
 73:	
 
-exit$15:	; al = £temporary2492
+exit$15:	; al = £temporary2710
 75:	
 
 exit$16:	; ah = 76
@@ -1026,86 +2438,102 @@ exit$18:	; return
 exit$19:	; function end exit
 1:	
 
-swap:	; index = 0
-2:		mov word [bp + 12], 0
-4:	
-
-swap$1:	; if index >= valueSize goto 15
-5:		mov ax, [bp + 10]
-6:		cmp [bp + 12], ax
-7:		jge swap$15
-9:	
-
-swap$2:	; £temporary2497 = leftValuePtr + index
-10:		mov si, [bp + 6]
-11:		add si, [bp + 12]
-13:	
-
-swap$3:	; £temporary2496 -> £temporary2497 = *£temporary2497
-15:	
-
-swap$4:	; tempValue = £temporary2496 -> £temporary2497
-16:		mov al, [si]
-17:		mov [bp + 14], al
-19:	
-
-swap$5:	; £temporary2499 = leftValuePtr + index
-20:		mov si, [bp + 6]
-21:		add si, [bp + 12]
-23:	
-
-swap$6:	; £temporary2498 -> £temporary2499 = *£temporary2499
-25:	
-
-swap$7:	; £temporary2501 = rightValuePtr + index
-26:		mov di, [bp + 8]
-27:		add di, [bp + 12]
-29:	
-
-swap$8:	; £temporary2500 -> £temporary2501 = *£temporary2501
-31:	
-
-swap$9:	; £temporary2498 -> £temporary2499 = £temporary2500 -> £temporary2501
-32:		mov al, [di]
-33:		mov [si], al
-35:	
-
-swap$10:	; £temporary2503 = rightValuePtr + index
-36:		mov si, [bp + 8]
-37:		add si, [bp + 12]
-39:	
-
-swap$11:	; £temporary2502 -> £temporary2503 = *£temporary2503
-41:	
-
-swap$12:	; £temporary2502 -> £temporary2503 = tempValue
-42:		mov al, [bp + 14]
-43:		mov [si], al
-45:	
-
-swap$13:	; ++index
-46:		inc word [bp + 12]
-48:	
-
-swap$14:	; goto 1
-49:		jmp swap$1
-51:	
-
-swap$15:	; return
-52:		mov ax, [bp]
-53:		mov di, [bp + 4]
-54:		mov bp, [bp + 2]
-55:		jmp ax
-57:	
-
-swap$16:	; function end swap
-1:	
-
-qsort:	; £temporary2504 = int_to_int valueList (Pointer -> Pointer)
+memswp:	; £temporary2712 = int_to_int value1 (Pointer -> Pointer)
 2:		mov ax, [bp + 6]
 5:	
 
-qsort$1:	; charList = £temporary2504
+memswp$1:	; charValue1 = £temporary2712
+6:		mov [bp + 12], ax
+8:	
+
+memswp$2:	; £temporary2713 = int_to_int value2 (Pointer -> Pointer)
+9:		mov ax, [bp + 8]
+12:	
+
+memswp$3:	; charValue2 = £temporary2713
+13:		mov [bp + 14], ax
+15:	
+
+memswp$4:	; index = 0
+16:		mov word [bp + 16], 0
+18:	
+
+memswp$5:	; if index >= valueSize goto 19
+19:		mov ax, [bp + 10]
+20:		cmp [bp + 16], ax
+21:		jge memswp$19
+23:	
+
+memswp$6:	; £temporary2717 = charValue1 + index
+24:		mov si, [bp + 12]
+25:		add si, [bp + 16]
+27:	
+
+memswp$7:	; £temporary2716 -> £temporary2717 = *£temporary2717
+29:	
+
+memswp$8:	; tempValue = £temporary2716 -> £temporary2717
+30:		mov al, [si]
+31:		mov [bp + 18], al
+33:	
+
+memswp$9:	; £temporary2719 = charValue1 + index
+34:		mov si, [bp + 12]
+35:		add si, [bp + 16]
+37:	
+
+memswp$10:	; £temporary2718 -> £temporary2719 = *£temporary2719
+39:	
+
+memswp$11:	; £temporary2721 = charValue2 + index
+40:		mov di, [bp + 14]
+41:		add di, [bp + 16]
+43:	
+
+memswp$12:	; £temporary2720 -> £temporary2721 = *£temporary2721
+45:	
+
+memswp$13:	; £temporary2718 -> £temporary2719 = £temporary2720 -> £temporary2721
+46:		mov al, [di]
+47:		mov [si], al
+49:	
+
+memswp$14:	; £temporary2723 = charValue2 + index
+50:		mov si, [bp + 14]
+51:		add si, [bp + 16]
+53:	
+
+memswp$15:	; £temporary2722 -> £temporary2723 = *£temporary2723
+55:	
+
+memswp$16:	; £temporary2722 -> £temporary2723 = tempValue
+56:		mov al, [bp + 18]
+57:		mov [si], al
+59:	
+
+memswp$17:	; ++index
+60:		inc word [bp + 16]
+62:	
+
+memswp$18:	; goto 5
+63:		jmp memswp$5
+65:	
+
+memswp$19:	; return
+66:		mov ax, [bp]
+67:		mov di, [bp + 4]
+68:		mov bp, [bp + 2]
+69:		jmp ax
+71:	
+
+memswp$20:	; function end memswp
+1:	
+
+qsort:	; £temporary2724 = int_to_int valueList (Pointer -> Pointer)
+2:		mov ax, [bp + 6]
+5:	
+
+qsort$1:	; charList = £temporary2724
 6:		mov [bp + 16], ax
 8:	
 
@@ -1134,29 +2562,29 @@ qsort$6:	; if index2 >= index1 goto 28
 26:		jge qsort$28
 28:	
 
-qsort$7:	; £temporary2510 = index2 * valueSize
+qsort$7:	; £temporary2730 = index2 * valueSize
 29:		mov ax, [bp + 20]
 31:		xor dx, dx
 32:		imul word [bp + 10]
 38:	
 
-qsort$8:	; valuePtr1 = charList + £temporary2510
+qsort$8:	; valuePtr1 = charList + £temporary2730
 39:		mov bx, [bp + 16]
 40:		add bx, ax
 41:		mov [bp + 22], bx
 43:	
 
-qsort$9:	; £temporary2512 = index2 + 1
+qsort$9:	; £temporary2732 = index2 + 1
 44:		mov ax, [bp + 20]
 45:		add ax, 1
 47:	
 
-qsort$10:	; £temporary2513 = £temporary2512 * valueSize
+qsort$10:	; £temporary2733 = £temporary2732 * valueSize
 49:		xor dx, dx
 50:		imul word [bp + 10]
 56:	
 
-qsort$11:	; valuePtr2 = charList + £temporary2513
+qsort$11:	; valuePtr2 = charList + £temporary2733
 57:		mov bx, [bp + 16]
 58:		add bx, ax
 59:		mov [bp + 24], bx
@@ -1186,10 +2614,10 @@ qsort$15:	; call function noellipse-noellipse compare
 qsort$16:	; post call
 80:	
 
-qsort$17:	; £temporary2515 = return_value
+qsort$17:	; £temporary2735 = return_value
 85:	
 
-qsort$18:	; if £temporary2515 <= 0 goto 26
+qsort$18:	; if £temporary2735 <= 0 goto 26
 86:		cmp bx, 0
 87:		jle qsort$26
 89:	
@@ -1212,11 +2640,11 @@ qsort$22:	; parameter valueSize, offset 10
 101:		mov [bp + 36], ax
 103:	
 
-qsort$23:	; call function noellipse-noellipse swap
+qsort$23:	; call function noellipse-noellipse memswp
 104:		mov word [bp + 26], qsort$24
 105:		mov [bp + 28], bp
 106:		add bp, 26
-107:		jmp swap
+107:		jmp memswp
 109:	
 
 qsort$24:	; post call
@@ -1257,28 +2685,103 @@ qsort$31:	; return
 qsort$32:	; function end qsort
 1:	
 
+@27$swap:	; index = 0
+2:		mov word [bp + 12], 0
+4:	
+
+@27$swap$1:	; if index >= valueSize goto 15
+5:		mov ax, [bp + 10]
+6:		cmp [bp + 12], ax
+7:		jge @27$swap$15
+9:	
+
+@27$swap$2:	; £temporary2748 = leftValuePtr + index
+10:		mov si, [bp + 6]
+11:		add si, [bp + 12]
+13:	
+
+@27$swap$3:	; £temporary2747 -> £temporary2748 = *£temporary2748
+15:	
+
+@27$swap$4:	; tempValue = £temporary2747 -> £temporary2748
+16:		mov al, [si]
+17:		mov [bp + 14], al
+19:	
+
+@27$swap$5:	; £temporary2750 = leftValuePtr + index
+20:		mov si, [bp + 6]
+21:		add si, [bp + 12]
+23:	
+
+@27$swap$6:	; £temporary2749 -> £temporary2750 = *£temporary2750
+25:	
+
+@27$swap$7:	; £temporary2752 = rightValuePtr + index
+26:		mov di, [bp + 8]
+27:		add di, [bp + 12]
+29:	
+
+@27$swap$8:	; £temporary2751 -> £temporary2752 = *£temporary2752
+31:	
+
+@27$swap$9:	; £temporary2749 -> £temporary2750 = £temporary2751 -> £temporary2752
+32:		mov al, [di]
+33:		mov [si], al
+35:	
+
+@27$swap$10:	; £temporary2754 = rightValuePtr + index
+36:		mov si, [bp + 8]
+37:		add si, [bp + 12]
+39:	
+
+@27$swap$11:	; £temporary2753 -> £temporary2754 = *£temporary2754
+41:	
+
+@27$swap$12:	; £temporary2753 -> £temporary2754 = tempValue
+42:		mov al, [bp + 14]
+43:		mov [si], al
+45:	
+
+@27$swap$13:	; ++index
+46:		inc word [bp + 12]
+48:	
+
+@27$swap$14:	; goto 1
+49:		jmp @27$swap$1
+51:	
+
+@27$swap$15:	; return
+52:		mov ax, [bp]
+53:		mov di, [bp + 4]
+54:		mov bp, [bp + 2]
+55:		jmp ax
+57:	
+
+@27$swap$16:	; function end swap
+1:	
+
 abs:	; if value >= 0 goto 4
 2:		cmp word [bp + 6], 0
 3:		jge abs$4
 5:	
 
-abs$1:	; £temporary2526 = -value
+abs$1:	; £temporary2756 = -value
 6:		mov bx, [bp + 6]
 7:		neg bx
 9:	
 
-abs$2:	; £temporary2530 = £temporary2526
+abs$2:	; £temporary2760 = £temporary2756
 11:	
 
 abs$3:	; goto 5
 12:		jmp abs$5
 14:	
 
-abs$4:	; £temporary2530 = value
+abs$4:	; £temporary2760 = value
 15:		mov bx, [bp + 6]
 17:	
 
-abs$5:	; return_value = £temporary2530
+abs$5:	; return_value = £temporary2760
 19:	
 
 abs$6:	; return
@@ -1296,23 +2799,23 @@ labs:	; if value >= 0 goto 4
 3:		jge labs$4
 5:	
 
-labs$1:	; £temporary2532 = -value
+labs$1:	; £temporary2762 = -value
 6:		mov ebx, [bp + 6]
 7:		neg ebx
 9:	
 
-labs$2:	; £temporary2536 = £temporary2532
+labs$2:	; £temporary2766 = £temporary2762
 11:	
 
 labs$3:	; goto 5
 12:		jmp labs$5
 14:	
 
-labs$4:	; £temporary2536 = value
+labs$4:	; £temporary2766 = value
 15:		mov ebx, [bp + 6]
 17:	
 
-labs$5:	; return_value = £temporary2536
+labs$5:	; return_value = £temporary2766
 19:	
 
 labs$6:	; return

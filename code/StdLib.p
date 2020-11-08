@@ -521,7 +521,43 @@ long atol ( char * s ) {
 return strtol ( s , ( char ** ) ( ( void * ) 0 ) , 10 ) ;
 }
 
-long strtol ( char * s , char ** endp , int ) {
+static int isbasedigit ( char c , int base ) {
+int value ;
+
+if ( isdigit ( c ) ) {
+int value = c - '\060' ;
+return ( ( value >= 0 ) && ( value < base ) ) ;
+}
+else if ( islower ( c ) ) {
+int value = ( c - '\141' ) + 10 ;
+return ( ( value >= 0 ) && ( value < base ) ) ;
+}
+else if ( isupper ( c ) ) {
+int value = ( c - '\101' ) + 10 ;
+return ( ( value >= 0 ) && ( value < base ) ) ;
+}
+else {
+return 0 ;
+}
+}
+
+static int tobasevalue ( char c ) {
+if ( isdigit ( c ) ) {
+return ( c - '\060' ) ;
+}
+else if ( islower ( c ) ) {
+return ( ( c - '\141' ) + 10 ) ;
+}
+else if ( isupper ( c ) ) {
+return ( ( c - '\101' ) + 10 ) ;
+}
+else {
+return 0 ;
+}
+}
+
+long strtol ( char * s , char ** endp , int base ) {
+if ( base == 0 ) {
 int chars = 0 ;
 long value = 0 ;
 sscanf ( s , "\045\154\151\045\156" , & value , & chars ) ;
@@ -532,8 +568,72 @@ if ( endp != ( ( void * ) 0 ) ) {
 
 return value ;
 }
+else if ( ( base > 0 ) && ( base <= 36 ) ) {
+int minus = 0 ;
 
-unsigned long strtoul ( char * s , char ** endp , int ) {
+if ( s [ 0 ] == '\053' ) {
+++ s ;
+}
+else if ( s [ 0 ] == '\055' ) {
+minus = 1 ;
+++ s ;
+}
+
+long value = 0 ;
+int index ;
+for ( index = 0 ; 1 ; ++ index ) {
+char c = s [ index ];
+
+if ( ! isbasedigit ( c , base ) ) {
+break ;
+}
+
+value *= base ;
+int digit = tobasevalue ( c ) ;
+value += digit ;
+
+}
+
+if ( endp != ( ( void * ) 0 ) ) {
+* endp = & s [ index ];
+}
+
+return minus ? - value : value ;
+}
+else {
+return 0 ;
+}
+}
+
+void strtol_test ( void ) {
+{ char text [] = "\053\061\062\063\141\142\143" , * pointer ;
+long value = strtol ( text , & pointer , 9 ) ;
+printf ( "\074\045\163\076\040\074\045\154\151\076\040\074\045\163\076\012\012" , text , value , pointer ) ;
+}
+{ char text [] = "\053\061\062\063\141\142\143" , * pointer ;
+long value = strtol ( text , & pointer , 10 ) ;
+printf ( "\074\045\163\076\040\074\045\154\151\076\040\074\045\163\076\012\012" , text , value , pointer ) ;
+}
+{ char text [] = "\053\061\062\063\141\142\143" , * pointer ;
+long value = strtol ( text , & pointer , 11 ) ;
+printf ( "\074\045\163\076\040\074\045\154\151\076\040\074\045\163\076\012\012" , text , value , pointer ) ;
+}
+{ char text [] = "\055\061\062\063\141\142\143" , * pointer ;
+long value = strtol ( text , & pointer , 9 ) ;
+printf ( "\074\045\163\076\040\074\045\154\151\076\040\074\045\163\076\012\012" , text , value , pointer ) ;
+}
+{ char text [] = "\055\061\062\063\141\142\143" , * pointer ;
+long value = strtol ( text , & pointer , 10 ) ;
+printf ( "\074\045\163\076\040\074\045\154\151\076\040\074\045\163\076\012\012" , text , value , pointer ) ;
+}
+{ char text [] = "\055\061\062\063\141\142\143" , * pointer ;
+long value = strtol ( text , & pointer , 11 ) ;
+printf ( "\074\045\163\076\040\074\045\154\151\076\040\074\045\163\076\012\012" , text , value , pointer ) ;
+}
+}
+
+unsigned long strtoul ( char * s , char ** endp , int base ) {
+if ( base == 0 ) {
 int chars = 0 ;
 unsigned long value = 0 ;
 sscanf ( s , "\045\154\165\045\156" , & value , & chars ) ;
@@ -543,6 +643,34 @@ if ( endp != ( ( void * ) 0 ) ) {
 }
 
 return value ;
+}
+else if ( ( base > 0 ) && ( base <= 36 ) ) {
+if ( s [ 0 ] == '\053' ) {
+++ s ;
+}
+
+unsigned long value = 0 ;
+int index ;
+for ( index = 0 ; 1 ; ++ index ) {
+char c = s [ index ];
+
+if ( ! isbasedigit ( c , base ) ) {
+break ;
+}
+
+value *= base ;
+value += tobasevalue ( c ) ;
+}
+
+if ( endp != ( ( void * ) 0 ) ) {
+* endp = & s [ index ];
+}
+
+return value ;
+}
+else {
+return 0 ;
+}
 }
 
 double atof ( char * s ) {
@@ -581,18 +709,6 @@ return ( ( void * ) 0 ) ;
 
 int system ( const char * ) {
 return -1 ;
-}
-
-void memswp ( void * value1 , void * value2 , int valueSize ) {
-char * charValue1 = ( char * ) value1 ;
-char * charValue2 = ( char * ) value2 ;
-
-int index ;
-for ( index = 0 ; index < valueSize ; ++ index ) {
-char tempValue = charValue1 [ index ];
-charValue1 [ index ] = charValue2 [ index ];
-charValue2 [ index ] = tempValue ;
-}
 }
 
 void * bsearch ( const void * keyPtr , const void * valueList ,
@@ -701,12 +817,15 @@ interrupt ( 0x21s ) ;
 
 }
 
-void swap ( char * leftValuePtr , char * rightValuePtr , int valueSize ) {
+void memswp ( void * value1 , void * value2 , int valueSize ) {
+char * charValue1 = ( char * ) value1 ;
+char * charValue2 = ( char * ) value2 ;
+
 int index ;
 for ( index = 0 ; index < valueSize ; ++ index ) {
-char tempValue = leftValuePtr [ index ];
-leftValuePtr [ index ] = rightValuePtr [ index ];
-rightValuePtr [ index ] = tempValue ;
+char tempValue = charValue1 [ index ];
+charValue1 [ index ] = charValue2 [ index ];
+charValue2 [ index ] = tempValue ;
 }
 }
 
@@ -725,7 +844,7 @@ char * valuePtr1 = charList + ( index2 * valueSize ) ;
 char * valuePtr2 = charList + ( ( index2 + 1 ) * valueSize ) ;
 
 if ( compare ( valuePtr1 , valuePtr2 ) > 0 ) {
-swap ( valuePtr1 , valuePtr2 , valueSize ) ;
+memswp ( valuePtr1 , valuePtr2 , valueSize ) ;
 update = 1 ;
 }
 }
@@ -735,6 +854,16 @@ break ;
 }
 }
 }
+
+static void swap ( char * leftValuePtr , char * rightValuePtr , int valueSize ) {
+int index ;
+for ( index = 0 ; index < valueSize ; ++ index ) {
+char tempValue = leftValuePtr [ index ];
+leftValuePtr [ index ] = rightValuePtr [ index ];
+rightValuePtr [ index ] = tempValue ;
+}
+}
+
 int abs ( int value ) {
 return ( value < 0 ) ? - value : value ;
 }

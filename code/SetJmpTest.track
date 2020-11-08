@@ -1,3 +1,225 @@
+0:		; Initialize Stack Pointer
+1:		mov bp, $StackTop
+2:		; Initialize Heap Pointer
+3:		mov word [65534], 65534
+4:		; Initialize FPU Control Word, truncate mode => set bit 10 and 11.
+5:		fstcw [bp]
+6:		or word [bp], 3072
+7:		fldcw [bp]
+8:		mov word [$StackTop], 0
+10:	
+
+@34$main:	; call header integral zero 0 stack zero 0
+12:	
+
+@34$main$1:	; parameter string_Please20input20a20value3A20#, offset 6
+13:		mov word [bp + 22], string_Please20input20a20value3A20#
+15:	
+
+@34$main$2:	; call function noellipse-ellipse printf, extra 0
+16:		mov word [bp + 16], @34$main$3
+17:		mov [bp + 18], bp
+18:		add bp, 16
+19:		mov di, bp
+20:		jmp printf
+22:	
+
+@34$main$3:	; post call
+24:	
+
+@34$main$4:	; call header integral zero 0 stack zero 0
+26:	
+
+@34$main$5:	; parameter string_25lf#, offset 6
+27:		mov word [bp + 22], string_25lf#
+29:	
+
+@34$main$6:	; £temporary4034 = &x
+30:		mov t2578, bp
+31:		add t2578, 8
+33:	
+
+@34$main$7:	; parameter £temporary4034, offset 8
+34:		mov [bp + 24], t2578
+36:	
+
+@34$main$8:	; call function noellipse-ellipse scanf, extra 0
+37:		mov word [bp + 16], @34$main$9
+38:		mov [bp + 18], bp
+39:		add bp, 16
+40:		mov di, bp
+41:		add di, 2
+42:		jmp scanf
+44:	
+
+@34$main$9:	; post call
+46:	
+
+@34$main$10:	; call header integral zero 0 stack zero 0
+48:	
+
+@34$main$11:	; parameter buffer, offset 6
+49:		mov word [bp + 22], buffer
+51:	
+
+@34$main$12:	; call function noellipse-noellipse setjmp
+52:		mov word [bp + 16], @34$main$13
+53:		mov [bp + 18], bp
+54:		add bp, 16
+55:		jmp setjmp
+57:	
+
+@34$main$13:	; post call
+59:	
+
+@34$main$14:	; £temporary4036 = return_value
+64:	
+
+@34$main$15:	; message = £temporary4036
+65:		mov [bp + 6], t2580
+67:	
+
+@34$main$16:	; if message != 0 goto 31
+68:		cmp word [bp + 6], 0
+69:		jne @34$main$31
+71:	
+
+@34$main$17:	; call header integral zero 0 stack zero 0
+73:	
+
+@34$main$18:	; parameter string_12E0202F2025f203D2025f0A#, offset 6
+74:		mov word [bp + 22], string_12E0202F2025f203D2025f0A#
+76:	
+
+@34$main$19:	; push float x
+77:		fld qword [bp + 8]
+79:	
+
+@34$main$20:	; parameter x, offset 8
+80:		fstp qword [bp + 24]
+82:	
+
+@34$main$21:	; call header integral zero 0 stack zero 0
+84:	
+
+@34$main$22:	; push float x
+85:		fld qword [bp + 8]
+87:	
+
+@34$main$23:	; parameter x, offset 22
+88:		fstp qword [bp + 38]
+90:	
+
+@34$main$24:	; call function noellipse-noellipse inverse
+91:		mov word [bp + 32], @34$main$25
+92:		mov [bp + 34], bp
+93:		add bp, 32
+94:		jmp inverse
+96:	
+
+@34$main$25:	; post call
+98:	
+
+@34$main$26:	; £temporary4038 = return_value
+100:	
+
+@34$main$27:	; parameter £temporary4038, offset 16
+101:		fstp qword [bp + 32]
+103:	
+
+@34$main$28:	; call function noellipse-ellipse printf, extra 0
+104:		mov word [bp + 16], @34$main$29
+105:		mov [bp + 18], bp
+106:		add bp, 16
+107:		mov di, bp
+108:		add di, 16
+109:		jmp printf
+111:	
+
+@34$main$29:	; post call
+113:	
+
+@34$main$30:	; goto 36
+114:		jmp @34$main$36
+116:	
+
+@34$main$31:	; call header integral zero 0 stack zero 0
+118:	
+
+@34$main$32:	; parameter string_25s0A#, offset 6
+119:		mov word [bp + 22], string_25s0A#
+121:	
+
+@34$main$33:	; parameter message, offset 8
+122:		mov a2581, [bp + 6]
+123:		mov [bp + 24], a2581
+125:	
+
+@34$main$34:	; call function noellipse-ellipse printf, extra 0
+126:		mov word [bp + 16], @34$main$35
+127:		mov [bp + 18], bp
+128:		add bp, 16
+129:		mov di, bp
+130:		add di, 2
+131:		jmp printf
+133:	
+
+@34$main$35:	; post call
+135:	
+
+@34$main$36:	; return
+136:		mov t2582, [bp]
+137:		mov di, [bp + 4]
+138:		mov bp, [bp + 2]
+139:		jmp t2582
+141:	
+
+@34$main$37:	; function end main
+1:	
+
+inverse:	; call header integral zero 0 stack zero 0
+3:	
+
+inverse$1:	; push 1
+4:		fld1
+6:	
+
+inverse$2:	; parameter 1, offset 6
+7:		fstp qword [bp + 20]
+9:	
+
+inverse$3:	; push float x
+10:		fld qword [bp + 6]
+12:	
+
+inverse$4:	; parameter x, offset 14
+13:		fstp qword [bp + 28]
+15:	
+
+inverse$5:	; call function noellipse-noellipse divide
+16:		mov word [bp + 14], inverse$6
+17:		mov [bp + 16], bp
+18:		add bp, 14
+19:		jmp divide
+21:	
+
+inverse$6:	; post call
+23:	
+
+inverse$7:	; £temporary4052 = return_value
+25:	
+
+inverse$8:	; return_value = £temporary4052
+27:	
+
+inverse$9:	; return
+28:		mov t2583, [bp]
+29:		mov di, [bp + 4]
+30:		mov bp, [bp + 2]
+31:		jmp t2583
+33:	
+
+inverse$10:	; function end inverse
 1:	
 
 divide:	; push float y
@@ -23,230 +245,66 @@ divide$4:	; push float y
 17:		fld qword [bp + 14]
 19:	
 
-divide$5:	; £temporary3804 = x / y
+divide$5:	; £temporary4056 = x / y
 20:		fdiv
 22:	
 
-divide$6:	; return_value = £temporary3804
+divide$6:	; return_value = £temporary4056
 24:	
 
 divide$7:	; return
-25:		mov t2459, [bp]
+25:		mov t2584, [bp]
 26:		mov di, [bp + 4]
 27:		mov bp, [bp + 2]
-28:		jmp t2459
+28:		jmp t2584
 30:	
 
-divide$8:	; p = string_Division20by20Zero2E#
-31:		mov word [bp + 22], string_Division20by20Zero2E#
-33:	
+divide$8:	; call header integral zero 0 stack zero 0
+32:	
 
-divide$9:	; call header integral zero 0 stack zero 0
+divide$9:	; parameter buffer, offset 6
+33:		mov word [bp + 28], buffer
 35:	
 
-divide$10:	; parameter buffer, offset 6
-36:		mov word [bp + 30], buffer
+divide$10:	; parameter string_Division20by20Zero2E#, offset 8
+36:		mov word [bp + 30], string_Division20by20Zero2E#
 38:	
 
-divide$11:	; parameter p, offset 8
-39:		mov a2460, [bp + 22]
-40:		mov [bp + 32], a2460
-42:	
+divide$11:	; call function noellipse-noellipse longjmp
+39:		mov word [bp + 22], divide$12
+40:		mov [bp + 24], bp
+41:		add bp, 22
+42:		jmp longjmp
+44:	
 
-divide$12:	; call function noellipse-noellipse longjmp
-43:		mov word [bp + 24], divide$13
-44:		mov [bp + 26], bp
-45:		add bp, 24
-46:		jmp longjmp
-48:	
+divide$12:	; post call
+46:	
 
-divide$13:	; post call
-50:	
+divide$13:	; push 0
+47:		fldz
+49:	
 
-divide$14:	; push 0
-51:		fldz
-53:	
-
-divide$15:	; return_value = 0
-55:	
-
-divide$16:	; return
-56:		mov t2461, [bp]
-57:		mov di, [bp + 4]
-58:		mov bp, [bp + 2]
-59:		jmp t2461
-61:	
-
-divide$17:	; function end divide
-1:	
-
-invers:	; call header integral zero 0 stack zero 0
-3:	
-
-invers$1:	; push float 1.0
-4:		fld1
-6:	
-
-invers$2:	; parameter 1.0, offset 6
-7:		fstp qword [bp + 20]
-9:	
-
-invers$3:	; push float x
-10:		fld qword [bp + 6]
-12:	
-
-invers$4:	; parameter x, offset 14
-13:		fstp qword [bp + 28]
-15:	
-
-invers$5:	; call function noellipse-noellipse divide
-16:		mov word [bp + 14], invers$6
-17:		mov [bp + 16], bp
-18:		add bp, 14
-19:		jmp divide
-21:	
-
-invers$6:	; post call
-23:	
-
-invers$7:	; £temporary3808 = return_value
-25:	
-
-invers$8:	; return_value = £temporary3808
-27:	
-
-invers$9:	; return
-28:		mov t2462, [bp]
-29:		mov di, [bp + 4]
-30:		mov bp, [bp + 2]
-31:		jmp t2462
-33:	
-
-invers$10:	; function end invers
-1:	
-
-setjmp_test:	; call header integral zero 0 stack zero 0
-3:	
-
-setjmp_test$1:	; parameter buffer, offset 6
-4:		mov word [bp + 22], buffer
-6:	
-
-setjmp_test$2:	; call function noellipse-noellipse setjmp
-7:		mov word [bp + 16], setjmp_test$3
-8:		mov [bp + 18], bp
-9:		add bp, 16
-10:		jmp setjmp
-12:	
-
-setjmp_test$3:	; post call
-14:	
-
-setjmp_test$4:	; £temporary3811 = return_value
-19:	
-
-setjmp_test$5:	; p = £temporary3811
-20:		mov [bp + 14], t2464
-22:	
-
-setjmp_test$6:	; if p != 0 goto 21
-23:		cmp word [bp + 14], 0
-24:		jne setjmp_test$21
-26:	
-
-setjmp_test$7:	; call header integral zero 0 stack zero 0
-28:	
-
-setjmp_test$8:	; parameter string_12E0202F2025f203D2025f0A#, offset 6
-29:		mov word [bp + 22], string_12E0202F2025f203D2025f0A#
-31:	
-
-setjmp_test$9:	; push float x
-32:		fld qword [bp + 6]
-34:	
-
-setjmp_test$10:	; parameter x, offset 8
-35:		fstp qword [bp + 24]
-37:	
-
-setjmp_test$11:	; call header integral zero 0 stack zero 0
-39:	
-
-setjmp_test$12:	; push float x
-40:		fld qword [bp + 6]
-42:	
-
-setjmp_test$13:	; parameter x, offset 22
-43:		fstp qword [bp + 38]
-45:	
-
-setjmp_test$14:	; call function noellipse-noellipse invers
-46:		mov word [bp + 32], setjmp_test$15
-47:		mov [bp + 34], bp
-48:		add bp, 32
-49:		jmp invers
+divide$14:	; return_value = 0
 51:	
 
-setjmp_test$15:	; post call
-53:	
+divide$15:	; return
+52:		mov t2585, [bp]
+53:		mov di, [bp + 4]
+54:		mov bp, [bp + 2]
+55:		jmp t2585
+57:	
 
-setjmp_test$16:	; £temporary3813 = return_value
-55:	
+divide$16:	; function end divide
+1:	
 
-setjmp_test$17:	; parameter £temporary3813, offset 16
-56:		fstp qword [bp + 32]
-58:	
+setjmp_test:	; empty
+3:	
 
-setjmp_test$18:	; call function noellipse-ellipse printf, extra 0
-59:		mov word [bp + 16], setjmp_test$19
-60:		mov [bp + 18], bp
-61:		add bp, 16
-62:		mov di, bp
-63:		add di, 16
-64:		jmp printf
-66:	
+setjmp_test$1:	; return
+4:		mov t2586, [bp]
+5:		mov di, [bp + 4]
+6:		mov bp, [bp + 2]
+7:		jmp t2586
+9:	
 
-setjmp_test$19:	; post call
-68:	
-
-setjmp_test$20:	; goto 27
-69:		jmp setjmp_test$27
-71:	
-
-setjmp_test$21:	; call header integral zero 0 stack zero 0
-73:	
-
-setjmp_test$22:	; parameter string_p203D203C25s3E203C25u3E0A#, offset 6
-74:		mov word [bp + 22], string_p203D203C25s3E203C25u3E0A#
-76:	
-
-setjmp_test$23:	; parameter p, offset 8
-77:		mov a2465, [bp + 14]
-78:		mov [bp + 24], a2465
-80:	
-
-setjmp_test$24:	; parameter p, offset 10
-81:		mov a2466, [bp + 14]
-82:		mov [bp + 26], a2466
-84:	
-
-setjmp_test$25:	; call function noellipse-ellipse printf, extra 0
-85:		mov word [bp + 16], setjmp_test$26
-86:		mov [bp + 18], bp
-87:		add bp, 16
-88:		mov di, bp
-89:		add di, 4
-90:		jmp printf
-92:	
-
-setjmp_test$26:	; post call
-94:	
-
-setjmp_test$27:	; return
-95:		mov t2467, [bp]
-96:		mov di, [bp + 4]
-97:		mov bp, [bp + 2]
-98:		jmp t2467
-100:	
-
-setjmp_test$28:	; function end setjmp_test
+setjmp_test$2:	; function end setjmp_test
