@@ -930,15 +930,15 @@ return value ;
 
 void abort ( void ) {
    
- register_ah = 0x4Cs ;
-register_al = -1s ;
-interrupt ( 0x21s ) ;
+    
+   
+    
   
 
    
-    
-   
-   
+ register_rax = 60L ;
+register_rdi = -1L ;
+syscall ( ) ;
   
  }
 
@@ -1044,15 +1044,15 @@ g_funcArray [ index ] ( ) ;
 }
 
    
- register_al = ( short ) status ;
-register_ah = 0x4Cs ;
-interrupt ( 0x21s ) ;
+       
+   
+    
   
 
    
-    
-       
-   
+ register_rax = 60L ;
+register_rdi = ( unsigned long ) status ;
+syscall ( ) ;
   
  }
 
@@ -1070,28 +1070,42 @@ charValue2 [ index ] = tempValue ;
 
 void qsort ( const void * valueList , int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) ) {
+printf ( "X1" ) ;
+compare ( ( ( void * ) 0 ) , ( ( void * ) 0 ) ) ;
+printf ( "X2" ) ;
 int update ;
 char * charList = ( char * ) valueList ;
 
 int index1 ;
 for ( index1 = ( listSize - 1 ) ; index1 > 0 ; -- index1 ) {
 update = 0 ;
+printf ( "index 1: %i\n" , index1 ) ;
 
 int index2 ;
 for ( index2 = 0 ; index2 < index1 ; ++ index2 ) {
+printf ( "  index2: %i\n" , index2 ) ;
+
 char * valuePtr1 = charList + ( index2 * valueSize ) ;
 char * valuePtr2 = charList + ( ( index2 + 1 ) * valueSize ) ;
 
 if ( compare ( valuePtr1 , valuePtr2 ) > 0 ) {
+printf ( "C" ) ;
 memswp ( valuePtr1 , valuePtr2 , valueSize ) ;
+printf ( "D" ) ;
 update = 1 ;
-}
+printf ( "E" ) ;
 }
 
+printf ( "X" ) ;
+}
+
+printf ( "Y" ) ;
 if ( ! update ) {
 break ;
 }
 }
+
+printf ( "Z" ) ;
 }
 
 static void swap ( char * leftValuePtr , char * rightValuePtr , int valueSize ) {

@@ -321,10 +321,10 @@ section .text
 	; PostCall 72
 
  acos_test$9:
-	; GetReturnValue £temporary3693
+	; GetReturnValue £temporary3702
 
  acos_test$10:
-	; Parameter double £temporary3693 72
+	; Parameter double £temporary3702 72
 	fstp qword [rbp + 72]
 
  acos_test$11:
@@ -403,10 +403,10 @@ section .text
 	; PostCall 72
 
  atan_test$9:
-	; GetReturnValue £temporary3698
+	; GetReturnValue £temporary3707
 
  atan_test$10:
-	; Parameter double £temporary3698 72
+	; Parameter double £temporary3707 72
 	fstp qword [rbp + 72]
 
  atan_test$11:
@@ -1404,10 +1404,10 @@ section .text
 	; PostCall 72
 
  math_test_1$15:
-	; GetReturnValue £temporary3771
+	; GetReturnValue £temporary3780
 
  math_test_1$16:
-	; Parameter double £temporary3771 72
+	; Parameter double £temporary3780 72
 	fstp qword [rbp + 72]
 
  math_test_1$17:
@@ -1468,10 +1468,10 @@ section .text
 	; PostCall 72
 
  math_test_1$30:
-	; GetReturnValue £temporary3773
+	; GetReturnValue £temporary3782
 
  math_test_1$31:
-	; Parameter double £temporary3773 72
+	; Parameter double £temporary3782 72
 	fstp qword [rbp + 72]
 
  math_test_1$32:
@@ -1532,10 +1532,10 @@ section .text
 	; PostCall 72
 
  math_test_1$45:
-	; GetReturnValue £temporary3775
+	; GetReturnValue £temporary3784
 
  math_test_1$46:
-	; Parameter double £temporary3775 72
+	; Parameter double £temporary3784 72
 	fstp qword [rbp + 72]
 
  math_test_1$47:
@@ -1596,10 +1596,10 @@ section .text
 	; PostCall 72
 
  math_test_1$60:
-	; GetReturnValue £temporary3777
+	; GetReturnValue £temporary3786
 
  math_test_1$61:
-	; Parameter double £temporary3777 72
+	; Parameter double £temporary3786 72
 	fstp qword [rbp + 72]
 
  math_test_1$62:
@@ -1660,10 +1660,10 @@ section .text
 	; PostCall 72
 
  math_test_1$75:
-	; GetReturnValue £temporary3779
+	; GetReturnValue £temporary3788
 
  math_test_1$76:
-	; Parameter double £temporary3779 72
+	; Parameter double £temporary3788 72
 	fstp qword [rbp + 72]
 
  math_test_1$77:
@@ -1724,10 +1724,10 @@ section .text
 	; PostCall 72
 
  math_test_1$90:
-	; GetReturnValue £temporary3781
+	; GetReturnValue £temporary3790
 
  math_test_1$91:
-	; Parameter double £temporary3781 72
+	; Parameter double £temporary3790 72
 	fstp qword [rbp + 72]
 
  math_test_1$92:
@@ -1788,10 +1788,10 @@ section .text
 	; PostCall 72
 
  math_test_1$105:
-	; GetReturnValue £temporary3783
+	; GetReturnValue £temporary3792
 
  math_test_1$106:
-	; Parameter double £temporary3783 72
+	; Parameter double £temporary3792 72
 	fstp qword [rbp + 72]
 
  math_test_1$107:
@@ -1852,10 +1852,10 @@ section .text
 	; PostCall 72
 
  math_test_1$120:
-	; GetReturnValue £temporary3785
+	; GetReturnValue £temporary3794
 
  math_test_1$121:
-	; Parameter double £temporary3785 72
+	; Parameter double £temporary3794 72
 	fstp qword [rbp + 72]
 
  math_test_1$122:
@@ -1916,10 +1916,10 @@ section .text
 	; PostCall 72
 
  math_test_1$135:
-	; GetReturnValue £temporary3787
+	; GetReturnValue £temporary3796
 
  math_test_1$136:
-	; Parameter double £temporary3787 72
+	; Parameter double £temporary3796 72
 	fstp qword [rbp + 72]
 
  math_test_1$137:
@@ -1980,10 +1980,10 @@ section .text
 	; PostCall 72
 
  math_test_1$150:
-	; GetReturnValue £temporary3789
+	; GetReturnValue £temporary3798
 
  math_test_1$151:
-	; Parameter double £temporary3789 72
+	; Parameter double £temporary3798 72
 	fstp qword [rbp + 72]
 
  math_test_1$152:
@@ -2044,10 +2044,10 @@ section .text
 	; PostCall 72
 
  math_test_1$165:
-	; GetReturnValue £temporary3791
+	; GetReturnValue £temporary3800
 
  math_test_1$166:
-	; Parameter double £temporary3791 72
+	; Parameter double £temporary3800 72
 	fstp qword [rbp + 72]
 
  math_test_1$167:
@@ -2108,10 +2108,10 @@ section .text
 	; PostCall 72
 
  math_test_1$180:
-	; GetReturnValue £temporary3793
+	; GetReturnValue £temporary3802
 
  math_test_1$181:
-	; Parameter double £temporary3793 72
+	; Parameter double £temporary3802 72
 	fstp qword [rbp + 72]
 
  math_test_1$182:
@@ -2172,10 +2172,10 @@ section .text
 	; PostCall 72
 
  math_test_1$195:
-	; GetReturnValue £temporary3795
+	; GetReturnValue £temporary3804
 
  math_test_1$196:
-	; Parameter double £temporary3795 72
+	; Parameter double £temporary3804 72
 	fstp qword [rbp + 72]
 
  math_test_1$197:
@@ -2236,10 +2236,10 @@ section .text
 	; PostCall 72
 
  math_test_1$210:
-	; GetReturnValue £temporary3797
+	; GetReturnValue £temporary3806
 
  math_test_1$211:
-	; Parameter double £temporary3797 72
+	; Parameter double £temporary3806 72
 	fstp qword [rbp + 72]
 
  math_test_1$212:
@@ -2300,10 +2300,10 @@ section .text
 	; PostCall 72
 
  math_test_1$225:
-	; GetReturnValue £temporary3799
+	; GetReturnValue £temporary3808
 
  math_test_1$226:
-	; Parameter double £temporary3799 72
+	; Parameter double £temporary3808 72
 	fstp qword [rbp + 72]
 
  math_test_1$227:
@@ -2364,10 +2364,10 @@ section .text
 	; PostCall 72
 
  math_test_1$240:
-	; GetReturnValue £temporary3801
+	; GetReturnValue £temporary3810
 
  math_test_1$241:
-	; Parameter double £temporary3801 72
+	; Parameter double £temporary3810 72
 	fstp qword [rbp + 72]
 
  math_test_1$242:
@@ -2407,12 +2407,12 @@ section .text
 	fstp qword [rbp + 60]
 
  math_test_1$250:
-	; Address £temporary3803 j
+	; Address £temporary3812 j
 	mov rsi, rbp
 	add rsi, 32
 
  math_test_1$251:
-	; Parameter pointer £temporary3803 68
+	; Parameter pointer £temporary3812 68
 	mov [rbp + 68], rsi
 
  math_test_1$252:
@@ -2426,7 +2426,7 @@ section .text
 	; PostCall 36
 
  math_test_1$254:
-	; GetReturnValue £temporary3804
+	; GetReturnValue £temporary3813
 
  math_test_1$255:
 	; PopFloat z
@@ -2523,12 +2523,12 @@ section .text
 	fstp qword [rbp + 64]
 
  math_test_1$277:
-	; Address £temporary3808 w
+	; Address £temporary3817 w
 	mov rsi, rbp
 	add rsi, 32
 
  math_test_1$278:
-	; Parameter pointer £temporary3808 72
+	; Parameter pointer £temporary3817 72
 	mov [rbp + 72], rsi
 
  math_test_1$279:
@@ -2542,7 +2542,7 @@ section .text
 	; PostCall 40
 
  math_test_1$281:
-	; GetReturnValue £temporary3809
+	; GetReturnValue £temporary3818
 
  math_test_1$282:
 	; PopFloat z
@@ -2735,10 +2735,10 @@ section .text
 	; PostCall 88
 
  math_test_2$13:
-	; GetReturnValue £temporary3872
+	; GetReturnValue £temporary3881
 
  math_test_2$14:
-	; Parameter double £temporary3872 88
+	; Parameter double £temporary3881 88
 	fstp qword [rbp + 88]
 
  math_test_2$15:
@@ -2815,10 +2815,10 @@ section .text
 	; PostCall 88
 
  math_test_2$32:
-	; GetReturnValue £temporary3874
+	; GetReturnValue £temporary3883
 
  math_test_2$33:
-	; Parameter double £temporary3874 88
+	; Parameter double £temporary3883 88
 	fstp qword [rbp + 88]
 
  math_test_2$34:
@@ -2895,10 +2895,10 @@ section .text
 	; PostCall 88
 
  math_test_2$51:
-	; GetReturnValue £temporary3876
+	; GetReturnValue £temporary3885
 
  math_test_2$52:
-	; Parameter double £temporary3876 88
+	; Parameter double £temporary3885 88
 	fstp qword [rbp + 88]
 
  math_test_2$53:
@@ -2960,12 +2960,12 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$66:
-	; FloatingToIntegral £temporary3879 y
+	; FloatingToIntegral £temporary3888 y
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  math_test_2$67:
-	; Parameter signedint £temporary3879 80
+	; Parameter signedint £temporary3888 80
 	mov [rbp + 80], eax
 
  math_test_2$68:
@@ -2984,12 +2984,12 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$72:
-	; FloatingToIntegral £temporary3880 y
+	; FloatingToIntegral £temporary3889 y
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  math_test_2$73:
-	; Parameter signedint £temporary3880 116
+	; Parameter signedint £temporary3889 116
 	mov [rbp + 116], eax
 
  math_test_2$74:
@@ -3003,10 +3003,10 @@ section .text
 	; PostCall 84
 
  math_test_2$76:
-	; GetReturnValue £temporary3881
+	; GetReturnValue £temporary3890
 
  math_test_2$77:
-	; Parameter double £temporary3881 84
+	; Parameter double £temporary3890 84
 	fstp qword [rbp + 84]
 
  math_test_2$78:

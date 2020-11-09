@@ -553,28 +553,42 @@ void memswp(void* value1, void* value2, int valueSize) {
 
 void qsort(const void* valueList, size_t listSize, size_t valueSize,
            int (*compare)(const void*, const void*)) {
+  printf("X1");
+  compare(NULL, NULL);
+  printf("X2");
   BOOL update;
   char* charList = (char*) valueList;
 
   int index1;
   for (index1 = (listSize - 1); index1 > 0; --index1)  {
     update = FALSE;
+    printf("index 1: %i\n", index1);
 
     int index2;
     for (index2 = 0; index2 < index1; ++index2)  {
+      printf("  index2: %i\n", index2);
+
       char* valuePtr1 = charList + (index2 * valueSize);
       char* valuePtr2 = charList + ((index2 + 1) * valueSize);
-      
+
       if (compare(valuePtr1, valuePtr2) > 0) {
+        printf("C");
         memswp(valuePtr1, valuePtr2, valueSize);
+        printf("D");
         update = TRUE;
+        printf("E");
       }
+
+      printf("X");
     }
 
+    printf("Y");
     if (!update) {
       break;
     }
   }
+
+  printf("Z");
 }
 
 static void swap(char* leftValuePtr, char* rightValuePtr, int valueSize) {

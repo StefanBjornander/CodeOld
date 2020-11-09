@@ -202,10 +202,10 @@ void maina() {
 }
 
 void main() {
-  strtol_test();
+/*  strtol_test();
   printf("\n");
-  strtoul_test();
-//  stdlib_test();
+  strtoul_test();*/
+  stdlib_test();
 }
 
 void mainX4(int argc, char* argv[]) {

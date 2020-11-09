@@ -33,10 +33,10 @@ section .text
 	; PostCall 28
 
  islower$3:
-	; GetReturnValue £temporary262
+	; GetReturnValue £temporary260
 
  islower$4:
-	; Assign localeConvPtr £temporary262
+	; Assign localeConvPtr £temporary260
 	mov [rbp + 28], rbx
 
  islower$5:
@@ -48,11 +48,11 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  islower$7:
-	; Dereference £temporary264 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary262 -> localeConvPtr localeConvPtr 0
 	mov rsi, [rbp + 28]
 
  islower$8:
-	; Parameter pointer £temporary264 -> localeConvPtr 60
+	; Parameter pointer £temporary262 -> localeConvPtr 60
 	mov rax, [rsi + 40]
 	mov [rbp + 60], rax
 
@@ -72,15 +72,15 @@ section .text
 	; PostCall 36
 
  islower$12:
-	; GetReturnValue £temporary265
+	; GetReturnValue £temporary263
 
  islower$13:
-	; Equal 16 £temporary265 0
+	; Equal 16 £temporary263 0
 	cmp rbx, 0
 	je islower$16
 
  islower$14:
-	; Assign £temporary267 1
+	; Assign £temporary265 1
 	mov ebx, 1
 
  islower$15:
@@ -88,11 +88,11 @@ section .text
 	jmp islower$17
 
  islower$16:
-	; Assign £temporary267 0
+	; Assign £temporary265 0
 	mov ebx, 0
 
  islower$17:
-	; Return £temporary267
+	; Return £temporary265
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -109,7 +109,7 @@ section .text
 	jg islower$22
 
  islower$20:
-	; Assign £temporary271 1
+	; Assign £temporary269 1
 	mov ebx, 1
 
  islower$21:
@@ -117,11 +117,11 @@ section .text
 	jmp islower$23
 
  islower$22:
-	; Assign £temporary271 0
+	; Assign £temporary269 0
 	mov ebx, 0
 
  islower$23:
-	; Return £temporary271
+	; Return £temporary269
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -146,10 +146,10 @@ section .text
 	; PostCall 28
 
  isupper$3:
-	; GetReturnValue £temporary272
+	; GetReturnValue £temporary270
 
  isupper$4:
-	; Assign localeConvPtr £temporary272
+	; Assign localeConvPtr £temporary270
 	mov [rbp + 28], rbx
 
  isupper$5:
@@ -161,11 +161,11 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  isupper$7:
-	; Dereference £temporary274 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary272 -> localeConvPtr localeConvPtr 0
 	mov rsi, [rbp + 28]
 
  isupper$8:
-	; Parameter pointer £temporary274 -> localeConvPtr 60
+	; Parameter pointer £temporary272 -> localeConvPtr 60
 	mov rax, [rsi + 48]
 	mov [rbp + 60], rax
 
@@ -185,15 +185,15 @@ section .text
 	; PostCall 36
 
  isupper$12:
-	; GetReturnValue £temporary275
+	; GetReturnValue £temporary273
 
  isupper$13:
-	; Equal 16 £temporary275 0
+	; Equal 16 £temporary273 0
 	cmp rbx, 0
 	je isupper$16
 
  isupper$14:
-	; Assign £temporary277 1
+	; Assign £temporary275 1
 	mov ebx, 1
 
  isupper$15:
@@ -201,11 +201,11 @@ section .text
 	jmp isupper$17
 
  isupper$16:
-	; Assign £temporary277 0
+	; Assign £temporary275 0
 	mov ebx, 0
 
  isupper$17:
-	; Return £temporary277
+	; Return £temporary275
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -222,7 +222,7 @@ section .text
 	jg isupper$22
 
  isupper$20:
-	; Assign £temporary281 1
+	; Assign £temporary279 1
 	mov ebx, 1
 
  isupper$21:
@@ -230,11 +230,11 @@ section .text
 	jmp isupper$23
 
  isupper$22:
-	; Assign £temporary281 0
+	; Assign £temporary279 0
 	mov ebx, 0
 
  isupper$23:
-	; Return £temporary281
+	; Return £temporary279
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -264,10 +264,10 @@ section .text
 	; PostCall 28
 
  isalpha$4:
-	; GetReturnValue £temporary282
+	; GetReturnValue £temporary280
 
  isalpha$5:
-	; NotEqual 12 £temporary282 0
+	; NotEqual 12 £temporary280 0
 	cmp ebx, 0
 	jne isalpha$12
 
@@ -290,15 +290,15 @@ section .text
 	; PostCall 28
 
  isalpha$10:
-	; GetReturnValue £temporary283
+	; GetReturnValue £temporary281
 
  isalpha$11:
-	; Equal 14 £temporary283 0
+	; Equal 14 £temporary281 0
 	cmp ebx, 0
 	je isalpha$14
 
  isalpha$12:
-	; Assign £temporary287 1
+	; Assign £temporary285 1
 	mov ebx, 1
 
  isalpha$13:
@@ -306,11 +306,11 @@ section .text
 	jmp isalpha$15
 
  isalpha$14:
-	; Assign £temporary287 0
+	; Assign £temporary285 0
 	mov ebx, 0
 
  isalpha$15:
-	; Return £temporary287
+	; Return £temporary285
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -332,7 +332,7 @@ section .text
 	jg isdigit$4
 
  isdigit$2:
-	; Assign £temporary291 1
+	; Assign £temporary289 1
 	mov ebx, 1
 
  isdigit$3:
@@ -340,11 +340,11 @@ section .text
 	jmp isdigit$5
 
  isdigit$4:
-	; Assign £temporary291 0
+	; Assign £temporary289 0
 	mov ebx, 0
 
  isdigit$5:
-	; Return £temporary291
+	; Return £temporary289
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -374,10 +374,10 @@ section .text
 	; PostCall 28
 
  isalnum$4:
-	; GetReturnValue £temporary292
+	; GetReturnValue £temporary290
 
  isalnum$5:
-	; NotEqual 12 £temporary292 0
+	; NotEqual 12 £temporary290 0
 	cmp ebx, 0
 	jne isalnum$12
 
@@ -400,15 +400,15 @@ section .text
 	; PostCall 28
 
  isalnum$10:
-	; GetReturnValue £temporary293
+	; GetReturnValue £temporary291
 
  isalnum$11:
-	; Equal 14 £temporary293 0
+	; Equal 14 £temporary291 0
 	cmp ebx, 0
 	je isalnum$14
 
  isalnum$12:
-	; Assign £temporary297 1
+	; Assign £temporary295 1
 	mov ebx, 1
 
  isalnum$13:
@@ -416,11 +416,11 @@ section .text
 	jmp isalnum$15
 
  isalnum$14:
-	; Assign £temporary297 0
+	; Assign £temporary295 0
 	mov ebx, 0
 
  isalnum$15:
-	; Return £temporary297
+	; Return £temporary295
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -450,10 +450,10 @@ section .text
 	; PostCall 28
 
  isxdigit$4:
-	; GetReturnValue £temporary298
+	; GetReturnValue £temporary296
 
  isxdigit$5:
-	; NotEqual 10 £temporary298 0
+	; NotEqual 10 £temporary296 0
 	cmp ebx, 0
 	jne isxdigit$10
 
@@ -478,7 +478,7 @@ section .text
 	jg isxdigit$12
 
  isxdigit$10:
-	; Assign £temporary308 1
+	; Assign £temporary306 1
 	mov ebx, 1
 
  isxdigit$11:
@@ -486,11 +486,11 @@ section .text
 	jmp isxdigit$13
 
  isxdigit$12:
-	; Assign £temporary308 0
+	; Assign £temporary306 0
 	mov ebx, 0
 
  isxdigit$13:
-	; Return £temporary308
+	; Return £temporary306
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -512,7 +512,7 @@ section .text
 	jg isgraph$4
 
  isgraph$2:
-	; Assign £temporary312 1
+	; Assign £temporary310 1
 	mov ebx, 1
 
  isgraph$3:
@@ -520,11 +520,11 @@ section .text
 	jmp isgraph$5
 
  isgraph$4:
-	; Assign £temporary312 0
+	; Assign £temporary310 0
 	mov ebx, 0
 
  isgraph$5:
-	; Return £temporary312
+	; Return £temporary310
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -554,10 +554,10 @@ section .text
 	; PostCall 28
 
  isprint$4:
-	; GetReturnValue £temporary313
+	; GetReturnValue £temporary311
 
  isprint$5:
-	; Equal 9 £temporary313 0
+	; Equal 9 £temporary311 0
 	cmp ebx, 0
 	je isprint$9
 
@@ -567,7 +567,7 @@ section .text
 	je isprint$9
 
  isprint$7:
-	; Assign £temporary317 1
+	; Assign £temporary315 1
 	mov ebx, 1
 
  isprint$8:
@@ -575,11 +575,11 @@ section .text
 	jmp isprint$10
 
  isprint$9:
-	; Assign £temporary317 0
+	; Assign £temporary315 0
 	mov ebx, 0
 
  isprint$10:
-	; Return £temporary317
+	; Return £temporary315
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -609,10 +609,10 @@ section .text
 	; PostCall 28
 
  ispunct$4:
-	; GetReturnValue £temporary318
+	; GetReturnValue £temporary316
 
  ispunct$5:
-	; Equal 14 £temporary318 0
+	; Equal 14 £temporary316 0
 	cmp ebx, 0
 	je ispunct$14
 
@@ -635,15 +635,15 @@ section .text
 	; PostCall 28
 
  ispunct$10:
-	; GetReturnValue £temporary319
+	; GetReturnValue £temporary317
 
  ispunct$11:
-	; NotEqual 14 £temporary319 0
+	; NotEqual 14 £temporary317 0
 	cmp ebx, 0
 	jne ispunct$14
 
  ispunct$12:
-	; Assign £temporary324 1
+	; Assign £temporary322 1
 	mov ebx, 1
 
  ispunct$13:
@@ -651,11 +651,11 @@ section .text
 	jmp ispunct$15
 
  ispunct$14:
-	; Assign £temporary324 0
+	; Assign £temporary322 0
 	mov ebx, 0
 
  ispunct$15:
-	; Return £temporary324
+	; Return £temporary322
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -685,15 +685,15 @@ section .text
 	; PostCall 28
 
  iscntrl$4:
-	; GetReturnValue £temporary325
+	; GetReturnValue £temporary323
 
  iscntrl$5:
-	; NotEqual 8 £temporary325 0
+	; NotEqual 8 £temporary323 0
 	cmp ebx, 0
 	jne iscntrl$8
 
  iscntrl$6:
-	; Assign £temporary328 1
+	; Assign £temporary326 1
 	mov ebx, 1
 
  iscntrl$7:
@@ -701,11 +701,11 @@ section .text
 	jmp iscntrl$9
 
  iscntrl$8:
-	; Assign £temporary328 0
+	; Assign £temporary326 0
 	mov ebx, 0
 
  iscntrl$9:
-	; Return £temporary328
+	; Return £temporary326
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -747,7 +747,7 @@ section .text
 	jne isspace$8
 
  isspace$6:
-	; Assign £temporary340 1
+	; Assign £temporary338 1
 	mov ebx, 1
 
  isspace$7:
@@ -755,11 +755,11 @@ section .text
 	jmp isspace$9
 
  isspace$8:
-	; Assign £temporary340 0
+	; Assign £temporary338 0
 	mov ebx, 0
 
  isspace$9:
-	; Return £temporary340
+	; Return £temporary338
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -789,10 +789,10 @@ section .text
 	; PostCall 28
 
  tolower$4:
-	; GetReturnValue £temporary341
+	; GetReturnValue £temporary339
 
  tolower$5:
-	; Equal 32 £temporary341 0
+	; Equal 32 £temporary339 0
 	cmp ebx, 0
 	je tolower$32
 
@@ -810,10 +810,10 @@ section .text
 	; PostCall 28
 
  tolower$9:
-	; GetReturnValue £temporary342
+	; GetReturnValue £temporary340
 
  tolower$10:
-	; Assign localeConvPtr £temporary342
+	; Assign localeConvPtr £temporary340
 	mov [rbp + 28], rbx
 
  tolower$11:
@@ -822,20 +822,20 @@ section .text
 	je tolower$30
 
  tolower$12:
-	; Dereference £temporary344 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary342 -> localeConvPtr localeConvPtr 0
 	mov rsi, [rbp + 28]
 
  tolower$13:
-	; Assign lowerCase £temporary344 -> localeConvPtr
+	; Assign lowerCase £temporary342 -> localeConvPtr
 	mov rax, [rsi + 40]
 	mov [rbp + 36], rax
 
  tolower$14:
-	; Dereference £temporary345 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary343 -> localeConvPtr localeConvPtr 0
 	mov rsi, [rbp + 28]
 
  tolower$15:
-	; Assign upperCase £temporary345 -> localeConvPtr
+	; Assign upperCase £temporary343 -> localeConvPtr
 	mov rax, [rsi + 48]
 	mov [rbp + 44], rax
 
@@ -863,35 +863,35 @@ section .text
 	; PostCall 52
 
  tolower$21:
-	; GetReturnValue £temporary346
+	; GetReturnValue £temporary344
 
  tolower$22:
-	; BinarySubtract £temporary348 £temporary346 upperCase
+	; BinarySubtract £temporary346 £temporary344 upperCase
 	sub rbx, [rbp + 44]
 
  tolower$23:
-	; IntegralToIntegral £temporary349 £temporary348
+	; IntegralToIntegral £temporary347 £temporary346
 
  tolower$24:
-	; Assign index £temporary349
+	; Assign index £temporary347
 	mov [rbp + 52], ebx
 
  tolower$25:
-	; IntegralToIntegral £temporary351 index
+	; IntegralToIntegral £temporary349 index
 	mov eax, [rbp + 52]
 	mov rbx, 4294967295
 	and rax, rbx
 
  tolower$26:
-	; BinaryAdd £temporary353 lowerCase £temporary351
+	; BinaryAdd £temporary351 lowerCase £temporary349
 	mov rsi, [rbp + 36]
 	add rsi, rax
 
  tolower$27:
-	; Dereference £temporary350 -> £temporary353 £temporary353 0
+	; Dereference £temporary348 -> £temporary351 £temporary351 0
 
  tolower$28:
-	; IntegralToIntegral £temporary354 £temporary350 -> £temporary353
+	; IntegralToIntegral £temporary352 £temporary348 -> £temporary351
 	mov bl, [rsi]
 	and ebx, 255
 	cmp bl, 0
@@ -900,19 +900,19 @@ section .text
 	neg ebx
 
  tolower$29:
-	; Return £temporary354
+	; Return £temporary352
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  tolower$30:
-	; BinaryAdd £temporary355 c 32
+	; BinaryAdd £temporary353 c 32
 	mov ebx, [rbp + 24]
 	add ebx, 32
 
  tolower$31:
-	; Return £temporary355
+	; Return £temporary353
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -950,10 +950,10 @@ section .text
 	; PostCall 28
 
  toupper$4:
-	; GetReturnValue £temporary357
+	; GetReturnValue £temporary355
 
  toupper$5:
-	; Equal 32 £temporary357 0
+	; Equal 32 £temporary355 0
 	cmp ebx, 0
 	je toupper$32
 
@@ -971,10 +971,10 @@ section .text
 	; PostCall 28
 
  toupper$9:
-	; GetReturnValue £temporary358
+	; GetReturnValue £temporary356
 
  toupper$10:
-	; Assign localeConvPtr £temporary358
+	; Assign localeConvPtr £temporary356
 	mov [rbp + 28], rbx
 
  toupper$11:
@@ -983,20 +983,20 @@ section .text
 	je toupper$30
 
  toupper$12:
-	; Dereference £temporary360 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary358 -> localeConvPtr localeConvPtr 0
 	mov rsi, [rbp + 28]
 
  toupper$13:
-	; Assign lowerCase £temporary360 -> localeConvPtr
+	; Assign lowerCase £temporary358 -> localeConvPtr
 	mov rax, [rsi + 40]
 	mov [rbp + 36], rax
 
  toupper$14:
-	; Dereference £temporary361 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary359 -> localeConvPtr localeConvPtr 0
 	mov rsi, [rbp + 28]
 
  toupper$15:
-	; Assign upperCase £temporary361 -> localeConvPtr
+	; Assign upperCase £temporary359 -> localeConvPtr
 	mov rax, [rsi + 48]
 	mov [rbp + 44], rax
 
@@ -1024,35 +1024,35 @@ section .text
 	; PostCall 52
 
  toupper$21:
-	; GetReturnValue £temporary362
+	; GetReturnValue £temporary360
 
  toupper$22:
-	; BinarySubtract £temporary364 £temporary362 lowerCase
+	; BinarySubtract £temporary362 £temporary360 lowerCase
 	sub rbx, [rbp + 36]
 
  toupper$23:
-	; IntegralToIntegral £temporary365 £temporary364
+	; IntegralToIntegral £temporary363 £temporary362
 
  toupper$24:
-	; Assign index £temporary365
+	; Assign index £temporary363
 	mov [rbp + 52], ebx
 
  toupper$25:
-	; IntegralToIntegral £temporary367 index
+	; IntegralToIntegral £temporary365 index
 	mov eax, [rbp + 52]
 	mov rbx, 4294967295
 	and rax, rbx
 
  toupper$26:
-	; BinaryAdd £temporary369 upperCase £temporary367
+	; BinaryAdd £temporary367 upperCase £temporary365
 	mov rsi, [rbp + 44]
 	add rsi, rax
 
  toupper$27:
-	; Dereference £temporary366 -> £temporary369 £temporary369 0
+	; Dereference £temporary364 -> £temporary367 £temporary367 0
 
  toupper$28:
-	; IntegralToIntegral £temporary370 £temporary366 -> £temporary369
+	; IntegralToIntegral £temporary368 £temporary364 -> £temporary367
 	mov bl, [rsi]
 	and ebx, 255
 	cmp bl, 0
@@ -1061,19 +1061,19 @@ section .text
 	neg ebx
 
  toupper$29:
-	; Return £temporary370
+	; Return £temporary368
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  toupper$30:
-	; BinarySubtract £temporary371 c 32
+	; BinarySubtract £temporary369 c 32
 	mov ebx, [rbp + 24]
 	sub ebx, 32
 
  toupper$31:
-	; Return £temporary371
+	; Return £temporary369
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]

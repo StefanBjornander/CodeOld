@@ -32,8 +32,7 @@
 	extern stderr
 	extern fprintf
 	extern abort
-	extern strtol_test
-	extern strtoul_test
+	extern stdlib_test
 	extern mktime
 	extern character_test
 	global _start
@@ -1128,47 +1127,16 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main$1:
-	; Call strtol_test 24 0
+	; Call stdlib_test 24 0
 	mov qword [rbp + 24], main$2
 	mov [rbp + 32], rbp
 	add rbp, 24
-	jmp strtol_test
+	jmp stdlib_test
 
  main$2:
 	; PostCall 24
 
  main$3:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- main$4:
-	; Parameter pointer "\n" 48
-	mov qword [rbp + 48], string_0A#
-
- main$5:
-	; Call printf 24 0
-	mov qword [rbp + 24], main$6
-	mov [rbp + 32], rbp
-	add rbp, 24
-	mov rdi, rbp
-	jmp printf
-
- main$6:
-	; PostCall 24
-
- main$7:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- main$8:
-	; Call strtoul_test 24 0
-	mov qword [rbp + 24], main$9
-	mov [rbp + 32], rbp
-	add rbp, 24
-	jmp strtoul_test
-
- main$9:
-	; PostCall 24
-
- main$10:
 	; Return
 	cmp qword [rbp], 0
 	je label$0
@@ -1182,30 +1150,30 @@ section .text
 	mov rax, 60
 	syscall
 
- main$11:
+ main$4:
 	; FunctionEnd main
 
 section .data
 
-@426$ZERO:
+@425$ZERO:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@427$ONE:
+@426$ONE:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@430$TWO:
+@429$TWO:
 	; Initializer SignedInt 2
 	dd 2
 
 section .data
 
-@431$THREE:
+@430$THREE:
 	; Initializer SignedInt 3
 	dd 3
 
@@ -1288,26 +1256,26 @@ section .text
 	mov [rbp + 72], eax
 
  mainX4$10:
-	; IntegralToIntegral £temporary82 index
+	; IntegralToIntegral £temporary80 index
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
  mainX4$11:
-	; UnsignedMultiply £temporary83 £temporary82 8
+	; UnsignedMultiply £temporary81 £temporary80 8
 	xor rdx, rdx
 	mul qword [int8$8#]
 
  mainX4$12:
-	; BinaryAdd £temporary84 argv £temporary83
+	; BinaryAdd £temporary82 argv £temporary81
 	mov rsi, [rbp + 28]
 	add rsi, rax
 
  mainX4$13:
-	; Dereference £temporary81 -> £temporary84 £temporary84 0
+	; Dereference £temporary79 -> £temporary82 £temporary82 0
 
  mainX4$14:
-	; Parameter pointer £temporary81 -> £temporary84 76
+	; Parameter pointer £temporary79 -> £temporary82 76
 	mov rax, [rsi]
 	mov [rbp + 76], rax
 
@@ -1354,26 +1322,26 @@ section .text
 	mov dword [rbp + 36], 0
 
  mainX4$24:
-	; IntegralToIntegral £temporary88 index
+	; IntegralToIntegral £temporary86 index
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
  mainX4$25:
-	; UnsignedMultiply £temporary89 £temporary88 8
+	; UnsignedMultiply £temporary87 £temporary86 8
 	xor rdx, rdx
 	mul qword [int8$8#]
 
  mainX4$26:
-	; BinaryAdd £temporary90 argv £temporary89
+	; BinaryAdd £temporary88 argv £temporary87
 	mov rsi, [rbp + 28]
 	add rsi, rax
 
  mainX4$27:
-	; Dereference £temporary87 -> £temporary90 £temporary90 0
+	; Dereference £temporary85 -> £temporary88 £temporary88 0
 
  mainX4$28:
-	; Equal 41 £temporary87 -> £temporary90 0
+	; Equal 41 £temporary85 -> £temporary88 0
 	cmp qword [rsi], 0
 	je mainX4$41
 
@@ -1390,26 +1358,26 @@ section .text
 	mov [rbp + 72], eax
 
  mainX4$32:
-	; IntegralToIntegral £temporary94 index
+	; IntegralToIntegral £temporary92 index
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
  mainX4$33:
-	; UnsignedMultiply £temporary95 £temporary94 8
+	; UnsignedMultiply £temporary93 £temporary92 8
 	xor rdx, rdx
 	mul qword [int8$8#]
 
  mainX4$34:
-	; BinaryAdd £temporary96 argv £temporary95
+	; BinaryAdd £temporary94 argv £temporary93
 	mov rsi, [rbp + 28]
 	add rsi, rax
 
  mainX4$35:
-	; Dereference £temporary93 -> £temporary96 £temporary96 0
+	; Dereference £temporary91 -> £temporary94 £temporary94 0
 
  mainX4$36:
-	; Parameter pointer £temporary93 -> £temporary96 76
+	; Parameter pointer £temporary91 -> £temporary94 76
 	mov rax, [rsi]
 	mov [rbp + 76], rax
 
@@ -1512,12 +1480,12 @@ section .text
 	mov qword [rbp + 97], string_25c2025s2025i2025lf#
 
  mainX4$59:
-	; Address £temporary102 c
+	; Address £temporary100 c
 	mov rsi, rbp
 	add rsi, 52
 
  mainX4$60:
-	; Parameter pointer £temporary102 105
+	; Parameter pointer £temporary100 105
 	mov [rbp + 105], rsi
 
  mainX4$61:
@@ -1526,21 +1494,21 @@ section .text
 	add qword [rbp + 113], 53
 
  mainX4$62:
-	; Address £temporary103 i
+	; Address £temporary101 i
 	mov rsi, rbp
 	add rsi, 40
 
  mainX4$63:
-	; Parameter pointer £temporary103 121
+	; Parameter pointer £temporary101 121
 	mov [rbp + 121], rsi
 
  mainX4$64:
-	; Address £temporary104 d
+	; Address £temporary102 d
 	mov rsi, rbp
 	add rsi, 44
 
  mainX4$65:
-	; Parameter pointer £temporary104 129
+	; Parameter pointer £temporary102 129
 	mov [rbp + 129], rsi
 
  mainX4$66:
@@ -1563,7 +1531,7 @@ section .text
 	mov qword [rbp + 97], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#
 
  mainX4$70:
-	; IntegralToIntegral £temporary106 c
+	; IntegralToIntegral £temporary104 c
 	mov al, [rbp + 52]
 	and eax, 255
 	cmp al, 0
@@ -1572,7 +1540,7 @@ section .text
 	neg eax
 
  mainX4$71:
-	; Parameter signedint £temporary106 105
+	; Parameter signedint £temporary104 105
 	mov [rbp + 105], eax
 
  mainX4$72:
@@ -1661,12 +1629,12 @@ section .text
 	mov qword [rbp + 56], string_25lf#
 
  main3$6:
-	; Address £temporary113 x
+	; Address £temporary111 x
 	mov rsi, rbp
 	add rsi, 24
 
  main3$7:
-	; Parameter pointer £temporary113 64
+	; Parameter pointer £temporary111 64
 	mov [rbp + 64], rsi
 
  main3$8:
@@ -2061,12 +2029,12 @@ section .text
 	mov qword [rbp + 52], string_25i#
 
  assert_test$7:
-	; Address £temporary137 n
+	; Address £temporary135 n
 	mov rsi, rbp
 	add rsi, 24
 
  assert_test$8:
-	; Parameter pointer £temporary137 60
+	; Parameter pointer £temporary135 60
 	mov [rbp + 60], rsi
 
  assert_test$9:

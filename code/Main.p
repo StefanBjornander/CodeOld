@@ -865,10 +865,10 @@ if ( ! ( 1 > 2 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at 
 }
 
 void main ( ) {
-strtol_test ( ) ;
-printf ( "\n" ) ;
-strtoul_test ( ) ;
 
+
+
+stdlib_test ( ) ;
 }
 
 void mainX4 ( int argc , char * argv [] ) {
