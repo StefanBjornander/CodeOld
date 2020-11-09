@@ -27,6 +27,7 @@ void setjmp_test(double x);   // ok
 void stdio_test(void);        // ok
 void stdlib_test(void);       // ok
 void strtol_test(void);       // ok
+void strtoul_test(void);       // ok
 void heap_test(void);         // ok
 void stack_test(void);        // ok
 void character_test(char c);  // ok
@@ -202,6 +203,9 @@ void maina() {
 
 void main() {
   strtol_test();
+  printf("\n");
+  strtoul_test();
+//  stdlib_test();
 }
 
 void mainX4(int argc, char* argv[]) {

@@ -155,19 +155,40 @@ void scanString(char* string, int precision) {
   }
 }
 
-unsigned long digitToValue(char input) {
-  if (isdigit(input)) {
-    return (input - '0');
+static BOOL isDigitInBase(char c, int base) {
+  if (isdigit(c)) {
+    int value = c - '0';
+    return ((value >= 0) && (value < base));
   }
-  else if (islower(input)) {
-    return ((input - 'a') + 10ul);
+  else if (islower(c)) {
+    int value = (c - 'a') + 10;
+    return ((value >= 0) && (value < base));
+  }
+  else if (isupper(c)) {
+    int value = (c - 'A') + 10;
+    return ((value >= 0) && (value < base));
   }
   else {
-    return ((input - 'A') + 10ul);
+    return FALSE;
   }
 }
 
-long scanLongInt(void) {
+static int digitToValue(char c) {
+  if (isdigit(c)) {
+    return (c - '0');
+  }
+  else if (islower(c)) {
+    return ((c - 'a') + 10);
+  }
+  else if (isupper(c)) {
+    return ((c - 'A') + 10);
+  }
+  else {
+    return 0;
+  }
+}
+
+long scanLongInt(int base) {
   long longValue = 0l;
   BOOL minus = FALSE, found = FALSE;
   char input = scanChar();
@@ -184,8 +205,26 @@ long scanLongInt(void) {
     input = scanChar();
   }
 
-  while (isdigit(input)) {
-    longValue = (10l * longValue) + (input - '0');
+  if (base == 0) {
+    if (input == '0') {
+      input = scanChar();
+
+      if (tolower(input) == 'x') {
+        base = 16;
+        input = scanChar();
+      }
+      else {
+        base = 8;
+      }
+    }
+    else {
+      base = 10;
+    }
+  }
+
+  while (isDigitInBase(input, base)) {
+    longValue *= base;
+    longValue += digitToValue(input);
     input = scanChar();
     found = TRUE;
   }
@@ -202,8 +241,8 @@ long scanLongInt(void) {
   return longValue;
 }
 
-unsigned long scanUnsignedLongInt(unsigned long base) {
-  unsigned long unsignedLongValue = 0ul, digit;
+unsigned long scanUnsignedLongInt(int base) {
+  unsigned long unsignedLongValue = 0, digit;
   char input = scanChar();
   BOOL found = TRUE;
 
@@ -211,30 +250,30 @@ unsigned long scanUnsignedLongInt(unsigned long base) {
     input = scanChar();
   }
 
-  if (input == '0') {
+  if (input == '+') {
     input = scanChar();
+  }
 
-    if (tolower(input) == 'x') {
-      base = (base == 0ul) ? 16ul : base;
+  if (base == 0) {
+    if (input == '0') {
       input = scanChar();
+
+      if (tolower(input) == 'x') {
+        base = 16;
+        input = scanChar();
+      }
+      else {
+        base = 8;
+      }
     }
     else {
-      base = (base == 0ul) ? 8ul : base;
+      base = 10;
     }
   }
 
-  if (base == 0ul) {
-    base = 10ul;
-  }
-
-  while (isxdigit(input)) {
-    digit = digitToValue(input);
-   
-    if (digit >= base) {
-      break;
-    }
-
-    unsignedLongValue = (unsignedLongValue * base) + digit;
+  while (isDigitInBase(input, base)) {
+    unsignedLongValue *= base;
+    unsignedLongValue += digitToValue(input);
     found = TRUE;
     input = scanChar();
   }
@@ -284,7 +323,7 @@ long double scanLongDouble(void) {
   unscanChar(input);
 
   if (tolower(input) == 'e') {
-    double exponent = (double) scanLongInt();
+    double exponent = (double)scanLongInt(10);
     value *= pow(10.0, exponent);
   }
   else {
@@ -372,7 +411,7 @@ int scanFormat(char* format, va_list arg_list) {
 
         case 'i':
         case 'd':
-          longValue = scanLongInt();
+          longValue = scanLongInt(10);
 
           if (!star) {
             if (shortInt) {
@@ -393,7 +432,7 @@ int scanFormat(char* format, va_list arg_list) {
           break;
 
         case 'o':
-          unsignedLongValue = scanUnsignedLongInt(8ul);
+          unsignedLongValue = scanUnsignedLongInt(8);
 
           if (!star) {
             if (shortInt) {
@@ -414,7 +453,7 @@ int scanFormat(char* format, va_list arg_list) {
           break;
 
         case 'x':
-          unsignedLongValue = scanUnsignedLongInt(16ul);
+          unsignedLongValue = scanUnsignedLongInt(16);
 
           if (!star) {
             if (shortInt) {
@@ -435,7 +474,7 @@ int scanFormat(char* format, va_list arg_list) {
           break;
 
         case 'u':
-          unsignedLongValue = scanUnsignedLongInt(0ul);
+          unsignedLongValue = scanUnsignedLongInt(0);
 
           if (!star) {
             if (shortInt) {

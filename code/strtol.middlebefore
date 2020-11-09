@@ -1,102 +1,20 @@
-0: Equal Assign chars 0 base 0
-1: Goto SignedGreaterThan SignedLessThanEqual Assign minus 0 base 36 base 0
-2: CheckTrackMapFloatStack
-3: Assign chars 0
-4: Assign value 0
-5: PreCall 18
-6: Parameter pointer s 24
-7: Parameter pointer "%li%n" 26
-8: Address £temporary1954 value
-9: Parameter pointer £temporary1954 28
-10: Address £temporary1955 chars
-11: Parameter pointer £temporary1955 30
-12: Call sscanf 18 4
-13: PostCall 18
-14: NotEqual Dereference £temporary1958 -> endp endp 0 endp 0
-15: Goto Return value
-16: CheckTrackMapFloatStack
-17: Dereference £temporary1958 -> endp endp 0
-18: UnsignedMultiply £temporary1960 chars 1
-19: BinaryAdd £temporary1959 s £temporary1960
-20: Assign £temporary1958 -> endp £temporary1959
-21: Goto Return value
-22: Return value
-23: Goto Empty
-24: SignedGreaterThan SignedLessThanEqual Assign minus 0 base 36 base 0
-25: Goto Return 0
-26: SignedLessThanEqual Assign minus 0 base 36
-27: Goto Return 0
-28: CheckTrackMapFloatStack
-29: Assign minus 0
-30: Dereference £temporary1964 -> s s 0
-31: Equal BinaryAdd s s 1 £temporary1964 -> s 43
-32: Goto Dereference £temporary1967 -> s s 0
-33: CheckTrackMapFloatStack
-34: BinaryAdd s s 1
-35: Goto Assign value 0
-36: Dereference £temporary1967 -> s s 0
-37: Equal Assign minus 1 £temporary1967 -> s 45
-38: Goto Assign value 0
-39: CheckTrackMapFloatStack
-40: Assign minus 1
-41: BinaryAdd s s 1
-42: Goto Assign value 0
-43: Assign value 0
-44: Empty
-45: Assign index 0
-46: Empty
-47: Goto UnsignedMultiply £temporary1972 index 1
-48: CheckTrackMapFloatStack
-49: UnsignedMultiply £temporary1972 index 1
-50: BinaryAdd £temporary1973 s £temporary1972
-51: Dereference £temporary1971 -> £temporary1973 £temporary1973 0
-52: Assign c £temporary1971 -> £temporary1973
-53: PreCall 21
-54: Parameter signedchar c 27
-55: Parameter signedint base 28
-56: Call isbasedigit 21 0
-57: PostCall 21
-58: GetReturnValue £temporary1974
-59: NotEqual IntegralToIntegral £temporary1977 base £temporary1974 0
-60: Goto Goto NotEqual Dereference £temporary1984 -> endp endp 0 endp 0
-61: CheckTrackMapFloatStack
-62: Goto NotEqual Dereference £temporary1984 -> endp endp 0 endp 0
-63: Goto IntegralToIntegral £temporary1977 base
-64: IntegralToIntegral £temporary1977 base
-65: SignedMultiply £temporary1978 value £temporary1977
-66: Assign value £temporary1978
-67: PreCall 21
-68: Parameter signedchar c 27
-69: Call tobasevalue 21 0
-70: PostCall 21
-71: GetReturnValue £temporary1979
-72: Assign digit £temporary1979
-73: IntegralToIntegral £temporary1980 digit
-74: BinaryAdd £temporary1981 value £temporary1980
-75: Assign value £temporary1981
-76: Empty
-77: BinaryAdd index index 1
-78: Goto Empty
-79: NotEqual Dereference £temporary1984 -> endp endp 0 endp 0
-80: Goto NotEqual UnarySubtract £temporary1989 value minus 0
-81: CheckTrackMapFloatStack
-82: Dereference £temporary1984 -> endp endp 0
-83: UnsignedMultiply £temporary1986 index 1
-84: BinaryAdd £temporary1987 s £temporary1986
-85: Dereference £temporary1985 -> £temporary1987 £temporary1987 0
-86: Address £temporary1988 £temporary1985 -> £temporary1987
-87: Assign £temporary1984 -> endp £temporary1988
-88: Goto NotEqual UnarySubtract £temporary1989 value minus 0
-89: NotEqual UnarySubtract £temporary1989 value minus 0
-90: Goto Empty
-91: UnarySubtract £temporary1989 value
-92: Assign £temporary1991 £temporary1989
-93: Goto Empty
-94: Empty
-95: Assign £temporary1991 value
-96: Empty
-97: Return £temporary1991
-98: Goto Empty
-99: Return 0
-100: Empty
-101: FunctionEnd strtol
+0: Assign g_inStatus 1
+1: Assign g_inDevice s
+2: Assign g_inChars 0
+3: PreCall 12
+4: Parameter signedint base 18
+5: Call scanLongInt 12 0
+6: PostCall 12
+7: GetReturnValue £temporary1946
+8: Assign longValue £temporary1946
+9: NotEqual Dereference £temporary1948 -> endp endp 0 endp 0
+10: Goto Return longValue
+11: CheckTrackMapFloatStack
+12: Dereference £temporary1948 -> endp endp 0
+13: UnsignedMultiply £temporary1950 g_inChars 1
+14: BinaryAdd £temporary1949 s £temporary1950
+15: Assign £temporary1948 -> endp £temporary1949
+16: Goto Return longValue
+17: Return longValue
+18: Empty
+19: FunctionEnd strtol

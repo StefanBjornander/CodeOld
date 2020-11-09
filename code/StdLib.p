@@ -1,12 +1,12 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+   
+   
 
 
 
 
-
-
-
-
+    
+    
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -38,12 +38,13 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
+  
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,1$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,0$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
+   
+   
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -59,12 +60,13 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
+  
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,2$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\errno.h,1$
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\errno.h,0$
+   
+   
 
 
 
@@ -125,43 +127,46 @@ FTELL , FSIZE , FREMOVE , FRENAME , FTEMPNAME , FTEMPFILE };
 
 extern int errno ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,2$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
+   
+   
+
+     
+                         
+                    
+               
+      
+
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,3$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+   
+   
 
+          
 
+    
+    
 
+    
+    
+    
 
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,4$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\string.h,0$
+   
+   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,5$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\string.h,1$
-
-
-
-
+    
 
 extern char * strcpy ( char * target , const char * source ) ;
 extern char * strncpy ( char * target , const char * source , int size ) ;
@@ -184,14 +189,15 @@ extern int memcmp ( const void * left , const void * right , int size ) ;
 extern void * memchr ( const void * block , int i , int size ) ;
 extern void * memset ( void * block , int i , int size ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,5$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,6$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
-
-
-
-
+          
 
 double atof ( char * s ) ;
 int atoi ( char * s ) ;
@@ -213,8 +219,8 @@ void exit ( int status ) ;
 typedef void ( * FUNC_PTR ) ( void ) ;
 int atexit ( FUNC_PTR fcn ) ;
 
-
-
+    
+    
 
 int abs ( int value ) ;
 long labs ( long value ) ;
@@ -244,115 +250,120 @@ long quot , rem ;
 } ldiv_t ;
 
 ldiv_t ldiv ( long num , long denum ) ;
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,6$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,7$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-
-
-
-
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+   
+   
 
 
 
 
+    
+    
 
+       
+       
+       
 
+          
+          
+           
 
+       
+           
+          
 
+       
+       
+       
 
+       
+       
+       
 
+       
+       
+       
+          
 
+       
+       
+       
+       
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
+   
+   
 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
+   
+   
 
+     
+                         
+                    
+               
+      
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+   
+   
 
+          
 
+    
+    
 
+    
+    
+    
 
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
+   
+   
 
+    
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-
-
-
-
-
-
-
-
+    
+    
 
 typedef unsigned int UINT ;
 
@@ -371,22 +382,22 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
+   
+    
+    
+    
+    
 
+    
 
+    
+    
+    
+    
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+          
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -418,39 +429,38 @@ int feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-
-
-
-
-
+    
+    
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
+    
+    
 
-
-
-
-
-
-
-
-extern int g_inStatus , g_inChars ;
-extern void * g_inDevice ;
+    
 
 char scanChar ( void ) ;
 void unscanChar ( char c ) ;
 void scanString ( char * string , int precision ) ;
-long scanLongInt ( void ) ;
-unsigned long scanUnsignedLongInt ( unsigned long base ) ;
+long scanLongInt ( int base ) ;
+unsigned long scanUnsignedLongInt ( int base ) ;
 long double scanLongDouble ( void ) ;
 
 int scanf ( char * format , ... ) ;
@@ -460,15 +470,16 @@ int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
 int sscanf ( char * inString , char * format , ... ) ;
 int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-
-
-
-
-
+    
+    
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -503,13 +514,15 @@ int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
 int sprintf ( char * outString , char * format , ... ) ;
 int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+       
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
+  
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,8$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,7$
+       
 
 extern FILE g_fileArray [];
 
@@ -521,155 +534,381 @@ long atol ( char * s ) {
 return strtol ( s , ( char ** ) ( ( void * ) 0 ) , 10 ) ;
 }
 
-static int isbasedigit ( char c , int base ) {
-int value ;
 
-if ( isdigit ( c ) ) {
-int value = c - '\060' ;
-return ( ( value >= 0 ) && ( value < base ) ) ;
-}
-else if ( islower ( c ) ) {
-int value = ( c - '\141' ) + 10 ;
-return ( ( value >= 0 ) && ( value < base ) ) ;
-}
-else if ( isupper ( c ) ) {
-int value = ( c - '\101' ) + 10 ;
-return ( ( value >= 0 ) && ( value < base ) ) ;
-}
-else {
-return 0 ;
-}
-}
 
-static int tobasevalue ( char c ) {
-if ( isdigit ( c ) ) {
-return ( c - '\060' ) ;
-}
-else if ( islower ( c ) ) {
-return ( ( c - '\141' ) + 10 ) ;
-}
-else if ( isupper ( c ) ) {
-return ( ( c - '\101' ) + 10 ) ;
-}
-else {
-return 0 ;
-}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+extern int g_inStatus , g_inChars ;
+extern void * g_inDevice ;
 
 long strtol ( char * s , char ** endp , int base ) {
-if ( base == 0 ) {
-int chars = 0 ;
-long value = 0 ;
-sscanf ( s , "\045\154\151\045\156" , & value , & chars ) ;
+g_inStatus = 1 ;
+g_inDevice = s ;
+g_inChars = 0 ;
+long longValue = scanLongInt ( base ) ;
 
 if ( endp != ( ( void * ) 0 ) ) {
-* endp = s + chars ;
+* endp = s + g_inChars ;
 }
 
-return value ;
-}
-else if ( ( base > 0 ) && ( base <= 36 ) ) {
-int minus = 0 ;
-
-if ( s [ 0 ] == '\053' ) {
-++ s ;
-}
-else if ( s [ 0 ] == '\055' ) {
-minus = 1 ;
-++ s ;
+return longValue ;
 }
 
-long value = 0 ;
-int index ;
-for ( index = 0 ; 1 ; ++ index ) {
-char c = s [ index ];
 
-if ( ! isbasedigit ( c , base ) ) {
-break ;
-}
 
-value *= base ;
-int digit = tobasevalue ( c ) ;
-value += digit ;
 
-}
 
-if ( endp != ( ( void * ) 0 ) ) {
-* endp = & s [ index ];
-}
 
-return minus ? - value : value ;
-}
-else {
-return 0 ;
-}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 void strtol_test ( void ) {
-{ char text [] = "\053\061\062\063\141\142\143" , * pointer ;
-long value = strtol ( text , & pointer , 9 ) ;
-printf ( "\074\045\163\076\040\074\045\154\151\076\040\074\045\163\076\012\012" , text , value , pointer ) ;
+{ int base = 0 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
 }
-{ char text [] = "\053\061\062\063\141\142\143" , * pointer ;
-long value = strtol ( text , & pointer , 10 ) ;
-printf ( "\074\045\163\076\040\074\045\154\151\076\040\074\045\163\076\012\012" , text , value , pointer ) ;
+
+{ int base = 0 ;
+char text [] = "   +0123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
 }
-{ char text [] = "\053\061\062\063\141\142\143" , * pointer ;
-long value = strtol ( text , & pointer , 11 ) ;
-printf ( "\074\045\163\076\040\074\045\154\151\076\040\074\045\163\076\012\012" , text , value , pointer ) ;
+
+{ int base = 0 ;
+char text [] = "   +0x123ABC" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
 }
-{ char text [] = "\055\061\062\063\141\142\143" , * pointer ;
-long value = strtol ( text , & pointer , 9 ) ;
-printf ( "\074\045\163\076\040\074\045\154\151\076\040\074\045\163\076\012\012" , text , value , pointer ) ;
+
+{ int base = 0 ;
+char text [] = "   +0X123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
 }
-{ char text [] = "\055\061\062\063\141\142\143" , * pointer ;
-long value = strtol ( text , & pointer , 10 ) ;
-printf ( "\074\045\163\076\040\074\045\154\151\076\040\074\045\163\076\012\012" , text , value , pointer ) ;
+
+{ int base = 0 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
 }
-{ char text [] = "\055\061\062\063\141\142\143" , * pointer ;
-long value = strtol ( text , & pointer , 11 ) ;
-printf ( "\074\045\163\076\040\074\045\154\151\076\040\074\045\163\076\012\012" , text , value , pointer ) ;
+
+{ int base = 0 ;
+char text [] = "   -0123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   -0x123ABC" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   -0X123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 9 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 10 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 11 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 12 ;
+char text [] = "   +123ABC" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 13 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 9 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 10 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 11 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 12 ;
+char text [] = "   -123ABC" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 13 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
 }
 }
 
 unsigned long strtoul ( char * s , char ** endp , int base ) {
-if ( base == 0 ) {
-int chars = 0 ;
-unsigned long value = 0 ;
-sscanf ( s , "\045\154\165\045\156" , & value , & chars ) ;
+g_inStatus = 1 ;
+g_inDevice = s ;
+g_inChars = 0 ;
+unsigned long unsignedLongValue = scanUnsignedLongInt ( base ) ;
 
 if ( endp != ( ( void * ) 0 ) ) {
-* endp = s + chars ;
+* endp = s + g_inChars ;
 }
 
-return value ;
-}
-else if ( ( base > 0 ) && ( base <= 36 ) ) {
-if ( s [ 0 ] == '\053' ) {
-++ s ;
+return unsignedLongValue ;
 }
 
-unsigned long value = 0 ;
-int index ;
-for ( index = 0 ; 1 ; ++ index ) {
-char c = s [ index ];
 
-if ( ! isbasedigit ( c , base ) ) {
-break ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void strtoul_test ( void ) {
+{ int base = 0 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
 }
 
-value *= base ;
-value += tobasevalue ( c ) ;
+{ int base = 0 ;
+char text [] = "   +0123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
 }
 
-if ( endp != ( ( void * ) 0 ) ) {
-* endp = & s [ index ];
+{ int base = 0 ;
+char text [] = "   +0x123ABC" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
 }
 
-return value ;
+{ int base = 0 ;
+char text [] = "   +0X123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
 }
-else {
-return 0 ;
+
+{ int base = 0 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   -0123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   -0x123ABC" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   -0X123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 9 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 10 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 11 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 12 ;
+char text [] = "   +123ABC" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 13 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 9 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 10 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 11 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 12 ;
+char text [] = "   -123ABC" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 13 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
 }
 }
 
@@ -678,9 +917,9 @@ return strtod ( s , ( char ** ) ( ( void * ) 0 ) ) ;
 }
 
 double strtod ( char * s , char ** endp ) {
-int chars = '\000' ;
+int chars = '\0' ;
 double value = 0 ;
-sscanf ( s , "\045\154\146\045\156" , & value , & chars ) ;
+sscanf ( s , "%lf%n" , & value , & chars ) ;
 
 if ( endp != ( ( void * ) 0 ) ) {
 * endp = s + chars ;
@@ -690,18 +929,18 @@ return value ;
 }
 
 void abort ( void ) {
-
-register_ah = 0x4Cs ;
+   
+ register_ah = 0x4Cs ;
 register_al = -1s ;
 interrupt ( 0x21s ) ;
+  
 
-
-
-
-
-
-
-}
+   
+    
+   
+   
+  
+ }
 
 char * getenv ( const char * ) {
 return ( ( void * ) 0 ) ;
@@ -762,9 +1001,9 @@ return middleValuePtr ;
 
 static long g_randValue ;
 
-
-
-
+    
+    
+    
 
 int rand ( void ) {
 g_randValue = ( ( 1664525l * g_randValue ) + 1013904223l ) % 127 ;
@@ -775,10 +1014,10 @@ void srand ( unsigned int seed ) {
 g_randValue = ( long ) seed ;
 }
 
-
-
-
-
+    
+    
+    
+            
 
 FUNC_PTR g_funcArray [ 256 ] = { ( ( void * ) 0 ) };
 
@@ -804,18 +1043,18 @@ g_funcArray [ index ] ( ) ;
 }
 }
 
-
-register_al = ( short ) status ;
+   
+ register_al = ( short ) status ;
 register_ah = 0x4Cs ;
 interrupt ( 0x21s ) ;
+  
 
-
-
-
-
-
-
-}
+   
+    
+       
+   
+  
+ }
 
 void memswp ( void * value1 , void * value2 , int valueSize ) {
 char * charValue1 = ( char * ) value1 ;
@@ -897,4 +1136,3 @@ result . quot = num / denum ;
 result . rem = num % denum ;
 return result ;
 }
-

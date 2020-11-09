@@ -6,14 +6,11 @@
 
 #define EOF -1
 
-extern int g_inStatus, g_inChars;
-extern void* g_inDevice;
-
 char scanChar(void);
 void unscanChar(char c);
 void scanString(char* string, int precision);
-long scanLongInt(void);
-unsigned long scanUnsignedLongInt(unsigned long base);
+long scanLongInt(int base);
+unsigned long scanUnsignedLongInt(int base);
 long double scanLongDouble(void);
 
 int scanf(char* format, ...);
