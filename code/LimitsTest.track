@@ -346,10 +346,10 @@ limits_test$74:	; post call
 271:	
 
 limits_test$75:	; return
-272:		mov t2501, [bp]
+272:		mov t2699, [bp]
 273:		mov di, [bp + 4]
 274:		mov bp, [bp + 2]
-275:		jmp t2501
+275:		jmp t2699
 277:	
 
 limits_test$76:	; function end limits_test

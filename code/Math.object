@@ -213,11 +213,11 @@ log$10:	; push float x
 41:		fld qword [bp + 6]
 43:	
 
-log$11:	; push float 2.7182818284590452353602874
-44:		fld qword [float8$2.7182818284590452353602874#]
+log$11:	; push float 2.71
+44:		fld qword [float8$2.71#]
 46:	
 
-log$12:	; £temporary532 = x / 2.7182818284590452353602874
+log$12:	; £temporary532 = x / 2.71
 47:		fdiv
 49:	
 
@@ -237,11 +237,11 @@ log$16:	; push float x
 59:		fld qword [bp + 6]
 61:	
 
-log$17:	; push float 0.3678794411714423215955237798
-62:		fld qword [float8$0.3678794411714423215955237798#]
+log$17:	; push float 0.3690036900369003690036900369
+62:		fld qword [float8$0.3690036900369003690036900369#]
 64:	
 
-log$18:	; if x >= 0.3678794411714423215955237798 goto 28
+log$18:	; if x >= 0.3690036900369003690036900369 goto 28
 65:		fcompp
 66:		fstsw ax
 67:		sahf
@@ -252,11 +252,11 @@ log$19:	; push float x
 71:		fld qword [bp + 6]
 73:	
 
-log$20:	; push float 0.3678794411714423215955237798
-74:		fld qword [float8$0.3678794411714423215955237798#]
+log$20:	; push float 0.3690036900369003690036900369
+74:		fld qword [float8$0.3690036900369003690036900369#]
 76:	
 
-log$21:	; if x >= 0.3678794411714423215955237798 goto 28
+log$21:	; if x >= 0.3690036900369003690036900369 goto 28
 77:		fcompp
 78:		fstsw ax
 79:		sahf
@@ -267,11 +267,11 @@ log$22:	; push float x
 83:		fld qword [bp + 6]
 85:	
 
-log$23:	; push float 2.7182818284590452353602874
-86:		fld qword [float8$2.7182818284590452353602874#]
+log$23:	; push float 2.71
+86:		fld qword [float8$2.71#]
 88:	
 
-log$24:	; £temporary536 = x * 2.7182818284590452353602874
+log$24:	; £temporary536 = x * 2.71
 89:		fmul
 91:	
 
@@ -529,11 +529,11 @@ log10$4:	; post call
 log10$5:	; £temporary550 = return_value
 19:	
 
-log10$6:	; push float 2.3025850929940456840179914
-20:		fld qword [float8$2.3025850929940456840179914#]
+log10$6:	; push float 2.30
+20:		fld qword [float8$2.30#]
 22:	
 
-log10$7:	; £temporary551 = £temporary550 / 2.3025850929940456840179914
+log10$7:	; £temporary551 = £temporary550 / 2.30
 23:		fdiv
 25:	
 

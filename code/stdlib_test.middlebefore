@@ -1,0 +1,17 @@
+0: PreCall 6
+1: Parameter pointer "hello: %u\n" 12
+2: IntegralToIntegral £temporary4308 hello
+3: Parameter unsigned int £temporary4308 14
+4: Call printf 6 2
+5: PostCall 6
+6: PreCall 6
+7: Parameter pointer hello 12
+8: Call qtest 6 0
+9: PostCall 6
+10: PreCall 6
+11: Parameter pointer "Y" 12
+12: Call printf 6 0
+13: PostCall 6
+14: Empty
+15: Return
+16: FunctionEnd stdlib_test

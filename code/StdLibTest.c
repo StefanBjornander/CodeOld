@@ -39,7 +39,45 @@ void exit_handle3x(void) {
   printf("exit3\n");
 }
 
+void hello(void) {
+//  printf("Hello");
+}
+
+void qtest(void f(void)) {
+  printf("f: %u\n", (unsigned) f);
+  f();
+}
+
 void stdlib_test(void) {
+  printf("hello: %u\n", (unsigned) hello);
+  qtest(hello);
+  printf("Y");
+}
+
+void stdlib_testZ(void) {
+  printf("X");
+  qtest(hello);
+  printf("Y");
+
+  int list[] = {3, 4, 2, 1,};
+  int size = sizeof list / sizeof list[0];
+
+  int index;
+  printf("\nA List 1: ");
+  for (index = 0; index < size; ++index) {
+    printf("%i ", *(list + index));
+  }
+
+  printf("\nB List 2: ");
+  printf("\nCompare 1: %i\n", (int) compare);
+  qsort(list, size, sizeof list[0], compare);
+  for (index = 0; index < size; ++index) {
+    printf("%i ", *(list + index));
+  }
+  printf("\n");
+}
+
+void stdlib_testX(void) {
   { char s[100], t[100], w[100];
     char *p = s, *q = t, *r = w;
 
@@ -80,7 +118,7 @@ void stdlib_test(void) {
       printf("\nA List 1: ");
       for (index = 0; index < size; ++index) {
         //printf("%i ", *(list + index));
-        printf("%i ", *(index + list));
+        printf("%i ", *(list + index));
       }
     }
 

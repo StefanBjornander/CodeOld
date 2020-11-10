@@ -539,23 +539,38 @@ void exit(int status) {
 #endif
 }
 
-void memswp(void* value1, void* value2, int valueSize) {
-  char* charValue1 = (char*)value1;
-  char* charValue2 = (char*)value2;
-
+static void memswp(char* value1, char* value2, int valueSize) {
   int index;
   for (index = 0; index < valueSize; ++index) {
-    char tempValue = charValue1[index];
-    charValue1[index] = charValue2[index];
-    charValue2[index] = tempValue;
+    char tempValue = value1[index];
+    value1[index] = value2[index];
+    value2[index] = tempValue;
   }
 }
 
 void qsort(const void* valueList, size_t listSize, size_t valueSize,
            int (*compare)(const void*, const void*)) {
-  printf("X1");
   compare(NULL, NULL);
-  printf("X2");
+  char* charList = (char*) valueList;
+
+  int size;
+  for (size = (listSize - 1); size > 0; --size)  {
+    int index;
+    for (index = 0; index < size; ++index)  {
+      char* valuePtr1 = charList + (index * valueSize);
+      char* valuePtr2 = charList + ((index + 1) * valueSize);
+
+      //printf("<%i %i>\n", (int) (*valuePtr1), (int) (*valuePtr2));
+      printf("Compare 2: %i\n", (int) compare);
+      if (compare(valuePtr1, valuePtr2) > 0) {
+        //memswp(valuePtr1, valuePtr2, valueSize);
+      }
+    }
+  }
+}
+
+void qsortX(const void* valueList, size_t listSize, size_t valueSize,
+           int (*compare)(const void*, const void*)) {
   BOOL update;
   char* charList = (char*) valueList;
 
@@ -569,8 +584,10 @@ void qsort(const void* valueList, size_t listSize, size_t valueSize,
       printf("  index2: %i\n", index2);
 
       char* valuePtr1 = charList + (index2 * valueSize);
+      printf("A");
       char* valuePtr2 = charList + ((index2 + 1) * valueSize);
 
+      printf("B");
       if (compare(valuePtr1, valuePtr2) > 0) {
         printf("C");
         memswp(valuePtr1, valuePtr2, valueSize);

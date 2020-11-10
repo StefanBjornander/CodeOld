@@ -1,15 +1,14 @@
 0: Assign g_inStatus 1
 1: Assign g_inDevice s
 2: Assign g_inChars 0
-3: PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-4: Parameter signedint base 68
-5: Call scanLongInt 44 0
-6: PostCall 44
-7: GetReturnValue £temporary1984
-8: Assign longValue £temporary1984
-9: Equal 13 endp 0
-10: Dereference £temporary1986 -> endp endp 0
-11: IntegralToIntegral £temporary1987 g_inChars
-12: BinaryAdd £temporary1986 -> endp s £temporary1987
-13: Return longValue
-14: FunctionEnd strtol
+3: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: Parameter signedint base 18
+5: Call scanLongInt 12 0
+6: PostCall 12
+7: GetReturnValue £temporary1944
+8: Assign longValue £temporary1944
+9: Equal 12 endp 0
+10: Dereference £temporary1946 -> endp endp 0
+11: BinaryAdd £temporary1946 -> endp s g_inChars
+12: Return longValue
+13: FunctionEnd strtol

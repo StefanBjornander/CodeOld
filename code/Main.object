@@ -848,8 +848,8 @@ maina$5:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Cc
 18:		mov word [bp + 18], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 20:	
 
-maina$6:	; parameter 199, offset 14
-21:		mov word [bp + 20], 199
+maina$6:	; parameter 200, offset 14
+21:		mov word [bp + 20], 200
 23:	
 
 maina$7:	; call function noellipse-ellipse fprintf, extra 0
@@ -902,8 +902,8 @@ maina$17:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5C
 60:		mov word [bp + 18], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 62:	
 
-maina$18:	; parameter 200, offset 14
-63:		mov word [bp + 20], 200
+maina$18:	; parameter 201, offset 14
+63:		mov word [bp + 20], 201
 65:	
 
 maina$19:	; call function noellipse-ellipse fprintf, extra 0
@@ -953,11 +953,11 @@ maina$25:	; function end maina
 main:	; call header integral zero 0 stack zero 0
 12:	
 
-main$1:	; call function noellipse-noellipse strtol_test
+main$1:	; call function noellipse-noellipse stdlib_test
 13:		mov word [bp + 6], main$2
 14:		mov [bp + 8], bp
 15:		add bp, 6
-16:		jmp strtol_test
+16:		jmp stdlib_test
 18:	
 
 main$2:	; post call
@@ -1775,8 +1775,8 @@ assert_test$16:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomes
 57:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 59:	
 
-assert_test$17:	; parameter 860, offset 14
-60:		mov word [bp + 22], 860
+assert_test$17:	; parameter 864, offset 14
+60:		mov word [bp + 22], 864
 62:	
 
 assert_test$18:	; call function noellipse-ellipse fprintf, extra 0
@@ -1857,8 +1857,8 @@ assert_test2$5:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomes
 18:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 20:	
 
-assert_test2$6:	; parameter 865, offset 14
-21:		mov word [bp + 22], 865
+assert_test2$6:	; parameter 869, offset 14
+21:		mov word [bp + 22], 869
 23:	
 
 assert_test2$7:	; call function noellipse-ellipse fprintf, extra 0
