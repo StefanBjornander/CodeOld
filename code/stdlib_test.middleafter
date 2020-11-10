@@ -1,16 +1,216 @@
-0: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-1: Parameter pointer "hello: %u\n" 12
-2: IntegralToIntegral £temporary4308 hello
-3: Parameter unsigned int £temporary4308 14
-4: Call printf 6 2
-5: PostCall 6
-6: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-7: Parameter pointer hello 12
-8: Call qtest 6 0
-9: PostCall 6
-10: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-11: Parameter pointer "Y" 12
-12: Call printf 6 0
-13: PostCall 6
-14: Return
-15: FunctionEnd stdlib_test
+0: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter pointer "atof("123.456") = %f\n" 14
+2: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+3: Parameter pointer "123.456" 22
+4: Call atof 16 0
+5: PostCall 16
+6: GetReturnValue £temporary4312
+7: Parameter double £temporary4312 16
+8: Call printf 8 8
+9: PostCall 8
+10: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+11: Parameter pointer "strtod("123.456789abc", &p) = (%f, %s)\n" 14
+12: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+13: Parameter pointer "123.456789abc" 22
+14: Address £temporary4314 p
+15: Parameter pointer £temporary4314 24
+16: Call strtod 16 0
+17: PostCall 16
+18: GetReturnValue £temporary4315
+19: Parameter double £temporary4315 16
+20: Parameter pointer p 24
+21: Call printf 8 10
+22: PostCall 8
+23: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+24: Parameter pointer "\ngetenv("path") = %s\n" 12
+25: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+26: Parameter pointer "path" 20
+27: Call getenv 14 0
+28: PostCall 14
+29: GetReturnValue £temporary4317
+30: Parameter pointer £temporary4317 14
+31: Call printf 6 2
+32: PostCall 6
+33: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+34: Parameter pointer "system("dir")\n" 12
+35: Call printf 6 0
+36: PostCall 6
+37: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+38: Parameter pointer "dir" 12
+39: Call system 6 0
+40: PostCall 6
+41: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+42: Parameter pointer "\nabs(-3) = %i, abs(3) = %i\n" 12
+43: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+44: Parameter signedint -3 20
+45: Call abs 14 0
+46: PostCall 14
+47: GetReturnValue £temporary4321
+48: Parameter signedint £temporary4321 14
+49: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+50: Parameter signedint 3 22
+51: Call abs 16 0
+52: PostCall 16
+53: GetReturnValue £temporary4322
+54: Parameter signedint £temporary4322 16
+55: Call printf 6 4
+56: PostCall 6
+57: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+58: Parameter pointer "labs(-3l) = %li, labs(3l) = %li\n\n" 12
+59: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+60: Parameter signed long int -3 20
+61: Call labs 14 0
+62: PostCall 14
+63: GetReturnValue £temporary4324
+64: Parameter signed long int £temporary4324 14
+65: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+66: Parameter signed long int 3 24
+67: Call labs 18 0
+68: PostCall 18
+69: GetReturnValue £temporary4325
+70: Parameter signed long int £temporary4325 18
+71: Call printf 6 8
+72: PostCall 6
+73: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+74: Parameter signedint 10 12
+75: Parameter signedint 3 14
+76: Call div 6 0
+77: PostCall 6
+78: GetReturnValue £temporary4327 -> £temporary4328
+79: AssignInitSize i £temporary4327 -> £temporary4328
+80: Assign i £temporary4327 -> £temporary4328
+81: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+82: Parameter pointer "div_t(10, 3) = (%i, %i),\n" 16
+83: Parameter signedint i.quot 18
+84: Parameter signedint i.rem 20
+85: Call printf 10 4
+86: PostCall 10
+87: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+88: ParameterInitSize struct i 16
+89: Parameter struct i 16
+90: Call print_div 10 0
+91: PostCall 10
+92: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+93: Parameter signed long int 10 12
+94: Parameter signed long int 3 16
+95: Call ldiv 6 0
+96: PostCall 6
+97: GetReturnValue £temporary4333 -> £temporary4334
+98: AssignInitSize li £temporary4333 -> £temporary4334
+99: Assign li £temporary4333 -> £temporary4334
+100: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+101: Parameter pointer "ldiv_t(10, 3) = (%li, %li)\n" 20
+102: Parameter signed long int li.quot 22
+103: Parameter signed long int li.rem 26
+104: Call printf 14 8
+105: PostCall 14
+106: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+107: ParameterInitSize struct li 20
+108: Parameter struct li 20
+109: Call print_ldiv 14 0
+110: PostCall 14
+111: Assign list[0] 3
+112: Assign list[1] 4
+113: Assign list[2] 2
+114: Assign list[3] 1
+115: Assign size 4
+116: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+117: Parameter pointer "\nA List 1: " 24
+118: Call printf 18 0
+119: PostCall 18
+120: Assign index 0
+121: SignedGreaterThanEqual 132 index size
+122: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+123: Parameter pointer "%i " 24
+124: UnsignedMultiply £temporary4348 index 2
+125: BinaryAdd £temporary4347 list £temporary4348
+126: Dereference £temporary4349 -> £temporary4347 £temporary4347 0
+127: Parameter signedint £temporary4349 -> £temporary4347 26
+128: Call printf 18 2
+129: PostCall 18
+130: BinaryAdd index index 1
+131: Goto 121
+132: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+133: Parameter pointer "\nB List 2: " 24
+134: Call printf 18 0
+135: PostCall 18
+136: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+137: Parameter pointer list 24
+138: Parameter signedint size 26
+139: Parameter signedint 2 28
+140: Parameter pointer compare 30
+141: Call qsort 18 0
+142: PostCall 18
+143: Assign index 0
+144: SignedGreaterThanEqual 155 index size
+145: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+146: Parameter pointer "%i " 24
+147: UnsignedMultiply £temporary4357 index 2
+148: BinaryAdd £temporary4356 list £temporary4357
+149: Dereference £temporary4358 -> £temporary4356 £temporary4356 0
+150: Parameter signedint £temporary4358 -> £temporary4356 26
+151: Call printf 18 2
+152: PostCall 18
+153: BinaryAdd index index 1
+154: Goto 144
+155: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+156: Parameter pointer "\nC List 3: " 24
+157: Call printf 18 0
+158: PostCall 18
+159: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+160: Parameter pointer list 24
+161: Parameter signedint size 26
+162: Parameter signedint 2 28
+163: Parameter pointer reverse_compare 30
+164: Call qsort 18 0
+165: PostCall 18
+166: Assign index 0
+167: SignedGreaterThanEqual 178 index size
+168: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+169: Parameter pointer "%i " 24
+170: UnsignedMultiply £temporary4366 index 2
+171: BinaryAdd £temporary4365 list £temporary4366
+172: Dereference £temporary4367 -> £temporary4365 £temporary4365 0
+173: Parameter signedint £temporary4367 -> £temporary4365 26
+174: Call printf 18 2
+175: PostCall 18
+176: BinaryAdd index index 1
+177: Goto 167
+178: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+179: Parameter pointer "\n\nSearch:\n" 24
+180: Call printf 18 0
+181: PostCall 18
+182: Assign key 0
+183: SignedGreaterThanEqual 210 key 6
+184: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+185: Address £temporary4372 key
+186: Parameter pointer £temporary4372 24
+187: Parameter pointer list 26
+188: Parameter signedint size 28
+189: Parameter signedint 2 30
+190: Parameter pointer compare 32
+191: Call bsearch 18 0
+192: PostCall 18
+193: GetReturnValue £temporary4374
+194: IntegralToIntegral £temporary4375 £temporary4374
+195: Assign p £temporary4375
+196: Equal 200 p 0
+197: BinarySubtract £temporary4378 p list
+198: UnsignedDivide £temporary4379 £temporary4378 2
+199: Goto 201
+200: Assign £temporary4379 -1
+201: Assign index £temporary4379
+202: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+203: Parameter pointer "  (%i, %i)\n" 28
+204: Parameter signedint key 30
+205: Parameter signedint index 32
+206: Call printf 22 4
+207: PostCall 22
+208: BinaryAdd key key 1
+209: Goto 183
+210: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+211: Parameter pointer "\n" 24
+212: Call printf 18 0
+213: PostCall 18
+214: Return
+215: FunctionEnd stdlib_test

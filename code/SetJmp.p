@@ -1,30 +1,31 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\setjmp.h,1$
-typedef void * jmp_buf [ 3 ];
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\setjmp.h,0$
+ typedef void * jmp_buf [ 3 ];
 int setjmp ( jmp_buf env ) ;
 void longjmp ( jmp_buf env , int value ) ;
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\SetJmp.c,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\SetJmp.c,0$
+       
+
+   
+       
+     
+        
+        
+        
+  
 
 
+         
+   
+     
+     
+     
+    
 
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-int setjmp ( jmp_buf buf ) {
+   
+ int setjmp ( jmp_buf buf ) {
 void ** bp_pointer = register_bp ;
 buf [ 0 ] = bp_pointer [ 0 ];
 buf [ 1 ] = bp_pointer [ 1 ];
@@ -39,5 +40,4 @@ register_di = buf [ 2 ];
 register_bp = buf [ 1 ];
 jump_register ( register_cx ) ;
 }
-
-
+  

@@ -320,10 +320,8 @@ long double scanLongDouble(void) {
     }
   }
 
-  unscanChar(input);
-
   if (tolower(input) == 'e') {
-    double exponent = (double)scanLongInt(10);
+    double exponent = (double) scanLongInt(10);
     value *= pow(10.0, exponent);
   }
   else {

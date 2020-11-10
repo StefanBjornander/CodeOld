@@ -34,12 +34,12 @@
 27:		mov word [bp + 22], string_25lf#
 29:	
 
-@35$main$6:	; £temporary4722 = &x
+@35$main$6:	; £temporary4719 = &x
 30:		mov si, bp
 31:		add si, 8
 33:	
 
-@35$main$7:	; parameter £temporary4722, offset 8
+@35$main$7:	; parameter £temporary4719, offset 8
 34:		mov [bp + 24], si
 36:	
 
@@ -72,10 +72,10 @@
 @35$main$13:	; post call
 59:	
 
-@35$main$14:	; £temporary4724 = return_value
+@35$main$14:	; £temporary4721 = return_value
 64:	
 
-@35$main$15:	; message = £temporary4724
+@35$main$15:	; message = £temporary4721
 65:		mov [bp + 6], bx
 67:	
 
@@ -120,10 +120,10 @@
 @35$main$25:	; post call
 98:	
 
-@35$main$26:	; £temporary4726 = return_value
+@35$main$26:	; £temporary4723 = return_value
 100:	
 
-@35$main$27:	; parameter £temporary4726, offset 16
+@35$main$27:	; parameter £temporary4723, offset 16
 101:		fstp qword [bp + 32]
 103:	
 
@@ -206,10 +206,10 @@ inverse$5:	; call function noellipse-noellipse divide
 inverse$6:	; post call
 23:	
 
-inverse$7:	; £temporary4740 = return_value
+inverse$7:	; £temporary4737 = return_value
 25:	
 
-inverse$8:	; return_value = £temporary4740
+inverse$8:	; return_value = £temporary4737
 27:	
 
 inverse$9:	; return
@@ -245,11 +245,11 @@ divide$4:	; push float y
 17:		fld qword [bp + 14]
 19:	
 
-divide$5:	; £temporary4744 = x / y
+divide$5:	; £temporary4741 = x / y
 20:		fdiv
 22:	
 
-divide$6:	; return_value = £temporary4744
+divide$6:	; return_value = £temporary4741
 24:	
 
 divide$7:	; return

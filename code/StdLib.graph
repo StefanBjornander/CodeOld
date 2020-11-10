@@ -12,9 +12,9 @@ strtol
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1576 a1576 endp 38 43,a1577 a1577 s 41 42 43)>
+  (a1575 a1575 endp 38 43,a1576 a1576 s 41 42 43)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1576 a1576 endp si 38 43,a1577 a1577 s ax 41 42 43)>
+  (a1575 a1575 endp si 38 43,a1576 a1576 s ax 41 42 43)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
@@ -151,9 +151,9 @@ strtoul
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1711 a1711 endp 38 43,a1712 a1712 s 41 42 43)>
+  (a1710 a1710 endp 38 43,a1711 a1711 s 41 42 43)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1711 a1711 endp si 38 43,a1712 a1712 s ax 41 42 43)>
+  (a1710 a1710 endp si 38 43,a1711 a1711 s ax 41 42 43)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
@@ -293,9 +293,9 @@ strtod
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1847 a1847 endp 48 53,a1848 a1848 s 51 52 53)>
+  (a1846 a1846 endp 48 53,a1847 a1847 s 51 52 53)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1847 a1847 endp si 48 53,a1848 a1848 s ax 51 52 53)>
+  (a1846 a1846 endp si 48 53,a1847 a1847 s ax 51 52 53)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 abort
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
@@ -311,53 +311,25 @@ bsearch
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1860 a1860 valueList 23 37 38,a1861 a1861 firstIndex ax 27 28)
-  (a1860 a1860 valueList 23 37 38,t1862 t1862 £temporary3305 ax 31)
-  (a1860 a1860 valueList 23 37 38,t1863 t1863 £temporary3305 dx 30)
-  (a1860 a1860 valueList 23 37 38,t1864 t1864 £temporary3305 ax 34 37)>
+  (a1859 a1859 valueList 23 37 38,a1860 a1860 firstIndex ax 27 28)
+  (a1859 a1859 valueList 23 37 38,t1861 t1861 £temporary3303 ax 31)
+  (a1859 a1859 valueList 23 37 38,t1862 t1862 £temporary3303 dx 30)
+  (a1859 a1859 valueList 23 37 38,t1863 t1863 £temporary3303 ax 34 37)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1860 a1860 valueList bx 23 37 38,a1861 a1861 firstIndex ax 27 28)
-  (a1860 a1860 valueList bx 23 37 38,t1862 t1862 £temporary3305 ax 31)
-  (a1860 a1860 valueList bx 23 37 38,t1863 t1863 £temporary3305 dx 30)
-  (a1860 a1860 valueList bx 23 37 38,t1864 t1864 £temporary3305 ax 34 37)>
+  (a1859 a1859 valueList bx 23 37 38,a1860 a1860 firstIndex ax 27 28)
+  (a1859 a1859 valueList bx 23 37 38,t1861 t1861 £temporary3303 ax 31)
+  (a1859 a1859 valueList bx 23 37 38,t1862 t1862 £temporary3303 dx 30)
+  (a1859 a1859 valueList bx 23 37 38,t1863 t1863 £temporary3303 ax 34 37)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1860 a1860 valueList bx 23 37 38,a1861 a1861 firstIndex ax 27 28)
-  (a1860 a1860 valueList bx 23 37 38,t1862 t1862 £temporary3305 ax 31)
-  (a1860 a1860 valueList bx 23 37 38,t1863 t1863 £temporary3305 dx 30)
-  (a1860 a1860 valueList bx 23 37 38,t1864 t1864 £temporary3305 ax 34 37)>
+  (a1859 a1859 valueList bx 23 37 38,a1860 a1860 firstIndex ax 27 28)
+  (a1859 a1859 valueList bx 23 37 38,t1861 t1861 £temporary3303 ax 31)
+  (a1859 a1859 valueList bx 23 37 38,t1862 t1862 £temporary3303 dx 30)
+  (a1859 a1859 valueList bx 23 37 38,t1863 t1863 £temporary3303 ax 34 37)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1860 a1860 valueList bx 23 37 38,a1861 a1861 firstIndex ax 27 28)
-  (a1860 a1860 valueList bx 23 37 38,t1862 t1862 £temporary3305 ax 31)
-  (a1860 a1860 valueList bx 23 37 38,t1863 t1863 £temporary3305 dx 30)
-  (a1860 a1860 valueList bx 23 37 38,t1864 t1864 £temporary3305 ax 34 37)>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1874 a1874 valueList 94 108 109,a1875 a1875 lastIndex ax 98 99)
-  (a1874 a1874 valueList 94 108 109,t1876 t1876 £temporary3311 ax 102)
-  (a1874 a1874 valueList 94 108 109,t1877 t1877 £temporary3311 dx 101)
-  (a1874 a1874 valueList 94 108 109,t1878 t1878 £temporary3311 ax 105 108)>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1874 a1874 valueList bx 94 108 109,a1875 a1875 lastIndex ax 98 99)
-  (a1874 a1874 valueList bx 94 108 109,t1876 t1876 £temporary3311 ax 102)
-  (a1874 a1874 valueList bx 94 108 109,t1877 t1877 £temporary3311 dx 101)
-  (a1874 a1874 valueList bx 94 108 109,t1878 t1878 £temporary3311 ax 105 108)>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1874 a1874 valueList bx 94 108 109,a1875 a1875 lastIndex ax 98 99)
-  (a1874 a1874 valueList bx 94 108 109,t1876 t1876 £temporary3311 ax 102)
-  (a1874 a1874 valueList bx 94 108 109,t1877 t1877 £temporary3311 dx 101)
-  (a1874 a1874 valueList bx 94 108 109,t1878 t1878 £temporary3311 ax 105 108)>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1874 a1874 valueList bx 94 108 109,a1875 a1875 lastIndex ax 98 99)
-  (a1874 a1874 valueList bx 94 108 109,t1876 t1876 £temporary3311 ax 102)
-  (a1874 a1874 valueList bx 94 108 109,t1877 t1877 £temporary3311 dx 101)
-  (a1874 a1874 valueList bx 94 108 109,t1878 t1878 £temporary3311 ax 105 108)>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+  (a1859 a1859 valueList bx 23 37 38,a1860 a1860 firstIndex ax 27 28)
+  (a1859 a1859 valueList bx 23 37 38,t1861 t1861 £temporary3303 ax 31)
+  (a1859 a1859 valueList bx 23 37 38,t1862 t1862 £temporary3303 dx 30)
+  (a1859 a1859 valueList bx 23 37 38,t1863 t1863 £temporary3303 ax 34 37)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
@@ -365,25 +337,25 @@ bsearch
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1891 a1891 valueList 175 189 190,a1892 a1892 middleIndex ax 179 180)
-  (a1891 a1891 valueList 175 189 190,t1893 t1893 £temporary3319 ax 183)
-  (a1891 a1891 valueList 175 189 190,t1894 t1894 £temporary3319 dx 182)
-  (a1891 a1891 valueList 175 189 190,t1895 t1895 £temporary3319 ax 186 189)>
+  (a1873 a1873 valueList 94 108 109,a1874 a1874 lastIndex ax 98 99)
+  (a1873 a1873 valueList 94 108 109,t1875 t1875 £temporary3309 ax 102)
+  (a1873 a1873 valueList 94 108 109,t1876 t1876 £temporary3309 dx 101)
+  (a1873 a1873 valueList 94 108 109,t1877 t1877 £temporary3309 ax 105 108)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1891 a1891 valueList bx 175 189 190,a1892 a1892 middleIndex ax 179 180)
-  (a1891 a1891 valueList bx 175 189 190,t1893 t1893 £temporary3319 ax 183)
-  (a1891 a1891 valueList bx 175 189 190,t1894 t1894 £temporary3319 dx 182)
-  (a1891 a1891 valueList bx 175 189 190,t1895 t1895 £temporary3319 ax 186 189)>
+  (a1873 a1873 valueList bx 94 108 109,a1874 a1874 lastIndex ax 98 99)
+  (a1873 a1873 valueList bx 94 108 109,t1875 t1875 £temporary3309 ax 102)
+  (a1873 a1873 valueList bx 94 108 109,t1876 t1876 £temporary3309 dx 101)
+  (a1873 a1873 valueList bx 94 108 109,t1877 t1877 £temporary3309 ax 105 108)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1891 a1891 valueList bx 175 189 190,a1892 a1892 middleIndex ax 179 180)
-  (a1891 a1891 valueList bx 175 189 190,t1893 t1893 £temporary3319 ax 183)
-  (a1891 a1891 valueList bx 175 189 190,t1894 t1894 £temporary3319 dx 182)
-  (a1891 a1891 valueList bx 175 189 190,t1895 t1895 £temporary3319 ax 186 189)>
+  (a1873 a1873 valueList bx 94 108 109,a1874 a1874 lastIndex ax 98 99)
+  (a1873 a1873 valueList bx 94 108 109,t1875 t1875 £temporary3309 ax 102)
+  (a1873 a1873 valueList bx 94 108 109,t1876 t1876 £temporary3309 dx 101)
+  (a1873 a1873 valueList bx 94 108 109,t1877 t1877 £temporary3309 ax 105 108)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1891 a1891 valueList bx 175 189 190,a1892 a1892 middleIndex ax 179 180)
-  (a1891 a1891 valueList bx 175 189 190,t1893 t1893 £temporary3319 ax 183)
-  (a1891 a1891 valueList bx 175 189 190,t1894 t1894 £temporary3319 dx 182)
-  (a1891 a1891 valueList bx 175 189 190,t1895 t1895 £temporary3319 ax 186 189)>
+  (a1873 a1873 valueList bx 94 108 109,a1874 a1874 lastIndex ax 98 99)
+  (a1873 a1873 valueList bx 94 108 109,t1875 t1875 £temporary3309 ax 102)
+  (a1873 a1873 valueList bx 94 108 109,t1876 t1876 £temporary3309 dx 101)
+  (a1873 a1873 valueList bx 94 108 109,t1877 t1877 £temporary3309 ax 105 108)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
@@ -393,26 +365,54 @@ bsearch
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1860 a1860 valueList bx 23 37 38,a1861 a1861 firstIndex ax 27 28)
-  (a1860 a1860 valueList bx 23 37 38,t1862 t1862 £temporary3305 ax 31)
-  (a1860 a1860 valueList bx 23 37 38,t1863 t1863 £temporary3305 dx 30)
-  (a1860 a1860 valueList bx 23 37 38,t1864 t1864 £temporary3305 ax 34 37)>
+  (a1890 a1890 valueList 175 189 190,a1891 a1891 middleIndex ax 179 180)
+  (a1890 a1890 valueList 175 189 190,t1892 t1892 £temporary3317 ax 183)
+  (a1890 a1890 valueList 175 189 190,t1893 t1893 £temporary3317 dx 182)
+  (a1890 a1890 valueList 175 189 190,t1894 t1894 £temporary3317 ax 186 189)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a1890 a1890 valueList bx 175 189 190,a1891 a1891 middleIndex ax 179 180)
+  (a1890 a1890 valueList bx 175 189 190,t1892 t1892 £temporary3317 ax 183)
+  (a1890 a1890 valueList bx 175 189 190,t1893 t1893 £temporary3317 dx 182)
+  (a1890 a1890 valueList bx 175 189 190,t1894 t1894 £temporary3317 ax 186 189)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a1890 a1890 valueList bx 175 189 190,a1891 a1891 middleIndex ax 179 180)
+  (a1890 a1890 valueList bx 175 189 190,t1892 t1892 £temporary3317 ax 183)
+  (a1890 a1890 valueList bx 175 189 190,t1893 t1893 £temporary3317 dx 182)
+  (a1890 a1890 valueList bx 175 189 190,t1894 t1894 £temporary3317 ax 186 189)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a1890 a1890 valueList bx 175 189 190,a1891 a1891 middleIndex ax 179 180)
+  (a1890 a1890 valueList bx 175 189 190,t1892 t1892 £temporary3317 ax 183)
+  (a1890 a1890 valueList bx 175 189 190,t1893 t1893 £temporary3317 dx 182)
+  (a1890 a1890 valueList bx 175 189 190,t1894 t1894 £temporary3317 ax 186 189)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1874 a1874 valueList bx 94 108 109,a1875 a1875 lastIndex ax 98 99)
-  (a1874 a1874 valueList bx 94 108 109,t1876 t1876 £temporary3311 ax 102)
-  (a1874 a1874 valueList bx 94 108 109,t1877 t1877 £temporary3311 dx 101)
-  (a1874 a1874 valueList bx 94 108 109,t1878 t1878 £temporary3311 ax 105 108)>
+  (a1859 a1859 valueList bx 23 37 38,a1860 a1860 firstIndex ax 27 28)
+  (a1859 a1859 valueList bx 23 37 38,t1861 t1861 £temporary3303 ax 31)
+  (a1859 a1859 valueList bx 23 37 38,t1862 t1862 £temporary3303 dx 30)
+  (a1859 a1859 valueList bx 23 37 38,t1863 t1863 £temporary3303 ax 34 37)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1891 a1891 valueList bx 175 189 190,a1892 a1892 middleIndex ax 179 180)
-  (a1891 a1891 valueList bx 175 189 190,t1893 t1893 £temporary3319 ax 183)
-  (a1891 a1891 valueList bx 175 189 190,t1894 t1894 £temporary3319 dx 182)
-  (a1891 a1891 valueList bx 175 189 190,t1895 t1895 £temporary3319 ax 186 189)>
+  (a1873 a1873 valueList bx 94 108 109,a1874 a1874 lastIndex ax 98 99)
+  (a1873 a1873 valueList bx 94 108 109,t1875 t1875 £temporary3309 ax 102)
+  (a1873 a1873 valueList bx 94 108 109,t1876 t1876 £temporary3309 dx 101)
+  (a1873 a1873 valueList bx 94 108 109,t1877 t1877 £temporary3309 ax 105 108)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a1890 a1890 valueList bx 175 189 190,a1891 a1891 middleIndex ax 179 180)
+  (a1890 a1890 valueList bx 175 189 190,t1892 t1892 £temporary3317 ax 183)
+  (a1890 a1890 valueList bx 175 189 190,t1893 t1893 £temporary3317 dx 182)
+  (a1890 a1890 valueList bx 175 189 190,t1894 t1894 £temporary3317 ax 186 189)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 rand
@@ -431,23 +431,23 @@ atexit
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1918 a1918 g_funcArray 19 20 25,t1917 t1917 £temporary3339 ax 16 20)>
+  (a1917 a1917 g_funcArray 19 20 25,t1916 t1916 £temporary3337 ax 16 20)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1923 a1923 g_funcArray 39 40 46,a1924 a1924 fcn 45 46)
-  (a1923 a1923 g_funcArray 39 40 46,t1922 t1922 £temporary3343 ax 36 40)>
+  (a1922 a1922 g_funcArray 39 40 46,a1923 a1923 fcn 45 46)
+  (a1922 a1922 g_funcArray 39 40 46,t1921 t1921 £temporary3341 ax 36 40)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1923 a1923 g_funcArray si 39 40 46,a1924 a1924 fcn ax 45 46)
-  (a1923 a1923 g_funcArray si 39 40 46,t1922 t1922 £temporary3343 ax 36 40)>
+  (a1922 a1922 g_funcArray si 39 40 46,a1923 a1923 fcn ax 45 46)
+  (a1922 a1922 g_funcArray si 39 40 46,t1921 t1921 £temporary3341 ax 36 40)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1918 a1918 g_funcArray si 19 20 25,t1917 t1917 £temporary3339 ax 16 20)>
+  (a1917 a1917 g_funcArray si 19 20 25,t1916 t1916 £temporary3337 ax 16 20)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1923 a1923 g_funcArray si 39 40 46,a1924 a1924 fcn ax 45 46)
-  (a1923 a1923 g_funcArray si 39 40 46,t1922 t1922 £temporary3343 ax 36 40)>
+  (a1922 a1922 g_funcArray si 39 40 46,a1923 a1923 fcn ax 45 46)
+  (a1922 a1922 g_funcArray si 39 40 46,t1921 t1921 £temporary3341 ax 36 40)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 exit
@@ -455,47 +455,47 @@ exit
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1933 a1933 g_funcArray 19 20 25,t1932 t1932 £temporary3348 ax 16 20)>
+  (a1932 a1932 g_funcArray 19 20 25,t1931 t1931 £temporary3346 ax 16 20)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1938 a1938 g_funcArray 39 40 43,t1939 t1939 £temporary3351 43 44)
-  (a1938 a1938 g_funcArray 39 40 43,t1937 t1937 £temporary3352 ax 36 40)>
+  (a1937 a1937 g_funcArray 39 40 43,t1938 t1938 £temporary3349 43 44)
+  (a1937 a1937 g_funcArray 39 40 43,t1936 t1936 £temporary3350 ax 36 40)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1938 a1938 g_funcArray si 39 40 43,t1939 t1939 £temporary3351 ax 43 44)
-  (a1938 a1938 g_funcArray si 39 40 43,t1937 t1937 £temporary3352 ax 36 40)>
+  (a1937 a1937 g_funcArray si 39 40 43,t1938 t1938 £temporary3349 ax 43 44)
+  (a1937 a1937 g_funcArray si 39 40 43,t1936 t1936 £temporary3350 ax 36 40)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1933 a1933 g_funcArray si 19 20 25,t1932 t1932 £temporary3348 ax 16 20)>
+  (a1932 a1932 g_funcArray si 19 20 25,t1931 t1931 £temporary3346 ax 16 20)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1938 a1938 g_funcArray si 39 40 43,t1939 t1939 £temporary3351 ax 43 44)
-  (a1938 a1938 g_funcArray si 39 40 43,t1937 t1937 £temporary3352 ax 36 40)>
+  (a1937 a1937 g_funcArray si 39 40 43,t1938 t1938 £temporary3349 ax 43 44)
+  (a1937 a1937 g_funcArray si 39 40 43,t1936 t1936 £temporary3350 ax 36 40)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
-memswp
+memswap
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1945 a1945 value1 10 11 16,t1946 t1946 £temporary3360 16 17)>
+  (a1944 a1944 value1 10 11 16,t1945 t1945 £temporary3358 16 17)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1945 a1945 value1 si 10 11 16,t1946 t1946 £temporary3360 al 16 17)>
+  (a1944 a1944 value1 si 10 11 16,t1945 t1945 £temporary3358 al 16 17)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1947 a1947 value1 20 21 33,a1948 a1948 value2 26 27 32)
-  (a1947 a1947 value1 20 21 33,t1949 t1949 £temporary3364 32 33)
-  (a1948 a1948 value2 26 27 32,t1949 t1949 £temporary3364 32 33)>
+  (a1946 a1946 value1 20 21 33,a1947 a1947 value2 26 27 32)
+  (a1946 a1946 value1 20 21 33,t1948 t1948 £temporary3362 32 33)
+  (a1947 a1947 value2 26 27 32,t1948 t1948 £temporary3362 32 33)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1947 a1947 value1 si 20 21 33,a1948 a1948 value2 di 26 27 32)
-  (a1947 a1947 value1 si 20 21 33,t1949 t1949 £temporary3364 al 32 33)
-  (a1948 a1948 value2 di 26 27 32,t1949 t1949 £temporary3364 al 32 33)>
+  (a1946 a1946 value1 si 20 21 33,a1947 a1947 value2 di 26 27 32)
+  (a1946 a1946 value1 si 20 21 33,t1948 t1948 £temporary3362 al 32 33)
+  (a1947 a1947 value2 di 26 27 32,t1948 t1948 £temporary3362 al 32 33)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1947 a1947 value1 si 20 21 33,a1948 a1948 value2 di 26 27 32)
-  (a1947 a1947 value1 si 20 21 33,t1949 t1949 £temporary3364 al 32 33)
-  (a1948 a1948 value2 di 26 27 32,t1949 t1949 £temporary3364 al 32 33)>
+  (a1946 a1946 value1 si 20 21 33,a1947 a1947 value2 di 26 27 32)
+  (a1946 a1946 value1 si 20 21 33,t1948 t1948 £temporary3362 al 32 33)
+  (a1947 a1947 value2 di 26 27 32,t1948 t1948 £temporary3362 al 32 33)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1950 a1950 value2 36 37 43,a1951 a1951 tempValue 42 43)>
+  (a1949 a1949 value2 36 37 43,a1950 a1950 tempValue 42 43)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1950 a1950 value2 si 36 37 43,a1951 a1951 tempValue al 42 43)>
+  (a1949 a1949 value2 si 36 37 43,a1950 a1950 tempValue al 42 43)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 qsort
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
@@ -504,23 +504,25 @@ qsort
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1961 a1961 charList 53 54 55,t1960 t1960 £temporary3375 ax 50 54)>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1966 a1966 charList 71 72 73,t1965 t1965 £temporary3378 ax 68 72)>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+  (a1959 a1959 charList 39 40 41,t1958 t1958 £temporary3372 ax 36 40)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1961 a1961 charList bx 53 54 55,t1960 t1960 £temporary3375 ax 50 54)>
+  (a1964 a1964 charList 57 58 59,t1963 t1963 £temporary3375 ax 54 58)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1966 a1966 charList bx 71 72 73,t1965 t1965 £temporary3378 ax 68 72)>
+  (a1959 a1959 charList bx 39 40 41,t1958 t1958 £temporary3372 ax 36 40)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a1964 a1964 charList bx 57 58 59,t1963 t1963 £temporary3375 ax 54 58)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 qsortX
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
@@ -532,12 +534,12 @@ qsortX
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1983 a1983 charList 77 78 79,t1982 t1982 £temporary3398 ax 74 78)>
+  (a1983 a1983 charList 77 78 79,t1982 t1982 £temporary3395 ax 74 78)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1988 a1988 charList 109 110 111,t1987 t1987 £temporary3402 ax 106 110)>
+  (a1988 a1988 charList 109 110 111,t1987 t1987 £temporary3399 ax 106 110)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
@@ -546,29 +548,29 @@ qsortX
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1983 a1983 charList bx 77 78 79,t1982 t1982 £temporary3398 ax 74 78)>
+  (a1983 a1983 charList bx 77 78 79,t1982 t1982 £temporary3395 ax 74 78)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1988 a1988 charList bx 109 110 111,t1987 t1987 £temporary3402 ax 106 110)>
+  (a1988 a1988 charList bx 109 110 111,t1987 t1987 £temporary3399 ax 106 110)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 swap
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1999 a1999 leftValuePtr 10 11 16,t2000 t2000 £temporary3435 16 17)>
+  (a1999 a1999 leftValuePtr 10 11 16,t2000 t2000 £temporary3432 16 17)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a1999 a1999 leftValuePtr si 10 11 16,t2000 t2000 £temporary3435 al 16 17)>
+  (a1999 a1999 leftValuePtr si 10 11 16,t2000 t2000 £temporary3432 al 16 17)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
   (a2001 a2001 leftValuePtr 20 21 33,a2002 a2002 rightValuePtr 26 27 32)
-  (a2001 a2001 leftValuePtr 20 21 33,t2003 t2003 £temporary3439 32 33)
-  (a2002 a2002 rightValuePtr 26 27 32,t2003 t2003 £temporary3439 32 33)>
+  (a2001 a2001 leftValuePtr 20 21 33,t2003 t2003 £temporary3436 32 33)
+  (a2002 a2002 rightValuePtr 26 27 32,t2003 t2003 £temporary3436 32 33)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
   (a2001 a2001 leftValuePtr si 20 21 33,a2002 a2002 rightValuePtr di 26 27 32)
-  (a2001 a2001 leftValuePtr si 20 21 33,t2003 t2003 £temporary3439 al 32 33)
-  (a2002 a2002 rightValuePtr di 26 27 32,t2003 t2003 £temporary3439 al 32 33)>
+  (a2001 a2001 leftValuePtr si 20 21 33,t2003 t2003 £temporary3436 al 32 33)
+  (a2002 a2002 rightValuePtr di 26 27 32,t2003 t2003 £temporary3436 al 32 33)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
   (a2001 a2001 leftValuePtr si 20 21 33,a2002 a2002 rightValuePtr di 26 27 32)
-  (a2001 a2001 leftValuePtr si 20 21 33,t2003 t2003 £temporary3439 al 32 33)
-  (a2002 a2002 rightValuePtr di 26 27 32,t2003 t2003 £temporary3439 al 32 33)>
+  (a2001 a2001 leftValuePtr si 20 21 33,t2003 t2003 £temporary3436 al 32 33)
+  (a2002 a2002 rightValuePtr di 26 27 32,t2003 t2003 £temporary3436 al 32 33)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
   (a2004 a2004 rightValuePtr 36 37 43,a2005 a2005 tempValue 42 43)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]

@@ -539,7 +539,7 @@ void exit(int status) {
 #endif
 }
 
-static void memswp(char* value1, char* value2, int valueSize) {
+static void memswap(char* value1, char* value2, int valueSize) {
   int index;
   for (index = 0; index < valueSize; ++index) {
     char tempValue = value1[index];
@@ -548,23 +548,26 @@ static void memswp(char* value1, char* value2, int valueSize) {
   }
 }
 
-void qsort(const void* valueList, size_t listSize, size_t valueSize,
+void qsort(void* valueList, size_t listSize, size_t valueSize,
            int (*compare)(const void*, const void*)) {
-  compare(NULL, NULL);
   char* charList = (char*) valueList;
 
   int size;
   for (size = (listSize - 1); size > 0; --size)  {
+    BOOL update = FALSE;
     int index;
     for (index = 0; index < size; ++index)  {
       char* valuePtr1 = charList + (index * valueSize);
       char* valuePtr2 = charList + ((index + 1) * valueSize);
 
-      //printf("<%i %i>\n", (int) (*valuePtr1), (int) (*valuePtr2));
-      printf("Compare 2: %i\n", (int) compare);
       if (compare(valuePtr1, valuePtr2) > 0) {
-        //memswp(valuePtr1, valuePtr2, valueSize);
+        memswap(valuePtr1, valuePtr2, valueSize);
+        update = TRUE;
       }
+    }
+
+    if (!update) {
+      break;
     }
   }
 }
@@ -590,7 +593,7 @@ void qsortX(const void* valueList, size_t listSize, size_t valueSize,
       printf("B");
       if (compare(valuePtr1, valuePtr2) > 0) {
         printf("C");
-        memswp(valuePtr1, valuePtr2, valueSize);
+        memswap(valuePtr1, valuePtr2, valueSize);
         printf("D");
         update = TRUE;
         printf("E");
