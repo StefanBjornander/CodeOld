@@ -1,26 +1,33 @@
 	global atoi
 	global atol
 	global strtol
+	global strtol_test
 	global strtoul
+	global strtoul_test
 	global atof
 	global strtod
 	global abort
 	global getenv
 	global system
-	global memswp
 	global bsearch
 	global rand
 	global srand
 	global g_funcArray
 	global atexit
 	global exit
-	global swap
 	global qsort
+	global qsortX
 	global @abs
 	global labs
 	global div
 	global ldiv
 
+	extern g_inStatus
+	extern g_inDevice
+	extern g_inChars
+	extern scanLongInt
+	extern printf
+	extern scanUnsignedLongInt
 	extern sscanf
 	extern errno
 	extern $StackTop
@@ -55,17 +62,17 @@ section .text
 	; PostCall 32
 
  atoi$6:
-	; GetReturnValue £temporary1943
+	; GetReturnValue £temporary1980
 
  atoi$7:
-	; IntegralToIntegral £temporary1944 £temporary1943
+	; IntegralToIntegral £temporary1981 £temporary1980
 	cmp rbx, 0
 	jge atoi$8
 	neg rbx
 	neg ebx
 
  atoi$8:
-	; Return £temporary1944
+	; Return £temporary1981
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -103,10 +110,10 @@ section .text
 	; PostCall 32
 
  atol$6:
-	; GetReturnValue £temporary1945
+	; GetReturnValue £temporary1982
 
  atol$7:
-	; Return £temporary1945
+	; Return £temporary1982
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -115,185 +122,4855 @@ section .text
  atol$8:
 	; FunctionEnd atol
 
-section .data
-
-string_25li25n#:
-	; Initializer String %li%n
-	db "%li%n", 0
-
 section .text
 
  strtol:
-	; Assign chars 0
-	mov dword [rbp + 44], 0
+	; Assign g_inStatus 1
+	mov dword [g_inStatus], 1
 
  strtol$1:
-	; Assign value 0
-	mov qword [rbp + 48], 0
+	; Assign g_inDevice s
+	mov rax, [rbp + 24]
+	mov [g_inDevice], rax
 
  strtol$2:
-	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Assign g_inChars 0
+	mov dword [g_inChars], 0
 
  strtol$3:
-	; Parameter pointer s 80
-	mov rax, [rbp + 24]
-	mov [rbp + 80], rax
+	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol$4:
-	; Parameter pointer "%li%n" 88
-	mov qword [rbp + 88], string_25li25n#
+	; Parameter signedint base 68
+	mov eax, [rbp + 40]
+	mov [rbp + 68], eax
 
  strtol$5:
-	; Address £temporary1946 value
-	mov rsi, rbp
-	add rsi, 48
+	; Call scanLongInt 44 0
+	mov qword [rbp + 44], strtol$6
+	mov [rbp + 52], rbp
+	add rbp, 44
+	jmp scanLongInt
 
  strtol$6:
-	; Parameter pointer £temporary1946 96
-	mov [rbp + 96], rsi
+	; PostCall 44
 
  strtol$7:
-	; Address £temporary1947 chars
-	mov rsi, rbp
-	add rsi, 44
+	; GetReturnValue £temporary1983
 
  strtol$8:
-	; Parameter pointer £temporary1947 104
-	mov [rbp + 104], rsi
+	; Assign longValue £temporary1983
+	mov [rbp + 44], rbx
 
  strtol$9:
-	; Call sscanf 56 16
-	mov qword [rbp + 56], strtol$10
-	mov [rbp + 64], rbp
-	add rbp, 56
-	mov rdi, rbp
-	add rdi, 16
-	jmp sscanf
+	; Equal 13 endp 0
+	cmp qword [rbp + 32], 0
+	je strtol$13
 
  strtol$10:
-	; PostCall 56
-
- strtol$11:
-	; Equal 15 endp 0
-	cmp qword [rbp + 32], 0
-	je strtol$15
-
- strtol$12:
-	; Dereference £temporary1950 -> endp endp 0
+	; Dereference £temporary1985 -> endp endp 0
 	mov rsi, [rbp + 32]
 
- strtol$13:
-	; IntegralToIntegral £temporary1951 chars
-	mov eax, [rbp + 44]
+ strtol$11:
+	; IntegralToIntegral £temporary1986 g_inChars
+	mov eax, [g_inChars]
 	mov rbx, 4294967295
 	and rax, rbx
 
- strtol$14:
-	; BinaryAdd £temporary1950 -> endp s £temporary1951
+ strtol$12:
+	; BinaryAdd £temporary1985 -> endp s £temporary1986
 	mov rbx, [rbp + 24]
 	add rbx, rax
 	mov [rsi], rbx
 
- strtol$15:
-	; Return value
-	mov rbx, [rbp + 48]
+ strtol$13:
+	; Return longValue
+	mov rbx, [rbp + 44]
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strtol$16:
+ strtol$14:
 	; FunctionEnd strtol
 
 section .data
 
-string_25lu25n#:
-	; Initializer String %lu%n
-	db "%lu%n", 0
+string_2020202B123abc#:
+	; Initializer String    +123abc
+	db "   +123abc", 0
+
+section .data
+
+string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+	; Initializer String <%s> <%li> <%s> <%i>\n
+	db "<%s> <%li> <%s> <%i>", 10, 0
+
+section .data
+
+string_2020202B0123abc#:
+	; Initializer String    +0123abc
+	db "   +0123abc", 0
+
+section .data
+
+string_2020202B0x123ABC#:
+	; Initializer String    +0x123ABC
+	db "   +0x123ABC", 0
+
+section .data
+
+string_2020202B0X123abc#:
+	; Initializer String    +0X123abc
+	db "   +0X123abc", 0
+
+section .data
+
+string_2020202D123abc#:
+	; Initializer String    -123abc
+	db "   -123abc", 0
+
+section .data
+
+string_2020202D0123abc#:
+	; Initializer String    -0123abc
+	db "   -0123abc", 0
+
+section .data
+
+string_2020202D0x123ABC#:
+	; Initializer String    -0x123ABC
+	db "   -0x123ABC", 0
+
+section .data
+
+string_2020202D0X123abc#:
+	; Initializer String    -0X123abc
+	db "   -0X123abc", 0
+
+section .data
+
+string_2020202B123ABC#:
+	; Initializer String    +123ABC
+	db "   +123ABC", 0
+
+section .data
+
+string_2020202D123ABC#:
+	; Initializer String    -123ABC
+	db "   -123ABC", 0
 
 section .text
 
- strtoul:
-	; Assign chars 0
-	mov dword [rbp + 44], 0
+ strtol_test:
+	; Assign base 0
+	mov dword [rbp + 24], 0
 
- strtoul$1:
-	; Assign value 0
-	mov qword [rbp + 48], 0
+ strtol_test$1:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
 
- strtoul$2:
+ strtol_test$2:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$3:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$4:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtol_test$5:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtol_test$6:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtol_test$7:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtol_test$8:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtol_test$9:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtol_test$10:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtol_test$11:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtol_test$12:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$13:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtol_test$14:
+	; Address £temporary2000 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtol_test$15:
+	; Parameter pointer £temporary2000 79
+	mov [rbp + 79], rsi
+
+ strtol_test$16:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtol_test$17:
+	; Call strtol 47 0
+	mov qword [rbp + 47], strtol_test$18
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtol
+
+ strtol_test$18:
+	; PostCall 47
+
+ strtol_test$19:
+	; GetReturnValue £temporary2001
+
+ strtol_test$20:
+	; Assign value £temporary2001
+	mov [rbp + 47], rbx
+
+ strtol_test$21:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$22:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$23:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtol_test$24:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtol_test$25:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtol_test$26:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtol_test$27:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtol_test$28
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$28:
+	; PostCall 55
+
+ strtol_test$29:
+	; Assign base 0
+	mov dword [rbp + 24], 0
+
+ strtol_test$30:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtol_test$31:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$32:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$33:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtol_test$34:
+	; Assign text[4] 48
+	mov byte [rbp + 32], 48
+
+ strtol_test$35:
+	; Assign text[5] 49
+	mov byte [rbp + 33], 49
+
+ strtol_test$36:
+	; Assign text[6] 50
+	mov byte [rbp + 34], 50
+
+ strtol_test$37:
+	; Assign text[7] 51
+	mov byte [rbp + 35], 51
+
+ strtol_test$38:
+	; Assign text[8] 97
+	mov byte [rbp + 36], 97
+
+ strtol_test$39:
+	; Assign text[9] 98
+	mov byte [rbp + 37], 98
+
+ strtol_test$40:
+	; Assign text[10] 99
+	mov byte [rbp + 38], 99
+
+ strtol_test$41:
+	; Assign text[11] 0
+	mov byte [rbp + 39], 0
+
+ strtol_test$42:
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$43:
+	; Parameter pointer text 72
+	mov [rbp + 72], rbp
+	add qword [rbp + 72], 28
+
+ strtol_test$44:
+	; Address £temporary2015 pointer
+	mov rsi, rbp
+	add rsi, 40
+
+ strtol_test$45:
+	; Parameter pointer £temporary2015 80
+	mov [rbp + 80], rsi
+
+ strtol_test$46:
+	; Parameter signedint base 88
+	mov eax, [rbp + 24]
+	mov [rbp + 88], eax
+
+ strtol_test$47:
+	; Call strtol 48 0
+	mov qword [rbp + 48], strtol_test$48
+	mov [rbp + 56], rbp
+	add rbp, 48
+	jmp strtol
+
+ strtol_test$48:
+	; PostCall 48
+
+ strtol_test$49:
+	; GetReturnValue £temporary2016
+
+ strtol_test$50:
+	; Assign value £temporary2016
+	mov [rbp + 48], rbx
+
+ strtol_test$51:
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- strtoul$3:
-	; Parameter pointer s 80
-	mov rax, [rbp + 24]
-	mov [rbp + 80], rax
+ strtol_test$52:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 80
+	mov qword [rbp + 80], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
- strtoul$4:
-	; Parameter pointer "%lu%n" 88
-	mov qword [rbp + 88], string_25lu25n#
+ strtol_test$53:
+	; Parameter pointer text 88
+	mov [rbp + 88], rbp
+	add qword [rbp + 88], 28
 
- strtoul$5:
-	; Address £temporary1956 value
-	mov rsi, rbp
-	add rsi, 48
+ strtol_test$54:
+	; Parameter signed long int value 96
+	mov rax, [rbp + 48]
+	mov [rbp + 96], rax
 
- strtoul$6:
-	; Parameter pointer £temporary1956 96
-	mov [rbp + 96], rsi
+ strtol_test$55:
+	; Parameter pointer pointer 104
+	mov rax, [rbp + 40]
+	mov [rbp + 104], rax
 
- strtoul$7:
-	; Address £temporary1957 chars
-	mov rsi, rbp
-	add rsi, 44
+ strtol_test$56:
+	; Parameter signedint base 112
+	mov eax, [rbp + 24]
+	mov [rbp + 112], eax
 
- strtoul$8:
-	; Parameter pointer £temporary1957 104
-	mov [rbp + 104], rsi
-
- strtoul$9:
-	; Call sscanf 56 16
-	mov qword [rbp + 56], strtoul$10
+ strtol_test$57:
+	; Call printf 56 28
+	mov qword [rbp + 56], strtol_test$58
 	mov [rbp + 64], rbp
 	add rbp, 56
 	mov rdi, rbp
-	add rdi, 16
-	jmp sscanf
+	add rdi, 28
+	jmp printf
 
- strtoul$10:
+ strtol_test$58:
 	; PostCall 56
 
- strtoul$11:
-	; Equal 15 endp 0
-	cmp qword [rbp + 32], 0
-	je strtoul$15
+ strtol_test$59:
+	; Assign base 0
+	mov dword [rbp + 24], 0
 
- strtoul$12:
-	; Dereference £temporary1960 -> endp endp 0
-	mov rsi, [rbp + 32]
+ strtol_test$60:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
 
- strtoul$13:
-	; IntegralToIntegral £temporary1961 chars
-	mov eax, [rbp + 44]
-	mov rbx, 4294967295
-	and rax, rbx
+ strtol_test$61:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
 
- strtoul$14:
-	; BinaryAdd £temporary1960 -> endp s £temporary1961
-	mov rbx, [rbp + 24]
-	add rbx, rax
-	mov [rsi], rbx
+ strtol_test$62:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
 
- strtoul$15:
-	; Return value
-	mov rbx, [rbp + 48]
+ strtol_test$63:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtol_test$64:
+	; Assign text[4] 48
+	mov byte [rbp + 32], 48
+
+ strtol_test$65:
+	; Assign text[5] 120
+	mov byte [rbp + 33], 120
+
+ strtol_test$66:
+	; Assign text[6] 49
+	mov byte [rbp + 34], 49
+
+ strtol_test$67:
+	; Assign text[7] 50
+	mov byte [rbp + 35], 50
+
+ strtol_test$68:
+	; Assign text[8] 51
+	mov byte [rbp + 36], 51
+
+ strtol_test$69:
+	; Assign text[9] 65
+	mov byte [rbp + 37], 65
+
+ strtol_test$70:
+	; Assign text[10] 66
+	mov byte [rbp + 38], 66
+
+ strtol_test$71:
+	; Assign text[11] 67
+	mov byte [rbp + 39], 67
+
+ strtol_test$72:
+	; Assign text[12] 0
+	mov byte [rbp + 40], 0
+
+ strtol_test$73:
+	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$74:
+	; Parameter pointer text 73
+	mov [rbp + 73], rbp
+	add qword [rbp + 73], 28
+
+ strtol_test$75:
+	; Address £temporary2031 pointer
+	mov rsi, rbp
+	add rsi, 41
+
+ strtol_test$76:
+	; Parameter pointer £temporary2031 81
+	mov [rbp + 81], rsi
+
+ strtol_test$77:
+	; Parameter signedint base 89
+	mov eax, [rbp + 24]
+	mov [rbp + 89], eax
+
+ strtol_test$78:
+	; Call strtol 49 0
+	mov qword [rbp + 49], strtol_test$79
+	mov [rbp + 57], rbp
+	add rbp, 49
+	jmp strtol
+
+ strtol_test$79:
+	; PostCall 49
+
+ strtol_test$80:
+	; GetReturnValue £temporary2032
+
+ strtol_test$81:
+	; Assign value £temporary2032
+	mov [rbp + 49], rbx
+
+ strtol_test$82:
+	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$83:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 81
+	mov qword [rbp + 81], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$84:
+	; Parameter pointer text 89
+	mov [rbp + 89], rbp
+	add qword [rbp + 89], 28
+
+ strtol_test$85:
+	; Parameter signed long int value 97
+	mov rax, [rbp + 49]
+	mov [rbp + 97], rax
+
+ strtol_test$86:
+	; Parameter pointer pointer 105
+	mov rax, [rbp + 41]
+	mov [rbp + 105], rax
+
+ strtol_test$87:
+	; Parameter signedint base 113
+	mov eax, [rbp + 24]
+	mov [rbp + 113], eax
+
+ strtol_test$88:
+	; Call printf 57 28
+	mov qword [rbp + 57], strtol_test$89
+	mov [rbp + 65], rbp
+	add rbp, 57
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$89:
+	; PostCall 57
+
+ strtol_test$90:
+	; Assign base 0
+	mov dword [rbp + 24], 0
+
+ strtol_test$91:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtol_test$92:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$93:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$94:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtol_test$95:
+	; Assign text[4] 48
+	mov byte [rbp + 32], 48
+
+ strtol_test$96:
+	; Assign text[5] 88
+	mov byte [rbp + 33], 88
+
+ strtol_test$97:
+	; Assign text[6] 49
+	mov byte [rbp + 34], 49
+
+ strtol_test$98:
+	; Assign text[7] 50
+	mov byte [rbp + 35], 50
+
+ strtol_test$99:
+	; Assign text[8] 51
+	mov byte [rbp + 36], 51
+
+ strtol_test$100:
+	; Assign text[9] 97
+	mov byte [rbp + 37], 97
+
+ strtol_test$101:
+	; Assign text[10] 98
+	mov byte [rbp + 38], 98
+
+ strtol_test$102:
+	; Assign text[11] 99
+	mov byte [rbp + 39], 99
+
+ strtol_test$103:
+	; Assign text[12] 0
+	mov byte [rbp + 40], 0
+
+ strtol_test$104:
+	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$105:
+	; Parameter pointer text 73
+	mov [rbp + 73], rbp
+	add qword [rbp + 73], 28
+
+ strtol_test$106:
+	; Address £temporary2047 pointer
+	mov rsi, rbp
+	add rsi, 41
+
+ strtol_test$107:
+	; Parameter pointer £temporary2047 81
+	mov [rbp + 81], rsi
+
+ strtol_test$108:
+	; Parameter signedint base 89
+	mov eax, [rbp + 24]
+	mov [rbp + 89], eax
+
+ strtol_test$109:
+	; Call strtol 49 0
+	mov qword [rbp + 49], strtol_test$110
+	mov [rbp + 57], rbp
+	add rbp, 49
+	jmp strtol
+
+ strtol_test$110:
+	; PostCall 49
+
+ strtol_test$111:
+	; GetReturnValue £temporary2048
+
+ strtol_test$112:
+	; Assign value £temporary2048
+	mov [rbp + 49], rbx
+
+ strtol_test$113:
+	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$114:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 81
+	mov qword [rbp + 81], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$115:
+	; Parameter pointer text 89
+	mov [rbp + 89], rbp
+	add qword [rbp + 89], 28
+
+ strtol_test$116:
+	; Parameter signed long int value 97
+	mov rax, [rbp + 49]
+	mov [rbp + 97], rax
+
+ strtol_test$117:
+	; Parameter pointer pointer 105
+	mov rax, [rbp + 41]
+	mov [rbp + 105], rax
+
+ strtol_test$118:
+	; Parameter signedint base 113
+	mov eax, [rbp + 24]
+	mov [rbp + 113], eax
+
+ strtol_test$119:
+	; Call printf 57 28
+	mov qword [rbp + 57], strtol_test$120
+	mov [rbp + 65], rbp
+	add rbp, 57
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$120:
+	; PostCall 57
+
+ strtol_test$121:
+	; Assign base 0
+	mov dword [rbp + 24], 0
+
+ strtol_test$122:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtol_test$123:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$124:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$125:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtol_test$126:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtol_test$127:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtol_test$128:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtol_test$129:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtol_test$130:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtol_test$131:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtol_test$132:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtol_test$133:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$134:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtol_test$135:
+	; Address £temporary2061 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtol_test$136:
+	; Parameter pointer £temporary2061 79
+	mov [rbp + 79], rsi
+
+ strtol_test$137:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtol_test$138:
+	; Call strtol 47 0
+	mov qword [rbp + 47], strtol_test$139
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtol
+
+ strtol_test$139:
+	; PostCall 47
+
+ strtol_test$140:
+	; GetReturnValue £temporary2062
+
+ strtol_test$141:
+	; Assign value £temporary2062
+	mov [rbp + 47], rbx
+
+ strtol_test$142:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$143:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$144:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtol_test$145:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtol_test$146:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtol_test$147:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtol_test$148:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtol_test$149
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$149:
+	; PostCall 55
+
+ strtol_test$150:
+	; Assign base 0
+	mov dword [rbp + 24], 0
+
+ strtol_test$151:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtol_test$152:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$153:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$154:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtol_test$155:
+	; Assign text[4] 48
+	mov byte [rbp + 32], 48
+
+ strtol_test$156:
+	; Assign text[5] 49
+	mov byte [rbp + 33], 49
+
+ strtol_test$157:
+	; Assign text[6] 50
+	mov byte [rbp + 34], 50
+
+ strtol_test$158:
+	; Assign text[7] 51
+	mov byte [rbp + 35], 51
+
+ strtol_test$159:
+	; Assign text[8] 97
+	mov byte [rbp + 36], 97
+
+ strtol_test$160:
+	; Assign text[9] 98
+	mov byte [rbp + 37], 98
+
+ strtol_test$161:
+	; Assign text[10] 99
+	mov byte [rbp + 38], 99
+
+ strtol_test$162:
+	; Assign text[11] 0
+	mov byte [rbp + 39], 0
+
+ strtol_test$163:
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$164:
+	; Parameter pointer text 72
+	mov [rbp + 72], rbp
+	add qword [rbp + 72], 28
+
+ strtol_test$165:
+	; Address £temporary2076 pointer
+	mov rsi, rbp
+	add rsi, 40
+
+ strtol_test$166:
+	; Parameter pointer £temporary2076 80
+	mov [rbp + 80], rsi
+
+ strtol_test$167:
+	; Parameter signedint base 88
+	mov eax, [rbp + 24]
+	mov [rbp + 88], eax
+
+ strtol_test$168:
+	; Call strtol 48 0
+	mov qword [rbp + 48], strtol_test$169
+	mov [rbp + 56], rbp
+	add rbp, 48
+	jmp strtol
+
+ strtol_test$169:
+	; PostCall 48
+
+ strtol_test$170:
+	; GetReturnValue £temporary2077
+
+ strtol_test$171:
+	; Assign value £temporary2077
+	mov [rbp + 48], rbx
+
+ strtol_test$172:
+	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$173:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 80
+	mov qword [rbp + 80], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$174:
+	; Parameter pointer text 88
+	mov [rbp + 88], rbp
+	add qword [rbp + 88], 28
+
+ strtol_test$175:
+	; Parameter signed long int value 96
+	mov rax, [rbp + 48]
+	mov [rbp + 96], rax
+
+ strtol_test$176:
+	; Parameter pointer pointer 104
+	mov rax, [rbp + 40]
+	mov [rbp + 104], rax
+
+ strtol_test$177:
+	; Parameter signedint base 112
+	mov eax, [rbp + 24]
+	mov [rbp + 112], eax
+
+ strtol_test$178:
+	; Call printf 56 28
+	mov qword [rbp + 56], strtol_test$179
+	mov [rbp + 64], rbp
+	add rbp, 56
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$179:
+	; PostCall 56
+
+ strtol_test$180:
+	; Assign base 0
+	mov dword [rbp + 24], 0
+
+ strtol_test$181:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtol_test$182:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$183:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$184:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtol_test$185:
+	; Assign text[4] 48
+	mov byte [rbp + 32], 48
+
+ strtol_test$186:
+	; Assign text[5] 120
+	mov byte [rbp + 33], 120
+
+ strtol_test$187:
+	; Assign text[6] 49
+	mov byte [rbp + 34], 49
+
+ strtol_test$188:
+	; Assign text[7] 50
+	mov byte [rbp + 35], 50
+
+ strtol_test$189:
+	; Assign text[8] 51
+	mov byte [rbp + 36], 51
+
+ strtol_test$190:
+	; Assign text[9] 65
+	mov byte [rbp + 37], 65
+
+ strtol_test$191:
+	; Assign text[10] 66
+	mov byte [rbp + 38], 66
+
+ strtol_test$192:
+	; Assign text[11] 67
+	mov byte [rbp + 39], 67
+
+ strtol_test$193:
+	; Assign text[12] 0
+	mov byte [rbp + 40], 0
+
+ strtol_test$194:
+	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$195:
+	; Parameter pointer text 73
+	mov [rbp + 73], rbp
+	add qword [rbp + 73], 28
+
+ strtol_test$196:
+	; Address £temporary2092 pointer
+	mov rsi, rbp
+	add rsi, 41
+
+ strtol_test$197:
+	; Parameter pointer £temporary2092 81
+	mov [rbp + 81], rsi
+
+ strtol_test$198:
+	; Parameter signedint base 89
+	mov eax, [rbp + 24]
+	mov [rbp + 89], eax
+
+ strtol_test$199:
+	; Call strtol 49 0
+	mov qword [rbp + 49], strtol_test$200
+	mov [rbp + 57], rbp
+	add rbp, 49
+	jmp strtol
+
+ strtol_test$200:
+	; PostCall 49
+
+ strtol_test$201:
+	; GetReturnValue £temporary2093
+
+ strtol_test$202:
+	; Assign value £temporary2093
+	mov [rbp + 49], rbx
+
+ strtol_test$203:
+	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$204:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 81
+	mov qword [rbp + 81], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$205:
+	; Parameter pointer text 89
+	mov [rbp + 89], rbp
+	add qword [rbp + 89], 28
+
+ strtol_test$206:
+	; Parameter signed long int value 97
+	mov rax, [rbp + 49]
+	mov [rbp + 97], rax
+
+ strtol_test$207:
+	; Parameter pointer pointer 105
+	mov rax, [rbp + 41]
+	mov [rbp + 105], rax
+
+ strtol_test$208:
+	; Parameter signedint base 113
+	mov eax, [rbp + 24]
+	mov [rbp + 113], eax
+
+ strtol_test$209:
+	; Call printf 57 28
+	mov qword [rbp + 57], strtol_test$210
+	mov [rbp + 65], rbp
+	add rbp, 57
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$210:
+	; PostCall 57
+
+ strtol_test$211:
+	; Assign base 0
+	mov dword [rbp + 24], 0
+
+ strtol_test$212:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtol_test$213:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$214:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$215:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtol_test$216:
+	; Assign text[4] 48
+	mov byte [rbp + 32], 48
+
+ strtol_test$217:
+	; Assign text[5] 88
+	mov byte [rbp + 33], 88
+
+ strtol_test$218:
+	; Assign text[6] 49
+	mov byte [rbp + 34], 49
+
+ strtol_test$219:
+	; Assign text[7] 50
+	mov byte [rbp + 35], 50
+
+ strtol_test$220:
+	; Assign text[8] 51
+	mov byte [rbp + 36], 51
+
+ strtol_test$221:
+	; Assign text[9] 97
+	mov byte [rbp + 37], 97
+
+ strtol_test$222:
+	; Assign text[10] 98
+	mov byte [rbp + 38], 98
+
+ strtol_test$223:
+	; Assign text[11] 99
+	mov byte [rbp + 39], 99
+
+ strtol_test$224:
+	; Assign text[12] 0
+	mov byte [rbp + 40], 0
+
+ strtol_test$225:
+	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$226:
+	; Parameter pointer text 73
+	mov [rbp + 73], rbp
+	add qword [rbp + 73], 28
+
+ strtol_test$227:
+	; Address £temporary2108 pointer
+	mov rsi, rbp
+	add rsi, 41
+
+ strtol_test$228:
+	; Parameter pointer £temporary2108 81
+	mov [rbp + 81], rsi
+
+ strtol_test$229:
+	; Parameter signedint base 89
+	mov eax, [rbp + 24]
+	mov [rbp + 89], eax
+
+ strtol_test$230:
+	; Call strtol 49 0
+	mov qword [rbp + 49], strtol_test$231
+	mov [rbp + 57], rbp
+	add rbp, 49
+	jmp strtol
+
+ strtol_test$231:
+	; PostCall 49
+
+ strtol_test$232:
+	; GetReturnValue £temporary2109
+
+ strtol_test$233:
+	; Assign value £temporary2109
+	mov [rbp + 49], rbx
+
+ strtol_test$234:
+	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$235:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 81
+	mov qword [rbp + 81], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$236:
+	; Parameter pointer text 89
+	mov [rbp + 89], rbp
+	add qword [rbp + 89], 28
+
+ strtol_test$237:
+	; Parameter signed long int value 97
+	mov rax, [rbp + 49]
+	mov [rbp + 97], rax
+
+ strtol_test$238:
+	; Parameter pointer pointer 105
+	mov rax, [rbp + 41]
+	mov [rbp + 105], rax
+
+ strtol_test$239:
+	; Parameter signedint base 113
+	mov eax, [rbp + 24]
+	mov [rbp + 113], eax
+
+ strtol_test$240:
+	; Call printf 57 28
+	mov qword [rbp + 57], strtol_test$241
+	mov [rbp + 65], rbp
+	add rbp, 57
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$241:
+	; PostCall 57
+
+ strtol_test$242:
+	; Assign base 9
+	mov dword [rbp + 24], 9
+
+ strtol_test$243:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtol_test$244:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$245:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$246:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtol_test$247:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtol_test$248:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtol_test$249:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtol_test$250:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtol_test$251:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtol_test$252:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtol_test$253:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtol_test$254:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$255:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtol_test$256:
+	; Address £temporary2122 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtol_test$257:
+	; Parameter pointer £temporary2122 79
+	mov [rbp + 79], rsi
+
+ strtol_test$258:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtol_test$259:
+	; Call strtol 47 0
+	mov qword [rbp + 47], strtol_test$260
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtol
+
+ strtol_test$260:
+	; PostCall 47
+
+ strtol_test$261:
+	; GetReturnValue £temporary2123
+
+ strtol_test$262:
+	; Assign value £temporary2123
+	mov [rbp + 47], rbx
+
+ strtol_test$263:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$264:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$265:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtol_test$266:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtol_test$267:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtol_test$268:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtol_test$269:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtol_test$270
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$270:
+	; PostCall 55
+
+ strtol_test$271:
+	; Assign base 10
+	mov dword [rbp + 24], 10
+
+ strtol_test$272:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtol_test$273:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$274:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$275:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtol_test$276:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtol_test$277:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtol_test$278:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtol_test$279:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtol_test$280:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtol_test$281:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtol_test$282:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtol_test$283:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$284:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtol_test$285:
+	; Address £temporary2136 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtol_test$286:
+	; Parameter pointer £temporary2136 79
+	mov [rbp + 79], rsi
+
+ strtol_test$287:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtol_test$288:
+	; Call strtol 47 0
+	mov qword [rbp + 47], strtol_test$289
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtol
+
+ strtol_test$289:
+	; PostCall 47
+
+ strtol_test$290:
+	; GetReturnValue £temporary2137
+
+ strtol_test$291:
+	; Assign value £temporary2137
+	mov [rbp + 47], rbx
+
+ strtol_test$292:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$293:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$294:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtol_test$295:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtol_test$296:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtol_test$297:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtol_test$298:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtol_test$299
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$299:
+	; PostCall 55
+
+ strtol_test$300:
+	; Assign base 11
+	mov dword [rbp + 24], 11
+
+ strtol_test$301:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtol_test$302:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$303:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$304:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtol_test$305:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtol_test$306:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtol_test$307:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtol_test$308:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtol_test$309:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtol_test$310:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtol_test$311:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtol_test$312:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$313:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtol_test$314:
+	; Address £temporary2150 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtol_test$315:
+	; Parameter pointer £temporary2150 79
+	mov [rbp + 79], rsi
+
+ strtol_test$316:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtol_test$317:
+	; Call strtol 47 0
+	mov qword [rbp + 47], strtol_test$318
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtol
+
+ strtol_test$318:
+	; PostCall 47
+
+ strtol_test$319:
+	; GetReturnValue £temporary2151
+
+ strtol_test$320:
+	; Assign value £temporary2151
+	mov [rbp + 47], rbx
+
+ strtol_test$321:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$322:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$323:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtol_test$324:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtol_test$325:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtol_test$326:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtol_test$327:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtol_test$328
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$328:
+	; PostCall 55
+
+ strtol_test$329:
+	; Assign base 12
+	mov dword [rbp + 24], 12
+
+ strtol_test$330:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtol_test$331:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$332:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$333:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtol_test$334:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtol_test$335:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtol_test$336:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtol_test$337:
+	; Assign text[7] 65
+	mov byte [rbp + 35], 65
+
+ strtol_test$338:
+	; Assign text[8] 66
+	mov byte [rbp + 36], 66
+
+ strtol_test$339:
+	; Assign text[9] 67
+	mov byte [rbp + 37], 67
+
+ strtol_test$340:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtol_test$341:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$342:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtol_test$343:
+	; Address £temporary2164 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtol_test$344:
+	; Parameter pointer £temporary2164 79
+	mov [rbp + 79], rsi
+
+ strtol_test$345:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtol_test$346:
+	; Call strtol 47 0
+	mov qword [rbp + 47], strtol_test$347
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtol
+
+ strtol_test$347:
+	; PostCall 47
+
+ strtol_test$348:
+	; GetReturnValue £temporary2165
+
+ strtol_test$349:
+	; Assign value £temporary2165
+	mov [rbp + 47], rbx
+
+ strtol_test$350:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$351:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$352:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtol_test$353:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtol_test$354:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtol_test$355:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtol_test$356:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtol_test$357
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$357:
+	; PostCall 55
+
+ strtol_test$358:
+	; Assign base 13
+	mov dword [rbp + 24], 13
+
+ strtol_test$359:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtol_test$360:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$361:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$362:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtol_test$363:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtol_test$364:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtol_test$365:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtol_test$366:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtol_test$367:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtol_test$368:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtol_test$369:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtol_test$370:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$371:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtol_test$372:
+	; Address £temporary2178 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtol_test$373:
+	; Parameter pointer £temporary2178 79
+	mov [rbp + 79], rsi
+
+ strtol_test$374:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtol_test$375:
+	; Call strtol 47 0
+	mov qword [rbp + 47], strtol_test$376
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtol
+
+ strtol_test$376:
+	; PostCall 47
+
+ strtol_test$377:
+	; GetReturnValue £temporary2179
+
+ strtol_test$378:
+	; Assign value £temporary2179
+	mov [rbp + 47], rbx
+
+ strtol_test$379:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$380:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$381:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtol_test$382:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtol_test$383:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtol_test$384:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtol_test$385:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtol_test$386
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$386:
+	; PostCall 55
+
+ strtol_test$387:
+	; Assign base 9
+	mov dword [rbp + 24], 9
+
+ strtol_test$388:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtol_test$389:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$390:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$391:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtol_test$392:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtol_test$393:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtol_test$394:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtol_test$395:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtol_test$396:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtol_test$397:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtol_test$398:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtol_test$399:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$400:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtol_test$401:
+	; Address £temporary2192 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtol_test$402:
+	; Parameter pointer £temporary2192 79
+	mov [rbp + 79], rsi
+
+ strtol_test$403:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtol_test$404:
+	; Call strtol 47 0
+	mov qword [rbp + 47], strtol_test$405
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtol
+
+ strtol_test$405:
+	; PostCall 47
+
+ strtol_test$406:
+	; GetReturnValue £temporary2193
+
+ strtol_test$407:
+	; Assign value £temporary2193
+	mov [rbp + 47], rbx
+
+ strtol_test$408:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$409:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$410:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtol_test$411:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtol_test$412:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtol_test$413:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtol_test$414:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtol_test$415
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$415:
+	; PostCall 55
+
+ strtol_test$416:
+	; Assign base 10
+	mov dword [rbp + 24], 10
+
+ strtol_test$417:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtol_test$418:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$419:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$420:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtol_test$421:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtol_test$422:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtol_test$423:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtol_test$424:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtol_test$425:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtol_test$426:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtol_test$427:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtol_test$428:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$429:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtol_test$430:
+	; Address £temporary2206 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtol_test$431:
+	; Parameter pointer £temporary2206 79
+	mov [rbp + 79], rsi
+
+ strtol_test$432:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtol_test$433:
+	; Call strtol 47 0
+	mov qword [rbp + 47], strtol_test$434
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtol
+
+ strtol_test$434:
+	; PostCall 47
+
+ strtol_test$435:
+	; GetReturnValue £temporary2207
+
+ strtol_test$436:
+	; Assign value £temporary2207
+	mov [rbp + 47], rbx
+
+ strtol_test$437:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$438:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$439:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtol_test$440:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtol_test$441:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtol_test$442:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtol_test$443:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtol_test$444
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$444:
+	; PostCall 55
+
+ strtol_test$445:
+	; Assign base 11
+	mov dword [rbp + 24], 11
+
+ strtol_test$446:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtol_test$447:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$448:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$449:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtol_test$450:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtol_test$451:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtol_test$452:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtol_test$453:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtol_test$454:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtol_test$455:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtol_test$456:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtol_test$457:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$458:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtol_test$459:
+	; Address £temporary2220 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtol_test$460:
+	; Parameter pointer £temporary2220 79
+	mov [rbp + 79], rsi
+
+ strtol_test$461:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtol_test$462:
+	; Call strtol 47 0
+	mov qword [rbp + 47], strtol_test$463
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtol
+
+ strtol_test$463:
+	; PostCall 47
+
+ strtol_test$464:
+	; GetReturnValue £temporary2221
+
+ strtol_test$465:
+	; Assign value £temporary2221
+	mov [rbp + 47], rbx
+
+ strtol_test$466:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$467:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$468:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtol_test$469:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtol_test$470:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtol_test$471:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtol_test$472:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtol_test$473
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$473:
+	; PostCall 55
+
+ strtol_test$474:
+	; Assign base 12
+	mov dword [rbp + 24], 12
+
+ strtol_test$475:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtol_test$476:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$477:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$478:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtol_test$479:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtol_test$480:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtol_test$481:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtol_test$482:
+	; Assign text[7] 65
+	mov byte [rbp + 35], 65
+
+ strtol_test$483:
+	; Assign text[8] 66
+	mov byte [rbp + 36], 66
+
+ strtol_test$484:
+	; Assign text[9] 67
+	mov byte [rbp + 37], 67
+
+ strtol_test$485:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtol_test$486:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$487:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtol_test$488:
+	; Address £temporary2234 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtol_test$489:
+	; Parameter pointer £temporary2234 79
+	mov [rbp + 79], rsi
+
+ strtol_test$490:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtol_test$491:
+	; Call strtol 47 0
+	mov qword [rbp + 47], strtol_test$492
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtol
+
+ strtol_test$492:
+	; PostCall 47
+
+ strtol_test$493:
+	; GetReturnValue £temporary2235
+
+ strtol_test$494:
+	; Assign value £temporary2235
+	mov [rbp + 47], rbx
+
+ strtol_test$495:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$496:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$497:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtol_test$498:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtol_test$499:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtol_test$500:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtol_test$501:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtol_test$502
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$502:
+	; PostCall 55
+
+ strtol_test$503:
+	; Assign base 13
+	mov dword [rbp + 24], 13
+
+ strtol_test$504:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtol_test$505:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtol_test$506:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtol_test$507:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtol_test$508:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtol_test$509:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtol_test$510:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtol_test$511:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtol_test$512:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtol_test$513:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtol_test$514:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtol_test$515:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$516:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtol_test$517:
+	; Address £temporary2248 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtol_test$518:
+	; Parameter pointer £temporary2248 79
+	mov [rbp + 79], rsi
+
+ strtol_test$519:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtol_test$520:
+	; Call strtol 47 0
+	mov qword [rbp + 47], strtol_test$521
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtol
+
+ strtol_test$521:
+	; PostCall 47
+
+ strtol_test$522:
+	; GetReturnValue £temporary2249
+
+ strtol_test$523:
+	; Assign value £temporary2249
+	mov [rbp + 47], rbx
+
+ strtol_test$524:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtol_test$525:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtol_test$526:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtol_test$527:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtol_test$528:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtol_test$529:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtol_test$530:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtol_test$531
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtol_test$531:
+	; PostCall 55
+
+ strtol_test$532:
+	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- strtoul$16:
+ strtol_test$533:
+	; FunctionEnd strtol_test
+
+section .text
+
+ strtoul:
+	; Assign g_inStatus 1
+	mov dword [g_inStatus], 1
+
+ strtoul$1:
+	; Assign g_inDevice s
+	mov rax, [rbp + 24]
+	mov [g_inDevice], rax
+
+ strtoul$2:
+	; Assign g_inChars 0
+	mov dword [g_inChars], 0
+
+ strtoul$3:
+	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul$4:
+	; Parameter signedint base 68
+	mov eax, [rbp + 40]
+	mov [rbp + 68], eax
+
+ strtoul$5:
+	; Call scanUnsignedLongInt 44 0
+	mov qword [rbp + 44], strtoul$6
+	mov [rbp + 52], rbp
+	add rbp, 44
+	jmp scanUnsignedLongInt
+
+ strtoul$6:
+	; PostCall 44
+
+ strtoul$7:
+	; GetReturnValue £temporary2269
+
+ strtoul$8:
+	; Assign unsignedLongValue £temporary2269
+	mov [rbp + 44], rbx
+
+ strtoul$9:
+	; Equal 13 endp 0
+	cmp qword [rbp + 32], 0
+	je strtoul$13
+
+ strtoul$10:
+	; Dereference £temporary2271 -> endp endp 0
+	mov rsi, [rbp + 32]
+
+ strtoul$11:
+	; IntegralToIntegral £temporary2272 g_inChars
+	mov eax, [g_inChars]
+	mov rbx, 4294967295
+	and rax, rbx
+
+ strtoul$12:
+	; BinaryAdd £temporary2271 -> endp s £temporary2272
+	mov rbx, [rbp + 24]
+	add rbx, rax
+	mov [rsi], rbx
+
+ strtoul$13:
+	; Return unsignedLongValue
+	mov rbx, [rbp + 44]
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
+
+ strtoul$14:
 	; FunctionEnd strtoul
+
+section .text
+
+ strtoul_test:
+	; Assign base 0
+	mov dword [rbp + 24], 0
+
+ strtoul_test$1:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$2:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$3:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$4:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtoul_test$5:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtoul_test$6:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtoul_test$7:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtoul_test$8:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtoul_test$9:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtoul_test$10:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtoul_test$11:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtoul_test$12:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$13:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtoul_test$14:
+	; Address £temporary2286 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtoul_test$15:
+	; Parameter pointer £temporary2286 79
+	mov [rbp + 79], rsi
+
+ strtoul_test$16:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtoul_test$17:
+	; Call strtoul 47 0
+	mov qword [rbp + 47], strtoul_test$18
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtoul
+
+ strtoul_test$18:
+	; PostCall 47
+
+ strtoul_test$19:
+	; GetReturnValue £temporary2287
+
+ strtoul_test$20:
+	; Assign value £temporary2287
+	mov [rbp + 47], rbx
+
+ strtoul_test$21:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$22:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$23:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtoul_test$24:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtoul_test$25:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtoul_test$26:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtoul_test$27:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtoul_test$28
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$28:
+	; PostCall 55
+
+ strtoul_test$29:
+	; Assign base 0
+	mov dword [rbp + 24], 0
+
+ strtoul_test$30:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$31:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$32:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$33:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtoul_test$34:
+	; Assign text[4] 48
+	mov byte [rbp + 32], 48
+
+ strtoul_test$35:
+	; Assign text[5] 49
+	mov byte [rbp + 33], 49
+
+ strtoul_test$36:
+	; Assign text[6] 50
+	mov byte [rbp + 34], 50
+
+ strtoul_test$37:
+	; Assign text[7] 51
+	mov byte [rbp + 35], 51
+
+ strtoul_test$38:
+	; Assign text[8] 97
+	mov byte [rbp + 36], 97
+
+ strtoul_test$39:
+	; Assign text[9] 98
+	mov byte [rbp + 37], 98
+
+ strtoul_test$40:
+	; Assign text[10] 99
+	mov byte [rbp + 38], 99
+
+ strtoul_test$41:
+	; Assign text[11] 0
+	mov byte [rbp + 39], 0
+
+ strtoul_test$42:
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$43:
+	; Parameter pointer text 72
+	mov [rbp + 72], rbp
+	add qword [rbp + 72], 28
+
+ strtoul_test$44:
+	; Address £temporary2301 pointer
+	mov rsi, rbp
+	add rsi, 40
+
+ strtoul_test$45:
+	; Parameter pointer £temporary2301 80
+	mov [rbp + 80], rsi
+
+ strtoul_test$46:
+	; Parameter signedint base 88
+	mov eax, [rbp + 24]
+	mov [rbp + 88], eax
+
+ strtoul_test$47:
+	; Call strtoul 48 0
+	mov qword [rbp + 48], strtoul_test$48
+	mov [rbp + 56], rbp
+	add rbp, 48
+	jmp strtoul
+
+ strtoul_test$48:
+	; PostCall 48
+
+ strtoul_test$49:
+	; GetReturnValue £temporary2302
+
+ strtoul_test$50:
+	; Assign value £temporary2302
+	mov [rbp + 48], rbx
+
+ strtoul_test$51:
+	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$52:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 80
+	mov qword [rbp + 80], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$53:
+	; Parameter pointer text 88
+	mov [rbp + 88], rbp
+	add qword [rbp + 88], 28
+
+ strtoul_test$54:
+	; Parameter signed long int value 96
+	mov rax, [rbp + 48]
+	mov [rbp + 96], rax
+
+ strtoul_test$55:
+	; Parameter pointer pointer 104
+	mov rax, [rbp + 40]
+	mov [rbp + 104], rax
+
+ strtoul_test$56:
+	; Parameter signedint base 112
+	mov eax, [rbp + 24]
+	mov [rbp + 112], eax
+
+ strtoul_test$57:
+	; Call printf 56 28
+	mov qword [rbp + 56], strtoul_test$58
+	mov [rbp + 64], rbp
+	add rbp, 56
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$58:
+	; PostCall 56
+
+ strtoul_test$59:
+	; Assign base 0
+	mov dword [rbp + 24], 0
+
+ strtoul_test$60:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$61:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$62:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$63:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtoul_test$64:
+	; Assign text[4] 48
+	mov byte [rbp + 32], 48
+
+ strtoul_test$65:
+	; Assign text[5] 120
+	mov byte [rbp + 33], 120
+
+ strtoul_test$66:
+	; Assign text[6] 49
+	mov byte [rbp + 34], 49
+
+ strtoul_test$67:
+	; Assign text[7] 50
+	mov byte [rbp + 35], 50
+
+ strtoul_test$68:
+	; Assign text[8] 51
+	mov byte [rbp + 36], 51
+
+ strtoul_test$69:
+	; Assign text[9] 65
+	mov byte [rbp + 37], 65
+
+ strtoul_test$70:
+	; Assign text[10] 66
+	mov byte [rbp + 38], 66
+
+ strtoul_test$71:
+	; Assign text[11] 67
+	mov byte [rbp + 39], 67
+
+ strtoul_test$72:
+	; Assign text[12] 0
+	mov byte [rbp + 40], 0
+
+ strtoul_test$73:
+	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$74:
+	; Parameter pointer text 73
+	mov [rbp + 73], rbp
+	add qword [rbp + 73], 28
+
+ strtoul_test$75:
+	; Address £temporary2317 pointer
+	mov rsi, rbp
+	add rsi, 41
+
+ strtoul_test$76:
+	; Parameter pointer £temporary2317 81
+	mov [rbp + 81], rsi
+
+ strtoul_test$77:
+	; Parameter signedint base 89
+	mov eax, [rbp + 24]
+	mov [rbp + 89], eax
+
+ strtoul_test$78:
+	; Call strtoul 49 0
+	mov qword [rbp + 49], strtoul_test$79
+	mov [rbp + 57], rbp
+	add rbp, 49
+	jmp strtoul
+
+ strtoul_test$79:
+	; PostCall 49
+
+ strtoul_test$80:
+	; GetReturnValue £temporary2318
+
+ strtoul_test$81:
+	; Assign value £temporary2318
+	mov [rbp + 49], rbx
+
+ strtoul_test$82:
+	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$83:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 81
+	mov qword [rbp + 81], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$84:
+	; Parameter pointer text 89
+	mov [rbp + 89], rbp
+	add qword [rbp + 89], 28
+
+ strtoul_test$85:
+	; Parameter signed long int value 97
+	mov rax, [rbp + 49]
+	mov [rbp + 97], rax
+
+ strtoul_test$86:
+	; Parameter pointer pointer 105
+	mov rax, [rbp + 41]
+	mov [rbp + 105], rax
+
+ strtoul_test$87:
+	; Parameter signedint base 113
+	mov eax, [rbp + 24]
+	mov [rbp + 113], eax
+
+ strtoul_test$88:
+	; Call printf 57 28
+	mov qword [rbp + 57], strtoul_test$89
+	mov [rbp + 65], rbp
+	add rbp, 57
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$89:
+	; PostCall 57
+
+ strtoul_test$90:
+	; Assign base 0
+	mov dword [rbp + 24], 0
+
+ strtoul_test$91:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$92:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$93:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$94:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtoul_test$95:
+	; Assign text[4] 48
+	mov byte [rbp + 32], 48
+
+ strtoul_test$96:
+	; Assign text[5] 88
+	mov byte [rbp + 33], 88
+
+ strtoul_test$97:
+	; Assign text[6] 49
+	mov byte [rbp + 34], 49
+
+ strtoul_test$98:
+	; Assign text[7] 50
+	mov byte [rbp + 35], 50
+
+ strtoul_test$99:
+	; Assign text[8] 51
+	mov byte [rbp + 36], 51
+
+ strtoul_test$100:
+	; Assign text[9] 97
+	mov byte [rbp + 37], 97
+
+ strtoul_test$101:
+	; Assign text[10] 98
+	mov byte [rbp + 38], 98
+
+ strtoul_test$102:
+	; Assign text[11] 99
+	mov byte [rbp + 39], 99
+
+ strtoul_test$103:
+	; Assign text[12] 0
+	mov byte [rbp + 40], 0
+
+ strtoul_test$104:
+	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$105:
+	; Parameter pointer text 73
+	mov [rbp + 73], rbp
+	add qword [rbp + 73], 28
+
+ strtoul_test$106:
+	; Address £temporary2333 pointer
+	mov rsi, rbp
+	add rsi, 41
+
+ strtoul_test$107:
+	; Parameter pointer £temporary2333 81
+	mov [rbp + 81], rsi
+
+ strtoul_test$108:
+	; Parameter signedint base 89
+	mov eax, [rbp + 24]
+	mov [rbp + 89], eax
+
+ strtoul_test$109:
+	; Call strtoul 49 0
+	mov qword [rbp + 49], strtoul_test$110
+	mov [rbp + 57], rbp
+	add rbp, 49
+	jmp strtoul
+
+ strtoul_test$110:
+	; PostCall 49
+
+ strtoul_test$111:
+	; GetReturnValue £temporary2334
+
+ strtoul_test$112:
+	; Assign value £temporary2334
+	mov [rbp + 49], rbx
+
+ strtoul_test$113:
+	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$114:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 81
+	mov qword [rbp + 81], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$115:
+	; Parameter pointer text 89
+	mov [rbp + 89], rbp
+	add qword [rbp + 89], 28
+
+ strtoul_test$116:
+	; Parameter signed long int value 97
+	mov rax, [rbp + 49]
+	mov [rbp + 97], rax
+
+ strtoul_test$117:
+	; Parameter pointer pointer 105
+	mov rax, [rbp + 41]
+	mov [rbp + 105], rax
+
+ strtoul_test$118:
+	; Parameter signedint base 113
+	mov eax, [rbp + 24]
+	mov [rbp + 113], eax
+
+ strtoul_test$119:
+	; Call printf 57 28
+	mov qword [rbp + 57], strtoul_test$120
+	mov [rbp + 65], rbp
+	add rbp, 57
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$120:
+	; PostCall 57
+
+ strtoul_test$121:
+	; Assign base 0
+	mov dword [rbp + 24], 0
+
+ strtoul_test$122:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$123:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$124:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$125:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtoul_test$126:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtoul_test$127:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtoul_test$128:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtoul_test$129:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtoul_test$130:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtoul_test$131:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtoul_test$132:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtoul_test$133:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$134:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtoul_test$135:
+	; Address £temporary2347 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtoul_test$136:
+	; Parameter pointer £temporary2347 79
+	mov [rbp + 79], rsi
+
+ strtoul_test$137:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtoul_test$138:
+	; Call strtoul 47 0
+	mov qword [rbp + 47], strtoul_test$139
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtoul
+
+ strtoul_test$139:
+	; PostCall 47
+
+ strtoul_test$140:
+	; GetReturnValue £temporary2348
+
+ strtoul_test$141:
+	; Assign value £temporary2348
+	mov [rbp + 47], rbx
+
+ strtoul_test$142:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$143:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$144:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtoul_test$145:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtoul_test$146:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtoul_test$147:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtoul_test$148:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtoul_test$149
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$149:
+	; PostCall 55
+
+ strtoul_test$150:
+	; Assign base 0
+	mov dword [rbp + 24], 0
+
+ strtoul_test$151:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$152:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$153:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$154:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtoul_test$155:
+	; Assign text[4] 48
+	mov byte [rbp + 32], 48
+
+ strtoul_test$156:
+	; Assign text[5] 49
+	mov byte [rbp + 33], 49
+
+ strtoul_test$157:
+	; Assign text[6] 50
+	mov byte [rbp + 34], 50
+
+ strtoul_test$158:
+	; Assign text[7] 51
+	mov byte [rbp + 35], 51
+
+ strtoul_test$159:
+	; Assign text[8] 97
+	mov byte [rbp + 36], 97
+
+ strtoul_test$160:
+	; Assign text[9] 98
+	mov byte [rbp + 37], 98
+
+ strtoul_test$161:
+	; Assign text[10] 99
+	mov byte [rbp + 38], 99
+
+ strtoul_test$162:
+	; Assign text[11] 0
+	mov byte [rbp + 39], 0
+
+ strtoul_test$163:
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$164:
+	; Parameter pointer text 72
+	mov [rbp + 72], rbp
+	add qword [rbp + 72], 28
+
+ strtoul_test$165:
+	; Address £temporary2362 pointer
+	mov rsi, rbp
+	add rsi, 40
+
+ strtoul_test$166:
+	; Parameter pointer £temporary2362 80
+	mov [rbp + 80], rsi
+
+ strtoul_test$167:
+	; Parameter signedint base 88
+	mov eax, [rbp + 24]
+	mov [rbp + 88], eax
+
+ strtoul_test$168:
+	; Call strtoul 48 0
+	mov qword [rbp + 48], strtoul_test$169
+	mov [rbp + 56], rbp
+	add rbp, 48
+	jmp strtoul
+
+ strtoul_test$169:
+	; PostCall 48
+
+ strtoul_test$170:
+	; GetReturnValue £temporary2363
+
+ strtoul_test$171:
+	; Assign value £temporary2363
+	mov [rbp + 48], rbx
+
+ strtoul_test$172:
+	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$173:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 80
+	mov qword [rbp + 80], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$174:
+	; Parameter pointer text 88
+	mov [rbp + 88], rbp
+	add qword [rbp + 88], 28
+
+ strtoul_test$175:
+	; Parameter signed long int value 96
+	mov rax, [rbp + 48]
+	mov [rbp + 96], rax
+
+ strtoul_test$176:
+	; Parameter pointer pointer 104
+	mov rax, [rbp + 40]
+	mov [rbp + 104], rax
+
+ strtoul_test$177:
+	; Parameter signedint base 112
+	mov eax, [rbp + 24]
+	mov [rbp + 112], eax
+
+ strtoul_test$178:
+	; Call printf 56 28
+	mov qword [rbp + 56], strtoul_test$179
+	mov [rbp + 64], rbp
+	add rbp, 56
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$179:
+	; PostCall 56
+
+ strtoul_test$180:
+	; Assign base 0
+	mov dword [rbp + 24], 0
+
+ strtoul_test$181:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$182:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$183:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$184:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtoul_test$185:
+	; Assign text[4] 48
+	mov byte [rbp + 32], 48
+
+ strtoul_test$186:
+	; Assign text[5] 120
+	mov byte [rbp + 33], 120
+
+ strtoul_test$187:
+	; Assign text[6] 49
+	mov byte [rbp + 34], 49
+
+ strtoul_test$188:
+	; Assign text[7] 50
+	mov byte [rbp + 35], 50
+
+ strtoul_test$189:
+	; Assign text[8] 51
+	mov byte [rbp + 36], 51
+
+ strtoul_test$190:
+	; Assign text[9] 65
+	mov byte [rbp + 37], 65
+
+ strtoul_test$191:
+	; Assign text[10] 66
+	mov byte [rbp + 38], 66
+
+ strtoul_test$192:
+	; Assign text[11] 67
+	mov byte [rbp + 39], 67
+
+ strtoul_test$193:
+	; Assign text[12] 0
+	mov byte [rbp + 40], 0
+
+ strtoul_test$194:
+	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$195:
+	; Parameter pointer text 73
+	mov [rbp + 73], rbp
+	add qword [rbp + 73], 28
+
+ strtoul_test$196:
+	; Address £temporary2378 pointer
+	mov rsi, rbp
+	add rsi, 41
+
+ strtoul_test$197:
+	; Parameter pointer £temporary2378 81
+	mov [rbp + 81], rsi
+
+ strtoul_test$198:
+	; Parameter signedint base 89
+	mov eax, [rbp + 24]
+	mov [rbp + 89], eax
+
+ strtoul_test$199:
+	; Call strtoul 49 0
+	mov qword [rbp + 49], strtoul_test$200
+	mov [rbp + 57], rbp
+	add rbp, 49
+	jmp strtoul
+
+ strtoul_test$200:
+	; PostCall 49
+
+ strtoul_test$201:
+	; GetReturnValue £temporary2379
+
+ strtoul_test$202:
+	; Assign value £temporary2379
+	mov [rbp + 49], rbx
+
+ strtoul_test$203:
+	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$204:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 81
+	mov qword [rbp + 81], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$205:
+	; Parameter pointer text 89
+	mov [rbp + 89], rbp
+	add qword [rbp + 89], 28
+
+ strtoul_test$206:
+	; Parameter signed long int value 97
+	mov rax, [rbp + 49]
+	mov [rbp + 97], rax
+
+ strtoul_test$207:
+	; Parameter pointer pointer 105
+	mov rax, [rbp + 41]
+	mov [rbp + 105], rax
+
+ strtoul_test$208:
+	; Parameter signedint base 113
+	mov eax, [rbp + 24]
+	mov [rbp + 113], eax
+
+ strtoul_test$209:
+	; Call printf 57 28
+	mov qword [rbp + 57], strtoul_test$210
+	mov [rbp + 65], rbp
+	add rbp, 57
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$210:
+	; PostCall 57
+
+ strtoul_test$211:
+	; Assign base 0
+	mov dword [rbp + 24], 0
+
+ strtoul_test$212:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$213:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$214:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$215:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtoul_test$216:
+	; Assign text[4] 48
+	mov byte [rbp + 32], 48
+
+ strtoul_test$217:
+	; Assign text[5] 88
+	mov byte [rbp + 33], 88
+
+ strtoul_test$218:
+	; Assign text[6] 49
+	mov byte [rbp + 34], 49
+
+ strtoul_test$219:
+	; Assign text[7] 50
+	mov byte [rbp + 35], 50
+
+ strtoul_test$220:
+	; Assign text[8] 51
+	mov byte [rbp + 36], 51
+
+ strtoul_test$221:
+	; Assign text[9] 97
+	mov byte [rbp + 37], 97
+
+ strtoul_test$222:
+	; Assign text[10] 98
+	mov byte [rbp + 38], 98
+
+ strtoul_test$223:
+	; Assign text[11] 99
+	mov byte [rbp + 39], 99
+
+ strtoul_test$224:
+	; Assign text[12] 0
+	mov byte [rbp + 40], 0
+
+ strtoul_test$225:
+	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$226:
+	; Parameter pointer text 73
+	mov [rbp + 73], rbp
+	add qword [rbp + 73], 28
+
+ strtoul_test$227:
+	; Address £temporary2394 pointer
+	mov rsi, rbp
+	add rsi, 41
+
+ strtoul_test$228:
+	; Parameter pointer £temporary2394 81
+	mov [rbp + 81], rsi
+
+ strtoul_test$229:
+	; Parameter signedint base 89
+	mov eax, [rbp + 24]
+	mov [rbp + 89], eax
+
+ strtoul_test$230:
+	; Call strtoul 49 0
+	mov qword [rbp + 49], strtoul_test$231
+	mov [rbp + 57], rbp
+	add rbp, 49
+	jmp strtoul
+
+ strtoul_test$231:
+	; PostCall 49
+
+ strtoul_test$232:
+	; GetReturnValue £temporary2395
+
+ strtoul_test$233:
+	; Assign value £temporary2395
+	mov [rbp + 49], rbx
+
+ strtoul_test$234:
+	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$235:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 81
+	mov qword [rbp + 81], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$236:
+	; Parameter pointer text 89
+	mov [rbp + 89], rbp
+	add qword [rbp + 89], 28
+
+ strtoul_test$237:
+	; Parameter signed long int value 97
+	mov rax, [rbp + 49]
+	mov [rbp + 97], rax
+
+ strtoul_test$238:
+	; Parameter pointer pointer 105
+	mov rax, [rbp + 41]
+	mov [rbp + 105], rax
+
+ strtoul_test$239:
+	; Parameter signedint base 113
+	mov eax, [rbp + 24]
+	mov [rbp + 113], eax
+
+ strtoul_test$240:
+	; Call printf 57 28
+	mov qword [rbp + 57], strtoul_test$241
+	mov [rbp + 65], rbp
+	add rbp, 57
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$241:
+	; PostCall 57
+
+ strtoul_test$242:
+	; Assign base 9
+	mov dword [rbp + 24], 9
+
+ strtoul_test$243:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$244:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$245:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$246:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtoul_test$247:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtoul_test$248:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtoul_test$249:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtoul_test$250:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtoul_test$251:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtoul_test$252:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtoul_test$253:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtoul_test$254:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$255:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtoul_test$256:
+	; Address £temporary2408 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtoul_test$257:
+	; Parameter pointer £temporary2408 79
+	mov [rbp + 79], rsi
+
+ strtoul_test$258:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtoul_test$259:
+	; Call strtoul 47 0
+	mov qword [rbp + 47], strtoul_test$260
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtoul
+
+ strtoul_test$260:
+	; PostCall 47
+
+ strtoul_test$261:
+	; GetReturnValue £temporary2409
+
+ strtoul_test$262:
+	; Assign value £temporary2409
+	mov [rbp + 47], rbx
+
+ strtoul_test$263:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$264:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$265:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtoul_test$266:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtoul_test$267:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtoul_test$268:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtoul_test$269:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtoul_test$270
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$270:
+	; PostCall 55
+
+ strtoul_test$271:
+	; Assign base 10
+	mov dword [rbp + 24], 10
+
+ strtoul_test$272:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$273:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$274:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$275:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtoul_test$276:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtoul_test$277:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtoul_test$278:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtoul_test$279:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtoul_test$280:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtoul_test$281:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtoul_test$282:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtoul_test$283:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$284:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtoul_test$285:
+	; Address £temporary2422 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtoul_test$286:
+	; Parameter pointer £temporary2422 79
+	mov [rbp + 79], rsi
+
+ strtoul_test$287:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtoul_test$288:
+	; Call strtoul 47 0
+	mov qword [rbp + 47], strtoul_test$289
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtoul
+
+ strtoul_test$289:
+	; PostCall 47
+
+ strtoul_test$290:
+	; GetReturnValue £temporary2423
+
+ strtoul_test$291:
+	; Assign value £temporary2423
+	mov [rbp + 47], rbx
+
+ strtoul_test$292:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$293:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$294:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtoul_test$295:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtoul_test$296:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtoul_test$297:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtoul_test$298:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtoul_test$299
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$299:
+	; PostCall 55
+
+ strtoul_test$300:
+	; Assign base 11
+	mov dword [rbp + 24], 11
+
+ strtoul_test$301:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$302:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$303:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$304:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtoul_test$305:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtoul_test$306:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtoul_test$307:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtoul_test$308:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtoul_test$309:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtoul_test$310:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtoul_test$311:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtoul_test$312:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$313:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtoul_test$314:
+	; Address £temporary2436 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtoul_test$315:
+	; Parameter pointer £temporary2436 79
+	mov [rbp + 79], rsi
+
+ strtoul_test$316:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtoul_test$317:
+	; Call strtoul 47 0
+	mov qword [rbp + 47], strtoul_test$318
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtoul
+
+ strtoul_test$318:
+	; PostCall 47
+
+ strtoul_test$319:
+	; GetReturnValue £temporary2437
+
+ strtoul_test$320:
+	; Assign value £temporary2437
+	mov [rbp + 47], rbx
+
+ strtoul_test$321:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$322:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$323:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtoul_test$324:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtoul_test$325:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtoul_test$326:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtoul_test$327:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtoul_test$328
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$328:
+	; PostCall 55
+
+ strtoul_test$329:
+	; Assign base 12
+	mov dword [rbp + 24], 12
+
+ strtoul_test$330:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$331:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$332:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$333:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtoul_test$334:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtoul_test$335:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtoul_test$336:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtoul_test$337:
+	; Assign text[7] 65
+	mov byte [rbp + 35], 65
+
+ strtoul_test$338:
+	; Assign text[8] 66
+	mov byte [rbp + 36], 66
+
+ strtoul_test$339:
+	; Assign text[9] 67
+	mov byte [rbp + 37], 67
+
+ strtoul_test$340:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtoul_test$341:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$342:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtoul_test$343:
+	; Address £temporary2450 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtoul_test$344:
+	; Parameter pointer £temporary2450 79
+	mov [rbp + 79], rsi
+
+ strtoul_test$345:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtoul_test$346:
+	; Call strtoul 47 0
+	mov qword [rbp + 47], strtoul_test$347
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtoul
+
+ strtoul_test$347:
+	; PostCall 47
+
+ strtoul_test$348:
+	; GetReturnValue £temporary2451
+
+ strtoul_test$349:
+	; Assign value £temporary2451
+	mov [rbp + 47], rbx
+
+ strtoul_test$350:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$351:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$352:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtoul_test$353:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtoul_test$354:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtoul_test$355:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtoul_test$356:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtoul_test$357
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$357:
+	; PostCall 55
+
+ strtoul_test$358:
+	; Assign base 13
+	mov dword [rbp + 24], 13
+
+ strtoul_test$359:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$360:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$361:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$362:
+	; Assign text[3] 43
+	mov byte [rbp + 31], 43
+
+ strtoul_test$363:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtoul_test$364:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtoul_test$365:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtoul_test$366:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtoul_test$367:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtoul_test$368:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtoul_test$369:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtoul_test$370:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$371:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtoul_test$372:
+	; Address £temporary2464 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtoul_test$373:
+	; Parameter pointer £temporary2464 79
+	mov [rbp + 79], rsi
+
+ strtoul_test$374:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtoul_test$375:
+	; Call strtoul 47 0
+	mov qword [rbp + 47], strtoul_test$376
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtoul
+
+ strtoul_test$376:
+	; PostCall 47
+
+ strtoul_test$377:
+	; GetReturnValue £temporary2465
+
+ strtoul_test$378:
+	; Assign value £temporary2465
+	mov [rbp + 47], rbx
+
+ strtoul_test$379:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$380:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$381:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtoul_test$382:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtoul_test$383:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtoul_test$384:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtoul_test$385:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtoul_test$386
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$386:
+	; PostCall 55
+
+ strtoul_test$387:
+	; Assign base 9
+	mov dword [rbp + 24], 9
+
+ strtoul_test$388:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$389:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$390:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$391:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtoul_test$392:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtoul_test$393:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtoul_test$394:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtoul_test$395:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtoul_test$396:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtoul_test$397:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtoul_test$398:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtoul_test$399:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$400:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtoul_test$401:
+	; Address £temporary2478 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtoul_test$402:
+	; Parameter pointer £temporary2478 79
+	mov [rbp + 79], rsi
+
+ strtoul_test$403:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtoul_test$404:
+	; Call strtoul 47 0
+	mov qword [rbp + 47], strtoul_test$405
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtoul
+
+ strtoul_test$405:
+	; PostCall 47
+
+ strtoul_test$406:
+	; GetReturnValue £temporary2479
+
+ strtoul_test$407:
+	; Assign value £temporary2479
+	mov [rbp + 47], rbx
+
+ strtoul_test$408:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$409:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$410:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtoul_test$411:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtoul_test$412:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtoul_test$413:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtoul_test$414:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtoul_test$415
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$415:
+	; PostCall 55
+
+ strtoul_test$416:
+	; Assign base 10
+	mov dword [rbp + 24], 10
+
+ strtoul_test$417:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$418:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$419:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$420:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtoul_test$421:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtoul_test$422:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtoul_test$423:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtoul_test$424:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtoul_test$425:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtoul_test$426:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtoul_test$427:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtoul_test$428:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$429:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtoul_test$430:
+	; Address £temporary2492 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtoul_test$431:
+	; Parameter pointer £temporary2492 79
+	mov [rbp + 79], rsi
+
+ strtoul_test$432:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtoul_test$433:
+	; Call strtoul 47 0
+	mov qword [rbp + 47], strtoul_test$434
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtoul
+
+ strtoul_test$434:
+	; PostCall 47
+
+ strtoul_test$435:
+	; GetReturnValue £temporary2493
+
+ strtoul_test$436:
+	; Assign value £temporary2493
+	mov [rbp + 47], rbx
+
+ strtoul_test$437:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$438:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$439:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtoul_test$440:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtoul_test$441:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtoul_test$442:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtoul_test$443:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtoul_test$444
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$444:
+	; PostCall 55
+
+ strtoul_test$445:
+	; Assign base 11
+	mov dword [rbp + 24], 11
+
+ strtoul_test$446:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$447:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$448:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$449:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtoul_test$450:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtoul_test$451:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtoul_test$452:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtoul_test$453:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtoul_test$454:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtoul_test$455:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtoul_test$456:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtoul_test$457:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$458:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtoul_test$459:
+	; Address £temporary2506 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtoul_test$460:
+	; Parameter pointer £temporary2506 79
+	mov [rbp + 79], rsi
+
+ strtoul_test$461:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtoul_test$462:
+	; Call strtoul 47 0
+	mov qword [rbp + 47], strtoul_test$463
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtoul
+
+ strtoul_test$463:
+	; PostCall 47
+
+ strtoul_test$464:
+	; GetReturnValue £temporary2507
+
+ strtoul_test$465:
+	; Assign value £temporary2507
+	mov [rbp + 47], rbx
+
+ strtoul_test$466:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$467:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$468:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtoul_test$469:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtoul_test$470:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtoul_test$471:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtoul_test$472:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtoul_test$473
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$473:
+	; PostCall 55
+
+ strtoul_test$474:
+	; Assign base 12
+	mov dword [rbp + 24], 12
+
+ strtoul_test$475:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$476:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$477:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$478:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtoul_test$479:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtoul_test$480:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtoul_test$481:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtoul_test$482:
+	; Assign text[7] 65
+	mov byte [rbp + 35], 65
+
+ strtoul_test$483:
+	; Assign text[8] 66
+	mov byte [rbp + 36], 66
+
+ strtoul_test$484:
+	; Assign text[9] 67
+	mov byte [rbp + 37], 67
+
+ strtoul_test$485:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtoul_test$486:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$487:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtoul_test$488:
+	; Address £temporary2520 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtoul_test$489:
+	; Parameter pointer £temporary2520 79
+	mov [rbp + 79], rsi
+
+ strtoul_test$490:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtoul_test$491:
+	; Call strtoul 47 0
+	mov qword [rbp + 47], strtoul_test$492
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtoul
+
+ strtoul_test$492:
+	; PostCall 47
+
+ strtoul_test$493:
+	; GetReturnValue £temporary2521
+
+ strtoul_test$494:
+	; Assign value £temporary2521
+	mov [rbp + 47], rbx
+
+ strtoul_test$495:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$496:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$497:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtoul_test$498:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtoul_test$499:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtoul_test$500:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtoul_test$501:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtoul_test$502
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$502:
+	; PostCall 55
+
+ strtoul_test$503:
+	; Assign base 13
+	mov dword [rbp + 24], 13
+
+ strtoul_test$504:
+	; Assign text[0] 32
+	mov byte [rbp + 28], 32
+
+ strtoul_test$505:
+	; Assign text[1] 32
+	mov byte [rbp + 29], 32
+
+ strtoul_test$506:
+	; Assign text[2] 32
+	mov byte [rbp + 30], 32
+
+ strtoul_test$507:
+	; Assign text[3] 45
+	mov byte [rbp + 31], 45
+
+ strtoul_test$508:
+	; Assign text[4] 49
+	mov byte [rbp + 32], 49
+
+ strtoul_test$509:
+	; Assign text[5] 50
+	mov byte [rbp + 33], 50
+
+ strtoul_test$510:
+	; Assign text[6] 51
+	mov byte [rbp + 34], 51
+
+ strtoul_test$511:
+	; Assign text[7] 97
+	mov byte [rbp + 35], 97
+
+ strtoul_test$512:
+	; Assign text[8] 98
+	mov byte [rbp + 36], 98
+
+ strtoul_test$513:
+	; Assign text[9] 99
+	mov byte [rbp + 37], 99
+
+ strtoul_test$514:
+	; Assign text[10] 0
+	mov byte [rbp + 38], 0
+
+ strtoul_test$515:
+	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$516:
+	; Parameter pointer text 71
+	mov [rbp + 71], rbp
+	add qword [rbp + 71], 28
+
+ strtoul_test$517:
+	; Address £temporary2534 pointer
+	mov rsi, rbp
+	add rsi, 39
+
+ strtoul_test$518:
+	; Parameter pointer £temporary2534 79
+	mov [rbp + 79], rsi
+
+ strtoul_test$519:
+	; Parameter signedint base 87
+	mov eax, [rbp + 24]
+	mov [rbp + 87], eax
+
+ strtoul_test$520:
+	; Call strtoul 47 0
+	mov qword [rbp + 47], strtoul_test$521
+	mov [rbp + 55], rbp
+	add rbp, 47
+	jmp strtoul
+
+ strtoul_test$521:
+	; PostCall 47
+
+ strtoul_test$522:
+	; GetReturnValue £temporary2535
+
+ strtoul_test$523:
+	; Assign value £temporary2535
+	mov [rbp + 47], rbx
+
+ strtoul_test$524:
+	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ strtoul_test$525:
+	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+
+ strtoul_test$526:
+	; Parameter pointer text 87
+	mov [rbp + 87], rbp
+	add qword [rbp + 87], 28
+
+ strtoul_test$527:
+	; Parameter signed long int value 95
+	mov rax, [rbp + 47]
+	mov [rbp + 95], rax
+
+ strtoul_test$528:
+	; Parameter pointer pointer 103
+	mov rax, [rbp + 39]
+	mov [rbp + 103], rax
+
+ strtoul_test$529:
+	; Parameter signedint base 111
+	mov eax, [rbp + 24]
+	mov [rbp + 111], eax
+
+ strtoul_test$530:
+	; Call printf 55 28
+	mov qword [rbp + 55], strtoul_test$531
+	mov [rbp + 63], rbp
+	add rbp, 55
+	mov rdi, rbp
+	add rdi, 28
+	jmp printf
+
+ strtoul_test$531:
+	; PostCall 55
+
+ strtoul_test$532:
+	; Return
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
+
+ strtoul_test$533:
+	; FunctionEnd strtoul_test
 
 section .text
 
@@ -320,10 +4997,10 @@ section .text
 	; PostCall 32
 
  atof$5:
-	; GetReturnValue £temporary1966
+	; GetReturnValue £temporary2555
 
  atof$6:
-	; Return £temporary1966
+	; Return £temporary2555
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -365,21 +5042,21 @@ section .text
 	mov qword [rbp + 84], string_25lf25n#
 
  strtod$6:
-	; Address £temporary1967 value
+	; Address £temporary2556 value
 	mov rsi, rbp
 	add rsi, 44
 
  strtod$7:
-	; Parameter pointer £temporary1967 92
+	; Parameter pointer £temporary2556 92
 	mov [rbp + 92], rsi
 
  strtod$8:
-	; Address £temporary1968 chars
+	; Address £temporary2557 chars
 	mov rsi, rbp
 	add rsi, 40
 
  strtod$9:
-	; Parameter pointer £temporary1968 100
+	; Parameter pointer £temporary2557 100
 	mov [rbp + 100], rsi
 
  strtod$10:
@@ -400,17 +5077,17 @@ section .text
 	je strtod$16
 
  strtod$13:
-	; Dereference £temporary1971 -> endp endp 0
+	; Dereference £temporary2560 -> endp endp 0
 	mov rsi, [rbp + 32]
 
  strtod$14:
-	; IntegralToIntegral £temporary1972 chars
+	; IntegralToIntegral £temporary2561 chars
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
  strtod$15:
-	; BinaryAdd £temporary1971 -> endp s £temporary1972
+	; BinaryAdd £temporary2560 -> endp s £temporary2561
 	mov rbx, [rbp + 24]
 	add rbx, rax
 	mov [rsi], rbx
@@ -479,123 +5156,6 @@ section .text
  system$1:
 	; FunctionEnd system
 
-section .text
-
- memswp:
-	; IntegralToIntegral £temporary1979 value1
-	mov rax, [rbp + 24]
-
- memswp$1:
-	; Assign charValue1 £temporary1979
-	mov [rbp + 44], rax
-
- memswp$2:
-	; IntegralToIntegral £temporary1980 value2
-	mov rax, [rbp + 32]
-
- memswp$3:
-	; Assign charValue2 £temporary1980
-	mov [rbp + 52], rax
-
- memswp$4:
-	; Assign index 0
-	mov dword [rbp + 60], 0
-
- memswp$5:
-	; SignedGreaterThanEqual 23 index valueSize
-	mov eax, [rbp + 40]
-	cmp [rbp + 60], eax
-	jge memswp$23
-
- memswp$6:
-	; IntegralToIntegral £temporary1984 index
-	mov eax, [rbp + 60]
-	mov rbx, 4294967295
-	and rax, rbx
-
- memswp$7:
-	; BinaryAdd £temporary1986 charValue1 £temporary1984
-	mov rsi, [rbp + 44]
-	add rsi, rax
-
- memswp$8:
-	; Dereference £temporary1983 -> £temporary1986 £temporary1986 0
-
- memswp$9:
-	; Assign tempValue £temporary1983 -> £temporary1986
-	mov al, [rsi]
-	mov [rbp + 64], al
-
- memswp$10:
-	; IntegralToIntegral £temporary1988 index
-	mov eax, [rbp + 60]
-	mov rbx, 4294967295
-	and rax, rbx
-
- memswp$11:
-	; BinaryAdd £temporary1990 charValue1 £temporary1988
-	mov rsi, [rbp + 44]
-	add rsi, rax
-
- memswp$12:
-	; Dereference £temporary1987 -> £temporary1990 £temporary1990 0
-
- memswp$13:
-	; IntegralToIntegral £temporary1992 index
-	mov eax, [rbp + 60]
-	mov rbx, 4294967295
-	and rax, rbx
-
- memswp$14:
-	; BinaryAdd £temporary1994 charValue2 £temporary1992
-	mov rdi, [rbp + 52]
-	add rdi, rax
-
- memswp$15:
-	; Dereference £temporary1991 -> £temporary1994 £temporary1994 0
-
- memswp$16:
-	; Assign £temporary1987 -> £temporary1990 £temporary1991 -> £temporary1994
-	mov al, [rdi]
-	mov [rsi], al
-
- memswp$17:
-	; IntegralToIntegral £temporary1996 index
-	mov eax, [rbp + 60]
-	mov rbx, 4294967295
-	and rax, rbx
-
- memswp$18:
-	; BinaryAdd £temporary1998 charValue2 £temporary1996
-	mov rsi, [rbp + 52]
-	add rsi, rax
-
- memswp$19:
-	; Dereference £temporary1995 -> £temporary1998 £temporary1998 0
-
- memswp$20:
-	; Assign £temporary1995 -> £temporary1998 tempValue
-	mov al, [rbp + 64]
-	mov [rsi], al
-
- memswp$21:
-	; BinaryAdd index index 1
-	inc dword [rbp + 60]
-
- memswp$22:
-	; Goto 5
-	jmp memswp$5
-
- memswp$23:
-	; Return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- memswp$24:
-	; FunctionEnd memswp
-
 section .data
 
 int4$2#:
@@ -628,22 +5188,22 @@ section .text
 	jmp rax
 
  bsearch$4:
-	; IntegralToIntegral £temporary2001 valueList
+	; IntegralToIntegral £temporary2570 valueList
 	mov rbx, [rbp + 32]
 
  bsearch$5:
-	; SignedMultiply £temporary2002 firstIndex valueSize
+	; SignedMultiply £temporary2571 firstIndex valueSize
 	mov eax, [rbp + 56]
 	xor edx, edx
 	imul dword [rbp + 44]
 
  bsearch$6:
-	; IntegralToIntegral £temporary2003 £temporary2002
+	; IntegralToIntegral £temporary2572 £temporary2571
 	mov rcx, 4294967295
 	and rax, rcx
 
  bsearch$7:
-	; BinaryAdd firstValuePtr £temporary2001 £temporary2003
+	; BinaryAdd firstValuePtr £temporary2570 £temporary2572
 	add rbx, rax
 	mov [rbp + 64], rbx
 
@@ -664,18 +5224,18 @@ section .text
 	; Call compare 72 0
 	mov qword [rbp + 72], bsearch$12
 	mov [rbp + 80], rbp
-	add rbp, 72
 	mov rax, [rbp + 48]
+	add rbp, 72
 	jmp rax
 
  bsearch$12:
 	; PostCall 72
 
  bsearch$13:
-	; GetReturnValue £temporary2006
+	; GetReturnValue £temporary2575
 
  bsearch$14:
-	; Assign firstCompare £temporary2006
+	; Assign firstCompare £temporary2575
 	mov [rbp + 72], ebx
 
  bsearch$15:
@@ -705,22 +5265,22 @@ section .text
 	jmp rax
 
  bsearch$19:
-	; IntegralToIntegral £temporary2009 valueList
+	; IntegralToIntegral £temporary2578 valueList
 	mov rbx, [rbp + 32]
 
  bsearch$20:
-	; SignedMultiply £temporary2010 lastIndex valueSize
+	; SignedMultiply £temporary2579 lastIndex valueSize
 	mov eax, [rbp + 60]
 	xor edx, edx
 	imul dword [rbp + 44]
 
  bsearch$21:
-	; IntegralToIntegral £temporary2011 £temporary2010
+	; IntegralToIntegral £temporary2580 £temporary2579
 	mov rcx, 4294967295
 	and rax, rcx
 
  bsearch$22:
-	; BinaryAdd lastValuePtr £temporary2009 £temporary2011
+	; BinaryAdd lastValuePtr £temporary2578 £temporary2580
 	add rbx, rax
 	mov [rbp + 64], rbx
 
@@ -741,18 +5301,18 @@ section .text
 	; Call compare 72 0
 	mov qword [rbp + 72], bsearch$27
 	mov [rbp + 80], rbp
-	add rbp, 72
 	mov rax, [rbp + 48]
+	add rbp, 72
 	jmp rax
 
  bsearch$27:
 	; PostCall 72
 
  bsearch$28:
-	; GetReturnValue £temporary2014
+	; GetReturnValue £temporary2583
 
  bsearch$29:
-	; Assign lastCompare £temporary2014
+	; Assign lastCompare £temporary2583
 	mov [rbp + 72], ebx
 
  bsearch$30:
@@ -782,33 +5342,33 @@ section .text
 	jmp rax
 
  bsearch$34:
-	; BinaryAdd £temporary2017 firstIndex lastIndex
+	; BinaryAdd £temporary2586 firstIndex lastIndex
 	mov eax, [rbp + 56]
 	add eax, [rbp + 60]
 
  bsearch$35:
-	; SignedDivide middleIndex £temporary2017 2
+	; SignedDivide middleIndex £temporary2586 2
 	xor edx, edx
 	idiv dword [int4$2#]
 	mov [rbp + 64], eax
 
  bsearch$36:
-	; IntegralToIntegral £temporary2019 valueList
+	; IntegralToIntegral £temporary2588 valueList
 	mov rbx, [rbp + 32]
 
  bsearch$37:
-	; SignedMultiply £temporary2020 middleIndex valueSize
+	; SignedMultiply £temporary2589 middleIndex valueSize
 	mov eax, [rbp + 64]
 	xor edx, edx
 	imul dword [rbp + 44]
 
  bsearch$38:
-	; IntegralToIntegral £temporary2021 £temporary2020
+	; IntegralToIntegral £temporary2590 £temporary2589
 	mov rcx, 4294967295
 	and rax, rcx
 
  bsearch$39:
-	; BinaryAdd middleValuePtr £temporary2019 £temporary2021
+	; BinaryAdd middleValuePtr £temporary2588 £temporary2590
 	add rbx, rax
 	mov [rbp + 68], rbx
 
@@ -829,18 +5389,18 @@ section .text
 	; Call compare 76 0
 	mov qword [rbp + 76], bsearch$44
 	mov [rbp + 84], rbp
-	add rbp, 76
 	mov rax, [rbp + 48]
+	add rbp, 76
 	jmp rax
 
  bsearch$44:
 	; PostCall 76
 
  bsearch$45:
-	; GetReturnValue £temporary2024
+	; GetReturnValue £temporary2593
 
  bsearch$46:
-	; Assign middleCompare £temporary2024
+	; Assign middleCompare £temporary2593
 	mov [rbp + 76], ebx
 
  bsearch$47:
@@ -884,7 +5444,7 @@ section .text
 
 section .data
 
-@3946$g_randValue:
+@4377$g_randValue:
 	; InitializerZero 8
 	times 8 db 0
 
@@ -903,31 +5463,31 @@ int8$127#:
 section .text
 
  rand:
-	; SignedMultiply £temporary2028 g_randValue 1664525
-	mov rax, [@3946$g_randValue]
+	; SignedMultiply £temporary2597 g_randValue 1664525
+	mov rax, [@4377$g_randValue]
 	xor rdx, rdx
 	imul qword [int8$1664525#]
 
  rand$1:
-	; BinaryAdd £temporary2029 £temporary2028 1013904223
+	; BinaryAdd £temporary2598 £temporary2597 1013904223
 	add rax, 1013904223
 
  rand$2:
-	; SignedModulo g_randValue £temporary2029 127
+	; SignedModulo g_randValue £temporary2598 127
 	xor rdx, rdx
 	idiv qword [int8$127#]
-	mov [@3946$g_randValue], rdx
+	mov [@4377$g_randValue], rdx
 
  rand$3:
-	; IntegralToIntegral £temporary2031 g_randValue
-	mov rbx, [@3946$g_randValue]
+	; IntegralToIntegral £temporary2600 g_randValue
+	mov rbx, [@4377$g_randValue]
 	cmp rbx, 0
 	jge rand$4
 	neg rbx
 	neg ebx
 
  rand$4:
-	; Return £temporary2031
+	; Return £temporary2600
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -939,14 +5499,14 @@ section .text
 section .text
 
  srand:
-	; IntegralToIntegral £temporary2032 seed
+	; IntegralToIntegral £temporary2601 seed
 	mov eax, [rbp + 24]
 	mov rbx, 4294967295
 	and rax, rbx
 
  srand$1:
-	; Assign g_randValue £temporary2032
-	mov [@3946$g_randValue], rax
+	; Assign g_randValue £temporary2601
+	mov [@4377$g_randValue], rax
 
  srand$2:
 	; Return
@@ -984,50 +5544,50 @@ section .text
 	jge atexit$15
 
  atexit$2:
-	; IntegralToIntegral £temporary2036 index
+	; IntegralToIntegral £temporary2605 index
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
  atexit$3:
-	; UnsignedMultiply £temporary2037 £temporary2036 8
+	; UnsignedMultiply £temporary2606 £temporary2605 8
 	xor rdx, rdx
 	mul qword [Array_8#]
 
  atexit$4:
-	; BinaryAdd £temporary2038 g_funcArray £temporary2037
+	; BinaryAdd £temporary2607 g_funcArray £temporary2606
 	mov rsi, g_funcArray
 	add rsi, rax
 
  atexit$5:
-	; Dereference £temporary2035 -> £temporary2038 £temporary2038 0
+	; Dereference £temporary2604 -> £temporary2607 £temporary2607 0
 
  atexit$6:
-	; NotEqual 13 £temporary2035 -> £temporary2038 0
+	; NotEqual 13 £temporary2604 -> £temporary2607 0
 	cmp qword [rsi], 0
 	jne atexit$13
 
  atexit$7:
-	; IntegralToIntegral £temporary2041 index
+	; IntegralToIntegral £temporary2610 index
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
  atexit$8:
-	; UnsignedMultiply £temporary2042 £temporary2041 8
+	; UnsignedMultiply £temporary2611 £temporary2610 8
 	xor rdx, rdx
 	mul qword [Array_8#]
 
  atexit$9:
-	; BinaryAdd £temporary2043 g_funcArray £temporary2042
+	; BinaryAdd £temporary2612 g_funcArray £temporary2611
 	mov rsi, g_funcArray
 	add rsi, rax
 
  atexit$10:
-	; Dereference £temporary2040 -> £temporary2043 £temporary2043 0
+	; Dereference £temporary2609 -> £temporary2612 £temporary2612 0
 
  atexit$11:
-	; Assign £temporary2040 -> £temporary2043 fcn
+	; Assign £temporary2609 -> £temporary2612 fcn
 	mov rax, [rbp + 24]
 	mov [rsi], rax
 
@@ -1070,59 +5630,59 @@ section .text
 	jl exit$16
 
  exit$2:
-	; IntegralToIntegral £temporary2047 index
+	; IntegralToIntegral £temporary2616 index
 	mov eax, [rbp + 28]
 	mov rbx, 4294967295
 	and rax, rbx
 
  exit$3:
-	; UnsignedMultiply £temporary2048 £temporary2047 8
+	; UnsignedMultiply £temporary2617 £temporary2616 8
 	xor rdx, rdx
 	mul qword [Array_8#]
 
  exit$4:
-	; BinaryAdd £temporary2049 g_funcArray £temporary2048
+	; BinaryAdd £temporary2618 g_funcArray £temporary2617
 	mov rsi, g_funcArray
 	add rsi, rax
 
  exit$5:
-	; Dereference £temporary2046 -> £temporary2049 £temporary2049 0
+	; Dereference £temporary2615 -> £temporary2618 £temporary2618 0
 
  exit$6:
-	; Equal 14 £temporary2046 -> £temporary2049 0
+	; Equal 14 £temporary2615 -> £temporary2618 0
 	cmp qword [rsi], 0
 	je exit$14
 
  exit$7:
-	; IntegralToIntegral £temporary2052 index
+	; IntegralToIntegral £temporary2621 index
 	mov eax, [rbp + 28]
 	mov rbx, 4294967295
 	and rax, rbx
 
  exit$8:
-	; UnsignedMultiply £temporary2053 £temporary2052 8
+	; UnsignedMultiply £temporary2622 £temporary2621 8
 	xor rdx, rdx
 	mul qword [Array_8#]
 
  exit$9:
-	; BinaryAdd £temporary2054 g_funcArray £temporary2053
+	; BinaryAdd £temporary2623 g_funcArray £temporary2622
 	mov rbx, g_funcArray
 	add rbx, rax
 
  exit$10:
-	; Dereference £temporary2051 -> £temporary2054 £temporary2054 0
+	; Dereference £temporary2620 -> £temporary2623 £temporary2623 0
 
  exit$11:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 	mov [rbp + 32], rbx
 
  exit$12:
-	; Call £temporary2051 -> £temporary2054 32 0
+	; Call £temporary2620 -> £temporary2623 32 0
 	mov qword [rbp + 2080], exit$13
 	mov [rbp + 2088], rbp
-	add rbp, 2080
 	mov rsi, rbp
 	mov rax, [rsi]
+	add rbp, 2080
 	jmp rax
 
  exit$13:
@@ -1142,13 +5702,13 @@ section .text
 	mov rax, 60
 
  exit$17:
-	; IntegralToIntegral £temporary2058 status
+	; IntegralToIntegral £temporary2627 status
 	mov edi, [rbp + 24]
 	mov rbx, 4294967295
 	and rdi, rbx
 
  exit$18:
-	; AssignRegister rdi £temporary2058
+	; AssignRegister rdi £temporary2627
 
  exit$19:
 	; SysCall
@@ -1166,175 +5726,175 @@ section .text
 
 section .text
 
- swap:
+ @4387$memswap:
 	; Assign index 0
 	mov dword [rbp + 44], 0
 
- swap$1:
+ @4387$memswap$1:
 	; SignedGreaterThanEqual 19 index valueSize
 	mov eax, [rbp + 40]
 	cmp [rbp + 44], eax
-	jge swap$19
+	jge @4387$memswap$19
 
- swap$2:
-	; IntegralToIntegral £temporary2062 index
+ @4387$memswap$2:
+	; IntegralToIntegral £temporary2631 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- swap$3:
-	; BinaryAdd £temporary2064 leftValuePtr £temporary2062
+ @4387$memswap$3:
+	; BinaryAdd £temporary2633 value1 £temporary2631
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- swap$4:
-	; Dereference £temporary2061 -> £temporary2064 £temporary2064 0
+ @4387$memswap$4:
+	; Dereference £temporary2630 -> £temporary2633 £temporary2633 0
 
- swap$5:
-	; Assign tempValue £temporary2061 -> £temporary2064
+ @4387$memswap$5:
+	; Assign tempValue £temporary2630 -> £temporary2633
 	mov al, [rsi]
 	mov [rbp + 48], al
 
- swap$6:
-	; IntegralToIntegral £temporary2066 index
+ @4387$memswap$6:
+	; IntegralToIntegral £temporary2635 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- swap$7:
-	; BinaryAdd £temporary2068 leftValuePtr £temporary2066
+ @4387$memswap$7:
+	; BinaryAdd £temporary2637 value1 £temporary2635
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- swap$8:
-	; Dereference £temporary2065 -> £temporary2068 £temporary2068 0
+ @4387$memswap$8:
+	; Dereference £temporary2634 -> £temporary2637 £temporary2637 0
 
- swap$9:
-	; IntegralToIntegral £temporary2070 index
+ @4387$memswap$9:
+	; IntegralToIntegral £temporary2639 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- swap$10:
-	; BinaryAdd £temporary2072 rightValuePtr £temporary2070
+ @4387$memswap$10:
+	; BinaryAdd £temporary2641 value2 £temporary2639
 	mov rdi, [rbp + 32]
 	add rdi, rax
 
- swap$11:
-	; Dereference £temporary2069 -> £temporary2072 £temporary2072 0
+ @4387$memswap$11:
+	; Dereference £temporary2638 -> £temporary2641 £temporary2641 0
 
- swap$12:
-	; Assign £temporary2065 -> £temporary2068 £temporary2069 -> £temporary2072
+ @4387$memswap$12:
+	; Assign £temporary2634 -> £temporary2637 £temporary2638 -> £temporary2641
 	mov al, [rdi]
 	mov [rsi], al
 
- swap$13:
-	; IntegralToIntegral £temporary2074 index
+ @4387$memswap$13:
+	; IntegralToIntegral £temporary2643 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- swap$14:
-	; BinaryAdd £temporary2076 rightValuePtr £temporary2074
+ @4387$memswap$14:
+	; BinaryAdd £temporary2645 value2 £temporary2643
 	mov rsi, [rbp + 32]
 	add rsi, rax
 
- swap$15:
-	; Dereference £temporary2073 -> £temporary2076 £temporary2076 0
+ @4387$memswap$15:
+	; Dereference £temporary2642 -> £temporary2645 £temporary2645 0
 
- swap$16:
-	; Assign £temporary2073 -> £temporary2076 tempValue
+ @4387$memswap$16:
+	; Assign £temporary2642 -> £temporary2645 tempValue
 	mov al, [rbp + 48]
 	mov [rsi], al
 
- swap$17:
+ @4387$memswap$17:
 	; BinaryAdd index index 1
 	inc dword [rbp + 44]
 
- swap$18:
+ @4387$memswap$18:
 	; Goto 1
-	jmp swap$1
+	jmp @4387$memswap$1
 
- swap$19:
+ @4387$memswap$19:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- swap$20:
-	; FunctionEnd swap
+ @4387$memswap$20:
+	; FunctionEnd memswap
 
 section .text
 
  qsort:
-	; IntegralToIntegral £temporary2077 valueList
+	; IntegralToIntegral £temporary2646 valueList
 	mov rax, [rbp + 24]
 
  qsort$1:
-	; Assign charList £temporary2077
-	mov [rbp + 52], rax
+	; Assign charList £temporary2646
+	mov [rbp + 48], rax
 
  qsort$2:
-	; BinarySubtract index1 listSize 1
+	; BinarySubtract size listSize 1
 	mov eax, [rbp + 32]
 	dec eax
-	mov [rbp + 60], eax
+	mov [rbp + 56], eax
 
  qsort$3:
-	; SignedLessThanEqual 33 index1 0
-	cmp dword [rbp + 60], 0
+	; SignedLessThanEqual 33 size 0
+	cmp dword [rbp + 56], 0
 	jle qsort$33
 
  qsort$4:
 	; Assign update 0
-	mov dword [rbp + 48], 0
+	mov dword [rbp + 60], 0
 
  qsort$5:
-	; Assign index2 0
+	; Assign index 0
 	mov dword [rbp + 64], 0
 
  qsort$6:
-	; SignedGreaterThanEqual 30 index2 index1
-	mov eax, [rbp + 60]
+	; SignedGreaterThanEqual 30 index size
+	mov eax, [rbp + 56]
 	cmp [rbp + 64], eax
 	jge qsort$30
 
  qsort$7:
-	; SignedMultiply £temporary2083 index2 valueSize
+	; SignedMultiply £temporary2652 index valueSize
 	mov eax, [rbp + 64]
 	xor edx, edx
 	imul dword [rbp + 36]
 
  qsort$8:
-	; IntegralToIntegral £temporary2084 £temporary2083
+	; IntegralToIntegral £temporary2653 £temporary2652
 	mov rbx, 4294967295
 	and rax, rbx
 
  qsort$9:
-	; BinaryAdd valuePtr1 charList £temporary2084
-	mov rbx, [rbp + 52]
+	; BinaryAdd valuePtr1 charList £temporary2653
+	mov rbx, [rbp + 48]
 	add rbx, rax
 	mov [rbp + 68], rbx
 
  qsort$10:
-	; BinaryAdd £temporary2087 index2 1
+	; BinaryAdd £temporary2656 index 1
 	mov eax, [rbp + 64]
 	inc eax
 
  qsort$11:
-	; SignedMultiply £temporary2088 £temporary2087 valueSize
+	; SignedMultiply £temporary2657 £temporary2656 valueSize
 	xor edx, edx
 	imul dword [rbp + 36]
 
  qsort$12:
-	; IntegralToIntegral £temporary2089 £temporary2088
+	; IntegralToIntegral £temporary2658 £temporary2657
 	mov rbx, 4294967295
 	and rax, rbx
 
  qsort$13:
-	; BinaryAdd valuePtr2 charList £temporary2089
-	mov rbx, [rbp + 52]
+	; BinaryAdd valuePtr2 charList £temporary2658
+	mov rbx, [rbp + 48]
 	add rbx, rax
 	mov [rbp + 76], rbx
 
@@ -1355,18 +5915,18 @@ section .text
 	; Call compare 84 0
 	mov qword [rbp + 84], qsort$18
 	mov [rbp + 92], rbp
-	add rbp, 84
 	mov rax, [rbp + 40]
+	add rbp, 84
 	jmp rax
 
  qsort$18:
 	; PostCall 84
 
  qsort$19:
-	; GetReturnValue £temporary2092
+	; GetReturnValue £temporary2661
 
  qsort$20:
-	; SignedLessThanEqual 28 £temporary2092 0
+	; SignedLessThanEqual 28 £temporary2661 0
 	cmp ebx, 0
 	jle qsort$28
 
@@ -1389,21 +5949,21 @@ section .text
 	mov [rbp + 124], eax
 
  qsort$25:
-	; Call swap 84 0
+	; Call memswap 84 0
 	mov qword [rbp + 84], qsort$26
 	mov [rbp + 92], rbp
 	add rbp, 84
-	jmp swap
+	jmp @4387$memswap
 
  qsort$26:
 	; PostCall 84
 
  qsort$27:
 	; Assign update 1
-	mov dword [rbp + 48], 1
+	mov dword [rbp + 60], 1
 
  qsort$28:
-	; BinaryAdd index2 index2 1
+	; BinaryAdd index index 1
 	inc dword [rbp + 64]
 
  qsort$29:
@@ -1412,12 +5972,12 @@ section .text
 
  qsort$30:
 	; Equal 33 update 0
-	cmp dword [rbp + 48], 0
+	cmp dword [rbp + 60], 0
 	je qsort$33
 
  qsort$31:
-	; BinarySubtract index1 index1 1
-	dec dword [rbp + 60]
+	; BinarySubtract size size 1
+	dec dword [rbp + 56]
 
  qsort$32:
 	; Goto 3
@@ -1433,6 +5993,527 @@ section .text
  qsort$34:
 	; FunctionEnd qsort
 
+section .data
+
+string_index2013A2025i0A#:
+	; Initializer String index 1: %i\n
+	db "index 1: %i", 10, 0
+
+section .data
+
+string_2020index23A2025i0A#:
+	; Initializer String   index2: %i\n
+	db "  index2: %i", 10, 0
+
+section .data
+
+string_A#:
+	; Initializer String A
+	db "A", 0
+
+section .data
+
+string_B#:
+	; Initializer String B
+	db "B", 0
+
+section .data
+
+string_C#:
+	; Initializer String C
+	db "C", 0
+
+section .data
+
+string_D#:
+	; Initializer String D
+	db "D", 0
+
+section .data
+
+string_E#:
+	; Initializer String E
+	db "E", 0
+
+section .data
+
+string_X#:
+	; Initializer String X
+	db "X", 0
+
+section .data
+
+string_Y#:
+	; Initializer String Y
+	db "Y", 0
+
+section .data
+
+string_Z#:
+	; Initializer String Z
+	db "Z", 0
+
+section .text
+
+ qsortX:
+	; IntegralToIntegral £temporary2666 valueList
+	mov rax, [rbp + 24]
+
+ qsortX$1:
+	; Assign charList £temporary2666
+	mov [rbp + 52], rax
+
+ qsortX$2:
+	; BinarySubtract index1 listSize 1
+	mov eax, [rbp + 32]
+	dec eax
+	mov [rbp + 60], eax
+
+ qsortX$3:
+	; SignedLessThanEqual 71 index1 0
+	cmp dword [rbp + 60], 0
+	jle qsortX$71
+
+ qsortX$4:
+	; Assign update 0
+	mov dword [rbp + 48], 0
+
+ qsortX$5:
+	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ qsortX$6:
+	; Parameter pointer "index 1: %i\n" 88
+	mov qword [rbp + 88], string_index2013A2025i0A#
+
+ qsortX$7:
+	; Parameter signedint index1 96
+	mov eax, [rbp + 60]
+	mov [rbp + 96], eax
+
+ qsortX$8:
+	; Call printf 64 4
+	mov qword [rbp + 64], qsortX$9
+	mov [rbp + 72], rbp
+	add rbp, 64
+	mov rdi, rbp
+	add rdi, 4
+	jmp printf
+
+ qsortX$9:
+	; PostCall 64
+
+ qsortX$10:
+	; Assign index2 0
+	mov dword [rbp + 64], 0
+
+ qsortX$11:
+	; SignedGreaterThanEqual 64 index2 index1
+	mov eax, [rbp + 60]
+	cmp [rbp + 64], eax
+	jge qsortX$64
+
+ qsortX$12:
+	; PreCall 68 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ qsortX$13:
+	; Parameter pointer "  index2: %i\n" 92
+	mov qword [rbp + 92], string_2020index23A2025i0A#
+
+ qsortX$14:
+	; Parameter signedint index2 100
+	mov eax, [rbp + 64]
+	mov [rbp + 100], eax
+
+ qsortX$15:
+	; Call printf 68 4
+	mov qword [rbp + 68], qsortX$16
+	mov [rbp + 76], rbp
+	add rbp, 68
+	mov rdi, rbp
+	add rdi, 4
+	jmp printf
+
+ qsortX$16:
+	; PostCall 68
+
+ qsortX$17:
+	; SignedMultiply £temporary2674 index2 valueSize
+	mov eax, [rbp + 64]
+	xor edx, edx
+	imul dword [rbp + 36]
+
+ qsortX$18:
+	; IntegralToIntegral £temporary2675 £temporary2674
+	mov rbx, 4294967295
+	and rax, rbx
+
+ qsortX$19:
+	; BinaryAdd valuePtr1 charList £temporary2675
+	mov rbx, [rbp + 52]
+	add rbx, rax
+	mov [rbp + 68], rbx
+
+ qsortX$20:
+	; PreCall 76 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ qsortX$21:
+	; Parameter pointer "A" 100
+	mov qword [rbp + 100], string_A#
+
+ qsortX$22:
+	; Call printf 76 0
+	mov qword [rbp + 76], qsortX$23
+	mov [rbp + 84], rbp
+	add rbp, 76
+	mov rdi, rbp
+	jmp printf
+
+ qsortX$23:
+	; PostCall 76
+
+ qsortX$24:
+	; BinaryAdd £temporary2679 index2 1
+	mov eax, [rbp + 64]
+	inc eax
+
+ qsortX$25:
+	; SignedMultiply £temporary2680 £temporary2679 valueSize
+	xor edx, edx
+	imul dword [rbp + 36]
+
+ qsortX$26:
+	; IntegralToIntegral £temporary2681 £temporary2680
+	mov rbx, 4294967295
+	and rax, rbx
+
+ qsortX$27:
+	; BinaryAdd valuePtr2 charList £temporary2681
+	mov rbx, [rbp + 52]
+	add rbx, rax
+	mov [rbp + 76], rbx
+
+ qsortX$28:
+	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ qsortX$29:
+	; Parameter pointer "B" 108
+	mov qword [rbp + 108], string_B#
+
+ qsortX$30:
+	; Call printf 84 0
+	mov qword [rbp + 84], qsortX$31
+	mov [rbp + 92], rbp
+	add rbp, 84
+	mov rdi, rbp
+	jmp printf
+
+ qsortX$31:
+	; PostCall 84
+
+ qsortX$32:
+	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ qsortX$33:
+	; Parameter pointer valuePtr1 108
+	mov rax, [rbp + 68]
+	mov [rbp + 108], rax
+
+ qsortX$34:
+	; Parameter pointer valuePtr2 116
+	mov rax, [rbp + 76]
+	mov [rbp + 116], rax
+
+ qsortX$35:
+	; Call compare 84 0
+	mov qword [rbp + 84], qsortX$36
+	mov [rbp + 92], rbp
+	mov rax, [rbp + 40]
+	add rbp, 84
+	jmp rax
+
+ qsortX$36:
+	; PostCall 84
+
+ qsortX$37:
+	; GetReturnValue £temporary2685
+
+ qsortX$38:
+	; SignedLessThanEqual 58 £temporary2685 0
+	cmp ebx, 0
+	jle qsortX$58
+
+ qsortX$39:
+	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ qsortX$40:
+	; Parameter pointer "C" 108
+	mov qword [rbp + 108], string_C#
+
+ qsortX$41:
+	; Call printf 84 0
+	mov qword [rbp + 84], qsortX$42
+	mov [rbp + 92], rbp
+	add rbp, 84
+	mov rdi, rbp
+	jmp printf
+
+ qsortX$42:
+	; PostCall 84
+
+ qsortX$43:
+	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ qsortX$44:
+	; Parameter pointer valuePtr1 108
+	mov rax, [rbp + 68]
+	mov [rbp + 108], rax
+
+ qsortX$45:
+	; Parameter pointer valuePtr2 116
+	mov rax, [rbp + 76]
+	mov [rbp + 116], rax
+
+ qsortX$46:
+	; Parameter signedint valueSize 124
+	mov eax, [rbp + 36]
+	mov [rbp + 124], eax
+
+ qsortX$47:
+	; Call memswap 84 0
+	mov qword [rbp + 84], qsortX$48
+	mov [rbp + 92], rbp
+	add rbp, 84
+	jmp @4387$memswap
+
+ qsortX$48:
+	; PostCall 84
+
+ qsortX$49:
+	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ qsortX$50:
+	; Parameter pointer "D" 108
+	mov qword [rbp + 108], string_D#
+
+ qsortX$51:
+	; Call printf 84 0
+	mov qword [rbp + 84], qsortX$52
+	mov [rbp + 92], rbp
+	add rbp, 84
+	mov rdi, rbp
+	jmp printf
+
+ qsortX$52:
+	; PostCall 84
+
+ qsortX$53:
+	; Assign update 1
+	mov dword [rbp + 48], 1
+
+ qsortX$54:
+	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ qsortX$55:
+	; Parameter pointer "E" 108
+	mov qword [rbp + 108], string_E#
+
+ qsortX$56:
+	; Call printf 84 0
+	mov qword [rbp + 84], qsortX$57
+	mov [rbp + 92], rbp
+	add rbp, 84
+	mov rdi, rbp
+	jmp printf
+
+ qsortX$57:
+	; PostCall 84
+
+ qsortX$58:
+	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ qsortX$59:
+	; Parameter pointer "X" 108
+	mov qword [rbp + 108], string_X#
+
+ qsortX$60:
+	; Call printf 84 0
+	mov qword [rbp + 84], qsortX$61
+	mov [rbp + 92], rbp
+	add rbp, 84
+	mov rdi, rbp
+	jmp printf
+
+ qsortX$61:
+	; PostCall 84
+
+ qsortX$62:
+	; BinaryAdd index2 index2 1
+	inc dword [rbp + 64]
+
+ qsortX$63:
+	; Goto 11
+	jmp qsortX$11
+
+ qsortX$64:
+	; PreCall 68 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ qsortX$65:
+	; Parameter pointer "Y" 92
+	mov qword [rbp + 92], string_Y#
+
+ qsortX$66:
+	; Call printf 68 0
+	mov qword [rbp + 68], qsortX$67
+	mov [rbp + 76], rbp
+	add rbp, 68
+	mov rdi, rbp
+	jmp printf
+
+ qsortX$67:
+	; PostCall 68
+
+ qsortX$68:
+	; Equal 71 update 0
+	cmp dword [rbp + 48], 0
+	je qsortX$71
+
+ qsortX$69:
+	; BinarySubtract index1 index1 1
+	dec dword [rbp + 60]
+
+ qsortX$70:
+	; Goto 3
+	jmp qsortX$3
+
+ qsortX$71:
+	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ qsortX$72:
+	; Parameter pointer "Z" 88
+	mov qword [rbp + 88], string_Z#
+
+ qsortX$73:
+	; Call printf 64 0
+	mov qword [rbp + 64], qsortX$74
+	mov [rbp + 72], rbp
+	add rbp, 64
+	mov rdi, rbp
+	jmp printf
+
+ qsortX$74:
+	; PostCall 64
+
+ qsortX$75:
+	; Return
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
+
+ qsortX$76:
+	; FunctionEnd qsortX
+
+section .text
+
+ @4439$swap:
+	; Assign index 0
+	mov dword [rbp + 44], 0
+
+ @4439$swap$1:
+	; SignedGreaterThanEqual 19 index valueSize
+	mov eax, [rbp + 40]
+	cmp [rbp + 44], eax
+	jge @4439$swap$19
+
+ @4439$swap$2:
+	; IntegralToIntegral £temporary2699 index
+	mov eax, [rbp + 44]
+	mov rbx, 4294967295
+	and rax, rbx
+
+ @4439$swap$3:
+	; BinaryAdd £temporary2701 leftValuePtr £temporary2699
+	mov rsi, [rbp + 24]
+	add rsi, rax
+
+ @4439$swap$4:
+	; Dereference £temporary2698 -> £temporary2701 £temporary2701 0
+
+ @4439$swap$5:
+	; Assign tempValue £temporary2698 -> £temporary2701
+	mov al, [rsi]
+	mov [rbp + 48], al
+
+ @4439$swap$6:
+	; IntegralToIntegral £temporary2703 index
+	mov eax, [rbp + 44]
+	mov rbx, 4294967295
+	and rax, rbx
+
+ @4439$swap$7:
+	; BinaryAdd £temporary2705 leftValuePtr £temporary2703
+	mov rsi, [rbp + 24]
+	add rsi, rax
+
+ @4439$swap$8:
+	; Dereference £temporary2702 -> £temporary2705 £temporary2705 0
+
+ @4439$swap$9:
+	; IntegralToIntegral £temporary2707 index
+	mov eax, [rbp + 44]
+	mov rbx, 4294967295
+	and rax, rbx
+
+ @4439$swap$10:
+	; BinaryAdd £temporary2709 rightValuePtr £temporary2707
+	mov rdi, [rbp + 32]
+	add rdi, rax
+
+ @4439$swap$11:
+	; Dereference £temporary2706 -> £temporary2709 £temporary2709 0
+
+ @4439$swap$12:
+	; Assign £temporary2702 -> £temporary2705 £temporary2706 -> £temporary2709
+	mov al, [rdi]
+	mov [rsi], al
+
+ @4439$swap$13:
+	; IntegralToIntegral £temporary2711 index
+	mov eax, [rbp + 44]
+	mov rbx, 4294967295
+	and rax, rbx
+
+ @4439$swap$14:
+	; BinaryAdd £temporary2713 rightValuePtr £temporary2711
+	mov rsi, [rbp + 32]
+	add rsi, rax
+
+ @4439$swap$15:
+	; Dereference £temporary2710 -> £temporary2713 £temporary2713 0
+
+ @4439$swap$16:
+	; Assign £temporary2710 -> £temporary2713 tempValue
+	mov al, [rbp + 48]
+	mov [rsi], al
+
+ @4439$swap$17:
+	; BinaryAdd index index 1
+	inc dword [rbp + 44]
+
+ @4439$swap$18:
+	; Goto 1
+	jmp @4439$swap$1
+
+ @4439$swap$19:
+	; Return
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
+
+ @4439$swap$20:
+	; FunctionEnd swap
+
 section .text
 
  @abs:
@@ -1441,23 +6522,23 @@ section .text
 	jge @abs$4
 
  @abs$1:
-	; UnarySubtract £temporary2098 value
+	; UnarySubtract £temporary2715 value
 	mov ebx, [rbp + 24]
 	neg ebx
 
  @abs$2:
-	; Assign £temporary2099 £temporary2098
+	; Assign £temporary2716 £temporary2715
 
  @abs$3:
 	; Goto 5
 	jmp @abs$5
 
  @abs$4:
-	; Assign £temporary2099 value
+	; Assign £temporary2716 value
 	mov ebx, [rbp + 24]
 
  @abs$5:
-	; Return £temporary2099
+	; Return £temporary2716
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1474,23 +6555,23 @@ section .text
 	jge labs$4
 
  labs$1:
-	; UnarySubtract £temporary2101 value
+	; UnarySubtract £temporary2718 value
 	mov rbx, [rbp + 24]
 	neg rbx
 
  labs$2:
-	; Assign £temporary2102 £temporary2101
+	; Assign £temporary2719 £temporary2718
 
  labs$3:
 	; Goto 5
 	jmp labs$5
 
  labs$4:
-	; Assign £temporary2102 value
+	; Assign £temporary2719 value
 	mov rbx, [rbp + 24]
 
  labs$5:
-	; Return £temporary2102
+	; Return £temporary2719
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]

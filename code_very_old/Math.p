@@ -3,10 +3,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
 
 
-
+    
 
     
-    
+
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -163,7 +163,7 @@ void * realloc ( void * ptr , int newSize ) ;
 void * calloc ( int num , int size ) ;
 void free ( void * ptr ) ;
 
-void qsort ( const void * valueList , int listSize , int valueSize ,
+void qsort ( void * valueList , int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) , ... ) ;
 
 void * bsearch ( const void * key , const void * valueList , int listSize , int valueSize ,
@@ -211,13 +211,13 @@ int n = 0 ;
 
 if ( x > 1 ) {
 while ( x > 1 ) {
-x /= 2.7182818284590452353602874 ;
+x /= 2.71 ;
 ++ n ;
 }
 }
-else if ( x < ( 1 / 2.7182818284590452353602874 ) ) {
-while ( x < ( 1 / 2.7182818284590452353602874 ) ) {
-x *= 2.7182818284590452353602874 ;
+else if ( x < ( 1 / 2.71 ) ) {
+while ( x < ( 1 / 2.71 ) ) {
+x *= 2.71 ;
 -- n ;
 }
 }
@@ -240,11 +240,11 @@ return 0 ;
 }
 }
 
-
     
 
+
 double log10 ( double x ) {
-return log ( x ) / 2.3025850929940456840179914 ;
+return log ( x ) / 2.30 ;
 }
 
 double pow ( double x , double y ) {

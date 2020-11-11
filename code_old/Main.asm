@@ -1139,18 +1139,19 @@ section .text
  main$3:
 	; Return
 	cmp qword [rbp], 0
-	je label$0
+	je main$4
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- label$0:
+ main$4:
+	; Exit
 	mov rdi, 0
 	mov rax, 60
 	syscall
 
- main$4:
+ main$5:
 	; FunctionEnd main
 
 section .data

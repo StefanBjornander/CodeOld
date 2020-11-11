@@ -3,10 +3,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
 
 
-
+    
 
     
-    
+
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -51,10 +51,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
 
 
-
+    
 
     
-    
+
 
        
        
@@ -244,14 +244,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
 
     
 
-extern int g_inStatus , g_inChars ;
-extern void * g_inDevice ;
-
 char scanChar ( void ) ;
 void unscanChar ( char c ) ;
 void scanString ( char * string , int precision ) ;
-long scanLongInt ( void ) ;
-unsigned long scanUnsignedLongInt ( unsigned long base ) ;
+long scanLongInt ( int base ) ;
+unsigned long scanUnsignedLongInt ( int base ) ;
 long double scanLongDouble ( void ) ;
 
 int scanf ( char * format , ... ) ;
@@ -493,7 +490,7 @@ void * realloc ( void * ptr , int newSize ) ;
 void * calloc ( int num , int size ) ;
 void free ( void * ptr ) ;
 
-void qsort ( const void * valueList , int listSize , int valueSize ,
+void qsort ( void * valueList , int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) , ... ) ;
 
 void * bsearch ( const void * key , const void * valueList , int listSize , int valueSize ,

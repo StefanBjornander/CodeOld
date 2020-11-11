@@ -34,7 +34,7 @@ void* realloc(void* ptr, size_t newSize);
 void* calloc(size_t num, size_t size);
 void free(void* ptr);
 
-void qsort(const void* valueList, size_t listSize, size_t valueSize,
+void qsort(void* valueList, size_t listSize, size_t valueSize,
            int (*compare)(const void*, const void*), ...);
 
 void* bsearch(const void* key, const void* valueList, size_t listSize, size_t valueSize,

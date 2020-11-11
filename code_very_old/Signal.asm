@@ -144,8 +144,8 @@ section .text
 	; Call func 36 0
 	mov qword [rbp + 36], raise$22
 	mov [rbp + 44], rbp
-	add rbp, 36
 	mov rax, [rbp + 28]
+	add rbp, 36
 	jmp rax
 
  raise$22:

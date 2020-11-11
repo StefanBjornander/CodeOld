@@ -55,8 +55,8 @@ double log(double x) {
   }
 }
 
-//#define LN_10 2.30
-#define LN_10 2.3025850929940456840179914
+#define LN_10 2.30
+//#define LN_10 2.3025850929940456840179914
 
 double log10(double x) {
   return log(x) / LN_10;

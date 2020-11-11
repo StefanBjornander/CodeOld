@@ -7,10 +7,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
 
 
-
+    
 
     
-    
+
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -200,14 +200,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
 
     
 
-extern int g_inStatus , g_inChars ;
-extern void * g_inDevice ;
-
 char scanChar ( void ) ;
 void unscanChar ( char c ) ;
 void scanString ( char * string , int precision ) ;
-long scanLongInt ( void ) ;
-unsigned long scanUnsignedLongInt ( unsigned long base ) ;
+long scanLongInt ( int base ) ;
+unsigned long scanUnsignedLongInt ( int base ) ;
 long double scanLongDouble ( void ) ;
 
 int scanf ( char * format , ... ) ;
@@ -270,16 +267,8 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\SetJmpTest.c,0$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\SetJmp.h,0$
-
-
-
-
-
-
-
-
-typedef char * jmp_buf [ 3 ];
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\setjmp.h,0$
+ typedef void * jmp_buf [ 3 ];
 int setjmp ( jmp_buf env ) ;
 void longjmp ( jmp_buf env , int value ) ;
 
@@ -288,38 +277,38 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\SetJmpTest.c,1$
 
 jmp_buf buffer ;
 
+double inverse ( double x ) ;
+double divide ( double x , double y ) ;
+
+static void main ( ) {
+char * message ;
+double x ;
+
+printf ( "Please input a value: " ) ;
+scanf ( "%lf" , & x ) ;
+
+if ( ( message = setjmp ( buffer ) ) == 0 ) {
+printf ( "1.0 / %f = %f\n" , x , inverse ( x ) ) ;
+}
+else {
+printf ( "%s\n" , message ) ;
+}
+}
+
+double inverse ( double x ) {
+return divide ( 1 , x ) ;
+}
+
 double divide ( double x , double y ) {
 if ( y != 0 ) {
 return x / y ;
 }
 else {
-char * p = "Division by Zero." ;
-
-longjmp ( buffer , p ) ;
+longjmp ( buffer , "Division by Zero." ) ;
 return 0 ;
 }
 }
 
-double invers ( double x ) {
-return divide ( 1.0 , x ) ;
-}
-
 void setjmp_test ( double x ) {
-char * p ;
-
-if ( ( p = setjmp ( buffer ) ) == 0 ) {
-printf ( "1.0 / %f = %f\n" , x , invers ( x ) ) ;
-}
-else {
-printf ( "p = <%s> <%u>\n" , p , p ) ;
 }
 
-
-
-
-
-
-
-
-
-}

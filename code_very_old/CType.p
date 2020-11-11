@@ -29,10 +29,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
 
 
-
+    
 
     
-    
+
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -222,14 +222,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
 
     
 
-extern int g_inStatus , g_inChars ;
-extern void * g_inDevice ;
-
 char scanChar ( void ) ;
 void unscanChar ( char c ) ;
 void scanString ( char * string , int precision ) ;
-long scanLongInt ( void ) ;
-unsigned long scanUnsignedLongInt ( unsigned long base ) ;
+long scanLongInt ( int base ) ;
+unsigned long scanUnsignedLongInt ( int base ) ;
 long double scanLongDouble ( void ) ;
 
 int scanf ( char * format , ... ) ;
@@ -419,7 +416,7 @@ return ( isgraph ( c ) != 0 ) && ( c != ' ' ) ;
 }
 
 int ispunct ( int c ) {
-return ( isgraph ( c ) != 0 ) && ! isalnum ( c ) ;
+return ( isgraph ( c ) && ! isalnum ( c ) ) ;
 }
 
 int iscntrl ( int c ) {
@@ -436,7 +433,8 @@ if ( isupper ( c ) ) {
 struct lconv * localeConvPtr = localeconv ( ) ;
 
 if ( localeConvPtr != ( ( void * ) 0 ) ) {
-char * lowerCase = localeConvPtr -> lowerCase , * upperCase = localeConvPtr -> upperCase ;
+char * lowerCase = localeConvPtr -> lowerCase ,
+* upperCase = localeConvPtr -> upperCase ;
 int index = ( strchr ( upperCase , c ) - upperCase ) ;
 return ( ( int ) lowerCase [ index ] ) ;
 }

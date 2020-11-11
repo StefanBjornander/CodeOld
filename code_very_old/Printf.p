@@ -3,10 +3,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
 
 
-
+    
 
     
-    
+
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -73,10 +73,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
 
 
-
+    
 
     
-    
+
 
        
        
@@ -266,14 +266,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
 
     
 
-extern int g_inStatus , g_inChars ;
-extern void * g_inDevice ;
-
 char scanChar ( void ) ;
 void unscanChar ( char c ) ;
 void scanString ( char * string , int precision ) ;
-long scanLongInt ( void ) ;
-unsigned long scanUnsignedLongInt ( unsigned long base ) ;
+long scanLongInt ( int base ) ;
+unsigned long scanUnsignedLongInt ( int base ) ;
 long double scanLongDouble ( void ) ;
 
 int scanf ( char * format , ... ) ;
@@ -404,7 +401,7 @@ void * realloc ( void * ptr , int newSize ) ;
 void * calloc ( int num , int size ) ;
 void free ( void * ptr ) ;
 
-void qsort ( const void * valueList , int listSize , int valueSize ,
+void qsort ( void * valueList , int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) , ... ) ;
 
 void * bsearch ( const void * key , const void * valueList , int listSize , int valueSize ,
@@ -438,13 +435,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
     
 
      
-    
-
-     
       
           
-     
-        
+      
+       
       
 
          
@@ -543,19 +537,19 @@ switch ( g_outStatus ) {
 case 0 : {
 FILE * stream = ( FILE * ) g_outDevice ;
    
- register_ah = 0x40s ;
-register_bx = stream -> handle ;
-register_cx = 1 ;
-register_dx = & c ;
-interrupt ( 0x21s ) ;
+    
+     
+   
+    
+    
   
 
    
-    
-         
-        
-   
-   
+ register_rax = 0x01L ;
+register_rdi = ( unsigned long ) stream -> handle ;
+register_rsi = ( unsigned long ) & c ;
+register_rdx = 1L ;
+syscall ( ) ;
   
  ++ g_outChars ;
 break ;

@@ -10,7 +10,7 @@
 }*/
 
 int compare(const void* valuePtr1, const void* valuePtr2) {
-  int intValue1 = *((int*)valuePtr1), intValue2 = *((int*)valuePtr2);
+  int intValue1 = *((int*) valuePtr1), intValue2 = *((int*) valuePtr2);
   return (intValue1 < intValue2) ? -1 : ((intValue1 == intValue2) ? 0 : 1);
 }
 
@@ -39,29 +39,33 @@ void exit_handle3x(void) {
   printf("exit3\n");
 }
 
+void hello(void) {
+  printf("HelloFFF");
+}
+
+void qtest(void f(void)) {
+  printf("f: %u\n", (unsigned) f);
+  f();
+}
+
+void stdlib_testZ(void) {
+  printf("hello: %u\n", (unsigned) hello);
+  qtest(hello);
+  printf("Y");
+}
+
 void stdlib_test(void) {
-  { char s[100], t[100], w[100];
-    char *p = s, *q = t, *r = w;
-
-    double x = strtod("123.456abc", &p), y = atof("123.456");
-    long l = strtol("123abc", &q, 8);
-    unsigned long ul = strtoul("123abc", &r, 8);
-
-    printf("atof(\"123.456\") = %f\n", y);
-    printf("atoi(\"123\") = %i\n", atoi("123"));
-    printf("atol(\"123\") = %li\n\n", atol("123"));
-
-    printf("strtod(\"123.456abc\", &endp) = (%f, %s)\n", x, p);
-    printf("strtol(\"123abc\", &endp) = (%li, %s)\n", l, q);
-    printf("strtoul(\"123abc\", &endp) = (%lu, %s)\n", ul, r);
+  { char *p;
+    printf("atof(\"123.456\") = %f\n", atof("123.456"));
+    printf("strtod(\"123.456789abc\", &p) = (%f, %s)\n", strtod("123.456789abc", &p), p);
   }
 
   printf("\ngetenv(\"path\") = %s\n", getenv("path"));
   printf("system(\"dir\")\n");
   system("dir");
 
-  printf("abs(-3) = %i, abs(3) = %i, labs(-3l) = %li, labs(3l) = %li\n",
-         abs(-3), abs(3), labs(-3l), labs(3l));
+  printf("\nabs(-3) = %i, abs(3) = %i\n", abs(-3), abs(3));
+  printf("labs(-3l) = %li, labs(3l) = %li\n\n", labs(-3l), labs(3l));
 
   { div_t i = div(10, 3);
     printf("div_t(10, 3) = (%i, %i),\n", i.quot, i.rem);
@@ -79,14 +83,13 @@ void stdlib_test(void) {
     { int index;
       printf("\nA List 1: ");
       for (index = 0; index < size; ++index) {
-        //printf("%i ", *(list + index));
-        printf("%i ", *(index + list));
+        printf("%i ", *(list + index));
       }
     }
 
     { int index;
       printf("\nB List 2: ");
-      qsort(list, size, sizeof list[0], reverse_compare);
+      qsort(list, size, sizeof list[0], compare);
       for (index = 0; index < size; ++index) {
         printf("%i ", *(list + index));
       }
@@ -94,7 +97,7 @@ void stdlib_test(void) {
 
     { int index;
       printf("\nC List 3: ");
-      qsort(list, size, sizeof list[0], compare);
+      qsort(list, size, sizeof list[0], reverse_compare);
       for (index = 0; index < size; ++index) {
         printf("%i ", *(list + index));
       }

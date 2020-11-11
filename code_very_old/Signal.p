@@ -43,10 +43,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
 
 
-
+    
 
     
-    
+
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -236,14 +236,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
 
     
 
-extern int g_inStatus , g_inChars ;
-extern void * g_inDevice ;
-
 char scanChar ( void ) ;
 void unscanChar ( char c ) ;
 void scanString ( char * string , int precision ) ;
-long scanLongInt ( void ) ;
-unsigned long scanUnsignedLongInt ( unsigned long base ) ;
+long scanLongInt ( int base ) ;
+unsigned long scanUnsignedLongInt ( int base ) ;
 long double scanLongDouble ( void ) ;
 
 int scanf ( char * format , ... ) ;
@@ -309,32 +306,32 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Signal.c,2$
 
 void signal ( int sig , handler func ) {
    
- printf ( "Signal %i function %p\n" , sig , func ) ;
-register_al = ( short ) sig ;
-register_ah = 0x25s ;
-register_dx = func ;
+         
+      
+   
+   
 
 
 
-interrupt ( 0x21s ) ;
-printf ( "Signal done\n" ) ;
+    
+    
   
   
  }
 
 int raise ( int sig ) {
    
- printf ( "\nRaise signal %i\n" , sig ) ;
-register_al = ( short ) sig ;
-register_ah = 0x35s ;
+       
+      
+   
 
 
-interrupt ( 0x21s ) ;
-handler func = register_bx ;
+    
+    
 
-printf ( "Raise function %p\n" , func ) ;
+      
   
-     
+ handler func = ( ( void * ) 0 ) ;
   
  if ( func == ( ( handler ) 0 ) ) {
 printf ( "Raise default\n" ) ;
