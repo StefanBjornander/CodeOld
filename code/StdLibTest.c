@@ -19,12 +19,18 @@ int reverse_compare(const void* valuePtr1, const void* valuePtr2) {
   return (intValue1 < intValue2) ? 1 : ((intValue1 == intValue2) ? 0 : -1);
 }
 
-void print_div(div_t d) {
+div_t print_div(div_t d) {
   printf("div_t quot %i rem %i\n", d.quot, d.rem);
+  ++d.quot;
+  d.rem++;
+  return d;
 }
 
-void print_ldiv(ldiv_t ld) {
+ldiv_t print_ldiv(ldiv_t ld) {
   printf("ldiv_t quot %li rem %li\n", ld.quot, ld.rem);
+  --ld.qout;
+  ld.rem--;
+  return ld;
 }
 
 void exit_handle1x(void) {
@@ -68,13 +74,15 @@ void stdlib_test(void) {
   printf("labs(-3l) = %li, labs(3l) = %li\n\n", labs(-3l), labs(3l));
 
   { div_t i = div(10, 3);
-    printf("div_t(10, 3) = (%i, %i),\n", i.quot, i.rem);
-    print_div(i);
+    printf("div_t(10, 3) = (%i, %i)\n", i.quot, i.rem);
+    div_t j = print_div(i);
+    printf("div_t(10, 3) = (%i, %i)\n\n", j.quot, j.rem);
   }
 
   { ldiv_t li = ldiv(10, 3);
     printf("ldiv_t(10, 3) = (%li, %li)\n", li.quot, li.rem);
-    print_ldiv(li);
+    ldiv_t lj = print_ldiv(li);
+    printf("ldiv_t(10, 3) = (%li, %li)\n\n", lj.quot, lj.rem);
   }
 
   { int list[] = {3, 4, 2, 1,};
