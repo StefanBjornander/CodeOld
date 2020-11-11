@@ -3,10 +3,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
 
 
-
+    
 
     
-    
+
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -73,10 +73,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
 
 
-
+    
 
     
-    
+
 
        
        
@@ -266,14 +266,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
 
     
 
-extern int g_inStatus , g_inChars ;
-extern void * g_inDevice ;
-
 char scanChar ( void ) ;
 void unscanChar ( char c ) ;
 void scanString ( char * string , int precision ) ;
-long scanLongInt ( void ) ;
-unsigned long scanUnsignedLongInt ( unsigned long base ) ;
+long scanLongInt ( int base ) ;
+unsigned long scanUnsignedLongInt ( int base ) ;
 long double scanLongDouble ( void ) ;
 
 int scanf ( char * format , ... ) ;
@@ -408,13 +405,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
     
 
      
-    
-
-     
       
           
-     
-        
+      
+       
       
 
          
@@ -491,19 +485,19 @@ stream = ( FILE * ) g_inDevice ;
 
 handle = stream -> handle ;
    
- register_ah = 0x3Fs ;
-register_bx = handle ;
-register_cx = 1 ;
-register_dx = & c ;
-interrupt ( 0x21s ) ;
+    
+   
+   
+    
+    
   
 
    
-    
-         
-        
-   
-   
+ register_rax = 0x00L ;
+register_rdi = ( unsigned long ) stream -> handle ;
+register_rsi = ( unsigned long ) & c ;
+register_rdx = 1L ;
+syscall ( ) ;
   
 
 ++ g_inChars ;
@@ -621,19 +615,40 @@ if ( found ) {
 }
 }
 
-unsigned long digitToValue ( char input ) {
-if ( isdigit ( input ) ) {
-return ( input - '0' ) ;
+static int isDigitInBase ( char c , int base ) {
+if ( isdigit ( c ) ) {
+int value = c - '0' ;
+return ( ( value >= 0 ) && ( value < base ) ) ;
 }
-else if ( islower ( input ) ) {
-return ( ( input - 'a' ) + 10ul ) ;
+else if ( islower ( c ) ) {
+int value = ( c - 'a' ) + 10 ;
+return ( ( value >= 0 ) && ( value < base ) ) ;
+}
+else if ( isupper ( c ) ) {
+int value = ( c - 'A' ) + 10 ;
+return ( ( value >= 0 ) && ( value < base ) ) ;
 }
 else {
-return ( ( input - 'A' ) + 10ul ) ;
+return 0 ;
 }
 }
 
-long scanLongInt ( void ) {
+static int digitToValue ( char c ) {
+if ( isdigit ( c ) ) {
+return ( c - '0' ) ;
+}
+else if ( islower ( c ) ) {
+return ( ( c - 'a' ) + 10 ) ;
+}
+else if ( isupper ( c ) ) {
+return ( ( c - 'A' ) + 10 ) ;
+}
+else {
+return 0 ;
+}
+}
+
+long scanLongInt ( int base ) {
 long longValue = 0l ;
 int minus = 0 , found = 0 ;
 char input = scanChar ( ) ;
@@ -650,8 +665,26 @@ minus = 1 ;
 input = scanChar ( ) ;
 }
 
-while ( isdigit ( input ) ) {
-longValue = ( 10l * longValue ) + ( input - '0' ) ;
+if ( base == 0 ) {
+if ( input == '0' ) {
+input = scanChar ( ) ;
+
+if ( tolower ( input ) == 'x' ) {
+base = 16 ;
+input = scanChar ( ) ;
+}
+else {
+base = 8 ;
+}
+}
+else {
+base = 10 ;
+}
+}
+
+while ( isDigitInBase ( input , base ) ) {
+longValue *= base ;
+longValue += digitToValue ( input ) ;
 input = scanChar ( ) ;
 found = 1 ;
 }
@@ -668,8 +701,8 @@ unscanChar ( input ) ;
 return longValue ;
 }
 
-unsigned long scanUnsignedLongInt ( unsigned long base ) {
-unsigned long unsignedLongValue = 0ul , digit ;
+unsigned long scanUnsignedLongInt ( int base ) {
+unsigned long unsignedLongValue = 0 , digit ;
 char input = scanChar ( ) ;
 int found = 1 ;
 
@@ -677,30 +710,30 @@ while ( isspace ( input ) ) {
 input = scanChar ( ) ;
 }
 
+if ( input == '+' ) {
+input = scanChar ( ) ;
+}
+
+if ( base == 0 ) {
 if ( input == '0' ) {
 input = scanChar ( ) ;
 
 if ( tolower ( input ) == 'x' ) {
-base = ( base == 0ul ) ? 16ul : base ;
+base = 16 ;
 input = scanChar ( ) ;
 }
 else {
-base = ( base == 0ul ) ? 8ul : base ;
+base = 8 ;
+}
+}
+else {
+base = 10 ;
 }
 }
 
-if ( base == 0ul ) {
-base = 10ul ;
-}
-
-while ( isxdigit ( input ) ) {
-digit = digitToValue ( input ) ;
-
-if ( digit >= base ) {
-break ;
-}
-
-unsignedLongValue = ( unsignedLongValue * base ) + digit ;
+while ( isDigitInBase ( input , base ) ) {
+unsignedLongValue *= base ;
+unsignedLongValue += digitToValue ( input ) ;
 found = 1 ;
 input = scanChar ( ) ;
 }
@@ -747,10 +780,8 @@ found = 1 ;
 }
 }
 
-unscanChar ( input ) ;
-
 if ( tolower ( input ) == 'e' ) {
-double exponent = ( double ) scanLongInt ( ) ;
+double exponent = ( double ) scanLongInt ( 10 ) ;
 value *= pow ( 10.0 , exponent ) ;
 }
 else {
@@ -838,7 +869,7 @@ break ;
 
 case 'i' :
 case 'd' :
-longValue = scanLongInt ( ) ;
+longValue = scanLongInt ( 10 ) ;
 
 if ( ! star ) {
 if ( shortInt ) {
@@ -859,7 +890,7 @@ percent = 0 ;
 break ;
 
 case 'o' :
-unsignedLongValue = scanUnsignedLongInt ( 8ul ) ;
+unsignedLongValue = scanUnsignedLongInt ( 8 ) ;
 
 if ( ! star ) {
 if ( shortInt ) {
@@ -880,7 +911,7 @@ percent = 0 ;
 break ;
 
 case 'x' :
-unsignedLongValue = scanUnsignedLongInt ( 16ul ) ;
+unsignedLongValue = scanUnsignedLongInt ( 16 ) ;
 
 if ( ! star ) {
 if ( shortInt ) {
@@ -901,7 +932,7 @@ percent = 0 ;
 break ;
 
 case 'u' :
-unsignedLongValue = scanUnsignedLongInt ( 0ul ) ;
+unsignedLongValue = scanUnsignedLongInt ( 0 ) ;
 
 if ( ! star ) {
 if ( shortInt ) {

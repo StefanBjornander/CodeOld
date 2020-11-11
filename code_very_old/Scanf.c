@@ -13,16 +13,6 @@ int g_inStatus, g_inChars;
 void* g_inDevice;
 int g_inCount;
 
-/*
-char scanChar(void) {
-  char c;
-  load_register(register_ah, 0x01);
-  interrupt(0x21s);
-  store_register(c, register_al);
-  return c;
-}
-*/
-
 char scanChar(void) {
   char c = '\0';
   FILE* stream;
@@ -33,39 +23,25 @@ char scanChar(void) {
     case DEVICE:
       stream = (FILE*) g_inDevice;
       
-      /*if ((g_inDevice != stdin) && feof(stream)) {
-        return ((char) EOF);
-      }
-      else {*/
-        handle = stream->handle;
-        //printf("<handle %i> ", handle);
-        //printf("Test1\n");
-        /*load_register(register_ah, 0x3Fs);
-        load_register(register_bx, handle);
-        load_register(register_cx, 1);
-        load_register(register_dx, &c);*/
+      handle = stream->handle;
 #ifdef __WINDOWS__
-        register_ah = 0x3Fs;
-        register_bx = handle;
-        register_cx = 1;
-        register_dx = &c;
-        interrupt(0x21s);
-        //printf("Test2\n");
-        //int i = (int) c;
-        //printf("<char '%c' %i %i>\n", c, c, i);
+      register_ah = 0x3Fs;
+      register_bx = handle;
+      register_cx = 1;
+      register_dx = &c;
+      interrupt(0x21s);
 #endif
 
 #ifdef __LINUX__
-        register_rax = 0x00L;
-        register_rdi = (unsigned long) stream->handle;
-        register_rsi = (unsigned long) &c;
-        register_rdx = 1L;
-        syscall();
+      register_rax = 0x00L;
+      register_rdi = (unsigned long) stream->handle;
+      register_rsi = (unsigned long) &c;
+      register_rdx = 1L;
+      syscall();
 #endif
 
-        ++g_inChars;
-        return c;
-      //}
+      ++g_inChars;
+      return c;
 
     case STRING:
       inString = (char*) g_inDevice;
@@ -77,20 +53,8 @@ char scanChar(void) {
 }
 
 void unscanChar(char /* c */) {
-//  FILE* stream;
-//  int handle;
-
   switch (g_inStatus) {
     case DEVICE:
-/*      stream = (FILE*) g_inDevice;
-      handle = stream->handle;
-  
-      load_register(register_ah, 0x3F);
-      load_register(register_bx, handle);
-      load_register(register_cx, 1);
-      load_register(register_dx, &c);
-      interrupt(0x21s);
-*/
       --g_inChars;
       break;
 
@@ -99,26 +63,6 @@ void unscanChar(char /* c */) {
       break;
   }
 }
-
-/*
-void scanString(char* string, int precision) {
-  int index = 0;
-  char input = scanChar();
-
-  while (isspace(input)) {
-    input = scanChar();
-  }
-
-  while (!isspace(input) && (input != EOF)) {
-    string[index++] = input;
-    input = scanChar();
-  }
-
-  string[index] = '\0';
-  printString(string, 0);
-  printString("Hello", 0);
-}
-*/
 
 void scanPattern(char* string, char* pattern, BOOL not) {
   int index = 0;
@@ -131,13 +75,11 @@ void scanPattern(char* string, char* pattern, BOOL not) {
   if (string != NULL) {
     while ((!not && strchr(pattern, input)) ||
            (not && !strchr(pattern, input))) {
-      //printf("1: <%c>\n", input);
       string[index++] = input;
       input = scanChar();
     }
 
     string[index] = '\0';
-    //printf("2: <%c>\n", input);
   }
   else {
     while ((!not && strchr(pattern, input)) ||
@@ -158,7 +100,7 @@ void scanString(char* string, int precision) {
 
   if (string != NULL) {
     if (precision == 0) {
-              while (!isspace(input) && (input != EOF) && (input != '\n')) {
+      while (!isspace(input) && (input != EOF) && (input != '\n')) {
         string[index++] = input;
         input = scanChar();
         found = TRUE;
@@ -169,7 +111,8 @@ void scanString(char* string, int precision) {
       ++g_inChars;
     }
     else {
-      while ((precision-- > 0) && (!isspace(input) && (input != EOF) && (input != '\n'))) {
+      while ((precision-- > 0) && (!isspace(input) &&
+             (input != EOF) && (input != '\n'))) {
         string[index++] = input;
         input = scanChar();
         found = TRUE;
@@ -184,7 +127,8 @@ void scanString(char* string, int precision) {
   }
   else {
     if (precision == 0) {
-      while (!isspace(input) && (input != EOF) && (input != '\n')) {
+      while (!isspace(input) && (input != EOF) &&
+             (input != '\n')) {
         input = scanChar();
         found = TRUE;
         ++g_inChars;
@@ -193,7 +137,8 @@ void scanString(char* string, int precision) {
       ++g_inChars;
     }
     else {
-      while ((precision-- > 0) && (!isspace(input) && (input != EOF) && (input != '\n'))) {
+      while ((precision-- > 0) && (!isspace(input) &&
+             (input != EOF) && (input != '\n'))) {
         input = scanChar();
         found = TRUE;
         ++g_inChars;
@@ -209,8 +154,6 @@ void scanString(char* string, int precision) {
     ++g_inCount;
   }
 }
-
-//----------------------------------------------------------------------------------------------------------------------
 
 unsigned long digitToValue(char input) {
   if (isdigit(input)) {
@@ -304,8 +247,6 @@ unsigned long scanUnsignedLongInt(unsigned long base) {
   return unsignedLongValue;
 }
 
-//----------------------------------------------------------------------------------------------------------------------
-
 long double scanLongDouble(void) {
   BOOL minus = FALSE, found = FALSE;
   long double value = 0.0L, factor = 1.0L;
@@ -361,11 +302,10 @@ long double scanLongDouble(void) {
   return value;
 }
 
-//----------------------------------------------------------------------------------------------------------------------
-
 int scanFormat(char* format, va_list arg_list) {
   char c, *charPtr;
-  BOOL percent = FALSE, shortInt = FALSE, longIntOrDouble = FALSE, longDouble = FALSE, star = FALSE;
+  BOOL percent = FALSE, shortInt = FALSE, longIntOrDouble = FALSE,
+       longDouble = FALSE, star = FALSE;
 
   long longValue, *longPtr;
   short* shortPtr;
@@ -585,7 +525,6 @@ int scanFormat(char* format, va_list arg_list) {
     }
   }
 
-//  PRINT(g_inCount, i);
   return g_inCount;
 }
 
@@ -596,12 +535,10 @@ int scanf(char* format, ...) {
 }
 
 int vscanf(char* format, va_list arg_list) {
-  //printf("vscanf\n");
   return vfscanf(stdin, format, arg_list);
 }
 
 int fscanf(FILE* inStream, char* format, ...) {
-  //printf("fscanf inStream->handle: %i, stdin->handle: %i\n", inStream->handle, stdin->handle);
   va_list arg_list;
   va_start(arg_list, format);
   return vfscanf(inStream, format, arg_list);
@@ -610,7 +547,6 @@ int fscanf(FILE* inStream, char* format, ...) {
 int vfscanf(FILE* inStream, char* format, va_list arg_list) {
   g_inStatus = DEVICE;
   g_inDevice = (void*) inStream;
-  //printf("vfscanf inStream->handle: %i, stdin->handle: %i\n", inStream->handle, stdin->handle);
   return scanFormat(format, arg_list);
 }
 

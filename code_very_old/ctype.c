@@ -1,57 +1,18 @@
 #include <ctype.h>
 #include <stdio.h>
-#include <Locale.h>
-#include <String.h>
+#include <locale.h>
+#include <string.h>
 #include <stddef.h>
-
-//#define PRINT(x,y) { printf(#x " = <%" #y ">\n", (x)); }
 
 int islower(int c) {
   struct lconv* localeConvPtr = localeconv();
 
-  /*printf("summerTimeZone <%i>\n", localeConvPtr->summerTimeZone);
-  printf("winterTimeZone <%i>\n", localeConvPtr->winterTimeZone);
-
-  int index;  
-  for (index = 0; index < 7; ++index) {
-    printf("shortDayList[%i] = <%s>\n", index, localeConvPtr->shortDayList[index]);
-  }
-
-  for (index = 0; index < 7; ++index) {
-    printf("longDayList[%i] = <%s>\n", index, localeConvPtr->longDayList[index]);
-  }
-
-  for (index = 0; index < 7; ++index) {
-    printf("shortMonthList[%i] = <%s>\n", index, localeConvPtr->shortMonthList[index]);
-  }
-
-  for (index = 0; index < 7; ++index) {
-    printf("longMonthList[%i] = <%s>\n", index, localeConvPtr->longMonthList[index]);
-  }
-
-  printf("lowerCase <%s>\n", localeConvPtr->lowerCase);
-  printf("upperCase <%s>\n", localeConvPtr->upperCase);
-
-  for (index = 0; index < 19; ++index) {
-    printf("messageList[%i] = <%s>\n", index, localeConvPtr->messageList[index]);
-  }*/
-
   if (localeConvPtr != NULL) {
-    //printf("lowerCase <%s>\n", localeConvPtr->lowerCase);
-    //printf("<index %i>\n", strchr(localeConvPtr->lowerCase, c));
     return (strchr(localeConvPtr->lowerCase, c) != NULL);
   }
   else {
     return ((c >= 'a') && (c <= 'z'));
   }
-}
-
-int islowerX(int c) {
-  return ((c >= 'a') && (c <= 'z'));
-}
-
-int isupperX(int c) {
-  return ((c >= 'A') && (c <= 'Z'));
 }
 
 int isupper(int c) {
@@ -103,10 +64,6 @@ int isspace(int c) {
          (c == '\r') || (c == '\t') || (c == '\v');
 }
 
-int tolowerX(int c) {
-  return isupper(c) ? (c + 32) : c;
-}
-
 int tolower(int c) {
   if (isupper(c)) {
     struct lconv* localeConvPtr = localeconv();
@@ -123,10 +80,6 @@ int tolower(int c) {
   else {
     return c;
   }
-}
-
-int toupperX(int c) {
-  return islower(c) ? (c - 32) : c;
 }
 
 int toupper(int c) {

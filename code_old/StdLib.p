@@ -3,10 +3,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
 
 
-
+    
 
     
-    
+
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -230,7 +230,7 @@ void * realloc ( void * ptr , int newSize ) ;
 void * calloc ( int num , int size ) ;
 void free ( void * ptr ) ;
 
-void qsort ( const void * valueList , int listSize , int valueSize ,
+void qsort ( void * valueList , int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) , ... ) ;
 
 void * bsearch ( const void * key , const void * valueList , int listSize , int valueSize ,
@@ -263,10 +263,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
 
 
-
+    
 
     
-    
+
 
        
        
@@ -456,14 +456,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
 
     
 
-extern int g_inStatus , g_inChars ;
-extern void * g_inDevice ;
-
 char scanChar ( void ) ;
 void unscanChar ( char c ) ;
 void scanString ( char * string , int precision ) ;
-long scanLongInt ( void ) ;
-unsigned long scanUnsignedLongInt ( unsigned long base ) ;
+long scanLongInt ( int base ) ;
+unsigned long scanUnsignedLongInt ( int base ) ;
 long double scanLongDouble ( void ) ;
 
 int scanf ( char * format , ... ) ;
@@ -537,28 +534,382 @@ long atol ( char * s ) {
 return strtol ( s , ( char ** ) ( ( void * ) 0 ) , 10 ) ;
 }
 
-long strtol ( char * s , char ** endp , int ) {
-int chars = 0 ;
-long value = 0 ;
-sscanf ( s , "%li%n" , & value , & chars ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+extern int g_inStatus , g_inChars ;
+extern void * g_inDevice ;
+
+long strtol ( char * s , char ** endp , int base ) {
+g_inStatus = 1 ;
+g_inDevice = s ;
+g_inChars = 0 ;
+long longValue = scanLongInt ( base ) ;
 
 if ( endp != ( ( void * ) 0 ) ) {
-* endp = s + chars ;
+* endp = s + g_inChars ;
 }
 
-return value ;
+return longValue ;
 }
 
-unsigned long strtoul ( char * s , char ** endp , int ) {
-int chars = 0 ;
-unsigned long value = 0 ;
-sscanf ( s , "%lu%n" , & value , & chars ) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void strtol_test ( void ) {
+{ int base = 0 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   +0123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   +0x123ABC" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   +0X123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   -0123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   -0x123ABC" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   -0X123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 9 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 10 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 11 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 12 ;
+char text [] = "   +123ABC" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 13 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 9 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 10 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 11 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 12 ;
+char text [] = "   -123ABC" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 13 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtol ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+}
+
+unsigned long strtoul ( char * s , char ** endp , int base ) {
+g_inStatus = 1 ;
+g_inDevice = s ;
+g_inChars = 0 ;
+unsigned long unsignedLongValue = scanUnsignedLongInt ( base ) ;
 
 if ( endp != ( ( void * ) 0 ) ) {
-* endp = s + chars ;
+* endp = s + g_inChars ;
 }
 
-return value ;
+return unsignedLongValue ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void strtoul_test ( void ) {
+{ int base = 0 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   +0123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   +0x123ABC" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   +0X123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   -0123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   -0x123ABC" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 0 ;
+char text [] = "   -0X123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 9 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 10 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 11 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 12 ;
+char text [] = "   +123ABC" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 13 ;
+char text [] = "   +123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 9 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 10 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 11 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 12 ;
+char text [] = "   -123ABC" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
+
+{ int base = 13 ;
+char text [] = "   -123abc" , * pointer ;
+long value = strtoul ( text , & pointer , base ) ;
+printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
+}
 }
 
 double atof ( char * s ) {
@@ -579,15 +930,15 @@ return value ;
 
 void abort ( void ) {
    
- register_ah = 0x4Cs ;
-register_al = -1s ;
-interrupt ( 0x21s ) ;
+    
+   
+    
   
 
    
-    
-   
-   
+ register_rax = 60L ;
+register_rdi = -1L ;
+syscall ( ) ;
   
  }
 
@@ -597,18 +948,6 @@ return ( ( void * ) 0 ) ;
 
 int system ( const char * ) {
 return -1 ;
-}
-
-void memswp ( void * value1 , void * value2 , int valueSize ) {
-char * charValue1 = ( char * ) value1 ;
-char * charValue2 = ( char * ) value2 ;
-
-int index ;
-for ( index = 0 ; index < valueSize ; ++ index ) {
-char tempValue = charValue1 [ index ];
-charValue1 [ index ] = charValue2 [ index ];
-charValue2 [ index ] = tempValue ;
-}
 }
 
 void * bsearch ( const void * keyPtr , const void * valueList ,
@@ -705,43 +1044,41 @@ g_funcArray [ index ] ( ) ;
 }
 
    
- register_al = ( short ) status ;
-register_ah = 0x4Cs ;
-interrupt ( 0x21s ) ;
+       
+   
+    
   
 
    
-    
-       
-   
+ register_rax = 60L ;
+register_rdi = ( unsigned long ) status ;
+syscall ( ) ;
   
  }
 
-void swap ( char * leftValuePtr , char * rightValuePtr , int valueSize ) {
+static void memswap ( char * value1 , char * value2 , int valueSize ) {
 int index ;
 for ( index = 0 ; index < valueSize ; ++ index ) {
-char tempValue = leftValuePtr [ index ];
-leftValuePtr [ index ] = rightValuePtr [ index ];
-rightValuePtr [ index ] = tempValue ;
+char tempValue = value1 [ index ];
+value1 [ index ] = value2 [ index ];
+value2 [ index ] = tempValue ;
 }
 }
 
-void qsort ( const void * valueList , int listSize , int valueSize ,
+void qsort ( void * valueList , int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) ) {
-int update ;
 char * charList = ( char * ) valueList ;
 
-int index1 ;
-for ( index1 = ( listSize - 1 ) ; index1 > 0 ; -- index1 ) {
-update = 0 ;
-
-int index2 ;
-for ( index2 = 0 ; index2 < index1 ; ++ index2 ) {
-char * valuePtr1 = charList + ( index2 * valueSize ) ;
-char * valuePtr2 = charList + ( ( index2 + 1 ) * valueSize ) ;
+int size ;
+for ( size = ( listSize - 1 ) ; size > 0 ; -- size ) {
+int update = 0 ;
+int index ;
+for ( index = 0 ; index < size ; ++ index ) {
+char * valuePtr1 = charList + ( index * valueSize ) ;
+char * valuePtr2 = charList + ( ( index + 1 ) * valueSize ) ;
 
 if ( compare ( valuePtr1 , valuePtr2 ) > 0 ) {
-swap ( valuePtr1 , valuePtr2 , valueSize ) ;
+memswap ( valuePtr1 , valuePtr2 , valueSize ) ;
 update = 1 ;
 }
 }
@@ -751,6 +1088,55 @@ break ;
 }
 }
 }
+
+void qsortX ( const void * valueList , int listSize , int valueSize ,
+int ( * compare ) ( const void * , const void * ) ) {
+int update ;
+char * charList = ( char * ) valueList ;
+
+int index1 ;
+for ( index1 = ( listSize - 1 ) ; index1 > 0 ; -- index1 ) {
+update = 0 ;
+printf ( "index 1: %i\n" , index1 ) ;
+
+int index2 ;
+for ( index2 = 0 ; index2 < index1 ; ++ index2 ) {
+printf ( "  index2: %i\n" , index2 ) ;
+
+char * valuePtr1 = charList + ( index2 * valueSize ) ;
+printf ( "A" ) ;
+char * valuePtr2 = charList + ( ( index2 + 1 ) * valueSize ) ;
+
+printf ( "B" ) ;
+if ( compare ( valuePtr1 , valuePtr2 ) > 0 ) {
+printf ( "C" ) ;
+memswap ( valuePtr1 , valuePtr2 , valueSize ) ;
+printf ( "D" ) ;
+update = 1 ;
+printf ( "E" ) ;
+}
+
+printf ( "X" ) ;
+}
+
+printf ( "Y" ) ;
+if ( ! update ) {
+break ;
+}
+}
+
+printf ( "Z" ) ;
+}
+
+static void swap ( char * leftValuePtr , char * rightValuePtr , int valueSize ) {
+int index ;
+for ( index = 0 ; index < valueSize ; ++ index ) {
+char tempValue = leftValuePtr [ index ];
+leftValuePtr [ index ] = rightValuePtr [ index ];
+rightValuePtr [ index ] = tempValue ;
+}
+}
+
 int abs ( int value ) {
 return ( value < 0 ) ? - value : value ;
 }
@@ -784,4 +1170,3 @@ result . quot = num / denum ;
 result . rem = num % denum ;
 return result ;
 }
-

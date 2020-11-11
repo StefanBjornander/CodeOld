@@ -35,36 +35,10 @@ static struct lconv en_US_utf8 = {-5, -4, enShortDayList, enLongDayList,
                                   "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
                                   enMessageList};
 
-static char* swShortDayList[] = {"Son", "Man", "Tis", "Ons",
-                                 "Tor", "Fre", "Lor"};
-static char* swLongDayList[] = {"Sondag", "Mandag", "Tisdag", "Onsdag",
-                                    "Torsdag", "Fredag", "Lordag"};
-static char* swShortMonthList[] = {"Jan", "Feb", "Mar", "Apr", "Maj", "Jun",
-                                   "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"};
-static char* swLongMonthList[] = {"Januari", "Februari", "Mars", "April",
-                                  "Maj", "Juni", "Juli", "Augusit",
-                              "September", "Oktober", "November", "December"};
-static char* swMessageList[] = {"inga fel", "felaktigt functionsnummer",
-                                "hittar ej filen", "hittar ej sokvagen",
-                                "inget handtag tillgangligt", "atkomst nekad",
-                                "utanfor doman", "utanfor range",
-                                "felaktig multibyte-sekvens",
-                                "fel vid oppning", "fel vid flushing",
-                                "fel vid stangning", "fel oppningslage",
-                                "fel vid skrivning", "fel vid lasning",
-                                "fel vid sokning", "fel vid telling",
-                                "fel vid borttagning av fil",
-                                "fel vid namnbyte av fil"};
-static struct lconv sw_EN_utf8 = {1, 2, swShortDayList, swLongDayList,
-                                  enShortMonthList, swLongMonthList,
-                                  "abcdefghijklmnopqrstuvwxyz",
-                                  "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-                                  swMessageList};
-
 static struct _s {
   char* name;
   struct lconv* localePtr;
-} sArray[] = {{"", &sw_EN_utf8}, {"C", &en_US_utf8}, {"US", &en_US_utf8}, {"SE", &sw_EN_utf8}};
+} sArray[] = {{"", &en_US_utf8}, {"C", &en_US_utf8}, {"US", &en_US_utf8}};
 
 static int sSize = (sizeof sArray) / (sizeof sArray[0]);
 static struct _s* g_currStructPtr = &sArray[0];

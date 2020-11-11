@@ -1,5 +1,5 @@
 #ifndef __ASSERT_H__
-#define __ASEERT_H__
+#define __ASSERT_H__
 
 #ifndef NDEBUG
   #include <stdio.h>

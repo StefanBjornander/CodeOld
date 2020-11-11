@@ -1,10 +1,12 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+   
+   
 
 
 
 
-
-
+    
+    
 
 extern double exp ( double x ) ;
 extern double log ( double x ) ;
@@ -36,12 +38,13 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
+  
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,1$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,0$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
+   
+   
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -57,12 +60,13 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
+  
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,2$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ErrNo.h,1$
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\errno.h,0$
+   
+   
 
 
 
@@ -123,43 +127,46 @@ FTELL , FSIZE , FREMOVE , FRENAME , FTEMPNAME , FTEMPFILE };
 
 extern int errno ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,2$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
+   
+   
+
+     
+                         
+                    
+               
+      
+
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,3$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+   
+   
 
+          
 
+    
+    
 
+    
+    
+    
 
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,4$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\string.h,0$
+   
+   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,5$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,1$
-
-
-
-
+    
 
 extern char * strcpy ( char * target , const char * source ) ;
 extern char * strncpy ( char * target , const char * source , int size ) ;
@@ -182,14 +189,15 @@ extern int memcmp ( const void * left , const void * right , int size ) ;
 extern void * memchr ( const void * block , int i , int size ) ;
 extern void * memset ( void * block , int i , int size ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,5$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,6$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
-
-
-
-
+          
 
 double atof ( char * s ) ;
 int atoi ( char * s ) ;
@@ -211,8 +219,8 @@ void exit ( int status ) ;
 typedef void ( * FUNC_PTR ) ( void ) ;
 int atexit ( FUNC_PTR fcn ) ;
 
-
-
+    
+    
 
 int abs ( int value ) ;
 long labs ( long value ) ;
@@ -242,114 +250,120 @@ long quot , rem ;
 } ldiv_t ;
 
 ldiv_t ldiv ( long num , long denum ) ;
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,6$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,7$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-
-
-
-
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+   
+   
 
 
 
 
+    
+    
 
+       
+       
+       
 
+          
+          
+           
 
+       
+           
+          
 
+       
+       
+       
 
+       
+       
+       
 
+       
+       
+       
+          
 
+       
+       
+       
+       
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
+   
+   
 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
+   
+   
 
+     
+                         
+                    
+               
+      
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+   
+   
 
+          
 
+    
+    
 
+    
+    
+    
 
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
+   
+   
 
+    
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-
-
-
-
-
-
-
-
-
+    
+    
 
 typedef unsigned int UINT ;
 
@@ -368,22 +382,22 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
+   
+    
+    
+    
+    
 
+    
 
+    
+    
+    
+    
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+          
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -415,31 +429,32 @@ int feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
+   
+   
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-
-
-
-
-
+    
+    
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
+    
+    
 
-
-
-
-
-
-
+    
 
 extern int g_inStatus , g_inChars ;
 extern void * g_inDevice ;
@@ -458,15 +473,16 @@ int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
 int sscanf ( char * inString , char * format , ... ) ;
 int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-
-
-
-
-
+    
+    
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -481,12 +497,16 @@ void printString ( char * s , int precision ) ;
 void printString2 ( char * s ) ;
 void printIntRec ( int intValue ) ;
 void printInt ( int intValue , int plus , int space ) ;
-void printDoublePlain ( double doubleValue , int plus , int space , int grid , int precision ) ;
-void printLongDoublePlain ( long double doubleValue , int plus , int space , int grid , int precision ) ;
+void printDoublePlain ( double doubleValue , int plus , int space ,
+int grid , int precision ) ;
+void printLongDoublePlain ( long double doubleValue , int plus ,
+int space , int grid , int precision ) ;
 void printInt ( int intValue , int plus , int space ) ;
 void printLongInt ( long longIntValue , int plus , int space ) ;
-void printLongDoubleFraction ( long double longDoubleValue , int grid , int precision ) ;
-void printLongDoublePlain ( long double longDoubleValue , int plus , int space , int grid , int precision ) ;
+void printLongDoubleFraction ( long double longDoubleValue ,
+int grid , int precision ) ;
+void printLongDoublePlain ( long double longDoubleValue , int plus ,
+int space , int grid , int precision ) ;
 int printFormat ( char * format , char * arg_list ) ;
 
 int printf2 ( char * format ) ;
@@ -497,13 +517,15 @@ int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
 int sprintf ( char * outString , char * format , ... ) ;
 int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+       
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
+  
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,8$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,7$
+       
 
 extern FILE g_fileArray [];
 
@@ -518,7 +540,7 @@ return strtol ( s , ( char ** ) ( ( void * ) 0 ) , 10 ) ;
 long strtol ( char * s , char ** endp , int ) {
 int chars = 0 ;
 long value = 0 ;
-sscanf ( s , "\045\154\151\045\156" , & value , & chars ) ;
+sscanf ( s , "%li%n" , & value , & chars ) ;
 
 if ( endp != ( ( void * ) 0 ) ) {
 * endp = s + chars ;
@@ -530,7 +552,7 @@ return value ;
 unsigned long strtoul ( char * s , char ** endp , int ) {
 int chars = 0 ;
 unsigned long value = 0 ;
-sscanf ( s , "\045\154\165\045\156" , & value , & chars ) ;
+sscanf ( s , "%lu%n" , & value , & chars ) ;
 
 if ( endp != ( ( void * ) 0 ) ) {
 * endp = s + chars ;
@@ -544,9 +566,9 @@ return strtod ( s , ( char ** ) ( ( void * ) 0 ) ) ;
 }
 
 double strtod ( char * s , char ** endp ) {
-int chars = '\000' ;
+int chars = '\0' ;
 double value = 0 ;
-sscanf ( s , "\045\154\146\045\156" , & value , & chars ) ;
+sscanf ( s , "%lf%n" , & value , & chars ) ;
 
 if ( endp != ( ( void * ) 0 ) ) {
 * endp = s + chars ;
@@ -555,175 +577,19 @@ if ( endp != ( ( void * ) 0 ) ) {
 return value ;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 void abort ( void ) {
-
-register_ah = 0x4Cs ;
+   
+ register_ah = 0x4Cs ;
 register_al = -1s ;
-
-
 interrupt ( 0x21s ) ;
+  
 
-
-
-
-
-
-
-}
+   
+    
+   
+   
+  
+ }
 
 char * getenv ( const char * ) {
 return ( ( void * ) 0 ) ;
@@ -745,36 +611,9 @@ charValue2 [ index ] = tempValue ;
 }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-void * bsearch ( const void * keyPtr , const void * valueList , int listSize , int valueSize ,
+void * bsearch ( const void * keyPtr , const void * valueList ,
+int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) ) {
-
 int firstIndex = 0 , lastIndex = listSize - 1 ;
 
 if ( listSize == 0 ) {
@@ -782,19 +621,13 @@ return ( ( void * ) 0 ) ;
 }
 
 while ( 1 ) {
-
-
 { char * firstValuePtr = ( ( char * ) valueList ) + ( firstIndex * valueSize ) ;
 int firstCompare = compare ( keyPtr , firstValuePtr ) ;
 
-
-
 if ( firstCompare < 0 ) {
-
 return ( ( void * ) 0 ) ;
 }
 else if ( firstCompare == 0 ) {
-
 return firstValuePtr ;
 }
 }
@@ -802,507 +635,59 @@ return firstValuePtr ;
 { char * lastValuePtr = ( ( char * ) valueList ) + ( lastIndex * valueSize ) ;
 int lastCompare = compare ( keyPtr , lastValuePtr ) ;
 
-
-
 if ( lastCompare > 0 ) {
-
 return ( ( void * ) 0 ) ;
 }
 else if ( lastCompare == 0 ) {
-
 return lastValuePtr ;
 }
 }
 
 { int middleIndex = ( firstIndex + lastIndex ) / 2 ;
-
 char * middleValuePtr = ( ( char * ) valueList ) + ( middleIndex * valueSize ) ;
 int middleCompare = compare ( keyPtr , middleValuePtr ) ;
 
-
-
 if ( middleCompare < 0 ) {
-
 lastIndex = middleIndex ;
 }
 else if ( middleCompare > 0 ) {
-
 firstIndex = middleIndex ;
 }
 else {
-
 return middleValuePtr ;
 }
 }
 }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 static long g_randValue ;
 
-
-
-
+    
+    
+    
 
 int rand ( void ) {
 g_randValue = ( ( 1664525l * g_randValue ) + 1013904223l ) % 127 ;
-
 return ( int ) g_randValue ;
 }
 
 void srand ( unsigned int seed ) {
 g_randValue = ( long ) seed ;
-
 }
 
-
-
-
-
-
-
-
-
-
-void print_heap2 ( ) {
-unsigned int heapBottom = * ( ( unsigned int * ) 32764 ) ,
-topStack = * ( ( unsigned int * ) 32766 ) ,
-heapTop = * ( ( unsigned int * ) 32762 ) , index = 0u ;
-printf ( "\163\164\141\143\153\040\164\157\160\040\045\165\054\040\150\145\141\160\040\164\157\160\040\045\165\054\040\150\145\141\160\040\142\157\164\164\157\155\040\045\165\012" , topStack , heapTop , heapBottom ) ;
-
-while ( heapTop != 0u ) {
-unsigned int size = * ( ( ( unsigned int * ) heapTop ) + 1 ) ;
-printf ( "\040\040\151\156\144\145\170\040\045\165\054\040\141\144\144\162\145\163\163\040\045\165\054\040\163\151\172\145\040\045\165\012" , index ++ , heapTop , size ) ;
-heapTop = * ( ( unsigned int * ) heapTop ) ;
-}
-
-printf ( "\012" ) ;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+            
 
 FUNC_PTR g_funcArray [ 256 ] = { ( ( void * ) 0 ) };
 
 int atexit ( FUNC_PTR fcn ) {
 int index ;
 
-printf ( "\012" ) ;
 for ( index = 0 ; index < 256 ; ++ index ) {
 if ( g_funcArray [ index ] == ( ( void * ) 0 ) ) {
 g_funcArray [ index ] = fcn ;
-printf ( "\101\144\144\145\144\040\146\165\156\143\164\151\157\156\040\151\156\144\145\170\040\045\151\072\040\045\151\012" , index , g_funcArray [ index ] ) ;
 return 0 ;
 }
 }
@@ -1313,141 +698,24 @@ return -1 ;
 void exit ( int status ) {
 int index ;
 
-
-
-
-
-
-
-
-printf ( "\012" ) ;
 for ( index = ( 256 - 1 ) ; index >= 0 ; -- index ) {
 if ( g_funcArray [ index ] != ( ( void * ) 0 ) ) {
-printf ( "\103\141\154\154\145\144\040\146\165\156\143\164\151\157\156\040\151\156\144\145\170\040\045\151\072\040\045\151\012" , index , g_funcArray [ index ] ) ;
 g_funcArray [ index ] ( ) ;
 }
 }
 
-
-register_al = ( short ) status ;
+   
+ register_al = ( short ) status ;
 register_ah = 0x4Cs ;
-
-
 interrupt ( 0x21s ) ;
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+
+   
+    
+       
+   
+  
+ }
 
 void swap ( char * leftValuePtr , char * rightValuePtr , int valueSize ) {
 int index ;
@@ -1465,12 +733,10 @@ char * charList = ( char * ) valueList ;
 
 int index1 ;
 for ( index1 = ( listSize - 1 ) ; index1 > 0 ; -- index1 ) {
-
 update = 0 ;
 
 int index2 ;
 for ( index2 = 0 ; index2 < index1 ; ++ index2 ) {
-
 char * valuePtr1 = charList + ( index2 * valueSize ) ;
 char * valuePtr2 = charList + ( ( index2 + 1 ) * valueSize ) ;
 
@@ -1481,73 +747,20 @@ update = 1 ;
 }
 
 if ( ! update ) {
-
+break ;
 }
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 int abs ( int value ) {
 return ( value < 0 ) ? - value : value ;
 }
 
 long labs ( long value ) {
 return ( value < 0l ) ? - value : value ;
-
-
-
-
-
-
 }
 
 div_t div ( int num , int denum ) {
-
 div_t result = { 0 , 0 };
-
 
 if ( denum == 0 ) {
 errno = EDOM ;
@@ -1556,7 +769,6 @@ return result ;
 
 result . quot = num / denum ;
 result . rem = num % denum ;
-
 return result ;
 }
 

@@ -52,7 +52,7 @@ int isprint(int c) {
 }
 
 int ispunct(int c) {
-  return (isgraph(c) != 0) && !isalnum(c);
+  return (isgraph(c) && !isalnum(c));
 }
 
 int iscntrl(int c) {
@@ -69,7 +69,8 @@ int tolower(int c) {
     struct lconv* localeConvPtr = localeconv();
 
     if (localeConvPtr != NULL) {
-      char *lowerCase = localeConvPtr->lowerCase, *upperCase = localeConvPtr->upperCase;
+      char *lowerCase = localeConvPtr->lowerCase,
+           *upperCase = localeConvPtr->upperCase;
       int index = (strchr(upperCase, c) - upperCase);
       return ((int) lowerCase[index]);
     }

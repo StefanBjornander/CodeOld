@@ -10,13 +10,13 @@
 
 section .data
 
-@2593$g_tempArray:
+@2589$g_tempArray:
 	; InitializerZero 64
 	times 64 db 0
 
 section .data
 
-@2594$g_tempSize:
+@2590$g_tempSize:
 	; Initializer SignedInt 0
 	dd 0
 
@@ -28,66 +28,66 @@ Array_4#:
 
 section .text
 
- @2596$existsTempName:
+ @2592$existsTempName:
 	; Assign index 0
 	mov dword [rbp + 32], 0
 
- @2596$existsTempName$1:
+ @2592$existsTempName$1:
 	; SignedGreaterThanEqual 16 index g_tempSize
-	mov eax, [@2594$g_tempSize]
+	mov eax, [@2590$g_tempSize]
 	cmp [rbp + 32], eax
-	jge @2596$existsTempName$16
+	jge @2592$existsTempName$16
 
- @2596$existsTempName$2:
+ @2592$existsTempName$2:
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @2596$existsTempName$3:
+ @2592$existsTempName$3:
 	; Parameter pointer name 60
 	mov rax, [rbp + 24]
 	mov [rbp + 60], rax
 
- @2596$existsTempName$4:
-	; IntegralToIntegral £temporary915 index
+ @2592$existsTempName$4:
+	; IntegralToIntegral £temporary916 index
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
- @2596$existsTempName$5:
-	; UnsignedMultiply £temporary916 £temporary915 4
+ @2592$existsTempName$5:
+	; UnsignedMultiply £temporary917 £temporary916 4
 	xor rdx, rdx
 	mul qword [Array_4#]
 
- @2596$existsTempName$6:
-	; BinaryAdd £temporary917 g_tempArray £temporary916
-	mov rsi, @2593$g_tempArray
+ @2592$existsTempName$6:
+	; BinaryAdd £temporary918 g_tempArray £temporary917
+	mov rsi, @2589$g_tempArray
 	add rsi, rax
 
- @2596$existsTempName$7:
-	; Dereference £temporary914 -> £temporary917 £temporary917 0
+ @2592$existsTempName$7:
+	; Dereference £temporary915 -> £temporary918 £temporary918 0
 
- @2596$existsTempName$8:
-	; Parameter pointer £temporary914 -> £temporary917 68
+ @2592$existsTempName$8:
+	; Parameter pointer £temporary915 -> £temporary918 68
 	mov [rbp + 68], rsi
 
- @2596$existsTempName$9:
+ @2592$existsTempName$9:
 	; Call strcmp 36 0
-	mov qword [rbp + 36], @2596$existsTempName$10
+	mov qword [rbp + 36], @2592$existsTempName$10
 	mov [rbp + 44], rbp
 	add rbp, 36
 	jmp strcmp
 
- @2596$existsTempName$10:
+ @2592$existsTempName$10:
 	; PostCall 36
 
- @2596$existsTempName$11:
-	; GetReturnValue £temporary918
+ @2592$existsTempName$11:
+	; GetReturnValue £temporary919
 
- @2596$existsTempName$12:
-	; NotEqual 14 £temporary918 0
+ @2592$existsTempName$12:
+	; NotEqual 14 £temporary919 0
 	cmp ebx, 0
-	jne @2596$existsTempName$14
+	jne @2592$existsTempName$14
 
- @2596$existsTempName$13:
+ @2592$existsTempName$13:
 	; Return 1
 	mov ebx, 1
 	mov rax, [rbp]
@@ -95,15 +95,15 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2596$existsTempName$14:
+ @2592$existsTempName$14:
 	; BinaryAdd index index 1
 	inc dword [rbp + 32]
 
- @2596$existsTempName$15:
+ @2592$existsTempName$15:
 	; Goto 1
-	jmp @2596$existsTempName$1
+	jmp @2592$existsTempName$1
 
- @2596$existsTempName$16:
+ @2592$existsTempName$16:
 	; Return 0
 	mov ebx, 0
 	mov rax, [rbp]
@@ -111,111 +111,111 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2596$existsTempName$17:
+ @2592$existsTempName$17:
 	; FunctionEnd existsTempName
 
 section .text
 
- @2603$generateTempName:
+ @2599$generateTempName:
 	; SignedGreaterThanEqual 58 size 5
 	cmp dword [rbp + 32], 5
-	jge @2603$generateTempName$58
+	jge @2599$generateTempName$58
 
- @2603$generateTempName$1:
+ @2599$generateTempName$1:
 	; Assign c 97
 	mov byte [rbp + 40], 97
 
- @2603$generateTempName$2:
+ @2599$generateTempName$2:
 	; SignedGreaterThan 58 c 122
 	cmp byte [rbp + 40], 122
-	jg @2603$generateTempName$58
+	jg @2599$generateTempName$58
 
- @2603$generateTempName$3:
-	; IntegralToIntegral £temporary924 size
+ @2599$generateTempName$3:
+	; IntegralToIntegral £temporary925 size
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
- @2603$generateTempName$4:
-	; BinaryAdd £temporary926 name £temporary924
+ @2599$generateTempName$4:
+	; BinaryAdd £temporary927 name £temporary925
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- @2603$generateTempName$5:
-	; Dereference £temporary923 -> £temporary926 £temporary926 0
+ @2599$generateTempName$5:
+	; Dereference £temporary924 -> £temporary927 £temporary927 0
 
- @2603$generateTempName$6:
-	; Assign £temporary923 -> £temporary926 c
+ @2599$generateTempName$6:
+	; Assign £temporary924 -> £temporary927 c
 	mov al, [rbp + 40]
 	mov [rsi], al
 
- @2603$generateTempName$7:
-	; BinaryAdd £temporary927 size 1
+ @2599$generateTempName$7:
+	; BinaryAdd £temporary928 size 1
 	mov eax, [rbp + 32]
 	inc eax
 
- @2603$generateTempName$8:
-	; IntegralToIntegral £temporary929 £temporary927
+ @2599$generateTempName$8:
+	; IntegralToIntegral £temporary930 £temporary928
 	mov rbx, 4294967295
 	and rax, rbx
 
- @2603$generateTempName$9:
-	; BinaryAdd £temporary931 name £temporary929
+ @2599$generateTempName$9:
+	; BinaryAdd £temporary932 name £temporary930
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- @2603$generateTempName$10:
-	; Dereference £temporary928 -> £temporary931 £temporary931 0
+ @2599$generateTempName$10:
+	; Dereference £temporary929 -> £temporary932 £temporary932 0
 
- @2603$generateTempName$11:
-	; Assign £temporary928 -> £temporary931 0
+ @2599$generateTempName$11:
+	; Assign £temporary929 -> £temporary932 0
 	mov byte [rsi], 0
 
- @2603$generateTempName$12:
+ @2599$generateTempName$12:
 	; PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @2603$generateTempName$13:
+ @2599$generateTempName$13:
 	; Parameter pointer name 65
 	mov rax, [rbp + 24]
 	mov [rbp + 65], rax
 
- @2603$generateTempName$14:
+ @2599$generateTempName$14:
 	; Call fileexists 41 0
-	mov qword [rbp + 41], @2603$generateTempName$15
+	mov qword [rbp + 41], @2599$generateTempName$15
 	mov [rbp + 49], rbp
 	add rbp, 41
 	jmp fileexists
 
- @2603$generateTempName$15:
+ @2599$generateTempName$15:
 	; PostCall 41
 
- @2603$generateTempName$16:
-	; GetReturnValue £temporary932
+ @2599$generateTempName$16:
+	; GetReturnValue £temporary933
 
- @2603$generateTempName$17:
-	; NotEqual 45 £temporary932 0
+ @2599$generateTempName$17:
+	; NotEqual 45 £temporary933 0
 	cmp ebx, 0
-	jne @2603$generateTempName$45
+	jne @2599$generateTempName$45
 
- @2603$generateTempName$18:
+ @2599$generateTempName$18:
 	; Case 22 status 0
 	mov eax, [rbp + 36]
 	cmp eax, 0
-	je @2603$generateTempName$22
+	je @2599$generateTempName$22
 
- @2603$generateTempName$19:
+ @2599$generateTempName$19:
 	; Case 23 status 1
 	cmp eax, 1
-	je @2603$generateTempName$23
+	je @2599$generateTempName$23
 
- @2603$generateTempName$20:
+ @2599$generateTempName$20:
 	; CaseEnd status
 
- @2603$generateTempName$21:
+ @2599$generateTempName$21:
 	; Goto 45
-	jmp @2603$generateTempName$45
+	jmp @2599$generateTempName$45
 
- @2603$generateTempName$22:
+ @2599$generateTempName$22:
 	; Return name
 	mov rbx, [rbp + 24]
 	mov rax, [rbp]
@@ -223,152 +223,152 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2603$generateTempName$23:
+ @2599$generateTempName$23:
 	; PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @2603$generateTempName$24:
+ @2599$generateTempName$24:
 	; Parameter pointer name 65
 	mov rax, [rbp + 24]
 	mov [rbp + 65], rax
 
- @2603$generateTempName$25:
+ @2599$generateTempName$25:
 	; Call existsTempName 41 0
-	mov qword [rbp + 41], @2603$generateTempName$26
+	mov qword [rbp + 41], @2599$generateTempName$26
 	mov [rbp + 49], rbp
 	add rbp, 41
-	jmp @2596$existsTempName
+	jmp @2592$existsTempName
 
- @2603$generateTempName$26:
+ @2599$generateTempName$26:
 	; PostCall 41
 
- @2603$generateTempName$27:
-	; GetReturnValue £temporary935
+ @2599$generateTempName$27:
+	; GetReturnValue £temporary936
 
- @2603$generateTempName$28:
-	; NotEqual 45 £temporary935 0
+ @2599$generateTempName$28:
+	; NotEqual 45 £temporary936 0
 	cmp ebx, 0
-	jne @2603$generateTempName$45
+	jne @2599$generateTempName$45
 
- @2603$generateTempName$29:
+ @2599$generateTempName$29:
 	; PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @2603$generateTempName$30:
-	; IntegralToIntegral £temporary939 g_tempSize
-	mov eax, [@2594$g_tempSize]
+ @2599$generateTempName$30:
+	; IntegralToIntegral £temporary940 g_tempSize
+	mov eax, [@2590$g_tempSize]
 	mov rbx, 4294967295
 	and rax, rbx
 
- @2603$generateTempName$31:
-	; UnsignedMultiply £temporary940 £temporary939 4
+ @2599$generateTempName$31:
+	; UnsignedMultiply £temporary941 £temporary940 4
 	xor rdx, rdx
 	mul qword [Array_4#]
 
- @2603$generateTempName$32:
-	; BinaryAdd £temporary941 g_tempArray £temporary940
-	mov rsi, @2593$g_tempArray
+ @2599$generateTempName$32:
+	; BinaryAdd £temporary942 g_tempArray £temporary941
+	mov rsi, @2589$g_tempArray
 	add rsi, rax
 
- @2603$generateTempName$33:
-	; Dereference £temporary938 -> £temporary941 £temporary941 0
+ @2599$generateTempName$33:
+	; Dereference £temporary939 -> £temporary942 £temporary942 0
 
- @2603$generateTempName$34:
-	; Parameter pointer £temporary938 -> £temporary941 65
+ @2599$generateTempName$34:
+	; Parameter pointer £temporary939 -> £temporary942 65
 	mov [rbp + 65], rsi
 
- @2603$generateTempName$35:
+ @2599$generateTempName$35:
 	; Parameter pointer name 73
 	mov rax, [rbp + 24]
 	mov [rbp + 73], rax
 
- @2603$generateTempName$36:
+ @2599$generateTempName$36:
 	; Call strcpy 41 0
-	mov qword [rbp + 41], @2603$generateTempName$37
+	mov qword [rbp + 41], @2599$generateTempName$37
 	mov [rbp + 49], rbp
 	add rbp, 41
 	jmp strcpy
 
- @2603$generateTempName$37:
+ @2599$generateTempName$37:
 	; PostCall 41
 
- @2603$generateTempName$38:
-	; Assign £temporary943 g_tempSize
-	mov eax, [@2594$g_tempSize]
+ @2599$generateTempName$38:
+	; Assign £temporary944 g_tempSize
+	mov eax, [@2590$g_tempSize]
 
- @2603$generateTempName$39:
+ @2599$generateTempName$39:
 	; BinaryAdd g_tempSize g_tempSize 1
-	inc dword [@2594$g_tempSize]
+	inc dword [@2590$g_tempSize]
 
- @2603$generateTempName$40:
-	; IntegralToIntegral £temporary945 £temporary943
+ @2599$generateTempName$40:
+	; IntegralToIntegral £temporary946 £temporary944
 	mov rbx, 4294967295
 	and rax, rbx
 
- @2603$generateTempName$41:
-	; UnsignedMultiply £temporary946 £temporary945 4
+ @2599$generateTempName$41:
+	; UnsignedMultiply £temporary947 £temporary946 4
 	xor rdx, rdx
 	mul qword [Array_4#]
 
- @2603$generateTempName$42:
-	; BinaryAdd £temporary947 g_tempArray £temporary946
-	mov rsi, @2593$g_tempArray
+ @2599$generateTempName$42:
+	; BinaryAdd £temporary948 g_tempArray £temporary947
+	mov rsi, @2589$g_tempArray
 	add rsi, rax
 
- @2603$generateTempName$43:
-	; Dereference £temporary944 -> £temporary947 £temporary947 0
+ @2599$generateTempName$43:
+	; Dereference £temporary945 -> £temporary948 £temporary948 0
 
- @2603$generateTempName$44:
-	; Return £temporary944 -> £temporary947
+ @2599$generateTempName$44:
+	; Return £temporary945 -> £temporary948
 	mov rbx, rsi
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2603$generateTempName$45:
+ @2599$generateTempName$45:
 	; PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @2603$generateTempName$46:
+ @2599$generateTempName$46:
 	; Parameter pointer name 65
 	mov rax, [rbp + 24]
 	mov [rbp + 65], rax
 
- @2603$generateTempName$47:
-	; BinaryAdd £temporary948 size 1
+ @2599$generateTempName$47:
+	; BinaryAdd £temporary949 size 1
 	mov eax, [rbp + 32]
 	inc eax
 
- @2603$generateTempName$48:
-	; Parameter signedint £temporary948 73
+ @2599$generateTempName$48:
+	; Parameter signedint £temporary949 73
 	mov [rbp + 73], eax
 
- @2603$generateTempName$49:
+ @2599$generateTempName$49:
 	; Parameter signedint status 77
 	mov eax, [rbp + 36]
 	mov [rbp + 77], eax
 
- @2603$generateTempName$50:
+ @2599$generateTempName$50:
 	; Call generateTempName 41 0
-	mov qword [rbp + 41], @2603$generateTempName$51
+	mov qword [rbp + 41], @2599$generateTempName$51
 	mov [rbp + 49], rbp
 	add rbp, 41
-	jmp @2603$generateTempName
+	jmp @2599$generateTempName
 
- @2603$generateTempName$51:
+ @2599$generateTempName$51:
 	; PostCall 41
 
- @2603$generateTempName$52:
-	; GetReturnValue £temporary949
+ @2599$generateTempName$52:
+	; GetReturnValue £temporary950
 
- @2603$generateTempName$53:
-	; Assign result £temporary949
+ @2599$generateTempName$53:
+	; Assign result £temporary950
 	mov [rbp + 41], rbx
 
- @2603$generateTempName$54:
+ @2599$generateTempName$54:
 	; Equal 56 result 0
 	cmp qword [rbp + 41], 0
-	je @2603$generateTempName$56
+	je @2599$generateTempName$56
 
- @2603$generateTempName$55:
+ @2599$generateTempName$55:
 	; Return result
 	mov rbx, [rbp + 41]
 	mov rax, [rbp]
@@ -376,15 +376,15 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2603$generateTempName$56:
+ @2599$generateTempName$56:
 	; BinaryAdd c c 1
 	inc byte [rbp + 40]
 
- @2603$generateTempName$57:
+ @2599$generateTempName$57:
 	; Goto 2
-	jmp @2603$generateTempName$2
+	jmp @2599$generateTempName$2
 
- @2603$generateTempName$58:
+ @2599$generateTempName$58:
 	; Return 0
 	mov rbx, 0
 	mov rax, [rbp]
@@ -392,7 +392,7 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2603$generateTempName$59:
+ @2599$generateTempName$59:
 	; FunctionEnd generateTempName
 
 section .data
@@ -424,16 +424,16 @@ section .text
 	mov qword [rbp + 36], tmpfile$5
 	mov [rbp + 44], rbp
 	add rbp, 36
-	jmp @2603$generateTempName
+	jmp @2599$generateTempName
 
  tmpfile$5:
 	; PostCall 36
 
  tmpfile$6:
-	; GetReturnValue £temporary951
+	; GetReturnValue £temporary952
 
  tmpfile$7:
-	; Equal 19 £temporary951 0
+	; Equal 19 £temporary952 0
 	cmp rbx, 0
 	je tmpfile$19
 
@@ -460,10 +460,10 @@ section .text
 	; PostCall 36
 
  tmpfile$13:
-	; GetReturnValue £temporary952
+	; GetReturnValue £temporary953
 
  tmpfile$14:
-	; Assign stream £temporary952
+	; Assign stream £temporary953
 	mov [rbp + 24], rbx
 
  tmpfile$15:
@@ -472,11 +472,11 @@ section .text
 	je tmpfile$19
 
  tmpfile$16:
-	; Dereference £temporary956 -> stream stream 0
+	; Dereference £temporary957 -> stream stream 0
 	mov rsi, [rbp + 24]
 
  tmpfile$17:
-	; Assign £temporary956 -> stream 1
+	; Assign £temporary957 -> stream 1
 	mov dword [rsi + 37], 1
 
  tmpfile$18:
@@ -502,7 +502,7 @@ section .text
 
  tmpnam:
 	; SignedGreaterThanEqual 9 g_tempSize 16
-	cmp dword [@2594$g_tempSize], 16
+	cmp dword [@2590$g_tempSize], 16
 	jge tmpnam$9
 
  tmpnam$1:
@@ -526,16 +526,16 @@ section .text
 	mov qword [rbp + 32], tmpnam$6
 	mov [rbp + 40], rbp
 	add rbp, 32
-	jmp @2603$generateTempName
+	jmp @2599$generateTempName
 
  tmpnam$6:
 	; PostCall 32
 
  tmpnam$7:
-	; GetReturnValue £temporary958
+	; GetReturnValue £temporary959
 
  tmpnam$8:
-	; Return £temporary958
+	; Return £temporary959
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]

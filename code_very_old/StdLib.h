@@ -44,13 +44,13 @@ int abs(int value);
 long labs(long value);
 
 typedef struct {
-int quot, rem;
+  int quot, rem;
 } div_t;
 
 div_t div(int num, int denum);
 
 typedef struct {
-long quot, rem;
+  long quot, rem;
 } ldiv_t;
 
 ldiv_t ldiv(long num, long denum);

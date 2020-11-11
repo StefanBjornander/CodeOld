@@ -8,7 +8,7 @@
 
 section .data
 
-@8730$i:
+@8284$i:
 	; Initializer SignedInt 0
 	dd 0
 
@@ -21,60 +21,57 @@ string_25i20#:
 section .text
 
  stack_test:
-	; Empty
-
- stack_test$1:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- stack_test$2:
+ stack_test$1:
 	; Parameter pointer "%i " 48
 	mov qword [rbp + 48], string_25i20#
 
+ stack_test$2:
+	; Assign £temporary3708 i
+	mov eax, [@8284$i]
+
  stack_test$3:
-	; Assign £temporary3746 i
-	mov eax, [@8730$i]
+	; BinaryAdd i i 1
+	inc dword [@8284$i]
 
  stack_test$4:
-	; BinaryAdd i i 1
-	inc dword [@8730$i]
-
- stack_test$5:
-	; Parameter signedint £temporary3746 56
+	; Parameter signedint £temporary3708 56
 	mov [rbp + 56], eax
 
- stack_test$6:
+ stack_test$5:
 	; Call printf 24 4
-	mov qword [rbp + 24], stack_test$7
+	mov qword [rbp + 24], stack_test$6
 	mov [rbp + 32], rbp
 	add rbp, 24
 	mov rdi, rbp
 	add rdi, 4
 	jmp printf
 
- stack_test$7:
+ stack_test$6:
 	; PostCall 24
 
- stack_test$8:
+ stack_test$7:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- stack_test$9:
+ stack_test$8:
 	; Call stack_test 24 0
-	mov qword [rbp + 24], stack_test$10
+	mov qword [rbp + 24], stack_test$9
 	mov [rbp + 32], rbp
 	add rbp, 24
 	jmp stack_test
 
- stack_test$10:
+ stack_test$9:
 	; PostCall 24
 
- stack_test$11:
+ stack_test$10:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- stack_test$12:
+ stack_test$11:
 	; FunctionEnd stack_test
 
 section .data
@@ -107,10 +104,10 @@ section .text
 	; PostCall 36
 
  heap_test$5:
-	; GetReturnValue £temporary3749
+	; GetReturnValue £temporary3711
 
  heap_test$6:
-	; Assign pointer £temporary3749
+	; Assign pointer £temporary3711
 	mov [rbp + 28], rbx
 
  heap_test$7:
@@ -126,7 +123,7 @@ section .text
 	mov qword [rbp + 60], string_102420bytes2Dblock20number3A2025i0A#
 
  heap_test$10:
-	; Assign £temporary3751 count
+	; Assign £temporary3713 count
 	mov eax, [rbp + 24]
 
  heap_test$11:
@@ -134,7 +131,7 @@ section .text
 	inc dword [rbp + 24]
 
  heap_test$12:
-	; Parameter signedint £temporary3751 68
+	; Parameter signedint £temporary3713 68
 	mov [rbp + 68], eax
 
  heap_test$13:

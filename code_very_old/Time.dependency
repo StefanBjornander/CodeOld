@@ -1,1 +1,1 @@
-Time.c Time.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stdlib.h String.h Locale.h Assert.h stdio.h stdlib.h
+Time.c time.h stdio.h math.h ctype.h stdarg.h stddef.h file.h temp.h scanf.h printf.h stdlib.h string.h locale.h assert.h stdio.h stdlib.h

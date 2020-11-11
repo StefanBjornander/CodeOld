@@ -50,7 +50,7 @@ string_Sat#:
 
 section .data
 
-@1498$enShortDayList:
+@1500$enShortDayList:
 	; Initializer Pointer string_Sun#
 	dq string_Sun#
 	; Initializer Pointer string_Mon#
@@ -110,7 +110,7 @@ string_Saturday#:
 
 section .data
 
-@1499$enLongDayList:
+@1501$enLongDayList:
 	; Initializer Pointer string_Sunday#
 	dq string_Sunday#
 	; Initializer Pointer string_Monday#
@@ -200,7 +200,7 @@ string_Dec#:
 
 section .data
 
-@1500$enShortMonthList:
+@1502$enShortMonthList:
 	; Initializer Pointer string_Jan#
 	dq string_Jan#
 	; Initializer Pointer string_Feb#
@@ -294,7 +294,7 @@ string_December#:
 
 section .data
 
-@1501$enLongMonthList:
+@1503$enLongMonthList:
 	; Initializer Pointer string_January#
 	dq string_January#
 	; Initializer Pointer string_February#
@@ -498,433 +498,25 @@ string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#:
 
 section .data
 
-@1524$en_US_utf8:
+@1526$en_US_utf8:
 	; Initializer SignedInt -5
 	dd -5
 	; Initializer SignedInt -4
 	dd -4
-	; Initializer Pointer @1498$enShortDayList
-	dq @1498$enShortDayList
-	; Initializer Pointer @1499$enLongDayList
-	dq @1499$enLongDayList
-	; Initializer Pointer @1500$enShortMonthList
-	dq @1500$enShortMonthList
-	; Initializer Pointer @1501$enLongMonthList
-	dq @1501$enLongMonthList
+	; Initializer Pointer @1500$enShortDayList
+	dq @1500$enShortDayList
+	; Initializer Pointer @1501$enLongDayList
+	dq @1501$enLongDayList
+	; Initializer Pointer @1502$enShortMonthList
+	dq @1502$enShortMonthList
+	; Initializer Pointer @1503$enLongMonthList
+	dq @1503$enLongMonthList
 	; Initializer Pointer string_abcdefghijklmnopqrstuvwxyz#
 	dq string_abcdefghijklmnopqrstuvwxyz#
 	; Initializer Pointer string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#
 	dq string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#
 	; Initializer Pointer enMessageList
 	dq enMessageList
-
-section .data
-
-string_Son#:
-	; Initializer String Son
-	db "Son", 0
-
-section .data
-
-string_Man#:
-	; Initializer String Man
-	db "Man", 0
-
-section .data
-
-string_Tis#:
-	; Initializer String Tis
-	db "Tis", 0
-
-section .data
-
-string_Ons#:
-	; Initializer String Ons
-	db "Ons", 0
-
-section .data
-
-string_Tor#:
-	; Initializer String Tor
-	db "Tor", 0
-
-section .data
-
-string_Fre#:
-	; Initializer String Fre
-	db "Fre", 0
-
-section .data
-
-string_Lor#:
-	; Initializer String Lor
-	db "Lor", 0
-
-section .data
-
-@1525$swShortDayList:
-	; Initializer Pointer string_Son#
-	dq string_Son#
-	; Initializer Pointer string_Man#
-	dq string_Man#
-	; Initializer Pointer string_Tis#
-	dq string_Tis#
-	; Initializer Pointer string_Ons#
-	dq string_Ons#
-	; Initializer Pointer string_Tor#
-	dq string_Tor#
-	; Initializer Pointer string_Fre#
-	dq string_Fre#
-	; Initializer Pointer string_Lor#
-	dq string_Lor#
-
-section .data
-
-string_Sondag#:
-	; Initializer String Sondag
-	db "Sondag", 0
-
-section .data
-
-string_Mandag#:
-	; Initializer String Mandag
-	db "Mandag", 0
-
-section .data
-
-string_Tisdag#:
-	; Initializer String Tisdag
-	db "Tisdag", 0
-
-section .data
-
-string_Onsdag#:
-	; Initializer String Onsdag
-	db "Onsdag", 0
-
-section .data
-
-string_Torsdag#:
-	; Initializer String Torsdag
-	db "Torsdag", 0
-
-section .data
-
-string_Fredag#:
-	; Initializer String Fredag
-	db "Fredag", 0
-
-section .data
-
-string_Lordag#:
-	; Initializer String Lordag
-	db "Lordag", 0
-
-section .data
-
-@1526$swLongDayList:
-	; Initializer Pointer string_Sondag#
-	dq string_Sondag#
-	; Initializer Pointer string_Mandag#
-	dq string_Mandag#
-	; Initializer Pointer string_Tisdag#
-	dq string_Tisdag#
-	; Initializer Pointer string_Onsdag#
-	dq string_Onsdag#
-	; Initializer Pointer string_Torsdag#
-	dq string_Torsdag#
-	; Initializer Pointer string_Fredag#
-	dq string_Fredag#
-	; Initializer Pointer string_Lordag#
-	dq string_Lordag#
-
-section .data
-
-string_Maj#:
-	; Initializer String Maj
-	db "Maj", 0
-
-section .data
-
-string_Okt#:
-	; Initializer String Okt
-	db "Okt", 0
-
-section .data
-
-@1527$swShortMonthList:
-	; Initializer Pointer string_Jan#
-	dq string_Jan#
-	; Initializer Pointer string_Feb#
-	dq string_Feb#
-	; Initializer Pointer string_Mar#
-	dq string_Mar#
-	; Initializer Pointer string_Apr#
-	dq string_Apr#
-	; Initializer Pointer string_Maj#
-	dq string_Maj#
-	; Initializer Pointer string_Jun#
-	dq string_Jun#
-	; Initializer Pointer string_Jul#
-	dq string_Jul#
-	; Initializer Pointer string_Aug#
-	dq string_Aug#
-	; Initializer Pointer string_Sep#
-	dq string_Sep#
-	; Initializer Pointer string_Okt#
-	dq string_Okt#
-	; Initializer Pointer string_Nov#
-	dq string_Nov#
-	; Initializer Pointer string_Dec#
-	dq string_Dec#
-
-section .data
-
-string_Januari#:
-	; Initializer String Januari
-	db "Januari", 0
-
-section .data
-
-string_Februari#:
-	; Initializer String Februari
-	db "Februari", 0
-
-section .data
-
-string_Mars#:
-	; Initializer String Mars
-	db "Mars", 0
-
-section .data
-
-string_Juni#:
-	; Initializer String Juni
-	db "Juni", 0
-
-section .data
-
-string_Juli#:
-	; Initializer String Juli
-	db "Juli", 0
-
-section .data
-
-string_Augusit#:
-	; Initializer String Augusit
-	db "Augusit", 0
-
-section .data
-
-string_Oktober#:
-	; Initializer String Oktober
-	db "Oktober", 0
-
-section .data
-
-@1528$swLongMonthList:
-	; Initializer Pointer string_Januari#
-	dq string_Januari#
-	; Initializer Pointer string_Februari#
-	dq string_Februari#
-	; Initializer Pointer string_Mars#
-	dq string_Mars#
-	; Initializer Pointer string_April#
-	dq string_April#
-	; Initializer Pointer string_Maj#
-	dq string_Maj#
-	; Initializer Pointer string_Juni#
-	dq string_Juni#
-	; Initializer Pointer string_Juli#
-	dq string_Juli#
-	; Initializer Pointer string_Augusit#
-	dq string_Augusit#
-	; Initializer Pointer string_September#
-	dq string_September#
-	; Initializer Pointer string_Oktober#
-	dq string_Oktober#
-	; Initializer Pointer string_November#
-	dq string_November#
-	; Initializer Pointer string_December#
-	dq string_December#
-
-section .data
-
-string_inga20fel#:
-	; Initializer String inga fel
-	db "inga fel", 0
-
-section .data
-
-string_felaktigt20functionsnummer#:
-	; Initializer String felaktigt functionsnummer
-	db "felaktigt functionsnummer", 0
-
-section .data
-
-string_hittar20ej20filen#:
-	; Initializer String hittar ej filen
-	db "hittar ej filen", 0
-
-section .data
-
-string_hittar20ej20sokvagen#:
-	; Initializer String hittar ej sokvagen
-	db "hittar ej sokvagen", 0
-
-section .data
-
-string_inget20handtag20tillgangligt#:
-	; Initializer String inget handtag tillgangligt
-	db "inget handtag tillgangligt", 0
-
-section .data
-
-string_atkomst20nekad#:
-	; Initializer String atkomst nekad
-	db "atkomst nekad", 0
-
-section .data
-
-string_utanfor20doman#:
-	; Initializer String utanfor doman
-	db "utanfor doman", 0
-
-section .data
-
-string_utanfor20range#:
-	; Initializer String utanfor range
-	db "utanfor range", 0
-
-section .data
-
-string_felaktig20multibyte2Dsekvens#:
-	; Initializer String felaktig multibyte-sekvens
-	db "felaktig multibyte-sekvens", 0
-
-section .data
-
-string_fel20vid20oppning#:
-	; Initializer String fel vid oppning
-	db "fel vid oppning", 0
-
-section .data
-
-string_fel20vid20flushing#:
-	; Initializer String fel vid flushing
-	db "fel vid flushing", 0
-
-section .data
-
-string_fel20vid20stangning#:
-	; Initializer String fel vid stangning
-	db "fel vid stangning", 0
-
-section .data
-
-string_fel20oppningslage#:
-	; Initializer String fel oppningslage
-	db "fel oppningslage", 0
-
-section .data
-
-string_fel20vid20skrivning#:
-	; Initializer String fel vid skrivning
-	db "fel vid skrivning", 0
-
-section .data
-
-string_fel20vid20lasning#:
-	; Initializer String fel vid lasning
-	db "fel vid lasning", 0
-
-section .data
-
-string_fel20vid20sokning#:
-	; Initializer String fel vid sokning
-	db "fel vid sokning", 0
-
-section .data
-
-string_fel20vid20telling#:
-	; Initializer String fel vid telling
-	db "fel vid telling", 0
-
-section .data
-
-string_fel20vid20borttagning20av20fil#:
-	; Initializer String fel vid borttagning av fil
-	db "fel vid borttagning av fil", 0
-
-section .data
-
-string_fel20vid20namnbyte20av20fil#:
-	; Initializer String fel vid namnbyte av fil
-	db "fel vid namnbyte av fil", 0
-
-section .data
-
-@1529$swMessageList:
-	; Initializer Pointer string_inga20fel#
-	dq string_inga20fel#
-	; Initializer Pointer string_felaktigt20functionsnummer#
-	dq string_felaktigt20functionsnummer#
-	; Initializer Pointer string_hittar20ej20filen#
-	dq string_hittar20ej20filen#
-	; Initializer Pointer string_hittar20ej20sokvagen#
-	dq string_hittar20ej20sokvagen#
-	; Initializer Pointer string_inget20handtag20tillgangligt#
-	dq string_inget20handtag20tillgangligt#
-	; Initializer Pointer string_atkomst20nekad#
-	dq string_atkomst20nekad#
-	; Initializer Pointer string_utanfor20doman#
-	dq string_utanfor20doman#
-	; Initializer Pointer string_utanfor20range#
-	dq string_utanfor20range#
-	; Initializer Pointer string_felaktig20multibyte2Dsekvens#
-	dq string_felaktig20multibyte2Dsekvens#
-	; Initializer Pointer string_fel20vid20oppning#
-	dq string_fel20vid20oppning#
-	; Initializer Pointer string_fel20vid20flushing#
-	dq string_fel20vid20flushing#
-	; Initializer Pointer string_fel20vid20stangning#
-	dq string_fel20vid20stangning#
-	; Initializer Pointer string_fel20oppningslage#
-	dq string_fel20oppningslage#
-	; Initializer Pointer string_fel20vid20skrivning#
-	dq string_fel20vid20skrivning#
-	; Initializer Pointer string_fel20vid20lasning#
-	dq string_fel20vid20lasning#
-	; Initializer Pointer string_fel20vid20sokning#
-	dq string_fel20vid20sokning#
-	; Initializer Pointer string_fel20vid20telling#
-	dq string_fel20vid20telling#
-	; Initializer Pointer string_fel20vid20borttagning20av20fil#
-	dq string_fel20vid20borttagning20av20fil#
-	; Initializer Pointer string_fel20vid20namnbyte20av20fil#
-	dq string_fel20vid20namnbyte20av20fil#
-
-section .data
-
-@1530$sw_EN_utf8:
-	; Initializer SignedInt 1
-	dd 1
-	; Initializer SignedInt 2
-	dd 2
-	; Initializer Pointer @1525$swShortDayList
-	dq @1525$swShortDayList
-	; Initializer Pointer @1526$swLongDayList
-	dq @1526$swLongDayList
-	; Initializer Pointer @1500$enShortMonthList
-	dq @1500$enShortMonthList
-	; Initializer Pointer @1528$swLongMonthList
-	dq @1528$swLongMonthList
-	; Initializer Pointer string_abcdefghijklmnopqrstuvwxyz#
-	dq string_abcdefghijklmnopqrstuvwxyz#
-	; Initializer Pointer string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#
-	dq string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#
-	; Initializer Pointer @1529$swMessageList
-	dq @1529$swMessageList
 
 section .data
 
@@ -946,41 +538,31 @@ string_US#:
 
 section .data
 
-string_SE#:
-	; Initializer String SE
-	db "SE", 0
-
-section .data
-
-@1533$sArray:
+@1529$sArray:
 	; Initializer Pointer string_#
 	dq string_#
-	; Initializer Pointer @1530$sw_EN_utf8
-	dq @1530$sw_EN_utf8
+	; Initializer Pointer @1526$en_US_utf8
+	dq @1526$en_US_utf8
 	; Initializer Pointer string_C#
 	dq string_C#
-	; Initializer Pointer @1524$en_US_utf8
-	dq @1524$en_US_utf8
+	; Initializer Pointer @1526$en_US_utf8
+	dq @1526$en_US_utf8
 	; Initializer Pointer string_US#
 	dq string_US#
-	; Initializer Pointer @1524$en_US_utf8
-	dq @1524$en_US_utf8
-	; Initializer Pointer string_SE#
-	dq string_SE#
-	; Initializer Pointer @1530$sw_EN_utf8
-	dq @1530$sw_EN_utf8
+	; Initializer Pointer @1526$en_US_utf8
+	dq @1526$en_US_utf8
 
 section .data
 
-@1534$sSize:
+@1530$sSize:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@1535$g_currStructPtr:
-	; Initializer Pointer @1533$sArray
-	dq @1533$sArray
+@1531$g_currStructPtr:
+	; Initializer Pointer @1529$sArray
+	dq @1529$sArray
 
 section .data
 
@@ -992,15 +574,15 @@ section .text
 
  setlocale:
 	; Equal 4 g_currStructPtr 0
-	cmp qword [@1535$g_currStructPtr], 0
+	cmp qword [@1531$g_currStructPtr], 0
 	je setlocale$4
 
  setlocale$1:
-	; Dereference £temporary371 -> g_currStructPtr g_currStructPtr 0
-	mov rsi, [@1535$g_currStructPtr]
+	; Dereference £temporary372 -> g_currStructPtr g_currStructPtr 0
+	mov rsi, [@1531$g_currStructPtr]
 
  setlocale$2:
-	; Assign £temporary372 £temporary371 -> g_currStructPtr
+	; Assign £temporary373 £temporary372 -> g_currStructPtr
 	mov rax, [rsi]
 
  setlocale$3:
@@ -1008,16 +590,16 @@ section .text
 	jmp setlocale$5
 
  setlocale$4:
-	; Assign £temporary372 0
+	; Assign £temporary373 0
 	mov rax, 0
 
  setlocale$5:
-	; Assign oldName £temporary372
+	; Assign oldName £temporary373
 	mov [rbp + 40], rax
 
  setlocale$6:
 	; Assign g_currStructPtr 0
-	mov qword [@1535$g_currStructPtr], 0
+	mov qword [@1531$g_currStructPtr], 0
 
  setlocale$7:
 	; Equal 30 newName 0
@@ -1030,7 +612,7 @@ section .text
 
  setlocale$9:
 	; SignedGreaterThanEqual 30 index sSize
-	mov eax, [@1534$sSize]
+	mov eax, [@1530$sSize]
 	cmp [rbp + 36], eax
 	jge setlocale$30
 
@@ -1043,26 +625,26 @@ section .text
 	mov [rbp + 72], rax
 
  setlocale$12:
-	; IntegralToIntegral £temporary377 index
+	; IntegralToIntegral £temporary378 index
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
  setlocale$13:
-	; UnsignedMultiply £temporary378 £temporary377 16
+	; UnsignedMultiply £temporary379 £temporary378 16
 	xor rdx, rdx
 	mul qword [Array_16#]
 
  setlocale$14:
-	; BinaryAdd £temporary379 sArray £temporary378
-	mov rsi, @1533$sArray
+	; BinaryAdd £temporary380 sArray £temporary379
+	mov rsi, @1529$sArray
 	add rsi, rax
 
  setlocale$15:
-	; Dereference £temporary376 -> £temporary379 £temporary379 0
+	; Dereference £temporary377 -> £temporary380 £temporary380 0
 
  setlocale$16:
-	; Parameter pointer £temporary376.name -> £temporary379 80
+	; Parameter pointer £temporary377.name -> £temporary380 80
 	mov rax, [rsi]
 	mov [rbp + 80], rax
 
@@ -1077,38 +659,38 @@ section .text
 	; PostCall 48
 
  setlocale$19:
-	; GetReturnValue £temporary380
+	; GetReturnValue £temporary381
 
  setlocale$20:
-	; NotEqual 28 £temporary380 0
+	; NotEqual 28 £temporary381 0
 	cmp ebx, 0
 	jne setlocale$28
 
  setlocale$21:
-	; IntegralToIntegral £temporary383 index
+	; IntegralToIntegral £temporary384 index
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
  setlocale$22:
-	; UnsignedMultiply £temporary384 £temporary383 16
+	; UnsignedMultiply £temporary385 £temporary384 16
 	xor rdx, rdx
 	mul qword [Array_16#]
 
  setlocale$23:
-	; BinaryAdd £temporary385 sArray £temporary384
-	mov rsi, @1533$sArray
+	; BinaryAdd £temporary386 sArray £temporary385
+	mov rsi, @1529$sArray
 	add rsi, rax
 
  setlocale$24:
-	; Dereference £temporary382 -> £temporary385 £temporary385 0
+	; Dereference £temporary383 -> £temporary386 £temporary386 0
 
  setlocale$25:
-	; Address £temporary386 £temporary382 -> £temporary385
+	; Address £temporary387 £temporary383 -> £temporary386
 
  setlocale$26:
-	; Assign g_currStructPtr £temporary386
-	mov [@1535$g_currStructPtr], rsi
+	; Assign g_currStructPtr £temporary387
+	mov [@1531$g_currStructPtr], rsi
 
  setlocale$27:
 	; Goto 30
@@ -1137,15 +719,15 @@ section .text
 
  localeconv:
 	; Equal 4 g_currStructPtr 0
-	cmp qword [@1535$g_currStructPtr], 0
+	cmp qword [@1531$g_currStructPtr], 0
 	je localeconv$4
 
  localeconv$1:
-	; Dereference £temporary388 -> g_currStructPtr g_currStructPtr 0
-	mov rsi, [@1535$g_currStructPtr]
+	; Dereference £temporary389 -> g_currStructPtr g_currStructPtr 0
+	mov rsi, [@1531$g_currStructPtr]
 
  localeconv$2:
-	; Assign £temporary389 £temporary388 -> g_currStructPtr
+	; Assign £temporary390 £temporary389 -> g_currStructPtr
 	mov rbx, [rsi + 8]
 
  localeconv$3:
@@ -1153,11 +735,11 @@ section .text
 	jmp localeconv$5
 
  localeconv$4:
-	; Assign £temporary389 0
+	; Assign £temporary390 0
 	mov rbx, 0
 
  localeconv$5:
-	; Return £temporary389
+	; Return £temporary390
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
