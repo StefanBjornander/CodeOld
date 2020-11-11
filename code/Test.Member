@@ -12801,18 +12801,26 @@
 3: parameter d$rem, offset 10
 4: call function noellipse-ellipse printf, extra 0
 5: post call
-6: empty
-7: return
-8: function end print_div
+6: d$quot = d$quot + 1
+7: d$rem = d$rem + 1
+8: return_value = d
+9: return
+10: empty
+11: return
+12: function end print_div
 0: call header
 1: parameter string_ldiv_t20quot2025li20rem2025li0A#, offset 6
 2: parameter ld$quot, offset 8
 3: parameter ld$rem, offset 12
 4: call function noellipse-ellipse printf, extra 0
 5: post call
-6: empty
-7: return
-8: function end print_ldiv
+6: ld$quot = ld$quot - 1
+7: ld$rem = ld$rem - 1
+8: return_value = ld
+9: return
+10: empty
+11: return
+12: function end print_ldiv
 0: call header
 1: parameter string_exit10A#, offset 6
 2: call function noellipse-ellipse printf, extra 0
@@ -12843,8 +12851,8 @@
 6: function end hello
 0: call header
 1: parameter string_f3A2025u0A#, offset 6
-2: £temporary5990 = int_to_int f (Pointer -> Unsigned_Int)
-3: parameter £temporary5990, offset 8
+2: £temporary6000 = int_to_int f (Pointer -> Unsigned_Int)
+3: parameter £temporary6000, offset 8
 4: call function noellipse-ellipse printf, extra 0
 5: post call
 6: call header
@@ -12855,8 +12863,8 @@
 11: function end qtest
 0: call header
 1: parameter string_hello3A2025u0A#, offset 6
-2: £temporary5995 = int_to_int hello (Function -> Unsigned_Int)
-3: parameter £temporary5995, offset 8
+2: £temporary6005 = int_to_int hello (Function -> Unsigned_Int)
+3: parameter £temporary6005, offset 8
 4: call function noellipse-ellipse printf, extra 0
 5: post call
 6: call header
@@ -12876,20 +12884,20 @@
 3: parameter string_1232E456#, offset 14
 4: call function noellipse-noellipse atof
 5: post call
-6: £temporary6003 = return_value
-7: parameter £temporary6003, offset 8
+6: £temporary6013 = return_value
+7: parameter £temporary6013, offset 8
 8: call function noellipse-ellipse printf, extra 0
 9: post call
 10: call header
 11: parameter string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A#, offset 6
 12: call header
 13: parameter string_1232E456789abc#, offset 14
-14: £temporary6005 = &p
-15: parameter £temporary6005, offset 16
+14: £temporary6015 = &p
+15: parameter £temporary6015, offset 16
 16: call function noellipse-noellipse strtod
 17: post call
-18: £temporary6006 = return_value
-19: parameter £temporary6006, offset 8
+18: £temporary6016 = return_value
+19: parameter £temporary6016, offset 8
 20: parameter p, offset 16
 21: call function noellipse-ellipse printf, extra 0
 22: post call
@@ -12899,8 +12907,8 @@
 26: parameter string_path#, offset 14
 27: call function noellipse-noellipse getenv
 28: post call
-29: £temporary6008 = return_value
-30: parameter £temporary6008, offset 8
+29: £temporary6018 = return_value
+30: parameter £temporary6018, offset 8
 31: call function noellipse-ellipse printf, extra 0
 32: post call
 33: call header
@@ -12917,14 +12925,14 @@
 44: parameter -3, offset 14
 45: call function noellipse-noellipse _abs
 46: post call
-47: £temporary6012 = return_value
-48: parameter £temporary6012, offset 8
+47: £temporary6022 = return_value
+48: parameter £temporary6022, offset 8
 49: call header
 50: parameter 3, offset 16
 51: call function noellipse-noellipse _abs
 52: post call
-53: £temporary6013 = return_value
-54: parameter £temporary6013, offset 10
+53: £temporary6023 = return_value
+54: parameter £temporary6023, offset 10
 55: call function noellipse-ellipse printf, extra 0
 56: post call
 57: call header
@@ -12933,14 +12941,14 @@
 60: parameter -3, offset 14
 61: call function noellipse-noellipse labs
 62: post call
-63: £temporary6015 = return_value
-64: parameter £temporary6015, offset 8
+63: £temporary6025 = return_value
+64: parameter £temporary6025, offset 8
 65: call header
 66: parameter 3, offset 18
 67: call function noellipse-noellipse labs
 68: post call
-69: £temporary6016 = return_value
-70: parameter £temporary6016, offset 12
+69: £temporary6026 = return_value
+70: parameter £temporary6026, offset 12
 71: call function noellipse-ellipse printf, extra 0
 72: post call
 73: call header
@@ -12948,10 +12956,10 @@
 75: parameter 3, offset 8
 76: call function noellipse-noellipse div
 77: post call
-78: £temporary6018 -> £temporary6019 = return_value
-79: i = £temporary6018 -> £temporary6019
+78: £temporary6028 -> £temporary6029 = return_value
+79: i = £temporary6028 -> £temporary6029
 80: call header
-81: parameter string_div_t28102C20329203D202825i2C2025i292C0A#, offset 6
+81: parameter string_div_t28102C20329203D202825i2C2025i290A#, offset 6
 82: parameter i$quot, offset 8
 83: parameter i$rem, offset 10
 84: call function noellipse-ellipse printf, extra 0
@@ -12960,155 +12968,171 @@
 87: parameter i, offset 6
 88: call function noellipse-noellipse print_div
 89: post call
-90: call header
-91: parameter 10, offset 6
-92: parameter 3, offset 10
-93: call function noellipse-noellipse ldiv
-94: post call
-95: £temporary6024 -> £temporary6025 = return_value
-96: li = £temporary6024 -> £temporary6025
-97: call header
-98: parameter string_ldiv_t28102C20329203D202825li2C2025li290A#, offset 6
-99: parameter li$quot, offset 8
-100: parameter li$rem, offset 12
-101: call function noellipse-ellipse printf, extra 0
+90: £temporary6033 -> £temporary6034 = return_value
+91: j = £temporary6033 -> £temporary6034
+92: call header
+93: parameter string_div_t28102C20329203D202825i2C2025i290A0A#, offset 6
+94: parameter j$quot, offset 8
+95: parameter j$rem, offset 10
+96: call function noellipse-ellipse printf, extra 0
+97: post call
+98: call header
+99: parameter 10, offset 6
+100: parameter 3, offset 10
+101: call function noellipse-noellipse ldiv
 102: post call
-103: call header
-104: parameter li, offset 6
-105: call function noellipse-noellipse print_ldiv
-106: post call
-107: list[0] = 3
-108: list[1] = 4
-109: list[2] = 2
-110: list[3] = 1
-111: size = 4
-112: call header
-113: parameter string_0AA20List2013A20#, offset 6
-114: call function noellipse-ellipse printf, extra 0
-115: post call
-116: index = 0
-117: empty
-118: if index < size goto 121
-119: goto 133
-120: check track map float stack
-121: empty
-122: call header
-123: parameter string_25i20#, offset 6
-124: £temporary6038 = index * 2
-125: £temporary6039 = list + £temporary6038
-126: £temporary6040 -> £temporary6039 = *£temporary6039
-127: parameter £temporary6040 -> £temporary6039, offset 8
-128: call function noellipse-ellipse printf, extra 0
-129: post call
-130: empty
-131: index = index + 1
-132: goto 117
-133: call header
-134: parameter string_0AB20List2023A20#, offset 6
-135: call function noellipse-ellipse printf, extra 0
-136: post call
-137: call header
-138: parameter list, offset 6
-139: parameter size, offset 8
-140: parameter 2, offset 10
-141: parameter compare, offset 12
-142: call function noellipse-ellipse qsort, extra 0
-143: post call
-144: index = 0
-145: empty
-146: if index < size goto 149
-147: goto 161
-148: check track map float stack
-149: empty
-150: call header
-151: parameter string_25i20#, offset 6
-152: £temporary6047 = index * 2
-153: £temporary6048 = list + £temporary6047
-154: £temporary6049 -> £temporary6048 = *£temporary6048
-155: parameter £temporary6049 -> £temporary6048, offset 8
-156: call function noellipse-ellipse printf, extra 0
-157: post call
-158: empty
-159: index = index + 1
-160: goto 145
-161: call header
-162: parameter string_0AC20List2033A20#, offset 6
-163: call function noellipse-ellipse printf, extra 0
-164: post call
-165: call header
-166: parameter list, offset 6
-167: parameter size, offset 8
-168: parameter 2, offset 10
-169: parameter reverse_compare, offset 12
-170: call function noellipse-ellipse qsort, extra 0
-171: post call
-172: index = 0
-173: empty
-174: if index < size goto 177
-175: goto 189
-176: check track map float stack
-177: empty
-178: call header
-179: parameter string_25i20#, offset 6
-180: £temporary6056 = index * 2
-181: £temporary6057 = list + £temporary6056
-182: £temporary6058 -> £temporary6057 = *£temporary6057
-183: parameter £temporary6058 -> £temporary6057, offset 8
-184: call function noellipse-ellipse printf, extra 0
-185: post call
-186: empty
-187: index = index + 1
-188: goto 173
+103: £temporary6038 -> £temporary6039 = return_value
+104: li = £temporary6038 -> £temporary6039
+105: call header
+106: parameter string_ldiv_t28102C20329203D202825li2C2025li290A#, offset 6
+107: parameter li$quot, offset 8
+108: parameter li$rem, offset 12
+109: call function noellipse-ellipse printf, extra 0
+110: post call
+111: call header
+112: parameter li, offset 6
+113: call function noellipse-noellipse print_ldiv
+114: post call
+115: £temporary6043 -> £temporary6044 = return_value
+116: lj = £temporary6043 -> £temporary6044
+117: call header
+118: parameter string_ldiv_t28102C20329203D202825li2C2025li290A0A#, offset 6
+119: parameter lj$quot, offset 8
+120: parameter lj$rem, offset 12
+121: call function noellipse-ellipse printf, extra 0
+122: post call
+123: list[0] = 3
+124: list[1] = 4
+125: list[2] = 2
+126: list[3] = 1
+127: size = 4
+128: call header
+129: parameter string_0AA20List2013A20#, offset 6
+130: call function noellipse-ellipse printf, extra 0
+131: post call
+132: index = 0
+133: empty
+134: if index < size goto 137
+135: goto 149
+136: check track map float stack
+137: empty
+138: call header
+139: parameter string_25i20#, offset 6
+140: £temporary6056 = index * 2
+141: £temporary6057 = list + £temporary6056
+142: £temporary6058 -> £temporary6057 = *£temporary6057
+143: parameter £temporary6058 -> £temporary6057, offset 8
+144: call function noellipse-ellipse printf, extra 0
+145: post call
+146: empty
+147: index = index + 1
+148: goto 133
+149: call header
+150: parameter string_0AB20List2023A20#, offset 6
+151: call function noellipse-ellipse printf, extra 0
+152: post call
+153: call header
+154: parameter list, offset 6
+155: parameter size, offset 8
+156: parameter 2, offset 10
+157: parameter compare, offset 12
+158: call function noellipse-ellipse qsort, extra 0
+159: post call
+160: index = 0
+161: empty
+162: if index < size goto 165
+163: goto 177
+164: check track map float stack
+165: empty
+166: call header
+167: parameter string_25i20#, offset 6
+168: £temporary6065 = index * 2
+169: £temporary6066 = list + £temporary6065
+170: £temporary6067 -> £temporary6066 = *£temporary6066
+171: parameter £temporary6067 -> £temporary6066, offset 8
+172: call function noellipse-ellipse printf, extra 0
+173: post call
+174: empty
+175: index = index + 1
+176: goto 161
+177: call header
+178: parameter string_0AC20List2033A20#, offset 6
+179: call function noellipse-ellipse printf, extra 0
+180: post call
+181: call header
+182: parameter list, offset 6
+183: parameter size, offset 8
+184: parameter 2, offset 10
+185: parameter reverse_compare, offset 12
+186: call function noellipse-ellipse qsort, extra 0
+187: post call
+188: index = 0
 189: empty
-190: call header
-191: parameter string_0A0ASearch3A0A#, offset 6
-192: call function noellipse-ellipse printf, extra 0
-193: post call
-194: key = 0
-195: empty
-196: if key < 6 goto 199
-197: goto 232
-198: check track map float stack
-199: empty
-200: call header
-201: £temporary6063 = &key
-202: parameter £temporary6063, offset 6
-203: parameter list, offset 8
-204: parameter size, offset 10
-205: parameter 2, offset 12
-206: parameter compare, offset 14
-207: call function noellipse-noellipse bsearch
-208: post call
-209: £temporary6065 = return_value
-210: £temporary6066 = int_to_int £temporary6065 (Pointer -> Pointer)
-211: p = £temporary6066
-212: if p != 0 goto 214
-213: goto 219
-214: empty
-215: £temporary6068 = p - list
-216: £temporary6069 = £temporary6068 / 2
-217: £temporary6073 = £temporary6069
-218: goto 221
-219: empty
-220: £temporary6073 = -1
-221: empty
-222: index = £temporary6073
-223: call header
-224: parameter string_20202825i2C2025i290A#, offset 6
-225: parameter key, offset 8
-226: parameter index, offset 10
-227: call function noellipse-ellipse printf, extra 0
-228: post call
-229: empty
-230: key = key + 1
-231: goto 195
-232: call header
-233: parameter string_0A#, offset 6
-234: call function noellipse-ellipse printf, extra 0
-235: post call
-236: empty
-237: return
-238: function end stdlib_test
+190: if index < size goto 193
+191: goto 205
+192: check track map float stack
+193: empty
+194: call header
+195: parameter string_25i20#, offset 6
+196: £temporary6074 = index * 2
+197: £temporary6075 = list + £temporary6074
+198: £temporary6076 -> £temporary6075 = *£temporary6075
+199: parameter £temporary6076 -> £temporary6075, offset 8
+200: call function noellipse-ellipse printf, extra 0
+201: post call
+202: empty
+203: index = index + 1
+204: goto 189
+205: empty
+206: call header
+207: parameter string_0A0ASearch3A0A#, offset 6
+208: call function noellipse-ellipse printf, extra 0
+209: post call
+210: key = 0
+211: empty
+212: if key < 6 goto 215
+213: goto 248
+214: check track map float stack
+215: empty
+216: call header
+217: £temporary6081 = &key
+218: parameter £temporary6081, offset 6
+219: parameter list, offset 8
+220: parameter size, offset 10
+221: parameter 2, offset 12
+222: parameter compare, offset 14
+223: call function noellipse-noellipse bsearch
+224: post call
+225: £temporary6083 = return_value
+226: £temporary6084 = int_to_int £temporary6083 (Pointer -> Pointer)
+227: p = £temporary6084
+228: if p != 0 goto 230
+229: goto 235
+230: empty
+231: £temporary6086 = p - list
+232: £temporary6087 = £temporary6086 / 2
+233: £temporary6091 = £temporary6087
+234: goto 237
+235: empty
+236: £temporary6091 = -1
+237: empty
+238: index = £temporary6091
+239: call header
+240: parameter string_20202825i2C2025i290A#, offset 6
+241: parameter key, offset 8
+242: parameter index, offset 10
+243: call function noellipse-ellipse printf, extra 0
+244: post call
+245: empty
+246: key = key + 1
+247: goto 211
+248: call header
+249: parameter string_0A#, offset 6
+250: call function noellipse-ellipse printf, extra 0
+251: post call
+252: empty
+253: return
+254: function end stdlib_test
 0: weekdays[0] = string_Sun#
 1: weekdays[1] = string_Mon#
 2: weekdays[2] = string_Tue#
@@ -13120,21 +13144,21 @@
 8: parameter 0, offset 6
 9: call function noellipse-noellipse time
 10: post call
-11: £temporary6153 = return_value
-12: now = £temporary6153
+11: £temporary6179 = return_value
+12: now = £temporary6179
 13: call header
-14: £temporary6154 = &now
-15: parameter £temporary6154, offset 6
+14: £temporary6180 = &now
+15: parameter £temporary6180, offset 6
 16: call function noellipse-noellipse gmtime
 17: post call
-18: £temporary6155 = return_value
-19: p = £temporary6155
+18: £temporary6181 = return_value
+19: p = £temporary6181
 20: call header
 21: parameter p, offset 6
 22: call function noellipse-noellipse mktime
 23: post call
-24: £temporary6156 = return_value
-25: now2 = £temporary6156
+24: £temporary6182 = return_value
+25: now2 = £temporary6182
 26: call header
 27: parameter string_now2013A2025lu0A#, offset 6
 28: parameter now, offset 8
@@ -13145,18 +13169,18 @@
 33: parameter now2, offset 8
 34: call function noellipse-ellipse printf, extra 0
 35: post call
-36: £temporary6159 -> p = *p
-37: s = £temporary6159 -> p
+36: £temporary6185 -> p = *p
+37: s = £temporary6185 -> p
 38: call header
 39: parameter string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#, offset 6
-40: £temporary6162 = s$tm_wday * 2
-41: £temporary6163 = weekdays + £temporary6162
-42: £temporary6161 -> £temporary6163 = *£temporary6163
-43: parameter £temporary6161 -> £temporary6163, offset 8
-44: £temporary6165 = 1900 + s$tm_year
-45: parameter £temporary6165, offset 10
-46: £temporary6167 = s$tm_mon + 1
-47: parameter £temporary6167, offset 12
+40: £temporary6188 = s$tm_wday * 2
+41: £temporary6189 = weekdays + £temporary6188
+42: £temporary6187 -> £temporary6189 = *£temporary6189
+43: parameter £temporary6187 -> £temporary6189, offset 8
+44: £temporary6191 = 1900 + s$tm_year
+45: parameter £temporary6191, offset 10
+46: £temporary6193 = s$tm_mon + 1
+47: parameter £temporary6193, offset 12
 48: parameter s$tm_mday, offset 14
 49: parameter s$tm_hour, offset 16
 50: parameter s$tm_min, offset 18
@@ -13167,23 +13191,23 @@
 55: call function noellipse-ellipse printf, extra 0
 56: post call
 57: call header
-58: £temporary6176 = &now
-59: parameter £temporary6176, offset 6
+58: £temporary6202 = &now
+59: parameter £temporary6202, offset 6
 60: call function noellipse-noellipse localtime
 61: post call
-62: £temporary6177 = return_value
-63: £temporary6178 -> £temporary6177 = *£temporary6177
-64: s = £temporary6178 -> £temporary6177
+62: £temporary6203 = return_value
+63: £temporary6204 -> £temporary6203 = *£temporary6203
+64: s = £temporary6204 -> £temporary6203
 65: call header
 66: parameter string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#, offset 6
-67: £temporary6181 = s$tm_wday * 2
-68: £temporary6182 = weekdays + £temporary6181
-69: £temporary6180 -> £temporary6182 = *£temporary6182
-70: parameter £temporary6180 -> £temporary6182, offset 8
-71: £temporary6184 = 1900 + s$tm_year
-72: parameter £temporary6184, offset 10
-73: £temporary6186 = s$tm_mon + 1
-74: parameter £temporary6186, offset 12
+67: £temporary6207 = s$tm_wday * 2
+68: £temporary6208 = weekdays + £temporary6207
+69: £temporary6206 -> £temporary6208 = *£temporary6208
+70: parameter £temporary6206 -> £temporary6208, offset 8
+71: £temporary6210 = 1900 + s$tm_year
+72: parameter £temporary6210, offset 10
+73: £temporary6212 = s$tm_mon + 1
+74: parameter £temporary6212, offset 12
 75: parameter s$tm_mday, offset 14
 76: parameter s$tm_hour, offset 16
 77: parameter s$tm_min, offset 18
@@ -13196,23 +13220,23 @@
 84: call header
 85: parameter buffer1, offset 6
 86: call header
-87: £temporary6195 = &s
-88: parameter £temporary6195, offset 112
+87: £temporary6221 = &s
+88: parameter £temporary6221, offset 112
 89: call function noellipse-noellipse asctime
 90: post call
-91: £temporary6196 = return_value
-92: parameter £temporary6196, offset 8
+91: £temporary6222 = return_value
+92: parameter £temporary6222, offset 8
 93: call function noellipse-noellipse strcpy
 94: post call
 95: call header
 96: parameter buffer2, offset 6
 97: call header
-98: £temporary6198 = &now
-99: parameter £temporary6198, offset 112
+98: £temporary6224 = &now
+99: parameter £temporary6224, offset 112
 100: call function noellipse-noellipse ctime
 101: post call
-102: £temporary6199 = return_value
-103: parameter £temporary6199, offset 8
+102: £temporary6225 = return_value
+103: parameter £temporary6225, offset 8
 104: call function noellipse-noellipse strcpy
 105: post call
 106: call header
@@ -13225,12 +13249,12 @@
 113: parameter buffer, offset 6
 114: parameter 300, offset 8
 115: parameter string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y#, offset 10
-116: £temporary6202 = &s
-117: parameter £temporary6202, offset 12
+116: £temporary6228 = &s
+117: parameter £temporary6228, offset 12
 118: call function noellipse-noellipse strftime
 119: post call
-120: £temporary6203 = return_value
-121: i = £temporary6203
+120: £temporary6229 = return_value
+121: i = £temporary6229
 122: call header
 123: parameter string_strftime203C25i3E203C25s3E0A#, offset 6
 124: parameter i, offset 8

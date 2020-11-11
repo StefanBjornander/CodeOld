@@ -395,7 +395,7 @@ return d ;
 
 ldiv_t print_ldiv ( ldiv_t ld ) {
 printf ( "ldiv_t quot %li rem %li\n" , ld . quot , ld . rem ) ;
--- ld . qout ;
+-- ld . quot ;
 ld . rem --;
 return ld ;
 }

@@ -28,7 +28,7 @@ div_t print_div(div_t d) {
 
 ldiv_t print_ldiv(ldiv_t ld) {
   printf("ldiv_t quot %li rem %li\n", ld.quot, ld.rem);
-  --ld.qout;
+  --ld.quot;
   ld.rem--;
   return ld;
 }
