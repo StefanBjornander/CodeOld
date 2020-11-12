@@ -6,11 +6,10 @@
 5: Assign intValue2 £temporary4240 -> £temporary4239
 6: SignedGreaterThanEqual 9 intValue1 intValue2
 7: Assign £temporary4244 -1
-8: Goto 14
+8: Goto 13
 9: NotEqual 12 intValue1 intValue2
-10: Assign £temporary4243 0
+10: Assign £temporary4244 0
 11: Goto 13
-12: Assign £temporary4243 1
-13: Assign £temporary4244 £temporary4243
-14: Return £temporary4244
-15: FunctionEnd compare
+12: Assign £temporary4244 1
+13: Return £temporary4244
+14: FunctionEnd compare

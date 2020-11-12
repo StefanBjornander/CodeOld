@@ -930,13 +930,13 @@ realloc$68:	; call header integral zero 0 stack zero 0
 
 realloc$69:	; parameter newMemorySize, offset 6
 258:		mov a182, [bp + 8]
-259:		mov [bp + 24], a182
+259:		mov [bp + 20], a182
 261:	
 
 realloc$70:	; call function noellipse-noellipse malloc
-262:		mov word [bp + 18], realloc$71
-263:		mov [bp + 20], bp
-264:		add bp, 18
+262:		mov word [bp + 14], realloc$71
+263:		mov [bp + 16], bp
+264:		add bp, 14
 265:		jmp malloc
 267:	
 
@@ -947,11 +947,11 @@ realloc$72:	; £temporary338 = return_value
 274:	
 
 realloc$73:	; newMemoryPtr = £temporary338
-275:		mov [bp + 18], t184
+275:		mov [bp + 14], t184
 277:	
 
 realloc$74:	; if newMemoryPtr == 0 goto 87
-278:		cmp word [bp + 18], 0
+278:		cmp word [bp + 14], 0
 279:		je realloc$87
 281:	
 
@@ -959,24 +959,24 @@ realloc$75:	; call header integral zero 0 stack zero 0
 283:	
 
 realloc$76:	; parameter newMemoryPtr, offset 6
-284:		mov a185, [bp + 18]
-285:		mov [bp + 26], a185
+284:		mov a185, [bp + 14]
+285:		mov [bp + 22], a185
 287:	
 
 realloc$77:	; parameter oldMemoryPtr, offset 8
 288:		mov a186, [bp + 6]
-289:		mov [bp + 28], a186
+289:		mov [bp + 24], a186
 291:	
 
 realloc$78:	; parameter newMemorySize, offset 10
 292:		mov a187, [bp + 8]
-293:		mov [bp + 30], a187
+293:		mov [bp + 26], a187
 295:	
 
 realloc$79:	; call function noellipse-noellipse memcpy
-296:		mov word [bp + 20], realloc$80
-297:		mov [bp + 22], bp
-298:		add bp, 20
+296:		mov word [bp + 16], realloc$80
+297:		mov [bp + 18], bp
+298:		add bp, 16
 299:		jmp memcpy
 301:	
 
@@ -988,13 +988,13 @@ realloc$81:	; call header integral zero 0 stack zero 0
 
 realloc$82:	; parameter oldMemoryPtr, offset 6
 306:		mov a188, [bp + 6]
-307:		mov [bp + 26], a188
+307:		mov [bp + 22], a188
 309:	
 
 realloc$83:	; call function noellipse-noellipse free
-310:		mov word [bp + 20], realloc$84
-311:		mov [bp + 22], bp
-312:		add bp, 20
+310:		mov word [bp + 16], realloc$84
+311:		mov [bp + 18], bp
+312:		add bp, 16
 313:		jmp free
 315:	
 
@@ -1002,7 +1002,7 @@ realloc$84:	; post call
 317:	
 
 realloc$85:	; return_value = newMemoryPtr
-318:		mov a189, [bp + 18]
+318:		mov a189, [bp + 14]
 320:	
 
 realloc$86:	; return

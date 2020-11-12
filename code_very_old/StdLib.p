@@ -574,13 +574,15 @@ long strtol ( char * s , char ** endp , int base ) {
 g_inStatus = 1 ;
 g_inDevice = s ;
 g_inChars = 0 ;
-long longValue = scanLongInt ( base ) ;
+
+{ long value = scanLongInt ( base ) ;
 
 if ( endp != ( ( void * ) 0 ) ) {
 * endp = s + g_inChars ;
 }
 
-return longValue ;
+return value ;
+}
 }
 
 
@@ -749,13 +751,15 @@ unsigned long strtoul ( char * s , char ** endp , int base ) {
 g_inStatus = 1 ;
 g_inDevice = s ;
 g_inChars = 0 ;
-unsigned long unsignedLongValue = scanUnsignedLongInt ( base ) ;
+
+{ unsigned long unsignedLongValue = scanUnsignedLongInt ( base ) ;
 
 if ( endp != ( ( void * ) 0 ) ) {
 * endp = s + g_inChars ;
 }
 
 return unsignedLongValue ;
+}
 }
 
 

@@ -267,7 +267,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Temp.c,0$
        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,0$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\string.h,0$
    
    
 

@@ -358,206 +358,207 @@ int scanFormat(char* format, va_list arg_list) {
 
   for (index = 0; format[index] != '\0'; ++index) {
     c = format[index];
-    int d = c + 1;
 
-    if (percent) {
-      switch (d - 1) {
-        case 'h':
-          shortInt = TRUE;
-          break;
+    { int d = c + 1;
+      if (percent) {
+        switch (d - 1) {
+          case 'h':
+            shortInt = TRUE;
+            break;
 
-        case 'l':
-          longIntOrDouble = TRUE;
-          break;
+          case 'l':
+            longIntOrDouble = TRUE;
+            break;
 
-        case 'L':
-          longDouble = TRUE;
-          break;
+          case 'L':
+            longDouble = TRUE;
+            break;
 
-        case '*':
-          star = TRUE;
-          break;
+          case '*':
+            star = TRUE;
+            break;
 
-        case 'c': {
-            char charValue = scanChar();
+          case 'c': {
+              char charValue = scanChar();
 
+              if (!star) {
+                charPtr = va_arg(arg_list, char*);
+                *charPtr = charValue;
+              }
+
+              percent = FALSE;
+
+              if (charValue != EOF) {
+                ++g_inCount;
+              }
+            }
+            break;
+
+          case 's':
             if (!star) {
               charPtr = va_arg(arg_list, char*);
-              *charPtr = charValue;
+              scanString(charPtr, 0);
+            }
+            else {
+              scanString(NULL, 0);
             }
 
             percent = FALSE;
+            break;
 
-            if (charValue != EOF) {
-              ++g_inCount;
-            }
-          }
-          break;
+          case 'i':
+          case 'd':
+            longValue = scanLongInt(10);
 
-        case 's':
-          if (!star) {
-            charPtr = va_arg(arg_list, char*);
-            scanString(charPtr, 0);
-          }
-          else {
-            scanString(NULL, 0);
-          }
-
-          percent = FALSE;
-          break;
-
-        case 'i':
-        case 'd':
-          longValue = scanLongInt(10);
-
-          if (!star) {
-            if (shortInt) {
-              shortPtr = va_arg(arg_list, short*);
-              *shortPtr = (short) longValue;
-            }
-            else if (!longIntOrDouble) {
-              intPtr = va_arg(arg_list, int*);
-              *intPtr = (int) longValue;
-            }
-            else {
-              longPtr = va_arg(arg_list, long*);
-              *longPtr = longValue;
-            }
-          }
-
-          percent = FALSE;
-          break;
-
-        case 'o':
-          unsignedLongValue = scanUnsignedLongInt(8);
-
-          if (!star) {
-            if (shortInt) {
-              unsignedShortPtr = va_arg(arg_list, unsigned short*);
-              *unsignedShortPtr = (short) unsignedLongValue;
-            }
-            else if (!longIntOrDouble) {
-              unsignedIntPtr = va_arg(arg_list, unsigned int*);
-              *unsignedIntPtr = (int) unsignedLongValue;
-            }
-            else {
-              unsignedLongPtr = va_arg(arg_list, unsigned long*);
-              *unsignedLongPtr = unsignedLongValue;
-            }
-          }
-
-          percent = FALSE;
-          break;
-
-        case 'x':
-          unsignedLongValue = scanUnsignedLongInt(16);
-
-          if (!star) {
-            if (shortInt) {
-              unsignedShortPtr = va_arg(arg_list, unsigned short*);
-              *unsignedShortPtr = (short) unsignedLongValue;
-            }
-            else if (!longIntOrDouble) {
-              unsignedIntPtr = va_arg(arg_list, unsigned int*);
-              *unsignedIntPtr = (int) unsignedLongValue;
-            }
-            else {
-              unsignedLongPtr = va_arg(arg_list, unsigned long*);
-              *unsignedLongPtr = unsignedLongValue;
-            }
-          }
-
-          percent = FALSE;
-          break;
-
-        case 'u':
-          unsignedLongValue = scanUnsignedLongInt(0);
-
-          if (!star) {
-            if (shortInt) {
-              unsignedShortPtr = va_arg(arg_list, unsigned short*);
-              *unsignedShortPtr = (short) unsignedLongValue;
-            }
-            else if (!longIntOrDouble) {
-              unsignedIntPtr = va_arg(arg_list, unsigned int*);
-              *unsignedIntPtr = (int) unsignedLongValue;
-            }
-            else {
-              unsignedLongPtr = va_arg(arg_list, unsigned long*);
-              *unsignedLongPtr = unsignedLongValue;
-            }
-          }
-
-          percent = FALSE;
-          break;
-
-        case 'e':
-        case 'f':
-        case 'g':
-          longDoubleValue = scanLongDouble();
-
-          if (!star) {
-            if (longIntOrDouble) {
-              double* doublePtr = va_arg(arg_list, double*);
-              *doublePtr = (double) longDoubleValue;
-            }
-            else if (longDouble) {
-              long double* longDoublePtr = va_arg(arg_list, long double*);
-              *longDoublePtr = longDoubleValue;
-            }
-            else {
-              float* floatPtr = va_arg(arg_list, float*);
-              *floatPtr = (float) longDoubleValue;
-            }
-          }
-
-          percent = FALSE;
-          break;
-
-        case '[': {
-            BOOL not = FALSE;
-            ++index;
-
-            if (format[index] == '^') {
-              not = TRUE;
-              ++index;
-            }
-
-            { int startIndex = index;
-              while (format[index] != ']') {
-                ++index;
+            if (!star) {
+              if (shortInt) {
+                shortPtr = va_arg(arg_list, short*);
+                *shortPtr = (short) longValue;
               }
-              format[index] = '\0';
-
-              if (!star) {
-                char* string = va_arg(arg_list, char*);
-                scanPattern(string, &format[startIndex], not);
+              else if (!longIntOrDouble) {
+                intPtr = va_arg(arg_list, int*);
+                *intPtr = (int) longValue;
               }
               else {
-                scanPattern(NULL, &format[startIndex], not);
+                longPtr = va_arg(arg_list, long*);
+                *longPtr = longValue;
               }
             }
-          }
-          break;
 
-        case 'n':
-          charsPtr = va_arg(arg_list, int*);
-          *charsPtr = g_inChars;
-          percent = FALSE;
-          break;
+            percent = FALSE;
+            break;
 
-        default:
-          printf("scanFormat c = '%c'\n", c);
-          break;
+          case 'o':
+            unsignedLongValue = scanUnsignedLongInt(8);
+
+            if (!star) {
+              if (shortInt) {
+                unsignedShortPtr = va_arg(arg_list, unsigned short*);
+                *unsignedShortPtr = (short) unsignedLongValue;
+              }
+              else if (!longIntOrDouble) {
+                unsignedIntPtr = va_arg(arg_list, unsigned int*);
+                *unsignedIntPtr = (int) unsignedLongValue;
+              }
+              else {
+                unsignedLongPtr = va_arg(arg_list, unsigned long*);
+                *unsignedLongPtr = unsignedLongValue;
+              }
+            }
+
+            percent = FALSE;
+            break;
+
+          case 'x':
+            unsignedLongValue = scanUnsignedLongInt(16);
+
+            if (!star) {
+              if (shortInt) {
+                unsignedShortPtr = va_arg(arg_list, unsigned short*);
+                *unsignedShortPtr = (short) unsignedLongValue;
+              }
+              else if (!longIntOrDouble) {
+                unsignedIntPtr = va_arg(arg_list, unsigned int*);
+                *unsignedIntPtr = (int) unsignedLongValue;
+              }
+              else {
+                unsignedLongPtr = va_arg(arg_list, unsigned long*);
+                *unsignedLongPtr = unsignedLongValue;
+              }
+            }
+
+            percent = FALSE;
+            break;
+
+          case 'u':
+            unsignedLongValue = scanUnsignedLongInt(0);
+
+            if (!star) {
+              if (shortInt) {
+                unsignedShortPtr = va_arg(arg_list, unsigned short*);
+                *unsignedShortPtr = (short) unsignedLongValue;
+              }
+              else if (!longIntOrDouble) {
+                unsignedIntPtr = va_arg(arg_list, unsigned int*);
+                *unsignedIntPtr = (int) unsignedLongValue;
+              }
+              else {
+                unsignedLongPtr = va_arg(arg_list, unsigned long*);
+                *unsignedLongPtr = unsignedLongValue;
+              }
+            }
+
+            percent = FALSE;
+            break;
+
+          case 'e':
+          case 'f':
+          case 'g':
+            longDoubleValue = scanLongDouble();
+
+            if (!star) {
+              if (longIntOrDouble) {
+                double* doublePtr = va_arg(arg_list, double*);
+                *doublePtr = (double) longDoubleValue;
+              }
+              else if (longDouble) {
+                long double* longDoublePtr = va_arg(arg_list, long double*);
+                *longDoublePtr = longDoubleValue;
+              }
+              else {
+                float* floatPtr = va_arg(arg_list, float*);
+                *floatPtr = (float) longDoubleValue;
+              }
+            }
+
+            percent = FALSE;
+            break;
+
+          case '[': {
+              BOOL not = FALSE;
+              ++index;
+
+              if (format[index] == '^') {
+                not = TRUE;
+                ++index;
+              }
+
+              { int startIndex = index;
+                while (format[index] != ']') {
+                  ++index;
+                }
+                format[index] = '\0';
+
+                if (!star) {
+                  char* string = va_arg(arg_list, char*);
+                  scanPattern(string, &format[startIndex], not);
+                }
+                else {
+                  scanPattern(NULL, &format[startIndex], not);
+                }
+              }
+            }
+            break;
+
+          case 'n':
+            charsPtr = va_arg(arg_list, int*);
+            *charsPtr = g_inChars;
+            percent = FALSE;
+            break;
+
+          default:
+            printf("scanFormat c = '%c'\n", c);
+            break;
+        }
       }
-    }
-    else {
-      if (c == '%') {
-        percent = TRUE;
-        shortInt = FALSE;
-        longIntOrDouble = FALSE;
-        longDouble = FALSE;
-        star = FALSE;
+      else {
+        if (c == '%') {
+          percent = TRUE;
+          shortInt = FALSE;
+          longIntOrDouble = FALSE;
+          longDouble = FALSE;
+          star = FALSE;
+        }
       }
     }
   }

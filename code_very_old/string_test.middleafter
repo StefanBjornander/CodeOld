@@ -1,0 +1,280 @@
+0: Assign s "Hello, World!"
+1: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter pointer "strlen("%s") = %i\n" 268
+3: Parameter pointer s 276
+4: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+5: Parameter pointer s 308
+6: Call strlen 284 0
+7: PostCall 284
+8: GetReturnValue £temporary3554
+9: Parameter signedint £temporary3554 284
+10: Call printf 244 12
+11: PostCall 244
+12: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+13: Parameter pointer t 268
+14: Parameter pointer s 276
+15: Call strcpy 244 0
+16: PostCall 244
+17: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+18: Parameter pointer u 268
+19: Parameter pointer s 276
+20: Parameter signedint 5 284
+21: Call strncpy 244 0
+22: PostCall 244
+23: Dereference £temporary3558 -> u u 0
+24: Assign £temporary3558 -> u 0
+25: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+26: Parameter pointer "t = "%s", u = "%s"\n" 268
+27: Parameter pointer t 276
+28: Parameter pointer u 284
+29: Call printf 244 16
+30: PostCall 244
+31: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+32: Parameter pointer t 268
+33: Parameter pointer "abc" 276
+34: Call strcat 244 0
+35: PostCall 244
+36: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+37: Parameter pointer u 268
+38: Call strlen 244 0
+39: PostCall 244
+40: GetReturnValue £temporary3561
+41: Assign i £temporary3561
+42: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+43: Parameter pointer u 268
+44: Parameter pointer "abc" 276
+45: Parameter signedint 2 284
+46: Call strncat 244 0
+47: PostCall 244
+48: BinaryAdd £temporary3563 i 2
+49: IntegralToIntegral £temporary3565 £temporary3563
+50: BinaryAdd £temporary3567 u £temporary3565
+51: Dereference £temporary3564 -> £temporary3567 £temporary3567 0
+52: Assign £temporary3564 -> £temporary3567 0
+53: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+54: Parameter pointer "t = "%s", u = "%s"\n" 268
+55: Parameter pointer t 276
+56: Parameter pointer u 284
+57: Call printf 244 16
+58: PostCall 244
+59: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+60: Parameter pointer "strcmp(s, u) = %i\n" 268
+61: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+62: Parameter pointer s 300
+63: Parameter pointer u 308
+64: Call strcmp 276 0
+65: PostCall 276
+66: GetReturnValue £temporary3569
+67: Parameter signedint £temporary3569 276
+68: Call printf 244 4
+69: PostCall 244
+70: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+71: Parameter pointer "strncmp(s, u, 2) = %i\n" 268
+72: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+73: Parameter pointer s 300
+74: Parameter pointer u 308
+75: Parameter signedint 2 316
+76: Call strncmp 276 0
+77: PostCall 276
+78: GetReturnValue £temporary3571
+79: Parameter signedint £temporary3571 276
+80: Call printf 244 4
+81: PostCall 244
+82: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+83: Parameter pointer s 268
+84: Parameter signedint 108 276
+85: Call strchr 244 0
+86: PostCall 244
+87: GetReturnValue £temporary3573
+88: Assign p £temporary3573
+89: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+90: Parameter pointer "strchr(s, 'l') = %i\n" 268
+91: Equal 95 p 0
+92: BinarySubtract £temporary3576 p s
+93: IntegralToIntegral £temporary3578 £temporary3576
+94: Goto 96
+95: Assign £temporary3578 -1
+96: Parameter signedint £temporary3578 276
+97: Call printf 244 4
+98: PostCall 244
+99: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+100: Parameter pointer s 268
+101: Parameter signedint 108 276
+102: Call strrchr 244 0
+103: PostCall 244
+104: GetReturnValue £temporary3580
+105: Assign p £temporary3580
+106: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+107: Parameter pointer "strrchr(s, 'l') = %i\n" 268
+108: Equal 112 p 0
+109: BinarySubtract £temporary3583 p s
+110: IntegralToIntegral £temporary3585 £temporary3583
+111: Goto 113
+112: Assign £temporary3585 -1
+113: Parameter signedint £temporary3585 276
+114: Call printf 244 4
+115: PostCall 244
+116: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+117: Parameter pointer s 268
+118: Parameter signedint 120 276
+119: Call strchr 244 0
+120: PostCall 244
+121: GetReturnValue £temporary3587
+122: Assign p £temporary3587
+123: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+124: Parameter pointer "strchr(s, 'x') = %i\n" 268
+125: Equal 129 p 0
+126: BinarySubtract £temporary3590 p s
+127: IntegralToIntegral £temporary3592 £temporary3590
+128: Goto 130
+129: Assign £temporary3592 -1
+130: Parameter signedint £temporary3592 276
+131: Call printf 244 4
+132: PostCall 244
+133: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+134: Parameter pointer s 268
+135: Parameter signedint 120 276
+136: Call strrchr 244 0
+137: PostCall 244
+138: GetReturnValue £temporary3594
+139: Assign p £temporary3594
+140: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+141: Parameter pointer "strrchr(s, 'x') = %i\n" 268
+142: Equal 146 p 0
+143: BinarySubtract £temporary3597 p s
+144: IntegralToIntegral £temporary3599 £temporary3597
+145: Goto 147
+146: Assign £temporary3599 -1
+147: Parameter signedint £temporary3599 276
+148: Call printf 244 4
+149: PostCall 244
+150: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+151: Parameter pointer s 268
+152: Parameter pointer "Hello, World!" 276
+153: Parameter signedint 20 284
+154: Call memcpy 244 0
+155: PostCall 244
+156: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+157: Parameter pointer t 268
+158: Parameter pointer "Hello, World!" 276
+159: Parameter signedint 20 284
+160: Call memmove 244 0
+161: PostCall 244
+162: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+163: Parameter pointer u 268
+164: Parameter signedint 88 276
+165: Parameter signedint 20 280
+166: Call memset 244 0
+167: PostCall 244
+168: Dereference £temporary3604 -> u u 0
+169: Assign £temporary3604 -> u 0
+170: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+171: Parameter pointer "s = "%s", t = "%s", u = "%s"\n" 268
+172: Parameter pointer s 276
+173: Parameter pointer t 284
+174: Parameter pointer u 292
+175: Call printf 244 24
+176: PostCall 244
+177: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+178: Parameter pointer s 268
+179: Parameter signedint 108 276
+180: Parameter signedint 20 280
+181: Call memchr 244 0
+182: PostCall 244
+183: GetReturnValue £temporary3606
+184: Assign p £temporary3606
+185: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+186: Parameter pointer "memchr(s, 'l', SIZE * sizeof(char)) = %i\n" 268
+187: Equal 191 p 0
+188: BinarySubtract £temporary3609 p s
+189: IntegralToIntegral £temporary3611 £temporary3609
+190: Goto 192
+191: Assign £temporary3611 -1
+192: Parameter signedint £temporary3611 276
+193: Call printf 244 4
+194: PostCall 244
+195: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+196: Parameter pointer s 268
+197: Parameter signedint 120 276
+198: Parameter signedint 20 280
+199: Call memchr 244 0
+200: PostCall 244
+201: GetReturnValue £temporary3613
+202: Assign p £temporary3613
+203: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+204: Parameter pointer "memchr(s, 'x', SIZE * sizeof(char)) = %i\n" 268
+205: Equal 209 p 0
+206: BinarySubtract £temporary3616 p s
+207: IntegralToIntegral £temporary3618 £temporary3616
+208: Goto 210
+209: Assign £temporary3618 -1
+210: Parameter signedint £temporary3618 276
+211: Call printf 244 4
+212: PostCall 244
+213: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+214: Parameter pointer "memcmp(s, t, SIZE * sizeof(char)) = %i\n" 268
+215: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+216: Parameter pointer s 300
+217: Parameter pointer t 308
+218: Parameter signedint 20 316
+219: Call memcmp 276 0
+220: PostCall 276
+221: GetReturnValue £temporary3620
+222: Parameter signedint £temporary3620 276
+223: Call printf 244 4
+224: PostCall 244
+225: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+226: Parameter pointer "strspn(s, "Hello, C") = %i\n" 268
+227: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+228: Parameter pointer s 300
+229: Parameter pointer "Hello, C" 308
+230: Call strspn 276 0
+231: PostCall 276
+232: GetReturnValue £temporary3622
+233: Parameter signedint £temporary3622 276
+234: Call printf 244 4
+235: PostCall 244
+236: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+237: Parameter pointer "strcspn(s, "Hello, C") = %i\n" 268
+238: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+239: Parameter pointer s 300
+240: Parameter pointer "Hello, C" 308
+241: Call strcspn 276 0
+242: PostCall 276
+243: GetReturnValue £temporary3624
+244: Parameter signedint £temporary3624 276
+245: Call printf 244 4
+246: PostCall 244
+247: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+248: Parameter pointer "strerror(errno) = "%s"\n" 268
+249: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+250: Parameter signedint errno 300
+251: Call strerror 276 0
+252: PostCall 276
+253: GetReturnValue £temporary3626
+254: Parameter pointer £temporary3626 276
+255: Call printf 244 8
+256: PostCall 244
+257: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+258: Parameter pointer s 268
+259: Parameter pointer "," 276
+260: Call strtok 244 0
+261: PostCall 244
+262: GetReturnValue £temporary3628
+263: Assign p £temporary3628
+264: Equal 278 p 0
+265: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+266: Parameter pointer "strtok(s, ",") = "%s"\n" 268
+267: Parameter pointer p 276
+268: Call printf 244 8
+269: PostCall 244
+270: PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+271: Parameter pointer 0 268
+272: Parameter pointer "," 276
+273: Call strtok 244 0
+274: PostCall 244
+275: GetReturnValue £temporary3631
+276: Assign p £temporary3631
+277: Goto 264
+278: Return
+279: FunctionEnd string_test

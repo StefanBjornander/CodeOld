@@ -172,8 +172,9 @@ struct tm* localtime(const time_t* timePtr) {
                                : localeConvPtr->winterTimeZone;
   }
 
-  time_t time = *timePtr + (3600 * timeZone);
-  return gmtime(&time);
+  { time_t time = *timePtr + (3600 * timeZone);
+    return gmtime(&time);
+  }
 }
 
 size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
@@ -189,6 +190,7 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
 
   const BOOL leapDays = (tp->tm_year - 69) / 4;
   const long totalDays = 365 * (tp->tm_year - 70) + leapDays + tp->tm_yday;
+  int yearDaySunday, yearDayMonday;
 
   strcpy(s, "");
   shortDayList = (shortDayList != NULL)
@@ -200,8 +202,6 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
                   ? longMonthList : g_defaultLongMonthList;
 
   // January 1, 1970, was a Thursday
-  int yearDaySunday, yearDayMonday;
-
   if (totalDays < 3) {
     yearDaySunday = totalDays + 4;
   }

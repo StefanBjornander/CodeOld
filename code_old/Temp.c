@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <String.h>
+#include <string.h>
 #include <file.h>
 
 static char g_tempArray[TMP_MAX][L_tmpnam];

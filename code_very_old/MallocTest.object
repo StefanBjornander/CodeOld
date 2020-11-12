@@ -582,15 +582,15 @@ malloc_test3$61:	; return
 malloc_test3$62:	; function end malloc_test3
 1:	
 
-rec:	; £temporary5849 = bp
-3:	
+rec:	; lowHeapPtr = 65534
+2:		mov word [bp + 8], 65534
+4:	
 
-rec$1:	; stackTop = £temporary5849
-4:		mov [bp + 6], bp
+rec$1:	; £temporary5849 = bp
 6:	
 
-rec$2:	; lowHeapPtr = 65534
-7:		mov word [bp + 8], 65534
+rec$2:	; stackTop = £temporary5849
+7:		mov [bp + 6], bp
 9:	
 
 rec$3:	; call header integral zero 0 stack zero 0
@@ -894,15 +894,15 @@ malloc_test$50:	; return
 malloc_test$51:	; function end malloc_test
 1:	
 
-malloc_test6:	; £temporary5877 = bp
-3:	
+malloc_test6:	; lowHeapPtr = 65534
+2:		mov word [bp + 10], 65534
+4:	
 
-malloc_test6$1:	; stackTop = £temporary5877
-4:		mov [bp + 8], bp
+malloc_test6$1:	; £temporary5877 = bp
 6:	
 
-malloc_test6$2:	; lowHeapPtr = 65534
-7:		mov word [bp + 10], 65534
+malloc_test6$2:	; stackTop = £temporary5877
+7:		mov [bp + 8], bp
 9:	
 
 malloc_test6$3:	; i = 0

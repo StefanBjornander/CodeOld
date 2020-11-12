@@ -12,13 +12,12 @@
 11: Equal Empty intValue1 intValue2
 12: Goto Empty
 13: Empty
-14: Assign £temporary4243 0
+14: Assign £temporary4244 0
 15: Goto Empty
 16: Empty
-17: Assign £temporary4243 1
+17: Assign £temporary4244 1
 18: Empty
-19: Assign £temporary4244 £temporary4243
-20: Empty
-21: Return £temporary4244
-22: Empty
-23: FunctionEnd compare
+19: Empty
+20: Return £temporary4244
+21: Empty
+22: FunctionEnd compare

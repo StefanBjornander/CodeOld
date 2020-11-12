@@ -994,84 +994,84 @@ section .text
 	jmp realloc$54
 
  realloc$67:
-	; PreCall 60 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$68:
-	; Parameter signedint newMemorySize 84
+	; Parameter signedint newMemorySize 72
 	mov eax, [rbp + 32]
-	mov [rbp + 84], eax
+	mov [rbp + 72], eax
 
  realloc$69:
-	; Call malloc 60 0
-	mov qword [rbp + 60], realloc$70
-	mov [rbp + 68], rbp
-	add rbp, 60
+	; Call malloc 48 0
+	mov qword [rbp + 48], realloc$70
+	mov [rbp + 56], rbp
+	add rbp, 48
 	jmp malloc
 
  realloc$70:
-	; PostCall 60
+	; PostCall 48
 
  realloc$71:
 	; GetReturnValue £temporary249
 
  realloc$72:
 	; Assign newMemoryPtr £temporary249
-	mov [rbp + 60], rbx
+	mov [rbp + 48], rbx
 
  realloc$73:
 	; Equal 85 newMemoryPtr 0
-	cmp qword [rbp + 60], 0
+	cmp qword [rbp + 48], 0
 	je realloc$85
 
  realloc$74:
-	; PreCall 68 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$75:
-	; Parameter pointer newMemoryPtr 92
-	mov rax, [rbp + 60]
-	mov [rbp + 92], rax
+	; Parameter pointer newMemoryPtr 80
+	mov rax, [rbp + 48]
+	mov [rbp + 80], rax
 
  realloc$76:
-	; Parameter pointer oldMemoryPtr 100
+	; Parameter pointer oldMemoryPtr 88
 	mov rax, [rbp + 24]
-	mov [rbp + 100], rax
+	mov [rbp + 88], rax
 
  realloc$77:
-	; Parameter signedint newMemorySize 108
+	; Parameter signedint newMemorySize 96
 	mov eax, [rbp + 32]
-	mov [rbp + 108], eax
+	mov [rbp + 96], eax
 
  realloc$78:
-	; Call memcpy 68 0
-	mov qword [rbp + 68], realloc$79
-	mov [rbp + 76], rbp
-	add rbp, 68
+	; Call memcpy 56 0
+	mov qword [rbp + 56], realloc$79
+	mov [rbp + 64], rbp
+	add rbp, 56
 	jmp memcpy
 
  realloc$79:
-	; PostCall 68
+	; PostCall 56
 
  realloc$80:
-	; PreCall 68 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$81:
-	; Parameter pointer oldMemoryPtr 92
+	; Parameter pointer oldMemoryPtr 80
 	mov rax, [rbp + 24]
-	mov [rbp + 92], rax
+	mov [rbp + 80], rax
 
  realloc$82:
-	; Call free 68 0
-	mov qword [rbp + 68], realloc$83
-	mov [rbp + 76], rbp
-	add rbp, 68
+	; Call free 56 0
+	mov qword [rbp + 56], realloc$83
+	mov [rbp + 64], rbp
+	add rbp, 56
 	jmp free
 
  realloc$83:
-	; PostCall 68
+	; PostCall 56
 
  realloc$84:
 	; Return newMemoryPtr
-	mov rbx, [rbp + 60]
+	mov rbx, [rbp + 48]
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]

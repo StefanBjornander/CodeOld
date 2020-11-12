@@ -1,0 +1,308 @@
+0: Assign s "Hello, World!"
+1: PreCall 244
+2: Parameter pointer "strlen("%s") = %i\n" 268
+3: Parameter pointer s 276
+4: PreCall 244
+5: Parameter pointer s 308
+6: Call strlen 284 0
+7: PostCall 284
+8: GetReturnValue £temporary3554
+9: Parameter signedint £temporary3554 284
+10: Call printf 244 12
+11: PostCall 244
+12: PreCall 244
+13: Parameter pointer t 268
+14: Parameter pointer s 276
+15: Call strcpy 244 0
+16: PostCall 244
+17: PreCall 244
+18: Parameter pointer u 268
+19: Parameter pointer s 276
+20: Parameter signedint 5 284
+21: Call strncpy 244 0
+22: PostCall 244
+23: Dereference £temporary3558 -> u u 0
+24: Assign £temporary3558 -> u 0
+25: PreCall 244
+26: Parameter pointer "t = "%s", u = "%s"\n" 268
+27: Parameter pointer t 276
+28: Parameter pointer u 284
+29: Call printf 244 16
+30: PostCall 244
+31: PreCall 244
+32: Parameter pointer t 268
+33: Parameter pointer "abc" 276
+34: Call strcat 244 0
+35: PostCall 244
+36: PreCall 244
+37: Parameter pointer u 268
+38: Call strlen 244 0
+39: PostCall 244
+40: GetReturnValue £temporary3561
+41: Assign i £temporary3561
+42: PreCall 244
+43: Parameter pointer u 268
+44: Parameter pointer "abc" 276
+45: Parameter signedint 2 284
+46: Call strncat 244 0
+47: PostCall 244
+48: BinaryAdd £temporary3563 i 2
+49: IntegralToIntegral £temporary3565 £temporary3563
+50: UnsignedMultiply £temporary3566 £temporary3565 1
+51: BinaryAdd £temporary3567 u £temporary3566
+52: Dereference £temporary3564 -> £temporary3567 £temporary3567 0
+53: Assign £temporary3564 -> £temporary3567 0
+54: PreCall 244
+55: Parameter pointer "t = "%s", u = "%s"\n" 268
+56: Parameter pointer t 276
+57: Parameter pointer u 284
+58: Call printf 244 16
+59: PostCall 244
+60: PreCall 244
+61: Parameter pointer "strcmp(s, u) = %i\n" 268
+62: PreCall 244
+63: Parameter pointer s 300
+64: Parameter pointer u 308
+65: Call strcmp 276 0
+66: PostCall 276
+67: GetReturnValue £temporary3569
+68: Parameter signedint £temporary3569 276
+69: Call printf 244 4
+70: PostCall 244
+71: PreCall 244
+72: Parameter pointer "strncmp(s, u, 2) = %i\n" 268
+73: PreCall 244
+74: Parameter pointer s 300
+75: Parameter pointer u 308
+76: Parameter signedint 2 316
+77: Call strncmp 276 0
+78: PostCall 276
+79: GetReturnValue £temporary3571
+80: Parameter signedint £temporary3571 276
+81: Call printf 244 4
+82: PostCall 244
+83: PreCall 244
+84: Parameter pointer s 268
+85: Parameter signedint 108 276
+86: Call strchr 244 0
+87: PostCall 244
+88: GetReturnValue £temporary3573
+89: Assign p £temporary3573
+90: PreCall 244
+91: Parameter pointer "strchr(s, 'l') = %i\n" 268
+92: NotEqual BinarySubtract £temporary3576 p s p 0
+93: Goto Empty
+94: BinarySubtract £temporary3576 p s
+95: UnsignedDivide £temporary3575 £temporary3576 1
+96: IntegralToIntegral £temporary3578 £temporary3575
+97: Goto Empty
+98: Empty
+99: Assign £temporary3578 -1
+100: Empty
+101: Parameter signedint £temporary3578 276
+102: Call printf 244 4
+103: PostCall 244
+104: PreCall 244
+105: Parameter pointer s 268
+106: Parameter signedint 108 276
+107: Call strrchr 244 0
+108: PostCall 244
+109: GetReturnValue £temporary3580
+110: Assign p £temporary3580
+111: PreCall 244
+112: Parameter pointer "strrchr(s, 'l') = %i\n" 268
+113: NotEqual BinarySubtract £temporary3583 p s p 0
+114: Goto Empty
+115: BinarySubtract £temporary3583 p s
+116: UnsignedDivide £temporary3582 £temporary3583 1
+117: IntegralToIntegral £temporary3585 £temporary3582
+118: Goto Empty
+119: Empty
+120: Assign £temporary3585 -1
+121: Empty
+122: Parameter signedint £temporary3585 276
+123: Call printf 244 4
+124: PostCall 244
+125: PreCall 244
+126: Parameter pointer s 268
+127: Parameter signedint 120 276
+128: Call strchr 244 0
+129: PostCall 244
+130: GetReturnValue £temporary3587
+131: Assign p £temporary3587
+132: PreCall 244
+133: Parameter pointer "strchr(s, 'x') = %i\n" 268
+134: NotEqual BinarySubtract £temporary3590 p s p 0
+135: Goto Empty
+136: BinarySubtract £temporary3590 p s
+137: UnsignedDivide £temporary3589 £temporary3590 1
+138: IntegralToIntegral £temporary3592 £temporary3589
+139: Goto Empty
+140: Empty
+141: Assign £temporary3592 -1
+142: Empty
+143: Parameter signedint £temporary3592 276
+144: Call printf 244 4
+145: PostCall 244
+146: PreCall 244
+147: Parameter pointer s 268
+148: Parameter signedint 120 276
+149: Call strrchr 244 0
+150: PostCall 244
+151: GetReturnValue £temporary3594
+152: Assign p £temporary3594
+153: PreCall 244
+154: Parameter pointer "strrchr(s, 'x') = %i\n" 268
+155: NotEqual BinarySubtract £temporary3597 p s p 0
+156: Goto Empty
+157: BinarySubtract £temporary3597 p s
+158: UnsignedDivide £temporary3596 £temporary3597 1
+159: IntegralToIntegral £temporary3599 £temporary3596
+160: Goto Empty
+161: Empty
+162: Assign £temporary3599 -1
+163: Empty
+164: Parameter signedint £temporary3599 276
+165: Call printf 244 4
+166: PostCall 244
+167: PreCall 244
+168: Parameter pointer s 268
+169: Parameter pointer "Hello, World!" 276
+170: Parameter signedint 20 284
+171: Call memcpy 244 0
+172: PostCall 244
+173: PreCall 244
+174: Parameter pointer t 268
+175: Parameter pointer "Hello, World!" 276
+176: Parameter signedint 20 284
+177: Call memmove 244 0
+178: PostCall 244
+179: PreCall 244
+180: Parameter pointer u 268
+181: Parameter signedint 88 276
+182: Parameter signedint 20 280
+183: Call memset 244 0
+184: PostCall 244
+185: Dereference £temporary3604 -> u u 0
+186: Assign £temporary3604 -> u 0
+187: PreCall 244
+188: Parameter pointer "s = "%s", t = "%s", u = "%s"\n" 268
+189: Parameter pointer s 276
+190: Parameter pointer t 284
+191: Parameter pointer u 292
+192: Call printf 244 24
+193: PostCall 244
+194: PreCall 244
+195: Parameter pointer s 268
+196: Parameter signedint 108 276
+197: Parameter signedint 20 280
+198: Call memchr 244 0
+199: PostCall 244
+200: GetReturnValue £temporary3606
+201: Assign p £temporary3606
+202: PreCall 244
+203: Parameter pointer "memchr(s, 'l', SIZE * sizeof(char)) = %i\n" 268
+204: NotEqual BinarySubtract £temporary3609 p s p 0
+205: Goto Empty
+206: BinarySubtract £temporary3609 p s
+207: UnsignedDivide £temporary3608 £temporary3609 1
+208: IntegralToIntegral £temporary3611 £temporary3608
+209: Goto Empty
+210: Empty
+211: Assign £temporary3611 -1
+212: Empty
+213: Parameter signedint £temporary3611 276
+214: Call printf 244 4
+215: PostCall 244
+216: PreCall 244
+217: Parameter pointer s 268
+218: Parameter signedint 120 276
+219: Parameter signedint 20 280
+220: Call memchr 244 0
+221: PostCall 244
+222: GetReturnValue £temporary3613
+223: Assign p £temporary3613
+224: PreCall 244
+225: Parameter pointer "memchr(s, 'x', SIZE * sizeof(char)) = %i\n" 268
+226: NotEqual BinarySubtract £temporary3616 p s p 0
+227: Goto Empty
+228: BinarySubtract £temporary3616 p s
+229: UnsignedDivide £temporary3615 £temporary3616 1
+230: IntegralToIntegral £temporary3618 £temporary3615
+231: Goto Empty
+232: Empty
+233: Assign £temporary3618 -1
+234: Empty
+235: Parameter signedint £temporary3618 276
+236: Call printf 244 4
+237: PostCall 244
+238: PreCall 244
+239: Parameter pointer "memcmp(s, t, SIZE * sizeof(char)) = %i\n" 268
+240: PreCall 244
+241: Parameter pointer s 300
+242: Parameter pointer t 308
+243: Parameter signedint 20 316
+244: Call memcmp 276 0
+245: PostCall 276
+246: GetReturnValue £temporary3620
+247: Parameter signedint £temporary3620 276
+248: Call printf 244 4
+249: PostCall 244
+250: PreCall 244
+251: Parameter pointer "strspn(s, "Hello, C") = %i\n" 268
+252: PreCall 244
+253: Parameter pointer s 300
+254: Parameter pointer "Hello, C" 308
+255: Call strspn 276 0
+256: PostCall 276
+257: GetReturnValue £temporary3622
+258: Parameter signedint £temporary3622 276
+259: Call printf 244 4
+260: PostCall 244
+261: PreCall 244
+262: Parameter pointer "strcspn(s, "Hello, C") = %i\n" 268
+263: PreCall 244
+264: Parameter pointer s 300
+265: Parameter pointer "Hello, C" 308
+266: Call strcspn 276 0
+267: PostCall 276
+268: GetReturnValue £temporary3624
+269: Parameter signedint £temporary3624 276
+270: Call printf 244 4
+271: PostCall 244
+272: PreCall 244
+273: Parameter pointer "strerror(errno) = "%s"\n" 268
+274: PreCall 244
+275: Parameter signedint errno 300
+276: Call strerror 276 0
+277: PostCall 276
+278: GetReturnValue £temporary3626
+279: Parameter pointer £temporary3626 276
+280: Call printf 244 8
+281: PostCall 244
+282: PreCall 244
+283: Parameter pointer s 268
+284: Parameter pointer "," 276
+285: Call strtok 244 0
+286: PostCall 244
+287: GetReturnValue £temporary3628
+288: Assign p £temporary3628
+289: NotEqual PreCall 244 p 0
+290: Goto Empty
+291: CheckTrackMapFloatStack
+292: PreCall 244
+293: Parameter pointer "strtok(s, ",") = "%s"\n" 268
+294: Parameter pointer p 276
+295: Call printf 244 8
+296: PostCall 244
+297: PreCall 244
+298: Parameter pointer 0 268
+299: Parameter pointer "," 276
+300: Call strtok 244 0
+301: PostCall 244
+302: GetReturnValue £temporary3631
+303: Assign p £temporary3631
+304: Goto NotEqual PreCall 244 p 0
+305: Empty
+306: Return
+307: FunctionEnd string_test

@@ -61,8 +61,8 @@ section .text
 	mov ebx, -1
 
  compare$8:
-	; Goto 14
-	jmp compare$14
+	; Goto 13
+	jmp compare$13
 
  compare$9:
 	; NotEqual 12 intValue1 intValue2
@@ -71,7 +71,7 @@ section .text
 	jne compare$12
 
  compare$10:
-	; Assign £temporary4349 0
+	; Assign £temporary4350 0
 	mov ebx, 0
 
  compare$11:
@@ -79,20 +79,17 @@ section .text
 	jmp compare$13
 
  compare$12:
-	; Assign £temporary4349 1
+	; Assign £temporary4350 1
 	mov ebx, 1
 
  compare$13:
-	; Assign £temporary4350 £temporary4349
-
- compare$14:
 	; Return £temporary4350
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- compare$15:
+ compare$14:
 	; FunctionEnd compare
 
 section .text
@@ -132,8 +129,8 @@ section .text
 	mov ebx, 1
 
  reverse_compare$8:
-	; Goto 14
-	jmp reverse_compare$14
+	; Goto 13
+	jmp reverse_compare$13
 
  reverse_compare$9:
 	; NotEqual 12 intValue1 intValue2
@@ -142,7 +139,7 @@ section .text
 	jne reverse_compare$12
 
  reverse_compare$10:
-	; Assign £temporary4357 0
+	; Assign £temporary4358 0
 	mov ebx, 0
 
  reverse_compare$11:
@@ -150,20 +147,17 @@ section .text
 	jmp reverse_compare$13
 
  reverse_compare$12:
-	; Assign £temporary4357 -1
+	; Assign £temporary4358 -1
 	mov ebx, -1
 
  reverse_compare$13:
-	; Assign £temporary4358 £temporary4357
-
- reverse_compare$14:
 	; Return £temporary4358
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- reverse_compare$15:
+ reverse_compare$14:
 	; FunctionEnd reverse_compare
 
 section .data
@@ -1658,9 +1652,9 @@ section .text
 	mov dword [rbp + 44], 0
 
  stdlib_test$204:
-	; SignedGreaterThanEqual 233 key 6
+	; SignedGreaterThanEqual 232 key 6
 	cmp dword [rbp + 44], 6
-	jge stdlib_test$233
+	jge stdlib_test$232
 
  stdlib_test$205:
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1713,9 +1707,9 @@ section .text
 	mov [rbp + 48], rbx
 
  stdlib_test$217:
-	; Equal 223 p 0
+	; Equal 222 p 0
 	cmp qword [rbp + 48], 0
-	je stdlib_test$223
+	je stdlib_test$222
 
  stdlib_test$218:
 	; BinarySubtract £temporary4463 p list
@@ -1730,84 +1724,81 @@ section .text
 	div qword [int8$4#]
 
  stdlib_test$220:
-	; IntegralToIntegral £temporary4464 £temporary4462
+	; IntegralToIntegral £temporary4465 £temporary4462
 
  stdlib_test$221:
-	; Assign £temporary4465 £temporary4464
+	; Goto 223
+	jmp stdlib_test$223
 
  stdlib_test$222:
-	; Goto 224
-	jmp stdlib_test$224
-
- stdlib_test$223:
 	; Assign £temporary4465 -1
 	mov eax, -1
 
- stdlib_test$224:
+ stdlib_test$223:
 	; Assign index £temporary4465
 	mov [rbp + 56], eax
 
- stdlib_test$225:
+ stdlib_test$224:
 	; PreCall 60 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- stdlib_test$226:
+ stdlib_test$225:
 	; Parameter pointer "  (%i, %i)\n" 84
 	mov qword [rbp + 84], string_20202825i2C2025i290A#
 
- stdlib_test$227:
+ stdlib_test$226:
 	; Parameter signedint key 92
 	mov eax, [rbp + 44]
 	mov [rbp + 92], eax
 
- stdlib_test$228:
+ stdlib_test$227:
 	; Parameter signedint index 96
 	mov eax, [rbp + 56]
 	mov [rbp + 96], eax
 
- stdlib_test$229:
+ stdlib_test$228:
 	; Call printf 60 8
-	mov qword [rbp + 60], stdlib_test$230
+	mov qword [rbp + 60], stdlib_test$229
 	mov [rbp + 68], rbp
 	add rbp, 60
 	mov rdi, rbp
 	add rdi, 8
 	jmp printf
 
- stdlib_test$230:
+ stdlib_test$229:
 	; PostCall 60
 
- stdlib_test$231:
+ stdlib_test$230:
 	; BinaryAdd key key 1
 	inc dword [rbp + 44]
 
- stdlib_test$232:
+ stdlib_test$231:
 	; Goto 204
 	jmp stdlib_test$204
 
- stdlib_test$233:
+ stdlib_test$232:
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- stdlib_test$234:
+ stdlib_test$233:
 	; Parameter pointer "\n" 68
 	mov qword [rbp + 68], string_0A#
 
- stdlib_test$235:
+ stdlib_test$234:
 	; Call printf 44 0
-	mov qword [rbp + 44], stdlib_test$236
+	mov qword [rbp + 44], stdlib_test$235
 	mov [rbp + 52], rbp
 	add rbp, 44
 	mov rdi, rbp
 	jmp printf
 
- stdlib_test$236:
+ stdlib_test$235:
 	; PostCall 44
 
- stdlib_test$237:
+ stdlib_test$236:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- stdlib_test$238:
+ stdlib_test$237:
 	; FunctionEnd stdlib_test

@@ -15,9 +15,8 @@ void file_test(char* inFilePtrName, char* outFilePtrName) {
       fscanf(inFilePtrPtr, "%i", &size);
    
       for (index = 0; index < size; ++index) {
-        double inValue = 0;
+        double inValue = 0, outValue = sqrt((double) inValue);
         fscanf(inFilePtrPtr, "%lf", &inValue);
-        double outValue = sqrt((double) inValue);
         fprintf(outFilePtrPtr, "%f\n", outValue);
       }
     }
@@ -101,10 +100,9 @@ void file_test(char* inFilePtrName, char* outFilePtrName) {
   { FILE* outFilePtr = fopen("Test.bin", "w");
     assert(outFilePtr != NULL);
 
-    { int size = 10;
+    { int size = 10, index;
       fwrite(&size, sizeof size, 1, outFilePtr); 
    
-      int index;
       for (index = 0; index < size; ++index) {
         double value = (double) (index * index);
         fwrite(&value, sizeof value, 1, outFilePtr);
@@ -204,8 +202,8 @@ void file_test(char* inFilePtrName, char* outFilePtrName) {
   }
 
   { FILE* inFilePtr = fopen("Test1.txt", "r"); // Random Access
-    assert(inFilePtr != NULL);
     unsigned int u;
+    assert(inFilePtr != NULL);
     fseek(inFilePtr, -1, SEEK_END);
 
     while ((u = (unsigned int) ftell(inFilePtr)) >= 0u) {

@@ -117,8 +117,8 @@ section .text
 section .text
 
  @2597$generateTempName:
-	; SignedGreaterThanEqual 58 size 5
-	cmp dword [rbp + 32], 5
+	; SignedGreaterThanEqual 58 size 3
+	cmp dword [rbp + 32], 3
 	jge @2597$generateTempName$58
 
  @2597$generateTempName$1:

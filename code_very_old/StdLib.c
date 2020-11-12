@@ -57,13 +57,15 @@ long strtol(char* s, char** endp, int base) {
   g_inStatus = STRING;
   g_inDevice = s;
   g_inChars = 0;
-  long longValue = scanLongInt(base);
 
-  if (endp != NULL) {
-    *endp = s + g_inChars;
+  { long value = scanLongInt(base);
+
+    if (endp != NULL) {
+      *endp = s + g_inChars;
+    }
+
+    return value;
   }
-
-  return longValue;
 }
 
 /*long strtol(char* s, char** endp, int base) {
@@ -232,13 +234,15 @@ unsigned long strtoul(char* s, char** endp, int base) {
   g_inStatus = STRING;
   g_inDevice = s;
   g_inChars = 0;
-  unsigned long unsignedLongValue = scanUnsignedLongInt(base);
+  
+  { unsigned long unsignedLongValue = scanUnsignedLongInt(base);
 
-  if (endp != NULL) {
-    *endp = s + g_inChars;
+    if (endp != NULL) {
+      *endp = s + g_inChars;
+    }
+
+    return unsignedLongValue;
   }
-
-  return unsignedLongValue;
 }
 
 /*unsigned long strtoul(char* s, char** endp, int base) {

@@ -598,62 +598,62 @@ section .text
 	; PreCall 72 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$51:
-	; Parameter pointer inFilePtrPtr 96
-	mov rax, [rbp + 40]
-	mov [rbp + 96], rax
-
- file_test$52:
-	; Parameter pointer "%lf" 104
-	mov qword [rbp + 104], string_25lf#
-
- file_test$53:
-	; Address £temporary3892 inValue
-	mov rsi, rbp
-	add rsi, 64
-
- file_test$54:
-	; Parameter pointer £temporary3892 112
-	mov [rbp + 112], rsi
-
- file_test$55:
-	; Call fscanf 72 8
-	mov qword [rbp + 72], file_test$56
-	mov [rbp + 80], rbp
-	add rbp, 72
-	mov rdi, rbp
-	add rdi, 8
-	jmp fscanf
-
- file_test$56:
-	; PostCall 72
-
- file_test$57:
-	; PreCall 72 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- file_test$58:
 	; PushFloat inValue
 	fld qword [rbp + 64]
 
- file_test$59:
-	; Parameter double £temporary3894 96
+ file_test$52:
+	; Parameter double £temporary3892 96
 	fstp qword [rbp + 96]
 
- file_test$60:
+ file_test$53:
 	; Call sqrt 72 0
-	mov qword [rbp + 72], file_test$61
+	mov qword [rbp + 72], file_test$54
 	mov [rbp + 80], rbp
 	add rbp, 72
 	jmp sqrt
 
- file_test$61:
+ file_test$54:
 	; PostCall 72
 
- file_test$62:
-	; GetReturnValue £temporary3895
+ file_test$55:
+	; GetReturnValue £temporary3893
 
- file_test$63:
+ file_test$56:
 	; PopFloat outValue
 	fstp qword [rbp + 72]
+
+ file_test$57:
+	; PreCall 80 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ file_test$58:
+	; Parameter pointer inFilePtrPtr 104
+	mov rax, [rbp + 40]
+	mov [rbp + 104], rax
+
+ file_test$59:
+	; Parameter pointer "%lf" 112
+	mov qword [rbp + 112], string_25lf#
+
+ file_test$60:
+	; Address £temporary3894 inValue
+	mov rsi, rbp
+	add rsi, 64
+
+ file_test$61:
+	; Parameter pointer £temporary3894 120
+	mov [rbp + 120], rsi
+
+ file_test$62:
+	; Call fscanf 80 8
+	mov qword [rbp + 80], file_test$63
+	mov [rbp + 88], rbp
+	add rbp, 80
+	mov rdi, rbp
+	add rdi, 8
+	jmp fscanf
+
+ file_test$63:
+	; PostCall 80
 
  file_test$64:
 	; PreCall 80 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1013,8 +1013,8 @@ section .text
 	mov qword [rbp + 96], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$145:
-	; Parameter signedint 51 104
-	mov dword [rbp + 104], 51
+	; Parameter signedint 50 104
+	mov dword [rbp + 104], 50
 
  file_test$146:
 	; Call fprintf 48 20
@@ -1337,8 +1337,8 @@ section .text
 	mov qword [rbp + 120], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$217:
-	; Parameter signedint 80 128
-	mov dword [rbp + 128], 80
+	; Parameter signedint 79 128
+	mov dword [rbp + 128], 79
 
  file_test$218:
 	; Call fprintf 72 20
@@ -1391,8 +1391,8 @@ section .text
 	mov qword [rbp + 120], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$229:
-	; Parameter signedint 81 128
-	mov dword [rbp + 128], 81
+	; Parameter signedint 80 128
+	mov dword [rbp + 128], 80
 
  file_test$230:
 	; Call fprintf 72 20
@@ -1617,8 +1617,8 @@ section .text
 	mov qword [rbp + 96], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$278:
-	; Parameter signedint 102 104
-	mov dword [rbp + 104], 102
+	; Parameter signedint 101 104
+	mov dword [rbp + 104], 101
 
  file_test$279:
 	; Call fprintf 48 20
@@ -1650,7 +1650,7 @@ section .text
 	mov dword [rbp + 48], 10
 
  file_test$285:
-	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$286:
 	; Address £temporary3950 size
@@ -1658,31 +1658,31 @@ section .text
 	add rsi, 48
 
  file_test$287:
-	; Parameter pointer £temporary3950 76
-	mov [rbp + 76], rsi
+	; Parameter pointer £temporary3950 80
+	mov [rbp + 80], rsi
 
  file_test$288:
-	; Parameter signedint 4 84
-	mov dword [rbp + 84], 4
+	; Parameter signedint 4 88
+	mov dword [rbp + 88], 4
 
  file_test$289:
-	; Parameter signedint 1 88
-	mov dword [rbp + 88], 1
+	; Parameter signedint 1 92
+	mov dword [rbp + 92], 1
 
  file_test$290:
-	; Parameter pointer outFilePtr 92
+	; Parameter pointer outFilePtr 96
 	mov rax, [rbp + 40]
-	mov [rbp + 92], rax
+	mov [rbp + 96], rax
 
  file_test$291:
-	; Call fwrite 52 0
-	mov qword [rbp + 52], file_test$292
-	mov [rbp + 60], rbp
-	add rbp, 52
+	; Call fwrite 56 0
+	mov qword [rbp + 56], file_test$292
+	mov [rbp + 64], rbp
+	add rbp, 56
 	jmp fwrite
 
  file_test$292:
-	; PostCall 52
+	; PostCall 56
 
  file_test$293:
 	; Assign index 0
@@ -1824,8 +1824,8 @@ section .text
 	mov qword [rbp + 96], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$325:
-	; Parameter signedint 118 104
-	mov dword [rbp + 104], 118
+	; Parameter signedint 116 104
+	mov dword [rbp + 104], 116
 
  file_test$326:
 	; Call fprintf 48 20
@@ -2105,8 +2105,8 @@ section .text
 	mov qword [rbp + 104], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$388:
-	; Parameter signedint 139 112
-	mov dword [rbp + 112], 139
+	; Parameter signedint 137 112
+	mov dword [rbp + 112], 137
 
  file_test$389:
 	; Call fprintf 56 20
@@ -2367,8 +2367,8 @@ section .text
 	mov qword [rbp + 100], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$447:
-	; Parameter signedint 156 108
-	mov dword [rbp + 108], 156
+	; Parameter signedint 154 108
+	mov dword [rbp + 108], 154
 
  file_test$448:
 	; Call fprintf 52 20
@@ -2539,8 +2539,8 @@ section .text
 	mov qword [rbp + 124], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$484:
-	; Parameter signedint 163 132
-	mov dword [rbp + 132], 163
+	; Parameter signedint 161 132
+	mov dword [rbp + 132], 161
 
  file_test$485:
 	; Call fprintf 76 20
@@ -3054,8 +3054,8 @@ section .text
 	mov qword [rbp + 312], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$605:
-	; Parameter signedint 190 320
-	mov dword [rbp + 320], 190
+	; Parameter signedint 188 320
+	mov dword [rbp + 320], 188
 
  file_test$606:
 	; Call fprintf 264 20
@@ -3108,8 +3108,8 @@ section .text
 	mov qword [rbp + 312], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$617:
-	; Parameter signedint 191 320
-	mov dword [rbp + 320], 191
+	; Parameter signedint 189 320
+	mov dword [rbp + 320], 189
 
  file_test$618:
 	; Call fprintf 264 20
@@ -3350,53 +3350,53 @@ section .text
 	jne file_test$682
 
  file_test$671:
-	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$672:
-	; Parameter pointer stderr 72
+	; Parameter pointer stderr 76
 	mov rax, [stderr]
-	mov [rbp + 72], rax
+	mov [rbp + 76], rax
 
  file_test$673:
-	; Parameter pointer "Assertion failed: "%s" in file %s at line %i\n" 80
-	mov qword [rbp + 80], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	; Parameter pointer "Assertion failed: "%s" in file %s at line %i\n" 84
+	mov qword [rbp + 84], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  file_test$674:
-	; Parameter pointer "inFilePtr != NULL" 88
-	mov qword [rbp + 88], string_inFilePtr20213D20NULL#
+	; Parameter pointer "inFilePtr != NULL" 92
+	mov qword [rbp + 92], string_inFilePtr20213D20NULL#
 
  file_test$675:
-	; Parameter pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c" 96
-	mov qword [rbp + 96], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	; Parameter pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c" 100
+	mov qword [rbp + 100], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$676:
-	; Parameter signedint 207 104
-	mov dword [rbp + 104], 207
+	; Parameter signedint 206 108
+	mov dword [rbp + 108], 206
 
  file_test$677:
-	; Call fprintf 48 20
-	mov qword [rbp + 48], file_test$678
-	mov [rbp + 56], rbp
-	add rbp, 48
+	; Call fprintf 52 20
+	mov qword [rbp + 52], file_test$678
+	mov [rbp + 60], rbp
+	add rbp, 52
 	mov rdi, rbp
 	add rdi, 20
 	jmp fprintf
 
  file_test$678:
-	; PostCall 48
+	; PostCall 52
 
  file_test$679:
-	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$680:
-	; Call abort 48 0
-	mov qword [rbp + 48], file_test$681
-	mov [rbp + 56], rbp
-	add rbp, 48
+	; Call abort 52 0
+	mov qword [rbp + 52], file_test$681
+	mov [rbp + 60], rbp
+	add rbp, 52
 	jmp abort
 
  file_test$681:
-	; PostCall 48
+	; PostCall 52
 
  file_test$682:
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -3760,8 +3760,8 @@ section .text
 	mov qword [rbp + 104], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$765:
-	; Parameter signedint 231 112
-	mov dword [rbp + 112], 231
+	; Parameter signedint 229 112
+	mov dword [rbp + 112], 229
 
  file_test$766:
 	; Call fprintf 56 20
@@ -3834,8 +3834,8 @@ section .text
 	mov qword [rbp + 104], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$782:
-	; Parameter signedint 234 112
-	mov dword [rbp + 112], 234
+	; Parameter signedint 232 112
+	mov dword [rbp + 112], 232
 
  file_test$783:
 	; Call fprintf 56 20

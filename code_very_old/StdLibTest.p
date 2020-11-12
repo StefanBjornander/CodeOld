@@ -442,14 +442,18 @@ printf ( "labs(-3l) = %li, labs(3l) = %li\n\n" , labs ( -3l ) , labs ( 3l ) ) ;
 
 { div_t i = div ( 10 , 3 ) ;
 printf ( "div_t(10, 3) = (%i, %i)\n" , i . quot , i . rem ) ;
-div_t j = print_div ( i ) ;
+
+{ div_t j = print_div ( i ) ;
 printf ( "div_t(10, 3) = (%i, %i)\n\n" , j . quot , j . rem ) ;
+}
 }
 
 { ldiv_t li = ldiv ( 10 , 3 ) ;
 printf ( "ldiv_t(10, 3) = (%li, %li)\n" , li . quot , li . rem ) ;
-ldiv_t lj = print_ldiv ( li ) ;
+
+{ ldiv_t lj = print_ldiv ( li ) ;
 printf ( "ldiv_t(10, 3) = (%li, %li)\n\n" , lj . quot , lj . rem ) ;
+}
 }
 
 { int list [] = { 3 , 4 , 2 , 1 , };

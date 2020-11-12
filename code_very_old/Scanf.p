@@ -818,8 +818,8 @@ g_inChars = 0 ;
 
 for ( index = 0 ; format [ index ] != '\0' ; ++ index ) {
 c = format [ index ];
-int d = c + 1 ;
 
+{ int d = c + 1 ;
 if ( percent ) {
 switch ( d - 1 ) {
 case 'h' :
@@ -1018,6 +1018,7 @@ shortInt = 0 ;
 longIntOrDouble = 0 ;
 longDouble = 0 ;
 star = 0 ;
+}
 }
 }
 }

@@ -609,19 +609,19 @@ string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#:
 section .text
 
  rec:
-	; InspectRegister £temporary4318 bp
+	; Assign lowHeapPtr 65534
+	mov qword [rbp + 28], 65534
 
  rec$1:
+	; InspectRegister £temporary4318 bp
+
+ rec$2:
 	; IntegralToIntegral £temporary4319 £temporary4318
 	and ebp, 65535
 
- rec$2:
+ rec$3:
 	; Assign stackTop £temporary4319
 	mov [rbp + 24], ebp
-
- rec$3:
-	; Assign lowHeapPtr 65534
-	mov qword [rbp + 28], 65534
 
  rec$4:
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -937,19 +937,19 @@ string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A
 section .text
 
  malloc_test6:
-	; InspectRegister £temporary4336 bp
+	; Assign lowHeapPtr 65534
+	mov qword [rbp + 32], 65534
 
  malloc_test6$1:
+	; InspectRegister £temporary4336 bp
+
+ malloc_test6$2:
 	; IntegralToIntegral £temporary4337 £temporary4336
 	and ebp, 65535
 
- malloc_test6$2:
+ malloc_test6$3:
 	; Assign stackTop £temporary4337
 	mov [rbp + 28], ebp
-
- malloc_test6$3:
-	; Assign lowHeapPtr 65534
-	mov qword [rbp + 32], 65534
 
  malloc_test6$4:
 	; Assign i 0

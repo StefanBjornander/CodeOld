@@ -334,6 +334,17 @@ x839:	jmp strchr	; 3: -23 -76 26
 
 string_test$85:	; post call
 
+
+
+
+
+
+
+
+
+
+
+
 string_test$86:	; £temporary4509 = return_value
 
 string_test$87:	; p = £temporary4509
@@ -357,6 +368,21 @@ x866:	jmp string_test$94	; 2: -21 3
 
 string_test$93:	; £temporary4515 = -1
 x868:	mov ax, -1	; 3: -72 -1 -1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 string_test$94:	; parameter £temporary4515, offset 8
 x871:	mov [bp + 220], ax	; 4: -119 -122 -36 0

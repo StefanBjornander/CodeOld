@@ -1,0 +1,41 @@
+0: PreCall 8
+1: Parameter signedint c 14
+2: Call isupper 8 0
+3: PostCall 8
+4: GetReturnValue £temporary324
+5: NotEqual PreCall 8 £temporary324 0
+6: Goto Return c
+7: CheckTrackMapFloatStack
+8: PreCall 8
+9: Call localeconv 8 0
+10: PostCall 8
+11: GetReturnValue £temporary325
+12: Assign localeConvPtr £temporary325
+13: NotEqual Dereference £temporary327 -> localeConvPtr localeConvPtr 0 localeConvPtr 0
+14: Goto BinaryAdd £temporary336 c 32
+15: CheckTrackMapFloatStack
+16: Dereference £temporary327 -> localeConvPtr localeConvPtr 0
+17: Assign lowerCase £temporary327 -> localeConvPtr
+18: Dereference £temporary328 -> localeConvPtr localeConvPtr 0
+19: Assign upperCase £temporary328 -> localeConvPtr
+20: PreCall 14
+21: Parameter pointer upperCase 20
+22: Parameter signedint c 22
+23: Call strchr 14 0
+24: PostCall 14
+25: GetReturnValue £temporary329
+26: BinarySubtract £temporary331 £temporary329 upperCase
+27: UnsignedDivide £temporary330 £temporary331 1
+28: Assign index £temporary330
+29: UnsignedMultiply £temporary333 index 1
+30: BinaryAdd £temporary334 lowerCase £temporary333
+31: Dereference £temporary332 -> £temporary334 £temporary334 0
+32: IntegralToIntegral £temporary335 £temporary332 -> £temporary334
+33: Return £temporary335
+34: Goto Empty
+35: BinaryAdd £temporary336 c 32
+36: Return £temporary336
+37: Goto Empty
+38: Return c
+39: Empty
+40: FunctionEnd tolower

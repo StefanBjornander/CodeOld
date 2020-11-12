@@ -2057,51 +2057,51 @@ section .text
 	je printArgument$113
 
  printArgument$11:
-	; Case 173 c 71
+	; Case 171 c 71
 	cmp al, 71
-	je printArgument$173
+	je printArgument$171
 
  printArgument$12:
-	; Case 173 c 103
+	; Case 171 c 103
 	cmp al, 103
-	je printArgument$173
+	je printArgument$171
 
  printArgument$13:
-	; Case 173 c 69
+	; Case 171 c 69
 	cmp al, 69
-	je printArgument$173
+	je printArgument$171
 
  printArgument$14:
-	; Case 173 c 101
+	; Case 171 c 101
 	cmp al, 101
-	je printArgument$173
+	je printArgument$171
 
  printArgument$15:
-	; Case 173 c 102
+	; Case 171 c 102
 	cmp al, 102
-	je printArgument$173
+	je printArgument$171
 
  printArgument$16:
-	; Case 299 c 112
+	; Case 297 c 112
 	cmp al, 112
-	je printArgument$299
+	je printArgument$297
 
  printArgument$17:
-	; Case 324 c 110
+	; Case 322 c 110
 	cmp al, 110
-	je printArgument$324
+	je printArgument$322
 
  printArgument$18:
-	; Case 346 c 37
+	; Case 344 c 37
 	cmp al, 37
-	je printArgument$346
+	je printArgument$344
 
  printArgument$19:
 	; CaseEnd c
 
  printArgument$20:
-	; Goto 359
-	jmp printArgument$359
+	; Goto 357
+	jmp printArgument$357
 
  printArgument$21:
 	; Equal 30 shortInt 0
@@ -2334,8 +2334,8 @@ section .text
 	; PostCall 122
 
  printArgument$72:
-	; Goto 359
-	jmp printArgument$359
+	; Goto 357
+	jmp printArgument$357
 
  printArgument$73:
 	; BinaryAdd arg_list arg_list 4
@@ -2422,8 +2422,8 @@ section .text
 	; PostCall 114
 
  printArgument$92:
-	; Goto 359
-	jmp printArgument$359
+	; Goto 357
+	jmp printArgument$357
 
  printArgument$93:
 	; BinaryAdd arg_list arg_list 8
@@ -2508,8 +2508,8 @@ section .text
 	; PostCall 122
 
  printArgument$112:
-	; Goto 359
-	jmp printArgument$359
+	; Goto 357
+	jmp printArgument$357
 
  printArgument$113:
 	; NotEqual 116 c 117
@@ -2521,8 +2521,8 @@ section .text
 	mov rax, 10
 
  printArgument$115:
-	; Goto 125
-	jmp printArgument$125
+	; Goto 123
+	jmp printArgument$123
 
  printArgument$116:
 	; NotEqual 119 c 111
@@ -2530,12 +2530,12 @@ section .text
 	jne printArgument$119
 
  printArgument$117:
-	; Assign £temporary1743 8
+	; Assign £temporary1744 8
 	mov rax, 8
 
  printArgument$118:
-	; Goto 124
-	jmp printArgument$124
+	; Goto 123
+	jmp printArgument$123
 
  printArgument$119:
 	; NotEqual 122 c 98
@@ -2543,7 +2543,7 @@ section .text
 	jne printArgument$122
 
  printArgument$120:
-	; Assign £temporary1742 2
+	; Assign £temporary1744 2
 	mov rax, 2
 
  printArgument$121:
@@ -2551,1029 +2551,1023 @@ section .text
 	jmp printArgument$123
 
  printArgument$122:
-	; Assign £temporary1742 16
+	; Assign £temporary1744 16
 	mov rax, 16
 
  printArgument$123:
-	; Assign £temporary1743 £temporary1742
-
- printArgument$124:
-	; Assign £temporary1744 £temporary1743
-
- printArgument$125:
 	; Assign base £temporary1744
 	mov [rbp + 114], rax
 
- printArgument$126:
-	; Equal 135 shortInt 0
+ printArgument$124:
+	; Equal 133 shortInt 0
 	cmp dword [rbp + 64], 0
-	je printArgument$135
+	je printArgument$133
 
- printArgument$127:
+ printArgument$125:
 	; BinaryAdd arg_list arg_list 4
 	add qword [rbp + 32], 4
 
- printArgument$128:
+ printArgument$126:
 	; BinarySubtract £temporary1747 arg_list 4
 	mov rsi, [rbp + 32]
 	sub rsi, 4
 
- printArgument$129:
+ printArgument$127:
 	; IntegralToIntegral £temporary1749 £temporary1747
 
- printArgument$130:
+ printArgument$128:
 	; Dereference £temporary1750 -> £temporary1749 £temporary1749 0
 
- printArgument$131:
+ printArgument$129:
 	; IntegralToIntegral £temporary1751 £temporary1750 -> £temporary1749
 	mov eax, [rsi]
 
- printArgument$132:
+ printArgument$130:
 	; IntegralToIntegral £temporary1752 £temporary1751
 	mov rbx, 65535
 	and rax, rbx
 
- printArgument$133:
+ printArgument$131:
 	; Assign value £temporary1752
 	mov [rbp + 122], rax
 
- printArgument$134:
-	; Goto 148
-	jmp printArgument$148
+ printArgument$132:
+	; Goto 146
+	jmp printArgument$146
 
- printArgument$135:
-	; Equal 142 longInt 0
+ printArgument$133:
+	; Equal 140 longInt 0
 	cmp dword [rbp + 68], 0
-	je printArgument$142
+	je printArgument$140
 
- printArgument$136:
+ printArgument$134:
 	; BinaryAdd arg_list arg_list 8
 	add qword [rbp + 32], 8
 
- printArgument$137:
+ printArgument$135:
 	; BinarySubtract £temporary1755 arg_list 8
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
- printArgument$138:
+ printArgument$136:
 	; IntegralToIntegral £temporary1757 £temporary1755
 
- printArgument$139:
+ printArgument$137:
 	; Dereference £temporary1758 -> £temporary1757 £temporary1757 0
 
- printArgument$140:
+ printArgument$138:
 	; Assign value £temporary1758 -> £temporary1757
 	mov rax, [rsi]
 	mov [rbp + 122], rax
 
- printArgument$141:
-	; Goto 148
-	jmp printArgument$148
+ printArgument$139:
+	; Goto 146
+	jmp printArgument$146
 
- printArgument$142:
+ printArgument$140:
 	; BinaryAdd arg_list arg_list 4
 	add qword [rbp + 32], 4
 
- printArgument$143:
+ printArgument$141:
 	; BinarySubtract £temporary1761 arg_list 4
 	mov rsi, [rbp + 32]
 	sub rsi, 4
 
- printArgument$144:
+ printArgument$142:
 	; IntegralToIntegral £temporary1763 £temporary1761
 
- printArgument$145:
+ printArgument$143:
 	; Dereference £temporary1764 -> £temporary1763 £temporary1763 0
 
- printArgument$146:
+ printArgument$144:
 	; IntegralToIntegral £temporary1765 £temporary1764 -> £temporary1763
 	mov eax, [rsi]
 	mov rbx, 4294967295
 	and rax, rbx
 
- printArgument$147:
+ printArgument$145:
 	; Assign value £temporary1765
 	mov [rbp + 122], rax
 
- printArgument$148:
+ printArgument$146:
 	; PreCall 130 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$149:
+ printArgument$147:
 	; Parameter pointer arg_list 154
 	mov rax, [rbp + 32]
 	mov [rbp + 154], rax
 
- printArgument$150:
+ printArgument$148:
 	; Parameter pointer widthPtr 162
 	mov rax, [rbp + 52]
 	mov [rbp + 162], rax
 
- printArgument$151:
+ printArgument$149:
 	; Address £temporary1768 precision
 	mov rsi, rbp
 	add rsi, 60
 
- printArgument$152:
+ printArgument$150:
 	; Parameter pointer £temporary1768 170
 	mov [rbp + 170], rsi
 
- printArgument$153:
+ printArgument$151:
 	; Call checkWidthAndPrecision 130 0
-	mov qword [rbp + 130], printArgument$154
+	mov qword [rbp + 130], printArgument$152
 	mov [rbp + 138], rbp
 	add rbp, 130
 	jmp checkWidthAndPrecision
 
- printArgument$154:
+ printArgument$152:
 	; PostCall 130
 
- printArgument$155:
+ printArgument$153:
 	; GetReturnValue £temporary1769
 
- printArgument$156:
+ printArgument$154:
 	; Assign arg_list £temporary1769
 	mov [rbp + 32], rbx
 
- printArgument$157:
+ printArgument$155:
 	; PreCall 130 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$158:
+ printArgument$156:
 	; Parameter unsignedlongint value 154
 	mov rax, [rbp + 122]
 	mov [rbp + 154], rax
 
- printArgument$159:
+ printArgument$157:
 	; Parameter signedint plus 162
 	mov eax, [rbp + 40]
 	mov [rbp + 162], eax
 
- printArgument$160:
+ printArgument$158:
 	; Parameter signedint space 166
 	mov eax, [rbp + 44]
 	mov [rbp + 166], eax
 
- printArgument$161:
+ printArgument$159:
 	; Parameter signedint grid 170
 	mov eax, [rbp + 48]
 	mov [rbp + 170], eax
 
- printArgument$162:
+ printArgument$160:
 	; Parameter unsignedlongint base 174
 	mov rax, [rbp + 114]
 	mov [rbp + 174], rax
 
- printArgument$163:
+ printArgument$161:
 	; PreCall 130 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$164:
+ printArgument$162:
 	; IntegralToIntegral £temporary1770 c
 	mov al, [rbp + 88]
 	and eax, 255
 	cmp al, 0
-	jge printArgument$165
+	jge printArgument$163
 	neg al
 	neg eax
 
- printArgument$165:
+ printArgument$163:
 	; Parameter signedint £temporary1770 206
 	mov [rbp + 206], eax
 
- printArgument$166:
+ printArgument$164:
 	; Call isupper 182 0
-	mov qword [rbp + 182], printArgument$167
+	mov qword [rbp + 182], printArgument$165
 	mov [rbp + 190], rbp
 	add rbp, 182
 	jmp isupper
 
- printArgument$167:
+ printArgument$165:
 	; PostCall 182
 
- printArgument$168:
+ printArgument$166:
 	; GetReturnValue £temporary1771
 
- printArgument$169:
+ printArgument$167:
 	; Parameter signedint £temporary1771 182
 	mov [rbp + 182], ebx
 
- printArgument$170:
+ printArgument$168:
 	; Call printUnsignedLong 130 0
-	mov qword [rbp + 130], printArgument$171
+	mov qword [rbp + 130], printArgument$169
 	mov [rbp + 138], rbp
 	add rbp, 130
 	jmp printUnsignedLong
 
- printArgument$171:
+ printArgument$169:
 	; PostCall 130
 
- printArgument$172:
-	; Goto 359
-	jmp printArgument$359
+ printArgument$170:
+	; Goto 357
+	jmp printArgument$357
 
- printArgument$173:
-	; Equal 190 longDouble 0
+ printArgument$171:
+	; Equal 188 longDouble 0
 	cmp dword [rbp + 72], 0
-	je printArgument$190
+	je printArgument$188
 
- printArgument$174:
+ printArgument$172:
 	; BinaryAdd arg_list arg_list 8
 	add qword [rbp + 32], 8
 
- printArgument$175:
+ printArgument$173:
 	; BinarySubtract £temporary1775 arg_list 8
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
- printArgument$176:
+ printArgument$174:
 	; IntegralToIntegral £temporary1777 £temporary1775
 
- printArgument$177:
+ printArgument$175:
 	; Dereference £temporary1778 -> £temporary1777 £temporary1777 0
 
- printArgument$178:
+ printArgument$176:
 	; PushFloat £temporary1778 -> £temporary1777
 	fld qword [rsi]
 
- printArgument$179:
+ printArgument$177:
 	; PopFloat longDoubleValue
 	fstp qword [rbp + 98]
 
- printArgument$180:
+ printArgument$178:
 	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$181:
+ printArgument$179:
 	; PushFloat longDoubleValue
 	fld qword [rbp + 98]
 
- printArgument$182:
+ printArgument$180:
 	; Parameter longdouble longDoubleValue 138
 	fstp qword [rbp + 138]
 
- printArgument$183:
+ printArgument$181:
 	; Parameter signedint 0 146
 	mov dword [rbp + 146], 0
 
- printArgument$184:
+ printArgument$182:
 	; Parameter signedint 0 150
 	mov dword [rbp + 150], 0
 
- printArgument$185:
+ printArgument$183:
 	; Parameter signedint 0 154
 	mov dword [rbp + 154], 0
 
- printArgument$186:
+ printArgument$184:
 	; Parameter signedint 3 158
 	mov dword [rbp + 158], 3
 
- printArgument$187:
+ printArgument$185:
 	; Call printLongDoublePlain 114 0
-	mov qword [rbp + 114], printArgument$188
+	mov qword [rbp + 114], printArgument$186
 	mov [rbp + 122], rbp
 	add rbp, 114
 	jmp printLongDoublePlain
 
- printArgument$188:
+ printArgument$186:
 	; PostCall 114
 
- printArgument$189:
-	; Goto 196
-	jmp printArgument$196
+ printArgument$187:
+	; Goto 194
+	jmp printArgument$194
 
- printArgument$190:
+ printArgument$188:
 	; BinaryAdd arg_list arg_list 8
 	add qword [rbp + 32], 8
 
- printArgument$191:
+ printArgument$189:
 	; BinarySubtract £temporary1782 arg_list 8
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
- printArgument$192:
+ printArgument$190:
 	; IntegralToIntegral £temporary1784 £temporary1782
 
- printArgument$193:
+ printArgument$191:
 	; Dereference £temporary1785 -> £temporary1784 £temporary1784 0
 
- printArgument$194:
+ printArgument$192:
 	; PushFloat £temporary1785 -> £temporary1784
 	fld qword [rsi]
 
- printArgument$195:
+ printArgument$193:
 	; PopFloat longDoubleValue
 	fstp qword [rbp + 98]
 
- printArgument$196:
-	; Equal 205 negativePtr 0
+ printArgument$194:
+	; Equal 203 negativePtr 0
 	cmp qword [rbp + 80], 0
-	je printArgument$205
+	je printArgument$203
 
- printArgument$197:
+ printArgument$195:
 	; Dereference £temporary1789 -> negativePtr negativePtr 0
 	mov rsi, [rbp + 80]
 
- printArgument$198:
+ printArgument$196:
 	; PushFloat longDoubleValue
 	fld qword [rbp + 98]
 
- printArgument$199:
+ printArgument$197:
 	; PushFloat 0
 	fldz
 
- printArgument$200:
-	; SignedGreaterThanEqual 203 longDoubleValue 0
+ printArgument$198:
+	; SignedGreaterThanEqual 201 longDoubleValue 0
 	fcompp
 	fstsw ax
 	sahf
-	jbe printArgument$203
+	jbe printArgument$201
 
- printArgument$201:
+ printArgument$199:
 	; Assign £temporary1791 1
 	mov eax, 1
 
- printArgument$202:
-	; Goto 204
-	jmp printArgument$204
+ printArgument$200:
+	; Goto 202
+	jmp printArgument$202
 
- printArgument$203:
+ printArgument$201:
 	; Assign £temporary1791 0
 	mov eax, 0
 
- printArgument$204:
+ printArgument$202:
 	; Assign £temporary1789 -> negativePtr £temporary1791
 	mov [rsi], eax
 
- printArgument$205:
-	; NotEqual 213 sign 0
+ printArgument$203:
+	; NotEqual 211 sign 0
 	cmp dword [rbp + 76], 0
-	jne printArgument$213
+	jne printArgument$211
 
- printArgument$206:
+ printArgument$204:
 	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$207:
+ printArgument$205:
 	; PushFloat longDoubleValue
 	fld qword [rbp + 98]
 
- printArgument$208:
+ printArgument$206:
 	; Parameter double longDoubleValue 138
 	fstp qword [rbp + 138]
 
- printArgument$209:
+ printArgument$207:
 	; Call fabs 114 0
-	mov qword [rbp + 114], printArgument$210
+	mov qword [rbp + 114], printArgument$208
 	mov [rbp + 122], rbp
 	add rbp, 114
 	jmp fabs
 
- printArgument$210:
+ printArgument$208:
 	; PostCall 114
 
- printArgument$211:
+ printArgument$209:
 	; GetReturnValue £temporary1794
 
- printArgument$212:
+ printArgument$210:
 	; PopFloat longDoubleValue
 	fstp qword [rbp + 98]
 
- printArgument$213:
+ printArgument$211:
 	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$214:
+ printArgument$212:
 	; Parameter pointer arg_list 138
 	mov rax, [rbp + 32]
 	mov [rbp + 138], rax
 
- printArgument$215:
+ printArgument$213:
 	; Parameter pointer widthPtr 146
 	mov rax, [rbp + 52]
 	mov [rbp + 146], rax
 
- printArgument$216:
+ printArgument$214:
 	; Address £temporary1795 precision
 	mov rsi, rbp
 	add rsi, 60
 
- printArgument$217:
+ printArgument$215:
 	; Parameter pointer £temporary1795 154
 	mov [rbp + 154], rsi
 
- printArgument$218:
+ printArgument$216:
 	; Call checkWidthAndPrecision 114 0
-	mov qword [rbp + 114], printArgument$219
+	mov qword [rbp + 114], printArgument$217
 	mov [rbp + 122], rbp
 	add rbp, 114
 	jmp checkWidthAndPrecision
 
- printArgument$219:
+ printArgument$217:
 	; PostCall 114
 
- printArgument$220:
+ printArgument$218:
 	; GetReturnValue £temporary1796
 
- printArgument$221:
+ printArgument$219:
 	; Assign arg_list £temporary1796
 	mov [rbp + 32], rbx
 
- printArgument$222:
-	; NotEqual 233 c 102
+ printArgument$220:
+	; NotEqual 231 c 102
 	cmp byte [rbp + 88], 102
-	jne printArgument$233
+	jne printArgument$231
 
- printArgument$223:
+ printArgument$221:
 	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$224:
+ printArgument$222:
 	; PushFloat longDoubleValue
 	fld qword [rbp + 98]
 
- printArgument$225:
+ printArgument$223:
 	; Parameter longdouble longDoubleValue 138
 	fstp qword [rbp + 138]
 
- printArgument$226:
+ printArgument$224:
 	; Parameter signedint plus 146
 	mov eax, [rbp + 40]
 	mov [rbp + 146], eax
 
- printArgument$227:
+ printArgument$225:
 	; Parameter signedint space 150
 	mov eax, [rbp + 44]
 	mov [rbp + 150], eax
 
- printArgument$228:
+ printArgument$226:
 	; Parameter signedint grid 154
 	mov eax, [rbp + 48]
 	mov [rbp + 154], eax
 
- printArgument$229:
+ printArgument$227:
 	; Parameter signedint precision 158
 	mov eax, [rbp + 60]
 	mov [rbp + 158], eax
 
- printArgument$230:
+ printArgument$228:
 	; Call printLongDoublePlain 114 0
-	mov qword [rbp + 114], printArgument$231
+	mov qword [rbp + 114], printArgument$229
 	mov [rbp + 122], rbp
 	add rbp, 114
 	jmp printLongDoublePlain
 
- printArgument$231:
+ printArgument$229:
 	; PostCall 114
 
- printArgument$232:
-	; Goto 359
-	jmp printArgument$359
+ printArgument$230:
+	; Goto 357
+	jmp printArgument$357
 
- printArgument$233:
+ printArgument$231:
 	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$234:
+ printArgument$232:
 	; IntegralToIntegral £temporary1799 c
 	mov al, [rbp + 88]
 	and eax, 255
 	cmp al, 0
-	jge printArgument$235
+	jge printArgument$233
 	neg al
 	neg eax
 
- printArgument$235:
+ printArgument$233:
 	; Parameter signedint £temporary1799 138
 	mov [rbp + 138], eax
 
- printArgument$236:
+ printArgument$234:
 	; Call tolower 114 0
-	mov qword [rbp + 114], printArgument$237
+	mov qword [rbp + 114], printArgument$235
 	mov [rbp + 122], rbp
 	add rbp, 114
 	jmp tolower
 
- printArgument$237:
+ printArgument$235:
 	; PostCall 114
 
- printArgument$238:
+ printArgument$236:
 	; GetReturnValue £temporary1800
 
- printArgument$239:
-	; NotEqual 257 £temporary1800 101
+ printArgument$237:
+	; NotEqual 255 £temporary1800 101
 	cmp ebx, 101
-	jne printArgument$257
+	jne printArgument$255
 
- printArgument$240:
+ printArgument$238:
 	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$241:
+ printArgument$239:
 	; PushFloat longDoubleValue
 	fld qword [rbp + 98]
 
- printArgument$242:
+ printArgument$240:
 	; Parameter longdouble longDoubleValue 138
 	fstp qword [rbp + 138]
 
- printArgument$243:
+ printArgument$241:
 	; Parameter signedint plus 146
 	mov eax, [rbp + 40]
 	mov [rbp + 146], eax
 
- printArgument$244:
+ printArgument$242:
 	; Parameter signedint space 150
 	mov eax, [rbp + 44]
 	mov [rbp + 150], eax
 
- printArgument$245:
+ printArgument$243:
 	; Parameter signedint grid 154
 	mov eax, [rbp + 48]
 	mov [rbp + 154], eax
 
- printArgument$246:
+ printArgument$244:
 	; Parameter signedint precision 158
 	mov eax, [rbp + 60]
 	mov [rbp + 158], eax
 
- printArgument$247:
+ printArgument$245:
 	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$248:
+ printArgument$246:
 	; IntegralToIntegral £temporary1802 c
 	mov al, [rbp + 88]
 	and eax, 255
 	cmp al, 0
-	jge printArgument$249
+	jge printArgument$247
 	neg al
 	neg eax
 
- printArgument$249:
+ printArgument$247:
 	; Parameter signedint £temporary1802 186
 	mov [rbp + 186], eax
 
- printArgument$250:
+ printArgument$248:
 	; Call isupper 162 0
-	mov qword [rbp + 162], printArgument$251
+	mov qword [rbp + 162], printArgument$249
 	mov [rbp + 170], rbp
 	add rbp, 162
 	jmp isupper
 
- printArgument$251:
+ printArgument$249:
 	; PostCall 162
 
- printArgument$252:
+ printArgument$250:
 	; GetReturnValue £temporary1803
 
- printArgument$253:
+ printArgument$251:
 	; Parameter signedint £temporary1803 162
 	mov [rbp + 162], ebx
 
- printArgument$254:
+ printArgument$252:
 	; Call printLongDoubleExpo 114 0
-	mov qword [rbp + 114], printArgument$255
+	mov qword [rbp + 114], printArgument$253
 	mov [rbp + 122], rbp
 	add rbp, 114
 	jmp printLongDoubleExpo
 
- printArgument$255:
+ printArgument$253:
 	; PostCall 114
 
+ printArgument$254:
+	; Goto 357
+	jmp printArgument$357
+
+ printArgument$255:
+	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
  printArgument$256:
-	; Goto 359
-	jmp printArgument$359
+	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printArgument$257:
-	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- printArgument$258:
-	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- printArgument$259:
 	; PushFloat longDoubleValue
 	fld qword [rbp + 98]
 
- printArgument$260:
+ printArgument$258:
 	; Parameter double longDoubleValue 138
 	fstp qword [rbp + 138]
 
- printArgument$261:
+ printArgument$259:
 	; Call fabs 114 0
-	mov qword [rbp + 114], printArgument$262
+	mov qword [rbp + 114], printArgument$260
 	mov [rbp + 122], rbp
 	add rbp, 114
 	jmp fabs
 
- printArgument$262:
+ printArgument$260:
 	; PostCall 114
 
- printArgument$263:
+ printArgument$261:
 	; GetReturnValue £temporary1805
 
- printArgument$264:
+ printArgument$262:
 	; Parameter double £temporary1805 138
 	fstp qword [rbp + 138]
 
- printArgument$265:
+ printArgument$263:
 	; Call log10 114 0
-	mov qword [rbp + 114], printArgument$266
+	mov qword [rbp + 114], printArgument$264
 	mov [rbp + 122], rbp
 	add rbp, 114
 	jmp log10
 
- printArgument$266:
+ printArgument$264:
 	; PostCall 114
 
- printArgument$267:
+ printArgument$265:
 	; GetReturnValue £temporary1806
 
- printArgument$268:
+ printArgument$266:
 	; FloatingToIntegral £temporary1807 £temporary1806
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
- printArgument$269:
+ printArgument$267:
 	; Assign expo £temporary1807
 	mov [rbp + 114], eax
 
- printArgument$270:
-	; SignedLessThan 282 expo -3
+ printArgument$268:
+	; SignedLessThan 280 expo -3
 	cmp dword [rbp + 114], -3
-	jl printArgument$282
+	jl printArgument$280
 
- printArgument$271:
-	; SignedGreaterThan 282 expo 2
+ printArgument$269:
+	; SignedGreaterThan 280 expo 2
 	cmp dword [rbp + 114], 2
-	jg printArgument$282
+	jg printArgument$280
 
- printArgument$272:
+ printArgument$270:
 	; PreCall 118 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$273:
+ printArgument$271:
 	; PushFloat longDoubleValue
 	fld qword [rbp + 98]
 
- printArgument$274:
+ printArgument$272:
 	; Parameter longdouble longDoubleValue 142
 	fstp qword [rbp + 142]
 
- printArgument$275:
+ printArgument$273:
 	; Parameter signedint plus 150
 	mov eax, [rbp + 40]
 	mov [rbp + 150], eax
 
- printArgument$276:
+ printArgument$274:
 	; Parameter signedint space 154
 	mov eax, [rbp + 44]
 	mov [rbp + 154], eax
 
- printArgument$277:
+ printArgument$275:
 	; Parameter signedint grid 158
 	mov eax, [rbp + 48]
 	mov [rbp + 158], eax
 
- printArgument$278:
+ printArgument$276:
 	; Parameter signedint precision 162
 	mov eax, [rbp + 60]
 	mov [rbp + 162], eax
 
- printArgument$279:
+ printArgument$277:
 	; Call printLongDoublePlain 118 0
-	mov qword [rbp + 118], printArgument$280
+	mov qword [rbp + 118], printArgument$278
 	mov [rbp + 126], rbp
 	add rbp, 118
 	jmp printLongDoublePlain
 
- printArgument$280:
+ printArgument$278:
 	; PostCall 118
 
- printArgument$281:
-	; Goto 359
-	jmp printArgument$359
+ printArgument$279:
+	; Goto 357
+	jmp printArgument$357
 
- printArgument$282:
+ printArgument$280:
 	; PreCall 118 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$283:
+ printArgument$281:
 	; PushFloat longDoubleValue
 	fld qword [rbp + 98]
 
- printArgument$284:
+ printArgument$282:
 	; Parameter longdouble longDoubleValue 142
 	fstp qword [rbp + 142]
 
- printArgument$285:
+ printArgument$283:
 	; Parameter signedint plus 150
 	mov eax, [rbp + 40]
 	mov [rbp + 150], eax
 
- printArgument$286:
+ printArgument$284:
 	; Parameter signedint space 154
 	mov eax, [rbp + 44]
 	mov [rbp + 154], eax
 
- printArgument$287:
+ printArgument$285:
 	; Parameter signedint grid 158
 	mov eax, [rbp + 48]
 	mov [rbp + 158], eax
 
- printArgument$288:
+ printArgument$286:
 	; Parameter signedint precision 162
 	mov eax, [rbp + 60]
 	mov [rbp + 162], eax
 
- printArgument$289:
+ printArgument$287:
 	; PreCall 118 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$290:
+ printArgument$288:
 	; IntegralToIntegral £temporary1812 c
 	mov al, [rbp + 88]
 	and eax, 255
 	cmp al, 0
-	jge printArgument$291
+	jge printArgument$289
 	neg al
 	neg eax
 
- printArgument$291:
+ printArgument$289:
 	; Parameter signedint £temporary1812 190
 	mov [rbp + 190], eax
 
- printArgument$292:
+ printArgument$290:
 	; Call isupper 166 0
-	mov qword [rbp + 166], printArgument$293
+	mov qword [rbp + 166], printArgument$291
 	mov [rbp + 174], rbp
 	add rbp, 166
 	jmp isupper
 
- printArgument$293:
+ printArgument$291:
 	; PostCall 166
 
- printArgument$294:
+ printArgument$292:
 	; GetReturnValue £temporary1813
 
- printArgument$295:
+ printArgument$293:
 	; Parameter signedint £temporary1813 166
 	mov [rbp + 166], ebx
 
- printArgument$296:
+ printArgument$294:
 	; Call printLongDoubleExpo 118 0
-	mov qword [rbp + 118], printArgument$297
+	mov qword [rbp + 118], printArgument$295
 	mov [rbp + 126], rbp
 	add rbp, 118
 	jmp printLongDoubleExpo
 
- printArgument$297:
+ printArgument$295:
 	; PostCall 118
 
- printArgument$298:
-	; Goto 359
-	jmp printArgument$359
+ printArgument$296:
+	; Goto 357
+	jmp printArgument$357
 
- printArgument$299:
+ printArgument$297:
 	; BinaryAdd arg_list arg_list 8
 	add qword [rbp + 32], 8
 
- printArgument$300:
+ printArgument$298:
 	; BinarySubtract £temporary1817 arg_list 8
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
- printArgument$301:
+ printArgument$299:
 	; IntegralToIntegral £temporary1819 £temporary1817
 
- printArgument$302:
+ printArgument$300:
 	; Dereference £temporary1820 -> £temporary1819 £temporary1819 0
 
- printArgument$303:
+ printArgument$301:
 	; Assign ptrValue £temporary1820 -> £temporary1819
 	mov rax, [rsi]
 	mov [rbp + 106], rax
 
- printArgument$304:
+ printArgument$302:
 	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$305:
+ printArgument$303:
 	; Parameter pointer arg_list 138
 	mov rax, [rbp + 32]
 	mov [rbp + 138], rax
 
- printArgument$306:
+ printArgument$304:
 	; Parameter pointer widthPtr 146
 	mov rax, [rbp + 52]
 	mov [rbp + 146], rax
 
- printArgument$307:
+ printArgument$305:
 	; Address £temporary1821 precision
 	mov rsi, rbp
 	add rsi, 60
 
- printArgument$308:
+ printArgument$306:
 	; Parameter pointer £temporary1821 154
 	mov [rbp + 154], rsi
 
- printArgument$309:
+ printArgument$307:
 	; Call checkWidthAndPrecision 114 0
-	mov qword [rbp + 114], printArgument$310
+	mov qword [rbp + 114], printArgument$308
 	mov [rbp + 122], rbp
 	add rbp, 114
 	jmp checkWidthAndPrecision
 
- printArgument$310:
+ printArgument$308:
 	; PostCall 114
 
- printArgument$311:
+ printArgument$309:
 	; GetReturnValue £temporary1822
 
- printArgument$312:
+ printArgument$310:
 	; Assign arg_list £temporary1822
 	mov [rbp + 32], rbx
 
- printArgument$313:
+ printArgument$311:
 	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$314:
+ printArgument$312:
 	; IntegralToIntegral £temporary1823 ptrValue
 	mov rax, [rbp + 106]
 
- printArgument$315:
+ printArgument$313:
 	; Parameter unsignedlongint £temporary1823 138
 	mov [rbp + 138], rax
 
- printArgument$316:
+ printArgument$314:
 	; Parameter signedint 0 146
 	mov dword [rbp + 146], 0
 
- printArgument$317:
+ printArgument$315:
 	; Parameter signedint 0 150
 	mov dword [rbp + 150], 0
 
- printArgument$318:
+ printArgument$316:
 	; Parameter signedint 0 154
 	mov dword [rbp + 154], 0
 
- printArgument$319:
+ printArgument$317:
 	; Parameter unsignedlongint 10 158
 	mov qword [rbp + 158], 10
 
- printArgument$320:
+ printArgument$318:
 	; Parameter signedint 0 166
 	mov dword [rbp + 166], 0
 
- printArgument$321:
+ printArgument$319:
 	; Call printUnsignedLong 114 0
-	mov qword [rbp + 114], printArgument$322
+	mov qword [rbp + 114], printArgument$320
 	mov [rbp + 122], rbp
 	add rbp, 114
 	jmp printUnsignedLong
 
- printArgument$322:
+ printArgument$320:
 	; PostCall 114
 
- printArgument$323:
-	; Goto 359
-	jmp printArgument$359
+ printArgument$321:
+	; Goto 357
+	jmp printArgument$357
 
- printArgument$324:
+ printArgument$322:
 	; BinaryAdd arg_list arg_list 8
 	add qword [rbp + 32], 8
 
- printArgument$325:
+ printArgument$323:
 	; BinarySubtract £temporary1827 arg_list 8
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
- printArgument$326:
+ printArgument$324:
 	; IntegralToIntegral £temporary1829 £temporary1827
 
- printArgument$327:
+ printArgument$325:
 	; Dereference £temporary1830 -> £temporary1829 £temporary1829 0
 
- printArgument$328:
+ printArgument$326:
 	; Assign ptrValue £temporary1830 -> £temporary1829
 	mov rax, [rsi]
 	mov [rbp + 106], rax
 
- printArgument$329:
+ printArgument$327:
 	; BinaryAdd arg_list arg_list 8
 	add qword [rbp + 32], 8
 
- printArgument$330:
+ printArgument$328:
 	; BinarySubtract £temporary1833 arg_list 8
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
- printArgument$331:
+ printArgument$329:
 	; IntegralToIntegral £temporary1835 £temporary1833
 
- printArgument$332:
+ printArgument$330:
 	; Dereference £temporary1836 -> £temporary1835 £temporary1835 0
 
- printArgument$333:
+ printArgument$331:
 	; Assign intPtr £temporary1836 -> £temporary1835
 	mov rax, [rsi]
 	mov [rbp + 90], rax
 
- printArgument$334:
+ printArgument$332:
 	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$335:
+ printArgument$333:
 	; Parameter pointer arg_list 138
 	mov rax, [rbp + 32]
 	mov [rbp + 138], rax
 
- printArgument$336:
+ printArgument$334:
 	; Parameter pointer widthPtr 146
 	mov rax, [rbp + 52]
 	mov [rbp + 146], rax
 
- printArgument$337:
+ printArgument$335:
 	; Address £temporary1837 precision
 	mov rsi, rbp
 	add rsi, 60
 
- printArgument$338:
+ printArgument$336:
 	; Parameter pointer £temporary1837 154
 	mov [rbp + 154], rsi
 
- printArgument$339:
+ printArgument$337:
 	; Call checkWidthAndPrecision 114 0
-	mov qword [rbp + 114], printArgument$340
+	mov qword [rbp + 114], printArgument$338
 	mov [rbp + 122], rbp
 	add rbp, 114
 	jmp checkWidthAndPrecision
 
- printArgument$340:
+ printArgument$338:
 	; PostCall 114
 
- printArgument$341:
+ printArgument$339:
 	; GetReturnValue £temporary1838
 
- printArgument$342:
+ printArgument$340:
 	; Assign arg_list £temporary1838
 	mov [rbp + 32], rbx
 
- printArgument$343:
+ printArgument$341:
 	; Dereference £temporary1839 -> intPtr intPtr 0
 	mov rsi, [rbp + 90]
 
- printArgument$344:
+ printArgument$342:
 	; Assign £temporary1839 -> intPtr g_outChars
 	mov eax, [g_outChars]
 	mov [rsi], eax
 
- printArgument$345:
-	; Goto 359
-	jmp printArgument$359
+ printArgument$343:
+	; Goto 357
+	jmp printArgument$357
 
- printArgument$346:
+ printArgument$344:
 	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$347:
+ printArgument$345:
 	; Parameter pointer arg_list 138
 	mov rax, [rbp + 32]
 	mov [rbp + 138], rax
 
- printArgument$348:
+ printArgument$346:
 	; Parameter pointer widthPtr 146
 	mov rax, [rbp + 52]
 	mov [rbp + 146], rax
 
- printArgument$349:
+ printArgument$347:
 	; Address £temporary1840 precision
 	mov rsi, rbp
 	add rsi, 60
 
- printArgument$350:
+ printArgument$348:
 	; Parameter pointer £temporary1840 154
 	mov [rbp + 154], rsi
 
- printArgument$351:
+ printArgument$349:
 	; Call checkWidthAndPrecision 114 0
-	mov qword [rbp + 114], printArgument$352
+	mov qword [rbp + 114], printArgument$350
 	mov [rbp + 122], rbp
 	add rbp, 114
 	jmp checkWidthAndPrecision
 
- printArgument$352:
+ printArgument$350:
 	; PostCall 114
 
- printArgument$353:
+ printArgument$351:
 	; GetReturnValue £temporary1841
 
- printArgument$354:
+ printArgument$352:
 	; Assign arg_list £temporary1841
 	mov [rbp + 32], rbx
 
- printArgument$355:
+ printArgument$353:
 	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printArgument$356:
+ printArgument$354:
 	; Parameter signedchar 37 138
 	mov byte [rbp + 138], 37
 
- printArgument$357:
+ printArgument$355:
 	; Call printChar 114 0
-	mov qword [rbp + 114], printArgument$358
+	mov qword [rbp + 114], printArgument$356
 	mov [rbp + 122], rbp
 	add rbp, 114
 	jmp printChar
 
- printArgument$358:
+ printArgument$356:
 	; PostCall 114
 
- printArgument$359:
+ printArgument$357:
 	; Return arg_list
 	mov rbx, [rbp + 32]
 	mov rax, [rbp]
@@ -3581,7 +3575,7 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- printArgument$360:
+ printArgument$358:
 	; FunctionEnd printArgument
 
 section .data

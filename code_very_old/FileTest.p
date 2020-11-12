@@ -536,9 +536,8 @@ if ( ! ( outFilePtrPtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion f
 fscanf ( inFilePtrPtr , "%i" , & size ) ;
 
 for ( index = 0 ; index < size ; ++ index ) {
-double inValue = 0 ;
+double inValue = 0 , outValue = sqrt ( ( double ) inValue ) ;
 fscanf ( inFilePtrPtr , "%lf" , & inValue ) ;
-double outValue = sqrt ( ( double ) inValue ) ;
 fprintf ( outFilePtrPtr , "%f\n" , outValue ) ;
 }
 }
@@ -569,7 +568,7 @@ printf ( "Error %i: %s.\n" , errno , strerror ( errno ) ) ;
 }
 
 { FILE * inFilePtr = fopen ( "PBook.txt" , "r" ) ;
-if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 51 ) ; abort ( ) ; } ;
+if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 50 ) ; abort ( ) ; } ;
 
 
 printf ( "\n%-24s %-24s\n" , "Name" , "Phone" ) ;
@@ -598,8 +597,8 @@ char * targetFilePtr = "Flow2.txt" ;
 FILE * inFilePtr = fopen ( sourceFilePtr , "r" ) ;
 FILE * outFilePtr = fopen ( targetFilePtr , "w" ) ;
 
-if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 80 ) ; abort ( ) ; } ;
-if ( ! ( outFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "outFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 81 ) ; abort ( ) ; } ;
+if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 79 ) ; abort ( ) ; } ;
+if ( ! ( outFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "outFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 80 ) ; abort ( ) ; } ;
 
 while ( 1 ) {
 char c = ( char ) fgetc ( inFilePtr ) ;
@@ -620,12 +619,11 @@ fclose ( outFilePtr ) ;
 }
 
 { FILE * outFilePtr = fopen ( "Test.bin" , "w" ) ;
-if ( ! ( outFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "outFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 102 ) ; abort ( ) ; } ;
+if ( ! ( outFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "outFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 101 ) ; abort ( ) ; } ;
 
-{ int size = 10 ;
+{ int size = 10 , index ;
 fwrite ( & size , sizeof size , 1 , outFilePtr ) ;
 
-int index ;
 for ( index = 0 ; index < size ; ++ index ) {
 double value = ( double ) ( index * index ) ;
 fwrite ( & value , sizeof value , 1 , outFilePtr ) ;
@@ -636,7 +634,7 @@ fclose ( outFilePtr ) ;
 }
 
 { FILE * inFilePtr = fopen ( "Test.bin" , "r" ) ;
-if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 118 ) ; abort ( ) ; } ;
+if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 116 ) ; abort ( ) ; } ;
 
 { int size , index ;
 double arr [ 10 ];
@@ -657,7 +655,7 @@ printf ( "\n" ) ;
 { FILE * inFilePtr = fopen ( "Test.bin" , "r" ) ;
 int size , index ;
 
-if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 139 ) ; abort ( ) ; } ;
+if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 137 ) ; abort ( ) ; } ;
 fread ( & size , sizeof size , 1 , inFilePtr ) ;
 printf ( "size2 %i\n" , size ) ;
 
@@ -674,14 +672,14 @@ fclose ( inFilePtr ) ;
 { FILE * inFilePtr = fopen ( "Test.bin" , "r" ) ;
 int size ;
 
-if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 156 ) ; abort ( ) ; } ;
+if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 154 ) ; abort ( ) ; } ;
 fread ( & size , sizeof size , 1 , inFilePtr ) ;
 printf ( "size3 %i total %i\n" , size , size * sizeof ( double ) ) ;
 
 { int total = size * sizeof ( double ) , index ;
 double * p = malloc ( total ) ;
 double * endPtr = p + size ;
-if ( ! ( p != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "p != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 163 ) ; abort ( ) ; } ;
+if ( ! ( p != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "p != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 161 ) ; abort ( ) ; } ;
 printf ( "malloc %u %u %u\n" , p , total , endPtr ) ;
 fread ( p , total , 1 , inFilePtr ) ;
 
@@ -708,8 +706,8 @@ struct _Person person ;
 FILE * outFilePtr = fopen ( "Block.bin" , "w" ) ;
 FILE * inFilePtr = fopen ( "Block.bin" , "r" ) ;
 
-if ( ! ( outFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "outFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 190 ) ; abort ( ) ; } ;
-if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 191 ) ; abort ( ) ; } ;
+if ( ! ( outFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "outFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 188 ) ; abort ( ) ; } ;
+if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 189 ) ; abort ( ) ; } ;
 
 fwrite ( personVector , sizeof personVector , 1 , outFilePtr ) ;
 fclose ( outFilePtr ) ;
@@ -725,8 +723,8 @@ fclose ( inFilePtr ) ;
 }
 
 { FILE * inFilePtr = fopen ( "Test1.txt" , "r" ) ;
-if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 207 ) ; abort ( ) ; } ;
 unsigned int u ;
+if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 206 ) ; abort ( ) ; } ;
 fseek ( inFilePtr , -1 , SEEK_END ) ;
 
 while ( ( u = ( unsigned int ) ftell ( inFilePtr ) ) >= 0u ) {
@@ -749,10 +747,10 @@ printf ( "fileexists Y %s\n\n" , fileexists ( "Y" ) ? "Yes" : "No" ) ;
 
 { FILE * tempFilePtr ;
 FILE * inOutFilePtr = fopen ( "PBookX.txt" , "r+" ) ;
-if ( ! ( inOutFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inOutFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 231 ) ; abort ( ) ; } ;
+if ( ! ( inOutFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inOutFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 229 ) ; abort ( ) ; } ;
 
 tempFilePtr = tmpfile ( ) ;
-if ( ! ( tempFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "tempFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 234 ) ; abort ( ) ; } ;
+if ( ! ( tempFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "tempFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 232 ) ; abort ( ) ; } ;
 
 while ( 1 ) {
 char c = ( char ) fgetc ( inOutFilePtr ) ;

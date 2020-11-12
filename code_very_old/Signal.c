@@ -25,23 +25,25 @@ int raise(int sig) {
   //load_register(register_al, (short)sig);
   //load_register(register_ah, 0x35s);
   interrupt(0x21s);
-  handler func = register_bx;
-  //store_register(register_bx, func);
-  printf("Raise function %p\n", func);
+
+  { handler func = register_bx;
+    //store_register(register_bx, func);
+    printf("Raise function %p\n", func);
 #else
-  handler func = NULL;
+  { handler func = NULL;
 #endif
-  if (func == SIG_DFL) {
-    printf("Raise default\n");
-    return TRUE;
-  }
-  else if (func == SIG_ERR) {
-    printf("Raise error\n");
-    return FALSE;
-  }
-  else {
-    printf("Raise function, calling %i with %i\n", func, sig);
-    func(sig);
-    return TRUE;
+    if (func == SIG_DFL) {
+      printf("Raise default\n");
+      return TRUE;
+    }
+    else if (func == SIG_ERR) {
+      printf("Raise error\n");
+      return FALSE;
+    }
+    else {
+      printf("Raise function, calling %i with %i\n", func, sig);
+      func(sig);
+      return TRUE;
+    }
   }
 }

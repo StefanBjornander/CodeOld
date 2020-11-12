@@ -691,8 +691,9 @@ timeZone = tmPtr -> tm_isdst ? localeConvPtr -> summerTimeZone
 : localeConvPtr -> winterTimeZone ;
 }
 
-unsigned long time = * timePtr + ( 3600 * timeZone ) ;
+{ unsigned long time = * timePtr + ( 3600 * timeZone ) ;
 return gmtime ( & time ) ;
+}
 }
 
 int strftime ( char * s , int smax , const char * fmt , const struct tm * tp ) {
@@ -708,6 +709,7 @@ char ** longMonthList = ( localeConvPtr != ( ( void * ) 0 ) )
 
 const int leapDays = ( tp -> tm_year - 69 ) / 4 ;
 const long totalDays = 365 * ( tp -> tm_year - 70 ) + leapDays + tp -> tm_yday ;
+int yearDaySunday , yearDayMonday ;
 
 strcpy ( s , "" ) ;
 shortDayList = ( shortDayList != ( ( void * ) 0 ) )
@@ -718,8 +720,6 @@ shortMonthList = ( shortMonthList != ( ( void * ) 0 ) )
 longMonthList = ( longMonthList != ( ( void * ) 0 ) )
 ? longMonthList : g_defaultLongMonthList ;
 
-
-int yearDaySunday , yearDayMonday ;
 
 if ( totalDays < 3 ) {
 yearDaySunday = totalDays + 4 ;

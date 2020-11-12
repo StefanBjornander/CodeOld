@@ -327,11 +327,12 @@ int raise ( int sig ) {
 
 
     
-    
+
+     
 
       
   
- handler func = ( ( void * ) 0 ) ;
+ { handler func = ( ( void * ) 0 ) ;
   
  if ( func == ( ( handler ) 0 ) ) {
 printf ( "Raise default\n" ) ;
@@ -345,5 +346,6 @@ else {
 printf ( "Raise function, calling %i with %i\n" , func , sig ) ;
 func ( sig ) ;
 return 1 ;
+}
 }
 }

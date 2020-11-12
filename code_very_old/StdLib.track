@@ -125,7 +125,7 @@ strtol$6:	; post call
 strtol$7:	; £temporary2425 = return_value
 30:	
 
-strtol$8:	; longValue = £temporary2425
+strtol$8:	; value = £temporary2425
 31:		mov [bp + 12], t1572
 33:	
 
@@ -144,7 +144,7 @@ strtol$11:	; £temporary2427 -> endp = s + g_inChars
 43:		mov [a1573], a1574
 45:	
 
-strtol$12:	; return_value = longValue
+strtol$12:	; return_value = value
 46:		mov a1575, [bp + 12]
 48:	
 

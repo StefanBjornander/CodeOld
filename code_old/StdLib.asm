@@ -5620,8 +5620,8 @@ section .text
 section .text
 
  exit:
-	; Assign index 257
-	mov dword [rbp + 28], 257
+	; Assign index 255
+	mov dword [rbp + 28], 255
 
  exit$1:
 	; SignedLessThan 16 index 0
@@ -5995,67 +5995,61 @@ section .text
 section .text
 
  @abs:
-	; SignedGreaterThanEqual 4 value 0
+	; SignedGreaterThanEqual 3 value 0
 	cmp dword [rbp + 24], 0
-	jge @abs$4
+	jge @abs$3
 
  @abs$1:
-	; UnarySubtract £temporary2667 value
+	; UnarySubtract £temporary2668 value
 	mov ebx, [rbp + 24]
 	neg ebx
 
  @abs$2:
-	; Assign £temporary2668 £temporary2667
+	; Goto 4
+	jmp @abs$4
 
  @abs$3:
-	; Goto 5
-	jmp @abs$5
-
- @abs$4:
 	; Assign £temporary2668 value
 	mov ebx, [rbp + 24]
 
- @abs$5:
+ @abs$4:
 	; Return £temporary2668
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @abs$6:
+ @abs$5:
 	; FunctionEnd @abs
 
 section .text
 
  labs:
-	; SignedGreaterThanEqual 4 value 0
+	; SignedGreaterThanEqual 3 value 0
 	cmp qword [rbp + 24], 0
-	jge labs$4
+	jge labs$3
 
  labs$1:
-	; UnarySubtract £temporary2670 value
+	; UnarySubtract £temporary2671 value
 	mov rbx, [rbp + 24]
 	neg rbx
 
  labs$2:
-	; Assign £temporary2671 £temporary2670
+	; Goto 4
+	jmp labs$4
 
  labs$3:
-	; Goto 5
-	jmp labs$5
-
- labs$4:
 	; Assign £temporary2671 value
 	mov rbx, [rbp + 24]
 
- labs$5:
+ labs$4:
 	; Return £temporary2671
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- labs$6:
+ labs$5:
 	; FunctionEnd labs
 
 section .text
