@@ -50,7 +50,7 @@ string_Sat#:
 
 section .data
 
-@1500$enShortDayList:
+@1498$enShortDayList:
 	; Initializer Pointer string_Sun#
 	dq string_Sun#
 	; Initializer Pointer string_Mon#
@@ -110,7 +110,7 @@ string_Saturday#:
 
 section .data
 
-@1501$enLongDayList:
+@1499$enLongDayList:
 	; Initializer Pointer string_Sunday#
 	dq string_Sunday#
 	; Initializer Pointer string_Monday#
@@ -200,7 +200,7 @@ string_Dec#:
 
 section .data
 
-@1502$enShortMonthList:
+@1500$enShortMonthList:
 	; Initializer Pointer string_Jan#
 	dq string_Jan#
 	; Initializer Pointer string_Feb#
@@ -294,7 +294,7 @@ string_December#:
 
 section .data
 
-@1503$enLongMonthList:
+@1501$enLongMonthList:
 	; Initializer Pointer string_January#
 	dq string_January#
 	; Initializer Pointer string_February#
@@ -498,19 +498,19 @@ string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#:
 
 section .data
 
-@1526$en_US_utf8:
+@1524$en_US_utf8:
 	; Initializer SignedInt -5
 	dd -5
 	; Initializer SignedInt -4
 	dd -4
-	; Initializer Pointer @1500$enShortDayList
-	dq @1500$enShortDayList
-	; Initializer Pointer @1501$enLongDayList
-	dq @1501$enLongDayList
-	; Initializer Pointer @1502$enShortMonthList
-	dq @1502$enShortMonthList
-	; Initializer Pointer @1503$enLongMonthList
-	dq @1503$enLongMonthList
+	; Initializer Pointer @1498$enShortDayList
+	dq @1498$enShortDayList
+	; Initializer Pointer @1499$enLongDayList
+	dq @1499$enLongDayList
+	; Initializer Pointer @1500$enShortMonthList
+	dq @1500$enShortMonthList
+	; Initializer Pointer @1501$enLongMonthList
+	dq @1501$enLongMonthList
 	; Initializer Pointer string_abcdefghijklmnopqrstuvwxyz#
 	dq string_abcdefghijklmnopqrstuvwxyz#
 	; Initializer Pointer string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#
@@ -538,31 +538,31 @@ string_US#:
 
 section .data
 
-@1529$sArray:
+@1527$sArray:
 	; Initializer Pointer string_#
 	dq string_#
-	; Initializer Pointer @1526$en_US_utf8
-	dq @1526$en_US_utf8
+	; Initializer Pointer @1524$en_US_utf8
+	dq @1524$en_US_utf8
 	; Initializer Pointer string_C#
 	dq string_C#
-	; Initializer Pointer @1526$en_US_utf8
-	dq @1526$en_US_utf8
+	; Initializer Pointer @1524$en_US_utf8
+	dq @1524$en_US_utf8
 	; Initializer Pointer string_US#
 	dq string_US#
-	; Initializer Pointer @1526$en_US_utf8
-	dq @1526$en_US_utf8
+	; Initializer Pointer @1524$en_US_utf8
+	dq @1524$en_US_utf8
 
 section .data
 
-@1530$sSize:
+@1528$sSize:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@1531$g_currStructPtr:
-	; Initializer Pointer @1529$sArray
-	dq @1529$sArray
+@1529$g_currStructPtr:
+	; Initializer Pointer @1527$sArray
+	dq @1527$sArray
 
 section .data
 
@@ -574,12 +574,12 @@ section .text
 
  setlocale:
 	; Equal 4 g_currStructPtr 0
-	cmp qword [@1531$g_currStructPtr], 0
+	cmp qword [@1529$g_currStructPtr], 0
 	je setlocale$4
 
  setlocale$1:
 	; Dereference £temporary372 -> g_currStructPtr g_currStructPtr 0
-	mov rsi, [@1531$g_currStructPtr]
+	mov rsi, [@1529$g_currStructPtr]
 
  setlocale$2:
 	; Assign £temporary373 £temporary372 -> g_currStructPtr
@@ -599,7 +599,7 @@ section .text
 
  setlocale$6:
 	; Assign g_currStructPtr 0
-	mov qword [@1531$g_currStructPtr], 0
+	mov qword [@1529$g_currStructPtr], 0
 
  setlocale$7:
 	; Equal 30 newName 0
@@ -612,7 +612,7 @@ section .text
 
  setlocale$9:
 	; SignedGreaterThanEqual 30 index sSize
-	mov eax, [@1530$sSize]
+	mov eax, [@1528$sSize]
 	cmp [rbp + 36], eax
 	jge setlocale$30
 
@@ -637,7 +637,7 @@ section .text
 
  setlocale$14:
 	; BinaryAdd £temporary380 sArray £temporary379
-	mov rsi, @1529$sArray
+	mov rsi, @1527$sArray
 	add rsi, rax
 
  setlocale$15:
@@ -679,7 +679,7 @@ section .text
 
  setlocale$23:
 	; BinaryAdd £temporary386 sArray £temporary385
-	mov rsi, @1529$sArray
+	mov rsi, @1527$sArray
 	add rsi, rax
 
  setlocale$24:
@@ -690,7 +690,7 @@ section .text
 
  setlocale$26:
 	; Assign g_currStructPtr £temporary387
-	mov [@1531$g_currStructPtr], rsi
+	mov [@1529$g_currStructPtr], rsi
 
  setlocale$27:
 	; Goto 30
@@ -719,12 +719,12 @@ section .text
 
  localeconv:
 	; Equal 4 g_currStructPtr 0
-	cmp qword [@1531$g_currStructPtr], 0
+	cmp qword [@1529$g_currStructPtr], 0
 	je localeconv$4
 
  localeconv$1:
 	; Dereference £temporary389 -> g_currStructPtr g_currStructPtr 0
-	mov rsi, [@1531$g_currStructPtr]
+	mov rsi, [@1529$g_currStructPtr]
 
  localeconv$2:
 	; Assign £temporary390 £temporary389 -> g_currStructPtr

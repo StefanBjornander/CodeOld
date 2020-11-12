@@ -85,80 +85,80 @@ stderr:
 
 section .data
 
-@2194$EEXIST:
+@2192$EEXIST:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@2195$ENOENT:
+@2193$ENOENT:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@2196$EACCES:
+@2194$EACCES:
 	; Initializer SignedInt 2
 	dd 2
 
 section .data
 
-@2197$SEEK_SET:
+@2195$SEEK_SET:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@2198$SEEK_CUR:
+@2196$SEEK_CUR:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@2199$SEEK_END:
+@2197$SEEK_END:
 	; Initializer SignedInt 2
 	dd 2
 
 section .data
 
-@2200$READ:
+@2198$READ:
 	; Initializer SignedInt 64
 	dd 64
 
 section .data
 
-@2201$WRITE:
+@2199$WRITE:
 	; Initializer SignedInt 65
 	dd 65
 
 section .data
 
-@2202$READ_WRITE:
+@2200$READ_WRITE:
 	; Initializer SignedInt 66
 	dd 66
 
 section .text
 
- @2204$filecreate:
+ @2202$filecreate:
 	; AssignRegister rax 85
 	mov rax, 85
 
- @2204$filecreate$1:
+ @2202$filecreate$1:
 	; IntegralToIntegral £temporary711 name
 	mov rdi, [rbp + 24]
 
- @2204$filecreate$2:
+ @2202$filecreate$2:
 	; AssignRegister rdi £temporary711
 
- @2204$filecreate$3:
+ @2202$filecreate$3:
 	; AssignRegister rsi 511
 	mov rsi, 511
 
- @2204$filecreate$4:
+ @2202$filecreate$4:
 	; SysCall
 	syscall
 
- @2204$filecreate$5:
+ @2202$filecreate$5:
 	; Return 0
 	mov ebx, 0
 	mov rax, [rbp]
@@ -166,7 +166,7 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2204$filecreate$6:
+ @2202$filecreate$6:
 	; FunctionEnd filecreate
 
 section .text
@@ -184,37 +184,37 @@ section .text
 
 section .text
 
- @2208$fileopen:
+ @2206$fileopen:
 	; AssignRegister rax 2
 	mov rax, 2
 
- @2208$fileopen$1:
+ @2206$fileopen$1:
 	; IntegralToIntegral £temporary715 name
 	mov rdi, [rbp + 24]
 
- @2208$fileopen$2:
+ @2206$fileopen$2:
 	; AssignRegister rdi £temporary715
 
- @2208$fileopen$3:
+ @2206$fileopen$3:
 	; IntegralToIntegral £temporary717 mode
 	mov si, [rbp + 32]
 	mov rbx, 65535
 	and rsi, rbx
 
- @2208$fileopen$4:
+ @2206$fileopen$4:
 	; AssignRegister rsi £temporary717
 
- @2208$fileopen$5:
+ @2206$fileopen$5:
 	; SysCall
 	syscall
 
- @2208$fileopen$6:
+ @2206$fileopen$6:
 	; InspectRegister £temporary718 rax
 
- @2208$fileopen$7:
+ @2206$fileopen$7:
 	; IntegralToIntegral £temporary719 £temporary718
 
- @2208$fileopen$8:
+ @2206$fileopen$8:
 	; Return £temporary719
 	mov ebx, eax
 	mov rax, [rbp]
@@ -222,7 +222,7 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2208$fileopen$9:
+ @2206$fileopen$9:
 	; FunctionEnd fileopen
 
 section .data
@@ -433,7 +433,7 @@ section .text
 	mov qword [rbp + 52], freopen$12
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2208$fileopen
+	jmp @2206$fileopen
 
  freopen$12:
 	; PostCall 52
@@ -492,7 +492,7 @@ section .text
 	mov qword [rbp + 52], freopen$26
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2204$filecreate
+	jmp @2202$filecreate
 
  freopen$26:
 	; PostCall 52
@@ -555,7 +555,7 @@ section .text
 	mov qword [rbp + 52], freopen$41
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2208$fileopen
+	jmp @2206$fileopen
 
  freopen$41:
 	; PostCall 52
@@ -615,7 +615,7 @@ section .text
 	mov qword [rbp + 52], freopen$55
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2204$filecreate
+	jmp @2202$filecreate
 
  freopen$55:
 	; PostCall 52
@@ -678,7 +678,7 @@ section .text
 	mov qword [rbp + 52], freopen$70
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2208$fileopen
+	jmp @2206$fileopen
 
  freopen$70:
 	; PostCall 52
@@ -767,7 +767,7 @@ section .text
 	mov qword [rbp + 52], freopen$91
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2208$fileopen
+	jmp @2206$fileopen
 
  freopen$91:
 	; PostCall 52
@@ -796,7 +796,7 @@ section .text
 	mov qword [rbp + 52], freopen$98
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2204$filecreate
+	jmp @2202$filecreate
 
  freopen$98:
 	; PostCall 52
@@ -859,7 +859,7 @@ section .text
 	mov qword [rbp + 52], freopen$113
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2208$fileopen
+	jmp @2206$fileopen
 
  freopen$113:
 	; PostCall 52
@@ -919,7 +919,7 @@ section .text
 	mov qword [rbp + 52], freopen$127
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2204$filecreate
+	jmp @2202$filecreate
 
  freopen$127:
 	; PostCall 52

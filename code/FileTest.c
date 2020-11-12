@@ -7,18 +7,18 @@
 
 void file_test(char* inFilePtrName, char* outFilePtrName) {
   { FILE* inFilePtrPtr = fopen(inFilePtrName, "r");
-    assert(inFilePtrPtr != NULL);
     FILE* outFilePtrPtr = fopen(outFilePtrName, "w");
+    assert(inFilePtrPtr != NULL);
     assert(outFilePtrPtr != NULL);
    
-    int size = 0, index;
-    fscanf(inFilePtrPtr, "%i", &size);
+    { int size = 0, index;
+      fscanf(inFilePtrPtr, "%i", &size);
    
-    for (index = 0; index < size; ++index) {
-      double inValue = 0;
-      fscanf(inFilePtrPtr, "%lf", &inValue);
-      double outValue = sqrt((double) inValue);
-      fprintf(outFilePtrPtr, "%f\n", outValue);
+      for (index = 0; index < size; ++index) {
+        double inValue = 0, outValue = sqrt((double) inValue);
+        fscanf(inFilePtrPtr, "%lf", &inValue);
+        fprintf(outFilePtrPtr, "%f\n", outValue);
+      }
     }
 
     fclose(inFilePtrPtr);
@@ -54,15 +54,16 @@ void file_test(char* inFilePtrName, char* outFilePtrName) {
     printf("%-24s %-24s\n","========================",
                            "========================");
 
-    int count, size;
-    fscanf(inFilePtr, "%i", &size);
-    //printf("size %i\n", size);
+    { int count, size;
+      fscanf(inFilePtr, "%i", &size);
+      //printf("size %i\n", size);
 
-    for (count = 0; count < size; ++count) {
-      char name[20], phone[20];
-      //printf("handle %i\n", inFilePtr->handle);
-      fscanf(inFilePtr, "%s%s", name, phone);
-      printf("%-24s %-24s\n", name, phone);
+      for (count = 0; count < size; ++count) {
+        char name[20], phone[20];
+        //printf("handle %i\n", inFilePtr->handle);
+        fscanf(inFilePtr, "%s%s", name, phone);
+        printf("%-24s %-24s\n", name, phone);
+      }
     }
 
     printf("\n");
@@ -73,9 +74,9 @@ void file_test(char* inFilePtrName, char* outFilePtrName) {
     char* targetFilePtr = "Flow2.txt";
 
     FILE* inFilePtr = fopen(sourceFilePtr, "r");
-    assert(inFilePtr != NULL);
-
     FILE* outFilePtr = fopen(targetFilePtr, "w");
+
+    assert(inFilePtr != NULL);
     assert(outFilePtr != NULL);
 
     while (TRUE) {
@@ -99,44 +100,44 @@ void file_test(char* inFilePtrName, char* outFilePtrName) {
   { FILE* outFilePtr = fopen("Test.bin", "w");
     assert(outFilePtr != NULL);
 
-    int size = 10;
-    fwrite(&size, sizeof size, 1, outFilePtr); 
+    { int size = 10, index;
+      fwrite(&size, sizeof size, 1, outFilePtr); 
    
-    int index;
-    for (index = 0; index < size; ++index) {
-      double value = (double) (index * index);
-      fwrite(&value, sizeof value, 1, outFilePtr);
-    }
+      for (index = 0; index < size; ++index) {
+        double value = (double) (index * index);
+        fwrite(&value, sizeof value, 1, outFilePtr);
+      }
 
-    fclose(outFilePtr);
+      fclose(outFilePtr);
+    }
   }
 
   { FILE* inFilePtr = fopen("Test.bin", "r");
     assert(inFilePtr != NULL);
 
-    int size;
-    fread(&size, sizeof size, 1, inFilePtr);
-    printf("size1 %i\n", size);
+    { int size, index;
+      double arr[10];
 
-    double arr[10];
-    fread(&arr, sizeof arr, 1, inFilePtr);
-    fclose(inFilePtr);
+      fread(&size, sizeof size, 1, inFilePtr);
+      printf("size1 %i\n", size);
 
-    int index;
-    for (index = 0; index < 10; ++index) {
-      printf("index1 %i: value %f\n", index, arr[index]);
+      fread(&arr, sizeof arr, 1, inFilePtr);
+      fclose(inFilePtr);
+
+      for (index = 0; index < 10; ++index) {
+        printf("index1 %i: value %f\n", index, arr[index]);
+      }
     }
     printf("\n");
   }
 
   { FILE* inFilePtr = fopen("Test.bin", "r");
-    assert(inFilePtr != NULL);
+    int size, index;
 
-    int size;
-    fread(&size, sizeof size, 1, inFilePtr); 
+    assert(inFilePtr != NULL);
+    fread(&size, sizeof size, 1, inFilePtr);
     printf("size2 %i\n", size);
    
-    int index;
     for (index = 0; index < size; ++index) {
       double value;
       fread(&value, sizeof value, 1, inFilePtr);
@@ -148,26 +149,26 @@ void file_test(char* inFilePtrName, char* outFilePtrName) {
   }
 
   { FILE* inFilePtr = fopen("Test.bin", "r");
-    assert(inFilePtr != NULL);
-    
     int size;
+
+    assert(inFilePtr != NULL);    
     fread(&size, sizeof size, 1, inFilePtr);
     printf("size3 %i total %i\n", size, size * sizeof(double));
 
-    int total = size * sizeof(double);
-    double *p = malloc(total);
-    assert(p != NULL);
-    double* endPtr = p + size;
-    printf("malloc %u %u %u\n", p, total, endPtr);
-    fread(p, total, 1, inFilePtr);
+    { int total = size * sizeof(double), index;
+      double *p = malloc(total);
+      double* endPtr = p + size;
+      assert(p != NULL);
+      printf("malloc %u %u %u\n", p, total, endPtr);
+      fread(p, total, 1, inFilePtr);
 
-    int index;
-    for (index = 0; index < size; ++index) {
-      printf("index3 %i: value %f\n", index, p[index]);
+      for (index = 0; index < size; ++index) {
+        printf("index3 %i: value %f\n", index, p[index]);
+      }
+
+      printf("\n");
+      free(p);
     }
-
-    printf("\n");
-    free(p);
     fclose(inFilePtr);
   }
 
@@ -182,13 +183,13 @@ void file_test(char* inFilePtrName, char* outFilePtrName) {
     struct _Person person;
 
     FILE* outFilePtr = fopen("Block.bin", "w");
+    FILE* inFilePtr = fopen("Block.bin", "r");
+
     assert(outFilePtr != NULL);
+    assert(inFilePtr != NULL);
 
     fwrite(personVector, sizeof personVector, 1, outFilePtr);
     fclose(outFilePtr);
-
-    FILE* inFilePtr = fopen("Block.bin", "r");
-    assert(inFilePtr != NULL);
 
     while (!feof(inFilePtr)) {
       fread(&person, sizeof(struct _Person), 1, inFilePtr);
@@ -201,10 +202,10 @@ void file_test(char* inFilePtrName, char* outFilePtrName) {
   }
 
   { FILE* inFilePtr = fopen("Test1.txt", "r"); // Random Access
+    unsigned int u;
     assert(inFilePtr != NULL);
     fseek(inFilePtr, -1, SEEK_END);
 
-    unsigned int u;
     while ((u = (unsigned int) ftell(inFilePtr)) >= 0u) {
       char c = (char) fgetc(inFilePtr);
       putchar(c);

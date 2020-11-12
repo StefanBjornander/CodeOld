@@ -247,7 +247,7 @@ void* memcpy(void* target, const void* source, size_t size) {
     charTarget[index] = charSource[index];
   }
 
-  return (void*) target;
+  return ((void*) target);
 }
 
 void* memmove(void* target, const void* source, size_t size) {
@@ -266,7 +266,7 @@ void* memmove(void* target, const void* source, size_t size) {
     }
   }
 
-  return (void*) target;
+  return ((void*) target);
 }
 
 int memcmp(const void* left, const void* right, size_t size) {

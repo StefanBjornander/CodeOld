@@ -485,19 +485,19 @@ stream = ( FILE * ) g_inDevice ;
 
 handle = stream -> handle ;
    
-    
-   
-   
-    
-    
+ register_ah = 0x3Fs ;
+register_bx = handle ;
+register_cx = 1 ;
+register_dx = & c ;
+interrupt ( 0x21s ) ;
   
 
    
- register_rax = 0x00L ;
-register_rdi = ( unsigned long ) stream -> handle ;
-register_rsi = ( unsigned long ) & c ;
-register_rdx = 1L ;
-syscall ( ) ;
+    
+         
+        
+   
+   
   
 
 ++ g_inChars ;
@@ -811,7 +811,6 @@ int index , * intPtr , * charsPtr ;
 unsigned long unsignedLongValue , * unsignedLongPtr ;
 unsigned short * unsignedShortPtr ;
 unsigned int * unsignedIntPtr ;
-
 long double longDoubleValue ;
 
 g_inCount = 0 ;
@@ -819,8 +818,8 @@ g_inChars = 0 ;
 
 for ( index = 0 ; format [ index ] != '\0' ; ++ index ) {
 c = format [ index ];
-int d = c + 1 ;
 
+{ int d = c + 1 ;
 if ( percent ) {
 switch ( d - 1 ) {
 case 'h' :
@@ -984,7 +983,7 @@ not = 1 ;
 ++ index ;
 }
 
-int startIndex = index ;
+{ int startIndex = index ;
 while ( format [ index ] != ']' ) {
 ++ index ;
 }
@@ -996,6 +995,7 @@ scanPattern ( string , & format [ startIndex ] , not ) ;
 }
 else {
 scanPattern ( ( ( void * ) 0 ) , & format [ startIndex ] , not ) ;
+}
 }
 }
 break ;
@@ -1018,6 +1018,7 @@ shortInt = 0 ;
 longIntOrDouble = 0 ;
 longDouble = 0 ;
 star = 0 ;
+}
 }
 }
 }
@@ -1058,4 +1059,3 @@ g_inStatus = 1 ;
 g_inDevice = ( void * ) inString ;
 return scanFormat ( format , arg_list ) ;
 }
-

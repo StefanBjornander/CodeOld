@@ -1,107 +1,107 @@
 1:	
 
-malloc:	; if memorySize >= 0 goto 12
-2:		cmp word [bp + 6], 0
-3:		jge malloc$12
+malloc:	; £temporary236 = int_to_int memorySize (Signed_Int -> Unsigned_Int)
+2:		mov ax, [bp + 6]
 5:	
 
-malloc$1:	; call header integral zero 0 stack zero 0
-7:	
+malloc$1:	; newBlockSize = £temporary236 + 4
+6:		add ax, 4
+7:		mov [bp + 8], ax
+9:	
 
-malloc$2:	; parameter stderr, offset 6
-8:		mov ax, [stderr]
-9:		mov [bp + 14], ax
-11:	
+malloc$2:	; minGap = 0
+10:		mov word [bp + 10], 0
+12:	
 
-malloc$3:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
-12:		mov word [bp + 16], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-14:	
+malloc$3:	; lastAddress = 65528
+13:		mov word [bp + 12], 65528
+15:	
 
-malloc$4:	; parameter string_memorySize203E3D200#, offset 10
-15:		mov word [bp + 18], string_memorySize203E3D200#
-17:	
+malloc$4:	; minBlockPtr = 0
+16:		mov word [bp + 14], 0
+18:	
 
-malloc$5:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#, offset 12
-18:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
-20:	
+malloc$5:	; minPrevBlockPtr = 0
+19:		mov word [bp + 16], 0
+21:	
 
-malloc$6:	; parameter 25, offset 14
-21:		mov word [bp + 22], 25
-23:	
+malloc$6:	; prevBlockPtr = 0
+22:		mov word [bp + 18], 0
+24:	
 
-malloc$7:	; call function noellipse-ellipse fprintf, extra 0
-24:		mov word [bp + 8], malloc$8
-25:		mov [bp + 10], bp
-26:		add bp, 8
-27:		mov di, bp
-28:		add di, 6
-29:		jmp fprintf
-31:	
+malloc$7:	; currBlockPtr = g_firstBlockPtr
+25:		mov ax, [g_firstBlockPtr]
+26:		mov [bp + 20], ax
+28:	
 
-malloc$8:	; post call
-33:	
+malloc$8:	; if memorySize >= 0 goto 20
+29:		cmp word [bp + 6], 0
+30:		jge malloc$20
+32:	
 
 malloc$9:	; call header integral zero 0 stack zero 0
-35:	
+34:	
 
-malloc$10:	; call function noellipse-noellipse abort
-36:		mov word [bp + 8], malloc$11
-37:		mov [bp + 10], bp
-38:		add bp, 8
-39:		jmp abort
+malloc$10:	; parameter stderr, offset 6
+35:		mov ax, [stderr]
+36:		mov [bp + 28], ax
+38:	
+
+malloc$11:	; parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
+39:		mov word [bp + 30], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 41:	
 
-malloc$11:	; post call
-43:	
+malloc$12:	; parameter string_memorySize203E3D200#, offset 10
+42:		mov word [bp + 32], string_memorySize203E3D200#
+44:	
 
-malloc$12:	; if memorySize != 0 goto 15
-44:		cmp word [bp + 6], 0
-45:		jne malloc$15
+malloc$13:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#, offset 12
+45:		mov word [bp + 34], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 47:	
 
-malloc$13:	; return_value = 0
-48:		mov bx, 0
+malloc$14:	; parameter 41, offset 14
+48:		mov word [bp + 36], 41
 50:	
 
-malloc$14:	; return
-51:		mov ax, [bp]
-52:		mov di, [bp + 4]
-53:		mov bp, [bp + 2]
-54:		jmp ax
-56:	
+malloc$15:	; call function noellipse-ellipse fprintf, extra 0
+51:		mov word [bp + 22], malloc$16
+52:		mov [bp + 24], bp
+53:		add bp, 22
+54:		mov di, bp
+55:		add di, 6
+56:		jmp fprintf
+58:	
 
-malloc$15:	; £temporary241 = int_to_int memorySize (Signed_Int -> Unsigned_Int)
-57:		mov ax, [bp + 6]
+malloc$16:	; post call
 60:	
 
-malloc$16:	; newBlockSize = £temporary241 + 4
-61:		add ax, 4
-62:		mov [bp + 8], ax
-64:	
+malloc$17:	; call header integral zero 0 stack zero 0
+62:	
 
-malloc$17:	; minGap = 0
-65:		mov word [bp + 10], 0
-67:	
+malloc$18:	; call function noellipse-noellipse abort
+63:		mov word [bp + 22], malloc$19
+64:		mov [bp + 24], bp
+65:		add bp, 22
+66:		jmp abort
+68:	
 
-malloc$18:	; lastAddress = 65528
-68:		mov word [bp + 12], 65528
+malloc$19:	; post call
 70:	
 
-malloc$19:	; minBlockPtr = 0
-71:		mov word [bp + 14], 0
-73:	
+malloc$20:	; if memorySize != 0 goto 23
+71:		cmp word [bp + 6], 0
+72:		jne malloc$23
+74:	
 
-malloc$20:	; minPrevBlockPtr = 0
-74:		mov word [bp + 16], 0
-76:	
+malloc$21:	; return_value = 0
+75:		mov bx, 0
+77:	
 
-malloc$21:	; prevBlockPtr = 0
-77:		mov word [bp + 18], 0
-79:	
-
-malloc$22:	; currBlockPtr = g_firstBlockPtr
-80:		mov ax, [g_firstBlockPtr]
-81:		mov [bp + 20], ax
+malloc$22:	; return
+78:		mov ax, [bp]
+79:		mov di, [bp + 4]
+80:		mov bp, [bp + 2]
+81:		jmp ax
 83:	
 
 malloc$23:	; if currBlockPtr == 0 goto 41
@@ -455,40 +455,40 @@ calloc$15:	; return
 calloc$16:	; function end calloc
 1:	
 
-free:	; if freeMemoryPtr != 0 goto 2
-2:		cmp word [bp + 6], 0
-3:		jne free$2
+free:	; £temporary290 = int_to_int freeMemoryPtr (Pointer -> Unsigned_Int)
+2:		mov ax, [bp + 6]
 5:	
 
-free$1:	; return
-6:		mov ax, [bp]
-7:		mov di, [bp + 4]
-8:		mov bp, [bp + 2]
-9:		jmp ax
+free$1:	; £temporary291 = £temporary290 - 4
+6:		sub ax, 4
+8:	
+
+free$2:	; £temporary292 = int_to_int £temporary291 (Unsigned_Int -> Pointer)
 11:	
 
-free$2:	; £temporary291 = int_to_int freeMemoryPtr (Pointer -> Unsigned_Int)
-12:		mov ax, [bp + 6]
-15:	
+free$3:	; freeBlockPtr = £temporary292
+12:		mov [bp + 8], ax
+14:	
 
-free$3:	; £temporary292 = £temporary291 - 4
-16:		sub ax, 4
-18:	
+free$4:	; prevBlockPtr = 0
+15:		mov word [bp + 10], 0
+17:	
 
-free$4:	; £temporary293 = int_to_int £temporary292 (Unsigned_Int -> Pointer)
+free$5:	; currBlockPtr = g_firstBlockPtr
+18:		mov ax, [g_firstBlockPtr]
+19:		mov [bp + 12], ax
 21:	
 
-free$5:	; freeBlockPtr = £temporary293
-22:		mov [bp + 8], ax
-24:	
+free$6:	; if freeMemoryPtr != 0 goto 8
+22:		cmp word [bp + 6], 0
+23:		jne free$8
+25:	
 
-free$6:	; prevBlockPtr = 0
-25:		mov word [bp + 10], 0
-27:	
-
-free$7:	; currBlockPtr = g_firstBlockPtr
-28:		mov ax, [g_firstBlockPtr]
-29:		mov [bp + 12], ax
+free$7:	; return
+26:		mov ax, [bp]
+27:		mov di, [bp + 4]
+28:		mov bp, [bp + 2]
+29:		jmp ax
 31:	
 
 free$8:	; if currBlockPtr == 0 goto 32

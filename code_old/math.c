@@ -37,17 +37,18 @@ double log(double x) {
       }
     }
 
-    double index = 1, term, sum = 0, sign = 1,
-           x_minus_1 = x - 1, power = x_minus_1;
+    { double index = 1, term, sum = 0, sign = 1,
+             x_minus_1 = x - 1, power = x_minus_1;
 
-    do {
-      term = sign * power / index++;
-      sum += term;
-      power *= x_minus_1;
-      sign *= -1.0;
-    } while (fabs(term) >= EPSILON);
+      do {
+        term = sign * power / index++;
+        sum += term;
+        power *= x_minus_1;
+        sign *= -1.0;
+      } while (fabs(term) >= EPSILON);
 
-    return sum + n;
+      return sum + n;
+    }
   }
   else {
     errno = EDOM;
@@ -141,8 +142,8 @@ double sqrt(double x) {
 
 double modf(double x, double* p) {
   double abs_x = fabs(x),
-    integral = (double) ((long) abs_x),
-    fractional = abs_x - integral;
+  integral = (double) ((long) abs_x),
+  fractional = abs_x - integral;
 
   if (p != NULL)  {
     *p = (x > 0) ? integral : -integral;
@@ -167,17 +168,18 @@ double sin(double x) {
     x = fmod(x, 2 * PI);
   }
 
-  double index = 1, term, sum = 0, sign = 1, power = x, faculty = 1;
+  { double index = 1, term, sum = 0, sign = 1, power = x, faculty = 1;
 
-  do {
-    term = sign * power / faculty;
-    sum += term;
-    sign *= -1;
-    power *= x * x;
-    faculty *= ++index * ++index;
-  } while (fabs(term) >= EPSILON);
+    do {
+      term = sign * power / faculty;
+      sum += term;
+      sign *= -1;
+      power *= x * x;
+      faculty *= ++index * ++index;
+    } while (fabs(term) >= EPSILON);
 
-  return sum;
+    return sum;
+  }
 }
 
 double cos(double x) {
@@ -185,17 +187,18 @@ double cos(double x) {
     x = fmod(x, 2 * PI);
   }
 
-  double index = 0, term, sum = 0, sign = 1, power = 1, faculty = 1;
+  { double index = 0, term, sum = 0, sign = 1, power = 1, faculty = 1;
 
-  do {
-    term = sign * power / faculty;
-    sum += term;
-    sign *= -1;
-    power *= x * x;
-    faculty *= ++index * ++index;
-  } while (fabs(term) >= EPSILON);
+    do {
+      term = sign * power / faculty;
+      sum += term;
+      sign *= -1;
+      power *= x * x;
+      faculty *= ++index * ++index;
+    } while (fabs(term) >= EPSILON);
 
-  return sum;
+    return sum;
+  }
 }
 
 double tan(double x) {

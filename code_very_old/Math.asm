@@ -1110,51 +1110,51 @@ container4bytes#:
 
 section .text
 
- @1665$log2:
+ @1663$log2:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @1665$log2$1:
+ @1663$log2$1:
 	; PushFloat x
 	fld qword [rbp + 24]
 
- @1665$log2$2:
+ @1663$log2$2:
 	; Parameter double x 56
 	fstp qword [rbp + 56]
 
- @1665$log2$3:
+ @1663$log2$3:
 	; Call log 32 0
-	mov qword [rbp + 32], @1665$log2$4
+	mov qword [rbp + 32], @1663$log2$4
 	mov [rbp + 40], rbp
 	add rbp, 32
 	jmp log
 
- @1665$log2$4:
+ @1663$log2$4:
 	; PostCall 32
 
- @1665$log2$5:
+ @1663$log2$5:
 	; GetReturnValue £temporary463
 
- @1665$log2$6:
+ @1663$log2$6:
 	; PushFloat 0.6931471805599453094172321
 	fld qword [float8$0.6931471805599453094172321#]
 
- @1665$log2$7:
+ @1663$log2$7:
 	; SignedDivide £temporary464 £temporary463 0.6931471805599453094172321
 	fdiv
 
- @1665$log2$8:
+ @1663$log2$8:
 	; FloatingToIntegral £temporary465 £temporary464
 	fistp dword [container4bytes#]
 	mov ebx, [container4bytes#]
 
- @1665$log2$9:
+ @1663$log2$9:
 	; Return £temporary465
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @1665$log2$10:
+ @1663$log2$10:
 	; FunctionEnd log2
 
 section .text
@@ -1210,7 +1210,7 @@ section .text
 	mov qword [rbp + 40], frexp$12
 	mov [rbp + 48], rbp
 	add rbp, 40
-	jmp @1665$log2
+	jmp @1663$log2
 
  frexp$12:
 	; PostCall 40

@@ -452,4 +452,3 @@ return oldName ;
 struct lconv * localeconv ( void ) {
 return ( g_currStructPtr != ( ( void * ) 0 ) ) ? g_currStructPtr -> localePtr : ( ( void * ) 0 ) ;
 }
-

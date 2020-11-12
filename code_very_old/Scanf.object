@@ -1115,465 +1115,465 @@ scanString$128:	; return
 scanString$129:	; function end scanString
 1:	
 
-@24$isDigitInBase:	; call header integral zero 0 stack zero 0
+@23$isDigitInBase:	; call header integral zero 0 stack zero 0
 3:	
 
-@24$isDigitInBase$1:	; £temporary1379 = int_to_int c (Signed_Char -> Signed_Int)
+@23$isDigitInBase$1:	; £temporary1379 = int_to_int c (Signed_Char -> Signed_Int)
 4:		mov al, [bp + 6]
 6:		and ax, 255
 8:		cmp al, 0
-9:		jge @24$isDigitInBase$2
+9:		jge @23$isDigitInBase$2
 10:		neg al
 12:		neg ax
 14:	
 
-@24$isDigitInBase$2:	; parameter £temporary1379, offset 6
+@23$isDigitInBase$2:	; parameter £temporary1379, offset 6
 15:		mov [bp + 15], ax
 17:	
 
-@24$isDigitInBase$3:	; call function noellipse-noellipse isdigit
-18:		mov word [bp + 9], @24$isDigitInBase$4
+@23$isDigitInBase$3:	; call function noellipse-noellipse isdigit
+18:		mov word [bp + 9], @23$isDigitInBase$4
 19:		mov [bp + 11], bp
 20:		add bp, 9
 21:		jmp isdigit
 23:	
 
-@24$isDigitInBase$4:	; post call
+@23$isDigitInBase$4:	; post call
 25:	
 
-@24$isDigitInBase$5:	; £temporary1380 = return_value
+@23$isDigitInBase$5:	; £temporary1380 = return_value
 30:	
 
-@24$isDigitInBase$6:	; if £temporary1380 == 0 goto 17
+@23$isDigitInBase$6:	; if £temporary1380 == 0 goto 17
 31:		cmp bx, 0
-32:		je @24$isDigitInBase$17
+32:		je @23$isDigitInBase$17
 34:	
 
-@24$isDigitInBase$7:	; £temporary1381 = c - 48
+@23$isDigitInBase$7:	; £temporary1381 = c - 48
 35:		mov al, [bp + 6]
 36:		sub al, 48
 38:	
 
-@24$isDigitInBase$8:	; £temporary1382 = int_to_int £temporary1381 (Signed_Char -> Signed_Int)
+@23$isDigitInBase$8:	; £temporary1382 = int_to_int £temporary1381 (Signed_Char -> Signed_Int)
 40:		and ax, 255
 42:		cmp al, 0
-43:		jge @24$isDigitInBase$9
+43:		jge @23$isDigitInBase$9
 44:		neg al
 46:		neg ax
 48:	
 
-@24$isDigitInBase$9:	; value = £temporary1382
+@23$isDigitInBase$9:	; value = £temporary1382
 49:		mov [bp + 9], ax
 51:	
 
-@24$isDigitInBase$10:	; if value < 0 goto 14
+@23$isDigitInBase$10:	; if value < 0 goto 14
 52:		cmp word [bp + 9], 0
-53:		jl @24$isDigitInBase$14
+53:		jl @23$isDigitInBase$14
 55:	
 
-@24$isDigitInBase$11:	; if value >= base goto 14
+@23$isDigitInBase$11:	; if value >= base goto 14
 56:		mov ax, [bp + 7]
 57:		cmp [bp + 9], ax
-58:		jge @24$isDigitInBase$14
+58:		jge @23$isDigitInBase$14
 60:	
 
-@24$isDigitInBase$12:	; £temporary1386 = 1
+@23$isDigitInBase$12:	; £temporary1386 = 1
 61:		mov bx, 1
 63:	
 
-@24$isDigitInBase$13:	; goto 15
-64:		jmp @24$isDigitInBase$15
+@23$isDigitInBase$13:	; goto 15
+64:		jmp @23$isDigitInBase$15
 66:	
 
-@24$isDigitInBase$14:	; £temporary1386 = 0
+@23$isDigitInBase$14:	; £temporary1386 = 0
 67:		mov bx, 0
 69:	
 
-@24$isDigitInBase$15:	; return_value = £temporary1386
+@23$isDigitInBase$15:	; return_value = £temporary1386
 71:	
 
-@24$isDigitInBase$16:	; return
+@23$isDigitInBase$16:	; return
 72:		mov ax, [bp]
 73:		mov di, [bp + 4]
 74:		mov bp, [bp + 2]
 75:		jmp ax
 77:	
 
-@24$isDigitInBase$17:	; call header integral zero 0 stack zero 0
+@23$isDigitInBase$17:	; call header integral zero 0 stack zero 0
 79:	
 
-@24$isDigitInBase$18:	; £temporary1387 = int_to_int c (Signed_Char -> Signed_Int)
+@23$isDigitInBase$18:	; £temporary1387 = int_to_int c (Signed_Char -> Signed_Int)
 80:		mov al, [bp + 6]
 82:		and ax, 255
 84:		cmp al, 0
-85:		jge @24$isDigitInBase$19
+85:		jge @23$isDigitInBase$19
 86:		neg al
 88:		neg ax
 90:	
 
-@24$isDigitInBase$19:	; parameter £temporary1387, offset 6
+@23$isDigitInBase$19:	; parameter £temporary1387, offset 6
 91:		mov [bp + 15], ax
 93:	
 
-@24$isDigitInBase$20:	; call function noellipse-noellipse islower
-94:		mov word [bp + 9], @24$isDigitInBase$21
+@23$isDigitInBase$20:	; call function noellipse-noellipse islower
+94:		mov word [bp + 9], @23$isDigitInBase$21
 95:		mov [bp + 11], bp
 96:		add bp, 9
 97:		jmp islower
 99:	
 
-@24$isDigitInBase$21:	; post call
+@23$isDigitInBase$21:	; post call
 101:	
 
-@24$isDigitInBase$22:	; £temporary1388 = return_value
+@23$isDigitInBase$22:	; £temporary1388 = return_value
 106:	
 
-@24$isDigitInBase$23:	; if £temporary1388 == 0 goto 34
+@23$isDigitInBase$23:	; if £temporary1388 == 0 goto 34
 107:		cmp bx, 0
-108:		je @24$isDigitInBase$34
+108:		je @23$isDigitInBase$34
 110:	
 
-@24$isDigitInBase$24:	; £temporary1389 = c - 97
+@23$isDigitInBase$24:	; £temporary1389 = c - 97
 111:		mov al, [bp + 6]
 112:		sub al, 97
 114:	
 
-@24$isDigitInBase$25:	; £temporary1390 = int_to_int £temporary1389 (Signed_Char -> Signed_Int)
+@23$isDigitInBase$25:	; £temporary1390 = int_to_int £temporary1389 (Signed_Char -> Signed_Int)
 116:		and ax, 255
 118:		cmp al, 0
-119:		jge @24$isDigitInBase$26
+119:		jge @23$isDigitInBase$26
 120:		neg al
 122:		neg ax
 124:	
 
-@24$isDigitInBase$26:	; value = £temporary1390 + 10
+@23$isDigitInBase$26:	; value = £temporary1390 + 10
 125:		add ax, 10
 126:		mov [bp + 9], ax
 128:	
 
-@24$isDigitInBase$27:	; if value < 0 goto 31
+@23$isDigitInBase$27:	; if value < 0 goto 31
 129:		cmp word [bp + 9], 0
-130:		jl @24$isDigitInBase$31
+130:		jl @23$isDigitInBase$31
 132:	
 
-@24$isDigitInBase$28:	; if value >= base goto 31
+@23$isDigitInBase$28:	; if value >= base goto 31
 133:		mov ax, [bp + 7]
 134:		cmp [bp + 9], ax
-135:		jge @24$isDigitInBase$31
+135:		jge @23$isDigitInBase$31
 137:	
 
-@24$isDigitInBase$29:	; £temporary1395 = 1
+@23$isDigitInBase$29:	; £temporary1395 = 1
 138:		mov bx, 1
 140:	
 
-@24$isDigitInBase$30:	; goto 32
-141:		jmp @24$isDigitInBase$32
+@23$isDigitInBase$30:	; goto 32
+141:		jmp @23$isDigitInBase$32
 143:	
 
-@24$isDigitInBase$31:	; £temporary1395 = 0
+@23$isDigitInBase$31:	; £temporary1395 = 0
 144:		mov bx, 0
 146:	
 
-@24$isDigitInBase$32:	; return_value = £temporary1395
+@23$isDigitInBase$32:	; return_value = £temporary1395
 148:	
 
-@24$isDigitInBase$33:	; return
+@23$isDigitInBase$33:	; return
 149:		mov ax, [bp]
 150:		mov di, [bp + 4]
 151:		mov bp, [bp + 2]
 152:		jmp ax
 154:	
 
-@24$isDigitInBase$34:	; call header integral zero 0 stack zero 0
+@23$isDigitInBase$34:	; call header integral zero 0 stack zero 0
 156:	
 
-@24$isDigitInBase$35:	; £temporary1396 = int_to_int c (Signed_Char -> Signed_Int)
+@23$isDigitInBase$35:	; £temporary1396 = int_to_int c (Signed_Char -> Signed_Int)
 157:		mov al, [bp + 6]
 159:		and ax, 255
 161:		cmp al, 0
-162:		jge @24$isDigitInBase$36
+162:		jge @23$isDigitInBase$36
 163:		neg al
 165:		neg ax
 167:	
 
-@24$isDigitInBase$36:	; parameter £temporary1396, offset 6
+@23$isDigitInBase$36:	; parameter £temporary1396, offset 6
 168:		mov [bp + 15], ax
 170:	
 
-@24$isDigitInBase$37:	; call function noellipse-noellipse isupper
-171:		mov word [bp + 9], @24$isDigitInBase$38
+@23$isDigitInBase$37:	; call function noellipse-noellipse isupper
+171:		mov word [bp + 9], @23$isDigitInBase$38
 172:		mov [bp + 11], bp
 173:		add bp, 9
 174:		jmp isupper
 176:	
 
-@24$isDigitInBase$38:	; post call
+@23$isDigitInBase$38:	; post call
 178:	
 
-@24$isDigitInBase$39:	; £temporary1397 = return_value
+@23$isDigitInBase$39:	; £temporary1397 = return_value
 183:	
 
-@24$isDigitInBase$40:	; if £temporary1397 == 0 goto 51
+@23$isDigitInBase$40:	; if £temporary1397 == 0 goto 51
 184:		cmp bx, 0
-185:		je @24$isDigitInBase$51
+185:		je @23$isDigitInBase$51
 187:	
 
-@24$isDigitInBase$41:	; £temporary1398 = c - 65
+@23$isDigitInBase$41:	; £temporary1398 = c - 65
 188:		mov al, [bp + 6]
 189:		sub al, 65
 191:	
 
-@24$isDigitInBase$42:	; £temporary1399 = int_to_int £temporary1398 (Signed_Char -> Signed_Int)
+@23$isDigitInBase$42:	; £temporary1399 = int_to_int £temporary1398 (Signed_Char -> Signed_Int)
 193:		and ax, 255
 195:		cmp al, 0
-196:		jge @24$isDigitInBase$43
+196:		jge @23$isDigitInBase$43
 197:		neg al
 199:		neg ax
 201:	
 
-@24$isDigitInBase$43:	; value = £temporary1399 + 10
+@23$isDigitInBase$43:	; value = £temporary1399 + 10
 202:		add ax, 10
 203:		mov [bp + 9], ax
 205:	
 
-@24$isDigitInBase$44:	; if value < 0 goto 48
+@23$isDigitInBase$44:	; if value < 0 goto 48
 206:		cmp word [bp + 9], 0
-207:		jl @24$isDigitInBase$48
+207:		jl @23$isDigitInBase$48
 209:	
 
-@24$isDigitInBase$45:	; if value >= base goto 48
+@23$isDigitInBase$45:	; if value >= base goto 48
 210:		mov ax, [bp + 7]
 211:		cmp [bp + 9], ax
-212:		jge @24$isDigitInBase$48
+212:		jge @23$isDigitInBase$48
 214:	
 
-@24$isDigitInBase$46:	; £temporary1404 = 1
+@23$isDigitInBase$46:	; £temporary1404 = 1
 215:		mov bx, 1
 217:	
 
-@24$isDigitInBase$47:	; goto 49
-218:		jmp @24$isDigitInBase$49
+@23$isDigitInBase$47:	; goto 49
+218:		jmp @23$isDigitInBase$49
 220:	
 
-@24$isDigitInBase$48:	; £temporary1404 = 0
+@23$isDigitInBase$48:	; £temporary1404 = 0
 221:		mov bx, 0
 223:	
 
-@24$isDigitInBase$49:	; return_value = £temporary1404
+@23$isDigitInBase$49:	; return_value = £temporary1404
 225:	
 
-@24$isDigitInBase$50:	; return
+@23$isDigitInBase$50:	; return
 226:		mov ax, [bp]
 227:		mov di, [bp + 4]
 228:		mov bp, [bp + 2]
 229:		jmp ax
 231:	
 
-@24$isDigitInBase$51:	; return_value = 0
+@23$isDigitInBase$51:	; return_value = 0
 232:		mov bx, 0
 234:	
 
-@24$isDigitInBase$52:	; return
+@23$isDigitInBase$52:	; return
 235:		mov ax, [bp]
 236:		mov di, [bp + 4]
 237:		mov bp, [bp + 2]
 238:		jmp ax
 240:	
 
-@24$isDigitInBase$53:	; function end isDigitInBase
+@23$isDigitInBase$53:	; function end isDigitInBase
 1:	
 
-@25$digitToValue:	; call header integral zero 0 stack zero 0
+@24$digitToValue:	; call header integral zero 0 stack zero 0
 3:	
 
-@25$digitToValue$1:	; £temporary1411 = int_to_int c (Signed_Char -> Signed_Int)
+@24$digitToValue$1:	; £temporary1411 = int_to_int c (Signed_Char -> Signed_Int)
 4:		mov al, [bp + 6]
 6:		and ax, 255
 8:		cmp al, 0
-9:		jge @25$digitToValue$2
+9:		jge @24$digitToValue$2
 10:		neg al
 12:		neg ax
 14:	
 
-@25$digitToValue$2:	; parameter £temporary1411, offset 6
+@24$digitToValue$2:	; parameter £temporary1411, offset 6
 15:		mov [bp + 13], ax
 17:	
 
-@25$digitToValue$3:	; call function noellipse-noellipse isdigit
-18:		mov word [bp + 7], @25$digitToValue$4
+@24$digitToValue$3:	; call function noellipse-noellipse isdigit
+18:		mov word [bp + 7], @24$digitToValue$4
 19:		mov [bp + 9], bp
 20:		add bp, 7
 21:		jmp isdigit
 23:	
 
-@25$digitToValue$4:	; post call
+@24$digitToValue$4:	; post call
 25:	
 
-@25$digitToValue$5:	; £temporary1412 = return_value
+@24$digitToValue$5:	; £temporary1412 = return_value
 30:	
 
-@25$digitToValue$6:	; if £temporary1412 == 0 goto 11
+@24$digitToValue$6:	; if £temporary1412 == 0 goto 11
 31:		cmp bx, 0
-32:		je @25$digitToValue$11
+32:		je @24$digitToValue$11
 34:	
 
-@25$digitToValue$7:	; £temporary1413 = c - 48
+@24$digitToValue$7:	; £temporary1413 = c - 48
 35:		mov bl, [bp + 6]
 36:		sub bl, 48
 38:	
 
-@25$digitToValue$8:	; £temporary1414 = int_to_int £temporary1413 (Signed_Char -> Signed_Int)
+@24$digitToValue$8:	; £temporary1414 = int_to_int £temporary1413 (Signed_Char -> Signed_Int)
 40:		and bx, 255
 42:		cmp bl, 0
-43:		jge @25$digitToValue$9
+43:		jge @24$digitToValue$9
 44:		neg bl
 46:		neg bx
 48:	
 
-@25$digitToValue$9:	; return_value = £temporary1414
+@24$digitToValue$9:	; return_value = £temporary1414
 50:	
 
-@25$digitToValue$10:	; return
+@24$digitToValue$10:	; return
 51:		mov ax, [bp]
 52:		mov di, [bp + 4]
 53:		mov bp, [bp + 2]
 54:		jmp ax
 56:	
 
-@25$digitToValue$11:	; call header integral zero 0 stack zero 0
+@24$digitToValue$11:	; call header integral zero 0 stack zero 0
 58:	
 
-@25$digitToValue$12:	; £temporary1415 = int_to_int c (Signed_Char -> Signed_Int)
+@24$digitToValue$12:	; £temporary1415 = int_to_int c (Signed_Char -> Signed_Int)
 59:		mov al, [bp + 6]
 61:		and ax, 255
 63:		cmp al, 0
-64:		jge @25$digitToValue$13
+64:		jge @24$digitToValue$13
 65:		neg al
 67:		neg ax
 69:	
 
-@25$digitToValue$13:	; parameter £temporary1415, offset 6
+@24$digitToValue$13:	; parameter £temporary1415, offset 6
 70:		mov [bp + 13], ax
 72:	
 
-@25$digitToValue$14:	; call function noellipse-noellipse islower
-73:		mov word [bp + 7], @25$digitToValue$15
+@24$digitToValue$14:	; call function noellipse-noellipse islower
+73:		mov word [bp + 7], @24$digitToValue$15
 74:		mov [bp + 9], bp
 75:		add bp, 7
 76:		jmp islower
 78:	
 
-@25$digitToValue$15:	; post call
+@24$digitToValue$15:	; post call
 80:	
 
-@25$digitToValue$16:	; £temporary1416 = return_value
+@24$digitToValue$16:	; £temporary1416 = return_value
 85:	
 
-@25$digitToValue$17:	; if £temporary1416 == 0 goto 23
+@24$digitToValue$17:	; if £temporary1416 == 0 goto 23
 86:		cmp bx, 0
-87:		je @25$digitToValue$23
+87:		je @24$digitToValue$23
 89:	
 
-@25$digitToValue$18:	; £temporary1417 = c - 97
+@24$digitToValue$18:	; £temporary1417 = c - 97
 90:		mov bl, [bp + 6]
 91:		sub bl, 97
 93:	
 
-@25$digitToValue$19:	; £temporary1418 = int_to_int £temporary1417 (Signed_Char -> Signed_Int)
+@24$digitToValue$19:	; £temporary1418 = int_to_int £temporary1417 (Signed_Char -> Signed_Int)
 95:		and bx, 255
 97:		cmp bl, 0
-98:		jge @25$digitToValue$20
+98:		jge @24$digitToValue$20
 99:		neg bl
 101:		neg bx
 103:	
 
-@25$digitToValue$20:	; £temporary1419 = £temporary1418 + 10
+@24$digitToValue$20:	; £temporary1419 = £temporary1418 + 10
 104:		add bx, 10
 106:	
 
-@25$digitToValue$21:	; return_value = £temporary1419
+@24$digitToValue$21:	; return_value = £temporary1419
 108:	
 
-@25$digitToValue$22:	; return
+@24$digitToValue$22:	; return
 109:		mov ax, [bp]
 110:		mov di, [bp + 4]
 111:		mov bp, [bp + 2]
 112:		jmp ax
 114:	
 
-@25$digitToValue$23:	; call header integral zero 0 stack zero 0
+@24$digitToValue$23:	; call header integral zero 0 stack zero 0
 116:	
 
-@25$digitToValue$24:	; £temporary1420 = int_to_int c (Signed_Char -> Signed_Int)
+@24$digitToValue$24:	; £temporary1420 = int_to_int c (Signed_Char -> Signed_Int)
 117:		mov al, [bp + 6]
 119:		and ax, 255
 121:		cmp al, 0
-122:		jge @25$digitToValue$25
+122:		jge @24$digitToValue$25
 123:		neg al
 125:		neg ax
 127:	
 
-@25$digitToValue$25:	; parameter £temporary1420, offset 6
+@24$digitToValue$25:	; parameter £temporary1420, offset 6
 128:		mov [bp + 13], ax
 130:	
 
-@25$digitToValue$26:	; call function noellipse-noellipse isupper
-131:		mov word [bp + 7], @25$digitToValue$27
+@24$digitToValue$26:	; call function noellipse-noellipse isupper
+131:		mov word [bp + 7], @24$digitToValue$27
 132:		mov [bp + 9], bp
 133:		add bp, 7
 134:		jmp isupper
 136:	
 
-@25$digitToValue$27:	; post call
+@24$digitToValue$27:	; post call
 138:	
 
-@25$digitToValue$28:	; £temporary1421 = return_value
+@24$digitToValue$28:	; £temporary1421 = return_value
 143:	
 
-@25$digitToValue$29:	; if £temporary1421 == 0 goto 35
+@24$digitToValue$29:	; if £temporary1421 == 0 goto 35
 144:		cmp bx, 0
-145:		je @25$digitToValue$35
+145:		je @24$digitToValue$35
 147:	
 
-@25$digitToValue$30:	; £temporary1422 = c - 65
+@24$digitToValue$30:	; £temporary1422 = c - 65
 148:		mov bl, [bp + 6]
 149:		sub bl, 65
 151:	
 
-@25$digitToValue$31:	; £temporary1423 = int_to_int £temporary1422 (Signed_Char -> Signed_Int)
+@24$digitToValue$31:	; £temporary1423 = int_to_int £temporary1422 (Signed_Char -> Signed_Int)
 153:		and bx, 255
 155:		cmp bl, 0
-156:		jge @25$digitToValue$32
+156:		jge @24$digitToValue$32
 157:		neg bl
 159:		neg bx
 161:	
 
-@25$digitToValue$32:	; £temporary1424 = £temporary1423 + 10
+@24$digitToValue$32:	; £temporary1424 = £temporary1423 + 10
 162:		add bx, 10
 164:	
 
-@25$digitToValue$33:	; return_value = £temporary1424
+@24$digitToValue$33:	; return_value = £temporary1424
 166:	
 
-@25$digitToValue$34:	; return
+@24$digitToValue$34:	; return
 167:		mov ax, [bp]
 168:		mov di, [bp + 4]
 169:		mov bp, [bp + 2]
 170:		jmp ax
 172:	
 
-@25$digitToValue$35:	; return_value = 0
+@24$digitToValue$35:	; return_value = 0
 173:		mov bx, 0
 175:	
 
-@25$digitToValue$36:	; return
+@24$digitToValue$36:	; return
 176:		mov ax, [bp]
 177:		mov di, [bp + 4]
 178:		mov bp, [bp + 2]
 179:		jmp ax
 181:	
 
-@25$digitToValue$37:	; function end digitToValue
+@24$digitToValue$37:	; function end digitToValue
 1:	
 
 scanLongInt:	; longValue = 0
@@ -1845,7 +1845,7 @@ scanLongInt$62:	; call function noellipse-noellipse isDigitInBase
 235:		mov word [bp + 17], scanLongInt$63
 236:		mov [bp + 19], bp
 237:		add bp, 17
-238:		jmp @24$isDigitInBase
+238:		jmp @23$isDigitInBase
 240:	
 
 scanLongInt$63:	; post call
@@ -1887,7 +1887,7 @@ scanLongInt$70:	; call function noellipse-noellipse digitToValue
 276:		mov word [bp + 17], scanLongInt$71
 277:		mov [bp + 19], bp
 278:		add bp, 17
-279:		jmp @25$digitToValue
+279:		jmp @24$digitToValue
 281:	
 
 scanLongInt$71:	; post call
@@ -2223,7 +2223,7 @@ scanUnsignedLongInt$53:	; call function noellipse-noellipse isDigitInBase
 204:		mov word [bp + 19], scanUnsignedLongInt$54
 205:		mov [bp + 21], bp
 206:		add bp, 19
-207:		jmp @24$isDigitInBase
+207:		jmp @23$isDigitInBase
 209:	
 
 scanUnsignedLongInt$54:	; post call
@@ -2261,7 +2261,7 @@ scanUnsignedLongInt$61:	; call function noellipse-noellipse digitToValue
 239:		mov word [bp + 19], scanUnsignedLongInt$62
 240:		mov [bp + 21], bp
 241:		add bp, 19
-242:		jmp @25$digitToValue
+242:		jmp @24$digitToValue
 244:	
 
 scanUnsignedLongInt$62:	; post call

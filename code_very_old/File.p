@@ -416,7 +416,8 @@ static int filecreate ( const char * name ) {
    
    
     
-    
+
+     
 
     
    
@@ -424,6 +425,7 @@ static int filecreate ( const char * name ) {
 
 
   
+
   
 
    
@@ -856,4 +858,3 @@ return stream -> errno ;
 void perror ( const char * s ) {
 printf ( "%s: %s.\n" , s , strerror ( errno ) ) ;
 }
-

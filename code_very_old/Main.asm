@@ -39,19 +39,6 @@
 	global $StackTop
 
 
-section .text
-
- @334$malloc:
-	; Return 0
-	mov rbx, 0
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- @334$malloc$1:
-	; FunctionEnd malloc
-
 section .data
 
 a:
@@ -1071,8 +1058,8 @@ section .text
 	mov qword [rbp + 72], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
  maina$5:
-	; Parameter signedint 201 80
-	mov dword [rbp + 80], 201
+	; Parameter signedint 197 80
+	mov dword [rbp + 80], 197
 
  maina$6:
 	; Call fprintf 24 20
@@ -1156,25 +1143,25 @@ section .text
 
 section .data
 
-@425$ZERO:
+@423$ZERO:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@426$ONE:
+@424$ONE:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@429$TWO:
+@427$TWO:
 	; Initializer SignedInt 2
 	dd 2
 
 section .data
 
-@430$THREE:
+@428$THREE:
 	; Initializer SignedInt 3
 	dd 3
 
@@ -1421,119 +1408,119 @@ section .text
 	; PostCall 40
 
  mainX4$45:
-	; PreCall 73 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; PreCall 69 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX4$46:
-	; Parameter pointer 0 97
-	mov qword [rbp + 97], 0
+	; Parameter pointer 0 93
+	mov qword [rbp + 93], 0
 
  mainX4$47:
-	; Call mktime 73 0
-	mov qword [rbp + 73], mainX4$48
-	mov [rbp + 81], rbp
-	add rbp, 73
+	; Call mktime 69 0
+	mov qword [rbp + 69], mainX4$48
+	mov [rbp + 77], rbp
+	add rbp, 69
 	jmp mktime
 
  mainX4$48:
-	; PostCall 73
+	; PostCall 69
 
  mainX4$49:
-	; PreCall 73 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; PreCall 69 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX4$50:
-	; Parameter pointer "Hello!\n" 97
-	mov qword [rbp + 97], string_Hello210A#
+	; Parameter pointer "Hello!\n" 93
+	mov qword [rbp + 93], string_Hello210A#
 
  mainX4$51:
-	; Call printf 73 0
-	mov qword [rbp + 73], mainX4$52
-	mov [rbp + 81], rbp
-	add rbp, 73
+	; Call printf 69 0
+	mov qword [rbp + 69], mainX4$52
+	mov [rbp + 77], rbp
+	add rbp, 69
 	mov rdi, rbp
 	jmp printf
 
  mainX4$52:
-	; PostCall 73
+	; PostCall 69
 
  mainX4$53:
-	; PreCall 73 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; PreCall 69 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX4$54:
-	; Parameter pointer "Please write a character, a string, an integer, and a double: " 97
-	mov qword [rbp + 97], string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#
+	; Parameter pointer "Please write a character, a string, an integer, and a double: " 93
+	mov qword [rbp + 93], string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#
 
  mainX4$55:
-	; Call printf 73 0
-	mov qword [rbp + 73], mainX4$56
-	mov [rbp + 81], rbp
-	add rbp, 73
+	; Call printf 69 0
+	mov qword [rbp + 69], mainX4$56
+	mov [rbp + 77], rbp
+	add rbp, 69
 	mov rdi, rbp
 	jmp printf
 
  mainX4$56:
-	; PostCall 73
+	; PostCall 69
 
  mainX4$57:
-	; PreCall 73 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; PreCall 69 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX4$58:
-	; Parameter pointer "%c %s %i %lf" 97
-	mov qword [rbp + 97], string_25c2025s2025i2025lf#
+	; Parameter pointer "%c %s %i %lf" 93
+	mov qword [rbp + 93], string_25c2025s2025i2025lf#
 
  mainX4$59:
 	; Address £temporary100 c
 	mov rsi, rbp
-	add rsi, 52
+	add rsi, 48
 
  mainX4$60:
-	; Parameter pointer £temporary100 105
-	mov [rbp + 105], rsi
+	; Parameter pointer £temporary100 101
+	mov [rbp + 101], rsi
 
  mainX4$61:
-	; Parameter pointer s 113
-	mov [rbp + 113], rbp
-	add qword [rbp + 113], 53
+	; Parameter pointer s 109
+	mov [rbp + 109], rbp
+	add qword [rbp + 109], 49
 
  mainX4$62:
 	; Address £temporary101 i
 	mov rsi, rbp
-	add rsi, 40
+	add rsi, 36
 
  mainX4$63:
-	; Parameter pointer £temporary101 121
-	mov [rbp + 121], rsi
+	; Parameter pointer £temporary101 117
+	mov [rbp + 117], rsi
 
  mainX4$64:
 	; Address £temporary102 d
 	mov rsi, rbp
-	add rsi, 44
+	add rsi, 40
 
  mainX4$65:
-	; Parameter pointer £temporary102 129
-	mov [rbp + 129], rsi
+	; Parameter pointer £temporary102 125
+	mov [rbp + 125], rsi
 
  mainX4$66:
-	; Call scanf 73 32
-	mov qword [rbp + 73], mainX4$67
-	mov [rbp + 81], rbp
-	add rbp, 73
+	; Call scanf 69 32
+	mov qword [rbp + 69], mainX4$67
+	mov [rbp + 77], rbp
+	add rbp, 69
 	mov rdi, rbp
 	add rdi, 32
 	jmp scanf
 
  mainX4$67:
-	; PostCall 73
+	; PostCall 69
 
  mainX4$68:
-	; PreCall 73 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; PreCall 69 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX4$69:
-	; Parameter pointer "You wrote the character '%c', the string "%s", the integer %i, and the double %f.\n" 97
-	mov qword [rbp + 97], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#
+	; Parameter pointer "You wrote the character '%c', the string "%s", the integer %i, and the double %f.\n" 93
+	mov qword [rbp + 93], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#
 
  mainX4$70:
 	; IntegralToIntegral £temporary104 c
-	mov al, [rbp + 52]
+	mov al, [rbp + 48]
 	and eax, 255
 	cmp al, 0
 	jge mainX4$71
@@ -1541,38 +1528,38 @@ section .text
 	neg eax
 
  mainX4$71:
-	; Parameter signedint £temporary104 105
-	mov [rbp + 105], eax
+	; Parameter signedint £temporary104 101
+	mov [rbp + 101], eax
 
  mainX4$72:
-	; Parameter pointer s 109
-	mov [rbp + 109], rbp
-	add qword [rbp + 109], 53
+	; Parameter pointer s 105
+	mov [rbp + 105], rbp
+	add qword [rbp + 105], 49
 
  mainX4$73:
-	; Parameter signedint i 117
-	mov eax, [rbp + 40]
-	mov [rbp + 117], eax
+	; Parameter signedint i 113
+	mov eax, [rbp + 36]
+	mov [rbp + 113], eax
 
  mainX4$74:
 	; PushFloat d
-	fld qword [rbp + 44]
+	fld qword [rbp + 40]
 
  mainX4$75:
-	; Parameter double d 121
-	fstp qword [rbp + 121]
+	; Parameter double d 117
+	fstp qword [rbp + 117]
 
  mainX4$76:
-	; Call printf 73 24
-	mov qword [rbp + 73], mainX4$77
-	mov [rbp + 81], rbp
-	add rbp, 73
+	; Call printf 69 24
+	mov qword [rbp + 69], mainX4$77
+	mov [rbp + 77], rbp
+	add rbp, 69
 	mov rdi, rbp
 	add rdi, 24
 	jmp printf
 
  mainX4$77:
-	; PostCall 73
+	; PostCall 69
 
  mainX4$78:
 	; Return
@@ -2076,8 +2063,8 @@ section .text
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
  assert_test$17:
-	; Parameter signedint 867 84
-	mov dword [rbp + 84], 867
+	; Parameter signedint 865 84
+	mov dword [rbp + 84], 865
 
  assert_test$18:
 	; Call fprintf 28 20
@@ -2166,8 +2153,8 @@ section .text
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
  assert_test2$6:
-	; Parameter signedint 872 84
-	mov dword [rbp + 84], 872
+	; Parameter signedint 870 84
+	mov dword [rbp + 84], 870
 
  assert_test2$7:
 	; Call fprintf 28 20

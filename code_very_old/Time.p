@@ -532,16 +532,23 @@ unsigned long time ( unsigned long * timePtr ) {
 unsigned long time ;
 
    
-    
+   
     
       
-          
 
    
     
-            
+     
+     
+   
 
-           
+   
+    
+   
+   
+   
+
+            
                  
                
         
@@ -550,8 +557,10 @@ unsigned long time ;
      
 
 
-                      
+                       
        
+
+
   
 
    
@@ -585,14 +594,14 @@ int year = 1970 ;
 
 if ( timePtr != ( ( void * ) 0 ) ) {
 unsigned long time = * timePtr ;
-
 const long secondsOfDay = time % 86400L ;
+long totalDays = time / 86400L ;
+
 g_timeStruct . tm_hour = secondsOfDay / 3600 ;
 g_timeStruct . tm_min = ( secondsOfDay % 3600 ) / 60 ;
 g_timeStruct . tm_sec = ( secondsOfDay % 3600 ) % 60 ;
 
 
-long totalDays = time / 86400L ;
 if ( totalDays < 3 ) {
 g_timeStruct . tm_wday = totalDays + 4 ;
 }
@@ -606,12 +615,11 @@ const int leapYear = ( ( ( year % 4 ) == 0 ) &&
 const int daysOfYear = leapYear ? 366 : 365 ;
 
 if ( totalDays < daysOfYear ) {
-g_timeStruct . tm_year = year - 1900 ;
-g_timeStruct . tm_yday = totalDays ;
-
 const int daysOfMonths [] = { 31 , leapYear ? 29 : 28 , 31 , 30 ,
 31 , 30 , 30 , 31 , 30 , 31 , 30 , 31 };
 int month = 0 ;
+g_timeStruct . tm_year = year - 1900 ;
+g_timeStruct . tm_yday = totalDays ;
 
 while ( totalDays >= daysOfMonths [ month ] ) {
 totalDays -= daysOfMonths [ month ];
@@ -698,6 +706,9 @@ char ** longDayList = ( localeConvPtr != ( ( void * ) 0 ) )
 char ** longMonthList = ( localeConvPtr != ( ( void * ) 0 ) )
 ? ( localeConvPtr -> longMonthList ) : ( ( void * ) 0 ) ;
 
+const int leapDays = ( tp -> tm_year - 69 ) / 4 ;
+const long totalDays = 365 * ( tp -> tm_year - 70 ) + leapDays + tp -> tm_yday ;
+
 strcpy ( s , "" ) ;
 shortDayList = ( shortDayList != ( ( void * ) 0 ) )
 ? shortDayList : g_defaultShortDayList ;
@@ -706,9 +717,6 @@ shortMonthList = ( shortMonthList != ( ( void * ) 0 ) )
 ? shortMonthList : g_defaultShortMonthList ;
 longMonthList = ( longMonthList != ( ( void * ) 0 ) )
 ? longMonthList : g_defaultLongMonthList ;
-
-const int leapDays = ( tp -> tm_year - 69 ) / 4 ;
-const long totalDays = 365 * ( tp -> tm_year - 70 ) + leapDays + tp -> tm_yday ;
 
 
 int yearDaySunday , yearDayMonday ;
@@ -727,7 +735,7 @@ else {
 yearDayMonday = ( totalDays - 4 ) % 7 ;
 }
 
-int index ;
+{ int index ;
 for ( index = 0 ; fmt [ index ] != '\0' ; ++ index ) {
 char add [ 20 ];
 
@@ -836,7 +844,7 @@ else {
 break ;
 }
 }
+}
 
 return strlen ( s ) ;
 }
-

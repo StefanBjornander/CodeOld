@@ -632,27 +632,27 @@ BLOCK_HEADER * g_firstBlockPtr = ( ( void * ) 0 ) ;
 
 
 void * malloc ( int memorySize ) {
-if ( ! ( memorySize >= 0 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "memorySize >= 0" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Malloc.c" , 25 ) ; abort ( ) ; } ;
-
-if ( memorySize == 0 ) {
-return ( ( void * ) 0 ) ;
-}
-
 UINT newBlockSize = ( ( UINT ) ( sizeof ( BLOCK_HEADER ) ) ) + ( ( UINT ) memorySize ) ,
 minGap = 0 ;
 
    
-     
+ UINT lastAddress = 65528u ;
   
 
    
 
-UINT lastAddress = ( UINT ) ( stack_top + 1048572u ) ;
+           
 
   
 
 BLOCK_HEADER * minBlockPtr = ( ( void * ) 0 ) , * minPrevBlockPtr = ( ( void * ) 0 ) , * prevBlockPtr = ( ( void * ) 0 ) ,
 * currBlockPtr = g_firstBlockPtr ;
+
+if ( ! ( memorySize >= 0 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "memorySize >= 0" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Malloc.c" , 41 ) ; abort ( ) ; } ;
+
+if ( memorySize == 0 ) {
+return ( ( void * ) 0 ) ;
+}
 
 while ( currBlockPtr != ( ( void * ) 0 ) ) {
 UINT currAddress = ( UINT ) currBlockPtr ;
@@ -691,11 +691,11 @@ else {
 UINT newAddress = lastAddress - newBlockSize ;
 
    
-     
+ UINT stackTop = register_bp ;
   
 
    
- UINT stackTop = register_rbp ;
+     
   
 
 
@@ -792,12 +792,12 @@ return pointer ;
 }
 
 void free ( void * freeMemoryPtr ) {
+BLOCK_HEADER * freeBlockPtr = ( BLOCK_HEADER * ) ( ( ( UINT ) freeMemoryPtr ) - ( ( UINT ) ( sizeof ( BLOCK_HEADER ) ) ) ) ,
+* prevBlockPtr = ( ( void * ) 0 ) , * currBlockPtr = g_firstBlockPtr ;
+
 if ( freeMemoryPtr == ( ( void * ) 0 ) ) {
 return ;
 }
-
-BLOCK_HEADER * freeBlockPtr = ( BLOCK_HEADER * ) ( ( ( UINT ) freeMemoryPtr ) - ( ( UINT ) ( sizeof ( BLOCK_HEADER ) ) ) ) ,
-* prevBlockPtr = ( ( void * ) 0 ) , * currBlockPtr = g_firstBlockPtr ;
 
 while ( currBlockPtr != ( ( void * ) 0 ) ) {
 if ( currBlockPtr == freeBlockPtr ) {
@@ -878,7 +878,7 @@ free ( oldMemoryPtr ) ;
 return ( ( void * ) 0 ) ;
 }
 
-UINT newBlockSize = ( ( UINT ) newMemorySize ) + ( ( UINT ) ( sizeof ( BLOCK_HEADER ) ) ) ;
+{ UINT newBlockSize = ( ( UINT ) newMemorySize ) + ( ( UINT ) ( sizeof ( BLOCK_HEADER ) ) ) ;
 BLOCK_HEADER * oldBlockPtr = ( BLOCK_HEADER * ) ( ( ( UINT ) oldMemoryPtr ) - ( ( UINT ) ( sizeof ( BLOCK_HEADER ) ) ) ) ;
 
 if ( newBlockSize <= oldBlockPtr -> size ) {
@@ -886,13 +886,14 @@ oldBlockPtr -> size = newBlockSize ;
 return oldMemoryPtr ;
 }
 
+
    
-     
+ { UINT lastAddress = 65528u ;
   
 
    
 
-UINT lastAddress = ( UINT ) ( stack_top + 1048572u ) ;
+            
 
   
 
@@ -914,13 +915,16 @@ break ;
 lastAddress = ( UINT ) currBlockPtr ;
 currBlockPtr = currBlockPtr -> next ;
 }
+}
 
-void * newMemoryPtr = malloc ( newMemorySize ) ;
+{ void * newMemoryPtr = malloc ( newMemorySize ) ;
 
 if ( newMemoryPtr != ( ( void * ) 0 ) ) {
 memcpy ( newMemoryPtr , oldMemoryPtr , newMemorySize ) ;
 free ( oldMemoryPtr ) ;
 return newMemoryPtr ;
+}
+}
 }
 
 return ( ( void * ) 0 ) ;

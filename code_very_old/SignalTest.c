@@ -60,8 +60,7 @@ void signal_test(void) {
   //signal(SIGFPE, floating_point_error);
   //raise(SIGFPE);
 
-  int a = 1, b = 1, c;
-  c = a / b;
+  int a = 1, b = 1, c = a / b;
   printf("%i\n", c);
 
   atexit(exit_handle1);

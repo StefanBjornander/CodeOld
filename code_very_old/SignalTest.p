@@ -406,8 +406,7 @@ void signal_test ( void ) {
 
 
 
-int a = 1 , b = 1 , c ;
-c = a / b ;
+int a = 1 , b = 1 , c = a / b ;
 printf ( "%i\n" , c ) ;
 
 atexit ( exit_handle1 ) ;

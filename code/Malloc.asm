@@ -41,116 +41,116 @@ string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 section .text
 
  malloc:
-	; SignedGreaterThanEqual 12 memorySize 0
-	cmp dword [rbp + 24], 0
-	jge malloc$12
+	; IntegralToIntegral £temporary147 memorySize
+	mov eax, [rbp + 24]
 
  malloc$1:
-	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; BinaryAdd newBlockSize £temporary147 12
+	add eax, 12
+	mov [rbp + 28], eax
 
  malloc$2:
-	; Parameter pointer stderr 52
-	mov rax, [stderr]
-	mov [rbp + 52], rax
+	; Assign minGap 0
+	mov dword [rbp + 32], 0
 
  malloc$3:
-	; Parameter pointer "Assertion failed: "%s" in file %s at line %i\n" 60
-	mov qword [rbp + 60], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	; StackTop £temporary149
+	mov rax, $StackTop
 
  malloc$4:
-	; Parameter pointer "memorySize >= 0" 68
-	mov qword [rbp + 68], string_memorySize203E3D200#
+	; BinaryAdd £temporary150 £temporary149 1048572
+	add rax, 1048572
 
  malloc$5:
-	; Parameter pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c" 76
-	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
+	; IntegralToIntegral £temporary152 £temporary150
 
  malloc$6:
-	; Parameter signedint 25 84
-	mov dword [rbp + 84], 25
+	; Assign lastAddress £temporary152
+	mov [rbp + 36], eax
 
  malloc$7:
-	; Call fprintf 28 20
-	mov qword [rbp + 28], malloc$8
-	mov [rbp + 36], rbp
-	add rbp, 28
+	; Assign minBlockPtr 0
+	mov qword [rbp + 40], 0
+
+ malloc$8:
+	; Assign minPrevBlockPtr 0
+	mov qword [rbp + 48], 0
+
+ malloc$9:
+	; Assign prevBlockPtr 0
+	mov qword [rbp + 56], 0
+
+ malloc$10:
+	; Assign currBlockPtr g_firstBlockPtr
+	mov rax, [g_firstBlockPtr]
+	mov [rbp + 64], rax
+
+ malloc$11:
+	; SignedGreaterThanEqual 23 memorySize 0
+	cmp dword [rbp + 24], 0
+	jge malloc$23
+
+ malloc$12:
+	; PreCall 72 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ malloc$13:
+	; Parameter pointer stderr 96
+	mov rax, [stderr]
+	mov [rbp + 96], rax
+
+ malloc$14:
+	; Parameter pointer "Assertion failed: "%s" in file %s at line %i\n" 104
+	mov qword [rbp + 104], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+
+ malloc$15:
+	; Parameter pointer "memorySize >= 0" 112
+	mov qword [rbp + 112], string_memorySize203E3D200#
+
+ malloc$16:
+	; Parameter pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c" 120
+	mov qword [rbp + 120], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
+
+ malloc$17:
+	; Parameter signedint 41 128
+	mov dword [rbp + 128], 41
+
+ malloc$18:
+	; Call fprintf 72 20
+	mov qword [rbp + 72], malloc$19
+	mov [rbp + 80], rbp
+	add rbp, 72
 	mov rdi, rbp
 	add rdi, 20
 	jmp fprintf
 
- malloc$8:
-	; PostCall 28
+ malloc$19:
+	; PostCall 72
 
- malloc$9:
-	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+ malloc$20:
+	; PreCall 72 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- malloc$10:
-	; Call abort 28 0
-	mov qword [rbp + 28], malloc$11
-	mov [rbp + 36], rbp
-	add rbp, 28
+ malloc$21:
+	; Call abort 72 0
+	mov qword [rbp + 72], malloc$22
+	mov [rbp + 80], rbp
+	add rbp, 72
 	jmp abort
 
- malloc$11:
-	; PostCall 28
+ malloc$22:
+	; PostCall 72
 
- malloc$12:
-	; NotEqual 14 memorySize 0
+ malloc$23:
+	; NotEqual 25 memorySize 0
 	cmp dword [rbp + 24], 0
-	jne malloc$14
+	jne malloc$25
 
- malloc$13:
+ malloc$24:
 	; Return 0
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
-
- malloc$14:
-	; IntegralToIntegral £temporary152 memorySize
-	mov eax, [rbp + 24]
-
- malloc$15:
-	; BinaryAdd newBlockSize £temporary152 12
-	add eax, 12
-	mov [rbp + 28], eax
-
- malloc$16:
-	; Assign minGap 0
-	mov dword [rbp + 32], 0
-
- malloc$17:
-	; StackTop £temporary154
-	mov rax, $StackTop
-
- malloc$18:
-	; BinaryAdd £temporary155 £temporary154 1048572
-	add rax, 1048572
-
- malloc$19:
-	; IntegralToIntegral £temporary157 £temporary155
-
- malloc$20:
-	; Assign lastAddress £temporary157
-	mov [rbp + 36], eax
-
- malloc$21:
-	; Assign minBlockPtr 0
-	mov qword [rbp + 40], 0
-
- malloc$22:
-	; Assign minPrevBlockPtr 0
-	mov qword [rbp + 48], 0
-
- malloc$23:
-	; Assign prevBlockPtr 0
-	mov qword [rbp + 56], 0
-
- malloc$24:
-	; Assign currBlockPtr g_firstBlockPtr
-	mov rax, [g_firstBlockPtr]
-	mov [rbp + 64], rax
 
  malloc$25:
 	; Equal 43 currBlockPtr 0
@@ -507,42 +507,42 @@ section .text
 section .text
 
  free:
-	; NotEqual 2 freeMemoryPtr 0
-	cmp qword [rbp + 24], 0
-	jne free$2
+	; IntegralToIntegral £temporary197 freeMemoryPtr
+	mov rax, [rbp + 24]
 
  free$1:
+	; BinarySubtract £temporary198 £temporary197 12
+	sub eax, 12
+
+ free$2:
+	; IntegralToIntegral £temporary199 £temporary198
+	mov rbx, 4294967295
+	and rax, rbx
+
+ free$3:
+	; Assign freeBlockPtr £temporary199
+	mov [rbp + 32], rax
+
+ free$4:
+	; Assign prevBlockPtr 0
+	mov qword [rbp + 40], 0
+
+ free$5:
+	; Assign currBlockPtr g_firstBlockPtr
+	mov rax, [g_firstBlockPtr]
+	mov [rbp + 48], rax
+
+ free$6:
+	; NotEqual 8 freeMemoryPtr 0
+	cmp qword [rbp + 24], 0
+	jne free$8
+
+ free$7:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
-
- free$2:
-	; IntegralToIntegral £temporary198 freeMemoryPtr
-	mov rax, [rbp + 24]
-
- free$3:
-	; BinarySubtract £temporary199 £temporary198 12
-	sub eax, 12
-
- free$4:
-	; IntegralToIntegral £temporary200 £temporary199
-	mov rbx, 4294967295
-	and rax, rbx
-
- free$5:
-	; Assign freeBlockPtr £temporary200
-	mov [rbp + 32], rax
-
- free$6:
-	; Assign prevBlockPtr 0
-	mov qword [rbp + 40], 0
-
- free$7:
-	; Assign currBlockPtr g_firstBlockPtr
-	mov rax, [g_firstBlockPtr]
-	mov [rbp + 48], rax
 
  free$8:
 	; Equal 32 currBlockPtr 0
@@ -994,84 +994,84 @@ section .text
 	jmp realloc$54
 
  realloc$67:
-	; PreCall 60 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$68:
-	; Parameter signedint newMemorySize 84
+	; Parameter signedint newMemorySize 72
 	mov eax, [rbp + 32]
-	mov [rbp + 84], eax
+	mov [rbp + 72], eax
 
  realloc$69:
-	; Call malloc 60 0
-	mov qword [rbp + 60], realloc$70
-	mov [rbp + 68], rbp
-	add rbp, 60
+	; Call malloc 48 0
+	mov qword [rbp + 48], realloc$70
+	mov [rbp + 56], rbp
+	add rbp, 48
 	jmp malloc
 
  realloc$70:
-	; PostCall 60
+	; PostCall 48
 
  realloc$71:
 	; GetReturnValue £temporary249
 
  realloc$72:
 	; Assign newMemoryPtr £temporary249
-	mov [rbp + 60], rbx
+	mov [rbp + 48], rbx
 
  realloc$73:
 	; Equal 85 newMemoryPtr 0
-	cmp qword [rbp + 60], 0
+	cmp qword [rbp + 48], 0
 	je realloc$85
 
  realloc$74:
-	; PreCall 68 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$75:
-	; Parameter pointer newMemoryPtr 92
-	mov rax, [rbp + 60]
-	mov [rbp + 92], rax
+	; Parameter pointer newMemoryPtr 80
+	mov rax, [rbp + 48]
+	mov [rbp + 80], rax
 
  realloc$76:
-	; Parameter pointer oldMemoryPtr 100
+	; Parameter pointer oldMemoryPtr 88
 	mov rax, [rbp + 24]
-	mov [rbp + 100], rax
+	mov [rbp + 88], rax
 
  realloc$77:
-	; Parameter signedint newMemorySize 108
+	; Parameter signedint newMemorySize 96
 	mov eax, [rbp + 32]
-	mov [rbp + 108], eax
+	mov [rbp + 96], eax
 
  realloc$78:
-	; Call memcpy 68 0
-	mov qword [rbp + 68], realloc$79
-	mov [rbp + 76], rbp
-	add rbp, 68
+	; Call memcpy 56 0
+	mov qword [rbp + 56], realloc$79
+	mov [rbp + 64], rbp
+	add rbp, 56
 	jmp memcpy
 
  realloc$79:
-	; PostCall 68
+	; PostCall 56
 
  realloc$80:
-	; PreCall 68 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$81:
-	; Parameter pointer oldMemoryPtr 92
+	; Parameter pointer oldMemoryPtr 80
 	mov rax, [rbp + 24]
-	mov [rbp + 92], rax
+	mov [rbp + 80], rax
 
  realloc$82:
-	; Call free 68 0
-	mov qword [rbp + 68], realloc$83
-	mov [rbp + 76], rbp
-	add rbp, 68
+	; Call free 56 0
+	mov qword [rbp + 56], realloc$83
+	mov [rbp + 64], rbp
+	add rbp, 56
 	jmp free
 
  realloc$83:
-	; PostCall 68
+	; PostCall 56
 
  realloc$84:
 	; Return newMemoryPtr
-	mov rbx, [rbp + 60]
+	mov rbx, [rbp + 48]
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]

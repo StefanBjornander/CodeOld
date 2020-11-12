@@ -75,14 +75,18 @@ void stdlib_test(void) {
 
   { div_t i = div(10, 3);
     printf("div_t(10, 3) = (%i, %i)\n", i.quot, i.rem);
-    div_t j = print_div(i);
-    printf("div_t(10, 3) = (%i, %i)\n\n", j.quot, j.rem);
+
+    { div_t j = print_div(i);
+      printf("div_t(10, 3) = (%i, %i)\n\n", j.quot, j.rem);
+    }
   }
 
   { ldiv_t li = ldiv(10, 3);
     printf("ldiv_t(10, 3) = (%li, %li)\n", li.quot, li.rem);
-    ldiv_t lj = print_ldiv(li);
-    printf("ldiv_t(10, 3) = (%li, %li)\n\n", lj.quot, lj.rem);
+
+    { ldiv_t lj = print_ldiv(li);
+      printf("ldiv_t(10, 3) = (%li, %li)\n\n", lj.quot, lj.rem);
+    }
   }
 
   { int list[] = {3, 4, 2, 1,};
@@ -111,12 +115,13 @@ void stdlib_test(void) {
       }
     }
 
-    int key;
-    printf("\n\nSearch:\n");
-    for (key = 0; key < 6; ++key) {
-      int* p = (int*) bsearch(&key, list, size, sizeof list[0], compare);
-      int index = (p != NULL) ? (p - list) : -1;
-      printf("  (%i, %i)\n", key, index);
+    { int key;
+      printf("\n\nSearch:\n");
+      for (key = 0; key < 6; ++key) {
+        int* p = (int*) bsearch(&key, list, size, sizeof list[0], compare);
+        int index = (p != NULL) ? (p - list) : -1;
+        printf("  (%i, %i)\n", key, index);
+      }
     }
 
     printf("\n");

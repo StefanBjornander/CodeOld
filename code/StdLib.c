@@ -57,13 +57,15 @@ long strtol(char* s, char** endp, int base) {
   g_inStatus = STRING;
   g_inDevice = s;
   g_inChars = 0;
-  long longValue = scanLongInt(base);
 
-  if (endp != NULL) {
-    *endp = s + g_inChars;
+  { long value = scanLongInt(base);
+
+    if (endp != NULL) {
+      *endp = s + g_inChars;
+    }
+
+    return value;
   }
-
-  return longValue;
 }
 
 /*long strtol(char* s, char** endp, int base) {
@@ -232,13 +234,15 @@ unsigned long strtoul(char* s, char** endp, int base) {
   g_inStatus = STRING;
   g_inDevice = s;
   g_inChars = 0;
-  unsigned long unsignedLongValue = scanUnsignedLongInt(base);
+  
+  { unsigned long unsignedLongValue = scanUnsignedLongInt(base);
 
-  if (endp != NULL) {
-    *endp = s + g_inChars;
+    if (endp != NULL) {
+      *endp = s + g_inChars;
+    }
+
+    return unsignedLongValue;
   }
-
-  return unsignedLongValue;
 }
 
 /*unsigned long strtoul(char* s, char** endp, int base) {
@@ -549,13 +553,12 @@ static void memswap(char* value1, char* value2, int valueSize) {
 }
 
 void qsort(void* valueList, size_t listSize, size_t valueSize,
-           int (*compare)(const void*, const void*)) {
+           int (*compare) (const void*, const void*)) {
   char* charList = (char*) valueList;
-
   int size;
   for (size = (listSize - 1); size > 0; --size)  {
-    BOOL update = FALSE;
     int index;
+    BOOL update = FALSE;
     for (index = 0; index < size; ++index)  {
       char* valuePtr1 = charList + (index * valueSize);
       char* valuePtr2 = charList + ((index + 1) * valueSize);
@@ -572,7 +575,7 @@ void qsort(void* valueList, size_t listSize, size_t valueSize,
   }
 }
 
-void qsortX(const void* valueList, size_t listSize, size_t valueSize,
+/*void qsortX(const void* valueList, size_t listSize, size_t valueSize,
            int (*compare)(const void*, const void*)) {
   BOOL update;
   char* charList = (char*) valueList;
@@ -618,7 +621,7 @@ static void swap(char* leftValuePtr, char* rightValuePtr, int valueSize) {
     leftValuePtr[index] = rightValuePtr[index];
     rightValuePtr[index] = tempValue;
   }
-}
+}*/
 
 int abs(int value) {
   return (value < 0) ? -value : value;

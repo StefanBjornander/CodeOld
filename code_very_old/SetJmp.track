@@ -4,88 +4,88 @@ setjmp:	; £temporary834 = bp
 3:	
 
 setjmp$1:	; bp_pointer = £temporary834
-4:		mov [bp + 8], t412
+4:		mov [bp + 8], t410
 6:	
 
 setjmp$2:	; £temporary835 -> buf = *buf
-7:		mov a413, [bp + 6]
+7:		mov a411, [bp + 6]
 9:	
 
 setjmp$3:	; £temporary836 -> bp_pointer = *bp_pointer
-10:		mov a414, [bp + 8]
+10:		mov a412, [bp + 8]
 12:	
 
 setjmp$4:	; £temporary835 -> buf = £temporary836 -> bp_pointer
-13:		mov t415, [a414]
-14:		mov [a413], t415
+13:		mov t413, [a412]
+14:		mov [a411], t413
 16:	
 
 setjmp$5:	; £temporary837 -> buf = *buf, offset 2
-17:		mov a416, [bp + 6]
+17:		mov a414, [bp + 6]
 19:	
 
 setjmp$6:	; £temporary838 -> bp_pointer = *bp_pointer, offset 2
-20:		mov a417, [bp + 8]
+20:		mov a415, [bp + 8]
 22:	
 
 setjmp$7:	; £temporary837 -> buf = £temporary838 -> bp_pointer
-23:		mov t418, [a417 + 2]
-24:		mov [a416 + 2], t418
+23:		mov t416, [a415 + 2]
+24:		mov [a414 + 2], t416
 26:	
 
 setjmp$8:	; £temporary839 -> buf = *buf, offset 4
-27:		mov a419, [bp + 6]
+27:		mov a417, [bp + 6]
 29:	
 
 setjmp$9:	; £temporary840 -> bp_pointer = *bp_pointer, offset 4
-30:		mov a420, [bp + 8]
+30:		mov a418, [bp + 8]
 32:	
 
 setjmp$10:	; £temporary839 -> buf = £temporary840 -> bp_pointer
-33:		mov t421, [a420 + 4]
-34:		mov [a419 + 4], t421
+33:		mov t419, [a418 + 4]
+34:		mov [a417 + 4], t419
 36:	
 
 setjmp$11:	; return_value = 0
-37:		mov a422, 0
+37:		mov a420, 0
 39:	
 
 setjmp$12:	; return
-40:		mov t423, [bp]
+40:		mov t421, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t423
+43:		jmp t421
 45:	
 
 setjmp$13:	; function end setjmp
 1:	
 
 longjmp:	; bx = return_value
-2:		mov a424, [bp + 8]
+2:		mov a422, [bp + 8]
 4:	
 
 longjmp$1:	; £temporary843 -> buf = *buf
-5:		mov a425, [bp + 6]
+5:		mov a423, [bp + 6]
 7:	
 
 longjmp$2:	; cx = £temporary843 -> buf
-8:		mov t426, [a425]
+8:		mov t424, [a423]
 10:	
 
 longjmp$3:	; £temporary845 -> buf = *buf, offset 4
-11:		mov a427, [bp + 6]
+11:		mov a425, [bp + 6]
 13:	
 
 longjmp$4:	; di = £temporary845 -> buf
-14:		mov t428, [a427 + 4]
+14:		mov t426, [a425 + 4]
 16:	
 
 longjmp$5:	; £temporary847 -> buf = *buf, offset 2
-17:		mov a429, [bp + 6]
+17:		mov a427, [bp + 6]
 19:	
 
 longjmp$6:	; bp = £temporary847 -> buf
-20:		mov t430, [a429 + 2]
+20:		mov t428, [a427 + 2]
 22:	
 
 longjmp$7:	; jump to 
@@ -93,10 +93,10 @@ longjmp$7:	; jump to
 25:	
 
 longjmp$8:	; return
-26:		mov t431, [bp]
+26:		mov t429, [bp]
 27:		mov di, [bp + 4]
 28:		mov bp, [bp + 2]
-29:		jmp t431
+29:		jmp t429
 31:	
 
 longjmp$9:	; function end longjmp

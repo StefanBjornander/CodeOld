@@ -22,12 +22,6 @@ BLOCK_HEADER* g_firstBlockPtr = NULL;
 // 4. After the list.
 
 void* malloc(size_t memorySize) {
-  assert(memorySize >= 0);
-  
-  if (memorySize == 0) {
-    return NULL;
-  }
-
   UINT newBlockSize = BLOCK_HEADER_SIZE + ((UINT) memorySize),
        minGap = 0;
 
@@ -43,6 +37,12 @@ void* malloc(size_t memorySize) {
 
   BLOCK_HEADER *minBlockPtr = NULL, *minPrevBlockPtr = NULL, *prevBlockPtr = NULL,
                *currBlockPtr = g_firstBlockPtr;
+
+  assert(memorySize >= 0);
+
+  if (memorySize == 0) {
+    return NULL;
+  }
 
   while (currBlockPtr != NULL) {
     UINT currAddress = (UINT) currBlockPtr;
@@ -182,12 +182,12 @@ void* calloc(size_t number, size_t size) {
 }
 
 void free(void* freeMemoryPtr) {
+  BLOCK_HEADER *freeBlockPtr = (BLOCK_HEADER*) (((UINT) freeMemoryPtr) - BLOCK_HEADER_SIZE),
+               *prevBlockPtr = NULL, *currBlockPtr = g_firstBlockPtr;
+
   if (freeMemoryPtr == NULL) {
     return;
   }
-  
-  BLOCK_HEADER *freeBlockPtr = (BLOCK_HEADER*) (((UINT) freeMemoryPtr) - BLOCK_HEADER_SIZE),
-               *prevBlockPtr = NULL, *currBlockPtr = g_firstBlockPtr;
 
   while (currBlockPtr != NULL) {
     if (currBlockPtr == freeBlockPtr) {
@@ -268,49 +268,53 @@ void* realloc(void* oldMemoryPtr, size_t newMemorySize) {
     return NULL;
   }
 
-  UINT newBlockSize = ((UINT) newMemorySize) + BLOCK_HEADER_SIZE;
-  BLOCK_HEADER* oldBlockPtr = (BLOCK_HEADER*) (((UINT) oldMemoryPtr) - BLOCK_HEADER_SIZE);
+  { UINT newBlockSize = ((UINT) newMemorySize) + BLOCK_HEADER_SIZE;
+    BLOCK_HEADER* oldBlockPtr = (BLOCK_HEADER*) (((UINT) oldMemoryPtr) - BLOCK_HEADER_SIZE);
 
-  if (newBlockSize <= oldBlockPtr->size) {
-    oldBlockPtr->size = newBlockSize;
-    return oldMemoryPtr;
-  }
+    if (newBlockSize <= oldBlockPtr->size) {
+      oldBlockPtr->size = newBlockSize;
+      return oldMemoryPtr;
+    }
+
 
 #ifdef __WINDOWS__
-  UINT lastAddress = 65528u; // LOW_HEAP_ADDRESS;
+    { UINT lastAddress = 65528u; // LOW_HEAP_ADDRESS;
 #endif
 
 #ifdef __LINUX__
-  //UINT lastAddress = (UINT)(stack_top + 65528u);
-  UINT lastAddress = (UINT)(stack_top + 1048572u);
-  //printf("lastAddress %u\n", lastAddress);
+    //UINT lastAddress = (UINT)(stack_top + 65528u);
+    { UINT lastAddress = (UINT)(stack_top + 1048572u);
+    //printf("lastAddress %u\n", lastAddress);
 #endif
 
-  BLOCK_HEADER* currBlockPtr = g_firstBlockPtr;
+      BLOCK_HEADER* currBlockPtr = g_firstBlockPtr;
 
-  while (currBlockPtr != NULL) {
-    if (currBlockPtr == oldBlockPtr) {
-      UINT availableSize = lastAddress - ((UINT) currBlockPtr);
+      while (currBlockPtr != NULL) {
+        if (currBlockPtr == oldBlockPtr) {
+          UINT availableSize = lastAddress - ((UINT) currBlockPtr);
 
-      if (availableSize >= newBlockSize) {
-        oldBlockPtr->size = newBlockSize;
-        return oldMemoryPtr;
-      }
-      else {
-        break;
+          if (availableSize >= newBlockSize) {
+            oldBlockPtr->size = newBlockSize;
+            return oldMemoryPtr;
+          }
+          else {
+            break;
+          }
+        }
+
+        lastAddress = (UINT) currBlockPtr;
+        currBlockPtr = currBlockPtr->next;
       }
     }
 
-    lastAddress = (UINT) currBlockPtr;
-    currBlockPtr = currBlockPtr->next;
-  }
+    { void* newMemoryPtr = malloc(newMemorySize);
 
-  void* newMemoryPtr = malloc(newMemorySize);
-
-  if (newMemoryPtr != NULL) {
-    memcpy(newMemoryPtr, oldMemoryPtr, newMemorySize);
-    free(oldMemoryPtr);
-    return newMemoryPtr;
+      if (newMemoryPtr != NULL) {
+        memcpy(newMemoryPtr, oldMemoryPtr, newMemorySize);
+        free(oldMemoryPtr);
+        return newMemoryPtr;
+      }
+    }
   }
 
   return NULL;

@@ -811,7 +811,6 @@ int index , * intPtr , * charsPtr ;
 unsigned long unsignedLongValue , * unsignedLongPtr ;
 unsigned short * unsignedShortPtr ;
 unsigned int * unsignedIntPtr ;
-
 long double longDoubleValue ;
 
 g_inCount = 0 ;
@@ -984,7 +983,7 @@ not = 1 ;
 ++ index ;
 }
 
-int startIndex = index ;
+{ int startIndex = index ;
 while ( format [ index ] != ']' ) {
 ++ index ;
 }
@@ -996,6 +995,7 @@ scanPattern ( string , & format [ startIndex ] , not ) ;
 }
 else {
 scanPattern ( ( ( void * ) 0 ) , & format [ startIndex ] , not ) ;
+}
 }
 }
 break ;
@@ -1058,4 +1058,3 @@ g_inStatus = 1 ;
 g_inDevice = ( void * ) inString ;
 return scanFormat ( format , arg_list ) ;
 }
-

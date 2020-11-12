@@ -536,20 +536,21 @@ char * outString ;
 switch ( g_outStatus ) {
 case 0 : {
 FILE * stream = ( FILE * ) g_outDevice ;
+
    
-    
-     
-   
-    
-    
+ register_ah = 0x40s ;
+register_bx = stream -> handle ;
+register_cx = 1 ;
+register_dx = & c ;
+interrupt ( 0x21s ) ;
   
 
    
- register_rax = 0x01L ;
-register_rdi = ( unsigned long ) stream -> handle ;
-register_rsi = ( unsigned long ) & c ;
-register_rdx = 1L ;
-syscall ( ) ;
+    
+         
+        
+   
+   
   
  ++ g_outChars ;
 break ;
@@ -637,8 +638,10 @@ unsigned long base , int capital ) {
 if ( unsignedValue > 0ul ) {
 int digit = ( int ) ( unsignedValue % base ) ;
 printUnsignedLongRec ( unsignedValue / base , base , capital ) ;
-char c = digitToChar ( digit , capital ) ;
+
+{ char c = digitToChar ( digit , capital ) ;
 printChar ( c ) ;
+}
 }
 }
 
@@ -700,10 +703,11 @@ plus = 0 ;
 space = 0 ;
 }
 
-long longValue = ( long ) longDoubleValue ;
+{ long longValue = ( long ) longDoubleValue ;
 printLongInt ( longValue , plus , space ) ;
 longDoubleValue -= ( long double ) longValue ;
 printLongDoubleFraction ( longDoubleValue , grid , precision ) ;
+}
 }
 
 void printLongDoubleExpo ( long double value , int plus , int space ,
@@ -720,12 +724,13 @@ printChar ( '-' ) ;
 value = - value ;
 }
 
-int expo = ( int ) log10 ( value ) ;
+{ int expo = ( int ) log10 ( value ) ;
 value /= pow ( 10.0 , expo ) ;
 
 printLongDoublePlain ( value , plus , space , grid , precision ) ;
 printChar ( capital ? 'E' : 'e' ) ;
 printLongInt ( expo , 1 , 0 ) ;
+}
 }
 }
 
@@ -964,10 +969,11 @@ arg_list = printArgument ( & format [ index ] , arg_list , plus , space ,
 grid , & width , precision , shortInt ,
 longInt , longDouble , 1 , ( ( void * ) 0 ) ) ;
 
-int field = g_outChars - startChars ;
+{ int field = g_outChars - startChars ;
 
 while ( field ++ < width ) {
 printChar ( ' ' ) ;
+}
 }
 }
 else if ( zero ) {
@@ -980,7 +986,7 @@ printArgument ( & format [ index ] , arg_list , 0 , 0 , grid ,
 longDouble , 0 , & negative ) ;
 g_outStatus = oldOutStatus ;
 
-int field = g_outChars - startChars ;
+{ int field = g_outChars - startChars ;
 g_outChars = startChars ;
 
 if ( negative ) {
@@ -1005,6 +1011,7 @@ arg_list = printArgument ( & format [ index ] , arg_list , 0 , 0 ,
 grid , ( ( void * ) 0 ) , precision , shortInt ,
 longInt , longDouble , 0 , ( ( void * ) 0 ) ) ;
 }
+}
 else {
 int startChars = g_outChars , oldOutStatus = g_outStatus ;
 
@@ -1014,7 +1021,7 @@ printArgument ( & format [ index ] , arg_list , plus , space , grid ,
 longDouble , 1 , ( ( void * ) 0 ) ) ;
 g_outStatus = oldOutStatus ;
 
-int field = g_outChars - startChars ;
+{ int field = g_outChars - startChars ;
 g_outChars = startChars ;
 
 while ( field ++ < width ) {
@@ -1024,6 +1031,7 @@ printChar ( ' ' ) ;
 arg_list = printArgument ( & format [ index ] , arg_list , plus , space ,
 grid , ( ( void * ) 0 ) , precision , shortInt ,
 longInt , longDouble , 1 , ( ( void * ) 0 ) ) ;
+}
 }
 
 percent = 0 ;
@@ -1112,4 +1120,3 @@ g_outStatus = 1 ;
 g_outDevice = ( void * ) outString ;
 return printFormat ( format , arg_list ) ;
 }
-

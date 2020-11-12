@@ -532,32 +532,41 @@ unsigned long time ( unsigned long * timePtr ) {
 unsigned long time ;
 
    
-    
-    
-      
-          
+ int year ;
+short month , monthDay ;
+short hour , min , sec ;
 
-   
-    
-            
+register_ah = 0x2As ;
+interrupt ( 0x21s ) ;
+year = register_cx - 1900 ;
+month = register_dh - 1s ;
+monthDay = register_dl ;
 
-           
-                 
-               
-        
+register_ah = 0x2Cs ;
+interrupt ( 0x21s ) ;
+hour = register_ch ;
+min = register_cl ;
+sec = register_dh ;
 
-             
-     
+{ const int leapYear = ( year % 4 ) == 0 ;
+const int daysOfMonths [] = { 31 , leapYear ? 29 : 28 , 31 , 30 ,
+31 , 30 , 30 , 31 , 30 , 31 , 30 , 31 };
+int yearDay = monthDay - 1 , mon ;
 
+for ( mon = 0 ; mon < month ; ++ mon ) {
+yearDay += daysOfMonths [ mon ];
+}
 
-                      
-       
+{ struct tm s = { sec , min , hour , monthDay , month , year , 0 , yearDay , 0 };
+time = mktime ( & s ) ;
+}
+}
   
 
    
- register_rax = 201L ;
-register_rdi = ( unsigned long ) & time ;
-syscall ( ) ;
+    
+        
+   
   
 
 if ( timePtr != ( ( void * ) 0 ) ) {
@@ -585,14 +594,14 @@ int year = 1970 ;
 
 if ( timePtr != ( ( void * ) 0 ) ) {
 unsigned long time = * timePtr ;
-
 const long secondsOfDay = time % 86400L ;
+long totalDays = time / 86400L ;
+
 g_timeStruct . tm_hour = secondsOfDay / 3600 ;
 g_timeStruct . tm_min = ( secondsOfDay % 3600 ) / 60 ;
 g_timeStruct . tm_sec = ( secondsOfDay % 3600 ) % 60 ;
 
 
-long totalDays = time / 86400L ;
 if ( totalDays < 3 ) {
 g_timeStruct . tm_wday = totalDays + 4 ;
 }
@@ -606,12 +615,11 @@ const int leapYear = ( ( ( year % 4 ) == 0 ) &&
 const int daysOfYear = leapYear ? 366 : 365 ;
 
 if ( totalDays < daysOfYear ) {
-g_timeStruct . tm_year = year - 1900 ;
-g_timeStruct . tm_yday = totalDays ;
-
 const int daysOfMonths [] = { 31 , leapYear ? 29 : 28 , 31 , 30 ,
 31 , 30 , 30 , 31 , 30 , 31 , 30 , 31 };
 int month = 0 ;
+g_timeStruct . tm_year = year - 1900 ;
+g_timeStruct . tm_yday = totalDays ;
 
 while ( totalDays >= daysOfMonths [ month ] ) {
 totalDays -= daysOfMonths [ month ];
@@ -683,8 +691,9 @@ timeZone = tmPtr -> tm_isdst ? localeConvPtr -> summerTimeZone
 : localeConvPtr -> winterTimeZone ;
 }
 
-unsigned long time = * timePtr + ( 3600 * timeZone ) ;
+{ unsigned long time = * timePtr + ( 3600 * timeZone ) ;
 return gmtime ( & time ) ;
+}
 }
 
 int strftime ( char * s , int smax , const char * fmt , const struct tm * tp ) {
@@ -698,6 +707,10 @@ char ** longDayList = ( localeConvPtr != ( ( void * ) 0 ) )
 char ** longMonthList = ( localeConvPtr != ( ( void * ) 0 ) )
 ? ( localeConvPtr -> longMonthList ) : ( ( void * ) 0 ) ;
 
+const int leapDays = ( tp -> tm_year - 69 ) / 4 ;
+const long totalDays = 365 * ( tp -> tm_year - 70 ) + leapDays + tp -> tm_yday ;
+int yearDaySunday , yearDayMonday ;
+
 strcpy ( s , "" ) ;
 shortDayList = ( shortDayList != ( ( void * ) 0 ) )
 ? shortDayList : g_defaultShortDayList ;
@@ -707,11 +720,6 @@ shortMonthList = ( shortMonthList != ( ( void * ) 0 ) )
 longMonthList = ( longMonthList != ( ( void * ) 0 ) )
 ? longMonthList : g_defaultLongMonthList ;
 
-const int leapDays = ( tp -> tm_year - 69 ) / 4 ;
-const long totalDays = 365 * ( tp -> tm_year - 70 ) + leapDays + tp -> tm_yday ;
-
-
-int yearDaySunday , yearDayMonday ;
 
 if ( totalDays < 3 ) {
 yearDaySunday = totalDays + 4 ;
@@ -727,7 +735,7 @@ else {
 yearDayMonday = ( totalDays - 4 ) % 7 ;
 }
 
-int index ;
+{ int index ;
 for ( index = 0 ; fmt [ index ] != '\0' ; ++ index ) {
 char add [ 20 ];
 
@@ -836,7 +844,7 @@ else {
 break ;
 }
 }
+}
 
 return strlen ( s ) ;
 }
-

@@ -23,14 +23,16 @@ static int filecreate(const char* name) {
   register_cx = 0x00;
   register_dx = name;
   interrupt(0x21s);
-  int handle = register_ax;
 
-  if (carry_flag) {
-    errno = FOPEN;
-    return -1;
+  { int handle = register_ax;
+
+    if (carry_flag) {
+      errno = FOPEN;
+      return -1;
+    }
+
+    return handle;
   }
-
-  return handle;
 #endif
 
 #ifdef __LINUX__

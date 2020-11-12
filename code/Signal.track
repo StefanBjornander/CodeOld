@@ -8,13 +8,13 @@ signal$1:	; parameter string_Signal2025i20function2025p0A#, offset 6
 6:	
 
 signal$2:	; parameter sig, offset 8
-7:		mov a432, [bp + 6]
-8:		mov [bp + 18], a432
+7:		mov a430, [bp + 6]
+8:		mov [bp + 18], a430
 10:	
 
 signal$3:	; parameter func, offset 10
-11:		mov a433, [bp + 8]
-12:		mov [bp + 20], a433
+11:		mov a431, [bp + 8]
+12:		mov [bp + 20], a431
 14:	
 
 signal$4:	; call function noellipse-ellipse printf, extra 0
@@ -30,22 +30,22 @@ signal$5:	; post call
 24:	
 
 signal$6:	; £temporary850 = int_to_int sig (Signed_Int -> Signed_Short_Int)
-25:		mov a434, [bp + 6]
-28:		cmp a434, 0
+25:		mov a432, [bp + 6]
+28:		cmp a432, 0
 29:		jge signal$7
-30:		neg a434
-32:		neg a434
+30:		neg a432
+32:		neg a432
 34:	
 
 signal$7:	; al = £temporary850
 36:	
 
 signal$8:	; ah = 37
-37:		mov a435, 37
+37:		mov a433, 37
 39:	
 
 signal$9:	; dx = func
-40:		mov a436, [bp + 8]
+40:		mov a434, [bp + 8]
 42:	
 
 signal$10:	; interrupt 33
@@ -71,10 +71,10 @@ signal$14:	; post call
 59:	
 
 signal$15:	; return
-60:		mov t437, [bp]
+60:		mov t435, [bp]
 61:		mov di, [bp + 4]
 62:		mov bp, [bp + 2]
-63:		jmp t437
+63:		jmp t435
 65:	
 
 signal$16:	; function end signal
@@ -88,8 +88,8 @@ raise$1:	; parameter string_0ARaise20signal2025i0A#, offset 6
 6:	
 
 raise$2:	; parameter sig, offset 8
-7:		mov a438, [bp + 6]
-8:		mov [bp + 16], a438
+7:		mov a436, [bp + 6]
+8:		mov [bp + 16], a436
 10:	
 
 raise$3:	; call function noellipse-ellipse printf, extra 0
@@ -105,18 +105,18 @@ raise$4:	; post call
 20:	
 
 raise$5:	; £temporary860 = int_to_int sig (Signed_Int -> Signed_Short_Int)
-21:		mov a439, [bp + 6]
-24:		cmp a439, 0
+21:		mov a437, [bp + 6]
+24:		cmp a437, 0
 25:		jge raise$6
-26:		neg a439
-28:		neg a439
+26:		neg a437
+28:		neg a437
 30:	
 
 raise$6:	; al = £temporary860
 32:	
 
 raise$7:	; ah = 53
-33:		mov a440, 53
+33:		mov a438, 53
 35:	
 
 raise$8:	; interrupt 33
@@ -127,7 +127,7 @@ raise$9:	; £temporary862 = bx
 40:	
 
 raise$10:	; func = £temporary862
-41:		mov [bp + 8], t441
+41:		mov [bp + 8], t439
 43:	
 
 raise$11:	; call header integral zero 0 stack zero 0
@@ -138,8 +138,8 @@ raise$12:	; parameter string_Raise20function2025p0A#, offset 6
 48:	
 
 raise$13:	; parameter func, offset 8
-49:		mov a442, [bp + 8]
-50:		mov [bp + 18], a442
+49:		mov a440, [bp + 8]
+50:		mov [bp + 18], a440
 52:	
 
 raise$14:	; call function noellipse-ellipse printf, extra 0
@@ -178,14 +178,14 @@ raise$20:	; post call
 80:	
 
 raise$21:	; return_value = 1
-81:		mov a443, 1
+81:		mov a441, 1
 83:	
 
 raise$22:	; return
-84:		mov t444, [bp]
+84:		mov t442, [bp]
 85:		mov di, [bp + 4]
 86:		mov bp, [bp + 2]
-87:		jmp t444
+87:		jmp t442
 89:	
 
 raise$23:	; if func != 0 goto 30
@@ -212,14 +212,14 @@ raise$27:	; post call
 107:	
 
 raise$28:	; return_value = 0
-108:		mov a445, 0
+108:		mov a443, 0
 110:	
 
 raise$29:	; return
-111:		mov t446, [bp]
+111:		mov t444, [bp]
 112:		mov di, [bp + 4]
 113:		mov bp, [bp + 2]
-114:		jmp t446
+114:		jmp t444
 116:	
 
 raise$30:	; call header integral zero 0 stack zero 0
@@ -230,13 +230,13 @@ raise$31:	; parameter string_Raise20function2C20calling2025i20with2025i0A#, offs
 121:	
 
 raise$32:	; parameter func, offset 8
-122:		mov a447, [bp + 8]
-123:		mov [bp + 18], a447
+122:		mov a445, [bp + 8]
+123:		mov [bp + 18], a445
 125:	
 
 raise$33:	; parameter sig, offset 10
-126:		mov a448, [bp + 6]
-127:		mov [bp + 20], a448
+126:		mov a446, [bp + 6]
+127:		mov [bp + 20], a446
 129:	
 
 raise$34:	; call function noellipse-ellipse printf, extra 0
@@ -255,30 +255,30 @@ raise$36:	; call header integral zero 0 stack zero 0
 141:	
 
 raise$37:	; parameter sig, offset 6
-142:		mov a449, [bp + 6]
-143:		mov [bp + 16], a449
+142:		mov a447, [bp + 6]
+143:		mov [bp + 16], a447
 145:	
 
 raise$38:	; call function noellipse-noellipse func
 146:		mov word [bp + 10], raise$39
 147:		mov [bp + 12], bp
-148:		mov a450, [bp + 8]
+148:		mov a448, [bp + 8]
 149:		add bp, 10
-150:		jmp a450 a450 func 148 150
+150:		jmp a448 a448 func 148 150
 152:	
 
 raise$39:	; post call
 154:	
 
 raise$40:	; return_value = 1
-155:		mov a451, 1
+155:		mov a449, 1
 157:	
 
 raise$41:	; return
-158:		mov t452, [bp]
+158:		mov t450, [bp]
 159:		mov di, [bp + 4]
 160:		mov bp, [bp + 2]
-161:		jmp t452
+161:		jmp t450
 163:	
 
 raise$42:	; function end raise

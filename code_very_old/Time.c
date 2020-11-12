@@ -13,26 +13,35 @@ time_t time(time_t* timePtr) {
   time_t time;
 
 #ifdef __WINDOWS__
+  int year;
+  short month, monthDay;
+  short hour, min, sec;
+
   register_ah = 0x2As;
   interrupt(0x21s);
-  int year = register_cx - 1900;
-  short month = register_dh - 1s, monthDay = register_dl;
+  year = register_cx - 1900;
+  month = register_dh - 1s;
+  monthDay = register_dl;
 
   register_ah = 0x2Cs;
   interrupt(0x21s);
-  short hour = register_ch, min = register_cl, sec = register_dh;
+  hour = register_ch;
+  min = register_cl;
+  sec = register_dh;
 
-  const BOOL leapYear = (year % 4) == 0;
-  const int daysOfMonths[] = {31, leapYear ? 29 : 28, 31, 30,
-                              31, 30, 30, 31, 30, 31, 30, 31};
-  int yearDay = monthDay - 1, mon;
+  { const BOOL leapYear = (year % 4) == 0;
+    const int daysOfMonths[] = {31, leapYear ? 29 : 28, 31, 30,
+                                31, 30, 30, 31, 30, 31, 30, 31};
+    int yearDay = monthDay - 1, mon;
 
-  for (mon = 0; mon < month; ++mon) {
-    yearDay += daysOfMonths[mon];
+    for (mon = 0; mon < month; ++mon) {
+      yearDay += daysOfMonths[mon];
+    }
+
+    { struct tm s = {sec, min, hour, monthDay, month, year, 0, yearDay, 0};
+      time = mktime(&s);
+    }
   }
-
-  struct tm s = {sec, min, hour, monthDay, month, year, 0, yearDay, 0};
-  time = mktime(&s);
 #endif
 
 #ifdef __LINUX__
@@ -66,14 +75,14 @@ struct tm* gmtime(const time_t* timePtr) {
 
   if (timePtr != NULL) {
     time_t time = *timePtr;
-
     const long secondsOfDay = time % 86400L;
+    long totalDays = time / 86400L;
+
     g_timeStruct.tm_hour = secondsOfDay / 3600;
     g_timeStruct.tm_min = (secondsOfDay % 3600) / 60;
     g_timeStruct.tm_sec = (secondsOfDay % 3600) % 60;
 
     // January 1, 1970, was a Thursday
-    long totalDays = time / 86400L;
     if (totalDays < 3) {
       g_timeStruct.tm_wday = totalDays + 4;
     }
@@ -87,12 +96,11 @@ struct tm* gmtime(const time_t* timePtr) {
       const int daysOfYear = leapYear ? 366 : 365;
 
       if (totalDays < daysOfYear) {
-        g_timeStruct.tm_year = year - 1900;
-        g_timeStruct.tm_yday = totalDays;
-
         const int daysOfMonths[] = {31, leapYear ? 29 : 28, 31, 30,
                                     31, 30, 30, 31, 30, 31, 30, 31};
         int month = 0;
+        g_timeStruct.tm_year = year - 1900;
+        g_timeStruct.tm_yday = totalDays;
 
         while (totalDays >= daysOfMonths[month]) {
           totalDays -= daysOfMonths[month];
@@ -179,6 +187,9 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
   char** longMonthList = (localeConvPtr != NULL)
                          ? (localeConvPtr->longMonthList) : NULL;
 
+  const BOOL leapDays = (tp->tm_year - 69) / 4;
+  const long totalDays = 365 * (tp->tm_year - 70) + leapDays + tp->tm_yday;
+
   strcpy(s, "");
   shortDayList = (shortDayList != NULL)
                  ? shortDayList : g_defaultShortDayList;
@@ -187,9 +198,6 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
                    ? shortMonthList : g_defaultShortMonthList;
   longMonthList = (longMonthList != NULL) 
                   ? longMonthList : g_defaultLongMonthList;
-
-  const BOOL leapDays = (tp->tm_year - 69) / 4;
-  const long totalDays = 365 * (tp->tm_year - 70) + leapDays + tp->tm_yday;
 
   // January 1, 1970, was a Thursday
   int yearDaySunday, yearDayMonday;
@@ -208,113 +216,114 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
     yearDayMonday = (totalDays - 4) % 7;
   }
 
-  int index;
-  for (index = 0; fmt[index] != '\0'; ++index) {
-    char add[20];
+  { int index;
+    for (index = 0; fmt[index] != '\0'; ++index) {
+      char add[20];
 
-    if (fmt[index] == '%') {
-      switch (fmt[++index]) {
-        case 'a':
-          strcpy(add, shortDayList[tp->tm_wday]);
-          break;
+      if (fmt[index] == '%') {
+        switch (fmt[++index]) {
+          case 'a':
+            strcpy(add, shortDayList[tp->tm_wday]);
+            break;
 
-        case 'A':
-          strcpy(add, longDayList[tp->tm_wday]);
-          break;
+          case 'A':
+            strcpy(add, longDayList[tp->tm_wday]);
+            break;
 
-        case 'b':
-          strcpy(add, shortMonthList[tp->tm_mon]);
-          break;
+          case 'b':
+            strcpy(add, shortMonthList[tp->tm_mon]);
+            break;
 
-        case 'B':
-          strcpy(add, longMonthList[tp->tm_mon]);
-          break;
+          case 'B':
+            strcpy(add, longMonthList[tp->tm_mon]);
+            break;
 
-        case 'c':
-          sprintf(add, "%04d-%02d-%02d %02d:%02d:%02d",
-                  1900 + tp->tm_year, tp->tm_mon + 1, tp->tm_mday,
-                  tp->tm_hour, tp->tm_min, tp->tm_sec); 
-          break;
+          case 'c':
+            sprintf(add, "%04d-%02d-%02d %02d:%02d:%02d",
+                    1900 + tp->tm_year, tp->tm_mon + 1, tp->tm_mday,
+                    tp->tm_hour, tp->tm_min, tp->tm_sec); 
+            break;
 
-        case 'd':
-          sprintf(add, "%02d", tp->tm_mday);
-          break;
+          case 'd':
+            sprintf(add, "%02d", tp->tm_mday);
+            break;
 
-        case 'H':
-          sprintf(add, "%02d", tp->tm_hour);
-          break;
+          case 'H':
+            sprintf(add, "%02d", tp->tm_hour);
+            break;
 
-        case 'I':
-          sprintf(add, "%02d", tp->tm_hour % 12);
-          break;
+          case 'I':
+            sprintf(add, "%02d", tp->tm_hour % 12);
+            break;
 
-        case 'j':
-          sprintf(add, "%03d", tp->tm_yday);
-          break;
+          case 'j':
+            sprintf(add, "%03d", tp->tm_yday);
+            break;
 
-        case 'm':
-          sprintf(add, "%02d", tp->tm_mon + 1);
-          break;
+          case 'm':
+            sprintf(add, "%02d", tp->tm_mon + 1);
+            break;
 
-        case 'M':
-          sprintf(add, "%02d", tp->tm_min);
-          break;
+          case 'M':
+            sprintf(add, "%02d", tp->tm_min);
+            break;
 
-        case 'p':
-          sprintf(add, "%s", (tp->tm_hour < 12) ? "AM" : "PM");
-          break;
+          case 'p':
+            sprintf(add, "%s", (tp->tm_hour < 12) ? "AM" : "PM");
+            break;
 
-        case 'S':
-          sprintf(add, "%02d", tp->tm_sec);
-          break;
+          case 'S':
+            sprintf(add, "%02d", tp->tm_sec);
+            break;
 
-        case 'U':
-          sprintf(add, "%02d", yearDaySunday);
-          break;
+          case 'U':
+            sprintf(add, "%02d", yearDaySunday);
+            break;
 
-        case 'w':
-          sprintf(add, "%02d", tp->tm_wday);
-          break;
+          case 'w':
+            sprintf(add, "%02d", tp->tm_wday);
+            break;
 
-        case 'W':
-          sprintf(add, "%02d", yearDayMonday);
-          break;
+          case 'W':
+            sprintf(add, "%02d", yearDayMonday);
+            break;
 
-        case 'x':
-          sprintf(add, "%04d-%02d-%02d", 1900 + tp->tm_year,
-                  tp->tm_mon + 1, tp->tm_mday);
-          break;
+          case 'x':
+            sprintf(add, "%04d-%02d-%02d", 1900 + tp->tm_year,
+                    tp->tm_mon + 1, tp->tm_mday);
+            break;
 
-        case 'X':
-          sprintf(add, "%02d:%02d:%02d", tp->tm_hour, tp->tm_min, tp->tm_sec); 
-          break;
+          case 'X':
+            sprintf(add, "%02d:%02d:%02d", tp->tm_hour, tp->tm_min, tp->tm_sec); 
+            break;
 
-        case 'y':
-          sprintf(add, "%02d", tp->tm_year % 100);
-          break;
+          case 'y':
+            sprintf(add, "%02d", tp->tm_year % 100);
+            break;
 
-        case 'Y':
-          sprintf(add, "%04d", 1900 + tp->tm_year);
-          break;
+          case 'Y':
+            sprintf(add, "%04d", 1900 + tp->tm_year);
+            break;
 
-        case 'Z':
-          strcpy(add, "");
-          break;
+          case 'Z':
+            strcpy(add, "");
+            break;
 
-        case '%':
-          strcpy(add, "%");
+          case '%':
+            strcpy(add, "%");
+        }
       }
-    }
-    else {
-      add[0] = fmt[index];
-      add[1] = '\0';
-    }
+      else {
+        add[0] = fmt[index];
+        add[1] = '\0';
+      }
 
-    if ((strlen(s) + strlen(add)) < smax) {
-      strcat(s, add);
-    }
-    else {
-      break;
+      if ((strlen(s) + strlen(add)) < smax) {
+        strcat(s, add);
+      }
+      else {
+        break;
+      }
     }
   }
 

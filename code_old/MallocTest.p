@@ -400,9 +400,9 @@ print_heap ( ) ;
 
 void rec ( ) {
 unsigned int stackTop ;
+unsigned int * lowHeapPtr = ( unsigned int * ) 65534u ;
 
 stackTop = register_bp ;
-unsigned int * lowHeapPtr = ( unsigned int * ) 65534u ;
 printf ( "Stack Top: %u, Low Heap: %u\n" , stackTop , * lowHeapPtr ) ;
 rec ( ) ;
 }
@@ -436,8 +436,8 @@ print_heap ( ) ;
 void malloc_test6 ( void ) {
 int i ;
 unsigned int stackTop ;
-stackTop = register_bp ;
 unsigned int * lowHeapPtr = ( unsigned int * ) 65534u ;
+stackTop = register_bp ;
 
 for ( i = 0 ; i < 1000 ; ++ i ) {
 void * p = malloc ( 96 ) ;

@@ -44,8 +44,9 @@ void printChar(char c) {
   char* outString;
 
   switch (g_outStatus) {
-    case DEVICE: {   
+    case DEVICE: {
         FILE* stream = (FILE*) g_outDevice;
+
 #ifdef __WINDOWS__
         register_ah = 0x40s;
         register_bx = stream->handle;
@@ -147,8 +148,10 @@ void printUnsignedLongRec(unsigned long unsignedValue,
   if (unsignedValue > 0ul) {
     int digit = (int) (unsignedValue % base);
     printUnsignedLongRec(unsignedValue / base, base, capital);
-    char c = digitToChar(digit, capital);
-    printChar(c);
+
+    { char c = digitToChar(digit, capital);
+      printChar(c);
+    }
   }
 }
 
@@ -209,11 +212,12 @@ void printLongDoublePlain(long double longDoubleValue, BOOL plus,
     plus = FALSE;
     space = FALSE;
   }
-   
-  long longValue = (long) longDoubleValue;
-  printLongInt(longValue, plus, space);
-  longDoubleValue -= (long double) longValue;
-  printLongDoubleFraction(longDoubleValue, grid, precision);
+
+  { long longValue = (long) longDoubleValue;
+    printLongInt(longValue, plus, space);
+    longDoubleValue -= (long double) longValue;
+    printLongDoubleFraction(longDoubleValue, grid, precision);
+  }
 }
 
 void printLongDoubleExpo(long double value, BOOL plus, BOOL space,
@@ -230,12 +234,13 @@ void printLongDoubleExpo(long double value, BOOL plus, BOOL space,
       value = -value;
     }
 
-    int expo = (int) log10(value);
-    value /= pow(10.0, expo);
+    { int expo = (int) log10(value);
+      value /= pow(10.0, expo);
 
-    printLongDoublePlain(value, plus, space, grid, precision);
-    printChar(capital ? 'E' : 'e');
-    printLongInt(expo, TRUE, FALSE);
+      printLongDoublePlain(value, plus, space, grid, precision);
+      printChar(capital ? 'E' : 'e');
+      printLongInt(expo, TRUE, FALSE);
+    }
   }
 }
 
@@ -474,10 +479,11 @@ int printFormat(char* format, va_list arg_list) {
                                        grid, &width, precision, shortInt,
                                        longInt, longDouble, TRUE, NULL);
 
-              int field = g_outChars - startChars;
+              { int field = g_outChars - startChars;
 
-              while (field++ < width) {
-                printChar(' ');
+                while (field++ < width) {
+                  printChar(' ');
+                }
               }
             }
             else if (zero) {
@@ -490,30 +496,31 @@ int printFormat(char* format, va_list arg_list) {
                             longDouble, FALSE, &negative);
               g_outStatus = oldOutStatus;
 
-              int field = g_outChars - startChars;
-              g_outChars = startChars;
+              { int field = g_outChars - startChars;
+                g_outChars = startChars;
 
-              if (negative) {               
-                printChar('X');
-                printChar('-');
-                ++field;
-              }
-              else if (plus) {
-                printChar('+');
-                ++field;
-              }
-              else if (space) {
-                printChar(' ');
-                ++field;
-              }
+                if (negative) {               
+                  printChar('X');
+                  printChar('-');
+                  ++field;
+                }
+                else if (plus) {
+                  printChar('+');
+                  ++field;
+                }
+                else if (space) {
+                  printChar(' ');
+                  ++field;
+                }
 
-              while (field++ < width) {
-                printChar('0');
-              }
+                while (field++ < width) {
+                  printChar('0');
+                }
 
-              arg_list = printArgument(&format[index], arg_list, FALSE, FALSE,
-                                       grid, NULL, precision, shortInt,
-                                       longInt, longDouble, FALSE, NULL);
+                arg_list = printArgument(&format[index], arg_list, FALSE, FALSE,
+                                         grid, NULL, precision, shortInt,
+                                         longInt, longDouble, FALSE, NULL);
+              }
             }
             else {
               int startChars = g_outChars, oldOutStatus = g_outStatus;
@@ -524,16 +531,17 @@ int printFormat(char* format, va_list arg_list) {
                             longDouble, TRUE, NULL);              
               g_outStatus = oldOutStatus;
 
-              int field = g_outChars - startChars;
-              g_outChars = startChars;
+              { int field = g_outChars - startChars;
+                g_outChars = startChars;
 
-              while (field++ < width) {
-                printChar(' ');
+                while (field++ < width) {
+                  printChar(' ');
+                }
+
+                arg_list = printArgument(&format[index], arg_list, plus, space,
+                                         grid, NULL, precision, shortInt,
+                                         longInt, longDouble, TRUE, NULL);
               }
-
-              arg_list = printArgument(&format[index], arg_list, plus, space,
-                                       grid, NULL, precision, shortInt,
-                                       longInt, longDouble, TRUE, NULL);
             }
 
             percent = FALSE;

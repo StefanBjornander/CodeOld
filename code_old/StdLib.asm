@@ -16,7 +16,6 @@
 	global atexit
 	global exit
 	global qsort
-	global qsortX
 	global @abs
 	global labs
 	global div
@@ -159,7 +158,7 @@ section .text
 	; GetReturnValue £temporary1983
 
  strtol$8:
-	; Assign longValue £temporary1983
+	; Assign value £temporary1983
 	mov [rbp + 44], rbx
 
  strtol$9:
@@ -184,7 +183,7 @@ section .text
 	mov [rsi], rbx
 
  strtol$13:
-	; Return longValue
+	; Return value
 	mov rbx, [rbp + 44]
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -5444,7 +5443,7 @@ section .text
 
 section .data
 
-@4377$g_randValue:
+@4375$g_randValue:
 	; InitializerZero 8
 	times 8 db 0
 
@@ -5464,7 +5463,7 @@ section .text
 
  rand:
 	; SignedMultiply £temporary2597 g_randValue 1664525
-	mov rax, [@4377$g_randValue]
+	mov rax, [@4375$g_randValue]
 	xor rdx, rdx
 	imul qword [int8$1664525#]
 
@@ -5476,11 +5475,11 @@ section .text
 	; SignedModulo g_randValue £temporary2598 127
 	xor rdx, rdx
 	idiv qword [int8$127#]
-	mov [@4377$g_randValue], rdx
+	mov [@4375$g_randValue], rdx
 
  rand$3:
 	; IntegralToIntegral £temporary2600 g_randValue
-	mov rbx, [@4377$g_randValue]
+	mov rbx, [@4375$g_randValue]
 	cmp rbx, 0
 	jge rand$4
 	neg rbx
@@ -5506,7 +5505,7 @@ section .text
 
  srand$1:
 	; Assign g_randValue £temporary2601
-	mov [@4377$g_randValue], rax
+	mov [@4375$g_randValue], rax
 
  srand$2:
 	; Return
@@ -5726,103 +5725,103 @@ section .text
 
 section .text
 
- @4387$memswap:
+ @4385$memswap:
 	; Assign index 0
 	mov dword [rbp + 44], 0
 
- @4387$memswap$1:
+ @4385$memswap$1:
 	; SignedGreaterThanEqual 19 index valueSize
 	mov eax, [rbp + 40]
 	cmp [rbp + 44], eax
-	jge @4387$memswap$19
+	jge @4385$memswap$19
 
- @4387$memswap$2:
+ @4385$memswap$2:
 	; IntegralToIntegral £temporary2631 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- @4387$memswap$3:
+ @4385$memswap$3:
 	; BinaryAdd £temporary2633 value1 £temporary2631
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- @4387$memswap$4:
+ @4385$memswap$4:
 	; Dereference £temporary2630 -> £temporary2633 £temporary2633 0
 
- @4387$memswap$5:
+ @4385$memswap$5:
 	; Assign tempValue £temporary2630 -> £temporary2633
 	mov al, [rsi]
 	mov [rbp + 48], al
 
- @4387$memswap$6:
+ @4385$memswap$6:
 	; IntegralToIntegral £temporary2635 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- @4387$memswap$7:
+ @4385$memswap$7:
 	; BinaryAdd £temporary2637 value1 £temporary2635
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- @4387$memswap$8:
+ @4385$memswap$8:
 	; Dereference £temporary2634 -> £temporary2637 £temporary2637 0
 
- @4387$memswap$9:
+ @4385$memswap$9:
 	; IntegralToIntegral £temporary2639 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- @4387$memswap$10:
+ @4385$memswap$10:
 	; BinaryAdd £temporary2641 value2 £temporary2639
 	mov rdi, [rbp + 32]
 	add rdi, rax
 
- @4387$memswap$11:
+ @4385$memswap$11:
 	; Dereference £temporary2638 -> £temporary2641 £temporary2641 0
 
- @4387$memswap$12:
+ @4385$memswap$12:
 	; Assign £temporary2634 -> £temporary2637 £temporary2638 -> £temporary2641
 	mov al, [rdi]
 	mov [rsi], al
 
- @4387$memswap$13:
+ @4385$memswap$13:
 	; IntegralToIntegral £temporary2643 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
- @4387$memswap$14:
+ @4385$memswap$14:
 	; BinaryAdd £temporary2645 value2 £temporary2643
 	mov rsi, [rbp + 32]
 	add rsi, rax
 
- @4387$memswap$15:
+ @4385$memswap$15:
 	; Dereference £temporary2642 -> £temporary2645 £temporary2645 0
 
- @4387$memswap$16:
+ @4385$memswap$16:
 	; Assign £temporary2642 -> £temporary2645 tempValue
 	mov al, [rbp + 48]
 	mov [rsi], al
 
- @4387$memswap$17:
+ @4385$memswap$17:
 	; BinaryAdd index index 1
 	inc dword [rbp + 44]
 
- @4387$memswap$18:
+ @4385$memswap$18:
 	; Goto 1
-	jmp @4387$memswap$1
+	jmp @4385$memswap$1
 
- @4387$memswap$19:
+ @4385$memswap$19:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @4387$memswap$20:
+ @4385$memswap$20:
 	; FunctionEnd memswap
 
 section .text
@@ -5848,21 +5847,21 @@ section .text
 
  qsort$4:
 	; Assign update 0
-	mov dword [rbp + 60], 0
+	mov dword [rbp + 64], 0
 
  qsort$5:
 	; Assign index 0
-	mov dword [rbp + 64], 0
+	mov dword [rbp + 60], 0
 
  qsort$6:
 	; SignedGreaterThanEqual 30 index size
 	mov eax, [rbp + 56]
-	cmp [rbp + 64], eax
+	cmp [rbp + 60], eax
 	jge qsort$30
 
  qsort$7:
 	; SignedMultiply £temporary2652 index valueSize
-	mov eax, [rbp + 64]
+	mov eax, [rbp + 60]
 	xor edx, edx
 	imul dword [rbp + 36]
 
@@ -5879,7 +5878,7 @@ section .text
 
  qsort$10:
 	; BinaryAdd £temporary2656 index 1
-	mov eax, [rbp + 64]
+	mov eax, [rbp + 60]
 	inc eax
 
  qsort$11:
@@ -5953,18 +5952,18 @@ section .text
 	mov qword [rbp + 84], qsort$26
 	mov [rbp + 92], rbp
 	add rbp, 84
-	jmp @4387$memswap
+	jmp @4385$memswap
 
  qsort$26:
 	; PostCall 84
 
  qsort$27:
 	; Assign update 1
-	mov dword [rbp + 60], 1
+	mov dword [rbp + 64], 1
 
  qsort$28:
 	; BinaryAdd index index 1
-	inc dword [rbp + 64]
+	inc dword [rbp + 60]
 
  qsort$29:
 	; Goto 6
@@ -5972,7 +5971,7 @@ section .text
 
  qsort$30:
 	; Equal 33 update 0
-	cmp dword [rbp + 60], 0
+	cmp dword [rbp + 64], 0
 	je qsort$33
 
  qsort$31:
@@ -5993,527 +5992,6 @@ section .text
  qsort$34:
 	; FunctionEnd qsort
 
-section .data
-
-string_index2013A2025i0A#:
-	; Initializer String index 1: %i\n
-	db "index 1: %i", 10, 0
-
-section .data
-
-string_2020index23A2025i0A#:
-	; Initializer String   index2: %i\n
-	db "  index2: %i", 10, 0
-
-section .data
-
-string_A#:
-	; Initializer String A
-	db "A", 0
-
-section .data
-
-string_B#:
-	; Initializer String B
-	db "B", 0
-
-section .data
-
-string_C#:
-	; Initializer String C
-	db "C", 0
-
-section .data
-
-string_D#:
-	; Initializer String D
-	db "D", 0
-
-section .data
-
-string_E#:
-	; Initializer String E
-	db "E", 0
-
-section .data
-
-string_X#:
-	; Initializer String X
-	db "X", 0
-
-section .data
-
-string_Y#:
-	; Initializer String Y
-	db "Y", 0
-
-section .data
-
-string_Z#:
-	; Initializer String Z
-	db "Z", 0
-
-section .text
-
- qsortX:
-	; IntegralToIntegral £temporary2666 valueList
-	mov rax, [rbp + 24]
-
- qsortX$1:
-	; Assign charList £temporary2666
-	mov [rbp + 52], rax
-
- qsortX$2:
-	; BinarySubtract index1 listSize 1
-	mov eax, [rbp + 32]
-	dec eax
-	mov [rbp + 60], eax
-
- qsortX$3:
-	; SignedLessThanEqual 71 index1 0
-	cmp dword [rbp + 60], 0
-	jle qsortX$71
-
- qsortX$4:
-	; Assign update 0
-	mov dword [rbp + 48], 0
-
- qsortX$5:
-	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- qsortX$6:
-	; Parameter pointer "index 1: %i\n" 88
-	mov qword [rbp + 88], string_index2013A2025i0A#
-
- qsortX$7:
-	; Parameter signedint index1 96
-	mov eax, [rbp + 60]
-	mov [rbp + 96], eax
-
- qsortX$8:
-	; Call printf 64 4
-	mov qword [rbp + 64], qsortX$9
-	mov [rbp + 72], rbp
-	add rbp, 64
-	mov rdi, rbp
-	add rdi, 4
-	jmp printf
-
- qsortX$9:
-	; PostCall 64
-
- qsortX$10:
-	; Assign index2 0
-	mov dword [rbp + 64], 0
-
- qsortX$11:
-	; SignedGreaterThanEqual 64 index2 index1
-	mov eax, [rbp + 60]
-	cmp [rbp + 64], eax
-	jge qsortX$64
-
- qsortX$12:
-	; PreCall 68 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- qsortX$13:
-	; Parameter pointer "  index2: %i\n" 92
-	mov qword [rbp + 92], string_2020index23A2025i0A#
-
- qsortX$14:
-	; Parameter signedint index2 100
-	mov eax, [rbp + 64]
-	mov [rbp + 100], eax
-
- qsortX$15:
-	; Call printf 68 4
-	mov qword [rbp + 68], qsortX$16
-	mov [rbp + 76], rbp
-	add rbp, 68
-	mov rdi, rbp
-	add rdi, 4
-	jmp printf
-
- qsortX$16:
-	; PostCall 68
-
- qsortX$17:
-	; SignedMultiply £temporary2674 index2 valueSize
-	mov eax, [rbp + 64]
-	xor edx, edx
-	imul dword [rbp + 36]
-
- qsortX$18:
-	; IntegralToIntegral £temporary2675 £temporary2674
-	mov rbx, 4294967295
-	and rax, rbx
-
- qsortX$19:
-	; BinaryAdd valuePtr1 charList £temporary2675
-	mov rbx, [rbp + 52]
-	add rbx, rax
-	mov [rbp + 68], rbx
-
- qsortX$20:
-	; PreCall 76 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- qsortX$21:
-	; Parameter pointer "A" 100
-	mov qword [rbp + 100], string_A#
-
- qsortX$22:
-	; Call printf 76 0
-	mov qword [rbp + 76], qsortX$23
-	mov [rbp + 84], rbp
-	add rbp, 76
-	mov rdi, rbp
-	jmp printf
-
- qsortX$23:
-	; PostCall 76
-
- qsortX$24:
-	; BinaryAdd £temporary2679 index2 1
-	mov eax, [rbp + 64]
-	inc eax
-
- qsortX$25:
-	; SignedMultiply £temporary2680 £temporary2679 valueSize
-	xor edx, edx
-	imul dword [rbp + 36]
-
- qsortX$26:
-	; IntegralToIntegral £temporary2681 £temporary2680
-	mov rbx, 4294967295
-	and rax, rbx
-
- qsortX$27:
-	; BinaryAdd valuePtr2 charList £temporary2681
-	mov rbx, [rbp + 52]
-	add rbx, rax
-	mov [rbp + 76], rbx
-
- qsortX$28:
-	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- qsortX$29:
-	; Parameter pointer "B" 108
-	mov qword [rbp + 108], string_B#
-
- qsortX$30:
-	; Call printf 84 0
-	mov qword [rbp + 84], qsortX$31
-	mov [rbp + 92], rbp
-	add rbp, 84
-	mov rdi, rbp
-	jmp printf
-
- qsortX$31:
-	; PostCall 84
-
- qsortX$32:
-	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- qsortX$33:
-	; Parameter pointer valuePtr1 108
-	mov rax, [rbp + 68]
-	mov [rbp + 108], rax
-
- qsortX$34:
-	; Parameter pointer valuePtr2 116
-	mov rax, [rbp + 76]
-	mov [rbp + 116], rax
-
- qsortX$35:
-	; Call compare 84 0
-	mov qword [rbp + 84], qsortX$36
-	mov [rbp + 92], rbp
-	mov rax, [rbp + 40]
-	add rbp, 84
-	jmp rax
-
- qsortX$36:
-	; PostCall 84
-
- qsortX$37:
-	; GetReturnValue £temporary2685
-
- qsortX$38:
-	; SignedLessThanEqual 58 £temporary2685 0
-	cmp ebx, 0
-	jle qsortX$58
-
- qsortX$39:
-	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- qsortX$40:
-	; Parameter pointer "C" 108
-	mov qword [rbp + 108], string_C#
-
- qsortX$41:
-	; Call printf 84 0
-	mov qword [rbp + 84], qsortX$42
-	mov [rbp + 92], rbp
-	add rbp, 84
-	mov rdi, rbp
-	jmp printf
-
- qsortX$42:
-	; PostCall 84
-
- qsortX$43:
-	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- qsortX$44:
-	; Parameter pointer valuePtr1 108
-	mov rax, [rbp + 68]
-	mov [rbp + 108], rax
-
- qsortX$45:
-	; Parameter pointer valuePtr2 116
-	mov rax, [rbp + 76]
-	mov [rbp + 116], rax
-
- qsortX$46:
-	; Parameter signedint valueSize 124
-	mov eax, [rbp + 36]
-	mov [rbp + 124], eax
-
- qsortX$47:
-	; Call memswap 84 0
-	mov qword [rbp + 84], qsortX$48
-	mov [rbp + 92], rbp
-	add rbp, 84
-	jmp @4387$memswap
-
- qsortX$48:
-	; PostCall 84
-
- qsortX$49:
-	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- qsortX$50:
-	; Parameter pointer "D" 108
-	mov qword [rbp + 108], string_D#
-
- qsortX$51:
-	; Call printf 84 0
-	mov qword [rbp + 84], qsortX$52
-	mov [rbp + 92], rbp
-	add rbp, 84
-	mov rdi, rbp
-	jmp printf
-
- qsortX$52:
-	; PostCall 84
-
- qsortX$53:
-	; Assign update 1
-	mov dword [rbp + 48], 1
-
- qsortX$54:
-	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- qsortX$55:
-	; Parameter pointer "E" 108
-	mov qword [rbp + 108], string_E#
-
- qsortX$56:
-	; Call printf 84 0
-	mov qword [rbp + 84], qsortX$57
-	mov [rbp + 92], rbp
-	add rbp, 84
-	mov rdi, rbp
-	jmp printf
-
- qsortX$57:
-	; PostCall 84
-
- qsortX$58:
-	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- qsortX$59:
-	; Parameter pointer "X" 108
-	mov qword [rbp + 108], string_X#
-
- qsortX$60:
-	; Call printf 84 0
-	mov qword [rbp + 84], qsortX$61
-	mov [rbp + 92], rbp
-	add rbp, 84
-	mov rdi, rbp
-	jmp printf
-
- qsortX$61:
-	; PostCall 84
-
- qsortX$62:
-	; BinaryAdd index2 index2 1
-	inc dword [rbp + 64]
-
- qsortX$63:
-	; Goto 11
-	jmp qsortX$11
-
- qsortX$64:
-	; PreCall 68 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- qsortX$65:
-	; Parameter pointer "Y" 92
-	mov qword [rbp + 92], string_Y#
-
- qsortX$66:
-	; Call printf 68 0
-	mov qword [rbp + 68], qsortX$67
-	mov [rbp + 76], rbp
-	add rbp, 68
-	mov rdi, rbp
-	jmp printf
-
- qsortX$67:
-	; PostCall 68
-
- qsortX$68:
-	; Equal 71 update 0
-	cmp dword [rbp + 48], 0
-	je qsortX$71
-
- qsortX$69:
-	; BinarySubtract index1 index1 1
-	dec dword [rbp + 60]
-
- qsortX$70:
-	; Goto 3
-	jmp qsortX$3
-
- qsortX$71:
-	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- qsortX$72:
-	; Parameter pointer "Z" 88
-	mov qword [rbp + 88], string_Z#
-
- qsortX$73:
-	; Call printf 64 0
-	mov qword [rbp + 64], qsortX$74
-	mov [rbp + 72], rbp
-	add rbp, 64
-	mov rdi, rbp
-	jmp printf
-
- qsortX$74:
-	; PostCall 64
-
- qsortX$75:
-	; Return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- qsortX$76:
-	; FunctionEnd qsortX
-
-section .text
-
- @4439$swap:
-	; Assign index 0
-	mov dword [rbp + 44], 0
-
- @4439$swap$1:
-	; SignedGreaterThanEqual 19 index valueSize
-	mov eax, [rbp + 40]
-	cmp [rbp + 44], eax
-	jge @4439$swap$19
-
- @4439$swap$2:
-	; IntegralToIntegral £temporary2699 index
-	mov eax, [rbp + 44]
-	mov rbx, 4294967295
-	and rax, rbx
-
- @4439$swap$3:
-	; BinaryAdd £temporary2701 leftValuePtr £temporary2699
-	mov rsi, [rbp + 24]
-	add rsi, rax
-
- @4439$swap$4:
-	; Dereference £temporary2698 -> £temporary2701 £temporary2701 0
-
- @4439$swap$5:
-	; Assign tempValue £temporary2698 -> £temporary2701
-	mov al, [rsi]
-	mov [rbp + 48], al
-
- @4439$swap$6:
-	; IntegralToIntegral £temporary2703 index
-	mov eax, [rbp + 44]
-	mov rbx, 4294967295
-	and rax, rbx
-
- @4439$swap$7:
-	; BinaryAdd £temporary2705 leftValuePtr £temporary2703
-	mov rsi, [rbp + 24]
-	add rsi, rax
-
- @4439$swap$8:
-	; Dereference £temporary2702 -> £temporary2705 £temporary2705 0
-
- @4439$swap$9:
-	; IntegralToIntegral £temporary2707 index
-	mov eax, [rbp + 44]
-	mov rbx, 4294967295
-	and rax, rbx
-
- @4439$swap$10:
-	; BinaryAdd £temporary2709 rightValuePtr £temporary2707
-	mov rdi, [rbp + 32]
-	add rdi, rax
-
- @4439$swap$11:
-	; Dereference £temporary2706 -> £temporary2709 £temporary2709 0
-
- @4439$swap$12:
-	; Assign £temporary2702 -> £temporary2705 £temporary2706 -> £temporary2709
-	mov al, [rdi]
-	mov [rsi], al
-
- @4439$swap$13:
-	; IntegralToIntegral £temporary2711 index
-	mov eax, [rbp + 44]
-	mov rbx, 4294967295
-	and rax, rbx
-
- @4439$swap$14:
-	; BinaryAdd £temporary2713 rightValuePtr £temporary2711
-	mov rsi, [rbp + 32]
-	add rsi, rax
-
- @4439$swap$15:
-	; Dereference £temporary2710 -> £temporary2713 £temporary2713 0
-
- @4439$swap$16:
-	; Assign £temporary2710 -> £temporary2713 tempValue
-	mov al, [rbp + 48]
-	mov [rsi], al
-
- @4439$swap$17:
-	; BinaryAdd index index 1
-	inc dword [rbp + 44]
-
- @4439$swap$18:
-	; Goto 1
-	jmp @4439$swap$1
-
- @4439$swap$19:
-	; Return
-	mov rax, [rbp]
-	mov rdi, [rbp + 16]
-	mov rbp, [rbp + 8]
-	jmp rax
-
- @4439$swap$20:
-	; FunctionEnd swap
-
 section .text
 
  @abs:
@@ -6522,23 +6000,23 @@ section .text
 	jge @abs$4
 
  @abs$1:
-	; UnarySubtract £temporary2715 value
+	; UnarySubtract £temporary2667 value
 	mov ebx, [rbp + 24]
 	neg ebx
 
  @abs$2:
-	; Assign £temporary2716 £temporary2715
+	; Assign £temporary2668 £temporary2667
 
  @abs$3:
 	; Goto 5
 	jmp @abs$5
 
  @abs$4:
-	; Assign £temporary2716 value
+	; Assign £temporary2668 value
 	mov ebx, [rbp + 24]
 
  @abs$5:
-	; Return £temporary2716
+	; Return £temporary2668
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -6555,23 +6033,23 @@ section .text
 	jge labs$4
 
  labs$1:
-	; UnarySubtract £temporary2718 value
+	; UnarySubtract £temporary2670 value
 	mov rbx, [rbp + 24]
 	neg rbx
 
  labs$2:
-	; Assign £temporary2719 £temporary2718
+	; Assign £temporary2671 £temporary2670
 
  labs$3:
 	; Goto 5
 	jmp labs$5
 
  labs$4:
-	; Assign £temporary2719 value
+	; Assign £temporary2671 value
 	mov rbx, [rbp + 24]
 
  labs$5:
-	; Return £temporary2719
+	; Return £temporary2671
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]

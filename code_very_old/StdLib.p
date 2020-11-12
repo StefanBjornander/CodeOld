@@ -1068,11 +1068,10 @@ value2 [ index ] = tempValue ;
 void qsort ( void * valueList , int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) ) {
 char * charList = ( char * ) valueList ;
-
 int size ;
 for ( size = ( listSize - 1 ) ; size > 0 ; -- size ) {
-int update = 0 ;
 int index ;
+int update = 0 ;
 for ( index = 0 ; index < size ; ++ index ) {
 char * valuePtr1 = charList + ( index * valueSize ) ;
 char * valuePtr2 = charList + ( ( index + 1 ) * valueSize ) ;
@@ -1089,53 +1088,53 @@ break ;
 }
 }
 
-void qsortX ( const void * valueList , int listSize , int valueSize ,
-int ( * compare ) ( const void * , const void * ) ) {
-int update ;
-char * charList = ( char * ) valueList ;
 
-int index1 ;
-for ( index1 = ( listSize - 1 ) ; index1 > 0 ; -- index1 ) {
-update = 0 ;
-printf ( "index 1: %i\n" , index1 ) ;
 
-int index2 ;
-for ( index2 = 0 ; index2 < index1 ; ++ index2 ) {
-printf ( "  index2: %i\n" , index2 ) ;
 
-char * valuePtr1 = charList + ( index2 * valueSize ) ;
-printf ( "A" ) ;
-char * valuePtr2 = charList + ( ( index2 + 1 ) * valueSize ) ;
 
-printf ( "B" ) ;
-if ( compare ( valuePtr1 , valuePtr2 ) > 0 ) {
-printf ( "C" ) ;
-memswap ( valuePtr1 , valuePtr2 , valueSize ) ;
-printf ( "D" ) ;
-update = 1 ;
-printf ( "E" ) ;
-}
 
-printf ( "X" ) ;
-}
 
-printf ( "Y" ) ;
-if ( ! update ) {
-break ;
-}
-}
 
-printf ( "Z" ) ;
-}
 
-static void swap ( char * leftValuePtr , char * rightValuePtr , int valueSize ) {
-int index ;
-for ( index = 0 ; index < valueSize ; ++ index ) {
-char tempValue = leftValuePtr [ index ];
-leftValuePtr [ index ] = rightValuePtr [ index ];
-rightValuePtr [ index ] = tempValue ;
-}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int abs ( int value ) {
 return ( value < 0 ) ? - value : value ;

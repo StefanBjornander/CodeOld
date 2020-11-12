@@ -1,19 +1,5 @@
 1:	
 
-@0$malloc:	; return_value = 0
-2:		mov bx, 0
-4:	
-
-@0$malloc$1:	; return
-5:		mov ax, [bp]
-6:		mov di, [bp + 4]
-7:		mov bp, [bp + 2]
-8:		jmp ax
-10:	
-
-@0$malloc$2:	; function end malloc
-1:	
-
 main2:	; a$p = 0
 2:		mov word [a], 0
 4:	
@@ -848,8 +834,8 @@ maina$5:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Cc
 18:		mov word [bp + 18], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 20:	
 
-maina$6:	; parameter 200, offset 14
-21:		mov word [bp + 20], 200
+maina$6:	; parameter 196, offset 14
+21:		mov word [bp + 20], 196
 23:	
 
 maina$7:	; call function noellipse-ellipse fprintf, extra 0
@@ -902,8 +888,8 @@ maina$17:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5C
 60:		mov word [bp + 18], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 62:	
 
-maina$18:	; parameter 201, offset 14
-63:		mov word [bp + 20], 201
+maina$18:	; parameter 197, offset 14
+63:		mov word [bp + 20], 197
 65:	
 
 maina$19:	; call function noellipse-ellipse fprintf, extra 0
@@ -1180,13 +1166,13 @@ mainX4$42:	; call header integral zero 0 stack zero 0
 171:	
 
 mainX4$43:	; parameter 0, offset 6
-172:		mov word [bp + 49], 0
+172:		mov word [bp + 47], 0
 174:	
 
 mainX4$44:	; call function noellipse-noellipse mktime
-175:		mov word [bp + 43], mainX4$45
-176:		mov [bp + 45], bp
-177:		add bp, 43
+175:		mov word [bp + 41], mainX4$45
+176:		mov [bp + 43], bp
+177:		add bp, 41
 178:		jmp mktime
 180:	
 
@@ -1197,13 +1183,13 @@ mainX4$46:	; call header integral zero 0 stack zero 0
 184:	
 
 mainX4$47:	; parameter string_Hello210A#, offset 6
-185:		mov word [bp + 49], string_Hello210A#
+185:		mov word [bp + 47], string_Hello210A#
 187:	
 
 mainX4$48:	; call function noellipse-ellipse printf, extra 0
-188:		mov word [bp + 43], mainX4$49
-189:		mov [bp + 45], bp
-190:		add bp, 43
+188:		mov word [bp + 41], mainX4$49
+189:		mov [bp + 43], bp
+190:		add bp, 41
 191:		mov di, bp
 192:		jmp printf
 194:	
@@ -1215,13 +1201,13 @@ mainX4$50:	; call header integral zero 0 stack zero 0
 198:	
 
 mainX4$51:	; parameter string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#, offset 6
-199:		mov word [bp + 49], string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#
+199:		mov word [bp + 47], string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#
 201:	
 
 mainX4$52:	; call function noellipse-ellipse printf, extra 0
-202:		mov word [bp + 43], mainX4$53
-203:		mov [bp + 45], bp
-204:		add bp, 43
+202:		mov word [bp + 41], mainX4$53
+203:		mov [bp + 43], bp
+204:		add bp, 41
 205:		mov di, bp
 206:		jmp printf
 208:	
@@ -1233,45 +1219,45 @@ mainX4$54:	; call header integral zero 0 stack zero 0
 212:	
 
 mainX4$55:	; parameter string_25c2025s2025i2025lf#, offset 6
-213:		mov word [bp + 49], string_25c2025s2025i2025lf#
+213:		mov word [bp + 47], string_25c2025s2025i2025lf#
 215:	
 
 mainX4$56:	; £temporary139 = &c
 216:		mov si, bp
-217:		add si, 22
+217:		add si, 20
 219:	
 
 mainX4$57:	; parameter £temporary139, offset 8
-220:		mov [bp + 51], si
+220:		mov [bp + 49], si
 222:	
 
 mainX4$58:	; parameter s, offset 10
-223:		mov [bp + 53], bp
-224:		add word [bp + 53], 23
+223:		mov [bp + 51], bp
+224:		add word [bp + 51], 21
 226:	
 
 mainX4$59:	; £temporary140 = &i
 227:		mov si, bp
-228:		add si, 12
+228:		add si, 10
 230:	
 
 mainX4$60:	; parameter £temporary140, offset 12
-231:		mov [bp + 55], si
+231:		mov [bp + 53], si
 233:	
 
 mainX4$61:	; £temporary141 = &d
 234:		mov si, bp
-235:		add si, 14
+235:		add si, 12
 237:	
 
 mainX4$62:	; parameter £temporary141, offset 14
-238:		mov [bp + 57], si
+238:		mov [bp + 55], si
 240:	
 
 mainX4$63:	; call function noellipse-ellipse scanf, extra 0
-241:		mov word [bp + 43], mainX4$64
-242:		mov [bp + 45], bp
-243:		add bp, 43
+241:		mov word [bp + 41], mainX4$64
+242:		mov [bp + 43], bp
+243:		add bp, 41
 244:		mov di, bp
 245:		add di, 8
 246:		jmp scanf
@@ -1284,11 +1270,11 @@ mainX4$65:	; call header integral zero 0 stack zero 0
 252:	
 
 mainX4$66:	; parameter string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#, offset 6
-253:		mov word [bp + 49], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#
+253:		mov word [bp + 47], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#
 255:	
 
 mainX4$67:	; £temporary143 = int_to_int c (Signed_Char -> Signed_Int)
-256:		mov al, [bp + 22]
+256:		mov al, [bp + 20]
 258:		and ax, 255
 260:		cmp al, 0
 261:		jge mainX4$68
@@ -1297,31 +1283,31 @@ mainX4$67:	; £temporary143 = int_to_int c (Signed_Char -> Signed_Int)
 266:	
 
 mainX4$68:	; parameter £temporary143, offset 8
-267:		mov [bp + 51], ax
+267:		mov [bp + 49], ax
 269:	
 
 mainX4$69:	; parameter s, offset 10
-270:		mov [bp + 53], bp
-271:		add word [bp + 53], 23
+270:		mov [bp + 51], bp
+271:		add word [bp + 51], 21
 273:	
 
 mainX4$70:	; parameter i, offset 12
-274:		mov ax, [bp + 12]
-275:		mov [bp + 55], ax
+274:		mov ax, [bp + 10]
+275:		mov [bp + 53], ax
 277:	
 
 mainX4$71:	; push float d
-278:		fld qword [bp + 14]
+278:		fld qword [bp + 12]
 280:	
 
 mainX4$72:	; parameter d, offset 14
-281:		fstp qword [bp + 57]
+281:		fstp qword [bp + 55]
 283:	
 
 mainX4$73:	; call function noellipse-ellipse printf, extra 0
-284:		mov word [bp + 43], mainX4$74
-285:		mov [bp + 45], bp
-286:		add bp, 43
+284:		mov word [bp + 41], mainX4$74
+285:		mov [bp + 43], bp
+286:		add bp, 41
 287:		mov di, bp
 288:		add di, 14
 289:		jmp printf
@@ -1775,8 +1761,8 @@ assert_test$16:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomes
 57:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 59:	
 
-assert_test$17:	; parameter 864, offset 14
-60:		mov word [bp + 22], 864
+assert_test$17:	; parameter 862, offset 14
+60:		mov word [bp + 22], 862
 62:	
 
 assert_test$18:	; call function noellipse-ellipse fprintf, extra 0
@@ -1857,8 +1843,8 @@ assert_test2$5:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomes
 18:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 20:	
 
-assert_test2$6:	; parameter 869, offset 14
-21:		mov word [bp + 22], 869
+assert_test2$6:	; parameter 867, offset 14
+21:		mov word [bp + 22], 867
 23:	
 
 assert_test2$7:	; call function noellipse-ellipse fprintf, extra 0

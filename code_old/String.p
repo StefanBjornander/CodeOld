@@ -656,7 +656,7 @@ for ( index = 0 ; index < size ; ++ index ) {
 charTarget [ index ] = charSource [ index ];
 }
 
-return ( void * ) target ;
+return ( ( void * ) target ) ;
 }
 
 void * memmove ( void * target , const void * source , int size ) {
@@ -675,7 +675,7 @@ charTarget [ index ] = charSource [ index ];
 }
 }
 
-return ( void * ) target ;
+return ( ( void * ) target ) ;
 }
 
 int memcmp ( const void * left , const void * right , int size ) {

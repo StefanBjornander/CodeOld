@@ -1,59 +1,59 @@
 1:	
 
-@18$filecreate:	; ah = 60
+@17$filecreate:	; ah = 60
 2:		mov ah, 60
 4:	
 
-@18$filecreate$1:	; cx = 0
+@17$filecreate$1:	; cx = 0
 5:		mov cx, 0
 7:	
 
-@18$filecreate$2:	; dx = name
+@17$filecreate$2:	; dx = name
 8:		mov dx, [bp + 6]
 10:	
 
-@18$filecreate$3:	; interrupt 33
+@17$filecreate$3:	; interrupt 33
 11:		int 33
 13:	
 
-@18$filecreate$4:	; £temporary886 = ax
+@17$filecreate$4:	; £temporary886 = ax
 15:	
 
-@18$filecreate$5:	; handle = £temporary886
+@17$filecreate$5:	; handle = £temporary886
 16:		mov [bp + 8], ax
 18:	
 
-@18$filecreate$6:	; if notcarry goto 10
-19:		jnc @18$filecreate$10
+@17$filecreate$6:	; if notcarry goto 10
+19:		jnc @17$filecreate$10
 21:	
 
-@18$filecreate$7:	; errno = 9
+@17$filecreate$7:	; errno = 9
 22:		mov word [errno], 9
 24:	
 
-@18$filecreate$8:	; return_value = -1
+@17$filecreate$8:	; return_value = -1
 25:		mov bx, -1
 27:	
 
-@18$filecreate$9:	; return
+@17$filecreate$9:	; return
 28:		mov ax, [bp]
 29:		mov di, [bp + 4]
 30:		mov bp, [bp + 2]
 31:		jmp ax
 33:	
 
-@18$filecreate$10:	; return_value = handle
+@17$filecreate$10:	; return_value = handle
 34:		mov bx, [bp + 8]
 36:	
 
-@18$filecreate$11:	; return
+@17$filecreate$11:	; return
 37:		mov ax, [bp]
 38:		mov di, [bp + 4]
 39:		mov bp, [bp + 2]
 40:		jmp ax
 42:	
 
-@18$filecreate$12:	; function end filecreate
+@17$filecreate$12:	; function end filecreate
 1:	
 
 fileexists:	; ah = 67
@@ -101,56 +101,56 @@ fileexists$9:	; return
 fileexists$10:	; function end fileexists
 1:	
 
-@19$fileopen:	; ah = 61
+@18$fileopen:	; ah = 61
 2:		mov ah, 61
 4:	
 
-@19$fileopen$1:	; al = mode
+@18$fileopen$1:	; al = mode
 5:		mov al, [bp + 8]
 7:	
 
-@19$fileopen$2:	; dx = name
+@18$fileopen$2:	; dx = name
 8:		mov dx, [bp + 6]
 10:	
 
-@19$fileopen$3:	; interrupt 33
+@18$fileopen$3:	; interrupt 33
 11:		int 33
 13:	
 
-@19$fileopen$4:	; if notcarry goto 8
-14:		jnc @19$fileopen$8
+@18$fileopen$4:	; if notcarry goto 8
+14:		jnc @18$fileopen$8
 16:	
 
-@19$fileopen$5:	; errno = 9
+@18$fileopen$5:	; errno = 9
 17:		mov word [errno], 9
 19:	
 
-@19$fileopen$6:	; return_value = -1
+@18$fileopen$6:	; return_value = -1
 20:		mov bx, -1
 22:	
 
-@19$fileopen$7:	; return
+@18$fileopen$7:	; return
 23:		mov ax, [bp]
 24:		mov di, [bp + 4]
 25:		mov bp, [bp + 2]
 26:		jmp ax
 28:	
 
-@19$fileopen$8:	; £temporary898 = ax
+@18$fileopen$8:	; £temporary898 = ax
 30:	
 
-@19$fileopen$9:	; return_value = £temporary898
+@18$fileopen$9:	; return_value = £temporary898
 31:		mov bx, ax
 33:	
 
-@19$fileopen$10:	; return
+@18$fileopen$10:	; return
 34:		mov ax, [bp]
 35:		mov di, [bp + 4]
 36:		mov bp, [bp + 2]
 37:		jmp ax
 39:	
 
-@19$fileopen$11:	; function end fileopen
+@18$fileopen$11:	; function end fileopen
 1:	
 
 fopen:	; index = 0
@@ -310,7 +310,7 @@ freopen$11:	; call function noellipse-noellipse fileopen
 40:		mov word [bp + 14], freopen$12
 41:		mov [bp + 16], bp
 42:		add bp, 14
-43:		jmp @19$fileopen
+43:		jmp @18$fileopen
 45:	
 
 freopen$12:	; post call
@@ -369,7 +369,7 @@ freopen$25:	; call function noellipse-noellipse filecreate
 91:		mov word [bp + 14], freopen$26
 92:		mov [bp + 16], bp
 93:		add bp, 14
-94:		jmp @18$filecreate
+94:		jmp @17$filecreate
 96:	
 
 freopen$26:	; post call
@@ -432,7 +432,7 @@ freopen$40:	; call function noellipse-noellipse fileopen
 145:		mov word [bp + 14], freopen$41
 146:		mov [bp + 16], bp
 147:		add bp, 14
-148:		jmp @19$fileopen
+148:		jmp @18$fileopen
 150:	
 
 freopen$41:	; post call
@@ -492,7 +492,7 @@ freopen$54:	; call function noellipse-noellipse filecreate
 194:		mov word [bp + 14], freopen$55
 195:		mov [bp + 16], bp
 196:		add bp, 14
-197:		jmp @18$filecreate
+197:		jmp @17$filecreate
 199:	
 
 freopen$55:	; post call
@@ -555,7 +555,7 @@ freopen$69:	; call function noellipse-noellipse fileopen
 248:		mov word [bp + 14], freopen$70
 249:		mov [bp + 16], bp
 250:		add bp, 14
-251:		jmp @19$fileopen
+251:		jmp @18$fileopen
 253:	
 
 freopen$70:	; post call
@@ -644,7 +644,7 @@ freopen$90:	; call function noellipse-noellipse fileopen
 325:		mov word [bp + 14], freopen$91
 326:		mov [bp + 16], bp
 327:		add bp, 14
-328:		jmp @19$fileopen
+328:		jmp @18$fileopen
 330:	
 
 freopen$91:	; post call
@@ -673,7 +673,7 @@ freopen$97:	; call function noellipse-noellipse filecreate
 350:		mov word [bp + 14], freopen$98
 351:		mov [bp + 16], bp
 352:		add bp, 14
-353:		jmp @18$filecreate
+353:		jmp @17$filecreate
 355:	
 
 freopen$98:	; post call
@@ -736,7 +736,7 @@ freopen$112:	; call function noellipse-noellipse fileopen
 404:		mov word [bp + 14], freopen$113
 405:		mov [bp + 16], bp
 406:		add bp, 14
-407:		jmp @19$fileopen
+407:		jmp @18$fileopen
 409:	
 
 freopen$113:	; post call
@@ -796,7 +796,7 @@ freopen$126:	; call function noellipse-noellipse filecreate
 453:		mov word [bp + 14], freopen$127
 454:		mov [bp + 16], bp
 455:		add bp, 14
-456:		jmp @18$filecreate
+456:		jmp @17$filecreate
 458:	
 
 freopen$127:	; post call

@@ -1,12 +1,12 @@
 1:	
 
 setlocale:	; if g_currStructPtr == 0 goto 4
-2:		cmp word [@16$g_currStructPtr], 0
+2:		cmp word [@15$g_currStructPtr], 0
 3:		je setlocale$4
 5:	
 
 setlocale$1:	; £temporary496 -> g_currStructPtr = *g_currStructPtr
-6:		mov si, [@16$g_currStructPtr]
+6:		mov si, [@15$g_currStructPtr]
 8:	
 
 setlocale$2:	; £temporary500 = £temporary496 -> g_currStructPtr
@@ -26,7 +26,7 @@ setlocale$5:	; oldName = £temporary500
 20:	
 
 setlocale$6:	; g_currStructPtr = 0
-21:		mov word [@16$g_currStructPtr], 0
+21:		mov word [@15$g_currStructPtr], 0
 23:	
 
 setlocale$7:	; if newName == 0 goto 28
@@ -39,7 +39,7 @@ setlocale$8:	; index = 0
 30:	
 
 setlocale$9:	; if index >= sSize goto 28
-31:		mov ax, [@15$sSize]
+31:		mov ax, [@14$sSize]
 32:		cmp [bp + 10], ax
 33:		jge setlocale$28
 35:	
@@ -59,7 +59,7 @@ setlocale$12:	; £temporary505 = index * 4
 51:	
 
 setlocale$13:	; £temporary506 = sArray + £temporary505
-52:		mov si, @14$sArray
+52:		mov si, @13$sArray
 53:		add si, ax
 55:	
 
@@ -96,7 +96,7 @@ setlocale$20:	; £temporary510 = index * 4
 88:	
 
 setlocale$21:	; £temporary511 = sArray + £temporary510
-89:		mov si, @14$sArray
+89:		mov si, @13$sArray
 90:		add si, ax
 92:	
 
@@ -107,7 +107,7 @@ setlocale$23:	; £temporary512 = &£temporary509 -> £temporary511
 96:	
 
 setlocale$24:	; g_currStructPtr = £temporary512
-97:		mov [@16$g_currStructPtr], si
+97:		mov [@15$g_currStructPtr], si
 99:	
 
 setlocale$25:	; goto 28
@@ -137,12 +137,12 @@ setlocale$30:	; function end setlocale
 1:	
 
 localeconv:	; if g_currStructPtr == 0 goto 4
-2:		cmp word [@16$g_currStructPtr], 0
+2:		cmp word [@15$g_currStructPtr], 0
 3:		je localeconv$4
 5:	
 
 localeconv$1:	; £temporary516 -> g_currStructPtr = *g_currStructPtr, offset 2
-6:		mov si, [@16$g_currStructPtr]
+6:		mov si, [@15$g_currStructPtr]
 8:	
 
 localeconv$2:	; £temporary520 = £temporary516 -> g_currStructPtr

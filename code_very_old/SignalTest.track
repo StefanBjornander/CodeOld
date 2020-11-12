@@ -8,8 +8,8 @@ floating_point_error$1:	; parameter string_Floating20point20error3A2025i0A#, off
 6:	
 
 floating_point_error$2:	; parameter sig, offset 8
-7:		mov a3018, [bp + 6]
-8:		mov [bp + 16], a3018
+7:		mov a2983, [bp + 6]
+8:		mov [bp + 16], a2983
 10:	
 
 floating_point_error$3:	; call function noellipse-ellipse printf, extra 0
@@ -25,10 +25,10 @@ floating_point_error$4:	; post call
 20:	
 
 floating_point_error$5:	; return
-21:		mov t3019, [bp]
+21:		mov t2984, [bp]
 22:		mov di, [bp + 4]
 23:		mov bp, [bp + 2]
-24:		jmp t3019
+24:		jmp t2984
 26:	
 
 floating_point_error$6:	; function end floating_point_error
@@ -53,10 +53,10 @@ exit_handle1$3:	; post call
 15:	
 
 exit_handle1$4:	; return
-16:		mov t3020, [bp]
+16:		mov t2985, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
-19:		jmp t3020
+19:		jmp t2985
 21:	
 
 exit_handle1$5:	; function end exit_handle1
@@ -81,10 +81,10 @@ exit_handle2$3:	; post call
 15:	
 
 exit_handle2$4:	; return
-16:		mov t3021, [bp]
+16:		mov t2986, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
-19:		jmp t3021
+19:		jmp t2986
 21:	
 
 exit_handle2$5:	; function end exit_handle2
@@ -109,10 +109,10 @@ exit_handle3$3:	; post call
 15:	
 
 exit_handle3$4:	; return
-16:		mov t3022, [bp]
+16:		mov t2987, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
-19:		jmp t3022
+19:		jmp t2987
 21:	
 
 exit_handle3$5:	; function end exit_handle3
@@ -127,7 +127,7 @@ signal_test$1:	; b = 1
 7:	
 
 signal_test$2:	; c = a / b
-8:		mov a3023, [bp + 6]
+8:		mov a2988, [bp + 6]
 10:		xor dx, dx
 11:		idiv word [bp + 8]
 12:		mov [bp + 10], ax
@@ -141,8 +141,8 @@ signal_test$4:	; parameter string_25i0A#, offset 6
 19:	
 
 signal_test$5:	; parameter c, offset 8
-20:		mov a3026, [bp + 10]
-21:		mov [bp + 20], a3026
+20:		mov a2991, [bp + 10]
+21:		mov [bp + 20], a2991
 23:	
 
 signal_test$6:	; call function noellipse-ellipse printf, extra 0
@@ -226,10 +226,10 @@ signal_test$23:	; post call
 85:	
 
 signal_test$24:	; return
-86:		mov t3027, [bp]
+86:		mov t2992, [bp]
 87:		mov di, [bp + 4]
 88:		mov bp, [bp + 2]
-89:		jmp t3027
+89:		jmp t2992
 91:	
 
 signal_test$25:	; function end signal_test

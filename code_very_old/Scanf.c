@@ -351,7 +351,6 @@ int scanFormat(char* format, va_list arg_list) {
   unsigned long unsignedLongValue, *unsignedLongPtr;
   unsigned short* unsignedShortPtr;
   unsigned int* unsignedIntPtr;
-
   long double longDoubleValue;
 
   g_inCount = 0;
@@ -524,18 +523,19 @@ int scanFormat(char* format, va_list arg_list) {
               ++index;
             }
 
-            int startIndex = index;
-            while (format[index] != ']') {
-              ++index;
-            }
-            format[index] = '\0';
+            { int startIndex = index;
+              while (format[index] != ']') {
+                ++index;
+              }
+              format[index] = '\0';
 
-            if (!star) {
-              char* string = va_arg(arg_list, char*);
-              scanPattern(string, &format[startIndex], not);
-            }
-            else {
-              scanPattern(NULL, &format[startIndex], not);
+              if (!star) {
+                char* string = va_arg(arg_list, char*);
+                scanPattern(string, &format[startIndex], not);
+              }
+              else {
+                scanPattern(NULL, &format[startIndex], not);
+              }
             }
           }
           break;

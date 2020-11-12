@@ -56,9 +56,9 @@ void malloc_test3(void) {
 
 void rec() {
   unsigned int stackTop; //frameSize;
+  unsigned int* lowHeapPtr = (unsigned int*) LOW_HEAP_ADDRESS;
   //stackTop = register_bp;
   stackTop = register_bp;
-  unsigned int* lowHeapPtr = (unsigned int*) LOW_HEAP_ADDRESS;
   printf("Stack Top: %u, Low Heap: %u\n", stackTop, *lowHeapPtr);
   rec();
 }
@@ -92,8 +92,8 @@ void malloc_test(void) {
 void malloc_test6(void) {
   int i;
   unsigned int stackTop;
+  unsigned int* lowHeapPtr = (unsigned int*)LOW_HEAP_ADDRESS;
   stackTop = register_bp;
-  unsigned int* lowHeapPtr = (unsigned int*) LOW_HEAP_ADDRESS;
 
   for (i = 0; i < 1000; ++i) {
     void* p = malloc(96);

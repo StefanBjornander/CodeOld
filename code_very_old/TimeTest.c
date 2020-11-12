@@ -12,10 +12,11 @@ void time_test(void) {
   { time_t now = time(NULL);
     struct tm *p = gmtime(&now);
     time_t now2 = mktime(p);
+    struct tm s = *p;
+
     printf("now 1: %lu\n", now);
     printf("now 2: %lu\n", now2);
 
-    struct tm s = *p;
     //printf("min <%i> <%i>\n", p->tm_min, s.tm_min);
     printf("   gm time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i\n", weekdays[s.tm_wday], 1900 + s.tm_year,
            s.tm_mon + 1, s.tm_mday, s.tm_hour, s.tm_min, s.tm_sec, s.tm_yday, s.tm_wday, s.tm_isdst);
@@ -25,14 +26,17 @@ void time_test(void) {
     printf("local time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i\n", weekdays[s.tm_wday], 1900 + s.tm_year,
            s.tm_mon + 1, s.tm_mday, s.tm_hour, s.tm_min, s.tm_sec, s.tm_yday, s.tm_wday, s.tm_isdst);
 
-    char buffer1[100], buffer2[100];
-    strcpy(buffer1, asctime(&s));
-    strcpy(buffer2, ctime(&now));
-    printf("asctime <%s>, ctime <%s>\n", buffer1, buffer2);
+    { char buffer1[100], buffer2[100];
+      char buffer[300];
+      int i;
 
-    char buffer[300];
-    int i = strftime(buffer, 300, "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y", &s);
-    printf("strftime <%i> <%s>\n", i, buffer);
+      strcpy(buffer1, asctime(&s));
+      strcpy(buffer2, ctime(&now));
+      printf("asctime <%s>, ctime <%s>\n", buffer1, buffer2);
+
+      i = strftime(buffer, 300, "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y", &s);
+      printf("strftime <%i> <%s>\n", i, buffer);
+    }
 
     /*time_t max = 0xFFFFFFFF;
     struct tm *q = localtime(&max);

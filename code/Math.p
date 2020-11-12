@@ -222,7 +222,7 @@ x *= 2.71 ;
 }
 }
 
-double index = 1 , term , sum = 0 , sign = 1 ,
+{ double index = 1 , term , sum = 0 , sign = 1 ,
 x_minus_1 = x - 1 , power = x_minus_1 ;
 
 do {
@@ -233,6 +233,7 @@ sign *= -1.0 ;
 } while ( fabs ( term ) >= 1e-9 ) ;
 
 return sum + n ;
+}
 }
 else {
 errno = EDOM ;
@@ -352,7 +353,7 @@ if ( fabs ( x ) > ( 2 * 3.1415926535897932384626433 ) ) {
 x = fmod ( x , 2 * 3.1415926535897932384626433 ) ;
 }
 
-double index = 1 , term , sum = 0 , sign = 1 , power = x , faculty = 1 ;
+{ double index = 1 , term , sum = 0 , sign = 1 , power = x , faculty = 1 ;
 
 do {
 term = sign * power / faculty ;
@@ -363,6 +364,7 @@ faculty *= ++ index * ++ index ;
 } while ( fabs ( term ) >= 1e-9 ) ;
 
 return sum ;
+}
 }
 
 double cos ( double x ) {
@@ -370,7 +372,7 @@ if ( fabs ( x ) > ( 2 * 3.1415926535897932384626433 ) ) {
 x = fmod ( x , 2 * 3.1415926535897932384626433 ) ;
 }
 
-double index = 0 , term , sum = 0 , sign = 1 , power = 1 , faculty = 1 ;
+{ double index = 0 , term , sum = 0 , sign = 1 , power = 1 , faculty = 1 ;
 
 do {
 term = sign * power / faculty ;
@@ -381,6 +383,7 @@ faculty *= ++ index * ++ index ;
 } while ( fabs ( term ) >= 1e-9 ) ;
 
 return sum ;
+}
 }
 
 double tan ( double x ) {
