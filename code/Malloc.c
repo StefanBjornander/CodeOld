@@ -22,12 +22,6 @@ BLOCK_HEADER* g_firstBlockPtr = NULL;
 // 4. After the list.
 
 void* malloc(size_t memorySize) {
-  assert(memorySize >= 0);
-  
-  if (memorySize == 0) {
-    return NULL;
-  }
-
   UINT newBlockSize = BLOCK_HEADER_SIZE + ((UINT) memorySize),
        minGap = 0;
 
@@ -43,6 +37,12 @@ void* malloc(size_t memorySize) {
 
   BLOCK_HEADER *minBlockPtr = NULL, *minPrevBlockPtr = NULL, *prevBlockPtr = NULL,
                *currBlockPtr = g_firstBlockPtr;
+
+  assert(memorySize >= 0);
+
+  if (memorySize == 0) {
+    return NULL;
+  }
 
   while (currBlockPtr != NULL) {
     UINT currAddress = (UINT) currBlockPtr;
@@ -182,12 +182,12 @@ void* calloc(size_t number, size_t size) {
 }
 
 void free(void* freeMemoryPtr) {
+  BLOCK_HEADER *freeBlockPtr = (BLOCK_HEADER*) (((UINT) freeMemoryPtr) - BLOCK_HEADER_SIZE),
+               *prevBlockPtr = NULL, *currBlockPtr = g_firstBlockPtr;
+
   if (freeMemoryPtr == NULL) {
     return;
   }
-  
-  BLOCK_HEADER *freeBlockPtr = (BLOCK_HEADER*) (((UINT) freeMemoryPtr) - BLOCK_HEADER_SIZE),
-               *prevBlockPtr = NULL, *currBlockPtr = g_firstBlockPtr;
 
   while (currBlockPtr != NULL) {
     if (currBlockPtr == freeBlockPtr) {
