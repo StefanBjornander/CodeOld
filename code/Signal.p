@@ -327,11 +327,12 @@ register_ah = 0x35s ;
 
 
 interrupt ( 0x21s ) ;
+
 { handler func = register_bx ;
 
 printf ( "Raise function %p\n" , func ) ;
   
-     
+      
   
  if ( func == ( ( handler ) 0 ) ) {
 printf ( "Raise default\n" ) ;

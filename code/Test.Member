@@ -234,7 +234,7 @@
 33: return
 34: function end maina
 0: call header
-1: call function noellipse-noellipse stdlib_test
+1: call function noellipse-noellipse string_test
 2: post call
 3: empty
 4: return
@@ -435,7 +435,7 @@
 16: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
 17: parameter string_n20213D206#, offset 10
 18: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#, offset 12
-19: parameter 862, offset 14
+19: parameter 863, offset 14
 20: call function noellipse-ellipse fprintf, extra 0
 21: post call
 22: call header
@@ -458,7 +458,7 @@
 5: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
 6: parameter string_n20213D207#, offset 10
 7: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#, offset 12
-8: parameter 867, offset 14
+8: parameter 868, offset 14
 9: call function noellipse-ellipse fprintf, extra 0
 10: post call
 11: call header
@@ -6327,7 +6327,7 @@
 5: call function noellipse-noellipse scanLongInt
 6: post call
 7: £temporary2425 = return_value
-8: longValue = £temporary2425
+8: value = £temporary2425
 9: if endp != 0 goto 12
 10: goto 16
 11: check track map float stack
@@ -6335,7 +6335,7 @@
 13: £temporary2428 = s + g_inChars
 14: £temporary2427 -> endp = £temporary2428
 15: goto 16
-16: return_value = longValue
+16: return_value = value
 17: return
 18: empty
 19: return
@@ -10994,21 +10994,21 @@
 60: push 0
 61: pop float inValue
 62: call header
-63: parameter inFilePtrPtr, offset 6
-64: parameter string_25lf#, offset 8
-65: push float inValue
-66: pop float empty X
-67: £temporary4989 = &inValue
-68: parameter £temporary4989, offset 10
-69: call function noellipse-ellipse fscanf, extra 0
-70: post call
-71: call header
+63: push float inValue
+64: parameter £temporary4989, offset 6
+65: call function noellipse-noellipse sqrt
+66: post call
+67: £temporary4990 = return_value
+68: pop float outValue
+69: call header
+70: parameter inFilePtrPtr, offset 6
+71: parameter string_25lf#, offset 8
 72: push float inValue
-73: parameter £temporary4991, offset 6
-74: call function noellipse-noellipse sqrt
-75: post call
-76: £temporary4992 = return_value
-77: pop float outValue
+73: pop float empty X
+74: £temporary4991 = &inValue
+75: parameter £temporary4991, offset 10
+76: call function noellipse-ellipse fscanf, extra 0
+77: post call
 78: call header
 79: parameter outFilePtrPtr, offset 6
 80: parameter string_25f0A#, offset 8
@@ -11099,7 +11099,7 @@
 165: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
 166: parameter string_inFilePtr20213D20NULL#, offset 10
 167: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
-168: parameter 51, offset 14
+168: parameter 50, offset 14
 169: call function noellipse-ellipse fprintf, extra 0
 170: post call
 171: call header
@@ -11180,7 +11180,7 @@
 246: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
 247: parameter string_inFilePtr20213D20NULL#, offset 10
 248: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
-249: parameter 80, offset 14
+249: parameter 79, offset 14
 250: call function noellipse-ellipse fprintf, extra 0
 251: post call
 252: call header
@@ -11196,7 +11196,7 @@
 262: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
 263: parameter string_outFilePtr20213D20NULL#, offset 10
 264: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
-265: parameter 81, offset 14
+265: parameter 80, offset 14
 266: call function noellipse-ellipse fprintf, extra 0
 267: post call
 268: call header
@@ -11258,7 +11258,7 @@
 324: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
 325: parameter string_outFilePtr20213D20NULL#, offset 10
 326: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
-327: parameter 102, offset 14
+327: parameter 101, offset 14
 328: call function noellipse-ellipse fprintf, extra 0
 329: post call
 330: call header
@@ -11316,7 +11316,7 @@
 382: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
 383: parameter string_inFilePtr20213D20NULL#, offset 10
 384: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
-385: parameter 118, offset 14
+385: parameter 116, offset 14
 386: call function noellipse-ellipse fprintf, extra 0
 387: post call
 388: call header
@@ -11387,7 +11387,7 @@
 453: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
 454: parameter string_inFilePtr20213D20NULL#, offset 10
 455: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
-456: parameter 139, offset 14
+456: parameter 137, offset 14
 457: call function noellipse-ellipse fprintf, extra 0
 458: post call
 459: call header
@@ -11457,7 +11457,7 @@
 523: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
 524: parameter string_inFilePtr20213D20NULL#, offset 10
 525: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
-526: parameter 156, offset 14
+526: parameter 154, offset 14
 527: call function noellipse-ellipse fprintf, extra 0
 528: post call
 529: call header
@@ -11499,7 +11499,7 @@
 565: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
 566: parameter string_p20213D20NULL#, offset 10
 567: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
-568: parameter 163, offset 14
+568: parameter 161, offset 14
 569: call function noellipse-ellipse fprintf, extra 0
 570: post call
 571: call header
@@ -11628,7 +11628,7 @@
 694: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
 695: parameter string_outFilePtr20213D20NULL#, offset 10
 696: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
-697: parameter 190, offset 14
+697: parameter 188, offset 14
 698: call function noellipse-ellipse fprintf, extra 0
 699: post call
 700: call header
@@ -11644,7 +11644,7 @@
 710: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
 711: parameter string_inFilePtr20213D20NULL#, offset 10
 712: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
-713: parameter 191, offset 14
+713: parameter 189, offset 14
 714: call function noellipse-ellipse fprintf, extra 0
 715: post call
 716: call header
@@ -11709,7 +11709,7 @@
 775: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
 776: parameter string_inFilePtr20213D20NULL#, offset 10
 777: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
-778: parameter 207, offset 14
+778: parameter 206, offset 14
 779: call function noellipse-ellipse fprintf, extra 0
 780: post call
 781: call header
@@ -11816,7 +11816,7 @@
 882: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
 883: parameter string_inOutFilePtr20213D20NULL#, offset 10
 884: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
-885: parameter 231, offset 14
+885: parameter 229, offset 14
 886: call function noellipse-ellipse fprintf, extra 0
 887: post call
 888: call header
@@ -11837,7 +11837,7 @@
 903: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 8
 904: parameter string_tempFilePtr20213D20NULL#, offset 10
 905: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#, offset 12
-906: parameter 234, offset 14
+906: parameter 232, offset 14
 907: call function noellipse-ellipse fprintf, extra 0
 908: post call
 909: call header
@@ -12511,9 +12511,9 @@
 61: empty
 62: return
 63: function end malloc_test3
-0: £temporary5849 = bp
-1: stackTop = £temporary5849
-2: lowHeapPtr = 65534
+0: lowHeapPtr = 65534
+1: £temporary5849 = bp
+2: stackTop = £temporary5849
 3: call header
 4: parameter string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#, offset 6
 5: parameter stackTop, offset 8
@@ -12586,9 +12586,9 @@
 50: empty
 51: return
 52: function end malloc_test
-0: £temporary5877 = bp
-1: stackTop = £temporary5877
-2: lowHeapPtr = 65534
+0: lowHeapPtr = 65534
+1: £temporary5877 = bp
+2: stackTop = £temporary5877
 3: i = 0
 4: empty
 5: if i < 1000 goto 8

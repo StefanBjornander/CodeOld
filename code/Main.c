@@ -201,7 +201,9 @@ void main() {
 /*  strtol_test();
   printf("\n");
   strtoul_test();*/
-  stdlib_test();
+  //stdlib_test();
+  string_test();
+  //time_test();
 }
 
 void mainX4(int argc, char* argv[]) {

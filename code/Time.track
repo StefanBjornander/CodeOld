@@ -1609,17 +1609,17 @@ strftime$40:	; call header integral zero 0 stack zero 0
 
 strftime$41:	; parameter s, offset 6
 149:		mov a2222, [bp + 6]
-150:		mov [bp + 36], a2222
+150:		mov [bp + 40], a2222
 152:	
 
 strftime$42:	; parameter string_#, offset 8
-153:		mov word [bp + 38], string_#
+153:		mov word [bp + 42], string_#
 155:	
 
 strftime$43:	; call function noellipse-noellipse strcpy
-156:		mov word [bp + 30], strftime$44
-157:		mov [bp + 32], bp
-158:		add bp, 30
+156:		mov word [bp + 34], strftime$44
+157:		mov [bp + 36], bp
+158:		add bp, 34
 159:		jmp strcpy
 161:	
 
