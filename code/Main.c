@@ -8,10 +8,6 @@
 #include <Limits.h>
 #include <Time.h>
 
-static void* malloc(size_t memorySize) {
-  return NULL;
-}
-
 void math_test_1(double x);   // ok
 void file_test(char*, char*); // ok
 void signal_test(void);       // ok
@@ -27,7 +23,7 @@ void setjmp_test(double x);   // ok
 void stdio_test(void);        // ok
 void stdlib_test(void);       // ok
 void strtol_test(void);       // ok
-void strtoul_test(void);       // ok
+void strtoul_test(void);      // ok
 void heap_test(void);         // ok
 void stack_test(void);        // ok
 void character_test(char c);  // ok
@@ -233,25 +229,27 @@ void mainX4(int argc, char* argv[]) {
 
   printf("argc: %i\n", argc);
 
-  int index;
-  for (index = 0; index < argc; ++index) {
-    printf("%i: <%s>\n", index, argv[index]);
-  }
-  printf("\n");
+  { int index;
+    for (index = 0; index < argc; ++index) {
+      printf("%i: <%s>\n", index, argv[index]);
+    }
+    printf("\n");
 
-  for (index = 0; argv[index] != NULL; ++index) {
-    printf("%i: <%s>\n", index, argv[index]);
+    for (index = 0; argv[index] != NULL; ++index) {
+      printf("%i: <%s>\n", index, argv[index]);
+    }
+    printf("\n");
   }
-  printf("\n");
 
-  int i;
-  double d;
-  char c, s[20];
-  mktime(NULL);
-  printf("Hello!\n");
-  printf("Please write a character, a string, an integer, and a double: ");
-  scanf("%c %s %i %lf", &c, s, &i, &d);
-  printf("You wrote the character '%c', the string \"%s\", the integer %i, and the double %f.\n", c, s, i, d);
+  { int i;
+    double d;
+    char c, s[20];
+    mktime(NULL);
+    printf("Hello!\n");
+    printf("Please write a character, a string, an integer, and a double: ");
+    scanf("%c %s %i %lf", &c, s, &i, &d);
+    printf("You wrote the character '%c', the string \"%s\", the integer %i, and the double %f.\n", c, s, i, d);
+  }
 }
 
 void main3() {
