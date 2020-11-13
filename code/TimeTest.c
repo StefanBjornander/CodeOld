@@ -9,33 +9,34 @@ void time_to_struct(time_t t, struct tm* tp);
 void time_test(void) {
   char* weekdays[] = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
   
-  { time_t now = time(NULL);
-    struct tm *p = gmtime(&now);
-    time_t now2 = mktime(p);
-    struct tm s = *p;
+  { time_t now1 = time(NULL);
+    struct tm s = *gmtime(&now1), t = *localtime(&now1);
+    time_t now2 = mktime(&s);
 
-    printf("now 1: %lu\n", now);
+    printf("now 1: %lu\n", now1);
     printf("now 2: %lu\n", now2);
 
     //printf("min <%i> <%i>\n", p->tm_min, s.tm_min);
     printf("   gm time: %s %i-%i-%i %i:%i:%i, year day %i, week day %i, daylight saving time %i\n", weekdays[s.tm_wday], 1900 + s.tm_year,
            s.tm_mon + 1, s.tm_mday, s.tm_hour, s.tm_min, s.tm_sec, s.tm_yday, s.tm_wday, s.tm_isdst);
 
-    s = *localtime(&now);
-    //printf("min <%i> <%i>\n", p->tm_min, s.tm_min);
-    printf("local time: %s %i-%i-%i %i:%i:%i, year day %i, week day %i, daylight saving time %i\n", weekdays[s.tm_wday], 1900 + s.tm_year,
-           s.tm_mon + 1, s.tm_mday, s.tm_hour, s.tm_min, s.tm_sec, s.tm_yday, s.tm_wday, s.tm_isdst);
+    //printf("min <%i> <%i>\n", p->tm_min, t.tm_min);
+    printf("local time: %s %i-%i-%i %i:%i:%i, year day %i, week day %i, daylight saving time %i\n", weekdays[t.tm_wday], 1900 + t.tm_year,
+           t.tm_mon + 1, t.tm_mday, t.tm_hour, t.tm_min, t.tm_sec, t.tm_yday, t.tm_wday, t.tm_isdst);
 
     { char buffer1[100], buffer2[100];
       char buffer[300];
       int i;
 
       strcpy(buffer1, asctime(&s));
-      strcpy(buffer2, ctime(&now));
+      strcpy(buffer2, ctime(&now1));
       printf("asctime <%s>, ctime <%s>\n", buffer1, buffer2);
 
-      i = strftime(buffer, 300, "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y", &s);
-      printf("strftime <%i> <%s>\n", i, buffer);
+      //i = strftime(buffer, 300, "date %x", &s);
+      //i = strftime(buffer, 300, "min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, short year %y, long year %Y", &s);
+      //i = strftime(buffer, 300, "min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y", &s);
+      i = strftime(buffer, 300, "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y", &t);
+      printf("strftime %i %i <%s>\n", i, strlen(buffer), buffer);
     }
 
     /*time_t max = 0xFFFFFFFF;

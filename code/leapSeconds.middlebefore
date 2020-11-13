@@ -5,7 +5,7 @@
 4: Goto Return seconds
 5: CheckTrackMapFloatStack
 6: PreCall 40
-7: Parameter unsignedlongint t 64
+7: Parameter signed long int t 64
 8: PreCall 40
 9: IntegralToIntegral £temporary2725 index
 10: UnsignedMultiply £temporary2726 £temporary2725 36
@@ -16,7 +16,7 @@
 15: Call mktime 72 0
 16: PostCall 72
 17: GetReturnValue £temporary2729
-18: Parameter unsignedlongint £temporary2729 72
+18: Parameter signed long int £temporary2729 72
 19: Call difftime 40 0
 20: PostCall 40
 21: GetReturnValue £temporary2730

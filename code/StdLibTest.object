@@ -1225,347 +1225,345 @@ stdlib_test$152:	; parameter compare, offset 12
 596:		mov word [bp + 30], compare
 598:	
 
-stdlib_test$153:	; call function noellipse-ellipse qsort, extra 0
+stdlib_test$153:	; call function noellipse-noellipse qsort
 599:		mov word [bp + 18], stdlib_test$154
 600:		mov [bp + 20], bp
 601:		add bp, 18
-602:		mov di, bp
-603:		jmp qsort
-605:	
+602:		jmp qsort
+604:	
 
 stdlib_test$154:	; post call
-607:	
+606:	
 
 stdlib_test$155:	; index = 0
-608:		mov word [bp + 16], 0
-610:	
+607:		mov word [bp + 16], 0
+609:	
 
 stdlib_test$156:	; if index >= size goto 167
-611:		mov ax, [bp + 14]
-612:		cmp [bp + 16], ax
-613:		jge stdlib_test$167
-615:	
+610:		mov ax, [bp + 14]
+611:		cmp [bp + 16], ax
+612:		jge stdlib_test$167
+614:	
 
 stdlib_test$157:	; call header integral zero 0 stack zero 0
-617:	
+616:	
 
 stdlib_test$158:	; parameter string_25i20#, offset 6
-618:		mov word [bp + 24], string_25i20#
-620:	
+617:		mov word [bp + 24], string_25i20#
+619:	
 
 stdlib_test$159:	; £temporary6027 = index * 2
-621:		mov ax, [bp + 16]
-623:		xor dx, dx
-624:		mul word [int2$2#]
-630:	
+620:		mov ax, [bp + 16]
+622:		xor dx, dx
+623:		mul word [int2$2#]
+629:	
 
 stdlib_test$160:	; £temporary6028 = list + £temporary6027
-631:		mov si, bp
-632:		add si, 6
-633:		add si, ax
-635:	
+630:		mov si, bp
+631:		add si, 6
+632:		add si, ax
+634:	
 
 stdlib_test$161:	; £temporary6029 -> £temporary6028 = *£temporary6028
-637:	
+636:	
 
 stdlib_test$162:	; parameter £temporary6029 -> £temporary6028, offset 8
-638:		mov ax, [si]
-639:		mov [bp + 26], ax
-641:	
+637:		mov ax, [si]
+638:		mov [bp + 26], ax
+640:	
 
 stdlib_test$163:	; call function noellipse-ellipse printf, extra 0
-642:		mov word [bp + 18], stdlib_test$164
-643:		mov [bp + 20], bp
-644:		add bp, 18
-645:		mov di, bp
-646:		add di, 2
-647:		jmp printf
-649:	
+641:		mov word [bp + 18], stdlib_test$164
+642:		mov [bp + 20], bp
+643:		add bp, 18
+644:		mov di, bp
+645:		add di, 2
+646:		jmp printf
+648:	
 
 stdlib_test$164:	; post call
-651:	
+650:	
 
 stdlib_test$165:	; ++index
-652:		inc word [bp + 16]
-654:	
+651:		inc word [bp + 16]
+653:	
 
 stdlib_test$166:	; goto 156
-655:		jmp stdlib_test$156
-657:	
+654:		jmp stdlib_test$156
+656:	
 
 stdlib_test$167:	; call header integral zero 0 stack zero 0
-659:	
+658:	
 
 stdlib_test$168:	; parameter string_0AC20List2033A20#, offset 6
-660:		mov word [bp + 24], string_0AC20List2033A20#
-662:	
+659:		mov word [bp + 24], string_0AC20List2033A20#
+661:	
 
 stdlib_test$169:	; call function noellipse-ellipse printf, extra 0
-663:		mov word [bp + 18], stdlib_test$170
-664:		mov [bp + 20], bp
-665:		add bp, 18
-666:		mov di, bp
-667:		jmp printf
-669:	
+662:		mov word [bp + 18], stdlib_test$170
+663:		mov [bp + 20], bp
+664:		add bp, 18
+665:		mov di, bp
+666:		jmp printf
+668:	
 
 stdlib_test$170:	; post call
-671:	
+670:	
 
 stdlib_test$171:	; call header integral zero 0 stack zero 0
-673:	
+672:	
 
 stdlib_test$172:	; parameter list, offset 6
-674:		mov [bp + 24], bp
-675:		add word [bp + 24], 6
-677:	
+673:		mov [bp + 24], bp
+674:		add word [bp + 24], 6
+676:	
 
 stdlib_test$173:	; parameter size, offset 8
-678:		mov ax, [bp + 14]
-679:		mov [bp + 26], ax
-681:	
+677:		mov ax, [bp + 14]
+678:		mov [bp + 26], ax
+680:	
 
 stdlib_test$174:	; parameter 2, offset 10
-682:		mov word [bp + 28], 2
-684:	
+681:		mov word [bp + 28], 2
+683:	
 
 stdlib_test$175:	; parameter reverse_compare, offset 12
-685:		mov word [bp + 30], reverse_compare
-687:	
+684:		mov word [bp + 30], reverse_compare
+686:	
 
-stdlib_test$176:	; call function noellipse-ellipse qsort, extra 0
-688:		mov word [bp + 18], stdlib_test$177
-689:		mov [bp + 20], bp
-690:		add bp, 18
-691:		mov di, bp
-692:		jmp qsort
-694:	
+stdlib_test$176:	; call function noellipse-noellipse qsort
+687:		mov word [bp + 18], stdlib_test$177
+688:		mov [bp + 20], bp
+689:		add bp, 18
+690:		jmp qsort
+692:	
 
 stdlib_test$177:	; post call
-696:	
+694:	
 
 stdlib_test$178:	; index = 0
-697:		mov word [bp + 16], 0
-699:	
+695:		mov word [bp + 16], 0
+697:	
 
 stdlib_test$179:	; if index >= size goto 190
-700:		mov ax, [bp + 14]
-701:		cmp [bp + 16], ax
-702:		jge stdlib_test$190
-704:	
+698:		mov ax, [bp + 14]
+699:		cmp [bp + 16], ax
+700:		jge stdlib_test$190
+702:	
 
 stdlib_test$180:	; call header integral zero 0 stack zero 0
-706:	
+704:	
 
 stdlib_test$181:	; parameter string_25i20#, offset 6
-707:		mov word [bp + 24], string_25i20#
-709:	
+705:		mov word [bp + 24], string_25i20#
+707:	
 
 stdlib_test$182:	; £temporary6036 = index * 2
-710:		mov ax, [bp + 16]
-712:		xor dx, dx
-713:		mul word [int2$2#]
-719:	
+708:		mov ax, [bp + 16]
+710:		xor dx, dx
+711:		mul word [int2$2#]
+717:	
 
 stdlib_test$183:	; £temporary6037 = list + £temporary6036
-720:		mov si, bp
-721:		add si, 6
-722:		add si, ax
-724:	
+718:		mov si, bp
+719:		add si, 6
+720:		add si, ax
+722:	
 
 stdlib_test$184:	; £temporary6038 -> £temporary6037 = *£temporary6037
-726:	
+724:	
 
 stdlib_test$185:	; parameter £temporary6038 -> £temporary6037, offset 8
-727:		mov ax, [si]
-728:		mov [bp + 26], ax
-730:	
+725:		mov ax, [si]
+726:		mov [bp + 26], ax
+728:	
 
 stdlib_test$186:	; call function noellipse-ellipse printf, extra 0
-731:		mov word [bp + 18], stdlib_test$187
-732:		mov [bp + 20], bp
-733:		add bp, 18
-734:		mov di, bp
-735:		add di, 2
-736:		jmp printf
-738:	
+729:		mov word [bp + 18], stdlib_test$187
+730:		mov [bp + 20], bp
+731:		add bp, 18
+732:		mov di, bp
+733:		add di, 2
+734:		jmp printf
+736:	
 
 stdlib_test$187:	; post call
-740:	
+738:	
 
 stdlib_test$188:	; ++index
-741:		inc word [bp + 16]
-743:	
+739:		inc word [bp + 16]
+741:	
 
 stdlib_test$189:	; goto 179
-744:		jmp stdlib_test$179
-746:	
+742:		jmp stdlib_test$179
+744:	
 
 stdlib_test$190:	; call header integral zero 0 stack zero 0
-748:	
+746:	
 
 stdlib_test$191:	; parameter string_0A0ASearch3A0A#, offset 6
-749:		mov word [bp + 24], string_0A0ASearch3A0A#
-751:	
+747:		mov word [bp + 24], string_0A0ASearch3A0A#
+749:	
 
 stdlib_test$192:	; call function noellipse-ellipse printf, extra 0
-752:		mov word [bp + 18], stdlib_test$193
-753:		mov [bp + 20], bp
-754:		add bp, 18
-755:		mov di, bp
-756:		jmp printf
-758:	
+750:		mov word [bp + 18], stdlib_test$193
+751:		mov [bp + 20], bp
+752:		add bp, 18
+753:		mov di, bp
+754:		jmp printf
+756:	
 
 stdlib_test$193:	; post call
-760:	
+758:	
 
 stdlib_test$194:	; key = 0
-761:		mov word [bp + 16], 0
-763:	
+759:		mov word [bp + 16], 0
+761:	
 
 stdlib_test$195:	; if key >= 6 goto 222
-764:		cmp word [bp + 16], 6
-765:		jge stdlib_test$222
-767:	
+762:		cmp word [bp + 16], 6
+763:		jge stdlib_test$222
+765:	
 
 stdlib_test$196:	; call header integral zero 0 stack zero 0
-769:	
+767:	
 
 stdlib_test$197:	; £temporary6043 = &key
-770:		mov si, bp
-771:		add si, 16
-773:	
+768:		mov si, bp
+769:		add si, 16
+771:	
 
 stdlib_test$198:	; parameter £temporary6043, offset 6
-774:		mov [bp + 24], si
-776:	
+772:		mov [bp + 24], si
+774:	
 
 stdlib_test$199:	; parameter list, offset 8
-777:		mov [bp + 26], bp
-778:		add word [bp + 26], 6
-780:	
+775:		mov [bp + 26], bp
+776:		add word [bp + 26], 6
+778:	
 
 stdlib_test$200:	; parameter size, offset 10
-781:		mov ax, [bp + 14]
-782:		mov [bp + 28], ax
-784:	
+779:		mov ax, [bp + 14]
+780:		mov [bp + 28], ax
+782:	
 
 stdlib_test$201:	; parameter 2, offset 12
-785:		mov word [bp + 30], 2
-787:	
+783:		mov word [bp + 30], 2
+785:	
 
 stdlib_test$202:	; parameter compare, offset 14
-788:		mov word [bp + 32], compare
-790:	
+786:		mov word [bp + 32], compare
+788:	
 
 stdlib_test$203:	; call function noellipse-noellipse bsearch
-791:		mov word [bp + 18], stdlib_test$204
-792:		mov [bp + 20], bp
-793:		add bp, 18
-794:		jmp bsearch
-796:	
+789:		mov word [bp + 18], stdlib_test$204
+790:		mov [bp + 20], bp
+791:		add bp, 18
+792:		jmp bsearch
+794:	
 
 stdlib_test$204:	; post call
-798:	
+796:	
 
 stdlib_test$205:	; £temporary6045 = return_value
-803:	
+801:	
 
 stdlib_test$206:	; £temporary6046 = int_to_int £temporary6045 (Pointer -> Pointer)
-806:	
+804:	
 
 stdlib_test$207:	; p = £temporary6046
-807:		mov [bp + 18], bx
-809:	
+805:		mov [bp + 18], bx
+807:	
 
 stdlib_test$208:	; if p == 0 goto 212
-810:		cmp word [bp + 18], 0
-811:		je stdlib_test$212
-813:	
+808:		cmp word [bp + 18], 0
+809:		je stdlib_test$212
+811:	
 
 stdlib_test$209:	; £temporary6048 = p - list
-814:		mov ax, [bp + 18]
-815:		mov bx, bp
-816:		add bx, 6
-817:		sub ax, bx
-819:	
+812:		mov ax, [bp + 18]
+813:		mov bx, bp
+814:		add bx, 6
+815:		sub ax, bx
+817:	
 
 stdlib_test$210:	; £temporary6053 = £temporary6048 / 2
-821:		xor dx, dx
-822:		div word [int2$2#]
-828:	
+819:		xor dx, dx
+820:		div word [int2$2#]
+826:	
 
 stdlib_test$211:	; goto 213
-829:		jmp stdlib_test$213
-831:	
+827:		jmp stdlib_test$213
+829:	
 
 stdlib_test$212:	; £temporary6053 = -1
-832:		mov ax, -1
-834:	
+830:		mov ax, -1
+832:	
 
 stdlib_test$213:	; index = £temporary6053
-835:		mov [bp + 20], ax
-837:	
+833:		mov [bp + 20], ax
+835:	
 
 stdlib_test$214:	; call header integral zero 0 stack zero 0
-839:	
+837:	
 
 stdlib_test$215:	; parameter string_20202825i2C2025i290A#, offset 6
-840:		mov word [bp + 28], string_20202825i2C2025i290A#
-842:	
+838:		mov word [bp + 28], string_20202825i2C2025i290A#
+840:	
 
 stdlib_test$216:	; parameter key, offset 8
-843:		mov ax, [bp + 16]
-844:		mov [bp + 30], ax
-846:	
+841:		mov ax, [bp + 16]
+842:		mov [bp + 30], ax
+844:	
 
 stdlib_test$217:	; parameter index, offset 10
-847:		mov ax, [bp + 20]
-848:		mov [bp + 32], ax
-850:	
+845:		mov ax, [bp + 20]
+846:		mov [bp + 32], ax
+848:	
 
 stdlib_test$218:	; call function noellipse-ellipse printf, extra 0
-851:		mov word [bp + 22], stdlib_test$219
-852:		mov [bp + 24], bp
-853:		add bp, 22
-854:		mov di, bp
-855:		add di, 4
-856:		jmp printf
-858:	
+849:		mov word [bp + 22], stdlib_test$219
+850:		mov [bp + 24], bp
+851:		add bp, 22
+852:		mov di, bp
+853:		add di, 4
+854:		jmp printf
+856:	
 
 stdlib_test$219:	; post call
-860:	
+858:	
 
 stdlib_test$220:	; ++key
-861:		inc word [bp + 16]
-863:	
+859:		inc word [bp + 16]
+861:	
 
 stdlib_test$221:	; goto 195
-864:		jmp stdlib_test$195
-866:	
+862:		jmp stdlib_test$195
+864:	
 
 stdlib_test$222:	; call header integral zero 0 stack zero 0
-868:	
+866:	
 
 stdlib_test$223:	; parameter string_0A#, offset 6
-869:		mov word [bp + 22], string_0A#
-871:	
+867:		mov word [bp + 22], string_0A#
+869:	
 
 stdlib_test$224:	; call function noellipse-ellipse printf, extra 0
-872:		mov word [bp + 16], stdlib_test$225
-873:		mov [bp + 18], bp
-874:		add bp, 16
-875:		mov di, bp
-876:		jmp printf
-878:	
+870:		mov word [bp + 16], stdlib_test$225
+871:		mov [bp + 18], bp
+872:		add bp, 16
+873:		mov di, bp
+874:		jmp printf
+876:	
 
 stdlib_test$225:	; post call
-880:	
+878:	
 
 stdlib_test$226:	; return
-881:		mov ax, [bp]
-882:		mov di, [bp + 4]
-883:		mov bp, [bp + 2]
-884:		jmp ax
-886:	
+879:		mov ax, [bp]
+880:		mov di, [bp + 4]
+881:		mov bp, [bp + 2]
+882:		jmp ax
+884:	
 
 stdlib_test$227:	; function end stdlib_test

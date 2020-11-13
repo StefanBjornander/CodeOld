@@ -2,7 +2,7 @@
 1: Assign index 0
 2: SignedGreaterThanEqual 24 index leapSize
 3: PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-4: Parameter unsignedlongint t 64
+4: Parameter signed long int t 64
 5: PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 6: IntegralToIntegral £temporary2725 index
 7: UnsignedMultiply £temporary2726 £temporary2725 36
@@ -13,7 +13,7 @@
 12: Call mktime 72 0
 13: PostCall 72
 14: GetReturnValue £temporary2729
-15: Parameter unsignedlongint £temporary2729 72
+15: Parameter signed long int £temporary2729 72
 16: Call difftime 40 0
 17: PostCall 40
 18: GetReturnValue £temporary2730

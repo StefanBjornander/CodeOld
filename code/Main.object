@@ -939,11 +939,11 @@ maina$25:	; function end maina
 main:	; call header integral zero 0 stack zero 0
 12:	
 
-main$1:	; call function noellipse-noellipse string_test
+main$1:	; call function noellipse-noellipse time_test
 13:		mov word [bp + 6], main$2
 14:		mov [bp + 8], bp
 15:		add bp, 6
-16:		jmp string_test
+16:		jmp time_test
 18:	
 
 main$2:	; post call

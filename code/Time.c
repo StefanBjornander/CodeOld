@@ -125,11 +125,18 @@ struct tm* gmtime(const time_t* timePtr) {
       const BOOL leapYear = (((year % 4) == 0) &&
                             ((year % 100) != 0)) || ((year % 400) == 0);
       const int daysOfYear = leapYear ? 366 : 365;
+      //printf("%i %i\n", year, daysOfYear);
 
       if (totalDays < daysOfYear) {
         const int daysOfMonths[] = {31, leapYear ? 29 : 28, 31, 30,
-                                    31, 30, 30, 31, 30, 31, 30, 31};
+                                    31, 30, 31, 31, 30, 31, 30, 31};
         int month = 0;
+        /*int index, sum = 0;
+        for (index = 0; index < 12; ++index) {
+          sum += daysOfMonths[index];
+          printf("  %i %i %i\n", index, daysOfMonths[index], sum);
+        }*/
+
         g_timeStruct.tm_year = year - 1900;
         g_timeStruct.tm_yday = totalDays;
 
@@ -138,6 +145,7 @@ struct tm* gmtime(const time_t* timePtr) {
           ++month;
         }
 
+        //printf("days %i\n", totalDays);
         g_timeStruct.tm_mon = month;
         g_timeStruct.tm_mday = totalDays + 1;
         g_timeStruct.tm_isdst = -1;
@@ -203,8 +211,10 @@ struct tm* localtime(const time_t* timePtr) {
                                : localeConvPtr->winterTimeZone;
   }
 
-  { time_t time = *timePtr + (3600 * timeZone);
-    return gmtime(&time);
+  //printf("timeZone %li %i %li\n", *timePtr, timeZone, 3600l * timeZone);
+  { time_t timeXXX = *timePtr + (3600l * timeZone);
+    //printf("time %li\n", timeXXX);    
+    return gmtime(&timeXXX);
   }
 }
 
@@ -320,7 +330,7 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
             break;
 
           case 'x':
-            sprintf(add, "%02d:%02d:%02d", tp->tm_hour,
+            sprintf(add, "%d:%d:%d", tp->tm_hour,
                     tp->tm_min, tp->tm_sec); 
             break;
 
@@ -355,11 +365,13 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
         add[1] = '\0';
       }
 
-      if ((strlen(s) + strlen(add)) < smax) {
-        strcat(s, add);
-      }
-      else {
-        break;
+      { int ss = strlen(s), sa = strlen(add);
+        if ((ss + sa) < smax) {
+          strcat(s, add);
+        }
+        else {
+          break;
+        }
       }
     }
   }

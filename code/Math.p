@@ -1,11 +1,11 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+   
+   
 
 
+    
 
-
-
-
-
+    
 
 
 extern double exp ( double x ) ;
@@ -38,12 +38,13 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
+  
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,1$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\errno.h,1$
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,0$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\errno.h,0$
+   
+   
 
 
 
@@ -104,30 +105,32 @@ FTELL , FSIZE , FREMOVE , FRENAME , FTEMPNAME , FTEMPFILE };
 
 extern int errno ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+   
+   
+
+          
+
+    
+    
+
+    
+    
+    
+
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,2$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
+   
+   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,3$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
-
-
-
-
+          
 
 double atof ( char * s ) ;
 int atoi ( char * s ) ;
@@ -149,8 +152,8 @@ void exit ( int status ) ;
 typedef void ( * FUNC_PTR ) ( void ) ;
 int atexit ( FUNC_PTR fcn ) ;
 
-
-
+    
+    
 
 int abs ( int value ) ;
 long labs ( long value ) ;
@@ -161,9 +164,9 @@ void * calloc ( int num , int size ) ;
 void free ( void * ptr ) ;
 
 void qsort ( void * valueList , int listSize , int valueSize ,
-int ( * compare ) ( const void * , const void * ) , ... ) ;
-
-void * bsearch ( const void * key , const void * valueList , int listSize , int valueSize ,
+int ( * compare ) ( const void * , const void * ) ) ;
+void * bsearch ( const void * key , const void * valueList ,
+int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
 int abs ( int value ) ;
@@ -180,13 +183,14 @@ long quot , rem ;
 } ldiv_t ;
 
 ldiv_t ldiv ( long num , long denum ) ;
+  
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,3$
+       
 
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Math.c,4$
-
-
-
-
+        
+    
 
 double exp ( double x ) {
 double index = 1 , term , sum = 1 , faculty = 1 , power = x ;
@@ -237,7 +241,7 @@ return 0 ;
 }
 }
 
-
+    
 
 
 double log10 ( double x ) {
@@ -275,7 +279,7 @@ return x * pow ( 2 , n ) ;
 }
 
 
-
+    
 
 static log2 ( double x ) {
 return log ( x ) / 0.6931471805599453094172321 ;
@@ -508,4 +512,3 @@ return ( double ) ( ( long ) ( ( x < 0 ) ? ( x - 0.5 ) : ( x + 0.5 ) ) ) ;
 double fabs ( double x ) {
 return ( x < 0 ) ? - x : x ;
 }
-
