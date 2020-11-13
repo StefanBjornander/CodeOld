@@ -533,465 +533,573 @@ mktime$29:	; return
 mktime$30:	; function end mktime
 1:	
 
+@30$leapSeconds:	; seconds = 0
+2:		mov word [bp + 10], 0
+4:	
+
+@30$leapSeconds$1:	; index = 0
+5:		mov word [bp + 12], 0
+7:	
+
+@30$leapSeconds$2:	; if index >= leapSize goto 23
+8:		mov ax, [@29$leapSize]
+9:		cmp [bp + 12], ax
+10:		jge @30$leapSeconds$23
+12:	
+
+@30$leapSeconds$3:	; call header integral zero 0 stack zero 0
+14:	
+
+@30$leapSeconds$4:	; parameter t, offset 6
+15:		mov eax, [bp + 6]
+16:		mov [bp + 20], eax
+18:	
+
+@30$leapSeconds$5:	; call header integral zero 0 stack zero 0
+20:	
+
+@30$leapSeconds$6:	; £temporary3505 = index * 18
+21:		mov ax, [bp + 12]
+23:		xor dx, dx
+24:		mul word [int2$18#]
+30:	
+
+@30$leapSeconds$7:	; £temporary3506 = leapList + £temporary3505
+31:		mov si, @28$leapList
+32:		add si, ax
+34:	
+
+@30$leapSeconds$8:	; £temporary3504 -> £temporary3506 = *£temporary3506
+36:	
+
+@30$leapSeconds$9:	; £temporary3507 = &£temporary3504 -> £temporary3506
+38:	
+
+@30$leapSeconds$10:	; parameter £temporary3507, offset 16
+39:		mov [bp + 30], si
+41:	
+
+@30$leapSeconds$11:	; call function noellipse-noellipse mktime
+42:		mov word [bp + 24], @30$leapSeconds$12
+43:		mov [bp + 26], bp
+44:		add bp, 24
+45:		jmp mktime
+47:	
+
+@30$leapSeconds$12:	; post call
+49:	
+
+@30$leapSeconds$13:	; £temporary3508 = return_value
+54:	
+
+@30$leapSeconds$14:	; parameter £temporary3508, offset 10
+55:		mov [bp + 24], ebx
+57:	
+
+@30$leapSeconds$15:	; call function noellipse-noellipse difftime
+58:		mov word [bp + 14], @30$leapSeconds$16
+59:		mov [bp + 16], bp
+60:		add bp, 14
+61:		jmp difftime
+63:	
+
+@30$leapSeconds$16:	; post call
+65:	
+
+@30$leapSeconds$17:	; £temporary3509 = return_value
+67:	
+
+@30$leapSeconds$18:	; push 0
+68:		fldz
+70:	
+
+@30$leapSeconds$19:	; if £temporary3509 < 0 goto 21
+71:		fcompp
+72:		fstsw ax
+73:		sahf
+74:		ja @30$leapSeconds$21
+76:	
+
+@30$leapSeconds$20:	; ++seconds
+77:		inc word [bp + 10]
+79:	
+
+@30$leapSeconds$21:	; ++index
+80:		inc word [bp + 12]
+82:	
+
+@30$leapSeconds$22:	; goto 2
+83:		jmp @30$leapSeconds$2
+85:	
+
+@30$leapSeconds$23:	; return_value = seconds
+86:		mov bx, [bp + 10]
+88:	
+
+@30$leapSeconds$24:	; return
+89:		mov ax, [bp]
+90:		mov di, [bp + 4]
+91:		mov bp, [bp + 2]
+92:		jmp ax
+94:	
+
+@30$leapSeconds$25:	; function end leapSeconds
+1:	
+
 gmtime:	; year = 1970
 2:		mov word [bp + 8], 1970
 4:	
 
-gmtime$1:	; if timePtr == 0 goto 86
+gmtime$1:	; if timePtr == 0 goto 85
 5:		cmp word [bp + 6], 0
-6:		je gmtime$86
+6:		je gmtime$85
 8:	
 
-gmtime$2:	; £temporary3502 -> timePtr = *timePtr
+gmtime$2:	; £temporary3516 -> timePtr = *timePtr
 9:		mov si, [bp + 6]
 11:	
 
-gmtime$3:	; time = £temporary3502 -> timePtr
+gmtime$3:	; time = £temporary3516 -> timePtr
 12:		mov eax, [si]
 13:		mov [bp + 10], eax
 15:	
 
-gmtime$4:	; secondsOfDay = time % 86400
+gmtime$4:	; totalDays = time / 86400
 16:		mov eax, [bp + 10]
 18:		xor edx, edx
 19:		idiv dword [int4$86400#]
-20:		mov [bp + 14], edx
+20:		mov [bp + 14], eax
 22:	
 
-gmtime$5:	; totalDays = time / 86400
+gmtime$5:	; secondsOfDay = time % 86400
 23:		mov eax, [bp + 10]
 25:		xor edx, edx
 26:		idiv dword [int4$86400#]
-27:		mov [bp + 18], eax
+27:		mov [bp + 18], edx
 29:	
 
-gmtime$6:	; £temporary3506 = secondsOfDay / 3600
-30:		mov eax, [bp + 14]
+gmtime$6:	; secondsOfHour = secondsOfDay % 3600
+30:		mov eax, [bp + 18]
 32:		xor edx, edx
 33:		idiv dword [int4$3600#]
-39:	
+34:		mov [bp + 22], edx
+36:	
 
-gmtime$7:	; £temporary3507 = int_to_int £temporary3506 (Signed_Long_Int -> Signed_Int)
-42:		cmp eax, 0
-43:		jge gmtime$8
-44:		neg eax
-46:		neg ax
-48:	
+gmtime$7:	; £temporary3521 = secondsOfDay / 3600
+37:		mov eax, [bp + 18]
+39:		xor edx, edx
+40:		idiv dword [int4$3600#]
+46:	
 
-gmtime$8:	; g_timeStruct$tm_hour = £temporary3507
-49:		mov [@27$g_timeStruct + 4], ax
-51:	
+gmtime$8:	; £temporary3522 = int_to_int £temporary3521 (Signed_Long_Int -> Signed_Int)
+49:		cmp eax, 0
+50:		jge gmtime$9
+51:		neg eax
+53:		neg ax
+55:	
 
-gmtime$9:	; £temporary3509 = secondsOfDay % 3600
-52:		mov eax, [bp + 14]
-54:		xor edx, edx
-55:		idiv dword [int4$3600#]
-61:	
+gmtime$9:	; g_timeStruct$tm_hour = £temporary3522
+56:		mov [@27$g_timeStruct + 4], ax
+58:	
 
-gmtime$10:	; £temporary3510 = £temporary3509 / 60
-62:		mov eax, edx
-64:		xor edx, edx
-65:		idiv dword [int4$60#]
-71:	
+gmtime$10:	; £temporary3524 = secondsOfHour / 60
+59:		mov eax, [bp + 22]
+61:		xor edx, edx
+62:		idiv dword [int4$60#]
+68:	
 
-gmtime$11:	; £temporary3511 = int_to_int £temporary3510 (Signed_Long_Int -> Signed_Int)
-74:		cmp eax, 0
-75:		jge gmtime$12
-76:		neg eax
-78:		neg ax
+gmtime$11:	; £temporary3525 = int_to_int £temporary3524 (Signed_Long_Int -> Signed_Int)
+71:		cmp eax, 0
+72:		jge gmtime$12
+73:		neg eax
+75:		neg ax
+77:	
+
+gmtime$12:	; g_timeStruct$tm_min = £temporary3525
+78:		mov [@27$g_timeStruct + 2], ax
 80:	
 
-gmtime$12:	; g_timeStruct$tm_min = £temporary3511
-81:		mov [@27$g_timeStruct + 2], ax
-83:	
+gmtime$13:	; £temporary3527 = secondsOfHour % 60
+81:		mov eax, [bp + 22]
+83:		xor edx, edx
+84:		idiv dword [int4$60#]
+90:	
 
-gmtime$13:	; £temporary3513 = secondsOfDay % 3600
-84:		mov eax, [bp + 14]
-86:		xor edx, edx
-87:		idiv dword [int4$3600#]
-93:	
+gmtime$14:	; £temporary3528 = int_to_int £temporary3527 (Signed_Long_Int -> Signed_Int)
+93:		cmp edx, 0
+94:		jge gmtime$15
+95:		neg edx
+97:		neg dx
+99:	
 
-gmtime$14:	; £temporary3514 = £temporary3513 % 60
-94:		mov eax, edx
-96:		xor edx, edx
-97:		idiv dword [int4$60#]
-103:	
+gmtime$15:	; g_timeStruct$tm_sec = £temporary3528
+100:		mov [@27$g_timeStruct], dx
+102:	
 
-gmtime$15:	; £temporary3515 = int_to_int £temporary3514 (Signed_Long_Int -> Signed_Int)
-106:		cmp edx, 0
-107:		jge gmtime$16
-108:		neg edx
-110:		neg dx
-112:	
+gmtime$16:	; if totalDays >= 3 goto 21
+103:		cmp dword [bp + 14], 3
+104:		jge gmtime$21
+106:	
 
-gmtime$16:	; g_timeStruct$tm_sec = £temporary3515
-113:		mov [@27$g_timeStruct], dx
-115:	
+gmtime$17:	; £temporary3531 = totalDays + 4
+107:		mov eax, [bp + 14]
+108:		add eax, 4
+110:	
 
-gmtime$17:	; if totalDays >= 3 goto 22
-116:		cmp dword [bp + 18], 3
-117:		jge gmtime$22
+gmtime$18:	; £temporary3532 = int_to_int £temporary3531 (Signed_Long_Int -> Signed_Int)
+113:		cmp eax, 0
+114:		jge gmtime$19
+115:		neg eax
+117:		neg ax
 119:	
 
-gmtime$18:	; £temporary3518 = totalDays + 4
-120:		mov eax, [bp + 18]
-121:		add eax, 4
-123:	
+gmtime$19:	; g_timeStruct$tm_wday = £temporary3532
+120:		mov [@27$g_timeStruct + 12], ax
+122:	
 
-gmtime$19:	; £temporary3519 = int_to_int £temporary3518 (Signed_Long_Int -> Signed_Int)
-126:		cmp eax, 0
-127:		jge gmtime$20
-128:		neg eax
-130:		neg ax
-132:	
+gmtime$20:	; goto 25
+123:		jmp gmtime$25
+125:	
 
-gmtime$20:	; g_timeStruct$tm_wday = £temporary3519
-133:		mov [@27$g_timeStruct + 12], ax
-135:	
+gmtime$21:	; £temporary3534 = totalDays - 3
+126:		mov eax, [bp + 14]
+127:		sub eax, 3
+129:	
 
-gmtime$21:	; goto 26
-136:		jmp gmtime$26
+gmtime$22:	; £temporary3535 = £temporary3534 % 7
+131:		xor edx, edx
+132:		idiv dword [int4$7#]
 138:	
 
-gmtime$22:	; £temporary3521 = totalDays - 3
-139:		mov eax, [bp + 18]
-140:		sub eax, 3
-142:	
+gmtime$23:	; £temporary3536 = int_to_int £temporary3535 (Signed_Long_Int -> Signed_Int)
+141:		cmp edx, 0
+142:		jge gmtime$24
+143:		neg edx
+145:		neg dx
+147:	
 
-gmtime$23:	; £temporary3522 = £temporary3521 % 7
-144:		xor edx, edx
-145:		idiv dword [int4$7#]
-151:	
+gmtime$24:	; g_timeStruct$tm_wday = £temporary3536
+148:		mov [@27$g_timeStruct + 12], dx
+150:	
 
-gmtime$24:	; £temporary3523 = int_to_int £temporary3522 (Signed_Long_Int -> Signed_Int)
-154:		cmp edx, 0
-155:		jge gmtime$25
-156:		neg edx
-158:		neg dx
+gmtime$25:	; £temporary3537 = year % 4
+151:		mov ax, [bp + 8]
+153:		xor dx, dx
+154:		idiv word [int2$4#]
 160:	
 
-gmtime$25:	; g_timeStruct$tm_wday = £temporary3523
-161:		mov [@27$g_timeStruct + 12], dx
-163:	
+gmtime$26:	; if £temporary3537 != 0 goto 29
+161:		cmp dx, 0
+162:		jne gmtime$29
+164:	
 
-gmtime$26:	; £temporary3524 = year % 4
-164:		mov ax, [bp + 8]
-166:		xor dx, dx
-167:		idiv word [int2$4#]
-173:	
+gmtime$27:	; £temporary3539 = year % 100
+165:		mov ax, [bp + 8]
+167:		xor dx, dx
+168:		idiv word [int2$100#]
+174:	
 
-gmtime$27:	; if £temporary3524 != 0 goto 30
-174:		cmp dx, 0
-175:		jne gmtime$30
-177:	
+gmtime$28:	; if £temporary3539 != 0 goto 31
+175:		cmp dx, 0
+176:		jne gmtime$31
+178:	
 
-gmtime$28:	; £temporary3526 = year % 100
-178:		mov ax, [bp + 8]
-180:		xor dx, dx
-181:		idiv word [int2$100#]
-187:	
+gmtime$29:	; £temporary3542 = year % 400
+179:		mov ax, [bp + 8]
+181:		xor dx, dx
+182:		idiv word [int2$400#]
+188:	
 
-gmtime$29:	; if £temporary3526 != 0 goto 32
-188:		cmp dx, 0
-189:		jne gmtime$32
-191:	
+gmtime$30:	; if £temporary3542 != 0 goto 33
+189:		cmp dx, 0
+190:		jne gmtime$33
+192:	
 
-gmtime$30:	; £temporary3529 = year % 400
-192:		mov ax, [bp + 8]
-194:		xor dx, dx
-195:		idiv word [int2$400#]
+gmtime$31:	; £temporary3545 = 1
+193:		mov ax, 1
+195:	
+
+gmtime$32:	; goto 34
+196:		jmp gmtime$34
+198:	
+
+gmtime$33:	; £temporary3545 = 0
+199:		mov ax, 0
 201:	
 
-gmtime$31:	; if £temporary3529 != 0 goto 34
-202:		cmp dx, 0
-203:		jne gmtime$34
-205:	
+gmtime$34:	; leapYear = £temporary3545
+202:		mov [bp + 26], ax
+204:	
 
-gmtime$32:	; £temporary3532 = 1
-206:		mov ax, 1
+gmtime$35:	; if leapYear == 0 goto 38
+205:		cmp word [bp + 26], 0
+206:		je gmtime$38
 208:	
 
-gmtime$33:	; goto 35
-209:		jmp gmtime$35
+gmtime$36:	; £temporary3550 = 366
+209:		mov ax, 366
 211:	
 
-gmtime$34:	; £temporary3532 = 0
-212:		mov ax, 0
+gmtime$37:	; goto 39
+212:		jmp gmtime$39
 214:	
 
-gmtime$35:	; leapYear = £temporary3532
-215:		mov [bp + 22], ax
+gmtime$38:	; £temporary3550 = 365
+215:		mov ax, 365
 217:	
 
-gmtime$36:	; if leapYear == 0 goto 39
-218:		cmp word [bp + 22], 0
-219:		je gmtime$39
-221:	
+gmtime$39:	; daysOfYear = £temporary3550
+218:		mov [bp + 28], ax
+220:	
 
-gmtime$37:	; £temporary3537 = 366
-222:		mov ax, 366
-224:	
+gmtime$40:	; £temporary3551 = int_to_int daysOfYear (Signed_Int -> Signed_Long_Int)
+221:		mov ax, [bp + 28]
+223:		and eax, 65535
+225:		cmp ax, 0
+226:		jge gmtime$41
+227:		neg ax
+229:		neg eax
+231:	
 
-gmtime$38:	; goto 40
-225:		jmp gmtime$40
-227:	
+gmtime$41:	; if totalDays >= £temporary3551 goto 81
+232:		cmp [bp + 14], eax
+233:		jge gmtime$81
+235:	
 
-gmtime$39:	; £temporary3537 = 365
-228:		mov ax, 365
-230:	
+gmtime$42:	; daysOfMonths[0] = 31
+236:		mov word [bp + 30], 31
+238:	
 
-gmtime$40:	; daysOfYear = £temporary3537
-231:		mov [bp + 24], ax
-233:	
+gmtime$43:	; if leapYear == 0 goto 46
+239:		cmp word [bp + 26], 0
+240:		je gmtime$46
+242:	
 
-gmtime$41:	; £temporary3538 = int_to_int daysOfYear (Signed_Int -> Signed_Long_Int)
-234:		mov ax, [bp + 24]
-236:		and eax, 65535
-238:		cmp ax, 0
-239:		jge gmtime$42
-240:		neg ax
-242:		neg eax
-244:	
+gmtime$44:	; £temporary3557 = 29
+243:		mov ax, 29
+245:	
 
-gmtime$42:	; if totalDays >= £temporary3538 goto 82
-245:		cmp [bp + 18], eax
-246:		jge gmtime$82
+gmtime$45:	; goto 47
+246:		jmp gmtime$47
 248:	
 
-gmtime$43:	; daysOfMonths[0] = 31
-249:		mov word [bp + 26], 31
+gmtime$46:	; £temporary3557 = 28
+249:		mov ax, 28
 251:	
 
-gmtime$44:	; if leapYear == 0 goto 47
-252:		cmp word [bp + 22], 0
-253:		je gmtime$47
-255:	
+gmtime$47:	; daysOfMonths[1] = £temporary3557
+252:		mov [bp + 32], ax
+254:	
 
-gmtime$45:	; £temporary3544 = 29
-256:		mov ax, 29
-258:	
+gmtime$48:	; daysOfMonths[2] = 31
+255:		mov word [bp + 34], 31
+257:	
 
-gmtime$46:	; goto 48
-259:		jmp gmtime$48
-261:	
+gmtime$49:	; daysOfMonths[3] = 30
+258:		mov word [bp + 36], 30
+260:	
 
-gmtime$47:	; £temporary3544 = 28
-262:		mov ax, 28
-264:	
+gmtime$50:	; daysOfMonths[4] = 31
+261:		mov word [bp + 38], 31
+263:	
 
-gmtime$48:	; daysOfMonths[1] = £temporary3544
-265:		mov [bp + 28], ax
-267:	
+gmtime$51:	; daysOfMonths[5] = 30
+264:		mov word [bp + 40], 30
+266:	
 
-gmtime$49:	; daysOfMonths[2] = 31
-268:		mov word [bp + 30], 31
-270:	
+gmtime$52:	; daysOfMonths[6] = 30
+267:		mov word [bp + 42], 30
+269:	
 
-gmtime$50:	; daysOfMonths[3] = 30
-271:		mov word [bp + 32], 30
-273:	
+gmtime$53:	; daysOfMonths[7] = 31
+270:		mov word [bp + 44], 31
+272:	
 
-gmtime$51:	; daysOfMonths[4] = 31
-274:		mov word [bp + 34], 31
-276:	
+gmtime$54:	; daysOfMonths[8] = 30
+273:		mov word [bp + 46], 30
+275:	
 
-gmtime$52:	; daysOfMonths[5] = 30
-277:		mov word [bp + 36], 30
-279:	
+gmtime$55:	; daysOfMonths[9] = 31
+276:		mov word [bp + 48], 31
+278:	
 
-gmtime$53:	; daysOfMonths[6] = 30
-280:		mov word [bp + 38], 30
-282:	
+gmtime$56:	; daysOfMonths[10] = 30
+279:		mov word [bp + 50], 30
+281:	
 
-gmtime$54:	; daysOfMonths[7] = 31
-283:		mov word [bp + 40], 31
-285:	
+gmtime$57:	; daysOfMonths[11] = 31
+282:		mov word [bp + 52], 31
+284:	
 
-gmtime$55:	; daysOfMonths[8] = 30
-286:		mov word [bp + 42], 30
-288:	
+gmtime$58:	; month = 0
+285:		mov word [bp + 54], 0
+287:	
 
-gmtime$56:	; daysOfMonths[9] = 31
-289:		mov word [bp + 44], 31
-291:	
+gmtime$59:	; g_timeStruct$tm_year = year - 1900
+288:		mov ax, [bp + 8]
+289:		sub ax, 1900
+290:		mov [@27$g_timeStruct], ax
+292:	
 
-gmtime$57:	; daysOfMonths[10] = 30
-292:		mov word [bp + 46], 30
-294:	
+gmtime$60:	; £temporary3573 = int_to_int totalDays (Signed_Long_Int -> Signed_Int)
+293:		mov eax, [bp + 14]
+296:		cmp eax, 0
+297:		jge gmtime$61
+298:		neg eax
+300:		neg ax
+302:	
 
-gmtime$58:	; daysOfMonths[11] = 31
-295:		mov word [bp + 48], 31
-297:	
-
-gmtime$59:	; month = 0
-298:		mov word [bp + 50], 0
-300:	
-
-gmtime$60:	; g_timeStruct$tm_year = year - 1900
-301:		mov ax, [bp + 8]
-302:		sub ax, 1900
-303:		mov [@27$g_timeStruct], ax
+gmtime$61:	; g_timeStruct$tm_yday = £temporary3573
+303:		mov [@27$g_timeStruct + 14], ax
 305:	
 
-gmtime$61:	; £temporary3560 = int_to_int totalDays (Signed_Long_Int -> Signed_Int)
-306:		mov eax, [bp + 18]
-309:		cmp eax, 0
-310:		jge gmtime$62
-311:		neg eax
-313:		neg ax
+gmtime$62:	; £temporary3575 = month * 2
+306:		mov ax, [bp + 54]
+308:		xor dx, dx
+309:		mul word [int2$2#]
 315:	
 
-gmtime$62:	; g_timeStruct$tm_yday = £temporary3560
-316:		mov [@27$g_timeStruct + 14], ax
-318:	
+gmtime$63:	; £temporary3576 = daysOfMonths + £temporary3575
+316:		mov si, bp
+317:		add si, 30
+318:		add si, ax
+320:	
 
-gmtime$63:	; £temporary3562 = month * 2
-319:		mov ax, [bp + 50]
-321:		xor dx, dx
-322:		mul word [int2$2#]
-328:	
+gmtime$64:	; £temporary3574 -> £temporary3576 = *£temporary3576
+322:	
 
-gmtime$64:	; £temporary3563 = daysOfMonths + £temporary3562
-329:		mov si, bp
-330:		add si, 26
-331:		add si, ax
+gmtime$65:	; £temporary3577 = int_to_int £temporary3574 -> £temporary3576 (Signed_Int -> Signed_Long_Int)
+323:		mov ax, [si]
+325:		and eax, 65535
+327:		cmp ax, 0
+328:		jge gmtime$66
+329:		neg ax
+331:		neg eax
 333:	
 
-gmtime$65:	; £temporary3561 -> £temporary3563 = *£temporary3563
-335:	
+gmtime$66:	; if totalDays < £temporary3577 goto 74
+334:		cmp [bp + 14], eax
+335:		jl gmtime$74
+337:	
 
-gmtime$66:	; £temporary3564 = int_to_int £temporary3561 -> £temporary3563 (Signed_Int -> Signed_Long_Int)
-336:		mov ax, [si]
-338:		and eax, 65535
-340:		cmp ax, 0
-341:		jge gmtime$67
-342:		neg ax
-344:		neg eax
-346:	
+gmtime$67:	; £temporary3580 = month * 2
+338:		mov ax, [bp + 54]
+340:		xor dx, dx
+341:		mul word [int2$2#]
+347:	
 
-gmtime$67:	; if totalDays < £temporary3564 goto 75
-347:		cmp [bp + 18], eax
-348:		jl gmtime$75
-350:	
+gmtime$68:	; £temporary3581 = daysOfMonths + £temporary3580
+348:		mov si, bp
+349:		add si, 30
+350:		add si, ax
+352:	
 
-gmtime$68:	; £temporary3567 = month * 2
-351:		mov ax, [bp + 50]
-353:		xor dx, dx
-354:		mul word [int2$2#]
-360:	
+gmtime$69:	; £temporary3579 -> £temporary3581 = *£temporary3581
+354:	
 
-gmtime$69:	; £temporary3568 = daysOfMonths + £temporary3567
-361:		mov si, bp
-362:		add si, 26
-363:		add si, ax
+gmtime$70:	; £temporary3582 = int_to_int £temporary3579 -> £temporary3581 (Signed_Int -> Signed_Long_Int)
+355:		mov ax, [si]
+357:		and eax, 65535
+359:		cmp ax, 0
+360:		jge gmtime$71
+361:		neg ax
+363:		neg eax
 365:	
 
-gmtime$70:	; £temporary3566 -> £temporary3568 = *£temporary3568
-367:	
+gmtime$71:	; totalDays = totalDays - £temporary3582
+366:		sub [bp + 14], eax
+368:	
 
-gmtime$71:	; £temporary3569 = int_to_int £temporary3566 -> £temporary3568 (Signed_Int -> Signed_Long_Int)
-368:		mov ax, [si]
-370:		and eax, 65535
-372:		cmp ax, 0
-373:		jge gmtime$72
-374:		neg ax
-376:		neg eax
+gmtime$72:	; ++month
+369:		inc word [bp + 54]
+371:	
+
+gmtime$73:	; goto 62
+372:		jmp gmtime$62
+374:	
+
+gmtime$74:	; g_timeStruct$tm_mon = month
+375:		mov ax, [bp + 54]
+376:		mov [@27$g_timeStruct + 8], ax
 378:	
 
-gmtime$72:	; totalDays = totalDays - £temporary3569
-379:		sub [bp + 18], eax
-381:	
+gmtime$75:	; £temporary3587 = totalDays + 1
+379:		mov eax, [bp + 14]
+380:		add eax, 1
+382:	
 
-gmtime$73:	; ++month
-382:		inc word [bp + 50]
-384:	
-
-gmtime$74:	; goto 63
-385:		jmp gmtime$63
-387:	
-
-gmtime$75:	; g_timeStruct$tm_mon = month
-388:		mov ax, [bp + 50]
-389:		mov [@27$g_timeStruct + 8], ax
+gmtime$76:	; £temporary3588 = int_to_int £temporary3587 (Signed_Long_Int -> Signed_Int)
+385:		cmp eax, 0
+386:		jge gmtime$77
+387:		neg eax
+389:		neg ax
 391:	
 
-gmtime$76:	; £temporary3574 = totalDays + 1
-392:		mov eax, [bp + 18]
-393:		add eax, 1
-395:	
+gmtime$77:	; g_timeStruct$tm_mday = £temporary3588
+392:		mov [@27$g_timeStruct + 6], ax
+394:	
 
-gmtime$77:	; £temporary3575 = int_to_int £temporary3574 (Signed_Long_Int -> Signed_Int)
-398:		cmp eax, 0
-399:		jge gmtime$78
-400:		neg eax
-402:		neg ax
-404:	
+gmtime$78:	; g_timeStruct$tm_isdst = -1
+395:		mov word [@27$g_timeStruct + 16], -1
+397:	
 
-gmtime$78:	; g_timeStruct$tm_mday = £temporary3575
-405:		mov [@27$g_timeStruct + 6], ax
-407:	
+gmtime$79:	; return_value = (@27$g_timeStruct,0)
+398:		mov bx, @27$g_timeStruct
+400:	
 
-gmtime$79:	; g_timeStruct$tm_isdst = -1
-408:		mov word [@27$g_timeStruct + 16], -1
-410:	
+gmtime$80:	; return
+401:		mov ax, [bp]
+402:		mov di, [bp + 4]
+403:		mov bp, [bp + 2]
+404:		jmp ax
+406:	
 
-gmtime$80:	; return_value = (@27$g_timeStruct,0)
-411:		mov bx, @27$g_timeStruct
-413:	
+gmtime$81:	; ++year
+407:		inc word [bp + 8]
+409:	
 
-gmtime$81:	; return
-414:		mov ax, [bp]
-415:		mov di, [bp + 4]
-416:		mov bp, [bp + 2]
-417:		jmp ax
-419:	
+gmtime$82:	; £temporary3591 = int_to_int daysOfYear (Signed_Int -> Signed_Long_Int)
+410:		mov ax, [bp + 28]
+412:		and eax, 65535
+414:		cmp ax, 0
+415:		jge gmtime$83
+416:		neg ax
+418:		neg eax
+420:	
 
-gmtime$82:	; ++year
-420:		inc word [bp + 8]
-422:	
+gmtime$83:	; totalDays = totalDays - £temporary3591
+421:		sub [bp + 14], eax
+423:	
 
-gmtime$83:	; £temporary3578 = int_to_int daysOfYear (Signed_Int -> Signed_Long_Int)
-423:		mov ax, [bp + 24]
-425:		and eax, 65535
-427:		cmp ax, 0
-428:		jge gmtime$84
-429:		neg ax
-431:		neg eax
-433:	
+gmtime$84:	; goto 25
+424:		jmp gmtime$25
+426:	
 
-gmtime$84:	; totalDays = totalDays - £temporary3578
-434:		sub [bp + 18], eax
-436:	
+gmtime$85:	; return_value = 0
+427:		mov bx, 0
+429:	
 
-gmtime$85:	; goto 26
-437:		jmp gmtime$26
-439:	
+gmtime$86:	; return
+430:		mov ax, [bp]
+431:		mov di, [bp + 4]
+432:		mov bp, [bp + 2]
+433:		jmp ax
+435:	
 
-gmtime$86:	; return_value = 0
-440:		mov bx, 0
-442:	
-
-gmtime$87:	; return
-443:		mov ax, [bp]
-444:		mov di, [bp + 4]
-445:		mov bp, [bp + 2]
-446:		jmp ax
-448:	
-
-gmtime$88:	; function end gmtime
+gmtime$87:	; function end gmtime
 1:	
 
-difftime:	; £temporary3581 = time2 - time1
+difftime:	; £temporary3594 = time2 - time1
 2:		mov eax, [bp + 10]
 3:		sub eax, [bp + 6]
 5:	
 
-difftime$1:	; £temporary3582 = int_to_float £temporary3581 (Unsigned_Long_Int -> Double)
+difftime$1:	; £temporary3595 = int_to_float £temporary3594 (Unsigned_Long_Int -> Double)
 6:		mov [container4bytes#], eax
 7:		fild dword [container4bytes#]
 9:	
 
-difftime$2:	; return_value = £temporary3582
+difftime$2:	; return_value = £temporary3595
 11:	
 
 difftime$3:	; return
@@ -1013,11 +1121,11 @@ asctime$1:	; if localeConvPtr == 0 goto 5
 6:		je asctime$5
 8:	
 
-asctime$2:	; £temporary3584 -> localeConvPtr = *localeConvPtr, offset 4
+asctime$2:	; £temporary3597 -> localeConvPtr = *localeConvPtr, offset 4
 9:		mov si, [bp + 8]
 11:	
 
-asctime$3:	; £temporary3588 = £temporary3584 -> localeConvPtr
+asctime$3:	; £temporary3601 = £temporary3597 -> localeConvPtr
 12:		mov ax, [si + 4]
 14:	
 
@@ -1025,11 +1133,11 @@ asctime$4:	; goto 6
 15:		jmp asctime$6
 17:	
 
-asctime$5:	; £temporary3588 = 0
+asctime$5:	; £temporary3601 = 0
 18:		mov ax, 0
 20:	
 
-asctime$6:	; shortDayList = £temporary3588
+asctime$6:	; shortDayList = £temporary3601
 21:		mov [bp + 10], ax
 23:	
 
@@ -1038,11 +1146,11 @@ asctime$7:	; if localeConvPtr == 0 goto 11
 25:		je asctime$11
 27:	
 
-asctime$8:	; £temporary3590 -> localeConvPtr = *localeConvPtr, offset 8
+asctime$8:	; £temporary3603 -> localeConvPtr = *localeConvPtr, offset 8
 28:		mov si, [bp + 8]
 30:	
 
-asctime$9:	; £temporary3594 = £temporary3590 -> localeConvPtr
+asctime$9:	; £temporary3607 = £temporary3603 -> localeConvPtr
 31:		mov ax, [si + 8]
 33:	
 
@@ -1050,11 +1158,11 @@ asctime$10:	; goto 12
 34:		jmp asctime$12
 36:	
 
-asctime$11:	; £temporary3594 = 0
+asctime$11:	; £temporary3607 = 0
 37:		mov ax, 0
 39:	
 
-asctime$12:	; shortMonthList = £temporary3594
+asctime$12:	; shortMonthList = £temporary3607
 40:		mov [bp + 12], ax
 42:	
 
@@ -1063,7 +1171,7 @@ asctime$13:	; if shortDayList == 0 goto 16
 44:		je asctime$16
 46:	
 
-asctime$14:	; £temporary3599 = shortDayList
+asctime$14:	; £temporary3612 = shortDayList
 47:		mov ax, [bp + 10]
 49:	
 
@@ -1071,11 +1179,11 @@ asctime$15:	; goto 17
 50:		jmp asctime$17
 52:	
 
-asctime$16:	; £temporary3599 = g_defaultShortDayList
-53:		mov ax, @29$g_defaultShortDayList
+asctime$16:	; £temporary3612 = g_defaultShortDayList
+53:		mov ax, @32$g_defaultShortDayList
 55:	
 
-asctime$17:	; shortDayList = £temporary3599
+asctime$17:	; shortDayList = £temporary3612
 56:		mov [bp + 10], ax
 58:	
 
@@ -1084,7 +1192,7 @@ asctime$18:	; if shortMonthList == 0 goto 21
 60:		je asctime$21
 62:	
 
-asctime$19:	; £temporary3604 = shortMonthList
+asctime$19:	; £temporary3617 = shortMonthList
 63:		mov ax, [bp + 12]
 65:	
 
@@ -1092,11 +1200,11 @@ asctime$20:	; goto 22
 66:		jmp asctime$22
 68:	
 
-asctime$21:	; £temporary3604 = g_defaultShortMonthList
-69:		mov ax, @31$g_defaultShortMonthList
+asctime$21:	; £temporary3617 = g_defaultShortMonthList
+69:		mov ax, @34$g_defaultShortMonthList
 71:	
 
-asctime$22:	; shortMonthList = £temporary3604
+asctime$22:	; shortMonthList = £temporary3617
 72:		mov [bp + 12], ax
 74:	
 
@@ -1104,105 +1212,105 @@ asctime$23:	; call header integral zero 0 stack zero 0
 76:	
 
 asctime$24:	; parameter g_timeString, offset 6
-77:		mov word [bp + 20], @28$g_timeString
+77:		mov word [bp + 20], @31$g_timeString
 79:	
 
-asctime$25:	; parameter string_25s2025s20252i202502i3A2502i3A2502i202504i#, offset 8
-80:		mov word [bp + 22], string_25s2025s20252i202502i3A2502i3A2502i202504i#
+asctime$25:	; parameter string_25s2025s2025i2025i3A25i3A25i2025i#, offset 8
+80:		mov word [bp + 22], string_25s2025s2025i2025i3A25i3A25i2025i#
 82:	
 
-asctime$26:	; £temporary3605 -> tp = *tp, offset 12
+asctime$26:	; £temporary3618 -> tp = *tp, offset 12
 83:		mov si, [bp + 6]
 85:	
 
-asctime$27:	; £temporary3607 = £temporary3605 -> tp * 2
+asctime$27:	; £temporary3620 = £temporary3618 -> tp * 2
 86:		mov ax, [si + 12]
 88:		xor dx, dx
 89:		mul word [int2$2#]
 95:	
 
-asctime$28:	; £temporary3608 = shortDayList + £temporary3607
+asctime$28:	; £temporary3621 = shortDayList + £temporary3620
 96:		mov si, [bp + 10]
 97:		add si, ax
 99:	
 
-asctime$29:	; £temporary3606 -> £temporary3608 = *£temporary3608
+asctime$29:	; £temporary3619 -> £temporary3621 = *£temporary3621
 101:	
 
-asctime$30:	; parameter £temporary3606 -> £temporary3608, offset 10
+asctime$30:	; parameter £temporary3619 -> £temporary3621, offset 10
 102:		mov ax, [si]
 103:		mov [bp + 24], ax
 105:	
 
-asctime$31:	; £temporary3609 -> tp = *tp, offset 8
+asctime$31:	; £temporary3622 -> tp = *tp, offset 8
 106:		mov si, [bp + 6]
 108:	
 
-asctime$32:	; £temporary3611 = £temporary3609 -> tp * 2
+asctime$32:	; £temporary3624 = £temporary3622 -> tp * 2
 109:		mov ax, [si + 8]
 111:		xor dx, dx
 112:		mul word [int2$2#]
 118:	
 
-asctime$33:	; £temporary3612 = shortMonthList + £temporary3611
+asctime$33:	; £temporary3625 = shortMonthList + £temporary3624
 119:		mov si, [bp + 12]
 120:		add si, ax
 122:	
 
-asctime$34:	; £temporary3610 -> £temporary3612 = *£temporary3612
+asctime$34:	; £temporary3623 -> £temporary3625 = *£temporary3625
 124:	
 
-asctime$35:	; parameter £temporary3610 -> £temporary3612, offset 12
+asctime$35:	; parameter £temporary3623 -> £temporary3625, offset 12
 125:		mov ax, [si]
 126:		mov [bp + 26], ax
 128:	
 
-asctime$36:	; £temporary3613 -> tp = *tp, offset 6
+asctime$36:	; £temporary3626 -> tp = *tp, offset 6
 129:		mov si, [bp + 6]
 131:	
 
-asctime$37:	; parameter £temporary3613 -> tp, offset 14
+asctime$37:	; parameter £temporary3626 -> tp, offset 14
 132:		mov ax, [si + 6]
 133:		mov [bp + 28], ax
 135:	
 
-asctime$38:	; £temporary3614 -> tp = *tp, offset 4
+asctime$38:	; £temporary3627 -> tp = *tp, offset 4
 136:		mov si, [bp + 6]
 138:	
 
-asctime$39:	; parameter £temporary3614 -> tp, offset 16
+asctime$39:	; parameter £temporary3627 -> tp, offset 16
 139:		mov ax, [si + 4]
 140:		mov [bp + 30], ax
 142:	
 
-asctime$40:	; £temporary3615 -> tp = *tp, offset 2
+asctime$40:	; £temporary3628 -> tp = *tp, offset 2
 143:		mov si, [bp + 6]
 145:	
 
-asctime$41:	; parameter £temporary3615 -> tp, offset 18
+asctime$41:	; parameter £temporary3628 -> tp, offset 18
 146:		mov ax, [si + 2]
 147:		mov [bp + 32], ax
 149:	
 
-asctime$42:	; £temporary3616 -> tp = *tp
+asctime$42:	; £temporary3629 -> tp = *tp
 150:		mov si, [bp + 6]
 152:	
 
-asctime$43:	; parameter £temporary3616 -> tp, offset 20
+asctime$43:	; parameter £temporary3629 -> tp, offset 20
 153:		mov ax, [si]
 154:		mov [bp + 34], ax
 156:	
 
-asctime$44:	; £temporary3617 -> tp = *tp, offset 10
+asctime$44:	; £temporary3630 -> tp = *tp, offset 10
 157:		mov si, [bp + 6]
 159:	
 
-asctime$45:	; £temporary3618 = £temporary3617 -> tp + 1900
+asctime$45:	; £temporary3631 = £temporary3630 -> tp + 1900
 160:		mov ax, [si + 10]
 161:		add ax, 1900
 163:	
 
-asctime$46:	; parameter £temporary3618, offset 22
+asctime$46:	; parameter £temporary3631, offset 22
 164:		mov [bp + 36], ax
 166:	
 
@@ -1219,7 +1327,7 @@ asctime$48:	; post call
 176:	
 
 asctime$49:	; return_value = g_timeString
-177:		mov bx, @28$g_timeString
+177:		mov bx, @31$g_timeString
 179:	
 
 asctime$50:	; return
@@ -1253,10 +1361,10 @@ ctime$3:	; call function noellipse-noellipse localtime
 ctime$4:	; post call
 17:	
 
-ctime$5:	; £temporary3629 = return_value
+ctime$5:	; £temporary3642 = return_value
 22:	
 
-ctime$6:	; parameter £temporary3629, offset 6
+ctime$6:	; parameter £temporary3642, offset 6
 23:		mov [bp + 14], bx
 25:	
 
@@ -1270,10 +1378,10 @@ ctime$7:	; call function noellipse-noellipse asctime
 ctime$8:	; post call
 33:	
 
-ctime$9:	; £temporary3630 = return_value
+ctime$9:	; £temporary3643 = return_value
 38:	
 
-ctime$10:	; return_value = £temporary3630
+ctime$10:	; return_value = £temporary3643
 40:	
 
 ctime$11:	; return
@@ -1304,10 +1412,10 @@ localtime$2:	; call function noellipse-noellipse gmtime
 localtime$3:	; post call
 15:	
 
-localtime$4:	; £temporary3633 = return_value
+localtime$4:	; £temporary3646 = return_value
 20:	
 
-localtime$5:	; tmPtr = £temporary3633
+localtime$5:	; tmPtr = £temporary3646
 21:		mov [bp + 8], bx
 23:	
 
@@ -1324,10 +1432,10 @@ localtime$7:	; call function noellipse-noellipse localeconv
 localtime$8:	; post call
 33:	
 
-localtime$9:	; £temporary3634 = return_value
+localtime$9:	; £temporary3647 = return_value
 38:	
 
-localtime$10:	; localeConvPtr = £temporary3634
+localtime$10:	; localeConvPtr = £temporary3647
 39:		mov [bp + 10], bx
 41:	
 
@@ -1340,20 +1448,20 @@ localtime$12:	; if localeConvPtr == 0 goto 21
 46:		je localtime$21
 48:	
 
-localtime$13:	; £temporary3636 -> tmPtr = *tmPtr, offset 16
+localtime$13:	; £temporary3649 -> tmPtr = *tmPtr, offset 16
 49:		mov si, [bp + 8]
 51:	
 
-localtime$14:	; if £temporary3636 -> tmPtr == 0 goto 18
+localtime$14:	; if £temporary3649 -> tmPtr == 0 goto 18
 52:		cmp word [si + 16], 0
 53:		je localtime$18
 55:	
 
-localtime$15:	; £temporary3637 -> localeConvPtr = *localeConvPtr
+localtime$15:	; £temporary3650 -> localeConvPtr = *localeConvPtr
 56:		mov si, [bp + 10]
 58:	
 
-localtime$16:	; £temporary3643 = £temporary3637 -> localeConvPtr
+localtime$16:	; £temporary3656 = £temporary3650 -> localeConvPtr
 59:		mov ax, [si]
 61:	
 
@@ -1361,33 +1469,33 @@ localtime$17:	; goto 20
 62:		jmp localtime$20
 64:	
 
-localtime$18:	; £temporary3638 -> localeConvPtr = *localeConvPtr, offset 2
+localtime$18:	; £temporary3651 -> localeConvPtr = *localeConvPtr, offset 2
 65:		mov si, [bp + 10]
 67:	
 
-localtime$19:	; £temporary3643 = £temporary3638 -> localeConvPtr
+localtime$19:	; £temporary3656 = £temporary3651 -> localeConvPtr
 68:		mov ax, [si + 2]
 70:	
 
-localtime$20:	; timeZone = £temporary3643
+localtime$20:	; timeZone = £temporary3656
 71:		mov [bp + 12], ax
 73:	
 
-localtime$21:	; £temporary3644 -> timePtr = *timePtr
+localtime$21:	; £temporary3657 -> timePtr = *timePtr
 74:		mov si, [bp + 6]
 76:	
 
-localtime$22:	; £temporary3645 = timeZone * 3600
+localtime$22:	; £temporary3658 = timeZone * 3600
 77:		mov ax, [bp + 12]
 79:		xor dx, dx
 80:		imul word [int2$3600#]
 86:	
 
-localtime$23:	; £temporary3646 = int_to_int £temporary3645 (Signed_Int -> Unsigned_Long_Int)
+localtime$23:	; £temporary3659 = int_to_int £temporary3658 (Signed_Int -> Unsigned_Long_Int)
 88:		and eax, 65535
 90:	
 
-localtime$24:	; time = £temporary3644 -> timePtr + £temporary3646
+localtime$24:	; time = £temporary3657 -> timePtr + £temporary3659
 91:		mov ebx, [si]
 92:		add ebx, eax
 93:		mov [bp + 14], ebx
@@ -1396,12 +1504,12 @@ localtime$24:	; time = £temporary3644 -> timePtr + £temporary3646
 localtime$25:	; call header integral zero 0 stack zero 0
 97:	
 
-localtime$26:	; £temporary3648 = &time
+localtime$26:	; £temporary3661 = &time
 98:		mov si, bp
 99:		add si, 14
 101:	
 
-localtime$27:	; parameter £temporary3648, offset 6
+localtime$27:	; parameter £temporary3661, offset 6
 102:		mov [bp + 24], si
 104:	
 
@@ -1415,10 +1523,10 @@ localtime$28:	; call function noellipse-noellipse gmtime
 localtime$29:	; post call
 112:	
 
-localtime$30:	; £temporary3649 = return_value
+localtime$30:	; £temporary3662 = return_value
 117:	
 
-localtime$31:	; return_value = £temporary3649
+localtime$31:	; return_value = £temporary3662
 119:	
 
 localtime$32:	; return
@@ -1444,10 +1552,10 @@ strftime$1:	; call function noellipse-noellipse localeconv
 strftime$2:	; post call
 11:	
 
-strftime$3:	; £temporary3653 = return_value
+strftime$3:	; £temporary3666 = return_value
 16:	
 
-strftime$4:	; localeConvPtr = £temporary3653
+strftime$4:	; localeConvPtr = £temporary3666
 17:		mov [bp + 14], bx
 19:	
 
@@ -1456,11 +1564,11 @@ strftime$5:	; if localeConvPtr == 0 goto 9
 21:		je strftime$9
 23:	
 
-strftime$6:	; £temporary3655 -> localeConvPtr = *localeConvPtr, offset 4
+strftime$6:	; £temporary3668 -> localeConvPtr = *localeConvPtr, offset 4
 24:		mov si, [bp + 14]
 26:	
 
-strftime$7:	; £temporary3659 = £temporary3655 -> localeConvPtr
+strftime$7:	; £temporary3672 = £temporary3668 -> localeConvPtr
 27:		mov ax, [si + 4]
 29:	
 
@@ -1468,11 +1576,11 @@ strftime$8:	; goto 10
 30:		jmp strftime$10
 32:	
 
-strftime$9:	; £temporary3659 = 0
+strftime$9:	; £temporary3672 = 0
 33:		mov ax, 0
 35:	
 
-strftime$10:	; shortDayList = £temporary3659
+strftime$10:	; shortDayList = £temporary3672
 36:		mov [bp + 16], ax
 38:	
 
@@ -1481,11 +1589,11 @@ strftime$11:	; if localeConvPtr == 0 goto 15
 40:		je strftime$15
 42:	
 
-strftime$12:	; £temporary3661 -> localeConvPtr = *localeConvPtr, offset 8
+strftime$12:	; £temporary3674 -> localeConvPtr = *localeConvPtr, offset 8
 43:		mov si, [bp + 14]
 45:	
 
-strftime$13:	; £temporary3665 = £temporary3661 -> localeConvPtr
+strftime$13:	; £temporary3678 = £temporary3674 -> localeConvPtr
 46:		mov ax, [si + 8]
 48:	
 
@@ -1493,11 +1601,11 @@ strftime$14:	; goto 16
 49:		jmp strftime$16
 51:	
 
-strftime$15:	; £temporary3665 = 0
+strftime$15:	; £temporary3678 = 0
 52:		mov ax, 0
 54:	
 
-strftime$16:	; shortMonthList = £temporary3665
+strftime$16:	; shortMonthList = £temporary3678
 55:		mov [bp + 18], ax
 57:	
 
@@ -1506,11 +1614,11 @@ strftime$17:	; if localeConvPtr == 0 goto 21
 59:		je strftime$21
 61:	
 
-strftime$18:	; £temporary3667 -> localeConvPtr = *localeConvPtr, offset 6
+strftime$18:	; £temporary3680 -> localeConvPtr = *localeConvPtr, offset 6
 62:		mov si, [bp + 14]
 64:	
 
-strftime$19:	; £temporary3671 = £temporary3667 -> localeConvPtr
+strftime$19:	; £temporary3684 = £temporary3680 -> localeConvPtr
 65:		mov ax, [si + 6]
 67:	
 
@@ -1518,11 +1626,11 @@ strftime$20:	; goto 22
 68:		jmp strftime$22
 70:	
 
-strftime$21:	; £temporary3671 = 0
+strftime$21:	; £temporary3684 = 0
 71:		mov ax, 0
 73:	
 
-strftime$22:	; longDayList = £temporary3671
+strftime$22:	; longDayList = £temporary3684
 74:		mov [bp + 20], ax
 76:	
 
@@ -1531,11 +1639,11 @@ strftime$23:	; if localeConvPtr == 0 goto 27
 78:		je strftime$27
 80:	
 
-strftime$24:	; £temporary3673 -> localeConvPtr = *localeConvPtr, offset 10
+strftime$24:	; £temporary3686 -> localeConvPtr = *localeConvPtr, offset 10
 81:		mov si, [bp + 14]
 83:	
 
-strftime$25:	; £temporary3677 = £temporary3673 -> localeConvPtr
+strftime$25:	; £temporary3690 = £temporary3686 -> localeConvPtr
 84:		mov ax, [si + 10]
 86:	
 
@@ -1543,56 +1651,56 @@ strftime$26:	; goto 28
 87:		jmp strftime$28
 89:	
 
-strftime$27:	; £temporary3677 = 0
+strftime$27:	; £temporary3690 = 0
 90:		mov ax, 0
 92:	
 
-strftime$28:	; longMonthList = £temporary3677
+strftime$28:	; longMonthList = £temporary3690
 93:		mov [bp + 22], ax
 95:	
 
-strftime$29:	; £temporary3678 -> tp = *tp, offset 10
+strftime$29:	; £temporary3691 -> tp = *tp, offset 10
 96:		mov si, [bp + 12]
 98:	
 
-strftime$30:	; £temporary3679 = £temporary3678 -> tp - 69
+strftime$30:	; £temporary3692 = £temporary3691 -> tp - 69
 99:		mov ax, [si + 10]
 100:		sub ax, 69
 102:	
 
-strftime$31:	; leapDays = £temporary3679 / 4
+strftime$31:	; leapDays = £temporary3692 / 4
 104:		xor dx, dx
 105:		idiv word [int2$4#]
 106:		mov [bp + 24], ax
 108:	
 
-strftime$32:	; £temporary3681 -> tp = *tp, offset 10
+strftime$32:	; £temporary3694 -> tp = *tp, offset 10
 109:		mov si, [bp + 12]
 111:	
 
-strftime$33:	; £temporary3682 = £temporary3681 -> tp - 70
+strftime$33:	; £temporary3695 = £temporary3694 -> tp - 70
 112:		mov ax, [si + 10]
 113:		sub ax, 70
 115:	
 
-strftime$34:	; £temporary3683 = £temporary3682 * 365
+strftime$34:	; £temporary3696 = £temporary3695 * 365
 117:		xor dx, dx
 118:		imul word [int2$365#]
 124:	
 
-strftime$35:	; £temporary3684 = £temporary3683 + leapDays
+strftime$35:	; £temporary3697 = £temporary3696 + leapDays
 125:		add ax, [bp + 24]
 127:	
 
-strftime$36:	; £temporary3685 -> tp = *tp, offset 14
+strftime$36:	; £temporary3698 -> tp = *tp, offset 14
 128:		mov si, [bp + 12]
 130:	
 
-strftime$37:	; £temporary3686 = £temporary3684 + £temporary3685 -> tp
+strftime$37:	; £temporary3699 = £temporary3697 + £temporary3698 -> tp
 131:		add ax, [si + 14]
 133:	
 
-strftime$38:	; £temporary3687 = int_to_int £temporary3686 (Signed_Int -> Signed_Long_Int)
+strftime$38:	; £temporary3700 = int_to_int £temporary3699 (Signed_Int -> Signed_Long_Int)
 135:		and eax, 65535
 137:		cmp ax, 0
 138:		jge strftime$39
@@ -1600,7 +1708,7 @@ strftime$38:	; £temporary3687 = int_to_int £temporary3686 (Signed_Int -> Signe
 141:		neg eax
 143:	
 
-strftime$39:	; totalDays = £temporary3687
+strftime$39:	; totalDays = £temporary3700
 144:		mov [bp + 26], eax
 146:	
 
@@ -1631,7 +1739,7 @@ strftime$45:	; if shortDayList == 0 goto 48
 165:		je strftime$48
 167:	
 
-strftime$46:	; £temporary3693 = shortDayList
+strftime$46:	; £temporary3706 = shortDayList
 168:		mov ax, [bp + 16]
 170:	
 
@@ -1639,11 +1747,11 @@ strftime$47:	; goto 49
 171:		jmp strftime$49
 173:	
 
-strftime$48:	; £temporary3693 = g_defaultShortDayList
-174:		mov ax, @29$g_defaultShortDayList
+strftime$48:	; £temporary3706 = g_defaultShortDayList
+174:		mov ax, @32$g_defaultShortDayList
 176:	
 
-strftime$49:	; shortDayList = £temporary3693
+strftime$49:	; shortDayList = £temporary3706
 177:		mov [bp + 16], ax
 179:	
 
@@ -1652,7 +1760,7 @@ strftime$50:	; if longDayList == 0 goto 53
 181:		je strftime$53
 183:	
 
-strftime$51:	; £temporary3698 = longDayList
+strftime$51:	; £temporary3711 = longDayList
 184:		mov ax, [bp + 20]
 186:	
 
@@ -1660,11 +1768,11 @@ strftime$52:	; goto 54
 187:		jmp strftime$54
 189:	
 
-strftime$53:	; £temporary3698 = g_defaultLongDayList
-190:		mov ax, @30$g_defaultLongDayList
+strftime$53:	; £temporary3711 = g_defaultLongDayList
+190:		mov ax, @33$g_defaultLongDayList
 192:	
 
-strftime$54:	; longDayList = £temporary3698
+strftime$54:	; longDayList = £temporary3711
 193:		mov [bp + 20], ax
 195:	
 
@@ -1673,7 +1781,7 @@ strftime$55:	; if shortMonthList == 0 goto 58
 197:		je strftime$58
 199:	
 
-strftime$56:	; £temporary3703 = shortMonthList
+strftime$56:	; £temporary3716 = shortMonthList
 200:		mov ax, [bp + 18]
 202:	
 
@@ -1681,11 +1789,11 @@ strftime$57:	; goto 59
 203:		jmp strftime$59
 205:	
 
-strftime$58:	; £temporary3703 = g_defaultShortMonthList
-206:		mov ax, @31$g_defaultShortMonthList
+strftime$58:	; £temporary3716 = g_defaultShortMonthList
+206:		mov ax, @34$g_defaultShortMonthList
 208:	
 
-strftime$59:	; shortMonthList = £temporary3703
+strftime$59:	; shortMonthList = £temporary3716
 209:		mov [bp + 18], ax
 211:	
 
@@ -1694,7 +1802,7 @@ strftime$60:	; if longMonthList == 0 goto 63
 213:		je strftime$63
 215:	
 
-strftime$61:	; £temporary3708 = longMonthList
+strftime$61:	; £temporary3721 = longMonthList
 216:		mov ax, [bp + 22]
 218:	
 
@@ -1702,11 +1810,11 @@ strftime$62:	; goto 64
 219:		jmp strftime$64
 221:	
 
-strftime$63:	; £temporary3708 = g_defaultLongMonthList
-222:		mov ax, @32$g_defaultLongMonthList
+strftime$63:	; £temporary3721 = g_defaultLongMonthList
+222:		mov ax, @35$g_defaultLongMonthList
 224:	
 
-strftime$64:	; longMonthList = £temporary3708
+strftime$64:	; longMonthList = £temporary3721
 225:		mov [bp + 22], ax
 227:	
 
@@ -1715,19 +1823,19 @@ strftime$65:	; if totalDays >= 3 goto 70
 229:		jge strftime$70
 231:	
 
-strftime$66:	; £temporary3710 = totalDays + 4
+strftime$66:	; £temporary3723 = totalDays + 4
 232:		mov eax, [bp + 26]
 233:		add eax, 4
 235:	
 
-strftime$67:	; £temporary3711 = int_to_int £temporary3710 (Signed_Long_Int -> Signed_Int)
+strftime$67:	; £temporary3724 = int_to_int £temporary3723 (Signed_Long_Int -> Signed_Int)
 238:		cmp eax, 0
 239:		jge strftime$68
 240:		neg eax
 242:		neg ax
 244:	
 
-strftime$68:	; yearDaySunday = £temporary3711
+strftime$68:	; yearDaySunday = £temporary3724
 245:		mov [bp + 30], ax
 247:	
 
@@ -1735,24 +1843,24 @@ strftime$69:	; goto 74
 248:		jmp strftime$74
 250:	
 
-strftime$70:	; £temporary3712 = totalDays - 3
+strftime$70:	; £temporary3725 = totalDays - 3
 251:		mov eax, [bp + 26]
 252:		sub eax, 3
 254:	
 
-strftime$71:	; £temporary3713 = £temporary3712 % 7
+strftime$71:	; £temporary3726 = £temporary3725 % 7
 256:		xor edx, edx
 257:		idiv dword [int4$7#]
 263:	
 
-strftime$72:	; £temporary3714 = int_to_int £temporary3713 (Signed_Long_Int -> Signed_Int)
+strftime$72:	; £temporary3727 = int_to_int £temporary3726 (Signed_Long_Int -> Signed_Int)
 266:		cmp edx, 0
 267:		jge strftime$73
 268:		neg edx
 270:		neg dx
 272:	
 
-strftime$73:	; yearDaySunday = £temporary3714
+strftime$73:	; yearDaySunday = £temporary3727
 273:		mov [bp + 30], dx
 275:	
 
@@ -1761,19 +1869,19 @@ strftime$74:	; if totalDays >= 4 goto 79
 277:		jge strftime$79
 279:	
 
-strftime$75:	; £temporary3716 = totalDays + 3
+strftime$75:	; £temporary3729 = totalDays + 3
 280:		mov eax, [bp + 26]
 281:		add eax, 3
 283:	
 
-strftime$76:	; £temporary3717 = int_to_int £temporary3716 (Signed_Long_Int -> Signed_Int)
+strftime$76:	; £temporary3730 = int_to_int £temporary3729 (Signed_Long_Int -> Signed_Int)
 286:		cmp eax, 0
 287:		jge strftime$77
 288:		neg eax
 290:		neg ax
 292:	
 
-strftime$77:	; yearDayMonday = £temporary3717
+strftime$77:	; yearDayMonday = £temporary3730
 293:		mov [bp + 32], ax
 295:	
 
@@ -1781,24 +1889,24 @@ strftime$78:	; goto 83
 296:		jmp strftime$83
 298:	
 
-strftime$79:	; £temporary3718 = totalDays - 4
+strftime$79:	; £temporary3731 = totalDays - 4
 299:		mov eax, [bp + 26]
 300:		sub eax, 4
 302:	
 
-strftime$80:	; £temporary3719 = £temporary3718 % 7
+strftime$80:	; £temporary3732 = £temporary3731 % 7
 304:		xor edx, edx
 305:		idiv dword [int4$7#]
 311:	
 
-strftime$81:	; £temporary3720 = int_to_int £temporary3719 (Signed_Long_Int -> Signed_Int)
+strftime$81:	; £temporary3733 = int_to_int £temporary3732 (Signed_Long_Int -> Signed_Int)
 314:		cmp edx, 0
 315:		jge strftime$82
 316:		neg edx
 318:		neg dx
 320:	
 
-strftime$82:	; yearDayMonday = £temporary3720
+strftime$82:	; yearDayMonday = £temporary3733
 321:		mov [bp + 32], dx
 323:	
 
@@ -1806,163 +1914,163 @@ strftime$83:	; index = 0
 324:		mov word [bp + 34], 0
 326:	
 
-strftime$84:	; £temporary3722 = fmt + index
+strftime$84:	; £temporary3735 = fmt + index
 327:		mov si, [bp + 10]
 328:		add si, [bp + 34]
 330:	
 
-strftime$85:	; £temporary3721 -> £temporary3722 = *£temporary3722
+strftime$85:	; £temporary3734 -> £temporary3735 = *£temporary3735
 332:	
 
-strftime$86:	; if £temporary3721 -> £temporary3722 == 0 goto 350
+strftime$86:	; if £temporary3734 -> £temporary3735 == 0 goto 354
 333:		cmp byte [si], 0
-334:		je strftime$350
+334:		je strftime$354
 336:	
 
-strftime$87:	; £temporary3726 = fmt + index
+strftime$87:	; £temporary3739 = fmt + index
 337:		mov si, [bp + 10]
 338:		add si, [bp + 34]
 340:	
 
-strftime$88:	; £temporary3725 -> £temporary3726 = *£temporary3726
+strftime$88:	; £temporary3738 -> £temporary3739 = *£temporary3739
 342:	
 
-strftime$89:	; if £temporary3725 -> £temporary3726 != 37 goto 325
+strftime$89:	; if £temporary3738 -> £temporary3739 != 37 goto 329
 343:		cmp byte [si], 37
-344:		jne strftime$325
+344:		jne strftime$329
 346:	
 
-strftime$90:	; £temporary3728 = index + 1
+strftime$90:	; £temporary3741 = index + 1
 347:		mov ax, [bp + 34]
 348:		add ax, 1
 350:	
 
-strftime$91:	; £temporary3730 = fmt + £temporary3728
+strftime$91:	; £temporary3743 = fmt + £temporary3741
 351:		mov si, [bp + 10]
 352:		add si, ax
 354:	
 
-strftime$92:	; £temporary3729 -> £temporary3730 = *£temporary3730
+strftime$92:	; £temporary3742 -> £temporary3743 = *£temporary3743
 355:		mov al, [si]
 356:		mov [bp + 56], al
 358:	
 
-strftime$93:	; case £temporary3729 -> £temporary3730 == 97 goto 117
+strftime$93:	; case £temporary3742 -> £temporary3743 == 97 goto 117
 359:		mov al, [bp + 56]
 360:		cmp al, 97
 361:		je strftime$117
 363:	
 
-strftime$94:	; case £temporary3729 -> £temporary3730 == 65 goto 127
+strftime$94:	; case £temporary3742 -> £temporary3743 == 65 goto 127
 364:		cmp al, 65
 365:		je strftime$127
 367:	
 
-strftime$95:	; case £temporary3729 -> £temporary3730 == 98 goto 137
+strftime$95:	; case £temporary3742 -> £temporary3743 == 98 goto 137
 368:		cmp al, 98
 369:		je strftime$137
 371:	
 
-strftime$96:	; case £temporary3729 -> £temporary3730 == 66 goto 147
+strftime$96:	; case £temporary3742 -> £temporary3743 == 66 goto 147
 372:		cmp al, 66
 373:		je strftime$147
 375:	
 
-strftime$97:	; case £temporary3729 -> £temporary3730 == 99 goto 157
+strftime$97:	; case £temporary3742 -> £temporary3743 == 99 goto 157
 376:		cmp al, 99
 377:		je strftime$157
 379:	
 
-strftime$98:	; case £temporary3729 -> £temporary3730 == 100 goto 177
+strftime$98:	; case £temporary3742 -> £temporary3743 == 100 goto 177
 380:		cmp al, 100
 381:		je strftime$177
 383:	
 
-strftime$99:	; case £temporary3729 -> £temporary3730 == 72 goto 185
+strftime$99:	; case £temporary3742 -> £temporary3743 == 72 goto 185
 384:		cmp al, 72
 385:		je strftime$185
 387:	
 
-strftime$100:	; case £temporary3729 -> £temporary3730 == 73 goto 193
+strftime$100:	; case £temporary3742 -> £temporary3743 == 73 goto 193
 388:		cmp al, 73
 389:		je strftime$193
 391:	
 
-strftime$101:	; case £temporary3729 -> £temporary3730 == 106 goto 202
+strftime$101:	; case £temporary3742 -> £temporary3743 == 106 goto 202
 392:		cmp al, 106
 393:		je strftime$202
 395:	
 
-strftime$102:	; case £temporary3729 -> £temporary3730 == 109 goto 210
+strftime$102:	; case £temporary3742 -> £temporary3743 == 109 goto 210
 396:		cmp al, 109
 397:		je strftime$210
 399:	
 
-strftime$103:	; case £temporary3729 -> £temporary3730 == 77 goto 219
+strftime$103:	; case £temporary3742 -> £temporary3743 == 77 goto 219
 400:		cmp al, 77
 401:		je strftime$219
 403:	
 
-strftime$104:	; case £temporary3729 -> £temporary3730 == 112 goto 227
+strftime$104:	; case £temporary3742 -> £temporary3743 == 112 goto 227
 404:		cmp al, 112
 405:		je strftime$227
 407:	
 
-strftime$105:	; case £temporary3729 -> £temporary3730 == 83 goto 239
+strftime$105:	; case £temporary3742 -> £temporary3743 == 83 goto 239
 408:		cmp al, 83
 409:		je strftime$239
 411:	
 
-strftime$106:	; case £temporary3729 -> £temporary3730 == 85 goto 247
+strftime$106:	; case £temporary3742 -> £temporary3743 == 85 goto 247
 412:		cmp al, 85
 413:		je strftime$247
 415:	
 
-strftime$107:	; case £temporary3729 -> £temporary3730 == 119 goto 254
+strftime$107:	; case £temporary3742 -> £temporary3743 == 119 goto 254
 416:		cmp al, 119
 417:		je strftime$254
 419:	
 
-strftime$108:	; case £temporary3729 -> £temporary3730 == 87 goto 262
+strftime$108:	; case £temporary3742 -> £temporary3743 == 87 goto 262
 420:		cmp al, 87
 421:		je strftime$262
 423:	
 
-strftime$109:	; case £temporary3729 -> £temporary3730 == 120 goto 269
+strftime$109:	; case £temporary3742 -> £temporary3743 == 120 goto 269
 424:		cmp al, 120
 425:		je strftime$269
 427:	
 
-strftime$110:	; case £temporary3729 -> £temporary3730 == 88 goto 283
+strftime$110:	; case £temporary3742 -> £temporary3743 == 88 goto 281
 428:		cmp al, 88
-429:		je strftime$283
+429:		je strftime$281
 431:	
 
-strftime$111:	; case £temporary3729 -> £temporary3730 == 121 goto 295
+strftime$111:	; case £temporary3742 -> £temporary3743 == 121 goto 293
 432:		cmp al, 121
-433:		je strftime$295
+433:		je strftime$293
 435:	
 
-strftime$112:	; case £temporary3729 -> £temporary3730 == 89 goto 304
+strftime$112:	; case £temporary3742 -> £temporary3743 == 89 goto 302
 436:		cmp al, 89
-437:		je strftime$304
+437:		je strftime$302
 439:	
 
-strftime$113:	; case £temporary3729 -> £temporary3730 == 90 goto 313
+strftime$113:	; case £temporary3742 -> £temporary3743 == 90 goto 311
 440:		cmp al, 90
-441:		je strftime$313
+441:		je strftime$311
 443:	
 
-strftime$114:	; case £temporary3729 -> £temporary3730 == 37 goto 319
+strftime$114:	; case £temporary3742 -> £temporary3743 == 37 goto 317
 444:		cmp al, 37
-445:		je strftime$319
+445:		je strftime$317
 447:	
 
-strftime$115:	; case end £temporary3729 -> £temporary3730
+strftime$115:	; case end £temporary3742 -> £temporary3743
 449:	
 
-strftime$116:	; goto 331
-450:		jmp strftime$331
+strftime$116:	; goto 322
+450:		jmp strftime$322
 452:	
 
 strftime$117:	; call header integral zero 0 stack zero 0
@@ -1973,25 +2081,25 @@ strftime$118:	; parameter add, offset 6
 456:		add word [bp + 62], 36
 458:	
 
-strftime$119:	; £temporary3731 -> tp = *tp, offset 12
+strftime$119:	; £temporary3744 -> tp = *tp, offset 12
 459:		mov si, [bp + 12]
 461:	
 
-strftime$120:	; £temporary3733 = £temporary3731 -> tp * 2
+strftime$120:	; £temporary3746 = £temporary3744 -> tp * 2
 462:		mov ax, [si + 12]
 464:		xor dx, dx
 465:		mul word [int2$2#]
 471:	
 
-strftime$121:	; £temporary3734 = shortDayList + £temporary3733
+strftime$121:	; £temporary3747 = shortDayList + £temporary3746
 472:		mov si, [bp + 16]
 473:		add si, ax
 475:	
 
-strftime$122:	; £temporary3732 -> £temporary3734 = *£temporary3734
+strftime$122:	; £temporary3745 -> £temporary3747 = *£temporary3747
 477:	
 
-strftime$123:	; parameter £temporary3732 -> £temporary3734, offset 8
+strftime$123:	; parameter £temporary3745 -> £temporary3747, offset 8
 478:		mov ax, [si]
 479:		mov [bp + 64], ax
 481:	
@@ -2006,8 +2114,8 @@ strftime$124:	; call function noellipse-noellipse strcpy
 strftime$125:	; post call
 489:	
 
-strftime$126:	; goto 331
-490:		jmp strftime$331
+strftime$126:	; goto 327
+490:		jmp strftime$327
 492:	
 
 strftime$127:	; call header integral zero 0 stack zero 0
@@ -2018,25 +2126,25 @@ strftime$128:	; parameter add, offset 6
 496:		add word [bp + 62], 36
 498:	
 
-strftime$129:	; £temporary3736 -> tp = *tp, offset 12
+strftime$129:	; £temporary3749 -> tp = *tp, offset 12
 499:		mov si, [bp + 12]
 501:	
 
-strftime$130:	; £temporary3738 = £temporary3736 -> tp * 2
+strftime$130:	; £temporary3751 = £temporary3749 -> tp * 2
 502:		mov ax, [si + 12]
 504:		xor dx, dx
 505:		mul word [int2$2#]
 511:	
 
-strftime$131:	; £temporary3739 = longDayList + £temporary3738
+strftime$131:	; £temporary3752 = longDayList + £temporary3751
 512:		mov si, [bp + 20]
 513:		add si, ax
 515:	
 
-strftime$132:	; £temporary3737 -> £temporary3739 = *£temporary3739
+strftime$132:	; £temporary3750 -> £temporary3752 = *£temporary3752
 517:	
 
-strftime$133:	; parameter £temporary3737 -> £temporary3739, offset 8
+strftime$133:	; parameter £temporary3750 -> £temporary3752, offset 8
 518:		mov ax, [si]
 519:		mov [bp + 64], ax
 521:	
@@ -2051,8 +2159,8 @@ strftime$134:	; call function noellipse-noellipse strcpy
 strftime$135:	; post call
 529:	
 
-strftime$136:	; goto 331
-530:		jmp strftime$331
+strftime$136:	; goto 327
+530:		jmp strftime$327
 532:	
 
 strftime$137:	; call header integral zero 0 stack zero 0
@@ -2063,25 +2171,25 @@ strftime$138:	; parameter add, offset 6
 536:		add word [bp + 62], 36
 538:	
 
-strftime$139:	; £temporary3741 -> tp = *tp, offset 8
+strftime$139:	; £temporary3754 -> tp = *tp, offset 8
 539:		mov si, [bp + 12]
 541:	
 
-strftime$140:	; £temporary3743 = £temporary3741 -> tp * 2
+strftime$140:	; £temporary3756 = £temporary3754 -> tp * 2
 542:		mov ax, [si + 8]
 544:		xor dx, dx
 545:		mul word [int2$2#]
 551:	
 
-strftime$141:	; £temporary3744 = shortMonthList + £temporary3743
+strftime$141:	; £temporary3757 = shortMonthList + £temporary3756
 552:		mov si, [bp + 18]
 553:		add si, ax
 555:	
 
-strftime$142:	; £temporary3742 -> £temporary3744 = *£temporary3744
+strftime$142:	; £temporary3755 -> £temporary3757 = *£temporary3757
 557:	
 
-strftime$143:	; parameter £temporary3742 -> £temporary3744, offset 8
+strftime$143:	; parameter £temporary3755 -> £temporary3757, offset 8
 558:		mov ax, [si]
 559:		mov [bp + 64], ax
 561:	
@@ -2096,8 +2204,8 @@ strftime$144:	; call function noellipse-noellipse strcpy
 strftime$145:	; post call
 569:	
 
-strftime$146:	; goto 331
-570:		jmp strftime$331
+strftime$146:	; goto 327
+570:		jmp strftime$327
 572:	
 
 strftime$147:	; call header integral zero 0 stack zero 0
@@ -2108,25 +2216,25 @@ strftime$148:	; parameter add, offset 6
 576:		add word [bp + 62], 36
 578:	
 
-strftime$149:	; £temporary3746 -> tp = *tp, offset 8
+strftime$149:	; £temporary3759 -> tp = *tp, offset 8
 579:		mov si, [bp + 12]
 581:	
 
-strftime$150:	; £temporary3748 = £temporary3746 -> tp * 2
+strftime$150:	; £temporary3761 = £temporary3759 -> tp * 2
 582:		mov ax, [si + 8]
 584:		xor dx, dx
 585:		mul word [int2$2#]
 591:	
 
-strftime$151:	; £temporary3749 = longMonthList + £temporary3748
+strftime$151:	; £temporary3762 = longMonthList + £temporary3761
 592:		mov si, [bp + 22]
 593:		add si, ax
 595:	
 
-strftime$152:	; £temporary3747 -> £temporary3749 = *£temporary3749
+strftime$152:	; £temporary3760 -> £temporary3762 = *£temporary3762
 597:	
 
-strftime$153:	; parameter £temporary3747 -> £temporary3749, offset 8
+strftime$153:	; parameter £temporary3760 -> £temporary3762, offset 8
 598:		mov ax, [si]
 599:		mov [bp + 64], ax
 601:	
@@ -2141,8 +2249,8 @@ strftime$154:	; call function noellipse-noellipse strcpy
 strftime$155:	; post call
 609:	
 
-strftime$156:	; goto 331
-610:		jmp strftime$331
+strftime$156:	; goto 327
+610:		jmp strftime$327
 612:	
 
 strftime$157:	; call header integral zero 0 stack zero 0
@@ -2153,68 +2261,68 @@ strftime$158:	; parameter add, offset 6
 616:		add word [bp + 62], 36
 618:	
 
-strftime$159:	; parameter string_2504d2D2502d2D2502d202502d3A2502d3A2502d#, offset 8
-619:		mov word [bp + 64], string_2504d2D2502d2D2502d202502d3A2502d3A2502d#
+strftime$159:	; parameter string_25d2D25d2D25d2025d3A25d3A25d#, offset 8
+619:		mov word [bp + 64], string_25d2D25d2D25d2025d3A25d3A25d#
 621:	
 
-strftime$160:	; £temporary3751 -> tp = *tp, offset 10
+strftime$160:	; £temporary3764 -> tp = *tp, offset 10
 622:		mov si, [bp + 12]
 624:	
 
-strftime$161:	; £temporary3752 = £temporary3751 -> tp + 1900
+strftime$161:	; £temporary3765 = £temporary3764 -> tp + 1900
 625:		mov ax, [si + 10]
 626:		add ax, 1900
 628:	
 
-strftime$162:	; parameter £temporary3752, offset 10
+strftime$162:	; parameter £temporary3765, offset 10
 629:		mov [bp + 66], ax
 631:	
 
-strftime$163:	; £temporary3753 -> tp = *tp, offset 8
+strftime$163:	; £temporary3766 -> tp = *tp, offset 8
 632:		mov si, [bp + 12]
 634:	
 
-strftime$164:	; £temporary3754 = £temporary3753 -> tp + 1
+strftime$164:	; £temporary3767 = £temporary3766 -> tp + 1
 635:		mov ax, [si + 8]
 636:		add ax, 1
 638:	
 
-strftime$165:	; parameter £temporary3754, offset 12
+strftime$165:	; parameter £temporary3767, offset 12
 639:		mov [bp + 68], ax
 641:	
 
-strftime$166:	; £temporary3755 -> tp = *tp, offset 6
+strftime$166:	; £temporary3768 -> tp = *tp, offset 6
 642:		mov si, [bp + 12]
 644:	
 
-strftime$167:	; parameter £temporary3755 -> tp, offset 14
+strftime$167:	; parameter £temporary3768 -> tp, offset 14
 645:		mov ax, [si + 6]
 646:		mov [bp + 70], ax
 648:	
 
-strftime$168:	; £temporary3756 -> tp = *tp, offset 4
+strftime$168:	; £temporary3769 -> tp = *tp, offset 4
 649:		mov si, [bp + 12]
 651:	
 
-strftime$169:	; parameter £temporary3756 -> tp, offset 16
+strftime$169:	; parameter £temporary3769 -> tp, offset 16
 652:		mov ax, [si + 4]
 653:		mov [bp + 72], ax
 655:	
 
-strftime$170:	; £temporary3757 -> tp = *tp, offset 2
+strftime$170:	; £temporary3770 -> tp = *tp, offset 2
 656:		mov si, [bp + 12]
 658:	
 
-strftime$171:	; parameter £temporary3757 -> tp, offset 18
+strftime$171:	; parameter £temporary3770 -> tp, offset 18
 659:		mov ax, [si + 2]
 660:		mov [bp + 74], ax
 662:	
 
-strftime$172:	; £temporary3758 -> tp = *tp
+strftime$172:	; £temporary3771 -> tp = *tp
 663:		mov si, [bp + 12]
 665:	
 
-strftime$173:	; parameter £temporary3758 -> tp, offset 20
+strftime$173:	; parameter £temporary3771 -> tp, offset 20
 666:		mov ax, [si]
 667:		mov [bp + 76], ax
 669:	
@@ -2231,8 +2339,8 @@ strftime$174:	; call function noellipse-ellipse sprintf, extra 0
 strftime$175:	; post call
 679:	
 
-strftime$176:	; goto 331
-680:		jmp strftime$331
+strftime$176:	; goto 327
+680:		jmp strftime$327
 682:	
 
 strftime$177:	; call header integral zero 0 stack zero 0
@@ -2243,15 +2351,15 @@ strftime$178:	; parameter add, offset 6
 686:		add word [bp + 62], 36
 688:	
 
-strftime$179:	; parameter string_2502d#, offset 8
-689:		mov word [bp + 64], string_2502d#
+strftime$179:	; parameter string_25d#, offset 8
+689:		mov word [bp + 64], string_25d#
 691:	
 
-strftime$180:	; £temporary3760 -> tp = *tp, offset 6
+strftime$180:	; £temporary3773 -> tp = *tp, offset 6
 692:		mov si, [bp + 12]
 694:	
 
-strftime$181:	; parameter £temporary3760 -> tp, offset 10
+strftime$181:	; parameter £temporary3773 -> tp, offset 10
 695:		mov ax, [si + 6]
 696:		mov [bp + 66], ax
 698:	
@@ -2268,8 +2376,8 @@ strftime$182:	; call function noellipse-ellipse sprintf, extra 0
 strftime$183:	; post call
 708:	
 
-strftime$184:	; goto 331
-709:		jmp strftime$331
+strftime$184:	; goto 327
+709:		jmp strftime$327
 711:	
 
 strftime$185:	; call header integral zero 0 stack zero 0
@@ -2280,15 +2388,15 @@ strftime$186:	; parameter add, offset 6
 715:		add word [bp + 62], 36
 717:	
 
-strftime$187:	; parameter string_2502d#, offset 8
-718:		mov word [bp + 64], string_2502d#
+strftime$187:	; parameter string_25d#, offset 8
+718:		mov word [bp + 64], string_25d#
 720:	
 
-strftime$188:	; £temporary3762 -> tp = *tp, offset 4
+strftime$188:	; £temporary3775 -> tp = *tp, offset 4
 721:		mov si, [bp + 12]
 723:	
 
-strftime$189:	; parameter £temporary3762 -> tp, offset 10
+strftime$189:	; parameter £temporary3775 -> tp, offset 10
 724:		mov ax, [si + 4]
 725:		mov [bp + 66], ax
 727:	
@@ -2305,8 +2413,8 @@ strftime$190:	; call function noellipse-ellipse sprintf, extra 0
 strftime$191:	; post call
 737:	
 
-strftime$192:	; goto 331
-738:		jmp strftime$331
+strftime$192:	; goto 327
+738:		jmp strftime$327
 740:	
 
 strftime$193:	; call header integral zero 0 stack zero 0
@@ -2317,21 +2425,21 @@ strftime$194:	; parameter add, offset 6
 744:		add word [bp + 62], 36
 746:	
 
-strftime$195:	; parameter string_2502d#, offset 8
-747:		mov word [bp + 64], string_2502d#
+strftime$195:	; parameter string_25d#, offset 8
+747:		mov word [bp + 64], string_25d#
 749:	
 
-strftime$196:	; £temporary3764 -> tp = *tp, offset 4
+strftime$196:	; £temporary3777 -> tp = *tp, offset 4
 750:		mov si, [bp + 12]
 752:	
 
-strftime$197:	; £temporary3765 = £temporary3764 -> tp % 12
+strftime$197:	; £temporary3778 = £temporary3777 -> tp % 12
 753:		mov ax, [si + 4]
 755:		xor dx, dx
 756:		idiv word [int2$12#]
 762:	
 
-strftime$198:	; parameter £temporary3765, offset 10
+strftime$198:	; parameter £temporary3778, offset 10
 763:		mov [bp + 66], dx
 765:	
 
@@ -2347,8 +2455,8 @@ strftime$199:	; call function noellipse-ellipse sprintf, extra 0
 strftime$200:	; post call
 775:	
 
-strftime$201:	; goto 331
-776:		jmp strftime$331
+strftime$201:	; goto 327
+776:		jmp strftime$327
 778:	
 
 strftime$202:	; call header integral zero 0 stack zero 0
@@ -2359,15 +2467,15 @@ strftime$203:	; parameter add, offset 6
 782:		add word [bp + 62], 36
 784:	
 
-strftime$204:	; parameter string_2503d#, offset 8
-785:		mov word [bp + 64], string_2503d#
+strftime$204:	; parameter string_25d#, offset 8
+785:		mov word [bp + 64], string_25d#
 787:	
 
-strftime$205:	; £temporary3767 -> tp = *tp, offset 14
+strftime$205:	; £temporary3780 -> tp = *tp, offset 14
 788:		mov si, [bp + 12]
 790:	
 
-strftime$206:	; parameter £temporary3767 -> tp, offset 10
+strftime$206:	; parameter £temporary3780 -> tp, offset 10
 791:		mov ax, [si + 14]
 792:		mov [bp + 66], ax
 794:	
@@ -2384,8 +2492,8 @@ strftime$207:	; call function noellipse-ellipse sprintf, extra 0
 strftime$208:	; post call
 804:	
 
-strftime$209:	; goto 331
-805:		jmp strftime$331
+strftime$209:	; goto 327
+805:		jmp strftime$327
 807:	
 
 strftime$210:	; call header integral zero 0 stack zero 0
@@ -2396,20 +2504,20 @@ strftime$211:	; parameter add, offset 6
 811:		add word [bp + 62], 36
 813:	
 
-strftime$212:	; parameter string_2502d#, offset 8
-814:		mov word [bp + 64], string_2502d#
+strftime$212:	; parameter string_25d#, offset 8
+814:		mov word [bp + 64], string_25d#
 816:	
 
-strftime$213:	; £temporary3769 -> tp = *tp, offset 8
+strftime$213:	; £temporary3782 -> tp = *tp, offset 8
 817:		mov si, [bp + 12]
 819:	
 
-strftime$214:	; £temporary3770 = £temporary3769 -> tp + 1
+strftime$214:	; £temporary3783 = £temporary3782 -> tp + 1
 820:		mov ax, [si + 8]
 821:		add ax, 1
 823:	
 
-strftime$215:	; parameter £temporary3770, offset 10
+strftime$215:	; parameter £temporary3783, offset 10
 824:		mov [bp + 66], ax
 826:	
 
@@ -2425,8 +2533,8 @@ strftime$216:	; call function noellipse-ellipse sprintf, extra 0
 strftime$217:	; post call
 836:	
 
-strftime$218:	; goto 331
-837:		jmp strftime$331
+strftime$218:	; goto 327
+837:		jmp strftime$327
 839:	
 
 strftime$219:	; call header integral zero 0 stack zero 0
@@ -2437,15 +2545,15 @@ strftime$220:	; parameter add, offset 6
 843:		add word [bp + 62], 36
 845:	
 
-strftime$221:	; parameter string_2502d#, offset 8
-846:		mov word [bp + 64], string_2502d#
+strftime$221:	; parameter string_25d#, offset 8
+846:		mov word [bp + 64], string_25d#
 848:	
 
-strftime$222:	; £temporary3772 -> tp = *tp, offset 2
+strftime$222:	; £temporary3785 -> tp = *tp, offset 2
 849:		mov si, [bp + 12]
 851:	
 
-strftime$223:	; parameter £temporary3772 -> tp, offset 10
+strftime$223:	; parameter £temporary3785 -> tp, offset 10
 852:		mov ax, [si + 2]
 853:		mov [bp + 66], ax
 855:	
@@ -2462,8 +2570,8 @@ strftime$224:	; call function noellipse-ellipse sprintf, extra 0
 strftime$225:	; post call
 865:	
 
-strftime$226:	; goto 331
-866:		jmp strftime$331
+strftime$226:	; goto 327
+866:		jmp strftime$327
 868:	
 
 strftime$227:	; call header integral zero 0 stack zero 0
@@ -2478,16 +2586,16 @@ strftime$229:	; parameter string_25s#, offset 8
 875:		mov word [bp + 64], string_25s#
 877:	
 
-strftime$230:	; £temporary3774 -> tp = *tp, offset 4
+strftime$230:	; £temporary3787 -> tp = *tp, offset 4
 878:		mov si, [bp + 12]
 880:	
 
-strftime$231:	; if £temporary3774 -> tp >= 12 goto 234
+strftime$231:	; if £temporary3787 -> tp >= 12 goto 234
 881:		cmp word [si + 4], 12
 882:		jge strftime$234
 884:	
 
-strftime$232:	; £temporary3779 = string_AM#
+strftime$232:	; £temporary3792 = string_AM#
 885:		mov ax, string_AM#
 887:	
 
@@ -2495,11 +2603,11 @@ strftime$233:	; goto 235
 888:		jmp strftime$235
 890:	
 
-strftime$234:	; £temporary3779 = string_PM#
+strftime$234:	; £temporary3792 = string_PM#
 891:		mov ax, string_PM#
 893:	
 
-strftime$235:	; parameter £temporary3779, offset 10
+strftime$235:	; parameter £temporary3792, offset 10
 894:		mov [bp + 66], ax
 896:	
 
@@ -2515,8 +2623,8 @@ strftime$236:	; call function noellipse-ellipse sprintf, extra 0
 strftime$237:	; post call
 906:	
 
-strftime$238:	; goto 331
-907:		jmp strftime$331
+strftime$238:	; goto 327
+907:		jmp strftime$327
 909:	
 
 strftime$239:	; call header integral zero 0 stack zero 0
@@ -2527,15 +2635,15 @@ strftime$240:	; parameter add, offset 6
 913:		add word [bp + 62], 36
 915:	
 
-strftime$241:	; parameter string_2502d#, offset 8
-916:		mov word [bp + 64], string_2502d#
+strftime$241:	; parameter string_25d#, offset 8
+916:		mov word [bp + 64], string_25d#
 918:	
 
-strftime$242:	; £temporary3781 -> tp = *tp
+strftime$242:	; £temporary3794 -> tp = *tp
 919:		mov si, [bp + 12]
 921:	
 
-strftime$243:	; parameter £temporary3781 -> tp, offset 10
+strftime$243:	; parameter £temporary3794 -> tp, offset 10
 922:		mov ax, [si]
 923:		mov [bp + 66], ax
 925:	
@@ -2552,8 +2660,8 @@ strftime$244:	; call function noellipse-ellipse sprintf, extra 0
 strftime$245:	; post call
 935:	
 
-strftime$246:	; goto 331
-936:		jmp strftime$331
+strftime$246:	; goto 327
+936:		jmp strftime$327
 938:	
 
 strftime$247:	; call header integral zero 0 stack zero 0
@@ -2564,8 +2672,8 @@ strftime$248:	; parameter add, offset 6
 942:		add word [bp + 62], 36
 944:	
 
-strftime$249:	; parameter string_2502d#, offset 8
-945:		mov word [bp + 64], string_2502d#
+strftime$249:	; parameter string_25d#, offset 8
+945:		mov word [bp + 64], string_25d#
 947:	
 
 strftime$250:	; parameter yearDaySunday, offset 10
@@ -2585,8 +2693,8 @@ strftime$251:	; call function noellipse-ellipse sprintf, extra 0
 strftime$252:	; post call
 961:	
 
-strftime$253:	; goto 331
-962:		jmp strftime$331
+strftime$253:	; goto 327
+962:		jmp strftime$327
 964:	
 
 strftime$254:	; call header integral zero 0 stack zero 0
@@ -2597,15 +2705,15 @@ strftime$255:	; parameter add, offset 6
 968:		add word [bp + 62], 36
 970:	
 
-strftime$256:	; parameter string_2502d#, offset 8
-971:		mov word [bp + 64], string_2502d#
+strftime$256:	; parameter string_25d#, offset 8
+971:		mov word [bp + 64], string_25d#
 973:	
 
-strftime$257:	; £temporary3784 -> tp = *tp, offset 12
+strftime$257:	; £temporary3797 -> tp = *tp, offset 12
 974:		mov si, [bp + 12]
 976:	
 
-strftime$258:	; parameter £temporary3784 -> tp, offset 10
+strftime$258:	; parameter £temporary3797 -> tp, offset 10
 977:		mov ax, [si + 12]
 978:		mov [bp + 66], ax
 980:	
@@ -2622,8 +2730,8 @@ strftime$259:	; call function noellipse-ellipse sprintf, extra 0
 strftime$260:	; post call
 990:	
 
-strftime$261:	; goto 331
-991:		jmp strftime$331
+strftime$261:	; goto 327
+991:		jmp strftime$327
 993:	
 
 strftime$262:	; call header integral zero 0 stack zero 0
@@ -2634,8 +2742,8 @@ strftime$263:	; parameter add, offset 6
 997:		add word [bp + 62], 36
 999:	
 
-strftime$264:	; parameter string_2502d#, offset 8
-1000:		mov word [bp + 64], string_2502d#
+strftime$264:	; parameter string_25d#, offset 8
+1000:		mov word [bp + 64], string_25d#
 1002:	
 
 strftime$265:	; parameter yearDayMonday, offset 10
@@ -2655,8 +2763,8 @@ strftime$266:	; call function noellipse-ellipse sprintf, extra 0
 strftime$267:	; post call
 1016:	
 
-strftime$268:	; goto 331
-1017:		jmp strftime$331
+strftime$268:	; goto 327
+1017:		jmp strftime$327
 1019:	
 
 strftime$269:	; call header integral zero 0 stack zero 0
@@ -2667,392 +2775,410 @@ strftime$270:	; parameter add, offset 6
 1023:		add word [bp + 62], 36
 1025:	
 
-strftime$271:	; parameter string_2504d2D2502d2D2502d#, offset 8
-1026:		mov word [bp + 64], string_2504d2D2502d2D2502d#
+strftime$271:	; parameter string_2502d3A2502d3A2502d#, offset 8
+1026:		mov word [bp + 64], string_2502d3A2502d3A2502d#
 1028:	
 
-strftime$272:	; £temporary3787 -> tp = *tp, offset 10
+strftime$272:	; £temporary3800 -> tp = *tp, offset 4
 1029:		mov si, [bp + 12]
 1031:	
 
-strftime$273:	; £temporary3788 = £temporary3787 -> tp + 1900
-1032:		mov ax, [si + 10]
-1033:		add ax, 1900
+strftime$273:	; parameter £temporary3800 -> tp, offset 10
+1032:		mov ax, [si + 4]
+1033:		mov [bp + 66], ax
 1035:	
 
-strftime$274:	; parameter £temporary3788, offset 10
-1036:		mov [bp + 66], ax
+strftime$274:	; £temporary3801 -> tp = *tp, offset 2
+1036:		mov si, [bp + 12]
 1038:	
 
-strftime$275:	; £temporary3789 -> tp = *tp, offset 8
-1039:		mov si, [bp + 12]
-1041:	
+strftime$275:	; parameter £temporary3801 -> tp, offset 12
+1039:		mov ax, [si + 2]
+1040:		mov [bp + 68], ax
+1042:	
 
-strftime$276:	; £temporary3790 = £temporary3789 -> tp + 1
-1042:		mov ax, [si + 8]
-1043:		add ax, 1
+strftime$276:	; £temporary3802 -> tp = *tp
+1043:		mov si, [bp + 12]
 1045:	
 
-strftime$277:	; parameter £temporary3790, offset 12
-1046:		mov [bp + 68], ax
-1048:	
+strftime$277:	; parameter £temporary3802 -> tp, offset 14
+1046:		mov ax, [si]
+1047:		mov [bp + 70], ax
+1049:	
 
-strftime$278:	; £temporary3791 -> tp = *tp, offset 6
-1049:		mov si, [bp + 12]
-1051:	
+strftime$278:	; call function noellipse-ellipse sprintf, extra 0
+1050:		mov word [bp + 56], strftime$279
+1051:		mov [bp + 58], bp
+1052:		add bp, 56
+1053:		mov di, bp
+1054:		add di, 6
+1055:		jmp sprintf
+1057:	
 
-strftime$279:	; parameter £temporary3791 -> tp, offset 14
-1052:		mov ax, [si + 6]
-1053:		mov [bp + 70], ax
-1055:	
+strftime$279:	; post call
+1059:	
 
-strftime$280:	; call function noellipse-ellipse sprintf, extra 0
-1056:		mov word [bp + 56], strftime$281
-1057:		mov [bp + 58], bp
-1058:		add bp, 56
-1059:		mov di, bp
-1060:		add di, 6
-1061:		jmp sprintf
-1063:	
+strftime$280:	; goto 327
+1060:		jmp strftime$327
+1062:	
 
-strftime$281:	; post call
-1065:	
+strftime$281:	; call header integral zero 0 stack zero 0
+1064:	
 
-strftime$282:	; goto 331
-1066:		jmp strftime$331
+strftime$282:	; parameter add, offset 6
+1065:		mov [bp + 62], bp
+1066:		add word [bp + 62], 36
 1068:	
 
-strftime$283:	; call header integral zero 0 stack zero 0
-1070:	
+strftime$283:	; parameter string_25d3A25d3A25d#, offset 8
+1069:		mov word [bp + 64], string_25d3A25d3A25d#
+1071:	
 
-strftime$284:	; parameter add, offset 6
-1071:		mov [bp + 62], bp
-1072:		add word [bp + 62], 36
+strftime$284:	; £temporary3804 -> tp = *tp, offset 4
+1072:		mov si, [bp + 12]
 1074:	
 
-strftime$285:	; parameter string_2502d3A2502d3A2502d#, offset 8
-1075:		mov word [bp + 64], string_2502d3A2502d3A2502d#
-1077:	
+strftime$285:	; parameter £temporary3804 -> tp, offset 10
+1075:		mov ax, [si + 4]
+1076:		mov [bp + 66], ax
+1078:	
 
-strftime$286:	; £temporary3793 -> tp = *tp, offset 4
-1078:		mov si, [bp + 12]
-1080:	
+strftime$286:	; £temporary3805 -> tp = *tp, offset 2
+1079:		mov si, [bp + 12]
+1081:	
 
-strftime$287:	; parameter £temporary3793 -> tp, offset 10
-1081:		mov ax, [si + 4]
-1082:		mov [bp + 66], ax
-1084:	
+strftime$287:	; parameter £temporary3805 -> tp, offset 12
+1082:		mov ax, [si + 2]
+1083:		mov [bp + 68], ax
+1085:	
 
-strftime$288:	; £temporary3794 -> tp = *tp, offset 2
-1085:		mov si, [bp + 12]
-1087:	
+strftime$288:	; £temporary3806 -> tp = *tp
+1086:		mov si, [bp + 12]
+1088:	
 
-strftime$289:	; parameter £temporary3794 -> tp, offset 12
-1088:		mov ax, [si + 2]
-1089:		mov [bp + 68], ax
-1091:	
+strftime$289:	; parameter £temporary3806 -> tp, offset 14
+1089:		mov ax, [si]
+1090:		mov [bp + 70], ax
+1092:	
 
-strftime$290:	; £temporary3795 -> tp = *tp
-1092:		mov si, [bp + 12]
-1094:	
+strftime$290:	; call function noellipse-ellipse sprintf, extra 0
+1093:		mov word [bp + 56], strftime$291
+1094:		mov [bp + 58], bp
+1095:		add bp, 56
+1096:		mov di, bp
+1097:		add di, 6
+1098:		jmp sprintf
+1100:	
 
-strftime$291:	; parameter £temporary3795 -> tp, offset 14
-1095:		mov ax, [si]
-1096:		mov [bp + 70], ax
-1098:	
+strftime$291:	; post call
+1102:	
 
-strftime$292:	; call function noellipse-ellipse sprintf, extra 0
-1099:		mov word [bp + 56], strftime$293
-1100:		mov [bp + 58], bp
-1101:		add bp, 56
-1102:		mov di, bp
-1103:		add di, 6
-1104:		jmp sprintf
-1106:	
+strftime$292:	; goto 327
+1103:		jmp strftime$327
+1105:	
 
-strftime$293:	; post call
-1108:	
+strftime$293:	; call header integral zero 0 stack zero 0
+1107:	
 
-strftime$294:	; goto 331
-1109:		jmp strftime$331
+strftime$294:	; parameter add, offset 6
+1108:		mov [bp + 62], bp
+1109:		add word [bp + 62], 36
 1111:	
 
-strftime$295:	; call header integral zero 0 stack zero 0
-1113:	
+strftime$295:	; parameter string_25d#, offset 8
+1112:		mov word [bp + 64], string_25d#
+1114:	
 
-strftime$296:	; parameter add, offset 6
-1114:		mov [bp + 62], bp
-1115:		add word [bp + 62], 36
+strftime$296:	; £temporary3808 -> tp = *tp, offset 10
+1115:		mov si, [bp + 12]
 1117:	
 
-strftime$297:	; parameter string_2502d#, offset 8
-1118:		mov word [bp + 64], string_2502d#
-1120:	
+strftime$297:	; £temporary3809 = £temporary3808 -> tp % 100
+1118:		mov ax, [si + 10]
+1120:		xor dx, dx
+1121:		idiv word [int2$100#]
+1127:	
 
-strftime$298:	; £temporary3797 -> tp = *tp, offset 10
-1121:		mov si, [bp + 12]
-1123:	
+strftime$298:	; parameter £temporary3809, offset 10
+1128:		mov [bp + 66], dx
+1130:	
 
-strftime$299:	; £temporary3798 = £temporary3797 -> tp % 100
-1124:		mov ax, [si + 10]
-1126:		xor dx, dx
-1127:		idiv word [int2$100#]
-1133:	
+strftime$299:	; call function noellipse-ellipse sprintf, extra 0
+1131:		mov word [bp + 56], strftime$300
+1132:		mov [bp + 58], bp
+1133:		add bp, 56
+1134:		mov di, bp
+1135:		add di, 2
+1136:		jmp sprintf
+1138:	
 
-strftime$300:	; parameter £temporary3798, offset 10
-1134:		mov [bp + 66], dx
-1136:	
+strftime$300:	; post call
+1140:	
 
-strftime$301:	; call function noellipse-ellipse sprintf, extra 0
-1137:		mov word [bp + 56], strftime$302
-1138:		mov [bp + 58], bp
-1139:		add bp, 56
-1140:		mov di, bp
-1141:		add di, 2
-1142:		jmp sprintf
-1144:	
+strftime$301:	; goto 327
+1141:		jmp strftime$327
+1143:	
 
-strftime$302:	; post call
-1146:	
+strftime$302:	; call header integral zero 0 stack zero 0
+1145:	
 
-strftime$303:	; goto 331
-1147:		jmp strftime$331
+strftime$303:	; parameter add, offset 6
+1146:		mov [bp + 62], bp
+1147:		add word [bp + 62], 36
 1149:	
 
-strftime$304:	; call header integral zero 0 stack zero 0
-1151:	
+strftime$304:	; parameter string_25d#, offset 8
+1150:		mov word [bp + 64], string_25d#
+1152:	
 
-strftime$305:	; parameter add, offset 6
-1152:		mov [bp + 62], bp
-1153:		add word [bp + 62], 36
+strftime$305:	; £temporary3811 -> tp = *tp, offset 10
+1153:		mov si, [bp + 12]
 1155:	
 
-strftime$306:	; parameter string_2504d#, offset 8
-1156:		mov word [bp + 64], string_2504d#
-1158:	
+strftime$306:	; £temporary3812 = £temporary3811 -> tp + 1900
+1156:		mov ax, [si + 10]
+1157:		add ax, 1900
+1159:	
 
-strftime$307:	; £temporary3800 -> tp = *tp, offset 10
-1159:		mov si, [bp + 12]
-1161:	
+strftime$307:	; parameter £temporary3812, offset 10
+1160:		mov [bp + 66], ax
+1162:	
 
-strftime$308:	; £temporary3801 = £temporary3800 -> tp + 1900
-1162:		mov ax, [si + 10]
-1163:		add ax, 1900
-1165:	
+strftime$308:	; call function noellipse-ellipse sprintf, extra 0
+1163:		mov word [bp + 56], strftime$309
+1164:		mov [bp + 58], bp
+1165:		add bp, 56
+1166:		mov di, bp
+1167:		add di, 2
+1168:		jmp sprintf
+1170:	
 
-strftime$309:	; parameter £temporary3801, offset 10
-1166:		mov [bp + 66], ax
-1168:	
+strftime$309:	; post call
+1172:	
 
-strftime$310:	; call function noellipse-ellipse sprintf, extra 0
-1169:		mov word [bp + 56], strftime$311
-1170:		mov [bp + 58], bp
-1171:		add bp, 56
-1172:		mov di, bp
-1173:		add di, 2
-1174:		jmp sprintf
-1176:	
+strftime$310:	; goto 327
+1173:		jmp strftime$327
+1175:	
 
-strftime$311:	; post call
-1178:	
+strftime$311:	; call header integral zero 0 stack zero 0
+1177:	
 
-strftime$312:	; goto 331
-1179:		jmp strftime$331
+strftime$312:	; parameter add, offset 6
+1178:		mov [bp + 62], bp
+1179:		add word [bp + 62], 36
 1181:	
 
-strftime$313:	; call header integral zero 0 stack zero 0
-1183:	
+strftime$313:	; parameter string_#, offset 8
+1182:		mov word [bp + 64], string_#
+1184:	
 
-strftime$314:	; parameter add, offset 6
-1184:		mov [bp + 62], bp
-1185:		add word [bp + 62], 36
-1187:	
-
-strftime$315:	; parameter string_#, offset 8
-1188:		mov word [bp + 64], string_#
+strftime$314:	; call function noellipse-noellipse strcpy
+1185:		mov word [bp + 56], strftime$315
+1186:		mov [bp + 58], bp
+1187:		add bp, 56
+1188:		jmp strcpy
 1190:	
 
-strftime$316:	; call function noellipse-noellipse strcpy
-1191:		mov word [bp + 56], strftime$317
-1192:		mov [bp + 58], bp
-1193:		add bp, 56
-1194:		jmp strcpy
-1196:	
+strftime$315:	; post call
+1192:	
 
-strftime$317:	; post call
-1198:	
+strftime$316:	; goto 327
+1193:		jmp strftime$327
+1195:	
 
-strftime$318:	; goto 331
-1199:		jmp strftime$331
+strftime$317:	; call header integral zero 0 stack zero 0
+1197:	
+
+strftime$318:	; parameter add, offset 6
+1198:		mov [bp + 62], bp
+1199:		add word [bp + 62], 36
 1201:	
 
-strftime$319:	; call header integral zero 0 stack zero 0
-1203:	
+strftime$319:	; parameter string_25#, offset 8
+1202:		mov word [bp + 64], string_25#
+1204:	
 
-strftime$320:	; parameter add, offset 6
-1204:		mov [bp + 62], bp
-1205:		add word [bp + 62], 36
-1207:	
-
-strftime$321:	; parameter string_25#, offset 8
-1208:		mov word [bp + 64], string_25#
+strftime$320:	; call function noellipse-noellipse strcpy
+1205:		mov word [bp + 56], strftime$321
+1206:		mov [bp + 58], bp
+1207:		add bp, 56
+1208:		jmp strcpy
 1210:	
 
-strftime$322:	; call function noellipse-noellipse strcpy
-1211:		mov word [bp + 56], strftime$323
-1212:		mov [bp + 58], bp
-1213:		add bp, 56
-1214:		jmp strcpy
-1216:	
+strftime$321:	; post call
+1212:	
 
-strftime$323:	; post call
+strftime$322:	; call header integral zero 0 stack zero 0
+1214:	
+
+strftime$323:	; parameter add, offset 6
+1215:		mov [bp + 62], bp
+1216:		add word [bp + 62], 36
 1218:	
 
-strftime$324:	; goto 331
-1219:		jmp strftime$331
+strftime$324:	; parameter string_#, offset 8
+1219:		mov word [bp + 64], string_#
 1221:	
 
-strftime$325:	; £temporary3805 -> add = *add
-1222:		mov si, bp
-1223:		add si, 36
-1225:	
+strftime$325:	; call function noellipse-noellipse strcpy
+1222:		mov word [bp + 56], strftime$326
+1223:		mov [bp + 58], bp
+1224:		add bp, 56
+1225:		jmp strcpy
+1227:	
 
-strftime$326:	; £temporary3807 = fmt + index
-1226:		mov di, [bp + 10]
-1227:		add di, [bp + 34]
+strftime$326:	; post call
 1229:	
 
-strftime$327:	; £temporary3806 -> £temporary3807 = *£temporary3807
-1231:	
+strftime$327:	; ++index
+1230:		inc word [bp + 34]
+1232:	
 
-strftime$328:	; £temporary3805 -> add = £temporary3806 -> £temporary3807
-1232:		mov al, [di]
-1233:		mov [si], al
+strftime$328:	; goto 335
+1233:		jmp strftime$335
 1235:	
 
-strftime$329:	; £temporary3808 -> add = *add, offset 1
+strftime$329:	; £temporary3818 -> add = *add
 1236:		mov si, bp
 1237:		add si, 36
 1239:	
 
-strftime$330:	; £temporary3808 -> add = 0
-1240:		mov byte [si + 1], 0
-1242:	
+strftime$330:	; £temporary3820 = fmt + index
+1240:		mov di, [bp + 10]
+1241:		add di, [bp + 34]
+1243:	
 
-strftime$331:	; call header integral zero 0 stack zero 0
-1244:	
+strftime$331:	; £temporary3819 -> £temporary3820 = *£temporary3820
+1245:	
 
-strftime$332:	; parameter s, offset 6
-1245:		mov ax, [bp + 6]
-1246:		mov [bp + 62], ax
-1248:	
+strftime$332:	; £temporary3818 -> add = £temporary3819 -> £temporary3820
+1246:		mov al, [di]
+1247:		mov [si], al
+1249:	
 
-strftime$333:	; call function noellipse-noellipse strlen
-1249:		mov word [bp + 56], strftime$334
-1250:		mov [bp + 58], bp
-1251:		add bp, 56
-1252:		jmp strlen
-1254:	
+strftime$333:	; £temporary3821 -> add = *add, offset 1
+1250:		mov si, bp
+1251:		add si, 36
+1253:	
 
-strftime$334:	; post call
+strftime$334:	; £temporary3821 -> add = 0
+1254:		mov byte [si + 1], 0
 1256:	
 
-strftime$335:	; £temporary3809 = return_value
-1261:	
+strftime$335:	; call header integral zero 0 stack zero 0
+1258:	
 
-strftime$336:	; call header integral no zero 1 stack zero 0
-1262:		mov [bp + 56], bx
-1264:	
+strftime$336:	; parameter s, offset 6
+1259:		mov ax, [bp + 6]
+1260:		mov [bp + 62], ax
+1262:	
 
-strftime$337:	; parameter add, offset 6
-1265:		mov [bp + 64], bp
-1266:		add word [bp + 64], 36
+strftime$337:	; call function noellipse-noellipse strlen
+1263:		mov word [bp + 56], strftime$338
+1264:		mov [bp + 58], bp
+1265:		add bp, 56
+1266:		jmp strlen
 1268:	
 
-strftime$338:	; call function noellipse-noellipse strlen
-1269:		mov word [bp + 58], strftime$339
-1270:		mov [bp + 60], bp
-1271:		add bp, 58
-1272:		jmp strlen
-1274:	
+strftime$338:	; post call
+1270:	
 
-strftime$339:	; post call
-1275:		mov bx, [bp + 56]
-1277:		mov ax, bx
-1279:	
+strftime$339:	; £temporary3822 = return_value
+1275:	
 
-strftime$340:	; £temporary3810 = return_value
-1284:	
+strftime$340:	; call header integral no zero 1 stack zero 0
+1276:		mov [bp + 56], bx
+1278:	
 
-strftime$341:	; £temporary3811 = £temporary3809 + £temporary3810
-1285:		add ax, bx
-1287:	
+strftime$341:	; parameter add, offset 6
+1279:		mov [bp + 64], bp
+1280:		add word [bp + 64], 36
+1282:	
 
-strftime$342:	; if £temporary3811 >= smax goto 350
-1288:		cmp ax, [bp + 8]
-1289:		jge strftime$350
-1291:	
+strftime$342:	; call function noellipse-noellipse strlen
+1283:		mov word [bp + 58], strftime$343
+1284:		mov [bp + 60], bp
+1285:		add bp, 58
+1286:		jmp strlen
+1288:	
 
-strftime$343:	; call header integral zero 0 stack zero 0
+strftime$343:	; post call
+1289:		mov bx, [bp + 56]
+1291:		mov ax, bx
 1293:	
 
-strftime$344:	; parameter s, offset 6
-1294:		mov ax, [bp + 6]
-1295:		mov [bp + 62], ax
-1297:	
+strftime$344:	; £temporary3823 = return_value
+1298:	
 
-strftime$345:	; parameter add, offset 8
-1298:		mov [bp + 64], bp
-1299:		add word [bp + 64], 36
+strftime$345:	; £temporary3824 = £temporary3822 + £temporary3823
+1299:		add ax, bx
 1301:	
 
-strftime$346:	; call function noellipse-noellipse strcat
-1302:		mov word [bp + 56], strftime$347
-1303:		mov [bp + 58], bp
-1304:		add bp, 56
-1305:		jmp strcat
+strftime$346:	; if £temporary3824 >= smax goto 354
+1302:		cmp ax, [bp + 8]
+1303:		jge strftime$354
+1305:	
+
+strftime$347:	; call header integral zero 0 stack zero 0
 1307:	
 
-strftime$347:	; post call
-1309:	
+strftime$348:	; parameter s, offset 6
+1308:		mov ax, [bp + 6]
+1309:		mov [bp + 62], ax
+1311:	
 
-strftime$348:	; ++index
-1310:		inc word [bp + 34]
-1312:	
-
-strftime$349:	; goto 84
-1313:		jmp strftime$84
+strftime$349:	; parameter add, offset 8
+1312:		mov [bp + 64], bp
+1313:		add word [bp + 64], 36
 1315:	
 
-strftime$350:	; call header integral zero 0 stack zero 0
-1317:	
-
-strftime$351:	; parameter s, offset 6
-1318:		mov ax, [bp + 6]
-1319:		mov [bp + 40], ax
+strftime$350:	; call function noellipse-noellipse strcat
+1316:		mov word [bp + 56], strftime$351
+1317:		mov [bp + 58], bp
+1318:		add bp, 56
+1319:		jmp strcat
 1321:	
 
-strftime$352:	; call function noellipse-noellipse strlen
-1322:		mov word [bp + 34], strftime$353
-1323:		mov [bp + 36], bp
-1324:		add bp, 34
-1325:		jmp strlen
-1327:	
+strftime$351:	; post call
+1323:	
 
-strftime$353:	; post call
+strftime$352:	; ++index
+1324:		inc word [bp + 34]
+1326:	
+
+strftime$353:	; goto 84
+1327:		jmp strftime$84
 1329:	
 
-strftime$354:	; £temporary3814 = return_value
-1334:	
+strftime$354:	; call header integral zero 0 stack zero 0
+1331:	
 
-strftime$355:	; return_value = £temporary3814
-1336:	
+strftime$355:	; parameter s, offset 6
+1332:		mov ax, [bp + 6]
+1333:		mov [bp + 40], ax
+1335:	
 
-strftime$356:	; return
-1337:		mov ax, [bp]
-1338:		mov di, [bp + 4]
-1339:		mov bp, [bp + 2]
-1340:		jmp ax
-1342:	
+strftime$356:	; call function noellipse-noellipse strlen
+1336:		mov word [bp + 34], strftime$357
+1337:		mov [bp + 36], bp
+1338:		add bp, 34
+1339:		jmp strlen
+1341:	
 
-strftime$357:	; function end strftime
+strftime$357:	; post call
+1343:	
+
+strftime$358:	; £temporary3827 = return_value
+1348:	
+
+strftime$359:	; return_value = £temporary3827
+1350:	
+
+strftime$360:	; return
+1351:		mov ax, [bp]
+1352:		mov di, [bp + 4]
+1353:		mov bp, [bp + 2]
+1354:		jmp ax
+1356:	
+
+strftime$361:	; function end strftime

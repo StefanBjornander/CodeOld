@@ -7,16 +7,16 @@ stack_test$1:	; parameter string_25i20#, offset 6
 4:		mov word [bp + 12], string_25i20#
 6:	
 
-stack_test$2:	; £temporary5777 = i
-7:		mov t2993, [@34$i]
+stack_test$2:	; £temporary5792 = i
+7:		mov t3000, [@37$i]
 9:	
 
 stack_test$3:	; ++i
-10:		inc word [@34$i]
+10:		inc word [@37$i]
 12:	
 
-stack_test$4:	; parameter £temporary5777, offset 8
-13:		mov [bp + 14], t2993
+stack_test$4:	; parameter £temporary5792, offset 8
+13:		mov [bp + 14], t3000
 15:	
 
 stack_test$5:	; call function noellipse-ellipse printf, extra 0
@@ -45,10 +45,10 @@ stack_test$9:	; post call
 35:	
 
 stack_test$10:	; return
-36:		mov t2994, [bp]
+36:		mov t3001, [bp]
 37:		mov di, [bp + 4]
 38:		mov bp, [bp + 2]
-39:		jmp t2994
+39:		jmp t3001
 41:	
 
 stack_test$11:	; function end stack_test
@@ -75,11 +75,11 @@ heap_test$3:	; call function noellipse-noellipse malloc
 heap_test$4:	; post call
 17:	
 
-heap_test$5:	; £temporary5782 = return_value
+heap_test$5:	; £temporary5797 = return_value
 22:	
 
-heap_test$6:	; pointer = £temporary5782
-23:		mov [bp + 8], t2996
+heap_test$6:	; pointer = £temporary5797
+23:		mov [bp + 8], t3003
 25:	
 
 heap_test$7:	; if pointer == 0 goto 17
@@ -94,21 +94,21 @@ heap_test$9:	; parameter string_102420bytes2Dblock20number3A2025i0A#, offset 6
 32:		mov word [bp + 16], string_102420bytes2Dblock20number3A2025i0A#
 34:	
 
-heap_test$10:	; £temporary5784 = count
-35:		mov t2997, [bp + 6]
+heap_test$10:	; £temporary5799 = count
+35:		mov t3004, [bp + 6]
 37:	
 
 heap_test$11:	; ++count
 38:		inc word [bp + 6]
 40:	
 
-heap_test$12:	; parameter £temporary5784, offset 8
-41:		mov [bp + 18], t2997
+heap_test$12:	; parameter £temporary5799, offset 8
+41:		mov [bp + 18], t3004
 43:	
 
 heap_test$13:	; parameter pointer, offset 10
-44:		mov a2998, [bp + 8]
-45:		mov [bp + 20], a2998
+44:		mov a3005, [bp + 8]
+45:		mov [bp + 20], a3005
 47:	
 
 heap_test$14:	; call function noellipse-ellipse printf, extra 0
@@ -128,10 +128,10 @@ heap_test$16:	; goto 1
 60:	
 
 heap_test$17:	; return
-61:		mov t2999, [bp]
+61:		mov t3006, [bp]
 62:		mov di, [bp + 4]
 63:		mov bp, [bp + 2]
-64:		jmp t2999
+64:		jmp t3006
 66:	
 
 heap_test$18:	; function end heap_test

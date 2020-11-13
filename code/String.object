@@ -4,36 +4,36 @@ strcpy:	; index = 0
 2:		mov word [bp + 10], 0
 4:	
 
-strcpy$1:	; £temporary3892 = source + index
+strcpy$1:	; £temporary3907 = source + index
 5:		mov si, [bp + 8]
 6:		add si, [bp + 10]
 8:	
 
-strcpy$2:	; £temporary3891 -> £temporary3892 = *£temporary3892
+strcpy$2:	; £temporary3906 -> £temporary3907 = *£temporary3907
 10:	
 
-strcpy$3:	; if £temporary3891 -> £temporary3892 == 0 goto 11
+strcpy$3:	; if £temporary3906 -> £temporary3907 == 0 goto 11
 11:		cmp byte [si], 0
 12:		je strcpy$11
 14:	
 
-strcpy$4:	; £temporary3896 = target + index
+strcpy$4:	; £temporary3911 = target + index
 15:		mov si, [bp + 6]
 16:		add si, [bp + 10]
 18:	
 
-strcpy$5:	; £temporary3895 -> £temporary3896 = *£temporary3896
+strcpy$5:	; £temporary3910 -> £temporary3911 = *£temporary3911
 20:	
 
-strcpy$6:	; £temporary3898 = source + index
+strcpy$6:	; £temporary3913 = source + index
 21:		mov di, [bp + 8]
 22:		add di, [bp + 10]
 24:	
 
-strcpy$7:	; £temporary3897 -> £temporary3898 = *£temporary3898
+strcpy$7:	; £temporary3912 -> £temporary3913 = *£temporary3913
 26:	
 
-strcpy$8:	; £temporary3895 -> £temporary3896 = £temporary3897 -> £temporary3898
+strcpy$8:	; £temporary3910 -> £temporary3911 = £temporary3912 -> £temporary3913
 27:		mov al, [di]
 28:		mov [si], al
 30:	
@@ -46,15 +46,15 @@ strcpy$10:	; goto 1
 34:		jmp strcpy$1
 36:	
 
-strcpy$11:	; £temporary3900 = target + index
+strcpy$11:	; £temporary3915 = target + index
 37:		mov si, [bp + 6]
 38:		add si, [bp + 10]
 40:	
 
-strcpy$12:	; £temporary3899 -> £temporary3900 = *£temporary3900
+strcpy$12:	; £temporary3914 -> £temporary3915 = *£temporary3915
 42:	
 
-strcpy$13:	; £temporary3899 -> £temporary3900 = 0
+strcpy$13:	; £temporary3914 -> £temporary3915 = 0
 43:		mov byte [si], 0
 45:	
 
@@ -82,36 +82,36 @@ strncpy$1:	; if index >= size goto 12
 7:		jge strncpy$12
 9:	
 
-strncpy$2:	; £temporary3903 = source + index
+strncpy$2:	; £temporary3918 = source + index
 10:		mov si, [bp + 8]
 11:		add si, [bp + 12]
 13:	
 
-strncpy$3:	; £temporary3902 -> £temporary3903 = *£temporary3903
+strncpy$3:	; £temporary3917 -> £temporary3918 = *£temporary3918
 15:	
 
-strncpy$4:	; if £temporary3902 -> £temporary3903 == 0 goto 12
+strncpy$4:	; if £temporary3917 -> £temporary3918 == 0 goto 12
 16:		cmp byte [si], 0
 17:		je strncpy$12
 19:	
 
-strncpy$5:	; £temporary3908 = target + index
+strncpy$5:	; £temporary3923 = target + index
 20:		mov si, [bp + 6]
 21:		add si, [bp + 12]
 23:	
 
-strncpy$6:	; £temporary3907 -> £temporary3908 = *£temporary3908
+strncpy$6:	; £temporary3922 -> £temporary3923 = *£temporary3923
 25:	
 
-strncpy$7:	; £temporary3910 = source + index
+strncpy$7:	; £temporary3925 = source + index
 26:		mov di, [bp + 8]
 27:		add di, [bp + 12]
 29:	
 
-strncpy$8:	; £temporary3909 -> £temporary3910 = *£temporary3910
+strncpy$8:	; £temporary3924 -> £temporary3925 = *£temporary3925
 31:	
 
-strncpy$9:	; £temporary3907 -> £temporary3908 = £temporary3909 -> £temporary3910
+strncpy$9:	; £temporary3922 -> £temporary3923 = £temporary3924 -> £temporary3925
 32:		mov al, [di]
 33:		mov [si], al
 35:	
@@ -130,15 +130,15 @@ strncpy$12:	; if index >= size goto 18
 44:		jge strncpy$18
 46:	
 
-strncpy$13:	; £temporary3914 = target + index
+strncpy$13:	; £temporary3929 = target + index
 47:		mov si, [bp + 6]
 48:		add si, [bp + 12]
 50:	
 
-strncpy$14:	; £temporary3913 -> £temporary3914 = *£temporary3914
+strncpy$14:	; £temporary3928 -> £temporary3929 = *£temporary3929
 52:	
 
-strncpy$15:	; £temporary3913 -> £temporary3914 = 0
+strncpy$15:	; £temporary3928 -> £temporary3929 = 0
 53:		mov byte [si], 0
 55:	
 
@@ -182,10 +182,10 @@ strcat$2:	; call function noellipse-noellipse strlen
 strcat$3:	; post call
 15:	
 
-strcat$4:	; £temporary3915 = return_value
+strcat$4:	; £temporary3930 = return_value
 20:	
 
-strcat$5:	; targetLength = £temporary3915
+strcat$5:	; targetLength = £temporary3930
 21:		mov [bp + 12], bx
 23:	
 
@@ -193,41 +193,41 @@ strcat$6:	; index = 0
 24:		mov word [bp + 10], 0
 26:	
 
-strcat$7:	; £temporary3917 = source + index
+strcat$7:	; £temporary3932 = source + index
 27:		mov si, [bp + 8]
 28:		add si, [bp + 10]
 30:	
 
-strcat$8:	; £temporary3916 -> £temporary3917 = *£temporary3917
+strcat$8:	; £temporary3931 -> £temporary3932 = *£temporary3932
 32:	
 
-strcat$9:	; if £temporary3916 -> £temporary3917 == 0 goto 18
+strcat$9:	; if £temporary3931 -> £temporary3932 == 0 goto 18
 33:		cmp byte [si], 0
 34:		je strcat$18
 36:	
 
-strcat$10:	; £temporary3920 = targetLength + index
+strcat$10:	; £temporary3935 = targetLength + index
 37:		mov ax, [bp + 12]
 38:		add ax, [bp + 10]
 40:	
 
-strcat$11:	; £temporary3922 = target + £temporary3920
+strcat$11:	; £temporary3937 = target + £temporary3935
 41:		mov si, [bp + 6]
 42:		add si, ax
 44:	
 
-strcat$12:	; £temporary3921 -> £temporary3922 = *£temporary3922
+strcat$12:	; £temporary3936 -> £temporary3937 = *£temporary3937
 46:	
 
-strcat$13:	; £temporary3924 = source + index
+strcat$13:	; £temporary3939 = source + index
 47:		mov di, [bp + 8]
 48:		add di, [bp + 10]
 50:	
 
-strcat$14:	; £temporary3923 -> £temporary3924 = *£temporary3924
+strcat$14:	; £temporary3938 -> £temporary3939 = *£temporary3939
 52:	
 
-strcat$15:	; £temporary3921 -> £temporary3922 = £temporary3923 -> £temporary3924
+strcat$15:	; £temporary3936 -> £temporary3937 = £temporary3938 -> £temporary3939
 53:		mov al, [di]
 54:		mov [si], al
 56:	
@@ -240,20 +240,20 @@ strcat$17:	; goto 7
 60:		jmp strcat$7
 62:	
 
-strcat$18:	; £temporary3925 = targetLength + index
+strcat$18:	; £temporary3940 = targetLength + index
 63:		mov ax, [bp + 12]
 64:		add ax, [bp + 10]
 66:	
 
-strcat$19:	; £temporary3927 = target + £temporary3925
+strcat$19:	; £temporary3942 = target + £temporary3940
 67:		mov si, [bp + 6]
 68:		add si, ax
 70:	
 
-strcat$20:	; £temporary3926 -> £temporary3927 = *£temporary3927
+strcat$20:	; £temporary3941 -> £temporary3942 = *£temporary3942
 72:	
 
-strcat$21:	; £temporary3926 -> £temporary3927 = 0
+strcat$21:	; £temporary3941 -> £temporary3942 = 0
 73:		mov byte [si], 0
 75:	
 
@@ -289,10 +289,10 @@ strncat$2:	; call function noellipse-noellipse strlen
 strncat$3:	; post call
 15:	
 
-strncat$4:	; £temporary3929 = return_value
+strncat$4:	; £temporary3944 = return_value
 20:	
 
-strncat$5:	; targetLength = £temporary3929
+strncat$5:	; targetLength = £temporary3944
 21:		mov [bp + 14], bx
 23:	
 
@@ -300,51 +300,51 @@ strncat$6:	; index = 0
 24:		mov word [bp + 12], 0
 26:	
 
-strncat$7:	; £temporary3930 = size - 1
+strncat$7:	; £temporary3945 = size - 1
 27:		mov ax, [bp + 10]
 28:		sub ax, 1
 30:	
 
-strncat$8:	; if index >= £temporary3930 goto 20
+strncat$8:	; if index >= £temporary3945 goto 20
 31:		cmp [bp + 12], ax
 32:		jge strncat$20
 34:	
 
-strncat$9:	; £temporary3933 = source + index
+strncat$9:	; £temporary3948 = source + index
 35:		mov si, [bp + 8]
 36:		add si, [bp + 12]
 38:	
 
-strncat$10:	; £temporary3932 -> £temporary3933 = *£temporary3933
+strncat$10:	; £temporary3947 -> £temporary3948 = *£temporary3948
 40:	
 
-strncat$11:	; if £temporary3932 -> £temporary3933 == 0 goto 20
+strncat$11:	; if £temporary3947 -> £temporary3948 == 0 goto 20
 41:		cmp byte [si], 0
 42:		je strncat$20
 44:	
 
-strncat$12:	; £temporary3937 = targetLength + index
+strncat$12:	; £temporary3952 = targetLength + index
 45:		mov ax, [bp + 14]
 46:		add ax, [bp + 12]
 48:	
 
-strncat$13:	; £temporary3939 = target + £temporary3937
+strncat$13:	; £temporary3954 = target + £temporary3952
 49:		mov si, [bp + 6]
 50:		add si, ax
 52:	
 
-strncat$14:	; £temporary3938 -> £temporary3939 = *£temporary3939
+strncat$14:	; £temporary3953 -> £temporary3954 = *£temporary3954
 54:	
 
-strncat$15:	; £temporary3941 = source + index
+strncat$15:	; £temporary3956 = source + index
 55:		mov di, [bp + 8]
 56:		add di, [bp + 12]
 58:	
 
-strncat$16:	; £temporary3940 -> £temporary3941 = *£temporary3941
+strncat$16:	; £temporary3955 -> £temporary3956 = *£temporary3956
 60:	
 
-strncat$17:	; £temporary3938 -> £temporary3939 = £temporary3940 -> £temporary3941
+strncat$17:	; £temporary3953 -> £temporary3954 = £temporary3955 -> £temporary3956
 61:		mov al, [di]
 62:		mov [si], al
 64:	
@@ -357,24 +357,24 @@ strncat$19:	; goto 7
 68:		jmp strncat$7
 70:	
 
-strncat$20:	; £temporary3942 = targetLength + size
+strncat$20:	; £temporary3957 = targetLength + size
 71:		mov ax, [bp + 14]
 72:		add ax, [bp + 10]
 74:	
 
-strncat$21:	; £temporary3943 = £temporary3942 - 1
+strncat$21:	; £temporary3958 = £temporary3957 - 1
 75:		sub ax, 1
 77:	
 
-strncat$22:	; £temporary3945 = target + £temporary3943
+strncat$22:	; £temporary3960 = target + £temporary3958
 78:		mov si, [bp + 6]
 79:		add si, ax
 81:	
 
-strncat$23:	; £temporary3944 -> £temporary3945 = *£temporary3945
+strncat$23:	; £temporary3959 -> £temporary3960 = *£temporary3960
 83:	
 
-strncat$24:	; £temporary3944 -> £temporary3945 = 0
+strncat$24:	; £temporary3959 -> £temporary3960 = 0
 84:		mov byte [si], 0
 86:	
 
@@ -396,28 +396,28 @@ strcmp:	; index = 0
 2:		mov word [bp + 10], 0
 4:	
 
-strcmp$1:	; £temporary3949 = left + index
+strcmp$1:	; £temporary3964 = left + index
 5:		mov si, [bp + 6]
 6:		add si, [bp + 10]
 8:	
 
-strcmp$2:	; £temporary3948 -> £temporary3949 = *£temporary3949
+strcmp$2:	; £temporary3963 -> £temporary3964 = *£temporary3964
 10:	
 
-strcmp$3:	; if £temporary3948 -> £temporary3949 != 0 goto 9
+strcmp$3:	; if £temporary3963 -> £temporary3964 != 0 goto 9
 11:		cmp byte [si], 0
 12:		jne strcmp$9
 14:	
 
-strcmp$4:	; £temporary3952 = right + index
+strcmp$4:	; £temporary3967 = right + index
 15:		mov si, [bp + 8]
 16:		add si, [bp + 10]
 18:	
 
-strcmp$5:	; £temporary3951 -> £temporary3952 = *£temporary3952
+strcmp$5:	; £temporary3966 -> £temporary3967 = *£temporary3967
 20:	
 
-strcmp$6:	; if £temporary3951 -> £temporary3952 != 0 goto 9
+strcmp$6:	; if £temporary3966 -> £temporary3967 != 0 goto 9
 21:		cmp byte [si], 0
 22:		jne strcmp$9
 24:	
@@ -433,15 +433,15 @@ strcmp$8:	; return
 31:		jmp ax
 33:	
 
-strcmp$9:	; £temporary3956 = left + index
+strcmp$9:	; £temporary3971 = left + index
 34:		mov si, [bp + 6]
 35:		add si, [bp + 10]
 37:	
 
-strcmp$10:	; £temporary3955 -> £temporary3956 = *£temporary3956
+strcmp$10:	; £temporary3970 -> £temporary3971 = *£temporary3971
 39:	
 
-strcmp$11:	; if £temporary3955 -> £temporary3956 != 0 goto 14
+strcmp$11:	; if £temporary3970 -> £temporary3971 != 0 goto 14
 40:		cmp byte [si], 0
 41:		jne strcmp$14
 43:	
@@ -457,15 +457,15 @@ strcmp$13:	; return
 50:		jmp ax
 52:	
 
-strcmp$14:	; £temporary3959 = right + index
+strcmp$14:	; £temporary3974 = right + index
 53:		mov si, [bp + 8]
 54:		add si, [bp + 10]
 56:	
 
-strcmp$15:	; £temporary3958 -> £temporary3959 = *£temporary3959
+strcmp$15:	; £temporary3973 -> £temporary3974 = *£temporary3974
 58:	
 
-strcmp$16:	; if £temporary3958 -> £temporary3959 != 0 goto 19
+strcmp$16:	; if £temporary3973 -> £temporary3974 != 0 goto 19
 59:		cmp byte [si], 0
 60:		jne strcmp$19
 62:	
@@ -481,23 +481,23 @@ strcmp$18:	; return
 69:		jmp ax
 71:	
 
-strcmp$19:	; £temporary3962 = left + index
+strcmp$19:	; £temporary3977 = left + index
 72:		mov si, [bp + 6]
 73:		add si, [bp + 10]
 75:	
 
-strcmp$20:	; £temporary3961 -> £temporary3962 = *£temporary3962
+strcmp$20:	; £temporary3976 -> £temporary3977 = *£temporary3977
 77:	
 
-strcmp$21:	; £temporary3964 = right + index
+strcmp$21:	; £temporary3979 = right + index
 78:		mov di, [bp + 8]
 79:		add di, [bp + 10]
 81:	
 
-strcmp$22:	; £temporary3963 -> £temporary3964 = *£temporary3964
+strcmp$22:	; £temporary3978 -> £temporary3979 = *£temporary3979
 83:	
 
-strcmp$23:	; if £temporary3961 -> £temporary3962 >= £temporary3963 -> £temporary3964 goto 26
+strcmp$23:	; if £temporary3976 -> £temporary3977 >= £temporary3978 -> £temporary3979 goto 26
 84:		mov al, [di]
 85:		cmp [si], al
 86:		jge strcmp$26
@@ -514,23 +514,23 @@ strcmp$25:	; return
 95:		jmp ax
 97:	
 
-strcmp$26:	; £temporary3967 = left + index
+strcmp$26:	; £temporary3982 = left + index
 98:		mov si, [bp + 6]
 99:		add si, [bp + 10]
 101:	
 
-strcmp$27:	; £temporary3966 -> £temporary3967 = *£temporary3967
+strcmp$27:	; £temporary3981 -> £temporary3982 = *£temporary3982
 103:	
 
-strcmp$28:	; £temporary3969 = right + index
+strcmp$28:	; £temporary3984 = right + index
 104:		mov di, [bp + 8]
 105:		add di, [bp + 10]
 107:	
 
-strcmp$29:	; £temporary3968 -> £temporary3969 = *£temporary3969
+strcmp$29:	; £temporary3983 -> £temporary3984 = *£temporary3984
 109:	
 
-strcmp$30:	; if £temporary3966 -> £temporary3967 <= £temporary3968 -> £temporary3969 goto 33
+strcmp$30:	; if £temporary3981 -> £temporary3982 <= £temporary3983 -> £temporary3984 goto 33
 110:		mov al, [di]
 111:		cmp [si], al
 112:		jle strcmp$33
@@ -568,28 +568,28 @@ strncmp$1:	; if index >= size goto 36
 7:		jge strncmp$36
 9:	
 
-strncmp$2:	; £temporary3975 = left + index
+strncmp$2:	; £temporary3990 = left + index
 10:		mov si, [bp + 6]
 11:		add si, [bp + 12]
 13:	
 
-strncmp$3:	; £temporary3974 -> £temporary3975 = *£temporary3975
+strncmp$3:	; £temporary3989 -> £temporary3990 = *£temporary3990
 15:	
 
-strncmp$4:	; if £temporary3974 -> £temporary3975 != 0 goto 10
+strncmp$4:	; if £temporary3989 -> £temporary3990 != 0 goto 10
 16:		cmp byte [si], 0
 17:		jne strncmp$10
 19:	
 
-strncmp$5:	; £temporary3978 = right + index
+strncmp$5:	; £temporary3993 = right + index
 20:		mov si, [bp + 8]
 21:		add si, [bp + 12]
 23:	
 
-strncmp$6:	; £temporary3977 -> £temporary3978 = *£temporary3978
+strncmp$6:	; £temporary3992 -> £temporary3993 = *£temporary3993
 25:	
 
-strncmp$7:	; if £temporary3977 -> £temporary3978 != 0 goto 10
+strncmp$7:	; if £temporary3992 -> £temporary3993 != 0 goto 10
 26:		cmp byte [si], 0
 27:		jne strncmp$10
 29:	
@@ -605,15 +605,15 @@ strncmp$9:	; return
 36:		jmp ax
 38:	
 
-strncmp$10:	; £temporary3982 = left + index
+strncmp$10:	; £temporary3997 = left + index
 39:		mov si, [bp + 6]
 40:		add si, [bp + 12]
 42:	
 
-strncmp$11:	; £temporary3981 -> £temporary3982 = *£temporary3982
+strncmp$11:	; £temporary3996 -> £temporary3997 = *£temporary3997
 44:	
 
-strncmp$12:	; if £temporary3981 -> £temporary3982 != 0 goto 15
+strncmp$12:	; if £temporary3996 -> £temporary3997 != 0 goto 15
 45:		cmp byte [si], 0
 46:		jne strncmp$15
 48:	
@@ -629,15 +629,15 @@ strncmp$14:	; return
 55:		jmp ax
 57:	
 
-strncmp$15:	; £temporary3985 = right + index
+strncmp$15:	; £temporary4000 = right + index
 58:		mov si, [bp + 8]
 59:		add si, [bp + 12]
 61:	
 
-strncmp$16:	; £temporary3984 -> £temporary3985 = *£temporary3985
+strncmp$16:	; £temporary3999 -> £temporary4000 = *£temporary4000
 63:	
 
-strncmp$17:	; if £temporary3984 -> £temporary3985 != 0 goto 20
+strncmp$17:	; if £temporary3999 -> £temporary4000 != 0 goto 20
 64:		cmp byte [si], 0
 65:		jne strncmp$20
 67:	
@@ -653,23 +653,23 @@ strncmp$19:	; return
 74:		jmp ax
 76:	
 
-strncmp$20:	; £temporary3988 = left + index
+strncmp$20:	; £temporary4003 = left + index
 77:		mov si, [bp + 6]
 78:		add si, [bp + 12]
 80:	
 
-strncmp$21:	; £temporary3987 -> £temporary3988 = *£temporary3988
+strncmp$21:	; £temporary4002 -> £temporary4003 = *£temporary4003
 82:	
 
-strncmp$22:	; £temporary3990 = right + index
+strncmp$22:	; £temporary4005 = right + index
 83:		mov di, [bp + 8]
 84:		add di, [bp + 12]
 86:	
 
-strncmp$23:	; £temporary3989 -> £temporary3990 = *£temporary3990
+strncmp$23:	; £temporary4004 -> £temporary4005 = *£temporary4005
 88:	
 
-strncmp$24:	; if £temporary3987 -> £temporary3988 >= £temporary3989 -> £temporary3990 goto 27
+strncmp$24:	; if £temporary4002 -> £temporary4003 >= £temporary4004 -> £temporary4005 goto 27
 89:		mov al, [di]
 90:		cmp [si], al
 91:		jge strncmp$27
@@ -686,23 +686,23 @@ strncmp$26:	; return
 100:		jmp ax
 102:	
 
-strncmp$27:	; £temporary3993 = left + index
+strncmp$27:	; £temporary4008 = left + index
 103:		mov si, [bp + 6]
 104:		add si, [bp + 12]
 106:	
 
-strncmp$28:	; £temporary3992 -> £temporary3993 = *£temporary3993
+strncmp$28:	; £temporary4007 -> £temporary4008 = *£temporary4008
 108:	
 
-strncmp$29:	; £temporary3995 = right + index
+strncmp$29:	; £temporary4010 = right + index
 109:		mov di, [bp + 8]
 110:		add di, [bp + 12]
 112:	
 
-strncmp$30:	; £temporary3994 -> £temporary3995 = *£temporary3995
+strncmp$30:	; £temporary4009 -> £temporary4010 = *£temporary4010
 114:	
 
-strncmp$31:	; if £temporary3992 -> £temporary3993 <= £temporary3994 -> £temporary3995 goto 34
+strncmp$31:	; if £temporary4007 -> £temporary4008 <= £temporary4009 -> £temporary4010 goto 34
 115:		mov al, [di]
 116:		cmp [si], al
 117:		jle strncmp$34
@@ -741,7 +741,7 @@ strncmp$37:	; return
 strncmp$38:	; function end strncmp
 1:	
 
-strchr:	; £temporary3997 = int_to_int i (Signed_Int -> Signed_Char)
+strchr:	; £temporary4012 = int_to_int i (Signed_Int -> Signed_Char)
 2:		mov ax, [bp + 8]
 5:		cmp ax, 0
 6:		jge strchr$1
@@ -749,7 +749,7 @@ strchr:	; £temporary3997 = int_to_int i (Signed_Int -> Signed_Char)
 9:		neg al
 11:	
 
-strchr$1:	; c = £temporary3997
+strchr$1:	; c = £temporary4012
 12:		mov [bp + 12], al
 14:	
 
@@ -757,45 +757,45 @@ strchr$2:	; index = 0
 15:		mov word [bp + 10], 0
 17:	
 
-strchr$3:	; £temporary3999 = text + index
+strchr$3:	; £temporary4014 = text + index
 18:		mov si, [bp + 6]
 19:		add si, [bp + 10]
 21:	
 
-strchr$4:	; £temporary3998 -> £temporary3999 = *£temporary3999
+strchr$4:	; £temporary4013 -> £temporary4014 = *£temporary4014
 23:	
 
-strchr$5:	; if £temporary3998 -> £temporary3999 == 0 goto 16
+strchr$5:	; if £temporary4013 -> £temporary4014 == 0 goto 16
 24:		cmp byte [si], 0
 25:		je strchr$16
 27:	
 
-strchr$6:	; £temporary4003 = text + index
+strchr$6:	; £temporary4018 = text + index
 28:		mov si, [bp + 6]
 29:		add si, [bp + 10]
 31:	
 
-strchr$7:	; £temporary4002 -> £temporary4003 = *£temporary4003
+strchr$7:	; £temporary4017 -> £temporary4018 = *£temporary4018
 33:	
 
-strchr$8:	; if £temporary4002 -> £temporary4003 != c goto 14
+strchr$8:	; if £temporary4017 -> £temporary4018 != c goto 14
 34:		mov al, [bp + 12]
 35:		cmp [si], al
 36:		jne strchr$14
 38:	
 
-strchr$9:	; £temporary4006 = text + index
+strchr$9:	; £temporary4021 = text + index
 39:		mov bx, [bp + 6]
 40:		add bx, [bp + 10]
 42:	
 
-strchr$10:	; £temporary4005 -> £temporary4006 = *£temporary4006
+strchr$10:	; £temporary4020 -> £temporary4021 = *£temporary4021
 44:	
 
-strchr$11:	; £temporary4007 = &£temporary4005 -> £temporary4006
+strchr$11:	; £temporary4022 = &£temporary4020 -> £temporary4021
 46:	
 
-strchr$12:	; return_value = £temporary4007
+strchr$12:	; return_value = £temporary4022
 48:	
 
 strchr$13:	; return
@@ -831,7 +831,7 @@ strrchr:	; result = 0
 2:		mov word [bp + 12], 0
 4:	
 
-strrchr$1:	; £temporary4008 = int_to_int i (Signed_Int -> Signed_Char)
+strrchr$1:	; £temporary4023 = int_to_int i (Signed_Int -> Signed_Char)
 5:		mov ax, [bp + 8]
 8:		cmp ax, 0
 9:		jge strrchr$2
@@ -839,7 +839,7 @@ strrchr$1:	; £temporary4008 = int_to_int i (Signed_Int -> Signed_Char)
 12:		neg al
 14:	
 
-strrchr$2:	; c = £temporary4008
+strrchr$2:	; c = £temporary4023
 15:		mov [bp + 14], al
 17:	
 
@@ -847,45 +847,45 @@ strrchr$3:	; index = 0
 18:		mov word [bp + 10], 0
 20:	
 
-strrchr$4:	; £temporary4010 = text + index
+strrchr$4:	; £temporary4025 = text + index
 21:		mov si, [bp + 6]
 22:		add si, [bp + 10]
 24:	
 
-strrchr$5:	; £temporary4009 -> £temporary4010 = *£temporary4010
+strrchr$5:	; £temporary4024 -> £temporary4025 = *£temporary4025
 26:	
 
-strrchr$6:	; if £temporary4009 -> £temporary4010 == 0 goto 16
+strrchr$6:	; if £temporary4024 -> £temporary4025 == 0 goto 16
 27:		cmp byte [si], 0
 28:		je strrchr$16
 30:	
 
-strrchr$7:	; £temporary4014 = text + index
+strrchr$7:	; £temporary4029 = text + index
 31:		mov si, [bp + 6]
 32:		add si, [bp + 10]
 34:	
 
-strrchr$8:	; £temporary4013 -> £temporary4014 = *£temporary4014
+strrchr$8:	; £temporary4028 -> £temporary4029 = *£temporary4029
 36:	
 
-strrchr$9:	; if £temporary4013 -> £temporary4014 != c goto 14
+strrchr$9:	; if £temporary4028 -> £temporary4029 != c goto 14
 37:		mov al, [bp + 14]
 38:		cmp [si], al
 39:		jne strrchr$14
 41:	
 
-strrchr$10:	; £temporary4017 = text + index
+strrchr$10:	; £temporary4032 = text + index
 42:		mov si, [bp + 6]
 43:		add si, [bp + 10]
 45:	
 
-strrchr$11:	; £temporary4016 -> £temporary4017 = *£temporary4017
+strrchr$11:	; £temporary4031 -> £temporary4032 = *£temporary4032
 47:	
 
-strrchr$12:	; £temporary4018 = &£temporary4016 -> £temporary4017
+strrchr$12:	; £temporary4033 = &£temporary4031 -> £temporary4032
 49:	
 
-strrchr$13:	; result = £temporary4018
+strrchr$13:	; result = £temporary4033
 50:		mov [bp + 12], si
 52:	
 
@@ -915,15 +915,15 @@ strspn:	; index = 0
 2:		mov word [bp + 10], 0
 4:	
 
-strspn$1:	; £temporary4020 = mainString + index
+strspn$1:	; £temporary4035 = mainString + index
 5:		mov si, [bp + 6]
 6:		add si, [bp + 10]
 8:	
 
-strspn$2:	; £temporary4019 -> £temporary4020 = *£temporary4020
+strspn$2:	; £temporary4034 -> £temporary4035 = *£temporary4035
 10:	
 
-strspn$3:	; if £temporary4019 -> £temporary4020 == 0 goto 18
+strspn$3:	; if £temporary4034 -> £temporary4035 == 0 goto 18
 11:		cmp byte [si], 0
 12:		je strspn$18
 14:	
@@ -936,15 +936,15 @@ strspn$5:	; parameter charSet, offset 6
 18:		mov [bp + 18], ax
 20:	
 
-strspn$6:	; £temporary4024 = mainString + index
+strspn$6:	; £temporary4039 = mainString + index
 21:		mov si, [bp + 6]
 22:		add si, [bp + 10]
 24:	
 
-strspn$7:	; £temporary4023 -> £temporary4024 = *£temporary4024
+strspn$7:	; £temporary4038 -> £temporary4039 = *£temporary4039
 26:	
 
-strspn$8:	; £temporary4025 = int_to_int £temporary4023 -> £temporary4024 (Signed_Char -> Signed_Int)
+strspn$8:	; £temporary4040 = int_to_int £temporary4038 -> £temporary4039 (Signed_Char -> Signed_Int)
 27:		mov al, [si]
 29:		and ax, 255
 31:		cmp al, 0
@@ -953,7 +953,7 @@ strspn$8:	; £temporary4025 = int_to_int £temporary4023 -> £temporary4024 (Sig
 35:		neg ax
 37:	
 
-strspn$9:	; parameter £temporary4025, offset 8
+strspn$9:	; parameter £temporary4040, offset 8
 38:		mov [bp + 20], ax
 40:	
 
@@ -967,10 +967,10 @@ strspn$10:	; call function noellipse-noellipse strchr
 strspn$11:	; post call
 48:	
 
-strspn$12:	; £temporary4026 = return_value
+strspn$12:	; £temporary4041 = return_value
 53:	
 
-strspn$13:	; if £temporary4026 != 0 goto 16
+strspn$13:	; if £temporary4041 != 0 goto 16
 54:		cmp bx, 0
 55:		jne strspn$16
 57:	
@@ -1012,15 +1012,15 @@ strcspn:	; index = 0
 2:		mov word [bp + 10], 0
 4:	
 
-strcspn$1:	; £temporary4031 = mainString + index
+strcspn$1:	; £temporary4046 = mainString + index
 5:		mov si, [bp + 6]
 6:		add si, [bp + 10]
 8:	
 
-strcspn$2:	; £temporary4030 -> £temporary4031 = *£temporary4031
+strcspn$2:	; £temporary4045 -> £temporary4046 = *£temporary4046
 10:	
 
-strcspn$3:	; if £temporary4030 -> £temporary4031 == 0 goto 18
+strcspn$3:	; if £temporary4045 -> £temporary4046 == 0 goto 18
 11:		cmp byte [si], 0
 12:		je strcspn$18
 14:	
@@ -1033,15 +1033,15 @@ strcspn$5:	; parameter charSet, offset 6
 18:		mov [bp + 18], ax
 20:	
 
-strcspn$6:	; £temporary4035 = mainString + index
+strcspn$6:	; £temporary4050 = mainString + index
 21:		mov si, [bp + 6]
 22:		add si, [bp + 10]
 24:	
 
-strcspn$7:	; £temporary4034 -> £temporary4035 = *£temporary4035
+strcspn$7:	; £temporary4049 -> £temporary4050 = *£temporary4050
 26:	
 
-strcspn$8:	; £temporary4036 = int_to_int £temporary4034 -> £temporary4035 (Signed_Char -> Signed_Int)
+strcspn$8:	; £temporary4051 = int_to_int £temporary4049 -> £temporary4050 (Signed_Char -> Signed_Int)
 27:		mov al, [si]
 29:		and ax, 255
 31:		cmp al, 0
@@ -1050,7 +1050,7 @@ strcspn$8:	; £temporary4036 = int_to_int £temporary4034 -> £temporary4035 (Si
 35:		neg ax
 37:	
 
-strcspn$9:	; parameter £temporary4036, offset 8
+strcspn$9:	; parameter £temporary4051, offset 8
 38:		mov [bp + 20], ax
 40:	
 
@@ -1064,10 +1064,10 @@ strcspn$10:	; call function noellipse-noellipse strchr
 strcspn$11:	; post call
 48:	
 
-strcspn$12:	; £temporary4037 = return_value
+strcspn$12:	; £temporary4052 = return_value
 53:	
 
-strcspn$13:	; if £temporary4037 == 0 goto 16
+strcspn$13:	; if £temporary4052 == 0 goto 16
 54:		cmp bx, 0
 55:		je strcspn$16
 57:	
@@ -1109,15 +1109,15 @@ strpbrk:	; index = 0
 2:		mov word [bp + 10], 0
 4:	
 
-strpbrk$1:	; £temporary4042 = mainString + index
+strpbrk$1:	; £temporary4057 = mainString + index
 5:		mov si, [bp + 6]
 6:		add si, [bp + 10]
 8:	
 
-strpbrk$2:	; £temporary4041 -> £temporary4042 = *£temporary4042
+strpbrk$2:	; £temporary4056 -> £temporary4057 = *£temporary4057
 10:	
 
-strpbrk$3:	; if £temporary4041 -> £temporary4042 == 0 goto 21
+strpbrk$3:	; if £temporary4056 -> £temporary4057 == 0 goto 21
 11:		cmp byte [si], 0
 12:		je strpbrk$21
 14:	
@@ -1130,15 +1130,15 @@ strpbrk$5:	; parameter charSet, offset 6
 18:		mov [bp + 18], ax
 20:	
 
-strpbrk$6:	; £temporary4046 = mainString + index
+strpbrk$6:	; £temporary4061 = mainString + index
 21:		mov si, [bp + 6]
 22:		add si, [bp + 10]
 24:	
 
-strpbrk$7:	; £temporary4045 -> £temporary4046 = *£temporary4046
+strpbrk$7:	; £temporary4060 -> £temporary4061 = *£temporary4061
 26:	
 
-strpbrk$8:	; £temporary4047 = int_to_int £temporary4045 -> £temporary4046 (Signed_Char -> Signed_Int)
+strpbrk$8:	; £temporary4062 = int_to_int £temporary4060 -> £temporary4061 (Signed_Char -> Signed_Int)
 27:		mov al, [si]
 29:		and ax, 255
 31:		cmp al, 0
@@ -1147,7 +1147,7 @@ strpbrk$8:	; £temporary4047 = int_to_int £temporary4045 -> £temporary4046 (Si
 35:		neg ax
 37:	
 
-strpbrk$9:	; parameter £temporary4047, offset 8
+strpbrk$9:	; parameter £temporary4062, offset 8
 38:		mov [bp + 20], ax
 40:	
 
@@ -1161,26 +1161,26 @@ strpbrk$10:	; call function noellipse-noellipse strchr
 strpbrk$11:	; post call
 48:	
 
-strpbrk$12:	; £temporary4048 = return_value
+strpbrk$12:	; £temporary4063 = return_value
 53:	
 
-strpbrk$13:	; if £temporary4048 == 0 goto 19
+strpbrk$13:	; if £temporary4063 == 0 goto 19
 54:		cmp bx, 0
 55:		je strpbrk$19
 57:	
 
-strpbrk$14:	; £temporary4051 = mainString + index
+strpbrk$14:	; £temporary4066 = mainString + index
 58:		mov bx, [bp + 6]
 59:		add bx, [bp + 10]
 61:	
 
-strpbrk$15:	; £temporary4050 -> £temporary4051 = *£temporary4051
+strpbrk$15:	; £temporary4065 -> £temporary4066 = *£temporary4066
 63:	
 
-strpbrk$16:	; £temporary4052 = &£temporary4050 -> £temporary4051
+strpbrk$16:	; £temporary4067 = &£temporary4065 -> £temporary4066
 65:	
 
-strpbrk$17:	; return_value = £temporary4052
+strpbrk$17:	; return_value = £temporary4067
 67:	
 
 strpbrk$18:	; return
@@ -1216,15 +1216,15 @@ strstr:	; index = 0
 2:		mov word [bp + 10], 0
 4:	
 
-strstr$1:	; £temporary4056 = mainString + index
+strstr$1:	; £temporary4071 = mainString + index
 5:		mov si, [bp + 6]
 6:		add si, [bp + 10]
 8:	
 
-strstr$2:	; £temporary4055 -> £temporary4056 = *£temporary4056
+strstr$2:	; £temporary4070 -> £temporary4071 = *£temporary4071
 10:	
 
-strstr$3:	; if £temporary4055 -> £temporary4056 == 0 goto 19
+strstr$3:	; if £temporary4070 -> £temporary4071 == 0 goto 19
 11:		cmp byte [si], 0
 12:		je strstr$19
 14:	
@@ -1232,12 +1232,12 @@ strstr$3:	; if £temporary4055 -> £temporary4056 == 0 goto 19
 strstr$4:	; call header integral zero 0 stack zero 0
 16:	
 
-strstr$5:	; £temporary4059 = mainString + index
+strstr$5:	; £temporary4074 = mainString + index
 17:		mov ax, [bp + 6]
 18:		add ax, [bp + 10]
 20:	
 
-strstr$6:	; parameter £temporary4059, offset 6
+strstr$6:	; parameter £temporary4074, offset 6
 21:		mov [bp + 18], ax
 23:	
 
@@ -1256,26 +1256,26 @@ strstr$8:	; call function noellipse-noellipse strcmp
 strstr$9:	; post call
 35:	
 
-strstr$10:	; £temporary4060 = return_value
+strstr$10:	; £temporary4075 = return_value
 40:	
 
-strstr$11:	; if £temporary4060 != 0 goto 17
+strstr$11:	; if £temporary4075 != 0 goto 17
 41:		cmp bx, 0
 42:		jne strstr$17
 44:	
 
-strstr$12:	; £temporary4063 = mainString + index
+strstr$12:	; £temporary4078 = mainString + index
 45:		mov bx, [bp + 6]
 46:		add bx, [bp + 10]
 48:	
 
-strstr$13:	; £temporary4062 -> £temporary4063 = *£temporary4063
+strstr$13:	; £temporary4077 -> £temporary4078 = *£temporary4078
 50:	
 
-strstr$14:	; £temporary4064 = &£temporary4062 -> £temporary4063
+strstr$14:	; £temporary4079 = &£temporary4077 -> £temporary4078
 52:	
 
-strstr$15:	; return_value = £temporary4064
+strstr$15:	; return_value = £temporary4079
 54:	
 
 strstr$16:	; return
@@ -1311,15 +1311,15 @@ strlen:	; index = 0
 2:		mov word [bp + 8], 0
 4:	
 
-strlen$1:	; £temporary4068 = string + index
+strlen$1:	; £temporary4083 = string + index
 5:		mov si, [bp + 6]
 6:		add si, [bp + 8]
 8:	
 
-strlen$2:	; £temporary4067 -> £temporary4068 = *£temporary4068
+strlen$2:	; £temporary4082 -> £temporary4083 = *£temporary4083
 10:	
 
-strlen$3:	; if £temporary4067 -> £temporary4068 == 0 goto 6
+strlen$3:	; if £temporary4082 -> £temporary4083 == 0 goto 6
 11:		cmp byte [si], 0
 12:		je strlen$6
 14:	
@@ -1359,10 +1359,10 @@ strerror$1:	; call function noellipse-noellipse localeconv
 strerror$2:	; post call
 11:	
 
-strerror$3:	; £temporary4071 = return_value
+strerror$3:	; £temporary4086 = return_value
 16:	
 
-strerror$4:	; localeConvPtr = £temporary4071
+strerror$4:	; localeConvPtr = £temporary4086
 17:		mov [bp + 8], bx
 19:	
 
@@ -1371,11 +1371,11 @@ strerror$5:	; if localeConvPtr == 0 goto 9
 21:		je strerror$9
 23:	
 
-strerror$6:	; £temporary4073 -> localeConvPtr = *localeConvPtr, offset 16
+strerror$6:	; £temporary4088 -> localeConvPtr = *localeConvPtr, offset 16
 24:		mov si, [bp + 8]
 26:	
 
-strerror$7:	; £temporary4077 = £temporary4073 -> localeConvPtr
+strerror$7:	; £temporary4092 = £temporary4088 -> localeConvPtr
 27:		mov ax, [si + 16]
 29:	
 
@@ -1383,11 +1383,11 @@ strerror$8:	; goto 10
 30:		jmp strerror$10
 32:	
 
-strerror$9:	; £temporary4077 = 0
+strerror$9:	; £temporary4092 = 0
 33:		mov ax, 0
 35:	
 
-strerror$10:	; messageList = £temporary4077
+strerror$10:	; messageList = £temporary4092
 36:		mov [bp + 10], ax
 38:	
 
@@ -1396,7 +1396,7 @@ strerror$11:	; if messageList == 0 goto 14
 40:		je strerror$14
 42:	
 
-strerror$12:	; £temporary4082 = messageList
+strerror$12:	; £temporary4097 = messageList
 43:		mov ax, [bp + 10]
 45:	
 
@@ -1404,29 +1404,29 @@ strerror$13:	; goto 15
 46:		jmp strerror$15
 48:	
 
-strerror$14:	; £temporary4082 = enMessageList
+strerror$14:	; £temporary4097 = enMessageList
 49:		mov ax, enMessageList
 51:	
 
-strerror$15:	; messageList = £temporary4082
+strerror$15:	; messageList = £temporary4097
 52:		mov [bp + 10], ax
 54:	
 
-strerror$16:	; £temporary4084 = errno * 2
+strerror$16:	; £temporary4099 = errno * 2
 55:		mov ax, [bp + 6]
 57:		xor dx, dx
 58:		mul word [int2$2#]
 64:	
 
-strerror$17:	; £temporary4085 = messageList + £temporary4084
+strerror$17:	; £temporary4100 = messageList + £temporary4099
 65:		mov si, [bp + 10]
 66:		add si, ax
 68:	
 
-strerror$18:	; £temporary4083 -> £temporary4085 = *£temporary4085
+strerror$18:	; £temporary4098 -> £temporary4100 = *£temporary4100
 70:	
 
-strerror$19:	; return_value = £temporary4083 -> £temporary4085
+strerror$19:	; return_value = £temporary4098 -> £temporary4100
 71:		mov bx, [si]
 73:	
 
@@ -1445,11 +1445,11 @@ strtok:	; if string == 0 goto 37
 3:		je strtok$37
 5:	
 
-strtok$1:	; £temporary4087 -> string = *string
+strtok$1:	; £temporary4102 -> string = *string
 6:		mov si, [bp + 6]
 8:	
 
-strtok$2:	; if £temporary4087 -> string != 0 goto 5
+strtok$2:	; if £temporary4102 -> string != 0 goto 5
 9:		cmp byte [si], 0
 10:		jne strtok$5
 12:	
@@ -1469,15 +1469,15 @@ strtok$5:	; index = 0
 22:		mov word [bp + 10], 0
 24:	
 
-strtok$6:	; £temporary4090 = string + index
+strtok$6:	; £temporary4105 = string + index
 25:		mov si, [bp + 6]
 26:		add si, [bp + 10]
 28:	
 
-strtok$7:	; £temporary4089 -> £temporary4090 = *£temporary4090
+strtok$7:	; £temporary4104 -> £temporary4105 = *£temporary4105
 30:	
 
-strtok$8:	; if £temporary4089 -> £temporary4090 == 0 goto 31
+strtok$8:	; if £temporary4104 -> £temporary4105 == 0 goto 31
 31:		cmp byte [si], 0
 32:		je strtok$31
 34:	
@@ -1490,15 +1490,15 @@ strtok$10:	; parameter charSet, offset 6
 38:		mov [bp + 20], ax
 40:	
 
-strtok$11:	; £temporary4094 = string + index
+strtok$11:	; £temporary4109 = string + index
 41:		mov si, [bp + 6]
 42:		add si, [bp + 10]
 44:	
 
-strtok$12:	; £temporary4093 -> £temporary4094 = *£temporary4094
+strtok$12:	; £temporary4108 -> £temporary4109 = *£temporary4109
 46:	
 
-strtok$13:	; £temporary4095 = int_to_int £temporary4093 -> £temporary4094 (Signed_Char -> Signed_Int)
+strtok$13:	; £temporary4110 = int_to_int £temporary4108 -> £temporary4109 (Signed_Char -> Signed_Int)
 47:		mov al, [si]
 49:		and ax, 255
 51:		cmp al, 0
@@ -1507,7 +1507,7 @@ strtok$13:	; £temporary4095 = int_to_int £temporary4093 -> £temporary4094 (Si
 55:		neg ax
 57:	
 
-strtok$14:	; parameter £temporary4095, offset 8
+strtok$14:	; parameter £temporary4110, offset 8
 58:		mov [bp + 22], ax
 60:	
 
@@ -1521,43 +1521,43 @@ strtok$15:	; call function noellipse-noellipse strchr
 strtok$16:	; post call
 68:	
 
-strtok$17:	; £temporary4096 = return_value
+strtok$17:	; £temporary4111 = return_value
 73:	
 
-strtok$18:	; if £temporary4096 == 0 goto 29
+strtok$18:	; if £temporary4111 == 0 goto 29
 74:		cmp bx, 0
 75:		je strtok$29
 77:	
 
-strtok$19:	; £temporary4099 = string + index
+strtok$19:	; £temporary4114 = string + index
 78:		mov si, [bp + 6]
 79:		add si, [bp + 10]
 81:	
 
-strtok$20:	; £temporary4098 -> £temporary4099 = *£temporary4099
+strtok$20:	; £temporary4113 -> £temporary4114 = *£temporary4114
 83:	
 
-strtok$21:	; £temporary4098 -> £temporary4099 = 0
+strtok$21:	; £temporary4113 -> £temporary4114 = 0
 84:		mov byte [si], 0
 86:	
 
-strtok$22:	; £temporary4100 = index + 1
+strtok$22:	; £temporary4115 = index + 1
 87:		mov ax, [bp + 10]
 88:		add ax, 1
 90:	
 
-strtok$23:	; £temporary4102 = string + £temporary4100
+strtok$23:	; £temporary4117 = string + £temporary4115
 91:		mov si, [bp + 6]
 92:		add si, ax
 94:	
 
-strtok$24:	; £temporary4101 -> £temporary4102 = *£temporary4102
+strtok$24:	; £temporary4116 -> £temporary4117 = *£temporary4117
 96:	
 
-strtok$25:	; £temporary4103 = &£temporary4101 -> £temporary4102
+strtok$25:	; £temporary4118 = &£temporary4116 -> £temporary4117
 98:	
 
-strtok$26:	; token = £temporary4103
+strtok$26:	; token = £temporary4118
 99:		mov [token], si
 101:	
 
@@ -1580,18 +1580,18 @@ strtok$30:	; goto 6
 114:		jmp strtok$6
 116:	
 
-strtok$31:	; £temporary4105 = string + index
+strtok$31:	; £temporary4120 = string + index
 117:		mov si, [bp + 6]
 118:		add si, [bp + 10]
 120:	
 
-strtok$32:	; £temporary4104 -> £temporary4105 = *£temporary4105
+strtok$32:	; £temporary4119 -> £temporary4120 = *£temporary4120
 122:	
 
-strtok$33:	; £temporary4106 = &£temporary4104 -> £temporary4105
+strtok$33:	; £temporary4121 = &£temporary4119 -> £temporary4120
 124:	
 
-strtok$34:	; token = £temporary4106
+strtok$34:	; token = £temporary4121
 125:		mov [token], si
 127:	
 
@@ -1643,15 +1643,15 @@ strtok$43:	; index = 0
 164:		mov word [bp + 10], 0
 166:	
 
-strtok$44:	; £temporary4111 = token + index
+strtok$44:	; £temporary4126 = token + index
 167:		mov si, [token]
 168:		add si, [bp + 10]
 170:	
 
-strtok$45:	; £temporary4110 -> £temporary4111 = *£temporary4111
+strtok$45:	; £temporary4125 -> £temporary4126 = *£temporary4126
 172:	
 
-strtok$46:	; if £temporary4110 -> £temporary4111 == 0 goto 70
+strtok$46:	; if £temporary4125 -> £temporary4126 == 0 goto 70
 173:		cmp byte [si], 0
 174:		je strtok$70
 176:	
@@ -1664,15 +1664,15 @@ strtok$48:	; parameter charSet, offset 6
 180:		mov [bp + 20], ax
 182:	
 
-strtok$49:	; £temporary4115 = token + index
+strtok$49:	; £temporary4130 = token + index
 183:		mov si, [token]
 184:		add si, [bp + 10]
 186:	
 
-strtok$50:	; £temporary4114 -> £temporary4115 = *£temporary4115
+strtok$50:	; £temporary4129 -> £temporary4130 = *£temporary4130
 188:	
 
-strtok$51:	; £temporary4116 = int_to_int £temporary4114 -> £temporary4115 (Signed_Char -> Signed_Int)
+strtok$51:	; £temporary4131 = int_to_int £temporary4129 -> £temporary4130 (Signed_Char -> Signed_Int)
 189:		mov al, [si]
 191:		and ax, 255
 193:		cmp al, 0
@@ -1681,7 +1681,7 @@ strtok$51:	; £temporary4116 = int_to_int £temporary4114 -> £temporary4115 (Si
 197:		neg ax
 199:	
 
-strtok$52:	; parameter £temporary4116, offset 8
+strtok$52:	; parameter £temporary4131, offset 8
 200:		mov [bp + 22], ax
 202:	
 
@@ -1695,10 +1695,10 @@ strtok$53:	; call function noellipse-noellipse strchr
 strtok$54:	; post call
 210:	
 
-strtok$55:	; £temporary4117 = return_value
+strtok$55:	; £temporary4132 = return_value
 215:	
 
-strtok$56:	; if £temporary4117 == 0 goto 68
+strtok$56:	; if £temporary4132 == 0 goto 68
 216:		cmp bx, 0
 217:		je strtok$68
 219:	
@@ -1708,35 +1708,35 @@ strtok$57:	; tokenStart2 = token
 221:		mov [bp + 14], ax
 223:	
 
-strtok$58:	; £temporary4120 = token + index
+strtok$58:	; £temporary4135 = token + index
 224:		mov si, [token]
 225:		add si, [bp + 10]
 227:	
 
-strtok$59:	; £temporary4119 -> £temporary4120 = *£temporary4120
+strtok$59:	; £temporary4134 -> £temporary4135 = *£temporary4135
 229:	
 
-strtok$60:	; £temporary4119 -> £temporary4120 = 0
+strtok$60:	; £temporary4134 -> £temporary4135 = 0
 230:		mov byte [si], 0
 232:	
 
-strtok$61:	; £temporary4121 = index + 1
+strtok$61:	; £temporary4136 = index + 1
 233:		mov ax, [bp + 10]
 234:		add ax, 1
 236:	
 
-strtok$62:	; £temporary4123 = token + £temporary4121
+strtok$62:	; £temporary4138 = token + £temporary4136
 237:		mov si, [token]
 238:		add si, ax
 240:	
 
-strtok$63:	; £temporary4122 -> £temporary4123 = *£temporary4123
+strtok$63:	; £temporary4137 -> £temporary4138 = *£temporary4138
 242:	
 
-strtok$64:	; £temporary4124 = &£temporary4122 -> £temporary4123
+strtok$64:	; £temporary4139 = &£temporary4137 -> £temporary4138
 244:	
 
-strtok$65:	; token = £temporary4124
+strtok$65:	; token = £temporary4139
 245:		mov [token], si
 247:	
 
@@ -1764,18 +1764,18 @@ strtok$70:	; tokenStart = token
 264:		mov [bp + 12], ax
 266:	
 
-strtok$71:	; £temporary4126 = token + index
+strtok$71:	; £temporary4141 = token + index
 267:		mov si, [token]
 268:		add si, [bp + 10]
 270:	
 
-strtok$72:	; £temporary4125 -> £temporary4126 = *£temporary4126
+strtok$72:	; £temporary4140 -> £temporary4141 = *£temporary4141
 272:	
 
-strtok$73:	; £temporary4127 = &£temporary4125 -> £temporary4126
+strtok$73:	; £temporary4142 = &£temporary4140 -> £temporary4141
 274:	
 
-strtok$74:	; token = £temporary4127
+strtok$74:	; token = £temporary4142
 275:		mov [token], si
 277:	
 
@@ -1793,19 +1793,19 @@ strtok$76:	; return
 strtok$77:	; function end strtok
 1:	
 
-memcpy:	; £temporary4132 = int_to_int target (Pointer -> Pointer)
+memcpy:	; £temporary4147 = int_to_int target (Pointer -> Pointer)
 2:		mov ax, [bp + 6]
 5:	
 
-memcpy$1:	; charTarget = £temporary4132
+memcpy$1:	; charTarget = £temporary4147
 6:		mov [bp + 12], ax
 8:	
 
-memcpy$2:	; £temporary4133 = int_to_int source (Pointer -> Pointer)
+memcpy$2:	; £temporary4148 = int_to_int source (Pointer -> Pointer)
 9:		mov ax, [bp + 8]
 12:	
 
-memcpy$3:	; charSource = £temporary4133
+memcpy$3:	; charSource = £temporary4148
 13:		mov [bp + 14], ax
 15:	
 
@@ -1819,23 +1819,23 @@ memcpy$5:	; if index >= size goto 13
 21:		jge memcpy$13
 23:	
 
-memcpy$6:	; £temporary4137 = charTarget + index
+memcpy$6:	; £temporary4152 = charTarget + index
 24:		mov si, [bp + 12]
 25:		add si, [bp + 16]
 27:	
 
-memcpy$7:	; £temporary4136 -> £temporary4137 = *£temporary4137
+memcpy$7:	; £temporary4151 -> £temporary4152 = *£temporary4152
 29:	
 
-memcpy$8:	; £temporary4139 = charSource + index
+memcpy$8:	; £temporary4154 = charSource + index
 30:		mov di, [bp + 14]
 31:		add di, [bp + 16]
 33:	
 
-memcpy$9:	; £temporary4138 -> £temporary4139 = *£temporary4139
+memcpy$9:	; £temporary4153 -> £temporary4154 = *£temporary4154
 35:	
 
-memcpy$10:	; £temporary4136 -> £temporary4137 = £temporary4138 -> £temporary4139
+memcpy$10:	; £temporary4151 -> £temporary4152 = £temporary4153 -> £temporary4154
 36:		mov al, [di]
 37:		mov [si], al
 39:	
@@ -1848,11 +1848,11 @@ memcpy$12:	; goto 5
 43:		jmp memcpy$5
 45:	
 
-memcpy$13:	; £temporary4140 = int_to_int target (Pointer -> Pointer)
+memcpy$13:	; £temporary4155 = int_to_int target (Pointer -> Pointer)
 46:		mov bx, [bp + 6]
 49:	
 
-memcpy$14:	; return_value = £temporary4140
+memcpy$14:	; return_value = £temporary4155
 51:	
 
 memcpy$15:	; return
@@ -1865,19 +1865,19 @@ memcpy$15:	; return
 memcpy$16:	; function end memcpy
 1:	
 
-memmove:	; £temporary4141 = int_to_int target (Pointer -> Pointer)
+memmove:	; £temporary4156 = int_to_int target (Pointer -> Pointer)
 2:		mov ax, [bp + 6]
 5:	
 
-memmove$1:	; charTarget = £temporary4141
+memmove$1:	; charTarget = £temporary4156
 6:		mov [bp + 12], ax
 8:	
 
-memmove$2:	; £temporary4142 = int_to_int source (Pointer -> Pointer)
+memmove$2:	; £temporary4157 = int_to_int source (Pointer -> Pointer)
 9:		mov ax, [bp + 8]
 12:	
 
-memmove$3:	; charSource = £temporary4142
+memmove$3:	; charSource = £temporary4157
 13:		mov [bp + 14], ax
 15:	
 
@@ -1898,23 +1898,23 @@ memmove$6:	; if index < 0 goto 23
 27:		jl memmove$23
 29:	
 
-memmove$7:	; £temporary4148 = charTarget + index
+memmove$7:	; £temporary4163 = charTarget + index
 30:		mov si, [bp + 12]
 31:		add si, [bp + 16]
 33:	
 
-memmove$8:	; £temporary4147 -> £temporary4148 = *£temporary4148
+memmove$8:	; £temporary4162 -> £temporary4163 = *£temporary4163
 35:	
 
-memmove$9:	; £temporary4150 = charSource + index
+memmove$9:	; £temporary4165 = charSource + index
 36:		mov di, [bp + 14]
 37:		add di, [bp + 16]
 39:	
 
-memmove$10:	; £temporary4149 -> £temporary4150 = *£temporary4150
+memmove$10:	; £temporary4164 -> £temporary4165 = *£temporary4165
 41:	
 
-memmove$11:	; £temporary4147 -> £temporary4148 = £temporary4149 -> £temporary4150
+memmove$11:	; £temporary4162 -> £temporary4163 = £temporary4164 -> £temporary4165
 42:		mov al, [di]
 43:		mov [si], al
 45:	
@@ -1937,23 +1937,23 @@ memmove$15:	; if index >= size goto 23
 57:		jge memmove$23
 59:	
 
-memmove$16:	; £temporary4154 = charTarget + index
+memmove$16:	; £temporary4169 = charTarget + index
 60:		mov si, [bp + 12]
 61:		add si, [bp + 16]
 63:	
 
-memmove$17:	; £temporary4153 -> £temporary4154 = *£temporary4154
+memmove$17:	; £temporary4168 -> £temporary4169 = *£temporary4169
 65:	
 
-memmove$18:	; £temporary4156 = charSource + index
+memmove$18:	; £temporary4171 = charSource + index
 66:		mov di, [bp + 14]
 67:		add di, [bp + 16]
 69:	
 
-memmove$19:	; £temporary4155 -> £temporary4156 = *£temporary4156
+memmove$19:	; £temporary4170 -> £temporary4171 = *£temporary4171
 71:	
 
-memmove$20:	; £temporary4153 -> £temporary4154 = £temporary4155 -> £temporary4156
+memmove$20:	; £temporary4168 -> £temporary4169 = £temporary4170 -> £temporary4171
 72:		mov al, [di]
 73:		mov [si], al
 75:	
@@ -1966,11 +1966,11 @@ memmove$22:	; goto 15
 79:		jmp memmove$15
 81:	
 
-memmove$23:	; £temporary4157 = int_to_int target (Pointer -> Pointer)
+memmove$23:	; £temporary4172 = int_to_int target (Pointer -> Pointer)
 82:		mov bx, [bp + 6]
 85:	
 
-memmove$24:	; return_value = £temporary4157
+memmove$24:	; return_value = £temporary4172
 87:	
 
 memmove$25:	; return
@@ -1983,19 +1983,19 @@ memmove$25:	; return
 memmove$26:	; function end memmove
 1:	
 
-memcmp:	; £temporary4158 = int_to_int left (Pointer -> Pointer)
+memcmp:	; £temporary4173 = int_to_int left (Pointer -> Pointer)
 2:		mov ax, [bp + 6]
 5:	
 
-memcmp$1:	; charLeft = £temporary4158
+memcmp$1:	; charLeft = £temporary4173
 6:		mov [bp + 12], ax
 8:	
 
-memcmp$2:	; £temporary4159 = int_to_int right (Pointer -> Pointer)
+memcmp$2:	; £temporary4174 = int_to_int right (Pointer -> Pointer)
 9:		mov ax, [bp + 8]
 12:	
 
-memcmp$3:	; charRight = £temporary4159
+memcmp$3:	; charRight = £temporary4174
 13:		mov [bp + 14], ax
 15:	
 
@@ -2009,23 +2009,23 @@ memcmp$5:	; if index >= size goto 22
 21:		jge memcmp$22
 23:	
 
-memcmp$6:	; £temporary4163 = charLeft + index
+memcmp$6:	; £temporary4178 = charLeft + index
 24:		mov si, [bp + 12]
 25:		add si, [bp + 16]
 27:	
 
-memcmp$7:	; £temporary4162 -> £temporary4163 = *£temporary4163
+memcmp$7:	; £temporary4177 -> £temporary4178 = *£temporary4178
 29:	
 
-memcmp$8:	; £temporary4165 = charRight + index
+memcmp$8:	; £temporary4180 = charRight + index
 30:		mov di, [bp + 14]
 31:		add di, [bp + 16]
 33:	
 
-memcmp$9:	; £temporary4164 -> £temporary4165 = *£temporary4165
+memcmp$9:	; £temporary4179 -> £temporary4180 = *£temporary4180
 35:	
 
-memcmp$10:	; if £temporary4162 -> £temporary4163 >= £temporary4164 -> £temporary4165 goto 13
+memcmp$10:	; if £temporary4177 -> £temporary4178 >= £temporary4179 -> £temporary4180 goto 13
 36:		mov al, [di]
 37:		cmp [si], al
 38:		jge memcmp$13
@@ -2042,23 +2042,23 @@ memcmp$12:	; return
 47:		jmp ax
 49:	
 
-memcmp$13:	; £temporary4168 = charLeft + index
+memcmp$13:	; £temporary4183 = charLeft + index
 50:		mov si, [bp + 12]
 51:		add si, [bp + 16]
 53:	
 
-memcmp$14:	; £temporary4167 -> £temporary4168 = *£temporary4168
+memcmp$14:	; £temporary4182 -> £temporary4183 = *£temporary4183
 55:	
 
-memcmp$15:	; £temporary4170 = charRight + index
+memcmp$15:	; £temporary4185 = charRight + index
 56:		mov di, [bp + 14]
 57:		add di, [bp + 16]
 59:	
 
-memcmp$16:	; £temporary4169 -> £temporary4170 = *£temporary4170
+memcmp$16:	; £temporary4184 -> £temporary4185 = *£temporary4185
 61:	
 
-memcmp$17:	; if £temporary4167 -> £temporary4168 <= £temporary4169 -> £temporary4170 goto 20
+memcmp$17:	; if £temporary4182 -> £temporary4183 <= £temporary4184 -> £temporary4185 goto 20
 62:		mov al, [di]
 63:		cmp [si], al
 64:		jle memcmp$20
@@ -2097,15 +2097,15 @@ memcmp$23:	; return
 memcmp$24:	; function end memcmp
 1:	
 
-memchr:	; £temporary4172 = int_to_int block (Pointer -> Pointer)
+memchr:	; £temporary4187 = int_to_int block (Pointer -> Pointer)
 2:		mov ax, [bp + 6]
 5:	
 
-memchr$1:	; charBlock = £temporary4172
+memchr$1:	; charBlock = £temporary4187
 6:		mov [bp + 14], ax
 8:	
 
-memchr$2:	; £temporary4173 = int_to_int i (Signed_Int -> Signed_Char)
+memchr$2:	; £temporary4188 = int_to_int i (Signed_Int -> Signed_Char)
 9:		mov ax, [bp + 8]
 12:		cmp ax, 0
 13:		jge memchr$3
@@ -2113,7 +2113,7 @@ memchr$2:	; £temporary4173 = int_to_int i (Signed_Int -> Signed_Char)
 16:		neg al
 18:	
 
-memchr$3:	; c = £temporary4173
+memchr$3:	; c = £temporary4188
 19:		mov [bp + 16], al
 21:	
 
@@ -2127,35 +2127,35 @@ memchr$5:	; if index >= size goto 17
 27:		jge memchr$17
 29:	
 
-memchr$6:	; £temporary4177 = charBlock + index
+memchr$6:	; £temporary4192 = charBlock + index
 30:		mov si, [bp + 14]
 31:		add si, [bp + 12]
 33:	
 
-memchr$7:	; £temporary4176 -> £temporary4177 = *£temporary4177
+memchr$7:	; £temporary4191 -> £temporary4192 = *£temporary4192
 35:	
 
-memchr$8:	; if £temporary4176 -> £temporary4177 != c goto 15
+memchr$8:	; if £temporary4191 -> £temporary4192 != c goto 15
 36:		mov al, [bp + 16]
 37:		cmp [si], al
 38:		jne memchr$15
 40:	
 
-memchr$9:	; £temporary4180 = charBlock + index
+memchr$9:	; £temporary4195 = charBlock + index
 41:		mov bx, [bp + 14]
 42:		add bx, [bp + 12]
 44:	
 
-memchr$10:	; £temporary4179 -> £temporary4180 = *£temporary4180
+memchr$10:	; £temporary4194 -> £temporary4195 = *£temporary4195
 46:	
 
-memchr$11:	; £temporary4181 = &£temporary4179 -> £temporary4180
+memchr$11:	; £temporary4196 = &£temporary4194 -> £temporary4195
 48:	
 
-memchr$12:	; £temporary4182 = int_to_int £temporary4181 (Pointer -> Pointer)
+memchr$12:	; £temporary4197 = int_to_int £temporary4196 (Pointer -> Pointer)
 51:	
 
-memchr$13:	; return_value = £temporary4182
+memchr$13:	; return_value = £temporary4197
 53:	
 
 memchr$14:	; return
@@ -2187,15 +2187,15 @@ memchr$18:	; return
 memchr$19:	; function end memchr
 1:	
 
-memset:	; £temporary4183 = int_to_int block (Pointer -> Pointer)
+memset:	; £temporary4198 = int_to_int block (Pointer -> Pointer)
 2:		mov ax, [bp + 6]
 5:	
 
-memset$1:	; charBlock = £temporary4183
+memset$1:	; charBlock = £temporary4198
 6:		mov [bp + 12], ax
 8:	
 
-memset$2:	; £temporary4184 = int_to_int i (Signed_Int -> Signed_Char)
+memset$2:	; £temporary4199 = int_to_int i (Signed_Int -> Signed_Char)
 9:		mov ax, [bp + 8]
 12:		cmp ax, 0
 13:		jge memset$3
@@ -2203,7 +2203,7 @@ memset$2:	; £temporary4184 = int_to_int i (Signed_Int -> Signed_Char)
 16:		neg al
 18:	
 
-memset$3:	; c = £temporary4184
+memset$3:	; c = £temporary4199
 19:		mov [bp + 14], al
 21:	
 
@@ -2217,15 +2217,15 @@ memset$5:	; if index >= size goto 11
 27:		jge memset$11
 29:	
 
-memset$6:	; £temporary4188 = charBlock + index
+memset$6:	; £temporary4203 = charBlock + index
 30:		mov si, [bp + 12]
 31:		add si, [bp + 15]
 33:	
 
-memset$7:	; £temporary4187 -> £temporary4188 = *£temporary4188
+memset$7:	; £temporary4202 -> £temporary4203 = *£temporary4203
 35:	
 
-memset$8:	; £temporary4187 -> £temporary4188 = c
+memset$8:	; £temporary4202 -> £temporary4203 = c
 36:		mov al, [bp + 14]
 37:		mov [si], al
 39:	

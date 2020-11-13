@@ -1,10 +1,10 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\time.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\time.h,1$
 
-    
-     
-    
+
+
+
+
+
 
 struct tm {
 int tm_sec ;
@@ -34,22 +34,21 @@ extern struct tm * localtimeX ( const unsigned long * time ) ;
 extern int strftime ( char * buffer , int size ,
 const char * format , const struct tm * timeStruct ) ;
 
-  
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.c,0$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
-   
-   
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
-   
-   
 
 
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.c,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
 
-    
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
+
+
+
+
+
+
+
 
 
 extern double exp ( double x ) ;
@@ -82,13 +81,12 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
-   
-   
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
+
+
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -104,50 +102,47 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
-   
-   
-
-     
-                         
-                    
-               
-      
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
 
-          
 
-    
-    
 
-    
-    
-    
 
-  
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
 
-    
-    
 
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
+
+
+
+
+
+
+
+
 
 typedef unsigned int UINT ;
 
@@ -166,22 +161,22 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-   
-    
-    
-    
-    
 
-    
 
-    
-    
-    
-    
-    
-  
 
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -213,32 +208,30 @@ int feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
-   
-   
 
-    
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
+
+
+
+
+
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
-   
-   
 
-    
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
 
-    
+
+
+
+
+
+
 
 char scanChar ( void ) ;
 void unscanChar ( char c ) ;
@@ -254,16 +247,15 @@ int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
 int sscanf ( char * inString , char * format , ... ) ;
 int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
-   
-   
 
-    
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
+
+
+
+
+
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -298,20 +290,18 @@ int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
 int sprintf ( char * outString , char * format , ... ) ;
 int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-       
 
-  
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.c,1$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
-   
-   
 
-          
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.c,2$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
+
+
+
+
 
 double atof ( char * s ) ;
 int atoi ( char * s ) ;
@@ -333,8 +323,8 @@ void exit ( int status ) ;
 typedef void ( * FUNC_PTR ) ( void ) ;
 int atexit ( FUNC_PTR fcn ) ;
 
-    
-    
+
+
 
 int abs ( int value ) ;
 long labs ( long value ) ;
@@ -364,15 +354,14 @@ long quot , rem ;
 } ldiv_t ;
 
 ldiv_t ldiv ( long num , long denum ) ;
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.c,2$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\string.h,0$
-   
-   
 
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.c,3$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\string.h,1$
+
+
+
+
 
 extern char * strcpy ( char * target , const char * source ) ;
 extern char * strncpy ( char * target , const char * source , int size ) ;
@@ -395,20 +384,19 @@ extern int memcmp ( const void * left , const void * right , int size ) ;
 extern void * memchr ( const void * block , int i , int size ) ;
 extern void * memset ( void * block , int i , int size ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.c,3$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\locale.h,0$
-   
-   
 
-    
-    
-    
-    
-    
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.c,4$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\locale.h,1$
+
+
+
+
+
+
+
+
+
 
 struct lconv {
 int summerTimeZone , winterTimeZone ;
@@ -425,104 +413,100 @@ extern char * enMessageList [];
 extern char * setlocale ( int flag , char * name ) ;
 extern struct lconv * localeconv ( void ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.c,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\assert.h,0$
-   
-   
-
-   
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
-   
-   
-
-       
-       
-       
-       
-       
-       
-       
-       
-
-  
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\assert.h,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
-   
-   
-
-          
-
-       
-       
-       
-
-           
-              
-               
-
-     
-       
-
-         
-        
-
-     
-      
-
-         
-      
-
-    
-    
-
-      
-      
-
-       
-           
-          
-       
-
-            
-                 
-
-                   
-               
-
-      
-      
-
-  
-    
-  
-
-         
-
-  
-    
-  
-
-         
-  
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\assert.h,5$
-       
-              
-     
-            
-  
-      
-  
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.c,5$
-       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\assert.h,1$
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\assert.h,5$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\assert.h,6$
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.c,6$
 
 long clock ( void ) {
 return -1 ;
@@ -531,8 +515,8 @@ return -1 ;
 unsigned long time ( unsigned long * timePtr ) {
 unsigned long time ;
 
-   
- int year ;
+
+int year ;
 short month , monthDay ;
 short hour , min , sec ;
 
@@ -561,13 +545,13 @@ yearDay += daysOfMonths [ mon ];
 time = mktime ( & s ) ;
 }
 }
-  
 
-   
-    
-        
-   
-  
+
+
+
+
+
+
 
 if ( timePtr != ( ( void * ) 0 ) ) {
 * timePtr = time ;
@@ -589,17 +573,48 @@ return 0 ;
 
 static struct tm g_timeStruct ;
 
+static struct tm leapList [] = {{ 72 , 07 , 01 } ,
+{ 72 , 07 , 01 } ,
+{ 72 , 07 , 01 } ,
+{ 72 , 07 , 01 } ,
+{ 72 , 07 , 01 } ,
+{ 72 , 07 , 01 } ,
+{ 72 , 07 , 01 } ,
+{ 72 , 07 , 01 } ,
+{ 72 , 07 , 01 } ,
+{ 72 , 07 , 01 } ,
+{ 72 , 07 , 01 } ,
+{ 72 , 07 , 01 } ,
+{ 72 , 07 , 01 } ,
+{ 72 , 07 , 01 }};
+
+static int leapSize = ( sizeof leapList ) / ( sizeof leapList [ 0 ] ) ;
+
+static int leapSeconds ( unsigned long t ) {
+int seconds = 0 , index ;
+
+for ( index = 0 ; index < leapSize ; ++ index ) {
+if ( difftime ( t , mktime ( & leapList [ index ] ) ) >= 0 ) {
+++ seconds ;
+}
+}
+
+return seconds ;
+}
+
 struct tm * gmtime ( const unsigned long * timePtr ) {
 int year = 1970 ;
 
 if ( timePtr != ( ( void * ) 0 ) ) {
 unsigned long time = * timePtr ;
-const long secondsOfDay = time % 86400L ;
 long totalDays = time / 86400L ;
-
+const long secondsOfDay = time % 86400L ,
+secondsOfHour = secondsOfDay % 3600 ;
 g_timeStruct . tm_hour = secondsOfDay / 3600 ;
-g_timeStruct . tm_min = ( secondsOfDay % 3600 ) / 60 ;
-g_timeStruct . tm_sec = ( secondsOfDay % 3600 ) % 60 ;
+g_timeStruct . tm_min = secondsOfHour / 60 ;
+g_timeStruct . tm_sec = secondsOfHour % 60 ;
+
+
 
 
 if ( totalDays < 3 ) {
@@ -629,6 +644,7 @@ totalDays -= daysOfMonths [ month ];
 g_timeStruct . tm_mon = month ;
 g_timeStruct . tm_mday = totalDays + 1 ;
 g_timeStruct . tm_isdst = -1 ;
+
 return & g_timeStruct ;
 }
 
@@ -646,17 +662,17 @@ return ( double ) ( time2 - time1 ) ;
 
 static char g_timeString [ 256 ];
 
-static char * g_defaultShortDayList [] = { "Sun" , "Mon" , "Tue" , "Wed" ,
-"Thu" , "Fri" , "Sat" };
-static char * g_defaultLongDayList [] = { "Sunday" , "Monday" , "Tuesday" ,
-"Wednesday" , "Thursday" , "Friday" , "Saturday" };
+static char * g_defaultShortDayList [] = { "\123\165\156" , "\115\157\156" , "\124\165\145" , "\127\145\144" ,
+"\124\150\165" , "\106\162\151" , "\123\141\164" };
+static char * g_defaultLongDayList [] = { "\123\165\156\144\141\171" , "\115\157\156\144\141\171" , "\124\165\145\163\144\141\171" ,
+"\127\145\144\156\145\163\144\141\171" , "\124\150\165\162\163\144\141\171" , "\106\162\151\144\141\171" , "\123\141\164\165\162\144\141\171" };
 
 static char * g_defaultShortMonthList [] =
-{ "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" ,
-"Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec" };
+{ "\112\141\156" , "\106\145\142" , "\115\141\162" , "\101\160\162" , "\115\141\171" , "\112\165\156" ,
+"\112\165\154" , "\101\165\147" , "\123\145\160" , "\117\143\164" , "\116\157\166" , "\104\145\143" };
 static char * g_defaultLongMonthList [] =
-{ "January" , "February" , "March" , "April" , "May" , "June" ,
-"July" , "August" , "September" , "October" , "November" , "December" };
+{ "\112\141\156\165\141\162\171" , "\106\145\142\162\165\141\162\171" , "\115\141\162\143\150" , "\101\160\162\151\154" , "\115\141\171" , "\112\165\156\145" ,
+"\112\165\154\171" , "\101\165\147\165\163\164" , "\123\145\160\164\145\155\142\145\162" , "\117\143\164\157\142\145\162" , "\116\157\166\145\155\142\145\162" , "\104\145\143\145\155\142\145\162" };
 
 char * asctime ( const struct tm * tp ) {
 struct lconv * localeConvPtr = ( ( void * ) 0 ) ;
@@ -669,8 +685,7 @@ shortDayList = ( shortDayList != ( ( void * ) 0 ) ) ? shortDayList
 : g_defaultShortDayList ;
 shortMonthList = ( shortMonthList != ( ( void * ) 0 ) ) ? shortMonthList
 : g_defaultShortMonthList ;
-
-sprintf ( g_timeString , "%s %s %2i %02i:%02i:%02i %04i" ,
+sprintf ( g_timeString , "\045\163\040\045\163\040\045\151\040\045\151\072\045\151\072\045\151\040\045\151" ,
 shortDayList [ tp -> tm_wday ] , shortMonthList [ tp -> tm_mon ] ,
 tp -> tm_mday , tp -> tm_hour , tp -> tm_min ,
 tp -> tm_sec , tp -> tm_year + 1900 ) ;
@@ -736,105 +751,111 @@ yearDayMonday = ( totalDays - 4 ) % 7 ;
 }
 
 { int index ;
-for ( index = 0 ; fmt [ index ] != '\0' ; ++ index ) {
+for ( index = 0 ; fmt [ index ] != '\000' ; ++ index ) {
 char add [ 20 ];
 
-if ( fmt [ index ] == '%' ) {
+if ( fmt [ index ] == '\045' ) {
 switch ( fmt [++ index ] ) {
-case 'a' :
+case '\141' :
 strcpy ( add , shortDayList [ tp -> tm_wday ] ) ;
 break ;
 
-case 'A' :
+case '\101' :
 strcpy ( add , longDayList [ tp -> tm_wday ] ) ;
 break ;
 
-case 'b' :
+case '\142' :
 strcpy ( add , shortMonthList [ tp -> tm_mon ] ) ;
 break ;
 
-case 'B' :
+case '\102' :
 strcpy ( add , longMonthList [ tp -> tm_mon ] ) ;
 break ;
 
-case 'c' :
-sprintf ( add , "%04d-%02d-%02d %02d:%02d:%02d" ,
+case '\143' :
+sprintf ( add , "\045\144\055\045\144\055\045\144\040\045\144\072\045\144\072\045\144" ,
 1900 + tp -> tm_year , tp -> tm_mon + 1 , tp -> tm_mday ,
 tp -> tm_hour , tp -> tm_min , tp -> tm_sec ) ;
 break ;
 
-case 'd' :
-sprintf ( add , "%02d" , tp -> tm_mday ) ;
+case '\144' :
+sprintf ( add , "\045\144" , tp -> tm_mday ) ;
 break ;
 
-case 'H' :
-sprintf ( add , "%02d" , tp -> tm_hour ) ;
+case '\110' :
+sprintf ( add , "\045\144" , tp -> tm_hour ) ;
 break ;
 
-case 'I' :
-sprintf ( add , "%02d" , tp -> tm_hour % 12 ) ;
+case '\111' :
+sprintf ( add , "\045\144" , tp -> tm_hour % 12 ) ;
 break ;
 
-case 'j' :
-sprintf ( add , "%03d" , tp -> tm_yday ) ;
+case '\152' :
+sprintf ( add , "\045\144" , tp -> tm_yday ) ;
 break ;
 
-case 'm' :
-sprintf ( add , "%02d" , tp -> tm_mon + 1 ) ;
+case '\155' :
+sprintf ( add , "\045\144" , tp -> tm_mon + 1 ) ;
 break ;
 
-case 'M' :
-sprintf ( add , "%02d" , tp -> tm_min ) ;
+case '\115' :
+sprintf ( add , "\045\144" , tp -> tm_min ) ;
 break ;
 
-case 'p' :
-sprintf ( add , "%s" , ( tp -> tm_hour < 12 ) ? "AM" : "PM" ) ;
+case '\160' :
+sprintf ( add , "\045\163" , ( tp -> tm_hour < 12 ) ? "\101\115" : "\120\115" ) ;
 break ;
 
-case 'S' :
-sprintf ( add , "%02d" , tp -> tm_sec ) ;
+case '\123' :
+sprintf ( add , "\045\144" , tp -> tm_sec ) ;
 break ;
 
-case 'U' :
-sprintf ( add , "%02d" , yearDaySunday ) ;
+case '\125' :
+sprintf ( add , "\045\144" , yearDaySunday ) ;
 break ;
 
-case 'w' :
-sprintf ( add , "%02d" , tp -> tm_wday ) ;
+case '\167' :
+sprintf ( add , "\045\144" , tp -> tm_wday ) ;
 break ;
 
-case 'W' :
-sprintf ( add , "%02d" , yearDayMonday ) ;
+case '\127' :
+sprintf ( add , "\045\144" , yearDayMonday ) ;
 break ;
 
-case 'x' :
-sprintf ( add , "%04d-%02d-%02d" , 1900 + tp -> tm_year ,
-tp -> tm_mon + 1 , tp -> tm_mday ) ;
+case '\170' :
+sprintf ( add , "\045\060\062\144\072\045\060\062\144\072\045\060\062\144" , tp -> tm_hour ,
+tp -> tm_min , tp -> tm_sec ) ;
 break ;
 
-case 'X' :
-sprintf ( add , "%02d:%02d:%02d" , tp -> tm_hour , tp -> tm_min , tp -> tm_sec ) ;
+case '\130' :
+sprintf ( add , "\045\144\072\045\144\072\045\144" , tp -> tm_hour , tp -> tm_min , tp -> tm_sec ) ;
 break ;
 
-case 'y' :
-sprintf ( add , "%02d" , tp -> tm_year % 100 ) ;
+case '\171' :
+sprintf ( add , "\045\144" , tp -> tm_year % 100 ) ;
 break ;
 
-case 'Y' :
-sprintf ( add , "%04d" , 1900 + tp -> tm_year ) ;
+case '\131' :
+sprintf ( add , "\045\144" , 1900 + tp -> tm_year ) ;
 break ;
 
-case 'Z' :
+case '\132' :
 strcpy ( add , "" ) ;
 break ;
 
-case '%' :
-strcpy ( add , "%" ) ;
+case '\045' :
+strcpy ( add , "\045" ) ;
+
+default :
+strcpy ( add , "" ) ;
+break ;
 }
+
+++ index ;
 }
 else {
 add [ 0 ] = fmt [ index ];
-add [ 1 ] = '\0' ;
+add [ 1 ] = '\000' ;
 }
 
 if ( ( strlen ( s ) + strlen ( add ) ) < smax ) {
@@ -848,3 +869,4 @@ break ;
 
 return strlen ( s ) ;
 }
+

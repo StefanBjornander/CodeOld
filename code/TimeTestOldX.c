@@ -18,12 +18,12 @@ void time_test(void) {
     printf("now 2: %lu\n", now2);
 
     //printf("min <%i> <%i>\n", p->tm_min, s.tm_min);
-    printf("   gm time: %s %i-%i-%i %i:%i:%i, year day %i, week day %i, daylight saving time %i\n", weekdays[s.tm_wday], 1900 + s.tm_year,
+    printf("   gm time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i\n", weekdays[s.tm_wday], 1900 + s.tm_year,
            s.tm_mon + 1, s.tm_mday, s.tm_hour, s.tm_min, s.tm_sec, s.tm_yday, s.tm_wday, s.tm_isdst);
 
     s = *localtime(&now);
     //printf("min <%i> <%i>\n", p->tm_min, s.tm_min);
-    printf("local time: %s %i-%i-%i %i:%i:%i, year day %i, week day %i, daylight saving time %i\n", weekdays[s.tm_wday], 1900 + s.tm_year,
+    printf("local time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i\n", weekdays[s.tm_wday], 1900 + s.tm_year,
            s.tm_mon + 1, s.tm_mday, s.tm_hour, s.tm_min, s.tm_sec, s.tm_yday, s.tm_wday, s.tm_isdst);
 
     { char buffer1[100], buffer2[100];
@@ -41,7 +41,7 @@ void time_test(void) {
     /*time_t max = 0xFFFFFFFF;
     struct tm *q = localtime(&max);
     struct tm t = *q;
-    printf("%s %i-%i-%i %i:%i:%i, year day %i, week day %i, daylight saving time %i\n", weekdays[t.tm_wday], 1900 + t.tm_year,
+    printf("%s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i\n", weekdays[t.tm_wday], 1900 + t.tm_year,
                     t.tm_mon + 1, t.tm_mday, t.tm_hour, t.tm_min, t.tm_sec, t.tm_yday, t.tm_wday, t.tm_isdst);
     printf("asctime <%s>\nctime <%s>\n", asctime(&s), ctime(&now));
 
@@ -71,7 +71,7 @@ void time_test(void) {
   printf("A %s %i-%i-%i %i:%i:%i %i %i %i\n", weekdays[s.tm_wday], 1900 + s.tm_year,
          s.tm_mon + 1, s.tm_mday, s.tm_hour, s.tm_min, s.tm_sec, s.tm_yday, s.tm_wday, s.tm_isdst);
 
-  printf("A %s %i-%i-%i %i:%i:%i %i %i %i\n", weekdays[s.tm_wday], 1900 + s.tm_year,
+  printf("A %s %i-%02i-%02i %02i:%02i:%02i %i %i %i\n", weekdays[s.tm_wday], 1900 + s.tm_year,
                   s.tm_mon + 1, s.tm_mday, s.tm_hour, s.tm_min, s.tm_sec, s.tm_yday, s.tm_wday, s.tm_isdst);
 
   printf("A %s %i-%0i-%0i %0i:%0i:%0i %i %i %i\n", weekdays[s.tm_wday], 1900 + s.tm_year,
@@ -101,11 +101,11 @@ void time_test(void) {
     time(&now);
 
     struct tm *p = gmtime(&now);
-    printf("F gm %s %i-%i-%i %i:%i:%i %i %i %i\n", weekdays[p->tm_wday], 1900 + p->tm_year,
+    printf("F gm %s %i-%02i-%02i %02i:%02i:%02i %i %i %i\n", weekdays[p->tm_wday], 1900 + p->tm_year,
            p->tm_mon + 1, p->tm_mday, p->tm_hour, p->tm_min, p->tm_sec, p->tm_yday, p->tm_wday, p->tm_isdst);
 
     struct tm t = *p;
-    printf("G gm %s %i-%i-%i %i:%i:%i %i %i %i\n", weekdays[t.tm_wday], 1900 + t.tm_year,
+    printf("G gm %s %i-%02i-%02i %02i:%02i:%02i %i %i %i\n", weekdays[t.tm_wday], 1900 + t.tm_year,
            t.tm_mon + 1, t.tm_mday, t.tm_hour, t.tm_min, t.tm_sec, t.tm_yday, t.tm_wday, t.tm_isdst);
   }
 
