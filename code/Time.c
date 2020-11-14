@@ -75,7 +75,7 @@ time_t mktime(struct tm* tp) {
 
 static struct tm g_timeStruct;
 
-static struct tm leapList[] = {{72, 07, 01},  // July 1, 1972
+/*static struct tm leapList[] = {{72, 07, 01},  // July 1, 1972
                                {72, 07, 01},  // July 1, 1972
                                {72, 07, 01},  // July 1, 1972
                                {72, 07, 01},  // July 1, 1972
@@ -102,7 +102,7 @@ static int leapSeconds(time_t t) {
   }
 
   return seconds;
-}
+}*/
 
 struct tm* gmtime(const time_t* timePtr) {
   int year = 1970;
@@ -355,21 +355,17 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
             strcpy(add, "");
             break;
         }
-
-        ++index;
       }
       else {
         add[0] = fmt[index];
         add[1] = '\0';
       }
 
-      { int ss = strlen(s), sa = strlen(add);
-        if ((ss + sa) < smax) {
-          strcat(s, add);
-        }
-        else {
-          break;
-        }
+      if ((strlen(s) + strlen(add)) < smax) {
+        strcat(s, add);
+      }
+      else {
+        break;
       }
     }
   }

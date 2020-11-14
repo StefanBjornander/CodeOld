@@ -20,7 +20,7 @@
 19: BinaryAdd £temporary1862 format £temporary1861
 20: Dereference £temporary1859 -> £temporary1862 £temporary1862 0
 21: NotEqual IntegralToIntegral £temporary1866 index £temporary1859 -> £temporary1862 0
-22: Goto Equal IntegralToIntegral £temporary1948 g_outDevice g_outStatus 1
+22: Goto Equal IntegralToIntegral £temporary1947 g_outDevice g_outStatus 1
 23: CheckTrackMapFloatStack
 24: IntegralToIntegral £temporary1866 index
 25: UnsignedMultiply £temporary1867 £temporary1866 1
@@ -161,196 +161,192 @@
 160: Goto NotEqual PreCall 117 plus 0
 161: CheckTrackMapFloatStack
 162: PreCall 117
-163: Parameter signedchar 88 141
+163: Parameter signedchar 45 141
 164: Call printChar 117 0
 165: PostCall 117
-166: PreCall 117
-167: Parameter signedchar 45 141
-168: Call printChar 117 0
-169: PostCall 117
-170: BinaryAdd field field 1
-171: Goto Assign £temporary1901 field
-172: NotEqual PreCall 117 plus 0
-173: Goto NotEqual PreCall 117 space 0
-174: CheckTrackMapFloatStack
-175: PreCall 117
-176: Parameter signedchar 43 141
-177: Call printChar 117 0
-178: PostCall 117
-179: BinaryAdd field field 1
-180: Goto Assign £temporary1901 field
-181: NotEqual PreCall 117 space 0
-182: Goto Assign £temporary1901 field
-183: CheckTrackMapFloatStack
-184: PreCall 117
-185: Parameter signedchar 32 141
-186: Call printChar 117 0
-187: PostCall 117
-188: BinaryAdd field field 1
-189: Goto Assign £temporary1901 field
-190: Assign £temporary1901 field
-191: BinaryAdd field field 1
-192: SignedLessThan PreCall 117 £temporary1901 width
-193: Goto PreCall 117
-194: CheckTrackMapFloatStack
-195: PreCall 117
-196: Parameter signedchar 48 141
-197: Call printChar 117 0
-198: PostCall 117
-199: Goto Assign £temporary1901 field
-200: PreCall 117
-201: IntegralToIntegral £temporary1905 index
-202: UnsignedMultiply £temporary1906 £temporary1905 1
-203: BinaryAdd £temporary1907 format £temporary1906
-204: Dereference £temporary1904 -> £temporary1907 £temporary1907 0
-205: Address £temporary1908 £temporary1904 -> £temporary1907
-206: Parameter pointer £temporary1908 141
-207: Parameter pointer arg_list 149
-208: Parameter signedint 0 157
-209: Parameter signedint 0 161
-210: Parameter signedint grid 165
-211: Parameter pointer 0 169
-212: Parameter signedint precision 177
-213: Parameter signedint shortInt 181
-214: Parameter signedint longInt 185
-215: Parameter signedint longDouble 189
-216: Parameter signedint 0 193
-217: Parameter pointer 0 197
-218: Call printArgument 117 0
-219: PostCall 117
-220: GetReturnValue £temporary1909
-221: Assign arg_list £temporary1909
-222: Goto Assign percent 0
-223: Assign startChars g_outChars
-224: Assign oldOutStatus g_outStatus
-225: Assign g_outStatus 2
-226: PreCall 109
-227: IntegralToIntegral £temporary1911 index
-228: UnsignedMultiply £temporary1912 £temporary1911 1
-229: BinaryAdd £temporary1913 format £temporary1912
-230: Dereference £temporary1910 -> £temporary1913 £temporary1913 0
-231: Address £temporary1914 £temporary1910 -> £temporary1913
-232: Parameter pointer £temporary1914 133
-233: Parameter pointer arg_list 141
-234: Parameter signedint plus 149
-235: Parameter signedint space 153
-236: Parameter signedint grid 157
-237: Address £temporary1915 width
-238: Parameter pointer £temporary1915 161
-239: Parameter signedint precision 169
-240: Parameter signedint shortInt 173
-241: Parameter signedint longInt 177
-242: Parameter signedint longDouble 181
-243: Parameter signedint 1 185
-244: Parameter pointer 0 189
-245: Call printArgument 109 0
-246: PostCall 109
-247: Assign g_outStatus oldOutStatus
-248: BinarySubtract £temporary1917 g_outChars startChars
-249: Assign field £temporary1917
-250: Assign g_outChars startChars
-251: Assign £temporary1918 field
-252: BinaryAdd field field 1
-253: SignedLessThan PreCall 113 £temporary1918 width
-254: Goto PreCall 113
-255: CheckTrackMapFloatStack
-256: PreCall 113
-257: Parameter signedchar 32 137
-258: Call printChar 113 0
-259: PostCall 113
-260: Goto Assign £temporary1918 field
-261: PreCall 113
-262: IntegralToIntegral £temporary1922 index
-263: UnsignedMultiply £temporary1923 £temporary1922 1
-264: BinaryAdd £temporary1924 format £temporary1923
-265: Dereference £temporary1921 -> £temporary1924 £temporary1924 0
-266: Address £temporary1925 £temporary1921 -> £temporary1924
-267: Parameter pointer £temporary1925 137
-268: Parameter pointer arg_list 145
-269: Parameter signedint plus 153
-270: Parameter signedint space 157
-271: Parameter signedint grid 161
-272: Parameter pointer 0 165
-273: Parameter signedint precision 173
-274: Parameter signedint shortInt 177
-275: Parameter signedint longInt 181
-276: Parameter signedint longDouble 185
-277: Parameter signedint 1 189
-278: Parameter pointer 0 193
-279: Call printArgument 113 0
-280: PostCall 113
-281: GetReturnValue £temporary1926
-282: Assign arg_list £temporary1926
-283: Assign percent 0
-284: Goto Empty
-285: Assign value 0
-286: PreCall 105
-287: IntegralToIntegral £temporary1929 c
-288: Parameter signedint £temporary1929 129
-289: Call isdigit 105 0
-290: PostCall 105
-291: GetReturnValue £temporary1930
-292: NotEqual SignedMultiply £temporary1931 10 value £temporary1930 0
-293: Goto BinarySubtract index index 1
-294: CheckTrackMapFloatStack
-295: SignedMultiply £temporary1931 10 value
-296: BinarySubtract £temporary1932 c 48
-297: IntegralToIntegral £temporary1933 £temporary1932
-298: BinaryAdd £temporary1934 £temporary1931 £temporary1933
-299: Assign value £temporary1934
-300: BinaryAdd index index 1
-301: Assign £temporary1935 index
-302: IntegralToIntegral £temporary1937 £temporary1935
-303: UnsignedMultiply £temporary1938 £temporary1937 1
-304: BinaryAdd £temporary1939 format £temporary1938
-305: Dereference £temporary1936 -> £temporary1939 £temporary1939 0
-306: Assign c £temporary1936 -> £temporary1939
-307: Goto PreCall 105
-308: BinarySubtract index index 1
-309: NotEqual Assign precision value period 0
-310: Goto Assign width value
-311: CheckTrackMapFloatStack
-312: Assign width value
-313: Goto Goto Empty
-314: Assign precision value
-315: Goto Empty
-316: Goto Empty
-317: Equal Assign percent 1 c 37
-318: Goto PreCall 101
-319: CheckTrackMapFloatStack
-320: Assign percent 1
-321: Assign plus 0
-322: Assign minus 0
-323: Assign space 0
-324: Assign zero 0
-325: Assign grid 0
-326: Assign widthStar 0
-327: Assign period 0
-328: Assign precisionStar 0
-329: Assign shortInt 0
-330: Assign longInt 0
-331: Assign longDouble 0
-332: Assign width 0
-333: Assign precision 0
-334: Goto Empty
-335: PreCall 101
-336: Parameter signedchar c 125
-337: Call printChar 101 0
-338: PostCall 101
-339: Empty
-340: BinaryAdd index index 1
-341: Goto Empty
-342: Equal IntegralToIntegral £temporary1948 g_outDevice g_outStatus 1
-343: Goto Return g_outChars
-344: CheckTrackMapFloatStack
-345: IntegralToIntegral £temporary1948 g_outDevice
-346: Assign outString £temporary1948
-347: IntegralToIntegral £temporary1950 g_outChars
-348: UnsignedMultiply £temporary1951 £temporary1950 1
-349: BinaryAdd £temporary1952 outString £temporary1951
-350: Dereference £temporary1949 -> £temporary1952 £temporary1952 0
-351: Assign £temporary1949 -> £temporary1952 0
-352: Goto Return g_outChars
-353: Return g_outChars
-354: Empty
-355: FunctionEnd printFormat
+166: BinaryAdd field field 1
+167: Goto Assign £temporary1900 field
+168: NotEqual PreCall 117 plus 0
+169: Goto NotEqual PreCall 117 space 0
+170: CheckTrackMapFloatStack
+171: PreCall 117
+172: Parameter signedchar 43 141
+173: Call printChar 117 0
+174: PostCall 117
+175: BinaryAdd field field 1
+176: Goto Assign £temporary1900 field
+177: NotEqual PreCall 117 space 0
+178: Goto Assign £temporary1900 field
+179: CheckTrackMapFloatStack
+180: PreCall 117
+181: Parameter signedchar 32 141
+182: Call printChar 117 0
+183: PostCall 117
+184: BinaryAdd field field 1
+185: Goto Assign £temporary1900 field
+186: Assign £temporary1900 field
+187: BinaryAdd field field 1
+188: SignedLessThan PreCall 117 £temporary1900 width
+189: Goto PreCall 117
+190: CheckTrackMapFloatStack
+191: PreCall 117
+192: Parameter signedchar 48 141
+193: Call printChar 117 0
+194: PostCall 117
+195: Goto Assign £temporary1900 field
+196: PreCall 117
+197: IntegralToIntegral £temporary1904 index
+198: UnsignedMultiply £temporary1905 £temporary1904 1
+199: BinaryAdd £temporary1906 format £temporary1905
+200: Dereference £temporary1903 -> £temporary1906 £temporary1906 0
+201: Address £temporary1907 £temporary1903 -> £temporary1906
+202: Parameter pointer £temporary1907 141
+203: Parameter pointer arg_list 149
+204: Parameter signedint 0 157
+205: Parameter signedint 0 161
+206: Parameter signedint grid 165
+207: Parameter pointer 0 169
+208: Parameter signedint precision 177
+209: Parameter signedint shortInt 181
+210: Parameter signedint longInt 185
+211: Parameter signedint longDouble 189
+212: Parameter signedint 0 193
+213: Parameter pointer 0 197
+214: Call printArgument 117 0
+215: PostCall 117
+216: GetReturnValue £temporary1908
+217: Assign arg_list £temporary1908
+218: Goto Assign percent 0
+219: Assign startChars g_outChars
+220: Assign oldOutStatus g_outStatus
+221: Assign g_outStatus 2
+222: PreCall 109
+223: IntegralToIntegral £temporary1910 index
+224: UnsignedMultiply £temporary1911 £temporary1910 1
+225: BinaryAdd £temporary1912 format £temporary1911
+226: Dereference £temporary1909 -> £temporary1912 £temporary1912 0
+227: Address £temporary1913 £temporary1909 -> £temporary1912
+228: Parameter pointer £temporary1913 133
+229: Parameter pointer arg_list 141
+230: Parameter signedint plus 149
+231: Parameter signedint space 153
+232: Parameter signedint grid 157
+233: Address £temporary1914 width
+234: Parameter pointer £temporary1914 161
+235: Parameter signedint precision 169
+236: Parameter signedint shortInt 173
+237: Parameter signedint longInt 177
+238: Parameter signedint longDouble 181
+239: Parameter signedint 1 185
+240: Parameter pointer 0 189
+241: Call printArgument 109 0
+242: PostCall 109
+243: Assign g_outStatus oldOutStatus
+244: BinarySubtract £temporary1916 g_outChars startChars
+245: Assign field £temporary1916
+246: Assign g_outChars startChars
+247: Assign £temporary1917 field
+248: BinaryAdd field field 1
+249: SignedLessThan PreCall 113 £temporary1917 width
+250: Goto PreCall 113
+251: CheckTrackMapFloatStack
+252: PreCall 113
+253: Parameter signedchar 32 137
+254: Call printChar 113 0
+255: PostCall 113
+256: Goto Assign £temporary1917 field
+257: PreCall 113
+258: IntegralToIntegral £temporary1921 index
+259: UnsignedMultiply £temporary1922 £temporary1921 1
+260: BinaryAdd £temporary1923 format £temporary1922
+261: Dereference £temporary1920 -> £temporary1923 £temporary1923 0
+262: Address £temporary1924 £temporary1920 -> £temporary1923
+263: Parameter pointer £temporary1924 137
+264: Parameter pointer arg_list 145
+265: Parameter signedint plus 153
+266: Parameter signedint space 157
+267: Parameter signedint grid 161
+268: Parameter pointer 0 165
+269: Parameter signedint precision 173
+270: Parameter signedint shortInt 177
+271: Parameter signedint longInt 181
+272: Parameter signedint longDouble 185
+273: Parameter signedint 1 189
+274: Parameter pointer 0 193
+275: Call printArgument 113 0
+276: PostCall 113
+277: GetReturnValue £temporary1925
+278: Assign arg_list £temporary1925
+279: Assign percent 0
+280: Goto Empty
+281: Assign value 0
+282: PreCall 105
+283: IntegralToIntegral £temporary1928 c
+284: Parameter signedint £temporary1928 129
+285: Call isdigit 105 0
+286: PostCall 105
+287: GetReturnValue £temporary1929
+288: NotEqual SignedMultiply £temporary1930 10 value £temporary1929 0
+289: Goto BinarySubtract index index 1
+290: CheckTrackMapFloatStack
+291: SignedMultiply £temporary1930 10 value
+292: BinarySubtract £temporary1931 c 48
+293: IntegralToIntegral £temporary1932 £temporary1931
+294: BinaryAdd £temporary1933 £temporary1930 £temporary1932
+295: Assign value £temporary1933
+296: BinaryAdd index index 1
+297: Assign £temporary1934 index
+298: IntegralToIntegral £temporary1936 £temporary1934
+299: UnsignedMultiply £temporary1937 £temporary1936 1
+300: BinaryAdd £temporary1938 format £temporary1937
+301: Dereference £temporary1935 -> £temporary1938 £temporary1938 0
+302: Assign c £temporary1935 -> £temporary1938
+303: Goto PreCall 105
+304: BinarySubtract index index 1
+305: NotEqual Assign precision value period 0
+306: Goto Assign width value
+307: CheckTrackMapFloatStack
+308: Assign width value
+309: Goto Goto Empty
+310: Assign precision value
+311: Goto Empty
+312: Goto Empty
+313: Equal Assign percent 1 c 37
+314: Goto PreCall 101
+315: CheckTrackMapFloatStack
+316: Assign percent 1
+317: Assign plus 0
+318: Assign minus 0
+319: Assign space 0
+320: Assign zero 0
+321: Assign grid 0
+322: Assign widthStar 0
+323: Assign period 0
+324: Assign precisionStar 0
+325: Assign shortInt 0
+326: Assign longInt 0
+327: Assign longDouble 0
+328: Assign width 0
+329: Assign precision 0
+330: Goto Empty
+331: PreCall 101
+332: Parameter signedchar c 125
+333: Call printChar 101 0
+334: PostCall 101
+335: Empty
+336: BinaryAdd index index 1
+337: Goto Empty
+338: Equal IntegralToIntegral £temporary1947 g_outDevice g_outStatus 1
+339: Goto Return g_outChars
+340: CheckTrackMapFloatStack
+341: IntegralToIntegral £temporary1947 g_outDevice
+342: Assign outString £temporary1947
+343: IntegralToIntegral £temporary1949 g_outChars
+344: UnsignedMultiply £temporary1950 £temporary1949 1
+345: BinaryAdd £temporary1951 outString £temporary1950
+346: Dereference £temporary1948 -> £temporary1951 £temporary1951 0
+347: Assign £temporary1948 -> £temporary1951 0
+348: Goto Return g_outChars
+349: Return g_outChars
+350: Empty
+351: FunctionEnd printFormat

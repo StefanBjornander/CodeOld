@@ -1,428 +1,414 @@
-0: call header
-1: call function noellipse-noellipse localeconv
-2: post call
-3: £temporary2842 = return_value
-4: localeConvPtr = £temporary2842
-5: if localeConvPtr != int2$0# goto <MiddleCode>
-6: goto <MiddleCode>
-7: £temporary2844 -> localeConvPtr = *localeConvPtr, offset 4
-8: £temporary2845 = £temporary2844 -> localeConvPtr
-9: goto <MiddleCode>
-10: empty
-11: £temporary2845 = int2$0#
-12: empty
-13: shortDayList = £temporary2845
-14: if localeConvPtr != int2$0# goto <MiddleCode>
-15: goto <MiddleCode>
-16: £temporary2847 -> localeConvPtr = *localeConvPtr, offset 8
-17: £temporary2848 = £temporary2847 -> localeConvPtr
-18: goto <MiddleCode>
-19: empty
-20: £temporary2848 = int2$0#
-21: empty
-22: shortMonthList = £temporary2848
-23: if localeConvPtr != int2$0# goto <MiddleCode>
-24: goto <MiddleCode>
-25: £temporary2850 -> localeConvPtr = *localeConvPtr, offset 6
-26: £temporary2851 = £temporary2850 -> localeConvPtr
-27: goto <MiddleCode>
-28: empty
-29: £temporary2851 = int2$0#
-30: empty
-31: longDayList = £temporary2851
-32: if localeConvPtr != int2$0# goto <MiddleCode>
-33: goto <MiddleCode>
-34: £temporary2853 -> localeConvPtr = *localeConvPtr, offset 10
-35: £temporary2854 = £temporary2853 -> localeConvPtr
-36: goto <MiddleCode>
-37: empty
-38: £temporary2854 = int2$0#
-39: empty
-40: longMonthList = £temporary2854
-41: call header
-42: parameter s, offset 30
-43: parameter string_#, offset 32
-44: call function noellipse-noellipse strcpy
-45: post call
-46: if shortDayList != int2$0# goto <MiddleCode>
-47: goto <MiddleCode>
-48: empty
-49: £temporary2857 = shortDayList
-50: goto <MiddleCode>
-51: empty
-52: £temporary2857 = g_defaultShortDayList
-53: empty
-54: shortDayList = £temporary2857
-55: if longDayList != int2$0# goto <MiddleCode>
-56: goto <MiddleCode>
-57: empty
-58: £temporary2859 = longDayList
-59: goto <MiddleCode>
-60: empty
-61: £temporary2859 = g_defaultLongDayList
-62: empty
-63: longDayList = £temporary2859
-64: if shortMonthList != int2$0# goto <MiddleCode>
-65: goto <MiddleCode>
-66: empty
-67: £temporary2861 = shortMonthList
-68: goto <MiddleCode>
-69: empty
-70: £temporary2861 = g_defaultShortMonthList
-71: empty
-72: shortMonthList = £temporary2861
-73: if longMonthList != int2$0# goto <MiddleCode>
-74: goto <MiddleCode>
-75: empty
-76: £temporary2863 = longMonthList
-77: goto <MiddleCode>
-78: empty
-79: £temporary2863 = g_defaultLongMonthList
-80: empty
-81: longMonthList = £temporary2863
-82: £temporary2864 -> tp = *tp, offset 10
-83: £temporary2865 = £temporary2864 -> tp - int2$69#
-84: £temporary2866 = £temporary2865 / int2$4#
-85: leapDays = £temporary2866
-86: £temporary2867 -> tp = *tp, offset 10
-87: £temporary2868 = £temporary2867 -> tp - int2$70#
-88: £temporary2869 = int2$365# * £temporary2868
-89: £temporary2870 = £temporary2869 + leapDays
-90: £temporary2871 -> tp = *tp, offset 14
-91: £temporary2872 = £temporary2870 + £temporary2871 -> tp
-92: £temporary2873 = int_to_int £temporary2872 (Signed_Int -> Signed_Long_Int)
-93: totalDays = £temporary2873
-94: call header
-95: parameter string_leap20days2025i2C20total20days2025lu0A#, offset 36
-96: parameter leapDays, offset 38
-97: parameter totalDays, offset 40
-98: call function noellipse-ellipse printf, extra 6
-99: post call
-100: empty
-101: if totalDays < int4$3# goto <MiddleCode>
-102: goto <MiddleCode>
-103: check track map float stack
-104: £temporary2876 = totalDays + int4$4#
-105: £temporary2877 = int_to_int £temporary2876 (Signed_Long_Int -> Signed_Int)
-106: yearDaySunday = £temporary2877
-107: goto <MiddleCode>
-108: £temporary2878 = totalDays - int4$3#
-109: £temporary2879 = £temporary2878 % int4$7#
-110: £temporary2880 = int_to_int £temporary2879 (Signed_Long_Int -> Signed_Int)
-111: yearDaySunday = £temporary2880
-112: call header
-113: parameter string_yearDaySunday2025i0A#, offset 40
-114: parameter yearDaySunday, offset 42
-115: call function noellipse-ellipse printf, extra 2
-116: post call
-117: if totalDays < int4$4# goto <MiddleCode>
-118: goto <MiddleCode>
-119: check track map float stack
-120: £temporary2883 = totalDays + int4$3#
-121: £temporary2884 = int_to_int £temporary2883 (Signed_Long_Int -> Signed_Int)
-122: yearDayMonday = £temporary2884
-123: goto <MiddleCode>
-124: £temporary2885 = totalDays - int4$4#
-125: £temporary2886 = £temporary2885 % int4$7#
-126: £temporary2887 = int_to_int £temporary2886 (Signed_Long_Int -> Signed_Int)
-127: yearDayMonday = £temporary2887
-128: call header
-129: parameter string_yearDayMonday2025i0A#, offset 40
-130: parameter yearDayMonday, offset 42
-131: call function noellipse-ellipse printf, extra 2
-132: post call
-133: empty
-134: index = int2$0#
-135: empty
-136: £temporary2890 = fmt + index
-137: £temporary2889 -> £temporary2890 = *£temporary2890
-138: if £temporary2889 -> £temporary2890 != int1$0# goto <MiddleCode>
-139: goto <MiddleCode>
-140: check track map float stack
-141: empty
-142: empty
-143: £temporary2894 = fmt + index
-144: £temporary2893 -> £temporary2894 = *£temporary2894
-145: if £temporary2893 -> £temporary2894 == int1$37# goto <MiddleCode>
-146: goto <MiddleCode>
-147: check track map float stack
-148: ++index
-149: £temporary2896 = index
-150: £temporary2898 = fmt + £temporary2896
-151: £temporary2897 -> £temporary2898 = *£temporary2898
-152: case £temporary2897 -> £temporary2898 == int1$97# goto call header
-153: case £temporary2897 -> £temporary2898 == int1$65# goto call header
-154: case £temporary2897 -> £temporary2898 == int1$98# goto call header
-155: case £temporary2897 -> £temporary2898 == int1$66# goto call header
-156: case £temporary2897 -> £temporary2898 == int1$99# goto call header
-157: case £temporary2897 -> £temporary2898 == int1$100# goto call header
-158: case £temporary2897 -> £temporary2898 == int1$72# goto call header
-159: case £temporary2897 -> £temporary2898 == int1$73# goto call header
-160: case £temporary2897 -> £temporary2898 == int1$106# goto call header
-161: case £temporary2897 -> £temporary2898 == int1$109# goto call header
-162: case £temporary2897 -> £temporary2898 == int1$77# goto call header
-163: case £temporary2897 -> £temporary2898 == int1$112# goto call header
-164: case £temporary2897 -> £temporary2898 == int1$83# goto call header
-165: case £temporary2897 -> £temporary2898 == int1$85# goto call header
-166: case £temporary2897 -> £temporary2898 == int1$119# goto call header
-167: case £temporary2897 -> £temporary2898 == int1$87# goto call header
-168: case £temporary2897 -> £temporary2898 == int1$120# goto call header
-169: case £temporary2897 -> £temporary2898 == int1$88# goto call header
-170: case £temporary2897 -> £temporary2898 == int1$121# goto call header
-171: case £temporary2897 -> £temporary2898 == int1$89# goto call header
-172: case £temporary2897 -> £temporary2898 == int1$90# goto call header
-173: case £temporary2897 -> £temporary2898 == int1$37# goto call header
-174: case end £temporary2897 -> £temporary2898
-175: goto <MiddleCode>
-176: call header
-177: parameter add, offset 62
-178: £temporary2899 -> tp = *tp, offset 12
-179: £temporary2901 = £temporary2899 -> tp * int2$2#
-180: £temporary2902 = shortDayList + £temporary2901
-181: £temporary2900 -> £temporary2902 = *£temporary2902
-182: parameter £temporary2900 -> £temporary2902, offset 64
-183: call function noellipse-noellipse strcpy
-184: post call
-185: goto <MiddleCode>
-186: call header
-187: parameter add, offset 62
-188: £temporary2904 -> tp = *tp, offset 12
-189: £temporary2906 = £temporary2904 -> tp * int2$2#
-190: £temporary2907 = longDayList + £temporary2906
-191: £temporary2905 -> £temporary2907 = *£temporary2907
-192: parameter £temporary2905 -> £temporary2907, offset 64
-193: call function noellipse-noellipse strcpy
-194: post call
-195: goto <MiddleCode>
-196: call header
-197: parameter add, offset 62
-198: £temporary2909 -> tp = *tp, offset 8
-199: £temporary2911 = £temporary2909 -> tp * int2$2#
-200: £temporary2912 = shortMonthList + £temporary2911
-201: £temporary2910 -> £temporary2912 = *£temporary2912
-202: parameter £temporary2910 -> £temporary2912, offset 64
-203: call function noellipse-noellipse strcpy
-204: post call
-205: goto <MiddleCode>
-206: call header
-207: parameter add, offset 62
-208: £temporary2914 -> tp = *tp, offset 8
-209: £temporary2916 = £temporary2914 -> tp * int2$2#
-210: £temporary2917 = longMonthList + £temporary2916
-211: £temporary2915 -> £temporary2917 = *£temporary2917
-212: parameter £temporary2915 -> £temporary2917, offset 64
-213: call function noellipse-noellipse strcpy
-214: post call
-215: goto <MiddleCode>
-216: call header
-217: parameter add, offset 62
-218: parameter string_2504d2D2502d2D2502d202502d3A2502d3A2502d#, offset 64
-219: £temporary2919 -> tp = *tp, offset 10
-220: £temporary2920 = int2$1900# + £temporary2919 -> tp
-221: parameter £temporary2920, offset 66
-222: £temporary2921 -> tp = *tp, offset 8
-223: £temporary2922 = £temporary2921 -> tp + int2$1#
-224: parameter £temporary2922, offset 68
-225: £temporary2923 -> tp = *tp, offset 6
-226: parameter £temporary2923 -> tp, offset 70
-227: £temporary2924 -> tp = *tp, offset 4
-228: parameter £temporary2924 -> tp, offset 72
-229: £temporary2925 -> tp = *tp, offset 2
-230: parameter £temporary2925 -> tp, offset 74
-231: £temporary2926 -> tp = *tp
-232: parameter £temporary2926 -> tp, offset 76
-233: call function noellipse-ellipse sprintf, extra 12
-234: post call
-235: goto <MiddleCode>
-236: call header
-237: parameter add, offset 62
-238: parameter string_2502d#, offset 64
-239: £temporary2928 -> tp = *tp, offset 6
-240: parameter £temporary2928 -> tp, offset 66
-241: call function noellipse-ellipse sprintf, extra 2
-242: post call
-243: goto <MiddleCode>
-244: call header
-245: parameter add, offset 62
-246: parameter string_2502d#, offset 64
-247: £temporary2930 -> tp = *tp, offset 4
-248: parameter £temporary2930 -> tp, offset 66
-249: call function noellipse-ellipse sprintf, extra 2
-250: post call
-251: goto <MiddleCode>
-252: call header
-253: parameter add, offset 62
-254: parameter string_2502d#, offset 64
-255: £temporary2932 -> tp = *tp, offset 4
-256: £temporary2933 = £temporary2932 -> tp % int2$12#
-257: parameter £temporary2933, offset 66
-258: call function noellipse-ellipse sprintf, extra 2
-259: post call
-260: goto <MiddleCode>
-261: call header
-262: parameter add, offset 62
-263: parameter string_2503d#, offset 64
-264: £temporary2935 -> tp = *tp, offset 14
-265: parameter £temporary2935 -> tp, offset 66
-266: call function noellipse-ellipse sprintf, extra 2
-267: post call
-268: goto <MiddleCode>
-269: call header
-270: parameter add, offset 62
-271: parameter string_2502d#, offset 64
-272: £temporary2937 -> tp = *tp, offset 8
-273: £temporary2938 = £temporary2937 -> tp + int2$1#
-274: parameter £temporary2938, offset 66
-275: call function noellipse-ellipse sprintf, extra 2
-276: post call
-277: goto <MiddleCode>
-278: call header
-279: parameter add, offset 62
-280: parameter string_2502d#, offset 64
-281: £temporary2940 -> tp = *tp, offset 2
-282: parameter £temporary2940 -> tp, offset 66
-283: call function noellipse-ellipse sprintf, extra 2
-284: post call
-285: goto <MiddleCode>
-286: call header
-287: parameter add, offset 62
-288: parameter string_25s#, offset 64
-289: £temporary2942 -> tp = *tp, offset 4
-290: if £temporary2942 -> tp < int2$12# goto <MiddleCode>
-291: goto <MiddleCode>
-292: empty
-293: £temporary2944 = string_AM#
-294: goto <MiddleCode>
-295: empty
-296: £temporary2944 = string_PM#
-297: empty
-298: parameter £temporary2944, offset 66
-299: call function noellipse-ellipse sprintf, extra 2
-300: post call
-301: goto <MiddleCode>
-302: call header
-303: parameter add, offset 62
-304: parameter string_2502d#, offset 64
-305: £temporary2946 -> tp = *tp
-306: parameter £temporary2946 -> tp, offset 66
-307: call function noellipse-ellipse sprintf, extra 2
-308: post call
-309: goto <MiddleCode>
-310: call header
-311: parameter add, offset 62
-312: parameter string_2502d#, offset 64
-313: parameter yearDaySunday, offset 66
-314: call function noellipse-ellipse sprintf, extra 2
-315: post call
-316: goto <MiddleCode>
-317: call header
-318: parameter add, offset 62
-319: parameter string_2502d#, offset 64
-320: £temporary2949 -> tp = *tp, offset 12
-321: parameter £temporary2949 -> tp, offset 66
-322: call function noellipse-ellipse sprintf, extra 2
-323: post call
-324: goto <MiddleCode>
-325: call header
-326: parameter add, offset 62
-327: parameter string_2502d#, offset 64
-328: parameter yearDayMonday, offset 66
-329: call function noellipse-ellipse sprintf, extra 2
-330: post call
-331: goto <MiddleCode>
-332: call header
-333: parameter add, offset 62
-334: parameter string_2504d2D2502d2D2502d#, offset 64
-335: £temporary2952 -> tp = *tp, offset 10
-336: £temporary2953 = int2$1900# + £temporary2952 -> tp
-337: parameter £temporary2953, offset 66
-338: £temporary2954 -> tp = *tp, offset 8
-339: £temporary2955 = £temporary2954 -> tp + int2$1#
-340: parameter £temporary2955, offset 68
-341: £temporary2956 -> tp = *tp, offset 6
-342: parameter £temporary2956 -> tp, offset 70
-343: call function noellipse-ellipse sprintf, extra 6
-344: post call
-345: goto <MiddleCode>
-346: call header
-347: parameter add, offset 62
-348: parameter string_2502d3A2502d3A2502d#, offset 64
-349: £temporary2958 -> tp = *tp, offset 4
-350: parameter £temporary2958 -> tp, offset 66
-351: £temporary2959 -> tp = *tp, offset 2
-352: parameter £temporary2959 -> tp, offset 68
-353: £temporary2960 -> tp = *tp
-354: parameter £temporary2960 -> tp, offset 70
-355: call function noellipse-ellipse sprintf, extra 6
-356: post call
-357: goto <MiddleCode>
-358: call header
-359: parameter add, offset 62
-360: parameter string_2502d#, offset 64
-361: £temporary2962 -> tp = *tp, offset 10
-362: £temporary2963 = £temporary2962 -> tp % int2$100#
-363: parameter £temporary2963, offset 66
-364: call function noellipse-ellipse sprintf, extra 2
-365: post call
-366: goto <MiddleCode>
-367: call header
-368: parameter add, offset 62
-369: parameter string_2504d#, offset 64
-370: £temporary2965 -> tp = *tp, offset 10
-371: £temporary2966 = int2$1900# + £temporary2965 -> tp
-372: parameter £temporary2966, offset 66
-373: call function noellipse-ellipse sprintf, extra 2
-374: post call
-375: goto <MiddleCode>
-376: call header
-377: parameter add, offset 62
-378: parameter string_#, offset 64
-379: call function noellipse-noellipse strcpy
-380: post call
-381: goto <MiddleCode>
-382: call header
-383: parameter add, offset 62
-384: parameter string_25#, offset 64
-385: call function noellipse-noellipse strcpy
-386: post call
-387: goto <MiddleCode>
-388: £temporary2970 -> add = *add
-389: £temporary2972 = fmt + index
-390: £temporary2971 -> £temporary2972 = *£temporary2972
-391: £temporary2970 -> add = £temporary2971 -> £temporary2972
-392: £temporary2973 -> add = *add, offset 1
-393: £temporary2973 -> add = int1$0#
-394: call header
-395: parameter s, offset 62
-396: call function noellipse-noellipse strlen
-397: post call
-398: £temporary2974 = return_value
-399: call header
-400: parameter add, offset 62
-401: call function noellipse-noellipse strlen
-402: post call
-403: £temporary2975 = return_value
-404: £temporary2976 = £temporary2974 + £temporary2975
-405: if £temporary2976 < smax goto <MiddleCode>
-406: goto <MiddleCode>
-407: check track map float stack
-408: call header
-409: parameter s, offset 62
-410: parameter add, offset 64
-411: call function noellipse-noellipse strcat
-412: post call
-413: goto <MiddleCode>
-414: goto <MiddleCode>
-415: empty
-416: ++index
-417: goto <MiddleCode>
-418: call header
-419: parameter s, offset 42
-420: call function noellipse-noellipse strlen
-421: post call
-422: £temporary2979 = return_value
-423: return_value = £temporary2979
-424: return
-425: empty
-426: return
-427: function end strftime
+0: PreCall 14
+1: Call localeconv 14 0
+2: PostCall 14
+3: GetReturnValue £temporary2836
+4: Assign localeConvPtr £temporary2836
+5: NotEqual Dereference £temporary2838 -> localeConvPtr localeConvPtr 0 localeConvPtr 0
+6: Goto Empty
+7: Dereference £temporary2838 -> localeConvPtr localeConvPtr 0
+8: Assign £temporary2839 £temporary2838 -> localeConvPtr
+9: Goto Empty
+10: Empty
+11: Assign £temporary2839 0
+12: Empty
+13: Assign shortDayList £temporary2839
+14: NotEqual Dereference £temporary2841 -> localeConvPtr localeConvPtr 0 localeConvPtr 0
+15: Goto Empty
+16: Dereference £temporary2841 -> localeConvPtr localeConvPtr 0
+17: Assign £temporary2842 £temporary2841 -> localeConvPtr
+18: Goto Empty
+19: Empty
+20: Assign £temporary2842 0
+21: Empty
+22: Assign shortMonthList £temporary2842
+23: NotEqual Dereference £temporary2844 -> localeConvPtr localeConvPtr 0 localeConvPtr 0
+24: Goto Empty
+25: Dereference £temporary2844 -> localeConvPtr localeConvPtr 0
+26: Assign £temporary2845 £temporary2844 -> localeConvPtr
+27: Goto Empty
+28: Empty
+29: Assign £temporary2845 0
+30: Empty
+31: Assign longDayList £temporary2845
+32: NotEqual Dereference £temporary2847 -> localeConvPtr localeConvPtr 0 localeConvPtr 0
+33: Goto Empty
+34: Dereference £temporary2847 -> localeConvPtr localeConvPtr 0
+35: Assign £temporary2848 £temporary2847 -> localeConvPtr
+36: Goto Empty
+37: Empty
+38: Assign £temporary2848 0
+39: Empty
+40: Assign longMonthList £temporary2848
+41: Dereference £temporary2849 -> tp tp 0
+42: BinarySubtract £temporary2850 £temporary2849 -> tp 69
+43: SignedDivide £temporary2851 £temporary2850 4
+44: Assign leapDays £temporary2851
+45: Dereference £temporary2852 -> tp tp 0
+46: BinarySubtract £temporary2853 £temporary2852 -> tp 70
+47: SignedMultiply £temporary2854 365 £temporary2853
+48: BinaryAdd £temporary2855 £temporary2854 leapDays
+49: Dereference £temporary2856 -> tp tp 0
+50: BinaryAdd £temporary2857 £temporary2855 £temporary2856 -> tp
+51: IntegralToIntegral £temporary2858 £temporary2857
+52: Assign totalDays £temporary2858
+53: PreCall 34
+54: Parameter pointer s 40
+55: Parameter pointer "" 42
+56: Call strcpy 34 0
+57: PostCall 34
+58: NotEqual Empty shortDayList 0
+59: Goto Empty
+60: Empty
+61: Assign £temporary2861 shortDayList
+62: Goto Empty
+63: Empty
+64: Assign £temporary2861 g_defaultShortDayList
+65: Empty
+66: Assign shortDayList £temporary2861
+67: NotEqual Empty longDayList 0
+68: Goto Empty
+69: Empty
+70: Assign £temporary2863 longDayList
+71: Goto Empty
+72: Empty
+73: Assign £temporary2863 g_defaultLongDayList
+74: Empty
+75: Assign longDayList £temporary2863
+76: NotEqual Empty shortMonthList 0
+77: Goto Empty
+78: Empty
+79: Assign £temporary2865 shortMonthList
+80: Goto Empty
+81: Empty
+82: Assign £temporary2865 g_defaultShortMonthList
+83: Empty
+84: Assign shortMonthList £temporary2865
+85: NotEqual Empty longMonthList 0
+86: Goto Empty
+87: Empty
+88: Assign £temporary2867 longMonthList
+89: Goto Empty
+90: Empty
+91: Assign £temporary2867 g_defaultLongMonthList
+92: Empty
+93: Assign longMonthList £temporary2867
+94: SignedLessThan BinaryAdd £temporary2869 totalDays 4 totalDays 3
+95: Goto BinarySubtract £temporary2871 totalDays 3
+96: CheckTrackMapFloatStack
+97: BinaryAdd £temporary2869 totalDays 4
+98: IntegralToIntegral £temporary2870 £temporary2869
+99: Assign yearDaySunday £temporary2870
+100: Goto SignedLessThan BinaryAdd £temporary2875 totalDays 3 totalDays 4
+101: BinarySubtract £temporary2871 totalDays 3
+102: SignedModulo £temporary2872 £temporary2871 7
+103: IntegralToIntegral £temporary2873 £temporary2872
+104: Assign yearDaySunday £temporary2873
+105: SignedLessThan BinaryAdd £temporary2875 totalDays 3 totalDays 4
+106: Goto BinarySubtract £temporary2877 totalDays 4
+107: CheckTrackMapFloatStack
+108: BinaryAdd £temporary2875 totalDays 3
+109: IntegralToIntegral £temporary2876 £temporary2875
+110: Assign yearDayMonday £temporary2876
+111: Goto Assign index 0
+112: BinarySubtract £temporary2877 totalDays 4
+113: SignedModulo £temporary2878 £temporary2877 7
+114: IntegralToIntegral £temporary2879 £temporary2878
+115: Assign yearDayMonday £temporary2879
+116: Assign index 0
+117: Empty
+118: UnsignedMultiply £temporary2881 index 1
+119: BinaryAdd £temporary2882 fmt £temporary2881
+120: Dereference £temporary2880 -> £temporary2882 £temporary2882 0
+121: NotEqual UnsignedMultiply £temporary2886 index 1 £temporary2880 -> £temporary2882 0
+122: Goto PreCall 34
+123: CheckTrackMapFloatStack
+124: UnsignedMultiply £temporary2886 index 1
+125: BinaryAdd £temporary2887 fmt £temporary2886
+126: Dereference £temporary2885 -> £temporary2887 £temporary2887 0
+127: Equal BinaryAdd index index 1 £temporary2885 -> £temporary2887 37
+128: Goto Dereference £temporary2963 -> add add 0
+129: CheckTrackMapFloatStack
+130: BinaryAdd index index 1
+131: Assign £temporary2889 index
+132: UnsignedMultiply £temporary2891 £temporary2889 1
+133: BinaryAdd £temporary2892 fmt £temporary2891
+134: Dereference £temporary2890 -> £temporary2892 £temporary2892 0
+135: Case PreCall 56 £temporary2890 -> £temporary2892 97
+136: Case PreCall 56 £temporary2890 -> £temporary2892 65
+137: Case PreCall 56 £temporary2890 -> £temporary2892 98
+138: Case PreCall 56 £temporary2890 -> £temporary2892 66
+139: Case PreCall 56 £temporary2890 -> £temporary2892 99
+140: Case PreCall 56 £temporary2890 -> £temporary2892 100
+141: Case PreCall 56 £temporary2890 -> £temporary2892 72
+142: Case PreCall 56 £temporary2890 -> £temporary2892 73
+143: Case PreCall 56 £temporary2890 -> £temporary2892 106
+144: Case PreCall 56 £temporary2890 -> £temporary2892 109
+145: Case PreCall 56 £temporary2890 -> £temporary2892 77
+146: Case PreCall 56 £temporary2890 -> £temporary2892 112
+147: Case PreCall 56 £temporary2890 -> £temporary2892 83
+148: Case PreCall 56 £temporary2890 -> £temporary2892 85
+149: Case PreCall 56 £temporary2890 -> £temporary2892 119
+150: Case PreCall 56 £temporary2890 -> £temporary2892 87
+151: Case PreCall 56 £temporary2890 -> £temporary2892 120
+152: Case PreCall 56 £temporary2890 -> £temporary2892 88
+153: Case PreCall 56 £temporary2890 -> £temporary2892 121
+154: Case PreCall 56 £temporary2890 -> £temporary2892 89
+155: Case PreCall 56 £temporary2890 -> £temporary2892 90
+156: Case PreCall 56 £temporary2890 -> £temporary2892 37
+157: CaseEnd £temporary2890 -> £temporary2892
+158: Goto PreCall 56
+159: PreCall 56
+160: Parameter pointer add 62
+161: Dereference £temporary2893 -> tp tp 0
+162: UnsignedMultiply £temporary2895 £temporary2893 -> tp 2
+163: BinaryAdd £temporary2896 shortDayList £temporary2895
+164: Dereference £temporary2894 -> £temporary2896 £temporary2896 0
+165: Parameter pointer £temporary2894 -> £temporary2896 64
+166: Call strcpy 56 0
+167: PostCall 56
+168: Goto PreCall 56
+169: PreCall 56
+170: Parameter pointer add 62
+171: Dereference £temporary2898 -> tp tp 0
+172: UnsignedMultiply £temporary2900 £temporary2898 -> tp 2
+173: BinaryAdd £temporary2901 longDayList £temporary2900
+174: Dereference £temporary2899 -> £temporary2901 £temporary2901 0
+175: Parameter pointer £temporary2899 -> £temporary2901 64
+176: Call strcpy 56 0
+177: PostCall 56
+178: Goto PreCall 56
+179: PreCall 56
+180: Parameter pointer add 62
+181: Dereference £temporary2903 -> tp tp 0
+182: UnsignedMultiply £temporary2905 £temporary2903 -> tp 2
+183: BinaryAdd £temporary2906 shortMonthList £temporary2905
+184: Dereference £temporary2904 -> £temporary2906 £temporary2906 0
+185: Parameter pointer £temporary2904 -> £temporary2906 64
+186: Call strcpy 56 0
+187: PostCall 56
+188: Goto PreCall 56
+189: PreCall 56
+190: Parameter pointer add 62
+191: Dereference £temporary2908 -> tp tp 0
+192: UnsignedMultiply £temporary2910 £temporary2908 -> tp 2
+193: BinaryAdd £temporary2911 longMonthList £temporary2910
+194: Dereference £temporary2909 -> £temporary2911 £temporary2911 0
+195: Parameter pointer £temporary2909 -> £temporary2911 64
+196: Call strcpy 56 0
+197: PostCall 56
+198: Goto PreCall 56
+199: PreCall 56
+200: Parameter pointer add 62
+201: Parameter pointer "%02i-%02i-%02i %02i:%02i:%02i" 64
+202: Dereference £temporary2913 -> tp tp 0
+203: BinaryAdd £temporary2914 1900 £temporary2913 -> tp
+204: Parameter signedint £temporary2914 66
+205: Dereference £temporary2915 -> tp tp 0
+206: BinaryAdd £temporary2916 £temporary2915 -> tp 1
+207: Parameter signedint £temporary2916 68
+208: Dereference £temporary2917 -> tp tp 0
+209: Parameter signedint £temporary2917 -> tp 70
+210: Dereference £temporary2918 -> tp tp 0
+211: Parameter signedint £temporary2918 -> tp 72
+212: Dereference £temporary2919 -> tp tp 0
+213: Parameter signedint £temporary2919 -> tp 74
+214: Dereference £temporary2920 -> tp tp 0
+215: Parameter signedint £temporary2920 -> tp 76
+216: Call sprintf 56 12
+217: PostCall 56
+218: Goto PreCall 56
+219: PreCall 56
+220: Parameter pointer add 62
+221: Parameter pointer "%i" 64
+222: Dereference £temporary2922 -> tp tp 0
+223: Parameter signedint £temporary2922 -> tp 66
+224: Call sprintf 56 2
+225: PostCall 56
+226: Goto PreCall 56
+227: PreCall 56
+228: Parameter pointer add 62
+229: Parameter pointer "%i" 64
+230: Dereference £temporary2924 -> tp tp 0
+231: Parameter signedint £temporary2924 -> tp 66
+232: Call sprintf 56 2
+233: PostCall 56
+234: Goto PreCall 56
+235: PreCall 56
+236: Parameter pointer add 62
+237: Parameter pointer "%i" 64
+238: Dereference £temporary2926 -> tp tp 0
+239: SignedModulo £temporary2927 £temporary2926 -> tp 12
+240: Parameter signedint £temporary2927 66
+241: Call sprintf 56 2
+242: PostCall 56
+243: Goto PreCall 56
+244: PreCall 56
+245: Parameter pointer add 62
+246: Parameter pointer "%i" 64
+247: Dereference £temporary2929 -> tp tp 0
+248: Parameter signedint £temporary2929 -> tp 66
+249: Call sprintf 56 2
+250: PostCall 56
+251: Goto PreCall 56
+252: PreCall 56
+253: Parameter pointer add 62
+254: Parameter pointer "%i" 64
+255: Dereference £temporary2931 -> tp tp 0
+256: BinaryAdd £temporary2932 £temporary2931 -> tp 1
+257: Parameter signedint £temporary2932 66
+258: Call sprintf 56 2
+259: PostCall 56
+260: Goto PreCall 56
+261: PreCall 56
+262: Parameter pointer add 62
+263: Parameter pointer "%i" 64
+264: Dereference £temporary2934 -> tp tp 0
+265: Parameter signedint £temporary2934 -> tp 66
+266: Call sprintf 56 2
+267: PostCall 56
+268: Goto PreCall 56
+269: PreCall 56
+270: Parameter pointer add 62
+271: Parameter pointer "%s" 64
+272: Dereference £temporary2936 -> tp tp 0
+273: SignedLessThan Empty £temporary2936 -> tp 12
+274: Goto Empty
+275: Empty
+276: Assign £temporary2938 "AM"
+277: Goto Empty
+278: Empty
+279: Assign £temporary2938 "PM"
+280: Empty
+281: Parameter pointer £temporary2938 66
+282: Call sprintf 56 2
+283: PostCall 56
+284: Goto PreCall 56
+285: PreCall 56
+286: Parameter pointer add 62
+287: Parameter pointer "%i" 64
+288: Dereference £temporary2940 -> tp tp 0
+289: Parameter signedint £temporary2940 -> tp 66
+290: Call sprintf 56 2
+291: PostCall 56
+292: Goto PreCall 56
+293: PreCall 56
+294: Parameter pointer add 62
+295: Parameter pointer "%i" 64
+296: Parameter signedint yearDaySunday 66
+297: Call sprintf 56 2
+298: PostCall 56
+299: Goto PreCall 56
+300: PreCall 56
+301: Parameter pointer add 62
+302: Parameter pointer "%i" 64
+303: Dereference £temporary2943 -> tp tp 0
+304: Parameter signedint £temporary2943 -> tp 66
+305: Call sprintf 56 2
+306: PostCall 56
+307: Goto PreCall 56
+308: PreCall 56
+309: Parameter pointer add 62
+310: Parameter pointer "%i" 64
+311: Parameter signedint yearDayMonday 66
+312: Call sprintf 56 2
+313: PostCall 56
+314: Goto PreCall 56
+315: PreCall 56
+316: Parameter pointer add 62
+317: Parameter pointer "%02i:%02i:%02i" 64
+318: Dereference £temporary2946 -> tp tp 0
+319: Parameter signedint £temporary2946 -> tp 66
+320: Dereference £temporary2947 -> tp tp 0
+321: Parameter signedint £temporary2947 -> tp 68
+322: Dereference £temporary2948 -> tp tp 0
+323: Parameter signedint £temporary2948 -> tp 70
+324: Call sprintf 56 6
+325: PostCall 56
+326: Goto PreCall 56
+327: PreCall 56
+328: Parameter pointer add 62
+329: Parameter pointer "%02i:%02i:%02i" 64
+330: Dereference £temporary2950 -> tp tp 0
+331: Parameter signedint £temporary2950 -> tp 66
+332: Dereference £temporary2951 -> tp tp 0
+333: Parameter signedint £temporary2951 -> tp 68
+334: Dereference £temporary2952 -> tp tp 0
+335: Parameter signedint £temporary2952 -> tp 70
+336: Call sprintf 56 6
+337: PostCall 56
+338: Goto PreCall 56
+339: PreCall 56
+340: Parameter pointer add 62
+341: Parameter pointer "%i" 64
+342: Dereference £temporary2954 -> tp tp 0
+343: SignedModulo £temporary2955 £temporary2954 -> tp 100
+344: Parameter signedint £temporary2955 66
+345: Call sprintf 56 2
+346: PostCall 56
+347: Goto PreCall 56
+348: PreCall 56
+349: Parameter pointer add 62
+350: Parameter pointer "%i" 64
+351: Dereference £temporary2957 -> tp tp 0
+352: BinaryAdd £temporary2958 1900 £temporary2957 -> tp
+353: Parameter signedint £temporary2958 66
+354: Call sprintf 56 2
+355: PostCall 56
+356: Goto PreCall 56
+357: PreCall 56
+358: Parameter pointer add 62
+359: Parameter pointer "" 64
+360: Call strcpy 56 0
+361: PostCall 56
+362: Goto PreCall 56
+363: PreCall 56
+364: Parameter pointer add 62
+365: Parameter pointer "%" 64
+366: Call strcpy 56 0
+367: PostCall 56
+368: PreCall 56
+369: Parameter pointer add 62
+370: Parameter pointer "" 64
+371: Call strcpy 56 0
+372: PostCall 56
+373: Goto PreCall 56
+374: Goto PreCall 56
+375: Dereference £temporary2963 -> add add 0
+376: UnsignedMultiply £temporary2965 index 1
+377: BinaryAdd £temporary2966 fmt £temporary2965
+378: Dereference £temporary2964 -> £temporary2966 £temporary2966 0
+379: Assign £temporary2963 -> add £temporary2964 -> £temporary2966
+380: Dereference £temporary2967 -> add add 0
+381: Assign £temporary2967 -> add 0
+382: PreCall 56
+383: Parameter pointer s 62
+384: Call strlen 56 0
+385: PostCall 56
+386: GetReturnValue £temporary2968
+387: PreCall 56
+388: Parameter pointer add 62
+389: Call strlen 56 0
+390: PostCall 56
+391: GetReturnValue £temporary2969
+392: BinaryAdd £temporary2970 £temporary2968 £temporary2969
+393: SignedLessThan PreCall 56 £temporary2970 smax
+394: Goto Goto PreCall 34
+395: CheckTrackMapFloatStack
+396: PreCall 56
+397: Parameter pointer s 62
+398: Parameter pointer add 64
+399: Call strcat 56 0
+400: PostCall 56
+401: Goto Empty
+402: Goto PreCall 34
+403: Empty
+404: BinaryAdd index index 1
+405: Goto Empty
+406: PreCall 34
+407: Parameter pointer s 40
+408: Call strlen 34 0
+409: PostCall 34
+410: GetReturnValue £temporary2973
+411: Return £temporary2973
+412: Empty
+413: FunctionEnd strftime

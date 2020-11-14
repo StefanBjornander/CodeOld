@@ -7,15 +7,15 @@ stack_test$1:	; parameter string_25i20#, offset 6
 4:		mov word [bp + 12], string_25i20#
 6:	
 
-stack_test$2:	; £temporary5792 = i
-7:		mov ax, [@37$i]
+stack_test$2:	; £temporary5780 = i
+7:		mov ax, [@34$i]
 9:	
 
 stack_test$3:	; ++i
-10:		inc word [@37$i]
+10:		inc word [@34$i]
 12:	
 
-stack_test$4:	; parameter £temporary5792, offset 8
+stack_test$4:	; parameter £temporary5780, offset 8
 13:		mov [bp + 14], ax
 15:	
 
@@ -75,10 +75,10 @@ heap_test$3:	; call function noellipse-noellipse malloc
 heap_test$4:	; post call
 17:	
 
-heap_test$5:	; £temporary5797 = return_value
+heap_test$5:	; £temporary5785 = return_value
 22:	
 
-heap_test$6:	; pointer = £temporary5797
+heap_test$6:	; pointer = £temporary5785
 23:		mov [bp + 8], bx
 25:	
 
@@ -94,7 +94,7 @@ heap_test$9:	; parameter string_102420bytes2Dblock20number3A2025i0A#, offset 6
 32:		mov word [bp + 16], string_102420bytes2Dblock20number3A2025i0A#
 34:	
 
-heap_test$10:	; £temporary5799 = count
+heap_test$10:	; £temporary5787 = count
 35:		mov ax, [bp + 6]
 37:	
 
@@ -102,7 +102,7 @@ heap_test$11:	; ++count
 38:		inc word [bp + 6]
 40:	
 
-heap_test$12:	; parameter £temporary5799, offset 8
+heap_test$12:	; parameter £temporary5787, offset 8
 41:		mov [bp + 18], ax
 43:	
 

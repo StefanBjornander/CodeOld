@@ -500,7 +500,6 @@ int printFormat(char* format, va_list arg_list) {
                 g_outChars = startChars;
 
                 if (negative) {               
-                  printChar('X');
                   printChar('-');
                   ++field;
                 }
