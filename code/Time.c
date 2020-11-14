@@ -16,6 +16,7 @@ time_t time(time_t* timePtr) {
   int year;
   short month, monthDay;
   short hour, min, sec;
+  struct lconv* localeConvPtr = localeconv();
 
   register_ah = 0x2As;
   interrupt(0x21s);
@@ -29,9 +30,19 @@ time_t time(time_t* timePtr) {
   min = register_cl;
   sec = register_dh;
 
+  if (localeConvPtr != NULL) {
+    printf("Hour %i", hour);
+    hour -= localeConvPtr->winterTimeZone;
+    printf(" %i\n", hour);
+  }
+
+  //printf("timeZone %li %i %li\n", *timePtr, timeZone, 3600l * timeZone);
+
+  printf("%i-%i-%i %i:%i:%i\n", 1900 + year, month, monthDay, hour, min, sec);
+
   { const BOOL leapYear = (year % 4) == 0;
     const int daysOfMonths[] = {31, leapYear ? 29 : 28, 31, 30,
-                                31, 30, 30, 31, 30, 31, 30, 31};
+                                31, 30, 31, 31, 30, 31, 30, 31};
     int yearDay = monthDay - 1, mon;
 
     for (mon = 0; mon < month; ++mon) {
@@ -207,8 +218,8 @@ struct tm* localtime(const time_t* timePtr) {
   int timeZone = 0;
 
   if (localeConvPtr != NULL) {
-    timeZone = tmPtr->tm_isdst ? localeConvPtr->summerTimeZone
-                               : localeConvPtr->winterTimeZone;
+    timeZone = (tmPtr->tm_isdst == 1) ? localeConvPtr->summerTimeZone
+                                      : localeConvPtr->winterTimeZone;
   }
 
   //printf("timeZone %li %i %li\n", *timePtr, timeZone, 3600l * timeZone);

@@ -1,6 +1,6 @@
-now 1: 1605305474
-now 2: 1605305474
-   gm time: Fri 2020-11-13 22:11:14, year day 317, week day 5, daylight saving time -1
-local time: Fri 2020-11-13 23:11:14, year day 317, week day 5, daylight saving time -1
-asctime <Fri Nov 13 22:11:14 2020>, ctime <Fri Nov 13 23:11:14 2020>
-strftime 286 286 <short day Fri, long day Friday, short month Nov, long month November, date-time 2020-11-13 23:11:14, mday 13, hour 23, gm hour 11, yday 317, month 11, min 11, am/pm PM, sec 14, week number sun 5, week day 5, week number mon 4, date 23:11:14, time 23:11:14, short year 20, long year 2020>
+now 1: 1605369598
+now 2: 1605369598
+   gm time: Sat 2020-11-14 15:59:58, year day 318, week day 6, daylight saving time -1
+local time: Sat 2020-11-14 16:59:58, year day 318, week day 6, daylight saving time -1
+asctime <Sat Nov 14 15:59:58 2020>, ctime <Sat Nov 14 16:59:58 2020>
+strftime 287 287 <short day Sat, long day Saturday, short month Nov, long month November, date-time 2020-11-14 16:59:58, mday 14, hour 16, gm hour 4, yday 318, month 11, min 59, am/pm PM, sec 58, week number sun 6, week day 6, week number mon 5, date 16:59:58, time 16:59:58, short year 20, long year 2020>
