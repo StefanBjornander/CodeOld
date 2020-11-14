@@ -532,52 +532,46 @@ long time ( long * timePtr ) {
 long time ;
 
    
- int year ;
-short month , monthDay ;
-short hour , min , sec ;
-struct lconv * localeConvPtr = localeconv ( ) ;
-
-register_ah = 0x2As ;
-interrupt ( 0x21s ) ;
-year = register_cx - 1900 ;
-month = register_dh - 1s ;
-monthDay = register_dl ;
-
-register_ah = 0x2Cs ;
-interrupt ( 0x21s ) ;
-hour = register_ch ;
-min = register_cl ;
-sec = register_dh ;
-
-if ( localeConvPtr != ( ( void * ) 0 ) ) {
-printf ( "Hour %i" , hour ) ;
-hour -= localeConvPtr -> winterTimeZone ;
-printf ( " %i\n" , hour ) ;
-}
-
-
-
-printf ( "%i-%i-%i %i:%i:%i\n" , 1900 + year , month , monthDay , hour , min , sec ) ;
-
-{ const int leapYear = ( year % 4 ) == 0 ;
-const int daysOfMonths [] = { 31 , leapYear ? 29 : 28 , 31 , 30 ,
-31 , 30 , 31 , 31 , 30 , 31 , 30 , 31 };
-int yearDay = monthDay - 1 , mon ;
-
-for ( mon = 0 ; mon < month ; ++ mon ) {
-yearDay += daysOfMonths [ mon ];
-}
-
-{ struct tm s = { sec , min , hour , monthDay , month , year , 0 , yearDay , 0 };
-time = mktime ( & s ) ;
-}
-}
-  
+   
+    
+      
+        
 
    
     
-        
+     
+     
    
+
+   
+    
+   
+   
+   
+
+      
+     
+
+
+            
+                 
+               
+        
+
+             
+     
+
+
+                       
+       
+
+
+  
+
+   
+ register_rax = 201L ;
+register_rdi = ( unsigned long ) & time ;
+syscall ( ) ;
   
 
 if ( timePtr != ( ( void * ) 0 ) ) {
@@ -642,8 +636,6 @@ g_timeStruct . tm_min = secondsOfHour / 60 ;
 g_timeStruct . tm_sec = secondsOfHour % 60 ;
 
 
-
-
 if ( totalDays < 3 ) {
 g_timeStruct . tm_wday = totalDays + 4 ;
 }
@@ -655,7 +647,6 @@ while ( 1 ) {
 const int leapYear = ( ( ( year % 4 ) == 0 ) &&
 ( ( year % 100 ) != 0 ) ) || ( ( year % 400 ) == 0 ) ;
 const int daysOfYear = leapYear ? 366 : 365 ;
-
 
 if ( totalDays < daysOfYear ) {
 const int daysOfMonths [] = { 31 , leapYear ? 29 : 28 , 31 , 30 ,
@@ -675,11 +666,9 @@ totalDays -= daysOfMonths [ month ];
 ++ month ;
 }
 
-
 g_timeStruct . tm_mon = month ;
 g_timeStruct . tm_mday = totalDays + 1 ;
 g_timeStruct . tm_isdst = -1 ;
-
 return & g_timeStruct ;
 }
 
@@ -720,7 +709,7 @@ shortDayList = ( shortDayList != ( ( void * ) 0 ) ) ? shortDayList
 : g_defaultShortDayList ;
 shortMonthList = ( shortMonthList != ( ( void * ) 0 ) ) ? shortMonthList
 : g_defaultShortMonthList ;
-sprintf ( g_timeString , "%s %s %i %i:%i:%i %i" ,
+sprintf ( g_timeString , "%s %s %i %02i:%02i:%02i %i" ,
 shortDayList [ tp -> tm_wday ] , shortMonthList [ tp -> tm_mon ] ,
 tp -> tm_mday , tp -> tm_hour , tp -> tm_min ,
 tp -> tm_sec , tp -> tm_year + 1900 ) ;
@@ -741,10 +730,8 @@ timeZone = ( tmPtr -> tm_isdst == 1 ) ? localeConvPtr -> summerTimeZone
 : localeConvPtr -> winterTimeZone ;
 }
 
-
-{ long timeXXX = * timePtr + ( 3600l * timeZone ) ;
-
-return gmtime ( & timeXXX ) ;
+{ long t = * timePtr + ( 3600l * timeZone ) ;
+return gmtime ( & t ) ;
 }
 }
 
@@ -810,33 +797,33 @@ strcpy ( add , longMonthList [ tp -> tm_mon ] ) ;
 break ;
 
 case 'c' :
-sprintf ( add , "%d-%d-%d %d:%d:%d" ,
+sprintf ( add , "%02i-%02i-%02i %02i:%02i:%02i" ,
 1900 + tp -> tm_year , tp -> tm_mon + 1 , tp -> tm_mday ,
 tp -> tm_hour , tp -> tm_min , tp -> tm_sec ) ;
 break ;
 
 case 'd' :
-sprintf ( add , "%d" , tp -> tm_mday ) ;
+sprintf ( add , "%i" , tp -> tm_mday ) ;
 break ;
 
 case 'H' :
-sprintf ( add , "%d" , tp -> tm_hour ) ;
+sprintf ( add , "%i" , tp -> tm_hour ) ;
 break ;
 
 case 'I' :
-sprintf ( add , "%d" , tp -> tm_hour % 12 ) ;
+sprintf ( add , "%i" , tp -> tm_hour % 12 ) ;
 break ;
 
 case 'j' :
-sprintf ( add , "%d" , tp -> tm_yday ) ;
+sprintf ( add , "%i" , tp -> tm_yday ) ;
 break ;
 
 case 'm' :
-sprintf ( add , "%d" , tp -> tm_mon + 1 ) ;
+sprintf ( add , "%i" , tp -> tm_mon + 1 ) ;
 break ;
 
 case 'M' :
-sprintf ( add , "%d" , tp -> tm_min ) ;
+sprintf ( add , "%i" , tp -> tm_min ) ;
 break ;
 
 case 'p' :
@@ -844,36 +831,36 @@ sprintf ( add , "%s" , ( tp -> tm_hour < 12 ) ? "AM" : "PM" ) ;
 break ;
 
 case 'S' :
-sprintf ( add , "%d" , tp -> tm_sec ) ;
+sprintf ( add , "%i" , tp -> tm_sec ) ;
 break ;
 
 case 'U' :
-sprintf ( add , "%d" , yearDaySunday ) ;
+sprintf ( add , "%i" , yearDaySunday ) ;
 break ;
 
 case 'w' :
-sprintf ( add , "%d" , tp -> tm_wday ) ;
+sprintf ( add , "%i" , tp -> tm_wday ) ;
 break ;
 
 case 'W' :
-sprintf ( add , "%d" , yearDayMonday ) ;
+sprintf ( add , "%i" , yearDayMonday ) ;
 break ;
 
 case 'x' :
-sprintf ( add , "%d:%d:%d" , tp -> tm_hour ,
+sprintf ( add , "%02i:%02i:%02i" , tp -> tm_hour ,
 tp -> tm_min , tp -> tm_sec ) ;
 break ;
 
 case 'X' :
-sprintf ( add , "%d:%d:%d" , tp -> tm_hour , tp -> tm_min , tp -> tm_sec ) ;
+sprintf ( add , "%02i:%02i:%02i" , tp -> tm_hour , tp -> tm_min , tp -> tm_sec ) ;
 break ;
 
 case 'y' :
-sprintf ( add , "%d" , tp -> tm_year % 100 ) ;
+sprintf ( add , "%i" , tp -> tm_year % 100 ) ;
 break ;
 
 case 'Y' :
-sprintf ( add , "%d" , 1900 + tp -> tm_year ) ;
+sprintf ( add , "%i" , 1900 + tp -> tm_year ) ;
 break ;
 
 case 'Z' :

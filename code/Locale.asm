@@ -499,10 +499,10 @@ string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#:
 section .data
 
 @1524$en_US_utf8:
-	; Initializer SignedInt 1
-	dd 1
 	; Initializer SignedInt 2
 	dd 2
+	; Initializer SignedInt 1
+	dd 1
 	; Initializer Pointer @1498$enShortDayList
 	dq @1498$enShortDayList
 	; Initializer Pointer @1499$enLongDayList

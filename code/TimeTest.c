@@ -16,11 +16,8 @@ void time_test(void) {
     printf("now 1: %lu\n", now1);
     printf("now 2: %lu\n", now2);
 
-    //printf("min <%i> <%i>\n", p->tm_min, s.tm_min);
     printf("   gm time: %s %i-%i-%i %i:%i:%i, year day %i, week day %i, daylight saving time %i\n", weekdays[s.tm_wday], 1900 + s.tm_year,
            s.tm_mon + 1, s.tm_mday, s.tm_hour, s.tm_min, s.tm_sec, s.tm_yday, s.tm_wday, s.tm_isdst);
-
-    //printf("min <%i> <%i>\n", p->tm_min, t.tm_min);
     printf("local time: %s %i-%i-%i %i:%i:%i, year day %i, week day %i, daylight saving time %i\n", weekdays[t.tm_wday], 1900 + t.tm_year,
            t.tm_mon + 1, t.tm_mday, t.tm_hour, t.tm_min, t.tm_sec, t.tm_yday, t.tm_wday, t.tm_isdst);
 

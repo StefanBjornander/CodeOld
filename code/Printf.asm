@@ -3665,9 +3665,9 @@ section .text
 	; Dereference £temporary1859 -> £temporary1862 £temporary1862 0
 
  printFormat$19:
-	; Equal 294 £temporary1859 -> £temporary1862 0
+	; Equal 297 £temporary1859 -> £temporary1862 0
 	cmp byte [rsi], 0
-	je printFormat$294
+	je printFormat$297
 
  printFormat$20:
 	; IntegralToIntegral £temporary1866 index
@@ -3689,9 +3689,9 @@ section .text
 	mov [rbp + 100], al
 
  printFormat$24:
-	; Equal 272 percent 0
+	; Equal 275 percent 0
 	cmp dword [rbp + 52], 0
-	je printFormat$272
+	je printFormat$275
 
  printFormat$25:
 	; Case 54 c 43
@@ -3833,56 +3833,56 @@ section .text
 	; CaseEnd c
 
  printFormat$53:
-	; Goto 248
-	jmp printFormat$248
+	; Goto 250
+	jmp printFormat$250
 
  printFormat$54:
 	; Assign plus 1
 	mov dword [rbp + 56], 1
 
  printFormat$55:
-	; Goto 292
-	jmp printFormat$292
+	; Goto 295
+	jmp printFormat$295
 
  printFormat$56:
 	; Assign minus 1
 	mov dword [rbp + 60], 1
 
  printFormat$57:
-	; Goto 292
-	jmp printFormat$292
+	; Goto 295
+	jmp printFormat$295
 
  printFormat$58:
 	; Assign space 1
 	mov dword [rbp + 64], 1
 
  printFormat$59:
-	; Goto 292
-	jmp printFormat$292
+	; Goto 295
+	jmp printFormat$295
 
  printFormat$60:
 	; Assign zero 1
 	mov dword [rbp + 68], 1
 
  printFormat$61:
-	; Goto 292
-	jmp printFormat$292
+	; Goto 295
+	jmp printFormat$295
 
  printFormat$62:
 	; Assign grid 1
 	mov dword [rbp + 72], 1
 
  printFormat$63:
-	; Goto 292
-	jmp printFormat$292
+	; Goto 295
+	jmp printFormat$295
 
  printFormat$64:
 	; Assign period 1
 	mov dword [rbp + 80], 1
 
  printFormat$65:
-	; Goto 292
-	jmp printFormat$292
+	; Goto 295
+	jmp printFormat$295
 
  printFormat$66:
 	; NotEqual 69 period 0
@@ -3894,45 +3894,45 @@ section .text
 	mov dword [rbp + 44], -1
 
  printFormat$68:
-	; Goto 292
-	jmp printFormat$292
+	; Goto 295
+	jmp printFormat$295
 
  printFormat$69:
 	; Assign precision -1
 	mov dword [rbp + 48], -1
 
  printFormat$70:
-	; Goto 292
-	jmp printFormat$292
+	; Goto 295
+	jmp printFormat$295
 
  printFormat$71:
 	; Assign shortInt 1
 	mov dword [rbp + 88], 1
 
  printFormat$72:
-	; Goto 292
-	jmp printFormat$292
+	; Goto 295
+	jmp printFormat$295
 
  printFormat$73:
 	; Assign longInt 1
 	mov dword [rbp + 92], 1
 
  printFormat$74:
-	; Goto 292
-	jmp printFormat$292
+	; Goto 295
+	jmp printFormat$295
 
  printFormat$75:
 	; Assign longDouble 1
 	mov dword [rbp + 96], 1
 
  printFormat$76:
-	; Goto 292
-	jmp printFormat$292
+	; Goto 295
+	jmp printFormat$295
 
  printFormat$77:
-	; Equal 109 minus 0
+	; Equal 110 minus 0
 	cmp dword [rbp + 60], 0
-	je printFormat$109
+	je printFormat$110
 
  printFormat$78:
 	; Assign startChars g_outChars
@@ -4038,897 +4038,908 @@ section .text
 	mov [rbp + 32], rbx
 
  printFormat$101:
-	; BinarySubtract £temporary1879 g_outChars startChars
+	; BinarySubtract field g_outChars startChars
 	mov eax, [g_outChars]
 	sub eax, [rbp + 101]
+	mov [rbp + 105], eax
 
  printFormat$102:
+	; Assign £temporary1879 field
+	mov eax, [rbp + 105]
+
+ printFormat$103:
 	; BinaryAdd field field 1
 	inc dword [rbp + 105]
 
- printFormat$103:
-	; SignedGreaterThanEqual 246 £temporary1879 width
-	cmp eax, [rbp + 44]
-	jge printFormat$246
-
  printFormat$104:
-	; PreCall 109 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; SignedGreaterThanEqual 248 £temporary1879 width
+	cmp eax, [rbp + 44]
+	jge printFormat$248
 
  printFormat$105:
+	; PreCall 109 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ printFormat$106:
 	; Parameter signedchar 32 133
 	mov byte [rbp + 133], 32
 
- printFormat$106:
+ printFormat$107:
 	; Call printChar 109 0
-	mov qword [rbp + 109], printFormat$107
+	mov qword [rbp + 109], printFormat$108
 	mov [rbp + 117], rbp
 	add rbp, 109
 	jmp printChar
 
- printFormat$107:
+ printFormat$108:
 	; PostCall 109
 
- printFormat$108:
+ printFormat$109:
 	; Goto 102
 	jmp printFormat$102
 
- printFormat$109:
-	; Equal 191 zero 0
-	cmp dword [rbp + 68], 0
-	je printFormat$191
-
  printFormat$110:
+	; Equal 193 zero 0
+	cmp dword [rbp + 68], 0
+	je printFormat$193
+
+ printFormat$111:
 	; Assign startChars g_outChars
 	mov eax, [g_outChars]
 	mov [rbp + 101], eax
 
- printFormat$111:
+ printFormat$112:
 	; Assign oldOutStatus g_outStatus
 	mov eax, [g_outStatus]
 	mov [rbp + 105], eax
 
- printFormat$112:
+ printFormat$113:
 	; Assign negative 0
 	mov dword [rbp + 109], 0
 
- printFormat$113:
+ printFormat$114:
 	; Assign g_outStatus 2
 	mov dword [g_outStatus], 2
 
- printFormat$114:
+ printFormat$115:
 	; PreCall 113 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printFormat$115:
+ printFormat$116:
 	; IntegralToIntegral £temporary1883 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- printFormat$116:
+ printFormat$117:
 	; BinaryAdd £temporary1885 format £temporary1883
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- printFormat$117:
+ printFormat$118:
 	; Dereference £temporary1882 -> £temporary1885 £temporary1885 0
 
- printFormat$118:
+ printFormat$119:
 	; Address £temporary1886 £temporary1882 -> £temporary1885
 
- printFormat$119:
+ printFormat$120:
 	; Parameter pointer £temporary1886 137
 	mov [rbp + 137], rsi
 
- printFormat$120:
+ printFormat$121:
 	; Parameter pointer arg_list 145
 	mov rax, [rbp + 32]
 	mov [rbp + 145], rax
 
- printFormat$121:
+ printFormat$122:
 	; Parameter signedint 0 153
 	mov dword [rbp + 153], 0
 
- printFormat$122:
+ printFormat$123:
 	; Parameter signedint 0 157
 	mov dword [rbp + 157], 0
 
- printFormat$123:
+ printFormat$124:
 	; Parameter signedint grid 161
 	mov eax, [rbp + 72]
 	mov [rbp + 161], eax
 
- printFormat$124:
+ printFormat$125:
 	; Address £temporary1887 width
 	mov rsi, rbp
 	add rsi, 44
 
- printFormat$125:
+ printFormat$126:
 	; Parameter pointer £temporary1887 165
 	mov [rbp + 165], rsi
 
- printFormat$126:
+ printFormat$127:
 	; Parameter signedint precision 173
 	mov eax, [rbp + 48]
 	mov [rbp + 173], eax
 
- printFormat$127:
+ printFormat$128:
 	; Parameter signedint shortInt 177
 	mov eax, [rbp + 88]
 	mov [rbp + 177], eax
 
- printFormat$128:
+ printFormat$129:
 	; Parameter signedint longInt 181
 	mov eax, [rbp + 92]
 	mov [rbp + 181], eax
 
- printFormat$129:
+ printFormat$130:
 	; Parameter signedint longDouble 185
 	mov eax, [rbp + 96]
 	mov [rbp + 185], eax
 
- printFormat$130:
+ printFormat$131:
 	; Parameter signedint 0 189
 	mov dword [rbp + 189], 0
 
- printFormat$131:
+ printFormat$132:
 	; Address £temporary1888 negative
 	mov rsi, rbp
 	add rsi, 109
 
- printFormat$132:
+ printFormat$133:
 	; Parameter pointer £temporary1888 193
 	mov [rbp + 193], rsi
 
- printFormat$133:
+ printFormat$134:
 	; Call printArgument 113 0
-	mov qword [rbp + 113], printFormat$134
+	mov qword [rbp + 113], printFormat$135
 	mov [rbp + 121], rbp
 	add rbp, 113
 	jmp printArgument
 
- printFormat$134:
+ printFormat$135:
 	; PostCall 113
 
- printFormat$135:
+ printFormat$136:
 	; Assign g_outStatus oldOutStatus
 	mov eax, [rbp + 105]
 	mov [g_outStatus], eax
 
- printFormat$136:
+ printFormat$137:
 	; BinarySubtract field g_outChars startChars
 	mov eax, [g_outChars]
 	sub eax, [rbp + 101]
 	mov [rbp + 113], eax
 
- printFormat$137:
+ printFormat$138:
 	; Assign g_outChars startChars
 	mov eax, [rbp + 101]
 	mov [g_outChars], eax
 
- printFormat$138:
-	; Equal 149 negative 0
-	cmp dword [rbp + 109], 0
-	je printFormat$149
-
  printFormat$139:
-	; PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Equal 150 negative 0
+	cmp dword [rbp + 109], 0
+	je printFormat$150
 
  printFormat$140:
+	; PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ printFormat$141:
 	; Parameter signedchar 88 141
 	mov byte [rbp + 141], 88
 
- printFormat$141:
+ printFormat$142:
 	; Call printChar 117 0
-	mov qword [rbp + 117], printFormat$142
+	mov qword [rbp + 117], printFormat$143
 	mov [rbp + 125], rbp
 	add rbp, 117
 	jmp printChar
 
- printFormat$142:
+ printFormat$143:
 	; PostCall 117
 
- printFormat$143:
+ printFormat$144:
 	; PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printFormat$144:
+ printFormat$145:
 	; Parameter signedchar 45 141
 	mov byte [rbp + 141], 45
 
- printFormat$145:
+ printFormat$146:
 	; Call printChar 117 0
-	mov qword [rbp + 117], printFormat$146
+	mov qword [rbp + 117], printFormat$147
 	mov [rbp + 125], rbp
 	add rbp, 117
 	jmp printChar
 
- printFormat$146:
+ printFormat$147:
 	; PostCall 117
 
- printFormat$147:
+ printFormat$148:
 	; BinaryAdd field field 1
 	inc dword [rbp + 113]
 
- printFormat$148:
-	; Goto 162
-	jmp printFormat$162
-
  printFormat$149:
-	; Equal 156 plus 0
-	cmp dword [rbp + 56], 0
-	je printFormat$156
+	; Goto 163
+	jmp printFormat$163
 
  printFormat$150:
-	; PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Equal 157 plus 0
+	cmp dword [rbp + 56], 0
+	je printFormat$157
 
  printFormat$151:
+	; PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ printFormat$152:
 	; Parameter signedchar 43 141
 	mov byte [rbp + 141], 43
 
- printFormat$152:
+ printFormat$153:
 	; Call printChar 117 0
-	mov qword [rbp + 117], printFormat$153
+	mov qword [rbp + 117], printFormat$154
 	mov [rbp + 125], rbp
 	add rbp, 117
 	jmp printChar
 
- printFormat$153:
+ printFormat$154:
 	; PostCall 117
 
- printFormat$154:
+ printFormat$155:
 	; BinaryAdd field field 1
 	inc dword [rbp + 113]
 
- printFormat$155:
-	; Goto 162
-	jmp printFormat$162
-
  printFormat$156:
-	; Equal 162 space 0
-	cmp dword [rbp + 64], 0
-	je printFormat$162
+	; Goto 163
+	jmp printFormat$163
 
  printFormat$157:
-	; PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Equal 163 space 0
+	cmp dword [rbp + 64], 0
+	je printFormat$163
 
  printFormat$158:
+	; PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ printFormat$159:
 	; Parameter signedchar 32 141
 	mov byte [rbp + 141], 32
 
- printFormat$159:
+ printFormat$160:
 	; Call printChar 117 0
-	mov qword [rbp + 117], printFormat$160
+	mov qword [rbp + 117], printFormat$161
 	mov [rbp + 125], rbp
 	add rbp, 117
 	jmp printChar
 
- printFormat$160:
-	; PostCall 117
-
  printFormat$161:
-	; BinaryAdd £temporary1901 field 1
-	mov eax, [rbp + 113]
-	inc eax
+	; PostCall 117
 
  printFormat$162:
 	; BinaryAdd field field 1
 	inc dword [rbp + 113]
 
  printFormat$163:
-	; SignedGreaterThanEqual 169 £temporary1901 width
-	cmp eax, [rbp + 44]
-	jge printFormat$169
+	; Assign £temporary1901 field
+	mov eax, [rbp + 113]
 
  printFormat$164:
-	; PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; BinaryAdd field field 1
+	inc dword [rbp + 113]
 
  printFormat$165:
+	; SignedGreaterThanEqual 171 £temporary1901 width
+	cmp eax, [rbp + 44]
+	jge printFormat$171
+
+ printFormat$166:
+	; PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ printFormat$167:
 	; Parameter signedchar 48 141
 	mov byte [rbp + 141], 48
 
- printFormat$166:
+ printFormat$168:
 	; Call printChar 117 0
-	mov qword [rbp + 117], printFormat$167
+	mov qword [rbp + 117], printFormat$169
 	mov [rbp + 125], rbp
 	add rbp, 117
 	jmp printChar
 
- printFormat$167:
+ printFormat$169:
 	; PostCall 117
 
- printFormat$168:
-	; Goto 162
-	jmp printFormat$162
+ printFormat$170:
+	; Goto 163
+	jmp printFormat$163
 
- printFormat$169:
+ printFormat$171:
 	; PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printFormat$170:
+ printFormat$172:
 	; IntegralToIntegral £temporary1905 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- printFormat$171:
+ printFormat$173:
 	; BinaryAdd £temporary1907 format £temporary1905
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- printFormat$172:
+ printFormat$174:
 	; Dereference £temporary1904 -> £temporary1907 £temporary1907 0
 
- printFormat$173:
+ printFormat$175:
 	; Address £temporary1908 £temporary1904 -> £temporary1907
 
- printFormat$174:
+ printFormat$176:
 	; Parameter pointer £temporary1908 141
 	mov [rbp + 141], rsi
 
- printFormat$175:
+ printFormat$177:
 	; Parameter pointer arg_list 149
 	mov rax, [rbp + 32]
 	mov [rbp + 149], rax
 
- printFormat$176:
+ printFormat$178:
 	; Parameter signedint 0 157
 	mov dword [rbp + 157], 0
 
- printFormat$177:
+ printFormat$179:
 	; Parameter signedint 0 161
 	mov dword [rbp + 161], 0
 
- printFormat$178:
+ printFormat$180:
 	; Parameter signedint grid 165
 	mov eax, [rbp + 72]
 	mov [rbp + 165], eax
 
- printFormat$179:
+ printFormat$181:
 	; Parameter pointer 0 169
 	mov qword [rbp + 169], 0
 
- printFormat$180:
+ printFormat$182:
 	; Parameter signedint precision 177
 	mov eax, [rbp + 48]
 	mov [rbp + 177], eax
 
- printFormat$181:
+ printFormat$183:
 	; Parameter signedint shortInt 181
 	mov eax, [rbp + 88]
 	mov [rbp + 181], eax
 
- printFormat$182:
+ printFormat$184:
 	; Parameter signedint longInt 185
 	mov eax, [rbp + 92]
 	mov [rbp + 185], eax
 
- printFormat$183:
+ printFormat$185:
 	; Parameter signedint longDouble 189
 	mov eax, [rbp + 96]
 	mov [rbp + 189], eax
 
- printFormat$184:
+ printFormat$186:
 	; Parameter signedint 0 193
 	mov dword [rbp + 193], 0
 
- printFormat$185:
+ printFormat$187:
 	; Parameter pointer 0 197
 	mov qword [rbp + 197], 0
 
- printFormat$186:
+ printFormat$188:
 	; Call printArgument 117 0
-	mov qword [rbp + 117], printFormat$187
+	mov qword [rbp + 117], printFormat$189
 	mov [rbp + 125], rbp
 	add rbp, 117
 	jmp printArgument
 
- printFormat$187:
+ printFormat$189:
 	; PostCall 117
 
- printFormat$188:
+ printFormat$190:
 	; GetReturnValue £temporary1909
 
- printFormat$189:
+ printFormat$191:
 	; Assign arg_list £temporary1909
 	mov [rbp + 32], rbx
 
- printFormat$190:
-	; Goto 246
-	jmp printFormat$246
+ printFormat$192:
+	; Goto 248
+	jmp printFormat$248
 
- printFormat$191:
+ printFormat$193:
 	; Assign startChars g_outChars
 	mov eax, [g_outChars]
 	mov [rbp + 101], eax
 
- printFormat$192:
+ printFormat$194:
 	; Assign oldOutStatus g_outStatus
 	mov eax, [g_outStatus]
 	mov [rbp + 105], eax
 
- printFormat$193:
+ printFormat$195:
 	; Assign g_outStatus 2
 	mov dword [g_outStatus], 2
 
- printFormat$194:
+ printFormat$196:
 	; PreCall 109 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printFormat$195:
+ printFormat$197:
 	; IntegralToIntegral £temporary1911 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- printFormat$196:
+ printFormat$198:
 	; BinaryAdd £temporary1913 format £temporary1911
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- printFormat$197:
+ printFormat$199:
 	; Dereference £temporary1910 -> £temporary1913 £temporary1913 0
 
- printFormat$198:
+ printFormat$200:
 	; Address £temporary1914 £temporary1910 -> £temporary1913
 
- printFormat$199:
+ printFormat$201:
 	; Parameter pointer £temporary1914 133
 	mov [rbp + 133], rsi
 
- printFormat$200:
+ printFormat$202:
 	; Parameter pointer arg_list 141
 	mov rax, [rbp + 32]
 	mov [rbp + 141], rax
 
- printFormat$201:
+ printFormat$203:
 	; Parameter signedint plus 149
 	mov eax, [rbp + 56]
 	mov [rbp + 149], eax
 
- printFormat$202:
+ printFormat$204:
 	; Parameter signedint space 153
 	mov eax, [rbp + 64]
 	mov [rbp + 153], eax
 
- printFormat$203:
+ printFormat$205:
 	; Parameter signedint grid 157
 	mov eax, [rbp + 72]
 	mov [rbp + 157], eax
 
- printFormat$204:
+ printFormat$206:
 	; Address £temporary1915 width
 	mov rsi, rbp
 	add rsi, 44
 
- printFormat$205:
+ printFormat$207:
 	; Parameter pointer £temporary1915 161
 	mov [rbp + 161], rsi
 
- printFormat$206:
+ printFormat$208:
 	; Parameter signedint precision 169
 	mov eax, [rbp + 48]
 	mov [rbp + 169], eax
 
- printFormat$207:
+ printFormat$209:
 	; Parameter signedint shortInt 173
 	mov eax, [rbp + 88]
 	mov [rbp + 173], eax
 
- printFormat$208:
+ printFormat$210:
 	; Parameter signedint longInt 177
 	mov eax, [rbp + 92]
 	mov [rbp + 177], eax
 
- printFormat$209:
+ printFormat$211:
 	; Parameter signedint longDouble 181
 	mov eax, [rbp + 96]
 	mov [rbp + 181], eax
 
- printFormat$210:
+ printFormat$212:
 	; Parameter signedint 1 185
 	mov dword [rbp + 185], 1
 
- printFormat$211:
+ printFormat$213:
 	; Parameter pointer 0 189
 	mov qword [rbp + 189], 0
 
- printFormat$212:
+ printFormat$214:
 	; Call printArgument 109 0
-	mov qword [rbp + 109], printFormat$213
+	mov qword [rbp + 109], printFormat$215
 	mov [rbp + 117], rbp
 	add rbp, 109
 	jmp printArgument
 
- printFormat$213:
+ printFormat$215:
 	; PostCall 109
 
- printFormat$214:
+ printFormat$216:
 	; Assign g_outStatus oldOutStatus
 	mov eax, [rbp + 105]
 	mov [g_outStatus], eax
 
- printFormat$215:
+ printFormat$217:
 	; BinarySubtract field g_outChars startChars
 	mov eax, [g_outChars]
 	sub eax, [rbp + 101]
 	mov [rbp + 109], eax
 
- printFormat$216:
+ printFormat$218:
 	; Assign g_outChars startChars
 	mov eax, [rbp + 101]
 	mov [g_outChars], eax
 
- printFormat$217:
+ printFormat$219:
 	; Assign £temporary1918 field
 	mov eax, [rbp + 109]
 
- printFormat$218:
+ printFormat$220:
 	; BinaryAdd field field 1
 	inc dword [rbp + 109]
 
- printFormat$219:
-	; SignedGreaterThanEqual 225 £temporary1918 width
+ printFormat$221:
+	; SignedGreaterThanEqual 227 £temporary1918 width
 	cmp eax, [rbp + 44]
-	jge printFormat$225
+	jge printFormat$227
 
- printFormat$220:
+ printFormat$222:
 	; PreCall 113 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printFormat$221:
+ printFormat$223:
 	; Parameter signedchar 32 137
 	mov byte [rbp + 137], 32
 
- printFormat$222:
+ printFormat$224:
 	; Call printChar 113 0
-	mov qword [rbp + 113], printFormat$223
+	mov qword [rbp + 113], printFormat$225
 	mov [rbp + 121], rbp
 	add rbp, 113
 	jmp printChar
 
- printFormat$223:
+ printFormat$225:
 	; PostCall 113
 
- printFormat$224:
-	; Goto 217
-	jmp printFormat$217
+ printFormat$226:
+	; Goto 219
+	jmp printFormat$219
 
- printFormat$225:
+ printFormat$227:
 	; PreCall 113 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printFormat$226:
+ printFormat$228:
 	; IntegralToIntegral £temporary1922 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- printFormat$227:
+ printFormat$229:
 	; BinaryAdd £temporary1924 format £temporary1922
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- printFormat$228:
+ printFormat$230:
 	; Dereference £temporary1921 -> £temporary1924 £temporary1924 0
 
- printFormat$229:
+ printFormat$231:
 	; Address £temporary1925 £temporary1921 -> £temporary1924
 
- printFormat$230:
+ printFormat$232:
 	; Parameter pointer £temporary1925 137
 	mov [rbp + 137], rsi
 
- printFormat$231:
+ printFormat$233:
 	; Parameter pointer arg_list 145
 	mov rax, [rbp + 32]
 	mov [rbp + 145], rax
 
- printFormat$232:
+ printFormat$234:
 	; Parameter signedint plus 153
 	mov eax, [rbp + 56]
 	mov [rbp + 153], eax
 
- printFormat$233:
+ printFormat$235:
 	; Parameter signedint space 157
 	mov eax, [rbp + 64]
 	mov [rbp + 157], eax
 
- printFormat$234:
+ printFormat$236:
 	; Parameter signedint grid 161
 	mov eax, [rbp + 72]
 	mov [rbp + 161], eax
 
- printFormat$235:
+ printFormat$237:
 	; Parameter pointer 0 165
 	mov qword [rbp + 165], 0
 
- printFormat$236:
+ printFormat$238:
 	; Parameter signedint precision 173
 	mov eax, [rbp + 48]
 	mov [rbp + 173], eax
 
- printFormat$237:
+ printFormat$239:
 	; Parameter signedint shortInt 177
 	mov eax, [rbp + 88]
 	mov [rbp + 177], eax
 
- printFormat$238:
+ printFormat$240:
 	; Parameter signedint longInt 181
 	mov eax, [rbp + 92]
 	mov [rbp + 181], eax
 
- printFormat$239:
+ printFormat$241:
 	; Parameter signedint longDouble 185
 	mov eax, [rbp + 96]
 	mov [rbp + 185], eax
 
- printFormat$240:
+ printFormat$242:
 	; Parameter signedint 1 189
 	mov dword [rbp + 189], 1
 
- printFormat$241:
+ printFormat$243:
 	; Parameter pointer 0 193
 	mov qword [rbp + 193], 0
 
- printFormat$242:
+ printFormat$244:
 	; Call printArgument 113 0
-	mov qword [rbp + 113], printFormat$243
+	mov qword [rbp + 113], printFormat$245
 	mov [rbp + 121], rbp
 	add rbp, 113
 	jmp printArgument
 
- printFormat$243:
+ printFormat$245:
 	; PostCall 113
 
- printFormat$244:
+ printFormat$246:
 	; GetReturnValue £temporary1926
 
- printFormat$245:
+ printFormat$247:
 	; Assign arg_list £temporary1926
 	mov [rbp + 32], rbx
 
- printFormat$246:
+ printFormat$248:
 	; Assign percent 0
 	mov dword [rbp + 52], 0
 
- printFormat$247:
-	; Goto 292
-	jmp printFormat$292
+ printFormat$249:
+	; Goto 295
+	jmp printFormat$295
 
- printFormat$248:
+ printFormat$250:
 	; Assign value 0
 	mov dword [rbp + 101], 0
 
- printFormat$249:
+ printFormat$251:
 	; PreCall 105 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printFormat$250:
+ printFormat$252:
 	; IntegralToIntegral £temporary1929 c
 	mov al, [rbp + 100]
 	and eax, 255
 	cmp al, 0
-	jge printFormat$251
+	jge printFormat$253
 	neg al
 	neg eax
 
- printFormat$251:
+ printFormat$253:
 	; Parameter signedint £temporary1929 129
 	mov [rbp + 129], eax
 
- printFormat$252:
+ printFormat$254:
 	; Call isdigit 105 0
-	mov qword [rbp + 105], printFormat$253
+	mov qword [rbp + 105], printFormat$255
 	mov [rbp + 113], rbp
 	add rbp, 105
 	jmp isdigit
 
- printFormat$253:
+ printFormat$255:
 	; PostCall 105
 
- printFormat$254:
+ printFormat$256:
 	; GetReturnValue £temporary1930
 
- printFormat$255:
-	; Equal 266 £temporary1930 0
+ printFormat$257:
+	; Equal 269 £temporary1930 0
 	cmp ebx, 0
-	je printFormat$266
+	je printFormat$269
 
- printFormat$256:
+ printFormat$258:
 	; SignedMultiply £temporary1931 value 10
 	mov eax, [rbp + 101]
 	xor edx, edx
 	imul dword [int4$10#]
 
- printFormat$257:
+ printFormat$259:
 	; BinarySubtract £temporary1932 c 48
 	mov bl, [rbp + 100]
 	sub bl, 48
 
- printFormat$258:
+ printFormat$260:
 	; IntegralToIntegral £temporary1933 £temporary1932
 	and ebx, 255
 	cmp bl, 0
-	jge printFormat$259
+	jge printFormat$261
 	neg bl
 	neg ebx
 
- printFormat$259:
+ printFormat$261:
 	; BinaryAdd value £temporary1931 £temporary1933
 	add eax, ebx
 	mov [rbp + 101], eax
 
- printFormat$260:
-	; BinaryAdd £temporary1935 index 1
-	mov eax, [rbp + 40]
-	inc eax
+ printFormat$262:
+	; BinaryAdd index index 1
+	inc dword [rbp + 40]
 
- printFormat$261:
+ printFormat$263:
+	; Assign £temporary1935 index
+	mov eax, [rbp + 40]
+
+ printFormat$264:
 	; IntegralToIntegral £temporary1937 £temporary1935
 	mov rbx, 4294967295
 	and rax, rbx
 
- printFormat$262:
+ printFormat$265:
 	; BinaryAdd £temporary1939 format £temporary1937
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- printFormat$263:
+ printFormat$266:
 	; Dereference £temporary1936 -> £temporary1939 £temporary1939 0
 
- printFormat$264:
+ printFormat$267:
 	; Assign c £temporary1936 -> £temporary1939
 	mov al, [rsi]
 	mov [rbp + 100], al
 
- printFormat$265:
-	; Goto 249
-	jmp printFormat$249
+ printFormat$268:
+	; Goto 251
+	jmp printFormat$251
 
- printFormat$266:
+ printFormat$269:
 	; BinarySubtract index index 1
 	dec dword [rbp + 40]
 
- printFormat$267:
-	; NotEqual 270 period 0
+ printFormat$270:
+	; NotEqual 273 period 0
 	cmp dword [rbp + 80], 0
-	jne printFormat$270
+	jne printFormat$273
 
- printFormat$268:
+ printFormat$271:
 	; Assign width value
 	mov eax, [rbp + 101]
 	mov [rbp + 44], eax
 
- printFormat$269:
-	; Goto 292
-	jmp printFormat$292
+ printFormat$272:
+	; Goto 295
+	jmp printFormat$295
 
- printFormat$270:
+ printFormat$273:
 	; Assign precision value
 	mov eax, [rbp + 101]
 	mov [rbp + 48], eax
 
- printFormat$271:
-	; Goto 292
-	jmp printFormat$292
+ printFormat$274:
+	; Goto 295
+	jmp printFormat$295
 
- printFormat$272:
-	; NotEqual 288 c 37
+ printFormat$275:
+	; NotEqual 291 c 37
 	cmp byte [rbp + 100], 37
-	jne printFormat$288
+	jne printFormat$291
 
- printFormat$273:
+ printFormat$276:
 	; Assign percent 1
 	mov dword [rbp + 52], 1
 
- printFormat$274:
+ printFormat$277:
 	; Assign plus 0
 	mov dword [rbp + 56], 0
 
- printFormat$275:
+ printFormat$278:
 	; Assign minus 0
 	mov dword [rbp + 60], 0
 
- printFormat$276:
+ printFormat$279:
 	; Assign space 0
 	mov dword [rbp + 64], 0
 
- printFormat$277:
+ printFormat$280:
 	; Assign zero 0
 	mov dword [rbp + 68], 0
 
- printFormat$278:
+ printFormat$281:
 	; Assign grid 0
 	mov dword [rbp + 72], 0
 
- printFormat$279:
+ printFormat$282:
 	; Assign widthStar 0
 	mov dword [rbp + 76], 0
 
- printFormat$280:
+ printFormat$283:
 	; Assign period 0
 	mov dword [rbp + 80], 0
 
- printFormat$281:
+ printFormat$284:
 	; Assign precisionStar 0
 	mov dword [rbp + 84], 0
 
- printFormat$282:
+ printFormat$285:
 	; Assign shortInt 0
 	mov dword [rbp + 88], 0
 
- printFormat$283:
+ printFormat$286:
 	; Assign longInt 0
 	mov dword [rbp + 92], 0
 
- printFormat$284:
+ printFormat$287:
 	; Assign longDouble 0
 	mov dword [rbp + 96], 0
 
- printFormat$285:
+ printFormat$288:
 	; Assign width 0
 	mov dword [rbp + 44], 0
 
- printFormat$286:
+ printFormat$289:
 	; Assign precision 0
 	mov dword [rbp + 48], 0
 
- printFormat$287:
-	; Goto 292
-	jmp printFormat$292
+ printFormat$290:
+	; Goto 295
+	jmp printFormat$295
 
- printFormat$288:
+ printFormat$291:
 	; PreCall 101 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- printFormat$289:
+ printFormat$292:
 	; Parameter signedchar c 125
 	mov al, [rbp + 100]
 	mov [rbp + 125], al
 
- printFormat$290:
+ printFormat$293:
 	; Call printChar 101 0
-	mov qword [rbp + 101], printFormat$291
+	mov qword [rbp + 101], printFormat$294
 	mov [rbp + 109], rbp
 	add rbp, 101
 	jmp printChar
 
- printFormat$291:
+ printFormat$294:
 	; PostCall 101
 
- printFormat$292:
+ printFormat$295:
 	; BinaryAdd index index 1
 	inc dword [rbp + 40]
 
- printFormat$293:
+ printFormat$296:
 	; Goto 16
 	jmp printFormat$16
 
- printFormat$294:
-	; NotEqual 301 g_outStatus 1
+ printFormat$297:
+	; NotEqual 304 g_outStatus 1
 	cmp dword [g_outStatus], 1
-	jne printFormat$301
+	jne printFormat$304
 
- printFormat$295:
+ printFormat$298:
 	; IntegralToIntegral £temporary1948 g_outDevice
 	mov rax, [g_outDevice]
 
- printFormat$296:
+ printFormat$299:
 	; Assign outString £temporary1948
 	mov [rbp + 100], rax
 
- printFormat$297:
+ printFormat$300:
 	; IntegralToIntegral £temporary1950 g_outChars
 	mov eax, [g_outChars]
 	mov rbx, 4294967295
 	and rax, rbx
 
- printFormat$298:
+ printFormat$301:
 	; BinaryAdd £temporary1952 outString £temporary1950
 	mov rsi, [rbp + 100]
 	add rsi, rax
 
- printFormat$299:
+ printFormat$302:
 	; Dereference £temporary1949 -> £temporary1952 £temporary1952 0
 
- printFormat$300:
+ printFormat$303:
 	; Assign £temporary1949 -> £temporary1952 0
 	mov byte [rsi], 0
 
- printFormat$301:
+ printFormat$304:
 	; Return g_outChars
 	mov ebx, [g_outChars]
 	mov rax, [rbp]
@@ -4936,7 +4947,7 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- printFormat$302:
+ printFormat$305:
 	; FunctionEnd printFormat
 
 section .text

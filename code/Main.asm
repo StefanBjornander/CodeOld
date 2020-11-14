@@ -2062,8 +2062,8 @@ section .text
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
  assert_test$17:
-	; Parameter signedint 867 84
-	mov dword [rbp + 84], 867
+	; Parameter signedint 869 84
+	mov dword [rbp + 84], 869
 
  assert_test$18:
 	; Call fprintf 28 20
@@ -2152,8 +2152,8 @@ section .text
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
  assert_test2$6:
-	; Parameter signedint 872 84
-	mov dword [rbp + 84], 872
+	; Parameter signedint 874 84
+	mov dword [rbp + 84], 874
 
  assert_test2$7:
 	; Call fprintf 28 20

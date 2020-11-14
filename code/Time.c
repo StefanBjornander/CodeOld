@@ -31,14 +31,8 @@ time_t time(time_t* timePtr) {
   sec = register_dh;
 
   if (localeConvPtr != NULL) {
-    printf("Hour %i", hour);
     hour -= localeConvPtr->winterTimeZone;
-    printf(" %i\n", hour);
   }
-
-  //printf("timeZone %li %i %li\n", *timePtr, timeZone, 3600l * timeZone);
-
-  printf("%i-%i-%i %i:%i:%i\n", 1900 + year, month, monthDay, hour, min, sec);
 
   { const BOOL leapYear = (year % 4) == 0;
     const int daysOfMonths[] = {31, leapYear ? 29 : 28, 31, 30,
@@ -122,8 +116,6 @@ struct tm* gmtime(const time_t* timePtr) {
     g_timeStruct.tm_min = secondsOfHour / 60;
     g_timeStruct.tm_sec = secondsOfHour % 60;
 
-    //printf("<%i> <%i> <%i>\n", g_timeStruct.tm_hour, g_timeStruct.tm_min, g_timeStruct.tm_sec);
-
     // January 1, 1970, was a Thursday
     if (totalDays < 3) {
       g_timeStruct.tm_wday = totalDays + 4;
@@ -136,7 +128,6 @@ struct tm* gmtime(const time_t* timePtr) {
       const BOOL leapYear = (((year % 4) == 0) &&
                             ((year % 100) != 0)) || ((year % 400) == 0);
       const int daysOfYear = leapYear ? 366 : 365;
-      //printf("%i %i\n", year, daysOfYear);
 
       if (totalDays < daysOfYear) {
         const int daysOfMonths[] = {31, leapYear ? 29 : 28, 31, 30,
@@ -156,11 +147,9 @@ struct tm* gmtime(const time_t* timePtr) {
           ++month;
         }
 
-        //printf("days %i\n", totalDays);
         g_timeStruct.tm_mon = month;
         g_timeStruct.tm_mday = totalDays + 1;
         g_timeStruct.tm_isdst = -1;
-        //printf("<%i> <%i> <%i>\n", 1900 + g_timeStruct.tm_year, g_timeStruct.tm_mon + 1, g_timeStruct.tm_mday);
         return &g_timeStruct;
       }
 
@@ -201,7 +190,7 @@ char* asctime(const struct tm* tp) {
                                         : g_defaultShortDayList;
   shortMonthList = (shortMonthList != NULL) ? shortMonthList
                                             : g_defaultShortMonthList;
-  sprintf(g_timeString, "%s %s %i %i:%i:%i %i",
+  sprintf(g_timeString, "%s %s %i %02i:%02i:%02i %i",
           shortDayList[tp->tm_wday], shortMonthList[tp->tm_mon],
           tp->tm_mday, tp->tm_hour, tp->tm_min,
           tp->tm_sec, tp->tm_year + 1900);
@@ -222,10 +211,8 @@ struct tm* localtime(const time_t* timePtr) {
                                       : localeConvPtr->winterTimeZone;
   }
 
-  //printf("timeZone %li %i %li\n", *timePtr, timeZone, 3600l * timeZone);
-  { time_t timeXXX = *timePtr + (3600l * timeZone);
-    //printf("time %li\n", timeXXX);    
-    return gmtime(&timeXXX);
+  { time_t t = *timePtr + (3600l * timeZone);
+    return gmtime(&t);
   }
 }
 
@@ -291,33 +278,33 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
             break;
 
           case 'c':
-            sprintf(add, "%d-%d-%d %d:%d:%d",
+            sprintf(add, "%02i-%02i-%02i %02i:%02i:%02i",
                     1900 + tp->tm_year, tp->tm_mon + 1, tp->tm_mday,
                     tp->tm_hour, tp->tm_min, tp->tm_sec); 
             break;
 
           case 'd':
-            sprintf(add, "%d", tp->tm_mday);
+            sprintf(add, "%i", tp->tm_mday);
             break;
 
           case 'H':
-            sprintf(add, "%d", tp->tm_hour);
+            sprintf(add, "%i", tp->tm_hour);
             break;
 
           case 'I':
-            sprintf(add, "%d", tp->tm_hour % 12);
+            sprintf(add, "%i", tp->tm_hour % 12);
             break;
 
           case 'j':
-            sprintf(add, "%d", tp->tm_yday);
+            sprintf(add, "%i", tp->tm_yday);
             break;
 
           case 'm':
-            sprintf(add, "%d", tp->tm_mon + 1);
+            sprintf(add, "%i", tp->tm_mon + 1);
             break;
 
           case 'M':
-            sprintf(add, "%d", tp->tm_min);
+            sprintf(add, "%i", tp->tm_min);
             break;
 
           case 'p':
@@ -325,36 +312,36 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
             break;
 
           case 'S':
-            sprintf(add, "%d", tp->tm_sec);
+            sprintf(add, "%i", tp->tm_sec);
             break;
 
           case 'U':
-            sprintf(add, "%d", yearDaySunday);
+            sprintf(add, "%i", yearDaySunday);
             break;
 
           case 'w':
-            sprintf(add, "%d", tp->tm_wday);
+            sprintf(add, "%i", tp->tm_wday);
             break;
 
           case 'W':
-            sprintf(add, "%d", yearDayMonday);
+            sprintf(add, "%i", yearDayMonday);
             break;
 
           case 'x':
-            sprintf(add, "%d:%d:%d", tp->tm_hour,
+            sprintf(add, "%02i:%02i:%02i", tp->tm_hour,
                     tp->tm_min, tp->tm_sec); 
             break;
 
           case 'X':
-            sprintf(add, "%d:%d:%d", tp->tm_hour, tp->tm_min, tp->tm_sec); 
+            sprintf(add, "%02i:%02i:%02i", tp->tm_hour, tp->tm_min, tp->tm_sec); 
             break;
 
           case 'y':
-            sprintf(add, "%d", tp->tm_year % 100);
+            sprintf(add, "%i", tp->tm_year % 100);
             break;
 
           case 'Y':
-            sprintf(add, "%d", 1900 + tp->tm_year);
+            sprintf(add, "%i", 1900 + tp->tm_year);
             break;
 
           case 'Z':

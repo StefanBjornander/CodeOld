@@ -198,7 +198,9 @@ void maina() {
 }
 
 void main() {
-/*  strtol_test();
+  //printf("<%i> <%2i> <%02i> <%i> <%2i> <%02i> <%i> <%2i> <%02i>\n", 1, 2, 3, 11, 12, 13, 111, 112, 123);
+  //printf("%i %2i %02i", 1, 2, 3);
+  /*  strtol_test();
   printf("\n");
   strtoul_test();*/
   //stdlib_test();
