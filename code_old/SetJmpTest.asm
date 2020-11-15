@@ -42,177 +42,177 @@ string_25s0A#:
 
 section .text
 
- @6927$main:
+ @6929$main:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @6927$main$1:
+ @6929$main$1:
 	; Parameter pointer "Please input a value: " 64
 	mov qword [rbp + 64], string_Please20input20a20value3A20#
 
- @6927$main$2:
+ @6929$main$2:
 	; Call printf 40 0
-	mov qword [rbp + 40], @6927$main$3
+	mov qword [rbp + 40], @6929$main$3
 	mov [rbp + 48], rbp
 	add rbp, 40
 	mov rdi, rbp
 	jmp printf
 
- @6927$main$3:
+ @6929$main$3:
 	; PostCall 40
 
- @6927$main$4:
+ @6929$main$4:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @6927$main$5:
+ @6929$main$5:
 	; Parameter pointer "%lf" 64
 	mov qword [rbp + 64], string_25lf#
 
- @6927$main$6:
-	; Address £temporary3633 x
+ @6929$main$6:
+	; Address £temporary3630 x
 	mov rsi, rbp
 	add rsi, 32
 
- @6927$main$7:
-	; Parameter pointer £temporary3633 72
+ @6929$main$7:
+	; Parameter pointer £temporary3630 72
 	mov [rbp + 72], rsi
 
- @6927$main$8:
+ @6929$main$8:
 	; Call scanf 40 8
-	mov qword [rbp + 40], @6927$main$9
+	mov qword [rbp + 40], @6929$main$9
 	mov [rbp + 48], rbp
 	add rbp, 40
 	mov rdi, rbp
 	add rdi, 8
 	jmp scanf
 
- @6927$main$9:
+ @6929$main$9:
 	; PostCall 40
 
- @6927$main$10:
+ @6929$main$10:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @6927$main$11:
+ @6929$main$11:
 	; Parameter pointer buffer 64
 	mov qword [rbp + 64], buffer
 
- @6927$main$12:
+ @6929$main$12:
 	; Call setjmp 40 0
-	mov qword [rbp + 40], @6927$main$13
+	mov qword [rbp + 40], @6929$main$13
 	mov [rbp + 48], rbp
 	add rbp, 40
 	jmp setjmp
 
- @6927$main$13:
+ @6929$main$13:
 	; PostCall 40
 
- @6927$main$14:
-	; GetReturnValue £temporary3635
+ @6929$main$14:
+	; GetReturnValue £temporary3632
 
- @6927$main$15:
-	; IntegralToIntegral £temporary3636 £temporary3635
+ @6929$main$15:
+	; IntegralToIntegral £temporary3633 £temporary3632
 	mov rax, 4294967295
 	and rbx, rax
 
- @6927$main$16:
-	; Assign message £temporary3636
+ @6929$main$16:
+	; Assign message £temporary3633
 	mov [rbp + 24], rbx
 
- @6927$main$17:
+ @6929$main$17:
 	; NotEqual 32 message 0
 	cmp qword [rbp + 24], 0
-	jne @6927$main$32
+	jne @6929$main$32
 
- @6927$main$18:
+ @6929$main$18:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @6927$main$19:
+ @6929$main$19:
 	; Parameter pointer "1.0 / %f = %f\n" 64
 	mov qword [rbp + 64], string_12E0202F2025f203D2025f0A#
 
- @6927$main$20:
+ @6929$main$20:
 	; PushFloat x
 	fld qword [rbp + 32]
 
- @6927$main$21:
+ @6929$main$21:
 	; Parameter double x 72
 	fstp qword [rbp + 72]
 
- @6927$main$22:
+ @6929$main$22:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @6927$main$23:
+ @6929$main$23:
 	; PushFloat x
 	fld qword [rbp + 32]
 
- @6927$main$24:
+ @6929$main$24:
 	; Parameter double x 104
 	fstp qword [rbp + 104]
 
- @6927$main$25:
+ @6929$main$25:
 	; Call inverse 80 0
-	mov qword [rbp + 80], @6927$main$26
+	mov qword [rbp + 80], @6929$main$26
 	mov [rbp + 88], rbp
 	add rbp, 80
 	jmp inverse
 
- @6927$main$26:
+ @6929$main$26:
 	; PostCall 80
 
- @6927$main$27:
-	; GetReturnValue £temporary3638
+ @6929$main$27:
+	; GetReturnValue £temporary3635
 
- @6927$main$28:
-	; Parameter double £temporary3638 80
+ @6929$main$28:
+	; Parameter double £temporary3635 80
 	fstp qword [rbp + 80]
 
- @6927$main$29:
+ @6929$main$29:
 	; Call printf 40 16
-	mov qword [rbp + 40], @6927$main$30
+	mov qword [rbp + 40], @6929$main$30
 	mov [rbp + 48], rbp
 	add rbp, 40
 	mov rdi, rbp
 	add rdi, 16
 	jmp printf
 
- @6927$main$30:
+ @6929$main$30:
 	; PostCall 40
 
- @6927$main$31:
+ @6929$main$31:
 	; Goto 37
-	jmp @6927$main$37
+	jmp @6929$main$37
 
- @6927$main$32:
+ @6929$main$32:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @6927$main$33:
+ @6929$main$33:
 	; Parameter pointer "%s\n" 64
 	mov qword [rbp + 64], string_25s0A#
 
- @6927$main$34:
+ @6929$main$34:
 	; Parameter pointer message 72
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
- @6927$main$35:
+ @6929$main$35:
 	; Call printf 40 8
-	mov qword [rbp + 40], @6927$main$36
+	mov qword [rbp + 40], @6929$main$36
 	mov [rbp + 48], rbp
 	add rbp, 40
 	mov rdi, rbp
 	add rdi, 8
 	jmp printf
 
- @6927$main$36:
+ @6929$main$36:
 	; PostCall 40
 
- @6927$main$37:
+ @6929$main$37:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @6927$main$38:
+ @6929$main$38:
 	; FunctionEnd main
 
 section .text
@@ -247,10 +247,10 @@ section .text
 	; PostCall 32
 
  inverse$7:
-	; GetReturnValue £temporary3645
+	; GetReturnValue £temporary3642
 
  inverse$8:
-	; Return £temporary3645
+	; Return £temporary3642
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -291,11 +291,11 @@ section .text
 	fld qword [rbp + 32]
 
  divide$5:
-	; SignedDivide £temporary3649 x y
+	; SignedDivide £temporary3646 x y
 	fdiv
 
  divide$6:
-	; Return £temporary3649
+	; Return £temporary3646
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -309,11 +309,11 @@ section .text
 	mov qword [rbp + 64], buffer
 
  divide$9:
-	; IntegralToIntegral £temporary3650 "Division by Zero."
+	; IntegralToIntegral £temporary3647 "Division by Zero."
 	mov rax, string_Division20by20Zero2E#
 
  divide$10:
-	; Parameter signedint £temporary3650 72
+	; Parameter signedint £temporary3647 72
 	mov [rbp + 72], eax
 
  divide$11:

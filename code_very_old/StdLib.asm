@@ -5620,8 +5620,8 @@ section .text
 section .text
 
  exit:
-	; Assign index 257
-	mov dword [rbp + 28], 257
+	; Assign index 255
+	mov dword [rbp + 28], 255
 
  exit$1:
 	; SignedLessThan 16 index 0

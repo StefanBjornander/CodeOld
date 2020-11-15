@@ -1,0 +1,140 @@
+0: Assign weekdays[0] "Sun"
+1: Assign weekdays[1] "Mon"
+2: Assign weekdays[2] "Tue"
+3: Assign weekdays[3] "Wed"
+4: Assign weekdays[4] "Thu"
+5: Assign weekdays[5] "Fri"
+6: Assign weekdays[6] "Sat"
+7: PreCall 80 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+8: Parameter pointer 0 104
+9: Call time 80 0
+10: PostCall 80
+11: GetReturnValue £temporary4497
+12: Assign now1 £temporary4497
+13: PreCall 88 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+14: Address £temporary4498 now1
+15: Parameter pointer £temporary4498 112
+16: Call gmtime 88 0
+17: PostCall 88
+18: GetReturnValue £temporary4499
+19: Dereference £temporary4500 -> £temporary4499 £temporary4499 0
+20: AssignInitSize s £temporary4500 -> £temporary4499
+21: Assign s £temporary4500 -> £temporary4499
+22: PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+23: Address £temporary4501 now1
+24: Parameter pointer £temporary4501 148
+25: Call localtime 124 0
+26: PostCall 124
+27: GetReturnValue £temporary4502
+28: Dereference £temporary4503 -> £temporary4502 £temporary4502 0
+29: AssignInitSize t £temporary4503 -> £temporary4502
+30: Assign t £temporary4503 -> £temporary4502
+31: PreCall 160 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+32: Address £temporary4504 s
+33: Parameter pointer £temporary4504 184
+34: Call mktime 160 0
+35: PostCall 160
+36: GetReturnValue £temporary4505
+37: Assign now2 £temporary4505
+38: PreCall 168 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+39: Parameter pointer "now 1: %lu\n" 192
+40: Parameter signed long int now1 200
+41: Call printf 168 8
+42: PostCall 168
+43: PreCall 168 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+44: Parameter pointer "now 2: %lu\n" 192
+45: Parameter signed long int now2 200
+46: Call printf 168 8
+47: PostCall 168
+48: PreCall 168 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+49: Parameter pointer "   gm time: %s %i-%i-%i %i:%i:%i, year day %i, week day %i, daylight saving time %i\n" 192
+50: IntegralToIntegral £temporary4510 s.tm_wday
+51: UnsignedMultiply £temporary4511 £temporary4510 8
+52: BinaryAdd £temporary4512 weekdays £temporary4511
+53: Dereference £temporary4509 -> £temporary4512 £temporary4512 0
+54: Parameter pointer £temporary4509 -> £temporary4512 200
+55: BinaryAdd £temporary4514 s.tm_year 1900
+56: Parameter signedint £temporary4514 208
+57: BinaryAdd £temporary4516 s.tm_mon 1
+58: Parameter signedint £temporary4516 212
+59: Parameter signedint s.tm_mday 216
+60: Parameter signedint s.tm_hour 220
+61: Parameter signedint s.tm_min 224
+62: Parameter signedint s.tm_sec 228
+63: Parameter signedint s.tm_yday 232
+64: Parameter signedint s.tm_wday 236
+65: Parameter signedint s.tm_isdst 240
+66: Call printf 168 44
+67: PostCall 168
+68: PreCall 168 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+69: Parameter pointer "local time: %s %i-%i-%i %i:%i:%i, year day %i, week day %i, daylight saving time %i\n" 192
+70: IntegralToIntegral £temporary4527 t.tm_wday
+71: UnsignedMultiply £temporary4528 £temporary4527 8
+72: BinaryAdd £temporary4529 weekdays £temporary4528
+73: Dereference £temporary4526 -> £temporary4529 £temporary4529 0
+74: Parameter pointer £temporary4526 -> £temporary4529 200
+75: BinaryAdd £temporary4531 t.tm_year 1900
+76: Parameter signedint £temporary4531 208
+77: BinaryAdd £temporary4533 t.tm_mon 1
+78: Parameter signedint £temporary4533 212
+79: Parameter signedint t.tm_mday 216
+80: Parameter signedint t.tm_hour 220
+81: Parameter signedint t.tm_min 224
+82: Parameter signedint t.tm_sec 228
+83: Parameter signedint t.tm_yday 232
+84: Parameter signedint t.tm_wday 236
+85: Parameter signedint t.tm_isdst 240
+86: Call printf 168 44
+87: PostCall 168
+88: PreCall 672 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+89: Parameter pointer buffer1 696
+90: PreCall 672 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+91: Address £temporary4542 s
+92: Parameter pointer £temporary4542 728
+93: Call asctime 704 0
+94: PostCall 704
+95: GetReturnValue £temporary4543
+96: Parameter pointer £temporary4543 704
+97: Call strcpy 672 0
+98: PostCall 672
+99: PreCall 672 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+100: Parameter pointer buffer2 696
+101: PreCall 672 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+102: Address £temporary4545 now1
+103: Parameter pointer £temporary4545 728
+104: Call ctime 704 0
+105: PostCall 704
+106: GetReturnValue £temporary4546
+107: Parameter pointer £temporary4546 704
+108: Call strcpy 672 0
+109: PostCall 672
+110: PreCall 672 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+111: Parameter pointer "asctime <%s>, ctime <%s>\n" 696
+112: Parameter pointer buffer1 704
+113: Parameter pointer buffer2 712
+114: Call printf 672 16
+115: PostCall 672
+116: PreCall 672 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+117: Parameter pointer buffer 696
+118: Parameter signedint 300 704
+119: Parameter pointer "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y" 708
+120: Address £temporary4549 t
+121: Parameter pointer £temporary4549 716
+122: Call strftime 672 0
+123: PostCall 672
+124: GetReturnValue £temporary4550
+125: Assign i £temporary4550
+126: PreCall 672 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+127: Parameter pointer "strftime %i %i <%s>\n" 696
+128: Parameter signedint i 704
+129: PreCall 672 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+130: Parameter pointer buffer 732
+131: Call strlen 708 0
+132: PostCall 708
+133: GetReturnValue £temporary4551
+134: Parameter signedint £temporary4551 708
+135: Parameter pointer buffer 712
+136: Call printf 672 16
+137: PostCall 672
+138: Return
+139: FunctionEnd time_test

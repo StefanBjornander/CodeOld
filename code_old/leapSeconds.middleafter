@@ -1,0 +1,26 @@
+0: Assign seconds 0
+1: Assign index 0
+2: SignedGreaterThanEqual 24 index leapSize
+3: PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: Parameter signed long int t 64
+5: PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+6: IntegralToIntegral £temporary2742 index
+7: UnsignedMultiply £temporary2743 £temporary2742 36
+8: BinaryAdd £temporary2744 leapList £temporary2743
+9: Dereference £temporary2741 -> £temporary2744 £temporary2744 0
+10: Address £temporary2745 £temporary2741 -> £temporary2744
+11: Parameter pointer £temporary2745 96
+12: Call mktime 72 0
+13: PostCall 72
+14: GetReturnValue £temporary2746
+15: Parameter signed long int £temporary2746 72
+16: Call difftime 40 0
+17: PostCall 40
+18: GetReturnValue £temporary2747
+19: PushFloat 0
+20: SignedLessThan 22 £temporary2747 0
+21: BinaryAdd seconds seconds 1
+22: BinaryAdd index index 1
+23: Goto 2
+24: Return seconds
+25: FunctionEnd leapSeconds

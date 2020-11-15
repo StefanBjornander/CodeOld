@@ -3532,9 +3532,9 @@ printFormat$16:	; £temporary2233 = format + index
 printFormat$17:	; £temporary2232 -> £temporary2233 = *£temporary2233
 55:	
 
-printFormat$18:	; if £temporary2232 -> £temporary2233 == 0 goto 282
+printFormat$18:	; if £temporary2232 -> £temporary2233 == 0 goto 285
 56:		cmp byte [a1436], 0
-57:		je printFormat$282
+57:		je printFormat$285
 59:	
 
 printFormat$19:	; £temporary2237 = format + index
@@ -3550,9 +3550,9 @@ printFormat$21:	; c = £temporary2236 -> £temporary2237
 67:		mov [bp + 40], t1438
 69:	
 
-printFormat$22:	; if percent == 0 goto 260
+printFormat$22:	; if percent == 0 goto 263
 70:		cmp word [bp + 16], 0
-71:		je printFormat$260
+71:		je printFormat$263
 73:	
 
 printFormat$23:	; case c == 43 goto 52
@@ -3694,56 +3694,56 @@ printFormat$49:	; case c == 105 goto 75
 printFormat$50:	; case end c
 184:	
 
-printFormat$51:	; goto 237
-185:		jmp printFormat$237
+printFormat$51:	; goto 239
+185:		jmp printFormat$239
 187:	
 
 printFormat$52:	; plus = 1
 188:		mov word [bp + 18], 1
 190:	
 
-printFormat$53:	; goto 280
-191:		jmp printFormat$280
+printFormat$53:	; goto 283
+191:		jmp printFormat$283
 193:	
 
 printFormat$54:	; minus = 1
 194:		mov word [bp + 20], 1
 196:	
 
-printFormat$55:	; goto 280
-197:		jmp printFormat$280
+printFormat$55:	; goto 283
+197:		jmp printFormat$283
 199:	
 
 printFormat$56:	; space = 1
 200:		mov word [bp + 22], 1
 202:	
 
-printFormat$57:	; goto 280
-203:		jmp printFormat$280
+printFormat$57:	; goto 283
+203:		jmp printFormat$283
 205:	
 
 printFormat$58:	; zero = 1
 206:		mov word [bp + 24], 1
 208:	
 
-printFormat$59:	; goto 280
-209:		jmp printFormat$280
+printFormat$59:	; goto 283
+209:		jmp printFormat$283
 211:	
 
 printFormat$60:	; grid = 1
 212:		mov word [bp + 26], 1
 214:	
 
-printFormat$61:	; goto 280
-215:		jmp printFormat$280
+printFormat$61:	; goto 283
+215:		jmp printFormat$283
 217:	
 
 printFormat$62:	; period = 1
 218:		mov word [bp + 30], 1
 220:	
 
-printFormat$63:	; goto 280
-221:		jmp printFormat$280
+printFormat$63:	; goto 283
+221:		jmp printFormat$283
 223:	
 
 printFormat$64:	; if period != 0 goto 67
@@ -3755,45 +3755,45 @@ printFormat$65:	; width = -1
 228:		mov word [bp + 12], -1
 230:	
 
-printFormat$66:	; goto 280
-231:		jmp printFormat$280
+printFormat$66:	; goto 283
+231:		jmp printFormat$283
 233:	
 
 printFormat$67:	; precision = -1
 234:		mov word [bp + 14], -1
 236:	
 
-printFormat$68:	; goto 280
-237:		jmp printFormat$280
+printFormat$68:	; goto 283
+237:		jmp printFormat$283
 239:	
 
 printFormat$69:	; shortInt = 1
 240:		mov word [bp + 34], 1
 242:	
 
-printFormat$70:	; goto 280
-243:		jmp printFormat$280
+printFormat$70:	; goto 283
+243:		jmp printFormat$283
 245:	
 
 printFormat$71:	; longInt = 1
 246:		mov word [bp + 36], 1
 248:	
 
-printFormat$72:	; goto 280
-249:		jmp printFormat$280
+printFormat$72:	; goto 283
+249:		jmp printFormat$283
 251:	
 
 printFormat$73:	; longDouble = 1
 252:		mov word [bp + 38], 1
 254:	
 
-printFormat$74:	; goto 280
-255:		jmp printFormat$280
+printFormat$74:	; goto 283
+255:		jmp printFormat$283
 257:	
 
-printFormat$75:	; if minus == 0 goto 106
+printFormat$75:	; if minus == 0 goto 107
 258:		cmp word [bp + 20], 0
-259:		je printFormat$106
+259:		je printFormat$107
 261:	
 
 printFormat$76:	; startChars = g_outChars
@@ -3893,883 +3893,894 @@ printFormat$97:	; arg_list = £temporary2244
 337:		mov [bp + 8], t1452
 339:	
 
-printFormat$98:	; £temporary2246 = g_outChars - startChars
+printFormat$98:	; field = g_outChars - startChars
 340:		mov a1453, [g_outChars]
 341:		sub a1453, [bp + 41]
-343:	
+342:		mov [bp + 43], a1453
+344:	
 
-printFormat$99:	; ++field
-344:		inc word [bp + 43]
-346:	
+printFormat$99:	; £temporary2246 = field
+345:		mov t1454, [bp + 43]
+347:	
 
-printFormat$100:	; if £temporary2246 >= width goto 235
-347:		cmp a1453, [bp + 12]
-348:		jge printFormat$235
+printFormat$100:	; ++field
+348:		inc word [bp + 43]
 350:	
 
-printFormat$101:	; call header integral zero 0 stack zero 0
-352:	
+printFormat$101:	; if £temporary2246 >= width goto 237
+351:		cmp t1454, [bp + 12]
+352:		jge printFormat$237
+354:	
 
-printFormat$102:	; parameter 32, offset 6
-353:		mov byte [bp + 51], 32
-355:	
+printFormat$102:	; call header integral zero 0 stack zero 0
+356:	
 
-printFormat$103:	; call function noellipse-noellipse printChar
-356:		mov word [bp + 45], printFormat$104
-357:		mov [bp + 47], bp
-358:		add bp, 45
-359:		jmp printChar
-361:	
+printFormat$103:	; parameter 32, offset 6
+357:		mov byte [bp + 51], 32
+359:	
 
-printFormat$104:	; post call
-363:	
+printFormat$104:	; call function noellipse-noellipse printChar
+360:		mov word [bp + 45], printFormat$105
+361:		mov [bp + 47], bp
+362:		add bp, 45
+363:		jmp printChar
+365:	
 
-printFormat$105:	; goto 99
-364:		jmp printFormat$99
-366:	
+printFormat$105:	; post call
+367:	
 
-printFormat$106:	; if zero == 0 goto 182
-367:		cmp word [bp + 24], 0
-368:		je printFormat$182
+printFormat$106:	; goto 99
+368:		jmp printFormat$99
 370:	
 
-printFormat$107:	; startChars = g_outChars
-371:		mov a1454, [g_outChars]
-372:		mov [bp + 41], a1454
+printFormat$107:	; if zero == 0 goto 184
+371:		cmp word [bp + 24], 0
+372:		je printFormat$184
 374:	
 
-printFormat$108:	; oldOutStatus = g_outStatus
-375:		mov a1455, [g_outStatus]
-376:		mov [bp + 43], a1455
+printFormat$108:	; startChars = g_outChars
+375:		mov a1455, [g_outChars]
+376:		mov [bp + 41], a1455
 378:	
 
-printFormat$109:	; negative = 0
-379:		mov word [bp + 45], 0
-381:	
+printFormat$109:	; oldOutStatus = g_outStatus
+379:		mov a1456, [g_outStatus]
+380:		mov [bp + 43], a1456
+382:	
 
-printFormat$110:	; g_outStatus = 2
-382:		mov word [g_outStatus], 2
-384:	
+printFormat$110:	; negative = 0
+383:		mov word [bp + 45], 0
+385:	
 
-printFormat$111:	; call header integral zero 0 stack zero 0
-386:	
+printFormat$111:	; g_outStatus = 2
+386:		mov word [g_outStatus], 2
+388:	
 
-printFormat$112:	; £temporary2250 = format + index
-387:		mov a1456, [bp + 6]
-388:		add a1456, [bp + 10]
+printFormat$112:	; call header integral zero 0 stack zero 0
 390:	
 
-printFormat$113:	; £temporary2249 -> £temporary2250 = *£temporary2250
-392:	
-
-printFormat$114:	; £temporary2251 = &£temporary2249 -> £temporary2250
+printFormat$113:	; £temporary2250 = format + index
+391:		mov a1457, [bp + 6]
+392:		add a1457, [bp + 10]
 394:	
 
-printFormat$115:	; parameter £temporary2251, offset 6
-395:		mov [bp + 53], a1456
-397:	
+printFormat$114:	; £temporary2249 -> £temporary2250 = *£temporary2250
+396:	
 
-printFormat$116:	; parameter arg_list, offset 8
-398:		mov a1457, [bp + 8]
-399:		mov [bp + 55], a1457
+printFormat$115:	; £temporary2251 = &£temporary2249 -> £temporary2250
+398:	
+
+printFormat$116:	; parameter £temporary2251, offset 6
+399:		mov [bp + 53], a1457
 401:	
 
-printFormat$117:	; parameter 0, offset 10
-402:		mov word [bp + 57], 0
-404:	
+printFormat$117:	; parameter arg_list, offset 8
+402:		mov a1458, [bp + 8]
+403:		mov [bp + 55], a1458
+405:	
 
-printFormat$118:	; parameter 0, offset 12
-405:		mov word [bp + 59], 0
-407:	
+printFormat$118:	; parameter 0, offset 10
+406:		mov word [bp + 57], 0
+408:	
 
-printFormat$119:	; parameter grid, offset 14
-408:		mov a1458, [bp + 26]
-409:		mov [bp + 61], a1458
+printFormat$119:	; parameter 0, offset 12
+409:		mov word [bp + 59], 0
 411:	
 
-printFormat$120:	; £temporary2252 = &width
-412:		mov t1459, bp
-413:		add t1459, 12
+printFormat$120:	; parameter grid, offset 14
+412:		mov a1459, [bp + 26]
+413:		mov [bp + 61], a1459
 415:	
 
-printFormat$121:	; parameter £temporary2252, offset 16
-416:		mov [bp + 63], t1459
-418:	
+printFormat$121:	; £temporary2252 = &width
+416:		mov t1460, bp
+417:		add t1460, 12
+419:	
 
-printFormat$122:	; parameter precision, offset 18
-419:		mov a1460, [bp + 14]
-420:		mov [bp + 65], a1460
+printFormat$122:	; parameter £temporary2252, offset 16
+420:		mov [bp + 63], t1460
 422:	
 
-printFormat$123:	; parameter shortInt, offset 20
-423:		mov a1461, [bp + 34]
-424:		mov [bp + 67], a1461
+printFormat$123:	; parameter precision, offset 18
+423:		mov a1461, [bp + 14]
+424:		mov [bp + 65], a1461
 426:	
 
-printFormat$124:	; parameter longInt, offset 22
-427:		mov a1462, [bp + 36]
-428:		mov [bp + 69], a1462
+printFormat$124:	; parameter shortInt, offset 20
+427:		mov a1462, [bp + 34]
+428:		mov [bp + 67], a1462
 430:	
 
-printFormat$125:	; parameter longDouble, offset 24
-431:		mov a1463, [bp + 38]
-432:		mov [bp + 71], a1463
+printFormat$125:	; parameter longInt, offset 22
+431:		mov a1463, [bp + 36]
+432:		mov [bp + 69], a1463
 434:	
 
-printFormat$126:	; parameter 0, offset 26
-435:		mov word [bp + 73], 0
-437:	
+printFormat$126:	; parameter longDouble, offset 24
+435:		mov a1464, [bp + 38]
+436:		mov [bp + 71], a1464
+438:	
 
-printFormat$127:	; £temporary2253 = &negative
-438:		mov t1464, bp
-439:		add t1464, 45
+printFormat$127:	; parameter 0, offset 26
+439:		mov word [bp + 73], 0
 441:	
 
-printFormat$128:	; parameter £temporary2253, offset 28
-442:		mov [bp + 75], t1464
-444:	
+printFormat$128:	; £temporary2253 = &negative
+442:		mov t1465, bp
+443:		add t1465, 45
+445:	
 
-printFormat$129:	; call function noellipse-noellipse printArgument
-445:		mov word [bp + 47], printFormat$130
-446:		mov [bp + 49], bp
-447:		add bp, 47
-448:		jmp printArgument
-450:	
+printFormat$129:	; parameter £temporary2253, offset 28
+446:		mov [bp + 75], t1465
+448:	
 
-printFormat$130:	; post call
-452:	
+printFormat$130:	; call function noellipse-noellipse printArgument
+449:		mov word [bp + 47], printFormat$131
+450:		mov [bp + 49], bp
+451:		add bp, 47
+452:		jmp printArgument
+454:	
 
-printFormat$131:	; g_outStatus = oldOutStatus
-453:		mov a1465, [bp + 43]
-454:		mov [g_outStatus], a1465
+printFormat$131:	; post call
 456:	
 
-printFormat$132:	; field = g_outChars - startChars
-457:		mov a1466, [g_outChars]
-458:		sub a1466, [bp + 41]
-459:		mov [bp + 47], a1466
-461:	
+printFormat$132:	; g_outStatus = oldOutStatus
+457:		mov a1466, [bp + 43]
+458:		mov [g_outStatus], a1466
+460:	
 
-printFormat$133:	; g_outChars = startChars
-462:		mov a1467, [bp + 41]
-463:		mov [g_outChars], a1467
+printFormat$133:	; field = g_outChars - startChars
+461:		mov a1467, [g_outChars]
+462:		sub a1467, [bp + 41]
+463:		mov [bp + 47], a1467
 465:	
 
-printFormat$134:	; if negative == 0 goto 141
-466:		cmp word [bp + 45], 0
-467:		je printFormat$141
+printFormat$134:	; g_outChars = startChars
+466:		mov a1468, [bp + 41]
+467:		mov [g_outChars], a1468
 469:	
 
-printFormat$135:	; call header integral zero 0 stack zero 0
-471:	
+printFormat$135:	; if negative == 0 goto 142
+470:		cmp word [bp + 45], 0
+471:		je printFormat$142
+473:	
 
-printFormat$136:	; parameter 45, offset 6
-472:		mov byte [bp + 55], 45
-474:	
+printFormat$136:	; call header integral zero 0 stack zero 0
+475:	
 
-printFormat$137:	; call function noellipse-noellipse printChar
-475:		mov word [bp + 49], printFormat$138
-476:		mov [bp + 51], bp
-477:		add bp, 49
-478:		jmp printChar
-480:	
+printFormat$137:	; parameter 45, offset 6
+476:		mov byte [bp + 55], 45
+478:	
 
-printFormat$138:	; post call
-482:	
+printFormat$138:	; call function noellipse-noellipse printChar
+479:		mov word [bp + 49], printFormat$139
+480:		mov [bp + 51], bp
+481:		add bp, 49
+482:		jmp printChar
+484:	
 
-printFormat$139:	; ++field
-483:		inc word [bp + 47]
-485:	
+printFormat$139:	; post call
+486:	
 
-printFormat$140:	; goto 154
-486:		jmp printFormat$154
-488:	
+printFormat$140:	; ++field
+487:		inc word [bp + 47]
+489:	
 
-printFormat$141:	; if plus == 0 goto 148
-489:		cmp word [bp + 18], 0
-490:		je printFormat$148
+printFormat$141:	; goto 155
+490:		jmp printFormat$155
 492:	
 
-printFormat$142:	; call header integral zero 0 stack zero 0
-494:	
+printFormat$142:	; if plus == 0 goto 149
+493:		cmp word [bp + 18], 0
+494:		je printFormat$149
+496:	
 
-printFormat$143:	; parameter 43, offset 6
-495:		mov byte [bp + 55], 43
-497:	
+printFormat$143:	; call header integral zero 0 stack zero 0
+498:	
 
-printFormat$144:	; call function noellipse-noellipse printChar
-498:		mov word [bp + 49], printFormat$145
-499:		mov [bp + 51], bp
-500:		add bp, 49
-501:		jmp printChar
-503:	
+printFormat$144:	; parameter 43, offset 6
+499:		mov byte [bp + 55], 43
+501:	
 
-printFormat$145:	; post call
-505:	
+printFormat$145:	; call function noellipse-noellipse printChar
+502:		mov word [bp + 49], printFormat$146
+503:		mov [bp + 51], bp
+504:		add bp, 49
+505:		jmp printChar
+507:	
 
-printFormat$146:	; ++field
-506:		inc word [bp + 47]
-508:	
+printFormat$146:	; post call
+509:	
 
-printFormat$147:	; goto 154
-509:		jmp printFormat$154
-511:	
+printFormat$147:	; ++field
+510:		inc word [bp + 47]
+512:	
 
-printFormat$148:	; if space == 0 goto 154
-512:		cmp word [bp + 22], 0
-513:		je printFormat$154
+printFormat$148:	; goto 155
+513:		jmp printFormat$155
 515:	
 
-printFormat$149:	; call header integral zero 0 stack zero 0
-517:	
+printFormat$149:	; if space == 0 goto 155
+516:		cmp word [bp + 22], 0
+517:		je printFormat$155
+519:	
 
-printFormat$150:	; parameter 32, offset 6
-518:		mov byte [bp + 55], 32
-520:	
+printFormat$150:	; call header integral zero 0 stack zero 0
+521:	
 
-printFormat$151:	; call function noellipse-noellipse printChar
-521:		mov word [bp + 49], printFormat$152
-522:		mov [bp + 51], bp
-523:		add bp, 49
-524:		jmp printChar
-526:	
+printFormat$151:	; parameter 32, offset 6
+522:		mov byte [bp + 55], 32
+524:	
 
-printFormat$152:	; post call
-528:	
+printFormat$152:	; call function noellipse-noellipse printChar
+525:		mov word [bp + 49], printFormat$153
+526:		mov [bp + 51], bp
+527:		add bp, 49
+528:		jmp printChar
+530:	
 
-printFormat$153:	; £temporary2265 = field + 1
-529:		mov a1468, [bp + 47]
-530:		add a1468, 1
+printFormat$153:	; post call
 532:	
 
 printFormat$154:	; ++field
 533:		inc word [bp + 47]
 535:	
 
-printFormat$155:	; if £temporary2265 >= width goto 161
-536:		cmp a1468, [bp + 12]
-537:		jge printFormat$161
-539:	
+printFormat$155:	; £temporary2265 = field
+536:		mov t1469, [bp + 47]
+538:	
 
-printFormat$156:	; call header integral zero 0 stack zero 0
+printFormat$156:	; ++field
+539:		inc word [bp + 47]
 541:	
 
-printFormat$157:	; parameter 48, offset 6
-542:		mov byte [bp + 55], 48
-544:	
+printFormat$157:	; if £temporary2265 >= width goto 163
+542:		cmp t1469, [bp + 12]
+543:		jge printFormat$163
+545:	
 
-printFormat$158:	; call function noellipse-noellipse printChar
-545:		mov word [bp + 49], printFormat$159
-546:		mov [bp + 51], bp
-547:		add bp, 49
-548:		jmp printChar
+printFormat$158:	; call header integral zero 0 stack zero 0
+547:	
+
+printFormat$159:	; parameter 48, offset 6
+548:		mov byte [bp + 55], 48
 550:	
 
-printFormat$159:	; post call
-552:	
+printFormat$160:	; call function noellipse-noellipse printChar
+551:		mov word [bp + 49], printFormat$161
+552:		mov [bp + 51], bp
+553:		add bp, 49
+554:		jmp printChar
+556:	
 
-printFormat$160:	; goto 154
-553:		jmp printFormat$154
-555:	
+printFormat$161:	; post call
+558:	
 
-printFormat$161:	; call header integral zero 0 stack zero 0
-557:	
-
-printFormat$162:	; £temporary2269 = format + index
-558:		mov a1469, [bp + 6]
-559:		add a1469, [bp + 10]
+printFormat$162:	; goto 155
+559:		jmp printFormat$155
 561:	
 
-printFormat$163:	; £temporary2268 -> £temporary2269 = *£temporary2269
+printFormat$163:	; call header integral zero 0 stack zero 0
 563:	
 
-printFormat$164:	; £temporary2270 = &£temporary2268 -> £temporary2269
-565:	
+printFormat$164:	; £temporary2269 = format + index
+564:		mov a1470, [bp + 6]
+565:		add a1470, [bp + 10]
+567:	
 
-printFormat$165:	; parameter £temporary2270, offset 6
-566:		mov [bp + 55], a1469
-568:	
+printFormat$165:	; £temporary2268 -> £temporary2269 = *£temporary2269
+569:	
 
-printFormat$166:	; parameter arg_list, offset 8
-569:		mov a1470, [bp + 8]
-570:		mov [bp + 57], a1470
-572:	
+printFormat$166:	; £temporary2270 = &£temporary2268 -> £temporary2269
+571:	
 
-printFormat$167:	; parameter 0, offset 10
-573:		mov word [bp + 59], 0
-575:	
+printFormat$167:	; parameter £temporary2270, offset 6
+572:		mov [bp + 55], a1470
+574:	
 
-printFormat$168:	; parameter 0, offset 12
-576:		mov word [bp + 61], 0
+printFormat$168:	; parameter arg_list, offset 8
+575:		mov a1471, [bp + 8]
+576:		mov [bp + 57], a1471
 578:	
 
-printFormat$169:	; parameter grid, offset 14
-579:		mov a1471, [bp + 26]
-580:		mov [bp + 63], a1471
-582:	
+printFormat$169:	; parameter 0, offset 10
+579:		mov word [bp + 59], 0
+581:	
 
-printFormat$170:	; parameter 0, offset 16
-583:		mov word [bp + 65], 0
-585:	
+printFormat$170:	; parameter 0, offset 12
+582:		mov word [bp + 61], 0
+584:	
 
-printFormat$171:	; parameter precision, offset 18
-586:		mov a1472, [bp + 14]
-587:		mov [bp + 67], a1472
-589:	
+printFormat$171:	; parameter grid, offset 14
+585:		mov a1472, [bp + 26]
+586:		mov [bp + 63], a1472
+588:	
 
-printFormat$172:	; parameter shortInt, offset 20
-590:		mov a1473, [bp + 34]
-591:		mov [bp + 69], a1473
-593:	
+printFormat$172:	; parameter 0, offset 16
+589:		mov word [bp + 65], 0
+591:	
 
-printFormat$173:	; parameter longInt, offset 22
-594:		mov a1474, [bp + 36]
-595:		mov [bp + 71], a1474
-597:	
+printFormat$173:	; parameter precision, offset 18
+592:		mov a1473, [bp + 14]
+593:		mov [bp + 67], a1473
+595:	
 
-printFormat$174:	; parameter longDouble, offset 24
-598:		mov a1475, [bp + 38]
-599:		mov [bp + 73], a1475
-601:	
+printFormat$174:	; parameter shortInt, offset 20
+596:		mov a1474, [bp + 34]
+597:		mov [bp + 69], a1474
+599:	
 
-printFormat$175:	; parameter 0, offset 26
-602:		mov word [bp + 75], 0
-604:	
+printFormat$175:	; parameter longInt, offset 22
+600:		mov a1475, [bp + 36]
+601:		mov [bp + 71], a1475
+603:	
 
-printFormat$176:	; parameter 0, offset 28
-605:		mov word [bp + 77], 0
+printFormat$176:	; parameter longDouble, offset 24
+604:		mov a1476, [bp + 38]
+605:		mov [bp + 73], a1476
 607:	
 
-printFormat$177:	; call function noellipse-noellipse printArgument
-608:		mov word [bp + 49], printFormat$178
-609:		mov [bp + 51], bp
-610:		add bp, 49
-611:		jmp printArgument
+printFormat$177:	; parameter 0, offset 26
+608:		mov word [bp + 75], 0
+610:	
+
+printFormat$178:	; parameter 0, offset 28
+611:		mov word [bp + 77], 0
 613:	
 
-printFormat$178:	; post call
-615:	
+printFormat$179:	; call function noellipse-noellipse printArgument
+614:		mov word [bp + 49], printFormat$180
+615:		mov [bp + 51], bp
+616:		add bp, 49
+617:		jmp printArgument
+619:	
 
-printFormat$179:	; £temporary2271 = return_value
-620:	
+printFormat$180:	; post call
+621:	
 
-printFormat$180:	; arg_list = £temporary2271
-621:		mov [bp + 8], t1477
-623:	
-
-printFormat$181:	; goto 235
-624:		jmp printFormat$235
+printFormat$181:	; £temporary2271 = return_value
 626:	
 
-printFormat$182:	; startChars = g_outChars
-627:		mov a1478, [g_outChars]
-628:		mov [bp + 41], a1478
-630:	
+printFormat$182:	; arg_list = £temporary2271
+627:		mov [bp + 8], t1478
+629:	
 
-printFormat$183:	; oldOutStatus = g_outStatus
-631:		mov a1479, [g_outStatus]
-632:		mov [bp + 43], a1479
-634:	
+printFormat$183:	; goto 237
+630:		jmp printFormat$237
+632:	
 
-printFormat$184:	; g_outStatus = 2
-635:		mov word [g_outStatus], 2
-637:	
+printFormat$184:	; startChars = g_outChars
+633:		mov a1479, [g_outChars]
+634:		mov [bp + 41], a1479
+636:	
 
-printFormat$185:	; call header integral zero 0 stack zero 0
-639:	
+printFormat$185:	; oldOutStatus = g_outStatus
+637:		mov a1480, [g_outStatus]
+638:		mov [bp + 43], a1480
+640:	
 
-printFormat$186:	; £temporary2273 = format + index
-640:		mov a1480, [bp + 6]
-641:		add a1480, [bp + 10]
+printFormat$186:	; g_outStatus = 2
+641:		mov word [g_outStatus], 2
 643:	
 
-printFormat$187:	; £temporary2272 -> £temporary2273 = *£temporary2273
+printFormat$187:	; call header integral zero 0 stack zero 0
 645:	
 
-printFormat$188:	; £temporary2274 = &£temporary2272 -> £temporary2273
-647:	
+printFormat$188:	; £temporary2273 = format + index
+646:		mov a1481, [bp + 6]
+647:		add a1481, [bp + 10]
+649:	
 
-printFormat$189:	; parameter £temporary2274, offset 6
-648:		mov [bp + 51], a1480
-650:	
+printFormat$189:	; £temporary2272 -> £temporary2273 = *£temporary2273
+651:	
 
-printFormat$190:	; parameter arg_list, offset 8
-651:		mov a1481, [bp + 8]
-652:		mov [bp + 53], a1481
-654:	
+printFormat$190:	; £temporary2274 = &£temporary2272 -> £temporary2273
+653:	
 
-printFormat$191:	; parameter plus, offset 10
-655:		mov a1482, [bp + 18]
-656:		mov [bp + 55], a1482
-658:	
+printFormat$191:	; parameter £temporary2274, offset 6
+654:		mov [bp + 51], a1481
+656:	
 
-printFormat$192:	; parameter space, offset 12
-659:		mov a1483, [bp + 22]
-660:		mov [bp + 57], a1483
-662:	
+printFormat$192:	; parameter arg_list, offset 8
+657:		mov a1482, [bp + 8]
+658:		mov [bp + 53], a1482
+660:	
 
-printFormat$193:	; parameter grid, offset 14
-663:		mov a1484, [bp + 26]
-664:		mov [bp + 59], a1484
-666:	
+printFormat$193:	; parameter plus, offset 10
+661:		mov a1483, [bp + 18]
+662:		mov [bp + 55], a1483
+664:	
 
-printFormat$194:	; £temporary2275 = &width
-667:		mov t1485, bp
-668:		add t1485, 12
-670:	
+printFormat$194:	; parameter space, offset 12
+665:		mov a1484, [bp + 22]
+666:		mov [bp + 57], a1484
+668:	
 
-printFormat$195:	; parameter £temporary2275, offset 16
-671:		mov [bp + 61], t1485
-673:	
+printFormat$195:	; parameter grid, offset 14
+669:		mov a1485, [bp + 26]
+670:		mov [bp + 59], a1485
+672:	
 
-printFormat$196:	; parameter precision, offset 18
-674:		mov a1486, [bp + 14]
-675:		mov [bp + 63], a1486
-677:	
+printFormat$196:	; £temporary2275 = &width
+673:		mov t1486, bp
+674:		add t1486, 12
+676:	
 
-printFormat$197:	; parameter shortInt, offset 20
-678:		mov a1487, [bp + 34]
-679:		mov [bp + 65], a1487
-681:	
+printFormat$197:	; parameter £temporary2275, offset 16
+677:		mov [bp + 61], t1486
+679:	
 
-printFormat$198:	; parameter longInt, offset 22
-682:		mov a1488, [bp + 36]
-683:		mov [bp + 67], a1488
-685:	
+printFormat$198:	; parameter precision, offset 18
+680:		mov a1487, [bp + 14]
+681:		mov [bp + 63], a1487
+683:	
 
-printFormat$199:	; parameter longDouble, offset 24
-686:		mov a1489, [bp + 38]
-687:		mov [bp + 69], a1489
-689:	
+printFormat$199:	; parameter shortInt, offset 20
+684:		mov a1488, [bp + 34]
+685:		mov [bp + 65], a1488
+687:	
 
-printFormat$200:	; parameter 1, offset 26
-690:		mov word [bp + 71], 1
-692:	
+printFormat$200:	; parameter longInt, offset 22
+688:		mov a1489, [bp + 36]
+689:		mov [bp + 67], a1489
+691:	
 
-printFormat$201:	; parameter 0, offset 28
-693:		mov word [bp + 73], 0
+printFormat$201:	; parameter longDouble, offset 24
+692:		mov a1490, [bp + 38]
+693:		mov [bp + 69], a1490
 695:	
 
-printFormat$202:	; call function noellipse-noellipse printArgument
-696:		mov word [bp + 45], printFormat$203
-697:		mov [bp + 47], bp
-698:		add bp, 45
-699:		jmp printArgument
+printFormat$202:	; parameter 1, offset 26
+696:		mov word [bp + 71], 1
+698:	
+
+printFormat$203:	; parameter 0, offset 28
+699:		mov word [bp + 73], 0
 701:	
 
-printFormat$203:	; post call
-703:	
-
-printFormat$204:	; g_outStatus = oldOutStatus
-704:		mov a1490, [bp + 43]
-705:		mov [g_outStatus], a1490
+printFormat$204:	; call function noellipse-noellipse printArgument
+702:		mov word [bp + 45], printFormat$205
+703:		mov [bp + 47], bp
+704:		add bp, 45
+705:		jmp printArgument
 707:	
 
-printFormat$205:	; field = g_outChars - startChars
-708:		mov a1491, [g_outChars]
-709:		sub a1491, [bp + 41]
-710:		mov [bp + 45], a1491
-712:	
+printFormat$205:	; post call
+709:	
 
-printFormat$206:	; g_outChars = startChars
-713:		mov a1492, [bp + 41]
-714:		mov [g_outChars], a1492
-716:	
+printFormat$206:	; g_outStatus = oldOutStatus
+710:		mov a1491, [bp + 43]
+711:		mov [g_outStatus], a1491
+713:	
 
-printFormat$207:	; £temporary2278 = field
-717:		mov t1493, [bp + 45]
-719:	
+printFormat$207:	; field = g_outChars - startChars
+714:		mov a1492, [g_outChars]
+715:		sub a1492, [bp + 41]
+716:		mov [bp + 45], a1492
+718:	
 
-printFormat$208:	; ++field
-720:		inc word [bp + 45]
+printFormat$208:	; g_outChars = startChars
+719:		mov a1493, [bp + 41]
+720:		mov [g_outChars], a1493
 722:	
 
-printFormat$209:	; if £temporary2278 >= width goto 215
-723:		cmp t1493, [bp + 12]
-724:		jge printFormat$215
-726:	
+printFormat$209:	; £temporary2278 = field
+723:		mov t1494, [bp + 45]
+725:	
 
-printFormat$210:	; call header integral zero 0 stack zero 0
+printFormat$210:	; ++field
+726:		inc word [bp + 45]
 728:	
 
-printFormat$211:	; parameter 32, offset 6
-729:		mov byte [bp + 53], 32
-731:	
+printFormat$211:	; if £temporary2278 >= width goto 217
+729:		cmp t1494, [bp + 12]
+730:		jge printFormat$217
+732:	
 
-printFormat$212:	; call function noellipse-noellipse printChar
-732:		mov word [bp + 47], printFormat$213
-733:		mov [bp + 49], bp
-734:		add bp, 47
-735:		jmp printChar
+printFormat$212:	; call header integral zero 0 stack zero 0
+734:	
+
+printFormat$213:	; parameter 32, offset 6
+735:		mov byte [bp + 53], 32
 737:	
 
-printFormat$213:	; post call
-739:	
+printFormat$214:	; call function noellipse-noellipse printChar
+738:		mov word [bp + 47], printFormat$215
+739:		mov [bp + 49], bp
+740:		add bp, 47
+741:		jmp printChar
+743:	
 
-printFormat$214:	; goto 207
-740:		jmp printFormat$207
-742:	
+printFormat$215:	; post call
+745:	
 
-printFormat$215:	; call header integral zero 0 stack zero 0
-744:	
-
-printFormat$216:	; £temporary2282 = format + index
-745:		mov a1494, [bp + 6]
-746:		add a1494, [bp + 10]
+printFormat$216:	; goto 209
+746:		jmp printFormat$209
 748:	
 
-printFormat$217:	; £temporary2281 -> £temporary2282 = *£temporary2282
+printFormat$217:	; call header integral zero 0 stack zero 0
 750:	
 
-printFormat$218:	; £temporary2283 = &£temporary2281 -> £temporary2282
-752:	
+printFormat$218:	; £temporary2282 = format + index
+751:		mov a1495, [bp + 6]
+752:		add a1495, [bp + 10]
+754:	
 
-printFormat$219:	; parameter £temporary2283, offset 6
-753:		mov [bp + 53], a1494
-755:	
+printFormat$219:	; £temporary2281 -> £temporary2282 = *£temporary2282
+756:	
 
-printFormat$220:	; parameter arg_list, offset 8
-756:		mov a1495, [bp + 8]
-757:		mov [bp + 55], a1495
-759:	
+printFormat$220:	; £temporary2283 = &£temporary2281 -> £temporary2282
+758:	
 
-printFormat$221:	; parameter plus, offset 10
-760:		mov a1496, [bp + 18]
-761:		mov [bp + 57], a1496
-763:	
+printFormat$221:	; parameter £temporary2283, offset 6
+759:		mov [bp + 53], a1495
+761:	
 
-printFormat$222:	; parameter space, offset 12
-764:		mov a1497, [bp + 22]
-765:		mov [bp + 59], a1497
-767:	
+printFormat$222:	; parameter arg_list, offset 8
+762:		mov a1496, [bp + 8]
+763:		mov [bp + 55], a1496
+765:	
 
-printFormat$223:	; parameter grid, offset 14
-768:		mov a1498, [bp + 26]
-769:		mov [bp + 61], a1498
-771:	
+printFormat$223:	; parameter plus, offset 10
+766:		mov a1497, [bp + 18]
+767:		mov [bp + 57], a1497
+769:	
 
-printFormat$224:	; parameter 0, offset 16
-772:		mov word [bp + 63], 0
-774:	
+printFormat$224:	; parameter space, offset 12
+770:		mov a1498, [bp + 22]
+771:		mov [bp + 59], a1498
+773:	
 
-printFormat$225:	; parameter precision, offset 18
-775:		mov a1499, [bp + 14]
-776:		mov [bp + 65], a1499
-778:	
+printFormat$225:	; parameter grid, offset 14
+774:		mov a1499, [bp + 26]
+775:		mov [bp + 61], a1499
+777:	
 
-printFormat$226:	; parameter shortInt, offset 20
-779:		mov a1500, [bp + 34]
-780:		mov [bp + 67], a1500
-782:	
+printFormat$226:	; parameter 0, offset 16
+778:		mov word [bp + 63], 0
+780:	
 
-printFormat$227:	; parameter longInt, offset 22
-783:		mov a1501, [bp + 36]
-784:		mov [bp + 69], a1501
-786:	
+printFormat$227:	; parameter precision, offset 18
+781:		mov a1500, [bp + 14]
+782:		mov [bp + 65], a1500
+784:	
 
-printFormat$228:	; parameter longDouble, offset 24
-787:		mov a1502, [bp + 38]
-788:		mov [bp + 71], a1502
-790:	
+printFormat$228:	; parameter shortInt, offset 20
+785:		mov a1501, [bp + 34]
+786:		mov [bp + 67], a1501
+788:	
 
-printFormat$229:	; parameter 1, offset 26
-791:		mov word [bp + 73], 1
-793:	
+printFormat$229:	; parameter longInt, offset 22
+789:		mov a1502, [bp + 36]
+790:		mov [bp + 69], a1502
+792:	
 
-printFormat$230:	; parameter 0, offset 28
-794:		mov word [bp + 75], 0
+printFormat$230:	; parameter longDouble, offset 24
+793:		mov a1503, [bp + 38]
+794:		mov [bp + 71], a1503
 796:	
 
-printFormat$231:	; call function noellipse-noellipse printArgument
-797:		mov word [bp + 47], printFormat$232
-798:		mov [bp + 49], bp
-799:		add bp, 47
-800:		jmp printArgument
+printFormat$231:	; parameter 1, offset 26
+797:		mov word [bp + 73], 1
+799:	
+
+printFormat$232:	; parameter 0, offset 28
+800:		mov word [bp + 75], 0
 802:	
 
-printFormat$232:	; post call
-804:	
+printFormat$233:	; call function noellipse-noellipse printArgument
+803:		mov word [bp + 47], printFormat$234
+804:		mov [bp + 49], bp
+805:		add bp, 47
+806:		jmp printArgument
+808:	
 
-printFormat$233:	; £temporary2284 = return_value
-809:	
+printFormat$234:	; post call
+810:	
 
-printFormat$234:	; arg_list = £temporary2284
-810:		mov [bp + 8], t1504
-812:	
-
-printFormat$235:	; percent = 0
-813:		mov word [bp + 16], 0
+printFormat$235:	; £temporary2284 = return_value
 815:	
 
-printFormat$236:	; goto 280
-816:		jmp printFormat$280
+printFormat$236:	; arg_list = £temporary2284
+816:		mov [bp + 8], t1505
 818:	
 
-printFormat$237:	; value = 0
-819:		mov word [bp + 41], 0
+printFormat$237:	; percent = 0
+819:		mov word [bp + 16], 0
 821:	
 
-printFormat$238:	; call header integral zero 0 stack zero 0
-823:	
+printFormat$238:	; goto 283
+822:		jmp printFormat$283
+824:	
 
-printFormat$239:	; £temporary2287 = int_to_int c (Signed_Char -> Signed_Int)
-824:		mov a1505, [bp + 40]
-826:		and a1505, 255
-828:		cmp a1505, 0
-829:		jge printFormat$240
-830:		neg a1505
-832:		neg a1505
-834:	
+printFormat$239:	; value = 0
+825:		mov word [bp + 41], 0
+827:	
 
-printFormat$240:	; parameter £temporary2287, offset 6
-835:		mov [bp + 49], a1505
-837:	
+printFormat$240:	; call header integral zero 0 stack zero 0
+829:	
 
-printFormat$241:	; call function noellipse-noellipse isdigit
-838:		mov word [bp + 43], printFormat$242
-839:		mov [bp + 45], bp
-840:		add bp, 43
-841:		jmp isdigit
+printFormat$241:	; £temporary2287 = int_to_int c (Signed_Char -> Signed_Int)
+830:		mov a1506, [bp + 40]
+832:		and a1506, 255
+834:		cmp a1506, 0
+835:		jge printFormat$242
+836:		neg a1506
+838:		neg a1506
+840:	
+
+printFormat$242:	; parameter £temporary2287, offset 6
+841:		mov [bp + 49], a1506
 843:	
 
-printFormat$242:	; post call
-845:	
+printFormat$243:	; call function noellipse-noellipse isdigit
+844:		mov word [bp + 43], printFormat$244
+845:		mov [bp + 45], bp
+846:		add bp, 43
+847:		jmp isdigit
+849:	
 
-printFormat$243:	; £temporary2288 = return_value
-850:	
+printFormat$244:	; post call
+851:	
 
-printFormat$244:	; if £temporary2288 == 0 goto 254
-851:		cmp t1507, 0
-852:		je printFormat$254
-854:	
+printFormat$245:	; £temporary2288 = return_value
+856:	
 
-printFormat$245:	; £temporary2289 = value * 10
-855:		mov a1508, [bp + 41]
-857:		xor dx, dx
-858:		imul word [int2$10#]
-864:	
+printFormat$246:	; if £temporary2288 == 0 goto 257
+857:		cmp t1508, 0
+858:		je printFormat$257
+860:	
 
-printFormat$246:	; £temporary2290 = c - 48
-865:		mov a1512, [bp + 40]
-866:		sub a1512, 48
-868:	
+printFormat$247:	; £temporary2289 = value * 10
+861:		mov a1509, [bp + 41]
+863:		xor dx, dx
+864:		imul word [int2$10#]
+870:	
 
-printFormat$247:	; £temporary2291 = int_to_int £temporary2290 (Signed_Char -> Signed_Int)
-870:		and a1512, 255
-872:		cmp a1512, 0
-873:		jge printFormat$248
-874:		neg a1512
-876:		neg a1512
-878:	
+printFormat$248:	; £temporary2290 = c - 48
+871:		mov a1513, [bp + 40]
+872:		sub a1513, 48
+874:	
 
-printFormat$248:	; value = £temporary2289 + £temporary2291
-879:		add t1511, a1512
-880:		mov [bp + 41], t1511
-882:	
+printFormat$249:	; £temporary2291 = int_to_int £temporary2290 (Signed_Char -> Signed_Int)
+876:		and a1513, 255
+878:		cmp a1513, 0
+879:		jge printFormat$250
+880:		neg a1513
+882:		neg a1513
+884:	
 
-printFormat$249:	; £temporary2293 = index + 1
-883:		mov a1513, [bp + 10]
-884:		add a1513, 1
-886:	
+printFormat$250:	; value = £temporary2289 + £temporary2291
+885:		add t1512, a1513
+886:		mov [bp + 41], t1512
+888:	
 
-printFormat$250:	; £temporary2295 = format + £temporary2293
-887:		mov a1514, [bp + 6]
-888:		add a1514, a1513
-890:	
+printFormat$251:	; ++index
+889:		inc word [bp + 10]
+891:	
 
-printFormat$251:	; £temporary2294 -> £temporary2295 = *£temporary2295
-892:	
+printFormat$252:	; £temporary2293 = index
+892:		mov t1514, [bp + 10]
+894:	
 
-printFormat$252:	; c = £temporary2294 -> £temporary2295
-893:		mov t1515, [a1514]
-894:		mov [bp + 40], t1515
-896:	
+printFormat$253:	; £temporary2295 = format + £temporary2293
+895:		mov a1515, [bp + 6]
+896:		add a1515, t1514
+898:	
 
-printFormat$253:	; goto 238
-897:		jmp printFormat$238
-899:	
+printFormat$254:	; £temporary2294 -> £temporary2295 = *£temporary2295
+900:	
 
-printFormat$254:	; --index
-900:		dec word [bp + 10]
-902:	
+printFormat$255:	; c = £temporary2294 -> £temporary2295
+901:		mov t1516, [a1515]
+902:		mov [bp + 40], t1516
+904:	
 
-printFormat$255:	; if period != 0 goto 258
-903:		cmp word [bp + 30], 0
-904:		jne printFormat$258
-906:	
+printFormat$256:	; goto 240
+905:		jmp printFormat$240
+907:	
 
-printFormat$256:	; width = value
-907:		mov a1516, [bp + 41]
-908:		mov [bp + 12], a1516
+printFormat$257:	; --index
+908:		dec word [bp + 10]
 910:	
 
-printFormat$257:	; goto 280
-911:		jmp printFormat$280
-913:	
+printFormat$258:	; if period != 0 goto 261
+911:		cmp word [bp + 30], 0
+912:		jne printFormat$261
+914:	
 
-printFormat$258:	; precision = value
-914:		mov a1517, [bp + 41]
-915:		mov [bp + 14], a1517
-917:	
+printFormat$259:	; width = value
+915:		mov a1517, [bp + 41]
+916:		mov [bp + 12], a1517
+918:	
 
-printFormat$259:	; goto 280
-918:		jmp printFormat$280
-920:	
+printFormat$260:	; goto 283
+919:		jmp printFormat$283
+921:	
 
-printFormat$260:	; if c != 37 goto 276
-921:		cmp byte [bp + 40], 37
-922:		jne printFormat$276
-924:	
+printFormat$261:	; precision = value
+922:		mov a1518, [bp + 41]
+923:		mov [bp + 14], a1518
+925:	
 
-printFormat$261:	; percent = 1
-925:		mov word [bp + 16], 1
-927:	
+printFormat$262:	; goto 283
+926:		jmp printFormat$283
+928:	
 
-printFormat$262:	; plus = 0
-928:		mov word [bp + 18], 0
-930:	
+printFormat$263:	; if c != 37 goto 279
+929:		cmp byte [bp + 40], 37
+930:		jne printFormat$279
+932:	
 
-printFormat$263:	; minus = 0
-931:		mov word [bp + 20], 0
-933:	
+printFormat$264:	; percent = 1
+933:		mov word [bp + 16], 1
+935:	
 
-printFormat$264:	; space = 0
-934:		mov word [bp + 22], 0
-936:	
+printFormat$265:	; plus = 0
+936:		mov word [bp + 18], 0
+938:	
 
-printFormat$265:	; zero = 0
-937:		mov word [bp + 24], 0
-939:	
+printFormat$266:	; minus = 0
+939:		mov word [bp + 20], 0
+941:	
 
-printFormat$266:	; grid = 0
-940:		mov word [bp + 26], 0
-942:	
+printFormat$267:	; space = 0
+942:		mov word [bp + 22], 0
+944:	
 
-printFormat$267:	; widthStar = 0
-943:		mov word [bp + 28], 0
-945:	
+printFormat$268:	; zero = 0
+945:		mov word [bp + 24], 0
+947:	
 
-printFormat$268:	; period = 0
-946:		mov word [bp + 30], 0
-948:	
+printFormat$269:	; grid = 0
+948:		mov word [bp + 26], 0
+950:	
 
-printFormat$269:	; precisionStar = 0
-949:		mov word [bp + 32], 0
-951:	
+printFormat$270:	; widthStar = 0
+951:		mov word [bp + 28], 0
+953:	
 
-printFormat$270:	; shortInt = 0
-952:		mov word [bp + 34], 0
-954:	
+printFormat$271:	; period = 0
+954:		mov word [bp + 30], 0
+956:	
 
-printFormat$271:	; longInt = 0
-955:		mov word [bp + 36], 0
-957:	
+printFormat$272:	; precisionStar = 0
+957:		mov word [bp + 32], 0
+959:	
 
-printFormat$272:	; longDouble = 0
-958:		mov word [bp + 38], 0
-960:	
+printFormat$273:	; shortInt = 0
+960:		mov word [bp + 34], 0
+962:	
 
-printFormat$273:	; width = 0
-961:		mov word [bp + 12], 0
-963:	
+printFormat$274:	; longInt = 0
+963:		mov word [bp + 36], 0
+965:	
 
-printFormat$274:	; precision = 0
-964:		mov word [bp + 14], 0
-966:	
+printFormat$275:	; longDouble = 0
+966:		mov word [bp + 38], 0
+968:	
 
-printFormat$275:	; goto 280
-967:		jmp printFormat$280
-969:	
-
-printFormat$276:	; call header integral zero 0 stack zero 0
+printFormat$276:	; width = 0
+969:		mov word [bp + 12], 0
 971:	
 
-printFormat$277:	; parameter c, offset 6
-972:		mov a1518, [bp + 40]
-973:		mov [bp + 47], a1518
-975:	
+printFormat$277:	; precision = 0
+972:		mov word [bp + 14], 0
+974:	
 
-printFormat$278:	; call function noellipse-noellipse printChar
-976:		mov word [bp + 41], printFormat$279
-977:		mov [bp + 43], bp
-978:		add bp, 41
-979:		jmp printChar
-981:	
+printFormat$278:	; goto 283
+975:		jmp printFormat$283
+977:	
 
-printFormat$279:	; post call
+printFormat$279:	; call header integral zero 0 stack zero 0
+979:	
+
+printFormat$280:	; parameter c, offset 6
+980:		mov a1519, [bp + 40]
+981:		mov [bp + 47], a1519
 983:	
 
-printFormat$280:	; ++index
-984:		inc word [bp + 10]
-986:	
-
-printFormat$281:	; goto 16
-987:		jmp printFormat$16
+printFormat$281:	; call function noellipse-noellipse printChar
+984:		mov word [bp + 41], printFormat$282
+985:		mov [bp + 43], bp
+986:		add bp, 41
+987:		jmp printChar
 989:	
 
-printFormat$282:	; if g_outStatus != 1 goto 288
-990:		cmp word [g_outStatus], 1
-991:		jne printFormat$288
-993:	
+printFormat$282:	; post call
+991:	
 
-printFormat$283:	; £temporary2304 = int_to_int g_outDevice (Pointer -> Pointer)
-994:		mov a1519, [g_outDevice]
+printFormat$283:	; ++index
+992:		inc word [bp + 10]
+994:	
+
+printFormat$284:	; goto 16
+995:		jmp printFormat$16
 997:	
 
-printFormat$284:	; outString = £temporary2304
-998:		mov [bp + 40], a1519
-1000:	
+printFormat$285:	; if g_outStatus != 1 goto 291
+998:		cmp word [g_outStatus], 1
+999:		jne printFormat$291
+1001:	
 
-printFormat$285:	; £temporary2306 = outString + g_outChars
-1001:		mov a1520, [bp + 40]
-1002:		add a1520, [g_outChars]
-1004:	
+printFormat$286:	; £temporary2304 = int_to_int g_outDevice (Pointer -> Pointer)
+1002:		mov a1520, [g_outDevice]
+1005:	
 
-printFormat$286:	; £temporary2305 -> £temporary2306 = *£temporary2306
-1006:	
+printFormat$287:	; outString = £temporary2304
+1006:		mov [bp + 40], a1520
+1008:	
 
-printFormat$287:	; £temporary2305 -> £temporary2306 = 0
-1007:		mov byte [a1520], 0
-1009:	
-
-printFormat$288:	; return_value = g_outChars
-1010:		mov a1521, [g_outChars]
+printFormat$288:	; £temporary2306 = outString + g_outChars
+1009:		mov a1521, [bp + 40]
+1010:		add a1521, [g_outChars]
 1012:	
 
-printFormat$289:	; return
-1013:		mov t1522, [bp]
-1014:		mov di, [bp + 4]
-1015:		mov bp, [bp + 2]
-1016:		jmp t1522
-1018:	
+printFormat$289:	; £temporary2305 -> £temporary2306 = *£temporary2306
+1014:	
 
-printFormat$290:	; function end printFormat
+printFormat$290:	; £temporary2305 -> £temporary2306 = 0
+1015:		mov byte [a1521], 0
+1017:	
+
+printFormat$291:	; return_value = g_outChars
+1018:		mov a1522, [g_outChars]
+1020:	
+
+printFormat$292:	; return
+1021:		mov t1523, [bp]
+1022:		mov di, [bp + 4]
+1023:		mov bp, [bp + 2]
+1024:		jmp t1523
+1026:	
+
+printFormat$293:	; function end printFormat
 1:	
 
 printf:	; £temporary2379 = &format
-2:		mov t1523, bp
-3:		add t1523, 6
+2:		mov t1524, bp
+3:		add t1524, 6
 5:	
 
 printf$1:	; £temporary2380 = int_to_int £temporary2379 (Pointer -> Pointer)
 8:	
 
 printf$2:	; arg_list = £temporary2380 + 2
-9:		add t1523, 2
-10:		mov [di + 8], t1523
+9:		add t1524, 2
+10:		mov [di + 8], t1524
 12:	
 
 printf$3:	; call header integral zero 0 stack zero 0
 14:	
 
 printf$4:	; parameter format, offset 6
-15:		mov a1524, [bp + 6]
-16:		mov [di + 16], a1524
+15:		mov a1525, [bp + 6]
+16:		mov [di + 16], a1525
 18:	
 
 printf$5:	; parameter arg_list, offset 8
-19:		mov a1525, [di + 8]
-20:		mov [di + 18], a1525
+19:		mov a1526, [di + 8]
+20:		mov [di + 18], a1526
 22:	
 
 printf$6:	; call function ellipse-noellipse vprintf
@@ -4791,10 +4802,10 @@ printf$9:	; return_value = £temporary2382
 39:	
 
 printf$10:	; return
-40:		mov t1528, [bp]
+40:		mov t1529, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t1528
+43:		jmp t1529
 45:	
 
 printf$11:	; function end printf
@@ -4804,18 +4815,18 @@ vprintf:	; call header integral zero 0 stack zero 0
 3:	
 
 vprintf$1:	; parameter stdout, offset 6
-4:		mov a1529, [stdout]
-5:		mov [bp + 16], a1529
+4:		mov a1530, [stdout]
+5:		mov [bp + 16], a1530
 7:	
 
 vprintf$2:	; parameter format, offset 8
-8:		mov a1530, [bp + 6]
-9:		mov [bp + 18], a1530
+8:		mov a1531, [bp + 6]
+9:		mov [bp + 18], a1531
 11:	
 
 vprintf$3:	; parameter arg_list, offset 10
-12:		mov a1531, [bp + 8]
-13:		mov [bp + 20], a1531
+12:		mov a1532, [bp + 8]
+13:		mov [bp + 20], a1532
 15:	
 
 vprintf$4:	; call function noellipse-noellipse vfprintf
@@ -4835,44 +4846,44 @@ vprintf$7:	; return_value = £temporary2386
 30:	
 
 vprintf$8:	; return
-31:		mov t1534, [bp]
+31:		mov t1535, [bp]
 32:		mov di, [bp + 4]
 33:		mov bp, [bp + 2]
-34:		jmp t1534
+34:		jmp t1535
 36:	
 
 vprintf$9:	; function end vprintf
 1:	
 
 fprintf:	; £temporary2390 = &format
-2:		mov t1535, bp
-3:		add t1535, 8
+2:		mov t1536, bp
+3:		add t1536, 8
 5:	
 
 fprintf$1:	; £temporary2391 = int_to_int £temporary2390 (Pointer -> Pointer)
 8:	
 
 fprintf$2:	; arg_list = £temporary2391 + 2
-9:		add t1535, 2
-10:		mov [di + 10], t1535
+9:		add t1536, 2
+10:		mov [di + 10], t1536
 12:	
 
 fprintf$3:	; call header integral zero 0 stack zero 0
 14:	
 
 fprintf$4:	; parameter outStream, offset 6
-15:		mov a1536, [bp + 6]
-16:		mov [di + 18], a1536
+15:		mov a1537, [bp + 6]
+16:		mov [di + 18], a1537
 18:	
 
 fprintf$5:	; parameter format, offset 8
-19:		mov a1537, [bp + 8]
-20:		mov [di + 20], a1537
+19:		mov a1538, [bp + 8]
+20:		mov [di + 20], a1538
 22:	
 
 fprintf$6:	; parameter arg_list, offset 10
-23:		mov a1538, [di + 10]
-24:		mov [di + 22], a1538
+23:		mov a1539, [di + 10]
+24:		mov [di + 22], a1539
 26:	
 
 fprintf$7:	; call function ellipse-noellipse vfprintf
@@ -4894,10 +4905,10 @@ fprintf$10:	; return_value = £temporary2393
 43:	
 
 fprintf$11:	; return
-44:		mov t1541, [bp]
+44:		mov t1542, [bp]
 45:		mov di, [bp + 4]
 46:		mov bp, [bp + 2]
-47:		jmp t1541
+47:		jmp t1542
 49:	
 
 fprintf$12:	; function end fprintf
@@ -4908,24 +4919,24 @@ vfprintf:	; g_outStatus = 0
 4:	
 
 vfprintf$1:	; £temporary2398 = int_to_int outStream (Pointer -> Pointer)
-5:		mov a1542, [bp + 6]
+5:		mov a1543, [bp + 6]
 8:	
 
 vfprintf$2:	; g_outDevice = £temporary2398
-9:		mov [g_outDevice], a1542
+9:		mov [g_outDevice], a1543
 11:	
 
 vfprintf$3:	; call header integral zero 0 stack zero 0
 13:	
 
 vfprintf$4:	; parameter format, offset 6
-14:		mov a1543, [bp + 8]
-15:		mov [bp + 18], a1543
+14:		mov a1544, [bp + 8]
+15:		mov [bp + 18], a1544
 17:	
 
 vfprintf$5:	; parameter arg_list, offset 8
-18:		mov a1544, [bp + 10]
-19:		mov [bp + 20], a1544
+18:		mov a1545, [bp + 10]
+19:		mov [bp + 20], a1545
 21:	
 
 vfprintf$6:	; call function noellipse-noellipse printFormat
@@ -4945,44 +4956,44 @@ vfprintf$9:	; return_value = £temporary2399
 36:	
 
 vfprintf$10:	; return
-37:		mov t1547, [bp]
+37:		mov t1548, [bp]
 38:		mov di, [bp + 4]
 39:		mov bp, [bp + 2]
-40:		jmp t1547
+40:		jmp t1548
 42:	
 
 vfprintf$11:	; function end vfprintf
 1:	
 
 sprintf:	; £temporary2402 = &format
-2:		mov t1548, bp
-3:		add t1548, 8
+2:		mov t1549, bp
+3:		add t1549, 8
 5:	
 
 sprintf$1:	; £temporary2403 = int_to_int £temporary2402 (Pointer -> Pointer)
 8:	
 
 sprintf$2:	; arg_list = £temporary2403 + 2
-9:		add t1548, 2
-10:		mov [di + 10], t1548
+9:		add t1549, 2
+10:		mov [di + 10], t1549
 12:	
 
 sprintf$3:	; call header integral zero 0 stack zero 0
 14:	
 
 sprintf$4:	; parameter outString, offset 6
-15:		mov a1549, [bp + 6]
-16:		mov [di + 18], a1549
+15:		mov a1550, [bp + 6]
+16:		mov [di + 18], a1550
 18:	
 
 sprintf$5:	; parameter format, offset 8
-19:		mov a1550, [bp + 8]
-20:		mov [di + 20], a1550
+19:		mov a1551, [bp + 8]
+20:		mov [di + 20], a1551
 22:	
 
 sprintf$6:	; parameter arg_list, offset 10
-23:		mov a1551, [di + 10]
-24:		mov [di + 22], a1551
+23:		mov a1552, [di + 10]
+24:		mov [di + 22], a1552
 26:	
 
 sprintf$7:	; call function ellipse-noellipse vsprintf
@@ -5004,10 +5015,10 @@ sprintf$10:	; return_value = £temporary2405
 43:	
 
 sprintf$11:	; return
-44:		mov t1554, [bp]
+44:		mov t1555, [bp]
 45:		mov di, [bp + 4]
 46:		mov bp, [bp + 2]
-47:		jmp t1554
+47:		jmp t1555
 49:	
 
 sprintf$12:	; function end sprintf
@@ -5018,24 +5029,24 @@ vsprintf:	; g_outStatus = 1
 4:	
 
 vsprintf$1:	; £temporary2410 = int_to_int outString (Pointer -> Pointer)
-5:		mov a1555, [bp + 6]
+5:		mov a1556, [bp + 6]
 8:	
 
 vsprintf$2:	; g_outDevice = £temporary2410
-9:		mov [g_outDevice], a1555
+9:		mov [g_outDevice], a1556
 11:	
 
 vsprintf$3:	; call header integral zero 0 stack zero 0
 13:	
 
 vsprintf$4:	; parameter format, offset 6
-14:		mov a1556, [bp + 8]
-15:		mov [bp + 18], a1556
+14:		mov a1557, [bp + 8]
+15:		mov [bp + 18], a1557
 17:	
 
 vsprintf$5:	; parameter arg_list, offset 8
-18:		mov a1557, [bp + 10]
-19:		mov [bp + 20], a1557
+18:		mov a1558, [bp + 10]
+19:		mov [bp + 20], a1558
 21:	
 
 vsprintf$6:	; call function noellipse-noellipse printFormat
@@ -5055,10 +5066,10 @@ vsprintf$9:	; return_value = £temporary2411
 36:	
 
 vsprintf$10:	; return
-37:		mov t1560, [bp]
+37:		mov t1561, [bp]
 38:		mov di, [bp + 4]
 39:		mov bp, [bp + 2]
-40:		jmp t1560
+40:		jmp t1561
 42:	
 
 vsprintf$11:	; function end vsprintf

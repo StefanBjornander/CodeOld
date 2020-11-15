@@ -9,6 +9,16 @@ clock_t clock(void) {
   return -1;
 }
 
+struct timeval {
+  int tv_sec;     /* seconds */
+  int tv_usec;    /* microseconds */
+};
+
+struct timezone {
+  int tz_minuteswest;     /* minutes west of Greenwich */
+  int tz_dsttime;         /* type of DST correction */
+};
+
 time_t time(time_t* timePtr) {
   time_t time;
 
@@ -53,6 +63,18 @@ time_t time(time_t* timePtr) {
   register_rax = 201L;
   register_rdi = (unsigned long) &time;
   syscall();
+
+
+  { struct timeval tv;
+    struct timezone tz;
+
+    register_rax = 96L;
+    register_rdi = &tv;
+    register_rsi = &tz;
+    syscall();
+    printf("timezone %i %i %i %i\n", tv.tv_sec, tv.tv_usec, tz.tz_minuteswest, tz.tz_dsttime);
+  }
+
 #endif
 
   if (timePtr != NULL) {
@@ -104,7 +126,72 @@ static int leapSeconds(time_t t) {
   return seconds;
 }*/
 
+static BOOL isLeapYear(int year) {
+  return (((year % 4) == 0) &&
+         ((year % 100) != 0)) || ((year % 400) == 0);
+}
+
 struct tm* gmtime(const time_t* timePtr) {
+  if (timePtr != NULL) {
+    time_t time = *timePtr;
+    const long secondsOfDay = time % 86400L,
+               secondsOfHour = secondsOfDay % 3600;
+    g_timeStruct.tm_hour = secondsOfDay / 3600;
+    g_timeStruct.tm_min = secondsOfHour / 60;
+    g_timeStruct.tm_sec = secondsOfHour % 60;
+
+    // January 1, 1970, was a Thursday
+    { long totalDays = time / 86400L;
+      
+      if (totalDays < 3) {
+        g_timeStruct.tm_wday = totalDays + 4;
+      }
+      else {
+        g_timeStruct.tm_wday = (totalDays - 3) % 7;
+      }
+
+      { int year = 1970 + (totalDays / 365);
+        const int leapDays = (year - 1969) / 4;
+        totalDays %= 365;
+        totalDays -= leapDays;
+
+        if (totalDays < 0) {
+          --year;
+
+          if (isLeapYear(year)) {
+            totalDays += 366;
+          }
+          else {
+            totalDays += 365;
+          }
+        }
+
+        { const int daysOfMonths[] = {31, isLeapYear(year) ? 29 : 28, 31,
+                                      30, 31, 30, 31, 31, 30, 31, 30, 31};
+          int month = 0;
+          printf("Hello1\n");
+          while (totalDays >= daysOfMonths[month]) {
+            totalDays -= daysOfMonths[month++];
+            printf("month %li %i\n", totalDays, month);
+          }
+          printf("Hello2\n");
+
+          g_timeStruct.tm_year = year - 1900;
+          g_timeStruct.tm_yday = totalDays;
+          g_timeStruct.tm_mon = month;
+          g_timeStruct.tm_mday = totalDays + 1;
+          g_timeStruct.tm_isdst = -1;
+          printf("Hello3\n");
+          return &g_timeStruct;
+        }
+      }
+    }
+  }
+
+  return NULL;
+}
+
+struct tm* gmtimeX(const time_t* timePtr) {
   int year = 1970;
 
   if (timePtr != NULL) {
@@ -133,19 +220,27 @@ struct tm* gmtime(const time_t* timePtr) {
         const int daysOfMonths[] = {31, leapYear ? 29 : 28, 31, 30,
                                     31, 30, 31, 31, 30, 31, 30, 31};
         int month = 0;
-        /*int index, sum = 0;
-        for (index = 0; index < 12; ++index) {
-          sum += daysOfMonths[index];
-          printf("  %i %i %i\n", index, daysOfMonths[index], sum);
-        }*/
-
         g_timeStruct.tm_year = year - 1900;
         g_timeStruct.tm_yday = totalDays;
 
         while (totalDays >= daysOfMonths[month]) {
-          totalDays -= daysOfMonths[month];
-          ++month;
+          totalDays -= daysOfMonths[month++];
         }
+
+        /*if (leapYear) {
+          static int daysWithLeapYeas[] = {31, 60, 91, 121, 152, 182,
+                                           213, 244, 274, 305, 335};
+          for (month = 11; totalYear < daysWithLeapYear[month - 1]; --month) {
+            // Empty.
+          }
+        }
+        else {
+          static int daysWithoutLeapYeas[] = {31, 59, 90, 120, 151, 181,
+                                              212, 243, 273, 304, 334, 365};
+          for (month = 12; totalYear < daysWithLeapYear[month - 2]; --month) {
+            // Empty.
+          }
+        }*/
 
         g_timeStruct.tm_mon = month;
         g_timeStruct.tm_mday = totalDays + 1;
@@ -227,7 +322,7 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
   char** longMonthList = (localeConvPtr != NULL)
                          ? (localeConvPtr->longMonthList) : NULL;
 
-  const BOOL leapDays = (tp->tm_year - 69) / 4;
+  const int leapDays = (tp->tm_year - 69) / 4;
   const long totalDays = 365 * (tp->tm_year - 70) + leapDays + tp->tm_yday;
   int yearDaySunday, yearDayMonday;
 
@@ -361,11 +456,14 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
         add[1] = '\0';
       }
 
-      if ((strlen(s) + strlen(add)) < smax) {
-        strcat(s, add);
-      }
-      else {
-        break;
+      { int x = strlen(s), y = strlen(add);
+        
+        if ((x + y) < smax) {
+          strcat(s, add);
+        }
+        else {
+          break;
+        }
       }
     }
   }

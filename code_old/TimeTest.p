@@ -3,7 +3,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.h,0$
    
 
     
-     
+    
     
 
 struct tm {
@@ -21,15 +21,15 @@ int tm_isdst ;
 };
 
 extern long clock ( void ) ;
-extern unsigned long time ( unsigned long * time ) ;
-extern double difftime ( unsigned long time2 , unsigned long time1 ) ;
-extern unsigned long mktime ( struct tm * timeStruct ) ;
+extern long time ( long * time ) ;
+extern double difftime ( long time2 , long time1 ) ;
+extern long mktime ( struct tm * timeStruct ) ;
 
 extern char * asctime ( const struct tm * timeStruct ) ;
-extern char * ctime ( const unsigned long * time ) ;
-extern struct tm * gmtime ( const unsigned long * time ) ;
-extern struct tm * localtime ( const unsigned long * time ) ;
-extern struct tm * localtimeX ( const unsigned long * time ) ;
+extern char * ctime ( const long * time ) ;
+extern struct tm * gmtime ( const long * time ) ;
+extern struct tm * localtime ( const long * time ) ;
+extern struct tm * localtimeX ( const long * time ) ;
 
 extern int strftime ( char * buffer , int size ,
 const char * format , const struct tm * timeStruct ) ;
@@ -345,9 +345,9 @@ void * calloc ( int num , int size ) ;
 void free ( void * ptr ) ;
 
 void qsort ( void * valueList , int listSize , int valueSize ,
-int ( * compare ) ( const void * , const void * ) , ... ) ;
-
-void * bsearch ( const void * key , const void * valueList , int listSize , int valueSize ,
+int ( * compare ) ( const void * , const void * ) ) ;
+void * bsearch ( const void * key , const void * valueList ,
+int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
 int abs ( int value ) ;
@@ -401,38 +401,33 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\TimeTest.c,3$
        
 
 int struct_to_time ( struct tm * tp ) ;
-void time_to_struct ( unsigned long t , struct tm * tp ) ;
+void time_to_struct ( long t , struct tm * tp ) ;
 
 void time_test ( void ) {
 char * weekdays [] = { "Sun" , "Mon" , "Tue" , "Wed" , "Thu" , "Fri" , "Sat" };
 
-{ unsigned long now = time ( ( ( void * ) 0 ) ) ;
-struct tm * p = gmtime ( & now ) ;
-unsigned long now2 = mktime ( p ) ;
-struct tm s = * p ;
+{ long now1 = time ( ( ( void * ) 0 ) ) ;
+struct tm s = * gmtime ( & now1 ) , t = * localtime ( & now1 ) ;
+long now2 = mktime ( & s ) ;
 
-printf ( "now 1: %lu\n" , now ) ;
+printf ( "now 1: %lu\n" , now1 ) ;
 printf ( "now 2: %lu\n" , now2 ) ;
-
 
 printf ( "   gm time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i\n" , weekdays [ s . tm_wday ] , 1900 + s . tm_year ,
 s . tm_mon + 1 , s . tm_mday , s . tm_hour , s . tm_min , s . tm_sec , s . tm_yday , s . tm_wday , s . tm_isdst ) ;
-
-s = * localtime ( & now ) ;
-
-printf ( "local time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i\n" , weekdays [ s . tm_wday ] , 1900 + s . tm_year ,
-s . tm_mon + 1 , s . tm_mday , s . tm_hour , s . tm_min , s . tm_sec , s . tm_yday , s . tm_wday , s . tm_isdst ) ;
+printf ( "local time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i\n" , weekdays [ t . tm_wday ] , 1900 + t . tm_year ,
+t . tm_mon + 1 , t . tm_mday , t . tm_hour , t . tm_min , t . tm_sec , t . tm_yday , t . tm_wday , t . tm_isdst ) ;
 
 { char buffer1 [ 100 ] , buffer2 [ 100 ];
 char buffer [ 300 ];
 int i ;
 
 strcpy ( buffer1 , asctime ( & s ) ) ;
-strcpy ( buffer2 , ctime ( & now ) ) ;
+strcpy ( buffer2 , ctime ( & now1 ) ) ;
 printf ( "asctime <%s>, ctime <%s>\n" , buffer1 , buffer2 ) ;
 
-i = strftime ( buffer , 300 , "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y" , & s ) ;
-printf ( "strftime <%i> <%s>\n" , i , buffer ) ;
+i = strftime ( buffer , 300 , "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y" , & t ) ;
+printf ( "strftime %i %i <%s>\n" , i , strlen ( buffer ) , buffer ) ;
 }
 
 

@@ -4,12 +4,12 @@ stdio_test:	; n = 0
 2:		mov word [bp + 6], 0
 4:	
 
-stdio_test$1:	; £temporary5529 = &n
+stdio_test$1:	; £temporary5532 = &n
 5:		mov si, bp
 6:		add si, 6
 8:	
 
-stdio_test$2:	; p = £temporary5529
+stdio_test$2:	; p = £temporary5532
 9:		mov [bp + 8], si
 11:	
 

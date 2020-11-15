@@ -890,7 +890,7 @@ section .text
 
  string_test$169:
 	; Assign £temporary3604 -> u 0
-	mov byte [rsi + 21], 0
+	mov byte [rsi + 19], 0
 
  string_test$170:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0

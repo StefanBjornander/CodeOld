@@ -181,6 +181,7 @@ size_t strlen(const char* string) {
     // Empty.
   }
 
+  //printf("strlen: %i\n", index);
   return index;
 }
 

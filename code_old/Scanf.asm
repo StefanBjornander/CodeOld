@@ -3080,9 +3080,9 @@ section .text
 	; Dereference £temporary1251 -> £temporary1254 £temporary1254 0
 
  scanFormat$11:
-	; Equal 333 £temporary1251 -> £temporary1254 0
+	; Equal 334 £temporary1251 -> £temporary1254 0
 	cmp byte [rsi], 0
-	je scanFormat$333
+	je scanFormat$334
 
  scanFormat$12:
 	; IntegralToIntegral £temporary1258 index
@@ -3118,9 +3118,9 @@ section .text
 	mov [rbp + 153], eax
 
  scanFormat$18:
-	; Equal 325 percent 0
+	; Equal 326 percent 0
 	cmp dword [rbp + 49], 0
-	je scanFormat$325
+	je scanFormat$326
 
  scanFormat$19:
 	; BinarySubtract £temporary1263 d 1
@@ -3203,48 +3203,48 @@ section .text
 	je scanFormat$263
 
  scanFormat$35:
-	; Case 309 £temporary1263 110
+	; Case 310 £temporary1263 110
 	cmp eax, 110
-	je scanFormat$309
+	je scanFormat$310
 
  scanFormat$36:
 	; CaseEnd £temporary1263
 
  scanFormat$37:
-	; Goto 318
-	jmp scanFormat$318
+	; Goto 319
+	jmp scanFormat$319
 
  scanFormat$38:
 	; Assign shortInt 1
 	mov dword [rbp + 53], 1
 
  scanFormat$39:
-	; Goto 331
-	jmp scanFormat$331
+	; Goto 332
+	jmp scanFormat$332
 
  scanFormat$40:
 	; Assign longIntOrDouble 1
 	mov dword [rbp + 57], 1
 
  scanFormat$41:
-	; Goto 331
-	jmp scanFormat$331
+	; Goto 332
+	jmp scanFormat$332
 
  scanFormat$42:
 	; Assign longDouble 1
 	mov dword [rbp + 61], 1
 
  scanFormat$43:
-	; Goto 331
-	jmp scanFormat$331
+	; Goto 332
+	jmp scanFormat$332
 
  scanFormat$44:
 	; Assign star 1
 	mov dword [rbp + 65], 1
 
  scanFormat$45:
-	; Goto 331
-	jmp scanFormat$331
+	; Goto 332
+	jmp scanFormat$332
 
  scanFormat$46:
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -3314,17 +3314,17 @@ section .text
 	neg eax
 
  scanFormat$61:
-	; Equal 331 £temporary1274 -1
+	; Equal 332 £temporary1274 -1
 	cmp eax, -1
-	je scanFormat$331
+	je scanFormat$332
 
  scanFormat$62:
 	; BinaryAdd g_inCount g_inCount 1
 	inc dword [g_inCount]
 
  scanFormat$63:
-	; Goto 331
-	jmp scanFormat$331
+	; Goto 332
+	jmp scanFormat$332
 
  scanFormat$64:
 	; NotEqual 76 star 0
@@ -3403,8 +3403,8 @@ section .text
 	mov dword [rbp + 49], 0
 
  scanFormat$82:
-	; Goto 331
-	jmp scanFormat$331
+	; Goto 332
+	jmp scanFormat$332
 
  scanFormat$83:
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -3559,8 +3559,8 @@ section .text
 	mov dword [rbp + 49], 0
 
  scanFormat$118:
-	; Goto 331
-	jmp scanFormat$331
+	; Goto 332
+	jmp scanFormat$332
 
  scanFormat$119:
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -3707,8 +3707,8 @@ section .text
 	mov dword [rbp + 49], 0
 
  scanFormat$154:
-	; Goto 331
-	jmp scanFormat$331
+	; Goto 332
+	jmp scanFormat$332
 
  scanFormat$155:
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -3855,8 +3855,8 @@ section .text
 	mov dword [rbp + 49], 0
 
  scanFormat$190:
-	; Goto 331
-	jmp scanFormat$331
+	; Goto 332
+	jmp scanFormat$332
 
  scanFormat$191:
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -4003,8 +4003,8 @@ section .text
 	mov dword [rbp + 49], 0
 
  scanFormat$226:
-	; Goto 331
-	jmp scanFormat$331
+	; Goto 332
+	jmp scanFormat$332
 
  scanFormat$227:
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -4150,8 +4150,8 @@ section .text
 	mov dword [rbp + 49], 0
 
  scanFormat$262:
-	; Goto 331
-	jmp scanFormat$331
+	; Goto 332
+	jmp scanFormat$332
 
  scanFormat$263:
 	; Assign not 0
@@ -4185,283 +4185,286 @@ section .text
 	mov dword [rbp + 157], 1
 
  scanFormat$270:
-	; BinaryAdd startIndex index 1
-	mov eax, [rbp + 93]
-	inc eax
-	mov [rbp + 161], eax
+	; BinaryAdd index index 1
+	inc dword [rbp + 93]
 
  scanFormat$271:
+	; Assign startIndex index
+	mov eax, [rbp + 93]
+	mov [rbp + 161], eax
+
+ scanFormat$272:
 	; IntegralToIntegral £temporary1439 index
 	mov eax, [rbp + 93]
 	mov rbx, 4294967295
 	and rax, rbx
 
- scanFormat$272:
+ scanFormat$273:
 	; BinaryAdd £temporary1441 format £temporary1439
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- scanFormat$273:
+ scanFormat$274:
 	; Dereference £temporary1438 -> £temporary1441 £temporary1441 0
 
- scanFormat$274:
-	; Equal 277 £temporary1438 -> £temporary1441 93
-	cmp byte [rsi], 93
-	je scanFormat$277
-
  scanFormat$275:
+	; Equal 278 £temporary1438 -> £temporary1441 93
+	cmp byte [rsi], 93
+	je scanFormat$278
+
+ scanFormat$276:
 	; BinaryAdd index index 1
 	inc dword [rbp + 93]
 
- scanFormat$276:
-	; Goto 271
-	jmp scanFormat$271
-
  scanFormat$277:
+	; Goto 272
+	jmp scanFormat$272
+
+ scanFormat$278:
 	; IntegralToIntegral £temporary1445 index
 	mov eax, [rbp + 93]
 	mov rbx, 4294967295
 	and rax, rbx
 
- scanFormat$278:
+ scanFormat$279:
 	; BinaryAdd £temporary1447 format £temporary1445
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- scanFormat$279:
+ scanFormat$280:
 	; Dereference £temporary1444 -> £temporary1447 £temporary1447 0
 
- scanFormat$280:
+ scanFormat$281:
 	; Assign £temporary1444 -> £temporary1447 0
 	mov byte [rsi], 0
 
- scanFormat$281:
-	; NotEqual 298 star 0
-	cmp dword [rbp + 65], 0
-	jne scanFormat$298
-
  scanFormat$282:
+	; NotEqual 299 star 0
+	cmp dword [rbp + 65], 0
+	jne scanFormat$299
+
+ scanFormat$283:
 	; BinaryAdd arg_list arg_list 8
 	add qword [rbp + 32], 8
 
- scanFormat$283:
+ scanFormat$284:
 	; BinarySubtract £temporary1452 arg_list 8
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
- scanFormat$284:
+ scanFormat$285:
 	; IntegralToIntegral £temporary1454 £temporary1452
 
- scanFormat$285:
+ scanFormat$286:
 	; Dereference £temporary1455 -> £temporary1454 £temporary1454 0
 
- scanFormat$286:
+ scanFormat$287:
 	; Assign string £temporary1455 -> £temporary1454
 	mov rax, [rsi]
 	mov [rbp + 165], rax
 
- scanFormat$287:
+ scanFormat$288:
 	; PreCall 173 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- scanFormat$288:
+ scanFormat$289:
 	; Parameter pointer string 197
 	mov rax, [rbp + 165]
 	mov [rbp + 197], rax
 
- scanFormat$289:
+ scanFormat$290:
 	; IntegralToIntegral £temporary1457 startIndex
 	mov eax, [rbp + 161]
 	mov rbx, 4294967295
 	and rax, rbx
 
- scanFormat$290:
+ scanFormat$291:
 	; BinaryAdd £temporary1459 format £temporary1457
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- scanFormat$291:
+ scanFormat$292:
 	; Dereference £temporary1456 -> £temporary1459 £temporary1459 0
 
- scanFormat$292:
+ scanFormat$293:
 	; Address £temporary1460 £temporary1456 -> £temporary1459
 
- scanFormat$293:
+ scanFormat$294:
 	; Parameter pointer £temporary1460 205
 	mov [rbp + 205], rsi
 
- scanFormat$294:
+ scanFormat$295:
 	; Parameter signedint not 213
 	mov eax, [rbp + 157]
 	mov [rbp + 213], eax
 
- scanFormat$295:
+ scanFormat$296:
 	; Call scanPattern 173 0
-	mov qword [rbp + 173], scanFormat$296
+	mov qword [rbp + 173], scanFormat$297
 	mov [rbp + 181], rbp
 	add rbp, 173
 	jmp scanPattern
 
- scanFormat$296:
+ scanFormat$297:
 	; PostCall 173
 
- scanFormat$297:
-	; Goto 331
-	jmp scanFormat$331
-
  scanFormat$298:
-	; PreCall 165 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Goto 332
+	jmp scanFormat$332
 
  scanFormat$299:
+	; PreCall 165 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ scanFormat$300:
 	; Parameter pointer 0 189
 	mov qword [rbp + 189], 0
 
- scanFormat$300:
+ scanFormat$301:
 	; IntegralToIntegral £temporary1463 startIndex
 	mov eax, [rbp + 161]
 	mov rbx, 4294967295
 	and rax, rbx
 
- scanFormat$301:
+ scanFormat$302:
 	; BinaryAdd £temporary1465 format £temporary1463
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- scanFormat$302:
+ scanFormat$303:
 	; Dereference £temporary1462 -> £temporary1465 £temporary1465 0
 
- scanFormat$303:
+ scanFormat$304:
 	; Address £temporary1466 £temporary1462 -> £temporary1465
 
- scanFormat$304:
+ scanFormat$305:
 	; Parameter pointer £temporary1466 197
 	mov [rbp + 197], rsi
 
- scanFormat$305:
+ scanFormat$306:
 	; Parameter signedint not 205
 	mov eax, [rbp + 157]
 	mov [rbp + 205], eax
 
- scanFormat$306:
+ scanFormat$307:
 	; Call scanPattern 165 0
-	mov qword [rbp + 165], scanFormat$307
+	mov qword [rbp + 165], scanFormat$308
 	mov [rbp + 173], rbp
 	add rbp, 165
 	jmp scanPattern
 
- scanFormat$307:
+ scanFormat$308:
 	; PostCall 165
 
- scanFormat$308:
-	; Goto 331
-	jmp scanFormat$331
-
  scanFormat$309:
+	; Goto 332
+	jmp scanFormat$332
+
+ scanFormat$310:
 	; BinaryAdd arg_list arg_list 8
 	add qword [rbp + 32], 8
 
- scanFormat$310:
+ scanFormat$311:
 	; BinarySubtract £temporary1470 arg_list 8
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
- scanFormat$311:
+ scanFormat$312:
 	; IntegralToIntegral £temporary1472 £temporary1470
 
- scanFormat$312:
+ scanFormat$313:
 	; Dereference £temporary1473 -> £temporary1472 £temporary1472 0
 
- scanFormat$313:
+ scanFormat$314:
 	; Assign charsPtr £temporary1473 -> £temporary1472
 	mov rax, [rsi]
 	mov [rbp + 105], rax
 
- scanFormat$314:
+ scanFormat$315:
 	; Dereference £temporary1474 -> charsPtr charsPtr 0
 	mov rsi, [rbp + 105]
 
- scanFormat$315:
+ scanFormat$316:
 	; Assign £temporary1474 -> charsPtr g_inChars
 	mov eax, [g_inChars]
 	mov [rsi], eax
 
- scanFormat$316:
+ scanFormat$317:
 	; Assign percent 0
 	mov dword [rbp + 49], 0
 
- scanFormat$317:
-	; Goto 331
-	jmp scanFormat$331
-
  scanFormat$318:
-	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Goto 332
+	jmp scanFormat$332
 
  scanFormat$319:
+	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ scanFormat$320:
 	; Parameter pointer "scanFormat c = '%c'\n" 181
 	mov qword [rbp + 181], string_scanFormat20c203D202725c270A#
 
- scanFormat$320:
+ scanFormat$321:
 	; IntegralToIntegral £temporary1475 c
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
-	jge scanFormat$321
+	jge scanFormat$322
 	neg al
 	neg eax
 
- scanFormat$321:
+ scanFormat$322:
 	; Parameter signedint £temporary1475 189
 	mov [rbp + 189], eax
 
- scanFormat$322:
+ scanFormat$323:
 	; Call printf 157 4
-	mov qword [rbp + 157], scanFormat$323
+	mov qword [rbp + 157], scanFormat$324
 	mov [rbp + 165], rbp
 	add rbp, 157
 	mov rdi, rbp
 	add rdi, 4
 	jmp printf
 
- scanFormat$323:
+ scanFormat$324:
 	; PostCall 157
 
- scanFormat$324:
-	; Goto 331
-	jmp scanFormat$331
-
  scanFormat$325:
-	; NotEqual 331 c 37
-	cmp byte [rbp + 40], 37
-	jne scanFormat$331
+	; Goto 332
+	jmp scanFormat$332
 
  scanFormat$326:
+	; NotEqual 332 c 37
+	cmp byte [rbp + 40], 37
+	jne scanFormat$332
+
+ scanFormat$327:
 	; Assign percent 1
 	mov dword [rbp + 49], 1
 
- scanFormat$327:
+ scanFormat$328:
 	; Assign shortInt 0
 	mov dword [rbp + 53], 0
 
- scanFormat$328:
+ scanFormat$329:
 	; Assign longIntOrDouble 0
 	mov dword [rbp + 57], 0
 
- scanFormat$329:
+ scanFormat$330:
 	; Assign longDouble 0
 	mov dword [rbp + 61], 0
 
- scanFormat$330:
+ scanFormat$331:
 	; Assign star 0
 	mov dword [rbp + 65], 0
 
- scanFormat$331:
+ scanFormat$332:
 	; BinaryAdd index index 1
 	inc dword [rbp + 93]
 
- scanFormat$332:
+ scanFormat$333:
 	; Goto 8
 	jmp scanFormat$8
 
- scanFormat$333:
+ scanFormat$334:
 	; Return g_inCount
 	mov ebx, [g_inCount]
 	mov rax, [rbp]
@@ -4469,7 +4472,7 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- scanFormat$334:
+ scanFormat$335:
 	; FunctionEnd scanFormat
 
 section .text

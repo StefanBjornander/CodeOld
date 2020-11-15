@@ -402,9 +402,9 @@ void * calloc ( int num , int size ) ;
 void free ( void * ptr ) ;
 
 void qsort ( void * valueList , int listSize , int valueSize ,
-int ( * compare ) ( const void * , const void * ) , ... ) ;
-
-void * bsearch ( const void * key , const void * valueList , int listSize , int valueSize ,
+int ( * compare ) ( const void * , const void * ) ) ;
+void * bsearch ( const void * key , const void * valueList ,
+int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
 int abs ( int value ) ;
@@ -990,7 +990,6 @@ g_outStatus = oldOutStatus ;
 g_outChars = startChars ;
 
 if ( negative ) {
-printChar ( 'X' ) ;
 printChar ( '-' ) ;
 ++ field ;
 }
