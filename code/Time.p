@@ -685,22 +685,19 @@ totalDays += 365 ;
 }
 }
 
+g_timeStruct . tm_year = year - 1900 ;
+g_timeStruct . tm_yday = totalDays ;
+
 { const int daysOfMonths [] = { 31 , isLeapYear ( year ) ? 29 : 28 , 31 ,
 30 , 31 , 30 , 31 , 31 , 30 , 31 , 30 , 31 };
 int month = 0 ;
-printf ( "Hello1\n" ) ;
 while ( totalDays >= daysOfMonths [ month ] ) {
 totalDays -= daysOfMonths [ month ++];
-printf ( "month %li %i\n" , totalDays , month ) ;
 }
-printf ( "Hello2\n" ) ;
 
-g_timeStruct . tm_year = year - 1900 ;
-g_timeStruct . tm_yday = totalDays ;
 g_timeStruct . tm_mon = month ;
 g_timeStruct . tm_mday = totalDays + 1 ;
 g_timeStruct . tm_isdst = -1 ;
-printf ( "Hello3\n" ) ;
 return & g_timeStruct ;
 }
 }
@@ -710,41 +707,6 @@ return & g_timeStruct ;
 return ( ( void * ) 0 ) ;
 }
 
-struct tm * gmtimeX ( const unsigned long * timePtr ) {
-int year = 1970 ;
-
-if ( timePtr != ( ( void * ) 0 ) ) {
-unsigned long time = * timePtr ;
-long totalDays = time / 86400L ;
-const long secondsOfDay = time % 86400L ,
-secondsOfHour = secondsOfDay % 3600 ;
-g_timeStruct . tm_hour = secondsOfDay / 3600 ;
-g_timeStruct . tm_min = secondsOfHour / 60 ;
-g_timeStruct . tm_sec = secondsOfHour % 60 ;
-
-
-if ( totalDays < 3 ) {
-g_timeStruct . tm_wday = totalDays + 4 ;
-}
-else {
-g_timeStruct . tm_wday = ( totalDays - 3 ) % 7 ;
-}
-
-while ( 1 ) {
-const int leapYear = ( ( ( year % 4 ) == 0 ) &&
-( ( year % 100 ) != 0 ) ) || ( ( year % 400 ) == 0 ) ;
-const int daysOfYear = leapYear ? 366 : 365 ;
-
-if ( totalDays < daysOfYear ) {
-const int daysOfMonths [] = { 31 , leapYear ? 29 : 28 , 31 , 30 ,
-31 , 30 , 31 , 31 , 30 , 31 , 30 , 31 };
-int month = 0 ;
-g_timeStruct . tm_year = year - 1900 ;
-g_timeStruct . tm_yday = totalDays ;
-
-while ( totalDays >= daysOfMonths [ month ] ) {
-totalDays -= daysOfMonths [ month ++];
-}
 
 
 
@@ -761,19 +723,54 @@ totalDays -= daysOfMonths [ month ++];
 
 
 
-g_timeStruct . tm_mon = month ;
-g_timeStruct . tm_mday = totalDays + 1 ;
-g_timeStruct . tm_isdst = -1 ;
-return & g_timeStruct ;
-}
 
-++ year ;
-totalDays -= daysOfYear ;
-}
-}
 
-return ( ( void * ) 0 ) ;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 double difftime ( unsigned long time1 , unsigned long time2 ) {
 return ( double ) ( time2 - time1 ) ;

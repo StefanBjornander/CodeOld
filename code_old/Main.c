@@ -206,6 +206,13 @@ void main() {
   //stdlib_test();
   string_test();
   //time_test();
+  /*time_t now = time(NULL);
+  struct tm s = *gmtime(&now);
+  char* weekdays[] = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+  printf("now: %lu\n", now);
+  printf("gm time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i\n",
+         weekdays[s.tm_wday], 1900 + s.tm_year, s.tm_mon + 1, s.tm_mday,
+         s.tm_hour, s.tm_min, s.tm_sec, s.tm_yday, s.tm_wday, s.tm_isdst);*/
 }
 
 void mainX4(int argc, char* argv[]) {

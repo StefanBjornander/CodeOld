@@ -45,12 +45,12 @@ time_t time(time_t* timePtr) {
   }
 
   { const BOOL leapYear = (year % 4) == 0;
-    const int daysOfMonths[] = {31, leapYear ? 29 : 28, 31, 30,
+    const int daysOfMonthsX[] = {31, leapYear ? 29 : 28, 31, 30,
                                 31, 30, 31, 31, 30, 31, 30, 31};
     int yearDay = monthDay - 1, mon;
 
     for (mon = 0; mon < month; ++mon) {
-      yearDay += daysOfMonths[mon];
+      yearDay += daysOfMonthsX[mon];
     }
 
     { struct tm s = {sec, min, hour, monthDay, month, year, 0, yearDay, 0};
@@ -166,22 +166,19 @@ struct tm* gmtime(const time_t* timePtr) {
           }
         }
 
+        g_timeStruct.tm_year = year - 1900;
+        g_timeStruct.tm_yday = totalDays;
+
         { const int daysOfMonths[] = {31, isLeapYear(year) ? 29 : 28, 31,
                                       30, 31, 30, 31, 31, 30, 31, 30, 31};
           int month = 0;
-          printf("Hello1\n");
           while (totalDays >= daysOfMonths[month]) {
             totalDays -= daysOfMonths[month++];
-            printf("month %li %i\n", totalDays, month);
           }
-          printf("Hello2\n");
 
-          g_timeStruct.tm_year = year - 1900;
-          g_timeStruct.tm_yday = totalDays;
           g_timeStruct.tm_mon = month;
           g_timeStruct.tm_mday = totalDays + 1;
           g_timeStruct.tm_isdst = -1;
-          printf("Hello3\n");
           return &g_timeStruct;
         }
       }
@@ -191,7 +188,7 @@ struct tm* gmtime(const time_t* timePtr) {
   return NULL;
 }
 
-struct tm* gmtimeX(const time_t* timePtr) {
+/*struct tm* gmtimeX(const time_t* timePtr) {
   int year = 1970;
 
   if (timePtr != NULL) {
@@ -240,7 +237,7 @@ struct tm* gmtimeX(const time_t* timePtr) {
           for (month = 12; totalYear < daysWithLeapYear[month - 2]; --month) {
             // Empty.
           }
-        }*/
+        }*
 
         g_timeStruct.tm_mon = month;
         g_timeStruct.tm_mday = totalDays + 1;
@@ -254,7 +251,7 @@ struct tm* gmtimeX(const time_t* timePtr) {
   }
 
   return NULL;
-}
+}*/
 
 double difftime(time_t time1, time_t time2) {
   return (double) (time2 - time1);

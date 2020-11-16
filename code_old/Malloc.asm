@@ -94,28 +94,28 @@ section .text
 	; PreCall 72 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc$13:
-	; Parameter pointer stderr 96
+	; Parameter 96 pointer stderr
 	mov rax, [stderr]
 	mov [rbp + 96], rax
 
  malloc$14:
-	; Parameter pointer "Assertion failed: "%s" in file %s at line %i\n" 104
+	; Parameter 104 pointer "Assertion failed: "%s" in file %s at line %i\n"
 	mov qword [rbp + 104], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  malloc$15:
-	; Parameter pointer "memorySize >= 0" 112
+	; Parameter 112 pointer "memorySize >= 0"
 	mov qword [rbp + 112], string_memorySize203E3D200#
 
  malloc$16:
-	; Parameter pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c" 120
+	; Parameter 120 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c"
 	mov qword [rbp + 120], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  malloc$17:
-	; Parameter signedint 41 128
+	; Parameter 128 signedint 41
 	mov dword [rbp + 128], 41
 
  malloc$18:
-	; Call fprintf 72 20
+	; Call 72 fprintf 20
 	mov qword [rbp + 72], malloc$19
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -130,7 +130,7 @@ section .text
 	; PreCall 72 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc$21:
-	; Call abort 72 0
+	; Call 72 abort 0
 	mov qword [rbp + 72], malloc$22
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -441,11 +441,11 @@ section .text
 	imul dword [rbp + 28]
 
  calloc$2:
-	; Parameter signedint £temporary193 56
+	; Parameter 56 signedint £temporary193
 	mov [rbp + 56], eax
 
  calloc$3:
-	; Call malloc 32 0
+	; Call 32 malloc 0
 	mov qword [rbp + 32], calloc$4
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -470,21 +470,21 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  calloc$9:
-	; Parameter pointer pointer 64
+	; Parameter 64 pointer pointer
 	mov rax, [rbp + 32]
 	mov [rbp + 64], rax
 
  calloc$10:
-	; Parameter signedint 0 72
+	; Parameter 72 signedint 0
 	mov dword [rbp + 72], 0
 
  calloc$11:
-	; Parameter signedint size 76
+	; Parameter 76 signedint size
 	mov eax, [rbp + 28]
 	mov [rbp + 76], eax
 
  calloc$12:
-	; Call memset 40 0
+	; Call 40 memset 0
 	mov qword [rbp + 40], calloc$13
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -687,28 +687,28 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$2:
-	; Parameter pointer stderr 60
+	; Parameter 60 pointer stderr
 	mov rax, [stderr]
 	mov [rbp + 60], rax
 
  realloc$3:
-	; Parameter pointer "Assertion failed: "%s" in file %s at line %i\n" 68
+	; Parameter 68 pointer "Assertion failed: "%s" in file %s at line %i\n"
 	mov qword [rbp + 68], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  realloc$4:
-	; Parameter pointer "newMemorySize >= 0" 76
+	; Parameter 76 pointer "newMemorySize >= 0"
 	mov qword [rbp + 76], string_newMemorySize203E3D200#
 
  realloc$5:
-	; Parameter pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c" 84
+	; Parameter 84 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c"
 	mov qword [rbp + 84], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  realloc$6:
-	; Parameter signedint 259 92
+	; Parameter 92 signedint 259
 	mov dword [rbp + 92], 259
 
  realloc$7:
-	; Call fprintf 36 20
+	; Call 36 fprintf 20
 	mov qword [rbp + 36], realloc$8
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -723,7 +723,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$10:
-	; Call abort 36 0
+	; Call 36 abort 0
 	mov qword [rbp + 36], realloc$11
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -746,28 +746,28 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$15:
-	; Parameter pointer stderr 60
+	; Parameter 60 pointer stderr
 	mov rax, [stderr]
 	mov [rbp + 60], rax
 
  realloc$16:
-	; Parameter pointer "Assertion failed: "%s" in file %s at line %i\n" 68
+	; Parameter 68 pointer "Assertion failed: "%s" in file %s at line %i\n"
 	mov qword [rbp + 68], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  realloc$17:
-	; Parameter pointer "( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )" 76
+	; Parameter 76 pointer "( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )"
 	mov qword [rbp + 76], string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#
 
  realloc$18:
-	; Parameter pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c" 84
+	; Parameter 84 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c"
 	mov qword [rbp + 84], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  realloc$19:
-	; Parameter signedint 260 92
+	; Parameter 92 signedint 260
 	mov dword [rbp + 92], 260
 
  realloc$20:
-	; Call fprintf 36 20
+	; Call 36 fprintf 20
 	mov qword [rbp + 36], realloc$21
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -782,7 +782,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$23:
-	; Call abort 36 0
+	; Call 36 abort 0
 	mov qword [rbp + 36], realloc$24
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -800,12 +800,12 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$27:
-	; Parameter signedint newMemorySize 60
+	; Parameter 60 signedint newMemorySize
 	mov eax, [rbp + 32]
 	mov [rbp + 60], eax
 
  realloc$28:
-	; Call malloc 36 0
+	; Call 36 malloc 0
 	mov qword [rbp + 36], realloc$29
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -833,12 +833,12 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$34:
-	; Parameter pointer oldMemoryPtr 60
+	; Parameter 60 pointer oldMemoryPtr
 	mov rax, [rbp + 24]
 	mov [rbp + 60], rax
 
  realloc$35:
-	; Call free 36 0
+	; Call 36 free 0
 	mov qword [rbp + 36], realloc$36
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -997,12 +997,12 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$68:
-	; Parameter signedint newMemorySize 72
+	; Parameter 72 signedint newMemorySize
 	mov eax, [rbp + 32]
 	mov [rbp + 72], eax
 
  realloc$69:
-	; Call malloc 48 0
+	; Call 48 malloc 0
 	mov qword [rbp + 48], realloc$70
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -1027,22 +1027,22 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$75:
-	; Parameter pointer newMemoryPtr 80
+	; Parameter 80 pointer newMemoryPtr
 	mov rax, [rbp + 48]
 	mov [rbp + 80], rax
 
  realloc$76:
-	; Parameter pointer oldMemoryPtr 88
+	; Parameter 88 pointer oldMemoryPtr
 	mov rax, [rbp + 24]
 	mov [rbp + 88], rax
 
  realloc$77:
-	; Parameter signedint newMemorySize 96
+	; Parameter 96 signedint newMemorySize
 	mov eax, [rbp + 32]
 	mov [rbp + 96], eax
 
  realloc$78:
-	; Call memcpy 56 0
+	; Call 56 memcpy 0
 	mov qword [rbp + 56], realloc$79
 	mov [rbp + 64], rbp
 	add rbp, 56
@@ -1055,12 +1055,12 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$81:
-	; Parameter pointer oldMemoryPtr 80
+	; Parameter 80 pointer oldMemoryPtr
 	mov rax, [rbp + 24]
 	mov [rbp + 80], rax
 
  realloc$82:
-	; Call free 56 0
+	; Call 56 free 0
 	mov qword [rbp + 56], realloc$83
 	mov [rbp + 64], rbp
 	add rbp, 56
@@ -1117,11 +1117,11 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  print_heap$2:
-	; Parameter pointer "Heap:\n" 56
+	; Parameter 56 pointer "Heap:\n"
 	mov qword [rbp + 56], string_Heap3A0A#
 
  print_heap$3:
-	; Call printf 32 0
+	; Call 32 printf 0
 	mov qword [rbp + 32], print_heap$4
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1140,7 +1140,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  print_heap$7:
-	; Parameter pointer "  Address %u, Size %u\n" 56
+	; Parameter 56 pointer "  Address %u, Size %u\n"
 	mov qword [rbp + 56], string_2020Address2025u2C20Size2025u0A#
 
  print_heap$8:
@@ -1148,7 +1148,7 @@ section .text
 	mov rax, [rbp + 24]
 
  print_heap$9:
-	; Parameter unsigned int £temporary255 64
+	; Parameter 64 unsigned int £temporary255
 	mov [rbp + 64], eax
 
  print_heap$10:
@@ -1156,12 +1156,12 @@ section .text
 	mov rsi, [rbp + 24]
 
  print_heap$11:
-	; Parameter unsigned int £temporary256 -> currBlockPtr 68
+	; Parameter 68 unsigned int £temporary256 -> currBlockPtr
 	mov eax, [rsi]
 	mov [rbp + 68], eax
 
  print_heap$12:
-	; Call printf 32 8
+	; Call 32 printf 8
 	mov qword [rbp + 32], print_heap$13
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1189,11 +1189,11 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  print_heap$18:
-	; Parameter pointer "\n" 56
+	; Parameter 56 pointer "\n"
 	mov qword [rbp + 56], string_0A#
 
  print_heap$19:
-	; Call printf 32 0
+	; Call 32 printf 0
 	mov qword [rbp + 32], print_heap$20
 	mov [rbp + 40], rbp
 	add rbp, 32

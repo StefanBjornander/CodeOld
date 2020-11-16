@@ -3,7 +3,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.h,0$
    
 
     
-     
+    
     
 
 struct tm {
@@ -21,15 +21,15 @@ int tm_isdst ;
 };
 
 extern long clock ( void ) ;
-extern unsigned long time ( unsigned long * time ) ;
-extern double difftime ( unsigned long time2 , unsigned long time1 ) ;
-extern unsigned long mktime ( struct tm * timeStruct ) ;
+extern long time ( long * time ) ;
+extern double difftime ( long time2 , long time1 ) ;
+extern long mktime ( struct tm * timeStruct ) ;
 
 extern char * asctime ( const struct tm * timeStruct ) ;
-extern char * ctime ( const unsigned long * time ) ;
-extern struct tm * gmtime ( const unsigned long * time ) ;
-extern struct tm * localtime ( const unsigned long * time ) ;
-extern struct tm * localtimeX ( const unsigned long * time ) ;
+extern char * ctime ( const long * time ) ;
+extern struct tm * gmtime ( const long * time ) ;
+extern struct tm * localtime ( const long * time ) ;
+extern struct tm * localtimeX ( const long * time ) ;
 
 extern int strftime ( char * buffer , int size ,
 const char * format , const struct tm * timeStruct ) ;
@@ -345,9 +345,9 @@ void * calloc ( int num , int size ) ;
 void free ( void * ptr ) ;
 
 void qsort ( void * valueList , int listSize , int valueSize ,
-int ( * compare ) ( const void * , const void * ) , ... ) ;
-
-void * bsearch ( const void * key , const void * valueList , int listSize , int valueSize ,
+int ( * compare ) ( const void * , const void * ) ) ;
+void * bsearch ( const void * key , const void * valueList ,
+int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
 int abs ( int value ) ;

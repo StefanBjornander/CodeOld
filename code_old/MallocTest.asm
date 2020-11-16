@@ -28,11 +28,11 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$3:
-	; Parameter signedint 96 68
+	; Parameter 68 signedint 96
 	mov dword [rbp + 68], 96
 
  malloc_test2$4:
-	; Call malloc 44 0
+	; Call 44 malloc 0
 	mov qword [rbp + 44], malloc_test2$5
 	mov [rbp + 52], rbp
 	add rbp, 44
@@ -42,10 +42,10 @@ section .text
 	; PostCall 44
 
  malloc_test2$6:
-	; GetReturnValue £temporary4285
+	; GetReturnValue £temporary4304
 
  malloc_test2$7:
-	; Assign q £temporary4285
+	; Assign q £temporary4304
 	mov [rbp + 44], rbx
 
  malloc_test2$8:
@@ -61,11 +61,11 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$11:
-	; Parameter signedint 96 76
+	; Parameter 76 signedint 96
 	mov dword [rbp + 76], 96
 
  malloc_test2$12:
-	; Call malloc 52 0
+	; Call 52 malloc 0
 	mov qword [rbp + 52], malloc_test2$13
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -75,10 +75,10 @@ section .text
 	; PostCall 52
 
  malloc_test2$14:
-	; GetReturnValue £temporary4288
+	; GetReturnValue £temporary4307
 
  malloc_test2$15:
-	; Assign p £temporary4288
+	; Assign p £temporary4307
 	mov [rbp + 28], rbx
 
  malloc_test2$16:
@@ -103,7 +103,7 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$21:
-	; Call print_heap 52 0
+	; Call 52 print_heap 0
 	mov qword [rbp + 52], malloc_test2$22
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -116,16 +116,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$24:
-	; Parameter pointer q 76
+	; Parameter 76 pointer q
 	mov rax, [rbp + 44]
 	mov [rbp + 76], rax
 
  malloc_test2$25:
-	; Parameter signedint 50 84
+	; Parameter 84 signedint 50
 	mov dword [rbp + 84], 50
 
  malloc_test2$26:
-	; Call realloc 52 0
+	; Call 52 realloc 0
 	mov qword [rbp + 52], malloc_test2$27
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -138,7 +138,7 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$29:
-	; Call print_heap 52 0
+	; Call 52 print_heap 0
 	mov qword [rbp + 52], malloc_test2$30
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -151,16 +151,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$32:
-	; Parameter pointer r 76
+	; Parameter 76 pointer r
 	mov rax, [rbp + 36]
 	mov [rbp + 76], rax
 
  malloc_test2$33:
-	; Parameter signedint 50 84
+	; Parameter 84 signedint 50
 	mov dword [rbp + 84], 50
 
  malloc_test2$34:
-	; Call realloc 52 0
+	; Call 52 realloc 0
 	mov qword [rbp + 52], malloc_test2$35
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -173,7 +173,7 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$37:
-	; Call print_heap 52 0
+	; Call 52 print_heap 0
 	mov qword [rbp + 52], malloc_test2$38
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -186,16 +186,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$40:
-	; Parameter pointer p 76
+	; Parameter 76 pointer p
 	mov rax, [rbp + 28]
 	mov [rbp + 76], rax
 
  malloc_test2$41:
-	; Parameter signedint 50 84
+	; Parameter 84 signedint 50
 	mov dword [rbp + 84], 50
 
  malloc_test2$42:
-	; Call realloc 52 0
+	; Call 52 realloc 0
 	mov qword [rbp + 52], malloc_test2$43
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -208,7 +208,7 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$45:
-	; Call print_heap 52 0
+	; Call 52 print_heap 0
 	mov qword [rbp + 52], malloc_test2$46
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -221,16 +221,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$48:
-	; Parameter pointer q 76
+	; Parameter 76 pointer q
 	mov rax, [rbp + 44]
 	mov [rbp + 76], rax
 
  malloc_test2$49:
-	; Parameter signedint 200 84
+	; Parameter 84 signedint 200
 	mov dword [rbp + 84], 200
 
  malloc_test2$50:
-	; Call realloc 52 0
+	; Call 52 realloc 0
 	mov qword [rbp + 52], malloc_test2$51
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -243,7 +243,7 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$53:
-	; Call print_heap 52 0
+	; Call 52 print_heap 0
 	mov qword [rbp + 52], malloc_test2$54
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -256,16 +256,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$56:
-	; Parameter pointer r 76
+	; Parameter 76 pointer r
 	mov rax, [rbp + 36]
 	mov [rbp + 76], rax
 
  malloc_test2$57:
-	; Parameter signedint 200 84
+	; Parameter 84 signedint 200
 	mov dword [rbp + 84], 200
 
  malloc_test2$58:
-	; Call realloc 52 0
+	; Call 52 realloc 0
 	mov qword [rbp + 52], malloc_test2$59
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -278,7 +278,7 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$61:
-	; Call print_heap 52 0
+	; Call 52 print_heap 0
 	mov qword [rbp + 52], malloc_test2$62
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -291,16 +291,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$64:
-	; Parameter pointer p 76
+	; Parameter 76 pointer p
 	mov rax, [rbp + 28]
 	mov [rbp + 76], rax
 
  malloc_test2$65:
-	; Parameter signedint 200 84
+	; Parameter 84 signedint 200
 	mov dword [rbp + 84], 200
 
  malloc_test2$66:
-	; Call realloc 52 0
+	; Call 52 realloc 0
 	mov qword [rbp + 52], malloc_test2$67
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -313,7 +313,7 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$69:
-	; Call print_heap 52 0
+	; Call 52 print_heap 0
 	mov qword [rbp + 52], malloc_test2$70
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -338,15 +338,15 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$1:
-	; Parameter signedint 96 48
+	; Parameter 48 signedint 96
 	mov dword [rbp + 48], 96
 
  malloc_test3$2:
-	; Parameter signedint 1 52
+	; Parameter 52 signedint 1
 	mov dword [rbp + 52], 1
 
  malloc_test3$3:
-	; Call calloc 24 0
+	; Call 24 calloc 0
 	mov qword [rbp + 24], malloc_test3$4
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -356,25 +356,25 @@ section .text
 	; PostCall 24
 
  malloc_test3$5:
-	; GetReturnValue £temporary4303
+	; GetReturnValue £temporary4322
 
  malloc_test3$6:
-	; Assign a £temporary4303
+	; Assign a £temporary4322
 	mov [rbp + 24], rbx
 
  malloc_test3$7:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$8:
-	; Parameter signedint 96 56
+	; Parameter 56 signedint 96
 	mov dword [rbp + 56], 96
 
  malloc_test3$9:
-	; Parameter signedint 1 60
+	; Parameter 60 signedint 1
 	mov dword [rbp + 60], 1
 
  malloc_test3$10:
-	; Call calloc 32 0
+	; Call 32 calloc 0
 	mov qword [rbp + 32], malloc_test3$11
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -384,25 +384,25 @@ section .text
 	; PostCall 32
 
  malloc_test3$12:
-	; GetReturnValue £temporary4304
+	; GetReturnValue £temporary4323
 
  malloc_test3$13:
-	; Assign b £temporary4304
+	; Assign b £temporary4323
 	mov [rbp + 32], rbx
 
  malloc_test3$14:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$15:
-	; Parameter signedint 96 64
+	; Parameter 64 signedint 96
 	mov dword [rbp + 64], 96
 
  malloc_test3$16:
-	; Parameter signedint 1 68
+	; Parameter 68 signedint 1
 	mov dword [rbp + 68], 1
 
  malloc_test3$17:
-	; Call calloc 40 0
+	; Call 40 calloc 0
 	mov qword [rbp + 40], malloc_test3$18
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -412,25 +412,25 @@ section .text
 	; PostCall 40
 
  malloc_test3$19:
-	; GetReturnValue £temporary4305
+	; GetReturnValue £temporary4324
 
  malloc_test3$20:
-	; Assign c £temporary4305
+	; Assign c £temporary4324
 	mov [rbp + 40], rbx
 
  malloc_test3$21:
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$22:
-	; Parameter signedint 96 72
+	; Parameter 72 signedint 96
 	mov dword [rbp + 72], 96
 
  malloc_test3$23:
-	; Parameter signedint 1 76
+	; Parameter 76 signedint 1
 	mov dword [rbp + 76], 1
 
  malloc_test3$24:
-	; Call calloc 48 0
+	; Call 48 calloc 0
 	mov qword [rbp + 48], malloc_test3$25
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -440,25 +440,25 @@ section .text
 	; PostCall 48
 
  malloc_test3$26:
-	; GetReturnValue £temporary4306
+	; GetReturnValue £temporary4325
 
  malloc_test3$27:
-	; Assign d £temporary4306
+	; Assign d £temporary4325
 	mov [rbp + 48], rbx
 
  malloc_test3$28:
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$29:
-	; Parameter signedint 96 80
+	; Parameter 80 signedint 96
 	mov dword [rbp + 80], 96
 
  malloc_test3$30:
-	; Parameter signedint 1 84
+	; Parameter 84 signedint 1
 	mov dword [rbp + 84], 1
 
  malloc_test3$31:
-	; Call calloc 56 0
+	; Call 56 calloc 0
 	mov qword [rbp + 56], malloc_test3$32
 	mov [rbp + 64], rbp
 	add rbp, 56
@@ -468,17 +468,17 @@ section .text
 	; PostCall 56
 
  malloc_test3$33:
-	; GetReturnValue £temporary4307
+	; GetReturnValue £temporary4326
 
  malloc_test3$34:
-	; Assign e £temporary4307
+	; Assign e £temporary4326
 	mov [rbp + 56], rbx
 
  malloc_test3$35:
 	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$36:
-	; Call print_heap 64 0
+	; Call 64 print_heap 0
 	mov qword [rbp + 64], malloc_test3$37
 	mov [rbp + 72], rbp
 	add rbp, 64
@@ -491,12 +491,12 @@ section .text
 	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$39:
-	; Parameter pointer a 88
+	; Parameter 88 pointer a
 	mov rax, [rbp + 24]
 	mov [rbp + 88], rax
 
  malloc_test3$40:
-	; Call free 64 0
+	; Call 64 free 0
 	mov qword [rbp + 64], malloc_test3$41
 	mov [rbp + 72], rbp
 	add rbp, 64
@@ -509,12 +509,12 @@ section .text
 	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$43:
-	; Parameter pointer b 88
+	; Parameter 88 pointer b
 	mov rax, [rbp + 32]
 	mov [rbp + 88], rax
 
  malloc_test3$44:
-	; Call free 64 0
+	; Call 64 free 0
 	mov qword [rbp + 64], malloc_test3$45
 	mov [rbp + 72], rbp
 	add rbp, 64
@@ -527,12 +527,12 @@ section .text
 	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$47:
-	; Parameter pointer c 88
+	; Parameter 88 pointer c
 	mov rax, [rbp + 40]
 	mov [rbp + 88], rax
 
  malloc_test3$48:
-	; Call free 64 0
+	; Call 64 free 0
 	mov qword [rbp + 64], malloc_test3$49
 	mov [rbp + 72], rbp
 	add rbp, 64
@@ -545,12 +545,12 @@ section .text
 	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$51:
-	; Parameter pointer d 88
+	; Parameter 88 pointer d
 	mov rax, [rbp + 48]
 	mov [rbp + 88], rax
 
  malloc_test3$52:
-	; Call free 64 0
+	; Call 64 free 0
 	mov qword [rbp + 64], malloc_test3$53
 	mov [rbp + 72], rbp
 	add rbp, 64
@@ -563,12 +563,12 @@ section .text
 	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$55:
-	; Parameter pointer e 88
+	; Parameter 88 pointer e
 	mov rax, [rbp + 56]
 	mov [rbp + 88], rax
 
  malloc_test3$56:
-	; Call free 64 0
+	; Call 64 free 0
 	mov qword [rbp + 64], malloc_test3$57
 	mov [rbp + 72], rbp
 	add rbp, 64
@@ -581,7 +581,7 @@ section .text
 	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$59:
-	; Call print_heap 64 0
+	; Call 64 print_heap 0
 	mov qword [rbp + 64], malloc_test3$60
 	mov [rbp + 72], rbp
 	add rbp, 64
@@ -613,39 +613,39 @@ section .text
 	mov qword [rbp + 28], 65534
 
  rec$1:
-	; InspectRegister £temporary4315 bp
+	; InspectRegister £temporary4334 bp
 
  rec$2:
-	; IntegralToIntegral £temporary4316 £temporary4315
+	; IntegralToIntegral £temporary4335 £temporary4334
 	and ebp, 65535
 
  rec$3:
-	; Assign stackTop £temporary4316
+	; Assign stackTop £temporary4335
 	mov [rbp + 24], ebp
 
  rec$4:
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  rec$5:
-	; Parameter pointer "Stack Top: %u, Low Heap: %u\n" 60
+	; Parameter 60 pointer "Stack Top: %u, Low Heap: %u\n"
 	mov qword [rbp + 60], string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#
 
  rec$6:
-	; Parameter unsigned int stackTop 68
+	; Parameter 68 unsigned int stackTop
 	mov eax, [rbp + 24]
 	mov [rbp + 68], eax
 
  rec$7:
-	; Dereference £temporary4317 -> lowHeapPtr lowHeapPtr 0
+	; Dereference £temporary4336 -> lowHeapPtr lowHeapPtr 0
 	mov rsi, [rbp + 28]
 
  rec$8:
-	; Parameter unsigned int £temporary4317 -> lowHeapPtr 72
+	; Parameter 72 unsigned int £temporary4336 -> lowHeapPtr
 	mov eax, [rsi]
 	mov [rbp + 72], eax
 
  rec$9:
-	; Call printf 36 8
+	; Call 36 printf 8
 	mov qword [rbp + 36], rec$10
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -660,7 +660,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  rec$12:
-	; Call rec 36 0
+	; Call 36 rec 0
 	mov qword [rbp + 36], rec$13
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -685,7 +685,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test4$1:
-	; Call rec 24 0
+	; Call 24 rec 0
 	mov qword [rbp + 24], malloc_test4$2
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -710,11 +710,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$1:
-	; Parameter signedint 96 48
+	; Parameter 48 signedint 96
 	mov dword [rbp + 48], 96
 
  malloc_test$2:
-	; Call malloc 24 0
+	; Call 24 malloc 0
 	mov qword [rbp + 24], malloc_test$3
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -724,21 +724,21 @@ section .text
 	; PostCall 24
 
  malloc_test$4:
-	; GetReturnValue £temporary4321
+	; GetReturnValue £temporary4340
 
  malloc_test$5:
-	; Assign b £temporary4321
+	; Assign b £temporary4340
 	mov [rbp + 24], rbx
 
  malloc_test$6:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$7:
-	; Parameter signedint 96 56
+	; Parameter 56 signedint 96
 	mov dword [rbp + 56], 96
 
  malloc_test$8:
-	; Call malloc 32 0
+	; Call 32 malloc 0
 	mov qword [rbp + 32], malloc_test$9
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -748,21 +748,21 @@ section .text
 	; PostCall 32
 
  malloc_test$10:
-	; GetReturnValue £temporary4322
+	; GetReturnValue £temporary4341
 
  malloc_test$11:
-	; Assign c £temporary4322
+	; Assign c £temporary4341
 	mov [rbp + 32], rbx
 
  malloc_test$12:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$13:
-	; Parameter signedint 96 64
+	; Parameter 64 signedint 96
 	mov dword [rbp + 64], 96
 
  malloc_test$14:
-	; Call malloc 40 0
+	; Call 40 malloc 0
 	mov qword [rbp + 40], malloc_test$15
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -772,17 +772,17 @@ section .text
 	; PostCall 40
 
  malloc_test$16:
-	; GetReturnValue £temporary4323
+	; GetReturnValue £temporary4342
 
  malloc_test$17:
-	; Assign d £temporary4323
+	; Assign d £temporary4342
 	mov [rbp + 40], rbx
 
  malloc_test$18:
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$19:
-	; Call print_heap 48 0
+	; Call 48 print_heap 0
 	mov qword [rbp + 48], malloc_test$20
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -795,16 +795,16 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$22:
-	; Parameter pointer c 72
+	; Parameter 72 pointer c
 	mov rax, [rbp + 32]
 	mov [rbp + 72], rax
 
  malloc_test$23:
-	; Parameter signedint 40 80
+	; Parameter 80 signedint 40
 	mov dword [rbp + 80], 40
 
  malloc_test$24:
-	; Call realloc 48 0
+	; Call 48 realloc 0
 	mov qword [rbp + 48], malloc_test$25
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -817,7 +817,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$27:
-	; Call print_heap 48 0
+	; Call 48 print_heap 0
 	mov qword [rbp + 48], malloc_test$28
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -830,11 +830,11 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$30:
-	; Parameter signedint 40 72
+	; Parameter 72 signedint 40
 	mov dword [rbp + 72], 40
 
  malloc_test$31:
-	; Call malloc 48 0
+	; Call 48 malloc 0
 	mov qword [rbp + 48], malloc_test$32
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -847,7 +847,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$34:
-	; Call print_heap 48 0
+	; Call 48 print_heap 0
 	mov qword [rbp + 48], malloc_test$35
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -860,12 +860,12 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$37:
-	; Parameter pointer b 72
+	; Parameter 72 pointer b
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
  malloc_test$38:
-	; Call free 48 0
+	; Call 48 free 0
 	mov qword [rbp + 48], malloc_test$39
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -878,7 +878,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$41:
-	; Call print_heap 48 0
+	; Call 48 print_heap 0
 	mov qword [rbp + 48], malloc_test$42
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -891,12 +891,12 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$44:
-	; Parameter pointer d 72
+	; Parameter 72 pointer d
 	mov rax, [rbp + 40]
 	mov [rbp + 72], rax
 
  malloc_test$45:
-	; Call free 48 0
+	; Call 48 free 0
 	mov qword [rbp + 48], malloc_test$46
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -909,7 +909,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$48:
-	; Call print_heap 48 0
+	; Call 48 print_heap 0
 	mov qword [rbp + 48], malloc_test$49
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -941,14 +941,14 @@ section .text
 	mov qword [rbp + 32], 65534
 
  malloc_test6$1:
-	; InspectRegister £temporary4333 bp
+	; InspectRegister £temporary4352 bp
 
  malloc_test6$2:
-	; IntegralToIntegral £temporary4334 £temporary4333
+	; IntegralToIntegral £temporary4353 £temporary4352
 	and ebp, 65535
 
  malloc_test6$3:
-	; Assign stackTop £temporary4334
+	; Assign stackTop £temporary4353
 	mov [rbp + 28], ebp
 
  malloc_test6$4:
@@ -964,11 +964,11 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test6$7:
-	; Parameter signedint 96 64
+	; Parameter 64 signedint 96
 	mov dword [rbp + 64], 96
 
  malloc_test6$8:
-	; Call malloc 40 0
+	; Call 40 malloc 0
 	mov qword [rbp + 40], malloc_test6$9
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -978,45 +978,45 @@ section .text
 	; PostCall 40
 
  malloc_test6$10:
-	; GetReturnValue £temporary4337
+	; GetReturnValue £temporary4356
 
  malloc_test6$11:
-	; Assign p £temporary4337
+	; Assign p £temporary4356
 	mov [rbp + 40], rbx
 
  malloc_test6$12:
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test6$13:
-	; Parameter pointer "Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u\n" 72
+	; Parameter 72 pointer "Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u\n"
 	mov qword [rbp + 72], string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#
 
  malloc_test6$14:
-	; Parameter signedint i 80
+	; Parameter 80 signedint i
 	mov eax, [rbp + 24]
 	mov [rbp + 80], eax
 
  malloc_test6$15:
-	; Parameter pointer p 84
+	; Parameter 84 pointer p
 	mov rax, [rbp + 40]
 	mov [rbp + 84], rax
 
  malloc_test6$16:
-	; Parameter unsigned int stackTop 92
+	; Parameter 92 unsigned int stackTop
 	mov eax, [rbp + 28]
 	mov [rbp + 92], eax
 
  malloc_test6$17:
-	; Dereference £temporary4338 -> lowHeapPtr lowHeapPtr 0
+	; Dereference £temporary4357 -> lowHeapPtr lowHeapPtr 0
 	mov rsi, [rbp + 32]
 
  malloc_test6$18:
-	; Parameter unsigned int £temporary4338 -> lowHeapPtr 96
+	; Parameter 96 unsigned int £temporary4357 -> lowHeapPtr
 	mov eax, [rsi]
 	mov [rbp + 96], eax
 
  malloc_test6$19:
-	; Call printf 48 20
+	; Call 48 printf 20
 	mov qword [rbp + 48], malloc_test6$20
 	mov [rbp + 56], rbp
 	add rbp, 48

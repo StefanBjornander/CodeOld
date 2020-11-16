@@ -143,55 +143,52 @@ section .text
 	fstp qword [rbp + 56]
 
  exp$27:
-	; CheckTrackMapFloatStack
-
- exp$28:
 	; PreCall 72 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- exp$29:
+ exp$28:
 	; PushFloat term
 	fld qword [rbp + 40]
 
- exp$30:
-	; Parameter double term 96
+ exp$29:
+	; Parameter 96 double term
 	fstp qword [rbp + 96]
 
- exp$31:
-	; Call fabs 72 0
-	mov qword [rbp + 72], exp$32
+ exp$30:
+	; Call 72 fabs 0
+	mov qword [rbp + 72], exp$31
 	mov [rbp + 80], rbp
 	add rbp, 72
 	jmp fabs
 
- exp$32:
+ exp$31:
 	; PostCall 72
 
- exp$33:
+ exp$32:
 	; GetReturnValue £temporary396
 
- exp$34:
+ exp$33:
 	; PushFloat 0.000000001
 	fld qword [float8$0.000000001#]
 
- exp$35:
+ exp$34:
 	; SignedGreaterThanEqual 8 £temporary396 0.000000001
 	fcompp
 	fstsw ax
 	sahf
 	jbe exp$8
 
- exp$36:
+ exp$35:
 	; PushFloat sum
 	fld qword [rbp + 48]
 
- exp$37:
+ exp$36:
 	; Return sum
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- exp$38:
+ exp$37:
 	; FunctionEnd exp
 
 section .data
@@ -223,11 +220,11 @@ section .text
 	fldz
 
  log$2:
-	; SignedLessThanEqual 76 x 0
+	; SignedLessThanEqual 75 x 0
 	fcompp
 	fstsw ax
 	sahf
-	jae log$76
+	jae log$75
 
  log$3:
 	; Assign n 0
@@ -482,78 +479,75 @@ section .text
 	fstp qword [rbp + 60]
 
  log$63:
-	; CheckTrackMapFloatStack
-
- log$64:
 	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- log$65:
+ log$64:
 	; PushFloat term
 	fld qword [rbp + 44]
 
- log$66:
-	; Parameter double term 108
+ log$65:
+	; Parameter 108 double term
 	fstp qword [rbp + 108]
 
- log$67:
-	; Call fabs 84 0
-	mov qword [rbp + 84], log$68
+ log$66:
+	; Call 84 fabs 0
+	mov qword [rbp + 84], log$67
 	mov [rbp + 92], rbp
 	add rbp, 84
 	jmp fabs
 
- log$68:
+ log$67:
 	; PostCall 84
 
- log$69:
+ log$68:
 	; GetReturnValue £temporary415
 
- log$70:
+ log$69:
 	; PushFloat 0.000000001
 	fld qword [float8$0.000000001#]
 
- log$71:
+ log$70:
 	; SignedGreaterThanEqual 40 £temporary415 0.000000001
 	fcompp
 	fstsw ax
 	sahf
 	jbe log$40
 
- log$72:
+ log$71:
 	; PushFloat sum
 	fld qword [rbp + 52]
 
- log$73:
+ log$72:
 	; IntegralToFloating £temporary417 n
 	fild dword [rbp + 32]
 
- log$74:
+ log$73:
 	; BinaryAdd £temporary418 sum £temporary417
 	fadd
 
- log$75:
+ log$74:
 	; Return £temporary418
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- log$76:
+ log$75:
 	; Assign errno 6
 	mov dword [errno], 6
 
- log$77:
+ log$76:
 	; PushFloat 0
 	fldz
 
- log$78:
+ log$77:
 	; Return 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- log$79:
+ log$78:
 	; FunctionEnd log
 
 section .data
@@ -572,11 +566,11 @@ section .text
 	fld qword [rbp + 24]
 
  log10$2:
-	; Parameter double x 56
+	; Parameter 56 double x
 	fstp qword [rbp + 56]
 
  log10$3:
-	; Call log 32 0
+	; Call 32 log 0
 	mov qword [rbp + 32], log10$4
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -651,11 +645,11 @@ section .text
 	fld qword [rbp + 24]
 
  pow$7:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 72]
 
  pow$8:
-	; Call log 40 0
+	; Call 40 log 0
 	mov qword [rbp + 48], pow$9
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -675,11 +669,11 @@ section .text
 	fmul
 
  pow$12:
-	; Parameter double £temporary425 64
+	; Parameter 64 double £temporary425
 	fstp qword [rbp + 64]
 
  pow$13:
-	; Call exp 40 0
+	; Call 40 exp 0
 	mov qword [rbp + 40], pow$14
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -803,11 +797,11 @@ section .text
 	fld qword [rbp + 32]
 
  pow$38:
-	; Parameter double y 64
+	; Parameter 64 double y
 	fstp qword [rbp + 64]
 
  pow$39:
-	; Call floor 40 0
+	; Call 40 floor 0
 	mov qword [rbp + 40], pow$40
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -828,11 +822,11 @@ section .text
 	fld qword [rbp + 32]
 
  pow$44:
-	; Parameter double y 64
+	; Parameter 64 double y
 	fstp qword [rbp + 72]
 
  pow$45:
-	; Call ceil 40 0
+	; Call 40 ceil 0
 	mov qword [rbp + 48], pow$46
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -898,11 +892,11 @@ section .text
 	fchs
 
  pow$59:
-	; Parameter double £temporary441 72
+	; Parameter 72 double £temporary441
 	fstp qword [rbp + 80]
 
  pow$60:
-	; Call log 48 0
+	; Call 48 log 0
 	mov qword [rbp + 56], pow$61
 	mov [rbp + 64], rbp
 	add rbp, 56
@@ -922,11 +916,11 @@ section .text
 	fmul
 
  pow$64:
-	; Parameter double £temporary443 72
+	; Parameter 72 double £temporary443
 	fstp qword [rbp + 72]
 
  pow$65:
-	; Call exp 48 0
+	; Call 48 exp 0
 	mov qword [rbp + 48], pow$66
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -965,11 +959,11 @@ section .text
 	fchs
 
  pow$74:
-	; Parameter double £temporary445 72
+	; Parameter 72 double £temporary445
 	fstp qword [rbp + 80]
 
  pow$75:
-	; Call log 48 0
+	; Call 48 log 0
 	mov qword [rbp + 56], pow$76
 	mov [rbp + 64], rbp
 	add rbp, 56
@@ -989,11 +983,11 @@ section .text
 	fmul
 
  pow$79:
-	; Parameter double £temporary447 72
+	; Parameter 72 double £temporary447
 	fstp qword [rbp + 72]
 
  pow$80:
-	; Call exp 48 0
+	; Call 48 exp 0
 	mov qword [rbp + 48], pow$81
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -1055,7 +1049,7 @@ section .text
 	fld qword [float8$2#]
 
  ldexp$3:
-	; Parameter double 2 60
+	; Parameter 60 double 2
 	fstp qword [rbp + 68]
 
  ldexp$4:
@@ -1063,11 +1057,11 @@ section .text
 	fild dword [rbp + 32]
 
  ldexp$5:
-	; Parameter double £temporary458 68
+	; Parameter 68 double £temporary458
 	fstp qword [rbp + 76]
 
  ldexp$6:
-	; Call pow 36 0
+	; Call 36 pow 0
 	mov qword [rbp + 44], ldexp$7
 	mov [rbp + 52], rbp
 	add rbp, 44
@@ -1118,11 +1112,11 @@ section .text
 	fld qword [rbp + 24]
 
  @1663$log2$2:
-	; Parameter double x 56
+	; Parameter 56 double x
 	fstp qword [rbp + 56]
 
  @1663$log2$3:
-	; Call log 32 0
+	; Call 32 log 0
 	mov qword [rbp + 32], @1663$log2$4
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1185,11 +1179,11 @@ section .text
 	fld qword [rbp + 24]
 
  frexp$6:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  frexp$7:
-	; Call fabs 40 0
+	; Call 40 fabs 0
 	mov qword [rbp + 40], frexp$8
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -1202,11 +1196,11 @@ section .text
 	; GetReturnValue £temporary468
 
  frexp$10:
-	; Parameter double £temporary468 64
+	; Parameter 64 double £temporary468
 	fstp qword [rbp + 64]
 
  frexp$11:
-	; Call log2 40 0
+	; Call 40 log2 0
 	mov qword [rbp + 40], frexp$12
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -1233,7 +1227,7 @@ section .text
 	fld qword [float8$2#]
 
  frexp$18:
-	; Parameter double 2 68
+	; Parameter 68 double 2
 	fstp qword [rbp + 68]
 
  frexp$19:
@@ -1241,11 +1235,11 @@ section .text
 	fild dword [rbp + 40]
 
  frexp$20:
-	; Parameter double £temporary471 76
+	; Parameter 76 double £temporary471
 	fstp qword [rbp + 76]
 
  frexp$21:
-	; Call pow 44 0
+	; Call 44 pow 0
 	mov qword [rbp + 44], frexp$22
 	mov [rbp + 52], rbp
 	add rbp, 44
@@ -1299,7 +1293,7 @@ section .text
 	fld qword [float8$2#]
 
  frexp$33:
-	; Parameter double 2 68
+	; Parameter 68 double 2
 	fstp qword [rbp + 76]
 
  frexp$34:
@@ -1307,11 +1301,11 @@ section .text
 	fild dword [rbp + 40]
 
  frexp$35:
-	; Parameter double £temporary477 76
+	; Parameter 76 double £temporary477
 	fstp qword [rbp + 84]
 
  frexp$36:
-	; Call pow 44 0
+	; Call 44 pow 0
 	mov qword [rbp + 52], frexp$37
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -1375,11 +1369,11 @@ section .text
 	fldz
 
  sqrt$2:
-	; SignedLessThan 28 x 0
+	; SignedLessThan 27 x 0
 	fcompp
 	fstsw ax
 	sahf
-	ja sqrt$28
+	ja sqrt$27
 
  sqrt$3:
 	; PushFloat 1
@@ -1430,78 +1424,75 @@ section .text
 	fstp qword [rbp + 40]
 
  sqrt$15:
-	; CheckTrackMapFloatStack
-
- sqrt$16:
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- sqrt$17:
+ sqrt$16:
 	; PushFloat root_i_plus_1
 	fld qword [rbp + 40]
 
- sqrt$18:
+ sqrt$17:
 	; PushFloat root_i
 	fld qword [rbp + 32]
 
- sqrt$19:
+ sqrt$18:
 	; BinarySubtract £temporary492 root_i_plus_1 root_i
 	fsub
 
- sqrt$20:
-	; Parameter double £temporary492 72
+ sqrt$19:
+	; Parameter 72 double £temporary492
 	fstp qword [rbp + 72]
 
- sqrt$21:
-	; Call fabs 48 0
-	mov qword [rbp + 48], sqrt$22
+ sqrt$20:
+	; Call 48 fabs 0
+	mov qword [rbp + 48], sqrt$21
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp fabs
 
- sqrt$22:
+ sqrt$21:
 	; PostCall 48
 
- sqrt$23:
+ sqrt$22:
 	; GetReturnValue £temporary493
 
- sqrt$24:
+ sqrt$23:
 	; PushFloat 0.000000001
 	fld qword [float8$0.000000001#]
 
- sqrt$25:
+ sqrt$24:
 	; SignedGreaterThanEqual 5 £temporary493 0.000000001
 	fcompp
 	fstsw ax
 	sahf
 	jbe sqrt$5
 
- sqrt$26:
+ sqrt$25:
 	; PushFloat root_i_plus_1
 	fld qword [rbp + 40]
 
- sqrt$27:
+ sqrt$26:
 	; Return root_i_plus_1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- sqrt$28:
+ sqrt$27:
 	; Assign errno 6
 	mov dword [errno], 6
 
- sqrt$29:
+ sqrt$28:
 	; PushFloat 0
 	fldz
 
- sqrt$30:
+ sqrt$29:
 	; Return 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- sqrt$31:
+ sqrt$30:
 	; FunctionEnd sqrt
 
 section .text
@@ -1514,11 +1505,11 @@ section .text
 	fld qword [rbp + 24]
 
  modf$2:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  modf$3:
-	; Call fabs 40 0
+	; Call 40 fabs 0
 	mov qword [rbp + 40], modf$4
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -1718,11 +1709,11 @@ section .text
 	fsub
 
  fmod$13:
-	; Parameter double £temporary514 64
+	; Parameter 64 double £temporary514
 	fstp qword [rbp + 64]
 
  fmod$14:
-	; Call fabs 40 0
+	; Call 40 fabs 0
 	mov qword [rbp + 40], fmod$15
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -1819,11 +1810,11 @@ section .text
 	fld qword [rbp + 24]
 
  sin$2:
-	; Parameter double x 56
+	; Parameter 56 double x
 	fstp qword [rbp + 56]
 
  sin$3:
-	; Call fabs 32 0
+	; Call 32 fabs 0
 	mov qword [rbp + 32], sin$4
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1854,7 +1845,7 @@ section .text
 	fld qword [rbp + 24]
 
  sin$10:
-	; Parameter double x 56
+	; Parameter 56 double x
 	fstp qword [rbp + 56]
 
  sin$11:
@@ -1862,11 +1853,11 @@ section .text
 	fld qword [float8$6.2831853071795864769252866#]
 
  sin$12:
-	; Parameter double 6.2831853071795864769252866 64
+	; Parameter 64 double 6.2831853071795864769252866
 	fstp qword [rbp + 64]
 
  sin$13:
-	; Call fmod 32 0
+	; Call 32 fmod 0
 	mov qword [rbp + 32], sin$14
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2051,55 +2042,52 @@ section .text
 	fstp qword [rbp + 72]
 
  sin$59:
-	; CheckTrackMapFloatStack
-
- sin$60:
 	; PreCall 80 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- sin$61:
+ sin$60:
 	; PushFloat term
 	fld qword [rbp + 40]
 
- sin$62:
-	; Parameter double term 104
+ sin$61:
+	; Parameter 104 double term
 	fstp qword [rbp + 104]
 
- sin$63:
-	; Call fabs 80 0
-	mov qword [rbp + 80], sin$64
+ sin$62:
+	; Call 80 fabs 0
+	mov qword [rbp + 80], sin$63
 	mov [rbp + 88], rbp
 	add rbp, 80
 	jmp fabs
 
- sin$64:
+ sin$63:
 	; PostCall 80
 
- sin$65:
+ sin$64:
 	; GetReturnValue £temporary533
 
- sin$66:
+ sin$65:
 	; PushFloat 0.000000001
 	fld qword [float8$0.000000001#]
 
- sin$67:
+ sin$66:
 	; SignedGreaterThanEqual 27 £temporary533 0.000000001
 	fcompp
 	fstsw ax
 	sahf
 	jbe sin$27
 
- sin$68:
+ sin$67:
 	; PushFloat sum
 	fld qword [rbp + 48]
 
- sin$69:
+ sin$68:
 	; Return sum
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- sin$70:
+ sin$69:
 	; FunctionEnd sin
 
 section .text
@@ -2112,11 +2100,11 @@ section .text
 	fld qword [rbp + 24]
 
  cos$2:
-	; Parameter double x 56
+	; Parameter 56 double x
 	fstp qword [rbp + 56]
 
  cos$3:
-	; Call fabs 32 0
+	; Call 32 fabs 0
 	mov qword [rbp + 32], cos$4
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2147,7 +2135,7 @@ section .text
 	fld qword [rbp + 24]
 
  cos$10:
-	; Parameter double x 56
+	; Parameter 56 double x
 	fstp qword [rbp + 56]
 
  cos$11:
@@ -2155,11 +2143,11 @@ section .text
 	fld qword [float8$6.2831853071795864769252866#]
 
  cos$12:
-	; Parameter double 6.2831853071795864769252866 64
+	; Parameter 64 double 6.2831853071795864769252866
 	fstp qword [rbp + 64]
 
  cos$13:
-	; Call fmod 32 0
+	; Call 32 fmod 0
 	mov qword [rbp + 32], cos$14
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2344,55 +2332,52 @@ section .text
 	fstp qword [rbp + 72]
 
  cos$59:
-	; CheckTrackMapFloatStack
-
- cos$60:
 	; PreCall 80 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- cos$61:
+ cos$60:
 	; PushFloat term
 	fld qword [rbp + 40]
 
- cos$62:
-	; Parameter double term 104
+ cos$61:
+	; Parameter 104 double term
 	fstp qword [rbp + 104]
 
- cos$63:
-	; Call fabs 80 0
-	mov qword [rbp + 80], cos$64
+ cos$62:
+	; Call 80 fabs 0
+	mov qword [rbp + 80], cos$63
 	mov [rbp + 88], rbp
 	add rbp, 80
 	jmp fabs
 
- cos$64:
+ cos$63:
 	; PostCall 80
 
- cos$65:
+ cos$64:
 	; GetReturnValue £temporary552
 
- cos$66:
+ cos$65:
 	; PushFloat 0.000000001
 	fld qword [float8$0.000000001#]
 
- cos$67:
+ cos$66:
 	; SignedGreaterThanEqual 27 £temporary552 0.000000001
 	fcompp
 	fstsw ax
 	sahf
 	jbe cos$27
 
- cos$68:
+ cos$67:
 	; PushFloat sum
 	fld qword [rbp + 48]
 
- cos$69:
+ cos$68:
 	; Return sum
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- cos$70:
+ cos$69:
 	; FunctionEnd cos
 
 section .text
@@ -2405,11 +2390,11 @@ section .text
 	fld qword [rbp + 24]
 
  tan$2:
-	; Parameter double x 56
+	; Parameter 56 double x
 	fstp qword [rbp + 56]
 
  tan$3:
-	; Call cos 32 0
+	; Call 32 cos 0
 	mov qword [rbp + 32], tan$4
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2448,11 +2433,11 @@ section .text
 	fld qword [rbp + 24]
 
  tan$12:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  tan$13:
-	; Call sin 40 0
+	; Call 40 sin 0
 	mov qword [rbp + 40], tan$14
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -2558,11 +2543,11 @@ section .text
 	fchs
 
  asin$11:
-	; Parameter double £temporary566 56
+	; Parameter 56 double £temporary566
 	fstp qword [rbp + 56]
 
  asin$12:
-	; Call asin 32 0
+	; Call 32 asin 0
 	mov qword [rbp + 32], asin$13
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2632,11 +2617,11 @@ section .text
 	fsub
 
  asin$28:
-	; Parameter double £temporary571 56
+	; Parameter 56 double £temporary571
 	fstp qword [rbp + 64]
 
  asin$29:
-	; Call sqrt 32 0
+	; Call 32 sqrt 0
 	mov qword [rbp + 40], asin$30
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -2656,11 +2641,11 @@ section .text
 	fdiv
 
  asin$33:
-	; Parameter double £temporary573 56
+	; Parameter 56 double £temporary573
 	fstp qword [rbp + 56]
 
  asin$34:
-	; Call atan 32 0
+	; Call 32 atan 0
 	mov qword [rbp + 32], asin$35
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2763,11 +2748,11 @@ section .text
 	fchs
 
  acos$12:
-	; Parameter double £temporary580 56
+	; Parameter 56 double £temporary580
 	fstp qword [rbp + 64]
 
  acos$13:
-	; Call acos 32 0
+	; Call 32 acos 0
 	mov qword [rbp + 40], acos$14
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -2835,11 +2820,11 @@ section .text
 	fsub
 
  acos$28:
-	; Parameter double £temporary585 56
+	; Parameter 56 double £temporary585
 	fstp qword [rbp + 56]
 
  acos$29:
-	; Call sqrt 32 0
+	; Call 32 sqrt 0
 	mov qword [rbp + 32], acos$30
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2860,11 +2845,11 @@ section .text
 	fdiv
 
  acos$34:
-	; Parameter double £temporary587 56
+	; Parameter 56 double £temporary587
 	fstp qword [rbp + 56]
 
  acos$35:
-	; Call atan 32 0
+	; Call 32 atan 0
 	mov qword [rbp + 32], acos$36
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2936,11 +2921,11 @@ section .text
 	fchs
 
  atan$6:
-	; Parameter double £temporary593 56
+	; Parameter 56 double £temporary593
 	fstp qword [rbp + 56]
 
  atan$7:
-	; Call atan 32 0
+	; Call 32 atan 0
 	mov qword [rbp + 32], atan$8
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2999,11 +2984,11 @@ section .text
 	fdiv
 
  atan$20:
-	; Parameter double £temporary597 56
+	; Parameter 56 double £temporary597
 	fstp qword [rbp + 64]
 
  atan$21:
-	; Call atan 32 0
+	; Call 32 atan 0
 	mov qword [rbp + 40], atan$22
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -3086,11 +3071,11 @@ section .text
 	fadd
 
  atan$39:
-	; Parameter double £temporary602 56
+	; Parameter 56 double £temporary602
 	fstp qword [rbp + 88]
 
  atan$40:
-	; Call sqrt 32 0
+	; Call 32 sqrt 0
 	mov qword [rbp + 64], atan$41
 	mov [rbp + 72], rbp
 	add rbp, 64
@@ -3115,11 +3100,11 @@ section .text
 	fdiv
 
  atan$45:
-	; Parameter double £temporary605 56
+	; Parameter 56 double £temporary605
 	fstp qword [rbp + 64]
 
  atan$46:
-	; Call atan 32 0
+	; Call 32 atan 0
 	mov qword [rbp + 40], atan$47
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -3270,55 +3255,52 @@ section .text
 	fstp qword [rbp + 56]
 
  atan$82:
-	; CheckTrackMapFloatStack
-
- atan$83:
 	; PreCall 72 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- atan$84:
+ atan$83:
 	; PushFloat term
 	fld qword [rbp + 32]
 
- atan$85:
-	; Parameter double term 96
+ atan$84:
+	; Parameter 96 double term
 	fstp qword [rbp + 96]
 
- atan$86:
-	; Call fabs 72 0
-	mov qword [rbp + 72], atan$87
+ atan$85:
+	; Call 72 fabs 0
+	mov qword [rbp + 72], atan$86
 	mov [rbp + 80], rbp
 	add rbp, 72
 	jmp fabs
 
- atan$87:
+ atan$86:
 	; PostCall 72
 
- atan$88:
+ atan$87:
 	; GetReturnValue £temporary615
 
- atan$89:
+ atan$88:
 	; PushFloat 0.000000001
 	fld qword [float8$0.000000001#]
 
- atan$90:
+ atan$89:
 	; SignedGreaterThanEqual 59 £temporary615 0.000000001
 	fcompp
 	fstsw ax
 	sahf
 	jbe atan$59
 
- atan$91:
+ atan$90:
 	; PushFloat sum
 	fld qword [rbp + 40]
 
- atan$92:
+ atan$91:
 	; Return sum
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- atan$93:
+ atan$92:
 	; FunctionEnd atan
 
 section .data
@@ -3366,11 +3348,11 @@ section .text
 	fdiv
 
  atan2$7:
-	; Parameter double £temporary623 64
+	; Parameter 64 double £temporary623
 	fstp qword [rbp + 64]
 
  atan2$8:
-	; Call atan 40 0
+	; Call 40 atan 0
 	mov qword [rbp + 40], atan2$9
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -3440,11 +3422,11 @@ section .text
 	fdiv
 
  atan2$23:
-	; Parameter double £temporary628 64
+	; Parameter 64 double £temporary628
 	fstp qword [rbp + 72]
 
  atan2$24:
-	; Call atan 40 0
+	; Call 40 atan 0
 	mov qword [rbp + 48], atan2$25
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -3521,11 +3503,11 @@ section .text
 	fdiv
 
  atan2$40:
-	; Parameter double £temporary634 64
+	; Parameter 64 double £temporary634
 	fstp qword [rbp + 72]
 
  atan2$41:
-	; Call atan 40 0
+	; Call 40 atan 0
 	mov qword [rbp + 48], atan2$42
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -3661,11 +3643,11 @@ section .text
 	fld qword [rbp + 24]
 
  sinh$2:
-	; Parameter double x 56
+	; Parameter 56 double x
 	fstp qword [rbp + 56]
 
  sinh$3:
-	; Call exp 32 0
+	; Call 32 exp 0
 	mov qword [rbp + 32], sinh$4
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -3690,11 +3672,11 @@ section .text
 	fchs
 
  sinh$9:
-	; Parameter double £temporary647 56
+	; Parameter 56 double £temporary647
 	fstp qword [rbp + 64]
 
  sinh$10:
-	; Call exp 32 0
+	; Call 32 exp 0
 	mov qword [rbp + 40], sinh$11
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -3741,11 +3723,11 @@ section .text
 	fld qword [rbp + 24]
 
  cosh$2:
-	; Parameter double x 56
+	; Parameter 56 double x
 	fstp qword [rbp + 56]
 
  cosh$3:
-	; Call exp 32 0
+	; Call 32 exp 0
 	mov qword [rbp + 32], cosh$4
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -3770,11 +3752,11 @@ section .text
 	fchs
 
  cosh$9:
-	; Parameter double £temporary654 56
+	; Parameter 56 double £temporary654
 	fstp qword [rbp + 64]
 
  cosh$10:
-	; Call exp 32 0
+	; Call 32 exp 0
 	mov qword [rbp + 40], cosh$11
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -3821,11 +3803,11 @@ section .text
 	fld qword [rbp + 24]
 
  tanh$2:
-	; Parameter double x 56
+	; Parameter 56 double x
 	fstp qword [rbp + 56]
 
  tanh$3:
-	; Call sinh 32 0
+	; Call 32 sinh 0
 	mov qword [rbp + 32], tanh$4
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -3846,11 +3828,11 @@ section .text
 	fld qword [rbp + 24]
 
  tanh$8:
-	; Parameter double x 56
+	; Parameter 56 double x
 	fstp qword [rbp + 64]
 
  tanh$9:
-	; Call cosh 32 0
+	; Call 32 cosh 0
 	mov qword [rbp + 40], tanh$10
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -3908,11 +3890,11 @@ section .text
 	fchs
 
  floor$6:
-	; Parameter double £temporary666 56
+	; Parameter 56 double £temporary666
 	fstp qword [rbp + 56]
 
  floor$7:
-	; Call ceil 32 0
+	; Call 32 ceil 0
 	mov qword [rbp + 32], floor$8
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -3994,11 +3976,11 @@ section .text
 	fchs
 
  ceil$6:
-	; Parameter double £temporary673 56
+	; Parameter 56 double £temporary673
 	fstp qword [rbp + 56]
 
  ceil$7:
-	; Call floor 32 0
+	; Call 32 floor 0
 	mov qword [rbp + 32], ceil$8
 	mov [rbp + 40], rbp
 	add rbp, 32

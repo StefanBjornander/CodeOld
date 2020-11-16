@@ -16,6 +16,7 @@ time_t time(time_t* timePtr) {
   int year;
   short month, monthDay;
   short hour, min, sec;
+  struct lconv* localeConvPtr = localeconv();
 
   register_ah = 0x2As;
   interrupt(0x21s);
@@ -29,9 +30,13 @@ time_t time(time_t* timePtr) {
   min = register_cl;
   sec = register_dh;
 
+  if (localeConvPtr != NULL) {
+    hour -= localeConvPtr->winterTimeZone;
+  }
+
   { const BOOL leapYear = (year % 4) == 0;
     const int daysOfMonths[] = {31, leapYear ? 29 : 28, 31, 30,
-                                31, 30, 30, 31, 30, 31, 30, 31};
+                                31, 30, 31, 31, 30, 31, 30, 31};
     int yearDay = monthDay - 1, mon;
 
     for (mon = 0; mon < month; ++mon) {
@@ -70,17 +75,46 @@ time_t mktime(struct tm* tp) {
 
 static struct tm g_timeStruct;
 
+/*static struct tm leapList[] = {{72, 07, 01},  // July 1, 1972
+                               {72, 07, 01},  // July 1, 1972
+                               {72, 07, 01},  // July 1, 1972
+                               {72, 07, 01},  // July 1, 1972
+                               {72, 07, 01},  // July 1, 1972
+                               {72, 07, 01},  // July 1, 1972
+                               {72, 07, 01},  // July 1, 1972
+                               {72, 07, 01},  // July 1, 1972
+                               {72, 07, 01},  // July 1, 1972
+                               {72, 07, 01},  // July 1, 1972
+                               {72, 07, 01},  // July 1, 1972
+                               {72, 07, 01},  // July 1, 1972
+                               {72, 07, 01},  // July 1, 1972
+                               {72, 07, 01}}; // July 1, 1972
+
+static int leapSize = (sizeof leapList) / (sizeof leapList[0]);
+
+static int leapSeconds(time_t t) {
+  int seconds = 0, index;
+
+  for (index = 0; index < leapSize; ++index) {
+    if (difftime(t, mktime(&leapList[index])) >= 0) {
+      ++seconds;
+    }
+  }
+
+  return seconds;
+}*/
+
 struct tm* gmtime(const time_t* timePtr) {
   int year = 1970;
 
   if (timePtr != NULL) {
     time_t time = *timePtr;
-    const long secondsOfDay = time % 86400L;
     long totalDays = time / 86400L;
-
+    const long secondsOfDay = time % 86400L,
+               secondsOfHour = secondsOfDay % 3600;
     g_timeStruct.tm_hour = secondsOfDay / 3600;
-    g_timeStruct.tm_min = (secondsOfDay % 3600) / 60;
-    g_timeStruct.tm_sec = (secondsOfDay % 3600) % 60;
+    g_timeStruct.tm_min = secondsOfHour / 60;
+    g_timeStruct.tm_sec = secondsOfHour % 60;
 
     // January 1, 1970, was a Thursday
     if (totalDays < 3) {
@@ -97,8 +131,14 @@ struct tm* gmtime(const time_t* timePtr) {
 
       if (totalDays < daysOfYear) {
         const int daysOfMonths[] = {31, leapYear ? 29 : 28, 31, 30,
-                                    31, 30, 30, 31, 30, 31, 30, 31};
+                                    31, 30, 31, 31, 30, 31, 30, 31};
         int month = 0;
+        /*int index, sum = 0;
+        for (index = 0; index < 12; ++index) {
+          sum += daysOfMonths[index];
+          printf("  %i %i %i\n", index, daysOfMonths[index], sum);
+        }*/
+
         g_timeStruct.tm_year = year - 1900;
         g_timeStruct.tm_yday = totalDays;
 
@@ -150,8 +190,7 @@ char* asctime(const struct tm* tp) {
                                         : g_defaultShortDayList;
   shortMonthList = (shortMonthList != NULL) ? shortMonthList
                                             : g_defaultShortMonthList;
-
-  sprintf(g_timeString, "%s %s %2i %02i:%02i:%02i %04i",
+  sprintf(g_timeString, "%s %s %i %02i:%02i:%02i %i",
           shortDayList[tp->tm_wday], shortMonthList[tp->tm_mon],
           tp->tm_mday, tp->tm_hour, tp->tm_min,
           tp->tm_sec, tp->tm_year + 1900);
@@ -168,12 +207,12 @@ struct tm* localtime(const time_t* timePtr) {
   int timeZone = 0;
 
   if (localeConvPtr != NULL) {
-    timeZone = tmPtr->tm_isdst ? localeConvPtr->summerTimeZone
-                               : localeConvPtr->winterTimeZone;
+    timeZone = (tmPtr->tm_isdst == 1) ? localeConvPtr->summerTimeZone
+                                      : localeConvPtr->winterTimeZone;
   }
 
-  { time_t time = *timePtr + (3600 * timeZone);
-    return gmtime(&time);
+  { time_t t = *timePtr + (3600l * timeZone);
+    return gmtime(&t);
   }
 }
 
@@ -239,33 +278,33 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
             break;
 
           case 'c':
-            sprintf(add, "%04d-%02d-%02d %02d:%02d:%02d",
+            sprintf(add, "%02i-%02i-%02i %02i:%02i:%02i",
                     1900 + tp->tm_year, tp->tm_mon + 1, tp->tm_mday,
                     tp->tm_hour, tp->tm_min, tp->tm_sec); 
             break;
 
           case 'd':
-            sprintf(add, "%02d", tp->tm_mday);
+            sprintf(add, "%i", tp->tm_mday);
             break;
 
           case 'H':
-            sprintf(add, "%02d", tp->tm_hour);
+            sprintf(add, "%i", tp->tm_hour);
             break;
 
           case 'I':
-            sprintf(add, "%02d", tp->tm_hour % 12);
+            sprintf(add, "%i", tp->tm_hour % 12);
             break;
 
           case 'j':
-            sprintf(add, "%03d", tp->tm_yday);
+            sprintf(add, "%i", tp->tm_yday);
             break;
 
           case 'm':
-            sprintf(add, "%02d", tp->tm_mon + 1);
+            sprintf(add, "%i", tp->tm_mon + 1);
             break;
 
           case 'M':
-            sprintf(add, "%02d", tp->tm_min);
+            sprintf(add, "%i", tp->tm_min);
             break;
 
           case 'p':
@@ -273,36 +312,36 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
             break;
 
           case 'S':
-            sprintf(add, "%02d", tp->tm_sec);
+            sprintf(add, "%i", tp->tm_sec);
             break;
 
           case 'U':
-            sprintf(add, "%02d", yearDaySunday);
+            sprintf(add, "%i", yearDaySunday);
             break;
 
           case 'w':
-            sprintf(add, "%02d", tp->tm_wday);
+            sprintf(add, "%i", tp->tm_wday);
             break;
 
           case 'W':
-            sprintf(add, "%02d", yearDayMonday);
+            sprintf(add, "%i", yearDayMonday);
             break;
 
           case 'x':
-            sprintf(add, "%04d-%02d-%02d", 1900 + tp->tm_year,
-                    tp->tm_mon + 1, tp->tm_mday);
+            sprintf(add, "%02i:%02i:%02i", tp->tm_hour,
+                    tp->tm_min, tp->tm_sec); 
             break;
 
           case 'X':
-            sprintf(add, "%02d:%02d:%02d", tp->tm_hour, tp->tm_min, tp->tm_sec); 
+            sprintf(add, "%02i:%02i:%02i", tp->tm_hour, tp->tm_min, tp->tm_sec); 
             break;
 
           case 'y':
-            sprintf(add, "%02d", tp->tm_year % 100);
+            sprintf(add, "%i", tp->tm_year % 100);
             break;
 
           case 'Y':
-            sprintf(add, "%04d", 1900 + tp->tm_year);
+            sprintf(add, "%i", 1900 + tp->tm_year);
             break;
 
           case 'Z':
@@ -311,6 +350,10 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
 
           case '%':
             strcpy(add, "%");
+
+          default:
+            strcpy(add, "");
+            break;
         }
       }
       else {

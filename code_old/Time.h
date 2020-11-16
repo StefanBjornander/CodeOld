@@ -2,7 +2,7 @@
 #define __TIME_H__
 
 #define size_t int
-#define time_t long
+#define time_t unsigned long
 #define clock_t long
 
 struct tm {

@@ -8,7 +8,7 @@
 
 section .data
 
-@8722$i:
+@8738$i:
 	; Initializer SignedInt 0
 	dd 0
 
@@ -24,23 +24,23 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stack_test$1:
-	; Parameter pointer "%i " 48
+	; Parameter 48 pointer "%i "
 	mov qword [rbp + 48], string_25i20#
 
  stack_test$2:
-	; Assign £temporary4278 i
-	mov eax, [@8722$i]
+	; Assign £temporary4297 i
+	mov eax, [@8738$i]
 
  stack_test$3:
 	; BinaryAdd i i 1
-	inc dword [@8722$i]
+	inc dword [@8738$i]
 
  stack_test$4:
-	; Parameter signedint £temporary4278 56
+	; Parameter 56 signedint £temporary4297
 	mov [rbp + 56], eax
 
  stack_test$5:
-	; Call printf 24 4
+	; Call 24 printf 4
 	mov qword [rbp + 24], stack_test$6
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -55,7 +55,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stack_test$8:
-	; Call stack_test 24 0
+	; Call 24 stack_test 0
 	mov qword [rbp + 24], stack_test$9
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -90,11 +90,11 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  heap_test$2:
-	; Parameter signedint 1024 60
+	; Parameter 60 signedint 1024
 	mov dword [rbp + 60], 1024
 
  heap_test$3:
-	; Call malloc 36 0
+	; Call 36 malloc 0
 	mov qword [rbp + 36], heap_test$4
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -104,10 +104,10 @@ section .text
 	; PostCall 36
 
  heap_test$5:
-	; GetReturnValue £temporary4281
+	; GetReturnValue £temporary4300
 
  heap_test$6:
-	; Assign pointer £temporary4281
+	; Assign pointer £temporary4300
 	mov [rbp + 28], rbx
 
  heap_test$7:
@@ -119,11 +119,11 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  heap_test$9:
-	; Parameter pointer "1024 bytes-block number: %i\n" 60
+	; Parameter 60 pointer "1024 bytes-block number: %i\n"
 	mov qword [rbp + 60], string_102420bytes2Dblock20number3A2025i0A#
 
  heap_test$10:
-	; Assign £temporary4283 count
+	; Assign £temporary4302 count
 	mov eax, [rbp + 24]
 
  heap_test$11:
@@ -131,16 +131,16 @@ section .text
 	inc dword [rbp + 24]
 
  heap_test$12:
-	; Parameter signedint £temporary4283 68
+	; Parameter 68 signedint £temporary4302
 	mov [rbp + 68], eax
 
  heap_test$13:
-	; Parameter pointer pointer 72
+	; Parameter 72 pointer pointer
 	mov rax, [rbp + 28]
 	mov [rbp + 72], rax
 
  heap_test$14:
-	; Call printf 36 12
+	; Call 36 printf 12
 	mov qword [rbp + 36], heap_test$15
 	mov [rbp + 44], rbp
 	add rbp, 36

@@ -190,10 +190,10 @@ math_test_1x$44:	; post call
 145:	
 
 math_test_1x$45:	; return
-146:		mov t2751, [bp]
+146:		mov t2764, [bp]
 147:		mov di, [bp + 4]
 148:		mov bp, [bp + 2]
-149:		jmp t2751
+149:		jmp t2764
 151:	
 
 math_test_1x$46:	; function end math_test_1x
@@ -235,16 +235,16 @@ acos_test$7:	; call function noellipse-noellipse acos
 acos_test$8:	; post call
 28:	
 
-acos_test$9:	; £temporary4713 = return_value
+acos_test$9:	; £temporary4719 = return_value
 30:	
 
-acos_test$10:	; parameter £temporary4713, offset 16
+acos_test$10:	; parameter £temporary4719, offset 16
 31:		fstp qword [bp + 30]
 33:	
 
 acos_test$11:	; parameter errno, offset 24
-34:		mov a2752, [errno]
-35:		mov [bp + 38], a2752
+34:		mov a2765, [errno]
+35:		mov [bp + 38], a2765
 37:	
 
 acos_test$12:	; call function noellipse-ellipse printf, extra 0
@@ -264,10 +264,10 @@ acos_test$14:	; errno = 0
 50:	
 
 acos_test$15:	; return
-51:		mov t2753, [bp]
+51:		mov t2766, [bp]
 52:		mov di, [bp + 4]
 53:		mov bp, [bp + 2]
-54:		jmp t2753
+54:		jmp t2766
 56:	
 
 acos_test$16:	; function end acos_test
@@ -309,16 +309,16 @@ atan_test$7:	; call function noellipse-noellipse atan
 atan_test$8:	; post call
 28:	
 
-atan_test$9:	; £temporary4720 = return_value
+atan_test$9:	; £temporary4726 = return_value
 30:	
 
-atan_test$10:	; parameter £temporary4720, offset 16
+atan_test$10:	; parameter £temporary4726, offset 16
 31:		fstp qword [bp + 30]
 33:	
 
 atan_test$11:	; parameter errno, offset 24
-34:		mov a2754, [errno]
-35:		mov [bp + 38], a2754
+34:		mov a2767, [errno]
+35:		mov [bp + 38], a2767
 37:	
 
 atan_test$12:	; call function noellipse-ellipse printf, extra 0
@@ -338,10 +338,10 @@ atan_test$14:	; errno = 0
 50:	
 
 atan_test$15:	; return
-51:		mov t2755, [bp]
+51:		mov t2768, [bp]
 52:		mov di, [bp + 4]
 53:		mov bp, [bp + 2]
-54:		jmp t2755
+54:		jmp t2768
 56:	
 
 atan_test$16:	; function end atan_test
@@ -1024,10 +1024,10 @@ main_math$161:	; post call
 515:	
 
 main_math$162:	; return
-516:		mov t2756, [bp]
+516:		mov t2769, [bp]
 517:		mov di, [bp + 4]
 518:		mov bp, [bp + 2]
-519:		jmp t2756
+519:		jmp t2769
 521:	
 
 main_math$163:	; function end main_math
@@ -1096,16 +1096,16 @@ math_test_1$13:	; call function noellipse-noellipse sin
 math_test_1$14:	; post call
 49:	
 
-math_test_1$15:	; £temporary4795 = return_value
+math_test_1$15:	; £temporary4801 = return_value
 51:	
 
-math_test_1$16:	; parameter £temporary4795, offset 16
+math_test_1$16:	; parameter £temporary4801, offset 16
 52:		fstp qword [bp + 30]
 54:	
 
 math_test_1$17:	; parameter errno, offset 24
-55:		mov a2757, [errno]
-56:		mov [bp + 38], a2757
+55:		mov a2770, [errno]
+56:		mov [bp + 38], a2770
 58:	
 
 math_test_1$18:	; call function noellipse-ellipse printf, extra 0
@@ -1160,16 +1160,16 @@ math_test_1$28:	; call function noellipse-noellipse cos
 math_test_1$29:	; post call
 98:	
 
-math_test_1$30:	; £temporary4797 = return_value
+math_test_1$30:	; £temporary4803 = return_value
 100:	
 
-math_test_1$31:	; parameter £temporary4797, offset 16
+math_test_1$31:	; parameter £temporary4803, offset 16
 101:		fstp qword [bp + 30]
 103:	
 
 math_test_1$32:	; parameter errno, offset 24
-104:		mov a2758, [errno]
-105:		mov [bp + 38], a2758
+104:		mov a2771, [errno]
+105:		mov [bp + 38], a2771
 107:	
 
 math_test_1$33:	; call function noellipse-ellipse printf, extra 0
@@ -1224,16 +1224,16 @@ math_test_1$43:	; call function noellipse-noellipse tan
 math_test_1$44:	; post call
 147:	
 
-math_test_1$45:	; £temporary4799 = return_value
+math_test_1$45:	; £temporary4805 = return_value
 149:	
 
-math_test_1$46:	; parameter £temporary4799, offset 16
+math_test_1$46:	; parameter £temporary4805, offset 16
 150:		fstp qword [bp + 30]
 152:	
 
 math_test_1$47:	; parameter errno, offset 24
-153:		mov a2759, [errno]
-154:		mov [bp + 38], a2759
+153:		mov a2772, [errno]
+154:		mov [bp + 38], a2772
 156:	
 
 math_test_1$48:	; call function noellipse-ellipse printf, extra 0
@@ -1288,16 +1288,16 @@ math_test_1$58:	; call function noellipse-noellipse asin
 math_test_1$59:	; post call
 196:	
 
-math_test_1$60:	; £temporary4801 = return_value
+math_test_1$60:	; £temporary4807 = return_value
 198:	
 
-math_test_1$61:	; parameter £temporary4801, offset 16
+math_test_1$61:	; parameter £temporary4807, offset 16
 199:		fstp qword [bp + 30]
 201:	
 
 math_test_1$62:	; parameter errno, offset 24
-202:		mov a2760, [errno]
-203:		mov [bp + 38], a2760
+202:		mov a2773, [errno]
+203:		mov [bp + 38], a2773
 205:	
 
 math_test_1$63:	; call function noellipse-ellipse printf, extra 0
@@ -1352,16 +1352,16 @@ math_test_1$73:	; call function noellipse-noellipse acos
 math_test_1$74:	; post call
 245:	
 
-math_test_1$75:	; £temporary4803 = return_value
+math_test_1$75:	; £temporary4809 = return_value
 247:	
 
-math_test_1$76:	; parameter £temporary4803, offset 16
+math_test_1$76:	; parameter £temporary4809, offset 16
 248:		fstp qword [bp + 30]
 250:	
 
 math_test_1$77:	; parameter errno, offset 24
-251:		mov a2761, [errno]
-252:		mov [bp + 38], a2761
+251:		mov a2774, [errno]
+252:		mov [bp + 38], a2774
 254:	
 
 math_test_1$78:	; call function noellipse-ellipse printf, extra 0
@@ -1416,16 +1416,16 @@ math_test_1$88:	; call function noellipse-noellipse atan
 math_test_1$89:	; post call
 294:	
 
-math_test_1$90:	; £temporary4805 = return_value
+math_test_1$90:	; £temporary4811 = return_value
 296:	
 
-math_test_1$91:	; parameter £temporary4805, offset 16
+math_test_1$91:	; parameter £temporary4811, offset 16
 297:		fstp qword [bp + 30]
 299:	
 
 math_test_1$92:	; parameter errno, offset 24
-300:		mov a2762, [errno]
-301:		mov [bp + 38], a2762
+300:		mov a2775, [errno]
+301:		mov [bp + 38], a2775
 303:	
 
 math_test_1$93:	; call function noellipse-ellipse printf, extra 0
@@ -1480,16 +1480,16 @@ math_test_1$103:	; call function noellipse-noellipse exp
 math_test_1$104:	; post call
 343:	
 
-math_test_1$105:	; £temporary4807 = return_value
+math_test_1$105:	; £temporary4813 = return_value
 345:	
 
-math_test_1$106:	; parameter £temporary4807, offset 16
+math_test_1$106:	; parameter £temporary4813, offset 16
 346:		fstp qword [bp + 30]
 348:	
 
 math_test_1$107:	; parameter errno, offset 24
-349:		mov a2763, [errno]
-350:		mov [bp + 38], a2763
+349:		mov a2776, [errno]
+350:		mov [bp + 38], a2776
 352:	
 
 math_test_1$108:	; call function noellipse-ellipse printf, extra 0
@@ -1544,16 +1544,16 @@ math_test_1$118:	; call function noellipse-noellipse log
 math_test_1$119:	; post call
 392:	
 
-math_test_1$120:	; £temporary4809 = return_value
+math_test_1$120:	; £temporary4815 = return_value
 394:	
 
-math_test_1$121:	; parameter £temporary4809, offset 16
+math_test_1$121:	; parameter £temporary4815, offset 16
 395:		fstp qword [bp + 30]
 397:	
 
 math_test_1$122:	; parameter errno, offset 24
-398:		mov a2764, [errno]
-399:		mov [bp + 38], a2764
+398:		mov a2777, [errno]
+399:		mov [bp + 38], a2777
 401:	
 
 math_test_1$123:	; call function noellipse-ellipse printf, extra 0
@@ -1608,16 +1608,16 @@ math_test_1$133:	; call function noellipse-noellipse log10
 math_test_1$134:	; post call
 441:	
 
-math_test_1$135:	; £temporary4811 = return_value
+math_test_1$135:	; £temporary4817 = return_value
 443:	
 
-math_test_1$136:	; parameter £temporary4811, offset 16
+math_test_1$136:	; parameter £temporary4817, offset 16
 444:		fstp qword [bp + 30]
 446:	
 
 math_test_1$137:	; parameter errno, offset 24
-447:		mov a2765, [errno]
-448:		mov [bp + 38], a2765
+447:		mov a2778, [errno]
+448:		mov [bp + 38], a2778
 450:	
 
 math_test_1$138:	; call function noellipse-ellipse printf, extra 0
@@ -1672,16 +1672,16 @@ math_test_1$148:	; call function noellipse-noellipse sinh
 math_test_1$149:	; post call
 490:	
 
-math_test_1$150:	; £temporary4813 = return_value
+math_test_1$150:	; £temporary4819 = return_value
 492:	
 
-math_test_1$151:	; parameter £temporary4813, offset 16
+math_test_1$151:	; parameter £temporary4819, offset 16
 493:		fstp qword [bp + 30]
 495:	
 
 math_test_1$152:	; parameter errno, offset 24
-496:		mov a2766, [errno]
-497:		mov [bp + 38], a2766
+496:		mov a2779, [errno]
+497:		mov [bp + 38], a2779
 499:	
 
 math_test_1$153:	; call function noellipse-ellipse printf, extra 0
@@ -1736,16 +1736,16 @@ math_test_1$163:	; call function noellipse-noellipse cosh
 math_test_1$164:	; post call
 539:	
 
-math_test_1$165:	; £temporary4815 = return_value
+math_test_1$165:	; £temporary4821 = return_value
 541:	
 
-math_test_1$166:	; parameter £temporary4815, offset 16
+math_test_1$166:	; parameter £temporary4821, offset 16
 542:		fstp qword [bp + 30]
 544:	
 
 math_test_1$167:	; parameter errno, offset 24
-545:		mov a2767, [errno]
-546:		mov [bp + 38], a2767
+545:		mov a2780, [errno]
+546:		mov [bp + 38], a2780
 548:	
 
 math_test_1$168:	; call function noellipse-ellipse printf, extra 0
@@ -1800,16 +1800,16 @@ math_test_1$178:	; call function noellipse-noellipse tanh
 math_test_1$179:	; post call
 588:	
 
-math_test_1$180:	; £temporary4817 = return_value
+math_test_1$180:	; £temporary4823 = return_value
 590:	
 
-math_test_1$181:	; parameter £temporary4817, offset 16
+math_test_1$181:	; parameter £temporary4823, offset 16
 591:		fstp qword [bp + 30]
 593:	
 
 math_test_1$182:	; parameter errno, offset 24
-594:		mov a2768, [errno]
-595:		mov [bp + 38], a2768
+594:		mov a2781, [errno]
+595:		mov [bp + 38], a2781
 597:	
 
 math_test_1$183:	; call function noellipse-ellipse printf, extra 0
@@ -1864,16 +1864,16 @@ math_test_1$193:	; call function noellipse-noellipse sqrt
 math_test_1$194:	; post call
 637:	
 
-math_test_1$195:	; £temporary4819 = return_value
+math_test_1$195:	; £temporary4825 = return_value
 639:	
 
-math_test_1$196:	; parameter £temporary4819, offset 16
+math_test_1$196:	; parameter £temporary4825, offset 16
 640:		fstp qword [bp + 30]
 642:	
 
 math_test_1$197:	; parameter errno, offset 24
-643:		mov a2769, [errno]
-644:		mov [bp + 38], a2769
+643:		mov a2782, [errno]
+644:		mov [bp + 38], a2782
 646:	
 
 math_test_1$198:	; call function noellipse-ellipse printf, extra 0
@@ -1928,16 +1928,16 @@ math_test_1$208:	; call function noellipse-noellipse floor
 math_test_1$209:	; post call
 686:	
 
-math_test_1$210:	; £temporary4821 = return_value
+math_test_1$210:	; £temporary4827 = return_value
 688:	
 
-math_test_1$211:	; parameter £temporary4821, offset 16
+math_test_1$211:	; parameter £temporary4827, offset 16
 689:		fstp qword [bp + 30]
 691:	
 
 math_test_1$212:	; parameter errno, offset 24
-692:		mov a2770, [errno]
-693:		mov [bp + 38], a2770
+692:		mov a2783, [errno]
+693:		mov [bp + 38], a2783
 695:	
 
 math_test_1$213:	; call function noellipse-ellipse printf, extra 0
@@ -1992,16 +1992,16 @@ math_test_1$223:	; call function noellipse-noellipse ceil
 math_test_1$224:	; post call
 735:	
 
-math_test_1$225:	; £temporary4823 = return_value
+math_test_1$225:	; £temporary4829 = return_value
 737:	
 
-math_test_1$226:	; parameter £temporary4823, offset 16
+math_test_1$226:	; parameter £temporary4829, offset 16
 738:		fstp qword [bp + 30]
 740:	
 
 math_test_1$227:	; parameter errno, offset 24
-741:		mov a2771, [errno]
-742:		mov [bp + 38], a2771
+741:		mov a2784, [errno]
+742:		mov [bp + 38], a2784
 744:	
 
 math_test_1$228:	; call function noellipse-ellipse printf, extra 0
@@ -2056,16 +2056,16 @@ math_test_1$238:	; call function noellipse-noellipse fabs
 math_test_1$239:	; post call
 784:	
 
-math_test_1$240:	; £temporary4825 = return_value
+math_test_1$240:	; £temporary4831 = return_value
 786:	
 
-math_test_1$241:	; parameter £temporary4825, offset 16
+math_test_1$241:	; parameter £temporary4831, offset 16
 787:		fstp qword [bp + 30]
 789:	
 
 math_test_1$242:	; parameter errno, offset 24
-790:		mov a2772, [errno]
-791:		mov [bp + 38], a2772
+790:		mov a2785, [errno]
+791:		mov [bp + 38], a2785
 793:	
 
 math_test_1$243:	; call function noellipse-ellipse printf, extra 0
@@ -2099,13 +2099,13 @@ math_test_1$249:	; parameter x, offset 6
 815:		fstp qword [bp + 22]
 817:	
 
-math_test_1$250:	; £temporary4827 = &j
-818:		mov t2773, bp
-819:		add t2773, 14
+math_test_1$250:	; £temporary4833 = &j
+818:		mov t2786, bp
+819:		add t2786, 14
 821:	
 
-math_test_1$251:	; parameter £temporary4827, offset 14
-822:		mov [bp + 30], t2773
+math_test_1$251:	; parameter £temporary4833, offset 14
+822:		mov [bp + 30], t2786
 824:	
 
 math_test_1$252:	; call function noellipse-noellipse frexp
@@ -2118,7 +2118,7 @@ math_test_1$252:	; call function noellipse-noellipse frexp
 math_test_1$253:	; post call
 832:	
 
-math_test_1$254:	; £temporary4828 = return_value
+math_test_1$254:	; £temporary4834 = return_value
 834:	
 
 math_test_1$255:	; pop float z
@@ -2149,13 +2149,13 @@ math_test_1$261:	; parameter z, offset 16
 854:	
 
 math_test_1$262:	; parameter j, offset 24
-855:		mov a2774, [bp + 14]
-856:		mov [bp + 48], a2774
+855:		mov a2787, [bp + 14]
+856:		mov [bp + 48], a2787
 858:	
 
 math_test_1$263:	; parameter errno, offset 26
-859:		mov a2775, [errno]
-860:		mov [bp + 50], a2775
+859:		mov a2788, [errno]
+860:		mov [bp + 50], a2788
 862:	
 
 math_test_1$264:	; call function noellipse-ellipse printf, extra 0
@@ -2215,13 +2215,13 @@ math_test_1$276:	; parameter x, offset 6
 904:		fstp qword [bp + 28]
 906:	
 
-math_test_1$277:	; £temporary4832 = &w
-907:		mov t2776, bp
-908:		add t2776, 14
+math_test_1$277:	; £temporary4838 = &w
+907:		mov t2789, bp
+908:		add t2789, 14
 910:	
 
-math_test_1$278:	; parameter £temporary4832, offset 14
-911:		mov [bp + 36], t2776
+math_test_1$278:	; parameter £temporary4838, offset 14
+911:		mov [bp + 36], t2789
 913:	
 
 math_test_1$279:	; call function noellipse-noellipse modf
@@ -2234,7 +2234,7 @@ math_test_1$279:	; call function noellipse-noellipse modf
 math_test_1$280:	; post call
 921:	
 
-math_test_1$281:	; £temporary4833 = return_value
+math_test_1$281:	; £temporary4839 = return_value
 923:	
 
 math_test_1$282:	; pop float z
@@ -2273,8 +2273,8 @@ math_test_1$290:	; parameter w, offset 24
 949:	
 
 math_test_1$291:	; parameter errno, offset 32
-950:		mov a2777, [errno]
-951:		mov [bp + 62], a2777
+950:		mov a2790, [errno]
+951:		mov [bp + 62], a2790
 953:	
 
 math_test_1$292:	; call function noellipse-ellipse printf, extra 0
@@ -2334,10 +2334,10 @@ math_test_1$303:	; post call
 997:	
 
 math_test_1$304:	; return
-998:		mov t2778, [bp]
+998:		mov t2791, [bp]
 999:		mov di, [bp + 4]
 1000:		mov bp, [bp + 2]
-1001:		jmp t2778
+1001:		jmp t2791
 1003:	
 
 math_test_1$305:	; function end math_test_1
@@ -2395,16 +2395,16 @@ math_test_2$11:	; call function noellipse-noellipse fmod
 math_test_2$12:	; post call
 40:	
 
-math_test_2$13:	; £temporary4939 = return_value
+math_test_2$13:	; £temporary4945 = return_value
 42:	
 
-math_test_2$14:	; parameter £temporary4939, offset 24
+math_test_2$14:	; parameter £temporary4945, offset 24
 43:		fstp qword [bp + 46]
 45:	
 
 math_test_2$15:	; parameter errno, offset 32
-46:		mov a2779, [errno]
-47:		mov [bp + 54], a2779
+46:		mov a2792, [errno]
+47:		mov [bp + 54], a2792
 49:	
 
 math_test_2$16:	; call function noellipse-ellipse printf, extra 0
@@ -2475,16 +2475,16 @@ math_test_2$30:	; call function noellipse-noellipse atan2
 math_test_2$31:	; post call
 101:	
 
-math_test_2$32:	; £temporary4941 = return_value
+math_test_2$32:	; £temporary4947 = return_value
 103:	
 
-math_test_2$33:	; parameter £temporary4941, offset 24
+math_test_2$33:	; parameter £temporary4947, offset 24
 104:		fstp qword [bp + 46]
 106:	
 
 math_test_2$34:	; parameter errno, offset 32
-107:		mov a2780, [errno]
-108:		mov [bp + 54], a2780
+107:		mov a2793, [errno]
+108:		mov [bp + 54], a2793
 110:	
 
 math_test_2$35:	; call function noellipse-ellipse printf, extra 0
@@ -2555,16 +2555,16 @@ math_test_2$49:	; call function noellipse-noellipse pow
 math_test_2$50:	; post call
 162:	
 
-math_test_2$51:	; £temporary4943 = return_value
+math_test_2$51:	; £temporary4949 = return_value
 164:	
 
-math_test_2$52:	; parameter £temporary4943, offset 24
+math_test_2$52:	; parameter £temporary4949, offset 24
 165:		fstp qword [bp + 46]
 167:	
 
 math_test_2$53:	; parameter errno, offset 32
-168:		mov a2781, [errno]
-169:		mov [bp + 54], a2781
+168:		mov a2794, [errno]
+169:		mov [bp + 54], a2794
 171:	
 
 math_test_2$54:	; call function noellipse-ellipse printf, extra 0
@@ -2620,13 +2620,13 @@ math_test_2$65:	; push float y
 210:		fld qword [bp + 14]
 212:	
 
-math_test_2$66:	; £temporary4946 = float_to_int y (Double -> Signed_Int)
+math_test_2$66:	; £temporary4952 = float_to_int y (Double -> Signed_Int)
 213:		fistp word [container2bytes#]
-214:		mov t2782, [container2bytes#]
+214:		mov t2795, [container2bytes#]
 216:	
 
-math_test_2$67:	; parameter £temporary4946, offset 16
-217:		mov [bp + 38], t2782
+math_test_2$67:	; parameter £temporary4952, offset 16
+217:		mov [bp + 38], t2795
 219:	
 
 math_test_2$68:	; call header integral zero 0 stack zero 0
@@ -2644,13 +2644,13 @@ math_test_2$71:	; push float y
 228:		fld qword [bp + 14]
 230:	
 
-math_test_2$72:	; £temporary4947 = float_to_int y (Double -> Signed_Int)
+math_test_2$72:	; £temporary4953 = float_to_int y (Double -> Signed_Int)
 231:		fistp word [container2bytes#]
-232:		mov t2783, [container2bytes#]
+232:		mov t2796, [container2bytes#]
 234:	
 
-math_test_2$73:	; parameter £temporary4947, offset 32
-235:		mov [bp + 54], t2783
+math_test_2$73:	; parameter £temporary4953, offset 32
+235:		mov [bp + 54], t2796
 237:	
 
 math_test_2$74:	; call function noellipse-noellipse ldexp
@@ -2663,10 +2663,10 @@ math_test_2$74:	; call function noellipse-noellipse ldexp
 math_test_2$75:	; post call
 245:	
 
-math_test_2$76:	; £temporary4948 = return_value
+math_test_2$76:	; £temporary4954 = return_value
 247:	
 
-math_test_2$77:	; parameter £temporary4948, offset 18
+math_test_2$77:	; parameter £temporary4954, offset 18
 248:		fstp qword [bp + 40]
 250:	
 
@@ -2683,10 +2683,10 @@ math_test_2$79:	; post call
 260:	
 
 math_test_2$80:	; return
-261:		mov t2784, [bp]
+261:		mov t2797, [bp]
 262:		mov di, [bp + 4]
 263:		mov bp, [bp + 2]
-264:		jmp t2784
+264:		jmp t2797
 266:	
 
 math_test_2$81:	; function end math_test_2

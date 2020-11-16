@@ -1,0 +1,34 @@
+0: Assign seconds 0
+1: Assign index 0
+2: Empty
+3: SignedLessThan PreCall 40 index leapSize
+4: Goto Return seconds
+5: CheckTrackMapFloatStack
+6: PreCall 40
+7: Parameter signed long int t 64
+8: PreCall 40
+9: IntegralToIntegral £temporary2742 index
+10: UnsignedMultiply £temporary2743 £temporary2742 36
+11: BinaryAdd £temporary2744 leapList £temporary2743
+12: Dereference £temporary2741 -> £temporary2744 £temporary2744 0
+13: Address £temporary2745 £temporary2741 -> £temporary2744
+14: Parameter pointer £temporary2745 96
+15: Call mktime 72 0
+16: PostCall 72
+17: GetReturnValue £temporary2746
+18: Parameter signed long int £temporary2746 72
+19: Call difftime 40 0
+20: PostCall 40
+21: GetReturnValue £temporary2747
+22: PushFloat 0
+23: SignedGreaterThanEqual BinaryAdd seconds seconds 1 £temporary2747 0
+24: Goto Empty
+25: CheckTrackMapFloatStack
+26: BinaryAdd seconds seconds 1
+27: Goto Empty
+28: Empty
+29: BinaryAdd index index 1
+30: Goto Empty
+31: Return seconds
+32: Empty
+33: FunctionEnd leapSeconds

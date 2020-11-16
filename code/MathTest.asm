@@ -85,11 +85,11 @@ section .text
 	fld qword [float8$minus6.2831853071795864769252866#]
 
  math_test_1x$2:
-	; Parameter double -6.2831853071795864769252866 48
+	; Parameter 48 double -6.2831853071795864769252866
 	fstp qword [rbp + 48]
 
  math_test_1x$3:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], math_test_1x$4
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -106,11 +106,11 @@ section .text
 	fld qword [float8$minus3.1415926535897932384626433#]
 
  math_test_1x$7:
-	; Parameter double -3.1415926535897932384626433 48
+	; Parameter 48 double -3.1415926535897932384626433
 	fstp qword [rbp + 48]
 
  math_test_1x$8:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], math_test_1x$9
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -127,11 +127,11 @@ section .text
 	fld qword [float8$minus1.57079632679489661923132165#]
 
  math_test_1x$12:
-	; Parameter double -1.57079632679489661923132165 48
+	; Parameter 48 double -1.57079632679489661923132165
 	fstp qword [rbp + 48]
 
  math_test_1x$13:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], math_test_1x$14
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -148,11 +148,11 @@ section .text
 	fld qword [float8$minus1#]
 
  math_test_1x$17:
-	; Parameter double -1 48
+	; Parameter 48 double -1
 	fstp qword [rbp + 48]
 
  math_test_1x$18:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], math_test_1x$19
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -169,11 +169,11 @@ section .text
 	fldz
 
  math_test_1x$22:
-	; Parameter double 0 48
+	; Parameter 48 double 0
 	fstp qword [rbp + 48]
 
  math_test_1x$23:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], math_test_1x$24
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -190,11 +190,11 @@ section .text
 	fld1
 
  math_test_1x$27:
-	; Parameter double 1 48
+	; Parameter 48 double 1
 	fstp qword [rbp + 48]
 
  math_test_1x$28:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], math_test_1x$29
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -211,11 +211,11 @@ section .text
 	fld qword [float8$1.57079632679489661923132165#]
 
  math_test_1x$32:
-	; Parameter double 1.57079632679489661923132165 48
+	; Parameter 48 double 1.57079632679489661923132165
 	fstp qword [rbp + 48]
 
  math_test_1x$33:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], math_test_1x$34
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -232,11 +232,11 @@ section .text
 	fld qword [float8$3.1415926535897932384626433#]
 
  math_test_1x$37:
-	; Parameter double 3.1415926535897932384626433 48
+	; Parameter 48 double 3.1415926535897932384626433
 	fstp qword [rbp + 48]
 
  math_test_1x$38:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], math_test_1x$39
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -253,11 +253,11 @@ section .text
 	fld qword [float8$6.2831853071795864769252866#]
 
  math_test_1x$42:
-	; Parameter double 6.2831853071795864769252866 48
+	; Parameter 48 double 6.2831853071795864769252866
 	fstp qword [rbp + 48]
 
  math_test_1x$43:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], math_test_1x$44
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -288,7 +288,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  acos_test$1:
-	; Parameter pointer "  acos(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  acos(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020acos2825f29203D2025f2C20errno203D2025i0A#
 
  acos_test$2:
@@ -296,7 +296,7 @@ section .text
 	fld qword [rbp + 24]
 
  acos_test$3:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  acos_test$4:
@@ -307,11 +307,11 @@ section .text
 	fld qword [rbp + 24]
 
  acos_test$6:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  acos_test$7:
-	; Call acos 72 0
+	; Call 72 acos 0
 	mov qword [rbp + 72], acos_test$8
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -321,19 +321,19 @@ section .text
 	; PostCall 72
 
  acos_test$9:
-	; GetReturnValue £temporary3765
+	; GetReturnValue £temporary3686
 
  acos_test$10:
-	; Parameter double £temporary3765 72
+	; Parameter 72 double £temporary3686
 	fstp qword [rbp + 72]
 
  acos_test$11:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  acos_test$12:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], acos_test$13
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -370,7 +370,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  atan_test$1:
-	; Parameter pointer "  atan(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  atan(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020atan2825f29203D2025f2C20errno203D2025i0A#
 
  atan_test$2:
@@ -378,7 +378,7 @@ section .text
 	fld qword [rbp + 24]
 
  atan_test$3:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  atan_test$4:
@@ -389,11 +389,11 @@ section .text
 	fld qword [rbp + 24]
 
  atan_test$6:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  atan_test$7:
-	; Call atan 72 0
+	; Call 72 atan 0
 	mov qword [rbp + 72], atan_test$8
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -403,19 +403,19 @@ section .text
 	; PostCall 72
 
  atan_test$9:
-	; GetReturnValue £temporary3770
+	; GetReturnValue £temporary3691
 
  atan_test$10:
-	; Parameter double £temporary3770 72
+	; Parameter 72 double £temporary3691
 	fstp qword [rbp + 72]
 
  atan_test$11:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  atan_test$12:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], atan_test$13
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -546,11 +546,11 @@ section .text
 	fld qword [float8$0.333333333#]
 
  main_math$2:
-	; Parameter double 0.333333333 48
+	; Parameter 48 double 0.333333333
 	fstp qword [rbp + 48]
 
  main_math$3:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$4
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -567,11 +567,11 @@ section .text
 	fld qword [float8$0.75#]
 
  main_math$7:
-	; Parameter double 0.75 48
+	; Parameter 48 double 0.75
 	fstp qword [rbp + 48]
 
  main_math$8:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$9
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -588,11 +588,11 @@ section .text
 	fld qword [float8$1.000010#]
 
  main_math$12:
-	; Parameter double 1.000010 48
+	; Parameter 48 double 1.000010
 	fstp qword [rbp + 48]
 
  main_math$13:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$14
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -609,11 +609,11 @@ section .text
 	fld1
 
  main_math$17:
-	; Parameter double 1.0 48
+	; Parameter 48 double 1.0
 	fstp qword [rbp + 48]
 
  main_math$18:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$19
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -630,11 +630,11 @@ section .text
 	fld qword [float8$0.999999#]
 
  main_math$22:
-	; Parameter double 0.999999 48
+	; Parameter 48 double 0.999999
 	fstp qword [rbp + 48]
 
  main_math$23:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$24
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -651,11 +651,11 @@ section .text
 	fld qword [float8$0.000010#]
 
  main_math$27:
-	; Parameter double 0.000010 48
+	; Parameter 48 double 0.000010
 	fstp qword [rbp + 48]
 
  main_math$28:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$29
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -672,11 +672,11 @@ section .text
 	fldz
 
  main_math$32:
-	; Parameter double 0 48
+	; Parameter 48 double 0
 	fstp qword [rbp + 48]
 
  main_math$33:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$34
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -693,11 +693,11 @@ section .text
 	fld qword [float8$minus0.000010#]
 
  main_math$37:
-	; Parameter double -0.000010 48
+	; Parameter 48 double -0.000010
 	fstp qword [rbp + 48]
 
  main_math$38:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$39
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -714,11 +714,11 @@ section .text
 	fld qword [float8$minus0.999999#]
 
  main_math$42:
-	; Parameter double -0.999999 48
+	; Parameter 48 double -0.999999
 	fstp qword [rbp + 48]
 
  main_math$43:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$44
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -735,11 +735,11 @@ section .text
 	fld qword [float8$minus1.0#]
 
  main_math$47:
-	; Parameter double -1.0 48
+	; Parameter 48 double -1.0
 	fstp qword [rbp + 48]
 
  main_math$48:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$49
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -756,11 +756,11 @@ section .text
 	fld qword [float8$minus1.000010#]
 
  main_math$52:
-	; Parameter double -1.000010 48
+	; Parameter 48 double -1.000010
 	fstp qword [rbp + 48]
 
  main_math$53:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$54
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -777,11 +777,11 @@ section .text
 	fld qword [float8$6.2831853071795864769252866#]
 
  main_math$57:
-	; Parameter double 6.2831853071795864769252866 48
+	; Parameter 48 double 6.2831853071795864769252866
 	fstp qword [rbp + 48]
 
  main_math$58:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$59
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -798,11 +798,11 @@ section .text
 	fld qword [float8$3.1415926535897932384626433#]
 
  main_math$62:
-	; Parameter double 3.1415926535897932384626433 48
+	; Parameter 48 double 3.1415926535897932384626433
 	fstp qword [rbp + 48]
 
  main_math$63:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$64
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -819,11 +819,11 @@ section .text
 	fld qword [float8$1.57079632679489661923132165#]
 
  main_math$67:
-	; Parameter double 1.57079632679489661923132165 48
+	; Parameter 48 double 1.57079632679489661923132165
 	fstp qword [rbp + 48]
 
  main_math$68:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$69
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -840,11 +840,11 @@ section .text
 	fld qword [float8$minus1.57079632679489661923132165#]
 
  main_math$72:
-	; Parameter double -1.57079632679489661923132165 48
+	; Parameter 48 double -1.57079632679489661923132165
 	fstp qword [rbp + 48]
 
  main_math$73:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$74
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -861,11 +861,11 @@ section .text
 	fld qword [float8$minus3.1415926535897932384626433#]
 
  main_math$77:
-	; Parameter double -3.1415926535897932384626433 48
+	; Parameter 48 double -3.1415926535897932384626433
 	fstp qword [rbp + 48]
 
  main_math$78:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$79
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -882,11 +882,11 @@ section .text
 	fld qword [float8$minus6.2831853071795864769252866#]
 
  main_math$82:
-	; Parameter double -6.2831853071795864769252866 48
+	; Parameter 48 double -6.2831853071795864769252866
 	fstp qword [rbp + 48]
 
  main_math$83:
-	; Call math_test_1 24 0
+	; Call 24 math_test_1 0
 	mov qword [rbp + 24], main_math$84
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -903,7 +903,7 @@ section .text
 	fld1
 
  main_math$87:
-	; Parameter double 1.0 48
+	; Parameter 48 double 1.0
 	fstp qword [rbp + 48]
 
  main_math$88:
@@ -911,11 +911,11 @@ section .text
 	fld qword [float8$2.0#]
 
  main_math$89:
-	; Parameter double 2.0 56
+	; Parameter 56 double 2.0
 	fstp qword [rbp + 56]
 
  main_math$90:
-	; Call math_test_2 24 0
+	; Call 24 math_test_2 0
 	mov qword [rbp + 24], main_math$91
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -932,7 +932,7 @@ section .text
 	fld qword [float8$3.0#]
 
  main_math$94:
-	; Parameter double 3.0 48
+	; Parameter 48 double 3.0
 	fstp qword [rbp + 48]
 
  main_math$95:
@@ -940,11 +940,11 @@ section .text
 	fld qword [float8$4.0#]
 
  main_math$96:
-	; Parameter double 4.0 56
+	; Parameter 56 double 4.0
 	fstp qword [rbp + 56]
 
  main_math$97:
-	; Call math_test_2 24 0
+	; Call 24 math_test_2 0
 	mov qword [rbp + 24], main_math$98
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -961,7 +961,7 @@ section .text
 	fldz
 
  main_math$101:
-	; Parameter double 0 48
+	; Parameter 48 double 0
 	fstp qword [rbp + 48]
 
  main_math$102:
@@ -969,11 +969,11 @@ section .text
 	fld qword [float8$2.0#]
 
  main_math$103:
-	; Parameter double 2.0 56
+	; Parameter 56 double 2.0
 	fstp qword [rbp + 56]
 
  main_math$104:
-	; Call math_test_2 24 0
+	; Call 24 math_test_2 0
 	mov qword [rbp + 24], main_math$105
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -990,7 +990,7 @@ section .text
 	fldz
 
  main_math$108:
-	; Parameter double 0 48
+	; Parameter 48 double 0
 	fstp qword [rbp + 48]
 
  main_math$109:
@@ -998,11 +998,11 @@ section .text
 	fld qword [float8$minus2.0#]
 
  main_math$110:
-	; Parameter double -2.0 56
+	; Parameter 56 double -2.0
 	fstp qword [rbp + 56]
 
  main_math$111:
-	; Call math_test_2 24 0
+	; Call 24 math_test_2 0
 	mov qword [rbp + 24], main_math$112
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1019,7 +1019,7 @@ section .text
 	fld1
 
  main_math$115:
-	; Parameter double 1 48
+	; Parameter 48 double 1
 	fstp qword [rbp + 48]
 
  main_math$116:
@@ -1027,11 +1027,11 @@ section .text
 	fld qword [float8$2.0#]
 
  main_math$117:
-	; Parameter double 2.0 56
+	; Parameter 56 double 2.0
 	fstp qword [rbp + 56]
 
  main_math$118:
-	; Call math_test_2 24 0
+	; Call 24 math_test_2 0
 	mov qword [rbp + 24], main_math$119
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1048,7 +1048,7 @@ section .text
 	fld1
 
  main_math$122:
-	; Parameter double 1 48
+	; Parameter 48 double 1
 	fstp qword [rbp + 48]
 
  main_math$123:
@@ -1056,11 +1056,11 @@ section .text
 	fld qword [float8$minus2.0#]
 
  main_math$124:
-	; Parameter double -2.0 56
+	; Parameter 56 double -2.0
 	fstp qword [rbp + 56]
 
  main_math$125:
-	; Call math_test_2 24 0
+	; Call 24 math_test_2 0
 	mov qword [rbp + 24], main_math$126
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1077,7 +1077,7 @@ section .text
 	fldz
 
  main_math$129:
-	; Parameter double 0 48
+	; Parameter 48 double 0
 	fstp qword [rbp + 48]
 
  main_math$130:
@@ -1085,11 +1085,11 @@ section .text
 	fldz
 
  main_math$131:
-	; Parameter double 0 56
+	; Parameter 56 double 0
 	fstp qword [rbp + 56]
 
  main_math$132:
-	; Call math_test_2 24 0
+	; Call 24 math_test_2 0
 	mov qword [rbp + 24], main_math$133
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1106,7 +1106,7 @@ section .text
 	fld qword [float8$2#]
 
  main_math$136:
-	; Parameter double 2 48
+	; Parameter 48 double 2
 	fstp qword [rbp + 48]
 
  main_math$137:
@@ -1114,11 +1114,11 @@ section .text
 	fldz
 
  main_math$138:
-	; Parameter double 0 56
+	; Parameter 56 double 0
 	fstp qword [rbp + 56]
 
  main_math$139:
-	; Call math_test_2 24 0
+	; Call 24 math_test_2 0
 	mov qword [rbp + 24], main_math$140
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1135,7 +1135,7 @@ section .text
 	fld qword [float8$minus2#]
 
  main_math$143:
-	; Parameter double -2 48
+	; Parameter 48 double -2
 	fstp qword [rbp + 48]
 
  main_math$144:
@@ -1143,11 +1143,11 @@ section .text
 	fldz
 
  main_math$145:
-	; Parameter double 0 56
+	; Parameter 56 double 0
 	fstp qword [rbp + 56]
 
  main_math$146:
-	; Call math_test_2 24 0
+	; Call 24 math_test_2 0
 	mov qword [rbp + 24], main_math$147
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1164,7 +1164,7 @@ section .text
 	fld qword [float8$minus1.0#]
 
  main_math$150:
-	; Parameter double -1.0 48
+	; Parameter 48 double -1.0
 	fstp qword [rbp + 48]
 
  main_math$151:
@@ -1172,11 +1172,11 @@ section .text
 	fld qword [float8$minus1.0#]
 
  main_math$152:
-	; Parameter double -1.0 56
+	; Parameter 56 double -1.0
 	fstp qword [rbp + 56]
 
  main_math$153:
-	; Call math_test_2 24 0
+	; Call 24 math_test_2 0
 	mov qword [rbp + 24], main_math$154
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1193,7 +1193,7 @@ section .text
 	fld qword [float8$minus2.0#]
 
  main_math$157:
-	; Parameter double -2.0 48
+	; Parameter 48 double -2.0
 	fstp qword [rbp + 48]
 
  main_math$158:
@@ -1201,11 +1201,11 @@ section .text
 	fld qword [float8$minus4.0#]
 
  main_math$159:
-	; Parameter double -4.0 56
+	; Parameter 56 double -4.0
 	fstp qword [rbp + 56]
 
  main_math$160:
-	; Call math_test_2 24 0
+	; Call 24 math_test_2 0
 	mov qword [rbp + 24], main_math$161
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1344,7 +1344,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$1:
-	; Parameter pointer "<%f>\n" 56
+	; Parameter 56 pointer "<%f>\n"
 	mov qword [rbp + 56], string_3C25f3E0A#
 
  math_test_1$2:
@@ -1352,11 +1352,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$3:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$4:
-	; Call printf 32 8
+	; Call 32 printf 8
 	mov qword [rbp + 32], math_test_1$5
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1371,7 +1371,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$7:
-	; Parameter pointer "  sin(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  sin(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020sin2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$8:
@@ -1379,7 +1379,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$9:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$10:
@@ -1390,11 +1390,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$12:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  math_test_1$13:
-	; Call sin 72 0
+	; Call 72 sin 0
 	mov qword [rbp + 72], math_test_1$14
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -1404,19 +1404,19 @@ section .text
 	; PostCall 72
 
  math_test_1$15:
-	; GetReturnValue £temporary3843
+	; GetReturnValue £temporary3764
 
  math_test_1$16:
-	; Parameter double £temporary3843 72
+	; Parameter 72 double £temporary3764
 	fstp qword [rbp + 72]
 
  math_test_1$17:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  math_test_1$18:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], math_test_1$19
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1435,7 +1435,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$22:
-	; Parameter pointer "  cos(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  cos(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020cos2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$23:
@@ -1443,7 +1443,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$24:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$25:
@@ -1454,11 +1454,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$27:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  math_test_1$28:
-	; Call cos 72 0
+	; Call 72 cos 0
 	mov qword [rbp + 72], math_test_1$29
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -1468,19 +1468,19 @@ section .text
 	; PostCall 72
 
  math_test_1$30:
-	; GetReturnValue £temporary3845
+	; GetReturnValue £temporary3766
 
  math_test_1$31:
-	; Parameter double £temporary3845 72
+	; Parameter 72 double £temporary3766
 	fstp qword [rbp + 72]
 
  math_test_1$32:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  math_test_1$33:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], math_test_1$34
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1499,7 +1499,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$37:
-	; Parameter pointer "  tan(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  tan(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020tan2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$38:
@@ -1507,7 +1507,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$39:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$40:
@@ -1518,11 +1518,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$42:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  math_test_1$43:
-	; Call tan 72 0
+	; Call 72 tan 0
 	mov qword [rbp + 72], math_test_1$44
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -1532,19 +1532,19 @@ section .text
 	; PostCall 72
 
  math_test_1$45:
-	; GetReturnValue £temporary3847
+	; GetReturnValue £temporary3768
 
  math_test_1$46:
-	; Parameter double £temporary3847 72
+	; Parameter 72 double £temporary3768
 	fstp qword [rbp + 72]
 
  math_test_1$47:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  math_test_1$48:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], math_test_1$49
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1563,7 +1563,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$52:
-	; Parameter pointer "  asin(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  asin(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020asin2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$53:
@@ -1571,7 +1571,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$54:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$55:
@@ -1582,11 +1582,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$57:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  math_test_1$58:
-	; Call asin 72 0
+	; Call 72 asin 0
 	mov qword [rbp + 72], math_test_1$59
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -1596,19 +1596,19 @@ section .text
 	; PostCall 72
 
  math_test_1$60:
-	; GetReturnValue £temporary3849
+	; GetReturnValue £temporary3770
 
  math_test_1$61:
-	; Parameter double £temporary3849 72
+	; Parameter 72 double £temporary3770
 	fstp qword [rbp + 72]
 
  math_test_1$62:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  math_test_1$63:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], math_test_1$64
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1627,7 +1627,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$67:
-	; Parameter pointer "  acos(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  acos(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020acos2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$68:
@@ -1635,7 +1635,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$69:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$70:
@@ -1646,11 +1646,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$72:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  math_test_1$73:
-	; Call acos 72 0
+	; Call 72 acos 0
 	mov qword [rbp + 72], math_test_1$74
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -1660,19 +1660,19 @@ section .text
 	; PostCall 72
 
  math_test_1$75:
-	; GetReturnValue £temporary3851
+	; GetReturnValue £temporary3772
 
  math_test_1$76:
-	; Parameter double £temporary3851 72
+	; Parameter 72 double £temporary3772
 	fstp qword [rbp + 72]
 
  math_test_1$77:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  math_test_1$78:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], math_test_1$79
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1691,7 +1691,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$82:
-	; Parameter pointer "  atan(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  atan(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020atan2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$83:
@@ -1699,7 +1699,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$84:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$85:
@@ -1710,11 +1710,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$87:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  math_test_1$88:
-	; Call atan 72 0
+	; Call 72 atan 0
 	mov qword [rbp + 72], math_test_1$89
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -1724,19 +1724,19 @@ section .text
 	; PostCall 72
 
  math_test_1$90:
-	; GetReturnValue £temporary3853
+	; GetReturnValue £temporary3774
 
  math_test_1$91:
-	; Parameter double £temporary3853 72
+	; Parameter 72 double £temporary3774
 	fstp qword [rbp + 72]
 
  math_test_1$92:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  math_test_1$93:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], math_test_1$94
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1755,7 +1755,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$97:
-	; Parameter pointer "  exp(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  exp(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020exp2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$98:
@@ -1763,7 +1763,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$99:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$100:
@@ -1774,11 +1774,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$102:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  math_test_1$103:
-	; Call exp 72 0
+	; Call 72 exp 0
 	mov qword [rbp + 72], math_test_1$104
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -1788,19 +1788,19 @@ section .text
 	; PostCall 72
 
  math_test_1$105:
-	; GetReturnValue £temporary3855
+	; GetReturnValue £temporary3776
 
  math_test_1$106:
-	; Parameter double £temporary3855 72
+	; Parameter 72 double £temporary3776
 	fstp qword [rbp + 72]
 
  math_test_1$107:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  math_test_1$108:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], math_test_1$109
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1819,7 +1819,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$112:
-	; Parameter pointer "  log(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  log(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020log2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$113:
@@ -1827,7 +1827,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$114:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$115:
@@ -1838,11 +1838,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$117:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  math_test_1$118:
-	; Call log 72 0
+	; Call 72 log 0
 	mov qword [rbp + 72], math_test_1$119
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -1852,19 +1852,19 @@ section .text
 	; PostCall 72
 
  math_test_1$120:
-	; GetReturnValue £temporary3857
+	; GetReturnValue £temporary3778
 
  math_test_1$121:
-	; Parameter double £temporary3857 72
+	; Parameter 72 double £temporary3778
 	fstp qword [rbp + 72]
 
  math_test_1$122:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  math_test_1$123:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], math_test_1$124
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1883,7 +1883,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$127:
-	; Parameter pointer "  log10(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  log10(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020log102825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$128:
@@ -1891,7 +1891,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$129:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$130:
@@ -1902,11 +1902,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$132:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  math_test_1$133:
-	; Call log10 72 0
+	; Call 72 log10 0
 	mov qword [rbp + 72], math_test_1$134
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -1916,19 +1916,19 @@ section .text
 	; PostCall 72
 
  math_test_1$135:
-	; GetReturnValue £temporary3859
+	; GetReturnValue £temporary3780
 
  math_test_1$136:
-	; Parameter double £temporary3859 72
+	; Parameter 72 double £temporary3780
 	fstp qword [rbp + 72]
 
  math_test_1$137:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  math_test_1$138:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], math_test_1$139
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1947,7 +1947,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$142:
-	; Parameter pointer "  sinh(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  sinh(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020sinh2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$143:
@@ -1955,7 +1955,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$144:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$145:
@@ -1966,11 +1966,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$147:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  math_test_1$148:
-	; Call sinh 72 0
+	; Call 72 sinh 0
 	mov qword [rbp + 72], math_test_1$149
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -1980,19 +1980,19 @@ section .text
 	; PostCall 72
 
  math_test_1$150:
-	; GetReturnValue £temporary3861
+	; GetReturnValue £temporary3782
 
  math_test_1$151:
-	; Parameter double £temporary3861 72
+	; Parameter 72 double £temporary3782
 	fstp qword [rbp + 72]
 
  math_test_1$152:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  math_test_1$153:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], math_test_1$154
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2011,7 +2011,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$157:
-	; Parameter pointer "  cosh(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  cosh(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020cosh2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$158:
@@ -2019,7 +2019,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$159:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$160:
@@ -2030,11 +2030,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$162:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  math_test_1$163:
-	; Call cosh 72 0
+	; Call 72 cosh 0
 	mov qword [rbp + 72], math_test_1$164
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -2044,19 +2044,19 @@ section .text
 	; PostCall 72
 
  math_test_1$165:
-	; GetReturnValue £temporary3863
+	; GetReturnValue £temporary3784
 
  math_test_1$166:
-	; Parameter double £temporary3863 72
+	; Parameter 72 double £temporary3784
 	fstp qword [rbp + 72]
 
  math_test_1$167:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  math_test_1$168:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], math_test_1$169
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2075,7 +2075,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$172:
-	; Parameter pointer "  tanh(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  tanh(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020tanh2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$173:
@@ -2083,7 +2083,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$174:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$175:
@@ -2094,11 +2094,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$177:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  math_test_1$178:
-	; Call tanh 72 0
+	; Call 72 tanh 0
 	mov qword [rbp + 72], math_test_1$179
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -2108,19 +2108,19 @@ section .text
 	; PostCall 72
 
  math_test_1$180:
-	; GetReturnValue £temporary3865
+	; GetReturnValue £temporary3786
 
  math_test_1$181:
-	; Parameter double £temporary3865 72
+	; Parameter 72 double £temporary3786
 	fstp qword [rbp + 72]
 
  math_test_1$182:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  math_test_1$183:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], math_test_1$184
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2139,7 +2139,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$187:
-	; Parameter pointer "  sqrt(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  sqrt(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020sqrt2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$188:
@@ -2147,7 +2147,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$189:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$190:
@@ -2158,11 +2158,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$192:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  math_test_1$193:
-	; Call sqrt 72 0
+	; Call 72 sqrt 0
 	mov qword [rbp + 72], math_test_1$194
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -2172,19 +2172,19 @@ section .text
 	; PostCall 72
 
  math_test_1$195:
-	; GetReturnValue £temporary3867
+	; GetReturnValue £temporary3788
 
  math_test_1$196:
-	; Parameter double £temporary3867 72
+	; Parameter 72 double £temporary3788
 	fstp qword [rbp + 72]
 
  math_test_1$197:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  math_test_1$198:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], math_test_1$199
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2203,7 +2203,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$202:
-	; Parameter pointer "  floor(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  floor(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020floor2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$203:
@@ -2211,7 +2211,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$204:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$205:
@@ -2222,11 +2222,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$207:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  math_test_1$208:
-	; Call floor 72 0
+	; Call 72 floor 0
 	mov qword [rbp + 72], math_test_1$209
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -2236,19 +2236,19 @@ section .text
 	; PostCall 72
 
  math_test_1$210:
-	; GetReturnValue £temporary3869
+	; GetReturnValue £temporary3790
 
  math_test_1$211:
-	; Parameter double £temporary3869 72
+	; Parameter 72 double £temporary3790
 	fstp qword [rbp + 72]
 
  math_test_1$212:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  math_test_1$213:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], math_test_1$214
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2267,7 +2267,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$217:
-	; Parameter pointer "  ceil(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  ceil(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020ceil2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$218:
@@ -2275,7 +2275,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$219:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$220:
@@ -2286,11 +2286,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$222:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  math_test_1$223:
-	; Call ceil 72 0
+	; Call 72 ceil 0
 	mov qword [rbp + 72], math_test_1$224
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -2300,19 +2300,19 @@ section .text
 	; PostCall 72
 
  math_test_1$225:
-	; GetReturnValue £temporary3871
+	; GetReturnValue £temporary3792
 
  math_test_1$226:
-	; Parameter double £temporary3871 72
+	; Parameter 72 double £temporary3792
 	fstp qword [rbp + 72]
 
  math_test_1$227:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  math_test_1$228:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], math_test_1$229
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2331,7 +2331,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$232:
-	; Parameter pointer "  fabs(%f) = %f, errno = %i\n" 56
+	; Parameter 56 pointer "  fabs(%f) = %f, errno = %i\n"
 	mov qword [rbp + 56], string_2020fabs2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$233:
@@ -2339,7 +2339,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$234:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$235:
@@ -2350,11 +2350,11 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$237:
-	; Parameter double x 96
+	; Parameter 96 double x
 	fstp qword [rbp + 96]
 
  math_test_1$238:
-	; Call fabs 72 0
+	; Call 72 fabs 0
 	mov qword [rbp + 72], math_test_1$239
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -2364,19 +2364,19 @@ section .text
 	; PostCall 72
 
  math_test_1$240:
-	; GetReturnValue £temporary3873
+	; GetReturnValue £temporary3794
 
  math_test_1$241:
-	; Parameter double £temporary3873 72
+	; Parameter 72 double £temporary3794
 	fstp qword [rbp + 72]
 
  math_test_1$242:
-	; Parameter signedint errno 80
+	; Parameter 80 signedint errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
  math_test_1$243:
-	; Call printf 32 20
+	; Call 32 printf 20
 	mov qword [rbp + 32], math_test_1$244
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2403,20 +2403,20 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$249:
-	; Parameter double x 60
+	; Parameter 60 double x
 	fstp qword [rbp + 60]
 
  math_test_1$250:
-	; Address £temporary3875 j
+	; Address £temporary3796 j
 	mov rsi, rbp
 	add rsi, 32
 
  math_test_1$251:
-	; Parameter pointer £temporary3875 68
+	; Parameter 68 pointer £temporary3796
 	mov [rbp + 68], rsi
 
  math_test_1$252:
-	; Call frexp 36 0
+	; Call 36 frexp 0
 	mov qword [rbp + 36], math_test_1$253
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -2426,7 +2426,7 @@ section .text
 	; PostCall 36
 
  math_test_1$254:
-	; GetReturnValue £temporary3876
+	; GetReturnValue £temporary3797
 
  math_test_1$255:
 	; PopFloat z
@@ -2436,7 +2436,7 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$257:
-	; Parameter pointer "frexp (%f, p) = (%f, %i), errno = %i\n" 68
+	; Parameter 68 pointer "frexp (%f, p) = (%f, %i), errno = %i\n"
 	mov qword [rbp + 68], string_frexp202825f2C20p29203D202825f2C2025i292C20errno203D2025i0A#
 
  math_test_1$258:
@@ -2444,7 +2444,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$259:
-	; Parameter double x 76
+	; Parameter 76 double x
 	fstp qword [rbp + 76]
 
  math_test_1$260:
@@ -2452,21 +2452,21 @@ section .text
 	fld qword [rbp + 36]
 
  math_test_1$261:
-	; Parameter double z 84
+	; Parameter 84 double z
 	fstp qword [rbp + 84]
 
  math_test_1$262:
-	; Parameter signedint j 92
+	; Parameter 92 signedint j
 	mov eax, [rbp + 32]
 	mov [rbp + 92], eax
 
  math_test_1$263:
-	; Parameter signedint errno 96
+	; Parameter 96 signedint errno
 	mov eax, [errno]
 	mov [rbp + 96], eax
 
  math_test_1$264:
-	; Call printf 44 24
+	; Call 44 printf 24
 	mov qword [rbp + 44], math_test_1$265
 	mov [rbp + 52], rbp
 	add rbp, 44
@@ -2486,11 +2486,11 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$268:
-	; Parameter pointer "Error message:" 68
+	; Parameter 68 pointer "Error message:"
 	mov qword [rbp + 68], string_Error20message3A#
 
  math_test_1$269:
-	; Call perror 44 0
+	; Call 44 perror 0
 	mov qword [rbp + 44], math_test_1$270
 	mov [rbp + 52], rbp
 	add rbp, 44
@@ -2519,20 +2519,20 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$276:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  math_test_1$277:
-	; Address £temporary3880 w
+	; Address £temporary3801 w
 	mov rsi, rbp
 	add rsi, 32
 
  math_test_1$278:
-	; Parameter pointer £temporary3880 72
+	; Parameter 72 pointer £temporary3801
 	mov [rbp + 72], rsi
 
  math_test_1$279:
-	; Call modf 40 0
+	; Call 40 modf 0
 	mov qword [rbp + 40], math_test_1$280
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -2542,7 +2542,7 @@ section .text
 	; PostCall 40
 
  math_test_1$281:
-	; GetReturnValue £temporary3881
+	; GetReturnValue £temporary3802
 
  math_test_1$282:
 	; PopFloat z
@@ -2552,7 +2552,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$284:
-	; Parameter pointer "modf (%f, p) = (%f, %f), errno = %i\n" 72
+	; Parameter 72 pointer "modf (%f, p) = (%f, %f), errno = %i\n"
 	mov qword [rbp + 72], string_modf202825f2C20p29203D202825f2C2025f292C20errno203D2025i0A#
 
  math_test_1$285:
@@ -2560,7 +2560,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_1$286:
-	; Parameter double x 80
+	; Parameter 80 double x
 	fstp qword [rbp + 80]
 
  math_test_1$287:
@@ -2568,7 +2568,7 @@ section .text
 	fld qword [rbp + 40]
 
  math_test_1$288:
-	; Parameter double z 88
+	; Parameter 88 double z
 	fstp qword [rbp + 88]
 
  math_test_1$289:
@@ -2576,16 +2576,16 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_1$290:
-	; Parameter double w 96
+	; Parameter 96 double w
 	fstp qword [rbp + 96]
 
  math_test_1$291:
-	; Parameter signedint errno 104
+	; Parameter 104 signedint errno
 	mov eax, [errno]
 	mov [rbp + 104], eax
 
  math_test_1$292:
-	; Call printf 48 28
+	; Call 48 printf 28
 	mov qword [rbp + 48], math_test_1$293
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -2605,11 +2605,11 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$296:
-	; Parameter pointer "Error message:" 72
+	; Parameter 72 pointer "Error message:"
 	mov qword [rbp + 72], string_Error20message3A#
 
  math_test_1$297:
-	; Call perror 48 0
+	; Call 48 perror 0
 	mov qword [rbp + 48], math_test_1$298
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -2626,11 +2626,11 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_1$301:
-	; Parameter pointer "\n" 56
+	; Parameter 56 pointer "\n"
 	mov qword [rbp + 56], string_0A#
 
  math_test_1$302:
-	; Call printf 32 0
+	; Call 32 printf 0
 	mov qword [rbp + 32], math_test_1$303
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2686,7 +2686,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_2$1:
-	; Parameter pointer "fmod(%f, %f) = %f, errno = %i\n" 64
+	; Parameter 64 pointer "fmod(%f, %f) = %f, errno = %i\n"
 	mov qword [rbp + 64], string_fmod2825f2C2025f29203D2025f2C20errno203D2025i0A#
 
  math_test_2$2:
@@ -2694,7 +2694,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_2$3:
-	; Parameter double x 72
+	; Parameter 72 double x
 	fstp qword [rbp + 72]
 
  math_test_2$4:
@@ -2702,7 +2702,7 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$5:
-	; Parameter double y 80
+	; Parameter 80 double y
 	fstp qword [rbp + 80]
 
  math_test_2$6:
@@ -2713,7 +2713,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_2$8:
-	; Parameter double x 112
+	; Parameter 112 double x
 	fstp qword [rbp + 112]
 
  math_test_2$9:
@@ -2721,11 +2721,11 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$10:
-	; Parameter double y 120
+	; Parameter 120 double y
 	fstp qword [rbp + 120]
 
  math_test_2$11:
-	; Call fmod 88 0
+	; Call 88 fmod 0
 	mov qword [rbp + 88], math_test_2$12
 	mov [rbp + 96], rbp
 	add rbp, 88
@@ -2735,19 +2735,19 @@ section .text
 	; PostCall 88
 
  math_test_2$13:
-	; GetReturnValue £temporary3944
+	; GetReturnValue £temporary3865
 
  math_test_2$14:
-	; Parameter double £temporary3944 88
+	; Parameter 88 double £temporary3865
 	fstp qword [rbp + 88]
 
  math_test_2$15:
-	; Parameter signedint errno 96
+	; Parameter 96 signedint errno
 	mov eax, [errno]
 	mov [rbp + 96], eax
 
  math_test_2$16:
-	; Call printf 40 28
+	; Call 40 printf 28
 	mov qword [rbp + 40], math_test_2$17
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -2766,7 +2766,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_2$20:
-	; Parameter pointer "atan2(%f, %f) = %f, errno = %i\n" 64
+	; Parameter 64 pointer "atan2(%f, %f) = %f, errno = %i\n"
 	mov qword [rbp + 64], string_atan22825f2C2025f29203D2025f2C20errno203D2025i0A#
 
  math_test_2$21:
@@ -2774,7 +2774,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_2$22:
-	; Parameter double x 72
+	; Parameter 72 double x
 	fstp qword [rbp + 72]
 
  math_test_2$23:
@@ -2782,7 +2782,7 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$24:
-	; Parameter double y 80
+	; Parameter 80 double y
 	fstp qword [rbp + 80]
 
  math_test_2$25:
@@ -2793,7 +2793,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_2$27:
-	; Parameter double x 112
+	; Parameter 112 double x
 	fstp qword [rbp + 112]
 
  math_test_2$28:
@@ -2801,11 +2801,11 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$29:
-	; Parameter double y 120
+	; Parameter 120 double y
 	fstp qword [rbp + 120]
 
  math_test_2$30:
-	; Call atan2 88 0
+	; Call 88 atan2 0
 	mov qword [rbp + 88], math_test_2$31
 	mov [rbp + 96], rbp
 	add rbp, 88
@@ -2815,19 +2815,19 @@ section .text
 	; PostCall 88
 
  math_test_2$32:
-	; GetReturnValue £temporary3946
+	; GetReturnValue £temporary3867
 
  math_test_2$33:
-	; Parameter double £temporary3946 88
+	; Parameter 88 double £temporary3867
 	fstp qword [rbp + 88]
 
  math_test_2$34:
-	; Parameter signedint errno 96
+	; Parameter 96 signedint errno
 	mov eax, [errno]
 	mov [rbp + 96], eax
 
  math_test_2$35:
-	; Call printf 40 28
+	; Call 40 printf 28
 	mov qword [rbp + 40], math_test_2$36
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -2846,7 +2846,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_2$39:
-	; Parameter pointer "pow(%f, %f) = %f, errno = %i\n" 64
+	; Parameter 64 pointer "pow(%f, %f) = %f, errno = %i\n"
 	mov qword [rbp + 64], string_pow2825f2C2025f29203D2025f2C20errno203D2025i0A#
 
  math_test_2$40:
@@ -2854,7 +2854,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_2$41:
-	; Parameter double x 72
+	; Parameter 72 double x
 	fstp qword [rbp + 72]
 
  math_test_2$42:
@@ -2862,7 +2862,7 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$43:
-	; Parameter double y 80
+	; Parameter 80 double y
 	fstp qword [rbp + 80]
 
  math_test_2$44:
@@ -2873,7 +2873,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_2$46:
-	; Parameter double x 112
+	; Parameter 112 double x
 	fstp qword [rbp + 112]
 
  math_test_2$47:
@@ -2881,11 +2881,11 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$48:
-	; Parameter double y 120
+	; Parameter 120 double y
 	fstp qword [rbp + 120]
 
  math_test_2$49:
-	; Call pow 88 0
+	; Call 88 pow 0
 	mov qword [rbp + 88], math_test_2$50
 	mov [rbp + 96], rbp
 	add rbp, 88
@@ -2895,19 +2895,19 @@ section .text
 	; PostCall 88
 
  math_test_2$51:
-	; GetReturnValue £temporary3948
+	; GetReturnValue £temporary3869
 
  math_test_2$52:
-	; Parameter double £temporary3948 88
+	; Parameter 88 double £temporary3869
 	fstp qword [rbp + 88]
 
  math_test_2$53:
-	; Parameter signedint errno 96
+	; Parameter 96 signedint errno
 	mov eax, [errno]
 	mov [rbp + 96], eax
 
  math_test_2$54:
-	; Call printf 40 28
+	; Call 40 printf 28
 	mov qword [rbp + 40], math_test_2$55
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -2926,11 +2926,11 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_2$58:
-	; Parameter pointer "\n" 64
+	; Parameter 64 pointer "\n"
 	mov qword [rbp + 64], string_0A#
 
  math_test_2$59:
-	; Call printf 40 0
+	; Call 40 printf 0
 	mov qword [rbp + 40], math_test_2$60
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -2944,7 +2944,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  math_test_2$62:
-	; Parameter pointer "ldexp(%f, %i) = %f\n\n" 64
+	; Parameter 64 pointer "ldexp(%f, %i) = %f\n\n"
 	mov qword [rbp + 64], string_ldexp2825f2C2025i29203D2025f0A0A#
 
  math_test_2$63:
@@ -2952,7 +2952,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_2$64:
-	; Parameter double x 72
+	; Parameter 72 double x
 	fstp qword [rbp + 72]
 
  math_test_2$65:
@@ -2960,12 +2960,12 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$66:
-	; FloatingToIntegral £temporary3951 y
+	; FloatingToIntegral £temporary3872 y
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  math_test_2$67:
-	; Parameter signedint £temporary3951 80
+	; Parameter 80 signedint £temporary3872
 	mov [rbp + 80], eax
 
  math_test_2$68:
@@ -2976,7 +2976,7 @@ section .text
 	fld qword [rbp + 24]
 
  math_test_2$70:
-	; Parameter double x 108
+	; Parameter 108 double x
 	fstp qword [rbp + 108]
 
  math_test_2$71:
@@ -2984,16 +2984,16 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$72:
-	; FloatingToIntegral £temporary3952 y
+	; FloatingToIntegral £temporary3873 y
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  math_test_2$73:
-	; Parameter signedint £temporary3952 116
+	; Parameter 116 signedint £temporary3873
 	mov [rbp + 116], eax
 
  math_test_2$74:
-	; Call ldexp 84 0
+	; Call 84 ldexp 0
 	mov qword [rbp + 84], math_test_2$75
 	mov [rbp + 92], rbp
 	add rbp, 84
@@ -3003,14 +3003,14 @@ section .text
 	; PostCall 84
 
  math_test_2$76:
-	; GetReturnValue £temporary3953
+	; GetReturnValue £temporary3874
 
  math_test_2$77:
-	; Parameter double £temporary3953 84
+	; Parameter 84 double £temporary3874
 	fstp qword [rbp + 84]
 
  math_test_2$78:
-	; Call printf 40 20
+	; Call 40 printf 20
 	mov qword [rbp + 40], math_test_2$79
 	mov [rbp + 48], rbp
 	add rbp, 40

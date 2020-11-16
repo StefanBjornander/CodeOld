@@ -29,7 +29,7 @@ char* enMessageList[] = {"no error", "function number invalid",
                          "error while removing file",
                          "error while renaming file" };
 
-static struct lconv en_US_utf8 = {-5, -4, enShortDayList, enLongDayList,
+static struct lconv en_US_utf8 = {2, 1, enShortDayList, enLongDayList,
                                   enShortMonthList, enLongMonthList,
                                   "abcdefghijklmnopqrstuvwxyz",
                                   "ABCDEFGHIJKLMNOPQRSTUVWXYZ",

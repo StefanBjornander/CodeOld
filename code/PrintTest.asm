@@ -46,43 +46,43 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  print_test$1:
-	; Parameter pointer "<%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>\n" 48
+	; Parameter 48 pointer "<%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>\n"
 	mov qword [rbp + 48], string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#
 
  print_test$2:
-	; Parameter signedint 123 56
+	; Parameter 56 signedint 123
 	mov dword [rbp + 56], 123
 
  print_test$3:
-	; Parameter signedint 123 60
+	; Parameter 60 signedint 123
 	mov dword [rbp + 60], 123
 
  print_test$4:
-	; Parameter signedint 123 64
+	; Parameter 64 signedint 123
 	mov dword [rbp + 64], 123
 
  print_test$5:
-	; Parameter signedint 123 68
+	; Parameter 68 signedint 123
 	mov dword [rbp + 68], 123
 
  print_test$6:
-	; Parameter signedint 123 72
+	; Parameter 72 signedint 123
 	mov dword [rbp + 72], 123
 
  print_test$7:
-	; Parameter signedint 123 76
+	; Parameter 76 signedint 123
 	mov dword [rbp + 76], 123
 
  print_test$8:
-	; Parameter signedint 123 80
+	; Parameter 80 signedint 123
 	mov dword [rbp + 80], 123
 
  print_test$9:
-	; Parameter signedint 123 84
+	; Parameter 84 signedint 123
 	mov dword [rbp + 84], 123
 
  print_test$10:
-	; Call printf 24 32
+	; Call 24 printf 32
 	mov qword [rbp + 24], print_test$11
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -97,43 +97,43 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  print_test$13:
-	; Parameter pointer "<%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>\n" 48
+	; Parameter 48 pointer "<%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>\n"
 	mov qword [rbp + 48], string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#
 
  print_test$14:
-	; Parameter signedint -123 56
+	; Parameter 56 signedint -123
 	mov dword [rbp + 56], -123
 
  print_test$15:
-	; Parameter signedint -123 60
+	; Parameter 60 signedint -123
 	mov dword [rbp + 60], -123
 
  print_test$16:
-	; Parameter signedint -123 64
+	; Parameter 64 signedint -123
 	mov dword [rbp + 64], -123
 
  print_test$17:
-	; Parameter signedint -123 68
+	; Parameter 68 signedint -123
 	mov dword [rbp + 68], -123
 
  print_test$18:
-	; Parameter signedint -123 72
+	; Parameter 72 signedint -123
 	mov dword [rbp + 72], -123
 
  print_test$19:
-	; Parameter signedint -123 76
+	; Parameter 76 signedint -123
 	mov dword [rbp + 76], -123
 
  print_test$20:
-	; Parameter signedint -123 80
+	; Parameter 80 signedint -123
 	mov dword [rbp + 80], -123
 
  print_test$21:
-	; Parameter signedint -123 84
+	; Parameter 84 signedint -123
 	mov dword [rbp + 84], -123
 
  print_test$22:
-	; Call printf 24 32
+	; Call 24 printf 32
 	mov qword [rbp + 24], print_test$23
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -148,27 +148,27 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  print_test$25:
-	; Parameter pointer "<%08i> <%+08i> <% 08i> <%0 8i>\n" 48
+	; Parameter 48 pointer "<%08i> <%+08i> <% 08i> <%0 8i>\n"
 	mov qword [rbp + 48], string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#
 
  print_test$26:
-	; Parameter signedint 123 56
+	; Parameter 56 signedint 123
 	mov dword [rbp + 56], 123
 
  print_test$27:
-	; Parameter signedint 123 60
+	; Parameter 60 signedint 123
 	mov dword [rbp + 60], 123
 
  print_test$28:
-	; Parameter signedint 123 64
+	; Parameter 64 signedint 123
 	mov dword [rbp + 64], 123
 
  print_test$29:
-	; Parameter signedint 123 68
+	; Parameter 68 signedint 123
 	mov dword [rbp + 68], 123
 
  print_test$30:
-	; Call printf 24 16
+	; Call 24 printf 16
 	mov qword [rbp + 24], print_test$31
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -183,27 +183,27 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  print_test$33:
-	; Parameter pointer "<%08i> <%+08i> <% 08i> <%0 8i>\n" 48
+	; Parameter 48 pointer "<%08i> <%+08i> <% 08i> <%0 8i>\n"
 	mov qword [rbp + 48], string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#
 
  print_test$34:
-	; Parameter signedint -123 56
+	; Parameter 56 signedint -123
 	mov dword [rbp + 56], -123
 
  print_test$35:
-	; Parameter signedint -123 60
+	; Parameter 60 signedint -123
 	mov dword [rbp + 60], -123
 
  print_test$36:
-	; Parameter signedint -123 64
+	; Parameter 64 signedint -123
 	mov dword [rbp + 64], -123
 
  print_test$37:
-	; Parameter signedint -123 68
+	; Parameter 68 signedint -123
 	mov dword [rbp + 68], -123
 
  print_test$38:
-	; Call printf 24 16
+	; Call 24 printf 16
 	mov qword [rbp + 24], print_test$39
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -218,7 +218,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  print_test$41:
-	; Parameter pointer "<%12.3f> <%+12.3f> <% 12.3f> <%-12.3f> <%+-12.3f> <%-+12.3f> <% -12.3f> <%- 12.3f>\n" 48
+	; Parameter 48 pointer "<%12.3f> <%+12.3f> <% 12.3f> <%-12.3f> <%+-12.3f> <%-+12.3f> <% -12.3f> <%- 12.3f>\n"
 	mov qword [rbp + 48], string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A#
 
  print_test$42:
@@ -226,7 +226,7 @@ section .text
 	fld qword [float8$123.456#]
 
  print_test$43:
-	; Parameter double 123.456 56
+	; Parameter 56 double 123.456
 	fstp qword [rbp + 56]
 
  print_test$44:
@@ -234,7 +234,7 @@ section .text
 	fld qword [float8$123.456#]
 
  print_test$45:
-	; Parameter double 123.456 64
+	; Parameter 64 double 123.456
 	fstp qword [rbp + 64]
 
  print_test$46:
@@ -242,7 +242,7 @@ section .text
 	fld qword [float8$123.456#]
 
  print_test$47:
-	; Parameter double 123.456 72
+	; Parameter 72 double 123.456
 	fstp qword [rbp + 72]
 
  print_test$48:
@@ -250,7 +250,7 @@ section .text
 	fld qword [float8$123.456#]
 
  print_test$49:
-	; Parameter double 123.456 80
+	; Parameter 80 double 123.456
 	fstp qword [rbp + 80]
 
  print_test$50:
@@ -258,7 +258,7 @@ section .text
 	fld qword [float8$123.456#]
 
  print_test$51:
-	; Parameter double 123.456 88
+	; Parameter 88 double 123.456
 	fstp qword [rbp + 88]
 
  print_test$52:
@@ -266,7 +266,7 @@ section .text
 	fld qword [float8$123.456#]
 
  print_test$53:
-	; Parameter double 123.456 96
+	; Parameter 96 double 123.456
 	fstp qword [rbp + 96]
 
  print_test$54:
@@ -274,7 +274,7 @@ section .text
 	fld qword [float8$123.456#]
 
  print_test$55:
-	; Parameter double 123.456 104
+	; Parameter 104 double 123.456
 	fstp qword [rbp + 104]
 
  print_test$56:
@@ -282,11 +282,11 @@ section .text
 	fld qword [float8$123.456#]
 
  print_test$57:
-	; Parameter double 123.456 112
+	; Parameter 112 double 123.456
 	fstp qword [rbp + 112]
 
  print_test$58:
-	; Call printf 24 64
+	; Call 24 printf 64
 	mov qword [rbp + 24], print_test$59
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -301,7 +301,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  print_test$61:
-	; Parameter pointer "<%12.3f> <%+12.3f> <% 12.3f> <%-12.3f> <%+-12.3f> <%-+12.3f> <% -12.3f> <%- 12.3f>\n" 48
+	; Parameter 48 pointer "<%12.3f> <%+12.3f> <% 12.3f> <%-12.3f> <%+-12.3f> <%-+12.3f> <% -12.3f> <%- 12.3f>\n"
 	mov qword [rbp + 48], string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A#
 
  print_test$62:
@@ -309,7 +309,7 @@ section .text
 	fld qword [float8$minus123.456#]
 
  print_test$63:
-	; Parameter double -123.456 56
+	; Parameter 56 double -123.456
 	fstp qword [rbp + 56]
 
  print_test$64:
@@ -317,7 +317,7 @@ section .text
 	fld qword [float8$minus123.456#]
 
  print_test$65:
-	; Parameter double -123.456 64
+	; Parameter 64 double -123.456
 	fstp qword [rbp + 64]
 
  print_test$66:
@@ -325,7 +325,7 @@ section .text
 	fld qword [float8$minus123.456#]
 
  print_test$67:
-	; Parameter double -123.456 72
+	; Parameter 72 double -123.456
 	fstp qword [rbp + 72]
 
  print_test$68:
@@ -333,7 +333,7 @@ section .text
 	fld qword [float8$minus123.456#]
 
  print_test$69:
-	; Parameter double -123.456 80
+	; Parameter 80 double -123.456
 	fstp qword [rbp + 80]
 
  print_test$70:
@@ -341,7 +341,7 @@ section .text
 	fld qword [float8$minus123.456#]
 
  print_test$71:
-	; Parameter double -123.456 88
+	; Parameter 88 double -123.456
 	fstp qword [rbp + 88]
 
  print_test$72:
@@ -349,7 +349,7 @@ section .text
 	fld qword [float8$minus123.456#]
 
  print_test$73:
-	; Parameter double -123.456 96
+	; Parameter 96 double -123.456
 	fstp qword [rbp + 96]
 
  print_test$74:
@@ -357,7 +357,7 @@ section .text
 	fld qword [float8$minus123.456#]
 
  print_test$75:
-	; Parameter double -123.456 104
+	; Parameter 104 double -123.456
 	fstp qword [rbp + 104]
 
  print_test$76:
@@ -365,11 +365,11 @@ section .text
 	fld qword [float8$minus123.456#]
 
  print_test$77:
-	; Parameter double -123.456 112
+	; Parameter 112 double -123.456
 	fstp qword [rbp + 112]
 
  print_test$78:
-	; Call printf 24 64
+	; Call 24 printf 64
 	mov qword [rbp + 24], print_test$79
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -384,7 +384,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  print_test$81:
-	; Parameter pointer "<%012.3f> <%+012.3f> <% 012.3f> <%0 12.3f>\n" 48
+	; Parameter 48 pointer "<%012.3f> <%+012.3f> <% 012.3f> <%0 12.3f>\n"
 	mov qword [rbp + 48], string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A#
 
  print_test$82:
@@ -392,7 +392,7 @@ section .text
 	fld qword [float8$123.456#]
 
  print_test$83:
-	; Parameter double 123.456 56
+	; Parameter 56 double 123.456
 	fstp qword [rbp + 56]
 
  print_test$84:
@@ -400,7 +400,7 @@ section .text
 	fld qword [float8$123.456#]
 
  print_test$85:
-	; Parameter double 123.456 64
+	; Parameter 64 double 123.456
 	fstp qword [rbp + 64]
 
  print_test$86:
@@ -408,7 +408,7 @@ section .text
 	fld qword [float8$123.456#]
 
  print_test$87:
-	; Parameter double 123.456 72
+	; Parameter 72 double 123.456
 	fstp qword [rbp + 72]
 
  print_test$88:
@@ -416,11 +416,11 @@ section .text
 	fld qword [float8$123.456#]
 
  print_test$89:
-	; Parameter double 123.456 80
+	; Parameter 80 double 123.456
 	fstp qword [rbp + 80]
 
  print_test$90:
-	; Call printf 24 32
+	; Call 24 printf 32
 	mov qword [rbp + 24], print_test$91
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -435,7 +435,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  print_test$93:
-	; Parameter pointer "<%012.3f> <%+012.3f> <% 012.3f> <%0 12.3f>\n" 48
+	; Parameter 48 pointer "<%012.3f> <%+012.3f> <% 012.3f> <%0 12.3f>\n"
 	mov qword [rbp + 48], string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A#
 
  print_test$94:
@@ -443,7 +443,7 @@ section .text
 	fld qword [float8$minus123.456#]
 
  print_test$95:
-	; Parameter double -123.456 56
+	; Parameter 56 double -123.456
 	fstp qword [rbp + 56]
 
  print_test$96:
@@ -451,7 +451,7 @@ section .text
 	fld qword [float8$minus123.456#]
 
  print_test$97:
-	; Parameter double -123.456 64
+	; Parameter 64 double -123.456
 	fstp qword [rbp + 64]
 
  print_test$98:
@@ -459,7 +459,7 @@ section .text
 	fld qword [float8$minus123.456#]
 
  print_test$99:
-	; Parameter double -123.456 72
+	; Parameter 72 double -123.456
 	fstp qword [rbp + 72]
 
  print_test$100:
@@ -467,11 +467,11 @@ section .text
 	fld qword [float8$minus123.456#]
 
  print_test$101:
-	; Parameter double -123.456 80
+	; Parameter 80 double -123.456
 	fstp qword [rbp + 80]
 
  print_test$102:
-	; Call printf 24 32
+	; Call 24 printf 32
 	mov qword [rbp + 24], print_test$103
 	mov [rbp + 32], rbp
 	add rbp, 24

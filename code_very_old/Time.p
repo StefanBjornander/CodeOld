@@ -3,7 +3,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\time.h,0$
    
 
     
-     
+    
     
 
 struct tm {
@@ -21,15 +21,15 @@ int tm_isdst ;
 };
 
 extern long clock ( void ) ;
-extern unsigned long time ( unsigned long * time ) ;
-extern double difftime ( unsigned long time2 , unsigned long time1 ) ;
-extern unsigned long mktime ( struct tm * timeStruct ) ;
+extern long time ( long * time ) ;
+extern double difftime ( long time2 , long time1 ) ;
+extern long mktime ( struct tm * timeStruct ) ;
 
 extern char * asctime ( const struct tm * timeStruct ) ;
-extern char * ctime ( const unsigned long * time ) ;
-extern struct tm * gmtime ( const unsigned long * time ) ;
-extern struct tm * localtime ( const unsigned long * time ) ;
-extern struct tm * localtimeX ( const unsigned long * time ) ;
+extern char * ctime ( const long * time ) ;
+extern struct tm * gmtime ( const long * time ) ;
+extern struct tm * localtime ( const long * time ) ;
+extern struct tm * localtimeX ( const long * time ) ;
 
 extern int strftime ( char * buffer , int size ,
 const char * format , const struct tm * timeStruct ) ;
@@ -345,9 +345,9 @@ void * calloc ( int num , int size ) ;
 void free ( void * ptr ) ;
 
 void qsort ( void * valueList , int listSize , int valueSize ,
-int ( * compare ) ( const void * , const void * ) , ... ) ;
-
-void * bsearch ( const void * key , const void * valueList , int listSize , int valueSize ,
+int ( * compare ) ( const void * , const void * ) ) ;
+void * bsearch ( const void * key , const void * valueList ,
+int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
 int abs ( int value ) ;
@@ -489,9 +489,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
        
 
             
-                 
-
-                   
+               
+             
+     
                
 
       
@@ -528,13 +528,14 @@ long clock ( void ) {
 return -1 ;
 }
 
-unsigned long time ( unsigned long * timePtr ) {
-unsigned long time ;
+long time ( long * timePtr ) {
+long time ;
 
    
    
     
       
+        
 
    
     
@@ -547,6 +548,10 @@ unsigned long time ;
    
    
    
+
+      
+     
+
 
             
                  
@@ -576,7 +581,7 @@ if ( timePtr != ( ( void * ) 0 ) ) {
 return time ;
 }
 
-unsigned long mktime ( struct tm * tp ) {
+long mktime ( struct tm * tp ) {
 if ( tp != ( ( void * ) 0 ) ) {
 const long leapDays = ( tp -> tm_year - 69 ) / 4 ;
 const long totalDays = 365 * ( tp -> tm_year - 70 ) + leapDays + tp -> tm_yday ;
@@ -589,17 +594,46 @@ return 0 ;
 
 static struct tm g_timeStruct ;
 
-struct tm * gmtime ( const unsigned long * timePtr ) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+struct tm * gmtime ( const long * timePtr ) {
 int year = 1970 ;
 
 if ( timePtr != ( ( void * ) 0 ) ) {
-unsigned long time = * timePtr ;
-const long secondsOfDay = time % 86400L ;
+long time = * timePtr ;
 long totalDays = time / 86400L ;
-
+const long secondsOfDay = time % 86400L ,
+secondsOfHour = secondsOfDay % 3600 ;
 g_timeStruct . tm_hour = secondsOfDay / 3600 ;
-g_timeStruct . tm_min = ( secondsOfDay % 3600 ) / 60 ;
-g_timeStruct . tm_sec = ( secondsOfDay % 3600 ) % 60 ;
+g_timeStruct . tm_min = secondsOfHour / 60 ;
+g_timeStruct . tm_sec = secondsOfHour % 60 ;
 
 
 if ( totalDays < 3 ) {
@@ -616,8 +650,14 @@ const int daysOfYear = leapYear ? 366 : 365 ;
 
 if ( totalDays < daysOfYear ) {
 const int daysOfMonths [] = { 31 , leapYear ? 29 : 28 , 31 , 30 ,
-31 , 30 , 30 , 31 , 30 , 31 , 30 , 31 };
+31 , 30 , 31 , 31 , 30 , 31 , 30 , 31 };
 int month = 0 ;
+
+
+
+
+
+
 g_timeStruct . tm_year = year - 1900 ;
 g_timeStruct . tm_yday = totalDays ;
 
@@ -640,7 +680,7 @@ totalDays -= daysOfYear ;
 return ( ( void * ) 0 ) ;
 }
 
-double difftime ( unsigned long time1 , unsigned long time2 ) {
+double difftime ( long time1 , long time2 ) {
 return ( double ) ( time2 - time1 ) ;
 }
 
@@ -669,30 +709,29 @@ shortDayList = ( shortDayList != ( ( void * ) 0 ) ) ? shortDayList
 : g_defaultShortDayList ;
 shortMonthList = ( shortMonthList != ( ( void * ) 0 ) ) ? shortMonthList
 : g_defaultShortMonthList ;
-
-sprintf ( g_timeString , "%s %s %2i %02i:%02i:%02i %04i" ,
+sprintf ( g_timeString , "%s %s %i %02i:%02i:%02i %i" ,
 shortDayList [ tp -> tm_wday ] , shortMonthList [ tp -> tm_mon ] ,
 tp -> tm_mday , tp -> tm_hour , tp -> tm_min ,
 tp -> tm_sec , tp -> tm_year + 1900 ) ;
 return g_timeString ;
 }
 
-char * ctime ( const unsigned long * time ) {
+char * ctime ( const long * time ) {
 return asctime ( localtime ( time ) ) ;
 }
 
-struct tm * localtime ( const unsigned long * timePtr ) {
+struct tm * localtime ( const long * timePtr ) {
 struct tm * tmPtr = gmtime ( timePtr ) ;
 struct lconv * localeConvPtr = localeconv ( ) ;
 int timeZone = 0 ;
 
 if ( localeConvPtr != ( ( void * ) 0 ) ) {
-timeZone = tmPtr -> tm_isdst ? localeConvPtr -> summerTimeZone
+timeZone = ( tmPtr -> tm_isdst == 1 ) ? localeConvPtr -> summerTimeZone
 : localeConvPtr -> winterTimeZone ;
 }
 
-{ unsigned long time = * timePtr + ( 3600 * timeZone ) ;
-return gmtime ( & time ) ;
+{ long t = * timePtr + ( 3600l * timeZone ) ;
+return gmtime ( & t ) ;
 }
 }
 
@@ -758,33 +797,33 @@ strcpy ( add , longMonthList [ tp -> tm_mon ] ) ;
 break ;
 
 case 'c' :
-sprintf ( add , "%04d-%02d-%02d %02d:%02d:%02d" ,
+sprintf ( add , "%02i-%02i-%02i %02i:%02i:%02i" ,
 1900 + tp -> tm_year , tp -> tm_mon + 1 , tp -> tm_mday ,
 tp -> tm_hour , tp -> tm_min , tp -> tm_sec ) ;
 break ;
 
 case 'd' :
-sprintf ( add , "%02d" , tp -> tm_mday ) ;
+sprintf ( add , "%i" , tp -> tm_mday ) ;
 break ;
 
 case 'H' :
-sprintf ( add , "%02d" , tp -> tm_hour ) ;
+sprintf ( add , "%i" , tp -> tm_hour ) ;
 break ;
 
 case 'I' :
-sprintf ( add , "%02d" , tp -> tm_hour % 12 ) ;
+sprintf ( add , "%i" , tp -> tm_hour % 12 ) ;
 break ;
 
 case 'j' :
-sprintf ( add , "%03d" , tp -> tm_yday ) ;
+sprintf ( add , "%i" , tp -> tm_yday ) ;
 break ;
 
 case 'm' :
-sprintf ( add , "%02d" , tp -> tm_mon + 1 ) ;
+sprintf ( add , "%i" , tp -> tm_mon + 1 ) ;
 break ;
 
 case 'M' :
-sprintf ( add , "%02d" , tp -> tm_min ) ;
+sprintf ( add , "%i" , tp -> tm_min ) ;
 break ;
 
 case 'p' :
@@ -792,36 +831,36 @@ sprintf ( add , "%s" , ( tp -> tm_hour < 12 ) ? "AM" : "PM" ) ;
 break ;
 
 case 'S' :
-sprintf ( add , "%02d" , tp -> tm_sec ) ;
+sprintf ( add , "%i" , tp -> tm_sec ) ;
 break ;
 
 case 'U' :
-sprintf ( add , "%02d" , yearDaySunday ) ;
+sprintf ( add , "%i" , yearDaySunday ) ;
 break ;
 
 case 'w' :
-sprintf ( add , "%02d" , tp -> tm_wday ) ;
+sprintf ( add , "%i" , tp -> tm_wday ) ;
 break ;
 
 case 'W' :
-sprintf ( add , "%02d" , yearDayMonday ) ;
+sprintf ( add , "%i" , yearDayMonday ) ;
 break ;
 
 case 'x' :
-sprintf ( add , "%04d-%02d-%02d" , 1900 + tp -> tm_year ,
-tp -> tm_mon + 1 , tp -> tm_mday ) ;
+sprintf ( add , "%02i:%02i:%02i" , tp -> tm_hour ,
+tp -> tm_min , tp -> tm_sec ) ;
 break ;
 
 case 'X' :
-sprintf ( add , "%02d:%02d:%02d" , tp -> tm_hour , tp -> tm_min , tp -> tm_sec ) ;
+sprintf ( add , "%02i:%02i:%02i" , tp -> tm_hour , tp -> tm_min , tp -> tm_sec ) ;
 break ;
 
 case 'y' :
-sprintf ( add , "%02d" , tp -> tm_year % 100 ) ;
+sprintf ( add , "%i" , tp -> tm_year % 100 ) ;
 break ;
 
 case 'Y' :
-sprintf ( add , "%04d" , 1900 + tp -> tm_year ) ;
+sprintf ( add , "%i" , 1900 + tp -> tm_year ) ;
 break ;
 
 case 'Z' :
@@ -830,6 +869,10 @@ break ;
 
 case '%' :
 strcpy ( add , "%" ) ;
+
+default :
+strcpy ( add , "" ) ;
+break ;
 }
 }
 else {

@@ -32,6 +32,7 @@
 	extern stderr
 	extern fprintf
 	extern abort
+	extern string_test
 	extern mktime
 	extern character_test
 	global _start
@@ -70,15 +71,15 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main2$3:
-	; Parameter pointer "test1.txt" 48
+	; Parameter 48 pointer "test1.txt"
 	mov qword [rbp + 48], string_test12Etxt#
 
  main2$4:
-	; Parameter pointer "test2.txt" 56
+	; Parameter 56 pointer "test2.txt"
 	mov qword [rbp + 56], string_test22Etxt#
 
  main2$5:
-	; Call file_test 24 0
+	; Call 24 file_test 0
 	mov qword [rbp + 24], main2$6
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -169,21 +170,21 @@ section .text
 	; PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main33$13:
-	; Parameter pointer "<%s> <%s>\n" 88
+	; Parameter 88 pointer "<%s> <%s>\n"
 	mov qword [rbp + 88], string_3C25s3E203C25s3E0A#
 
  main33$14:
-	; Parameter pointer s 96
+	; Parameter 96 pointer s
 	mov [rbp + 96], rbp
 	add qword [rbp + 96], 24
 
  main33$15:
-	; Parameter pointer t 104
+	; Parameter 104 pointer t
 	mov [rbp + 104], rbp
 	add qword [rbp + 104], 44
 
  main33$16:
-	; Call printf 64 16
+	; Call 64 printf 16
 	mov qword [rbp + 64], main33$17
 	mov [rbp + 72], rbp
 	add rbp, 64
@@ -215,11 +216,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main34$2:
-	; Parameter signedchar 88 48
+	; Parameter 48 signedchar 88
 	mov byte [rbp + 48], 88
 
  main34$3:
-	; Call printChar 24 0
+	; Call 24 printChar 0
 	mov qword [rbp + 24], main34$4
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -232,11 +233,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main34$6:
-	; Parameter signedchar 10 48
+	; Parameter 48 signedchar 10
 	mov byte [rbp + 48], 10
 
  main34$7:
-	; Call printChar 24 0
+	; Call 24 printChar 0
 	mov qword [rbp + 24], main34$8
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -279,11 +280,11 @@ section .text
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainc$1:
-	; Parameter pointer "Please write a character: " 49
+	; Parameter 49 pointer "Please write a character: "
 	mov qword [rbp + 49], string_Please20write20a20character3A20#
 
  mainc$2:
-	; Call printf 25 0
+	; Call 25 printf 0
 	mov qword [rbp + 25], mainc$3
 	mov [rbp + 33], rbp
 	add rbp, 25
@@ -297,7 +298,7 @@ section .text
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainc$5:
-	; Parameter pointer "%c" 49
+	; Parameter 49 pointer "%c"
 	mov qword [rbp + 49], string_25c#
 
  mainc$6:
@@ -306,11 +307,11 @@ section .text
 	add rsi, 24
 
  mainc$7:
-	; Parameter pointer £temporary19 57
+	; Parameter 57 pointer £temporary19
 	mov [rbp + 57], rsi
 
  mainc$8:
-	; Call scanf 25 8
+	; Call 25 scanf 8
 	mov qword [rbp + 25], mainc$9
 	mov [rbp + 33], rbp
 	add rbp, 25
@@ -325,7 +326,7 @@ section .text
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainc$11:
-	; Parameter pointer "You wrote the character '%c'.\n" 49
+	; Parameter 49 pointer "You wrote the character '%c'.\n"
 	mov qword [rbp + 49], string_You20wrote20the20character202725c272E0A#
 
  mainc$12:
@@ -338,11 +339,11 @@ section .text
 	neg eax
 
  mainc$13:
-	; Parameter signedint £temporary21 57
+	; Parameter 57 signedint £temporary21
 	mov [rbp + 57], eax
 
  mainc$14:
-	; Call printf 25 4
+	; Call 25 printf 4
 	mov qword [rbp + 25], mainc$15
 	mov [rbp + 33], rbp
 	add rbp, 25
@@ -387,11 +388,11 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  maini$1:
-	; Parameter pointer "Please write an integer: " 52
+	; Parameter 52 pointer "Please write an integer: "
 	mov qword [rbp + 52], string_Please20write20an20integer3A20#
 
  maini$2:
-	; Call printf 28 0
+	; Call 28 printf 0
 	mov qword [rbp + 28], maini$3
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -405,7 +406,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  maini$5:
-	; Parameter pointer "%i" 52
+	; Parameter 52 pointer "%i"
 	mov qword [rbp + 52], string_25i#
 
  maini$6:
@@ -414,11 +415,11 @@ section .text
 	add rsi, 24
 
  maini$7:
-	; Parameter pointer £temporary25 60
+	; Parameter 60 pointer £temporary25
 	mov [rbp + 60], rsi
 
  maini$8:
-	; Call scanf 28 8
+	; Call 28 scanf 8
 	mov qword [rbp + 28], maini$9
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -433,16 +434,16 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  maini$11:
-	; Parameter pointer "You wrote the integer %i.\n" 52
+	; Parameter 52 pointer "You wrote the integer %i.\n"
 	mov qword [rbp + 52], string_You20wrote20the20integer2025i2E0A#
 
  maini$12:
-	; Parameter signedint i 60
+	; Parameter 60 signedint i
 	mov eax, [rbp + 24]
 	mov [rbp + 60], eax
 
  maini$13:
-	; Call printf 28 4
+	; Call 28 printf 4
 	mov qword [rbp + 28], maini$14
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -487,11 +488,11 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mains$1:
-	; Parameter pointer "Please write a string: " 68
+	; Parameter 68 pointer "Please write a string: "
 	mov qword [rbp + 68], string_Please20write20a20string3A20#
 
  mains$2:
-	; Call printf 44 0
+	; Call 44 printf 0
 	mov qword [rbp + 44], mains$3
 	mov [rbp + 52], rbp
 	add rbp, 44
@@ -505,16 +506,16 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mains$5:
-	; Parameter pointer "%s" 68
+	; Parameter 68 pointer "%s"
 	mov qword [rbp + 68], string_25s#
 
  mains$6:
-	; Parameter pointer s 76
+	; Parameter 76 pointer s
 	mov [rbp + 76], rbp
 	add qword [rbp + 76], 24
 
  mains$7:
-	; Call scanf 44 8
+	; Call 44 scanf 8
 	mov qword [rbp + 44], mains$8
 	mov [rbp + 52], rbp
 	add rbp, 44
@@ -529,16 +530,16 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mains$10:
-	; Parameter pointer "You wrote the string "%s".\n" 68
+	; Parameter 68 pointer "You wrote the string "%s".\n"
 	mov qword [rbp + 68], string_You20wrote20the20string202225s222E0A#
 
  mains$11:
-	; Parameter pointer s 76
+	; Parameter 76 pointer s
 	mov [rbp + 76], rbp
 	add qword [rbp + 76], 24
 
  mains$12:
-	; Call printf 44 8
+	; Call 44 printf 8
 	mov qword [rbp + 44], mains$13
 	mov [rbp + 52], rbp
 	add rbp, 44
@@ -565,7 +566,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  maint$1:
-	; Call limits_test 24 0
+	; Call 24 limits_test 0
 	mov qword [rbp + 24], maint$2
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -578,7 +579,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  maint$4:
-	; Call time_test 24 0
+	; Call 24 time_test 0
 	mov qword [rbp + 24], maint$5
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -609,7 +610,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainY$1:
-	; Call malloc_test 24 0
+	; Call 24 malloc_test 0
 	mov qword [rbp + 24], mainY$2
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -626,11 +627,11 @@ section .text
 	fld qword [float8$10#]
 
  mainY$5:
-	; Parameter double 10 48
+	; Parameter 48 double 10
 	fstp qword [rbp + 48]
 
  mainY$6:
-	; Call setjmp_test 24 0
+	; Call 24 setjmp_test 0
 	mov qword [rbp + 24], mainY$7
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -647,11 +648,11 @@ section .text
 	fldz
 
  mainY$10:
-	; Parameter double 0 48
+	; Parameter 48 double 0
 	fstp qword [rbp + 48]
 
  mainY$11:
-	; Call setjmp_test 24 0
+	; Call 24 setjmp_test 0
 	mov qword [rbp + 24], mainY$12
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -729,11 +730,11 @@ section .text
 	; PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX$6:
-	; Parameter pointer "%i: %i <%c>\n" 65
+	; Parameter 65 pointer "%i: %i <%c>\n"
 	mov qword [rbp + 65], string_25i3A2025i203C25c3E0A#
 
  mainX$7:
-	; Parameter signedint index 73
+	; Parameter 73 signedint index
 	mov eax, [rbp + 36]
 	mov [rbp + 73], eax
 
@@ -747,7 +748,7 @@ section .text
 	neg eax
 
  mainX$9:
-	; Parameter signedint £temporary43 77
+	; Parameter 77 signedint £temporary43
 	mov [rbp + 77], eax
 
  mainX$10:
@@ -760,11 +761,11 @@ section .text
 	neg eax
 
  mainX$11:
-	; Parameter signedint £temporary44 81
+	; Parameter 81 signedint £temporary44
 	mov [rbp + 81], eax
 
  mainX$12:
-	; Call printf 41 12
+	; Call 41 printf 12
 	mov qword [rbp + 41], mainX$13
 	mov [rbp + 49], rbp
 	add rbp, 41
@@ -787,16 +788,16 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX$17:
-	; Parameter pointer "\nargc: %i\n" 64
+	; Parameter 64 pointer "\nargc: %i\n"
 	mov qword [rbp + 64], string_0Aargc3A2025i0A#
 
  mainX$18:
-	; Parameter signedint argc 72
+	; Parameter 72 signedint argc
 	mov eax, [rbp + 24]
 	mov [rbp + 72], eax
 
  mainX$19:
-	; Call printf 40 4
+	; Call 40 printf 4
 	mov qword [rbp + 40], mainX$20
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -821,11 +822,11 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX$24:
-	; Parameter pointer "%i: <%s>\n" 64
+	; Parameter 64 pointer "%i: <%s>\n"
 	mov qword [rbp + 64], string_25i3A203C25s3E0A#
 
  mainX$25:
-	; Parameter signedint index 72
+	; Parameter 72 signedint index
 	mov eax, [rbp + 36]
 	mov [rbp + 72], eax
 
@@ -849,12 +850,12 @@ section .text
 	; Dereference £temporary49 -> £temporary52 £temporary52 0
 
  mainX$30:
-	; Parameter pointer £temporary49 -> £temporary52 76
+	; Parameter 76 pointer £temporary49 -> £temporary52
 	mov rax, [rsi]
 	mov [rbp + 76], rax
 
  mainX$31:
-	; Call printf 40 12
+	; Call 40 printf 12
 	mov qword [rbp + 40], mainX$32
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -877,11 +878,11 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX$36:
-	; Parameter pointer "\n" 64
+	; Parameter 64 pointer "\n"
 	mov qword [rbp + 64], string_0A#
 
  mainX$37:
-	; Call printf 40 0
+	; Call 40 printf 0
 	mov qword [rbp + 40], mainX$38
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -923,11 +924,11 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX$46:
-	; Parameter pointer "%i: <%s>\n" 64
+	; Parameter 64 pointer "%i: <%s>\n"
 	mov qword [rbp + 64], string_25i3A203C25s3E0A#
 
  mainX$47:
-	; Parameter signedint index 72
+	; Parameter 72 signedint index
 	mov eax, [rbp + 36]
 	mov [rbp + 72], eax
 
@@ -951,12 +952,12 @@ section .text
 	; Dereference £temporary61 -> £temporary64 £temporary64 0
 
  mainX$52:
-	; Parameter pointer £temporary61 -> £temporary64 76
+	; Parameter 76 pointer £temporary61 -> £temporary64
 	mov rax, [rsi]
 	mov [rbp + 76], rax
 
  mainX$53:
-	; Call printf 40 12
+	; Call 40 printf 12
 	mov qword [rbp + 40], mainX$54
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -991,7 +992,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainm$1:
-	; Call main_math 36 0
+	; Call 36 main_math 0
 	mov qword [rbp + 36], mainm$2
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -1040,28 +1041,28 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  maina$1:
-	; Parameter pointer stderr 48
+	; Parameter 48 pointer stderr
 	mov rax, [stderr]
 	mov [rbp + 48], rax
 
  maina$2:
-	; Parameter pointer "Assertion failed: "%s" in file %s at line %i\n" 56
+	; Parameter 56 pointer "Assertion failed: "%s" in file %s at line %i\n"
 	mov qword [rbp + 56], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  maina$3:
-	; Parameter pointer "1 > 2" 64
+	; Parameter 64 pointer "1 > 2"
 	mov qword [rbp + 64], string_1203E202#
 
  maina$4:
-	; Parameter pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c" 72
+	; Parameter 72 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c"
 	mov qword [rbp + 72], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
  maina$5:
-	; Parameter signedint 197 80
+	; Parameter 80 signedint 197
 	mov dword [rbp + 80], 197
 
  maina$6:
-	; Call fprintf 24 20
+	; Call 24 fprintf 20
 	mov qword [rbp + 24], maina$7
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1076,7 +1077,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  maina$9:
-	; Call abort 24 0
+	; Call 24 abort 0
 	mov qword [rbp + 24], maina$10
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1113,11 +1114,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main$1:
-	; Call time_test 24 0
+	; Call 24 string_test 0
 	mov qword [rbp + 24], main$2
 	mov [rbp + 32], rbp
 	add rbp, 24
-	jmp time_test
+	jmp string_test
 
  main$2:
 	; PostCall 24
@@ -1200,16 +1201,16 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX4$1:
-	; Parameter pointer "argc: %i\n" 60
+	; Parameter 60 pointer "argc: %i\n"
 	mov qword [rbp + 60], string_argc3A2025i0A#
 
  mainX4$2:
-	; Parameter signedint argc 68
+	; Parameter 68 signedint argc
 	mov eax, [rbp + 24]
 	mov [rbp + 68], eax
 
  mainX4$3:
-	; Call printf 36 4
+	; Call 36 printf 4
 	mov qword [rbp + 36], mainX4$4
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -1234,11 +1235,11 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX4$8:
-	; Parameter pointer "%i: <%s>\n" 64
+	; Parameter 64 pointer "%i: <%s>\n"
 	mov qword [rbp + 64], string_25i3A203C25s3E0A#
 
  mainX4$9:
-	; Parameter signedint index 72
+	; Parameter 72 signedint index
 	mov eax, [rbp + 36]
 	mov [rbp + 72], eax
 
@@ -1262,12 +1263,12 @@ section .text
 	; Dereference £temporary79 -> £temporary82 £temporary82 0
 
  mainX4$14:
-	; Parameter pointer £temporary79 -> £temporary82 76
+	; Parameter 76 pointer £temporary79 -> £temporary82
 	mov rax, [rsi]
 	mov [rbp + 76], rax
 
  mainX4$15:
-	; Call printf 40 12
+	; Call 40 printf 12
 	mov qword [rbp + 40], mainX4$16
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -1290,11 +1291,11 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX4$20:
-	; Parameter pointer "\n" 64
+	; Parameter 64 pointer "\n"
 	mov qword [rbp + 64], string_0A#
 
  mainX4$21:
-	; Call printf 40 0
+	; Call 40 printf 0
 	mov qword [rbp + 40], mainX4$22
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -1336,11 +1337,11 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX4$30:
-	; Parameter pointer "%i: <%s>\n" 64
+	; Parameter 64 pointer "%i: <%s>\n"
 	mov qword [rbp + 64], string_25i3A203C25s3E0A#
 
  mainX4$31:
-	; Parameter signedint index 72
+	; Parameter 72 signedint index
 	mov eax, [rbp + 36]
 	mov [rbp + 72], eax
 
@@ -1364,12 +1365,12 @@ section .text
 	; Dereference £temporary91 -> £temporary94 £temporary94 0
 
  mainX4$36:
-	; Parameter pointer £temporary91 -> £temporary94 76
+	; Parameter 76 pointer £temporary91 -> £temporary94
 	mov rax, [rsi]
 	mov [rbp + 76], rax
 
  mainX4$37:
-	; Call printf 40 12
+	; Call 40 printf 12
 	mov qword [rbp + 40], mainX4$38
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -1392,11 +1393,11 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX4$42:
-	; Parameter pointer "\n" 64
+	; Parameter 64 pointer "\n"
 	mov qword [rbp + 64], string_0A#
 
  mainX4$43:
-	; Call printf 40 0
+	; Call 40 printf 0
 	mov qword [rbp + 40], mainX4$44
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -1410,11 +1411,11 @@ section .text
 	; PreCall 69 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX4$46:
-	; Parameter pointer 0 93
+	; Parameter 93 pointer 0
 	mov qword [rbp + 93], 0
 
  mainX4$47:
-	; Call mktime 69 0
+	; Call 69 mktime 0
 	mov qword [rbp + 69], mainX4$48
 	mov [rbp + 77], rbp
 	add rbp, 69
@@ -1427,11 +1428,11 @@ section .text
 	; PreCall 69 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX4$50:
-	; Parameter pointer "Hello!\n" 93
+	; Parameter 93 pointer "Hello!\n"
 	mov qword [rbp + 93], string_Hello210A#
 
  mainX4$51:
-	; Call printf 69 0
+	; Call 69 printf 0
 	mov qword [rbp + 69], mainX4$52
 	mov [rbp + 77], rbp
 	add rbp, 69
@@ -1445,11 +1446,11 @@ section .text
 	; PreCall 69 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX4$54:
-	; Parameter pointer "Please write a character, a string, an integer, and a double: " 93
+	; Parameter 93 pointer "Please write a character, a string, an integer, and a double: "
 	mov qword [rbp + 93], string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20#
 
  mainX4$55:
-	; Call printf 69 0
+	; Call 69 printf 0
 	mov qword [rbp + 69], mainX4$56
 	mov [rbp + 77], rbp
 	add rbp, 69
@@ -1463,7 +1464,7 @@ section .text
 	; PreCall 69 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX4$58:
-	; Parameter pointer "%c %s %i %lf" 93
+	; Parameter 93 pointer "%c %s %i %lf"
 	mov qword [rbp + 93], string_25c2025s2025i2025lf#
 
  mainX4$59:
@@ -1472,11 +1473,11 @@ section .text
 	add rsi, 48
 
  mainX4$60:
-	; Parameter pointer £temporary100 101
+	; Parameter 101 pointer £temporary100
 	mov [rbp + 101], rsi
 
  mainX4$61:
-	; Parameter pointer s 109
+	; Parameter 109 pointer s
 	mov [rbp + 109], rbp
 	add qword [rbp + 109], 49
 
@@ -1486,7 +1487,7 @@ section .text
 	add rsi, 36
 
  mainX4$63:
-	; Parameter pointer £temporary101 117
+	; Parameter 117 pointer £temporary101
 	mov [rbp + 117], rsi
 
  mainX4$64:
@@ -1495,11 +1496,11 @@ section .text
 	add rsi, 40
 
  mainX4$65:
-	; Parameter pointer £temporary102 125
+	; Parameter 125 pointer £temporary102
 	mov [rbp + 125], rsi
 
  mainX4$66:
-	; Call scanf 69 32
+	; Call 69 scanf 32
 	mov qword [rbp + 69], mainX4$67
 	mov [rbp + 77], rbp
 	add rbp, 69
@@ -1514,7 +1515,7 @@ section .text
 	; PreCall 69 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX4$69:
-	; Parameter pointer "You wrote the character '%c', the string "%s", the integer %i, and the double %f.\n" 93
+	; Parameter 93 pointer "You wrote the character '%c', the string "%s", the integer %i, and the double %f.\n"
 	mov qword [rbp + 93], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#
 
  mainX4$70:
@@ -1527,16 +1528,16 @@ section .text
 	neg eax
 
  mainX4$71:
-	; Parameter signedint £temporary104 101
+	; Parameter 101 signedint £temporary104
 	mov [rbp + 101], eax
 
  mainX4$72:
-	; Parameter pointer s 105
+	; Parameter 105 pointer s
 	mov [rbp + 105], rbp
 	add qword [rbp + 105], 49
 
  mainX4$73:
-	; Parameter signedint i 113
+	; Parameter 113 signedint i
 	mov eax, [rbp + 36]
 	mov [rbp + 113], eax
 
@@ -1545,11 +1546,11 @@ section .text
 	fld qword [rbp + 40]
 
  mainX4$75:
-	; Parameter double d 117
+	; Parameter 117 double d
 	fstp qword [rbp + 117]
 
  mainX4$76:
-	; Call printf 69 24
+	; Call 69 printf 24
 	mov qword [rbp + 69], mainX4$77
 	mov [rbp + 77], rbp
 	add rbp, 69
@@ -1594,11 +1595,11 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main3$1:
-	; Parameter pointer ": " 56
+	; Parameter 56 pointer ": "
 	mov qword [rbp + 56], string_3A20#
 
  main3$2:
-	; Call printf 32 0
+	; Call 32 printf 0
 	mov qword [rbp + 32], main3$3
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1612,7 +1613,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main3$5:
-	; Parameter pointer "%lf" 56
+	; Parameter 56 pointer "%lf"
 	mov qword [rbp + 56], string_25lf#
 
  main3$6:
@@ -1621,11 +1622,11 @@ section .text
 	add rsi, 24
 
  main3$7:
-	; Parameter pointer £temporary111 64
+	; Parameter 64 pointer £temporary111
 	mov [rbp + 64], rsi
 
  main3$8:
-	; Call scanf 32 8
+	; Call 32 scanf 8
 	mov qword [rbp + 32], main3$9
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1640,7 +1641,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main3$11:
-	; Parameter pointer "<%f>" 56
+	; Parameter 56 pointer "<%f>"
 	mov qword [rbp + 56], string_3C25f3E#
 
  main3$12:
@@ -1648,11 +1649,11 @@ section .text
 	fld qword [rbp + 24]
 
  main3$13:
-	; Parameter double x 64
+	; Parameter 64 double x
 	fstp qword [rbp + 64]
 
  main3$14:
-	; Call printf 32 8
+	; Call 32 printf 8
 	mov qword [rbp + 32], main3$15
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1701,11 +1702,11 @@ section .text
 	fld qword [float8$3.14#]
 
  mains2$2:
-	; Parameter double 3.14 48
+	; Parameter 48 double 3.14
 	fstp qword [rbp + 48]
 
  mains2$3:
-	; Call setjmp_test 24 0
+	; Call 24 setjmp_test 0
 	mov qword [rbp + 24], mains2$4
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1718,11 +1719,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mains2$6:
-	; Parameter pointer "---------------------------------------------\n" 48
+	; Parameter 48 pointer "---------------------------------------------\n"
 	mov qword [rbp + 48], string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#
 
  mains2$7:
-	; Call printf 24 0
+	; Call 24 printf 0
 	mov qword [rbp + 24], mains2$8
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1740,11 +1741,11 @@ section .text
 	fldz
 
  mains2$11:
-	; Parameter double 0 48
+	; Parameter 48 double 0
 	fstp qword [rbp + 48]
 
  mains2$12:
-	; Call setjmp_test 24 0
+	; Call 24 setjmp_test 0
 	mov qword [rbp + 24], mains2$13
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1757,11 +1758,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mains2$15:
-	; Parameter pointer "---------------------------------------------\n" 48
+	; Parameter 48 pointer "---------------------------------------------\n"
 	mov qword [rbp + 48], string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#
 
  mains2$16:
-	; Call printf 24 0
+	; Call 24 printf 0
 	mov qword [rbp + 24], mains2$17
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1779,11 +1780,11 @@ section .text
 	fld qword [float8$2.71#]
 
  mains2$20:
-	; Parameter double 2.71 48
+	; Parameter 48 double 2.71
 	fstp qword [rbp + 48]
 
  mains2$21:
-	; Call setjmp_test 24 0
+	; Call 24 setjmp_test 0
 	mov qword [rbp + 24], mains2$22
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1796,11 +1797,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mains2$24:
-	; Parameter pointer "---------------------------------------------\n" 48
+	; Parameter 48 pointer "---------------------------------------------\n"
 	mov qword [rbp + 48], string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#
 
  mains2$25:
-	; Call printf 24 0
+	; Call 24 printf 0
 	mov qword [rbp + 24], mains2$26
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1818,11 +1819,11 @@ section .text
 	fldz
 
  mains2$29:
-	; Parameter double 0 48
+	; Parameter 48 double 0
 	fstp qword [rbp + 48]
 
  mains2$30:
-	; Call setjmp_test 24 0
+	; Call 24 setjmp_test 0
 	mov qword [rbp + 24], mains2$31
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1847,11 +1848,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  char_main$1:
-	; Parameter signedchar 97 48
+	; Parameter 48 signedchar 97
 	mov byte [rbp + 48], 97
 
  char_main$2:
-	; Call character_test 24 0
+	; Call 24 character_test 0
 	mov qword [rbp + 24], char_main$3
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1864,11 +1865,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  char_main$5:
-	; Parameter signedchar 66 48
+	; Parameter 48 signedchar 66
 	mov byte [rbp + 48], 66
 
  char_main$6:
-	; Call character_test 24 0
+	; Call 24 character_test 0
 	mov qword [rbp + 24], char_main$7
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1881,11 +1882,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  char_main$9:
-	; Parameter signedchar 49 48
+	; Parameter 48 signedchar 49
 	mov byte [rbp + 48], 49
 
  char_main$10:
-	; Call character_test 24 0
+	; Call 24 character_test 0
 	mov qword [rbp + 24], char_main$11
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1898,11 +1899,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  char_main$13:
-	; Parameter signedchar 46 48
+	; Parameter 48 signedchar 46
 	mov byte [rbp + 48], 46
 
  char_main$14:
-	; Call character_test 24 0
+	; Call 24 character_test 0
 	mov qword [rbp + 24], char_main$15
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1915,11 +1916,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  char_main$17:
-	; Parameter signedchar 10 48
+	; Parameter 48 signedchar 10
 	mov byte [rbp + 48], 10
 
  char_main$18:
-	; Call character_test 24 0
+	; Call 24 character_test 0
 	mov qword [rbp + 24], char_main$19
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1932,11 +1933,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  char_main$21:
-	; Parameter signedchar 102 48
+	; Parameter 48 signedchar 102
 	mov byte [rbp + 48], 102
 
  char_main$22:
-	; Call character_test 24 0
+	; Call 24 character_test 0
 	mov qword [rbp + 24], char_main$23
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1949,11 +1950,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  char_main$25:
-	; Parameter signedchar 103 48
+	; Parameter 48 signedchar 103
 	mov byte [rbp + 48], 103
 
  char_main$26:
-	; Call character_test 24 0
+	; Call 24 character_test 0
 	mov qword [rbp + 24], char_main$27
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1994,11 +1995,11 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  assert_test$2:
-	; Parameter pointer "Please write a number (not 6 or 7): " 52
+	; Parameter 52 pointer "Please write a number (not 6 or 7): "
 	mov qword [rbp + 52], string_Please20write20a20number2028not20620or207293A20#
 
  assert_test$3:
-	; Call printf 28 0
+	; Call 28 printf 0
 	mov qword [rbp + 28], assert_test$4
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -2012,7 +2013,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  assert_test$6:
-	; Parameter pointer "%i" 52
+	; Parameter 52 pointer "%i"
 	mov qword [rbp + 52], string_25i#
 
  assert_test$7:
@@ -2021,11 +2022,11 @@ section .text
 	add rsi, 24
 
  assert_test$8:
-	; Parameter pointer £temporary135 60
+	; Parameter 60 pointer £temporary135
 	mov [rbp + 60], rsi
 
  assert_test$9:
-	; Call scanf 28 8
+	; Call 28 scanf 8
 	mov qword [rbp + 28], assert_test$10
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -2045,28 +2046,28 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  assert_test$13:
-	; Parameter pointer stderr 52
+	; Parameter 52 pointer stderr
 	mov rax, [stderr]
 	mov [rbp + 52], rax
 
  assert_test$14:
-	; Parameter pointer "Assertion failed: "%s" in file %s at line %i\n" 60
+	; Parameter 60 pointer "Assertion failed: "%s" in file %s at line %i\n"
 	mov qword [rbp + 60], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  assert_test$15:
-	; Parameter pointer "n != 6" 68
+	; Parameter 68 pointer "n != 6"
 	mov qword [rbp + 68], string_n20213D206#
 
  assert_test$16:
-	; Parameter pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c" 76
+	; Parameter 76 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c"
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
  assert_test$17:
-	; Parameter signedint 869 84
-	mov dword [rbp + 84], 869
+	; Parameter 84 signedint 876
+	mov dword [rbp + 84], 876
 
  assert_test$18:
-	; Call fprintf 28 20
+	; Call 28 fprintf 20
 	mov qword [rbp + 28], assert_test$19
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -2081,7 +2082,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  assert_test$21:
-	; Call abort 28 0
+	; Call 28 abort 0
 	mov qword [rbp + 28], assert_test$22
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -2094,12 +2095,12 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  assert_test$24:
-	; Parameter signedint n 52
+	; Parameter 52 signedint n
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
  assert_test$25:
-	; Call assert_test2 28 0
+	; Call 28 assert_test2 0
 	mov qword [rbp + 28], assert_test$26
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -2135,28 +2136,28 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  assert_test2$2:
-	; Parameter pointer stderr 52
+	; Parameter 52 pointer stderr
 	mov rax, [stderr]
 	mov [rbp + 52], rax
 
  assert_test2$3:
-	; Parameter pointer "Assertion failed: "%s" in file %s at line %i\n" 60
+	; Parameter 60 pointer "Assertion failed: "%s" in file %s at line %i\n"
 	mov qword [rbp + 60], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  assert_test2$4:
-	; Parameter pointer "n != 7" 68
+	; Parameter 68 pointer "n != 7"
 	mov qword [rbp + 68], string_n20213D207#
 
  assert_test2$5:
-	; Parameter pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c" 76
+	; Parameter 76 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c"
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
  assert_test2$6:
-	; Parameter signedint 874 84
-	mov dword [rbp + 84], 874
+	; Parameter 84 signedint 881
+	mov dword [rbp + 84], 881
 
  assert_test2$7:
-	; Call fprintf 28 20
+	; Call 28 fprintf 20
 	mov qword [rbp + 28], assert_test2$8
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -2171,7 +2172,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  assert_test2$10:
-	; Call abort 28 0
+	; Call 28 abort 0
 	mov qword [rbp + 28], assert_test2$11
 	mov [rbp + 36], rbp
 	add rbp, 28

@@ -270,12 +270,12 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fopen$8:
-	; Parameter pointer name 68
+	; Parameter 68 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 68], rax
 
  fopen$9:
-	; Parameter pointer mode 76
+	; Parameter 76 pointer mode
 	mov rax, [rbp + 32]
 	mov [rbp + 76], rax
 
@@ -302,11 +302,11 @@ section .text
 	; Address £temporary732 £temporary728 -> £temporary731
 
  fopen$15:
-	; Parameter pointer £temporary732 84
+	; Parameter 84 pointer £temporary732
 	mov [rbp + 84], rsi
 
  fopen$16:
-	; Call freopen 44 0
+	; Call 44 freopen 0
 	mov qword [rbp + 44], fopen$17
 	mov [rbp + 52], rbp
 	add rbp, 44
@@ -390,16 +390,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$2:
-	; Parameter pointer mode 76
+	; Parameter 76 pointer mode
 	mov rax, [rbp + 32]
 	mov [rbp + 76], rax
 
  freopen$3:
-	; Parameter pointer "r" 84
+	; Parameter 84 pointer "r"
 	mov qword [rbp + 84], string_r#
 
  freopen$4:
-	; Call strcmp 52 0
+	; Call 52 strcmp 0
 	mov qword [rbp + 52], freopen$5
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -420,16 +420,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$9:
-	; Parameter pointer name 76
+	; Parameter 76 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 76], rax
 
  freopen$10:
-	; Parameter unsignedshortint 64 84
+	; Parameter 84 unsignedshortint 64
 	mov word [rbp + 84], 64
 
  freopen$11:
-	; Call fileopen 52 0
+	; Call 52 fileopen 0
 	mov qword [rbp + 52], freopen$12
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -453,16 +453,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$17:
-	; Parameter pointer mode 76
+	; Parameter 76 pointer mode
 	mov rax, [rbp + 32]
 	mov [rbp + 76], rax
 
  freopen$18:
-	; Parameter pointer "w" 84
+	; Parameter 84 pointer "w"
 	mov qword [rbp + 84], string_w#
 
  freopen$19:
-	; Call strcmp 52 0
+	; Call 52 strcmp 0
 	mov qword [rbp + 52], freopen$20
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -483,12 +483,12 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$24:
-	; Parameter pointer name 76
+	; Parameter 76 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 76], rax
 
  freopen$25:
-	; Call filecreate 52 0
+	; Call 52 filecreate 0
 	mov qword [rbp + 52], freopen$26
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -512,16 +512,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$31:
-	; Parameter pointer mode 76
+	; Parameter 76 pointer mode
 	mov rax, [rbp + 32]
 	mov [rbp + 76], rax
 
  freopen$32:
-	; Parameter pointer "a" 84
+	; Parameter 84 pointer "a"
 	mov qword [rbp + 84], string_a#
 
  freopen$33:
-	; Call strcmp 52 0
+	; Call 52 strcmp 0
 	mov qword [rbp + 52], freopen$34
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -542,16 +542,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$38:
-	; Parameter pointer name 76
+	; Parameter 76 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 76], rax
 
  freopen$39:
-	; Parameter unsignedshortint 65 84
+	; Parameter 84 unsignedshortint 65
 	mov word [rbp + 84], 65
 
  freopen$40:
-	; Call fileopen 52 0
+	; Call 52 fileopen 0
 	mov qword [rbp + 52], freopen$41
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -576,20 +576,20 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$46:
-	; Parameter pointer stream 76
+	; Parameter 76 pointer stream
 	mov rax, [rbp + 40]
 	mov [rbp + 76], rax
 
  freopen$47:
-	; Parameter signedint 0 84
+	; Parameter 84 signedint 0
 	mov dword [rbp + 84], 0
 
  freopen$48:
-	; Parameter signedint 2 88
+	; Parameter 88 signedint 2
 	mov dword [rbp + 88], 2
 
  freopen$49:
-	; Call fseek 52 0
+	; Call 52 fseek 0
 	mov qword [rbp + 52], freopen$50
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -606,12 +606,12 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$53:
-	; Parameter pointer name 76
+	; Parameter 76 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 76], rax
 
  freopen$54:
-	; Call filecreate 52 0
+	; Call 52 filecreate 0
 	mov qword [rbp + 52], freopen$55
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -635,16 +635,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$60:
-	; Parameter pointer mode 76
+	; Parameter 76 pointer mode
 	mov rax, [rbp + 32]
 	mov [rbp + 76], rax
 
  freopen$61:
-	; Parameter pointer "r+" 84
+	; Parameter 84 pointer "r+"
 	mov qword [rbp + 84], string_r2B#
 
  freopen$62:
-	; Call strcmp 52 0
+	; Call 52 strcmp 0
 	mov qword [rbp + 52], freopen$63
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -665,16 +665,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$67:
-	; Parameter pointer name 76
+	; Parameter 76 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 76], rax
 
  freopen$68:
-	; Parameter unsignedshortint 66 84
+	; Parameter 84 unsignedshortint 66
 	mov word [rbp + 84], 66
 
  freopen$69:
-	; Call fileopen 52 0
+	; Call 52 fileopen 0
 	mov qword [rbp + 52], freopen$70
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -698,16 +698,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$75:
-	; Parameter pointer mode 76
+	; Parameter 76 pointer mode
 	mov rax, [rbp + 32]
 	mov [rbp + 76], rax
 
  freopen$76:
-	; Parameter pointer "w+" 84
+	; Parameter 84 pointer "w+"
 	mov qword [rbp + 84], string_w2B#
 
  freopen$77:
-	; Call strcmp 52 0
+	; Call 52 strcmp 0
 	mov qword [rbp + 52], freopen$78
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -728,12 +728,12 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$82:
-	; Parameter pointer name 76
+	; Parameter 76 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 76], rax
 
  freopen$83:
-	; Call fileexists 52 0
+	; Call 52 fileexists 0
 	mov qword [rbp + 52], freopen$84
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -754,16 +754,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$88:
-	; Parameter pointer name 76
+	; Parameter 76 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 76], rax
 
  freopen$89:
-	; Parameter unsignedshortint 66 84
+	; Parameter 84 unsignedshortint 66
 	mov word [rbp + 84], 66
 
  freopen$90:
-	; Call fileopen 52 0
+	; Call 52 fileopen 0
 	mov qword [rbp + 52], freopen$91
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -787,12 +787,12 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$96:
-	; Parameter pointer name 76
+	; Parameter 76 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 76], rax
 
  freopen$97:
-	; Call filecreate 52 0
+	; Call 52 filecreate 0
 	mov qword [rbp + 52], freopen$98
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -816,16 +816,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$103:
-	; Parameter pointer mode 76
+	; Parameter 76 pointer mode
 	mov rax, [rbp + 32]
 	mov [rbp + 76], rax
 
  freopen$104:
-	; Parameter pointer "a+" 84
+	; Parameter 84 pointer "a+"
 	mov qword [rbp + 84], string_a2B#
 
  freopen$105:
-	; Call strcmp 52 0
+	; Call 52 strcmp 0
 	mov qword [rbp + 52], freopen$106
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -846,16 +846,16 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$110:
-	; Parameter pointer name 76
+	; Parameter 76 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 76], rax
 
  freopen$111:
-	; Parameter unsignedshortint 66 84
+	; Parameter 84 unsignedshortint 66
 	mov word [rbp + 84], 66
 
  freopen$112:
-	; Call fileopen 52 0
+	; Call 52 fileopen 0
 	mov qword [rbp + 52], freopen$113
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -880,20 +880,20 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$118:
-	; Parameter pointer stream 76
+	; Parameter 76 pointer stream
 	mov rax, [rbp + 40]
 	mov [rbp + 76], rax
 
  freopen$119:
-	; Parameter signedint 0 84
+	; Parameter 84 signedint 0
 	mov dword [rbp + 84], 0
 
  freopen$120:
-	; Parameter signedint 2 88
+	; Parameter 88 signedint 2
 	mov dword [rbp + 88], 2
 
  freopen$121:
-	; Call fseek 52 0
+	; Call 52 fseek 0
 	mov qword [rbp + 52], freopen$122
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -910,12 +910,12 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$125:
-	; Parameter pointer name 76
+	; Parameter 76 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 76], rax
 
  freopen$126:
-	; Call filecreate 52 0
+	; Call 52 filecreate 0
 	mov qword [rbp + 52], freopen$127
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -969,17 +969,17 @@ section .text
 	mov rsi, [rbp + 40]
 
  freopen$139:
-	; Parameter pointer £temporary765 -> stream 76
+	; Parameter 76 pointer £temporary765 -> stream
 	mov [rbp + 76], rsi
 	add qword [rbp + 76], 8
 
  freopen$140:
-	; Parameter pointer name 84
+	; Parameter 84 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 84], rax
 
  freopen$141:
-	; Call strcpy 52 0
+	; Call 52 strcpy 0
 	mov qword [rbp + 52], freopen$142
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -1089,11 +1089,11 @@ section .text
 	; Address £temporary780 £temporary776 -> £temporary779
 
  fflush$14:
-	; Parameter pointer £temporary780 60
+	; Parameter 60 pointer £temporary780
 	mov [rbp + 60], rsi
 
  fflush$15:
-	; Call fflush 36 0
+	; Call 36 fflush 0
 	mov qword [rbp + 36], fflush$16
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -1232,11 +1232,11 @@ section .text
 	; Address £temporary799 £temporary795 -> £temporary798
 
  fclose$20:
-	; Parameter pointer £temporary799 60
+	; Parameter 60 pointer £temporary799
 	mov [rbp + 60], rsi
 
  fclose$21:
-	; Call fclose 36 0
+	; Call 36 fclose 0
 	mov qword [rbp + 36], fclose$22
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -1383,24 +1383,24 @@ section .text
 	add rsi, 32
 
  fgetc$3:
-	; Parameter pointer £temporary811 57
+	; Parameter 57 pointer £temporary811
 	mov [rbp + 57], rsi
 
  fgetc$4:
-	; Parameter signedint 1 65
+	; Parameter 65 signedint 1
 	mov dword [rbp + 65], 1
 
  fgetc$5:
-	; Parameter signedint 1 69
+	; Parameter 69 signedint 1
 	mov dword [rbp + 69], 1
 
  fgetc$6:
-	; Parameter pointer stream 73
+	; Parameter 73 pointer stream
 	mov rax, [rbp + 24]
 	mov [rbp + 73], rax
 
  fgetc$7:
-	; Call fread 33 0
+	; Call 33 fread 0
 	mov qword [rbp + 33], fgetc$8
 	mov [rbp + 41], rbp
 	add rbp, 33
@@ -1478,12 +1478,12 @@ section .text
 	; PreCall 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fgets$6:
-	; Parameter pointer stream 74
+	; Parameter 74 pointer stream
 	mov rax, [rbp + 36]
 	mov [rbp + 74], rax
 
  fgets$7:
-	; Parameter pointer "%c" 82
+	; Parameter 82 pointer "%c"
 	mov qword [rbp + 82], string_25c#
 
  fgets$8:
@@ -1492,11 +1492,11 @@ section .text
 	add rsi, 49
 
  fgets$9:
-	; Parameter pointer £temporary818 90
+	; Parameter 90 pointer £temporary818
 	mov [rbp + 90], rsi
 
  fgets$10:
-	; Call fscanf 50 8
+	; Call 50 fscanf 8
 	mov qword [rbp + 50], fgets$11
 	mov [rbp + 58], rbp
 	add rbp, 50
@@ -1637,12 +1637,12 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fputs$1:
-	; Parameter pointer s 64
+	; Parameter 64 pointer s
 	mov rax, [rbp + 24]
 	mov [rbp + 64], rax
 
  fputs$2:
-	; Call strlen 40 0
+	; Call 40 strlen 0
 	mov qword [rbp + 40], fputs$3
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -1663,26 +1663,26 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fputs$7:
-	; Parameter pointer s 68
+	; Parameter 68 pointer s
 	mov rax, [rbp + 24]
 	mov [rbp + 68], rax
 
  fputs$8:
-	; Parameter signedint size 76
+	; Parameter 76 signedint size
 	mov eax, [rbp + 40]
 	mov [rbp + 76], eax
 
  fputs$9:
-	; Parameter signedint 1 80
+	; Parameter 80 signedint 1
 	mov dword [rbp + 80], 1
 
  fputs$10:
-	; Parameter pointer stream 84
+	; Parameter 84 pointer stream
 	mov rax, [rbp + 32]
 	mov [rbp + 84], rax
 
  fputs$11:
-	; Call fwrite 44 0
+	; Call 44 fwrite 0
 	mov qword [rbp + 44], fputs$12
 	mov [rbp + 52], rbp
 	add rbp, 44
@@ -1727,12 +1727,12 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  getchar$1:
-	; Parameter pointer stdin 48
+	; Parameter 48 pointer stdin
 	mov rax, [stdin]
 	mov [rbp + 48], rax
 
  getchar$2:
-	; Call fgetc 24 0
+	; Call 24 fgetc 0
 	mov qword [rbp + 24], getchar$3
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -1760,21 +1760,21 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  gets$1:
-	; Parameter pointer s 56
+	; Parameter 56 pointer s
 	mov rax, [rbp + 24]
 	mov [rbp + 56], rax
 
  gets$2:
-	; Parameter signedint -1 64
+	; Parameter 64 signedint -1
 	mov dword [rbp + 64], -1
 
  gets$3:
-	; Parameter pointer stdin 68
+	; Parameter 68 pointer stdin
 	mov rax, [stdin]
 	mov [rbp + 68], rax
 
  gets$4:
-	; Call fgets 32 0
+	; Call 32 fgets 0
 	mov qword [rbp + 32], gets$5
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1795,12 +1795,12 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  gets$9:
-	; Parameter pointer s 56
+	; Parameter 56 pointer s
 	mov rax, [rbp + 24]
 	mov [rbp + 56], rax
 
  gets$10:
-	; Call strlen 32 0
+	; Call 32 strlen 0
 	mov qword [rbp + 32], gets$11
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1868,17 +1868,17 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  puts$1:
-	; Parameter pointer s 56
+	; Parameter 56 pointer s
 	mov rax, [rbp + 24]
 	mov [rbp + 56], rax
 
  puts$2:
-	; Parameter pointer stdout 64
+	; Parameter 64 pointer stdout
 	mov rax, [stdout]
 	mov [rbp + 64], rax
 
  puts$3:
-	; Call fputs 32 0
+	; Call 32 fputs 0
 	mov qword [rbp + 32], puts$4
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -1899,16 +1899,16 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  puts$8:
-	; Parameter signedint 10 56
+	; Parameter 56 signedint 10
 	mov dword [rbp + 56], 10
 
  puts$9:
-	; Parameter pointer stdout 60
+	; Parameter 60 pointer stdout
 	mov rax, [stdout]
 	mov [rbp + 60], rax
 
  puts$10:
-	; Call fputc 32 0
+	; Call 32 fputc 0
 	mov qword [rbp + 32], puts$11
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2155,20 +2155,20 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  ftell$1:
-	; Parameter pointer stream 56
+	; Parameter 56 pointer stream
 	mov rax, [rbp + 24]
 	mov [rbp + 56], rax
 
  ftell$2:
-	; Parameter signedint 0 64
+	; Parameter 64 signedint 0
 	mov dword [rbp + 64], 0
 
  ftell$3:
-	; Parameter signedint 1 68
+	; Parameter 68 signedint 1
 	mov dword [rbp + 68], 1
 
  ftell$4:
-	; Call fseek 32 0
+	; Call 32 fseek 0
 	mov qword [rbp + 32], ftell$5
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2213,12 +2213,12 @@ section .text
 	mov [rbp + 40], rsi
 
  fgetpos$2:
-	; Parameter pointer stream 64
+	; Parameter 64 pointer stream
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
  fgetpos$3:
-	; Call ftell 40 0
+	; Call 40 ftell 0
 	mov qword [rbp + 48], fgetpos$4
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -2255,7 +2255,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fsetpos$1:
-	; Parameter pointer stream 64
+	; Parameter 64 pointer stream
 	mov rax, [rbp + 24]
 	mov [rbp + 64], rax
 
@@ -2264,16 +2264,16 @@ section .text
 	mov rsi, [rbp + 32]
 
  fsetpos$3:
-	; Parameter signedint £temporary898 -> ptr 72
+	; Parameter 72 signedint £temporary898 -> ptr
 	mov eax, [rsi]
 	mov [rbp + 72], eax
 
  fsetpos$4:
-	; Parameter signedint 0 76
+	; Parameter 76 signedint 0
 	mov dword [rbp + 76], 0
 
  fsetpos$5:
-	; Call fseek 40 0
+	; Call 40 fseek 0
 	mov qword [rbp + 40], fsetpos$6
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -2329,20 +2329,20 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  feof$1:
-	; Parameter pointer stream 56
+	; Parameter 56 pointer stream
 	mov rax, [rbp + 24]
 	mov [rbp + 56], rax
 
  feof$2:
-	; Parameter signedint 0 64
+	; Parameter 64 signedint 0
 	mov dword [rbp + 64], 0
 
  feof$3:
-	; Parameter signedint 1 68
+	; Parameter 68 signedint 1
 	mov dword [rbp + 68], 1
 
  feof$4:
-	; Call fseek 32 0
+	; Call 32 fseek 0
 	mov qword [rbp + 32], feof$5
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -2367,20 +2367,20 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  feof$10:
-	; Parameter pointer stream 64
+	; Parameter 64 pointer stream
 	mov rax, [rbp + 24]
 	mov [rbp + 64], rax
 
  feof$11:
-	; Parameter signedint 0 72
+	; Parameter 72 signedint 0
 	mov dword [rbp + 72], 0
 
  feof$12:
-	; Parameter signedint 2 76
+	; Parameter 76 signedint 2
 	mov dword [rbp + 76], 2
 
  feof$13:
-	; Call fseek 40 0
+	; Call 40 fseek 0
 	mov qword [rbp + 40], feof$14
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -2405,7 +2405,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  feof$19:
-	; Parameter pointer stream 72
+	; Parameter 72 pointer stream
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
@@ -2414,15 +2414,15 @@ section .text
 	mov rax, [rbp + 32]
 
  feof$21:
-	; Parameter signedint £temporary906 80
+	; Parameter 80 signedint £temporary906
 	mov [rbp + 80], eax
 
  feof$22:
-	; Parameter signedint 0 84
+	; Parameter 84 signedint 0
 	mov dword [rbp + 84], 0
 
  feof$23:
-	; Call fseek 48 0
+	; Call 48 fseek 0
 	mov qword [rbp + 48], feof$24
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -2493,11 +2493,11 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  perror$1:
-	; Parameter pointer "%s: %s.\n" 56
+	; Parameter 56 pointer "%s: %s.\n"
 	mov qword [rbp + 56], string_25s3A2025s2E0A#
 
  perror$2:
-	; Parameter pointer s 64
+	; Parameter 64 pointer s
 	mov rax, [rbp + 24]
 	mov [rbp + 64], rax
 
@@ -2505,12 +2505,12 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  perror$4:
-	; Parameter signedint errno 96
+	; Parameter 96 signedint errno
 	mov eax, [errno]
 	mov [rbp + 96], eax
 
  perror$5:
-	; Call strerror 72 0
+	; Call 72 strerror 0
 	mov qword [rbp + 72], perror$6
 	mov [rbp + 80], rbp
 	add rbp, 72
@@ -2523,11 +2523,11 @@ section .text
 	; GetReturnValue £temporary911
 
  perror$8:
-	; Parameter pointer £temporary911 72
+	; Parameter 72 pointer £temporary911
 	mov [rbp + 72], rbx
 
  perror$9:
-	; Call printf 32 16
+	; Call 32 printf 16
 	mov qword [rbp + 32], perror$10
 	mov [rbp + 40], rbp
 	add rbp, 32

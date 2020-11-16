@@ -305,9 +305,9 @@ void * calloc ( int num , int size ) ;
 void free ( void * ptr ) ;
 
 void qsort ( void * valueList , int listSize , int valueSize ,
-int ( * compare ) ( const void * , const void * ) , ... ) ;
-
-void * bsearch ( const void * key , const void * valueList , int listSize , int valueSize ,
+int ( * compare ) ( const void * , const void * ) ) ;
+void * bsearch ( const void * key , const void * valueList ,
+int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
 int abs ( int value ) ;
@@ -416,7 +416,7 @@ char * enMessageList [] = { "no error" , "function number invalid" ,
 "error while removing file" ,
 "error while renaming file" };
 
-static struct lconv en_US_utf8 = {- 5 , -4 , enShortDayList , enLongDayList ,
+static struct lconv en_US_utf8 = { 2 , 1 , enShortDayList , enLongDayList ,
 enShortMonthList , enLongMonthList ,
 "abcdefghijklmnopqrstuvwxyz" ,
 "ABCDEFGHIJKLMNOPQRSTUVWXYZ" ,

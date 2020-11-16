@@ -1,0 +1,92 @@
+0: Equal 90 timePtr 0
+1: Dereference £temporary2743 -> timePtr timePtr 0
+2: Assign time £temporary2743 -> timePtr
+3: SignedModulo secondsOfDay time 86400
+4: SignedModulo secondsOfHour secondsOfDay 3600
+5: SignedDivide £temporary2747 secondsOfDay 3600
+6: IntegralToIntegral £temporary2748 £temporary2747
+7: Assign g_timeStruct.tm_hour £temporary2748
+8: SignedDivide £temporary2750 secondsOfHour 60
+9: IntegralToIntegral £temporary2751 £temporary2750
+10: Assign g_timeStruct.tm_min £temporary2751
+11: SignedModulo £temporary2753 secondsOfHour 60
+12: IntegralToIntegral £temporary2754 £temporary2753
+13: Assign g_timeStruct.tm_sec £temporary2754
+14: SignedDivide totalDays time 86400
+15: SignedGreaterThanEqual 20 totalDays 3
+16: BinaryAdd £temporary2758 totalDays 4
+17: IntegralToIntegral £temporary2759 £temporary2758
+18: Assign g_timeStruct.tm_wday £temporary2759
+19: Goto 24
+20: BinarySubtract £temporary2761 totalDays 3
+21: SignedModulo £temporary2762 £temporary2761 7
+22: IntegralToIntegral £temporary2763 £temporary2762
+23: Assign g_timeStruct.tm_wday £temporary2763
+24: SignedDivide £temporary2764 totalDays 365
+25: BinaryAdd £temporary2765 £temporary2764 1970
+26: IntegralToIntegral £temporary2766 £temporary2765
+27: Assign year £temporary2766
+28: BinarySubtract £temporary2767 year 1969
+29: SignedDivide leapDays £temporary2767 4
+30: SignedModulo totalDays totalDays 365
+31: IntegralToIntegral £temporary2770 leapDays
+32: BinarySubtract totalDays totalDays £temporary2770
+33: SignedGreaterThanEqual 44 totalDays 0
+34: BinarySubtract year year 1
+35: PreCall 72 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+36: Parameter 96 signedint year
+37: Call 72 isLeapYear 0
+38: PostCall 72
+39: GetReturnValue £temporary2774
+40: Equal 43 £temporary2774 0
+41: BinaryAdd totalDays totalDays 366
+42: Goto 44
+43: BinaryAdd totalDays totalDays 365
+44: BinarySubtract g_timeStruct.tm_year year 1900
+45: IntegralToIntegral £temporary2781 totalDays
+46: Assign g_timeStruct.tm_yday £temporary2781
+47: Assign daysOfMonths[0] 31
+48: PreCall 76 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+49: Parameter 100 signedint year
+50: Call 76 isLeapYear 0
+51: PostCall 76
+52: GetReturnValue £temporary2782
+53: Equal 56 £temporary2782 0
+54: Assign £temporary2784 29
+55: Goto 57
+56: Assign £temporary2784 28
+57: Assign daysOfMonths[1] £temporary2784
+58: Assign daysOfMonths[2] 31
+59: Assign daysOfMonths[3] 30
+60: Assign daysOfMonths[4] 31
+61: Assign daysOfMonths[5] 30
+62: Assign daysOfMonths[6] 31
+63: Assign daysOfMonths[7] 31
+64: Assign daysOfMonths[8] 30
+65: Assign daysOfMonths[9] 31
+66: Assign daysOfMonths[10] 30
+67: Assign daysOfMonths[11] 31
+68: Assign month 0
+69: IntegralToIntegral £temporary2798 month
+70: UnsignedMultiply £temporary2799 £temporary2798 4
+71: BinaryAdd £temporary2800 daysOfMonths £temporary2799
+72: Dereference £temporary2797 -> £temporary2800 £temporary2800 0
+73: IntegralToIntegral £temporary2801 £temporary2797 -> £temporary2800
+74: SignedLessThan 84 totalDays £temporary2801
+75: Assign £temporary2803 month
+76: BinaryAdd month month 1
+77: IntegralToIntegral £temporary2805 £temporary2803
+78: UnsignedMultiply £temporary2806 £temporary2805 4
+79: BinaryAdd £temporary2807 daysOfMonths £temporary2806
+80: Dereference £temporary2804 -> £temporary2807 £temporary2807 0
+81: IntegralToIntegral £temporary2808 £temporary2804 -> £temporary2807
+82: BinarySubtract totalDays totalDays £temporary2808
+83: Goto 69
+84: Assign g_timeStruct.tm_mon month
+85: BinaryAdd £temporary2812 totalDays 1
+86: IntegralToIntegral £temporary2813 £temporary2812
+87: Assign g_timeStruct.tm_mday £temporary2813
+88: Assign g_timeStruct.tm_isdst -1
+89: Return @4752$g_timeStruct
+90: Return 0
+91: FunctionEnd gmtime

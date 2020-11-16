@@ -23,7 +23,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  islower$1:
-	; Call localeconv 28 0
+	; Call 28 localeconv 0
 	mov qword [rbp + 28], islower$2
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -52,17 +52,17 @@ section .text
 	mov rsi, [rbp + 28]
 
  islower$8:
-	; Parameter pointer £temporary262 -> localeConvPtr 60
+	; Parameter 60 pointer £temporary262 -> localeConvPtr
 	mov rax, [rsi + 40]
 	mov [rbp + 60], rax
 
  islower$9:
-	; Parameter signedint c 68
+	; Parameter 68 signedint c
 	mov eax, [rbp + 24]
 	mov [rbp + 68], eax
 
  islower$10:
-	; Call strchr 36 0
+	; Call 36 strchr 0
 	mov qword [rbp + 36], islower$11
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -136,7 +136,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  isupper$1:
-	; Call localeconv 28 0
+	; Call 28 localeconv 0
 	mov qword [rbp + 28], isupper$2
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -165,17 +165,17 @@ section .text
 	mov rsi, [rbp + 28]
 
  isupper$8:
-	; Parameter pointer £temporary272 -> localeConvPtr 60
+	; Parameter 60 pointer £temporary272 -> localeConvPtr
 	mov rax, [rsi + 48]
 	mov [rbp + 60], rax
 
  isupper$9:
-	; Parameter signedint c 68
+	; Parameter 68 signedint c
 	mov eax, [rbp + 24]
 	mov [rbp + 68], eax
 
  isupper$10:
-	; Call strchr 36 0
+	; Call 36 strchr 0
 	mov qword [rbp + 36], isupper$11
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -249,12 +249,12 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  isalpha$1:
-	; Parameter signedint c 52
+	; Parameter 52 signedint c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
  isalpha$2:
-	; Call islower 28 0
+	; Call 28 islower 0
 	mov qword [rbp + 28], isalpha$3
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -275,12 +275,12 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  isalpha$7:
-	; Parameter signedint c 52
+	; Parameter 52 signedint c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
  isalpha$8:
-	; Call isupper 28 0
+	; Call 28 isupper 0
 	mov qword [rbp + 28], isalpha$9
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -359,12 +359,12 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  isalnum$1:
-	; Parameter signedint c 52
+	; Parameter 52 signedint c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
  isalnum$2:
-	; Call isalpha 28 0
+	; Call 28 isalpha 0
 	mov qword [rbp + 28], isalnum$3
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -385,12 +385,12 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  isalnum$7:
-	; Parameter signedint c 52
+	; Parameter 52 signedint c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
  isalnum$8:
-	; Call isdigit 28 0
+	; Call 28 isdigit 0
 	mov qword [rbp + 28], isalnum$9
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -435,12 +435,12 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  isxdigit$1:
-	; Parameter signedint c 52
+	; Parameter 52 signedint c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
  isxdigit$2:
-	; Call isdigit 28 0
+	; Call 28 isdigit 0
 	mov qword [rbp + 28], isxdigit$3
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -539,12 +539,12 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  isprint$1:
-	; Parameter signedint c 52
+	; Parameter 52 signedint c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
  isprint$2:
-	; Call isgraph 28 0
+	; Call 28 isgraph 0
 	mov qword [rbp + 28], isprint$3
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -594,12 +594,12 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  ispunct$1:
-	; Parameter signedint c 52
+	; Parameter 52 signedint c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
  ispunct$2:
-	; Call isgraph 28 0
+	; Call 28 isgraph 0
 	mov qword [rbp + 28], ispunct$3
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -620,12 +620,12 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  ispunct$7:
-	; Parameter signedint c 52
+	; Parameter 52 signedint c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
  ispunct$8:
-	; Call isalnum 28 0
+	; Call 28 isalnum 0
 	mov qword [rbp + 28], ispunct$9
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -670,12 +670,12 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  iscntrl$1:
-	; Parameter signedint c 52
+	; Parameter 52 signedint c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
  iscntrl$2:
-	; Call isprint 28 0
+	; Call 28 isprint 0
 	mov qword [rbp + 28], iscntrl$3
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -774,12 +774,12 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  tolower$1:
-	; Parameter signedint c 52
+	; Parameter 52 signedint c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
  tolower$2:
-	; Call isupper 28 0
+	; Call 28 isupper 0
 	mov qword [rbp + 28], tolower$3
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -800,7 +800,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  tolower$7:
-	; Call localeconv 28 0
+	; Call 28 localeconv 0
 	mov qword [rbp + 28], tolower$8
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -843,17 +843,17 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  tolower$17:
-	; Parameter pointer upperCase 76
+	; Parameter 76 pointer upperCase
 	mov rax, [rbp + 44]
 	mov [rbp + 76], rax
 
  tolower$18:
-	; Parameter signedint c 84
+	; Parameter 84 signedint c
 	mov eax, [rbp + 24]
 	mov [rbp + 84], eax
 
  tolower$19:
-	; Call strchr 52 0
+	; Call 52 strchr 0
 	mov qword [rbp + 52], tolower$20
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -935,12 +935,12 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  toupper$1:
-	; Parameter signedint c 52
+	; Parameter 52 signedint c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
  toupper$2:
-	; Call islower 28 0
+	; Call 28 islower 0
 	mov qword [rbp + 28], toupper$3
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -961,7 +961,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  toupper$7:
-	; Call localeconv 28 0
+	; Call 28 localeconv 0
 	mov qword [rbp + 28], toupper$8
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -1004,17 +1004,17 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  toupper$17:
-	; Parameter pointer lowerCase 76
+	; Parameter 76 pointer lowerCase
 	mov rax, [rbp + 36]
 	mov [rbp + 76], rax
 
  toupper$18:
-	; Parameter signedint c 84
+	; Parameter 84 signedint c
 	mov eax, [rbp + 24]
 	mov [rbp + 84], eax
 
  toupper$19:
-	; Call strchr 52 0
+	; Call 52 strchr 0
 	mov qword [rbp + 52], toupper$20
 	mov [rbp + 60], rbp
 	add rbp, 52

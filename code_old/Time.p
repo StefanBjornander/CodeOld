@@ -3,7 +3,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\time.h,0$
    
 
     
-    
+     
     
 
 struct tm {
@@ -21,15 +21,15 @@ int tm_isdst ;
 };
 
 extern long clock ( void ) ;
-extern long time ( long * time ) ;
-extern double difftime ( long time2 , long time1 ) ;
-extern long mktime ( struct tm * timeStruct ) ;
+extern unsigned long time ( unsigned long * time ) ;
+extern double difftime ( unsigned long time2 , unsigned long time1 ) ;
+extern unsigned long mktime ( struct tm * timeStruct ) ;
 
 extern char * asctime ( const struct tm * timeStruct ) ;
-extern char * ctime ( const long * time ) ;
-extern struct tm * gmtime ( const long * time ) ;
-extern struct tm * localtime ( const long * time ) ;
-extern struct tm * localtimeX ( const long * time ) ;
+extern char * ctime ( const unsigned long * time ) ;
+extern struct tm * gmtime ( const unsigned long * time ) ;
+extern struct tm * localtime ( const unsigned long * time ) ;
+extern struct tm * localtimeX ( const unsigned long * time ) ;
 
 extern int strftime ( char * buffer , int size ,
 const char * format , const struct tm * timeStruct ) ;
@@ -528,8 +528,18 @@ long clock ( void ) {
 return -1 ;
 }
 
-long time ( long * timePtr ) {
-long time ;
+struct timeval {
+int tv_sec ;
+int tv_usec ;
+};
+
+struct timezone {
+int tz_minuteswest ;
+int tz_dsttime ;
+};
+
+unsigned long time ( unsigned long * timePtr ) {
+unsigned long time ;
 
    
    
@@ -572,6 +582,18 @@ long time ;
  register_rax = 201L ;
 register_rdi = ( unsigned long ) & time ;
 syscall ( ) ;
+
+
+{ struct timeval tv ;
+struct timezone tz ;
+
+register_rax = 96L ;
+register_rdi = & tv ;
+register_rsi = & tz ;
+syscall ( ) ;
+printf ( "timezone %i %i %i %i\n" , tv . tv_sec , tv . tv_usec , tz . tz_minuteswest , tz . tz_dsttime ) ;
+}
+
   
 
 if ( timePtr != ( ( void * ) 0 ) ) {
@@ -581,7 +603,7 @@ if ( timePtr != ( ( void * ) 0 ) ) {
 return time ;
 }
 
-long mktime ( struct tm * tp ) {
+unsigned long mktime ( struct tm * tp ) {
 if ( tp != ( ( void * ) 0 ) ) {
 const long leapDays = ( tp -> tm_year - 69 ) / 4 ;
 const long totalDays = 365 * ( tp -> tm_year - 70 ) + leapDays + tp -> tm_yday ;
@@ -623,18 +645,22 @@ static struct tm g_timeStruct ;
 
 
 
-struct tm * gmtime ( const long * timePtr ) {
-int year = 1970 ;
+static int isLeapYear ( int year ) {
+return ( ( ( year % 4 ) == 0 ) &&
+( ( year % 100 ) != 0 ) ) || ( ( year % 400 ) == 0 ) ;
+}
 
+struct tm * gmtime ( const unsigned long * timePtr ) {
 if ( timePtr != ( ( void * ) 0 ) ) {
-long time = * timePtr ;
-long totalDays = time / 86400L ;
+unsigned long time = * timePtr ;
 const long secondsOfDay = time % 86400L ,
 secondsOfHour = secondsOfDay % 3600 ;
 g_timeStruct . tm_hour = secondsOfDay / 3600 ;
 g_timeStruct . tm_min = secondsOfHour / 60 ;
 g_timeStruct . tm_sec = secondsOfHour % 60 ;
 
+
+{ long totalDays = time / 86400L ;
 
 if ( totalDays < 3 ) {
 g_timeStruct . tm_wday = totalDays + 4 ;
@@ -643,27 +669,30 @@ else {
 g_timeStruct . tm_wday = ( totalDays - 3 ) % 7 ;
 }
 
-while ( 1 ) {
-const int leapYear = ( ( ( year % 4 ) == 0 ) &&
-( ( year % 100 ) != 0 ) ) || ( ( year % 400 ) == 0 ) ;
-const int daysOfYear = leapYear ? 366 : 365 ;
+{ int year = 1970 + ( totalDays / 365 ) ;
+const int leapDays = ( year - 1969 ) / 4 ;
+totalDays %= 365 ;
+totalDays -= leapDays ;
 
-if ( totalDays < daysOfYear ) {
-const int daysOfMonths [] = { 31 , leapYear ? 29 : 28 , 31 , 30 ,
-31 , 30 , 31 , 31 , 30 , 31 , 30 , 31 };
-int month = 0 ;
+if ( totalDays < 0 ) {
+-- year ;
 
-
-
-
-
+if ( isLeapYear ( year ) ) {
+totalDays += 366 ;
+}
+else {
+totalDays += 365 ;
+}
+}
 
 g_timeStruct . tm_year = year - 1900 ;
 g_timeStruct . tm_yday = totalDays ;
 
+{ const int daysOfMonths [] = { 31 , isLeapYear ( year ) ? 29 : 28 , 31 ,
+30 , 31 , 30 , 31 , 31 , 30 , 31 , 30 , 31 };
+int month = 0 ;
 while ( totalDays >= daysOfMonths [ month ] ) {
-totalDays -= daysOfMonths [ month ];
-++ month ;
+totalDays -= daysOfMonths [ month ++];
 }
 
 g_timeStruct . tm_mon = month ;
@@ -671,16 +700,79 @@ g_timeStruct . tm_mday = totalDays + 1 ;
 g_timeStruct . tm_isdst = -1 ;
 return & g_timeStruct ;
 }
-
-++ year ;
-totalDays -= daysOfYear ;
+}
 }
 }
 
 return ( ( void * ) 0 ) ;
 }
 
-double difftime ( long time1 , long time2 ) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+double difftime ( unsigned long time1 , unsigned long time2 ) {
 return ( double ) ( time2 - time1 ) ;
 }
 
@@ -716,11 +808,11 @@ tp -> tm_sec , tp -> tm_year + 1900 ) ;
 return g_timeString ;
 }
 
-char * ctime ( const long * time ) {
+char * ctime ( const unsigned long * time ) {
 return asctime ( localtime ( time ) ) ;
 }
 
-struct tm * localtime ( const long * timePtr ) {
+struct tm * localtime ( const unsigned long * timePtr ) {
 struct tm * tmPtr = gmtime ( timePtr ) ;
 struct lconv * localeConvPtr = localeconv ( ) ;
 int timeZone = 0 ;
@@ -730,7 +822,7 @@ timeZone = ( tmPtr -> tm_isdst == 1 ) ? localeConvPtr -> summerTimeZone
 : localeConvPtr -> winterTimeZone ;
 }
 
-{ long t = * timePtr + ( 3600l * timeZone ) ;
+{ unsigned long t = * timePtr + ( 3600l * timeZone ) ;
 return gmtime ( & t ) ;
 }
 }
@@ -880,11 +972,14 @@ add [ 0 ] = fmt [ index ];
 add [ 1 ] = '\0' ;
 }
 
-if ( ( strlen ( s ) + strlen ( add ) ) < smax ) {
+{ int x = strlen ( s ) , y = strlen ( add ) ;
+
+if ( ( x + y ) < smax ) {
 strcat ( s , add ) ;
 }
 else {
 break ;
+}
 }
 }
 }
