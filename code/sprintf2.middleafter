@@ -1,0 +1,13 @@
+0: address £temporary2402 format
+1: IntegralToIntegral £temporary2403 £temporary2402
+2: BinaryAdd arg_list £temporary2403 2
+3: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: Parameter 12 outString 6
+5: Parameter 12 format 8
+6: Parameter 12 arg_list 10
+7: Call 12 vsprintf 0
+8: PostCall 12
+9: GetReturnValue £temporary2405
+10: SetReturnValue £temporary2405
+11: Return £temporary2405
+12: FunctionEnd sprintf

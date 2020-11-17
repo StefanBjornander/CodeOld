@@ -242,7 +242,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanPattern$2:
-	; Call scanChar 48 0
+	; Call 48 scanChar 0
 	mov qword [rbp + 48], scanPattern$3
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -271,11 +271,11 @@ section .text
 	neg eax
 
  scanPattern$8:
-	; Parameter signedint £temporary981 73
+	; Parameter 73 signedint £temporary981
 	mov [rbp + 73], eax
 
  scanPattern$9:
-	; Call isspace 49 0
+	; Call 49 isspace 0
 	mov qword [rbp + 49], scanPattern$10
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -296,7 +296,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanPattern$14:
-	; Call scanChar 49 0
+	; Call 49 scanChar 0
 	mov qword [rbp + 49], scanPattern$15
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -330,7 +330,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanPattern$22:
-	; Parameter pointer pattern 73
+	; Parameter 73 pointer pattern
 	mov rax, [rbp + 32]
 	mov [rbp + 73], rax
 
@@ -344,11 +344,11 @@ section .text
 	neg eax
 
  scanPattern$24:
-	; Parameter signedint £temporary988 81
+	; Parameter 81 signedint £temporary988
 	mov [rbp + 81], eax
 
  scanPattern$25:
-	; Call strchr 49 0
+	; Call 49 strchr 0
 	mov qword [rbp + 49], scanPattern$26
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -374,7 +374,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanPattern$31:
-	; Parameter pointer pattern 73
+	; Parameter 73 pointer pattern
 	mov rax, [rbp + 32]
 	mov [rbp + 73], rax
 
@@ -388,11 +388,11 @@ section .text
 	neg eax
 
  scanPattern$33:
-	; Parameter signedint £temporary992 81
+	; Parameter 81 signedint £temporary992
 	mov [rbp + 81], eax
 
  scanPattern$34:
-	; Call strchr 49 0
+	; Call 49 strchr 0
 	mov qword [rbp + 49], scanPattern$35
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -439,7 +439,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanPattern$45:
-	; Call scanChar 49 0
+	; Call 49 scanChar 0
 	mov qword [rbp + 49], scanPattern$46
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -490,7 +490,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanPattern$57:
-	; Parameter pointer pattern 73
+	; Parameter 73 pointer pattern
 	mov rax, [rbp + 32]
 	mov [rbp + 73], rax
 
@@ -504,11 +504,11 @@ section .text
 	neg eax
 
  scanPattern$59:
-	; Parameter signedint £temporary1011 81
+	; Parameter 81 signedint £temporary1011
 	mov [rbp + 81], eax
 
  scanPattern$60:
-	; Call strchr 49 0
+	; Call 49 strchr 0
 	mov qword [rbp + 49], scanPattern$61
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -534,7 +534,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanPattern$66:
-	; Parameter pointer pattern 73
+	; Parameter 73 pointer pattern
 	mov rax, [rbp + 32]
 	mov [rbp + 73], rax
 
@@ -548,11 +548,11 @@ section .text
 	neg eax
 
  scanPattern$68:
-	; Parameter signedint £temporary1015 81
+	; Parameter 81 signedint £temporary1015
 	mov [rbp + 81], eax
 
  scanPattern$69:
-	; Call strchr 49 0
+	; Call 49 strchr 0
 	mov qword [rbp + 49], scanPattern$70
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -573,7 +573,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanPattern$74:
-	; Call scanChar 49 0
+	; Call 49 scanChar 0
 	mov qword [rbp + 49], scanPattern$75
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -613,7 +613,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanString$2:
-	; Call scanChar 40 0
+	; Call 40 scanChar 0
 	mov qword [rbp + 40], scanString$3
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -646,11 +646,11 @@ section .text
 	neg eax
 
  scanString$9:
-	; Parameter signedint £temporary1024 69
+	; Parameter 69 signedint £temporary1024
 	mov [rbp + 69], eax
 
  scanString$10:
-	; Call isspace 45 0
+	; Call 45 isspace 0
 	mov qword [rbp + 45], scanString$11
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -671,7 +671,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanString$15:
-	; Call scanChar 45 0
+	; Call 45 scanChar 0
 	mov qword [rbp + 45], scanString$16
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -714,11 +714,11 @@ section .text
 	neg eax
 
  scanString$24:
-	; Parameter signedint £temporary1030 69
+	; Parameter 69 signedint £temporary1030
 	mov [rbp + 69], eax
 
  scanString$25:
-	; Call isspace 45 0
+	; Call 45 isspace 0
 	mov qword [rbp + 45], scanString$26
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -784,7 +784,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanString$39:
-	; Call scanChar 45 0
+	; Call 45 scanChar 0
 	mov qword [rbp + 45], scanString$40
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -864,11 +864,11 @@ section .text
 	neg eax
 
  scanString$57:
-	; Parameter signedint £temporary1053 69
+	; Parameter 69 signedint £temporary1053
 	mov [rbp + 69], eax
 
  scanString$58:
-	; Call isspace 45 0
+	; Call 45 isspace 0
 	mov qword [rbp + 45], scanString$59
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -934,7 +934,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanString$72:
-	; Call scanChar 45 0
+	; Call 45 scanChar 0
 	mov qword [rbp + 45], scanString$73
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -1011,11 +1011,11 @@ section .text
 	neg eax
 
  scanString$89:
-	; Parameter signedint £temporary1077 69
+	; Parameter 69 signedint £temporary1077
 	mov [rbp + 69], eax
 
  scanString$90:
-	; Call isspace 45 0
+	; Call 45 isspace 0
 	mov qword [rbp + 45], scanString$91
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -1055,7 +1055,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanString$98:
-	; Call scanChar 45 0
+	; Call 45 scanChar 0
 	mov qword [rbp + 45], scanString$99
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -1117,11 +1117,11 @@ section .text
 	neg eax
 
  scanString$112:
-	; Parameter signedint £temporary1091 69
+	; Parameter 69 signedint £temporary1091
 	mov [rbp + 69], eax
 
  scanString$113:
-	; Call isspace 45 0
+	; Call 45 isspace 0
 	mov qword [rbp + 45], scanString$114
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -1161,7 +1161,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanString$121:
-	; Call scanChar 45 0
+	; Call 45 scanChar 0
 	mov qword [rbp + 45], scanString$122
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -1232,11 +1232,11 @@ section .text
 	neg eax
 
  @2886$isDigitInBase$2:
-	; Parameter signedint £temporary1107 53
+	; Parameter 53 signedint £temporary1107
 	mov [rbp + 53], eax
 
  @2886$isDigitInBase$3:
-	; Call isdigit 29 0
+	; Call 29 isdigit 0
 	mov qword [rbp + 29], @2886$isDigitInBase$4
 	mov [rbp + 37], rbp
 	add rbp, 29
@@ -1313,11 +1313,11 @@ section .text
 	neg eax
 
  @2886$isDigitInBase$18:
-	; Parameter signedint £temporary1115 53
+	; Parameter 53 signedint £temporary1115
 	mov [rbp + 53], eax
 
  @2886$isDigitInBase$19:
-	; Call islower 29 0
+	; Call 29 islower 0
 	mov qword [rbp + 29], @2886$isDigitInBase$20
 	mov [rbp + 37], rbp
 	add rbp, 29
@@ -1395,11 +1395,11 @@ section .text
 	neg eax
 
  @2886$isDigitInBase$34:
-	; Parameter signedint £temporary1124 53
+	; Parameter 53 signedint £temporary1124
 	mov [rbp + 53], eax
 
  @2886$isDigitInBase$35:
-	; Call isupper 29 0
+	; Call 29 isupper 0
 	mov qword [rbp + 29], @2886$isDigitInBase$36
 	mov [rbp + 37], rbp
 	add rbp, 29
@@ -1490,11 +1490,11 @@ section .text
 	neg eax
 
  @2894$digitToValue$2:
-	; Parameter signedint £temporary1136 49
+	; Parameter 49 signedint £temporary1136
 	mov [rbp + 49], eax
 
  @2894$digitToValue$3:
-	; Call isdigit 25 0
+	; Call 25 isdigit 0
 	mov qword [rbp + 25], @2894$digitToValue$4
 	mov [rbp + 33], rbp
 	add rbp, 25
@@ -1544,11 +1544,11 @@ section .text
 	neg eax
 
  @2894$digitToValue$12:
-	; Parameter signedint £temporary1140 49
+	; Parameter 49 signedint £temporary1140
 	mov [rbp + 49], eax
 
  @2894$digitToValue$13:
-	; Call islower 25 0
+	; Call 25 islower 0
 	mov qword [rbp + 25], @2894$digitToValue$14
 	mov [rbp + 33], rbp
 	add rbp, 25
@@ -1602,11 +1602,11 @@ section .text
 	neg eax
 
  @2894$digitToValue$23:
-	; Parameter signedint £temporary1145 49
+	; Parameter 49 signedint £temporary1145
 	mov [rbp + 49], eax
 
  @2894$digitToValue$24:
-	; Call isupper 25 0
+	; Call 25 isupper 0
 	mov qword [rbp + 25], @2894$digitToValue$25
 	mov [rbp + 33], rbp
 	add rbp, 25
@@ -1676,7 +1676,7 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongInt$4:
-	; Call scanChar 44 0
+	; Call 44 scanChar 0
 	mov qword [rbp + 44], scanLongInt$5
 	mov [rbp + 52], rbp
 	add rbp, 44
@@ -1705,11 +1705,11 @@ section .text
 	neg eax
 
  scanLongInt$10:
-	; Parameter signedint £temporary1154 69
+	; Parameter 69 signedint £temporary1154
 	mov [rbp + 69], eax
 
  scanLongInt$11:
-	; Call isspace 45 0
+	; Call 45 isspace 0
 	mov qword [rbp + 45], scanLongInt$12
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -1730,7 +1730,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongInt$16:
-	; Call scanChar 45 0
+	; Call 45 scanChar 0
 	mov qword [rbp + 45], scanLongInt$17
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -1759,7 +1759,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongInt$23:
-	; Call scanChar 45 0
+	; Call 45 scanChar 0
 	mov qword [rbp + 45], scanLongInt$24
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -1792,7 +1792,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongInt$31:
-	; Call scanChar 45 0
+	; Call 45 scanChar 0
 	mov qword [rbp + 45], scanLongInt$32
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -1822,7 +1822,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongInt$38:
-	; Call scanChar 45 0
+	; Call 45 scanChar 0
 	mov qword [rbp + 45], scanLongInt$39
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -1851,11 +1851,11 @@ section .text
 	neg eax
 
  scanLongInt$44:
-	; Parameter signedint £temporary1165 69
+	; Parameter 69 signedint £temporary1165
 	mov [rbp + 69], eax
 
  scanLongInt$45:
-	; Call tolower 45 0
+	; Call 45 tolower 0
 	mov qword [rbp + 45], scanLongInt$46
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -1880,7 +1880,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongInt$51:
-	; Call scanChar 45 0
+	; Call 45 scanChar 0
 	mov qword [rbp + 45], scanLongInt$52
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -1916,17 +1916,17 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongInt$60:
-	; Parameter signedchar input 69
+	; Parameter 69 signedchar input
 	mov al, [rbp + 44]
 	mov [rbp + 69], al
 
  scanLongInt$61:
-	; Parameter signedint base 70
+	; Parameter 70 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 70], eax
 
  scanLongInt$62:
-	; Call isDigitInBase 45 0
+	; Call 45 isDigitInBase 0
 	mov qword [rbp + 45], scanLongInt$63
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -1964,12 +1964,12 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongInt$69:
-	; Parameter signedchar input 69
+	; Parameter 69 signedchar input
 	mov al, [rbp + 44]
 	mov [rbp + 69], al
 
  scanLongInt$70:
-	; Call digitToValue 45 0
+	; Call 45 digitToValue 0
 	mov qword [rbp + 45], scanLongInt$71
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -1998,7 +1998,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongInt$76:
-	; Call scanChar 45 0
+	; Call 45 scanChar 0
 	mov qword [rbp + 45], scanLongInt$77
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -2049,12 +2049,12 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongInt$88:
-	; Parameter signedchar input 69
+	; Parameter 69 signedchar input
 	mov al, [rbp + 44]
 	mov [rbp + 69], al
 
  scanLongInt$89:
-	; Call unscanChar 45 0
+	; Call 45 unscanChar 0
 	mov qword [rbp + 45], scanLongInt$90
 	mov [rbp + 53], rbp
 	add rbp, 45
@@ -2084,7 +2084,7 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanUnsignedLongInt$2:
-	; Call scanChar 44 0
+	; Call 44 scanChar 0
 	mov qword [rbp + 44], scanUnsignedLongInt$3
 	mov [rbp + 52], rbp
 	add rbp, 44
@@ -2117,11 +2117,11 @@ section .text
 	neg eax
 
  scanUnsignedLongInt$9:
-	; Parameter signedint £temporary1183 73
+	; Parameter 73 signedint £temporary1183
 	mov [rbp + 73], eax
 
  scanUnsignedLongInt$10:
-	; Call isspace 49 0
+	; Call 49 isspace 0
 	mov qword [rbp + 49], scanUnsignedLongInt$11
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2142,7 +2142,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanUnsignedLongInt$15:
-	; Call scanChar 49 0
+	; Call 49 scanChar 0
 	mov qword [rbp + 49], scanUnsignedLongInt$16
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2171,7 +2171,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanUnsignedLongInt$22:
-	; Call scanChar 49 0
+	; Call 49 scanChar 0
 	mov qword [rbp + 49], scanUnsignedLongInt$23
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2201,7 +2201,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanUnsignedLongInt$29:
-	; Call scanChar 49 0
+	; Call 49 scanChar 0
 	mov qword [rbp + 49], scanUnsignedLongInt$30
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2230,11 +2230,11 @@ section .text
 	neg eax
 
  scanUnsignedLongInt$35:
-	; Parameter signedint £temporary1192 73
+	; Parameter 73 signedint £temporary1192
 	mov [rbp + 73], eax
 
  scanUnsignedLongInt$36:
-	; Call tolower 49 0
+	; Call 49 tolower 0
 	mov qword [rbp + 49], scanUnsignedLongInt$37
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2259,7 +2259,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanUnsignedLongInt$42:
-	; Call scanChar 49 0
+	; Call 49 scanChar 0
 	mov qword [rbp + 49], scanUnsignedLongInt$43
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2295,17 +2295,17 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanUnsignedLongInt$51:
-	; Parameter signedchar input 73
+	; Parameter 73 signedchar input
 	mov al, [rbp + 44]
 	mov [rbp + 73], al
 
  scanUnsignedLongInt$52:
-	; Parameter signedint base 74
+	; Parameter 74 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 74], eax
 
  scanUnsignedLongInt$53:
-	; Call isDigitInBase 49 0
+	; Call 49 isDigitInBase 0
 	mov qword [rbp + 49], scanUnsignedLongInt$54
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2339,12 +2339,12 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanUnsignedLongInt$60:
-	; Parameter signedchar input 73
+	; Parameter 73 signedchar input
 	mov al, [rbp + 44]
 	mov [rbp + 73], al
 
  scanUnsignedLongInt$61:
-	; Call digitToValue 49 0
+	; Call 49 digitToValue 0
 	mov qword [rbp + 49], scanUnsignedLongInt$62
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2373,7 +2373,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanUnsignedLongInt$68:
-	; Call scanChar 49 0
+	; Call 49 scanChar 0
 	mov qword [rbp + 49], scanUnsignedLongInt$69
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2406,12 +2406,12 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanUnsignedLongInt$76:
-	; Parameter signedchar input 73
+	; Parameter 73 signedchar input
 	mov al, [rbp + 44]
 	mov [rbp + 73], al
 
  scanUnsignedLongInt$77:
-	; Call unscanChar 49 0
+	; Call 49 unscanChar 0
 	mov qword [rbp + 49], scanUnsignedLongInt$78
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2479,7 +2479,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongDouble$7:
-	; Call scanChar 48 0
+	; Call 48 scanChar 0
 	mov qword [rbp + 48], scanLongDouble$8
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -2508,11 +2508,11 @@ section .text
 	neg eax
 
  scanLongDouble$13:
-	; Parameter signedint £temporary1208 73
+	; Parameter 73 signedint £temporary1208
 	mov [rbp + 73], eax
 
  scanLongDouble$14:
-	; Call isspace 49 0
+	; Call 49 isspace 0
 	mov qword [rbp + 49], scanLongDouble$15
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2533,7 +2533,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongDouble$19:
-	; Call scanChar 49 0
+	; Call 49 scanChar 0
 	mov qword [rbp + 49], scanLongDouble$20
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2562,7 +2562,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongDouble$26:
-	; Call scanChar 49 0
+	; Call 49 scanChar 0
 	mov qword [rbp + 49], scanLongDouble$27
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2595,7 +2595,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongDouble$34:
-	; Call scanChar 49 0
+	; Call 49 scanChar 0
 	mov qword [rbp + 49], scanLongDouble$35
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2624,11 +2624,11 @@ section .text
 	neg eax
 
  scanLongDouble$40:
-	; Parameter signedint £temporary1216 73
+	; Parameter 73 signedint £temporary1216
 	mov [rbp + 73], eax
 
  scanLongDouble$41:
-	; Call isdigit 49 0
+	; Call 49 isdigit 0
 	mov qword [rbp + 49], scanLongDouble$42
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2687,7 +2687,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongDouble$54:
-	; Call scanChar 49 0
+	; Call 49 scanChar 0
 	mov qword [rbp + 49], scanLongDouble$55
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2720,7 +2720,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongDouble$62:
-	; Call scanChar 49 0
+	; Call 49 scanChar 0
 	mov qword [rbp + 49], scanLongDouble$63
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2749,11 +2749,11 @@ section .text
 	neg eax
 
  scanLongDouble$68:
-	; Parameter signedint £temporary1227 73
+	; Parameter 73 signedint £temporary1227
 	mov [rbp + 73], eax
 
  scanLongDouble$69:
-	; Call isdigit 49 0
+	; Call 49 isdigit 0
 	mov qword [rbp + 49], scanLongDouble$70
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2828,7 +2828,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongDouble$86:
-	; Call scanChar 49 0
+	; Call 49 scanChar 0
 	mov qword [rbp + 49], scanLongDouble$87
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2865,11 +2865,11 @@ section .text
 	neg eax
 
  scanLongDouble$94:
-	; Parameter signedint £temporary1237 73
+	; Parameter 73 signedint £temporary1237
 	mov [rbp + 73], eax
 
  scanLongDouble$95:
-	; Call tolower 49 0
+	; Call 49 tolower 0
 	mov qword [rbp + 49], scanLongDouble$96
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2890,11 +2890,11 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongDouble$100:
-	; Parameter signedint 10 73
+	; Parameter 73 signedint 10
 	mov dword [rbp + 73], 10
 
  scanLongDouble$101:
-	; Call scanLongInt 49 0
+	; Call 49 scanLongInt 0
 	mov qword [rbp + 49], scanLongDouble$102
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -2928,7 +2928,7 @@ section .text
 	fld qword [float8$10.0#]
 
  scanLongDouble$109:
-	; Parameter double 10.0 81
+	; Parameter 81 double 10.0
 	fstp qword [rbp + 89]
 
  scanLongDouble$110:
@@ -2936,11 +2936,11 @@ section .text
 	fld qword [rbp + 49]
 
  scanLongDouble$111:
-	; Parameter double exponent 89
+	; Parameter 89 double exponent
 	fstp qword [rbp + 97]
 
  scanLongDouble$112:
-	; Call pow 57 0
+	; Call 57 pow 0
 	mov qword [rbp + 65], scanLongDouble$113
 	mov [rbp + 73], rbp
 	add rbp, 65
@@ -2971,12 +2971,12 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongDouble$119:
-	; Parameter signedchar input 73
+	; Parameter 73 signedchar input
 	mov al, [rbp + 48]
 	mov [rbp + 73], al
 
  scanLongDouble$120:
-	; Call unscanChar 49 0
+	; Call 49 unscanChar 0
 	mov qword [rbp + 49], scanLongDouble$121
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -3250,7 +3250,7 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$47:
-	; Call scanChar 157 0
+	; Call 157 scanChar 0
 	mov qword [rbp + 157], scanFormat$48
 	mov [rbp + 165], rbp
 	add rbp, 157
@@ -3355,16 +3355,16 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$71:
-	; Parameter pointer charPtr 181
+	; Parameter 181 pointer charPtr
 	mov rax, [rbp + 41]
 	mov [rbp + 181], rax
 
  scanFormat$72:
-	; Parameter signedint 0 189
+	; Parameter 189 signedint 0
 	mov dword [rbp + 189], 0
 
  scanFormat$73:
-	; Call scanString 157 0
+	; Call 157 scanString 0
 	mov qword [rbp + 157], scanFormat$74
 	mov [rbp + 165], rbp
 	add rbp, 157
@@ -3381,15 +3381,15 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$77:
-	; Parameter pointer 0 181
+	; Parameter 181 pointer 0
 	mov qword [rbp + 181], 0
 
  scanFormat$78:
-	; Parameter signedint 0 189
+	; Parameter 189 signedint 0
 	mov dword [rbp + 189], 0
 
  scanFormat$79:
-	; Call scanString 157 0
+	; Call 157 scanString 0
 	mov qword [rbp + 157], scanFormat$80
 	mov [rbp + 165], rbp
 	add rbp, 157
@@ -3410,11 +3410,11 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$84:
-	; Parameter signedint 10 181
+	; Parameter 181 signedint 10
 	mov dword [rbp + 181], 10
 
  scanFormat$85:
-	; Call scanLongInt 157 0
+	; Call 157 scanLongInt 0
 	mov qword [rbp + 157], scanFormat$86
 	mov [rbp + 165], rbp
 	add rbp, 157
@@ -3566,11 +3566,11 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$120:
-	; Parameter signedint 8 181
+	; Parameter 181 signedint 8
 	mov dword [rbp + 181], 8
 
  scanFormat$121:
-	; Call scanUnsignedLongInt 157 0
+	; Call 157 scanUnsignedLongInt 0
 	mov qword [rbp + 157], scanFormat$122
 	mov [rbp + 165], rbp
 	add rbp, 157
@@ -3714,11 +3714,11 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$156:
-	; Parameter signedint 16 181
+	; Parameter 181 signedint 16
 	mov dword [rbp + 181], 16
 
  scanFormat$157:
-	; Call scanUnsignedLongInt 157 0
+	; Call 157 scanUnsignedLongInt 0
 	mov qword [rbp + 157], scanFormat$158
 	mov [rbp + 165], rbp
 	add rbp, 157
@@ -3862,11 +3862,11 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$192:
-	; Parameter signedint 0 181
+	; Parameter 181 signedint 0
 	mov dword [rbp + 181], 0
 
  scanFormat$193:
-	; Call scanUnsignedLongInt 157 0
+	; Call 157 scanUnsignedLongInt 0
 	mov qword [rbp + 157], scanFormat$194
 	mov [rbp + 165], rbp
 	add rbp, 157
@@ -4010,7 +4010,7 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$228:
-	; Call scanLongDouble 157 0
+	; Call 157 scanLongDouble 0
 	mov qword [rbp + 157], scanFormat$229
 	mov [rbp + 165], rbp
 	add rbp, 157
@@ -4267,7 +4267,7 @@ section .text
 	; PreCall 173 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$289:
-	; Parameter pointer string 197
+	; Parameter 197 pointer string
 	mov rax, [rbp + 165]
 	mov [rbp + 197], rax
 
@@ -4289,16 +4289,16 @@ section .text
 	; Address £temporary1460 £temporary1456 -> £temporary1459
 
  scanFormat$294:
-	; Parameter pointer £temporary1460 205
+	; Parameter 205 pointer £temporary1460
 	mov [rbp + 205], rsi
 
  scanFormat$295:
-	; Parameter signedint not 213
+	; Parameter 213 signedint not
 	mov eax, [rbp + 157]
 	mov [rbp + 213], eax
 
  scanFormat$296:
-	; Call scanPattern 173 0
+	; Call 173 scanPattern 0
 	mov qword [rbp + 173], scanFormat$297
 	mov [rbp + 181], rbp
 	add rbp, 173
@@ -4315,7 +4315,7 @@ section .text
 	; PreCall 165 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$300:
-	; Parameter pointer 0 189
+	; Parameter 189 pointer 0
 	mov qword [rbp + 189], 0
 
  scanFormat$301:
@@ -4336,16 +4336,16 @@ section .text
 	; Address £temporary1466 £temporary1462 -> £temporary1465
 
  scanFormat$305:
-	; Parameter pointer £temporary1466 197
+	; Parameter 197 pointer £temporary1466
 	mov [rbp + 197], rsi
 
  scanFormat$306:
-	; Parameter signedint not 205
+	; Parameter 205 signedint not
 	mov eax, [rbp + 157]
 	mov [rbp + 205], eax
 
  scanFormat$307:
-	; Call scanPattern 165 0
+	; Call 165 scanPattern 0
 	mov qword [rbp + 165], scanFormat$308
 	mov [rbp + 173], rbp
 	add rbp, 165
@@ -4399,7 +4399,7 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$320:
-	; Parameter pointer "scanFormat c = '%c'\n" 181
+	; Parameter 181 pointer "scanFormat c = '%c'\n"
 	mov qword [rbp + 181], string_scanFormat20c203D202725c270A#
 
  scanFormat$321:
@@ -4412,11 +4412,11 @@ section .text
 	neg eax
 
  scanFormat$322:
-	; Parameter signedint £temporary1475 189
+	; Parameter 189 signedint £temporary1475
 	mov [rbp + 189], eax
 
  scanFormat$323:
-	; Call printf 157 4
+	; Call 157 printf 4
 	mov qword [rbp + 157], scanFormat$324
 	mov [rbp + 165], rbp
 	add rbp, 157
@@ -4494,17 +4494,17 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanf$4:
-	; Parameter pointer format 64
+	; Parameter 64 pointer format
 	mov rax, [rbp + 24]
 	mov [rdi + 64], rax
 
  scanf$5:
-	; Parameter pointer arg_list 72
+	; Parameter 72 pointer arg_list
 	mov rax, [rdi + 32]
 	mov [rdi + 72], rax
 
  scanf$6:
-	; Call vscanf 40 0
+	; Call 40 vscanf 0
 	mov qword [rdi + 40], scanf$7
 	mov [rdi + 48], rbp
 	mov [rdi + 56], rdi
@@ -4534,22 +4534,22 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  vscanf$1:
-	; Parameter pointer stdin 64
+	; Parameter 64 pointer stdin
 	mov rax, [stdin]
 	mov [rbp + 64], rax
 
  vscanf$2:
-	; Parameter pointer format 72
+	; Parameter 72 pointer format
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
  vscanf$3:
-	; Parameter pointer arg_list 80
+	; Parameter 80 pointer arg_list
 	mov rax, [rbp + 32]
 	mov [rbp + 80], rax
 
  vscanf$4:
-	; Call vfscanf 40 0
+	; Call 40 vfscanf 0
 	mov qword [rbp + 40], vscanf$5
 	mov [rbp + 48], rbp
 	add rbp, 40
@@ -4590,22 +4590,22 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fscanf$4:
-	; Parameter pointer inStream 72
+	; Parameter 72 pointer inStream
 	mov rax, [rbp + 24]
 	mov [rdi + 72], rax
 
  fscanf$5:
-	; Parameter pointer format 80
+	; Parameter 80 pointer format
 	mov rax, [rbp + 32]
 	mov [rdi + 80], rax
 
  fscanf$6:
-	; Parameter pointer arg_list 88
+	; Parameter 88 pointer arg_list
 	mov rax, [rdi + 40]
 	mov [rdi + 88], rax
 
  fscanf$7:
-	; Call vfscanf 48 0
+	; Call 48 vfscanf 0
 	mov qword [rdi + 48], fscanf$8
 	mov [rdi + 56], rbp
 	mov [rdi + 64], rdi
@@ -4647,17 +4647,17 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  vfscanf$4:
-	; Parameter pointer format 72
+	; Parameter 72 pointer format
 	mov rax, [rbp + 32]
 	mov [rbp + 72], rax
 
  vfscanf$5:
-	; Parameter pointer arg_list 80
+	; Parameter 80 pointer arg_list
 	mov rax, [rbp + 40]
 	mov [rbp + 80], rax
 
  vfscanf$6:
-	; Call scanFormat 48 0
+	; Call 48 scanFormat 0
 	mov qword [rbp + 48], vfscanf$7
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -4698,22 +4698,22 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  sscanf$4:
-	; Parameter pointer inString 72
+	; Parameter 72 pointer inString
 	mov rax, [rbp + 24]
 	mov [rdi + 72], rax
 
  sscanf$5:
-	; Parameter pointer format 80
+	; Parameter 80 pointer format
 	mov rax, [rbp + 32]
 	mov [rdi + 80], rax
 
  sscanf$6:
-	; Parameter pointer arg_list 88
+	; Parameter 88 pointer arg_list
 	mov rax, [rdi + 40]
 	mov [rdi + 88], rax
 
  sscanf$7:
-	; Call vsscanf 48 0
+	; Call 48 vsscanf 0
 	mov qword [rdi + 48], sscanf$8
 	mov [rdi + 56], rbp
 	mov [rdi + 64], rdi
@@ -4755,17 +4755,17 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  vsscanf$4:
-	; Parameter pointer format 72
+	; Parameter 72 pointer format
 	mov rax, [rbp + 32]
 	mov [rbp + 72], rax
 
  vsscanf$5:
-	; Parameter pointer arg_list 80
+	; Parameter 80 pointer arg_list
 	mov rax, [rbp + 40]
 	mov [rbp + 80], rax
 
  vsscanf$6:
-	; Call scanFormat 48 0
+	; Call 48 scanFormat 0
 	mov qword [rbp + 48], vsscanf$7
 	mov [rbp + 56], rbp
 	add rbp, 48

@@ -1,0 +1,29 @@
+0: Assign index 255
+1: Empty
+2: SignedGreaterThanEqual Empty index 0
+3: Goto IntegralToIntegral £temporary3352 status
+4: CheckTrackMapFloatStack
+5: Empty
+6: UnsignedMultiply £temporary3344 index 2
+7: BinaryAdd £temporary3345 g_funcArray £temporary3344
+8: Deref £temporary3343 -> £temporary3345 £temporary3345 0
+9: NotEqual UnsignedMultiply £temporary3348 index 2 £temporary3343 -> £temporary3345 0
+10: Goto Empty
+11: CheckTrackMapFloatStack
+12: UnsignedMultiply £temporary3348 index 2
+13: BinaryAdd £temporary3349 g_funcArray £temporary3348
+14: Deref £temporary3347 -> £temporary3349 £temporary3349 0
+15: CallHeader 12 £temporary3347 -> £temporary3349
+16: Call 12 £temporary3347 -> £temporary3349 0
+17: PostCall 12
+18: Goto Empty
+19: Empty
+20: BinarySubtract index index 1
+21: Goto Empty
+22: IntegralToIntegral £temporary3352 status
+23: AssignRegister al £temporary3352
+24: AssignRegister ah 76
+25: Interrupt 33
+26: Empty
+27: Return 0
+28: FunctionEnd exit

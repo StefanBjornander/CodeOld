@@ -499,8 +499,8 @@ string_ABCDEFGHIJKLMNOPQRSTUVWXYZ#:
 section .data
 
 @1524$en_US_utf8:
-	; Initializer SignedInt 2
-	dd 2
+	; Initializer SignedInt 1
+	dd 1
 	; Initializer SignedInt 1
 	dd 1
 	; Initializer Pointer @1498$enShortDayList
@@ -620,7 +620,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  setlocale$11:
-	; Parameter pointer newName 72
+	; Parameter 72 pointer newName
 	mov rax, [rbp + 28]
 	mov [rbp + 72], rax
 
@@ -644,12 +644,12 @@ section .text
 	; Dereference £temporary377 -> £temporary380 £temporary380 0
 
  setlocale$16:
-	; Parameter pointer £temporary377.name -> £temporary380 80
+	; Parameter 80 pointer £temporary377.name -> £temporary380
 	mov rax, [rsi]
 	mov [rbp + 80], rax
 
  setlocale$17:
-	; Call strcmp 48 0
+	; Call 48 strcmp 0
 	mov qword [rbp + 48], setlocale$18
 	mov [rbp + 56], rbp
 	add rbp, 48

@@ -418,13 +418,13 @@ double strtod(char* s, char** endp) {
 void abort(void) {
 #ifdef __WINDOWS__
   register_ah = 0x4Cs;
-  register_al = -1s;
+  register_al = (unsigned char) -1;
   interrupt(0x21s);
 #endif
 
 #ifdef __LINUX__
   register_rax = 60L;
-  register_rdi = -1L;
+  register_rdi = (unsigned long) -1;
   syscall();
 #endif
 }

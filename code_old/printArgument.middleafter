@@ -1,375 +1,398 @@
-0: £temporary1973 -> format = *format
-1: c = £temporary1973 -> format
-2: case c == int1$100# goto 21
-3: case c == int1$105# goto 21
-4: case c == int1$99# goto 76
-5: case c == int1$115# goto 97
-6: case c == int1$88# goto 118
-7: case c == int1$120# goto 118
-8: case c == int1$98# goto 118
-9: case c == int1$111# goto 118
-10: case c == int1$117# goto 118
-11: case c == int1$71# goto 181
-12: case c == int1$103# goto 181
-13: case c == int1$69# goto 181
-14: case c == int1$101# goto 181
-15: case c == int1$102# goto 181
-16: case c == int1$112# goto 309
-17: case c == int1$110# goto 335
-18: case c == int1$37# goto 359
-19: case end c
-20: goto 372
-21: if shortInt == int1$0# goto 31
-22: £temporary1974 = arg_list + int2$2#
-23: arg_list = £temporary1974
-24: £temporary1975 = arg_list - int2$2#
-25: £temporary1976 = int_to_int £temporary1975 (Pointer -> Pointer)
-26: £temporary1977 -> £temporary1976 = *£temporary1976
-27: £temporary1978 = int_to_int £temporary1977 -> £temporary1976 (Signed_Int -> Signed_Short_Int)
-28: £temporary1979 = int_to_int £temporary1978 (Signed_Short_Int -> Signed_Long_Int)
-29: longValue = £temporary1979
-30: goto 46
-31: if longInt == int1$0# goto 39
-32: £temporary1980 = arg_list + int2$4#
-33: arg_list = £temporary1980
-34: £temporary1981 = arg_list - int2$4#
-35: £temporary1982 = int_to_int £temporary1981 (Pointer -> Pointer)
-36: £temporary1983 -> £temporary1982 = *£temporary1982
-37: longValue = £temporary1983 -> £temporary1982
-38: goto 46
-39: £temporary1984 = arg_list + int2$2#
-40: arg_list = £temporary1984
-41: £temporary1985 = arg_list - int2$2#
-42: £temporary1986 = int_to_int £temporary1985 (Pointer -> Pointer)
-43: £temporary1987 -> £temporary1986 = *£temporary1986
-44: £temporary1988 = int_to_int £temporary1987 -> £temporary1986 (Signed_Int -> Signed_Long_Int)
-45: longValue = £temporary1988
-46: if negativePtr == int2$0# goto 53
-47: £temporary1992 -> negativePtr = *negativePtr
-48: if longValue >= int4$0# goto 51
-49: £temporary1994 = int2$1#
-50: goto 52
-51: £temporary1994 = int2$0#
-52: £temporary1992 -> negativePtr = £temporary1994
-53: if sign != int1$0# goto 60
-54: call header integral zero 0 stack zero 0
-55: parameter longValue, offset 54
-56: call function noellipse-noellipse labs
-57: post call
-58: £temporary1997 = return_value
-59: longValue = £temporary1997
-60: call header integral zero 0 stack zero 0
-61: parameter arg_list, offset 54
-62: parameter widthPtr, offset 56
-63: £temporary1998 = &precision
-64: parameter £temporary1998, offset 58
-65: call function noellipse-noellipse checkWidthAndPrecision
-66: post call
-67: £temporary1999 = return_value
-68: arg_list = £temporary1999
-69: call header integral zero 0 stack zero 0
-70: parameter longValue, offset 54
-71: parameter plus, offset 58
-72: parameter space, offset 60
-73: call function noellipse-noellipse printLongInt
-74: post call
-75: goto 372
-76: £temporary2001 = arg_list + int2$2#
-77: arg_list = £temporary2001
-78: £temporary2002 = arg_list - int2$2#
-79: £temporary2003 = int_to_int £temporary2002 (Pointer -> Pointer)
-80: £temporary2004 -> £temporary2003 = *£temporary2003
-81: £temporary2005 = int_to_int £temporary2004 -> £temporary2003 (Signed_Int -> Signed_Char)
-82: charValue = £temporary2005
-83: call header integral zero 0 stack zero 0
-84: parameter arg_list, offset 50
-85: parameter widthPtr, offset 52
-86: £temporary2006 = &precision
-87: parameter £temporary2006, offset 54
-88: call function noellipse-noellipse checkWidthAndPrecision
-89: post call
-90: £temporary2007 = return_value
-91: arg_list = £temporary2007
-92: call header integral zero 0 stack zero 0
-93: parameter charValue, offset 50
-94: call function noellipse-noellipse printChar
-95: post call
-96: goto 372
-97: £temporary2009 = arg_list + int2$2#
-98: arg_list = £temporary2009
-99: £temporary2010 = arg_list - int2$2#
-100: £temporary2011 = int_to_int £temporary2010 (Pointer -> Pointer)
-101: £temporary2012 -> £temporary2011 = *£temporary2011
-102: stringValue = £temporary2012 -> £temporary2011
-103: call header integral zero 0 stack zero 0
-104: parameter arg_list, offset 52
-105: parameter widthPtr, offset 54
-106: £temporary2013 = &precision
-107: parameter £temporary2013, offset 56
-108: call function noellipse-noellipse checkWidthAndPrecision
-109: post call
-110: £temporary2014 = return_value
-111: arg_list = £temporary2014
-112: call header integral zero 0 stack zero 0
-113: parameter stringValue, offset 52
-114: parameter precision, offset 54
-115: call function noellipse-noellipse printString
-116: post call
-117: goto 372
-118: if c != int1$117# goto 121
-119: £temporary2021 = int4$10#
-120: goto 130
-121: if c != int1$111# goto 124
-122: £temporary2020 = int4$8#
-123: goto 129
-124: if c != int1$98# goto 127
-125: £temporary2019 = int4$2#
-126: goto 128
-127: £temporary2019 = int4$16#
-128: £temporary2020 = £temporary2019
-129: £temporary2021 = £temporary2020
-130: base = £temporary2021
-131: if shortInt == int1$0# goto 141
-132: £temporary2022 = arg_list + int2$2#
-133: arg_list = £temporary2022
-134: £temporary2023 = arg_list - int2$2#
-135: £temporary2024 = int_to_int £temporary2023 (Pointer -> Pointer)
-136: £temporary2025 -> £temporary2024 = *£temporary2024
-137: £temporary2026 = int_to_int £temporary2025 -> £temporary2024 (Unsigned_Int -> Unsigned_Short_Int)
-138: £temporary2027 = int_to_int £temporary2026 (Unsigned_Short_Int -> Unsigned_Long_Int)
-139: value = £temporary2027
-140: goto 156
-141: if longInt == int1$0# goto 149
-142: £temporary2028 = arg_list + int2$4#
-143: arg_list = £temporary2028
-144: £temporary2029 = arg_list - int2$4#
-145: £temporary2030 = int_to_int £temporary2029 (Pointer -> Pointer)
-146: £temporary2031 -> £temporary2030 = *£temporary2030
-147: value = £temporary2031 -> £temporary2030
-148: goto 156
-149: £temporary2032 = arg_list + int2$2#
-150: arg_list = £temporary2032
-151: £temporary2033 = arg_list - int2$2#
-152: £temporary2034 = int_to_int £temporary2033 (Pointer -> Pointer)
-153: £temporary2035 -> £temporary2034 = *£temporary2034
-154: £temporary2036 = int_to_int £temporary2035 -> £temporary2034 (Unsigned_Int -> Unsigned_Long_Int)
-155: value = £temporary2036
-156: call header integral zero 0 stack zero 0
-157: parameter arg_list, offset 58
-158: parameter widthPtr, offset 60
-159: £temporary2039 = &precision
-160: parameter £temporary2039, offset 62
-161: call function noellipse-noellipse checkWidthAndPrecision
-162: post call
-163: £temporary2040 = return_value
-164: arg_list = £temporary2040
-165: call header integral zero 0 stack zero 0
-166: parameter value, offset 58
-167: parameter plus, offset 62
-168: parameter space, offset 64
-169: parameter grid, offset 66
-170: parameter base, offset 68
-171: call header integral zero 0 stack zero 0
-172: £temporary2041 = int_to_int c (Signed_Char -> Signed_Int)
-173: parameter £temporary2041, offset 78
-174: call function noellipse-noellipse isupper
-175: post call
-176: £temporary2042 = return_value
-177: parameter £temporary2042, offset 72
-178: call function noellipse-noellipse printUnsignedLong
-179: post call
-180: goto 372
-181: if longDouble == int1$0# goto 199
-182: £temporary2044 = arg_list + int2$8#
-183: arg_list = £temporary2044
-184: £temporary2045 = arg_list - int2$8#
-185: £temporary2046 = int_to_int £temporary2045 (Pointer -> Pointer)
-186: £temporary2047 -> £temporary2046 = *£temporary2046
-187: push float £temporary2047 -> £temporary2046
-188: pop float longDoubleValue
-189: call header integral zero 0 stack zero 0
-190: push float longDoubleValue
-191: parameter longDoubleValue, offset 50
-192: parameter int2$0#, offset 58
-193: parameter int2$0#, offset 60
-194: parameter int2$0#, offset 62
-195: parameter int2$3#, offset 64
-196: call function noellipse-noellipse printLongDoublePlain
-197: post call
-198: goto 206
-199: £temporary2049 = arg_list + int2$8#
-200: arg_list = £temporary2049
-201: £temporary2050 = arg_list - int2$8#
-202: £temporary2051 = int_to_int £temporary2050 (Pointer -> Pointer)
-203: £temporary2052 -> £temporary2051 = *£temporary2051
-204: push float £temporary2052 -> £temporary2051
-205: pop float longDoubleValue
-206: if negativePtr == int2$0# goto 215
-207: £temporary2056 -> negativePtr = *negativePtr
-208: push float longDoubleValue
-209: push float float8$0#
-210: if longDoubleValue >= float8$0# goto 213
-211: £temporary2058 = int2$1#
-212: goto 214
-213: £temporary2058 = int2$0#
-214: £temporary2056 -> negativePtr = £temporary2058
-215: if sign != int1$0# goto 223
-216: call header integral zero 0 stack zero 0
-217: push float longDoubleValue
-218: parameter longDoubleValue, offset 50
-219: call function noellipse-noellipse fabs
-220: post call
-221: £temporary2061 = return_value
-222: pop float longDoubleValue
-223: call header integral zero 0 stack zero 0
-224: parameter arg_list, offset 50
-225: parameter widthPtr, offset 52
-226: £temporary2062 = &precision
-227: parameter £temporary2062, offset 54
-228: call function noellipse-noellipse checkWidthAndPrecision
-229: post call
-230: £temporary2063 = return_value
-231: arg_list = £temporary2063
-232: if c != int1$102# goto 243
-233: call header integral zero 0 stack zero 0
-234: push float longDoubleValue
-235: parameter longDoubleValue, offset 50
-236: parameter plus, offset 58
-237: parameter space, offset 60
-238: parameter grid, offset 62
-239: parameter precision, offset 64
-240: call function noellipse-noellipse printLongDoublePlain
-241: post call
-242: goto 372
-243: call header integral zero 0 stack zero 0
-244: £temporary2066 = int_to_int c (Signed_Char -> Signed_Int)
-245: parameter £temporary2066, offset 50
-246: call function noellipse-noellipse tolower
-247: post call
-248: £temporary2067 = return_value
-249: if £temporary2067 != int2$101# goto 267
-250: call header integral zero 0 stack zero 0
-251: push float longDoubleValue
-252: parameter longDoubleValue, offset 50
-253: parameter plus, offset 58
-254: parameter space, offset 60
-255: parameter grid, offset 62
-256: parameter precision, offset 64
-257: call header integral zero 0 stack zero 0
-258: £temporary2069 = int_to_int c (Signed_Char -> Signed_Int)
-259: parameter £temporary2069, offset 72
-260: call function noellipse-noellipse isupper
-261: post call
-262: £temporary2070 = return_value
-263: parameter £temporary2070, offset 66
-264: call function noellipse-noellipse printLongDoubleExpo
-265: post call
-266: goto 372
-267: call header integral zero 0 stack zero 0
-268: call header integral zero 0 stack zero 0
-269: push float longDoubleValue
-270: parameter longDoubleValue, offset 50
-271: call function noellipse-noellipse fabs
-272: post call
-273: £temporary2072 = return_value
-274: parameter £temporary2072, offset 50
-275: call function noellipse-noellipse log10
-276: post call
-277: £temporary2073 = return_value
-278: £temporary2074 = float_to_int £temporary2073 (Double -> Signed_Int)
-279: expo = £temporary2074
-280: if expo < int2$minus3# goto 292
-281: if expo > int2$2# goto 292
-282: call header integral zero 0 stack zero 0
-283: push float longDoubleValue
-284: parameter longDoubleValue, offset 52
-285: parameter plus, offset 60
-286: parameter space, offset 62
-287: parameter grid, offset 64
-288: parameter precision, offset 66
-289: call function noellipse-noellipse printLongDoublePlain
-290: post call
-291: goto 372
-292: call header integral zero 0 stack zero 0
-293: push float longDoubleValue
-294: parameter longDoubleValue, offset 52
-295: parameter plus, offset 60
-296: parameter space, offset 62
-297: parameter grid, offset 64
-298: parameter precision, offset 66
-299: call header integral zero 0 stack zero 0
-300: £temporary2079 = int_to_int c (Signed_Char -> Signed_Int)
-301: parameter £temporary2079, offset 74
-302: call function noellipse-noellipse isupper
-303: post call
-304: £temporary2080 = return_value
-305: parameter £temporary2080, offset 68
-306: call function noellipse-noellipse printLongDoubleExpo
-307: post call
-308: goto 372
-309: £temporary2082 = arg_list + int2$2#
-310: arg_list = £temporary2082
-311: £temporary2083 = arg_list - int2$2#
-312: £temporary2084 = int_to_int £temporary2083 (Pointer -> Pointer)
-313: £temporary2085 -> £temporary2084 = *£temporary2084
-314: ptrValue = £temporary2085 -> £temporary2084
-315: call header integral zero 0 stack zero 0
-316: parameter arg_list, offset 50
-317: parameter widthPtr, offset 52
-318: £temporary2086 = &precision
-319: parameter £temporary2086, offset 54
-320: call function noellipse-noellipse checkWidthAndPrecision
-321: post call
-322: £temporary2087 = return_value
-323: arg_list = £temporary2087
-324: call header integral zero 0 stack zero 0
-325: £temporary2088 = int_to_int ptrValue (Pointer -> Unsigned_Long_Int)
-326: parameter £temporary2088, offset 50
-327: parameter int2$0#, offset 54
-328: parameter int2$0#, offset 56
-329: parameter int2$0#, offset 58
-330: parameter int4$10#, offset 60
-331: parameter int2$0#, offset 64
-332: call function noellipse-noellipse printUnsignedLong
-333: post call
-334: goto 372
-335: £temporary2090 = arg_list + int2$2#
-336: arg_list = £temporary2090
-337: £temporary2091 = arg_list - int2$2#
-338: £temporary2092 = int_to_int £temporary2091 (Pointer -> Pointer)
-339: £temporary2093 -> £temporary2092 = *£temporary2092
-340: ptrValue = £temporary2093 -> £temporary2092
-341: £temporary2094 = arg_list + int2$2#
-342: arg_list = £temporary2094
-343: £temporary2095 = arg_list - int2$2#
-344: £temporary2096 = int_to_int £temporary2095 (Pointer -> Pointer)
-345: £temporary2097 -> £temporary2096 = *£temporary2096
-346: intPtr = £temporary2097 -> £temporary2096
-347: call header integral zero 0 stack zero 0
-348: parameter arg_list, offset 50
-349: parameter widthPtr, offset 52
-350: £temporary2098 = &precision
-351: parameter £temporary2098, offset 54
-352: call function noellipse-noellipse checkWidthAndPrecision
-353: post call
-354: £temporary2099 = return_value
-355: arg_list = £temporary2099
-356: £temporary2100 -> intPtr = *intPtr
-357: £temporary2100 -> intPtr = g_outChars
-358: goto 372
-359: call header integral zero 0 stack zero 0
-360: parameter arg_list, offset 50
-361: parameter widthPtr, offset 52
-362: £temporary2101 = &precision
-363: parameter £temporary2101, offset 54
-364: call function noellipse-noellipse checkWidthAndPrecision
-365: post call
-366: £temporary2102 = return_value
-367: arg_list = £temporary2102
-368: call header integral zero 0 stack zero 0
-369: parameter int1$37#, offset 50
-370: call function noellipse-noellipse printChar
-371: post call
-372: return_value = arg_list
-373: return
-374: function end printArgument
+0: Dereference £temporary1728 -> format format 0
+1: Assign c £temporary1728 -> format
+2: Case 21 c 100
+3: Case 21 c 105
+4: Case 82 c 99
+5: Case 105 c 115
+6: Case 128 c 88
+7: Case 128 c 120
+8: Case 128 c 98
+9: Case 128 c 111
+10: Case 128 c 117
+11: Case 195 c 71
+12: Case 195 c 103
+13: Case 195 c 69
+14: Case 195 c 101
+15: Case 195 c 102
+16: Case 327 c 112
+17: Case 355 c 110
+18: Case 383 c 37
+19: CaseEnd c
+20: Goto 396
+21: Equal 33 shortInt 0
+22: BinaryAdd £temporary1730 arg_list 4
+23: IntegralToIntegral £temporary1731 £temporary1730
+24: IntegralToIntegral £temporary1732 £temporary1731
+25: Assign arg_list £temporary1732
+26: BinarySubtract £temporary1733 arg_list 4
+27: IntegralToIntegral £temporary1735 £temporary1733
+28: Dereference £temporary1736 -> £temporary1735 £temporary1735 0
+29: IntegralToIntegral £temporary1737 £temporary1736 -> £temporary1735
+30: IntegralToIntegral £temporary1738 £temporary1737
+31: Assign longValue £temporary1738
+32: Goto 52
+33: Equal 43 longInt 0
+34: BinaryAdd £temporary1740 arg_list 8
+35: IntegralToIntegral £temporary1741 £temporary1740
+36: IntegralToIntegral £temporary1742 £temporary1741
+37: Assign arg_list £temporary1742
+38: BinarySubtract £temporary1743 arg_list 8
+39: IntegralToIntegral £temporary1745 £temporary1743
+40: Dereference £temporary1746 -> £temporary1745 £temporary1745 0
+41: Assign longValue £temporary1746 -> £temporary1745
+42: Goto 52
+43: BinaryAdd £temporary1748 arg_list 4
+44: IntegralToIntegral £temporary1749 £temporary1748
+45: IntegralToIntegral £temporary1750 £temporary1749
+46: Assign arg_list £temporary1750
+47: BinarySubtract £temporary1751 arg_list 4
+48: IntegralToIntegral £temporary1753 £temporary1751
+49: Dereference £temporary1754 -> £temporary1753 £temporary1753 0
+50: IntegralToIntegral £temporary1755 £temporary1754 -> £temporary1753
+51: Assign longValue £temporary1755
+52: Equal 59 negativePtr 0
+53: Dereference £temporary1759 -> negativePtr negativePtr 0
+54: SignedGreaterThanEqual 57 longValue 0
+55: Assign £temporary1761 1
+56: Goto 58
+57: Assign £temporary1761 0
+58: Assign £temporary1759 -> negativePtr £temporary1761
+59: NotEqual 66 sign 0
+60: PreCall 122 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+61: Parameter 146 signed long int longValue
+62: Call 122 labs 0
+63: PostCall 122
+64: GetReturnValue £temporary1764
+65: Assign longValue £temporary1764
+66: PreCall 122 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+67: Parameter 146 pointer arg_list
+68: Parameter 154 pointer widthPtr
+69: Address £temporary1765 precision
+70: Parameter 162 pointer £temporary1765
+71: Call 122 checkWidthAndPrecision 0
+72: PostCall 122
+73: GetReturnValue £temporary1766
+74: Assign arg_list £temporary1766
+75: PreCall 122 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+76: Parameter 146 signed long int longValue
+77: Parameter 154 signedint plus
+78: Parameter 158 signedint space
+79: Call 122 printLongInt 0
+80: PostCall 122
+81: Goto 396
+82: BinaryAdd £temporary1769 arg_list 4
+83: IntegralToIntegral £temporary1770 £temporary1769
+84: IntegralToIntegral £temporary1771 £temporary1770
+85: Assign arg_list £temporary1771
+86: BinarySubtract £temporary1772 arg_list 4
+87: IntegralToIntegral £temporary1774 £temporary1772
+88: Dereference £temporary1775 -> £temporary1774 £temporary1774 0
+89: IntegralToIntegral £temporary1776 £temporary1775 -> £temporary1774
+90: Assign charValue £temporary1776
+91: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+92: Parameter 138 pointer arg_list
+93: Parameter 146 pointer widthPtr
+94: Address £temporary1777 precision
+95: Parameter 154 pointer £temporary1777
+96: Call 114 checkWidthAndPrecision 0
+97: PostCall 114
+98: GetReturnValue £temporary1778
+99: Assign arg_list £temporary1778
+100: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+101: Parameter 138 signedchar charValue
+102: Call 114 printChar 0
+103: PostCall 114
+104: Goto 396
+105: BinaryAdd £temporary1781 arg_list 8
+106: IntegralToIntegral £temporary1782 £temporary1781
+107: IntegralToIntegral £temporary1783 £temporary1782
+108: Assign arg_list £temporary1783
+109: BinarySubtract £temporary1784 arg_list 8
+110: IntegralToIntegral £temporary1786 £temporary1784
+111: Dereference £temporary1787 -> £temporary1786 £temporary1786 0
+112: Assign stringValue £temporary1787 -> £temporary1786
+113: PreCall 122 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+114: Parameter 146 pointer arg_list
+115: Parameter 154 pointer widthPtr
+116: Address £temporary1788 precision
+117: Parameter 162 pointer £temporary1788
+118: Call 122 checkWidthAndPrecision 0
+119: PostCall 122
+120: GetReturnValue £temporary1789
+121: Assign arg_list £temporary1789
+122: PreCall 122 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+123: Parameter 146 pointer stringValue
+124: Parameter 154 signedint precision
+125: Call 122 printString 0
+126: PostCall 122
+127: Goto 396
+128: NotEqual 131 c 117
+129: Assign £temporary1796 10
+130: Goto 138
+131: NotEqual 134 c 111
+132: Assign £temporary1796 8
+133: Goto 138
+134: NotEqual 137 c 98
+135: Assign £temporary1796 2
+136: Goto 138
+137: Assign £temporary1796 16
+138: Assign base £temporary1796
+139: Equal 151 shortInt 0
+140: BinaryAdd £temporary1798 arg_list 4
+141: IntegralToIntegral £temporary1799 £temporary1798
+142: IntegralToIntegral £temporary1800 £temporary1799
+143: Assign arg_list £temporary1800
+144: BinarySubtract £temporary1801 arg_list 4
+145: IntegralToIntegral £temporary1803 £temporary1801
+146: Dereference £temporary1804 -> £temporary1803 £temporary1803 0
+147: IntegralToIntegral £temporary1805 £temporary1804 -> £temporary1803
+148: IntegralToIntegral £temporary1806 £temporary1805
+149: Assign value £temporary1806
+150: Goto 170
+151: Equal 161 longInt 0
+152: BinaryAdd £temporary1808 arg_list 8
+153: IntegralToIntegral £temporary1809 £temporary1808
+154: IntegralToIntegral £temporary1810 £temporary1809
+155: Assign arg_list £temporary1810
+156: BinarySubtract £temporary1811 arg_list 8
+157: IntegralToIntegral £temporary1813 £temporary1811
+158: Dereference £temporary1814 -> £temporary1813 £temporary1813 0
+159: Assign value £temporary1814 -> £temporary1813
+160: Goto 170
+161: BinaryAdd £temporary1816 arg_list 4
+162: IntegralToIntegral £temporary1817 £temporary1816
+163: IntegralToIntegral £temporary1818 £temporary1817
+164: Assign arg_list £temporary1818
+165: BinarySubtract £temporary1819 arg_list 4
+166: IntegralToIntegral £temporary1821 £temporary1819
+167: Dereference £temporary1822 -> £temporary1821 £temporary1821 0
+168: IntegralToIntegral £temporary1823 £temporary1822 -> £temporary1821
+169: Assign value £temporary1823
+170: PreCall 130 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+171: Parameter 154 pointer arg_list
+172: Parameter 162 pointer widthPtr
+173: Address £temporary1826 precision
+174: Parameter 170 pointer £temporary1826
+175: Call 130 checkWidthAndPrecision 0
+176: PostCall 130
+177: GetReturnValue £temporary1827
+178: Assign arg_list £temporary1827
+179: PreCall 130 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+180: Parameter 154 unsignedlongint value
+181: Parameter 162 signedint plus
+182: Parameter 166 signedint space
+183: Parameter 170 signedint grid
+184: Parameter 174 unsignedlongint base
+185: PreCall 130 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+186: IntegralToIntegral £temporary1828 c
+187: Parameter 206 signedint £temporary1828
+188: Call 182 isupper 0
+189: PostCall 182
+190: GetReturnValue £temporary1829
+191: Parameter 182 signedint £temporary1829
+192: Call 130 printUnsignedLong 0
+193: PostCall 130
+194: Goto 396
+195: Equal 215 longDouble 0
+196: BinaryAdd £temporary1832 arg_list 8
+197: IntegralToIntegral £temporary1833 £temporary1832
+198: IntegralToIntegral £temporary1834 £temporary1833
+199: Assign arg_list £temporary1834
+200: BinarySubtract £temporary1835 arg_list 8
+201: IntegralToIntegral £temporary1837 £temporary1835
+202: Dereference £temporary1838 -> £temporary1837 £temporary1837 0
+203: PushFloat £temporary1838 -> £temporary1837
+204: PopFloat longDoubleValue
+205: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+206: PushFloat longDoubleValue
+207: Parameter 138 longdouble longDoubleValue
+208: Parameter 146 signedint 0
+209: Parameter 150 signedint 0
+210: Parameter 154 signedint 0
+211: Parameter 158 signedint 3
+212: Call 114 printLongDoublePlain 0
+213: PostCall 114
+214: Goto 224
+215: BinaryAdd £temporary1841 arg_list 8
+216: IntegralToIntegral £temporary1842 £temporary1841
+217: IntegralToIntegral £temporary1843 £temporary1842
+218: Assign arg_list £temporary1843
+219: BinarySubtract £temporary1844 arg_list 8
+220: IntegralToIntegral £temporary1846 £temporary1844
+221: Dereference £temporary1847 -> £temporary1846 £temporary1846 0
+222: PushFloat £temporary1847 -> £temporary1846
+223: PopFloat longDoubleValue
+224: Equal 233 negativePtr 0
+225: Dereference £temporary1851 -> negativePtr negativePtr 0
+226: PushFloat longDoubleValue
+227: PushFloat 0
+228: SignedGreaterThanEqual 231 longDoubleValue 0
+229: Assign £temporary1853 1
+230: Goto 232
+231: Assign £temporary1853 0
+232: Assign £temporary1851 -> negativePtr £temporary1853
+233: NotEqual 241 sign 0
+234: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+235: PushFloat longDoubleValue
+236: Parameter 138 double longDoubleValue
+237: Call 114 fabs 0
+238: PostCall 114
+239: GetReturnValue £temporary1856
+240: PopFloat longDoubleValue
+241: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+242: Parameter 138 pointer arg_list
+243: Parameter 146 pointer widthPtr
+244: Address £temporary1857 precision
+245: Parameter 154 pointer £temporary1857
+246: Call 114 checkWidthAndPrecision 0
+247: PostCall 114
+248: GetReturnValue £temporary1858
+249: Assign arg_list £temporary1858
+250: NotEqual 261 c 102
+251: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+252: PushFloat longDoubleValue
+253: Parameter 138 longdouble longDoubleValue
+254: Parameter 146 signedint plus
+255: Parameter 150 signedint space
+256: Parameter 154 signedint grid
+257: Parameter 158 signedint precision
+258: Call 114 printLongDoublePlain 0
+259: PostCall 114
+260: Goto 396
+261: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+262: IntegralToIntegral £temporary1861 c
+263: Parameter 138 signedint £temporary1861
+264: Call 114 tolower 0
+265: PostCall 114
+266: GetReturnValue £temporary1862
+267: NotEqual 285 £temporary1862 101
+268: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+269: PushFloat longDoubleValue
+270: Parameter 138 longdouble longDoubleValue
+271: Parameter 146 signedint plus
+272: Parameter 150 signedint space
+273: Parameter 154 signedint grid
+274: Parameter 158 signedint precision
+275: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+276: IntegralToIntegral £temporary1864 c
+277: Parameter 186 signedint £temporary1864
+278: Call 162 isupper 0
+279: PostCall 162
+280: GetReturnValue £temporary1865
+281: Parameter 162 signedint £temporary1865
+282: Call 114 printLongDoubleExpo 0
+283: PostCall 114
+284: Goto 396
+285: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+286: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+287: PushFloat longDoubleValue
+288: Parameter 138 double longDoubleValue
+289: Call 114 fabs 0
+290: PostCall 114
+291: GetReturnValue £temporary1867
+292: Parameter 138 double £temporary1867
+293: Call 114 log10 0
+294: PostCall 114
+295: GetReturnValue £temporary1868
+296: FloatingToIntegral £temporary1869 £temporary1868
+297: Assign expo £temporary1869
+298: SignedLessThan 310 expo -3
+299: SignedGreaterThan 310 expo 2
+300: PreCall 118 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+301: PushFloat longDoubleValue
+302: Parameter 142 longdouble longDoubleValue
+303: Parameter 150 signedint plus
+304: Parameter 154 signedint space
+305: Parameter 158 signedint grid
+306: Parameter 162 signedint precision
+307: Call 118 printLongDoublePlain 0
+308: PostCall 118
+309: Goto 396
+310: PreCall 118 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+311: PushFloat longDoubleValue
+312: Parameter 142 longdouble longDoubleValue
+313: Parameter 150 signedint plus
+314: Parameter 154 signedint space
+315: Parameter 158 signedint grid
+316: Parameter 162 signedint precision
+317: PreCall 118 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+318: IntegralToIntegral £temporary1874 c
+319: Parameter 190 signedint £temporary1874
+320: Call 166 isupper 0
+321: PostCall 166
+322: GetReturnValue £temporary1875
+323: Parameter 166 signedint £temporary1875
+324: Call 118 printLongDoubleExpo 0
+325: PostCall 118
+326: Goto 396
+327: BinaryAdd £temporary1878 arg_list 8
+328: IntegralToIntegral £temporary1879 £temporary1878
+329: IntegralToIntegral £temporary1880 £temporary1879
+330: Assign arg_list £temporary1880
+331: BinarySubtract £temporary1881 arg_list 8
+332: IntegralToIntegral £temporary1883 £temporary1881
+333: Dereference £temporary1884 -> £temporary1883 £temporary1883 0
+334: Assign ptrValue £temporary1884 -> £temporary1883
+335: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+336: Parameter 138 pointer arg_list
+337: Parameter 146 pointer widthPtr
+338: Address £temporary1885 precision
+339: Parameter 154 pointer £temporary1885
+340: Call 114 checkWidthAndPrecision 0
+341: PostCall 114
+342: GetReturnValue £temporary1886
+343: Assign arg_list £temporary1886
+344: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+345: IntegralToIntegral £temporary1887 ptrValue
+346: Parameter 138 unsignedlongint £temporary1887
+347: Parameter 146 signedint 0
+348: Parameter 150 signedint 0
+349: Parameter 154 signedint 0
+350: Parameter 158 unsignedlongint 10
+351: Parameter 166 signedint 0
+352: Call 114 printUnsignedLong 0
+353: PostCall 114
+354: Goto 396
+355: BinaryAdd £temporary1890 arg_list 8
+356: IntegralToIntegral £temporary1891 £temporary1890
+357: IntegralToIntegral £temporary1892 £temporary1891
+358: Assign arg_list £temporary1892
+359: BinarySubtract £temporary1893 arg_list 8
+360: IntegralToIntegral £temporary1895 £temporary1893
+361: Dereference £temporary1896 -> £temporary1895 £temporary1895 0
+362: Assign ptrValue £temporary1896 -> £temporary1895
+363: BinaryAdd £temporary1898 arg_list 8
+364: IntegralToIntegral £temporary1899 £temporary1898
+365: IntegralToIntegral £temporary1900 £temporary1899
+366: Assign arg_list £temporary1900
+367: BinarySubtract £temporary1901 arg_list 8
+368: IntegralToIntegral £temporary1903 £temporary1901
+369: Dereference £temporary1904 -> £temporary1903 £temporary1903 0
+370: Assign intPtr £temporary1904 -> £temporary1903
+371: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+372: Parameter 138 pointer arg_list
+373: Parameter 146 pointer widthPtr
+374: Address £temporary1905 precision
+375: Parameter 154 pointer £temporary1905
+376: Call 114 checkWidthAndPrecision 0
+377: PostCall 114
+378: GetReturnValue £temporary1906
+379: Assign arg_list £temporary1906
+380: Dereference £temporary1907 -> intPtr intPtr 0
+381: Assign £temporary1907 -> intPtr g_outChars
+382: Goto 396
+383: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+384: Parameter 138 pointer arg_list
+385: Parameter 146 pointer widthPtr
+386: Address £temporary1908 precision
+387: Parameter 154 pointer £temporary1908
+388: Call 114 checkWidthAndPrecision 0
+389: PostCall 114
+390: GetReturnValue £temporary1909
+391: Assign arg_list £temporary1909
+392: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+393: Parameter 138 signedchar 37
+394: Call 114 printChar 0
+395: PostCall 114
+396: Return arg_list
+397: FunctionEnd printArgument

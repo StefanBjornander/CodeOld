@@ -1,13 +1,13 @@
 1:	
 
-float_test:	; empty
+float_test:	; Empty
 3:	
 
-float_test$1:	; return
-4:		mov t2677, [bp]
+float_test$1:	; Return 0
+4:		mov t2676, [bp]
 5:		mov di, [bp + 4]
 6:		mov bp, [bp + 2]
-7:		jmp t2677
+7:		jmp t2676
 9:	
 
-float_test$2:	; function end float_test
+float_test$2:	; FunctionEnd float_test

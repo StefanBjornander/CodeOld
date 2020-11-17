@@ -9,42 +9,42 @@
 8:		mov word [$StackTop], 0
 10:	
 
-@34$main:	; call header integral zero 0 stack zero 0
+@5440$main:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 12:	
 
-@34$main$1:	; parameter string_Please20input20a20value3A20#, offset 6
+@5440$main$1:	; Parameter 16 string_Please20input20a20value3A20# 6
 13:		mov word [bp + 22], string_Please20input20a20value3A20#
 15:	
 
-@34$main$2:	; call function noellipse-ellipse printf, extra 0
-16:		mov word [bp + 16], @34$main$3
+@5440$main$2:	; Call 16 printf 0
+16:		mov word [bp + 16], @5440$main$3
 17:		mov [bp + 18], bp
 18:		add bp, 16
 19:		mov di, bp
 20:		jmp printf
 22:	
 
-@34$main$3:	; post call
+@5440$main$3:	; PostCall 16
 24:	
 
-@34$main$4:	; call header integral zero 0 stack zero 0
+@5440$main$4:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 26:	
 
-@34$main$5:	; parameter string_25lf#, offset 6
+@5440$main$5:	; Parameter 16 string_25lf# 6
 27:		mov word [bp + 22], string_25lf#
 29:	
 
-@34$main$6:	; £temporary4675 = &x
-30:		mov t2755, bp
-31:		add t2755, 8
+@5440$main$6:	; address £temporary4675 x
+30:		mov t2754, bp
+31:		add t2754, 8
 33:	
 
-@34$main$7:	; parameter £temporary4675, offset 8
-34:		mov [bp + 24], t2755
+@5440$main$7:	; Parameter 16 £temporary4675 8
+34:		mov [bp + 24], t2754
 36:	
 
-@34$main$8:	; call function noellipse-ellipse scanf, extra 0
-37:		mov word [bp + 16], @34$main$9
+@5440$main$8:	; Call 16 scanf 0
+37:		mov word [bp + 16], @5440$main$9
 38:		mov [bp + 18], bp
 39:		add bp, 16
 40:		mov di, bp
@@ -52,83 +52,83 @@
 42:		jmp scanf
 44:	
 
-@34$main$9:	; post call
+@5440$main$9:	; PostCall 16
 46:	
 
-@34$main$10:	; call header integral zero 0 stack zero 0
+@5440$main$10:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 48:	
 
-@34$main$11:	; parameter buffer, offset 6
+@5440$main$11:	; Parameter 16 buffer 6
 49:		mov word [bp + 22], buffer
 51:	
 
-@34$main$12:	; call function noellipse-noellipse setjmp
-52:		mov word [bp + 16], @34$main$13
+@5440$main$12:	; Call 16 setjmp 0
+52:		mov word [bp + 16], @5440$main$13
 53:		mov [bp + 18], bp
 54:		add bp, 16
 55:		jmp setjmp
 57:	
 
-@34$main$13:	; post call
+@5440$main$13:	; PostCall 16
 59:	
 
-@34$main$14:	; £temporary4677 = return_value
+@5440$main$14:	; GetReturnValue £temporary4677
 64:	
 
-@34$main$15:	; message = £temporary4677
-65:		mov [bp + 6], t2757
+@5440$main$15:	; Assign message £temporary4677
+65:		mov [bp + 6], t2756
 67:	
 
-@34$main$16:	; if message != 0 goto 31
+@5440$main$16:	; NotEqual 31 message 0
 68:		cmp word [bp + 6], 0
-69:		jne @34$main$31
+69:		jne @5440$main$31
 71:	
 
-@34$main$17:	; call header integral zero 0 stack zero 0
+@5440$main$17:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 73:	
 
-@34$main$18:	; parameter string_12E0202F2025f203D2025f0A#, offset 6
+@5440$main$18:	; Parameter 16 string_12E0202F2025f203D2025f0A# 6
 74:		mov word [bp + 22], string_12E0202F2025f203D2025f0A#
 76:	
 
-@34$main$19:	; push float x
+@5440$main$19:	; PushFloat x
 77:		fld qword [bp + 8]
 79:	
 
-@34$main$20:	; parameter x, offset 8
+@5440$main$20:	; Parameter 16 x 8
 80:		fstp qword [bp + 24]
 82:	
 
-@34$main$21:	; call header integral zero 0 stack zero 0
+@5440$main$21:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 84:	
 
-@34$main$22:	; push float x
+@5440$main$22:	; PushFloat x
 85:		fld qword [bp + 8]
 87:	
 
-@34$main$23:	; parameter x, offset 22
+@5440$main$23:	; Parameter 16 x 22
 88:		fstp qword [bp + 38]
 90:	
 
-@34$main$24:	; call function noellipse-noellipse inverse
-91:		mov word [bp + 32], @34$main$25
+@5440$main$24:	; Call 16 inverse 16
+91:		mov word [bp + 32], @5440$main$25
 92:		mov [bp + 34], bp
 93:		add bp, 32
 94:		jmp inverse
 96:	
 
-@34$main$25:	; post call
+@5440$main$25:	; PostCall 16
 98:	
 
-@34$main$26:	; £temporary4679 = return_value
+@5440$main$26:	; GetReturnValue £temporary4679
 100:	
 
-@34$main$27:	; parameter £temporary4679, offset 16
+@5440$main$27:	; Parameter 16 £temporary4679 16
 101:		fstp qword [bp + 32]
 103:	
 
-@34$main$28:	; call function noellipse-ellipse printf, extra 0
-104:		mov word [bp + 16], @34$main$29
+@5440$main$28:	; Call 16 printf 0
+104:		mov word [bp + 16], @5440$main$29
 105:		mov [bp + 18], bp
 106:		add bp, 16
 107:		mov di, bp
@@ -136,27 +136,27 @@
 109:		jmp printf
 111:	
 
-@34$main$29:	; post call
+@5440$main$29:	; PostCall 16
 113:	
 
-@34$main$30:	; goto 36
-114:		jmp @34$main$36
+@5440$main$30:	; Goto 36
+114:		jmp @5440$main$36
 116:	
 
-@34$main$31:	; call header integral zero 0 stack zero 0
+@5440$main$31:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 118:	
 
-@34$main$32:	; parameter string_25s0A#, offset 6
+@5440$main$32:	; Parameter 16 string_25s0A# 6
 119:		mov word [bp + 22], string_25s0A#
 121:	
 
-@34$main$33:	; parameter message, offset 8
-122:		mov a2758, [bp + 6]
-123:		mov [bp + 24], a2758
+@5440$main$33:	; Parameter 16 message 8
+122:		mov a2757, [bp + 6]
+123:		mov [bp + 24], a2757
 125:	
 
-@34$main$34:	; call function noellipse-ellipse printf, extra 0
-126:		mov word [bp + 16], @34$main$35
+@5440$main$34:	; Call 16 printf 0
+126:		mov word [bp + 16], @5440$main$35
 127:		mov [bp + 18], bp
 128:		add bp, 16
 129:		mov di, bp
@@ -164,147 +164,147 @@
 131:		jmp printf
 133:	
 
-@34$main$35:	; post call
+@5440$main$35:	; PostCall 16
 135:	
 
-@34$main$36:	; return
-136:		mov t2759, [bp]
+@5440$main$36:	; Return 0
+136:		mov t2758, [bp]
 137:		mov di, [bp + 4]
 138:		mov bp, [bp + 2]
-139:		jmp t2759
+139:		jmp t2758
 141:	
 
-@34$main$37:	; function end main
+@5440$main$37:	; FunctionEnd main
 1:	
 
-inverse:	; call header integral zero 0 stack zero 0
+inverse:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
-inverse$1:	; push 1
+inverse$1:	; PushOne
 4:		fld1
 6:	
 
-inverse$2:	; parameter 1, offset 6
+inverse$2:	; Parameter 14 1 6
 7:		fstp qword [bp + 20]
 9:	
 
-inverse$3:	; push float x
+inverse$3:	; PushFloat x
 10:		fld qword [bp + 6]
 12:	
 
-inverse$4:	; parameter x, offset 14
+inverse$4:	; Parameter 14 x 14
 13:		fstp qword [bp + 28]
 15:	
 
-inverse$5:	; call function noellipse-noellipse divide
+inverse$5:	; Call 14 divide 0
 16:		mov word [bp + 14], inverse$6
 17:		mov [bp + 16], bp
 18:		add bp, 14
 19:		jmp divide
 21:	
 
-inverse$6:	; post call
+inverse$6:	; PostCall 14
 23:	
 
-inverse$7:	; £temporary4693 = return_value
+inverse$7:	; GetReturnValue £temporary4693
 25:	
 
-inverse$8:	; return_value = £temporary4693
+inverse$8:	; SetReturnValue £temporary4693
 27:	
 
-inverse$9:	; return
-28:		mov t2760, [bp]
+inverse$9:	; Return £temporary4693
+28:		mov t2759, [bp]
 29:		mov di, [bp + 4]
 30:		mov bp, [bp + 2]
-31:		jmp t2760
+31:		jmp t2759
 33:	
 
-inverse$10:	; function end inverse
+inverse$10:	; FunctionEnd inverse
 1:	
 
-divide:	; push float y
+divide:	; PushFloat y
 2:		fld qword [bp + 14]
 4:	
 
-divide$1:	; push 0
+divide$1:	; PushZero
 5:		fldz
 7:	
 
-divide$2:	; if y == 0 goto 8
+divide$2:	; Equal 8 y 0
 8:		fcompp
 9:		fstsw ax
 10:		sahf
 11:		je divide$8
 13:	
 
-divide$3:	; push float x
+divide$3:	; PushFloat x
 14:		fld qword [bp + 6]
 16:	
 
-divide$4:	; push float y
+divide$4:	; PushFloat y
 17:		fld qword [bp + 14]
 19:	
 
-divide$5:	; £temporary4697 = x / y
+divide$5:	; SignedDivide £temporary4697 x y
 20:		fdiv
 22:	
 
-divide$6:	; return_value = £temporary4697
+divide$6:	; SetReturnValue £temporary4697
 24:	
 
-divide$7:	; return
-25:		mov t2761, [bp]
+divide$7:	; Return £temporary4697
+25:		mov t2760, [bp]
 26:		mov di, [bp + 4]
 27:		mov bp, [bp + 2]
-28:		jmp t2761
+28:		jmp t2760
 30:	
 
-divide$8:	; call header integral zero 0 stack zero 0
+divide$8:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 32:	
 
-divide$9:	; parameter buffer, offset 6
+divide$9:	; Parameter 22 buffer 6
 33:		mov word [bp + 28], buffer
 35:	
 
-divide$10:	; parameter string_Division20by20Zero2E#, offset 8
+divide$10:	; Parameter 22 string_Division20by20Zero2E# 8
 36:		mov word [bp + 30], string_Division20by20Zero2E#
 38:	
 
-divide$11:	; call function noellipse-noellipse longjmp
+divide$11:	; Call 22 longjmp 0
 39:		mov word [bp + 22], divide$12
 40:		mov [bp + 24], bp
 41:		add bp, 22
 42:		jmp longjmp
 44:	
 
-divide$12:	; post call
+divide$12:	; PostCall 22
 46:	
 
-divide$13:	; push 0
+divide$13:	; PushZero
 47:		fldz
 49:	
 
-divide$14:	; return_value = 0
+divide$14:	; SetReturnValue 0
 51:	
 
-divide$15:	; return
-52:		mov t2762, [bp]
+divide$15:	; Return 0
+52:		mov t2761, [bp]
 53:		mov di, [bp + 4]
 54:		mov bp, [bp + 2]
-55:		jmp t2762
+55:		jmp t2761
 57:	
 
-divide$16:	; function end divide
+divide$16:	; FunctionEnd divide
 1:	
 
-setjmp_test:	; empty
+setjmp_test:	; Empty
 3:	
 
-setjmp_test$1:	; return
-4:		mov t2763, [bp]
+setjmp_test$1:	; Return 0
+4:		mov t2762, [bp]
 5:		mov di, [bp + 4]
 6:		mov bp, [bp + 2]
-7:		jmp t2763
+7:		jmp t2762
 9:	
 
-setjmp_test$2:	; function end setjmp_test
+setjmp_test$2:	; FunctionEnd setjmp_test

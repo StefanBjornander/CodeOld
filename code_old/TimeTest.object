@@ -1,86 +1,86 @@
 1:	
 
-time_test:	; weekdays[0] = string_Sun#
+time_test:	; Assign weekdays[0] string_Sun#
 2:		mov word [bp + 6], string_Sun#
 4:	
 
-time_test$1:	; weekdays[1] = string_Mon#
+time_test$1:	; Assign weekdays[1] string_Mon#
 5:		mov word [bp + 8], string_Mon#
 7:	
 
-time_test$2:	; weekdays[2] = string_Tue#
+time_test$2:	; Assign weekdays[2] string_Tue#
 8:		mov word [bp + 10], string_Tue#
 10:	
 
-time_test$3:	; weekdays[3] = string_Wed#
+time_test$3:	; Assign weekdays[3] string_Wed#
 11:		mov word [bp + 12], string_Wed#
 13:	
 
-time_test$4:	; weekdays[4] = string_Thu#
+time_test$4:	; Assign weekdays[4] string_Thu#
 14:		mov word [bp + 14], string_Thu#
 16:	
 
-time_test$5:	; weekdays[5] = string_Fri#
+time_test$5:	; Assign weekdays[5] string_Fri#
 17:		mov word [bp + 16], string_Fri#
 19:	
 
-time_test$6:	; weekdays[6] = string_Sat#
+time_test$6:	; Assign weekdays[6] string_Sat#
 20:		mov word [bp + 18], string_Sat#
 22:	
 
-time_test$7:	; call header integral zero 0 stack zero 0
+time_test$7:	; CallHeader 20 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 24:	
 
-time_test$8:	; parameter 0, offset 6
+time_test$8:	; Parameter 20 0 6
 25:		mov word [bp + 26], 0
 27:	
 
-time_test$9:	; call function noellipse-noellipse time
+time_test$9:	; Call 20 time 0
 28:		mov word [bp + 20], time_test$10
 29:		mov [bp + 22], bp
 30:		add bp, 20
 31:		jmp time
 33:	
 
-time_test$10:	; post call
+time_test$10:	; PostCall 20
 35:	
 
-time_test$11:	; £temporary6135 = return_value
+time_test$11:	; GetReturnValue £temporary6135
 40:	
 
-time_test$12:	; now1 = £temporary6135
+time_test$12:	; Assign now1 £temporary6135
 41:		mov [bp + 20], ebx
 43:	
 
-time_test$13:	; call header integral zero 0 stack zero 0
+time_test$13:	; CallHeader 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 45:	
 
-time_test$14:	; £temporary6136 = &now1
+time_test$14:	; address £temporary6136 now1
 46:		mov si, bp
 47:		add si, 20
 49:	
 
-time_test$15:	; parameter £temporary6136, offset 6
+time_test$15:	; Parameter 24 £temporary6136 6
 50:		mov [bp + 30], si
 52:	
 
-time_test$16:	; call function noellipse-noellipse gmtime
+time_test$16:	; Call 24 gmtime 0
 53:		mov word [bp + 24], time_test$17
 54:		mov [bp + 26], bp
 55:		add bp, 24
 56:		jmp gmtime
 58:	
 
-time_test$17:	; post call
+time_test$17:	; PostCall 24
 60:	
 
-time_test$18:	; £temporary6137 = return_value
+time_test$18:	; GetReturnValue £temporary6137
 65:	
 
-time_test$19:	; £temporary6138 -> £temporary6137 = *£temporary6137
+time_test$19:	; Deref £temporary6138 -> £temporary6137 £temporary6137 0
 67:	
 
-time_test$20:	; s = £temporary6138 -> £temporary6137
+time_test$20:	; Assign s £temporary6138 -> £temporary6137
 68:		mov si, bp
 69:		add si, 24
 70:		mov al, 18
@@ -96,35 +96,35 @@ time_test$20$Loop:
 78:		jne time_test$20$Loop
 80:	
 
-time_test$21:	; call header integral zero 0 stack zero 0
+time_test$21:	; CallHeader 42 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 82:	
 
-time_test$22:	; £temporary6139 = &now1
+time_test$22:	; address £temporary6139 now1
 83:		mov si, bp
 84:		add si, 20
 86:	
 
-time_test$23:	; parameter £temporary6139, offset 6
+time_test$23:	; Parameter 42 £temporary6139 6
 87:		mov [bp + 48], si
 89:	
 
-time_test$24:	; call function noellipse-noellipse localtime
+time_test$24:	; Call 42 localtime 0
 90:		mov word [bp + 42], time_test$25
 91:		mov [bp + 44], bp
 92:		add bp, 42
 93:		jmp localtime
 95:	
 
-time_test$25:	; post call
+time_test$25:	; PostCall 42
 97:	
 
-time_test$26:	; £temporary6140 = return_value
+time_test$26:	; GetReturnValue £temporary6140
 102:	
 
-time_test$27:	; £temporary6141 -> £temporary6140 = *£temporary6140
+time_test$27:	; Deref £temporary6141 -> £temporary6140 £temporary6140 0
 104:	
 
-time_test$28:	; t = £temporary6141 -> £temporary6140
+time_test$28:	; Assign t £temporary6141 -> £temporary6140
 105:		mov si, bp
 106:		add si, 42
 107:		mov al, 18
@@ -140,48 +140,48 @@ time_test$28$Loop:
 115:		jne time_test$28$Loop
 117:	
 
-time_test$29:	; call header integral zero 0 stack zero 0
+time_test$29:	; CallHeader 60 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 119:	
 
-time_test$30:	; £temporary6142 = &s
+time_test$30:	; address £temporary6142 s
 120:		mov si, bp
 121:		add si, 24
 123:	
 
-time_test$31:	; parameter £temporary6142, offset 6
+time_test$31:	; Parameter 60 £temporary6142 6
 124:		mov [bp + 66], si
 126:	
 
-time_test$32:	; call function noellipse-noellipse mktime
+time_test$32:	; Call 60 mktime 0
 127:		mov word [bp + 60], time_test$33
 128:		mov [bp + 62], bp
 129:		add bp, 60
 130:		jmp mktime
 132:	
 
-time_test$33:	; post call
+time_test$33:	; PostCall 60
 134:	
 
-time_test$34:	; £temporary6143 = return_value
+time_test$34:	; GetReturnValue £temporary6143
 139:	
 
-time_test$35:	; now2 = £temporary6143
+time_test$35:	; Assign now2 £temporary6143
 140:		mov [bp + 60], ebx
 142:	
 
-time_test$36:	; call header integral zero 0 stack zero 0
+time_test$36:	; CallHeader 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 144:	
 
-time_test$37:	; parameter string_now2013A2025lu0A#, offset 6
+time_test$37:	; Parameter 64 string_now2013A2025lu0A# 6
 145:		mov word [bp + 70], string_now2013A2025lu0A#
 147:	
 
-time_test$38:	; parameter now1, offset 8
+time_test$38:	; Parameter 64 now1 8
 148:		mov eax, [bp + 20]
 149:		mov [bp + 72], eax
 151:	
 
-time_test$39:	; call function noellipse-ellipse printf, extra 0
+time_test$39:	; Call 64 printf 0
 152:		mov word [bp + 64], time_test$40
 153:		mov [bp + 66], bp
 154:		add bp, 64
@@ -190,22 +190,22 @@ time_test$39:	; call function noellipse-ellipse printf, extra 0
 157:		jmp printf
 159:	
 
-time_test$40:	; post call
+time_test$40:	; PostCall 64
 161:	
 
-time_test$41:	; call header integral zero 0 stack zero 0
+time_test$41:	; CallHeader 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 163:	
 
-time_test$42:	; parameter string_now2023A2025lu0A#, offset 6
+time_test$42:	; Parameter 64 string_now2023A2025lu0A# 6
 164:		mov word [bp + 70], string_now2023A2025lu0A#
 166:	
 
-time_test$43:	; parameter now2, offset 8
+time_test$43:	; Parameter 64 now2 8
 167:		mov eax, [bp + 60]
 168:		mov [bp + 72], eax
 170:	
 
-time_test$44:	; call function noellipse-ellipse printf, extra 0
+time_test$44:	; Call 64 printf 0
 171:		mov word [bp + 64], time_test$45
 172:		mov [bp + 66], bp
 173:		add bp, 64
@@ -214,90 +214,90 @@ time_test$44:	; call function noellipse-ellipse printf, extra 0
 176:		jmp printf
 178:	
 
-time_test$45:	; post call
+time_test$45:	; PostCall 64
 180:	
 
-time_test$46:	; call header integral zero 0 stack zero 0
+time_test$46:	; CallHeader 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 182:	
 
-time_test$47:	; parameter string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#, offset 6
+time_test$47:	; Parameter 64 string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A# 6
 183:		mov word [bp + 70], string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 185:	
 
-time_test$48:	; £temporary6148 = s$tm_wday * 2
+time_test$48:	; UnsignedMultiply £temporary6148 s$tm_wday 2
 186:		mov ax, [bp + 36]
 188:		xor dx, dx
 189:		mul word [int2$2#]
 195:	
 
-time_test$49:	; £temporary6149 = weekdays + £temporary6148
+time_test$49:	; BinaryAdd £temporary6149 weekdays £temporary6148
 196:		mov si, bp
 197:		add si, 6
 198:		add si, ax
 200:	
 
-time_test$50:	; £temporary6147 -> £temporary6149 = *£temporary6149
+time_test$50:	; Deref £temporary6147 -> £temporary6149 £temporary6149 0
 202:	
 
-time_test$51:	; parameter £temporary6147 -> £temporary6149, offset 8
+time_test$51:	; Parameter 64 £temporary6147 -> £temporary6149 8
 203:		mov ax, [si]
 204:		mov [bp + 72], ax
 206:	
 
-time_test$52:	; £temporary6151 = s$tm_year + 1900
+time_test$52:	; BinaryAdd £temporary6151 s$tm_year 1900
 207:		mov ax, [bp + 34]
 208:		add ax, 1900
 210:	
 
-time_test$53:	; parameter £temporary6151, offset 10
+time_test$53:	; Parameter 64 £temporary6151 10
 211:		mov [bp + 74], ax
 213:	
 
-time_test$54:	; £temporary6153 = s$tm_mon + 1
+time_test$54:	; BinaryAdd £temporary6153 s$tm_mon 1
 214:		mov ax, [bp + 32]
 215:		add ax, 1
 217:	
 
-time_test$55:	; parameter £temporary6153, offset 12
+time_test$55:	; Parameter 64 £temporary6153 12
 218:		mov [bp + 76], ax
 220:	
 
-time_test$56:	; parameter s$tm_mday, offset 14
+time_test$56:	; Parameter 64 s$tm_mday 14
 221:		mov ax, [bp + 30]
 222:		mov [bp + 78], ax
 224:	
 
-time_test$57:	; parameter s$tm_hour, offset 16
+time_test$57:	; Parameter 64 s$tm_hour 16
 225:		mov ax, [bp + 28]
 226:		mov [bp + 80], ax
 228:	
 
-time_test$58:	; parameter s$tm_min, offset 18
+time_test$58:	; Parameter 64 s$tm_min 18
 229:		mov ax, [bp + 26]
 230:		mov [bp + 82], ax
 232:	
 
-time_test$59:	; parameter s$tm_sec, offset 20
+time_test$59:	; Parameter 64 s$tm_sec 20
 233:		mov ax, [bp + 24]
 234:		mov [bp + 84], ax
 236:	
 
-time_test$60:	; parameter s$tm_yday, offset 22
+time_test$60:	; Parameter 64 s$tm_yday 22
 237:		mov ax, [bp + 38]
 238:		mov [bp + 86], ax
 240:	
 
-time_test$61:	; parameter s$tm_wday, offset 24
+time_test$61:	; Parameter 64 s$tm_wday 24
 241:		mov ax, [bp + 36]
 242:		mov [bp + 88], ax
 244:	
 
-time_test$62:	; parameter s$tm_isdst, offset 26
+time_test$62:	; Parameter 64 s$tm_isdst 26
 245:		mov ax, [bp + 40]
 246:		mov [bp + 90], ax
 248:	
 
-time_test$63:	; call function noellipse-ellipse printf, extra 0
+time_test$63:	; Call 64 printf 0
 249:		mov word [bp + 64], time_test$64
 250:		mov [bp + 66], bp
 251:		add bp, 64
@@ -306,90 +306,90 @@ time_test$63:	; call function noellipse-ellipse printf, extra 0
 254:		jmp printf
 256:	
 
-time_test$64:	; post call
+time_test$64:	; PostCall 64
 258:	
 
-time_test$65:	; call header integral zero 0 stack zero 0
+time_test$65:	; CallHeader 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 260:	
 
-time_test$66:	; parameter string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#, offset 6
+time_test$66:	; Parameter 64 string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A# 6
 261:		mov word [bp + 70], string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 263:	
 
-time_test$67:	; £temporary6164 = t$tm_wday * 2
+time_test$67:	; UnsignedMultiply £temporary6164 t$tm_wday 2
 264:		mov ax, [bp + 54]
 266:		xor dx, dx
 267:		mul word [int2$2#]
 273:	
 
-time_test$68:	; £temporary6165 = weekdays + £temporary6164
+time_test$68:	; BinaryAdd £temporary6165 weekdays £temporary6164
 274:		mov si, bp
 275:		add si, 6
 276:		add si, ax
 278:	
 
-time_test$69:	; £temporary6163 -> £temporary6165 = *£temporary6165
+time_test$69:	; Deref £temporary6163 -> £temporary6165 £temporary6165 0
 280:	
 
-time_test$70:	; parameter £temporary6163 -> £temporary6165, offset 8
+time_test$70:	; Parameter 64 £temporary6163 -> £temporary6165 8
 281:		mov ax, [si]
 282:		mov [bp + 72], ax
 284:	
 
-time_test$71:	; £temporary6167 = t$tm_year + 1900
+time_test$71:	; BinaryAdd £temporary6167 t$tm_year 1900
 285:		mov ax, [bp + 52]
 286:		add ax, 1900
 288:	
 
-time_test$72:	; parameter £temporary6167, offset 10
+time_test$72:	; Parameter 64 £temporary6167 10
 289:		mov [bp + 74], ax
 291:	
 
-time_test$73:	; £temporary6169 = t$tm_mon + 1
+time_test$73:	; BinaryAdd £temporary6169 t$tm_mon 1
 292:		mov ax, [bp + 50]
 293:		add ax, 1
 295:	
 
-time_test$74:	; parameter £temporary6169, offset 12
+time_test$74:	; Parameter 64 £temporary6169 12
 296:		mov [bp + 76], ax
 298:	
 
-time_test$75:	; parameter t$tm_mday, offset 14
+time_test$75:	; Parameter 64 t$tm_mday 14
 299:		mov ax, [bp + 48]
 300:		mov [bp + 78], ax
 302:	
 
-time_test$76:	; parameter t$tm_hour, offset 16
+time_test$76:	; Parameter 64 t$tm_hour 16
 303:		mov ax, [bp + 46]
 304:		mov [bp + 80], ax
 306:	
 
-time_test$77:	; parameter t$tm_min, offset 18
+time_test$77:	; Parameter 64 t$tm_min 18
 307:		mov ax, [bp + 44]
 308:		mov [bp + 82], ax
 310:	
 
-time_test$78:	; parameter t$tm_sec, offset 20
+time_test$78:	; Parameter 64 t$tm_sec 20
 311:		mov ax, [bp + 42]
 312:		mov [bp + 84], ax
 314:	
 
-time_test$79:	; parameter t$tm_yday, offset 22
+time_test$79:	; Parameter 64 t$tm_yday 22
 315:		mov ax, [bp + 56]
 316:		mov [bp + 86], ax
 318:	
 
-time_test$80:	; parameter t$tm_wday, offset 24
+time_test$80:	; Parameter 64 t$tm_wday 24
 319:		mov ax, [bp + 54]
 320:		mov [bp + 88], ax
 322:	
 
-time_test$81:	; parameter t$tm_isdst, offset 26
+time_test$81:	; Parameter 64 t$tm_isdst 26
 323:		mov ax, [bp + 58]
 324:		mov [bp + 90], ax
 326:	
 
-time_test$82:	; call function noellipse-ellipse printf, extra 0
+time_test$82:	; Call 64 printf 0
 327:		mov word [bp + 64], time_test$83
 328:		mov [bp + 66], bp
 329:		add bp, 64
@@ -398,121 +398,121 @@ time_test$82:	; call function noellipse-ellipse printf, extra 0
 332:		jmp printf
 334:	
 
-time_test$83:	; post call
+time_test$83:	; PostCall 64
 336:	
 
-time_test$84:	; call header integral zero 0 stack zero 0
+time_test$84:	; CallHeader 566 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 338:	
 
-time_test$85:	; parameter buffer1, offset 6
+time_test$85:	; Parameter 566 buffer1 6
 339:		mov [bp + 572], bp
 340:		add word [bp + 572], 64
 342:	
 
-time_test$86:	; call header integral zero 0 stack zero 0
+time_test$86:	; CallHeader 566 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 344:	
 
-time_test$87:	; £temporary6178 = &s
+time_test$87:	; address £temporary6178 s
 345:		mov si, bp
 346:		add si, 24
 348:	
 
-time_test$88:	; parameter £temporary6178, offset 112
+time_test$88:	; Parameter 566 £temporary6178 112
 349:		mov [bp + 678], si
 351:	
 
-time_test$89:	; call function noellipse-noellipse asctime
+time_test$89:	; Call 566 asctime 106
 352:		mov word [bp + 672], time_test$90
 353:		mov [bp + 674], bp
 354:		add bp, 672
 355:		jmp asctime
 357:	
 
-time_test$90:	; post call
+time_test$90:	; PostCall 566
 359:	
 
-time_test$91:	; £temporary6179 = return_value
+time_test$91:	; GetReturnValue £temporary6179
 364:	
 
-time_test$92:	; parameter £temporary6179, offset 8
+time_test$92:	; Parameter 566 £temporary6179 8
 365:		mov [bp + 574], bx
 367:	
 
-time_test$93:	; call function noellipse-noellipse strcpy
+time_test$93:	; Call 566 strcpy 0
 368:		mov word [bp + 566], time_test$94
 369:		mov [bp + 568], bp
 370:		add bp, 566
 371:		jmp strcpy
 373:	
 
-time_test$94:	; post call
+time_test$94:	; PostCall 566
 375:	
 
-time_test$95:	; call header integral zero 0 stack zero 0
+time_test$95:	; CallHeader 566 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 377:	
 
-time_test$96:	; parameter buffer2, offset 6
+time_test$96:	; Parameter 566 buffer2 6
 378:		mov [bp + 572], bp
 379:		add word [bp + 572], 164
 381:	
 
-time_test$97:	; call header integral zero 0 stack zero 0
+time_test$97:	; CallHeader 566 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 383:	
 
-time_test$98:	; £temporary6181 = &now1
+time_test$98:	; address £temporary6181 now1
 384:		mov si, bp
 385:		add si, 20
 387:	
 
-time_test$99:	; parameter £temporary6181, offset 112
+time_test$99:	; Parameter 566 £temporary6181 112
 388:		mov [bp + 678], si
 390:	
 
-time_test$100:	; call function noellipse-noellipse ctime
+time_test$100:	; Call 566 ctime 106
 391:		mov word [bp + 672], time_test$101
 392:		mov [bp + 674], bp
 393:		add bp, 672
 394:		jmp ctime
 396:	
 
-time_test$101:	; post call
+time_test$101:	; PostCall 566
 398:	
 
-time_test$102:	; £temporary6182 = return_value
+time_test$102:	; GetReturnValue £temporary6182
 403:	
 
-time_test$103:	; parameter £temporary6182, offset 8
+time_test$103:	; Parameter 566 £temporary6182 8
 404:		mov [bp + 574], bx
 406:	
 
-time_test$104:	; call function noellipse-noellipse strcpy
+time_test$104:	; Call 566 strcpy 0
 407:		mov word [bp + 566], time_test$105
 408:		mov [bp + 568], bp
 409:		add bp, 566
 410:		jmp strcpy
 412:	
 
-time_test$105:	; post call
+time_test$105:	; PostCall 566
 414:	
 
-time_test$106:	; call header integral zero 0 stack zero 0
+time_test$106:	; CallHeader 566 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 416:	
 
-time_test$107:	; parameter string_asctime203C25s3E2C20ctime203C25s3E0A#, offset 6
+time_test$107:	; Parameter 566 string_asctime203C25s3E2C20ctime203C25s3E0A# 6
 417:		mov word [bp + 572], string_asctime203C25s3E2C20ctime203C25s3E0A#
 419:	
 
-time_test$108:	; parameter buffer1, offset 8
+time_test$108:	; Parameter 566 buffer1 8
 420:		mov [bp + 574], bp
 421:		add word [bp + 574], 64
 423:	
 
-time_test$109:	; parameter buffer2, offset 10
+time_test$109:	; Parameter 566 buffer2 10
 424:		mov [bp + 576], bp
 425:		add word [bp + 576], 164
 427:	
 
-time_test$110:	; call function noellipse-ellipse printf, extra 0
+time_test$110:	; Call 566 printf 0
 428:		mov word [bp + 566], time_test$111
 429:		mov [bp + 568], bp
 430:		add bp, 566
@@ -521,94 +521,94 @@ time_test$110:	; call function noellipse-ellipse printf, extra 0
 433:		jmp printf
 435:	
 
-time_test$111:	; post call
+time_test$111:	; PostCall 566
 437:	
 
-time_test$112:	; call header integral zero 0 stack zero 0
+time_test$112:	; CallHeader 566 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 439:	
 
-time_test$113:	; parameter buffer, offset 6
+time_test$113:	; Parameter 566 buffer 6
 440:		mov [bp + 572], bp
 441:		add word [bp + 572], 264
 443:	
 
-time_test$114:	; parameter 300, offset 8
+time_test$114:	; Parameter 566 300 8
 444:		mov word [bp + 574], 300
 446:	
 
-time_test$115:	; parameter string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y#, offset 10
+time_test$115:	; Parameter 566 string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y# 10
 447:		mov word [bp + 576], string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y#
 449:	
 
-time_test$116:	; £temporary6185 = &t
+time_test$116:	; address £temporary6185 t
 450:		mov si, bp
 451:		add si, 42
 453:	
 
-time_test$117:	; parameter £temporary6185, offset 12
+time_test$117:	; Parameter 566 £temporary6185 12
 454:		mov [bp + 578], si
 456:	
 
-time_test$118:	; call function noellipse-noellipse strftime
+time_test$118:	; Call 566 strftime 0
 457:		mov word [bp + 566], time_test$119
 458:		mov [bp + 568], bp
 459:		add bp, 566
 460:		jmp strftime
 462:	
 
-time_test$119:	; post call
+time_test$119:	; PostCall 566
 464:	
 
-time_test$120:	; £temporary6186 = return_value
+time_test$120:	; GetReturnValue £temporary6186
 469:	
 
-time_test$121:	; i = £temporary6186
+time_test$121:	; Assign i £temporary6186
 470:		mov [bp + 564], bx
 472:	
 
-time_test$122:	; call header integral zero 0 stack zero 0
+time_test$122:	; CallHeader 566 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 474:	
 
-time_test$123:	; parameter string_strftime2025i2025i203C25s3E0A#, offset 6
+time_test$123:	; Parameter 566 string_strftime2025i2025i203C25s3E0A# 6
 475:		mov word [bp + 572], string_strftime2025i2025i203C25s3E0A#
 477:	
 
-time_test$124:	; parameter i, offset 8
+time_test$124:	; Parameter 566 i 8
 478:		mov ax, [bp + 564]
 479:		mov [bp + 574], ax
 481:	
 
-time_test$125:	; call header integral zero 0 stack zero 0
+time_test$125:	; CallHeader 566 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 483:	
 
-time_test$126:	; parameter buffer, offset 16
+time_test$126:	; Parameter 566 buffer 16
 484:		mov [bp + 582], bp
 485:		add word [bp + 582], 264
 487:	
 
-time_test$127:	; call function noellipse-noellipse strlen
+time_test$127:	; Call 566 strlen 10
 488:		mov word [bp + 576], time_test$128
 489:		mov [bp + 578], bp
 490:		add bp, 576
 491:		jmp strlen
 493:	
 
-time_test$128:	; post call
+time_test$128:	; PostCall 566
 495:	
 
-time_test$129:	; £temporary6187 = return_value
+time_test$129:	; GetReturnValue £temporary6187
 500:	
 
-time_test$130:	; parameter £temporary6187, offset 10
+time_test$130:	; Parameter 566 £temporary6187 10
 501:		mov [bp + 576], bx
 503:	
 
-time_test$131:	; parameter buffer, offset 12
+time_test$131:	; Parameter 566 buffer 12
 504:		mov [bp + 578], bp
 505:		add word [bp + 578], 264
 507:	
 
-time_test$132:	; call function noellipse-ellipse printf, extra 0
+time_test$132:	; Call 566 printf 0
 508:		mov word [bp + 566], time_test$133
 509:		mov [bp + 568], bp
 510:		add bp, 566
@@ -617,14 +617,14 @@ time_test$132:	; call function noellipse-ellipse printf, extra 0
 513:		jmp printf
 515:	
 
-time_test$133:	; post call
+time_test$133:	; PostCall 566
 517:	
 
-time_test$134:	; return
+time_test$134:	; Return 0
 518:		mov ax, [bp]
 519:		mov di, [bp + 4]
 520:		mov bp, [bp + 2]
 521:		jmp ax
 523:	
 
-time_test$135:	; function end time_test
+time_test$135:	; FunctionEnd time_test

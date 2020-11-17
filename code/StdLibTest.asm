@@ -27,26 +27,26 @@
 section .text
 
  compare:
-	; IntegralToIntegral £temporary4359 valuePtr1
+	; IntegralToIntegral £temporary4427 valuePtr1
 	mov rsi, [rbp + 24]
 
  compare$1:
-	; Dereference £temporary4360 -> £temporary4359 £temporary4359 0
+	; Dereference £temporary4428 -> £temporary4427 £temporary4427 0
 
  compare$2:
-	; Assign intValue1 £temporary4360 -> £temporary4359
+	; Assign intValue1 £temporary4428 -> £temporary4427
 	mov eax, [rsi]
 	mov [rbp + 40], eax
 
  compare$3:
-	; IntegralToIntegral £temporary4361 valuePtr2
+	; IntegralToIntegral £temporary4429 valuePtr2
 	mov rsi, [rbp + 32]
 
  compare$4:
-	; Dereference £temporary4362 -> £temporary4361 £temporary4361 0
+	; Dereference £temporary4430 -> £temporary4429 £temporary4429 0
 
  compare$5:
-	; Assign intValue2 £temporary4362 -> £temporary4361
+	; Assign intValue2 £temporary4430 -> £temporary4429
 	mov eax, [rsi]
 	mov [rbp + 44], eax
 
@@ -57,7 +57,7 @@ section .text
 	jge compare$9
 
  compare$7:
-	; Assign £temporary4366 -1
+	; Assign £temporary4434 -1
 	mov ebx, -1
 
  compare$8:
@@ -71,7 +71,7 @@ section .text
 	jne compare$12
 
  compare$10:
-	; Assign £temporary4366 0
+	; Assign £temporary4434 0
 	mov ebx, 0
 
  compare$11:
@@ -79,11 +79,11 @@ section .text
 	jmp compare$13
 
  compare$12:
-	; Assign £temporary4366 1
+	; Assign £temporary4434 1
 	mov ebx, 1
 
  compare$13:
-	; Return £temporary4366
+	; Return £temporary4434
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -95,26 +95,26 @@ section .text
 section .text
 
  reverse_compare:
-	; IntegralToIntegral £temporary4367 valuePtr1
+	; IntegralToIntegral £temporary4435 valuePtr1
 	mov rsi, [rbp + 24]
 
  reverse_compare$1:
-	; Dereference £temporary4368 -> £temporary4367 £temporary4367 0
+	; Dereference £temporary4436 -> £temporary4435 £temporary4435 0
 
  reverse_compare$2:
-	; Assign intValue1 £temporary4368 -> £temporary4367
+	; Assign intValue1 £temporary4436 -> £temporary4435
 	mov eax, [rsi]
 	mov [rbp + 40], eax
 
  reverse_compare$3:
-	; IntegralToIntegral £temporary4369 valuePtr2
+	; IntegralToIntegral £temporary4437 valuePtr2
 	mov rsi, [rbp + 32]
 
  reverse_compare$4:
-	; Dereference £temporary4370 -> £temporary4369 £temporary4369 0
+	; Dereference £temporary4438 -> £temporary4437 £temporary4437 0
 
  reverse_compare$5:
-	; Assign intValue2 £temporary4370 -> £temporary4369
+	; Assign intValue2 £temporary4438 -> £temporary4437
 	mov eax, [rsi]
 	mov [rbp + 44], eax
 
@@ -125,7 +125,7 @@ section .text
 	jge reverse_compare$9
 
  reverse_compare$7:
-	; Assign £temporary4374 1
+	; Assign £temporary4442 1
 	mov ebx, 1
 
  reverse_compare$8:
@@ -139,7 +139,7 @@ section .text
 	jne reverse_compare$12
 
  reverse_compare$10:
-	; Assign £temporary4374 0
+	; Assign £temporary4442 0
 	mov ebx, 0
 
  reverse_compare$11:
@@ -147,11 +147,11 @@ section .text
 	jmp reverse_compare$13
 
  reverse_compare$12:
-	; Assign £temporary4374 -1
+	; Assign £temporary4442 -1
 	mov ebx, -1
 
  reverse_compare$13:
-	; Return £temporary4374
+	; Return £temporary4442
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -434,11 +434,11 @@ section .text
 	mov qword [rbp + 56], string_f3A2025u0A#
 
  qtest$2:
-	; IntegralToIntegral £temporary4395 f
+	; IntegralToIntegral £temporary4463 f
 	mov rax, [rbp + 24]
 
  qtest$3:
-	; Parameter 64 unsigned int £temporary4395
+	; Parameter 64 unsigned int £temporary4463
 	mov [rbp + 64], eax
 
  qtest$4:
@@ -499,11 +499,11 @@ section .text
 	mov qword [rbp + 48], string_hello3A2025u0A#
 
  stdlib_testZ$2:
-	; IntegralToIntegral £temporary4398 hello
+	; IntegralToIntegral £temporary4466 hello
 	mov rax, hello
 
  stdlib_testZ$3:
-	; Parameter 56 unsigned int £temporary4398
+	; Parameter 56 unsigned int £temporary4466
 	mov [rbp + 56], eax
 
  stdlib_testZ$4:
@@ -722,10 +722,10 @@ section .text
 	; PostCall 64
 
  stdlib_test$6:
-	; GetReturnValue £temporary4402
+	; GetReturnValue £temporary4470
 
  stdlib_test$7:
-	; Parameter 64 double £temporary4402
+	; Parameter 64 double £temporary4470
 	fstp qword [rbp + 64]
 
  stdlib_test$8:
@@ -755,12 +755,12 @@ section .text
 	mov qword [rbp + 88], string_1232E456789abc#
 
  stdlib_test$14:
-	; Address £temporary4404 p
+	; Address £temporary4472 p
 	mov rsi, rbp
 	add rsi, 24
 
  stdlib_test$15:
-	; Parameter 96 pointer £temporary4404
+	; Parameter 96 pointer £temporary4472
 	mov [rbp + 96], rsi
 
  stdlib_test$16:
@@ -774,10 +774,10 @@ section .text
 	; PostCall 64
 
  stdlib_test$18:
-	; GetReturnValue £temporary4405
+	; GetReturnValue £temporary4473
 
  stdlib_test$19:
-	; Parameter 64 double £temporary4405
+	; Parameter 64 double £temporary4473
 	fstp qword [rbp + 64]
 
  stdlib_test$20:
@@ -822,10 +822,10 @@ section .text
 	; PostCall 56
 
  stdlib_test$29:
-	; GetReturnValue £temporary4407
+	; GetReturnValue £temporary4475
 
  stdlib_test$30:
-	; Parameter 56 pointer £temporary4407
+	; Parameter 56 pointer £temporary4475
 	mov [rbp + 56], rbx
 
  stdlib_test$31:
@@ -900,10 +900,10 @@ section .text
 	; PostCall 56
 
  stdlib_test$47:
-	; GetReturnValue £temporary4411
+	; GetReturnValue £temporary4479
 
  stdlib_test$48:
-	; Parameter 56 signedint £temporary4411
+	; Parameter 56 signedint £temporary4479
 	mov [rbp + 56], ebx
 
  stdlib_test$49:
@@ -924,10 +924,10 @@ section .text
 	; PostCall 60
 
  stdlib_test$53:
-	; GetReturnValue £temporary4412
+	; GetReturnValue £temporary4480
 
  stdlib_test$54:
-	; Parameter 60 signedint £temporary4412
+	; Parameter 60 signedint £temporary4480
 	mov [rbp + 60], ebx
 
  stdlib_test$55:
@@ -967,10 +967,10 @@ section .text
 	; PostCall 56
 
  stdlib_test$63:
-	; GetReturnValue £temporary4414
+	; GetReturnValue £temporary4482
 
  stdlib_test$64:
-	; Parameter 56 signed long int £temporary4414
+	; Parameter 56 signed long int £temporary4482
 	mov [rbp + 56], rbx
 
  stdlib_test$65:
@@ -991,10 +991,10 @@ section .text
 	; PostCall 64
 
  stdlib_test$69:
-	; GetReturnValue £temporary4415
+	; GetReturnValue £temporary4483
 
  stdlib_test$70:
-	; Parameter 64 signed long int £temporary4415
+	; Parameter 64 signed long int £temporary4483
 	mov [rbp + 64], rbx
 
  stdlib_test$71:
@@ -1031,16 +1031,16 @@ section .text
 	; PostCall 24
 
  stdlib_test$78:
-	; GetReturnValue £temporary4417 -> £temporary4418
+	; GetReturnValue £temporary4485 -> £temporary4486
 
  stdlib_test$79:
-	; AssignInitSize i £temporary4417 -> £temporary4418
+	; AssignInitSize i £temporary4485 -> £temporary4486
 	mov rsi, rbp
 	add rsi, 24
 	mov al, 8
 
  stdlib_test$80:
-	; Assign i £temporary4417 -> £temporary4418
+	; Assign i £temporary4485 -> £temporary4486
 	mov ah, [rbx]
 	mov [rsi], ah
 	inc rbx
@@ -1110,16 +1110,16 @@ section .text
 	; PostCall 32
 
  stdlib_test$92:
-	; GetReturnValue £temporary4422 -> £temporary4423
+	; GetReturnValue £temporary4490 -> £temporary4491
 
  stdlib_test$93:
-	; AssignInitSize j £temporary4422 -> £temporary4423
+	; AssignInitSize j £temporary4490 -> £temporary4491
 	mov rsi, rbp
 	add rsi, 32
 	mov al, 8
 
  stdlib_test$94:
-	; Assign j £temporary4422 -> £temporary4423
+	; Assign j £temporary4490 -> £temporary4491
 	mov ah, [rbx]
 	mov [rsi], ah
 	inc rbx
@@ -1179,16 +1179,16 @@ section .text
 	; PostCall 24
 
  stdlib_test$106:
-	; GetReturnValue £temporary4427 -> £temporary4428
+	; GetReturnValue £temporary4495 -> £temporary4496
 
  stdlib_test$107:
-	; AssignInitSize li £temporary4427 -> £temporary4428
+	; AssignInitSize li £temporary4495 -> £temporary4496
 	mov rsi, rbp
 	add rsi, 24
 	mov al, 16
 
  stdlib_test$108:
-	; Assign li £temporary4427 -> £temporary4428
+	; Assign li £temporary4495 -> £temporary4496
 	mov ah, [rbx]
 	mov [rsi], ah
 	inc rbx
@@ -1258,16 +1258,16 @@ section .text
 	; PostCall 40
 
  stdlib_test$120:
-	; GetReturnValue £temporary4432 -> £temporary4433
+	; GetReturnValue £temporary4500 -> £temporary4501
 
  stdlib_test$121:
-	; AssignInitSize lj £temporary4432 -> £temporary4433
+	; AssignInitSize lj £temporary4500 -> £temporary4501
 	mov rsi, rbp
 	add rsi, 40
 	mov al, 16
 
  stdlib_test$122:
-	; Assign lj £temporary4432 -> £temporary4433
+	; Assign lj £temporary4500 -> £temporary4501
 	mov ah, [rbx]
 	mov [rsi], ah
 	inc rbx
@@ -1361,27 +1361,27 @@ section .text
 	mov qword [rbp + 72], string_25i20#
 
  stdlib_test$142:
-	; IntegralToIntegral £temporary4445 index
+	; IntegralToIntegral £temporary4513 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  stdlib_test$143:
-	; UnsignedMultiply £temporary4447 £temporary4445 4
+	; UnsignedMultiply £temporary4515 £temporary4513 4
 	xor rdx, rdx
 	mul qword [int8$4#]
 
  stdlib_test$144:
-	; BinaryAdd £temporary4446 list £temporary4447
+	; BinaryAdd £temporary4514 list £temporary4515
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
  stdlib_test$145:
-	; Dereference £temporary4448 -> £temporary4446 £temporary4446 0
+	; Dereference £temporary4516 -> £temporary4514 £temporary4514 0
 
  stdlib_test$146:
-	; Parameter 80 signedint £temporary4448 -> £temporary4446
+	; Parameter 80 signedint £temporary4516 -> £temporary4514
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1472,27 +1472,27 @@ section .text
 	mov qword [rbp + 72], string_25i20#
 
  stdlib_test$166:
-	; IntegralToIntegral £temporary4455 index
+	; IntegralToIntegral £temporary4523 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  stdlib_test$167:
-	; UnsignedMultiply £temporary4457 £temporary4455 4
+	; UnsignedMultiply £temporary4525 £temporary4523 4
 	xor rdx, rdx
 	mul qword [int8$4#]
 
  stdlib_test$168:
-	; BinaryAdd £temporary4456 list £temporary4457
+	; BinaryAdd £temporary4524 list £temporary4525
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
  stdlib_test$169:
-	; Dereference £temporary4458 -> £temporary4456 £temporary4456 0
+	; Dereference £temporary4526 -> £temporary4524 £temporary4524 0
 
  stdlib_test$170:
-	; Parameter 80 signedint £temporary4458 -> £temporary4456
+	; Parameter 80 signedint £temporary4526 -> £temporary4524
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1583,27 +1583,27 @@ section .text
 	mov qword [rbp + 72], string_25i20#
 
  stdlib_test$190:
-	; IntegralToIntegral £temporary4465 index
+	; IntegralToIntegral £temporary4533 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  stdlib_test$191:
-	; UnsignedMultiply £temporary4467 £temporary4465 4
+	; UnsignedMultiply £temporary4535 £temporary4533 4
 	xor rdx, rdx
 	mul qword [int8$4#]
 
  stdlib_test$192:
-	; BinaryAdd £temporary4466 list £temporary4467
+	; BinaryAdd £temporary4534 list £temporary4535
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
  stdlib_test$193:
-	; Dereference £temporary4468 -> £temporary4466 £temporary4466 0
+	; Dereference £temporary4536 -> £temporary4534 £temporary4534 0
 
  stdlib_test$194:
-	; Parameter 80 signedint £temporary4468 -> £temporary4466
+	; Parameter 80 signedint £temporary4536 -> £temporary4534
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1658,12 +1658,12 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$206:
-	; Address £temporary4473 key
+	; Address £temporary4541 key
 	mov rsi, rbp
 	add rsi, 44
 
  stdlib_test$207:
-	; Parameter 72 pointer £temporary4473
+	; Parameter 72 pointer £temporary4541
 	mov [rbp + 72], rsi
 
  stdlib_test$208:
@@ -1695,13 +1695,13 @@ section .text
 	; PostCall 48
 
  stdlib_test$214:
-	; GetReturnValue £temporary4475
+	; GetReturnValue £temporary4543
 
  stdlib_test$215:
-	; IntegralToIntegral £temporary4476 £temporary4475
+	; IntegralToIntegral £temporary4544 £temporary4543
 
  stdlib_test$216:
-	; Assign p £temporary4476
+	; Assign p £temporary4544
 	mov [rbp + 48], rbx
 
  stdlib_test$217:
@@ -1710,30 +1710,30 @@ section .text
 	je stdlib_test$222
 
  stdlib_test$218:
-	; BinarySubtract £temporary4479 p list
+	; BinarySubtract £temporary4547 p list
 	mov rax, [rbp + 48]
 	mov rbx, rbp
 	add rbx, 24
 	sub rax, rbx
 
  stdlib_test$219:
-	; UnsignedDivide £temporary4478 £temporary4479 4
+	; UnsignedDivide £temporary4546 £temporary4547 4
 	xor rdx, rdx
 	div qword [int8$4#]
 
  stdlib_test$220:
-	; IntegralToIntegral £temporary4481 £temporary4478
+	; IntegralToIntegral £temporary4549 £temporary4546
 
  stdlib_test$221:
 	; Goto 223
 	jmp stdlib_test$223
 
  stdlib_test$222:
-	; Assign £temporary4481 -1
+	; Assign £temporary4549 -1
 	mov eax, -1
 
  stdlib_test$223:
-	; Assign index £temporary4481
+	; Assign index £temporary4549
 	mov [rbp + 56], eax
 
  stdlib_test$224:

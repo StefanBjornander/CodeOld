@@ -50,11 +50,11 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  raise$3:
-	; Parameter pointer "Raise default\n" 60
+	; Parameter 60 pointer "Raise default\n"
 	mov qword [rbp + 60], string_Raise20default0A#
 
  raise$4:
-	; Call printf 36 0
+	; Call 36 printf 0
 	mov qword [rbp + 36], raise$5
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -81,11 +81,11 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  raise$9:
-	; Parameter pointer "Raise error\n" 60
+	; Parameter 60 pointer "Raise error\n"
 	mov qword [rbp + 60], string_Raise20error0A#
 
  raise$10:
-	; Call printf 36 0
+	; Call 36 printf 0
 	mov qword [rbp + 36], raise$11
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -107,21 +107,21 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  raise$14:
-	; Parameter pointer "Raise function, calling %i with %i\n" 60
+	; Parameter 60 pointer "Raise function, calling %i with %i\n"
 	mov qword [rbp + 60], string_Raise20function2C20calling2025i20with2025i0A#
 
  raise$15:
-	; Parameter pointer func 68
+	; Parameter 68 pointer func
 	mov rax, [rbp + 28]
 	mov [rbp + 68], rax
 
  raise$16:
-	; Parameter signedint sig 76
+	; Parameter 76 signedint sig
 	mov eax, [rbp + 24]
 	mov [rbp + 76], eax
 
  raise$17:
-	; Call printf 36 12
+	; Call 36 printf 12
 	mov qword [rbp + 36], raise$18
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -136,12 +136,12 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  raise$20:
-	; Parameter signedint sig 60
+	; Parameter 60 signedint sig
 	mov eax, [rbp + 24]
 	mov [rbp + 60], eax
 
  raise$21:
-	; Call func 36 0
+	; Call 36 func 0
 	mov qword [rbp + 36], raise$22
 	mov [rbp + 44], rbp
 	mov rax, [rbp + 28]

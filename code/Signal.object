@@ -1,23 +1,23 @@
 1:	
 
-signal:	; call header integral zero 0 stack zero 0
+signal:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
-signal$1:	; parameter string_Signal2025i20function2025p0A#, offset 6
+signal$1:	; Parameter 10 string_Signal2025i20function2025p0A# 6
 4:		mov word [bp + 16], string_Signal2025i20function2025p0A#
 6:	
 
-signal$2:	; parameter sig, offset 8
+signal$2:	; Parameter 10 sig 8
 7:		mov ax, [bp + 6]
 8:		mov [bp + 18], ax
 10:	
 
-signal$3:	; parameter func, offset 10
+signal$3:	; Parameter 10 func 10
 11:		mov ax, [bp + 8]
 12:		mov [bp + 20], ax
 14:	
 
-signal$4:	; call function noellipse-ellipse printf, extra 0
+signal$4:	; Call 10 printf 0
 15:		mov word [bp + 10], signal$5
 16:		mov [bp + 12], bp
 17:		add bp, 10
@@ -26,10 +26,10 @@ signal$4:	; call function noellipse-ellipse printf, extra 0
 20:		jmp printf
 22:	
 
-signal$5:	; post call
+signal$5:	; PostCall 10
 24:	
 
-signal$6:	; £temporary850 = int_to_int sig (Signed_Int -> Signed_Short_Int)
+signal$6:	; IntegralToIntegral £temporary850 sig
 25:		mov ax, [bp + 6]
 28:		cmp ax, 0
 29:		jge signal$7
@@ -37,29 +37,29 @@ signal$6:	; £temporary850 = int_to_int sig (Signed_Int -> Signed_Short_Int)
 32:		neg al
 34:	
 
-signal$7:	; al = £temporary850
+signal$7:	; AssignRegister al £temporary850
 36:	
 
-signal$8:	; ah = 37
+signal$8:	; AssignRegister ah 37
 37:		mov ah, 37
 39:	
 
-signal$9:	; dx = func
+signal$9:	; AssignRegister dx func
 40:		mov dx, [bp + 8]
 42:	
 
-signal$10:	; interrupt 33
+signal$10:	; Interrupt 33
 43:		int 33
 45:	
 
-signal$11:	; call header integral zero 0 stack zero 0
+signal$11:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 47:	
 
-signal$12:	; parameter string_Signal20done0A#, offset 6
+signal$12:	; Parameter 10 string_Signal20done0A# 6
 48:		mov word [bp + 16], string_Signal20done0A#
 50:	
 
-signal$13:	; call function noellipse-ellipse printf, extra 0
+signal$13:	; Call 10 printf 0
 51:		mov word [bp + 10], signal$14
 52:		mov [bp + 12], bp
 53:		add bp, 10
@@ -67,32 +67,32 @@ signal$13:	; call function noellipse-ellipse printf, extra 0
 55:		jmp printf
 57:	
 
-signal$14:	; post call
+signal$14:	; PostCall 10
 59:	
 
-signal$15:	; return
+signal$15:	; Return 0
 60:		mov ax, [bp]
 61:		mov di, [bp + 4]
 62:		mov bp, [bp + 2]
 63:		jmp ax
 65:	
 
-signal$16:	; function end signal
+signal$16:	; FunctionEnd signal
 1:	
 
-raise:	; call header integral zero 0 stack zero 0
+raise:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
-raise$1:	; parameter string_0ARaise20signal2025i0A#, offset 6
+raise$1:	; Parameter 8 string_0ARaise20signal2025i0A# 6
 4:		mov word [bp + 14], string_0ARaise20signal2025i0A#
 6:	
 
-raise$2:	; parameter sig, offset 8
+raise$2:	; Parameter 8 sig 8
 7:		mov ax, [bp + 6]
 8:		mov [bp + 16], ax
 10:	
 
-raise$3:	; call function noellipse-ellipse printf, extra 0
+raise$3:	; Call 8 printf 0
 11:		mov word [bp + 8], raise$4
 12:		mov [bp + 10], bp
 13:		add bp, 8
@@ -101,10 +101,10 @@ raise$3:	; call function noellipse-ellipse printf, extra 0
 16:		jmp printf
 18:	
 
-raise$4:	; post call
+raise$4:	; PostCall 8
 20:	
 
-raise$5:	; £temporary860 = int_to_int sig (Signed_Int -> Signed_Short_Int)
+raise$5:	; IntegralToIntegral £temporary860 sig
 21:		mov ax, [bp + 6]
 24:		cmp ax, 0
 25:		jge raise$6
@@ -112,37 +112,37 @@ raise$5:	; £temporary860 = int_to_int sig (Signed_Int -> Signed_Short_Int)
 28:		neg al
 30:	
 
-raise$6:	; al = £temporary860
+raise$6:	; AssignRegister al £temporary860
 32:	
 
-raise$7:	; ah = 53
+raise$7:	; AssignRegister ah 53
 33:		mov ah, 53
 35:	
 
-raise$8:	; interrupt 33
+raise$8:	; Interrupt 33
 36:		int 33
 38:	
 
-raise$9:	; £temporary862 = bx
+raise$9:	; InspectRegister £temporary862 bx
 40:	
 
-raise$10:	; func = £temporary862
+raise$10:	; Assign func £temporary862
 41:		mov [bp + 8], bx
 43:	
 
-raise$11:	; call header integral zero 0 stack zero 0
+raise$11:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 45:	
 
-raise$12:	; parameter string_Raise20function2025p0A#, offset 6
+raise$12:	; Parameter 10 string_Raise20function2025p0A# 6
 46:		mov word [bp + 16], string_Raise20function2025p0A#
 48:	
 
-raise$13:	; parameter func, offset 8
+raise$13:	; Parameter 10 func 8
 49:		mov ax, [bp + 8]
 50:		mov [bp + 18], ax
 52:	
 
-raise$14:	; call function noellipse-ellipse printf, extra 0
+raise$14:	; Call 10 printf 0
 53:		mov word [bp + 10], raise$15
 54:		mov [bp + 12], bp
 55:		add bp, 10
@@ -151,22 +151,22 @@ raise$14:	; call function noellipse-ellipse printf, extra 0
 58:		jmp printf
 60:	
 
-raise$15:	; post call
+raise$15:	; PostCall 10
 62:	
 
-raise$16:	; if func != 0 goto 23
+raise$16:	; NotEqual 23 func 0
 63:		cmp word [bp + 8], 0
 64:		jne raise$23
 66:	
 
-raise$17:	; call header integral zero 0 stack zero 0
+raise$17:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 68:	
 
-raise$18:	; parameter string_Raise20default0A#, offset 6
+raise$18:	; Parameter 10 string_Raise20default0A# 6
 69:		mov word [bp + 16], string_Raise20default0A#
 71:	
 
-raise$19:	; call function noellipse-ellipse printf, extra 0
+raise$19:	; Call 10 printf 0
 72:		mov word [bp + 10], raise$20
 73:		mov [bp + 12], bp
 74:		add bp, 10
@@ -174,33 +174,33 @@ raise$19:	; call function noellipse-ellipse printf, extra 0
 76:		jmp printf
 78:	
 
-raise$20:	; post call
+raise$20:	; PostCall 10
 80:	
 
-raise$21:	; return_value = 1
+raise$21:	; SetReturnValue 1
 81:		mov bx, 1
 83:	
 
-raise$22:	; return
+raise$22:	; Return 1
 84:		mov ax, [bp]
 85:		mov di, [bp + 4]
 86:		mov bp, [bp + 2]
 87:		jmp ax
 89:	
 
-raise$23:	; if func != 0 goto 30
+raise$23:	; NotEqual 30 func 0
 90:		cmp word [bp + 8], 0
 91:		jne raise$30
 93:	
 
-raise$24:	; call header integral zero 0 stack zero 0
+raise$24:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 95:	
 
-raise$25:	; parameter string_Raise20error0A#, offset 6
+raise$25:	; Parameter 10 string_Raise20error0A# 6
 96:		mov word [bp + 16], string_Raise20error0A#
 98:	
 
-raise$26:	; call function noellipse-ellipse printf, extra 0
+raise$26:	; Call 10 printf 0
 99:		mov word [bp + 10], raise$27
 100:		mov [bp + 12], bp
 101:		add bp, 10
@@ -208,38 +208,38 @@ raise$26:	; call function noellipse-ellipse printf, extra 0
 103:		jmp printf
 105:	
 
-raise$27:	; post call
+raise$27:	; PostCall 10
 107:	
 
-raise$28:	; return_value = 0
+raise$28:	; SetReturnValue 0
 108:		mov bx, 0
 110:	
 
-raise$29:	; return
+raise$29:	; Return 0
 111:		mov ax, [bp]
 112:		mov di, [bp + 4]
 113:		mov bp, [bp + 2]
 114:		jmp ax
 116:	
 
-raise$30:	; call header integral zero 0 stack zero 0
+raise$30:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 118:	
 
-raise$31:	; parameter string_Raise20function2C20calling2025i20with2025i0A#, offset 6
+raise$31:	; Parameter 10 string_Raise20function2C20calling2025i20with2025i0A# 6
 119:		mov word [bp + 16], string_Raise20function2C20calling2025i20with2025i0A#
 121:	
 
-raise$32:	; parameter func, offset 8
+raise$32:	; Parameter 10 func 8
 122:		mov ax, [bp + 8]
 123:		mov [bp + 18], ax
 125:	
 
-raise$33:	; parameter sig, offset 10
+raise$33:	; Parameter 10 sig 10
 126:		mov ax, [bp + 6]
 127:		mov [bp + 20], ax
 129:	
 
-raise$34:	; call function noellipse-ellipse printf, extra 0
+raise$34:	; Call 10 printf 0
 130:		mov word [bp + 10], raise$35
 131:		mov [bp + 12], bp
 132:		add bp, 10
@@ -248,18 +248,18 @@ raise$34:	; call function noellipse-ellipse printf, extra 0
 135:		jmp printf
 137:	
 
-raise$35:	; post call
+raise$35:	; PostCall 10
 139:	
 
-raise$36:	; call header integral zero 0 stack zero 0
+raise$36:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 141:	
 
-raise$37:	; parameter sig, offset 6
+raise$37:	; Parameter 10 sig 6
 142:		mov ax, [bp + 6]
 143:		mov [bp + 16], ax
 145:	
 
-raise$38:	; call function noellipse-noellipse func
+raise$38:	; Call 10 func 0
 146:		mov word [bp + 10], raise$39
 147:		mov [bp + 12], bp
 148:		mov ax, [bp + 8]
@@ -267,18 +267,18 @@ raise$38:	; call function noellipse-noellipse func
 150:		jmp ax
 152:	
 
-raise$39:	; post call
+raise$39:	; PostCall 10
 154:	
 
-raise$40:	; return_value = 1
+raise$40:	; SetReturnValue 1
 155:		mov bx, 1
 157:	
 
-raise$41:	; return
+raise$41:	; Return 1
 158:		mov ax, [bp]
 159:		mov di, [bp + 4]
 160:		mov bp, [bp + 2]
 161:		jmp ax
 163:	
 
-raise$42:	; function end raise
+raise$42:	; FunctionEnd raise

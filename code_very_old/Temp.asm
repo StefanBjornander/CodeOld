@@ -42,7 +42,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  @2590$existsTempName$3:
-	; Parameter pointer name 60
+	; Parameter 60 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 60], rax
 
@@ -66,11 +66,11 @@ section .text
 	; Dereference £temporary915 -> £temporary918 £temporary918 0
 
  @2590$existsTempName$8:
-	; Parameter pointer £temporary915 -> £temporary918 68
+	; Parameter 68 pointer £temporary915 -> £temporary918
 	mov [rbp + 68], rsi
 
  @2590$existsTempName$9:
-	; Call strcmp 36 0
+	; Call 36 strcmp 0
 	mov qword [rbp + 36], @2590$existsTempName$10
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -175,12 +175,12 @@ section .text
 	; PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  @2597$generateTempName$13:
-	; Parameter pointer name 65
+	; Parameter 65 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 65], rax
 
  @2597$generateTempName$14:
-	; Call fileexists 41 0
+	; Call 41 fileexists 0
 	mov qword [rbp + 41], @2597$generateTempName$15
 	mov [rbp + 49], rbp
 	add rbp, 41
@@ -227,12 +227,12 @@ section .text
 	; PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  @2597$generateTempName$24:
-	; Parameter pointer name 65
+	; Parameter 65 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 65], rax
 
  @2597$generateTempName$25:
-	; Call existsTempName 41 0
+	; Call 41 existsTempName 0
 	mov qword [rbp + 41], @2597$generateTempName$26
 	mov [rbp + 49], rbp
 	add rbp, 41
@@ -272,16 +272,16 @@ section .text
 	; Dereference £temporary939 -> £temporary942 £temporary942 0
 
  @2597$generateTempName$34:
-	; Parameter pointer £temporary939 -> £temporary942 65
+	; Parameter 65 pointer £temporary939 -> £temporary942
 	mov [rbp + 65], rsi
 
  @2597$generateTempName$35:
-	; Parameter pointer name 73
+	; Parameter 73 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 73], rax
 
  @2597$generateTempName$36:
-	; Call strcpy 41 0
+	; Call 41 strcpy 0
 	mov qword [rbp + 41], @2597$generateTempName$37
 	mov [rbp + 49], rbp
 	add rbp, 41
@@ -328,7 +328,7 @@ section .text
 	; PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  @2597$generateTempName$46:
-	; Parameter pointer name 65
+	; Parameter 65 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 65], rax
 
@@ -338,16 +338,16 @@ section .text
 	inc eax
 
  @2597$generateTempName$48:
-	; Parameter signedint £temporary949 73
+	; Parameter 73 signedint £temporary949
 	mov [rbp + 73], eax
 
  @2597$generateTempName$49:
-	; Parameter signedint status 77
+	; Parameter 77 signedint status
 	mov eax, [rbp + 36]
 	mov [rbp + 77], eax
 
  @2597$generateTempName$50:
-	; Call generateTempName 41 0
+	; Call 41 generateTempName 0
 	mov qword [rbp + 41], @2597$generateTempName$51
 	mov [rbp + 49], rbp
 	add rbp, 41
@@ -407,20 +407,20 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  tmpfile$1:
-	; Parameter pointer name 60
+	; Parameter 60 pointer name
 	mov [rbp + 60], rbp
 	add qword [rbp + 60], 32
 
  tmpfile$2:
-	; Parameter signedint 0 68
+	; Parameter 68 signedint 0
 	mov dword [rbp + 68], 0
 
  tmpfile$3:
-	; Parameter signedint 0 72
+	; Parameter 72 signedint 0
 	mov dword [rbp + 72], 0
 
  tmpfile$4:
-	; Call generateTempName 36 0
+	; Call 36 generateTempName 0
 	mov qword [rbp + 36], tmpfile$5
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -441,16 +441,16 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  tmpfile$9:
-	; Parameter pointer name 60
+	; Parameter 60 pointer name
 	mov [rbp + 60], rbp
 	add qword [rbp + 60], 32
 
  tmpfile$10:
-	; Parameter pointer "w" 68
+	; Parameter 68 pointer "w"
 	mov qword [rbp + 68], string_w#
 
  tmpfile$11:
-	; Call fopen 36 0
+	; Call 36 fopen 0
 	mov qword [rbp + 36], tmpfile$12
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -509,20 +509,20 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  tmpnam$2:
-	; Parameter pointer name 56
+	; Parameter 56 pointer name
 	mov rax, [rbp + 24]
 	mov [rbp + 56], rax
 
  tmpnam$3:
-	; Parameter signedint 0 64
+	; Parameter 64 signedint 0
 	mov dword [rbp + 64], 0
 
  tmpnam$4:
-	; Parameter signedint 1 68
+	; Parameter 68 signedint 1
 	mov dword [rbp + 68], 1
 
  tmpnam$5:
-	; Call generateTempName 32 0
+	; Call 32 generateTempName 0
 	mov qword [rbp + 32], tmpnam$6
 	mov [rbp + 40], rbp
 	add rbp, 32

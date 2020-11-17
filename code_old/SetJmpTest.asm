@@ -68,12 +68,12 @@ section .text
 	mov qword [rbp + 64], string_25lf#
 
  @6945$main$6:
-	; Address £temporary3649 x
+	; Address £temporary3717 x
 	mov rsi, rbp
 	add rsi, 32
 
  @6945$main$7:
-	; Parameter 72 pointer £temporary3649
+	; Parameter 72 pointer £temporary3717
 	mov [rbp + 72], rsi
 
  @6945$main$8:
@@ -106,15 +106,15 @@ section .text
 	; PostCall 40
 
  @6945$main$14:
-	; GetReturnValue £temporary3651
+	; GetReturnValue £temporary3719
 
  @6945$main$15:
-	; IntegralToIntegral £temporary3652 £temporary3651
+	; IntegralToIntegral £temporary3720 £temporary3719
 	mov rax, 4294967295
 	and rbx, rax
 
  @6945$main$16:
-	; Assign message £temporary3652
+	; Assign message £temporary3720
 	mov [rbp + 24], rbx
 
  @6945$main$17:
@@ -159,10 +159,10 @@ section .text
 	; PostCall 80
 
  @6945$main$27:
-	; GetReturnValue £temporary3654
+	; GetReturnValue £temporary3722
 
  @6945$main$28:
-	; Parameter 80 double £temporary3654
+	; Parameter 80 double £temporary3722
 	fstp qword [rbp + 80]
 
  @6945$main$29:
@@ -247,10 +247,10 @@ section .text
 	; PostCall 32
 
  inverse$7:
-	; GetReturnValue £temporary3661
+	; GetReturnValue £temporary3729
 
  inverse$8:
-	; Return £temporary3661
+	; Return £temporary3729
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -291,11 +291,11 @@ section .text
 	fld qword [rbp + 32]
 
  divide$5:
-	; SignedDivide £temporary3665 x y
+	; SignedDivide £temporary3733 x y
 	fdiv
 
  divide$6:
-	; Return £temporary3665
+	; Return £temporary3733
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -309,11 +309,11 @@ section .text
 	mov qword [rbp + 64], buffer
 
  divide$9:
-	; IntegralToIntegral £temporary3666 "Division by Zero."
+	; IntegralToIntegral £temporary3734 "Division by Zero."
 	mov eax, string_Division20by20Zero2E#
 
  divide$10:
-	; Parameter 72 signedint £temporary3666
+	; Parameter 72 signedint £temporary3734
 	mov [rbp + 72], eax
 
  divide$11:

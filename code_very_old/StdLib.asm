@@ -38,20 +38,20 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  atoi$1:
-	; Parameter pointer s 56
+	; Parameter 56 pointer s
 	mov rax, [rbp + 24]
 	mov [rbp + 56], rax
 
  atoi$2:
-	; Parameter pointer 0 64
+	; Parameter 64 pointer 0
 	mov qword [rbp + 64], 0
 
  atoi$3:
-	; Parameter signedint 10 72
+	; Parameter 72 signedint 10
 	mov dword [rbp + 72], 10
 
  atoi$4:
-	; Call strtol 32 0
+	; Call 32 strtol 0
 	mov qword [rbp + 32], atoi$5
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -86,20 +86,20 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  atol$1:
-	; Parameter pointer s 56
+	; Parameter 56 pointer s
 	mov rax, [rbp + 24]
 	mov [rbp + 56], rax
 
  atol$2:
-	; Parameter pointer 0 64
+	; Parameter 64 pointer 0
 	mov qword [rbp + 64], 0
 
  atol$3:
-	; Parameter signedint 10 72
+	; Parameter 72 signedint 10
 	mov dword [rbp + 72], 10
 
  atol$4:
-	; Call strtol 32 0
+	; Call 32 strtol 0
 	mov qword [rbp + 32], atol$5
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -140,12 +140,12 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol$4:
-	; Parameter signedint base 68
+	; Parameter 68 signedint base
 	mov eax, [rbp + 40]
 	mov [rbp + 68], eax
 
  strtol$5:
-	; Call scanLongInt 44 0
+	; Call 44 scanLongInt 0
 	mov qword [rbp + 44], strtol$6
 	mov [rbp + 52], rbp
 	add rbp, 44
@@ -313,7 +313,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$13:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -323,16 +323,16 @@ section .text
 	add rsi, 39
 
  strtol_test$15:
-	; Parameter pointer £temporary1999 79
+	; Parameter 79 pointer £temporary1999
 	mov [rbp + 79], rsi
 
  strtol_test$16:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtol_test$17:
-	; Call strtol 47 0
+	; Call 47 strtol 0
 	mov qword [rbp + 47], strtol_test$18
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -352,31 +352,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$22:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$23:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtol_test$24:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtol_test$25:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtol_test$26:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtol_test$27:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtol_test$28
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -443,7 +443,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$43:
-	; Parameter pointer text 72
+	; Parameter 72 pointer text
 	mov [rbp + 72], rbp
 	add qword [rbp + 72], 28
 
@@ -453,16 +453,16 @@ section .text
 	add rsi, 40
 
  strtol_test$45:
-	; Parameter pointer £temporary2014 80
+	; Parameter 80 pointer £temporary2014
 	mov [rbp + 80], rsi
 
  strtol_test$46:
-	; Parameter signedint base 88
+	; Parameter 88 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 88], eax
 
  strtol_test$47:
-	; Call strtol 48 0
+	; Call 48 strtol 0
 	mov qword [rbp + 48], strtol_test$48
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -482,31 +482,31 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$52:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 80
+	; Parameter 80 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 80], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$53:
-	; Parameter pointer text 88
+	; Parameter 88 pointer text
 	mov [rbp + 88], rbp
 	add qword [rbp + 88], 28
 
  strtol_test$54:
-	; Parameter signed long int value 96
+	; Parameter 96 signed long int value
 	mov rax, [rbp + 48]
 	mov [rbp + 96], rax
 
  strtol_test$55:
-	; Parameter pointer pointer 104
+	; Parameter 104 pointer pointer
 	mov rax, [rbp + 40]
 	mov [rbp + 104], rax
 
  strtol_test$56:
-	; Parameter signedint base 112
+	; Parameter 112 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 112], eax
 
  strtol_test$57:
-	; Call printf 56 28
+	; Call 56 printf 28
 	mov qword [rbp + 56], strtol_test$58
 	mov [rbp + 64], rbp
 	add rbp, 56
@@ -577,7 +577,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$74:
-	; Parameter pointer text 73
+	; Parameter 73 pointer text
 	mov [rbp + 73], rbp
 	add qword [rbp + 73], 28
 
@@ -587,16 +587,16 @@ section .text
 	add rsi, 41
 
  strtol_test$76:
-	; Parameter pointer £temporary2030 81
+	; Parameter 81 pointer £temporary2030
 	mov [rbp + 81], rsi
 
  strtol_test$77:
-	; Parameter signedint base 89
+	; Parameter 89 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 89], eax
 
  strtol_test$78:
-	; Call strtol 49 0
+	; Call 49 strtol 0
 	mov qword [rbp + 49], strtol_test$79
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -616,31 +616,31 @@ section .text
 	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$83:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 81
+	; Parameter 81 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 81], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$84:
-	; Parameter pointer text 89
+	; Parameter 89 pointer text
 	mov [rbp + 89], rbp
 	add qword [rbp + 89], 28
 
  strtol_test$85:
-	; Parameter signed long int value 97
+	; Parameter 97 signed long int value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
  strtol_test$86:
-	; Parameter pointer pointer 105
+	; Parameter 105 pointer pointer
 	mov rax, [rbp + 41]
 	mov [rbp + 105], rax
 
  strtol_test$87:
-	; Parameter signedint base 113
+	; Parameter 113 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 113], eax
 
  strtol_test$88:
-	; Call printf 57 28
+	; Call 57 printf 28
 	mov qword [rbp + 57], strtol_test$89
 	mov [rbp + 65], rbp
 	add rbp, 57
@@ -711,7 +711,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$105:
-	; Parameter pointer text 73
+	; Parameter 73 pointer text
 	mov [rbp + 73], rbp
 	add qword [rbp + 73], 28
 
@@ -721,16 +721,16 @@ section .text
 	add rsi, 41
 
  strtol_test$107:
-	; Parameter pointer £temporary2046 81
+	; Parameter 81 pointer £temporary2046
 	mov [rbp + 81], rsi
 
  strtol_test$108:
-	; Parameter signedint base 89
+	; Parameter 89 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 89], eax
 
  strtol_test$109:
-	; Call strtol 49 0
+	; Call 49 strtol 0
 	mov qword [rbp + 49], strtol_test$110
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -750,31 +750,31 @@ section .text
 	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$114:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 81
+	; Parameter 81 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 81], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$115:
-	; Parameter pointer text 89
+	; Parameter 89 pointer text
 	mov [rbp + 89], rbp
 	add qword [rbp + 89], 28
 
  strtol_test$116:
-	; Parameter signed long int value 97
+	; Parameter 97 signed long int value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
  strtol_test$117:
-	; Parameter pointer pointer 105
+	; Parameter 105 pointer pointer
 	mov rax, [rbp + 41]
 	mov [rbp + 105], rax
 
  strtol_test$118:
-	; Parameter signedint base 113
+	; Parameter 113 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 113], eax
 
  strtol_test$119:
-	; Call printf 57 28
+	; Call 57 printf 28
 	mov qword [rbp + 57], strtol_test$120
 	mov [rbp + 65], rbp
 	add rbp, 57
@@ -837,7 +837,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$134:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -847,16 +847,16 @@ section .text
 	add rsi, 39
 
  strtol_test$136:
-	; Parameter pointer £temporary2060 79
+	; Parameter 79 pointer £temporary2060
 	mov [rbp + 79], rsi
 
  strtol_test$137:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtol_test$138:
-	; Call strtol 47 0
+	; Call 47 strtol 0
 	mov qword [rbp + 47], strtol_test$139
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -876,31 +876,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$143:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$144:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtol_test$145:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtol_test$146:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtol_test$147:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtol_test$148:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtol_test$149
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -967,7 +967,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$164:
-	; Parameter pointer text 72
+	; Parameter 72 pointer text
 	mov [rbp + 72], rbp
 	add qword [rbp + 72], 28
 
@@ -977,16 +977,16 @@ section .text
 	add rsi, 40
 
  strtol_test$166:
-	; Parameter pointer £temporary2075 80
+	; Parameter 80 pointer £temporary2075
 	mov [rbp + 80], rsi
 
  strtol_test$167:
-	; Parameter signedint base 88
+	; Parameter 88 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 88], eax
 
  strtol_test$168:
-	; Call strtol 48 0
+	; Call 48 strtol 0
 	mov qword [rbp + 48], strtol_test$169
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -1006,31 +1006,31 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$173:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 80
+	; Parameter 80 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 80], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$174:
-	; Parameter pointer text 88
+	; Parameter 88 pointer text
 	mov [rbp + 88], rbp
 	add qword [rbp + 88], 28
 
  strtol_test$175:
-	; Parameter signed long int value 96
+	; Parameter 96 signed long int value
 	mov rax, [rbp + 48]
 	mov [rbp + 96], rax
 
  strtol_test$176:
-	; Parameter pointer pointer 104
+	; Parameter 104 pointer pointer
 	mov rax, [rbp + 40]
 	mov [rbp + 104], rax
 
  strtol_test$177:
-	; Parameter signedint base 112
+	; Parameter 112 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 112], eax
 
  strtol_test$178:
-	; Call printf 56 28
+	; Call 56 printf 28
 	mov qword [rbp + 56], strtol_test$179
 	mov [rbp + 64], rbp
 	add rbp, 56
@@ -1101,7 +1101,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$195:
-	; Parameter pointer text 73
+	; Parameter 73 pointer text
 	mov [rbp + 73], rbp
 	add qword [rbp + 73], 28
 
@@ -1111,16 +1111,16 @@ section .text
 	add rsi, 41
 
  strtol_test$197:
-	; Parameter pointer £temporary2091 81
+	; Parameter 81 pointer £temporary2091
 	mov [rbp + 81], rsi
 
  strtol_test$198:
-	; Parameter signedint base 89
+	; Parameter 89 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 89], eax
 
  strtol_test$199:
-	; Call strtol 49 0
+	; Call 49 strtol 0
 	mov qword [rbp + 49], strtol_test$200
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -1140,31 +1140,31 @@ section .text
 	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$204:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 81
+	; Parameter 81 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 81], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$205:
-	; Parameter pointer text 89
+	; Parameter 89 pointer text
 	mov [rbp + 89], rbp
 	add qword [rbp + 89], 28
 
  strtol_test$206:
-	; Parameter signed long int value 97
+	; Parameter 97 signed long int value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
  strtol_test$207:
-	; Parameter pointer pointer 105
+	; Parameter 105 pointer pointer
 	mov rax, [rbp + 41]
 	mov [rbp + 105], rax
 
  strtol_test$208:
-	; Parameter signedint base 113
+	; Parameter 113 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 113], eax
 
  strtol_test$209:
-	; Call printf 57 28
+	; Call 57 printf 28
 	mov qword [rbp + 57], strtol_test$210
 	mov [rbp + 65], rbp
 	add rbp, 57
@@ -1235,7 +1235,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$226:
-	; Parameter pointer text 73
+	; Parameter 73 pointer text
 	mov [rbp + 73], rbp
 	add qword [rbp + 73], 28
 
@@ -1245,16 +1245,16 @@ section .text
 	add rsi, 41
 
  strtol_test$228:
-	; Parameter pointer £temporary2107 81
+	; Parameter 81 pointer £temporary2107
 	mov [rbp + 81], rsi
 
  strtol_test$229:
-	; Parameter signedint base 89
+	; Parameter 89 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 89], eax
 
  strtol_test$230:
-	; Call strtol 49 0
+	; Call 49 strtol 0
 	mov qword [rbp + 49], strtol_test$231
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -1274,31 +1274,31 @@ section .text
 	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$235:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 81
+	; Parameter 81 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 81], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$236:
-	; Parameter pointer text 89
+	; Parameter 89 pointer text
 	mov [rbp + 89], rbp
 	add qword [rbp + 89], 28
 
  strtol_test$237:
-	; Parameter signed long int value 97
+	; Parameter 97 signed long int value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
  strtol_test$238:
-	; Parameter pointer pointer 105
+	; Parameter 105 pointer pointer
 	mov rax, [rbp + 41]
 	mov [rbp + 105], rax
 
  strtol_test$239:
-	; Parameter signedint base 113
+	; Parameter 113 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 113], eax
 
  strtol_test$240:
-	; Call printf 57 28
+	; Call 57 printf 28
 	mov qword [rbp + 57], strtol_test$241
 	mov [rbp + 65], rbp
 	add rbp, 57
@@ -1361,7 +1361,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$255:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -1371,16 +1371,16 @@ section .text
 	add rsi, 39
 
  strtol_test$257:
-	; Parameter pointer £temporary2121 79
+	; Parameter 79 pointer £temporary2121
 	mov [rbp + 79], rsi
 
  strtol_test$258:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtol_test$259:
-	; Call strtol 47 0
+	; Call 47 strtol 0
 	mov qword [rbp + 47], strtol_test$260
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -1400,31 +1400,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$264:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$265:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtol_test$266:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtol_test$267:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtol_test$268:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtol_test$269:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtol_test$270
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -1487,7 +1487,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$284:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -1497,16 +1497,16 @@ section .text
 	add rsi, 39
 
  strtol_test$286:
-	; Parameter pointer £temporary2135 79
+	; Parameter 79 pointer £temporary2135
 	mov [rbp + 79], rsi
 
  strtol_test$287:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtol_test$288:
-	; Call strtol 47 0
+	; Call 47 strtol 0
 	mov qword [rbp + 47], strtol_test$289
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -1526,31 +1526,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$293:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$294:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtol_test$295:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtol_test$296:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtol_test$297:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtol_test$298:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtol_test$299
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -1613,7 +1613,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$313:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -1623,16 +1623,16 @@ section .text
 	add rsi, 39
 
  strtol_test$315:
-	; Parameter pointer £temporary2149 79
+	; Parameter 79 pointer £temporary2149
 	mov [rbp + 79], rsi
 
  strtol_test$316:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtol_test$317:
-	; Call strtol 47 0
+	; Call 47 strtol 0
 	mov qword [rbp + 47], strtol_test$318
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -1652,31 +1652,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$322:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$323:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtol_test$324:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtol_test$325:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtol_test$326:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtol_test$327:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtol_test$328
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -1739,7 +1739,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$342:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -1749,16 +1749,16 @@ section .text
 	add rsi, 39
 
  strtol_test$344:
-	; Parameter pointer £temporary2163 79
+	; Parameter 79 pointer £temporary2163
 	mov [rbp + 79], rsi
 
  strtol_test$345:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtol_test$346:
-	; Call strtol 47 0
+	; Call 47 strtol 0
 	mov qword [rbp + 47], strtol_test$347
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -1778,31 +1778,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$351:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$352:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtol_test$353:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtol_test$354:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtol_test$355:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtol_test$356:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtol_test$357
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -1865,7 +1865,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$371:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -1875,16 +1875,16 @@ section .text
 	add rsi, 39
 
  strtol_test$373:
-	; Parameter pointer £temporary2177 79
+	; Parameter 79 pointer £temporary2177
 	mov [rbp + 79], rsi
 
  strtol_test$374:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtol_test$375:
-	; Call strtol 47 0
+	; Call 47 strtol 0
 	mov qword [rbp + 47], strtol_test$376
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -1904,31 +1904,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$380:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$381:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtol_test$382:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtol_test$383:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtol_test$384:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtol_test$385:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtol_test$386
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -1991,7 +1991,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$400:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -2001,16 +2001,16 @@ section .text
 	add rsi, 39
 
  strtol_test$402:
-	; Parameter pointer £temporary2191 79
+	; Parameter 79 pointer £temporary2191
 	mov [rbp + 79], rsi
 
  strtol_test$403:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtol_test$404:
-	; Call strtol 47 0
+	; Call 47 strtol 0
 	mov qword [rbp + 47], strtol_test$405
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -2030,31 +2030,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$409:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$410:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtol_test$411:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtol_test$412:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtol_test$413:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtol_test$414:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtol_test$415
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -2117,7 +2117,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$429:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -2127,16 +2127,16 @@ section .text
 	add rsi, 39
 
  strtol_test$431:
-	; Parameter pointer £temporary2205 79
+	; Parameter 79 pointer £temporary2205
 	mov [rbp + 79], rsi
 
  strtol_test$432:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtol_test$433:
-	; Call strtol 47 0
+	; Call 47 strtol 0
 	mov qword [rbp + 47], strtol_test$434
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -2156,31 +2156,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$438:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$439:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtol_test$440:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtol_test$441:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtol_test$442:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtol_test$443:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtol_test$444
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -2243,7 +2243,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$458:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -2253,16 +2253,16 @@ section .text
 	add rsi, 39
 
  strtol_test$460:
-	; Parameter pointer £temporary2219 79
+	; Parameter 79 pointer £temporary2219
 	mov [rbp + 79], rsi
 
  strtol_test$461:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtol_test$462:
-	; Call strtol 47 0
+	; Call 47 strtol 0
 	mov qword [rbp + 47], strtol_test$463
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -2282,31 +2282,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$467:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$468:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtol_test$469:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtol_test$470:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtol_test$471:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtol_test$472:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtol_test$473
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -2369,7 +2369,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$487:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -2379,16 +2379,16 @@ section .text
 	add rsi, 39
 
  strtol_test$489:
-	; Parameter pointer £temporary2233 79
+	; Parameter 79 pointer £temporary2233
 	mov [rbp + 79], rsi
 
  strtol_test$490:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtol_test$491:
-	; Call strtol 47 0
+	; Call 47 strtol 0
 	mov qword [rbp + 47], strtol_test$492
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -2408,31 +2408,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$496:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$497:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtol_test$498:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtol_test$499:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtol_test$500:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtol_test$501:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtol_test$502
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -2495,7 +2495,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$516:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -2505,16 +2505,16 @@ section .text
 	add rsi, 39
 
  strtol_test$518:
-	; Parameter pointer £temporary2247 79
+	; Parameter 79 pointer £temporary2247
 	mov [rbp + 79], rsi
 
  strtol_test$519:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtol_test$520:
-	; Call strtol 47 0
+	; Call 47 strtol 0
 	mov qword [rbp + 47], strtol_test$521
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -2534,31 +2534,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$525:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$526:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtol_test$527:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtol_test$528:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtol_test$529:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtol_test$530:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtol_test$531
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -2598,12 +2598,12 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul$4:
-	; Parameter signedint base 68
+	; Parameter 68 signedint base
 	mov eax, [rbp + 40]
 	mov [rbp + 68], eax
 
  strtoul$5:
-	; Call scanUnsignedLongInt 44 0
+	; Call 44 scanUnsignedLongInt 0
 	mov qword [rbp + 44], strtoul$6
 	mov [rbp + 52], rbp
 	add rbp, 44
@@ -2705,7 +2705,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$13:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -2715,16 +2715,16 @@ section .text
 	add rsi, 39
 
  strtoul_test$15:
-	; Parameter pointer £temporary2285 79
+	; Parameter 79 pointer £temporary2285
 	mov [rbp + 79], rsi
 
  strtoul_test$16:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtoul_test$17:
-	; Call strtoul 47 0
+	; Call 47 strtoul 0
 	mov qword [rbp + 47], strtoul_test$18
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -2744,31 +2744,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$22:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$23:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtoul_test$24:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtoul_test$25:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtoul_test$26:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtoul_test$27:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtoul_test$28
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -2835,7 +2835,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$43:
-	; Parameter pointer text 72
+	; Parameter 72 pointer text
 	mov [rbp + 72], rbp
 	add qword [rbp + 72], 28
 
@@ -2845,16 +2845,16 @@ section .text
 	add rsi, 40
 
  strtoul_test$45:
-	; Parameter pointer £temporary2300 80
+	; Parameter 80 pointer £temporary2300
 	mov [rbp + 80], rsi
 
  strtoul_test$46:
-	; Parameter signedint base 88
+	; Parameter 88 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 88], eax
 
  strtoul_test$47:
-	; Call strtoul 48 0
+	; Call 48 strtoul 0
 	mov qword [rbp + 48], strtoul_test$48
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -2874,31 +2874,31 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$52:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 80
+	; Parameter 80 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 80], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$53:
-	; Parameter pointer text 88
+	; Parameter 88 pointer text
 	mov [rbp + 88], rbp
 	add qword [rbp + 88], 28
 
  strtoul_test$54:
-	; Parameter signed long int value 96
+	; Parameter 96 signed long int value
 	mov rax, [rbp + 48]
 	mov [rbp + 96], rax
 
  strtoul_test$55:
-	; Parameter pointer pointer 104
+	; Parameter 104 pointer pointer
 	mov rax, [rbp + 40]
 	mov [rbp + 104], rax
 
  strtoul_test$56:
-	; Parameter signedint base 112
+	; Parameter 112 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 112], eax
 
  strtoul_test$57:
-	; Call printf 56 28
+	; Call 56 printf 28
 	mov qword [rbp + 56], strtoul_test$58
 	mov [rbp + 64], rbp
 	add rbp, 56
@@ -2969,7 +2969,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$74:
-	; Parameter pointer text 73
+	; Parameter 73 pointer text
 	mov [rbp + 73], rbp
 	add qword [rbp + 73], 28
 
@@ -2979,16 +2979,16 @@ section .text
 	add rsi, 41
 
  strtoul_test$76:
-	; Parameter pointer £temporary2316 81
+	; Parameter 81 pointer £temporary2316
 	mov [rbp + 81], rsi
 
  strtoul_test$77:
-	; Parameter signedint base 89
+	; Parameter 89 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 89], eax
 
  strtoul_test$78:
-	; Call strtoul 49 0
+	; Call 49 strtoul 0
 	mov qword [rbp + 49], strtoul_test$79
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -3008,31 +3008,31 @@ section .text
 	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$83:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 81
+	; Parameter 81 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 81], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$84:
-	; Parameter pointer text 89
+	; Parameter 89 pointer text
 	mov [rbp + 89], rbp
 	add qword [rbp + 89], 28
 
  strtoul_test$85:
-	; Parameter signed long int value 97
+	; Parameter 97 signed long int value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
  strtoul_test$86:
-	; Parameter pointer pointer 105
+	; Parameter 105 pointer pointer
 	mov rax, [rbp + 41]
 	mov [rbp + 105], rax
 
  strtoul_test$87:
-	; Parameter signedint base 113
+	; Parameter 113 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 113], eax
 
  strtoul_test$88:
-	; Call printf 57 28
+	; Call 57 printf 28
 	mov qword [rbp + 57], strtoul_test$89
 	mov [rbp + 65], rbp
 	add rbp, 57
@@ -3103,7 +3103,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$105:
-	; Parameter pointer text 73
+	; Parameter 73 pointer text
 	mov [rbp + 73], rbp
 	add qword [rbp + 73], 28
 
@@ -3113,16 +3113,16 @@ section .text
 	add rsi, 41
 
  strtoul_test$107:
-	; Parameter pointer £temporary2332 81
+	; Parameter 81 pointer £temporary2332
 	mov [rbp + 81], rsi
 
  strtoul_test$108:
-	; Parameter signedint base 89
+	; Parameter 89 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 89], eax
 
  strtoul_test$109:
-	; Call strtoul 49 0
+	; Call 49 strtoul 0
 	mov qword [rbp + 49], strtoul_test$110
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -3142,31 +3142,31 @@ section .text
 	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$114:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 81
+	; Parameter 81 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 81], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$115:
-	; Parameter pointer text 89
+	; Parameter 89 pointer text
 	mov [rbp + 89], rbp
 	add qword [rbp + 89], 28
 
  strtoul_test$116:
-	; Parameter signed long int value 97
+	; Parameter 97 signed long int value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
  strtoul_test$117:
-	; Parameter pointer pointer 105
+	; Parameter 105 pointer pointer
 	mov rax, [rbp + 41]
 	mov [rbp + 105], rax
 
  strtoul_test$118:
-	; Parameter signedint base 113
+	; Parameter 113 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 113], eax
 
  strtoul_test$119:
-	; Call printf 57 28
+	; Call 57 printf 28
 	mov qword [rbp + 57], strtoul_test$120
 	mov [rbp + 65], rbp
 	add rbp, 57
@@ -3229,7 +3229,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$134:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -3239,16 +3239,16 @@ section .text
 	add rsi, 39
 
  strtoul_test$136:
-	; Parameter pointer £temporary2346 79
+	; Parameter 79 pointer £temporary2346
 	mov [rbp + 79], rsi
 
  strtoul_test$137:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtoul_test$138:
-	; Call strtoul 47 0
+	; Call 47 strtoul 0
 	mov qword [rbp + 47], strtoul_test$139
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -3268,31 +3268,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$143:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$144:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtoul_test$145:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtoul_test$146:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtoul_test$147:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtoul_test$148:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtoul_test$149
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -3359,7 +3359,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$164:
-	; Parameter pointer text 72
+	; Parameter 72 pointer text
 	mov [rbp + 72], rbp
 	add qword [rbp + 72], 28
 
@@ -3369,16 +3369,16 @@ section .text
 	add rsi, 40
 
  strtoul_test$166:
-	; Parameter pointer £temporary2361 80
+	; Parameter 80 pointer £temporary2361
 	mov [rbp + 80], rsi
 
  strtoul_test$167:
-	; Parameter signedint base 88
+	; Parameter 88 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 88], eax
 
  strtoul_test$168:
-	; Call strtoul 48 0
+	; Call 48 strtoul 0
 	mov qword [rbp + 48], strtoul_test$169
 	mov [rbp + 56], rbp
 	add rbp, 48
@@ -3398,31 +3398,31 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$173:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 80
+	; Parameter 80 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 80], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$174:
-	; Parameter pointer text 88
+	; Parameter 88 pointer text
 	mov [rbp + 88], rbp
 	add qword [rbp + 88], 28
 
  strtoul_test$175:
-	; Parameter signed long int value 96
+	; Parameter 96 signed long int value
 	mov rax, [rbp + 48]
 	mov [rbp + 96], rax
 
  strtoul_test$176:
-	; Parameter pointer pointer 104
+	; Parameter 104 pointer pointer
 	mov rax, [rbp + 40]
 	mov [rbp + 104], rax
 
  strtoul_test$177:
-	; Parameter signedint base 112
+	; Parameter 112 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 112], eax
 
  strtoul_test$178:
-	; Call printf 56 28
+	; Call 56 printf 28
 	mov qword [rbp + 56], strtoul_test$179
 	mov [rbp + 64], rbp
 	add rbp, 56
@@ -3493,7 +3493,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$195:
-	; Parameter pointer text 73
+	; Parameter 73 pointer text
 	mov [rbp + 73], rbp
 	add qword [rbp + 73], 28
 
@@ -3503,16 +3503,16 @@ section .text
 	add rsi, 41
 
  strtoul_test$197:
-	; Parameter pointer £temporary2377 81
+	; Parameter 81 pointer £temporary2377
 	mov [rbp + 81], rsi
 
  strtoul_test$198:
-	; Parameter signedint base 89
+	; Parameter 89 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 89], eax
 
  strtoul_test$199:
-	; Call strtoul 49 0
+	; Call 49 strtoul 0
 	mov qword [rbp + 49], strtoul_test$200
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -3532,31 +3532,31 @@ section .text
 	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$204:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 81
+	; Parameter 81 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 81], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$205:
-	; Parameter pointer text 89
+	; Parameter 89 pointer text
 	mov [rbp + 89], rbp
 	add qword [rbp + 89], 28
 
  strtoul_test$206:
-	; Parameter signed long int value 97
+	; Parameter 97 signed long int value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
  strtoul_test$207:
-	; Parameter pointer pointer 105
+	; Parameter 105 pointer pointer
 	mov rax, [rbp + 41]
 	mov [rbp + 105], rax
 
  strtoul_test$208:
-	; Parameter signedint base 113
+	; Parameter 113 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 113], eax
 
  strtoul_test$209:
-	; Call printf 57 28
+	; Call 57 printf 28
 	mov qword [rbp + 57], strtoul_test$210
 	mov [rbp + 65], rbp
 	add rbp, 57
@@ -3627,7 +3627,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$226:
-	; Parameter pointer text 73
+	; Parameter 73 pointer text
 	mov [rbp + 73], rbp
 	add qword [rbp + 73], 28
 
@@ -3637,16 +3637,16 @@ section .text
 	add rsi, 41
 
  strtoul_test$228:
-	; Parameter pointer £temporary2393 81
+	; Parameter 81 pointer £temporary2393
 	mov [rbp + 81], rsi
 
  strtoul_test$229:
-	; Parameter signedint base 89
+	; Parameter 89 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 89], eax
 
  strtoul_test$230:
-	; Call strtoul 49 0
+	; Call 49 strtoul 0
 	mov qword [rbp + 49], strtoul_test$231
 	mov [rbp + 57], rbp
 	add rbp, 49
@@ -3666,31 +3666,31 @@ section .text
 	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$235:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 81
+	; Parameter 81 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 81], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$236:
-	; Parameter pointer text 89
+	; Parameter 89 pointer text
 	mov [rbp + 89], rbp
 	add qword [rbp + 89], 28
 
  strtoul_test$237:
-	; Parameter signed long int value 97
+	; Parameter 97 signed long int value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
  strtoul_test$238:
-	; Parameter pointer pointer 105
+	; Parameter 105 pointer pointer
 	mov rax, [rbp + 41]
 	mov [rbp + 105], rax
 
  strtoul_test$239:
-	; Parameter signedint base 113
+	; Parameter 113 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 113], eax
 
  strtoul_test$240:
-	; Call printf 57 28
+	; Call 57 printf 28
 	mov qword [rbp + 57], strtoul_test$241
 	mov [rbp + 65], rbp
 	add rbp, 57
@@ -3753,7 +3753,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$255:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -3763,16 +3763,16 @@ section .text
 	add rsi, 39
 
  strtoul_test$257:
-	; Parameter pointer £temporary2407 79
+	; Parameter 79 pointer £temporary2407
 	mov [rbp + 79], rsi
 
  strtoul_test$258:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtoul_test$259:
-	; Call strtoul 47 0
+	; Call 47 strtoul 0
 	mov qword [rbp + 47], strtoul_test$260
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -3792,31 +3792,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$264:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$265:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtoul_test$266:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtoul_test$267:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtoul_test$268:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtoul_test$269:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtoul_test$270
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -3879,7 +3879,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$284:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -3889,16 +3889,16 @@ section .text
 	add rsi, 39
 
  strtoul_test$286:
-	; Parameter pointer £temporary2421 79
+	; Parameter 79 pointer £temporary2421
 	mov [rbp + 79], rsi
 
  strtoul_test$287:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtoul_test$288:
-	; Call strtoul 47 0
+	; Call 47 strtoul 0
 	mov qword [rbp + 47], strtoul_test$289
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -3918,31 +3918,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$293:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$294:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtoul_test$295:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtoul_test$296:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtoul_test$297:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtoul_test$298:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtoul_test$299
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -4005,7 +4005,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$313:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -4015,16 +4015,16 @@ section .text
 	add rsi, 39
 
  strtoul_test$315:
-	; Parameter pointer £temporary2435 79
+	; Parameter 79 pointer £temporary2435
 	mov [rbp + 79], rsi
 
  strtoul_test$316:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtoul_test$317:
-	; Call strtoul 47 0
+	; Call 47 strtoul 0
 	mov qword [rbp + 47], strtoul_test$318
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -4044,31 +4044,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$322:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$323:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtoul_test$324:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtoul_test$325:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtoul_test$326:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtoul_test$327:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtoul_test$328
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -4131,7 +4131,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$342:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -4141,16 +4141,16 @@ section .text
 	add rsi, 39
 
  strtoul_test$344:
-	; Parameter pointer £temporary2449 79
+	; Parameter 79 pointer £temporary2449
 	mov [rbp + 79], rsi
 
  strtoul_test$345:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtoul_test$346:
-	; Call strtoul 47 0
+	; Call 47 strtoul 0
 	mov qword [rbp + 47], strtoul_test$347
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -4170,31 +4170,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$351:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$352:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtoul_test$353:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtoul_test$354:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtoul_test$355:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtoul_test$356:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtoul_test$357
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -4257,7 +4257,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$371:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -4267,16 +4267,16 @@ section .text
 	add rsi, 39
 
  strtoul_test$373:
-	; Parameter pointer £temporary2463 79
+	; Parameter 79 pointer £temporary2463
 	mov [rbp + 79], rsi
 
  strtoul_test$374:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtoul_test$375:
-	; Call strtoul 47 0
+	; Call 47 strtoul 0
 	mov qword [rbp + 47], strtoul_test$376
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -4296,31 +4296,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$380:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$381:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtoul_test$382:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtoul_test$383:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtoul_test$384:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtoul_test$385:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtoul_test$386
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -4383,7 +4383,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$400:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -4393,16 +4393,16 @@ section .text
 	add rsi, 39
 
  strtoul_test$402:
-	; Parameter pointer £temporary2477 79
+	; Parameter 79 pointer £temporary2477
 	mov [rbp + 79], rsi
 
  strtoul_test$403:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtoul_test$404:
-	; Call strtoul 47 0
+	; Call 47 strtoul 0
 	mov qword [rbp + 47], strtoul_test$405
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -4422,31 +4422,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$409:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$410:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtoul_test$411:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtoul_test$412:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtoul_test$413:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtoul_test$414:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtoul_test$415
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -4509,7 +4509,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$429:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -4519,16 +4519,16 @@ section .text
 	add rsi, 39
 
  strtoul_test$431:
-	; Parameter pointer £temporary2491 79
+	; Parameter 79 pointer £temporary2491
 	mov [rbp + 79], rsi
 
  strtoul_test$432:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtoul_test$433:
-	; Call strtoul 47 0
+	; Call 47 strtoul 0
 	mov qword [rbp + 47], strtoul_test$434
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -4548,31 +4548,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$438:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$439:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtoul_test$440:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtoul_test$441:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtoul_test$442:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtoul_test$443:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtoul_test$444
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -4635,7 +4635,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$458:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -4645,16 +4645,16 @@ section .text
 	add rsi, 39
 
  strtoul_test$460:
-	; Parameter pointer £temporary2505 79
+	; Parameter 79 pointer £temporary2505
 	mov [rbp + 79], rsi
 
  strtoul_test$461:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtoul_test$462:
-	; Call strtoul 47 0
+	; Call 47 strtoul 0
 	mov qword [rbp + 47], strtoul_test$463
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -4674,31 +4674,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$467:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$468:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtoul_test$469:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtoul_test$470:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtoul_test$471:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtoul_test$472:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtoul_test$473
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -4761,7 +4761,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$487:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -4771,16 +4771,16 @@ section .text
 	add rsi, 39
 
  strtoul_test$489:
-	; Parameter pointer £temporary2519 79
+	; Parameter 79 pointer £temporary2519
 	mov [rbp + 79], rsi
 
  strtoul_test$490:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtoul_test$491:
-	; Call strtoul 47 0
+	; Call 47 strtoul 0
 	mov qword [rbp + 47], strtoul_test$492
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -4800,31 +4800,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$496:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$497:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtoul_test$498:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtoul_test$499:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtoul_test$500:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtoul_test$501:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtoul_test$502
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -4887,7 +4887,7 @@ section .text
 	; PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$516:
-	; Parameter pointer text 71
+	; Parameter 71 pointer text
 	mov [rbp + 71], rbp
 	add qword [rbp + 71], 28
 
@@ -4897,16 +4897,16 @@ section .text
 	add rsi, 39
 
  strtoul_test$518:
-	; Parameter pointer £temporary2533 79
+	; Parameter 79 pointer £temporary2533
 	mov [rbp + 79], rsi
 
  strtoul_test$519:
-	; Parameter signedint base 87
+	; Parameter 87 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
  strtoul_test$520:
-	; Call strtoul 47 0
+	; Call 47 strtoul 0
 	mov qword [rbp + 47], strtoul_test$521
 	mov [rbp + 55], rbp
 	add rbp, 47
@@ -4926,31 +4926,31 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$525:
-	; Parameter pointer "<%s> <%li> <%s> <%i>\n" 79
+	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
 	mov qword [rbp + 79], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$526:
-	; Parameter pointer text 87
+	; Parameter 87 pointer text
 	mov [rbp + 87], rbp
 	add qword [rbp + 87], 28
 
  strtoul_test$527:
-	; Parameter signed long int value 95
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
  strtoul_test$528:
-	; Parameter pointer pointer 103
+	; Parameter 103 pointer pointer
 	mov rax, [rbp + 39]
 	mov [rbp + 103], rax
 
  strtoul_test$529:
-	; Parameter signedint base 111
+	; Parameter 111 signedint base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
  strtoul_test$530:
-	; Call printf 55 28
+	; Call 55 printf 28
 	mov qword [rbp + 55], strtoul_test$531
 	mov [rbp + 63], rbp
 	add rbp, 55
@@ -4977,16 +4977,16 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  atof$1:
-	; Parameter pointer s 56
+	; Parameter 56 pointer s
 	mov rax, [rbp + 24]
 	mov [rbp + 56], rax
 
  atof$2:
-	; Parameter pointer 0 64
+	; Parameter 64 pointer 0
 	mov qword [rbp + 64], 0
 
  atof$3:
-	; Call strtod 32 0
+	; Call 32 strtod 0
 	mov qword [rbp + 32], atof$4
 	mov [rbp + 40], rbp
 	add rbp, 32
@@ -5032,12 +5032,12 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtod$4:
-	; Parameter pointer s 76
+	; Parameter 76 pointer s
 	mov rax, [rbp + 24]
 	mov [rbp + 76], rax
 
  strtod$5:
-	; Parameter pointer "%lf%n" 84
+	; Parameter 84 pointer "%lf%n"
 	mov qword [rbp + 84], string_25lf25n#
 
  strtod$6:
@@ -5046,7 +5046,7 @@ section .text
 	add rsi, 44
 
  strtod$7:
-	; Parameter pointer £temporary2555 92
+	; Parameter 92 pointer £temporary2555
 	mov [rbp + 92], rsi
 
  strtod$8:
@@ -5055,11 +5055,11 @@ section .text
 	add rsi, 40
 
  strtod$9:
-	; Parameter pointer £temporary2556 100
+	; Parameter 100 pointer £temporary2556
 	mov [rbp + 100], rsi
 
  strtod$10:
-	; Call sscanf 52 16
+	; Call 52 sscanf 16
 	mov qword [rbp + 52], strtod$11
 	mov [rbp + 60], rbp
 	add rbp, 52
@@ -5210,17 +5210,17 @@ section .text
 	; PreCall 72 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  bsearch$9:
-	; Parameter pointer keyPtr 96
+	; Parameter 96 pointer keyPtr
 	mov rax, [rbp + 24]
 	mov [rbp + 96], rax
 
  bsearch$10:
-	; Parameter pointer firstValuePtr 104
+	; Parameter 104 pointer firstValuePtr
 	mov rax, [rbp + 64]
 	mov [rbp + 104], rax
 
  bsearch$11:
-	; Call compare 72 0
+	; Call 72 compare 0
 	mov qword [rbp + 72], bsearch$12
 	mov [rbp + 80], rbp
 	mov rax, [rbp + 48]
@@ -5287,17 +5287,17 @@ section .text
 	; PreCall 72 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  bsearch$24:
-	; Parameter pointer keyPtr 96
+	; Parameter 96 pointer keyPtr
 	mov rax, [rbp + 24]
 	mov [rbp + 96], rax
 
  bsearch$25:
-	; Parameter pointer lastValuePtr 104
+	; Parameter 104 pointer lastValuePtr
 	mov rax, [rbp + 64]
 	mov [rbp + 104], rax
 
  bsearch$26:
-	; Call compare 72 0
+	; Call 72 compare 0
 	mov qword [rbp + 72], bsearch$27
 	mov [rbp + 80], rbp
 	mov rax, [rbp + 48]
@@ -5375,17 +5375,17 @@ section .text
 	; PreCall 76 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  bsearch$41:
-	; Parameter pointer keyPtr 100
+	; Parameter 100 pointer keyPtr
 	mov rax, [rbp + 24]
 	mov [rbp + 100], rax
 
  bsearch$42:
-	; Parameter pointer middleValuePtr 108
+	; Parameter 108 pointer middleValuePtr
 	mov rax, [rbp + 68]
 	mov [rbp + 108], rax
 
  bsearch$43:
-	; Call compare 76 0
+	; Call 76 compare 0
 	mov qword [rbp + 76], bsearch$44
 	mov [rbp + 84], rbp
 	mov rax, [rbp + 48]
@@ -5676,7 +5676,7 @@ section .text
 	mov [rbp + 32], rbx
 
  exit$12:
-	; Call £temporary2619 -> £temporary2622 32 0
+	; Call 32 £temporary2619 -> £temporary2622 0
 	mov qword [rbp + 2080], exit$13
 	mov [rbp + 2088], rbp
 	mov rsi, rbp
@@ -5686,7 +5686,6 @@ section .text
 
  exit$13:
 	; PostCall 32
-	mov rbx, [rbp + 32]
 
  exit$14:
 	; BinarySubtract index index 1
@@ -5901,17 +5900,17 @@ section .text
 	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  qsort$15:
-	; Parameter pointer valuePtr1 108
+	; Parameter 108 pointer valuePtr1
 	mov rax, [rbp + 68]
 	mov [rbp + 108], rax
 
  qsort$16:
-	; Parameter pointer valuePtr2 116
+	; Parameter 116 pointer valuePtr2
 	mov rax, [rbp + 76]
 	mov [rbp + 116], rax
 
  qsort$17:
-	; Call compare 84 0
+	; Call 84 compare 0
 	mov qword [rbp + 84], qsort$18
 	mov [rbp + 92], rbp
 	mov rax, [rbp + 40]
@@ -5933,22 +5932,22 @@ section .text
 	; PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  qsort$22:
-	; Parameter pointer valuePtr1 108
+	; Parameter 108 pointer valuePtr1
 	mov rax, [rbp + 68]
 	mov [rbp + 108], rax
 
  qsort$23:
-	; Parameter pointer valuePtr2 116
+	; Parameter 116 pointer valuePtr2
 	mov rax, [rbp + 76]
 	mov [rbp + 116], rax
 
  qsort$24:
-	; Parameter signedint valueSize 124
+	; Parameter 124 signedint valueSize
 	mov eax, [rbp + 36]
 	mov [rbp + 124], eax
 
  qsort$25:
-	; Call memswap 84 0
+	; Call 84 memswap 0
 	mov qword [rbp + 84], qsort$26
 	mov [rbp + 92], rbp
 	add rbp, 84

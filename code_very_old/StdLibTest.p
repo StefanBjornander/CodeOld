@@ -3,7 +3,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.h,0$
    
 
     
-    
+     
     
 
 struct tm {
@@ -21,15 +21,15 @@ int tm_isdst ;
 };
 
 extern long clock ( void ) ;
-extern long time ( long * time ) ;
-extern double difftime ( long time2 , long time1 ) ;
-extern long mktime ( struct tm * timeStruct ) ;
+extern unsigned long time ( unsigned long * time ) ;
+extern double difftime ( unsigned long time2 , unsigned long time1 ) ;
+extern unsigned long mktime ( struct tm * timeStruct ) ;
 
 extern char * asctime ( const struct tm * timeStruct ) ;
-extern char * ctime ( const long * time ) ;
-extern struct tm * gmtime ( const long * time ) ;
-extern struct tm * localtime ( const long * time ) ;
-extern struct tm * localtimeX ( const long * time ) ;
+extern char * ctime ( const unsigned long * time ) ;
+extern struct tm * gmtime ( const unsigned long * time ) ;
+extern struct tm * localtime ( const unsigned long * time ) ;
+extern struct tm * localtimeX ( const unsigned long * time ) ;
 
 extern int strftime ( char * buffer , int size ,
 const char * format , const struct tm * timeStruct ) ;

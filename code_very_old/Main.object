@@ -1761,8 +1761,8 @@ assert_test$16:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomes
 57:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 59:	
 
-assert_test$17:	; parameter 866, offset 14
-60:		mov word [bp + 22], 866
+assert_test$17:	; parameter 873, offset 14
+60:		mov word [bp + 22], 873
 62:	
 
 assert_test$18:	; call function noellipse-ellipse fprintf, extra 0
@@ -1843,8 +1843,8 @@ assert_test2$5:	; parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomes
 18:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 20:	
 
-assert_test2$6:	; parameter 871, offset 14
-21:		mov word [bp + 22], 871
+assert_test2$6:	; parameter 878, offset 14
+21:		mov word [bp + 22], 878
 23:	
 
 assert_test2$7:	; call function noellipse-ellipse fprintf, extra 0

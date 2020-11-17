@@ -590,6 +590,7 @@ for ( index = 0 ; string [ index ] != '\0' ; ++ index ) {
 
 }
 
+
 return index ;
 }
 

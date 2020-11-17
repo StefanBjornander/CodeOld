@@ -3,7 +3,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.h,0$
    
 
     
-    
+     
     
 
 struct tm {
@@ -21,15 +21,15 @@ int tm_isdst ;
 };
 
 extern long clock ( void ) ;
-extern long time ( long * time ) ;
-extern double difftime ( long time2 , long time1 ) ;
-extern long mktime ( struct tm * timeStruct ) ;
+extern unsigned long time ( unsigned long * time ) ;
+extern double difftime ( unsigned long time2 , unsigned long time1 ) ;
+extern unsigned long mktime ( struct tm * timeStruct ) ;
 
 extern char * asctime ( const struct tm * timeStruct ) ;
-extern char * ctime ( const long * time ) ;
-extern struct tm * gmtime ( const long * time ) ;
-extern struct tm * localtime ( const long * time ) ;
-extern struct tm * localtimeX ( const long * time ) ;
+extern char * ctime ( const unsigned long * time ) ;
+extern struct tm * gmtime ( const unsigned long * time ) ;
+extern struct tm * localtime ( const unsigned long * time ) ;
+extern struct tm * localtimeX ( const unsigned long * time ) ;
 
 extern int strftime ( char * buffer , int size ,
 const char * format , const struct tm * timeStruct ) ;
@@ -401,14 +401,14 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\TimeTest.c,3$
        
 
 int struct_to_time ( struct tm * tp ) ;
-void time_to_struct ( long t , struct tm * tp ) ;
+void time_to_struct ( unsigned long t , struct tm * tp ) ;
 
 void time_test ( void ) {
 char * weekdays [] = { "Sun" , "Mon" , "Tue" , "Wed" , "Thu" , "Fri" , "Sat" };
 
-{ long now1 = time ( ( ( void * ) 0 ) ) ;
+{ unsigned long now1 = time ( ( ( void * ) 0 ) ) ;
 struct tm s = * gmtime ( & now1 ) , t = * localtime ( & now1 ) ;
-long now2 = mktime ( & s ) ;
+unsigned long now2 = mktime ( & s ) ;
 
 printf ( "now 1: %lu\n" , now1 ) ;
 printf ( "now 2: %lu\n" , now2 ) ;

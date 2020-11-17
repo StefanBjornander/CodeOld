@@ -22,16 +22,16 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  floating_point_error$1:
-	; Parameter pointer "Floating point error: %i\n" 52
+	; Parameter 52 pointer "Floating point error: %i\n"
 	mov qword [rbp + 52], string_Floating20point20error3A2025i0A#
 
  floating_point_error$2:
-	; Parameter signedint sig 60
+	; Parameter 60 signedint sig
 	mov eax, [rbp + 24]
 	mov [rbp + 60], eax
 
  floating_point_error$3:
-	; Call printf 28 4
+	; Call 28 printf 4
 	mov qword [rbp + 28], floating_point_error$4
 	mov [rbp + 36], rbp
 	add rbp, 28
@@ -64,11 +64,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  exit_handle1$1:
-	; Parameter pointer "exit1\n" 48
+	; Parameter 48 pointer "exit1\n"
 	mov qword [rbp + 48], string_exit10A#
 
  exit_handle1$2:
-	; Call printf 24 0
+	; Call 24 printf 0
 	mov qword [rbp + 24], exit_handle1$3
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -100,11 +100,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  exit_handle2$1:
-	; Parameter pointer "exit2\n" 48
+	; Parameter 48 pointer "exit2\n"
 	mov qword [rbp + 48], string_exit20A#
 
  exit_handle2$2:
-	; Call printf 24 0
+	; Call 24 printf 0
 	mov qword [rbp + 24], exit_handle2$3
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -136,11 +136,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  exit_handle3$1:
-	; Parameter pointer "exit3\n" 48
+	; Parameter 48 pointer "exit3\n"
 	mov qword [rbp + 48], string_exit30A#
 
  exit_handle3$2:
-	; Call printf 24 0
+	; Call 24 printf 0
 	mov qword [rbp + 24], exit_handle3$3
 	mov [rbp + 32], rbp
 	add rbp, 24
@@ -187,16 +187,16 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  signal_test$4:
-	; Parameter pointer "%i\n" 60
+	; Parameter 60 pointer "%i\n"
 	mov qword [rbp + 60], string_25i0A#
 
  signal_test$5:
-	; Parameter signedint c 68
+	; Parameter 68 signedint c
 	mov eax, [rbp + 32]
 	mov [rbp + 68], eax
 
  signal_test$6:
-	; Call printf 36 4
+	; Call 36 printf 4
 	mov qword [rbp + 36], signal_test$7
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -211,11 +211,11 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  signal_test$9:
-	; Parameter pointer exit_handle1 60
+	; Parameter 60 pointer exit_handle1
 	mov qword [rbp + 60], exit_handle1
 
  signal_test$10:
-	; Call atexit 36 0
+	; Call 36 atexit 0
 	mov qword [rbp + 36], signal_test$11
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -228,11 +228,11 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  signal_test$13:
-	; Parameter pointer exit_handle2 60
+	; Parameter 60 pointer exit_handle2
 	mov qword [rbp + 60], exit_handle2
 
  signal_test$14:
-	; Call atexit 36 0
+	; Call 36 atexit 0
 	mov qword [rbp + 36], signal_test$15
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -245,11 +245,11 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  signal_test$17:
-	; Parameter pointer exit_handle3 60
+	; Parameter 60 pointer exit_handle3
 	mov qword [rbp + 60], exit_handle3
 
  signal_test$18:
-	; Call atexit 36 0
+	; Call 36 atexit 0
 	mov qword [rbp + 36], signal_test$19
 	mov [rbp + 44], rbp
 	add rbp, 36
@@ -262,11 +262,11 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  signal_test$21:
-	; Parameter signedint 0 60
+	; Parameter 60 signedint 0
 	mov dword [rbp + 60], 0
 
  signal_test$22:
-	; Call exit 36 0
+	; Call 36 exit 0
 	mov qword [rbp + 36], signal_test$23
 	mov [rbp + 44], rbp
 	add rbp, 36
