@@ -1,45 +1,45 @@
 1:	
 
-print_test:	; call header integral zero 0 stack zero 0
+print_test:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
-print_test$1:	; parameter string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#, offset 6
+print_test$1:	; Parameter 6 string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A# 6
 4:		mov word [bp + 12], string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#
 6:	
 
-print_test$2:	; parameter 123, offset 8
+print_test$2:	; Parameter 6 123 8
 7:		mov word [bp + 14], 123
 9:	
 
-print_test$3:	; parameter 123, offset 10
+print_test$3:	; Parameter 6 123 10
 10:		mov word [bp + 16], 123
 12:	
 
-print_test$4:	; parameter 123, offset 12
+print_test$4:	; Parameter 6 123 12
 13:		mov word [bp + 18], 123
 15:	
 
-print_test$5:	; parameter 123, offset 14
+print_test$5:	; Parameter 6 123 14
 16:		mov word [bp + 20], 123
 18:	
 
-print_test$6:	; parameter 123, offset 16
+print_test$6:	; Parameter 6 123 16
 19:		mov word [bp + 22], 123
 21:	
 
-print_test$7:	; parameter 123, offset 18
+print_test$7:	; Parameter 6 123 18
 22:		mov word [bp + 24], 123
 24:	
 
-print_test$8:	; parameter 123, offset 20
+print_test$8:	; Parameter 6 123 20
 25:		mov word [bp + 26], 123
 27:	
 
-print_test$9:	; parameter 123, offset 22
+print_test$9:	; Parameter 6 123 22
 28:		mov word [bp + 28], 123
 30:	
 
-print_test$10:	; call function noellipse-ellipse printf, extra 0
+print_test$10:	; Call 6 printf 0
 31:		mov word [bp + 6], print_test$11
 32:		mov [bp + 8], bp
 33:		add bp, 6
@@ -48,49 +48,49 @@ print_test$10:	; call function noellipse-ellipse printf, extra 0
 36:		jmp printf
 38:	
 
-print_test$11:	; post call
+print_test$11:	; PostCall 6
 40:	
 
-print_test$12:	; call header integral zero 0 stack zero 0
+print_test$12:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 42:	
 
-print_test$13:	; parameter string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#, offset 6
+print_test$13:	; Parameter 6 string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A# 6
 43:		mov word [bp + 12], string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#
 45:	
 
-print_test$14:	; parameter -123, offset 8
+print_test$14:	; Parameter 6 -123 8
 46:		mov word [bp + 14], -123
 48:	
 
-print_test$15:	; parameter -123, offset 10
+print_test$15:	; Parameter 6 -123 10
 49:		mov word [bp + 16], -123
 51:	
 
-print_test$16:	; parameter -123, offset 12
+print_test$16:	; Parameter 6 -123 12
 52:		mov word [bp + 18], -123
 54:	
 
-print_test$17:	; parameter -123, offset 14
+print_test$17:	; Parameter 6 -123 14
 55:		mov word [bp + 20], -123
 57:	
 
-print_test$18:	; parameter -123, offset 16
+print_test$18:	; Parameter 6 -123 16
 58:		mov word [bp + 22], -123
 60:	
 
-print_test$19:	; parameter -123, offset 18
+print_test$19:	; Parameter 6 -123 18
 61:		mov word [bp + 24], -123
 63:	
 
-print_test$20:	; parameter -123, offset 20
+print_test$20:	; Parameter 6 -123 20
 64:		mov word [bp + 26], -123
 66:	
 
-print_test$21:	; parameter -123, offset 22
+print_test$21:	; Parameter 6 -123 22
 67:		mov word [bp + 28], -123
 69:	
 
-print_test$22:	; call function noellipse-ellipse printf, extra 0
+print_test$22:	; Call 6 printf 0
 70:		mov word [bp + 6], print_test$23
 71:		mov [bp + 8], bp
 72:		add bp, 6
@@ -99,33 +99,33 @@ print_test$22:	; call function noellipse-ellipse printf, extra 0
 75:		jmp printf
 77:	
 
-print_test$23:	; post call
+print_test$23:	; PostCall 6
 79:	
 
-print_test$24:	; call header integral zero 0 stack zero 0
+print_test$24:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 81:	
 
-print_test$25:	; parameter string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#, offset 6
+print_test$25:	; Parameter 6 string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A# 6
 82:		mov word [bp + 12], string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#
 84:	
 
-print_test$26:	; parameter 123, offset 8
+print_test$26:	; Parameter 6 123 8
 85:		mov word [bp + 14], 123
 87:	
 
-print_test$27:	; parameter 123, offset 10
+print_test$27:	; Parameter 6 123 10
 88:		mov word [bp + 16], 123
 90:	
 
-print_test$28:	; parameter 123, offset 12
+print_test$28:	; Parameter 6 123 12
 91:		mov word [bp + 18], 123
 93:	
 
-print_test$29:	; parameter 123, offset 14
+print_test$29:	; Parameter 6 123 14
 94:		mov word [bp + 20], 123
 96:	
 
-print_test$30:	; call function noellipse-ellipse printf, extra 0
+print_test$30:	; Call 6 printf 0
 97:		mov word [bp + 6], print_test$31
 98:		mov [bp + 8], bp
 99:		add bp, 6
@@ -134,33 +134,33 @@ print_test$30:	; call function noellipse-ellipse printf, extra 0
 102:		jmp printf
 104:	
 
-print_test$31:	; post call
+print_test$31:	; PostCall 6
 106:	
 
-print_test$32:	; call header integral zero 0 stack zero 0
+print_test$32:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 108:	
 
-print_test$33:	; parameter string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#, offset 6
+print_test$33:	; Parameter 6 string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A# 6
 109:		mov word [bp + 12], string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#
 111:	
 
-print_test$34:	; parameter -123, offset 8
+print_test$34:	; Parameter 6 -123 8
 112:		mov word [bp + 14], -123
 114:	
 
-print_test$35:	; parameter -123, offset 10
+print_test$35:	; Parameter 6 -123 10
 115:		mov word [bp + 16], -123
 117:	
 
-print_test$36:	; parameter -123, offset 12
+print_test$36:	; Parameter 6 -123 12
 118:		mov word [bp + 18], -123
 120:	
 
-print_test$37:	; parameter -123, offset 14
+print_test$37:	; Parameter 6 -123 14
 121:		mov word [bp + 20], -123
 123:	
 
-print_test$38:	; call function noellipse-ellipse printf, extra 0
+print_test$38:	; Call 6 printf 0
 124:		mov word [bp + 6], print_test$39
 125:		mov [bp + 8], bp
 126:		add bp, 6
@@ -169,81 +169,81 @@ print_test$38:	; call function noellipse-ellipse printf, extra 0
 129:		jmp printf
 131:	
 
-print_test$39:	; post call
+print_test$39:	; PostCall 6
 133:	
 
-print_test$40:	; call header integral zero 0 stack zero 0
+print_test$40:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 135:	
 
-print_test$41:	; parameter string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A#, offset 6
+print_test$41:	; Parameter 6 string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A# 6
 136:		mov word [bp + 12], string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A#
 138:	
 
-print_test$42:	; push float 123.456
+print_test$42:	; PushFloat 123.456
 139:		fld qword [float8$123.456#]
 141:	
 
-print_test$43:	; parameter 123.456, offset 8
+print_test$43:	; Parameter 6 123.456 8
 142:		fstp qword [bp + 14]
 144:	
 
-print_test$44:	; push float 123.456
+print_test$44:	; PushFloat 123.456
 145:		fld qword [float8$123.456#]
 147:	
 
-print_test$45:	; parameter 123.456, offset 16
+print_test$45:	; Parameter 6 123.456 16
 148:		fstp qword [bp + 22]
 150:	
 
-print_test$46:	; push float 123.456
+print_test$46:	; PushFloat 123.456
 151:		fld qword [float8$123.456#]
 153:	
 
-print_test$47:	; parameter 123.456, offset 24
+print_test$47:	; Parameter 6 123.456 24
 154:		fstp qword [bp + 30]
 156:	
 
-print_test$48:	; push float 123.456
+print_test$48:	; PushFloat 123.456
 157:		fld qword [float8$123.456#]
 159:	
 
-print_test$49:	; parameter 123.456, offset 32
+print_test$49:	; Parameter 6 123.456 32
 160:		fstp qword [bp + 38]
 162:	
 
-print_test$50:	; push float 123.456
+print_test$50:	; PushFloat 123.456
 163:		fld qword [float8$123.456#]
 165:	
 
-print_test$51:	; parameter 123.456, offset 40
+print_test$51:	; Parameter 6 123.456 40
 166:		fstp qword [bp + 46]
 168:	
 
-print_test$52:	; push float 123.456
+print_test$52:	; PushFloat 123.456
 169:		fld qword [float8$123.456#]
 171:	
 
-print_test$53:	; parameter 123.456, offset 48
+print_test$53:	; Parameter 6 123.456 48
 172:		fstp qword [bp + 54]
 174:	
 
-print_test$54:	; push float 123.456
+print_test$54:	; PushFloat 123.456
 175:		fld qword [float8$123.456#]
 177:	
 
-print_test$55:	; parameter 123.456, offset 56
+print_test$55:	; Parameter 6 123.456 56
 178:		fstp qword [bp + 62]
 180:	
 
-print_test$56:	; push float 123.456
+print_test$56:	; PushFloat 123.456
 181:		fld qword [float8$123.456#]
 183:	
 
-print_test$57:	; parameter 123.456, offset 64
+print_test$57:	; Parameter 6 123.456 64
 184:		fstp qword [bp + 70]
 186:	
 
-print_test$58:	; call function noellipse-ellipse printf, extra 0
+print_test$58:	; Call 6 printf 0
 187:		mov word [bp + 6], print_test$59
 188:		mov [bp + 8], bp
 189:		add bp, 6
@@ -252,81 +252,81 @@ print_test$58:	; call function noellipse-ellipse printf, extra 0
 192:		jmp printf
 194:	
 
-print_test$59:	; post call
+print_test$59:	; PostCall 6
 196:	
 
-print_test$60:	; call header integral zero 0 stack zero 0
+print_test$60:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 198:	
 
-print_test$61:	; parameter string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A#, offset 6
+print_test$61:	; Parameter 6 string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A# 6
 199:		mov word [bp + 12], string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A#
 201:	
 
-print_test$62:	; push float -123.456
+print_test$62:	; PushFloat -123.456
 202:		fld qword [float8$minus123.456#]
 204:	
 
-print_test$63:	; parameter -123.456, offset 8
+print_test$63:	; Parameter 6 -123.456 8
 205:		fstp qword [bp + 14]
 207:	
 
-print_test$64:	; push float -123.456
+print_test$64:	; PushFloat -123.456
 208:		fld qword [float8$minus123.456#]
 210:	
 
-print_test$65:	; parameter -123.456, offset 16
+print_test$65:	; Parameter 6 -123.456 16
 211:		fstp qword [bp + 22]
 213:	
 
-print_test$66:	; push float -123.456
+print_test$66:	; PushFloat -123.456
 214:		fld qword [float8$minus123.456#]
 216:	
 
-print_test$67:	; parameter -123.456, offset 24
+print_test$67:	; Parameter 6 -123.456 24
 217:		fstp qword [bp + 30]
 219:	
 
-print_test$68:	; push float -123.456
+print_test$68:	; PushFloat -123.456
 220:		fld qword [float8$minus123.456#]
 222:	
 
-print_test$69:	; parameter -123.456, offset 32
+print_test$69:	; Parameter 6 -123.456 32
 223:		fstp qword [bp + 38]
 225:	
 
-print_test$70:	; push float -123.456
+print_test$70:	; PushFloat -123.456
 226:		fld qword [float8$minus123.456#]
 228:	
 
-print_test$71:	; parameter -123.456, offset 40
+print_test$71:	; Parameter 6 -123.456 40
 229:		fstp qword [bp + 46]
 231:	
 
-print_test$72:	; push float -123.456
+print_test$72:	; PushFloat -123.456
 232:		fld qword [float8$minus123.456#]
 234:	
 
-print_test$73:	; parameter -123.456, offset 48
+print_test$73:	; Parameter 6 -123.456 48
 235:		fstp qword [bp + 54]
 237:	
 
-print_test$74:	; push float -123.456
+print_test$74:	; PushFloat -123.456
 238:		fld qword [float8$minus123.456#]
 240:	
 
-print_test$75:	; parameter -123.456, offset 56
+print_test$75:	; Parameter 6 -123.456 56
 241:		fstp qword [bp + 62]
 243:	
 
-print_test$76:	; push float -123.456
+print_test$76:	; PushFloat -123.456
 244:		fld qword [float8$minus123.456#]
 246:	
 
-print_test$77:	; parameter -123.456, offset 64
+print_test$77:	; Parameter 6 -123.456 64
 247:		fstp qword [bp + 70]
 249:	
 
-print_test$78:	; call function noellipse-ellipse printf, extra 0
+print_test$78:	; Call 6 printf 0
 250:		mov word [bp + 6], print_test$79
 251:		mov [bp + 8], bp
 252:		add bp, 6
@@ -335,49 +335,49 @@ print_test$78:	; call function noellipse-ellipse printf, extra 0
 255:		jmp printf
 257:	
 
-print_test$79:	; post call
+print_test$79:	; PostCall 6
 259:	
 
-print_test$80:	; call header integral zero 0 stack zero 0
+print_test$80:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 261:	
 
-print_test$81:	; parameter string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A#, offset 6
+print_test$81:	; Parameter 6 string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A# 6
 262:		mov word [bp + 12], string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A#
 264:	
 
-print_test$82:	; push float 123.456
+print_test$82:	; PushFloat 123.456
 265:		fld qword [float8$123.456#]
 267:	
 
-print_test$83:	; parameter 123.456, offset 8
+print_test$83:	; Parameter 6 123.456 8
 268:		fstp qword [bp + 14]
 270:	
 
-print_test$84:	; push float 123.456
+print_test$84:	; PushFloat 123.456
 271:		fld qword [float8$123.456#]
 273:	
 
-print_test$85:	; parameter 123.456, offset 16
+print_test$85:	; Parameter 6 123.456 16
 274:		fstp qword [bp + 22]
 276:	
 
-print_test$86:	; push float 123.456
+print_test$86:	; PushFloat 123.456
 277:		fld qword [float8$123.456#]
 279:	
 
-print_test$87:	; parameter 123.456, offset 24
+print_test$87:	; Parameter 6 123.456 24
 280:		fstp qword [bp + 30]
 282:	
 
-print_test$88:	; push float 123.456
+print_test$88:	; PushFloat 123.456
 283:		fld qword [float8$123.456#]
 285:	
 
-print_test$89:	; parameter 123.456, offset 32
+print_test$89:	; Parameter 6 123.456 32
 286:		fstp qword [bp + 38]
 288:	
 
-print_test$90:	; call function noellipse-ellipse printf, extra 0
+print_test$90:	; Call 6 printf 0
 289:		mov word [bp + 6], print_test$91
 290:		mov [bp + 8], bp
 291:		add bp, 6
@@ -386,49 +386,49 @@ print_test$90:	; call function noellipse-ellipse printf, extra 0
 294:		jmp printf
 296:	
 
-print_test$91:	; post call
+print_test$91:	; PostCall 6
 298:	
 
-print_test$92:	; call header integral zero 0 stack zero 0
+print_test$92:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 300:	
 
-print_test$93:	; parameter string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A#, offset 6
+print_test$93:	; Parameter 6 string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A# 6
 301:		mov word [bp + 12], string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A#
 303:	
 
-print_test$94:	; push float -123.456
+print_test$94:	; PushFloat -123.456
 304:		fld qword [float8$minus123.456#]
 306:	
 
-print_test$95:	; parameter -123.456, offset 8
+print_test$95:	; Parameter 6 -123.456 8
 307:		fstp qword [bp + 14]
 309:	
 
-print_test$96:	; push float -123.456
+print_test$96:	; PushFloat -123.456
 310:		fld qword [float8$minus123.456#]
 312:	
 
-print_test$97:	; parameter -123.456, offset 16
+print_test$97:	; Parameter 6 -123.456 16
 313:		fstp qword [bp + 22]
 315:	
 
-print_test$98:	; push float -123.456
+print_test$98:	; PushFloat -123.456
 316:		fld qword [float8$minus123.456#]
 318:	
 
-print_test$99:	; parameter -123.456, offset 24
+print_test$99:	; Parameter 6 -123.456 24
 319:		fstp qword [bp + 30]
 321:	
 
-print_test$100:	; push float -123.456
+print_test$100:	; PushFloat -123.456
 322:		fld qword [float8$minus123.456#]
 324:	
 
-print_test$101:	; parameter -123.456, offset 32
+print_test$101:	; Parameter 6 -123.456 32
 325:		fstp qword [bp + 38]
 327:	
 
-print_test$102:	; call function noellipse-ellipse printf, extra 0
+print_test$102:	; Call 6 printf 0
 328:		mov word [bp + 6], print_test$103
 329:		mov [bp + 8], bp
 330:		add bp, 6
@@ -437,14 +437,14 @@ print_test$102:	; call function noellipse-ellipse printf, extra 0
 333:		jmp printf
 335:	
 
-print_test$103:	; post call
+print_test$103:	; PostCall 6
 337:	
 
-print_test$104:	; return
+print_test$104:	; Return 0
 338:		mov ax, [bp]
 339:		mov di, [bp + 4]
 340:		mov bp, [bp + 2]
 341:		jmp ax
 343:	
 
-print_test$105:	; function end print_test
+print_test$105:	; FunctionEnd print_test

@@ -1,167 +1,167 @@
 1:	
 
-compare:	; £temporary5898 = int_to_int valuePtr1 (Pointer -> Pointer)
+compare:	; IntegralToIntegral £temporary5898 valuePtr1
 2:		mov si, [bp + 6]
 5:	
 
-compare$1:	; £temporary5899 -> £temporary5898 = *£temporary5898
+compare$1:	; Deref £temporary5899 -> £temporary5898 £temporary5898 0
 7:	
 
-compare$2:	; intValue1 = £temporary5899 -> £temporary5898
+compare$2:	; Assign intValue1 £temporary5899 -> £temporary5898
 8:		mov ax, [si]
 9:		mov [bp + 10], ax
 11:	
 
-compare$3:	; £temporary5900 = int_to_int valuePtr2 (Pointer -> Pointer)
+compare$3:	; IntegralToIntegral £temporary5900 valuePtr2
 12:		mov si, [bp + 8]
 15:	
 
-compare$4:	; £temporary5901 -> £temporary5900 = *£temporary5900
+compare$4:	; Deref £temporary5901 -> £temporary5900 £temporary5900 0
 17:	
 
-compare$5:	; intValue2 = £temporary5901 -> £temporary5900
+compare$5:	; Assign intValue2 £temporary5901 -> £temporary5900
 18:		mov ax, [si]
 19:		mov [bp + 12], ax
 21:	
 
-compare$6:	; if intValue1 >= intValue2 goto 9
+compare$6:	; SignedGreaterThanEqual 9 intValue1 intValue2
 22:		mov ax, [bp + 12]
 23:		cmp [bp + 10], ax
 24:		jge compare$9
 26:	
 
-compare$7:	; £temporary5911 = -1
+compare$7:	; Assign £temporary5911 -1
 27:		mov bx, -1
 29:	
 
-compare$8:	; goto 14
+compare$8:	; Goto 14
 30:		jmp compare$14
 32:	
 
-compare$9:	; if intValue1 != intValue2 goto 12
+compare$9:	; NotEqual 12 intValue1 intValue2
 33:		mov ax, [bp + 12]
 34:		cmp [bp + 10], ax
 35:		jne compare$12
 37:	
 
-compare$10:	; £temporary5907 = 0
+compare$10:	; Assign £temporary5907 0
 38:		mov bx, 0
 40:	
 
-compare$11:	; goto 13
+compare$11:	; Goto 13
 41:		jmp compare$13
 43:	
 
-compare$12:	; £temporary5907 = 1
+compare$12:	; Assign £temporary5907 1
 44:		mov bx, 1
 46:	
 
-compare$13:	; £temporary5911 = £temporary5907
+compare$13:	; Assign £temporary5911 £temporary5907
 48:	
 
-compare$14:	; return_value = £temporary5911
+compare$14:	; SetReturnValue £temporary5911
 50:	
 
-compare$15:	; return
+compare$15:	; Return £temporary5911
 51:		mov ax, [bp]
 52:		mov di, [bp + 4]
 53:		mov bp, [bp + 2]
 54:		jmp ax
 56:	
 
-compare$16:	; function end compare
+compare$16:	; FunctionEnd compare
 1:	
 
-reverse_compare:	; £temporary5912 = int_to_int valuePtr1 (Pointer -> Pointer)
+reverse_compare:	; IntegralToIntegral £temporary5912 valuePtr1
 2:		mov si, [bp + 6]
 5:	
 
-reverse_compare$1:	; £temporary5913 -> £temporary5912 = *£temporary5912
+reverse_compare$1:	; Deref £temporary5913 -> £temporary5912 £temporary5912 0
 7:	
 
-reverse_compare$2:	; intValue1 = £temporary5913 -> £temporary5912
+reverse_compare$2:	; Assign intValue1 £temporary5913 -> £temporary5912
 8:		mov ax, [si]
 9:		mov [bp + 10], ax
 11:	
 
-reverse_compare$3:	; £temporary5914 = int_to_int valuePtr2 (Pointer -> Pointer)
+reverse_compare$3:	; IntegralToIntegral £temporary5914 valuePtr2
 12:		mov si, [bp + 8]
 15:	
 
-reverse_compare$4:	; £temporary5915 -> £temporary5914 = *£temporary5914
+reverse_compare$4:	; Deref £temporary5915 -> £temporary5914 £temporary5914 0
 17:	
 
-reverse_compare$5:	; intValue2 = £temporary5915 -> £temporary5914
+reverse_compare$5:	; Assign intValue2 £temporary5915 -> £temporary5914
 18:		mov ax, [si]
 19:		mov [bp + 12], ax
 21:	
 
-reverse_compare$6:	; if intValue1 >= intValue2 goto 9
+reverse_compare$6:	; SignedGreaterThanEqual 9 intValue1 intValue2
 22:		mov ax, [bp + 12]
 23:		cmp [bp + 10], ax
 24:		jge reverse_compare$9
 26:	
 
-reverse_compare$7:	; £temporary5925 = 1
+reverse_compare$7:	; Assign £temporary5925 1
 27:		mov bx, 1
 29:	
 
-reverse_compare$8:	; goto 14
+reverse_compare$8:	; Goto 14
 30:		jmp reverse_compare$14
 32:	
 
-reverse_compare$9:	; if intValue1 != intValue2 goto 12
+reverse_compare$9:	; NotEqual 12 intValue1 intValue2
 33:		mov ax, [bp + 12]
 34:		cmp [bp + 10], ax
 35:		jne reverse_compare$12
 37:	
 
-reverse_compare$10:	; £temporary5921 = 0
+reverse_compare$10:	; Assign £temporary5921 0
 38:		mov bx, 0
 40:	
 
-reverse_compare$11:	; goto 13
+reverse_compare$11:	; Goto 13
 41:		jmp reverse_compare$13
 43:	
 
-reverse_compare$12:	; £temporary5921 = -1
+reverse_compare$12:	; Assign £temporary5921 -1
 44:		mov bx, -1
 46:	
 
-reverse_compare$13:	; £temporary5925 = £temporary5921
+reverse_compare$13:	; Assign £temporary5925 £temporary5921
 48:	
 
-reverse_compare$14:	; return_value = £temporary5925
+reverse_compare$14:	; SetReturnValue £temporary5925
 50:	
 
-reverse_compare$15:	; return
+reverse_compare$15:	; Return £temporary5925
 51:		mov ax, [bp]
 52:		mov di, [bp + 4]
 53:		mov bp, [bp + 2]
 54:		jmp ax
 56:	
 
-reverse_compare$16:	; function end reverse_compare
+reverse_compare$16:	; FunctionEnd reverse_compare
 1:	
 
-print_div:	; call header integral zero 0 stack zero 0
+print_div:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
-print_div$1:	; parameter string_div_t20quot2025i20rem2025i0A#, offset 6
+print_div$1:	; Parameter 10 string_div_t20quot2025i20rem2025i0A# 6
 4:		mov word [bp + 16], string_div_t20quot2025i20rem2025i0A#
 6:	
 
-print_div$2:	; parameter d$quot, offset 8
+print_div$2:	; Parameter 10 d$quot 8
 7:		mov ax, [bp + 6]
 8:		mov [bp + 18], ax
 10:	
 
-print_div$3:	; parameter d$rem, offset 10
+print_div$3:	; Parameter 10 d$rem 10
 11:		mov ax, [bp + 8]
 12:		mov [bp + 20], ax
 14:	
 
-print_div$4:	; call function noellipse-ellipse printf, extra 0
+print_div$4:	; Call 10 printf 0
 15:		mov word [bp + 10], print_div$5
 16:		mov [bp + 12], bp
 17:		add bp, 10
@@ -170,50 +170,50 @@ print_div$4:	; call function noellipse-ellipse printf, extra 0
 20:		jmp printf
 22:	
 
-print_div$5:	; post call
+print_div$5:	; PostCall 10
 24:	
 
-print_div$6:	; ++d$quot
+print_div$6:	; Increment d$quot
 25:		inc word [bp + 6]
 27:	
 
-print_div$7:	; ++d$rem
+print_div$7:	; Increment d$rem
 28:		inc word [bp + 8]
 30:	
 
-print_div$8:	; return_value = d
+print_div$8:	; SetReturnValue d
 31:		mov bx, bp
 32:		add bx, 6
 34:	
 
-print_div$9:	; return
+print_div$9:	; Return d
 35:		mov ax, [bp]
 36:		mov di, [bp + 4]
 37:		mov bp, [bp + 2]
 38:		jmp ax
 40:	
 
-print_div$10:	; function end print_div
+print_div$10:	; FunctionEnd print_div
 1:	
 
-print_ldiv:	; call header integral zero 0 stack zero 0
+print_ldiv:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
-print_ldiv$1:	; parameter string_ldiv_t20quot2025li20rem2025li0A#, offset 6
+print_ldiv$1:	; Parameter 14 string_ldiv_t20quot2025li20rem2025li0A# 6
 4:		mov word [bp + 20], string_ldiv_t20quot2025li20rem2025li0A#
 6:	
 
-print_ldiv$2:	; parameter ld$quot, offset 8
+print_ldiv$2:	; Parameter 14 ld$quot 8
 7:		mov eax, [bp + 6]
 8:		mov [bp + 22], eax
 10:	
 
-print_ldiv$3:	; parameter ld$rem, offset 12
+print_ldiv$3:	; Parameter 14 ld$rem 12
 11:		mov eax, [bp + 10]
 12:		mov [bp + 26], eax
 14:	
 
-print_ldiv$4:	; call function noellipse-ellipse printf, extra 0
+print_ldiv$4:	; Call 14 printf 0
 15:		mov word [bp + 14], print_ldiv$5
 16:		mov [bp + 16], bp
 17:		add bp, 14
@@ -222,40 +222,40 @@ print_ldiv$4:	; call function noellipse-ellipse printf, extra 0
 20:		jmp printf
 22:	
 
-print_ldiv$5:	; post call
+print_ldiv$5:	; PostCall 14
 24:	
 
-print_ldiv$6:	; --ld$quot
+print_ldiv$6:	; Decrement ld$quot
 25:		dec dword [bp + 6]
 27:	
 
-print_ldiv$7:	; --ld$rem
+print_ldiv$7:	; Decrement ld$rem
 28:		dec dword [bp + 10]
 30:	
 
-print_ldiv$8:	; return_value = ld
+print_ldiv$8:	; SetReturnValue ld
 31:		mov bx, bp
 32:		add bx, 6
 34:	
 
-print_ldiv$9:	; return
+print_ldiv$9:	; Return ld
 35:		mov ax, [bp]
 36:		mov di, [bp + 4]
 37:		mov bp, [bp + 2]
 38:		jmp ax
 40:	
 
-print_ldiv$10:	; function end print_ldiv
+print_ldiv$10:	; FunctionEnd print_ldiv
 1:	
 
-exit_handle1x:	; call header integral zero 0 stack zero 0
+exit_handle1x:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
-exit_handle1x$1:	; parameter string_exit10A#, offset 6
+exit_handle1x$1:	; Parameter 6 string_exit10A# 6
 4:		mov word [bp + 12], string_exit10A#
 6:	
 
-exit_handle1x$2:	; call function noellipse-ellipse printf, extra 0
+exit_handle1x$2:	; Call 6 printf 0
 7:		mov word [bp + 6], exit_handle1x$3
 8:		mov [bp + 8], bp
 9:		add bp, 6
@@ -263,27 +263,27 @@ exit_handle1x$2:	; call function noellipse-ellipse printf, extra 0
 11:		jmp printf
 13:	
 
-exit_handle1x$3:	; post call
+exit_handle1x$3:	; PostCall 6
 15:	
 
-exit_handle1x$4:	; return
+exit_handle1x$4:	; Return 0
 16:		mov ax, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
 19:		jmp ax
 21:	
 
-exit_handle1x$5:	; function end exit_handle1x
+exit_handle1x$5:	; FunctionEnd exit_handle1x
 1:	
 
-exit_handle2x:	; call header integral zero 0 stack zero 0
+exit_handle2x:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
-exit_handle2x$1:	; parameter string_exit20A#, offset 6
+exit_handle2x$1:	; Parameter 6 string_exit20A# 6
 4:		mov word [bp + 12], string_exit20A#
 6:	
 
-exit_handle2x$2:	; call function noellipse-ellipse printf, extra 0
+exit_handle2x$2:	; Call 6 printf 0
 7:		mov word [bp + 6], exit_handle2x$3
 8:		mov [bp + 8], bp
 9:		add bp, 6
@@ -291,27 +291,27 @@ exit_handle2x$2:	; call function noellipse-ellipse printf, extra 0
 11:		jmp printf
 13:	
 
-exit_handle2x$3:	; post call
+exit_handle2x$3:	; PostCall 6
 15:	
 
-exit_handle2x$4:	; return
+exit_handle2x$4:	; Return 0
 16:		mov ax, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
 19:		jmp ax
 21:	
 
-exit_handle2x$5:	; function end exit_handle2x
+exit_handle2x$5:	; FunctionEnd exit_handle2x
 1:	
 
-exit_handle3x:	; call header integral zero 0 stack zero 0
+exit_handle3x:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
-exit_handle3x$1:	; parameter string_exit30A#, offset 6
+exit_handle3x$1:	; Parameter 6 string_exit30A# 6
 4:		mov word [bp + 12], string_exit30A#
 6:	
 
-exit_handle3x$2:	; call function noellipse-ellipse printf, extra 0
+exit_handle3x$2:	; Call 6 printf 0
 7:		mov word [bp + 6], exit_handle3x$3
 8:		mov [bp + 8], bp
 9:		add bp, 6
@@ -319,27 +319,27 @@ exit_handle3x$2:	; call function noellipse-ellipse printf, extra 0
 11:		jmp printf
 13:	
 
-exit_handle3x$3:	; post call
+exit_handle3x$3:	; PostCall 6
 15:	
 
-exit_handle3x$4:	; return
+exit_handle3x$4:	; Return 0
 16:		mov ax, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
 19:		jmp ax
 21:	
 
-exit_handle3x$5:	; function end exit_handle3x
+exit_handle3x$5:	; FunctionEnd exit_handle3x
 1:	
 
-hello:	; call header integral zero 0 stack zero 0
+hello:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
-hello$1:	; parameter string_HelloFFF#, offset 6
+hello$1:	; Parameter 6 string_HelloFFF# 6
 4:		mov word [bp + 12], string_HelloFFF#
 6:	
 
-hello$2:	; call function noellipse-ellipse printf, extra 0
+hello$2:	; Call 6 printf 0
 7:		mov word [bp + 6], hello$3
 8:		mov [bp + 8], bp
 9:		add bp, 6
@@ -347,35 +347,35 @@ hello$2:	; call function noellipse-ellipse printf, extra 0
 11:		jmp printf
 13:	
 
-hello$3:	; post call
+hello$3:	; PostCall 6
 15:	
 
-hello$4:	; return
+hello$4:	; Return 0
 16:		mov ax, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
 19:		jmp ax
 21:	
 
-hello$5:	; function end hello
+hello$5:	; FunctionEnd hello
 1:	
 
-qtest:	; call header integral zero 0 stack zero 0
+qtest:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
-qtest$1:	; parameter string_f3A2025u0A#, offset 6
+qtest$1:	; Parameter 8 string_f3A2025u0A# 6
 4:		mov word [bp + 14], string_f3A2025u0A#
 6:	
 
-qtest$2:	; £temporary5956 = int_to_int f (Pointer -> Unsigned_Int)
+qtest$2:	; IntegralToIntegral £temporary5956 f
 7:		mov ax, [bp + 6]
 10:	
 
-qtest$3:	; parameter £temporary5956, offset 8
+qtest$3:	; Parameter 8 £temporary5956 8
 11:		mov [bp + 16], ax
 13:	
 
-qtest$4:	; call function noellipse-ellipse printf, extra 0
+qtest$4:	; Call 8 printf 0
 14:		mov word [bp + 8], qtest$5
 15:		mov [bp + 10], bp
 16:		add bp, 8
@@ -384,13 +384,13 @@ qtest$4:	; call function noellipse-ellipse printf, extra 0
 19:		jmp printf
 21:	
 
-qtest$5:	; post call
+qtest$5:	; PostCall 8
 23:	
 
-qtest$6:	; call header integral zero 0 stack zero 0
+qtest$6:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 25:	
 
-qtest$7:	; call function noellipse-noellipse f
+qtest$7:	; Call 8 f 0
 26:		mov word [bp + 8], qtest$8
 27:		mov [bp + 10], bp
 28:		mov ax, [bp + 6]
@@ -398,35 +398,35 @@ qtest$7:	; call function noellipse-noellipse f
 30:		jmp ax
 32:	
 
-qtest$8:	; post call
+qtest$8:	; PostCall 8
 34:	
 
-qtest$9:	; return
+qtest$9:	; Return 0
 35:		mov ax, [bp]
 36:		mov di, [bp + 4]
 37:		mov bp, [bp + 2]
 38:		jmp ax
 40:	
 
-qtest$10:	; function end qtest
+qtest$10:	; FunctionEnd qtest
 1:	
 
-stdlib_testZ:	; call header integral zero 0 stack zero 0
+stdlib_testZ:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
-stdlib_testZ$1:	; parameter string_hello3A2025u0A#, offset 6
+stdlib_testZ$1:	; Parameter 6 string_hello3A2025u0A# 6
 4:		mov word [bp + 12], string_hello3A2025u0A#
 6:	
 
-stdlib_testZ$2:	; £temporary5961 = int_to_int hello (Function -> Unsigned_Int)
+stdlib_testZ$2:	; IntegralToIntegral £temporary5961 hello
 7:		mov ax, hello
 10:	
 
-stdlib_testZ$3:	; parameter £temporary5961, offset 8
+stdlib_testZ$3:	; Parameter 6 £temporary5961 8
 11:		mov [bp + 14], ax
 13:	
 
-stdlib_testZ$4:	; call function noellipse-ellipse printf, extra 0
+stdlib_testZ$4:	; Call 6 printf 0
 14:		mov word [bp + 6], stdlib_testZ$5
 15:		mov [bp + 8], bp
 16:		add bp, 6
@@ -435,34 +435,34 @@ stdlib_testZ$4:	; call function noellipse-ellipse printf, extra 0
 19:		jmp printf
 21:	
 
-stdlib_testZ$5:	; post call
+stdlib_testZ$5:	; PostCall 6
 23:	
 
-stdlib_testZ$6:	; call header integral zero 0 stack zero 0
+stdlib_testZ$6:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 25:	
 
-stdlib_testZ$7:	; parameter hello, offset 6
+stdlib_testZ$7:	; Parameter 6 hello 6
 26:		mov word [bp + 12], hello
 28:	
 
-stdlib_testZ$8:	; call function noellipse-noellipse qtest
+stdlib_testZ$8:	; Call 6 qtest 0
 29:		mov word [bp + 6], stdlib_testZ$9
 30:		mov [bp + 8], bp
 31:		add bp, 6
 32:		jmp qtest
 34:	
 
-stdlib_testZ$9:	; post call
+stdlib_testZ$9:	; PostCall 6
 36:	
 
-stdlib_testZ$10:	; call header integral zero 0 stack zero 0
+stdlib_testZ$10:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 38:	
 
-stdlib_testZ$11:	; parameter string_Y#, offset 6
+stdlib_testZ$11:	; Parameter 6 string_Y# 6
 39:		mov word [bp + 12], string_Y#
 41:	
 
-stdlib_testZ$12:	; call function noellipse-ellipse printf, extra 0
+stdlib_testZ$12:	; Call 6 printf 0
 42:		mov word [bp + 6], stdlib_testZ$13
 43:		mov [bp + 8], bp
 44:		add bp, 6
@@ -470,51 +470,51 @@ stdlib_testZ$12:	; call function noellipse-ellipse printf, extra 0
 46:		jmp printf
 48:	
 
-stdlib_testZ$13:	; post call
+stdlib_testZ$13:	; PostCall 6
 50:	
 
-stdlib_testZ$14:	; return
+stdlib_testZ$14:	; Return 0
 51:		mov ax, [bp]
 52:		mov di, [bp + 4]
 53:		mov bp, [bp + 2]
 54:		jmp ax
 56:	
 
-stdlib_testZ$15:	; function end stdlib_testZ
+stdlib_testZ$15:	; FunctionEnd stdlib_testZ
 1:	
 
-stdlib_test:	; call header integral zero 0 stack zero 0
+stdlib_test:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
-stdlib_test$1:	; parameter string_atof28221232E4562229203D2025f0A#, offset 6
+stdlib_test$1:	; Parameter 8 string_atof28221232E4562229203D2025f0A# 6
 4:		mov word [bp + 14], string_atof28221232E4562229203D2025f0A#
 6:	
 
-stdlib_test$2:	; call header integral zero 0 stack zero 0
+stdlib_test$2:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 8:	
 
-stdlib_test$3:	; parameter string_1232E456#, offset 14
+stdlib_test$3:	; Parameter 8 string_1232E456# 14
 9:		mov word [bp + 22], string_1232E456#
 11:	
 
-stdlib_test$4:	; call function noellipse-noellipse atof
+stdlib_test$4:	; Call 8 atof 8
 12:		mov word [bp + 16], stdlib_test$5
 13:		mov [bp + 18], bp
 14:		add bp, 16
 15:		jmp atof
 17:	
 
-stdlib_test$5:	; post call
+stdlib_test$5:	; PostCall 8
 19:	
 
-stdlib_test$6:	; £temporary5969 = return_value
+stdlib_test$6:	; GetReturnValue £temporary5969
 21:	
 
-stdlib_test$7:	; parameter £temporary5969, offset 8
+stdlib_test$7:	; Parameter 8 £temporary5969 8
 22:		fstp qword [bp + 16]
 24:	
 
-stdlib_test$8:	; call function noellipse-ellipse printf, extra 0
+stdlib_test$8:	; Call 8 printf 0
 25:		mov word [bp + 8], stdlib_test$9
 26:		mov [bp + 10], bp
 27:		add bp, 8
@@ -523,55 +523,55 @@ stdlib_test$8:	; call function noellipse-ellipse printf, extra 0
 30:		jmp printf
 32:	
 
-stdlib_test$9:	; post call
+stdlib_test$9:	; PostCall 8
 34:	
 
-stdlib_test$10:	; call header integral zero 0 stack zero 0
+stdlib_test$10:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 36:	
 
-stdlib_test$11:	; parameter string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A#, offset 6
+stdlib_test$11:	; Parameter 8 string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A# 6
 37:		mov word [bp + 14], string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A#
 39:	
 
-stdlib_test$12:	; call header integral zero 0 stack zero 0
+stdlib_test$12:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 41:	
 
-stdlib_test$13:	; parameter string_1232E456789abc#, offset 14
+stdlib_test$13:	; Parameter 8 string_1232E456789abc# 14
 42:		mov word [bp + 22], string_1232E456789abc#
 44:	
 
-stdlib_test$14:	; £temporary5971 = &p
+stdlib_test$14:	; address £temporary5971 p
 45:		mov si, bp
 46:		add si, 6
 48:	
 
-stdlib_test$15:	; parameter £temporary5971, offset 16
+stdlib_test$15:	; Parameter 8 £temporary5971 16
 49:		mov [bp + 24], si
 51:	
 
-stdlib_test$16:	; call function noellipse-noellipse strtod
+stdlib_test$16:	; Call 8 strtod 8
 52:		mov word [bp + 16], stdlib_test$17
 53:		mov [bp + 18], bp
 54:		add bp, 16
 55:		jmp strtod
 57:	
 
-stdlib_test$17:	; post call
+stdlib_test$17:	; PostCall 8
 59:	
 
-stdlib_test$18:	; £temporary5972 = return_value
+stdlib_test$18:	; GetReturnValue £temporary5972
 61:	
 
-stdlib_test$19:	; parameter £temporary5972, offset 8
+stdlib_test$19:	; Parameter 8 £temporary5972 8
 62:		fstp qword [bp + 16]
 64:	
 
-stdlib_test$20:	; parameter p, offset 16
+stdlib_test$20:	; Parameter 8 p 16
 65:		mov ax, [bp + 6]
 66:		mov [bp + 24], ax
 68:	
 
-stdlib_test$21:	; call function noellipse-ellipse printf, extra 0
+stdlib_test$21:	; Call 8 printf 0
 69:		mov word [bp + 8], stdlib_test$22
 70:		mov [bp + 10], bp
 71:		add bp, 8
@@ -580,41 +580,41 @@ stdlib_test$21:	; call function noellipse-ellipse printf, extra 0
 74:		jmp printf
 76:	
 
-stdlib_test$22:	; post call
+stdlib_test$22:	; PostCall 8
 78:	
 
-stdlib_test$23:	; call header integral zero 0 stack zero 0
+stdlib_test$23:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 80:	
 
-stdlib_test$24:	; parameter string_0Agetenv2822path2229203D2025s0A#, offset 6
+stdlib_test$24:	; Parameter 6 string_0Agetenv2822path2229203D2025s0A# 6
 81:		mov word [bp + 12], string_0Agetenv2822path2229203D2025s0A#
 83:	
 
-stdlib_test$25:	; call header integral zero 0 stack zero 0
+stdlib_test$25:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 85:	
 
-stdlib_test$26:	; parameter string_path#, offset 14
+stdlib_test$26:	; Parameter 6 string_path# 14
 86:		mov word [bp + 20], string_path#
 88:	
 
-stdlib_test$27:	; call function noellipse-noellipse getenv
+stdlib_test$27:	; Call 6 getenv 8
 89:		mov word [bp + 14], stdlib_test$28
 90:		mov [bp + 16], bp
 91:		add bp, 14
 92:		jmp getenv
 94:	
 
-stdlib_test$28:	; post call
+stdlib_test$28:	; PostCall 6
 96:	
 
-stdlib_test$29:	; £temporary5974 = return_value
+stdlib_test$29:	; GetReturnValue £temporary5974
 101:	
 
-stdlib_test$30:	; parameter £temporary5974, offset 8
+stdlib_test$30:	; Parameter 6 £temporary5974 8
 102:		mov [bp + 14], bx
 104:	
 
-stdlib_test$31:	; call function noellipse-ellipse printf, extra 0
+stdlib_test$31:	; Call 6 printf 0
 105:		mov word [bp + 6], stdlib_test$32
 106:		mov [bp + 8], bp
 107:		add bp, 6
@@ -623,17 +623,17 @@ stdlib_test$31:	; call function noellipse-ellipse printf, extra 0
 110:		jmp printf
 112:	
 
-stdlib_test$32:	; post call
+stdlib_test$32:	; PostCall 6
 114:	
 
-stdlib_test$33:	; call header integral zero 0 stack zero 0
+stdlib_test$33:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 116:	
 
-stdlib_test$34:	; parameter string_system2822dir22290A#, offset 6
+stdlib_test$34:	; Parameter 6 string_system2822dir22290A# 6
 117:		mov word [bp + 12], string_system2822dir22290A#
 119:	
 
-stdlib_test$35:	; call function noellipse-ellipse printf, extra 0
+stdlib_test$35:	; Call 6 printf 0
 120:		mov word [bp + 6], stdlib_test$36
 121:		mov [bp + 8], bp
 122:		add bp, 6
@@ -641,82 +641,82 @@ stdlib_test$35:	; call function noellipse-ellipse printf, extra 0
 124:		jmp printf
 126:	
 
-stdlib_test$36:	; post call
+stdlib_test$36:	; PostCall 6
 128:	
 
-stdlib_test$37:	; call header integral zero 0 stack zero 0
+stdlib_test$37:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 130:	
 
-stdlib_test$38:	; parameter string_dir#, offset 6
+stdlib_test$38:	; Parameter 6 string_dir# 6
 131:		mov word [bp + 12], string_dir#
 133:	
 
-stdlib_test$39:	; call function noellipse-noellipse system
+stdlib_test$39:	; Call 6 system 0
 134:		mov word [bp + 6], stdlib_test$40
 135:		mov [bp + 8], bp
 136:		add bp, 6
 137:		jmp system
 139:	
 
-stdlib_test$40:	; post call
+stdlib_test$40:	; PostCall 6
 141:	
 
-stdlib_test$41:	; call header integral zero 0 stack zero 0
+stdlib_test$41:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 143:	
 
-stdlib_test$42:	; parameter string_0Aabs282D329203D2025i2C20abs28329203D2025i0A#, offset 6
+stdlib_test$42:	; Parameter 6 string_0Aabs282D329203D2025i2C20abs28329203D2025i0A# 6
 144:		mov word [bp + 12], string_0Aabs282D329203D2025i2C20abs28329203D2025i0A#
 146:	
 
-stdlib_test$43:	; call header integral zero 0 stack zero 0
+stdlib_test$43:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 148:	
 
-stdlib_test$44:	; parameter -3, offset 14
+stdlib_test$44:	; Parameter 6 -3 14
 149:		mov word [bp + 20], -3
 151:	
 
-stdlib_test$45:	; call function noellipse-noellipse _abs
+stdlib_test$45:	; Call 6 _abs 8
 152:		mov word [bp + 14], stdlib_test$46
 153:		mov [bp + 16], bp
 154:		add bp, 14
 155:		jmp _abs
 157:	
 
-stdlib_test$46:	; post call
+stdlib_test$46:	; PostCall 6
 159:	
 
-stdlib_test$47:	; £temporary5978 = return_value
+stdlib_test$47:	; GetReturnValue £temporary5978
 164:	
 
-stdlib_test$48:	; parameter £temporary5978, offset 8
+stdlib_test$48:	; Parameter 6 £temporary5978 8
 165:		mov [bp + 14], bx
 167:	
 
-stdlib_test$49:	; call header integral zero 0 stack zero 0
+stdlib_test$49:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 169:	
 
-stdlib_test$50:	; parameter 3, offset 16
+stdlib_test$50:	; Parameter 6 3 16
 170:		mov word [bp + 22], 3
 172:	
 
-stdlib_test$51:	; call function noellipse-noellipse _abs
+stdlib_test$51:	; Call 6 _abs 10
 173:		mov word [bp + 16], stdlib_test$52
 174:		mov [bp + 18], bp
 175:		add bp, 16
 176:		jmp _abs
 178:	
 
-stdlib_test$52:	; post call
+stdlib_test$52:	; PostCall 6
 180:	
 
-stdlib_test$53:	; £temporary5979 = return_value
+stdlib_test$53:	; GetReturnValue £temporary5979
 185:	
 
-stdlib_test$54:	; parameter £temporary5979, offset 10
+stdlib_test$54:	; Parameter 6 £temporary5979 10
 186:		mov [bp + 16], bx
 188:	
 
-stdlib_test$55:	; call function noellipse-ellipse printf, extra 0
+stdlib_test$55:	; Call 6 printf 0
 189:		mov word [bp + 6], stdlib_test$56
 190:		mov [bp + 8], bp
 191:		add bp, 6
@@ -725,65 +725,65 @@ stdlib_test$55:	; call function noellipse-ellipse printf, extra 0
 194:		jmp printf
 196:	
 
-stdlib_test$56:	; post call
+stdlib_test$56:	; PostCall 6
 198:	
 
-stdlib_test$57:	; call header integral zero 0 stack zero 0
+stdlib_test$57:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 200:	
 
-stdlib_test$58:	; parameter string_labs282D3l29203D2025li2C20labs283l29203D2025li0A0A#, offset 6
+stdlib_test$58:	; Parameter 6 string_labs282D3l29203D2025li2C20labs283l29203D2025li0A0A# 6
 201:		mov word [bp + 12], string_labs282D3l29203D2025li2C20labs283l29203D2025li0A0A#
 203:	
 
-stdlib_test$59:	; call header integral zero 0 stack zero 0
+stdlib_test$59:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 205:	
 
-stdlib_test$60:	; parameter -3, offset 14
+stdlib_test$60:	; Parameter 6 -3 14
 206:		mov dword [bp + 20], -3
 208:	
 
-stdlib_test$61:	; call function noellipse-noellipse labs
+stdlib_test$61:	; Call 6 labs 8
 209:		mov word [bp + 14], stdlib_test$62
 210:		mov [bp + 16], bp
 211:		add bp, 14
 212:		jmp labs
 214:	
 
-stdlib_test$62:	; post call
+stdlib_test$62:	; PostCall 6
 216:	
 
-stdlib_test$63:	; £temporary5981 = return_value
+stdlib_test$63:	; GetReturnValue £temporary5981
 221:	
 
-stdlib_test$64:	; parameter £temporary5981, offset 8
+stdlib_test$64:	; Parameter 6 £temporary5981 8
 222:		mov [bp + 14], ebx
 224:	
 
-stdlib_test$65:	; call header integral zero 0 stack zero 0
+stdlib_test$65:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 226:	
 
-stdlib_test$66:	; parameter 3, offset 18
+stdlib_test$66:	; Parameter 6 3 18
 227:		mov dword [bp + 24], 3
 229:	
 
-stdlib_test$67:	; call function noellipse-noellipse labs
+stdlib_test$67:	; Call 6 labs 12
 230:		mov word [bp + 18], stdlib_test$68
 231:		mov [bp + 20], bp
 232:		add bp, 18
 233:		jmp labs
 235:	
 
-stdlib_test$68:	; post call
+stdlib_test$68:	; PostCall 6
 237:	
 
-stdlib_test$69:	; £temporary5982 = return_value
+stdlib_test$69:	; GetReturnValue £temporary5982
 242:	
 
-stdlib_test$70:	; parameter £temporary5982, offset 12
+stdlib_test$70:	; Parameter 6 £temporary5982 12
 243:		mov [bp + 18], ebx
 245:	
 
-stdlib_test$71:	; call function noellipse-ellipse printf, extra 0
+stdlib_test$71:	; Call 6 printf 0
 246:		mov word [bp + 6], stdlib_test$72
 247:		mov [bp + 8], bp
 248:		add bp, 6
@@ -792,34 +792,34 @@ stdlib_test$71:	; call function noellipse-ellipse printf, extra 0
 251:		jmp printf
 253:	
 
-stdlib_test$72:	; post call
+stdlib_test$72:	; PostCall 6
 255:	
 
-stdlib_test$73:	; call header integral zero 0 stack zero 0
+stdlib_test$73:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 257:	
 
-stdlib_test$74:	; parameter 10, offset 6
+stdlib_test$74:	; Parameter 6 10 6
 258:		mov word [bp + 12], 10
 260:	
 
-stdlib_test$75:	; parameter 3, offset 8
+stdlib_test$75:	; Parameter 6 3 8
 261:		mov word [bp + 14], 3
 263:	
 
-stdlib_test$76:	; call function noellipse-noellipse div
+stdlib_test$76:	; Call 6 div 0
 264:		mov word [bp + 6], stdlib_test$77
 265:		mov [bp + 8], bp
 266:		add bp, 6
 267:		jmp div
 269:	
 
-stdlib_test$77:	; post call
+stdlib_test$77:	; PostCall 6
 271:	
 
-stdlib_test$78:	; £temporary5984 -> £temporary5985 = return_value
+stdlib_test$78:	; GetReturnValue £temporary5984 -> £temporary5985
 273:	
 
-stdlib_test$79:	; i = £temporary5984 -> £temporary5985
+stdlib_test$79:	; Assign i £temporary5984 -> £temporary5985
 274:		mov si, bp
 275:		add si, 6
 276:		mov al, 4
@@ -835,24 +835,24 @@ stdlib_test$79$Loop:
 284:		jne stdlib_test$79$Loop
 286:	
 
-stdlib_test$80:	; call header integral zero 0 stack zero 0
+stdlib_test$80:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 288:	
 
-stdlib_test$81:	; parameter string_div_t28102C20329203D202825i2C2025i290A#, offset 6
+stdlib_test$81:	; Parameter 10 string_div_t28102C20329203D202825i2C2025i290A# 6
 289:		mov word [bp + 16], string_div_t28102C20329203D202825i2C2025i290A#
 291:	
 
-stdlib_test$82:	; parameter i$quot, offset 8
+stdlib_test$82:	; Parameter 10 i$quot 8
 292:		mov ax, [bp + 6]
 293:		mov [bp + 18], ax
 295:	
 
-stdlib_test$83:	; parameter i$rem, offset 10
+stdlib_test$83:	; Parameter 10 i$rem 10
 296:		mov ax, [bp + 8]
 297:		mov [bp + 20], ax
 299:	
 
-stdlib_test$84:	; call function noellipse-ellipse printf, extra 0
+stdlib_test$84:	; Call 10 printf 0
 300:		mov word [bp + 10], stdlib_test$85
 301:		mov [bp + 12], bp
 302:		add bp, 10
@@ -861,709 +861,715 @@ stdlib_test$84:	; call function noellipse-ellipse printf, extra 0
 305:		jmp printf
 307:	
 
-stdlib_test$85:	; post call
+stdlib_test$85:	; PostCall 10
 309:	
 
-stdlib_test$86:	; call header integral zero 0 stack zero 0
+stdlib_test$86:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 311:	
 
-stdlib_test$87:	; parameter i, offset 6
-312:		mov si, bp
-313:		add si, 6
-314:		mov di, bp
-315:		add di, 16
-316:		mov al, 4
-317:	
+stdlib_test$87:	; ParameterInitSize
+313:	
 
-stdlib_test$87$Loop:
-318:		mov ah, [si]
-319:		mov [di], ah
-320:		inc si
-321:		inc di
-322:		dec al
-323:		cmp al, 0
-324:		jne stdlib_test$87$Loop
-326:	
+stdlib_test$88:	; Parameter 10 i 6
+314:		mov si, bp
+315:		add si, 6
+316:		mov di, bp
+317:		add di, 16
+318:		mov al, 4
+319:	
 
-stdlib_test$88:	; call function noellipse-noellipse print_div
-327:		mov word [bp + 10], stdlib_test$89
-328:		mov [bp + 12], bp
-329:		add bp, 10
-330:		jmp print_div
-332:	
+stdlib_test$88$Loop:
+320:		mov ah, [si]
+321:		mov [di], ah
+322:		inc si
+323:		inc di
+324:		dec al
+325:		cmp al, 0
+326:		jne stdlib_test$88$Loop
+328:	
 
-stdlib_test$89:	; post call
+stdlib_test$89:	; Call 10 print_div 0
+329:		mov word [bp + 10], stdlib_test$90
+330:		mov [bp + 12], bp
+331:		add bp, 10
+332:		jmp print_div
 334:	
 
-stdlib_test$90:	; £temporary5989 -> £temporary5990 = return_value
+stdlib_test$90:	; PostCall 10
 336:	
 
-stdlib_test$91:	; j = £temporary5989 -> £temporary5990
-337:		mov si, bp
-338:		add si, 10
-339:		mov al, 4
-340:	
+stdlib_test$91:	; GetReturnValue £temporary5989 -> £temporary5990
+338:	
 
-stdlib_test$91$Loop:
-341:		mov ah, [bx]
-342:		mov [si], ah
-343:		inc bx
-344:		inc si
-345:		dec al
-346:		cmp al, 0
-347:		jne stdlib_test$91$Loop
-349:	
+stdlib_test$92:	; Assign j £temporary5989 -> £temporary5990
+339:		mov si, bp
+340:		add si, 10
+341:		mov al, 4
+342:	
 
-stdlib_test$92:	; call header integral zero 0 stack zero 0
+stdlib_test$92$Loop:
+343:		mov ah, [bx]
+344:		mov [si], ah
+345:		inc bx
+346:		inc si
+347:		dec al
+348:		cmp al, 0
+349:		jne stdlib_test$92$Loop
 351:	
 
-stdlib_test$93:	; parameter string_div_t28102C20329203D202825i2C2025i290A0A#, offset 6
-352:		mov word [bp + 20], string_div_t28102C20329203D202825i2C2025i290A0A#
-354:	
+stdlib_test$93:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+353:	
 
-stdlib_test$94:	; parameter j$quot, offset 8
-355:		mov ax, [bp + 10]
-356:		mov [bp + 22], ax
-358:	
+stdlib_test$94:	; Parameter 14 string_div_t28102C20329203D202825i2C2025i290A0A# 6
+354:		mov word [bp + 20], string_div_t28102C20329203D202825i2C2025i290A0A#
+356:	
 
-stdlib_test$95:	; parameter j$rem, offset 10
-359:		mov ax, [bp + 12]
-360:		mov [bp + 24], ax
-362:	
+stdlib_test$95:	; Parameter 14 j$quot 8
+357:		mov ax, [bp + 10]
+358:		mov [bp + 22], ax
+360:	
 
-stdlib_test$96:	; call function noellipse-ellipse printf, extra 0
-363:		mov word [bp + 14], stdlib_test$97
-364:		mov [bp + 16], bp
-365:		add bp, 14
-366:		mov di, bp
-367:		add di, 4
-368:		jmp printf
-370:	
+stdlib_test$96:	; Parameter 14 j$rem 10
+361:		mov ax, [bp + 12]
+362:		mov [bp + 24], ax
+364:	
 
-stdlib_test$97:	; post call
+stdlib_test$97:	; Call 14 printf 0
+365:		mov word [bp + 14], stdlib_test$98
+366:		mov [bp + 16], bp
+367:		add bp, 14
+368:		mov di, bp
+369:		add di, 4
+370:		jmp printf
 372:	
 
-stdlib_test$98:	; call header integral zero 0 stack zero 0
+stdlib_test$98:	; PostCall 14
 374:	
 
-stdlib_test$99:	; parameter 10, offset 6
-375:		mov dword [bp + 12], 10
-377:	
+stdlib_test$99:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+376:	
 
-stdlib_test$100:	; parameter 3, offset 10
-378:		mov dword [bp + 16], 3
-380:	
+stdlib_test$100:	; Parameter 6 10 6
+377:		mov dword [bp + 12], 10
+379:	
 
-stdlib_test$101:	; call function noellipse-noellipse ldiv
-381:		mov word [bp + 6], stdlib_test$102
-382:		mov [bp + 8], bp
-383:		add bp, 6
-384:		jmp ldiv
-386:	
+stdlib_test$101:	; Parameter 6 3 10
+380:		mov dword [bp + 16], 3
+382:	
 
-stdlib_test$102:	; post call
+stdlib_test$102:	; Call 6 ldiv 0
+383:		mov word [bp + 6], stdlib_test$103
+384:		mov [bp + 8], bp
+385:		add bp, 6
+386:		jmp ldiv
 388:	
 
-stdlib_test$103:	; £temporary5994 -> £temporary5995 = return_value
+stdlib_test$103:	; PostCall 6
 390:	
 
-stdlib_test$104:	; li = £temporary5994 -> £temporary5995
-391:		mov si, bp
-392:		add si, 6
-393:		mov al, 8
-394:	
+stdlib_test$104:	; GetReturnValue £temporary5994 -> £temporary5995
+392:	
 
-stdlib_test$104$Loop:
-395:		mov ah, [bx]
-396:		mov [si], ah
-397:		inc bx
-398:		inc si
-399:		dec al
-400:		cmp al, 0
-401:		jne stdlib_test$104$Loop
-403:	
+stdlib_test$105:	; Assign li £temporary5994 -> £temporary5995
+393:		mov si, bp
+394:		add si, 6
+395:		mov al, 8
+396:	
 
-stdlib_test$105:	; call header integral zero 0 stack zero 0
+stdlib_test$105$Loop:
+397:		mov ah, [bx]
+398:		mov [si], ah
+399:		inc bx
+400:		inc si
+401:		dec al
+402:		cmp al, 0
+403:		jne stdlib_test$105$Loop
 405:	
 
-stdlib_test$106:	; parameter string_ldiv_t28102C20329203D202825li2C2025li290A#, offset 6
-406:		mov word [bp + 20], string_ldiv_t28102C20329203D202825li2C2025li290A#
-408:	
+stdlib_test$106:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+407:	
 
-stdlib_test$107:	; parameter li$quot, offset 8
-409:		mov eax, [bp + 6]
-410:		mov [bp + 22], eax
-412:	
+stdlib_test$107:	; Parameter 14 string_ldiv_t28102C20329203D202825li2C2025li290A# 6
+408:		mov word [bp + 20], string_ldiv_t28102C20329203D202825li2C2025li290A#
+410:	
 
-stdlib_test$108:	; parameter li$rem, offset 12
-413:		mov eax, [bp + 10]
-414:		mov [bp + 26], eax
-416:	
+stdlib_test$108:	; Parameter 14 li$quot 8
+411:		mov eax, [bp + 6]
+412:		mov [bp + 22], eax
+414:	
 
-stdlib_test$109:	; call function noellipse-ellipse printf, extra 0
-417:		mov word [bp + 14], stdlib_test$110
-418:		mov [bp + 16], bp
-419:		add bp, 14
-420:		mov di, bp
-421:		add di, 8
-422:		jmp printf
-424:	
+stdlib_test$109:	; Parameter 14 li$rem 12
+415:		mov eax, [bp + 10]
+416:		mov [bp + 26], eax
+418:	
 
-stdlib_test$110:	; post call
+stdlib_test$110:	; Call 14 printf 0
+419:		mov word [bp + 14], stdlib_test$111
+420:		mov [bp + 16], bp
+421:		add bp, 14
+422:		mov di, bp
+423:		add di, 8
+424:		jmp printf
 426:	
 
-stdlib_test$111:	; call header integral zero 0 stack zero 0
+stdlib_test$111:	; PostCall 14
 428:	
 
-stdlib_test$112:	; parameter li, offset 6
-429:		mov si, bp
-430:		add si, 6
-431:		mov di, bp
-432:		add di, 20
-433:		mov al, 8
-434:	
+stdlib_test$112:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+430:	
 
-stdlib_test$112$Loop:
-435:		mov ah, [si]
-436:		mov [di], ah
-437:		inc si
-438:		inc di
-439:		dec al
-440:		cmp al, 0
-441:		jne stdlib_test$112$Loop
-443:	
+stdlib_test$113:	; ParameterInitSize
+432:	
 
-stdlib_test$113:	; call function noellipse-noellipse print_ldiv
-444:		mov word [bp + 14], stdlib_test$114
-445:		mov [bp + 16], bp
-446:		add bp, 14
-447:		jmp print_ldiv
-449:	
+stdlib_test$114:	; Parameter 14 li 6
+433:		mov si, bp
+434:		add si, 6
+435:		mov di, bp
+436:		add di, 20
+437:		mov al, 8
+438:	
 
-stdlib_test$114:	; post call
-451:	
+stdlib_test$114$Loop:
+439:		mov ah, [si]
+440:		mov [di], ah
+441:		inc si
+442:		inc di
+443:		dec al
+444:		cmp al, 0
+445:		jne stdlib_test$114$Loop
+447:	
 
-stdlib_test$115:	; £temporary5999 -> £temporary6000 = return_value
+stdlib_test$115:	; Call 14 print_ldiv 0
+448:		mov word [bp + 14], stdlib_test$116
+449:		mov [bp + 16], bp
+450:		add bp, 14
+451:		jmp print_ldiv
 453:	
 
-stdlib_test$116:	; lj = £temporary5999 -> £temporary6000
-454:		mov si, bp
-455:		add si, 14
-456:		mov al, 8
+stdlib_test$116:	; PostCall 14
+455:	
+
+stdlib_test$117:	; GetReturnValue £temporary5999 -> £temporary6000
 457:	
 
-stdlib_test$116$Loop:
-458:		mov ah, [bx]
-459:		mov [si], ah
-460:		inc bx
-461:		inc si
-462:		dec al
-463:		cmp al, 0
-464:		jne stdlib_test$116$Loop
-466:	
+stdlib_test$118:	; Assign lj £temporary5999 -> £temporary6000
+458:		mov si, bp
+459:		add si, 14
+460:		mov al, 8
+461:	
 
-stdlib_test$117:	; call header integral zero 0 stack zero 0
-468:	
+stdlib_test$118$Loop:
+462:		mov ah, [bx]
+463:		mov [si], ah
+464:		inc bx
+465:		inc si
+466:		dec al
+467:		cmp al, 0
+468:		jne stdlib_test$118$Loop
+470:	
 
-stdlib_test$118:	; parameter string_ldiv_t28102C20329203D202825li2C2025li290A0A#, offset 6
-469:		mov word [bp + 28], string_ldiv_t28102C20329203D202825li2C2025li290A0A#
-471:	
+stdlib_test$119:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+472:	
 
-stdlib_test$119:	; parameter lj$quot, offset 8
-472:		mov eax, [bp + 14]
-473:		mov [bp + 30], eax
+stdlib_test$120:	; Parameter 22 string_ldiv_t28102C20329203D202825li2C2025li290A0A# 6
+473:		mov word [bp + 28], string_ldiv_t28102C20329203D202825li2C2025li290A0A#
 475:	
 
-stdlib_test$120:	; parameter lj$rem, offset 12
-476:		mov eax, [bp + 18]
-477:		mov [bp + 34], eax
+stdlib_test$121:	; Parameter 22 lj$quot 8
+476:		mov eax, [bp + 14]
+477:		mov [bp + 30], eax
 479:	
 
-stdlib_test$121:	; call function noellipse-ellipse printf, extra 0
-480:		mov word [bp + 22], stdlib_test$122
-481:		mov [bp + 24], bp
-482:		add bp, 22
-483:		mov di, bp
-484:		add di, 8
-485:		jmp printf
-487:	
+stdlib_test$122:	; Parameter 22 lj$rem 12
+480:		mov eax, [bp + 18]
+481:		mov [bp + 34], eax
+483:	
 
-stdlib_test$122:	; post call
-489:	
+stdlib_test$123:	; Call 22 printf 0
+484:		mov word [bp + 22], stdlib_test$124
+485:		mov [bp + 24], bp
+486:		add bp, 22
+487:		mov di, bp
+488:		add di, 8
+489:		jmp printf
+491:	
 
-stdlib_test$123:	; list[0] = 3
-490:		mov word [bp + 6], 3
-492:	
+stdlib_test$124:	; PostCall 22
+493:	
 
-stdlib_test$124:	; list[1] = 4
-493:		mov word [bp + 8], 4
-495:	
+stdlib_test$125:	; Assign list[0] 3
+494:		mov word [bp + 6], 3
+496:	
 
-stdlib_test$125:	; list[2] = 2
-496:		mov word [bp + 10], 2
-498:	
+stdlib_test$126:	; Assign list[1] 4
+497:		mov word [bp + 8], 4
+499:	
 
-stdlib_test$126:	; list[3] = 1
-499:		mov word [bp + 12], 1
-501:	
+stdlib_test$127:	; Assign list[2] 2
+500:		mov word [bp + 10], 2
+502:	
 
-stdlib_test$127:	; size = 4
-502:		mov word [bp + 14], 4
-504:	
+stdlib_test$128:	; Assign list[3] 1
+503:		mov word [bp + 12], 1
+505:	
 
-stdlib_test$128:	; call header integral zero 0 stack zero 0
-506:	
+stdlib_test$129:	; Assign size 4
+506:		mov word [bp + 14], 4
+508:	
 
-stdlib_test$129:	; parameter string_0AA20List2013A20#, offset 6
-507:		mov word [bp + 24], string_0AA20List2013A20#
-509:	
+stdlib_test$130:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+510:	
 
-stdlib_test$130:	; call function noellipse-ellipse printf, extra 0
-510:		mov word [bp + 18], stdlib_test$131
-511:		mov [bp + 20], bp
-512:		add bp, 18
-513:		mov di, bp
-514:		jmp printf
-516:	
+stdlib_test$131:	; Parameter 18 string_0AA20List2013A20# 6
+511:		mov word [bp + 24], string_0AA20List2013A20#
+513:	
 
-stdlib_test$131:	; post call
-518:	
+stdlib_test$132:	; Call 18 printf 0
+514:		mov word [bp + 18], stdlib_test$133
+515:		mov [bp + 20], bp
+516:		add bp, 18
+517:		mov di, bp
+518:		jmp printf
+520:	
 
-stdlib_test$132:	; index = 0
-519:		mov word [bp + 16], 0
-521:	
+stdlib_test$133:	; PostCall 18
+522:	
 
-stdlib_test$133:	; if index >= size goto 144
-522:		mov ax, [bp + 14]
-523:		cmp [bp + 16], ax
-524:		jge stdlib_test$144
-526:	
+stdlib_test$134:	; Assign index 0
+523:		mov word [bp + 16], 0
+525:	
 
-stdlib_test$134:	; call header integral zero 0 stack zero 0
-528:	
+stdlib_test$135:	; SignedGreaterThanEqual 146 index size
+526:		mov ax, [bp + 14]
+527:		cmp [bp + 16], ax
+528:		jge stdlib_test$146
+530:	
 
-stdlib_test$135:	; parameter string_25i20#, offset 6
-529:		mov word [bp + 24], string_25i20#
-531:	
+stdlib_test$136:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+532:	
 
-stdlib_test$136:	; £temporary6012 = index * 2
-532:		mov ax, [bp + 16]
-534:		xor dx, dx
-535:		mul word [int2$2#]
-541:	
+stdlib_test$137:	; Parameter 18 string_25i20# 6
+533:		mov word [bp + 24], string_25i20#
+535:	
 
-stdlib_test$137:	; £temporary6013 = list + £temporary6012
-542:		mov si, bp
-543:		add si, 6
-544:		add si, ax
-546:	
+stdlib_test$138:	; UnsignedMultiply £temporary6012 index 2
+536:		mov ax, [bp + 16]
+538:		xor dx, dx
+539:		mul word [int2$2#]
+545:	
 
-stdlib_test$138:	; £temporary6014 -> £temporary6013 = *£temporary6013
-548:	
+stdlib_test$139:	; BinaryAdd £temporary6013 list £temporary6012
+546:		mov si, bp
+547:		add si, 6
+548:		add si, ax
+550:	
 
-stdlib_test$139:	; parameter £temporary6014 -> £temporary6013, offset 8
-549:		mov ax, [si]
-550:		mov [bp + 26], ax
+stdlib_test$140:	; Deref £temporary6014 -> £temporary6013 £temporary6013 0
 552:	
 
-stdlib_test$140:	; call function noellipse-ellipse printf, extra 0
-553:		mov word [bp + 18], stdlib_test$141
-554:		mov [bp + 20], bp
-555:		add bp, 18
-556:		mov di, bp
-557:		add di, 2
-558:		jmp printf
-560:	
+stdlib_test$141:	; Parameter 18 £temporary6014 -> £temporary6013 8
+553:		mov ax, [si]
+554:		mov [bp + 26], ax
+556:	
 
-stdlib_test$141:	; post call
-562:	
+stdlib_test$142:	; Call 18 printf 0
+557:		mov word [bp + 18], stdlib_test$143
+558:		mov [bp + 20], bp
+559:		add bp, 18
+560:		mov di, bp
+561:		add di, 2
+562:		jmp printf
+564:	
 
-stdlib_test$142:	; ++index
-563:		inc word [bp + 16]
-565:	
+stdlib_test$143:	; PostCall 18
+566:	
 
-stdlib_test$143:	; goto 133
-566:		jmp stdlib_test$133
-568:	
+stdlib_test$144:	; Increment index
+567:		inc word [bp + 16]
+569:	
 
-stdlib_test$144:	; call header integral zero 0 stack zero 0
-570:	
+stdlib_test$145:	; Goto 135
+570:		jmp stdlib_test$135
+572:	
 
-stdlib_test$145:	; parameter string_0AB20List2023A20#, offset 6
-571:		mov word [bp + 24], string_0AB20List2023A20#
-573:	
+stdlib_test$146:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+574:	
 
-stdlib_test$146:	; call function noellipse-ellipse printf, extra 0
-574:		mov word [bp + 18], stdlib_test$147
-575:		mov [bp + 20], bp
-576:		add bp, 18
-577:		mov di, bp
-578:		jmp printf
-580:	
+stdlib_test$147:	; Parameter 18 string_0AB20List2023A20# 6
+575:		mov word [bp + 24], string_0AB20List2023A20#
+577:	
 
-stdlib_test$147:	; post call
-582:	
-
-stdlib_test$148:	; call header integral zero 0 stack zero 0
+stdlib_test$148:	; Call 18 printf 0
+578:		mov word [bp + 18], stdlib_test$149
+579:		mov [bp + 20], bp
+580:		add bp, 18
+581:		mov di, bp
+582:		jmp printf
 584:	
 
-stdlib_test$149:	; parameter list, offset 6
-585:		mov [bp + 24], bp
-586:		add word [bp + 24], 6
+stdlib_test$149:	; PostCall 18
+586:	
+
+stdlib_test$150:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 588:	
 
-stdlib_test$150:	; parameter size, offset 8
-589:		mov ax, [bp + 14]
-590:		mov [bp + 26], ax
+stdlib_test$151:	; Parameter 18 list 6
+589:		mov [bp + 24], bp
+590:		add word [bp + 24], 6
 592:	
 
-stdlib_test$151:	; parameter 2, offset 10
-593:		mov word [bp + 28], 2
-595:	
+stdlib_test$152:	; Parameter 18 size 8
+593:		mov ax, [bp + 14]
+594:		mov [bp + 26], ax
+596:	
 
-stdlib_test$152:	; parameter compare, offset 12
-596:		mov word [bp + 30], compare
-598:	
+stdlib_test$153:	; Parameter 18 2 10
+597:		mov word [bp + 28], 2
+599:	
 
-stdlib_test$153:	; call function noellipse-noellipse qsort
-599:		mov word [bp + 18], stdlib_test$154
-600:		mov [bp + 20], bp
-601:		add bp, 18
-602:		jmp qsort
-604:	
+stdlib_test$154:	; Parameter 18 compare 12
+600:		mov word [bp + 30], compare
+602:	
 
-stdlib_test$154:	; post call
-606:	
+stdlib_test$155:	; Call 18 qsort 0
+603:		mov word [bp + 18], stdlib_test$156
+604:		mov [bp + 20], bp
+605:		add bp, 18
+606:		jmp qsort
+608:	
 
-stdlib_test$155:	; index = 0
-607:		mov word [bp + 16], 0
-609:	
+stdlib_test$156:	; PostCall 18
+610:	
 
-stdlib_test$156:	; if index >= size goto 167
-610:		mov ax, [bp + 14]
-611:		cmp [bp + 16], ax
-612:		jge stdlib_test$167
-614:	
+stdlib_test$157:	; Assign index 0
+611:		mov word [bp + 16], 0
+613:	
 
-stdlib_test$157:	; call header integral zero 0 stack zero 0
-616:	
+stdlib_test$158:	; SignedGreaterThanEqual 169 index size
+614:		mov ax, [bp + 14]
+615:		cmp [bp + 16], ax
+616:		jge stdlib_test$169
+618:	
 
-stdlib_test$158:	; parameter string_25i20#, offset 6
-617:		mov word [bp + 24], string_25i20#
-619:	
+stdlib_test$159:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+620:	
 
-stdlib_test$159:	; £temporary6021 = index * 2
-620:		mov ax, [bp + 16]
-622:		xor dx, dx
-623:		mul word [int2$2#]
-629:	
+stdlib_test$160:	; Parameter 18 string_25i20# 6
+621:		mov word [bp + 24], string_25i20#
+623:	
 
-stdlib_test$160:	; £temporary6022 = list + £temporary6021
-630:		mov si, bp
-631:		add si, 6
-632:		add si, ax
-634:	
+stdlib_test$161:	; UnsignedMultiply £temporary6021 index 2
+624:		mov ax, [bp + 16]
+626:		xor dx, dx
+627:		mul word [int2$2#]
+633:	
 
-stdlib_test$161:	; £temporary6023 -> £temporary6022 = *£temporary6022
-636:	
+stdlib_test$162:	; BinaryAdd £temporary6022 list £temporary6021
+634:		mov si, bp
+635:		add si, 6
+636:		add si, ax
+638:	
 
-stdlib_test$162:	; parameter £temporary6023 -> £temporary6022, offset 8
-637:		mov ax, [si]
-638:		mov [bp + 26], ax
+stdlib_test$163:	; Deref £temporary6023 -> £temporary6022 £temporary6022 0
 640:	
 
-stdlib_test$163:	; call function noellipse-ellipse printf, extra 0
-641:		mov word [bp + 18], stdlib_test$164
-642:		mov [bp + 20], bp
-643:		add bp, 18
-644:		mov di, bp
-645:		add di, 2
-646:		jmp printf
-648:	
+stdlib_test$164:	; Parameter 18 £temporary6023 -> £temporary6022 8
+641:		mov ax, [si]
+642:		mov [bp + 26], ax
+644:	
 
-stdlib_test$164:	; post call
-650:	
+stdlib_test$165:	; Call 18 printf 0
+645:		mov word [bp + 18], stdlib_test$166
+646:		mov [bp + 20], bp
+647:		add bp, 18
+648:		mov di, bp
+649:		add di, 2
+650:		jmp printf
+652:	
 
-stdlib_test$165:	; ++index
-651:		inc word [bp + 16]
-653:	
+stdlib_test$166:	; PostCall 18
+654:	
 
-stdlib_test$166:	; goto 156
-654:		jmp stdlib_test$156
-656:	
+stdlib_test$167:	; Increment index
+655:		inc word [bp + 16]
+657:	
 
-stdlib_test$167:	; call header integral zero 0 stack zero 0
-658:	
+stdlib_test$168:	; Goto 158
+658:		jmp stdlib_test$158
+660:	
 
-stdlib_test$168:	; parameter string_0AC20List2033A20#, offset 6
-659:		mov word [bp + 24], string_0AC20List2033A20#
-661:	
+stdlib_test$169:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+662:	
 
-stdlib_test$169:	; call function noellipse-ellipse printf, extra 0
-662:		mov word [bp + 18], stdlib_test$170
-663:		mov [bp + 20], bp
-664:		add bp, 18
-665:		mov di, bp
-666:		jmp printf
-668:	
+stdlib_test$170:	; Parameter 18 string_0AC20List2033A20# 6
+663:		mov word [bp + 24], string_0AC20List2033A20#
+665:	
 
-stdlib_test$170:	; post call
-670:	
-
-stdlib_test$171:	; call header integral zero 0 stack zero 0
+stdlib_test$171:	; Call 18 printf 0
+666:		mov word [bp + 18], stdlib_test$172
+667:		mov [bp + 20], bp
+668:		add bp, 18
+669:		mov di, bp
+670:		jmp printf
 672:	
 
-stdlib_test$172:	; parameter list, offset 6
-673:		mov [bp + 24], bp
-674:		add word [bp + 24], 6
+stdlib_test$172:	; PostCall 18
+674:	
+
+stdlib_test$173:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 676:	
 
-stdlib_test$173:	; parameter size, offset 8
-677:		mov ax, [bp + 14]
-678:		mov [bp + 26], ax
+stdlib_test$174:	; Parameter 18 list 6
+677:		mov [bp + 24], bp
+678:		add word [bp + 24], 6
 680:	
 
-stdlib_test$174:	; parameter 2, offset 10
-681:		mov word [bp + 28], 2
-683:	
+stdlib_test$175:	; Parameter 18 size 8
+681:		mov ax, [bp + 14]
+682:		mov [bp + 26], ax
+684:	
 
-stdlib_test$175:	; parameter reverse_compare, offset 12
-684:		mov word [bp + 30], reverse_compare
-686:	
+stdlib_test$176:	; Parameter 18 2 10
+685:		mov word [bp + 28], 2
+687:	
 
-stdlib_test$176:	; call function noellipse-noellipse qsort
-687:		mov word [bp + 18], stdlib_test$177
-688:		mov [bp + 20], bp
-689:		add bp, 18
-690:		jmp qsort
-692:	
+stdlib_test$177:	; Parameter 18 reverse_compare 12
+688:		mov word [bp + 30], reverse_compare
+690:	
 
-stdlib_test$177:	; post call
-694:	
+stdlib_test$178:	; Call 18 qsort 0
+691:		mov word [bp + 18], stdlib_test$179
+692:		mov [bp + 20], bp
+693:		add bp, 18
+694:		jmp qsort
+696:	
 
-stdlib_test$178:	; index = 0
-695:		mov word [bp + 16], 0
-697:	
+stdlib_test$179:	; PostCall 18
+698:	
 
-stdlib_test$179:	; if index >= size goto 190
-698:		mov ax, [bp + 14]
-699:		cmp [bp + 16], ax
-700:		jge stdlib_test$190
-702:	
+stdlib_test$180:	; Assign index 0
+699:		mov word [bp + 16], 0
+701:	
 
-stdlib_test$180:	; call header integral zero 0 stack zero 0
-704:	
+stdlib_test$181:	; SignedGreaterThanEqual 192 index size
+702:		mov ax, [bp + 14]
+703:		cmp [bp + 16], ax
+704:		jge stdlib_test$192
+706:	
 
-stdlib_test$181:	; parameter string_25i20#, offset 6
-705:		mov word [bp + 24], string_25i20#
-707:	
+stdlib_test$182:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+708:	
 
-stdlib_test$182:	; £temporary6030 = index * 2
-708:		mov ax, [bp + 16]
-710:		xor dx, dx
-711:		mul word [int2$2#]
-717:	
+stdlib_test$183:	; Parameter 18 string_25i20# 6
+709:		mov word [bp + 24], string_25i20#
+711:	
 
-stdlib_test$183:	; £temporary6031 = list + £temporary6030
-718:		mov si, bp
-719:		add si, 6
-720:		add si, ax
-722:	
+stdlib_test$184:	; UnsignedMultiply £temporary6030 index 2
+712:		mov ax, [bp + 16]
+714:		xor dx, dx
+715:		mul word [int2$2#]
+721:	
 
-stdlib_test$184:	; £temporary6032 -> £temporary6031 = *£temporary6031
-724:	
+stdlib_test$185:	; BinaryAdd £temporary6031 list £temporary6030
+722:		mov si, bp
+723:		add si, 6
+724:		add si, ax
+726:	
 
-stdlib_test$185:	; parameter £temporary6032 -> £temporary6031, offset 8
-725:		mov ax, [si]
-726:		mov [bp + 26], ax
+stdlib_test$186:	; Deref £temporary6032 -> £temporary6031 £temporary6031 0
 728:	
 
-stdlib_test$186:	; call function noellipse-ellipse printf, extra 0
-729:		mov word [bp + 18], stdlib_test$187
-730:		mov [bp + 20], bp
-731:		add bp, 18
-732:		mov di, bp
-733:		add di, 2
-734:		jmp printf
-736:	
+stdlib_test$187:	; Parameter 18 £temporary6032 -> £temporary6031 8
+729:		mov ax, [si]
+730:		mov [bp + 26], ax
+732:	
 
-stdlib_test$187:	; post call
-738:	
+stdlib_test$188:	; Call 18 printf 0
+733:		mov word [bp + 18], stdlib_test$189
+734:		mov [bp + 20], bp
+735:		add bp, 18
+736:		mov di, bp
+737:		add di, 2
+738:		jmp printf
+740:	
 
-stdlib_test$188:	; ++index
-739:		inc word [bp + 16]
-741:	
+stdlib_test$189:	; PostCall 18
+742:	
 
-stdlib_test$189:	; goto 179
-742:		jmp stdlib_test$179
-744:	
+stdlib_test$190:	; Increment index
+743:		inc word [bp + 16]
+745:	
 
-stdlib_test$190:	; call header integral zero 0 stack zero 0
-746:	
+stdlib_test$191:	; Goto 181
+746:		jmp stdlib_test$181
+748:	
 
-stdlib_test$191:	; parameter string_0A0ASearch3A0A#, offset 6
-747:		mov word [bp + 24], string_0A0ASearch3A0A#
-749:	
+stdlib_test$192:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+750:	
 
-stdlib_test$192:	; call function noellipse-ellipse printf, extra 0
-750:		mov word [bp + 18], stdlib_test$193
-751:		mov [bp + 20], bp
-752:		add bp, 18
-753:		mov di, bp
-754:		jmp printf
-756:	
+stdlib_test$193:	; Parameter 18 string_0A0ASearch3A0A# 6
+751:		mov word [bp + 24], string_0A0ASearch3A0A#
+753:	
 
-stdlib_test$193:	; post call
-758:	
+stdlib_test$194:	; Call 18 printf 0
+754:		mov word [bp + 18], stdlib_test$195
+755:		mov [bp + 20], bp
+756:		add bp, 18
+757:		mov di, bp
+758:		jmp printf
+760:	
 
-stdlib_test$194:	; key = 0
-759:		mov word [bp + 16], 0
-761:	
+stdlib_test$195:	; PostCall 18
+762:	
 
-stdlib_test$195:	; if key >= 6 goto 222
-762:		cmp word [bp + 16], 6
-763:		jge stdlib_test$222
+stdlib_test$196:	; Assign key 0
+763:		mov word [bp + 16], 0
 765:	
 
-stdlib_test$196:	; call header integral zero 0 stack zero 0
-767:	
+stdlib_test$197:	; SignedGreaterThanEqual 224 key 6
+766:		cmp word [bp + 16], 6
+767:		jge stdlib_test$224
+769:	
 
-stdlib_test$197:	; £temporary6037 = &key
-768:		mov si, bp
-769:		add si, 16
+stdlib_test$198:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 771:	
 
-stdlib_test$198:	; parameter £temporary6037, offset 6
-772:		mov [bp + 24], si
-774:	
+stdlib_test$199:	; address £temporary6037 key
+772:		mov si, bp
+773:		add si, 16
+775:	
 
-stdlib_test$199:	; parameter list, offset 8
-775:		mov [bp + 26], bp
-776:		add word [bp + 26], 6
+stdlib_test$200:	; Parameter 18 £temporary6037 6
+776:		mov [bp + 24], si
 778:	
 
-stdlib_test$200:	; parameter size, offset 10
-779:		mov ax, [bp + 14]
-780:		mov [bp + 28], ax
+stdlib_test$201:	; Parameter 18 list 8
+779:		mov [bp + 26], bp
+780:		add word [bp + 26], 6
 782:	
 
-stdlib_test$201:	; parameter 2, offset 12
-783:		mov word [bp + 30], 2
-785:	
+stdlib_test$202:	; Parameter 18 size 10
+783:		mov ax, [bp + 14]
+784:		mov [bp + 28], ax
+786:	
 
-stdlib_test$202:	; parameter compare, offset 14
-786:		mov word [bp + 32], compare
-788:	
+stdlib_test$203:	; Parameter 18 2 12
+787:		mov word [bp + 30], 2
+789:	
 
-stdlib_test$203:	; call function noellipse-noellipse bsearch
-789:		mov word [bp + 18], stdlib_test$204
-790:		mov [bp + 20], bp
-791:		add bp, 18
-792:		jmp bsearch
-794:	
+stdlib_test$204:	; Parameter 18 compare 14
+790:		mov word [bp + 32], compare
+792:	
 
-stdlib_test$204:	; post call
-796:	
+stdlib_test$205:	; Call 18 bsearch 0
+793:		mov word [bp + 18], stdlib_test$206
+794:		mov [bp + 20], bp
+795:		add bp, 18
+796:		jmp bsearch
+798:	
 
-stdlib_test$205:	; £temporary6039 = return_value
-801:	
+stdlib_test$206:	; PostCall 18
+800:	
 
-stdlib_test$206:	; £temporary6040 = int_to_int £temporary6039 (Pointer -> Pointer)
-804:	
+stdlib_test$207:	; GetReturnValue £temporary6039
+805:	
 
-stdlib_test$207:	; p = £temporary6040
-805:		mov [bp + 18], bx
-807:	
+stdlib_test$208:	; IntegralToIntegral £temporary6040 £temporary6039
+808:	
 
-stdlib_test$208:	; if p == 0 goto 212
-808:		cmp word [bp + 18], 0
-809:		je stdlib_test$212
+stdlib_test$209:	; Assign p £temporary6040
+809:		mov [bp + 18], bx
 811:	
 
-stdlib_test$209:	; £temporary6042 = p - list
-812:		mov ax, [bp + 18]
-813:		mov bx, bp
-814:		add bx, 6
-815:		sub ax, bx
-817:	
+stdlib_test$210:	; Equal 214 p 0
+812:		cmp word [bp + 18], 0
+813:		je stdlib_test$214
+815:	
 
-stdlib_test$210:	; £temporary6047 = £temporary6042 / 2
-819:		xor dx, dx
-820:		div word [int2$2#]
-826:	
+stdlib_test$211:	; BinarySubtract £temporary6042 p list
+816:		mov ax, [bp + 18]
+817:		mov bx, bp
+818:		add bx, 6
+819:		sub ax, bx
+821:	
 
-stdlib_test$211:	; goto 213
-827:		jmp stdlib_test$213
-829:	
+stdlib_test$212:	; UnsignedDivide £temporary6047 £temporary6042 2
+823:		xor dx, dx
+824:		div word [int2$2#]
+830:	
 
-stdlib_test$212:	; £temporary6047 = -1
-830:		mov ax, -1
-832:	
+stdlib_test$213:	; Goto 215
+831:		jmp stdlib_test$215
+833:	
 
-stdlib_test$213:	; index = £temporary6047
-833:		mov [bp + 20], ax
-835:	
+stdlib_test$214:	; Assign £temporary6047 -1
+834:		mov ax, -1
+836:	
 
-stdlib_test$214:	; call header integral zero 0 stack zero 0
-837:	
+stdlib_test$215:	; Assign index £temporary6047
+837:		mov [bp + 20], ax
+839:	
 
-stdlib_test$215:	; parameter string_20202825i2C2025i290A#, offset 6
-838:		mov word [bp + 28], string_20202825i2C2025i290A#
-840:	
+stdlib_test$216:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+841:	
 
-stdlib_test$216:	; parameter key, offset 8
-841:		mov ax, [bp + 16]
-842:		mov [bp + 30], ax
+stdlib_test$217:	; Parameter 22 string_20202825i2C2025i290A# 6
+842:		mov word [bp + 28], string_20202825i2C2025i290A#
 844:	
 
-stdlib_test$217:	; parameter index, offset 10
-845:		mov ax, [bp + 20]
-846:		mov [bp + 32], ax
+stdlib_test$218:	; Parameter 22 key 8
+845:		mov ax, [bp + 16]
+846:		mov [bp + 30], ax
 848:	
 
-stdlib_test$218:	; call function noellipse-ellipse printf, extra 0
-849:		mov word [bp + 22], stdlib_test$219
-850:		mov [bp + 24], bp
-851:		add bp, 22
-852:		mov di, bp
-853:		add di, 4
-854:		jmp printf
-856:	
+stdlib_test$219:	; Parameter 22 index 10
+849:		mov ax, [bp + 20]
+850:		mov [bp + 32], ax
+852:	
 
-stdlib_test$219:	; post call
-858:	
+stdlib_test$220:	; Call 22 printf 0
+853:		mov word [bp + 22], stdlib_test$221
+854:		mov [bp + 24], bp
+855:		add bp, 22
+856:		mov di, bp
+857:		add di, 4
+858:		jmp printf
+860:	
 
-stdlib_test$220:	; ++key
-859:		inc word [bp + 16]
-861:	
+stdlib_test$221:	; PostCall 22
+862:	
 
-stdlib_test$221:	; goto 195
-862:		jmp stdlib_test$195
-864:	
+stdlib_test$222:	; Increment key
+863:		inc word [bp + 16]
+865:	
 
-stdlib_test$222:	; call header integral zero 0 stack zero 0
-866:	
+stdlib_test$223:	; Goto 197
+866:		jmp stdlib_test$197
+868:	
 
-stdlib_test$223:	; parameter string_0A#, offset 6
-867:		mov word [bp + 22], string_0A#
-869:	
+stdlib_test$224:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+870:	
 
-stdlib_test$224:	; call function noellipse-ellipse printf, extra 0
-870:		mov word [bp + 16], stdlib_test$225
-871:		mov [bp + 18], bp
-872:		add bp, 16
-873:		mov di, bp
-874:		jmp printf
-876:	
+stdlib_test$225:	; Parameter 16 string_0A# 6
+871:		mov word [bp + 22], string_0A#
+873:	
 
-stdlib_test$225:	; post call
-878:	
+stdlib_test$226:	; Call 16 printf 0
+874:		mov word [bp + 16], stdlib_test$227
+875:		mov [bp + 18], bp
+876:		add bp, 16
+877:		mov di, bp
+878:		jmp printf
+880:	
 
-stdlib_test$226:	; return
-879:		mov ax, [bp]
-880:		mov di, [bp + 4]
-881:		mov bp, [bp + 2]
-882:		jmp ax
-884:	
+stdlib_test$227:	; PostCall 16
+882:	
 
-stdlib_test$227:	; function end stdlib_test
+stdlib_test$228:	; Return 0
+883:		mov ax, [bp]
+884:		mov di, [bp + 4]
+885:		mov bp, [bp + 2]
+886:		jmp ax
+888:	
+
+stdlib_test$229:	; FunctionEnd stdlib_test

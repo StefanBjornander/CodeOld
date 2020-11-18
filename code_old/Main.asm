@@ -32,7 +32,6 @@
 	extern stderr
 	extern fprintf
 	extern abort
-	extern string_test
 	extern mktime
 	extern character_test
 	global _start
@@ -1114,11 +1113,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  main$1:
-	; Call 24 string_test 0
+	; Call 24 time_test 0
 	mov qword [rbp + 24], main$2
 	mov [rbp + 32], rbp
 	add rbp, 24
-	jmp string_test
+	jmp time_test
 
  main$2:
 	; PostCall 24
@@ -2063,8 +2062,8 @@ section .text
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
  assert_test$17:
-	; Parameter 84 signedint 876
-	mov dword [rbp + 84], 876
+	; Parameter 84 signedint 877
+	mov dword [rbp + 84], 877
 
  assert_test$18:
 	; Call 28 fprintf 20
@@ -2153,8 +2152,8 @@ section .text
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 
  assert_test2$6:
-	; Parameter 84 signedint 881
-	mov dword [rbp + 84], 881
+	; Parameter 84 signedint 882
+	mov dword [rbp + 84], 882
 
  assert_test2$7:
 	; Call 28 fprintf 20

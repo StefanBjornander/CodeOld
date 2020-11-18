@@ -1,0 +1,16 @@
+0: address £temporary2402 format
+1: IntegralToIntegral £temporary2403 £temporary2402
+2: BinaryAdd £temporary2404 £temporary2403 2
+3: Assign arg_list £temporary2404
+4: CallHeader 12
+5: Parameter 12 outString 6
+6: Parameter 12 format 8
+7: Parameter 12 arg_list 10
+8: Call 12 vsprintf 0
+9: PostCall 12
+10: GetReturnValue £temporary2405
+11: SetReturnValue £temporary2405
+12: Return £temporary2405
+13: Empty
+14: Return 0
+15: FunctionEnd sprintf

@@ -973,9 +973,9 @@ add [ 1 ] = '\0' ;
 }
 
 { int x = strlen ( s ) , y = strlen ( add ) ;
-
 if ( ( x + y ) < smax ) {
 strcat ( s , add ) ;
+
 }
 else {
 break ;

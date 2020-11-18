@@ -454,9 +454,9 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
       }
 
       { int x = strlen(s), y = strlen(add);
-        
         if ((x + y) < smax) {
           strcat(s, add);
+          //printf("");
         }
         else {
           break;

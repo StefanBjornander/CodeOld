@@ -1,0 +1,29 @@
+0: Assign index 0
+1: Empty
+2: SignedLessThan Empty index g_tempSize
+3: Goto SetReturnValue 0
+4: CheckTrackMapFloatStack
+5: Empty
+6: CallHeader 10 strcmp
+7: Parameter 10 name 6
+8: UnsignedMultiply £temporary1183 index 2
+9: BinaryAdd £temporary1184 g_tempArray £temporary1183
+10: Deref £temporary1182 -> £temporary1184 £temporary1184 0
+11: Parameter 10 £temporary1182 -> £temporary1184 8
+12: Call 10 strcmp 0
+13: PostCall 10
+14: GetReturnValue £temporary1185
+15: Equal SetReturnValue 1 £temporary1185 0
+16: Goto Empty
+17: CheckTrackMapFloatStack
+18: SetReturnValue 1
+19: Return 1
+20: Goto Empty
+21: Empty
+22: BinaryAdd index index 1
+23: Goto Empty
+24: SetReturnValue 0
+25: Return 0
+26: Empty
+27: Return 0
+28: FunctionEnd existsTempName

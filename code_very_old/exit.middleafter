@@ -8,7 +8,7 @@
 7: £temporary2514 = g_funcArray + £temporary2513
 8: £temporary2512 -> £temporary2514 = *£temporary2514
 9: if £temporary2512 -> £temporary2514 == int2$0# goto 25
-10: call header integral zero 0 stack zero 0
+10: call header integral zero 0 stack zero 0XXX
 11: parameter string_Called20function20index2025i3A2025i0A#, offset 16
 12: parameter index, offset 18
 13: £temporary2517 = index * int2$2#

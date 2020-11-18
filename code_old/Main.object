@@ -939,11 +939,11 @@ maina$25:	; FunctionEnd maina
 main:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 12:	
 
-main$1:	; Call 6 string_test 0
+main$1:	; Call 6 time_test 0
 13:		mov word [bp + 6], main$2
 14:		mov [bp + 8], bp
 15:		add bp, 6
-16:		jmp string_test
+16:		jmp time_test
 18:	
 
 main$2:	; PostCall 6
@@ -1761,8 +1761,8 @@ assert_test$16:	; Parameter 8 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chom
 57:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 59:	
 
-assert_test$17:	; Parameter 8 873 14
-60:		mov word [bp + 22], 873
+assert_test$17:	; Parameter 8 874 14
+60:		mov word [bp + 22], 874
 62:	
 
 assert_test$18:	; Call 8 fprintf 0
@@ -1843,8 +1843,8 @@ assert_test2$5:	; Parameter 8 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chom
 18:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 20:	
 
-assert_test2$6:	; Parameter 8 878 14
-21:		mov word [bp + 22], 878
+assert_test2$6:	; Parameter 8 879 14
+21:		mov word [bp + 22], 879
 23:	
 
 assert_test2$7:	; Call 8 fprintf 0

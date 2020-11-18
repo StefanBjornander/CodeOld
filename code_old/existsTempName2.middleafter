@@ -1,0 +1,19 @@
+0: Assign index 0
+1: SignedGreaterThanEqual 16 index g_tempSize
+2: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+3: Parameter 10 name 6
+4: UnsignedMultiply £temporary1183 index 2
+5: BinaryAdd £temporary1184 g_tempArray £temporary1183
+6: Deref £temporary1182 -> £temporary1184 £temporary1184 0
+7: Parameter 10 £temporary1182 -> £temporary1184 8
+8: Call 10 strcmp 0
+9: PostCall 10
+10: GetReturnValue £temporary1185
+11: NotEqual 14 £temporary1185 0
+12: SetReturnValue 1
+13: Return 1
+14: Increment index
+15: Goto 1
+16: SetReturnValue 0
+17: Return 0
+18: FunctionEnd existsTempName

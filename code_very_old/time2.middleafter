@@ -1,0 +1,10 @@
+
+
+
+  if (localeConvPtr != NULL) {
+    hour -= localeConvPtr->winterTimeZone;
+  }
+
+22: Deref £temporary3427 -> localeConvPtr localeConvPtr 2
+23: IntegralToIntegral £temporary3428 £temporary3427 -> localeConvPtr
+24: BinarySubtract hour hour £temporary3428

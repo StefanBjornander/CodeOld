@@ -1,0 +1,80 @@
+0: SignedLessThan Assign c 97 size 3
+1: Goto SetReturnValue 0
+2: CheckTrackMapFloatStack
+3: Assign c 97
+4: Empty
+5: SignedLessThanEqual Empty c 122
+6: Goto SetReturnValue 0
+7: CheckTrackMapFloatStack
+8: Empty
+9: BinaryAdd £temporary1191 name size
+10: Deref £temporary1190 -> £temporary1191 £temporary1191 0
+11: Assign £temporary1190 -> £temporary1191 c
+12: BinaryAdd £temporary1192 size 1
+13: BinaryAdd £temporary1194 name £temporary1192
+14: Deref £temporary1193 -> £temporary1194 £temporary1194 0
+15: Assign £temporary1193 -> £temporary1194 0
+16: CallHeader 13 fileexists
+17: Parameter 13 name 6
+18: Call 13 fileexists 0
+19: PostCall 13
+20: GetReturnValue £temporary1195
+21: NotEqual CallHeader 13 generateTempName £temporary1195 0
+22: Goto Case SetReturnValue name status 0
+23: CheckTrackMapFloatStack
+24: Case SetReturnValue name status 0
+25: Case CallHeader 13 existsTempName status 1
+26: CaseEnd status
+27: Goto CallHeader 13 generateTempName
+28: SetReturnValue name
+29: Return name
+30: CallHeader 13 existsTempName
+31: Parameter 13 name 6
+32: Call 13 existsTempName 0
+33: PostCall 13
+34: GetReturnValue £temporary1198
+35: NotEqual Goto CallHeader 13 generateTempName £temporary1198 0
+36: Goto CallHeader 13 strcpy
+37: CheckTrackMapFloatStack
+38: CallHeader 13 strcpy
+39: UnsignedMultiply £temporary1202 g_tempSize 2
+40: BinaryAdd £temporary1203 g_tempArray £temporary1202
+41: Deref £temporary1201 -> £temporary1203 £temporary1203 0
+42: Parameter 13 £temporary1201 -> £temporary1203 6
+43: Parameter 13 name 8
+44: Call 13 strcpy 0
+45: PostCall 13
+46: Assign £temporary1205 g_tempSize
+47: BinaryAdd g_tempSize g_tempSize 1
+48: UnsignedMultiply £temporary1207 £temporary1205 2
+49: BinaryAdd £temporary1208 g_tempArray £temporary1207
+50: Deref £temporary1206 -> £temporary1208 £temporary1208 0
+51: SetReturnValue £temporary1206 -> £temporary1208
+52: Return £temporary1206 -> £temporary1208
+53: Goto Goto CallHeader 13 generateTempName
+54: Goto CallHeader 13 generateTempName
+55: Goto CallHeader 13 generateTempName
+56: CallHeader 13 generateTempName
+57: Parameter 13 name 6
+58: BinaryAdd £temporary1209 size 1
+59: Parameter 13 £temporary1209 8
+60: Parameter 13 status 10
+61: Call 13 generateTempName 0
+62: PostCall 13
+63: GetReturnValue £temporary1210
+64: Assign result £temporary1210
+65: NotEqual SetReturnValue result result 0
+66: Goto Empty
+67: CheckTrackMapFloatStack
+68: SetReturnValue result
+69: Return result
+70: Goto Empty
+71: Empty
+72: BinaryAdd c c 1
+73: Goto Empty
+74: Goto SetReturnValue 0
+75: SetReturnValue 0
+76: Return 0
+77: Empty
+78: Return 0
+79: FunctionEnd generateTempName

@@ -233,8 +233,8 @@
 32: Empty
 33: Return 0
 34: FunctionEnd maina
-0: CallHeader 6 string_test
-1: Call 6 string_test 0
+0: CallHeader 6 time_test
+1: Call 6 time_test 0
 2: PostCall 6
 3: Empty
 4: Return 0
@@ -435,7 +435,7 @@
 16: Parameter 8 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
 17: Parameter 8 string_n20213D206# 10
 18: Parameter 8 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec# 12
-19: Parameter 8 873 14
+19: Parameter 8 874 14
 20: Call 8 fprintf 0
 21: PostCall 8
 22: CallHeader 8 abort
@@ -458,7 +458,7 @@
 5: Parameter 8 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
 6: Parameter 8 string_n20213D207# 10
 7: Parameter 8 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec# 12
-8: Parameter 8 878 14
+8: Parameter 8 879 14
 9: Call 8 fprintf 0
 10: PostCall 8
 11: CallHeader 8 abort
@@ -13131,8 +13131,8 @@
 85: Parameter 566 buffer1 6
 86: CallHeader 566 asctime
 87: address £temporary6178 s
-88: Parameter 566 £temporary6178 112
-89: Call 566 asctime 106
+88: Parameter 566 £temporary6178 14
+89: Call 566 asctime 8
 90: PostCall 566
 91: GetReturnValue £temporary6179
 92: Parameter 566 £temporary6179 8
@@ -13142,8 +13142,8 @@
 96: Parameter 566 buffer2 6
 97: CallHeader 566 ctime
 98: address £temporary6181 now1
-99: Parameter 566 £temporary6181 112
-100: Call 566 ctime 106
+99: Parameter 566 £temporary6181 14
+100: Call 566 ctime 8
 101: PostCall 566
 102: GetReturnValue £temporary6182
 103: Parameter 566 £temporary6182 8

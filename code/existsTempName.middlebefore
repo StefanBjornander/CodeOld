@@ -1,0 +1,23 @@
+0: Assign index 0
+1: Empty
+2: SignedLessThan PreCall 10 index g_tempSize
+3: Goto Return 0
+4: PreCall 10
+5: Parameter 16 pointer name
+6: UnsignedMultiply £temporary914 index 4
+7: BinaryAdd £temporary915 g_tempArray £temporary914
+8: Dereference £temporary913 -> £temporary915 £temporary915 0
+9: Parameter 18 pointer £temporary913 -> £temporary915
+10: Call 10 strcmp 0
+11: PostCall 10
+12: GetReturnValue £temporary916
+13: Equal Return 1 £temporary916 0
+14: Goto Empty
+15: Return 1
+16: Goto Empty
+17: Empty
+18: BinaryAdd index index 1
+19: Goto Empty
+20: Return 0
+21: Empty
+22: FunctionEnd existsTempName

@@ -417,14 +417,14 @@ time_test$87:	; address £temporary6178 s
 346:		add t3234, 24
 348:	
 
-time_test$88:	; Parameter 566 £temporary6178 112
-349:		mov [bp + 678], t3234
+time_test$88:	; Parameter 566 £temporary6178 14
+349:		mov [bp + 580], t3234
 351:	
 
-time_test$89:	; Call 566 asctime 106
-352:		mov word [bp + 672], time_test$90
-353:		mov [bp + 674], bp
-354:		add bp, 672
+time_test$89:	; Call 566 asctime 8
+352:		mov word [bp + 574], time_test$90
+353:		mov [bp + 576], bp
+354:		add bp, 574
 355:		jmp asctime
 357:	
 
@@ -464,14 +464,14 @@ time_test$98:	; address £temporary6181 now1
 385:		add t3237, 20
 387:	
 
-time_test$99:	; Parameter 566 £temporary6181 112
-388:		mov [bp + 678], t3237
+time_test$99:	; Parameter 566 £temporary6181 14
+388:		mov [bp + 580], t3237
 390:	
 
-time_test$100:	; Call 566 ctime 106
-391:		mov word [bp + 672], time_test$101
-392:		mov [bp + 674], bp
-393:		add bp, 672
+time_test$100:	; Call 566 ctime 8
+391:		mov word [bp + 574], time_test$101
+392:		mov [bp + 576], bp
+393:		add bp, 574
 394:		jmp ctime
 396:	
 

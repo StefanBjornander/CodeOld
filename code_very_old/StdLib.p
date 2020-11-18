@@ -935,13 +935,13 @@ return value ;
 void abort ( void ) {
    
     
-   
+       
     
   
 
    
  register_rax = 60L ;
-register_rdi = -1L ;
+register_rdi = ( unsigned long ) -1 ;
 syscall ( ) ;
   
  }

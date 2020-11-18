@@ -1,47 +1,47 @@
 1:	
 
-string_test:	; s = string_Hello2C20World21#
+string_test:	; Assign s string_Hello2C20World21#
 2:		mov word [bp + 8], string_Hello2C20World21#
 4:	
 
-string_test$1:	; call header integral zero 0 stack zero 0
+string_test$1:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 6:	
 
-string_test$2:	; parameter string_strlen282225s2229203D2025i0A#, offset 6
+string_test$2:	; Parameter 212 string_strlen282225s2229203D2025i0A# 6
 7:		mov word [bp + 218], string_strlen282225s2229203D2025i0A#
 9:	
 
-string_test$3:	; parameter s, offset 8
+string_test$3:	; Parameter 212 s 8
 10:		mov ax, [bp + 8]
 11:		mov [bp + 220], ax
 13:	
 
-string_test$4:	; call header integral zero 0 stack zero 0
+string_test$4:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 15:	
 
-string_test$5:	; parameter s, offset 16
+string_test$5:	; Parameter 212 s 16
 16:		mov ax, [bp + 8]
 17:		mov [bp + 228], ax
 19:	
 
-string_test$6:	; call function noellipse-noellipse strlen
+string_test$6:	; Call 212 strlen 10
 20:		mov word [bp + 222], string_test$7
 21:		mov [bp + 224], bp
 22:		add bp, 222
 23:		jmp strlen
 25:	
 
-string_test$7:	; post call
+string_test$7:	; PostCall 212
 27:	
 
-string_test$8:	; £temporary4501 = return_value
+string_test$8:	; GetReturnValue £temporary4501
 32:	
 
-string_test$9:	; parameter £temporary4501, offset 10
+string_test$9:	; Parameter 212 £temporary4501 10
 33:		mov [bp + 222], bx
 35:	
 
-string_test$10:	; call function noellipse-ellipse printf, extra 0
+string_test$10:	; Call 212 printf 0
 36:		mov word [bp + 212], string_test$11
 37:		mov [bp + 214], bp
 38:		add bp, 212
@@ -50,86 +50,86 @@ string_test$10:	; call function noellipse-ellipse printf, extra 0
 41:		jmp printf
 43:	
 
-string_test$11:	; post call
+string_test$11:	; PostCall 212
 45:	
 
-string_test$12:	; call header integral zero 0 stack zero 0
+string_test$12:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 47:	
 
-string_test$13:	; parameter t, offset 6
+string_test$13:	; Parameter 212 t 6
 48:		mov [bp + 218], bp
 49:		add word [bp + 218], 10
 51:	
 
-string_test$14:	; parameter s, offset 8
+string_test$14:	; Parameter 212 s 8
 52:		mov ax, [bp + 8]
 53:		mov [bp + 220], ax
 55:	
 
-string_test$15:	; call function noellipse-noellipse strcpy
+string_test$15:	; Call 212 strcpy 0
 56:		mov word [bp + 212], string_test$16
 57:		mov [bp + 214], bp
 58:		add bp, 212
 59:		jmp strcpy
 61:	
 
-string_test$16:	; post call
+string_test$16:	; PostCall 212
 63:	
 
-string_test$17:	; call header integral zero 0 stack zero 0
+string_test$17:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 65:	
 
-string_test$18:	; parameter u, offset 6
+string_test$18:	; Parameter 212 u 6
 66:		mov [bp + 218], bp
 67:		add word [bp + 218], 110
 69:	
 
-string_test$19:	; parameter s, offset 8
+string_test$19:	; Parameter 212 s 8
 70:		mov ax, [bp + 8]
 71:		mov [bp + 220], ax
 73:	
 
-string_test$20:	; parameter 5, offset 10
+string_test$20:	; Parameter 212 5 10
 74:		mov word [bp + 222], 5
 76:	
 
-string_test$21:	; call function noellipse-noellipse strncpy
+string_test$21:	; Call 212 strncpy 0
 77:		mov word [bp + 212], string_test$22
 78:		mov [bp + 214], bp
 79:		add bp, 212
 80:		jmp strncpy
 82:	
 
-string_test$22:	; post call
+string_test$22:	; PostCall 212
 84:	
 
-string_test$23:	; £temporary4505 -> u = *u, offset 5
+string_test$23:	; Deref £temporary4505 -> u u 5
 85:		mov si, bp
 86:		add si, 110
 88:	
 
-string_test$24:	; £temporary4505 -> u = 0
+string_test$24:	; Assign £temporary4505 -> u 0
 89:		mov byte [si + 5], 0
 91:	
 
-string_test$25:	; call header integral zero 0 stack zero 0
+string_test$25:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 93:	
 
-string_test$26:	; parameter string_t203D202225s222C20u203D202225s220A#, offset 6
+string_test$26:	; Parameter 212 string_t203D202225s222C20u203D202225s220A# 6
 94:		mov word [bp + 218], string_t203D202225s222C20u203D202225s220A#
 96:	
 
-string_test$27:	; parameter t, offset 8
+string_test$27:	; Parameter 212 t 8
 97:		mov [bp + 220], bp
 98:		add word [bp + 220], 10
 100:	
 
-string_test$28:	; parameter u, offset 10
+string_test$28:	; Parameter 212 u 10
 101:		mov [bp + 222], bp
 102:		add word [bp + 222], 110
 104:	
 
-string_test$29:	; call function noellipse-ellipse printf, extra 0
+string_test$29:	; Call 212 printf 0
 105:		mov word [bp + 212], string_test$30
 106:		mov [bp + 214], bp
 107:		add bp, 212
@@ -138,118 +138,118 @@ string_test$29:	; call function noellipse-ellipse printf, extra 0
 110:		jmp printf
 112:	
 
-string_test$30:	; post call
+string_test$30:	; PostCall 212
 114:	
 
-string_test$31:	; call header integral zero 0 stack zero 0
+string_test$31:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 116:	
 
-string_test$32:	; parameter t, offset 6
+string_test$32:	; Parameter 212 t 6
 117:		mov [bp + 218], bp
 118:		add word [bp + 218], 10
 120:	
 
-string_test$33:	; parameter string_abc#, offset 8
+string_test$33:	; Parameter 212 string_abc# 8
 121:		mov word [bp + 220], string_abc#
 123:	
 
-string_test$34:	; call function noellipse-noellipse strcat
+string_test$34:	; Call 212 strcat 0
 124:		mov word [bp + 212], string_test$35
 125:		mov [bp + 214], bp
 126:		add bp, 212
 127:		jmp strcat
 129:	
 
-string_test$35:	; post call
+string_test$35:	; PostCall 212
 131:	
 
-string_test$36:	; call header integral zero 0 stack zero 0
+string_test$36:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 133:	
 
-string_test$37:	; parameter u, offset 6
+string_test$37:	; Parameter 212 u 6
 134:		mov [bp + 218], bp
 135:		add word [bp + 218], 110
 137:	
 
-string_test$38:	; call function noellipse-noellipse strlen
+string_test$38:	; Call 212 strlen 0
 138:		mov word [bp + 212], string_test$39
 139:		mov [bp + 214], bp
 140:		add bp, 212
 141:		jmp strlen
 143:	
 
-string_test$39:	; post call
+string_test$39:	; PostCall 212
 145:	
 
-string_test$40:	; £temporary4508 = return_value
+string_test$40:	; GetReturnValue £temporary4508
 150:	
 
-string_test$41:	; i = £temporary4508
+string_test$41:	; Assign i £temporary4508
 151:		mov [bp + 6], bx
 153:	
 
-string_test$42:	; call header integral zero 0 stack zero 0
+string_test$42:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 155:	
 
-string_test$43:	; parameter u, offset 6
+string_test$43:	; Parameter 212 u 6
 156:		mov [bp + 218], bp
 157:		add word [bp + 218], 110
 159:	
 
-string_test$44:	; parameter string_abc#, offset 8
+string_test$44:	; Parameter 212 string_abc# 8
 160:		mov word [bp + 220], string_abc#
 162:	
 
-string_test$45:	; parameter 2, offset 10
+string_test$45:	; Parameter 212 2 10
 163:		mov word [bp + 222], 2
 165:	
 
-string_test$46:	; call function noellipse-noellipse strncat
+string_test$46:	; Call 212 strncat 0
 166:		mov word [bp + 212], string_test$47
 167:		mov [bp + 214], bp
 168:		add bp, 212
 169:		jmp strncat
 171:	
 
-string_test$47:	; post call
+string_test$47:	; PostCall 212
 173:	
 
-string_test$48:	; £temporary4510 = i + 2
+string_test$48:	; BinaryAdd £temporary4510 i 2
 174:		mov ax, [bp + 6]
 175:		add ax, 2
 177:	
 
-string_test$49:	; £temporary4512 = u + £temporary4510
+string_test$49:	; BinaryAdd £temporary4512 u £temporary4510
 178:		mov si, bp
 179:		add si, 110
 180:		add si, ax
 182:	
 
-string_test$50:	; £temporary4511 -> £temporary4512 = *£temporary4512
+string_test$50:	; Deref £temporary4511 -> £temporary4512 £temporary4512 0
 184:	
 
-string_test$51:	; £temporary4511 -> £temporary4512 = 0
+string_test$51:	; Assign £temporary4511 -> £temporary4512 0
 185:		mov byte [si], 0
 187:	
 
-string_test$52:	; call header integral zero 0 stack zero 0
+string_test$52:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 189:	
 
-string_test$53:	; parameter string_t203D202225s222C20u203D202225s220A#, offset 6
+string_test$53:	; Parameter 212 string_t203D202225s222C20u203D202225s220A# 6
 190:		mov word [bp + 218], string_t203D202225s222C20u203D202225s220A#
 192:	
 
-string_test$54:	; parameter t, offset 8
+string_test$54:	; Parameter 212 t 8
 193:		mov [bp + 220], bp
 194:		add word [bp + 220], 10
 196:	
 
-string_test$55:	; parameter u, offset 10
+string_test$55:	; Parameter 212 u 10
 197:		mov [bp + 222], bp
 198:		add word [bp + 222], 110
 200:	
 
-string_test$56:	; call function noellipse-ellipse printf, extra 0
+string_test$56:	; Call 212 printf 0
 201:		mov word [bp + 212], string_test$57
 202:		mov [bp + 214], bp
 203:		add bp, 212
@@ -258,47 +258,47 @@ string_test$56:	; call function noellipse-ellipse printf, extra 0
 206:		jmp printf
 208:	
 
-string_test$57:	; post call
+string_test$57:	; PostCall 212
 210:	
 
-string_test$58:	; call header integral zero 0 stack zero 0
+string_test$58:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 212:	
 
-string_test$59:	; parameter string_strcmp28s2C20u29203D2025i0A#, offset 6
+string_test$59:	; Parameter 212 string_strcmp28s2C20u29203D2025i0A# 6
 213:		mov word [bp + 218], string_strcmp28s2C20u29203D2025i0A#
 215:	
 
-string_test$60:	; call header integral zero 0 stack zero 0
+string_test$60:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 217:	
 
-string_test$61:	; parameter s, offset 14
+string_test$61:	; Parameter 212 s 14
 218:		mov ax, [bp + 8]
 219:		mov [bp + 226], ax
 221:	
 
-string_test$62:	; parameter u, offset 16
+string_test$62:	; Parameter 212 u 16
 222:		mov [bp + 228], bp
 223:		add word [bp + 228], 110
 225:	
 
-string_test$63:	; call function noellipse-noellipse strcmp
+string_test$63:	; Call 212 strcmp 8
 226:		mov word [bp + 220], string_test$64
 227:		mov [bp + 222], bp
 228:		add bp, 220
 229:		jmp strcmp
 231:	
 
-string_test$64:	; post call
+string_test$64:	; PostCall 212
 233:	
 
-string_test$65:	; £temporary4514 = return_value
+string_test$65:	; GetReturnValue £temporary4514
 238:	
 
-string_test$66:	; parameter £temporary4514, offset 8
+string_test$66:	; Parameter 212 £temporary4514 8
 239:		mov [bp + 220], bx
 241:	
 
-string_test$67:	; call function noellipse-ellipse printf, extra 0
+string_test$67:	; Call 212 printf 0
 242:		mov word [bp + 212], string_test$68
 243:		mov [bp + 214], bp
 244:		add bp, 212
@@ -307,51 +307,51 @@ string_test$67:	; call function noellipse-ellipse printf, extra 0
 247:		jmp printf
 249:	
 
-string_test$68:	; post call
+string_test$68:	; PostCall 212
 251:	
 
-string_test$69:	; call header integral zero 0 stack zero 0
+string_test$69:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 253:	
 
-string_test$70:	; parameter string_strncmp28s2C20u2C20229203D2025i0A#, offset 6
+string_test$70:	; Parameter 212 string_strncmp28s2C20u2C20229203D2025i0A# 6
 254:		mov word [bp + 218], string_strncmp28s2C20u2C20229203D2025i0A#
 256:	
 
-string_test$71:	; call header integral zero 0 stack zero 0
+string_test$71:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 258:	
 
-string_test$72:	; parameter s, offset 14
+string_test$72:	; Parameter 212 s 14
 259:		mov ax, [bp + 8]
 260:		mov [bp + 226], ax
 262:	
 
-string_test$73:	; parameter u, offset 16
+string_test$73:	; Parameter 212 u 16
 263:		mov [bp + 228], bp
 264:		add word [bp + 228], 110
 266:	
 
-string_test$74:	; parameter 2, offset 18
+string_test$74:	; Parameter 212 2 18
 267:		mov word [bp + 230], 2
 269:	
 
-string_test$75:	; call function noellipse-noellipse strncmp
+string_test$75:	; Call 212 strncmp 8
 270:		mov word [bp + 220], string_test$76
 271:		mov [bp + 222], bp
 272:		add bp, 220
 273:		jmp strncmp
 275:	
 
-string_test$76:	; post call
+string_test$76:	; PostCall 212
 277:	
 
-string_test$77:	; £temporary4516 = return_value
+string_test$77:	; GetReturnValue £temporary4516
 282:	
 
-string_test$78:	; parameter £temporary4516, offset 8
+string_test$78:	; Parameter 212 £temporary4516 8
 283:		mov [bp + 220], bx
 285:	
 
-string_test$79:	; call function noellipse-ellipse printf, extra 0
+string_test$79:	; Call 212 printf 0
 286:		mov word [bp + 212], string_test$80
 287:		mov [bp + 214], bp
 288:		add bp, 212
@@ -360,68 +360,68 @@ string_test$79:	; call function noellipse-ellipse printf, extra 0
 291:		jmp printf
 293:	
 
-string_test$80:	; post call
+string_test$80:	; PostCall 212
 295:	
 
-string_test$81:	; call header integral zero 0 stack zero 0
+string_test$81:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 297:	
 
-string_test$82:	; parameter s, offset 6
+string_test$82:	; Parameter 212 s 6
 298:		mov ax, [bp + 8]
 299:		mov [bp + 218], ax
 301:	
 
-string_test$83:	; parameter 108, offset 8
+string_test$83:	; Parameter 212 108 8
 302:		mov word [bp + 220], 108
 304:	
 
-string_test$84:	; call function noellipse-noellipse strchr
+string_test$84:	; Call 212 strchr 0
 305:		mov word [bp + 212], string_test$85
 306:		mov [bp + 214], bp
 307:		add bp, 212
 308:		jmp strchr
 310:	
 
-string_test$85:	; post call
+string_test$85:	; PostCall 212
 312:	
 
-string_test$86:	; £temporary4518 = return_value
+string_test$86:	; GetReturnValue £temporary4518
 317:	
 
-string_test$87:	; p = £temporary4518
+string_test$87:	; Assign p £temporary4518
 318:		mov [bp + 210], bx
 320:	
 
-string_test$88:	; call header integral zero 0 stack zero 0
+string_test$88:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 322:	
 
-string_test$89:	; parameter string_strchr28s2C2027l2729203D2025i0A#, offset 6
+string_test$89:	; Parameter 212 string_strchr28s2C2027l2729203D2025i0A# 6
 323:		mov word [bp + 218], string_strchr28s2C2027l2729203D2025i0A#
 325:	
 
-string_test$90:	; if p == 0 goto 93
+string_test$90:	; Equal 93 p 0
 326:		cmp word [bp + 210], 0
 327:		je string_test$93
 329:	
 
-string_test$91:	; £temporary4524 = p - s
+string_test$91:	; BinarySubtract £temporary4524 p s
 330:		mov ax, [bp + 210]
 331:		sub ax, [bp + 8]
 333:	
 
-string_test$92:	; goto 94
+string_test$92:	; Goto 94
 334:		jmp string_test$94
 336:	
 
-string_test$93:	; £temporary4524 = -1
+string_test$93:	; Assign £temporary4524 -1
 337:		mov ax, -1
 339:	
 
-string_test$94:	; parameter £temporary4524, offset 8
+string_test$94:	; Parameter 212 £temporary4524 8
 340:		mov [bp + 220], ax
 342:	
 
-string_test$95:	; call function noellipse-ellipse printf, extra 0
+string_test$95:	; Call 212 printf 0
 343:		mov word [bp + 212], string_test$96
 344:		mov [bp + 214], bp
 345:		add bp, 212
@@ -430,68 +430,68 @@ string_test$95:	; call function noellipse-ellipse printf, extra 0
 348:		jmp printf
 350:	
 
-string_test$96:	; post call
+string_test$96:	; PostCall 212
 352:	
 
-string_test$97:	; call header integral zero 0 stack zero 0
+string_test$97:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 354:	
 
-string_test$98:	; parameter s, offset 6
+string_test$98:	; Parameter 212 s 6
 355:		mov ax, [bp + 8]
 356:		mov [bp + 218], ax
 358:	
 
-string_test$99:	; parameter 108, offset 8
+string_test$99:	; Parameter 212 108 8
 359:		mov word [bp + 220], 108
 361:	
 
-string_test$100:	; call function noellipse-noellipse strrchr
+string_test$100:	; Call 212 strrchr 0
 362:		mov word [bp + 212], string_test$101
 363:		mov [bp + 214], bp
 364:		add bp, 212
 365:		jmp strrchr
 367:	
 
-string_test$101:	; post call
+string_test$101:	; PostCall 212
 369:	
 
-string_test$102:	; £temporary4526 = return_value
+string_test$102:	; GetReturnValue £temporary4526
 374:	
 
-string_test$103:	; p = £temporary4526
+string_test$103:	; Assign p £temporary4526
 375:		mov [bp + 210], bx
 377:	
 
-string_test$104:	; call header integral zero 0 stack zero 0
+string_test$104:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 379:	
 
-string_test$105:	; parameter string_strrchr28s2C2027l2729203D2025i0A#, offset 6
+string_test$105:	; Parameter 212 string_strrchr28s2C2027l2729203D2025i0A# 6
 380:		mov word [bp + 218], string_strrchr28s2C2027l2729203D2025i0A#
 382:	
 
-string_test$106:	; if p == 0 goto 109
+string_test$106:	; Equal 109 p 0
 383:		cmp word [bp + 210], 0
 384:		je string_test$109
 386:	
 
-string_test$107:	; £temporary4532 = p - s
+string_test$107:	; BinarySubtract £temporary4532 p s
 387:		mov ax, [bp + 210]
 388:		sub ax, [bp + 8]
 390:	
 
-string_test$108:	; goto 110
+string_test$108:	; Goto 110
 391:		jmp string_test$110
 393:	
 
-string_test$109:	; £temporary4532 = -1
+string_test$109:	; Assign £temporary4532 -1
 394:		mov ax, -1
 396:	
 
-string_test$110:	; parameter £temporary4532, offset 8
+string_test$110:	; Parameter 212 £temporary4532 8
 397:		mov [bp + 220], ax
 399:	
 
-string_test$111:	; call function noellipse-ellipse printf, extra 0
+string_test$111:	; Call 212 printf 0
 400:		mov word [bp + 212], string_test$112
 401:		mov [bp + 214], bp
 402:		add bp, 212
@@ -500,68 +500,68 @@ string_test$111:	; call function noellipse-ellipse printf, extra 0
 405:		jmp printf
 407:	
 
-string_test$112:	; post call
+string_test$112:	; PostCall 212
 409:	
 
-string_test$113:	; call header integral zero 0 stack zero 0
+string_test$113:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 411:	
 
-string_test$114:	; parameter s, offset 6
+string_test$114:	; Parameter 212 s 6
 412:		mov ax, [bp + 8]
 413:		mov [bp + 218], ax
 415:	
 
-string_test$115:	; parameter 120, offset 8
+string_test$115:	; Parameter 212 120 8
 416:		mov word [bp + 220], 120
 418:	
 
-string_test$116:	; call function noellipse-noellipse strchr
+string_test$116:	; Call 212 strchr 0
 419:		mov word [bp + 212], string_test$117
 420:		mov [bp + 214], bp
 421:		add bp, 212
 422:		jmp strchr
 424:	
 
-string_test$117:	; post call
+string_test$117:	; PostCall 212
 426:	
 
-string_test$118:	; £temporary4534 = return_value
+string_test$118:	; GetReturnValue £temporary4534
 431:	
 
-string_test$119:	; p = £temporary4534
+string_test$119:	; Assign p £temporary4534
 432:		mov [bp + 210], bx
 434:	
 
-string_test$120:	; call header integral zero 0 stack zero 0
+string_test$120:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 436:	
 
-string_test$121:	; parameter string_strchr28s2C2027x2729203D2025i0A#, offset 6
+string_test$121:	; Parameter 212 string_strchr28s2C2027x2729203D2025i0A# 6
 437:		mov word [bp + 218], string_strchr28s2C2027x2729203D2025i0A#
 439:	
 
-string_test$122:	; if p == 0 goto 125
+string_test$122:	; Equal 125 p 0
 440:		cmp word [bp + 210], 0
 441:		je string_test$125
 443:	
 
-string_test$123:	; £temporary4540 = p - s
+string_test$123:	; BinarySubtract £temporary4540 p s
 444:		mov ax, [bp + 210]
 445:		sub ax, [bp + 8]
 447:	
 
-string_test$124:	; goto 126
+string_test$124:	; Goto 126
 448:		jmp string_test$126
 450:	
 
-string_test$125:	; £temporary4540 = -1
+string_test$125:	; Assign £temporary4540 -1
 451:		mov ax, -1
 453:	
 
-string_test$126:	; parameter £temporary4540, offset 8
+string_test$126:	; Parameter 212 £temporary4540 8
 454:		mov [bp + 220], ax
 456:	
 
-string_test$127:	; call function noellipse-ellipse printf, extra 0
+string_test$127:	; Call 212 printf 0
 457:		mov word [bp + 212], string_test$128
 458:		mov [bp + 214], bp
 459:		add bp, 212
@@ -570,68 +570,68 @@ string_test$127:	; call function noellipse-ellipse printf, extra 0
 462:		jmp printf
 464:	
 
-string_test$128:	; post call
+string_test$128:	; PostCall 212
 466:	
 
-string_test$129:	; call header integral zero 0 stack zero 0
+string_test$129:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 468:	
 
-string_test$130:	; parameter s, offset 6
+string_test$130:	; Parameter 212 s 6
 469:		mov ax, [bp + 8]
 470:		mov [bp + 218], ax
 472:	
 
-string_test$131:	; parameter 120, offset 8
+string_test$131:	; Parameter 212 120 8
 473:		mov word [bp + 220], 120
 475:	
 
-string_test$132:	; call function noellipse-noellipse strrchr
+string_test$132:	; Call 212 strrchr 0
 476:		mov word [bp + 212], string_test$133
 477:		mov [bp + 214], bp
 478:		add bp, 212
 479:		jmp strrchr
 481:	
 
-string_test$133:	; post call
+string_test$133:	; PostCall 212
 483:	
 
-string_test$134:	; £temporary4542 = return_value
+string_test$134:	; GetReturnValue £temporary4542
 488:	
 
-string_test$135:	; p = £temporary4542
+string_test$135:	; Assign p £temporary4542
 489:		mov [bp + 210], bx
 491:	
 
-string_test$136:	; call header integral zero 0 stack zero 0
+string_test$136:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 493:	
 
-string_test$137:	; parameter string_strrchr28s2C2027x2729203D2025i0A#, offset 6
+string_test$137:	; Parameter 212 string_strrchr28s2C2027x2729203D2025i0A# 6
 494:		mov word [bp + 218], string_strrchr28s2C2027x2729203D2025i0A#
 496:	
 
-string_test$138:	; if p == 0 goto 141
+string_test$138:	; Equal 141 p 0
 497:		cmp word [bp + 210], 0
 498:		je string_test$141
 500:	
 
-string_test$139:	; £temporary4548 = p - s
+string_test$139:	; BinarySubtract £temporary4548 p s
 501:		mov ax, [bp + 210]
 502:		sub ax, [bp + 8]
 504:	
 
-string_test$140:	; goto 142
+string_test$140:	; Goto 142
 505:		jmp string_test$142
 507:	
 
-string_test$141:	; £temporary4548 = -1
+string_test$141:	; Assign £temporary4548 -1
 508:		mov ax, -1
 510:	
 
-string_test$142:	; parameter £temporary4548, offset 8
+string_test$142:	; Parameter 212 £temporary4548 8
 511:		mov [bp + 220], ax
 513:	
 
-string_test$143:	; call function noellipse-ellipse printf, extra 0
+string_test$143:	; Call 212 printf 0
 514:		mov word [bp + 212], string_test$144
 515:		mov [bp + 214], bp
 516:		add bp, 212
@@ -640,119 +640,119 @@ string_test$143:	; call function noellipse-ellipse printf, extra 0
 519:		jmp printf
 521:	
 
-string_test$144:	; post call
+string_test$144:	; PostCall 212
 523:	
 
-string_test$145:	; call header integral zero 0 stack zero 0
+string_test$145:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 525:	
 
-string_test$146:	; parameter s, offset 6
+string_test$146:	; Parameter 212 s 6
 526:		mov ax, [bp + 8]
 527:		mov [bp + 218], ax
 529:	
 
-string_test$147:	; parameter string_Hello2C20World21#, offset 8
+string_test$147:	; Parameter 212 string_Hello2C20World21# 8
 530:		mov word [bp + 220], string_Hello2C20World21#
 532:	
 
-string_test$148:	; parameter 20, offset 10
+string_test$148:	; Parameter 212 20 10
 533:		mov word [bp + 222], 20
 535:	
 
-string_test$149:	; call function noellipse-noellipse memcpy
+string_test$149:	; Call 212 memcpy 0
 536:		mov word [bp + 212], string_test$150
 537:		mov [bp + 214], bp
 538:		add bp, 212
 539:		jmp memcpy
 541:	
 
-string_test$150:	; post call
+string_test$150:	; PostCall 212
 543:	
 
-string_test$151:	; call header integral zero 0 stack zero 0
+string_test$151:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 545:	
 
-string_test$152:	; parameter t, offset 6
+string_test$152:	; Parameter 212 t 6
 546:		mov [bp + 218], bp
 547:		add word [bp + 218], 10
 549:	
 
-string_test$153:	; parameter string_Hello2C20World21#, offset 8
+string_test$153:	; Parameter 212 string_Hello2C20World21# 8
 550:		mov word [bp + 220], string_Hello2C20World21#
 552:	
 
-string_test$154:	; parameter 20, offset 10
+string_test$154:	; Parameter 212 20 10
 553:		mov word [bp + 222], 20
 555:	
 
-string_test$155:	; call function noellipse-noellipse memmove
+string_test$155:	; Call 212 memmove 0
 556:		mov word [bp + 212], string_test$156
 557:		mov [bp + 214], bp
 558:		add bp, 212
 559:		jmp memmove
 561:	
 
-string_test$156:	; post call
+string_test$156:	; PostCall 212
 563:	
 
-string_test$157:	; call header integral zero 0 stack zero 0
+string_test$157:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 565:	
 
-string_test$158:	; parameter u, offset 6
+string_test$158:	; Parameter 212 u 6
 566:		mov [bp + 218], bp
 567:		add word [bp + 218], 110
 569:	
 
-string_test$159:	; parameter 88, offset 8
+string_test$159:	; Parameter 212 88 8
 570:		mov word [bp + 220], 88
 572:	
 
-string_test$160:	; parameter 20, offset 10
+string_test$160:	; Parameter 212 20 10
 573:		mov word [bp + 222], 20
 575:	
 
-string_test$161:	; call function noellipse-noellipse memset
+string_test$161:	; Call 212 memset 0
 576:		mov word [bp + 212], string_test$162
 577:		mov [bp + 214], bp
 578:		add bp, 212
 579:		jmp memset
 581:	
 
-string_test$162:	; post call
+string_test$162:	; PostCall 212
 583:	
 
-string_test$163:	; £temporary4553 -> u = *u, offset 19
+string_test$163:	; Deref £temporary4553 -> u u 19
 584:		mov si, bp
 585:		add si, 110
 587:	
 
-string_test$164:	; £temporary4553 -> u = 0
+string_test$164:	; Assign £temporary4553 -> u 0
 588:		mov byte [si + 19], 0
 590:	
 
-string_test$165:	; call header integral zero 0 stack zero 0
+string_test$165:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 592:	
 
-string_test$166:	; parameter string_s203D202225s222C20t203D202225s222C20u203D202225s220A#, offset 6
+string_test$166:	; Parameter 212 string_s203D202225s222C20t203D202225s222C20u203D202225s220A# 6
 593:		mov word [bp + 218], string_s203D202225s222C20t203D202225s222C20u203D202225s220A#
 595:	
 
-string_test$167:	; parameter s, offset 8
+string_test$167:	; Parameter 212 s 8
 596:		mov ax, [bp + 8]
 597:		mov [bp + 220], ax
 599:	
 
-string_test$168:	; parameter t, offset 10
+string_test$168:	; Parameter 212 t 10
 600:		mov [bp + 222], bp
 601:		add word [bp + 222], 10
 603:	
 
-string_test$169:	; parameter u, offset 12
+string_test$169:	; Parameter 212 u 12
 604:		mov [bp + 224], bp
 605:		add word [bp + 224], 110
 607:	
 
-string_test$170:	; call function noellipse-ellipse printf, extra 0
+string_test$170:	; Call 212 printf 0
 608:		mov word [bp + 212], string_test$171
 609:		mov [bp + 214], bp
 610:		add bp, 212
@@ -761,72 +761,72 @@ string_test$170:	; call function noellipse-ellipse printf, extra 0
 613:		jmp printf
 615:	
 
-string_test$171:	; post call
+string_test$171:	; PostCall 212
 617:	
 
-string_test$172:	; call header integral zero 0 stack zero 0
+string_test$172:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 619:	
 
-string_test$173:	; parameter s, offset 6
+string_test$173:	; Parameter 212 s 6
 620:		mov ax, [bp + 8]
 621:		mov [bp + 218], ax
 623:	
 
-string_test$174:	; parameter 108, offset 8
+string_test$174:	; Parameter 212 108 8
 624:		mov word [bp + 220], 108
 626:	
 
-string_test$175:	; parameter 20, offset 10
+string_test$175:	; Parameter 212 20 10
 627:		mov word [bp + 222], 20
 629:	
 
-string_test$176:	; call function noellipse-noellipse memchr
+string_test$176:	; Call 212 memchr 0
 630:		mov word [bp + 212], string_test$177
 631:		mov [bp + 214], bp
 632:		add bp, 212
 633:		jmp memchr
 635:	
 
-string_test$177:	; post call
+string_test$177:	; PostCall 212
 637:	
 
-string_test$178:	; £temporary4555 = return_value
+string_test$178:	; GetReturnValue £temporary4555
 642:	
 
-string_test$179:	; p = £temporary4555
+string_test$179:	; Assign p £temporary4555
 643:		mov [bp + 210], bx
 645:	
 
-string_test$180:	; call header integral zero 0 stack zero 0
+string_test$180:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 647:	
 
-string_test$181:	; parameter string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A#, offset 6
+string_test$181:	; Parameter 212 string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A# 6
 648:		mov word [bp + 218], string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A#
 650:	
 
-string_test$182:	; if p == 0 goto 185
+string_test$182:	; Equal 185 p 0
 651:		cmp word [bp + 210], 0
 652:		je string_test$185
 654:	
 
-string_test$183:	; £temporary4561 = p - s
+string_test$183:	; BinarySubtract £temporary4561 p s
 655:		mov ax, [bp + 210]
 656:		sub ax, [bp + 8]
 658:	
 
-string_test$184:	; goto 186
+string_test$184:	; Goto 186
 659:		jmp string_test$186
 661:	
 
-string_test$185:	; £temporary4561 = -1
+string_test$185:	; Assign £temporary4561 -1
 662:		mov ax, -1
 664:	
 
-string_test$186:	; parameter £temporary4561, offset 8
+string_test$186:	; Parameter 212 £temporary4561 8
 665:		mov [bp + 220], ax
 667:	
 
-string_test$187:	; call function noellipse-ellipse printf, extra 0
+string_test$187:	; Call 212 printf 0
 668:		mov word [bp + 212], string_test$188
 669:		mov [bp + 214], bp
 670:		add bp, 212
@@ -835,72 +835,72 @@ string_test$187:	; call function noellipse-ellipse printf, extra 0
 673:		jmp printf
 675:	
 
-string_test$188:	; post call
+string_test$188:	; PostCall 212
 677:	
 
-string_test$189:	; call header integral zero 0 stack zero 0
+string_test$189:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 679:	
 
-string_test$190:	; parameter s, offset 6
+string_test$190:	; Parameter 212 s 6
 680:		mov ax, [bp + 8]
 681:		mov [bp + 218], ax
 683:	
 
-string_test$191:	; parameter 120, offset 8
+string_test$191:	; Parameter 212 120 8
 684:		mov word [bp + 220], 120
 686:	
 
-string_test$192:	; parameter 20, offset 10
+string_test$192:	; Parameter 212 20 10
 687:		mov word [bp + 222], 20
 689:	
 
-string_test$193:	; call function noellipse-noellipse memchr
+string_test$193:	; Call 212 memchr 0
 690:		mov word [bp + 212], string_test$194
 691:		mov [bp + 214], bp
 692:		add bp, 212
 693:		jmp memchr
 695:	
 
-string_test$194:	; post call
+string_test$194:	; PostCall 212
 697:	
 
-string_test$195:	; £temporary4563 = return_value
+string_test$195:	; GetReturnValue £temporary4563
 702:	
 
-string_test$196:	; p = £temporary4563
+string_test$196:	; Assign p £temporary4563
 703:		mov [bp + 210], bx
 705:	
 
-string_test$197:	; call header integral zero 0 stack zero 0
+string_test$197:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 707:	
 
-string_test$198:	; parameter string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A#, offset 6
+string_test$198:	; Parameter 212 string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A# 6
 708:		mov word [bp + 218], string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A#
 710:	
 
-string_test$199:	; if p == 0 goto 202
+string_test$199:	; Equal 202 p 0
 711:		cmp word [bp + 210], 0
 712:		je string_test$202
 714:	
 
-string_test$200:	; £temporary4569 = p - s
+string_test$200:	; BinarySubtract £temporary4569 p s
 715:		mov ax, [bp + 210]
 716:		sub ax, [bp + 8]
 718:	
 
-string_test$201:	; goto 203
+string_test$201:	; Goto 203
 719:		jmp string_test$203
 721:	
 
-string_test$202:	; £temporary4569 = -1
+string_test$202:	; Assign £temporary4569 -1
 722:		mov ax, -1
 724:	
 
-string_test$203:	; parameter £temporary4569, offset 8
+string_test$203:	; Parameter 212 £temporary4569 8
 725:		mov [bp + 220], ax
 727:	
 
-string_test$204:	; call function noellipse-ellipse printf, extra 0
+string_test$204:	; Call 212 printf 0
 728:		mov word [bp + 212], string_test$205
 729:		mov [bp + 214], bp
 730:		add bp, 212
@@ -909,51 +909,51 @@ string_test$204:	; call function noellipse-ellipse printf, extra 0
 733:		jmp printf
 735:	
 
-string_test$205:	; post call
+string_test$205:	; PostCall 212
 737:	
 
-string_test$206:	; call header integral zero 0 stack zero 0
+string_test$206:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 739:	
 
-string_test$207:	; parameter string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A#, offset 6
+string_test$207:	; Parameter 212 string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A# 6
 740:		mov word [bp + 218], string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A#
 742:	
 
-string_test$208:	; call header integral zero 0 stack zero 0
+string_test$208:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 744:	
 
-string_test$209:	; parameter s, offset 14
+string_test$209:	; Parameter 212 s 14
 745:		mov ax, [bp + 8]
 746:		mov [bp + 226], ax
 748:	
 
-string_test$210:	; parameter t, offset 16
+string_test$210:	; Parameter 212 t 16
 749:		mov [bp + 228], bp
 750:		add word [bp + 228], 10
 752:	
 
-string_test$211:	; parameter 20, offset 18
+string_test$211:	; Parameter 212 20 18
 753:		mov word [bp + 230], 20
 755:	
 
-string_test$212:	; call function noellipse-noellipse memcmp
+string_test$212:	; Call 212 memcmp 8
 756:		mov word [bp + 220], string_test$213
 757:		mov [bp + 222], bp
 758:		add bp, 220
 759:		jmp memcmp
 761:	
 
-string_test$213:	; post call
+string_test$213:	; PostCall 212
 763:	
 
-string_test$214:	; £temporary4571 = return_value
+string_test$214:	; GetReturnValue £temporary4571
 768:	
 
-string_test$215:	; parameter £temporary4571, offset 8
+string_test$215:	; Parameter 212 £temporary4571 8
 769:		mov [bp + 220], bx
 771:	
 
-string_test$216:	; call function noellipse-ellipse printf, extra 0
+string_test$216:	; Call 212 printf 0
 772:		mov word [bp + 212], string_test$217
 773:		mov [bp + 214], bp
 774:		add bp, 212
@@ -962,46 +962,46 @@ string_test$216:	; call function noellipse-ellipse printf, extra 0
 777:		jmp printf
 779:	
 
-string_test$217:	; post call
+string_test$217:	; PostCall 212
 781:	
 
-string_test$218:	; call header integral zero 0 stack zero 0
+string_test$218:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 783:	
 
-string_test$219:	; parameter string_strspn28s2C2022Hello2C20C2229203D2025i0A#, offset 6
+string_test$219:	; Parameter 212 string_strspn28s2C2022Hello2C20C2229203D2025i0A# 6
 784:		mov word [bp + 218], string_strspn28s2C2022Hello2C20C2229203D2025i0A#
 786:	
 
-string_test$220:	; call header integral zero 0 stack zero 0
+string_test$220:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 788:	
 
-string_test$221:	; parameter s, offset 14
+string_test$221:	; Parameter 212 s 14
 789:		mov ax, [bp + 8]
 790:		mov [bp + 226], ax
 792:	
 
-string_test$222:	; parameter string_Hello2C20C#, offset 16
+string_test$222:	; Parameter 212 string_Hello2C20C# 16
 793:		mov word [bp + 228], string_Hello2C20C#
 795:	
 
-string_test$223:	; call function noellipse-noellipse strspn
+string_test$223:	; Call 212 strspn 8
 796:		mov word [bp + 220], string_test$224
 797:		mov [bp + 222], bp
 798:		add bp, 220
 799:		jmp strspn
 801:	
 
-string_test$224:	; post call
+string_test$224:	; PostCall 212
 803:	
 
-string_test$225:	; £temporary4573 = return_value
+string_test$225:	; GetReturnValue £temporary4573
 808:	
 
-string_test$226:	; parameter £temporary4573, offset 8
+string_test$226:	; Parameter 212 £temporary4573 8
 809:		mov [bp + 220], bx
 811:	
 
-string_test$227:	; call function noellipse-ellipse printf, extra 0
+string_test$227:	; Call 212 printf 0
 812:		mov word [bp + 212], string_test$228
 813:		mov [bp + 214], bp
 814:		add bp, 212
@@ -1010,46 +1010,46 @@ string_test$227:	; call function noellipse-ellipse printf, extra 0
 817:		jmp printf
 819:	
 
-string_test$228:	; post call
+string_test$228:	; PostCall 212
 821:	
 
-string_test$229:	; call header integral zero 0 stack zero 0
+string_test$229:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 823:	
 
-string_test$230:	; parameter string_strcspn28s2C2022Hello2C20C2229203D2025i0A#, offset 6
+string_test$230:	; Parameter 212 string_strcspn28s2C2022Hello2C20C2229203D2025i0A# 6
 824:		mov word [bp + 218], string_strcspn28s2C2022Hello2C20C2229203D2025i0A#
 826:	
 
-string_test$231:	; call header integral zero 0 stack zero 0
+string_test$231:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 828:	
 
-string_test$232:	; parameter s, offset 14
+string_test$232:	; Parameter 212 s 14
 829:		mov ax, [bp + 8]
 830:		mov [bp + 226], ax
 832:	
 
-string_test$233:	; parameter string_Hello2C20C#, offset 16
+string_test$233:	; Parameter 212 string_Hello2C20C# 16
 833:		mov word [bp + 228], string_Hello2C20C#
 835:	
 
-string_test$234:	; call function noellipse-noellipse strcspn
+string_test$234:	; Call 212 strcspn 8
 836:		mov word [bp + 220], string_test$235
 837:		mov [bp + 222], bp
 838:		add bp, 220
 839:		jmp strcspn
 841:	
 
-string_test$235:	; post call
+string_test$235:	; PostCall 212
 843:	
 
-string_test$236:	; £temporary4575 = return_value
+string_test$236:	; GetReturnValue £temporary4575
 848:	
 
-string_test$237:	; parameter £temporary4575, offset 8
+string_test$237:	; Parameter 212 £temporary4575 8
 849:		mov [bp + 220], bx
 851:	
 
-string_test$238:	; call function noellipse-ellipse printf, extra 0
+string_test$238:	; Call 212 printf 0
 852:		mov word [bp + 212], string_test$239
 853:		mov [bp + 214], bp
 854:		add bp, 212
@@ -1058,42 +1058,42 @@ string_test$238:	; call function noellipse-ellipse printf, extra 0
 857:		jmp printf
 859:	
 
-string_test$239:	; post call
+string_test$239:	; PostCall 212
 861:	
 
-string_test$240:	; call header integral zero 0 stack zero 0
+string_test$240:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 863:	
 
-string_test$241:	; parameter string_strerror28errno29203D202225s220A#, offset 6
+string_test$241:	; Parameter 212 string_strerror28errno29203D202225s220A# 6
 864:		mov word [bp + 218], string_strerror28errno29203D202225s220A#
 866:	
 
-string_test$242:	; call header integral zero 0 stack zero 0
+string_test$242:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 868:	
 
-string_test$243:	; parameter errno, offset 14
+string_test$243:	; Parameter 212 errno 14
 869:		mov ax, [errno]
 870:		mov [bp + 226], ax
 872:	
 
-string_test$244:	; call function noellipse-noellipse strerror
+string_test$244:	; Call 212 strerror 8
 873:		mov word [bp + 220], string_test$245
 874:		mov [bp + 222], bp
 875:		add bp, 220
 876:		jmp strerror
 878:	
 
-string_test$245:	; post call
+string_test$245:	; PostCall 212
 880:	
 
-string_test$246:	; £temporary4577 = return_value
+string_test$246:	; GetReturnValue £temporary4577
 885:	
 
-string_test$247:	; parameter £temporary4577, offset 8
+string_test$247:	; Parameter 212 £temporary4577 8
 886:		mov [bp + 220], bx
 888:	
 
-string_test$248:	; call function noellipse-ellipse printf, extra 0
+string_test$248:	; Call 212 printf 0
 889:		mov word [bp + 212], string_test$249
 890:		mov [bp + 214], bp
 891:		add bp, 212
@@ -1102,56 +1102,56 @@ string_test$248:	; call function noellipse-ellipse printf, extra 0
 894:		jmp printf
 896:	
 
-string_test$249:	; post call
+string_test$249:	; PostCall 212
 898:	
 
-string_test$250:	; call header integral zero 0 stack zero 0
+string_test$250:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 900:	
 
-string_test$251:	; parameter s, offset 6
+string_test$251:	; Parameter 212 s 6
 901:		mov ax, [bp + 8]
 902:		mov [bp + 218], ax
 904:	
 
-string_test$252:	; parameter string_2C#, offset 8
+string_test$252:	; Parameter 212 string_2C# 8
 905:		mov word [bp + 220], string_2C#
 907:	
 
-string_test$253:	; call function noellipse-noellipse strtok
+string_test$253:	; Call 212 strtok 0
 908:		mov word [bp + 212], string_test$254
 909:		mov [bp + 214], bp
 910:		add bp, 212
 911:		jmp strtok
 913:	
 
-string_test$254:	; post call
+string_test$254:	; PostCall 212
 915:	
 
-string_test$255:	; £temporary4579 = return_value
+string_test$255:	; GetReturnValue £temporary4579
 920:	
 
-string_test$256:	; p = £temporary4579
+string_test$256:	; Assign p £temporary4579
 921:		mov [bp + 210], bx
 923:	
 
-string_test$257:	; if p == 0 goto 271
+string_test$257:	; Equal 271 p 0
 924:		cmp word [bp + 210], 0
 925:		je string_test$271
 927:	
 
-string_test$258:	; call header integral zero 0 stack zero 0
+string_test$258:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 929:	
 
-string_test$259:	; parameter string_strtok28s2C20222C2229203D202225s220A#, offset 6
+string_test$259:	; Parameter 212 string_strtok28s2C20222C2229203D202225s220A# 6
 930:		mov word [bp + 218], string_strtok28s2C20222C2229203D202225s220A#
 932:	
 
-string_test$260:	; parameter p, offset 8
+string_test$260:	; Parameter 212 p 8
 933:		mov ax, [bp + 210]
 934:		mov [bp + 220], ax
 936:	
 
-string_test$261:	; call function noellipse-ellipse printf, extra 0
+string_test$261:	; Call 212 printf 0
 937:		mov word [bp + 212], string_test$262
 938:		mov [bp + 214], bp
 939:		add bp, 212
@@ -1160,46 +1160,46 @@ string_test$261:	; call function noellipse-ellipse printf, extra 0
 942:		jmp printf
 944:	
 
-string_test$262:	; post call
+string_test$262:	; PostCall 212
 946:	
 
-string_test$263:	; call header integral zero 0 stack zero 0
+string_test$263:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 948:	
 
-string_test$264:	; parameter 0, offset 6
+string_test$264:	; Parameter 212 0 6
 949:		mov word [bp + 218], 0
 951:	
 
-string_test$265:	; parameter string_2C#, offset 8
+string_test$265:	; Parameter 212 string_2C# 8
 952:		mov word [bp + 220], string_2C#
 954:	
 
-string_test$266:	; call function noellipse-noellipse strtok
+string_test$266:	; Call 212 strtok 0
 955:		mov word [bp + 212], string_test$267
 956:		mov [bp + 214], bp
 957:		add bp, 212
 958:		jmp strtok
 960:	
 
-string_test$267:	; post call
+string_test$267:	; PostCall 212
 962:	
 
-string_test$268:	; £temporary4582 = return_value
+string_test$268:	; GetReturnValue £temporary4582
 967:	
 
-string_test$269:	; p = £temporary4582
+string_test$269:	; Assign p £temporary4582
 968:		mov [bp + 210], bx
 970:	
 
-string_test$270:	; goto 257
+string_test$270:	; Goto 257
 971:		jmp string_test$257
 973:	
 
-string_test$271:	; return
+string_test$271:	; Return 0
 974:		mov ax, [bp]
 975:		mov di, [bp + 4]
 976:		mov bp, [bp + 2]
 977:		jmp ax
 979:	
 
-string_test$272:	; function end string_test
+string_test$272:	; FunctionEnd string_test

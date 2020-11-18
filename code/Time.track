@@ -866,7 +866,7 @@ gmtime$43:	; BinaryAdd totalDays totalDays 365
 gmtime$44:	; BinarySubtract g_timeStruct$tm_year year 1900
 243:		mov a2123, [bp + 24]
 244:		sub a2123, 1900
-245:		mov [@4114$g_timeStruct], a2123
+245:		mov [@4114$g_timeStruct + 10], a2123
 247:	
 
 gmtime$45:	; IntegralToIntegral £temporary3552 totalDays
