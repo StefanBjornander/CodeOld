@@ -1,0 +1,21 @@
+0: Assign count 0
+1: PreCall 10
+2: Parameter 16 signedint 1024
+3: Call 10 malloc 0
+4: PostCall 10
+5: GetReturnValue £temporary4189
+6: Assign pointer £temporary4189
+7: NotEqual PreCall 10 pointer 0
+8: Goto Empty
+9: PreCall 10
+10: Parameter 16 pointer "1024 bytes-block number: %i\n"
+11: Assign £temporary4191 count
+12: BinaryAdd count count 1
+13: Parameter 18 signedint £temporary4191
+14: Parameter 20 pointer pointer
+15: Call 10 printf 4
+16: PostCall 10
+17: Goto PreCall 10
+18: Empty
+19: Return
+20: FunctionEnd heap_test

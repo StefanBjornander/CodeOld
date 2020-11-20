@@ -1,0 +1,19 @@
+0: Assign count 0
+1: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 10 1024 6
+3: Call 10 malloc 0
+4: PostCall 10
+5: GetReturnValue £temporary5793
+6: Assign pointer £temporary5793
+7: Equal 17 pointer 0
+8: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+9: Parameter 10 string_102420bytes2Dblock20number3A2025i0A# 6
+10: Assign £temporary5795 count
+11: Increment count
+12: Parameter 10 £temporary5795 8
+13: Parameter 10 pointer 10
+14: Call 10 printf 0
+15: PostCall 10
+16: Goto 1
+17: Return 0
+18: FunctionEnd heap_test

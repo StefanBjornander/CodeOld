@@ -22,10 +22,10 @@ file_test$3:	; Call 10 fopen 0
 file_test$4:	; PostCall 10
 18:	
 
-file_test$5:	; GetReturnValue £temporary4984
+file_test$5:	; GetReturnValue £temporary4986
 23:	
 
-file_test$6:	; Assign inFilePtrPtr £temporary4984
+file_test$6:	; Assign inFilePtrPtr £temporary4986
 24:		mov [bp + 10], t2799
 26:	
 
@@ -51,10 +51,10 @@ file_test$10:	; Call 12 fopen 0
 file_test$11:	; PostCall 12
 43:	
 
-file_test$12:	; GetReturnValue £temporary4985
+file_test$12:	; GetReturnValue £temporary4987
 48:	
 
-file_test$13:	; Assign outFilePtrPtr £temporary4985
+file_test$13:	; Assign outFilePtrPtr £temporary4987
 49:		mov [bp + 12], t2802
 51:	
 
@@ -182,12 +182,12 @@ file_test$41:	; Parameter 18 string_25i# 8
 145:		mov word [bp + 26], string_25i#
 147:	
 
-file_test$42:	; address £temporary4994 size
+file_test$42:	; address £temporary4996 size
 148:		mov t2806, bp
 149:		add t2806, 14
 151:	
 
-file_test$43:	; Parameter 18 £temporary4994 10
+file_test$43:	; Parameter 18 £temporary4996 10
 152:		mov [bp + 28], t2806
 154:	
 
@@ -228,7 +228,7 @@ file_test$51:	; PushFloat inValue
 181:		fld qword [bp + 18]
 183:	
 
-file_test$52:	; Parameter 26 £temporary4998 6
+file_test$52:	; Parameter 26 £temporary5000 6
 184:		fstp qword [bp + 32]
 186:	
 
@@ -242,7 +242,7 @@ file_test$53:	; Call 26 sqrt 0
 file_test$54:	; PostCall 26
 194:	
 
-file_test$55:	; GetReturnValue £temporary4999
+file_test$55:	; GetReturnValue £temporary5001
 196:	
 
 file_test$56:	; PopFloat outValue
@@ -261,12 +261,12 @@ file_test$59:	; Parameter 34 string_25lf# 8
 206:		mov word [bp + 42], string_25lf#
 208:	
 
-file_test$60:	; address £temporary5000 inValue
+file_test$60:	; address £temporary5002 inValue
 209:		mov t2809, bp
 210:		add t2809, 18
 212:	
 
-file_test$61:	; Parameter 34 £temporary5000 10
+file_test$61:	; Parameter 34 £temporary5002 10
 213:		mov [bp + 44], t2809
 215:	
 
@@ -389,10 +389,10 @@ file_test$86:	; Call 14 rename 0
 file_test$87:	; PostCall 14
 308:	
 
-file_test$88:	; GetReturnValue £temporary5005
+file_test$88:	; GetReturnValue £temporary5007
 313:	
 
-file_test$89:	; NotEqual 97 £temporary5005 0
+file_test$89:	; NotEqual 97 £temporary5007 0
 314:		cmp t2816, 0
 315:		jne file_test$97
 317:	
@@ -460,10 +460,10 @@ file_test$102:	; Call 14 strerror 10
 file_test$103:	; PostCall 14
 366:	
 
-file_test$104:	; GetReturnValue £temporary5008
+file_test$104:	; GetReturnValue £temporary5010
 371:	
 
-file_test$105:	; Parameter 14 £temporary5008 10
+file_test$105:	; Parameter 14 £temporary5010 10
 372:		mov [bp + 24], t2822
 374:	
 
@@ -501,10 +501,10 @@ file_test$111:	; Call 12 remove 0
 file_test$112:	; PostCall 12
 401:	
 
-file_test$113:	; GetReturnValue £temporary5010
+file_test$113:	; GetReturnValue £temporary5012
 406:	
 
-file_test$114:	; NotEqual 121 £temporary5010 0
+file_test$114:	; NotEqual 121 £temporary5012 0
 407:		cmp t2825, 0
 408:		jne file_test$121
 410:	
@@ -567,10 +567,10 @@ file_test$126:	; Call 12 strerror 10
 file_test$127:	; PostCall 12
 455:	
 
-file_test$128:	; GetReturnValue £temporary5013
+file_test$128:	; GetReturnValue £temporary5015
 460:	
 
-file_test$129:	; Parameter 12 £temporary5013 10
+file_test$129:	; Parameter 12 £temporary5015 10
 461:		mov [bp + 22], t2830
 463:	
 
@@ -607,10 +607,10 @@ file_test$135:	; Call 10 fopen 0
 file_test$136:	; PostCall 10
 489:	
 
-file_test$137:	; GetReturnValue £temporary5015
+file_test$137:	; GetReturnValue £temporary5017
 494:	
 
-file_test$138:	; Assign inFilePtr £temporary5015
+file_test$138:	; Assign inFilePtr £temporary5017
 495:		mov [bp + 10], t2832
 497:	
 
@@ -734,12 +734,12 @@ file_test$165:	; Parameter 16 string_25i# 8
 588:		mov word [bp + 24], string_25i#
 590:	
 
-file_test$166:	; address £temporary5022 size
+file_test$166:	; address £temporary5024 size
 591:		mov t2835, bp
 592:		add t2835, 14
 594:	
 
-file_test$167:	; Parameter 16 £temporary5022 10
+file_test$167:	; Parameter 16 £temporary5024 10
 595:		mov [bp + 26], t2835
 597:	
 
@@ -902,10 +902,10 @@ file_test$200:	; Call 14 fopen 0
 file_test$201:	; PostCall 14
 722:	
 
-file_test$202:	; GetReturnValue £temporary5030
+file_test$202:	; GetReturnValue £temporary5032
 727:	
 
-file_test$203:	; Assign inFilePtr £temporary5030
+file_test$203:	; Assign inFilePtr £temporary5032
 728:		mov [bp + 14], t2841
 730:	
 
@@ -931,10 +931,10 @@ file_test$207:	; Call 16 fopen 0
 file_test$208:	; PostCall 16
 747:	
 
-file_test$209:	; GetReturnValue £temporary5031
+file_test$209:	; GetReturnValue £temporary5033
 752:	
 
-file_test$210:	; Assign outFilePtr £temporary5031
+file_test$210:	; Assign outFilePtr £temporary5033
 753:		mov [bp + 16], t2844
 755:	
 
@@ -1064,21 +1064,21 @@ file_test$237:	; Call 18 fgetc 0
 file_test$238:	; PostCall 18
 853:	
 
-file_test$239:	; GetReturnValue £temporary5040
+file_test$239:	; GetReturnValue £temporary5042
 858:	
 
-file_test$240:	; IntegralToIntegral £temporary5041 £temporary5040
+file_test$240:	; IntegralToIntegral £temporary5043 £temporary5042
 861:		cmp t2849, 0
 862:		jge file_test$241
 863:		neg t2849
 865:		neg t2849
 867:	
 
-file_test$241:	; Assign c £temporary5041
+file_test$241:	; Assign c £temporary5043
 868:		mov [bp + 18], t2849
 870:	
 
-file_test$242:	; IntegralToIntegral £temporary5042 c
+file_test$242:	; IntegralToIntegral £temporary5044 c
 871:		mov a2850, [bp + 18]
 873:		and a2850, 255
 875:		cmp a2850, 0
@@ -1087,7 +1087,7 @@ file_test$242:	; IntegralToIntegral £temporary5042 c
 879:		neg a2850
 881:	
 
-file_test$243:	; Equal 257 £temporary5042 -1
+file_test$243:	; Equal 257 £temporary5044 -1
 882:		cmp a2850, -1
 883:		je file_test$257
 885:	
@@ -1095,7 +1095,7 @@ file_test$243:	; Equal 257 £temporary5042 -1
 file_test$244:	; CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 887:	
 
-file_test$245:	; IntegralToIntegral £temporary5044 c
+file_test$245:	; IntegralToIntegral £temporary5046 c
 888:		mov a2851, [bp + 18]
 890:		and a2851, 255
 892:		cmp a2851, 0
@@ -1104,7 +1104,7 @@ file_test$245:	; IntegralToIntegral £temporary5044 c
 896:		neg a2851
 898:	
 
-file_test$246:	; Parameter 19 £temporary5044 6
+file_test$246:	; Parameter 19 £temporary5046 6
 899:		mov [bp + 25], a2851
 901:	
 
@@ -1211,10 +1211,10 @@ file_test$268:	; Call 10 fopen 0
 file_test$269:	; PostCall 10
 981:	
 
-file_test$270:	; GetReturnValue £temporary5051
+file_test$270:	; GetReturnValue £temporary5053
 986:	
 
-file_test$271:	; Assign outFilePtr £temporary5051
+file_test$271:	; Assign outFilePtr £temporary5053
 987:		mov [bp + 10], t2857
 989:	
 
@@ -1279,12 +1279,12 @@ file_test$284:	; Assign size 10
 file_test$285:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1036:	
 
-file_test$286:	; address £temporary5056 size
+file_test$286:	; address £temporary5058 size
 1037:		mov t2859, bp
 1038:		add t2859, 12
 1040:	
 
-file_test$287:	; Parameter 16 £temporary5056 6
+file_test$287:	; Parameter 16 £temporary5058 6
 1041:		mov [bp + 22], t2859
 1043:	
 
@@ -1321,13 +1321,13 @@ file_test$294:	; SignedGreaterThanEqual 308 index size
 1067:		jge file_test$308
 1069:	
 
-file_test$295:	; SignedMultiply £temporary5060 index index
+file_test$295:	; SignedMultiply £temporary5062 index index
 1070:		mov a2862, [bp + 14]
 1072:		xor dx, dx
 1073:		imul word [bp + 14]
 1079:	
 
-file_test$296:	; IntegralToFloating £temporary5061 £temporary5060
+file_test$296:	; IntegralToFloating £temporary5063 £temporary5062
 1080:		mov [container2bytes#], t2865
 1081:		fild word [container2bytes#]
 1083:	
@@ -1339,12 +1339,12 @@ file_test$297:	; PopFloat value
 file_test$298:	; CallHeader 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1088:	
 
-file_test$299:	; address £temporary5062 value
+file_test$299:	; address £temporary5064 value
 1089:		mov t2866, bp
 1090:		add t2866, 16
 1092:	
 
-file_test$300:	; Parameter 24 £temporary5062 6
+file_test$300:	; Parameter 24 £temporary5064 6
 1093:		mov [bp + 30], t2866
 1095:	
 
@@ -1418,10 +1418,10 @@ file_test$315:	; Call 10 fopen 0
 file_test$316:	; PostCall 10
 1149:	
 
-file_test$317:	; GetReturnValue £temporary5065
+file_test$317:	; GetReturnValue £temporary5067
 1154:	
 
-file_test$318:	; Assign inFilePtr £temporary5065
+file_test$318:	; Assign inFilePtr £temporary5067
 1155:		mov [bp + 10], t2870
 1157:	
 
@@ -1482,12 +1482,12 @@ file_test$330:	; PostCall 12
 file_test$331:	; CallHeader 96 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1201:	
 
-file_test$332:	; address £temporary5070 size
+file_test$332:	; address £temporary5072 size
 1202:		mov t2872, bp
 1203:		add t2872, 12
 1205:	
 
-file_test$333:	; Parameter 96 £temporary5070 6
+file_test$333:	; Parameter 96 £temporary5072 6
 1206:		mov [bp + 102], t2872
 1208:	
 
@@ -1541,12 +1541,12 @@ file_test$343:	; PostCall 96
 file_test$344:	; CallHeader 96 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1247:	
 
-file_test$345:	; address £temporary5073 arr
+file_test$345:	; address £temporary5075 arr
 1248:		mov t2875, bp
 1249:		add t2875, 16
 1251:	
 
-file_test$346:	; Parameter 96 £temporary5073 6
+file_test$346:	; Parameter 96 £temporary5075 6
 1252:		mov [bp + 102], t2875
 1254:	
 
@@ -1612,26 +1612,26 @@ file_test$360:	; Parameter 96 index 8
 1300:		mov [bp + 104], a2878
 1302:	
 
-file_test$361:	; UnsignedMultiply £temporary5079 index 8
+file_test$361:	; UnsignedMultiply £temporary5081 index 8
 1303:		mov a2879, [bp + 14]
 1305:		xor dx, dx
 1306:		mul word [int2$8#]
 1312:	
 
-file_test$362:	; BinaryAdd £temporary5080 arr £temporary5079
+file_test$362:	; BinaryAdd £temporary5082 arr £temporary5081
 1313:		mov a2883, bp
 1314:		add a2883, 16
 1315:		add a2883, t2882
 1317:	
 
-file_test$363:	; Deref £temporary5078 -> £temporary5080 £temporary5080 0
+file_test$363:	; Deref £temporary5080 -> £temporary5082 £temporary5082 0
 1319:	
 
-file_test$364:	; PushFloat £temporary5078 -> £temporary5080
+file_test$364:	; PushFloat £temporary5080 -> £temporary5082
 1320:		fld qword [a2883]
 1322:	
 
-file_test$365:	; Parameter 96 £temporary5078 -> £temporary5080 10
+file_test$365:	; Parameter 96 £temporary5080 -> £temporary5082 10
 1323:		fstp qword [bp + 106]
 1325:	
 
@@ -1694,10 +1694,10 @@ file_test$377:	; Call 10 fopen 0
 file_test$378:	; PostCall 10
 1371:	
 
-file_test$379:	; GetReturnValue £temporary5083
+file_test$379:	; GetReturnValue £temporary5085
 1376:	
 
-file_test$380:	; Assign inFilePtr £temporary5083
+file_test$380:	; Assign inFilePtr £temporary5085
 1377:		mov [bp + 10], t2885
 1379:	
 
@@ -1758,12 +1758,12 @@ file_test$392:	; PostCall 16
 file_test$393:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1423:	
 
-file_test$394:	; address £temporary5088 size
+file_test$394:	; address £temporary5090 size
 1424:		mov t2887, bp
 1425:		add t2887, 12
 1427:	
 
-file_test$395:	; Parameter 16 £temporary5088 6
+file_test$395:	; Parameter 16 £temporary5090 6
 1428:		mov [bp + 22], t2887
 1430:	
 
@@ -1827,12 +1827,12 @@ file_test$407:	; SignedGreaterThanEqual 425 index size
 file_test$408:	; CallHeader 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1477:	
 
-file_test$409:	; address £temporary5093 value
+file_test$409:	; address £temporary5095 value
 1478:		mov t2891, bp
 1479:		add t2891, 16
 1481:	
 
-file_test$410:	; Parameter 24 £temporary5093 6
+file_test$410:	; Parameter 24 £temporary5095 6
 1482:		mov [bp + 30], t2891
 1484:	
 
@@ -1956,10 +1956,10 @@ file_test$436:	; Call 10 fopen 0
 file_test$437:	; PostCall 10
 1577:	
 
-file_test$438:	; GetReturnValue £temporary5098
+file_test$438:	; GetReturnValue £temporary5100
 1582:	
 
-file_test$439:	; Assign inFilePtr £temporary5098
+file_test$439:	; Assign inFilePtr £temporary5100
 1583:		mov [bp + 10], t2896
 1585:	
 
@@ -2020,12 +2020,12 @@ file_test$451:	; PostCall 14
 file_test$452:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1629:	
 
-file_test$453:	; address £temporary5103 size
+file_test$453:	; address £temporary5105 size
 1630:		mov t2898, bp
 1631:		add t2898, 12
 1633:	
 
-file_test$454:	; Parameter 14 £temporary5103 6
+file_test$454:	; Parameter 14 £temporary5105 6
 1634:		mov [bp + 20], t2898
 1636:	
 
@@ -2064,13 +2064,13 @@ file_test$462:	; Parameter 14 size 8
 1661:		mov [bp + 22], a2900
 1663:	
 
-file_test$463:	; SignedMultiply £temporary5105 size 8
+file_test$463:	; SignedMultiply £temporary5107 size 8
 1664:		mov a2901, [bp + 12]
 1666:		xor dx, dx
 1667:		imul word [int2$8#]
 1673:	
 
-file_test$464:	; Parameter 14 £temporary5105 10
+file_test$464:	; Parameter 14 £temporary5107 10
 1674:		mov [bp + 24], t2904
 1676:	
 
@@ -2111,20 +2111,20 @@ file_test$470:	; Call 18 malloc 0
 file_test$471:	; PostCall 18
 1707:	
 
-file_test$472:	; GetReturnValue £temporary5108
+file_test$472:	; GetReturnValue £temporary5110
 1712:	
 
-file_test$473:	; Assign p £temporary5108
+file_test$473:	; Assign p £temporary5110
 1713:		mov [bp + 18], t2910
 1715:	
 
-file_test$474:	; UnsignedMultiply £temporary5109 size 8
+file_test$474:	; UnsignedMultiply £temporary5111 size 8
 1716:		mov a2911, [bp + 12]
 1718:		xor dx, dx
 1719:		mul word [int2$8#]
 1725:	
 
-file_test$475:	; BinaryAdd endPtr p £temporary5109
+file_test$475:	; BinaryAdd endPtr p £temporary5111
 1726:		mov a2915, [bp + 18]
 1727:		add a2915, t2914
 1728:		mov [bp + 20], a2915
@@ -2272,25 +2272,25 @@ file_test$506:	; Parameter 22 index 8
 1839:		mov [bp + 30], a2924
 1841:	
 
-file_test$507:	; UnsignedMultiply £temporary5120 index 8
+file_test$507:	; UnsignedMultiply £temporary5122 index 8
 1842:		mov a2925, [bp + 16]
 1844:		xor dx, dx
 1845:		mul word [int2$8#]
 1851:	
 
-file_test$508:	; BinaryAdd £temporary5121 p £temporary5120
+file_test$508:	; BinaryAdd £temporary5123 p £temporary5122
 1852:		mov a2929, [bp + 18]
 1853:		add a2929, t2928
 1855:	
 
-file_test$509:	; Deref £temporary5119 -> £temporary5121 £temporary5121 0
+file_test$509:	; Deref £temporary5121 -> £temporary5123 £temporary5123 0
 1857:	
 
-file_test$510:	; PushFloat £temporary5119 -> £temporary5121
+file_test$510:	; PushFloat £temporary5121 -> £temporary5123
 1858:		fld qword [a2929]
 1860:	
 
-file_test$511:	; Parameter 22 £temporary5119 -> £temporary5121 10
+file_test$511:	; Parameter 22 £temporary5121 -> £temporary5123 10
 1861:		fstp qword [bp + 32]
 1863:	
 
@@ -2605,10 +2605,10 @@ file_test$585:	; Call 210 fopen 0
 file_test$586:	; PostCall 210
 2099:	
 
-file_test$587:	; GetReturnValue £temporary5186
+file_test$587:	; GetReturnValue £temporary5188
 2104:	
 
-file_test$588:	; Assign outFilePtr £temporary5186
+file_test$588:	; Assign outFilePtr £temporary5188
 2105:		mov [bp + 210], t2933
 2107:	
 
@@ -2633,10 +2633,10 @@ file_test$592:	; Call 212 fopen 0
 file_test$593:	; PostCall 212
 2123:	
 
-file_test$594:	; GetReturnValue £temporary5187
+file_test$594:	; GetReturnValue £temporary5189
 2128:	
 
-file_test$595:	; Assign inFilePtr £temporary5187
+file_test$595:	; Assign inFilePtr £temporary5189
 2129:		mov [bp + 212], t2935
 2131:	
 
@@ -2815,10 +2815,10 @@ file_test$633:	; Call 214 feof 0
 file_test$634:	; PostCall 214
 2267:	
 
-file_test$635:	; GetReturnValue £temporary5198
+file_test$635:	; GetReturnValue £temporary5200
 2272:	
 
-file_test$636:	; NotEqual 656 £temporary5198 0
+file_test$636:	; NotEqual 656 £temporary5200 0
 2273:		cmp t2942, 0
 2274:		jne file_test$656
 2276:	
@@ -2826,12 +2826,12 @@ file_test$636:	; NotEqual 656 £temporary5198 0
 file_test$637:	; CallHeader 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 2278:	
 
-file_test$638:	; address £temporary5201 person
+file_test$638:	; address £temporary5203 person
 2279:		mov t2943, bp
 2280:		add t2943, 160
 2282:	
 
-file_test$639:	; Parameter 214 £temporary5201 6
+file_test$639:	; Parameter 214 £temporary5203 6
 2283:		mov [bp + 220], t2943
 2285:	
 
@@ -2949,10 +2949,10 @@ file_test$663:	; Call 10 fopen 0
 file_test$664:	; PostCall 10
 2374:	
 
-file_test$665:	; GetReturnValue £temporary5208
+file_test$665:	; GetReturnValue £temporary5210
 2379:	
 
-file_test$666:	; Assign inFilePtr £temporary5208
+file_test$666:	; Assign inFilePtr £temporary5210
 2380:		mov [bp + 10], t2948
 2382:	
 
@@ -3054,13 +3054,13 @@ file_test$687:	; Call 14 ftell 0
 file_test$688:	; PostCall 14
 2458:	
 
-file_test$689:	; GetReturnValue £temporary5214
+file_test$689:	; GetReturnValue £temporary5216
 2463:	
 
-file_test$690:	; IntegralToIntegral £temporary5215 £temporary5214
+file_test$690:	; IntegralToIntegral £temporary5217 £temporary5216
 2466:	
 
-file_test$691:	; Assign u £temporary5215
+file_test$691:	; Assign u £temporary5217
 2467:		mov [bp + 12], t2953
 2469:	
 
@@ -3087,24 +3087,24 @@ file_test$695:	; Call 14 fgetc 0
 file_test$696:	; PostCall 14
 2487:	
 
-file_test$697:	; GetReturnValue £temporary5217
+file_test$697:	; GetReturnValue £temporary5219
 2492:	
 
-file_test$698:	; IntegralToIntegral £temporary5218 £temporary5217
+file_test$698:	; IntegralToIntegral £temporary5220 £temporary5219
 2495:		cmp t2956, 0
 2496:		jge file_test$699
 2497:		neg t2956
 2499:		neg t2956
 2501:	
 
-file_test$699:	; Assign c £temporary5218
+file_test$699:	; Assign c £temporary5220
 2502:		mov [bp + 14], t2956
 2504:	
 
 file_test$700:	; CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 2506:	
 
-file_test$701:	; IntegralToIntegral £temporary5219 c
+file_test$701:	; IntegralToIntegral £temporary5221 c
 2507:		mov a2957, [bp + 14]
 2509:		and a2957, 255
 2511:		cmp a2957, 0
@@ -3113,7 +3113,7 @@ file_test$701:	; IntegralToIntegral £temporary5219 c
 2515:		neg a2957
 2517:	
 
-file_test$702:	; Parameter 15 £temporary5219 6
+file_test$702:	; Parameter 15 £temporary5221 6
 2518:		mov [bp + 21], a2957
 2520:	
 
@@ -3222,15 +3222,15 @@ file_test$725:	; Call 10 fileexists 8
 file_test$726:	; PostCall 10
 2601:	
 
-file_test$727:	; GetReturnValue £temporary5225
+file_test$727:	; GetReturnValue £temporary5227
 2606:	
 
-file_test$728:	; Equal 731 £temporary5225 0
+file_test$728:	; Equal 731 £temporary5227 0
 2607:		cmp t2961, 0
 2608:		je file_test$731
 2610:	
 
-file_test$729:	; Assign £temporary5230 string_Yes#
+file_test$729:	; Assign £temporary5232 string_Yes#
 2611:		mov t2962, string_Yes#
 2613:	
 
@@ -3238,11 +3238,11 @@ file_test$730:	; Goto 732
 2614:		jmp file_test$732
 2616:	
 
-file_test$731:	; Assign £temporary5230 string_No#
+file_test$731:	; Assign £temporary5232 string_No#
 2617:		mov t2963, string_No#
 2619:	
 
-file_test$732:	; Parameter 10 £temporary5230 8
+file_test$732:	; Parameter 10 £temporary5232 8
 2620:		mov [bp + 18], t2963
 2622:	
 
@@ -3282,15 +3282,15 @@ file_test$739:	; Call 10 fileexists 8
 file_test$740:	; PostCall 10
 2650:	
 
-file_test$741:	; GetReturnValue £temporary5232
+file_test$741:	; GetReturnValue £temporary5234
 2655:	
 
-file_test$742:	; Equal 745 £temporary5232 0
+file_test$742:	; Equal 745 £temporary5234 0
 2656:		cmp t2965, 0
 2657:		je file_test$745
 2659:	
 
-file_test$743:	; Assign £temporary5237 string_Yes#
+file_test$743:	; Assign £temporary5239 string_Yes#
 2660:		mov t2966, string_Yes#
 2662:	
 
@@ -3298,11 +3298,11 @@ file_test$744:	; Goto 746
 2663:		jmp file_test$746
 2665:	
 
-file_test$745:	; Assign £temporary5237 string_No#
+file_test$745:	; Assign £temporary5239 string_No#
 2666:		mov t2967, string_No#
 2668:	
 
-file_test$746:	; Parameter 10 £temporary5237 8
+file_test$746:	; Parameter 10 £temporary5239 8
 2669:		mov [bp + 18], t2967
 2671:	
 
@@ -3339,10 +3339,10 @@ file_test$752:	; Call 12 fopen 0
 file_test$753:	; PostCall 12
 2697:	
 
-file_test$754:	; GetReturnValue £temporary5239
+file_test$754:	; GetReturnValue £temporary5241
 2702:	
 
-file_test$755:	; Assign inOutFilePtr £temporary5239
+file_test$755:	; Assign inOutFilePtr £temporary5241
 2703:		mov [bp + 12], t2969
 2705:	
 
@@ -3413,10 +3413,10 @@ file_test$769:	; Call 14 tmpfile 0
 file_test$770:	; PostCall 14
 2757:	
 
-file_test$771:	; GetReturnValue £temporary5244
+file_test$771:	; GetReturnValue £temporary5246
 2762:	
 
-file_test$772:	; Assign tempFilePtr £temporary5244
+file_test$772:	; Assign tempFilePtr £temporary5246
 2763:		mov [bp + 10], t2972
 2765:	
 
@@ -3492,21 +3492,21 @@ file_test$787:	; Call 14 fgetc 0
 file_test$788:	; PostCall 14
 2821:	
 
-file_test$789:	; GetReturnValue £temporary5249
+file_test$789:	; GetReturnValue £temporary5251
 2826:	
 
-file_test$790:	; IntegralToIntegral £temporary5250 £temporary5249
+file_test$790:	; IntegralToIntegral £temporary5252 £temporary5251
 2829:		cmp t2976, 0
 2830:		jge file_test$791
 2831:		neg t2976
 2833:		neg t2976
 2835:	
 
-file_test$791:	; Assign c £temporary5250
+file_test$791:	; Assign c £temporary5252
 2836:		mov [bp + 14], t2976
 2838:	
 
-file_test$792:	; IntegralToIntegral £temporary5251 c
+file_test$792:	; IntegralToIntegral £temporary5253 c
 2839:		mov a2977, [bp + 14]
 2841:		and a2977, 255
 2843:		cmp a2977, 0
@@ -3515,7 +3515,7 @@ file_test$792:	; IntegralToIntegral £temporary5251 c
 2847:		neg a2977
 2849:	
 
-file_test$793:	; Equal 806 £temporary5251 -1
+file_test$793:	; Equal 806 £temporary5253 -1
 2850:		cmp a2977, -1
 2851:		je file_test$806
 2853:	
@@ -3526,7 +3526,7 @@ file_test$794:	; CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Sy
 file_test$795:	; CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 2857:	
 
-file_test$796:	; IntegralToIntegral £temporary5253 c
+file_test$796:	; IntegralToIntegral £temporary5255 c
 2858:		mov a2978, [bp + 14]
 2860:		and a2978, 255
 2862:		cmp a2978, 0
@@ -3535,7 +3535,7 @@ file_test$796:	; IntegralToIntegral £temporary5253 c
 2866:		neg a2978
 2868:	
 
-file_test$797:	; Parameter 15 £temporary5253 6
+file_test$797:	; Parameter 15 £temporary5255 6
 2869:		mov [bp + 21], a2978
 2871:	
 
@@ -3549,10 +3549,10 @@ file_test$798:	; Call 15 toupper 0
 file_test$799:	; PostCall 15
 2879:	
 
-file_test$800:	; GetReturnValue £temporary5254
+file_test$800:	; GetReturnValue £temporary5256
 2884:	
 
-file_test$801:	; Parameter 15 £temporary5254 6
+file_test$801:	; Parameter 15 £temporary5256 6
 2885:		mov [bp + 21], t2980
 2887:	
 
@@ -3634,21 +3634,21 @@ file_test$817:	; Call 14 fgetc 0
 file_test$818:	; PostCall 14
 2948:	
 
-file_test$819:	; GetReturnValue £temporary5259
+file_test$819:	; GetReturnValue £temporary5261
 2953:	
 
-file_test$820:	; IntegralToIntegral £temporary5260 £temporary5259
+file_test$820:	; IntegralToIntegral £temporary5262 £temporary5261
 2956:		cmp t2986, 0
 2957:		jge file_test$821
 2958:		neg t2986
 2960:		neg t2986
 2962:	
 
-file_test$821:	; Assign c £temporary5260
+file_test$821:	; Assign c £temporary5262
 2963:		mov [bp + 14], t2986
 2965:	
 
-file_test$822:	; IntegralToIntegral £temporary5261 c
+file_test$822:	; IntegralToIntegral £temporary5263 c
 2966:		mov a2987, [bp + 14]
 2968:		and a2987, 255
 2970:		cmp a2987, 0
@@ -3657,7 +3657,7 @@ file_test$822:	; IntegralToIntegral £temporary5261 c
 2974:		neg a2987
 2976:	
 
-file_test$823:	; Equal 831 £temporary5261 -1
+file_test$823:	; Equal 831 £temporary5263 -1
 2977:		cmp a2987, -1
 2978:		je file_test$831
 2980:	
@@ -3665,7 +3665,7 @@ file_test$823:	; Equal 831 £temporary5261 -1
 file_test$824:	; CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 2982:	
 
-file_test$825:	; IntegralToIntegral £temporary5263 c
+file_test$825:	; IntegralToIntegral £temporary5265 c
 2983:		mov a2988, [bp + 14]
 2985:		and a2988, 255
 2987:		cmp a2988, 0
@@ -3674,7 +3674,7 @@ file_test$825:	; IntegralToIntegral £temporary5263 c
 2991:		neg a2988
 2993:	
 
-file_test$826:	; Parameter 15 £temporary5263 6
+file_test$826:	; Parameter 15 £temporary5265 6
 2994:		mov [bp + 21], a2988
 2996:	
 

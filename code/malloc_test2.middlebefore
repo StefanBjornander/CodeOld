@@ -1,0 +1,79 @@
+0: Assign p 0
+1: Assign r 0
+2: PreCall 12
+3: Parameter 18 signedint 96
+4: Call 12 malloc 0
+5: PostCall 12
+6: GetReturnValue £temporary4193
+7: Assign q £temporary4193
+8: Assign index 0
+9: Empty
+10: SignedLessThan PreCall 14 index 10
+11: Goto PreCall 14
+12: PreCall 14
+13: Parameter 20 signedint 96
+14: Call 14 malloc 0
+15: PostCall 14
+16: GetReturnValue £temporary4196
+17: Assign p £temporary4196
+18: Equal Assign r p index 5
+19: Goto Empty
+20: Assign r p
+21: Goto Empty
+22: Empty
+23: BinaryAdd index index 1
+24: Goto Empty
+25: PreCall 14
+26: Call 14 print_heap 0
+27: PostCall 14
+28: PreCall 14
+29: Parameter 20 pointer q
+30: Parameter 22 signedint 50
+31: Call 14 realloc 0
+32: PostCall 14
+33: PreCall 14
+34: Call 14 print_heap 0
+35: PostCall 14
+36: PreCall 14
+37: Parameter 20 pointer r
+38: Parameter 22 signedint 50
+39: Call 14 realloc 0
+40: PostCall 14
+41: PreCall 14
+42: Call 14 print_heap 0
+43: PostCall 14
+44: PreCall 14
+45: Parameter 20 pointer p
+46: Parameter 22 signedint 50
+47: Call 14 realloc 0
+48: PostCall 14
+49: PreCall 14
+50: Call 14 print_heap 0
+51: PostCall 14
+52: PreCall 14
+53: Parameter 20 pointer q
+54: Parameter 22 signedint 200
+55: Call 14 realloc 0
+56: PostCall 14
+57: PreCall 14
+58: Call 14 print_heap 0
+59: PostCall 14
+60: PreCall 14
+61: Parameter 20 pointer r
+62: Parameter 22 signedint 200
+63: Call 14 realloc 0
+64: PostCall 14
+65: PreCall 14
+66: Call 14 print_heap 0
+67: PostCall 14
+68: PreCall 14
+69: Parameter 20 pointer p
+70: Parameter 22 signedint 200
+71: Call 14 realloc 0
+72: PostCall 14
+73: PreCall 14
+74: Call 14 print_heap 0
+75: PostCall 14
+76: Empty
+77: Return
+78: FunctionEnd malloc_test2

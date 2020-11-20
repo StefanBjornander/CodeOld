@@ -1,0 +1,42 @@
+0: PushFloat x
+1: PushFloat 0
+2: SignedGreaterThanEqual PushFloat 1 x 0
+3: Goto Assign errno 6
+4: PushFloat 1
+5: PopFloat root_i_plus_1
+6: PushFloat root_i
+7: PopFloat
+8: PushFloat root_i_plus_1
+9: TopFloat root_i
+10: PopFloat
+11: PushFloat root_i_plus_1
+12: PopFloat
+13: PushFloat root_i
+14: PushFloat x
+15: PushFloat root_i
+16: SignedDivide £temporary468 x root_i
+17: BinaryAdd £temporary469 root_i £temporary468
+18: PushFloat 2
+19: SignedDivide £temporary470 £temporary469 2
+20: TopFloat root_i_plus_1
+21: PopFloat
+22: PreCall 30
+23: PushFloat root_i_plus_1
+24: PushFloat root_i
+25: BinarySubtract £temporary471 root_i_plus_1 root_i
+26: Parameter 36 double £temporary471
+27: Call 30 fabs 0
+28: PostCall 30
+29: GetReturnValue £temporary472
+30: PushFloat 0.000000001
+31: SignedGreaterThanEqual PushFloat root_i £temporary472 0.000000001
+32: Goto PushFloat root_i_plus_1
+33: Goto PushFloat root_i
+34: PushFloat root_i_plus_1
+35: Return root_i_plus_1
+36: Goto Empty
+37: Assign errno 6
+38: PushFloat 0
+39: Return 0
+40: Empty
+41: FunctionEnd sqrt

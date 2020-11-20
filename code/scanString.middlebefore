@@ -1,0 +1,159 @@
+0: Assign index 0
+1: PreCall 12
+2: Call 12 scanChar 0
+3: PostCall 12
+4: GetReturnValue £temporary1010
+5: Assign input £temporary1010
+6: Assign found 0
+7: PreCall 15
+8: IntegralToIntegral £temporary1011 input
+9: Parameter 21 signedint £temporary1011
+10: Call 15 isspace 0
+11: PostCall 15
+12: GetReturnValue £temporary1012
+13: NotEqual PreCall 15 £temporary1012 0
+14: Goto NotEqual Equal PreCall 15 precision 0 string 0
+15: PreCall 15
+16: Call 15 scanChar 0
+17: PostCall 15
+18: GetReturnValue £temporary1013
+19: Assign input £temporary1013
+20: Goto PreCall 15
+21: NotEqual Equal PreCall 15 precision 0 string 0
+22: Goto Equal PreCall 15 precision 0
+23: Equal PreCall 15 precision 0
+24: Goto Assign £temporary1036 precision
+25: PreCall 15
+26: IntegralToIntegral £temporary1017 input
+27: Parameter 21 signedint £temporary1017
+28: Call 15 isspace 0
+29: PostCall 15
+30: GetReturnValue £temporary1018
+31: NotEqual UnsignedMultiply £temporary1033 index 1 £temporary1018 0
+32: Goto IntegralToIntegral £temporary1021 input
+33: IntegralToIntegral £temporary1021 input
+34: NotEqual NotEqual Assign £temporary1026 index input 10 £temporary1021 -1
+35: Goto UnsignedMultiply £temporary1033 index 1
+36: NotEqual Assign £temporary1026 index input 10
+37: Goto UnsignedMultiply £temporary1033 index 1
+38: Assign £temporary1026 index
+39: BinaryAdd index index 1
+40: UnsignedMultiply £temporary1028 £temporary1026 1
+41: BinaryAdd £temporary1029 string £temporary1028
+42: Dereference £temporary1027 -> £temporary1029 £temporary1029 0
+43: Assign £temporary1027 -> £temporary1029 input
+44: PreCall 15
+45: Call 15 scanChar 0
+46: PostCall 15
+47: GetReturnValue £temporary1030
+48: Assign input £temporary1030
+49: Assign found 1
+50: BinaryAdd g_inChars g_inChars 1
+51: Goto PreCall 15
+52: UnsignedMultiply £temporary1033 index 1
+53: BinaryAdd £temporary1034 string £temporary1033
+54: Dereference £temporary1032 -> £temporary1034 £temporary1034 0
+55: Assign £temporary1032 -> £temporary1034 0
+56: BinaryAdd g_inChars g_inChars 1
+57: Goto NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+58: Assign £temporary1036 precision
+59: BinarySubtract precision precision 1
+60: SignedGreaterThan PreCall 15 £temporary1036 0
+61: Goto SignedGreaterThan UnsignedMultiply £temporary1056 index 1 precision 0
+62: PreCall 15
+63: IntegralToIntegral £temporary1038 input
+64: Parameter 21 signedint £temporary1038
+65: Call 15 isspace 0
+66: PostCall 15
+67: GetReturnValue £temporary1039
+68: NotEqual SignedGreaterThan UnsignedMultiply £temporary1056 index 1 precision 0 £temporary1039 0
+69: Goto IntegralToIntegral £temporary1042 input
+70: IntegralToIntegral £temporary1042 input
+71: NotEqual NotEqual Assign £temporary1048 index input 10 £temporary1042 -1
+72: Goto SignedGreaterThan UnsignedMultiply £temporary1056 index 1 precision 0
+73: NotEqual Assign £temporary1048 index input 10
+74: Goto SignedGreaterThan UnsignedMultiply £temporary1056 index 1 precision 0
+75: Assign £temporary1048 index
+76: BinaryAdd index index 1
+77: UnsignedMultiply £temporary1050 £temporary1048 1
+78: BinaryAdd £temporary1051 string £temporary1050
+79: Dereference £temporary1049 -> £temporary1051 £temporary1051 0
+80: Assign £temporary1049 -> £temporary1051 input
+81: PreCall 15
+82: Call 15 scanChar 0
+83: PostCall 15
+84: GetReturnValue £temporary1052
+85: Assign input £temporary1052
+86: Assign found 1
+87: BinaryAdd g_inChars g_inChars 1
+88: Goto Assign £temporary1036 precision
+89: SignedGreaterThan UnsignedMultiply £temporary1056 index 1 precision 0
+90: Goto NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+91: UnsignedMultiply £temporary1056 index 1
+92: BinaryAdd £temporary1057 string £temporary1056
+93: Dereference £temporary1055 -> £temporary1057 £temporary1057 0
+94: Assign £temporary1055 -> £temporary1057 0
+95: BinaryAdd g_inChars g_inChars 1
+96: Goto NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+97: Goto NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+98: Equal PreCall 15 precision 0
+99: Goto Assign £temporary1072 precision
+100: PreCall 15
+101: IntegralToIntegral £temporary1060 input
+102: Parameter 21 signedint £temporary1060
+103: Call 15 isspace 0
+104: PostCall 15
+105: GetReturnValue £temporary1061
+106: NotEqual BinaryAdd g_inChars g_inChars 1 £temporary1061 0
+107: Goto IntegralToIntegral £temporary1064 input
+108: IntegralToIntegral £temporary1064 input
+109: NotEqual NotEqual PreCall 15 input 10 £temporary1064 -1
+110: Goto BinaryAdd g_inChars g_inChars 1
+111: NotEqual PreCall 15 input 10
+112: Goto BinaryAdd g_inChars g_inChars 1
+113: PreCall 15
+114: Call 15 scanChar 0
+115: PostCall 15
+116: GetReturnValue £temporary1069
+117: Assign input £temporary1069
+118: Assign found 1
+119: BinaryAdd g_inChars g_inChars 1
+120: Goto PreCall 15
+121: BinaryAdd g_inChars g_inChars 1
+122: Goto NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+123: Assign £temporary1072 precision
+124: BinarySubtract precision precision 1
+125: SignedGreaterThan PreCall 15 £temporary1072 0
+126: Goto SignedGreaterThan BinaryAdd g_inChars g_inChars 1 precision 0
+127: PreCall 15
+128: IntegralToIntegral £temporary1074 input
+129: Parameter 21 signedint £temporary1074
+130: Call 15 isspace 0
+131: PostCall 15
+132: GetReturnValue £temporary1075
+133: NotEqual SignedGreaterThan BinaryAdd g_inChars g_inChars 1 precision 0 £temporary1075 0
+134: Goto IntegralToIntegral £temporary1078 input
+135: IntegralToIntegral £temporary1078 input
+136: NotEqual NotEqual PreCall 15 input 10 £temporary1078 -1
+137: Goto SignedGreaterThan BinaryAdd g_inChars g_inChars 1 precision 0
+138: NotEqual PreCall 15 input 10
+139: Goto SignedGreaterThan BinaryAdd g_inChars g_inChars 1 precision 0
+140: PreCall 15
+141: Call 15 scanChar 0
+142: PostCall 15
+143: GetReturnValue £temporary1084
+144: Assign input £temporary1084
+145: Assign found 1
+146: BinaryAdd g_inChars g_inChars 1
+147: Goto Assign £temporary1072 precision
+148: SignedGreaterThan BinaryAdd g_inChars g_inChars 1 precision 0
+149: Goto NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+150: BinaryAdd g_inChars g_inChars 1
+151: Goto NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+152: NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+153: Goto Empty
+154: BinaryAdd g_inCount g_inCount 1
+155: Goto Empty
+156: Empty
+157: Return
+158: FunctionEnd scanString

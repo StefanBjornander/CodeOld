@@ -1,0 +1,109 @@
+0: Assign longValue 0
+1: Assign minus 0
+2: Assign found 0
+3: PreCall 16
+4: Call 16 scanChar 0
+5: PostCall 16
+6: GetReturnValue £temporary1136
+7: Assign input £temporary1136
+8: PreCall 17
+9: IntegralToIntegral £temporary1137 input
+10: Parameter 23 signedint £temporary1137
+11: Call 17 isspace 0
+12: PostCall 17
+13: GetReturnValue £temporary1138
+14: NotEqual PreCall 17 £temporary1138 0
+15: Goto Equal PreCall 17 input 43
+16: PreCall 17
+17: Call 17 scanChar 0
+18: PostCall 17
+19: GetReturnValue £temporary1139
+20: Assign input £temporary1139
+21: Goto PreCall 17
+22: Equal PreCall 17 input 43
+23: Goto Equal Assign minus 1 input 45
+24: PreCall 17
+25: Call 17 scanChar 0
+26: PostCall 17
+27: GetReturnValue £temporary1142
+28: Assign input £temporary1142
+29: Goto Equal Equal PreCall 17 input 48 base 0
+30: Equal Assign minus 1 input 45
+31: Goto Equal Equal PreCall 17 input 48 base 0
+32: Assign minus 1
+33: PreCall 17
+34: Call 17 scanChar 0
+35: PostCall 17
+36: GetReturnValue £temporary1144
+37: Assign input £temporary1144
+38: Goto Equal Equal PreCall 17 input 48 base 0
+39: Equal Equal PreCall 17 input 48 base 0
+40: Goto PreCall 17
+41: Equal PreCall 17 input 48
+42: Goto Assign base 10
+43: PreCall 17
+44: Call 17 scanChar 0
+45: PostCall 17
+46: GetReturnValue £temporary1147
+47: Assign input £temporary1147
+48: PreCall 17
+49: IntegralToIntegral £temporary1148 input
+50: Parameter 23 signedint £temporary1148
+51: Call 17 tolower 0
+52: PostCall 17
+53: GetReturnValue £temporary1149
+54: Equal Assign base 16 £temporary1149 120
+55: Goto Assign base 8
+56: Assign base 16
+57: PreCall 17
+58: Call 17 scanChar 0
+59: PostCall 17
+60: GetReturnValue £temporary1151
+61: Assign input £temporary1151
+62: Goto PreCall 17
+63: Assign base 8
+64: Goto PreCall 17
+65: Assign base 10
+66: Goto PreCall 17
+67: PreCall 17
+68: Parameter 23 signedchar input
+69: Parameter 24 signedint base
+70: Call 17 isDigitInBase 0
+71: PostCall 17
+72: GetReturnValue £temporary1152
+73: NotEqual IntegralToIntegral £temporary1153 base £temporary1152 0
+74: Goto NotEqual UnarySubtract £temporary1160 longValue minus 0
+75: IntegralToIntegral £temporary1153 base
+76: SignedMultiply £temporary1154 longValue £temporary1153
+77: Assign longValue £temporary1154
+78: PreCall 17
+79: Parameter 23 signedchar input
+80: Call 17 digitToValue 0
+81: PostCall 17
+82: GetReturnValue £temporary1155
+83: IntegralToIntegral £temporary1156 £temporary1155
+84: BinaryAdd £temporary1157 longValue £temporary1156
+85: Assign longValue £temporary1157
+86: PreCall 17
+87: Call 17 scanChar 0
+88: PostCall 17
+89: GetReturnValue £temporary1158
+90: Assign input £temporary1158
+91: Assign found 1
+92: Goto PreCall 17
+93: NotEqual UnarySubtract £temporary1160 longValue minus 0
+94: Goto NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+95: UnarySubtract £temporary1160 longValue
+96: Assign longValue £temporary1160
+97: Goto NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+98: NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+99: Goto PreCall 17
+100: BinaryAdd g_inCount g_inCount 1
+101: Goto PreCall 17
+102: PreCall 17
+103: Parameter 23 signedchar input
+104: Call 17 unscanChar 0
+105: PostCall 17
+106: Return longValue
+107: Empty
+108: FunctionEnd scanLongInt

@@ -1,0 +1,15 @@
+0: Assign g_inStatus 1
+1: Assign g_inDevice s
+2: Assign g_inChars 0
+3: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: Parameter 12 base 6
+5: Call 12 scanLongInt 0
+6: PostCall 12
+7: GetReturnValue £temporary2425
+8: Assign value £temporary2425
+9: Equal 12 endp 0
+10: Deref £temporary2427 -> endp endp 0
+11: BinaryAdd £temporary2427 -> endp s g_inChars
+12: SetReturnValue value
+13: Return value
+14: FunctionEnd strtol

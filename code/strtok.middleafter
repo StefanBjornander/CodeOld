@@ -1,0 +1,79 @@
+0: Equal 37 string 0
+1: Dereference £temporary3209 -> string string 0
+2: NotEqual 5 £temporary3209 -> string 0
+3: SetReturnValue
+4: Return 0
+5: Assign index 0
+6: BinaryAdd £temporary3213 string index
+7: Dereference £temporary3211 -> £temporary3213 £temporary3213 0
+8: Equal 31 £temporary3211 -> £temporary3213 0
+9: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+10: Parameter 20 pointer charSet
+11: BinaryAdd £temporary3218 string index
+12: Dereference £temporary3216 -> £temporary3218 £temporary3218 0
+13: IntegralToIntegral £temporary3219 £temporary3216 -> £temporary3218
+14: Parameter 22 signedint £temporary3219
+15: Call 14 strchr 0
+16: PostCall 14
+17: GetReturnValue £temporary3220
+18: Equal 29 £temporary3220 0
+19: BinaryAdd £temporary3224 string index
+20: Dereference £temporary3222 -> £temporary3224 £temporary3224 0
+21: Assign £temporary3222 -> £temporary3224 0
+22: BinaryAdd £temporary3225 index 1
+23: BinaryAdd £temporary3228 string £temporary3225
+24: Dereference £temporary3226 -> £temporary3228 £temporary3228 0
+25: Address £temporary3229 £temporary3226 -> £temporary3228
+26: Assign token £temporary3229
+27: SetReturnValue
+28: Return string
+29: BinaryAdd index index 1
+30: Goto 6
+31: BinaryAdd £temporary3232 string index
+32: Dereference £temporary3230 -> £temporary3232 £temporary3232 0
+33: Address £temporary3233 £temporary3230 -> £temporary3232
+34: Assign token £temporary3233
+35: SetReturnValue
+36: Return string
+37: NotEqual 40 token 0
+38: SetReturnValue
+39: Return 0
+40: Dereference £temporary3235 -> token token 0
+41: NotEqual 44 £temporary3235 -> token 0
+42: SetReturnValue
+43: Return 0
+44: Assign index 0
+45: BinaryAdd £temporary3239 token index
+46: Dereference £temporary3237 -> £temporary3239 £temporary3239 0
+47: Equal 71 £temporary3237 -> £temporary3239 0
+48: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+49: Parameter 20 pointer charSet
+50: BinaryAdd £temporary3244 token index
+51: Dereference £temporary3242 -> £temporary3244 £temporary3244 0
+52: IntegralToIntegral £temporary3245 £temporary3242 -> £temporary3244
+53: Parameter 22 signedint £temporary3245
+54: Call 14 strchr 0
+55: PostCall 14
+56: GetReturnValue £temporary3246
+57: Equal 69 £temporary3246 0
+58: Assign tokenStart2 token
+59: BinaryAdd £temporary3250 token index
+60: Dereference £temporary3248 -> £temporary3250 £temporary3250 0
+61: Assign £temporary3248 -> £temporary3250 0
+62: BinaryAdd £temporary3251 index 1
+63: BinaryAdd £temporary3254 token £temporary3251
+64: Dereference £temporary3252 -> £temporary3254 £temporary3254 0
+65: Address £temporary3255 £temporary3252 -> £temporary3254
+66: Assign token £temporary3255
+67: SetReturnValue
+68: Return tokenStart2
+69: BinaryAdd index index 1
+70: Goto 45
+71: Assign tokenStart token
+72: BinaryAdd £temporary3258 token index
+73: Dereference £temporary3256 -> £temporary3258 £temporary3258 0
+74: Address £temporary3259 £temporary3256 -> £temporary3258
+75: Assign token £temporary3259
+76: SetReturnValue
+77: Return tokenStart
+78: FunctionEnd strtok

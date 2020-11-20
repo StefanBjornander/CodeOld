@@ -1,0 +1,43 @@
+0: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 8 string_0ARaise20signal2025i0A# 6
+2: Parameter 8 sig 8
+3: Call 8 printf 0
+4: PostCall 8
+5: IntegralToIntegral £temporary862 sig
+6: AssignRegister al £temporary862
+7: AssignRegister ah 53
+8: Interrupt 33
+9: InspectRegister £temporary864 bx
+10: Assign func £temporary864
+11: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+12: Parameter 10 string_Raise20function2025p0A# 6
+13: Parameter 10 func 8
+14: Call 10 printf 0
+15: PostCall 10
+16: NotEqual 23 func 0
+17: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+18: Parameter 10 string_Raise20default0A# 6
+19: Call 10 printf 0
+20: PostCall 10
+21: SetReturnValue 1
+22: Return 1
+23: NotEqual 30 func 0
+24: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+25: Parameter 10 string_Raise20error0A# 6
+26: Call 10 printf 0
+27: PostCall 10
+28: SetReturnValue 0
+29: Return 0
+30: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+31: Parameter 10 string_Raise20function2C20calling2025i20with2025i0A# 6
+32: Parameter 10 func 8
+33: Parameter 10 sig 10
+34: Call 10 printf 0
+35: PostCall 10
+36: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+37: Parameter 10 sig 6
+38: Call 10 func 0
+39: PostCall 10
+40: SetReturnValue 1
+41: Return 1
+42: FunctionEnd raise

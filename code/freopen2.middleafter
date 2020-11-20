@@ -1,0 +1,152 @@
+0: Assign handle -1
+1: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 14 mode 6
+3: Parameter 14 string_r# 8
+4: Call 14 strcmp 0
+5: PostCall 14
+6: GetReturnValue £temporary916
+7: NotEqual 16 £temporary916 0
+8: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+9: Parameter 14 name 6
+10: Parameter 14 64 8
+11: Call 14 fileopen 0
+12: PostCall 14
+13: GetReturnValue £temporary918
+14: Assign handle £temporary918
+15: Goto 130
+16: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+17: Parameter 14 mode 6
+18: Parameter 14 string_w# 8
+19: Call 14 strcmp 0
+20: PostCall 14
+21: GetReturnValue £temporary919
+22: NotEqual 30 £temporary919 0
+23: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+24: Parameter 14 name 6
+25: Call 14 filecreate 0
+26: PostCall 14
+27: GetReturnValue £temporary921
+28: Assign handle £temporary921
+29: Goto 130
+30: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+31: Parameter 14 mode 6
+32: Parameter 14 string_a# 8
+33: Call 14 strcmp 0
+34: PostCall 14
+35: GetReturnValue £temporary922
+36: NotEqual 59 £temporary922 0
+37: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+38: Parameter 14 name 6
+39: Parameter 14 65 8
+40: Call 14 fileopen 0
+41: PostCall 14
+42: GetReturnValue £temporary924
+43: Assign handle £temporary924
+44: Equal 52 handle -1
+45: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+46: Parameter 14 stream 6
+47: Parameter 14 0 8
+48: Parameter 14 2 10
+49: Call 14 fseek 0
+50: PostCall 14
+51: Goto 130
+52: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+53: Parameter 14 name 6
+54: Call 14 filecreate 0
+55: PostCall 14
+56: GetReturnValue £temporary927
+57: Assign handle £temporary927
+58: Goto 130
+59: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+60: Parameter 14 mode 6
+61: Parameter 14 string_r2B# 8
+62: Call 14 strcmp 0
+63: PostCall 14
+64: GetReturnValue £temporary928
+65: NotEqual 74 £temporary928 0
+66: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+67: Parameter 14 name 6
+68: Parameter 14 66 8
+69: Call 14 fileopen 0
+70: PostCall 14
+71: GetReturnValue £temporary930
+72: Assign handle £temporary930
+73: Goto 130
+74: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+75: Parameter 14 mode 6
+76: Parameter 14 string_w2B# 8
+77: Call 14 strcmp 0
+78: PostCall 14
+79: GetReturnValue £temporary931
+80: NotEqual 102 £temporary931 0
+81: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+82: Parameter 14 name 6
+83: Call 14 fileexists 0
+84: PostCall 14
+85: GetReturnValue £temporary933
+86: Equal 95 £temporary933 0
+87: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+88: Parameter 14 name 6
+89: Parameter 14 66 8
+90: Call 14 fileopen 0
+91: PostCall 14
+92: GetReturnValue £temporary934
+93: Assign handle £temporary934
+94: Goto 130
+95: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+96: Parameter 14 name 6
+97: Call 14 filecreate 0
+98: PostCall 14
+99: GetReturnValue £temporary935
+100: Assign handle £temporary935
+101: Goto 130
+102: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+103: Parameter 14 mode 6
+104: Parameter 14 string_a2B# 8
+105: Call 14 strcmp 0
+106: PostCall 14
+107: GetReturnValue £temporary937
+108: NotEqual 130 £temporary937 0
+109: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+110: Parameter 14 name 6
+111: Parameter 14 66 8
+112: Call 14 fileopen 0
+113: PostCall 14
+114: GetReturnValue £temporary939
+115: Assign handle £temporary939
+116: Equal 124 handle -1
+117: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+118: Parameter 14 stream 6
+119: Parameter 14 0 8
+120: Parameter 14 2 10
+121: Call 14 fseek 0
+122: PostCall 14
+123: Goto 130
+124: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+125: Parameter 14 name 6
+126: Call 14 filecreate 0
+127: PostCall 14
+128: GetReturnValue £temporary942
+129: Assign handle £temporary942
+130: Equal 147 handle -1
+131: Deref £temporary944 -> stream stream 0
+132: Assign £temporary944 -> stream 1
+133: Deref £temporary945 -> stream stream 2
+134: Assign £temporary945 -> stream handle
+135: Deref £temporary946 -> stream stream 25
+136: Assign £temporary946 -> stream 0
+137: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+138: Deref £temporary947 -> stream stream 4
+139: Parameter 14 £temporary947 -> stream 6
+140: Parameter 14 name 8
+141: Call 14 strcpy 0
+142: PostCall 14
+143: Deref £temporary949 -> stream stream 27
+144: Assign £temporary949 -> stream 0
+145: SetReturnValue stream
+146: Return stream
+147: Deref £temporary950 -> stream stream 0
+148: Assign £temporary950 -> stream 0
+149: SetReturnValue 0
+150: Return 0
+151: FunctionEnd freopen

@@ -1,0 +1,18 @@
+0: PreCall 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 13 pointer "Please write a character: "
+2: Call 7 printf 0
+3: PostCall 7
+4: PreCall 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+5: Parameter 13 pointer "%c"
+6: Address £temporary19 c
+7: Parameter 15 pointer £temporary19
+8: Call 7 scanf 2
+9: PostCall 7
+10: PreCall 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+11: Parameter 13 pointer "You wrote the character '%c'.\n"
+12: IntegralToIntegral £temporary21 c
+13: Parameter 15 signedint £temporary21
+14: Call 7 printf 2
+15: PostCall 7
+16: Return
+17: FunctionEnd mainc

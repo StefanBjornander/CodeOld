@@ -1,0 +1,45 @@
+0: PreCall 8
+1: Parameter 14 pointer "\nRaise signal %i\n"
+2: Parameter 16 signedint sig
+3: Call 8 printf 2
+4: PostCall 8
+5: IntegralToIntegral £temporary690 sig
+6: AssignRegister al £temporary690
+7: AssignRegister ah 53
+8: Interrupt 33
+9: InspectRegister £temporary692 bx
+10: Assign func £temporary692
+11: PreCall 10
+12: Parameter 16 pointer "Raise function %p\n"
+13: Parameter 18 pointer func
+14: Call 10 printf 2
+15: PostCall 10
+16: Equal PreCall 10 func 0
+17: Goto Equal PreCall 10 func 0
+18: PreCall 10
+19: Parameter 16 pointer "Raise default\n"
+20: Call 10 printf 0
+21: PostCall 10
+22: Return 1
+23: Goto Empty
+24: Equal PreCall 10 func 0
+25: Goto PreCall 10
+26: PreCall 10
+27: Parameter 16 pointer "Raise error\n"
+28: Call 10 printf 0
+29: PostCall 10
+30: Return 0
+31: Goto Empty
+32: PreCall 10
+33: Parameter 16 pointer "Raise function, calling %i with %i\n"
+34: Parameter 18 pointer func
+35: Parameter 20 signedint sig
+36: Call 10 printf 4
+37: PostCall 10
+38: PreCall 10
+39: Parameter 16 signedint sig
+40: Call 10 func 0
+41: PostCall 10
+42: Return 1
+43: Empty
+44: FunctionEnd raise

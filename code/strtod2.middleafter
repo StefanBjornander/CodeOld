@@ -1,0 +1,19 @@
+0: Assign chars 0
+1: PushZero
+2: PopFloat value
+3: CallHeader 20 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: Parameter 20 s 6
+5: Parameter 20 string_25lf25n# 8
+6: address £temporary3286 value
+7: Parameter 20 £temporary3286 10
+8: address £temporary3287 chars
+9: Parameter 20 £temporary3287 12
+10: Call 20 sscanf 0
+11: PostCall 20
+12: Equal 15 endp 0
+13: Deref £temporary3290 -> endp endp 0
+14: BinaryAdd £temporary3290 -> endp s chars
+15: PushFloat value
+16: SetReturnValue value
+17: Return value
+18: FunctionEnd strtod

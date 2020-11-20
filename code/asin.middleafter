@@ -1,0 +1,46 @@
+0: PushFloat x
+1: PushFloat 1
+2: NotEqual 6 x 1
+3: PushFloat 1.57079632679489661923132165
+4: SetReturnValue
+5: Return 1.57079632679489661923132165
+6: PushFloat x
+7: PushFloat 0
+8: SignedGreaterThanEqual 19 x 0
+9: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+10: PushFloat x
+11: UnarySubtract £temporary545 x
+12: Parameter 20 double £temporary545
+13: Call 14 asin 0
+14: PostCall 14
+15: GetReturnValue £temporary546
+16: UnarySubtract £temporary547 £temporary546
+17: SetReturnValue
+18: Return £temporary547
+19: PushFloat x
+20: PushFloat 1
+21: SignedGreaterThanEqual 41 x 1
+22: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+23: PushFloat x
+24: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
+25: PushFloat 1
+26: PushFloat x
+27: PushFloat x
+28: SignedMultiply £temporary549 x x
+29: BinarySubtract £temporary550 1 £temporary549
+30: Parameter 20 double £temporary550
+31: Call 14 sqrt 0
+32: PostCall 14
+33: GetReturnValue £temporary551
+34: SignedDivide £temporary552 x £temporary551
+35: Parameter 20 double £temporary552
+36: Call 14 atan 0
+37: PostCall 14
+38: GetReturnValue £temporary553
+39: SetReturnValue
+40: Return £temporary553
+41: Assign errno 6
+42: PushFloat 0
+43: SetReturnValue
+44: Return 0
+45: FunctionEnd asin

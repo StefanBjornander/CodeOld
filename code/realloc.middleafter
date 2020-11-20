@@ -1,92 +1,90 @@
-0: if newMemorySize >= int2$0# goto 12
-1: call header integral zero 0 stack zero 0
-2: parameter stderr, offset 16
-3: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 18
-4: parameter string_newMemorySize203E3D200#, offset 20
-5: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5CMalloc2Ec#, offset 22
-6: parameter int2$239#, offset 24
-7: call function noellipse-ellipse fprintf, extra 6
-8: post call
-9: call header integral zero 0 stack zero 0
-10: call function noellipse-noellipse abort
-11: post call
-12: if oldMemoryPtr != int2$0# goto 25
-13: if newMemorySize > int2$0# goto 25
-14: call header integral zero 0 stack zero 0
-15: parameter stderr, offset 16
-16: parameter string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#, offset 18
-17: parameter string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#, offset 20
-18: parameter string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5CMalloc2Ec#, offset 22
-19: parameter int2$240#, offset 24
-20: call function noellipse-ellipse fprintf, extra 6
-21: post call
-22: call header integral zero 0 stack zero 0
-23: call function noellipse-noellipse abort
-24: post call
-25: if oldMemoryPtr != int2$0# goto 33
-26: call header integral zero 0 stack zero 0
-27: parameter newMemorySize, offset 16
-28: call function noellipse-noellipse malloc
-29: post call
-30: £temporary228 = return_value
-31: return_value = £temporary228
-32: return
-33: if newMemorySize != int2$0# goto 40
-34: call header integral zero 0 stack zero 0
-35: parameter oldMemoryPtr, offset 16
-36: call function noellipse-noellipse free
-37: post call
-38: return_value = int2$0#
-39: return
-40: £temporary231 = int_to_int newMemorySize (Signed_Int -> Unsigned_Int)
-41: £temporary232 = £temporary231 + int2$4#
-42: newBlockSize = £temporary232
-43: £temporary233 = int_to_int oldMemoryPtr (Pointer -> Unsigned_Int)
-44: £temporary234 = £temporary233 - int2$4#
-45: £temporary235 = int_to_int £temporary234 (Unsigned_Int -> Pointer)
-46: oldBlockPtr = £temporary235
-47: £temporary236 -> oldBlockPtr = *oldBlockPtr
-48: if newBlockSize > £temporary236 -> oldBlockPtr goto 53
-49: £temporary238 -> oldBlockPtr = *oldBlockPtr
-50: £temporary238 -> oldBlockPtr = newBlockSize
-51: return_value = oldMemoryPtr
-52: return
-53: lastAddress = int2$65528#
-54: currBlockPtr = g_firstBlockPtr
-55: if currBlockPtr == int2$0# goto 70
-56: if currBlockPtr != oldBlockPtr goto 65
-57: £temporary241 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
-58: £temporary242 = lastAddress - £temporary241
-59: availableSize = £temporary242
-60: if availableSize < newBlockSize goto 70
-61: £temporary244 -> oldBlockPtr = *oldBlockPtr
-62: £temporary244 -> oldBlockPtr = newBlockSize
-63: return_value = oldMemoryPtr
-64: return
-65: £temporary245 = int_to_int currBlockPtr (Pointer -> Unsigned_Int)
-66: lastAddress = £temporary245
-67: £temporary246 -> currBlockPtr = *currBlockPtr, offset 2
-68: currBlockPtr = £temporary246 -> currBlockPtr
-69: goto 55
-70: call header integral zero 0 stack zero 0
-71: parameter newMemorySize, offset 24
-72: call function noellipse-noellipse malloc
-73: post call
-74: £temporary247 = return_value
-75: newMemoryPtr = £temporary247
-76: if newMemoryPtr == int2$0# goto 89
-77: call header integral zero 0 stack zero 0
-78: parameter newMemoryPtr, offset 26
-79: parameter oldMemoryPtr, offset 28
-80: parameter newMemorySize, offset 30
-81: call function noellipse-noellipse memcpy
-82: post call
-83: call header integral zero 0 stack zero 0
-84: parameter oldMemoryPtr, offset 26
-85: call function noellipse-noellipse free
-86: post call
-87: return_value = newMemoryPtr
-88: return
-89: return_value = int2$0#
-90: return
-91: function end realloc
+0: SignedGreaterThanEqual 12 newMemorySize 0
+1: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 16 pointer stderr
+3: Parameter 18 pointer "Assertion failed: "%s" in file %s at line %i\n"
+4: Parameter 20 pointer "newMemorySize >= 0"
+5: Parameter 22 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c"
+6: Parameter 24 signedint 259
+7: Call 10 fprintf 6
+8: PostCall 10
+9: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+10: Call 10 abort 0
+11: PostCall 10
+12: NotEqual 25 oldMemoryPtr 0
+13: SignedGreaterThan 25 newMemorySize 0
+14: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+15: Parameter 16 pointer stderr
+16: Parameter 18 pointer "Assertion failed: "%s" in file %s at line %i\n"
+17: Parameter 20 pointer "( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )"
+18: Parameter 22 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c"
+19: Parameter 24 signedint 260
+20: Call 10 fprintf 6
+21: PostCall 10
+22: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+23: Call 10 abort 0
+24: PostCall 10
+25: NotEqual 33 oldMemoryPtr 0
+26: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+27: Parameter 16 signedint newMemorySize
+28: Call 10 malloc 0
+29: PostCall 10
+30: GetReturnValue £temporary215
+31: SetReturnValue
+32: Return £temporary215
+33: NotEqual 40 newMemorySize 0
+34: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+35: Parameter 16 pointer oldMemoryPtr
+36: Call 10 free 0
+37: PostCall 10
+38: SetReturnValue
+39: Return 0
+40: IntegralToIntegral £temporary218 newMemorySize
+41: BinaryAdd newBlockSize £temporary218 4
+42: IntegralToIntegral £temporary220 oldMemoryPtr
+43: BinarySubtract £temporary221 £temporary220 4
+44: IntegralToIntegral £temporary222 £temporary221
+45: Assign oldBlockPtr £temporary222
+46: Dereference £temporary223 -> oldBlockPtr oldBlockPtr 0
+47: UnsignedGreaterThan 52 newBlockSize £temporary223 -> oldBlockPtr
+48: Dereference £temporary225 -> oldBlockPtr oldBlockPtr 0
+49: Assign £temporary225 -> oldBlockPtr newBlockSize
+50: SetReturnValue
+51: Return oldMemoryPtr
+52: Assign lastAddress 65528
+53: Assign currBlockPtr g_firstBlockPtr
+54: Equal 68 currBlockPtr 0
+55: NotEqual 63 currBlockPtr oldBlockPtr
+56: IntegralToIntegral £temporary228 currBlockPtr
+57: BinarySubtract availableSize lastAddress £temporary228
+58: UnsignedLessThan 68 availableSize newBlockSize
+59: Dereference £temporary231 -> oldBlockPtr oldBlockPtr 0
+60: Assign £temporary231 -> oldBlockPtr newBlockSize
+61: SetReturnValue
+62: Return oldMemoryPtr
+63: IntegralToIntegral £temporary232 currBlockPtr
+64: Assign lastAddress £temporary232
+65: Dereference £temporary233 -> currBlockPtr currBlockPtr 0
+66: Assign currBlockPtr £temporary233 -> currBlockPtr
+67: Goto 54
+68: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+69: Parameter 20 signedint newMemorySize
+70: Call 14 malloc 0
+71: PostCall 14
+72: GetReturnValue £temporary234
+73: Assign newMemoryPtr £temporary234
+74: Equal 87 newMemoryPtr 0
+75: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+76: Parameter 22 pointer newMemoryPtr
+77: Parameter 24 pointer oldMemoryPtr
+78: Parameter 26 signedint newMemorySize
+79: Call 16 memcpy 0
+80: PostCall 16
+81: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+82: Parameter 22 pointer oldMemoryPtr
+83: Call 16 free 0
+84: PostCall 16
+85: SetReturnValue
+86: Return newMemoryPtr
+87: SetReturnValue
+88: Return 0
+89: FunctionEnd realloc

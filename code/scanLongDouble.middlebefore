@@ -1,0 +1,154 @@
+0: Assign minus 0
+1: Assign found 0
+2: PushFloat 0.0
+3: PopFloat value
+4: PushFloat 1.0
+5: PopFloat factor
+6: PreCall 26
+7: Call 26 scanChar 0
+8: PostCall 26
+9: GetReturnValue £temporary1190
+10: Assign input £temporary1190
+11: PreCall 27
+12: IntegralToIntegral £temporary1191 input
+13: Parameter 33 signedint £temporary1191
+14: Call 27 isspace 0
+15: PostCall 27
+16: GetReturnValue £temporary1192
+17: NotEqual PreCall 27 £temporary1192 0
+18: Goto Equal PreCall 27 input 43
+19: PreCall 27
+20: Call 27 scanChar 0
+21: PostCall 27
+22: GetReturnValue £temporary1193
+23: Assign input £temporary1193
+24: Goto PreCall 27
+25: Equal PreCall 27 input 43
+26: Goto Equal Assign minus 1 input 45
+27: PreCall 27
+28: Call 27 scanChar 0
+29: PostCall 27
+30: GetReturnValue £temporary1196
+31: Assign input £temporary1196
+32: Goto PreCall 27
+33: Equal Assign minus 1 input 45
+34: Goto PreCall 27
+35: Assign minus 1
+36: PreCall 27
+37: Call 27 scanChar 0
+38: PostCall 27
+39: GetReturnValue £temporary1198
+40: Assign input £temporary1198
+41: Goto PreCall 27
+42: PreCall 27
+43: IntegralToIntegral £temporary1199 input
+44: Parameter 33 signedint £temporary1199
+45: Call 27 isdigit 0
+46: PostCall 27
+47: GetReturnValue £temporary1200
+48: NotEqual PushFloat value £temporary1200 0
+49: Goto Equal PreCall 27 input 46
+50: PushFloat value
+51: PopFloat
+52: PushFloat 10.0
+53: PushFloat value
+54: SignedMultiply £temporary1201 10.0 value
+55: BinarySubtract £temporary1202 input 48
+56: IntegralToIntegral £temporary1204 £temporary1202
+57: IntegralToFloating £temporary1203 £temporary1204
+58: BinaryAdd £temporary1205 £temporary1201 £temporary1203
+59: TopFloat value
+60: PopFloat
+61: PreCall 27
+62: Call 27 scanChar 0
+63: PostCall 27
+64: GetReturnValue £temporary1206
+65: Assign input £temporary1206
+66: Assign found 1
+67: Goto PreCall 27
+68: Equal PreCall 27 input 46
+69: Goto PreCall 27
+70: PreCall 27
+71: Call 27 scanChar 0
+72: PostCall 27
+73: GetReturnValue £temporary1209
+74: Assign input £temporary1209
+75: PreCall 27
+76: IntegralToIntegral £temporary1210 input
+77: Parameter 33 signedint £temporary1210
+78: Call 27 isdigit 0
+79: PostCall 27
+80: GetReturnValue £temporary1211
+81: NotEqual PushFloat factor £temporary1211 0
+82: Goto PreCall 27
+83: PushFloat factor
+84: PushFloat 10.0
+85: SignedDivide £temporary1212 factor 10.0
+86: TopFloat factor
+87: PopFloat
+88: PushFloat value
+89: PushFloat factor
+90: BinarySubtract £temporary1213 input 48
+91: IntegralToIntegral £temporary1215 £temporary1213
+92: IntegralToFloating £temporary1214 £temporary1215
+93: SignedMultiply £temporary1216 factor £temporary1214
+94: BinaryAdd £temporary1217 value £temporary1216
+95: TopFloat value
+96: PopFloat
+97: PreCall 27
+98: Call 27 scanChar 0
+99: PostCall 27
+100: GetReturnValue £temporary1218
+101: Assign input £temporary1218
+102: Assign found 1
+103: Goto PreCall 27
+104: Goto PreCall 27
+105: PreCall 27
+106: IntegralToIntegral £temporary1220 input
+107: Parameter 33 signedint £temporary1220
+108: Call 27 tolower 0
+109: PostCall 27
+110: GetReturnValue £temporary1221
+111: Equal PreCall 27 £temporary1221 101
+112: Goto PreCall 27
+113: PreCall 27
+114: Parameter 33 signedint 10
+115: Call 27 scanLongInt 0
+116: PostCall 27
+117: GetReturnValue £temporary1223
+118: IntegralToFloating £temporary1224 £temporary1223
+119: PopFloat exponent
+120: PushFloat value
+121: PreCall 35
+122: PushFloat 10.0
+123: Parameter 41 double 10.0
+124: PushFloat exponent
+125: Parameter 49 double exponent
+126: Call 35 pow 0
+127: PostCall 35
+128: GetReturnValue £temporary1225
+129: SignedMultiply £temporary1226 value £temporary1225
+130: TopFloat value
+131: PopFloat
+132: Goto NotEqual PushFloat value minus 0
+133: PreCall 27
+134: Parameter 33 signedchar input
+135: Call 27 unscanChar 0
+136: PostCall 27
+137: NotEqual PushFloat value minus 0
+138: Goto NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+139: PushFloat value
+140: PopFloat
+141: PushFloat value
+142: UnarySubtract £temporary1228 value
+143: TopFloat value
+144: PopFloat
+145: Goto NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+146: NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+147: Goto PushFloat value
+148: BinaryAdd g_inCount g_inCount 1
+149: Goto PushFloat value
+150: PushFloat value
+151: Return value
+152: Empty
+153: FunctionEnd scanLongDouble

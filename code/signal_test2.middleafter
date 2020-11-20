@@ -1,0 +1,26 @@
+0: Assign a 1
+1: Assign b 1
+2: SignedDivide c a b
+3: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: Parameter 12 string_25i0A# 6
+5: Parameter 12 c 8
+6: Call 12 printf 0
+7: PostCall 12
+8: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+9: Parameter 12 exit_handle1 6
+10: Call 12 atexit 0
+11: PostCall 12
+12: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+13: Parameter 12 exit_handle2 6
+14: Call 12 atexit 0
+15: PostCall 12
+16: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+17: Parameter 12 exit_handle3 6
+18: Call 12 atexit 0
+19: PostCall 12
+20: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+21: Parameter 12 0 6
+22: Call 12 exit 0
+23: PostCall 12
+24: Return 0
+25: FunctionEnd signal_test

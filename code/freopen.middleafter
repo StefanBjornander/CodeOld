@@ -1,0 +1,152 @@
+0: Assign handle -1
+1: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 20 pointer mode
+3: Parameter 22 pointer "r"
+4: Call 14 strcmp 0
+5: PostCall 14
+6: GetReturnValue £temporary728
+7: NotEqual 16 £temporary728 0
+8: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+9: Parameter 20 pointer name
+10: Parameter 22 unsignedshortint 64
+11: Call 14 fileopen 0
+12: PostCall 14
+13: GetReturnValue £temporary730
+14: Assign handle £temporary730
+15: Goto 130
+16: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+17: Parameter 20 pointer mode
+18: Parameter 22 pointer "w"
+19: Call 14 strcmp 0
+20: PostCall 14
+21: GetReturnValue £temporary731
+22: NotEqual 30 £temporary731 0
+23: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+24: Parameter 20 pointer name
+25: Call 14 filecreate 0
+26: PostCall 14
+27: GetReturnValue £temporary733
+28: Assign handle £temporary733
+29: Goto 130
+30: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+31: Parameter 20 pointer mode
+32: Parameter 22 pointer "a"
+33: Call 14 strcmp 0
+34: PostCall 14
+35: GetReturnValue £temporary734
+36: NotEqual 59 £temporary734 0
+37: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+38: Parameter 20 pointer name
+39: Parameter 22 unsignedshortint 65
+40: Call 14 fileopen 0
+41: PostCall 14
+42: GetReturnValue £temporary736
+43: Assign handle £temporary736
+44: Equal 52 handle -1
+45: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+46: Parameter 20 pointer stream
+47: Parameter 22 signedint 0
+48: Parameter 24 signedint 2
+49: Call 14 fseek 0
+50: PostCall 14
+51: Goto 130
+52: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+53: Parameter 20 pointer name
+54: Call 14 filecreate 0
+55: PostCall 14
+56: GetReturnValue £temporary739
+57: Assign handle £temporary739
+58: Goto 130
+59: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+60: Parameter 20 pointer mode
+61: Parameter 22 pointer "r+"
+62: Call 14 strcmp 0
+63: PostCall 14
+64: GetReturnValue £temporary740
+65: NotEqual 74 £temporary740 0
+66: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+67: Parameter 20 pointer name
+68: Parameter 22 unsignedshortint 66
+69: Call 14 fileopen 0
+70: PostCall 14
+71: GetReturnValue £temporary742
+72: Assign handle £temporary742
+73: Goto 130
+74: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+75: Parameter 20 pointer mode
+76: Parameter 22 pointer "w+"
+77: Call 14 strcmp 0
+78: PostCall 14
+79: GetReturnValue £temporary743
+80: NotEqual 102 £temporary743 0
+81: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+82: Parameter 20 pointer name
+83: Call 14 fileexists 0
+84: PostCall 14
+85: GetReturnValue £temporary745
+86: Equal 95 £temporary745 0
+87: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+88: Parameter 20 pointer name
+89: Parameter 22 unsignedshortint 66
+90: Call 14 fileopen 0
+91: PostCall 14
+92: GetReturnValue £temporary746
+93: Assign handle £temporary746
+94: Goto 130
+95: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+96: Parameter 20 pointer name
+97: Call 14 filecreate 0
+98: PostCall 14
+99: GetReturnValue £temporary747
+100: Assign handle £temporary747
+101: Goto 130
+102: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+103: Parameter 20 pointer mode
+104: Parameter 22 pointer "a+"
+105: Call 14 strcmp 0
+106: PostCall 14
+107: GetReturnValue £temporary749
+108: NotEqual 130 £temporary749 0
+109: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+110: Parameter 20 pointer name
+111: Parameter 22 unsignedshortint 66
+112: Call 14 fileopen 0
+113: PostCall 14
+114: GetReturnValue £temporary751
+115: Assign handle £temporary751
+116: Equal 124 handle -1
+117: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+118: Parameter 20 pointer stream
+119: Parameter 22 signedint 0
+120: Parameter 24 signedint 2
+121: Call 14 fseek 0
+122: PostCall 14
+123: Goto 130
+124: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+125: Parameter 20 pointer name
+126: Call 14 filecreate 0
+127: PostCall 14
+128: GetReturnValue £temporary754
+129: Assign handle £temporary754
+130: Equal 147 handle -1
+131: Dereference £temporary756 -> stream stream 0
+132: Assign £temporary756 -> stream 1
+133: Dereference £temporary757 -> stream stream 0
+134: Assign £temporary757 -> stream handle
+135: Dereference £temporary758 -> stream stream 0
+136: Assign £temporary758 -> stream 0
+137: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+138: Dereference £temporary759 -> stream stream 0
+139: Parameter 20 pointer £temporary759 -> stream
+140: Parameter 22 pointer name
+141: Call 14 strcpy 0
+142: PostCall 14
+143: Dereference £temporary761 -> stream stream 0
+144: Assign £temporary761 -> stream 0
+145: SetReturnValue
+146: Return stream
+147: Dereference £temporary762 -> stream stream 0
+148: Assign £temporary762 -> stream 0
+149: SetReturnValue
+150: Return 0
+151: FunctionEnd freopen

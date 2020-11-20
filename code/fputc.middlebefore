@@ -1,0 +1,11 @@
+0: Assign g_outStatus 0
+1: IntegralToIntegral £temporary1481 stream
+2: Assign g_outDevice £temporary1481
+3: PreCall 10
+4: IntegralToIntegral £temporary1482 i
+5: Parameter 16 signedchar £temporary1482
+6: Call 10 printChar 0
+7: PostCall 10
+8: Return 1
+9: Empty
+10: FunctionEnd fputc

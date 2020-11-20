@@ -1,0 +1,82 @@
+0: Assign unsignedLongValue 0
+1: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Call 16 scanChar 0
+3: PostCall 16
+4: GetReturnValue £temporary1468
+5: Assign input £temporary1468
+6: Assign found 1
+7: CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+8: IntegralToIntegral £temporary1469 input
+9: Parameter 19 £temporary1469 6
+10: Call 19 isspace 0
+11: PostCall 19
+12: GetReturnValue £temporary1470
+13: Equal 20 £temporary1470 0
+14: CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+15: Call 19 scanChar 0
+16: PostCall 19
+17: GetReturnValue £temporary1471
+18: Assign input £temporary1471
+19: Goto 7
+20: NotEqual 26 input 43
+21: CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+22: Call 19 scanChar 0
+23: PostCall 19
+24: GetReturnValue £temporary1474
+25: Assign input £temporary1474
+26: NotEqual 50 base 0
+27: NotEqual 49 input 48
+28: CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+29: Call 19 scanChar 0
+30: PostCall 19
+31: GetReturnValue £temporary1477
+32: Assign input £temporary1477
+33: CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+34: IntegralToIntegral £temporary1478 input
+35: Parameter 19 £temporary1478 6
+36: Call 19 tolower 0
+37: PostCall 19
+38: GetReturnValue £temporary1479
+39: NotEqual 47 £temporary1479 120
+40: Assign base 16
+41: CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+42: Call 19 scanChar 0
+43: PostCall 19
+44: GetReturnValue £temporary1481
+45: Assign input £temporary1481
+46: Goto 50
+47: Assign base 8
+48: Goto 50
+49: Assign base 10
+50: CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+51: Parameter 19 input 6
+52: Parameter 19 base 7
+53: Call 19 isDigitInBase 0
+54: PostCall 19
+55: GetReturnValue £temporary1482
+56: Equal 73 £temporary1482 0
+57: IntegralToIntegral £temporary1483 base
+58: UnsignedMultiply unsignedLongValue unsignedLongValue £temporary1483
+59: CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+60: Parameter 19 input 6
+61: Call 19 digitToValue 0
+62: PostCall 19
+63: GetReturnValue £temporary1485
+64: IntegralToIntegral £temporary1486 £temporary1485
+65: BinaryAdd unsignedLongValue unsignedLongValue £temporary1486
+66: Assign found 1
+67: CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+68: Call 19 scanChar 0
+69: PostCall 19
+70: GetReturnValue £temporary1488
+71: Assign input £temporary1488
+72: Goto 50
+73: Equal 75 found 0
+74: Increment g_inCount
+75: CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+76: Parameter 19 input 6
+77: Call 19 unscanChar 0
+78: PostCall 19
+79: SetReturnValue unsignedLongValue
+80: Return unsignedLongValue
+81: FunctionEnd scanUnsignedLongInt

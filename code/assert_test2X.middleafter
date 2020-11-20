@@ -1,0 +1,14 @@
+0: NotEqual 12 n 7
+1: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 14 pointer stderr
+3: Parameter 16 pointer "Assertion failed: "%s" in file %s at line %i\n"
+4: Parameter 18 pointer "n != 7"
+5: Parameter 20 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\AssertTest.c"
+6: Parameter 22 signedint 15
+7: Call 8 fprintf 6
+8: PostCall 8
+9: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+10: Call 8 abort 0
+11: PostCall 8
+12: Return
+13: FunctionEnd assert_test2X

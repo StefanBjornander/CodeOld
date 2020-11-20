@@ -1,0 +1,10 @@
+0: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 10 stdout 6
+2: Parameter 10 format 8
+3: Parameter 10 arg_list 10
+4: Call 10 vfprintf 0
+5: PostCall 10
+6: GetReturnValue £temporary2388
+7: SetReturnValue £temporary2388
+8: Return £temporary2388
+9: FunctionEnd vprintf

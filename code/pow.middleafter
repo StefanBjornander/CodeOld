@@ -1,0 +1,95 @@
+0: PushFloat x
+1: PushFloat 0
+2: SignedLessThanEqual 18 x 0
+3: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: PushFloat y
+5: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
+6: PushFloat x
+7: Parameter 28 double x
+8: Call 22 log 0
+9: PostCall 22
+10: GetReturnValue £temporary403
+11: SignedMultiply £temporary404 y £temporary403
+12: Parameter 28 double £temporary404
+13: Call 22 exp 0
+14: PostCall 22
+15: GetReturnValue £temporary405
+16: SetReturnValue
+17: Return £temporary405
+18: PushFloat x
+19: PushFloat 0
+20: NotEqual 27 x 0
+21: PushFloat y
+22: PushFloat 0
+23: NotEqual 27 y 0
+24: PushFloat 1
+25: SetReturnValue
+26: Return 1
+27: PushFloat x
+28: PushFloat 0
+29: NotEqual 36 x 0
+30: PushFloat y
+31: PushFloat 0
+32: SignedLessThanEqual 36 y 0
+33: PushFloat 0
+34: SetReturnValue
+35: Return 0
+36: PushFloat x
+37: PushFloat 0
+38: SignedGreaterThanEqual 90 x 0
+39: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+40: PushFloat y
+41: Parameter 28 double y
+42: Call 22 floor 0
+43: PostCall 22
+44: GetReturnValue £temporary413
+45: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
+46: PushFloat y
+47: Parameter 28 double y
+48: Call 22 ceil 0
+49: PostCall 22
+50: GetReturnValue £temporary414
+51: NotEqual 90 £temporary413 £temporary414
+52: PushFloat y
+53: FloatingToIntegral £temporary417 y
+54: Assign long_y £temporary417
+55: SignedModulo £temporary418 long_y 2
+56: NotEqual 73 £temporary418 0
+57: PreCall 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+58: PushFloat y
+59: PreCall 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
+60: PushFloat x
+61: UnarySubtract £temporary420 x
+62: Parameter 32 double £temporary420
+63: Call 26 log 0
+64: PostCall 26
+65: GetReturnValue £temporary421
+66: SignedMultiply £temporary422 y £temporary421
+67: Parameter 32 double £temporary422
+68: Call 26 exp 0
+69: PostCall 26
+70: GetReturnValue £temporary423
+71: SetReturnValue
+72: Return £temporary423
+73: PreCall 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+74: PushFloat y
+75: PreCall 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
+76: PushFloat x
+77: UnarySubtract £temporary424 x
+78: Parameter 32 double £temporary424
+79: Call 26 log 0
+80: PostCall 26
+81: GetReturnValue £temporary425
+82: SignedMultiply £temporary426 y £temporary425
+83: Parameter 32 double £temporary426
+84: Call 26 exp 0
+85: PostCall 26
+86: GetReturnValue £temporary427
+87: UnarySubtract £temporary428 £temporary427
+88: SetReturnValue
+89: Return £temporary428
+90: Assign errno 6
+91: PushFloat 0
+92: SetReturnValue
+93: Return 0
+94: FunctionEnd pow

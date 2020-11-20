@@ -868,8 +868,8 @@ void main ( ) {
 
 
 
-time_test ( ) ;
 
+file_test ( "in_test" , "out_test" ) ;
 
 
 

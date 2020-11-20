@@ -1,0 +1,17 @@
+0: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 14 string_2020atan2825f29203D2025f2C20errno203D2025i0A# 6
+2: PushFloat x
+3: Parameter 14 x 8
+4: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+5: PushFloat x
+6: Parameter 14 x 22
+7: Call 14 atan 16
+8: PostCall 14
+9: GetReturnValue £temporary4728
+10: Parameter 14 £temporary4728 16
+11: Parameter 14 errno 24
+12: Call 14 printf 0
+13: PostCall 14
+14: Assign errno 0
+15: Return 0
+16: FunctionEnd atan_test

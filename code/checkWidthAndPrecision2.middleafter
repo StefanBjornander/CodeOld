@@ -1,0 +1,21 @@
+0: Equal 9 widthPtr 0
+1: Deref £temporary1991 -> widthPtr widthPtr 0
+2: NotEqual 9 £temporary1991 -> widthPtr -1
+3: Deref £temporary1994 -> widthPtr widthPtr 0
+4: BinaryAdd arg_list arg_list 2
+5: BinarySubtract £temporary1996 arg_list 2
+6: IntegralToIntegral £temporary1997 £temporary1996
+7: Deref £temporary1998 -> £temporary1997 £temporary1997 0
+8: Assign £temporary1994 -> widthPtr £temporary1998 -> £temporary1997
+9: Equal 18 precisionPtr 0
+10: Deref £temporary2000 -> precisionPtr precisionPtr 0
+11: NotEqual 18 £temporary2000 -> precisionPtr -1
+12: Deref £temporary2003 -> precisionPtr precisionPtr 0
+13: BinaryAdd arg_list arg_list 2
+14: BinarySubtract £temporary2005 arg_list 2
+15: IntegralToIntegral £temporary2006 £temporary2005
+16: Deref £temporary2007 -> £temporary2006 £temporary2006 0
+17: Assign £temporary2003 -> precisionPtr £temporary2007 -> £temporary2006
+18: SetReturnValue arg_list
+19: Return arg_list
+20: FunctionEnd checkWidthAndPrecision

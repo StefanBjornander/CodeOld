@@ -1,0 +1,11 @@
+0: Case BinarySubtract g_inChars g_inChars 1 g_inStatus 0
+1: Case BinarySubtract g_inChars g_inChars 1 g_inStatus 1
+2: CaseEnd g_inStatus
+3: Goto Empty
+4: BinarySubtract g_inChars g_inChars 1
+5: Goto Empty
+6: BinarySubtract g_inChars g_inChars 1
+7: Goto Empty
+8: Empty
+9: Return
+10: FunctionEnd unscanChar

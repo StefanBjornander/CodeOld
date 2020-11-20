@@ -1,0 +1,30 @@
+0: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 12 signedchar 97
+2: Call 6 character_test 0
+3: PostCall 6
+4: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+5: Parameter 12 signedchar 66
+6: Call 6 character_test 0
+7: PostCall 6
+8: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+9: Parameter 12 signedchar 49
+10: Call 6 character_test 0
+11: PostCall 6
+12: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+13: Parameter 12 signedchar 46
+14: Call 6 character_test 0
+15: PostCall 6
+16: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+17: Parameter 12 signedchar 10
+18: Call 6 character_test 0
+19: PostCall 6
+20: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+21: Parameter 12 signedchar 102
+22: Call 6 character_test 0
+23: PostCall 6
+24: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+25: Parameter 12 signedchar 103
+26: Call 6 character_test 0
+27: PostCall 6
+28: Return
+29: FunctionEnd char_main

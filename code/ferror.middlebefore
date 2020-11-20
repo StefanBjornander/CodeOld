@@ -1,0 +1,4 @@
+0: Dereference £temporary908 -> stream stream 0
+1: Return £temporary908 -> stream
+2: Empty
+3: FunctionEnd ferror

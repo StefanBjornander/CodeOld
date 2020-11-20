@@ -1,25 +1,25 @@
 1:	
 
-compare:	; IntegralToIntegral £temporary5898 valuePtr1
+compare:	; IntegralToIntegral £temporary5900 valuePtr1
 2:		mov a3066, [bp + 6]
 5:	
 
-compare$1:	; Deref £temporary5899 -> £temporary5898 £temporary5898 0
+compare$1:	; Deref £temporary5901 -> £temporary5900 £temporary5900 0
 7:	
 
-compare$2:	; Assign intValue1 £temporary5899 -> £temporary5898
+compare$2:	; Assign intValue1 £temporary5901 -> £temporary5900
 8:		mov t3067, [a3066]
 9:		mov [bp + 10], t3067
 11:	
 
-compare$3:	; IntegralToIntegral £temporary5900 valuePtr2
+compare$3:	; IntegralToIntegral £temporary5902 valuePtr2
 12:		mov a3068, [bp + 8]
 15:	
 
-compare$4:	; Deref £temporary5901 -> £temporary5900 £temporary5900 0
+compare$4:	; Deref £temporary5903 -> £temporary5902 £temporary5902 0
 17:	
 
-compare$5:	; Assign intValue2 £temporary5901 -> £temporary5900
+compare$5:	; Assign intValue2 £temporary5903 -> £temporary5902
 18:		mov t3069, [a3068]
 19:		mov [bp + 12], t3069
 21:	
@@ -30,7 +30,7 @@ compare$6:	; SignedGreaterThanEqual 9 intValue1 intValue2
 24:		jge compare$9
 26:	
 
-compare$7:	; Assign £temporary5911 -1
+compare$7:	; Assign £temporary5913 -1
 27:		mov t3071, -1
 29:	
 
@@ -44,7 +44,7 @@ compare$9:	; NotEqual 12 intValue1 intValue2
 35:		jne compare$12
 37:	
 
-compare$10:	; Assign £temporary5907 0
+compare$10:	; Assign £temporary5909 0
 38:		mov t3073, 0
 40:	
 
@@ -52,17 +52,17 @@ compare$11:	; Goto 13
 41:		jmp compare$13
 43:	
 
-compare$12:	; Assign £temporary5907 1
+compare$12:	; Assign £temporary5909 1
 44:		mov t3074, 1
 46:	
 
-compare$13:	; Assign £temporary5911 £temporary5907
+compare$13:	; Assign £temporary5913 £temporary5909
 48:	
 
-compare$14:	; SetReturnValue £temporary5911
+compare$14:	; SetReturnValue £temporary5913
 50:	
 
-compare$15:	; Return £temporary5911
+compare$15:	; Return £temporary5913
 51:		mov t3076, [bp]
 52:		mov di, [bp + 4]
 53:		mov bp, [bp + 2]
@@ -72,26 +72,26 @@ compare$15:	; Return £temporary5911
 compare$16:	; FunctionEnd compare
 1:	
 
-reverse_compare:	; IntegralToIntegral £temporary5912 valuePtr1
+reverse_compare:	; IntegralToIntegral £temporary5914 valuePtr1
 2:		mov a3077, [bp + 6]
 5:	
 
-reverse_compare$1:	; Deref £temporary5913 -> £temporary5912 £temporary5912 0
+reverse_compare$1:	; Deref £temporary5915 -> £temporary5914 £temporary5914 0
 7:	
 
-reverse_compare$2:	; Assign intValue1 £temporary5913 -> £temporary5912
+reverse_compare$2:	; Assign intValue1 £temporary5915 -> £temporary5914
 8:		mov t3078, [a3077]
 9:		mov [bp + 10], t3078
 11:	
 
-reverse_compare$3:	; IntegralToIntegral £temporary5914 valuePtr2
+reverse_compare$3:	; IntegralToIntegral £temporary5916 valuePtr2
 12:		mov a3079, [bp + 8]
 15:	
 
-reverse_compare$4:	; Deref £temporary5915 -> £temporary5914 £temporary5914 0
+reverse_compare$4:	; Deref £temporary5917 -> £temporary5916 £temporary5916 0
 17:	
 
-reverse_compare$5:	; Assign intValue2 £temporary5915 -> £temporary5914
+reverse_compare$5:	; Assign intValue2 £temporary5917 -> £temporary5916
 18:		mov t3080, [a3079]
 19:		mov [bp + 12], t3080
 21:	
@@ -102,7 +102,7 @@ reverse_compare$6:	; SignedGreaterThanEqual 9 intValue1 intValue2
 24:		jge reverse_compare$9
 26:	
 
-reverse_compare$7:	; Assign £temporary5925 1
+reverse_compare$7:	; Assign £temporary5927 1
 27:		mov t3082, 1
 29:	
 
@@ -116,7 +116,7 @@ reverse_compare$9:	; NotEqual 12 intValue1 intValue2
 35:		jne reverse_compare$12
 37:	
 
-reverse_compare$10:	; Assign £temporary5921 0
+reverse_compare$10:	; Assign £temporary5923 0
 38:		mov t3084, 0
 40:	
 
@@ -124,17 +124,17 @@ reverse_compare$11:	; Goto 13
 41:		jmp reverse_compare$13
 43:	
 
-reverse_compare$12:	; Assign £temporary5921 -1
+reverse_compare$12:	; Assign £temporary5923 -1
 44:		mov t3085, -1
 46:	
 
-reverse_compare$13:	; Assign £temporary5925 £temporary5921
+reverse_compare$13:	; Assign £temporary5927 £temporary5923
 48:	
 
-reverse_compare$14:	; SetReturnValue £temporary5925
+reverse_compare$14:	; SetReturnValue £temporary5927
 50:	
 
-reverse_compare$15:	; Return £temporary5925
+reverse_compare$15:	; Return £temporary5927
 51:		mov t3087, [bp]
 52:		mov di, [bp + 4]
 53:		mov bp, [bp + 2]
@@ -367,11 +367,11 @@ qtest$1:	; Parameter 8 string_f3A2025u0A# 6
 4:		mov word [bp + 14], string_f3A2025u0A#
 6:	
 
-qtest$2:	; IntegralToIntegral £temporary5956 f
+qtest$2:	; IntegralToIntegral £temporary5958 f
 7:		mov a3100, [bp + 6]
 10:	
 
-qtest$3:	; Parameter 8 £temporary5956 8
+qtest$3:	; Parameter 8 £temporary5958 8
 11:		mov [bp + 16], a3100
 13:	
 
@@ -418,11 +418,11 @@ stdlib_testZ$1:	; Parameter 6 string_hello3A2025u0A# 6
 4:		mov word [bp + 12], string_hello3A2025u0A#
 6:	
 
-stdlib_testZ$2:	; IntegralToIntegral £temporary5961 hello
+stdlib_testZ$2:	; IntegralToIntegral £temporary5963 hello
 7:		mov a3103, hello
 10:	
 
-stdlib_testZ$3:	; Parameter 6 £temporary5961 8
+stdlib_testZ$3:	; Parameter 6 £temporary5963 8
 11:		mov [bp + 14], a3103
 13:	
 
@@ -507,10 +507,10 @@ stdlib_test$4:	; Call 8 atof 8
 stdlib_test$5:	; PostCall 8
 19:	
 
-stdlib_test$6:	; GetReturnValue £temporary5969
+stdlib_test$6:	; GetReturnValue £temporary5971
 21:	
 
-stdlib_test$7:	; Parameter 8 £temporary5969 8
+stdlib_test$7:	; Parameter 8 £temporary5971 8
 22:		fstp qword [bp + 16]
 24:	
 
@@ -540,12 +540,12 @@ stdlib_test$13:	; Parameter 8 string_1232E456789abc# 14
 42:		mov word [bp + 22], string_1232E456789abc#
 44:	
 
-stdlib_test$14:	; address £temporary5971 p
+stdlib_test$14:	; address £temporary5973 p
 45:		mov t3105, bp
 46:		add t3105, 6
 48:	
 
-stdlib_test$15:	; Parameter 8 £temporary5971 16
+stdlib_test$15:	; Parameter 8 £temporary5973 16
 49:		mov [bp + 24], t3105
 51:	
 
@@ -559,10 +559,10 @@ stdlib_test$16:	; Call 8 strtod 8
 stdlib_test$17:	; PostCall 8
 59:	
 
-stdlib_test$18:	; GetReturnValue £temporary5972
+stdlib_test$18:	; GetReturnValue £temporary5974
 61:	
 
-stdlib_test$19:	; Parameter 8 £temporary5972 8
+stdlib_test$19:	; Parameter 8 £temporary5974 8
 62:		fstp qword [bp + 16]
 64:	
 
@@ -607,10 +607,10 @@ stdlib_test$27:	; Call 6 getenv 8
 stdlib_test$28:	; PostCall 6
 96:	
 
-stdlib_test$29:	; GetReturnValue £temporary5974
+stdlib_test$29:	; GetReturnValue £temporary5976
 101:	
 
-stdlib_test$30:	; Parameter 6 £temporary5974 8
+stdlib_test$30:	; Parameter 6 £temporary5976 8
 102:		mov [bp + 14], t3108
 104:	
 
@@ -685,10 +685,10 @@ stdlib_test$45:	; Call 6 _abs 8
 stdlib_test$46:	; PostCall 6
 159:	
 
-stdlib_test$47:	; GetReturnValue £temporary5978
+stdlib_test$47:	; GetReturnValue £temporary5980
 164:	
 
-stdlib_test$48:	; Parameter 6 £temporary5978 8
+stdlib_test$48:	; Parameter 6 £temporary5980 8
 165:		mov [bp + 14], t3110
 167:	
 
@@ -709,10 +709,10 @@ stdlib_test$51:	; Call 6 _abs 10
 stdlib_test$52:	; PostCall 6
 180:	
 
-stdlib_test$53:	; GetReturnValue £temporary5979
+stdlib_test$53:	; GetReturnValue £temporary5981
 185:	
 
-stdlib_test$54:	; Parameter 6 £temporary5979 10
+stdlib_test$54:	; Parameter 6 £temporary5981 10
 186:		mov [bp + 16], t3112
 188:	
 
@@ -752,10 +752,10 @@ stdlib_test$61:	; Call 6 labs 8
 stdlib_test$62:	; PostCall 6
 216:	
 
-stdlib_test$63:	; GetReturnValue £temporary5981
+stdlib_test$63:	; GetReturnValue £temporary5983
 221:	
 
-stdlib_test$64:	; Parameter 6 £temporary5981 8
+stdlib_test$64:	; Parameter 6 £temporary5983 8
 222:		mov [bp + 14], t3114
 224:	
 
@@ -776,10 +776,10 @@ stdlib_test$67:	; Call 6 labs 12
 stdlib_test$68:	; PostCall 6
 237:	
 
-stdlib_test$69:	; GetReturnValue £temporary5982
+stdlib_test$69:	; GetReturnValue £temporary5984
 242:	
 
-stdlib_test$70:	; Parameter 6 £temporary5982 12
+stdlib_test$70:	; Parameter 6 £temporary5984 12
 243:		mov [bp + 18], t3116
 245:	
 
@@ -816,10 +816,10 @@ stdlib_test$76:	; Call 6 div 0
 stdlib_test$77:	; PostCall 6
 271:	
 
-stdlib_test$78:	; GetReturnValue £temporary5984 -> £temporary5985
+stdlib_test$78:	; GetReturnValue £temporary5986 -> £temporary5987
 273:	
 
-stdlib_test$79:	; Assign i £temporary5984 -> £temporary5985
+stdlib_test$79:	; Assign i £temporary5986 -> £temporary5987
 274:		mov t3118, bp
 275:		add t3118, 6
 276:		mov t3119, 4
@@ -898,10 +898,10 @@ stdlib_test$89:	; Call 10 print_div 0
 stdlib_test$90:	; PostCall 10
 336:	
 
-stdlib_test$91:	; GetReturnValue £temporary5989 -> £temporary5990
+stdlib_test$91:	; GetReturnValue £temporary5991 -> £temporary5992
 338:	
 
-stdlib_test$92:	; Assign j £temporary5989 -> £temporary5990
+stdlib_test$92:	; Assign j £temporary5991 -> £temporary5992
 339:		mov t3128, bp
 340:		add t3128, 10
 341:		mov t3129, 4
@@ -967,10 +967,10 @@ stdlib_test$102:	; Call 6 ldiv 0
 stdlib_test$103:	; PostCall 6
 390:	
 
-stdlib_test$104:	; GetReturnValue £temporary5994 -> £temporary5995
+stdlib_test$104:	; GetReturnValue £temporary5996 -> £temporary5997
 392:	
 
-stdlib_test$105:	; Assign li £temporary5994 -> £temporary5995
+stdlib_test$105:	; Assign li £temporary5996 -> £temporary5997
 393:		mov t3134, bp
 394:		add t3134, 6
 395:		mov t3135, 8
@@ -1049,10 +1049,10 @@ stdlib_test$115:	; Call 14 print_ldiv 0
 stdlib_test$116:	; PostCall 14
 455:	
 
-stdlib_test$117:	; GetReturnValue £temporary5999 -> £temporary6000
+stdlib_test$117:	; GetReturnValue £temporary6001 -> £temporary6002
 457:	
 
-stdlib_test$118:	; Assign lj £temporary5999 -> £temporary6000
+stdlib_test$118:	; Assign lj £temporary6001 -> £temporary6002
 458:		mov t3144, bp
 459:		add t3144, 14
 460:		mov t3145, 8
@@ -1152,22 +1152,22 @@ stdlib_test$137:	; Parameter 18 string_25i20# 6
 533:		mov word [bp + 24], string_25i20#
 535:	
 
-stdlib_test$138:	; UnsignedMultiply £temporary6012 index 2
+stdlib_test$138:	; UnsignedMultiply £temporary6014 index 2
 536:		mov a3150, [bp + 16]
 538:		xor dx, dx
 539:		mul word [int2$2#]
 545:	
 
-stdlib_test$139:	; BinaryAdd £temporary6013 list £temporary6012
+stdlib_test$139:	; BinaryAdd £temporary6015 list £temporary6014
 546:		mov a3154, bp
 547:		add a3154, 6
 548:		add a3154, t3153
 550:	
 
-stdlib_test$140:	; Deref £temporary6014 -> £temporary6013 £temporary6013 0
+stdlib_test$140:	; Deref £temporary6016 -> £temporary6015 £temporary6015 0
 552:	
 
-stdlib_test$141:	; Parameter 18 £temporary6014 -> £temporary6013 8
+stdlib_test$141:	; Parameter 18 £temporary6016 -> £temporary6015 8
 553:		mov t3155, [a3154]
 554:		mov [bp + 26], t3155
 556:	
@@ -1258,22 +1258,22 @@ stdlib_test$160:	; Parameter 18 string_25i20# 6
 621:		mov word [bp + 24], string_25i20#
 623:	
 
-stdlib_test$161:	; UnsignedMultiply £temporary6021 index 2
+stdlib_test$161:	; UnsignedMultiply £temporary6023 index 2
 624:		mov a3158, [bp + 16]
 626:		xor dx, dx
 627:		mul word [int2$2#]
 633:	
 
-stdlib_test$162:	; BinaryAdd £temporary6022 list £temporary6021
+stdlib_test$162:	; BinaryAdd £temporary6024 list £temporary6023
 634:		mov a3162, bp
 635:		add a3162, 6
 636:		add a3162, t3161
 638:	
 
-stdlib_test$163:	; Deref £temporary6023 -> £temporary6022 £temporary6022 0
+stdlib_test$163:	; Deref £temporary6025 -> £temporary6024 £temporary6024 0
 640:	
 
-stdlib_test$164:	; Parameter 18 £temporary6023 -> £temporary6022 8
+stdlib_test$164:	; Parameter 18 £temporary6025 -> £temporary6024 8
 641:		mov t3163, [a3162]
 642:		mov [bp + 26], t3163
 644:	
@@ -1364,22 +1364,22 @@ stdlib_test$183:	; Parameter 18 string_25i20# 6
 709:		mov word [bp + 24], string_25i20#
 711:	
 
-stdlib_test$184:	; UnsignedMultiply £temporary6030 index 2
+stdlib_test$184:	; UnsignedMultiply £temporary6032 index 2
 712:		mov a3166, [bp + 16]
 714:		xor dx, dx
 715:		mul word [int2$2#]
 721:	
 
-stdlib_test$185:	; BinaryAdd £temporary6031 list £temporary6030
+stdlib_test$185:	; BinaryAdd £temporary6033 list £temporary6032
 722:		mov a3170, bp
 723:		add a3170, 6
 724:		add a3170, t3169
 726:	
 
-stdlib_test$186:	; Deref £temporary6032 -> £temporary6031 £temporary6031 0
+stdlib_test$186:	; Deref £temporary6034 -> £temporary6033 £temporary6033 0
 728:	
 
-stdlib_test$187:	; Parameter 18 £temporary6032 -> £temporary6031 8
+stdlib_test$187:	; Parameter 18 £temporary6034 -> £temporary6033 8
 729:		mov t3171, [a3170]
 730:		mov [bp + 26], t3171
 732:	
@@ -1434,12 +1434,12 @@ stdlib_test$197:	; SignedGreaterThanEqual 224 key 6
 stdlib_test$198:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 771:	
 
-stdlib_test$199:	; address £temporary6037 key
+stdlib_test$199:	; address £temporary6039 key
 772:		mov t3172, bp
 773:		add t3172, 16
 775:	
 
-stdlib_test$200:	; Parameter 18 £temporary6037 6
+stdlib_test$200:	; Parameter 18 £temporary6039 6
 776:		mov [bp + 24], t3172
 778:	
 
@@ -1471,13 +1471,13 @@ stdlib_test$205:	; Call 18 bsearch 0
 stdlib_test$206:	; PostCall 18
 800:	
 
-stdlib_test$207:	; GetReturnValue £temporary6039
+stdlib_test$207:	; GetReturnValue £temporary6041
 805:	
 
-stdlib_test$208:	; IntegralToIntegral £temporary6040 £temporary6039
+stdlib_test$208:	; IntegralToIntegral £temporary6042 £temporary6041
 808:	
 
-stdlib_test$209:	; Assign p £temporary6040
+stdlib_test$209:	; Assign p £temporary6042
 809:		mov [bp + 18], t3175
 811:	
 
@@ -1486,14 +1486,14 @@ stdlib_test$210:	; Equal 214 p 0
 813:		je stdlib_test$214
 815:	
 
-stdlib_test$211:	; BinarySubtract £temporary6042 p list
+stdlib_test$211:	; BinarySubtract £temporary6044 p list
 816:		mov a3176, [bp + 18]
 817:		mov a3177, bp
 818:		add a3177, 6
 819:		sub a3176, a3177
 821:	
 
-stdlib_test$212:	; UnsignedDivide £temporary6047 £temporary6042 2
+stdlib_test$212:	; UnsignedDivide £temporary6049 £temporary6044 2
 823:		xor dx, dx
 824:		div word [int2$2#]
 830:	
@@ -1502,11 +1502,11 @@ stdlib_test$213:	; Goto 215
 831:		jmp stdlib_test$215
 833:	
 
-stdlib_test$214:	; Assign £temporary6047 -1
+stdlib_test$214:	; Assign £temporary6049 -1
 834:		mov t3181, -1
 836:	
 
-stdlib_test$215:	; Assign index £temporary6047
+stdlib_test$215:	; Assign index £temporary6049
 837:		mov [bp + 20], t3181
 839:	
 

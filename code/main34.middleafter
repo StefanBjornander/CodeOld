@@ -1,0 +1,11 @@
+0: Assign g_outDevice stdout
+1: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 12 signedchar 88
+3: Call 6 printChar 0
+4: PostCall 6
+5: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+6: Parameter 12 signedchar 10
+7: Call 6 printChar 0
+8: PostCall 6
+9: Return
+10: FunctionEnd main34

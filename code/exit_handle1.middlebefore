@@ -1,0 +1,7 @@
+0: PreCall 6
+1: Parameter 12 pointer "exit1\n"
+2: Call 6 printf 0
+3: PostCall 6
+4: Empty
+5: Return
+6: FunctionEnd exit_handle1

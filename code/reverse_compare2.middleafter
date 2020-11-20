@@ -1,0 +1,17 @@
+0: IntegralToIntegral £temporary5914 valuePtr1
+1: Deref £temporary5915 -> £temporary5914 £temporary5914 0
+2: Assign intValue1 £temporary5915 -> £temporary5914
+3: IntegralToIntegral £temporary5916 valuePtr2
+4: Deref £temporary5917 -> £temporary5916 £temporary5916 0
+5: Assign intValue2 £temporary5917 -> £temporary5916
+6: SignedGreaterThanEqual 9 intValue1 intValue2
+7: Assign £temporary5927 1
+8: Goto 14
+9: NotEqual 12 intValue1 intValue2
+10: Assign £temporary5923 0
+11: Goto 13
+12: Assign £temporary5923 -1
+13: Assign £temporary5927 £temporary5923
+14: SetReturnValue £temporary5927
+15: Return £temporary5927
+16: FunctionEnd reverse_compare

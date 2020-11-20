@@ -1,0 +1,12 @@
+0: Assign g_outDevice stdout
+1: PreCall 6
+2: Parameter 12 signedchar 88
+3: Call 6 printChar 0
+4: PostCall 6
+5: PreCall 6
+6: Parameter 12 signedchar 10
+7: Call 6 printChar 0
+8: PostCall 6
+9: Empty
+10: Return
+11: FunctionEnd main34

@@ -1,0 +1,12 @@
+0: AssignRegister ah 65
+1: AssignRegister cl 0
+2: AssignRegister dx name
+3: Interrupt 33
+4: Carry Assign errno 18
+5: Goto Return 0
+6: Assign errno 18
+7: Return -1
+8: Goto Return 0
+9: Return 0
+10: Empty
+11: FunctionEnd remove

@@ -1,0 +1,19 @@
+0: PreCall 14
+1: Parameter 20 pointer "  acos(%f) = %f, errno = %i\n"
+2: PushFloat x
+3: Parameter 22 double x
+4: PreCall 14
+5: PushFloat x
+6: Parameter 36 double x
+7: Call 30 acos 0
+8: PostCall 30
+9: GetReturnValue £temporary3578
+10: Parameter 30 double £temporary3578
+11: Parameter 38 signedint errno
+12: Call 14 printf 18
+13: PostCall 14
+14: Assign errno 0
+15: Empty
+16: Empty
+17: Return
+18: FunctionEnd acos_test

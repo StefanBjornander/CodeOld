@@ -1,0 +1,18 @@
+0: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 8 s 6
+2: Parameter 8 stdout 8
+3: Call 8 fputs 0
+4: PostCall 8
+5: GetReturnValue £temporary1092
+6: Equal 15 £temporary1092 0
+7: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+8: Parameter 8 10 6
+9: Parameter 8 stdout 8
+10: Call 8 fputc 0
+11: PostCall 8
+12: GetReturnValue £temporary1094
+13: SetReturnValue £temporary1094
+14: Return £temporary1094
+15: SetReturnValue -1
+16: Return -1
+17: FunctionEnd puts

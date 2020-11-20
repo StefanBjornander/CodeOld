@@ -1,0 +1,54 @@
+0: Assign index 0
+1: Empty
+2: Goto UnsignedMultiply £temporary3052 index 1
+3: UnsignedMultiply £temporary3052 index 1
+4: BinaryAdd £temporary3053 left £temporary3052
+5: Dereference £temporary3051 -> £temporary3053 £temporary3053 0
+6: Equal UnsignedMultiply £temporary3056 index 1 £temporary3051 -> £temporary3053 0
+7: Goto UnsignedMultiply £temporary3061 index 1
+8: UnsignedMultiply £temporary3056 index 1
+9: BinaryAdd £temporary3057 right £temporary3056
+10: Dereference £temporary3055 -> £temporary3057 £temporary3057 0
+11: Equal Return 0 £temporary3055 -> £temporary3057 0
+12: Goto UnsignedMultiply £temporary3061 index 1
+13: Return 0
+14: Goto Empty
+15: UnsignedMultiply £temporary3061 index 1
+16: BinaryAdd £temporary3062 left £temporary3061
+17: Dereference £temporary3060 -> £temporary3062 £temporary3062 0
+18: Equal Return -1 £temporary3060 -> £temporary3062 0
+19: Goto UnsignedMultiply £temporary3065 index 1
+20: Return -1
+21: Goto Empty
+22: UnsignedMultiply £temporary3065 index 1
+23: BinaryAdd £temporary3066 right £temporary3065
+24: Dereference £temporary3064 -> £temporary3066 £temporary3066 0
+25: Equal Return 1 £temporary3064 -> £temporary3066 0
+26: Goto UnsignedMultiply £temporary3069 index 1
+27: Return 1
+28: Goto Empty
+29: UnsignedMultiply £temporary3069 index 1
+30: BinaryAdd £temporary3070 left £temporary3069
+31: Dereference £temporary3068 -> £temporary3070 £temporary3070 0
+32: UnsignedMultiply £temporary3072 index 1
+33: BinaryAdd £temporary3073 right £temporary3072
+34: Dereference £temporary3071 -> £temporary3073 £temporary3073 0
+35: SignedLessThan Return -1 £temporary3068 -> £temporary3070 £temporary3071 -> £temporary3073
+36: Goto UnsignedMultiply £temporary3076 index 1
+37: Return -1
+38: Goto Empty
+39: UnsignedMultiply £temporary3076 index 1
+40: BinaryAdd £temporary3077 left £temporary3076
+41: Dereference £temporary3075 -> £temporary3077 £temporary3077 0
+42: UnsignedMultiply £temporary3079 index 1
+43: BinaryAdd £temporary3080 right £temporary3079
+44: Dereference £temporary3078 -> £temporary3080 £temporary3080 0
+45: SignedGreaterThan Return 1 £temporary3075 -> £temporary3077 £temporary3078 -> £temporary3080
+46: Goto Empty
+47: Return 1
+48: Goto Empty
+49: Empty
+50: BinaryAdd index index 1
+51: Goto Empty
+52: Empty
+53: FunctionEnd strcmp

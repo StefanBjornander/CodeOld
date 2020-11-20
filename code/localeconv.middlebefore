@@ -1,0 +1,11 @@
+0: NotEqual Dereference £temporary368 -> g_currStructPtr g_currStructPtr 0 g_currStructPtr 0
+1: Goto Empty
+2: Dereference £temporary368 -> g_currStructPtr g_currStructPtr 0
+3: Assign £temporary369 £temporary368 -> g_currStructPtr
+4: Goto Empty
+5: Empty
+6: Assign £temporary369 0
+7: Empty
+8: Return £temporary369
+9: Empty
+10: FunctionEnd localeconv

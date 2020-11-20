@@ -1,15 +1,15 @@
-0: Address £temporary2039 format
-1: IntegralToIntegral £temporary2040 £temporary2039
-2: UnsignedMultiply £temporary2042 8 1
-3: BinaryAdd £temporary2041 £temporary2040 £temporary2042
-4: Assign arg_list £temporary2041
-5: PreCall 48
-6: Parameter 72 pointer outString
-7: Parameter 80 pointer format
-8: Parameter 88 pointer arg_list
-9: Call 48 vsprintf 0
-10: PostCall 48
-11: GetReturnValue £temporary2043
-12: Return £temporary2043
+0: Address £temporary1931 format
+1: IntegralToIntegral £temporary1932 £temporary1931
+2: UnsignedMultiply £temporary1934 2 1
+3: BinaryAdd £temporary1933 £temporary1932 £temporary1934
+4: Assign arg_list £temporary1933
+5: PreCall 12
+6: Parameter 18 pointer outString
+7: Parameter 20 pointer format
+8: Parameter 22 pointer arg_list
+9: Call 12 vsprintf 0
+10: PostCall 12
+11: GetReturnValue £temporary1935
+12: Return £temporary1935
 13: Empty
 14: FunctionEnd sprintf

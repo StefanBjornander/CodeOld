@@ -1,0 +1,6 @@
+0: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 6 string_exit10A# 6
+2: Call 6 printf 0
+3: PostCall 6
+4: Return 0
+5: FunctionEnd exit_handle1

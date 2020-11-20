@@ -1,0 +1,16 @@
+0: PreCall 14
+1: PushFloat x
+2: Parameter 20 double x
+3: Call 14 sinh 0
+4: PostCall 14
+5: GetReturnValue £temporary639
+6: PreCall 14
+7: PushFloat x
+8: Parameter 20 double x
+9: Call 14 cosh 0
+10: PostCall 14
+11: GetReturnValue £temporary640
+12: SignedDivide £temporary641 £temporary639 £temporary640
+13: Return £temporary641
+14: Empty
+15: FunctionEnd tanh

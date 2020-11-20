@@ -1,0 +1,34 @@
+0: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 8 timePtr 6
+2: Call 8 gmtime 0
+3: PostCall 8
+4: GetReturnValue £temporary3643
+5: Assign tmPtr £temporary3643
+6: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+7: Call 10 localeconv 0
+8: PostCall 10
+9: GetReturnValue £temporary3644
+10: Assign localeConvPtr £temporary3644
+11: Assign timeZone 0
+12: Equal 21 localeConvPtr 0
+13: Deref £temporary3646 -> tmPtr tmPtr 16
+14: NotEqual 18 £temporary3646 -> tmPtr 1
+15: Deref £temporary3648 -> localeConvPtr localeConvPtr 0
+16: Assign £temporary3653 £temporary3648 -> localeConvPtr
+17: Goto 20
+18: Deref £temporary3649 -> localeConvPtr localeConvPtr 2
+19: Assign £temporary3653 £temporary3649 -> localeConvPtr
+20: Assign timeZone £temporary3653
+21: Deref £temporary3654 -> timePtr timePtr 0
+22: IntegralToIntegral £temporary3655 timeZone
+23: SignedMultiply £temporary3656 £temporary3655 3600
+24: BinaryAdd t £temporary3654 -> timePtr £temporary3656
+25: CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+26: address £temporary3658 t
+27: Parameter 18 £temporary3658 6
+28: Call 18 gmtime 0
+29: PostCall 18
+30: GetReturnValue £temporary3659
+31: SetReturnValue £temporary3659
+32: Return £temporary3659
+33: FunctionEnd localtime

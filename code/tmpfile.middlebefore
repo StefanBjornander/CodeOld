@@ -1,0 +1,25 @@
+0: PreCall 12
+1: Parameter 18 pointer name
+2: Parameter 20 signedint 0
+3: Parameter 22 signedint 0
+4: Call 12 generateTempName 0
+5: PostCall 12
+6: GetReturnValue £temporary945
+7: NotEqual PreCall 12 £temporary945 0
+8: Goto Return 0
+9: PreCall 12
+10: Parameter 18 pointer name
+11: Parameter 20 pointer "w"
+12: Call 12 fopen 0
+13: PostCall 12
+14: GetReturnValue £temporary946
+15: Assign stream £temporary946
+16: NotEqual Dereference £temporary950 -> stream stream 0 stream 0
+17: Goto Return 0
+18: Dereference £temporary950 -> stream stream 0
+19: Assign £temporary950 -> stream 1
+20: Return stream
+21: Goto Return 0
+22: Return 0
+23: Empty
+24: FunctionEnd tmpfile

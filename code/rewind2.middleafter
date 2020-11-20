@@ -1,0 +1,8 @@
+0: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 8 stream 6
+2: Parameter 8 0 8
+3: Parameter 8 0 10
+4: Call 8 fseek 0
+5: PostCall 8
+6: Return 0
+7: FunctionEnd rewind

@@ -1,0 +1,22 @@
+0: IntegralToIntegral £temporary3260 target
+1: Assign charTarget £temporary3260
+2: IntegralToIntegral £temporary3261 source
+3: Assign charSource £temporary3261
+4: Assign index 0
+5: Empty
+6: SignedLessThan UnsignedMultiply £temporary3265 index 1 index size
+7: Goto IntegralToIntegral £temporary3270 target
+8: UnsignedMultiply £temporary3265 index 1
+9: BinaryAdd £temporary3266 charTarget £temporary3265
+10: Dereference £temporary3264 -> £temporary3266 £temporary3266 0
+11: UnsignedMultiply £temporary3268 index 1
+12: BinaryAdd £temporary3269 charSource £temporary3268
+13: Dereference £temporary3267 -> £temporary3269 £temporary3269 0
+14: Assign £temporary3264 -> £temporary3266 £temporary3267 -> £temporary3269
+15: Empty
+16: BinaryAdd index index 1
+17: Goto Empty
+18: IntegralToIntegral £temporary3270 target
+19: Return £temporary3270
+20: Empty
+21: FunctionEnd memcpy

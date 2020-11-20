@@ -1,0 +1,48 @@
+0: PushFloat longDoubleValue
+1: PushFloat longDoubleValue
+2: FloatingToIntegral £temporary1581 longDoubleValue
+3: IntegralToFloating £temporary1582 £temporary1581
+4: BinarySubtract £temporary1583 longDoubleValue £temporary1582
+5: TopFloat longDoubleValue
+6: PopFloat
+7: Equal Assign precision 6 precision 0
+8: Goto NotEqual PreCall 18 grid 0
+9: Assign precision 6
+10: Goto NotEqual PreCall 18 grid 0
+11: NotEqual PreCall 18 grid 0
+12: Goto SignedGreaterThan PreCall 18 precision 0
+13: SignedGreaterThan PreCall 18 precision 0
+14: Goto Assign £temporary1589 precision
+15: PreCall 18
+16: Parameter 24 signedchar 46
+17: Call 18 printChar 0
+18: PostCall 18
+19: Goto Assign £temporary1589 precision
+20: Assign £temporary1589 precision
+21: BinarySubtract precision precision 1
+22: SignedGreaterThan PushFloat 10.0 £temporary1589 0
+23: Goto Empty
+24: PushFloat 10.0
+25: PushFloat longDoubleValue
+26: SignedMultiply £temporary1591 10.0 longDoubleValue
+27: PopFloat longDoubleValue10
+28: PushFloat longDoubleValue10
+29: FloatingToIntegral £temporary1592 longDoubleValue10
+30: Assign digitValue £temporary1592
+31: PreCall 28
+32: BinaryAdd £temporary1593 digitValue 48
+33: IntegralToIntegral £temporary1594 £temporary1593
+34: Parameter 34 signedchar £temporary1594
+35: Call 28 printChar 0
+36: PostCall 28
+37: PushFloat longDoubleValue
+38: PopFloat
+39: PushFloat longDoubleValue10
+40: IntegralToFloating £temporary1596 digitValue
+41: BinarySubtract £temporary1597 longDoubleValue10 £temporary1596
+42: TopFloat longDoubleValue
+43: PopFloat
+44: Goto Assign £temporary1589 precision
+45: Empty
+46: Return
+47: FunctionEnd printLongDoubleFraction

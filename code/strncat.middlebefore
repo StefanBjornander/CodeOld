@@ -1,0 +1,36 @@
+0: PreCall 14
+1: Parameter 20 pointer target
+2: Call 14 strlen 0
+3: PostCall 14
+4: GetReturnValue £temporary3029
+5: Assign targetLength £temporary3029
+6: Assign index 0
+7: Empty
+8: BinarySubtract £temporary3030 size 1
+9: SignedLessThan UnsignedMultiply £temporary3033 index 1 index £temporary3030
+10: Goto BinaryAdd £temporary3045 targetLength size
+11: UnsignedMultiply £temporary3033 index 1
+12: BinaryAdd £temporary3034 source £temporary3033
+13: Dereference £temporary3032 -> £temporary3034 £temporary3034 0
+14: NotEqual BinaryAdd £temporary3038 targetLength index £temporary3032 -> £temporary3034 0
+15: Goto BinaryAdd £temporary3045 targetLength size
+16: BinaryAdd £temporary3038 targetLength index
+17: UnsignedMultiply £temporary3040 £temporary3038 1
+18: BinaryAdd £temporary3041 target £temporary3040
+19: Dereference £temporary3039 -> £temporary3041 £temporary3041 0
+20: UnsignedMultiply £temporary3043 index 1
+21: BinaryAdd £temporary3044 source £temporary3043
+22: Dereference £temporary3042 -> £temporary3044 £temporary3044 0
+23: Assign £temporary3039 -> £temporary3041 £temporary3042 -> £temporary3044
+24: Empty
+25: BinaryAdd index index 1
+26: Goto Empty
+27: BinaryAdd £temporary3045 targetLength size
+28: BinarySubtract £temporary3046 £temporary3045 1
+29: UnsignedMultiply £temporary3048 £temporary3046 1
+30: BinaryAdd £temporary3049 target £temporary3048
+31: Dereference £temporary3047 -> £temporary3049 £temporary3049 0
+32: Assign £temporary3047 -> £temporary3049 0
+33: Return target
+34: Empty
+35: FunctionEnd strncat

@@ -1,0 +1,13 @@
+0: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 14 pointer "%s: %s.\n"
+2: Parameter 16 pointer s
+3: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: Parameter 24 signedint errno
+5: Call 18 strerror 0
+6: PostCall 18
+7: GetReturnValue £temporary909
+8: Parameter 18 pointer £temporary909
+9: Call 8 printf 4
+10: PostCall 8
+11: Return
+12: FunctionEnd perror

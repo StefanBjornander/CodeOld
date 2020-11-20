@@ -1,0 +1,47 @@
+0: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: PushFloat -6.2831853071795864769252866
+2: Parameter 12 double -6.2831853071795864769252866
+3: Call 6 math_test_1 0
+4: PostCall 6
+5: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+6: PushFloat -3.1415926535897932384626433
+7: Parameter 12 double -3.1415926535897932384626433
+8: Call 6 math_test_1 0
+9: PostCall 6
+10: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+11: PushFloat -1.57079632679489661923132165
+12: Parameter 12 double -1.57079632679489661923132165
+13: Call 6 math_test_1 0
+14: PostCall 6
+15: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+16: PushFloat -1
+17: Parameter 12 double -1
+18: Call 6 math_test_1 0
+19: PostCall 6
+20: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+21: PushFloat 0
+22: Parameter 12 double 0
+23: Call 6 math_test_1 0
+24: PostCall 6
+25: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+26: PushFloat 1
+27: Parameter 12 double 1
+28: Call 6 math_test_1 0
+29: PostCall 6
+30: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+31: PushFloat 1.57079632679489661923132165
+32: Parameter 12 double 1.57079632679489661923132165
+33: Call 6 math_test_1 0
+34: PostCall 6
+35: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+36: PushFloat 3.1415926535897932384626433
+37: Parameter 12 double 3.1415926535897932384626433
+38: Call 6 math_test_1 0
+39: PostCall 6
+40: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+41: PushFloat 6.2831853071795864769252866
+42: Parameter 12 double 6.2831853071795864769252866
+43: Call 6 math_test_1 0
+44: PostCall 6
+45: Return
+46: FunctionEnd math_test_1x

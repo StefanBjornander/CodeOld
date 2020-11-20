@@ -1,0 +1,35 @@
+0: PreCall 6
+1: PushFloat 3.14
+2: Parameter 12 double 3.14
+3: Call 6 setjmp_test 0
+4: PostCall 6
+5: PreCall 6
+6: Parameter 12 pointer "---------------------------------------------\n"
+7: Call 6 printf 0
+8: PostCall 6
+9: PreCall 6
+10: PushFloat 0
+11: Parameter 12 double 0
+12: Call 6 setjmp_test 0
+13: PostCall 6
+14: PreCall 6
+15: Parameter 12 pointer "---------------------------------------------\n"
+16: Call 6 printf 0
+17: PostCall 6
+18: PreCall 6
+19: PushFloat 2.71
+20: Parameter 12 double 2.71
+21: Call 6 setjmp_test 0
+22: PostCall 6
+23: PreCall 6
+24: Parameter 12 pointer "---------------------------------------------\n"
+25: Call 6 printf 0
+26: PostCall 6
+27: PreCall 6
+28: PushFloat 0
+29: Parameter 12 double 0
+30: Call 6 setjmp_test 0
+31: PostCall 6
+32: Empty
+33: Return
+34: FunctionEnd mains2

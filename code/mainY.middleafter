@@ -1,0 +1,15 @@
+0: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Call 6 malloc_test 0
+2: PostCall 6
+3: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: PushFloat 10
+5: Parameter 12 double 10
+6: Call 6 setjmp_test 0
+7: PostCall 6
+8: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+9: PushFloat 0
+10: Parameter 12 double 0
+11: Call 6 setjmp_test 0
+12: PostCall 6
+13: Return
+14: FunctionEnd mainY

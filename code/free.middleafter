@@ -1,0 +1,34 @@
+0: IntegralToIntegral £temporary186 freeMemoryPtr
+1: BinarySubtract £temporary187 £temporary186 4
+2: IntegralToIntegral £temporary188 £temporary187
+3: Assign freeBlockPtr £temporary188
+4: Assign prevBlockPtr 0
+5: Assign currBlockPtr g_firstBlockPtr
+6: NotEqual 8 freeMemoryPtr 0
+7: Return
+8: Equal 32 currBlockPtr 0
+9: NotEqual 28 currBlockPtr freeBlockPtr
+10: NotEqual 15 prevBlockPtr 0
+11: Dereference £temporary193 -> currBlockPtr currBlockPtr 0
+12: NotEqual 15 £temporary193 -> currBlockPtr 0
+13: Assign g_firstBlockPtr 0
+14: Goto 27
+15: NotEqual 19 prevBlockPtr 0
+16: Dereference £temporary197 -> currBlockPtr currBlockPtr 0
+17: Assign g_firstBlockPtr £temporary197 -> currBlockPtr
+18: Goto 27
+19: Dereference £temporary198 -> currBlockPtr currBlockPtr 0
+20: NotEqual 24 £temporary198 -> currBlockPtr 0
+21: Dereference £temporary200 -> prevBlockPtr prevBlockPtr 0
+22: Assign £temporary200 -> prevBlockPtr 0
+23: Goto 27
+24: Dereference £temporary201 -> prevBlockPtr prevBlockPtr 0
+25: Dereference £temporary202 -> currBlockPtr currBlockPtr 0
+26: Assign £temporary201 -> prevBlockPtr £temporary202 -> currBlockPtr
+27: Return
+28: Assign prevBlockPtr currBlockPtr
+29: Dereference £temporary203 -> currBlockPtr currBlockPtr 0
+30: Assign currBlockPtr £temporary203 -> currBlockPtr
+31: Goto 8
+32: Return
+33: FunctionEnd free

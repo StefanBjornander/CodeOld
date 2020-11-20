@@ -1,0 +1,75 @@
+0: Assign firstIndex 0
+1: BinarySubtract £temporary2524 listSize 1
+2: Assign lastIndex £temporary2524
+3: Equal Return 0 listSize 0
+4: Goto Goto IntegralToIntegral £temporary2526 valueList
+5: Return 0
+6: Goto Goto IntegralToIntegral £temporary2526 valueList
+7: Goto IntegralToIntegral £temporary2526 valueList
+8: IntegralToIntegral £temporary2526 valueList
+9: SignedMultiply £temporary2527 firstIndex valueSize
+10: UnsignedMultiply £temporary2529 £temporary2527 1
+11: BinaryAdd £temporary2528 £temporary2526 £temporary2529
+12: Assign firstValuePtr £temporary2528
+13: PreCall 22
+14: Parameter 28 pointer keyPtr
+15: Parameter 30 pointer firstValuePtr
+16: Call 22 compare 0
+17: PostCall 22
+18: GetReturnValue £temporary2530
+19: Assign firstCompare £temporary2530
+20: SignedLessThan Return 0 firstCompare 0
+21: Goto Equal Return firstValuePtr firstCompare 0
+22: Return 0
+23: Goto IntegralToIntegral £temporary2533 valueList
+24: Equal Return firstValuePtr firstCompare 0
+25: Goto IntegralToIntegral £temporary2533 valueList
+26: Return firstValuePtr
+27: Goto IntegralToIntegral £temporary2533 valueList
+28: IntegralToIntegral £temporary2533 valueList
+29: SignedMultiply £temporary2534 lastIndex valueSize
+30: UnsignedMultiply £temporary2536 £temporary2534 1
+31: BinaryAdd £temporary2535 £temporary2533 £temporary2536
+32: Assign lastValuePtr £temporary2535
+33: PreCall 22
+34: Parameter 28 pointer keyPtr
+35: Parameter 30 pointer lastValuePtr
+36: Call 22 compare 0
+37: PostCall 22
+38: GetReturnValue £temporary2537
+39: Assign lastCompare £temporary2537
+40: SignedGreaterThan Return 0 lastCompare 0
+41: Goto Equal Return lastValuePtr lastCompare 0
+42: Return 0
+43: Goto BinaryAdd £temporary2540 firstIndex lastIndex
+44: Equal Return lastValuePtr lastCompare 0
+45: Goto BinaryAdd £temporary2540 firstIndex lastIndex
+46: Return lastValuePtr
+47: Goto BinaryAdd £temporary2540 firstIndex lastIndex
+48: BinaryAdd £temporary2540 firstIndex lastIndex
+49: SignedDivide £temporary2541 £temporary2540 2
+50: Assign middleIndex £temporary2541
+51: IntegralToIntegral £temporary2542 valueList
+52: SignedMultiply £temporary2543 middleIndex valueSize
+53: UnsignedMultiply £temporary2545 £temporary2543 1
+54: BinaryAdd £temporary2544 £temporary2542 £temporary2545
+55: Assign middleValuePtr £temporary2544
+56: PreCall 24
+57: Parameter 30 pointer keyPtr
+58: Parameter 32 pointer middleValuePtr
+59: Call 24 compare 0
+60: PostCall 24
+61: GetReturnValue £temporary2546
+62: Assign middleCompare £temporary2546
+63: SignedLessThan Assign lastIndex middleIndex middleCompare 0
+64: Goto SignedGreaterThan Assign firstIndex middleIndex middleCompare 0
+65: Assign lastIndex middleIndex
+66: Goto Goto IntegralToIntegral £temporary2526 valueList
+67: SignedGreaterThan Assign firstIndex middleIndex middleCompare 0
+68: Goto Return middleValuePtr
+69: Assign firstIndex middleIndex
+70: Goto Goto IntegralToIntegral £temporary2526 valueList
+71: Return middleValuePtr
+72: Goto Goto IntegralToIntegral £temporary2526 valueList
+73: Empty
+74: FunctionEnd bsearch

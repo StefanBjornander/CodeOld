@@ -1,0 +1,18 @@
+0: PreCall 8
+1: Parameter 14 pointer "Please write an integer: "
+2: Call 8 printf 0
+3: PostCall 8
+4: PreCall 8
+5: Parameter 14 pointer "%i"
+6: Address £temporary25 i
+7: Parameter 16 pointer £temporary25
+8: Call 8 scanf 2
+9: PostCall 8
+10: PreCall 8
+11: Parameter 14 pointer "You wrote the integer %i.\n"
+12: Parameter 16 signedint i
+13: Call 8 printf 2
+14: PostCall 8
+15: Empty
+16: Return
+17: FunctionEnd maini

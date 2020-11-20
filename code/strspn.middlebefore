@@ -1,0 +1,27 @@
+0: Assign index 0
+1: Empty
+2: UnsignedMultiply £temporary3145 index 1
+3: BinaryAdd £temporary3146 mainString £temporary3145
+4: Dereference £temporary3144 -> £temporary3146 £temporary3146 0
+5: NotEqual PreCall 12 £temporary3144 -> £temporary3146 0
+6: Goto Return -1
+7: PreCall 12
+8: Parameter 18 pointer charSet
+9: UnsignedMultiply £temporary3150 index 1
+10: BinaryAdd £temporary3151 mainString £temporary3150
+11: Dereference £temporary3149 -> £temporary3151 £temporary3151 0
+12: IntegralToIntegral £temporary3152 £temporary3149 -> £temporary3151
+13: Parameter 20 signedint £temporary3152
+14: Call 12 strchr 0
+15: PostCall 12
+16: GetReturnValue £temporary3153
+17: Equal Return index £temporary3153 0
+18: Goto Empty
+19: Return index
+20: Goto Empty
+21: Empty
+22: BinaryAdd index index 1
+23: Goto Empty
+24: Return -1
+25: Empty
+26: FunctionEnd strspn

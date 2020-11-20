@@ -1,0 +1,82 @@
+0: PushFloat value
+1: PushFloat 0.0
+2: NotEqual 27 value 0.0
+3: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: Parameter 30 signedchar 48
+5: Call 24 printChar 0
+6: PostCall 24
+7: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+8: PushFloat 0.0
+9: Parameter 30 longdouble 0.0
+10: Parameter 38 signedint precision
+11: Parameter 40 signedint grid
+12: Call 24 printLongDoubleFraction 0
+13: PostCall 24
+14: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+15: Equal 18 capital 0
+16: Assign £temporary1611 69
+17: Goto 19
+18: Assign £temporary1611 101
+19: Parameter 30 signedchar £temporary1611
+20: Call 24 printChar 0
+21: PostCall 24
+22: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+23: Parameter 30 signedchar 48
+24: Call 24 printChar 0
+25: PostCall 24
+26: Goto 80
+27: PushFloat value
+28: PushFloat 0.0
+29: SignedGreaterThanEqual 37 value 0.0
+30: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+31: Parameter 30 signedchar 45
+32: Call 24 printChar 0
+33: PostCall 24
+34: PushFloat value
+35: UnarySubtract £temporary1616 value
+36: PopFloat value
+37: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+38: PushFloat value
+39: Parameter 30 double value
+40: Call 24 log10 0
+41: PostCall 24
+42: GetReturnValue £temporary1617
+43: FloatingToIntegral £temporary1618 £temporary1617
+44: Assign expo £temporary1618
+45: PushFloat value
+46: PreCall 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
+47: PushFloat 10.0
+48: Parameter 32 double 10.0
+49: IntegralToFloating £temporary1619 expo
+50: Parameter 40 double £temporary1619
+51: Call 26 pow 0
+52: PostCall 26
+53: GetReturnValue £temporary1620
+54: SignedDivide £temporary1621 value £temporary1620
+55: PopFloat value
+56: PreCall 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+57: PushFloat value
+58: Parameter 32 longdouble value
+59: Parameter 40 signedint plus
+60: Parameter 42 signedint space
+61: Parameter 44 signedint grid
+62: Parameter 46 signedint precision
+63: Call 26 printLongDoublePlain 0
+64: PostCall 26
+65: PreCall 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+66: Equal 69 capital 0
+67: Assign £temporary1624 69
+68: Goto 70
+69: Assign £temporary1624 101
+70: Parameter 32 signedchar £temporary1624
+71: Call 26 printChar 0
+72: PostCall 26
+73: PreCall 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+74: IntegralToIntegral £temporary1626 expo
+75: Parameter 32 signed long int £temporary1626
+76: Parameter 36 signedint 1
+77: Parameter 38 signedint 0
+78: Call 26 printLongInt 0
+79: PostCall 26
+80: Return
+81: FunctionEnd printLongDoubleExpo

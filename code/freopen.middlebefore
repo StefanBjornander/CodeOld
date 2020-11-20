@@ -1,0 +1,163 @@
+0: Assign handle -1
+1: PreCall 14
+2: Parameter 20 pointer mode
+3: Parameter 22 pointer "r"
+4: Call 14 strcmp 0
+5: PostCall 14
+6: GetReturnValue £temporary728
+7: Equal PreCall 14 £temporary728 0
+8: Goto PreCall 14
+9: PreCall 14
+10: Parameter 20 pointer name
+11: Parameter 22 unsignedshortint 64
+12: Call 14 fileopen 0
+13: PostCall 14
+14: GetReturnValue £temporary730
+15: Assign handle £temporary730
+16: Goto NotEqual Dereference £temporary756 -> stream stream 0 handle -1
+17: PreCall 14
+18: Parameter 20 pointer mode
+19: Parameter 22 pointer "w"
+20: Call 14 strcmp 0
+21: PostCall 14
+22: GetReturnValue £temporary731
+23: Equal PreCall 14 £temporary731 0
+24: Goto PreCall 14
+25: PreCall 14
+26: Parameter 20 pointer name
+27: Call 14 filecreate 0
+28: PostCall 14
+29: GetReturnValue £temporary733
+30: Assign handle £temporary733
+31: Goto NotEqual Dereference £temporary756 -> stream stream 0 handle -1
+32: PreCall 14
+33: Parameter 20 pointer mode
+34: Parameter 22 pointer "a"
+35: Call 14 strcmp 0
+36: PostCall 14
+37: GetReturnValue £temporary734
+38: Equal PreCall 14 £temporary734 0
+39: Goto PreCall 14
+40: PreCall 14
+41: Parameter 20 pointer name
+42: Parameter 22 unsignedshortint 65
+43: Call 14 fileopen 0
+44: PostCall 14
+45: GetReturnValue £temporary736
+46: Assign handle £temporary736
+47: NotEqual PreCall 14 handle -1
+48: Goto PreCall 14
+49: PreCall 14
+50: Parameter 20 pointer stream
+51: Parameter 22 signedint 0
+52: Parameter 24 signedint 2
+53: Call 14 fseek 0
+54: PostCall 14
+55: Goto NotEqual Dereference £temporary756 -> stream stream 0 handle -1
+56: PreCall 14
+57: Parameter 20 pointer name
+58: Call 14 filecreate 0
+59: PostCall 14
+60: GetReturnValue £temporary739
+61: Assign handle £temporary739
+62: Goto NotEqual Dereference £temporary756 -> stream stream 0 handle -1
+63: PreCall 14
+64: Parameter 20 pointer mode
+65: Parameter 22 pointer "r+"
+66: Call 14 strcmp 0
+67: PostCall 14
+68: GetReturnValue £temporary740
+69: Equal PreCall 14 £temporary740 0
+70: Goto PreCall 14
+71: PreCall 14
+72: Parameter 20 pointer name
+73: Parameter 22 unsignedshortint 66
+74: Call 14 fileopen 0
+75: PostCall 14
+76: GetReturnValue £temporary742
+77: Assign handle £temporary742
+78: Goto NotEqual Dereference £temporary756 -> stream stream 0 handle -1
+79: PreCall 14
+80: Parameter 20 pointer mode
+81: Parameter 22 pointer "w+"
+82: Call 14 strcmp 0
+83: PostCall 14
+84: GetReturnValue £temporary743
+85: Equal PreCall 14 £temporary743 0
+86: Goto PreCall 14
+87: PreCall 14
+88: Parameter 20 pointer name
+89: Call 14 fileexists 0
+90: PostCall 14
+91: GetReturnValue £temporary745
+92: NotEqual PreCall 14 £temporary745 0
+93: Goto PreCall 14
+94: PreCall 14
+95: Parameter 20 pointer name
+96: Parameter 22 unsignedshortint 66
+97: Call 14 fileopen 0
+98: PostCall 14
+99: GetReturnValue £temporary746
+100: Assign handle £temporary746
+101: Goto NotEqual Dereference £temporary756 -> stream stream 0 handle -1
+102: PreCall 14
+103: Parameter 20 pointer name
+104: Call 14 filecreate 0
+105: PostCall 14
+106: GetReturnValue £temporary747
+107: Assign handle £temporary747
+108: Goto NotEqual Dereference £temporary756 -> stream stream 0 handle -1
+109: PreCall 14
+110: Parameter 20 pointer mode
+111: Parameter 22 pointer "a+"
+112: Call 14 strcmp 0
+113: PostCall 14
+114: GetReturnValue £temporary749
+115: Equal PreCall 14 £temporary749 0
+116: Goto NotEqual Dereference £temporary756 -> stream stream 0 handle -1
+117: PreCall 14
+118: Parameter 20 pointer name
+119: Parameter 22 unsignedshortint 66
+120: Call 14 fileopen 0
+121: PostCall 14
+122: GetReturnValue £temporary751
+123: Assign handle £temporary751
+124: NotEqual PreCall 14 handle -1
+125: Goto PreCall 14
+126: PreCall 14
+127: Parameter 20 pointer stream
+128: Parameter 22 signedint 0
+129: Parameter 24 signedint 2
+130: Call 14 fseek 0
+131: PostCall 14
+132: Goto NotEqual Dereference £temporary756 -> stream stream 0 handle -1
+133: PreCall 14
+134: Parameter 20 pointer name
+135: Call 14 filecreate 0
+136: PostCall 14
+137: GetReturnValue £temporary754
+138: Assign handle £temporary754
+139: Goto NotEqual Dereference £temporary756 -> stream stream 0 handle -1
+140: NotEqual Dereference £temporary756 -> stream stream 0 handle -1
+141: Goto Dereference £temporary762 -> stream stream 0
+142: Dereference £temporary756 -> stream stream 0
+143: Assign £temporary756 -> stream 1
+144: Dereference £temporary757 -> stream stream 0
+145: Assign £temporary757 -> stream handle
+146: Dereference £temporary758 -> stream stream 0
+147: Assign £temporary758 -> stream 0
+148: PreCall 14
+149: Dereference £temporary759 -> stream stream 0
+150: Parameter 20 pointer £temporary759 -> stream
+151: Parameter 22 pointer name
+152: Call 14 strcpy 0
+153: PostCall 14
+154: Dereference £temporary761 -> stream stream 0
+155: Assign £temporary761 -> stream 0
+156: Return stream
+157: Goto Empty
+158: Dereference £temporary762 -> stream stream 0
+159: Assign £temporary762 -> stream 0
+160: Return 0
+161: Empty
+162: FunctionEnd freopen

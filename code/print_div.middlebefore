@@ -1,0 +1,11 @@
+0: PreCall 10
+1: Parameter 16 pointer "div_t quot %i rem %i\n"
+2: Parameter 18 signedint d.quot
+3: Parameter 20 signedint d.rem
+4: Call 10 printf 4
+5: PostCall 10
+6: BinaryAdd d.quot d.quot 1
+7: BinaryAdd d.rem d.rem 1
+8: Return d
+9: Empty
+10: FunctionEnd print_div

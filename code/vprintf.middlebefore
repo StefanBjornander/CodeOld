@@ -1,0 +1,10 @@
+0: PreCall 10
+1: Parameter 16 pointer stdout
+2: Parameter 18 pointer format
+3: Parameter 20 pointer arg_list
+4: Call 10 vfprintf 0
+5: PostCall 10
+6: GetReturnValue £temporary1922
+7: Return £temporary1922
+8: Empty
+9: FunctionEnd vprintf

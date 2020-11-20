@@ -1,0 +1,22 @@
+0: PreCall 8
+1: Parameter 14 signedint c
+2: Call 8 isdigit 0
+3: PostCall 8
+4: GetReturnValue £temporary281
+5: NotEqual Assign £temporary291 1 £temporary281 0
+6: Goto SignedGreaterThanEqual SignedLessThanEqual Assign £temporary291 1 c 102 c 97
+7: SignedGreaterThanEqual SignedLessThanEqual Assign £temporary291 1 c 102 c 97
+8: Goto SignedGreaterThanEqual SignedLessThanEqual Assign £temporary291 1 c 70 c 65
+9: SignedLessThanEqual Assign £temporary291 1 c 102
+10: Goto SignedGreaterThanEqual SignedLessThanEqual Assign £temporary291 1 c 70 c 65
+11: SignedGreaterThanEqual SignedLessThanEqual Assign £temporary291 1 c 70 c 65
+12: Goto Assign £temporary291 0
+13: SignedLessThanEqual Assign £temporary291 1 c 70
+14: Goto Assign £temporary291 0
+15: Assign £temporary291 1
+16: Goto Empty
+17: Assign £temporary291 0
+18: Empty
+19: Return £temporary291
+20: Empty
+21: FunctionEnd isxdigit

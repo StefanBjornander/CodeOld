@@ -1,0 +1,11 @@
+0: SignedGreaterThanEqual SignedLessThanEqual Assign £temporary295 1 c 126 c 32
+1: Goto Assign £temporary295 0
+2: SignedLessThanEqual Assign £temporary295 1 c 126
+3: Goto Assign £temporary295 0
+4: Assign £temporary295 1
+5: Goto Empty
+6: Assign £temporary295 0
+7: Empty
+8: Return £temporary295
+9: Empty
+10: FunctionEnd isgraph

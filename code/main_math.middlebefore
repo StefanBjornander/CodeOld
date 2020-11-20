@@ -1,0 +1,165 @@
+0: PreCall 6
+1: PushFloat 0.333333333
+2: Parameter 12 double 0.333333333
+3: Call 6 math_test_1 0
+4: PostCall 6
+5: PreCall 6
+6: PushFloat 0.75
+7: Parameter 12 double 0.75
+8: Call 6 math_test_1 0
+9: PostCall 6
+10: PreCall 6
+11: PushFloat 1.000010
+12: Parameter 12 double 1.000010
+13: Call 6 math_test_1 0
+14: PostCall 6
+15: PreCall 6
+16: PushFloat 1.0
+17: Parameter 12 double 1.0
+18: Call 6 math_test_1 0
+19: PostCall 6
+20: PreCall 6
+21: PushFloat 0.999999
+22: Parameter 12 double 0.999999
+23: Call 6 math_test_1 0
+24: PostCall 6
+25: PreCall 6
+26: PushFloat 0.000010
+27: Parameter 12 double 0.000010
+28: Call 6 math_test_1 0
+29: PostCall 6
+30: PreCall 6
+31: PushFloat 0
+32: Parameter 12 double 0
+33: Call 6 math_test_1 0
+34: PostCall 6
+35: PreCall 6
+36: PushFloat -0.000010
+37: Parameter 12 double -0.000010
+38: Call 6 math_test_1 0
+39: PostCall 6
+40: PreCall 6
+41: PushFloat -0.999999
+42: Parameter 12 double -0.999999
+43: Call 6 math_test_1 0
+44: PostCall 6
+45: PreCall 6
+46: PushFloat -1.0
+47: Parameter 12 double -1.0
+48: Call 6 math_test_1 0
+49: PostCall 6
+50: PreCall 6
+51: PushFloat -1.000010
+52: Parameter 12 double -1.000010
+53: Call 6 math_test_1 0
+54: PostCall 6
+55: PreCall 6
+56: PushFloat 6.2831853071795864769252866
+57: Parameter 12 double 6.2831853071795864769252866
+58: Call 6 math_test_1 0
+59: PostCall 6
+60: PreCall 6
+61: PushFloat 3.1415926535897932384626433
+62: Parameter 12 double 3.1415926535897932384626433
+63: Call 6 math_test_1 0
+64: PostCall 6
+65: PreCall 6
+66: PushFloat 1.57079632679489661923132165
+67: Parameter 12 double 1.57079632679489661923132165
+68: Call 6 math_test_1 0
+69: PostCall 6
+70: PreCall 6
+71: PushFloat -1.57079632679489661923132165
+72: Parameter 12 double -1.57079632679489661923132165
+73: Call 6 math_test_1 0
+74: PostCall 6
+75: PreCall 6
+76: PushFloat -3.1415926535897932384626433
+77: Parameter 12 double -3.1415926535897932384626433
+78: Call 6 math_test_1 0
+79: PostCall 6
+80: PreCall 6
+81: PushFloat -6.2831853071795864769252866
+82: Parameter 12 double -6.2831853071795864769252866
+83: Call 6 math_test_1 0
+84: PostCall 6
+85: PreCall 6
+86: PushFloat 1.0
+87: Parameter 12 double 1.0
+88: PushFloat 2.0
+89: Parameter 20 double 2.0
+90: Call 6 math_test_2 0
+91: PostCall 6
+92: PreCall 6
+93: PushFloat 3.0
+94: Parameter 12 double 3.0
+95: PushFloat 4.0
+96: Parameter 20 double 4.0
+97: Call 6 math_test_2 0
+98: PostCall 6
+99: PreCall 6
+100: PushFloat 0
+101: Parameter 12 double 0
+102: PushFloat 2.0
+103: Parameter 20 double 2.0
+104: Call 6 math_test_2 0
+105: PostCall 6
+106: PreCall 6
+107: PushFloat 0
+108: Parameter 12 double 0
+109: PushFloat -2.0
+110: Parameter 20 double -2.0
+111: Call 6 math_test_2 0
+112: PostCall 6
+113: PreCall 6
+114: PushFloat 1
+115: Parameter 12 double 1
+116: PushFloat 2.0
+117: Parameter 20 double 2.0
+118: Call 6 math_test_2 0
+119: PostCall 6
+120: PreCall 6
+121: PushFloat 1
+122: Parameter 12 double 1
+123: PushFloat -2.0
+124: Parameter 20 double -2.0
+125: Call 6 math_test_2 0
+126: PostCall 6
+127: PreCall 6
+128: PushFloat 0
+129: Parameter 12 double 0
+130: PushFloat 0
+131: Parameter 20 double 0
+132: Call 6 math_test_2 0
+133: PostCall 6
+134: PreCall 6
+135: PushFloat 2
+136: Parameter 12 double 2
+137: PushFloat 0
+138: Parameter 20 double 0
+139: Call 6 math_test_2 0
+140: PostCall 6
+141: PreCall 6
+142: PushFloat -2
+143: Parameter 12 double -2
+144: PushFloat 0
+145: Parameter 20 double 0
+146: Call 6 math_test_2 0
+147: PostCall 6
+148: PreCall 6
+149: PushFloat -1.0
+150: Parameter 12 double -1.0
+151: PushFloat -1.0
+152: Parameter 20 double -1.0
+153: Call 6 math_test_2 0
+154: PostCall 6
+155: PreCall 6
+156: PushFloat -2.0
+157: Parameter 12 double -2.0
+158: PushFloat -4.0
+159: Parameter 20 double -4.0
+160: Call 6 math_test_2 0
+161: PostCall 6
+162: Empty
+163: Return
+164: FunctionEnd main_math

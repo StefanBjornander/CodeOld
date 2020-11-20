@@ -359,5 +359,6 @@
 358: Call 34 strlen 0
 359: PostCall 34
 360: GetReturnValue £temporary2979
-361: Return £temporary2979
-362: FunctionEnd strftime
+361: SetReturnValue
+362: Return £temporary2979
+363: FunctionEnd strftime

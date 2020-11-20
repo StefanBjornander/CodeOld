@@ -14,289 +14,281 @@
 13: Assign longDouble 0
 14: Assign g_outChars 0
 15: Assign index 0
-16: IntegralToIntegral £temporary1860 index
-17: BinaryAdd £temporary1862 format £temporary1860
-18: Dereference £temporary1859 -> £temporary1862 £temporary1862 0
-19: Equal 293 £temporary1859 -> £temporary1862 0
-20: IntegralToIntegral £temporary1866 index
-21: BinaryAdd £temporary1868 format £temporary1866
-22: Dereference £temporary1865 -> £temporary1868 £temporary1868 0
-23: Assign c £temporary1865 -> £temporary1868
-24: Equal 271 percent 0
-25: Case 54 c 43
-26: Case 56 c 45
-27: Case 58 c 32
-28: Case 60 c 48
-29: Case 62 c 35
-30: Case 64 c 46
-31: Case 66 c 42
-32: Case 71 c 104
-33: Case 73 c 108
-34: Case 75 c 76
-35: Case 77 c 37
-36: Case 77 c 110
-37: Case 77 c 112
-38: Case 77 c 71
-39: Case 77 c 103
-40: Case 77 c 69
-41: Case 77 c 101
-42: Case 77 c 102
-43: Case 77 c 115
-44: Case 77 c 99
-45: Case 77 c 88
-46: Case 77 c 120
-47: Case 77 c 111
-48: Case 77 c 98
-49: Case 77 c 117
-50: Case 77 c 100
-51: Case 77 c 105
-52: CaseEnd c
-53: Goto 246
-54: Assign plus 1
-55: Goto 291
-56: Assign minus 1
-57: Goto 291
-58: Assign space 1
-59: Goto 291
-60: Assign zero 1
-61: Goto 291
-62: Assign grid 1
-63: Goto 291
-64: Assign period 1
-65: Goto 291
-66: NotEqual 69 period 0
-67: Assign width -1
-68: Goto 291
-69: Assign precision -1
-70: Goto 291
-71: Assign shortInt 1
-72: Goto 291
-73: Assign longInt 1
-74: Goto 291
-75: Assign longDouble 1
-76: Goto 291
-77: Equal 110 minus 0
-78: Assign startChars g_outChars
-79: PreCall 105 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-80: IntegralToIntegral £temporary1872 index
-81: BinaryAdd £temporary1874 format £temporary1872
-82: Dereference £temporary1871 -> £temporary1874 £temporary1874 0
-83: Address £temporary1875 £temporary1871 -> £temporary1874
-84: Parameter pointer £temporary1875 129
-85: Parameter pointer arg_list 137
-86: Parameter signedint plus 145
-87: Parameter signedint space 149
-88: Parameter signedint grid 153
-89: Address £temporary1876 width
-90: Parameter pointer £temporary1876 157
-91: Parameter signedint precision 165
-92: Parameter signedint shortInt 169
-93: Parameter signedint longInt 173
-94: Parameter signedint longDouble 177
-95: Parameter signedint 1 181
-96: Parameter pointer 0 185
-97: Call printArgument 105 0
-98: PostCall 105
-99: GetReturnValue £temporary1877
-100: Assign arg_list £temporary1877
-101: BinarySubtract field g_outChars startChars
-102: Assign £temporary1879 field
-103: BinaryAdd field field 1
-104: SignedGreaterThanEqual 244 £temporary1879 width
-105: PreCall 109 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-106: Parameter signedchar 32 133
-107: Call printChar 109 0
-108: PostCall 109
-109: Goto 102
-110: Equal 189 zero 0
-111: Assign startChars g_outChars
-112: Assign oldOutStatus g_outStatus
-113: Assign negative 0
-114: Assign g_outStatus 2
-115: PreCall 113 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-116: IntegralToIntegral £temporary1883 index
-117: BinaryAdd £temporary1885 format £temporary1883
-118: Dereference £temporary1882 -> £temporary1885 £temporary1885 0
-119: Address £temporary1886 £temporary1882 -> £temporary1885
-120: Parameter pointer £temporary1886 137
-121: Parameter pointer arg_list 145
-122: Parameter signedint 0 153
-123: Parameter signedint 0 157
-124: Parameter signedint grid 161
-125: Address £temporary1887 width
-126: Parameter pointer £temporary1887 165
-127: Parameter signedint precision 173
-128: Parameter signedint shortInt 177
-129: Parameter signedint longInt 181
-130: Parameter signedint longDouble 185
-131: Parameter signedint 0 189
-132: Address £temporary1888 negative
-133: Parameter pointer £temporary1888 193
-134: Call printArgument 113 0
-135: PostCall 113
-136: Assign g_outStatus oldOutStatus
-137: BinarySubtract field g_outChars startChars
-138: Assign g_outChars startChars
-139: Equal 146 negative 0
-140: PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-141: Parameter signedchar 45 141
-142: Call printChar 117 0
-143: PostCall 117
-144: BinaryAdd field field 1
-145: Goto 159
-146: Equal 153 plus 0
-147: PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-148: Parameter signedchar 43 141
-149: Call printChar 117 0
-150: PostCall 117
-151: BinaryAdd field field 1
-152: Goto 159
-153: Equal 159 space 0
-154: PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-155: Parameter signedchar 32 141
-156: Call printChar 117 0
-157: PostCall 117
-158: BinaryAdd field field 1
-159: Assign £temporary1900 field
-160: BinaryAdd field field 1
-161: SignedGreaterThanEqual 167 £temporary1900 width
-162: PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-163: Parameter signedchar 48 141
-164: Call printChar 117 0
-165: PostCall 117
-166: Goto 159
-167: PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-168: IntegralToIntegral £temporary1904 index
-169: BinaryAdd £temporary1906 format £temporary1904
-170: Dereference £temporary1903 -> £temporary1906 £temporary1906 0
-171: Address £temporary1907 £temporary1903 -> £temporary1906
-172: Parameter pointer £temporary1907 141
-173: Parameter pointer arg_list 149
-174: Parameter signedint 0 157
-175: Parameter signedint 0 161
-176: Parameter signedint grid 165
-177: Parameter pointer 0 169
-178: Parameter signedint precision 177
-179: Parameter signedint shortInt 181
-180: Parameter signedint longInt 185
-181: Parameter signedint longDouble 189
-182: Parameter signedint 0 193
-183: Parameter pointer 0 197
-184: Call printArgument 117 0
-185: PostCall 117
-186: GetReturnValue £temporary1908
-187: Assign arg_list £temporary1908
-188: Goto 244
-189: Assign startChars g_outChars
-190: Assign oldOutStatus g_outStatus
-191: Assign g_outStatus 2
-192: PreCall 109 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-193: IntegralToIntegral £temporary1910 index
-194: BinaryAdd £temporary1912 format £temporary1910
-195: Dereference £temporary1909 -> £temporary1912 £temporary1912 0
-196: Address £temporary1913 £temporary1909 -> £temporary1912
-197: Parameter pointer £temporary1913 133
-198: Parameter pointer arg_list 141
-199: Parameter signedint plus 149
-200: Parameter signedint space 153
-201: Parameter signedint grid 157
-202: Address £temporary1914 width
-203: Parameter pointer £temporary1914 161
-204: Parameter signedint precision 169
-205: Parameter signedint shortInt 173
-206: Parameter signedint longInt 177
-207: Parameter signedint longDouble 181
-208: Parameter signedint 1 185
-209: Parameter pointer 0 189
-210: Call printArgument 109 0
-211: PostCall 109
-212: Assign g_outStatus oldOutStatus
-213: BinarySubtract field g_outChars startChars
-214: Assign g_outChars startChars
-215: Assign £temporary1917 field
-216: BinaryAdd field field 1
-217: SignedGreaterThanEqual 223 £temporary1917 width
-218: PreCall 113 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-219: Parameter signedchar 32 137
-220: Call printChar 113 0
-221: PostCall 113
-222: Goto 215
-223: PreCall 113 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-224: IntegralToIntegral £temporary1921 index
-225: BinaryAdd £temporary1923 format £temporary1921
-226: Dereference £temporary1920 -> £temporary1923 £temporary1923 0
-227: Address £temporary1924 £temporary1920 -> £temporary1923
-228: Parameter pointer £temporary1924 137
-229: Parameter pointer arg_list 145
-230: Parameter signedint plus 153
-231: Parameter signedint space 157
-232: Parameter signedint grid 161
-233: Parameter pointer 0 165
-234: Parameter signedint precision 173
-235: Parameter signedint shortInt 177
-236: Parameter signedint longInt 181
-237: Parameter signedint longDouble 185
-238: Parameter signedint 1 189
-239: Parameter pointer 0 193
-240: Call printArgument 113 0
-241: PostCall 113
-242: GetReturnValue £temporary1925
-243: Assign arg_list £temporary1925
-244: Assign percent 0
-245: Goto 291
-246: Assign value 0
-247: PreCall 105 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-248: IntegralToIntegral £temporary1928 c
-249: Parameter signedint £temporary1928 129
-250: Call isdigit 105 0
-251: PostCall 105
-252: GetReturnValue £temporary1929
-253: Equal 265 £temporary1929 0
-254: SignedMultiply £temporary1930 value 10
-255: BinarySubtract £temporary1931 c 48
-256: IntegralToIntegral £temporary1932 £temporary1931
-257: BinaryAdd value £temporary1930 £temporary1932
-258: BinaryAdd index index 1
-259: Assign £temporary1934 index
-260: IntegralToIntegral £temporary1936 £temporary1934
-261: BinaryAdd £temporary1938 format £temporary1936
-262: Dereference £temporary1935 -> £temporary1938 £temporary1938 0
-263: Assign c £temporary1935 -> £temporary1938
-264: Goto 247
-265: BinarySubtract index index 1
-266: NotEqual 269 period 0
-267: Assign width value
-268: Goto 291
-269: Assign precision value
-270: Goto 291
-271: NotEqual 287 c 37
-272: Assign percent 1
-273: Assign plus 0
-274: Assign minus 0
-275: Assign space 0
-276: Assign zero 0
-277: Assign grid 0
-278: Assign widthStar 0
-279: Assign period 0
-280: Assign precisionStar 0
-281: Assign shortInt 0
-282: Assign longInt 0
-283: Assign longDouble 0
-284: Assign width 0
-285: Assign precision 0
-286: Goto 291
-287: PreCall 101 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-288: Parameter signedchar c 125
-289: Call printChar 101 0
-290: PostCall 101
-291: BinaryAdd index index 1
-292: Goto 16
-293: NotEqual 300 g_outStatus 1
-294: IntegralToIntegral £temporary1947 g_outDevice
-295: Assign outString £temporary1947
-296: IntegralToIntegral £temporary1949 g_outChars
-297: BinaryAdd £temporary1951 outString £temporary1949
-298: Dereference £temporary1948 -> £temporary1951 £temporary1951 0
-299: Assign £temporary1948 -> £temporary1951 0
-300: Return g_outChars
-301: FunctionEnd printFormat
+16: BinaryAdd £temporary1830 format index
+17: Dereference £temporary1828 -> £temporary1830 £temporary1830 0
+18: Equal 285 £temporary1828 -> £temporary1830 0
+19: BinaryAdd £temporary1835 format index
+20: Dereference £temporary1833 -> £temporary1835 £temporary1835 0
+21: Assign c £temporary1833 -> £temporary1835
+22: Equal 263 percent 0
+23: Case 52 c 43
+24: Case 54 c 45
+25: Case 56 c 32
+26: Case 58 c 48
+27: Case 60 c 35
+28: Case 62 c 46
+29: Case 64 c 42
+30: Case 69 c 104
+31: Case 71 c 108
+32: Case 73 c 76
+33: Case 75 c 37
+34: Case 75 c 110
+35: Case 75 c 112
+36: Case 75 c 71
+37: Case 75 c 103
+38: Case 75 c 69
+39: Case 75 c 101
+40: Case 75 c 102
+41: Case 75 c 115
+42: Case 75 c 99
+43: Case 75 c 88
+44: Case 75 c 120
+45: Case 75 c 111
+46: Case 75 c 98
+47: Case 75 c 117
+48: Case 75 c 100
+49: Case 75 c 105
+50: CaseEnd c
+51: Goto 239
+52: Assign plus 1
+53: Goto 283
+54: Assign minus 1
+55: Goto 283
+56: Assign space 1
+57: Goto 283
+58: Assign zero 1
+59: Goto 283
+60: Assign grid 1
+61: Goto 283
+62: Assign period 1
+63: Goto 283
+64: NotEqual 67 period 0
+65: Assign width -1
+66: Goto 283
+67: Assign precision -1
+68: Goto 283
+69: Assign shortInt 1
+70: Goto 283
+71: Assign longInt 1
+72: Goto 283
+73: Assign longDouble 1
+74: Goto 283
+75: Equal 107 minus 0
+76: Assign startChars g_outChars
+77: PreCall 43 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+78: BinaryAdd £temporary1840 format index
+79: Dereference £temporary1838 -> £temporary1840 £temporary1840 0
+80: Address £temporary1841 £temporary1838 -> £temporary1840
+81: Parameter 49 pointer £temporary1841
+82: Parameter 51 pointer arg_list
+83: Parameter 53 signedint plus
+84: Parameter 55 signedint space
+85: Parameter 57 signedint grid
+86: Address £temporary1842 width
+87: Parameter 59 pointer £temporary1842
+88: Parameter 61 signedint precision
+89: Parameter 63 signedint shortInt
+90: Parameter 65 signedint longInt
+91: Parameter 67 signedint longDouble
+92: Parameter 69 signedint 1
+93: Parameter 71 pointer 0
+94: Call 43 printArgument 0
+95: PostCall 43
+96: GetReturnValue £temporary1843
+97: Assign arg_list £temporary1843
+98: BinarySubtract field g_outChars startChars
+99: Assign £temporary1845 field
+100: BinaryAdd field field 1
+101: SignedGreaterThanEqual 237 £temporary1845 width
+102: PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+103: Parameter 51 signedchar 32
+104: Call 45 printChar 0
+105: PostCall 45
+106: Goto 99
+107: Equal 184 zero 0
+108: Assign startChars g_outChars
+109: Assign oldOutStatus g_outStatus
+110: Assign negative 0
+111: Assign g_outStatus 2
+112: PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+113: BinaryAdd £temporary1850 format index
+114: Dereference £temporary1848 -> £temporary1850 £temporary1850 0
+115: Address £temporary1851 £temporary1848 -> £temporary1850
+116: Parameter 53 pointer £temporary1851
+117: Parameter 55 pointer arg_list
+118: Parameter 57 signedint 0
+119: Parameter 59 signedint 0
+120: Parameter 61 signedint grid
+121: Address £temporary1852 width
+122: Parameter 63 pointer £temporary1852
+123: Parameter 65 signedint precision
+124: Parameter 67 signedint shortInt
+125: Parameter 69 signedint longInt
+126: Parameter 71 signedint longDouble
+127: Parameter 73 signedint 0
+128: Address £temporary1853 negative
+129: Parameter 75 pointer £temporary1853
+130: Call 47 printArgument 0
+131: PostCall 47
+132: Assign g_outStatus oldOutStatus
+133: BinarySubtract field g_outChars startChars
+134: Assign g_outChars startChars
+135: Equal 142 negative 0
+136: PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+137: Parameter 55 signedchar 45
+138: Call 49 printChar 0
+139: PostCall 49
+140: BinaryAdd field field 1
+141: Goto 155
+142: Equal 149 plus 0
+143: PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+144: Parameter 55 signedchar 43
+145: Call 49 printChar 0
+146: PostCall 49
+147: BinaryAdd field field 1
+148: Goto 155
+149: Equal 155 space 0
+150: PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+151: Parameter 55 signedchar 32
+152: Call 49 printChar 0
+153: PostCall 49
+154: BinaryAdd field field 1
+155: Assign £temporary1865 field
+156: BinaryAdd field field 1
+157: SignedGreaterThanEqual 163 £temporary1865 width
+158: PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+159: Parameter 55 signedchar 48
+160: Call 49 printChar 0
+161: PostCall 49
+162: Goto 155
+163: PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+164: BinaryAdd £temporary1870 format index
+165: Dereference £temporary1868 -> £temporary1870 £temporary1870 0
+166: Address £temporary1871 £temporary1868 -> £temporary1870
+167: Parameter 55 pointer £temporary1871
+168: Parameter 57 pointer arg_list
+169: Parameter 59 signedint 0
+170: Parameter 61 signedint 0
+171: Parameter 63 signedint grid
+172: Parameter 65 pointer 0
+173: Parameter 67 signedint precision
+174: Parameter 69 signedint shortInt
+175: Parameter 71 signedint longInt
+176: Parameter 73 signedint longDouble
+177: Parameter 75 signedint 0
+178: Parameter 77 pointer 0
+179: Call 49 printArgument 0
+180: PostCall 49
+181: GetReturnValue £temporary1872
+182: Assign arg_list £temporary1872
+183: Goto 237
+184: Assign startChars g_outChars
+185: Assign oldOutStatus g_outStatus
+186: Assign g_outStatus 2
+187: PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+188: BinaryAdd £temporary1875 format index
+189: Dereference £temporary1873 -> £temporary1875 £temporary1875 0
+190: Address £temporary1876 £temporary1873 -> £temporary1875
+191: Parameter 51 pointer £temporary1876
+192: Parameter 53 pointer arg_list
+193: Parameter 55 signedint plus
+194: Parameter 57 signedint space
+195: Parameter 59 signedint grid
+196: Address £temporary1877 width
+197: Parameter 61 pointer £temporary1877
+198: Parameter 63 signedint precision
+199: Parameter 65 signedint shortInt
+200: Parameter 67 signedint longInt
+201: Parameter 69 signedint longDouble
+202: Parameter 71 signedint 1
+203: Parameter 73 pointer 0
+204: Call 45 printArgument 0
+205: PostCall 45
+206: Assign g_outStatus oldOutStatus
+207: BinarySubtract field g_outChars startChars
+208: Assign g_outChars startChars
+209: Assign £temporary1880 field
+210: BinaryAdd field field 1
+211: SignedGreaterThanEqual 217 £temporary1880 width
+212: PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+213: Parameter 53 signedchar 32
+214: Call 47 printChar 0
+215: PostCall 47
+216: Goto 209
+217: PreCall 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+218: BinaryAdd £temporary1885 format index
+219: Dereference £temporary1883 -> £temporary1885 £temporary1885 0
+220: Address £temporary1886 £temporary1883 -> £temporary1885
+221: Parameter 53 pointer £temporary1886
+222: Parameter 55 pointer arg_list
+223: Parameter 57 signedint plus
+224: Parameter 59 signedint space
+225: Parameter 61 signedint grid
+226: Parameter 63 pointer 0
+227: Parameter 65 signedint precision
+228: Parameter 67 signedint shortInt
+229: Parameter 69 signedint longInt
+230: Parameter 71 signedint longDouble
+231: Parameter 73 signedint 1
+232: Parameter 75 pointer 0
+233: Call 47 printArgument 0
+234: PostCall 47
+235: GetReturnValue £temporary1887
+236: Assign arg_list £temporary1887
+237: Assign percent 0
+238: Goto 283
+239: Assign value 0
+240: PreCall 43 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+241: IntegralToIntegral £temporary1890 c
+242: Parameter 49 signedint £temporary1890
+243: Call 43 isdigit 0
+244: PostCall 43
+245: GetReturnValue £temporary1891
+246: Equal 257 £temporary1891 0
+247: SignedMultiply £temporary1892 value 10
+248: BinarySubtract £temporary1893 c 48
+249: IntegralToIntegral £temporary1894 £temporary1893
+250: BinaryAdd value £temporary1892 £temporary1894
+251: BinaryAdd index index 1
+252: Assign £temporary1896 index
+253: BinaryAdd £temporary1899 format £temporary1896
+254: Dereference £temporary1897 -> £temporary1899 £temporary1899 0
+255: Assign c £temporary1897 -> £temporary1899
+256: Goto 240
+257: BinarySubtract index index 1
+258: NotEqual 261 period 0
+259: Assign width value
+260: Goto 283
+261: Assign precision value
+262: Goto 283
+263: NotEqual 279 c 37
+264: Assign percent 1
+265: Assign plus 0
+266: Assign minus 0
+267: Assign space 0
+268: Assign zero 0
+269: Assign grid 0
+270: Assign widthStar 0
+271: Assign period 0
+272: Assign precisionStar 0
+273: Assign shortInt 0
+274: Assign longInt 0
+275: Assign longDouble 0
+276: Assign width 0
+277: Assign precision 0
+278: Goto 283
+279: PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+280: Parameter 47 signedchar c
+281: Call 41 printChar 0
+282: PostCall 41
+283: BinaryAdd index index 1
+284: Goto 16
+285: NotEqual 291 g_outStatus 1
+286: IntegralToIntegral £temporary1908 g_outDevice
+287: Assign outString £temporary1908
+288: BinaryAdd £temporary1911 outString g_outChars
+289: Dereference £temporary1909 -> £temporary1911 £temporary1911 0
+290: Assign £temporary1909 -> £temporary1911 0
+291: SetReturnValue
+292: Return g_outChars
+293: FunctionEnd printFormat

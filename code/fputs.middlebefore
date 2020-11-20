@@ -1,0 +1,27 @@
+0: PreCall 10
+1: Parameter 16 pointer s
+2: Call 10 strlen 0
+3: PostCall 10
+4: GetReturnValue £temporary835
+5: BinaryAdd £temporary836 £temporary835 1
+6: SignedMultiply £temporary837 £temporary836 1
+7: Assign size £temporary837
+8: PreCall 12
+9: Parameter 18 pointer s
+10: Parameter 20 signedint size
+11: Parameter 22 signedint 1
+12: Parameter 24 pointer stream
+13: Call 12 fwrite 0
+14: PostCall 12
+15: GetReturnValue £temporary838
+16: Equal Empty £temporary838 size
+17: Goto Empty
+18: Empty
+19: Assign £temporary840 0
+20: Goto Empty
+21: Empty
+22: Assign £temporary840 -1
+23: Empty
+24: Return £temporary840
+25: Empty
+26: FunctionEnd fputs

@@ -1,0 +1,12 @@
+0: AssignRegister ah 61
+1: AssignRegister al mode
+2: AssignRegister dx name
+3: Interrupt 33
+4: NotCarry 8
+5: Assign errno 9
+6: SetReturnValue -1
+7: Return -1
+8: InspectRegister £temporary900 ax
+9: SetReturnValue £temporary900
+10: Return £temporary900
+11: FunctionEnd fileopen

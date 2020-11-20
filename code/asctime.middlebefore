@@ -1,0 +1,66 @@
+0: Assign localeConvPtr 0
+1: NotEqual Dereference £temporary2801 -> localeConvPtr localeConvPtr 0 localeConvPtr 0
+2: Goto Empty
+3: Dereference £temporary2801 -> localeConvPtr localeConvPtr 0
+4: Assign £temporary2802 £temporary2801 -> localeConvPtr
+5: Goto Empty
+6: Empty
+7: Assign £temporary2802 0
+8: Empty
+9: Assign shortDayList £temporary2802
+10: NotEqual Dereference £temporary2804 -> localeConvPtr localeConvPtr 0 localeConvPtr 0
+11: Goto Empty
+12: Dereference £temporary2804 -> localeConvPtr localeConvPtr 0
+13: Assign £temporary2805 £temporary2804 -> localeConvPtr
+14: Goto Empty
+15: Empty
+16: Assign £temporary2805 0
+17: Empty
+18: Assign shortMonthList £temporary2805
+19: NotEqual Empty shortDayList 0
+20: Goto Empty
+21: Empty
+22: Assign £temporary2807 shortDayList
+23: Goto Empty
+24: Empty
+25: Assign £temporary2807 g_defaultShortDayList
+26: Empty
+27: Assign shortDayList £temporary2807
+28: NotEqual Empty shortMonthList 0
+29: Goto Empty
+30: Empty
+31: Assign £temporary2809 shortMonthList
+32: Goto Empty
+33: Empty
+34: Assign £temporary2809 g_defaultShortMonthList
+35: Empty
+36: Assign shortMonthList £temporary2809
+37: PreCall 14
+38: Parameter 20 pointer g_timeString
+39: Parameter 22 pointer "%s %s %i %02i:%02i:%02i %i"
+40: Dereference £temporary2810 -> tp tp 0
+41: UnsignedMultiply £temporary2812 £temporary2810 -> tp 2
+42: BinaryAdd £temporary2813 shortDayList £temporary2812
+43: Dereference £temporary2811 -> £temporary2813 £temporary2813 0
+44: Parameter 24 pointer £temporary2811 -> £temporary2813
+45: Dereference £temporary2814 -> tp tp 0
+46: UnsignedMultiply £temporary2816 £temporary2814 -> tp 2
+47: BinaryAdd £temporary2817 shortMonthList £temporary2816
+48: Dereference £temporary2815 -> £temporary2817 £temporary2817 0
+49: Parameter 26 pointer £temporary2815 -> £temporary2817
+50: Dereference £temporary2818 -> tp tp 0
+51: Parameter 28 signedint £temporary2818 -> tp
+52: Dereference £temporary2819 -> tp tp 0
+53: Parameter 30 signedint £temporary2819 -> tp
+54: Dereference £temporary2820 -> tp tp 0
+55: Parameter 32 signedint £temporary2820 -> tp
+56: Dereference £temporary2821 -> tp tp 0
+57: Parameter 34 signedint £temporary2821 -> tp
+58: Dereference £temporary2822 -> tp tp 0
+59: BinaryAdd £temporary2823 £temporary2822 -> tp 1900
+60: Parameter 36 signedint £temporary2823
+61: Call 14 sprintf 14
+62: PostCall 14
+63: Return g_timeString
+64: Empty
+65: FunctionEnd asctime

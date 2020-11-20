@@ -1,0 +1,841 @@
+0: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 16 pointer inFilePtrName
+2: Parameter 18 pointer "r"
+3: Call 10 fopen 0
+4: PostCall 10
+5: GetReturnValue £temporary3786
+6: Assign inFilePtrPtr £temporary3786
+7: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+8: Parameter 18 pointer outFilePtrName
+9: Parameter 20 pointer "w"
+10: Call 12 fopen 0
+11: PostCall 12
+12: GetReturnValue £temporary3787
+13: Assign outFilePtrPtr £temporary3787
+14: NotEqual 26 inFilePtrPtr 0
+15: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+16: Parameter 20 pointer stderr
+17: Parameter 22 pointer "Assertion failed: "%s" in file %s at line %i\n"
+18: Parameter 24 pointer "inFilePtrPtr != NULL"
+19: Parameter 26 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+20: Parameter 28 signedint 11
+21: Call 14 fprintf 6
+22: PostCall 14
+23: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+24: Call 14 abort 0
+25: PostCall 14
+26: NotEqual 38 outFilePtrPtr 0
+27: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+28: Parameter 20 pointer stderr
+29: Parameter 22 pointer "Assertion failed: "%s" in file %s at line %i\n"
+30: Parameter 24 pointer "outFilePtrPtr != NULL"
+31: Parameter 26 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+32: Parameter 28 signedint 12
+33: Call 14 fprintf 6
+34: PostCall 14
+35: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+36: Call 14 abort 0
+37: PostCall 14
+38: Assign size 0
+39: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+40: Parameter 24 pointer inFilePtrPtr
+41: Parameter 26 pointer "%i"
+42: Address £temporary3796 size
+43: Parameter 28 pointer £temporary3796
+44: Call 18 fscanf 2
+45: PostCall 18
+46: Assign index 0
+47: SignedGreaterThanEqual 73 index size
+48: PushFloat 0
+49: PopFloat inValue
+50: PreCall 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+51: PushFloat inValue
+52: Parameter 32 double £temporary3800
+53: Call 26 sqrt 0
+54: PostCall 26
+55: GetReturnValue £temporary3801
+56: PopFloat outValue
+57: PreCall 34 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+58: Parameter 40 pointer inFilePtrPtr
+59: Parameter 42 pointer "%lf"
+60: Address £temporary3802 inValue
+61: Parameter 44 pointer £temporary3802
+62: Call 34 fscanf 2
+63: PostCall 34
+64: PreCall 34 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+65: Parameter 40 pointer outFilePtrPtr
+66: Parameter 42 pointer "%f\n"
+67: PushFloat outValue
+68: Parameter 44 double outValue
+69: Call 34 fprintf 8
+70: PostCall 34
+71: BinaryAdd index index 1
+72: Goto 47
+73: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+74: Parameter 20 pointer inFilePtrPtr
+75: Call 14 fclose 0
+76: PostCall 14
+77: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+78: Parameter 20 pointer outFilePtrPtr
+79: Call 14 fclose 0
+80: PostCall 14
+81: Assign sourceFilePtr "X"
+82: Assign targetFilePtr "Y"
+83: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+84: Parameter 20 pointer sourceFilePtr
+85: Parameter 22 pointer targetFilePtr
+86: Call 14 rename 0
+87: PostCall 14
+88: GetReturnValue £temporary3807
+89: NotEqual 97 £temporary3807 0
+90: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+91: Parameter 20 pointer ""%s" has been renamed to "%s".\n"
+92: Parameter 22 pointer sourceFilePtr
+93: Parameter 24 pointer targetFilePtr
+94: Call 14 printf 4
+95: PostCall 14
+96: Goto 108
+97: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+98: Parameter 20 pointer "Error %i: %s.\n"
+99: Parameter 22 signedint errno
+100: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+101: Parameter 30 signedint errno
+102: Call 24 strerror 0
+103: PostCall 24
+104: GetReturnValue £temporary3810
+105: Parameter 24 pointer £temporary3810
+106: Call 14 printf 4
+107: PostCall 14
+108: Assign targetFilePtr "Z"
+109: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+110: Parameter 18 pointer targetFilePtr
+111: Call 12 remove 0
+112: PostCall 12
+113: GetReturnValue £temporary3812
+114: NotEqual 121 £temporary3812 0
+115: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+116: Parameter 18 pointer ""%s" has been removed.\n"
+117: Parameter 20 pointer targetFilePtr
+118: Call 12 printf 2
+119: PostCall 12
+120: Goto 132
+121: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+122: Parameter 18 pointer "Error %i: %s.\n"
+123: Parameter 20 signedint errno
+124: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+125: Parameter 28 signedint errno
+126: Call 22 strerror 0
+127: PostCall 22
+128: GetReturnValue £temporary3815
+129: Parameter 22 pointer £temporary3815
+130: Call 12 printf 4
+131: PostCall 12
+132: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+133: Parameter 16 pointer "PBook.txt"
+134: Parameter 18 pointer "r"
+135: Call 10 fopen 0
+136: PostCall 10
+137: GetReturnValue £temporary3817
+138: Assign inFilePtr £temporary3817
+139: NotEqual 151 inFilePtr 0
+140: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+141: Parameter 18 pointer stderr
+142: Parameter 20 pointer "Assertion failed: "%s" in file %s at line %i\n"
+143: Parameter 22 pointer "inFilePtr != NULL"
+144: Parameter 24 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+145: Parameter 26 signedint 50
+146: Call 12 fprintf 6
+147: PostCall 12
+148: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+149: Call 12 abort 0
+150: PostCall 12
+151: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+152: Parameter 18 pointer "\n%-24s %-24s\n"
+153: Parameter 20 pointer "Name"
+154: Parameter 22 pointer "Phone"
+155: Call 12 printf 4
+156: PostCall 12
+157: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+158: Parameter 18 pointer "%-24s %-24s\n"
+159: Parameter 20 pointer "========================"
+160: Parameter 22 pointer "========================"
+161: Call 12 printf 4
+162: PostCall 12
+163: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+164: Parameter 22 pointer inFilePtr
+165: Parameter 24 pointer "%i"
+166: Address £temporary3824 size
+167: Parameter 26 pointer £temporary3824
+168: Call 16 fscanf 2
+169: PostCall 16
+170: Assign count 0
+171: SignedGreaterThanEqual 187 count size
+172: PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+173: Parameter 62 pointer inFilePtr
+174: Parameter 64 pointer "%s%s"
+175: Parameter 66 pointer name
+176: Parameter 68 pointer phone
+177: Call 56 fscanf 4
+178: PostCall 56
+179: PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+180: Parameter 62 pointer "%-24s %-24s\n"
+181: Parameter 64 pointer name
+182: Parameter 66 pointer phone
+183: Call 56 printf 4
+184: PostCall 56
+185: BinaryAdd count count 1
+186: Goto 171
+187: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+188: Parameter 18 pointer "\n"
+189: Call 12 printf 0
+190: PostCall 12
+191: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+192: Parameter 18 pointer inFilePtr
+193: Call 12 fclose 0
+194: PostCall 12
+195: Assign sourceFilePtr "Flow1.txt"
+196: Assign targetFilePtr "Flow2.txt"
+197: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+198: Parameter 20 pointer sourceFilePtr
+199: Parameter 22 pointer "r"
+200: Call 14 fopen 0
+201: PostCall 14
+202: GetReturnValue £temporary3832
+203: Assign inFilePtr £temporary3832
+204: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+205: Parameter 22 pointer targetFilePtr
+206: Parameter 24 pointer "w"
+207: Call 16 fopen 0
+208: PostCall 16
+209: GetReturnValue £temporary3833
+210: Assign outFilePtr £temporary3833
+211: NotEqual 223 inFilePtr 0
+212: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+213: Parameter 24 pointer stderr
+214: Parameter 26 pointer "Assertion failed: "%s" in file %s at line %i\n"
+215: Parameter 28 pointer "inFilePtr != NULL"
+216: Parameter 30 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+217: Parameter 32 signedint 79
+218: Call 18 fprintf 6
+219: PostCall 18
+220: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+221: Call 18 abort 0
+222: PostCall 18
+223: NotEqual 235 outFilePtr 0
+224: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+225: Parameter 24 pointer stderr
+226: Parameter 26 pointer "Assertion failed: "%s" in file %s at line %i\n"
+227: Parameter 28 pointer "outFilePtr != NULL"
+228: Parameter 30 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+229: Parameter 32 signedint 80
+230: Call 18 fprintf 6
+231: PostCall 18
+232: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+233: Call 18 abort 0
+234: PostCall 18
+235: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+236: Parameter 24 pointer inFilePtr
+237: Call 18 fgetc 0
+238: PostCall 18
+239: GetReturnValue £temporary3842
+240: IntegralToIntegral £temporary3843 £temporary3842
+241: Assign c £temporary3843
+242: IntegralToIntegral £temporary3844 c
+243: Equal 257 £temporary3844 -1
+244: PreCall 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+245: IntegralToIntegral £temporary3846 c
+246: Parameter 25 signedint £temporary3846
+247: Parameter 27 pointer outFilePtr
+248: Call 19 putc 0
+249: PostCall 19
+250: NotEqual 235 c 10
+251: PreCall 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+252: Parameter 25 signedint 10
+253: Parameter 27 pointer outFilePtr
+254: Call 19 putc 0
+255: PostCall 19
+256: Goto 235
+257: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+258: Parameter 24 pointer inFilePtr
+259: Call 18 fclose 0
+260: PostCall 18
+261: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+262: Parameter 24 pointer outFilePtr
+263: Call 18 fclose 0
+264: PostCall 18
+265: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+266: Parameter 16 pointer "Test.bin"
+267: Parameter 18 pointer "w"
+268: Call 10 fopen 0
+269: PostCall 10
+270: GetReturnValue £temporary3853
+271: Assign outFilePtr £temporary3853
+272: NotEqual 284 outFilePtr 0
+273: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+274: Parameter 18 pointer stderr
+275: Parameter 20 pointer "Assertion failed: "%s" in file %s at line %i\n"
+276: Parameter 22 pointer "outFilePtr != NULL"
+277: Parameter 24 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+278: Parameter 26 signedint 101
+279: Call 12 fprintf 6
+280: PostCall 12
+281: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+282: Call 12 abort 0
+283: PostCall 12
+284: Assign size 10
+285: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+286: Address £temporary3858 size
+287: Parameter 22 pointer £temporary3858
+288: Parameter 24 signedint 2
+289: Parameter 26 signedint 1
+290: Parameter 28 pointer outFilePtr
+291: Call 16 fwrite 0
+292: PostCall 16
+293: Assign index 0
+294: SignedGreaterThanEqual 308 index size
+295: SignedMultiply £temporary3862 index index
+296: IntegralToFloating £temporary3863 £temporary3862
+297: PopFloat value
+298: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+299: Address £temporary3864 value
+300: Parameter 30 pointer £temporary3864
+301: Parameter 32 signedint 8
+302: Parameter 34 signedint 1
+303: Parameter 36 pointer outFilePtr
+304: Call 24 fwrite 0
+305: PostCall 24
+306: BinaryAdd index index 1
+307: Goto 294
+308: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+309: Parameter 22 pointer outFilePtr
+310: Call 16 fclose 0
+311: PostCall 16
+312: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+313: Parameter 16 pointer "Test.bin"
+314: Parameter 18 pointer "r"
+315: Call 10 fopen 0
+316: PostCall 10
+317: GetReturnValue £temporary3867
+318: Assign inFilePtr £temporary3867
+319: NotEqual 331 inFilePtr 0
+320: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+321: Parameter 18 pointer stderr
+322: Parameter 20 pointer "Assertion failed: "%s" in file %s at line %i\n"
+323: Parameter 22 pointer "inFilePtr != NULL"
+324: Parameter 24 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+325: Parameter 26 signedint 116
+326: Call 12 fprintf 6
+327: PostCall 12
+328: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+329: Call 12 abort 0
+330: PostCall 12
+331: PreCall 96 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+332: Address £temporary3872 size
+333: Parameter 102 pointer £temporary3872
+334: Parameter 104 signedint 2
+335: Parameter 106 signedint 1
+336: Parameter 108 pointer inFilePtr
+337: Call 96 fread 0
+338: PostCall 96
+339: PreCall 96 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+340: Parameter 102 pointer "size1 %i\n"
+341: Parameter 104 signedint size
+342: Call 96 printf 2
+343: PostCall 96
+344: PreCall 96 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+345: Address £temporary3875 arr
+346: Parameter 102 pointer £temporary3875
+347: Parameter 104 signedint 80
+348: Parameter 106 signedint 1
+349: Parameter 108 pointer inFilePtr
+350: Call 96 fread 0
+351: PostCall 96
+352: PreCall 96 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+353: Parameter 102 pointer inFilePtr
+354: Call 96 fclose 0
+355: PostCall 96
+356: Assign index 0
+357: SignedGreaterThanEqual 370 index 10
+358: PreCall 96 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+359: Parameter 102 pointer "index1 %i: value %f\n"
+360: Parameter 104 signedint index
+361: UnsignedMultiply £temporary3881 index 8
+362: BinaryAdd £temporary3882 arr £temporary3881
+363: Dereference £temporary3880 -> £temporary3882 £temporary3882 0
+364: PushFloat £temporary3880 -> £temporary3882
+365: Parameter 106 double £temporary3880 -> £temporary3882
+366: Call 96 printf 10
+367: PostCall 96
+368: BinaryAdd index index 1
+369: Goto 357
+370: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+371: Parameter 18 pointer "\n"
+372: Call 12 printf 0
+373: PostCall 12
+374: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+375: Parameter 16 pointer "Test.bin"
+376: Parameter 18 pointer "r"
+377: Call 10 fopen 0
+378: PostCall 10
+379: GetReturnValue £temporary3885
+380: Assign inFilePtr £temporary3885
+381: NotEqual 393 inFilePtr 0
+382: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+383: Parameter 22 pointer stderr
+384: Parameter 24 pointer "Assertion failed: "%s" in file %s at line %i\n"
+385: Parameter 26 pointer "inFilePtr != NULL"
+386: Parameter 28 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+387: Parameter 30 signedint 137
+388: Call 16 fprintf 6
+389: PostCall 16
+390: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+391: Call 16 abort 0
+392: PostCall 16
+393: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+394: Address £temporary3890 size
+395: Parameter 22 pointer £temporary3890
+396: Parameter 24 signedint 2
+397: Parameter 26 signedint 1
+398: Parameter 28 pointer inFilePtr
+399: Call 16 fread 0
+400: PostCall 16
+401: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+402: Parameter 22 pointer "size2 %i\n"
+403: Parameter 24 signedint size
+404: Call 16 printf 2
+405: PostCall 16
+406: Assign index 0
+407: SignedGreaterThanEqual 425 index size
+408: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+409: Address £temporary3895 value
+410: Parameter 30 pointer £temporary3895
+411: Parameter 32 signedint 8
+412: Parameter 34 signedint 1
+413: Parameter 36 pointer inFilePtr
+414: Call 24 fread 0
+415: PostCall 24
+416: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+417: Parameter 30 pointer "index2 %i: value %f\n"
+418: Parameter 32 signedint index
+419: PushFloat value
+420: Parameter 34 double value
+421: Call 24 printf 10
+422: PostCall 24
+423: BinaryAdd index index 1
+424: Goto 407
+425: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+426: Parameter 22 pointer "\n"
+427: Call 16 printf 0
+428: PostCall 16
+429: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+430: Parameter 22 pointer inFilePtr
+431: Call 16 fclose 0
+432: PostCall 16
+433: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+434: Parameter 16 pointer "Test.bin"
+435: Parameter 18 pointer "r"
+436: Call 10 fopen 0
+437: PostCall 10
+438: GetReturnValue £temporary3900
+439: Assign inFilePtr £temporary3900
+440: NotEqual 452 inFilePtr 0
+441: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+442: Parameter 20 pointer stderr
+443: Parameter 22 pointer "Assertion failed: "%s" in file %s at line %i\n"
+444: Parameter 24 pointer "inFilePtr != NULL"
+445: Parameter 26 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+446: Parameter 28 signedint 154
+447: Call 14 fprintf 6
+448: PostCall 14
+449: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+450: Call 14 abort 0
+451: PostCall 14
+452: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+453: Address £temporary3905 size
+454: Parameter 20 pointer £temporary3905
+455: Parameter 22 signedint 2
+456: Parameter 24 signedint 1
+457: Parameter 26 pointer inFilePtr
+458: Call 14 fread 0
+459: PostCall 14
+460: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+461: Parameter 20 pointer "size3 %i total %i\n"
+462: Parameter 22 signedint size
+463: SignedMultiply £temporary3907 size 8
+464: Parameter 24 signedint £temporary3907
+465: Call 14 printf 4
+466: PostCall 14
+467: SignedMultiply total size 8
+468: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+469: Parameter 24 signedint total
+470: Call 18 malloc 0
+471: PostCall 18
+472: GetReturnValue £temporary3910
+473: Assign p £temporary3910
+474: UnsignedMultiply £temporary3912 size 8
+475: BinaryAdd endPtr p £temporary3912
+476: NotEqual 488 p 0
+477: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+478: Parameter 28 pointer stderr
+479: Parameter 30 pointer "Assertion failed: "%s" in file %s at line %i\n"
+480: Parameter 32 pointer "p != NULL"
+481: Parameter 34 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+482: Parameter 36 signedint 161
+483: Call 22 fprintf 6
+484: PostCall 22
+485: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+486: Call 22 abort 0
+487: PostCall 22
+488: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+489: Parameter 28 pointer "malloc %u %u %u\n"
+490: Parameter 30 pointer p
+491: Parameter 32 signedint total
+492: Parameter 34 pointer endPtr
+493: Call 22 printf 6
+494: PostCall 22
+495: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+496: Parameter 28 pointer p
+497: Parameter 30 signedint total
+498: Parameter 32 signedint 1
+499: Parameter 34 pointer inFilePtr
+500: Call 22 fread 0
+501: PostCall 22
+502: Assign index 0
+503: SignedGreaterThanEqual 516 index size
+504: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+505: Parameter 28 pointer "index3 %i: value %f\n"
+506: Parameter 30 signedint index
+507: UnsignedMultiply £temporary3922 index 8
+508: BinaryAdd £temporary3923 p £temporary3922
+509: Dereference £temporary3921 -> £temporary3923 £temporary3923 0
+510: PushFloat £temporary3921 -> £temporary3923
+511: Parameter 32 double £temporary3921 -> £temporary3923
+512: Call 22 printf 10
+513: PostCall 22
+514: BinaryAdd index index 1
+515: Goto 503
+516: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+517: Parameter 28 pointer "\n"
+518: Call 22 printf 0
+519: PostCall 22
+520: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+521: Parameter 28 pointer p
+522: Call 22 free 0
+523: PostCall 22
+524: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+525: Parameter 20 pointer inFilePtr
+526: Call 14 fclose 0
+527: PostCall 14
+528: Assign personVector[0].name[0] 65
+529: Assign personVector[0].name[1] 100
+530: Assign personVector[0].name[2] 97
+531: Assign personVector[0].name[3] 109
+532: Assign personVector[0].name[4] 32
+533: Assign personVector[0].name[5] 66
+534: Assign personVector[0].name[6] 101
+535: Assign personVector[0].name[7] 114
+536: Assign personVector[0].name[8] 116
+537: Assign personVector[0].name[9] 105
+538: Assign personVector[0].name[10] 108
+539: Assign personVector[0].name[11] 115
+540: Assign personVector[0].name[12] 115
+541: Assign personVector[0].name[13] 111
+542: Assign personVector[0].name[14] 110
+543: Assign personVector[0].name[15] 0
+544: Assign personVector[0].phone 12345
+545: Assign personVector[1].name[0] 66
+546: Assign personVector[1].name[1] 101
+547: Assign personVector[1].name[2] 114
+548: Assign personVector[1].name[3] 116
+549: Assign personVector[1].name[4] 105
+550: Assign personVector[1].name[5] 108
+551: Assign personVector[1].name[6] 32
+552: Assign personVector[1].name[7] 67
+553: Assign personVector[1].name[8] 101
+554: Assign personVector[1].name[9] 97
+555: Assign personVector[1].name[10] 115
+556: Assign personVector[1].name[11] 97
+557: Assign personVector[1].name[12] 114
+558: Assign personVector[1].name[13] 115
+559: Assign personVector[1].name[14] 115
+560: Assign personVector[1].name[15] 111
+561: Assign personVector[1].name[16] 110
+562: Assign personVector[1].name[17] 0
+563: Assign personVector[1].phone 23456
+564: Assign personVector[2].name[0] 67
+565: Assign personVector[2].name[1] 101
+566: Assign personVector[2].name[2] 97
+567: Assign personVector[2].name[3] 115
+568: Assign personVector[2].name[4] 97
+569: Assign personVector[2].name[5] 114
+570: Assign personVector[2].name[6] 32
+571: Assign personVector[2].name[7] 68
+572: Assign personVector[2].name[8] 97
+573: Assign personVector[2].name[9] 118
+574: Assign personVector[2].name[10] 105
+575: Assign personVector[2].name[11] 100
+576: Assign personVector[2].name[12] 115
+577: Assign personVector[2].name[13] 115
+578: Assign personVector[2].name[14] 111
+579: Assign personVector[2].name[15] 110
+580: Assign personVector[2].name[16] 0
+581: Assign personVector[2].phone 24567
+582: PreCall 210 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+583: Parameter 216 pointer "Block.bin"
+584: Parameter 218 pointer "w"
+585: Call 210 fopen 0
+586: PostCall 210
+587: GetReturnValue £temporary3988
+588: Assign outFilePtr £temporary3988
+589: PreCall 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+590: Parameter 218 pointer "Block.bin"
+591: Parameter 220 pointer "r"
+592: Call 212 fopen 0
+593: PostCall 212
+594: GetReturnValue £temporary3989
+595: Assign inFilePtr £temporary3989
+596: NotEqual 608 outFilePtr 0
+597: PreCall 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+598: Parameter 220 pointer stderr
+599: Parameter 222 pointer "Assertion failed: "%s" in file %s at line %i\n"
+600: Parameter 224 pointer "outFilePtr != NULL"
+601: Parameter 226 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+602: Parameter 228 signedint 188
+603: Call 214 fprintf 6
+604: PostCall 214
+605: PreCall 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+606: Call 214 abort 0
+607: PostCall 214
+608: NotEqual 620 inFilePtr 0
+609: PreCall 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+610: Parameter 220 pointer stderr
+611: Parameter 222 pointer "Assertion failed: "%s" in file %s at line %i\n"
+612: Parameter 224 pointer "inFilePtr != NULL"
+613: Parameter 226 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+614: Parameter 228 signedint 189
+615: Call 214 fprintf 6
+616: PostCall 214
+617: PreCall 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+618: Call 214 abort 0
+619: PostCall 214
+620: PreCall 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+621: Parameter 220 pointer personVector
+622: Parameter 222 signedint 150
+623: Parameter 224 signedint 1
+624: Parameter 226 pointer outFilePtr
+625: Call 214 fwrite 0
+626: PostCall 214
+627: PreCall 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+628: Parameter 220 pointer outFilePtr
+629: Call 214 fclose 0
+630: PostCall 214
+631: PreCall 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+632: Parameter 220 pointer inFilePtr
+633: Call 214 feof 0
+634: PostCall 214
+635: GetReturnValue £temporary4000
+636: NotEqual 656 £temporary4000 0
+637: PreCall 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+638: Address £temporary4003 person
+639: Parameter 220 pointer £temporary4003
+640: Parameter 222 signedint 50
+641: Parameter 224 signedint 1
+642: Parameter 226 pointer inFilePtr
+643: Call 214 fread 0
+644: PostCall 214
+645: PreCall 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+646: Parameter 220 pointer "Name  : %s\n"
+647: Parameter 222 pointer person.name
+648: Call 214 printf 2
+649: PostCall 214
+650: PreCall 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+651: Parameter 220 pointer "Phone : %d\n"
+652: Parameter 222 signedint person.phone
+653: Call 214 printf 2
+654: PostCall 214
+655: Goto 631
+656: PreCall 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+657: Parameter 220 pointer inFilePtr
+658: Call 214 fclose 0
+659: PostCall 214
+660: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+661: Parameter 16 pointer "Test1.txt"
+662: Parameter 18 pointer "r"
+663: Call 10 fopen 0
+664: PostCall 10
+665: GetReturnValue £temporary4010
+666: Assign inFilePtr £temporary4010
+667: NotEqual 679 inFilePtr 0
+668: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+669: Parameter 20 pointer stderr
+670: Parameter 22 pointer "Assertion failed: "%s" in file %s at line %i\n"
+671: Parameter 24 pointer "inFilePtr != NULL"
+672: Parameter 26 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+673: Parameter 28 signedint 206
+674: Call 14 fprintf 6
+675: PostCall 14
+676: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+677: Call 14 abort 0
+678: PostCall 14
+679: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+680: Parameter 20 pointer inFilePtr
+681: Parameter 22 signedint -1
+682: Parameter 24 signedint 2
+683: Call 14 fseek 0
+684: PostCall 14
+685: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+686: Parameter 20 pointer inFilePtr
+687: Call 14 ftell 0
+688: PostCall 14
+689: GetReturnValue £temporary4016
+690: IntegralToIntegral £temporary4017 £temporary4016
+691: Assign u £temporary4017
+692: UnsignedLessThan 713 u 0
+693: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+694: Parameter 20 pointer inFilePtr
+695: Call 14 fgetc 0
+696: PostCall 14
+697: GetReturnValue £temporary4019
+698: IntegralToIntegral £temporary4020 £temporary4019
+699: Assign c £temporary4020
+700: PreCall 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+701: IntegralToIntegral £temporary4021 c
+702: Parameter 21 signedint £temporary4021
+703: Call 15 putchar 0
+704: PostCall 15
+705: Equal 713 u 0
+706: PreCall 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+707: Parameter 21 pointer inFilePtr
+708: Parameter 23 signedint -2
+709: Parameter 25 signedint 1
+710: Call 15 fseek 0
+711: PostCall 15
+712: Goto 685
+713: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+714: Parameter 20 pointer "\n\n"
+715: Call 14 printf 0
+716: PostCall 14
+717: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+718: Parameter 20 pointer inFilePtr
+719: Call 14 fclose 0
+720: PostCall 14
+721: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+722: Parameter 16 pointer "fileexists X %s\n"
+723: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+724: Parameter 24 pointer "X"
+725: Call 18 fileexists 0
+726: PostCall 18
+727: GetReturnValue £temporary4027
+728: Equal 731 £temporary4027 0
+729: Assign £temporary4029 "Yes"
+730: Goto 732
+731: Assign £temporary4029 "No"
+732: Parameter 18 pointer £temporary4029
+733: Call 10 printf 2
+734: PostCall 10
+735: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+736: Parameter 16 pointer "fileexists Y %s\n\n"
+737: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+738: Parameter 24 pointer "Y"
+739: Call 18 fileexists 0
+740: PostCall 18
+741: GetReturnValue £temporary4031
+742: Equal 745 £temporary4031 0
+743: Assign £temporary4033 "Yes"
+744: Goto 746
+745: Assign £temporary4033 "No"
+746: Parameter 18 pointer £temporary4033
+747: Call 10 printf 2
+748: PostCall 10
+749: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+750: Parameter 18 pointer "PBookX.txt"
+751: Parameter 20 pointer "r+"
+752: Call 12 fopen 0
+753: PostCall 12
+754: GetReturnValue £temporary4035
+755: Assign inOutFilePtr £temporary4035
+756: NotEqual 768 inOutFilePtr 0
+757: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+758: Parameter 20 pointer stderr
+759: Parameter 22 pointer "Assertion failed: "%s" in file %s at line %i\n"
+760: Parameter 24 pointer "inOutFilePtr != NULL"
+761: Parameter 26 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+762: Parameter 28 signedint 229
+763: Call 14 fprintf 6
+764: PostCall 14
+765: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+766: Call 14 abort 0
+767: PostCall 14
+768: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+769: Call 14 tmpfile 0
+770: PostCall 14
+771: GetReturnValue £temporary4040
+772: Assign tempFilePtr £temporary4040
+773: NotEqual 785 tempFilePtr 0
+774: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+775: Parameter 20 pointer stderr
+776: Parameter 22 pointer "Assertion failed: "%s" in file %s at line %i\n"
+777: Parameter 24 pointer "tempFilePtr != NULL"
+778: Parameter 26 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+779: Parameter 28 signedint 232
+780: Call 14 fprintf 6
+781: PostCall 14
+782: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+783: Call 14 abort 0
+784: PostCall 14
+785: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+786: Parameter 20 pointer inOutFilePtr
+787: Call 14 fgetc 0
+788: PostCall 14
+789: GetReturnValue £temporary4045
+790: IntegralToIntegral £temporary4046 £temporary4045
+791: Assign c £temporary4046
+792: IntegralToIntegral £temporary4047 c
+793: Equal 806 £temporary4047 -1
+794: PreCall 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+795: PreCall 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+796: IntegralToIntegral £temporary4049 c
+797: Parameter 21 signedint £temporary4049
+798: Call 15 toupper 0
+799: PostCall 15
+800: GetReturnValue £temporary4050
+801: Parameter 21 signedint £temporary4050
+802: Parameter 23 pointer tempFilePtr
+803: Call 15 putc 0
+804: PostCall 15
+805: Goto 785
+806: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+807: Parameter 20 pointer tempFilePtr
+808: Call 14 rewind 0
+809: PostCall 14
+810: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+811: Parameter 20 pointer inOutFilePtr
+812: Parameter 22 pointer "\n------------\n"
+813: Call 14 fprintf 0
+814: PostCall 14
+815: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+816: Parameter 20 pointer tempFilePtr
+817: Call 14 fgetc 0
+818: PostCall 14
+819: GetReturnValue £temporary4055
+820: IntegralToIntegral £temporary4056 £temporary4055
+821: Assign c £temporary4056
+822: IntegralToIntegral £temporary4057 c
+823: Equal 831 £temporary4057 -1
+824: PreCall 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+825: IntegralToIntegral £temporary4059 c
+826: Parameter 21 signedint £temporary4059
+827: Parameter 23 pointer inOutFilePtr
+828: Call 15 putc 0
+829: PostCall 15
+830: Goto 815
+831: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+832: Parameter 20 pointer inOutFilePtr
+833: Call 14 fclose 0
+834: PostCall 14
+835: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+836: Parameter 20 pointer tempFilePtr
+837: Call 14 fclose 0
+838: PostCall 14
+839: Return
+840: FunctionEnd file_test

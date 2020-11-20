@@ -1,0 +1,19 @@
+0: Assign count 0
+1: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 16 signedint 1024
+3: Call 10 malloc 0
+4: PostCall 10
+5: GetReturnValue £temporary4189
+6: Assign pointer £temporary4189
+7: Equal 17 pointer 0
+8: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+9: Parameter 16 pointer "1024 bytes-block number: %i\n"
+10: Assign £temporary4191 count
+11: BinaryAdd count count 1
+12: Parameter 18 signedint £temporary4191
+13: Parameter 20 pointer pointer
+14: Call 10 printf 4
+15: PostCall 10
+16: Goto 1
+17: Return
+18: FunctionEnd heap_test

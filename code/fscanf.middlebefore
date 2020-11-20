@@ -1,0 +1,15 @@
+0: Address £temporary1462 format
+1: IntegralToIntegral £temporary1463 £temporary1462
+2: UnsignedMultiply £temporary1465 2 1
+3: BinaryAdd £temporary1464 £temporary1463 £temporary1465
+4: Assign arg_list £temporary1464
+5: PreCall 12
+6: Parameter 18 pointer inStream
+7: Parameter 20 pointer format
+8: Parameter 22 pointer arg_list
+9: Call 12 vfscanf 0
+10: PostCall 12
+11: GetReturnValue £temporary1466
+12: Return £temporary1466
+13: Empty
+14: FunctionEnd fscanf

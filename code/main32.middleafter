@@ -1,0 +1,18 @@
+0: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 14 string_3A20# 6
+2: Call 14 printf 0
+3: PostCall 14
+4: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+5: Parameter 14 string_25lf# 6
+6: address £temporary174 x
+7: Parameter 14 £temporary174 8
+8: Call 14 scanf 0
+9: PostCall 14
+10: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+11: Parameter 14 string_3C25f3E# 6
+12: PushFloat x
+13: Parameter 14 x 8
+14: Call 14 printf 0
+15: PostCall 14
+16: Return 0
+17: FunctionEnd main3

@@ -1,0 +1,12 @@
+0: PreCall 8
+1: Parameter 14 pointer "f: %u\n"
+2: IntegralToIntegral £temporary4282 f
+3: Parameter 16 unsigned int £temporary4282
+4: Call 8 printf 2
+5: PostCall 8
+6: PreCall 8
+7: Call 8 f 0
+8: PostCall 8
+9: Empty
+10: Return
+11: FunctionEnd qtest

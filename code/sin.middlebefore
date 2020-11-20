@@ -1,0 +1,85 @@
+0: PreCall 14
+1: PushFloat x
+2: Parameter 20 double x
+3: Call 14 fabs 0
+4: PostCall 14
+5: GetReturnValue £temporary499
+6: PushFloat 6.2831853071795864769252866
+7: SignedGreaterThan PushFloat x £temporary499 6.2831853071795864769252866
+8: Goto PushFloat 1
+9: PushFloat x
+10: PopFloat
+11: PreCall 14
+12: PushFloat x
+13: Parameter 20 double x
+14: PushFloat 6.2831853071795864769252866
+15: Parameter 28 double 6.2831853071795864769252866
+16: Call 14 fmod 0
+17: PostCall 14
+18: GetReturnValue £temporary501
+19: TopFloat x
+20: PopFloat
+21: Goto PushFloat 1
+22: PushFloat 1
+23: PopFloat index
+24: PushFloat 0
+25: PopFloat sum
+26: PushFloat 1
+27: PopFloat sign
+28: PushFloat x
+29: PopFloat power
+30: PushFloat 1
+31: PopFloat faculty
+32: PushFloat term
+33: PopFloat
+34: PushFloat sign
+35: PushFloat power
+36: SignedMultiply £temporary502 sign power
+37: PushFloat faculty
+38: SignedDivide £temporary503 £temporary502 faculty
+39: TopFloat term
+40: PopFloat
+41: PushFloat sum
+42: PushFloat term
+43: BinaryAdd £temporary504 sum term
+44: TopFloat sum
+45: PopFloat
+46: PushFloat sign
+47: PushFloat -1
+48: SignedMultiply £temporary505 sign -1
+49: TopFloat sign
+50: PopFloat
+51: PushFloat power
+52: PushFloat x
+53: PushFloat x
+54: SignedMultiply £temporary506 x x
+55: SignedMultiply £temporary507 power £temporary506
+56: TopFloat power
+57: PopFloat
+58: PushFloat faculty
+59: PushFloat index
+60: PushOne
+61: BinaryAdd index index 1
+62: TopFloat index
+63: PushFloat index
+64: PushOne
+65: BinaryAdd index index 1
+66: TopFloat index
+67: SignedMultiply £temporary510 £temporary508 £temporary509
+68: SignedMultiply £temporary511 faculty £temporary510
+69: TopFloat faculty
+70: PopFloat
+71: PreCall 62
+72: PushFloat term
+73: Parameter 68 double term
+74: Call 62 fabs 0
+75: PostCall 62
+76: GetReturnValue £temporary512
+77: PushFloat 0.000000001
+78: SignedGreaterThanEqual PushFloat term £temporary512 0.000000001
+79: Goto PushFloat sum
+80: Goto PushFloat term
+81: PushFloat sum
+82: Return sum
+83: Empty
+84: FunctionEnd sin

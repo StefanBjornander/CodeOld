@@ -1,0 +1,21 @@
+0: IntegralToIntegral £temporary877 origin
+1: AssignRegister al £temporary877
+2: AssignRegister ah 66
+3: Dereference £temporary880 -> stream stream 0
+4: AssignRegister bx £temporary880 -> stream
+5: AssignRegister cx 0
+6: IntegralToIntegral £temporary883 offset
+7: AssignRegister dx £temporary883
+8: Interrupt 33
+9: Carry 16
+10: Dereference £temporary886 -> stream stream 0
+11: InspectRegister £temporary887 ax
+12: Assign £temporary886 -> stream £temporary887
+13: Dereference £temporary888 -> stream stream 0
+14: SetReturnValue
+15: Return £temporary888 -> stream
+16: Dereference £temporary889 -> stream stream 0
+17: Assign £temporary889 -> stream 15
+18: SetReturnValue
+19: Return -1
+20: FunctionEnd fseek

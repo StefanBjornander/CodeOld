@@ -1,0 +1,19 @@
+0: PushFloat y
+1: PushFloat 0
+2: NotEqual PushFloat x y 0
+3: Goto PreCall 22
+4: PushFloat x
+5: PushFloat y
+6: SignedDivide £temporary3557 x y
+7: Return £temporary3557
+8: Goto Empty
+9: PreCall 22
+10: Parameter 28 pointer buffer
+11: IntegralToIntegral £temporary3558 "Division by Zero."
+12: Parameter 30 signedint £temporary3558
+13: Call 22 longjmp 0
+14: PostCall 22
+15: PushFloat 0
+16: Return 0
+17: Empty
+18: FunctionEnd divide

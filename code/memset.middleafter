@@ -1,0 +1,14 @@
+0: IntegralToIntegral £temporary3323 block
+1: Assign charBlock £temporary3323
+2: IntegralToIntegral £temporary3324 i
+3: Assign c £temporary3324
+4: Assign index 0
+5: SignedGreaterThanEqual 11 index size
+6: BinaryAdd £temporary3329 charBlock index
+7: Dereference £temporary3327 -> £temporary3329 £temporary3329 0
+8: Assign £temporary3327 -> £temporary3329 c
+9: BinaryAdd index index 1
+10: Goto 5
+11: SetReturnValue
+12: Return block
+13: FunctionEnd memset

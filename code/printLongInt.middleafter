@@ -1,0 +1,31 @@
+0: SignedGreaterThanEqual 8 longValue 0
+1: UnarySubtract £temporary1540 longValue
+2: Assign longValue £temporary1540
+3: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: Parameter 20 signedchar 45
+5: Call 14 printChar 0
+6: PostCall 14
+7: Goto 19
+8: Equal 14 space 0
+9: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+10: Parameter 20 signedchar 32
+11: Call 14 printChar 0
+12: PostCall 14
+13: Goto 19
+14: Equal 19 plus 0
+15: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+16: Parameter 20 signedchar 43
+17: Call 14 printChar 0
+18: PostCall 14
+19: NotEqual 25 longValue 0
+20: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+21: Parameter 20 signedchar 48
+22: Call 14 printChar 0
+23: PostCall 14
+24: Goto 29
+25: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+26: Parameter 20 signed long int longValue
+27: Call 14 printLongIntRec 0
+28: PostCall 14
+29: Return
+30: FunctionEnd printLongInt

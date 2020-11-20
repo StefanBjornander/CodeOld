@@ -1,0 +1,106 @@
+0: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 12 pointer "<%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>\n"
+2: Parameter 14 signedint 123
+3: Parameter 16 signedint 123
+4: Parameter 18 signedint 123
+5: Parameter 20 signedint 123
+6: Parameter 22 signedint 123
+7: Parameter 24 signedint 123
+8: Parameter 26 signedint 123
+9: Parameter 28 signedint 123
+10: Call 6 printf 16
+11: PostCall 6
+12: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+13: Parameter 12 pointer "<%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>\n"
+14: Parameter 14 signedint -123
+15: Parameter 16 signedint -123
+16: Parameter 18 signedint -123
+17: Parameter 20 signedint -123
+18: Parameter 22 signedint -123
+19: Parameter 24 signedint -123
+20: Parameter 26 signedint -123
+21: Parameter 28 signedint -123
+22: Call 6 printf 16
+23: PostCall 6
+24: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+25: Parameter 12 pointer "<%08i> <%+08i> <% 08i> <%0 8i>\n"
+26: Parameter 14 signedint 123
+27: Parameter 16 signedint 123
+28: Parameter 18 signedint 123
+29: Parameter 20 signedint 123
+30: Call 6 printf 8
+31: PostCall 6
+32: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+33: Parameter 12 pointer "<%08i> <%+08i> <% 08i> <%0 8i>\n"
+34: Parameter 14 signedint -123
+35: Parameter 16 signedint -123
+36: Parameter 18 signedint -123
+37: Parameter 20 signedint -123
+38: Call 6 printf 8
+39: PostCall 6
+40: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+41: Parameter 12 pointer "<%12.3f> <%+12.3f> <% 12.3f> <%-12.3f> <%+-12.3f> <%-+12.3f> <% -12.3f> <%- 12.3f>\n"
+42: PushFloat 123.456
+43: Parameter 14 double 123.456
+44: PushFloat 123.456
+45: Parameter 22 double 123.456
+46: PushFloat 123.456
+47: Parameter 30 double 123.456
+48: PushFloat 123.456
+49: Parameter 38 double 123.456
+50: PushFloat 123.456
+51: Parameter 46 double 123.456
+52: PushFloat 123.456
+53: Parameter 54 double 123.456
+54: PushFloat 123.456
+55: Parameter 62 double 123.456
+56: PushFloat 123.456
+57: Parameter 70 double 123.456
+58: Call 6 printf 64
+59: PostCall 6
+60: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+61: Parameter 12 pointer "<%12.3f> <%+12.3f> <% 12.3f> <%-12.3f> <%+-12.3f> <%-+12.3f> <% -12.3f> <%- 12.3f>\n"
+62: PushFloat -123.456
+63: Parameter 14 double -123.456
+64: PushFloat -123.456
+65: Parameter 22 double -123.456
+66: PushFloat -123.456
+67: Parameter 30 double -123.456
+68: PushFloat -123.456
+69: Parameter 38 double -123.456
+70: PushFloat -123.456
+71: Parameter 46 double -123.456
+72: PushFloat -123.456
+73: Parameter 54 double -123.456
+74: PushFloat -123.456
+75: Parameter 62 double -123.456
+76: PushFloat -123.456
+77: Parameter 70 double -123.456
+78: Call 6 printf 64
+79: PostCall 6
+80: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+81: Parameter 12 pointer "<%012.3f> <%+012.3f> <% 012.3f> <%0 12.3f>\n"
+82: PushFloat 123.456
+83: Parameter 14 double 123.456
+84: PushFloat 123.456
+85: Parameter 22 double 123.456
+86: PushFloat 123.456
+87: Parameter 30 double 123.456
+88: PushFloat 123.456
+89: Parameter 38 double 123.456
+90: Call 6 printf 32
+91: PostCall 6
+92: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+93: Parameter 12 pointer "<%012.3f> <%+012.3f> <% 012.3f> <%0 12.3f>\n"
+94: PushFloat -123.456
+95: Parameter 14 double -123.456
+96: PushFloat -123.456
+97: Parameter 22 double -123.456
+98: PushFloat -123.456
+99: Parameter 30 double -123.456
+100: PushFloat -123.456
+101: Parameter 38 double -123.456
+102: Call 6 printf 32
+103: PostCall 6
+104: Return
+105: FunctionEnd print_test

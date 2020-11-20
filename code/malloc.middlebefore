@@ -1,0 +1,100 @@
+0: IntegralToIntegral £temporary141 memorySize
+1: BinaryAdd £temporary142 4 £temporary141
+2: Assign newBlockSize £temporary142
+3: Assign minGap 0
+4: Assign lastAddress 65528
+5: Assign minBlockPtr 0
+6: Assign minPrevBlockPtr 0
+7: Assign prevBlockPtr 0
+8: Assign currBlockPtr g_firstBlockPtr
+9: SignedGreaterThanEqual Empty memorySize 0
+10: Goto PreCall 22
+11: PreCall 22
+12: Parameter 28 pointer stderr
+13: Parameter 30 pointer "Assertion failed: "%s" in file %s at line %i\n"
+14: Parameter 32 pointer "memorySize >= 0"
+15: Parameter 34 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c"
+16: Parameter 36 signedint 41
+17: Call 22 fprintf 6
+18: PostCall 22
+19: PreCall 22
+20: Call 22 abort 0
+21: PostCall 22
+22: Goto Empty
+23: Empty
+24: Equal Return 0 memorySize 0
+25: Goto NotEqual IntegralToIntegral £temporary149 currBlockPtr currBlockPtr 0
+26: Return 0
+27: Goto NotEqual IntegralToIntegral £temporary149 currBlockPtr currBlockPtr 0
+28: NotEqual IntegralToIntegral £temporary149 currBlockPtr currBlockPtr 0
+29: Goto NotEqual IntegralToIntegral £temporary161 minBlockPtr minBlockPtr 0
+30: IntegralToIntegral £temporary149 currBlockPtr
+31: Assign currAddress £temporary149
+32: Dereference £temporary150 -> currBlockPtr currBlockPtr 0
+33: BinaryAdd £temporary151 currAddress £temporary150 -> currBlockPtr
+34: BinaryAdd £temporary152 £temporary151 4
+35: BinarySubtract £temporary153 lastAddress £temporary152
+36: Assign currGap £temporary153
+37: UnsignedLessThanEqual Equal Assign minGap currGap minGap 0 newBlockSize currGap
+38: Goto Assign lastAddress currAddress
+39: Equal Assign minGap currGap minGap 0
+40: Goto UnsignedLessThan Assign minGap currGap currGap minGap
+41: UnsignedLessThan Assign minGap currGap currGap minGap
+42: Goto Assign lastAddress currAddress
+43: Assign minGap currGap
+44: Assign minBlockPtr currBlockPtr
+45: Assign minPrevBlockPtr prevBlockPtr
+46: Goto Assign lastAddress currAddress
+47: Assign lastAddress currAddress
+48: Assign prevBlockPtr currBlockPtr
+49: Dereference £temporary159 -> currBlockPtr currBlockPtr 0
+50: Assign currBlockPtr £temporary159 -> currBlockPtr
+51: Goto NotEqual IntegralToIntegral £temporary149 currBlockPtr currBlockPtr 0
+52: NotEqual IntegralToIntegral £temporary161 minBlockPtr minBlockPtr 0
+53: Goto BinarySubtract £temporary172 lastAddress newBlockSize
+54: IntegralToIntegral £temporary161 minBlockPtr
+55: Dereference £temporary162 -> minBlockPtr minBlockPtr 0
+56: BinaryAdd £temporary163 £temporary161 £temporary162 -> minBlockPtr
+57: BinaryAdd £temporary164 £temporary163 4
+58: Assign newAddress £temporary164
+59: IntegralToIntegral £temporary165 newAddress
+60: Assign newBlockPtr £temporary165
+61: Dereference £temporary166 -> newBlockPtr newBlockPtr 0
+62: Assign £temporary166 -> newBlockPtr memorySize
+63: Dereference £temporary167 -> newBlockPtr newBlockPtr 0
+64: Assign £temporary167 -> newBlockPtr minBlockPtr
+65: NotEqual Dereference £temporary169 -> minPrevBlockPtr minPrevBlockPtr 0 minPrevBlockPtr 0
+66: Goto Assign g_firstBlockPtr newBlockPtr
+67: Dereference £temporary169 -> minPrevBlockPtr minPrevBlockPtr 0
+68: Assign £temporary169 -> minPrevBlockPtr newBlockPtr
+69: Goto BinaryAdd £temporary170 newAddress 4
+70: Assign g_firstBlockPtr newBlockPtr
+71: BinaryAdd £temporary170 newAddress 4
+72: IntegralToIntegral £temporary171 £temporary170
+73: Return £temporary171
+74: Goto Return 0
+75: BinarySubtract £temporary172 lastAddress newBlockSize
+76: Assign newAddress £temporary172
+77: InspectRegister £temporary173 bp
+78: Assign stackTop £temporary173
+79: UnsignedLessThanEqual IntegralToIntegral £temporary175 newAddress stackTop newAddress
+80: Goto Return 0
+81: IntegralToIntegral £temporary175 newAddress
+82: Assign newBlockPtr £temporary175
+83: Dereference £temporary176 -> newBlockPtr newBlockPtr 0
+84: Assign £temporary176 -> newBlockPtr memorySize
+85: Dereference £temporary177 -> newBlockPtr newBlockPtr 0
+86: Assign £temporary177 -> newBlockPtr 0
+87: NotEqual Dereference £temporary179 -> prevBlockPtr prevBlockPtr 0 prevBlockPtr 0
+88: Goto Assign g_firstBlockPtr newBlockPtr
+89: Dereference £temporary179 -> prevBlockPtr prevBlockPtr 0
+90: Assign £temporary179 -> prevBlockPtr newBlockPtr
+91: Goto BinaryAdd £temporary180 newAddress 4
+92: Assign g_firstBlockPtr newBlockPtr
+93: BinaryAdd £temporary180 newAddress 4
+94: IntegralToIntegral £temporary181 £temporary180
+95: Return £temporary181
+96: Goto Return 0
+97: Return 0
+98: Empty
+99: FunctionEnd malloc

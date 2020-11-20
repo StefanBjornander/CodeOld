@@ -1,0 +1,13 @@
+0: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 14 signedint c
+2: Call 8 isgraph 0
+3: PostCall 8
+4: GetReturnValue £temporary296
+5: Equal 9 £temporary296 0
+6: Equal 9 c 32
+7: Assign £temporary300 1
+8: Goto 10
+9: Assign £temporary300 0
+10: SetReturnValue
+11: Return £temporary300
+12: FunctionEnd isprint

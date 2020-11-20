@@ -1,0 +1,14 @@
+0: NotEqual 12 n 7
+1: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 8 stderr 6
+3: Parameter 8 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
+4: Parameter 8 string_n20213D207# 10
+5: Parameter 8 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec# 12
+6: Parameter 8 879 14
+7: Call 8 fprintf 0
+8: PostCall 8
+9: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+10: Call 8 abort 0
+11: PostCall 8
+12: Return 0
+13: FunctionEnd assert_test2

@@ -1,0 +1,6 @@
+0: PreCall 6
+1: Call 6 rec 0
+2: PostCall 6
+3: Empty
+4: Return
+5: FunctionEnd malloc_test4

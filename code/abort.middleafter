@@ -1,0 +1,5 @@
+0: AssignRegister ah 76
+1: AssignRegister al 255
+2: Interrupt 33
+3: Return
+4: FunctionEnd abort

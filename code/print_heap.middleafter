@@ -1,0 +1,23 @@
+0: Assign currBlockPtr g_firstBlockPtr
+1: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 14 pointer "Heap:\n"
+3: Call 8 printf 0
+4: PostCall 8
+5: Equal 17 currBlockPtr 0
+6: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+7: Parameter 14 pointer "  Address %u, Size %u\n"
+8: IntegralToIntegral £temporary240 currBlockPtr
+9: Parameter 16 unsigned int £temporary240
+10: Dereference £temporary241 -> currBlockPtr currBlockPtr 0
+11: Parameter 18 unsigned int £temporary241 -> currBlockPtr
+12: Call 8 printf 4
+13: PostCall 8
+14: Dereference £temporary243 -> currBlockPtr currBlockPtr 0
+15: Assign currBlockPtr £temporary243 -> currBlockPtr
+16: Goto 5
+17: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+18: Parameter 14 pointer "\n"
+19: Call 8 printf 0
+20: PostCall 8
+21: Return
+22: FunctionEnd print_heap

@@ -1,0 +1,78 @@
+0: PreCall 6
+1: Parameter 12 pointer "CHAR_BIT = %i\n"
+2: Parameter 14 signedint 8
+3: Call 6 printf 2
+4: PostCall 6
+5: PreCall 6
+6: Parameter 12 pointer "CHAR_MIN = %i\n\n"
+7: Parameter 14 signedint -128
+8: Call 6 printf 2
+9: PostCall 6
+10: PreCall 6
+11: Parameter 12 pointer "CHAR_MAX = %i\n"
+12: Parameter 14 signedint 127
+13: Call 6 printf 2
+14: PostCall 6
+15: PreCall 6
+16: Parameter 12 pointer "UCHAR_MAX = %u\n\n"
+17: Parameter 14 unsigned int 255
+18: Call 6 printf 2
+19: PostCall 6
+20: PreCall 6
+21: Parameter 12 pointer "SHRT_MIN = %i\n"
+22: Parameter 14 signedint -128
+23: Call 6 printf 2
+24: PostCall 6
+25: PreCall 6
+26: Parameter 12 pointer "SHRT_MAX = %i\n"
+27: Parameter 14 signedint 127
+28: Call 6 printf 2
+29: PostCall 6
+30: PreCall 6
+31: Parameter 12 pointer "USHRT_MAX = %u\n\n"
+32: Parameter 14 unsigned int 255
+33: Call 6 printf 2
+34: PostCall 6
+35: PreCall 6
+36: Parameter 12 pointer "INT_MIN = %i\n"
+37: Parameter 14 signedint -32768
+38: Call 6 printf 2
+39: PostCall 6
+40: PreCall 6
+41: Parameter 12 pointer "INT_MAX = %i\n"
+42: Parameter 14 signedint 32767
+43: Call 6 printf 2
+44: PostCall 6
+45: PreCall 6
+46: Parameter 12 pointer "UINT_MAX = %u\n\n"
+47: Parameter 14 unsigned int 65535
+48: Call 6 printf 2
+49: PostCall 6
+50: PreCall 6
+51: Parameter 12 pointer "LONG_MIN = %li\n"
+52: Parameter 14 signed long int -2147483648
+53: Call 6 printf 4
+54: PostCall 6
+55: PreCall 6
+56: Parameter 12 pointer "LONG_MAX = %li\n"
+57: Parameter 14 signed long int 2147483647
+58: Call 6 printf 4
+59: PostCall 6
+60: PreCall 6
+61: Parameter 12 pointer "ULONG_MAX = %lu\n"
+62: Parameter 14 unsignedlongint 4294967295
+63: Call 6 printf 4
+64: PostCall 6
+65: PreCall 6
+66: Parameter 12 pointer "ULONG_MAX = %lx\n"
+67: Parameter 14 unsignedlongint 4294967295
+68: Call 6 printf 4
+69: PostCall 6
+70: PreCall 6
+71: Parameter 12 pointer "ULONG_MAX = %lX\n"
+72: Parameter 14 unsignedlongint 4294967295
+73: Call 6 printf 4
+74: PostCall 6
+75: Empty
+76: Return
+77: FunctionEnd limits_test

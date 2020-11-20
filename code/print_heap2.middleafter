@@ -1,0 +1,23 @@
+0: Assign currBlockPtr g_firstBlockPtr
+1: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 8 string_Heap3A0A# 6
+3: Call 8 printf 0
+4: PostCall 8
+5: Equal 17 currBlockPtr 0
+6: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+7: Parameter 8 string_2020Address2025u2C20Size2025u0A# 6
+8: IntegralToIntegral £temporary363 currBlockPtr
+9: Parameter 8 £temporary363 8
+10: Deref £temporary364 -> currBlockPtr currBlockPtr 0
+11: Parameter 8 £temporary364 -> currBlockPtr 10
+12: Call 8 printf 0
+13: PostCall 8
+14: Deref £temporary366 -> currBlockPtr currBlockPtr 2
+15: Assign currBlockPtr £temporary366 -> currBlockPtr
+16: Goto 5
+17: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+18: Parameter 8 string_0A# 6
+19: Call 8 printf 0
+20: PostCall 8
+21: Return 0
+22: FunctionEnd print_heap

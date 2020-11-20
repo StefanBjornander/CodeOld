@@ -1,0 +1,8 @@
+0: Equal 4 g_currStructPtr 0
+1: Deref £temporary518 -> g_currStructPtr g_currStructPtr 2
+2: Assign £temporary522 £temporary518 -> g_currStructPtr
+3: Goto 5
+4: Assign £temporary522 0
+5: SetReturnValue £temporary522
+6: Return £temporary522
+7: FunctionEnd localeconv

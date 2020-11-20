@@ -1,0 +1,66 @@
+0: Assign index 129
+1: Empty
+2: SignedLessThan IntegralToIntegral £temporary41 index index 255
+3: Goto PreCall 12
+4: IntegralToIntegral £temporary41 index
+5: Dereference £temporary42 -> £temporary41 £temporary41 0
+6: Assign c £temporary42 -> £temporary41
+7: PreCall 13
+8: Parameter 19 pointer "%i: %i <%c>\n"
+9: Parameter 21 signedint index
+10: IntegralToIntegral £temporary43 c
+11: Parameter 23 signedint £temporary43
+12: IntegralToIntegral £temporary44 c
+13: Parameter 25 signedint £temporary44
+14: Call 13 printf 6
+15: PostCall 13
+16: Empty
+17: BinaryAdd index index 1
+18: Goto Empty
+19: PreCall 12
+20: Parameter 18 pointer "\nargc: %i\n"
+21: Parameter 20 signedint argc
+22: Call 12 printf 2
+23: PostCall 12
+24: Assign index 0
+25: Empty
+26: SignedLessThan PreCall 12 index argc
+27: Goto PreCall 12
+28: PreCall 12
+29: Parameter 18 pointer "%i: <%s>\n"
+30: Parameter 20 signedint index
+31: UnsignedMultiply £temporary50 index 2
+32: BinaryAdd £temporary51 argv £temporary50
+33: Dereference £temporary49 -> £temporary51 £temporary51 0
+34: Parameter 22 pointer £temporary49 -> £temporary51
+35: Call 12 printf 4
+36: PostCall 12
+37: Empty
+38: BinaryAdd index index 1
+39: Goto Empty
+40: PreCall 12
+41: Parameter 18 pointer "\n"
+42: Call 12 printf 0
+43: PostCall 12
+44: Assign index 0
+45: Empty
+46: UnsignedMultiply £temporary55 index 2
+47: BinaryAdd £temporary56 argv £temporary55
+48: Dereference £temporary54 -> £temporary56 £temporary56 0
+49: NotEqual PreCall 12 £temporary54 -> £temporary56 0
+50: Goto Empty
+51: PreCall 12
+52: Parameter 18 pointer "%i: <%s>\n"
+53: Parameter 20 signedint index
+54: UnsignedMultiply £temporary60 index 2
+55: BinaryAdd £temporary61 argv £temporary60
+56: Dereference £temporary59 -> £temporary61 £temporary61 0
+57: Parameter 22 pointer £temporary59 -> £temporary61
+58: Call 12 printf 4
+59: PostCall 12
+60: Empty
+61: BinaryAdd index index 1
+62: Goto Empty
+63: Empty
+64: Return
+65: FunctionEnd mainX

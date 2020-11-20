@@ -1,11 +1,11 @@
-0: push float float8$0.4342944820#
-1: call header integral zero 0 stack no zero 1
-2: push float x
-3: parameter x, offset 20
-4: call function noellipse-noellipse log
-5: post call
-6: £temporary453 = return_value
-7: £temporary454 = float8$0.4342944820# * £temporary453
-8: return_value = £temporary454
-9: return
-10: function end log10
+0: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: PushFloat x
+2: Parameter 20 double x
+3: Call 14 log 0
+4: PostCall 14
+5: GetReturnValue £temporary399
+6: PushFloat 2.30
+7: SignedDivide £temporary400 £temporary399 2.30
+8: SetReturnValue
+9: Return £temporary400
+10: FunctionEnd log10

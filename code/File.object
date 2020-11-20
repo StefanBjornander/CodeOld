@@ -1,59 +1,59 @@
 1:	
 
-@1097$filecreate:	; AssignRegister ah 60
+@1099$filecreate:	; AssignRegister ah 60
 2:		mov ah, 60
 4:	
 
-@1097$filecreate$1:	; AssignRegister cx 0
+@1099$filecreate$1:	; AssignRegister cx 0
 5:		mov cx, 0
 7:	
 
-@1097$filecreate$2:	; AssignRegister dx name
+@1099$filecreate$2:	; AssignRegister dx name
 8:		mov dx, [bp + 6]
 10:	
 
-@1097$filecreate$3:	; Interrupt 33
+@1099$filecreate$3:	; Interrupt 33
 11:		int 33
 13:	
 
-@1097$filecreate$4:	; InspectRegister £temporary886 ax
+@1099$filecreate$4:	; InspectRegister £temporary888 ax
 15:	
 
-@1097$filecreate$5:	; Assign handle £temporary886
+@1099$filecreate$5:	; Assign handle £temporary888
 16:		mov [bp + 8], ax
 18:	
 
-@1097$filecreate$6:	; NotCarry 10
-19:		jnc @1097$filecreate$10
+@1099$filecreate$6:	; NotCarry 10
+19:		jnc @1099$filecreate$10
 21:	
 
-@1097$filecreate$7:	; Assign errno 9
+@1099$filecreate$7:	; Assign errno 9
 22:		mov word [errno], 9
 24:	
 
-@1097$filecreate$8:	; SetReturnValue -1
+@1099$filecreate$8:	; SetReturnValue -1
 25:		mov bx, -1
 27:	
 
-@1097$filecreate$9:	; Return -1
+@1099$filecreate$9:	; Return -1
 28:		mov ax, [bp]
 29:		mov di, [bp + 4]
 30:		mov bp, [bp + 2]
 31:		jmp ax
 33:	
 
-@1097$filecreate$10:	; SetReturnValue handle
+@1099$filecreate$10:	; SetReturnValue handle
 34:		mov bx, [bp + 8]
 36:	
 
-@1097$filecreate$11:	; Return handle
+@1099$filecreate$11:	; Return handle
 37:		mov ax, [bp]
 38:		mov di, [bp + 4]
 39:		mov bp, [bp + 2]
 40:		jmp ax
 42:	
 
-@1097$filecreate$12:	; FunctionEnd filecreate
+@1099$filecreate$12:	; FunctionEnd filecreate
 1:	
 
 fileexists:	; AssignRegister ah 67
@@ -76,7 +76,7 @@ fileexists$4:	; Carry 7
 14:		jc fileexists$7
 16:	
 
-fileexists$5:	; Assign £temporary893 1
+fileexists$5:	; Assign £temporary895 1
 17:		mov bx, 1
 19:	
 
@@ -84,14 +84,14 @@ fileexists$6:	; Goto 8
 20:		jmp fileexists$8
 22:	
 
-fileexists$7:	; Assign £temporary893 0
+fileexists$7:	; Assign £temporary895 0
 23:		mov bx, 0
 25:	
 
-fileexists$8:	; SetReturnValue £temporary893
+fileexists$8:	; SetReturnValue £temporary895
 27:	
 
-fileexists$9:	; Return £temporary893
+fileexists$9:	; Return £temporary895
 28:		mov ax, [bp]
 29:		mov di, [bp + 4]
 30:		mov bp, [bp + 2]
@@ -101,56 +101,56 @@ fileexists$9:	; Return £temporary893
 fileexists$10:	; FunctionEnd fileexists
 1:	
 
-@1110$fileopen:	; AssignRegister ah 61
+@1112$fileopen:	; AssignRegister ah 61
 2:		mov ah, 61
 4:	
 
-@1110$fileopen$1:	; AssignRegister al mode
+@1112$fileopen$1:	; AssignRegister al mode
 5:		mov al, [bp + 8]
 7:	
 
-@1110$fileopen$2:	; AssignRegister dx name
+@1112$fileopen$2:	; AssignRegister dx name
 8:		mov dx, [bp + 6]
 10:	
 
-@1110$fileopen$3:	; Interrupt 33
+@1112$fileopen$3:	; Interrupt 33
 11:		int 33
 13:	
 
-@1110$fileopen$4:	; NotCarry 8
-14:		jnc @1110$fileopen$8
+@1112$fileopen$4:	; NotCarry 8
+14:		jnc @1112$fileopen$8
 16:	
 
-@1110$fileopen$5:	; Assign errno 9
+@1112$fileopen$5:	; Assign errno 9
 17:		mov word [errno], 9
 19:	
 
-@1110$fileopen$6:	; SetReturnValue -1
+@1112$fileopen$6:	; SetReturnValue -1
 20:		mov bx, -1
 22:	
 
-@1110$fileopen$7:	; Return -1
+@1112$fileopen$7:	; Return -1
 23:		mov ax, [bp]
 24:		mov di, [bp + 4]
 25:		mov bp, [bp + 2]
 26:		jmp ax
 28:	
 
-@1110$fileopen$8:	; InspectRegister £temporary898 ax
+@1112$fileopen$8:	; InspectRegister £temporary900 ax
 30:	
 
-@1110$fileopen$9:	; SetReturnValue £temporary898
+@1112$fileopen$9:	; SetReturnValue £temporary900
 31:		mov bx, ax
 33:	
 
-@1110$fileopen$10:	; Return £temporary898
+@1112$fileopen$10:	; Return £temporary900
 34:		mov ax, [bp]
 35:		mov di, [bp + 4]
 36:		mov bp, [bp + 2]
 37:		jmp ax
 39:	
 
-@1110$fileopen$11:	; FunctionEnd fileopen
+@1112$fileopen$11:	; FunctionEnd fileopen
 1:	
 
 fopen:	; Assign index 0
@@ -162,21 +162,21 @@ fopen$1:	; SignedGreaterThanEqual 21 index 20
 6:		jge fopen$21
 8:	
 
-fopen$2:	; UnsignedMultiply £temporary902 index 29
+fopen$2:	; UnsignedMultiply £temporary904 index 29
 9:		mov ax, [bp + 10]
 11:		xor dx, dx
 12:		mul word [int2$29#]
 18:	
 
-fopen$3:	; BinaryAdd £temporary903 g_fileArray £temporary902
+fopen$3:	; BinaryAdd £temporary905 g_fileArray £temporary904
 19:		mov si, g_fileArray
 20:		add si, ax
 22:	
 
-fopen$4:	; Deref £temporary901 -> £temporary903 £temporary903 0
+fopen$4:	; Deref £temporary903 -> £temporary905 £temporary905 0
 24:	
 
-fopen$5:	; NotEqual 19 £temporary901.open$0 -> £temporary903 0
+fopen$5:	; NotEqual 19 £temporary903.open$0 -> £temporary905 0
 25:		cmp word [si], 0
 26:		jne fopen$19
 28:	
@@ -194,24 +194,24 @@ fopen$8:	; Parameter 12 mode 8
 36:		mov [bp + 20], ax
 38:	
 
-fopen$9:	; UnsignedMultiply £temporary907 index 29
+fopen$9:	; UnsignedMultiply £temporary909 index 29
 39:		mov ax, [bp + 10]
 41:		xor dx, dx
 42:		mul word [int2$29#]
 48:	
 
-fopen$10:	; BinaryAdd £temporary908 g_fileArray £temporary907
+fopen$10:	; BinaryAdd £temporary910 g_fileArray £temporary909
 49:		mov si, g_fileArray
 50:		add si, ax
 52:	
 
-fopen$11:	; Deref £temporary906 -> £temporary908 £temporary908 0
+fopen$11:	; Deref £temporary908 -> £temporary910 £temporary910 0
 54:	
 
-fopen$12:	; address £temporary909 £temporary906 -> £temporary908
+fopen$12:	; address £temporary911 £temporary908 -> £temporary910
 56:	
 
-fopen$13:	; Parameter 12 £temporary909 10
+fopen$13:	; Parameter 12 £temporary911 10
 57:		mov [bp + 22], si
 59:	
 
@@ -225,13 +225,13 @@ fopen$14:	; Call 12 freopen 0
 fopen$15:	; PostCall 12
 67:	
 
-fopen$16:	; GetReturnValue £temporary910
+fopen$16:	; GetReturnValue £temporary912
 72:	
 
-fopen$17:	; SetReturnValue £temporary910
+fopen$17:	; SetReturnValue £temporary912
 74:	
 
-fopen$18:	; Return £temporary910
+fopen$18:	; Return £temporary912
 75:		mov ax, [bp]
 76:		mov di, [bp + 4]
 77:		mov bp, [bp + 2]
@@ -286,10 +286,10 @@ freopen$4:	; Call 14 strcmp 0
 freopen$5:	; PostCall 14
 21:	
 
-freopen$6:	; GetReturnValue £temporary914
+freopen$6:	; GetReturnValue £temporary916
 26:	
 
-freopen$7:	; NotEqual 16 £temporary914 0
+freopen$7:	; NotEqual 16 £temporary916 0
 27:		cmp bx, 0
 28:		jne freopen$16
 30:	
@@ -310,16 +310,16 @@ freopen$11:	; Call 14 fileopen 0
 40:		mov word [bp + 14], freopen$12
 41:		mov [bp + 16], bp
 42:		add bp, 14
-43:		jmp @1110$fileopen
+43:		jmp @1112$fileopen
 45:	
 
 freopen$12:	; PostCall 14
 47:	
 
-freopen$13:	; GetReturnValue £temporary916
+freopen$13:	; GetReturnValue £temporary918
 52:	
 
-freopen$14:	; Assign handle £temporary916
+freopen$14:	; Assign handle £temporary918
 53:		mov [bp + 12], bx
 55:	
 
@@ -349,10 +349,10 @@ freopen$19:	; Call 14 strcmp 0
 freopen$20:	; PostCall 14
 75:	
 
-freopen$21:	; GetReturnValue £temporary917
+freopen$21:	; GetReturnValue £temporary919
 80:	
 
-freopen$22:	; NotEqual 30 £temporary917 0
+freopen$22:	; NotEqual 30 £temporary919 0
 81:		cmp bx, 0
 82:		jne freopen$30
 84:	
@@ -369,16 +369,16 @@ freopen$25:	; Call 14 filecreate 0
 91:		mov word [bp + 14], freopen$26
 92:		mov [bp + 16], bp
 93:		add bp, 14
-94:		jmp @1097$filecreate
+94:		jmp @1099$filecreate
 96:	
 
 freopen$26:	; PostCall 14
 98:	
 
-freopen$27:	; GetReturnValue £temporary919
+freopen$27:	; GetReturnValue £temporary921
 103:	
 
-freopen$28:	; Assign handle £temporary919
+freopen$28:	; Assign handle £temporary921
 104:		mov [bp + 12], bx
 106:	
 
@@ -408,10 +408,10 @@ freopen$33:	; Call 14 strcmp 0
 freopen$34:	; PostCall 14
 126:	
 
-freopen$35:	; GetReturnValue £temporary920
+freopen$35:	; GetReturnValue £temporary922
 131:	
 
-freopen$36:	; NotEqual 59 £temporary920 0
+freopen$36:	; NotEqual 59 £temporary922 0
 132:		cmp bx, 0
 133:		jne freopen$59
 135:	
@@ -432,16 +432,16 @@ freopen$40:	; Call 14 fileopen 0
 145:		mov word [bp + 14], freopen$41
 146:		mov [bp + 16], bp
 147:		add bp, 14
-148:		jmp @1110$fileopen
+148:		jmp @1112$fileopen
 150:	
 
 freopen$41:	; PostCall 14
 152:	
 
-freopen$42:	; GetReturnValue £temporary922
+freopen$42:	; GetReturnValue £temporary924
 157:	
 
-freopen$43:	; Assign handle £temporary922
+freopen$43:	; Assign handle £temporary924
 158:		mov [bp + 12], bx
 160:	
 
@@ -492,16 +492,16 @@ freopen$54:	; Call 14 filecreate 0
 194:		mov word [bp + 14], freopen$55
 195:		mov [bp + 16], bp
 196:		add bp, 14
-197:		jmp @1097$filecreate
+197:		jmp @1099$filecreate
 199:	
 
 freopen$55:	; PostCall 14
 201:	
 
-freopen$56:	; GetReturnValue £temporary925
+freopen$56:	; GetReturnValue £temporary927
 206:	
 
-freopen$57:	; Assign handle £temporary925
+freopen$57:	; Assign handle £temporary927
 207:		mov [bp + 12], bx
 209:	
 
@@ -531,10 +531,10 @@ freopen$62:	; Call 14 strcmp 0
 freopen$63:	; PostCall 14
 229:	
 
-freopen$64:	; GetReturnValue £temporary926
+freopen$64:	; GetReturnValue £temporary928
 234:	
 
-freopen$65:	; NotEqual 74 £temporary926 0
+freopen$65:	; NotEqual 74 £temporary928 0
 235:		cmp bx, 0
 236:		jne freopen$74
 238:	
@@ -555,16 +555,16 @@ freopen$69:	; Call 14 fileopen 0
 248:		mov word [bp + 14], freopen$70
 249:		mov [bp + 16], bp
 250:		add bp, 14
-251:		jmp @1110$fileopen
+251:		jmp @1112$fileopen
 253:	
 
 freopen$70:	; PostCall 14
 255:	
 
-freopen$71:	; GetReturnValue £temporary928
+freopen$71:	; GetReturnValue £temporary930
 260:	
 
-freopen$72:	; Assign handle £temporary928
+freopen$72:	; Assign handle £temporary930
 261:		mov [bp + 12], bx
 263:	
 
@@ -594,10 +594,10 @@ freopen$77:	; Call 14 strcmp 0
 freopen$78:	; PostCall 14
 283:	
 
-freopen$79:	; GetReturnValue £temporary929
+freopen$79:	; GetReturnValue £temporary931
 288:	
 
-freopen$80:	; NotEqual 102 £temporary929 0
+freopen$80:	; NotEqual 102 £temporary931 0
 289:		cmp bx, 0
 290:		jne freopen$102
 292:	
@@ -620,10 +620,10 @@ freopen$83:	; Call 14 fileexists 0
 freopen$84:	; PostCall 14
 306:	
 
-freopen$85:	; GetReturnValue £temporary931
+freopen$85:	; GetReturnValue £temporary933
 311:	
 
-freopen$86:	; Equal 95 £temporary931 0
+freopen$86:	; Equal 95 £temporary933 0
 312:		cmp bx, 0
 313:		je freopen$95
 315:	
@@ -644,16 +644,16 @@ freopen$90:	; Call 14 fileopen 0
 325:		mov word [bp + 14], freopen$91
 326:		mov [bp + 16], bp
 327:		add bp, 14
-328:		jmp @1110$fileopen
+328:		jmp @1112$fileopen
 330:	
 
 freopen$91:	; PostCall 14
 332:	
 
-freopen$92:	; GetReturnValue £temporary932
+freopen$92:	; GetReturnValue £temporary934
 337:	
 
-freopen$93:	; Assign handle £temporary932
+freopen$93:	; Assign handle £temporary934
 338:		mov [bp + 12], bx
 340:	
 
@@ -673,16 +673,16 @@ freopen$97:	; Call 14 filecreate 0
 350:		mov word [bp + 14], freopen$98
 351:		mov [bp + 16], bp
 352:		add bp, 14
-353:		jmp @1097$filecreate
+353:		jmp @1099$filecreate
 355:	
 
 freopen$98:	; PostCall 14
 357:	
 
-freopen$99:	; GetReturnValue £temporary933
+freopen$99:	; GetReturnValue £temporary935
 362:	
 
-freopen$100:	; Assign handle £temporary933
+freopen$100:	; Assign handle £temporary935
 363:		mov [bp + 12], bx
 365:	
 
@@ -712,10 +712,10 @@ freopen$105:	; Call 14 strcmp 0
 freopen$106:	; PostCall 14
 385:	
 
-freopen$107:	; GetReturnValue £temporary935
+freopen$107:	; GetReturnValue £temporary937
 390:	
 
-freopen$108:	; NotEqual 130 £temporary935 0
+freopen$108:	; NotEqual 130 £temporary937 0
 391:		cmp bx, 0
 392:		jne freopen$130
 394:	
@@ -736,16 +736,16 @@ freopen$112:	; Call 14 fileopen 0
 404:		mov word [bp + 14], freopen$113
 405:		mov [bp + 16], bp
 406:		add bp, 14
-407:		jmp @1110$fileopen
+407:		jmp @1112$fileopen
 409:	
 
 freopen$113:	; PostCall 14
 411:	
 
-freopen$114:	; GetReturnValue £temporary937
+freopen$114:	; GetReturnValue £temporary939
 416:	
 
-freopen$115:	; Assign handle £temporary937
+freopen$115:	; Assign handle £temporary939
 417:		mov [bp + 12], bx
 419:	
 
@@ -796,16 +796,16 @@ freopen$126:	; Call 14 filecreate 0
 453:		mov word [bp + 14], freopen$127
 454:		mov [bp + 16], bp
 455:		add bp, 14
-456:		jmp @1097$filecreate
+456:		jmp @1099$filecreate
 458:	
 
 freopen$127:	; PostCall 14
 460:	
 
-freopen$128:	; GetReturnValue £temporary940
+freopen$128:	; GetReturnValue £temporary942
 465:	
 
-freopen$129:	; Assign handle £temporary940
+freopen$129:	; Assign handle £temporary942
 466:		mov [bp + 12], bx
 468:	
 
@@ -814,39 +814,39 @@ freopen$130:	; Equal 147 handle -1
 470:		je freopen$147
 472:	
 
-freopen$131:	; Deref £temporary942 -> stream stream 0
+freopen$131:	; Deref £temporary944 -> stream stream 0
 473:		mov si, [bp + 10]
 475:	
 
-freopen$132:	; Assign £temporary942 -> stream 1
+freopen$132:	; Assign £temporary944 -> stream 1
 476:		mov word [si], 1
 478:	
 
-freopen$133:	; Deref £temporary943 -> stream stream 2
+freopen$133:	; Deref £temporary945 -> stream stream 2
 479:		mov si, [bp + 10]
 481:	
 
-freopen$134:	; Assign £temporary943 -> stream handle
+freopen$134:	; Assign £temporary945 -> stream handle
 482:		mov ax, [bp + 12]
 483:		mov [si + 2], ax
 485:	
 
-freopen$135:	; Deref £temporary944 -> stream stream 25
+freopen$135:	; Deref £temporary946 -> stream stream 25
 486:		mov si, [bp + 10]
 488:	
 
-freopen$136:	; Assign £temporary944 -> stream 0
+freopen$136:	; Assign £temporary946 -> stream 0
 489:		mov word [si + 25], 0
 491:	
 
 freopen$137:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 493:	
 
-freopen$138:	; Deref £temporary945 -> stream stream 4
+freopen$138:	; Deref £temporary947 -> stream stream 4
 494:		mov si, [bp + 10]
 496:	
 
-freopen$139:	; Parameter 14 £temporary945 -> stream 6
+freopen$139:	; Parameter 14 £temporary947 -> stream 6
 497:		mov [bp + 20], si
 498:		add word [bp + 20], 4
 500:	
@@ -866,11 +866,11 @@ freopen$141:	; Call 14 strcpy 0
 freopen$142:	; PostCall 14
 512:	
 
-freopen$143:	; Deref £temporary947 -> stream stream 27
+freopen$143:	; Deref £temporary949 -> stream stream 27
 513:		mov si, [bp + 10]
 515:	
 
-freopen$144:	; Assign £temporary947 -> stream 0
+freopen$144:	; Assign £temporary949 -> stream 0
 516:		mov word [si + 27], 0
 518:	
 
@@ -885,11 +885,11 @@ freopen$146:	; Return stream
 525:		jmp ax
 527:	
 
-freopen$147:	; Deref £temporary948 -> stream stream 0
+freopen$147:	; Deref £temporary950 -> stream stream 0
 528:		mov si, [bp + 10]
 530:	
 
-freopen$148:	; Assign £temporary948 -> stream 0
+freopen$148:	; Assign £temporary950 -> stream 0
 531:		mov word [si], 0
 533:	
 
@@ -921,21 +921,21 @@ fflush$2:	; SignedGreaterThanEqual 21 index 20
 10:		jge fflush$21
 12:	
 
-fflush$3:	; UnsignedMultiply £temporary988 index 29
+fflush$3:	; UnsignedMultiply £temporary990 index 29
 13:		mov ax, [bp + 8]
 15:		xor dx, dx
 16:		mul word [int2$29#]
 22:	
 
-fflush$4:	; BinaryAdd £temporary989 g_fileArray £temporary988
+fflush$4:	; BinaryAdd £temporary991 g_fileArray £temporary990
 23:		mov si, g_fileArray
 24:		add si, ax
 26:	
 
-fflush$5:	; Deref £temporary987 -> £temporary989 £temporary989 0
+fflush$5:	; Deref £temporary989 -> £temporary991 £temporary991 0
 28:	
 
-fflush$6:	; Equal 19 £temporary987.open$0 -> £temporary989 0
+fflush$6:	; Equal 19 £temporary989.open$0 -> £temporary991 0
 29:		cmp word [si], 0
 30:		je fflush$19
 32:	
@@ -943,24 +943,24 @@ fflush$6:	; Equal 19 £temporary987.open$0 -> £temporary989 0
 fflush$7:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 34:	
 
-fflush$8:	; UnsignedMultiply £temporary991 index 29
+fflush$8:	; UnsignedMultiply £temporary993 index 29
 35:		mov ax, [bp + 8]
 37:		xor dx, dx
 38:		mul word [int2$29#]
 44:	
 
-fflush$9:	; BinaryAdd £temporary992 g_fileArray £temporary991
+fflush$9:	; BinaryAdd £temporary994 g_fileArray £temporary993
 45:		mov si, g_fileArray
 46:		add si, ax
 48:	
 
-fflush$10:	; Deref £temporary990 -> £temporary992 £temporary992 0
+fflush$10:	; Deref £temporary992 -> £temporary994 £temporary994 0
 50:	
 
-fflush$11:	; address £temporary993 £temporary990 -> £temporary992
+fflush$11:	; address £temporary995 £temporary992 -> £temporary994
 52:	
 
-fflush$12:	; Parameter 10 £temporary993 6
+fflush$12:	; Parameter 10 £temporary995 6
 53:		mov [bp + 16], si
 55:	
 
@@ -974,10 +974,10 @@ fflush$13:	; Call 10 fflush 0
 fflush$14:	; PostCall 10
 63:	
 
-fflush$15:	; GetReturnValue £temporary994
+fflush$15:	; GetReturnValue £temporary996
 68:	
 
-fflush$16:	; NotEqual 19 £temporary994 -1
+fflush$16:	; NotEqual 19 £temporary996 -1
 69:		cmp bx, -1
 70:		jne fflush$19
 72:	
@@ -1024,11 +1024,11 @@ fclose$1:	; AssignRegister ah 62
 6:		mov ah, 62
 8:	
 
-fclose$2:	; Deref £temporary1001 -> stream stream 2
+fclose$2:	; Deref £temporary1003 -> stream stream 2
 9:		mov si, [bp + 6]
 11:	
 
-fclose$3:	; AssignRegister bx £temporary1001 -> stream
+fclose$3:	; AssignRegister bx £temporary1003 -> stream
 12:		mov bx, [si + 2]
 14:	
 
@@ -1055,11 +1055,11 @@ fclose$8:	; Return -1
 30:		jmp ax
 32:	
 
-fclose$9:	; Deref £temporary1003 -> stream stream 27
+fclose$9:	; Deref £temporary1005 -> stream stream 27
 33:		mov si, [bp + 6]
 35:	
 
-fclose$10:	; Equal 16 £temporary1003 -> stream 0
+fclose$10:	; Equal 16 £temporary1005 -> stream 0
 36:		cmp word [si + 27], 0
 37:		je fclose$16
 39:	
@@ -1067,11 +1067,11 @@ fclose$10:	; Equal 16 £temporary1003 -> stream 0
 fclose$11:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 41:	
 
-fclose$12:	; Deref £temporary1004 -> stream stream 4
+fclose$12:	; Deref £temporary1006 -> stream stream 4
 42:		mov si, [bp + 6]
 44:	
 
-fclose$13:	; Parameter 8 £temporary1004 -> stream 6
+fclose$13:	; Parameter 8 £temporary1006 -> stream 6
 45:		mov [bp + 14], si
 46:		add word [bp + 14], 4
 48:	
@@ -1086,11 +1086,11 @@ fclose$14:	; Call 8 remove 0
 fclose$15:	; PostCall 8
 56:	
 
-fclose$16:	; Deref £temporary1007 -> stream stream 0
+fclose$16:	; Deref £temporary1009 -> stream stream 0
 57:		mov si, [bp + 6]
 59:	
 
-fclose$17:	; Assign £temporary1007 -> stream 0
+fclose$17:	; Assign £temporary1009 -> stream 0
 60:		mov word [si], 0
 62:	
 
@@ -1114,21 +1114,21 @@ fclose$21:	; SignedGreaterThanEqual 40 index 20
 76:		jge fclose$40
 78:	
 
-fclose$22:	; UnsignedMultiply £temporary1011 index 29
+fclose$22:	; UnsignedMultiply £temporary1013 index 29
 79:		mov ax, [bp + 8]
 81:		xor dx, dx
 82:		mul word [int2$29#]
 88:	
 
-fclose$23:	; BinaryAdd £temporary1012 g_fileArray £temporary1011
+fclose$23:	; BinaryAdd £temporary1014 g_fileArray £temporary1013
 89:		mov si, g_fileArray
 90:		add si, ax
 92:	
 
-fclose$24:	; Deref £temporary1010 -> £temporary1012 £temporary1012 0
+fclose$24:	; Deref £temporary1012 -> £temporary1014 £temporary1014 0
 94:	
 
-fclose$25:	; Equal 38 £temporary1010.open$0 -> £temporary1012 0
+fclose$25:	; Equal 38 £temporary1012.open$0 -> £temporary1014 0
 95:		cmp word [si], 0
 96:		je fclose$38
 98:	
@@ -1136,24 +1136,24 @@ fclose$25:	; Equal 38 £temporary1010.open$0 -> £temporary1012 0
 fclose$26:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 100:	
 
-fclose$27:	; UnsignedMultiply £temporary1014 index 29
+fclose$27:	; UnsignedMultiply £temporary1016 index 29
 101:		mov ax, [bp + 8]
 103:		xor dx, dx
 104:		mul word [int2$29#]
 110:	
 
-fclose$28:	; BinaryAdd £temporary1015 g_fileArray £temporary1014
+fclose$28:	; BinaryAdd £temporary1017 g_fileArray £temporary1016
 111:		mov si, g_fileArray
 112:		add si, ax
 114:	
 
-fclose$29:	; Deref £temporary1013 -> £temporary1015 £temporary1015 0
+fclose$29:	; Deref £temporary1015 -> £temporary1017 £temporary1017 0
 116:	
 
-fclose$30:	; address £temporary1016 £temporary1013 -> £temporary1015
+fclose$30:	; address £temporary1018 £temporary1015 -> £temporary1017
 118:	
 
-fclose$31:	; Parameter 10 £temporary1016 6
+fclose$31:	; Parameter 10 £temporary1018 6
 119:		mov [bp + 16], si
 121:	
 
@@ -1167,10 +1167,10 @@ fclose$32:	; Call 10 fclose 0
 fclose$33:	; PostCall 10
 129:	
 
-fclose$34:	; GetReturnValue £temporary1017
+fclose$34:	; GetReturnValue £temporary1019
 134:	
 
-fclose$35:	; NotEqual 38 £temporary1017 -1
+fclose$35:	; NotEqual 38 £temporary1019 -1
 135:		cmp bx, -1
 136:		jne fclose$38
 138:	
@@ -1344,12 +1344,12 @@ fgetc:	; Assign c 0
 fgetc$1:	; CallHeader 9 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 6:	
 
-fgetc$2:	; address £temporary1031 c
+fgetc$2:	; address £temporary1033 c
 7:		mov si, bp
 8:		add si, 8
 10:	
 
-fgetc$3:	; Parameter 9 £temporary1031 6
+fgetc$3:	; Parameter 9 £temporary1033 6
 11:		mov [bp + 15], si
 13:	
 
@@ -1376,15 +1376,15 @@ fgetc$7:	; Call 9 fread 0
 fgetc$8:	; PostCall 9
 31:	
 
-fgetc$9:	; GetReturnValue £temporary1032
+fgetc$9:	; GetReturnValue £temporary1034
 36:	
 
-fgetc$10:	; SignedLessThanEqual 14 £temporary1032 0
+fgetc$10:	; SignedLessThanEqual 14 £temporary1034 0
 37:		cmp bx, 0
 38:		jle fgetc$14
 40:	
 
-fgetc$11:	; IntegralToIntegral £temporary1034 c
+fgetc$11:	; IntegralToIntegral £temporary1036 c
 41:		mov bl, [bp + 8]
 43:		and bx, 255
 45:		cmp bl, 0
@@ -1393,10 +1393,10 @@ fgetc$11:	; IntegralToIntegral £temporary1034 c
 49:		neg bx
 51:	
 
-fgetc$12:	; SetReturnValue £temporary1034
+fgetc$12:	; SetReturnValue £temporary1036
 53:	
 
-fgetc$13:	; Return £temporary1034
+fgetc$13:	; Return £temporary1036
 54:		mov ax, [bp]
 55:		mov di, [bp + 4]
 56:		mov bp, [bp + 2]
@@ -1425,12 +1425,12 @@ fgets$1:	; Assign prevChar 0
 5:		mov byte [bp + 14], 0
 7:	
 
-fgets$2:	; BinarySubtract £temporary1040 size 1
+fgets$2:	; BinarySubtract £temporary1042 size 1
 8:		mov ax, [bp + 8]
 9:		sub ax, 1
 11:	
 
-fgets$3:	; SignedGreaterThanEqual 33 count £temporary1040
+fgets$3:	; SignedGreaterThanEqual 33 count £temporary1042
 12:		cmp [bp + 12], ax
 13:		jge fgets$33
 15:	
@@ -1451,12 +1451,12 @@ fgets$7:	; Parameter 16 string_25c# 8
 25:		mov word [bp + 24], string_25c#
 27:	
 
-fgets$8:	; address £temporary1042 currChar
+fgets$8:	; address £temporary1044 currChar
 28:		mov si, bp
 29:		add si, 15
 31:	
 
-fgets$9:	; Parameter 16 £temporary1042 10
+fgets$9:	; Parameter 16 £temporary1044 10
 32:		mov [bp + 26], si
 34:	
 
@@ -1482,15 +1482,15 @@ fgets$13:	; NotEqual 18 currChar 10
 50:		jne fgets$18
 52:	
 
-fgets$14:	; BinaryAdd £temporary1048 text count
+fgets$14:	; BinaryAdd £temporary1050 text count
 53:		mov si, [bp + 6]
 54:		add si, [bp + 12]
 56:	
 
-fgets$15:	; Deref £temporary1047 -> £temporary1048 £temporary1048 0
+fgets$15:	; Deref £temporary1049 -> £temporary1050 £temporary1050 0
 58:	
 
-fgets$16:	; Assign £temporary1047 -> £temporary1048 0
+fgets$16:	; Assign £temporary1049 -> £temporary1050 0
 59:		mov byte [si], 0
 61:	
 
@@ -1498,7 +1498,7 @@ fgets$17:	; Goto 33
 62:		jmp fgets$33
 64:	
 
-fgets$18:	; IntegralToIntegral £temporary1049 currChar
+fgets$18:	; IntegralToIntegral £temporary1051 currChar
 65:		mov al, [bp + 15]
 67:		and ax, 255
 69:		cmp al, 0
@@ -1507,20 +1507,20 @@ fgets$18:	; IntegralToIntegral £temporary1049 currChar
 73:		neg ax
 75:	
 
-fgets$19:	; NotEqual 24 £temporary1049 -1
+fgets$19:	; NotEqual 24 £temporary1051 -1
 76:		cmp ax, -1
 77:		jne fgets$24
 79:	
 
-fgets$20:	; BinaryAdd £temporary1052 text count
+fgets$20:	; BinaryAdd £temporary1054 text count
 80:		mov si, [bp + 6]
 81:		add si, [bp + 12]
 83:	
 
-fgets$21:	; Deref £temporary1051 -> £temporary1052 £temporary1052 0
+fgets$21:	; Deref £temporary1053 -> £temporary1054 £temporary1054 0
 85:	
 
-fgets$22:	; Assign £temporary1051 -> £temporary1052 0
+fgets$22:	; Assign £temporary1053 -> £temporary1054 0
 86:		mov byte [si], 0
 88:	
 
@@ -1538,7 +1538,7 @@ fgets$25:	; Equal 31 currChar 10
 97:		je fgets$31
 99:	
 
-fgets$26:	; Assign £temporary1056 count
+fgets$26:	; Assign £temporary1058 count
 100:		mov ax, [bp + 12]
 102:	
 
@@ -1546,15 +1546,15 @@ fgets$27:	; Increment count
 103:		inc word [bp + 12]
 105:	
 
-fgets$28:	; BinaryAdd £temporary1058 text £temporary1056
+fgets$28:	; BinaryAdd £temporary1060 text £temporary1058
 106:		mov si, [bp + 6]
 107:		add si, ax
 109:	
 
-fgets$29:	; Deref £temporary1057 -> £temporary1058 £temporary1058 0
+fgets$29:	; Deref £temporary1059 -> £temporary1060 £temporary1060 0
 111:	
 
-fgets$30:	; Assign £temporary1057 -> £temporary1058 currChar
+fgets$30:	; Assign £temporary1059 -> £temporary1060 currChar
 112:		mov al, [bp + 15]
 113:		mov [si], al
 115:	
@@ -1600,14 +1600,14 @@ fputs$2:	; Call 10 strlen 0
 fputs$3:	; PostCall 10
 15:	
 
-fputs$4:	; GetReturnValue £temporary1063
+fputs$4:	; GetReturnValue £temporary1065
 20:	
 
-fputs$5:	; BinaryAdd £temporary1064 £temporary1063 1
+fputs$5:	; BinaryAdd £temporary1066 £temporary1065 1
 21:		add bx, 1
 23:	
 
-fputs$6:	; SignedMultiply size £temporary1064 1
+fputs$6:	; SignedMultiply size £temporary1066 1
 24:		mov ax, bx
 26:		xor dx, dx
 27:		imul word [int2$1#]
@@ -1646,15 +1646,15 @@ fputs$12:	; Call 12 fwrite 0
 fputs$13:	; PostCall 12
 55:	
 
-fputs$14:	; GetReturnValue £temporary1066
+fputs$14:	; GetReturnValue £temporary1068
 60:	
 
-fputs$15:	; NotEqual 18 £temporary1066 size
+fputs$15:	; NotEqual 18 £temporary1068 size
 61:		cmp bx, [bp + 10]
 62:		jne fputs$18
 64:	
 
-fputs$16:	; Assign £temporary1071 0
+fputs$16:	; Assign £temporary1073 0
 65:		mov bx, 0
 67:	
 
@@ -1662,14 +1662,14 @@ fputs$17:	; Goto 19
 68:		jmp fputs$19
 70:	
 
-fputs$18:	; Assign £temporary1071 -1
+fputs$18:	; Assign £temporary1073 -1
 71:		mov bx, -1
 73:	
 
-fputs$19:	; SetReturnValue £temporary1071
+fputs$19:	; SetReturnValue £temporary1073
 75:	
 
-fputs$20:	; Return £temporary1071
+fputs$20:	; Return £temporary1073
 76:		mov ax, [bp]
 77:		mov di, [bp + 4]
 78:		mov bp, [bp + 2]
@@ -1697,13 +1697,13 @@ getchar$2:	; Call 6 fgetc 0
 getchar$3:	; PostCall 6
 15:	
 
-getchar$4:	; GetReturnValue £temporary1077
+getchar$4:	; GetReturnValue £temporary1079
 20:	
 
-getchar$5:	; SetReturnValue £temporary1077
+getchar$5:	; SetReturnValue £temporary1079
 22:	
 
-getchar$6:	; Return £temporary1077
+getchar$6:	; Return £temporary1079
 23:		mov ax, [bp]
 24:		mov di, [bp + 4]
 25:		mov bp, [bp + 2]
@@ -1740,10 +1740,10 @@ gets$4:	; Call 8 fgets 0
 gets$5:	; PostCall 8
 22:	
 
-gets$6:	; GetReturnValue £temporary1079
+gets$6:	; GetReturnValue £temporary1081
 27:	
 
-gets$7:	; Equal 21 £temporary1079 0
+gets$7:	; Equal 21 £temporary1081 0
 28:		cmp bx, 0
 29:		je gets$21
 31:	
@@ -1766,10 +1766,10 @@ gets$10:	; Call 8 strlen 0
 gets$11:	; PostCall 8
 45:	
 
-gets$12:	; GetReturnValue £temporary1081
+gets$12:	; GetReturnValue £temporary1083
 50:	
 
-gets$13:	; Assign size £temporary1081
+gets$13:	; Assign size £temporary1083
 51:		mov [bp + 8], bx
 53:	
 
@@ -1778,20 +1778,20 @@ gets$14:	; SignedLessThanEqual 19 size 0
 55:		jle gets$19
 57:	
 
-gets$15:	; BinarySubtract £temporary1083 size 1
+gets$15:	; BinarySubtract £temporary1085 size 1
 58:		mov ax, [bp + 8]
 59:		sub ax, 1
 61:	
 
-gets$16:	; BinaryAdd £temporary1085 s £temporary1083
+gets$16:	; BinaryAdd £temporary1087 s £temporary1085
 62:		mov si, [bp + 6]
 63:		add si, ax
 65:	
 
-gets$17:	; Deref £temporary1084 -> £temporary1085 £temporary1085 0
+gets$17:	; Deref £temporary1086 -> £temporary1087 £temporary1087 0
 67:	
 
-gets$18:	; Assign £temporary1084 -> £temporary1085 0
+gets$18:	; Assign £temporary1086 -> £temporary1087 0
 68:		mov byte [si], 0
 70:	
 
@@ -1843,10 +1843,10 @@ puts$3:	; Call 8 fputs 0
 puts$4:	; PostCall 8
 19:	
 
-puts$5:	; GetReturnValue £temporary1090
+puts$5:	; GetReturnValue £temporary1092
 24:	
 
-puts$6:	; Equal 15 £temporary1090 0
+puts$6:	; Equal 15 £temporary1092 0
 25:		cmp bx, 0
 26:		je puts$15
 28:	
@@ -1873,13 +1873,13 @@ puts$10:	; Call 8 fputc 0
 puts$11:	; PostCall 8
 45:	
 
-puts$12:	; GetReturnValue £temporary1092
+puts$12:	; GetReturnValue £temporary1094
 50:	
 
-puts$13:	; SetReturnValue £temporary1092
+puts$13:	; SetReturnValue £temporary1094
 52:	
 
-puts$14:	; Return £temporary1092
+puts$14:	; Return £temporary1094
 53:		mov ax, [bp]
 54:		mov di, [bp + 4]
 55:		mov bp, [bp + 2]
@@ -1900,11 +1900,11 @@ puts$16:	; Return -1
 puts$17:	; FunctionEnd puts
 1:	
 
-ungetc:	; Deref £temporary1097 -> stream stream 20
+ungetc:	; Deref £temporary1099 -> stream stream 20
 2:		mov si, [bp + 8]
 4:	
 
-ungetc$1:	; IntegralToIntegral £temporary1098 £temporary1097 -> stream
+ungetc$1:	; IntegralToIntegral £temporary1100 £temporary1099 -> stream
 5:		mov al, [si + 20]
 7:		and ax, 255
 9:		cmp al, 0
@@ -1913,16 +1913,16 @@ ungetc$1:	; IntegralToIntegral £temporary1098 £temporary1097 -> stream
 13:		neg ax
 15:	
 
-ungetc$2:	; Equal 6 £temporary1098 -1
+ungetc$2:	; Equal 6 £temporary1100 -1
 16:		cmp ax, -1
 17:		je ungetc$6
 19:	
 
-ungetc$3:	; Deref £temporary1100 -> stream stream 20
+ungetc$3:	; Deref £temporary1102 -> stream stream 20
 20:		mov si, [bp + 8]
 22:	
 
-ungetc$4:	; IntegralToIntegral £temporary1101 c
+ungetc$4:	; IntegralToIntegral £temporary1103 c
 23:		mov ax, [bp + 6]
 26:		cmp ax, 0
 27:		jge ungetc$5
@@ -1930,7 +1930,7 @@ ungetc$4:	; IntegralToIntegral £temporary1101 c
 30:		neg al
 32:	
 
-ungetc$5:	; Assign £temporary1100 -> stream £temporary1101
+ungetc$5:	; Assign £temporary1102 -> stream £temporary1103
 33:		mov [si + 20], al
 35:	
 
@@ -1948,21 +1948,21 @@ ungetc$7:	; Return c
 ungetc$8:	; FunctionEnd ungetc
 1:	
 
-fread:	; Deref £temporary1103 -> stream stream 2
+fread:	; Deref £temporary1105 -> stream stream 2
 2:		mov si, [bp + 12]
 4:	
 
-fread$1:	; AssignRegister bx £temporary1103 -> stream
+fread$1:	; AssignRegister bx £temporary1105 -> stream
 5:		mov bx, [si + 2]
 7:	
 
-fread$2:	; SignedMultiply £temporary1105 size nobj
+fread$2:	; SignedMultiply £temporary1107 size nobj
 8:		mov ax, [bp + 8]
 10:		xor dx, dx
 11:		imul word [bp + 10]
 17:	
 
-fread$3:	; AssignRegister cx £temporary1105
+fread$3:	; AssignRegister cx £temporary1107
 18:		mov cx, ax
 20:	
 
@@ -1982,7 +1982,7 @@ fread$7:	; NotCarry 13
 30:		jnc fread$13
 32:	
 
-fread$8:	; Deref £temporary1109 -> stream stream 21
+fread$8:	; Deref £temporary1111 -> stream stream 21
 33:		mov si, [bp + 12]
 35:	
 
@@ -1990,7 +1990,7 @@ fread$9:	; Assign errno 14
 36:		mov word [errno], 14
 38:	
 
-fread$10:	; Assign £temporary1109 -> stream errno
+fread$10:	; Assign £temporary1111 -> stream errno
 39:		mov ax, [errno]
 40:		mov [si + 21], ax
 42:	
@@ -2006,14 +2006,14 @@ fread$12:	; Return 0
 49:		jmp ax
 51:	
 
-fread$13:	; InspectRegister £temporary1110 ax
+fread$13:	; InspectRegister £temporary1112 ax
 53:	
 
-fread$14:	; SetReturnValue £temporary1110
+fread$14:	; SetReturnValue £temporary1112
 54:		mov bx, ax
 56:	
 
-fread$15:	; Return £temporary1110
+fread$15:	; Return £temporary1112
 57:		mov ax, [bp]
 58:		mov di, [bp + 4]
 59:		mov bp, [bp + 2]
@@ -2023,21 +2023,21 @@ fread$15:	; Return £temporary1110
 fread$16:	; FunctionEnd fread
 1:	
 
-fwrite:	; Deref £temporary1112 -> stream stream 2
+fwrite:	; Deref £temporary1114 -> stream stream 2
 2:		mov si, [bp + 12]
 4:	
 
-fwrite$1:	; AssignRegister bx £temporary1112 -> stream
+fwrite$1:	; AssignRegister bx £temporary1114 -> stream
 5:		mov bx, [si + 2]
 7:	
 
-fwrite$2:	; SignedMultiply £temporary1114 size nobj
+fwrite$2:	; SignedMultiply £temporary1116 size nobj
 8:		mov ax, [bp + 8]
 10:		xor dx, dx
 11:		imul word [bp + 10]
 17:	
 
-fwrite$3:	; AssignRegister cx £temporary1114
+fwrite$3:	; AssignRegister cx £temporary1116
 18:		mov cx, ax
 20:	
 
@@ -2057,7 +2057,7 @@ fwrite$7:	; NotCarry 13
 30:		jnc fwrite$13
 32:	
 
-fwrite$8:	; Deref £temporary1118 -> stream stream 21
+fwrite$8:	; Deref £temporary1120 -> stream stream 21
 33:		mov si, [bp + 12]
 35:	
 
@@ -2065,7 +2065,7 @@ fwrite$9:	; Assign errno 13
 36:		mov word [errno], 13
 38:	
 
-fwrite$10:	; Assign £temporary1118 -> stream errno
+fwrite$10:	; Assign £temporary1120 -> stream errno
 39:		mov ax, [errno]
 40:		mov [si + 21], ax
 42:	
@@ -2081,14 +2081,14 @@ fwrite$12:	; Return 0
 49:		jmp ax
 51:	
 
-fwrite$13:	; InspectRegister £temporary1119 ax
+fwrite$13:	; InspectRegister £temporary1121 ax
 53:	
 
-fwrite$14:	; SetReturnValue £temporary1119
+fwrite$14:	; SetReturnValue £temporary1121
 54:		mov bx, ax
 56:	
 
-fwrite$15:	; Return £temporary1119
+fwrite$15:	; Return £temporary1121
 57:		mov ax, [bp]
 58:		mov di, [bp + 4]
 59:		mov bp, [bp + 2]
@@ -2098,7 +2098,7 @@ fwrite$15:	; Return £temporary1119
 fwrite$16:	; FunctionEnd fwrite
 1:	
 
-fseek:	; IntegralToIntegral £temporary1121 origin
+fseek:	; IntegralToIntegral £temporary1123 origin
 2:		mov ax, [bp + 10]
 5:		cmp ax, 0
 6:		jge fseek$1
@@ -2106,18 +2106,18 @@ fseek:	; IntegralToIntegral £temporary1121 origin
 9:		neg al
 11:	
 
-fseek$1:	; AssignRegister al £temporary1121
+fseek$1:	; AssignRegister al £temporary1123
 13:	
 
 fseek$2:	; AssignRegister ah 66
 14:		mov ah, 66
 16:	
 
-fseek$3:	; Deref £temporary1124 -> stream stream 2
+fseek$3:	; Deref £temporary1126 -> stream stream 2
 17:		mov si, [bp + 6]
 19:	
 
-fseek$4:	; AssignRegister bx £temporary1124 -> stream
+fseek$4:	; AssignRegister bx £temporary1126 -> stream
 20:		mov bx, [si + 2]
 22:	
 
@@ -2125,11 +2125,11 @@ fseek$5:	; AssignRegister cx 0
 23:		mov cx, 0
 25:	
 
-fseek$6:	; IntegralToIntegral £temporary1127 offset
+fseek$6:	; IntegralToIntegral £temporary1129 offset
 26:		mov dx, [bp + 8]
 29:	
 
-fseek$7:	; AssignRegister dx £temporary1127
+fseek$7:	; AssignRegister dx £temporary1129
 31:	
 
 fseek$8:	; Interrupt 33
@@ -2140,37 +2140,37 @@ fseek$9:	; Carry 16
 35:		jc fseek$16
 37:	
 
-fseek$10:	; Deref £temporary1130 -> stream stream 23
+fseek$10:	; Deref £temporary1132 -> stream stream 23
 38:		mov si, [bp + 6]
 40:	
 
-fseek$11:	; InspectRegister £temporary1131 ax
+fseek$11:	; InspectRegister £temporary1133 ax
 42:	
 
-fseek$12:	; Assign £temporary1130 -> stream £temporary1131
+fseek$12:	; Assign £temporary1132 -> stream £temporary1133
 43:		mov [si + 23], ax
 45:	
 
-fseek$13:	; Deref £temporary1132 -> stream stream 23
+fseek$13:	; Deref £temporary1134 -> stream stream 23
 46:		mov si, [bp + 6]
 48:	
 
-fseek$14:	; SetReturnValue £temporary1132 -> stream
+fseek$14:	; SetReturnValue £temporary1134 -> stream
 49:		mov bx, [si + 23]
 51:	
 
-fseek$15:	; Return £temporary1132 -> stream
+fseek$15:	; Return £temporary1134 -> stream
 52:		mov ax, [bp]
 53:		mov di, [bp + 4]
 54:		mov bp, [bp + 2]
 55:		jmp ax
 57:	
 
-fseek$16:	; Deref £temporary1133 -> stream stream 21
+fseek$16:	; Deref £temporary1135 -> stream stream 21
 58:		mov si, [bp + 6]
 60:	
 
-fseek$17:	; Assign £temporary1133 -> stream 15
+fseek$17:	; Assign £temporary1135 -> stream 15
 61:		mov word [si + 21], 15
 63:	
 
@@ -2214,13 +2214,13 @@ ftell$4:	; Call 8 fseek 0
 ftell$5:	; PostCall 8
 21:	
 
-ftell$6:	; GetReturnValue £temporary1134
+ftell$6:	; GetReturnValue £temporary1136
 26:	
 
-ftell$7:	; SetReturnValue £temporary1134
+ftell$7:	; SetReturnValue £temporary1136
 28:	
 
-ftell$8:	; Return £temporary1134
+ftell$8:	; Return £temporary1136
 29:		mov ax, [bp]
 30:		mov di, [bp + 4]
 31:		mov bp, [bp + 2]
@@ -2266,7 +2266,7 @@ rewind$6:	; Return 0
 rewind$7:	; FunctionEnd rewind
 1:	
 
-fgetpos:	; Deref £temporary1143 -> ptr ptr 0
+fgetpos:	; Deref £temporary1145 -> ptr ptr 0
 2:		mov si, [bp + 8]
 4:	
 
@@ -2290,13 +2290,13 @@ fgetpos$4:	; PostCall 10
 18:		mov si, [bp + 10]
 20:	
 
-fgetpos$5:	; GetReturnValue £temporary1144
+fgetpos$5:	; GetReturnValue £temporary1146
 25:	
 
-fgetpos$6:	; IntegralToIntegral £temporary1145 £temporary1144
+fgetpos$6:	; IntegralToIntegral £temporary1147 £temporary1146
 28:	
 
-fgetpos$7:	; Assign £temporary1143 -> ptr £temporary1145
+fgetpos$7:	; Assign £temporary1145 -> ptr £temporary1147
 29:		mov [si], bx
 31:	
 
@@ -2322,11 +2322,11 @@ fsetpos$1:	; Parameter 10 stream 6
 5:		mov [bp + 16], ax
 7:	
 
-fsetpos$2:	; Deref £temporary1147 -> ptr ptr 0
+fsetpos$2:	; Deref £temporary1149 -> ptr ptr 0
 8:		mov si, [bp + 8]
 10:	
 
-fsetpos$3:	; Parameter 10 £temporary1147 -> ptr 8
+fsetpos$3:	; Parameter 10 £temporary1149 -> ptr 8
 11:		mov ax, [si]
 12:		mov [bp + 18], ax
 14:	
@@ -2345,16 +2345,16 @@ fsetpos$5:	; Call 10 fseek 0
 fsetpos$6:	; PostCall 10
 25:	
 
-fsetpos$7:	; GetReturnValue £temporary1148
+fsetpos$7:	; GetReturnValue £temporary1150
 30:	
 
-fsetpos$8:	; IntegralToIntegral £temporary1149 £temporary1148
+fsetpos$8:	; IntegralToIntegral £temporary1151 £temporary1150
 33:	
 
-fsetpos$9:	; SetReturnValue £temporary1149
+fsetpos$9:	; SetReturnValue £temporary1151
 35:	
 
-fsetpos$10:	; Return £temporary1149
+fsetpos$10:	; Return £temporary1151
 36:		mov ax, [bp]
 37:		mov di, [bp + 4]
 38:		mov bp, [bp + 2]
@@ -2364,7 +2364,7 @@ fsetpos$10:	; Return £temporary1149
 fsetpos$11:	; FunctionEnd fsetpos
 1:	
 
-clearerr:	; Deref £temporary1153 -> stream stream 21
+clearerr:	; Deref £temporary1155 -> stream stream 21
 2:		mov si, [bp + 6]
 4:	
 
@@ -2372,7 +2372,7 @@ clearerr$1:	; Assign errno 0
 5:		mov word [errno], 0
 7:	
 
-clearerr$2:	; Assign £temporary1153 -> stream errno
+clearerr$2:	; Assign £temporary1155 -> stream errno
 8:		mov ax, [errno]
 9:		mov [si + 21], ax
 11:	
@@ -2413,14 +2413,14 @@ feof$4:	; Call 8 fseek 0
 feof$5:	; PostCall 8
 21:	
 
-feof$6:	; GetReturnValue £temporary1154
+feof$6:	; GetReturnValue £temporary1156
 26:	
 
-feof$7:	; IntegralToIntegral £temporary1155 £temporary1154
+feof$7:	; IntegralToIntegral £temporary1157 £temporary1156
 28:		and ebx, 65535
 30:	
 
-feof$8:	; Assign currPosition £temporary1155
+feof$8:	; Assign currPosition £temporary1157
 31:		mov [bp + 8], ebx
 33:	
 
@@ -2450,14 +2450,14 @@ feof$13:	; Call 12 fseek 0
 feof$14:	; PostCall 12
 53:	
 
-feof$15:	; GetReturnValue £temporary1156
+feof$15:	; GetReturnValue £temporary1158
 58:	
 
-feof$16:	; IntegralToIntegral £temporary1157 £temporary1156
+feof$16:	; IntegralToIntegral £temporary1159 £temporary1158
 60:		and ebx, 65535
 62:	
 
-feof$17:	; Assign lastPosition £temporary1157
+feof$17:	; Assign lastPosition £temporary1159
 63:		mov [bp + 12], ebx
 65:	
 
@@ -2469,11 +2469,11 @@ feof$19:	; Parameter 16 stream 6
 69:		mov [bp + 22], ax
 71:	
 
-feof$20:	; IntegralToIntegral £temporary1158 currPosition
+feof$20:	; IntegralToIntegral £temporary1160 currPosition
 72:		mov eax, [bp + 8]
 75:	
 
-feof$21:	; Parameter 16 £temporary1158 8
+feof$21:	; Parameter 16 £temporary1160 8
 76:		mov [bp + 24], ax
 78:	
 
@@ -2497,7 +2497,7 @@ feof$25:	; NotEqual 28 currPosition lastPosition
 92:		jne feof$28
 94:	
 
-feof$26:	; Assign £temporary1161 1
+feof$26:	; Assign £temporary1163 1
 95:		mov ax, 1
 97:	
 
@@ -2505,11 +2505,11 @@ feof$27:	; Goto 29
 98:		jmp feof$29
 100:	
 
-feof$28:	; Assign £temporary1161 0
+feof$28:	; Assign £temporary1163 0
 101:		mov ax, 0
 103:	
 
-feof$29:	; Assign endOfFile £temporary1161
+feof$29:	; Assign endOfFile £temporary1163
 104:		mov [bp + 16], ax
 106:	
 
@@ -2527,15 +2527,15 @@ feof$31:	; Return endOfFile
 feof$32:	; FunctionEnd feof
 1:	
 
-ferror:	; Deref £temporary1171 -> stream stream 21
+ferror:	; Deref £temporary1173 -> stream stream 21
 2:		mov si, [bp + 6]
 4:	
 
-ferror$1:	; SetReturnValue £temporary1171 -> stream
+ferror$1:	; SetReturnValue £temporary1173 -> stream
 5:		mov bx, [si + 21]
 7:	
 
-ferror$2:	; Return £temporary1171 -> stream
+ferror$2:	; Return £temporary1173 -> stream
 8:		mov ax, [bp]
 9:		mov di, [bp + 4]
 10:		mov bp, [bp + 2]
@@ -2575,10 +2575,10 @@ perror$5:	; Call 8 strerror 10
 perror$6:	; PostCall 8
 24:	
 
-perror$7:	; GetReturnValue £temporary1172
+perror$7:	; GetReturnValue £temporary1174
 29:	
 
-perror$8:	; Parameter 8 £temporary1172 10
+perror$8:	; Parameter 8 £temporary1174 10
 30:		mov [bp + 18], bx
 32:	
 

@@ -1,0 +1,41 @@
+0: NotEqual Dereference £temporary353 -> g_currStructPtr g_currStructPtr 0 g_currStructPtr 0
+1: Goto Empty
+2: Dereference £temporary353 -> g_currStructPtr g_currStructPtr 0
+3: Assign £temporary354 £temporary353 -> g_currStructPtr
+4: Goto Empty
+5: Empty
+6: Assign £temporary354 0
+7: Empty
+8: Assign oldName £temporary354
+9: Assign g_currStructPtr 0
+10: NotEqual Assign index 0 newName 0
+11: Goto Return oldName
+12: Assign index 0
+13: Empty
+14: SignedLessThan PreCall 14 index sSize
+15: Goto Return oldName
+16: PreCall 14
+17: Parameter 20 pointer newName
+18: UnsignedMultiply £temporary359 index 4
+19: BinaryAdd £temporary360 sArray £temporary359
+20: Dereference £temporary358 -> £temporary360 £temporary360 0
+21: Parameter 22 pointer £temporary358.name -> £temporary360
+22: Call 14 strcmp 0
+23: PostCall 14
+24: GetReturnValue £temporary361
+25: Equal UnsignedMultiply £temporary364 index 4 £temporary361 0
+26: Goto Empty
+27: UnsignedMultiply £temporary364 index 4
+28: BinaryAdd £temporary365 sArray £temporary364
+29: Dereference £temporary363 -> £temporary365 £temporary365 0
+30: Address £temporary366 £temporary363 -> £temporary365
+31: Assign g_currStructPtr £temporary366
+32: Goto Return oldName
+33: Goto Empty
+34: Empty
+35: BinaryAdd index index 1
+36: Goto Empty
+37: Goto Return oldName
+38: Return oldName
+39: Empty
+40: FunctionEnd setlocale

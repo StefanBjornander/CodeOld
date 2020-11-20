@@ -1,0 +1,25 @@
+0: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 18 pointer target
+2: Call 12 strlen 0
+3: PostCall 12
+4: GetReturnValue £temporary3012
+5: Assign targetLength £temporary3012
+6: Assign index 0
+7: BinaryAdd £temporary3015 source index
+8: Dereference £temporary3013 -> £temporary3015 £temporary3015 0
+9: Equal 18 £temporary3013 -> £temporary3015 0
+10: BinaryAdd £temporary3018 targetLength index
+11: BinaryAdd £temporary3021 target £temporary3018
+12: Dereference £temporary3019 -> £temporary3021 £temporary3021 0
+13: BinaryAdd £temporary3024 source index
+14: Dereference £temporary3022 -> £temporary3024 £temporary3024 0
+15: Assign £temporary3019 -> £temporary3021 £temporary3022 -> £temporary3024
+16: BinaryAdd index index 1
+17: Goto 7
+18: BinaryAdd £temporary3025 targetLength index
+19: BinaryAdd £temporary3028 target £temporary3025
+20: Dereference £temporary3026 -> £temporary3028 £temporary3028 0
+21: Assign £temporary3026 -> £temporary3028 0
+22: SetReturnValue
+23: Return target
+24: FunctionEnd strcat

@@ -1,0 +1,11 @@
+0: PreCall 14
+1: Parameter 20 pointer "ldiv_t quot %li rem %li\n"
+2: Parameter 22 signed long int ld.quot
+3: Parameter 26 signed long int ld.rem
+4: Call 14 printf 8
+5: PostCall 14
+6: BinarySubtract ld.quot ld.quot 1
+7: BinarySubtract ld.rem ld.rem 1
+8: Return ld
+9: Empty
+10: FunctionEnd print_ldiv

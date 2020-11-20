@@ -1,0 +1,11 @@
+0: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 14 string_ldiv_t20quot2025li20rem2025li0A# 6
+2: Parameter 14 ld$quot 8
+3: Parameter 14 ld$rem 12
+4: Call 14 printf 0
+5: PostCall 14
+6: Decrement ld$quot
+7: Decrement ld$rem
+8: SetReturnValue ld
+9: Return ld
+10: FunctionEnd print_ldiv

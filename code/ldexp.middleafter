@@ -1,0 +1,13 @@
+0: PushFloat x
+1: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
+2: PushFloat 2
+3: Parameter 22 double 2
+4: IntegralToFloating £temporary437 n
+5: Parameter 30 double £temporary437
+6: Call 16 pow 0
+7: PostCall 16
+8: GetReturnValue £temporary438
+9: SignedMultiply £temporary439 x £temporary438
+10: SetReturnValue
+11: Return £temporary439
+12: FunctionEnd ldexp

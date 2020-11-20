@@ -1,0 +1,12 @@
+0: Assign g_inStatus 0
+1: IntegralToIntegral £temporary1468 inStream
+2: Assign g_inDevice £temporary1468
+3: PreCall 12
+4: Parameter 18 pointer format
+5: Parameter 20 pointer arg_list
+6: Call 12 scanFormat 0
+7: PostCall 12
+8: GetReturnValue £temporary1469
+9: Return £temporary1469
+10: Empty
+11: FunctionEnd vfscanf

@@ -1,0 +1,32 @@
+0: Equal Assign index 0 stream 0
+1: Goto Return 0
+2: Assign index 0
+3: Empty
+4: SignedLessThan UnsignedMultiply £temporary767 index 29 index 20
+5: Goto Return 0
+6: UnsignedMultiply £temporary767 index 29
+7: BinaryAdd £temporary768 g_fileArray £temporary767
+8: Dereference £temporary766 -> £temporary768 £temporary768 0
+9: NotEqual PreCall 10 £temporary766.open -> £temporary768 0
+10: Goto Empty
+11: PreCall 10
+12: UnsignedMultiply £temporary770 index 29
+13: BinaryAdd £temporary771 g_fileArray £temporary770
+14: Dereference £temporary769 -> £temporary771 £temporary771 0
+15: Address £temporary772 £temporary769 -> £temporary771
+16: Parameter 16 pointer £temporary772
+17: Call 10 fflush 0
+18: PostCall 10
+19: GetReturnValue £temporary773
+20: Equal Return -1 £temporary773 -1
+21: Goto Empty
+22: Return -1
+23: Goto Empty
+24: Goto Empty
+25: Empty
+26: BinaryAdd index index 1
+27: Goto Empty
+28: Goto Return 0
+29: Return 0
+30: Empty
+31: FunctionEnd fflush

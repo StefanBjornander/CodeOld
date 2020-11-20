@@ -1,0 +1,26 @@
+0: PreCall 14
+1: PushFloat x
+2: Parameter 20 double x
+3: Call 14 cos 0
+4: PostCall 14
+5: GetReturnValue £temporary537
+6: PopFloat cos_of_x
+7: PushFloat cos_of_x
+8: PushFloat 0
+9: NotEqual PreCall 22 cos_of_x 0
+10: Goto Assign errno 6
+11: PreCall 22
+12: PushFloat x
+13: Parameter 28 double x
+14: Call 22 sin 0
+15: PostCall 22
+16: GetReturnValue £temporary539
+17: PushFloat cos_of_x
+18: SignedDivide £temporary540 £temporary539 cos_of_x
+19: Return £temporary540
+20: Goto Empty
+21: Assign errno 6
+22: PushFloat 0
+23: Return 0
+24: Empty
+25: FunctionEnd tan

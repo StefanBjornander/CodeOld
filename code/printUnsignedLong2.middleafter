@@ -1,0 +1,43 @@
+0: Equal 5 plus 0
+1: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 22 43 6
+3: Call 22 printChar 0
+4: PostCall 22
+5: Equal 10 space 0
+6: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+7: Parameter 22 32 6
+8: Call 22 printChar 0
+9: PostCall 22
+10: Equal 29 grid 0
+11: NotEqual 16 base 8
+12: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+13: Parameter 22 48 6
+14: Call 22 printChar 0
+15: PostCall 22
+16: NotEqual 29 base 16
+17: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+18: Parameter 22 48 6
+19: Call 22 printChar 0
+20: PostCall 22
+21: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+22: Equal 25 capital 0
+23: Assign £temporary1895 88
+24: Goto 26
+25: Assign £temporary1895 120
+26: Parameter 22 £temporary1895 6
+27: Call 22 printChar 0
+28: PostCall 22
+29: NotEqual 35 unsignedValue 0
+30: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+31: Parameter 22 48 6
+32: Call 22 printChar 0
+33: PostCall 22
+34: Goto 41
+35: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+36: Parameter 22 unsignedValue 6
+37: Parameter 22 base 10
+38: Parameter 22 capital 14
+39: Call 22 printUnsignedLongRec 0
+40: PostCall 22
+41: Return 0
+42: FunctionEnd printUnsignedLong

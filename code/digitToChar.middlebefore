@@ -1,0 +1,19 @@
+0: SignedLessThan BinaryAdd £temporary1550 48 digit digit 10
+1: Goto NotEqual BinarySubtract £temporary1552 digit 10 capital 0
+2: BinaryAdd £temporary1550 48 digit
+3: IntegralToIntegral £temporary1551 £temporary1550
+4: Return £temporary1551
+5: Goto Empty
+6: NotEqual BinarySubtract £temporary1552 digit 10 capital 0
+7: Goto BinarySubtract £temporary1555 digit 10
+8: BinarySubtract £temporary1552 digit 10
+9: BinaryAdd £temporary1553 65 £temporary1552
+10: IntegralToIntegral £temporary1554 £temporary1553
+11: Return £temporary1554
+12: Goto Empty
+13: BinarySubtract £temporary1555 digit 10
+14: BinaryAdd £temporary1556 97 £temporary1555
+15: IntegralToIntegral £temporary1557 £temporary1556
+16: Return £temporary1557
+17: Empty
+18: FunctionEnd digitToChar

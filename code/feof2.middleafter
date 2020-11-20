@@ -1,0 +1,33 @@
+0: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 8 stream 6
+2: Parameter 8 0 8
+3: Parameter 8 1 10
+4: Call 8 fseek 0
+5: PostCall 8
+6: GetReturnValue £temporary1156
+7: IntegralToIntegral £temporary1157 £temporary1156
+8: Assign currPosition £temporary1157
+9: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+10: Parameter 12 stream 6
+11: Parameter 12 0 8
+12: Parameter 12 2 10
+13: Call 12 fseek 0
+14: PostCall 12
+15: GetReturnValue £temporary1158
+16: IntegralToIntegral £temporary1159 £temporary1158
+17: Assign lastPosition £temporary1159
+18: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+19: Parameter 16 stream 6
+20: IntegralToIntegral £temporary1160 currPosition
+21: Parameter 16 £temporary1160 8
+22: Parameter 16 0 10
+23: Call 16 fseek 0
+24: PostCall 16
+25: NotEqual 28 currPosition lastPosition
+26: Assign £temporary1163 1
+27: Goto 29
+28: Assign £temporary1163 0
+29: Assign endOfFile £temporary1163
+30: SetReturnValue endOfFile
+31: Return endOfFile
+32: FunctionEnd feof

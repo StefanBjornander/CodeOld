@@ -1,0 +1,24 @@
+0: Assign index 0
+1: SignedGreaterThanEqual 21 index 20
+2: UnsignedMultiply £temporary719 index 29
+3: BinaryAdd £temporary720 g_fileArray £temporary719
+4: Dereference £temporary718 -> £temporary720 £temporary720 0
+5: NotEqual 19 £temporary718.open -> £temporary720 0
+6: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+7: Parameter 18 pointer name
+8: Parameter 20 pointer mode
+9: UnsignedMultiply £temporary724 index 29
+10: BinaryAdd £temporary725 g_fileArray £temporary724
+11: Dereference £temporary723 -> £temporary725 £temporary725 0
+12: Address £temporary726 £temporary723 -> £temporary725
+13: Parameter 22 pointer £temporary726
+14: Call 12 freopen 0
+15: PostCall 12
+16: GetReturnValue £temporary727
+17: SetReturnValue
+18: Return £temporary727
+19: BinaryAdd index index 1
+20: Goto 1
+21: SetReturnValue
+22: Return 0
+23: FunctionEnd fopen

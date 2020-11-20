@@ -34,10 +34,10 @@ string_test$6:	; Call 212 strlen 10
 string_test$7:	; PostCall 212
 27:	
 
-string_test$8:	; GetReturnValue £temporary4501
+string_test$8:	; GetReturnValue £temporary4503
 32:	
 
-string_test$9:	; Parameter 212 £temporary4501 10
+string_test$9:	; Parameter 212 £temporary4503 10
 33:		mov [bp + 222], bx
 35:	
 
@@ -103,12 +103,12 @@ string_test$21:	; Call 212 strncpy 0
 string_test$22:	; PostCall 212
 84:	
 
-string_test$23:	; Deref £temporary4505 -> u u 5
+string_test$23:	; Deref £temporary4507 -> u u 5
 85:		mov si, bp
 86:		add si, 110
 88:	
 
-string_test$24:	; Assign £temporary4505 -> u 0
+string_test$24:	; Assign £temporary4507 -> u 0
 89:		mov byte [si + 5], 0
 91:	
 
@@ -181,10 +181,10 @@ string_test$38:	; Call 212 strlen 0
 string_test$39:	; PostCall 212
 145:	
 
-string_test$40:	; GetReturnValue £temporary4508
+string_test$40:	; GetReturnValue £temporary4510
 150:	
 
-string_test$41:	; Assign i £temporary4508
+string_test$41:	; Assign i £temporary4510
 151:		mov [bp + 6], bx
 153:	
 
@@ -214,21 +214,21 @@ string_test$46:	; Call 212 strncat 0
 string_test$47:	; PostCall 212
 173:	
 
-string_test$48:	; BinaryAdd £temporary4510 i 2
+string_test$48:	; BinaryAdd £temporary4512 i 2
 174:		mov ax, [bp + 6]
 175:		add ax, 2
 177:	
 
-string_test$49:	; BinaryAdd £temporary4512 u £temporary4510
+string_test$49:	; BinaryAdd £temporary4514 u £temporary4512
 178:		mov si, bp
 179:		add si, 110
 180:		add si, ax
 182:	
 
-string_test$50:	; Deref £temporary4511 -> £temporary4512 £temporary4512 0
+string_test$50:	; Deref £temporary4513 -> £temporary4514 £temporary4514 0
 184:	
 
-string_test$51:	; Assign £temporary4511 -> £temporary4512 0
+string_test$51:	; Assign £temporary4513 -> £temporary4514 0
 185:		mov byte [si], 0
 187:	
 
@@ -291,10 +291,10 @@ string_test$63:	; Call 212 strcmp 8
 string_test$64:	; PostCall 212
 233:	
 
-string_test$65:	; GetReturnValue £temporary4514
+string_test$65:	; GetReturnValue £temporary4516
 238:	
 
-string_test$66:	; Parameter 212 £temporary4514 8
+string_test$66:	; Parameter 212 £temporary4516 8
 239:		mov [bp + 220], bx
 241:	
 
@@ -344,10 +344,10 @@ string_test$75:	; Call 212 strncmp 8
 string_test$76:	; PostCall 212
 277:	
 
-string_test$77:	; GetReturnValue £temporary4516
+string_test$77:	; GetReturnValue £temporary4518
 282:	
 
-string_test$78:	; Parameter 212 £temporary4516 8
+string_test$78:	; Parameter 212 £temporary4518 8
 283:		mov [bp + 220], bx
 285:	
 
@@ -385,10 +385,10 @@ string_test$84:	; Call 212 strchr 0
 string_test$85:	; PostCall 212
 312:	
 
-string_test$86:	; GetReturnValue £temporary4518
+string_test$86:	; GetReturnValue £temporary4520
 317:	
 
-string_test$87:	; Assign p £temporary4518
+string_test$87:	; Assign p £temporary4520
 318:		mov [bp + 210], bx
 320:	
 
@@ -404,7 +404,7 @@ string_test$90:	; Equal 93 p 0
 327:		je string_test$93
 329:	
 
-string_test$91:	; BinarySubtract £temporary4524 p s
+string_test$91:	; BinarySubtract £temporary4526 p s
 330:		mov ax, [bp + 210]
 331:		sub ax, [bp + 8]
 333:	
@@ -413,11 +413,11 @@ string_test$92:	; Goto 94
 334:		jmp string_test$94
 336:	
 
-string_test$93:	; Assign £temporary4524 -1
+string_test$93:	; Assign £temporary4526 -1
 337:		mov ax, -1
 339:	
 
-string_test$94:	; Parameter 212 £temporary4524 8
+string_test$94:	; Parameter 212 £temporary4526 8
 340:		mov [bp + 220], ax
 342:	
 
@@ -455,10 +455,10 @@ string_test$100:	; Call 212 strrchr 0
 string_test$101:	; PostCall 212
 369:	
 
-string_test$102:	; GetReturnValue £temporary4526
+string_test$102:	; GetReturnValue £temporary4528
 374:	
 
-string_test$103:	; Assign p £temporary4526
+string_test$103:	; Assign p £temporary4528
 375:		mov [bp + 210], bx
 377:	
 
@@ -474,7 +474,7 @@ string_test$106:	; Equal 109 p 0
 384:		je string_test$109
 386:	
 
-string_test$107:	; BinarySubtract £temporary4532 p s
+string_test$107:	; BinarySubtract £temporary4534 p s
 387:		mov ax, [bp + 210]
 388:		sub ax, [bp + 8]
 390:	
@@ -483,11 +483,11 @@ string_test$108:	; Goto 110
 391:		jmp string_test$110
 393:	
 
-string_test$109:	; Assign £temporary4532 -1
+string_test$109:	; Assign £temporary4534 -1
 394:		mov ax, -1
 396:	
 
-string_test$110:	; Parameter 212 £temporary4532 8
+string_test$110:	; Parameter 212 £temporary4534 8
 397:		mov [bp + 220], ax
 399:	
 
@@ -525,10 +525,10 @@ string_test$116:	; Call 212 strchr 0
 string_test$117:	; PostCall 212
 426:	
 
-string_test$118:	; GetReturnValue £temporary4534
+string_test$118:	; GetReturnValue £temporary4536
 431:	
 
-string_test$119:	; Assign p £temporary4534
+string_test$119:	; Assign p £temporary4536
 432:		mov [bp + 210], bx
 434:	
 
@@ -544,7 +544,7 @@ string_test$122:	; Equal 125 p 0
 441:		je string_test$125
 443:	
 
-string_test$123:	; BinarySubtract £temporary4540 p s
+string_test$123:	; BinarySubtract £temporary4542 p s
 444:		mov ax, [bp + 210]
 445:		sub ax, [bp + 8]
 447:	
@@ -553,11 +553,11 @@ string_test$124:	; Goto 126
 448:		jmp string_test$126
 450:	
 
-string_test$125:	; Assign £temporary4540 -1
+string_test$125:	; Assign £temporary4542 -1
 451:		mov ax, -1
 453:	
 
-string_test$126:	; Parameter 212 £temporary4540 8
+string_test$126:	; Parameter 212 £temporary4542 8
 454:		mov [bp + 220], ax
 456:	
 
@@ -595,10 +595,10 @@ string_test$132:	; Call 212 strrchr 0
 string_test$133:	; PostCall 212
 483:	
 
-string_test$134:	; GetReturnValue £temporary4542
+string_test$134:	; GetReturnValue £temporary4544
 488:	
 
-string_test$135:	; Assign p £temporary4542
+string_test$135:	; Assign p £temporary4544
 489:		mov [bp + 210], bx
 491:	
 
@@ -614,7 +614,7 @@ string_test$138:	; Equal 141 p 0
 498:		je string_test$141
 500:	
 
-string_test$139:	; BinarySubtract £temporary4548 p s
+string_test$139:	; BinarySubtract £temporary4550 p s
 501:		mov ax, [bp + 210]
 502:		sub ax, [bp + 8]
 504:	
@@ -623,11 +623,11 @@ string_test$140:	; Goto 142
 505:		jmp string_test$142
 507:	
 
-string_test$141:	; Assign £temporary4548 -1
+string_test$141:	; Assign £temporary4550 -1
 508:		mov ax, -1
 510:	
 
-string_test$142:	; Parameter 212 £temporary4548 8
+string_test$142:	; Parameter 212 £temporary4550 8
 511:		mov [bp + 220], ax
 513:	
 
@@ -721,12 +721,12 @@ string_test$161:	; Call 212 memset 0
 string_test$162:	; PostCall 212
 583:	
 
-string_test$163:	; Deref £temporary4553 -> u u 19
+string_test$163:	; Deref £temporary4555 -> u u 19
 584:		mov si, bp
 585:		add si, 110
 587:	
 
-string_test$164:	; Assign £temporary4553 -> u 0
+string_test$164:	; Assign £temporary4555 -> u 0
 588:		mov byte [si + 19], 0
 590:	
 
@@ -790,10 +790,10 @@ string_test$176:	; Call 212 memchr 0
 string_test$177:	; PostCall 212
 637:	
 
-string_test$178:	; GetReturnValue £temporary4555
+string_test$178:	; GetReturnValue £temporary4557
 642:	
 
-string_test$179:	; Assign p £temporary4555
+string_test$179:	; Assign p £temporary4557
 643:		mov [bp + 210], bx
 645:	
 
@@ -809,7 +809,7 @@ string_test$182:	; Equal 185 p 0
 652:		je string_test$185
 654:	
 
-string_test$183:	; BinarySubtract £temporary4561 p s
+string_test$183:	; BinarySubtract £temporary4563 p s
 655:		mov ax, [bp + 210]
 656:		sub ax, [bp + 8]
 658:	
@@ -818,11 +818,11 @@ string_test$184:	; Goto 186
 659:		jmp string_test$186
 661:	
 
-string_test$185:	; Assign £temporary4561 -1
+string_test$185:	; Assign £temporary4563 -1
 662:		mov ax, -1
 664:	
 
-string_test$186:	; Parameter 212 £temporary4561 8
+string_test$186:	; Parameter 212 £temporary4563 8
 665:		mov [bp + 220], ax
 667:	
 
@@ -864,10 +864,10 @@ string_test$193:	; Call 212 memchr 0
 string_test$194:	; PostCall 212
 697:	
 
-string_test$195:	; GetReturnValue £temporary4563
+string_test$195:	; GetReturnValue £temporary4565
 702:	
 
-string_test$196:	; Assign p £temporary4563
+string_test$196:	; Assign p £temporary4565
 703:		mov [bp + 210], bx
 705:	
 
@@ -883,7 +883,7 @@ string_test$199:	; Equal 202 p 0
 712:		je string_test$202
 714:	
 
-string_test$200:	; BinarySubtract £temporary4569 p s
+string_test$200:	; BinarySubtract £temporary4571 p s
 715:		mov ax, [bp + 210]
 716:		sub ax, [bp + 8]
 718:	
@@ -892,11 +892,11 @@ string_test$201:	; Goto 203
 719:		jmp string_test$203
 721:	
 
-string_test$202:	; Assign £temporary4569 -1
+string_test$202:	; Assign £temporary4571 -1
 722:		mov ax, -1
 724:	
 
-string_test$203:	; Parameter 212 £temporary4569 8
+string_test$203:	; Parameter 212 £temporary4571 8
 725:		mov [bp + 220], ax
 727:	
 
@@ -946,10 +946,10 @@ string_test$212:	; Call 212 memcmp 8
 string_test$213:	; PostCall 212
 763:	
 
-string_test$214:	; GetReturnValue £temporary4571
+string_test$214:	; GetReturnValue £temporary4573
 768:	
 
-string_test$215:	; Parameter 212 £temporary4571 8
+string_test$215:	; Parameter 212 £temporary4573 8
 769:		mov [bp + 220], bx
 771:	
 
@@ -994,10 +994,10 @@ string_test$223:	; Call 212 strspn 8
 string_test$224:	; PostCall 212
 803:	
 
-string_test$225:	; GetReturnValue £temporary4573
+string_test$225:	; GetReturnValue £temporary4575
 808:	
 
-string_test$226:	; Parameter 212 £temporary4573 8
+string_test$226:	; Parameter 212 £temporary4575 8
 809:		mov [bp + 220], bx
 811:	
 
@@ -1042,10 +1042,10 @@ string_test$234:	; Call 212 strcspn 8
 string_test$235:	; PostCall 212
 843:	
 
-string_test$236:	; GetReturnValue £temporary4575
+string_test$236:	; GetReturnValue £temporary4577
 848:	
 
-string_test$237:	; Parameter 212 £temporary4575 8
+string_test$237:	; Parameter 212 £temporary4577 8
 849:		mov [bp + 220], bx
 851:	
 
@@ -1086,10 +1086,10 @@ string_test$244:	; Call 212 strerror 8
 string_test$245:	; PostCall 212
 880:	
 
-string_test$246:	; GetReturnValue £temporary4577
+string_test$246:	; GetReturnValue £temporary4579
 885:	
 
-string_test$247:	; Parameter 212 £temporary4577 8
+string_test$247:	; Parameter 212 £temporary4579 8
 886:		mov [bp + 220], bx
 888:	
 
@@ -1127,10 +1127,10 @@ string_test$253:	; Call 212 strtok 0
 string_test$254:	; PostCall 212
 915:	
 
-string_test$255:	; GetReturnValue £temporary4579
+string_test$255:	; GetReturnValue £temporary4581
 920:	
 
-string_test$256:	; Assign p £temporary4579
+string_test$256:	; Assign p £temporary4581
 921:		mov [bp + 210], bx
 923:	
 
@@ -1184,10 +1184,10 @@ string_test$266:	; Call 212 strtok 0
 string_test$267:	; PostCall 212
 962:	
 
-string_test$268:	; GetReturnValue £temporary4582
+string_test$268:	; GetReturnValue £temporary4584
 967:	
 
-string_test$269:	; Assign p £temporary4582
+string_test$269:	; Assign p £temporary4584
 968:		mov [bp + 210], bx
 970:	
 

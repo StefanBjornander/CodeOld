@@ -1,0 +1,14 @@
+0: Address £temporary1455 format
+1: IntegralToIntegral £temporary1456 £temporary1455
+2: UnsignedMultiply £temporary1458 2 1
+3: BinaryAdd £temporary1457 £temporary1456 £temporary1458
+4: Assign arg_list £temporary1457
+5: PreCall 10
+6: Parameter 16 pointer format
+7: Parameter 18 pointer arg_list
+8: Call 10 vscanf 0
+9: PostCall 10
+10: GetReturnValue £temporary1459
+11: Return £temporary1459
+12: Empty
+13: FunctionEnd scanf

@@ -1,0 +1,24 @@
+0: NotEqual 21 stream 0
+1: Assign index 0
+2: SignedGreaterThanEqual 21 index 20
+3: UnsignedMultiply £temporary990 index 29
+4: BinaryAdd £temporary991 g_fileArray £temporary990
+5: Deref £temporary989 -> £temporary991 £temporary991 0
+6: Equal 19 £temporary989.open$0 -> £temporary991 0
+7: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+8: UnsignedMultiply £temporary993 index 29
+9: BinaryAdd £temporary994 g_fileArray £temporary993
+10: Deref £temporary992 -> £temporary994 £temporary994 0
+11: address £temporary995 £temporary992 -> £temporary994
+12: Parameter 10 £temporary995 6
+13: Call 10 fflush 0
+14: PostCall 10
+15: GetReturnValue £temporary996
+16: NotEqual 19 £temporary996 -1
+17: SetReturnValue -1
+18: Return -1
+19: Increment index
+20: Goto 2
+21: SetReturnValue 0
+22: Return 0
+23: FunctionEnd fflush

@@ -1,0 +1,39 @@
+0: PushOne
+1: PopFloat index
+2: PushOne
+3: PopFloat sum
+4: PushOne
+5: PopFloat faculty
+6: PushFloat x
+7: PopFloat power
+8: PushFloat power
+9: PushFloat faculty
+10: SignedDivide £temporary523 power faculty
+11: PopFloat term
+12: PushFloat sum
+13: PushFloat term
+14: BinaryAdd £temporary524 sum term
+15: PopFloat sum
+16: PushFloat power
+17: PushFloat x
+18: SignedMultiply £temporary525 power x
+19: PopFloat power
+20: PushFloat faculty
+21: PushFloat index
+22: PushOne
+23: BinaryAdd index index 1
+24: TopFloat index
+25: SignedMultiply £temporary527 faculty £temporary526
+26: PopFloat faculty
+27: CallHeader 54 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+28: PushFloat term
+29: Parameter 54 term 6
+30: Call 54 fabs 0
+31: PostCall 54
+32: GetReturnValue £temporary528
+33: PushFloat 0.000000001
+34: SignedGreaterThanEqual 8 £temporary528 0.000000001
+35: PushFloat sum
+36: SetReturnValue sum
+37: Return sum
+38: FunctionEnd exp

@@ -4,12 +4,12 @@ stdio_test:	; Assign n 0
 2:		mov word [bp + 6], 0
 4:	
 
-stdio_test$1:	; address £temporary5538 n
+stdio_test$1:	; address £temporary5540 n
 5:		mov t2993, bp
 6:		add t2993, 6
 8:	
 
-stdio_test$2:	; Assign p £temporary5538
+stdio_test$2:	; Assign p £temporary5540
 9:		mov [bp + 8], t2993
 11:	
 

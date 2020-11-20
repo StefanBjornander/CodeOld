@@ -1,0 +1,16 @@
+0: PushFloat x
+1: PushFloat 0
+2: SignedGreaterThanEqual 8 x 0
+3: PushFloat x
+4: PushFloat 0.5
+5: BinarySubtract £temporary660 x 0.5
+6: DecreaseStack
+7: Goto 11
+8: PushFloat x
+9: PushFloat 0.5
+10: BinaryAdd £temporary661 x 0.5
+11: FloatingToIntegral £temporary663 £temporary662
+12: IntegralToFloating £temporary664 £temporary663
+13: SetReturnValue
+14: Return £temporary664
+15: FunctionEnd round

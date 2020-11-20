@@ -1,0 +1,17 @@
+0: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 16 pointer "Signal %i function %p\n"
+2: Parameter 18 signedint sig
+3: Parameter 20 pointer func
+4: Call 10 printf 4
+5: PostCall 10
+6: IntegralToIntegral £temporary684 sig
+7: AssignRegister al £temporary684
+8: AssignRegister ah 37
+9: AssignRegister dx func
+10: Interrupt 33
+11: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+12: Parameter 16 pointer "Signal done\n"
+13: Call 10 printf 0
+14: PostCall 10
+15: Return
+16: FunctionEnd signal

@@ -1,0 +1,73 @@
+0: Assign p 0
+1: Assign r 0
+2: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+3: Parameter 12 96 6
+4: Call 12 malloc 0
+5: PostCall 12
+6: GetReturnValue £temporary5801
+7: Assign q £temporary5801
+8: Assign index 0
+9: SignedGreaterThanEqual 20 index 10
+10: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+11: Parameter 14 96 6
+12: Call 14 malloc 0
+13: PostCall 14
+14: GetReturnValue £temporary5804
+15: Assign p £temporary5804
+16: NotEqual 18 index 5
+17: Assign r p
+18: Increment index
+19: Goto 9
+20: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+21: Call 14 print_heap 0
+22: PostCall 14
+23: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+24: Parameter 14 q 6
+25: Parameter 14 50 8
+26: Call 14 realloc 0
+27: PostCall 14
+28: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+29: Call 14 print_heap 0
+30: PostCall 14
+31: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+32: Parameter 14 r 6
+33: Parameter 14 50 8
+34: Call 14 realloc 0
+35: PostCall 14
+36: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+37: Call 14 print_heap 0
+38: PostCall 14
+39: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+40: Parameter 14 p 6
+41: Parameter 14 50 8
+42: Call 14 realloc 0
+43: PostCall 14
+44: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+45: Call 14 print_heap 0
+46: PostCall 14
+47: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+48: Parameter 14 q 6
+49: Parameter 14 200 8
+50: Call 14 realloc 0
+51: PostCall 14
+52: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+53: Call 14 print_heap 0
+54: PostCall 14
+55: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+56: Parameter 14 r 6
+57: Parameter 14 200 8
+58: Call 14 realloc 0
+59: PostCall 14
+60: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+61: Call 14 print_heap 0
+62: PostCall 14
+63: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+64: Parameter 14 p 6
+65: Parameter 14 200 8
+66: Call 14 realloc 0
+67: PostCall 14
+68: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+69: Call 14 print_heap 0
+70: PostCall 14
+71: Return 0
+72: FunctionEnd malloc_test2

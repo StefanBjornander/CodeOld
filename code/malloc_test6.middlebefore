@@ -1,0 +1,28 @@
+0: Assign lowHeapPtr 65534
+1: InspectRegister £temporary4240 bp
+2: Assign stackTop £temporary4240
+3: Assign i 0
+4: Empty
+5: SignedLessThan PreCall 12 i 1000
+6: Goto Empty
+7: PreCall 12
+8: Parameter 18 signedint 96
+9: Call 12 malloc 0
+10: PostCall 12
+11: GetReturnValue £temporary4243
+12: Assign p £temporary4243
+13: PreCall 14
+14: Parameter 20 pointer "Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u\n"
+15: Parameter 22 signedint i
+16: Parameter 24 pointer p
+17: Parameter 26 unsigned int stackTop
+18: Dereference £temporary4244 -> lowHeapPtr lowHeapPtr 0
+19: Parameter 28 unsigned int £temporary4244 -> lowHeapPtr
+20: Call 14 printf 8
+21: PostCall 14
+22: Empty
+23: BinaryAdd i i 1
+24: Goto Empty
+25: Empty
+26: Return
+27: FunctionEnd malloc_test6

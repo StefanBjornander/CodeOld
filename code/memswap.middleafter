@@ -1,0 +1,17 @@
+0: Assign index 0
+1: SignedGreaterThanEqual 15 index valueSize
+2: BinaryAdd £temporary2581 value1 index
+3: Dereference £temporary2579 -> £temporary2581 £temporary2581 0
+4: Assign tempValue £temporary2579 -> £temporary2581
+5: BinaryAdd £temporary2584 value1 index
+6: Dereference £temporary2582 -> £temporary2584 £temporary2584 0
+7: BinaryAdd £temporary2587 value2 index
+8: Dereference £temporary2585 -> £temporary2587 £temporary2587 0
+9: Assign £temporary2582 -> £temporary2584 £temporary2585 -> £temporary2587
+10: BinaryAdd £temporary2590 value2 index
+11: Dereference £temporary2588 -> £temporary2590 £temporary2590 0
+12: Assign £temporary2588 -> £temporary2590 tempValue
+13: BinaryAdd index index 1
+14: Goto 1
+15: Return
+16: FunctionEnd memswap

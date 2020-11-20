@@ -1,0 +1,43 @@
+0: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 14 pointer "\nRaise signal %i\n"
+2: Parameter 16 signedint sig
+3: Call 8 printf 2
+4: PostCall 8
+5: IntegralToIntegral £temporary690 sig
+6: AssignRegister al £temporary690
+7: AssignRegister ah 53
+8: Interrupt 33
+9: InspectRegister £temporary692 bx
+10: Assign func £temporary692
+11: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+12: Parameter 16 pointer "Raise function %p\n"
+13: Parameter 18 pointer func
+14: Call 10 printf 2
+15: PostCall 10
+16: NotEqual 23 func 0
+17: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+18: Parameter 16 pointer "Raise default\n"
+19: Call 10 printf 0
+20: PostCall 10
+21: SetReturnValue
+22: Return 1
+23: NotEqual 30 func 0
+24: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+25: Parameter 16 pointer "Raise error\n"
+26: Call 10 printf 0
+27: PostCall 10
+28: SetReturnValue
+29: Return 0
+30: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+31: Parameter 16 pointer "Raise function, calling %i with %i\n"
+32: Parameter 18 pointer func
+33: Parameter 20 signedint sig
+34: Call 10 printf 4
+35: PostCall 10
+36: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+37: Parameter 16 signedint sig
+38: Call 10 func 0
+39: PostCall 10
+40: SetReturnValue
+41: Return 1
+42: FunctionEnd raise

@@ -1,0 +1,132 @@
+0: Assign minus 0
+1: Assign found 0
+2: PushFloat 0.0
+3: PopFloat value
+4: PushFloat 1.0
+5: PopFloat factor
+6: PreCall 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+7: Call 26 scanChar 0
+8: PostCall 26
+9: GetReturnValue £temporary1190
+10: Assign input £temporary1190
+11: PreCall 27 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+12: IntegralToIntegral £temporary1191 input
+13: Parameter 33 signedint £temporary1191
+14: Call 27 isspace 0
+15: PostCall 27
+16: GetReturnValue £temporary1192
+17: Equal 24 £temporary1192 0
+18: PreCall 27 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+19: Call 27 scanChar 0
+20: PostCall 27
+21: GetReturnValue £temporary1193
+22: Assign input £temporary1193
+23: Goto 11
+24: NotEqual 31 input 43
+25: PreCall 27 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+26: Call 27 scanChar 0
+27: PostCall 27
+28: GetReturnValue £temporary1196
+29: Assign input £temporary1196
+30: Goto 38
+31: NotEqual 38 input 45
+32: Assign minus 1
+33: PreCall 27 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+34: Call 27 scanChar 0
+35: PostCall 27
+36: GetReturnValue £temporary1198
+37: Assign input £temporary1198
+38: PreCall 27 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+39: IntegralToIntegral £temporary1199 input
+40: Parameter 33 signedint £temporary1199
+41: Call 27 isdigit 0
+42: PostCall 27
+43: GetReturnValue £temporary1200
+44: Equal 60 £temporary1200 0
+45: PushFloat 10.0
+46: PushFloat value
+47: SignedMultiply £temporary1201 10.0 value
+48: BinarySubtract £temporary1202 input 48
+49: IntegralToIntegral £temporary1204 £temporary1202
+50: IntegralToFloating £temporary1203 £temporary1204
+51: BinaryAdd £temporary1205 £temporary1201 £temporary1203
+52: PopFloat value
+53: PreCall 27 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+54: Call 27 scanChar 0
+55: PostCall 27
+56: GetReturnValue £temporary1206
+57: Assign input £temporary1206
+58: Assign found 1
+59: Goto 38
+60: NotEqual 92 input 46
+61: PreCall 27 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+62: Call 27 scanChar 0
+63: PostCall 27
+64: GetReturnValue £temporary1209
+65: Assign input £temporary1209
+66: PreCall 27 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+67: IntegralToIntegral £temporary1210 input
+68: Parameter 33 signedint £temporary1210
+69: Call 27 isdigit 0
+70: PostCall 27
+71: GetReturnValue £temporary1211
+72: Equal 92 £temporary1211 0
+73: PushFloat factor
+74: PushFloat 10.0
+75: SignedDivide £temporary1212 factor 10.0
+76: PopFloat factor
+77: PushFloat value
+78: PushFloat factor
+79: BinarySubtract £temporary1213 input 48
+80: IntegralToIntegral £temporary1215 £temporary1213
+81: IntegralToFloating £temporary1214 £temporary1215
+82: SignedMultiply £temporary1216 factor £temporary1214
+83: BinaryAdd £temporary1217 value £temporary1216
+84: PopFloat value
+85: PreCall 27 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+86: Call 27 scanChar 0
+87: PostCall 27
+88: GetReturnValue £temporary1218
+89: Assign input £temporary1218
+90: Assign found 1
+91: Goto 66
+92: PreCall 27 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+93: IntegralToIntegral £temporary1220 input
+94: Parameter 33 signedint £temporary1220
+95: Call 27 tolower 0
+96: PostCall 27
+97: GetReturnValue £temporary1221
+98: NotEqual 118 £temporary1221 101
+99: PreCall 27 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+100: Parameter 33 signedint 10
+101: Call 27 scanLongInt 0
+102: PostCall 27
+103: GetReturnValue £temporary1223
+104: IntegralToFloating £temporary1224 £temporary1223
+105: PopFloat exponent
+106: PushFloat value
+107: PreCall 35 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
+108: PushFloat 10.0
+109: Parameter 41 double 10.0
+110: PushFloat exponent
+111: Parameter 49 double exponent
+112: Call 35 pow 0
+113: PostCall 35
+114: GetReturnValue £temporary1225
+115: SignedMultiply £temporary1226 value £temporary1225
+116: PopFloat value
+117: Goto 122
+118: PreCall 27 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+119: Parameter 33 signedchar input
+120: Call 27 unscanChar 0
+121: PostCall 27
+122: Equal 126 minus 0
+123: PushFloat value
+124: UnarySubtract £temporary1228 value
+125: PopFloat value
+126: Equal 128 found 0
+127: BinaryAdd g_inCount g_inCount 1
+128: PushFloat value
+129: SetReturnValue
+130: Return value
+131: FunctionEnd scanLongDouble

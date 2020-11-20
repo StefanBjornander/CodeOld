@@ -1,0 +1,8 @@
+0: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 6 stdin 6
+2: Call 6 fgetc 0
+3: PostCall 6
+4: GetReturnValue £temporary1079
+5: SetReturnValue £temporary1079
+6: Return £temporary1079
+7: FunctionEnd getchar

@@ -29,7 +29,7 @@ signal$4:	; Call 10 printf 0
 signal$5:	; PostCall 10
 24:	
 
-signal$6:	; IntegralToIntegral £temporary850 sig
+signal$6:	; IntegralToIntegral £temporary852 sig
 25:		mov ax, [bp + 6]
 28:		cmp ax, 0
 29:		jge signal$7
@@ -37,7 +37,7 @@ signal$6:	; IntegralToIntegral £temporary850 sig
 32:		neg al
 34:	
 
-signal$7:	; AssignRegister al £temporary850
+signal$7:	; AssignRegister al £temporary852
 36:	
 
 signal$8:	; AssignRegister ah 37
@@ -104,7 +104,7 @@ raise$3:	; Call 8 printf 0
 raise$4:	; PostCall 8
 20:	
 
-raise$5:	; IntegralToIntegral £temporary860 sig
+raise$5:	; IntegralToIntegral £temporary862 sig
 21:		mov ax, [bp + 6]
 24:		cmp ax, 0
 25:		jge raise$6
@@ -112,7 +112,7 @@ raise$5:	; IntegralToIntegral £temporary860 sig
 28:		neg al
 30:	
 
-raise$6:	; AssignRegister al £temporary860
+raise$6:	; AssignRegister al £temporary862
 32:	
 
 raise$7:	; AssignRegister ah 53
@@ -123,10 +123,10 @@ raise$8:	; Interrupt 33
 36:		int 33
 38:	
 
-raise$9:	; InspectRegister £temporary862 bx
+raise$9:	; InspectRegister £temporary864 bx
 40:	
 
-raise$10:	; Assign func £temporary862
+raise$10:	; Assign func £temporary864
 41:		mov [bp + 8], bx
 43:	
 

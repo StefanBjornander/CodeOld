@@ -1,0 +1,35 @@
+0: PreCall 8
+1: Parameter 14 pointer stream
+2: Parameter 16 signedint 0
+3: Parameter 18 signedint 1
+4: Call 8 fseek 0
+5: PostCall 8
+6: GetReturnValue £temporary900
+7: IntegralToIntegral £temporary901 £temporary900
+8: Assign currPosition £temporary901
+9: PreCall 12
+10: Parameter 18 pointer stream
+11: Parameter 20 signedint 0
+12: Parameter 22 signedint 2
+13: Call 12 fseek 0
+14: PostCall 12
+15: GetReturnValue £temporary902
+16: IntegralToIntegral £temporary903 £temporary902
+17: Assign lastPosition £temporary903
+18: PreCall 16
+19: Parameter 22 pointer stream
+20: IntegralToIntegral £temporary904 currPosition
+21: Parameter 24 signedint £temporary904
+22: Parameter 26 signedint 0
+23: Call 16 fseek 0
+24: PostCall 16
+25: Equal Assign £temporary907 1 currPosition lastPosition
+26: Goto Assign £temporary907 0
+27: Assign £temporary907 1
+28: Goto Empty
+29: Assign £temporary907 0
+30: Empty
+31: Assign endOfFile £temporary907
+32: Return endOfFile
+33: Empty
+34: FunctionEnd feof

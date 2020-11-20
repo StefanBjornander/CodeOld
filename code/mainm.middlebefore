@@ -1,0 +1,6 @@
+0: PreCall 10
+1: Call 10 main_math 0
+2: PostCall 10
+3: Empty
+4: Return
+5: FunctionEnd mainm

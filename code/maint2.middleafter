@@ -1,0 +1,8 @@
+0: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Call 6 limits_test 0
+2: PostCall 6
+3: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: Call 6 time_test 0
+5: PostCall 6
+6: Return 0
+7: FunctionEnd maint

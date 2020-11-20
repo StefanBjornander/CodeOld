@@ -1,0 +1,82 @@
+0: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 22 string_fmod2825f2C2025f29203D2025f2C20errno203D2025i0A# 6
+2: PushFloat x
+3: Parameter 22 x 8
+4: PushFloat y
+5: Parameter 22 y 16
+6: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+7: PushFloat x
+8: Parameter 22 x 30
+9: PushFloat y
+10: Parameter 22 y 38
+11: Call 22 fmod 24
+12: PostCall 22
+13: GetReturnValue £temporary4947
+14: Parameter 22 £temporary4947 24
+15: Parameter 22 errno 32
+16: Call 22 printf 0
+17: PostCall 22
+18: Assign errno 0
+19: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+20: Parameter 22 string_atan22825f2C2025f29203D2025f2C20errno203D2025i0A# 6
+21: PushFloat x
+22: Parameter 22 x 8
+23: PushFloat y
+24: Parameter 22 y 16
+25: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+26: PushFloat x
+27: Parameter 22 x 30
+28: PushFloat y
+29: Parameter 22 y 38
+30: Call 22 atan2 24
+31: PostCall 22
+32: GetReturnValue £temporary4949
+33: Parameter 22 £temporary4949 24
+34: Parameter 22 errno 32
+35: Call 22 printf 0
+36: PostCall 22
+37: Assign errno 0
+38: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+39: Parameter 22 string_pow2825f2C2025f29203D2025f2C20errno203D2025i0A# 6
+40: PushFloat x
+41: Parameter 22 x 8
+42: PushFloat y
+43: Parameter 22 y 16
+44: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+45: PushFloat x
+46: Parameter 22 x 30
+47: PushFloat y
+48: Parameter 22 y 38
+49: Call 22 pow 24
+50: PostCall 22
+51: GetReturnValue £temporary4951
+52: Parameter 22 £temporary4951 24
+53: Parameter 22 errno 32
+54: Call 22 printf 0
+55: PostCall 22
+56: Assign errno 0
+57: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+58: Parameter 22 string_0A# 6
+59: Call 22 printf 0
+60: PostCall 22
+61: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+62: Parameter 22 string_ldexp2825f2C2025i29203D2025f0A0A# 6
+63: PushFloat x
+64: Parameter 22 x 8
+65: PushFloat y
+66: FloatingToIntegral £temporary4954 y
+67: Parameter 22 £temporary4954 16
+68: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+69: PushFloat x
+70: Parameter 22 x 24
+71: PushFloat y
+72: FloatingToIntegral £temporary4955 y
+73: Parameter 22 £temporary4955 32
+74: Call 22 ldexp 18
+75: PostCall 22
+76: GetReturnValue £temporary4956
+77: Parameter 22 £temporary4956 18
+78: Call 22 printf 0
+79: PostCall 22
+80: Return 0
+81: FunctionEnd math_test_2

@@ -1,0 +1,17 @@
+0: Deref £temporary1105 -> stream stream 2
+1: AssignRegister bx £temporary1105 -> stream
+2: SignedMultiply £temporary1107 size nobj
+3: AssignRegister cx £temporary1107
+4: AssignRegister ah 63
+5: AssignRegister dx ptr
+6: Interrupt 33
+7: NotCarry 13
+8: Deref £temporary1111 -> stream stream 21
+9: Assign errno 14
+10: Assign £temporary1111 -> stream errno
+11: SetReturnValue 0
+12: Return 0
+13: InspectRegister £temporary1112 ax
+14: SetReturnValue £temporary1112
+15: Return £temporary1112
+16: FunctionEnd fread

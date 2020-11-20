@@ -1,0 +1,86 @@
+0: PreCall 22
+1: Parameter 28 pointer "fmod(%f, %f) = %f, errno = %i\n"
+2: PushFloat x
+3: Parameter 30 double x
+4: PushFloat y
+5: Parameter 38 double y
+6: PreCall 22
+7: PushFloat x
+8: Parameter 52 double x
+9: PushFloat y
+10: Parameter 60 double y
+11: Call 46 fmod 0
+12: PostCall 46
+13: GetReturnValue £temporary3757
+14: Parameter 46 double £temporary3757
+15: Parameter 54 signedint errno
+16: Call 22 printf 26
+17: PostCall 22
+18: Assign errno 0
+19: Empty
+20: PreCall 22
+21: Parameter 28 pointer "atan2(%f, %f) = %f, errno = %i\n"
+22: PushFloat x
+23: Parameter 30 double x
+24: PushFloat y
+25: Parameter 38 double y
+26: PreCall 22
+27: PushFloat x
+28: Parameter 52 double x
+29: PushFloat y
+30: Parameter 60 double y
+31: Call 46 atan2 0
+32: PostCall 46
+33: GetReturnValue £temporary3759
+34: Parameter 46 double £temporary3759
+35: Parameter 54 signedint errno
+36: Call 22 printf 26
+37: PostCall 22
+38: Assign errno 0
+39: Empty
+40: PreCall 22
+41: Parameter 28 pointer "pow(%f, %f) = %f, errno = %i\n"
+42: PushFloat x
+43: Parameter 30 double x
+44: PushFloat y
+45: Parameter 38 double y
+46: PreCall 22
+47: PushFloat x
+48: Parameter 52 double x
+49: PushFloat y
+50: Parameter 60 double y
+51: Call 46 pow 0
+52: PostCall 46
+53: GetReturnValue £temporary3761
+54: Parameter 46 double £temporary3761
+55: Parameter 54 signedint errno
+56: Call 22 printf 26
+57: PostCall 22
+58: Assign errno 0
+59: Empty
+60: PreCall 22
+61: Parameter 28 pointer "\n"
+62: Call 22 printf 0
+63: PostCall 22
+64: PreCall 22
+65: Parameter 28 pointer "ldexp(%f, %i) = %f\n\n"
+66: PushFloat x
+67: Parameter 30 double x
+68: PushFloat y
+69: FloatingToIntegral £temporary3764 y
+70: Parameter 38 signedint £temporary3764
+71: PreCall 22
+72: PushFloat x
+73: Parameter 46 double x
+74: PushFloat y
+75: FloatingToIntegral £temporary3765 y
+76: Parameter 54 signedint £temporary3765
+77: Call 40 ldexp 0
+78: PostCall 40
+79: GetReturnValue £temporary3766
+80: Parameter 40 double £temporary3766
+81: Call 22 printf 18
+82: PostCall 22
+83: Empty
+84: Return
+85: FunctionEnd math_test_2

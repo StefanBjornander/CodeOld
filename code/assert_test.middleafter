@@ -1,0 +1,29 @@
+0: Assign n 0
+1: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 14 pointer "Please write a number (not 6 or 7): "
+3: Call 8 printf 0
+4: PostCall 8
+5: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+6: Parameter 14 pointer "%i"
+7: Address £temporary129 n
+8: Parameter 16 pointer £temporary129
+9: Call 8 scanf 2
+10: PostCall 8
+11: NotEqual 23 n 6
+12: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+13: Parameter 14 pointer stderr
+14: Parameter 16 pointer "Assertion failed: "%s" in file %s at line %i\n"
+15: Parameter 18 pointer "n != 6"
+16: Parameter 20 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c"
+17: Parameter 22 signedint 877
+18: Call 8 fprintf 6
+19: PostCall 8
+20: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+21: Call 8 abort 0
+22: PostCall 8
+23: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+24: Parameter 14 signedint n
+25: Call 8 assert_test2 0
+26: PostCall 8
+27: Return
+28: FunctionEnd assert_test

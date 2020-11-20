@@ -1,0 +1,10 @@
+0: Assign a.p 0
+1: Assign a.q 0
+2: PreCall 6
+3: Parameter 12 pointer "test1.txt"
+4: Parameter 14 pointer "test2.txt"
+5: Call 6 file_test 0
+6: PostCall 6
+7: Empty
+8: Return
+9: FunctionEnd main2

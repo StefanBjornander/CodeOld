@@ -1,0 +1,25 @@
+0: Assign chars 0
+1: PushFloat 0
+2: PopFloat value
+3: PreCall 20
+4: Parameter 26 pointer s
+5: Parameter 28 pointer "%lf%n"
+6: PushFloat value
+7: PopFloat
+8: Address £temporary2513 value
+9: Parameter 30 pointer £temporary2513
+10: Address £temporary2514 chars
+11: Parameter 32 pointer £temporary2514
+12: Call 20 sscanf 4
+13: PostCall 20
+14: NotEqual Dereference £temporary2517 -> endp endp 0 endp 0
+15: Goto PushFloat value
+16: Dereference £temporary2517 -> endp endp 0
+17: UnsignedMultiply £temporary2519 chars 1
+18: BinaryAdd £temporary2518 s £temporary2519
+19: Assign £temporary2517 -> endp £temporary2518
+20: Goto PushFloat value
+21: PushFloat value
+22: Return value
+23: Empty
+24: FunctionEnd strtod

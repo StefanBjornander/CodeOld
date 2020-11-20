@@ -5,137 +5,135 @@
 4: Assign weekdays[4] "Thu"
 5: Assign weekdays[5] "Fri"
 6: Assign weekdays[6] "Sat"
-7: PreCall 80
-8: Parameter pointer 0 104
-9: Call time 80 0
-10: PostCall 80
-11: GetReturnValue £temporary4497
-12: Assign now1 £temporary4497
-13: PreCall 88
-14: Address £temporary4498 now1
-15: Parameter pointer £temporary4498 112
-16: Call gmtime 88 0
-17: PostCall 88
-18: GetReturnValue £temporary4499
-19: Dereference £temporary4500 -> £temporary4499 £temporary4499 0
-20: AssignInitSize s £temporary4500 -> £temporary4499
-21: Assign s £temporary4500 -> £temporary4499
-22: PreCall 124
-23: Address £temporary4501 now1
-24: Parameter pointer £temporary4501 148
-25: Call localtime 124 0
-26: PostCall 124
-27: GetReturnValue £temporary4502
-28: Dereference £temporary4503 -> £temporary4502 £temporary4502 0
-29: AssignInitSize t £temporary4503 -> £temporary4502
-30: Assign t £temporary4503 -> £temporary4502
-31: PreCall 160
-32: Address £temporary4504 s
-33: Parameter pointer £temporary4504 184
-34: Call mktime 160 0
-35: PostCall 160
-36: GetReturnValue £temporary4505
-37: Assign now2 £temporary4505
-38: PreCall 168
-39: Parameter pointer "now 1: %lu\n" 192
-40: Parameter signed long int now1 200
-41: Call printf 168 8
-42: PostCall 168
-43: PreCall 168
-44: Parameter pointer "now 2: %lu\n" 192
-45: Parameter signed long int now2 200
-46: Call printf 168 8
-47: PostCall 168
-48: PreCall 168
-49: Parameter pointer "   gm time: %s %i-%i-%i %i:%i:%i, year day %i, week day %i, daylight saving time %i\n" 192
-50: IntegralToIntegral £temporary4510 s.tm_wday
-51: UnsignedMultiply £temporary4511 £temporary4510 8
-52: BinaryAdd £temporary4512 weekdays £temporary4511
-53: Dereference £temporary4509 -> £temporary4512 £temporary4512 0
-54: Parameter pointer £temporary4509 -> £temporary4512 200
-55: BinaryAdd £temporary4514 1900 s.tm_year
-56: Parameter signedint £temporary4514 208
-57: BinaryAdd £temporary4516 s.tm_mon 1
-58: Parameter signedint £temporary4516 212
-59: Parameter signedint s.tm_mday 216
-60: Parameter signedint s.tm_hour 220
-61: Parameter signedint s.tm_min 224
-62: Parameter signedint s.tm_sec 228
-63: Parameter signedint s.tm_yday 232
-64: Parameter signedint s.tm_wday 236
-65: Parameter signedint s.tm_isdst 240
-66: Call printf 168 44
-67: PostCall 168
-68: PreCall 168
-69: Parameter pointer "local time: %s %i-%i-%i %i:%i:%i, year day %i, week day %i, daylight saving time %i\n" 192
-70: IntegralToIntegral £temporary4527 t.tm_wday
-71: UnsignedMultiply £temporary4528 £temporary4527 8
-72: BinaryAdd £temporary4529 weekdays £temporary4528
-73: Dereference £temporary4526 -> £temporary4529 £temporary4529 0
-74: Parameter pointer £temporary4526 -> £temporary4529 200
-75: BinaryAdd £temporary4531 1900 t.tm_year
-76: Parameter signedint £temporary4531 208
-77: BinaryAdd £temporary4533 t.tm_mon 1
-78: Parameter signedint £temporary4533 212
-79: Parameter signedint t.tm_mday 216
-80: Parameter signedint t.tm_hour 220
-81: Parameter signedint t.tm_min 224
-82: Parameter signedint t.tm_sec 228
-83: Parameter signedint t.tm_yday 232
-84: Parameter signedint t.tm_wday 236
-85: Parameter signedint t.tm_isdst 240
-86: Call printf 168 44
-87: PostCall 168
-88: PreCall 672
-89: Parameter pointer buffer1 696
-90: PreCall 672
-91: Address £temporary4542 s
-92: Parameter pointer £temporary4542 728
-93: Call asctime 704 0
-94: PostCall 704
-95: GetReturnValue £temporary4543
-96: Parameter pointer £temporary4543 704
-97: Call strcpy 672 0
-98: PostCall 672
-99: PreCall 672
-100: Parameter pointer buffer2 696
-101: PreCall 672
-102: Address £temporary4545 now1
-103: Parameter pointer £temporary4545 728
-104: Call ctime 704 0
-105: PostCall 704
-106: GetReturnValue £temporary4546
-107: Parameter pointer £temporary4546 704
-108: Call strcpy 672 0
-109: PostCall 672
-110: PreCall 672
-111: Parameter pointer "asctime <%s>, ctime <%s>\n" 696
-112: Parameter pointer buffer1 704
-113: Parameter pointer buffer2 712
-114: Call printf 672 16
-115: PostCall 672
-116: PreCall 672
-117: Parameter pointer buffer 696
-118: Parameter signedint 300 704
-119: Parameter pointer "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y" 708
-120: Address £temporary4549 t
-121: Parameter pointer £temporary4549 716
-122: Call strftime 672 0
-123: PostCall 672
-124: GetReturnValue £temporary4550
-125: Assign i £temporary4550
-126: PreCall 672
-127: Parameter pointer "strftime %i %i <%s>\n" 696
-128: Parameter signedint i 704
-129: PreCall 672
-130: Parameter pointer buffer 732
-131: Call strlen 708 0
-132: PostCall 708
-133: GetReturnValue £temporary4551
-134: Parameter signedint £temporary4551 708
-135: Parameter pointer buffer 712
-136: Call printf 672 16
-137: PostCall 672
-138: Empty
-139: Return
-140: FunctionEnd time_test
+7: PreCall 20
+8: Parameter 26 pointer 0
+9: Call 20 time 0
+10: PostCall 20
+11: GetReturnValue £temporary4388
+12: Assign now1 £temporary4388
+13: PreCall 24
+14: Address £temporary4389 now1
+15: Parameter 30 pointer £temporary4389
+16: Call 24 gmtime 0
+17: PostCall 24
+18: GetReturnValue £temporary4390
+19: Dereference £temporary4391 -> £temporary4390 £temporary4390 0
+20: AssignInitSize s £temporary4391 -> £temporary4390
+21: Assign s £temporary4391 -> £temporary4390
+22: PreCall 42
+23: Address £temporary4392 now1
+24: Parameter 48 pointer £temporary4392
+25: Call 42 localtime 0
+26: PostCall 42
+27: GetReturnValue £temporary4393
+28: Dereference £temporary4394 -> £temporary4393 £temporary4393 0
+29: AssignInitSize t £temporary4394 -> £temporary4393
+30: Assign t £temporary4394 -> £temporary4393
+31: PreCall 60
+32: Address £temporary4395 s
+33: Parameter 66 pointer £temporary4395
+34: Call 60 mktime 0
+35: PostCall 60
+36: GetReturnValue £temporary4396
+37: Assign now2 £temporary4396
+38: PreCall 64
+39: Parameter 70 pointer "now 1: %lu\n"
+40: Parameter 72 unsignedlongint now1
+41: Call 64 printf 4
+42: PostCall 64
+43: PreCall 64
+44: Parameter 70 pointer "now 2: %lu\n"
+45: Parameter 72 unsignedlongint now2
+46: Call 64 printf 4
+47: PostCall 64
+48: PreCall 64
+49: Parameter 70 pointer "   gm time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i\n"
+50: UnsignedMultiply £temporary4401 s.tm_wday 2
+51: BinaryAdd £temporary4402 weekdays £temporary4401
+52: Dereference £temporary4400 -> £temporary4402 £temporary4402 0
+53: Parameter 72 pointer £temporary4400 -> £temporary4402
+54: BinaryAdd £temporary4404 1900 s.tm_year
+55: Parameter 74 signedint £temporary4404
+56: BinaryAdd £temporary4406 s.tm_mon 1
+57: Parameter 76 signedint £temporary4406
+58: Parameter 78 signedint s.tm_mday
+59: Parameter 80 signedint s.tm_hour
+60: Parameter 82 signedint s.tm_min
+61: Parameter 84 signedint s.tm_sec
+62: Parameter 86 signedint s.tm_yday
+63: Parameter 88 signedint s.tm_wday
+64: Parameter 90 signedint s.tm_isdst
+65: Call 64 printf 20
+66: PostCall 64
+67: PreCall 64
+68: Parameter 70 pointer "local time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i\n"
+69: UnsignedMultiply £temporary4417 t.tm_wday 2
+70: BinaryAdd £temporary4418 weekdays £temporary4417
+71: Dereference £temporary4416 -> £temporary4418 £temporary4418 0
+72: Parameter 72 pointer £temporary4416 -> £temporary4418
+73: BinaryAdd £temporary4420 1900 t.tm_year
+74: Parameter 74 signedint £temporary4420
+75: BinaryAdd £temporary4422 t.tm_mon 1
+76: Parameter 76 signedint £temporary4422
+77: Parameter 78 signedint t.tm_mday
+78: Parameter 80 signedint t.tm_hour
+79: Parameter 82 signedint t.tm_min
+80: Parameter 84 signedint t.tm_sec
+81: Parameter 86 signedint t.tm_yday
+82: Parameter 88 signedint t.tm_wday
+83: Parameter 90 signedint t.tm_isdst
+84: Call 64 printf 20
+85: PostCall 64
+86: PreCall 566
+87: Parameter 572 pointer buffer1
+88: PreCall 566
+89: Address £temporary4431 s
+90: Parameter 580 pointer £temporary4431
+91: Call 574 asctime 0
+92: PostCall 574
+93: GetReturnValue £temporary4432
+94: Parameter 574 pointer £temporary4432
+95: Call 566 strcpy 0
+96: PostCall 566
+97: PreCall 566
+98: Parameter 572 pointer buffer2
+99: PreCall 566
+100: Address £temporary4434 now1
+101: Parameter 580 pointer £temporary4434
+102: Call 574 ctime 0
+103: PostCall 574
+104: GetReturnValue £temporary4435
+105: Parameter 574 pointer £temporary4435
+106: Call 566 strcpy 0
+107: PostCall 566
+108: PreCall 566
+109: Parameter 572 pointer "asctime <%s>, ctime <%s>\n"
+110: Parameter 574 pointer buffer1
+111: Parameter 576 pointer buffer2
+112: Call 566 printf 4
+113: PostCall 566
+114: PreCall 566
+115: Parameter 572 pointer buffer
+116: Parameter 574 signedint 300
+117: Parameter 576 pointer "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y"
+118: Address £temporary4438 t
+119: Parameter 578 pointer £temporary4438
+120: Call 566 strftime 0
+121: PostCall 566
+122: GetReturnValue £temporary4439
+123: Assign i £temporary4439
+124: PreCall 566
+125: Parameter 572 pointer "strftime %i %i <%s>\n"
+126: Parameter 574 signedint i
+127: PreCall 566
+128: Parameter 582 pointer buffer
+129: Call 576 strlen 0
+130: PostCall 576
+131: GetReturnValue £temporary4440
+132: Parameter 576 signedint £temporary4440
+133: Parameter 578 pointer buffer
+134: Call 566 printf 6
+135: PostCall 566
+136: Empty
+137: Return
+138: FunctionEnd time_test

@@ -1,0 +1,53 @@
+0: NotEqual AssignRegister ah 62 stream 0
+1: Goto Assign index 0
+2: AssignRegister ah 62
+3: Dereference £temporary779 -> stream stream 0
+4: AssignRegister bx £temporary779 -> stream
+5: Interrupt 33
+6: Carry Assign errno 11
+7: Goto Dereference £temporary781 -> stream stream 0
+8: Assign errno 11
+9: Return -1
+10: Goto Dereference £temporary781 -> stream stream 0
+11: Dereference £temporary781 -> stream stream 0
+12: NotEqual PreCall 8 £temporary781 -> stream 0
+13: Goto Dereference £temporary785 -> stream stream 0
+14: PreCall 8
+15: Dereference £temporary782 -> stream stream 0
+16: Parameter 14 pointer £temporary782 -> stream
+17: Call 8 remove 0
+18: PostCall 8
+19: Goto Dereference £temporary785 -> stream stream 0
+20: Dereference £temporary785 -> stream stream 0
+21: Assign £temporary785 -> stream 0
+22: Return 0
+23: Goto Empty
+24: Assign index 0
+25: Empty
+26: SignedLessThan UnsignedMultiply £temporary789 index 29 index 20
+27: Goto Return 0
+28: UnsignedMultiply £temporary789 index 29
+29: BinaryAdd £temporary790 g_fileArray £temporary789
+30: Dereference £temporary788 -> £temporary790 £temporary790 0
+31: NotEqual PreCall 10 £temporary788.open -> £temporary790 0
+32: Goto Empty
+33: PreCall 10
+34: UnsignedMultiply £temporary792 index 29
+35: BinaryAdd £temporary793 g_fileArray £temporary792
+36: Dereference £temporary791 -> £temporary793 £temporary793 0
+37: Address £temporary794 £temporary791 -> £temporary793
+38: Parameter 16 pointer £temporary794
+39: Call 10 fclose 0
+40: PostCall 10
+41: GetReturnValue £temporary795
+42: Equal Return -1 £temporary795 -1
+43: Goto Empty
+44: Return -1
+45: Goto Empty
+46: Goto Empty
+47: Empty
+48: BinaryAdd index index 1
+49: Goto Empty
+50: Return 0
+51: Empty
+52: FunctionEnd fclose

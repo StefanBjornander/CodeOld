@@ -1,0 +1,32 @@
+0: PreCall 12
+1: Parameter 18 pointer target
+2: Call 12 strlen 0
+3: PostCall 12
+4: GetReturnValue £temporary3012
+5: Assign targetLength £temporary3012
+6: Assign index 0
+7: Empty
+8: UnsignedMultiply £temporary3014 index 1
+9: BinaryAdd £temporary3015 source £temporary3014
+10: Dereference £temporary3013 -> £temporary3015 £temporary3015 0
+11: NotEqual BinaryAdd £temporary3018 targetLength index £temporary3013 -> £temporary3015 0
+12: Goto BinaryAdd £temporary3025 targetLength index
+13: BinaryAdd £temporary3018 targetLength index
+14: UnsignedMultiply £temporary3020 £temporary3018 1
+15: BinaryAdd £temporary3021 target £temporary3020
+16: Dereference £temporary3019 -> £temporary3021 £temporary3021 0
+17: UnsignedMultiply £temporary3023 index 1
+18: BinaryAdd £temporary3024 source £temporary3023
+19: Dereference £temporary3022 -> £temporary3024 £temporary3024 0
+20: Assign £temporary3019 -> £temporary3021 £temporary3022 -> £temporary3024
+21: Empty
+22: BinaryAdd index index 1
+23: Goto Empty
+24: BinaryAdd £temporary3025 targetLength index
+25: UnsignedMultiply £temporary3027 £temporary3025 1
+26: BinaryAdd £temporary3028 target £temporary3027
+27: Dereference £temporary3026 -> £temporary3028 £temporary3028 0
+28: Assign £temporary3026 -> £temporary3028 0
+29: Return target
+30: Empty
+31: FunctionEnd strcat

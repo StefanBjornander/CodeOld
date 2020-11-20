@@ -1,19 +1,19 @@
 0: SignedGreaterThanEqual 57 size 3
 1: Assign c 97
 2: SignedGreaterThan 57 c 122
-3: BinaryAdd £temporary1191 name size
-4: Deref £temporary1190 -> £temporary1191 £temporary1191 0
-5: Assign £temporary1190 -> £temporary1191 c
-6: BinaryAdd £temporary1192 size 1
-7: BinaryAdd £temporary1194 name £temporary1192
-8: Deref £temporary1193 -> £temporary1194 £temporary1194 0
-9: Assign £temporary1193 -> £temporary1194 0
+3: BinaryAdd £temporary1193 name size
+4: Deref £temporary1192 -> £temporary1193 £temporary1193 0
+5: Assign £temporary1192 -> £temporary1193 c
+6: BinaryAdd £temporary1194 size 1
+7: BinaryAdd £temporary1196 name £temporary1194
+8: Deref £temporary1195 -> £temporary1196 £temporary1196 0
+9: Assign £temporary1195 -> £temporary1196 0
 10: CallHeader 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 11: Parameter 13 name 6
 12: Call 13 fileexists 0
 13: PostCall 13
-14: GetReturnValue £temporary1195
-15: NotEqual 43 £temporary1195 0
+14: GetReturnValue £temporary1197
+15: NotEqual 43 £temporary1197 0
 16: Case 20 status 0
 17: Case 22 status 1
 18: CaseEnd status
@@ -24,32 +24,32 @@
 23: Parameter 13 name 6
 24: Call 13 existsTempName 0
 25: PostCall 13
-26: GetReturnValue £temporary1198
-27: NotEqual 43 £temporary1198 0
+26: GetReturnValue £temporary1200
+27: NotEqual 43 £temporary1200 0
 28: CallHeader 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-29: UnsignedMultiply £temporary1202 g_tempSize 2
-30: BinaryAdd £temporary1203 g_tempArray £temporary1202
-31: Deref £temporary1201 -> £temporary1203 £temporary1203 0
-32: Parameter 13 £temporary1201 -> £temporary1203 6
+29: UnsignedMultiply £temporary1204 g_tempSize 2
+30: BinaryAdd £temporary1205 g_tempArray £temporary1204
+31: Deref £temporary1203 -> £temporary1205 £temporary1205 0
+32: Parameter 13 £temporary1203 -> £temporary1205 6
 33: Parameter 13 name 8
 34: Call 13 strcpy 0
 35: PostCall 13
-36: Assign £temporary1205 g_tempSize
+36: Assign £temporary1207 g_tempSize
 37: Increment g_tempSize
-38: UnsignedMultiply £temporary1207 £temporary1205 2
-39: BinaryAdd £temporary1208 g_tempArray £temporary1207
-40: Deref £temporary1206 -> £temporary1208 £temporary1208 0
-41: SetReturnValue £temporary1206 -> £temporary1208
-42: Return £temporary1206 -> £temporary1208
+38: UnsignedMultiply £temporary1209 £temporary1207 2
+39: BinaryAdd £temporary1210 g_tempArray £temporary1209
+40: Deref £temporary1208 -> £temporary1210 £temporary1210 0
+41: SetReturnValue £temporary1208 -> £temporary1210
+42: Return £temporary1208 -> £temporary1210
 43: CallHeader 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 44: Parameter 13 name 6
-45: BinaryAdd £temporary1209 size 1
-46: Parameter 13 £temporary1209 8
+45: BinaryAdd £temporary1211 size 1
+46: Parameter 13 £temporary1211 8
 47: Parameter 13 status 10
 48: Call 13 generateTempName 0
 49: PostCall 13
-50: GetReturnValue £temporary1210
-51: Assign result £temporary1210
+50: GetReturnValue £temporary1212
+51: Assign result £temporary1212
 52: Equal 55 result 0
 53: SetReturnValue result
 54: Return result

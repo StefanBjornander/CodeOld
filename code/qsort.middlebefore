@@ -1,0 +1,50 @@
+0: IntegralToIntegral £temporary2591 valueList
+1: Assign charList £temporary2591
+2: BinarySubtract £temporary2592 listSize 1
+3: Assign size £temporary2592
+4: Empty
+5: SignedGreaterThan Assign update 0 size 0
+6: Goto Empty
+7: Assign update 0
+8: Assign index 0
+9: Empty
+10: SignedLessThan SignedMultiply £temporary2597 index valueSize index size
+11: Goto NotEqual Empty update 0
+12: SignedMultiply £temporary2597 index valueSize
+13: UnsignedMultiply £temporary2599 £temporary2597 1
+14: BinaryAdd £temporary2598 charList £temporary2599
+15: Assign valuePtr1 £temporary2598
+16: BinaryAdd £temporary2600 index 1
+17: SignedMultiply £temporary2601 £temporary2600 valueSize
+18: UnsignedMultiply £temporary2603 £temporary2601 1
+19: BinaryAdd £temporary2602 charList £temporary2603
+20: Assign valuePtr2 £temporary2602
+21: PreCall 26
+22: Parameter 32 pointer valuePtr1
+23: Parameter 34 pointer valuePtr2
+24: Call 26 compare 0
+25: PostCall 26
+26: GetReturnValue £temporary2604
+27: SignedGreaterThan PreCall 26 £temporary2604 0
+28: Goto Empty
+29: PreCall 26
+30: Parameter 32 pointer valuePtr1
+31: Parameter 34 pointer valuePtr2
+32: Parameter 36 signedint valueSize
+33: Call 26 memswap 0
+34: PostCall 26
+35: Assign update 1
+36: Goto Empty
+37: Empty
+38: BinaryAdd index index 1
+39: Goto Empty
+40: NotEqual Empty update 0
+41: Goto Goto Empty
+42: Goto Empty
+43: Goto Empty
+44: Empty
+45: BinarySubtract size size 1
+46: Goto Empty
+47: Empty
+48: Return
+49: FunctionEnd qsort

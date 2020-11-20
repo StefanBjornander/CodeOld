@@ -1,0 +1,11 @@
+0: AssignRegister ah 67
+1: AssignRegister al 0
+2: AssignRegister dx name
+3: Interrupt 33
+4: Carry 7
+5: Assign £temporary895 1
+6: Goto 8
+7: Assign £temporary895 0
+8: SetReturnValue £temporary895
+9: Return £temporary895
+10: FunctionEnd fileexists

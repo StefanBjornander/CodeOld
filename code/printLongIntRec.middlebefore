@@ -1,0 +1,20 @@
+0: NotEqual SignedModulo £temporary1532 longValue 10 longValue 0
+1: Goto Empty
+2: SignedModulo £temporary1532 longValue 10
+3: IntegralToIntegral £temporary1533 £temporary1532
+4: Assign digit £temporary1533
+5: PreCall 12
+6: SignedDivide £temporary1534 longValue 10
+7: Parameter 18 signed long int £temporary1534
+8: Call 12 printLongIntRec 0
+9: PostCall 12
+10: PreCall 12
+11: BinaryAdd £temporary1536 digit 48
+12: IntegralToIntegral £temporary1537 £temporary1536
+13: Parameter 18 signedchar £temporary1537
+14: Call 12 printChar 0
+15: PostCall 12
+16: Goto Empty
+17: Empty
+18: Return
+19: FunctionEnd printLongIntRec

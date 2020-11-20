@@ -1,0 +1,11 @@
+0: Assign result.quot 0
+1: Assign result.rem 0
+2: NotEqual 6 denum 0
+3: Assign errno 6
+4: SetReturnValue
+5: Return result
+6: SignedDivide result.quot num denum
+7: SignedModulo result.rem num denum
+8: SetReturnValue
+9: Return result
+10: FunctionEnd ldiv

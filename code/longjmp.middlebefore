@@ -1,0 +1,11 @@
+0: AssignRegister bx return_value
+1: Dereference £temporary677 -> buf buf 0
+2: AssignRegister cx £temporary677 -> buf
+3: Dereference £temporary679 -> buf buf 0
+4: AssignRegister di £temporary679 -> buf
+5: Dereference £temporary681 -> buf buf 0
+6: AssignRegister bp £temporary681 -> buf
+7: JumpRegister cx
+8: Empty
+9: Return
+10: FunctionEnd longjmp

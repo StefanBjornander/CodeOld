@@ -1,0 +1,19 @@
+0: PreCall 8
+1: Parameter 14 pointer s
+2: Parameter 16 pointer stdout
+3: Call 8 fputs 0
+4: PostCall 8
+5: GetReturnValue £temporary850
+6: NotEqual PreCall 8 £temporary850 0
+7: Goto Return -1
+8: PreCall 8
+9: Parameter 14 signedint 10
+10: Parameter 16 pointer stdout
+11: Call 8 fputc 0
+12: PostCall 8
+13: GetReturnValue £temporary852
+14: Return £temporary852
+15: Goto Return -1
+16: Return -1
+17: Empty
+18: FunctionEnd puts

@@ -1,0 +1,17 @@
+0: PreCall 26
+1: Parameter 32 pointer "Please write a string: "
+2: Call 26 printf 0
+3: PostCall 26
+4: PreCall 26
+5: Parameter 32 pointer "%s"
+6: Parameter 34 pointer s
+7: Call 26 scanf 2
+8: PostCall 26
+9: PreCall 26
+10: Parameter 32 pointer "You wrote the string "%s".\n"
+11: Parameter 34 pointer s
+12: Call 26 printf 2
+13: PostCall 26
+14: Empty
+15: Return
+16: FunctionEnd mains

@@ -1,0 +1,10 @@
+0: SignedLessThan UnarySubtract £temporary2614 value value 0
+1: Goto Empty
+2: UnarySubtract £temporary2614 value
+3: Goto Empty
+4: Empty
+5: Assign £temporary2614 value
+6: Empty
+7: Return £temporary2614
+8: Empty
+9: FunctionEnd labs

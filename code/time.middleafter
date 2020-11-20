@@ -20,16 +20,10 @@
 19: InspectRegister £temporary2643 dh
 20: Assign sec £temporary2643
 21: Equal 25 localeConvPtr 0
-
 22: Dereference £temporary2645 -> localeConvPtr localeConvPtr 0
 23: IntegralToIntegral £temporary2646 £temporary2645 -> localeConvPtr
 24: BinarySubtract hour hour £temporary2646
-
-22: Deref £temporary3427 -> localeConvPtr localeConvPtr 2
-23: IntegralToIntegral £temporary3428 £temporary3427 -> localeConvPtr
-24: BinarySubtract hour hour £temporary3428
-
-s25: SignedModulo £temporary2648 year 4
+25: SignedModulo £temporary2648 year 4
 26: NotEqual 29 £temporary2648 0
 27: Assign £temporary2650 1
 28: Goto 30
@@ -86,5 +80,6 @@ s25: SignedModulo £temporary2648 year 4
 79: Equal 82 timePtr 0
 80: Dereference £temporary2691 -> timePtr timePtr 0
 81: Assign £temporary2691 -> timePtr time
-82: Return time
-83: FunctionEnd time
+82: SetReturnValue
+83: Return time
+84: FunctionEnd time

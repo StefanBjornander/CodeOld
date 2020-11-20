@@ -1,0 +1,16 @@
+0: Assign lowHeapPtr 65534
+1: InspectRegister £temporary4223 bp
+2: Assign stackTop £temporary4223
+3: PreCall 10
+4: Parameter 16 pointer "Stack Top: %u, Low Heap: %u\n"
+5: Parameter 18 unsigned int stackTop
+6: Dereference £temporary4224 -> lowHeapPtr lowHeapPtr 0
+7: Parameter 20 unsigned int £temporary4224 -> lowHeapPtr
+8: Call 10 printf 4
+9: PostCall 10
+10: PreCall 10
+11: Call 10 rec 0
+12: PostCall 10
+13: Empty
+14: Return
+15: FunctionEnd rec

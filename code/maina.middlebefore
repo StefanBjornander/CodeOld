@@ -1,0 +1,31 @@
+0: Goto Empty
+1: PreCall 6
+2: Parameter 12 pointer stderr
+3: Parameter 14 pointer "Assertion failed: "%s" in file %s at line %i\n"
+4: Parameter 16 pointer "1 < 2"
+5: Parameter 18 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c"
+6: Parameter 20 signedint 196
+7: Call 6 fprintf 6
+8: PostCall 6
+9: PreCall 6
+10: Call 6 abort 0
+11: PostCall 6
+12: Goto Empty
+13: Empty
+14: Goto PreCall 6
+15: PreCall 6
+16: Parameter 12 pointer stderr
+17: Parameter 14 pointer "Assertion failed: "%s" in file %s at line %i\n"
+18: Parameter 16 pointer "1 > 2"
+19: Parameter 18 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c"
+20: Parameter 20 signedint 197
+21: Call 6 fprintf 6
+22: PostCall 6
+23: PreCall 6
+24: Call 6 abort 0
+25: PostCall 6
+26: Goto Empty
+27: Empty
+28: Empty
+29: Return
+30: FunctionEnd maina

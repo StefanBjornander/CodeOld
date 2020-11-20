@@ -1,0 +1,11 @@
+0: Dereference £temporary853 -> stream stream 0
+1: IntegralToIntegral £temporary854 £temporary853 -> stream
+2: NotEqual Dereference £temporary856 -> stream stream 0 £temporary854 -1
+3: Goto Return c
+4: Dereference £temporary856 -> stream stream 0
+5: IntegralToIntegral £temporary857 c
+6: Assign £temporary856 -> stream £temporary857
+7: Goto Return c
+8: Return c
+9: Empty
+10: FunctionEnd ungetc

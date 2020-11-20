@@ -1,0 +1,23 @@
+0: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 18 pointer name
+2: Parameter 20 signedint 0
+3: Parameter 22 signedint 0
+4: Call 12 generateTempName 0
+5: PostCall 12
+6: GetReturnValue £temporary945
+7: Equal 20 £temporary945 0
+8: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+9: Parameter 18 pointer name
+10: Parameter 20 pointer "w"
+11: Call 12 fopen 0
+12: PostCall 12
+13: GetReturnValue £temporary946
+14: Assign stream £temporary946
+15: Equal 20 stream 0
+16: Dereference £temporary950 -> stream stream 0
+17: Assign £temporary950 -> stream 1
+18: SetReturnValue
+19: Return stream
+20: SetReturnValue
+21: Return 0
+22: FunctionEnd tmpfile

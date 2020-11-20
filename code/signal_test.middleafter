@@ -1,0 +1,26 @@
+0: Assign a 1
+1: Assign b 1
+2: SignedDivide c a b
+3: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: Parameter 18 pointer "%i\n"
+5: Parameter 20 signedint c
+6: Call 12 printf 2
+7: PostCall 12
+8: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+9: Parameter 18 pointer exit_handle1
+10: Call 12 atexit 0
+11: PostCall 12
+12: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+13: Parameter 18 pointer exit_handle2
+14: Call 12 atexit 0
+15: PostCall 12
+16: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+17: Parameter 18 pointer exit_handle3
+18: Call 12 atexit 0
+19: PostCall 12
+20: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+21: Parameter 18 signedint 0
+22: Call 12 exit 0
+23: PostCall 12
+24: Return
+25: FunctionEnd signal_test

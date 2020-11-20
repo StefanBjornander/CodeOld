@@ -1,0 +1,22 @@
+0: PushFloat x
+1: PushFloat 0
+2: SignedLessThan PreCall 14 x 0
+3: Goto PushFloat x
+4: PreCall 14
+5: PushFloat x
+6: UnarySubtract £temporary652 x
+7: Parameter 20 double £temporary652
+8: Call 14 floor 0
+9: PostCall 14
+10: GetReturnValue £temporary653
+11: UnarySubtract £temporary654 £temporary653
+12: Return £temporary654
+13: Goto PushFloat x
+14: PushFloat x
+15: PushFloat 0.999999999999
+16: BinaryAdd £temporary655 x 0.999999999999
+17: FloatingToIntegral £temporary656 £temporary655
+18: IntegralToFloating £temporary657 £temporary656
+19: Return £temporary657
+20: Empty
+21: FunctionEnd ceil

@@ -1,0 +1,358 @@
+0: Assign n 0
+1: address £temporary5540 n
+2: Assign p £temporary5540
+3: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: Parameter 10 string_3C25i3E203C25i3E203C25li3E203C25li3E203C25u3E203C25lu3E0A0A# 6
+5: Parameter 10 123 8
+6: Parameter 10 -123 10
+7: Parameter 10 123 12
+8: Parameter 10 -123 16
+9: Parameter 10 123 20
+10: Parameter 10 123 22
+11: Call 10 printf 0
+12: PostCall 10
+13: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+14: Parameter 10 string_3C256i3E203C256i3E203C256li3E203C256li3E203C256u3E203C256lu3E0A# 6
+15: Parameter 10 123 8
+16: Parameter 10 -123 10
+17: Parameter 10 123 12
+18: Parameter 10 -123 16
+19: Parameter 10 123 20
+20: Parameter 10 123 22
+21: Call 10 printf 0
+22: PostCall 10
+23: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+24: Parameter 10 string_3C252B6i3E203C252B6i3E203C252B6li3E203C252B6li3E203C252B6u3E203C252B6lu3E0A# 6
+25: Parameter 10 123 8
+26: Parameter 10 -123 10
+27: Parameter 10 123 12
+28: Parameter 10 -123 16
+29: Parameter 10 123 20
+30: Parameter 10 123 22
+31: Call 10 printf 0
+32: PostCall 10
+33: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+34: Parameter 10 string_3C252D6i3E203C252D6i3E203C252D6li3E203C252D6li3E203C252D6u3E203C252D6lu3E0A# 6
+35: Parameter 10 123 8
+36: Parameter 10 -123 10
+37: Parameter 10 123 12
+38: Parameter 10 -123 16
+39: Parameter 10 123 20
+40: Parameter 10 123 22
+41: Call 10 printf 0
+42: PostCall 10
+43: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+44: Parameter 10 string_3C252B2D6i3E203C252B2D6i3E203C252B2D6li3E203C252B2D6li3E203C252B2D6u3E203C252B2D6lu3E0A0A# 6
+45: Parameter 10 123 8
+46: Parameter 10 -123 10
+47: Parameter 10 123 12
+48: Parameter 10 -123 16
+49: Parameter 10 123 20
+50: Parameter 10 123 22
+51: Call 10 printf 0
+52: PostCall 10
+53: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+54: Parameter 10 string_3C2506i3E203C2506i3E203C2506li3E203C2506li3E203C2506u3E203C2506lu3E0A# 6
+55: Parameter 10 123 8
+56: Parameter 10 -123 10
+57: Parameter 10 123 12
+58: Parameter 10 -123 16
+59: Parameter 10 123 20
+60: Parameter 10 123 22
+61: Call 10 printf 0
+62: PostCall 10
+63: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+64: Parameter 10 string_3C252B06i3E203C252B06i3E203C252B06li3E203C252B06li3E203C252B06u3E203C252B06lu3E0A# 6
+65: Parameter 10 123 8
+66: Parameter 10 -123 10
+67: Parameter 10 123 12
+68: Parameter 10 -123 16
+69: Parameter 10 123 20
+70: Parameter 10 123 22
+71: Call 10 printf 0
+72: PostCall 10
+73: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+74: Parameter 10 string_3C252D06i3E203C252D06i3E203C252D06li3E203C252D06li3E203C252D06u3E203C252D06lu3E0A# 6
+75: Parameter 10 123 8
+76: Parameter 10 -123 10
+77: Parameter 10 123 12
+78: Parameter 10 -123 16
+79: Parameter 10 123 20
+80: Parameter 10 123 22
+81: Call 10 printf 0
+82: PostCall 10
+83: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+84: Parameter 10 string_3C252B2D06i3E203C252B2D06i3E203C252B2D06li3E203C252B2D06li3E203C252B2D06u3E203C252B2D06lu3E0A0A# 6
+85: Parameter 10 123 8
+86: Parameter 10 -123 10
+87: Parameter 10 123 12
+88: Parameter 10 -123 16
+89: Parameter 10 123 20
+90: Parameter 10 123 22
+91: Call 10 printf 0
+92: PostCall 10
+93: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+94: Parameter 10 string_3C25206i3E203C25206i3E203C25206li3E203C25206li3E203C25206u3E203C25206lu3E0A# 6
+95: Parameter 10 123 8
+96: Parameter 10 -123 10
+97: Parameter 10 123 12
+98: Parameter 10 -123 16
+99: Parameter 10 123 20
+100: Parameter 10 123 22
+101: Call 10 printf 0
+102: PostCall 10
+103: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+104: Parameter 10 string_3C252B206i3E203C252B206i3E203C252B206li3E203C252B206li3E203C252B206u3E203C252B206lu3E0A# 6
+105: Parameter 10 123 8
+106: Parameter 10 -123 10
+107: Parameter 10 123 12
+108: Parameter 10 -123 16
+109: Parameter 10 123 20
+110: Parameter 10 123 22
+111: Call 10 printf 0
+112: PostCall 10
+113: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+114: Parameter 10 string_3C252D206i3E203C252D206i3E203C252D206li3E203C252D206li3E203C252D206u3E203C252D206lu3E0A# 6
+115: Parameter 10 123 8
+116: Parameter 10 -123 10
+117: Parameter 10 123 12
+118: Parameter 10 -123 16
+119: Parameter 10 123 20
+120: Parameter 10 123 22
+121: Call 10 printf 0
+122: PostCall 10
+123: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+124: Parameter 10 string_3C252B2D206i3E203C252B2D206i3E203C252B2D206li3E203C252B2D206li3E203C252B2D206u3E203C252B2D206lu3E0A0A# 6
+125: Parameter 10 123 8
+126: Parameter 10 -123 10
+127: Parameter 10 123 12
+128: Parameter 10 -123 16
+129: Parameter 10 123 20
+130: Parameter 10 123 22
+131: Call 10 printf 0
+132: PostCall 10
+133: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+134: Parameter 10 string_3C25x3E203C25X3E203C25o3E203C25lx3E203C25lX3E203C25lo3E0A# 6
+135: Parameter 10 123 8
+136: Parameter 10 123 10
+137: Parameter 10 123 12
+138: Parameter 10 123 14
+139: Parameter 10 123 18
+140: Parameter 10 123 22
+141: Call 10 printf 0
+142: PostCall 10
+143: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+144: Parameter 10 string_3C2523x3E203C2523X3E203C2523o3E203C2523lx3E203C2523lX3E203C2523lo3E0A# 6
+145: Parameter 10 123 8
+146: Parameter 10 123 10
+147: Parameter 10 123 12
+148: Parameter 10 123 14
+149: Parameter 10 123 18
+150: Parameter 10 123 22
+151: Call 10 printf 0
+152: PostCall 10
+153: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+154: Parameter 10 string_3C25253E203C25s3E203C25c3E203C25p3E0A0A# 6
+155: Parameter 10 string_Hello2C20World21# 8
+156: Parameter 10 88 10
+157: Parameter 10 p 12
+158: Call 10 printf 0
+159: PostCall 10
+160: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+161: Parameter 10 string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A# 6
+162: PushFloat 123.456
+163: Parameter 10 123.456 8
+164: PushFloat 123.456
+165: Parameter 10 123.456 16
+166: PushFloat 123.456
+167: Parameter 10 123.456 24
+168: PushFloat 123456.1
+169: Parameter 10 123456.1 32
+170: PushFloat 123456.1
+171: Parameter 10 123456.1 40
+172: Call 10 printf 0
+173: PostCall 10
+174: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+175: Parameter 10 string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A# 6
+176: PushFloat 123.456
+177: Parameter 10 123.456 8
+178: PushFloat 123.456
+179: Parameter 10 123.456 16
+180: PushFloat 123.456
+181: Parameter 10 123.456 24
+182: PushFloat 123456.1
+183: Parameter 10 123456.1 32
+184: PushFloat 123456.1
+185: Parameter 10 123456.1 40
+186: Call 10 printf 0
+187: PostCall 10
+188: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+189: Parameter 10 string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A# 6
+190: PushFloat 123.456
+191: Parameter 10 123.456 8
+192: PushFloat 123.456
+193: Parameter 10 123.456 16
+194: PushFloat 123.456
+195: Parameter 10 123.456 24
+196: PushFloat 123.456
+197: Parameter 10 123.456 32
+198: PushFloat 123.456
+199: Parameter 10 123.456 40
+200: Call 10 printf 0
+201: PostCall 10
+202: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+203: Parameter 10 string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A# 6
+204: PushFloat 123.456
+205: Parameter 10 123.456 8
+206: PushFloat 123.456
+207: Parameter 10 123.456 16
+208: PushFloat 123.456
+209: Parameter 10 123.456 24
+210: PushFloat 123.456
+211: Parameter 10 123.456 32
+212: PushFloat 123.456
+213: Parameter 10 123.456 40
+214: Call 10 printf 0
+215: PostCall 10
+216: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+217: Parameter 10 string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A# 6
+218: PushFloat 123.456
+219: Parameter 10 123.456 8
+220: PushFloat 123.456
+221: Parameter 10 123.456 16
+222: PushFloat 123.456
+223: Parameter 10 123.456 24
+224: PushFloat 123.456
+225: Parameter 10 123.456 32
+226: PushFloat 123.456
+227: Parameter 10 123.456 40
+228: Call 10 printf 0
+229: PostCall 10
+230: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+231: Parameter 10 string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A# 6
+232: PushFloat 123.456
+233: Parameter 10 123.456 8
+234: PushFloat 123.456
+235: Parameter 10 123.456 16
+236: PushFloat 123.456
+237: Parameter 10 123.456 24
+238: PushFloat 123.456
+239: Parameter 10 123.456 32
+240: PushFloat 123.456
+241: Parameter 10 123.456 40
+242: Call 10 printf 0
+243: PostCall 10
+244: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+245: Parameter 10 string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A# 6
+246: PushFloat -123.456
+247: Parameter 10 -123.456 8
+248: PushFloat -123.456
+249: Parameter 10 -123.456 16
+250: PushFloat -123.456
+251: Parameter 10 -123.456 24
+252: PushFloat -0.000000123456
+253: Parameter 10 -0.000000123456 32
+254: PushFloat -0.000000123456
+255: Parameter 10 -0.000000123456 40
+256: Call 10 printf 0
+257: PostCall 10
+258: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+259: Parameter 10 string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A# 6
+260: PushFloat -123.456
+261: Parameter 10 -123.456 8
+262: PushFloat -123.456
+263: Parameter 10 -123.456 16
+264: PushFloat -123.456
+265: Parameter 10 -123.456 24
+266: PushFloat -0.000000123456
+267: Parameter 10 -0.000000123456 32
+268: PushFloat -0.000000123456
+269: Parameter 10 -0.000000123456 40
+270: Call 10 printf 0
+271: PostCall 10
+272: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+273: Parameter 10 string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A# 6
+274: PushFloat -123.456
+275: Parameter 10 -123.456 8
+276: PushFloat -123.456
+277: Parameter 10 -123.456 16
+278: PushFloat -123.456
+279: Parameter 10 -123.456 24
+280: PushFloat -123.456
+281: Parameter 10 -123.456 32
+282: PushFloat -123.456
+283: Parameter 10 -123.456 40
+284: Call 10 printf 0
+285: PostCall 10
+286: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+287: Parameter 10 string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A# 6
+288: PushFloat -123.456
+289: Parameter 10 -123.456 8
+290: PushFloat -123.456
+291: Parameter 10 -123.456 16
+292: PushFloat -123.456
+293: Parameter 10 -123.456 24
+294: PushFloat -123.456
+295: Parameter 10 -123.456 32
+296: PushFloat -123.456
+297: Parameter 10 -123.456 40
+298: Call 10 printf 0
+299: PostCall 10
+300: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+301: Parameter 10 string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A# 6
+302: PushFloat -123.456
+303: Parameter 10 -123.456 8
+304: PushFloat -123.456
+305: Parameter 10 -123.456 16
+306: PushFloat -123.456
+307: Parameter 10 -123.456 24
+308: PushFloat -123.456
+309: Parameter 10 -123.456 32
+310: PushFloat -123.456
+311: Parameter 10 -123.456 40
+312: Call 10 printf 0
+313: PostCall 10
+314: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+315: Parameter 10 string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A# 6
+316: PushFloat -123.456
+317: Parameter 10 -123.456 8
+318: PushFloat -123.456
+319: Parameter 10 -123.456 16
+320: PushFloat -123.456
+321: Parameter 10 -123.456 24
+322: PushFloat -123.456
+323: Parameter 10 -123.456 32
+324: PushFloat -123.456
+325: Parameter 10 -123.456 40
+326: Call 10 printf 0
+327: PostCall 10
+328: CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+329: Parameter 106 string_Please20write20the20patterns205Babc5D3A20# 6
+330: Call 106 printf 0
+331: PostCall 106
+332: CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+333: Parameter 106 string_255Babc5D# 6
+334: Parameter 106 s 8
+335: Call 106 scanf 0
+336: PostCall 106
+337: CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+338: Parameter 106 string_0A3C25s3E0A# 6
+339: Parameter 106 s 8
+340: Call 106 printf 0
+341: PostCall 106
+342: CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+343: Parameter 106 string_Please20write20the20patterns205B5Eabc5D3A20# 6
+344: Call 106 printf 0
+345: PostCall 106
+346: CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+347: Parameter 106 string_255B5Eabc5D# 6
+348: Parameter 106 s 8
+349: Call 106 scanf 0
+350: PostCall 106
+351: CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+352: Parameter 106 string_0A3C25s3E# 6
+353: Parameter 106 s 8
+354: Call 106 printf 0
+355: PostCall 106
+356: Return 0
+357: FunctionEnd stdio_test

@@ -1,0 +1,41 @@
+0: PushFloat longDoubleValue
+1: PushFloat 0.0
+2: SignedLessThan PreCall 22 longDoubleValue 0.0
+3: Goto PushFloat longDoubleValue
+4: PreCall 22
+5: Parameter 28 signedchar 45
+6: Call 22 printChar 0
+7: PostCall 22
+8: PushFloat longDoubleValue
+9: PopFloat
+10: PushFloat longDoubleValue
+11: UnarySubtract £temporary1600 longDoubleValue
+12: TopFloat longDoubleValue
+13: PopFloat
+14: Assign plus 0
+15: Assign space 0
+16: Goto PushFloat longDoubleValue
+17: PushFloat longDoubleValue
+18: FloatingToIntegral £temporary1601 longDoubleValue
+19: Assign longValue £temporary1601
+20: PreCall 26
+21: Parameter 32 signed long int longValue
+22: Parameter 36 signedint plus
+23: Parameter 38 signedint space
+24: Call 26 printLongInt 0
+25: PostCall 26
+26: PushFloat longDoubleValue
+27: IntegralToFloating £temporary1603 longValue
+28: BinarySubtract £temporary1604 longDoubleValue £temporary1603
+29: TopFloat longDoubleValue
+30: PopFloat
+31: PreCall 26
+32: PushFloat longDoubleValue
+33: Parameter 32 longdouble longDoubleValue
+34: Parameter 40 signedint grid
+35: Parameter 42 signedint precision
+36: Call 26 printLongDoubleFraction 0
+37: PostCall 26
+38: Empty
+39: Return
+40: FunctionEnd printLongDoublePlain

@@ -1,0 +1,18 @@
+0: NotEqual Empty n 7
+1: Goto PreCall 8
+2: PreCall 8
+3: Parameter 14 pointer stderr
+4: Parameter 16 pointer "Assertion failed: "%s" in file %s at line %i\n"
+5: Parameter 18 pointer "n != 7"
+6: Parameter 20 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c"
+7: Parameter 22 signedint 882
+8: Call 8 fprintf 6
+9: PostCall 8
+10: PreCall 8
+11: Call 8 abort 0
+12: PostCall 8
+13: Goto Empty
+14: Empty
+15: Empty
+16: Return
+17: FunctionEnd assert_test2

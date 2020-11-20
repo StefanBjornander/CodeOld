@@ -1,0 +1,32 @@
+0: Assign index 0
+1: Empty
+2: SignedLessThan UnsignedMultiply £temporary2996 index 1 index size
+3: Goto Empty
+4: UnsignedMultiply £temporary2996 index 1
+5: BinaryAdd £temporary2997 source £temporary2996
+6: Dereference £temporary2995 -> £temporary2997 £temporary2997 0
+7: NotEqual UnsignedMultiply £temporary3002 index 1 £temporary2995 -> £temporary2997 0
+8: Goto Empty
+9: UnsignedMultiply £temporary3002 index 1
+10: BinaryAdd £temporary3003 target £temporary3002
+11: Dereference £temporary3001 -> £temporary3003 £temporary3003 0
+12: UnsignedMultiply £temporary3005 index 1
+13: BinaryAdd £temporary3006 source £temporary3005
+14: Dereference £temporary3004 -> £temporary3006 £temporary3006 0
+15: Assign £temporary3001 -> £temporary3003 £temporary3004 -> £temporary3006
+16: Empty
+17: BinaryAdd index index 1
+18: Goto Empty
+19: Empty
+20: SignedLessThan UnsignedMultiply £temporary3010 index 1 index size
+21: Goto Return target
+22: UnsignedMultiply £temporary3010 index 1
+23: BinaryAdd £temporary3011 target £temporary3010
+24: Dereference £temporary3009 -> £temporary3011 £temporary3011 0
+25: Assign £temporary3009 -> £temporary3011 0
+26: Empty
+27: BinaryAdd index index 1
+28: Goto Empty
+29: Return target
+30: Empty
+31: FunctionEnd strncpy

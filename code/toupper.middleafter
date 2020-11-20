@@ -1,0 +1,34 @@
+0: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 14 signedint c
+2: Call 8 islower 0
+3: PostCall 8
+4: GetReturnValue £temporary338
+5: Equal 31 £temporary338 0
+6: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+7: Call 8 localeconv 0
+8: PostCall 8
+9: GetReturnValue £temporary339
+10: Assign localeConvPtr £temporary339
+11: Equal 28 localeConvPtr 0
+12: Dereference £temporary341 -> localeConvPtr localeConvPtr 0
+13: Assign lowerCase £temporary341 -> localeConvPtr
+14: Dereference £temporary342 -> localeConvPtr localeConvPtr 0
+15: Assign upperCase £temporary342 -> localeConvPtr
+16: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+17: Parameter 20 pointer lowerCase
+18: Parameter 22 signedint c
+19: Call 14 strchr 0
+20: PostCall 14
+21: GetReturnValue £temporary343
+22: BinarySubtract index £temporary343 lowerCase
+23: BinaryAdd £temporary348 upperCase index
+24: Dereference £temporary346 -> £temporary348 £temporary348 0
+25: IntegralToIntegral £temporary349 £temporary346 -> £temporary348
+26: SetReturnValue
+27: Return £temporary349
+28: BinarySubtract £temporary350 c 32
+29: SetReturnValue
+30: Return £temporary350
+31: SetReturnValue
+32: Return c
+33: FunctionEnd toupper

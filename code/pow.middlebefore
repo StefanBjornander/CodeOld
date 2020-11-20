@@ -1,0 +1,103 @@
+0: PushFloat x
+1: PushFloat 0
+2: SignedGreaterThan PreCall 22 x 0
+3: Goto PushFloat x
+4: PreCall 22
+5: PushFloat y
+6: PreCall 22
+7: PushFloat x
+8: Parameter 28 double x
+9: Call 22 log 0
+10: PostCall 22
+11: GetReturnValue £temporary403
+12: SignedMultiply £temporary404 y £temporary403
+13: Parameter 28 double £temporary404
+14: Call 22 exp 0
+15: PostCall 22
+16: GetReturnValue £temporary405
+17: Return £temporary405
+18: Goto Empty
+19: PushFloat x
+20: PushFloat 0
+21: Equal PushFloat y x 0
+22: Goto PushFloat x
+23: PushFloat y
+24: PushFloat 0
+25: Equal PushFloat 1 y 0
+26: Goto PushFloat x
+27: PushFloat 1
+28: Return 1
+29: Goto Empty
+30: PushFloat x
+31: PushFloat 0
+32: Equal PushFloat y x 0
+33: Goto PushFloat x
+34: PushFloat y
+35: PushFloat 0
+36: SignedGreaterThan PushFloat 0 y 0
+37: Goto PushFloat x
+38: PushFloat 0
+39: Return 0
+40: Goto Empty
+41: PushFloat x
+42: PushFloat 0
+43: SignedLessThan PreCall 22 x 0
+44: Goto Assign errno 6
+45: PreCall 22
+46: PushFloat y
+47: Parameter 28 double y
+48: Call 22 floor 0
+49: PostCall 22
+50: GetReturnValue £temporary413
+51: PreCall 22
+52: PushFloat y
+53: Parameter 28 double y
+54: Call 22 ceil 0
+55: PostCall 22
+56: GetReturnValue £temporary414
+57: Equal PushFloat y £temporary413 £temporary414
+58: Goto Assign errno 6
+59: PushFloat y
+60: FloatingToIntegral £temporary417 y
+61: Assign long_y £temporary417
+62: SignedModulo £temporary418 long_y 2
+63: Equal PreCall 26 £temporary418 0
+64: Goto PreCall 26
+65: PreCall 26
+66: PushFloat y
+67: PreCall 26
+68: PushFloat x
+69: UnarySubtract £temporary420 x
+70: Parameter 32 double £temporary420
+71: Call 26 log 0
+72: PostCall 26
+73: GetReturnValue £temporary421
+74: SignedMultiply £temporary422 y £temporary421
+75: Parameter 32 double £temporary422
+76: Call 26 exp 0
+77: PostCall 26
+78: GetReturnValue £temporary423
+79: Return £temporary423
+80: Goto Empty
+81: PreCall 26
+82: PushFloat y
+83: PreCall 26
+84: PushFloat x
+85: UnarySubtract £temporary424 x
+86: Parameter 32 double £temporary424
+87: Call 26 log 0
+88: PostCall 26
+89: GetReturnValue £temporary425
+90: SignedMultiply £temporary426 y £temporary425
+91: Parameter 32 double £temporary426
+92: Call 26 exp 0
+93: PostCall 26
+94: GetReturnValue £temporary427
+95: UnarySubtract £temporary428 £temporary427
+96: Return £temporary428
+97: Goto Empty
+98: Assign errno 6
+99: PushFloat 0
+100: Return 0
+101: Empty
+102: FunctionEnd pow

@@ -1,0 +1,942 @@
+0: PreCall 10
+1: Parameter 16 pointer inFilePtrName
+2: Parameter 18 pointer "r"
+3: Call 10 fopen 0
+4: PostCall 10
+5: GetReturnValue £temporary3786
+6: Assign inFilePtrPtr £temporary3786
+7: PreCall 12
+8: Parameter 18 pointer outFilePtrName
+9: Parameter 20 pointer "w"
+10: Call 12 fopen 0
+11: PostCall 12
+12: GetReturnValue £temporary3787
+13: Assign outFilePtrPtr £temporary3787
+14: NotEqual Empty inFilePtrPtr 0
+15: Goto PreCall 14
+16: PreCall 14
+17: Parameter 20 pointer stderr
+18: Parameter 22 pointer "Assertion failed: "%s" in file %s at line %i\n"
+19: Parameter 24 pointer "inFilePtrPtr != NULL"
+20: Parameter 26 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+21: Parameter 28 signedint 11
+22: Call 14 fprintf 6
+23: PostCall 14
+24: PreCall 14
+25: Call 14 abort 0
+26: PostCall 14
+27: Goto Empty
+28: Empty
+29: NotEqual Empty outFilePtrPtr 0
+30: Goto PreCall 14
+31: PreCall 14
+32: Parameter 20 pointer stderr
+33: Parameter 22 pointer "Assertion failed: "%s" in file %s at line %i\n"
+34: Parameter 24 pointer "outFilePtrPtr != NULL"
+35: Parameter 26 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+36: Parameter 28 signedint 12
+37: Call 14 fprintf 6
+38: PostCall 14
+39: PreCall 14
+40: Call 14 abort 0
+41: PostCall 14
+42: Goto Empty
+43: Empty
+44: Assign size 0
+45: PreCall 18
+46: Parameter 24 pointer inFilePtrPtr
+47: Parameter 26 pointer "%i"
+48: Address £temporary3796 size
+49: Parameter 28 pointer £temporary3796
+50: Call 18 fscanf 2
+51: PostCall 18
+52: Assign index 0
+53: Empty
+54: SignedLessThan PushFloat 0 index size
+55: Goto PreCall 14
+56: PushFloat 0
+57: PopFloat inValue
+58: PreCall 26
+59: PushFloat inValue
+60: Parameter 32 double £temporary3800
+61: Call 26 sqrt 0
+62: PostCall 26
+63: GetReturnValue £temporary3801
+64: PopFloat outValue
+65: PreCall 34
+66: Parameter 40 pointer inFilePtrPtr
+67: Parameter 42 pointer "%lf"
+68: PushFloat inValue
+69: PopFloat
+70: Address £temporary3802 inValue
+71: Parameter 44 pointer £temporary3802
+72: Call 34 fscanf 2
+73: PostCall 34
+74: PreCall 34
+75: Parameter 40 pointer outFilePtrPtr
+76: Parameter 42 pointer "%f\n"
+77: PushFloat outValue
+78: Parameter 44 double outValue
+79: Call 34 fprintf 8
+80: PostCall 34
+81: Empty
+82: BinaryAdd index index 1
+83: Goto Empty
+84: PreCall 14
+85: Parameter 20 pointer inFilePtrPtr
+86: Call 14 fclose 0
+87: PostCall 14
+88: PreCall 14
+89: Parameter 20 pointer outFilePtrPtr
+90: Call 14 fclose 0
+91: PostCall 14
+92: Assign sourceFilePtr "X"
+93: Assign targetFilePtr "Y"
+94: PreCall 14
+95: Parameter 20 pointer sourceFilePtr
+96: Parameter 22 pointer targetFilePtr
+97: Call 14 rename 0
+98: PostCall 14
+99: GetReturnValue £temporary3807
+100: Equal PreCall 14 £temporary3807 0
+101: Goto PreCall 14
+102: PreCall 14
+103: Parameter 20 pointer ""%s" has been renamed to "%s".\n"
+104: Parameter 22 pointer sourceFilePtr
+105: Parameter 24 pointer targetFilePtr
+106: Call 14 printf 4
+107: PostCall 14
+108: Goto Assign targetFilePtr "Z"
+109: PreCall 14
+110: Parameter 20 pointer "Error %i: %s.\n"
+111: Parameter 22 signedint errno
+112: PreCall 14
+113: Parameter 30 signedint errno
+114: Call 24 strerror 0
+115: PostCall 24
+116: GetReturnValue £temporary3810
+117: Parameter 24 pointer £temporary3810
+118: Call 14 printf 4
+119: PostCall 14
+120: Assign targetFilePtr "Z"
+121: PreCall 12
+122: Parameter 18 pointer targetFilePtr
+123: Call 12 remove 0
+124: PostCall 12
+125: GetReturnValue £temporary3812
+126: Equal PreCall 12 £temporary3812 0
+127: Goto PreCall 12
+128: PreCall 12
+129: Parameter 18 pointer ""%s" has been removed.\n"
+130: Parameter 20 pointer targetFilePtr
+131: Call 12 printf 2
+132: PostCall 12
+133: Goto PreCall 10
+134: PreCall 12
+135: Parameter 18 pointer "Error %i: %s.\n"
+136: Parameter 20 signedint errno
+137: PreCall 12
+138: Parameter 28 signedint errno
+139: Call 22 strerror 0
+140: PostCall 22
+141: GetReturnValue £temporary3815
+142: Parameter 22 pointer £temporary3815
+143: Call 12 printf 4
+144: PostCall 12
+145: PreCall 10
+146: Parameter 16 pointer "PBook.txt"
+147: Parameter 18 pointer "r"
+148: Call 10 fopen 0
+149: PostCall 10
+150: GetReturnValue £temporary3817
+151: Assign inFilePtr £temporary3817
+152: NotEqual Empty inFilePtr 0
+153: Goto PreCall 12
+154: PreCall 12
+155: Parameter 18 pointer stderr
+156: Parameter 20 pointer "Assertion failed: "%s" in file %s at line %i\n"
+157: Parameter 22 pointer "inFilePtr != NULL"
+158: Parameter 24 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+159: Parameter 26 signedint 50
+160: Call 12 fprintf 6
+161: PostCall 12
+162: PreCall 12
+163: Call 12 abort 0
+164: PostCall 12
+165: Goto Empty
+166: Empty
+167: PreCall 12
+168: Parameter 18 pointer "\n%-24s %-24s\n"
+169: Parameter 20 pointer "Name"
+170: Parameter 22 pointer "Phone"
+171: Call 12 printf 4
+172: PostCall 12
+173: PreCall 12
+174: Parameter 18 pointer "%-24s %-24s\n"
+175: Parameter 20 pointer "========================"
+176: Parameter 22 pointer "========================"
+177: Call 12 printf 4
+178: PostCall 12
+179: PreCall 16
+180: Parameter 22 pointer inFilePtr
+181: Parameter 24 pointer "%i"
+182: Address £temporary3824 size
+183: Parameter 26 pointer £temporary3824
+184: Call 16 fscanf 2
+185: PostCall 16
+186: Assign count 0
+187: Empty
+188: SignedLessThan PreCall 56 count size
+189: Goto PreCall 12
+190: PreCall 56
+191: Parameter 62 pointer inFilePtr
+192: Parameter 64 pointer "%s%s"
+193: Parameter 66 pointer name
+194: Parameter 68 pointer phone
+195: Call 56 fscanf 4
+196: PostCall 56
+197: PreCall 56
+198: Parameter 62 pointer "%-24s %-24s\n"
+199: Parameter 64 pointer name
+200: Parameter 66 pointer phone
+201: Call 56 printf 4
+202: PostCall 56
+203: Empty
+204: BinaryAdd count count 1
+205: Goto Empty
+206: PreCall 12
+207: Parameter 18 pointer "\n"
+208: Call 12 printf 0
+209: PostCall 12
+210: PreCall 12
+211: Parameter 18 pointer inFilePtr
+212: Call 12 fclose 0
+213: PostCall 12
+214: Assign sourceFilePtr "Flow1.txt"
+215: Assign targetFilePtr "Flow2.txt"
+216: PreCall 14
+217: Parameter 20 pointer sourceFilePtr
+218: Parameter 22 pointer "r"
+219: Call 14 fopen 0
+220: PostCall 14
+221: GetReturnValue £temporary3832
+222: Assign inFilePtr £temporary3832
+223: PreCall 16
+224: Parameter 22 pointer targetFilePtr
+225: Parameter 24 pointer "w"
+226: Call 16 fopen 0
+227: PostCall 16
+228: GetReturnValue £temporary3833
+229: Assign outFilePtr £temporary3833
+230: NotEqual Empty inFilePtr 0
+231: Goto PreCall 18
+232: PreCall 18
+233: Parameter 24 pointer stderr
+234: Parameter 26 pointer "Assertion failed: "%s" in file %s at line %i\n"
+235: Parameter 28 pointer "inFilePtr != NULL"
+236: Parameter 30 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+237: Parameter 32 signedint 79
+238: Call 18 fprintf 6
+239: PostCall 18
+240: PreCall 18
+241: Call 18 abort 0
+242: PostCall 18
+243: Goto Empty
+244: Empty
+245: NotEqual Empty outFilePtr 0
+246: Goto PreCall 18
+247: PreCall 18
+248: Parameter 24 pointer stderr
+249: Parameter 26 pointer "Assertion failed: "%s" in file %s at line %i\n"
+250: Parameter 28 pointer "outFilePtr != NULL"
+251: Parameter 30 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+252: Parameter 32 signedint 80
+253: Call 18 fprintf 6
+254: PostCall 18
+255: PreCall 18
+256: Call 18 abort 0
+257: PostCall 18
+258: Goto Empty
+259: Empty
+260: Goto PreCall 18
+261: PreCall 18
+262: Parameter 24 pointer inFilePtr
+263: Call 18 fgetc 0
+264: PostCall 18
+265: GetReturnValue £temporary3842
+266: IntegralToIntegral £temporary3843 £temporary3842
+267: Assign c £temporary3843
+268: IntegralToIntegral £temporary3844 c
+269: Equal Goto PreCall 18 £temporary3844 -1
+270: Goto PreCall 19
+271: Goto PreCall 18
+272: Goto PreCall 19
+273: PreCall 19
+274: IntegralToIntegral £temporary3846 c
+275: Parameter 25 signedint £temporary3846
+276: Parameter 27 pointer outFilePtr
+277: Call 19 putc 0
+278: PostCall 19
+279: Equal PreCall 19 c 10
+280: Goto Goto PreCall 18
+281: PreCall 19
+282: Parameter 25 signedint 10
+283: Parameter 27 pointer outFilePtr
+284: Call 19 putc 0
+285: PostCall 19
+286: Goto Goto PreCall 18
+287: Goto Goto PreCall 18
+288: PreCall 18
+289: Parameter 24 pointer inFilePtr
+290: Call 18 fclose 0
+291: PostCall 18
+292: PreCall 18
+293: Parameter 24 pointer outFilePtr
+294: Call 18 fclose 0
+295: PostCall 18
+296: PreCall 10
+297: Parameter 16 pointer "Test.bin"
+298: Parameter 18 pointer "w"
+299: Call 10 fopen 0
+300: PostCall 10
+301: GetReturnValue £temporary3853
+302: Assign outFilePtr £temporary3853
+303: NotEqual Empty outFilePtr 0
+304: Goto PreCall 12
+305: PreCall 12
+306: Parameter 18 pointer stderr
+307: Parameter 20 pointer "Assertion failed: "%s" in file %s at line %i\n"
+308: Parameter 22 pointer "outFilePtr != NULL"
+309: Parameter 24 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+310: Parameter 26 signedint 101
+311: Call 12 fprintf 6
+312: PostCall 12
+313: PreCall 12
+314: Call 12 abort 0
+315: PostCall 12
+316: Goto Empty
+317: Empty
+318: Assign size 10
+319: PreCall 16
+320: Address £temporary3858 size
+321: Parameter 22 pointer £temporary3858
+322: Parameter 24 signedint 2
+323: Parameter 26 signedint 1
+324: Parameter 28 pointer outFilePtr
+325: Call 16 fwrite 0
+326: PostCall 16
+327: Assign index 0
+328: Empty
+329: SignedLessThan SignedMultiply £temporary3862 index index index size
+330: Goto PreCall 16
+331: SignedMultiply £temporary3862 index index
+332: IntegralToFloating £temporary3863 £temporary3862
+333: PopFloat value
+334: PreCall 24
+335: PushFloat value
+336: PopFloat
+337: Address £temporary3864 value
+338: Parameter 30 pointer £temporary3864
+339: Parameter 32 signedint 8
+340: Parameter 34 signedint 1
+341: Parameter 36 pointer outFilePtr
+342: Call 24 fwrite 0
+343: PostCall 24
+344: Empty
+345: BinaryAdd index index 1
+346: Goto Empty
+347: PreCall 16
+348: Parameter 22 pointer outFilePtr
+349: Call 16 fclose 0
+350: PostCall 16
+351: PreCall 10
+352: Parameter 16 pointer "Test.bin"
+353: Parameter 18 pointer "r"
+354: Call 10 fopen 0
+355: PostCall 10
+356: GetReturnValue £temporary3867
+357: Assign inFilePtr £temporary3867
+358: NotEqual Empty inFilePtr 0
+359: Goto PreCall 12
+360: PreCall 12
+361: Parameter 18 pointer stderr
+362: Parameter 20 pointer "Assertion failed: "%s" in file %s at line %i\n"
+363: Parameter 22 pointer "inFilePtr != NULL"
+364: Parameter 24 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+365: Parameter 26 signedint 116
+366: Call 12 fprintf 6
+367: PostCall 12
+368: PreCall 12
+369: Call 12 abort 0
+370: PostCall 12
+371: Goto Empty
+372: Empty
+373: PreCall 96
+374: Address £temporary3872 size
+375: Parameter 102 pointer £temporary3872
+376: Parameter 104 signedint 2
+377: Parameter 106 signedint 1
+378: Parameter 108 pointer inFilePtr
+379: Call 96 fread 0
+380: PostCall 96
+381: PreCall 96
+382: Parameter 102 pointer "size1 %i\n"
+383: Parameter 104 signedint size
+384: Call 96 printf 2
+385: PostCall 96
+386: PreCall 96
+387: Address £temporary3875 arr
+388: Parameter 102 pointer £temporary3875
+389: Parameter 104 signedint 80
+390: Parameter 106 signedint 1
+391: Parameter 108 pointer inFilePtr
+392: Call 96 fread 0
+393: PostCall 96
+394: PreCall 96
+395: Parameter 102 pointer inFilePtr
+396: Call 96 fclose 0
+397: PostCall 96
+398: Assign index 0
+399: Empty
+400: SignedLessThan PreCall 96 index 10
+401: Goto PreCall 12
+402: PreCall 96
+403: Parameter 102 pointer "index1 %i: value %f\n"
+404: Parameter 104 signedint index
+405: UnsignedMultiply £temporary3881 index 8
+406: BinaryAdd £temporary3882 arr £temporary3881
+407: Dereference £temporary3880 -> £temporary3882 £temporary3882 0
+408: PushFloat £temporary3880 -> £temporary3882
+409: Parameter 106 double £temporary3880 -> £temporary3882
+410: Call 96 printf 10
+411: PostCall 96
+412: Empty
+413: BinaryAdd index index 1
+414: Goto Empty
+415: PreCall 12
+416: Parameter 18 pointer "\n"
+417: Call 12 printf 0
+418: PostCall 12
+419: PreCall 10
+420: Parameter 16 pointer "Test.bin"
+421: Parameter 18 pointer "r"
+422: Call 10 fopen 0
+423: PostCall 10
+424: GetReturnValue £temporary3885
+425: Assign inFilePtr £temporary3885
+426: NotEqual Empty inFilePtr 0
+427: Goto PreCall 16
+428: PreCall 16
+429: Parameter 22 pointer stderr
+430: Parameter 24 pointer "Assertion failed: "%s" in file %s at line %i\n"
+431: Parameter 26 pointer "inFilePtr != NULL"
+432: Parameter 28 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+433: Parameter 30 signedint 137
+434: Call 16 fprintf 6
+435: PostCall 16
+436: PreCall 16
+437: Call 16 abort 0
+438: PostCall 16
+439: Goto Empty
+440: Empty
+441: PreCall 16
+442: Address £temporary3890 size
+443: Parameter 22 pointer £temporary3890
+444: Parameter 24 signedint 2
+445: Parameter 26 signedint 1
+446: Parameter 28 pointer inFilePtr
+447: Call 16 fread 0
+448: PostCall 16
+449: PreCall 16
+450: Parameter 22 pointer "size2 %i\n"
+451: Parameter 24 signedint size
+452: Call 16 printf 2
+453: PostCall 16
+454: Assign index 0
+455: Empty
+456: SignedLessThan PreCall 24 index size
+457: Goto PreCall 16
+458: PreCall 24
+459: PushFloat value
+460: PopFloat
+461: Address £temporary3895 value
+462: Parameter 30 pointer £temporary3895
+463: Parameter 32 signedint 8
+464: Parameter 34 signedint 1
+465: Parameter 36 pointer inFilePtr
+466: Call 24 fread 0
+467: PostCall 24
+468: PreCall 24
+469: Parameter 30 pointer "index2 %i: value %f\n"
+470: Parameter 32 signedint index
+471: PushFloat value
+472: Parameter 34 double value
+473: Call 24 printf 10
+474: PostCall 24
+475: Empty
+476: BinaryAdd index index 1
+477: Goto Empty
+478: PreCall 16
+479: Parameter 22 pointer "\n"
+480: Call 16 printf 0
+481: PostCall 16
+482: PreCall 16
+483: Parameter 22 pointer inFilePtr
+484: Call 16 fclose 0
+485: PostCall 16
+486: PreCall 10
+487: Parameter 16 pointer "Test.bin"
+488: Parameter 18 pointer "r"
+489: Call 10 fopen 0
+490: PostCall 10
+491: GetReturnValue £temporary3900
+492: Assign inFilePtr £temporary3900
+493: NotEqual Empty inFilePtr 0
+494: Goto PreCall 14
+495: PreCall 14
+496: Parameter 20 pointer stderr
+497: Parameter 22 pointer "Assertion failed: "%s" in file %s at line %i\n"
+498: Parameter 24 pointer "inFilePtr != NULL"
+499: Parameter 26 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+500: Parameter 28 signedint 154
+501: Call 14 fprintf 6
+502: PostCall 14
+503: PreCall 14
+504: Call 14 abort 0
+505: PostCall 14
+506: Goto Empty
+507: Empty
+508: PreCall 14
+509: Address £temporary3905 size
+510: Parameter 20 pointer £temporary3905
+511: Parameter 22 signedint 2
+512: Parameter 24 signedint 1
+513: Parameter 26 pointer inFilePtr
+514: Call 14 fread 0
+515: PostCall 14
+516: PreCall 14
+517: Parameter 20 pointer "size3 %i total %i\n"
+518: Parameter 22 signedint size
+519: SignedMultiply £temporary3907 size 8
+520: Parameter 24 signedint £temporary3907
+521: Call 14 printf 4
+522: PostCall 14
+523: SignedMultiply £temporary3909 size 8
+524: Assign total £temporary3909
+525: PreCall 18
+526: Parameter 24 signedint total
+527: Call 18 malloc 0
+528: PostCall 18
+529: GetReturnValue £temporary3910
+530: Assign p £temporary3910
+531: UnsignedMultiply £temporary3912 size 8
+532: BinaryAdd £temporary3911 p £temporary3912
+533: Assign endPtr £temporary3911
+534: NotEqual Empty p 0
+535: Goto PreCall 22
+536: PreCall 22
+537: Parameter 28 pointer stderr
+538: Parameter 30 pointer "Assertion failed: "%s" in file %s at line %i\n"
+539: Parameter 32 pointer "p != NULL"
+540: Parameter 34 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+541: Parameter 36 signedint 161
+542: Call 22 fprintf 6
+543: PostCall 22
+544: PreCall 22
+545: Call 22 abort 0
+546: PostCall 22
+547: Goto Empty
+548: Empty
+549: PreCall 22
+550: Parameter 28 pointer "malloc %u %u %u\n"
+551: Parameter 30 pointer p
+552: Parameter 32 signedint total
+553: Parameter 34 pointer endPtr
+554: Call 22 printf 6
+555: PostCall 22
+556: PreCall 22
+557: Parameter 28 pointer p
+558: Parameter 30 signedint total
+559: Parameter 32 signedint 1
+560: Parameter 34 pointer inFilePtr
+561: Call 22 fread 0
+562: PostCall 22
+563: Assign index 0
+564: Empty
+565: SignedLessThan PreCall 22 index size
+566: Goto PreCall 22
+567: PreCall 22
+568: Parameter 28 pointer "index3 %i: value %f\n"
+569: Parameter 30 signedint index
+570: UnsignedMultiply £temporary3922 index 8
+571: BinaryAdd £temporary3923 p £temporary3922
+572: Dereference £temporary3921 -> £temporary3923 £temporary3923 0
+573: PushFloat £temporary3921 -> £temporary3923
+574: Parameter 32 double £temporary3921 -> £temporary3923
+575: Call 22 printf 10
+576: PostCall 22
+577: Empty
+578: BinaryAdd index index 1
+579: Goto Empty
+580: PreCall 22
+581: Parameter 28 pointer "\n"
+582: Call 22 printf 0
+583: PostCall 22
+584: PreCall 22
+585: Parameter 28 pointer p
+586: Call 22 free 0
+587: PostCall 22
+588: PreCall 14
+589: Parameter 20 pointer inFilePtr
+590: Call 14 fclose 0
+591: PostCall 14
+592: Assign personVector[0].name[0] 65
+593: Assign personVector[0].name[1] 100
+594: Assign personVector[0].name[2] 97
+595: Assign personVector[0].name[3] 109
+596: Assign personVector[0].name[4] 32
+597: Assign personVector[0].name[5] 66
+598: Assign personVector[0].name[6] 101
+599: Assign personVector[0].name[7] 114
+600: Assign personVector[0].name[8] 116
+601: Assign personVector[0].name[9] 105
+602: Assign personVector[0].name[10] 108
+603: Assign personVector[0].name[11] 115
+604: Assign personVector[0].name[12] 115
+605: Assign personVector[0].name[13] 111
+606: Assign personVector[0].name[14] 110
+607: Assign personVector[0].name[15] 0
+608: Assign personVector[0].phone 12345
+609: Assign personVector[1].name[0] 66
+610: Assign personVector[1].name[1] 101
+611: Assign personVector[1].name[2] 114
+612: Assign personVector[1].name[3] 116
+613: Assign personVector[1].name[4] 105
+614: Assign personVector[1].name[5] 108
+615: Assign personVector[1].name[6] 32
+616: Assign personVector[1].name[7] 67
+617: Assign personVector[1].name[8] 101
+618: Assign personVector[1].name[9] 97
+619: Assign personVector[1].name[10] 115
+620: Assign personVector[1].name[11] 97
+621: Assign personVector[1].name[12] 114
+622: Assign personVector[1].name[13] 115
+623: Assign personVector[1].name[14] 115
+624: Assign personVector[1].name[15] 111
+625: Assign personVector[1].name[16] 110
+626: Assign personVector[1].name[17] 0
+627: Assign personVector[1].phone 23456
+628: Assign personVector[2].name[0] 67
+629: Assign personVector[2].name[1] 101
+630: Assign personVector[2].name[2] 97
+631: Assign personVector[2].name[3] 115
+632: Assign personVector[2].name[4] 97
+633: Assign personVector[2].name[5] 114
+634: Assign personVector[2].name[6] 32
+635: Assign personVector[2].name[7] 68
+636: Assign personVector[2].name[8] 97
+637: Assign personVector[2].name[9] 118
+638: Assign personVector[2].name[10] 105
+639: Assign personVector[2].name[11] 100
+640: Assign personVector[2].name[12] 115
+641: Assign personVector[2].name[13] 115
+642: Assign personVector[2].name[14] 111
+643: Assign personVector[2].name[15] 110
+644: Assign personVector[2].name[16] 0
+645: Assign personVector[2].phone 24567
+646: PreCall 210
+647: Parameter 216 pointer "Block.bin"
+648: Parameter 218 pointer "w"
+649: Call 210 fopen 0
+650: PostCall 210
+651: GetReturnValue £temporary3988
+652: Assign outFilePtr £temporary3988
+653: PreCall 212
+654: Parameter 218 pointer "Block.bin"
+655: Parameter 220 pointer "r"
+656: Call 212 fopen 0
+657: PostCall 212
+658: GetReturnValue £temporary3989
+659: Assign inFilePtr £temporary3989
+660: NotEqual Empty outFilePtr 0
+661: Goto PreCall 214
+662: PreCall 214
+663: Parameter 220 pointer stderr
+664: Parameter 222 pointer "Assertion failed: "%s" in file %s at line %i\n"
+665: Parameter 224 pointer "outFilePtr != NULL"
+666: Parameter 226 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+667: Parameter 228 signedint 188
+668: Call 214 fprintf 6
+669: PostCall 214
+670: PreCall 214
+671: Call 214 abort 0
+672: PostCall 214
+673: Goto Empty
+674: Empty
+675: NotEqual Empty inFilePtr 0
+676: Goto PreCall 214
+677: PreCall 214
+678: Parameter 220 pointer stderr
+679: Parameter 222 pointer "Assertion failed: "%s" in file %s at line %i\n"
+680: Parameter 224 pointer "inFilePtr != NULL"
+681: Parameter 226 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+682: Parameter 228 signedint 189
+683: Call 214 fprintf 6
+684: PostCall 214
+685: PreCall 214
+686: Call 214 abort 0
+687: PostCall 214
+688: Goto Empty
+689: Empty
+690: PreCall 214
+691: Parameter 220 pointer personVector
+692: Parameter 222 signedint 150
+693: Parameter 224 signedint 1
+694: Parameter 226 pointer outFilePtr
+695: Call 214 fwrite 0
+696: PostCall 214
+697: PreCall 214
+698: Parameter 220 pointer outFilePtr
+699: Call 214 fclose 0
+700: PostCall 214
+701: PreCall 214
+702: Parameter 220 pointer inFilePtr
+703: Call 214 feof 0
+704: PostCall 214
+705: GetReturnValue £temporary4000
+706: NotEqual PreCall 214 £temporary4000 0
+707: Goto PreCall 214
+708: PreCall 214
+709: Address £temporary4003 person
+710: Parameter 220 pointer £temporary4003
+711: Parameter 222 signedint 50
+712: Parameter 224 signedint 1
+713: Parameter 226 pointer inFilePtr
+714: Call 214 fread 0
+715: PostCall 214
+716: PreCall 214
+717: Parameter 220 pointer "Name  : %s\n"
+718: Parameter 222 pointer person.name
+719: Call 214 printf 2
+720: PostCall 214
+721: PreCall 214
+722: Parameter 220 pointer "Phone : %d\n"
+723: Parameter 222 signedint person.phone
+724: Call 214 printf 2
+725: PostCall 214
+726: Goto PreCall 214
+727: PreCall 214
+728: Parameter 220 pointer inFilePtr
+729: Call 214 fclose 0
+730: PostCall 214
+731: PreCall 10
+732: Parameter 16 pointer "Test1.txt"
+733: Parameter 18 pointer "r"
+734: Call 10 fopen 0
+735: PostCall 10
+736: GetReturnValue £temporary4010
+737: Assign inFilePtr £temporary4010
+738: NotEqual Empty inFilePtr 0
+739: Goto PreCall 14
+740: PreCall 14
+741: Parameter 20 pointer stderr
+742: Parameter 22 pointer "Assertion failed: "%s" in file %s at line %i\n"
+743: Parameter 24 pointer "inFilePtr != NULL"
+744: Parameter 26 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+745: Parameter 28 signedint 206
+746: Call 14 fprintf 6
+747: PostCall 14
+748: PreCall 14
+749: Call 14 abort 0
+750: PostCall 14
+751: Goto Empty
+752: Empty
+753: PreCall 14
+754: Parameter 20 pointer inFilePtr
+755: Parameter 22 signedint -1
+756: Parameter 24 signedint 2
+757: Call 14 fseek 0
+758: PostCall 14
+759: PreCall 14
+760: Parameter 20 pointer inFilePtr
+761: Call 14 ftell 0
+762: PostCall 14
+763: GetReturnValue £temporary4016
+764: IntegralToIntegral £temporary4017 £temporary4016
+765: Assign u £temporary4017
+766: UnsignedGreaterThanEqual PreCall 14 u 0
+767: Goto PreCall 14
+768: PreCall 14
+769: Parameter 20 pointer inFilePtr
+770: Call 14 fgetc 0
+771: PostCall 14
+772: GetReturnValue £temporary4019
+773: IntegralToIntegral £temporary4020 £temporary4019
+774: Assign c £temporary4020
+775: PreCall 15
+776: IntegralToIntegral £temporary4021 c
+777: Parameter 21 signedint £temporary4021
+778: Call 15 putchar 0
+779: PostCall 15
+780: Equal Goto PreCall 14 u 0
+781: Goto PreCall 15
+782: Goto PreCall 14
+783: Goto PreCall 15
+784: PreCall 15
+785: Parameter 21 pointer inFilePtr
+786: Parameter 23 signedint -2
+787: Parameter 25 signedint 1
+788: Call 15 fseek 0
+789: PostCall 15
+790: Goto PreCall 14
+791: PreCall 14
+792: Parameter 20 pointer "\n\n"
+793: Call 14 printf 0
+794: PostCall 14
+795: PreCall 14
+796: Parameter 20 pointer inFilePtr
+797: Call 14 fclose 0
+798: PostCall 14
+799: PreCall 10
+800: Parameter 16 pointer "fileexists X %s\n"
+801: PreCall 10
+802: Parameter 24 pointer "X"
+803: Call 18 fileexists 0
+804: PostCall 18
+805: GetReturnValue £temporary4027
+806: NotEqual Empty £temporary4027 0
+807: Goto Empty
+808: Empty
+809: Assign £temporary4029 "Yes"
+810: Goto Empty
+811: Empty
+812: Assign £temporary4029 "No"
+813: Empty
+814: Parameter 18 pointer £temporary4029
+815: Call 10 printf 2
+816: PostCall 10
+817: PreCall 10
+818: Parameter 16 pointer "fileexists Y %s\n\n"
+819: PreCall 10
+820: Parameter 24 pointer "Y"
+821: Call 18 fileexists 0
+822: PostCall 18
+823: GetReturnValue £temporary4031
+824: NotEqual Empty £temporary4031 0
+825: Goto Empty
+826: Empty
+827: Assign £temporary4033 "Yes"
+828: Goto Empty
+829: Empty
+830: Assign £temporary4033 "No"
+831: Empty
+832: Parameter 18 pointer £temporary4033
+833: Call 10 printf 2
+834: PostCall 10
+835: PreCall 12
+836: Parameter 18 pointer "PBookX.txt"
+837: Parameter 20 pointer "r+"
+838: Call 12 fopen 0
+839: PostCall 12
+840: GetReturnValue £temporary4035
+841: Assign inOutFilePtr £temporary4035
+842: NotEqual Empty inOutFilePtr 0
+843: Goto PreCall 14
+844: PreCall 14
+845: Parameter 20 pointer stderr
+846: Parameter 22 pointer "Assertion failed: "%s" in file %s at line %i\n"
+847: Parameter 24 pointer "inOutFilePtr != NULL"
+848: Parameter 26 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+849: Parameter 28 signedint 229
+850: Call 14 fprintf 6
+851: PostCall 14
+852: PreCall 14
+853: Call 14 abort 0
+854: PostCall 14
+855: Goto Empty
+856: Empty
+857: PreCall 14
+858: Call 14 tmpfile 0
+859: PostCall 14
+860: GetReturnValue £temporary4040
+861: Assign tempFilePtr £temporary4040
+862: NotEqual Empty tempFilePtr 0
+863: Goto PreCall 14
+864: PreCall 14
+865: Parameter 20 pointer stderr
+866: Parameter 22 pointer "Assertion failed: "%s" in file %s at line %i\n"
+867: Parameter 24 pointer "tempFilePtr != NULL"
+868: Parameter 26 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c"
+869: Parameter 28 signedint 232
+870: Call 14 fprintf 6
+871: PostCall 14
+872: PreCall 14
+873: Call 14 abort 0
+874: PostCall 14
+875: Goto Empty
+876: Empty
+877: Goto PreCall 14
+878: PreCall 14
+879: Parameter 20 pointer inOutFilePtr
+880: Call 14 fgetc 0
+881: PostCall 14
+882: GetReturnValue £temporary4045
+883: IntegralToIntegral £temporary4046 £temporary4045
+884: Assign c £temporary4046
+885: IntegralToIntegral £temporary4047 c
+886: Equal Goto PreCall 14 £temporary4047 -1
+887: Goto PreCall 15
+888: Goto PreCall 14
+889: Goto PreCall 15
+890: PreCall 15
+891: PreCall 15
+892: IntegralToIntegral £temporary4049 c
+893: Parameter 21 signedint £temporary4049
+894: Call 15 toupper 0
+895: PostCall 15
+896: GetReturnValue £temporary4050
+897: Parameter 21 signedint £temporary4050
+898: Parameter 23 pointer tempFilePtr
+899: Call 15 putc 0
+900: PostCall 15
+901: Goto Goto PreCall 14
+902: PreCall 14
+903: Parameter 20 pointer tempFilePtr
+904: Call 14 rewind 0
+905: PostCall 14
+906: PreCall 14
+907: Parameter 20 pointer inOutFilePtr
+908: Parameter 22 pointer "\n------------\n"
+909: Call 14 fprintf 0
+910: PostCall 14
+911: Goto PreCall 14
+912: PreCall 14
+913: Parameter 20 pointer tempFilePtr
+914: Call 14 fgetc 0
+915: PostCall 14
+916: GetReturnValue £temporary4055
+917: IntegralToIntegral £temporary4056 £temporary4055
+918: Assign c £temporary4056
+919: IntegralToIntegral £temporary4057 c
+920: Equal Goto PreCall 14 £temporary4057 -1
+921: Goto PreCall 15
+922: Goto PreCall 14
+923: Goto PreCall 15
+924: PreCall 15
+925: IntegralToIntegral £temporary4059 c
+926: Parameter 21 signedint £temporary4059
+927: Parameter 23 pointer inOutFilePtr
+928: Call 15 putc 0
+929: PostCall 15
+930: Goto Goto PreCall 14
+931: PreCall 14
+932: Parameter 20 pointer inOutFilePtr
+933: Call 14 fclose 0
+934: PostCall 14
+935: PreCall 14
+936: Parameter 20 pointer tempFilePtr
+937: Call 14 fclose 0
+938: PostCall 14
+939: Empty
+940: Return
+941: FunctionEnd file_test

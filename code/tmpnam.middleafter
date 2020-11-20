@@ -1,0 +1,13 @@
+0: SignedGreaterThanEqual 10 g_tempSize 16
+1: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 14 pointer name
+3: Parameter 16 signedint 0
+4: Parameter 18 signedint 1
+5: Call 8 generateTempName 0
+6: PostCall 8
+7: GetReturnValue £temporary952
+8: SetReturnValue
+9: Return £temporary952
+10: SetReturnValue
+11: Return 0
+12: FunctionEnd tmpnam

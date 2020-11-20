@@ -1,0 +1,25 @@
+0: IntegralToIntegral £temporary4169 left
+1: Assign charLeft £temporary4169
+2: IntegralToIntegral £temporary4170 right
+3: Assign charRight £temporary4170
+4: Assign index 0
+5: SignedGreaterThanEqual 22 index size
+6: BinaryAdd £temporary4174 charLeft index
+7: Deref £temporary4173 -> £temporary4174 £temporary4174 0
+8: BinaryAdd £temporary4176 charRight index
+9: Deref £temporary4175 -> £temporary4176 £temporary4176 0
+10: SignedGreaterThanEqual 13 £temporary4173 -> £temporary4174 £temporary4175 -> £temporary4176
+11: SetReturnValue -1
+12: Return -1
+13: BinaryAdd £temporary4179 charLeft index
+14: Deref £temporary4178 -> £temporary4179 £temporary4179 0
+15: BinaryAdd £temporary4181 charRight index
+16: Deref £temporary4180 -> £temporary4181 £temporary4181 0
+17: SignedLessThanEqual 20 £temporary4178 -> £temporary4179 £temporary4180 -> £temporary4181
+18: SetReturnValue 1
+19: Return 1
+20: Increment index
+21: Goto 5
+22: SetReturnValue 0
+23: Return 0
+24: FunctionEnd memcmp

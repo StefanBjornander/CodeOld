@@ -1,0 +1,21 @@
+0: PreCall 8
+1: Parameter 14 signedint c
+2: Call 8 isalpha 0
+3: PostCall 8
+4: GetReturnValue £temporary275
+5: NotEqual Assign £temporary280 1 £temporary275 0
+6: Goto PreCall 8
+7: PreCall 8
+8: Parameter 14 signedint c
+9: Call 8 isdigit 0
+10: PostCall 8
+11: GetReturnValue £temporary276
+12: NotEqual Assign £temporary280 1 £temporary276 0
+13: Goto Assign £temporary280 0
+14: Assign £temporary280 1
+15: Goto Empty
+16: Assign £temporary280 0
+17: Empty
+18: Return £temporary280
+19: Empty
+20: FunctionEnd isalnum

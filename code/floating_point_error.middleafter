@@ -1,0 +1,7 @@
+0: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 14 pointer "Floating point error: %i\n"
+2: Parameter 16 signedint sig
+3: Call 8 printf 2
+4: PostCall 8
+5: Return
+6: FunctionEnd floating_point_error

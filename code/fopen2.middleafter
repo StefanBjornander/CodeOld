@@ -1,0 +1,24 @@
+0: Assign index 0
+1: SignedGreaterThanEqual 21 index 20
+2: UnsignedMultiply £temporary904 index 29
+3: BinaryAdd £temporary905 g_fileArray £temporary904
+4: Deref £temporary903 -> £temporary905 £temporary905 0
+5: NotEqual 19 £temporary903.open$0 -> £temporary905 0
+6: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+7: Parameter 12 name 6
+8: Parameter 12 mode 8
+9: UnsignedMultiply £temporary909 index 29
+10: BinaryAdd £temporary910 g_fileArray £temporary909
+11: Deref £temporary908 -> £temporary910 £temporary910 0
+12: address £temporary911 £temporary908 -> £temporary910
+13: Parameter 12 £temporary911 10
+14: Call 12 freopen 0
+15: PostCall 12
+16: GetReturnValue £temporary912
+17: SetReturnValue £temporary912
+18: Return £temporary912
+19: Increment index
+20: Goto 1
+21: SetReturnValue 0
+22: Return 0
+23: FunctionEnd fopen

@@ -1,0 +1,9 @@
+0: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 8 s 6
+2: Parameter 8 0 8
+3: Call 8 strtod 0
+4: PostCall 8
+5: GetReturnValue £temporary3283
+6: SetReturnValue £temporary3283
+7: Return £temporary3283
+8: FunctionEnd atof

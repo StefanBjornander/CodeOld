@@ -1,0 +1,55 @@
+0: Equal 29 s 0
+1: NotEqual 14 precision 0
+2: Assign index 0
+3: BinaryAdd £temporary1506 s index
+4: Dereference £temporary1504 -> £temporary1506 £temporary1506 0
+5: Equal 53 £temporary1504 -> £temporary1506 0
+6: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+7: BinaryAdd £temporary1511 s index
+8: Dereference £temporary1509 -> £temporary1511 £temporary1511 0
+9: Parameter 18 signedchar £temporary1509 -> £temporary1511
+10: Call 12 printChar 0
+11: PostCall 12
+12: BinaryAdd index index 1
+13: Goto 3
+14: Assign index 0
+15: Assign £temporary1513 precision
+16: BinarySubtract precision precision 1
+17: SignedLessThanEqual 53 £temporary1513 0
+18: BinaryAdd £temporary1517 s index
+19: Dereference £temporary1515 -> £temporary1517 £temporary1517 0
+20: Equal 53 £temporary1515 -> £temporary1517 0
+21: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+22: BinaryAdd £temporary1523 s index
+23: Dereference £temporary1521 -> £temporary1523 £temporary1523 0
+24: Parameter 18 signedchar £temporary1521 -> £temporary1523
+25: Call 12 printChar 0
+26: PostCall 12
+27: BinaryAdd index index 1
+28: Goto 15
+29: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+30: Parameter 16 signedchar 60
+31: Call 10 printChar 0
+32: PostCall 10
+33: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+34: Parameter 16 signedchar 78
+35: Call 10 printChar 0
+36: PostCall 10
+37: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+38: Parameter 16 signedchar 85
+39: Call 10 printChar 0
+40: PostCall 10
+41: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+42: Parameter 16 signedchar 76
+43: Call 10 printChar 0
+44: PostCall 10
+45: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+46: Parameter 16 signedchar 76
+47: Call 10 printChar 0
+48: PostCall 10
+49: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+50: Parameter 16 signedchar 62
+51: Call 10 printChar 0
+52: PostCall 10
+53: Return
+54: FunctionEnd printString

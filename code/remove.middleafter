@@ -1,0 +1,11 @@
+0: AssignRegister ah 65
+1: AssignRegister cl 0
+2: AssignRegister dx name
+3: Interrupt 33
+4: NotCarry 8
+5: Assign errno 18
+6: SetReturnValue
+7: Return -1
+8: SetReturnValue
+9: Return 0
+10: FunctionEnd remove

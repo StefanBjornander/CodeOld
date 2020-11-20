@@ -1,0 +1,38 @@
+0: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: IntegralToIntegral £temporary1413 c
+2: Parameter 7 £temporary1413 6
+3: Call 7 isdigit 0
+4: PostCall 7
+5: GetReturnValue £temporary1414
+6: Equal 11 £temporary1414 0
+7: BinarySubtract £temporary1415 c 48
+8: IntegralToIntegral £temporary1416 £temporary1415
+9: SetReturnValue £temporary1416
+10: Return £temporary1416
+11: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+12: IntegralToIntegral £temporary1417 c
+13: Parameter 7 £temporary1417 6
+14: Call 7 islower 0
+15: PostCall 7
+16: GetReturnValue £temporary1418
+17: Equal 23 £temporary1418 0
+18: BinarySubtract £temporary1419 c 97
+19: IntegralToIntegral £temporary1420 £temporary1419
+20: BinaryAdd £temporary1421 £temporary1420 10
+21: SetReturnValue £temporary1421
+22: Return £temporary1421
+23: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+24: IntegralToIntegral £temporary1422 c
+25: Parameter 7 £temporary1422 6
+26: Call 7 isupper 0
+27: PostCall 7
+28: GetReturnValue £temporary1423
+29: Equal 35 £temporary1423 0
+30: BinarySubtract £temporary1424 c 65
+31: IntegralToIntegral £temporary1425 £temporary1424
+32: BinaryAdd £temporary1426 £temporary1425 10
+33: SetReturnValue £temporary1426
+34: Return £temporary1426
+35: SetReturnValue 0
+36: Return 0
+37: FunctionEnd digitToValue

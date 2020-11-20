@@ -1,0 +1,13 @@
+0: PreCall 8
+1: PreCall 8
+2: Parameter 14 pointer time
+3: Call 8 localtime 0
+4: PostCall 8
+5: GetReturnValue £temporary2825
+6: Parameter 14 pointer £temporary2825
+7: Call 8 asctime 0
+8: PostCall 8
+9: GetReturnValue £temporary2826
+10: Return £temporary2826
+11: Empty
+12: FunctionEnd ctime

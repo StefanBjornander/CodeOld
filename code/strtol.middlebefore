@@ -2,19 +2,18 @@
 1: Assign g_inDevice s
 2: Assign g_inChars 0
 3: PreCall 12
-4: Parameter signedint base 18
-5: Call scanLongInt 12 0
+4: Parameter 18 signedint base
+5: Call 12 scanLongInt 0
 6: PostCall 12
-7: GetReturnValue £temporary1944
-8: Assign longValue £temporary1944
-9: NotEqual Dereference £temporary1946 -> endp endp 0 endp 0
-10: Goto Return longValue
-11: CheckTrackMapFloatStack
-12: Dereference £temporary1946 -> endp endp 0
-13: UnsignedMultiply £temporary1948 g_inChars 1
-14: BinaryAdd £temporary1947 s £temporary1948
-15: Assign £temporary1946 -> endp £temporary1947
-16: Goto Return longValue
-17: Return longValue
-18: Empty
-19: FunctionEnd strtol
+7: GetReturnValue £temporary1942
+8: Assign value £temporary1942
+9: NotEqual Dereference £temporary1944 -> endp endp 0 endp 0
+10: Goto Return value
+11: Dereference £temporary1944 -> endp endp 0
+12: UnsignedMultiply £temporary1946 g_inChars 1
+13: BinaryAdd £temporary1945 s £temporary1946
+14: Assign £temporary1944 -> endp £temporary1945
+15: Goto Return value
+16: Return value
+17: Empty
+18: FunctionEnd strtol

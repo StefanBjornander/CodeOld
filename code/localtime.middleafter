@@ -1,35 +1,34 @@
-0: call header integral zero 0 stack zero 0
-1: parameter timePtr, offset 14
-2: call function noellipse-noellipse gmtime
-3: post call
-4: £temporary2797 = return_value
-5: tmPtr = £temporary2797
-6: call header integral zero 0 stack zero 0
-7: call function noellipse-noellipse localeconv
-8: post call
-9: £temporary2798 = return_value
-10: localeConvPtr = £temporary2798
-11: timeZone = int2$0#
-12: if localeConvPtr == int2$0# goto 21
-13: £temporary2800 -> tmPtr = *tmPtr, offset 16
-14: if £temporary2800 -> tmPtr == int1$0# goto 18
-15: £temporary2801 -> localeConvPtr = *localeConvPtr
-16: £temporary2804 = £temporary2801 -> localeConvPtr
-17: goto 20
-18: £temporary2802 -> localeConvPtr = *localeConvPtr, offset 2
-19: £temporary2804 = £temporary2802 -> localeConvPtr
-20: timeZone = £temporary2804
-21: £temporary2805 -> timePtr = *timePtr
-22: £temporary2806 = timeZone * int2$3600#
-23: £temporary2807 = int_to_int £temporary2806 (Signed_Int -> Unsigned_Long_Int)
-24: £temporary2808 = £temporary2805 -> timePtr + £temporary2807
-25: time = £temporary2808
-26: call header integral zero 0 stack zero 0
-27: £temporary2809 = &time
-28: parameter £temporary2809, offset 24
-29: call function noellipse-noellipse gmtime
-30: post call
-31: £temporary2810 = return_value
-32: return_value = £temporary2810
-33: return
-34: function end localtime
+0: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 14 pointer timePtr
+2: Call 8 gmtime 0
+3: PostCall 8
+4: GetReturnValue £temporary2827
+5: Assign tmPtr £temporary2827
+6: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+7: Call 10 localeconv 0
+8: PostCall 10
+9: GetReturnValue £temporary2828
+10: Assign localeConvPtr £temporary2828
+11: Assign timeZone 0
+12: Equal 21 localeConvPtr 0
+13: Dereference £temporary2830 -> tmPtr tmPtr 0
+14: NotEqual 18 £temporary2830 -> tmPtr 1
+15: Dereference £temporary2832 -> localeConvPtr localeConvPtr 0
+16: Assign £temporary2834 £temporary2832 -> localeConvPtr
+17: Goto 20
+18: Dereference £temporary2833 -> localeConvPtr localeConvPtr 0
+19: Assign £temporary2834 £temporary2833 -> localeConvPtr
+20: Assign timeZone £temporary2834
+21: Dereference £temporary2835 -> timePtr timePtr 0
+22: IntegralToIntegral £temporary2836 timeZone
+23: SignedMultiply £temporary2837 £temporary2836 3600
+24: BinaryAdd t £temporary2835 -> timePtr £temporary2837
+25: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+26: Address £temporary2839 t
+27: Parameter 24 pointer £temporary2839
+28: Call 18 gmtime 0
+29: PostCall 18
+30: GetReturnValue £temporary2840
+31: SetReturnValue
+32: Return £temporary2840
+33: FunctionEnd localtime

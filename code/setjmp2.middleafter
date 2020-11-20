@@ -1,0 +1,14 @@
+0: InspectRegister £temporary836 bp
+1: Assign bp_pointer £temporary836
+2: Deref £temporary837 -> buf buf 0
+3: Deref £temporary838 -> bp_pointer bp_pointer 0
+4: Assign £temporary837 -> buf £temporary838 -> bp_pointer
+5: Deref £temporary839 -> buf buf 2
+6: Deref £temporary840 -> bp_pointer bp_pointer 2
+7: Assign £temporary839 -> buf £temporary840 -> bp_pointer
+8: Deref £temporary841 -> buf buf 4
+9: Deref £temporary842 -> bp_pointer bp_pointer 4
+10: Assign £temporary841 -> buf £temporary842 -> bp_pointer
+11: SetReturnValue 0
+12: Return 0
+13: FunctionEnd setjmp

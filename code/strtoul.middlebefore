@@ -1,0 +1,19 @@
+0: Assign g_inStatus 1
+1: Assign g_inDevice s
+2: Assign g_inChars 0
+3: PreCall 12
+4: Parameter 18 signedint base
+5: Call 12 scanUnsignedLongInt 0
+6: PostCall 12
+7: GetReturnValue £temporary2227
+8: Assign unsignedLongValue £temporary2227
+9: NotEqual Dereference £temporary2229 -> endp endp 0 endp 0
+10: Goto Return unsignedLongValue
+11: Dereference £temporary2229 -> endp endp 0
+12: UnsignedMultiply £temporary2231 g_inChars 1
+13: BinaryAdd £temporary2230 s £temporary2231
+14: Assign £temporary2229 -> endp £temporary2230
+15: Goto Return unsignedLongValue
+16: Return unsignedLongValue
+17: Empty
+18: FunctionEnd strtoul

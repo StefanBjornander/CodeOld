@@ -1,0 +1,17 @@
+0: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: SignedMultiply £temporary182 number size
+2: Parameter 16 signedint £temporary182
+3: Call 10 malloc 0
+4: PostCall 10
+5: GetReturnValue £temporary183
+6: Assign pointer £temporary183
+7: Equal 14 pointer 0
+8: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+9: Parameter 18 pointer pointer
+10: Parameter 20 signedint 0
+11: Parameter 22 signedint size
+12: Call 12 memset 0
+13: PostCall 12
+14: SetReturnValue
+15: Return pointer
+16: FunctionEnd calloc

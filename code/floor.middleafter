@@ -1,0 +1,19 @@
+0: PushFloat x
+1: PushFloat 0
+2: SignedGreaterThanEqual 13 x 0
+3: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: PushFloat x
+5: UnarySubtract £temporary645 x
+6: Parameter 20 double £temporary645
+7: Call 14 ceil 0
+8: PostCall 14
+9: GetReturnValue £temporary646
+10: UnarySubtract £temporary647 £temporary646
+11: SetReturnValue
+12: Return £temporary647
+13: PushFloat x
+14: FloatingToIntegral £temporary648 x
+15: IntegralToFloating £temporary649 £temporary648
+16: SetReturnValue
+17: Return £temporary649
+18: FunctionEnd floor

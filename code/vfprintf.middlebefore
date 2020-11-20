@@ -1,0 +1,12 @@
+0: Assign g_outStatus 0
+1: IntegralToIntegral £temporary1929 outStream
+2: Assign g_outDevice £temporary1929
+3: PreCall 12
+4: Parameter 18 pointer format
+5: Parameter 20 pointer arg_list
+6: Call 12 printFormat 0
+7: PostCall 12
+8: GetReturnValue £temporary1930
+9: Return £temporary1930
+10: Empty
+11: FunctionEnd vfprintf

@@ -1,0 +1,13 @@
+0: AssignRegister ah 60
+1: AssignRegister cx 0
+2: AssignRegister dx name
+3: Interrupt 33
+4: InspectRegister £temporary703 ax
+5: Assign handle £temporary703
+6: NotCarry 10
+7: Assign errno 9
+8: SetReturnValue
+9: Return -1
+10: SetReturnValue
+11: Return handle
+12: FunctionEnd filecreate

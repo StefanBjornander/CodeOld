@@ -1,0 +1,14 @@
+0: Assign result.quot 0
+1: Assign result.rem 0
+2: Equal Assign errno 6 denum 0
+3: Goto SignedDivide £temporary2619 num denum
+4: Assign errno 6
+5: Return result
+6: Goto SignedDivide £temporary2619 num denum
+7: SignedDivide £temporary2619 num denum
+8: Assign result.quot £temporary2619
+9: SignedModulo £temporary2621 num denum
+10: Assign result.rem £temporary2621
+11: Return result
+12: Empty
+13: FunctionEnd div

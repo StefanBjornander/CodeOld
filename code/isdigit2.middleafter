@@ -1,0 +1,8 @@
+0: SignedLessThan 4 c 48
+1: SignedGreaterThan 4 c 57
+2: Assign £temporary408 1
+3: Goto 5
+4: Assign £temporary408 0
+5: SetReturnValue £temporary408
+6: Return £temporary408
+7: FunctionEnd isdigit

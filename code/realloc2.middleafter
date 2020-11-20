@@ -1,0 +1,90 @@
+0: SignedGreaterThanEqual 12 newMemorySize 0
+1: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 10 stderr 6
+3: Parameter 10 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
+4: Parameter 10 string_newMemorySize203E3D200# 10
+5: Parameter 10 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec# 12
+6: Parameter 10 259 14
+7: Call 10 fprintf 0
+8: PostCall 10
+9: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+10: Call 10 abort 0
+11: PostCall 10
+12: NotEqual 25 oldMemoryPtr 0
+13: SignedGreaterThan 25 newMemorySize 0
+14: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+15: Parameter 10 stderr 6
+16: Parameter 10 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
+17: Parameter 10 string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029# 10
+18: Parameter 10 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec# 12
+19: Parameter 10 260 14
+20: Call 10 fprintf 0
+21: PostCall 10
+22: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+23: Call 10 abort 0
+24: PostCall 10
+25: NotEqual 33 oldMemoryPtr 0
+26: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+27: Parameter 10 newMemorySize 6
+28: Call 10 malloc 0
+29: PostCall 10
+30: GetReturnValue £temporary321
+31: SetReturnValue £temporary321
+32: Return £temporary321
+33: NotEqual 40 newMemorySize 0
+34: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+35: Parameter 10 oldMemoryPtr 6
+36: Call 10 free 0
+37: PostCall 10
+38: SetReturnValue 0
+39: Return 0
+40: IntegralToIntegral £temporary324 newMemorySize
+41: BinaryAdd newBlockSize £temporary324 4
+42: IntegralToIntegral £temporary326 oldMemoryPtr
+43: BinarySubtract £temporary327 £temporary326 4
+44: IntegralToIntegral £temporary328 £temporary327
+45: Assign oldBlockPtr £temporary328
+46: Deref £temporary329 -> oldBlockPtr oldBlockPtr 0
+47: UnsignedGreaterThan 52 newBlockSize £temporary329 -> oldBlockPtr
+48: Deref £temporary331 -> oldBlockPtr oldBlockPtr 0
+49: Assign £temporary331 -> oldBlockPtr newBlockSize
+50: SetReturnValue oldMemoryPtr
+51: Return oldMemoryPtr
+52: Assign lastAddress 65528
+53: Assign currBlockPtr g_firstBlockPtr
+54: Equal 68 currBlockPtr 0
+55: NotEqual 63 currBlockPtr oldBlockPtr
+56: IntegralToIntegral £temporary334 currBlockPtr
+57: BinarySubtract availableSize lastAddress £temporary334
+58: UnsignedLessThan 68 availableSize newBlockSize
+59: Deref £temporary337 -> oldBlockPtr oldBlockPtr 0
+60: Assign £temporary337 -> oldBlockPtr newBlockSize
+61: SetReturnValue oldMemoryPtr
+62: Return oldMemoryPtr
+63: IntegralToIntegral £temporary338 currBlockPtr
+64: Assign lastAddress £temporary338
+65: Deref £temporary339 -> currBlockPtr currBlockPtr 2
+66: Assign currBlockPtr £temporary339 -> currBlockPtr
+67: Goto 54
+68: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+69: Parameter 14 newMemorySize 6
+70: Call 14 malloc 0
+71: PostCall 14
+72: GetReturnValue £temporary340
+73: Assign newMemoryPtr £temporary340
+74: Equal 87 newMemoryPtr 0
+75: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+76: Parameter 16 newMemoryPtr 6
+77: Parameter 16 oldMemoryPtr 8
+78: Parameter 16 newMemorySize 10
+79: Call 16 memcpy 0
+80: PostCall 16
+81: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+82: Parameter 16 oldMemoryPtr 6
+83: Call 16 free 0
+84: PostCall 16
+85: SetReturnValue newMemoryPtr
+86: Return newMemoryPtr
+87: SetReturnValue 0
+88: Return 0
+89: FunctionEnd realloc

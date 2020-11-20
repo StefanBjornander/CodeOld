@@ -1,39 +1,8 @@
-0: PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-1: Parameter pointer "Please input a value: " 64
-2: Call printf 40 0
-3: PostCall 40
-4: PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-5: Parameter pointer "%lf" 64
-6: Address £temporary3064 x
-7: Parameter pointer £temporary3064 72
-8: Call scanf 40 8
-9: PostCall 40
-10: PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-11: Parameter pointer buffer 64
-12: Call setjmp 40 0
-13: PostCall 40
-14: GetReturnValue £temporary3066
-15: IntegralToIntegral £temporary3067 £temporary3066
-16: Assign message £temporary3067
-17: NotEqual 32 message 0
-18: PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-19: Parameter pointer "1.0 / %f = %f\n" 64
-20: PushFloat x
-21: Parameter double x 72
-22: PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-23: PushFloat x
-24: Parameter double x 104
-25: Call inverse 80 0
-26: PostCall 80
-27: GetReturnValue £temporary3069
-28: Parameter double £temporary3069 80
-29: Call printf 40 16
-30: PostCall 40
-31: Goto 37
-32: PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-33: Parameter pointer "%s\n" 64
-34: Parameter pointer message 72
-35: Call printf 40 8
-36: PostCall 40
-37: Return
-38: FunctionEnd main
+0: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 12 pointer "in_test"
+2: Parameter 14 pointer "out_test"
+3: Call 6 file_test 0
+4: PostCall 6
+5: Return
+6: Exit
+7: FunctionEnd main

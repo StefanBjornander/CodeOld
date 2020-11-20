@@ -1,0 +1,33 @@
+0: NotEqual Dereference £temporary1634 -> widthPtr widthPtr 0 widthPtr 0
+1: Goto NotEqual Dereference £temporary1645 -> precisionPtr precisionPtr 0 precisionPtr 0
+2: Dereference £temporary1634 -> widthPtr widthPtr 0
+3: Equal Dereference £temporary1637 -> widthPtr widthPtr 0 £temporary1634 -> widthPtr -1
+4: Goto NotEqual Dereference £temporary1645 -> precisionPtr precisionPtr 0 precisionPtr 0
+5: Dereference £temporary1637 -> widthPtr widthPtr 0
+6: BinaryAdd £temporary1639 arg_list 2
+7: UnsignedDivide £temporary1638 £temporary1639 1
+8: Assign arg_list £temporary1638
+9: UnsignedMultiply £temporary1641 2 1
+10: BinarySubtract £temporary1640 arg_list £temporary1641
+11: IntegralToIntegral £temporary1642 £temporary1640
+12: Dereference £temporary1643 -> £temporary1642 £temporary1642 0
+13: Assign £temporary1637 -> widthPtr £temporary1643 -> £temporary1642
+14: Goto NotEqual Dereference £temporary1645 -> precisionPtr precisionPtr 0 precisionPtr 0
+15: NotEqual Dereference £temporary1645 -> precisionPtr precisionPtr 0 precisionPtr 0
+16: Goto Return arg_list
+17: Dereference £temporary1645 -> precisionPtr precisionPtr 0
+18: Equal Dereference £temporary1648 -> precisionPtr precisionPtr 0 £temporary1645 -> precisionPtr -1
+19: Goto Return arg_list
+20: Dereference £temporary1648 -> precisionPtr precisionPtr 0
+21: BinaryAdd £temporary1650 arg_list 2
+22: UnsignedDivide £temporary1649 £temporary1650 1
+23: Assign arg_list £temporary1649
+24: UnsignedMultiply £temporary1652 2 1
+25: BinarySubtract £temporary1651 arg_list £temporary1652
+26: IntegralToIntegral £temporary1653 £temporary1651
+27: Dereference £temporary1654 -> £temporary1653 £temporary1653 0
+28: Assign £temporary1648 -> precisionPtr £temporary1654 -> £temporary1653
+29: Goto Return arg_list
+30: Return arg_list
+31: Empty
+32: FunctionEnd checkWidthAndPrecision

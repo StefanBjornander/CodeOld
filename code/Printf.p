@@ -538,19 +538,19 @@ case 0 : {
 FILE * stream = ( FILE * ) g_outDevice ;
 
    
-    
-     
-   
-    
-    
+ register_ah = 0x40s ;
+register_bx = stream -> handle ;
+register_cx = 1 ;
+register_dx = & c ;
+interrupt ( 0x21s ) ;
   
 
    
- register_rax = 0x01L ;
-register_rdi = ( unsigned long ) stream -> handle ;
-register_rsi = ( unsigned long ) & c ;
-register_rdx = 1L ;
-syscall ( ) ;
+    
+         
+        
+   
+   
   
  ++ g_outChars ;
 break ;

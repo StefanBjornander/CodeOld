@@ -939,32 +939,40 @@ maina$25:	; FunctionEnd maina
 main:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 12:	
 
-main$1:	; Call 6 time_test 0
-13:		mov word [bp + 6], main$2
-14:		mov [bp + 8], bp
-15:		add bp, 6
-16:		jmp time_test
+main$1:	; Parameter 6 string_in_test# 6
+13:		mov word [bp + 12], string_in_test#
+15:	
+
+main$2:	; Parameter 6 string_out_test# 8
+16:		mov word [bp + 14], string_out_test#
 18:	
 
-main$2:	; PostCall 6
-20:	
+main$3:	; Call 6 file_test 0
+19:		mov word [bp + 6], main$4
+20:		mov [bp + 8], bp
+21:		add bp, 6
+22:		jmp file_test
+24:	
 
-main$3:	; Return 0
-21:		cmp word [bp], 0
-22:		je return_label$0
-23:		mov t44, [bp]
-24:		mov di, [bp + 4]
-25:		mov bp, [bp + 2]
-26:		jmp t44
-27:	
+main$4:	; PostCall 6
+26:	
+
+main$5:	; Return 0
+27:		cmp word [bp], 0
+28:		je return_label$0
+29:		mov t44, [bp]
+30:		mov di, [bp + 4]
+31:		mov bp, [bp + 2]
+32:		jmp t44
+33:	
 
 return_label$0:
-28:		mov al, 0
-29:		mov ah, 76
-30:		int 33
-32:	
+34:		mov al, 0
+35:		mov ah, 76
+36:		int 33
+38:	
 
-main$4:	; FunctionEnd main
+main$6:	; FunctionEnd main
 1:	
 
 mainX4:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1013,21 +1021,21 @@ mainX4$9:	; Parameter 12 index 8
 35:		mov [bp + 20], a47
 37:	
 
-mainX4$10:	; UnsignedMultiply £temporary122 index 2
+mainX4$10:	; UnsignedMultiply £temporary124 index 2
 38:		mov a48, [bp + 10]
 40:		xor dx, dx
 41:		mul word [int2$2#]
 47:	
 
-mainX4$11:	; BinaryAdd £temporary123 argv £temporary122
+mainX4$11:	; BinaryAdd £temporary125 argv £temporary124
 48:		mov a52, [bp + 8]
 49:		add a52, t51
 51:	
 
-mainX4$12:	; Deref £temporary121 -> £temporary123 £temporary123 0
+mainX4$12:	; Deref £temporary123 -> £temporary125 £temporary125 0
 53:	
 
-mainX4$13:	; Parameter 12 £temporary121 -> £temporary123 10
+mainX4$13:	; Parameter 12 £temporary123 -> £temporary125 10
 54:		mov t53, [a52]
 55:		mov [bp + 22], t53
 57:	
@@ -1074,21 +1082,21 @@ mainX4$22:	; Assign index 0
 88:		mov word [bp + 10], 0
 90:	
 
-mainX4$23:	; UnsignedMultiply £temporary127 index 2
+mainX4$23:	; UnsignedMultiply £temporary129 index 2
 91:		mov a54, [bp + 10]
 93:		xor dx, dx
 94:		mul word [int2$2#]
 100:	
 
-mainX4$24:	; BinaryAdd £temporary128 argv £temporary127
+mainX4$24:	; BinaryAdd £temporary130 argv £temporary129
 101:		mov a58, [bp + 8]
 102:		add a58, t57
 104:	
 
-mainX4$25:	; Deref £temporary126 -> £temporary128 £temporary128 0
+mainX4$25:	; Deref £temporary128 -> £temporary130 £temporary130 0
 106:	
 
-mainX4$26:	; Equal 38 £temporary126 -> £temporary128 0
+mainX4$26:	; Equal 38 £temporary128 -> £temporary130 0
 107:		cmp word [a58], 0
 108:		je mainX4$38
 110:	
@@ -1105,21 +1113,21 @@ mainX4$29:	; Parameter 12 index 8
 117:		mov [bp + 20], a59
 119:	
 
-mainX4$30:	; UnsignedMultiply £temporary132 index 2
+mainX4$30:	; UnsignedMultiply £temporary134 index 2
 120:		mov a60, [bp + 10]
 122:		xor dx, dx
 123:		mul word [int2$2#]
 129:	
 
-mainX4$31:	; BinaryAdd £temporary133 argv £temporary132
+mainX4$31:	; BinaryAdd £temporary135 argv £temporary134
 130:		mov a64, [bp + 8]
 131:		add a64, t63
 133:	
 
-mainX4$32:	; Deref £temporary131 -> £temporary133 £temporary133 0
+mainX4$32:	; Deref £temporary133 -> £temporary135 £temporary135 0
 135:	
 
-mainX4$33:	; Parameter 12 £temporary131 -> £temporary133 10
+mainX4$33:	; Parameter 12 £temporary133 -> £temporary135 10
 136:		mov t65, [a64]
 137:		mov [bp + 22], t65
 139:	
@@ -1222,12 +1230,12 @@ mainX4$55:	; Parameter 41 string_25c2025s2025i2025lf# 6
 213:		mov word [bp + 47], string_25c2025s2025i2025lf#
 215:	
 
-mainX4$56:	; address £temporary139 c
+mainX4$56:	; address £temporary141 c
 216:		mov t66, bp
 217:		add t66, 20
 219:	
 
-mainX4$57:	; Parameter 41 £temporary139 8
+mainX4$57:	; Parameter 41 £temporary141 8
 220:		mov [bp + 49], t66
 222:	
 
@@ -1236,21 +1244,21 @@ mainX4$58:	; Parameter 41 s 10
 224:		add word [bp + 51], 21
 226:	
 
-mainX4$59:	; address £temporary140 i
+mainX4$59:	; address £temporary142 i
 227:		mov t67, bp
 228:		add t67, 10
 230:	
 
-mainX4$60:	; Parameter 41 £temporary140 12
+mainX4$60:	; Parameter 41 £temporary142 12
 231:		mov [bp + 53], t67
 233:	
 
-mainX4$61:	; address £temporary141 d
+mainX4$61:	; address £temporary143 d
 234:		mov t68, bp
 235:		add t68, 12
 237:	
 
-mainX4$62:	; Parameter 41 £temporary141 14
+mainX4$62:	; Parameter 41 £temporary143 14
 238:		mov [bp + 55], t68
 240:	
 
@@ -1273,7 +1281,7 @@ mainX4$66:	; Parameter 41 string_You20wrote20the20character202725c272C20the20str
 253:		mov word [bp + 47], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#
 255:	
 
-mainX4$67:	; IntegralToIntegral £temporary143 c
+mainX4$67:	; IntegralToIntegral £temporary145 c
 256:		mov a69, [bp + 20]
 258:		and a69, 255
 260:		cmp a69, 0
@@ -1282,7 +1290,7 @@ mainX4$67:	; IntegralToIntegral £temporary143 c
 264:		neg a69
 266:	
 
-mainX4$68:	; Parameter 41 £temporary143 8
+mainX4$68:	; Parameter 41 £temporary145 8
 267:		mov [bp + 49], a69
 269:	
 
@@ -1351,12 +1359,12 @@ main3$5:	; Parameter 14 string_25lf# 6
 18:		mov word [bp + 20], string_25lf#
 20:	
 
-main3$6:	; address £temporary172 x
+main3$6:	; address £temporary174 x
 21:		mov t72, bp
 22:		add t72, 6
 24:	
 
-main3$7:	; Parameter 14 £temporary172 8
+main3$7:	; Parameter 14 £temporary174 8
 25:		mov [bp + 22], t72
 27:	
 
@@ -1715,12 +1723,12 @@ assert_test$6:	; Parameter 8 string_25i# 6
 21:		mov word [bp + 14], string_25i#
 23:	
 
-assert_test$7:	; address £temporary210 n
+assert_test$7:	; address £temporary212 n
 24:		mov t76, bp
 25:		add t76, 6
 27:	
 
-assert_test$8:	; Parameter 8 £temporary210 8
+assert_test$8:	; Parameter 8 £temporary212 8
 28:		mov [bp + 16], t76
 30:	
 

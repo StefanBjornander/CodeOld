@@ -1,0 +1,17 @@
+0: PushFloat y
+1: PushZero
+2: Equal 8 y 0
+3: PushFloat x
+4: PushFloat y
+5: SignedDivide £temporary4699 x y
+6: SetReturnValue £temporary4699
+7: Return £temporary4699
+8: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+9: Parameter 22 buffer 6
+10: Parameter 22 string_Division20by20Zero2E# 8
+11: Call 22 longjmp 0
+12: PostCall 22
+13: PushZero
+14: SetReturnValue 0
+15: Return 0
+16: FunctionEnd divide

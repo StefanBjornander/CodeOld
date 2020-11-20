@@ -1,0 +1,8 @@
+0: SignedLessThan 4 c 32
+1: SignedGreaterThan 4 c 126
+2: Assign £temporary432 1
+3: Goto 5
+4: Assign £temporary432 0
+5: SetReturnValue £temporary432
+6: Return £temporary432
+7: FunctionEnd isgraph

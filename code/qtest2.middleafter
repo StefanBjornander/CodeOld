@@ -1,0 +1,11 @@
+0: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 8 string_f3A2025u0A# 6
+2: IntegralToIntegral £temporary5958 f
+3: Parameter 8 £temporary5958 8
+4: Call 8 printf 0
+5: PostCall 8
+6: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+7: Call 8 f 0
+8: PostCall 8
+9: Return 0
+10: FunctionEnd qtest

@@ -1,0 +1,41 @@
+0: PreCall 7
+1: IntegralToIntegral £temporary1119 c
+2: Parameter 13 signedint £temporary1119
+3: Call 7 isdigit 0
+4: PostCall 7
+5: GetReturnValue £temporary1120
+6: NotEqual BinarySubtract £temporary1121 c 48 £temporary1120 0
+7: Goto PreCall 7
+8: BinarySubtract £temporary1121 c 48
+9: IntegralToIntegral £temporary1122 £temporary1121
+10: Return £temporary1122
+11: Goto Empty
+12: PreCall 7
+13: IntegralToIntegral £temporary1123 c
+14: Parameter 13 signedint £temporary1123
+15: Call 7 islower 0
+16: PostCall 7
+17: GetReturnValue £temporary1124
+18: NotEqual BinarySubtract £temporary1125 c 97 £temporary1124 0
+19: Goto PreCall 7
+20: BinarySubtract £temporary1125 c 97
+21: IntegralToIntegral £temporary1126 £temporary1125
+22: BinaryAdd £temporary1127 £temporary1126 10
+23: Return £temporary1127
+24: Goto Empty
+25: PreCall 7
+26: IntegralToIntegral £temporary1128 c
+27: Parameter 13 signedint £temporary1128
+28: Call 7 isupper 0
+29: PostCall 7
+30: GetReturnValue £temporary1129
+31: NotEqual BinarySubtract £temporary1130 c 65 £temporary1129 0
+32: Goto Return 0
+33: BinarySubtract £temporary1130 c 65
+34: IntegralToIntegral £temporary1131 £temporary1130
+35: BinaryAdd £temporary1132 £temporary1131 10
+36: Return £temporary1132
+37: Goto Empty
+38: Return 0
+39: Empty
+40: FunctionEnd digitToValue

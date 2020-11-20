@@ -1,0 +1,33 @@
+0: IntegralToIntegral £temporary3366 valueList
+1: Assign charList £temporary3366
+2: BinarySubtract size listSize 1
+3: SignedLessThanEqual 31 size 0
+4: Assign update 0
+5: Assign index 0
+6: SignedGreaterThanEqual 28 index size
+7: SignedMultiply £temporary3372 index valueSize
+8: BinaryAdd valuePtr1 charList £temporary3372
+9: BinaryAdd £temporary3374 index 1
+10: SignedMultiply £temporary3375 £temporary3374 valueSize
+11: BinaryAdd valuePtr2 charList £temporary3375
+12: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+13: Parameter 26 valuePtr1 6
+14: Parameter 26 valuePtr2 8
+15: Call 26 compare 0
+16: PostCall 26
+17: GetReturnValue £temporary3377
+18: SignedLessThanEqual 26 £temporary3377 0
+19: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+20: Parameter 26 valuePtr1 6
+21: Parameter 26 valuePtr2 8
+22: Parameter 26 valueSize 10
+23: Call 26 memswap 0
+24: PostCall 26
+25: Assign update 1
+26: Increment index
+27: Goto 6
+28: Equal 31 update 0
+29: Decrement size
+30: Goto 3
+31: Return 0
+32: FunctionEnd qsort

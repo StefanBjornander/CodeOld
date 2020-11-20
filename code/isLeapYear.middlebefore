@@ -1,0 +1,16 @@
+0: SignedModulo £temporary2718 year 4
+1: Equal SignedModulo £temporary2720 year 100 £temporary2718 0
+2: Goto SignedModulo £temporary2723 year 400
+3: SignedModulo £temporary2720 year 100
+4: NotEqual Assign £temporary2726 1 £temporary2720 0
+5: Goto SignedModulo £temporary2723 year 400
+6: SignedModulo £temporary2723 year 400
+7: Equal Assign £temporary2726 1 £temporary2723 0
+8: Goto Assign £temporary2726 0
+9: Assign £temporary2726 1
+10: Goto Empty
+11: Assign £temporary2726 0
+12: Empty
+13: Return £temporary2726
+14: Empty
+15: FunctionEnd isLeapYear

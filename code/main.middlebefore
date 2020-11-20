@@ -1,46 +1,42 @@
-0: Empty
-1: Empty
-2: PreCall 40
-3: Parameter pointer "Please input a value: " 64
-4: Call printf 40 0
-5: PostCall 40
-6: PreCall 40
-7: Parameter pointer "%lf" 64
-8: PushFloat x
-9: PopFloat
-10: Address £temporary3064 x
-11: Parameter pointer £temporary3064 72
-12: Call scanf 40 8
-13: PostCall 40
-14: PreCall 40
-15: Parameter pointer buffer 64
-16: Call setjmp 40 0
-17: PostCall 40
-18: GetReturnValue £temporary3066
-19: IntegralToIntegral £temporary3067 £temporary3066
-20: Assign message £temporary3067
-21: Equal PreCall 40 message 0
-22: Goto PreCall 40
-23: CheckTrackMapFloatStack
-24: PreCall 40
-25: Parameter pointer "1.0 / %f = %f\n" 64
-26: PushFloat x
-27: Parameter double x 72
-28: PreCall 40
-29: PushFloat x
-30: Parameter double x 104
-31: Call inverse 80 0
-32: PostCall 80
-33: GetReturnValue £temporary3069
-34: Parameter double £temporary3069 80
-35: Call printf 40 16
-36: PostCall 40
-37: Goto Empty
-38: PreCall 40
-39: Parameter pointer "%s\n" 64
-40: Parameter pointer message 72
-41: Call printf 40 8
-42: PostCall 40
-43: Empty
-44: Return
-45: FunctionEnd main
+0: PreCall 16
+1: Parameter 22 pointer "Please input a value: "
+2: Call 16 printf 0
+3: PostCall 16
+4: PreCall 16
+5: Parameter 22 pointer "%lf"
+6: PushFloat x
+7: PopFloat
+8: Address £temporary3542 x
+9: Parameter 24 pointer £temporary3542
+10: Call 16 scanf 2
+11: PostCall 16
+12: PreCall 16
+13: Parameter 22 pointer buffer
+14: Call 16 setjmp 0
+15: PostCall 16
+16: GetReturnValue £temporary3544
+17: Assign message £temporary3544
+18: Equal PreCall 16 message 0
+19: Goto PreCall 16
+20: PreCall 16
+21: Parameter 22 pointer "1.0 / %f = %f\n"
+22: PushFloat x
+23: Parameter 24 double x
+24: PreCall 16
+25: PushFloat x
+26: Parameter 38 double x
+27: Call 32 inverse 0
+28: PostCall 32
+29: GetReturnValue £temporary3546
+30: Parameter 32 double £temporary3546
+31: Call 16 printf 16
+32: PostCall 16
+33: Goto Empty
+34: PreCall 16
+35: Parameter 22 pointer "%s\n"
+36: Parameter 24 pointer message
+37: Call 16 printf 2
+38: PostCall 16
+39: Empty
+40: Return
+41: FunctionEnd main

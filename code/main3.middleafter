@@ -1,0 +1,18 @@
+0: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 20 pointer ": "
+2: Call 14 printf 0
+3: PostCall 14
+4: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+5: Parameter 20 pointer "%lf"
+6: Address £temporary105 x
+7: Parameter 22 pointer £temporary105
+8: Call 14 scanf 2
+9: PostCall 14
+10: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+11: Parameter 20 pointer "<%f>"
+12: PushFloat x
+13: Parameter 22 double x
+14: Call 14 printf 8
+15: PostCall 14
+16: Return
+17: FunctionEnd main3

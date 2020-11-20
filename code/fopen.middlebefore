@@ -1,0 +1,28 @@
+0: Assign index 0
+1: Empty
+2: SignedLessThan UnsignedMultiply £temporary719 index 29 index 20
+3: Goto Return 0
+4: UnsignedMultiply £temporary719 index 29
+5: BinaryAdd £temporary720 g_fileArray £temporary719
+6: Dereference £temporary718 -> £temporary720 £temporary720 0
+7: NotEqual Empty £temporary718.open -> £temporary720 0
+8: Goto PreCall 12
+9: PreCall 12
+10: Parameter 18 pointer name
+11: Parameter 20 pointer mode
+12: UnsignedMultiply £temporary724 index 29
+13: BinaryAdd £temporary725 g_fileArray £temporary724
+14: Dereference £temporary723 -> £temporary725 £temporary725 0
+15: Address £temporary726 £temporary723 -> £temporary725
+16: Parameter 22 pointer £temporary726
+17: Call 12 freopen 0
+18: PostCall 12
+19: GetReturnValue £temporary727
+20: Return £temporary727
+21: Goto Empty
+22: Empty
+23: BinaryAdd index index 1
+24: Goto Empty
+25: Return 0
+26: Empty
+27: FunctionEnd fopen

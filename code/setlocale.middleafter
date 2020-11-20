@@ -1,0 +1,31 @@
+0: Equal 4 g_currStructPtr 0
+1: Dereference £temporary353 -> g_currStructPtr g_currStructPtr 0
+2: Assign £temporary354 £temporary353 -> g_currStructPtr
+3: Goto 5
+4: Assign £temporary354 0
+5: Assign oldName £temporary354
+6: Assign g_currStructPtr 0
+7: Equal 28 newName 0
+8: Assign index 0
+9: SignedGreaterThanEqual 28 index sSize
+10: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+11: Parameter 20 pointer newName
+12: UnsignedMultiply £temporary359 index 4
+13: BinaryAdd £temporary360 sArray £temporary359
+14: Dereference £temporary358 -> £temporary360 £temporary360 0
+15: Parameter 22 pointer £temporary358.name -> £temporary360
+16: Call 14 strcmp 0
+17: PostCall 14
+18: GetReturnValue £temporary361
+19: NotEqual 26 £temporary361 0
+20: UnsignedMultiply £temporary364 index 4
+21: BinaryAdd £temporary365 sArray £temporary364
+22: Dereference £temporary363 -> £temporary365 £temporary365 0
+23: Address £temporary366 £temporary363 -> £temporary365
+24: Assign g_currStructPtr £temporary366
+25: Goto 28
+26: BinaryAdd index index 1
+27: Goto 9
+28: SetReturnValue
+29: Return oldName
+30: FunctionEnd setlocale

@@ -1,0 +1,18 @@
+0: Dereference £temporary868 -> stream stream 0
+1: AssignRegister bx £temporary868 -> stream
+2: SignedMultiply £temporary870 size nobj
+3: AssignRegister cx £temporary870
+4: AssignRegister ah 64
+5: AssignRegister dx ptr
+6: Interrupt 33
+7: Carry Dereference £temporary874 -> stream stream 0
+8: Goto InspectRegister £temporary875 ax
+9: Dereference £temporary874 -> stream stream 0
+10: Assign errno 13
+11: Assign £temporary874 -> stream errno
+12: Return 0
+13: Goto Empty
+14: InspectRegister £temporary875 ax
+15: Return £temporary875
+16: Empty
+17: FunctionEnd fwrite

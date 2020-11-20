@@ -1,0 +1,13 @@
+0: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 8 time 6
+3: Call 8 localtime 0
+4: PostCall 8
+5: GetReturnValue £temporary3639
+6: Parameter 8 £temporary3639 6
+7: Call 8 asctime 0
+8: PostCall 8
+9: GetReturnValue £temporary3640
+10: SetReturnValue £temporary3640
+11: Return £temporary3640
+12: FunctionEnd ctime

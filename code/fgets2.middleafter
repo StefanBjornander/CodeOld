@@ -1,0 +1,36 @@
+0: Assign count 0
+1: Assign prevChar 0
+2: BinarySubtract £temporary1042 size 1
+3: SignedGreaterThanEqual 33 count £temporary1042
+4: Assign currChar 0
+5: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+6: Parameter 16 stream 6
+7: Parameter 16 string_25c# 8
+8: address £temporary1044 currChar
+9: Parameter 16 £temporary1044 10
+10: Call 16 fscanf 0
+11: PostCall 16
+12: NotEqual 18 prevChar 13
+13: NotEqual 18 currChar 10
+14: BinaryAdd £temporary1050 text count
+15: Deref £temporary1049 -> £temporary1050 £temporary1050 0
+16: Assign £temporary1049 -> £temporary1050 0
+17: Goto 33
+18: IntegralToIntegral £temporary1051 currChar
+19: NotEqual 24 £temporary1051 -1
+20: BinaryAdd £temporary1054 text count
+21: Deref £temporary1053 -> £temporary1054 £temporary1054 0
+22: Assign £temporary1053 -> £temporary1054 0
+23: Goto 33
+24: Equal 31 currChar 13
+25: Equal 31 currChar 10
+26: Assign £temporary1058 count
+27: Increment count
+28: BinaryAdd £temporary1060 text £temporary1058
+29: Deref £temporary1059 -> £temporary1060 £temporary1060 0
+30: Assign £temporary1059 -> £temporary1060 currChar
+31: Assign prevChar currChar
+32: Goto 2
+33: SetReturnValue text
+34: Return text
+35: FunctionEnd fgets

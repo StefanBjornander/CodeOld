@@ -1,0 +1,17 @@
+0: Assign index 0
+1: SignedGreaterThanEqual 14 index 256
+2: UnsignedMultiply £temporary2558 index 2
+3: BinaryAdd £temporary2559 g_funcArray £temporary2558
+4: Dereference £temporary2557 -> £temporary2559 £temporary2559 0
+5: NotEqual 12 £temporary2557 -> £temporary2559 0
+6: UnsignedMultiply £temporary2562 index 2
+7: BinaryAdd £temporary2563 g_funcArray £temporary2562
+8: Dereference £temporary2561 -> £temporary2563 £temporary2563 0
+9: Assign £temporary2561 -> £temporary2563 fcn
+10: SetReturnValue
+11: Return 0
+12: BinaryAdd index index 1
+13: Goto 1
+14: SetReturnValue
+15: Return -1
+16: FunctionEnd atexit

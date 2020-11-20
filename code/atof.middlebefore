@@ -1,0 +1,9 @@
+0: PreCall 8
+1: Parameter 14 pointer s
+2: Parameter 16 pointer 0
+3: Call 8 strtod 0
+4: PostCall 8
+5: GetReturnValue £temporary2512
+6: Return £temporary2512
+7: Empty
+8: FunctionEnd atof

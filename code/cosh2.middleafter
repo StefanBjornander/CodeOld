@@ -1,0 +1,19 @@
+0: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: PushFloat x
+2: Parameter 14 x 6
+3: Call 14 exp 0
+4: PostCall 14
+5: GetReturnValue £temporary794
+6: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
+7: PushFloat x
+8: UnarySubtract £temporary795 x
+9: Parameter 14 £temporary795 6
+10: Call 14 exp 0
+11: PostCall 14
+12: GetReturnValue £temporary796
+13: BinaryAdd £temporary797 £temporary794 £temporary796
+14: PushFloat 2
+15: SignedDivide £temporary798 £temporary797 2
+16: SetReturnValue £temporary798
+17: Return £temporary798
+18: FunctionEnd cosh

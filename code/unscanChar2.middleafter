@@ -1,0 +1,9 @@
+0: Case 4 g_inStatus 0
+1: Case 6 g_inStatus 1
+2: CaseEnd g_inStatus
+3: Goto 7
+4: Decrement g_inChars
+5: Goto 7
+6: Decrement g_inChars
+7: Return 0
+8: FunctionEnd unscanChar

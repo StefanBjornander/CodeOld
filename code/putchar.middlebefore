@@ -1,0 +1,11 @@
+0: Assign g_outStatus 0
+1: IntegralToIntegral £temporary1484 stdout
+2: Assign g_outDevice £temporary1484
+3: PreCall 8
+4: IntegralToIntegral £temporary1485 i
+5: Parameter 14 signedchar £temporary1485
+6: Call 8 printChar 0
+7: PostCall 8
+8: Return 1
+9: Empty
+10: FunctionEnd putchar

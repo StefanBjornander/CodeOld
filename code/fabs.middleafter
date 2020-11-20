@@ -1,0 +1,11 @@
+0: PushFloat x
+1: PushFloat 0
+2: SignedGreaterThanEqual 7 x 0
+3: PushFloat x
+4: UnarySubtract £temporary666 x
+5: DecreaseStack
+6: Goto 8
+7: PushFloat x
+8: SetReturnValue
+9: Return £temporary667
+10: FunctionEnd fabs

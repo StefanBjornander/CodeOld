@@ -1,0 +1,30 @@
+0: Case IntegralToIntegral £temporary1487 g_outDevice g_outStatus 0
+1: Case IntegralToIntegral £temporary1495 g_outDevice g_outStatus 1
+2: Case BinaryAdd g_outChars g_outChars 1 g_outStatus 2
+3: CaseEnd g_outStatus
+4: Goto Empty
+5: IntegralToIntegral £temporary1487 g_outDevice
+6: Assign stream £temporary1487
+7: AssignRegister ah 64
+8: Dereference £temporary1490 -> stream stream 0
+9: AssignRegister bx £temporary1490 -> stream
+10: AssignRegister cx 1
+11: Address £temporary1493 c
+12: AssignRegister dx £temporary1493
+13: Interrupt 33
+14: BinaryAdd g_outChars g_outChars 1
+15: Goto Empty
+16: IntegralToIntegral £temporary1495 g_outDevice
+17: Assign outString £temporary1495
+18: Assign £temporary1496 g_outChars
+19: BinaryAdd g_outChars g_outChars 1
+20: UnsignedMultiply £temporary1498 £temporary1496 1
+21: BinaryAdd £temporary1499 outString £temporary1498
+22: Dereference £temporary1497 -> £temporary1499 £temporary1499 0
+23: Assign £temporary1497 -> £temporary1499 c
+24: Goto Empty
+25: BinaryAdd g_outChars g_outChars 1
+26: Goto Empty
+27: Empty
+28: Return
+29: FunctionEnd printChar

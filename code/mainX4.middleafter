@@ -1,0 +1,77 @@
+0: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 16 pointer "argc: %i\n"
+2: Parameter 18 signedint argc
+3: Call 10 printf 2
+4: PostCall 10
+5: Assign index 0
+6: SignedGreaterThanEqual 18 index argc
+7: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+8: Parameter 18 pointer "%i: <%s>\n"
+9: Parameter 20 signedint index
+10: UnsignedMultiply £temporary77 index 2
+11: BinaryAdd £temporary78 argv £temporary77
+12: Dereference £temporary76 -> £temporary78 £temporary78 0
+13: Parameter 22 pointer £temporary76 -> £temporary78
+14: Call 12 printf 4
+15: PostCall 12
+16: BinaryAdd index index 1
+17: Goto 6
+18: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+19: Parameter 18 pointer "\n"
+20: Call 12 printf 0
+21: PostCall 12
+22: Assign index 0
+23: UnsignedMultiply £temporary82 index 2
+24: BinaryAdd £temporary83 argv £temporary82
+25: Dereference £temporary81 -> £temporary83 £temporary83 0
+26: Equal 38 £temporary81 -> £temporary83 0
+27: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+28: Parameter 18 pointer "%i: <%s>\n"
+29: Parameter 20 signedint index
+30: UnsignedMultiply £temporary87 index 2
+31: BinaryAdd £temporary88 argv £temporary87
+32: Dereference £temporary86 -> £temporary88 £temporary88 0
+33: Parameter 22 pointer £temporary86 -> £temporary88
+34: Call 12 printf 4
+35: PostCall 12
+36: BinaryAdd index index 1
+37: Goto 23
+38: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+39: Parameter 18 pointer "\n"
+40: Call 12 printf 0
+41: PostCall 12
+42: PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+43: Parameter 47 pointer 0
+44: Call 41 mktime 0
+45: PostCall 41
+46: PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+47: Parameter 47 pointer "Hello!\n"
+48: Call 41 printf 0
+49: PostCall 41
+50: PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+51: Parameter 47 pointer "Please write a character, a string, an integer, and a double: "
+52: Call 41 printf 0
+53: PostCall 41
+54: PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+55: Parameter 47 pointer "%c %s %i %lf"
+56: Address £temporary94 c
+57: Parameter 49 pointer £temporary94
+58: Parameter 51 pointer s
+59: Address £temporary95 i
+60: Parameter 53 pointer £temporary95
+61: Address £temporary96 d
+62: Parameter 55 pointer £temporary96
+63: Call 41 scanf 8
+64: PostCall 41
+65: PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+66: Parameter 47 pointer "You wrote the character '%c', the string "%s", the integer %i, and the double %f.\n"
+67: IntegralToIntegral £temporary98 c
+68: Parameter 49 signedint £temporary98
+69: Parameter 51 pointer s
+70: Parameter 53 signedint i
+71: PushFloat d
+72: Parameter 55 double d
+73: Call 41 printf 14
+74: PostCall 41
+75: Return
+76: FunctionEnd mainX4

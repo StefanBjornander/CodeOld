@@ -1,0 +1,49 @@
+0: PushFloat x
+1: PushZero
+2: Equal 42 x 0
+3: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+5: PushFloat x
+6: Parameter 16 x 6
+7: Call 16 fabs 0
+8: PostCall 16
+9: GetReturnValue £temporary600
+10: Parameter 16 £temporary600 6
+11: Call 16 log2 0
+12: PostCall 16
+13: GetReturnValue £temporary601
+14: IntegralToIntegral £temporary602 £temporary601
+15: Assign exponent £temporary602
+16: CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+17: PushFloat 2
+18: Parameter 18 2 6
+19: IntegralToFloating £temporary603 exponent
+20: Parameter 18 £temporary603 14
+21: Call 18 pow 0
+22: PostCall 18
+23: GetReturnValue £temporary604
+24: PushFloat x
+25: SignedGreaterThanEqual 27 £temporary604 x
+26: Increment exponent
+27: Equal 30 p 0
+28: Deref £temporary608 -> p p 0
+29: Assign £temporary608 -> p exponent
+30: PushFloat x
+31: CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
+32: PushFloat 2
+33: Parameter 18 2 6
+34: IntegralToFloating £temporary609 exponent
+35: Parameter 18 £temporary609 14
+36: Call 18 pow 0
+37: PostCall 18
+38: GetReturnValue £temporary610
+39: SignedDivide £temporary611 x £temporary610
+40: SetReturnValue £temporary611
+41: Return £temporary611
+42: Equal 45 p 0
+43: Deref £temporary613 -> p p 0
+44: Assign £temporary613 -> p 0
+45: PushZero
+46: SetReturnValue 0
+47: Return 0
+48: FunctionEnd frexp

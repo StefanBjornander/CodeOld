@@ -1,0 +1,50 @@
+0: PushFloat x
+1: PushFloat 0
+2: Equal PushFloat 1.57079632679489661923132165 x 0
+3: Goto PushFloat x
+4: PushFloat 1.57079632679489661923132165
+5: Return 1.57079632679489661923132165
+6: Goto Empty
+7: PushFloat x
+8: PushFloat 0
+9: SignedLessThan PushFloat 3.1415926535897932384626433 x 0
+10: Goto PushFloat x
+11: PushFloat 3.1415926535897932384626433
+12: PreCall 14
+13: PushFloat x
+14: UnarySubtract £temporary559 x
+15: Parameter 20 double £temporary559
+16: Call 14 acos 0
+17: PostCall 14
+18: GetReturnValue £temporary560
+19: BinarySubtract £temporary561 3.1415926535897932384626433 £temporary560
+20: Return £temporary561
+21: Goto Empty
+22: PushFloat x
+23: PushFloat 1
+24: SignedLessThanEqual PreCall 14 x 1
+25: Goto Assign errno 6
+26: PreCall 14
+27: PreCall 14
+28: PushFloat 1
+29: PushFloat x
+30: PushFloat x
+31: SignedMultiply £temporary563 x x
+32: BinarySubtract £temporary564 1 £temporary563
+33: Parameter 20 double £temporary564
+34: Call 14 sqrt 0
+35: PostCall 14
+36: GetReturnValue £temporary565
+37: PushFloat x
+38: SignedDivide £temporary566 £temporary565 x
+39: Parameter 20 double £temporary566
+40: Call 14 atan 0
+41: PostCall 14
+42: GetReturnValue £temporary567
+43: Return £temporary567
+44: Goto Empty
+45: Assign errno 6
+46: PushFloat 0
+47: Return 0
+48: Empty
+49: FunctionEnd acos

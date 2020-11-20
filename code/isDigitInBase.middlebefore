@@ -1,0 +1,68 @@
+0: PreCall 9
+1: IntegralToIntegral £temporary1090 c
+2: Parameter 15 signedint £temporary1090
+3: Call 9 isdigit 0
+4: PostCall 9
+5: GetReturnValue £temporary1091
+6: NotEqual BinarySubtract £temporary1092 c 48 £temporary1091 0
+7: Goto PreCall 9
+8: BinarySubtract £temporary1092 c 48
+9: IntegralToIntegral £temporary1093 £temporary1092
+10: Assign value £temporary1093
+11: SignedGreaterThanEqual SignedLessThan Assign £temporary1097 1 value base value 0
+12: Goto Assign £temporary1097 0
+13: SignedLessThan Assign £temporary1097 1 value base
+14: Goto Assign £temporary1097 0
+15: Assign £temporary1097 1
+16: Goto Empty
+17: Assign £temporary1097 0
+18: Empty
+19: Return £temporary1097
+20: Goto Empty
+21: PreCall 9
+22: IntegralToIntegral £temporary1098 c
+23: Parameter 15 signedint £temporary1098
+24: Call 9 islower 0
+25: PostCall 9
+26: GetReturnValue £temporary1099
+27: NotEqual BinarySubtract £temporary1100 c 97 £temporary1099 0
+28: Goto PreCall 9
+29: BinarySubtract £temporary1100 c 97
+30: IntegralToIntegral £temporary1101 £temporary1100
+31: BinaryAdd £temporary1102 £temporary1101 10
+32: Assign value £temporary1102
+33: SignedGreaterThanEqual SignedLessThan Assign £temporary1106 1 value base value 0
+34: Goto Assign £temporary1106 0
+35: SignedLessThan Assign £temporary1106 1 value base
+36: Goto Assign £temporary1106 0
+37: Assign £temporary1106 1
+38: Goto Empty
+39: Assign £temporary1106 0
+40: Empty
+41: Return £temporary1106
+42: Goto Empty
+43: PreCall 9
+44: IntegralToIntegral £temporary1107 c
+45: Parameter 15 signedint £temporary1107
+46: Call 9 isupper 0
+47: PostCall 9
+48: GetReturnValue £temporary1108
+49: NotEqual BinarySubtract £temporary1109 c 65 £temporary1108 0
+50: Goto Return 0
+51: BinarySubtract £temporary1109 c 65
+52: IntegralToIntegral £temporary1110 £temporary1109
+53: BinaryAdd £temporary1111 £temporary1110 10
+54: Assign value £temporary1111
+55: SignedGreaterThanEqual SignedLessThan Assign £temporary1115 1 value base value 0
+56: Goto Assign £temporary1115 0
+57: SignedLessThan Assign £temporary1115 1 value base
+58: Goto Assign £temporary1115 0
+59: Assign £temporary1115 1
+60: Goto Empty
+61: Assign £temporary1115 0
+62: Empty
+63: Return £temporary1115
+64: Goto Empty
+65: Return 0
+66: Empty
+67: FunctionEnd isDigitInBase

@@ -1,0 +1,21 @@
+0: Assign s[0] 72
+1: Assign s[1] 101
+2: Assign s[2] 108
+3: Assign s[3] 108
+4: Assign s[4] 111
+5: Assign s[5] 0
+6: Assign t[0] 87
+7: Assign t[1] 111
+8: Assign t[2] 114
+9: Assign t[3] 108
+10: Assign t[4] 100
+11: Assign t[5] 0
+12: PreCall 46
+13: Parameter 52 pointer "<%s> <%s>\n"
+14: Parameter 54 pointer s
+15: Parameter 56 pointer t
+16: Call 46 printf 4
+17: PostCall 46
+18: Empty
+19: Return
+20: FunctionEnd main33

@@ -1,0 +1,28 @@
+0: Assign a 1
+1: Assign b 1
+2: SignedDivide £temporary4180 a b
+3: Assign c £temporary4180
+4: PreCall 12
+5: Parameter 18 pointer "%i\n"
+6: Parameter 20 signedint c
+7: Call 12 printf 2
+8: PostCall 12
+9: PreCall 12
+10: Parameter 18 pointer exit_handle1
+11: Call 12 atexit 0
+12: PostCall 12
+13: PreCall 12
+14: Parameter 18 pointer exit_handle2
+15: Call 12 atexit 0
+16: PostCall 12
+17: PreCall 12
+18: Parameter 18 pointer exit_handle3
+19: Call 12 atexit 0
+20: PostCall 12
+21: PreCall 12
+22: Parameter 18 signedint 0
+23: Call 12 exit 0
+24: PostCall 12
+25: Empty
+26: Return
+27: FunctionEnd signal_test

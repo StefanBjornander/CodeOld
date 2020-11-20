@@ -1,0 +1,25 @@
+0: Assign index 0
+1: Empty
+2: SignedLessThan UnsignedMultiply £temporary2580 index 1 index valueSize
+3: Goto Empty
+4: UnsignedMultiply £temporary2580 index 1
+5: BinaryAdd £temporary2581 value1 £temporary2580
+6: Dereference £temporary2579 -> £temporary2581 £temporary2581 0
+7: Assign tempValue £temporary2579 -> £temporary2581
+8: UnsignedMultiply £temporary2583 index 1
+9: BinaryAdd £temporary2584 value1 £temporary2583
+10: Dereference £temporary2582 -> £temporary2584 £temporary2584 0
+11: UnsignedMultiply £temporary2586 index 1
+12: BinaryAdd £temporary2587 value2 £temporary2586
+13: Dereference £temporary2585 -> £temporary2587 £temporary2587 0
+14: Assign £temporary2582 -> £temporary2584 £temporary2585 -> £temporary2587
+15: UnsignedMultiply £temporary2589 index 1
+16: BinaryAdd £temporary2590 value2 £temporary2589
+17: Dereference £temporary2588 -> £temporary2590 £temporary2590 0
+18: Assign £temporary2588 -> £temporary2590 tempValue
+19: Empty
+20: BinaryAdd index index 1
+21: Goto Empty
+22: Empty
+23: Return
+24: FunctionEnd memswap

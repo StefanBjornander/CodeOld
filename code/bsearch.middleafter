@@ -1,0 +1,58 @@
+0: Assign firstIndex 0
+1: BinarySubtract lastIndex listSize 1
+2: NotEqual 5 listSize 0
+3: SetReturnValue
+4: Return 0
+5: IntegralToIntegral £temporary2526 valueList
+6: SignedMultiply £temporary2527 firstIndex valueSize
+7: BinaryAdd firstValuePtr £temporary2526 £temporary2527
+8: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+9: Parameter 28 pointer keyPtr
+10: Parameter 30 pointer firstValuePtr
+11: Call 22 compare 0
+12: PostCall 22
+13: GetReturnValue £temporary2530
+14: Assign firstCompare £temporary2530
+15: SignedGreaterThanEqual 18 firstCompare 0
+16: SetReturnValue
+17: Return 0
+18: NotEqual 21 firstCompare 0
+19: SetReturnValue
+20: Return firstValuePtr
+21: IntegralToIntegral £temporary2533 valueList
+22: SignedMultiply £temporary2534 lastIndex valueSize
+23: BinaryAdd lastValuePtr £temporary2533 £temporary2534
+24: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+25: Parameter 28 pointer keyPtr
+26: Parameter 30 pointer lastValuePtr
+27: Call 22 compare 0
+28: PostCall 22
+29: GetReturnValue £temporary2537
+30: Assign lastCompare £temporary2537
+31: SignedLessThanEqual 34 lastCompare 0
+32: SetReturnValue
+33: Return 0
+34: NotEqual 37 lastCompare 0
+35: SetReturnValue
+36: Return lastValuePtr
+37: BinaryAdd £temporary2540 firstIndex lastIndex
+38: SignedDivide middleIndex £temporary2540 2
+39: IntegralToIntegral £temporary2542 valueList
+40: SignedMultiply £temporary2543 middleIndex valueSize
+41: BinaryAdd middleValuePtr £temporary2542 £temporary2543
+42: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+43: Parameter 30 pointer keyPtr
+44: Parameter 32 pointer middleValuePtr
+45: Call 24 compare 0
+46: PostCall 24
+47: GetReturnValue £temporary2546
+48: Assign middleCompare £temporary2546
+49: SignedGreaterThanEqual 52 middleCompare 0
+50: Assign lastIndex middleIndex
+51: Goto 5
+52: SignedLessThanEqual 55 middleCompare 0
+53: Assign firstIndex middleIndex
+54: Goto 5
+55: SetReturnValue
+56: Return middleValuePtr
+57: FunctionEnd bsearch

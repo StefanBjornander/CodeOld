@@ -1,0 +1,63 @@
+0: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 6 96 6
+2: Parameter 6 1 8
+3: Call 6 calloc 0
+4: PostCall 6
+5: GetReturnValue £temporary5833
+6: Assign a £temporary5833
+7: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+8: Parameter 8 96 6
+9: Parameter 8 1 8
+10: Call 8 calloc 0
+11: PostCall 8
+12: GetReturnValue £temporary5834
+13: Assign b £temporary5834
+14: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+15: Parameter 10 96 6
+16: Parameter 10 1 8
+17: Call 10 calloc 0
+18: PostCall 10
+19: GetReturnValue £temporary5835
+20: Assign c £temporary5835
+21: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+22: Parameter 12 96 6
+23: Parameter 12 1 8
+24: Call 12 calloc 0
+25: PostCall 12
+26: GetReturnValue £temporary5836
+27: Assign d £temporary5836
+28: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+29: Parameter 14 96 6
+30: Parameter 14 1 8
+31: Call 14 calloc 0
+32: PostCall 14
+33: GetReturnValue £temporary5837
+34: Assign e £temporary5837
+35: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+36: Call 16 print_heap 0
+37: PostCall 16
+38: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+39: Parameter 16 a 6
+40: Call 16 free 0
+41: PostCall 16
+42: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+43: Parameter 16 b 6
+44: Call 16 free 0
+45: PostCall 16
+46: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+47: Parameter 16 c 6
+48: Call 16 free 0
+49: PostCall 16
+50: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+51: Parameter 16 d 6
+52: Call 16 free 0
+53: PostCall 16
+54: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+55: Parameter 16 e 6
+56: Call 16 free 0
+57: PostCall 16
+58: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+59: Call 16 print_heap 0
+60: PostCall 16
+61: Return 0
+62: FunctionEnd malloc_test3

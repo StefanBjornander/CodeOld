@@ -1,0 +1,11 @@
+0: Assign g_outDevice stdout
+1: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 6 88 6
+3: Call 6 printChar 0
+4: PostCall 6
+5: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+6: Parameter 6 10 6
+7: Call 6 printChar 0
+8: PostCall 6
+9: Return 0
+10: FunctionEnd main34

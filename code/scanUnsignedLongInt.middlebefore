@@ -1,0 +1,94 @@
+0: Assign unsignedLongValue 0
+1: PreCall 16
+2: Call 16 scanChar 0
+3: PostCall 16
+4: GetReturnValue £temporary1165
+5: Assign input £temporary1165
+6: Assign found 1
+7: PreCall 19
+8: IntegralToIntegral £temporary1166 input
+9: Parameter 25 signedint £temporary1166
+10: Call 19 isspace 0
+11: PostCall 19
+12: GetReturnValue £temporary1167
+13: NotEqual PreCall 19 £temporary1167 0
+14: Goto Equal PreCall 19 input 43
+15: PreCall 19
+16: Call 19 scanChar 0
+17: PostCall 19
+18: GetReturnValue £temporary1168
+19: Assign input £temporary1168
+20: Goto PreCall 19
+21: Equal PreCall 19 input 43
+22: Goto Equal Equal PreCall 19 input 48 base 0
+23: PreCall 19
+24: Call 19 scanChar 0
+25: PostCall 19
+26: GetReturnValue £temporary1171
+27: Assign input £temporary1171
+28: Goto Equal Equal PreCall 19 input 48 base 0
+29: Equal Equal PreCall 19 input 48 base 0
+30: Goto PreCall 19
+31: Equal PreCall 19 input 48
+32: Goto Assign base 10
+33: PreCall 19
+34: Call 19 scanChar 0
+35: PostCall 19
+36: GetReturnValue £temporary1174
+37: Assign input £temporary1174
+38: PreCall 19
+39: IntegralToIntegral £temporary1175 input
+40: Parameter 25 signedint £temporary1175
+41: Call 19 tolower 0
+42: PostCall 19
+43: GetReturnValue £temporary1176
+44: Equal Assign base 16 £temporary1176 120
+45: Goto Assign base 8
+46: Assign base 16
+47: PreCall 19
+48: Call 19 scanChar 0
+49: PostCall 19
+50: GetReturnValue £temporary1178
+51: Assign input £temporary1178
+52: Goto PreCall 19
+53: Assign base 8
+54: Goto PreCall 19
+55: Assign base 10
+56: Goto PreCall 19
+57: PreCall 19
+58: Parameter 25 signedchar input
+59: Parameter 26 signedint base
+60: Call 19 isDigitInBase 0
+61: PostCall 19
+62: GetReturnValue £temporary1179
+63: NotEqual IntegralToIntegral £temporary1180 base £temporary1179 0
+64: Goto NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+65: IntegralToIntegral £temporary1180 base
+66: UnsignedMultiply £temporary1181 unsignedLongValue £temporary1180
+67: Assign unsignedLongValue £temporary1181
+68: PreCall 19
+69: Parameter 25 signedchar input
+70: Call 19 digitToValue 0
+71: PostCall 19
+72: GetReturnValue £temporary1182
+73: IntegralToIntegral £temporary1183 £temporary1182
+74: BinaryAdd £temporary1184 unsignedLongValue £temporary1183
+75: Assign unsignedLongValue £temporary1184
+76: Assign found 1
+77: PreCall 19
+78: Call 19 scanChar 0
+79: PostCall 19
+80: GetReturnValue £temporary1185
+81: Assign input £temporary1185
+82: Goto PreCall 19
+83: NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+84: Goto PreCall 19
+85: BinaryAdd g_inCount g_inCount 1
+86: Goto PreCall 19
+87: PreCall 19
+88: Parameter 25 signedchar input
+89: Call 19 unscanChar 0
+90: PostCall 19
+91: Return unsignedLongValue
+92: Empty
+93: FunctionEnd scanUnsignedLongInt

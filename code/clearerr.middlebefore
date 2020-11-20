@@ -1,0 +1,6 @@
+0: Dereference £temporary899 -> stream stream 0
+1: Assign errno 0
+2: Assign £temporary899 -> stream errno
+3: Empty
+4: Return
+5: FunctionEnd clearerr

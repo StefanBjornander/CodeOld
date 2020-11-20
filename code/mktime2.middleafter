@@ -1,31 +1,31 @@
-0: if tp == 0 goto 28
-1: £temporary3480 -> tp = *tp, offset 10
-2: £temporary3481 = £temporary3480 -> tp - 69
-3: £temporary3482 = £temporary3481 / 4
-4: £temporary3483 = int_to_int £temporary3482 (Signed_Int -> Signed_Long_Int)
-5: leapDays = £temporary3483
-6: £temporary3484 -> tp = *tp, offset 10
-7: £temporary3485 = £temporary3484 -> tp - 70
-8: £temporary3486 = £temporary3485 * 365
-9: £temporary3487 = int_to_int £temporary3486 (Signed_Int -> Signed_Long_Int)
-10: £temporary3488 = £temporary3487 + leapDays
-11: £temporary3489 -> tp = *tp, offset 14
-12: £temporary3490 = int_to_int £temporary3489 -> tp (Signed_Int -> Signed_Long_Int)
-13: totalDays = £temporary3488 + £temporary3490
-14: £temporary3492 = totalDays * 86400
-15: £temporary3493 -> tp = *tp, offset 4
-16: £temporary3494 = int_to_int £temporary3493 -> tp (Signed_Int -> Signed_Long_Int)
-17: £temporary3495 = £temporary3494 * 3600
-18: £temporary3496 = £temporary3492 + £temporary3495
-19: £temporary3497 -> tp = *tp, offset 2
-20: £temporary3498 = int_to_int £temporary3497 -> tp (Signed_Int -> Signed_Long_Int)
-21: £temporary3499 = £temporary3498 * 60
-22: £temporary3500 = £temporary3496 + £temporary3499
-23: £temporary3501 -> tp = *tp
-24: £temporary3502 = int_to_int £temporary3501 -> tp (Signed_Int -> Signed_Long_Int)
-25: £temporary3503 = £temporary3500 + £temporary3502
-26: return_value = £temporary3503
-27: return
-28: return_value = 0
-29: return
-30: function end mktime
+0: Equal 28 tp 0
+1: Deref £temporary3482 -> tp tp 10
+2: BinarySubtract £temporary3483 £temporary3482 -> tp 69
+3: SignedDivide £temporary3484 £temporary3483 4
+4: IntegralToIntegral £temporary3485 £temporary3484
+5: Assign leapDays £temporary3485
+6: Deref £temporary3486 -> tp tp 10
+7: BinarySubtract £temporary3487 £temporary3486 -> tp 70
+8: SignedMultiply £temporary3488 £temporary3487 365
+9: IntegralToIntegral £temporary3489 £temporary3488
+10: BinaryAdd £temporary3490 £temporary3489 leapDays
+11: Deref £temporary3491 -> tp tp 14
+12: IntegralToIntegral £temporary3492 £temporary3491 -> tp
+13: BinaryAdd totalDays £temporary3490 £temporary3492
+14: SignedMultiply £temporary3494 totalDays 86400
+15: Deref £temporary3495 -> tp tp 4
+16: IntegralToIntegral £temporary3496 £temporary3495 -> tp
+17: SignedMultiply £temporary3497 £temporary3496 3600
+18: BinaryAdd £temporary3498 £temporary3494 £temporary3497
+19: Deref £temporary3499 -> tp tp 2
+20: IntegralToIntegral £temporary3500 £temporary3499 -> tp
+21: SignedMultiply £temporary3501 £temporary3500 60
+22: BinaryAdd £temporary3502 £temporary3498 £temporary3501
+23: Deref £temporary3503 -> tp tp 0
+24: IntegralToIntegral £temporary3504 £temporary3503 -> tp
+25: BinaryAdd £temporary3505 £temporary3502 £temporary3504
+26: SetReturnValue £temporary3505
+27: Return £temporary3505
+28: SetReturnValue 0
+29: Return 0
+30: FunctionEnd mktime

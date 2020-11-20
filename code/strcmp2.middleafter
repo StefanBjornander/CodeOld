@@ -1,0 +1,36 @@
+0: Assign index 0
+1: BinaryAdd £temporary3960 left index
+2: Deref £temporary3959 -> £temporary3960 £temporary3960 0
+3: NotEqual 9 £temporary3959 -> £temporary3960 0
+4: BinaryAdd £temporary3963 right index
+5: Deref £temporary3962 -> £temporary3963 £temporary3963 0
+6: NotEqual 9 £temporary3962 -> £temporary3963 0
+7: SetReturnValue 0
+8: Return 0
+9: BinaryAdd £temporary3967 left index
+10: Deref £temporary3966 -> £temporary3967 £temporary3967 0
+11: NotEqual 14 £temporary3966 -> £temporary3967 0
+12: SetReturnValue -1
+13: Return -1
+14: BinaryAdd £temporary3970 right index
+15: Deref £temporary3969 -> £temporary3970 £temporary3970 0
+16: NotEqual 19 £temporary3969 -> £temporary3970 0
+17: SetReturnValue 1
+18: Return 1
+19: BinaryAdd £temporary3973 left index
+20: Deref £temporary3972 -> £temporary3973 £temporary3973 0
+21: BinaryAdd £temporary3975 right index
+22: Deref £temporary3974 -> £temporary3975 £temporary3975 0
+23: SignedGreaterThanEqual 26 £temporary3972 -> £temporary3973 £temporary3974 -> £temporary3975
+24: SetReturnValue -1
+25: Return -1
+26: BinaryAdd £temporary3978 left index
+27: Deref £temporary3977 -> £temporary3978 £temporary3978 0
+28: BinaryAdd £temporary3980 right index
+29: Deref £temporary3979 -> £temporary3980 £temporary3980 0
+30: SignedLessThanEqual 33 £temporary3977 -> £temporary3978 £temporary3979 -> £temporary3980
+31: SetReturnValue 1
+32: Return 1
+33: Increment index
+34: Goto 1
+35: FunctionEnd strcmp

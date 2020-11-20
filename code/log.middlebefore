@@ -1,94 +1,98 @@
-0: push float x_plus_1
-1: push float float8$0#
-2: if x_plus_1 > float8$0# goto <MiddleCode>
-3: goto <MiddleCode>
-4: check track map float stack
-5: expo = int2$0#
-6: push float x_plus_1
-7: push float float8$0.3678794411714423216036827922#
-8: if x_plus_1 < float8$0.3678794411714423216036827922# goto <MiddleCode>
-9: goto <MiddleCode>
-10: check track map float stack
-11: push float x_plus_1
-12: push float float8$2.7182818284590452353#
-13: £temporary436 = x_plus_1 * float8$2.7182818284590452353#
-14: top float x_plus_1
-15: pop float empty X
-16: --expo
-17: goto <MiddleCode>
-18: push float x_plus_1
-19: push float float8$0.7357588823428846432073655843#
-20: if x_plus_1 > float8$0.7357588823428846432073655843# goto <MiddleCode>
-21: goto <MiddleCode>
-22: check track map float stack
-23: push float x_plus_1
-24: push float float8$2.7182818284590452353#
-25: £temporary439 = x_plus_1 / float8$2.7182818284590452353#
-26: top float x_plus_1
-27: pop float empty X
-28: ++expo
-29: goto <MiddleCode>
-30: push float float8$1#
-31: pop float n
-32: push float float8$1#
-33: pop float plusMinusOne
-34: push float x_plus_1
-35: push float float8$1#
-36: £temporary441 = x_plus_1 - float8$1#
-37: pop float x
-38: push float float8$0#
-39: pop float sum
-40: push float x
-41: pop float power
-42: push float term
-43: pop float empty X
-44: push float plusMinusOne
-45: push float power
-46: push float n
-47: push float n
-48: push 1
-49: n = n + float8$1#
-50: pop float n
-51: £temporary443 = power / £temporary442
-52: £temporary444 = plusMinusOne * £temporary443
-53: top float term
-54: pop float empty X
-55: push float sum
-56: push float term
-57: £temporary445 = sum + term
-58: top float sum
-59: pop float empty X
-60: push float power
-61: push float x
-62: £temporary446 = power * x
-63: top float power
-64: pop float empty X
-65: push float plusMinusOne
-66: push float float8$minus1.0#
-67: £temporary447 = plusMinusOne * float8$minus1.0#
-68: top float plusMinusOne
-69: pop float empty X
-70: check track map float stack
-71: call header
-72: push float term
-73: parameter term, offset 70
-74: call function noellipse-noellipse fabs
-75: post call
-76: £temporary448 = return_value
-77: push float float8$0.000000001#
-78: if £temporary448 > float8$0.000000001# goto <MiddleCode>
-79: goto <MiddleCode>
-80: goto <MiddleCode>
-81: push float sum
-82: £temporary450 = int_to_float expo (Signed_Int -> Double)
-83: £temporary451 = sum + £temporary450
-84: return_value = £temporary451
-85: return
-86: goto <MiddleCode>
-87: errno = int2$6#
-88: push float float8$0#
-89: return_value = float8$0#
-90: return
-91: empty
-92: return
-93: function end log
+0: PushFloat x
+1: PushFloat 0
+2: SignedGreaterThan Assign n 0 x 0
+3: Goto Assign errno 6
+4: Assign n 0
+5: PushFloat x
+6: PushFloat 1
+7: SignedGreaterThan PushFloat x x 1
+8: Goto PushFloat x
+9: PushFloat x
+10: PushFloat 1
+11: SignedGreaterThan PushFloat x x 1
+12: Goto PushFloat 1
+13: PushFloat x
+14: PushFloat 2.71
+15: SignedDivide £temporary381 x 2.71
+16: TopFloat x
+17: PopFloat
+18: BinaryAdd n n 1
+19: Goto PushFloat x
+20: Goto PushFloat 1
+21: PushFloat x
+22: PushFloat 0.3690036900369003690036900369
+23: SignedLessThan PushFloat x x 0.3690036900369003690036900369
+24: Goto PushFloat 1
+25: PushFloat x
+26: PushFloat 0.3690036900369003690036900369
+27: SignedLessThan PushFloat x x 0.3690036900369003690036900369
+28: Goto PushFloat 1
+29: PushFloat x
+30: PushFloat 2.71
+31: SignedMultiply £temporary385 x 2.71
+32: TopFloat x
+33: PopFloat
+34: BinarySubtract n n 1
+35: Goto PushFloat x
+36: Goto PushFloat 1
+37: PushFloat 1
+38: PopFloat index
+39: PushFloat 0
+40: PopFloat sum
+41: PushFloat 1
+42: PopFloat sign
+43: PushFloat x
+44: PushFloat 1
+45: BinarySubtract £temporary387 x 1
+46: PopFloat x_minus_1
+47: PushFloat x_minus_1
+48: PopFloat power
+49: PushFloat term
+50: PopFloat
+51: PushFloat sign
+52: PushFloat power
+53: SignedMultiply £temporary388 sign power
+54: PushFloat index
+55: PushOne
+56: BinaryAdd index index 1
+57: TopFloat index
+58: PushOne
+59: BinarySubtract index index 1
+60: SignedDivide £temporary390 £temporary388 £temporary389
+61: TopFloat term
+62: PopFloat
+63: PushFloat sum
+64: PushFloat term
+65: BinaryAdd £temporary391 sum term
+66: TopFloat sum
+67: PopFloat
+68: PushFloat power
+69: PushFloat x_minus_1
+70: SignedMultiply £temporary392 power x_minus_1
+71: TopFloat power
+72: PopFloat
+73: PushFloat sign
+74: PushFloat -1.0
+75: SignedMultiply £temporary393 sign -1.0
+76: TopFloat sign
+77: PopFloat
+78: PreCall 64
+79: PushFloat term
+80: Parameter 70 double term
+81: Call 64 fabs 0
+82: PostCall 64
+83: GetReturnValue £temporary394
+84: PushFloat 0.000000001
+85: SignedGreaterThanEqual PushFloat term £temporary394 0.000000001
+86: Goto PushFloat sum
+87: Goto PushFloat term
+88: PushFloat sum
+89: IntegralToFloating £temporary396 n
+90: BinaryAdd £temporary397 sum £temporary396
+91: Return £temporary397
+92: Goto Empty
+93: Assign errno 6
+94: PushFloat 0
+95: Return 0
+96: Empty
+97: FunctionEnd log

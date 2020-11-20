@@ -1,0 +1,77 @@
+0: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 10 string_argc3A2025i0A# 6
+2: Parameter 10 argc 8
+3: Call 10 printf 0
+4: PostCall 10
+5: Assign index 0
+6: SignedGreaterThanEqual 18 index argc
+7: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+8: Parameter 12 string_25i3A203C25s3E0A# 6
+9: Parameter 12 index 8
+10: UnsignedMultiply £temporary124 index 2
+11: BinaryAdd £temporary125 argv £temporary124
+12: Deref £temporary123 -> £temporary125 £temporary125 0
+13: Parameter 12 £temporary123 -> £temporary125 10
+14: Call 12 printf 0
+15: PostCall 12
+16: Increment index
+17: Goto 6
+18: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+19: Parameter 12 string_0A# 6
+20: Call 12 printf 0
+21: PostCall 12
+22: Assign index 0
+23: UnsignedMultiply £temporary129 index 2
+24: BinaryAdd £temporary130 argv £temporary129
+25: Deref £temporary128 -> £temporary130 £temporary130 0
+26: Equal 38 £temporary128 -> £temporary130 0
+27: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+28: Parameter 12 string_25i3A203C25s3E0A# 6
+29: Parameter 12 index 8
+30: UnsignedMultiply £temporary134 index 2
+31: BinaryAdd £temporary135 argv £temporary134
+32: Deref £temporary133 -> £temporary135 £temporary135 0
+33: Parameter 12 £temporary133 -> £temporary135 10
+34: Call 12 printf 0
+35: PostCall 12
+36: Increment index
+37: Goto 23
+38: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+39: Parameter 12 string_0A# 6
+40: Call 12 printf 0
+41: PostCall 12
+42: CallHeader 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+43: Parameter 41 0 6
+44: Call 41 mktime 0
+45: PostCall 41
+46: CallHeader 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+47: Parameter 41 string_Hello210A# 6
+48: Call 41 printf 0
+49: PostCall 41
+50: CallHeader 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+51: Parameter 41 string_Please20write20a20character2C20a20string2C20an20integer2C20and20a20double3A20# 6
+52: Call 41 printf 0
+53: PostCall 41
+54: CallHeader 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+55: Parameter 41 string_25c2025s2025i2025lf# 6
+56: address £temporary141 c
+57: Parameter 41 £temporary141 8
+58: Parameter 41 s 10
+59: address £temporary142 i
+60: Parameter 41 £temporary142 12
+61: address £temporary143 d
+62: Parameter 41 £temporary143 14
+63: Call 41 scanf 0
+64: PostCall 41
+65: CallHeader 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+66: Parameter 41 string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A# 6
+67: IntegralToIntegral £temporary145 c
+68: Parameter 41 £temporary145 8
+69: Parameter 41 s 10
+70: Parameter 41 i 12
+71: PushFloat d
+72: Parameter 41 d 14
+73: Call 41 printf 0
+74: PostCall 41
+75: Return 0
+76: FunctionEnd mainX4

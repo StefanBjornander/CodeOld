@@ -1,0 +1,17 @@
+0: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 8 string_Please20write20an20integer3A20# 6
+2: Call 8 printf 0
+3: PostCall 8
+4: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+5: Parameter 8 string_25i# 6
+6: address £temporary37 i
+7: Parameter 8 £temporary37 8
+8: Call 8 scanf 0
+9: PostCall 8
+10: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+11: Parameter 8 string_You20wrote20the20integer2025i2E0A# 6
+12: Parameter 8 i 8
+13: Call 8 printf 0
+14: PostCall 8
+15: Return 0
+16: FunctionEnd maini

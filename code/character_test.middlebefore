@@ -1,0 +1,270 @@
+0: PreCall 7
+1: Parameter 13 pointer "ascii %i\n"
+2: IntegralToIntegral £temporary3362 c
+3: Parameter 15 signedint £temporary3362
+4: Call 7 printf 2
+5: PostCall 7
+6: PreCall 7
+7: Parameter 13 pointer "islower('%c') = %s\n"
+8: IntegralToIntegral £temporary3364 c
+9: Parameter 15 signedint £temporary3364
+10: PreCall 7
+11: IntegralToIntegral £temporary3365 c
+12: Parameter 23 signedint £temporary3365
+13: Call 17 islower 0
+14: PostCall 17
+15: GetReturnValue £temporary3366
+16: NotEqual Empty £temporary3366 0
+17: Goto Empty
+18: Empty
+19: Assign £temporary3368 "Yes"
+20: Goto Empty
+21: Empty
+22: Assign £temporary3368 "No"
+23: Empty
+24: Parameter 17 pointer £temporary3368
+25: Call 7 printf 4
+26: PostCall 7
+27: PreCall 7
+28: Parameter 13 pointer "isupper('%c') = %s\n"
+29: IntegralToIntegral £temporary3370 c
+30: Parameter 15 signedint £temporary3370
+31: PreCall 7
+32: IntegralToIntegral £temporary3371 c
+33: Parameter 23 signedint £temporary3371
+34: Call 17 isupper 0
+35: PostCall 17
+36: GetReturnValue £temporary3372
+37: NotEqual Empty £temporary3372 0
+38: Goto Empty
+39: Empty
+40: Assign £temporary3374 "Yes"
+41: Goto Empty
+42: Empty
+43: Assign £temporary3374 "No"
+44: Empty
+45: Parameter 17 pointer £temporary3374
+46: Call 7 printf 4
+47: PostCall 7
+48: PreCall 7
+49: Parameter 13 pointer "isalpha('%c') = %s\n"
+50: IntegralToIntegral £temporary3376 c
+51: Parameter 15 signedint £temporary3376
+52: PreCall 7
+53: IntegralToIntegral £temporary3377 c
+54: Parameter 23 signedint £temporary3377
+55: Call 17 isalpha 0
+56: PostCall 17
+57: GetReturnValue £temporary3378
+58: NotEqual Empty £temporary3378 0
+59: Goto Empty
+60: Empty
+61: Assign £temporary3380 "Yes"
+62: Goto Empty
+63: Empty
+64: Assign £temporary3380 "No"
+65: Empty
+66: Parameter 17 pointer £temporary3380
+67: Call 7 printf 4
+68: PostCall 7
+69: PreCall 7
+70: Parameter 13 pointer "isdigit('%c') = %s\n"
+71: IntegralToIntegral £temporary3382 c
+72: Parameter 15 signedint £temporary3382
+73: PreCall 7
+74: IntegralToIntegral £temporary3383 c
+75: Parameter 23 signedint £temporary3383
+76: Call 17 isdigit 0
+77: PostCall 17
+78: GetReturnValue £temporary3384
+79: NotEqual Empty £temporary3384 0
+80: Goto Empty
+81: Empty
+82: Assign £temporary3386 "Yes"
+83: Goto Empty
+84: Empty
+85: Assign £temporary3386 "No"
+86: Empty
+87: Parameter 17 pointer £temporary3386
+88: Call 7 printf 4
+89: PostCall 7
+90: PreCall 7
+91: Parameter 13 pointer "isalnum('%c') = %s\n"
+92: IntegralToIntegral £temporary3388 c
+93: Parameter 15 signedint £temporary3388
+94: PreCall 7
+95: IntegralToIntegral £temporary3389 c
+96: Parameter 23 signedint £temporary3389
+97: Call 17 isalnum 0
+98: PostCall 17
+99: GetReturnValue £temporary3390
+100: NotEqual Empty £temporary3390 0
+101: Goto Empty
+102: Empty
+103: Assign £temporary3392 "Yes"
+104: Goto Empty
+105: Empty
+106: Assign £temporary3392 "No"
+107: Empty
+108: Parameter 17 pointer £temporary3392
+109: Call 7 printf 4
+110: PostCall 7
+111: PreCall 7
+112: Parameter 13 pointer "isxdigit('%c') = %s\n"
+113: IntegralToIntegral £temporary3394 c
+114: Parameter 15 signedint £temporary3394
+115: PreCall 7
+116: IntegralToIntegral £temporary3395 c
+117: Parameter 23 signedint £temporary3395
+118: Call 17 isxdigit 0
+119: PostCall 17
+120: GetReturnValue £temporary3396
+121: NotEqual Empty £temporary3396 0
+122: Goto Empty
+123: Empty
+124: Assign £temporary3398 "Yes"
+125: Goto Empty
+126: Empty
+127: Assign £temporary3398 "No"
+128: Empty
+129: Parameter 17 pointer £temporary3398
+130: Call 7 printf 4
+131: PostCall 7
+132: PreCall 7
+133: Parameter 13 pointer "isgraph('%c') = %s\n"
+134: IntegralToIntegral £temporary3400 c
+135: Parameter 15 signedint £temporary3400
+136: PreCall 7
+137: IntegralToIntegral £temporary3401 c
+138: Parameter 23 signedint £temporary3401
+139: Call 17 isgraph 0
+140: PostCall 17
+141: GetReturnValue £temporary3402
+142: NotEqual Empty £temporary3402 0
+143: Goto Empty
+144: Empty
+145: Assign £temporary3404 "Yes"
+146: Goto Empty
+147: Empty
+148: Assign £temporary3404 "No"
+149: Empty
+150: Parameter 17 pointer £temporary3404
+151: Call 7 printf 4
+152: PostCall 7
+153: PreCall 7
+154: Parameter 13 pointer "isprint('%c') = %s\n"
+155: IntegralToIntegral £temporary3406 c
+156: Parameter 15 signedint £temporary3406
+157: PreCall 7
+158: IntegralToIntegral £temporary3407 c
+159: Parameter 23 signedint £temporary3407
+160: Call 17 isprint 0
+161: PostCall 17
+162: GetReturnValue £temporary3408
+163: NotEqual Empty £temporary3408 0
+164: Goto Empty
+165: Empty
+166: Assign £temporary3410 "Yes"
+167: Goto Empty
+168: Empty
+169: Assign £temporary3410 "No"
+170: Empty
+171: Parameter 17 pointer £temporary3410
+172: Call 7 printf 4
+173: PostCall 7
+174: PreCall 7
+175: Parameter 13 pointer "ispunct('%c') = %s\n"
+176: IntegralToIntegral £temporary3412 c
+177: Parameter 15 signedint £temporary3412
+178: PreCall 7
+179: IntegralToIntegral £temporary3413 c
+180: Parameter 23 signedint £temporary3413
+181: Call 17 ispunct 0
+182: PostCall 17
+183: GetReturnValue £temporary3414
+184: NotEqual Empty £temporary3414 0
+185: Goto Empty
+186: Empty
+187: Assign £temporary3416 "Yes"
+188: Goto Empty
+189: Empty
+190: Assign £temporary3416 "No"
+191: Empty
+192: Parameter 17 pointer £temporary3416
+193: Call 7 printf 4
+194: PostCall 7
+195: PreCall 7
+196: Parameter 13 pointer "iscntrl('%c') = %s\n"
+197: IntegralToIntegral £temporary3418 c
+198: Parameter 15 signedint £temporary3418
+199: PreCall 7
+200: IntegralToIntegral £temporary3419 c
+201: Parameter 23 signedint £temporary3419
+202: Call 17 iscntrl 0
+203: PostCall 17
+204: GetReturnValue £temporary3420
+205: NotEqual Empty £temporary3420 0
+206: Goto Empty
+207: Empty
+208: Assign £temporary3422 "Yes"
+209: Goto Empty
+210: Empty
+211: Assign £temporary3422 "No"
+212: Empty
+213: Parameter 17 pointer £temporary3422
+214: Call 7 printf 4
+215: PostCall 7
+216: PreCall 7
+217: Parameter 13 pointer "isspace('%c') = %s\n"
+218: IntegralToIntegral £temporary3424 c
+219: Parameter 15 signedint £temporary3424
+220: PreCall 7
+221: IntegralToIntegral £temporary3425 c
+222: Parameter 23 signedint £temporary3425
+223: Call 17 isspace 0
+224: PostCall 17
+225: GetReturnValue £temporary3426
+226: NotEqual Empty £temporary3426 0
+227: Goto Empty
+228: Empty
+229: Assign £temporary3428 "Yes"
+230: Goto Empty
+231: Empty
+232: Assign £temporary3428 "No"
+233: Empty
+234: Parameter 17 pointer £temporary3428
+235: Call 7 printf 4
+236: PostCall 7
+237: PreCall 7
+238: Parameter 13 pointer "tolower('%c') = '%c'\n"
+239: IntegralToIntegral £temporary3430 c
+240: Parameter 15 signedint £temporary3430
+241: PreCall 7
+242: IntegralToIntegral £temporary3431 c
+243: Parameter 23 signedint £temporary3431
+244: Call 17 tolower 0
+245: PostCall 17
+246: GetReturnValue £temporary3432
+247: IntegralToIntegral £temporary3433 £temporary3432
+248: IntegralToIntegral £temporary3434 £temporary3433
+249: Parameter 17 signedint £temporary3434
+250: Call 7 printf 4
+251: PostCall 7
+252: PreCall 7
+253: Parameter 13 pointer "toupper('%c') = '%c'\n\n"
+254: IntegralToIntegral £temporary3436 c
+255: Parameter 15 signedint £temporary3436
+256: PreCall 7
+257: IntegralToIntegral £temporary3437 c
+258: Parameter 23 signedint £temporary3437
+259: Call 17 toupper 0
+260: PostCall 17
+261: GetReturnValue £temporary3438
+262: IntegralToIntegral £temporary3439 £temporary3438
+263: IntegralToIntegral £temporary3440 £temporary3439
+264: Parameter 17 signedint £temporary3440
+265: Call 7 printf 4
+266: PostCall 7
+267: Empty
+268: Return
+269: FunctionEnd character_test

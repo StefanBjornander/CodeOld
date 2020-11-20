@@ -1,0 +1,24 @@
+0: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 8 s 6
+2: Parameter 8 -1 8
+3: Parameter 8 stdin 10
+4: Call 8 fgets 0
+5: PostCall 8
+6: GetReturnValue £temporary1081
+7: Equal 21 £temporary1081 0
+8: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+9: Parameter 8 s 6
+10: Call 8 strlen 0
+11: PostCall 8
+12: GetReturnValue £temporary1083
+13: Assign size £temporary1083
+14: SignedLessThanEqual 19 size 0
+15: BinarySubtract £temporary1085 size 1
+16: BinaryAdd £temporary1087 s £temporary1085
+17: Deref £temporary1086 -> £temporary1087 £temporary1087 0
+18: Assign £temporary1086 -> £temporary1087 0
+19: SetReturnValue s
+20: Return s
+21: SetReturnValue 0
+22: Return 0
+23: FunctionEnd gets

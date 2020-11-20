@@ -1,0 +1,22 @@
+0: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Call 8 localeconv 0
+2: PostCall 8
+3: GetReturnValue £temporary4082
+4: Assign localeConvPtr £temporary4082
+5: Equal 9 localeConvPtr 0
+6: Deref £temporary4084 -> localeConvPtr localeConvPtr 16
+7: Assign £temporary4088 £temporary4084 -> localeConvPtr
+8: Goto 10
+9: Assign £temporary4088 0
+10: Assign messageList £temporary4088
+11: Equal 14 messageList 0
+12: Assign £temporary4093 messageList
+13: Goto 15
+14: Assign £temporary4093 enMessageList
+15: Assign messageList £temporary4093
+16: UnsignedMultiply £temporary4095 errno 2
+17: BinaryAdd £temporary4096 messageList £temporary4095
+18: Deref £temporary4094 -> £temporary4096 £temporary4096 0
+19: SetReturnValue £temporary4094 -> £temporary4096
+20: Return £temporary4094 -> £temporary4096
+21: FunctionEnd strerror

@@ -1,0 +1,9 @@
+0: Assign a.p 0
+1: Assign a.q 0
+2: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+3: Parameter 12 pointer "test1.txt"
+4: Parameter 14 pointer "test2.txt"
+5: Call 6 file_test 0
+6: PostCall 6
+7: Return
+8: FunctionEnd main2

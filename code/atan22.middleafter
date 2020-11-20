@@ -1,0 +1,72 @@
+0: PushFloat y
+1: PushZero
+2: SignedLessThanEqual 13 y 0
+3: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: PushFloat x
+5: PushFloat y
+6: SignedDivide £temporary764 x y
+7: Parameter 22 £temporary764 6
+8: Call 22 atan 0
+9: PostCall 22
+10: GetReturnValue £temporary765
+11: SetReturnValue £temporary765
+12: Return £temporary765
+13: PushFloat x
+14: PushZero
+15: SignedLessThan 31 x 0
+16: PushFloat y
+17: PushZero
+18: SignedGreaterThanEqual 31 y 0
+19: PushFloat 3.1415926535897932384626433
+20: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
+21: PushFloat x
+22: PushFloat y
+23: SignedDivide £temporary769 x y
+24: Parameter 22 £temporary769 6
+25: Call 22 atan 0
+26: PostCall 22
+27: GetReturnValue £temporary770
+28: BinaryAdd £temporary771 3.1415926535897932384626433 £temporary770
+29: SetReturnValue £temporary771
+30: Return £temporary771
+31: PushFloat x
+32: PushZero
+33: SignedGreaterThanEqual 49 x 0
+34: PushFloat y
+35: PushZero
+36: SignedGreaterThanEqual 49 y 0
+37: PushFloat -3.1415926535897932384626433
+38: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
+39: PushFloat x
+40: PushFloat y
+41: SignedDivide £temporary775 x y
+42: Parameter 22 £temporary775 6
+43: Call 22 atan 0
+44: PostCall 22
+45: GetReturnValue £temporary776
+46: BinaryAdd £temporary777 -3.1415926535897932384626433 £temporary776
+47: SetReturnValue £temporary777
+48: Return £temporary777
+49: PushFloat x
+50: PushZero
+51: SignedLessThanEqual 58 x 0
+52: PushFloat y
+53: PushZero
+54: NotEqual 58 y 0
+55: PushFloat 1.57079632679489661923132165
+56: SetReturnValue 1.57079632679489661923132165
+57: Return 1.57079632679489661923132165
+58: PushFloat x
+59: PushZero
+60: SignedGreaterThanEqual 67 x 0
+61: PushFloat y
+62: PushZero
+63: NotEqual 67 y 0
+64: PushFloat -1.57079632679489661923132165
+65: SetReturnValue -1.57079632679489661923132165
+66: Return -1.57079632679489661923132165
+67: Assign errno 6
+68: PushZero
+69: SetReturnValue 0
+70: Return 0
+71: FunctionEnd atan2

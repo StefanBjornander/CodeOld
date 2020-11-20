@@ -1,0 +1,11 @@
+0: Dereference £temporary893 -> ptr ptr 0
+1: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Parameter 16 pointer stream
+3: Call 10 ftell 0
+4: PostCall 10
+5: GetReturnValue £temporary894
+6: IntegralToIntegral £temporary895 £temporary894
+7: Assign £temporary893 -> ptr £temporary895
+8: SetReturnValue
+9: Return 0
+10: FunctionEnd fgetpos

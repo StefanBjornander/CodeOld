@@ -1,0 +1,24 @@
+0: Assign lowHeapPtr 65534
+1: InspectRegister £temporary4240 bp
+2: Assign stackTop £temporary4240
+3: Assign i 0
+4: SignedGreaterThanEqual 22 i 1000
+5: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+6: Parameter 18 signedint 96
+7: Call 12 malloc 0
+8: PostCall 12
+9: GetReturnValue £temporary4243
+10: Assign p £temporary4243
+11: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+12: Parameter 20 pointer "Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u\n"
+13: Parameter 22 signedint i
+14: Parameter 24 pointer p
+15: Parameter 26 unsigned int stackTop
+16: Dereference £temporary4244 -> lowHeapPtr lowHeapPtr 0
+17: Parameter 28 unsigned int £temporary4244 -> lowHeapPtr
+18: Call 14 printf 8
+19: PostCall 14
+20: BinaryAdd i i 1
+21: Goto 4
+22: Return
+23: FunctionEnd malloc_test6

@@ -1,0 +1,329 @@
+0: PreCall 14
+1: Parameter 20 pointer "<%f>\n"
+2: PushFloat x
+3: Parameter 22 double x
+4: Call 14 printf 8
+5: PostCall 14
+6: PreCall 14
+7: Parameter 20 pointer "  sin(%f) = %f, errno = %i\n"
+8: PushFloat x
+9: Parameter 22 double x
+10: PreCall 14
+11: PushFloat x
+12: Parameter 36 double x
+13: Call 30 sin 0
+14: PostCall 30
+15: GetReturnValue £temporary3656
+16: Parameter 30 double £temporary3656
+17: Parameter 38 signedint errno
+18: Call 14 printf 18
+19: PostCall 14
+20: Assign errno 0
+21: Empty
+22: PreCall 14
+23: Parameter 20 pointer "  cos(%f) = %f, errno = %i\n"
+24: PushFloat x
+25: Parameter 22 double x
+26: PreCall 14
+27: PushFloat x
+28: Parameter 36 double x
+29: Call 30 cos 0
+30: PostCall 30
+31: GetReturnValue £temporary3658
+32: Parameter 30 double £temporary3658
+33: Parameter 38 signedint errno
+34: Call 14 printf 18
+35: PostCall 14
+36: Assign errno 0
+37: Empty
+38: PreCall 14
+39: Parameter 20 pointer "  tan(%f) = %f, errno = %i\n"
+40: PushFloat x
+41: Parameter 22 double x
+42: PreCall 14
+43: PushFloat x
+44: Parameter 36 double x
+45: Call 30 tan 0
+46: PostCall 30
+47: GetReturnValue £temporary3660
+48: Parameter 30 double £temporary3660
+49: Parameter 38 signedint errno
+50: Call 14 printf 18
+51: PostCall 14
+52: Assign errno 0
+53: Empty
+54: PreCall 14
+55: Parameter 20 pointer "  asin(%f) = %f, errno = %i\n"
+56: PushFloat x
+57: Parameter 22 double x
+58: PreCall 14
+59: PushFloat x
+60: Parameter 36 double x
+61: Call 30 asin 0
+62: PostCall 30
+63: GetReturnValue £temporary3662
+64: Parameter 30 double £temporary3662
+65: Parameter 38 signedint errno
+66: Call 14 printf 18
+67: PostCall 14
+68: Assign errno 0
+69: Empty
+70: PreCall 14
+71: Parameter 20 pointer "  acos(%f) = %f, errno = %i\n"
+72: PushFloat x
+73: Parameter 22 double x
+74: PreCall 14
+75: PushFloat x
+76: Parameter 36 double x
+77: Call 30 acos 0
+78: PostCall 30
+79: GetReturnValue £temporary3664
+80: Parameter 30 double £temporary3664
+81: Parameter 38 signedint errno
+82: Call 14 printf 18
+83: PostCall 14
+84: Assign errno 0
+85: Empty
+86: PreCall 14
+87: Parameter 20 pointer "  atan(%f) = %f, errno = %i\n"
+88: PushFloat x
+89: Parameter 22 double x
+90: PreCall 14
+91: PushFloat x
+92: Parameter 36 double x
+93: Call 30 atan 0
+94: PostCall 30
+95: GetReturnValue £temporary3666
+96: Parameter 30 double £temporary3666
+97: Parameter 38 signedint errno
+98: Call 14 printf 18
+99: PostCall 14
+100: Assign errno 0
+101: Empty
+102: PreCall 14
+103: Parameter 20 pointer "  exp(%f) = %f, errno = %i\n"
+104: PushFloat x
+105: Parameter 22 double x
+106: PreCall 14
+107: PushFloat x
+108: Parameter 36 double x
+109: Call 30 exp 0
+110: PostCall 30
+111: GetReturnValue £temporary3668
+112: Parameter 30 double £temporary3668
+113: Parameter 38 signedint errno
+114: Call 14 printf 18
+115: PostCall 14
+116: Assign errno 0
+117: Empty
+118: PreCall 14
+119: Parameter 20 pointer "  log(%f) = %f, errno = %i\n"
+120: PushFloat x
+121: Parameter 22 double x
+122: PreCall 14
+123: PushFloat x
+124: Parameter 36 double x
+125: Call 30 log 0
+126: PostCall 30
+127: GetReturnValue £temporary3670
+128: Parameter 30 double £temporary3670
+129: Parameter 38 signedint errno
+130: Call 14 printf 18
+131: PostCall 14
+132: Assign errno 0
+133: Empty
+134: PreCall 14
+135: Parameter 20 pointer "  log10(%f) = %f, errno = %i\n"
+136: PushFloat x
+137: Parameter 22 double x
+138: PreCall 14
+139: PushFloat x
+140: Parameter 36 double x
+141: Call 30 log10 0
+142: PostCall 30
+143: GetReturnValue £temporary3672
+144: Parameter 30 double £temporary3672
+145: Parameter 38 signedint errno
+146: Call 14 printf 18
+147: PostCall 14
+148: Assign errno 0
+149: Empty
+150: PreCall 14
+151: Parameter 20 pointer "  sinh(%f) = %f, errno = %i\n"
+152: PushFloat x
+153: Parameter 22 double x
+154: PreCall 14
+155: PushFloat x
+156: Parameter 36 double x
+157: Call 30 sinh 0
+158: PostCall 30
+159: GetReturnValue £temporary3674
+160: Parameter 30 double £temporary3674
+161: Parameter 38 signedint errno
+162: Call 14 printf 18
+163: PostCall 14
+164: Assign errno 0
+165: Empty
+166: PreCall 14
+167: Parameter 20 pointer "  cosh(%f) = %f, errno = %i\n"
+168: PushFloat x
+169: Parameter 22 double x
+170: PreCall 14
+171: PushFloat x
+172: Parameter 36 double x
+173: Call 30 cosh 0
+174: PostCall 30
+175: GetReturnValue £temporary3676
+176: Parameter 30 double £temporary3676
+177: Parameter 38 signedint errno
+178: Call 14 printf 18
+179: PostCall 14
+180: Assign errno 0
+181: Empty
+182: PreCall 14
+183: Parameter 20 pointer "  tanh(%f) = %f, errno = %i\n"
+184: PushFloat x
+185: Parameter 22 double x
+186: PreCall 14
+187: PushFloat x
+188: Parameter 36 double x
+189: Call 30 tanh 0
+190: PostCall 30
+191: GetReturnValue £temporary3678
+192: Parameter 30 double £temporary3678
+193: Parameter 38 signedint errno
+194: Call 14 printf 18
+195: PostCall 14
+196: Assign errno 0
+197: Empty
+198: PreCall 14
+199: Parameter 20 pointer "  sqrt(%f) = %f, errno = %i\n"
+200: PushFloat x
+201: Parameter 22 double x
+202: PreCall 14
+203: PushFloat x
+204: Parameter 36 double x
+205: Call 30 sqrt 0
+206: PostCall 30
+207: GetReturnValue £temporary3680
+208: Parameter 30 double £temporary3680
+209: Parameter 38 signedint errno
+210: Call 14 printf 18
+211: PostCall 14
+212: Assign errno 0
+213: Empty
+214: PreCall 14
+215: Parameter 20 pointer "  floor(%f) = %f, errno = %i\n"
+216: PushFloat x
+217: Parameter 22 double x
+218: PreCall 14
+219: PushFloat x
+220: Parameter 36 double x
+221: Call 30 floor 0
+222: PostCall 30
+223: GetReturnValue £temporary3682
+224: Parameter 30 double £temporary3682
+225: Parameter 38 signedint errno
+226: Call 14 printf 18
+227: PostCall 14
+228: Assign errno 0
+229: Empty
+230: PreCall 14
+231: Parameter 20 pointer "  ceil(%f) = %f, errno = %i\n"
+232: PushFloat x
+233: Parameter 22 double x
+234: PreCall 14
+235: PushFloat x
+236: Parameter 36 double x
+237: Call 30 ceil 0
+238: PostCall 30
+239: GetReturnValue £temporary3684
+240: Parameter 30 double £temporary3684
+241: Parameter 38 signedint errno
+242: Call 14 printf 18
+243: PostCall 14
+244: Assign errno 0
+245: Empty
+246: PreCall 14
+247: Parameter 20 pointer "  fabs(%f) = %f, errno = %i\n"
+248: PushFloat x
+249: Parameter 22 double x
+250: PreCall 14
+251: PushFloat x
+252: Parameter 36 double x
+253: Call 30 fabs 0
+254: PostCall 30
+255: GetReturnValue £temporary3686
+256: Parameter 30 double £temporary3686
+257: Parameter 38 signedint errno
+258: Call 14 printf 18
+259: PostCall 14
+260: Assign errno 0
+261: Empty
+262: Assign j 0
+263: PreCall 16
+264: PushFloat x
+265: Parameter 22 double x
+266: Address £temporary3688 j
+267: Parameter 30 pointer £temporary3688
+268: Call 16 frexp 0
+269: PostCall 16
+270: GetReturnValue £temporary3689
+271: PopFloat z
+272: PreCall 24
+273: Parameter 30 pointer "frexp (%f, p) = (%f, %i), errno = %i\n"
+274: PushFloat x
+275: Parameter 32 double x
+276: PushFloat z
+277: Parameter 40 double z
+278: Parameter 48 signedint j
+279: Parameter 50 signedint errno
+280: Call 24 printf 20
+281: PostCall 24
+282: NotEqual PreCall 24 errno 0
+283: Goto PushFloat 0
+284: PreCall 24
+285: Parameter 30 pointer "Error message:"
+286: Call 24 perror 0
+287: PostCall 24
+288: Assign errno 0
+289: Goto PushFloat 0
+290: PushFloat 0
+291: PopFloat w
+292: PreCall 22
+293: PushFloat x
+294: Parameter 28 double x
+295: PushFloat w
+296: PopFloat
+297: Address £temporary3693 w
+298: Parameter 36 pointer £temporary3693
+299: Call 22 modf 0
+300: PostCall 22
+301: GetReturnValue £temporary3694
+302: PopFloat z
+303: PreCall 30
+304: Parameter 36 pointer "modf (%f, p) = (%f, %f), errno = %i\n"
+305: PushFloat x
+306: Parameter 38 double x
+307: PushFloat z
+308: Parameter 46 double z
+309: PushFloat w
+310: Parameter 54 double w
+311: Parameter 62 signedint errno
+312: Call 30 printf 26
+313: PostCall 30
+314: NotEqual PreCall 30 errno 0
+315: Goto PreCall 14
+316: PreCall 30
+317: Parameter 36 pointer "Error message:"
+318: Call 30 perror 0
+319: PostCall 30
+320: Assign errno 0
+321: Goto PreCall 14
+322: PreCall 14
+323: Parameter 20 pointer "\n"
+324: Call 14 printf 0
+325: PostCall 14
+326: Empty
+327: Return
+328: FunctionEnd math_test_1

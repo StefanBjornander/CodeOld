@@ -1,0 +1,27 @@
+0: UnsignedGreaterThan UnsignedModulo £temporary1560 unsignedValue base unsignedValue 0
+1: Goto Empty
+2: UnsignedModulo £temporary1560 unsignedValue base
+3: IntegralToIntegral £temporary1561 £temporary1560
+4: Assign digit £temporary1561
+5: PreCall 18
+6: UnsignedDivide £temporary1562 unsignedValue base
+7: Parameter 24 unsignedlongint £temporary1562
+8: Parameter 28 unsignedlongint base
+9: Parameter 32 signedint capital
+10: Call 18 printUnsignedLongRec 0
+11: PostCall 18
+12: PreCall 18
+13: Parameter 24 signedint digit
+14: Parameter 26 signedint capital
+15: Call 18 digitToChar 0
+16: PostCall 18
+17: GetReturnValue £temporary1564
+18: Assign c £temporary1564
+19: PreCall 19
+20: Parameter 25 signedchar c
+21: Call 19 printChar 0
+22: PostCall 19
+23: Goto Empty
+24: Empty
+25: Return
+26: FunctionEnd printUnsignedLongRec

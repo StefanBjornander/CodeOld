@@ -1,0 +1,12 @@
+0: Equal 6 c 32
+1: Equal 6 c 12
+2: Equal 6 c 10
+3: Equal 6 c 13
+4: Equal 6 c 9
+5: NotEqual 8 c 11
+6: Assign £temporary323 1
+7: Goto 9
+8: Assign £temporary323 0
+9: SetReturnValue
+10: Return £temporary323
+11: FunctionEnd isspace

@@ -1,0 +1,8 @@
+0: PreCall 6
+1: Parameter 12 pointer stdin
+2: Call 6 fgetc 0
+3: PostCall 6
+4: GetReturnValue £temporary841
+5: Return £temporary841
+6: Empty
+7: FunctionEnd getchar

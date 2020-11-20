@@ -1,0 +1,21 @@
+0: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 16 pointer s
+2: Call 10 strlen 0
+3: PostCall 10
+4: GetReturnValue £temporary835
+5: BinaryAdd size £temporary835 1
+6: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+7: Parameter 18 pointer s
+8: Parameter 20 signedint size
+9: Parameter 22 signedint 1
+10: Parameter 24 pointer stream
+11: Call 12 fwrite 0
+12: PostCall 12
+13: GetReturnValue £temporary838
+14: NotEqual 17 £temporary838 size
+15: Assign £temporary840 0
+16: Goto 18
+17: Assign £temporary840 -1
+18: SetReturnValue
+19: Return £temporary840
+20: FunctionEnd fputs

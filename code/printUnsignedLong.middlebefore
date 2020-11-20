@@ -1,0 +1,59 @@
+0: NotEqual PreCall 22 plus 0
+1: Goto NotEqual PreCall 22 space 0
+2: PreCall 22
+3: Parameter 28 signedchar 43
+4: Call 22 printChar 0
+5: PostCall 22
+6: Goto NotEqual PreCall 22 space 0
+7: NotEqual PreCall 22 space 0
+8: Goto NotEqual Equal PreCall 22 base 8 grid 0
+9: PreCall 22
+10: Parameter 28 signedchar 32
+11: Call 22 printChar 0
+12: PostCall 22
+13: Goto NotEqual Equal PreCall 22 base 8 grid 0
+14: NotEqual Equal PreCall 22 base 8 grid 0
+15: Goto Equal PreCall 22 unsignedValue 0
+16: Equal PreCall 22 base 8
+17: Goto Equal PreCall 22 base 16
+18: PreCall 22
+19: Parameter 28 signedchar 48
+20: Call 22 printChar 0
+21: PostCall 22
+22: Goto Equal PreCall 22 base 16
+23: Equal PreCall 22 base 16
+24: Goto Equal PreCall 22 unsignedValue 0
+25: PreCall 22
+26: Parameter 28 signedchar 48
+27: Call 22 printChar 0
+28: PostCall 22
+29: PreCall 22
+30: NotEqual Empty capital 0
+31: Goto Empty
+32: Empty
+33: Assign £temporary1575 88
+34: Goto Empty
+35: Empty
+36: Assign £temporary1575 120
+37: Empty
+38: Parameter 28 signedchar £temporary1575
+39: Call 22 printChar 0
+40: PostCall 22
+41: Goto Equal PreCall 22 unsignedValue 0
+42: Goto Equal PreCall 22 unsignedValue 0
+43: Equal PreCall 22 unsignedValue 0
+44: Goto PreCall 22
+45: PreCall 22
+46: Parameter 28 signedchar 48
+47: Call 22 printChar 0
+48: PostCall 22
+49: Goto Empty
+50: PreCall 22
+51: Parameter 28 unsignedlongint unsignedValue
+52: Parameter 32 unsignedlongint base
+53: Parameter 36 signedint capital
+54: Call 22 printUnsignedLongRec 0
+55: PostCall 22
+56: Empty
+57: Return
+58: FunctionEnd printUnsignedLong

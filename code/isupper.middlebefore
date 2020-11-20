@@ -1,0 +1,33 @@
+0: PreCall 8
+1: Call 8 localeconv 0
+2: PostCall 8
+3: GetReturnValue £temporary255
+4: Assign localeConvPtr £temporary255
+5: NotEqual PreCall 10 localeConvPtr 0
+6: Goto SignedGreaterThanEqual SignedLessThanEqual Assign £temporary264 1 c 90 c 65
+7: PreCall 10
+8: Dereference £temporary257 -> localeConvPtr localeConvPtr 0
+9: Parameter 16 pointer £temporary257 -> localeConvPtr
+10: Parameter 18 signedint c
+11: Call 10 strchr 0
+12: PostCall 10
+13: GetReturnValue £temporary258
+14: NotEqual Assign £temporary260 1 £temporary258 0
+15: Goto Assign £temporary260 0
+16: Assign £temporary260 1
+17: Goto Empty
+18: Assign £temporary260 0
+19: Empty
+20: Return £temporary260
+21: Goto Empty
+22: SignedGreaterThanEqual SignedLessThanEqual Assign £temporary264 1 c 90 c 65
+23: Goto Assign £temporary264 0
+24: SignedLessThanEqual Assign £temporary264 1 c 90
+25: Goto Assign £temporary264 0
+26: Assign £temporary264 1
+27: Goto Empty
+28: Assign £temporary264 0
+29: Empty
+30: Return £temporary264
+31: Empty
+32: FunctionEnd isupper

@@ -29,12 +29,12 @@ assert_testX$6:	; Parameter 8 string_25i# 6
 21:		mov word [bp + 14], string_25i#
 23:	
 
-assert_testX$7:	; address £temporary4475 n
+assert_testX$7:	; address £temporary4477 n
 24:		mov t2678, bp
 25:		add t2678, 6
 27:	
 
-assert_testX$8:	; Parameter 8 £temporary4475 8
+assert_testX$8:	; Parameter 8 £temporary4477 8
 28:		mov [bp + 16], t2678
 30:	
 

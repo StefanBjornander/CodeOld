@@ -1,0 +1,86 @@
+0: PreCall 10
+1: Parameter 16 pointer "argc: %i\n"
+2: Parameter 18 signedint argc
+3: Call 10 printf 2
+4: PostCall 10
+5: Assign index 0
+6: Empty
+7: SignedLessThan PreCall 12 index argc
+8: Goto PreCall 12
+9: PreCall 12
+10: Parameter 18 pointer "%i: <%s>\n"
+11: Parameter 20 signedint index
+12: UnsignedMultiply £temporary77 index 2
+13: BinaryAdd £temporary78 argv £temporary77
+14: Dereference £temporary76 -> £temporary78 £temporary78 0
+15: Parameter 22 pointer £temporary76 -> £temporary78
+16: Call 12 printf 4
+17: PostCall 12
+18: Empty
+19: BinaryAdd index index 1
+20: Goto Empty
+21: PreCall 12
+22: Parameter 18 pointer "\n"
+23: Call 12 printf 0
+24: PostCall 12
+25: Assign index 0
+26: Empty
+27: UnsignedMultiply £temporary82 index 2
+28: BinaryAdd £temporary83 argv £temporary82
+29: Dereference £temporary81 -> £temporary83 £temporary83 0
+30: NotEqual PreCall 12 £temporary81 -> £temporary83 0
+31: Goto PreCall 12
+32: PreCall 12
+33: Parameter 18 pointer "%i: <%s>\n"
+34: Parameter 20 signedint index
+35: UnsignedMultiply £temporary87 index 2
+36: BinaryAdd £temporary88 argv £temporary87
+37: Dereference £temporary86 -> £temporary88 £temporary88 0
+38: Parameter 22 pointer £temporary86 -> £temporary88
+39: Call 12 printf 4
+40: PostCall 12
+41: Empty
+42: BinaryAdd index index 1
+43: Goto Empty
+44: PreCall 12
+45: Parameter 18 pointer "\n"
+46: Call 12 printf 0
+47: PostCall 12
+48: PreCall 41
+49: Parameter 47 pointer 0
+50: Call 41 mktime 0
+51: PostCall 41
+52: PreCall 41
+53: Parameter 47 pointer "Hello!\n"
+54: Call 41 printf 0
+55: PostCall 41
+56: PreCall 41
+57: Parameter 47 pointer "Please write a character, a string, an integer, and a double: "
+58: Call 41 printf 0
+59: PostCall 41
+60: PreCall 41
+61: Parameter 47 pointer "%c %s %i %lf"
+62: Address £temporary94 c
+63: Parameter 49 pointer £temporary94
+64: Parameter 51 pointer s
+65: Address £temporary95 i
+66: Parameter 53 pointer £temporary95
+67: PushFloat d
+68: PopFloat
+69: Address £temporary96 d
+70: Parameter 55 pointer £temporary96
+71: Call 41 scanf 8
+72: PostCall 41
+73: PreCall 41
+74: Parameter 47 pointer "You wrote the character '%c', the string "%s", the integer %i, and the double %f.\n"
+75: IntegralToIntegral £temporary98 c
+76: Parameter 49 signedint £temporary98
+77: Parameter 51 pointer s
+78: Parameter 53 signedint i
+79: PushFloat d
+80: Parameter 55 double d
+81: Call 41 printf 14
+82: PostCall 41
+83: Empty
+84: Return
+85: FunctionEnd mainX4

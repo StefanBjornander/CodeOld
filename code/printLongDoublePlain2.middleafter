@@ -1,0 +1,34 @@
+0: PushFloat longDoubleValue
+1: PushFloat 0.0
+2: SignedGreaterThanEqual 12 longDoubleValue 0.0
+3: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+4: Parameter 22 45 6
+5: Call 22 printChar 0
+6: PostCall 22
+7: PushFloat longDoubleValue
+8: UnarySubtract £temporary1931 longDoubleValue
+9: PopFloat longDoubleValue
+10: Assign plus 0
+11: Assign space 0
+12: PushFloat longDoubleValue
+13: FloatingToIntegral £temporary1932 longDoubleValue
+14: Assign longValue £temporary1932
+15: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+16: Parameter 26 longValue 6
+17: Parameter 26 plus 10
+18: Parameter 26 space 12
+19: Call 26 printLongInt 0
+20: PostCall 26
+21: PushFloat longDoubleValue
+22: IntegralToFloating £temporary1934 longValue
+23: BinarySubtract £temporary1935 longDoubleValue £temporary1934
+24: PopFloat longDoubleValue
+25: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+26: PushFloat longDoubleValue
+27: Parameter 26 longDoubleValue 6
+28: Parameter 26 grid 14
+29: Parameter 26 precision 16
+30: Call 26 printLongDoubleFraction 0
+31: PostCall 26
+32: Return 0
+33: FunctionEnd printLongDoublePlain

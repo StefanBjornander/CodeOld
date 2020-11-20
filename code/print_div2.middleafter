@@ -1,0 +1,11 @@
+0: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 10 string_div_t20quot2025i20rem2025i0A# 6
+2: Parameter 10 d$quot 8
+3: Parameter 10 d$rem 10
+4: Call 10 printf 0
+5: PostCall 10
+6: Increment d$quot
+7: Increment d$rem
+8: SetReturnValue d
+9: Return d
+10: FunctionEnd print_div

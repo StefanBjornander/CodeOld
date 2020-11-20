@@ -1,0 +1,21 @@
+0: PreCall 14
+1: Parameter 20 pointer ": "
+2: Call 14 printf 0
+3: PostCall 14
+4: PreCall 14
+5: Parameter 20 pointer "%lf"
+6: PushFloat x
+7: PopFloat
+8: Address £temporary105 x
+9: Parameter 22 pointer £temporary105
+10: Call 14 scanf 2
+11: PostCall 14
+12: PreCall 14
+13: Parameter 20 pointer "<%f>"
+14: PushFloat x
+15: Parameter 22 double x
+16: Call 14 printf 8
+17: PostCall 14
+18: Empty
+19: Return
+20: FunctionEnd main3

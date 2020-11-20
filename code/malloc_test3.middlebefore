@@ -1,0 +1,64 @@
+0: PreCall 6
+1: Parameter 12 signedint 96
+2: Parameter 14 signedint 1
+3: Call 6 calloc 0
+4: PostCall 6
+5: GetReturnValue £temporary4211
+6: Assign a £temporary4211
+7: PreCall 8
+8: Parameter 14 signedint 96
+9: Parameter 16 signedint 1
+10: Call 8 calloc 0
+11: PostCall 8
+12: GetReturnValue £temporary4212
+13: Assign b £temporary4212
+14: PreCall 10
+15: Parameter 16 signedint 96
+16: Parameter 18 signedint 1
+17: Call 10 calloc 0
+18: PostCall 10
+19: GetReturnValue £temporary4213
+20: Assign c £temporary4213
+21: PreCall 12
+22: Parameter 18 signedint 96
+23: Parameter 20 signedint 1
+24: Call 12 calloc 0
+25: PostCall 12
+26: GetReturnValue £temporary4214
+27: Assign d £temporary4214
+28: PreCall 14
+29: Parameter 20 signedint 96
+30: Parameter 22 signedint 1
+31: Call 14 calloc 0
+32: PostCall 14
+33: GetReturnValue £temporary4215
+34: Assign e £temporary4215
+35: PreCall 16
+36: Call 16 print_heap 0
+37: PostCall 16
+38: PreCall 16
+39: Parameter 22 pointer a
+40: Call 16 free 0
+41: PostCall 16
+42: PreCall 16
+43: Parameter 22 pointer b
+44: Call 16 free 0
+45: PostCall 16
+46: PreCall 16
+47: Parameter 22 pointer c
+48: Call 16 free 0
+49: PostCall 16
+50: PreCall 16
+51: Parameter 22 pointer d
+52: Call 16 free 0
+53: PostCall 16
+54: PreCall 16
+55: Parameter 22 pointer e
+56: Call 16 free 0
+57: PostCall 16
+58: PreCall 16
+59: Call 16 print_heap 0
+60: PostCall 16
+61: Empty
+62: Return
+63: FunctionEnd malloc_test3

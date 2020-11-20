@@ -1,0 +1,16 @@
+0: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 6 string_hello3A2025u0A# 6
+2: IntegralToIntegral £temporary5963 hello
+3: Parameter 6 £temporary5963 8
+4: Call 6 printf 0
+5: PostCall 6
+6: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+7: Parameter 6 hello 6
+8: Call 6 qtest 0
+9: PostCall 6
+10: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+11: Parameter 6 string_Y# 6
+12: Call 6 printf 0
+13: PostCall 6
+14: Return 0
+15: FunctionEnd stdlib_testZ

@@ -1,0 +1,14 @@
+0: PreCall 8
+1: Parameter 14 signedint c
+2: Call 8 isprint 0
+3: PostCall 8
+4: GetReturnValue £temporary308
+5: NotEqual Assign £temporary311 0 £temporary308 0
+6: Goto Assign £temporary311 1
+7: Assign £temporary311 1
+8: Goto Empty
+9: Assign £temporary311 0
+10: Empty
+11: Return £temporary311
+12: Empty
+13: FunctionEnd iscntrl

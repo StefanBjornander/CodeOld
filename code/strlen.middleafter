@@ -1,0 +1,9 @@
+0: Assign index 0
+1: BinaryAdd £temporary3196 string index
+2: Dereference £temporary3194 -> £temporary3196 £temporary3196 0
+3: Equal 6 £temporary3194 -> £temporary3196 0
+4: BinaryAdd index index 1
+5: Goto 1
+6: SetReturnValue
+7: Return index
+8: FunctionEnd strlen

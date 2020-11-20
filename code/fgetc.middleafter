@@ -1,0 +1,17 @@
+0: Assign c 0
+1: PreCall 9 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+2: Address £temporary807 c
+3: Parameter 15 pointer £temporary807
+4: Parameter 17 signedint 1
+5: Parameter 19 signedint 1
+6: Parameter 21 pointer stream
+7: Call 9 fread 0
+8: PostCall 9
+9: GetReturnValue £temporary808
+10: SignedLessThanEqual 14 £temporary808 0
+11: IntegralToIntegral £temporary810 c
+12: SetReturnValue
+13: Return £temporary810
+14: SetReturnValue
+15: Return -1
+16: FunctionEnd fgetc

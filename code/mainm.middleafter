@@ -1,0 +1,5 @@
+0: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Call 10 main_math 0
+2: PostCall 10
+3: Return
+4: FunctionEnd mainm
