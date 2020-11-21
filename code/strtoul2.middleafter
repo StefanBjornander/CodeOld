@@ -5,11 +5,11 @@
 4: Parameter 12 base 6
 5: Call 12 scanUnsignedLongInt 0
 6: PostCall 12
-7: GetReturnValue £temporary2854
-8: Assign unsignedLongValue £temporary2854
+7: GetReturnValue £temporary2840
+8: Assign unsignedLongValue £temporary2840
 9: Equal 12 endp 0
-10: Deref £temporary2856 -> endp endp 0
-11: BinaryAdd £temporary2856 -> endp s g_inChars
+10: Deref £temporary2842 -> endp endp 0
+11: BinaryAdd £temporary2842 -> endp s g_inChars
 12: SetReturnValue unsignedLongValue
 13: Return unsignedLongValue
 14: FunctionEnd strtoul

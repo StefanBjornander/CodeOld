@@ -1,7 +1,7 @@
 0: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1: Parameter 14 pointer "f: %u\n"
-2: IntegralToIntegral £temporary4282 f
-3: Parameter 16 unsigned int £temporary4282
+2: IntegralToIntegral £temporary4271 f
+3: Parameter 16 unsigned int £temporary4271
 4: Call 8 printf 2
 5: PostCall 8
 6: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0

@@ -4,20 +4,20 @@
 3: Parameter 22 pointer "123.456"
 4: Call 16 atof 0
 5: PostCall 16
-6: GetReturnValue £temporary4289
-7: Parameter 16 double £temporary4289
+6: GetReturnValue £temporary4278
+7: Parameter 16 double £temporary4278
 8: Call 8 printf 8
 9: PostCall 8
 10: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 11: Parameter 14 pointer "strtod("123.456789abc", &p) = (%f, %s)\n"
 12: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 13: Parameter 22 pointer "123.456789abc"
-14: Address £temporary4291 p
-15: Parameter 24 pointer £temporary4291
+14: Address £temporary4280 p
+15: Parameter 24 pointer £temporary4280
 16: Call 16 strtod 0
 17: PostCall 16
-18: GetReturnValue £temporary4292
-19: Parameter 16 double £temporary4292
+18: GetReturnValue £temporary4281
+19: Parameter 16 double £temporary4281
 20: Parameter 24 pointer p
 21: Call 8 printf 10
 22: PostCall 8
@@ -27,8 +27,8 @@
 26: Parameter 20 pointer "path"
 27: Call 14 getenv 0
 28: PostCall 14
-29: GetReturnValue £temporary4294
-30: Parameter 14 pointer £temporary4294
+29: GetReturnValue £temporary4283
+30: Parameter 14 pointer £temporary4283
 31: Call 6 printf 2
 32: PostCall 6
 33: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -45,14 +45,14 @@
 44: Parameter 20 signedint -3
 45: Call 14 abs 0
 46: PostCall 14
-47: GetReturnValue £temporary4298
-48: Parameter 14 signedint £temporary4298
+47: GetReturnValue £temporary4287
+48: Parameter 14 signedint £temporary4287
 49: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 50: Parameter 22 signedint 3
 51: Call 16 abs 0
 52: PostCall 16
-53: GetReturnValue £temporary4299
-54: Parameter 16 signedint £temporary4299
+53: GetReturnValue £temporary4288
+54: Parameter 16 signedint £temporary4288
 55: Call 6 printf 4
 56: PostCall 6
 57: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -61,14 +61,14 @@
 60: Parameter 20 signed long int -3
 61: Call 14 labs 0
 62: PostCall 14
-63: GetReturnValue £temporary4301
-64: Parameter 14 signed long int £temporary4301
+63: GetReturnValue £temporary4290
+64: Parameter 14 signed long int £temporary4290
 65: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 66: Parameter 24 signed long int 3
 67: Call 18 labs 0
 68: PostCall 18
-69: GetReturnValue £temporary4302
-70: Parameter 18 signed long int £temporary4302
+69: GetReturnValue £temporary4291
+70: Parameter 18 signed long int £temporary4291
 71: Call 6 printf 8
 72: PostCall 6
 73: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -76,9 +76,9 @@
 75: Parameter 14 signedint 3
 76: Call 6 div 0
 77: PostCall 6
-78: GetReturnValue £temporary4304 -> £temporary4305
-79: AssignInitSize i £temporary4304 -> £temporary4305
-80: Assign i £temporary4304 -> £temporary4305
+78: GetReturnValue £temporary4293 -> £temporary4294
+79: AssignInitSize i £temporary4293 -> £temporary4294
+80: Assign i £temporary4293 -> £temporary4294
 81: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 82: Parameter 16 pointer "div_t(10, 3) = (%i, %i)\n"
 83: Parameter 18 signedint i.quot
@@ -90,9 +90,9 @@
 89: Parameter 16 struct i
 90: Call 10 print_div 0
 91: PostCall 10
-92: GetReturnValue £temporary4309 -> £temporary4310
-93: AssignInitSize j £temporary4309 -> £temporary4310
-94: Assign j £temporary4309 -> £temporary4310
+92: GetReturnValue £temporary4298 -> £temporary4299
+93: AssignInitSize j £temporary4298 -> £temporary4299
+94: Assign j £temporary4298 -> £temporary4299
 95: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 96: Parameter 20 pointer "div_t(10, 3) = (%i, %i)\n\n"
 97: Parameter 22 signedint j.quot
@@ -104,9 +104,9 @@
 103: Parameter 16 signed long int 3
 104: Call 6 ldiv 0
 105: PostCall 6
-106: GetReturnValue £temporary4314 -> £temporary4315
-107: AssignInitSize li £temporary4314 -> £temporary4315
-108: Assign li £temporary4314 -> £temporary4315
+106: GetReturnValue £temporary4303 -> £temporary4304
+107: AssignInitSize li £temporary4303 -> £temporary4304
+108: Assign li £temporary4303 -> £temporary4304
 109: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 110: Parameter 20 pointer "ldiv_t(10, 3) = (%li, %li)\n"
 111: Parameter 22 signed long int li.quot
@@ -118,9 +118,9 @@
 117: Parameter 20 struct li
 118: Call 14 print_ldiv 0
 119: PostCall 14
-120: GetReturnValue £temporary4319 -> £temporary4320
-121: AssignInitSize lj £temporary4319 -> £temporary4320
-122: Assign lj £temporary4319 -> £temporary4320
+120: GetReturnValue £temporary4308 -> £temporary4309
+121: AssignInitSize lj £temporary4308 -> £temporary4309
+122: Assign lj £temporary4308 -> £temporary4309
 123: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 124: Parameter 28 pointer "ldiv_t(10, 3) = (%li, %li)\n\n"
 125: Parameter 30 signed long int lj.quot
@@ -140,10 +140,10 @@
 139: SignedGreaterThanEqual 150 index size
 140: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 141: Parameter 24 pointer "%i "
-142: UnsignedMultiply £temporary4333 index 2
-143: BinaryAdd £temporary4332 list £temporary4333
-144: Dereference £temporary4334 -> £temporary4332 £temporary4332 0
-145: Parameter 26 signedint £temporary4334 -> £temporary4332
+142: UnsignedMultiply £temporary4322 index 2
+143: BinaryAdd £temporary4321 list £temporary4322
+144: Dereference £temporary4323 -> £temporary4321 £temporary4321 0
+145: Parameter 26 signedint £temporary4323 -> £temporary4321
 146: Call 18 printf 2
 147: PostCall 18
 148: BinaryAdd index index 1
@@ -163,10 +163,10 @@
 162: SignedGreaterThanEqual 173 index size
 163: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 164: Parameter 24 pointer "%i "
-165: UnsignedMultiply £temporary4342 index 2
-166: BinaryAdd £temporary4341 list £temporary4342
-167: Dereference £temporary4343 -> £temporary4341 £temporary4341 0
-168: Parameter 26 signedint £temporary4343 -> £temporary4341
+165: UnsignedMultiply £temporary4331 index 2
+166: BinaryAdd £temporary4330 list £temporary4331
+167: Dereference £temporary4332 -> £temporary4330 £temporary4330 0
+168: Parameter 26 signedint £temporary4332 -> £temporary4330
 169: Call 18 printf 2
 170: PostCall 18
 171: BinaryAdd index index 1
@@ -186,10 +186,10 @@
 185: SignedGreaterThanEqual 196 index size
 186: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 187: Parameter 24 pointer "%i "
-188: UnsignedMultiply £temporary4351 index 2
-189: BinaryAdd £temporary4350 list £temporary4351
-190: Dereference £temporary4352 -> £temporary4350 £temporary4350 0
-191: Parameter 26 signedint £temporary4352 -> £temporary4350
+188: UnsignedMultiply £temporary4340 index 2
+189: BinaryAdd £temporary4339 list £temporary4340
+190: Dereference £temporary4341 -> £temporary4339 £temporary4339 0
+191: Parameter 26 signedint £temporary4341 -> £temporary4339
 192: Call 18 printf 2
 193: PostCall 18
 194: BinaryAdd index index 1
@@ -201,23 +201,23 @@
 200: Assign key 0
 201: SignedGreaterThanEqual 228 key 6
 202: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-203: Address £temporary4357 key
-204: Parameter 24 pointer £temporary4357
+203: Address £temporary4346 key
+204: Parameter 24 pointer £temporary4346
 205: Parameter 26 pointer list
 206: Parameter 28 signedint size
 207: Parameter 30 signedint 2
 208: Parameter 32 pointer compare
 209: Call 18 bsearch 0
 210: PostCall 18
-211: GetReturnValue £temporary4359
-212: IntegralToIntegral £temporary4360 £temporary4359
-213: Assign p £temporary4360
+211: GetReturnValue £temporary4348
+212: IntegralToIntegral £temporary4349 £temporary4348
+213: Assign p £temporary4349
 214: Equal 218 p 0
-215: BinarySubtract £temporary4363 p list
-216: UnsignedDivide £temporary4364 £temporary4363 2
+215: BinarySubtract £temporary4352 p list
+216: UnsignedDivide £temporary4353 £temporary4352 2
 217: Goto 219
-218: Assign £temporary4364 -1
-219: Assign index £temporary4364
+218: Assign £temporary4353 -1
+219: Assign index £temporary4353
 220: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 221: Parameter 28 pointer "  (%i, %i)\n"
 222: Parameter 30 signedint key

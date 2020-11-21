@@ -1,6 +1,6 @@
-0: SignedGreaterThanEqual 57 size 3
+0: SignedGreaterThanEqual 36 size 3
 1: Assign c 97
-2: SignedGreaterThan 57 c 122
+2: SignedGreaterThan 36 c 122
 3: BinaryAdd £temporary923 name size
 4: Dereference £temporary921 -> £temporary923 £temporary923 0
 5: Assign £temporary921 -> £temporary923 c
@@ -13,48 +13,27 @@
 12: Call 13 fileexists 0
 13: PostCall 13
 14: GetReturnValue £temporary928
-15: NotEqual 43 £temporary928 0
+15: NotEqual 22 £temporary928 0
 16: Case 20 status 0
 17: Case 22 status 1
 18: CaseEnd status
-19: Goto 43
+19: Goto 22
 20: SetReturnValue
 21: Return name
 22: PreCall 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 23: Parameter 19 pointer name
-24: Call 13 existsTempName 0
-25: PostCall 13
-26: GetReturnValue £temporary931
-27: NotEqual 43 £temporary931 0
-28: PreCall 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-29: UnsignedMultiply £temporary935 g_tempSize 4
-30: BinaryAdd £temporary936 g_tempArray £temporary935
-31: Dereference £temporary934 -> £temporary936 £temporary936 0
-32: Parameter 19 pointer £temporary934 -> £temporary936
-33: Parameter 21 pointer name
-34: Call 13 strcpy 0
-35: PostCall 13
-36: Assign £temporary938 g_tempSize
-37: BinaryAdd g_tempSize g_tempSize 1
-38: UnsignedMultiply £temporary940 £temporary938 4
-39: BinaryAdd £temporary941 g_tempArray £temporary940
-40: Dereference £temporary939 -> £temporary941 £temporary941 0
-41: SetReturnValue
-42: Return £temporary939 -> £temporary941
-43: PreCall 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-44: Parameter 19 pointer name
-45: BinaryAdd £temporary942 size 1
-46: Parameter 21 signedint £temporary942
-47: Parameter 23 signedint status
-48: Call 13 generateTempName 0
-49: PostCall 13
-50: GetReturnValue £temporary943
-51: Assign result £temporary943
-52: Equal 55 result 0
-53: SetReturnValue
-54: Return result
-55: BinaryAdd c c 1
-56: Goto 2
-57: SetReturnValue
-58: Return 0
-59: FunctionEnd generateTempName
+24: BinaryAdd £temporary931 size 1
+25: Parameter 21 signedint £temporary931
+26: Parameter 23 signedint status
+27: Call 13 generateTempName 0
+28: PostCall 13
+29: GetReturnValue £temporary932
+30: Assign result £temporary932
+31: Equal 34 result 0
+32: SetReturnValue
+33: Return result
+34: BinaryAdd c c 1
+35: Goto 2
+36: SetReturnValue
+37: Return 0
+38: FunctionEnd generateTempName

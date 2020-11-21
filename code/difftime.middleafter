@@ -1,5 +1,5 @@
-0: BinarySubtract £temporary2798 time2 time1
-1: IntegralToFloating £temporary2799 £temporary2798
+0: BinarySubtract £temporary2787 time2 time1
+1: IntegralToFloating £temporary2788 £temporary2787
 2: SetReturnValue
-3: Return £temporary2799
+3: Return £temporary2788
 4: FunctionEnd difftime

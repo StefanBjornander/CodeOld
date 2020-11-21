@@ -1,17 +1,17 @@
-0: IntegralToIntegral £temporary4143 target
-1: Assign charTarget £temporary4143
-2: IntegralToIntegral £temporary4144 source
-3: Assign charSource £temporary4144
+0: IntegralToIntegral £temporary4129 target
+1: Assign charTarget £temporary4129
+2: IntegralToIntegral £temporary4130 source
+3: Assign charSource £temporary4130
 4: Assign index 0
 5: SignedGreaterThanEqual 13 index size
-6: BinaryAdd £temporary4148 charTarget index
-7: Deref £temporary4147 -> £temporary4148 £temporary4148 0
-8: BinaryAdd £temporary4150 charSource index
-9: Deref £temporary4149 -> £temporary4150 £temporary4150 0
-10: Assign £temporary4147 -> £temporary4148 £temporary4149 -> £temporary4150
+6: BinaryAdd £temporary4134 charTarget index
+7: Deref £temporary4133 -> £temporary4134 £temporary4134 0
+8: BinaryAdd £temporary4136 charSource index
+9: Deref £temporary4135 -> £temporary4136 £temporary4136 0
+10: Assign £temporary4133 -> £temporary4134 £temporary4135 -> £temporary4136
 11: Increment index
 12: Goto 5
-13: IntegralToIntegral £temporary4151 target
-14: SetReturnValue £temporary4151
-15: Return £temporary4151
+13: IntegralToIntegral £temporary4137 target
+14: SetReturnValue £temporary4137
+15: Return £temporary4137
 16: FunctionEnd memcpy

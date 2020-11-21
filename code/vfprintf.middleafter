@@ -1,12 +1,12 @@
 0: Assign g_outStatus 0
-1: IntegralToIntegral £temporary1929 outStream
-2: Assign g_outDevice £temporary1929
+1: IntegralToIntegral £temporary1918 outStream
+2: Assign g_outDevice £temporary1918
 3: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 4: Parameter 18 pointer format
 5: Parameter 20 pointer arg_list
 6: Call 12 printFormat 0
 7: PostCall 12
-8: GetReturnValue £temporary1930
+8: GetReturnValue £temporary1919
 9: SetReturnValue
-10: Return £temporary1930
+10: Return £temporary1919
 11: FunctionEnd vfprintf

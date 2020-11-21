@@ -1,22 +1,22 @@
 0: Assign index 0
-1: BinaryAdd £temporary3168 mainString index
-2: Dereference £temporary3166 -> £temporary3168 £temporary3168 0
-3: Equal 21 £temporary3166 -> £temporary3168 0
+1: BinaryAdd £temporary3157 mainString index
+2: Dereference £temporary3155 -> £temporary3157 £temporary3157 0
+3: Equal 21 £temporary3155 -> £temporary3157 0
 4: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 5: Parameter 18 pointer charSet
-6: BinaryAdd £temporary3173 mainString index
-7: Dereference £temporary3171 -> £temporary3173 £temporary3173 0
-8: IntegralToIntegral £temporary3174 £temporary3171 -> £temporary3173
-9: Parameter 20 signedint £temporary3174
+6: BinaryAdd £temporary3162 mainString index
+7: Dereference £temporary3160 -> £temporary3162 £temporary3162 0
+8: IntegralToIntegral £temporary3163 £temporary3160 -> £temporary3162
+9: Parameter 20 signedint £temporary3163
 10: Call 12 strchr 0
 11: PostCall 12
-12: GetReturnValue £temporary3175
-13: Equal 19 £temporary3175 0
-14: BinaryAdd £temporary3179 mainString index
-15: Dereference £temporary3177 -> £temporary3179 £temporary3179 0
-16: Address £temporary3180 £temporary3177 -> £temporary3179
+12: GetReturnValue £temporary3164
+13: Equal 19 £temporary3164 0
+14: BinaryAdd £temporary3168 mainString index
+15: Dereference £temporary3166 -> £temporary3168 £temporary3168 0
+16: Address £temporary3169 £temporary3166 -> £temporary3168
 17: SetReturnValue
-18: Return £temporary3180
+18: Return £temporary3169
 19: BinaryAdd index index 1
 20: Goto 1
 21: SetReturnValue

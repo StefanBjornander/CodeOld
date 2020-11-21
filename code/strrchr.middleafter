@@ -1,17 +1,17 @@
 0: Assign result 0
-1: IntegralToIntegral £temporary3130 i
-2: Assign c £temporary3130
+1: IntegralToIntegral £temporary3119 i
+2: Assign c £temporary3119
 3: Assign index 0
-4: BinaryAdd £temporary3133 text index
-5: Dereference £temporary3131 -> £temporary3133 £temporary3133 0
-6: Equal 16 £temporary3131 -> £temporary3133 0
-7: BinaryAdd £temporary3138 text index
-8: Dereference £temporary3136 -> £temporary3138 £temporary3138 0
-9: NotEqual 14 £temporary3136 -> £temporary3138 c
-10: BinaryAdd £temporary3142 text index
-11: Dereference £temporary3140 -> £temporary3142 £temporary3142 0
-12: Address £temporary3143 £temporary3140 -> £temporary3142
-13: Assign result £temporary3143
+4: BinaryAdd £temporary3122 text index
+5: Dereference £temporary3120 -> £temporary3122 £temporary3122 0
+6: Equal 16 £temporary3120 -> £temporary3122 0
+7: BinaryAdd £temporary3127 text index
+8: Dereference £temporary3125 -> £temporary3127 £temporary3127 0
+9: NotEqual 14 £temporary3125 -> £temporary3127 c
+10: BinaryAdd £temporary3131 text index
+11: Dereference £temporary3129 -> £temporary3131 £temporary3131 0
+12: Address £temporary3132 £temporary3129 -> £temporary3131
+13: Assign result £temporary3132
 14: BinaryAdd index index 1
 15: Goto 4
 16: SetReturnValue

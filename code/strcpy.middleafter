@@ -1,17 +1,17 @@
 0: Assign index 0
-1: BinaryAdd £temporary2982 source index
-2: Dereference £temporary2980 -> £temporary2982 £temporary2982 0
-3: Equal 11 £temporary2980 -> £temporary2982 0
-4: BinaryAdd £temporary2987 target index
-5: Dereference £temporary2985 -> £temporary2987 £temporary2987 0
-6: BinaryAdd £temporary2990 source index
-7: Dereference £temporary2988 -> £temporary2990 £temporary2990 0
-8: Assign £temporary2985 -> £temporary2987 £temporary2988 -> £temporary2990
+1: BinaryAdd £temporary2971 source index
+2: Dereference £temporary2969 -> £temporary2971 £temporary2971 0
+3: Equal 11 £temporary2969 -> £temporary2971 0
+4: BinaryAdd £temporary2976 target index
+5: Dereference £temporary2974 -> £temporary2976 £temporary2976 0
+6: BinaryAdd £temporary2979 source index
+7: Dereference £temporary2977 -> £temporary2979 £temporary2979 0
+8: Assign £temporary2974 -> £temporary2976 £temporary2977 -> £temporary2979
 9: BinaryAdd index index 1
 10: Goto 1
-11: BinaryAdd £temporary2993 target index
-12: Dereference £temporary2991 -> £temporary2993 £temporary2993 0
-13: Assign £temporary2991 -> £temporary2993 0
+11: BinaryAdd £temporary2982 target index
+12: Dereference £temporary2980 -> £temporary2982 £temporary2982 0
+13: Assign £temporary2980 -> £temporary2982 0
 14: SetReturnValue
 15: Return target
 16: FunctionEnd strcpy

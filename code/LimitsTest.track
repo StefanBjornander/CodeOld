@@ -346,10 +346,10 @@ limits_test$74:	; PostCall 6
 271:	
 
 limits_test$75:	; Return 0
-272:		mov t2677, [bp]
+272:		mov t2660, [bp]
 273:		mov di, [bp + 4]
 274:		mov bp, [bp + 2]
-275:		jmp t2677
+275:		jmp t2660
 277:	
 
 limits_test$76:	; FunctionEnd limits_test

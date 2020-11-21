@@ -4,10 +4,10 @@ float_test:	; Empty
 3:	
 
 float_test$1:	; Return 0
-4:		mov t2676, [bp]
+4:		mov t2659, [bp]
 5:		mov di, [bp + 4]
 6:		mov bp, [bp + 2]
-7:		jmp t2676
+7:		jmp t2659
 9:	
 
 float_test$2:	; FunctionEnd float_test

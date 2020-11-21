@@ -4,8 +4,8 @@
 3: Parameter 18 signedint 10
 4: Call 8 strtol 0
 5: PostCall 8
-6: GetReturnValue £temporary1939
-7: IntegralToIntegral £temporary1940 £temporary1939
+6: GetReturnValue £temporary1928
+7: IntegralToIntegral £temporary1929 £temporary1928
 8: SetReturnValue
-9: Return £temporary1940
+9: Return £temporary1929
 10: FunctionEnd atoi

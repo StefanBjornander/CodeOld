@@ -21,10 +21,10 @@
 20: PostCall 22
 21: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 22: Equal 25 capital 0
-23: Assign £temporary1575 88
+23: Assign £temporary1564 88
 24: Goto 26
-25: Assign £temporary1575 120
-26: Parameter 28 signedchar £temporary1575
+25: Assign £temporary1564 120
+26: Parameter 28 signedchar £temporary1564
 27: Call 22 printChar 0
 28: PostCall 22
 29: NotEqual 35 unsignedValue 0

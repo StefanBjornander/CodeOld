@@ -4,7 +4,7 @@
 3: Parameter 18 signedint 10
 4: Call 8 strtol 0
 5: PostCall 8
-6: GetReturnValue £temporary1941
+6: GetReturnValue £temporary1930
 7: SetReturnValue
-8: Return £temporary1941
+8: Return £temporary1930
 9: FunctionEnd atol

@@ -1,19 +1,19 @@
 0: Assign index 255
 1: SignedLessThan 14 index 0
-2: UnsignedMultiply £temporary2567 index 2
-3: BinaryAdd £temporary2568 g_funcArray £temporary2567
-4: Dereference £temporary2566 -> £temporary2568 £temporary2568 0
-5: Equal 12 £temporary2566 -> £temporary2568 0
-6: UnsignedMultiply £temporary2571 index 2
-7: BinaryAdd £temporary2572 g_funcArray £temporary2571
-8: Dereference £temporary2570 -> £temporary2572 £temporary2572 0
+2: UnsignedMultiply £temporary2556 index 2
+3: BinaryAdd £temporary2557 g_funcArray £temporary2556
+4: Dereference £temporary2555 -> £temporary2557 £temporary2557 0
+5: Equal 12 £temporary2555 -> £temporary2557 0
+6: UnsignedMultiply £temporary2560 index 2
+7: BinaryAdd £temporary2561 g_funcArray £temporary2560
+8: Dereference £temporary2559 -> £temporary2561 £temporary2561 0
 9: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-10: Call 10 £temporary2570 -> £temporary2572 0
+10: Call 10 £temporary2559 -> £temporary2561 0
 11: PostCall 10
 12: BinarySubtract index index 1
 13: Goto 1
-14: IntegralToIntegral £temporary2575 status
-15: AssignRegister al £temporary2575
+14: IntegralToIntegral £temporary2564 status
+15: AssignRegister al £temporary2564
 16: AssignRegister ah 76
 17: Interrupt 33
 18: Return

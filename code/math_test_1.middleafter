@@ -13,8 +13,8 @@
 12: Parameter 36 double x
 13: Call 30 sin 0
 14: PostCall 30
-15: GetReturnValue £temporary3656
-16: Parameter 30 double £temporary3656
+15: GetReturnValue £temporary3645
+16: Parameter 30 double £temporary3645
 17: Parameter 38 signedint errno
 18: Call 14 printf 18
 19: PostCall 14
@@ -28,8 +28,8 @@
 27: Parameter 36 double x
 28: Call 30 cos 0
 29: PostCall 30
-30: GetReturnValue £temporary3658
-31: Parameter 30 double £temporary3658
+30: GetReturnValue £temporary3647
+31: Parameter 30 double £temporary3647
 32: Parameter 38 signedint errno
 33: Call 14 printf 18
 34: PostCall 14
@@ -43,8 +43,8 @@
 42: Parameter 36 double x
 43: Call 30 tan 0
 44: PostCall 30
-45: GetReturnValue £temporary3660
-46: Parameter 30 double £temporary3660
+45: GetReturnValue £temporary3649
+46: Parameter 30 double £temporary3649
 47: Parameter 38 signedint errno
 48: Call 14 printf 18
 49: PostCall 14
@@ -58,8 +58,8 @@
 57: Parameter 36 double x
 58: Call 30 asin 0
 59: PostCall 30
-60: GetReturnValue £temporary3662
-61: Parameter 30 double £temporary3662
+60: GetReturnValue £temporary3651
+61: Parameter 30 double £temporary3651
 62: Parameter 38 signedint errno
 63: Call 14 printf 18
 64: PostCall 14
@@ -73,8 +73,8 @@
 72: Parameter 36 double x
 73: Call 30 acos 0
 74: PostCall 30
-75: GetReturnValue £temporary3664
-76: Parameter 30 double £temporary3664
+75: GetReturnValue £temporary3653
+76: Parameter 30 double £temporary3653
 77: Parameter 38 signedint errno
 78: Call 14 printf 18
 79: PostCall 14
@@ -88,8 +88,8 @@
 87: Parameter 36 double x
 88: Call 30 atan 0
 89: PostCall 30
-90: GetReturnValue £temporary3666
-91: Parameter 30 double £temporary3666
+90: GetReturnValue £temporary3655
+91: Parameter 30 double £temporary3655
 92: Parameter 38 signedint errno
 93: Call 14 printf 18
 94: PostCall 14
@@ -103,8 +103,8 @@
 102: Parameter 36 double x
 103: Call 30 exp 0
 104: PostCall 30
-105: GetReturnValue £temporary3668
-106: Parameter 30 double £temporary3668
+105: GetReturnValue £temporary3657
+106: Parameter 30 double £temporary3657
 107: Parameter 38 signedint errno
 108: Call 14 printf 18
 109: PostCall 14
@@ -118,8 +118,8 @@
 117: Parameter 36 double x
 118: Call 30 log 0
 119: PostCall 30
-120: GetReturnValue £temporary3670
-121: Parameter 30 double £temporary3670
+120: GetReturnValue £temporary3659
+121: Parameter 30 double £temporary3659
 122: Parameter 38 signedint errno
 123: Call 14 printf 18
 124: PostCall 14
@@ -133,8 +133,8 @@
 132: Parameter 36 double x
 133: Call 30 log10 0
 134: PostCall 30
-135: GetReturnValue £temporary3672
-136: Parameter 30 double £temporary3672
+135: GetReturnValue £temporary3661
+136: Parameter 30 double £temporary3661
 137: Parameter 38 signedint errno
 138: Call 14 printf 18
 139: PostCall 14
@@ -148,8 +148,8 @@
 147: Parameter 36 double x
 148: Call 30 sinh 0
 149: PostCall 30
-150: GetReturnValue £temporary3674
-151: Parameter 30 double £temporary3674
+150: GetReturnValue £temporary3663
+151: Parameter 30 double £temporary3663
 152: Parameter 38 signedint errno
 153: Call 14 printf 18
 154: PostCall 14
@@ -163,8 +163,8 @@
 162: Parameter 36 double x
 163: Call 30 cosh 0
 164: PostCall 30
-165: GetReturnValue £temporary3676
-166: Parameter 30 double £temporary3676
+165: GetReturnValue £temporary3665
+166: Parameter 30 double £temporary3665
 167: Parameter 38 signedint errno
 168: Call 14 printf 18
 169: PostCall 14
@@ -178,8 +178,8 @@
 177: Parameter 36 double x
 178: Call 30 tanh 0
 179: PostCall 30
-180: GetReturnValue £temporary3678
-181: Parameter 30 double £temporary3678
+180: GetReturnValue £temporary3667
+181: Parameter 30 double £temporary3667
 182: Parameter 38 signedint errno
 183: Call 14 printf 18
 184: PostCall 14
@@ -193,8 +193,8 @@
 192: Parameter 36 double x
 193: Call 30 sqrt 0
 194: PostCall 30
-195: GetReturnValue £temporary3680
-196: Parameter 30 double £temporary3680
+195: GetReturnValue £temporary3669
+196: Parameter 30 double £temporary3669
 197: Parameter 38 signedint errno
 198: Call 14 printf 18
 199: PostCall 14
@@ -208,8 +208,8 @@
 207: Parameter 36 double x
 208: Call 30 floor 0
 209: PostCall 30
-210: GetReturnValue £temporary3682
-211: Parameter 30 double £temporary3682
+210: GetReturnValue £temporary3671
+211: Parameter 30 double £temporary3671
 212: Parameter 38 signedint errno
 213: Call 14 printf 18
 214: PostCall 14
@@ -223,8 +223,8 @@
 222: Parameter 36 double x
 223: Call 30 ceil 0
 224: PostCall 30
-225: GetReturnValue £temporary3684
-226: Parameter 30 double £temporary3684
+225: GetReturnValue £temporary3673
+226: Parameter 30 double £temporary3673
 227: Parameter 38 signedint errno
 228: Call 14 printf 18
 229: PostCall 14
@@ -238,8 +238,8 @@
 237: Parameter 36 double x
 238: Call 30 fabs 0
 239: PostCall 30
-240: GetReturnValue £temporary3686
-241: Parameter 30 double £temporary3686
+240: GetReturnValue £temporary3675
+241: Parameter 30 double £temporary3675
 242: Parameter 38 signedint errno
 243: Call 14 printf 18
 244: PostCall 14
@@ -248,11 +248,11 @@
 247: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 248: PushFloat x
 249: Parameter 22 double x
-250: Address £temporary3688 j
-251: Parameter 30 pointer £temporary3688
+250: Address £temporary3677 j
+251: Parameter 30 pointer £temporary3677
 252: Call 16 frexp 0
 253: PostCall 16
-254: GetReturnValue £temporary3689
+254: GetReturnValue £temporary3678
 255: PopFloat z
 256: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 257: Parameter 30 pointer "frexp (%f, p) = (%f, %i), errno = %i\n"
@@ -275,11 +275,11 @@
 274: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 275: PushFloat x
 276: Parameter 28 double x
-277: Address £temporary3693 w
-278: Parameter 36 pointer £temporary3693
+277: Address £temporary3682 w
+278: Parameter 36 pointer £temporary3682
 279: Call 22 modf 0
 280: PostCall 22
-281: GetReturnValue £temporary3694
+281: GetReturnValue £temporary3683
 282: PopFloat z
 283: PreCall 30 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 284: Parameter 36 pointer "modf (%f, p) = (%f, %f), errno = %i\n"

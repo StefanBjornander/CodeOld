@@ -1,20 +1,20 @@
 0: Assign index 0
-1: BinaryAdd £temporary3183 mainString index
-2: Dereference £temporary3181 -> £temporary3183 £temporary3183 0
-3: Equal 19 £temporary3181 -> £temporary3183 0
+1: BinaryAdd £temporary3172 mainString index
+2: Dereference £temporary3170 -> £temporary3172 £temporary3172 0
+3: Equal 19 £temporary3170 -> £temporary3172 0
 4: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-5: BinaryAdd £temporary3186 mainString index
-6: Parameter 18 pointer £temporary3186
+5: BinaryAdd £temporary3175 mainString index
+6: Parameter 18 pointer £temporary3175
 7: Parameter 20 pointer subString
 8: Call 12 strcmp 0
 9: PostCall 12
-10: GetReturnValue £temporary3188
-11: NotEqual 17 £temporary3188 0
-12: BinaryAdd £temporary3192 mainString index
-13: Dereference £temporary3190 -> £temporary3192 £temporary3192 0
-14: Address £temporary3193 £temporary3190 -> £temporary3192
+10: GetReturnValue £temporary3177
+11: NotEqual 17 £temporary3177 0
+12: BinaryAdd £temporary3181 mainString index
+13: Dereference £temporary3179 -> £temporary3181 £temporary3181 0
+14: Address £temporary3182 £temporary3179 -> £temporary3181
 15: SetReturnValue
-16: Return £temporary3193
+16: Return £temporary3182
 17: BinaryAdd index index 1
 18: Goto 1
 19: SetReturnValue

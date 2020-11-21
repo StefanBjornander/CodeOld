@@ -1,8 +1,8 @@
 0: PushFloat longDoubleValue
 1: PushFloat longDoubleValue
-2: FloatingToIntegral £temporary1910 longDoubleValue
-3: IntegralToFloating £temporary1911 £temporary1910
-4: BinarySubtract £temporary1912 longDoubleValue £temporary1911
+2: FloatingToIntegral £temporary1896 longDoubleValue
+3: IntegralToFloating £temporary1897 £temporary1896
+4: BinarySubtract £temporary1898 longDoubleValue £temporary1897
 5: PopFloat longDoubleValue
 6: NotEqual 8 precision 0
 7: Assign precision 6
@@ -12,25 +12,25 @@
 11: Parameter 18 46 6
 12: Call 18 printChar 0
 13: PostCall 18
-14: Assign £temporary1918 precision
+14: Assign £temporary1904 precision
 15: Decrement precision
-16: SignedLessThanEqual 35 £temporary1918 0
+16: SignedLessThanEqual 35 £temporary1904 0
 17: PushFloat 10.0
 18: PushFloat longDoubleValue
-19: SignedMultiply £temporary1920 10.0 longDoubleValue
+19: SignedMultiply £temporary1906 10.0 longDoubleValue
 20: PopFloat longDoubleValue10
 21: PushFloat longDoubleValue10
-22: FloatingToIntegral £temporary1921 longDoubleValue10
-23: Assign digitValue £temporary1921
+22: FloatingToIntegral £temporary1907 longDoubleValue10
+23: Assign digitValue £temporary1907
 24: CallHeader 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-25: BinaryAdd £temporary1922 digitValue 48
-26: IntegralToIntegral £temporary1923 £temporary1922
-27: Parameter 28 £temporary1923 6
+25: BinaryAdd £temporary1908 digitValue 48
+26: IntegralToIntegral £temporary1909 £temporary1908
+27: Parameter 28 £temporary1909 6
 28: Call 28 printChar 0
 29: PostCall 28
 30: PushFloat longDoubleValue10
-31: IntegralToFloating £temporary1925 digitValue
-32: BinarySubtract £temporary1926 longDoubleValue10 £temporary1925
+31: IntegralToFloating £temporary1911 digitValue
+32: BinarySubtract £temporary1912 longDoubleValue10 £temporary1911
 33: PopFloat longDoubleValue
 34: Goto 14
 35: Return 0

@@ -1,9 +1,38 @@
-0: Assign a.p 0
-1: Assign a.q 0
-2: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-3: Parameter 12 pointer "test1.txt"
-4: Parameter 14 pointer "test2.txt"
-5: Call 6 file_test 0
-6: PostCall 6
-7: Return
-8: FunctionEnd main2
+0: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 16 string_Please20input20a20value3A20# 6
+2: Call 16 printf 0
+3: PostCall 16
+4: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+5: Parameter 16 string_25lf# 6
+6: address £temporary4663 x
+7: Parameter 16 £temporary4663 8
+8: Call 16 scanf 0
+9: PostCall 16
+10: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+11: Parameter 16 buffer 6
+12: Call 16 setjmp 0
+13: PostCall 16
+14: GetReturnValue £temporary4665
+15: Assign message £temporary4665
+16: NotEqual 31 message 0
+17: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+18: Parameter 16 string_12E0202F2025f203D2025f0A# 6
+19: PushFloat x
+20: Parameter 16 x 8
+21: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+22: PushFloat x
+23: Parameter 16 x 22
+24: Call 16 inverse 16
+25: PostCall 16
+26: GetReturnValue £temporary4667
+27: Parameter 16 £temporary4667 16
+28: Call 16 printf 0
+29: PostCall 16
+30: Goto 36
+31: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+32: Parameter 16 string_25s0A# 6
+33: Parameter 16 message 8
+34: Call 16 printf 0
+35: PostCall 16
+36: Return 0
+37: FunctionEnd main

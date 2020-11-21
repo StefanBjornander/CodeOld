@@ -1,18 +1,18 @@
-0: IntegralToIntegral £temporary3310 block
-1: Assign charBlock £temporary3310
-2: IntegralToIntegral £temporary3311 i
-3: Assign c £temporary3311
+0: IntegralToIntegral £temporary3299 block
+1: Assign charBlock £temporary3299
+2: IntegralToIntegral £temporary3300 i
+3: Assign c £temporary3300
 4: Assign index 0
 5: SignedGreaterThanEqual 17 index size
-6: BinaryAdd £temporary3316 charBlock index
-7: Dereference £temporary3314 -> £temporary3316 £temporary3316 0
-8: NotEqual 15 £temporary3314 -> £temporary3316 c
-9: BinaryAdd £temporary3320 charBlock index
-10: Dereference £temporary3318 -> £temporary3320 £temporary3320 0
-11: Address £temporary3321 £temporary3318 -> £temporary3320
-12: IntegralToIntegral £temporary3322 £temporary3321
+6: BinaryAdd £temporary3305 charBlock index
+7: Dereference £temporary3303 -> £temporary3305 £temporary3305 0
+8: NotEqual 15 £temporary3303 -> £temporary3305 c
+9: BinaryAdd £temporary3309 charBlock index
+10: Dereference £temporary3307 -> £temporary3309 £temporary3309 0
+11: Address £temporary3310 £temporary3307 -> £temporary3309
+12: IntegralToIntegral £temporary3311 £temporary3310
 13: SetReturnValue
-14: Return £temporary3322
+14: Return £temporary3311
 15: BinaryAdd index index 1
 16: Goto 5
 17: SetReturnValue

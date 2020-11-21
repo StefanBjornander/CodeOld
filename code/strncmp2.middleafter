@@ -1,35 +1,35 @@
 0: Assign index 0
 1: SignedGreaterThanEqual 36 index size
-2: BinaryAdd £temporary3986 left index
-3: Deref £temporary3985 -> £temporary3986 £temporary3986 0
-4: NotEqual 10 £temporary3985 -> £temporary3986 0
-5: BinaryAdd £temporary3989 right index
-6: Deref £temporary3988 -> £temporary3989 £temporary3989 0
-7: NotEqual 10 £temporary3988 -> £temporary3989 0
+2: BinaryAdd £temporary3972 left index
+3: Deref £temporary3971 -> £temporary3972 £temporary3972 0
+4: NotEqual 10 £temporary3971 -> £temporary3972 0
+5: BinaryAdd £temporary3975 right index
+6: Deref £temporary3974 -> £temporary3975 £temporary3975 0
+7: NotEqual 10 £temporary3974 -> £temporary3975 0
 8: SetReturnValue 0
 9: Return 0
-10: BinaryAdd £temporary3993 left index
-11: Deref £temporary3992 -> £temporary3993 £temporary3993 0
-12: NotEqual 15 £temporary3992 -> £temporary3993 0
+10: BinaryAdd £temporary3979 left index
+11: Deref £temporary3978 -> £temporary3979 £temporary3979 0
+12: NotEqual 15 £temporary3978 -> £temporary3979 0
 13: SetReturnValue -1
 14: Return -1
-15: BinaryAdd £temporary3996 right index
-16: Deref £temporary3995 -> £temporary3996 £temporary3996 0
-17: NotEqual 20 £temporary3995 -> £temporary3996 0
+15: BinaryAdd £temporary3982 right index
+16: Deref £temporary3981 -> £temporary3982 £temporary3982 0
+17: NotEqual 20 £temporary3981 -> £temporary3982 0
 18: SetReturnValue 1
 19: Return 1
-20: BinaryAdd £temporary3999 left index
-21: Deref £temporary3998 -> £temporary3999 £temporary3999 0
-22: BinaryAdd £temporary4001 right index
-23: Deref £temporary4000 -> £temporary4001 £temporary4001 0
-24: SignedGreaterThanEqual 27 £temporary3998 -> £temporary3999 £temporary4000 -> £temporary4001
+20: BinaryAdd £temporary3985 left index
+21: Deref £temporary3984 -> £temporary3985 £temporary3985 0
+22: BinaryAdd £temporary3987 right index
+23: Deref £temporary3986 -> £temporary3987 £temporary3987 0
+24: SignedGreaterThanEqual 27 £temporary3984 -> £temporary3985 £temporary3986 -> £temporary3987
 25: SetReturnValue -1
 26: Return -1
-27: BinaryAdd £temporary4004 left index
-28: Deref £temporary4003 -> £temporary4004 £temporary4004 0
-29: BinaryAdd £temporary4006 right index
-30: Deref £temporary4005 -> £temporary4006 £temporary4006 0
-31: SignedLessThanEqual 34 £temporary4003 -> £temporary4004 £temporary4005 -> £temporary4006
+27: BinaryAdd £temporary3990 left index
+28: Deref £temporary3989 -> £temporary3990 £temporary3990 0
+29: BinaryAdd £temporary3992 right index
+30: Deref £temporary3991 -> £temporary3992 £temporary3992 0
+31: SignedLessThanEqual 34 £temporary3989 -> £temporary3990 £temporary3991 -> £temporary3992
 32: SetReturnValue 1
 33: Return 1
 34: Increment index

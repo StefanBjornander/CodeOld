@@ -3,15 +3,15 @@
 2: Parameter 18 pointer "r"
 3: Call 10 fopen 0
 4: PostCall 10
-5: GetReturnValue £temporary3786
-6: Assign inFilePtrPtr £temporary3786
+5: GetReturnValue £temporary3775
+6: Assign inFilePtrPtr £temporary3775
 7: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 8: Parameter 18 pointer outFilePtrName
 9: Parameter 20 pointer "w"
 10: Call 12 fopen 0
 11: PostCall 12
-12: GetReturnValue £temporary3787
-13: Assign outFilePtrPtr £temporary3787
+12: GetReturnValue £temporary3776
+13: Assign outFilePtrPtr £temporary3776
 14: NotEqual 26 inFilePtrPtr 0
 15: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 16: Parameter 20 pointer stderr
@@ -40,8 +40,8 @@
 39: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 40: Parameter 24 pointer inFilePtrPtr
 41: Parameter 26 pointer "%i"
-42: Address £temporary3796 size
-43: Parameter 28 pointer £temporary3796
+42: Address £temporary3785 size
+43: Parameter 28 pointer £temporary3785
 44: Call 18 fscanf 2
 45: PostCall 18
 46: Assign index 0
@@ -50,16 +50,16 @@
 49: PopFloat inValue
 50: PreCall 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 51: PushFloat inValue
-52: Parameter 32 double £temporary3800
+52: Parameter 32 double £temporary3789
 53: Call 26 sqrt 0
 54: PostCall 26
-55: GetReturnValue £temporary3801
+55: GetReturnValue £temporary3790
 56: PopFloat outValue
 57: PreCall 34 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 58: Parameter 40 pointer inFilePtrPtr
 59: Parameter 42 pointer "%lf"
-60: Address £temporary3802 inValue
-61: Parameter 44 pointer £temporary3802
+60: Address £temporary3791 inValue
+61: Parameter 44 pointer £temporary3791
 62: Call 34 fscanf 2
 63: PostCall 34
 64: PreCall 34 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -86,8 +86,8 @@
 85: Parameter 22 pointer targetFilePtr
 86: Call 14 rename 0
 87: PostCall 14
-88: GetReturnValue £temporary3807
-89: NotEqual 97 £temporary3807 0
+88: GetReturnValue £temporary3796
+89: NotEqual 97 £temporary3796 0
 90: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 91: Parameter 20 pointer ""%s" has been renamed to "%s".\n"
 92: Parameter 22 pointer sourceFilePtr
@@ -102,8 +102,8 @@
 101: Parameter 30 signedint errno
 102: Call 24 strerror 0
 103: PostCall 24
-104: GetReturnValue £temporary3810
-105: Parameter 24 pointer £temporary3810
+104: GetReturnValue £temporary3799
+105: Parameter 24 pointer £temporary3799
 106: Call 14 printf 4
 107: PostCall 14
 108: Assign targetFilePtr "Z"
@@ -111,8 +111,8 @@
 110: Parameter 18 pointer targetFilePtr
 111: Call 12 remove 0
 112: PostCall 12
-113: GetReturnValue £temporary3812
-114: NotEqual 121 £temporary3812 0
+113: GetReturnValue £temporary3801
+114: NotEqual 121 £temporary3801 0
 115: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 116: Parameter 18 pointer ""%s" has been removed.\n"
 117: Parameter 20 pointer targetFilePtr
@@ -126,8 +126,8 @@
 125: Parameter 28 signedint errno
 126: Call 22 strerror 0
 127: PostCall 22
-128: GetReturnValue £temporary3815
-129: Parameter 22 pointer £temporary3815
+128: GetReturnValue £temporary3804
+129: Parameter 22 pointer £temporary3804
 130: Call 12 printf 4
 131: PostCall 12
 132: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -135,8 +135,8 @@
 134: Parameter 18 pointer "r"
 135: Call 10 fopen 0
 136: PostCall 10
-137: GetReturnValue £temporary3817
-138: Assign inFilePtr £temporary3817
+137: GetReturnValue £temporary3806
+138: Assign inFilePtr £temporary3806
 139: NotEqual 151 inFilePtr 0
 140: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 141: Parameter 18 pointer stderr
@@ -164,8 +164,8 @@
 163: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 164: Parameter 22 pointer inFilePtr
 165: Parameter 24 pointer "%i"
-166: Address £temporary3824 size
-167: Parameter 26 pointer £temporary3824
+166: Address £temporary3813 size
+167: Parameter 26 pointer £temporary3813
 168: Call 16 fscanf 2
 169: PostCall 16
 170: Assign count 0
@@ -200,15 +200,15 @@
 199: Parameter 22 pointer "r"
 200: Call 14 fopen 0
 201: PostCall 14
-202: GetReturnValue £temporary3832
-203: Assign inFilePtr £temporary3832
+202: GetReturnValue £temporary3821
+203: Assign inFilePtr £temporary3821
 204: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 205: Parameter 22 pointer targetFilePtr
 206: Parameter 24 pointer "w"
 207: Call 16 fopen 0
 208: PostCall 16
-209: GetReturnValue £temporary3833
-210: Assign outFilePtr £temporary3833
+209: GetReturnValue £temporary3822
+210: Assign outFilePtr £temporary3822
 211: NotEqual 223 inFilePtr 0
 212: PreCall 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 213: Parameter 24 pointer stderr
@@ -237,14 +237,14 @@
 236: Parameter 24 pointer inFilePtr
 237: Call 18 fgetc 0
 238: PostCall 18
-239: GetReturnValue £temporary3842
-240: IntegralToIntegral £temporary3843 £temporary3842
-241: Assign c £temporary3843
-242: IntegralToIntegral £temporary3844 c
-243: Equal 257 £temporary3844 -1
+239: GetReturnValue £temporary3831
+240: IntegralToIntegral £temporary3832 £temporary3831
+241: Assign c £temporary3832
+242: IntegralToIntegral £temporary3833 c
+243: Equal 257 £temporary3833 -1
 244: PreCall 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-245: IntegralToIntegral £temporary3846 c
-246: Parameter 25 signedint £temporary3846
+245: IntegralToIntegral £temporary3835 c
+246: Parameter 25 signedint £temporary3835
 247: Parameter 27 pointer outFilePtr
 248: Call 19 putc 0
 249: PostCall 19
@@ -268,8 +268,8 @@
 267: Parameter 18 pointer "w"
 268: Call 10 fopen 0
 269: PostCall 10
-270: GetReturnValue £temporary3853
-271: Assign outFilePtr £temporary3853
+270: GetReturnValue £temporary3842
+271: Assign outFilePtr £temporary3842
 272: NotEqual 284 outFilePtr 0
 273: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 274: Parameter 18 pointer stderr
@@ -284,8 +284,8 @@
 283: PostCall 12
 284: Assign size 10
 285: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-286: Address £temporary3858 size
-287: Parameter 22 pointer £temporary3858
+286: Address £temporary3847 size
+287: Parameter 22 pointer £temporary3847
 288: Parameter 24 signedint 2
 289: Parameter 26 signedint 1
 290: Parameter 28 pointer outFilePtr
@@ -293,12 +293,12 @@
 292: PostCall 16
 293: Assign index 0
 294: SignedGreaterThanEqual 308 index size
-295: SignedMultiply £temporary3862 index index
-296: IntegralToFloating £temporary3863 £temporary3862
+295: SignedMultiply £temporary3851 index index
+296: IntegralToFloating £temporary3852 £temporary3851
 297: PopFloat value
 298: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-299: Address £temporary3864 value
-300: Parameter 30 pointer £temporary3864
+299: Address £temporary3853 value
+300: Parameter 30 pointer £temporary3853
 301: Parameter 32 signedint 8
 302: Parameter 34 signedint 1
 303: Parameter 36 pointer outFilePtr
@@ -315,8 +315,8 @@
 314: Parameter 18 pointer "r"
 315: Call 10 fopen 0
 316: PostCall 10
-317: GetReturnValue £temporary3867
-318: Assign inFilePtr £temporary3867
+317: GetReturnValue £temporary3856
+318: Assign inFilePtr £temporary3856
 319: NotEqual 331 inFilePtr 0
 320: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 321: Parameter 18 pointer stderr
@@ -330,8 +330,8 @@
 329: Call 12 abort 0
 330: PostCall 12
 331: PreCall 96 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-332: Address £temporary3872 size
-333: Parameter 102 pointer £temporary3872
+332: Address £temporary3861 size
+333: Parameter 102 pointer £temporary3861
 334: Parameter 104 signedint 2
 335: Parameter 106 signedint 1
 336: Parameter 108 pointer inFilePtr
@@ -343,8 +343,8 @@
 342: Call 96 printf 2
 343: PostCall 96
 344: PreCall 96 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-345: Address £temporary3875 arr
-346: Parameter 102 pointer £temporary3875
+345: Address £temporary3864 arr
+346: Parameter 102 pointer £temporary3864
 347: Parameter 104 signedint 80
 348: Parameter 106 signedint 1
 349: Parameter 108 pointer inFilePtr
@@ -359,11 +359,11 @@
 358: PreCall 96 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 359: Parameter 102 pointer "index1 %i: value %f\n"
 360: Parameter 104 signedint index
-361: UnsignedMultiply £temporary3881 index 8
-362: BinaryAdd £temporary3882 arr £temporary3881
-363: Dereference £temporary3880 -> £temporary3882 £temporary3882 0
-364: PushFloat £temporary3880 -> £temporary3882
-365: Parameter 106 double £temporary3880 -> £temporary3882
+361: UnsignedMultiply £temporary3870 index 8
+362: BinaryAdd £temporary3871 arr £temporary3870
+363: Dereference £temporary3869 -> £temporary3871 £temporary3871 0
+364: PushFloat £temporary3869 -> £temporary3871
+365: Parameter 106 double £temporary3869 -> £temporary3871
 366: Call 96 printf 10
 367: PostCall 96
 368: BinaryAdd index index 1
@@ -377,8 +377,8 @@
 376: Parameter 18 pointer "r"
 377: Call 10 fopen 0
 378: PostCall 10
-379: GetReturnValue £temporary3885
-380: Assign inFilePtr £temporary3885
+379: GetReturnValue £temporary3874
+380: Assign inFilePtr £temporary3874
 381: NotEqual 393 inFilePtr 0
 382: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 383: Parameter 22 pointer stderr
@@ -392,8 +392,8 @@
 391: Call 16 abort 0
 392: PostCall 16
 393: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-394: Address £temporary3890 size
-395: Parameter 22 pointer £temporary3890
+394: Address £temporary3879 size
+395: Parameter 22 pointer £temporary3879
 396: Parameter 24 signedint 2
 397: Parameter 26 signedint 1
 398: Parameter 28 pointer inFilePtr
@@ -407,8 +407,8 @@
 406: Assign index 0
 407: SignedGreaterThanEqual 425 index size
 408: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-409: Address £temporary3895 value
-410: Parameter 30 pointer £temporary3895
+409: Address £temporary3884 value
+410: Parameter 30 pointer £temporary3884
 411: Parameter 32 signedint 8
 412: Parameter 34 signedint 1
 413: Parameter 36 pointer inFilePtr
@@ -436,8 +436,8 @@
 435: Parameter 18 pointer "r"
 436: Call 10 fopen 0
 437: PostCall 10
-438: GetReturnValue £temporary3900
-439: Assign inFilePtr £temporary3900
+438: GetReturnValue £temporary3889
+439: Assign inFilePtr £temporary3889
 440: NotEqual 452 inFilePtr 0
 441: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 442: Parameter 20 pointer stderr
@@ -451,8 +451,8 @@
 450: Call 14 abort 0
 451: PostCall 14
 452: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-453: Address £temporary3905 size
-454: Parameter 20 pointer £temporary3905
+453: Address £temporary3894 size
+454: Parameter 20 pointer £temporary3894
 455: Parameter 22 signedint 2
 456: Parameter 24 signedint 1
 457: Parameter 26 pointer inFilePtr
@@ -461,8 +461,8 @@
 460: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 461: Parameter 20 pointer "size3 %i total %i\n"
 462: Parameter 22 signedint size
-463: SignedMultiply £temporary3907 size 8
-464: Parameter 24 signedint £temporary3907
+463: SignedMultiply £temporary3896 size 8
+464: Parameter 24 signedint £temporary3896
 465: Call 14 printf 4
 466: PostCall 14
 467: SignedMultiply total size 8
@@ -470,10 +470,10 @@
 469: Parameter 24 signedint total
 470: Call 18 malloc 0
 471: PostCall 18
-472: GetReturnValue £temporary3910
-473: Assign p £temporary3910
-474: UnsignedMultiply £temporary3912 size 8
-475: BinaryAdd endPtr p £temporary3912
+472: GetReturnValue £temporary3899
+473: Assign p £temporary3899
+474: UnsignedMultiply £temporary3901 size 8
+475: BinaryAdd endPtr p £temporary3901
 476: NotEqual 488 p 0
 477: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 478: Parameter 28 pointer stderr
@@ -505,11 +505,11 @@
 504: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 505: Parameter 28 pointer "index3 %i: value %f\n"
 506: Parameter 30 signedint index
-507: UnsignedMultiply £temporary3922 index 8
-508: BinaryAdd £temporary3923 p £temporary3922
-509: Dereference £temporary3921 -> £temporary3923 £temporary3923 0
-510: PushFloat £temporary3921 -> £temporary3923
-511: Parameter 32 double £temporary3921 -> £temporary3923
+507: UnsignedMultiply £temporary3911 index 8
+508: BinaryAdd £temporary3912 p £temporary3911
+509: Dereference £temporary3910 -> £temporary3912 £temporary3912 0
+510: PushFloat £temporary3910 -> £temporary3912
+511: Parameter 32 double £temporary3910 -> £temporary3912
 512: Call 22 printf 10
 513: PostCall 22
 514: BinaryAdd index index 1
@@ -585,15 +585,15 @@
 584: Parameter 218 pointer "w"
 585: Call 210 fopen 0
 586: PostCall 210
-587: GetReturnValue £temporary3988
-588: Assign outFilePtr £temporary3988
+587: GetReturnValue £temporary3977
+588: Assign outFilePtr £temporary3977
 589: PreCall 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 590: Parameter 218 pointer "Block.bin"
 591: Parameter 220 pointer "r"
 592: Call 212 fopen 0
 593: PostCall 212
-594: GetReturnValue £temporary3989
-595: Assign inFilePtr £temporary3989
+594: GetReturnValue £temporary3978
+595: Assign inFilePtr £temporary3978
 596: NotEqual 608 outFilePtr 0
 597: PreCall 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 598: Parameter 220 pointer stderr
@@ -633,11 +633,11 @@
 632: Parameter 220 pointer inFilePtr
 633: Call 214 feof 0
 634: PostCall 214
-635: GetReturnValue £temporary4000
-636: NotEqual 656 £temporary4000 0
+635: GetReturnValue £temporary3989
+636: NotEqual 656 £temporary3989 0
 637: PreCall 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-638: Address £temporary4003 person
-639: Parameter 220 pointer £temporary4003
+638: Address £temporary3992 person
+639: Parameter 220 pointer £temporary3992
 640: Parameter 222 signedint 50
 641: Parameter 224 signedint 1
 642: Parameter 226 pointer inFilePtr
@@ -663,8 +663,8 @@
 662: Parameter 18 pointer "r"
 663: Call 10 fopen 0
 664: PostCall 10
-665: GetReturnValue £temporary4010
-666: Assign inFilePtr £temporary4010
+665: GetReturnValue £temporary3999
+666: Assign inFilePtr £temporary3999
 667: NotEqual 679 inFilePtr 0
 668: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 669: Parameter 20 pointer stderr
@@ -687,20 +687,20 @@
 686: Parameter 20 pointer inFilePtr
 687: Call 14 ftell 0
 688: PostCall 14
-689: GetReturnValue £temporary4016
-690: IntegralToIntegral £temporary4017 £temporary4016
-691: Assign u £temporary4017
+689: GetReturnValue £temporary4005
+690: IntegralToIntegral £temporary4006 £temporary4005
+691: Assign u £temporary4006
 692: UnsignedLessThan 713 u 0
 693: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 694: Parameter 20 pointer inFilePtr
 695: Call 14 fgetc 0
 696: PostCall 14
-697: GetReturnValue £temporary4019
-698: IntegralToIntegral £temporary4020 £temporary4019
-699: Assign c £temporary4020
+697: GetReturnValue £temporary4008
+698: IntegralToIntegral £temporary4009 £temporary4008
+699: Assign c £temporary4009
 700: PreCall 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-701: IntegralToIntegral £temporary4021 c
-702: Parameter 21 signedint £temporary4021
+701: IntegralToIntegral £temporary4010 c
+702: Parameter 21 signedint £temporary4010
 703: Call 15 putchar 0
 704: PostCall 15
 705: Equal 713 u 0
@@ -725,12 +725,12 @@
 724: Parameter 24 pointer "X"
 725: Call 18 fileexists 0
 726: PostCall 18
-727: GetReturnValue £temporary4027
-728: Equal 731 £temporary4027 0
-729: Assign £temporary4029 "Yes"
+727: GetReturnValue £temporary4016
+728: Equal 731 £temporary4016 0
+729: Assign £temporary4018 "Yes"
 730: Goto 732
-731: Assign £temporary4029 "No"
-732: Parameter 18 pointer £temporary4029
+731: Assign £temporary4018 "No"
+732: Parameter 18 pointer £temporary4018
 733: Call 10 printf 2
 734: PostCall 10
 735: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -739,12 +739,12 @@
 738: Parameter 24 pointer "Y"
 739: Call 18 fileexists 0
 740: PostCall 18
-741: GetReturnValue £temporary4031
-742: Equal 745 £temporary4031 0
-743: Assign £temporary4033 "Yes"
+741: GetReturnValue £temporary4020
+742: Equal 745 £temporary4020 0
+743: Assign £temporary4022 "Yes"
 744: Goto 746
-745: Assign £temporary4033 "No"
-746: Parameter 18 pointer £temporary4033
+745: Assign £temporary4022 "No"
+746: Parameter 18 pointer £temporary4022
 747: Call 10 printf 2
 748: PostCall 10
 749: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -752,8 +752,8 @@
 751: Parameter 20 pointer "r+"
 752: Call 12 fopen 0
 753: PostCall 12
-754: GetReturnValue £temporary4035
-755: Assign inOutFilePtr £temporary4035
+754: GetReturnValue £temporary4024
+755: Assign inOutFilePtr £temporary4024
 756: NotEqual 768 inOutFilePtr 0
 757: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 758: Parameter 20 pointer stderr
@@ -769,8 +769,8 @@
 768: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 769: Call 14 tmpfile 0
 770: PostCall 14
-771: GetReturnValue £temporary4040
-772: Assign tempFilePtr £temporary4040
+771: GetReturnValue £temporary4029
+772: Assign tempFilePtr £temporary4029
 773: NotEqual 785 tempFilePtr 0
 774: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 775: Parameter 20 pointer stderr
@@ -787,19 +787,19 @@
 786: Parameter 20 pointer inOutFilePtr
 787: Call 14 fgetc 0
 788: PostCall 14
-789: GetReturnValue £temporary4045
-790: IntegralToIntegral £temporary4046 £temporary4045
-791: Assign c £temporary4046
-792: IntegralToIntegral £temporary4047 c
-793: Equal 806 £temporary4047 -1
+789: GetReturnValue £temporary4034
+790: IntegralToIntegral £temporary4035 £temporary4034
+791: Assign c £temporary4035
+792: IntegralToIntegral £temporary4036 c
+793: Equal 806 £temporary4036 -1
 794: PreCall 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 795: PreCall 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-796: IntegralToIntegral £temporary4049 c
-797: Parameter 21 signedint £temporary4049
+796: IntegralToIntegral £temporary4038 c
+797: Parameter 21 signedint £temporary4038
 798: Call 15 toupper 0
 799: PostCall 15
-800: GetReturnValue £temporary4050
-801: Parameter 21 signedint £temporary4050
+800: GetReturnValue £temporary4039
+801: Parameter 21 signedint £temporary4039
 802: Parameter 23 pointer tempFilePtr
 803: Call 15 putc 0
 804: PostCall 15
@@ -817,14 +817,14 @@
 816: Parameter 20 pointer tempFilePtr
 817: Call 14 fgetc 0
 818: PostCall 14
-819: GetReturnValue £temporary4055
-820: IntegralToIntegral £temporary4056 £temporary4055
-821: Assign c £temporary4056
-822: IntegralToIntegral £temporary4057 c
-823: Equal 831 £temporary4057 -1
+819: GetReturnValue £temporary4044
+820: IntegralToIntegral £temporary4045 £temporary4044
+821: Assign c £temporary4045
+822: IntegralToIntegral £temporary4046 c
+823: Equal 831 £temporary4046 -1
 824: PreCall 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-825: IntegralToIntegral £temporary4059 c
-826: Parameter 21 signedint £temporary4059
+825: IntegralToIntegral £temporary4048 c
+826: Parameter 21 signedint £temporary4048
 827: Parameter 23 pointer inOutFilePtr
 828: Call 15 putc 0
 829: PostCall 15

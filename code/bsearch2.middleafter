@@ -3,50 +3,50 @@
 2: NotEqual 5 listSize 0
 3: SetReturnValue 0
 4: Return 0
-5: IntegralToIntegral £temporary3302 valueList
-6: SignedMultiply £temporary3303 firstIndex valueSize
-7: BinaryAdd firstValuePtr £temporary3302 £temporary3303
+5: IntegralToIntegral £temporary3288 valueList
+6: SignedMultiply £temporary3289 firstIndex valueSize
+7: BinaryAdd firstValuePtr £temporary3288 £temporary3289
 8: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 9: Parameter 22 keyPtr 6
 10: Parameter 22 firstValuePtr 8
 11: Call 22 compare 0
 12: PostCall 22
-13: GetReturnValue £temporary3305
-14: Assign firstCompare £temporary3305
+13: GetReturnValue £temporary3291
+14: Assign firstCompare £temporary3291
 15: SignedGreaterThanEqual 18 firstCompare 0
 16: SetReturnValue 0
 17: Return 0
 18: NotEqual 21 firstCompare 0
 19: SetReturnValue firstValuePtr
 20: Return firstValuePtr
-21: IntegralToIntegral £temporary3308 valueList
-22: SignedMultiply £temporary3309 lastIndex valueSize
-23: BinaryAdd lastValuePtr £temporary3308 £temporary3309
+21: IntegralToIntegral £temporary3294 valueList
+22: SignedMultiply £temporary3295 lastIndex valueSize
+23: BinaryAdd lastValuePtr £temporary3294 £temporary3295
 24: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 25: Parameter 22 keyPtr 6
 26: Parameter 22 lastValuePtr 8
 27: Call 22 compare 0
 28: PostCall 22
-29: GetReturnValue £temporary3311
-30: Assign lastCompare £temporary3311
+29: GetReturnValue £temporary3297
+30: Assign lastCompare £temporary3297
 31: SignedLessThanEqual 34 lastCompare 0
 32: SetReturnValue 0
 33: Return 0
 34: NotEqual 37 lastCompare 0
 35: SetReturnValue lastValuePtr
 36: Return lastValuePtr
-37: BinaryAdd £temporary3314 firstIndex lastIndex
-38: SignedDivide middleIndex £temporary3314 2
-39: IntegralToIntegral £temporary3316 valueList
-40: SignedMultiply £temporary3317 middleIndex valueSize
-41: BinaryAdd middleValuePtr £temporary3316 £temporary3317
+37: BinaryAdd £temporary3300 firstIndex lastIndex
+38: SignedDivide middleIndex £temporary3300 2
+39: IntegralToIntegral £temporary3302 valueList
+40: SignedMultiply £temporary3303 middleIndex valueSize
+41: BinaryAdd middleValuePtr £temporary3302 £temporary3303
 42: CallHeader 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 43: Parameter 24 keyPtr 6
 44: Parameter 24 middleValuePtr 8
 45: Call 24 compare 0
 46: PostCall 24
-47: GetReturnValue £temporary3319
-48: Assign middleCompare £temporary3319
+47: GetReturnValue £temporary3305
+48: Assign middleCompare £temporary3305
 49: SignedGreaterThanEqual 52 middleCompare 0
 50: Assign lastIndex middleIndex
 51: Goto 5

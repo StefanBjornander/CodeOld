@@ -1,16 +1,16 @@
 0: Equal 15 longValue 0
-1: SignedModulo £temporary1532 longValue 10
-2: IntegralToIntegral £temporary1533 £temporary1532
-3: Assign digit £temporary1533
+1: SignedModulo £temporary1521 longValue 10
+2: IntegralToIntegral £temporary1522 £temporary1521
+3: Assign digit £temporary1522
 4: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-5: SignedDivide £temporary1534 longValue 10
-6: Parameter 18 signed long int £temporary1534
+5: SignedDivide £temporary1523 longValue 10
+6: Parameter 18 signed long int £temporary1523
 7: Call 12 printLongIntRec 0
 8: PostCall 12
 9: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-10: BinaryAdd £temporary1536 digit 48
-11: IntegralToIntegral £temporary1537 £temporary1536
-12: Parameter 18 signedchar £temporary1537
+10: BinaryAdd £temporary1525 digit 48
+11: IntegralToIntegral £temporary1526 £temporary1525
+12: Parameter 18 signedchar £temporary1526
 13: Call 12 printChar 0
 14: PostCall 12
 15: Return

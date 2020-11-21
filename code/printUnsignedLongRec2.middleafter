@@ -1,10 +1,10 @@
 0: UnsignedLessThanEqual 22 unsignedValue 0
-1: UnsignedModulo £temporary1871 unsignedValue base
-2: IntegralToIntegral £temporary1872 £temporary1871
-3: Assign digit £temporary1872
+1: UnsignedModulo £temporary1857 unsignedValue base
+2: IntegralToIntegral £temporary1858 £temporary1857
+3: Assign digit £temporary1858
 4: CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-5: UnsignedDivide £temporary1873 unsignedValue base
-6: Parameter 18 £temporary1873 6
+5: UnsignedDivide £temporary1859 unsignedValue base
+6: Parameter 18 £temporary1859 6
 7: Parameter 18 base 10
 8: Parameter 18 capital 14
 9: Call 18 printUnsignedLongRec 0
@@ -14,8 +14,8 @@
 13: Parameter 18 capital 8
 14: Call 18 digitToChar 0
 15: PostCall 18
-16: GetReturnValue £temporary1875
-17: Assign c £temporary1875
+16: GetReturnValue £temporary1861
+17: Assign c £temporary1861
 18: CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 19: Parameter 19 c 6
 20: Call 19 printChar 0

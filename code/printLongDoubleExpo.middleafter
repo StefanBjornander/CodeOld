@@ -14,10 +14,10 @@
 13: PostCall 24
 14: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 15: Equal 18 capital 0
-16: Assign £temporary1611 69
+16: Assign £temporary1600 69
 17: Goto 19
-18: Assign £temporary1611 101
-19: Parameter 30 signedchar £temporary1611
+18: Assign £temporary1600 101
+19: Parameter 30 signedchar £temporary1600
 20: Call 24 printChar 0
 21: PostCall 24
 22: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -33,26 +33,26 @@
 32: Call 24 printChar 0
 33: PostCall 24
 34: PushFloat value
-35: UnarySubtract £temporary1616 value
+35: UnarySubtract £temporary1605 value
 36: PopFloat value
 37: PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 38: PushFloat value
 39: Parameter 30 double value
 40: Call 24 log10 0
 41: PostCall 24
-42: GetReturnValue £temporary1617
-43: FloatingToIntegral £temporary1618 £temporary1617
-44: Assign expo £temporary1618
+42: GetReturnValue £temporary1606
+43: FloatingToIntegral £temporary1607 £temporary1606
+44: Assign expo £temporary1607
 45: PushFloat value
 46: PreCall 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
 47: PushFloat 10.0
 48: Parameter 32 double 10.0
-49: IntegralToFloating £temporary1619 expo
-50: Parameter 40 double £temporary1619
+49: IntegralToFloating £temporary1608 expo
+50: Parameter 40 double £temporary1608
 51: Call 26 pow 0
 52: PostCall 26
-53: GetReturnValue £temporary1620
-54: SignedDivide £temporary1621 value £temporary1620
+53: GetReturnValue £temporary1609
+54: SignedDivide £temporary1610 value £temporary1609
 55: PopFloat value
 56: PreCall 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 57: PushFloat value
@@ -65,15 +65,15 @@
 64: PostCall 26
 65: PreCall 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 66: Equal 69 capital 0
-67: Assign £temporary1624 69
+67: Assign £temporary1613 69
 68: Goto 70
-69: Assign £temporary1624 101
-70: Parameter 32 signedchar £temporary1624
+69: Assign £temporary1613 101
+70: Parameter 32 signedchar £temporary1613
 71: Call 26 printChar 0
 72: PostCall 26
 73: PreCall 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-74: IntegralToIntegral £temporary1626 expo
-75: Parameter 32 signed long int £temporary1626
+74: IntegralToIntegral £temporary1615 expo
+75: Parameter 32 signed long int £temporary1615
 76: Parameter 36 signedint 1
 77: Parameter 38 signedint 0
 78: Call 26 printLongInt 0

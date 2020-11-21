@@ -4,15 +4,15 @@
 3: PreCall 20 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 4: Parameter 26 pointer s
 5: Parameter 28 pointer "%lf%n"
-6: Address £temporary2513 value
-7: Parameter 30 pointer £temporary2513
-8: Address £temporary2514 chars
-9: Parameter 32 pointer £temporary2514
+6: Address £temporary2502 value
+7: Parameter 30 pointer £temporary2502
+8: Address £temporary2503 chars
+9: Parameter 32 pointer £temporary2503
 10: Call 20 sscanf 4
 11: PostCall 20
 12: Equal 15 endp 0
-13: Dereference £temporary2517 -> endp endp 0
-14: BinaryAdd £temporary2517 -> endp s chars
+13: Dereference £temporary2506 -> endp endp 0
+14: BinaryAdd £temporary2506 -> endp s chars
 15: PushFloat value
 16: SetReturnValue
 17: Return value

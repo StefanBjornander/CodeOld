@@ -1,12 +1,12 @@
 0: Assign g_inStatus 0
-1: IntegralToIntegral £temporary1760 inStream
-2: Assign g_inDevice £temporary1760
+1: IntegralToIntegral £temporary1746 inStream
+2: Assign g_inDevice £temporary1746
 3: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 4: Parameter 12 format 6
 5: Parameter 12 arg_list 8
 6: Call 12 scanFormat 0
 7: PostCall 12
-8: GetReturnValue £temporary1761
-9: SetReturnValue £temporary1761
-10: Return £temporary1761
+8: GetReturnValue £temporary1747
+9: SetReturnValue £temporary1747
+10: Return £temporary1747
 11: FunctionEnd vfscanf

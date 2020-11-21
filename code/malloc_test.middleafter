@@ -2,20 +2,20 @@
 1: Parameter 12 signedint 96
 2: Call 6 malloc 0
 3: PostCall 6
-4: GetReturnValue £temporary4228
-5: Assign b £temporary4228
+4: GetReturnValue £temporary4217
+5: Assign b £temporary4217
 6: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 7: Parameter 14 signedint 96
 8: Call 8 malloc 0
 9: PostCall 8
-10: GetReturnValue £temporary4229
-11: Assign c £temporary4229
+10: GetReturnValue £temporary4218
+11: Assign c £temporary4218
 12: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 13: Parameter 16 signedint 96
 14: Call 10 malloc 0
 15: PostCall 10
-16: GetReturnValue £temporary4230
-17: Assign d £temporary4230
+16: GetReturnValue £temporary4219
+17: Assign d £temporary4219
 18: PreCall 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 19: Call 12 print_heap 0
 20: PostCall 12

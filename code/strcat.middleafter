@@ -2,24 +2,24 @@
 1: Parameter 18 pointer target
 2: Call 12 strlen 0
 3: PostCall 12
-4: GetReturnValue £temporary3012
-5: Assign targetLength £temporary3012
+4: GetReturnValue £temporary3001
+5: Assign targetLength £temporary3001
 6: Assign index 0
-7: BinaryAdd £temporary3015 source index
-8: Dereference £temporary3013 -> £temporary3015 £temporary3015 0
-9: Equal 18 £temporary3013 -> £temporary3015 0
-10: BinaryAdd £temporary3018 targetLength index
-11: BinaryAdd £temporary3021 target £temporary3018
-12: Dereference £temporary3019 -> £temporary3021 £temporary3021 0
-13: BinaryAdd £temporary3024 source index
-14: Dereference £temporary3022 -> £temporary3024 £temporary3024 0
-15: Assign £temporary3019 -> £temporary3021 £temporary3022 -> £temporary3024
+7: BinaryAdd £temporary3004 source index
+8: Dereference £temporary3002 -> £temporary3004 £temporary3004 0
+9: Equal 18 £temporary3002 -> £temporary3004 0
+10: BinaryAdd £temporary3007 targetLength index
+11: BinaryAdd £temporary3010 target £temporary3007
+12: Dereference £temporary3008 -> £temporary3010 £temporary3010 0
+13: BinaryAdd £temporary3013 source index
+14: Dereference £temporary3011 -> £temporary3013 £temporary3013 0
+15: Assign £temporary3008 -> £temporary3010 £temporary3011 -> £temporary3013
 16: BinaryAdd index index 1
 17: Goto 7
-18: BinaryAdd £temporary3025 targetLength index
-19: BinaryAdd £temporary3028 target £temporary3025
-20: Dereference £temporary3026 -> £temporary3028 £temporary3028 0
-21: Assign £temporary3026 -> £temporary3028 0
+18: BinaryAdd £temporary3014 targetLength index
+19: BinaryAdd £temporary3017 target £temporary3014
+20: Dereference £temporary3015 -> £temporary3017 £temporary3017 0
+21: Assign £temporary3015 -> £temporary3017 0
 22: SetReturnValue
 23: Return target
 24: FunctionEnd strcat

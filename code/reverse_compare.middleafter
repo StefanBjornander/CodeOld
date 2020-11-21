@@ -1,16 +1,16 @@
-0: IntegralToIntegral £temporary4254 valuePtr1
-1: Dereference £temporary4255 -> £temporary4254 £temporary4254 0
-2: Assign intValue1 £temporary4255 -> £temporary4254
-3: IntegralToIntegral £temporary4256 valuePtr2
-4: Dereference £temporary4257 -> £temporary4256 £temporary4256 0
-5: Assign intValue2 £temporary4257 -> £temporary4256
+0: IntegralToIntegral £temporary4243 valuePtr1
+1: Dereference £temporary4244 -> £temporary4243 £temporary4243 0
+2: Assign intValue1 £temporary4244 -> £temporary4243
+3: IntegralToIntegral £temporary4245 valuePtr2
+4: Dereference £temporary4246 -> £temporary4245 £temporary4245 0
+5: Assign intValue2 £temporary4246 -> £temporary4245
 6: SignedGreaterThanEqual 9 intValue1 intValue2
-7: Assign £temporary4261 1
+7: Assign £temporary4250 1
 8: Goto 13
 9: NotEqual 12 intValue1 intValue2
-10: Assign £temporary4261 0
+10: Assign £temporary4250 0
 11: Goto 13
-12: Assign £temporary4261 -1
+12: Assign £temporary4250 -1
 13: SetReturnValue
-14: Return £temporary4261
+14: Return £temporary4250
 15: FunctionEnd reverse_compare

@@ -1,8 +1,8 @@
 0: SignedGreaterThanEqual 4 value 0
-1: UnarySubtract £temporary3394 value
-2: Assign £temporary3398 £temporary3394
+1: UnarySubtract £temporary3380 value
+2: Assign £temporary3384 £temporary3380
 3: Goto 5
-4: Assign £temporary3398 value
-5: SetReturnValue £temporary3398
-6: Return £temporary3398
+4: Assign £temporary3384 value
+5: SetReturnValue £temporary3384
+6: Return £temporary3384
 7: FunctionEnd labs

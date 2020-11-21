@@ -11,8 +11,8 @@
 10: Parameter 60 double y
 11: Call 46 fmod 0
 12: PostCall 46
-13: GetReturnValue £temporary3757
-14: Parameter 46 double £temporary3757
+13: GetReturnValue £temporary3746
+14: Parameter 46 double £temporary3746
 15: Parameter 54 signedint errno
 16: Call 22 printf 26
 17: PostCall 22
@@ -30,8 +30,8 @@
 29: Parameter 60 double y
 30: Call 46 atan2 0
 31: PostCall 46
-32: GetReturnValue £temporary3759
-33: Parameter 46 double £temporary3759
+32: GetReturnValue £temporary3748
+33: Parameter 46 double £temporary3748
 34: Parameter 54 signedint errno
 35: Call 22 printf 26
 36: PostCall 22
@@ -49,8 +49,8 @@
 48: Parameter 60 double y
 49: Call 46 pow 0
 50: PostCall 46
-51: GetReturnValue £temporary3761
-52: Parameter 46 double £temporary3761
+51: GetReturnValue £temporary3750
+52: Parameter 46 double £temporary3750
 53: Parameter 54 signedint errno
 54: Call 22 printf 26
 55: PostCall 22
@@ -64,18 +64,18 @@
 63: PushFloat x
 64: Parameter 30 double x
 65: PushFloat y
-66: FloatingToIntegral £temporary3764 y
-67: Parameter 38 signedint £temporary3764
+66: FloatingToIntegral £temporary3753 y
+67: Parameter 38 signedint £temporary3753
 68: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 69: PushFloat x
 70: Parameter 46 double x
 71: PushFloat y
-72: FloatingToIntegral £temporary3765 y
-73: Parameter 54 signedint £temporary3765
+72: FloatingToIntegral £temporary3754 y
+73: Parameter 54 signedint £temporary3754
 74: Call 40 ldexp 0
 75: PostCall 40
-76: GetReturnValue £temporary3766
-77: Parameter 40 double £temporary3766
+76: GetReturnValue £temporary3755
+77: Parameter 40 double £temporary3755
 78: Call 22 printf 18
 79: PostCall 22
 80: Return

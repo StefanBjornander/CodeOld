@@ -1,13 +1,13 @@
 0: Assign index 0
 1: SignedGreaterThanEqual 14 index 256
-2: UnsignedMultiply £temporary3337 index 2
-3: BinaryAdd £temporary3338 g_funcArray £temporary3337
-4: Deref £temporary3336 -> £temporary3338 £temporary3338 0
-5: NotEqual 12 £temporary3336 -> £temporary3338 0
-6: UnsignedMultiply £temporary3341 index 2
-7: BinaryAdd £temporary3342 g_funcArray £temporary3341
-8: Deref £temporary3340 -> £temporary3342 £temporary3342 0
-9: Assign £temporary3340 -> £temporary3342 fcn
+2: UnsignedMultiply £temporary3323 index 2
+3: BinaryAdd £temporary3324 g_funcArray £temporary3323
+4: Deref £temporary3322 -> £temporary3324 £temporary3324 0
+5: NotEqual 12 £temporary3322 -> £temporary3324 0
+6: UnsignedMultiply £temporary3327 index 2
+7: BinaryAdd £temporary3328 g_funcArray £temporary3327
+8: Deref £temporary3326 -> £temporary3328 £temporary3328 0
+9: Assign £temporary3326 -> £temporary3328 fcn
 10: SetReturnValue 0
 11: Return 0
 12: Increment index

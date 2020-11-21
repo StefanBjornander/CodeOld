@@ -1,6 +1,6 @@
 0: Assign n 0
-1: Address £temporary4080 n
-2: Assign p £temporary4080
+1: Address £temporary4069 n
+2: Assign p £temporary4069
 3: PreCall 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 4: Parameter 16 pointer "<%i> <%i> <%li> <%li> <%u> <%lu>\n\n"
 5: Parameter 18 signedint 123

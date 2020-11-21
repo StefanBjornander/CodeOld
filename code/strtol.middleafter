@@ -5,11 +5,11 @@
 4: Parameter 18 signedint base
 5: Call 12 scanLongInt 0
 6: PostCall 12
-7: GetReturnValue £temporary1942
-8: Assign value £temporary1942
+7: GetReturnValue £temporary1931
+8: Assign value £temporary1931
 9: Equal 12 endp 0
-10: Dereference £temporary1944 -> endp endp 0
-11: BinaryAdd £temporary1944 -> endp s g_inChars
+10: Dereference £temporary1933 -> endp endp 0
+11: BinaryAdd £temporary1933 -> endp s g_inChars
 12: SetReturnValue
 13: Return value
 14: FunctionEnd strtol

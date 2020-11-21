@@ -14,10 +14,10 @@
 13: PostCall 24
 14: CallHeader 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 15: Equal 18 capital 0
-16: Assign £temporary1951 69
+16: Assign £temporary1937 69
 17: Goto 19
-18: Assign £temporary1951 101
-19: Parameter 24 £temporary1951 6
+18: Assign £temporary1937 101
+19: Parameter 24 £temporary1937 6
 20: Call 24 printChar 0
 21: PostCall 24
 22: CallHeader 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -33,26 +33,26 @@
 32: Call 24 printChar 0
 33: PostCall 24
 34: PushFloat value
-35: UnarySubtract £temporary1956 value
+35: UnarySubtract £temporary1942 value
 36: PopFloat value
 37: CallHeader 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 38: PushFloat value
 39: Parameter 24 value 6
 40: Call 24 log10 0
 41: PostCall 24
-42: GetReturnValue £temporary1957
-43: FloatingToIntegral £temporary1958 £temporary1957
-44: Assign expo £temporary1958
+42: GetReturnValue £temporary1943
+43: FloatingToIntegral £temporary1944 £temporary1943
+44: Assign expo £temporary1944
 45: PushFloat value
 46: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
 47: PushFloat 10.0
 48: Parameter 26 10.0 6
-49: IntegralToFloating £temporary1959 expo
-50: Parameter 26 £temporary1959 14
+49: IntegralToFloating £temporary1945 expo
+50: Parameter 26 £temporary1945 14
 51: Call 26 pow 0
 52: PostCall 26
-53: GetReturnValue £temporary1960
-54: SignedDivide £temporary1961 value £temporary1960
+53: GetReturnValue £temporary1946
+54: SignedDivide £temporary1947 value £temporary1946
 55: PopFloat value
 56: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 57: PushFloat value
@@ -65,15 +65,15 @@
 64: PostCall 26
 65: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 66: Equal 69 capital 0
-67: Assign £temporary1967 69
+67: Assign £temporary1953 69
 68: Goto 70
-69: Assign £temporary1967 101
-70: Parameter 26 £temporary1967 6
+69: Assign £temporary1953 101
+70: Parameter 26 £temporary1953 6
 71: Call 26 printChar 0
 72: PostCall 26
 73: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-74: IntegralToIntegral £temporary1969 expo
-75: Parameter 26 £temporary1969 6
+74: IntegralToIntegral £temporary1955 expo
+75: Parameter 26 £temporary1955 6
 76: Parameter 26 1 10
 77: Parameter 26 0 12
 78: Call 26 printLongInt 0

@@ -1,21 +1,21 @@
-0: IntegralToIntegral £temporary3292 left
-1: Assign charLeft £temporary3292
-2: IntegralToIntegral £temporary3293 right
-3: Assign charRight £temporary3293
+0: IntegralToIntegral £temporary3281 left
+1: Assign charLeft £temporary3281
+2: IntegralToIntegral £temporary3282 right
+3: Assign charRight £temporary3282
 4: Assign index 0
 5: SignedGreaterThanEqual 22 index size
-6: BinaryAdd £temporary3298 charLeft index
-7: Dereference £temporary3296 -> £temporary3298 £temporary3298 0
-8: BinaryAdd £temporary3301 charRight index
-9: Dereference £temporary3299 -> £temporary3301 £temporary3301 0
-10: SignedGreaterThanEqual 13 £temporary3296 -> £temporary3298 £temporary3299 -> £temporary3301
+6: BinaryAdd £temporary3287 charLeft index
+7: Dereference £temporary3285 -> £temporary3287 £temporary3287 0
+8: BinaryAdd £temporary3290 charRight index
+9: Dereference £temporary3288 -> £temporary3290 £temporary3290 0
+10: SignedGreaterThanEqual 13 £temporary3285 -> £temporary3287 £temporary3288 -> £temporary3290
 11: SetReturnValue
 12: Return -1
-13: BinaryAdd £temporary3305 charLeft index
-14: Dereference £temporary3303 -> £temporary3305 £temporary3305 0
-15: BinaryAdd £temporary3308 charRight index
-16: Dereference £temporary3306 -> £temporary3308 £temporary3308 0
-17: SignedLessThanEqual 20 £temporary3303 -> £temporary3305 £temporary3306 -> £temporary3308
+13: BinaryAdd £temporary3294 charLeft index
+14: Dereference £temporary3292 -> £temporary3294 £temporary3294 0
+15: BinaryAdd £temporary3297 charRight index
+16: Dereference £temporary3295 -> £temporary3297 £temporary3297 0
+17: SignedLessThanEqual 20 £temporary3292 -> £temporary3294 £temporary3295 -> £temporary3297
 18: SetReturnValue
 19: Return 1
 20: BinaryAdd index index 1

@@ -1,21 +1,21 @@
 0: Assign lowHeapPtr 65534
-1: InspectRegister £temporary5888 bp
-2: Assign stackTop £temporary5888
+1: InspectRegister £temporary5874 bp
+2: Assign stackTop £temporary5874
 3: Assign i 0
 4: SignedGreaterThanEqual 22 i 1000
 5: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 6: Parameter 12 96 6
 7: Call 12 malloc 0
 8: PostCall 12
-9: GetReturnValue £temporary5891
-10: Assign p £temporary5891
+9: GetReturnValue £temporary5877
+10: Assign p £temporary5877
 11: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 12: Parameter 14 string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A# 6
 13: Parameter 14 i 8
 14: Parameter 14 p 10
 15: Parameter 14 stackTop 12
-16: Deref £temporary5892 -> lowHeapPtr lowHeapPtr 0
-17: Parameter 14 £temporary5892 -> lowHeapPtr 14
+16: Deref £temporary5878 -> lowHeapPtr lowHeapPtr 0
+17: Parameter 14 £temporary5878 -> lowHeapPtr 14
 18: Call 14 printf 0
 19: PostCall 14
 20: Increment i

@@ -3,7 +3,7 @@
 2: Parameter 8 0 8
 3: Call 8 strtod 0
 4: PostCall 8
-5: GetReturnValue £temporary3283
-6: SetReturnValue £temporary3283
-7: Return £temporary3283
+5: GetReturnValue £temporary3269
+6: SetReturnValue £temporary3269
+7: Return £temporary3269
 8: FunctionEnd atof

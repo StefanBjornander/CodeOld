@@ -3,11 +3,11 @@
 2: Parameter 8 time 6
 3: Call 8 localtime 0
 4: PostCall 8
-5: GetReturnValue £temporary3639
-6: Parameter 8 £temporary3639 6
+5: GetReturnValue £temporary3625
+6: Parameter 8 £temporary3625 6
 7: Call 8 asctime 0
 8: PostCall 8
-9: GetReturnValue £temporary3640
-10: SetReturnValue £temporary3640
-11: Return £temporary3640
+9: GetReturnValue £temporary3626
+10: SetReturnValue £temporary3626
+11: Return £temporary3626
 12: FunctionEnd ctime

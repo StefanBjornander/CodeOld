@@ -1,8 +1,38 @@
-0: PreCall 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-1: Parameter 12 pointer "in_test"
-2: Parameter 14 pointer "out_test"
-3: Call 6 file_test 0
-4: PostCall 6
-5: Return
-6: Exit
-7: FunctionEnd main
+0: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 22 pointer "Please input a value: "
+2: Call 16 printf 0
+3: PostCall 16
+4: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+5: Parameter 22 pointer "%lf"
+6: Address £temporary3531 x
+7: Parameter 24 pointer £temporary3531
+8: Call 16 scanf 2
+9: PostCall 16
+10: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+11: Parameter 22 pointer buffer
+12: Call 16 setjmp 0
+13: PostCall 16
+14: GetReturnValue £temporary3533
+15: Assign message £temporary3533
+16: NotEqual 31 message 0
+17: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+18: Parameter 22 pointer "1.0 / %f = %f\n"
+19: PushFloat x
+20: Parameter 24 double x
+21: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+22: PushFloat x
+23: Parameter 38 double x
+24: Call 32 inverse 0
+25: PostCall 32
+26: GetReturnValue £temporary3535
+27: Parameter 32 double £temporary3535
+28: Call 16 printf 16
+29: PostCall 16
+30: Goto 36
+31: PreCall 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+32: Parameter 22 pointer "%s\n"
+33: Parameter 24 pointer message
+34: Call 16 printf 2
+35: PostCall 16
+36: Return
+37: FunctionEnd main

@@ -1,6 +1,6 @@
-0: SignedGreaterThanEqual 57 size 3
+0: SignedGreaterThanEqual 36 size 3
 1: Assign c 97
-2: SignedGreaterThan 57 c 122
+2: SignedGreaterThan 36 c 122
 3: BinaryAdd £temporary1193 name size
 4: Deref £temporary1192 -> £temporary1193 £temporary1193 0
 5: Assign £temporary1192 -> £temporary1193 c
@@ -13,48 +13,27 @@
 12: Call 13 fileexists 0
 13: PostCall 13
 14: GetReturnValue £temporary1197
-15: NotEqual 43 £temporary1197 0
+15: NotEqual 22 £temporary1197 0
 16: Case 20 status 0
 17: Case 22 status 1
 18: CaseEnd status
-19: Goto 43
+19: Goto 22
 20: SetReturnValue name
 21: Return name
 22: CallHeader 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 23: Parameter 13 name 6
-24: Call 13 existsTempName 0
-25: PostCall 13
-26: GetReturnValue £temporary1200
-27: NotEqual 43 £temporary1200 0
-28: CallHeader 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-29: UnsignedMultiply £temporary1204 g_tempSize 2
-30: BinaryAdd £temporary1205 g_tempArray £temporary1204
-31: Deref £temporary1203 -> £temporary1205 £temporary1205 0
-32: Parameter 13 £temporary1203 -> £temporary1205 6
-33: Parameter 13 name 8
-34: Call 13 strcpy 0
-35: PostCall 13
-36: Assign £temporary1207 g_tempSize
-37: Increment g_tempSize
-38: UnsignedMultiply £temporary1209 £temporary1207 2
-39: BinaryAdd £temporary1210 g_tempArray £temporary1209
-40: Deref £temporary1208 -> £temporary1210 £temporary1210 0
-41: SetReturnValue £temporary1208 -> £temporary1210
-42: Return £temporary1208 -> £temporary1210
-43: CallHeader 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-44: Parameter 13 name 6
-45: BinaryAdd £temporary1211 size 1
-46: Parameter 13 £temporary1211 8
-47: Parameter 13 status 10
-48: Call 13 generateTempName 0
-49: PostCall 13
-50: GetReturnValue £temporary1212
-51: Assign result £temporary1212
-52: Equal 55 result 0
-53: SetReturnValue result
-54: Return result
-55: Increment c
-56: Goto 2
-57: SetReturnValue 0
-58: Return 0
-59: FunctionEnd generateTempName
+24: BinaryAdd £temporary1200 size 1
+25: Parameter 13 £temporary1200 8
+26: Parameter 13 status 10
+27: Call 13 generateTempName 0
+28: PostCall 13
+29: GetReturnValue £temporary1201
+30: Assign result £temporary1201
+31: Equal 34 result 0
+32: SetReturnValue result
+33: Return result
+34: Increment c
+35: Goto 2
+36: SetReturnValue 0
+37: Return 0
+38: FunctionEnd generateTempName

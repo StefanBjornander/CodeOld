@@ -2,123 +2,123 @@
 1: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 2: Call 12 scanChar 0
 3: PostCall 12
-4: GetReturnValue £temporary1300
-5: Assign input £temporary1300
+4: GetReturnValue £temporary1286
+5: Assign input £temporary1286
 6: Assign found 0
 7: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-8: IntegralToIntegral £temporary1301 input
-9: Parameter 15 £temporary1301 6
+8: IntegralToIntegral £temporary1287 input
+9: Parameter 15 £temporary1287 6
 10: Call 15 isspace 0
 11: PostCall 15
-12: GetReturnValue £temporary1302
-13: Equal 20 £temporary1302 0
+12: GetReturnValue £temporary1288
+13: Equal 20 £temporary1288 0
 14: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 15: Call 15 scanChar 0
 16: PostCall 15
-17: GetReturnValue £temporary1303
-18: Assign input £temporary1303
+17: GetReturnValue £temporary1289
+18: Assign input £temporary1289
 19: Goto 7
 20: Equal 82 string 0
 21: NotEqual 50 precision 0
 22: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-23: IntegralToIntegral £temporary1307 input
-24: Parameter 15 £temporary1307 6
+23: IntegralToIntegral £temporary1293 input
+24: Parameter 15 £temporary1293 6
 25: Call 15 isspace 0
 26: PostCall 15
-27: GetReturnValue £temporary1308
-28: NotEqual 45 £temporary1308 0
-29: IntegralToIntegral £temporary1311 input
-30: Equal 45 £temporary1311 -1
+27: GetReturnValue £temporary1294
+28: NotEqual 45 £temporary1294 0
+29: IntegralToIntegral £temporary1297 input
+30: Equal 45 £temporary1297 -1
 31: Equal 45 input 10
-32: Assign £temporary1316 index
+32: Assign £temporary1302 index
 33: Increment index
-34: BinaryAdd £temporary1318 string £temporary1316
-35: Deref £temporary1317 -> £temporary1318 £temporary1318 0
-36: Assign £temporary1317 -> £temporary1318 input
+34: BinaryAdd £temporary1304 string £temporary1302
+35: Deref £temporary1303 -> £temporary1304 £temporary1304 0
+36: Assign £temporary1303 -> £temporary1304 input
 37: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 38: Call 15 scanChar 0
 39: PostCall 15
-40: GetReturnValue £temporary1319
-41: Assign input £temporary1319
+40: GetReturnValue £temporary1305
+41: Assign input £temporary1305
 42: Assign found 1
 43: Increment g_inChars
 44: Goto 22
-45: BinaryAdd £temporary1322 string index
-46: Deref £temporary1321 -> £temporary1322 £temporary1322 0
-47: Assign £temporary1321 -> £temporary1322 0
+45: BinaryAdd £temporary1308 string index
+46: Deref £temporary1307 -> £temporary1308 £temporary1308 0
+47: Assign £temporary1307 -> £temporary1308 0
 48: Increment g_inChars
 49: Goto 126
-50: Assign £temporary1324 precision
+50: Assign £temporary1310 precision
 51: Decrement precision
-52: SignedLessThanEqual 76 £temporary1324 0
+52: SignedLessThanEqual 76 £temporary1310 0
 53: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-54: IntegralToIntegral £temporary1326 input
-55: Parameter 15 £temporary1326 6
+54: IntegralToIntegral £temporary1312 input
+55: Parameter 15 £temporary1312 6
 56: Call 15 isspace 0
 57: PostCall 15
-58: GetReturnValue £temporary1327
-59: NotEqual 76 £temporary1327 0
-60: IntegralToIntegral £temporary1330 input
-61: Equal 76 £temporary1330 -1
+58: GetReturnValue £temporary1313
+59: NotEqual 76 £temporary1313 0
+60: IntegralToIntegral £temporary1316 input
+61: Equal 76 £temporary1316 -1
 62: Equal 76 input 10
-63: Assign £temporary1336 index
+63: Assign £temporary1322 index
 64: Increment index
-65: BinaryAdd £temporary1338 string £temporary1336
-66: Deref £temporary1337 -> £temporary1338 £temporary1338 0
-67: Assign £temporary1337 -> £temporary1338 input
+65: BinaryAdd £temporary1324 string £temporary1322
+66: Deref £temporary1323 -> £temporary1324 £temporary1324 0
+67: Assign £temporary1323 -> £temporary1324 input
 68: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 69: Call 15 scanChar 0
 70: PostCall 15
-71: GetReturnValue £temporary1339
-72: Assign input £temporary1339
+71: GetReturnValue £temporary1325
+72: Assign input £temporary1325
 73: Assign found 1
 74: Increment g_inChars
 75: Goto 50
 76: SignedLessThanEqual 126 precision 0
-77: BinaryAdd £temporary1343 string index
-78: Deref £temporary1342 -> £temporary1343 £temporary1343 0
-79: Assign £temporary1342 -> £temporary1343 0
+77: BinaryAdd £temporary1329 string index
+78: Deref £temporary1328 -> £temporary1329 £temporary1329 0
+79: Assign £temporary1328 -> £temporary1329 0
 80: Increment g_inChars
 81: Goto 126
 82: NotEqual 103 precision 0
 83: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-84: IntegralToIntegral £temporary1346 input
-85: Parameter 15 £temporary1346 6
+84: IntegralToIntegral £temporary1332 input
+85: Parameter 15 £temporary1332 6
 86: Call 15 isspace 0
 87: PostCall 15
-88: GetReturnValue £temporary1347
-89: NotEqual 101 £temporary1347 0
-90: IntegralToIntegral £temporary1350 input
-91: Equal 101 £temporary1350 -1
+88: GetReturnValue £temporary1333
+89: NotEqual 101 £temporary1333 0
+90: IntegralToIntegral £temporary1336 input
+91: Equal 101 £temporary1336 -1
 92: Equal 101 input 10
 93: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 94: Call 15 scanChar 0
 95: PostCall 15
-96: GetReturnValue £temporary1355
-97: Assign input £temporary1355
+96: GetReturnValue £temporary1341
+97: Assign input £temporary1341
 98: Assign found 1
 99: Increment g_inChars
 100: Goto 83
 101: Increment g_inChars
 102: Goto 126
-103: Assign £temporary1358 precision
+103: Assign £temporary1344 precision
 104: Decrement precision
-105: SignedLessThanEqual 124 £temporary1358 0
+105: SignedLessThanEqual 124 £temporary1344 0
 106: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-107: IntegralToIntegral £temporary1360 input
-108: Parameter 15 £temporary1360 6
+107: IntegralToIntegral £temporary1346 input
+108: Parameter 15 £temporary1346 6
 109: Call 15 isspace 0
 110: PostCall 15
-111: GetReturnValue £temporary1361
-112: NotEqual 124 £temporary1361 0
-113: IntegralToIntegral £temporary1364 input
-114: Equal 124 £temporary1364 -1
+111: GetReturnValue £temporary1347
+112: NotEqual 124 £temporary1347 0
+113: IntegralToIntegral £temporary1350 input
+114: Equal 124 £temporary1350 -1
 115: Equal 124 input 10
 116: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 117: Call 15 scanChar 0
 118: PostCall 15
-119: GetReturnValue £temporary1370
-120: Assign input £temporary1370
+119: GetReturnValue £temporary1356
+120: Assign input £temporary1356
 121: Assign found 1
 122: Increment g_inChars
 123: Goto 103

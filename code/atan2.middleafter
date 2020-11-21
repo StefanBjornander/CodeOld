@@ -1,72 +1,97 @@
-0: PushFloat y
-1: PushFloat 0
-2: SignedLessThanEqual 13 y 0
-3: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+0: PushFloat x
+1: PushZero
+2: SignedGreaterThanEqual 13 x 0
+3: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 4: PushFloat x
-5: PushFloat y
-6: SignedDivide £temporary602 x y
-7: Parameter 28 double £temporary602
-8: Call 22 atan 0
-9: PostCall 22
-10: GetReturnValue £temporary603
-11: SetReturnValue
-12: Return £temporary603
+5: UnarySubtract £temporary734 x
+6: Parameter 14 £temporary734 6
+7: Call 14 atan 0
+8: PostCall 14
+9: GetReturnValue £temporary735
+10: UnarySubtract £temporary736 £temporary735
+11: SetReturnValue £temporary736
+12: Return £temporary736
 13: PushFloat x
-14: PushFloat 0
-15: SignedLessThan 31 x 0
-16: PushFloat y
-17: PushFloat 0
-18: SignedGreaterThanEqual 31 y 0
-19: PushFloat 3.1415926535897932384626433
-20: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
-21: PushFloat x
-22: PushFloat y
-23: SignedDivide £temporary607 x y
-24: Parameter 28 double £temporary607
-25: Call 22 atan 0
-26: PostCall 22
-27: GetReturnValue £temporary608
-28: BinaryAdd £temporary609 3.1415926535897932384626433 £temporary608
-29: SetReturnValue
-30: Return £temporary609
-31: PushFloat x
-32: PushFloat 0
-33: SignedGreaterThanEqual 49 x 0
-34: PushFloat y
-35: PushFloat 0
-36: SignedGreaterThanEqual 49 y 0
-37: PushFloat -3.1415926535897932384626433
-38: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
-39: PushFloat x
-40: PushFloat y
-41: SignedDivide £temporary613 x y
-42: Parameter 28 double £temporary613
-43: Call 22 atan 0
-44: PostCall 22
-45: GetReturnValue £temporary614
-46: BinaryAdd £temporary615 -3.1415926535897932384626433 £temporary614
-47: SetReturnValue
-48: Return £temporary615
-49: PushFloat x
-50: PushFloat 0
-51: SignedLessThanEqual 58 x 0
-52: PushFloat y
-53: PushFloat 0
-54: NotEqual 58 y 0
-55: PushFloat 1.57079632679489661923132165
-56: SetReturnValue
-57: Return 1.57079632679489661923132165
-58: PushFloat x
-59: PushFloat 0
-60: SignedGreaterThanEqual 67 x 0
-61: PushFloat y
-62: PushFloat 0
-63: NotEqual 67 y 0
-64: PushFloat -1.57079632679489661923132165
-65: SetReturnValue
-66: Return -1.57079632679489661923132165
-67: Assign errno 6
-68: PushFloat 0
-69: SetReturnValue
-70: Return 0
-71: FunctionEnd atan2
+14: PushOne
+15: SignedLessThanEqual 28 x 1
+16: PushFloat 1.57079632679489661923132165
+17: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
+18: PushOne
+19: PushFloat x
+20: SignedDivide £temporary738 1 x
+21: Parameter 14 £temporary738 6
+22: Call 14 atan 0
+23: PostCall 14
+24: GetReturnValue £temporary739
+25: BinarySubtract £temporary740 1.57079632679489661923132165 £temporary739
+26: SetReturnValue £temporary740
+27: Return £temporary740
+28: PushFloat x
+29: PushFloat 0.5
+30: SignedLessThanEqual 54 x 0.5
+31: PushFloat 2
+32: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
+33: PushFloat x
+34: PushOne
+35: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 3
+36: PushOne
+37: PushFloat x
+38: PushFloat x
+39: SignedMultiply £temporary742 x x
+40: BinaryAdd £temporary743 1 £temporary742
+41: Parameter 14 £temporary743 6
+42: Call 14 sqrt 0
+43: PostCall 14
+44: GetReturnValue £temporary744
+45: BinaryAdd £temporary745 1 £temporary744
+46: SignedDivide £temporary746 x £temporary745
+47: Parameter 14 £temporary746 14
+48: Call 14 atan 0
+49: PostCall 14
+50: GetReturnValue £temporary747
+51: SignedMultiply £temporary748 2 £temporary747
+52: SetReturnValue £temporary748
+53: Return £temporary748
+54: PushZero
+55: PopFloat sum
+56: PushOne
+57: PopFloat sign
+58: PushOne
+59: PopFloat denominator
+60: PushFloat x
+61: PopFloat product
+62: PushFloat sign
+63: PushFloat product
+64: SignedMultiply £temporary749 sign product
+65: PushFloat denominator
+66: SignedDivide £temporary750 £temporary749 denominator
+67: PopFloat term
+68: PushFloat sum
+69: PushFloat term
+70: BinaryAdd £temporary751 sum term
+71: PopFloat sum
+72: PushFloat sign
+73: UnarySubtract £temporary752 sign
+74: PopFloat sign
+75: PushFloat product
+76: PushFloat x
+77: PushFloat x
+78: SignedMultiply £temporary753 x x
+79: SignedMultiply £temporary754 product £temporary753
+80: PopFloat product
+81: PushFloat denominator
+82: PushFloat 2
+83: BinaryAdd £temporary755 denominator 2
+84: PopFloat denominator
+85: CallHeader 54 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+86: PushFloat term
+87: Parameter 54 term 6
+88: Call 54 fabs 0
+89: PostCall 54
+90: GetReturnValue £temporary756
+91: PushFloat 0.000000001
+92: SignedGreaterThanEqual 62 £temporary756 0.000000001
+93: PushFloat sum
+94: SetReturnValue sum
+95: Return sum
+96: FunctionEnd atan

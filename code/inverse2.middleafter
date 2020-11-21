@@ -5,7 +5,7 @@
 4: Parameter 14 x 14
 5: Call 14 divide 0
 6: PostCall 14
-7: GetReturnValue £temporary4695
-8: SetReturnValue £temporary4695
-9: Return £temporary4695
+7: GetReturnValue £temporary4681
+8: SetReturnValue £temporary4681
+9: Return £temporary4681
 10: FunctionEnd inverse

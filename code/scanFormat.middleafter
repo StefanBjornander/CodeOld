@@ -6,33 +6,33 @@
 5: Assign g_inCount 0
 6: Assign g_inChars 0
 7: Assign index 0
-8: BinaryAdd £temporary1236 format index
-9: Dereference £temporary1234 -> £temporary1236 £temporary1236 0
-10: Equal 327 £temporary1234 -> £temporary1236 0
-11: BinaryAdd £temporary1241 format index
-12: Dereference £temporary1239 -> £temporary1241 £temporary1241 0
-13: Assign c £temporary1239 -> £temporary1241
-14: IntegralToIntegral £temporary1242 c
-15: BinaryAdd d £temporary1242 1
+8: BinaryAdd £temporary1225 format index
+9: Dereference £temporary1223 -> £temporary1225 £temporary1225 0
+10: Equal 327 £temporary1223 -> £temporary1225 0
+11: BinaryAdd £temporary1230 format index
+12: Dereference £temporary1228 -> £temporary1230 £temporary1230 0
+13: Assign c £temporary1228 -> £temporary1230
+14: IntegralToIntegral £temporary1231 c
+15: BinaryAdd d £temporary1231 1
 16: Equal 319 percent 0
-17: BinarySubtract £temporary1244 d 1
-18: Case 36 £temporary1244 104
-19: Case 38 £temporary1244 108
-20: Case 40 £temporary1244 76
-21: Case 42 £temporary1244 42
-22: Case 44 £temporary1244 99
-23: Case 62 £temporary1244 115
-24: Case 81 £temporary1244 100
-25: Case 81 £temporary1244 105
-26: Case 117 £temporary1244 111
-27: Case 153 £temporary1244 120
-28: Case 189 £temporary1244 117
-29: Case 225 £temporary1244 103
-30: Case 225 £temporary1244 102
-31: Case 225 £temporary1244 101
-32: Case 261 £temporary1244 91
-33: Case 303 £temporary1244 110
-34: CaseEnd £temporary1244
+17: BinarySubtract £temporary1233 d 1
+18: Case 36 £temporary1233 104
+19: Case 38 £temporary1233 108
+20: Case 40 £temporary1233 76
+21: Case 42 £temporary1233 42
+22: Case 44 £temporary1233 99
+23: Case 62 £temporary1233 115
+24: Case 81 £temporary1233 100
+25: Case 81 £temporary1233 105
+26: Case 117 £temporary1233 111
+27: Case 153 £temporary1233 120
+28: Case 189 £temporary1233 117
+29: Case 225 £temporary1233 103
+30: Case 225 £temporary1233 102
+31: Case 225 £temporary1233 101
+32: Case 261 £temporary1233 91
+33: Case 303 £temporary1233 110
+34: CaseEnd £temporary1233
 35: Goto 312
 36: Assign shortInt 1
 37: Goto 325
@@ -45,27 +45,27 @@
 44: PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 45: Call 57 scanChar 0
 46: PostCall 57
-47: GetReturnValue £temporary1245
-48: Assign charValue £temporary1245
+47: GetReturnValue £temporary1234
+48: Assign charValue £temporary1234
 49: NotEqual 57 star 0
 50: BinaryAdd arg_list arg_list 2
-51: BinarySubtract £temporary1250 arg_list 2
-52: IntegralToIntegral £temporary1252 £temporary1250
-53: Dereference £temporary1253 -> £temporary1252 £temporary1252 0
-54: Assign charPtr £temporary1253 -> £temporary1252
-55: Dereference £temporary1254 -> charPtr charPtr 0
-56: Assign £temporary1254 -> charPtr charValue
+51: BinarySubtract £temporary1239 arg_list 2
+52: IntegralToIntegral £temporary1241 £temporary1239
+53: Dereference £temporary1242 -> £temporary1241 £temporary1241 0
+54: Assign charPtr £temporary1242 -> £temporary1241
+55: Dereference £temporary1243 -> charPtr charPtr 0
+56: Assign £temporary1243 -> charPtr charValue
 57: Assign percent 0
-58: IntegralToIntegral £temporary1255 charValue
-59: Equal 325 £temporary1255 -1
+58: IntegralToIntegral £temporary1244 charValue
+59: Equal 325 £temporary1244 -1
 60: BinaryAdd g_inCount g_inCount 1
 61: Goto 325
 62: NotEqual 74 star 0
 63: BinaryAdd arg_list arg_list 2
-64: BinarySubtract £temporary1262 arg_list 2
-65: IntegralToIntegral £temporary1264 £temporary1262
-66: Dereference £temporary1265 -> £temporary1264 £temporary1264 0
-67: Assign charPtr £temporary1265 -> £temporary1264
+64: BinarySubtract £temporary1251 arg_list 2
+65: IntegralToIntegral £temporary1253 £temporary1251
+66: Dereference £temporary1254 -> £temporary1253 £temporary1253 0
+67: Assign charPtr £temporary1254 -> £temporary1253
 68: PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 69: Parameter 63 pointer charPtr
 70: Parameter 65 signedint 0
@@ -83,237 +83,237 @@
 82: Parameter 63 signedint 10
 83: Call 57 scanLongInt 0
 84: PostCall 57
-85: GetReturnValue £temporary1268
-86: Assign longValue £temporary1268
+85: GetReturnValue £temporary1257
+86: Assign longValue £temporary1257
 87: NotEqual 115 star 0
 88: Equal 98 shortInt 0
 89: BinaryAdd arg_list arg_list 2
-90: BinarySubtract £temporary1273 arg_list 2
-91: IntegralToIntegral £temporary1275 £temporary1273
-92: Dereference £temporary1276 -> £temporary1275 £temporary1275 0
-93: Assign shortPtr £temporary1276 -> £temporary1275
-94: Dereference £temporary1277 -> shortPtr shortPtr 0
-95: IntegralToIntegral £temporary1278 longValue
-96: Assign £temporary1277 -> shortPtr £temporary1278
+90: BinarySubtract £temporary1262 arg_list 2
+91: IntegralToIntegral £temporary1264 £temporary1262
+92: Dereference £temporary1265 -> £temporary1264 £temporary1264 0
+93: Assign shortPtr £temporary1265 -> £temporary1264
+94: Dereference £temporary1266 -> shortPtr shortPtr 0
+95: IntegralToIntegral £temporary1267 longValue
+96: Assign £temporary1266 -> shortPtr £temporary1267
 97: Goto 115
 98: NotEqual 108 longIntOrDouble 0
 99: BinaryAdd arg_list arg_list 2
-100: BinarySubtract £temporary1283 arg_list 2
-101: IntegralToIntegral £temporary1285 £temporary1283
-102: Dereference £temporary1286 -> £temporary1285 £temporary1285 0
-103: Assign intPtr £temporary1286 -> £temporary1285
-104: Dereference £temporary1287 -> intPtr intPtr 0
-105: IntegralToIntegral £temporary1288 longValue
-106: Assign £temporary1287 -> intPtr £temporary1288
+100: BinarySubtract £temporary1272 arg_list 2
+101: IntegralToIntegral £temporary1274 £temporary1272
+102: Dereference £temporary1275 -> £temporary1274 £temporary1274 0
+103: Assign intPtr £temporary1275 -> £temporary1274
+104: Dereference £temporary1276 -> intPtr intPtr 0
+105: IntegralToIntegral £temporary1277 longValue
+106: Assign £temporary1276 -> intPtr £temporary1277
 107: Goto 115
 108: BinaryAdd arg_list arg_list 2
-109: BinarySubtract £temporary1291 arg_list 2
-110: IntegralToIntegral £temporary1293 £temporary1291
-111: Dereference £temporary1294 -> £temporary1293 £temporary1293 0
-112: Assign longPtr £temporary1294 -> £temporary1293
-113: Dereference £temporary1295 -> longPtr longPtr 0
-114: Assign £temporary1295 -> longPtr longValue
+109: BinarySubtract £temporary1280 arg_list 2
+110: IntegralToIntegral £temporary1282 £temporary1280
+111: Dereference £temporary1283 -> £temporary1282 £temporary1282 0
+112: Assign longPtr £temporary1283 -> £temporary1282
+113: Dereference £temporary1284 -> longPtr longPtr 0
+114: Assign £temporary1284 -> longPtr longValue
 115: Assign percent 0
 116: Goto 325
 117: PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 118: Parameter 63 signedint 8
 119: Call 57 scanUnsignedLongInt 0
 120: PostCall 57
-121: GetReturnValue £temporary1297
-122: Assign unsignedLongValue £temporary1297
+121: GetReturnValue £temporary1286
+122: Assign unsignedLongValue £temporary1286
 123: NotEqual 151 star 0
 124: Equal 134 shortInt 0
 125: BinaryAdd arg_list arg_list 2
-126: BinarySubtract £temporary1302 arg_list 2
-127: IntegralToIntegral £temporary1304 £temporary1302
-128: Dereference £temporary1305 -> £temporary1304 £temporary1304 0
-129: Assign unsignedShortPtr £temporary1305 -> £temporary1304
-130: Dereference £temporary1306 -> unsignedShortPtr unsignedShortPtr 0
-131: IntegralToIntegral £temporary1307 unsignedLongValue
-132: Assign £temporary1306 -> unsignedShortPtr £temporary1307
+126: BinarySubtract £temporary1291 arg_list 2
+127: IntegralToIntegral £temporary1293 £temporary1291
+128: Dereference £temporary1294 -> £temporary1293 £temporary1293 0
+129: Assign unsignedShortPtr £temporary1294 -> £temporary1293
+130: Dereference £temporary1295 -> unsignedShortPtr unsignedShortPtr 0
+131: IntegralToIntegral £temporary1296 unsignedLongValue
+132: Assign £temporary1295 -> unsignedShortPtr £temporary1296
 133: Goto 151
 134: NotEqual 144 longIntOrDouble 0
 135: BinaryAdd arg_list arg_list 2
-136: BinarySubtract £temporary1312 arg_list 2
-137: IntegralToIntegral £temporary1314 £temporary1312
-138: Dereference £temporary1315 -> £temporary1314 £temporary1314 0
-139: Assign unsignedIntPtr £temporary1315 -> £temporary1314
-140: Dereference £temporary1316 -> unsignedIntPtr unsignedIntPtr 0
-141: IntegralToIntegral £temporary1317 unsignedLongValue
-142: Assign £temporary1316 -> unsignedIntPtr £temporary1317
+136: BinarySubtract £temporary1301 arg_list 2
+137: IntegralToIntegral £temporary1303 £temporary1301
+138: Dereference £temporary1304 -> £temporary1303 £temporary1303 0
+139: Assign unsignedIntPtr £temporary1304 -> £temporary1303
+140: Dereference £temporary1305 -> unsignedIntPtr unsignedIntPtr 0
+141: IntegralToIntegral £temporary1306 unsignedLongValue
+142: Assign £temporary1305 -> unsignedIntPtr £temporary1306
 143: Goto 151
 144: BinaryAdd arg_list arg_list 2
-145: BinarySubtract £temporary1320 arg_list 2
-146: IntegralToIntegral £temporary1322 £temporary1320
-147: Dereference £temporary1323 -> £temporary1322 £temporary1322 0
-148: Assign unsignedLongPtr £temporary1323 -> £temporary1322
-149: Dereference £temporary1324 -> unsignedLongPtr unsignedLongPtr 0
-150: Assign £temporary1324 -> unsignedLongPtr unsignedLongValue
+145: BinarySubtract £temporary1309 arg_list 2
+146: IntegralToIntegral £temporary1311 £temporary1309
+147: Dereference £temporary1312 -> £temporary1311 £temporary1311 0
+148: Assign unsignedLongPtr £temporary1312 -> £temporary1311
+149: Dereference £temporary1313 -> unsignedLongPtr unsignedLongPtr 0
+150: Assign £temporary1313 -> unsignedLongPtr unsignedLongValue
 151: Assign percent 0
 152: Goto 325
 153: PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 154: Parameter 63 signedint 16
 155: Call 57 scanUnsignedLongInt 0
 156: PostCall 57
-157: GetReturnValue £temporary1326
-158: Assign unsignedLongValue £temporary1326
+157: GetReturnValue £temporary1315
+158: Assign unsignedLongValue £temporary1315
 159: NotEqual 187 star 0
 160: Equal 170 shortInt 0
 161: BinaryAdd arg_list arg_list 2
-162: BinarySubtract £temporary1331 arg_list 2
-163: IntegralToIntegral £temporary1333 £temporary1331
-164: Dereference £temporary1334 -> £temporary1333 £temporary1333 0
-165: Assign unsignedShortPtr £temporary1334 -> £temporary1333
-166: Dereference £temporary1335 -> unsignedShortPtr unsignedShortPtr 0
-167: IntegralToIntegral £temporary1336 unsignedLongValue
-168: Assign £temporary1335 -> unsignedShortPtr £temporary1336
+162: BinarySubtract £temporary1320 arg_list 2
+163: IntegralToIntegral £temporary1322 £temporary1320
+164: Dereference £temporary1323 -> £temporary1322 £temporary1322 0
+165: Assign unsignedShortPtr £temporary1323 -> £temporary1322
+166: Dereference £temporary1324 -> unsignedShortPtr unsignedShortPtr 0
+167: IntegralToIntegral £temporary1325 unsignedLongValue
+168: Assign £temporary1324 -> unsignedShortPtr £temporary1325
 169: Goto 187
 170: NotEqual 180 longIntOrDouble 0
 171: BinaryAdd arg_list arg_list 2
-172: BinarySubtract £temporary1341 arg_list 2
-173: IntegralToIntegral £temporary1343 £temporary1341
-174: Dereference £temporary1344 -> £temporary1343 £temporary1343 0
-175: Assign unsignedIntPtr £temporary1344 -> £temporary1343
-176: Dereference £temporary1345 -> unsignedIntPtr unsignedIntPtr 0
-177: IntegralToIntegral £temporary1346 unsignedLongValue
-178: Assign £temporary1345 -> unsignedIntPtr £temporary1346
+172: BinarySubtract £temporary1330 arg_list 2
+173: IntegralToIntegral £temporary1332 £temporary1330
+174: Dereference £temporary1333 -> £temporary1332 £temporary1332 0
+175: Assign unsignedIntPtr £temporary1333 -> £temporary1332
+176: Dereference £temporary1334 -> unsignedIntPtr unsignedIntPtr 0
+177: IntegralToIntegral £temporary1335 unsignedLongValue
+178: Assign £temporary1334 -> unsignedIntPtr £temporary1335
 179: Goto 187
 180: BinaryAdd arg_list arg_list 2
-181: BinarySubtract £temporary1349 arg_list 2
-182: IntegralToIntegral £temporary1351 £temporary1349
-183: Dereference £temporary1352 -> £temporary1351 £temporary1351 0
-184: Assign unsignedLongPtr £temporary1352 -> £temporary1351
-185: Dereference £temporary1353 -> unsignedLongPtr unsignedLongPtr 0
-186: Assign £temporary1353 -> unsignedLongPtr unsignedLongValue
+181: BinarySubtract £temporary1338 arg_list 2
+182: IntegralToIntegral £temporary1340 £temporary1338
+183: Dereference £temporary1341 -> £temporary1340 £temporary1340 0
+184: Assign unsignedLongPtr £temporary1341 -> £temporary1340
+185: Dereference £temporary1342 -> unsignedLongPtr unsignedLongPtr 0
+186: Assign £temporary1342 -> unsignedLongPtr unsignedLongValue
 187: Assign percent 0
 188: Goto 325
 189: PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 190: Parameter 63 signedint 0
 191: Call 57 scanUnsignedLongInt 0
 192: PostCall 57
-193: GetReturnValue £temporary1355
-194: Assign unsignedLongValue £temporary1355
+193: GetReturnValue £temporary1344
+194: Assign unsignedLongValue £temporary1344
 195: NotEqual 223 star 0
 196: Equal 206 shortInt 0
 197: BinaryAdd arg_list arg_list 2
-198: BinarySubtract £temporary1360 arg_list 2
-199: IntegralToIntegral £temporary1362 £temporary1360
-200: Dereference £temporary1363 -> £temporary1362 £temporary1362 0
-201: Assign unsignedShortPtr £temporary1363 -> £temporary1362
-202: Dereference £temporary1364 -> unsignedShortPtr unsignedShortPtr 0
-203: IntegralToIntegral £temporary1365 unsignedLongValue
-204: Assign £temporary1364 -> unsignedShortPtr £temporary1365
+198: BinarySubtract £temporary1349 arg_list 2
+199: IntegralToIntegral £temporary1351 £temporary1349
+200: Dereference £temporary1352 -> £temporary1351 £temporary1351 0
+201: Assign unsignedShortPtr £temporary1352 -> £temporary1351
+202: Dereference £temporary1353 -> unsignedShortPtr unsignedShortPtr 0
+203: IntegralToIntegral £temporary1354 unsignedLongValue
+204: Assign £temporary1353 -> unsignedShortPtr £temporary1354
 205: Goto 223
 206: NotEqual 216 longIntOrDouble 0
 207: BinaryAdd arg_list arg_list 2
-208: BinarySubtract £temporary1370 arg_list 2
-209: IntegralToIntegral £temporary1372 £temporary1370
-210: Dereference £temporary1373 -> £temporary1372 £temporary1372 0
-211: Assign unsignedIntPtr £temporary1373 -> £temporary1372
-212: Dereference £temporary1374 -> unsignedIntPtr unsignedIntPtr 0
-213: IntegralToIntegral £temporary1375 unsignedLongValue
-214: Assign £temporary1374 -> unsignedIntPtr £temporary1375
+208: BinarySubtract £temporary1359 arg_list 2
+209: IntegralToIntegral £temporary1361 £temporary1359
+210: Dereference £temporary1362 -> £temporary1361 £temporary1361 0
+211: Assign unsignedIntPtr £temporary1362 -> £temporary1361
+212: Dereference £temporary1363 -> unsignedIntPtr unsignedIntPtr 0
+213: IntegralToIntegral £temporary1364 unsignedLongValue
+214: Assign £temporary1363 -> unsignedIntPtr £temporary1364
 215: Goto 223
 216: BinaryAdd arg_list arg_list 2
-217: BinarySubtract £temporary1378 arg_list 2
-218: IntegralToIntegral £temporary1380 £temporary1378
-219: Dereference £temporary1381 -> £temporary1380 £temporary1380 0
-220: Assign unsignedLongPtr £temporary1381 -> £temporary1380
-221: Dereference £temporary1382 -> unsignedLongPtr unsignedLongPtr 0
-222: Assign £temporary1382 -> unsignedLongPtr unsignedLongValue
+217: BinarySubtract £temporary1367 arg_list 2
+218: IntegralToIntegral £temporary1369 £temporary1367
+219: Dereference £temporary1370 -> £temporary1369 £temporary1369 0
+220: Assign unsignedLongPtr £temporary1370 -> £temporary1369
+221: Dereference £temporary1371 -> unsignedLongPtr unsignedLongPtr 0
+222: Assign £temporary1371 -> unsignedLongPtr unsignedLongValue
 223: Assign percent 0
 224: Goto 325
 225: PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 226: Call 57 scanLongDouble 0
 227: PostCall 57
-228: GetReturnValue £temporary1384
+228: GetReturnValue £temporary1373
 229: PopFloat longDoubleValue
 230: NotEqual 259 star 0
 231: Equal 241 longIntOrDouble 0
 232: BinaryAdd arg_list arg_list 2
-233: BinarySubtract £temporary1389 arg_list 2
-234: IntegralToIntegral £temporary1391 £temporary1389
-235: Dereference £temporary1392 -> £temporary1391 £temporary1391 0
-236: Assign doublePtr £temporary1392 -> £temporary1391
-237: Dereference £temporary1393 -> doublePtr doublePtr 0
+233: BinarySubtract £temporary1378 arg_list 2
+234: IntegralToIntegral £temporary1380 £temporary1378
+235: Dereference £temporary1381 -> £temporary1380 £temporary1380 0
+236: Assign doublePtr £temporary1381 -> £temporary1380
+237: Dereference £temporary1382 -> doublePtr doublePtr 0
 238: PushFloat longDoubleValue
-239: PopFloat £temporary1393 -> doublePtr
+239: PopFloat £temporary1382 -> doublePtr
 240: Goto 259
 241: Equal 251 longDouble 0
 242: BinaryAdd arg_list arg_list 2
-243: BinarySubtract £temporary1397 arg_list 2
-244: IntegralToIntegral £temporary1399 £temporary1397
-245: Dereference £temporary1400 -> £temporary1399 £temporary1399 0
-246: Assign longDoublePtr £temporary1400 -> £temporary1399
-247: Dereference £temporary1401 -> longDoublePtr longDoublePtr 0
+243: BinarySubtract £temporary1386 arg_list 2
+244: IntegralToIntegral £temporary1388 £temporary1386
+245: Dereference £temporary1389 -> £temporary1388 £temporary1388 0
+246: Assign longDoublePtr £temporary1389 -> £temporary1388
+247: Dereference £temporary1390 -> longDoublePtr longDoublePtr 0
 248: PushFloat longDoubleValue
-249: PopFloat £temporary1401 -> longDoublePtr
+249: PopFloat £temporary1390 -> longDoublePtr
 250: Goto 259
 251: BinaryAdd arg_list arg_list 2
-252: BinarySubtract £temporary1404 arg_list 2
-253: IntegralToIntegral £temporary1406 £temporary1404
-254: Dereference £temporary1407 -> £temporary1406 £temporary1406 0
-255: Assign floatPtr £temporary1407 -> £temporary1406
-256: Dereference £temporary1408 -> floatPtr floatPtr 0
+252: BinarySubtract £temporary1393 arg_list 2
+253: IntegralToIntegral £temporary1395 £temporary1393
+254: Dereference £temporary1396 -> £temporary1395 £temporary1395 0
+255: Assign floatPtr £temporary1396 -> £temporary1395
+256: Dereference £temporary1397 -> floatPtr floatPtr 0
 257: PushFloat longDoubleValue
-258: PopFloat £temporary1408 -> floatPtr
+258: PopFloat £temporary1397 -> floatPtr
 259: Assign percent 0
 260: Goto 325
 261: Assign not 0
 262: BinaryAdd index index 1
-263: BinaryAdd £temporary1415 format index
-264: Dereference £temporary1413 -> £temporary1415 £temporary1415 0
-265: NotEqual 268 £temporary1413 -> £temporary1415 94
+263: BinaryAdd £temporary1404 format index
+264: Dereference £temporary1402 -> £temporary1404 £temporary1404 0
+265: NotEqual 268 £temporary1402 -> £temporary1404 94
 266: Assign not 1
 267: BinaryAdd index index 1
 268: Assign startIndex index
-269: BinaryAdd £temporary1420 format index
-270: Dereference £temporary1418 -> £temporary1420 £temporary1420 0
-271: Equal 274 £temporary1418 -> £temporary1420 93
+269: BinaryAdd £temporary1409 format index
+270: Dereference £temporary1407 -> £temporary1409 £temporary1409 0
+271: Equal 274 £temporary1407 -> £temporary1409 93
 272: BinaryAdd index index 1
 273: Goto 269
-274: BinaryAdd £temporary1425 format index
-275: Dereference £temporary1423 -> £temporary1425 £temporary1425 0
-276: Assign £temporary1423 -> £temporary1425 0
+274: BinaryAdd £temporary1414 format index
+275: Dereference £temporary1412 -> £temporary1414 £temporary1414 0
+276: Assign £temporary1412 -> £temporary1414 0
 277: NotEqual 293 star 0
 278: BinaryAdd arg_list arg_list 2
-279: BinarySubtract £temporary1430 arg_list 2
-280: IntegralToIntegral £temporary1432 £temporary1430
-281: Dereference £temporary1433 -> £temporary1432 £temporary1432 0
-282: Assign string £temporary1433 -> £temporary1432
+279: BinarySubtract £temporary1419 arg_list 2
+280: IntegralToIntegral £temporary1421 £temporary1419
+281: Dereference £temporary1422 -> £temporary1421 £temporary1421 0
+282: Assign string £temporary1422 -> £temporary1421
 283: PreCall 63 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 284: Parameter 69 pointer string
-285: BinaryAdd £temporary1436 format startIndex
-286: Dereference £temporary1434 -> £temporary1436 £temporary1436 0
-287: Address £temporary1437 £temporary1434 -> £temporary1436
-288: Parameter 71 pointer £temporary1437
+285: BinaryAdd £temporary1425 format startIndex
+286: Dereference £temporary1423 -> £temporary1425 £temporary1425 0
+287: Address £temporary1426 £temporary1423 -> £temporary1425
+288: Parameter 71 pointer £temporary1426
 289: Parameter 73 signedint not
 290: Call 63 scanPattern 0
 291: PostCall 63
 292: Goto 325
 293: PreCall 61 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 294: Parameter 67 pointer 0
-295: BinaryAdd £temporary1441 format startIndex
-296: Dereference £temporary1439 -> £temporary1441 £temporary1441 0
-297: Address £temporary1442 £temporary1439 -> £temporary1441
-298: Parameter 69 pointer £temporary1442
+295: BinaryAdd £temporary1430 format startIndex
+296: Dereference £temporary1428 -> £temporary1430 £temporary1430 0
+297: Address £temporary1431 £temporary1428 -> £temporary1430
+298: Parameter 69 pointer £temporary1431
 299: Parameter 71 signedint not
 300: Call 61 scanPattern 0
 301: PostCall 61
 302: Goto 325
 303: BinaryAdd arg_list arg_list 2
-304: BinarySubtract £temporary1446 arg_list 2
-305: IntegralToIntegral £temporary1448 £temporary1446
-306: Dereference £temporary1449 -> £temporary1448 £temporary1448 0
-307: Assign charsPtr £temporary1449 -> £temporary1448
-308: Dereference £temporary1450 -> charsPtr charsPtr 0
-309: Assign £temporary1450 -> charsPtr g_inChars
+304: BinarySubtract £temporary1435 arg_list 2
+305: IntegralToIntegral £temporary1437 £temporary1435
+306: Dereference £temporary1438 -> £temporary1437 £temporary1437 0
+307: Assign charsPtr £temporary1438 -> £temporary1437
+308: Dereference £temporary1439 -> charsPtr charsPtr 0
+309: Assign £temporary1439 -> charsPtr g_inChars
 310: Assign percent 0
 311: Goto 325
 312: PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 313: Parameter 63 pointer "scanFormat c = '%c'\n"
-314: IntegralToIntegral £temporary1451 c
-315: Parameter 65 signedint £temporary1451
+314: IntegralToIntegral £temporary1440 c
+315: Parameter 65 signedint £temporary1440
 316: Call 57 printf 2
 317: PostCall 57
 318: Goto 325

@@ -1,2 +1,8 @@
-0: Return
-1: FunctionEnd rewind
+0: PreCall 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 14 pointer stream
+2: Parameter 16 signedint 0
+3: Parameter 18 signedint 0
+4: Call 8 fseek 0
+5: PostCall 8
+6: Return
+7: FunctionEnd rewind

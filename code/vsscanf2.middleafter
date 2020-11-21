@@ -1,12 +1,12 @@
 0: Assign g_inStatus 1
-1: IntegralToIntegral £temporary1772 inString
-2: Assign g_inDevice £temporary1772
+1: IntegralToIntegral £temporary1758 inString
+2: Assign g_inDevice £temporary1758
 3: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 4: Parameter 12 format 6
 5: Parameter 12 arg_list 8
 6: Call 12 scanFormat 0
 7: PostCall 12
-8: GetReturnValue £temporary1773
-9: SetReturnValue £temporary1773
-10: Return £temporary1773
+8: GetReturnValue £temporary1759
+9: SetReturnValue £temporary1759
+10: Return £temporary1759
 11: FunctionEnd vsscanf

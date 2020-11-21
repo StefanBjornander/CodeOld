@@ -1,6 +1,6 @@
 0: SignedGreaterThanEqual 8 longValue 0
-1: UnarySubtract £temporary1540 longValue
-2: Assign longValue £temporary1540
+1: UnarySubtract £temporary1529 longValue
+2: Assign longValue £temporary1529
 3: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 4: Parameter 20 signedchar 45
 5: Call 14 printChar 0

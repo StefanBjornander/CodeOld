@@ -1,17 +1,17 @@
 0: Assign index 0
-1: BinaryAdd £temporary3903 source index
-2: Deref £temporary3902 -> £temporary3903 £temporary3903 0
-3: Equal 11 £temporary3902 -> £temporary3903 0
-4: BinaryAdd £temporary3907 target index
-5: Deref £temporary3906 -> £temporary3907 £temporary3907 0
-6: BinaryAdd £temporary3909 source index
-7: Deref £temporary3908 -> £temporary3909 £temporary3909 0
-8: Assign £temporary3906 -> £temporary3907 £temporary3908 -> £temporary3909
+1: BinaryAdd £temporary3889 source index
+2: Deref £temporary3888 -> £temporary3889 £temporary3889 0
+3: Equal 11 £temporary3888 -> £temporary3889 0
+4: BinaryAdd £temporary3893 target index
+5: Deref £temporary3892 -> £temporary3893 £temporary3893 0
+6: BinaryAdd £temporary3895 source index
+7: Deref £temporary3894 -> £temporary3895 £temporary3895 0
+8: Assign £temporary3892 -> £temporary3893 £temporary3894 -> £temporary3895
 9: Increment index
 10: Goto 1
-11: BinaryAdd £temporary3911 target index
-12: Deref £temporary3910 -> £temporary3911 £temporary3911 0
-13: Assign £temporary3910 -> £temporary3911 0
+11: BinaryAdd £temporary3897 target index
+12: Deref £temporary3896 -> £temporary3897 £temporary3897 0
+13: Assign £temporary3896 -> £temporary3897 0
 14: SetReturnValue target
 15: Return target
 16: FunctionEnd strcpy

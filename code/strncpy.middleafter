@@ -1,19 +1,19 @@
 0: Assign index 0
 1: SignedGreaterThanEqual 12 index size
-2: BinaryAdd £temporary2997 source index
-3: Dereference £temporary2995 -> £temporary2997 £temporary2997 0
-4: Equal 12 £temporary2995 -> £temporary2997 0
-5: BinaryAdd £temporary3003 target index
-6: Dereference £temporary3001 -> £temporary3003 £temporary3003 0
-7: BinaryAdd £temporary3006 source index
-8: Dereference £temporary3004 -> £temporary3006 £temporary3006 0
-9: Assign £temporary3001 -> £temporary3003 £temporary3004 -> £temporary3006
+2: BinaryAdd £temporary2986 source index
+3: Dereference £temporary2984 -> £temporary2986 £temporary2986 0
+4: Equal 12 £temporary2984 -> £temporary2986 0
+5: BinaryAdd £temporary2992 target index
+6: Dereference £temporary2990 -> £temporary2992 £temporary2992 0
+7: BinaryAdd £temporary2995 source index
+8: Dereference £temporary2993 -> £temporary2995 £temporary2995 0
+9: Assign £temporary2990 -> £temporary2992 £temporary2993 -> £temporary2995
 10: BinaryAdd index index 1
 11: Goto 1
 12: SignedGreaterThanEqual 18 index size
-13: BinaryAdd £temporary3011 target index
-14: Dereference £temporary3009 -> £temporary3011 £temporary3011 0
-15: Assign £temporary3009 -> £temporary3011 0
+13: BinaryAdd £temporary3000 target index
+14: Dereference £temporary2998 -> £temporary3000 £temporary3000 0
+15: Assign £temporary2998 -> £temporary3000 0
 16: BinaryAdd index index 1
 17: Goto 12
 18: SetReturnValue

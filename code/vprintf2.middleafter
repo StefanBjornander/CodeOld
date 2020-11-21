@@ -4,7 +4,7 @@
 3: Parameter 10 arg_list 10
 4: Call 10 vfprintf 0
 5: PostCall 10
-6: GetReturnValue £temporary2388
-7: SetReturnValue £temporary2388
-8: Return £temporary2388
+6: GetReturnValue £temporary2374
+7: SetReturnValue £temporary2374
+8: Return £temporary2374
 9: FunctionEnd vprintf
