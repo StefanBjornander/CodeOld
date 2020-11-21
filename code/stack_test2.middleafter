@@ -1,8 +1,8 @@
 0: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1: Parameter 6 string_25i20# 6
-2: Assign £temporary5774 i
+2: Assign £temporary5282 i
 3: Increment i
-4: Parameter 6 £temporary5774 8
+4: Parameter 6 £temporary5282 8
 5: Call 6 printf 0
 6: PostCall 6
 7: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0

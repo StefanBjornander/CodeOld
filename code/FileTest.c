@@ -5,27 +5,31 @@
 #include <String.h>
 #include <Assert.h>
 
-void file_test(char* inFilePtrName, char* outFilePtrName) {
-  { FILE* inFilePtrPtr = fopen(inFilePtrName, "r");
-    FILE* outFilePtrPtr = fopen(outFilePtrName, "w");
-    assert(inFilePtrPtr != NULL);
-    assert(outFilePtrPtr != NULL);
-   
+void file_test(char* inFileName, char* outFileName) {
+  { FILE* inFilePtr = fopen(inFileName, "r");
+    FILE* outFilePtr = fopen(outFileName, "w");
+
+    printf("%s: %li, %s: %li\n", inFileName, inFilePtr, outFileName, outFilePtr);
+    assert(inFilePtr != NULL);
+    assert(outFilePtr != NULL);
+
     { int size = 0, index;
-      fscanf(inFilePtrPtr, "%i", &size);
-   
+      fscanf(inFilePtr, "%i", &size);
+      printf("size %i\n", size);
+
       for (index = 0; index < size; ++index) {
-        double inValue = 0, outValue = sqrt((double) inValue);
-        fscanf(inFilePtrPtr, "%lf", &inValue);
-        fprintf(outFilePtrPtr, "%f\n", outValue);
+        double value;
+        fscanf(inFilePtr, "%lf", &value);
+        printf("Y value %f\n", sqrt(value));
+        fprintf(outFilePtr, "Z value %f\n", sqrt(value));
       }
     }
 
-    fclose(inFilePtrPtr);
-    fclose(outFilePtrPtr);
+    fclose(inFilePtr);
+    fclose(outFilePtr);
   }
 
-  { char* sourceFilePtr = "X";
+/*{ char* sourceFilePtr = "X";
     char* targetFilePtr = "Y";
 
     if (rename(sourceFilePtr, targetFilePtr) == 0) {
@@ -258,5 +262,5 @@ void file_test(char* inFilePtrName, char* outFilePtrName) {
 
     fclose(inOutFilePtr);
     fclose(tempFilePtr);
-  }
+  }*/
 }

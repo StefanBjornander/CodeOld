@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <Limits.h>
+#include <limits.h>
 
 void limits_test(void) {
   printf("CHAR_BIT = %i\n", CHAR_BIT);

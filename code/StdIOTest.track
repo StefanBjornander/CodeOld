@@ -4,13 +4,13 @@ stdio_test:	; Assign n 0
 2:		mov word [bp + 6], 0
 4:	
 
-stdio_test$1:	; address £temporary5526 n
-5:		mov t2976, bp
-6:		add t2976, 6
+stdio_test$1:	; address £temporary5034 n
+5:		mov t2802, bp
+6:		add t2802, 6
 8:	
 
-stdio_test$2:	; Assign p £temporary5526
-9:		mov [bp + 8], t2976
+stdio_test$2:	; Assign p £temporary5034
+9:		mov [bp + 8], t2802
 11:	
 
 stdio_test$3:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -674,8 +674,8 @@ stdio_test$156:	; Parameter 10 88 10
 517:	
 
 stdio_test$157:	; Parameter 10 p 12
-518:		mov a2977, [bp + 8]
-519:		mov [bp + 22], a2977
+518:		mov a2803, [bp + 8]
+519:		mov [bp + 22], a2803
 521:	
 
 stdio_test$158:	; Call 10 printf 0
@@ -1531,10 +1531,10 @@ stdio_test$355:	; PostCall 106
 1175:	
 
 stdio_test$356:	; Return 0
-1176:		mov t2978, [bp]
+1176:		mov t2804, [bp]
 1177:		mov di, [bp + 4]
 1178:		mov bp, [bp + 2]
-1179:		jmp t2978
+1179:		jmp t2804
 1181:	
 
 stdio_test$357:	; FunctionEnd stdio_test

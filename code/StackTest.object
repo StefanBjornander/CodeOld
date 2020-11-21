@@ -7,15 +7,15 @@ stack_test$1:	; Parameter 6 string_25i20# 6
 4:		mov word [bp + 12], string_25i20#
 6:	
 
-stack_test$2:	; Assign £temporary5774 i
-7:		mov ax, [@6655$i]
+stack_test$2:	; Assign £temporary5282 i
+7:		mov ax, [@6118$i]
 9:	
 
 stack_test$3:	; Increment i
-10:		inc word [@6655$i]
+10:		inc word [@6118$i]
 12:	
 
-stack_test$4:	; Parameter 6 £temporary5774 8
+stack_test$4:	; Parameter 6 £temporary5282 8
 13:		mov [bp + 14], ax
 15:	
 
@@ -75,10 +75,10 @@ heap_test$3:	; Call 10 malloc 0
 heap_test$4:	; PostCall 10
 17:	
 
-heap_test$5:	; GetReturnValue £temporary5779
+heap_test$5:	; GetReturnValue £temporary5287
 22:	
 
-heap_test$6:	; Assign pointer £temporary5779
+heap_test$6:	; Assign pointer £temporary5287
 23:		mov [bp + 8], bx
 25:	
 
@@ -94,7 +94,7 @@ heap_test$9:	; Parameter 10 string_102420bytes2Dblock20number3A2025i0A# 6
 32:		mov word [bp + 16], string_102420bytes2Dblock20number3A2025i0A#
 34:	
 
-heap_test$10:	; Assign £temporary5781 count
+heap_test$10:	; Assign £temporary5289 count
 35:		mov ax, [bp + 6]
 37:	
 
@@ -102,7 +102,7 @@ heap_test$11:	; Increment count
 38:		inc word [bp + 6]
 40:	
 
-heap_test$12:	; Parameter 10 £temporary5781 8
+heap_test$12:	; Parameter 10 £temporary5289 8
 41:		mov [bp + 18], ax
 43:	
 

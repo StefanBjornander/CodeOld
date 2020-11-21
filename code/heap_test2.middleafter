@@ -3,14 +3,14 @@
 2: Parameter 10 1024 6
 3: Call 10 malloc 0
 4: PostCall 10
-5: GetReturnValue £temporary5779
-6: Assign pointer £temporary5779
+5: GetReturnValue £temporary5287
+6: Assign pointer £temporary5287
 7: Equal 17 pointer 0
 8: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 9: Parameter 10 string_102420bytes2Dblock20number3A2025i0A# 6
-10: Assign £temporary5781 count
+10: Assign £temporary5289 count
 11: Increment count
-12: Parameter 10 £temporary5781 8
+12: Parameter 10 £temporary5289 8
 13: Parameter 10 pointer 10
 14: Call 10 printf 0
 15: PostCall 10

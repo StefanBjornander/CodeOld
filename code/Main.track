@@ -939,12 +939,12 @@ maina$25:	; FunctionEnd maina
 main:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 12:	
 
-main$1:	; Parameter 6 string_in_test# 6
-13:		mov word [bp + 12], string_in_test#
+main$1:	; Parameter 6 string_in2Etxt# 6
+13:		mov word [bp + 12], string_in2Etxt#
 15:	
 
-main$2:	; Parameter 6 string_out_test# 8
-16:		mov word [bp + 14], string_out_test#
+main$2:	; Parameter 6 string_out2Etxt# 8
+16:		mov word [bp + 14], string_out2Etxt#
 18:	
 
 main$3:	; Call 6 file_test 0

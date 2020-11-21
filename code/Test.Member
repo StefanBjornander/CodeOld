@@ -234,8 +234,8 @@
 33: Return 0
 34: FunctionEnd maina
 0: CallHeader 6 file_test
-1: Parameter 6 string_in_test# 6
-2: Parameter 6 string_out_test# 8
+1: Parameter 6 string_in2Etxt# 6
+2: Parameter 6 string_out2Etxt# 8
 3: Call 6 file_test 0
 4: PostCall 6
 5: Empty
@@ -10944,991 +10944,127 @@
 81: Return 0
 82: FunctionEnd math_test_2
 0: CallHeader 10 fopen
-1: Parameter 10 inFilePtrName 6
+1: Parameter 10 inFileName 6
 2: Parameter 10 string_r# 8
 3: Call 10 fopen 0
 4: PostCall 10
 5: GetReturnValue £temporary4972
-6: Assign inFilePtrPtr £temporary4972
+6: Assign inFilePtr £temporary4972
 7: CallHeader 12 fopen
-8: Parameter 12 outFilePtrName 6
+8: Parameter 12 outFileName 6
 9: Parameter 12 string_w# 8
 10: Call 12 fopen 0
 11: PostCall 12
 12: GetReturnValue £temporary4973
-13: Assign outFilePtrPtr £temporary4973
-14: NotEqual 29 inFilePtrPtr 0
-15: Goto 17
-16: CheckTrackMapFloatStack
-17: CallHeader 14 fprintf
-18: Parameter 14 stderr 6
-19: Parameter 14 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-20: Parameter 14 string_inFilePtrPtr20213D20NULL# 10
-21: Parameter 14 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-22: Parameter 14 11 14
-23: Call 14 fprintf 0
-24: PostCall 14
-25: CallHeader 14 abort
-26: Call 14 abort 0
-27: PostCall 14
-28: Goto 29
-29: Empty
-30: NotEqual 45 outFilePtrPtr 0
-31: Goto 33
-32: CheckTrackMapFloatStack
-33: CallHeader 14 fprintf
-34: Parameter 14 stderr 6
-35: Parameter 14 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-36: Parameter 14 string_outFilePtrPtr20213D20NULL# 10
-37: Parameter 14 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-38: Parameter 14 12 14
-39: Call 14 fprintf 0
-40: PostCall 14
-41: CallHeader 14 abort
-42: Call 14 abort 0
-43: PostCall 14
-44: Goto 45
-45: Empty
-46: Assign size 0
-47: CallHeader 18 fscanf
-48: Parameter 18 inFilePtrPtr 6
-49: Parameter 18 string_25i# 8
-50: address £temporary4982 size
-51: Parameter 18 £temporary4982 10
-52: Call 18 fscanf 0
-53: PostCall 18
-54: Assign index 0
-55: Empty
-56: SignedLessThan 59 index size
-57: Goto 88
-58: CheckTrackMapFloatStack
-59: Empty
-60: PushZero
-61: PopFloat inValue
-62: CallHeader 26 sqrt
-63: PushFloat inValue
-64: Parameter 26 £temporary4986 6
-65: Call 26 sqrt 0
-66: PostCall 26
-67: GetReturnValue £temporary4987
-68: PopFloat outValue
-69: CallHeader 34 fscanf
-70: Parameter 34 inFilePtrPtr 6
-71: Parameter 34 string_25lf# 8
-72: PushFloat inValue
-73: PopFloat
-74: address £temporary4988 inValue
-75: Parameter 34 £temporary4988 10
-76: Call 34 fscanf 0
-77: PostCall 34
-78: CallHeader 34 fprintf
-79: Parameter 34 outFilePtrPtr 6
-80: Parameter 34 string_25f0A# 8
-81: PushFloat outValue
-82: Parameter 34 outValue 10
-83: Call 34 fprintf 0
-84: PostCall 34
-85: Empty
-86: BinaryAdd index index 1
-87: Goto 55
-88: CallHeader 14 fclose
-89: Parameter 14 inFilePtrPtr 6
-90: Call 14 fclose 0
-91: PostCall 14
-92: CallHeader 14 fclose
-93: Parameter 14 outFilePtrPtr 6
-94: Call 14 fclose 0
-95: PostCall 14
-96: Assign sourceFilePtr string_X#
-97: Assign targetFilePtr string_Y#
-98: CallHeader 14 rename
-99: Parameter 14 sourceFilePtr 6
-100: Parameter 14 targetFilePtr 8
-101: Call 14 rename 0
-102: PostCall 14
-103: GetReturnValue £temporary4993
-104: Equal 107 £temporary4993 0
-105: Goto 114
-106: CheckTrackMapFloatStack
-107: CallHeader 14 printf
-108: Parameter 14 string_2225s2220has20been20renamed20to202225s222E0A# 6
-109: Parameter 14 sourceFilePtr 8
-110: Parameter 14 targetFilePtr 10
-111: Call 14 printf 0
-112: PostCall 14
-113: Goto 126
-114: CallHeader 14 printf
-115: Parameter 14 string_Error2025i3A2025s2E0A# 6
-116: Parameter 14 errno 8
-117: CallHeader 14 strerror
-118: Parameter 14 errno 16
-119: Call 14 strerror 10
-120: PostCall 14
-121: GetReturnValue £temporary4996
-122: Parameter 14 £temporary4996 10
-123: Call 14 printf 0
-124: PostCall 14
-125: Goto 126
-126: Assign targetFilePtr string_Z#
-127: CallHeader 12 remove
-128: Parameter 12 targetFilePtr 6
-129: Call 12 remove 0
-130: PostCall 12
-131: GetReturnValue £temporary4998
-132: Equal 135 £temporary4998 0
-133: Goto 141
-134: CheckTrackMapFloatStack
-135: CallHeader 12 printf
-136: Parameter 12 string_2225s2220has20been20removed2E0A# 6
-137: Parameter 12 targetFilePtr 8
-138: Call 12 printf 0
-139: PostCall 12
-140: Goto 153
-141: CallHeader 12 printf
-142: Parameter 12 string_Error2025i3A2025s2E0A# 6
-143: Parameter 12 errno 8
-144: CallHeader 12 strerror
-145: Parameter 12 errno 16
-146: Call 12 strerror 10
-147: PostCall 12
-148: GetReturnValue £temporary5001
-149: Parameter 12 £temporary5001 10
-150: Call 12 printf 0
-151: PostCall 12
-152: Goto 153
-153: CallHeader 10 fopen
-154: Parameter 10 string_PBook2Etxt# 6
-155: Parameter 10 string_r# 8
-156: Call 10 fopen 0
-157: PostCall 10
-158: GetReturnValue £temporary5003
-159: Assign inFilePtr £temporary5003
-160: NotEqual 175 inFilePtr 0
-161: Goto 163
-162: CheckTrackMapFloatStack
-163: CallHeader 12 fprintf
-164: Parameter 12 stderr 6
-165: Parameter 12 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-166: Parameter 12 string_inFilePtr20213D20NULL# 10
-167: Parameter 12 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-168: Parameter 12 50 14
-169: Call 12 fprintf 0
-170: PostCall 12
-171: CallHeader 12 abort
-172: Call 12 abort 0
-173: PostCall 12
-174: Goto 175
-175: Empty
-176: CallHeader 12 printf
-177: Parameter 12 string_0A252D24s20252D24s0A# 6
-178: Parameter 12 string_Name# 8
-179: Parameter 12 string_Phone# 10
-180: Call 12 printf 0
-181: PostCall 12
-182: CallHeader 12 printf
-183: Parameter 12 string_252D24s20252D24s0A# 6
-184: Parameter 12 string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D# 8
-185: Parameter 12 string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D# 10
-186: Call 12 printf 0
-187: PostCall 12
-188: CallHeader 16 fscanf
-189: Parameter 16 inFilePtr 6
-190: Parameter 16 string_25i# 8
-191: address £temporary5010 size
-192: Parameter 16 £temporary5010 10
-193: Call 16 fscanf 0
-194: PostCall 16
-195: Assign count 0
-196: Empty
-197: SignedLessThan 200 count size
-198: Goto 217
-199: CheckTrackMapFloatStack
-200: Empty
-201: CallHeader 56 fscanf
-202: Parameter 56 inFilePtr 6
-203: Parameter 56 string_25s25s# 8
-204: Parameter 56 name 10
-205: Parameter 56 phone 12
-206: Call 56 fscanf 0
-207: PostCall 56
-208: CallHeader 56 printf
-209: Parameter 56 string_252D24s20252D24s0A# 6
-210: Parameter 56 name 8
-211: Parameter 56 phone 10
-212: Call 56 printf 0
-213: PostCall 56
-214: Empty
-215: BinaryAdd count count 1
-216: Goto 196
-217: CallHeader 12 printf
-218: Parameter 12 string_0A# 6
-219: Call 12 printf 0
-220: PostCall 12
-221: CallHeader 12 fclose
-222: Parameter 12 inFilePtr 6
-223: Call 12 fclose 0
-224: PostCall 12
-225: Assign sourceFilePtr string_Flow12Etxt#
-226: Assign targetFilePtr string_Flow22Etxt#
-227: CallHeader 14 fopen
-228: Parameter 14 sourceFilePtr 6
-229: Parameter 14 string_r# 8
-230: Call 14 fopen 0
-231: PostCall 14
-232: GetReturnValue £temporary5018
-233: Assign inFilePtr £temporary5018
-234: CallHeader 16 fopen
-235: Parameter 16 targetFilePtr 6
-236: Parameter 16 string_w# 8
-237: Call 16 fopen 0
-238: PostCall 16
-239: GetReturnValue £temporary5019
-240: Assign outFilePtr £temporary5019
-241: NotEqual 256 inFilePtr 0
-242: Goto 244
-243: CheckTrackMapFloatStack
-244: CallHeader 18 fprintf
-245: Parameter 18 stderr 6
-246: Parameter 18 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-247: Parameter 18 string_inFilePtr20213D20NULL# 10
-248: Parameter 18 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-249: Parameter 18 79 14
-250: Call 18 fprintf 0
-251: PostCall 18
-252: CallHeader 18 abort
-253: Call 18 abort 0
-254: PostCall 18
-255: Goto 256
-256: Empty
-257: NotEqual 272 outFilePtr 0
-258: Goto 260
-259: CheckTrackMapFloatStack
-260: CallHeader 18 fprintf
-261: Parameter 18 stderr 6
-262: Parameter 18 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-263: Parameter 18 string_outFilePtr20213D20NULL# 10
-264: Parameter 18 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-265: Parameter 18 80 14
-266: Call 18 fprintf 0
-267: PostCall 18
-268: CallHeader 18 abort
-269: Call 18 abort 0
-270: PostCall 18
-271: Goto 272
-272: Empty
-273: Goto 275
-274: CheckTrackMapFloatStack
-275: CallHeader 18 fgetc
-276: Parameter 18 inFilePtr 6
-277: Call 18 fgetc 0
-278: PostCall 18
-279: GetReturnValue £temporary5028
-280: IntegralToIntegral £temporary5029 £temporary5028
-281: Assign c £temporary5029
-282: IntegralToIntegral £temporary5030 c
-283: Equal 286 £temporary5030 -1
-284: Goto 288
-285: CheckTrackMapFloatStack
-286: Goto 304
-287: Goto 288
-288: CallHeader 19 putc
-289: IntegralToIntegral £temporary5032 c
-290: Parameter 19 £temporary5032 6
-291: Parameter 19 outFilePtr 8
-292: Call 19 putc 0
-293: PostCall 19
-294: Equal 297 c 10
-295: Goto 273
-296: CheckTrackMapFloatStack
-297: CallHeader 19 putc
-298: Parameter 19 10 6
-299: Parameter 19 outFilePtr 8
-300: Call 19 putc 0
-301: PostCall 19
-302: Goto 273
-303: Goto 273
-304: CallHeader 18 fclose
-305: Parameter 18 inFilePtr 6
-306: Call 18 fclose 0
-307: PostCall 18
-308: CallHeader 18 fclose
-309: Parameter 18 outFilePtr 6
-310: Call 18 fclose 0
-311: PostCall 18
-312: CallHeader 10 fopen
-313: Parameter 10 string_Test2Ebin# 6
-314: Parameter 10 string_w# 8
-315: Call 10 fopen 0
-316: PostCall 10
-317: GetReturnValue £temporary5039
-318: Assign outFilePtr £temporary5039
-319: NotEqual 334 outFilePtr 0
-320: Goto 322
-321: CheckTrackMapFloatStack
-322: CallHeader 12 fprintf
-323: Parameter 12 stderr 6
-324: Parameter 12 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-325: Parameter 12 string_outFilePtr20213D20NULL# 10
-326: Parameter 12 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-327: Parameter 12 101 14
-328: Call 12 fprintf 0
-329: PostCall 12
-330: CallHeader 12 abort
-331: Call 12 abort 0
-332: PostCall 12
-333: Goto 334
-334: Empty
-335: Assign size 10
-336: CallHeader 16 fwrite
-337: address £temporary5044 size
-338: Parameter 16 £temporary5044 6
-339: Parameter 16 2 8
-340: Parameter 16 1 10
-341: Parameter 16 outFilePtr 12
-342: Call 16 fwrite 0
-343: PostCall 16
-344: Assign index 0
-345: Empty
-346: SignedLessThan 349 index size
-347: Goto 366
-348: CheckTrackMapFloatStack
-349: Empty
-350: SignedMultiply £temporary5048 index index
-351: IntegralToFloating £temporary5049 £temporary5048
-352: PopFloat value
-353: CallHeader 24 fwrite
-354: PushFloat value
-355: PopFloat
-356: address £temporary5050 value
-357: Parameter 24 £temporary5050 6
-358: Parameter 24 8 8
-359: Parameter 24 1 10
-360: Parameter 24 outFilePtr 12
-361: Call 24 fwrite 0
-362: PostCall 24
-363: Empty
-364: BinaryAdd index index 1
-365: Goto 345
-366: CallHeader 16 fclose
-367: Parameter 16 outFilePtr 6
-368: Call 16 fclose 0
-369: PostCall 16
-370: CallHeader 10 fopen
-371: Parameter 10 string_Test2Ebin# 6
-372: Parameter 10 string_r# 8
-373: Call 10 fopen 0
-374: PostCall 10
-375: GetReturnValue £temporary5053
-376: Assign inFilePtr £temporary5053
-377: NotEqual 392 inFilePtr 0
-378: Goto 380
-379: CheckTrackMapFloatStack
-380: CallHeader 12 fprintf
-381: Parameter 12 stderr 6
-382: Parameter 12 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-383: Parameter 12 string_inFilePtr20213D20NULL# 10
-384: Parameter 12 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-385: Parameter 12 116 14
-386: Call 12 fprintf 0
-387: PostCall 12
-388: CallHeader 12 abort
-389: Call 12 abort 0
-390: PostCall 12
-391: Goto 392
-392: Empty
-393: CallHeader 96 fread
-394: address £temporary5058 size
-395: Parameter 96 £temporary5058 6
-396: Parameter 96 2 8
-397: Parameter 96 1 10
-398: Parameter 96 inFilePtr 12
-399: Call 96 fread 0
-400: PostCall 96
-401: CallHeader 96 printf
-402: Parameter 96 string_size12025i0A# 6
-403: Parameter 96 size 8
-404: Call 96 printf 0
-405: PostCall 96
-406: CallHeader 96 fread
-407: address £temporary5061 arr
-408: Parameter 96 £temporary5061 6
-409: Parameter 96 80 8
-410: Parameter 96 1 10
-411: Parameter 96 inFilePtr 12
-412: Call 96 fread 0
-413: PostCall 96
-414: CallHeader 96 fclose
-415: Parameter 96 inFilePtr 6
-416: Call 96 fclose 0
-417: PostCall 96
-418: Assign index 0
-419: Empty
-420: SignedLessThan 423 index 10
-421: Goto 437
-422: CheckTrackMapFloatStack
-423: Empty
-424: CallHeader 96 printf
-425: Parameter 96 string_index12025i3A20value2025f0A# 6
-426: Parameter 96 index 8
-427: UnsignedMultiply £temporary5067 index 8
-428: BinaryAdd £temporary5068 arr £temporary5067
-429: Deref £temporary5066 -> £temporary5068 £temporary5068 0
-430: PushFloat £temporary5066 -> £temporary5068
-431: Parameter 96 £temporary5066 -> £temporary5068 10
-432: Call 96 printf 0
-433: PostCall 96
-434: Empty
-435: BinaryAdd index index 1
-436: Goto 419
-437: CallHeader 12 printf
-438: Parameter 12 string_0A# 6
-439: Call 12 printf 0
-440: PostCall 12
-441: CallHeader 10 fopen
-442: Parameter 10 string_Test2Ebin# 6
-443: Parameter 10 string_r# 8
-444: Call 10 fopen 0
-445: PostCall 10
-446: GetReturnValue £temporary5071
-447: Assign inFilePtr £temporary5071
-448: NotEqual 463 inFilePtr 0
-449: Goto 451
-450: CheckTrackMapFloatStack
-451: CallHeader 16 fprintf
-452: Parameter 16 stderr 6
-453: Parameter 16 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-454: Parameter 16 string_inFilePtr20213D20NULL# 10
-455: Parameter 16 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-456: Parameter 16 137 14
-457: Call 16 fprintf 0
-458: PostCall 16
-459: CallHeader 16 abort
-460: Call 16 abort 0
-461: PostCall 16
-462: Goto 463
-463: Empty
-464: CallHeader 16 fread
-465: address £temporary5076 size
-466: Parameter 16 £temporary5076 6
-467: Parameter 16 2 8
-468: Parameter 16 1 10
-469: Parameter 16 inFilePtr 12
-470: Call 16 fread 0
-471: PostCall 16
-472: CallHeader 16 printf
-473: Parameter 16 string_size22025i0A# 6
-474: Parameter 16 size 8
-475: Call 16 printf 0
-476: PostCall 16
-477: Assign index 0
-478: Empty
-479: SignedLessThan 482 index size
-480: Goto 503
-481: CheckTrackMapFloatStack
-482: Empty
-483: CallHeader 24 fread
-484: PushFloat value
-485: PopFloat
-486: address £temporary5081 value
-487: Parameter 24 £temporary5081 6
-488: Parameter 24 8 8
-489: Parameter 24 1 10
-490: Parameter 24 inFilePtr 12
-491: Call 24 fread 0
-492: PostCall 24
-493: CallHeader 24 printf
-494: Parameter 24 string_index22025i3A20value2025f0A# 6
-495: Parameter 24 index 8
-496: PushFloat value
-497: Parameter 24 value 10
-498: Call 24 printf 0
-499: PostCall 24
-500: Empty
-501: BinaryAdd index index 1
-502: Goto 478
-503: CallHeader 16 printf
-504: Parameter 16 string_0A# 6
-505: Call 16 printf 0
-506: PostCall 16
-507: CallHeader 16 fclose
-508: Parameter 16 inFilePtr 6
-509: Call 16 fclose 0
-510: PostCall 16
-511: CallHeader 10 fopen
-512: Parameter 10 string_Test2Ebin# 6
-513: Parameter 10 string_r# 8
-514: Call 10 fopen 0
-515: PostCall 10
-516: GetReturnValue £temporary5086
-517: Assign inFilePtr £temporary5086
-518: NotEqual 533 inFilePtr 0
-519: Goto 521
-520: CheckTrackMapFloatStack
-521: CallHeader 14 fprintf
-522: Parameter 14 stderr 6
-523: Parameter 14 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-524: Parameter 14 string_inFilePtr20213D20NULL# 10
-525: Parameter 14 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-526: Parameter 14 154 14
-527: Call 14 fprintf 0
-528: PostCall 14
-529: CallHeader 14 abort
-530: Call 14 abort 0
-531: PostCall 14
-532: Goto 533
-533: Empty
-534: CallHeader 14 fread
-535: address £temporary5091 size
-536: Parameter 14 £temporary5091 6
-537: Parameter 14 2 8
-538: Parameter 14 1 10
-539: Parameter 14 inFilePtr 12
-540: Call 14 fread 0
-541: PostCall 14
-542: CallHeader 14 printf
-543: Parameter 14 string_size32025i20total2025i0A# 6
-544: Parameter 14 size 8
-545: SignedMultiply £temporary5093 size 8
-546: Parameter 14 £temporary5093 10
-547: Call 14 printf 0
-548: PostCall 14
-549: SignedMultiply £temporary5095 size 8
-550: Assign total £temporary5095
-551: CallHeader 18 malloc
-552: Parameter 18 total 6
-553: Call 18 malloc 0
-554: PostCall 18
-555: GetReturnValue £temporary5096
-556: Assign p £temporary5096
-557: UnsignedMultiply £temporary5097 size 8
-558: BinaryAdd £temporary5098 p £temporary5097
-559: Assign endPtr £temporary5098
-560: NotEqual 575 p 0
-561: Goto 563
-562: CheckTrackMapFloatStack
-563: CallHeader 22 fprintf
-564: Parameter 22 stderr 6
-565: Parameter 22 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-566: Parameter 22 string_p20213D20NULL# 10
-567: Parameter 22 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-568: Parameter 22 161 14
-569: Call 22 fprintf 0
-570: PostCall 22
-571: CallHeader 22 abort
-572: Call 22 abort 0
-573: PostCall 22
-574: Goto 575
-575: Empty
-576: CallHeader 22 printf
-577: Parameter 22 string_malloc2025u2025u2025u0A# 6
-578: Parameter 22 p 8
-579: Parameter 22 total 10
-580: Parameter 22 endPtr 12
-581: Call 22 printf 0
-582: PostCall 22
-583: CallHeader 22 fread
-584: Parameter 22 p 6
-585: Parameter 22 total 8
-586: Parameter 22 1 10
-587: Parameter 22 inFilePtr 12
-588: Call 22 fread 0
-589: PostCall 22
-590: Assign index 0
-591: Empty
-592: SignedLessThan 595 index size
-593: Goto 609
-594: CheckTrackMapFloatStack
-595: Empty
-596: CallHeader 22 printf
-597: Parameter 22 string_index32025i3A20value2025f0A# 6
-598: Parameter 22 index 8
-599: UnsignedMultiply £temporary5108 index 8
-600: BinaryAdd £temporary5109 p £temporary5108
-601: Deref £temporary5107 -> £temporary5109 £temporary5109 0
-602: PushFloat £temporary5107 -> £temporary5109
-603: Parameter 22 £temporary5107 -> £temporary5109 10
-604: Call 22 printf 0
-605: PostCall 22
-606: Empty
-607: BinaryAdd index index 1
-608: Goto 591
-609: CallHeader 22 printf
-610: Parameter 22 string_0A# 6
-611: Call 22 printf 0
-612: PostCall 22
-613: CallHeader 22 free
-614: Parameter 22 p 6
-615: Call 22 free 0
-616: PostCall 22
-617: CallHeader 14 fclose
-618: Parameter 14 inFilePtr 6
-619: Call 14 fclose 0
-620: PostCall 14
-621: Assign personVector[0]$name[0] 65
-622: Assign personVector[0]$name[1] 100
-623: Assign personVector[0]$name[2] 97
-624: Assign personVector[0]$name[3] 109
-625: Assign personVector[0]$name[4] 32
-626: Assign personVector[0]$name[5] 66
-627: Assign personVector[0]$name[6] 101
-628: Assign personVector[0]$name[7] 114
-629: Assign personVector[0]$name[8] 116
-630: Assign personVector[0]$name[9] 105
-631: Assign personVector[0]$name[10] 108
-632: Assign personVector[0]$name[11] 115
-633: Assign personVector[0]$name[12] 115
-634: Assign personVector[0]$name[13] 111
-635: Assign personVector[0]$name[14] 110
-636: Assign personVector[0]$name[15] 0
-637: Assign personVector[0]$phone 12345
-638: Assign personVector[1]$name[0] 66
-639: Assign personVector[1]$name[1] 101
-640: Assign personVector[1]$name[2] 114
-641: Assign personVector[1]$name[3] 116
-642: Assign personVector[1]$name[4] 105
-643: Assign personVector[1]$name[5] 108
-644: Assign personVector[1]$name[6] 32
-645: Assign personVector[1]$name[7] 67
-646: Assign personVector[1]$name[8] 101
-647: Assign personVector[1]$name[9] 97
-648: Assign personVector[1]$name[10] 115
-649: Assign personVector[1]$name[11] 97
-650: Assign personVector[1]$name[12] 114
-651: Assign personVector[1]$name[13] 115
-652: Assign personVector[1]$name[14] 115
-653: Assign personVector[1]$name[15] 111
-654: Assign personVector[1]$name[16] 110
-655: Assign personVector[1]$name[17] 0
-656: Assign personVector[1]$phone 23456
-657: Assign personVector[2]$name[0] 67
-658: Assign personVector[2]$name[1] 101
-659: Assign personVector[2]$name[2] 97
-660: Assign personVector[2]$name[3] 115
-661: Assign personVector[2]$name[4] 97
-662: Assign personVector[2]$name[5] 114
-663: Assign personVector[2]$name[6] 32
-664: Assign personVector[2]$name[7] 68
-665: Assign personVector[2]$name[8] 97
-666: Assign personVector[2]$name[9] 118
-667: Assign personVector[2]$name[10] 105
-668: Assign personVector[2]$name[11] 100
-669: Assign personVector[2]$name[12] 115
-670: Assign personVector[2]$name[13] 115
-671: Assign personVector[2]$name[14] 111
-672: Assign personVector[2]$name[15] 110
-673: Assign personVector[2]$name[16] 0
-674: Assign personVector[2]$phone 24567
-675: CallHeader 210 fopen
-676: Parameter 210 string_Block2Ebin# 6
-677: Parameter 210 string_w# 8
-678: Call 210 fopen 0
-679: PostCall 210
-680: GetReturnValue £temporary5174
-681: Assign outFilePtr £temporary5174
-682: CallHeader 212 fopen
-683: Parameter 212 string_Block2Ebin# 6
-684: Parameter 212 string_r# 8
-685: Call 212 fopen 0
-686: PostCall 212
-687: GetReturnValue £temporary5175
-688: Assign inFilePtr £temporary5175
-689: NotEqual 704 outFilePtr 0
-690: Goto 692
-691: CheckTrackMapFloatStack
-692: CallHeader 214 fprintf
-693: Parameter 214 stderr 6
-694: Parameter 214 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-695: Parameter 214 string_outFilePtr20213D20NULL# 10
-696: Parameter 214 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-697: Parameter 214 188 14
-698: Call 214 fprintf 0
-699: PostCall 214
-700: CallHeader 214 abort
-701: Call 214 abort 0
-702: PostCall 214
-703: Goto 704
-704: Empty
-705: NotEqual 720 inFilePtr 0
-706: Goto 708
-707: CheckTrackMapFloatStack
-708: CallHeader 214 fprintf
-709: Parameter 214 stderr 6
-710: Parameter 214 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-711: Parameter 214 string_inFilePtr20213D20NULL# 10
-712: Parameter 214 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-713: Parameter 214 189 14
-714: Call 214 fprintf 0
-715: PostCall 214
-716: CallHeader 214 abort
-717: Call 214 abort 0
-718: PostCall 214
-719: Goto 720
-720: Empty
-721: CallHeader 214 fwrite
-722: Parameter 214 personVector 6
-723: Parameter 214 150 8
-724: Parameter 214 1 10
-725: Parameter 214 outFilePtr 12
-726: Call 214 fwrite 0
-727: PostCall 214
-728: CallHeader 214 fclose
-729: Parameter 214 outFilePtr 6
-730: Call 214 fclose 0
-731: PostCall 214
-732: CallHeader 214 feof
-733: Parameter 214 inFilePtr 6
-734: Call 214 feof 0
-735: PostCall 214
-736: GetReturnValue £temporary5186
-737: NotEqual 759 £temporary5186 0
-738: Goto 740
-739: CheckTrackMapFloatStack
-740: CallHeader 214 fread
-741: address £temporary5189 person
-742: Parameter 214 £temporary5189 6
-743: Parameter 214 50 8
-744: Parameter 214 1 10
-745: Parameter 214 inFilePtr 12
-746: Call 214 fread 0
-747: PostCall 214
-748: CallHeader 214 printf
-749: Parameter 214 string_Name20203A2025s0A# 6
-750: Parameter 214 person$name 8
-751: Call 214 printf 0
-752: PostCall 214
-753: CallHeader 214 printf
-754: Parameter 214 string_Phone203A2025d0A# 6
-755: Parameter 214 person$phone 8
-756: Call 214 printf 0
-757: PostCall 214
-758: Goto 732
-759: CallHeader 214 fclose
-760: Parameter 214 inFilePtr 6
-761: Call 214 fclose 0
-762: PostCall 214
-763: CallHeader 10 fopen
-764: Parameter 10 string_Test12Etxt# 6
-765: Parameter 10 string_r# 8
-766: Call 10 fopen 0
-767: PostCall 10
-768: GetReturnValue £temporary5196
-769: Assign inFilePtr £temporary5196
-770: NotEqual 785 inFilePtr 0
-771: Goto 773
-772: CheckTrackMapFloatStack
-773: CallHeader 14 fprintf
-774: Parameter 14 stderr 6
-775: Parameter 14 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-776: Parameter 14 string_inFilePtr20213D20NULL# 10
-777: Parameter 14 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-778: Parameter 14 206 14
-779: Call 14 fprintf 0
-780: PostCall 14
-781: CallHeader 14 abort
-782: Call 14 abort 0
-783: PostCall 14
-784: Goto 785
-785: Empty
-786: CallHeader 14 fseek
-787: Parameter 14 inFilePtr 6
-788: Parameter 14 -1 8
-789: Parameter 14 2 10
-790: Call 14 fseek 0
-791: PostCall 14
-792: CallHeader 14 ftell
-793: Parameter 14 inFilePtr 6
-794: Call 14 ftell 0
-795: PostCall 14
-796: GetReturnValue £temporary5202
-797: IntegralToIntegral £temporary5203 £temporary5202
-798: Assign u £temporary5203
-799: UnsignedGreaterThanEqual 802 u 0
-800: Goto 826
-801: CheckTrackMapFloatStack
-802: CallHeader 14 fgetc
-803: Parameter 14 inFilePtr 6
-804: Call 14 fgetc 0
-805: PostCall 14
-806: GetReturnValue £temporary5205
-807: IntegralToIntegral £temporary5206 £temporary5205
-808: Assign c £temporary5206
-809: CallHeader 15 putchar
-810: IntegralToIntegral £temporary5207 c
-811: Parameter 15 £temporary5207 6
-812: Call 15 putchar 0
-813: PostCall 15
-814: Equal 817 u 0
-815: Goto 819
-816: CheckTrackMapFloatStack
-817: Goto 826
-818: Goto 819
-819: CallHeader 15 fseek
-820: Parameter 15 inFilePtr 6
-821: Parameter 15 -2 8
-822: Parameter 15 1 10
-823: Call 15 fseek 0
-824: PostCall 15
-825: Goto 792
-826: CallHeader 14 printf
-827: Parameter 14 string_0A0A# 6
-828: Call 14 printf 0
-829: PostCall 14
-830: CallHeader 14 fclose
-831: Parameter 14 inFilePtr 6
-832: Call 14 fclose 0
-833: PostCall 14
-834: CallHeader 10 printf
-835: Parameter 10 string_fileexists20X2025s0A# 6
-836: CallHeader 10 fileexists
-837: Parameter 10 string_X# 14
-838: Call 10 fileexists 8
-839: PostCall 10
-840: GetReturnValue £temporary5213
-841: NotEqual 843 £temporary5213 0
-842: Goto 846
-843: Empty
-844: Assign £temporary5218 string_Yes#
-845: Goto 848
-846: Empty
-847: Assign £temporary5218 string_No#
-848: Empty
-849: Parameter 10 £temporary5218 8
-850: Call 10 printf 0
-851: PostCall 10
-852: CallHeader 10 printf
-853: Parameter 10 string_fileexists20Y2025s0A0A# 6
-854: CallHeader 10 fileexists
-855: Parameter 10 string_Y# 14
-856: Call 10 fileexists 8
-857: PostCall 10
-858: GetReturnValue £temporary5220
-859: NotEqual 861 £temporary5220 0
-860: Goto 864
-861: Empty
-862: Assign £temporary5225 string_Yes#
-863: Goto 866
-864: Empty
-865: Assign £temporary5225 string_No#
-866: Empty
-867: Parameter 10 £temporary5225 8
-868: Call 10 printf 0
-869: PostCall 10
-870: CallHeader 12 fopen
-871: Parameter 12 string_PBookX2Etxt# 6
-872: Parameter 12 string_r2B# 8
-873: Call 12 fopen 0
-874: PostCall 12
-875: GetReturnValue £temporary5227
-876: Assign inOutFilePtr £temporary5227
-877: NotEqual 892 inOutFilePtr 0
-878: Goto 880
-879: CheckTrackMapFloatStack
-880: CallHeader 14 fprintf
-881: Parameter 14 stderr 6
-882: Parameter 14 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-883: Parameter 14 string_inOutFilePtr20213D20NULL# 10
-884: Parameter 14 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-885: Parameter 14 229 14
-886: Call 14 fprintf 0
-887: PostCall 14
-888: CallHeader 14 abort
-889: Call 14 abort 0
-890: PostCall 14
-891: Goto 892
-892: Empty
-893: CallHeader 14 tmpfile
-894: Call 14 tmpfile 0
-895: PostCall 14
-896: GetReturnValue £temporary5232
-897: Assign tempFilePtr £temporary5232
-898: NotEqual 913 tempFilePtr 0
-899: Goto 901
-900: CheckTrackMapFloatStack
-901: CallHeader 14 fprintf
-902: Parameter 14 stderr 6
-903: Parameter 14 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-904: Parameter 14 string_tempFilePtr20213D20NULL# 10
-905: Parameter 14 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-906: Parameter 14 232 14
-907: Call 14 fprintf 0
-908: PostCall 14
-909: CallHeader 14 abort
-910: Call 14 abort 0
-911: PostCall 14
-912: Goto 913
-913: Empty
-914: Goto 916
-915: CheckTrackMapFloatStack
-916: CallHeader 14 fgetc
-917: Parameter 14 inOutFilePtr 6
-918: Call 14 fgetc 0
-919: PostCall 14
-920: GetReturnValue £temporary5237
-921: IntegralToIntegral £temporary5238 £temporary5237
-922: Assign c £temporary5238
-923: IntegralToIntegral £temporary5239 c
-924: Equal 927 £temporary5239 -1
-925: Goto 929
-926: CheckTrackMapFloatStack
-927: Goto 941
-928: Goto 929
-929: CallHeader 15 putc
-930: CallHeader 15 toupper
-931: IntegralToIntegral £temporary5241 c
-932: Parameter 15 £temporary5241 6
-933: Call 15 toupper 0
-934: PostCall 15
-935: GetReturnValue £temporary5242
-936: Parameter 15 £temporary5242 6
-937: Parameter 15 tempFilePtr 8
-938: Call 15 putc 0
-939: PostCall 15
-940: Goto 914
-941: CallHeader 14 rewind
-942: Parameter 14 tempFilePtr 6
-943: Call 14 rewind 0
-944: PostCall 14
-945: CallHeader 14 fprintf
-946: Parameter 14 inOutFilePtr 6
-947: Parameter 14 string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A# 8
-948: Call 14 fprintf 0
-949: PostCall 14
-950: Goto 952
-951: CheckTrackMapFloatStack
-952: CallHeader 14 fgetc
-953: Parameter 14 tempFilePtr 6
-954: Call 14 fgetc 0
-955: PostCall 14
-956: GetReturnValue £temporary5247
-957: IntegralToIntegral £temporary5248 £temporary5247
-958: Assign c £temporary5248
-959: IntegralToIntegral £temporary5249 c
-960: Equal 963 £temporary5249 -1
-961: Goto 965
-962: CheckTrackMapFloatStack
-963: Goto 972
-964: Goto 965
-965: CallHeader 15 putc
-966: IntegralToIntegral £temporary5251 c
-967: Parameter 15 £temporary5251 6
-968: Parameter 15 inOutFilePtr 8
-969: Call 15 putc 0
-970: PostCall 15
-971: Goto 950
-972: CallHeader 14 fclose
-973: Parameter 14 inOutFilePtr 6
-974: Call 14 fclose 0
-975: PostCall 14
-976: CallHeader 14 fclose
-977: Parameter 14 tempFilePtr 6
-978: Call 14 fclose 0
-979: PostCall 14
-980: Empty
-981: Return 0
-982: FunctionEnd file_test
+13: Assign outFilePtr £temporary4973
+14: CallHeader 14 printf
+15: Parameter 14 string_25s3A2025li2C2025s3A2025li0A# 6
+16: Parameter 14 inFileName 8
+17: Parameter 14 inFilePtr 10
+18: Parameter 14 outFileName 12
+19: Parameter 14 outFilePtr 14
+20: Call 14 printf 0
+21: PostCall 14
+22: NotEqual 37 inFilePtr 0
+23: Goto 25
+24: CheckTrackMapFloatStack
+25: CallHeader 14 fprintf
+26: Parameter 14 stderr 6
+27: Parameter 14 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
+28: Parameter 14 string_inFilePtr20213D20NULL# 10
+29: Parameter 14 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
+30: Parameter 14 13 14
+31: Call 14 fprintf 0
+32: PostCall 14
+33: CallHeader 14 abort
+34: Call 14 abort 0
+35: PostCall 14
+36: Goto 37
+37: Empty
+38: NotEqual 53 outFilePtr 0
+39: Goto 41
+40: CheckTrackMapFloatStack
+41: CallHeader 14 fprintf
+42: Parameter 14 stderr 6
+43: Parameter 14 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
+44: Parameter 14 string_outFilePtr20213D20NULL# 10
+45: Parameter 14 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
+46: Parameter 14 14 14
+47: Call 14 fprintf 0
+48: PostCall 14
+49: CallHeader 14 abort
+50: Call 14 abort 0
+51: PostCall 14
+52: Goto 53
+53: Empty
+54: Assign size 0
+55: CallHeader 18 fscanf
+56: Parameter 18 inFilePtr 6
+57: Parameter 18 string_25i# 8
+58: address £temporary4983 size
+59: Parameter 18 £temporary4983 10
+60: Call 18 fscanf 0
+61: PostCall 18
+62: CallHeader 18 printf
+63: Parameter 18 string_size2025i0A# 6
+64: Parameter 18 size 8
+65: Call 18 printf 0
+66: PostCall 18
+67: Assign index 0
+68: Empty
+69: SignedLessThan 72 index size
+70: Goto 108
+71: CheckTrackMapFloatStack
+72: Empty
+73: CallHeader 26 fscanf
+74: Parameter 26 inFilePtr 6
+75: Parameter 26 string_25lf# 8
+76: PushFloat value
+77: PopFloat
+78: address £temporary4988 value
+79: Parameter 26 £temporary4988 10
+80: Call 26 fscanf 0
+81: PostCall 26
+82: CallHeader 26 printf
+83: Parameter 26 string_Y20value2025f0A# 6
+84: CallHeader 26 sqrt
+85: PushFloat value
+86: Parameter 26 value 14
+87: Call 26 sqrt 8
+88: PostCall 26
+89: GetReturnValue £temporary4990
+90: Parameter 26 £temporary4990 8
+91: Call 26 printf 0
+92: PostCall 26
+93: CallHeader 26 fprintf
+94: Parameter 26 outFilePtr 6
+95: Parameter 26 string_Z20value2025f0A# 8
+96: CallHeader 26 sqrt
+97: PushFloat value
+98: Parameter 26 value 16
+99: Call 26 sqrt 10
+100: PostCall 26
+101: GetReturnValue £temporary4992
+102: Parameter 26 £temporary4992 10
+103: Call 26 fprintf 0
+104: PostCall 26
+105: Empty
+106: BinaryAdd index index 1
+107: Goto 68
+108: CallHeader 14 fclose
+109: Parameter 14 inFilePtr 6
+110: Call 14 fclose 0
+111: PostCall 14
+112: CallHeader 14 fclose
+113: Parameter 14 outFilePtr 6
+114: Call 14 fclose 0
+115: PostCall 14
+116: Empty
+117: Return 0
+118: FunctionEnd file_test
 0: Assign n 0
-1: address £temporary5526 n
-2: Assign p £temporary5526
+1: address £temporary5034 n
+2: Assign p £temporary5034
 3: CallHeader 10 printf
 4: Parameter 10 string_3C25i3E203C25i3E203C25li3E203C25li3E203C25u3E203C25lu3E0A0A# 6
 5: Parameter 10 123 8
@@ -12316,8 +11452,8 @@
 6: FunctionEnd exit_handle3
 0: Assign a 1
 1: Assign b 1
-2: SignedDivide £temporary5762 a b
-3: Assign c £temporary5762
+2: SignedDivide £temporary5270 a b
+3: Assign c £temporary5270
 4: CallHeader 12 printf
 5: Parameter 12 string_25i0A# 6
 6: Parameter 12 c 8
@@ -12344,9 +11480,9 @@
 27: FunctionEnd signal_test
 0: CallHeader 6 printf
 1: Parameter 6 string_25i20# 6
-2: Assign £temporary5774 i
+2: Assign £temporary5282 i
 3: BinaryAdd i i 1
-4: Parameter 6 £temporary5774 8
+4: Parameter 6 £temporary5282 8
 5: Call 6 printf 0
 6: PostCall 6
 7: CallHeader 6 stack_test
@@ -12360,16 +11496,16 @@
 2: Parameter 10 1024 6
 3: Call 10 malloc 0
 4: PostCall 10
-5: GetReturnValue £temporary5779
-6: Assign pointer £temporary5779
+5: GetReturnValue £temporary5287
+6: Assign pointer £temporary5287
 7: NotEqual 10 pointer 0
 8: Goto 19
 9: CheckTrackMapFloatStack
 10: CallHeader 10 printf
 11: Parameter 10 string_102420bytes2Dblock20number3A2025i0A# 6
-12: Assign £temporary5781 count
+12: Assign £temporary5289 count
 13: BinaryAdd count count 1
-14: Parameter 10 £temporary5781 8
+14: Parameter 10 £temporary5289 8
 15: Parameter 10 pointer 10
 16: Call 10 printf 0
 17: PostCall 10
@@ -12383,8 +11519,8 @@
 3: Parameter 12 96 6
 4: Call 12 malloc 0
 5: PostCall 12
-6: GetReturnValue £temporary5787
-7: Assign q £temporary5787
+6: GetReturnValue £temporary5295
+7: Assign q £temporary5295
 8: Assign index 0
 9: Empty
 10: SignedLessThan 13 index 10
@@ -12395,8 +11531,8 @@
 15: Parameter 14 96 6
 16: Call 14 malloc 0
 17: PostCall 14
-18: GetReturnValue £temporary5790
-19: Assign p £temporary5790
+18: GetReturnValue £temporary5298
+19: Assign p £temporary5298
 20: Equal 23 index 5
 21: Goto 25
 22: CheckTrackMapFloatStack
@@ -12464,36 +11600,36 @@
 2: Parameter 6 1 8
 3: Call 6 calloc 0
 4: PostCall 6
-5: GetReturnValue £temporary5819
-6: Assign a £temporary5819
+5: GetReturnValue £temporary5327
+6: Assign a £temporary5327
 7: CallHeader 8 calloc
 8: Parameter 8 96 6
 9: Parameter 8 1 8
 10: Call 8 calloc 0
 11: PostCall 8
-12: GetReturnValue £temporary5820
-13: Assign b £temporary5820
+12: GetReturnValue £temporary5328
+13: Assign b £temporary5328
 14: CallHeader 10 calloc
 15: Parameter 10 96 6
 16: Parameter 10 1 8
 17: Call 10 calloc 0
 18: PostCall 10
-19: GetReturnValue £temporary5821
-20: Assign c £temporary5821
+19: GetReturnValue £temporary5329
+20: Assign c £temporary5329
 21: CallHeader 12 calloc
 22: Parameter 12 96 6
 23: Parameter 12 1 8
 24: Call 12 calloc 0
 25: PostCall 12
-26: GetReturnValue £temporary5822
-27: Assign d £temporary5822
+26: GetReturnValue £temporary5330
+27: Assign d £temporary5330
 28: CallHeader 14 calloc
 29: Parameter 14 96 6
 30: Parameter 14 1 8
 31: Call 14 calloc 0
 32: PostCall 14
-33: GetReturnValue £temporary5823
-34: Assign e £temporary5823
+33: GetReturnValue £temporary5331
+34: Assign e £temporary5331
 35: CallHeader 16 print_heap
 36: Call 16 print_heap 0
 37: PostCall 16
@@ -12524,13 +11660,13 @@
 62: Return 0
 63: FunctionEnd malloc_test3
 0: Assign lowHeapPtr 65534
-1: InspectRegister £temporary5846 bp
-2: Assign stackTop £temporary5846
+1: InspectRegister £temporary5354 bp
+2: Assign stackTop £temporary5354
 3: CallHeader 10 printf
 4: Parameter 10 string_Stack20Top3A2025u2C20Low20Heap3A2025u0A# 6
 5: Parameter 10 stackTop 8
-6: Deref £temporary5847 -> lowHeapPtr lowHeapPtr 0
-7: Parameter 10 £temporary5847 -> lowHeapPtr 10
+6: Deref £temporary5355 -> lowHeapPtr lowHeapPtr 0
+7: Parameter 10 £temporary5355 -> lowHeapPtr 10
 8: Call 10 printf 0
 9: PostCall 10
 10: CallHeader 10 rec
@@ -12549,20 +11685,20 @@
 1: Parameter 6 96 6
 2: Call 6 malloc 0
 3: PostCall 6
-4: GetReturnValue £temporary5854
-5: Assign b £temporary5854
+4: GetReturnValue £temporary5362
+5: Assign b £temporary5362
 6: CallHeader 8 malloc
 7: Parameter 8 96 6
 8: Call 8 malloc 0
 9: PostCall 8
-10: GetReturnValue £temporary5855
-11: Assign c £temporary5855
+10: GetReturnValue £temporary5363
+11: Assign c £temporary5363
 12: CallHeader 10 malloc
 13: Parameter 10 96 6
 14: Call 10 malloc 0
 15: PostCall 10
-16: GetReturnValue £temporary5856
-17: Assign d £temporary5856
+16: GetReturnValue £temporary5364
+17: Assign d £temporary5364
 18: CallHeader 12 print_heap
 19: Call 12 print_heap 0
 20: PostCall 12
@@ -12599,8 +11735,8 @@
 51: Return 0
 52: FunctionEnd malloc_test
 0: Assign lowHeapPtr 65534
-1: InspectRegister £temporary5874 bp
-2: Assign stackTop £temporary5874
+1: InspectRegister £temporary5382 bp
+2: Assign stackTop £temporary5382
 3: Assign i 0
 4: Empty
 5: SignedLessThan 8 i 1000
@@ -12611,15 +11747,15 @@
 10: Parameter 12 96 6
 11: Call 12 malloc 0
 12: PostCall 12
-13: GetReturnValue £temporary5877
-14: Assign p £temporary5877
+13: GetReturnValue £temporary5385
+14: Assign p £temporary5385
 15: CallHeader 14 printf
 16: Parameter 14 string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A# 6
 17: Parameter 14 i 8
 18: Parameter 14 p 10
 19: Parameter 14 stackTop 12
-20: Deref £temporary5878 -> lowHeapPtr lowHeapPtr 0
-21: Parameter 14 £temporary5878 -> lowHeapPtr 14
+20: Deref £temporary5386 -> lowHeapPtr lowHeapPtr 0
+21: Parameter 14 £temporary5386 -> lowHeapPtr 14
 22: Call 14 printf 0
 23: PostCall 14
 24: Empty
@@ -12628,57 +11764,57 @@
 27: Empty
 28: Return 0
 29: FunctionEnd malloc_test6
-0: IntegralToIntegral £temporary5886 valuePtr1
-1: Deref £temporary5887 -> £temporary5886 £temporary5886 0
-2: Assign intValue1 £temporary5887 -> £temporary5886
-3: IntegralToIntegral £temporary5888 valuePtr2
-4: Deref £temporary5889 -> £temporary5888 £temporary5888 0
-5: Assign intValue2 £temporary5889 -> £temporary5888
+0: IntegralToIntegral £temporary5394 valuePtr1
+1: Deref £temporary5395 -> £temporary5394 £temporary5394 0
+2: Assign intValue1 £temporary5395 -> £temporary5394
+3: IntegralToIntegral £temporary5396 valuePtr2
+4: Deref £temporary5397 -> £temporary5396 £temporary5396 0
+5: Assign intValue2 £temporary5397 -> £temporary5396
 6: SignedLessThan 8 intValue1 intValue2
 7: Goto 11
 8: Empty
-9: Assign £temporary5899 -1
+9: Assign £temporary5407 -1
 10: Goto 21
 11: Empty
 12: Equal 14 intValue1 intValue2
 13: Goto 17
 14: Empty
-15: Assign £temporary5895 0
+15: Assign £temporary5403 0
 16: Goto 19
 17: Empty
-18: Assign £temporary5895 1
+18: Assign £temporary5403 1
 19: Empty
-20: Assign £temporary5899 £temporary5895
+20: Assign £temporary5407 £temporary5403
 21: Empty
-22: SetReturnValue £temporary5899
-23: Return £temporary5899
+22: SetReturnValue £temporary5407
+23: Return £temporary5407
 24: Empty
 25: Return 0
 26: FunctionEnd compare
-0: IntegralToIntegral £temporary5900 valuePtr1
-1: Deref £temporary5901 -> £temporary5900 £temporary5900 0
-2: Assign intValue1 £temporary5901 -> £temporary5900
-3: IntegralToIntegral £temporary5902 valuePtr2
-4: Deref £temporary5903 -> £temporary5902 £temporary5902 0
-5: Assign intValue2 £temporary5903 -> £temporary5902
+0: IntegralToIntegral £temporary5408 valuePtr1
+1: Deref £temporary5409 -> £temporary5408 £temporary5408 0
+2: Assign intValue1 £temporary5409 -> £temporary5408
+3: IntegralToIntegral £temporary5410 valuePtr2
+4: Deref £temporary5411 -> £temporary5410 £temporary5410 0
+5: Assign intValue2 £temporary5411 -> £temporary5410
 6: SignedLessThan 8 intValue1 intValue2
 7: Goto 11
 8: Empty
-9: Assign £temporary5913 1
+9: Assign £temporary5421 1
 10: Goto 21
 11: Empty
 12: Equal 14 intValue1 intValue2
 13: Goto 17
 14: Empty
-15: Assign £temporary5909 0
+15: Assign £temporary5417 0
 16: Goto 19
 17: Empty
-18: Assign £temporary5909 -1
+18: Assign £temporary5417 -1
 19: Empty
-20: Assign £temporary5913 £temporary5909
+20: Assign £temporary5421 £temporary5417
 21: Empty
-22: SetReturnValue £temporary5913
-23: Return £temporary5913
+22: SetReturnValue £temporary5421
+23: Return £temporary5421
 24: Empty
 25: Return 0
 26: FunctionEnd reverse_compare
@@ -12738,8 +11874,8 @@
 6: FunctionEnd hello
 0: CallHeader 8 printf
 1: Parameter 8 string_f3A2025u0A# 6
-2: IntegralToIntegral £temporary5944 f
-3: Parameter 8 £temporary5944 8
+2: IntegralToIntegral £temporary5452 f
+3: Parameter 8 £temporary5452 8
 4: Call 8 printf 0
 5: PostCall 8
 6: CallHeader 8 f
@@ -12750,8 +11886,8 @@
 11: FunctionEnd qtest
 0: CallHeader 6 printf
 1: Parameter 6 string_hello3A2025u0A# 6
-2: IntegralToIntegral £temporary5949 hello
-3: Parameter 6 £temporary5949 8
+2: IntegralToIntegral £temporary5457 hello
+3: Parameter 6 £temporary5457 8
 4: Call 6 printf 0
 5: PostCall 6
 6: CallHeader 6 qtest
@@ -12771,20 +11907,20 @@
 3: Parameter 8 string_1232E456# 14
 4: Call 8 atof 8
 5: PostCall 8
-6: GetReturnValue £temporary5957
-7: Parameter 8 £temporary5957 8
+6: GetReturnValue £temporary5465
+7: Parameter 8 £temporary5465 8
 8: Call 8 printf 0
 9: PostCall 8
 10: CallHeader 8 printf
 11: Parameter 8 string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A# 6
 12: CallHeader 8 strtod
 13: Parameter 8 string_1232E456789abc# 14
-14: address £temporary5959 p
-15: Parameter 8 £temporary5959 16
+14: address £temporary5467 p
+15: Parameter 8 £temporary5467 16
 16: Call 8 strtod 8
 17: PostCall 8
-18: GetReturnValue £temporary5960
-19: Parameter 8 £temporary5960 8
+18: GetReturnValue £temporary5468
+19: Parameter 8 £temporary5468 8
 20: Parameter 8 p 16
 21: Call 8 printf 0
 22: PostCall 8
@@ -12794,8 +11930,8 @@
 26: Parameter 6 string_path# 14
 27: Call 6 getenv 8
 28: PostCall 6
-29: GetReturnValue £temporary5962
-30: Parameter 6 £temporary5962 8
+29: GetReturnValue £temporary5470
+30: Parameter 6 £temporary5470 8
 31: Call 6 printf 0
 32: PostCall 6
 33: CallHeader 6 printf
@@ -12812,14 +11948,14 @@
 44: Parameter 6 -3 14
 45: Call 6 _abs 8
 46: PostCall 6
-47: GetReturnValue £temporary5966
-48: Parameter 6 £temporary5966 8
+47: GetReturnValue £temporary5474
+48: Parameter 6 £temporary5474 8
 49: CallHeader 6 _abs
 50: Parameter 6 3 16
 51: Call 6 _abs 10
 52: PostCall 6
-53: GetReturnValue £temporary5967
-54: Parameter 6 £temporary5967 10
+53: GetReturnValue £temporary5475
+54: Parameter 6 £temporary5475 10
 55: Call 6 printf 0
 56: PostCall 6
 57: CallHeader 6 printf
@@ -12828,14 +11964,14 @@
 60: Parameter 6 -3 14
 61: Call 6 labs 8
 62: PostCall 6
-63: GetReturnValue £temporary5969
-64: Parameter 6 £temporary5969 8
+63: GetReturnValue £temporary5477
+64: Parameter 6 £temporary5477 8
 65: CallHeader 6 labs
 66: Parameter 6 3 18
 67: Call 6 labs 12
 68: PostCall 6
-69: GetReturnValue £temporary5970
-70: Parameter 6 £temporary5970 12
+69: GetReturnValue £temporary5478
+70: Parameter 6 £temporary5478 12
 71: Call 6 printf 0
 72: PostCall 6
 73: CallHeader 6 div
@@ -12843,8 +11979,8 @@
 75: Parameter 6 3 8
 76: Call 6 div 0
 77: PostCall 6
-78: GetReturnValue £temporary5972 -> £temporary5973
-79: Assign i £temporary5972 -> £temporary5973
+78: GetReturnValue £temporary5480 -> £temporary5481
+79: Assign i £temporary5480 -> £temporary5481
 80: CallHeader 10 printf
 81: Parameter 10 string_div_t28102C20329203D202825i2C2025i290A# 6
 82: Parameter 10 i$quot 8
@@ -12856,8 +11992,8 @@
 88: Parameter 10 i 6
 89: Call 10 print_div 0
 90: PostCall 10
-91: GetReturnValue £temporary5977 -> £temporary5978
-92: Assign j £temporary5977 -> £temporary5978
+91: GetReturnValue £temporary5485 -> £temporary5486
+92: Assign j £temporary5485 -> £temporary5486
 93: CallHeader 14 printf
 94: Parameter 14 string_div_t28102C20329203D202825i2C2025i290A0A# 6
 95: Parameter 14 j$quot 8
@@ -12869,8 +12005,8 @@
 101: Parameter 6 3 10
 102: Call 6 ldiv 0
 103: PostCall 6
-104: GetReturnValue £temporary5982 -> £temporary5983
-105: Assign li £temporary5982 -> £temporary5983
+104: GetReturnValue £temporary5490 -> £temporary5491
+105: Assign li £temporary5490 -> £temporary5491
 106: CallHeader 14 printf
 107: Parameter 14 string_ldiv_t28102C20329203D202825li2C2025li290A# 6
 108: Parameter 14 li$quot 8
@@ -12882,8 +12018,8 @@
 114: Parameter 14 li 6
 115: Call 14 print_ldiv 0
 116: PostCall 14
-117: GetReturnValue £temporary5987 -> £temporary5988
-118: Assign lj £temporary5987 -> £temporary5988
+117: GetReturnValue £temporary5495 -> £temporary5496
+118: Assign lj £temporary5495 -> £temporary5496
 119: CallHeader 22 printf
 120: Parameter 22 string_ldiv_t28102C20329203D202825li2C2025li290A0A# 6
 121: Parameter 22 lj$quot 8
@@ -12907,10 +12043,10 @@
 139: Empty
 140: CallHeader 18 printf
 141: Parameter 18 string_25i20# 6
-142: UnsignedMultiply £temporary6000 index 2
-143: BinaryAdd £temporary6001 list £temporary6000
-144: Deref £temporary6002 -> £temporary6001 £temporary6001 0
-145: Parameter 18 £temporary6002 -> £temporary6001 8
+142: UnsignedMultiply £temporary5508 index 2
+143: BinaryAdd £temporary5509 list £temporary5508
+144: Deref £temporary5510 -> £temporary5509 £temporary5509 0
+145: Parameter 18 £temporary5510 -> £temporary5509 8
 146: Call 18 printf 0
 147: PostCall 18
 148: Empty
@@ -12935,10 +12071,10 @@
 167: Empty
 168: CallHeader 18 printf
 169: Parameter 18 string_25i20# 6
-170: UnsignedMultiply £temporary6009 index 2
-171: BinaryAdd £temporary6010 list £temporary6009
-172: Deref £temporary6011 -> £temporary6010 £temporary6010 0
-173: Parameter 18 £temporary6011 -> £temporary6010 8
+170: UnsignedMultiply £temporary5517 index 2
+171: BinaryAdd £temporary5518 list £temporary5517
+172: Deref £temporary5519 -> £temporary5518 £temporary5518 0
+173: Parameter 18 £temporary5519 -> £temporary5518 8
 174: Call 18 printf 0
 175: PostCall 18
 176: Empty
@@ -12963,10 +12099,10 @@
 195: Empty
 196: CallHeader 18 printf
 197: Parameter 18 string_25i20# 6
-198: UnsignedMultiply £temporary6018 index 2
-199: BinaryAdd £temporary6019 list £temporary6018
-200: Deref £temporary6020 -> £temporary6019 £temporary6019 0
-201: Parameter 18 £temporary6020 -> £temporary6019 8
+198: UnsignedMultiply £temporary5526 index 2
+199: BinaryAdd £temporary5527 list £temporary5526
+200: Deref £temporary5528 -> £temporary5527 £temporary5527 0
+201: Parameter 18 £temporary5528 -> £temporary5527 8
 202: Call 18 printf 0
 203: PostCall 18
 204: Empty
@@ -12983,28 +12119,28 @@
 215: CheckTrackMapFloatStack
 216: Empty
 217: CallHeader 18 bsearch
-218: address £temporary6025 key
-219: Parameter 18 £temporary6025 6
+218: address £temporary5533 key
+219: Parameter 18 £temporary5533 6
 220: Parameter 18 list 8
 221: Parameter 18 size 10
 222: Parameter 18 2 12
 223: Parameter 18 compare 14
 224: Call 18 bsearch 0
 225: PostCall 18
-226: GetReturnValue £temporary6027
-227: IntegralToIntegral £temporary6028 £temporary6027
-228: Assign p £temporary6028
+226: GetReturnValue £temporary5535
+227: IntegralToIntegral £temporary5536 £temporary5535
+228: Assign p £temporary5536
 229: NotEqual 231 p 0
 230: Goto 236
 231: Empty
-232: BinarySubtract £temporary6030 p list
-233: UnsignedDivide £temporary6031 £temporary6030 2
-234: Assign £temporary6035 £temporary6031
+232: BinarySubtract £temporary5538 p list
+233: UnsignedDivide £temporary5539 £temporary5538 2
+234: Assign £temporary5543 £temporary5539
 235: Goto 238
 236: Empty
-237: Assign £temporary6035 -1
+237: Assign £temporary5543 -1
 238: Empty
-239: Assign index £temporary6035
+239: Assign index £temporary5543
 240: CallHeader 22 printf
 241: Parameter 22 string_20202825i2C2025i290A# 6
 242: Parameter 22 key 8
@@ -13032,31 +12168,31 @@
 8: Parameter 20 0 6
 9: Call 20 time 0
 10: PostCall 20
-11: GetReturnValue £temporary6123
-12: Assign now1 £temporary6123
+11: GetReturnValue £temporary5631
+12: Assign now1 £temporary5631
 13: CallHeader 24 gmtime
-14: address £temporary6124 now1
-15: Parameter 24 £temporary6124 6
+14: address £temporary5632 now1
+15: Parameter 24 £temporary5632 6
 16: Call 24 gmtime 0
 17: PostCall 24
-18: GetReturnValue £temporary6125
-19: Deref £temporary6126 -> £temporary6125 £temporary6125 0
-20: Assign s £temporary6126 -> £temporary6125
+18: GetReturnValue £temporary5633
+19: Deref £temporary5634 -> £temporary5633 £temporary5633 0
+20: Assign s £temporary5634 -> £temporary5633
 21: CallHeader 42 localtime
-22: address £temporary6127 now1
-23: Parameter 42 £temporary6127 6
+22: address £temporary5635 now1
+23: Parameter 42 £temporary5635 6
 24: Call 42 localtime 0
 25: PostCall 42
-26: GetReturnValue £temporary6128
-27: Deref £temporary6129 -> £temporary6128 £temporary6128 0
-28: Assign t £temporary6129 -> £temporary6128
+26: GetReturnValue £temporary5636
+27: Deref £temporary5637 -> £temporary5636 £temporary5636 0
+28: Assign t £temporary5637 -> £temporary5636
 29: CallHeader 60 mktime
-30: address £temporary6130 s
-31: Parameter 60 £temporary6130 6
+30: address £temporary5638 s
+31: Parameter 60 £temporary5638 6
 32: Call 60 mktime 0
 33: PostCall 60
-34: GetReturnValue £temporary6131
-35: Assign now2 £temporary6131
+34: GetReturnValue £temporary5639
+35: Assign now2 £temporary5639
 36: CallHeader 64 printf
 37: Parameter 64 string_now2013A2025lu0A# 6
 38: Parameter 64 now1 8
@@ -13069,14 +12205,14 @@
 45: PostCall 64
 46: CallHeader 64 printf
 47: Parameter 64 string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A# 6
-48: UnsignedMultiply £temporary6136 s$tm_wday 2
-49: BinaryAdd £temporary6137 weekdays £temporary6136
-50: Deref £temporary6135 -> £temporary6137 £temporary6137 0
-51: Parameter 64 £temporary6135 -> £temporary6137 8
-52: BinaryAdd £temporary6139 1900 s$tm_year
-53: Parameter 64 £temporary6139 10
-54: BinaryAdd £temporary6141 s$tm_mon 1
-55: Parameter 64 £temporary6141 12
+48: UnsignedMultiply £temporary5644 s$tm_wday 2
+49: BinaryAdd £temporary5645 weekdays £temporary5644
+50: Deref £temporary5643 -> £temporary5645 £temporary5645 0
+51: Parameter 64 £temporary5643 -> £temporary5645 8
+52: BinaryAdd £temporary5647 1900 s$tm_year
+53: Parameter 64 £temporary5647 10
+54: BinaryAdd £temporary5649 s$tm_mon 1
+55: Parameter 64 £temporary5649 12
 56: Parameter 64 s$tm_mday 14
 57: Parameter 64 s$tm_hour 16
 58: Parameter 64 s$tm_min 18
@@ -13088,14 +12224,14 @@
 64: PostCall 64
 65: CallHeader 64 printf
 66: Parameter 64 string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A# 6
-67: UnsignedMultiply £temporary6152 t$tm_wday 2
-68: BinaryAdd £temporary6153 weekdays £temporary6152
-69: Deref £temporary6151 -> £temporary6153 £temporary6153 0
-70: Parameter 64 £temporary6151 -> £temporary6153 8
-71: BinaryAdd £temporary6155 1900 t$tm_year
-72: Parameter 64 £temporary6155 10
-73: BinaryAdd £temporary6157 t$tm_mon 1
-74: Parameter 64 £temporary6157 12
+67: UnsignedMultiply £temporary5660 t$tm_wday 2
+68: BinaryAdd £temporary5661 weekdays £temporary5660
+69: Deref £temporary5659 -> £temporary5661 £temporary5661 0
+70: Parameter 64 £temporary5659 -> £temporary5661 8
+71: BinaryAdd £temporary5663 1900 t$tm_year
+72: Parameter 64 £temporary5663 10
+73: BinaryAdd £temporary5665 t$tm_mon 1
+74: Parameter 64 £temporary5665 12
 75: Parameter 64 t$tm_mday 14
 76: Parameter 64 t$tm_hour 16
 77: Parameter 64 t$tm_min 18
@@ -13108,23 +12244,23 @@
 84: CallHeader 566 strcpy
 85: Parameter 566 buffer1 6
 86: CallHeader 566 asctime
-87: address £temporary6166 s
-88: Parameter 566 £temporary6166 14
+87: address £temporary5674 s
+88: Parameter 566 £temporary5674 14
 89: Call 566 asctime 8
 90: PostCall 566
-91: GetReturnValue £temporary6167
-92: Parameter 566 £temporary6167 8
+91: GetReturnValue £temporary5675
+92: Parameter 566 £temporary5675 8
 93: Call 566 strcpy 0
 94: PostCall 566
 95: CallHeader 566 strcpy
 96: Parameter 566 buffer2 6
 97: CallHeader 566 ctime
-98: address £temporary6169 now1
-99: Parameter 566 £temporary6169 14
+98: address £temporary5677 now1
+99: Parameter 566 £temporary5677 14
 100: Call 566 ctime 8
 101: PostCall 566
-102: GetReturnValue £temporary6170
-103: Parameter 566 £temporary6170 8
+102: GetReturnValue £temporary5678
+103: Parameter 566 £temporary5678 8
 104: Call 566 strcpy 0
 105: PostCall 566
 106: CallHeader 566 printf
@@ -13137,12 +12273,12 @@
 113: Parameter 566 buffer 6
 114: Parameter 566 300 8
 115: Parameter 566 string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y# 10
-116: address £temporary6173 t
-117: Parameter 566 £temporary6173 12
+116: address £temporary5681 t
+117: Parameter 566 £temporary5681 12
 118: Call 566 strftime 0
 119: PostCall 566
-120: GetReturnValue £temporary6174
-121: Assign i £temporary6174
+120: GetReturnValue £temporary5682
+121: Assign i £temporary5682
 122: CallHeader 566 printf
 123: Parameter 566 string_strftime2025i2025i203C25s3E0A# 6
 124: Parameter 566 i 8
@@ -13150,8 +12286,8 @@
 126: Parameter 566 buffer 16
 127: Call 566 strlen 10
 128: PostCall 566
-129: GetReturnValue £temporary6175
-130: Parameter 566 £temporary6175 10
+129: GetReturnValue £temporary5683
+130: Parameter 566 £temporary5683 10
 131: Parameter 566 buffer 12
 132: Call 566 printf 0
 133: PostCall 566

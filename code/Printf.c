@@ -59,7 +59,7 @@ void printChar(char c) {
         register_rax = 0x01L;
         register_rdi = (unsigned long) stream->handle;
         register_rsi = (unsigned long) &c;
-        register_rdx = 1L;
+        register_rdx = 1;
         syscall();
 #endif
         ++g_outChars;

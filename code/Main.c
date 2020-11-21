@@ -206,7 +206,7 @@ void main() {
   //stdlib_test();
   //string_test();
   //time_test();
-  file_test("in_test", "out_test");
+  file_test("in.txt", "out.txt");
   /*time_t now = time(NULL);
   struct tm s = *gmtime(&now);
   char* weekdays[] = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };

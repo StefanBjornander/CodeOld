@@ -1,841 +1,103 @@
 0: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-1: Parameter 10 inFilePtrName 6
+1: Parameter 10 inFileName 6
 2: Parameter 10 string_r# 8
 3: Call 10 fopen 0
 4: PostCall 10
 5: GetReturnValue £temporary4972
-6: Assign inFilePtrPtr £temporary4972
+6: Assign inFilePtr £temporary4972
 7: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-8: Parameter 12 outFilePtrName 6
+8: Parameter 12 outFileName 6
 9: Parameter 12 string_w# 8
 10: Call 12 fopen 0
 11: PostCall 12
 12: GetReturnValue £temporary4973
-13: Assign outFilePtrPtr £temporary4973
-14: NotEqual 26 inFilePtrPtr 0
-15: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-16: Parameter 14 stderr 6
-17: Parameter 14 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-18: Parameter 14 string_inFilePtrPtr20213D20NULL# 10
-19: Parameter 14 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-20: Parameter 14 11 14
-21: Call 14 fprintf 0
-22: PostCall 14
+13: Assign outFilePtr £temporary4973
+14: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+15: Parameter 14 string_25s3A2025li2C2025s3A2025li0A# 6
+16: Parameter 14 inFileName 8
+17: Parameter 14 inFilePtr 10
+18: Parameter 14 outFileName 12
+19: Parameter 14 outFilePtr 14
+20: Call 14 printf 0
+21: PostCall 14
+22: NotEqual 34 inFilePtr 0
 23: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-24: Call 14 abort 0
-25: PostCall 14
-26: NotEqual 38 outFilePtrPtr 0
-27: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-28: Parameter 14 stderr 6
-29: Parameter 14 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-30: Parameter 14 string_outFilePtrPtr20213D20NULL# 10
-31: Parameter 14 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-32: Parameter 14 12 14
-33: Call 14 fprintf 0
-34: PostCall 14
+24: Parameter 14 stderr 6
+25: Parameter 14 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
+26: Parameter 14 string_inFilePtr20213D20NULL# 10
+27: Parameter 14 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
+28: Parameter 14 13 14
+29: Call 14 fprintf 0
+30: PostCall 14
+31: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+32: Call 14 abort 0
+33: PostCall 14
+34: NotEqual 46 outFilePtr 0
 35: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-36: Call 14 abort 0
-37: PostCall 14
-38: Assign size 0
-39: CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-40: Parameter 18 inFilePtrPtr 6
-41: Parameter 18 string_25i# 8
-42: address £temporary4982 size
-43: Parameter 18 £temporary4982 10
-44: Call 18 fscanf 0
-45: PostCall 18
-46: Assign index 0
-47: SignedGreaterThanEqual 73 index size
-48: PushZero
-49: PopFloat inValue
-50: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-51: PushFloat inValue
-52: Parameter 26 £temporary4986 6
-53: Call 26 sqrt 0
-54: PostCall 26
-55: GetReturnValue £temporary4987
-56: PopFloat outValue
-57: CallHeader 34 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-58: Parameter 34 inFilePtrPtr 6
-59: Parameter 34 string_25lf# 8
-60: address £temporary4988 inValue
-61: Parameter 34 £temporary4988 10
-62: Call 34 fscanf 0
-63: PostCall 34
-64: CallHeader 34 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-65: Parameter 34 outFilePtrPtr 6
-66: Parameter 34 string_25f0A# 8
-67: PushFloat outValue
-68: Parameter 34 outValue 10
-69: Call 34 fprintf 0
-70: PostCall 34
-71: Increment index
-72: Goto 47
-73: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-74: Parameter 14 inFilePtrPtr 6
-75: Call 14 fclose 0
-76: PostCall 14
-77: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-78: Parameter 14 outFilePtrPtr 6
-79: Call 14 fclose 0
-80: PostCall 14
-81: Assign sourceFilePtr string_X#
-82: Assign targetFilePtr string_Y#
-83: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-84: Parameter 14 sourceFilePtr 6
-85: Parameter 14 targetFilePtr 8
-86: Call 14 rename 0
-87: PostCall 14
-88: GetReturnValue £temporary4993
-89: NotEqual 97 £temporary4993 0
-90: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-91: Parameter 14 string_2225s2220has20been20renamed20to202225s222E0A# 6
-92: Parameter 14 sourceFilePtr 8
-93: Parameter 14 targetFilePtr 10
-94: Call 14 printf 0
-95: PostCall 14
-96: Goto 108
+36: Parameter 14 stderr 6
+37: Parameter 14 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
+38: Parameter 14 string_outFilePtr20213D20NULL# 10
+39: Parameter 14 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
+40: Parameter 14 14 14
+41: Call 14 fprintf 0
+42: PostCall 14
+43: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+44: Call 14 abort 0
+45: PostCall 14
+46: Assign size 0
+47: CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+48: Parameter 18 inFilePtr 6
+49: Parameter 18 string_25i# 8
+50: address £temporary4983 size
+51: Parameter 18 £temporary4983 10
+52: Call 18 fscanf 0
+53: PostCall 18
+54: CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+55: Parameter 18 string_size2025i0A# 6
+56: Parameter 18 size 8
+57: Call 18 printf 0
+58: PostCall 18
+59: Assign index 0
+60: SignedGreaterThanEqual 93 index size
+61: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+62: Parameter 26 inFilePtr 6
+63: Parameter 26 string_25lf# 8
+64: address £temporary4988 value
+65: Parameter 26 £temporary4988 10
+66: Call 26 fscanf 0
+67: PostCall 26
+68: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+69: Parameter 26 string_Y20value2025f0A# 6
+70: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+71: PushFloat value
+72: Parameter 26 value 14
+73: Call 26 sqrt 8
+74: PostCall 26
+75: GetReturnValue £temporary4990
+76: Parameter 26 £temporary4990 8
+77: Call 26 printf 0
+78: PostCall 26
+79: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+80: Parameter 26 outFilePtr 6
+81: Parameter 26 string_Z20value2025f0A# 8
+82: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+83: PushFloat value
+84: Parameter 26 value 16
+85: Call 26 sqrt 10
+86: PostCall 26
+87: GetReturnValue £temporary4992
+88: Parameter 26 £temporary4992 10
+89: Call 26 fprintf 0
+90: PostCall 26
+91: Increment index
+92: Goto 60
+93: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+94: Parameter 14 inFilePtr 6
+95: Call 14 fclose 0
+96: PostCall 14
 97: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-98: Parameter 14 string_Error2025i3A2025s2E0A# 6
-99: Parameter 14 errno 8
-100: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-101: Parameter 14 errno 16
-102: Call 14 strerror 10
-103: PostCall 14
-104: GetReturnValue £temporary4996
-105: Parameter 14 £temporary4996 10
-106: Call 14 printf 0
-107: PostCall 14
-108: Assign targetFilePtr string_Z#
-109: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-110: Parameter 12 targetFilePtr 6
-111: Call 12 remove 0
-112: PostCall 12
-113: GetReturnValue £temporary4998
-114: NotEqual 121 £temporary4998 0
-115: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-116: Parameter 12 string_2225s2220has20been20removed2E0A# 6
-117: Parameter 12 targetFilePtr 8
-118: Call 12 printf 0
-119: PostCall 12
-120: Goto 132
-121: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-122: Parameter 12 string_Error2025i3A2025s2E0A# 6
-123: Parameter 12 errno 8
-124: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-125: Parameter 12 errno 16
-126: Call 12 strerror 10
-127: PostCall 12
-128: GetReturnValue £temporary5001
-129: Parameter 12 £temporary5001 10
-130: Call 12 printf 0
-131: PostCall 12
-132: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-133: Parameter 10 string_PBook2Etxt# 6
-134: Parameter 10 string_r# 8
-135: Call 10 fopen 0
-136: PostCall 10
-137: GetReturnValue £temporary5003
-138: Assign inFilePtr £temporary5003
-139: NotEqual 151 inFilePtr 0
-140: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-141: Parameter 12 stderr 6
-142: Parameter 12 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-143: Parameter 12 string_inFilePtr20213D20NULL# 10
-144: Parameter 12 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-145: Parameter 12 50 14
-146: Call 12 fprintf 0
-147: PostCall 12
-148: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-149: Call 12 abort 0
-150: PostCall 12
-151: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-152: Parameter 12 string_0A252D24s20252D24s0A# 6
-153: Parameter 12 string_Name# 8
-154: Parameter 12 string_Phone# 10
-155: Call 12 printf 0
-156: PostCall 12
-157: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-158: Parameter 12 string_252D24s20252D24s0A# 6
-159: Parameter 12 string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D# 8
-160: Parameter 12 string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D# 10
-161: Call 12 printf 0
-162: PostCall 12
-163: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-164: Parameter 16 inFilePtr 6
-165: Parameter 16 string_25i# 8
-166: address £temporary5010 size
-167: Parameter 16 £temporary5010 10
-168: Call 16 fscanf 0
-169: PostCall 16
-170: Assign count 0
-171: SignedGreaterThanEqual 187 count size
-172: CallHeader 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-173: Parameter 56 inFilePtr 6
-174: Parameter 56 string_25s25s# 8
-175: Parameter 56 name 10
-176: Parameter 56 phone 12
-177: Call 56 fscanf 0
-178: PostCall 56
-179: CallHeader 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-180: Parameter 56 string_252D24s20252D24s0A# 6
-181: Parameter 56 name 8
-182: Parameter 56 phone 10
-183: Call 56 printf 0
-184: PostCall 56
-185: Increment count
-186: Goto 171
-187: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-188: Parameter 12 string_0A# 6
-189: Call 12 printf 0
-190: PostCall 12
-191: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-192: Parameter 12 inFilePtr 6
-193: Call 12 fclose 0
-194: PostCall 12
-195: Assign sourceFilePtr string_Flow12Etxt#
-196: Assign targetFilePtr string_Flow22Etxt#
-197: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-198: Parameter 14 sourceFilePtr 6
-199: Parameter 14 string_r# 8
-200: Call 14 fopen 0
-201: PostCall 14
-202: GetReturnValue £temporary5018
-203: Assign inFilePtr £temporary5018
-204: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-205: Parameter 16 targetFilePtr 6
-206: Parameter 16 string_w# 8
-207: Call 16 fopen 0
-208: PostCall 16
-209: GetReturnValue £temporary5019
-210: Assign outFilePtr £temporary5019
-211: NotEqual 223 inFilePtr 0
-212: CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-213: Parameter 18 stderr 6
-214: Parameter 18 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-215: Parameter 18 string_inFilePtr20213D20NULL# 10
-216: Parameter 18 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-217: Parameter 18 79 14
-218: Call 18 fprintf 0
-219: PostCall 18
-220: CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-221: Call 18 abort 0
-222: PostCall 18
-223: NotEqual 235 outFilePtr 0
-224: CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-225: Parameter 18 stderr 6
-226: Parameter 18 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-227: Parameter 18 string_outFilePtr20213D20NULL# 10
-228: Parameter 18 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-229: Parameter 18 80 14
-230: Call 18 fprintf 0
-231: PostCall 18
-232: CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-233: Call 18 abort 0
-234: PostCall 18
-235: CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-236: Parameter 18 inFilePtr 6
-237: Call 18 fgetc 0
-238: PostCall 18
-239: GetReturnValue £temporary5028
-240: IntegralToIntegral £temporary5029 £temporary5028
-241: Assign c £temporary5029
-242: IntegralToIntegral £temporary5030 c
-243: Equal 257 £temporary5030 -1
-244: CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-245: IntegralToIntegral £temporary5032 c
-246: Parameter 19 £temporary5032 6
-247: Parameter 19 outFilePtr 8
-248: Call 19 putc 0
-249: PostCall 19
-250: NotEqual 235 c 10
-251: CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-252: Parameter 19 10 6
-253: Parameter 19 outFilePtr 8
-254: Call 19 putc 0
-255: PostCall 19
-256: Goto 235
-257: CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-258: Parameter 18 inFilePtr 6
-259: Call 18 fclose 0
-260: PostCall 18
-261: CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-262: Parameter 18 outFilePtr 6
-263: Call 18 fclose 0
-264: PostCall 18
-265: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-266: Parameter 10 string_Test2Ebin# 6
-267: Parameter 10 string_w# 8
-268: Call 10 fopen 0
-269: PostCall 10
-270: GetReturnValue £temporary5039
-271: Assign outFilePtr £temporary5039
-272: NotEqual 284 outFilePtr 0
-273: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-274: Parameter 12 stderr 6
-275: Parameter 12 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-276: Parameter 12 string_outFilePtr20213D20NULL# 10
-277: Parameter 12 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-278: Parameter 12 101 14
-279: Call 12 fprintf 0
-280: PostCall 12
-281: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-282: Call 12 abort 0
-283: PostCall 12
-284: Assign size 10
-285: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-286: address £temporary5044 size
-287: Parameter 16 £temporary5044 6
-288: Parameter 16 2 8
-289: Parameter 16 1 10
-290: Parameter 16 outFilePtr 12
-291: Call 16 fwrite 0
-292: PostCall 16
-293: Assign index 0
-294: SignedGreaterThanEqual 308 index size
-295: SignedMultiply £temporary5048 index index
-296: IntegralToFloating £temporary5049 £temporary5048
-297: PopFloat value
-298: CallHeader 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-299: address £temporary5050 value
-300: Parameter 24 £temporary5050 6
-301: Parameter 24 8 8
-302: Parameter 24 1 10
-303: Parameter 24 outFilePtr 12
-304: Call 24 fwrite 0
-305: PostCall 24
-306: Increment index
-307: Goto 294
-308: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-309: Parameter 16 outFilePtr 6
-310: Call 16 fclose 0
-311: PostCall 16
-312: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-313: Parameter 10 string_Test2Ebin# 6
-314: Parameter 10 string_r# 8
-315: Call 10 fopen 0
-316: PostCall 10
-317: GetReturnValue £temporary5053
-318: Assign inFilePtr £temporary5053
-319: NotEqual 331 inFilePtr 0
-320: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-321: Parameter 12 stderr 6
-322: Parameter 12 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-323: Parameter 12 string_inFilePtr20213D20NULL# 10
-324: Parameter 12 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-325: Parameter 12 116 14
-326: Call 12 fprintf 0
-327: PostCall 12
-328: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-329: Call 12 abort 0
-330: PostCall 12
-331: CallHeader 96 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-332: address £temporary5058 size
-333: Parameter 96 £temporary5058 6
-334: Parameter 96 2 8
-335: Parameter 96 1 10
-336: Parameter 96 inFilePtr 12
-337: Call 96 fread 0
-338: PostCall 96
-339: CallHeader 96 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-340: Parameter 96 string_size12025i0A# 6
-341: Parameter 96 size 8
-342: Call 96 printf 0
-343: PostCall 96
-344: CallHeader 96 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-345: address £temporary5061 arr
-346: Parameter 96 £temporary5061 6
-347: Parameter 96 80 8
-348: Parameter 96 1 10
-349: Parameter 96 inFilePtr 12
-350: Call 96 fread 0
-351: PostCall 96
-352: CallHeader 96 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-353: Parameter 96 inFilePtr 6
-354: Call 96 fclose 0
-355: PostCall 96
-356: Assign index 0
-357: SignedGreaterThanEqual 370 index 10
-358: CallHeader 96 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-359: Parameter 96 string_index12025i3A20value2025f0A# 6
-360: Parameter 96 index 8
-361: UnsignedMultiply £temporary5067 index 8
-362: BinaryAdd £temporary5068 arr £temporary5067
-363: Deref £temporary5066 -> £temporary5068 £temporary5068 0
-364: PushFloat £temporary5066 -> £temporary5068
-365: Parameter 96 £temporary5066 -> £temporary5068 10
-366: Call 96 printf 0
-367: PostCall 96
-368: Increment index
-369: Goto 357
-370: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-371: Parameter 12 string_0A# 6
-372: Call 12 printf 0
-373: PostCall 12
-374: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-375: Parameter 10 string_Test2Ebin# 6
-376: Parameter 10 string_r# 8
-377: Call 10 fopen 0
-378: PostCall 10
-379: GetReturnValue £temporary5071
-380: Assign inFilePtr £temporary5071
-381: NotEqual 393 inFilePtr 0
-382: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-383: Parameter 16 stderr 6
-384: Parameter 16 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-385: Parameter 16 string_inFilePtr20213D20NULL# 10
-386: Parameter 16 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-387: Parameter 16 137 14
-388: Call 16 fprintf 0
-389: PostCall 16
-390: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-391: Call 16 abort 0
-392: PostCall 16
-393: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-394: address £temporary5076 size
-395: Parameter 16 £temporary5076 6
-396: Parameter 16 2 8
-397: Parameter 16 1 10
-398: Parameter 16 inFilePtr 12
-399: Call 16 fread 0
-400: PostCall 16
-401: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-402: Parameter 16 string_size22025i0A# 6
-403: Parameter 16 size 8
-404: Call 16 printf 0
-405: PostCall 16
-406: Assign index 0
-407: SignedGreaterThanEqual 425 index size
-408: CallHeader 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-409: address £temporary5081 value
-410: Parameter 24 £temporary5081 6
-411: Parameter 24 8 8
-412: Parameter 24 1 10
-413: Parameter 24 inFilePtr 12
-414: Call 24 fread 0
-415: PostCall 24
-416: CallHeader 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-417: Parameter 24 string_index22025i3A20value2025f0A# 6
-418: Parameter 24 index 8
-419: PushFloat value
-420: Parameter 24 value 10
-421: Call 24 printf 0
-422: PostCall 24
-423: Increment index
-424: Goto 407
-425: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-426: Parameter 16 string_0A# 6
-427: Call 16 printf 0
-428: PostCall 16
-429: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-430: Parameter 16 inFilePtr 6
-431: Call 16 fclose 0
-432: PostCall 16
-433: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-434: Parameter 10 string_Test2Ebin# 6
-435: Parameter 10 string_r# 8
-436: Call 10 fopen 0
-437: PostCall 10
-438: GetReturnValue £temporary5086
-439: Assign inFilePtr £temporary5086
-440: NotEqual 452 inFilePtr 0
-441: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-442: Parameter 14 stderr 6
-443: Parameter 14 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-444: Parameter 14 string_inFilePtr20213D20NULL# 10
-445: Parameter 14 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-446: Parameter 14 154 14
-447: Call 14 fprintf 0
-448: PostCall 14
-449: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-450: Call 14 abort 0
-451: PostCall 14
-452: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-453: address £temporary5091 size
-454: Parameter 14 £temporary5091 6
-455: Parameter 14 2 8
-456: Parameter 14 1 10
-457: Parameter 14 inFilePtr 12
-458: Call 14 fread 0
-459: PostCall 14
-460: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-461: Parameter 14 string_size32025i20total2025i0A# 6
-462: Parameter 14 size 8
-463: SignedMultiply £temporary5093 size 8
-464: Parameter 14 £temporary5093 10
-465: Call 14 printf 0
-466: PostCall 14
-467: SignedMultiply total size 8
-468: CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-469: Parameter 18 total 6
-470: Call 18 malloc 0
-471: PostCall 18
-472: GetReturnValue £temporary5096
-473: Assign p £temporary5096
-474: UnsignedMultiply £temporary5097 size 8
-475: BinaryAdd endPtr p £temporary5097
-476: NotEqual 488 p 0
-477: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-478: Parameter 22 stderr 6
-479: Parameter 22 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-480: Parameter 22 string_p20213D20NULL# 10
-481: Parameter 22 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-482: Parameter 22 161 14
-483: Call 22 fprintf 0
-484: PostCall 22
-485: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-486: Call 22 abort 0
-487: PostCall 22
-488: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-489: Parameter 22 string_malloc2025u2025u2025u0A# 6
-490: Parameter 22 p 8
-491: Parameter 22 total 10
-492: Parameter 22 endPtr 12
-493: Call 22 printf 0
-494: PostCall 22
-495: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-496: Parameter 22 p 6
-497: Parameter 22 total 8
-498: Parameter 22 1 10
-499: Parameter 22 inFilePtr 12
-500: Call 22 fread 0
-501: PostCall 22
-502: Assign index 0
-503: SignedGreaterThanEqual 516 index size
-504: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-505: Parameter 22 string_index32025i3A20value2025f0A# 6
-506: Parameter 22 index 8
-507: UnsignedMultiply £temporary5108 index 8
-508: BinaryAdd £temporary5109 p £temporary5108
-509: Deref £temporary5107 -> £temporary5109 £temporary5109 0
-510: PushFloat £temporary5107 -> £temporary5109
-511: Parameter 22 £temporary5107 -> £temporary5109 10
-512: Call 22 printf 0
-513: PostCall 22
-514: Increment index
-515: Goto 503
-516: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-517: Parameter 22 string_0A# 6
-518: Call 22 printf 0
-519: PostCall 22
-520: CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-521: Parameter 22 p 6
-522: Call 22 free 0
-523: PostCall 22
-524: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-525: Parameter 14 inFilePtr 6
-526: Call 14 fclose 0
-527: PostCall 14
-528: Assign personVector[0]$name[0] 65
-529: Assign personVector[0]$name[1] 100
-530: Assign personVector[0]$name[2] 97
-531: Assign personVector[0]$name[3] 109
-532: Assign personVector[0]$name[4] 32
-533: Assign personVector[0]$name[5] 66
-534: Assign personVector[0]$name[6] 101
-535: Assign personVector[0]$name[7] 114
-536: Assign personVector[0]$name[8] 116
-537: Assign personVector[0]$name[9] 105
-538: Assign personVector[0]$name[10] 108
-539: Assign personVector[0]$name[11] 115
-540: Assign personVector[0]$name[12] 115
-541: Assign personVector[0]$name[13] 111
-542: Assign personVector[0]$name[14] 110
-543: Assign personVector[0]$name[15] 0
-544: Assign personVector[0]$phone 12345
-545: Assign personVector[1]$name[0] 66
-546: Assign personVector[1]$name[1] 101
-547: Assign personVector[1]$name[2] 114
-548: Assign personVector[1]$name[3] 116
-549: Assign personVector[1]$name[4] 105
-550: Assign personVector[1]$name[5] 108
-551: Assign personVector[1]$name[6] 32
-552: Assign personVector[1]$name[7] 67
-553: Assign personVector[1]$name[8] 101
-554: Assign personVector[1]$name[9] 97
-555: Assign personVector[1]$name[10] 115
-556: Assign personVector[1]$name[11] 97
-557: Assign personVector[1]$name[12] 114
-558: Assign personVector[1]$name[13] 115
-559: Assign personVector[1]$name[14] 115
-560: Assign personVector[1]$name[15] 111
-561: Assign personVector[1]$name[16] 110
-562: Assign personVector[1]$name[17] 0
-563: Assign personVector[1]$phone 23456
-564: Assign personVector[2]$name[0] 67
-565: Assign personVector[2]$name[1] 101
-566: Assign personVector[2]$name[2] 97
-567: Assign personVector[2]$name[3] 115
-568: Assign personVector[2]$name[4] 97
-569: Assign personVector[2]$name[5] 114
-570: Assign personVector[2]$name[6] 32
-571: Assign personVector[2]$name[7] 68
-572: Assign personVector[2]$name[8] 97
-573: Assign personVector[2]$name[9] 118
-574: Assign personVector[2]$name[10] 105
-575: Assign personVector[2]$name[11] 100
-576: Assign personVector[2]$name[12] 115
-577: Assign personVector[2]$name[13] 115
-578: Assign personVector[2]$name[14] 111
-579: Assign personVector[2]$name[15] 110
-580: Assign personVector[2]$name[16] 0
-581: Assign personVector[2]$phone 24567
-582: CallHeader 210 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-583: Parameter 210 string_Block2Ebin# 6
-584: Parameter 210 string_w# 8
-585: Call 210 fopen 0
-586: PostCall 210
-587: GetReturnValue £temporary5174
-588: Assign outFilePtr £temporary5174
-589: CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-590: Parameter 212 string_Block2Ebin# 6
-591: Parameter 212 string_r# 8
-592: Call 212 fopen 0
-593: PostCall 212
-594: GetReturnValue £temporary5175
-595: Assign inFilePtr £temporary5175
-596: NotEqual 608 outFilePtr 0
-597: CallHeader 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-598: Parameter 214 stderr 6
-599: Parameter 214 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-600: Parameter 214 string_outFilePtr20213D20NULL# 10
-601: Parameter 214 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-602: Parameter 214 188 14
-603: Call 214 fprintf 0
-604: PostCall 214
-605: CallHeader 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-606: Call 214 abort 0
-607: PostCall 214
-608: NotEqual 620 inFilePtr 0
-609: CallHeader 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-610: Parameter 214 stderr 6
-611: Parameter 214 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-612: Parameter 214 string_inFilePtr20213D20NULL# 10
-613: Parameter 214 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-614: Parameter 214 189 14
-615: Call 214 fprintf 0
-616: PostCall 214
-617: CallHeader 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-618: Call 214 abort 0
-619: PostCall 214
-620: CallHeader 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-621: Parameter 214 personVector 6
-622: Parameter 214 150 8
-623: Parameter 214 1 10
-624: Parameter 214 outFilePtr 12
-625: Call 214 fwrite 0
-626: PostCall 214
-627: CallHeader 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-628: Parameter 214 outFilePtr 6
-629: Call 214 fclose 0
-630: PostCall 214
-631: CallHeader 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-632: Parameter 214 inFilePtr 6
-633: Call 214 feof 0
-634: PostCall 214
-635: GetReturnValue £temporary5186
-636: NotEqual 656 £temporary5186 0
-637: CallHeader 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-638: address £temporary5189 person
-639: Parameter 214 £temporary5189 6
-640: Parameter 214 50 8
-641: Parameter 214 1 10
-642: Parameter 214 inFilePtr 12
-643: Call 214 fread 0
-644: PostCall 214
-645: CallHeader 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-646: Parameter 214 string_Name20203A2025s0A# 6
-647: Parameter 214 person$name 8
-648: Call 214 printf 0
-649: PostCall 214
-650: CallHeader 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-651: Parameter 214 string_Phone203A2025d0A# 6
-652: Parameter 214 person$phone 8
-653: Call 214 printf 0
-654: PostCall 214
-655: Goto 631
-656: CallHeader 214 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-657: Parameter 214 inFilePtr 6
-658: Call 214 fclose 0
-659: PostCall 214
-660: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-661: Parameter 10 string_Test12Etxt# 6
-662: Parameter 10 string_r# 8
-663: Call 10 fopen 0
-664: PostCall 10
-665: GetReturnValue £temporary5196
-666: Assign inFilePtr £temporary5196
-667: NotEqual 679 inFilePtr 0
-668: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-669: Parameter 14 stderr 6
-670: Parameter 14 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-671: Parameter 14 string_inFilePtr20213D20NULL# 10
-672: Parameter 14 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-673: Parameter 14 206 14
-674: Call 14 fprintf 0
-675: PostCall 14
-676: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-677: Call 14 abort 0
-678: PostCall 14
-679: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-680: Parameter 14 inFilePtr 6
-681: Parameter 14 -1 8
-682: Parameter 14 2 10
-683: Call 14 fseek 0
-684: PostCall 14
-685: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-686: Parameter 14 inFilePtr 6
-687: Call 14 ftell 0
-688: PostCall 14
-689: GetReturnValue £temporary5202
-690: IntegralToIntegral £temporary5203 £temporary5202
-691: Assign u £temporary5203
-692: UnsignedLessThan 713 u 0
-693: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-694: Parameter 14 inFilePtr 6
-695: Call 14 fgetc 0
-696: PostCall 14
-697: GetReturnValue £temporary5205
-698: IntegralToIntegral £temporary5206 £temporary5205
-699: Assign c £temporary5206
-700: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-701: IntegralToIntegral £temporary5207 c
-702: Parameter 15 £temporary5207 6
-703: Call 15 putchar 0
-704: PostCall 15
-705: Equal 713 u 0
-706: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-707: Parameter 15 inFilePtr 6
-708: Parameter 15 -2 8
-709: Parameter 15 1 10
-710: Call 15 fseek 0
-711: PostCall 15
-712: Goto 685
-713: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-714: Parameter 14 string_0A0A# 6
-715: Call 14 printf 0
-716: PostCall 14
-717: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-718: Parameter 14 inFilePtr 6
-719: Call 14 fclose 0
-720: PostCall 14
-721: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-722: Parameter 10 string_fileexists20X2025s0A# 6
-723: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-724: Parameter 10 string_X# 14
-725: Call 10 fileexists 8
-726: PostCall 10
-727: GetReturnValue £temporary5213
-728: Equal 731 £temporary5213 0
-729: Assign £temporary5218 string_Yes#
-730: Goto 732
-731: Assign £temporary5218 string_No#
-732: Parameter 10 £temporary5218 8
-733: Call 10 printf 0
-734: PostCall 10
-735: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-736: Parameter 10 string_fileexists20Y2025s0A0A# 6
-737: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-738: Parameter 10 string_Y# 14
-739: Call 10 fileexists 8
-740: PostCall 10
-741: GetReturnValue £temporary5220
-742: Equal 745 £temporary5220 0
-743: Assign £temporary5225 string_Yes#
-744: Goto 746
-745: Assign £temporary5225 string_No#
-746: Parameter 10 £temporary5225 8
-747: Call 10 printf 0
-748: PostCall 10
-749: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-750: Parameter 12 string_PBookX2Etxt# 6
-751: Parameter 12 string_r2B# 8
-752: Call 12 fopen 0
-753: PostCall 12
-754: GetReturnValue £temporary5227
-755: Assign inOutFilePtr £temporary5227
-756: NotEqual 768 inOutFilePtr 0
-757: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-758: Parameter 14 stderr 6
-759: Parameter 14 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-760: Parameter 14 string_inOutFilePtr20213D20NULL# 10
-761: Parameter 14 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-762: Parameter 14 229 14
-763: Call 14 fprintf 0
-764: PostCall 14
-765: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-766: Call 14 abort 0
-767: PostCall 14
-768: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-769: Call 14 tmpfile 0
-770: PostCall 14
-771: GetReturnValue £temporary5232
-772: Assign tempFilePtr £temporary5232
-773: NotEqual 785 tempFilePtr 0
-774: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-775: Parameter 14 stderr 6
-776: Parameter 14 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-777: Parameter 14 string_tempFilePtr20213D20NULL# 10
-778: Parameter 14 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-779: Parameter 14 232 14
-780: Call 14 fprintf 0
-781: PostCall 14
-782: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-783: Call 14 abort 0
-784: PostCall 14
-785: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-786: Parameter 14 inOutFilePtr 6
-787: Call 14 fgetc 0
-788: PostCall 14
-789: GetReturnValue £temporary5237
-790: IntegralToIntegral £temporary5238 £temporary5237
-791: Assign c £temporary5238
-792: IntegralToIntegral £temporary5239 c
-793: Equal 806 £temporary5239 -1
-794: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-795: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-796: IntegralToIntegral £temporary5241 c
-797: Parameter 15 £temporary5241 6
-798: Call 15 toupper 0
-799: PostCall 15
-800: GetReturnValue £temporary5242
-801: Parameter 15 £temporary5242 6
-802: Parameter 15 tempFilePtr 8
-803: Call 15 putc 0
-804: PostCall 15
-805: Goto 785
-806: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-807: Parameter 14 tempFilePtr 6
-808: Call 14 rewind 0
-809: PostCall 14
-810: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-811: Parameter 14 inOutFilePtr 6
-812: Parameter 14 string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A# 8
-813: Call 14 fprintf 0
-814: PostCall 14
-815: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-816: Parameter 14 tempFilePtr 6
-817: Call 14 fgetc 0
-818: PostCall 14
-819: GetReturnValue £temporary5247
-820: IntegralToIntegral £temporary5248 £temporary5247
-821: Assign c £temporary5248
-822: IntegralToIntegral £temporary5249 c
-823: Equal 831 £temporary5249 -1
-824: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-825: IntegralToIntegral £temporary5251 c
-826: Parameter 15 £temporary5251 6
-827: Parameter 15 inOutFilePtr 8
-828: Call 15 putc 0
-829: PostCall 15
-830: Goto 815
-831: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-832: Parameter 14 inOutFilePtr 6
-833: Call 14 fclose 0
-834: PostCall 14
-835: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-836: Parameter 14 tempFilePtr 6
-837: Call 14 fclose 0
-838: PostCall 14
-839: Return 0
-840: FunctionEnd file_test
+98: Parameter 14 outFilePtr 6
+99: Call 14 fclose 0
+100: PostCall 14
+101: Return 0
+102: FunctionEnd file_test

@@ -7,16 +7,16 @@ stack_test$1:	; Parameter 6 string_25i20# 6
 4:		mov word [bp + 12], string_25i20#
 6:	
 
-stack_test$2:	; Assign £temporary5774 i
-7:		mov t2989, [@6655$i]
+stack_test$2:	; Assign £temporary5282 i
+7:		mov t2815, [@6118$i]
 9:	
 
 stack_test$3:	; Increment i
-10:		inc word [@6655$i]
+10:		inc word [@6118$i]
 12:	
 
-stack_test$4:	; Parameter 6 £temporary5774 8
-13:		mov [bp + 14], t2989
+stack_test$4:	; Parameter 6 £temporary5282 8
+13:		mov [bp + 14], t2815
 15:	
 
 stack_test$5:	; Call 6 printf 0
@@ -45,10 +45,10 @@ stack_test$9:	; PostCall 6
 35:	
 
 stack_test$10:	; Return 0
-36:		mov t2990, [bp]
+36:		mov t2816, [bp]
 37:		mov di, [bp + 4]
 38:		mov bp, [bp + 2]
-39:		jmp t2990
+39:		jmp t2816
 41:	
 
 stack_test$11:	; FunctionEnd stack_test
@@ -75,11 +75,11 @@ heap_test$3:	; Call 10 malloc 0
 heap_test$4:	; PostCall 10
 17:	
 
-heap_test$5:	; GetReturnValue £temporary5779
+heap_test$5:	; GetReturnValue £temporary5287
 22:	
 
-heap_test$6:	; Assign pointer £temporary5779
-23:		mov [bp + 8], t2992
+heap_test$6:	; Assign pointer £temporary5287
+23:		mov [bp + 8], t2818
 25:	
 
 heap_test$7:	; Equal 17 pointer 0
@@ -94,21 +94,21 @@ heap_test$9:	; Parameter 10 string_102420bytes2Dblock20number3A2025i0A# 6
 32:		mov word [bp + 16], string_102420bytes2Dblock20number3A2025i0A#
 34:	
 
-heap_test$10:	; Assign £temporary5781 count
-35:		mov t2993, [bp + 6]
+heap_test$10:	; Assign £temporary5289 count
+35:		mov t2819, [bp + 6]
 37:	
 
 heap_test$11:	; Increment count
 38:		inc word [bp + 6]
 40:	
 
-heap_test$12:	; Parameter 10 £temporary5781 8
-41:		mov [bp + 18], t2993
+heap_test$12:	; Parameter 10 £temporary5289 8
+41:		mov [bp + 18], t2819
 43:	
 
 heap_test$13:	; Parameter 10 pointer 10
-44:		mov a2994, [bp + 8]
-45:		mov [bp + 20], a2994
+44:		mov a2820, [bp + 8]
+45:		mov [bp + 20], a2820
 47:	
 
 heap_test$14:	; Call 10 printf 0
@@ -128,10 +128,10 @@ heap_test$16:	; Goto 1
 60:	
 
 heap_test$17:	; Return 0
-61:		mov t2995, [bp]
+61:		mov t2821, [bp]
 62:		mov di, [bp + 4]
 63:		mov bp, [bp + 2]
-64:		jmp t2995
+64:		jmp t2821
 66:	
 
 heap_test$18:	; FunctionEnd heap_test
