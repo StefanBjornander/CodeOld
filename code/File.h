@@ -7,11 +7,9 @@
 #define fpos_t int
 #define EOF -1
 
-typedef unsigned int UINT;
-
 typedef struct {
   BOOL open;
-  UINT handle;
+  unsigned int handle;
   char name[FILENAME_MAX], ungetc;
   int errno;
   unsigned int position, size;
