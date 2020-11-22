@@ -378,8 +378,7 @@ va_list printArgument(char* format, va_list arg_list, BOOL plus, BOOL space,
     case 'p':
       ptrValue = va_arg(arg_list, void*);
       arg_list = checkWidthAndPrecision(arg_list, widthPtr, &precision);
-      printUnsignedLong((unsigned long) ptrValue, FALSE,
-                        FALSE, FALSE, 10u, FALSE);
+      printUnsignedLong((void*)ptrValue, FALSE, FALSE, FALSE, 10u, FALSE);
       break;
 
     case 'n':

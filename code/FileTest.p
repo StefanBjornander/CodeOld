@@ -1,11 +1,11 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+   
+   
 
 
+    
 
-
-
-
-
+    
 
 
 extern double exp ( double x ) ;
@@ -38,59 +38,61 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
+  
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,0$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
+   
+   
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+   
+   
 
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,1$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
+    
+
+    
 
 
+       
+       
+       
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
+          
+          
+           
 
+       
+           
+          
 
+       
+       
+       
 
+       
+       
+       
 
+       
+       
+       
+          
 
+       
+       
+       
+       
 
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
+   
+   
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -106,47 +108,50 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
+   
+   
+
+     
+                         
+                    
+               
+      
+
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+   
+   
 
+          
 
+    
+    
 
+    
+    
+    
 
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
+   
+   
 
+    
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-
-
-
-
-
-
-
-
+    
+    
 
 typedef unsigned int UINT ;
 
@@ -165,22 +170,22 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
+   
+    
+    
+    
+    
 
+    
 
+    
+    
+    
+    
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+          
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -212,30 +217,32 @@ int feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-
-
-
-
-
+    
+    
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
+    
+    
 
-
-
-
-
-
-
+    
 
 char scanChar ( void ) ;
 void unscanChar ( char c ) ;
@@ -251,15 +258,16 @@ int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
 int sscanf ( char * inString , char * format , ... ) ;
 int vsscanf ( char * inString , char * format , char * arg_list ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-
-
-
-
-
+    
+    
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -294,37 +302,40 @@ int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
 int sprintf ( char * outString , char * format , ... ) ;
 int vsprintf ( char * outString , char * format , char * arg_list ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+       
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
+   
+   
 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,2$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,3$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ErrNo.h,1$
-
-
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ErrNo.h,0$
+   
+   
 
 
 
@@ -385,14 +396,15 @@ FTELL , FSIZE , FREMOVE , FRENAME , FTEMPNAME , FTEMPFILE };
 
 extern int errno ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,3$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,4$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,1$
-
-
-
-
+    
 
 extern char * strcpy ( char * target , const char * source ) ;
 extern char * strncpy ( char * target , const char * source , int size ) ;
@@ -415,35 +427,37 @@ extern int memcmp ( const void * left , const void * right , int size ) ;
 extern void * memchr ( const void * block , int i , int size ) ;
 extern void * memset ( void * block , int i , int size ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,4$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,5$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,1$
+   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
+   
+   
 
+       
+       
+       
+       
+       
+       
+       
+       
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,4$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,5$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
-
-
-
-
+          
 
 double atof ( char * s ) ;
 int atoi ( char * s ) ;
@@ -465,8 +479,8 @@ void exit ( int status ) ;
 typedef void ( * FUNC_PTR ) ( void ) ;
 int atexit ( FUNC_PTR fcn ) ;
 
-
-
+    
+    
 
 int abs ( int value ) ;
 long labs ( long value ) ;
@@ -496,37 +510,38 @@ long quot , rem ;
 } ldiv_t ;
 
 ldiv_t ldiv ( long num , long denum ) ;
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,5$
+       
+              
+     
+            
+  
+      
+  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,6$
+  
 
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,6$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c,5$
+       
 
 void file_test ( char * inFileName , char * outFileName ) {
-{ FILE * inFilePtr = fopen ( inFileName , "\162" ) ;
-FILE * outFilePtr = fopen ( outFileName , "\167" ) ;
+{ FILE * inFilePtr = fopen ( inFileName , "r" ) ;
+FILE * outFilePtr = fopen ( outFileName , "w" ) ;
 
-printf ( "\045\163\072\040\045\154\151\054\040\045\163\072\040\045\154\151\012" , inFileName , inFilePtr , outFileName , outFilePtr ) ;
-if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\151\156\106\151\154\145\120\164\162\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 13 ) ; abort ( ) ; } ;
-if ( ! ( outFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "\101\163\163\145\162\164\151\157\156\040\146\141\151\154\145\144\072\040\042\045\163\042\040\151\156\040\146\151\154\145\040\045\163\040\141\164\040\154\151\156\145\040\045\151\012" , "\157\165\164\106\151\154\145\120\164\162\040\041\075\040\116\125\114\114" , "\103\072\134\125\163\145\162\163\134\123\164\145\146\141\156\134\104\157\143\165\155\145\156\164\163\134\166\141\147\162\141\156\164\134\150\157\155\145\163\164\145\141\144\134\143\157\144\145\134\143\157\144\145\134\106\151\154\145\124\145\163\164\056\143" , 14 ) ; abort ( ) ; } ;
+printf ( "%s: %p, %s: %p\n" , inFileName , inFilePtr , outFileName , outFilePtr ) ;
+if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 13 ) ; abort ( ) ; } ;
+if ( ! ( outFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "outFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 14 ) ; abort ( ) ; } ;
 
 { int size = 0 , index ;
-fscanf ( inFilePtr , "\045\151" , & size ) ;
-printf ( "\163\151\172\145\040\045\151\012" , size ) ;
+fscanf ( inFilePtr , "%i" , & size ) ;
+printf ( "size %i\n" , size ) ;
 
 for ( index = 0 ; index < size ; ++ index ) {
 double value ;
-fscanf ( inFilePtr , "\045\154\146" , & value ) ;
-printf ( "\131\040\166\141\154\165\145\040\045\146\012" , sqrt ( value ) ) ;
-fprintf ( outFilePtr , "\132\040\166\141\154\165\145\040\045\146\012" , sqrt ( value ) ) ;
+fscanf ( inFilePtr , "%lf" , & value ) ;
+fprintf ( outFilePtr , "value %f\n" , sqrt ( value ) ) ;
 }
 }
 
@@ -564,20 +579,29 @@ fclose ( outFilePtr ) ;
 
 
 
+{ FILE * inFilePtr = fopen ( "PBook.txt" , "r" ) ;
+if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 62 ) ; abort ( ) ; } ;
 
 
+printf ( "\n%-24s %-24s\n" , "Name" , "Phone" ) ;
+printf ( "%-24s %-24s\n" , "========================" ,
+"========================" ) ;
+
+{ int count , size ;
+fscanf ( inFilePtr , "%i" , & size ) ;
 
 
+for ( count = 0 ; count < size ; ++ count ) {
+char name [ 20 ] , phone [ 20 ];
 
+fscanf ( inFilePtr , "%s%s" , name , phone ) ;
+printf ( "%-24s %-24s\n" , name , phone ) ;
+}
+}
 
-
-
-
-
-
-
-
-
+printf ( "\n" ) ;
+fclose ( inFilePtr ) ;
+}
 
 
 
@@ -769,4 +793,3 @@ fclose ( outFilePtr ) ;
 
 
 }
-

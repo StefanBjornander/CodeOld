@@ -9,7 +9,7 @@ void file_test(char* inFileName, char* outFileName) {
   { FILE* inFilePtr = fopen(inFileName, "r");
     FILE* outFilePtr = fopen(outFileName, "w");
 
-    printf("%s: %li, %s: %li\n", inFileName, inFilePtr, outFileName, outFilePtr);
+    printf("%s: %p, %s: %p\n", inFileName, inFilePtr, outFileName, outFilePtr);
     assert(inFilePtr != NULL);
     assert(outFilePtr != NULL);
 
@@ -20,8 +20,7 @@ void file_test(char* inFileName, char* outFileName) {
       for (index = 0; index < size; ++index) {
         double value;
         fscanf(inFilePtr, "%lf", &value);
-        printf("Y value %f\n", sqrt(value));
-        fprintf(outFilePtr, "Z value %f\n", sqrt(value));
+        fprintf(outFilePtr, "value %f\n", sqrt(value));
       }
     }
 
@@ -29,8 +28,12 @@ void file_test(char* inFileName, char* outFileName) {
     fclose(outFilePtr);
   }
 
-/*{ char* sourceFilePtr = "X";
+/*  { char* sourceFilePtr = "X";
     char* targetFilePtr = "Y";
+
+    FILE* filePtr = fopen(sourceFilePtr, "w");
+    fprintf(filePtr, "Hello X");
+    fclose(filePtr);
 
     if (rename(sourceFilePtr, targetFilePtr) == 0) {
       printf("\"%s\" has been renamed to \"%s\".\n", sourceFilePtr, targetFilePtr); // Rename FilePtr
@@ -41,6 +44,10 @@ void file_test(char* inFileName, char* outFileName) {
   }
 
   { char* targetFilePtr = "Z";
+  
+    FILE* filePtr = fopen("Z", "w");
+    fprintf(filePtr, "Hello Z");
+    fclose(filePtr);
 
     if (remove(targetFilePtr) == 0) {
       printf("\"%s\" has been removed.\n", targetFilePtr); // Remove FilePtr
@@ -49,7 +56,8 @@ void file_test(char* inFileName, char* outFileName) {
       printf("Error %i: %s.\n", errno, strerror(errno));
     }
   }
-
+  */
+  
   { FILE* inFilePtr = fopen("PBook.txt", "r"); // PhoneBook
     assert(inFilePtr != NULL);
 
@@ -74,7 +82,7 @@ void file_test(char* inFileName, char* outFileName) {
     fclose(inFilePtr);
   }
 
-  { char* sourceFilePtr = "Flow1.txt"; // Double Line
+  /*{ char* sourceFilePtr = "Flow1.txt"; // Double Line
     char* targetFilePtr = "Flow2.txt";
 
     FILE* inFilePtr = fopen(sourceFilePtr, "r");
