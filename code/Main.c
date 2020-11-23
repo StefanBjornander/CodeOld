@@ -9,7 +9,7 @@
 #include <Time.h>
 
 void math_test_1(double x);   // ok
-void file_test(char*, char*); // ok
+void file_test();             // ok
 void signal_test(void);       // ok
 void time_test(void);         // ok
 void assert_test(void);       // ok
@@ -61,7 +61,7 @@ void main2(void) {
   a.q = NULL;
 
   //malloc_test();
-  file_test("test1.txt", "test2.txt");
+  file_test();
   //atan_test(0.999999);
   //main_math();
   //main_math();
@@ -206,7 +206,7 @@ void main() {
   //stdlib_test();
   //string_test();
   //time_test();
-  file_test("in.txt", "out.txt");
+  file_test();
   /*time_t now = time(NULL);
   struct tm s = *gmtime(&now);
   char* weekdays[] = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };

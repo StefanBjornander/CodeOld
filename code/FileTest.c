@@ -5,30 +5,51 @@
 #include <String.h>
 #include <Assert.h>
 
-void file_test(char* inFileName, char* outFileName) {
-  { FILE* inFilePtr = fopen(inFileName, "r");
-    FILE* outFilePtr = fopen(outFileName, "w");
+void file_test() {
+  { FILE* inFilePtr = fopen("in.txt", "r");
+    FILE* outFilePtr = fopen("outX.txt", "w");
 
-    printf("%s: %p, %s: %p\n", inFileName, inFilePtr, outFileName, outFilePtr);
+    assert(inFilePtr != NULL);
+    assert(outFilePtr != NULL);
+
+    while (!feof(inFilePtr)) {
+      double value;
+      fscanf(inFilePtr, "%lf", &value);
+      printf("X %f\n", sqrt(value));
+      fprintf(outFilePtr, "X %f\n", sqrt(value));
+    }
+    
+    printf("\n");
+    fclose(inFilePtr);
+    fclose(outFilePtr);
+  }
+
+  { FILE* inFilePtr = fopen("in.txt", "r");
+    FILE* outFilePtr = fopen("outY.txt", "w");
+
     assert(inFilePtr != NULL);
     assert(outFilePtr != NULL);
 
     { int size = 0, index;
       fscanf(inFilePtr, "%i", &size);
       printf("size %i\n", size);
+      fprintf(outFilePtr, "Y size %i\n", size);
 
       for (index = 0; index < size; ++index) {
         double value;
         fscanf(inFilePtr, "%lf", &value);
-        fprintf(outFilePtr, "value %f\n", sqrt(value));
+        printf("Y %f\n", sqrt(value));
+        fprintf(outFilePtr, "Y %f\n", sqrt(value));
       }
+
+      printf("\n");
     }
 
     fclose(inFilePtr);
     fclose(outFilePtr);
   }
 
-/*  { char* sourceFilePtr = "X";
+  { char* sourceFilePtr = "X";
     char* targetFilePtr = "Y";
 
     FILE* filePtr = fopen(sourceFilePtr, "w");
@@ -56,7 +77,6 @@ void file_test(char* inFileName, char* outFileName) {
       printf("Error %i: %s.\n", errno, strerror(errno));
     }
   }
-  */
   
   { FILE* inFilePtr = fopen("PBook.txt", "r"); // PhoneBook
     assert(inFilePtr != NULL);
@@ -82,7 +102,7 @@ void file_test(char* inFileName, char* outFileName) {
     fclose(inFilePtr);
   }
 
-  /*{ char* sourceFilePtr = "Flow1.txt"; // Double Line
+  { char* sourceFilePtr = "Flow1.txt"; // Double Line
     char* targetFilePtr = "Flow2.txt";
 
     FILE* inFilePtr = fopen(sourceFilePtr, "r");
@@ -108,8 +128,26 @@ void file_test(char* inFileName, char* outFileName) {
     fclose(inFilePtr);
     fclose(outFilePtr);
   }
+  
+  /*
+  forhandling@sverigesinjenjorer.se
 
-  { FILE* outFilePtr = fopen("Test.bin", "w");
+  1. Vad har du som röd tråd?
+     Programmering!
+
+  2. Formell kompoetens
+
+  3. Social kompetens
+
+  4. Varför jag för denna tjänst?
+  
+  Ytterligare: goda sidor. 
+
+  Checklista
+    * Kollektivavtal
+  */
+
+  { FILE* outFilePtr = fopen("TestX.bin", "w");
     assert(outFilePtr != NULL);
 
     { int size = 10, index;
@@ -124,58 +162,89 @@ void file_test(char* inFileName, char* outFileName) {
     }
   }
 
-  { FILE* inFilePtr = fopen("Test.bin", "r");
-    assert(inFilePtr != NULL);
-
-    { int size, index;
-      double arr[10];
-
-      fread(&size, sizeof size, 1, inFilePtr);
-      printf("size1 %i\n", size);
-
-      fread(&arr, sizeof arr, 1, inFilePtr);
-      fclose(inFilePtr);
-
-      for (index = 0; index < 10; ++index) {
-        printf("index1 %i: value %f\n", index, arr[index]);
-      }
-    }
-    printf("\n");
-  }
-
-  { FILE* inFilePtr = fopen("Test.bin", "r");
+  { FILE* inFilePtr = fopen("TestX.bin", "r");
     int size, index;
 
     assert(inFilePtr != NULL);
     fread(&size, sizeof size, 1, inFilePtr);
-    printf("size2 %i\n", size);
+    printf("size1: %i\n", size);
    
     for (index = 0; index < size; ++index) {
       double value;
       fread(&value, sizeof value, 1, inFilePtr);
-      printf("index2 %i: value %f\n", index, value);
+      printf("index1: %i: value %f\n", index, value);
     }
    
     printf("\n");
     fclose(inFilePtr);
   }
 
-  { FILE* inFilePtr = fopen("Test.bin", "r");
+  { FILE* outFilePtr = fopen("TestY.bin", "w");
+    assert(outFilePtr != NULL);
+
+    { int size = 10, index;
+
+      for (index = 0; index < size; ++index) {
+        double value = (double) (index * index);
+        fwrite(&value, sizeof value, 1, outFilePtr);
+      }
+
+      fclose(outFilePtr);
+    }
+  }
+
+  { FILE* inFilePtr = fopen("TestY.bin", "r");
+    assert(inFilePtr != NULL);
+   
+    { int index = 0;
+
+      while (TRUE) {
+        double value;
+
+        if (fread(&value, sizeof value, 1, inFilePtr) == 0) {
+          break;
+        }
+
+        printf("index2: %i: value %f\n", index++, value);
+      }
+    }
+   
+    printf("\n");
+    fclose(inFilePtr);
+  }
+
+  { FILE* inFilePtr = fopen("TestY.bin", "r");
+    assert(inFilePtr != NULL);
+   
+    { int index = 0;
+
+      while (!feof(inFilePtr)) {
+        double value;
+        fread(&value, sizeof value, 1, inFilePtr);
+        printf("index3: %i: value %f\n", index++, value);
+      }
+    }
+   
+    printf("\n");
+    fclose(inFilePtr);
+  }
+
+  { FILE* inFilePtr = fopen("TestX.bin", "r");
     int size;
 
     assert(inFilePtr != NULL);    
     fread(&size, sizeof size, 1, inFilePtr);
-    printf("size3 %i total %i\n", size, size * sizeof(double));
+    printf("size4: %i total %i\n", size, size * sizeof(double));
 
     { int total = size * sizeof(double), index;
       double *p = malloc(total);
       double* endPtr = p + size;
       assert(p != NULL);
-      printf("malloc %u %u %u\n", p, total, endPtr);
+      printf("malloc4: %u %u %u\n", p, total, endPtr);
       fread(p, total, 1, inFilePtr);
 
       for (index = 0; index < size; ++index) {
-        printf("index3 %i: value %f\n", index, p[index]);
+        printf("index4: %i: value %f\n", index, p[index]);
       }
 
       printf("\n");
@@ -213,21 +282,20 @@ void file_test(char* inFileName, char* outFileName) {
     fclose(inFilePtr);
   }
 
-  { FILE* inFilePtr = fopen("Test1.txt", "r"); // Random Access
+/*  { FILE* inFilePtr = fopen("outx.txt", "r"); // Random Access
     unsigned int u;
     assert(inFilePtr != NULL);
     fseek(inFilePtr, -1, SEEK_END);
+    printf("\n");
 
-    while ((u = (unsigned int) ftell(inFilePtr)) >= 0u) {
+    printf("random1\n");
+    while (ftell(inFilePtr) >= 0) {
       char c = (char) fgetc(inFilePtr);
-      putchar(c);
-
-      if (u == 0u) {
-        break;
-      }
-
+      printf("<%c> %i\n", c, (int) c);
+      //putchar(c);
       fseek(inFilePtr, -2, SEEK_CUR);
     }
+    printf("random2\n");
 
     printf("\n\n");
     fclose(inFilePtr);
@@ -245,8 +313,7 @@ void file_test(char* inFileName, char* outFileName) {
 
     while (TRUE) {
       char c = (char) getc(inOutFilePtr);
-
-      //printf("c <%c> %i\n", c, (int) c);
+      printf("c1 <%c> %i\n", c, (int) c);
 
       if (c == EOF) {
           break;
@@ -260,6 +327,7 @@ void file_test(char* inFileName, char* outFileName) {
 
     while (TRUE) {
       char c = (char) getc(tempFilePtr);
+      printf("c2 <%c> %i\n", c, (int)c);
 
       if (c == EOF) {
         break;

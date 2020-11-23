@@ -672,7 +672,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c,8$
        
 
 void math_test_1 ( double x ) ;
-void file_test ( char * , char * ) ;
+void file_test ( ) ;
 void signal_test ( void ) ;
 void time_test ( void ) ;
 void assert_test ( void ) ;
@@ -724,7 +724,7 @@ a . p = ( ( void * ) 0 ) ;
 a . q = ( ( void * ) 0 ) ;
 
 
-file_test ( "test1.txt" , "test2.txt" ) ;
+file_test ( ) ;
 
 
 
@@ -869,7 +869,7 @@ void main ( ) {
 
 
 
-file_test ( "in.txt" , "out.txt" ) ;
+file_test ( ) ;
 
 
 
