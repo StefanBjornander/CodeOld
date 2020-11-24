@@ -5,6 +5,8 @@
 #include <String.h>
 #include <Assert.h>
 
+extern int filecreate(const char* name);
+
 void file_test() {
   { FILE* inFilePtr = fopen("in.txt", "r");
     FILE* outFilePtr = fopen("outX.txt", "w");
@@ -12,11 +14,13 @@ void file_test() {
     assert(inFilePtr != NULL);
     assert(outFilePtr != NULL);
 
+    //printf("in %lu, out %lu\n", inFilePtr, outFilePtr);
+
     while (!feof(inFilePtr)) {
       double value;
       fscanf(inFilePtr, "%lf", &value);
-      printf("X %f\n", sqrt(value));
-      fprintf(outFilePtr, "X %f\n", sqrt(value));
+      printf("X1 %f\n", sqrt(value));
+      fprintf(outFilePtr, "X2 %f\n", sqrt(value));
     }
     
     printf("\n");
@@ -30,6 +34,8 @@ void file_test() {
     assert(inFilePtr != NULL);
     assert(outFilePtr != NULL);
 
+    //printf("in %lu, out %lu\n", inFilePtr, outFilePtr);
+
     { int size = 0, index;
       fscanf(inFilePtr, "%i", &size);
       printf("size %i\n", size);
@@ -38,8 +44,8 @@ void file_test() {
       for (index = 0; index < size; ++index) {
         double value;
         fscanf(inFilePtr, "%lf", &value);
-        printf("Y %f\n", sqrt(value));
-        fprintf(outFilePtr, "Y %f\n", sqrt(value));
+        printf("Y1 %f\n", sqrt(value));
+        fprintf(outFilePtr, "Y2 %f\n", sqrt(value));
       }
 
       printf("\n");
@@ -80,6 +86,7 @@ void file_test() {
   
   { FILE* inFilePtr = fopen("PBook.txt", "r"); // PhoneBook
     assert(inFilePtr != NULL);
+    //printf("pbook handle %i\n", inFilePtr->handle);
 
     //printf("\n");
     printf("\n%-24s %-24s\n", "Name", "Phone");
@@ -88,7 +95,7 @@ void file_test() {
 
     { int count, size;
       fscanf(inFilePtr, "%i", &size);
-      //printf("size %i\n", size);
+      printf("size %i\n", size);
 
       for (count = 0; count < size; ++count) {
         char name[20], phone[20];
@@ -102,7 +109,7 @@ void file_test() {
     fclose(inFilePtr);
   }
 
-  { char* sourceFilePtr = "Flow1.txt"; // Double Line
+  /*{ char* sourceFilePtr = "Flow1.txt"; // Double Line
     char* targetFilePtr = "Flow2.txt";
 
     FILE* inFilePtr = fopen(sourceFilePtr, "r");
@@ -127,25 +134,7 @@ void file_test() {
 
     fclose(inFilePtr);
     fclose(outFilePtr);
-  }
-  
-  /*
-  forhandling@sverigesinjenjorer.se
-
-  1. Vad har du som röd tråd?
-     Programmering!
-
-  2. Formell kompoetens
-
-  3. Social kompetens
-
-  4. Varför jag för denna tjänst?
-  
-  Ytterligare: goda sidor. 
-
-  Checklista
-    * Kollektivavtal
-  */
+  }*/
 
   { FILE* outFilePtr = fopen("TestX.bin", "w");
     assert(outFilePtr != NULL);
@@ -174,7 +163,7 @@ void file_test() {
       fread(&value, sizeof value, 1, inFilePtr);
       printf("index1: %i: value %f\n", index, value);
     }
-   
+
     printf("\n");
     fclose(inFilePtr);
   }
@@ -197,14 +186,9 @@ void file_test() {
     assert(inFilePtr != NULL);
    
     { int index = 0;
+      double value;
 
-      while (TRUE) {
-        double value;
-
-        if (fread(&value, sizeof value, 1, inFilePtr) == 0) {
-          break;
-        }
-
+      while (fread(&value, sizeof value, 1, inFilePtr) > 0) {
         printf("index2: %i: value %f\n", index++, value);
       }
     }
@@ -281,30 +265,40 @@ void file_test() {
 
     fclose(inFilePtr);
   }
-
-/*  { FILE* inFilePtr = fopen("outx.txt", "r"); // Random Access
+ 
+  { FILE* inFilePtr = fopen("outx.txt", "r"); // Random Access
     unsigned int u;
     assert(inFilePtr != NULL);
-    fseek(inFilePtr, -1, SEEK_END);
-    printf("\n");
+    fseek(inFilePtr, -2, SEEK_END);
+    printf("ftell %i\n", ftell(inFilePtr));
 
-    printf("random1\n");
     while (ftell(inFilePtr) >= 0) {
       char c = (char) fgetc(inFilePtr);
-      printf("<%c> %i\n", c, (int) c);
+      //fread(&c, sizeof c, 1, inFilePtr);
+      printf("<%c> %i %i\n", c, (int) c, ftell(inFilePtr));
       //putchar(c);
       fseek(inFilePtr, -2, SEEK_CUR);
     }
-    printf("random2\n");
 
-    printf("\n\n");
+    printf("\n");
     fclose(inFilePtr);
   }
 
-  printf("fileexists X %s\n", fileexists("X") ? "Yes" : "No");
-  printf("fileexists Y %s\n\n", fileexists("Y") ? "Yes" : "No");
+#define X(x) printf("fileexists " x ": %s\n", fileexists(x) ? "Yes" : "No")
+  X("X");
+  X("Y");
+  X("Main.asm");
+  X("MainX.asm");
+  X("Main.c");
+  X("MainX.c");
+  X("File.c");
+  X("File.x");
+  X("File.h");
+  X("File.y");
+  X("File.p");
+  X("File.z");
 
-  { FILE* tempFilePtr;
+/*  { FILE* tempFilePtr;
     FILE* inOutFilePtr = fopen("PBookX.txt", "r+"); // Temp FilePtr
     assert(inOutFilePtr != NULL);
 

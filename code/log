@@ -1,0 +1,67 @@
+X1 3.162277
+X1 1.000000
+X1 1.414213
+X1 1.732050
+X1 2.000000
+X1 2.236067
+X1 2.449489
+X1 2.645751
+X1 2.828427
+X1 3.000000
+X1 3.162277
+
+size 10
+Y1 1.000000
+Y1 1.414213
+Y1 1.732050
+Y1 2.000000
+Y1 2.236067
+Y1 2.449489
+Y1 2.645751
+Y1 2.828427
+Y1 3.000000
+Y1 3.162277
+
+"X" has been renamed to "Y".
+"Z" has been removed.
+pbook handle 3
+
+Name                     Phone                   
+======================== ========================
+size 5
+Adam                     12345                   
+Bertil                   23456                   
+Ceasar                   34567                   
+David                    45678                   
+Erik                     56789                   
+
+fread: 1
+fwrite: 4
+fwrite: 8
+fwrite: 8
+fwrite: 8
+fwrite: 8
+fwrite: 8
+fwrite: 8
+fwrite: 8
+fwrite: 8
+fwrite: 8
+fwrite: 8
+fread: 4
+size1: 0 6365909
+
+fwrite: 8
+fwrite: 8
+fwrite: 8
+fwrite: 8
+fwrite: 8
+fwrite: 8
+fwrite: 8
+fwrite: 8
+fwrite: 8
+fwrite: 8
+fread: 8
+
+
+fread: 4
+size4: 6365909 total 50927272

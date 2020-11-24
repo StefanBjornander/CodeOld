@@ -46,15 +46,15 @@ section .text
 	mov rax, 201
 
  time$1:
-	; Address £temporary2746 time
+	; Address £temporary2759 time
 	mov rdi, rbp
 	add rdi, 32
 
  time$2:
-	; IntegralToIntegral £temporary2747 £temporary2746
+	; IntegralToIntegral £temporary2760 £temporary2759
 
  time$3:
-	; AssignRegister rdi £temporary2747
+	; AssignRegister rdi £temporary2760
 
  time$4:
 	; SysCall
@@ -65,20 +65,20 @@ section .text
 	mov rax, 96
 
  time$6:
-	; Address £temporary2750 tv
+	; Address £temporary2763 tv
 	mov rdi, rbp
 	add rdi, 40
 
  time$7:
-	; AssignRegister rdi £temporary2750
+	; AssignRegister rdi £temporary2763
 
  time$8:
-	; Address £temporary2752 tz
+	; Address £temporary2765 tz
 	mov rsi, rbp
 	add rsi, 48
 
  time$9:
-	; AssignRegister rsi £temporary2752
+	; AssignRegister rsi £temporary2765
 
  time$10:
 	; SysCall
@@ -129,11 +129,11 @@ section .text
 	je time$22
 
  time$20:
-	; Dereference £temporary2759 -> timePtr timePtr 0
+	; Dereference £temporary2772 -> timePtr timePtr 0
 	mov rsi, [rbp + 24]
 
  time$21:
-	; Assign £temporary2759 -> timePtr time
+	; Assign £temporary2772 -> timePtr time
 	mov rax, [rbp + 32]
 	mov [rsi], rax
 
@@ -189,21 +189,21 @@ section .text
 	je mktime$28
 
  mktime$1:
-	; Dereference £temporary2764 -> tp tp 0
+	; Dereference £temporary2777 -> tp tp 0
 	mov rsi, [rbp + 24]
 
  mktime$2:
-	; BinarySubtract £temporary2765 £temporary2764 -> tp 69
+	; BinarySubtract £temporary2778 £temporary2777 -> tp 69
 	mov eax, [rsi + 20]
 	sub eax, 69
 
  mktime$3:
-	; SignedDivide £temporary2766 £temporary2765 4
+	; SignedDivide £temporary2779 £temporary2778 4
 	xor edx, edx
 	idiv dword [int4$4#]
 
  mktime$4:
-	; IntegralToIntegral £temporary2767 £temporary2766
+	; IntegralToIntegral £temporary2780 £temporary2779
 	mov rbx, 4294967295
 	and rax, rbx
 	cmp eax, 0
@@ -212,25 +212,25 @@ section .text
 	neg rax
 
  mktime$5:
-	; Assign leapDays £temporary2767
+	; Assign leapDays £temporary2780
 	mov [rbp + 32], rax
 
  mktime$6:
-	; Dereference £temporary2768 -> tp tp 0
+	; Dereference £temporary2781 -> tp tp 0
 	mov rsi, [rbp + 24]
 
  mktime$7:
-	; BinarySubtract £temporary2769 £temporary2768 -> tp 70
+	; BinarySubtract £temporary2782 £temporary2781 -> tp 70
 	mov eax, [rsi + 20]
 	sub eax, 70
 
  mktime$8:
-	; SignedMultiply £temporary2770 £temporary2769 365
+	; SignedMultiply £temporary2783 £temporary2782 365
 	xor edx, edx
 	imul dword [int4$365#]
 
  mktime$9:
-	; IntegralToIntegral £temporary2771 £temporary2770
+	; IntegralToIntegral £temporary2784 £temporary2783
 	mov rbx, 4294967295
 	and rax, rbx
 	cmp eax, 0
@@ -239,15 +239,15 @@ section .text
 	neg rax
 
  mktime$10:
-	; BinaryAdd £temporary2772 £temporary2771 leapDays
+	; BinaryAdd £temporary2785 £temporary2784 leapDays
 	add rax, [rbp + 32]
 
  mktime$11:
-	; Dereference £temporary2773 -> tp tp 0
+	; Dereference £temporary2786 -> tp tp 0
 	mov rsi, [rbp + 24]
 
  mktime$12:
-	; IntegralToIntegral £temporary2774 £temporary2773 -> tp
+	; IntegralToIntegral £temporary2787 £temporary2786 -> tp
 	mov ebx, [rsi + 28]
 	mov rcx, 4294967295
 	and rbx, rcx
@@ -257,23 +257,23 @@ section .text
 	neg rbx
 
  mktime$13:
-	; BinaryAdd totalDays £temporary2772 £temporary2774
+	; BinaryAdd totalDays £temporary2785 £temporary2787
 	add rax, rbx
 	mov [rbp + 40], rax
 
  mktime$14:
-	; SignedMultiply £temporary2776 totalDays 86400
+	; SignedMultiply £temporary2789 totalDays 86400
 	mov rax, [rbp + 40]
 	xor rdx, rdx
 	imul qword [int8$86400#]
 	mov rbx, rax
 
  mktime$15:
-	; Dereference £temporary2777 -> tp tp 0
+	; Dereference £temporary2790 -> tp tp 0
 	mov rsi, [rbp + 24]
 
  mktime$16:
-	; IntegralToIntegral £temporary2778 £temporary2777 -> tp
+	; IntegralToIntegral £temporary2791 £temporary2790 -> tp
 	mov eax, [rsi + 8]
 	mov rcx, 4294967295
 	and rax, rcx
@@ -283,20 +283,20 @@ section .text
 	neg rax
 
  mktime$17:
-	; SignedMultiply £temporary2779 £temporary2778 3600
+	; SignedMultiply £temporary2792 £temporary2791 3600
 	xor rdx, rdx
 	imul qword [int8$3600#]
 
  mktime$18:
-	; BinaryAdd £temporary2780 £temporary2776 £temporary2779
+	; BinaryAdd £temporary2793 £temporary2789 £temporary2792
 	add rbx, rax
 
  mktime$19:
-	; Dereference £temporary2781 -> tp tp 0
+	; Dereference £temporary2794 -> tp tp 0
 	mov rsi, [rbp + 24]
 
  mktime$20:
-	; IntegralToIntegral £temporary2782 £temporary2781 -> tp
+	; IntegralToIntegral £temporary2795 £temporary2794 -> tp
 	mov eax, [rsi + 4]
 	mov rcx, 4294967295
 	and rax, rcx
@@ -306,20 +306,20 @@ section .text
 	neg rax
 
  mktime$21:
-	; SignedMultiply £temporary2783 £temporary2782 60
+	; SignedMultiply £temporary2796 £temporary2795 60
 	xor rdx, rdx
 	imul qword [int8$60#]
 
  mktime$22:
-	; BinaryAdd £temporary2784 £temporary2780 £temporary2783
+	; BinaryAdd £temporary2797 £temporary2793 £temporary2796
 	add rbx, rax
 
  mktime$23:
-	; Dereference £temporary2785 -> tp tp 0
+	; Dereference £temporary2798 -> tp tp 0
 	mov rsi, [rbp + 24]
 
  mktime$24:
-	; IntegralToIntegral £temporary2786 £temporary2785 -> tp
+	; IntegralToIntegral £temporary2799 £temporary2798 -> tp
 	mov eax, [rsi]
 	mov rcx, 4294967295
 	and rax, rcx
@@ -329,14 +329,14 @@ section .text
 	neg rax
 
  mktime$25:
-	; BinaryAdd £temporary2787 £temporary2784 £temporary2786
+	; BinaryAdd £temporary2800 £temporary2797 £temporary2799
 	add rbx, rax
 
  mktime$26:
 	; SetReturnValue
 
  mktime$27:
-	; Return £temporary2787
+	; Return £temporary2800
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -358,7 +358,7 @@ section .text
 
 section .data
 
-@4748$g_timeStruct:
+@4763$g_timeStruct:
 	; InitializerZero 36
 	times 36 db 0
 
@@ -376,62 +376,62 @@ int4$400#:
 
 section .text
 
- @4750$isLeapYear:
-	; SignedModulo £temporary2788 year 4
+ @4765$isLeapYear:
+	; SignedModulo £temporary2801 year 4
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [int4$4#]
 
- @4750$isLeapYear$1:
-	; NotEqual 4 £temporary2788 0
+ @4765$isLeapYear$1:
+	; NotEqual 4 £temporary2801 0
 	cmp edx, 0
-	jne @4750$isLeapYear$4
+	jne @4765$isLeapYear$4
 
- @4750$isLeapYear$2:
-	; SignedModulo £temporary2790 year 100
+ @4765$isLeapYear$2:
+	; SignedModulo £temporary2803 year 100
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [int4$100#]
 
- @4750$isLeapYear$3:
-	; NotEqual 6 £temporary2790 0
+ @4765$isLeapYear$3:
+	; NotEqual 6 £temporary2803 0
 	cmp edx, 0
-	jne @4750$isLeapYear$6
+	jne @4765$isLeapYear$6
 
- @4750$isLeapYear$4:
-	; SignedModulo £temporary2793 year 400
+ @4765$isLeapYear$4:
+	; SignedModulo £temporary2806 year 400
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [int4$400#]
 
- @4750$isLeapYear$5:
-	; NotEqual 8 £temporary2793 0
+ @4765$isLeapYear$5:
+	; NotEqual 8 £temporary2806 0
 	cmp edx, 0
-	jne @4750$isLeapYear$8
+	jne @4765$isLeapYear$8
 
- @4750$isLeapYear$6:
-	; Assign £temporary2796 1
+ @4765$isLeapYear$6:
+	; Assign £temporary2809 1
 	mov ebx, 1
 
- @4750$isLeapYear$7:
+ @4765$isLeapYear$7:
 	; Goto 9
-	jmp @4750$isLeapYear$9
+	jmp @4765$isLeapYear$9
 
- @4750$isLeapYear$8:
-	; Assign £temporary2796 0
+ @4765$isLeapYear$8:
+	; Assign £temporary2809 0
 	mov ebx, 0
 
- @4750$isLeapYear$9:
+ @4765$isLeapYear$9:
 	; SetReturnValue
 
- @4750$isLeapYear$10:
-	; Return £temporary2796
+ @4765$isLeapYear$10:
+	; Return £temporary2809
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @4750$isLeapYear$11:
+ @4765$isLeapYear$11:
 	; FunctionEnd isLeapYear
 
 section .data
@@ -460,11 +460,11 @@ section .text
 	je gmtime$91
 
  gmtime$1:
-	; Dereference £temporary2798 -> timePtr timePtr 0
+	; Dereference £temporary2811 -> timePtr timePtr 0
 	mov rsi, [rbp + 24]
 
  gmtime$2:
-	; Assign time £temporary2798 -> timePtr
+	; Assign time £temporary2811 -> timePtr
 	mov rax, [rsi]
 	mov [rbp + 32], rax
 
@@ -483,55 +483,55 @@ section .text
 	mov [rbp + 48], rdx
 
  gmtime$5:
-	; SignedDivide £temporary2802 secondsOfDay 3600
+	; SignedDivide £temporary2815 secondsOfDay 3600
 	mov rax, [rbp + 40]
 	xor rdx, rdx
 	idiv qword [int8$3600#]
 
  gmtime$6:
-	; IntegralToIntegral £temporary2803 £temporary2802
+	; IntegralToIntegral £temporary2816 £temporary2815
 	cmp rax, 0
 	jge gmtime$7
 	neg rax
 	neg eax
 
  gmtime$7:
-	; Assign g_timeStruct.tm_hour £temporary2803
-	mov [@4748$g_timeStruct + 8], eax
+	; Assign g_timeStruct.tm_hour £temporary2816
+	mov [@4763$g_timeStruct + 8], eax
 
  gmtime$8:
-	; SignedDivide £temporary2805 secondsOfHour 60
+	; SignedDivide £temporary2818 secondsOfHour 60
 	mov rax, [rbp + 48]
 	xor rdx, rdx
 	idiv qword [int8$60#]
 
  gmtime$9:
-	; IntegralToIntegral £temporary2806 £temporary2805
+	; IntegralToIntegral £temporary2819 £temporary2818
 	cmp rax, 0
 	jge gmtime$10
 	neg rax
 	neg eax
 
  gmtime$10:
-	; Assign g_timeStruct.tm_min £temporary2806
-	mov [@4748$g_timeStruct + 4], eax
+	; Assign g_timeStruct.tm_min £temporary2819
+	mov [@4763$g_timeStruct + 4], eax
 
  gmtime$11:
-	; SignedModulo £temporary2808 secondsOfHour 60
+	; SignedModulo £temporary2821 secondsOfHour 60
 	mov rax, [rbp + 48]
 	xor rdx, rdx
 	idiv qword [int8$60#]
 
  gmtime$12:
-	; IntegralToIntegral £temporary2809 £temporary2808
+	; IntegralToIntegral £temporary2822 £temporary2821
 	cmp rdx, 0
 	jge gmtime$13
 	neg rdx
 	neg edx
 
  gmtime$13:
-	; Assign g_timeStruct.tm_sec £temporary2809
-	mov [@4748$g_timeStruct], edx
+	; Assign g_timeStruct.tm_sec £temporary2822
+	mov [@4763$g_timeStruct], edx
 
  gmtime$14:
 	; SignedDivide totalDays time 86400
@@ -546,74 +546,74 @@ section .text
 	jge gmtime$20
 
  gmtime$16:
-	; BinaryAdd £temporary2813 totalDays 4
+	; BinaryAdd £temporary2826 totalDays 4
 	mov rax, [rbp + 56]
 	add rax, 4
 
  gmtime$17:
-	; IntegralToIntegral £temporary2814 £temporary2813
+	; IntegralToIntegral £temporary2827 £temporary2826
 	cmp rax, 0
 	jge gmtime$18
 	neg rax
 	neg eax
 
  gmtime$18:
-	; Assign g_timeStruct.tm_wday £temporary2814
-	mov [@4748$g_timeStruct + 24], eax
+	; Assign g_timeStruct.tm_wday £temporary2827
+	mov [@4763$g_timeStruct + 24], eax
 
  gmtime$19:
 	; Goto 24
 	jmp gmtime$24
 
  gmtime$20:
-	; BinarySubtract £temporary2816 totalDays 3
+	; BinarySubtract £temporary2829 totalDays 3
 	mov rax, [rbp + 56]
 	sub rax, 3
 
  gmtime$21:
-	; SignedModulo £temporary2817 £temporary2816 7
+	; SignedModulo £temporary2830 £temporary2829 7
 	xor rdx, rdx
 	idiv qword [int8$7#]
 
  gmtime$22:
-	; IntegralToIntegral £temporary2818 £temporary2817
+	; IntegralToIntegral £temporary2831 £temporary2830
 	cmp rdx, 0
 	jge gmtime$23
 	neg rdx
 	neg edx
 
  gmtime$23:
-	; Assign g_timeStruct.tm_wday £temporary2818
-	mov [@4748$g_timeStruct + 24], edx
+	; Assign g_timeStruct.tm_wday £temporary2831
+	mov [@4763$g_timeStruct + 24], edx
 
  gmtime$24:
-	; SignedDivide £temporary2819 totalDays 365
+	; SignedDivide £temporary2832 totalDays 365
 	mov rax, [rbp + 56]
 	xor rdx, rdx
 	idiv qword [int8$365#]
 
  gmtime$25:
-	; BinaryAdd £temporary2820 £temporary2819 1970
+	; BinaryAdd £temporary2833 £temporary2832 1970
 	add rax, 1970
 
  gmtime$26:
-	; IntegralToIntegral £temporary2821 £temporary2820
+	; IntegralToIntegral £temporary2834 £temporary2833
 	cmp rax, 0
 	jge gmtime$27
 	neg rax
 	neg eax
 
  gmtime$27:
-	; Assign year £temporary2821
+	; Assign year £temporary2834
 	mov [rbp + 64], eax
 
  gmtime$28:
-	; BinarySubtract £temporary2822 year 1969
+	; BinarySubtract £temporary2835 year 1969
 	mov eax, [rbp + 64]
 	sub eax, 1969
 
  gmtime$29:
-	; SignedDivide leapDays £temporary2822 4
+	; SignedDivide leapDays £temporary2835 4
 	xor edx, edx
 	idiv dword [int4$4#]
 	mov [rbp + 68], eax
@@ -626,7 +626,7 @@ section .text
 	mov [rbp + 56], rdx
 
  gmtime$31:
-	; IntegralToIntegral £temporary2825 leapDays
+	; IntegralToIntegral £temporary2838 leapDays
 	mov eax, [rbp + 68]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -636,7 +636,7 @@ section .text
 	neg rax
 
  gmtime$32:
-	; BinarySubtract totalDays totalDays £temporary2825
+	; BinarySubtract totalDays totalDays £temporary2838
 	sub [rbp + 56], rax
 
  gmtime$33:
@@ -661,16 +661,16 @@ section .text
 	mov qword [rbp + 72], gmtime$38
 	mov [rbp + 80], rbp
 	add rbp, 72
-	jmp @4750$isLeapYear
+	jmp @4765$isLeapYear
 
  gmtime$38:
 	; PostCall 72
 
  gmtime$39:
-	; GetReturnValue £temporary2829
+	; GetReturnValue £temporary2842
 
  gmtime$40:
-	; Equal 43 £temporary2829 0
+	; Equal 43 £temporary2842 0
 	cmp ebx, 0
 	je gmtime$43
 
@@ -690,10 +690,10 @@ section .text
 	; BinarySubtract g_timeStruct.tm_year year 1900
 	mov eax, [rbp + 64]
 	sub eax, 1900
-	mov [@4748$g_timeStruct + 20], eax
+	mov [@4763$g_timeStruct + 20], eax
 
  gmtime$45:
-	; IntegralToIntegral £temporary2836 totalDays
+	; IntegralToIntegral £temporary2849 totalDays
 	mov rax, [rbp + 56]
 	cmp rax, 0
 	jge gmtime$46
@@ -701,8 +701,8 @@ section .text
 	neg eax
 
  gmtime$46:
-	; Assign g_timeStruct.tm_yday £temporary2836
-	mov [@4748$g_timeStruct + 28], eax
+	; Assign g_timeStruct.tm_yday £temporary2849
+	mov [@4763$g_timeStruct + 28], eax
 
  gmtime$47:
 	; Assign daysOfMonths[0] 31
@@ -721,21 +721,21 @@ section .text
 	mov qword [rbp + 76], gmtime$51
 	mov [rbp + 84], rbp
 	add rbp, 76
-	jmp @4750$isLeapYear
+	jmp @4765$isLeapYear
 
  gmtime$51:
 	; PostCall 76
 
  gmtime$52:
-	; GetReturnValue £temporary2837
+	; GetReturnValue £temporary2850
 
  gmtime$53:
-	; Equal 56 £temporary2837 0
+	; Equal 56 £temporary2850 0
 	cmp ebx, 0
 	je gmtime$56
 
  gmtime$54:
-	; Assign £temporary2839 29
+	; Assign £temporary2852 29
 	mov eax, 29
 
  gmtime$55:
@@ -743,11 +743,11 @@ section .text
 	jmp gmtime$57
 
  gmtime$56:
-	; Assign £temporary2839 28
+	; Assign £temporary2852 28
 	mov eax, 28
 
  gmtime$57:
-	; Assign daysOfMonths[1] £temporary2839
+	; Assign daysOfMonths[1] £temporary2852
 	mov [rbp + 76], eax
 
  gmtime$58:
@@ -795,27 +795,27 @@ section .text
 	mov dword [rbp + 120], 0
 
  gmtime$69:
-	; IntegralToIntegral £temporary2853 month
+	; IntegralToIntegral £temporary2866 month
 	mov eax, [rbp + 120]
 	mov rbx, 4294967295
 	and rax, rbx
 
  gmtime$70:
-	; UnsignedMultiply £temporary2854 £temporary2853 4
+	; UnsignedMultiply £temporary2867 £temporary2866 4
 	xor rdx, rdx
 	mul qword [Array_4#]
 
  gmtime$71:
-	; BinaryAdd £temporary2855 daysOfMonths £temporary2854
+	; BinaryAdd £temporary2868 daysOfMonths £temporary2867
 	mov rsi, rbp
 	add rsi, 72
 	add rsi, rax
 
  gmtime$72:
-	; Dereference £temporary2852 -> £temporary2855 £temporary2855 0
+	; Dereference £temporary2865 -> £temporary2868 £temporary2868 0
 
  gmtime$73:
-	; IntegralToIntegral £temporary2856 £temporary2852 -> £temporary2855
+	; IntegralToIntegral £temporary2869 £temporary2865 -> £temporary2868
 	mov eax, [rsi]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -825,12 +825,12 @@ section .text
 	neg rax
 
  gmtime$74:
-	; SignedLessThan 84 totalDays £temporary2856
+	; SignedLessThan 84 totalDays £temporary2869
 	cmp [rbp + 56], rax
 	jl gmtime$84
 
  gmtime$75:
-	; Assign £temporary2858 month
+	; Assign £temporary2871 month
 	mov eax, [rbp + 120]
 
  gmtime$76:
@@ -838,26 +838,26 @@ section .text
 	inc dword [rbp + 120]
 
  gmtime$77:
-	; IntegralToIntegral £temporary2860 £temporary2858
+	; IntegralToIntegral £temporary2873 £temporary2871
 	mov rbx, 4294967295
 	and rax, rbx
 
  gmtime$78:
-	; UnsignedMultiply £temporary2861 £temporary2860 4
+	; UnsignedMultiply £temporary2874 £temporary2873 4
 	xor rdx, rdx
 	mul qword [Array_4#]
 
  gmtime$79:
-	; BinaryAdd £temporary2862 daysOfMonths £temporary2861
+	; BinaryAdd £temporary2875 daysOfMonths £temporary2874
 	mov rsi, rbp
 	add rsi, 72
 	add rsi, rax
 
  gmtime$80:
-	; Dereference £temporary2859 -> £temporary2862 £temporary2862 0
+	; Dereference £temporary2872 -> £temporary2875 £temporary2875 0
 
  gmtime$81:
-	; IntegralToIntegral £temporary2863 £temporary2859 -> £temporary2862
+	; IntegralToIntegral £temporary2876 £temporary2872 -> £temporary2875
 	mov eax, [rsi]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -867,7 +867,7 @@ section .text
 	neg rax
 
  gmtime$82:
-	; BinarySubtract totalDays totalDays £temporary2863
+	; BinarySubtract totalDays totalDays £temporary2876
 	sub [rbp + 56], rax
 
  gmtime$83:
@@ -877,34 +877,34 @@ section .text
  gmtime$84:
 	; Assign g_timeStruct.tm_mon month
 	mov eax, [rbp + 120]
-	mov [@4748$g_timeStruct + 16], eax
+	mov [@4763$g_timeStruct + 16], eax
 
  gmtime$85:
-	; BinaryAdd £temporary2867 totalDays 1
+	; BinaryAdd £temporary2880 totalDays 1
 	mov rax, [rbp + 56]
 	inc rax
 
  gmtime$86:
-	; IntegralToIntegral £temporary2868 £temporary2867
+	; IntegralToIntegral £temporary2881 £temporary2880
 	cmp rax, 0
 	jge gmtime$87
 	neg rax
 	neg eax
 
  gmtime$87:
-	; Assign g_timeStruct.tm_mday £temporary2868
-	mov [@4748$g_timeStruct + 12], eax
+	; Assign g_timeStruct.tm_mday £temporary2881
+	mov [@4763$g_timeStruct + 12], eax
 
  gmtime$88:
 	; Assign g_timeStruct.tm_isdst -1
-	mov dword [@4748$g_timeStruct + 32], -1
+	mov dword [@4763$g_timeStruct + 32], -1
 
  gmtime$89:
 	; SetReturnValue
 
  gmtime$90:
-	; Return @4748$g_timeStruct
-	mov rbx, @4748$g_timeStruct
+	; Return @4763$g_timeStruct
+	mov rbx, @4763$g_timeStruct
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -933,12 +933,12 @@ container8bytes#:
 section .text
 
  difftime:
-	; BinarySubtract £temporary2870 time2 time1
+	; BinarySubtract £temporary2883 time2 time1
 	mov rax, [rbp + 32]
 	sub rax, [rbp + 24]
 
  difftime$1:
-	; IntegralToFloating £temporary2871 £temporary2870
+	; IntegralToFloating £temporary2884 £temporary2883
 	mov [container8bytes#], rax
 	fild qword [container8bytes#]
 
@@ -946,7 +946,7 @@ section .text
 	; SetReturnValue
 
  difftime$3:
-	; Return £temporary2871
+	; Return £temporary2884
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -957,7 +957,7 @@ section .text
 
 section .data
 
-@4764$g_timeString:
+@4779$g_timeString:
 	; InitializerZero 256
 	times 256 db 0
 
@@ -1005,7 +1005,7 @@ string_Sat#:
 
 section .data
 
-@4765$g_defaultShortDayList:
+@4780$g_defaultShortDayList:
 	; Initializer Pointer string_Sun#
 	dq string_Sun#
 	; Initializer Pointer string_Mon#
@@ -1065,7 +1065,7 @@ string_Saturday#:
 
 section .data
 
-@4766$g_defaultLongDayList:
+@4781$g_defaultLongDayList:
 	; Initializer Pointer string_Sunday#
 	dq string_Sunday#
 	; Initializer Pointer string_Monday#
@@ -1155,7 +1155,7 @@ string_Dec#:
 
 section .data
 
-@4767$g_defaultShortMonthList:
+@4782$g_defaultShortMonthList:
 	; Initializer Pointer string_Jan#
 	dq string_Jan#
 	; Initializer Pointer string_Feb#
@@ -1249,7 +1249,7 @@ string_December#:
 
 section .data
 
-@4768$g_defaultLongMonthList:
+@4783$g_defaultLongMonthList:
 	; Initializer Pointer string_January#
 	dq string_January#
 	; Initializer Pointer string_February#
@@ -1299,11 +1299,11 @@ section .text
 	je asctime$5
 
  asctime$2:
-	; Dereference £temporary2873 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2886 -> localeConvPtr localeConvPtr 0
 	mov rsi, [rbp + 32]
 
  asctime$3:
-	; Assign £temporary2874 £temporary2873 -> localeConvPtr
+	; Assign £temporary2887 £temporary2886 -> localeConvPtr
 	mov rax, [rsi + 8]
 
  asctime$4:
@@ -1311,11 +1311,11 @@ section .text
 	jmp asctime$6
 
  asctime$5:
-	; Assign £temporary2874 0
+	; Assign £temporary2887 0
 	mov rax, 0
 
  asctime$6:
-	; Assign shortDayList £temporary2874
+	; Assign shortDayList £temporary2887
 	mov [rbp + 40], rax
 
  asctime$7:
@@ -1324,11 +1324,11 @@ section .text
 	je asctime$11
 
  asctime$8:
-	; Dereference £temporary2876 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2889 -> localeConvPtr localeConvPtr 0
 	mov rsi, [rbp + 32]
 
  asctime$9:
-	; Assign £temporary2877 £temporary2876 -> localeConvPtr
+	; Assign £temporary2890 £temporary2889 -> localeConvPtr
 	mov rax, [rsi + 24]
 
  asctime$10:
@@ -1336,11 +1336,11 @@ section .text
 	jmp asctime$12
 
  asctime$11:
-	; Assign £temporary2877 0
+	; Assign £temporary2890 0
 	mov rax, 0
 
  asctime$12:
-	; Assign shortMonthList £temporary2877
+	; Assign shortMonthList £temporary2890
 	mov [rbp + 48], rax
 
  asctime$13:
@@ -1349,7 +1349,7 @@ section .text
 	je asctime$16
 
  asctime$14:
-	; Assign £temporary2879 shortDayList
+	; Assign £temporary2892 shortDayList
 	mov rax, [rbp + 40]
 
  asctime$15:
@@ -1357,11 +1357,11 @@ section .text
 	jmp asctime$17
 
  asctime$16:
-	; Assign £temporary2879 g_defaultShortDayList
-	mov rax, @4765$g_defaultShortDayList
+	; Assign £temporary2892 g_defaultShortDayList
+	mov rax, @4780$g_defaultShortDayList
 
  asctime$17:
-	; Assign shortDayList £temporary2879
+	; Assign shortDayList £temporary2892
 	mov [rbp + 40], rax
 
  asctime$18:
@@ -1370,7 +1370,7 @@ section .text
 	je asctime$21
 
  asctime$19:
-	; Assign £temporary2881 shortMonthList
+	; Assign £temporary2894 shortMonthList
 	mov rax, [rbp + 48]
 
  asctime$20:
@@ -1378,11 +1378,11 @@ section .text
 	jmp asctime$22
 
  asctime$21:
-	; Assign £temporary2881 g_defaultShortMonthList
-	mov rax, @4767$g_defaultShortMonthList
+	; Assign £temporary2894 g_defaultShortMonthList
+	mov rax, @4782$g_defaultShortMonthList
 
  asctime$22:
-	; Assign shortMonthList £temporary2881
+	; Assign shortMonthList £temporary2894
 	mov [rbp + 48], rax
 
  asctime$23:
@@ -1390,115 +1390,115 @@ section .text
 
  asctime$24:
 	; Parameter 80 pointer g_timeString
-	mov qword [rbp + 80], @4764$g_timeString
+	mov qword [rbp + 80], @4779$g_timeString
 
  asctime$25:
 	; Parameter 88 pointer "%s %s %i %02i:%02i:%02i %i"
 	mov qword [rbp + 88], string_25s2025s2025i202502i3A2502i3A2502i2025i#
 
  asctime$26:
-	; Dereference £temporary2882 -> tp tp 0
+	; Dereference £temporary2895 -> tp tp 0
 	mov rsi, [rbp + 24]
 
  asctime$27:
-	; IntegralToIntegral £temporary2884 £temporary2882 -> tp
+	; IntegralToIntegral £temporary2897 £temporary2895 -> tp
 	mov eax, [rsi + 24]
 	mov rbx, 4294967295
 	and rax, rbx
 
  asctime$28:
-	; UnsignedMultiply £temporary2885 £temporary2884 8
+	; UnsignedMultiply £temporary2898 £temporary2897 8
 	xor rdx, rdx
 	mul qword [int8$8#]
 
  asctime$29:
-	; BinaryAdd £temporary2886 shortDayList £temporary2885
+	; BinaryAdd £temporary2899 shortDayList £temporary2898
 	mov rsi, [rbp + 40]
 	add rsi, rax
 
  asctime$30:
-	; Dereference £temporary2883 -> £temporary2886 £temporary2886 0
+	; Dereference £temporary2896 -> £temporary2899 £temporary2899 0
 
  asctime$31:
-	; Parameter 96 pointer £temporary2883 -> £temporary2886
+	; Parameter 96 pointer £temporary2896 -> £temporary2899
 	mov rax, [rsi]
 	mov [rbp + 96], rax
 
  asctime$32:
-	; Dereference £temporary2887 -> tp tp 0
+	; Dereference £temporary2900 -> tp tp 0
 	mov rsi, [rbp + 24]
 
  asctime$33:
-	; IntegralToIntegral £temporary2889 £temporary2887 -> tp
+	; IntegralToIntegral £temporary2902 £temporary2900 -> tp
 	mov eax, [rsi + 16]
 	mov rbx, 4294967295
 	and rax, rbx
 
  asctime$34:
-	; UnsignedMultiply £temporary2890 £temporary2889 8
+	; UnsignedMultiply £temporary2903 £temporary2902 8
 	xor rdx, rdx
 	mul qword [int8$8#]
 
  asctime$35:
-	; BinaryAdd £temporary2891 shortMonthList £temporary2890
+	; BinaryAdd £temporary2904 shortMonthList £temporary2903
 	mov rsi, [rbp + 48]
 	add rsi, rax
 
  asctime$36:
-	; Dereference £temporary2888 -> £temporary2891 £temporary2891 0
+	; Dereference £temporary2901 -> £temporary2904 £temporary2904 0
 
  asctime$37:
-	; Parameter 104 pointer £temporary2888 -> £temporary2891
+	; Parameter 104 pointer £temporary2901 -> £temporary2904
 	mov rax, [rsi]
 	mov [rbp + 104], rax
 
  asctime$38:
-	; Dereference £temporary2892 -> tp tp 0
+	; Dereference £temporary2905 -> tp tp 0
 	mov rsi, [rbp + 24]
 
  asctime$39:
-	; Parameter 112 signedint £temporary2892 -> tp
+	; Parameter 112 signedint £temporary2905 -> tp
 	mov eax, [rsi + 12]
 	mov [rbp + 112], eax
 
  asctime$40:
-	; Dereference £temporary2893 -> tp tp 0
+	; Dereference £temporary2906 -> tp tp 0
 	mov rsi, [rbp + 24]
 
  asctime$41:
-	; Parameter 116 signedint £temporary2893 -> tp
+	; Parameter 116 signedint £temporary2906 -> tp
 	mov eax, [rsi + 8]
 	mov [rbp + 116], eax
 
  asctime$42:
-	; Dereference £temporary2894 -> tp tp 0
+	; Dereference £temporary2907 -> tp tp 0
 	mov rsi, [rbp + 24]
 
  asctime$43:
-	; Parameter 120 signedint £temporary2894 -> tp
+	; Parameter 120 signedint £temporary2907 -> tp
 	mov eax, [rsi + 4]
 	mov [rbp + 120], eax
 
  asctime$44:
-	; Dereference £temporary2895 -> tp tp 0
+	; Dereference £temporary2908 -> tp tp 0
 	mov rsi, [rbp + 24]
 
  asctime$45:
-	; Parameter 124 signedint £temporary2895 -> tp
+	; Parameter 124 signedint £temporary2908 -> tp
 	mov eax, [rsi]
 	mov [rbp + 124], eax
 
  asctime$46:
-	; Dereference £temporary2896 -> tp tp 0
+	; Dereference £temporary2909 -> tp tp 0
 	mov rsi, [rbp + 24]
 
  asctime$47:
-	; BinaryAdd £temporary2897 £temporary2896 -> tp 1900
+	; BinaryAdd £temporary2910 £temporary2909 -> tp 1900
 	mov eax, [rsi + 20]
 	add eax, 1900
 
  asctime$48:
-	; Parameter 128 signedint £temporary2897
+	; Parameter 128 signedint £temporary2910
 	mov [rbp + 128], eax
 
  asctime$49:
@@ -1518,7 +1518,7 @@ section .text
 
  asctime$52:
 	; Return g_timeString
-	mov rbx, @4764$g_timeString
+	mov rbx, @4779$g_timeString
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1551,10 +1551,10 @@ section .text
 	; PostCall 32
 
  ctime$5:
-	; GetReturnValue £temporary2899
+	; GetReturnValue £temporary2912
 
  ctime$6:
-	; Parameter 56 pointer £temporary2899
+	; Parameter 56 pointer £temporary2912
 	mov [rbp + 56], rbx
 
  ctime$7:
@@ -1568,13 +1568,13 @@ section .text
 	; PostCall 32
 
  ctime$9:
-	; GetReturnValue £temporary2900
+	; GetReturnValue £temporary2913
 
  ctime$10:
 	; SetReturnValue
 
  ctime$11:
-	; Return £temporary2900
+	; Return £temporary2913
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1604,10 +1604,10 @@ section .text
 	; PostCall 32
 
  localtime$4:
-	; GetReturnValue £temporary2901
+	; GetReturnValue £temporary2914
 
  localtime$5:
-	; Assign tmPtr £temporary2901
+	; Assign tmPtr £temporary2914
 	mov [rbp + 32], rbx
 
  localtime$6:
@@ -1624,10 +1624,10 @@ section .text
 	; PostCall 40
 
  localtime$9:
-	; GetReturnValue £temporary2902
+	; GetReturnValue £temporary2915
 
  localtime$10:
-	; Assign localeConvPtr £temporary2902
+	; Assign localeConvPtr £temporary2915
 	mov [rbp + 40], rbx
 
  localtime$11:
@@ -1640,20 +1640,20 @@ section .text
 	je localtime$21
 
  localtime$13:
-	; Dereference £temporary2904 -> tmPtr tmPtr 0
+	; Dereference £temporary2917 -> tmPtr tmPtr 0
 	mov rsi, [rbp + 32]
 
  localtime$14:
-	; NotEqual 18 £temporary2904 -> tmPtr 1
+	; NotEqual 18 £temporary2917 -> tmPtr 1
 	cmp dword [rsi + 32], 1
 	jne localtime$18
 
  localtime$15:
-	; Dereference £temporary2906 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2919 -> localeConvPtr localeConvPtr 0
 	mov rsi, [rbp + 40]
 
  localtime$16:
-	; Assign £temporary2908 £temporary2906 -> localeConvPtr
+	; Assign £temporary2921 £temporary2919 -> localeConvPtr
 	mov eax, [rsi]
 
  localtime$17:
@@ -1661,23 +1661,23 @@ section .text
 	jmp localtime$20
 
  localtime$18:
-	; Dereference £temporary2907 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2920 -> localeConvPtr localeConvPtr 0
 	mov rsi, [rbp + 40]
 
  localtime$19:
-	; Assign £temporary2908 £temporary2907 -> localeConvPtr
+	; Assign £temporary2921 £temporary2920 -> localeConvPtr
 	mov eax, [rsi + 4]
 
  localtime$20:
-	; Assign timeZone £temporary2908
+	; Assign timeZone £temporary2921
 	mov [rbp + 48], eax
 
  localtime$21:
-	; Dereference £temporary2909 -> timePtr timePtr 0
+	; Dereference £temporary2922 -> timePtr timePtr 0
 	mov rsi, [rbp + 24]
 
  localtime$22:
-	; IntegralToIntegral £temporary2910 timeZone
+	; IntegralToIntegral £temporary2923 timeZone
 	mov eax, [rbp + 48]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -1687,12 +1687,12 @@ section .text
 	neg rax
 
  localtime$23:
-	; SignedMultiply £temporary2911 £temporary2910 3600
+	; SignedMultiply £temporary2924 £temporary2923 3600
 	xor rdx, rdx
 	imul qword [int8$3600#]
 
  localtime$24:
-	; BinaryAdd t £temporary2909 -> timePtr £temporary2911
+	; BinaryAdd t £temporary2922 -> timePtr £temporary2924
 	mov rbx, [rsi]
 	add rbx, rax
 	mov [rbp + 52], rbx
@@ -1701,12 +1701,12 @@ section .text
 	; PreCall 60 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  localtime$26:
-	; Address £temporary2913 t
+	; Address £temporary2926 t
 	mov rsi, rbp
 	add rsi, 52
 
  localtime$27:
-	; Parameter 84 pointer £temporary2913
+	; Parameter 84 pointer £temporary2926
 	mov [rbp + 84], rsi
 
  localtime$28:
@@ -1720,13 +1720,13 @@ section .text
 	; PostCall 60
 
  localtime$30:
-	; GetReturnValue £temporary2914
+	; GetReturnValue £temporary2927
 
  localtime$31:
 	; SetReturnValue
 
  localtime$32:
-	; Return £temporary2914
+	; Return £temporary2927
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1805,10 +1805,10 @@ section .text
 	; PostCall 52
 
  strftime$3:
-	; GetReturnValue £temporary2916
+	; GetReturnValue £temporary2929
 
  strftime$4:
-	; Assign localeConvPtr £temporary2916
+	; Assign localeConvPtr £temporary2929
 	mov [rbp + 52], rbx
 
  strftime$5:
@@ -1817,11 +1817,11 @@ section .text
 	je strftime$9
 
  strftime$6:
-	; Dereference £temporary2918 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2931 -> localeConvPtr localeConvPtr 0
 	mov rsi, [rbp + 52]
 
  strftime$7:
-	; Assign £temporary2919 £temporary2918 -> localeConvPtr
+	; Assign £temporary2932 £temporary2931 -> localeConvPtr
 	mov rax, [rsi + 8]
 
  strftime$8:
@@ -1829,11 +1829,11 @@ section .text
 	jmp strftime$10
 
  strftime$9:
-	; Assign £temporary2919 0
+	; Assign £temporary2932 0
 	mov rax, 0
 
  strftime$10:
-	; Assign shortDayList £temporary2919
+	; Assign shortDayList £temporary2932
 	mov [rbp + 60], rax
 
  strftime$11:
@@ -1842,11 +1842,11 @@ section .text
 	je strftime$15
 
  strftime$12:
-	; Dereference £temporary2921 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2934 -> localeConvPtr localeConvPtr 0
 	mov rsi, [rbp + 52]
 
  strftime$13:
-	; Assign £temporary2922 £temporary2921 -> localeConvPtr
+	; Assign £temporary2935 £temporary2934 -> localeConvPtr
 	mov rax, [rsi + 24]
 
  strftime$14:
@@ -1854,11 +1854,11 @@ section .text
 	jmp strftime$16
 
  strftime$15:
-	; Assign £temporary2922 0
+	; Assign £temporary2935 0
 	mov rax, 0
 
  strftime$16:
-	; Assign shortMonthList £temporary2922
+	; Assign shortMonthList £temporary2935
 	mov [rbp + 68], rax
 
  strftime$17:
@@ -1867,11 +1867,11 @@ section .text
 	je strftime$21
 
  strftime$18:
-	; Dereference £temporary2924 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2937 -> localeConvPtr localeConvPtr 0
 	mov rsi, [rbp + 52]
 
  strftime$19:
-	; Assign £temporary2925 £temporary2924 -> localeConvPtr
+	; Assign £temporary2938 £temporary2937 -> localeConvPtr
 	mov rax, [rsi + 16]
 
  strftime$20:
@@ -1879,11 +1879,11 @@ section .text
 	jmp strftime$22
 
  strftime$21:
-	; Assign £temporary2925 0
+	; Assign £temporary2938 0
 	mov rax, 0
 
  strftime$22:
-	; Assign longDayList £temporary2925
+	; Assign longDayList £temporary2938
 	mov [rbp + 76], rax
 
  strftime$23:
@@ -1892,11 +1892,11 @@ section .text
 	je strftime$27
 
  strftime$24:
-	; Dereference £temporary2927 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2940 -> localeConvPtr localeConvPtr 0
 	mov rsi, [rbp + 52]
 
  strftime$25:
-	; Assign £temporary2928 £temporary2927 -> localeConvPtr
+	; Assign £temporary2941 £temporary2940 -> localeConvPtr
 	mov rax, [rsi + 32]
 
  strftime$26:
@@ -1904,56 +1904,56 @@ section .text
 	jmp strftime$28
 
  strftime$27:
-	; Assign £temporary2928 0
+	; Assign £temporary2941 0
 	mov rax, 0
 
  strftime$28:
-	; Assign longMonthList £temporary2928
+	; Assign longMonthList £temporary2941
 	mov [rbp + 84], rax
 
  strftime$29:
-	; Dereference £temporary2929 -> tp tp 0
+	; Dereference £temporary2942 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$30:
-	; BinarySubtract £temporary2930 £temporary2929 -> tp 69
+	; BinarySubtract £temporary2943 £temporary2942 -> tp 69
 	mov eax, [rsi + 20]
 	sub eax, 69
 
  strftime$31:
-	; SignedDivide leapDays £temporary2930 4
+	; SignedDivide leapDays £temporary2943 4
 	xor edx, edx
 	idiv dword [int4$4#]
 	mov [rbp + 92], eax
 
  strftime$32:
-	; Dereference £temporary2932 -> tp tp 0
+	; Dereference £temporary2945 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$33:
-	; BinarySubtract £temporary2933 £temporary2932 -> tp 70
+	; BinarySubtract £temporary2946 £temporary2945 -> tp 70
 	mov eax, [rsi + 20]
 	sub eax, 70
 
  strftime$34:
-	; SignedMultiply £temporary2934 £temporary2933 365
+	; SignedMultiply £temporary2947 £temporary2946 365
 	xor edx, edx
 	imul dword [int4$365#]
 
  strftime$35:
-	; BinaryAdd £temporary2935 £temporary2934 leapDays
+	; BinaryAdd £temporary2948 £temporary2947 leapDays
 	add eax, [rbp + 92]
 
  strftime$36:
-	; Dereference £temporary2936 -> tp tp 0
+	; Dereference £temporary2949 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$37:
-	; BinaryAdd £temporary2937 £temporary2935 £temporary2936 -> tp
+	; BinaryAdd £temporary2950 £temporary2948 £temporary2949 -> tp
 	add eax, [rsi + 28]
 
  strftime$38:
-	; IntegralToIntegral £temporary2938 £temporary2937
+	; IntegralToIntegral £temporary2951 £temporary2950
 	mov rbx, 4294967295
 	and rax, rbx
 	cmp eax, 0
@@ -1962,7 +1962,7 @@ section .text
 	neg rax
 
  strftime$39:
-	; Assign totalDays £temporary2938
+	; Assign totalDays £temporary2951
 	mov [rbp + 96], rax
 
  strftime$40:
@@ -1993,7 +1993,7 @@ section .text
 	je strftime$48
 
  strftime$46:
-	; Assign £temporary2941 shortDayList
+	; Assign £temporary2954 shortDayList
 	mov rax, [rbp + 60]
 
  strftime$47:
@@ -2001,11 +2001,11 @@ section .text
 	jmp strftime$49
 
  strftime$48:
-	; Assign £temporary2941 g_defaultShortDayList
-	mov rax, @4765$g_defaultShortDayList
+	; Assign £temporary2954 g_defaultShortDayList
+	mov rax, @4780$g_defaultShortDayList
 
  strftime$49:
-	; Assign shortDayList £temporary2941
+	; Assign shortDayList £temporary2954
 	mov [rbp + 60], rax
 
  strftime$50:
@@ -2014,7 +2014,7 @@ section .text
 	je strftime$53
 
  strftime$51:
-	; Assign £temporary2943 longDayList
+	; Assign £temporary2956 longDayList
 	mov rax, [rbp + 76]
 
  strftime$52:
@@ -2022,11 +2022,11 @@ section .text
 	jmp strftime$54
 
  strftime$53:
-	; Assign £temporary2943 g_defaultLongDayList
-	mov rax, @4766$g_defaultLongDayList
+	; Assign £temporary2956 g_defaultLongDayList
+	mov rax, @4781$g_defaultLongDayList
 
  strftime$54:
-	; Assign longDayList £temporary2943
+	; Assign longDayList £temporary2956
 	mov [rbp + 76], rax
 
  strftime$55:
@@ -2035,7 +2035,7 @@ section .text
 	je strftime$58
 
  strftime$56:
-	; Assign £temporary2945 shortMonthList
+	; Assign £temporary2958 shortMonthList
 	mov rax, [rbp + 68]
 
  strftime$57:
@@ -2043,11 +2043,11 @@ section .text
 	jmp strftime$59
 
  strftime$58:
-	; Assign £temporary2945 g_defaultShortMonthList
-	mov rax, @4767$g_defaultShortMonthList
+	; Assign £temporary2958 g_defaultShortMonthList
+	mov rax, @4782$g_defaultShortMonthList
 
  strftime$59:
-	; Assign shortMonthList £temporary2945
+	; Assign shortMonthList £temporary2958
 	mov [rbp + 68], rax
 
  strftime$60:
@@ -2056,7 +2056,7 @@ section .text
 	je strftime$63
 
  strftime$61:
-	; Assign £temporary2947 longMonthList
+	; Assign £temporary2960 longMonthList
 	mov rax, [rbp + 84]
 
  strftime$62:
@@ -2064,11 +2064,11 @@ section .text
 	jmp strftime$64
 
  strftime$63:
-	; Assign £temporary2947 g_defaultLongMonthList
-	mov rax, @4768$g_defaultLongMonthList
+	; Assign £temporary2960 g_defaultLongMonthList
+	mov rax, @4783$g_defaultLongMonthList
 
  strftime$64:
-	; Assign longMonthList £temporary2947
+	; Assign longMonthList £temporary2960
 	mov [rbp + 84], rax
 
  strftime$65:
@@ -2077,19 +2077,19 @@ section .text
 	jge strftime$70
 
  strftime$66:
-	; BinaryAdd £temporary2949 totalDays 4
+	; BinaryAdd £temporary2962 totalDays 4
 	mov rax, [rbp + 96]
 	add rax, 4
 
  strftime$67:
-	; IntegralToIntegral £temporary2950 £temporary2949
+	; IntegralToIntegral £temporary2963 £temporary2962
 	cmp rax, 0
 	jge strftime$68
 	neg rax
 	neg eax
 
  strftime$68:
-	; Assign yearDaySunday £temporary2950
+	; Assign yearDaySunday £temporary2963
 	mov [rbp + 104], eax
 
  strftime$69:
@@ -2097,24 +2097,24 @@ section .text
 	jmp strftime$74
 
  strftime$70:
-	; BinarySubtract £temporary2951 totalDays 3
+	; BinarySubtract £temporary2964 totalDays 3
 	mov rax, [rbp + 96]
 	sub rax, 3
 
  strftime$71:
-	; SignedModulo £temporary2952 £temporary2951 7
+	; SignedModulo £temporary2965 £temporary2964 7
 	xor rdx, rdx
 	idiv qword [int8$7#]
 
  strftime$72:
-	; IntegralToIntegral £temporary2953 £temporary2952
+	; IntegralToIntegral £temporary2966 £temporary2965
 	cmp rdx, 0
 	jge strftime$73
 	neg rdx
 	neg edx
 
  strftime$73:
-	; Assign yearDaySunday £temporary2953
+	; Assign yearDaySunday £temporary2966
 	mov [rbp + 104], edx
 
  strftime$74:
@@ -2123,19 +2123,19 @@ section .text
 	jge strftime$79
 
  strftime$75:
-	; BinaryAdd £temporary2955 totalDays 3
+	; BinaryAdd £temporary2968 totalDays 3
 	mov rax, [rbp + 96]
 	add rax, 3
 
  strftime$76:
-	; IntegralToIntegral £temporary2956 £temporary2955
+	; IntegralToIntegral £temporary2969 £temporary2968
 	cmp rax, 0
 	jge strftime$77
 	neg rax
 	neg eax
 
  strftime$77:
-	; Assign yearDayMonday £temporary2956
+	; Assign yearDayMonday £temporary2969
 	mov [rbp + 108], eax
 
  strftime$78:
@@ -2143,24 +2143,24 @@ section .text
 	jmp strftime$83
 
  strftime$79:
-	; BinarySubtract £temporary2957 totalDays 4
+	; BinarySubtract £temporary2970 totalDays 4
 	mov rax, [rbp + 96]
 	sub rax, 4
 
  strftime$80:
-	; SignedModulo £temporary2958 £temporary2957 7
+	; SignedModulo £temporary2971 £temporary2970 7
 	xor rdx, rdx
 	idiv qword [int8$7#]
 
  strftime$81:
-	; IntegralToIntegral £temporary2959 £temporary2958
+	; IntegralToIntegral £temporary2972 £temporary2971
 	cmp rdx, 0
 	jge strftime$82
 	neg rdx
 	neg edx
 
  strftime$82:
-	; Assign yearDayMonday £temporary2959
+	; Assign yearDayMonday £temporary2972
 	mov [rbp + 108], edx
 
  strftime$83:
@@ -2168,40 +2168,40 @@ section .text
 	mov dword [rbp + 112], 0
 
  strftime$84:
-	; IntegralToIntegral £temporary2961 index
+	; IntegralToIntegral £temporary2974 index
 	mov eax, [rbp + 112]
 	mov rbx, 4294967295
 	and rax, rbx
 
  strftime$85:
-	; BinaryAdd £temporary2963 fmt £temporary2961
+	; BinaryAdd £temporary2976 fmt £temporary2974
 	mov rsi, [rbp + 36]
 	add rsi, rax
 
  strftime$86:
-	; Dereference £temporary2960 -> £temporary2963 £temporary2963 0
+	; Dereference £temporary2973 -> £temporary2976 £temporary2976 0
 
  strftime$87:
-	; Equal 364 £temporary2960 -> £temporary2963 0
+	; Equal 364 £temporary2973 -> £temporary2976 0
 	cmp byte [rsi], 0
 	je strftime$364
 
  strftime$88:
-	; IntegralToIntegral £temporary2967 index
+	; IntegralToIntegral £temporary2980 index
 	mov eax, [rbp + 112]
 	mov rbx, 4294967295
 	and rax, rbx
 
  strftime$89:
-	; BinaryAdd £temporary2969 fmt £temporary2967
+	; BinaryAdd £temporary2982 fmt £temporary2980
 	mov rsi, [rbp + 36]
 	add rsi, rax
 
  strftime$90:
-	; Dereference £temporary2966 -> £temporary2969 £temporary2969 0
+	; Dereference £temporary2979 -> £temporary2982 £temporary2982 0
 
  strftime$91:
-	; NotEqual 336 £temporary2966 -> £temporary2969 37
+	; NotEqual 336 £temporary2979 -> £temporary2982 37
 	cmp byte [rsi], 37
 	jne strftime$336
 
@@ -2210,135 +2210,135 @@ section .text
 	inc dword [rbp + 112]
 
  strftime$93:
-	; Assign £temporary2971 index
+	; Assign £temporary2984 index
 	mov eax, [rbp + 112]
 
  strftime$94:
-	; IntegralToIntegral £temporary2973 £temporary2971
+	; IntegralToIntegral £temporary2986 £temporary2984
 	mov rbx, 4294967295
 	and rax, rbx
 
  strftime$95:
-	; BinaryAdd £temporary2975 fmt £temporary2973
+	; BinaryAdd £temporary2988 fmt £temporary2986
 	mov rsi, [rbp + 36]
 	add rsi, rax
 
  strftime$96:
-	; Dereference £temporary2972 -> £temporary2975 £temporary2975 0
+	; Dereference £temporary2985 -> £temporary2988 £temporary2988 0
 
  strftime$97:
-	; Case 121 £temporary2972 -> £temporary2975 97
+	; Case 121 £temporary2985 -> £temporary2988 97
 	mov al, [rsi]
 	cmp al, 97
 	je strftime$121
 
  strftime$98:
-	; Case 132 £temporary2972 -> £temporary2975 65
+	; Case 132 £temporary2985 -> £temporary2988 65
 	cmp al, 65
 	je strftime$132
 
  strftime$99:
-	; Case 143 £temporary2972 -> £temporary2975 98
+	; Case 143 £temporary2985 -> £temporary2988 98
 	cmp al, 98
 	je strftime$143
 
  strftime$100:
-	; Case 154 £temporary2972 -> £temporary2975 66
+	; Case 154 £temporary2985 -> £temporary2988 66
 	cmp al, 66
 	je strftime$154
 
  strftime$101:
-	; Case 165 £temporary2972 -> £temporary2975 99
+	; Case 165 £temporary2985 -> £temporary2988 99
 	cmp al, 99
 	je strftime$165
 
  strftime$102:
-	; Case 185 £temporary2972 -> £temporary2975 100
+	; Case 185 £temporary2985 -> £temporary2988 100
 	cmp al, 100
 	je strftime$185
 
  strftime$103:
-	; Case 193 £temporary2972 -> £temporary2975 72
+	; Case 193 £temporary2985 -> £temporary2988 72
 	cmp al, 72
 	je strftime$193
 
  strftime$104:
-	; Case 201 £temporary2972 -> £temporary2975 73
+	; Case 201 £temporary2985 -> £temporary2988 73
 	cmp al, 73
 	je strftime$201
 
  strftime$105:
-	; Case 210 £temporary2972 -> £temporary2975 106
+	; Case 210 £temporary2985 -> £temporary2988 106
 	cmp al, 106
 	je strftime$210
 
  strftime$106:
-	; Case 218 £temporary2972 -> £temporary2975 109
+	; Case 218 £temporary2985 -> £temporary2988 109
 	cmp al, 109
 	je strftime$218
 
  strftime$107:
-	; Case 227 £temporary2972 -> £temporary2975 77
+	; Case 227 £temporary2985 -> £temporary2988 77
 	cmp al, 77
 	je strftime$227
 
  strftime$108:
-	; Case 235 £temporary2972 -> £temporary2975 112
+	; Case 235 £temporary2985 -> £temporary2988 112
 	cmp al, 112
 	je strftime$235
 
  strftime$109:
-	; Case 247 £temporary2972 -> £temporary2975 83
+	; Case 247 £temporary2985 -> £temporary2988 83
 	cmp al, 83
 	je strftime$247
 
  strftime$110:
-	; Case 255 £temporary2972 -> £temporary2975 85
+	; Case 255 £temporary2985 -> £temporary2988 85
 	cmp al, 85
 	je strftime$255
 
  strftime$111:
-	; Case 262 £temporary2972 -> £temporary2975 119
+	; Case 262 £temporary2985 -> £temporary2988 119
 	cmp al, 119
 	je strftime$262
 
  strftime$112:
-	; Case 270 £temporary2972 -> £temporary2975 87
+	; Case 270 £temporary2985 -> £temporary2988 87
 	cmp al, 87
 	je strftime$270
 
  strftime$113:
-	; Case 277 £temporary2972 -> £temporary2975 120
+	; Case 277 £temporary2985 -> £temporary2988 120
 	cmp al, 120
 	je strftime$277
 
  strftime$114:
-	; Case 289 £temporary2972 -> £temporary2975 88
+	; Case 289 £temporary2985 -> £temporary2988 88
 	cmp al, 88
 	je strftime$289
 
  strftime$115:
-	; Case 301 £temporary2972 -> £temporary2975 121
+	; Case 301 £temporary2985 -> £temporary2988 121
 	cmp al, 121
 	je strftime$301
 
  strftime$116:
-	; Case 310 £temporary2972 -> £temporary2975 89
+	; Case 310 £temporary2985 -> £temporary2988 89
 	cmp al, 89
 	je strftime$310
 
  strftime$117:
-	; Case 319 £temporary2972 -> £temporary2975 90
+	; Case 319 £temporary2985 -> £temporary2988 90
 	cmp al, 90
 	je strftime$319
 
  strftime$118:
-	; Case 325 £temporary2972 -> £temporary2975 37
+	; Case 325 £temporary2985 -> £temporary2988 37
 	cmp al, 37
 	je strftime$325
 
  strftime$119:
-	; CaseEnd £temporary2972 -> £temporary2975
+	; CaseEnd £temporary2985 -> £temporary2988
 
  strftime$120:
 	; Goto 330
@@ -2353,30 +2353,30 @@ section .text
 	add qword [rbp + 160], 116
 
  strftime$123:
-	; Dereference £temporary2976 -> tp tp 0
+	; Dereference £temporary2989 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$124:
-	; IntegralToIntegral £temporary2978 £temporary2976 -> tp
+	; IntegralToIntegral £temporary2991 £temporary2989 -> tp
 	mov eax, [rsi + 24]
 	mov rbx, 4294967295
 	and rax, rbx
 
  strftime$125:
-	; UnsignedMultiply £temporary2979 £temporary2978 8
+	; UnsignedMultiply £temporary2992 £temporary2991 8
 	xor rdx, rdx
 	mul qword [int8$8#]
 
  strftime$126:
-	; BinaryAdd £temporary2980 shortDayList £temporary2979
+	; BinaryAdd £temporary2993 shortDayList £temporary2992
 	mov rsi, [rbp + 60]
 	add rsi, rax
 
  strftime$127:
-	; Dereference £temporary2977 -> £temporary2980 £temporary2980 0
+	; Dereference £temporary2990 -> £temporary2993 £temporary2993 0
 
  strftime$128:
-	; Parameter 168 pointer £temporary2977 -> £temporary2980
+	; Parameter 168 pointer £temporary2990 -> £temporary2993
 	mov rax, [rsi]
 	mov [rbp + 168], rax
 
@@ -2403,30 +2403,30 @@ section .text
 	add qword [rbp + 160], 116
 
  strftime$134:
-	; Dereference £temporary2982 -> tp tp 0
+	; Dereference £temporary2995 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$135:
-	; IntegralToIntegral £temporary2984 £temporary2982 -> tp
+	; IntegralToIntegral £temporary2997 £temporary2995 -> tp
 	mov eax, [rsi + 24]
 	mov rbx, 4294967295
 	and rax, rbx
 
  strftime$136:
-	; UnsignedMultiply £temporary2985 £temporary2984 8
+	; UnsignedMultiply £temporary2998 £temporary2997 8
 	xor rdx, rdx
 	mul qword [int8$8#]
 
  strftime$137:
-	; BinaryAdd £temporary2986 longDayList £temporary2985
+	; BinaryAdd £temporary2999 longDayList £temporary2998
 	mov rsi, [rbp + 76]
 	add rsi, rax
 
  strftime$138:
-	; Dereference £temporary2983 -> £temporary2986 £temporary2986 0
+	; Dereference £temporary2996 -> £temporary2999 £temporary2999 0
 
  strftime$139:
-	; Parameter 168 pointer £temporary2983 -> £temporary2986
+	; Parameter 168 pointer £temporary2996 -> £temporary2999
 	mov rax, [rsi]
 	mov [rbp + 168], rax
 
@@ -2453,30 +2453,30 @@ section .text
 	add qword [rbp + 160], 116
 
  strftime$145:
-	; Dereference £temporary2988 -> tp tp 0
+	; Dereference £temporary3001 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$146:
-	; IntegralToIntegral £temporary2990 £temporary2988 -> tp
+	; IntegralToIntegral £temporary3003 £temporary3001 -> tp
 	mov eax, [rsi + 16]
 	mov rbx, 4294967295
 	and rax, rbx
 
  strftime$147:
-	; UnsignedMultiply £temporary2991 £temporary2990 8
+	; UnsignedMultiply £temporary3004 £temporary3003 8
 	xor rdx, rdx
 	mul qword [int8$8#]
 
  strftime$148:
-	; BinaryAdd £temporary2992 shortMonthList £temporary2991
+	; BinaryAdd £temporary3005 shortMonthList £temporary3004
 	mov rsi, [rbp + 68]
 	add rsi, rax
 
  strftime$149:
-	; Dereference £temporary2989 -> £temporary2992 £temporary2992 0
+	; Dereference £temporary3002 -> £temporary3005 £temporary3005 0
 
  strftime$150:
-	; Parameter 168 pointer £temporary2989 -> £temporary2992
+	; Parameter 168 pointer £temporary3002 -> £temporary3005
 	mov rax, [rsi]
 	mov [rbp + 168], rax
 
@@ -2503,30 +2503,30 @@ section .text
 	add qword [rbp + 160], 116
 
  strftime$156:
-	; Dereference £temporary2994 -> tp tp 0
+	; Dereference £temporary3007 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$157:
-	; IntegralToIntegral £temporary2996 £temporary2994 -> tp
+	; IntegralToIntegral £temporary3009 £temporary3007 -> tp
 	mov eax, [rsi + 16]
 	mov rbx, 4294967295
 	and rax, rbx
 
  strftime$158:
-	; UnsignedMultiply £temporary2997 £temporary2996 8
+	; UnsignedMultiply £temporary3010 £temporary3009 8
 	xor rdx, rdx
 	mul qword [int8$8#]
 
  strftime$159:
-	; BinaryAdd £temporary2998 longMonthList £temporary2997
+	; BinaryAdd £temporary3011 longMonthList £temporary3010
 	mov rsi, [rbp + 84]
 	add rsi, rax
 
  strftime$160:
-	; Dereference £temporary2995 -> £temporary2998 £temporary2998 0
+	; Dereference £temporary3008 -> £temporary3011 £temporary3011 0
 
  strftime$161:
-	; Parameter 168 pointer £temporary2995 -> £temporary2998
+	; Parameter 168 pointer £temporary3008 -> £temporary3011
 	mov rax, [rsi]
 	mov [rbp + 168], rax
 
@@ -2557,64 +2557,64 @@ section .text
 	mov qword [rbp + 168], string_2502i2D2502i2D2502i202502i3A2502i3A2502i#
 
  strftime$168:
-	; Dereference £temporary3000 -> tp tp 0
+	; Dereference £temporary3013 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$169:
-	; BinaryAdd £temporary3001 £temporary3000 -> tp 1900
+	; BinaryAdd £temporary3014 £temporary3013 -> tp 1900
 	mov eax, [rsi + 20]
 	add eax, 1900
 
  strftime$170:
-	; Parameter 176 signedint £temporary3001
+	; Parameter 176 signedint £temporary3014
 	mov [rbp + 176], eax
 
  strftime$171:
-	; Dereference £temporary3002 -> tp tp 0
+	; Dereference £temporary3015 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$172:
-	; BinaryAdd £temporary3003 £temporary3002 -> tp 1
+	; BinaryAdd £temporary3016 £temporary3015 -> tp 1
 	mov eax, [rsi + 16]
 	inc eax
 
  strftime$173:
-	; Parameter 180 signedint £temporary3003
+	; Parameter 180 signedint £temporary3016
 	mov [rbp + 180], eax
 
  strftime$174:
-	; Dereference £temporary3004 -> tp tp 0
+	; Dereference £temporary3017 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$175:
-	; Parameter 184 signedint £temporary3004 -> tp
+	; Parameter 184 signedint £temporary3017 -> tp
 	mov eax, [rsi + 12]
 	mov [rbp + 184], eax
 
  strftime$176:
-	; Dereference £temporary3005 -> tp tp 0
+	; Dereference £temporary3018 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$177:
-	; Parameter 188 signedint £temporary3005 -> tp
+	; Parameter 188 signedint £temporary3018 -> tp
 	mov eax, [rsi + 8]
 	mov [rbp + 188], eax
 
  strftime$178:
-	; Dereference £temporary3006 -> tp tp 0
+	; Dereference £temporary3019 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$179:
-	; Parameter 192 signedint £temporary3006 -> tp
+	; Parameter 192 signedint £temporary3019 -> tp
 	mov eax, [rsi + 4]
 	mov [rbp + 192], eax
 
  strftime$180:
-	; Dereference £temporary3007 -> tp tp 0
+	; Dereference £temporary3020 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$181:
-	; Parameter 196 signedint £temporary3007 -> tp
+	; Parameter 196 signedint £temporary3020 -> tp
 	mov eax, [rsi]
 	mov [rbp + 196], eax
 
@@ -2647,11 +2647,11 @@ section .text
 	mov qword [rbp + 168], string_25i#
 
  strftime$188:
-	; Dereference £temporary3009 -> tp tp 0
+	; Dereference £temporary3022 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$189:
-	; Parameter 176 signedint £temporary3009 -> tp
+	; Parameter 176 signedint £temporary3022 -> tp
 	mov eax, [rsi + 12]
 	mov [rbp + 176], eax
 
@@ -2684,11 +2684,11 @@ section .text
 	mov qword [rbp + 168], string_25i#
 
  strftime$196:
-	; Dereference £temporary3011 -> tp tp 0
+	; Dereference £temporary3024 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$197:
-	; Parameter 176 signedint £temporary3011 -> tp
+	; Parameter 176 signedint £temporary3024 -> tp
 	mov eax, [rsi + 8]
 	mov [rbp + 176], eax
 
@@ -2721,17 +2721,17 @@ section .text
 	mov qword [rbp + 168], string_25i#
 
  strftime$204:
-	; Dereference £temporary3013 -> tp tp 0
+	; Dereference £temporary3026 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$205:
-	; SignedModulo £temporary3014 £temporary3013 -> tp 12
+	; SignedModulo £temporary3027 £temporary3026 -> tp 12
 	mov eax, [rsi + 8]
 	xor edx, edx
 	idiv dword [int4$12#]
 
  strftime$206:
-	; Parameter 176 signedint £temporary3014
+	; Parameter 176 signedint £temporary3027
 	mov [rbp + 176], edx
 
  strftime$207:
@@ -2763,11 +2763,11 @@ section .text
 	mov qword [rbp + 168], string_25i#
 
  strftime$213:
-	; Dereference £temporary3016 -> tp tp 0
+	; Dereference £temporary3029 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$214:
-	; Parameter 176 signedint £temporary3016 -> tp
+	; Parameter 176 signedint £temporary3029 -> tp
 	mov eax, [rsi + 28]
 	mov [rbp + 176], eax
 
@@ -2800,16 +2800,16 @@ section .text
 	mov qword [rbp + 168], string_25i#
 
  strftime$221:
-	; Dereference £temporary3018 -> tp tp 0
+	; Dereference £temporary3031 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$222:
-	; BinaryAdd £temporary3019 £temporary3018 -> tp 1
+	; BinaryAdd £temporary3032 £temporary3031 -> tp 1
 	mov eax, [rsi + 16]
 	inc eax
 
  strftime$223:
-	; Parameter 176 signedint £temporary3019
+	; Parameter 176 signedint £temporary3032
 	mov [rbp + 176], eax
 
  strftime$224:
@@ -2841,11 +2841,11 @@ section .text
 	mov qword [rbp + 168], string_25i#
 
  strftime$230:
-	; Dereference £temporary3021 -> tp tp 0
+	; Dereference £temporary3034 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$231:
-	; Parameter 176 signedint £temporary3021 -> tp
+	; Parameter 176 signedint £temporary3034 -> tp
 	mov eax, [rsi + 4]
 	mov [rbp + 176], eax
 
@@ -2878,16 +2878,16 @@ section .text
 	mov qword [rbp + 168], string_25s#
 
  strftime$238:
-	; Dereference £temporary3023 -> tp tp 0
+	; Dereference £temporary3036 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$239:
-	; SignedGreaterThanEqual 242 £temporary3023 -> tp 12
+	; SignedGreaterThanEqual 242 £temporary3036 -> tp 12
 	cmp dword [rsi + 8], 12
 	jge strftime$242
 
  strftime$240:
-	; Assign £temporary3025 "AM"
+	; Assign £temporary3038 "AM"
 	mov eax, string_AM#
 
  strftime$241:
@@ -2895,11 +2895,11 @@ section .text
 	jmp strftime$243
 
  strftime$242:
-	; Assign £temporary3025 "PM"
+	; Assign £temporary3038 "PM"
 	mov eax, string_PM#
 
  strftime$243:
-	; Parameter 176 pointer £temporary3025
+	; Parameter 176 pointer £temporary3038
 	mov [rbp + 176], eax
 
  strftime$244:
@@ -2931,11 +2931,11 @@ section .text
 	mov qword [rbp + 168], string_25i#
 
  strftime$250:
-	; Dereference £temporary3027 -> tp tp 0
+	; Dereference £temporary3040 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$251:
-	; Parameter 176 signedint £temporary3027 -> tp
+	; Parameter 176 signedint £temporary3040 -> tp
 	mov eax, [rsi]
 	mov [rbp + 176], eax
 
@@ -3001,11 +3001,11 @@ section .text
 	mov qword [rbp + 168], string_25i#
 
  strftime$265:
-	; Dereference £temporary3030 -> tp tp 0
+	; Dereference £temporary3043 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$266:
-	; Parameter 176 signedint £temporary3030 -> tp
+	; Parameter 176 signedint £temporary3043 -> tp
 	mov eax, [rsi + 24]
 	mov [rbp + 176], eax
 
@@ -3071,29 +3071,29 @@ section .text
 	mov qword [rbp + 168], string_2502i3A2502i3A2502i#
 
  strftime$280:
-	; Dereference £temporary3033 -> tp tp 0
+	; Dereference £temporary3046 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$281:
-	; Parameter 176 signedint £temporary3033 -> tp
+	; Parameter 176 signedint £temporary3046 -> tp
 	mov eax, [rsi + 8]
 	mov [rbp + 176], eax
 
  strftime$282:
-	; Dereference £temporary3034 -> tp tp 0
+	; Dereference £temporary3047 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$283:
-	; Parameter 180 signedint £temporary3034 -> tp
+	; Parameter 180 signedint £temporary3047 -> tp
 	mov eax, [rsi + 4]
 	mov [rbp + 180], eax
 
  strftime$284:
-	; Dereference £temporary3035 -> tp tp 0
+	; Dereference £temporary3048 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$285:
-	; Parameter 184 signedint £temporary3035 -> tp
+	; Parameter 184 signedint £temporary3048 -> tp
 	mov eax, [rsi]
 	mov [rbp + 184], eax
 
@@ -3126,29 +3126,29 @@ section .text
 	mov qword [rbp + 168], string_2502i3A2502i3A2502i#
 
  strftime$292:
-	; Dereference £temporary3037 -> tp tp 0
+	; Dereference £temporary3050 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$293:
-	; Parameter 176 signedint £temporary3037 -> tp
+	; Parameter 176 signedint £temporary3050 -> tp
 	mov eax, [rsi + 8]
 	mov [rbp + 176], eax
 
  strftime$294:
-	; Dereference £temporary3038 -> tp tp 0
+	; Dereference £temporary3051 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$295:
-	; Parameter 180 signedint £temporary3038 -> tp
+	; Parameter 180 signedint £temporary3051 -> tp
 	mov eax, [rsi + 4]
 	mov [rbp + 180], eax
 
  strftime$296:
-	; Dereference £temporary3039 -> tp tp 0
+	; Dereference £temporary3052 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$297:
-	; Parameter 184 signedint £temporary3039 -> tp
+	; Parameter 184 signedint £temporary3052 -> tp
 	mov eax, [rsi]
 	mov [rbp + 184], eax
 
@@ -3181,17 +3181,17 @@ section .text
 	mov qword [rbp + 168], string_25i#
 
  strftime$304:
-	; Dereference £temporary3041 -> tp tp 0
+	; Dereference £temporary3054 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$305:
-	; SignedModulo £temporary3042 £temporary3041 -> tp 100
+	; SignedModulo £temporary3055 £temporary3054 -> tp 100
 	mov eax, [rsi + 20]
 	xor edx, edx
 	idiv dword [int4$100#]
 
  strftime$306:
-	; Parameter 176 signedint £temporary3042
+	; Parameter 176 signedint £temporary3055
 	mov [rbp + 176], edx
 
  strftime$307:
@@ -3223,16 +3223,16 @@ section .text
 	mov qword [rbp + 168], string_25i#
 
  strftime$313:
-	; Dereference £temporary3044 -> tp tp 0
+	; Dereference £temporary3057 -> tp tp 0
 	mov rsi, [rbp + 44]
 
  strftime$314:
-	; BinaryAdd £temporary3045 £temporary3044 -> tp 1900
+	; BinaryAdd £temporary3058 £temporary3057 -> tp 1900
 	mov eax, [rsi + 20]
 	add eax, 1900
 
  strftime$315:
-	; Parameter 176 signedint £temporary3045
+	; Parameter 176 signedint £temporary3058
 	mov [rbp + 176], eax
 
  strftime$316:
@@ -3326,36 +3326,36 @@ section .text
 	jmp strftime$343
 
  strftime$336:
-	; Dereference £temporary3050 -> add add 0
+	; Dereference £temporary3063 -> add add 0
 	mov rsi, rbp
 	add rsi, 116
 
  strftime$337:
-	; IntegralToIntegral £temporary3052 index
+	; IntegralToIntegral £temporary3065 index
 	mov eax, [rbp + 112]
 	mov rbx, 4294967295
 	and rax, rbx
 
  strftime$338:
-	; BinaryAdd £temporary3054 fmt £temporary3052
+	; BinaryAdd £temporary3067 fmt £temporary3065
 	mov rdi, [rbp + 36]
 	add rdi, rax
 
  strftime$339:
-	; Dereference £temporary3051 -> £temporary3054 £temporary3054 0
+	; Dereference £temporary3064 -> £temporary3067 £temporary3067 0
 
  strftime$340:
-	; Assign £temporary3050 -> add £temporary3051 -> £temporary3054
+	; Assign £temporary3063 -> add £temporary3064 -> £temporary3067
 	mov al, [rdi]
 	mov [rsi], al
 
  strftime$341:
-	; Dereference £temporary3055 -> add add 0
+	; Dereference £temporary3068 -> add add 0
 	mov rsi, rbp
 	add rsi, 116
 
  strftime$342:
-	; Assign £temporary3055 -> add 0
+	; Assign £temporary3068 -> add 0
 	mov byte [rsi + 1], 0
 
  strftime$343:
@@ -3377,10 +3377,10 @@ section .text
 	; PostCall 136
 
  strftime$347:
-	; GetReturnValue £temporary3056
+	; GetReturnValue £temporary3069
 
  strftime$348:
-	; Assign x £temporary3056
+	; Assign x £temporary3069
 	mov [rbp + 136], ebx
 
  strftime$349:
@@ -3402,19 +3402,19 @@ section .text
 	; PostCall 140
 
  strftime$353:
-	; GetReturnValue £temporary3057
+	; GetReturnValue £temporary3070
 
  strftime$354:
-	; Assign y £temporary3057
+	; Assign y £temporary3070
 	mov [rbp + 140], ebx
 
  strftime$355:
-	; BinaryAdd £temporary3058 x y
+	; BinaryAdd £temporary3071 x y
 	mov eax, [rbp + 136]
 	add eax, [rbp + 140]
 
  strftime$356:
-	; SignedGreaterThanEqual 364 £temporary3058 smax
+	; SignedGreaterThanEqual 364 £temporary3071 smax
 	cmp eax, [rbp + 32]
 	jge strftime$364
 
@@ -3468,13 +3468,13 @@ section .text
 	; PostCall 112
 
  strftime$368:
-	; GetReturnValue £temporary3061
+	; GetReturnValue £temporary3074
 
  strftime$369:
 	; SetReturnValue
 
  strftime$370:
-	; Return £temporary3061
+	; Return £temporary3074
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]

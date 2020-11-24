@@ -154,6 +154,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
     
 
 typedef unsigned int UINT ;
+typedef unsigned long ULONG ;
 
 typedef struct {
 int open ;
@@ -169,6 +170,18 @@ extern FILE * stdin , * stdout , * stderr ;
 extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
+
+
+
+
+
+
+
+
+
+
+
+
 
    
     

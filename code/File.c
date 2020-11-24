@@ -9,7 +9,14 @@ FILE *stdin = &g_fileArray[0], *stdout = &g_fileArray[1],
 
 enum {EEXIST, ENOENT, EACCES};
 enum {SEEK_SET = 0, SEEK_CUR = 1, SEEK_END = 2};
-enum {READ = 0x40, WRITE = 0x41, READ_WRITE = 0x42};
+
+#ifdef __WINDOWS__
+  enum { READ = 0x40, WRITE = 0x41, READ_WRITE = 0x42 };
+#endif
+
+#ifdef __LINUX__
+  enum { READ = 0, WRITE = 1, READ_WRITE = 3 };
+#endif
 
 #define MAX(a,b) (((a) > (b)) ? (a) : (b))
 
@@ -17,7 +24,7 @@ enum {READ = 0x40, WRITE = 0x41, READ_WRITE = 0x42};
 
 #define PRINT(x,y) { printf(#x " = <%" #y ">\n", (x)); }
 
-static int filecreate(const char* name) {
+int filecreate(const char* name) {
 #ifdef __WINDOWS__
   register_ah = 0x3Cs;
   register_cx = 0x00;
@@ -36,12 +43,25 @@ static int filecreate(const char* name) {
 #endif
 
 #ifdef __LINUX__
-  register_rax = 85L;
-  register_rdi = (unsigned long) name;
+  register_rax = 85;
+  register_rdi = (unsigned long)name;
   register_rsi = 0777L; // octal
   syscall();
-  return 0;
+  return register_eax;
 #endif
+}
+
+#define X(x) printf("register_" #x ": %u\n", register_##x)
+
+BOOL fileexistsX(const char* name) {
+  FILE* filePtr = fopen(name, "r");
+
+  if (filePtr != NULL) {
+    fclose(filePtr);
+    return TRUE;
+  }
+
+  return FALSE;
 }
 
 BOOL fileexists(const char* name) {
@@ -54,7 +74,11 @@ BOOL fileexists(const char* name) {
 #endif
 
 #ifdef __LINUX__
-  return TRUE;
+  register_rax = 21;
+  register_rdi = (unsigned long) name;
+  register_rsi = 0;
+  syscall();
+  return (register_eax == 0);
 #endif
 }
 
@@ -75,11 +99,11 @@ static int fileopen(const char* name, unsigned short mode) {
 #endif
 
 #ifdef __LINUX__
-  register_rax = 2L;
+  register_rax = 2;
   register_rdi = (unsigned long) name;
   register_rsi = (unsigned long) mode;
   syscall();
-  return register_rax;
+  return register_eax;
 #endif
 }
 
@@ -103,6 +127,7 @@ FILE* freopen(const char* name, const char* mode, FILE* stream) {
   }
   else if (strcmp(mode, "w") == 0) {
     handle = filecreate(name);
+    //printf("create handle %u\n", handle);
   }
   else if (strcmp(mode, "a") == 0) {
     handle = fileopen(name, (unsigned short) WRITE);
@@ -362,12 +387,12 @@ size_t fread(void* ptr, size_t size, size_t nobj, FILE* stream) {
 #endif
 
 #ifdef __LINUX__
-  register_rax = 0L;
   register_rdi = (unsigned long) stream->handle;
   register_rsi = (unsigned long) ptr;
   register_rdx = (unsigned long) (size * nobj);
+  register_rax = 0;
   syscall();
-  return 0;
+  return register_eax;
 #endif
 }
 
@@ -389,12 +414,12 @@ size_t fwrite(const void* ptr, size_t size, size_t nobj, FILE* stream) {
 #endif
 
 #ifdef __LINUX__
-  register_rax = 0L;
   register_rdi = (unsigned long) stream->handle;
   register_rsi = (unsigned long) ptr;
   register_rdx = (unsigned long) (size * nobj);
+  register_rax = 1;
   syscall();
-  return 0;
+  return register_eax;
 #endif
 }
 
@@ -418,12 +443,12 @@ int fseek(FILE* stream, int offset, int origin) {
 #endif
 
 #ifdef __LINUX__
-  register_rax = 8L;
+  register_rax = 8;
   register_rdi = (unsigned long) stream->handle;
   register_rsi = (unsigned long) offset;
   register_rdx = (unsigned long) origin;
   syscall();
-  return 0;
+  return register_eax;
 #endif
 }
 

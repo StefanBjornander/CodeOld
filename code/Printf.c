@@ -48,7 +48,7 @@ void printChar(char c) {
         FILE* stream = (FILE*) g_outDevice;
 
 #ifdef __WINDOWS__
-        register_ah = 0x40s;
+        register_ah = 0x40;
         register_bx = stream->handle;
         register_cx = 1;
         register_dx = &c;
@@ -56,7 +56,7 @@ void printChar(char c) {
 #endif
 
 #ifdef __LINUX__
-        register_rax = 0x01L;
+        register_rax = 0x01;
         register_rdi = (unsigned long) stream->handle;
         register_rsi = (unsigned long) &c;
         register_rdx = 1;

@@ -1122,25 +1122,25 @@ section .text
 
 section .data
 
-@419$ZERO:
+@420$ZERO:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@420$ONE:
+@421$ONE:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@423$TWO:
+@424$TWO:
 	; Initializer SignedInt 2
 	dd 2
 
 section .data
 
-@424$THREE:
+@425$THREE:
 	; Initializer SignedInt 3
 	dd 3
 

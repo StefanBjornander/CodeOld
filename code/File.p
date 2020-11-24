@@ -110,6 +110,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
     
 
 typedef unsigned int UINT ;
+typedef unsigned long ULONG ;
 
 typedef struct {
 int open ;
@@ -125,6 +126,18 @@ extern FILE * stdin , * stdout , * stderr ;
 extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
+
+
+
+
+
+
+
+
+
+
+
+
 
    
     
@@ -402,7 +415,14 @@ FILE * stdin = & g_fileArray [ 0 ] , * stdout = & g_fileArray [ 1 ] ,
 
 enum { EEXIST , ENOENT , EACCES };
 enum { SEEK_SET = 0 , SEEK_CUR = 1 , SEEK_END = 2 };
-enum { READ = 0x40 , WRITE = 0x41 , READ_WRITE = 0x42 };
+
+   
+              
+  
+
+   
+ enum { READ = 0 , WRITE = 1 , READ_WRITE = 3 };
+  
 
                            
 
@@ -410,7 +430,7 @@ enum { READ = 0x40 , WRITE = 0x41 , READ_WRITE = 0x42 };
 
                         
 
-static int filecreate ( const char * name ) {
+int filecreate ( const char * name ) {
    
     
    
@@ -429,13 +449,26 @@ static int filecreate ( const char * name ) {
   
 
    
- register_rax = 85L ;
+ register_rax = 85 ;
 register_rdi = ( unsigned long ) name ;
 register_rsi = 0777L ;
 syscall ( ) ;
-return 0 ;
+return register_eax ;
   
  }
+
+                 
+
+int fileexistsX ( const char * name ) {
+FILE * filePtr = fopen ( name , "r" ) ;
+
+if ( filePtr != ( ( void * ) 0 ) ) {
+fclose ( filePtr ) ;
+return 1 ;
+}
+
+return 0 ;
+}
 
 int fileexists ( const char * name ) {
    
@@ -447,7 +480,11 @@ int fileexists ( const char * name ) {
   
 
    
- return 1 ;
+ register_rax = 21 ;
+register_rdi = ( unsigned long ) name ;
+register_rsi = 0 ;
+syscall ( ) ;
+return ( register_eax == 0 ) ;
   
  }
 
@@ -468,11 +505,11 @@ static int fileopen ( const char * name , unsigned short mode ) {
   
 
    
- register_rax = 2L ;
+ register_rax = 2 ;
 register_rdi = ( unsigned long ) name ;
 register_rsi = ( unsigned long ) mode ;
 syscall ( ) ;
-return register_rax ;
+return register_eax ;
   
  }
 
@@ -496,6 +533,7 @@ handle = fileopen ( name , ( unsigned short ) READ ) ;
 }
 else if ( strcmp ( mode , "w" ) == 0 ) {
 handle = filecreate ( name ) ;
+
 }
 else if ( strcmp ( mode , "a" ) == 0 ) {
 handle = fileopen ( name , ( unsigned short ) WRITE ) ;
@@ -755,12 +793,12 @@ int fread ( void * ptr , int size , int nobj , FILE * stream ) {
   
 
    
- register_rax = 0L ;
-register_rdi = ( unsigned long ) stream -> handle ;
+ register_rdi = ( unsigned long ) stream -> handle ;
 register_rsi = ( unsigned long ) ptr ;
 register_rdx = ( unsigned long ) ( size * nobj ) ;
+register_rax = 0 ;
 syscall ( ) ;
-return 0 ;
+return register_eax ;
   
  }
 
@@ -782,12 +820,12 @@ int fwrite ( const void * ptr , int size , int nobj , FILE * stream ) {
   
 
    
- register_rax = 0L ;
-register_rdi = ( unsigned long ) stream -> handle ;
+ register_rdi = ( unsigned long ) stream -> handle ;
 register_rsi = ( unsigned long ) ptr ;
 register_rdx = ( unsigned long ) ( size * nobj ) ;
+register_rax = 1 ;
 syscall ( ) ;
-return 0 ;
+return register_eax ;
   
  }
 
@@ -811,12 +849,12 @@ int fseek ( FILE * stream , int offset , int origin ) {
   
 
    
- register_rax = 8L ;
+ register_rax = 8 ;
 register_rdi = ( unsigned long ) stream -> handle ;
 register_rsi = ( unsigned long ) offset ;
 register_rdx = ( unsigned long ) origin ;
 syscall ( ) ;
-return 0 ;
+return register_eax ;
   
  }
 

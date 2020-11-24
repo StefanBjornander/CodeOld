@@ -176,6 +176,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
     
 
 typedef unsigned int UINT ;
+typedef unsigned long ULONG ;
 
 typedef struct {
 int open ;
@@ -191,6 +192,18 @@ extern FILE * stdin , * stdout , * stderr ;
 extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
+
+
+
+
+
+
+
+
+
+
+
+
 
    
     
@@ -546,7 +559,7 @@ FILE * stream = ( FILE * ) g_outDevice ;
   
 
    
- register_rax = 0x01L ;
+ register_rax = 0x01 ;
 register_rdi = ( unsigned long ) stream -> handle ;
 register_rsi = ( unsigned long ) & c ;
 register_rdx = 1 ;
