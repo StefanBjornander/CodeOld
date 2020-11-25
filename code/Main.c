@@ -19,7 +19,7 @@ void print_test(void);        // ok
 void limits_test(void);       // ok
 void float_test(void);        // ok
 void string_test(void);       // ok
-void setjmp_test(double x);   // ok
+void setjmp_test(void);       // ok
 void stdio_test(void);        // ok
 void stdlib_test(void);       // ok
 void strtol_test(void);       // ok
@@ -151,13 +151,13 @@ void maint() {
   time_test();
 }
 
-void mainY() {
+/*void mainY() {
   malloc_test();
   setjmp_test(10);
   setjmp_test(0);
 }
 
-/*void mainX() {
+void mainX() {
   static count = 1;
 
   if (count <= 10) {
@@ -207,6 +207,9 @@ void main() {
   //string_test();
   //time_test();
   file_test();
+  //print_test();
+  //malloc_test();
+  //setjmp_test();
   /*time_t now = time(NULL);
   struct tm s = *gmtime(&now);
   char* weekdays[] = { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
@@ -271,7 +274,7 @@ void main3() {
   printf("<%f>", x);
 }
 
-void mains2(void) {
+/*void mains2(void) {
   setjmp_test(3.14);
   printf("---------------------------------------------\n");
 
@@ -282,7 +285,7 @@ void mains2(void) {
   printf("---------------------------------------------\n");
 
   setjmp_test(0);
-}
+}*/
 
 void char_main(void) {
   character_test('a');

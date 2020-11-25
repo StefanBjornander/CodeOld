@@ -801,17 +801,24 @@ fclose ( inFilePtr ) ;
 }
 
 { FILE * inFilePtr = fopen ( "outx.txt" , "r" ) ;
-unsigned int u ;
+unsigned int u , index ;
 if ( ! ( inFilePtr != ( ( void * ) 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 271 ) ; abort ( ) ; } ;
-fseek ( inFilePtr , -2 , SEEK_END ) ;
+
+{ int size = fseek ( inFilePtr , 0 , SEEK_END ) ;
+
 printf ( "ftell %i\n" , ftell ( inFilePtr ) ) ;
 
-while ( ftell ( inFilePtr ) >= 0 ) {
+
+
+
+
+
+
+for ( index = 0 ; index < size ; ++ index ) {
 char c = ( char ) fgetc ( inFilePtr ) ;
-
 printf ( "<%c> %i %i\n" , c , ( int ) c , ftell ( inFilePtr ) ) ;
-
-fseek ( inFilePtr , -2 , SEEK_CUR ) ;
+fseek ( inFilePtr , size - index - 1 , SEEK_SET ) ;
+}
 }
 
 printf ( "\n" ) ;

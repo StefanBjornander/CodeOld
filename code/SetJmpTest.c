@@ -35,5 +35,19 @@ double divide(double x, double y) {
   }
 }
 
-void setjmp_test(double x) {
+void test(double x) {
+  char* message;
+
+  if ((message = setjmp(buffer)) == 0) {
+    printf("1.0 / %f = %f\n", x, inverse(x));
+  }
+  else {
+    printf("%s\n", message);
+  }
+}
+
+void setjmp_test(void) {
+  test(10);
+  test(0);
+  test(0.1);
 }

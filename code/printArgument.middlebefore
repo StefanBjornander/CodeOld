@@ -1,9 +1,9 @@
-0: Dereference £temporary1728 -> format format 0
-1: Assign c £temporary1728 -> format
-2: Case NotEqual BinaryAdd £temporary1730 arg_list 4 shortInt 0 c 100
-3: Case NotEqual BinaryAdd £temporary1730 arg_list 4 shortInt 0 c 105
-4: Case BinaryAdd £temporary1769 arg_list 4 c 99
-5: Case BinaryAdd £temporary1781 arg_list 8 c 115
+0: Dereference £temporary1712 -> format format 0
+1: Assign c £temporary1712 -> format
+2: Case NotEqual BinaryAdd £temporary1714 arg_list 4 shortInt 0 c 100
+3: Case NotEqual BinaryAdd £temporary1714 arg_list 4 shortInt 0 c 105
+4: Case BinaryAdd £temporary1753 arg_list 4 c 99
+5: Case BinaryAdd £temporary1765 arg_list 8 c 115
 6: Case Equal Empty c 117 c 88
 7: Case Equal Empty c 117 c 120
 8: Case Equal Empty c 117 c 98
@@ -14,60 +14,60 @@
 13: Case NotEqual PushFloat longDoubleValue longDouble 0 c 69
 14: Case NotEqual PushFloat longDoubleValue longDouble 0 c 101
 15: Case NotEqual PushFloat longDoubleValue longDouble 0 c 102
-16: Case BinaryAdd £temporary1878 arg_list 8 c 112
-17: Case BinaryAdd £temporary1890 arg_list 8 c 110
+16: Case BinaryAdd £temporary1862 arg_list 8 c 112
+17: Case BinaryAdd £temporary1874 arg_list 8 c 110
 18: Case PreCall 114 c 37
 19: CaseEnd c
 20: Goto SetReturnValue
-21: NotEqual BinaryAdd £temporary1730 arg_list 4 shortInt 0
-22: Goto NotEqual BinaryAdd £temporary1740 arg_list 8 longInt 0
-23: BinaryAdd £temporary1730 arg_list 4
-24: UnsignedDivide £temporary1729 £temporary1730 1
-25: IntegralToIntegral £temporary1731 £temporary1729
-26: IntegralToIntegral £temporary1732 £temporary1731
-27: Assign arg_list £temporary1732
-28: UnsignedMultiply £temporary1734 4 1
-29: BinarySubtract £temporary1733 arg_list £temporary1734
-30: IntegralToIntegral £temporary1735 £temporary1733
-31: Dereference £temporary1736 -> £temporary1735 £temporary1735 0
-32: IntegralToIntegral £temporary1737 £temporary1736 -> £temporary1735
-33: IntegralToIntegral £temporary1738 £temporary1737
-34: Assign longValue £temporary1738
-35: Goto NotEqual Dereference £temporary1759 -> negativePtr negativePtr 0 negativePtr 0
-36: NotEqual BinaryAdd £temporary1740 arg_list 8 longInt 0
-37: Goto BinaryAdd £temporary1748 arg_list 4
-38: BinaryAdd £temporary1740 arg_list 8
-39: UnsignedDivide £temporary1739 £temporary1740 1
-40: IntegralToIntegral £temporary1741 £temporary1739
-41: IntegralToIntegral £temporary1742 £temporary1741
-42: Assign arg_list £temporary1742
-43: UnsignedMultiply £temporary1744 8 1
-44: BinarySubtract £temporary1743 arg_list £temporary1744
-45: IntegralToIntegral £temporary1745 £temporary1743
-46: Dereference £temporary1746 -> £temporary1745 £temporary1745 0
-47: Assign longValue £temporary1746 -> £temporary1745
-48: Goto NotEqual Dereference £temporary1759 -> negativePtr negativePtr 0 negativePtr 0
-49: BinaryAdd £temporary1748 arg_list 4
-50: UnsignedDivide £temporary1747 £temporary1748 1
-51: IntegralToIntegral £temporary1749 £temporary1747
-52: IntegralToIntegral £temporary1750 £temporary1749
-53: Assign arg_list £temporary1750
-54: UnsignedMultiply £temporary1752 4 1
-55: BinarySubtract £temporary1751 arg_list £temporary1752
-56: IntegralToIntegral £temporary1753 £temporary1751
-57: Dereference £temporary1754 -> £temporary1753 £temporary1753 0
-58: IntegralToIntegral £temporary1755 £temporary1754 -> £temporary1753
-59: Assign longValue £temporary1755
-60: NotEqual Dereference £temporary1759 -> negativePtr negativePtr 0 negativePtr 0
+21: NotEqual BinaryAdd £temporary1714 arg_list 4 shortInt 0
+22: Goto NotEqual BinaryAdd £temporary1724 arg_list 8 longInt 0
+23: BinaryAdd £temporary1714 arg_list 4
+24: UnsignedDivide £temporary1713 £temporary1714 1
+25: IntegralToIntegral £temporary1715 £temporary1713
+26: IntegralToIntegral £temporary1716 £temporary1715
+27: Assign arg_list £temporary1716
+28: UnsignedMultiply £temporary1718 4 1
+29: BinarySubtract £temporary1717 arg_list £temporary1718
+30: IntegralToIntegral £temporary1719 £temporary1717
+31: Dereference £temporary1720 -> £temporary1719 £temporary1719 0
+32: IntegralToIntegral £temporary1721 £temporary1720 -> £temporary1719
+33: IntegralToIntegral £temporary1722 £temporary1721
+34: Assign longValue £temporary1722
+35: Goto NotEqual Dereference £temporary1743 -> negativePtr negativePtr 0 negativePtr 0
+36: NotEqual BinaryAdd £temporary1724 arg_list 8 longInt 0
+37: Goto BinaryAdd £temporary1732 arg_list 4
+38: BinaryAdd £temporary1724 arg_list 8
+39: UnsignedDivide £temporary1723 £temporary1724 1
+40: IntegralToIntegral £temporary1725 £temporary1723
+41: IntegralToIntegral £temporary1726 £temporary1725
+42: Assign arg_list £temporary1726
+43: UnsignedMultiply £temporary1728 8 1
+44: BinarySubtract £temporary1727 arg_list £temporary1728
+45: IntegralToIntegral £temporary1729 £temporary1727
+46: Dereference £temporary1730 -> £temporary1729 £temporary1729 0
+47: Assign longValue £temporary1730 -> £temporary1729
+48: Goto NotEqual Dereference £temporary1743 -> negativePtr negativePtr 0 negativePtr 0
+49: BinaryAdd £temporary1732 arg_list 4
+50: UnsignedDivide £temporary1731 £temporary1732 1
+51: IntegralToIntegral £temporary1733 £temporary1731
+52: IntegralToIntegral £temporary1734 £temporary1733
+53: Assign arg_list £temporary1734
+54: UnsignedMultiply £temporary1736 4 1
+55: BinarySubtract £temporary1735 arg_list £temporary1736
+56: IntegralToIntegral £temporary1737 £temporary1735
+57: Dereference £temporary1738 -> £temporary1737 £temporary1737 0
+58: IntegralToIntegral £temporary1739 £temporary1738 -> £temporary1737
+59: Assign longValue £temporary1739
+60: NotEqual Dereference £temporary1743 -> negativePtr negativePtr 0 negativePtr 0
 61: Goto NotEqual PreCall 122 sign 0
-62: Dereference £temporary1759 -> negativePtr negativePtr 0
-63: SignedLessThan Assign £temporary1761 1 longValue 0
-64: Goto Assign £temporary1761 0
-65: Assign £temporary1761 1
+62: Dereference £temporary1743 -> negativePtr negativePtr 0
+63: SignedLessThan Assign £temporary1745 1 longValue 0
+64: Goto Assign £temporary1745 0
+65: Assign £temporary1745 1
 66: Goto Empty
-67: Assign £temporary1761 0
+67: Assign £temporary1745 0
 68: Empty
-69: Assign £temporary1759 -> negativePtr £temporary1761
+69: Assign £temporary1743 -> negativePtr £temporary1745
 70: Goto NotEqual PreCall 122 sign 0
 71: NotEqual PreCall 122 sign 0
 72: Goto PreCall 122
@@ -75,18 +75,18 @@
 74: Parameter 146 signed long int longValue
 75: Call 122 labs 0
 76: PostCall 122
-77: GetReturnValue £temporary1764
-78: Assign longValue £temporary1764
+77: GetReturnValue £temporary1748
+78: Assign longValue £temporary1748
 79: Goto PreCall 122
 80: PreCall 122
 81: Parameter 146 pointer arg_list
 82: Parameter 154 pointer widthPtr
-83: Address £temporary1765 precision
-84: Parameter 162 pointer £temporary1765
+83: Address £temporary1749 precision
+84: Parameter 162 pointer £temporary1749
 85: Call 122 checkWidthAndPrecision 0
 86: PostCall 122
-87: GetReturnValue £temporary1766
-88: Assign arg_list £temporary1766
+87: GetReturnValue £temporary1750
+88: Assign arg_list £temporary1750
 89: PreCall 122
 90: Parameter 146 signed long int longValue
 91: Parameter 154 signedint plus
@@ -94,50 +94,50 @@
 93: Call 122 printLongInt 0
 94: PostCall 122
 95: Goto SetReturnValue
-96: BinaryAdd £temporary1769 arg_list 4
-97: UnsignedDivide £temporary1768 £temporary1769 1
-98: IntegralToIntegral £temporary1770 £temporary1768
-99: IntegralToIntegral £temporary1771 £temporary1770
-100: Assign arg_list £temporary1771
-101: UnsignedMultiply £temporary1773 4 1
-102: BinarySubtract £temporary1772 arg_list £temporary1773
-103: IntegralToIntegral £temporary1774 £temporary1772
-104: Dereference £temporary1775 -> £temporary1774 £temporary1774 0
-105: IntegralToIntegral £temporary1776 £temporary1775 -> £temporary1774
-106: Assign charValue £temporary1776
+96: BinaryAdd £temporary1753 arg_list 4
+97: UnsignedDivide £temporary1752 £temporary1753 1
+98: IntegralToIntegral £temporary1754 £temporary1752
+99: IntegralToIntegral £temporary1755 £temporary1754
+100: Assign arg_list £temporary1755
+101: UnsignedMultiply £temporary1757 4 1
+102: BinarySubtract £temporary1756 arg_list £temporary1757
+103: IntegralToIntegral £temporary1758 £temporary1756
+104: Dereference £temporary1759 -> £temporary1758 £temporary1758 0
+105: IntegralToIntegral £temporary1760 £temporary1759 -> £temporary1758
+106: Assign charValue £temporary1760
 107: PreCall 114
 108: Parameter 138 pointer arg_list
 109: Parameter 146 pointer widthPtr
-110: Address £temporary1777 precision
-111: Parameter 154 pointer £temporary1777
+110: Address £temporary1761 precision
+111: Parameter 154 pointer £temporary1761
 112: Call 114 checkWidthAndPrecision 0
 113: PostCall 114
-114: GetReturnValue £temporary1778
-115: Assign arg_list £temporary1778
+114: GetReturnValue £temporary1762
+115: Assign arg_list £temporary1762
 116: PreCall 114
 117: Parameter 138 signedchar charValue
 118: Call 114 printChar 0
 119: PostCall 114
 120: Goto SetReturnValue
-121: BinaryAdd £temporary1781 arg_list 8
-122: UnsignedDivide £temporary1780 £temporary1781 1
-123: IntegralToIntegral £temporary1782 £temporary1780
-124: IntegralToIntegral £temporary1783 £temporary1782
-125: Assign arg_list £temporary1783
-126: UnsignedMultiply £temporary1785 8 1
-127: BinarySubtract £temporary1784 arg_list £temporary1785
-128: IntegralToIntegral £temporary1786 £temporary1784
-129: Dereference £temporary1787 -> £temporary1786 £temporary1786 0
-130: Assign stringValue £temporary1787 -> £temporary1786
+121: BinaryAdd £temporary1765 arg_list 8
+122: UnsignedDivide £temporary1764 £temporary1765 1
+123: IntegralToIntegral £temporary1766 £temporary1764
+124: IntegralToIntegral £temporary1767 £temporary1766
+125: Assign arg_list £temporary1767
+126: UnsignedMultiply £temporary1769 8 1
+127: BinarySubtract £temporary1768 arg_list £temporary1769
+128: IntegralToIntegral £temporary1770 £temporary1768
+129: Dereference £temporary1771 -> £temporary1770 £temporary1770 0
+130: Assign stringValue £temporary1771 -> £temporary1770
 131: PreCall 122
 132: Parameter 146 pointer arg_list
 133: Parameter 154 pointer widthPtr
-134: Address £temporary1788 precision
-135: Parameter 162 pointer £temporary1788
+134: Address £temporary1772 precision
+135: Parameter 162 pointer £temporary1772
 136: Call 122 checkWidthAndPrecision 0
 137: PostCall 122
-138: GetReturnValue £temporary1789
-139: Assign arg_list £temporary1789
+138: GetReturnValue £temporary1773
+139: Assign arg_list £temporary1773
 140: PreCall 122
 141: Parameter 146 pointer stringValue
 142: Parameter 154 signedint precision
@@ -147,72 +147,72 @@
 146: Equal Empty c 117
 147: Goto Equal Empty c 111
 148: Empty
-149: Assign £temporary1796 10
+149: Assign £temporary1780 10
 150: Goto Empty
 151: Equal Empty c 111
 152: Goto Equal Empty c 98
 153: Empty
-154: Assign £temporary1796 8
+154: Assign £temporary1780 8
 155: Goto Empty
 156: Equal Empty c 98
 157: Goto Empty
 158: Empty
-159: Assign £temporary1796 2
+159: Assign £temporary1780 2
 160: Goto Empty
 161: Empty
-162: Assign £temporary1796 16
+162: Assign £temporary1780 16
 163: Empty
 164: Empty
 165: Empty
-166: Assign base £temporary1796
-167: NotEqual BinaryAdd £temporary1798 arg_list 4 shortInt 0
-168: Goto NotEqual BinaryAdd £temporary1808 arg_list 8 longInt 0
-169: BinaryAdd £temporary1798 arg_list 4
-170: UnsignedDivide £temporary1797 £temporary1798 1
-171: IntegralToIntegral £temporary1799 £temporary1797
-172: IntegralToIntegral £temporary1800 £temporary1799
-173: Assign arg_list £temporary1800
-174: UnsignedMultiply £temporary1802 4 1
-175: BinarySubtract £temporary1801 arg_list £temporary1802
-176: IntegralToIntegral £temporary1803 £temporary1801
-177: Dereference £temporary1804 -> £temporary1803 £temporary1803 0
-178: IntegralToIntegral £temporary1805 £temporary1804 -> £temporary1803
-179: IntegralToIntegral £temporary1806 £temporary1805
-180: Assign value £temporary1806
+166: Assign base £temporary1780
+167: NotEqual BinaryAdd £temporary1782 arg_list 4 shortInt 0
+168: Goto NotEqual BinaryAdd £temporary1792 arg_list 8 longInt 0
+169: BinaryAdd £temporary1782 arg_list 4
+170: UnsignedDivide £temporary1781 £temporary1782 1
+171: IntegralToIntegral £temporary1783 £temporary1781
+172: IntegralToIntegral £temporary1784 £temporary1783
+173: Assign arg_list £temporary1784
+174: UnsignedMultiply £temporary1786 4 1
+175: BinarySubtract £temporary1785 arg_list £temporary1786
+176: IntegralToIntegral £temporary1787 £temporary1785
+177: Dereference £temporary1788 -> £temporary1787 £temporary1787 0
+178: IntegralToIntegral £temporary1789 £temporary1788 -> £temporary1787
+179: IntegralToIntegral £temporary1790 £temporary1789
+180: Assign value £temporary1790
 181: Goto PreCall 130
-182: NotEqual BinaryAdd £temporary1808 arg_list 8 longInt 0
-183: Goto BinaryAdd £temporary1816 arg_list 4
-184: BinaryAdd £temporary1808 arg_list 8
-185: UnsignedDivide £temporary1807 £temporary1808 1
-186: IntegralToIntegral £temporary1809 £temporary1807
-187: IntegralToIntegral £temporary1810 £temporary1809
-188: Assign arg_list £temporary1810
-189: UnsignedMultiply £temporary1812 8 1
-190: BinarySubtract £temporary1811 arg_list £temporary1812
-191: IntegralToIntegral £temporary1813 £temporary1811
-192: Dereference £temporary1814 -> £temporary1813 £temporary1813 0
-193: Assign value £temporary1814 -> £temporary1813
+182: NotEqual BinaryAdd £temporary1792 arg_list 8 longInt 0
+183: Goto BinaryAdd £temporary1800 arg_list 4
+184: BinaryAdd £temporary1792 arg_list 8
+185: UnsignedDivide £temporary1791 £temporary1792 1
+186: IntegralToIntegral £temporary1793 £temporary1791
+187: IntegralToIntegral £temporary1794 £temporary1793
+188: Assign arg_list £temporary1794
+189: UnsignedMultiply £temporary1796 8 1
+190: BinarySubtract £temporary1795 arg_list £temporary1796
+191: IntegralToIntegral £temporary1797 £temporary1795
+192: Dereference £temporary1798 -> £temporary1797 £temporary1797 0
+193: Assign value £temporary1798 -> £temporary1797
 194: Goto PreCall 130
-195: BinaryAdd £temporary1816 arg_list 4
-196: UnsignedDivide £temporary1815 £temporary1816 1
-197: IntegralToIntegral £temporary1817 £temporary1815
-198: IntegralToIntegral £temporary1818 £temporary1817
-199: Assign arg_list £temporary1818
-200: UnsignedMultiply £temporary1820 4 1
-201: BinarySubtract £temporary1819 arg_list £temporary1820
-202: IntegralToIntegral £temporary1821 £temporary1819
-203: Dereference £temporary1822 -> £temporary1821 £temporary1821 0
-204: IntegralToIntegral £temporary1823 £temporary1822 -> £temporary1821
-205: Assign value £temporary1823
+195: BinaryAdd £temporary1800 arg_list 4
+196: UnsignedDivide £temporary1799 £temporary1800 1
+197: IntegralToIntegral £temporary1801 £temporary1799
+198: IntegralToIntegral £temporary1802 £temporary1801
+199: Assign arg_list £temporary1802
+200: UnsignedMultiply £temporary1804 4 1
+201: BinarySubtract £temporary1803 arg_list £temporary1804
+202: IntegralToIntegral £temporary1805 £temporary1803
+203: Dereference £temporary1806 -> £temporary1805 £temporary1805 0
+204: IntegralToIntegral £temporary1807 £temporary1806 -> £temporary1805
+205: Assign value £temporary1807
 206: PreCall 130
 207: Parameter 154 pointer arg_list
 208: Parameter 162 pointer widthPtr
-209: Address £temporary1826 precision
-210: Parameter 170 pointer £temporary1826
+209: Address £temporary1810 precision
+210: Parameter 170 pointer £temporary1810
 211: Call 130 checkWidthAndPrecision 0
 212: PostCall 130
-213: GetReturnValue £temporary1827
-214: Assign arg_list £temporary1827
+213: GetReturnValue £temporary1811
+214: Assign arg_list £temporary1811
 215: PreCall 130
 216: Parameter 154 unsignedlongint value
 217: Parameter 162 signedint plus
@@ -220,12 +220,12 @@
 219: Parameter 170 signedint grid
 220: Parameter 174 unsignedlongint base
 221: PreCall 130
-222: IntegralToIntegral £temporary1828 c
-223: Parameter 206 signedint £temporary1828
+222: IntegralToIntegral £temporary1812 c
+223: Parameter 206 signedint £temporary1812
 224: Call 182 isupper 0
 225: PostCall 182
-226: GetReturnValue £temporary1829
-227: Parameter 182 signedint £temporary1829
+226: GetReturnValue £temporary1813
+227: Parameter 182 signedint £temporary1813
 228: Call 130 printUnsignedLong 0
 229: PostCall 130
 230: Goto SetReturnValue
@@ -233,16 +233,16 @@
 232: Goto PushFloat longDoubleValue
 233: PushFloat longDoubleValue
 234: PopFloat
-235: BinaryAdd £temporary1832 arg_list 8
-236: UnsignedDivide £temporary1831 £temporary1832 1
-237: IntegralToIntegral £temporary1833 £temporary1831
-238: IntegralToIntegral £temporary1834 £temporary1833
-239: Assign arg_list £temporary1834
-240: UnsignedMultiply £temporary1836 8 1
-241: BinarySubtract £temporary1835 arg_list £temporary1836
-242: IntegralToIntegral £temporary1837 £temporary1835
-243: Dereference £temporary1838 -> £temporary1837 £temporary1837 0
-244: PushFloat £temporary1838 -> £temporary1837
+235: BinaryAdd £temporary1816 arg_list 8
+236: UnsignedDivide £temporary1815 £temporary1816 1
+237: IntegralToIntegral £temporary1817 £temporary1815
+238: IntegralToIntegral £temporary1818 £temporary1817
+239: Assign arg_list £temporary1818
+240: UnsignedMultiply £temporary1820 8 1
+241: BinarySubtract £temporary1819 arg_list £temporary1820
+242: IntegralToIntegral £temporary1821 £temporary1819
+243: Dereference £temporary1822 -> £temporary1821 £temporary1821 0
+244: PushFloat £temporary1822 -> £temporary1821
 245: TopFloat longDoubleValue
 246: PopFloat
 247: PreCall 114
@@ -254,33 +254,33 @@
 253: Parameter 158 signedint 3
 254: Call 114 printLongDoublePlain 0
 255: PostCall 114
-256: Goto NotEqual Dereference £temporary1851 -> negativePtr negativePtr 0 negativePtr 0
+256: Goto NotEqual Dereference £temporary1835 -> negativePtr negativePtr 0 negativePtr 0
 257: PushFloat longDoubleValue
 258: PopFloat
-259: BinaryAdd £temporary1841 arg_list 8
-260: UnsignedDivide £temporary1840 £temporary1841 1
-261: IntegralToIntegral £temporary1842 £temporary1840
-262: IntegralToIntegral £temporary1843 £temporary1842
-263: Assign arg_list £temporary1843
-264: UnsignedMultiply £temporary1845 8 1
-265: BinarySubtract £temporary1844 arg_list £temporary1845
-266: IntegralToIntegral £temporary1846 £temporary1844
-267: Dereference £temporary1847 -> £temporary1846 £temporary1846 0
-268: PushFloat £temporary1847 -> £temporary1846
+259: BinaryAdd £temporary1825 arg_list 8
+260: UnsignedDivide £temporary1824 £temporary1825 1
+261: IntegralToIntegral £temporary1826 £temporary1824
+262: IntegralToIntegral £temporary1827 £temporary1826
+263: Assign arg_list £temporary1827
+264: UnsignedMultiply £temporary1829 8 1
+265: BinarySubtract £temporary1828 arg_list £temporary1829
+266: IntegralToIntegral £temporary1830 £temporary1828
+267: Dereference £temporary1831 -> £temporary1830 £temporary1830 0
+268: PushFloat £temporary1831 -> £temporary1830
 269: TopFloat longDoubleValue
 270: PopFloat
-271: NotEqual Dereference £temporary1851 -> negativePtr negativePtr 0 negativePtr 0
+271: NotEqual Dereference £temporary1835 -> negativePtr negativePtr 0 negativePtr 0
 272: Goto NotEqual PreCall 114 sign 0
-273: Dereference £temporary1851 -> negativePtr negativePtr 0
+273: Dereference £temporary1835 -> negativePtr negativePtr 0
 274: PushFloat longDoubleValue
 275: PushFloat 0
-276: SignedLessThan Assign £temporary1853 1 longDoubleValue 0
-277: Goto Assign £temporary1853 0
-278: Assign £temporary1853 1
+276: SignedLessThan Assign £temporary1837 1 longDoubleValue 0
+277: Goto Assign £temporary1837 0
+278: Assign £temporary1837 1
 279: Goto Empty
-280: Assign £temporary1853 0
+280: Assign £temporary1837 0
 281: Empty
-282: Assign £temporary1851 -> negativePtr £temporary1853
+282: Assign £temporary1835 -> negativePtr £temporary1837
 283: Goto NotEqual PreCall 114 sign 0
 284: NotEqual PreCall 114 sign 0
 285: Goto PushFloat longDoubleValue
@@ -291,19 +291,19 @@
 290: Parameter 138 double longDoubleValue
 291: Call 114 fabs 0
 292: PostCall 114
-293: GetReturnValue £temporary1856
+293: GetReturnValue £temporary1840
 294: TopFloat longDoubleValue
 295: PopFloat
 296: Goto PreCall 114
 297: PreCall 114
 298: Parameter 138 pointer arg_list
 299: Parameter 146 pointer widthPtr
-300: Address £temporary1857 precision
-301: Parameter 154 pointer £temporary1857
+300: Address £temporary1841 precision
+301: Parameter 154 pointer £temporary1841
 302: Call 114 checkWidthAndPrecision 0
 303: PostCall 114
-304: GetReturnValue £temporary1858
-305: Assign arg_list £temporary1858
+304: GetReturnValue £temporary1842
+305: Assign arg_list £temporary1842
 306: Equal PreCall 114 c 102
 307: Goto PreCall 114
 308: PreCall 114
@@ -317,12 +317,12 @@
 316: PostCall 114
 317: Goto Goto SetReturnValue
 318: PreCall 114
-319: IntegralToIntegral £temporary1861 c
-320: Parameter 138 signedint £temporary1861
+319: IntegralToIntegral £temporary1845 c
+320: Parameter 138 signedint £temporary1845
 321: Call 114 tolower 0
 322: PostCall 114
-323: GetReturnValue £temporary1862
-324: Equal PreCall 114 £temporary1862 101
+323: GetReturnValue £temporary1846
+324: Equal PreCall 114 £temporary1846 101
 325: Goto PreCall 114
 326: PreCall 114
 327: PushFloat longDoubleValue
@@ -332,12 +332,12 @@
 331: Parameter 154 signedint grid
 332: Parameter 158 signedint precision
 333: PreCall 114
-334: IntegralToIntegral £temporary1864 c
-335: Parameter 186 signedint £temporary1864
+334: IntegralToIntegral £temporary1848 c
+335: Parameter 186 signedint £temporary1848
 336: Call 162 isupper 0
 337: PostCall 162
-338: GetReturnValue £temporary1865
-339: Parameter 162 signedint £temporary1865
+338: GetReturnValue £temporary1849
+339: Parameter 162 signedint £temporary1849
 340: Call 114 printLongDoubleExpo 0
 341: PostCall 114
 342: Goto Goto SetReturnValue
@@ -347,13 +347,13 @@
 346: Parameter 138 double longDoubleValue
 347: Call 114 fabs 0
 348: PostCall 114
-349: GetReturnValue £temporary1867
-350: Parameter 138 double £temporary1867
+349: GetReturnValue £temporary1851
+350: Parameter 138 double £temporary1851
 351: Call 114 log10 0
 352: PostCall 114
-353: GetReturnValue £temporary1868
-354: FloatingToIntegral £temporary1869 £temporary1868
-355: Assign expo £temporary1869
+353: GetReturnValue £temporary1852
+354: FloatingToIntegral £temporary1853 £temporary1852
+355: Assign expo £temporary1853
 356: SignedGreaterThanEqual SignedLessThanEqual PreCall 118 expo 2 expo -3
 357: Goto PreCall 118
 358: SignedLessThanEqual PreCall 118 expo 2
@@ -376,37 +376,37 @@
 375: Parameter 158 signedint grid
 376: Parameter 162 signedint precision
 377: PreCall 118
-378: IntegralToIntegral £temporary1874 c
-379: Parameter 190 signedint £temporary1874
+378: IntegralToIntegral £temporary1858 c
+379: Parameter 190 signedint £temporary1858
 380: Call 166 isupper 0
 381: PostCall 166
-382: GetReturnValue £temporary1875
-383: Parameter 166 signedint £temporary1875
+382: GetReturnValue £temporary1859
+383: Parameter 166 signedint £temporary1859
 384: Call 118 printLongDoubleExpo 0
 385: PostCall 118
 386: Goto SetReturnValue
-387: BinaryAdd £temporary1878 arg_list 8
-388: UnsignedDivide £temporary1877 £temporary1878 1
-389: IntegralToIntegral £temporary1879 £temporary1877
-390: IntegralToIntegral £temporary1880 £temporary1879
-391: Assign arg_list £temporary1880
-392: UnsignedMultiply £temporary1882 8 1
-393: BinarySubtract £temporary1881 arg_list £temporary1882
-394: IntegralToIntegral £temporary1883 £temporary1881
-395: Dereference £temporary1884 -> £temporary1883 £temporary1883 0
-396: Assign ptrValue £temporary1884 -> £temporary1883
+387: BinaryAdd £temporary1862 arg_list 8
+388: UnsignedDivide £temporary1861 £temporary1862 1
+389: IntegralToIntegral £temporary1863 £temporary1861
+390: IntegralToIntegral £temporary1864 £temporary1863
+391: Assign arg_list £temporary1864
+392: UnsignedMultiply £temporary1866 8 1
+393: BinarySubtract £temporary1865 arg_list £temporary1866
+394: IntegralToIntegral £temporary1867 £temporary1865
+395: Dereference £temporary1868 -> £temporary1867 £temporary1867 0
+396: Assign ptrValue £temporary1868 -> £temporary1867
 397: PreCall 114
 398: Parameter 138 pointer arg_list
 399: Parameter 146 pointer widthPtr
-400: Address £temporary1885 precision
-401: Parameter 154 pointer £temporary1885
+400: Address £temporary1869 precision
+401: Parameter 154 pointer £temporary1869
 402: Call 114 checkWidthAndPrecision 0
 403: PostCall 114
-404: GetReturnValue £temporary1886
-405: Assign arg_list £temporary1886
+404: GetReturnValue £temporary1870
+405: Assign arg_list £temporary1870
 406: PreCall 114
-407: IntegralToIntegral £temporary1887 ptrValue
-408: Parameter 138 unsignedlongint £temporary1887
+407: IntegralToIntegral £temporary1871 ptrValue
+408: Parameter 138 unsignedlongint £temporary1871
 409: Parameter 146 signedint 0
 410: Parameter 150 signedint 0
 411: Parameter 154 signedint 0
@@ -415,47 +415,47 @@
 414: Call 114 printUnsignedLong 0
 415: PostCall 114
 416: Goto SetReturnValue
-417: BinaryAdd £temporary1890 arg_list 8
-418: UnsignedDivide £temporary1889 £temporary1890 1
-419: IntegralToIntegral £temporary1891 £temporary1889
-420: IntegralToIntegral £temporary1892 £temporary1891
-421: Assign arg_list £temporary1892
-422: UnsignedMultiply £temporary1894 8 1
-423: BinarySubtract £temporary1893 arg_list £temporary1894
-424: IntegralToIntegral £temporary1895 £temporary1893
-425: Dereference £temporary1896 -> £temporary1895 £temporary1895 0
-426: Assign ptrValue £temporary1896 -> £temporary1895
-427: BinaryAdd £temporary1898 arg_list 8
-428: UnsignedDivide £temporary1897 £temporary1898 1
-429: IntegralToIntegral £temporary1899 £temporary1897
-430: IntegralToIntegral £temporary1900 £temporary1899
-431: Assign arg_list £temporary1900
-432: UnsignedMultiply £temporary1902 8 1
-433: BinarySubtract £temporary1901 arg_list £temporary1902
-434: IntegralToIntegral £temporary1903 £temporary1901
-435: Dereference £temporary1904 -> £temporary1903 £temporary1903 0
-436: Assign intPtr £temporary1904 -> £temporary1903
+417: BinaryAdd £temporary1874 arg_list 8
+418: UnsignedDivide £temporary1873 £temporary1874 1
+419: IntegralToIntegral £temporary1875 £temporary1873
+420: IntegralToIntegral £temporary1876 £temporary1875
+421: Assign arg_list £temporary1876
+422: UnsignedMultiply £temporary1878 8 1
+423: BinarySubtract £temporary1877 arg_list £temporary1878
+424: IntegralToIntegral £temporary1879 £temporary1877
+425: Dereference £temporary1880 -> £temporary1879 £temporary1879 0
+426: Assign ptrValue £temporary1880 -> £temporary1879
+427: BinaryAdd £temporary1882 arg_list 8
+428: UnsignedDivide £temporary1881 £temporary1882 1
+429: IntegralToIntegral £temporary1883 £temporary1881
+430: IntegralToIntegral £temporary1884 £temporary1883
+431: Assign arg_list £temporary1884
+432: UnsignedMultiply £temporary1886 8 1
+433: BinarySubtract £temporary1885 arg_list £temporary1886
+434: IntegralToIntegral £temporary1887 £temporary1885
+435: Dereference £temporary1888 -> £temporary1887 £temporary1887 0
+436: Assign intPtr £temporary1888 -> £temporary1887
 437: PreCall 114
 438: Parameter 138 pointer arg_list
 439: Parameter 146 pointer widthPtr
-440: Address £temporary1905 precision
-441: Parameter 154 pointer £temporary1905
+440: Address £temporary1889 precision
+441: Parameter 154 pointer £temporary1889
 442: Call 114 checkWidthAndPrecision 0
 443: PostCall 114
-444: GetReturnValue £temporary1906
-445: Assign arg_list £temporary1906
-446: Dereference £temporary1907 -> intPtr intPtr 0
-447: Assign £temporary1907 -> intPtr g_outChars
+444: GetReturnValue £temporary1890
+445: Assign arg_list £temporary1890
+446: Dereference £temporary1891 -> intPtr intPtr 0
+447: Assign £temporary1891 -> intPtr g_outChars
 448: Goto SetReturnValue
 449: PreCall 114
 450: Parameter 138 pointer arg_list
 451: Parameter 146 pointer widthPtr
-452: Address £temporary1908 precision
-453: Parameter 154 pointer £temporary1908
+452: Address £temporary1892 precision
+453: Parameter 154 pointer £temporary1892
 454: Call 114 checkWidthAndPrecision 0
 455: PostCall 114
-456: GetReturnValue £temporary1909
-457: Assign arg_list £temporary1909
+456: GetReturnValue £temporary1893
+457: Assign arg_list £temporary1893
 458: PreCall 114
 459: Parameter 138 signedchar 37
 460: Call 114 printChar 0

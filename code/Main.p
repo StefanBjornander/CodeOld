@@ -695,7 +695,7 @@ void print_test ( void ) ;
 void limits_test ( void ) ;
 void float_test ( void ) ;
 void string_test ( void ) ;
-void setjmp_test ( double x ) ;
+void setjmp_test ( void ) ;
 void stdio_test ( void ) ;
 void stdlib_test ( void ) ;
 void strtol_test ( void ) ;
@@ -827,11 +827,11 @@ limits_test ( ) ;
 time_test ( ) ;
 }
 
-void mainY ( ) {
-malloc_test ( ) ;
-setjmp_test ( 10 ) ;
-setjmp_test ( 0 ) ;
-}
+
+
+
+
+
 
 
 
@@ -883,6 +883,9 @@ void main ( ) {
 
 
 file_test ( ) ;
+
+
+
 
 
 
@@ -947,18 +950,18 @@ scanf ( "%lf" , & x ) ;
 printf ( "<%f>" , x ) ;
 }
 
-void mains2 ( void ) {
-setjmp_test ( 3.14 ) ;
-printf ( "---------------------------------------------\n" ) ;
 
-setjmp_test ( 0 ) ;
-printf ( "---------------------------------------------\n" ) ;
 
-setjmp_test ( 2.71 ) ;
-printf ( "---------------------------------------------\n" ) ;
 
-setjmp_test ( 0 ) ;
-}
+
+
+
+
+
+
+
+
+
 
 void char_main ( void ) {
 character_test ( 'a' ) ;
@@ -1550,12 +1553,12 @@ void assert_test ( void ) {
 int n = 0 ;
 printf ( "Please write a number (not 6 or 7): " ) ;
 scanf ( "%i" , & n ) ;
-if ( ! ( n != 6 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 6" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 877 ) ; abort ( ) ; } ;
+if ( ! ( n != 6 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 6" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 880 ) ; abort ( ) ; } ;
 assert_test2 ( n ) ;
 }
 
 void assert_test2 ( int n ) {
-if ( ! ( n != 7 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 7" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 882 ) ; abort ( ) ; } ;
+if ( ! ( n != 7 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 7" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 885 ) ; abort ( ) ; } ;
 }
 
 
