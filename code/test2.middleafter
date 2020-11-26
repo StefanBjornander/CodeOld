@@ -1,0 +1,28 @@
+0: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 16 buffer 6
+2: Call 16 setjmp 0
+3: PostCall 16
+4: GetReturnValue £temporary4694
+5: Assign message £temporary4694
+6: NotEqual 21 message 0
+7: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+8: Parameter 16 string_12E0202F2025f203D2025f0A# 6
+9: PushFloat x
+10: Parameter 16 x 8
+11: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+12: PushFloat x
+13: Parameter 16 x 22
+14: Call 16 inverse 16
+15: PostCall 16
+16: GetReturnValue £temporary4696
+17: Parameter 16 £temporary4696 16
+18: Call 16 printf 0
+19: PostCall 16
+20: Goto 26
+21: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+22: Parameter 16 string_25s0A# 6
+23: Parameter 16 message 8
+24: Call 16 printf 0
+25: PostCall 16
+26: Return 0
+27: FunctionEnd test

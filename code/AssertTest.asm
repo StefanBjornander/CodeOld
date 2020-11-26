@@ -1,14 +1,103 @@
+	global assert_test
 	global assert_testX
 	global assert_test2X
 
-	extern printf
-	extern scanf
 	extern stderr
 	extern fprintf
 	extern abort
+	extern printf
+	extern scanf
 	extern assert_test2
 	extern $StackTop
 
+
+section .data
+
+string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+	; Initializer String Assertion failed: "%s" in file %s at line %i\n
+	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
+
+section .data
+
+string_n203D3D201#:
+	; Initializer String n == 1
+	db "n == 1", 0
+
+section .data
+
+string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CAssertTest2Ec#:
+	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\AssertTest.c
+	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\AssertTest.c", 0
+
+section .text
+
+ assert_test:
+	; Assign n 1
+	mov dword [rbp + 24], 1
+
+ assert_test$1:
+	; Equal 13 n 1
+	cmp dword [rbp + 24], 1
+	je assert_test$13
+
+ assert_test$2:
+	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ assert_test$3:
+	; Parameter 52 pointer stderr
+	mov rax, [stderr]
+	mov [rbp + 52], rax
+
+ assert_test$4:
+	; Parameter 60 pointer "Assertion failed: "%s" in file %s at line %i\n"
+	mov qword [rbp + 60], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+
+ assert_test$5:
+	; Parameter 68 pointer "n == 1"
+	mov qword [rbp + 68], string_n203D3D201#
+
+ assert_test$6:
+	; Parameter 76 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\AssertTest.c"
+	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CAssertTest2Ec#
+
+ assert_test$7:
+	; Parameter 84 signedint 8
+	mov dword [rbp + 84], 8
+
+ assert_test$8:
+	; Call 28 fprintf 20
+	mov qword [rbp + 28], assert_test$9
+	mov [rbp + 36], rbp
+	add rbp, 28
+	mov rdi, rbp
+	add rdi, 20
+	jmp fprintf
+
+ assert_test$9:
+	; PostCall 28
+
+ assert_test$10:
+	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ assert_test$11:
+	; Call 28 abort 0
+	mov qword [rbp + 28], assert_test$12
+	mov [rbp + 36], rbp
+	add rbp, 28
+	jmp abort
+
+ assert_test$12:
+	; PostCall 28
+
+ assert_test$13:
+	; Return
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
+
+ assert_test$14:
+	; FunctionEnd assert_test
 
 section .data
 
@@ -24,21 +113,9 @@ string_25i#:
 
 section .data
 
-string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
-	; Initializer String Assertion failed: "%s" in file %s at line %i\n
-	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
-
-section .data
-
 string_n20213D206#:
 	; Initializer String n != 6
 	db "n != 6", 0
-
-section .data
-
-string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CAssertTest2Ec#:
-	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\AssertTest.c
-	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\AssertTest.c", 0
 
 section .text
 
@@ -72,12 +149,12 @@ section .text
 	mov qword [rbp + 52], string_25i#
 
  assert_testX$7:
-	; Address £temporary3610 n
+	; Address £temporary3623 n
 	mov rsi, rbp
 	add rsi, 24
 
  assert_testX$8:
-	; Parameter 60 pointer £temporary3610
+	; Parameter 60 pointer £temporary3623
 	mov [rbp + 60], rsi
 
  assert_testX$9:
@@ -118,8 +195,8 @@ section .text
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CAssertTest2Ec#
 
  assert_testX$17:
-	; Parameter 84 signedint 10
-	mov dword [rbp + 84], 10
+	; Parameter 84 signedint 16
+	mov dword [rbp + 84], 16
 
  assert_testX$18:
 	; Call 28 fprintf 20
@@ -208,8 +285,8 @@ section .text
 	mov qword [rbp + 76], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CAssertTest2Ec#
 
  assert_test2X$6:
-	; Parameter 84 signedint 15
-	mov dword [rbp + 84], 15
+	; Parameter 84 signedint 21
+	mov dword [rbp + 84], 21
 
  assert_test2X$7:
 	; Call 28 fprintf 20

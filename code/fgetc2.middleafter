@@ -1,17 +1,17 @@
 0: Assign c 0
 1: CallHeader 9 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-2: address £temporary1033 c
-3: Parameter 9 £temporary1033 6
+2: address £temporary1014 c
+3: Parameter 9 £temporary1014 6
 4: Parameter 9 1 8
 5: Parameter 9 1 10
 6: Parameter 9 stream 12
 7: Call 9 fread 0
 8: PostCall 9
-9: GetReturnValue £temporary1034
-10: SignedLessThanEqual 14 £temporary1034 0
-11: IntegralToIntegral £temporary1036 c
-12: SetReturnValue £temporary1036
-13: Return £temporary1036
+9: GetReturnValue £temporary1015
+10: SignedLessThanEqual 14 £temporary1015 0
+11: IntegralToIntegral £temporary1017 c
+12: SetReturnValue £temporary1017
+13: Return £temporary1017
 14: SetReturnValue -1
 15: Return -1
 16: FunctionEnd fgetc

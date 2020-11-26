@@ -1,32 +1,32 @@
 1:	
 
 setlocale:	; Equal 4 g_currStructPtr 0
-2:		cmp word [@640$g_currStructPtr], 0
+2:		cmp word [@614$g_currStructPtr], 0
 3:		je setlocale$4
 5:	
 
-setlocale$1:	; Deref £temporary498 -> g_currStructPtr g_currStructPtr 0
-6:		mov a320, [@640$g_currStructPtr]
+setlocale$1:	; Deref £temporary473 -> g_currStructPtr g_currStructPtr 0
+6:		mov a315, [@614$g_currStructPtr]
 8:	
 
-setlocale$2:	; Assign £temporary502 £temporary498 -> g_currStructPtr
-9:		mov t321, [a320]
+setlocale$2:	; Assign £temporary477 £temporary473 -> g_currStructPtr
+9:		mov t316, [a315]
 11:	
 
 setlocale$3:	; Goto 5
 12:		jmp setlocale$5
 14:	
 
-setlocale$4:	; Assign £temporary502 0
-15:		mov t322, 0
+setlocale$4:	; Assign £temporary477 0
+15:		mov t317, 0
 17:	
 
-setlocale$5:	; Assign oldName £temporary502
-18:		mov [bp + 12], t322
+setlocale$5:	; Assign oldName £temporary477
+18:		mov [bp + 12], t317
 20:	
 
 setlocale$6:	; Assign g_currStructPtr 0
-21:		mov word [@640$g_currStructPtr], 0
+21:		mov word [@614$g_currStructPtr], 0
 23:	
 
 setlocale$7:	; Equal 28 newName 0
@@ -39,8 +39,8 @@ setlocale$8:	; Assign index 0
 30:	
 
 setlocale$9:	; SignedGreaterThanEqual 28 index sSize
-31:		mov a323, [@639$sSize]
-32:		cmp [bp + 10], a323
+31:		mov a318, [@613$sSize]
+32:		cmp [bp + 10], a318
 33:		jge setlocale$28
 35:	
 
@@ -48,27 +48,27 @@ setlocale$10:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Sym
 37:	
 
 setlocale$11:	; Parameter 14 newName 6
-38:		mov a324, [bp + 8]
-39:		mov [bp + 20], a324
+38:		mov a319, [bp + 8]
+39:		mov [bp + 20], a319
 41:	
 
-setlocale$12:	; UnsignedMultiply £temporary507 index 4
-42:		mov a325, [bp + 10]
+setlocale$12:	; UnsignedMultiply £temporary482 index 4
+42:		mov a320, [bp + 10]
 44:		xor dx, dx
 45:		mul word [int2$4#]
 51:	
 
-setlocale$13:	; BinaryAdd £temporary508 sArray £temporary507
-52:		mov a329, @638$sArray
-53:		add a329, t328
+setlocale$13:	; BinaryAdd £temporary483 sArray £temporary482
+52:		mov a324, @612$sArray
+53:		add a324, t323
 55:	
 
-setlocale$14:	; Deref £temporary506 -> £temporary508 £temporary508 0
+setlocale$14:	; Deref £temporary481 -> £temporary483 £temporary483 0
 57:	
 
-setlocale$15:	; Parameter 14 £temporary506.name$0 -> £temporary508 8
-58:		mov t330, [a329]
-59:		mov [bp + 22], t330
+setlocale$15:	; Parameter 14 £temporary481.name$0 -> £temporary483 8
+58:		mov t325, [a324]
+59:		mov [bp + 22], t325
 61:	
 
 setlocale$16:	; Call 14 strcmp 0
@@ -81,33 +81,33 @@ setlocale$16:	; Call 14 strcmp 0
 setlocale$17:	; PostCall 14
 69:	
 
-setlocale$18:	; GetReturnValue £temporary509
+setlocale$18:	; GetReturnValue £temporary484
 74:	
 
-setlocale$19:	; NotEqual 26 £temporary509 0
-75:		cmp t332, 0
+setlocale$19:	; NotEqual 26 £temporary484 0
+75:		cmp t327, 0
 76:		jne setlocale$26
 78:	
 
-setlocale$20:	; UnsignedMultiply £temporary512 index 4
-79:		mov a333, [bp + 10]
+setlocale$20:	; UnsignedMultiply £temporary487 index 4
+79:		mov a328, [bp + 10]
 81:		xor dx, dx
 82:		mul word [int2$4#]
 88:	
 
-setlocale$21:	; BinaryAdd £temporary513 sArray £temporary512
-89:		mov a337, @638$sArray
-90:		add a337, t336
+setlocale$21:	; BinaryAdd £temporary488 sArray £temporary487
+89:		mov a332, @612$sArray
+90:		add a332, t331
 92:	
 
-setlocale$22:	; Deref £temporary511 -> £temporary513 £temporary513 0
+setlocale$22:	; Deref £temporary486 -> £temporary488 £temporary488 0
 94:	
 
-setlocale$23:	; address £temporary514 £temporary511 -> £temporary513
+setlocale$23:	; address £temporary489 £temporary486 -> £temporary488
 96:	
 
-setlocale$24:	; Assign g_currStructPtr £temporary514
-97:		mov [@640$g_currStructPtr], a337
+setlocale$24:	; Assign g_currStructPtr £temporary489
+97:		mov [@614$g_currStructPtr], a332
 99:	
 
 setlocale$25:	; Goto 28
@@ -123,48 +123,48 @@ setlocale$27:	; Goto 9
 108:	
 
 setlocale$28:	; SetReturnValue oldName
-109:		mov a338, [bp + 12]
+109:		mov a333, [bp + 12]
 111:	
 
 setlocale$29:	; Return oldName
-112:		mov t339, [bp]
+112:		mov t334, [bp]
 113:		mov di, [bp + 4]
 114:		mov bp, [bp + 2]
-115:		jmp t339
+115:		jmp t334
 117:	
 
 setlocale$30:	; FunctionEnd setlocale
 1:	
 
 localeconv:	; Equal 4 g_currStructPtr 0
-2:		cmp word [@640$g_currStructPtr], 0
+2:		cmp word [@614$g_currStructPtr], 0
 3:		je localeconv$4
 5:	
 
-localeconv$1:	; Deref £temporary518 -> g_currStructPtr g_currStructPtr 2
-6:		mov a340, [@640$g_currStructPtr]
+localeconv$1:	; Deref £temporary493 -> g_currStructPtr g_currStructPtr 2
+6:		mov a335, [@614$g_currStructPtr]
 8:	
 
-localeconv$2:	; Assign £temporary522 £temporary518 -> g_currStructPtr
-9:		mov t341, [a340 + 2]
+localeconv$2:	; Assign £temporary497 £temporary493 -> g_currStructPtr
+9:		mov t336, [a335 + 2]
 11:	
 
 localeconv$3:	; Goto 5
 12:		jmp localeconv$5
 14:	
 
-localeconv$4:	; Assign £temporary522 0
-15:		mov t342, 0
+localeconv$4:	; Assign £temporary497 0
+15:		mov t337, 0
 17:	
 
-localeconv$5:	; SetReturnValue £temporary522
+localeconv$5:	; SetReturnValue £temporary497
 19:	
 
-localeconv$6:	; Return £temporary522
-20:		mov t343, [bp]
+localeconv$6:	; Return £temporary497
+20:		mov t338, [bp]
 21:		mov di, [bp + 4]
 22:		mov bp, [bp + 2]
-23:		jmp t343
+23:		jmp t338
 25:	
 
 localeconv$7:	; FunctionEnd localeconv

@@ -1,3 +1,17 @@
-0: Empty
-1: Return 0
-2: FunctionEnd setjmp_test
+0: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: PushFloat 10
+2: Parameter 6 10 6
+3: Call 6 test 0
+4: PostCall 6
+5: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+6: PushZero
+7: Parameter 6 0 6
+8: Call 6 test 0
+9: PostCall 6
+10: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+11: PushFloat 0.1
+12: Parameter 6 0.1 6
+13: Call 6 test 0
+14: PostCall 6
+15: Return 0
+16: FunctionEnd setjmp_test

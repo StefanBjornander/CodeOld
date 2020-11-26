@@ -1,5 +1,5 @@
-0: Deref £temporary1155 -> stream stream 21
+0: Deref £temporary1136 -> stream stream 21
 1: Assign errno 0
-2: Assign £temporary1155 -> stream errno
+2: Assign £temporary1136 -> stream errno
 3: Return 0
 4: FunctionEnd clearerr

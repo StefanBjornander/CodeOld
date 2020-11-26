@@ -5,9 +5,9 @@
 4: Parameter 8 1 10
 5: Call 8 generateTempName 0
 6: PostCall 8
-7: GetReturnValue £temporary1219
-8: SetReturnValue £temporary1219
-9: Return £temporary1219
+7: GetReturnValue £temporary1200
+8: SetReturnValue £temporary1200
+9: Return £temporary1200
 10: SetReturnValue 0
 11: Return 0
 12: FunctionEnd tmpnam

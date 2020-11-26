@@ -14,12 +14,12 @@
 13: Assign longDouble 0
 14: Assign g_outChars 0
 15: Assign index 0
-16: BinaryAdd £temporary2221 format index
-17: Deref £temporary2220 -> £temporary2221 £temporary2221 0
-18: Equal 285 £temporary2220 -> £temporary2221 0
-19: BinaryAdd £temporary2225 format index
-20: Deref £temporary2224 -> £temporary2225 £temporary2225 0
-21: Assign c £temporary2224 -> £temporary2225
+16: BinaryAdd £temporary2203 format index
+17: Deref £temporary2202 -> £temporary2203 £temporary2203 0
+18: Equal 285 £temporary2202 -> £temporary2203 0
+19: BinaryAdd £temporary2207 format index
+20: Deref £temporary2206 -> £temporary2207 £temporary2207 0
+21: Assign c £temporary2206 -> £temporary2207
 22: Equal 263 percent 0
 23: Case 52 c 43
 24: Case 54 c 45
@@ -76,16 +76,16 @@
 75: Equal 107 minus 0
 76: Assign startChars g_outChars
 77: CallHeader 43 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-78: BinaryAdd £temporary2229 format index
-79: Deref £temporary2228 -> £temporary2229 £temporary2229 0
-80: address £temporary2230 £temporary2228 -> £temporary2229
-81: Parameter 43 £temporary2230 6
+78: BinaryAdd £temporary2211 format index
+79: Deref £temporary2210 -> £temporary2211 £temporary2211 0
+80: address £temporary2212 £temporary2210 -> £temporary2211
+81: Parameter 43 £temporary2212 6
 82: Parameter 43 arg_list 8
 83: Parameter 43 plus 10
 84: Parameter 43 space 12
 85: Parameter 43 grid 14
-86: address £temporary2231 width
-87: Parameter 43 £temporary2231 16
+86: address £temporary2213 width
+87: Parameter 43 £temporary2213 16
 88: Parameter 43 precision 18
 89: Parameter 43 shortInt 20
 90: Parameter 43 longInt 22
@@ -94,12 +94,12 @@
 93: Parameter 43 0 28
 94: Call 43 printArgument 0
 95: PostCall 43
-96: GetReturnValue £temporary2232
-97: Assign arg_list £temporary2232
+96: GetReturnValue £temporary2214
+97: Assign arg_list £temporary2214
 98: BinarySubtract field g_outChars startChars
-99: Assign £temporary2234 field
+99: Assign £temporary2216 field
 100: Increment field
-101: SignedGreaterThanEqual 237 £temporary2234 width
+101: SignedGreaterThanEqual 237 £temporary2216 width
 102: CallHeader 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 103: Parameter 45 32 6
 104: Call 45 printChar 0
@@ -111,23 +111,23 @@
 110: Assign negative 0
 111: Assign g_outStatus 2
 112: CallHeader 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-113: BinaryAdd £temporary2238 format index
-114: Deref £temporary2237 -> £temporary2238 £temporary2238 0
-115: address £temporary2239 £temporary2237 -> £temporary2238
-116: Parameter 47 £temporary2239 6
+113: BinaryAdd £temporary2220 format index
+114: Deref £temporary2219 -> £temporary2220 £temporary2220 0
+115: address £temporary2221 £temporary2219 -> £temporary2220
+116: Parameter 47 £temporary2221 6
 117: Parameter 47 arg_list 8
 118: Parameter 47 0 10
 119: Parameter 47 0 12
 120: Parameter 47 grid 14
-121: address £temporary2240 width
-122: Parameter 47 £temporary2240 16
+121: address £temporary2222 width
+122: Parameter 47 £temporary2222 16
 123: Parameter 47 precision 18
 124: Parameter 47 shortInt 20
 125: Parameter 47 longInt 22
 126: Parameter 47 longDouble 24
 127: Parameter 47 0 26
-128: address £temporary2241 negative
-129: Parameter 47 £temporary2241 28
+128: address £temporary2223 negative
+129: Parameter 47 £temporary2223 28
 130: Call 47 printArgument 0
 131: PostCall 47
 132: Assign g_outStatus oldOutStatus
@@ -153,19 +153,19 @@
 152: Call 49 printChar 0
 153: PostCall 49
 154: Increment field
-155: Assign £temporary2253 field
+155: Assign £temporary2235 field
 156: Increment field
-157: SignedGreaterThanEqual 163 £temporary2253 width
+157: SignedGreaterThanEqual 163 £temporary2235 width
 158: CallHeader 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 159: Parameter 49 48 6
 160: Call 49 printChar 0
 161: PostCall 49
 162: Goto 155
 163: CallHeader 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-164: BinaryAdd £temporary2257 format index
-165: Deref £temporary2256 -> £temporary2257 £temporary2257 0
-166: address £temporary2258 £temporary2256 -> £temporary2257
-167: Parameter 49 £temporary2258 6
+164: BinaryAdd £temporary2239 format index
+165: Deref £temporary2238 -> £temporary2239 £temporary2239 0
+166: address £temporary2240 £temporary2238 -> £temporary2239
+167: Parameter 49 £temporary2240 6
 168: Parameter 49 arg_list 8
 169: Parameter 49 0 10
 170: Parameter 49 0 12
@@ -179,23 +179,23 @@
 178: Parameter 49 0 28
 179: Call 49 printArgument 0
 180: PostCall 49
-181: GetReturnValue £temporary2259
-182: Assign arg_list £temporary2259
+181: GetReturnValue £temporary2241
+182: Assign arg_list £temporary2241
 183: Goto 237
 184: Assign startChars g_outChars
 185: Assign oldOutStatus g_outStatus
 186: Assign g_outStatus 2
 187: CallHeader 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-188: BinaryAdd £temporary2261 format index
-189: Deref £temporary2260 -> £temporary2261 £temporary2261 0
-190: address £temporary2262 £temporary2260 -> £temporary2261
-191: Parameter 45 £temporary2262 6
+188: BinaryAdd £temporary2243 format index
+189: Deref £temporary2242 -> £temporary2243 £temporary2243 0
+190: address £temporary2244 £temporary2242 -> £temporary2243
+191: Parameter 45 £temporary2244 6
 192: Parameter 45 arg_list 8
 193: Parameter 45 plus 10
 194: Parameter 45 space 12
 195: Parameter 45 grid 14
-196: address £temporary2263 width
-197: Parameter 45 £temporary2263 16
+196: address £temporary2245 width
+197: Parameter 45 £temporary2245 16
 198: Parameter 45 precision 18
 199: Parameter 45 shortInt 20
 200: Parameter 45 longInt 22
@@ -207,19 +207,19 @@
 206: Assign g_outStatus oldOutStatus
 207: BinarySubtract field g_outChars startChars
 208: Assign g_outChars startChars
-209: Assign £temporary2266 field
+209: Assign £temporary2248 field
 210: Increment field
-211: SignedGreaterThanEqual 217 £temporary2266 width
+211: SignedGreaterThanEqual 217 £temporary2248 width
 212: CallHeader 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 213: Parameter 47 32 6
 214: Call 47 printChar 0
 215: PostCall 47
 216: Goto 209
 217: CallHeader 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-218: BinaryAdd £temporary2270 format index
-219: Deref £temporary2269 -> £temporary2270 £temporary2270 0
-220: address £temporary2271 £temporary2269 -> £temporary2270
-221: Parameter 47 £temporary2271 6
+218: BinaryAdd £temporary2252 format index
+219: Deref £temporary2251 -> £temporary2252 £temporary2252 0
+220: address £temporary2253 £temporary2251 -> £temporary2252
+221: Parameter 47 £temporary2253 6
 222: Parameter 47 arg_list 8
 223: Parameter 47 plus 10
 224: Parameter 47 space 12
@@ -233,27 +233,27 @@
 232: Parameter 47 0 28
 233: Call 47 printArgument 0
 234: PostCall 47
-235: GetReturnValue £temporary2272
-236: Assign arg_list £temporary2272
+235: GetReturnValue £temporary2254
+236: Assign arg_list £temporary2254
 237: Assign percent 0
 238: Goto 283
 239: Assign value 0
 240: CallHeader 43 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-241: IntegralToIntegral £temporary2275 c
-242: Parameter 43 £temporary2275 6
+241: IntegralToIntegral £temporary2257 c
+242: Parameter 43 £temporary2257 6
 243: Call 43 isdigit 0
 244: PostCall 43
-245: GetReturnValue £temporary2276
-246: Equal 257 £temporary2276 0
-247: SignedMultiply £temporary2277 value 10
-248: BinarySubtract £temporary2278 c 48
-249: IntegralToIntegral £temporary2279 £temporary2278
-250: BinaryAdd value £temporary2277 £temporary2279
+245: GetReturnValue £temporary2258
+246: Equal 257 £temporary2258 0
+247: SignedMultiply £temporary2259 value 10
+248: BinarySubtract £temporary2260 c 48
+249: IntegralToIntegral £temporary2261 £temporary2260
+250: BinaryAdd value £temporary2259 £temporary2261
 251: Increment index
-252: Assign £temporary2281 index
-253: BinaryAdd £temporary2283 format £temporary2281
-254: Deref £temporary2282 -> £temporary2283 £temporary2283 0
-255: Assign c £temporary2282 -> £temporary2283
+252: Assign £temporary2263 index
+253: BinaryAdd £temporary2265 format £temporary2263
+254: Deref £temporary2264 -> £temporary2265 £temporary2265 0
+255: Assign c £temporary2264 -> £temporary2265
 256: Goto 240
 257: Decrement index
 258: NotEqual 261 period 0
@@ -284,11 +284,11 @@
 283: Increment index
 284: Goto 16
 285: NotEqual 291 g_outStatus 1
-286: IntegralToIntegral £temporary2292 g_outDevice
-287: Assign outString £temporary2292
-288: BinaryAdd £temporary2294 outString g_outChars
-289: Deref £temporary2293 -> £temporary2294 £temporary2294 0
-290: Assign £temporary2293 -> £temporary2294 0
+286: IntegralToIntegral £temporary2274 g_outDevice
+287: Assign outString £temporary2274
+288: BinaryAdd £temporary2276 outString g_outChars
+289: Deref £temporary2275 -> £temporary2276 £temporary2276 0
+290: Assign £temporary2275 -> £temporary2276 0
 291: SetReturnValue g_outChars
 292: Return g_outChars
 293: FunctionEnd printFormat

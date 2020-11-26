@@ -53,7 +53,7 @@ void stdio_test(void) {
     printf("<%i> <%i> <%i>\n", a, b, n);
   }*/
 
-  { char s[100];
+/*  { char s[100];
     printf("Please write the patterns [abc]: ");
     scanf("%[abc]", s);
     printf("\n<%s>\n", s);
@@ -61,5 +61,5 @@ void stdio_test(void) {
     printf("Please write the patterns [^abc]: ");
     scanf("%[^abc]", s);
     printf("\n<%s>", s);
-  }
+  }*/
 }

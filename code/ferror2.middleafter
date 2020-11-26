@@ -1,4 +1,4 @@
-0: Deref £temporary1173 -> stream stream 21
-1: SetReturnValue £temporary1173 -> stream
-2: Return £temporary1173 -> stream
+0: Deref £temporary1154 -> stream stream 21
+1: SetReturnValue £temporary1154 -> stream
+2: Return £temporary1154 -> stream
 3: FunctionEnd ferror

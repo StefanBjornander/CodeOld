@@ -2,24 +2,24 @@
 1: Parameter 12 target 6
 2: Call 12 strlen 0
 3: PostCall 12
-4: GetReturnValue £temporary3912
-5: Assign targetLength £temporary3912
+4: GetReturnValue £temporary3894
+5: Assign targetLength £temporary3894
 6: Assign index 0
-7: BinaryAdd £temporary3914 source index
-8: Deref £temporary3913 -> £temporary3914 £temporary3914 0
-9: Equal 18 £temporary3913 -> £temporary3914 0
-10: BinaryAdd £temporary3917 targetLength index
-11: BinaryAdd £temporary3919 target £temporary3917
-12: Deref £temporary3918 -> £temporary3919 £temporary3919 0
-13: BinaryAdd £temporary3921 source index
-14: Deref £temporary3920 -> £temporary3921 £temporary3921 0
-15: Assign £temporary3918 -> £temporary3919 £temporary3920 -> £temporary3921
+7: BinaryAdd £temporary3896 source index
+8: Deref £temporary3895 -> £temporary3896 £temporary3896 0
+9: Equal 18 £temporary3895 -> £temporary3896 0
+10: BinaryAdd £temporary3899 targetLength index
+11: BinaryAdd £temporary3901 target £temporary3899
+12: Deref £temporary3900 -> £temporary3901 £temporary3901 0
+13: BinaryAdd £temporary3903 source index
+14: Deref £temporary3902 -> £temporary3903 £temporary3903 0
+15: Assign £temporary3900 -> £temporary3901 £temporary3902 -> £temporary3903
 16: Increment index
 17: Goto 7
-18: BinaryAdd £temporary3922 targetLength index
-19: BinaryAdd £temporary3924 target £temporary3922
-20: Deref £temporary3923 -> £temporary3924 £temporary3924 0
-21: Assign £temporary3923 -> £temporary3924 0
+18: BinaryAdd £temporary3904 targetLength index
+19: BinaryAdd £temporary3906 target £temporary3904
+20: Deref £temporary3905 -> £temporary3906 £temporary3906 0
+21: Assign £temporary3905 -> £temporary3906 0
 22: SetReturnValue target
 23: Return target
 24: FunctionEnd strcat

@@ -3,10 +3,10 @@
 2: Parameter 14 x 6
 3: Call 14 log 0
 4: PostCall 14
-5: GetReturnValue £temporary595
-6: PushFloat 0.6931471805599453094172321
-7: SignedDivide £temporary596 £temporary595 0.6931471805599453094172321
-8: FloatingToIntegral £temporary597 £temporary596
-9: SetReturnValue £temporary597
-10: Return £temporary597
+5: GetReturnValue £temporary570
+6: PushFloat 0.693
+7: SignedDivide £temporary571 £temporary570 0.693
+8: FloatingToIntegral £temporary572 £temporary571
+9: SetReturnValue £temporary572
+10: Return £temporary572
 11: FunctionEnd log2

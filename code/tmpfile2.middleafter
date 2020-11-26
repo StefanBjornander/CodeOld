@@ -4,18 +4,18 @@
 3: Parameter 12 0 10
 4: Call 12 generateTempName 0
 5: PostCall 12
-6: GetReturnValue £temporary1207
-7: Equal 20 £temporary1207 0
+6: GetReturnValue £temporary1188
+7: Equal 20 £temporary1188 0
 8: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 9: Parameter 12 name 6
 10: Parameter 12 string_w# 8
 11: Call 12 fopen 0
 12: PostCall 12
-13: GetReturnValue £temporary1208
-14: Assign stream £temporary1208
+13: GetReturnValue £temporary1189
+14: Assign stream £temporary1189
 15: Equal 20 stream 0
-16: Deref £temporary1212 -> stream stream 27
-17: Assign £temporary1212 -> stream 1
+16: Deref £temporary1193 -> stream stream 27
+17: Assign £temporary1193 -> stream 1
 18: SetReturnValue stream
 19: Return stream
 20: SetReturnValue 0

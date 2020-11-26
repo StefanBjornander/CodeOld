@@ -3,6 +3,12 @@
 
 void assert_test2(int n);
 
+void assert_test(void) {
+  int n = 1;
+  assert(n == 1);
+//  assert(n == 2);
+}
+
 void assert_testX(void) {
   int n = 0;
   printf("Please write a number (not 6 or 7): ");

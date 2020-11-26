@@ -6,10 +6,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
    
 
-
+    
     
 
-    
+
 
 
 extern double exp ( double x ) ;
@@ -305,7 +305,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\CharacterTest.c,1$
 
                               
 
-void character_test ( char c ) {
+void character_testX ( char c ) {
 printf ( "ascii %i\n" , ( int ) c ) ;
 
 printf ( "islower('%c') = %s\n" , c , ( islower ( ( int ) c ) != 0 ) ? "Yes" : "No" ) ;
@@ -324,3 +324,12 @@ printf ( "tolower('%c') = '%c'\n" , c , ( char ) tolower ( c ) ) ;
 printf ( "toupper('%c') = '%c'\n\n" , c , ( char ) toupper ( c ) ) ;
 }
 
+void character_test ( ) {
+character_testX ( 'a' ) ;
+character_testX ( 'B' ) ;
+character_testX ( '1' ) ;
+character_testX ( '.' ) ;
+character_testX ( '\n' ) ;
+character_testX ( 'f' ) ;
+character_testX ( 'g' ) ;
+}

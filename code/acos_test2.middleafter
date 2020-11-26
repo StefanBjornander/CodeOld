@@ -7,8 +7,8 @@
 6: Parameter 14 x 22
 7: Call 14 acos 16
 8: PostCall 14
-9: GetReturnValue £temporary4707
-10: Parameter 14 £temporary4707 16
+9: GetReturnValue £temporary4730
+10: Parameter 14 £temporary4730 16
 11: Parameter 14 errno 24
 12: Call 14 printf 0
 13: PostCall 14

@@ -4,27 +4,27 @@ putc:	; Assign g_outStatus 0
 2:		mov word [g_outStatus], 0
 4:	
 
-putc$1:	; IntegralToIntegral £temporary1762 stream
-5:		mov a1186, [bp + 8]
+putc$1:	; IntegralToIntegral £temporary1743 stream
+5:		mov a1189, [bp + 8]
 8:	
 
-putc$2:	; Assign g_outDevice £temporary1762
-9:		mov [g_outDevice], a1186
+putc$2:	; Assign g_outDevice £temporary1743
+9:		mov [g_outDevice], a1189
 11:	
 
 putc$3:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 13:	
 
-putc$4:	; IntegralToIntegral £temporary1763 i
-14:		mov a1187, [bp + 6]
-17:		cmp a1187, 0
+putc$4:	; IntegralToIntegral £temporary1744 i
+14:		mov a1190, [bp + 6]
+17:		cmp a1190, 0
 18:		jge putc$5
-19:		neg a1187
-21:		neg a1187
+19:		neg a1190
+21:		neg a1190
 23:	
 
-putc$5:	; Parameter 10 £temporary1763 6
-24:		mov [bp + 16], a1187
+putc$5:	; Parameter 10 £temporary1744 6
+24:		mov [bp + 16], a1190
 26:	
 
 putc$6:	; Call 10 printChar 0
@@ -38,14 +38,14 @@ putc$7:	; PostCall 10
 34:	
 
 putc$8:	; SetReturnValue 1
-35:		mov a1188, 1
+35:		mov a1191, 1
 37:	
 
 putc$9:	; Return 1
-38:		mov t1189, [bp]
+38:		mov t1192, [bp]
 39:		mov di, [bp + 4]
 40:		mov bp, [bp + 2]
-41:		jmp t1189
+41:		jmp t1192
 43:	
 
 putc$10:	; FunctionEnd putc
@@ -55,27 +55,27 @@ fputc:	; Assign g_outStatus 0
 2:		mov word [g_outStatus], 0
 4:	
 
-fputc$1:	; IntegralToIntegral £temporary1766 stream
-5:		mov a1190, [bp + 8]
+fputc$1:	; IntegralToIntegral £temporary1747 stream
+5:		mov a1193, [bp + 8]
 8:	
 
-fputc$2:	; Assign g_outDevice £temporary1766
-9:		mov [g_outDevice], a1190
+fputc$2:	; Assign g_outDevice £temporary1747
+9:		mov [g_outDevice], a1193
 11:	
 
 fputc$3:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 13:	
 
-fputc$4:	; IntegralToIntegral £temporary1767 i
-14:		mov a1191, [bp + 6]
-17:		cmp a1191, 0
+fputc$4:	; IntegralToIntegral £temporary1748 i
+14:		mov a1194, [bp + 6]
+17:		cmp a1194, 0
 18:		jge fputc$5
-19:		neg a1191
-21:		neg a1191
+19:		neg a1194
+21:		neg a1194
 23:	
 
-fputc$5:	; Parameter 10 £temporary1767 6
-24:		mov [bp + 16], a1191
+fputc$5:	; Parameter 10 £temporary1748 6
+24:		mov [bp + 16], a1194
 26:	
 
 fputc$6:	; Call 10 printChar 0
@@ -89,14 +89,14 @@ fputc$7:	; PostCall 10
 34:	
 
 fputc$8:	; SetReturnValue 1
-35:		mov a1192, 1
+35:		mov a1195, 1
 37:	
 
 fputc$9:	; Return 1
-38:		mov t1193, [bp]
+38:		mov t1196, [bp]
 39:		mov di, [bp + 4]
 40:		mov bp, [bp + 2]
-41:		jmp t1193
+41:		jmp t1196
 43:	
 
 fputc$10:	; FunctionEnd fputc
@@ -106,27 +106,27 @@ putchar:	; Assign g_outStatus 0
 2:		mov word [g_outStatus], 0
 4:	
 
-putchar$1:	; IntegralToIntegral £temporary1770 stdout
-5:		mov a1194, [stdout]
+putchar$1:	; IntegralToIntegral £temporary1751 stdout
+5:		mov a1197, [stdout]
 8:	
 
-putchar$2:	; Assign g_outDevice £temporary1770
-9:		mov [g_outDevice], a1194
+putchar$2:	; Assign g_outDevice £temporary1751
+9:		mov [g_outDevice], a1197
 11:	
 
 putchar$3:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 13:	
 
-putchar$4:	; IntegralToIntegral £temporary1771 i
-14:		mov a1195, [bp + 6]
-17:		cmp a1195, 0
+putchar$4:	; IntegralToIntegral £temporary1752 i
+14:		mov a1198, [bp + 6]
+17:		cmp a1198, 0
 18:		jge putchar$5
-19:		neg a1195
-21:		neg a1195
+19:		neg a1198
+21:		neg a1198
 23:	
 
-putchar$5:	; Parameter 8 £temporary1771 6
-24:		mov [bp + 14], a1195
+putchar$5:	; Parameter 8 £temporary1752 6
+24:		mov [bp + 14], a1198
 26:	
 
 putchar$6:	; Call 8 printChar 0
@@ -140,32 +140,32 @@ putchar$7:	; PostCall 8
 34:	
 
 putchar$8:	; SetReturnValue 1
-35:		mov a1196, 1
+35:		mov a1199, 1
 37:	
 
 putchar$9:	; Return 1
-38:		mov t1197, [bp]
+38:		mov t1200, [bp]
 39:		mov di, [bp + 4]
 40:		mov bp, [bp + 2]
-41:		jmp t1197
+41:		jmp t1200
 43:	
 
 putchar$10:	; FunctionEnd putchar
 1:	
 
 printChar:	; Case 5 g_outStatus 0
-2:		mov a1198, [g_outStatus]
-3:		cmp a1198, 0
+2:		mov a1201, [g_outStatus]
+3:		cmp a1201, 0
 4:		je printChar$5
 6:	
 
 printChar$1:	; Case 16 g_outStatus 1
-7:		cmp a1198, 1
+7:		cmp a1201, 1
 8:		je printChar$16
 10:	
 
 printChar$2:	; Case 24 g_outStatus 2
-11:		cmp a1198, 2
+11:		cmp a1201, 2
 12:		je printChar$24
 14:	
 
@@ -176,36 +176,36 @@ printChar$4:	; Goto 25
 17:		jmp printChar$25
 19:	
 
-printChar$5:	; IntegralToIntegral £temporary1774 g_outDevice
-20:		mov a1199, [g_outDevice]
+printChar$5:	; IntegralToIntegral £temporary1755 g_outDevice
+20:		mov a1202, [g_outDevice]
 23:	
 
-printChar$6:	; Assign stream £temporary1774
-24:		mov [bp + 11], a1199
+printChar$6:	; Assign stream £temporary1755
+24:		mov [bp + 11], a1202
 26:	
 
 printChar$7:	; AssignRegister ah 64
-27:		mov a1200, 64
+27:		mov a1203, 64
 29:	
 
-printChar$8:	; Deref £temporary1777 -> stream stream 2
-30:		mov a1201, [bp + 11]
+printChar$8:	; Deref £temporary1758 -> stream stream 2
+30:		mov a1204, [bp + 11]
 32:	
 
-printChar$9:	; AssignRegister bx £temporary1777 -> stream
-33:		mov t1202, [a1201 + 2]
+printChar$9:	; AssignRegister bx £temporary1758 -> stream
+33:		mov t1205, [a1204 + 2]
 35:	
 
 printChar$10:	; AssignRegister cx 1
-36:		mov a1203, 1
+36:		mov a1206, 1
 38:	
 
-printChar$11:	; address £temporary1780 c
-39:		mov t1204, bp
-40:		add t1204, 6
+printChar$11:	; address £temporary1761 c
+39:		mov t1207, bp
+40:		add t1207, 6
 42:	
 
-printChar$12:	; AssignRegister dx £temporary1780
+printChar$12:	; AssignRegister dx £temporary1761
 44:	
 
 printChar$13:	; Interrupt 33
@@ -220,33 +220,33 @@ printChar$15:	; Goto 25
 51:		jmp printChar$25
 53:	
 
-printChar$16:	; IntegralToIntegral £temporary1782 g_outDevice
-54:		mov a1205, [g_outDevice]
+printChar$16:	; IntegralToIntegral £temporary1763 g_outDevice
+54:		mov a1208, [g_outDevice]
 57:	
 
-printChar$17:	; Assign outString £temporary1782
-58:		mov [bp + 9], a1205
+printChar$17:	; Assign outString £temporary1763
+58:		mov [bp + 9], a1208
 60:	
 
-printChar$18:	; Assign £temporary1783 g_outChars
-61:		mov t1206, [g_outChars]
+printChar$18:	; Assign £temporary1764 g_outChars
+61:		mov t1209, [g_outChars]
 63:	
 
 printChar$19:	; Increment g_outChars
 64:		inc word [g_outChars]
 66:	
 
-printChar$20:	; BinaryAdd £temporary1785 outString £temporary1783
-67:		mov a1207, [bp + 9]
-68:		add a1207, t1206
+printChar$20:	; BinaryAdd £temporary1766 outString £temporary1764
+67:		mov a1210, [bp + 9]
+68:		add a1210, t1209
 70:	
 
-printChar$21:	; Deref £temporary1784 -> £temporary1785 £temporary1785 0
+printChar$21:	; Deref £temporary1765 -> £temporary1766 £temporary1766 0
 72:	
 
-printChar$22:	; Assign £temporary1784 -> £temporary1785 c
-73:		mov a1208, [bp + 6]
-74:		mov [a1207], a1208
+printChar$22:	; Assign £temporary1765 -> £temporary1766 c
+73:		mov a1211, [bp + 6]
+74:		mov [a1210], a1211
 76:	
 
 printChar$23:	; Goto 25
@@ -258,10 +258,10 @@ printChar$24:	; Increment g_outChars
 82:	
 
 printChar$25:	; Return 0
-83:		mov t1209, [bp]
+83:		mov t1212, [bp]
 84:		mov di, [bp + 4]
 85:		mov bp, [bp + 2]
-86:		jmp t1209
+86:		jmp t1212
 88:	
 
 printChar$26:	; FunctionEnd printChar
@@ -281,33 +281,33 @@ printString$2:	; Assign index 0
 10:		mov word [bp + 10], 0
 12:	
 
-printString$3:	; BinaryAdd £temporary1791 s index
-13:		mov a1210, [bp + 6]
-14:		add a1210, [bp + 10]
+printString$3:	; BinaryAdd £temporary1772 s index
+13:		mov a1213, [bp + 6]
+14:		add a1213, [bp + 10]
 16:	
 
-printString$4:	; Deref £temporary1790 -> £temporary1791 £temporary1791 0
+printString$4:	; Deref £temporary1771 -> £temporary1772 £temporary1772 0
 18:	
 
-printString$5:	; Equal 53 £temporary1790 -> £temporary1791 0
-19:		cmp byte [a1210], 0
+printString$5:	; Equal 53 £temporary1771 -> £temporary1772 0
+19:		cmp byte [a1213], 0
 20:		je printString$53
 22:	
 
 printString$6:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 24:	
 
-printString$7:	; BinaryAdd £temporary1795 s index
-25:		mov a1211, [bp + 6]
-26:		add a1211, [bp + 10]
+printString$7:	; BinaryAdd £temporary1776 s index
+25:		mov a1214, [bp + 6]
+26:		add a1214, [bp + 10]
 28:	
 
-printString$8:	; Deref £temporary1794 -> £temporary1795 £temporary1795 0
+printString$8:	; Deref £temporary1775 -> £temporary1776 £temporary1776 0
 30:	
 
-printString$9:	; Parameter 12 £temporary1794 -> £temporary1795 6
-31:		mov t1212, [a1211]
-32:		mov [bp + 18], t1212
+printString$9:	; Parameter 12 £temporary1775 -> £temporary1776 6
+31:		mov t1215, [a1214]
+32:		mov [bp + 18], t1215
 34:	
 
 printString$10:	; Call 12 printChar 0
@@ -332,46 +332,46 @@ printString$14:	; Assign index 0
 49:		mov word [bp + 10], 0
 51:	
 
-printString$15:	; Assign £temporary1797 precision
-52:		mov t1213, [bp + 8]
+printString$15:	; Assign £temporary1778 precision
+52:		mov t1216, [bp + 8]
 54:	
 
 printString$16:	; Decrement precision
 55:		dec word [bp + 8]
 57:	
 
-printString$17:	; SignedLessThanEqual 53 £temporary1797 0
-58:		cmp t1213, 0
+printString$17:	; SignedLessThanEqual 53 £temporary1778 0
+58:		cmp t1216, 0
 59:		jle printString$53
 61:	
 
-printString$18:	; BinaryAdd £temporary1800 s index
-62:		mov a1214, [bp + 6]
-63:		add a1214, [bp + 10]
+printString$18:	; BinaryAdd £temporary1781 s index
+62:		mov a1217, [bp + 6]
+63:		add a1217, [bp + 10]
 65:	
 
-printString$19:	; Deref £temporary1799 -> £temporary1800 £temporary1800 0
+printString$19:	; Deref £temporary1780 -> £temporary1781 £temporary1781 0
 67:	
 
-printString$20:	; Equal 53 £temporary1799 -> £temporary1800 0
-68:		cmp byte [a1214], 0
+printString$20:	; Equal 53 £temporary1780 -> £temporary1781 0
+68:		cmp byte [a1217], 0
 69:		je printString$53
 71:	
 
 printString$21:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 73:	
 
-printString$22:	; BinaryAdd £temporary1805 s index
-74:		mov a1215, [bp + 6]
-75:		add a1215, [bp + 10]
+printString$22:	; BinaryAdd £temporary1786 s index
+74:		mov a1218, [bp + 6]
+75:		add a1218, [bp + 10]
 77:	
 
-printString$23:	; Deref £temporary1804 -> £temporary1805 £temporary1805 0
+printString$23:	; Deref £temporary1785 -> £temporary1786 £temporary1786 0
 79:	
 
-printString$24:	; Parameter 12 £temporary1804 -> £temporary1805 6
-80:		mov t1216, [a1215]
-81:		mov [bp + 18], t1216
+printString$24:	; Parameter 12 £temporary1785 -> £temporary1786 6
+80:		mov t1219, [a1218]
+81:		mov [bp + 18], t1219
 83:	
 
 printString$25:	; Call 12 printChar 0
@@ -495,10 +495,10 @@ printString$52:	; PostCall 10
 175:	
 
 printString$53:	; Return 0
-176:		mov t1217, [bp]
+176:		mov t1220, [bp]
 177:		mov di, [bp + 4]
 178:		mov bp, [bp + 2]
-179:		jmp t1217
+179:		jmp t1220
 181:	
 
 printString$54:	; FunctionEnd printString
@@ -509,34 +509,34 @@ printLongIntRec:	; Equal 15 longValue 0
 3:		je printLongIntRec$15
 5:	
 
-printLongIntRec$1:	; SignedModulo £temporary1822 longValue 10
-6:		mov a1218, [bp + 6]
+printLongIntRec$1:	; SignedModulo £temporary1803 longValue 10
+6:		mov a1221, [bp + 6]
 8:		xor edx, edx
 9:		idiv dword [int4$10#]
 15:	
 
-printLongIntRec$2:	; IntegralToIntegral £temporary1823 £temporary1822
-18:		cmp t1220, 0
+printLongIntRec$2:	; IntegralToIntegral £temporary1804 £temporary1803
+18:		cmp t1223, 0
 19:		jge printLongIntRec$3
-20:		neg t1220
-22:		neg t1220
+20:		neg t1223
+22:		neg t1223
 24:	
 
-printLongIntRec$3:	; Assign digit £temporary1823
-25:		mov [bp + 10], t1220
+printLongIntRec$3:	; Assign digit £temporary1804
+25:		mov [bp + 10], t1223
 27:	
 
 printLongIntRec$4:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 29:	
 
-printLongIntRec$5:	; SignedDivide £temporary1824 longValue 10
-30:		mov a1221, [bp + 6]
+printLongIntRec$5:	; SignedDivide £temporary1805 longValue 10
+30:		mov a1224, [bp + 6]
 32:		xor edx, edx
 33:		idiv dword [int4$10#]
 39:	
 
-printLongIntRec$6:	; Parameter 12 £temporary1824 6
-40:		mov [bp + 18], t1224
+printLongIntRec$6:	; Parameter 12 £temporary1805 6
+40:		mov [bp + 18], t1227
 42:	
 
 printLongIntRec$7:	; Call 12 printLongIntRec 0
@@ -552,20 +552,20 @@ printLongIntRec$8:	; PostCall 12
 printLongIntRec$9:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 52:	
 
-printLongIntRec$10:	; BinaryAdd £temporary1826 digit 48
-53:		mov a1225, [bp + 10]
-54:		add a1225, 48
+printLongIntRec$10:	; BinaryAdd £temporary1807 digit 48
+53:		mov a1228, [bp + 10]
+54:		add a1228, 48
 56:	
 
-printLongIntRec$11:	; IntegralToIntegral £temporary1827 £temporary1826
-59:		cmp a1225, 0
+printLongIntRec$11:	; IntegralToIntegral £temporary1808 £temporary1807
+59:		cmp a1228, 0
 60:		jge printLongIntRec$12
-61:		neg a1225
-63:		neg a1225
+61:		neg a1228
+63:		neg a1228
 65:	
 
-printLongIntRec$12:	; Parameter 12 £temporary1827 6
-66:		mov [bp + 18], a1225
+printLongIntRec$12:	; Parameter 12 £temporary1808 6
+66:		mov [bp + 18], a1228
 68:	
 
 printLongIntRec$13:	; Call 12 printChar 0
@@ -579,10 +579,10 @@ printLongIntRec$14:	; PostCall 12
 76:	
 
 printLongIntRec$15:	; Return 0
-77:		mov t1226, [bp]
+77:		mov t1229, [bp]
 78:		mov di, [bp + 4]
 79:		mov bp, [bp + 2]
-80:		jmp t1226
+80:		jmp t1229
 82:	
 
 printLongIntRec$16:	; FunctionEnd printLongIntRec
@@ -593,13 +593,13 @@ printLongInt:	; SignedGreaterThanEqual 8 longValue 0
 3:		jge printLongInt$8
 5:	
 
-printLongInt$1:	; UnarySubtract £temporary1832 longValue
-6:		mov a1227, [bp + 6]
-7:		neg a1227
+printLongInt$1:	; UnarySubtract £temporary1813 longValue
+6:		mov a1230, [bp + 6]
+7:		neg a1230
 9:	
 
-printLongInt$2:	; Assign longValue £temporary1832
-10:		mov [bp + 6], a1227
+printLongInt$2:	; Assign longValue £temporary1813
+10:		mov [bp + 6], a1230
 12:	
 
 printLongInt$3:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -701,8 +701,8 @@ printLongInt$25:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.
 87:	
 
 printLongInt$26:	; Parameter 14 longValue 6
-88:		mov a1228, [bp + 6]
-89:		mov [bp + 20], a1228
+88:		mov a1231, [bp + 6]
+89:		mov [bp + 20], a1231
 91:	
 
 printLongInt$27:	; Call 14 printLongIntRec 0
@@ -716,10 +716,10 @@ printLongInt$28:	; PostCall 14
 99:	
 
 printLongInt$29:	; Return 0
-100:		mov t1229, [bp]
+100:		mov t1232, [bp]
 101:		mov di, [bp + 4]
 102:		mov bp, [bp + 2]
-103:		jmp t1229
+103:		jmp t1232
 105:	
 
 printLongInt$30:	; FunctionEnd printLongInt
@@ -730,26 +730,26 @@ digitToChar:	; SignedGreaterThanEqual 5 digit 10
 3:		jge digitToChar$5
 5:	
 
-digitToChar$1:	; BinaryAdd £temporary1847 digit 48
-6:		mov a1230, [bp + 6]
-7:		add a1230, 48
+digitToChar$1:	; BinaryAdd £temporary1828 digit 48
+6:		mov a1233, [bp + 6]
+7:		add a1233, 48
 9:	
 
-digitToChar$2:	; IntegralToIntegral £temporary1848 £temporary1847
-12:		cmp a1230, 0
+digitToChar$2:	; IntegralToIntegral £temporary1829 £temporary1828
+12:		cmp a1233, 0
 13:		jge digitToChar$3
-14:		neg a1230
-16:		neg a1230
+14:		neg a1233
+16:		neg a1233
 18:	
 
-digitToChar$3:	; SetReturnValue £temporary1848
+digitToChar$3:	; SetReturnValue £temporary1829
 20:	
 
-digitToChar$4:	; Return £temporary1848
-21:		mov t1231, [bp]
+digitToChar$4:	; Return £temporary1829
+21:		mov t1234, [bp]
 22:		mov di, [bp + 4]
 23:		mov bp, [bp + 2]
-24:		jmp t1231
+24:		jmp t1234
 26:	
 
 digitToChar$5:	; Equal 11 capital 0
@@ -757,56 +757,56 @@ digitToChar$5:	; Equal 11 capital 0
 28:		je digitToChar$11
 30:	
 
-digitToChar$6:	; BinarySubtract £temporary1849 digit 10
-31:		mov a1232, [bp + 6]
-32:		sub a1232, 10
+digitToChar$6:	; BinarySubtract £temporary1830 digit 10
+31:		mov a1235, [bp + 6]
+32:		sub a1235, 10
 34:	
 
-digitToChar$7:	; BinaryAdd £temporary1850 £temporary1849 65
-35:		add a1232, 65
+digitToChar$7:	; BinaryAdd £temporary1831 £temporary1830 65
+35:		add a1235, 65
 37:	
 
-digitToChar$8:	; IntegralToIntegral £temporary1851 £temporary1850
-40:		cmp a1232, 0
+digitToChar$8:	; IntegralToIntegral £temporary1832 £temporary1831
+40:		cmp a1235, 0
 41:		jge digitToChar$9
-42:		neg a1232
-44:		neg a1232
+42:		neg a1235
+44:		neg a1235
 46:	
 
-digitToChar$9:	; SetReturnValue £temporary1851
+digitToChar$9:	; SetReturnValue £temporary1832
 48:	
 
-digitToChar$10:	; Return £temporary1851
-49:		mov t1233, [bp]
+digitToChar$10:	; Return £temporary1832
+49:		mov t1236, [bp]
 50:		mov di, [bp + 4]
 51:		mov bp, [bp + 2]
-52:		jmp t1233
+52:		jmp t1236
 54:	
 
-digitToChar$11:	; BinarySubtract £temporary1852 digit 10
-55:		mov a1234, [bp + 6]
-56:		sub a1234, 10
+digitToChar$11:	; BinarySubtract £temporary1833 digit 10
+55:		mov a1237, [bp + 6]
+56:		sub a1237, 10
 58:	
 
-digitToChar$12:	; BinaryAdd £temporary1853 £temporary1852 97
-59:		add a1234, 97
+digitToChar$12:	; BinaryAdd £temporary1834 £temporary1833 97
+59:		add a1237, 97
 61:	
 
-digitToChar$13:	; IntegralToIntegral £temporary1854 £temporary1853
-64:		cmp a1234, 0
+digitToChar$13:	; IntegralToIntegral £temporary1835 £temporary1834
+64:		cmp a1237, 0
 65:		jge digitToChar$14
-66:		neg a1234
-68:		neg a1234
+66:		neg a1237
+68:		neg a1237
 70:	
 
-digitToChar$14:	; SetReturnValue £temporary1854
+digitToChar$14:	; SetReturnValue £temporary1835
 72:	
 
-digitToChar$15:	; Return £temporary1854
-73:		mov t1235, [bp]
+digitToChar$15:	; Return £temporary1835
+73:		mov t1238, [bp]
 74:		mov di, [bp + 4]
 75:		mov bp, [bp + 2]
-76:		jmp t1235
+76:		jmp t1238
 78:	
 
 digitToChar$16:	; FunctionEnd digitToChar
@@ -817,40 +817,40 @@ printUnsignedLongRec:	; UnsignedLessThanEqual 22 unsignedValue 0
 3:		jbe printUnsignedLongRec$22
 5:	
 
-printUnsignedLongRec$1:	; UnsignedModulo £temporary1857 unsignedValue base
-6:		mov a1236, [bp + 6]
+printUnsignedLongRec$1:	; UnsignedModulo £temporary1838 unsignedValue base
+6:		mov a1239, [bp + 6]
 8:		xor edx, edx
 9:		div dword [bp + 10]
 15:	
 
-printUnsignedLongRec$2:	; IntegralToIntegral £temporary1858 £temporary1857
+printUnsignedLongRec$2:	; IntegralToIntegral £temporary1839 £temporary1838
 18:	
 
-printUnsignedLongRec$3:	; Assign digit £temporary1858
-19:		mov [bp + 16], t1238
+printUnsignedLongRec$3:	; Assign digit £temporary1839
+19:		mov [bp + 16], t1241
 21:	
 
 printUnsignedLongRec$4:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 23:	
 
-printUnsignedLongRec$5:	; UnsignedDivide £temporary1859 unsignedValue base
-24:		mov a1239, [bp + 6]
+printUnsignedLongRec$5:	; UnsignedDivide £temporary1840 unsignedValue base
+24:		mov a1242, [bp + 6]
 26:		xor edx, edx
 27:		div dword [bp + 10]
 33:	
 
-printUnsignedLongRec$6:	; Parameter 18 £temporary1859 6
-34:		mov [bp + 24], t1242
+printUnsignedLongRec$6:	; Parameter 18 £temporary1840 6
+34:		mov [bp + 24], t1245
 36:	
 
 printUnsignedLongRec$7:	; Parameter 18 base 10
-37:		mov a1243, [bp + 10]
-38:		mov [bp + 28], a1243
+37:		mov a1246, [bp + 10]
+38:		mov [bp + 28], a1246
 40:	
 
 printUnsignedLongRec$8:	; Parameter 18 capital 14
-41:		mov a1244, [bp + 14]
-42:		mov [bp + 32], a1244
+41:		mov a1247, [bp + 14]
+42:		mov [bp + 32], a1247
 44:	
 
 printUnsignedLongRec$9:	; Call 18 printUnsignedLongRec 0
@@ -867,13 +867,13 @@ printUnsignedLongRec$11:	; CallHeader 18 System.Collections.Generic.HashSet`1[CC
 54:	
 
 printUnsignedLongRec$12:	; Parameter 18 digit 6
-55:		mov a1245, [bp + 16]
-56:		mov [bp + 24], a1245
+55:		mov a1248, [bp + 16]
+56:		mov [bp + 24], a1248
 58:	
 
 printUnsignedLongRec$13:	; Parameter 18 capital 8
-59:		mov a1246, [bp + 14]
-60:		mov [bp + 26], a1246
+59:		mov a1249, [bp + 14]
+60:		mov [bp + 26], a1249
 62:	
 
 printUnsignedLongRec$14:	; Call 18 digitToChar 0
@@ -886,19 +886,19 @@ printUnsignedLongRec$14:	; Call 18 digitToChar 0
 printUnsignedLongRec$15:	; PostCall 18
 70:	
 
-printUnsignedLongRec$16:	; GetReturnValue £temporary1861
+printUnsignedLongRec$16:	; GetReturnValue £temporary1842
 75:	
 
-printUnsignedLongRec$17:	; Assign c £temporary1861
-76:		mov [bp + 18], t1248
+printUnsignedLongRec$17:	; Assign c £temporary1842
+76:		mov [bp + 18], t1251
 78:	
 
 printUnsignedLongRec$18:	; CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 80:	
 
 printUnsignedLongRec$19:	; Parameter 19 c 6
-81:		mov a1249, [bp + 18]
-82:		mov [bp + 25], a1249
+81:		mov a1252, [bp + 18]
+82:		mov [bp + 25], a1252
 84:	
 
 printUnsignedLongRec$20:	; Call 19 printChar 0
@@ -912,10 +912,10 @@ printUnsignedLongRec$21:	; PostCall 19
 92:	
 
 printUnsignedLongRec$22:	; Return 0
-93:		mov t1250, [bp]
+93:		mov t1253, [bp]
 94:		mov di, [bp + 4]
 95:		mov bp, [bp + 2]
-96:		jmp t1250
+96:		jmp t1253
 98:	
 
 printUnsignedLongRec$23:	; FunctionEnd printUnsignedLongRec
@@ -1022,20 +1022,20 @@ printUnsignedLong$22:	; Equal 25 capital 0
 77:		je printUnsignedLong$25
 79:	
 
-printUnsignedLong$23:	; Assign £temporary1881 88
-80:		mov t1251, 88
+printUnsignedLong$23:	; Assign £temporary1862 88
+80:		mov t1254, 88
 82:	
 
 printUnsignedLong$24:	; Goto 26
 83:		jmp printUnsignedLong$26
 85:	
 
-printUnsignedLong$25:	; Assign £temporary1881 120
-86:		mov t1252, 120
+printUnsignedLong$25:	; Assign £temporary1862 120
+86:		mov t1255, 120
 88:	
 
-printUnsignedLong$26:	; Parameter 22 £temporary1881 6
-89:		mov [bp + 28], t1252
+printUnsignedLong$26:	; Parameter 22 £temporary1862 6
+89:		mov [bp + 28], t1255
 91:	
 
 printUnsignedLong$27:	; Call 22 printChar 0
@@ -1078,18 +1078,18 @@ printUnsignedLong$35:	; CallHeader 22 System.Collections.Generic.HashSet`1[CComp
 121:	
 
 printUnsignedLong$36:	; Parameter 22 unsignedValue 6
-122:		mov a1253, [bp + 6]
-123:		mov [bp + 28], a1253
+122:		mov a1256, [bp + 6]
+123:		mov [bp + 28], a1256
 125:	
 
 printUnsignedLong$37:	; Parameter 22 base 10
-126:		mov a1254, [bp + 16]
-127:		mov [bp + 32], a1254
+126:		mov a1257, [bp + 16]
+127:		mov [bp + 32], a1257
 129:	
 
 printUnsignedLong$38:	; Parameter 22 capital 14
-130:		mov a1255, [bp + 20]
-131:		mov [bp + 36], a1255
+130:		mov a1258, [bp + 20]
+131:		mov [bp + 36], a1258
 133:	
 
 printUnsignedLong$39:	; Call 22 printUnsignedLongRec 0
@@ -1103,10 +1103,10 @@ printUnsignedLong$40:	; PostCall 22
 141:	
 
 printUnsignedLong$41:	; Return 0
-142:		mov t1256, [bp]
+142:		mov t1259, [bp]
 143:		mov di, [bp + 4]
 144:		mov bp, [bp + 2]
-145:		jmp t1256
+145:		jmp t1259
 147:	
 
 printUnsignedLong$42:	; FunctionEnd printUnsignedLong
@@ -1120,17 +1120,17 @@ printLongDoubleFraction$1:	; PushFloat longDoubleValue
 5:		fld qword [bp + 6]
 7:	
 
-printLongDoubleFraction$2:	; FloatingToIntegral £temporary1896 longDoubleValue
+printLongDoubleFraction$2:	; FloatingToIntegral £temporary1877 longDoubleValue
 8:		fistp dword [container4bytes#]
-9:		mov t1257, [container4bytes#]
+9:		mov t1260, [container4bytes#]
 11:	
 
-printLongDoubleFraction$3:	; IntegralToFloating £temporary1897 £temporary1896
-12:		mov [container4bytes#], t1257
+printLongDoubleFraction$3:	; IntegralToFloating £temporary1878 £temporary1877
+12:		mov [container4bytes#], t1260
 13:		fild dword [container4bytes#]
 15:	
 
-printLongDoubleFraction$4:	; BinarySubtract £temporary1898 longDoubleValue £temporary1897
+printLongDoubleFraction$4:	; BinarySubtract £temporary1879 longDoubleValue £temporary1878
 16:		fsub
 18:	
 
@@ -1174,16 +1174,16 @@ printLongDoubleFraction$12:	; Call 18 printChar 0
 printLongDoubleFraction$13:	; PostCall 18
 49:	
 
-printLongDoubleFraction$14:	; Assign £temporary1904 precision
-50:		mov t1258, [bp + 16]
+printLongDoubleFraction$14:	; Assign £temporary1885 precision
+50:		mov t1261, [bp + 16]
 52:	
 
 printLongDoubleFraction$15:	; Decrement precision
 53:		dec word [bp + 16]
 55:	
 
-printLongDoubleFraction$16:	; SignedLessThanEqual 35 £temporary1904 0
-56:		cmp t1258, 0
+printLongDoubleFraction$16:	; SignedLessThanEqual 35 £temporary1885 0
+56:		cmp t1261, 0
 57:		jle printLongDoubleFraction$35
 59:	
 
@@ -1195,7 +1195,7 @@ printLongDoubleFraction$18:	; PushFloat longDoubleValue
 63:		fld qword [bp + 6]
 65:	
 
-printLongDoubleFraction$19:	; SignedMultiply £temporary1906 10.0 longDoubleValue
+printLongDoubleFraction$19:	; SignedMultiply £temporary1887 10.0 longDoubleValue
 66:		fmul
 68:	
 
@@ -1207,32 +1207,32 @@ printLongDoubleFraction$21:	; PushFloat longDoubleValue10
 72:		fld qword [bp + 18]
 74:	
 
-printLongDoubleFraction$22:	; FloatingToIntegral £temporary1907 longDoubleValue10
+printLongDoubleFraction$22:	; FloatingToIntegral £temporary1888 longDoubleValue10
 75:		fistp word [container2bytes#]
-76:		mov t1259, [container2bytes#]
+76:		mov t1262, [container2bytes#]
 78:	
 
-printLongDoubleFraction$23:	; Assign digitValue £temporary1907
-79:		mov [bp + 26], t1259
+printLongDoubleFraction$23:	; Assign digitValue £temporary1888
+79:		mov [bp + 26], t1262
 81:	
 
 printLongDoubleFraction$24:	; CallHeader 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 83:	
 
-printLongDoubleFraction$25:	; BinaryAdd £temporary1908 digitValue 48
-84:		mov a1260, [bp + 26]
-85:		add a1260, 48
+printLongDoubleFraction$25:	; BinaryAdd £temporary1889 digitValue 48
+84:		mov a1263, [bp + 26]
+85:		add a1263, 48
 87:	
 
-printLongDoubleFraction$26:	; IntegralToIntegral £temporary1909 £temporary1908
-90:		cmp a1260, 0
+printLongDoubleFraction$26:	; IntegralToIntegral £temporary1890 £temporary1889
+90:		cmp a1263, 0
 91:		jge printLongDoubleFraction$27
-92:		neg a1260
-94:		neg a1260
+92:		neg a1263
+94:		neg a1263
 96:	
 
-printLongDoubleFraction$27:	; Parameter 28 £temporary1909 6
-97:		mov [bp + 34], a1260
+printLongDoubleFraction$27:	; Parameter 28 £temporary1890 6
+97:		mov [bp + 34], a1263
 99:	
 
 printLongDoubleFraction$28:	; Call 28 printChar 0
@@ -1249,11 +1249,11 @@ printLongDoubleFraction$30:	; PushFloat longDoubleValue10
 108:		fld qword [bp + 18]
 110:	
 
-printLongDoubleFraction$31:	; IntegralToFloating £temporary1911 digitValue
+printLongDoubleFraction$31:	; IntegralToFloating £temporary1892 digitValue
 111:		fild word [bp + 26]
 113:	
 
-printLongDoubleFraction$32:	; BinarySubtract £temporary1912 longDoubleValue10 £temporary1911
+printLongDoubleFraction$32:	; BinarySubtract £temporary1893 longDoubleValue10 £temporary1892
 114:		fsub
 116:	
 
@@ -1266,10 +1266,10 @@ printLongDoubleFraction$34:	; Goto 14
 122:	
 
 printLongDoubleFraction$35:	; Return 0
-123:		mov t1261, [bp]
+123:		mov t1264, [bp]
 124:		mov di, [bp + 4]
 125:		mov bp, [bp + 2]
-126:		jmp t1261
+126:		jmp t1264
 128:	
 
 printLongDoubleFraction$36:	; FunctionEnd printLongDoubleFraction
@@ -1311,7 +1311,7 @@ printLongDoublePlain$7:	; PushFloat longDoubleValue
 27:		fld qword [bp + 6]
 29:	
 
-printLongDoublePlain$8:	; UnarySubtract £temporary1917 longDoubleValue
+printLongDoublePlain$8:	; UnarySubtract £temporary1898 longDoubleValue
 30:		fchs
 32:	
 
@@ -1331,31 +1331,31 @@ printLongDoublePlain$12:	; PushFloat longDoubleValue
 42:		fld qword [bp + 6]
 44:	
 
-printLongDoublePlain$13:	; FloatingToIntegral £temporary1918 longDoubleValue
+printLongDoublePlain$13:	; FloatingToIntegral £temporary1899 longDoubleValue
 45:		fistp dword [container4bytes#]
-46:		mov t1262, [container4bytes#]
+46:		mov t1265, [container4bytes#]
 48:	
 
-printLongDoublePlain$14:	; Assign longValue £temporary1918
-49:		mov [bp + 22], t1262
+printLongDoublePlain$14:	; Assign longValue £temporary1899
+49:		mov [bp + 22], t1265
 51:	
 
 printLongDoublePlain$15:	; CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 53:	
 
 printLongDoublePlain$16:	; Parameter 26 longValue 6
-54:		mov a1263, [bp + 22]
-55:		mov [bp + 32], a1263
+54:		mov a1266, [bp + 22]
+55:		mov [bp + 32], a1266
 57:	
 
 printLongDoublePlain$17:	; Parameter 26 plus 10
-58:		mov a1264, [bp + 14]
-59:		mov [bp + 36], a1264
+58:		mov a1267, [bp + 14]
+59:		mov [bp + 36], a1267
 61:	
 
 printLongDoublePlain$18:	; Parameter 26 space 12
-62:		mov a1265, [bp + 16]
-63:		mov [bp + 38], a1265
+62:		mov a1268, [bp + 16]
+63:		mov [bp + 38], a1268
 65:	
 
 printLongDoublePlain$19:	; Call 26 printLongInt 0
@@ -1372,11 +1372,11 @@ printLongDoublePlain$21:	; PushFloat longDoubleValue
 74:		fld qword [bp + 6]
 76:	
 
-printLongDoublePlain$22:	; IntegralToFloating £temporary1920 longValue
+printLongDoublePlain$22:	; IntegralToFloating £temporary1901 longValue
 77:		fild dword [bp + 22]
 79:	
 
-printLongDoublePlain$23:	; BinarySubtract £temporary1921 longDoubleValue £temporary1920
+printLongDoublePlain$23:	; BinarySubtract £temporary1902 longDoubleValue £temporary1901
 80:		fsub
 82:	
 
@@ -1396,13 +1396,13 @@ printLongDoublePlain$27:	; Parameter 26 longDoubleValue 6
 93:	
 
 printLongDoublePlain$28:	; Parameter 26 grid 14
-94:		mov a1266, [bp + 18]
-95:		mov [bp + 40], a1266
+94:		mov a1269, [bp + 18]
+95:		mov [bp + 40], a1269
 97:	
 
 printLongDoublePlain$29:	; Parameter 26 precision 16
-98:		mov a1267, [bp + 20]
-99:		mov [bp + 42], a1267
+98:		mov a1270, [bp + 20]
+99:		mov [bp + 42], a1270
 101:	
 
 printLongDoublePlain$30:	; Call 26 printLongDoubleFraction 0
@@ -1416,10 +1416,10 @@ printLongDoublePlain$31:	; PostCall 26
 109:	
 
 printLongDoublePlain$32:	; Return 0
-110:		mov t1268, [bp]
+110:		mov t1271, [bp]
 111:		mov di, [bp + 4]
 112:		mov bp, [bp + 2]
-113:		jmp t1268
+113:		jmp t1271
 115:	
 
 printLongDoublePlain$33:	; FunctionEnd printLongDoublePlain
@@ -1469,13 +1469,13 @@ printLongDoubleExpo$9:	; Parameter 24 0.0 6
 34:	
 
 printLongDoubleExpo$10:	; Parameter 24 precision 14
-35:		mov a1269, [bp + 20]
-36:		mov [bp + 38], a1269
+35:		mov a1272, [bp + 20]
+36:		mov [bp + 38], a1272
 38:	
 
 printLongDoubleExpo$11:	; Parameter 24 grid 16
-39:		mov a1270, [bp + 18]
-40:		mov [bp + 40], a1270
+39:		mov a1273, [bp + 18]
+40:		mov [bp + 40], a1273
 42:	
 
 printLongDoubleExpo$12:	; Call 24 printLongDoubleFraction 0
@@ -1496,20 +1496,20 @@ printLongDoubleExpo$15:	; Equal 18 capital 0
 54:		je printLongDoubleExpo$18
 56:	
 
-printLongDoubleExpo$16:	; Assign £temporary1937 69
-57:		mov t1271, 69
+printLongDoubleExpo$16:	; Assign £temporary1918 69
+57:		mov t1274, 69
 59:	
 
 printLongDoubleExpo$17:	; Goto 19
 60:		jmp printLongDoubleExpo$19
 62:	
 
-printLongDoubleExpo$18:	; Assign £temporary1937 101
-63:		mov t1272, 101
+printLongDoubleExpo$18:	; Assign £temporary1918 101
+63:		mov t1275, 101
 65:	
 
-printLongDoubleExpo$19:	; Parameter 24 £temporary1937 6
-66:		mov [bp + 30], t1272
+printLongDoubleExpo$19:	; Parameter 24 £temporary1918 6
+66:		mov [bp + 30], t1275
 68:	
 
 printLongDoubleExpo$20:	; Call 24 printChar 0
@@ -1579,7 +1579,7 @@ printLongDoubleExpo$34:	; PushFloat value
 118:		fld qword [bp + 6]
 120:	
 
-printLongDoubleExpo$35:	; UnarySubtract £temporary1942 value
+printLongDoubleExpo$35:	; UnarySubtract £temporary1923 value
 121:		fchs
 123:	
 
@@ -1608,16 +1608,16 @@ printLongDoubleExpo$40:	; Call 24 log10 0
 printLongDoubleExpo$41:	; PostCall 24
 142:	
 
-printLongDoubleExpo$42:	; GetReturnValue £temporary1943
+printLongDoubleExpo$42:	; GetReturnValue £temporary1924
 144:	
 
-printLongDoubleExpo$43:	; FloatingToIntegral £temporary1944 £temporary1943
+printLongDoubleExpo$43:	; FloatingToIntegral £temporary1925 £temporary1924
 145:		fistp word [container2bytes#]
-146:		mov t1273, [container2bytes#]
+146:		mov t1276, [container2bytes#]
 148:	
 
-printLongDoubleExpo$44:	; Assign expo £temporary1944
-149:		mov [bp + 24], t1273
+printLongDoubleExpo$44:	; Assign expo £temporary1925
+149:		mov [bp + 24], t1276
 151:	
 
 printLongDoubleExpo$45:	; PushFloat value
@@ -1636,11 +1636,11 @@ printLongDoubleExpo$48:	; Parameter 26 10.0 6
 161:		fstp qword [bp + 40]
 163:	
 
-printLongDoubleExpo$49:	; IntegralToFloating £temporary1945 expo
+printLongDoubleExpo$49:	; IntegralToFloating £temporary1926 expo
 164:		fild word [bp + 24]
 166:	
 
-printLongDoubleExpo$50:	; Parameter 26 £temporary1945 14
+printLongDoubleExpo$50:	; Parameter 26 £temporary1926 14
 167:		fstp qword [bp + 48]
 169:	
 
@@ -1657,10 +1657,10 @@ printLongDoubleExpo$52:	; PostCall 26
 178:		fld qword [bp + 34]
 180:	
 
-printLongDoubleExpo$53:	; GetReturnValue £temporary1946
+printLongDoubleExpo$53:	; GetReturnValue £temporary1927
 182:	
 
-printLongDoubleExpo$54:	; SignedDivide £temporary1947 value £temporary1946
+printLongDoubleExpo$54:	; SignedDivide £temporary1928 value £temporary1927
 183:		fdiv
 185:	
 
@@ -1680,23 +1680,23 @@ printLongDoubleExpo$58:	; Parameter 26 value 6
 196:	
 
 printLongDoubleExpo$59:	; Parameter 26 plus 14
-197:		mov a1274, [bp + 14]
-198:		mov [bp + 40], a1274
+197:		mov a1277, [bp + 14]
+198:		mov [bp + 40], a1277
 200:	
 
 printLongDoubleExpo$60:	; Parameter 26 space 16
-201:		mov a1275, [bp + 16]
-202:		mov [bp + 42], a1275
+201:		mov a1278, [bp + 16]
+202:		mov [bp + 42], a1278
 204:	
 
 printLongDoubleExpo$61:	; Parameter 26 grid 18
-205:		mov a1276, [bp + 18]
-206:		mov [bp + 44], a1276
+205:		mov a1279, [bp + 18]
+206:		mov [bp + 44], a1279
 208:	
 
 printLongDoubleExpo$62:	; Parameter 26 precision 20
-209:		mov a1277, [bp + 20]
-210:		mov [bp + 46], a1277
+209:		mov a1280, [bp + 20]
+210:		mov [bp + 46], a1280
 212:	
 
 printLongDoubleExpo$63:	; Call 26 printLongDoublePlain 0
@@ -1717,20 +1717,20 @@ printLongDoubleExpo$66:	; Equal 69 capital 0
 224:		je printLongDoubleExpo$69
 226:	
 
-printLongDoubleExpo$67:	; Assign £temporary1953 69
-227:		mov t1278, 69
+printLongDoubleExpo$67:	; Assign £temporary1934 69
+227:		mov t1281, 69
 229:	
 
 printLongDoubleExpo$68:	; Goto 70
 230:		jmp printLongDoubleExpo$70
 232:	
 
-printLongDoubleExpo$69:	; Assign £temporary1953 101
-233:		mov t1279, 101
+printLongDoubleExpo$69:	; Assign £temporary1934 101
+233:		mov t1282, 101
 235:	
 
-printLongDoubleExpo$70:	; Parameter 26 £temporary1953 6
-236:		mov [bp + 32], t1279
+printLongDoubleExpo$70:	; Parameter 26 £temporary1934 6
+236:		mov [bp + 32], t1282
 238:	
 
 printLongDoubleExpo$71:	; Call 26 printChar 0
@@ -1746,17 +1746,17 @@ printLongDoubleExpo$72:	; PostCall 26
 printLongDoubleExpo$73:	; CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 248:	
 
-printLongDoubleExpo$74:	; IntegralToIntegral £temporary1955 expo
-249:		mov a1280, [bp + 24]
-251:		and a1280, 65535
-253:		cmp a1280, 0
+printLongDoubleExpo$74:	; IntegralToIntegral £temporary1936 expo
+249:		mov a1283, [bp + 24]
+251:		and a1283, 65535
+253:		cmp a1283, 0
 254:		jge printLongDoubleExpo$75
-255:		neg a1280
-257:		neg a1280
+255:		neg a1283
+257:		neg a1283
 259:	
 
-printLongDoubleExpo$75:	; Parameter 26 £temporary1955 6
-260:		mov [bp + 32], a1280
+printLongDoubleExpo$75:	; Parameter 26 £temporary1936 6
+260:		mov [bp + 32], a1283
 262:	
 
 printLongDoubleExpo$76:	; Parameter 26 1 10
@@ -1778,10 +1778,10 @@ printLongDoubleExpo$79:	; PostCall 26
 276:	
 
 printLongDoubleExpo$80:	; Return 0
-277:		mov t1281, [bp]
+277:		mov t1284, [bp]
 278:		mov di, [bp + 4]
 279:		mov bp, [bp + 2]
-280:		jmp t1281
+280:		jmp t1284
 282:	
 
 printLongDoubleExpo$81:	; FunctionEnd printLongDoubleExpo
@@ -1792,37 +1792,37 @@ checkWidthAndPrecision:	; Equal 9 widthPtr 0
 3:		je checkWidthAndPrecision$9
 5:	
 
-checkWidthAndPrecision$1:	; Deref £temporary1977 -> widthPtr widthPtr 0
-6:		mov a1282, [bp + 8]
+checkWidthAndPrecision$1:	; Deref £temporary1958 -> widthPtr widthPtr 0
+6:		mov a1285, [bp + 8]
 8:	
 
-checkWidthAndPrecision$2:	; NotEqual 9 £temporary1977 -> widthPtr -1
-9:		cmp word [a1282], -1
+checkWidthAndPrecision$2:	; NotEqual 9 £temporary1958 -> widthPtr -1
+9:		cmp word [a1285], -1
 10:		jne checkWidthAndPrecision$9
 12:	
 
-checkWidthAndPrecision$3:	; Deref £temporary1980 -> widthPtr widthPtr 0
-13:		mov a1283, [bp + 8]
+checkWidthAndPrecision$3:	; Deref £temporary1961 -> widthPtr widthPtr 0
+13:		mov a1286, [bp + 8]
 15:	
 
 checkWidthAndPrecision$4:	; BinaryAdd arg_list arg_list 2
 16:		add word [bp + 6], 2
 18:	
 
-checkWidthAndPrecision$5:	; BinarySubtract £temporary1982 arg_list 2
-19:		mov a1284, [bp + 6]
-20:		sub a1284, 2
+checkWidthAndPrecision$5:	; BinarySubtract £temporary1963 arg_list 2
+19:		mov a1287, [bp + 6]
+20:		sub a1287, 2
 22:	
 
-checkWidthAndPrecision$6:	; IntegralToIntegral £temporary1983 £temporary1982
+checkWidthAndPrecision$6:	; IntegralToIntegral £temporary1964 £temporary1963
 25:	
 
-checkWidthAndPrecision$7:	; Deref £temporary1984 -> £temporary1983 £temporary1983 0
+checkWidthAndPrecision$7:	; Deref £temporary1965 -> £temporary1964 £temporary1964 0
 27:	
 
-checkWidthAndPrecision$8:	; Assign £temporary1980 -> widthPtr £temporary1984 -> £temporary1983
-28:		mov t1285, [a1284]
-29:		mov [a1283], t1285
+checkWidthAndPrecision$8:	; Assign £temporary1961 -> widthPtr £temporary1965 -> £temporary1964
+28:		mov t1288, [a1287]
+29:		mov [a1286], t1288
 31:	
 
 checkWidthAndPrecision$9:	; Equal 18 precisionPtr 0
@@ -1830,153 +1830,153 @@ checkWidthAndPrecision$9:	; Equal 18 precisionPtr 0
 33:		je checkWidthAndPrecision$18
 35:	
 
-checkWidthAndPrecision$10:	; Deref £temporary1986 -> precisionPtr precisionPtr 0
-36:		mov a1286, [bp + 10]
+checkWidthAndPrecision$10:	; Deref £temporary1967 -> precisionPtr precisionPtr 0
+36:		mov a1289, [bp + 10]
 38:	
 
-checkWidthAndPrecision$11:	; NotEqual 18 £temporary1986 -> precisionPtr -1
-39:		cmp word [a1286], -1
+checkWidthAndPrecision$11:	; NotEqual 18 £temporary1967 -> precisionPtr -1
+39:		cmp word [a1289], -1
 40:		jne checkWidthAndPrecision$18
 42:	
 
-checkWidthAndPrecision$12:	; Deref £temporary1989 -> precisionPtr precisionPtr 0
-43:		mov a1287, [bp + 10]
+checkWidthAndPrecision$12:	; Deref £temporary1970 -> precisionPtr precisionPtr 0
+43:		mov a1290, [bp + 10]
 45:	
 
 checkWidthAndPrecision$13:	; BinaryAdd arg_list arg_list 2
 46:		add word [bp + 6], 2
 48:	
 
-checkWidthAndPrecision$14:	; BinarySubtract £temporary1991 arg_list 2
-49:		mov a1288, [bp + 6]
-50:		sub a1288, 2
+checkWidthAndPrecision$14:	; BinarySubtract £temporary1972 arg_list 2
+49:		mov a1291, [bp + 6]
+50:		sub a1291, 2
 52:	
 
-checkWidthAndPrecision$15:	; IntegralToIntegral £temporary1992 £temporary1991
+checkWidthAndPrecision$15:	; IntegralToIntegral £temporary1973 £temporary1972
 55:	
 
-checkWidthAndPrecision$16:	; Deref £temporary1993 -> £temporary1992 £temporary1992 0
+checkWidthAndPrecision$16:	; Deref £temporary1974 -> £temporary1973 £temporary1973 0
 57:	
 
-checkWidthAndPrecision$17:	; Assign £temporary1989 -> precisionPtr £temporary1993 -> £temporary1992
-58:		mov t1289, [a1288]
-59:		mov [a1287], t1289
+checkWidthAndPrecision$17:	; Assign £temporary1970 -> precisionPtr £temporary1974 -> £temporary1973
+58:		mov t1292, [a1291]
+59:		mov [a1290], t1292
 61:	
 
 checkWidthAndPrecision$18:	; SetReturnValue arg_list
-62:		mov a1290, [bp + 6]
+62:		mov a1293, [bp + 6]
 64:	
 
 checkWidthAndPrecision$19:	; Return arg_list
-65:		mov t1291, [bp]
+65:		mov t1294, [bp]
 66:		mov di, [bp + 4]
 67:		mov bp, [bp + 2]
-68:		jmp t1291
+68:		jmp t1294
 70:	
 
 checkWidthAndPrecision$20:	; FunctionEnd checkWidthAndPrecision
 1:	
 
-printArgument:	; Deref £temporary1994 -> format format 0
-2:		mov a1292, [bp + 6]
+printArgument:	; Deref £temporary1975 -> format format 0
+2:		mov a1295, [bp + 6]
 4:	
 
-printArgument$1:	; Assign c £temporary1994 -> format
-5:		mov t1293, [a1292]
-6:		mov [bp + 30], t1293
+printArgument$1:	; Assign c £temporary1975 -> format
+5:		mov t1296, [a1295]
+6:		mov [bp + 30], t1296
 8:	
 
 printArgument$2:	; Case 21 c 100
-9:		mov a1294, [bp + 30]
-10:		cmp a1294, 100
+9:		mov a1297, [bp + 30]
+10:		cmp a1297, 100
 11:		je printArgument$21
 13:	
 
 printArgument$3:	; Case 21 c 105
-14:		cmp a1294, 105
+14:		cmp a1297, 105
 15:		je printArgument$21
 17:	
 
 printArgument$4:	; Case 73 c 99
-18:		cmp a1294, 99
+18:		cmp a1297, 99
 19:		je printArgument$73
 21:	
 
 printArgument$5:	; Case 93 c 115
-22:		cmp a1294, 115
+22:		cmp a1297, 115
 23:		je printArgument$93
 25:	
 
 printArgument$6:	; Case 113 c 88
-26:		cmp a1294, 88
+26:		cmp a1297, 88
 27:		je printArgument$113
 29:	
 
 printArgument$7:	; Case 113 c 120
-30:		cmp a1294, 120
+30:		cmp a1297, 120
 31:		je printArgument$113
 33:	
 
 printArgument$8:	; Case 113 c 98
-34:		cmp a1294, 98
+34:		cmp a1297, 98
 35:		je printArgument$113
 37:	
 
 printArgument$9:	; Case 113 c 111
-38:		cmp a1294, 111
+38:		cmp a1297, 111
 39:		je printArgument$113
 41:	
 
 printArgument$10:	; Case 113 c 117
-42:		cmp a1294, 117
+42:		cmp a1297, 117
 43:		je printArgument$113
 45:	
 
 printArgument$11:	; Case 173 c 71
-46:		cmp a1294, 71
+46:		cmp a1297, 71
 47:		je printArgument$173
 49:	
 
 printArgument$12:	; Case 173 c 103
-50:		cmp a1294, 103
+50:		cmp a1297, 103
 51:		je printArgument$173
 53:	
 
 printArgument$13:	; Case 173 c 69
-54:		cmp a1294, 69
+54:		cmp a1297, 69
 55:		je printArgument$173
 57:	
 
 printArgument$14:	; Case 173 c 101
-58:		cmp a1294, 101
+58:		cmp a1297, 101
 59:		je printArgument$173
 61:	
 
 printArgument$15:	; Case 173 c 102
-62:		cmp a1294, 102
+62:		cmp a1297, 102
 63:		je printArgument$173
 65:	
 
 printArgument$16:	; Case 299 c 112
-66:		cmp a1294, 112
+66:		cmp a1297, 112
 67:		je printArgument$299
 69:	
 
-printArgument$17:	; Case 324 c 110
-70:		cmp a1294, 110
-71:		je printArgument$324
+printArgument$17:	; Case 325 c 110
+70:		cmp a1297, 110
+71:		je printArgument$325
 73:	
 
-printArgument$18:	; Case 346 c 37
-74:		cmp a1294, 37
-75:		je printArgument$346
+printArgument$18:	; Case 347 c 37
+74:		cmp a1297, 37
+75:		je printArgument$347
 77:	
 
 printArgument$19:	; CaseEnd c
 79:	
 
-printArgument$20:	; Goto 359
-80:		jmp printArgument$359
+printArgument$20:	; Goto 360
+80:		jmp printArgument$360
 82:	
 
 printArgument$21:	; Equal 30 shortInt 0
@@ -1988,35 +1988,35 @@ printArgument$22:	; BinaryAdd arg_list arg_list 2
 87:		add word [bp + 8], 2
 89:	
 
-printArgument$23:	; BinarySubtract £temporary1996 arg_list 2
-90:		mov a1295, [bp + 8]
-91:		sub a1295, 2
+printArgument$23:	; BinarySubtract £temporary1977 arg_list 2
+90:		mov a1298, [bp + 8]
+91:		sub a1298, 2
 93:	
 
-printArgument$24:	; IntegralToIntegral £temporary1997 £temporary1996
+printArgument$24:	; IntegralToIntegral £temporary1978 £temporary1977
 96:	
 
-printArgument$25:	; Deref £temporary1998 -> £temporary1997 £temporary1997 0
+printArgument$25:	; Deref £temporary1979 -> £temporary1978 £temporary1978 0
 98:	
 
-printArgument$26:	; IntegralToIntegral £temporary1999 £temporary1998 -> £temporary1997
-99:		mov t1296, [a1295]
-102:		cmp t1296, 0
+printArgument$26:	; IntegralToIntegral £temporary1980 £temporary1979 -> £temporary1978
+99:		mov t1299, [a1298]
+102:		cmp t1299, 0
 103:		jge printArgument$27
-104:		neg t1296
-106:		neg t1296
+104:		neg t1299
+106:		neg t1299
 108:	
 
-printArgument$27:	; IntegralToIntegral £temporary2000 £temporary1999
-110:		and t1296, 255
-112:		cmp t1296, 0
+printArgument$27:	; IntegralToIntegral £temporary1981 £temporary1980
+110:		and t1299, 255
+112:		cmp t1299, 0
 113:		jge printArgument$28
-114:		neg t1296
-116:		neg t1296
+114:		neg t1299
+116:		neg t1299
 118:	
 
-printArgument$28:	; Assign longValue £temporary2000
-119:		mov [bp + 44], t1296
+printArgument$28:	; Assign longValue £temporary1981
+119:		mov [bp + 44], t1299
 121:	
 
 printArgument$29:	; Goto 43
@@ -2032,20 +2032,20 @@ printArgument$31:	; BinaryAdd arg_list arg_list 4
 129:		add word [bp + 8], 4
 131:	
 
-printArgument$32:	; BinarySubtract £temporary2002 arg_list 4
-132:		mov a1297, [bp + 8]
-133:		sub a1297, 4
+printArgument$32:	; BinarySubtract £temporary1983 arg_list 4
+132:		mov a1300, [bp + 8]
+133:		sub a1300, 4
 135:	
 
-printArgument$33:	; IntegralToIntegral £temporary2003 £temporary2002
+printArgument$33:	; IntegralToIntegral £temporary1984 £temporary1983
 138:	
 
-printArgument$34:	; Deref £temporary2004 -> £temporary2003 £temporary2003 0
+printArgument$34:	; Deref £temporary1985 -> £temporary1984 £temporary1984 0
 140:	
 
-printArgument$35:	; Assign longValue £temporary2004 -> £temporary2003
-141:		mov t1298, [a1297]
-142:		mov [bp + 44], t1298
+printArgument$35:	; Assign longValue £temporary1985 -> £temporary1984
+141:		mov t1301, [a1300]
+142:		mov [bp + 44], t1301
 144:	
 
 printArgument$36:	; Goto 43
@@ -2056,28 +2056,28 @@ printArgument$37:	; BinaryAdd arg_list arg_list 2
 148:		add word [bp + 8], 2
 150:	
 
-printArgument$38:	; BinarySubtract £temporary2006 arg_list 2
-151:		mov a1299, [bp + 8]
-152:		sub a1299, 2
+printArgument$38:	; BinarySubtract £temporary1987 arg_list 2
+151:		mov a1302, [bp + 8]
+152:		sub a1302, 2
 154:	
 
-printArgument$39:	; IntegralToIntegral £temporary2007 £temporary2006
+printArgument$39:	; IntegralToIntegral £temporary1988 £temporary1987
 157:	
 
-printArgument$40:	; Deref £temporary2008 -> £temporary2007 £temporary2007 0
+printArgument$40:	; Deref £temporary1989 -> £temporary1988 £temporary1988 0
 159:	
 
-printArgument$41:	; IntegralToIntegral £temporary2009 £temporary2008 -> £temporary2007
-160:		mov t1300, [a1299]
-162:		and t1300, 65535
-164:		cmp t1300, 0
+printArgument$41:	; IntegralToIntegral £temporary1990 £temporary1989 -> £temporary1988
+160:		mov t1303, [a1302]
+162:		and t1303, 65535
+164:		cmp t1303, 0
 165:		jge printArgument$42
-166:		neg t1300
-168:		neg t1300
+166:		neg t1303
+168:		neg t1303
 170:	
 
-printArgument$42:	; Assign longValue £temporary2009
-171:		mov [bp + 44], t1300
+printArgument$42:	; Assign longValue £temporary1990
+171:		mov [bp + 44], t1303
 173:	
 
 printArgument$43:	; Equal 50 negativePtr 0
@@ -2085,8 +2085,8 @@ printArgument$43:	; Equal 50 negativePtr 0
 175:		je printArgument$50
 177:	
 
-printArgument$44:	; Deref £temporary2013 -> negativePtr negativePtr 0
-178:		mov a1301, [bp + 28]
+printArgument$44:	; Deref £temporary1994 -> negativePtr negativePtr 0
+178:		mov a1304, [bp + 28]
 180:	
 
 printArgument$45:	; SignedGreaterThanEqual 48 longValue 0
@@ -2094,20 +2094,20 @@ printArgument$45:	; SignedGreaterThanEqual 48 longValue 0
 182:		jge printArgument$48
 184:	
 
-printArgument$46:	; Assign £temporary2015 1
-185:		mov t1302, 1
+printArgument$46:	; Assign £temporary1996 1
+185:		mov t1305, 1
 187:	
 
 printArgument$47:	; Goto 49
 188:		jmp printArgument$49
 190:	
 
-printArgument$48:	; Assign £temporary2015 0
-191:		mov t1303, 0
+printArgument$48:	; Assign £temporary1996 0
+191:		mov t1306, 0
 193:	
 
-printArgument$49:	; Assign £temporary2013 -> negativePtr £temporary2015
-194:		mov [a1301], t1303
+printArgument$49:	; Assign £temporary1994 -> negativePtr £temporary1996
+194:		mov [a1304], t1306
 196:	
 
 printArgument$50:	; NotEqual 57 sign 0
@@ -2119,8 +2119,8 @@ printArgument$51:	; CallHeader 48 System.Collections.Generic.HashSet`1[CCompiler
 202:	
 
 printArgument$52:	; Parameter 48 longValue 6
-203:		mov a1304, [bp + 44]
-204:		mov [bp + 54], a1304
+203:		mov a1307, [bp + 44]
+204:		mov [bp + 54], a1307
 206:	
 
 printArgument$53:	; Call 48 labs 0
@@ -2133,33 +2133,33 @@ printArgument$53:	; Call 48 labs 0
 printArgument$54:	; PostCall 48
 214:	
 
-printArgument$55:	; GetReturnValue £temporary2018
+printArgument$55:	; GetReturnValue £temporary1999
 219:	
 
-printArgument$56:	; Assign longValue £temporary2018
-220:		mov [bp + 44], t1306
+printArgument$56:	; Assign longValue £temporary1999
+220:		mov [bp + 44], t1309
 222:	
 
 printArgument$57:	; CallHeader 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 224:	
 
 printArgument$58:	; Parameter 48 arg_list 6
-225:		mov a1307, [bp + 8]
-226:		mov [bp + 54], a1307
+225:		mov a1310, [bp + 8]
+226:		mov [bp + 54], a1310
 228:	
 
 printArgument$59:	; Parameter 48 widthPtr 8
-229:		mov a1308, [bp + 16]
-230:		mov [bp + 56], a1308
+229:		mov a1311, [bp + 16]
+230:		mov [bp + 56], a1311
 232:	
 
-printArgument$60:	; address £temporary2019 precision
-233:		mov t1309, bp
-234:		add t1309, 18
+printArgument$60:	; address £temporary2000 precision
+233:		mov t1312, bp
+234:		add t1312, 18
 236:	
 
-printArgument$61:	; Parameter 48 £temporary2019 10
-237:		mov [bp + 58], t1309
+printArgument$61:	; Parameter 48 £temporary2000 10
+237:		mov [bp + 58], t1312
 239:	
 
 printArgument$62:	; Call 48 checkWidthAndPrecision 0
@@ -2172,29 +2172,29 @@ printArgument$62:	; Call 48 checkWidthAndPrecision 0
 printArgument$63:	; PostCall 48
 247:	
 
-printArgument$64:	; GetReturnValue £temporary2020
+printArgument$64:	; GetReturnValue £temporary2001
 252:	
 
-printArgument$65:	; Assign arg_list £temporary2020
-253:		mov [bp + 8], t1311
+printArgument$65:	; Assign arg_list £temporary2001
+253:		mov [bp + 8], t1314
 255:	
 
 printArgument$66:	; CallHeader 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 257:	
 
 printArgument$67:	; Parameter 48 longValue 6
-258:		mov a1312, [bp + 44]
-259:		mov [bp + 54], a1312
+258:		mov a1315, [bp + 44]
+259:		mov [bp + 54], a1315
 261:	
 
 printArgument$68:	; Parameter 48 plus 10
-262:		mov a1313, [bp + 10]
-263:		mov [bp + 58], a1313
+262:		mov a1316, [bp + 10]
+263:		mov [bp + 58], a1316
 265:	
 
 printArgument$69:	; Parameter 48 space 12
-266:		mov a1314, [bp + 12]
-267:		mov [bp + 60], a1314
+266:		mov a1317, [bp + 12]
+267:		mov [bp + 60], a1317
 269:	
 
 printArgument$70:	; Call 48 printLongInt 0
@@ -2207,57 +2207,57 @@ printArgument$70:	; Call 48 printLongInt 0
 printArgument$71:	; PostCall 48
 277:	
 
-printArgument$72:	; Goto 359
-278:		jmp printArgument$359
+printArgument$72:	; Goto 360
+278:		jmp printArgument$360
 280:	
 
 printArgument$73:	; BinaryAdd arg_list arg_list 2
 281:		add word [bp + 8], 2
 283:	
 
-printArgument$74:	; BinarySubtract £temporary2023 arg_list 2
-284:		mov a1315, [bp + 8]
-285:		sub a1315, 2
+printArgument$74:	; BinarySubtract £temporary2004 arg_list 2
+284:		mov a1318, [bp + 8]
+285:		sub a1318, 2
 287:	
 
-printArgument$75:	; IntegralToIntegral £temporary2024 £temporary2023
+printArgument$75:	; IntegralToIntegral £temporary2005 £temporary2004
 290:	
 
-printArgument$76:	; Deref £temporary2025 -> £temporary2024 £temporary2024 0
+printArgument$76:	; Deref £temporary2006 -> £temporary2005 £temporary2005 0
 292:	
 
-printArgument$77:	; IntegralToIntegral £temporary2026 £temporary2025 -> £temporary2024
-293:		mov t1316, [a1315]
-296:		cmp t1316, 0
+printArgument$77:	; IntegralToIntegral £temporary2007 £temporary2006 -> £temporary2005
+293:		mov t1319, [a1318]
+296:		cmp t1319, 0
 297:		jge printArgument$78
-298:		neg t1316
-300:		neg t1316
+298:		neg t1319
+300:		neg t1319
 302:	
 
-printArgument$78:	; Assign charValue £temporary2026
-303:		mov [bp + 31], t1316
+printArgument$78:	; Assign charValue £temporary2007
+303:		mov [bp + 31], t1319
 305:	
 
 printArgument$79:	; CallHeader 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 307:	
 
 printArgument$80:	; Parameter 44 arg_list 6
-308:		mov a1317, [bp + 8]
-309:		mov [bp + 50], a1317
+308:		mov a1320, [bp + 8]
+309:		mov [bp + 50], a1320
 311:	
 
 printArgument$81:	; Parameter 44 widthPtr 8
-312:		mov a1318, [bp + 16]
-313:		mov [bp + 52], a1318
+312:		mov a1321, [bp + 16]
+313:		mov [bp + 52], a1321
 315:	
 
-printArgument$82:	; address £temporary2027 precision
-316:		mov t1319, bp
-317:		add t1319, 18
+printArgument$82:	; address £temporary2008 precision
+316:		mov t1322, bp
+317:		add t1322, 18
 319:	
 
-printArgument$83:	; Parameter 44 £temporary2027 10
-320:		mov [bp + 54], t1319
+printArgument$83:	; Parameter 44 £temporary2008 10
+320:		mov [bp + 54], t1322
 322:	
 
 printArgument$84:	; Call 44 checkWidthAndPrecision 0
@@ -2270,19 +2270,19 @@ printArgument$84:	; Call 44 checkWidthAndPrecision 0
 printArgument$85:	; PostCall 44
 330:	
 
-printArgument$86:	; GetReturnValue £temporary2028
+printArgument$86:	; GetReturnValue £temporary2009
 335:	
 
-printArgument$87:	; Assign arg_list £temporary2028
-336:		mov [bp + 8], t1321
+printArgument$87:	; Assign arg_list £temporary2009
+336:		mov [bp + 8], t1324
 338:	
 
 printArgument$88:	; CallHeader 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 340:	
 
 printArgument$89:	; Parameter 44 charValue 6
-341:		mov a1322, [bp + 31]
-342:		mov [bp + 50], a1322
+341:		mov a1325, [bp + 31]
+342:		mov [bp + 50], a1325
 344:	
 
 printArgument$90:	; Call 44 printChar 0
@@ -2295,50 +2295,50 @@ printArgument$90:	; Call 44 printChar 0
 printArgument$91:	; PostCall 44
 352:	
 
-printArgument$92:	; Goto 359
-353:		jmp printArgument$359
+printArgument$92:	; Goto 360
+353:		jmp printArgument$360
 355:	
 
 printArgument$93:	; BinaryAdd arg_list arg_list 2
 356:		add word [bp + 8], 2
 358:	
 
-printArgument$94:	; BinarySubtract £temporary2031 arg_list 2
-359:		mov a1323, [bp + 8]
-360:		sub a1323, 2
+printArgument$94:	; BinarySubtract £temporary2012 arg_list 2
+359:		mov a1326, [bp + 8]
+360:		sub a1326, 2
 362:	
 
-printArgument$95:	; IntegralToIntegral £temporary2032 £temporary2031
+printArgument$95:	; IntegralToIntegral £temporary2013 £temporary2012
 365:	
 
-printArgument$96:	; Deref £temporary2033 -> £temporary2032 £temporary2032 0
+printArgument$96:	; Deref £temporary2014 -> £temporary2013 £temporary2013 0
 367:	
 
-printArgument$97:	; Assign stringValue £temporary2033 -> £temporary2032
-368:		mov t1324, [a1323]
-369:		mov [bp + 44], t1324
+printArgument$97:	; Assign stringValue £temporary2014 -> £temporary2013
+368:		mov t1327, [a1326]
+369:		mov [bp + 44], t1327
 371:	
 
 printArgument$98:	; CallHeader 46 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 373:	
 
 printArgument$99:	; Parameter 46 arg_list 6
-374:		mov a1325, [bp + 8]
-375:		mov [bp + 52], a1325
+374:		mov a1328, [bp + 8]
+375:		mov [bp + 52], a1328
 377:	
 
 printArgument$100:	; Parameter 46 widthPtr 8
-378:		mov a1326, [bp + 16]
-379:		mov [bp + 54], a1326
+378:		mov a1329, [bp + 16]
+379:		mov [bp + 54], a1329
 381:	
 
-printArgument$101:	; address £temporary2034 precision
-382:		mov t1327, bp
-383:		add t1327, 18
+printArgument$101:	; address £temporary2015 precision
+382:		mov t1330, bp
+383:		add t1330, 18
 385:	
 
-printArgument$102:	; Parameter 46 £temporary2034 10
-386:		mov [bp + 56], t1327
+printArgument$102:	; Parameter 46 £temporary2015 10
+386:		mov [bp + 56], t1330
 388:	
 
 printArgument$103:	; Call 46 checkWidthAndPrecision 0
@@ -2351,24 +2351,24 @@ printArgument$103:	; Call 46 checkWidthAndPrecision 0
 printArgument$104:	; PostCall 46
 396:	
 
-printArgument$105:	; GetReturnValue £temporary2035
+printArgument$105:	; GetReturnValue £temporary2016
 401:	
 
-printArgument$106:	; Assign arg_list £temporary2035
-402:		mov [bp + 8], t1329
+printArgument$106:	; Assign arg_list £temporary2016
+402:		mov [bp + 8], t1332
 404:	
 
 printArgument$107:	; CallHeader 46 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 406:	
 
 printArgument$108:	; Parameter 46 stringValue 6
-407:		mov a1330, [bp + 44]
-408:		mov [bp + 52], a1330
+407:		mov a1333, [bp + 44]
+408:		mov [bp + 52], a1333
 410:	
 
 printArgument$109:	; Parameter 46 precision 8
-411:		mov a1331, [bp + 18]
-412:		mov [bp + 54], a1331
+411:		mov a1334, [bp + 18]
+412:		mov [bp + 54], a1334
 414:	
 
 printArgument$110:	; Call 46 printString 0
@@ -2381,8 +2381,8 @@ printArgument$110:	; Call 46 printString 0
 printArgument$111:	; PostCall 46
 422:	
 
-printArgument$112:	; Goto 359
-423:		jmp printArgument$359
+printArgument$112:	; Goto 360
+423:		jmp printArgument$360
 425:	
 
 printArgument$113:	; NotEqual 116 c 117
@@ -2390,8 +2390,8 @@ printArgument$113:	; NotEqual 116 c 117
 427:		jne printArgument$116
 429:	
 
-printArgument$114:	; Assign £temporary2051 10
-430:		mov t1332, 10
+printArgument$114:	; Assign £temporary2032 10
+430:		mov t1335, 10
 432:	
 
 printArgument$115:	; Goto 125
@@ -2403,8 +2403,8 @@ printArgument$116:	; NotEqual 119 c 111
 437:		jne printArgument$119
 439:	
 
-printArgument$117:	; Assign £temporary2047 8
-440:		mov t1333, 8
+printArgument$117:	; Assign £temporary2028 8
+440:		mov t1336, 8
 442:	
 
 printArgument$118:	; Goto 124
@@ -2416,26 +2416,26 @@ printArgument$119:	; NotEqual 122 c 98
 447:		jne printArgument$122
 449:	
 
-printArgument$120:	; Assign £temporary2043 2
-450:		mov t1334, 2
+printArgument$120:	; Assign £temporary2024 2
+450:		mov t1337, 2
 452:	
 
 printArgument$121:	; Goto 123
 453:		jmp printArgument$123
 455:	
 
-printArgument$122:	; Assign £temporary2043 16
-456:		mov t1335, 16
+printArgument$122:	; Assign £temporary2024 16
+456:		mov t1338, 16
 458:	
 
-printArgument$123:	; Assign £temporary2047 £temporary2043
+printArgument$123:	; Assign £temporary2028 £temporary2024
 460:	
 
-printArgument$124:	; Assign £temporary2051 £temporary2047
+printArgument$124:	; Assign £temporary2032 £temporary2028
 462:	
 
-printArgument$125:	; Assign base £temporary2051
-463:		mov [bp + 44], t1335
+printArgument$125:	; Assign base £temporary2032
+463:		mov [bp + 44], t1338
 465:	
 
 printArgument$126:	; Equal 135 shortInt 0
@@ -2447,27 +2447,27 @@ printArgument$127:	; BinaryAdd arg_list arg_list 2
 470:		add word [bp + 8], 2
 472:	
 
-printArgument$128:	; BinarySubtract £temporary2053 arg_list 2
-473:		mov a1338, [bp + 8]
-474:		sub a1338, 2
+printArgument$128:	; BinarySubtract £temporary2034 arg_list 2
+473:		mov a1341, [bp + 8]
+474:		sub a1341, 2
 476:	
 
-printArgument$129:	; IntegralToIntegral £temporary2054 £temporary2053
+printArgument$129:	; IntegralToIntegral £temporary2035 £temporary2034
 479:	
 
-printArgument$130:	; Deref £temporary2055 -> £temporary2054 £temporary2054 0
+printArgument$130:	; Deref £temporary2036 -> £temporary2035 £temporary2035 0
 481:	
 
-printArgument$131:	; IntegralToIntegral £temporary2056 £temporary2055 -> £temporary2054
-482:		mov t1339, [a1338]
+printArgument$131:	; IntegralToIntegral £temporary2037 £temporary2036 -> £temporary2035
+482:		mov t1342, [a1341]
 485:	
 
-printArgument$132:	; IntegralToIntegral £temporary2057 £temporary2056
-487:		and t1339, 255
+printArgument$132:	; IntegralToIntegral £temporary2038 £temporary2037
+487:		and t1342, 255
 489:	
 
-printArgument$133:	; Assign value £temporary2057
-490:		mov [bp + 48], t1339
+printArgument$133:	; Assign value £temporary2038
+490:		mov [bp + 48], t1342
 492:	
 
 printArgument$134:	; Goto 148
@@ -2483,20 +2483,20 @@ printArgument$136:	; BinaryAdd arg_list arg_list 4
 500:		add word [bp + 8], 4
 502:	
 
-printArgument$137:	; BinarySubtract £temporary2059 arg_list 4
-503:		mov a1340, [bp + 8]
-504:		sub a1340, 4
+printArgument$137:	; BinarySubtract £temporary2040 arg_list 4
+503:		mov a1343, [bp + 8]
+504:		sub a1343, 4
 506:	
 
-printArgument$138:	; IntegralToIntegral £temporary2060 £temporary2059
+printArgument$138:	; IntegralToIntegral £temporary2041 £temporary2040
 509:	
 
-printArgument$139:	; Deref £temporary2061 -> £temporary2060 £temporary2060 0
+printArgument$139:	; Deref £temporary2042 -> £temporary2041 £temporary2041 0
 511:	
 
-printArgument$140:	; Assign value £temporary2061 -> £temporary2060
-512:		mov t1341, [a1340]
-513:		mov [bp + 48], t1341
+printArgument$140:	; Assign value £temporary2042 -> £temporary2041
+512:		mov t1344, [a1343]
+513:		mov [bp + 48], t1344
 515:	
 
 printArgument$141:	; Goto 148
@@ -2507,46 +2507,46 @@ printArgument$142:	; BinaryAdd arg_list arg_list 2
 519:		add word [bp + 8], 2
 521:	
 
-printArgument$143:	; BinarySubtract £temporary2063 arg_list 2
-522:		mov a1342, [bp + 8]
-523:		sub a1342, 2
+printArgument$143:	; BinarySubtract £temporary2044 arg_list 2
+522:		mov a1345, [bp + 8]
+523:		sub a1345, 2
 525:	
 
-printArgument$144:	; IntegralToIntegral £temporary2064 £temporary2063
+printArgument$144:	; IntegralToIntegral £temporary2045 £temporary2044
 528:	
 
-printArgument$145:	; Deref £temporary2065 -> £temporary2064 £temporary2064 0
+printArgument$145:	; Deref £temporary2046 -> £temporary2045 £temporary2045 0
 530:	
 
-printArgument$146:	; IntegralToIntegral £temporary2066 £temporary2065 -> £temporary2064
-531:		mov t1343, [a1342]
-533:		and t1343, 65535
+printArgument$146:	; IntegralToIntegral £temporary2047 £temporary2046 -> £temporary2045
+531:		mov t1346, [a1345]
+533:		and t1346, 65535
 535:	
 
-printArgument$147:	; Assign value £temporary2066
-536:		mov [bp + 48], t1343
+printArgument$147:	; Assign value £temporary2047
+536:		mov [bp + 48], t1346
 538:	
 
 printArgument$148:	; CallHeader 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 540:	
 
 printArgument$149:	; Parameter 52 arg_list 6
-541:		mov a1344, [bp + 8]
-542:		mov [bp + 58], a1344
+541:		mov a1347, [bp + 8]
+542:		mov [bp + 58], a1347
 544:	
 
 printArgument$150:	; Parameter 52 widthPtr 8
-545:		mov a1345, [bp + 16]
-546:		mov [bp + 60], a1345
+545:		mov a1348, [bp + 16]
+546:		mov [bp + 60], a1348
 548:	
 
-printArgument$151:	; address £temporary2069 precision
-549:		mov t1346, bp
-550:		add t1346, 18
+printArgument$151:	; address £temporary2050 precision
+549:		mov t1349, bp
+550:		add t1349, 18
 552:	
 
-printArgument$152:	; Parameter 52 £temporary2069 10
-553:		mov [bp + 62], t1346
+printArgument$152:	; Parameter 52 £temporary2050 10
+553:		mov [bp + 62], t1349
 555:	
 
 printArgument$153:	; Call 52 checkWidthAndPrecision 0
@@ -2559,55 +2559,55 @@ printArgument$153:	; Call 52 checkWidthAndPrecision 0
 printArgument$154:	; PostCall 52
 563:	
 
-printArgument$155:	; GetReturnValue £temporary2070
+printArgument$155:	; GetReturnValue £temporary2051
 568:	
 
-printArgument$156:	; Assign arg_list £temporary2070
-569:		mov [bp + 8], t1348
+printArgument$156:	; Assign arg_list £temporary2051
+569:		mov [bp + 8], t1351
 571:	
 
 printArgument$157:	; CallHeader 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 573:	
 
 printArgument$158:	; Parameter 52 value 6
-574:		mov a1349, [bp + 48]
-575:		mov [bp + 58], a1349
+574:		mov a1352, [bp + 48]
+575:		mov [bp + 58], a1352
 577:	
 
 printArgument$159:	; Parameter 52 plus 10
-578:		mov a1350, [bp + 10]
-579:		mov [bp + 62], a1350
+578:		mov a1353, [bp + 10]
+579:		mov [bp + 62], a1353
 581:	
 
 printArgument$160:	; Parameter 52 space 12
-582:		mov a1351, [bp + 12]
-583:		mov [bp + 64], a1351
+582:		mov a1354, [bp + 12]
+583:		mov [bp + 64], a1354
 585:	
 
 printArgument$161:	; Parameter 52 grid 14
-586:		mov a1352, [bp + 14]
-587:		mov [bp + 66], a1352
+586:		mov a1355, [bp + 14]
+587:		mov [bp + 66], a1355
 589:	
 
 printArgument$162:	; Parameter 52 base 16
-590:		mov a1353, [bp + 44]
-591:		mov [bp + 68], a1353
+590:		mov a1356, [bp + 44]
+591:		mov [bp + 68], a1356
 593:	
 
 printArgument$163:	; CallHeader 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 595:	
 
-printArgument$164:	; IntegralToIntegral £temporary2071 c
-596:		mov a1354, [bp + 30]
-598:		and a1354, 255
-600:		cmp a1354, 0
+printArgument$164:	; IntegralToIntegral £temporary2052 c
+596:		mov a1357, [bp + 30]
+598:		and a1357, 255
+600:		cmp a1357, 0
 601:		jge printArgument$165
-602:		neg a1354
-604:		neg a1354
+602:		neg a1357
+604:		neg a1357
 606:	
 
-printArgument$165:	; Parameter 52 £temporary2071 26
-607:		mov [bp + 78], a1354
+printArgument$165:	; Parameter 52 £temporary2052 26
+607:		mov [bp + 78], a1357
 609:	
 
 printArgument$166:	; Call 52 isupper 20
@@ -2620,11 +2620,11 @@ printArgument$166:	; Call 52 isupper 20
 printArgument$167:	; PostCall 52
 617:	
 
-printArgument$168:	; GetReturnValue £temporary2072
+printArgument$168:	; GetReturnValue £temporary2053
 622:	
 
-printArgument$169:	; Parameter 52 £temporary2072 20
-623:		mov [bp + 72], t1356
+printArgument$169:	; Parameter 52 £temporary2053 20
+623:		mov [bp + 72], t1359
 625:	
 
 printArgument$170:	; Call 52 printUnsignedLong 0
@@ -2637,8 +2637,8 @@ printArgument$170:	; Call 52 printUnsignedLong 0
 printArgument$171:	; PostCall 52
 633:	
 
-printArgument$172:	; Goto 359
-634:		jmp printArgument$359
+printArgument$172:	; Goto 360
+634:		jmp printArgument$360
 636:	
 
 printArgument$173:	; Equal 190 longDouble 0
@@ -2650,19 +2650,19 @@ printArgument$174:	; BinaryAdd arg_list arg_list 8
 641:		add word [bp + 8], 8
 643:	
 
-printArgument$175:	; BinarySubtract £temporary2075 arg_list 8
-644:		mov a1357, [bp + 8]
-645:		sub a1357, 8
+printArgument$175:	; BinarySubtract £temporary2056 arg_list 8
+644:		mov a1360, [bp + 8]
+645:		sub a1360, 8
 647:	
 
-printArgument$176:	; IntegralToIntegral £temporary2076 £temporary2075
+printArgument$176:	; IntegralToIntegral £temporary2057 £temporary2056
 650:	
 
-printArgument$177:	; Deref £temporary2077 -> £temporary2076 £temporary2076 0
+printArgument$177:	; Deref £temporary2058 -> £temporary2057 £temporary2057 0
 652:	
 
-printArgument$178:	; PushFloat £temporary2077 -> £temporary2076
-653:		fld qword [a1357]
+printArgument$178:	; PushFloat £temporary2058 -> £temporary2057
+653:		fld qword [a1360]
 655:	
 
 printArgument$179:	; PopFloat longDoubleValue
@@ -2714,19 +2714,19 @@ printArgument$190:	; BinaryAdd arg_list arg_list 8
 690:		add word [bp + 8], 8
 692:	
 
-printArgument$191:	; BinarySubtract £temporary2080 arg_list 8
-693:		mov a1358, [bp + 8]
-694:		sub a1358, 8
+printArgument$191:	; BinarySubtract £temporary2061 arg_list 8
+693:		mov a1361, [bp + 8]
+694:		sub a1361, 8
 696:	
 
-printArgument$192:	; IntegralToIntegral £temporary2081 £temporary2080
+printArgument$192:	; IntegralToIntegral £temporary2062 £temporary2061
 699:	
 
-printArgument$193:	; Deref £temporary2082 -> £temporary2081 £temporary2081 0
+printArgument$193:	; Deref £temporary2063 -> £temporary2062 £temporary2062 0
 701:	
 
-printArgument$194:	; PushFloat £temporary2082 -> £temporary2081
-702:		fld qword [a1358]
+printArgument$194:	; PushFloat £temporary2063 -> £temporary2062
+702:		fld qword [a1361]
 704:	
 
 printArgument$195:	; PopFloat longDoubleValue
@@ -2738,8 +2738,8 @@ printArgument$196:	; Equal 205 negativePtr 0
 709:		je printArgument$205
 711:	
 
-printArgument$197:	; Deref £temporary2086 -> negativePtr negativePtr 0
-712:		mov a1359, [bp + 28]
+printArgument$197:	; Deref £temporary2067 -> negativePtr negativePtr 0
+712:		mov a1362, [bp + 28]
 714:	
 
 printArgument$198:	; PushFloat longDoubleValue
@@ -2757,20 +2757,20 @@ printArgument$200:	; SignedGreaterThanEqual 203 longDoubleValue 0
 724:		jbe printArgument$203
 726:	
 
-printArgument$201:	; Assign £temporary2088 1
-727:		mov t1360, 1
+printArgument$201:	; Assign £temporary2069 1
+727:		mov t1363, 1
 729:	
 
 printArgument$202:	; Goto 204
 730:		jmp printArgument$204
 732:	
 
-printArgument$203:	; Assign £temporary2088 0
-733:		mov t1361, 0
+printArgument$203:	; Assign £temporary2069 0
+733:		mov t1364, 0
 735:	
 
-printArgument$204:	; Assign £temporary2086 -> negativePtr £temporary2088
-736:		mov [a1359], t1361
+printArgument$204:	; Assign £temporary2067 -> negativePtr £temporary2069
+736:		mov [a1362], t1364
 738:	
 
 printArgument$205:	; NotEqual 213 sign 0
@@ -2799,7 +2799,7 @@ printArgument$209:	; Call 44 fabs 0
 printArgument$210:	; PostCall 44
 758:	
 
-printArgument$211:	; GetReturnValue £temporary2091
+printArgument$211:	; GetReturnValue £temporary2072
 760:	
 
 printArgument$212:	; PopFloat longDoubleValue
@@ -2810,22 +2810,22 @@ printArgument$213:	; CallHeader 44 System.Collections.Generic.HashSet`1[CCompile
 765:	
 
 printArgument$214:	; Parameter 44 arg_list 6
-766:		mov a1362, [bp + 8]
-767:		mov [bp + 50], a1362
+766:		mov a1365, [bp + 8]
+767:		mov [bp + 50], a1365
 769:	
 
 printArgument$215:	; Parameter 44 widthPtr 8
-770:		mov a1363, [bp + 16]
-771:		mov [bp + 52], a1363
+770:		mov a1366, [bp + 16]
+771:		mov [bp + 52], a1366
 773:	
 
-printArgument$216:	; address £temporary2092 precision
-774:		mov t1364, bp
-775:		add t1364, 18
+printArgument$216:	; address £temporary2073 precision
+774:		mov t1367, bp
+775:		add t1367, 18
 777:	
 
-printArgument$217:	; Parameter 44 £temporary2092 10
-778:		mov [bp + 54], t1364
+printArgument$217:	; Parameter 44 £temporary2073 10
+778:		mov [bp + 54], t1367
 780:	
 
 printArgument$218:	; Call 44 checkWidthAndPrecision 0
@@ -2838,11 +2838,11 @@ printArgument$218:	; Call 44 checkWidthAndPrecision 0
 printArgument$219:	; PostCall 44
 788:	
 
-printArgument$220:	; GetReturnValue £temporary2093
+printArgument$220:	; GetReturnValue £temporary2074
 793:	
 
-printArgument$221:	; Assign arg_list £temporary2093
-794:		mov [bp + 8], t1366
+printArgument$221:	; Assign arg_list £temporary2074
+794:		mov [bp + 8], t1369
 796:	
 
 printArgument$222:	; NotEqual 233 c 102
@@ -2862,23 +2862,23 @@ printArgument$225:	; Parameter 44 longDoubleValue 6
 808:	
 
 printArgument$226:	; Parameter 44 plus 14
-809:		mov a1367, [bp + 10]
-810:		mov [bp + 58], a1367
+809:		mov a1370, [bp + 10]
+810:		mov [bp + 58], a1370
 812:	
 
 printArgument$227:	; Parameter 44 space 16
-813:		mov a1368, [bp + 12]
-814:		mov [bp + 60], a1368
+813:		mov a1371, [bp + 12]
+814:		mov [bp + 60], a1371
 816:	
 
 printArgument$228:	; Parameter 44 grid 18
-817:		mov a1369, [bp + 14]
-818:		mov [bp + 62], a1369
+817:		mov a1372, [bp + 14]
+818:		mov [bp + 62], a1372
 820:	
 
 printArgument$229:	; Parameter 44 precision 20
-821:		mov a1370, [bp + 18]
-822:		mov [bp + 64], a1370
+821:		mov a1373, [bp + 18]
+822:		mov [bp + 64], a1373
 824:	
 
 printArgument$230:	; Call 44 printLongDoublePlain 0
@@ -2891,24 +2891,24 @@ printArgument$230:	; Call 44 printLongDoublePlain 0
 printArgument$231:	; PostCall 44
 832:	
 
-printArgument$232:	; Goto 359
-833:		jmp printArgument$359
+printArgument$232:	; Goto 360
+833:		jmp printArgument$360
 835:	
 
 printArgument$233:	; CallHeader 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 837:	
 
-printArgument$234:	; IntegralToIntegral £temporary2096 c
-838:		mov a1371, [bp + 30]
-840:		and a1371, 255
-842:		cmp a1371, 0
+printArgument$234:	; IntegralToIntegral £temporary2077 c
+838:		mov a1374, [bp + 30]
+840:		and a1374, 255
+842:		cmp a1374, 0
 843:		jge printArgument$235
-844:		neg a1371
-846:		neg a1371
+844:		neg a1374
+846:		neg a1374
 848:	
 
-printArgument$235:	; Parameter 44 £temporary2096 6
-849:		mov [bp + 50], a1371
+printArgument$235:	; Parameter 44 £temporary2077 6
+849:		mov [bp + 50], a1374
 851:	
 
 printArgument$236:	; Call 44 tolower 0
@@ -2921,11 +2921,11 @@ printArgument$236:	; Call 44 tolower 0
 printArgument$237:	; PostCall 44
 859:	
 
-printArgument$238:	; GetReturnValue £temporary2097
+printArgument$238:	; GetReturnValue £temporary2078
 864:	
 
-printArgument$239:	; NotEqual 257 £temporary2097 101
-865:		cmp t1373, 101
+printArgument$239:	; NotEqual 257 £temporary2078 101
+865:		cmp t1376, 101
 866:		jne printArgument$257
 868:	
 
@@ -2941,39 +2941,39 @@ printArgument$242:	; Parameter 44 longDoubleValue 6
 876:	
 
 printArgument$243:	; Parameter 44 plus 14
-877:		mov a1374, [bp + 10]
-878:		mov [bp + 58], a1374
+877:		mov a1377, [bp + 10]
+878:		mov [bp + 58], a1377
 880:	
 
 printArgument$244:	; Parameter 44 space 16
-881:		mov a1375, [bp + 12]
-882:		mov [bp + 60], a1375
+881:		mov a1378, [bp + 12]
+882:		mov [bp + 60], a1378
 884:	
 
 printArgument$245:	; Parameter 44 grid 18
-885:		mov a1376, [bp + 14]
-886:		mov [bp + 62], a1376
+885:		mov a1379, [bp + 14]
+886:		mov [bp + 62], a1379
 888:	
 
 printArgument$246:	; Parameter 44 precision 20
-889:		mov a1377, [bp + 18]
-890:		mov [bp + 64], a1377
+889:		mov a1380, [bp + 18]
+890:		mov [bp + 64], a1380
 892:	
 
 printArgument$247:	; CallHeader 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 894:	
 
-printArgument$248:	; IntegralToIntegral £temporary2099 c
-895:		mov a1378, [bp + 30]
-897:		and a1378, 255
-899:		cmp a1378, 0
+printArgument$248:	; IntegralToIntegral £temporary2080 c
+895:		mov a1381, [bp + 30]
+897:		and a1381, 255
+899:		cmp a1381, 0
 900:		jge printArgument$249
-901:		neg a1378
-903:		neg a1378
+901:		neg a1381
+903:		neg a1381
 905:	
 
-printArgument$249:	; Parameter 44 £temporary2099 28
-906:		mov [bp + 72], a1378
+printArgument$249:	; Parameter 44 £temporary2080 28
+906:		mov [bp + 72], a1381
 908:	
 
 printArgument$250:	; Call 44 isupper 22
@@ -2986,11 +2986,11 @@ printArgument$250:	; Call 44 isupper 22
 printArgument$251:	; PostCall 44
 916:	
 
-printArgument$252:	; GetReturnValue £temporary2100
+printArgument$252:	; GetReturnValue £temporary2081
 921:	
 
-printArgument$253:	; Parameter 44 £temporary2100 22
-922:		mov [bp + 66], t1380
+printArgument$253:	; Parameter 44 £temporary2081 22
+922:		mov [bp + 66], t1383
 924:	
 
 printArgument$254:	; Call 44 printLongDoubleExpo 0
@@ -3003,8 +3003,8 @@ printArgument$254:	; Call 44 printLongDoubleExpo 0
 printArgument$255:	; PostCall 44
 932:	
 
-printArgument$256:	; Goto 359
-933:		jmp printArgument$359
+printArgument$256:	; Goto 360
+933:		jmp printArgument$360
 935:	
 
 printArgument$257:	; CallHeader 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -3031,10 +3031,10 @@ printArgument$261:	; Call 44 fabs 0
 printArgument$262:	; PostCall 44
 953:	
 
-printArgument$263:	; GetReturnValue £temporary2102
+printArgument$263:	; GetReturnValue £temporary2083
 955:	
 
-printArgument$264:	; Parameter 44 £temporary2102 6
+printArgument$264:	; Parameter 44 £temporary2083 6
 956:		fstp qword [bp + 50]
 958:	
 
@@ -3048,16 +3048,16 @@ printArgument$265:	; Call 44 log10 0
 printArgument$266:	; PostCall 44
 966:	
 
-printArgument$267:	; GetReturnValue £temporary2103
+printArgument$267:	; GetReturnValue £temporary2084
 968:	
 
-printArgument$268:	; FloatingToIntegral £temporary2104 £temporary2103
+printArgument$268:	; FloatingToIntegral £temporary2085 £temporary2084
 969:		fistp word [container2bytes#]
-970:		mov t1381, [container2bytes#]
+970:		mov t1384, [container2bytes#]
 972:	
 
-printArgument$269:	; Assign expo £temporary2104
-973:		mov [bp + 44], t1381
+printArgument$269:	; Assign expo £temporary2085
+973:		mov [bp + 44], t1384
 975:	
 
 printArgument$270:	; SignedLessThan 282 expo -3
@@ -3082,23 +3082,23 @@ printArgument$274:	; Parameter 46 longDoubleValue 6
 991:	
 
 printArgument$275:	; Parameter 46 plus 14
-992:		mov a1382, [bp + 10]
-993:		mov [bp + 60], a1382
+992:		mov a1385, [bp + 10]
+993:		mov [bp + 60], a1385
 995:	
 
 printArgument$276:	; Parameter 46 space 16
-996:		mov a1383, [bp + 12]
-997:		mov [bp + 62], a1383
+996:		mov a1386, [bp + 12]
+997:		mov [bp + 62], a1386
 999:	
 
 printArgument$277:	; Parameter 46 grid 18
-1000:		mov a1384, [bp + 14]
-1001:		mov [bp + 64], a1384
+1000:		mov a1387, [bp + 14]
+1001:		mov [bp + 64], a1387
 1003:	
 
 printArgument$278:	; Parameter 46 precision 20
-1004:		mov a1385, [bp + 18]
-1005:		mov [bp + 66], a1385
+1004:		mov a1388, [bp + 18]
+1005:		mov [bp + 66], a1388
 1007:	
 
 printArgument$279:	; Call 46 printLongDoublePlain 0
@@ -3111,8 +3111,8 @@ printArgument$279:	; Call 46 printLongDoublePlain 0
 printArgument$280:	; PostCall 46
 1015:	
 
-printArgument$281:	; Goto 359
-1016:		jmp printArgument$359
+printArgument$281:	; Goto 360
+1016:		jmp printArgument$360
 1018:	
 
 printArgument$282:	; CallHeader 46 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -3127,39 +3127,39 @@ printArgument$284:	; Parameter 46 longDoubleValue 6
 1026:	
 
 printArgument$285:	; Parameter 46 plus 14
-1027:		mov a1386, [bp + 10]
-1028:		mov [bp + 60], a1386
+1027:		mov a1389, [bp + 10]
+1028:		mov [bp + 60], a1389
 1030:	
 
 printArgument$286:	; Parameter 46 space 16
-1031:		mov a1387, [bp + 12]
-1032:		mov [bp + 62], a1387
+1031:		mov a1390, [bp + 12]
+1032:		mov [bp + 62], a1390
 1034:	
 
 printArgument$287:	; Parameter 46 grid 18
-1035:		mov a1388, [bp + 14]
-1036:		mov [bp + 64], a1388
+1035:		mov a1391, [bp + 14]
+1036:		mov [bp + 64], a1391
 1038:	
 
 printArgument$288:	; Parameter 46 precision 20
-1039:		mov a1389, [bp + 18]
-1040:		mov [bp + 66], a1389
+1039:		mov a1392, [bp + 18]
+1040:		mov [bp + 66], a1392
 1042:	
 
 printArgument$289:	; CallHeader 46 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1044:	
 
-printArgument$290:	; IntegralToIntegral £temporary2109 c
-1045:		mov a1390, [bp + 30]
-1047:		and a1390, 255
-1049:		cmp a1390, 0
+printArgument$290:	; IntegralToIntegral £temporary2090 c
+1045:		mov a1393, [bp + 30]
+1047:		and a1393, 255
+1049:		cmp a1393, 0
 1050:		jge printArgument$291
-1051:		neg a1390
-1053:		neg a1390
+1051:		neg a1393
+1053:		neg a1393
 1055:	
 
-printArgument$291:	; Parameter 46 £temporary2109 28
-1056:		mov [bp + 74], a1390
+printArgument$291:	; Parameter 46 £temporary2090 28
+1056:		mov [bp + 74], a1393
 1058:	
 
 printArgument$292:	; Call 46 isupper 22
@@ -3172,11 +3172,11 @@ printArgument$292:	; Call 46 isupper 22
 printArgument$293:	; PostCall 46
 1066:	
 
-printArgument$294:	; GetReturnValue £temporary2110
+printArgument$294:	; GetReturnValue £temporary2091
 1071:	
 
-printArgument$295:	; Parameter 46 £temporary2110 22
-1072:		mov [bp + 68], t1392
+printArgument$295:	; Parameter 46 £temporary2091 22
+1072:		mov [bp + 68], t1395
 1074:	
 
 printArgument$296:	; Call 46 printLongDoubleExpo 0
@@ -3189,50 +3189,50 @@ printArgument$296:	; Call 46 printLongDoubleExpo 0
 printArgument$297:	; PostCall 46
 1082:	
 
-printArgument$298:	; Goto 359
-1083:		jmp printArgument$359
+printArgument$298:	; Goto 360
+1083:		jmp printArgument$360
 1085:	
 
 printArgument$299:	; BinaryAdd arg_list arg_list 2
 1086:		add word [bp + 8], 2
 1088:	
 
-printArgument$300:	; BinarySubtract £temporary2113 arg_list 2
-1089:		mov a1393, [bp + 8]
-1090:		sub a1393, 2
+printArgument$300:	; BinarySubtract £temporary2094 arg_list 2
+1089:		mov a1396, [bp + 8]
+1090:		sub a1396, 2
 1092:	
 
-printArgument$301:	; IntegralToIntegral £temporary2114 £temporary2113
+printArgument$301:	; IntegralToIntegral £temporary2095 £temporary2094
 1095:	
 
-printArgument$302:	; Deref £temporary2115 -> £temporary2114 £temporary2114 0
+printArgument$302:	; Deref £temporary2096 -> £temporary2095 £temporary2095 0
 1097:	
 
-printArgument$303:	; Assign ptrValue £temporary2115 -> £temporary2114
-1098:		mov t1394, [a1393]
-1099:		mov [bp + 42], t1394
+printArgument$303:	; Assign ptrValue £temporary2096 -> £temporary2095
+1098:		mov t1397, [a1396]
+1099:		mov [bp + 42], t1397
 1101:	
 
 printArgument$304:	; CallHeader 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1103:	
 
 printArgument$305:	; Parameter 44 arg_list 6
-1104:		mov a1395, [bp + 8]
-1105:		mov [bp + 50], a1395
+1104:		mov a1398, [bp + 8]
+1105:		mov [bp + 50], a1398
 1107:	
 
 printArgument$306:	; Parameter 44 widthPtr 8
-1108:		mov a1396, [bp + 16]
-1109:		mov [bp + 52], a1396
+1108:		mov a1399, [bp + 16]
+1109:		mov [bp + 52], a1399
 1111:	
 
-printArgument$307:	; address £temporary2116 precision
-1112:		mov t1397, bp
-1113:		add t1397, 18
+printArgument$307:	; address £temporary2097 precision
+1112:		mov t1400, bp
+1113:		add t1400, 18
 1115:	
 
-printArgument$308:	; Parameter 44 £temporary2116 10
-1116:		mov [bp + 54], t1397
+printArgument$308:	; Parameter 44 £temporary2097 10
+1116:		mov [bp + 54], t1400
 1118:	
 
 printArgument$309:	; Call 44 checkWidthAndPrecision 0
@@ -3245,219 +3245,222 @@ printArgument$309:	; Call 44 checkWidthAndPrecision 0
 printArgument$310:	; PostCall 44
 1126:	
 
-printArgument$311:	; GetReturnValue £temporary2117
+printArgument$311:	; GetReturnValue £temporary2098
 1131:	
 
-printArgument$312:	; Assign arg_list £temporary2117
-1132:		mov [bp + 8], t1399
+printArgument$312:	; Assign arg_list £temporary2098
+1132:		mov [bp + 8], t1402
 1134:	
 
 printArgument$313:	; CallHeader 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1136:	
 
-printArgument$314:	; IntegralToIntegral £temporary2118 ptrValue
-1137:		mov a1400, [bp + 42]
-1139:		and a1400, 65535
-1141:	
+printArgument$314:	; IntegralToIntegral £temporary2099 ptrValue
+1137:		mov a1403, [bp + 42]
+1140:	
 
-printArgument$315:	; Parameter 44 £temporary2118 6
-1142:		mov [bp + 50], a1400
+printArgument$315:	; IntegralToIntegral £temporary2100 £temporary2099
+1142:		and a1403, 65535
 1144:	
 
-printArgument$316:	; Parameter 44 0 10
-1145:		mov word [bp + 54], 0
+printArgument$316:	; Parameter 44 £temporary2100 6
+1145:		mov [bp + 50], a1403
 1147:	
 
-printArgument$317:	; Parameter 44 0 12
-1148:		mov word [bp + 56], 0
+printArgument$317:	; Parameter 44 0 10
+1148:		mov word [bp + 54], 0
 1150:	
 
-printArgument$318:	; Parameter 44 0 14
-1151:		mov word [bp + 58], 0
+printArgument$318:	; Parameter 44 0 12
+1151:		mov word [bp + 56], 0
 1153:	
 
-printArgument$319:	; Parameter 44 10 16
-1154:		mov dword [bp + 60], 10
+printArgument$319:	; Parameter 44 0 14
+1154:		mov word [bp + 58], 0
 1156:	
 
-printArgument$320:	; Parameter 44 0 20
-1157:		mov word [bp + 64], 0
+printArgument$320:	; Parameter 44 10 16
+1157:		mov dword [bp + 60], 10
 1159:	
 
-printArgument$321:	; Call 44 printUnsignedLong 0
-1160:		mov word [bp + 44], printArgument$322
-1161:		mov [bp + 46], bp
-1162:		add bp, 44
-1163:		jmp printUnsignedLong
-1165:	
+printArgument$321:	; Parameter 44 0 20
+1160:		mov word [bp + 64], 0
+1162:	
 
-printArgument$322:	; PostCall 44
-1167:	
+printArgument$322:	; Call 44 printUnsignedLong 0
+1163:		mov word [bp + 44], printArgument$323
+1164:		mov [bp + 46], bp
+1165:		add bp, 44
+1166:		jmp printUnsignedLong
+1168:	
 
-printArgument$323:	; Goto 359
-1168:		jmp printArgument$359
+printArgument$323:	; PostCall 44
 1170:	
 
-printArgument$324:	; BinaryAdd arg_list arg_list 2
-1171:		add word [bp + 8], 2
+printArgument$324:	; Goto 360
+1171:		jmp printArgument$360
 1173:	
 
-printArgument$325:	; BinarySubtract £temporary2121 arg_list 2
-1174:		mov a1401, [bp + 8]
-1175:		sub a1401, 2
-1177:	
+printArgument$325:	; BinaryAdd arg_list arg_list 2
+1174:		add word [bp + 8], 2
+1176:	
 
-printArgument$326:	; IntegralToIntegral £temporary2122 £temporary2121
+printArgument$326:	; BinarySubtract £temporary2103 arg_list 2
+1177:		mov a1404, [bp + 8]
+1178:		sub a1404, 2
 1180:	
 
-printArgument$327:	; Deref £temporary2123 -> £temporary2122 £temporary2122 0
-1182:	
+printArgument$327:	; IntegralToIntegral £temporary2104 £temporary2103
+1183:	
 
-printArgument$328:	; Assign ptrValue £temporary2123 -> £temporary2122
-1183:		mov t1402, [a1401]
-1184:		mov [bp + 42], t1402
-1186:	
+printArgument$328:	; Deref £temporary2105 -> £temporary2104 £temporary2104 0
+1185:	
 
-printArgument$329:	; BinaryAdd arg_list arg_list 2
-1187:		add word [bp + 8], 2
+printArgument$329:	; Assign ptrValue £temporary2105 -> £temporary2104
+1186:		mov t1405, [a1404]
+1187:		mov [bp + 42], t1405
 1189:	
 
-printArgument$330:	; BinarySubtract £temporary2125 arg_list 2
-1190:		mov a1403, [bp + 8]
-1191:		sub a1403, 2
-1193:	
+printArgument$330:	; BinaryAdd arg_list arg_list 2
+1190:		add word [bp + 8], 2
+1192:	
 
-printArgument$331:	; IntegralToIntegral £temporary2126 £temporary2125
+printArgument$331:	; BinarySubtract £temporary2107 arg_list 2
+1193:		mov a1406, [bp + 8]
+1194:		sub a1406, 2
 1196:	
 
-printArgument$332:	; Deref £temporary2127 -> £temporary2126 £temporary2126 0
-1198:	
+printArgument$332:	; IntegralToIntegral £temporary2108 £temporary2107
+1199:	
 
-printArgument$333:	; Assign intPtr £temporary2127 -> £temporary2126
-1199:		mov t1404, [a1403]
-1200:		mov [bp + 32], t1404
-1202:	
+printArgument$333:	; Deref £temporary2109 -> £temporary2108 £temporary2108 0
+1201:	
 
-printArgument$334:	; CallHeader 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-1204:	
+printArgument$334:	; Assign intPtr £temporary2109 -> £temporary2108
+1202:		mov t1407, [a1406]
+1203:		mov [bp + 32], t1407
+1205:	
 
-printArgument$335:	; Parameter 44 arg_list 6
-1205:		mov a1405, [bp + 8]
-1206:		mov [bp + 50], a1405
-1208:	
+printArgument$335:	; CallHeader 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1207:	
 
-printArgument$336:	; Parameter 44 widthPtr 8
-1209:		mov a1406, [bp + 16]
-1210:		mov [bp + 52], a1406
-1212:	
+printArgument$336:	; Parameter 44 arg_list 6
+1208:		mov a1408, [bp + 8]
+1209:		mov [bp + 50], a1408
+1211:	
 
-printArgument$337:	; address £temporary2128 precision
-1213:		mov t1407, bp
-1214:		add t1407, 18
-1216:	
+printArgument$337:	; Parameter 44 widthPtr 8
+1212:		mov a1409, [bp + 16]
+1213:		mov [bp + 52], a1409
+1215:	
 
-printArgument$338:	; Parameter 44 £temporary2128 10
-1217:		mov [bp + 54], t1407
+printArgument$338:	; address £temporary2110 precision
+1216:		mov t1410, bp
+1217:		add t1410, 18
 1219:	
 
-printArgument$339:	; Call 44 checkWidthAndPrecision 0
-1220:		mov word [bp + 44], printArgument$340
-1221:		mov [bp + 46], bp
-1222:		add bp, 44
-1223:		jmp checkWidthAndPrecision
-1225:	
+printArgument$339:	; Parameter 44 £temporary2110 10
+1220:		mov [bp + 54], t1410
+1222:	
 
-printArgument$340:	; PostCall 44
-1227:	
+printArgument$340:	; Call 44 checkWidthAndPrecision 0
+1223:		mov word [bp + 44], printArgument$341
+1224:		mov [bp + 46], bp
+1225:		add bp, 44
+1226:		jmp checkWidthAndPrecision
+1228:	
 
-printArgument$341:	; GetReturnValue £temporary2129
-1232:	
+printArgument$341:	; PostCall 44
+1230:	
 
-printArgument$342:	; Assign arg_list £temporary2129
-1233:		mov [bp + 8], t1409
+printArgument$342:	; GetReturnValue £temporary2111
 1235:	
 
-printArgument$343:	; Deref £temporary2130 -> intPtr intPtr 0
-1236:		mov a1410, [bp + 32]
+printArgument$343:	; Assign arg_list £temporary2111
+1236:		mov [bp + 8], t1412
 1238:	
 
-printArgument$344:	; Assign £temporary2130 -> intPtr g_outChars
-1239:		mov a1411, [g_outChars]
-1240:		mov [a1410], a1411
-1242:	
+printArgument$344:	; Deref £temporary2112 -> intPtr intPtr 0
+1239:		mov a1413, [bp + 32]
+1241:	
 
-printArgument$345:	; Goto 359
-1243:		jmp printArgument$359
+printArgument$345:	; Assign £temporary2112 -> intPtr g_outChars
+1242:		mov a1414, [g_outChars]
+1243:		mov [a1413], a1414
 1245:	
 
-printArgument$346:	; CallHeader 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-1247:	
+printArgument$346:	; Goto 360
+1246:		jmp printArgument$360
+1248:	
 
-printArgument$347:	; Parameter 44 arg_list 6
-1248:		mov a1412, [bp + 8]
-1249:		mov [bp + 50], a1412
-1251:	
+printArgument$347:	; CallHeader 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1250:	
 
-printArgument$348:	; Parameter 44 widthPtr 8
-1252:		mov a1413, [bp + 16]
-1253:		mov [bp + 52], a1413
-1255:	
+printArgument$348:	; Parameter 44 arg_list 6
+1251:		mov a1415, [bp + 8]
+1252:		mov [bp + 50], a1415
+1254:	
 
-printArgument$349:	; address £temporary2131 precision
-1256:		mov t1414, bp
-1257:		add t1414, 18
-1259:	
+printArgument$349:	; Parameter 44 widthPtr 8
+1255:		mov a1416, [bp + 16]
+1256:		mov [bp + 52], a1416
+1258:	
 
-printArgument$350:	; Parameter 44 £temporary2131 10
-1260:		mov [bp + 54], t1414
+printArgument$350:	; address £temporary2113 precision
+1259:		mov t1417, bp
+1260:		add t1417, 18
 1262:	
 
-printArgument$351:	; Call 44 checkWidthAndPrecision 0
-1263:		mov word [bp + 44], printArgument$352
-1264:		mov [bp + 46], bp
-1265:		add bp, 44
-1266:		jmp checkWidthAndPrecision
-1268:	
+printArgument$351:	; Parameter 44 £temporary2113 10
+1263:		mov [bp + 54], t1417
+1265:	
 
-printArgument$352:	; PostCall 44
-1270:	
+printArgument$352:	; Call 44 checkWidthAndPrecision 0
+1266:		mov word [bp + 44], printArgument$353
+1267:		mov [bp + 46], bp
+1268:		add bp, 44
+1269:		jmp checkWidthAndPrecision
+1271:	
 
-printArgument$353:	; GetReturnValue £temporary2132
-1275:	
+printArgument$353:	; PostCall 44
+1273:	
 
-printArgument$354:	; Assign arg_list £temporary2132
-1276:		mov [bp + 8], t1416
+printArgument$354:	; GetReturnValue £temporary2114
 1278:	
 
-printArgument$355:	; CallHeader 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-1280:	
+printArgument$355:	; Assign arg_list £temporary2114
+1279:		mov [bp + 8], t1419
+1281:	
 
-printArgument$356:	; Parameter 44 37 6
-1281:		mov byte [bp + 50], 37
+printArgument$356:	; CallHeader 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1283:	
 
-printArgument$357:	; Call 44 printChar 0
-1284:		mov word [bp + 44], printArgument$358
-1285:		mov [bp + 46], bp
-1286:		add bp, 44
-1287:		jmp printChar
-1289:	
+printArgument$357:	; Parameter 44 37 6
+1284:		mov byte [bp + 50], 37
+1286:	
 
-printArgument$358:	; PostCall 44
-1291:	
+printArgument$358:	; Call 44 printChar 0
+1287:		mov word [bp + 44], printArgument$359
+1288:		mov [bp + 46], bp
+1289:		add bp, 44
+1290:		jmp printChar
+1292:	
 
-printArgument$359:	; SetReturnValue arg_list
-1292:		mov a1417, [bp + 8]
+printArgument$359:	; PostCall 44
 1294:	
 
-printArgument$360:	; Return arg_list
-1295:		mov t1418, [bp]
-1296:		mov di, [bp + 4]
-1297:		mov bp, [bp + 2]
-1298:		jmp t1418
-1300:	
+printArgument$360:	; SetReturnValue arg_list
+1295:		mov a1420, [bp + 8]
+1297:	
 
-printArgument$361:	; FunctionEnd printArgument
+printArgument$361:	; Return arg_list
+1298:		mov t1421, [bp]
+1299:		mov di, [bp + 4]
+1300:		mov bp, [bp + 2]
+1301:		jmp t1421
+1303:	
+
+printArgument$362:	; FunctionEnd printArgument
 1:	
 
 printFormat:	; Assign width 0
@@ -3524,30 +3527,30 @@ printFormat$15:	; Assign index 0
 47:		mov word [bp + 10], 0
 49:	
 
-printFormat$16:	; BinaryAdd £temporary2221 format index
-50:		mov a1419, [bp + 6]
-51:		add a1419, [bp + 10]
+printFormat$16:	; BinaryAdd £temporary2203 format index
+50:		mov a1422, [bp + 6]
+51:		add a1422, [bp + 10]
 53:	
 
-printFormat$17:	; Deref £temporary2220 -> £temporary2221 £temporary2221 0
+printFormat$17:	; Deref £temporary2202 -> £temporary2203 £temporary2203 0
 55:	
 
-printFormat$18:	; Equal 285 £temporary2220 -> £temporary2221 0
-56:		cmp byte [a1419], 0
+printFormat$18:	; Equal 285 £temporary2202 -> £temporary2203 0
+56:		cmp byte [a1422], 0
 57:		je printFormat$285
 59:	
 
-printFormat$19:	; BinaryAdd £temporary2225 format index
-60:		mov a1420, [bp + 6]
-61:		add a1420, [bp + 10]
+printFormat$19:	; BinaryAdd £temporary2207 format index
+60:		mov a1423, [bp + 6]
+61:		add a1423, [bp + 10]
 63:	
 
-printFormat$20:	; Deref £temporary2224 -> £temporary2225 £temporary2225 0
+printFormat$20:	; Deref £temporary2206 -> £temporary2207 £temporary2207 0
 65:	
 
-printFormat$21:	; Assign c £temporary2224 -> £temporary2225
-66:		mov t1421, [a1420]
-67:		mov [bp + 40], t1421
+printFormat$21:	; Assign c £temporary2206 -> £temporary2207
+66:		mov t1424, [a1423]
+67:		mov [bp + 40], t1424
 69:	
 
 printFormat$22:	; Equal 263 percent 0
@@ -3556,138 +3559,138 @@ printFormat$22:	; Equal 263 percent 0
 73:	
 
 printFormat$23:	; Case 52 c 43
-74:		mov a1422, [bp + 40]
-75:		cmp a1422, 43
+74:		mov a1425, [bp + 40]
+75:		cmp a1425, 43
 76:		je printFormat$52
 78:	
 
 printFormat$24:	; Case 54 c 45
-79:		cmp a1422, 45
+79:		cmp a1425, 45
 80:		je printFormat$54
 82:	
 
 printFormat$25:	; Case 56 c 32
-83:		cmp a1422, 32
+83:		cmp a1425, 32
 84:		je printFormat$56
 86:	
 
 printFormat$26:	; Case 58 c 48
-87:		cmp a1422, 48
+87:		cmp a1425, 48
 88:		je printFormat$58
 90:	
 
 printFormat$27:	; Case 60 c 35
-91:		cmp a1422, 35
+91:		cmp a1425, 35
 92:		je printFormat$60
 94:	
 
 printFormat$28:	; Case 62 c 46
-95:		cmp a1422, 46
+95:		cmp a1425, 46
 96:		je printFormat$62
 98:	
 
 printFormat$29:	; Case 64 c 42
-99:		cmp a1422, 42
+99:		cmp a1425, 42
 100:		je printFormat$64
 102:	
 
 printFormat$30:	; Case 69 c 104
-103:		cmp a1422, 104
+103:		cmp a1425, 104
 104:		je printFormat$69
 106:	
 
 printFormat$31:	; Case 71 c 108
-107:		cmp a1422, 108
+107:		cmp a1425, 108
 108:		je printFormat$71
 110:	
 
 printFormat$32:	; Case 73 c 76
-111:		cmp a1422, 76
+111:		cmp a1425, 76
 112:		je printFormat$73
 114:	
 
 printFormat$33:	; Case 75 c 37
-115:		cmp a1422, 37
+115:		cmp a1425, 37
 116:		je printFormat$75
 118:	
 
 printFormat$34:	; Case 75 c 110
-119:		cmp a1422, 110
+119:		cmp a1425, 110
 120:		je printFormat$75
 122:	
 
 printFormat$35:	; Case 75 c 112
-123:		cmp a1422, 112
+123:		cmp a1425, 112
 124:		je printFormat$75
 126:	
 
 printFormat$36:	; Case 75 c 71
-127:		cmp a1422, 71
+127:		cmp a1425, 71
 128:		je printFormat$75
 130:	
 
 printFormat$37:	; Case 75 c 103
-131:		cmp a1422, 103
+131:		cmp a1425, 103
 132:		je printFormat$75
 134:	
 
 printFormat$38:	; Case 75 c 69
-135:		cmp a1422, 69
+135:		cmp a1425, 69
 136:		je printFormat$75
 138:	
 
 printFormat$39:	; Case 75 c 101
-139:		cmp a1422, 101
+139:		cmp a1425, 101
 140:		je printFormat$75
 142:	
 
 printFormat$40:	; Case 75 c 102
-143:		cmp a1422, 102
+143:		cmp a1425, 102
 144:		je printFormat$75
 146:	
 
 printFormat$41:	; Case 75 c 115
-147:		cmp a1422, 115
+147:		cmp a1425, 115
 148:		je printFormat$75
 150:	
 
 printFormat$42:	; Case 75 c 99
-151:		cmp a1422, 99
+151:		cmp a1425, 99
 152:		je printFormat$75
 154:	
 
 printFormat$43:	; Case 75 c 88
-155:		cmp a1422, 88
+155:		cmp a1425, 88
 156:		je printFormat$75
 158:	
 
 printFormat$44:	; Case 75 c 120
-159:		cmp a1422, 120
+159:		cmp a1425, 120
 160:		je printFormat$75
 162:	
 
 printFormat$45:	; Case 75 c 111
-163:		cmp a1422, 111
+163:		cmp a1425, 111
 164:		je printFormat$75
 166:	
 
 printFormat$46:	; Case 75 c 98
-167:		cmp a1422, 98
+167:		cmp a1425, 98
 168:		je printFormat$75
 170:	
 
 printFormat$47:	; Case 75 c 117
-171:		cmp a1422, 117
+171:		cmp a1425, 117
 172:		je printFormat$75
 174:	
 
 printFormat$48:	; Case 75 c 100
-175:		cmp a1422, 100
+175:		cmp a1425, 100
 176:		je printFormat$75
 178:	
 
 printFormat$49:	; Case 75 c 105
-179:		cmp a1422, 105
+179:		cmp a1425, 105
 180:		je printFormat$75
 182:	
 
@@ -3797,75 +3800,75 @@ printFormat$75:	; Equal 107 minus 0
 261:	
 
 printFormat$76:	; Assign startChars g_outChars
-262:		mov a1423, [g_outChars]
-263:		mov [bp + 41], a1423
+262:		mov a1426, [g_outChars]
+263:		mov [bp + 41], a1426
 265:	
 
 printFormat$77:	; CallHeader 43 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 267:	
 
-printFormat$78:	; BinaryAdd £temporary2229 format index
-268:		mov a1424, [bp + 6]
-269:		add a1424, [bp + 10]
+printFormat$78:	; BinaryAdd £temporary2211 format index
+268:		mov a1427, [bp + 6]
+269:		add a1427, [bp + 10]
 271:	
 
-printFormat$79:	; Deref £temporary2228 -> £temporary2229 £temporary2229 0
+printFormat$79:	; Deref £temporary2210 -> £temporary2211 £temporary2211 0
 273:	
 
-printFormat$80:	; address £temporary2230 £temporary2228 -> £temporary2229
+printFormat$80:	; address £temporary2212 £temporary2210 -> £temporary2211
 275:	
 
-printFormat$81:	; Parameter 43 £temporary2230 6
-276:		mov [bp + 49], a1424
+printFormat$81:	; Parameter 43 £temporary2212 6
+276:		mov [bp + 49], a1427
 278:	
 
 printFormat$82:	; Parameter 43 arg_list 8
-279:		mov a1425, [bp + 8]
-280:		mov [bp + 51], a1425
+279:		mov a1428, [bp + 8]
+280:		mov [bp + 51], a1428
 282:	
 
 printFormat$83:	; Parameter 43 plus 10
-283:		mov a1426, [bp + 18]
-284:		mov [bp + 53], a1426
+283:		mov a1429, [bp + 18]
+284:		mov [bp + 53], a1429
 286:	
 
 printFormat$84:	; Parameter 43 space 12
-287:		mov a1427, [bp + 22]
-288:		mov [bp + 55], a1427
+287:		mov a1430, [bp + 22]
+288:		mov [bp + 55], a1430
 290:	
 
 printFormat$85:	; Parameter 43 grid 14
-291:		mov a1428, [bp + 26]
-292:		mov [bp + 57], a1428
+291:		mov a1431, [bp + 26]
+292:		mov [bp + 57], a1431
 294:	
 
-printFormat$86:	; address £temporary2231 width
-295:		mov t1429, bp
-296:		add t1429, 12
+printFormat$86:	; address £temporary2213 width
+295:		mov t1432, bp
+296:		add t1432, 12
 298:	
 
-printFormat$87:	; Parameter 43 £temporary2231 16
-299:		mov [bp + 59], t1429
+printFormat$87:	; Parameter 43 £temporary2213 16
+299:		mov [bp + 59], t1432
 301:	
 
 printFormat$88:	; Parameter 43 precision 18
-302:		mov a1430, [bp + 14]
-303:		mov [bp + 61], a1430
+302:		mov a1433, [bp + 14]
+303:		mov [bp + 61], a1433
 305:	
 
 printFormat$89:	; Parameter 43 shortInt 20
-306:		mov a1431, [bp + 34]
-307:		mov [bp + 63], a1431
+306:		mov a1434, [bp + 34]
+307:		mov [bp + 63], a1434
 309:	
 
 printFormat$90:	; Parameter 43 longInt 22
-310:		mov a1432, [bp + 36]
-311:		mov [bp + 65], a1432
+310:		mov a1435, [bp + 36]
+311:		mov [bp + 65], a1435
 313:	
 
 printFormat$91:	; Parameter 43 longDouble 24
-314:		mov a1433, [bp + 38]
-315:		mov [bp + 67], a1433
+314:		mov a1436, [bp + 38]
+315:		mov [bp + 67], a1436
 317:	
 
 printFormat$92:	; Parameter 43 1 26
@@ -3886,29 +3889,29 @@ printFormat$94:	; Call 43 printArgument 0
 printFormat$95:	; PostCall 43
 331:	
 
-printFormat$96:	; GetReturnValue £temporary2232
+printFormat$96:	; GetReturnValue £temporary2214
 336:	
 
-printFormat$97:	; Assign arg_list £temporary2232
-337:		mov [bp + 8], t1435
+printFormat$97:	; Assign arg_list £temporary2214
+337:		mov [bp + 8], t1438
 339:	
 
 printFormat$98:	; BinarySubtract field g_outChars startChars
-340:		mov a1436, [g_outChars]
-341:		sub a1436, [bp + 41]
-342:		mov [bp + 43], a1436
+340:		mov a1439, [g_outChars]
+341:		sub a1439, [bp + 41]
+342:		mov [bp + 43], a1439
 344:	
 
-printFormat$99:	; Assign £temporary2234 field
-345:		mov t1437, [bp + 43]
+printFormat$99:	; Assign £temporary2216 field
+345:		mov t1440, [bp + 43]
 347:	
 
 printFormat$100:	; Increment field
 348:		inc word [bp + 43]
 350:	
 
-printFormat$101:	; SignedGreaterThanEqual 237 £temporary2234 width
-351:		cmp t1437, [bp + 12]
+printFormat$101:	; SignedGreaterThanEqual 237 £temporary2216 width
+351:		cmp t1440, [bp + 12]
 352:		jge printFormat$237
 354:	
 
@@ -3939,13 +3942,13 @@ printFormat$107:	; Equal 184 zero 0
 374:	
 
 printFormat$108:	; Assign startChars g_outChars
-375:		mov a1438, [g_outChars]
-376:		mov [bp + 41], a1438
+375:		mov a1441, [g_outChars]
+376:		mov [bp + 41], a1441
 378:	
 
 printFormat$109:	; Assign oldOutStatus g_outStatus
-379:		mov a1439, [g_outStatus]
-380:		mov [bp + 43], a1439
+379:		mov a1442, [g_outStatus]
+380:		mov [bp + 43], a1442
 382:	
 
 printFormat$110:	; Assign negative 0
@@ -3959,24 +3962,24 @@ printFormat$111:	; Assign g_outStatus 2
 printFormat$112:	; CallHeader 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 390:	
 
-printFormat$113:	; BinaryAdd £temporary2238 format index
-391:		mov a1440, [bp + 6]
-392:		add a1440, [bp + 10]
+printFormat$113:	; BinaryAdd £temporary2220 format index
+391:		mov a1443, [bp + 6]
+392:		add a1443, [bp + 10]
 394:	
 
-printFormat$114:	; Deref £temporary2237 -> £temporary2238 £temporary2238 0
+printFormat$114:	; Deref £temporary2219 -> £temporary2220 £temporary2220 0
 396:	
 
-printFormat$115:	; address £temporary2239 £temporary2237 -> £temporary2238
+printFormat$115:	; address £temporary2221 £temporary2219 -> £temporary2220
 398:	
 
-printFormat$116:	; Parameter 47 £temporary2239 6
-399:		mov [bp + 53], a1440
+printFormat$116:	; Parameter 47 £temporary2221 6
+399:		mov [bp + 53], a1443
 401:	
 
 printFormat$117:	; Parameter 47 arg_list 8
-402:		mov a1441, [bp + 8]
-403:		mov [bp + 55], a1441
+402:		mov a1444, [bp + 8]
+403:		mov [bp + 55], a1444
 405:	
 
 printFormat$118:	; Parameter 47 0 10
@@ -3988,50 +3991,50 @@ printFormat$119:	; Parameter 47 0 12
 411:	
 
 printFormat$120:	; Parameter 47 grid 14
-412:		mov a1442, [bp + 26]
-413:		mov [bp + 61], a1442
+412:		mov a1445, [bp + 26]
+413:		mov [bp + 61], a1445
 415:	
 
-printFormat$121:	; address £temporary2240 width
-416:		mov t1443, bp
-417:		add t1443, 12
+printFormat$121:	; address £temporary2222 width
+416:		mov t1446, bp
+417:		add t1446, 12
 419:	
 
-printFormat$122:	; Parameter 47 £temporary2240 16
-420:		mov [bp + 63], t1443
+printFormat$122:	; Parameter 47 £temporary2222 16
+420:		mov [bp + 63], t1446
 422:	
 
 printFormat$123:	; Parameter 47 precision 18
-423:		mov a1444, [bp + 14]
-424:		mov [bp + 65], a1444
+423:		mov a1447, [bp + 14]
+424:		mov [bp + 65], a1447
 426:	
 
 printFormat$124:	; Parameter 47 shortInt 20
-427:		mov a1445, [bp + 34]
-428:		mov [bp + 67], a1445
+427:		mov a1448, [bp + 34]
+428:		mov [bp + 67], a1448
 430:	
 
 printFormat$125:	; Parameter 47 longInt 22
-431:		mov a1446, [bp + 36]
-432:		mov [bp + 69], a1446
+431:		mov a1449, [bp + 36]
+432:		mov [bp + 69], a1449
 434:	
 
 printFormat$126:	; Parameter 47 longDouble 24
-435:		mov a1447, [bp + 38]
-436:		mov [bp + 71], a1447
+435:		mov a1450, [bp + 38]
+436:		mov [bp + 71], a1450
 438:	
 
 printFormat$127:	; Parameter 47 0 26
 439:		mov word [bp + 73], 0
 441:	
 
-printFormat$128:	; address £temporary2241 negative
-442:		mov t1448, bp
-443:		add t1448, 45
+printFormat$128:	; address £temporary2223 negative
+442:		mov t1451, bp
+443:		add t1451, 45
 445:	
 
-printFormat$129:	; Parameter 47 £temporary2241 28
-446:		mov [bp + 75], t1448
+printFormat$129:	; Parameter 47 £temporary2223 28
+446:		mov [bp + 75], t1451
 448:	
 
 printFormat$130:	; Call 47 printArgument 0
@@ -4045,19 +4048,19 @@ printFormat$131:	; PostCall 47
 456:	
 
 printFormat$132:	; Assign g_outStatus oldOutStatus
-457:		mov a1449, [bp + 43]
-458:		mov [g_outStatus], a1449
+457:		mov a1452, [bp + 43]
+458:		mov [g_outStatus], a1452
 460:	
 
 printFormat$133:	; BinarySubtract field g_outChars startChars
-461:		mov a1450, [g_outChars]
-462:		sub a1450, [bp + 41]
-463:		mov [bp + 47], a1450
+461:		mov a1453, [g_outChars]
+462:		sub a1453, [bp + 41]
+463:		mov [bp + 47], a1453
 465:	
 
 printFormat$134:	; Assign g_outChars startChars
-466:		mov a1451, [bp + 41]
-467:		mov [g_outChars], a1451
+466:		mov a1454, [bp + 41]
+467:		mov [g_outChars], a1454
 469:	
 
 printFormat$135:	; Equal 142 negative 0
@@ -4146,16 +4149,16 @@ printFormat$154:	; Increment field
 533:		inc word [bp + 47]
 535:	
 
-printFormat$155:	; Assign £temporary2253 field
-536:		mov t1452, [bp + 47]
+printFormat$155:	; Assign £temporary2235 field
+536:		mov t1455, [bp + 47]
 538:	
 
 printFormat$156:	; Increment field
 539:		inc word [bp + 47]
 541:	
 
-printFormat$157:	; SignedGreaterThanEqual 163 £temporary2253 width
-542:		cmp t1452, [bp + 12]
+printFormat$157:	; SignedGreaterThanEqual 163 £temporary2235 width
+542:		cmp t1455, [bp + 12]
 543:		jge printFormat$163
 545:	
 
@@ -4183,24 +4186,24 @@ printFormat$162:	; Goto 155
 printFormat$163:	; CallHeader 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 563:	
 
-printFormat$164:	; BinaryAdd £temporary2257 format index
-564:		mov a1453, [bp + 6]
-565:		add a1453, [bp + 10]
+printFormat$164:	; BinaryAdd £temporary2239 format index
+564:		mov a1456, [bp + 6]
+565:		add a1456, [bp + 10]
 567:	
 
-printFormat$165:	; Deref £temporary2256 -> £temporary2257 £temporary2257 0
+printFormat$165:	; Deref £temporary2238 -> £temporary2239 £temporary2239 0
 569:	
 
-printFormat$166:	; address £temporary2258 £temporary2256 -> £temporary2257
+printFormat$166:	; address £temporary2240 £temporary2238 -> £temporary2239
 571:	
 
-printFormat$167:	; Parameter 49 £temporary2258 6
-572:		mov [bp + 55], a1453
+printFormat$167:	; Parameter 49 £temporary2240 6
+572:		mov [bp + 55], a1456
 574:	
 
 printFormat$168:	; Parameter 49 arg_list 8
-575:		mov a1454, [bp + 8]
-576:		mov [bp + 57], a1454
+575:		mov a1457, [bp + 8]
+576:		mov [bp + 57], a1457
 578:	
 
 printFormat$169:	; Parameter 49 0 10
@@ -4212,8 +4215,8 @@ printFormat$170:	; Parameter 49 0 12
 584:	
 
 printFormat$171:	; Parameter 49 grid 14
-585:		mov a1455, [bp + 26]
-586:		mov [bp + 63], a1455
+585:		mov a1458, [bp + 26]
+586:		mov [bp + 63], a1458
 588:	
 
 printFormat$172:	; Parameter 49 0 16
@@ -4221,23 +4224,23 @@ printFormat$172:	; Parameter 49 0 16
 591:	
 
 printFormat$173:	; Parameter 49 precision 18
-592:		mov a1456, [bp + 14]
-593:		mov [bp + 67], a1456
+592:		mov a1459, [bp + 14]
+593:		mov [bp + 67], a1459
 595:	
 
 printFormat$174:	; Parameter 49 shortInt 20
-596:		mov a1457, [bp + 34]
-597:		mov [bp + 69], a1457
+596:		mov a1460, [bp + 34]
+597:		mov [bp + 69], a1460
 599:	
 
 printFormat$175:	; Parameter 49 longInt 22
-600:		mov a1458, [bp + 36]
-601:		mov [bp + 71], a1458
+600:		mov a1461, [bp + 36]
+601:		mov [bp + 71], a1461
 603:	
 
 printFormat$176:	; Parameter 49 longDouble 24
-604:		mov a1459, [bp + 38]
-605:		mov [bp + 73], a1459
+604:		mov a1462, [bp + 38]
+605:		mov [bp + 73], a1462
 607:	
 
 printFormat$177:	; Parameter 49 0 26
@@ -4258,11 +4261,11 @@ printFormat$179:	; Call 49 printArgument 0
 printFormat$180:	; PostCall 49
 621:	
 
-printFormat$181:	; GetReturnValue £temporary2259
+printFormat$181:	; GetReturnValue £temporary2241
 626:	
 
-printFormat$182:	; Assign arg_list £temporary2259
-627:		mov [bp + 8], t1461
+printFormat$182:	; Assign arg_list £temporary2241
+627:		mov [bp + 8], t1464
 629:	
 
 printFormat$183:	; Goto 237
@@ -4270,13 +4273,13 @@ printFormat$183:	; Goto 237
 632:	
 
 printFormat$184:	; Assign startChars g_outChars
-633:		mov a1462, [g_outChars]
-634:		mov [bp + 41], a1462
+633:		mov a1465, [g_outChars]
+634:		mov [bp + 41], a1465
 636:	
 
 printFormat$185:	; Assign oldOutStatus g_outStatus
-637:		mov a1463, [g_outStatus]
-638:		mov [bp + 43], a1463
+637:		mov a1466, [g_outStatus]
+638:		mov [bp + 43], a1466
 640:	
 
 printFormat$186:	; Assign g_outStatus 2
@@ -4286,68 +4289,68 @@ printFormat$186:	; Assign g_outStatus 2
 printFormat$187:	; CallHeader 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 645:	
 
-printFormat$188:	; BinaryAdd £temporary2261 format index
-646:		mov a1464, [bp + 6]
-647:		add a1464, [bp + 10]
+printFormat$188:	; BinaryAdd £temporary2243 format index
+646:		mov a1467, [bp + 6]
+647:		add a1467, [bp + 10]
 649:	
 
-printFormat$189:	; Deref £temporary2260 -> £temporary2261 £temporary2261 0
+printFormat$189:	; Deref £temporary2242 -> £temporary2243 £temporary2243 0
 651:	
 
-printFormat$190:	; address £temporary2262 £temporary2260 -> £temporary2261
+printFormat$190:	; address £temporary2244 £temporary2242 -> £temporary2243
 653:	
 
-printFormat$191:	; Parameter 45 £temporary2262 6
-654:		mov [bp + 51], a1464
+printFormat$191:	; Parameter 45 £temporary2244 6
+654:		mov [bp + 51], a1467
 656:	
 
 printFormat$192:	; Parameter 45 arg_list 8
-657:		mov a1465, [bp + 8]
-658:		mov [bp + 53], a1465
+657:		mov a1468, [bp + 8]
+658:		mov [bp + 53], a1468
 660:	
 
 printFormat$193:	; Parameter 45 plus 10
-661:		mov a1466, [bp + 18]
-662:		mov [bp + 55], a1466
+661:		mov a1469, [bp + 18]
+662:		mov [bp + 55], a1469
 664:	
 
 printFormat$194:	; Parameter 45 space 12
-665:		mov a1467, [bp + 22]
-666:		mov [bp + 57], a1467
+665:		mov a1470, [bp + 22]
+666:		mov [bp + 57], a1470
 668:	
 
 printFormat$195:	; Parameter 45 grid 14
-669:		mov a1468, [bp + 26]
-670:		mov [bp + 59], a1468
+669:		mov a1471, [bp + 26]
+670:		mov [bp + 59], a1471
 672:	
 
-printFormat$196:	; address £temporary2263 width
-673:		mov t1469, bp
-674:		add t1469, 12
+printFormat$196:	; address £temporary2245 width
+673:		mov t1472, bp
+674:		add t1472, 12
 676:	
 
-printFormat$197:	; Parameter 45 £temporary2263 16
-677:		mov [bp + 61], t1469
+printFormat$197:	; Parameter 45 £temporary2245 16
+677:		mov [bp + 61], t1472
 679:	
 
 printFormat$198:	; Parameter 45 precision 18
-680:		mov a1470, [bp + 14]
-681:		mov [bp + 63], a1470
+680:		mov a1473, [bp + 14]
+681:		mov [bp + 63], a1473
 683:	
 
 printFormat$199:	; Parameter 45 shortInt 20
-684:		mov a1471, [bp + 34]
-685:		mov [bp + 65], a1471
+684:		mov a1474, [bp + 34]
+685:		mov [bp + 65], a1474
 687:	
 
 printFormat$200:	; Parameter 45 longInt 22
-688:		mov a1472, [bp + 36]
-689:		mov [bp + 67], a1472
+688:		mov a1475, [bp + 36]
+689:		mov [bp + 67], a1475
 691:	
 
 printFormat$201:	; Parameter 45 longDouble 24
-692:		mov a1473, [bp + 38]
-693:		mov [bp + 69], a1473
+692:		mov a1476, [bp + 38]
+693:		mov [bp + 69], a1476
 695:	
 
 printFormat$202:	; Parameter 45 1 26
@@ -4369,31 +4372,31 @@ printFormat$205:	; PostCall 45
 709:	
 
 printFormat$206:	; Assign g_outStatus oldOutStatus
-710:		mov a1474, [bp + 43]
-711:		mov [g_outStatus], a1474
+710:		mov a1477, [bp + 43]
+711:		mov [g_outStatus], a1477
 713:	
 
 printFormat$207:	; BinarySubtract field g_outChars startChars
-714:		mov a1475, [g_outChars]
-715:		sub a1475, [bp + 41]
-716:		mov [bp + 45], a1475
+714:		mov a1478, [g_outChars]
+715:		sub a1478, [bp + 41]
+716:		mov [bp + 45], a1478
 718:	
 
 printFormat$208:	; Assign g_outChars startChars
-719:		mov a1476, [bp + 41]
-720:		mov [g_outChars], a1476
+719:		mov a1479, [bp + 41]
+720:		mov [g_outChars], a1479
 722:	
 
-printFormat$209:	; Assign £temporary2266 field
-723:		mov t1477, [bp + 45]
+printFormat$209:	; Assign £temporary2248 field
+723:		mov t1480, [bp + 45]
 725:	
 
 printFormat$210:	; Increment field
 726:		inc word [bp + 45]
 728:	
 
-printFormat$211:	; SignedGreaterThanEqual 217 £temporary2266 width
-729:		cmp t1477, [bp + 12]
+printFormat$211:	; SignedGreaterThanEqual 217 £temporary2248 width
+729:		cmp t1480, [bp + 12]
 730:		jge printFormat$217
 732:	
 
@@ -4421,39 +4424,39 @@ printFormat$216:	; Goto 209
 printFormat$217:	; CallHeader 47 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 750:	
 
-printFormat$218:	; BinaryAdd £temporary2270 format index
-751:		mov a1478, [bp + 6]
-752:		add a1478, [bp + 10]
+printFormat$218:	; BinaryAdd £temporary2252 format index
+751:		mov a1481, [bp + 6]
+752:		add a1481, [bp + 10]
 754:	
 
-printFormat$219:	; Deref £temporary2269 -> £temporary2270 £temporary2270 0
+printFormat$219:	; Deref £temporary2251 -> £temporary2252 £temporary2252 0
 756:	
 
-printFormat$220:	; address £temporary2271 £temporary2269 -> £temporary2270
+printFormat$220:	; address £temporary2253 £temporary2251 -> £temporary2252
 758:	
 
-printFormat$221:	; Parameter 47 £temporary2271 6
-759:		mov [bp + 53], a1478
+printFormat$221:	; Parameter 47 £temporary2253 6
+759:		mov [bp + 53], a1481
 761:	
 
 printFormat$222:	; Parameter 47 arg_list 8
-762:		mov a1479, [bp + 8]
-763:		mov [bp + 55], a1479
+762:		mov a1482, [bp + 8]
+763:		mov [bp + 55], a1482
 765:	
 
 printFormat$223:	; Parameter 47 plus 10
-766:		mov a1480, [bp + 18]
-767:		mov [bp + 57], a1480
+766:		mov a1483, [bp + 18]
+767:		mov [bp + 57], a1483
 769:	
 
 printFormat$224:	; Parameter 47 space 12
-770:		mov a1481, [bp + 22]
-771:		mov [bp + 59], a1481
+770:		mov a1484, [bp + 22]
+771:		mov [bp + 59], a1484
 773:	
 
 printFormat$225:	; Parameter 47 grid 14
-774:		mov a1482, [bp + 26]
-775:		mov [bp + 61], a1482
+774:		mov a1485, [bp + 26]
+775:		mov [bp + 61], a1485
 777:	
 
 printFormat$226:	; Parameter 47 0 16
@@ -4461,23 +4464,23 @@ printFormat$226:	; Parameter 47 0 16
 780:	
 
 printFormat$227:	; Parameter 47 precision 18
-781:		mov a1483, [bp + 14]
-782:		mov [bp + 65], a1483
+781:		mov a1486, [bp + 14]
+782:		mov [bp + 65], a1486
 784:	
 
 printFormat$228:	; Parameter 47 shortInt 20
-785:		mov a1484, [bp + 34]
-786:		mov [bp + 67], a1484
+785:		mov a1487, [bp + 34]
+786:		mov [bp + 67], a1487
 788:	
 
 printFormat$229:	; Parameter 47 longInt 22
-789:		mov a1485, [bp + 36]
-790:		mov [bp + 69], a1485
+789:		mov a1488, [bp + 36]
+790:		mov [bp + 69], a1488
 792:	
 
 printFormat$230:	; Parameter 47 longDouble 24
-793:		mov a1486, [bp + 38]
-794:		mov [bp + 71], a1486
+793:		mov a1489, [bp + 38]
+794:		mov [bp + 71], a1489
 796:	
 
 printFormat$231:	; Parameter 47 1 26
@@ -4498,11 +4501,11 @@ printFormat$233:	; Call 47 printArgument 0
 printFormat$234:	; PostCall 47
 810:	
 
-printFormat$235:	; GetReturnValue £temporary2272
+printFormat$235:	; GetReturnValue £temporary2254
 815:	
 
-printFormat$236:	; Assign arg_list £temporary2272
-816:		mov [bp + 8], t1488
+printFormat$236:	; Assign arg_list £temporary2254
+816:		mov [bp + 8], t1491
 818:	
 
 printFormat$237:	; Assign percent 0
@@ -4520,17 +4523,17 @@ printFormat$239:	; Assign value 0
 printFormat$240:	; CallHeader 43 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 829:	
 
-printFormat$241:	; IntegralToIntegral £temporary2275 c
-830:		mov a1489, [bp + 40]
-832:		and a1489, 255
-834:		cmp a1489, 0
+printFormat$241:	; IntegralToIntegral £temporary2257 c
+830:		mov a1492, [bp + 40]
+832:		and a1492, 255
+834:		cmp a1492, 0
 835:		jge printFormat$242
-836:		neg a1489
-838:		neg a1489
+836:		neg a1492
+838:		neg a1492
 840:	
 
-printFormat$242:	; Parameter 43 £temporary2275 6
-841:		mov [bp + 49], a1489
+printFormat$242:	; Parameter 43 £temporary2257 6
+841:		mov [bp + 49], a1492
 843:	
 
 printFormat$243:	; Call 43 isdigit 0
@@ -4543,57 +4546,57 @@ printFormat$243:	; Call 43 isdigit 0
 printFormat$244:	; PostCall 43
 851:	
 
-printFormat$245:	; GetReturnValue £temporary2276
+printFormat$245:	; GetReturnValue £temporary2258
 856:	
 
-printFormat$246:	; Equal 257 £temporary2276 0
-857:		cmp t1491, 0
+printFormat$246:	; Equal 257 £temporary2258 0
+857:		cmp t1494, 0
 858:		je printFormat$257
 860:	
 
-printFormat$247:	; SignedMultiply £temporary2277 value 10
-861:		mov a1492, [bp + 41]
+printFormat$247:	; SignedMultiply £temporary2259 value 10
+861:		mov a1495, [bp + 41]
 863:		xor dx, dx
 864:		imul word [int2$10#]
 870:	
 
-printFormat$248:	; BinarySubtract £temporary2278 c 48
-871:		mov a1496, [bp + 40]
-872:		sub a1496, 48
+printFormat$248:	; BinarySubtract £temporary2260 c 48
+871:		mov a1499, [bp + 40]
+872:		sub a1499, 48
 874:	
 
-printFormat$249:	; IntegralToIntegral £temporary2279 £temporary2278
-876:		and a1496, 255
-878:		cmp a1496, 0
+printFormat$249:	; IntegralToIntegral £temporary2261 £temporary2260
+876:		and a1499, 255
+878:		cmp a1499, 0
 879:		jge printFormat$250
-880:		neg a1496
-882:		neg a1496
+880:		neg a1499
+882:		neg a1499
 884:	
 
-printFormat$250:	; BinaryAdd value £temporary2277 £temporary2279
-885:		add t1495, a1496
-886:		mov [bp + 41], t1495
+printFormat$250:	; BinaryAdd value £temporary2259 £temporary2261
+885:		add t1498, a1499
+886:		mov [bp + 41], t1498
 888:	
 
 printFormat$251:	; Increment index
 889:		inc word [bp + 10]
 891:	
 
-printFormat$252:	; Assign £temporary2281 index
-892:		mov t1497, [bp + 10]
+printFormat$252:	; Assign £temporary2263 index
+892:		mov t1500, [bp + 10]
 894:	
 
-printFormat$253:	; BinaryAdd £temporary2283 format £temporary2281
-895:		mov a1498, [bp + 6]
-896:		add a1498, t1497
+printFormat$253:	; BinaryAdd £temporary2265 format £temporary2263
+895:		mov a1501, [bp + 6]
+896:		add a1501, t1500
 898:	
 
-printFormat$254:	; Deref £temporary2282 -> £temporary2283 £temporary2283 0
+printFormat$254:	; Deref £temporary2264 -> £temporary2265 £temporary2265 0
 900:	
 
-printFormat$255:	; Assign c £temporary2282 -> £temporary2283
-901:		mov t1499, [a1498]
-902:		mov [bp + 40], t1499
+printFormat$255:	; Assign c £temporary2264 -> £temporary2265
+901:		mov t1502, [a1501]
+902:		mov [bp + 40], t1502
 904:	
 
 printFormat$256:	; Goto 240
@@ -4610,8 +4613,8 @@ printFormat$258:	; NotEqual 261 period 0
 914:	
 
 printFormat$259:	; Assign width value
-915:		mov a1500, [bp + 41]
-916:		mov [bp + 12], a1500
+915:		mov a1503, [bp + 41]
+916:		mov [bp + 12], a1503
 918:	
 
 printFormat$260:	; Goto 283
@@ -4619,8 +4622,8 @@ printFormat$260:	; Goto 283
 921:	
 
 printFormat$261:	; Assign precision value
-922:		mov a1501, [bp + 41]
-923:		mov [bp + 14], a1501
+922:		mov a1504, [bp + 41]
+923:		mov [bp + 14], a1504
 925:	
 
 printFormat$262:	; Goto 283
@@ -4696,8 +4699,8 @@ printFormat$279:	; CallHeader 41 System.Collections.Generic.HashSet`1[CCompiler.
 979:	
 
 printFormat$280:	; Parameter 41 c 6
-980:		mov a1502, [bp + 40]
-981:		mov [bp + 47], a1502
+980:		mov a1505, [bp + 40]
+981:		mov [bp + 47], a1505
 983:	
 
 printFormat$281:	; Call 41 printChar 0
@@ -4723,64 +4726,64 @@ printFormat$285:	; NotEqual 291 g_outStatus 1
 999:		jne printFormat$291
 1001:	
 
-printFormat$286:	; IntegralToIntegral £temporary2292 g_outDevice
-1002:		mov a1503, [g_outDevice]
+printFormat$286:	; IntegralToIntegral £temporary2274 g_outDevice
+1002:		mov a1506, [g_outDevice]
 1005:	
 
-printFormat$287:	; Assign outString £temporary2292
-1006:		mov [bp + 40], a1503
+printFormat$287:	; Assign outString £temporary2274
+1006:		mov [bp + 40], a1506
 1008:	
 
-printFormat$288:	; BinaryAdd £temporary2294 outString g_outChars
-1009:		mov a1504, [bp + 40]
-1010:		add a1504, [g_outChars]
+printFormat$288:	; BinaryAdd £temporary2276 outString g_outChars
+1009:		mov a1507, [bp + 40]
+1010:		add a1507, [g_outChars]
 1012:	
 
-printFormat$289:	; Deref £temporary2293 -> £temporary2294 £temporary2294 0
+printFormat$289:	; Deref £temporary2275 -> £temporary2276 £temporary2276 0
 1014:	
 
-printFormat$290:	; Assign £temporary2293 -> £temporary2294 0
-1015:		mov byte [a1504], 0
+printFormat$290:	; Assign £temporary2275 -> £temporary2276 0
+1015:		mov byte [a1507], 0
 1017:	
 
 printFormat$291:	; SetReturnValue g_outChars
-1018:		mov a1505, [g_outChars]
+1018:		mov a1508, [g_outChars]
 1020:	
 
 printFormat$292:	; Return g_outChars
-1021:		mov t1506, [bp]
+1021:		mov t1509, [bp]
 1022:		mov di, [bp + 4]
 1023:		mov bp, [bp + 2]
-1024:		jmp t1506
+1024:		jmp t1509
 1026:	
 
 printFormat$293:	; FunctionEnd printFormat
 1:	
 
-printf:	; address £temporary2367 format
-2:		mov t1507, bp
-3:		add t1507, 6
+printf:	; address £temporary2349 format
+2:		mov t1510, bp
+3:		add t1510, 6
 5:	
 
-printf$1:	; IntegralToIntegral £temporary2368 £temporary2367
+printf$1:	; IntegralToIntegral £temporary2350 £temporary2349
 8:	
 
-printf$2:	; BinaryAdd arg_list £temporary2368 2
-9:		add t1507, 2
-10:		mov [di + 8], t1507
+printf$2:	; BinaryAdd arg_list £temporary2350 2
+9:		add t1510, 2
+10:		mov [di + 8], t1510
 12:	
 
 printf$3:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 14:	
 
 printf$4:	; Parameter 10 format 6
-15:		mov a1508, [bp + 6]
-16:		mov [di + 16], a1508
+15:		mov a1511, [bp + 6]
+16:		mov [di + 16], a1511
 18:	
 
 printf$5:	; Parameter 10 arg_list 8
-19:		mov a1509, [di + 8]
-20:		mov [di + 18], a1509
+19:		mov a1512, [di + 8]
+20:		mov [di + 18], a1512
 22:	
 
 printf$6:	; Call 10 vprintf 0
@@ -4795,17 +4798,17 @@ printf$6:	; Call 10 vprintf 0
 printf$7:	; PostCall 10
 32:	
 
-printf$8:	; GetReturnValue £temporary2370
+printf$8:	; GetReturnValue £temporary2352
 37:	
 
-printf$9:	; SetReturnValue £temporary2370
+printf$9:	; SetReturnValue £temporary2352
 39:	
 
-printf$10:	; Return £temporary2370
-40:		mov t1512, [bp]
+printf$10:	; Return £temporary2352
+40:		mov t1515, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t1512
+43:		jmp t1515
 45:	
 
 printf$11:	; FunctionEnd printf
@@ -4815,18 +4818,18 @@ vprintf:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 
 3:	
 
 vprintf$1:	; Parameter 10 stdout 6
-4:		mov a1513, [stdout]
-5:		mov [bp + 16], a1513
+4:		mov a1516, [stdout]
+5:		mov [bp + 16], a1516
 7:	
 
 vprintf$2:	; Parameter 10 format 8
-8:		mov a1514, [bp + 6]
-9:		mov [bp + 18], a1514
+8:		mov a1517, [bp + 6]
+9:		mov [bp + 18], a1517
 11:	
 
 vprintf$3:	; Parameter 10 arg_list 10
-12:		mov a1515, [bp + 8]
-13:		mov [bp + 20], a1515
+12:		mov a1518, [bp + 8]
+13:		mov [bp + 20], a1518
 15:	
 
 vprintf$4:	; Call 10 vfprintf 0
@@ -4839,51 +4842,51 @@ vprintf$4:	; Call 10 vfprintf 0
 vprintf$5:	; PostCall 10
 23:	
 
-vprintf$6:	; GetReturnValue £temporary2374
+vprintf$6:	; GetReturnValue £temporary2356
 28:	
 
-vprintf$7:	; SetReturnValue £temporary2374
+vprintf$7:	; SetReturnValue £temporary2356
 30:	
 
-vprintf$8:	; Return £temporary2374
-31:		mov t1518, [bp]
+vprintf$8:	; Return £temporary2356
+31:		mov t1521, [bp]
 32:		mov di, [bp + 4]
 33:		mov bp, [bp + 2]
-34:		jmp t1518
+34:		jmp t1521
 36:	
 
 vprintf$9:	; FunctionEnd vprintf
 1:	
 
-fprintf:	; address £temporary2378 format
-2:		mov t1519, bp
-3:		add t1519, 8
+fprintf:	; address £temporary2360 format
+2:		mov t1522, bp
+3:		add t1522, 8
 5:	
 
-fprintf$1:	; IntegralToIntegral £temporary2379 £temporary2378
+fprintf$1:	; IntegralToIntegral £temporary2361 £temporary2360
 8:	
 
-fprintf$2:	; BinaryAdd arg_list £temporary2379 2
-9:		add t1519, 2
-10:		mov [di + 10], t1519
+fprintf$2:	; BinaryAdd arg_list £temporary2361 2
+9:		add t1522, 2
+10:		mov [di + 10], t1522
 12:	
 
 fprintf$3:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 14:	
 
 fprintf$4:	; Parameter 12 outStream 6
-15:		mov a1520, [bp + 6]
-16:		mov [di + 18], a1520
+15:		mov a1523, [bp + 6]
+16:		mov [di + 18], a1523
 18:	
 
 fprintf$5:	; Parameter 12 format 8
-19:		mov a1521, [bp + 8]
-20:		mov [di + 20], a1521
+19:		mov a1524, [bp + 8]
+20:		mov [di + 20], a1524
 22:	
 
 fprintf$6:	; Parameter 12 arg_list 10
-23:		mov a1522, [di + 10]
-24:		mov [di + 22], a1522
+23:		mov a1525, [di + 10]
+24:		mov [di + 22], a1525
 26:	
 
 fprintf$7:	; Call 12 vfprintf 0
@@ -4898,17 +4901,17 @@ fprintf$7:	; Call 12 vfprintf 0
 fprintf$8:	; PostCall 12
 36:	
 
-fprintf$9:	; GetReturnValue £temporary2381
+fprintf$9:	; GetReturnValue £temporary2363
 41:	
 
-fprintf$10:	; SetReturnValue £temporary2381
+fprintf$10:	; SetReturnValue £temporary2363
 43:	
 
-fprintf$11:	; Return £temporary2381
-44:		mov t1525, [bp]
+fprintf$11:	; Return £temporary2363
+44:		mov t1528, [bp]
 45:		mov di, [bp + 4]
 46:		mov bp, [bp + 2]
-47:		jmp t1525
+47:		jmp t1528
 49:	
 
 fprintf$12:	; FunctionEnd fprintf
@@ -4918,25 +4921,25 @@ vfprintf:	; Assign g_outStatus 0
 2:		mov word [g_outStatus], 0
 4:	
 
-vfprintf$1:	; IntegralToIntegral £temporary2386 outStream
-5:		mov a1526, [bp + 6]
+vfprintf$1:	; IntegralToIntegral £temporary2368 outStream
+5:		mov a1529, [bp + 6]
 8:	
 
-vfprintf$2:	; Assign g_outDevice £temporary2386
-9:		mov [g_outDevice], a1526
+vfprintf$2:	; Assign g_outDevice £temporary2368
+9:		mov [g_outDevice], a1529
 11:	
 
 vfprintf$3:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 13:	
 
 vfprintf$4:	; Parameter 12 format 6
-14:		mov a1527, [bp + 8]
-15:		mov [bp + 18], a1527
+14:		mov a1530, [bp + 8]
+15:		mov [bp + 18], a1530
 17:	
 
 vfprintf$5:	; Parameter 12 arg_list 8
-18:		mov a1528, [bp + 10]
-19:		mov [bp + 20], a1528
+18:		mov a1531, [bp + 10]
+19:		mov [bp + 20], a1531
 21:	
 
 vfprintf$6:	; Call 12 printFormat 0
@@ -4949,51 +4952,51 @@ vfprintf$6:	; Call 12 printFormat 0
 vfprintf$7:	; PostCall 12
 29:	
 
-vfprintf$8:	; GetReturnValue £temporary2387
+vfprintf$8:	; GetReturnValue £temporary2369
 34:	
 
-vfprintf$9:	; SetReturnValue £temporary2387
+vfprintf$9:	; SetReturnValue £temporary2369
 36:	
 
-vfprintf$10:	; Return £temporary2387
-37:		mov t1531, [bp]
+vfprintf$10:	; Return £temporary2369
+37:		mov t1534, [bp]
 38:		mov di, [bp + 4]
 39:		mov bp, [bp + 2]
-40:		jmp t1531
+40:		jmp t1534
 42:	
 
 vfprintf$11:	; FunctionEnd vfprintf
 1:	
 
-sprintf:	; address £temporary2390 format
-2:		mov t1532, bp
-3:		add t1532, 8
+sprintf:	; address £temporary2372 format
+2:		mov t1535, bp
+3:		add t1535, 8
 5:	
 
-sprintf$1:	; IntegralToIntegral £temporary2391 £temporary2390
+sprintf$1:	; IntegralToIntegral £temporary2373 £temporary2372
 8:	
 
-sprintf$2:	; BinaryAdd arg_list £temporary2391 2
-9:		add t1532, 2
-10:		mov [di + 10], t1532
+sprintf$2:	; BinaryAdd arg_list £temporary2373 2
+9:		add t1535, 2
+10:		mov [di + 10], t1535
 12:	
 
 sprintf$3:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 14:	
 
 sprintf$4:	; Parameter 12 outString 6
-15:		mov a1533, [bp + 6]
-16:		mov [di + 18], a1533
+15:		mov a1536, [bp + 6]
+16:		mov [di + 18], a1536
 18:	
 
 sprintf$5:	; Parameter 12 format 8
-19:		mov a1534, [bp + 8]
-20:		mov [di + 20], a1534
+19:		mov a1537, [bp + 8]
+20:		mov [di + 20], a1537
 22:	
 
 sprintf$6:	; Parameter 12 arg_list 10
-23:		mov a1535, [di + 10]
-24:		mov [di + 22], a1535
+23:		mov a1538, [di + 10]
+24:		mov [di + 22], a1538
 26:	
 
 sprintf$7:	; Call 12 vsprintf 0
@@ -5008,17 +5011,17 @@ sprintf$7:	; Call 12 vsprintf 0
 sprintf$8:	; PostCall 12
 36:	
 
-sprintf$9:	; GetReturnValue £temporary2393
+sprintf$9:	; GetReturnValue £temporary2375
 41:	
 
-sprintf$10:	; SetReturnValue £temporary2393
+sprintf$10:	; SetReturnValue £temporary2375
 43:	
 
-sprintf$11:	; Return £temporary2393
-44:		mov t1538, [bp]
+sprintf$11:	; Return £temporary2375
+44:		mov t1541, [bp]
 45:		mov di, [bp + 4]
 46:		mov bp, [bp + 2]
-47:		jmp t1538
+47:		jmp t1541
 49:	
 
 sprintf$12:	; FunctionEnd sprintf
@@ -5028,25 +5031,25 @@ vsprintf:	; Assign g_outStatus 1
 2:		mov word [g_outStatus], 1
 4:	
 
-vsprintf$1:	; IntegralToIntegral £temporary2398 outString
-5:		mov a1539, [bp + 6]
+vsprintf$1:	; IntegralToIntegral £temporary2380 outString
+5:		mov a1542, [bp + 6]
 8:	
 
-vsprintf$2:	; Assign g_outDevice £temporary2398
-9:		mov [g_outDevice], a1539
+vsprintf$2:	; Assign g_outDevice £temporary2380
+9:		mov [g_outDevice], a1542
 11:	
 
 vsprintf$3:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 13:	
 
 vsprintf$4:	; Parameter 12 format 6
-14:		mov a1540, [bp + 8]
-15:		mov [bp + 18], a1540
+14:		mov a1543, [bp + 8]
+15:		mov [bp + 18], a1543
 17:	
 
 vsprintf$5:	; Parameter 12 arg_list 8
-18:		mov a1541, [bp + 10]
-19:		mov [bp + 20], a1541
+18:		mov a1544, [bp + 10]
+19:		mov [bp + 20], a1544
 21:	
 
 vsprintf$6:	; Call 12 printFormat 0
@@ -5059,17 +5062,17 @@ vsprintf$6:	; Call 12 printFormat 0
 vsprintf$7:	; PostCall 12
 29:	
 
-vsprintf$8:	; GetReturnValue £temporary2399
+vsprintf$8:	; GetReturnValue £temporary2381
 34:	
 
-vsprintf$9:	; SetReturnValue £temporary2399
+vsprintf$9:	; SetReturnValue £temporary2381
 36:	
 
-vsprintf$10:	; Return £temporary2399
-37:		mov t1544, [bp]
+vsprintf$10:	; Return £temporary2381
+37:		mov t1547, [bp]
 38:		mov di, [bp + 4]
 39:		mov bp, [bp + 2]
-40:		jmp t1544
+40:		jmp t1547
 42:	
 
 vsprintf$11:	; FunctionEnd vsprintf

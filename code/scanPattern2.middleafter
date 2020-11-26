@@ -2,78 +2,78 @@
 1: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 2: Call 14 scanChar 0
 3: PostCall 14
-4: GetReturnValue £temporary1238
-5: Assign input £temporary1238
+4: GetReturnValue £temporary1219
+5: Assign input £temporary1219
 6: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-7: IntegralToIntegral £temporary1239 input
-8: Parameter 15 £temporary1239 6
+7: IntegralToIntegral £temporary1220 input
+8: Parameter 15 £temporary1220 6
 9: Call 15 isspace 0
 10: PostCall 15
-11: GetReturnValue £temporary1240
-12: Equal 19 £temporary1240 0
+11: GetReturnValue £temporary1221
+12: Equal 19 £temporary1221 0
 13: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 14: Call 15 scanChar 0
 15: PostCall 15
-16: GetReturnValue £temporary1241
-17: Assign input £temporary1241
+16: GetReturnValue £temporary1222
+17: Assign input £temporary1222
 18: Goto 6
 19: Equal 53 string 0
 20: NotEqual 29 not 0
 21: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 22: Parameter 15 pattern 6
-23: IntegralToIntegral £temporary1246 input
-24: Parameter 15 £temporary1246 8
+23: IntegralToIntegral £temporary1227 input
+24: Parameter 15 £temporary1227 8
 25: Call 15 strchr 0
 26: PostCall 15
-27: GetReturnValue £temporary1247
-28: NotEqual 38 £temporary1247 0
+27: GetReturnValue £temporary1228
+28: NotEqual 38 £temporary1228 0
 29: Equal 49 not 0
 30: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 31: Parameter 15 pattern 6
-32: IntegralToIntegral £temporary1250 input
-33: Parameter 15 £temporary1250 8
+32: IntegralToIntegral £temporary1231 input
+33: Parameter 15 £temporary1231 8
 34: Call 15 strchr 0
 35: PostCall 15
-36: GetReturnValue £temporary1251
-37: NotEqual 49 £temporary1251 0
-38: Assign £temporary1257 index
+36: GetReturnValue £temporary1232
+37: NotEqual 49 £temporary1232 0
+38: Assign £temporary1238 index
 39: Increment index
-40: BinaryAdd £temporary1259 string £temporary1257
-41: Deref £temporary1258 -> £temporary1259 £temporary1259 0
-42: Assign £temporary1258 -> £temporary1259 input
+40: BinaryAdd £temporary1240 string £temporary1238
+41: Deref £temporary1239 -> £temporary1240 £temporary1240 0
+42: Assign £temporary1239 -> £temporary1240 input
 43: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 44: Call 15 scanChar 0
 45: PostCall 15
-46: GetReturnValue £temporary1260
-47: Assign input £temporary1260
+46: GetReturnValue £temporary1241
+47: Assign input £temporary1241
 48: Goto 20
-49: BinaryAdd £temporary1262 string index
-50: Deref £temporary1261 -> £temporary1262 £temporary1262 0
-51: Assign £temporary1261 -> £temporary1262 0
+49: BinaryAdd £temporary1243 string index
+50: Deref £temporary1242 -> £temporary1243 £temporary1243 0
+51: Assign £temporary1242 -> £temporary1243 0
 52: Goto 77
 53: NotEqual 62 not 0
 54: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 55: Parameter 15 pattern 6
-56: IntegralToIntegral £temporary1265 input
-57: Parameter 15 £temporary1265 8
+56: IntegralToIntegral £temporary1246 input
+57: Parameter 15 £temporary1246 8
 58: Call 15 strchr 0
 59: PostCall 15
-60: GetReturnValue £temporary1266
-61: NotEqual 71 £temporary1266 0
+60: GetReturnValue £temporary1247
+61: NotEqual 71 £temporary1247 0
 62: Equal 77 not 0
 63: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 64: Parameter 15 pattern 6
-65: IntegralToIntegral £temporary1269 input
-66: Parameter 15 £temporary1269 8
+65: IntegralToIntegral £temporary1250 input
+66: Parameter 15 £temporary1250 8
 67: Call 15 strchr 0
 68: PostCall 15
-69: GetReturnValue £temporary1270
-70: NotEqual 77 £temporary1270 0
+69: GetReturnValue £temporary1251
+70: NotEqual 77 £temporary1251 0
 71: CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 72: Call 15 scanChar 0
 73: PostCall 15
-74: GetReturnValue £temporary1276
-75: Assign input £temporary1276
+74: GetReturnValue £temporary1257
+75: Assign input £temporary1257
 76: Goto 53
 77: Return 0
 78: FunctionEnd scanPattern

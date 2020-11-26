@@ -4,8 +4,8 @@
 3: PostCall 14
 4: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 5: Parameter 14 string_25lf# 6
-6: address £temporary174 x
-7: Parameter 14 £temporary174 8
+6: address £temporary181 x
+7: Parameter 14 £temporary181 8
 8: Call 14 scanf 0
 9: PostCall 14
 10: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0

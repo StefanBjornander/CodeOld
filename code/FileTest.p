@@ -2,10 +2,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
    
 
-
+    
     
 
-    
+
 
 
 extern double exp ( double x ) ;
@@ -50,10 +50,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
    
 
-
+    
     
 
-    
+
 
 
        
@@ -589,15 +589,15 @@ fclose ( inFilePtr ) ;
 fclose ( outFilePtr ) ;
 }
 
-{ char * sourceFilePtr = "X" ;
-char * targetFilePtr = "Y" ;
+{ char * sourceFile = "X" ;
+char * targetFile = "Y" ;
 
-FILE * filePtr = fopen ( sourceFilePtr , "w" ) ;
+FILE * filePtr = fopen ( sourceFile , "w" ) ;
 fprintf ( filePtr , "Hello X" ) ;
 fclose ( filePtr ) ;
 
-if ( rename ( sourceFilePtr , targetFilePtr ) == 0 ) {
-printf ( "\"%s\" has been renamed to \"%s\".\n" , sourceFilePtr , targetFilePtr ) ;
+if ( rename ( sourceFile , targetFile ) == 0 ) {
+printf ( "\"%s\" has been renamed to \"%s\".\n" , sourceFile , targetFile ) ;
 }
 else {
 printf ( "Error %i: %s.\n" , errno , strerror ( errno ) ) ;

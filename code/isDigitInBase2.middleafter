@@ -1,54 +1,54 @@
 0: CallHeader 9 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-1: IntegralToIntegral £temporary1367 c
-2: Parameter 9 £temporary1367 6
+1: IntegralToIntegral £temporary1348 c
+2: Parameter 9 £temporary1348 6
 3: Call 9 isdigit 0
 4: PostCall 9
-5: GetReturnValue £temporary1368
-6: Equal 17 £temporary1368 0
-7: BinarySubtract £temporary1369 c 48
-8: IntegralToIntegral £temporary1370 £temporary1369
-9: Assign value £temporary1370
+5: GetReturnValue £temporary1349
+6: Equal 17 £temporary1349 0
+7: BinarySubtract £temporary1350 c 48
+8: IntegralToIntegral £temporary1351 £temporary1350
+9: Assign value £temporary1351
 10: SignedLessThan 14 value 0
 11: SignedGreaterThanEqual 14 value base
-12: Assign £temporary1374 1
+12: Assign £temporary1355 1
 13: Goto 15
-14: Assign £temporary1374 0
-15: SetReturnValue £temporary1374
-16: Return £temporary1374
+14: Assign £temporary1355 0
+15: SetReturnValue £temporary1355
+16: Return £temporary1355
 17: CallHeader 9 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-18: IntegralToIntegral £temporary1375 c
-19: Parameter 9 £temporary1375 6
+18: IntegralToIntegral £temporary1356 c
+19: Parameter 9 £temporary1356 6
 20: Call 9 islower 0
 21: PostCall 9
-22: GetReturnValue £temporary1376
-23: Equal 34 £temporary1376 0
-24: BinarySubtract £temporary1377 c 97
-25: IntegralToIntegral £temporary1378 £temporary1377
-26: BinaryAdd value £temporary1378 10
+22: GetReturnValue £temporary1357
+23: Equal 34 £temporary1357 0
+24: BinarySubtract £temporary1358 c 97
+25: IntegralToIntegral £temporary1359 £temporary1358
+26: BinaryAdd value £temporary1359 10
 27: SignedLessThan 31 value 0
 28: SignedGreaterThanEqual 31 value base
-29: Assign £temporary1383 1
+29: Assign £temporary1364 1
 30: Goto 32
-31: Assign £temporary1383 0
-32: SetReturnValue £temporary1383
-33: Return £temporary1383
+31: Assign £temporary1364 0
+32: SetReturnValue £temporary1364
+33: Return £temporary1364
 34: CallHeader 9 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-35: IntegralToIntegral £temporary1384 c
-36: Parameter 9 £temporary1384 6
+35: IntegralToIntegral £temporary1365 c
+36: Parameter 9 £temporary1365 6
 37: Call 9 isupper 0
 38: PostCall 9
-39: GetReturnValue £temporary1385
-40: Equal 51 £temporary1385 0
-41: BinarySubtract £temporary1386 c 65
-42: IntegralToIntegral £temporary1387 £temporary1386
-43: BinaryAdd value £temporary1387 10
+39: GetReturnValue £temporary1366
+40: Equal 51 £temporary1366 0
+41: BinarySubtract £temporary1367 c 65
+42: IntegralToIntegral £temporary1368 £temporary1367
+43: BinaryAdd value £temporary1368 10
 44: SignedLessThan 48 value 0
 45: SignedGreaterThanEqual 48 value base
-46: Assign £temporary1392 1
+46: Assign £temporary1373 1
 47: Goto 49
-48: Assign £temporary1392 0
-49: SetReturnValue £temporary1392
-50: Return £temporary1392
+48: Assign £temporary1373 0
+49: SetReturnValue £temporary1373
+50: Return £temporary1373
 51: SetReturnValue 0
 52: Return 0
 53: FunctionEnd isDigitInBase

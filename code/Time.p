@@ -46,10 +46,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
    
 
-
+    
     
 
-    
+
 
 
 extern double exp ( double x ) ;
@@ -604,7 +604,7 @@ register_rax = 96L ;
 register_rdi = & tv ;
 register_rsi = & tz ;
 syscall ( ) ;
-printf ( "timezone %i %i %i %i\n" , tv . tv_sec , tv . tv_usec , tz . tz_minuteswest , tz . tz_dsttime ) ;
+
 }
 
   

@@ -1,22 +1,22 @@
-0: IntegralToIntegral £temporary3352 valueList
-1: Assign charList £temporary3352
+0: IntegralToIntegral £temporary3334 valueList
+1: Assign charList £temporary3334
 2: BinarySubtract size listSize 1
 3: SignedLessThanEqual 31 size 0
 4: Assign update 0
 5: Assign index 0
 6: SignedGreaterThanEqual 28 index size
-7: SignedMultiply £temporary3358 index valueSize
-8: BinaryAdd valuePtr1 charList £temporary3358
-9: BinaryAdd £temporary3360 index 1
-10: SignedMultiply £temporary3361 £temporary3360 valueSize
-11: BinaryAdd valuePtr2 charList £temporary3361
+7: SignedMultiply £temporary3340 index valueSize
+8: BinaryAdd valuePtr1 charList £temporary3340
+9: BinaryAdd £temporary3342 index 1
+10: SignedMultiply £temporary3343 £temporary3342 valueSize
+11: BinaryAdd valuePtr2 charList £temporary3343
 12: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 13: Parameter 26 valuePtr1 6
 14: Parameter 26 valuePtr2 8
 15: Call 26 compare 0
 16: PostCall 26
-17: GetReturnValue £temporary3363
-18: SignedLessThanEqual 26 £temporary3363 0
+17: GetReturnValue £temporary3345
+18: SignedLessThanEqual 26 £temporary3345 0
 19: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 20: Parameter 26 valuePtr1 6
 21: Parameter 26 valuePtr2 8

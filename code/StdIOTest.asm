@@ -1,7 +1,6 @@
 	global stdio_test
 
 	extern printf
-	extern scanf
 	extern $StackTop
 
 
@@ -145,42 +144,6 @@ string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A#
 
 section .data
 
-string_Please20write20the20patterns205Babc5D3A20#:
-	; Initializer String Please write the patterns [abc]: 
-	db "Please write the patterns [abc]: ", 0
-
-section .data
-
-string_255Babc5D#:
-	; Initializer String %[abc]
-	db "%[abc]", 0
-
-section .data
-
-string_0A3C25s3E0A#:
-	; Initializer String \n<%s>\n
-	db 10, "<%s>", 10, 0
-
-section .data
-
-string_Please20write20the20patterns205B5Eabc5D3A20#:
-	; Initializer String Please write the patterns [^abc]: 
-	db "Please write the patterns [^abc]: ", 0
-
-section .data
-
-string_255B5Eabc5D#:
-	; Initializer String %[^abc]
-	db "%[^abc]", 0
-
-section .data
-
-string_0A3C25s3E#:
-	; Initializer String \n<%s>
-	db 10, "<%s>", 0
-
-section .data
-
 float8$123.456#:
 	; Initializer Double 123.456
 	dq 123.456
@@ -210,12 +173,12 @@ section .text
 	mov dword [rbp + 24], 0
 
  stdio_test$1:
-	; Address £temporary4313 n
+	; Address £temporary4326 n
 	mov rsi, rbp
 	add rsi, 24
 
  stdio_test$2:
-	; Assign p £temporary4313
+	; Assign p £temporary4326
 	mov [rbp + 28], rsi
 
  stdio_test$3:
@@ -1604,143 +1567,11 @@ section .text
 	; PostCall 36
 
  stdio_test$328:
-	; PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- stdio_test$329:
-	; Parameter 148 pointer "Please write the patterns [abc]: "
-	mov qword [rbp + 148], string_Please20write20the20patterns205Babc5D3A20#
-
- stdio_test$330:
-	; Call 124 printf 0
-	mov qword [rbp + 124], stdio_test$331
-	mov [rbp + 132], rbp
-	add rbp, 124
-	mov rdi, rbp
-	jmp printf
-
- stdio_test$331:
-	; PostCall 124
-
- stdio_test$332:
-	; PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- stdio_test$333:
-	; Parameter 148 pointer "%[abc]"
-	mov qword [rbp + 148], string_255Babc5D#
-
- stdio_test$334:
-	; Parameter 156 pointer s
-	mov [rbp + 156], rbp
-	add qword [rbp + 156], 24
-
- stdio_test$335:
-	; Call 124 scanf 8
-	mov qword [rbp + 124], stdio_test$336
-	mov [rbp + 132], rbp
-	add rbp, 124
-	mov rdi, rbp
-	add rdi, 8
-	jmp scanf
-
- stdio_test$336:
-	; PostCall 124
-
- stdio_test$337:
-	; PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- stdio_test$338:
-	; Parameter 148 pointer "\n<%s>\n"
-	mov qword [rbp + 148], string_0A3C25s3E0A#
-
- stdio_test$339:
-	; Parameter 156 pointer s
-	mov [rbp + 156], rbp
-	add qword [rbp + 156], 24
-
- stdio_test$340:
-	; Call 124 printf 8
-	mov qword [rbp + 124], stdio_test$341
-	mov [rbp + 132], rbp
-	add rbp, 124
-	mov rdi, rbp
-	add rdi, 8
-	jmp printf
-
- stdio_test$341:
-	; PostCall 124
-
- stdio_test$342:
-	; PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- stdio_test$343:
-	; Parameter 148 pointer "Please write the patterns [^abc]: "
-	mov qword [rbp + 148], string_Please20write20the20patterns205B5Eabc5D3A20#
-
- stdio_test$344:
-	; Call 124 printf 0
-	mov qword [rbp + 124], stdio_test$345
-	mov [rbp + 132], rbp
-	add rbp, 124
-	mov rdi, rbp
-	jmp printf
-
- stdio_test$345:
-	; PostCall 124
-
- stdio_test$346:
-	; PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- stdio_test$347:
-	; Parameter 148 pointer "%[^abc]"
-	mov qword [rbp + 148], string_255B5Eabc5D#
-
- stdio_test$348:
-	; Parameter 156 pointer s
-	mov [rbp + 156], rbp
-	add qword [rbp + 156], 24
-
- stdio_test$349:
-	; Call 124 scanf 8
-	mov qword [rbp + 124], stdio_test$350
-	mov [rbp + 132], rbp
-	add rbp, 124
-	mov rdi, rbp
-	add rdi, 8
-	jmp scanf
-
- stdio_test$350:
-	; PostCall 124
-
- stdio_test$351:
-	; PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- stdio_test$352:
-	; Parameter 148 pointer "\n<%s>"
-	mov qword [rbp + 148], string_0A3C25s3E#
-
- stdio_test$353:
-	; Parameter 156 pointer s
-	mov [rbp + 156], rbp
-	add qword [rbp + 156], 24
-
- stdio_test$354:
-	; Call 124 printf 8
-	mov qword [rbp + 124], stdio_test$355
-	mov [rbp + 132], rbp
-	add rbp, 124
-	mov rdi, rbp
-	add rdi, 8
-	jmp printf
-
- stdio_test$355:
-	; PostCall 124
-
- stdio_test$356:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- stdio_test$357:
+ stdio_test$329:
 	; FunctionEnd stdio_test

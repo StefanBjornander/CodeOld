@@ -26,20 +26,20 @@ atoi$4:	; Call 8 strtol 0
 atoi$5:	; PostCall 8
 21:	
 
-atoi$6:	; GetReturnValue £temporary2402
+atoi$6:	; GetReturnValue £temporary2384
 26:	
 
-atoi$7:	; IntegralToIntegral £temporary2403 £temporary2402
+atoi$7:	; IntegralToIntegral £temporary2385 £temporary2384
 29:		cmp ebx, 0
 30:		jge atoi$8
 31:		neg ebx
 33:		neg bx
 35:	
 
-atoi$8:	; SetReturnValue £temporary2403
+atoi$8:	; SetReturnValue £temporary2385
 37:	
 
-atoi$9:	; Return £temporary2403
+atoi$9:	; Return £temporary2385
 38:		mov ax, [bp]
 39:		mov di, [bp + 4]
 40:		mov bp, [bp + 2]
@@ -75,13 +75,13 @@ atol$4:	; Call 8 strtol 0
 atol$5:	; PostCall 8
 21:	
 
-atol$6:	; GetReturnValue £temporary2407
+atol$6:	; GetReturnValue £temporary2389
 26:	
 
-atol$7:	; SetReturnValue £temporary2407
+atol$7:	; SetReturnValue £temporary2389
 28:	
 
-atol$8:	; Return £temporary2407
+atol$8:	; Return £temporary2389
 29:		mov ax, [bp]
 30:		mov di, [bp + 4]
 31:		mov bp, [bp + 2]
@@ -122,10 +122,10 @@ strtol$5:	; Call 12 scanLongInt 0
 strtol$6:	; PostCall 12
 25:	
 
-strtol$7:	; GetReturnValue £temporary2411
+strtol$7:	; GetReturnValue £temporary2393
 30:	
 
-strtol$8:	; Assign value £temporary2411
+strtol$8:	; Assign value £temporary2393
 31:		mov [bp + 12], ebx
 33:	
 
@@ -134,11 +134,11 @@ strtol$9:	; Equal 12 endp 0
 35:		je strtol$12
 37:	
 
-strtol$10:	; Deref £temporary2413 -> endp endp 0
+strtol$10:	; Deref £temporary2395 -> endp endp 0
 38:		mov si, [bp + 8]
 40:	
 
-strtol$11:	; BinaryAdd £temporary2413 -> endp s g_inChars
+strtol$11:	; BinaryAdd £temporary2395 -> endp s g_inChars
 41:		mov ax, [bp + 6]
 42:		add ax, [g_inChars]
 43:		mov [si], ax
@@ -214,12 +214,12 @@ strtol_test$13:	; Parameter 21 text 6
 41:		add word [bp + 27], 8
 43:	
 
-strtol_test$14:	; address £temporary2427 pointer
+strtol_test$14:	; address £temporary2409 pointer
 44:		mov si, bp
 45:		add si, 19
 47:	
 
-strtol_test$15:	; Parameter 21 £temporary2427 8
+strtol_test$15:	; Parameter 21 £temporary2409 8
 48:		mov [bp + 29], si
 50:	
 
@@ -238,10 +238,10 @@ strtol_test$17:	; Call 21 strtol 0
 strtol_test$18:	; PostCall 21
 62:	
 
-strtol_test$19:	; GetReturnValue £temporary2428
+strtol_test$19:	; GetReturnValue £temporary2410
 67:	
 
-strtol_test$20:	; Assign value £temporary2428
+strtol_test$20:	; Assign value £temporary2410
 68:		mov [bp + 21], ebx
 70:	
 
@@ -344,12 +344,12 @@ strtol_test$43:	; Parameter 22 text 6
 144:		add word [bp + 28], 8
 146:	
 
-strtol_test$44:	; address £temporary2442 pointer
+strtol_test$44:	; address £temporary2424 pointer
 147:		mov si, bp
 148:		add si, 20
 150:	
 
-strtol_test$45:	; Parameter 22 £temporary2442 8
+strtol_test$45:	; Parameter 22 £temporary2424 8
 151:		mov [bp + 30], si
 153:	
 
@@ -368,10 +368,10 @@ strtol_test$47:	; Call 22 strtol 0
 strtol_test$48:	; PostCall 22
 165:	
 
-strtol_test$49:	; GetReturnValue £temporary2443
+strtol_test$49:	; GetReturnValue £temporary2425
 170:	
 
-strtol_test$50:	; Assign value £temporary2443
+strtol_test$50:	; Assign value £temporary2425
 171:		mov [bp + 22], ebx
 173:	
 
@@ -478,12 +478,12 @@ strtol_test$74:	; Parameter 23 text 6
 250:		add word [bp + 29], 8
 252:	
 
-strtol_test$75:	; address £temporary2458 pointer
+strtol_test$75:	; address £temporary2440 pointer
 253:		mov si, bp
 254:		add si, 21
 256:	
 
-strtol_test$76:	; Parameter 23 £temporary2458 8
+strtol_test$76:	; Parameter 23 £temporary2440 8
 257:		mov [bp + 31], si
 259:	
 
@@ -502,10 +502,10 @@ strtol_test$78:	; Call 23 strtol 0
 strtol_test$79:	; PostCall 23
 271:	
 
-strtol_test$80:	; GetReturnValue £temporary2459
+strtol_test$80:	; GetReturnValue £temporary2441
 276:	
 
-strtol_test$81:	; Assign value £temporary2459
+strtol_test$81:	; Assign value £temporary2441
 277:		mov [bp + 23], ebx
 279:	
 
@@ -612,12 +612,12 @@ strtol_test$105:	; Parameter 23 text 6
 356:		add word [bp + 29], 8
 358:	
 
-strtol_test$106:	; address £temporary2474 pointer
+strtol_test$106:	; address £temporary2456 pointer
 359:		mov si, bp
 360:		add si, 21
 362:	
 
-strtol_test$107:	; Parameter 23 £temporary2474 8
+strtol_test$107:	; Parameter 23 £temporary2456 8
 363:		mov [bp + 31], si
 365:	
 
@@ -636,10 +636,10 @@ strtol_test$109:	; Call 23 strtol 0
 strtol_test$110:	; PostCall 23
 377:	
 
-strtol_test$111:	; GetReturnValue £temporary2475
+strtol_test$111:	; GetReturnValue £temporary2457
 382:	
 
-strtol_test$112:	; Assign value £temporary2475
+strtol_test$112:	; Assign value £temporary2457
 383:		mov [bp + 23], ebx
 385:	
 
@@ -738,12 +738,12 @@ strtol_test$134:	; Parameter 21 text 6
 456:		add word [bp + 27], 8
 458:	
 
-strtol_test$135:	; address £temporary2488 pointer
+strtol_test$135:	; address £temporary2470 pointer
 459:		mov si, bp
 460:		add si, 19
 462:	
 
-strtol_test$136:	; Parameter 21 £temporary2488 8
+strtol_test$136:	; Parameter 21 £temporary2470 8
 463:		mov [bp + 29], si
 465:	
 
@@ -762,10 +762,10 @@ strtol_test$138:	; Call 21 strtol 0
 strtol_test$139:	; PostCall 21
 477:	
 
-strtol_test$140:	; GetReturnValue £temporary2489
+strtol_test$140:	; GetReturnValue £temporary2471
 482:	
 
-strtol_test$141:	; Assign value £temporary2489
+strtol_test$141:	; Assign value £temporary2471
 483:		mov [bp + 21], ebx
 485:	
 
@@ -868,12 +868,12 @@ strtol_test$164:	; Parameter 22 text 6
 559:		add word [bp + 28], 8
 561:	
 
-strtol_test$165:	; address £temporary2503 pointer
+strtol_test$165:	; address £temporary2485 pointer
 562:		mov si, bp
 563:		add si, 20
 565:	
 
-strtol_test$166:	; Parameter 22 £temporary2503 8
+strtol_test$166:	; Parameter 22 £temporary2485 8
 566:		mov [bp + 30], si
 568:	
 
@@ -892,10 +892,10 @@ strtol_test$168:	; Call 22 strtol 0
 strtol_test$169:	; PostCall 22
 580:	
 
-strtol_test$170:	; GetReturnValue £temporary2504
+strtol_test$170:	; GetReturnValue £temporary2486
 585:	
 
-strtol_test$171:	; Assign value £temporary2504
+strtol_test$171:	; Assign value £temporary2486
 586:		mov [bp + 22], ebx
 588:	
 
@@ -1002,12 +1002,12 @@ strtol_test$195:	; Parameter 23 text 6
 665:		add word [bp + 29], 8
 667:	
 
-strtol_test$196:	; address £temporary2519 pointer
+strtol_test$196:	; address £temporary2501 pointer
 668:		mov si, bp
 669:		add si, 21
 671:	
 
-strtol_test$197:	; Parameter 23 £temporary2519 8
+strtol_test$197:	; Parameter 23 £temporary2501 8
 672:		mov [bp + 31], si
 674:	
 
@@ -1026,10 +1026,10 @@ strtol_test$199:	; Call 23 strtol 0
 strtol_test$200:	; PostCall 23
 686:	
 
-strtol_test$201:	; GetReturnValue £temporary2520
+strtol_test$201:	; GetReturnValue £temporary2502
 691:	
 
-strtol_test$202:	; Assign value £temporary2520
+strtol_test$202:	; Assign value £temporary2502
 692:		mov [bp + 23], ebx
 694:	
 
@@ -1136,12 +1136,12 @@ strtol_test$226:	; Parameter 23 text 6
 771:		add word [bp + 29], 8
 773:	
 
-strtol_test$227:	; address £temporary2535 pointer
+strtol_test$227:	; address £temporary2517 pointer
 774:		mov si, bp
 775:		add si, 21
 777:	
 
-strtol_test$228:	; Parameter 23 £temporary2535 8
+strtol_test$228:	; Parameter 23 £temporary2517 8
 778:		mov [bp + 31], si
 780:	
 
@@ -1160,10 +1160,10 @@ strtol_test$230:	; Call 23 strtol 0
 strtol_test$231:	; PostCall 23
 792:	
 
-strtol_test$232:	; GetReturnValue £temporary2536
+strtol_test$232:	; GetReturnValue £temporary2518
 797:	
 
-strtol_test$233:	; Assign value £temporary2536
+strtol_test$233:	; Assign value £temporary2518
 798:		mov [bp + 23], ebx
 800:	
 
@@ -1262,12 +1262,12 @@ strtol_test$255:	; Parameter 21 text 6
 871:		add word [bp + 27], 8
 873:	
 
-strtol_test$256:	; address £temporary2549 pointer
+strtol_test$256:	; address £temporary2531 pointer
 874:		mov si, bp
 875:		add si, 19
 877:	
 
-strtol_test$257:	; Parameter 21 £temporary2549 8
+strtol_test$257:	; Parameter 21 £temporary2531 8
 878:		mov [bp + 29], si
 880:	
 
@@ -1286,10 +1286,10 @@ strtol_test$259:	; Call 21 strtol 0
 strtol_test$260:	; PostCall 21
 892:	
 
-strtol_test$261:	; GetReturnValue £temporary2550
+strtol_test$261:	; GetReturnValue £temporary2532
 897:	
 
-strtol_test$262:	; Assign value £temporary2550
+strtol_test$262:	; Assign value £temporary2532
 898:		mov [bp + 21], ebx
 900:	
 
@@ -1388,12 +1388,12 @@ strtol_test$284:	; Parameter 21 text 6
 971:		add word [bp + 27], 8
 973:	
 
-strtol_test$285:	; address £temporary2563 pointer
+strtol_test$285:	; address £temporary2545 pointer
 974:		mov si, bp
 975:		add si, 19
 977:	
 
-strtol_test$286:	; Parameter 21 £temporary2563 8
+strtol_test$286:	; Parameter 21 £temporary2545 8
 978:		mov [bp + 29], si
 980:	
 
@@ -1412,10 +1412,10 @@ strtol_test$288:	; Call 21 strtol 0
 strtol_test$289:	; PostCall 21
 992:	
 
-strtol_test$290:	; GetReturnValue £temporary2564
+strtol_test$290:	; GetReturnValue £temporary2546
 997:	
 
-strtol_test$291:	; Assign value £temporary2564
+strtol_test$291:	; Assign value £temporary2546
 998:		mov [bp + 21], ebx
 1000:	
 
@@ -1514,12 +1514,12 @@ strtol_test$313:	; Parameter 21 text 6
 1071:		add word [bp + 27], 8
 1073:	
 
-strtol_test$314:	; address £temporary2577 pointer
+strtol_test$314:	; address £temporary2559 pointer
 1074:		mov si, bp
 1075:		add si, 19
 1077:	
 
-strtol_test$315:	; Parameter 21 £temporary2577 8
+strtol_test$315:	; Parameter 21 £temporary2559 8
 1078:		mov [bp + 29], si
 1080:	
 
@@ -1538,10 +1538,10 @@ strtol_test$317:	; Call 21 strtol 0
 strtol_test$318:	; PostCall 21
 1092:	
 
-strtol_test$319:	; GetReturnValue £temporary2578
+strtol_test$319:	; GetReturnValue £temporary2560
 1097:	
 
-strtol_test$320:	; Assign value £temporary2578
+strtol_test$320:	; Assign value £temporary2560
 1098:		mov [bp + 21], ebx
 1100:	
 
@@ -1640,12 +1640,12 @@ strtol_test$342:	; Parameter 21 text 6
 1171:		add word [bp + 27], 8
 1173:	
 
-strtol_test$343:	; address £temporary2591 pointer
+strtol_test$343:	; address £temporary2573 pointer
 1174:		mov si, bp
 1175:		add si, 19
 1177:	
 
-strtol_test$344:	; Parameter 21 £temporary2591 8
+strtol_test$344:	; Parameter 21 £temporary2573 8
 1178:		mov [bp + 29], si
 1180:	
 
@@ -1664,10 +1664,10 @@ strtol_test$346:	; Call 21 strtol 0
 strtol_test$347:	; PostCall 21
 1192:	
 
-strtol_test$348:	; GetReturnValue £temporary2592
+strtol_test$348:	; GetReturnValue £temporary2574
 1197:	
 
-strtol_test$349:	; Assign value £temporary2592
+strtol_test$349:	; Assign value £temporary2574
 1198:		mov [bp + 21], ebx
 1200:	
 
@@ -1766,12 +1766,12 @@ strtol_test$371:	; Parameter 21 text 6
 1271:		add word [bp + 27], 8
 1273:	
 
-strtol_test$372:	; address £temporary2605 pointer
+strtol_test$372:	; address £temporary2587 pointer
 1274:		mov si, bp
 1275:		add si, 19
 1277:	
 
-strtol_test$373:	; Parameter 21 £temporary2605 8
+strtol_test$373:	; Parameter 21 £temporary2587 8
 1278:		mov [bp + 29], si
 1280:	
 
@@ -1790,10 +1790,10 @@ strtol_test$375:	; Call 21 strtol 0
 strtol_test$376:	; PostCall 21
 1292:	
 
-strtol_test$377:	; GetReturnValue £temporary2606
+strtol_test$377:	; GetReturnValue £temporary2588
 1297:	
 
-strtol_test$378:	; Assign value £temporary2606
+strtol_test$378:	; Assign value £temporary2588
 1298:		mov [bp + 21], ebx
 1300:	
 
@@ -1892,12 +1892,12 @@ strtol_test$400:	; Parameter 21 text 6
 1371:		add word [bp + 27], 8
 1373:	
 
-strtol_test$401:	; address £temporary2619 pointer
+strtol_test$401:	; address £temporary2601 pointer
 1374:		mov si, bp
 1375:		add si, 19
 1377:	
 
-strtol_test$402:	; Parameter 21 £temporary2619 8
+strtol_test$402:	; Parameter 21 £temporary2601 8
 1378:		mov [bp + 29], si
 1380:	
 
@@ -1916,10 +1916,10 @@ strtol_test$404:	; Call 21 strtol 0
 strtol_test$405:	; PostCall 21
 1392:	
 
-strtol_test$406:	; GetReturnValue £temporary2620
+strtol_test$406:	; GetReturnValue £temporary2602
 1397:	
 
-strtol_test$407:	; Assign value £temporary2620
+strtol_test$407:	; Assign value £temporary2602
 1398:		mov [bp + 21], ebx
 1400:	
 
@@ -2018,12 +2018,12 @@ strtol_test$429:	; Parameter 21 text 6
 1471:		add word [bp + 27], 8
 1473:	
 
-strtol_test$430:	; address £temporary2633 pointer
+strtol_test$430:	; address £temporary2615 pointer
 1474:		mov si, bp
 1475:		add si, 19
 1477:	
 
-strtol_test$431:	; Parameter 21 £temporary2633 8
+strtol_test$431:	; Parameter 21 £temporary2615 8
 1478:		mov [bp + 29], si
 1480:	
 
@@ -2042,10 +2042,10 @@ strtol_test$433:	; Call 21 strtol 0
 strtol_test$434:	; PostCall 21
 1492:	
 
-strtol_test$435:	; GetReturnValue £temporary2634
+strtol_test$435:	; GetReturnValue £temporary2616
 1497:	
 
-strtol_test$436:	; Assign value £temporary2634
+strtol_test$436:	; Assign value £temporary2616
 1498:		mov [bp + 21], ebx
 1500:	
 
@@ -2144,12 +2144,12 @@ strtol_test$458:	; Parameter 21 text 6
 1571:		add word [bp + 27], 8
 1573:	
 
-strtol_test$459:	; address £temporary2647 pointer
+strtol_test$459:	; address £temporary2629 pointer
 1574:		mov si, bp
 1575:		add si, 19
 1577:	
 
-strtol_test$460:	; Parameter 21 £temporary2647 8
+strtol_test$460:	; Parameter 21 £temporary2629 8
 1578:		mov [bp + 29], si
 1580:	
 
@@ -2168,10 +2168,10 @@ strtol_test$462:	; Call 21 strtol 0
 strtol_test$463:	; PostCall 21
 1592:	
 
-strtol_test$464:	; GetReturnValue £temporary2648
+strtol_test$464:	; GetReturnValue £temporary2630
 1597:	
 
-strtol_test$465:	; Assign value £temporary2648
+strtol_test$465:	; Assign value £temporary2630
 1598:		mov [bp + 21], ebx
 1600:	
 
@@ -2270,12 +2270,12 @@ strtol_test$487:	; Parameter 21 text 6
 1671:		add word [bp + 27], 8
 1673:	
 
-strtol_test$488:	; address £temporary2661 pointer
+strtol_test$488:	; address £temporary2643 pointer
 1674:		mov si, bp
 1675:		add si, 19
 1677:	
 
-strtol_test$489:	; Parameter 21 £temporary2661 8
+strtol_test$489:	; Parameter 21 £temporary2643 8
 1678:		mov [bp + 29], si
 1680:	
 
@@ -2294,10 +2294,10 @@ strtol_test$491:	; Call 21 strtol 0
 strtol_test$492:	; PostCall 21
 1692:	
 
-strtol_test$493:	; GetReturnValue £temporary2662
+strtol_test$493:	; GetReturnValue £temporary2644
 1697:	
 
-strtol_test$494:	; Assign value £temporary2662
+strtol_test$494:	; Assign value £temporary2644
 1698:		mov [bp + 21], ebx
 1700:	
 
@@ -2396,12 +2396,12 @@ strtol_test$516:	; Parameter 21 text 6
 1771:		add word [bp + 27], 8
 1773:	
 
-strtol_test$517:	; address £temporary2675 pointer
+strtol_test$517:	; address £temporary2657 pointer
 1774:		mov si, bp
 1775:		add si, 19
 1777:	
 
-strtol_test$518:	; Parameter 21 £temporary2675 8
+strtol_test$518:	; Parameter 21 £temporary2657 8
 1778:		mov [bp + 29], si
 1780:	
 
@@ -2420,10 +2420,10 @@ strtol_test$520:	; Call 21 strtol 0
 strtol_test$521:	; PostCall 21
 1792:	
 
-strtol_test$522:	; GetReturnValue £temporary2676
+strtol_test$522:	; GetReturnValue £temporary2658
 1797:	
 
-strtol_test$523:	; Assign value £temporary2676
+strtol_test$523:	; Assign value £temporary2658
 1798:		mov [bp + 21], ebx
 1800:	
 
@@ -2507,10 +2507,10 @@ strtoul$5:	; Call 12 scanUnsignedLongInt 0
 strtoul$6:	; PostCall 12
 25:	
 
-strtoul$7:	; GetReturnValue £temporary2840
+strtoul$7:	; GetReturnValue £temporary2822
 30:	
 
-strtoul$8:	; Assign unsignedLongValue £temporary2840
+strtoul$8:	; Assign unsignedLongValue £temporary2822
 31:		mov [bp + 12], ebx
 33:	
 
@@ -2519,11 +2519,11 @@ strtoul$9:	; Equal 12 endp 0
 35:		je strtoul$12
 37:	
 
-strtoul$10:	; Deref £temporary2842 -> endp endp 0
+strtoul$10:	; Deref £temporary2824 -> endp endp 0
 38:		mov si, [bp + 8]
 40:	
 
-strtoul$11:	; BinaryAdd £temporary2842 -> endp s g_inChars
+strtoul$11:	; BinaryAdd £temporary2824 -> endp s g_inChars
 41:		mov ax, [bp + 6]
 42:		add ax, [g_inChars]
 43:		mov [si], ax
@@ -2599,12 +2599,12 @@ strtoul_test$13:	; Parameter 21 text 6
 41:		add word [bp + 27], 8
 43:	
 
-strtoul_test$14:	; address £temporary2856 pointer
+strtoul_test$14:	; address £temporary2838 pointer
 44:		mov si, bp
 45:		add si, 19
 47:	
 
-strtoul_test$15:	; Parameter 21 £temporary2856 8
+strtoul_test$15:	; Parameter 21 £temporary2838 8
 48:		mov [bp + 29], si
 50:	
 
@@ -2623,10 +2623,10 @@ strtoul_test$17:	; Call 21 strtoul 0
 strtoul_test$18:	; PostCall 21
 62:	
 
-strtoul_test$19:	; GetReturnValue £temporary2857
+strtoul_test$19:	; GetReturnValue £temporary2839
 67:	
 
-strtoul_test$20:	; Assign value £temporary2857
+strtoul_test$20:	; Assign value £temporary2839
 68:		mov [bp + 21], ebx
 70:	
 
@@ -2729,12 +2729,12 @@ strtoul_test$43:	; Parameter 22 text 6
 144:		add word [bp + 28], 8
 146:	
 
-strtoul_test$44:	; address £temporary2871 pointer
+strtoul_test$44:	; address £temporary2853 pointer
 147:		mov si, bp
 148:		add si, 20
 150:	
 
-strtoul_test$45:	; Parameter 22 £temporary2871 8
+strtoul_test$45:	; Parameter 22 £temporary2853 8
 151:		mov [bp + 30], si
 153:	
 
@@ -2753,10 +2753,10 @@ strtoul_test$47:	; Call 22 strtoul 0
 strtoul_test$48:	; PostCall 22
 165:	
 
-strtoul_test$49:	; GetReturnValue £temporary2872
+strtoul_test$49:	; GetReturnValue £temporary2854
 170:	
 
-strtoul_test$50:	; Assign value £temporary2872
+strtoul_test$50:	; Assign value £temporary2854
 171:		mov [bp + 22], ebx
 173:	
 
@@ -2863,12 +2863,12 @@ strtoul_test$74:	; Parameter 23 text 6
 250:		add word [bp + 29], 8
 252:	
 
-strtoul_test$75:	; address £temporary2887 pointer
+strtoul_test$75:	; address £temporary2869 pointer
 253:		mov si, bp
 254:		add si, 21
 256:	
 
-strtoul_test$76:	; Parameter 23 £temporary2887 8
+strtoul_test$76:	; Parameter 23 £temporary2869 8
 257:		mov [bp + 31], si
 259:	
 
@@ -2887,10 +2887,10 @@ strtoul_test$78:	; Call 23 strtoul 0
 strtoul_test$79:	; PostCall 23
 271:	
 
-strtoul_test$80:	; GetReturnValue £temporary2888
+strtoul_test$80:	; GetReturnValue £temporary2870
 276:	
 
-strtoul_test$81:	; Assign value £temporary2888
+strtoul_test$81:	; Assign value £temporary2870
 277:		mov [bp + 23], ebx
 279:	
 
@@ -2997,12 +2997,12 @@ strtoul_test$105:	; Parameter 23 text 6
 356:		add word [bp + 29], 8
 358:	
 
-strtoul_test$106:	; address £temporary2903 pointer
+strtoul_test$106:	; address £temporary2885 pointer
 359:		mov si, bp
 360:		add si, 21
 362:	
 
-strtoul_test$107:	; Parameter 23 £temporary2903 8
+strtoul_test$107:	; Parameter 23 £temporary2885 8
 363:		mov [bp + 31], si
 365:	
 
@@ -3021,10 +3021,10 @@ strtoul_test$109:	; Call 23 strtoul 0
 strtoul_test$110:	; PostCall 23
 377:	
 
-strtoul_test$111:	; GetReturnValue £temporary2904
+strtoul_test$111:	; GetReturnValue £temporary2886
 382:	
 
-strtoul_test$112:	; Assign value £temporary2904
+strtoul_test$112:	; Assign value £temporary2886
 383:		mov [bp + 23], ebx
 385:	
 
@@ -3123,12 +3123,12 @@ strtoul_test$134:	; Parameter 21 text 6
 456:		add word [bp + 27], 8
 458:	
 
-strtoul_test$135:	; address £temporary2917 pointer
+strtoul_test$135:	; address £temporary2899 pointer
 459:		mov si, bp
 460:		add si, 19
 462:	
 
-strtoul_test$136:	; Parameter 21 £temporary2917 8
+strtoul_test$136:	; Parameter 21 £temporary2899 8
 463:		mov [bp + 29], si
 465:	
 
@@ -3147,10 +3147,10 @@ strtoul_test$138:	; Call 21 strtoul 0
 strtoul_test$139:	; PostCall 21
 477:	
 
-strtoul_test$140:	; GetReturnValue £temporary2918
+strtoul_test$140:	; GetReturnValue £temporary2900
 482:	
 
-strtoul_test$141:	; Assign value £temporary2918
+strtoul_test$141:	; Assign value £temporary2900
 483:		mov [bp + 21], ebx
 485:	
 
@@ -3253,12 +3253,12 @@ strtoul_test$164:	; Parameter 22 text 6
 559:		add word [bp + 28], 8
 561:	
 
-strtoul_test$165:	; address £temporary2932 pointer
+strtoul_test$165:	; address £temporary2914 pointer
 562:		mov si, bp
 563:		add si, 20
 565:	
 
-strtoul_test$166:	; Parameter 22 £temporary2932 8
+strtoul_test$166:	; Parameter 22 £temporary2914 8
 566:		mov [bp + 30], si
 568:	
 
@@ -3277,10 +3277,10 @@ strtoul_test$168:	; Call 22 strtoul 0
 strtoul_test$169:	; PostCall 22
 580:	
 
-strtoul_test$170:	; GetReturnValue £temporary2933
+strtoul_test$170:	; GetReturnValue £temporary2915
 585:	
 
-strtoul_test$171:	; Assign value £temporary2933
+strtoul_test$171:	; Assign value £temporary2915
 586:		mov [bp + 22], ebx
 588:	
 
@@ -3387,12 +3387,12 @@ strtoul_test$195:	; Parameter 23 text 6
 665:		add word [bp + 29], 8
 667:	
 
-strtoul_test$196:	; address £temporary2948 pointer
+strtoul_test$196:	; address £temporary2930 pointer
 668:		mov si, bp
 669:		add si, 21
 671:	
 
-strtoul_test$197:	; Parameter 23 £temporary2948 8
+strtoul_test$197:	; Parameter 23 £temporary2930 8
 672:		mov [bp + 31], si
 674:	
 
@@ -3411,10 +3411,10 @@ strtoul_test$199:	; Call 23 strtoul 0
 strtoul_test$200:	; PostCall 23
 686:	
 
-strtoul_test$201:	; GetReturnValue £temporary2949
+strtoul_test$201:	; GetReturnValue £temporary2931
 691:	
 
-strtoul_test$202:	; Assign value £temporary2949
+strtoul_test$202:	; Assign value £temporary2931
 692:		mov [bp + 23], ebx
 694:	
 
@@ -3521,12 +3521,12 @@ strtoul_test$226:	; Parameter 23 text 6
 771:		add word [bp + 29], 8
 773:	
 
-strtoul_test$227:	; address £temporary2964 pointer
+strtoul_test$227:	; address £temporary2946 pointer
 774:		mov si, bp
 775:		add si, 21
 777:	
 
-strtoul_test$228:	; Parameter 23 £temporary2964 8
+strtoul_test$228:	; Parameter 23 £temporary2946 8
 778:		mov [bp + 31], si
 780:	
 
@@ -3545,10 +3545,10 @@ strtoul_test$230:	; Call 23 strtoul 0
 strtoul_test$231:	; PostCall 23
 792:	
 
-strtoul_test$232:	; GetReturnValue £temporary2965
+strtoul_test$232:	; GetReturnValue £temporary2947
 797:	
 
-strtoul_test$233:	; Assign value £temporary2965
+strtoul_test$233:	; Assign value £temporary2947
 798:		mov [bp + 23], ebx
 800:	
 
@@ -3647,12 +3647,12 @@ strtoul_test$255:	; Parameter 21 text 6
 871:		add word [bp + 27], 8
 873:	
 
-strtoul_test$256:	; address £temporary2978 pointer
+strtoul_test$256:	; address £temporary2960 pointer
 874:		mov si, bp
 875:		add si, 19
 877:	
 
-strtoul_test$257:	; Parameter 21 £temporary2978 8
+strtoul_test$257:	; Parameter 21 £temporary2960 8
 878:		mov [bp + 29], si
 880:	
 
@@ -3671,10 +3671,10 @@ strtoul_test$259:	; Call 21 strtoul 0
 strtoul_test$260:	; PostCall 21
 892:	
 
-strtoul_test$261:	; GetReturnValue £temporary2979
+strtoul_test$261:	; GetReturnValue £temporary2961
 897:	
 
-strtoul_test$262:	; Assign value £temporary2979
+strtoul_test$262:	; Assign value £temporary2961
 898:		mov [bp + 21], ebx
 900:	
 
@@ -3773,12 +3773,12 @@ strtoul_test$284:	; Parameter 21 text 6
 971:		add word [bp + 27], 8
 973:	
 
-strtoul_test$285:	; address £temporary2992 pointer
+strtoul_test$285:	; address £temporary2974 pointer
 974:		mov si, bp
 975:		add si, 19
 977:	
 
-strtoul_test$286:	; Parameter 21 £temporary2992 8
+strtoul_test$286:	; Parameter 21 £temporary2974 8
 978:		mov [bp + 29], si
 980:	
 
@@ -3797,10 +3797,10 @@ strtoul_test$288:	; Call 21 strtoul 0
 strtoul_test$289:	; PostCall 21
 992:	
 
-strtoul_test$290:	; GetReturnValue £temporary2993
+strtoul_test$290:	; GetReturnValue £temporary2975
 997:	
 
-strtoul_test$291:	; Assign value £temporary2993
+strtoul_test$291:	; Assign value £temporary2975
 998:		mov [bp + 21], ebx
 1000:	
 
@@ -3899,12 +3899,12 @@ strtoul_test$313:	; Parameter 21 text 6
 1071:		add word [bp + 27], 8
 1073:	
 
-strtoul_test$314:	; address £temporary3006 pointer
+strtoul_test$314:	; address £temporary2988 pointer
 1074:		mov si, bp
 1075:		add si, 19
 1077:	
 
-strtoul_test$315:	; Parameter 21 £temporary3006 8
+strtoul_test$315:	; Parameter 21 £temporary2988 8
 1078:		mov [bp + 29], si
 1080:	
 
@@ -3923,10 +3923,10 @@ strtoul_test$317:	; Call 21 strtoul 0
 strtoul_test$318:	; PostCall 21
 1092:	
 
-strtoul_test$319:	; GetReturnValue £temporary3007
+strtoul_test$319:	; GetReturnValue £temporary2989
 1097:	
 
-strtoul_test$320:	; Assign value £temporary3007
+strtoul_test$320:	; Assign value £temporary2989
 1098:		mov [bp + 21], ebx
 1100:	
 
@@ -4025,12 +4025,12 @@ strtoul_test$342:	; Parameter 21 text 6
 1171:		add word [bp + 27], 8
 1173:	
 
-strtoul_test$343:	; address £temporary3020 pointer
+strtoul_test$343:	; address £temporary3002 pointer
 1174:		mov si, bp
 1175:		add si, 19
 1177:	
 
-strtoul_test$344:	; Parameter 21 £temporary3020 8
+strtoul_test$344:	; Parameter 21 £temporary3002 8
 1178:		mov [bp + 29], si
 1180:	
 
@@ -4049,10 +4049,10 @@ strtoul_test$346:	; Call 21 strtoul 0
 strtoul_test$347:	; PostCall 21
 1192:	
 
-strtoul_test$348:	; GetReturnValue £temporary3021
+strtoul_test$348:	; GetReturnValue £temporary3003
 1197:	
 
-strtoul_test$349:	; Assign value £temporary3021
+strtoul_test$349:	; Assign value £temporary3003
 1198:		mov [bp + 21], ebx
 1200:	
 
@@ -4151,12 +4151,12 @@ strtoul_test$371:	; Parameter 21 text 6
 1271:		add word [bp + 27], 8
 1273:	
 
-strtoul_test$372:	; address £temporary3034 pointer
+strtoul_test$372:	; address £temporary3016 pointer
 1274:		mov si, bp
 1275:		add si, 19
 1277:	
 
-strtoul_test$373:	; Parameter 21 £temporary3034 8
+strtoul_test$373:	; Parameter 21 £temporary3016 8
 1278:		mov [bp + 29], si
 1280:	
 
@@ -4175,10 +4175,10 @@ strtoul_test$375:	; Call 21 strtoul 0
 strtoul_test$376:	; PostCall 21
 1292:	
 
-strtoul_test$377:	; GetReturnValue £temporary3035
+strtoul_test$377:	; GetReturnValue £temporary3017
 1297:	
 
-strtoul_test$378:	; Assign value £temporary3035
+strtoul_test$378:	; Assign value £temporary3017
 1298:		mov [bp + 21], ebx
 1300:	
 
@@ -4277,12 +4277,12 @@ strtoul_test$400:	; Parameter 21 text 6
 1371:		add word [bp + 27], 8
 1373:	
 
-strtoul_test$401:	; address £temporary3048 pointer
+strtoul_test$401:	; address £temporary3030 pointer
 1374:		mov si, bp
 1375:		add si, 19
 1377:	
 
-strtoul_test$402:	; Parameter 21 £temporary3048 8
+strtoul_test$402:	; Parameter 21 £temporary3030 8
 1378:		mov [bp + 29], si
 1380:	
 
@@ -4301,10 +4301,10 @@ strtoul_test$404:	; Call 21 strtoul 0
 strtoul_test$405:	; PostCall 21
 1392:	
 
-strtoul_test$406:	; GetReturnValue £temporary3049
+strtoul_test$406:	; GetReturnValue £temporary3031
 1397:	
 
-strtoul_test$407:	; Assign value £temporary3049
+strtoul_test$407:	; Assign value £temporary3031
 1398:		mov [bp + 21], ebx
 1400:	
 
@@ -4403,12 +4403,12 @@ strtoul_test$429:	; Parameter 21 text 6
 1471:		add word [bp + 27], 8
 1473:	
 
-strtoul_test$430:	; address £temporary3062 pointer
+strtoul_test$430:	; address £temporary3044 pointer
 1474:		mov si, bp
 1475:		add si, 19
 1477:	
 
-strtoul_test$431:	; Parameter 21 £temporary3062 8
+strtoul_test$431:	; Parameter 21 £temporary3044 8
 1478:		mov [bp + 29], si
 1480:	
 
@@ -4427,10 +4427,10 @@ strtoul_test$433:	; Call 21 strtoul 0
 strtoul_test$434:	; PostCall 21
 1492:	
 
-strtoul_test$435:	; GetReturnValue £temporary3063
+strtoul_test$435:	; GetReturnValue £temporary3045
 1497:	
 
-strtoul_test$436:	; Assign value £temporary3063
+strtoul_test$436:	; Assign value £temporary3045
 1498:		mov [bp + 21], ebx
 1500:	
 
@@ -4529,12 +4529,12 @@ strtoul_test$458:	; Parameter 21 text 6
 1571:		add word [bp + 27], 8
 1573:	
 
-strtoul_test$459:	; address £temporary3076 pointer
+strtoul_test$459:	; address £temporary3058 pointer
 1574:		mov si, bp
 1575:		add si, 19
 1577:	
 
-strtoul_test$460:	; Parameter 21 £temporary3076 8
+strtoul_test$460:	; Parameter 21 £temporary3058 8
 1578:		mov [bp + 29], si
 1580:	
 
@@ -4553,10 +4553,10 @@ strtoul_test$462:	; Call 21 strtoul 0
 strtoul_test$463:	; PostCall 21
 1592:	
 
-strtoul_test$464:	; GetReturnValue £temporary3077
+strtoul_test$464:	; GetReturnValue £temporary3059
 1597:	
 
-strtoul_test$465:	; Assign value £temporary3077
+strtoul_test$465:	; Assign value £temporary3059
 1598:		mov [bp + 21], ebx
 1600:	
 
@@ -4655,12 +4655,12 @@ strtoul_test$487:	; Parameter 21 text 6
 1671:		add word [bp + 27], 8
 1673:	
 
-strtoul_test$488:	; address £temporary3090 pointer
+strtoul_test$488:	; address £temporary3072 pointer
 1674:		mov si, bp
 1675:		add si, 19
 1677:	
 
-strtoul_test$489:	; Parameter 21 £temporary3090 8
+strtoul_test$489:	; Parameter 21 £temporary3072 8
 1678:		mov [bp + 29], si
 1680:	
 
@@ -4679,10 +4679,10 @@ strtoul_test$491:	; Call 21 strtoul 0
 strtoul_test$492:	; PostCall 21
 1692:	
 
-strtoul_test$493:	; GetReturnValue £temporary3091
+strtoul_test$493:	; GetReturnValue £temporary3073
 1697:	
 
-strtoul_test$494:	; Assign value £temporary3091
+strtoul_test$494:	; Assign value £temporary3073
 1698:		mov [bp + 21], ebx
 1700:	
 
@@ -4781,12 +4781,12 @@ strtoul_test$516:	; Parameter 21 text 6
 1771:		add word [bp + 27], 8
 1773:	
 
-strtoul_test$517:	; address £temporary3104 pointer
+strtoul_test$517:	; address £temporary3086 pointer
 1774:		mov si, bp
 1775:		add si, 19
 1777:	
 
-strtoul_test$518:	; Parameter 21 £temporary3104 8
+strtoul_test$518:	; Parameter 21 £temporary3086 8
 1778:		mov [bp + 29], si
 1780:	
 
@@ -4805,10 +4805,10 @@ strtoul_test$520:	; Call 21 strtoul 0
 strtoul_test$521:	; PostCall 21
 1792:	
 
-strtoul_test$522:	; GetReturnValue £temporary3105
+strtoul_test$522:	; GetReturnValue £temporary3087
 1797:	
 
-strtoul_test$523:	; Assign value £temporary3105
+strtoul_test$523:	; Assign value £temporary3087
 1798:		mov [bp + 21], ebx
 1800:	
 
@@ -4883,13 +4883,13 @@ atof$3:	; Call 8 strtod 0
 atof$4:	; PostCall 8
 18:	
 
-atof$5:	; GetReturnValue £temporary3269
+atof$5:	; GetReturnValue £temporary3251
 20:	
 
-atof$6:	; SetReturnValue £temporary3269
+atof$6:	; SetReturnValue £temporary3251
 22:	
 
-atof$7:	; Return £temporary3269
+atof$7:	; Return £temporary3251
 23:		mov ax, [bp]
 24:		mov di, [bp + 4]
 25:		mov bp, [bp + 2]
@@ -4923,21 +4923,21 @@ strtod$5:	; Parameter 20 string_25lf25n# 8
 17:		mov word [bp + 28], string_25lf25n#
 19:	
 
-strtod$6:	; address £temporary3272 value
+strtod$6:	; address £temporary3254 value
 20:		mov si, bp
 21:		add si, 12
 23:	
 
-strtod$7:	; Parameter 20 £temporary3272 10
+strtod$7:	; Parameter 20 £temporary3254 10
 24:		mov [bp + 30], si
 26:	
 
-strtod$8:	; address £temporary3273 chars
+strtod$8:	; address £temporary3255 chars
 27:		mov si, bp
 28:		add si, 10
 30:	
 
-strtod$9:	; Parameter 20 £temporary3273 12
+strtod$9:	; Parameter 20 £temporary3255 12
 31:		mov [bp + 32], si
 33:	
 
@@ -4958,11 +4958,11 @@ strtod$12:	; Equal 15 endp 0
 45:		je strtod$15
 47:	
 
-strtod$13:	; Deref £temporary3276 -> endp endp 0
+strtod$13:	; Deref £temporary3258 -> endp endp 0
 48:		mov si, [bp + 8]
 50:	
 
-strtod$14:	; BinaryAdd £temporary3276 -> endp s chars
+strtod$14:	; BinaryAdd £temporary3258 -> endp s chars
 51:		mov ax, [bp + 6]
 52:		add ax, [bp + 10]
 53:		mov [si], ax
@@ -5061,17 +5061,17 @@ bsearch$4:	; Return 0
 20:		jmp ax
 22:	
 
-bsearch$5:	; IntegralToIntegral £temporary3288 valueList
+bsearch$5:	; IntegralToIntegral £temporary3270 valueList
 23:		mov bx, [bp + 8]
 26:	
 
-bsearch$6:	; SignedMultiply £temporary3289 firstIndex valueSize
+bsearch$6:	; SignedMultiply £temporary3271 firstIndex valueSize
 27:		mov ax, [bp + 16]
 29:		xor dx, dx
 30:		imul word [bp + 12]
 36:	
 
-bsearch$7:	; BinaryAdd firstValuePtr £temporary3288 £temporary3289
+bsearch$7:	; BinaryAdd firstValuePtr £temporary3270 £temporary3271
 37:		add bx, ax
 38:		mov [bp + 20], bx
 40:	
@@ -5100,10 +5100,10 @@ bsearch$11:	; Call 22 compare 0
 bsearch$12:	; PostCall 22
 59:	
 
-bsearch$13:	; GetReturnValue £temporary3291
+bsearch$13:	; GetReturnValue £temporary3273
 64:	
 
-bsearch$14:	; Assign firstCompare £temporary3291
+bsearch$14:	; Assign firstCompare £temporary3273
 65:		mov [bp + 22], bx
 67:	
 
@@ -5139,17 +5139,17 @@ bsearch$20:	; Return firstValuePtr
 91:		jmp ax
 93:	
 
-bsearch$21:	; IntegralToIntegral £temporary3294 valueList
+bsearch$21:	; IntegralToIntegral £temporary3276 valueList
 94:		mov bx, [bp + 8]
 97:	
 
-bsearch$22:	; SignedMultiply £temporary3295 lastIndex valueSize
+bsearch$22:	; SignedMultiply £temporary3277 lastIndex valueSize
 98:		mov ax, [bp + 18]
 100:		xor dx, dx
 101:		imul word [bp + 12]
 107:	
 
-bsearch$23:	; BinaryAdd lastValuePtr £temporary3294 £temporary3295
+bsearch$23:	; BinaryAdd lastValuePtr £temporary3276 £temporary3277
 108:		add bx, ax
 109:		mov [bp + 20], bx
 111:	
@@ -5178,10 +5178,10 @@ bsearch$27:	; Call 22 compare 0
 bsearch$28:	; PostCall 22
 130:	
 
-bsearch$29:	; GetReturnValue £temporary3297
+bsearch$29:	; GetReturnValue £temporary3279
 135:	
 
-bsearch$30:	; Assign lastCompare £temporary3297
+bsearch$30:	; Assign lastCompare £temporary3279
 136:		mov [bp + 22], bx
 138:	
 
@@ -5217,28 +5217,28 @@ bsearch$36:	; Return lastValuePtr
 162:		jmp ax
 164:	
 
-bsearch$37:	; BinaryAdd £temporary3300 firstIndex lastIndex
+bsearch$37:	; BinaryAdd £temporary3282 firstIndex lastIndex
 165:		mov ax, [bp + 16]
 166:		add ax, [bp + 18]
 168:	
 
-bsearch$38:	; SignedDivide middleIndex £temporary3300 2
+bsearch$38:	; SignedDivide middleIndex £temporary3282 2
 170:		xor dx, dx
 171:		idiv word [int2$2#]
 172:		mov [bp + 20], ax
 174:	
 
-bsearch$39:	; IntegralToIntegral £temporary3302 valueList
+bsearch$39:	; IntegralToIntegral £temporary3284 valueList
 175:		mov bx, [bp + 8]
 178:	
 
-bsearch$40:	; SignedMultiply £temporary3303 middleIndex valueSize
+bsearch$40:	; SignedMultiply £temporary3285 middleIndex valueSize
 179:		mov ax, [bp + 20]
 181:		xor dx, dx
 182:		imul word [bp + 12]
 188:	
 
-bsearch$41:	; BinaryAdd middleValuePtr £temporary3302 £temporary3303
+bsearch$41:	; BinaryAdd middleValuePtr £temporary3284 £temporary3285
 189:		add bx, ax
 190:		mov [bp + 22], bx
 192:	
@@ -5267,10 +5267,10 @@ bsearch$45:	; Call 24 compare 0
 bsearch$46:	; PostCall 24
 211:	
 
-bsearch$47:	; GetReturnValue £temporary3305
+bsearch$47:	; GetReturnValue £temporary3287
 216:	
 
-bsearch$48:	; Assign middleCompare £temporary3305
+bsearch$48:	; Assign middleCompare £temporary3287
 217:		mov [bp + 24], bx
 219:	
 
@@ -5316,34 +5316,34 @@ bsearch$56:	; Return middleValuePtr
 bsearch$57:	; FunctionEnd bsearch
 1:	
 
-rand:	; SignedMultiply £temporary3315 g_randValue 1664525
-2:		mov eax, [@3862$g_randValue]
+rand:	; SignedMultiply £temporary3297 g_randValue 1664525
+2:		mov eax, [@3843$g_randValue]
 4:		xor edx, edx
 5:		imul dword [int4$1664525#]
 11:	
 
-rand$1:	; BinaryAdd £temporary3316 £temporary3315 1013904223
+rand$1:	; BinaryAdd £temporary3298 £temporary3297 1013904223
 12:		add eax, 1013904223
 14:	
 
-rand$2:	; SignedModulo g_randValue £temporary3316 127
+rand$2:	; SignedModulo g_randValue £temporary3298 127
 16:		xor edx, edx
 17:		idiv dword [int4$127#]
-18:		mov [@3862$g_randValue], edx
+18:		mov [@3843$g_randValue], edx
 20:	
 
-rand$3:	; IntegralToIntegral £temporary3318 g_randValue
-21:		mov ebx, [@3862$g_randValue]
+rand$3:	; IntegralToIntegral £temporary3300 g_randValue
+21:		mov ebx, [@3843$g_randValue]
 24:		cmp ebx, 0
 25:		jge rand$4
 26:		neg ebx
 28:		neg bx
 30:	
 
-rand$4:	; SetReturnValue £temporary3318
+rand$4:	; SetReturnValue £temporary3300
 32:	
 
-rand$5:	; Return £temporary3318
+rand$5:	; Return £temporary3300
 33:		mov ax, [bp]
 34:		mov di, [bp + 4]
 35:		mov bp, [bp + 2]
@@ -5353,13 +5353,13 @@ rand$5:	; Return £temporary3318
 rand$6:	; FunctionEnd rand
 1:	
 
-srand:	; IntegralToIntegral £temporary3319 seed
+srand:	; IntegralToIntegral £temporary3301 seed
 2:		mov ax, [bp + 6]
 4:		and eax, 65535
 6:	
 
-srand$1:	; Assign g_randValue £temporary3319
-7:		mov [@3862$g_randValue], eax
+srand$1:	; Assign g_randValue £temporary3301
+7:		mov [@3843$g_randValue], eax
 9:	
 
 srand$2:	; Return 0
@@ -5381,40 +5381,40 @@ atexit$1:	; SignedGreaterThanEqual 14 index 256
 6:		jge atexit$14
 8:	
 
-atexit$2:	; UnsignedMultiply £temporary3323 index 2
+atexit$2:	; UnsignedMultiply £temporary3305 index 2
 9:		mov ax, [bp + 8]
 11:		xor dx, dx
 12:		mul word [int2$2#]
 18:	
 
-atexit$3:	; BinaryAdd £temporary3324 g_funcArray £temporary3323
+atexit$3:	; BinaryAdd £temporary3306 g_funcArray £temporary3305
 19:		mov si, g_funcArray
 20:		add si, ax
 22:	
 
-atexit$4:	; Deref £temporary3322 -> £temporary3324 £temporary3324 0
+atexit$4:	; Deref £temporary3304 -> £temporary3306 £temporary3306 0
 24:	
 
-atexit$5:	; NotEqual 12 £temporary3322 -> £temporary3324 0
+atexit$5:	; NotEqual 12 £temporary3304 -> £temporary3306 0
 25:		cmp word [si], 0
 26:		jne atexit$12
 28:	
 
-atexit$6:	; UnsignedMultiply £temporary3327 index 2
+atexit$6:	; UnsignedMultiply £temporary3309 index 2
 29:		mov ax, [bp + 8]
 31:		xor dx, dx
 32:		mul word [int2$2#]
 38:	
 
-atexit$7:	; BinaryAdd £temporary3328 g_funcArray £temporary3327
+atexit$7:	; BinaryAdd £temporary3310 g_funcArray £temporary3309
 39:		mov si, g_funcArray
 40:		add si, ax
 42:	
 
-atexit$8:	; Deref £temporary3326 -> £temporary3328 £temporary3328 0
+atexit$8:	; Deref £temporary3308 -> £temporary3310 £temporary3310 0
 44:	
 
-atexit$9:	; Assign £temporary3326 -> £temporary3328 fcn
+atexit$9:	; Assign £temporary3308 -> £temporary3310 fcn
 45:		mov ax, [bp + 6]
 46:		mov [si], ax
 48:	
@@ -5461,44 +5461,44 @@ exit$1:	; SignedLessThan 14 index 0
 6:		jl exit$14
 8:	
 
-exit$2:	; UnsignedMultiply £temporary3332 index 2
+exit$2:	; UnsignedMultiply £temporary3314 index 2
 9:		mov ax, [bp + 8]
 11:		xor dx, dx
 12:		mul word [int2$2#]
 18:	
 
-exit$3:	; BinaryAdd £temporary3333 g_funcArray £temporary3332
+exit$3:	; BinaryAdd £temporary3315 g_funcArray £temporary3314
 19:		mov si, g_funcArray
 20:		add si, ax
 22:	
 
-exit$4:	; Deref £temporary3331 -> £temporary3333 £temporary3333 0
+exit$4:	; Deref £temporary3313 -> £temporary3315 £temporary3315 0
 24:	
 
-exit$5:	; Equal 12 £temporary3331 -> £temporary3333 0
+exit$5:	; Equal 12 £temporary3313 -> £temporary3315 0
 25:		cmp word [si], 0
 26:		je exit$12
 28:	
 
-exit$6:	; UnsignedMultiply £temporary3336 index 2
+exit$6:	; UnsignedMultiply £temporary3318 index 2
 29:		mov ax, [bp + 8]
 31:		xor dx, dx
 32:		mul word [int2$2#]
 38:	
 
-exit$7:	; BinaryAdd £temporary3337 g_funcArray £temporary3336
+exit$7:	; BinaryAdd £temporary3319 g_funcArray £temporary3318
 39:		mov si, g_funcArray
 40:		add si, ax
 42:	
 
-exit$8:	; Deref £temporary3335 -> £temporary3337 £temporary3337 0
+exit$8:	; Deref £temporary3317 -> £temporary3319 £temporary3319 0
 44:	
 
 exit$9:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 45:		mov [bp + 12], si
 47:	
 
-exit$10:	; Call 12 £temporary3335 -> £temporary3337 0
+exit$10:	; Call 12 £temporary3317 -> £temporary3319 0
 48:		mov word [bp + 14], exit$11
 49:		mov [bp + 16], bp
 50:		mov di, [bp]
@@ -5519,7 +5519,7 @@ exit$13:	; Goto 1
 62:		jmp exit$1
 64:	
 
-exit$14:	; IntegralToIntegral £temporary3340 status
+exit$14:	; IntegralToIntegral £temporary3322 status
 65:		mov ax, [bp + 6]
 68:		cmp ax, 0
 69:		jge exit$15
@@ -5527,7 +5527,7 @@ exit$14:	; IntegralToIntegral £temporary3340 status
 72:		neg al
 74:	
 
-exit$15:	; AssignRegister al £temporary3340
+exit$15:	; AssignRegister al £temporary3322
 76:	
 
 exit$16:	; AssignRegister ah 76
@@ -5548,86 +5548,86 @@ exit$18:	; Return 0
 exit$19:	; FunctionEnd exit
 1:	
 
-@3892$memswap:	; Assign index 0
+@3873$memswap:	; Assign index 0
 2:		mov word [bp + 12], 0
 4:	
 
-@3892$memswap$1:	; SignedGreaterThanEqual 15 index valueSize
+@3873$memswap$1:	; SignedGreaterThanEqual 15 index valueSize
 5:		mov ax, [bp + 10]
 6:		cmp [bp + 12], ax
-7:		jge @3892$memswap$15
+7:		jge @3873$memswap$15
 9:	
 
-@3892$memswap$2:	; BinaryAdd £temporary3345 value1 index
+@3873$memswap$2:	; BinaryAdd £temporary3327 value1 index
 10:		mov si, [bp + 6]
 11:		add si, [bp + 12]
 13:	
 
-@3892$memswap$3:	; Deref £temporary3344 -> £temporary3345 £temporary3345 0
+@3873$memswap$3:	; Deref £temporary3326 -> £temporary3327 £temporary3327 0
 15:	
 
-@3892$memswap$4:	; Assign tempValue £temporary3344 -> £temporary3345
+@3873$memswap$4:	; Assign tempValue £temporary3326 -> £temporary3327
 16:		mov al, [si]
 17:		mov [bp + 14], al
 19:	
 
-@3892$memswap$5:	; BinaryAdd £temporary3347 value1 index
+@3873$memswap$5:	; BinaryAdd £temporary3329 value1 index
 20:		mov si, [bp + 6]
 21:		add si, [bp + 12]
 23:	
 
-@3892$memswap$6:	; Deref £temporary3346 -> £temporary3347 £temporary3347 0
+@3873$memswap$6:	; Deref £temporary3328 -> £temporary3329 £temporary3329 0
 25:	
 
-@3892$memswap$7:	; BinaryAdd £temporary3349 value2 index
+@3873$memswap$7:	; BinaryAdd £temporary3331 value2 index
 26:		mov di, [bp + 8]
 27:		add di, [bp + 12]
 29:	
 
-@3892$memswap$8:	; Deref £temporary3348 -> £temporary3349 £temporary3349 0
+@3873$memswap$8:	; Deref £temporary3330 -> £temporary3331 £temporary3331 0
 31:	
 
-@3892$memswap$9:	; Assign £temporary3346 -> £temporary3347 £temporary3348 -> £temporary3349
+@3873$memswap$9:	; Assign £temporary3328 -> £temporary3329 £temporary3330 -> £temporary3331
 32:		mov al, [di]
 33:		mov [si], al
 35:	
 
-@3892$memswap$10:	; BinaryAdd £temporary3351 value2 index
+@3873$memswap$10:	; BinaryAdd £temporary3333 value2 index
 36:		mov si, [bp + 8]
 37:		add si, [bp + 12]
 39:	
 
-@3892$memswap$11:	; Deref £temporary3350 -> £temporary3351 £temporary3351 0
+@3873$memswap$11:	; Deref £temporary3332 -> £temporary3333 £temporary3333 0
 41:	
 
-@3892$memswap$12:	; Assign £temporary3350 -> £temporary3351 tempValue
+@3873$memswap$12:	; Assign £temporary3332 -> £temporary3333 tempValue
 42:		mov al, [bp + 14]
 43:		mov [si], al
 45:	
 
-@3892$memswap$13:	; Increment index
+@3873$memswap$13:	; Increment index
 46:		inc word [bp + 12]
 48:	
 
-@3892$memswap$14:	; Goto 1
-49:		jmp @3892$memswap$1
+@3873$memswap$14:	; Goto 1
+49:		jmp @3873$memswap$1
 51:	
 
-@3892$memswap$15:	; Return 0
+@3873$memswap$15:	; Return 0
 52:		mov ax, [bp]
 53:		mov di, [bp + 4]
 54:		mov bp, [bp + 2]
 55:		jmp ax
 57:	
 
-@3892$memswap$16:	; FunctionEnd memswap
+@3873$memswap$16:	; FunctionEnd memswap
 1:	
 
-qsort:	; IntegralToIntegral £temporary3352 valueList
+qsort:	; IntegralToIntegral £temporary3334 valueList
 2:		mov ax, [bp + 6]
 5:	
 
-qsort$1:	; Assign charList £temporary3352
+qsort$1:	; Assign charList £temporary3334
 6:		mov [bp + 14], ax
 8:	
 
@@ -5656,29 +5656,29 @@ qsort$6:	; SignedGreaterThanEqual 28 index size
 26:		jge qsort$28
 28:	
 
-qsort$7:	; SignedMultiply £temporary3358 index valueSize
+qsort$7:	; SignedMultiply £temporary3340 index valueSize
 29:		mov ax, [bp + 18]
 31:		xor dx, dx
 32:		imul word [bp + 10]
 38:	
 
-qsort$8:	; BinaryAdd valuePtr1 charList £temporary3358
+qsort$8:	; BinaryAdd valuePtr1 charList £temporary3340
 39:		mov bx, [bp + 14]
 40:		add bx, ax
 41:		mov [bp + 22], bx
 43:	
 
-qsort$9:	; BinaryAdd £temporary3360 index 1
+qsort$9:	; BinaryAdd £temporary3342 index 1
 44:		mov ax, [bp + 18]
 45:		add ax, 1
 47:	
 
-qsort$10:	; SignedMultiply £temporary3361 £temporary3360 valueSize
+qsort$10:	; SignedMultiply £temporary3343 £temporary3342 valueSize
 49:		xor dx, dx
 50:		imul word [bp + 10]
 56:	
 
-qsort$11:	; BinaryAdd valuePtr2 charList £temporary3361
+qsort$11:	; BinaryAdd valuePtr2 charList £temporary3343
 57:		mov bx, [bp + 14]
 58:		add bx, ax
 59:		mov [bp + 24], bx
@@ -5708,10 +5708,10 @@ qsort$15:	; Call 26 compare 0
 qsort$16:	; PostCall 26
 80:	
 
-qsort$17:	; GetReturnValue £temporary3363
+qsort$17:	; GetReturnValue £temporary3345
 85:	
 
-qsort$18:	; SignedLessThanEqual 26 £temporary3363 0
+qsort$18:	; SignedLessThanEqual 26 £temporary3345 0
 86:		cmp bx, 0
 87:		jle qsort$26
 89:	
@@ -5738,7 +5738,7 @@ qsort$23:	; Call 26 memswap 0
 104:		mov word [bp + 26], qsort$24
 105:		mov [bp + 28], bp
 106:		add bp, 26
-107:		jmp @3892$memswap
+107:		jmp @3873$memswap
 109:	
 
 qsort$24:	; PostCall 26
@@ -5784,26 +5784,26 @@ _abs:	; SignedGreaterThanEqual 4 value 0
 3:		jge _abs$4
 5:	
 
-_abs$1:	; UnarySubtract £temporary3374 value
+_abs$1:	; UnarySubtract £temporary3356 value
 6:		mov bx, [bp + 6]
 7:		neg bx
 9:	
 
-_abs$2:	; Assign £temporary3378 £temporary3374
+_abs$2:	; Assign £temporary3360 £temporary3356
 11:	
 
 _abs$3:	; Goto 5
 12:		jmp _abs$5
 14:	
 
-_abs$4:	; Assign £temporary3378 value
+_abs$4:	; Assign £temporary3360 value
 15:		mov bx, [bp + 6]
 17:	
 
-_abs$5:	; SetReturnValue £temporary3378
+_abs$5:	; SetReturnValue £temporary3360
 19:	
 
-_abs$6:	; Return £temporary3378
+_abs$6:	; Return £temporary3360
 20:		mov ax, [bp]
 21:		mov di, [bp + 4]
 22:		mov bp, [bp + 2]
@@ -5818,26 +5818,26 @@ labs:	; SignedGreaterThanEqual 4 value 0
 3:		jge labs$4
 5:	
 
-labs$1:	; UnarySubtract £temporary3380 value
+labs$1:	; UnarySubtract £temporary3362 value
 6:		mov ebx, [bp + 6]
 7:		neg ebx
 9:	
 
-labs$2:	; Assign £temporary3384 £temporary3380
+labs$2:	; Assign £temporary3366 £temporary3362
 11:	
 
 labs$3:	; Goto 5
 12:		jmp labs$5
 14:	
 
-labs$4:	; Assign £temporary3384 value
+labs$4:	; Assign £temporary3366 value
 15:		mov ebx, [bp + 6]
 17:	
 
-labs$5:	; SetReturnValue £temporary3384
+labs$5:	; SetReturnValue £temporary3366
 19:	
 
-labs$6:	; Return £temporary3384
+labs$6:	; Return £temporary3366
 20:		mov ax, [bp]
 21:		mov di, [bp + 4]
 22:		mov bp, [bp + 2]

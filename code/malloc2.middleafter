@@ -1,5 +1,5 @@
-0: IntegralToIntegral £temporary238 memorySize
-1: BinaryAdd newBlockSize £temporary238 4
+0: IntegralToIntegral £temporary213 memorySize
+1: BinaryAdd newBlockSize £temporary213 4
 2: Assign minGap 0
 3: Assign lastAddress 65528
 4: Assign minBlockPtr 0
@@ -22,12 +22,12 @@
 21: SetReturnValue 0
 22: Return 0
 23: Equal 41 currBlockPtr 0
-24: IntegralToIntegral £temporary246 currBlockPtr
-25: Assign currAddress £temporary246
-26: Deref £temporary247 -> currBlockPtr currBlockPtr 0
-27: BinaryAdd £temporary248 currAddress £temporary247 -> currBlockPtr
-28: BinaryAdd £temporary249 £temporary248 4
-29: BinarySubtract currGap lastAddress £temporary249
+24: IntegralToIntegral £temporary221 currBlockPtr
+25: Assign currAddress £temporary221
+26: Deref £temporary222 -> currBlockPtr currBlockPtr 0
+27: BinaryAdd £temporary223 currAddress £temporary222 -> currBlockPtr
+28: BinaryAdd £temporary224 £temporary223 4
+29: BinarySubtract currGap lastAddress £temporary224
 30: UnsignedGreaterThan 36 newBlockSize currGap
 31: Equal 33 minGap 0
 32: UnsignedGreaterThanEqual 36 currGap minGap
@@ -36,48 +36,48 @@
 35: Assign minPrevBlockPtr prevBlockPtr
 36: Assign lastAddress currAddress
 37: Assign prevBlockPtr currBlockPtr
-38: Deref £temporary256 -> currBlockPtr currBlockPtr 2
-39: Assign currBlockPtr £temporary256 -> currBlockPtr
+38: Deref £temporary231 -> currBlockPtr currBlockPtr 2
+39: Assign currBlockPtr £temporary231 -> currBlockPtr
 40: Goto 23
 41: Equal 61 minBlockPtr 0
-42: IntegralToIntegral £temporary258 minBlockPtr
-43: Deref £temporary259 -> minBlockPtr minBlockPtr 0
-44: BinaryAdd £temporary260 £temporary258 £temporary259 -> minBlockPtr
-45: BinaryAdd newAddress £temporary260 4
-46: IntegralToIntegral £temporary262 newAddress
-47: Assign newBlockPtr £temporary262
-48: Deref £temporary263 -> newBlockPtr newBlockPtr 0
-49: Assign £temporary263 -> newBlockPtr memorySize
-50: Deref £temporary264 -> newBlockPtr newBlockPtr 2
-51: Assign £temporary264 -> newBlockPtr minBlockPtr
+42: IntegralToIntegral £temporary233 minBlockPtr
+43: Deref £temporary234 -> minBlockPtr minBlockPtr 0
+44: BinaryAdd £temporary235 £temporary233 £temporary234 -> minBlockPtr
+45: BinaryAdd newAddress £temporary235 4
+46: IntegralToIntegral £temporary237 newAddress
+47: Assign newBlockPtr £temporary237
+48: Deref £temporary238 -> newBlockPtr newBlockPtr 0
+49: Assign £temporary238 -> newBlockPtr memorySize
+50: Deref £temporary239 -> newBlockPtr newBlockPtr 2
+51: Assign £temporary239 -> newBlockPtr minBlockPtr
 52: Equal 56 minPrevBlockPtr 0
-53: Deref £temporary266 -> minPrevBlockPtr minPrevBlockPtr 2
-54: Assign £temporary266 -> minPrevBlockPtr newBlockPtr
+53: Deref £temporary241 -> minPrevBlockPtr minPrevBlockPtr 2
+54: Assign £temporary241 -> minPrevBlockPtr newBlockPtr
 55: Goto 57
 56: Assign g_firstBlockPtr newBlockPtr
-57: BinaryAdd £temporary267 newAddress 4
-58: IntegralToIntegral £temporary268 £temporary267
-59: SetReturnValue £temporary268
-60: Return £temporary268
+57: BinaryAdd £temporary242 newAddress 4
+58: IntegralToIntegral £temporary243 £temporary242
+59: SetReturnValue £temporary243
+60: Return £temporary243
 61: BinarySubtract newAddress lastAddress newBlockSize
-62: InspectRegister £temporary270 bp
-63: Assign stackTop £temporary270
+62: InspectRegister £temporary245 bp
+63: Assign stackTop £temporary245
 64: UnsignedGreaterThan 80 stackTop newAddress
-65: IntegralToIntegral £temporary272 newAddress
-66: Assign newBlockPtr £temporary272
-67: Deref £temporary273 -> newBlockPtr newBlockPtr 0
-68: Assign £temporary273 -> newBlockPtr memorySize
-69: Deref £temporary274 -> newBlockPtr newBlockPtr 2
-70: Assign £temporary274 -> newBlockPtr 0
+65: IntegralToIntegral £temporary247 newAddress
+66: Assign newBlockPtr £temporary247
+67: Deref £temporary248 -> newBlockPtr newBlockPtr 0
+68: Assign £temporary248 -> newBlockPtr memorySize
+69: Deref £temporary249 -> newBlockPtr newBlockPtr 2
+70: Assign £temporary249 -> newBlockPtr 0
 71: Equal 75 prevBlockPtr 0
-72: Deref £temporary276 -> prevBlockPtr prevBlockPtr 2
-73: Assign £temporary276 -> prevBlockPtr newBlockPtr
+72: Deref £temporary251 -> prevBlockPtr prevBlockPtr 2
+73: Assign £temporary251 -> prevBlockPtr newBlockPtr
 74: Goto 76
 75: Assign g_firstBlockPtr newBlockPtr
-76: BinaryAdd £temporary277 newAddress 4
-77: IntegralToIntegral £temporary278 £temporary277
-78: SetReturnValue £temporary278
-79: Return £temporary278
+76: BinaryAdd £temporary252 newAddress 4
+77: IntegralToIntegral £temporary253 £temporary252
+78: SetReturnValue £temporary253
+79: Return £temporary253
 80: SetReturnValue 0
 81: Return 0
 82: FunctionEnd malloc

@@ -4,7 +4,7 @@
 3: Parameter 10 arg_list 10
 4: Call 10 vfscanf 0
 5: PostCall 10
-6: GetReturnValue £temporary1734
-7: SetReturnValue £temporary1734
-8: Return £temporary1734
+6: GetReturnValue £temporary1715
+7: SetReturnValue £temporary1715
+8: Return £temporary1715
 9: FunctionEnd vscanf

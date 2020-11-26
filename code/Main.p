@@ -84,10 +84,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
    
 
-
+    
     
 
-    
+
 
 
 extern double exp ( double x ) ;
@@ -362,10 +362,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
    
 
-
+    
     
 
-    
+
 
 
        
@@ -684,12 +684,11 @@ const char * format , const struct tm * timeStruct ) ;
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Main.c,8$
        
 
-void math_test_1 ( double x ) ;
+void math_test ( ) ;
 void file_test ( ) ;
 void signal_test ( void ) ;
 void time_test ( void ) ;
 void assert_test ( void ) ;
-void assert_test2 ( int n ) ;
 void malloc_test ( void ) ;
 void print_test ( void ) ;
 void limits_test ( void ) ;
@@ -702,13 +701,13 @@ void strtol_test ( void ) ;
 void strtoul_test ( void ) ;
 void heap_test ( void ) ;
 void stack_test ( void ) ;
-void character_test ( char c ) ;
+void character_test ( ) ;
 void locale_test ( void ) ;
 
-void main_math ( void ) ;
-void math_test_2 ( double x , double y ) ;
-void acos_test ( double x ) ;
-void atan_test ( double x ) ;
+
+
+
+
 
 struct A ;
 struct B ;
@@ -865,15 +864,38 @@ printf ( "%i: <%s>\n" , index , argv [ index ] ) ;
 void mainm ( int argc , char * argv [] ) {
 
 
-main_math ( ) ;
+
 }
 
 void maina ( ) {
-if ( ! ( 1 < 2 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "1 < 2" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 196 ) ; abort ( ) ; } ;
-if ( ! ( 1 > 2 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "1 > 2" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 197 ) ; abort ( ) ; } ;
+if ( ! ( 1 < 2 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "1 < 2" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 195 ) ; abort ( ) ; } ;
+if ( ! ( 1 > 2 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "1 > 2" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 196 ) ; abort ( ) ; } ;
 }
 
-void main ( ) {
+void main ( void ) {
+math_test ( ) ;
+file_test ( ) ;
+stdio_test ( ) ;
+
+time_test ( ) ;
+assert_test ( ) ;
+malloc_test ( ) ;
+print_test ( ) ;
+limits_test ( ) ;
+float_test ( ) ;
+string_test ( ) ;
+setjmp_test ( ) ;
+stdio_test ( ) ;
+stdlib_test ( ) ;
+strtol_test ( ) ;
+strtoul_test ( ) ;
+
+
+character_test ( ) ;
+locale_test ( ) ;
+}
+
+void mainX5 ( ) {
 
 
 
@@ -1549,16 +1571,16 @@ character_test ( 'g' ) ;
 
   
 
-void assert_test ( void ) {
-int n = 0 ;
-printf ( "Please write a number (not 6 or 7): " ) ;
-scanf ( "%i" , & n ) ;
-if ( ! ( n != 6 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 6" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 880 ) ; abort ( ) ; } ;
-assert_test2 ( n ) ;
-}
+
+
+
+
+
+
+
 
 void assert_test2 ( int n ) {
-if ( ! ( n != 7 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 7" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 885 ) ; abort ( ) ; } ;
+if ( ! ( n != 7 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 7" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 907 ) ; abort ( ) ; } ;
 }
 
 

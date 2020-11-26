@@ -2,10 +2,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
    
 
-
+    
     
 
-    
+
 
 
 extern double exp ( double x ) ;
@@ -262,10 +262,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
    
 
-
+    
     
 
-    
+
 
 
        

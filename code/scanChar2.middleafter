@@ -3,27 +3,27 @@
 2: Case 18 g_inStatus 1
 3: CaseEnd g_inStatus
 4: Goto 26
-5: IntegralToIntegral £temporary1223 g_inDevice
-6: Assign stream £temporary1223
-7: Deref £temporary1224 -> stream stream 2
-8: Assign handle £temporary1224 -> stream
+5: IntegralToIntegral £temporary1204 g_inDevice
+6: Assign stream £temporary1204
+7: Deref £temporary1205 -> stream stream 2
+8: Assign handle £temporary1205 -> stream
 9: AssignRegister ah 63
 10: AssignRegister bx handle
 11: AssignRegister cx 1
-12: address £temporary1229 c
-13: AssignRegister dx £temporary1229
+12: address £temporary1210 c
+13: AssignRegister dx £temporary1210
 14: Interrupt 33
 15: Increment g_inChars
 16: SetReturnValue c
 17: Return c
-18: IntegralToIntegral £temporary1231 g_inDevice
-19: Assign inString £temporary1231
-20: Assign £temporary1232 g_inChars
+18: IntegralToIntegral £temporary1212 g_inDevice
+19: Assign inString £temporary1212
+20: Assign £temporary1213 g_inChars
 21: Increment g_inChars
-22: BinaryAdd £temporary1234 inString £temporary1232
-23: Deref £temporary1233 -> £temporary1234 £temporary1234 0
-24: SetReturnValue £temporary1233 -> £temporary1234
-25: Return £temporary1233 -> £temporary1234
+22: BinaryAdd £temporary1215 inString £temporary1213
+23: Deref £temporary1214 -> £temporary1215 £temporary1215 0
+24: SetReturnValue £temporary1214 -> £temporary1215
+25: Return £temporary1214 -> £temporary1215
 26: SetReturnValue 0
 27: Return 0
 28: FunctionEnd scanChar

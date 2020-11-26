@@ -1,9 +1,7 @@
 0: Assign a$p 0
 1: Assign a$q 0
 2: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-3: Parameter 6 string_test12Etxt# 6
-4: Parameter 6 string_test22Etxt# 8
-5: Call 6 file_test 0
-6: PostCall 6
-7: Return 0
-8: FunctionEnd main2
+3: Call 6 file_test 0
+4: PostCall 6
+5: Return 0
+6: FunctionEnd main2

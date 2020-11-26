@@ -75,7 +75,7 @@ section .text
 	fld qword [rbp + 56]
 
  exp$10:
-	; SignedDivide £temporary375 power faculty
+	; SignedDivide £temporary382 power faculty
 	fdiv
 
  exp$11:
@@ -91,7 +91,7 @@ section .text
 	fld qword [rbp + 40]
 
  exp$14:
-	; BinaryAdd £temporary376 sum term
+	; BinaryAdd £temporary383 sum term
 	fadd
 
  exp$15:
@@ -107,7 +107,7 @@ section .text
 	fld qword [rbp + 24]
 
  exp$18:
-	; SignedMultiply £temporary377 power x
+	; SignedMultiply £temporary384 power x
 	fmul
 
  exp$19:
@@ -135,7 +135,7 @@ section .text
 	fst qword [rbp + 32]
 
  exp$25:
-	; SignedMultiply £temporary379 faculty £temporary378
+	; SignedMultiply £temporary386 faculty £temporary385
 	fmul
 
  exp$26:
@@ -164,14 +164,14 @@ section .text
 	; PostCall 72
 
  exp$32:
-	; GetReturnValue £temporary380
+	; GetReturnValue £temporary387
 
  exp$33:
 	; PushFloat 0.000000001
 	fld qword [float8$0.000000001#]
 
  exp$34:
-	; SignedGreaterThanEqual 8 £temporary380 0.000000001
+	; SignedGreaterThanEqual 8 £temporary387 0.000000001
 	fcompp
 	fstsw ax
 	sahf
@@ -202,9 +202,9 @@ float8$2.71#:
 
 section .data
 
-float8$0.3690036900369003690036900369#:
-	; Initializer Double 0.3690036900369003690036900369
-	dq 0.3690036900369003690036900369
+float8$0.368#:
+	; Initializer Double 0.368
+	dq 0.368
 
 section .data
 
@@ -272,7 +272,7 @@ section .text
 	fld qword [float8$2.71#]
 
  log$12:
-	; SignedDivide £temporary386 x 2.71
+	; SignedDivide £temporary393 x 2.71
 	fdiv
 
  log$13:
@@ -292,11 +292,11 @@ section .text
 	fld qword [rbp + 24]
 
  log$17:
-	; PushFloat 0.3690036900369003690036900369
-	fld qword [float8$0.3690036900369003690036900369#]
+	; PushFloat 0.368
+	fld qword [float8$0.368#]
 
  log$18:
-	; SignedGreaterThanEqual 28 x 0.3690036900369003690036900369
+	; SignedGreaterThanEqual 28 x 0.368
 	fcompp
 	fstsw ax
 	sahf
@@ -307,11 +307,11 @@ section .text
 	fld qword [rbp + 24]
 
  log$20:
-	; PushFloat 0.3690036900369003690036900369
-	fld qword [float8$0.3690036900369003690036900369#]
+	; PushFloat 0.368
+	fld qword [float8$0.368#]
 
  log$21:
-	; SignedGreaterThanEqual 28 x 0.3690036900369003690036900369
+	; SignedGreaterThanEqual 28 x 0.368
 	fcompp
 	fstsw ax
 	sahf
@@ -326,7 +326,7 @@ section .text
 	fld qword [float8$2.71#]
 
  log$24:
-	; SignedMultiply £temporary390 x 2.71
+	; SignedMultiply £temporary397 x 2.71
 	fmul
 
  log$25:
@@ -374,7 +374,7 @@ section .text
 	fld1
 
  log$36:
-	; BinarySubtract £temporary392 x 1
+	; BinarySubtract £temporary399 x 1
 	fsub
 
  log$37:
@@ -398,7 +398,7 @@ section .text
 	fld qword [rbp + 76]
 
  log$42:
-	; SignedMultiply £temporary393 sign power
+	; SignedMultiply £temporary400 sign power
 	fmul
 
  log$43:
@@ -426,7 +426,7 @@ section .text
 	fsub
 
  log$49:
-	; SignedDivide £temporary395 £temporary393 £temporary394
+	; SignedDivide £temporary402 £temporary400 £temporary401
 	fdiv
 
  log$50:
@@ -442,7 +442,7 @@ section .text
 	fld qword [rbp + 44]
 
  log$53:
-	; BinaryAdd £temporary396 sum term
+	; BinaryAdd £temporary403 sum term
 	fadd
 
  log$54:
@@ -458,7 +458,7 @@ section .text
 	fld qword [rbp + 68]
 
  log$57:
-	; SignedMultiply £temporary397 power x_minus_1
+	; SignedMultiply £temporary404 power x_minus_1
 	fmul
 
  log$58:
@@ -474,7 +474,7 @@ section .text
 	fld qword [float8$minus1.0#]
 
  log$61:
-	; SignedMultiply £temporary398 sign -1.0
+	; SignedMultiply £temporary405 sign -1.0
 	fmul
 
  log$62:
@@ -503,14 +503,14 @@ section .text
 	; PostCall 84
 
  log$68:
-	; GetReturnValue £temporary399
+	; GetReturnValue £temporary406
 
  log$69:
 	; PushFloat 0.000000001
 	fld qword [float8$0.000000001#]
 
  log$70:
-	; SignedGreaterThanEqual 40 £temporary399 0.000000001
+	; SignedGreaterThanEqual 40 £temporary406 0.000000001
 	fcompp
 	fstsw ax
 	sahf
@@ -521,18 +521,18 @@ section .text
 	fld qword [rbp + 52]
 
  log$72:
-	; IntegralToFloating £temporary401 n
+	; IntegralToFloating £temporary408 n
 	fild dword [rbp + 32]
 
  log$73:
-	; BinaryAdd £temporary402 sum £temporary401
+	; BinaryAdd £temporary409 sum £temporary408
 	fadd
 
  log$74:
 	; SetReturnValue
 
  log$75:
-	; Return £temporary402
+	; Return £temporary409
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -589,21 +589,21 @@ section .text
 	; PostCall 32
 
  log10$5:
-	; GetReturnValue £temporary404
+	; GetReturnValue £temporary411
 
  log10$6:
 	; PushFloat 2.30
 	fld qword [float8$2.30#]
 
  log10$7:
-	; SignedDivide £temporary405 £temporary404 2.30
+	; SignedDivide £temporary412 £temporary411 2.30
 	fdiv
 
  log10$8:
 	; SetReturnValue
 
  log10$9:
-	; Return £temporary405
+	; Return £temporary412
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -674,14 +674,14 @@ section .text
 	fld qword [rbp + 48]
 
  pow$10:
-	; GetReturnValue £temporary408
+	; GetReturnValue £temporary415
 
  pow$11:
-	; SignedMultiply £temporary409 y £temporary408
+	; SignedMultiply £temporary416 y £temporary415
 	fmul
 
  pow$12:
-	; Parameter 64 double £temporary409
+	; Parameter 64 double £temporary416
 	fstp qword [rbp + 64]
 
  pow$13:
@@ -695,13 +695,13 @@ section .text
 	; PostCall 40
 
  pow$15:
-	; GetReturnValue £temporary410
+	; GetReturnValue £temporary417
 
  pow$16:
 	; SetReturnValue
 
  pow$17:
-	; Return £temporary410
+	; Return £temporary417
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -832,7 +832,7 @@ section .text
 	; PostCall 40
 
  pow$44:
-	; GetReturnValue £temporary418
+	; GetReturnValue £temporary425
 
  pow$45:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -860,10 +860,10 @@ section .text
 	fld qword [rbp + 48]
 
  pow$50:
-	; GetReturnValue £temporary419
+	; GetReturnValue £temporary426
 
  pow$51:
-	; NotEqual 90 £temporary418 £temporary419
+	; NotEqual 90 £temporary425 £temporary426
 	fcompp
 	fstsw ax
 	sahf
@@ -874,22 +874,22 @@ section .text
 	fld qword [rbp + 32]
 
  pow$53:
-	; FloatingToIntegral £temporary422 y
+	; FloatingToIntegral £temporary429 y
 	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
  pow$54:
-	; Assign long_y £temporary422
+	; Assign long_y £temporary429
 	mov [rbp + 40], rax
 
  pow$55:
-	; SignedModulo £temporary423 long_y 2
+	; SignedModulo £temporary430 long_y 2
 	mov rax, [rbp + 40]
 	xor rdx, rdx
 	idiv qword [int8$2#]
 
  pow$56:
-	; NotEqual 73 £temporary423 0
+	; NotEqual 73 £temporary430 0
 	cmp rdx, 0
 	jne pow$73
 
@@ -909,11 +909,11 @@ section .text
 	fld qword [rbp + 24]
 
  pow$61:
-	; UnarySubtract £temporary425 x
+	; UnarySubtract £temporary432 x
 	fchs
 
  pow$62:
-	; Parameter 72 double £temporary425
+	; Parameter 72 double £temporary432
 	fstp qword [rbp + 80]
 
  pow$63:
@@ -930,14 +930,14 @@ section .text
 	fld qword [rbp + 56]
 
  pow$65:
-	; GetReturnValue £temporary426
+	; GetReturnValue £temporary433
 
  pow$66:
-	; SignedMultiply £temporary427 y £temporary426
+	; SignedMultiply £temporary434 y £temporary433
 	fmul
 
  pow$67:
-	; Parameter 72 double £temporary427
+	; Parameter 72 double £temporary434
 	fstp qword [rbp + 72]
 
  pow$68:
@@ -951,13 +951,13 @@ section .text
 	; PostCall 48
 
  pow$70:
-	; GetReturnValue £temporary428
+	; GetReturnValue £temporary435
 
  pow$71:
 	; SetReturnValue
 
  pow$72:
-	; Return £temporary428
+	; Return £temporary435
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -979,11 +979,11 @@ section .text
 	fld qword [rbp + 24]
 
  pow$77:
-	; UnarySubtract £temporary429 x
+	; UnarySubtract £temporary436 x
 	fchs
 
  pow$78:
-	; Parameter 72 double £temporary429
+	; Parameter 72 double £temporary436
 	fstp qword [rbp + 80]
 
  pow$79:
@@ -1000,14 +1000,14 @@ section .text
 	fld qword [rbp + 56]
 
  pow$81:
-	; GetReturnValue £temporary430
+	; GetReturnValue £temporary437
 
  pow$82:
-	; SignedMultiply £temporary431 y £temporary430
+	; SignedMultiply £temporary438 y £temporary437
 	fmul
 
  pow$83:
-	; Parameter 72 double £temporary431
+	; Parameter 72 double £temporary438
 	fstp qword [rbp + 72]
 
  pow$84:
@@ -1021,17 +1021,17 @@ section .text
 	; PostCall 48
 
  pow$86:
-	; GetReturnValue £temporary432
+	; GetReturnValue £temporary439
 
  pow$87:
-	; UnarySubtract £temporary433 £temporary432
+	; UnarySubtract £temporary440 £temporary439
 	fchs
 
  pow$88:
 	; SetReturnValue
 
  pow$89:
-	; Return £temporary433
+	; Return £temporary440
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1083,11 +1083,11 @@ section .text
 	fstp qword [rbp + 68]
 
  ldexp$4:
-	; IntegralToFloating £temporary442 n
+	; IntegralToFloating £temporary449 n
 	fild dword [rbp + 32]
 
  ldexp$5:
-	; Parameter 68 double £temporary442
+	; Parameter 68 double £temporary449
 	fstp qword [rbp + 76]
 
  ldexp$6:
@@ -1104,17 +1104,17 @@ section .text
 	fld qword [rbp + 44]
 
  ldexp$8:
-	; GetReturnValue £temporary443
+	; GetReturnValue £temporary450
 
  ldexp$9:
-	; SignedMultiply £temporary444 x £temporary443
+	; SignedMultiply £temporary451 x £temporary450
 	fmul
 
  ldexp$10:
 	; SetReturnValue
 
  ldexp$11:
-	; Return £temporary444
+	; Return £temporary451
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1125,9 +1125,9 @@ section .text
 
 section .data
 
-float8$0.6931471805599453094172321#:
-	; Initializer Double 0.6931471805599453094172321
-	dq 0.6931471805599453094172321
+float8$0.693#:
+	; Initializer Double 0.693
+	dq 0.693
 
 section .data
 
@@ -1137,54 +1137,54 @@ container4bytes#:
 
 section .text
 
- @1659$log2:
+ @1641$log2:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @1659$log2$1:
+ @1641$log2$1:
 	; PushFloat x
 	fld qword [rbp + 24]
 
- @1659$log2$2:
+ @1641$log2$2:
 	; Parameter 56 double x
 	fstp qword [rbp + 56]
 
- @1659$log2$3:
+ @1641$log2$3:
 	; Call 32 log 0
-	mov qword [rbp + 32], @1659$log2$4
+	mov qword [rbp + 32], @1641$log2$4
 	mov [rbp + 40], rbp
 	add rbp, 32
 	jmp log
 
- @1659$log2$4:
+ @1641$log2$4:
 	; PostCall 32
 
- @1659$log2$5:
-	; GetReturnValue £temporary447
+ @1641$log2$5:
+	; GetReturnValue £temporary454
 
- @1659$log2$6:
-	; PushFloat 0.6931471805599453094172321
-	fld qword [float8$0.6931471805599453094172321#]
+ @1641$log2$6:
+	; PushFloat 0.693
+	fld qword [float8$0.693#]
 
- @1659$log2$7:
-	; SignedDivide £temporary448 £temporary447 0.6931471805599453094172321
+ @1641$log2$7:
+	; SignedDivide £temporary455 £temporary454 0.693
 	fdiv
 
- @1659$log2$8:
-	; FloatingToIntegral £temporary449 £temporary448
+ @1641$log2$8:
+	; FloatingToIntegral £temporary456 £temporary455
 	fistp dword [container4bytes#]
 	mov ebx, [container4bytes#]
 
- @1659$log2$9:
+ @1641$log2$9:
 	; SetReturnValue
 
- @1659$log2$10:
-	; Return £temporary449
+ @1641$log2$10:
+	; Return £temporary456
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @1659$log2$11:
+ @1641$log2$11:
 	; FunctionEnd log2
 
 section .text
@@ -1229,10 +1229,10 @@ section .text
 	; PostCall 40
 
  frexp$9:
-	; GetReturnValue £temporary452
+	; GetReturnValue £temporary459
 
  frexp$10:
-	; Parameter 64 double £temporary452
+	; Parameter 64 double £temporary459
 	fstp qword [rbp + 64]
 
  frexp$11:
@@ -1240,19 +1240,19 @@ section .text
 	mov qword [rbp + 40], frexp$12
 	mov [rbp + 48], rbp
 	add rbp, 40
-	jmp @1659$log2
+	jmp @1641$log2
 
  frexp$12:
 	; PostCall 40
 
  frexp$13:
-	; GetReturnValue £temporary453
+	; GetReturnValue £temporary460
 
  frexp$14:
-	; IntegralToIntegral £temporary454 £temporary453
+	; IntegralToIntegral £temporary461 £temporary460
 
  frexp$15:
-	; Assign exponent £temporary454
+	; Assign exponent £temporary461
 	mov [rbp + 40], ebx
 
  frexp$16:
@@ -1267,11 +1267,11 @@ section .text
 	fstp qword [rbp + 68]
 
  frexp$19:
-	; IntegralToFloating £temporary455 exponent
+	; IntegralToFloating £temporary462 exponent
 	fild dword [rbp + 40]
 
  frexp$20:
-	; Parameter 76 double £temporary455
+	; Parameter 76 double £temporary462
 	fstp qword [rbp + 76]
 
  frexp$21:
@@ -1285,14 +1285,14 @@ section .text
 	; PostCall 44
 
  frexp$23:
-	; GetReturnValue £temporary456
+	; GetReturnValue £temporary463
 
  frexp$24:
 	; PushFloat x
 	fld qword [rbp + 24]
 
  frexp$25:
-	; SignedGreaterThanEqual 27 £temporary456 x
+	; SignedGreaterThanEqual 27 £temporary463 x
 	fcompp
 	fstsw ax
 	sahf
@@ -1308,11 +1308,11 @@ section .text
 	je frexp$30
 
  frexp$28:
-	; Dereference £temporary460 -> p p 0
+	; Dereference £temporary467 -> p p 0
 	mov rsi, [rbp + 32]
 
  frexp$29:
-	; Assign £temporary460 -> p exponent
+	; Assign £temporary467 -> p exponent
 	mov eax, [rbp + 40]
 	mov [rsi], eax
 
@@ -1333,11 +1333,11 @@ section .text
 	fstp qword [rbp + 76]
 
  frexp$34:
-	; IntegralToFloating £temporary461 exponent
+	; IntegralToFloating £temporary468 exponent
 	fild dword [rbp + 40]
 
  frexp$35:
-	; Parameter 76 double £temporary461
+	; Parameter 76 double £temporary468
 	fstp qword [rbp + 84]
 
  frexp$36:
@@ -1354,17 +1354,17 @@ section .text
 	fld qword [rbp + 52]
 
  frexp$38:
-	; GetReturnValue £temporary462
+	; GetReturnValue £temporary469
 
  frexp$39:
-	; SignedDivide £temporary463 x £temporary462
+	; SignedDivide £temporary470 x £temporary469
 	fdiv
 
  frexp$40:
 	; SetReturnValue
 
  frexp$41:
-	; Return £temporary463
+	; Return £temporary470
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1376,11 +1376,11 @@ section .text
 	je frexp$45
 
  frexp$43:
-	; Dereference £temporary465 -> p p 0
+	; Dereference £temporary472 -> p p 0
 	mov rsi, [rbp + 32]
 
  frexp$44:
-	; Assign £temporary465 -> p 0
+	; Assign £temporary472 -> p 0
 	mov dword [rsi], 0
 
  frexp$45:
@@ -1446,11 +1446,11 @@ section .text
 	fld qword [rbp + 32]
 
  sqrt$10:
-	; SignedDivide £temporary473 x root_i
+	; SignedDivide £temporary480 x root_i
 	fdiv
 
  sqrt$11:
-	; BinaryAdd £temporary474 root_i £temporary473
+	; BinaryAdd £temporary481 root_i £temporary480
 	fadd
 
  sqrt$12:
@@ -1458,7 +1458,7 @@ section .text
 	fld qword [float8$2#]
 
  sqrt$13:
-	; SignedDivide £temporary475 £temporary474 2
+	; SignedDivide £temporary482 £temporary481 2
 	fdiv
 
  sqrt$14:
@@ -1477,11 +1477,11 @@ section .text
 	fld qword [rbp + 32]
 
  sqrt$18:
-	; BinarySubtract £temporary476 root_i_plus_1 root_i
+	; BinarySubtract £temporary483 root_i_plus_1 root_i
 	fsub
 
  sqrt$19:
-	; Parameter 72 double £temporary476
+	; Parameter 72 double £temporary483
 	fstp qword [rbp + 72]
 
  sqrt$20:
@@ -1495,14 +1495,14 @@ section .text
 	; PostCall 48
 
  sqrt$22:
-	; GetReturnValue £temporary477
+	; GetReturnValue £temporary484
 
  sqrt$23:
 	; PushFloat 0.000000001
 	fld qword [float8$0.000000001#]
 
  sqrt$24:
-	; SignedGreaterThanEqual 5 £temporary477 0.000000001
+	; SignedGreaterThanEqual 5 £temporary484 0.000000001
 	fcompp
 	fstsw ax
 	sahf
@@ -1567,7 +1567,7 @@ section .text
 	; PostCall 40
 
  modf$5:
-	; GetReturnValue £temporary480
+	; GetReturnValue £temporary487
 
  modf$6:
 	; PopFloat abs_x
@@ -1578,12 +1578,12 @@ section .text
 	fld qword [rbp + 40]
 
  modf$8:
-	; FloatingToIntegral £temporary481 abs_x
+	; FloatingToIntegral £temporary488 abs_x
 	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
  modf$9:
-	; IntegralToFloating £temporary482 £temporary481
+	; IntegralToFloating £temporary489 £temporary488
 	mov [container8bytes#], rax
 	fild qword [container8bytes#]
 
@@ -1600,7 +1600,7 @@ section .text
 	fld qword [rbp + 48]
 
  modf$13:
-	; BinarySubtract £temporary483 abs_x integral
+	; BinarySubtract £temporary490 abs_x integral
 	fsub
 
  modf$14:
@@ -1613,7 +1613,7 @@ section .text
 	je modf$26
 
  modf$16:
-	; Dereference £temporary485 -> p p 0
+	; Dereference £temporary492 -> p p 0
 	mov rsi, [rbp + 32]
 
  modf$17:
@@ -1647,11 +1647,11 @@ section .text
 	fld qword [rbp + 48]
 
  modf$24:
-	; UnarySubtract £temporary487 integral
+	; UnarySubtract £temporary494 integral
 	fchs
 
  modf$25:
-	; PopFloat £temporary485 -> p
+	; PopFloat £temporary492 -> p
 	fstp qword [rsi]
 
  modf$26:
@@ -1685,14 +1685,14 @@ section .text
 	fld qword [rbp + 56]
 
  modf$33:
-	; UnarySubtract £temporary490 fractional
+	; UnarySubtract £temporary497 fractional
 	fchs
 
  modf$34:
 	; SetReturnValue
 
  modf$35:
-	; Return £temporary491
+	; Return £temporary498
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1738,29 +1738,29 @@ section .text
 	fld qword [rbp + 32]
 
  fmod$8:
-	; SignedDivide £temporary494 x y
+	; SignedDivide £temporary501 x y
 	fdiv
 
  fmod$9:
-	; FloatingToIntegral £temporary495 £temporary494
+	; FloatingToIntegral £temporary502 £temporary501
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  fmod$10:
-	; IntegralToFloating £temporary496 £temporary495
+	; IntegralToFloating £temporary503 £temporary502
 	mov [container4bytes#], eax
 	fild dword [container4bytes#]
 
  fmod$11:
-	; SignedMultiply £temporary497 y £temporary496
+	; SignedMultiply £temporary504 y £temporary503
 	fmul
 
  fmod$12:
-	; BinarySubtract £temporary498 x £temporary497
+	; BinarySubtract £temporary505 x £temporary504
 	fsub
 
  fmod$13:
-	; Parameter 64 double £temporary498
+	; Parameter 64 double £temporary505
 	fstp qword [rbp + 64]
 
  fmod$14:
@@ -1774,7 +1774,7 @@ section .text
 	; PostCall 40
 
  fmod$16:
-	; GetReturnValue £temporary499
+	; GetReturnValue £temporary506
 
  fmod$17:
 	; PopFloat remainder
@@ -1811,14 +1811,14 @@ section .text
 	fld qword [rbp + 40]
 
  fmod$25:
-	; UnarySubtract £temporary501 remainder
+	; UnarySubtract £temporary508 remainder
 	fchs
 
  fmod$26:
 	; SetReturnValue
 
  fmod$27:
-	; Return £temporary502
+	; Return £temporary509
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1847,9 +1847,9 @@ section .text
 
 section .data
 
-float8$6.2831853071795864769252866#:
-	; Initializer Double 6.2831853071795864769252866
-	dq 6.2831853071795864769252866
+float8$6.28#:
+	; Initializer Double 6.28
+	dq 6.28
 
 section .data
 
@@ -1881,14 +1881,14 @@ section .text
 	; PostCall 32
 
  sin$5:
-	; GetReturnValue £temporary504
+	; GetReturnValue £temporary511
 
  sin$6:
-	; PushFloat 6.2831853071795864769252866
-	fld qword [float8$6.2831853071795864769252866#]
+	; PushFloat 6.28
+	fld qword [float8$6.28#]
 
  sin$7:
-	; SignedLessThanEqual 17 £temporary504 6.2831853071795864769252866
+	; SignedLessThanEqual 17 £temporary511 6.28
 	fcompp
 	fstsw ax
 	sahf
@@ -1906,11 +1906,11 @@ section .text
 	fstp qword [rbp + 56]
 
  sin$11:
-	; PushFloat 6.2831853071795864769252866
-	fld qword [float8$6.2831853071795864769252866#]
+	; PushFloat 6.28
+	fld qword [float8$6.28#]
 
  sin$12:
-	; Parameter 64 double 6.2831853071795864769252866
+	; Parameter 64 double 6.28
 	fstp qword [rbp + 64]
 
  sin$13:
@@ -1924,7 +1924,7 @@ section .text
 	; PostCall 32
 
  sin$15:
-	; GetReturnValue £temporary506
+	; GetReturnValue £temporary513
 
  sin$16:
 	; PopFloat x
@@ -1979,7 +1979,7 @@ section .text
 	fld qword [rbp + 64]
 
  sin$29:
-	; SignedMultiply £temporary507 sign power
+	; SignedMultiply £temporary514 sign power
 	fmul
 
  sin$30:
@@ -1987,7 +1987,7 @@ section .text
 	fld qword [rbp + 72]
 
  sin$31:
-	; SignedDivide £temporary508 £temporary507 faculty
+	; SignedDivide £temporary515 £temporary514 faculty
 	fdiv
 
  sin$32:
@@ -2003,7 +2003,7 @@ section .text
 	fld qword [rbp + 40]
 
  sin$35:
-	; BinaryAdd £temporary509 sum term
+	; BinaryAdd £temporary516 sum term
 	fadd
 
  sin$36:
@@ -2019,7 +2019,7 @@ section .text
 	fld qword [float8$minus1#]
 
  sin$39:
-	; SignedMultiply £temporary510 sign -1
+	; SignedMultiply £temporary517 sign -1
 	fmul
 
  sin$40:
@@ -2039,11 +2039,11 @@ section .text
 	fld qword [rbp + 24]
 
  sin$44:
-	; SignedMultiply £temporary511 x x
+	; SignedMultiply £temporary518 x x
 	fmul
 
  sin$45:
-	; SignedMultiply £temporary512 power £temporary511
+	; SignedMultiply £temporary519 power £temporary518
 	fmul
 
  sin$46:
@@ -2087,11 +2087,11 @@ section .text
 	fst qword [rbp + 32]
 
  sin$56:
-	; SignedMultiply £temporary515 £temporary513 £temporary514
+	; SignedMultiply £temporary522 £temporary520 £temporary521
 	fmul
 
  sin$57:
-	; SignedMultiply £temporary516 faculty £temporary515
+	; SignedMultiply £temporary523 faculty £temporary522
 	fmul
 
  sin$58:
@@ -2120,14 +2120,14 @@ section .text
 	; PostCall 80
 
  sin$64:
-	; GetReturnValue £temporary517
+	; GetReturnValue £temporary524
 
  sin$65:
 	; PushFloat 0.000000001
 	fld qword [float8$0.000000001#]
 
  sin$66:
-	; SignedGreaterThanEqual 27 £temporary517 0.000000001
+	; SignedGreaterThanEqual 27 £temporary524 0.000000001
 	fcompp
 	fstsw ax
 	sahf
@@ -2174,14 +2174,14 @@ section .text
 	; PostCall 32
 
  cos$5:
-	; GetReturnValue £temporary523
+	; GetReturnValue £temporary530
 
  cos$6:
-	; PushFloat 6.2831853071795864769252866
-	fld qword [float8$6.2831853071795864769252866#]
+	; PushFloat 6.28
+	fld qword [float8$6.28#]
 
  cos$7:
-	; SignedLessThanEqual 17 £temporary523 6.2831853071795864769252866
+	; SignedLessThanEqual 17 £temporary530 6.28
 	fcompp
 	fstsw ax
 	sahf
@@ -2199,11 +2199,11 @@ section .text
 	fstp qword [rbp + 56]
 
  cos$11:
-	; PushFloat 6.2831853071795864769252866
-	fld qword [float8$6.2831853071795864769252866#]
+	; PushFloat 6.28
+	fld qword [float8$6.28#]
 
  cos$12:
-	; Parameter 64 double 6.2831853071795864769252866
+	; Parameter 64 double 6.28
 	fstp qword [rbp + 64]
 
  cos$13:
@@ -2217,7 +2217,7 @@ section .text
 	; PostCall 32
 
  cos$15:
-	; GetReturnValue £temporary525
+	; GetReturnValue £temporary532
 
  cos$16:
 	; PopFloat x
@@ -2272,7 +2272,7 @@ section .text
 	fld qword [rbp + 64]
 
  cos$29:
-	; SignedMultiply £temporary526 sign power
+	; SignedMultiply £temporary533 sign power
 	fmul
 
  cos$30:
@@ -2280,7 +2280,7 @@ section .text
 	fld qword [rbp + 72]
 
  cos$31:
-	; SignedDivide £temporary527 £temporary526 faculty
+	; SignedDivide £temporary534 £temporary533 faculty
 	fdiv
 
  cos$32:
@@ -2296,7 +2296,7 @@ section .text
 	fld qword [rbp + 40]
 
  cos$35:
-	; BinaryAdd £temporary528 sum term
+	; BinaryAdd £temporary535 sum term
 	fadd
 
  cos$36:
@@ -2312,7 +2312,7 @@ section .text
 	fld qword [float8$minus1#]
 
  cos$39:
-	; SignedMultiply £temporary529 sign -1
+	; SignedMultiply £temporary536 sign -1
 	fmul
 
  cos$40:
@@ -2332,11 +2332,11 @@ section .text
 	fld qword [rbp + 24]
 
  cos$44:
-	; SignedMultiply £temporary530 x x
+	; SignedMultiply £temporary537 x x
 	fmul
 
  cos$45:
-	; SignedMultiply £temporary531 power £temporary530
+	; SignedMultiply £temporary538 power £temporary537
 	fmul
 
  cos$46:
@@ -2380,11 +2380,11 @@ section .text
 	fst qword [rbp + 32]
 
  cos$56:
-	; SignedMultiply £temporary534 £temporary532 £temporary533
+	; SignedMultiply £temporary541 £temporary539 £temporary540
 	fmul
 
  cos$57:
-	; SignedMultiply £temporary535 faculty £temporary534
+	; SignedMultiply £temporary542 faculty £temporary541
 	fmul
 
  cos$58:
@@ -2413,14 +2413,14 @@ section .text
 	; PostCall 80
 
  cos$64:
-	; GetReturnValue £temporary536
+	; GetReturnValue £temporary543
 
  cos$65:
 	; PushFloat 0.000000001
 	fld qword [float8$0.000000001#]
 
  cos$66:
-	; SignedGreaterThanEqual 27 £temporary536 0.000000001
+	; SignedGreaterThanEqual 27 £temporary543 0.000000001
 	fcompp
 	fstsw ax
 	sahf
@@ -2467,7 +2467,7 @@ section .text
 	; PostCall 32
 
  tan$5:
-	; GetReturnValue £temporary542
+	; GetReturnValue £temporary549
 
  tan$6:
 	; PopFloat cos_of_x
@@ -2510,21 +2510,21 @@ section .text
 	; PostCall 40
 
  tan$15:
-	; GetReturnValue £temporary544
+	; GetReturnValue £temporary551
 
  tan$16:
 	; PushFloat cos_of_x
 	fld qword [rbp + 32]
 
  tan$17:
-	; SignedDivide £temporary545 £temporary544 cos_of_x
+	; SignedDivide £temporary552 £temporary551 cos_of_x
 	fdiv
 
  tan$18:
 	; SetReturnValue
 
  tan$19:
-	; Return £temporary545
+	; Return £temporary552
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2553,9 +2553,9 @@ section .text
 
 section .data
 
-float8$1.57079632679489661923132165#:
-	; Initializer Double 1.57079632679489661923132165
-	dq 1.57079632679489661923132165
+float8$1.57#:
+	; Initializer Double 1.57
+	dq 1.57
 
 section .text
 
@@ -2575,14 +2575,14 @@ section .text
 	jne asin$6
 
  asin$3:
-	; PushFloat 1.57079632679489661923132165
-	fld qword [float8$1.57079632679489661923132165#]
+	; PushFloat 1.57
+	fld qword [float8$1.57#]
 
  asin$4:
 	; SetReturnValue
 
  asin$5:
-	; Return 1.57079632679489661923132165
+	; Return 1.57
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2611,11 +2611,11 @@ section .text
 	fld qword [rbp + 24]
 
  asin$11:
-	; UnarySubtract £temporary550 x
+	; UnarySubtract £temporary557 x
 	fchs
 
  asin$12:
-	; Parameter 56 double £temporary550
+	; Parameter 56 double £temporary557
 	fstp qword [rbp + 56]
 
  asin$13:
@@ -2629,17 +2629,17 @@ section .text
 	; PostCall 32
 
  asin$15:
-	; GetReturnValue £temporary551
+	; GetReturnValue £temporary558
 
  asin$16:
-	; UnarySubtract £temporary552 £temporary551
+	; UnarySubtract £temporary559 £temporary558
 	fchs
 
  asin$17:
 	; SetReturnValue
 
  asin$18:
-	; Return £temporary552
+	; Return £temporary559
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2684,15 +2684,15 @@ section .text
 	fld qword [rbp + 24]
 
  asin$28:
-	; SignedMultiply £temporary554 x x
+	; SignedMultiply £temporary561 x x
 	fmul
 
  asin$29:
-	; BinarySubtract £temporary555 1 £temporary554
+	; BinarySubtract £temporary562 1 £temporary561
 	fsub
 
  asin$30:
-	; Parameter 56 double £temporary555
+	; Parameter 56 double £temporary562
 	fstp qword [rbp + 64]
 
  asin$31:
@@ -2709,14 +2709,14 @@ section .text
 	fld qword [rbp + 40]
 
  asin$33:
-	; GetReturnValue £temporary556
+	; GetReturnValue £temporary563
 
  asin$34:
-	; SignedDivide £temporary557 x £temporary556
+	; SignedDivide £temporary564 x £temporary563
 	fdiv
 
  asin$35:
-	; Parameter 56 double £temporary557
+	; Parameter 56 double £temporary564
 	fstp qword [rbp + 56]
 
  asin$36:
@@ -2730,13 +2730,13 @@ section .text
 	; PostCall 32
 
  asin$38:
-	; GetReturnValue £temporary558
+	; GetReturnValue £temporary565
 
  asin$39:
 	; SetReturnValue
 
  asin$40:
-	; Return £temporary558
+	; Return £temporary565
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2765,9 +2765,9 @@ section .text
 
 section .data
 
-float8$3.1415926535897932384626433#:
-	; Initializer Double 3.1415926535897932384626433
-	dq 3.1415926535897932384626433
+float8$3.14#:
+	; Initializer Double 3.14
+	dq 3.14
 
 section .text
 
@@ -2787,14 +2787,14 @@ section .text
 	jne acos$6
 
  acos$3:
-	; PushFloat 1.57079632679489661923132165
-	fld qword [float8$1.57079632679489661923132165#]
+	; PushFloat 1.57
+	fld qword [float8$1.57#]
 
  acos$4:
 	; SetReturnValue
 
  acos$5:
-	; Return 1.57079632679489661923132165
+	; Return 1.57
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2816,8 +2816,8 @@ section .text
 	jbe acos$20
 
  acos$9:
-	; PushFloat 3.1415926535897932384626433
-	fld qword [float8$3.1415926535897932384626433#]
+	; PushFloat 3.14
+	fld qword [float8$3.14#]
 
  acos$10:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -2828,11 +2828,11 @@ section .text
 	fld qword [rbp + 24]
 
  acos$12:
-	; UnarySubtract £temporary564 x
+	; UnarySubtract £temporary571 x
 	fchs
 
  acos$13:
-	; Parameter 56 double £temporary564
+	; Parameter 56 double £temporary571
 	fstp qword [rbp + 64]
 
  acos$14:
@@ -2849,17 +2849,17 @@ section .text
 	fld qword [rbp + 40]
 
  acos$16:
-	; GetReturnValue £temporary565
+	; GetReturnValue £temporary572
 
  acos$17:
-	; BinarySubtract £temporary566 3.1415926535897932384626433 £temporary565
+	; BinarySubtract £temporary573 3.14 £temporary572
 	fsub
 
  acos$18:
 	; SetReturnValue
 
  acos$19:
-	; Return £temporary566
+	; Return £temporary573
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2899,15 +2899,15 @@ section .text
 	fld qword [rbp + 24]
 
  acos$28:
-	; SignedMultiply £temporary568 x x
+	; SignedMultiply £temporary575 x x
 	fmul
 
  acos$29:
-	; BinarySubtract £temporary569 1 £temporary568
+	; BinarySubtract £temporary576 1 £temporary575
 	fsub
 
  acos$30:
-	; Parameter 56 double £temporary569
+	; Parameter 56 double £temporary576
 	fstp qword [rbp + 56]
 
  acos$31:
@@ -2921,18 +2921,18 @@ section .text
 	; PostCall 32
 
  acos$33:
-	; GetReturnValue £temporary570
+	; GetReturnValue £temporary577
 
  acos$34:
 	; PushFloat x
 	fld qword [rbp + 24]
 
  acos$35:
-	; SignedDivide £temporary571 £temporary570 x
+	; SignedDivide £temporary578 £temporary577 x
 	fdiv
 
  acos$36:
-	; Parameter 56 double £temporary571
+	; Parameter 56 double £temporary578
 	fstp qword [rbp + 56]
 
  acos$37:
@@ -2946,13 +2946,13 @@ section .text
 	; PostCall 32
 
  acos$39:
-	; GetReturnValue £temporary572
+	; GetReturnValue £temporary579
 
  acos$40:
 	; SetReturnValue
 
  acos$41:
-	; Return £temporary572
+	; Return £temporary579
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -3010,11 +3010,11 @@ section .text
 	fld qword [rbp + 24]
 
  atan$5:
-	; UnarySubtract £temporary577 x
+	; UnarySubtract £temporary584 x
 	fchs
 
  atan$6:
-	; Parameter 56 double £temporary577
+	; Parameter 56 double £temporary584
 	fstp qword [rbp + 56]
 
  atan$7:
@@ -3028,17 +3028,17 @@ section .text
 	; PostCall 32
 
  atan$9:
-	; GetReturnValue £temporary578
+	; GetReturnValue £temporary585
 
  atan$10:
-	; UnarySubtract £temporary579 £temporary578
+	; UnarySubtract £temporary586 £temporary585
 	fchs
 
  atan$11:
 	; SetReturnValue
 
  atan$12:
-	; Return £temporary579
+	; Return £temporary586
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -3060,8 +3060,8 @@ section .text
 	jae atan$28
 
  atan$16:
-	; PushFloat 1.57079632679489661923132165
-	fld qword [float8$1.57079632679489661923132165#]
+	; PushFloat 1.57
+	fld qword [float8$1.57#]
 
  atan$17:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -3076,11 +3076,11 @@ section .text
 	fld qword [rbp + 24]
 
  atan$20:
-	; SignedDivide £temporary581 1 x
+	; SignedDivide £temporary588 1 x
 	fdiv
 
  atan$21:
-	; Parameter 56 double £temporary581
+	; Parameter 56 double £temporary588
 	fstp qword [rbp + 64]
 
  atan$22:
@@ -3097,17 +3097,17 @@ section .text
 	fld qword [rbp + 40]
 
  atan$24:
-	; GetReturnValue £temporary582
+	; GetReturnValue £temporary589
 
  atan$25:
-	; BinarySubtract £temporary583 1.57079632679489661923132165 £temporary582
+	; BinarySubtract £temporary590 1.57 £temporary589
 	fsub
 
  atan$26:
 	; SetReturnValue
 
  atan$27:
-	; Return £temporary583
+	; Return £temporary590
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -3162,15 +3162,15 @@ section .text
 	fld qword [rbp + 24]
 
  atan$39:
-	; SignedMultiply £temporary585 x x
+	; SignedMultiply £temporary592 x x
 	fmul
 
  atan$40:
-	; BinaryAdd £temporary586 1 £temporary585
+	; BinaryAdd £temporary593 1 £temporary592
 	fadd
 
  atan$41:
-	; Parameter 56 double £temporary586
+	; Parameter 56 double £temporary593
 	fstp qword [rbp + 88]
 
  atan$42:
@@ -3188,18 +3188,18 @@ section .text
 	fld qword [rbp + 56]
 
  atan$44:
-	; GetReturnValue £temporary587
+	; GetReturnValue £temporary594
 
  atan$45:
-	; BinaryAdd £temporary588 1 £temporary587
+	; BinaryAdd £temporary595 1 £temporary594
 	fadd
 
  atan$46:
-	; SignedDivide £temporary589 x £temporary588
+	; SignedDivide £temporary596 x £temporary595
 	fdiv
 
  atan$47:
-	; Parameter 56 double £temporary589
+	; Parameter 56 double £temporary596
 	fstp qword [rbp + 64]
 
  atan$48:
@@ -3216,17 +3216,17 @@ section .text
 	fld qword [rbp + 40]
 
  atan$50:
-	; GetReturnValue £temporary590
+	; GetReturnValue £temporary597
 
  atan$51:
-	; SignedMultiply £temporary591 2 £temporary590
+	; SignedMultiply £temporary598 2 £temporary597
 	fmul
 
  atan$52:
 	; SetReturnValue
 
  atan$53:
-	; Return £temporary591
+	; Return £temporary598
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -3273,7 +3273,7 @@ section .text
 	fld qword [rbp + 64]
 
  atan$64:
-	; SignedMultiply £temporary592 sign product
+	; SignedMultiply £temporary599 sign product
 	fmul
 
  atan$65:
@@ -3281,7 +3281,7 @@ section .text
 	fld qword [rbp + 56]
 
  atan$66:
-	; SignedDivide £temporary593 £temporary592 denominator
+	; SignedDivide £temporary600 £temporary599 denominator
 	fdiv
 
  atan$67:
@@ -3297,7 +3297,7 @@ section .text
 	fld qword [rbp + 32]
 
  atan$70:
-	; BinaryAdd £temporary594 sum term
+	; BinaryAdd £temporary601 sum term
 	fadd
 
  atan$71:
@@ -3309,7 +3309,7 @@ section .text
 	fld qword [rbp + 48]
 
  atan$73:
-	; UnarySubtract £temporary595 sign
+	; UnarySubtract £temporary602 sign
 	fchs
 
  atan$74:
@@ -3329,11 +3329,11 @@ section .text
 	fld qword [rbp + 24]
 
  atan$78:
-	; SignedMultiply £temporary596 x x
+	; SignedMultiply £temporary603 x x
 	fmul
 
  atan$79:
-	; SignedMultiply £temporary597 product £temporary596
+	; SignedMultiply £temporary604 product £temporary603
 	fmul
 
  atan$80:
@@ -3349,7 +3349,7 @@ section .text
 	fld qword [float8$2#]
 
  atan$83:
-	; BinaryAdd £temporary598 denominator 2
+	; BinaryAdd £temporary605 denominator 2
 	fadd
 
  atan$84:
@@ -3378,14 +3378,14 @@ section .text
 	; PostCall 72
 
  atan$90:
-	; GetReturnValue £temporary599
+	; GetReturnValue £temporary606
 
  atan$91:
 	; PushFloat 0.000000001
 	fld qword [float8$0.000000001#]
 
  atan$92:
-	; SignedGreaterThanEqual 62 £temporary599 0.000000001
+	; SignedGreaterThanEqual 62 £temporary606 0.000000001
 	fcompp
 	fstsw ax
 	sahf
@@ -3410,15 +3410,15 @@ section .text
 
 section .data
 
-float8$minus3.1415926535897932384626433#:
-	; Initializer Double -3.1415926535897932384626433
-	dq -3.1415926535897932384626433
+float8$minus3.14#:
+	; Initializer Double -3.14
+	dq -3.14
 
 section .data
 
-float8$minus1.57079632679489661923132165#:
-	; Initializer Double -1.57079632679489661923132165
-	dq -1.57079632679489661923132165
+float8$minus1.57#:
+	; Initializer Double -1.57
+	dq -1.57
 
 section .text
 
@@ -3449,11 +3449,11 @@ section .text
 	fld qword [rbp + 32]
 
  atan2$6:
-	; SignedDivide £temporary607 x y
+	; SignedDivide £temporary614 x y
 	fdiv
 
  atan2$7:
-	; Parameter 64 double £temporary607
+	; Parameter 64 double £temporary614
 	fstp qword [rbp + 64]
 
  atan2$8:
@@ -3467,13 +3467,13 @@ section .text
 	; PostCall 40
 
  atan2$10:
-	; GetReturnValue £temporary608
+	; GetReturnValue £temporary615
 
  atan2$11:
 	; SetReturnValue
 
  atan2$12:
-	; Return £temporary608
+	; Return £temporary615
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -3510,8 +3510,8 @@ section .text
 	jbe atan2$31
 
  atan2$19:
-	; PushFloat 3.1415926535897932384626433
-	fld qword [float8$3.1415926535897932384626433#]
+	; PushFloat 3.14
+	fld qword [float8$3.14#]
 
  atan2$20:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -3526,11 +3526,11 @@ section .text
 	fld qword [rbp + 32]
 
  atan2$23:
-	; SignedDivide £temporary612 x y
+	; SignedDivide £temporary619 x y
 	fdiv
 
  atan2$24:
-	; Parameter 64 double £temporary612
+	; Parameter 64 double £temporary619
 	fstp qword [rbp + 72]
 
  atan2$25:
@@ -3547,17 +3547,17 @@ section .text
 	fld qword [rbp + 48]
 
  atan2$27:
-	; GetReturnValue £temporary613
+	; GetReturnValue £temporary620
 
  atan2$28:
-	; BinaryAdd £temporary614 3.1415926535897932384626433 £temporary613
+	; BinaryAdd £temporary621 3.14 £temporary620
 	fadd
 
  atan2$29:
 	; SetReturnValue
 
  atan2$30:
-	; Return £temporary614
+	; Return £temporary621
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -3594,8 +3594,8 @@ section .text
 	jbe atan2$49
 
  atan2$37:
-	; PushFloat -3.1415926535897932384626433
-	fld qword [float8$minus3.1415926535897932384626433#]
+	; PushFloat -3.14
+	fld qword [float8$minus3.14#]
 
  atan2$38:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -3610,11 +3610,11 @@ section .text
 	fld qword [rbp + 32]
 
  atan2$41:
-	; SignedDivide £temporary618 x y
+	; SignedDivide £temporary625 x y
 	fdiv
 
  atan2$42:
-	; Parameter 64 double £temporary618
+	; Parameter 64 double £temporary625
 	fstp qword [rbp + 72]
 
  atan2$43:
@@ -3631,17 +3631,17 @@ section .text
 	fld qword [rbp + 48]
 
  atan2$45:
-	; GetReturnValue £temporary619
+	; GetReturnValue £temporary626
 
  atan2$46:
-	; BinaryAdd £temporary620 -3.1415926535897932384626433 £temporary619
+	; BinaryAdd £temporary627 -3.14 £temporary626
 	fadd
 
  atan2$47:
 	; SetReturnValue
 
  atan2$48:
-	; Return £temporary620
+	; Return £temporary627
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -3678,14 +3678,14 @@ section .text
 	jne atan2$58
 
  atan2$55:
-	; PushFloat 1.57079632679489661923132165
-	fld qword [float8$1.57079632679489661923132165#]
+	; PushFloat 1.57
+	fld qword [float8$1.57#]
 
  atan2$56:
 	; SetReturnValue
 
  atan2$57:
-	; Return 1.57079632679489661923132165
+	; Return 1.57
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -3722,14 +3722,14 @@ section .text
 	jne atan2$67
 
  atan2$64:
-	; PushFloat -1.57079632679489661923132165
-	fld qword [float8$minus1.57079632679489661923132165#]
+	; PushFloat -1.57
+	fld qword [float8$minus1.57#]
 
  atan2$65:
 	; SetReturnValue
 
  atan2$66:
-	; Return -1.57079632679489661923132165
+	; Return -1.57
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -3780,7 +3780,7 @@ section .text
 	; PostCall 32
 
  sinh$5:
-	; GetReturnValue £temporary630
+	; GetReturnValue £temporary637
 
  sinh$6:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -3791,11 +3791,11 @@ section .text
 	fld qword [rbp + 24]
 
  sinh$8:
-	; UnarySubtract £temporary631 x
+	; UnarySubtract £temporary638 x
 	fchs
 
  sinh$9:
-	; Parameter 56 double £temporary631
+	; Parameter 56 double £temporary638
 	fstp qword [rbp + 64]
 
  sinh$10:
@@ -3812,10 +3812,10 @@ section .text
 	fld qword [rbp + 40]
 
  sinh$12:
-	; GetReturnValue £temporary632
+	; GetReturnValue £temporary639
 
  sinh$13:
-	; BinarySubtract £temporary633 £temporary630 £temporary632
+	; BinarySubtract £temporary640 £temporary637 £temporary639
 	fsub
 
  sinh$14:
@@ -3823,14 +3823,14 @@ section .text
 	fld qword [float8$2#]
 
  sinh$15:
-	; SignedDivide £temporary634 £temporary633 2
+	; SignedDivide £temporary641 £temporary640 2
 	fdiv
 
  sinh$16:
 	; SetReturnValue
 
  sinh$17:
-	; Return £temporary634
+	; Return £temporary641
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -3863,7 +3863,7 @@ section .text
 	; PostCall 32
 
  cosh$5:
-	; GetReturnValue £temporary637
+	; GetReturnValue £temporary644
 
  cosh$6:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -3874,11 +3874,11 @@ section .text
 	fld qword [rbp + 24]
 
  cosh$8:
-	; UnarySubtract £temporary638 x
+	; UnarySubtract £temporary645 x
 	fchs
 
  cosh$9:
-	; Parameter 56 double £temporary638
+	; Parameter 56 double £temporary645
 	fstp qword [rbp + 64]
 
  cosh$10:
@@ -3895,10 +3895,10 @@ section .text
 	fld qword [rbp + 40]
 
  cosh$12:
-	; GetReturnValue £temporary639
+	; GetReturnValue £temporary646
 
  cosh$13:
-	; BinaryAdd £temporary640 £temporary637 £temporary639
+	; BinaryAdd £temporary647 £temporary644 £temporary646
 	fadd
 
  cosh$14:
@@ -3906,14 +3906,14 @@ section .text
 	fld qword [float8$2#]
 
  cosh$15:
-	; SignedDivide £temporary641 £temporary640 2
+	; SignedDivide £temporary648 £temporary647 2
 	fdiv
 
  cosh$16:
 	; SetReturnValue
 
  cosh$17:
-	; Return £temporary641
+	; Return £temporary648
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -3946,7 +3946,7 @@ section .text
 	; PostCall 32
 
  tanh$5:
-	; GetReturnValue £temporary644
+	; GetReturnValue £temporary651
 
  tanh$6:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -3974,17 +3974,17 @@ section .text
 	fld qword [rbp + 40]
 
  tanh$11:
-	; GetReturnValue £temporary645
+	; GetReturnValue £temporary652
 
  tanh$12:
-	; SignedDivide £temporary646 £temporary644 £temporary645
+	; SignedDivide £temporary653 £temporary651 £temporary652
 	fdiv
 
  tanh$13:
 	; SetReturnValue
 
  tanh$14:
-	; Return £temporary646
+	; Return £temporary653
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -4018,11 +4018,11 @@ section .text
 	fld qword [rbp + 24]
 
  floor$5:
-	; UnarySubtract £temporary650 x
+	; UnarySubtract £temporary657 x
 	fchs
 
  floor$6:
-	; Parameter 56 double £temporary650
+	; Parameter 56 double £temporary657
 	fstp qword [rbp + 56]
 
  floor$7:
@@ -4036,17 +4036,17 @@ section .text
 	; PostCall 32
 
  floor$9:
-	; GetReturnValue £temporary651
+	; GetReturnValue £temporary658
 
  floor$10:
-	; UnarySubtract £temporary652 £temporary651
+	; UnarySubtract £temporary659 £temporary658
 	fchs
 
  floor$11:
 	; SetReturnValue
 
  floor$12:
-	; Return £temporary652
+	; Return £temporary659
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -4057,12 +4057,12 @@ section .text
 	fld qword [rbp + 24]
 
  floor$14:
-	; FloatingToIntegral £temporary653 x
+	; FloatingToIntegral £temporary660 x
 	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
  floor$15:
-	; IntegralToFloating £temporary654 £temporary653
+	; IntegralToFloating £temporary661 £temporary660
 	mov [container8bytes#], rax
 	fild qword [container8bytes#]
 
@@ -4070,7 +4070,7 @@ section .text
 	; SetReturnValue
 
  floor$17:
-	; Return £temporary654
+	; Return £temporary661
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -4110,11 +4110,11 @@ section .text
 	fld qword [rbp + 24]
 
  ceil$5:
-	; UnarySubtract £temporary657 x
+	; UnarySubtract £temporary664 x
 	fchs
 
  ceil$6:
-	; Parameter 56 double £temporary657
+	; Parameter 56 double £temporary664
 	fstp qword [rbp + 56]
 
  ceil$7:
@@ -4128,17 +4128,17 @@ section .text
 	; PostCall 32
 
  ceil$9:
-	; GetReturnValue £temporary658
+	; GetReturnValue £temporary665
 
  ceil$10:
-	; UnarySubtract £temporary659 £temporary658
+	; UnarySubtract £temporary666 £temporary665
 	fchs
 
  ceil$11:
 	; SetReturnValue
 
  ceil$12:
-	; Return £temporary659
+	; Return £temporary666
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -4153,16 +4153,16 @@ section .text
 	fld qword [float8$0.999999999999#]
 
  ceil$15:
-	; BinaryAdd £temporary660 x 0.999999999999
+	; BinaryAdd £temporary667 x 0.999999999999
 	fadd
 
  ceil$16:
-	; FloatingToIntegral £temporary661 £temporary660
+	; FloatingToIntegral £temporary668 £temporary667
 	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
  ceil$17:
-	; IntegralToFloating £temporary662 £temporary661
+	; IntegralToFloating £temporary669 £temporary668
 	mov [container8bytes#], rax
 	fild qword [container8bytes#]
 
@@ -4170,7 +4170,7 @@ section .text
 	; SetReturnValue
 
  ceil$19:
-	; Return £temporary662
+	; Return £temporary669
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -4205,7 +4205,7 @@ section .text
 	fld qword [float8$0.5#]
 
  round$5:
-	; BinarySubtract £temporary665 x 0.5
+	; BinarySubtract £temporary672 x 0.5
 	fsub
 
  round$6:
@@ -4224,16 +4224,16 @@ section .text
 	fld qword [float8$0.5#]
 
  round$10:
-	; BinaryAdd £temporary666 x 0.5
+	; BinaryAdd £temporary673 x 0.5
 	fadd
 
  round$11:
-	; FloatingToIntegral £temporary668 £temporary667
+	; FloatingToIntegral £temporary675 £temporary674
 	fistp qword [container8bytes#]
 	mov rax, [container8bytes#]
 
  round$12:
-	; IntegralToFloating £temporary669 £temporary668
+	; IntegralToFloating £temporary676 £temporary675
 	mov [container8bytes#], rax
 	fild qword [container8bytes#]
 
@@ -4241,7 +4241,7 @@ section .text
 	; SetReturnValue
 
  round$14:
-	; Return £temporary669
+	; Return £temporary676
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -4272,7 +4272,7 @@ section .text
 	fld qword [rbp + 24]
 
  fabs$4:
-	; UnarySubtract £temporary671 x
+	; UnarySubtract £temporary678 x
 	fchs
 
  fabs$5:
@@ -4290,7 +4290,7 @@ section .text
 	; SetReturnValue
 
  fabs$9:
-	; Return £temporary672
+	; Return £temporary679
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]

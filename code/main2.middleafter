@@ -4,16 +4,16 @@
 3: PostCall 16
 4: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 5: Parameter 16 string_25lf# 6
-6: address £temporary4663 x
-7: Parameter 16 £temporary4663 8
+6: address £temporary4668 x
+7: Parameter 16 £temporary4668 8
 8: Call 16 scanf 0
 9: PostCall 16
 10: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 11: Parameter 16 buffer 6
 12: Call 16 setjmp 0
 13: PostCall 16
-14: GetReturnValue £temporary4665
-15: Assign message £temporary4665
+14: GetReturnValue £temporary4670
+15: Assign message £temporary4670
 16: NotEqual 31 message 0
 17: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 18: Parameter 16 string_12E0202F2025f203D2025f0A# 6
@@ -24,8 +24,8 @@
 23: Parameter 16 x 22
 24: Call 16 inverse 16
 25: PostCall 16
-26: GetReturnValue £temporary4667
-27: Parameter 16 £temporary4667 16
+26: GetReturnValue £temporary4672
+27: Parameter 16 £temporary4672 16
 28: Call 16 printf 0
 29: PostCall 16
 30: Goto 36

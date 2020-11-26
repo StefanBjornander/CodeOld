@@ -2,33 +2,33 @@
 1: Parameter 8 c 6
 2: Call 8 islower 0
 3: PostCall 8
-4: GetReturnValue £temporary480
-5: Equal 31 £temporary480 0
+4: GetReturnValue £temporary455
+5: Equal 31 £temporary455 0
 6: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 7: Call 8 localeconv 0
 8: PostCall 8
-9: GetReturnValue £temporary481
-10: Assign localeConvPtr £temporary481
+9: GetReturnValue £temporary456
+10: Assign localeConvPtr £temporary456
 11: Equal 28 localeConvPtr 0
-12: Deref £temporary483 -> localeConvPtr localeConvPtr 12
-13: Assign lowerCase £temporary483 -> localeConvPtr
-14: Deref £temporary484 -> localeConvPtr localeConvPtr 14
-15: Assign upperCase £temporary484 -> localeConvPtr
+12: Deref £temporary458 -> localeConvPtr localeConvPtr 12
+13: Assign lowerCase £temporary458 -> localeConvPtr
+14: Deref £temporary459 -> localeConvPtr localeConvPtr 14
+15: Assign upperCase £temporary459 -> localeConvPtr
 16: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 17: Parameter 14 lowerCase 6
 18: Parameter 14 c 8
 19: Call 14 strchr 0
 20: PostCall 14
-21: GetReturnValue £temporary485
-22: BinarySubtract index £temporary485 lowerCase
-23: BinaryAdd £temporary488 upperCase index
-24: Deref £temporary487 -> £temporary488 £temporary488 0
-25: IntegralToIntegral £temporary489 £temporary487 -> £temporary488
-26: SetReturnValue £temporary489
-27: Return £temporary489
-28: BinarySubtract £temporary490 c 32
-29: SetReturnValue £temporary490
-30: Return £temporary490
+21: GetReturnValue £temporary460
+22: BinarySubtract index £temporary460 lowerCase
+23: BinaryAdd £temporary463 upperCase index
+24: Deref £temporary462 -> £temporary463 £temporary463 0
+25: IntegralToIntegral £temporary464 £temporary462 -> £temporary463
+26: SetReturnValue £temporary464
+27: Return £temporary464
+28: BinarySubtract £temporary465 c 32
+29: SetReturnValue £temporary465
+30: Return £temporary465
 31: SetReturnValue c
 32: Return c
 33: FunctionEnd toupper

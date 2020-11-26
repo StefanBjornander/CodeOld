@@ -1,11 +1,11 @@
-0: Deref £temporary1145 -> ptr ptr 0
+0: Deref £temporary1126 -> ptr ptr 0
 1: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 2: Parameter 10 stream 6
 3: Call 10 ftell 0
 4: PostCall 10
-5: GetReturnValue £temporary1146
-6: IntegralToIntegral £temporary1147 £temporary1146
-7: Assign £temporary1145 -> ptr £temporary1147
+5: GetReturnValue £temporary1127
+6: IntegralToIntegral £temporary1128 £temporary1127
+7: Assign £temporary1126 -> ptr £temporary1128
 8: SetReturnValue 0
 9: Return 0
 10: FunctionEnd fgetpos

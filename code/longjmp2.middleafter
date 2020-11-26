@@ -1,10 +1,10 @@
 0: AssignRegister bx return_value
-1: Deref £temporary845 -> buf buf 0
-2: AssignRegister cx £temporary845 -> buf
-3: Deref £temporary847 -> buf buf 4
-4: AssignRegister di £temporary847 -> buf
-5: Deref £temporary849 -> buf buf 2
-6: AssignRegister bp £temporary849 -> buf
+1: Deref £temporary820 -> buf buf 0
+2: AssignRegister cx £temporary820 -> buf
+3: Deref £temporary822 -> buf buf 4
+4: AssignRegister di £temporary822 -> buf
+5: Deref £temporary824 -> buf buf 2
+6: AssignRegister bp £temporary824 -> buf
 7: JumpRegister cx
 8: Return 0
 9: FunctionEnd longjmp

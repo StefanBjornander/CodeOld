@@ -1,12 +1,12 @@
-0: SignedModulo £temporary3492 year 4
-1: NotEqual 4 £temporary3492 0
-2: SignedModulo £temporary3494 year 100
-3: NotEqual 6 £temporary3494 0
-4: SignedModulo £temporary3497 year 400
-5: NotEqual 8 £temporary3497 0
-6: Assign £temporary3500 1
+0: SignedModulo £temporary3474 year 4
+1: NotEqual 4 £temporary3474 0
+2: SignedModulo £temporary3476 year 100
+3: NotEqual 6 £temporary3476 0
+4: SignedModulo £temporary3479 year 400
+5: NotEqual 8 £temporary3479 0
+6: Assign £temporary3482 1
 7: Goto 9
-8: Assign £temporary3500 0
-9: SetReturnValue £temporary3500
-10: Return £temporary3500
+8: Assign £temporary3482 0
+9: SetReturnValue £temporary3482
+10: Return £temporary3482
 11: FunctionEnd isLeapYear

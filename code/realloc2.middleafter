@@ -28,9 +28,9 @@
 27: Parameter 10 newMemorySize 6
 28: Call 10 malloc 0
 29: PostCall 10
-30: GetReturnValue £temporary321
-31: SetReturnValue £temporary321
-32: Return £temporary321
+30: GetReturnValue £temporary296
+31: SetReturnValue £temporary296
+32: Return £temporary296
 33: NotEqual 40 newMemorySize 0
 34: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 35: Parameter 10 oldMemoryPtr 6
@@ -38,40 +38,40 @@
 37: PostCall 10
 38: SetReturnValue 0
 39: Return 0
-40: IntegralToIntegral £temporary324 newMemorySize
-41: BinaryAdd newBlockSize £temporary324 4
-42: IntegralToIntegral £temporary326 oldMemoryPtr
-43: BinarySubtract £temporary327 £temporary326 4
-44: IntegralToIntegral £temporary328 £temporary327
-45: Assign oldBlockPtr £temporary328
-46: Deref £temporary329 -> oldBlockPtr oldBlockPtr 0
-47: UnsignedGreaterThan 52 newBlockSize £temporary329 -> oldBlockPtr
-48: Deref £temporary331 -> oldBlockPtr oldBlockPtr 0
-49: Assign £temporary331 -> oldBlockPtr newBlockSize
+40: IntegralToIntegral £temporary299 newMemorySize
+41: BinaryAdd newBlockSize £temporary299 4
+42: IntegralToIntegral £temporary301 oldMemoryPtr
+43: BinarySubtract £temporary302 £temporary301 4
+44: IntegralToIntegral £temporary303 £temporary302
+45: Assign oldBlockPtr £temporary303
+46: Deref £temporary304 -> oldBlockPtr oldBlockPtr 0
+47: UnsignedGreaterThan 52 newBlockSize £temporary304 -> oldBlockPtr
+48: Deref £temporary306 -> oldBlockPtr oldBlockPtr 0
+49: Assign £temporary306 -> oldBlockPtr newBlockSize
 50: SetReturnValue oldMemoryPtr
 51: Return oldMemoryPtr
 52: Assign lastAddress 65528
 53: Assign currBlockPtr g_firstBlockPtr
 54: Equal 68 currBlockPtr 0
 55: NotEqual 63 currBlockPtr oldBlockPtr
-56: IntegralToIntegral £temporary334 currBlockPtr
-57: BinarySubtract availableSize lastAddress £temporary334
+56: IntegralToIntegral £temporary309 currBlockPtr
+57: BinarySubtract availableSize lastAddress £temporary309
 58: UnsignedLessThan 68 availableSize newBlockSize
-59: Deref £temporary337 -> oldBlockPtr oldBlockPtr 0
-60: Assign £temporary337 -> oldBlockPtr newBlockSize
+59: Deref £temporary312 -> oldBlockPtr oldBlockPtr 0
+60: Assign £temporary312 -> oldBlockPtr newBlockSize
 61: SetReturnValue oldMemoryPtr
 62: Return oldMemoryPtr
-63: IntegralToIntegral £temporary338 currBlockPtr
-64: Assign lastAddress £temporary338
-65: Deref £temporary339 -> currBlockPtr currBlockPtr 2
-66: Assign currBlockPtr £temporary339 -> currBlockPtr
+63: IntegralToIntegral £temporary313 currBlockPtr
+64: Assign lastAddress £temporary313
+65: Deref £temporary314 -> currBlockPtr currBlockPtr 2
+66: Assign currBlockPtr £temporary314 -> currBlockPtr
 67: Goto 54
 68: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 69: Parameter 14 newMemorySize 6
 70: Call 14 malloc 0
 71: PostCall 14
-72: GetReturnValue £temporary340
-73: Assign newMemoryPtr £temporary340
+72: GetReturnValue £temporary315
+73: Assign newMemoryPtr £temporary315
 74: Equal 87 newMemoryPtr 0
 75: CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 76: Parameter 16 newMemoryPtr 6

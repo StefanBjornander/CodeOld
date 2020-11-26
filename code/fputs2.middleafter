@@ -2,9 +2,9 @@
 1: Parameter 10 s 6
 2: Call 10 strlen 0
 3: PostCall 10
-4: GetReturnValue £temporary1065
-5: BinaryAdd £temporary1066 £temporary1065 1
-6: SignedMultiply size £temporary1066 1
+4: GetReturnValue £temporary1046
+5: BinaryAdd £temporary1047 £temporary1046 1
+6: SignedMultiply size £temporary1047 1
 7: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 8: Parameter 12 s 6
 9: Parameter 12 size 8
@@ -12,11 +12,11 @@
 11: Parameter 12 stream 12
 12: Call 12 fwrite 0
 13: PostCall 12
-14: GetReturnValue £temporary1068
-15: NotEqual 18 £temporary1068 size
-16: Assign £temporary1073 0
+14: GetReturnValue £temporary1049
+15: NotEqual 18 £temporary1049 size
+16: Assign £temporary1054 0
 17: Goto 19
-18: Assign £temporary1073 -1
-19: SetReturnValue £temporary1073
-20: Return £temporary1073
+18: Assign £temporary1054 -1
+19: SetReturnValue £temporary1054
+20: Return £temporary1054
 21: FunctionEnd fputs

@@ -1,0 +1,225 @@
+0: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 7 string_ascii2025i0A# 6
+2: IntegralToIntegral £temporary4232 c
+3: Parameter 7 £temporary4232 8
+4: Call 7 printf 0
+5: PostCall 7
+6: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+7: Parameter 7 string_islower282725c2729203D2025s0A# 6
+8: IntegralToIntegral £temporary4234 c
+9: Parameter 7 £temporary4234 8
+10: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+11: IntegralToIntegral £temporary4235 c
+12: Parameter 7 £temporary4235 16
+13: Call 7 islower 10
+14: PostCall 7
+15: GetReturnValue £temporary4236
+16: Equal 19 £temporary4236 0
+17: Assign £temporary4241 string_Yes#
+18: Goto 20
+19: Assign £temporary4241 string_No#
+20: Parameter 7 £temporary4241 10
+21: Call 7 printf 0
+22: PostCall 7
+23: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+24: Parameter 7 string_isupper282725c2729203D2025s0A# 6
+25: IntegralToIntegral £temporary4243 c
+26: Parameter 7 £temporary4243 8
+27: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+28: IntegralToIntegral £temporary4244 c
+29: Parameter 7 £temporary4244 16
+30: Call 7 isupper 10
+31: PostCall 7
+32: GetReturnValue £temporary4245
+33: Equal 36 £temporary4245 0
+34: Assign £temporary4250 string_Yes#
+35: Goto 37
+36: Assign £temporary4250 string_No#
+37: Parameter 7 £temporary4250 10
+38: Call 7 printf 0
+39: PostCall 7
+40: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+41: Parameter 7 string_isalpha282725c2729203D2025s0A# 6
+42: IntegralToIntegral £temporary4252 c
+43: Parameter 7 £temporary4252 8
+44: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+45: IntegralToIntegral £temporary4253 c
+46: Parameter 7 £temporary4253 16
+47: Call 7 isalpha 10
+48: PostCall 7
+49: GetReturnValue £temporary4254
+50: Equal 53 £temporary4254 0
+51: Assign £temporary4259 string_Yes#
+52: Goto 54
+53: Assign £temporary4259 string_No#
+54: Parameter 7 £temporary4259 10
+55: Call 7 printf 0
+56: PostCall 7
+57: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+58: Parameter 7 string_isdigit282725c2729203D2025s0A# 6
+59: IntegralToIntegral £temporary4261 c
+60: Parameter 7 £temporary4261 8
+61: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+62: IntegralToIntegral £temporary4262 c
+63: Parameter 7 £temporary4262 16
+64: Call 7 isdigit 10
+65: PostCall 7
+66: GetReturnValue £temporary4263
+67: Equal 70 £temporary4263 0
+68: Assign £temporary4268 string_Yes#
+69: Goto 71
+70: Assign £temporary4268 string_No#
+71: Parameter 7 £temporary4268 10
+72: Call 7 printf 0
+73: PostCall 7
+74: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+75: Parameter 7 string_isalnum282725c2729203D2025s0A# 6
+76: IntegralToIntegral £temporary4270 c
+77: Parameter 7 £temporary4270 8
+78: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+79: IntegralToIntegral £temporary4271 c
+80: Parameter 7 £temporary4271 16
+81: Call 7 isalnum 10
+82: PostCall 7
+83: GetReturnValue £temporary4272
+84: Equal 87 £temporary4272 0
+85: Assign £temporary4277 string_Yes#
+86: Goto 88
+87: Assign £temporary4277 string_No#
+88: Parameter 7 £temporary4277 10
+89: Call 7 printf 0
+90: PostCall 7
+91: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+92: Parameter 7 string_isxdigit282725c2729203D2025s0A# 6
+93: IntegralToIntegral £temporary4279 c
+94: Parameter 7 £temporary4279 8
+95: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+96: IntegralToIntegral £temporary4280 c
+97: Parameter 7 £temporary4280 16
+98: Call 7 isxdigit 10
+99: PostCall 7
+100: GetReturnValue £temporary4281
+101: Equal 104 £temporary4281 0
+102: Assign £temporary4286 string_Yes#
+103: Goto 105
+104: Assign £temporary4286 string_No#
+105: Parameter 7 £temporary4286 10
+106: Call 7 printf 0
+107: PostCall 7
+108: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+109: Parameter 7 string_isgraph282725c2729203D2025s0A# 6
+110: IntegralToIntegral £temporary4288 c
+111: Parameter 7 £temporary4288 8
+112: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+113: IntegralToIntegral £temporary4289 c
+114: Parameter 7 £temporary4289 16
+115: Call 7 isgraph 10
+116: PostCall 7
+117: GetReturnValue £temporary4290
+118: Equal 121 £temporary4290 0
+119: Assign £temporary4295 string_Yes#
+120: Goto 122
+121: Assign £temporary4295 string_No#
+122: Parameter 7 £temporary4295 10
+123: Call 7 printf 0
+124: PostCall 7
+125: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+126: Parameter 7 string_isprint282725c2729203D2025s0A# 6
+127: IntegralToIntegral £temporary4297 c
+128: Parameter 7 £temporary4297 8
+129: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+130: IntegralToIntegral £temporary4298 c
+131: Parameter 7 £temporary4298 16
+132: Call 7 isprint 10
+133: PostCall 7
+134: GetReturnValue £temporary4299
+135: Equal 138 £temporary4299 0
+136: Assign £temporary4304 string_Yes#
+137: Goto 139
+138: Assign £temporary4304 string_No#
+139: Parameter 7 £temporary4304 10
+140: Call 7 printf 0
+141: PostCall 7
+142: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+143: Parameter 7 string_ispunct282725c2729203D2025s0A# 6
+144: IntegralToIntegral £temporary4306 c
+145: Parameter 7 £temporary4306 8
+146: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+147: IntegralToIntegral £temporary4307 c
+148: Parameter 7 £temporary4307 16
+149: Call 7 ispunct 10
+150: PostCall 7
+151: GetReturnValue £temporary4308
+152: Equal 155 £temporary4308 0
+153: Assign £temporary4313 string_Yes#
+154: Goto 156
+155: Assign £temporary4313 string_No#
+156: Parameter 7 £temporary4313 10
+157: Call 7 printf 0
+158: PostCall 7
+159: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+160: Parameter 7 string_iscntrl282725c2729203D2025s0A# 6
+161: IntegralToIntegral £temporary4315 c
+162: Parameter 7 £temporary4315 8
+163: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+164: IntegralToIntegral £temporary4316 c
+165: Parameter 7 £temporary4316 16
+166: Call 7 iscntrl 10
+167: PostCall 7
+168: GetReturnValue £temporary4317
+169: Equal 172 £temporary4317 0
+170: Assign £temporary4322 string_Yes#
+171: Goto 173
+172: Assign £temporary4322 string_No#
+173: Parameter 7 £temporary4322 10
+174: Call 7 printf 0
+175: PostCall 7
+176: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+177: Parameter 7 string_isspace282725c2729203D2025s0A# 6
+178: IntegralToIntegral £temporary4324 c
+179: Parameter 7 £temporary4324 8
+180: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+181: IntegralToIntegral £temporary4325 c
+182: Parameter 7 £temporary4325 16
+183: Call 7 isspace 10
+184: PostCall 7
+185: GetReturnValue £temporary4326
+186: Equal 189 £temporary4326 0
+187: Assign £temporary4331 string_Yes#
+188: Goto 190
+189: Assign £temporary4331 string_No#
+190: Parameter 7 £temporary4331 10
+191: Call 7 printf 0
+192: PostCall 7
+193: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+194: Parameter 7 string_tolower282725c2729203D202725c270A# 6
+195: IntegralToIntegral £temporary4333 c
+196: Parameter 7 £temporary4333 8
+197: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+198: IntegralToIntegral £temporary4334 c
+199: Parameter 7 £temporary4334 16
+200: Call 7 tolower 10
+201: PostCall 7
+202: GetReturnValue £temporary4335
+203: IntegralToIntegral £temporary4336 £temporary4335
+204: IntegralToIntegral £temporary4337 £temporary4336
+205: Parameter 7 £temporary4337 10
+206: Call 7 printf 0
+207: PostCall 7
+208: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+209: Parameter 7 string_toupper282725c2729203D202725c270A0A# 6
+210: IntegralToIntegral £temporary4339 c
+211: Parameter 7 £temporary4339 8
+212: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+213: IntegralToIntegral £temporary4340 c
+214: Parameter 7 £temporary4340 16
+215: Call 7 toupper 10
+216: PostCall 7
+217: GetReturnValue £temporary4341
+218: IntegralToIntegral £temporary4342 £temporary4341
+219: IntegralToIntegral £temporary4343 £temporary4342
+220: Parameter 7 £temporary4343 10
+221: Call 7 printf 0
+222: PostCall 7
+223: Return 0
+224: FunctionEnd character_testX

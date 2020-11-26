@@ -72,7 +72,7 @@ time_t time(time_t* timePtr) {
     register_rdi = &tv;
     register_rsi = &tz;
     syscall();
-    printf("timezone %i %i %i %i\n", tv.tv_sec, tv.tv_usec, tz.tz_minuteswest, tz.tz_dsttime);
+    //printf("timezone %i %i %i %i\n", tv.tv_sec, tv.tv_usec, tz.tz_minuteswest, tz.tz_dsttime);
   }
 
 #endif

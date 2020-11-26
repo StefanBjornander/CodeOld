@@ -1,0 +1,5 @@
+0: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Call 6 file_test 0
+2: PostCall 6
+3: Return 0
+4: FunctionEnd mainX5

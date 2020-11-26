@@ -1,39 +1,39 @@
 0: Equal 20 stream 0
 1: AssignRegister ah 62
-2: Deref £temporary1003 -> stream stream 2
-3: AssignRegister bx £temporary1003 -> stream
+2: Deref £temporary984 -> stream stream 2
+3: AssignRegister bx £temporary984 -> stream
 4: Interrupt 33
 5: NotCarry 9
 6: Assign errno 11
 7: SetReturnValue -1
 8: Return -1
-9: Deref £temporary1005 -> stream stream 27
-10: Equal 16 £temporary1005 -> stream 0
+9: Deref £temporary986 -> stream stream 27
+10: Equal 16 £temporary986 -> stream 0
 11: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-12: Deref £temporary1006 -> stream stream 4
-13: Parameter 8 £temporary1006 -> stream 6
+12: Deref £temporary987 -> stream stream 4
+13: Parameter 8 £temporary987 -> stream 6
 14: Call 8 remove 0
 15: PostCall 8
-16: Deref £temporary1009 -> stream stream 0
-17: Assign £temporary1009 -> stream 0
+16: Deref £temporary990 -> stream stream 0
+17: Assign £temporary990 -> stream 0
 18: SetReturnValue 0
 19: Return 0
 20: Assign index 0
 21: SignedGreaterThanEqual 40 index 20
-22: UnsignedMultiply £temporary1013 index 29
-23: BinaryAdd £temporary1014 g_fileArray £temporary1013
-24: Deref £temporary1012 -> £temporary1014 £temporary1014 0
-25: Equal 38 £temporary1012.open$0 -> £temporary1014 0
+22: UnsignedMultiply £temporary994 index 29
+23: BinaryAdd £temporary995 g_fileArray £temporary994
+24: Deref £temporary993 -> £temporary995 £temporary995 0
+25: Equal 38 £temporary993.open$0 -> £temporary995 0
 26: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-27: UnsignedMultiply £temporary1016 index 29
-28: BinaryAdd £temporary1017 g_fileArray £temporary1016
-29: Deref £temporary1015 -> £temporary1017 £temporary1017 0
-30: address £temporary1018 £temporary1015 -> £temporary1017
-31: Parameter 10 £temporary1018 6
+27: UnsignedMultiply £temporary997 index 29
+28: BinaryAdd £temporary998 g_fileArray £temporary997
+29: Deref £temporary996 -> £temporary998 £temporary998 0
+30: address £temporary999 £temporary996 -> £temporary998
+31: Parameter 10 £temporary999 6
 32: Call 10 fclose 0
 33: PostCall 10
-34: GetReturnValue £temporary1019
-35: NotEqual 38 £temporary1019 -1
+34: GetReturnValue £temporary1000
+35: NotEqual 38 £temporary1000 -1
 36: SetReturnValue -1
 37: Return -1
 38: Increment index

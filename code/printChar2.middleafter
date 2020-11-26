@@ -3,24 +3,24 @@
 2: Case 24 g_outStatus 2
 3: CaseEnd g_outStatus
 4: Goto 25
-5: IntegralToIntegral £temporary1774 g_outDevice
-6: Assign stream £temporary1774
+5: IntegralToIntegral £temporary1755 g_outDevice
+6: Assign stream £temporary1755
 7: AssignRegister ah 64
-8: Deref £temporary1777 -> stream stream 2
-9: AssignRegister bx £temporary1777 -> stream
+8: Deref £temporary1758 -> stream stream 2
+9: AssignRegister bx £temporary1758 -> stream
 10: AssignRegister cx 1
-11: address £temporary1780 c
-12: AssignRegister dx £temporary1780
+11: address £temporary1761 c
+12: AssignRegister dx £temporary1761
 13: Interrupt 33
 14: Increment g_outChars
 15: Goto 25
-16: IntegralToIntegral £temporary1782 g_outDevice
-17: Assign outString £temporary1782
-18: Assign £temporary1783 g_outChars
+16: IntegralToIntegral £temporary1763 g_outDevice
+17: Assign outString £temporary1763
+18: Assign £temporary1764 g_outChars
 19: Increment g_outChars
-20: BinaryAdd £temporary1785 outString £temporary1783
-21: Deref £temporary1784 -> £temporary1785 £temporary1785 0
-22: Assign £temporary1784 -> £temporary1785 c
+20: BinaryAdd £temporary1766 outString £temporary1764
+21: Deref £temporary1765 -> £temporary1766 £temporary1766 0
+22: Assign £temporary1765 -> £temporary1766 c
 23: Goto 25
 24: Increment g_outChars
 25: Return 0

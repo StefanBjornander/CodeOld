@@ -3,17 +3,17 @@
 2: Parameter 14 x 6
 3: Call 14 fabs 0
 4: PostCall 14
-5: GetReturnValue £temporary661
-6: PushFloat 6.2831853071795864769252866
-7: SignedLessThanEqual 17 £temporary661 6.2831853071795864769252866
+5: GetReturnValue £temporary636
+6: PushFloat 6.28
+7: SignedLessThanEqual 17 £temporary636 6.28
 8: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 9: PushFloat x
 10: Parameter 14 x 6
-11: PushFloat 6.2831853071795864769252866
-12: Parameter 14 6.2831853071795864769252866 14
+11: PushFloat 6.28
+12: Parameter 14 6.28 14
 13: Call 14 fmod 0
 14: PostCall 14
-15: GetReturnValue £temporary663
+15: GetReturnValue £temporary638
 16: PopFloat x
 17: PushOne
 18: PopFloat index
@@ -27,23 +27,23 @@
 26: PopFloat faculty
 27: PushFloat sign
 28: PushFloat power
-29: SignedMultiply £temporary664 sign power
+29: SignedMultiply £temporary639 sign power
 30: PushFloat faculty
-31: SignedDivide £temporary665 £temporary664 faculty
+31: SignedDivide £temporary640 £temporary639 faculty
 32: PopFloat term
 33: PushFloat sum
 34: PushFloat term
-35: BinaryAdd £temporary666 sum term
+35: BinaryAdd £temporary641 sum term
 36: PopFloat sum
 37: PushFloat sign
 38: PushFloat -1
-39: SignedMultiply £temporary667 sign -1
+39: SignedMultiply £temporary642 sign -1
 40: PopFloat sign
 41: PushFloat power
 42: PushFloat x
 43: PushFloat x
-44: SignedMultiply £temporary668 x x
-45: SignedMultiply £temporary669 power £temporary668
+44: SignedMultiply £temporary643 x x
+45: SignedMultiply £temporary644 power £temporary643
 46: PopFloat power
 47: PushFloat faculty
 48: PushFloat index
@@ -54,17 +54,17 @@
 53: PushOne
 54: BinaryAdd index index 1
 55: TopFloat index
-56: SignedMultiply £temporary672 £temporary670 £temporary671
-57: SignedMultiply £temporary673 faculty £temporary672
+56: SignedMultiply £temporary647 £temporary645 £temporary646
+57: SignedMultiply £temporary648 faculty £temporary647
 58: PopFloat faculty
 59: CallHeader 62 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 60: PushFloat term
 61: Parameter 62 term 6
 62: Call 62 fabs 0
 63: PostCall 62
-64: GetReturnValue £temporary674
+64: GetReturnValue £temporary649
 65: PushFloat 0.000000001
-66: SignedGreaterThanEqual 27 £temporary674 0.000000001
+66: SignedGreaterThanEqual 27 £temporary649 0.000000001
 67: PushFloat sum
 68: SetReturnValue sum
 69: Return sum

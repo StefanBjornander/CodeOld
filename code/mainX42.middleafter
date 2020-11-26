@@ -8,10 +8,10 @@
 7: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 8: Parameter 12 string_25i3A203C25s3E0A# 6
 9: Parameter 12 index 8
-10: UnsignedMultiply £temporary124 index 2
-11: BinaryAdd £temporary125 argv £temporary124
-12: Deref £temporary123 -> £temporary125 £temporary125 0
-13: Parameter 12 £temporary123 -> £temporary125 10
+10: UnsignedMultiply £temporary131 index 2
+11: BinaryAdd £temporary132 argv £temporary131
+12: Deref £temporary130 -> £temporary132 £temporary132 0
+13: Parameter 12 £temporary130 -> £temporary132 10
 14: Call 12 printf 0
 15: PostCall 12
 16: Increment index
@@ -21,17 +21,17 @@
 20: Call 12 printf 0
 21: PostCall 12
 22: Assign index 0
-23: UnsignedMultiply £temporary129 index 2
-24: BinaryAdd £temporary130 argv £temporary129
-25: Deref £temporary128 -> £temporary130 £temporary130 0
-26: Equal 38 £temporary128 -> £temporary130 0
+23: UnsignedMultiply £temporary136 index 2
+24: BinaryAdd £temporary137 argv £temporary136
+25: Deref £temporary135 -> £temporary137 £temporary137 0
+26: Equal 38 £temporary135 -> £temporary137 0
 27: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 28: Parameter 12 string_25i3A203C25s3E0A# 6
 29: Parameter 12 index 8
-30: UnsignedMultiply £temporary134 index 2
-31: BinaryAdd £temporary135 argv £temporary134
-32: Deref £temporary133 -> £temporary135 £temporary135 0
-33: Parameter 12 £temporary133 -> £temporary135 10
+30: UnsignedMultiply £temporary141 index 2
+31: BinaryAdd £temporary142 argv £temporary141
+32: Deref £temporary140 -> £temporary142 £temporary142 0
+33: Parameter 12 £temporary140 -> £temporary142 10
 34: Call 12 printf 0
 35: PostCall 12
 36: Increment index
@@ -54,19 +54,19 @@
 53: PostCall 41
 54: CallHeader 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 55: Parameter 41 string_25c2025s2025i2025lf# 6
-56: address £temporary141 c
-57: Parameter 41 £temporary141 8
+56: address £temporary148 c
+57: Parameter 41 £temporary148 8
 58: Parameter 41 s 10
-59: address £temporary142 i
-60: Parameter 41 £temporary142 12
-61: address £temporary143 d
-62: Parameter 41 £temporary143 14
+59: address £temporary149 i
+60: Parameter 41 £temporary149 12
+61: address £temporary150 d
+62: Parameter 41 £temporary150 14
 63: Call 41 scanf 0
 64: PostCall 41
 65: CallHeader 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 66: Parameter 41 string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A# 6
-67: IntegralToIntegral £temporary145 c
-68: Parameter 41 £temporary145 8
+67: IntegralToIntegral £temporary152 c
+68: Parameter 41 £temporary152 8
 69: Parameter 41 s 10
 70: Parameter 41 i 12
 71: PushFloat d

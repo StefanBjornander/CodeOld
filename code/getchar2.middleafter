@@ -2,7 +2,7 @@
 1: Parameter 6 stdin 6
 2: Call 6 fgetc 0
 3: PostCall 6
-4: GetReturnValue £temporary1079
-5: SetReturnValue £temporary1079
-6: Return £temporary1079
+4: GetReturnValue £temporary1060
+5: SetReturnValue £temporary1060
+6: Return £temporary1060
 7: FunctionEnd getchar

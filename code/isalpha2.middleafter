@@ -2,17 +2,17 @@
 1: Parameter 8 c 6
 2: Call 8 islower 0
 3: PostCall 8
-4: GetReturnValue £temporary397
-5: NotEqual 12 £temporary397 0
+4: GetReturnValue £temporary372
+5: NotEqual 12 £temporary372 0
 6: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 7: Parameter 8 c 6
 8: Call 8 isupper 0
 9: PostCall 8
-10: GetReturnValue £temporary398
-11: Equal 14 £temporary398 0
-12: Assign £temporary402 1
+10: GetReturnValue £temporary373
+11: Equal 14 £temporary373 0
+12: Assign £temporary377 1
 13: Goto 15
-14: Assign £temporary402 0
-15: SetReturnValue £temporary402
-16: Return £temporary402
+14: Assign £temporary377 0
+15: SetReturnValue £temporary377
+16: Return £temporary377
 17: FunctionEnd isalpha

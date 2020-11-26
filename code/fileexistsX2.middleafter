@@ -1,0 +1,17 @@
+0: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1: Parameter 8 name 6
+2: Parameter 8 string_r# 8
+3: Call 8 fopen 0
+4: PostCall 8
+5: GetReturnValue £temporary865
+6: Assign filePtr £temporary865
+7: Equal 14 filePtr 0
+8: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+9: Parameter 10 filePtr 6
+10: Call 10 fclose 0
+11: PostCall 10
+12: SetReturnValue 1
+13: Return 1
+14: SetReturnValue 0
+15: Return 0
+16: FunctionEnd fileexistsX

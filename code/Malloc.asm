@@ -41,11 +41,11 @@ string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 section .text
 
  malloc:
-	; IntegralToIntegral £temporary131 memorySize
+	; IntegralToIntegral £temporary138 memorySize
 	mov eax, [rbp + 24]
 
  malloc$1:
-	; BinaryAdd newBlockSize £temporary131 12
+	; BinaryAdd newBlockSize £temporary138 12
 	add eax, 12
 	mov [rbp + 28], eax
 
@@ -54,18 +54,18 @@ section .text
 	mov dword [rbp + 32], 0
 
  malloc$3:
-	; StackTop £temporary133
+	; StackTop £temporary140
 	mov rax, $StackTop
 
  malloc$4:
-	; BinaryAdd £temporary134 £temporary133 1048572
+	; BinaryAdd £temporary141 £temporary140 1048572
 	add rax, 1048572
 
  malloc$5:
-	; IntegralToIntegral £temporary136 £temporary134
+	; IntegralToIntegral £temporary143 £temporary141
 
  malloc$6:
-	; Assign lastAddress £temporary136
+	; Assign lastAddress £temporary143
 	mov [rbp + 36], eax
 
  malloc$7:
@@ -161,28 +161,28 @@ section .text
 	je malloc$44
 
  malloc$27:
-	; IntegralToIntegral £temporary143 currBlockPtr
+	; IntegralToIntegral £temporary150 currBlockPtr
 	mov rax, [rbp + 64]
 
  malloc$28:
-	; Assign currAddress £temporary143
+	; Assign currAddress £temporary150
 	mov [rbp + 72], eax
 
  malloc$29:
-	; Dereference £temporary144 -> currBlockPtr currBlockPtr 0
+	; Dereference £temporary151 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 64]
 
  malloc$30:
-	; BinaryAdd £temporary145 currAddress £temporary144 -> currBlockPtr
+	; BinaryAdd £temporary152 currAddress £temporary151 -> currBlockPtr
 	mov eax, [rbp + 72]
 	add eax, [rsi]
 
  malloc$31:
-	; BinaryAdd £temporary146 £temporary145 12
+	; BinaryAdd £temporary153 £temporary152 12
 	add eax, 12
 
  malloc$32:
-	; BinarySubtract currGap lastAddress £temporary146
+	; BinarySubtract currGap lastAddress £temporary153
 	mov ebx, [rbp + 36]
 	sub ebx, eax
 	mov [rbp + 76], ebx
@@ -230,11 +230,11 @@ section .text
 	mov [rbp + 56], rax
 
  malloc$41:
-	; Dereference £temporary153 -> currBlockPtr currBlockPtr 0
+	; Dereference £temporary160 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 64]
 
  malloc$42:
-	; Assign currBlockPtr £temporary153 -> currBlockPtr
+	; Assign currBlockPtr £temporary160 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [rbp + 64], rax
 
@@ -248,47 +248,47 @@ section .text
 	je malloc$64
 
  malloc$45:
-	; IntegralToIntegral £temporary155 minBlockPtr
+	; IntegralToIntegral £temporary162 minBlockPtr
 	mov rax, [rbp + 40]
 
  malloc$46:
-	; Dereference £temporary156 -> minBlockPtr minBlockPtr 0
+	; Dereference £temporary163 -> minBlockPtr minBlockPtr 0
 	mov rsi, [rbp + 40]
 
  malloc$47:
-	; BinaryAdd £temporary157 £temporary155 £temporary156 -> minBlockPtr
+	; BinaryAdd £temporary164 £temporary162 £temporary163 -> minBlockPtr
 	add eax, [rsi]
 
  malloc$48:
-	; BinaryAdd newAddress £temporary157 12
+	; BinaryAdd newAddress £temporary164 12
 	add eax, 12
 	mov [rbp + 72], eax
 
  malloc$49:
-	; IntegralToIntegral £temporary159 newAddress
+	; IntegralToIntegral £temporary166 newAddress
 	mov eax, [rbp + 72]
 	mov rbx, 4294967295
 	and rax, rbx
 
  malloc$50:
-	; Assign newBlockPtr £temporary159
+	; Assign newBlockPtr £temporary166
 	mov [rbp + 76], rax
 
  malloc$51:
-	; Dereference £temporary160 -> newBlockPtr newBlockPtr 0
+	; Dereference £temporary167 -> newBlockPtr newBlockPtr 0
 	mov rsi, [rbp + 76]
 
  malloc$52:
-	; Assign £temporary160 -> newBlockPtr memorySize
+	; Assign £temporary167 -> newBlockPtr memorySize
 	mov eax, [rbp + 24]
 	mov [rsi], eax
 
  malloc$53:
-	; Dereference £temporary161 -> newBlockPtr newBlockPtr 0
+	; Dereference £temporary168 -> newBlockPtr newBlockPtr 0
 	mov rsi, [rbp + 76]
 
  malloc$54:
-	; Assign £temporary161 -> newBlockPtr minBlockPtr
+	; Assign £temporary168 -> newBlockPtr minBlockPtr
 	mov rax, [rbp + 40]
 	mov [rsi + 4], rax
 
@@ -298,11 +298,11 @@ section .text
 	je malloc$59
 
  malloc$56:
-	; Dereference £temporary163 -> minPrevBlockPtr minPrevBlockPtr 0
+	; Dereference £temporary170 -> minPrevBlockPtr minPrevBlockPtr 0
 	mov rsi, [rbp + 48]
 
  malloc$57:
-	; Assign £temporary163 -> minPrevBlockPtr newBlockPtr
+	; Assign £temporary170 -> minPrevBlockPtr newBlockPtr
 	mov rax, [rbp + 76]
 	mov [rsi + 4], rax
 
@@ -316,12 +316,12 @@ section .text
 	mov [g_firstBlockPtr], rax
 
  malloc$60:
-	; BinaryAdd £temporary164 newAddress 12
+	; BinaryAdd £temporary171 newAddress 12
 	mov ebx, [rbp + 72]
 	add ebx, 12
 
  malloc$61:
-	; IntegralToIntegral £temporary165 £temporary164
+	; IntegralToIntegral £temporary172 £temporary171
 	mov rax, 4294967295
 	and rbx, rax
 
@@ -329,7 +329,7 @@ section .text
 	; SetReturnValue
 
  malloc$63:
-	; Return £temporary165
+	; Return £temporary172
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -342,13 +342,13 @@ section .text
 	mov [rbp + 72], eax
 
  malloc$65:
-	; InspectRegister £temporary167 rbp
+	; InspectRegister £temporary174 rbp
 
  malloc$66:
-	; IntegralToIntegral £temporary168 £temporary167
+	; IntegralToIntegral £temporary175 £temporary174
 
  malloc$67:
-	; Assign stackTop £temporary168
+	; Assign stackTop £temporary175
 	mov [rbp + 76], ebp
 
  malloc$68:
@@ -358,30 +358,30 @@ section .text
 	ja malloc$84
 
  malloc$69:
-	; IntegralToIntegral £temporary170 newAddress
+	; IntegralToIntegral £temporary177 newAddress
 	mov eax, [rbp + 72]
 	mov rbx, 4294967295
 	and rax, rbx
 
  malloc$70:
-	; Assign newBlockPtr £temporary170
+	; Assign newBlockPtr £temporary177
 	mov [rbp + 80], rax
 
  malloc$71:
-	; Dereference £temporary171 -> newBlockPtr newBlockPtr 0
+	; Dereference £temporary178 -> newBlockPtr newBlockPtr 0
 	mov rsi, [rbp + 80]
 
  malloc$72:
-	; Assign £temporary171 -> newBlockPtr memorySize
+	; Assign £temporary178 -> newBlockPtr memorySize
 	mov eax, [rbp + 24]
 	mov [rsi], eax
 
  malloc$73:
-	; Dereference £temporary172 -> newBlockPtr newBlockPtr 0
+	; Dereference £temporary179 -> newBlockPtr newBlockPtr 0
 	mov rsi, [rbp + 80]
 
  malloc$74:
-	; Assign £temporary172 -> newBlockPtr 0
+	; Assign £temporary179 -> newBlockPtr 0
 	mov qword [rsi + 4], 0
 
  malloc$75:
@@ -390,11 +390,11 @@ section .text
 	je malloc$79
 
  malloc$76:
-	; Dereference £temporary174 -> prevBlockPtr prevBlockPtr 0
+	; Dereference £temporary181 -> prevBlockPtr prevBlockPtr 0
 	mov rsi, [rbp + 56]
 
  malloc$77:
-	; Assign £temporary174 -> prevBlockPtr newBlockPtr
+	; Assign £temporary181 -> prevBlockPtr newBlockPtr
 	mov rax, [rbp + 80]
 	mov [rsi + 4], rax
 
@@ -408,12 +408,12 @@ section .text
 	mov [g_firstBlockPtr], rax
 
  malloc$80:
-	; BinaryAdd £temporary175 newAddress 12
+	; BinaryAdd £temporary182 newAddress 12
 	mov ebx, [rbp + 72]
 	add ebx, 12
 
  malloc$81:
-	; IntegralToIntegral £temporary176 £temporary175
+	; IntegralToIntegral £temporary183 £temporary182
 	mov rax, 4294967295
 	and rbx, rax
 
@@ -421,7 +421,7 @@ section .text
 	; SetReturnValue
 
  malloc$83:
-	; Return £temporary176
+	; Return £temporary183
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -447,13 +447,13 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  calloc$1:
-	; SignedMultiply £temporary177 number size
+	; SignedMultiply £temporary184 number size
 	mov eax, [rbp + 24]
 	xor edx, edx
 	imul dword [rbp + 28]
 
  calloc$2:
-	; Parameter 56 signedint £temporary177
+	; Parameter 56 signedint £temporary184
 	mov [rbp + 56], eax
 
  calloc$3:
@@ -467,10 +467,10 @@ section .text
 	; PostCall 32
 
  calloc$5:
-	; GetReturnValue £temporary178
+	; GetReturnValue £temporary185
 
  calloc$6:
-	; Assign pointer £temporary178
+	; Assign pointer £temporary185
 	mov [rbp + 32], rbx
 
  calloc$7:
@@ -522,20 +522,20 @@ section .text
 section .text
 
  free:
-	; IntegralToIntegral £temporary181 freeMemoryPtr
+	; IntegralToIntegral £temporary188 freeMemoryPtr
 	mov rax, [rbp + 24]
 
  free$1:
-	; BinarySubtract £temporary182 £temporary181 12
+	; BinarySubtract £temporary189 £temporary188 12
 	sub eax, 12
 
  free$2:
-	; IntegralToIntegral £temporary183 £temporary182
+	; IntegralToIntegral £temporary190 £temporary189
 	mov rbx, 4294967295
 	and rax, rbx
 
  free$3:
-	; Assign freeBlockPtr £temporary183
+	; Assign freeBlockPtr £temporary190
 	mov [rbp + 32], rax
 
  free$4:
@@ -576,11 +576,11 @@ section .text
 	jne free$15
 
  free$11:
-	; Dereference £temporary188 -> currBlockPtr currBlockPtr 0
+	; Dereference £temporary195 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 48]
 
  free$12:
-	; NotEqual 15 £temporary188 -> currBlockPtr 0
+	; NotEqual 15 £temporary195 -> currBlockPtr 0
 	cmp qword [rsi + 4], 0
 	jne free$15
 
@@ -598,11 +598,11 @@ section .text
 	jne free$19
 
  free$16:
-	; Dereference £temporary192 -> currBlockPtr currBlockPtr 0
+	; Dereference £temporary199 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 48]
 
  free$17:
-	; Assign g_firstBlockPtr £temporary192 -> currBlockPtr
+	; Assign g_firstBlockPtr £temporary199 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [g_firstBlockPtr], rax
 
@@ -611,20 +611,20 @@ section .text
 	jmp free$27
 
  free$19:
-	; Dereference £temporary193 -> currBlockPtr currBlockPtr 0
+	; Dereference £temporary200 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 48]
 
  free$20:
-	; NotEqual 24 £temporary193 -> currBlockPtr 0
+	; NotEqual 24 £temporary200 -> currBlockPtr 0
 	cmp qword [rsi + 4], 0
 	jne free$24
 
  free$21:
-	; Dereference £temporary195 -> prevBlockPtr prevBlockPtr 0
+	; Dereference £temporary202 -> prevBlockPtr prevBlockPtr 0
 	mov rsi, [rbp + 40]
 
  free$22:
-	; Assign £temporary195 -> prevBlockPtr 0
+	; Assign £temporary202 -> prevBlockPtr 0
 	mov qword [rsi + 4], 0
 
  free$23:
@@ -632,15 +632,15 @@ section .text
 	jmp free$27
 
  free$24:
-	; Dereference £temporary196 -> prevBlockPtr prevBlockPtr 0
+	; Dereference £temporary203 -> prevBlockPtr prevBlockPtr 0
 	mov rsi, [rbp + 40]
 
  free$25:
-	; Dereference £temporary197 -> currBlockPtr currBlockPtr 0
+	; Dereference £temporary204 -> currBlockPtr currBlockPtr 0
 	mov rdi, [rbp + 48]
 
  free$26:
-	; Assign £temporary196 -> prevBlockPtr £temporary197 -> currBlockPtr
+	; Assign £temporary203 -> prevBlockPtr £temporary204 -> currBlockPtr
 	mov rax, [rdi + 4]
 	mov [rsi + 4], rax
 
@@ -657,11 +657,11 @@ section .text
 	mov [rbp + 40], rax
 
  free$29:
-	; Dereference £temporary198 -> currBlockPtr currBlockPtr 0
+	; Dereference £temporary205 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 48]
 
  free$30:
-	; Assign currBlockPtr £temporary198 -> currBlockPtr
+	; Assign currBlockPtr £temporary205 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [rbp + 48], rax
 
@@ -830,13 +830,13 @@ section .text
 	; PostCall 36
 
  realloc$30:
-	; GetReturnValue £temporary210
+	; GetReturnValue £temporary217
 
  realloc$31:
 	; SetReturnValue
 
  realloc$32:
-	; Return £temporary210
+	; Return £temporary217
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -877,47 +877,47 @@ section .text
 	jmp rax
 
  realloc$40:
-	; IntegralToIntegral £temporary213 newMemorySize
+	; IntegralToIntegral £temporary220 newMemorySize
 	mov eax, [rbp + 32]
 
  realloc$41:
-	; BinaryAdd newBlockSize £temporary213 12
+	; BinaryAdd newBlockSize £temporary220 12
 	add eax, 12
 	mov [rbp + 36], eax
 
  realloc$42:
-	; IntegralToIntegral £temporary215 oldMemoryPtr
+	; IntegralToIntegral £temporary222 oldMemoryPtr
 	mov rax, [rbp + 24]
 
  realloc$43:
-	; BinarySubtract £temporary216 £temporary215 12
+	; BinarySubtract £temporary223 £temporary222 12
 	sub eax, 12
 
  realloc$44:
-	; IntegralToIntegral £temporary217 £temporary216
+	; IntegralToIntegral £temporary224 £temporary223
 	mov rbx, 4294967295
 	and rax, rbx
 
  realloc$45:
-	; Assign oldBlockPtr £temporary217
+	; Assign oldBlockPtr £temporary224
 	mov [rbp + 40], rax
 
  realloc$46:
-	; Dereference £temporary218 -> oldBlockPtr oldBlockPtr 0
+	; Dereference £temporary225 -> oldBlockPtr oldBlockPtr 0
 	mov rsi, [rbp + 40]
 
  realloc$47:
-	; UnsignedGreaterThan 52 newBlockSize £temporary218 -> oldBlockPtr
+	; UnsignedGreaterThan 52 newBlockSize £temporary225 -> oldBlockPtr
 	mov eax, [rsi]
 	cmp [rbp + 36], eax
 	ja realloc$52
 
  realloc$48:
-	; Dereference £temporary220 -> oldBlockPtr oldBlockPtr 0
+	; Dereference £temporary227 -> oldBlockPtr oldBlockPtr 0
 	mov rsi, [rbp + 40]
 
  realloc$49:
-	; Assign £temporary220 -> oldBlockPtr newBlockSize
+	; Assign £temporary227 -> oldBlockPtr newBlockSize
 	mov eax, [rbp + 36]
 	mov [rsi], eax
 
@@ -933,18 +933,18 @@ section .text
 	jmp rax
 
  realloc$52:
-	; StackTop £temporary221
+	; StackTop £temporary228
 	mov rax, $StackTop
 
  realloc$53:
-	; BinaryAdd £temporary222 £temporary221 1048572
+	; BinaryAdd £temporary229 £temporary228 1048572
 	add rax, 1048572
 
  realloc$54:
-	; IntegralToIntegral £temporary224 £temporary222
+	; IntegralToIntegral £temporary231 £temporary229
 
  realloc$55:
-	; Assign lastAddress £temporary224
+	; Assign lastAddress £temporary231
 	mov [rbp + 48], eax
 
  realloc$56:
@@ -964,11 +964,11 @@ section .text
 	jne realloc$66
 
  realloc$59:
-	; IntegralToIntegral £temporary227 currBlockPtr
+	; IntegralToIntegral £temporary234 currBlockPtr
 	mov rax, [rbp + 52]
 
  realloc$60:
-	; BinarySubtract availableSize lastAddress £temporary227
+	; BinarySubtract availableSize lastAddress £temporary234
 	mov ebx, [rbp + 48]
 	sub ebx, eax
 	mov [rbp + 60], ebx
@@ -980,11 +980,11 @@ section .text
 	jb realloc$71
 
  realloc$62:
-	; Dereference £temporary230 -> oldBlockPtr oldBlockPtr 0
+	; Dereference £temporary237 -> oldBlockPtr oldBlockPtr 0
 	mov rsi, [rbp + 40]
 
  realloc$63:
-	; Assign £temporary230 -> oldBlockPtr newBlockSize
+	; Assign £temporary237 -> oldBlockPtr newBlockSize
 	mov eax, [rbp + 36]
 	mov [rsi], eax
 
@@ -1000,19 +1000,19 @@ section .text
 	jmp rax
 
  realloc$66:
-	; IntegralToIntegral £temporary231 currBlockPtr
+	; IntegralToIntegral £temporary238 currBlockPtr
 	mov rax, [rbp + 52]
 
  realloc$67:
-	; Assign lastAddress £temporary231
+	; Assign lastAddress £temporary238
 	mov [rbp + 48], eax
 
  realloc$68:
-	; Dereference £temporary232 -> currBlockPtr currBlockPtr 0
+	; Dereference £temporary239 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 52]
 
  realloc$69:
-	; Assign currBlockPtr £temporary232 -> currBlockPtr
+	; Assign currBlockPtr £temporary239 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [rbp + 52], rax
 
@@ -1039,10 +1039,10 @@ section .text
 	; PostCall 48
 
  realloc$75:
-	; GetReturnValue £temporary233
+	; GetReturnValue £temporary240
 
  realloc$76:
-	; Assign newMemoryPtr £temporary233
+	; Assign newMemoryPtr £temporary240
 	mov [rbp + 48], rbx
 
  realloc$77:
@@ -1177,19 +1177,19 @@ section .text
 	mov qword [rbp + 56], string_2020Address2025u2C20Size2025u0A#
 
  print_heap$8:
-	; IntegralToIntegral £temporary239 currBlockPtr
+	; IntegralToIntegral £temporary246 currBlockPtr
 	mov rax, [rbp + 24]
 
  print_heap$9:
-	; Parameter 64 unsigned int £temporary239
+	; Parameter 64 unsigned int £temporary246
 	mov [rbp + 64], eax
 
  print_heap$10:
-	; Dereference £temporary240 -> currBlockPtr currBlockPtr 0
+	; Dereference £temporary247 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 24]
 
  print_heap$11:
-	; Parameter 68 unsigned int £temporary240 -> currBlockPtr
+	; Parameter 68 unsigned int £temporary247 -> currBlockPtr
 	mov eax, [rsi]
 	mov [rbp + 68], eax
 
@@ -1206,11 +1206,11 @@ section .text
 	; PostCall 32
 
  print_heap$14:
-	; Dereference £temporary242 -> currBlockPtr currBlockPtr 0
+	; Dereference £temporary249 -> currBlockPtr currBlockPtr 0
 	mov rsi, [rbp + 24]
 
  print_heap$15:
-	; Assign currBlockPtr £temporary242 -> currBlockPtr
+	; Assign currBlockPtr £temporary249 -> currBlockPtr
 	mov rax, [rsi + 4]
 	mov [rbp + 24], rax
 

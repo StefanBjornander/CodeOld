@@ -3,12 +3,12 @@
 2: Parameter 8 sig 8
 3: Call 8 printf 0
 4: PostCall 8
-5: IntegralToIntegral £temporary862 sig
-6: AssignRegister al £temporary862
+5: IntegralToIntegral £temporary837 sig
+6: AssignRegister al £temporary837
 7: AssignRegister ah 53
 8: Interrupt 33
-9: InspectRegister £temporary864 bx
-10: Assign func £temporary864
+9: InspectRegister £temporary839 bx
+10: Assign func £temporary839
 11: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 12: Parameter 10 string_Raise20function2025p0A# 6
 13: Parameter 10 func 8

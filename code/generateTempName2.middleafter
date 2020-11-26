@@ -1,19 +1,19 @@
 0: SignedGreaterThanEqual 36 size 3
 1: Assign c 97
 2: SignedGreaterThan 36 c 122
-3: BinaryAdd £temporary1193 name size
-4: Deref £temporary1192 -> £temporary1193 £temporary1193 0
-5: Assign £temporary1192 -> £temporary1193 c
-6: BinaryAdd £temporary1194 size 1
-7: BinaryAdd £temporary1196 name £temporary1194
-8: Deref £temporary1195 -> £temporary1196 £temporary1196 0
-9: Assign £temporary1195 -> £temporary1196 0
+3: BinaryAdd £temporary1174 name size
+4: Deref £temporary1173 -> £temporary1174 £temporary1174 0
+5: Assign £temporary1173 -> £temporary1174 c
+6: BinaryAdd £temporary1175 size 1
+7: BinaryAdd £temporary1177 name £temporary1175
+8: Deref £temporary1176 -> £temporary1177 £temporary1177 0
+9: Assign £temporary1176 -> £temporary1177 0
 10: CallHeader 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 11: Parameter 13 name 6
 12: Call 13 fileexists 0
 13: PostCall 13
-14: GetReturnValue £temporary1197
-15: NotEqual 22 £temporary1197 0
+14: GetReturnValue £temporary1178
+15: NotEqual 22 £temporary1178 0
 16: Case 20 status 0
 17: Case 22 status 1
 18: CaseEnd status
@@ -22,13 +22,13 @@
 21: Return name
 22: CallHeader 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 23: Parameter 13 name 6
-24: BinaryAdd £temporary1200 size 1
-25: Parameter 13 £temporary1200 8
+24: BinaryAdd £temporary1181 size 1
+25: Parameter 13 £temporary1181 8
 26: Parameter 13 status 10
 27: Call 13 generateTempName 0
 28: PostCall 13
-29: GetReturnValue £temporary1201
-30: Assign result £temporary1201
+29: GetReturnValue £temporary1182
+30: Assign result £temporary1182
 31: Equal 34 result 0
 32: SetReturnValue result
 33: Return result

@@ -4,7 +4,7 @@
 3: Parameter 8 1 10
 4: Call 8 fseek 0
 5: PostCall 8
-6: GetReturnValue £temporary1136
-7: SetReturnValue £temporary1136
-8: Return £temporary1136
+6: GetReturnValue £temporary1117
+7: SetReturnValue £temporary1117
+8: Return £temporary1117
 9: FunctionEnd ftell

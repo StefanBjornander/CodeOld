@@ -1,6 +1,6 @@
 0: Assign n 0
-1: address £temporary5034 n
-2: Assign p £temporary5034
+1: address £temporary5691 n
+2: Assign p £temporary5691
 3: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 4: Parameter 10 string_3C25i3E203C25i3E203C25li3E203C25li3E203C25u3E203C25lu3E0A0A# 6
 5: Parameter 10 123 8
@@ -326,33 +326,5 @@
 325: Parameter 10 -123.456 40
 326: Call 10 printf 0
 327: PostCall 10
-328: CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-329: Parameter 106 string_Please20write20the20patterns205Babc5D3A20# 6
-330: Call 106 printf 0
-331: PostCall 106
-332: CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-333: Parameter 106 string_255Babc5D# 6
-334: Parameter 106 s 8
-335: Call 106 scanf 0
-336: PostCall 106
-337: CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-338: Parameter 106 string_0A3C25s3E0A# 6
-339: Parameter 106 s 8
-340: Call 106 printf 0
-341: PostCall 106
-342: CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-343: Parameter 106 string_Please20write20the20patterns205B5Eabc5D3A20# 6
-344: Call 106 printf 0
-345: PostCall 106
-346: CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-347: Parameter 106 string_255B5Eabc5D# 6
-348: Parameter 106 s 8
-349: Call 106 scanf 0
-350: PostCall 106
-351: CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-352: Parameter 106 string_0A3C25s3E# 6
-353: Parameter 106 s 8
-354: Call 106 printf 0
-355: PostCall 106
-356: Return 0
-357: FunctionEnd stdio_test
+328: Return 0
+329: FunctionEnd stdio_test

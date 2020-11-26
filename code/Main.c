@@ -8,12 +8,11 @@
 #include <Limits.h>
 #include <Time.h>
 
-void math_test_1(double x);   // ok
+void math_test();             // ok
 void file_test();             // ok
 void signal_test(void);       // ok
 void time_test(void);         // ok
 void assert_test(void);       // ok
-void assert_test2(int n);     // ok
 void malloc_test(void);       // ok
 void print_test(void);        // ok
 void limits_test(void);       // ok
@@ -26,13 +25,13 @@ void strtol_test(void);       // ok
 void strtoul_test(void);      // ok
 void heap_test(void);         // ok
 void stack_test(void);        // ok
-void character_test(char c);  // ok
+void character_test();        // ok
 void locale_test(void);       // ok
 
-void main_math(void);
+/*void main_math(void);
 void math_test_2(double x,double y);
 void acos_test(double x);
-void atan_test(double x);
+void atan_test(double x);*/
 
 struct A;
 struct B;
@@ -189,7 +188,7 @@ void mainX(int argc, char* argv[]) {
 void mainm(int argc, char* argv[]) {
   //printf("%f\n", tan(PI / 2));
   //printf("%f\n", tan(-PI / 2));
-  main_math();
+  //main_math();
 }
 
 void maina() {
@@ -197,7 +196,30 @@ void maina() {
   assert(1 > 2);
 }
 
-void main() {
+void main(void) {
+  math_test();
+  file_test();
+  stdio_test();
+  //signal_test();
+  time_test();  
+  assert_test();
+  malloc_test();
+  print_test(); 
+  limits_test();
+  float_test(); 
+  string_test();
+  setjmp_test();
+  stdio_test(); 
+  stdlib_test();
+  strtol_test();
+  strtoul_test();
+  //heap_test();  
+  //stack_test(); 
+  character_test();
+  locale_test();
+}
+
+void mainX5() {
   //printf("<%i> <%2i> <%02i> <%i> <%2i> <%02i> <%i> <%2i> <%02i>\n", 1, 2, 3, 11, 12, 13, 111, 112, 123);
   //printf("%i %2i %02i", 1, 2, 3);
   /*  strtol_test();
@@ -873,13 +895,13 @@ void mainT(int argc, char* argv[]) {
   }*/
 #endif
 
-void assert_test(void) {
+/*void assert_test(void) {
   int n = 0;
   printf("Please write a number (not 6 or 7): ");
   scanf("%i", &n);
   assert(n != 6);
-  assert_test2(n);
-}
+  //assert_test2(n);
+}*/
 
 void assert_test2(int n) {
   assert(n != 7);

@@ -1,267 +1,267 @@
 1:	
 
-@1423$existsTempName:	; Assign index 0
+@1403$existsTempName:	; Assign index 0
 2:		mov word [bp + 8], 0
 4:	
 
-@1423$existsTempName$1:	; SignedGreaterThanEqual 16 index g_tempSize
-5:		mov ax, [@1422$g_tempSize]
+@1403$existsTempName$1:	; SignedGreaterThanEqual 16 index g_tempSize
+5:		mov ax, [@1402$g_tempSize]
 6:		cmp [bp + 8], ax
-7:		jge @1423$existsTempName$16
+7:		jge @1403$existsTempName$16
 9:	
 
-@1423$existsTempName$2:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+@1403$existsTempName$2:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 11:	
 
-@1423$existsTempName$3:	; Parameter 10 name 6
+@1403$existsTempName$3:	; Parameter 10 name 6
 12:		mov ax, [bp + 6]
 13:		mov [bp + 16], ax
 15:	
 
-@1423$existsTempName$4:	; UnsignedMultiply £temporary1183 index 2
+@1403$existsTempName$4:	; UnsignedMultiply £temporary1164 index 2
 16:		mov ax, [bp + 8]
 18:		xor dx, dx
 19:		mul word [int2$2#]
 25:	
 
-@1423$existsTempName$5:	; BinaryAdd £temporary1184 g_tempArray £temporary1183
-26:		mov si, @1421$g_tempArray
+@1403$existsTempName$5:	; BinaryAdd £temporary1165 g_tempArray £temporary1164
+26:		mov si, @1401$g_tempArray
 27:		add si, ax
 29:	
 
-@1423$existsTempName$6:	; Deref £temporary1182 -> £temporary1184 £temporary1184 0
+@1403$existsTempName$6:	; Deref £temporary1163 -> £temporary1165 £temporary1165 0
 31:	
 
-@1423$existsTempName$7:	; Parameter 10 £temporary1182 -> £temporary1184 8
+@1403$existsTempName$7:	; Parameter 10 £temporary1163 -> £temporary1165 8
 32:		mov ax, [si]
 33:		mov [bp + 18], ax
 35:	
 
-@1423$existsTempName$8:	; Call 10 strcmp 0
-36:		mov word [bp + 10], @1423$existsTempName$9
+@1403$existsTempName$8:	; Call 10 strcmp 0
+36:		mov word [bp + 10], @1403$existsTempName$9
 37:		mov [bp + 12], bp
 38:		add bp, 10
 39:		jmp strcmp
 41:	
 
-@1423$existsTempName$9:	; PostCall 10
+@1403$existsTempName$9:	; PostCall 10
 43:	
 
-@1423$existsTempName$10:	; GetReturnValue £temporary1185
+@1403$existsTempName$10:	; GetReturnValue £temporary1166
 48:	
 
-@1423$existsTempName$11:	; NotEqual 14 £temporary1185 0
+@1403$existsTempName$11:	; NotEqual 14 £temporary1166 0
 49:		cmp bx, 0
-50:		jne @1423$existsTempName$14
+50:		jne @1403$existsTempName$14
 52:	
 
-@1423$existsTempName$12:	; SetReturnValue 1
+@1403$existsTempName$12:	; SetReturnValue 1
 53:		mov bx, 1
 55:	
 
-@1423$existsTempName$13:	; Return 1
+@1403$existsTempName$13:	; Return 1
 56:		mov ax, [bp]
 57:		mov di, [bp + 4]
 58:		mov bp, [bp + 2]
 59:		jmp ax
 61:	
 
-@1423$existsTempName$14:	; Increment index
+@1403$existsTempName$14:	; Increment index
 62:		inc word [bp + 8]
 64:	
 
-@1423$existsTempName$15:	; Goto 1
-65:		jmp @1423$existsTempName$1
+@1403$existsTempName$15:	; Goto 1
+65:		jmp @1403$existsTempName$1
 67:	
 
-@1423$existsTempName$16:	; SetReturnValue 0
+@1403$existsTempName$16:	; SetReturnValue 0
 68:		mov bx, 0
 70:	
 
-@1423$existsTempName$17:	; Return 0
+@1403$existsTempName$17:	; Return 0
 71:		mov ax, [bp]
 72:		mov di, [bp + 4]
 73:		mov bp, [bp + 2]
 74:		jmp ax
 76:	
 
-@1423$existsTempName$18:	; FunctionEnd existsTempName
+@1403$existsTempName$18:	; FunctionEnd existsTempName
 1:	
 
-@1434$generateTempName:	; SignedGreaterThanEqual 36 size 3
+@1414$generateTempName:	; SignedGreaterThanEqual 36 size 3
 2:		cmp word [bp + 8], 3
-3:		jge @1434$generateTempName$36
+3:		jge @1414$generateTempName$36
 5:	
 
-@1434$generateTempName$1:	; Assign c 97
+@1414$generateTempName$1:	; Assign c 97
 6:		mov byte [bp + 12], 97
 8:	
 
-@1434$generateTempName$2:	; SignedGreaterThan 36 c 122
+@1414$generateTempName$2:	; SignedGreaterThan 36 c 122
 9:		cmp byte [bp + 12], 122
-10:		jg @1434$generateTempName$36
+10:		jg @1414$generateTempName$36
 12:	
 
-@1434$generateTempName$3:	; BinaryAdd £temporary1193 name size
+@1414$generateTempName$3:	; BinaryAdd £temporary1174 name size
 13:		mov si, [bp + 6]
 14:		add si, [bp + 8]
 16:	
 
-@1434$generateTempName$4:	; Deref £temporary1192 -> £temporary1193 £temporary1193 0
+@1414$generateTempName$4:	; Deref £temporary1173 -> £temporary1174 £temporary1174 0
 18:	
 
-@1434$generateTempName$5:	; Assign £temporary1192 -> £temporary1193 c
+@1414$generateTempName$5:	; Assign £temporary1173 -> £temporary1174 c
 19:		mov al, [bp + 12]
 20:		mov [si], al
 22:	
 
-@1434$generateTempName$6:	; BinaryAdd £temporary1194 size 1
+@1414$generateTempName$6:	; BinaryAdd £temporary1175 size 1
 23:		mov ax, [bp + 8]
 24:		add ax, 1
 26:	
 
-@1434$generateTempName$7:	; BinaryAdd £temporary1196 name £temporary1194
+@1414$generateTempName$7:	; BinaryAdd £temporary1177 name £temporary1175
 27:		mov si, [bp + 6]
 28:		add si, ax
 30:	
 
-@1434$generateTempName$8:	; Deref £temporary1195 -> £temporary1196 £temporary1196 0
+@1414$generateTempName$8:	; Deref £temporary1176 -> £temporary1177 £temporary1177 0
 32:	
 
-@1434$generateTempName$9:	; Assign £temporary1195 -> £temporary1196 0
+@1414$generateTempName$9:	; Assign £temporary1176 -> £temporary1177 0
 33:		mov byte [si], 0
 35:	
 
-@1434$generateTempName$10:	; CallHeader 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+@1414$generateTempName$10:	; CallHeader 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 37:	
 
-@1434$generateTempName$11:	; Parameter 13 name 6
+@1414$generateTempName$11:	; Parameter 13 name 6
 38:		mov ax, [bp + 6]
 39:		mov [bp + 19], ax
 41:	
 
-@1434$generateTempName$12:	; Call 13 fileexists 0
-42:		mov word [bp + 13], @1434$generateTempName$13
+@1414$generateTempName$12:	; Call 13 fileexists 0
+42:		mov word [bp + 13], @1414$generateTempName$13
 43:		mov [bp + 15], bp
 44:		add bp, 13
 45:		jmp fileexists
 47:	
 
-@1434$generateTempName$13:	; PostCall 13
+@1414$generateTempName$13:	; PostCall 13
 49:	
 
-@1434$generateTempName$14:	; GetReturnValue £temporary1197
+@1414$generateTempName$14:	; GetReturnValue £temporary1178
 54:	
 
-@1434$generateTempName$15:	; NotEqual 22 £temporary1197 0
+@1414$generateTempName$15:	; NotEqual 22 £temporary1178 0
 55:		cmp bx, 0
-56:		jne @1434$generateTempName$22
+56:		jne @1414$generateTempName$22
 58:	
 
-@1434$generateTempName$16:	; Case 20 status 0
+@1414$generateTempName$16:	; Case 20 status 0
 59:		mov ax, [bp + 10]
 60:		cmp ax, 0
-61:		je @1434$generateTempName$20
+61:		je @1414$generateTempName$20
 63:	
 
-@1434$generateTempName$17:	; Case 22 status 1
+@1414$generateTempName$17:	; Case 22 status 1
 64:		cmp ax, 1
-65:		je @1434$generateTempName$22
+65:		je @1414$generateTempName$22
 67:	
 
-@1434$generateTempName$18:	; CaseEnd status
+@1414$generateTempName$18:	; CaseEnd status
 69:	
 
-@1434$generateTempName$19:	; Goto 22
-70:		jmp @1434$generateTempName$22
+@1414$generateTempName$19:	; Goto 22
+70:		jmp @1414$generateTempName$22
 72:	
 
-@1434$generateTempName$20:	; SetReturnValue name
+@1414$generateTempName$20:	; SetReturnValue name
 73:		mov bx, [bp + 6]
 75:	
 
-@1434$generateTempName$21:	; Return name
+@1414$generateTempName$21:	; Return name
 76:		mov ax, [bp]
 77:		mov di, [bp + 4]
 78:		mov bp, [bp + 2]
 79:		jmp ax
 81:	
 
-@1434$generateTempName$22:	; CallHeader 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+@1414$generateTempName$22:	; CallHeader 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 83:	
 
-@1434$generateTempName$23:	; Parameter 13 name 6
+@1414$generateTempName$23:	; Parameter 13 name 6
 84:		mov ax, [bp + 6]
 85:		mov [bp + 19], ax
 87:	
 
-@1434$generateTempName$24:	; BinaryAdd £temporary1200 size 1
+@1414$generateTempName$24:	; BinaryAdd £temporary1181 size 1
 88:		mov ax, [bp + 8]
 89:		add ax, 1
 91:	
 
-@1434$generateTempName$25:	; Parameter 13 £temporary1200 8
+@1414$generateTempName$25:	; Parameter 13 £temporary1181 8
 92:		mov [bp + 21], ax
 94:	
 
-@1434$generateTempName$26:	; Parameter 13 status 10
+@1414$generateTempName$26:	; Parameter 13 status 10
 95:		mov ax, [bp + 10]
 96:		mov [bp + 23], ax
 98:	
 
-@1434$generateTempName$27:	; Call 13 generateTempName 0
-99:		mov word [bp + 13], @1434$generateTempName$28
+@1414$generateTempName$27:	; Call 13 generateTempName 0
+99:		mov word [bp + 13], @1414$generateTempName$28
 100:		mov [bp + 15], bp
 101:		add bp, 13
-102:		jmp @1434$generateTempName
+102:		jmp @1414$generateTempName
 104:	
 
-@1434$generateTempName$28:	; PostCall 13
+@1414$generateTempName$28:	; PostCall 13
 106:	
 
-@1434$generateTempName$29:	; GetReturnValue £temporary1201
+@1414$generateTempName$29:	; GetReturnValue £temporary1182
 111:	
 
-@1434$generateTempName$30:	; Assign result £temporary1201
+@1414$generateTempName$30:	; Assign result £temporary1182
 112:		mov [bp + 13], bx
 114:	
 
-@1434$generateTempName$31:	; Equal 34 result 0
+@1414$generateTempName$31:	; Equal 34 result 0
 115:		cmp word [bp + 13], 0
-116:		je @1434$generateTempName$34
+116:		je @1414$generateTempName$34
 118:	
 
-@1434$generateTempName$32:	; SetReturnValue result
+@1414$generateTempName$32:	; SetReturnValue result
 119:		mov bx, [bp + 13]
 121:	
 
-@1434$generateTempName$33:	; Return result
+@1414$generateTempName$33:	; Return result
 122:		mov ax, [bp]
 123:		mov di, [bp + 4]
 124:		mov bp, [bp + 2]
 125:		jmp ax
 127:	
 
-@1434$generateTempName$34:	; Increment c
+@1414$generateTempName$34:	; Increment c
 128:		inc byte [bp + 12]
 130:	
 
-@1434$generateTempName$35:	; Goto 2
-131:		jmp @1434$generateTempName$2
+@1414$generateTempName$35:	; Goto 2
+131:		jmp @1414$generateTempName$2
 133:	
 
-@1434$generateTempName$36:	; SetReturnValue 0
+@1414$generateTempName$36:	; SetReturnValue 0
 134:		mov bx, 0
 136:	
 
-@1434$generateTempName$37:	; Return 0
+@1414$generateTempName$37:	; Return 0
 137:		mov ax, [bp]
 138:		mov di, [bp + 4]
 139:		mov bp, [bp + 2]
 140:		jmp ax
 142:	
 
-@1434$generateTempName$38:	; FunctionEnd generateTempName
+@1414$generateTempName$38:	; FunctionEnd generateTempName
 1:	
 
 tmpfile:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -284,16 +284,16 @@ tmpfile$4:	; Call 12 generateTempName 0
 14:		mov word [bp + 12], tmpfile$5
 15:		mov [bp + 14], bp
 16:		add bp, 12
-17:		jmp @1434$generateTempName
+17:		jmp @1414$generateTempName
 19:	
 
 tmpfile$5:	; PostCall 12
 21:	
 
-tmpfile$6:	; GetReturnValue £temporary1207
+tmpfile$6:	; GetReturnValue £temporary1188
 26:	
 
-tmpfile$7:	; Equal 20 £temporary1207 0
+tmpfile$7:	; Equal 20 £temporary1188 0
 27:		cmp bx, 0
 28:		je tmpfile$20
 30:	
@@ -320,10 +320,10 @@ tmpfile$11:	; Call 12 fopen 0
 tmpfile$12:	; PostCall 12
 47:	
 
-tmpfile$13:	; GetReturnValue £temporary1208
+tmpfile$13:	; GetReturnValue £temporary1189
 52:	
 
-tmpfile$14:	; Assign stream £temporary1208
+tmpfile$14:	; Assign stream £temporary1189
 53:		mov [bp + 6], bx
 55:	
 
@@ -332,11 +332,11 @@ tmpfile$15:	; Equal 20 stream 0
 57:		je tmpfile$20
 59:	
 
-tmpfile$16:	; Deref £temporary1212 -> stream stream 27
+tmpfile$16:	; Deref £temporary1193 -> stream stream 27
 60:		mov si, [bp + 6]
 62:	
 
-tmpfile$17:	; Assign £temporary1212 -> stream 1
+tmpfile$17:	; Assign £temporary1193 -> stream 1
 63:		mov word [si + 27], 1
 65:	
 
@@ -366,7 +366,7 @@ tmpfile$22:	; FunctionEnd tmpfile
 1:	
 
 tmpnam:	; SignedGreaterThanEqual 10 g_tempSize 16
-2:		cmp word [@1422$g_tempSize], 16
+2:		cmp word [@1402$g_tempSize], 16
 3:		jge tmpnam$10
 5:	
 
@@ -390,19 +390,19 @@ tmpnam$5:	; Call 8 generateTempName 0
 18:		mov word [bp + 8], tmpnam$6
 19:		mov [bp + 10], bp
 20:		add bp, 8
-21:		jmp @1434$generateTempName
+21:		jmp @1414$generateTempName
 23:	
 
 tmpnam$6:	; PostCall 8
 25:	
 
-tmpnam$7:	; GetReturnValue £temporary1219
+tmpnam$7:	; GetReturnValue £temporary1200
 30:	
 
-tmpnam$8:	; SetReturnValue £temporary1219
+tmpnam$8:	; SetReturnValue £temporary1200
 32:	
 
-tmpnam$9:	; Return £temporary1219
+tmpnam$9:	; Return £temporary1200
 33:		mov ax, [bp]
 34:		mov di, [bp + 4]
 35:		mov bp, [bp + 2]

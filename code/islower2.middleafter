@@ -1,27 +1,27 @@
 0: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1: Call 8 localeconv 0
 2: PostCall 8
-3: GetReturnValue £temporary373
-4: Assign localeConvPtr £temporary373
+3: GetReturnValue £temporary348
+4: Assign localeConvPtr £temporary348
 5: Equal 19 localeConvPtr 0
 6: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-7: Deref £temporary375 -> localeConvPtr localeConvPtr 12
-8: Parameter 10 £temporary375 -> localeConvPtr 6
+7: Deref £temporary350 -> localeConvPtr localeConvPtr 12
+8: Parameter 10 £temporary350 -> localeConvPtr 6
 9: Parameter 10 c 8
 10: Call 10 strchr 0
 11: PostCall 10
-12: GetReturnValue £temporary376
-13: Equal 16 £temporary376 0
-14: Assign £temporary378 1
+12: GetReturnValue £temporary351
+13: Equal 16 £temporary351 0
+14: Assign £temporary353 1
 15: Goto 17
-16: Assign £temporary378 0
-17: SetReturnValue £temporary378
-18: Return £temporary378
+16: Assign £temporary353 0
+17: SetReturnValue £temporary353
+18: Return £temporary353
 19: SignedLessThan 23 c 97
 20: SignedGreaterThan 23 c 122
-21: Assign £temporary382 1
+21: Assign £temporary357 1
 22: Goto 24
-23: Assign £temporary382 0
-24: SetReturnValue £temporary382
-25: Return £temporary382
+23: Assign £temporary357 0
+24: SetReturnValue £temporary357
+25: Return £temporary357
 26: FunctionEnd islower

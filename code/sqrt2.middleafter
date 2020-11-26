@@ -8,21 +8,21 @@
 7: PushFloat root_i
 8: PushFloat x
 9: PushFloat root_i
-10: SignedDivide £temporary621 x root_i
-11: BinaryAdd £temporary622 root_i £temporary621
+10: SignedDivide £temporary596 x root_i
+11: BinaryAdd £temporary597 root_i £temporary596
 12: PushFloat 2
-13: SignedDivide £temporary623 £temporary622 2
+13: SignedDivide £temporary598 £temporary597 2
 14: PopFloat root_i_plus_1
 15: CallHeader 30 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 16: PushFloat root_i_plus_1
 17: PushFloat root_i
-18: BinarySubtract £temporary624 root_i_plus_1 root_i
-19: Parameter 30 £temporary624 6
+18: BinarySubtract £temporary599 root_i_plus_1 root_i
+19: Parameter 30 £temporary599 6
 20: Call 30 fabs 0
 21: PostCall 30
-22: GetReturnValue £temporary625
+22: GetReturnValue £temporary600
 23: PushFloat 0.000000001
-24: SignedGreaterThanEqual 5 £temporary625 0.000000001
+24: SignedGreaterThanEqual 5 £temporary600 0.000000001
 25: PushFloat root_i_plus_1
 26: SetReturnValue root_i_plus_1
 27: Return root_i_plus_1

@@ -6,7 +6,7 @@
 5: Assign errno 9
 6: SetReturnValue -1
 7: Return -1
-8: InspectRegister £temporary900 ax
-9: SetReturnValue £temporary900
-10: Return £temporary900
+8: InspectRegister £temporary881 ax
+9: SetReturnValue £temporary881
+10: Return £temporary881
 11: FunctionEnd fileopen

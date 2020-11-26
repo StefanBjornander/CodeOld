@@ -43,177 +43,177 @@ string_25s0A#:
 
 section .text
 
- @6960$main:
+ @6951$main:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @6960$main$1:
+ @6951$main$1:
 	; Parameter 64 pointer "Please input a value: "
 	mov qword [rbp + 64], string_Please20input20a20value3A20#
 
- @6960$main$2:
+ @6951$main$2:
 	; Call 40 printf 0
-	mov qword [rbp + 40], @6960$main$3
+	mov qword [rbp + 40], @6951$main$3
 	mov [rbp + 48], rbp
 	add rbp, 40
 	mov rdi, rbp
 	jmp printf
 
- @6960$main$3:
+ @6951$main$3:
 	; PostCall 40
 
- @6960$main$4:
+ @6951$main$4:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @6960$main$5:
+ @6951$main$5:
 	; Parameter 64 pointer "%lf"
 	mov qword [rbp + 64], string_25lf#
 
- @6960$main$6:
-	; Address £temporary3701 x
+ @6951$main$6:
+	; Address £temporary3714 x
 	mov rsi, rbp
 	add rsi, 32
 
- @6960$main$7:
-	; Parameter 72 pointer £temporary3701
+ @6951$main$7:
+	; Parameter 72 pointer £temporary3714
 	mov [rbp + 72], rsi
 
- @6960$main$8:
+ @6951$main$8:
 	; Call 40 scanf 8
-	mov qword [rbp + 40], @6960$main$9
+	mov qword [rbp + 40], @6951$main$9
 	mov [rbp + 48], rbp
 	add rbp, 40
 	mov rdi, rbp
 	add rdi, 8
 	jmp scanf
 
- @6960$main$9:
+ @6951$main$9:
 	; PostCall 40
 
- @6960$main$10:
+ @6951$main$10:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @6960$main$11:
+ @6951$main$11:
 	; Parameter 64 pointer buffer
 	mov qword [rbp + 64], buffer
 
- @6960$main$12:
+ @6951$main$12:
 	; Call 40 setjmp 0
-	mov qword [rbp + 40], @6960$main$13
+	mov qword [rbp + 40], @6951$main$13
 	mov [rbp + 48], rbp
 	add rbp, 40
 	jmp setjmp
 
- @6960$main$13:
+ @6951$main$13:
 	; PostCall 40
 
- @6960$main$14:
-	; GetReturnValue £temporary3703
+ @6951$main$14:
+	; GetReturnValue £temporary3716
 
- @6960$main$15:
-	; IntegralToIntegral £temporary3704 £temporary3703
+ @6951$main$15:
+	; IntegralToIntegral £temporary3717 £temporary3716
 	mov rax, 4294967295
 	and rbx, rax
 
- @6960$main$16:
-	; Assign message £temporary3704
+ @6951$main$16:
+	; Assign message £temporary3717
 	mov [rbp + 24], rbx
 
- @6960$main$17:
+ @6951$main$17:
 	; NotEqual 32 message 0
 	cmp qword [rbp + 24], 0
-	jne @6960$main$32
+	jne @6951$main$32
 
- @6960$main$18:
+ @6951$main$18:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @6960$main$19:
+ @6951$main$19:
 	; Parameter 64 pointer "1.0 / %f = %f\n"
 	mov qword [rbp + 64], string_12E0202F2025f203D2025f0A#
 
- @6960$main$20:
+ @6951$main$20:
 	; PushFloat x
 	fld qword [rbp + 32]
 
- @6960$main$21:
+ @6951$main$21:
 	; Parameter 72 double x
 	fstp qword [rbp + 72]
 
- @6960$main$22:
+ @6951$main$22:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @6960$main$23:
+ @6951$main$23:
 	; PushFloat x
 	fld qword [rbp + 32]
 
- @6960$main$24:
+ @6951$main$24:
 	; Parameter 104 double x
 	fstp qword [rbp + 104]
 
- @6960$main$25:
+ @6951$main$25:
 	; Call 80 inverse 0
-	mov qword [rbp + 80], @6960$main$26
+	mov qword [rbp + 80], @6951$main$26
 	mov [rbp + 88], rbp
 	add rbp, 80
 	jmp inverse
 
- @6960$main$26:
+ @6951$main$26:
 	; PostCall 80
 
- @6960$main$27:
-	; GetReturnValue £temporary3706
+ @6951$main$27:
+	; GetReturnValue £temporary3719
 
- @6960$main$28:
-	; Parameter 80 double £temporary3706
+ @6951$main$28:
+	; Parameter 80 double £temporary3719
 	fstp qword [rbp + 80]
 
- @6960$main$29:
+ @6951$main$29:
 	; Call 40 printf 16
-	mov qword [rbp + 40], @6960$main$30
+	mov qword [rbp + 40], @6951$main$30
 	mov [rbp + 48], rbp
 	add rbp, 40
 	mov rdi, rbp
 	add rdi, 16
 	jmp printf
 
- @6960$main$30:
+ @6951$main$30:
 	; PostCall 40
 
- @6960$main$31:
+ @6951$main$31:
 	; Goto 37
-	jmp @6960$main$37
+	jmp @6951$main$37
 
- @6960$main$32:
+ @6951$main$32:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @6960$main$33:
+ @6951$main$33:
 	; Parameter 64 pointer "%s\n"
 	mov qword [rbp + 64], string_25s0A#
 
- @6960$main$34:
+ @6951$main$34:
 	; Parameter 72 pointer message
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
- @6960$main$35:
+ @6951$main$35:
 	; Call 40 printf 8
-	mov qword [rbp + 40], @6960$main$36
+	mov qword [rbp + 40], @6951$main$36
 	mov [rbp + 48], rbp
 	add rbp, 40
 	mov rdi, rbp
 	add rdi, 8
 	jmp printf
 
- @6960$main$36:
+ @6951$main$36:
 	; PostCall 40
 
- @6960$main$37:
+ @6951$main$37:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @6960$main$38:
+ @6951$main$38:
 	; FunctionEnd main
 
 section .text
@@ -248,13 +248,13 @@ section .text
 	; PostCall 32
 
  inverse$7:
-	; GetReturnValue £temporary3713
+	; GetReturnValue £temporary3726
 
  inverse$8:
 	; SetReturnValue
 
  inverse$9:
-	; Return £temporary3713
+	; Return £temporary3726
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -295,14 +295,14 @@ section .text
 	fld qword [rbp + 32]
 
  divide$5:
-	; SignedDivide £temporary3717 x y
+	; SignedDivide £temporary3730 x y
 	fdiv
 
  divide$6:
 	; SetReturnValue
 
  divide$7:
-	; Return £temporary3717
+	; Return £temporary3730
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -316,11 +316,11 @@ section .text
 	mov qword [rbp + 64], buffer
 
  divide$10:
-	; IntegralToIntegral £temporary3718 "Division by Zero."
+	; IntegralToIntegral £temporary3731 "Division by Zero."
 	mov eax, string_Division20by20Zero2E#
 
  divide$11:
-	; Parameter 72 signedint £temporary3718
+	; Parameter 72 signedint £temporary3731
 	mov [rbp + 72], eax
 
  divide$12:
@@ -370,15 +370,15 @@ section .text
 	; PostCall 40
 
  test$4:
-	; GetReturnValue £temporary3720
+	; GetReturnValue £temporary3733
 
  test$5:
-	; IntegralToIntegral £temporary3721 £temporary3720
+	; IntegralToIntegral £temporary3734 £temporary3733
 	mov rax, 4294967295
 	and rbx, rax
 
  test$6:
-	; Assign message £temporary3721
+	; Assign message £temporary3734
 	mov [rbp + 32], rbx
 
  test$7:
@@ -423,10 +423,10 @@ section .text
 	; PostCall 80
 
  test$17:
-	; GetReturnValue £temporary3723
+	; GetReturnValue £temporary3736
 
  test$18:
-	; Parameter 80 double £temporary3723
+	; Parameter 80 double £temporary3736
 	fstp qword [rbp + 80]
 
  test$19:

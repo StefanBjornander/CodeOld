@@ -11,32 +11,24 @@ main2$1:	; Assign a$q 0
 main2$2:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 9:	
 
-main2$3:	; Parameter 6 string_test12Etxt# 6
-10:		mov word [bp + 12], string_test12Etxt#
-12:	
-
-main2$4:	; Parameter 6 string_test22Etxt# 8
-13:		mov word [bp + 14], string_test22Etxt#
+main2$3:	; Call 6 file_test 0
+10:		mov word [bp + 6], main2$4
+11:		mov [bp + 8], bp
+12:		add bp, 6
+13:		jmp file_test
 15:	
 
-main2$5:	; Call 6 file_test 0
-16:		mov word [bp + 6], main2$6
-17:		mov [bp + 8], bp
-18:		add bp, 6
-19:		jmp file_test
-21:	
+main2$4:	; PostCall 6
+17:	
 
-main2$6:	; PostCall 6
+main2$5:	; Return 0
+18:		mov ax, [bp]
+19:		mov di, [bp + 4]
+20:		mov bp, [bp + 2]
+21:		jmp ax
 23:	
 
-main2$7:	; Return 0
-24:		mov ax, [bp]
-25:		mov di, [bp + 4]
-26:		mov bp, [bp + 2]
-27:		jmp ax
-29:	
-
-main2$8:	; FunctionEnd main2
+main2$6:	; FunctionEnd main2
 1:	
 
 main33:	; Assign s[0] 72
@@ -200,12 +192,12 @@ mainc$5:	; Parameter 7 string_25c# 6
 18:		mov word [bp + 13], string_25c#
 20:	
 
-mainc$6:	; address £temporary26 c
+mainc$6:	; address £temporary24 c
 21:		mov si, bp
 22:		add si, 6
 24:	
 
-mainc$7:	; Parameter 7 £temporary26 8
+mainc$7:	; Parameter 7 £temporary24 8
 25:		mov [bp + 15], si
 27:	
 
@@ -228,7 +220,7 @@ mainc$11:	; Parameter 7 string_You20wrote20the20character202725c272E0A# 6
 40:		mov word [bp + 13], string_You20wrote20the20character202725c272E0A#
 42:	
 
-mainc$12:	; IntegralToIntegral £temporary28 c
+mainc$12:	; IntegralToIntegral £temporary26 c
 43:		mov al, [bp + 6]
 45:		and ax, 255
 47:		cmp al, 0
@@ -237,7 +229,7 @@ mainc$12:	; IntegralToIntegral £temporary28 c
 51:		neg ax
 53:	
 
-mainc$13:	; Parameter 7 £temporary28 8
+mainc$13:	; Parameter 7 £temporary26 8
 54:		mov [bp + 15], ax
 56:	
 
@@ -288,12 +280,12 @@ maini$5:	; Parameter 8 string_25i# 6
 18:		mov word [bp + 14], string_25i#
 20:	
 
-maini$6:	; address £temporary37 i
+maini$6:	; address £temporary35 i
 21:		mov si, bp
 22:		add si, 6
 24:	
 
-maini$7:	; Parameter 8 £temporary37 8
+maini$7:	; Parameter 8 £temporary35 8
 25:		mov [bp + 16], si
 27:	
 
@@ -455,71 +447,6 @@ maint$6:	; Return 0
 maint$7:	; FunctionEnd maint
 1:	
 
-mainY:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-3:	
-
-mainY$1:	; Call 6 malloc_test 0
-4:		mov word [bp + 6], mainY$2
-5:		mov [bp + 8], bp
-6:		add bp, 6
-7:		jmp malloc_test
-9:	
-
-mainY$2:	; PostCall 6
-11:	
-
-mainY$3:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-13:	
-
-mainY$4:	; PushFloat 10
-14:		fld qword [float8$10#]
-16:	
-
-mainY$5:	; Parameter 6 10 6
-17:		fstp qword [bp + 12]
-19:	
-
-mainY$6:	; Call 6 setjmp_test 0
-20:		mov word [bp + 6], mainY$7
-21:		mov [bp + 8], bp
-22:		add bp, 6
-23:		jmp setjmp_test
-25:	
-
-mainY$7:	; PostCall 6
-27:	
-
-mainY$8:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-29:	
-
-mainY$9:	; PushZero
-30:		fldz
-32:	
-
-mainY$10:	; Parameter 6 0 6
-33:		fstp qword [bp + 12]
-35:	
-
-mainY$11:	; Call 6 setjmp_test 0
-36:		mov word [bp + 6], mainY$12
-37:		mov [bp + 8], bp
-38:		add bp, 6
-39:		jmp setjmp_test
-41:	
-
-mainY$12:	; PostCall 6
-43:	
-
-mainY$13:	; Return 0
-44:		mov ax, [bp]
-45:		mov di, [bp + 4]
-46:		mov bp, [bp + 2]
-47:		jmp ax
-49:	
-
-mainY$14:	; FunctionEnd mainY
-1:	
-
 mainX:	; Assign index 129
 2:		mov word [bp + 10], 129
 4:	
@@ -529,14 +456,14 @@ mainX$1:	; SignedGreaterThanEqual 16 index 255
 6:		jge mainX$16
 8:	
 
-mainX$2:	; IntegralToIntegral £temporary63 index
+mainX$2:	; IntegralToIntegral £temporary56 index
 9:		mov si, [bp + 10]
 12:	
 
-mainX$3:	; Deref £temporary64 -> £temporary63 £temporary63 0
+mainX$3:	; Deref £temporary57 -> £temporary56 £temporary56 0
 14:	
 
-mainX$4:	; Assign c £temporary64 -> £temporary63
+mainX$4:	; Assign c £temporary57 -> £temporary56
 15:		mov al, [si]
 16:		mov [bp + 12], al
 18:	
@@ -553,7 +480,7 @@ mainX$7:	; Parameter 13 index 8
 25:		mov [bp + 21], ax
 27:	
 
-mainX$8:	; IntegralToIntegral £temporary65 c
+mainX$8:	; IntegralToIntegral £temporary58 c
 28:		mov al, [bp + 12]
 30:		and ax, 255
 32:		cmp al, 0
@@ -562,11 +489,11 @@ mainX$8:	; IntegralToIntegral £temporary65 c
 36:		neg ax
 38:	
 
-mainX$9:	; Parameter 13 £temporary65 10
+mainX$9:	; Parameter 13 £temporary58 10
 39:		mov [bp + 23], ax
 41:	
 
-mainX$10:	; IntegralToIntegral £temporary66 c
+mainX$10:	; IntegralToIntegral £temporary59 c
 42:		mov al, [bp + 12]
 44:		and ax, 255
 46:		cmp al, 0
@@ -575,7 +502,7 @@ mainX$10:	; IntegralToIntegral £temporary66 c
 50:		neg ax
 52:	
 
-mainX$11:	; Parameter 13 £temporary66 12
+mainX$11:	; Parameter 13 £temporary59 12
 53:		mov [bp + 25], ax
 55:	
 
@@ -645,21 +572,21 @@ mainX$25:	; Parameter 12 index 8
 105:		mov [bp + 20], ax
 107:	
 
-mainX$26:	; UnsignedMultiply £temporary72 index 2
+mainX$26:	; UnsignedMultiply £temporary65 index 2
 108:		mov ax, [bp + 10]
 110:		xor dx, dx
 111:		mul word [int2$2#]
 117:	
 
-mainX$27:	; BinaryAdd £temporary73 argv £temporary72
+mainX$27:	; BinaryAdd £temporary66 argv £temporary65
 118:		mov si, [bp + 8]
 119:		add si, ax
 121:	
 
-mainX$28:	; Deref £temporary71 -> £temporary73 £temporary73 0
+mainX$28:	; Deref £temporary64 -> £temporary66 £temporary66 0
 123:	
 
-mainX$29:	; Parameter 12 £temporary71 -> £temporary73 10
+mainX$29:	; Parameter 12 £temporary64 -> £temporary66 10
 124:		mov ax, [si]
 125:		mov [bp + 22], ax
 127:	
@@ -706,21 +633,21 @@ mainX$38:	; Assign index 0
 158:		mov word [bp + 10], 0
 160:	
 
-mainX$39:	; UnsignedMultiply £temporary77 index 2
+mainX$39:	; UnsignedMultiply £temporary70 index 2
 161:		mov ax, [bp + 10]
 163:		xor dx, dx
 164:		mul word [int2$2#]
 170:	
 
-mainX$40:	; BinaryAdd £temporary78 argv £temporary77
+mainX$40:	; BinaryAdd £temporary71 argv £temporary70
 171:		mov si, [bp + 8]
 172:		add si, ax
 174:	
 
-mainX$41:	; Deref £temporary76 -> £temporary78 £temporary78 0
+mainX$41:	; Deref £temporary69 -> £temporary71 £temporary71 0
 176:	
 
-mainX$42:	; Equal 54 £temporary76 -> £temporary78 0
+mainX$42:	; Equal 54 £temporary69 -> £temporary71 0
 177:		cmp word [si], 0
 178:		je mainX$54
 180:	
@@ -737,21 +664,21 @@ mainX$45:	; Parameter 12 index 8
 187:		mov [bp + 20], ax
 189:	
 
-mainX$46:	; UnsignedMultiply £temporary82 index 2
+mainX$46:	; UnsignedMultiply £temporary75 index 2
 190:		mov ax, [bp + 10]
 192:		xor dx, dx
 193:		mul word [int2$2#]
 199:	
 
-mainX$47:	; BinaryAdd £temporary83 argv £temporary82
+mainX$47:	; BinaryAdd £temporary76 argv £temporary75
 200:		mov si, [bp + 8]
 201:		add si, ax
 203:	
 
-mainX$48:	; Deref £temporary81 -> £temporary83 £temporary83 0
+mainX$48:	; Deref £temporary74 -> £temporary76 £temporary76 0
 205:	
 
-mainX$49:	; Parameter 12 £temporary81 -> £temporary83 10
+mainX$49:	; Parameter 12 £temporary74 -> £temporary76 10
 206:		mov ax, [si]
 207:		mov [bp + 22], ax
 209:	
@@ -786,27 +713,17 @@ mainX$54:	; Return 0
 mainX$55:	; FunctionEnd mainX
 1:	
 
-mainm:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+mainm:	; Empty
 3:	
 
-mainm$1:	; Call 10 main_math 0
-4:		mov word [bp + 10], mainm$2
-5:		mov [bp + 12], bp
-6:		add bp, 10
-7:		jmp main_math
+mainm$1:	; Return 0
+4:		mov ax, [bp]
+5:		mov di, [bp + 4]
+6:		mov bp, [bp + 2]
+7:		jmp ax
 9:	
 
-mainm$2:	; PostCall 10
-11:	
-
-mainm$3:	; Return 0
-12:		mov ax, [bp]
-13:		mov di, [bp + 4]
-14:		mov bp, [bp + 2]
-15:		jmp ax
-17:	
-
-mainm$4:	; FunctionEnd mainm
+mainm$2:	; FunctionEnd mainm
 1:	
 
 maina:	; SignedLessThan 12 1 2
@@ -834,8 +751,8 @@ maina$5:	; Parameter 6 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5
 18:		mov word [bp + 18], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 20:	
 
-maina$6:	; Parameter 6 196 14
-21:		mov word [bp + 20], 196
+maina$6:	; Parameter 6 195 14
+21:		mov word [bp + 20], 195
 23:	
 
 maina$7:	; Call 6 fprintf 0
@@ -888,8 +805,8 @@ maina$17:	; Parameter 6 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead
 60:		mov word [bp + 18], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 62:	
 
-maina$18:	; Parameter 6 197 14
-63:		mov word [bp + 20], 197
+maina$18:	; Parameter 6 196 14
+63:		mov word [bp + 20], 196
 65:	
 
 maina$19:	; Call 6 fprintf 0
@@ -939,40 +856,263 @@ maina$25:	; FunctionEnd maina
 main:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 12:	
 
-main$1:	; Parameter 6 string_in2Etxt# 6
-13:		mov word [bp + 12], string_in2Etxt#
-15:	
-
-main$2:	; Parameter 6 string_out2Etxt# 8
-16:		mov word [bp + 14], string_out2Etxt#
+main$1:	; Call 6 math_test 0
+13:		mov word [bp + 6], main$2
+14:		mov [bp + 8], bp
+15:		add bp, 6
+16:		jmp math_test
 18:	
 
-main$3:	; Call 6 file_test 0
-19:		mov word [bp + 6], main$4
-20:		mov [bp + 8], bp
-21:		add bp, 6
-22:		jmp file_test
-24:	
+main$2:	; PostCall 6
+20:	
 
-main$4:	; PostCall 6
-26:	
+main$3:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+22:	
 
-main$5:	; Return 0
-27:		cmp word [bp], 0
-28:		je return_label$0
-29:		mov ax, [bp]
-30:		mov di, [bp + 4]
-31:		mov bp, [bp + 2]
-32:		jmp ax
-33:	
+main$4:	; Call 6 file_test 0
+23:		mov word [bp + 6], main$5
+24:		mov [bp + 8], bp
+25:		add bp, 6
+26:		jmp file_test
+28:	
 
-return_label$0:
-34:		mov al, 0
-35:		mov ah, 76
-36:		int 33
+main$5:	; PostCall 6
+30:	
+
+main$6:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+32:	
+
+main$7:	; Call 6 stdio_test 0
+33:		mov word [bp + 6], main$8
+34:		mov [bp + 8], bp
+35:		add bp, 6
+36:		jmp stdio_test
 38:	
 
-main$6:	; FunctionEnd main
+main$8:	; PostCall 6
+40:	
+
+main$9:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+42:	
+
+main$10:	; Call 6 time_test 0
+43:		mov word [bp + 6], main$11
+44:		mov [bp + 8], bp
+45:		add bp, 6
+46:		jmp time_test
+48:	
+
+main$11:	; PostCall 6
+50:	
+
+main$12:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+52:	
+
+main$13:	; Call 6 assert_test 0
+53:		mov word [bp + 6], main$14
+54:		mov [bp + 8], bp
+55:		add bp, 6
+56:		jmp assert_test
+58:	
+
+main$14:	; PostCall 6
+60:	
+
+main$15:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+62:	
+
+main$16:	; Call 6 malloc_test 0
+63:		mov word [bp + 6], main$17
+64:		mov [bp + 8], bp
+65:		add bp, 6
+66:		jmp malloc_test
+68:	
+
+main$17:	; PostCall 6
+70:	
+
+main$18:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+72:	
+
+main$19:	; Call 6 print_test 0
+73:		mov word [bp + 6], main$20
+74:		mov [bp + 8], bp
+75:		add bp, 6
+76:		jmp print_test
+78:	
+
+main$20:	; PostCall 6
+80:	
+
+main$21:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+82:	
+
+main$22:	; Call 6 limits_test 0
+83:		mov word [bp + 6], main$23
+84:		mov [bp + 8], bp
+85:		add bp, 6
+86:		jmp limits_test
+88:	
+
+main$23:	; PostCall 6
+90:	
+
+main$24:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+92:	
+
+main$25:	; Call 6 float_test 0
+93:		mov word [bp + 6], main$26
+94:		mov [bp + 8], bp
+95:		add bp, 6
+96:		jmp float_test
+98:	
+
+main$26:	; PostCall 6
+100:	
+
+main$27:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+102:	
+
+main$28:	; Call 6 string_test 0
+103:		mov word [bp + 6], main$29
+104:		mov [bp + 8], bp
+105:		add bp, 6
+106:		jmp string_test
+108:	
+
+main$29:	; PostCall 6
+110:	
+
+main$30:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+112:	
+
+main$31:	; Call 6 setjmp_test 0
+113:		mov word [bp + 6], main$32
+114:		mov [bp + 8], bp
+115:		add bp, 6
+116:		jmp setjmp_test
+118:	
+
+main$32:	; PostCall 6
+120:	
+
+main$33:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+122:	
+
+main$34:	; Call 6 stdio_test 0
+123:		mov word [bp + 6], main$35
+124:		mov [bp + 8], bp
+125:		add bp, 6
+126:		jmp stdio_test
+128:	
+
+main$35:	; PostCall 6
+130:	
+
+main$36:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+132:	
+
+main$37:	; Call 6 stdlib_test 0
+133:		mov word [bp + 6], main$38
+134:		mov [bp + 8], bp
+135:		add bp, 6
+136:		jmp stdlib_test
+138:	
+
+main$38:	; PostCall 6
+140:	
+
+main$39:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+142:	
+
+main$40:	; Call 6 strtol_test 0
+143:		mov word [bp + 6], main$41
+144:		mov [bp + 8], bp
+145:		add bp, 6
+146:		jmp strtol_test
+148:	
+
+main$41:	; PostCall 6
+150:	
+
+main$42:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+152:	
+
+main$43:	; Call 6 strtoul_test 0
+153:		mov word [bp + 6], main$44
+154:		mov [bp + 8], bp
+155:		add bp, 6
+156:		jmp strtoul_test
+158:	
+
+main$44:	; PostCall 6
+160:	
+
+main$45:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+162:	
+
+main$46:	; Call 6 character_test 0
+163:		mov word [bp + 6], main$47
+164:		mov [bp + 8], bp
+165:		add bp, 6
+166:		jmp character_test
+168:	
+
+main$47:	; PostCall 6
+170:	
+
+main$48:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+172:	
+
+main$49:	; Call 6 locale_test 0
+173:		mov word [bp + 6], main$50
+174:		mov [bp + 8], bp
+175:		add bp, 6
+176:		jmp locale_test
+178:	
+
+main$50:	; PostCall 6
+180:	
+
+main$51:	; Return 0
+181:		cmp word [bp], 0
+182:		je return_label$0
+183:		mov ax, [bp]
+184:		mov di, [bp + 4]
+185:		mov bp, [bp + 2]
+186:		jmp ax
+187:	
+
+return_label$0:
+188:		mov al, 0
+189:		mov ah, 76
+190:		int 33
+192:	
+
+main$52:	; FunctionEnd main
+1:	
+
+mainX5:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+3:	
+
+mainX5$1:	; Call 6 file_test 0
+4:		mov word [bp + 6], mainX5$2
+5:		mov [bp + 8], bp
+6:		add bp, 6
+7:		jmp file_test
+9:	
+
+mainX5$2:	; PostCall 6
+11:	
+
+mainX5$3:	; Return 0
+12:		mov ax, [bp]
+13:		mov di, [bp + 4]
+14:		mov bp, [bp + 2]
+15:		jmp ax
+17:	
+
+mainX5$4:	; FunctionEnd mainX5
 1:	
 
 mainX4:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1021,21 +1161,21 @@ mainX4$9:	; Parameter 12 index 8
 35:		mov [bp + 20], ax
 37:	
 
-mainX4$10:	; UnsignedMultiply £temporary124 index 2
+mainX4$10:	; UnsignedMultiply £temporary131 index 2
 38:		mov ax, [bp + 10]
 40:		xor dx, dx
 41:		mul word [int2$2#]
 47:	
 
-mainX4$11:	; BinaryAdd £temporary125 argv £temporary124
+mainX4$11:	; BinaryAdd £temporary132 argv £temporary131
 48:		mov si, [bp + 8]
 49:		add si, ax
 51:	
 
-mainX4$12:	; Deref £temporary123 -> £temporary125 £temporary125 0
+mainX4$12:	; Deref £temporary130 -> £temporary132 £temporary132 0
 53:	
 
-mainX4$13:	; Parameter 12 £temporary123 -> £temporary125 10
+mainX4$13:	; Parameter 12 £temporary130 -> £temporary132 10
 54:		mov ax, [si]
 55:		mov [bp + 22], ax
 57:	
@@ -1082,21 +1222,21 @@ mainX4$22:	; Assign index 0
 88:		mov word [bp + 10], 0
 90:	
 
-mainX4$23:	; UnsignedMultiply £temporary129 index 2
+mainX4$23:	; UnsignedMultiply £temporary136 index 2
 91:		mov ax, [bp + 10]
 93:		xor dx, dx
 94:		mul word [int2$2#]
 100:	
 
-mainX4$24:	; BinaryAdd £temporary130 argv £temporary129
+mainX4$24:	; BinaryAdd £temporary137 argv £temporary136
 101:		mov si, [bp + 8]
 102:		add si, ax
 104:	
 
-mainX4$25:	; Deref £temporary128 -> £temporary130 £temporary130 0
+mainX4$25:	; Deref £temporary135 -> £temporary137 £temporary137 0
 106:	
 
-mainX4$26:	; Equal 38 £temporary128 -> £temporary130 0
+mainX4$26:	; Equal 38 £temporary135 -> £temporary137 0
 107:		cmp word [si], 0
 108:		je mainX4$38
 110:	
@@ -1113,21 +1253,21 @@ mainX4$29:	; Parameter 12 index 8
 117:		mov [bp + 20], ax
 119:	
 
-mainX4$30:	; UnsignedMultiply £temporary134 index 2
+mainX4$30:	; UnsignedMultiply £temporary141 index 2
 120:		mov ax, [bp + 10]
 122:		xor dx, dx
 123:		mul word [int2$2#]
 129:	
 
-mainX4$31:	; BinaryAdd £temporary135 argv £temporary134
+mainX4$31:	; BinaryAdd £temporary142 argv £temporary141
 130:		mov si, [bp + 8]
 131:		add si, ax
 133:	
 
-mainX4$32:	; Deref £temporary133 -> £temporary135 £temporary135 0
+mainX4$32:	; Deref £temporary140 -> £temporary142 £temporary142 0
 135:	
 
-mainX4$33:	; Parameter 12 £temporary133 -> £temporary135 10
+mainX4$33:	; Parameter 12 £temporary140 -> £temporary142 10
 136:		mov ax, [si]
 137:		mov [bp + 22], ax
 139:	
@@ -1230,12 +1370,12 @@ mainX4$55:	; Parameter 41 string_25c2025s2025i2025lf# 6
 213:		mov word [bp + 47], string_25c2025s2025i2025lf#
 215:	
 
-mainX4$56:	; address £temporary141 c
+mainX4$56:	; address £temporary148 c
 216:		mov si, bp
 217:		add si, 20
 219:	
 
-mainX4$57:	; Parameter 41 £temporary141 8
+mainX4$57:	; Parameter 41 £temporary148 8
 220:		mov [bp + 49], si
 222:	
 
@@ -1244,21 +1384,21 @@ mainX4$58:	; Parameter 41 s 10
 224:		add word [bp + 51], 21
 226:	
 
-mainX4$59:	; address £temporary142 i
+mainX4$59:	; address £temporary149 i
 227:		mov si, bp
 228:		add si, 10
 230:	
 
-mainX4$60:	; Parameter 41 £temporary142 12
+mainX4$60:	; Parameter 41 £temporary149 12
 231:		mov [bp + 53], si
 233:	
 
-mainX4$61:	; address £temporary143 d
+mainX4$61:	; address £temporary150 d
 234:		mov si, bp
 235:		add si, 12
 237:	
 
-mainX4$62:	; Parameter 41 £temporary143 14
+mainX4$62:	; Parameter 41 £temporary150 14
 238:		mov [bp + 55], si
 240:	
 
@@ -1281,7 +1421,7 @@ mainX4$66:	; Parameter 41 string_You20wrote20the20character202725c272C20the20str
 253:		mov word [bp + 47], string_You20wrote20the20character202725c272C20the20string202225s222C20the20integer2025i2C20and20the20double2025f2E0A#
 255:	
 
-mainX4$67:	; IntegralToIntegral £temporary145 c
+mainX4$67:	; IntegralToIntegral £temporary152 c
 256:		mov al, [bp + 20]
 258:		and ax, 255
 260:		cmp al, 0
@@ -1290,7 +1430,7 @@ mainX4$67:	; IntegralToIntegral £temporary145 c
 264:		neg ax
 266:	
 
-mainX4$68:	; Parameter 41 £temporary145 8
+mainX4$68:	; Parameter 41 £temporary152 8
 267:		mov [bp + 49], ax
 269:	
 
@@ -1359,12 +1499,12 @@ main3$5:	; Parameter 14 string_25lf# 6
 18:		mov word [bp + 20], string_25lf#
 20:	
 
-main3$6:	; address £temporary174 x
+main3$6:	; address £temporary181 x
 21:		mov si, bp
 22:		add si, 6
 24:	
 
-main3$7:	; Parameter 14 £temporary174 8
+main3$7:	; Parameter 14 £temporary181 8
 25:		mov [bp + 22], si
 27:	
 
@@ -1417,159 +1557,11 @@ main3$16:	; Return 0
 main3$17:	; FunctionEnd main3
 1:	
 
-mains2:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-3:	
-
-mains2$1:	; PushFloat 3.14
-4:		fld qword [float8$3.14#]
-6:	
-
-mains2$2:	; Parameter 6 3.14 6
-7:		fstp qword [bp + 12]
-9:	
-
-mains2$3:	; Call 6 setjmp_test 0
-10:		mov word [bp + 6], mains2$4
-11:		mov [bp + 8], bp
-12:		add bp, 6
-13:		jmp setjmp_test
-15:	
-
-mains2$4:	; PostCall 6
-17:	
-
-mains2$5:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-19:	
-
-mains2$6:	; Parameter 6 string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A# 6
-20:		mov word [bp + 12], string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#
-22:	
-
-mains2$7:	; Call 6 printf 0
-23:		mov word [bp + 6], mains2$8
-24:		mov [bp + 8], bp
-25:		add bp, 6
-26:		mov di, bp
-27:		jmp printf
-29:	
-
-mains2$8:	; PostCall 6
-31:	
-
-mains2$9:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-33:	
-
-mains2$10:	; PushZero
-34:		fldz
-36:	
-
-mains2$11:	; Parameter 6 0 6
-37:		fstp qword [bp + 12]
-39:	
-
-mains2$12:	; Call 6 setjmp_test 0
-40:		mov word [bp + 6], mains2$13
-41:		mov [bp + 8], bp
-42:		add bp, 6
-43:		jmp setjmp_test
-45:	
-
-mains2$13:	; PostCall 6
-47:	
-
-mains2$14:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-49:	
-
-mains2$15:	; Parameter 6 string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A# 6
-50:		mov word [bp + 12], string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#
-52:	
-
-mains2$16:	; Call 6 printf 0
-53:		mov word [bp + 6], mains2$17
-54:		mov [bp + 8], bp
-55:		add bp, 6
-56:		mov di, bp
-57:		jmp printf
-59:	
-
-mains2$17:	; PostCall 6
-61:	
-
-mains2$18:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-63:	
-
-mains2$19:	; PushFloat 2.71
-64:		fld qword [float8$2.71#]
-66:	
-
-mains2$20:	; Parameter 6 2.71 6
-67:		fstp qword [bp + 12]
-69:	
-
-mains2$21:	; Call 6 setjmp_test 0
-70:		mov word [bp + 6], mains2$22
-71:		mov [bp + 8], bp
-72:		add bp, 6
-73:		jmp setjmp_test
-75:	
-
-mains2$22:	; PostCall 6
-77:	
-
-mains2$23:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-79:	
-
-mains2$24:	; Parameter 6 string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A# 6
-80:		mov word [bp + 12], string_2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D2D0A#
-82:	
-
-mains2$25:	; Call 6 printf 0
-83:		mov word [bp + 6], mains2$26
-84:		mov [bp + 8], bp
-85:		add bp, 6
-86:		mov di, bp
-87:		jmp printf
-89:	
-
-mains2$26:	; PostCall 6
-91:	
-
-mains2$27:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-93:	
-
-mains2$28:	; PushZero
-94:		fldz
-96:	
-
-mains2$29:	; Parameter 6 0 6
-97:		fstp qword [bp + 12]
-99:	
-
-mains2$30:	; Call 6 setjmp_test 0
-100:		mov word [bp + 6], mains2$31
-101:		mov [bp + 8], bp
-102:		add bp, 6
-103:		jmp setjmp_test
-105:	
-
-mains2$31:	; PostCall 6
-107:	
-
-mains2$32:	; Return 0
-108:		mov ax, [bp]
-109:		mov di, [bp + 4]
-110:		mov bp, [bp + 2]
-111:		jmp ax
-113:	
-
-mains2$33:	; FunctionEnd mains2
-1:	
-
 char_main:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
 char_main$1:	; Parameter 6 97 6
-4:		mov byte [bp + 12], 97
+4:		mov word [bp + 12], 97
 6:	
 
 char_main$2:	; Call 6 character_test 0
@@ -1586,7 +1578,7 @@ char_main$4:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbo
 16:	
 
 char_main$5:	; Parameter 6 66 6
-17:		mov byte [bp + 12], 66
+17:		mov word [bp + 12], 66
 19:	
 
 char_main$6:	; Call 6 character_test 0
@@ -1603,7 +1595,7 @@ char_main$8:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbo
 29:	
 
 char_main$9:	; Parameter 6 49 6
-30:		mov byte [bp + 12], 49
+30:		mov word [bp + 12], 49
 32:	
 
 char_main$10:	; Call 6 character_test 0
@@ -1620,7 +1612,7 @@ char_main$12:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 42:	
 
 char_main$13:	; Parameter 6 46 6
-43:		mov byte [bp + 12], 46
+43:		mov word [bp + 12], 46
 45:	
 
 char_main$14:	; Call 6 character_test 0
@@ -1637,7 +1629,7 @@ char_main$16:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 55:	
 
 char_main$17:	; Parameter 6 10 6
-56:		mov byte [bp + 12], 10
+56:		mov word [bp + 12], 10
 58:	
 
 char_main$18:	; Call 6 character_test 0
@@ -1654,7 +1646,7 @@ char_main$20:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 68:	
 
 char_main$21:	; Parameter 6 102 6
-69:		mov byte [bp + 12], 102
+69:		mov word [bp + 12], 102
 71:	
 
 char_main$22:	; Call 6 character_test 0
@@ -1671,7 +1663,7 @@ char_main$24:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 81:	
 
 char_main$25:	; Parameter 6 103 6
-82:		mov byte [bp + 12], 103
+82:		mov word [bp + 12], 103
 84:	
 
 char_main$26:	; Call 6 character_test 0
@@ -1692,138 +1684,6 @@ char_main$28:	; Return 0
 98:	
 
 char_main$29:	; FunctionEnd char_main
-1:	
-
-assert_test:	; Assign n 0
-2:		mov word [bp + 6], 0
-4:	
-
-assert_test$1:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-6:	
-
-assert_test$2:	; Parameter 8 string_Please20write20a20number2028not20620or207293A20# 6
-7:		mov word [bp + 14], string_Please20write20a20number2028not20620or207293A20#
-9:	
-
-assert_test$3:	; Call 8 printf 0
-10:		mov word [bp + 8], assert_test$4
-11:		mov [bp + 10], bp
-12:		add bp, 8
-13:		mov di, bp
-14:		jmp printf
-16:	
-
-assert_test$4:	; PostCall 8
-18:	
-
-assert_test$5:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-20:	
-
-assert_test$6:	; Parameter 8 string_25i# 6
-21:		mov word [bp + 14], string_25i#
-23:	
-
-assert_test$7:	; address £temporary212 n
-24:		mov si, bp
-25:		add si, 6
-27:	
-
-assert_test$8:	; Parameter 8 £temporary212 8
-28:		mov [bp + 16], si
-30:	
-
-assert_test$9:	; Call 8 scanf 0
-31:		mov word [bp + 8], assert_test$10
-32:		mov [bp + 10], bp
-33:		add bp, 8
-34:		mov di, bp
-35:		add di, 2
-36:		jmp scanf
-38:	
-
-assert_test$10:	; PostCall 8
-40:	
-
-assert_test$11:	; NotEqual 23 n 6
-41:		cmp word [bp + 6], 6
-42:		jne assert_test$23
-44:	
-
-assert_test$12:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-46:	
-
-assert_test$13:	; Parameter 8 stderr 6
-47:		mov ax, [stderr]
-48:		mov [bp + 14], ax
-50:	
-
-assert_test$14:	; Parameter 8 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-51:		mov word [bp + 16], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-53:	
-
-assert_test$15:	; Parameter 8 string_n20213D206# 10
-54:		mov word [bp + 18], string_n20213D206#
-56:	
-
-assert_test$16:	; Parameter 8 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec# 12
-57:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
-59:	
-
-assert_test$17:	; Parameter 8 874 14
-60:		mov word [bp + 22], 874
-62:	
-
-assert_test$18:	; Call 8 fprintf 0
-63:		mov word [bp + 8], assert_test$19
-64:		mov [bp + 10], bp
-65:		add bp, 8
-66:		mov di, bp
-67:		add di, 6
-68:		jmp fprintf
-70:	
-
-assert_test$19:	; PostCall 8
-72:	
-
-assert_test$20:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-74:	
-
-assert_test$21:	; Call 8 abort 0
-75:		mov word [bp + 8], assert_test$22
-76:		mov [bp + 10], bp
-77:		add bp, 8
-78:		jmp abort
-80:	
-
-assert_test$22:	; PostCall 8
-82:	
-
-assert_test$23:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-84:	
-
-assert_test$24:	; Parameter 8 n 6
-85:		mov ax, [bp + 6]
-86:		mov [bp + 14], ax
-88:	
-
-assert_test$25:	; Call 8 assert_test2 0
-89:		mov word [bp + 8], assert_test$26
-90:		mov [bp + 10], bp
-91:		add bp, 8
-92:		jmp assert_test2
-94:	
-
-assert_test$26:	; PostCall 8
-96:	
-
-assert_test$27:	; Return 0
-97:		mov ax, [bp]
-98:		mov di, [bp + 4]
-99:		mov bp, [bp + 2]
-100:		jmp ax
-102:	
-
-assert_test$28:	; FunctionEnd assert_test
 1:	
 
 assert_test2:	; NotEqual 12 n 7
@@ -1851,8 +1711,8 @@ assert_test2$5:	; Parameter 8 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chom
 18:		mov word [bp + 20], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec#
 20:	
 
-assert_test2$6:	; Parameter 8 879 14
-21:		mov word [bp + 22], 879
+assert_test2$6:	; Parameter 8 904 14
+21:		mov word [bp + 22], 904
 23:	
 
 assert_test2$7:	; Call 8 fprintf 0

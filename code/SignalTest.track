@@ -8,8 +8,8 @@ floating_point_error$1:	; Parameter 8 string_Floating20point20error3A2025i0A# 6
 6:	
 
 floating_point_error$2:	; Parameter 8 sig 8
-7:		mov a2805, [bp + 6]
-8:		mov [bp + 16], a2805
+7:		mov a3036, [bp + 6]
+8:		mov [bp + 16], a3036
 10:	
 
 floating_point_error$3:	; Call 8 printf 0
@@ -25,10 +25,10 @@ floating_point_error$4:	; PostCall 8
 20:	
 
 floating_point_error$5:	; Return 0
-21:		mov t2806, [bp]
+21:		mov t3037, [bp]
 22:		mov di, [bp + 4]
 23:		mov bp, [bp + 2]
-24:		jmp t2806
+24:		jmp t3037
 26:	
 
 floating_point_error$6:	; FunctionEnd floating_point_error
@@ -53,10 +53,10 @@ exit_handle1$3:	; PostCall 6
 15:	
 
 exit_handle1$4:	; Return 0
-16:		mov t2807, [bp]
+16:		mov t3038, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
-19:		jmp t2807
+19:		jmp t3038
 21:	
 
 exit_handle1$5:	; FunctionEnd exit_handle1
@@ -81,10 +81,10 @@ exit_handle2$3:	; PostCall 6
 15:	
 
 exit_handle2$4:	; Return 0
-16:		mov t2808, [bp]
+16:		mov t3039, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
-19:		jmp t2808
+19:		jmp t3039
 21:	
 
 exit_handle2$5:	; FunctionEnd exit_handle2
@@ -109,10 +109,10 @@ exit_handle3$3:	; PostCall 6
 15:	
 
 exit_handle3$4:	; Return 0
-16:		mov t2809, [bp]
+16:		mov t3040, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
-19:		jmp t2809
+19:		jmp t3040
 21:	
 
 exit_handle3$5:	; FunctionEnd exit_handle3
@@ -127,7 +127,7 @@ signal_test$1:	; Assign b 1
 7:	
 
 signal_test$2:	; SignedDivide c a b
-8:		mov a2810, [bp + 6]
+8:		mov a3041, [bp + 6]
 10:		xor dx, dx
 11:		idiv word [bp + 8]
 12:		mov [bp + 10], ax
@@ -141,8 +141,8 @@ signal_test$4:	; Parameter 12 string_25i0A# 6
 19:	
 
 signal_test$5:	; Parameter 12 c 8
-20:		mov a2813, [bp + 10]
-21:		mov [bp + 20], a2813
+20:		mov a3044, [bp + 10]
+21:		mov [bp + 20], a3044
 23:	
 
 signal_test$6:	; Call 12 printf 0
@@ -226,10 +226,10 @@ signal_test$23:	; PostCall 12
 85:	
 
 signal_test$24:	; Return 0
-86:		mov t2814, [bp]
+86:		mov t3045, [bp]
 87:		mov di, [bp + 4]
 88:		mov bp, [bp + 2]
-89:		jmp t2814
+89:		jmp t3045
 91:	
 
 signal_test$25:	; FunctionEnd signal_test

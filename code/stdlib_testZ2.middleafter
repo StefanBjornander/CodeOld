@@ -1,7 +1,7 @@
 0: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1: Parameter 6 string_hello3A2025u0A# 6
-2: IntegralToIntegral £temporary5457 hello
-3: Parameter 6 £temporary5457 8
+2: IntegralToIntegral £temporary6098 hello
+3: Parameter 6 £temporary6098 8
 4: Call 6 printf 0
 5: PostCall 6
 6: CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0

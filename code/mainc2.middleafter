@@ -4,14 +4,14 @@
 3: PostCall 7
 4: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 5: Parameter 7 string_25c# 6
-6: address £temporary26 c
-7: Parameter 7 £temporary26 8
+6: address £temporary24 c
+7: Parameter 7 £temporary24 8
 8: Call 7 scanf 0
 9: PostCall 7
 10: CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 11: Parameter 7 string_You20wrote20the20character202725c272E0A# 6
-12: IntegralToIntegral £temporary28 c
-13: Parameter 7 £temporary28 8
+12: IntegralToIntegral £temporary26 c
+13: Parameter 7 £temporary26 8
 14: Call 7 printf 0
 15: PostCall 7
 16: Return 0

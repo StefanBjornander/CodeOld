@@ -30,7 +30,7 @@ void atan_test(double x) {
   PRINT(atan);
 }
 
-void main_math(void) {
+void math_test(void) {
   math_test_1(0.333333333);
   math_test_1(0.75);
   math_test_1(1.000010);

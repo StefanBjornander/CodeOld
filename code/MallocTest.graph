@@ -32,9 +32,9 @@ rec
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a2852 a2852 lowHeapPtr 19 22,t2853 t2853 £temporary5355 22 23)>
+  (a3083 a3083 lowHeapPtr 19 22,t3084 t3084 £temporary5996 22 23)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a2852 a2852 lowHeapPtr si 19 22,t2853 t2853 £temporary5355 ax 22 23)>
+  (a3083 a3083 lowHeapPtr si 19 22,t3084 t3084 £temporary5996 ax 22 23)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 malloc_test4
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
@@ -56,8 +56,8 @@ malloc_test6
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a2872 a2872 lowHeapPtr 55 58,t2873 t2873 £temporary5386 58 59)>
+  (a3103 a3103 lowHeapPtr 55 58,t3104 t3104 £temporary6027 58 59)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a2872 a2872 lowHeapPtr si 55 58,t2873 t2873 £temporary5386 ax 58 59)>
+  (a3103 a3103 lowHeapPtr si 55 58,t3104 t3104 £temporary6027 ax 58 59)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>

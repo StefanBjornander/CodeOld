@@ -6,10 +6,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
    
 
-
+    
     
 
-    
+
 
 
 extern double exp ( double x ) ;
@@ -334,13 +334,13 @@ printf ( "<%6.3lf> <%6.3le> <%6.3lE> <%6.3lg> <%6.3lG>\n\n" , -123.456L , -123.4
 
 
 
-{ char s [ 100 ];
-printf ( "Please write the patterns [abc]: " ) ;
-scanf ( "%[abc]" , s ) ;
-printf ( "\n<%s>\n" , s ) ;
 
-printf ( "Please write the patterns [^abc]: " ) ;
-scanf ( "%[^abc]" , s ) ;
-printf ( "\n<%s>" , s ) ;
-}
+
+
+
+
+
+
+
+
 }

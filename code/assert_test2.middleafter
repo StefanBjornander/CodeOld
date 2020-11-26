@@ -1,29 +1,15 @@
-0: Assign n 0
-1: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-2: Parameter 8 string_Please20write20a20number2028not20620or207293A20# 6
-3: Call 8 printf 0
-4: PostCall 8
-5: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-6: Parameter 8 string_25i# 6
-7: address £temporary212 n
-8: Parameter 8 £temporary212 8
-9: Call 8 scanf 0
-10: PostCall 8
-11: NotEqual 23 n 6
-12: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-13: Parameter 8 stderr 6
-14: Parameter 8 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-15: Parameter 8 string_n20213D206# 10
-16: Parameter 8 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMain2Ec# 12
-17: Parameter 8 874 14
-18: Call 8 fprintf 0
-19: PostCall 8
-20: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-21: Call 8 abort 0
-22: PostCall 8
-23: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-24: Parameter 8 n 6
-25: Call 8 assert_test2 0
-26: PostCall 8
-27: Return 0
-28: FunctionEnd assert_test
+0: Assign n 1
+1: Equal 13 n 1
+2: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+3: Parameter 8 stderr 6
+4: Parameter 8 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
+5: Parameter 8 string_n203D3D201# 10
+6: Parameter 8 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CAssertTest2Ec# 12
+7: Parameter 8 8 14
+8: Call 8 fprintf 0
+9: PostCall 8
+10: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+11: Call 8 abort 0
+12: PostCall 8
+13: Return 0
+14: FunctionEnd assert_test

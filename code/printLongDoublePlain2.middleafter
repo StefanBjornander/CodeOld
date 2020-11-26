@@ -6,13 +6,13 @@
 5: Call 22 printChar 0
 6: PostCall 22
 7: PushFloat longDoubleValue
-8: UnarySubtract £temporary1917 longDoubleValue
+8: UnarySubtract £temporary1898 longDoubleValue
 9: PopFloat longDoubleValue
 10: Assign plus 0
 11: Assign space 0
 12: PushFloat longDoubleValue
-13: FloatingToIntegral £temporary1918 longDoubleValue
-14: Assign longValue £temporary1918
+13: FloatingToIntegral £temporary1899 longDoubleValue
+14: Assign longValue £temporary1899
 15: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 16: Parameter 26 longValue 6
 17: Parameter 26 plus 10
@@ -20,8 +20,8 @@
 19: Call 26 printLongInt 0
 20: PostCall 26
 21: PushFloat longDoubleValue
-22: IntegralToFloating £temporary1920 longValue
-23: BinarySubtract £temporary1921 longDoubleValue £temporary1920
+22: IntegralToFloating £temporary1901 longValue
+23: BinarySubtract £temporary1902 longDoubleValue £temporary1901
 24: PopFloat longDoubleValue
 25: CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 26: PushFloat longDoubleValue

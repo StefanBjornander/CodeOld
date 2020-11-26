@@ -1,22 +1,22 @@
 0: CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1: Call 8 localeconv 0
 2: PostCall 8
-3: GetReturnValue £temporary4068
-4: Assign localeConvPtr £temporary4068
+3: GetReturnValue £temporary4050
+4: Assign localeConvPtr £temporary4050
 5: Equal 9 localeConvPtr 0
-6: Deref £temporary4070 -> localeConvPtr localeConvPtr 16
-7: Assign £temporary4074 £temporary4070 -> localeConvPtr
+6: Deref £temporary4052 -> localeConvPtr localeConvPtr 16
+7: Assign £temporary4056 £temporary4052 -> localeConvPtr
 8: Goto 10
-9: Assign £temporary4074 0
-10: Assign messageList £temporary4074
+9: Assign £temporary4056 0
+10: Assign messageList £temporary4056
 11: Equal 14 messageList 0
-12: Assign £temporary4079 messageList
+12: Assign £temporary4061 messageList
 13: Goto 15
-14: Assign £temporary4079 enMessageList
-15: Assign messageList £temporary4079
-16: UnsignedMultiply £temporary4081 errno 2
-17: BinaryAdd £temporary4082 messageList £temporary4081
-18: Deref £temporary4080 -> £temporary4082 £temporary4082 0
-19: SetReturnValue £temporary4080 -> £temporary4082
-20: Return £temporary4080 -> £temporary4082
+14: Assign £temporary4061 enMessageList
+15: Assign messageList £temporary4061
+16: UnsignedMultiply £temporary4063 errno 2
+17: BinaryAdd £temporary4064 messageList £temporary4063
+18: Deref £temporary4062 -> £temporary4064 £temporary4064 0
+19: SetReturnValue £temporary4062 -> £temporary4064
+20: Return £temporary4062 -> £temporary4064
 21: FunctionEnd strerror

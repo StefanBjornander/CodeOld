@@ -3,7 +3,7 @@
 2: Parameter 14 x 6
 3: Call 14 cos 0
 4: PostCall 14
-5: GetReturnValue £temporary699
+5: GetReturnValue £temporary674
 6: PopFloat cos_of_x
 7: PushFloat cos_of_x
 8: PushZero
@@ -13,11 +13,11 @@
 12: Parameter 22 x 6
 13: Call 22 sin 0
 14: PostCall 22
-15: GetReturnValue £temporary701
+15: GetReturnValue £temporary676
 16: PushFloat cos_of_x
-17: SignedDivide £temporary702 £temporary701 cos_of_x
-18: SetReturnValue £temporary702
-19: Return £temporary702
+17: SignedDivide £temporary677 £temporary676 cos_of_x
+18: SetReturnValue £temporary677
+19: Return £temporary677
 20: Assign errno 6
 21: PushZero
 22: SetReturnValue 0

@@ -1,23 +1,23 @@
 0: PushFloat x
 1: PushZero
 2: NotEqual 6 x 0
-3: PushFloat 1.57079632679489661923132165
-4: SetReturnValue 1.57079632679489661923132165
-5: Return 1.57079632679489661923132165
+3: PushFloat 1.57
+4: SetReturnValue 1.57
+5: Return 1.57
 6: PushFloat x
 7: PushZero
 8: SignedGreaterThanEqual 20 x 0
-9: PushFloat 3.1415926535897932384626433
+9: PushFloat 3.14
 10: CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
 11: PushFloat x
-12: UnarySubtract £temporary721 x
-13: Parameter 14 £temporary721 6
+12: UnarySubtract £temporary696 x
+13: Parameter 14 £temporary696 6
 14: Call 14 acos 0
 15: PostCall 14
-16: GetReturnValue £temporary722
-17: BinarySubtract £temporary723 3.1415926535897932384626433 £temporary722
-18: SetReturnValue £temporary723
-19: Return £temporary723
+16: GetReturnValue £temporary697
+17: BinarySubtract £temporary698 3.14 £temporary697
+18: SetReturnValue £temporary698
+19: Return £temporary698
 20: PushFloat x
 21: PushOne
 22: SignedGreaterThan 42 x 1
@@ -26,20 +26,20 @@
 25: PushOne
 26: PushFloat x
 27: PushFloat x
-28: SignedMultiply £temporary725 x x
-29: BinarySubtract £temporary726 1 £temporary725
-30: Parameter 14 £temporary726 6
+28: SignedMultiply £temporary700 x x
+29: BinarySubtract £temporary701 1 £temporary700
+30: Parameter 14 £temporary701 6
 31: Call 14 sqrt 0
 32: PostCall 14
-33: GetReturnValue £temporary727
+33: GetReturnValue £temporary702
 34: PushFloat x
-35: SignedDivide £temporary728 £temporary727 x
-36: Parameter 14 £temporary728 6
+35: SignedDivide £temporary703 £temporary702 x
+36: Parameter 14 £temporary703 6
 37: Call 14 atan 0
 38: PostCall 14
-39: GetReturnValue £temporary729
-40: SetReturnValue £temporary729
-41: Return £temporary729
+39: GetReturnValue £temporary704
+40: SetReturnValue £temporary704
+41: Return £temporary704
 42: Assign errno 6
 43: PushZero
 44: SetReturnValue 0

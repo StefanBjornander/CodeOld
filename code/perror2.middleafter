@@ -5,8 +5,8 @@
 4: Parameter 8 errno 16
 5: Call 8 strerror 10
 6: PostCall 8
-7: GetReturnValue £temporary1174
-8: Parameter 8 £temporary1174 10
+7: GetReturnValue £temporary1155
+8: Parameter 8 £temporary1155 10
 9: Call 8 printf 0
 10: PostCall 8
 11: Return 0

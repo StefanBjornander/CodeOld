@@ -1,9 +1,9 @@
 0: Assign g_outStatus 0
-1: IntegralToIntegral £temporary1766 stream
-2: Assign g_outDevice £temporary1766
+1: IntegralToIntegral £temporary1747 stream
+2: Assign g_outDevice £temporary1747
 3: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-4: IntegralToIntegral £temporary1767 i
-5: Parameter 10 £temporary1767 6
+4: IntegralToIntegral £temporary1748 i
+5: Parameter 10 £temporary1748 6
 6: Call 10 printChar 0
 7: PostCall 10
 8: SetReturnValue 1

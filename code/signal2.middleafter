@@ -4,8 +4,8 @@
 3: Parameter 10 func 10
 4: Call 10 printf 0
 5: PostCall 10
-6: IntegralToIntegral £temporary852 sig
-7: AssignRegister al £temporary852
+6: IntegralToIntegral £temporary827 sig
+7: AssignRegister al £temporary827
 8: AssignRegister ah 37
 9: AssignRegister dx func
 10: Interrupt 33

@@ -1,7 +1,7 @@
 0: Assign index 0
-1: BinaryAdd £temporary4065 string index
-2: Deref £temporary4064 -> £temporary4065 £temporary4065 0
-3: Equal 6 £temporary4064 -> £temporary4065 0
+1: BinaryAdd £temporary4047 string index
+2: Deref £temporary4046 -> £temporary4047 £temporary4047 0
+3: Equal 6 £temporary4046 -> £temporary4047 0
 4: Increment index
 5: Goto 1
 6: SetReturnValue index

@@ -1,22 +1,22 @@
 0: Assign index 0
-1: BinaryAdd £temporary4039 mainString index
-2: Deref £temporary4038 -> £temporary4039 £temporary4039 0
-3: Equal 21 £temporary4038 -> £temporary4039 0
+1: BinaryAdd £temporary4021 mainString index
+2: Deref £temporary4020 -> £temporary4021 £temporary4021 0
+3: Equal 21 £temporary4020 -> £temporary4021 0
 4: CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 5: Parameter 12 charSet 6
-6: BinaryAdd £temporary4043 mainString index
-7: Deref £temporary4042 -> £temporary4043 £temporary4043 0
-8: IntegralToIntegral £temporary4044 £temporary4042 -> £temporary4043
-9: Parameter 12 £temporary4044 8
+6: BinaryAdd £temporary4025 mainString index
+7: Deref £temporary4024 -> £temporary4025 £temporary4025 0
+8: IntegralToIntegral £temporary4026 £temporary4024 -> £temporary4025
+9: Parameter 12 £temporary4026 8
 10: Call 12 strchr 0
 11: PostCall 12
-12: GetReturnValue £temporary4045
-13: Equal 19 £temporary4045 0
-14: BinaryAdd £temporary4048 mainString index
-15: Deref £temporary4047 -> £temporary4048 £temporary4048 0
-16: address £temporary4049 £temporary4047 -> £temporary4048
-17: SetReturnValue £temporary4049
-18: Return £temporary4049
+12: GetReturnValue £temporary4027
+13: Equal 19 £temporary4027 0
+14: BinaryAdd £temporary4030 mainString index
+15: Deref £temporary4029 -> £temporary4030 £temporary4030 0
+16: address £temporary4031 £temporary4029 -> £temporary4030
+17: SetReturnValue £temporary4031
+18: Return £temporary4031
 19: Increment index
 20: Goto 1
 21: SetReturnValue 0

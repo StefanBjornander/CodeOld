@@ -1,12 +1,12 @@
 0: CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1: Parameter 10 stream 6
-2: Deref £temporary1149 -> ptr ptr 0
-3: Parameter 10 £temporary1149 -> ptr 8
+2: Deref £temporary1130 -> ptr ptr 0
+3: Parameter 10 £temporary1130 -> ptr 8
 4: Parameter 10 0 10
 5: Call 10 fseek 0
 6: PostCall 10
-7: GetReturnValue £temporary1150
-8: IntegralToIntegral £temporary1151 £temporary1150
-9: SetReturnValue £temporary1151
-10: Return £temporary1151
+7: GetReturnValue £temporary1131
+8: IntegralToIntegral £temporary1132 £temporary1131
+9: SetReturnValue £temporary1132
+10: Return £temporary1132
 11: FunctionEnd fsetpos

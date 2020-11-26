@@ -1,17 +1,17 @@
 0: SignedGreaterThanEqual 5 digit 10
-1: BinaryAdd £temporary1847 digit 48
-2: IntegralToIntegral £temporary1848 £temporary1847
-3: SetReturnValue £temporary1848
-4: Return £temporary1848
+1: BinaryAdd £temporary1828 digit 48
+2: IntegralToIntegral £temporary1829 £temporary1828
+3: SetReturnValue £temporary1829
+4: Return £temporary1829
 5: Equal 11 capital 0
-6: BinarySubtract £temporary1849 digit 10
-7: BinaryAdd £temporary1850 £temporary1849 65
-8: IntegralToIntegral £temporary1851 £temporary1850
-9: SetReturnValue £temporary1851
-10: Return £temporary1851
-11: BinarySubtract £temporary1852 digit 10
-12: BinaryAdd £temporary1853 £temporary1852 97
-13: IntegralToIntegral £temporary1854 £temporary1853
-14: SetReturnValue £temporary1854
-15: Return £temporary1854
+6: BinarySubtract £temporary1830 digit 10
+7: BinaryAdd £temporary1831 £temporary1830 65
+8: IntegralToIntegral £temporary1832 £temporary1831
+9: SetReturnValue £temporary1832
+10: Return £temporary1832
+11: BinarySubtract £temporary1833 digit 10
+12: BinaryAdd £temporary1834 £temporary1833 97
+13: IntegralToIntegral £temporary1835 £temporary1834
+14: SetReturnValue £temporary1835
+15: Return £temporary1835
 16: FunctionEnd digitToChar

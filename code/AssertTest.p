@@ -6,10 +6,10 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
    
    
 
-
+    
     
 
-    
+
 
 
 extern double exp ( double x ) ;
@@ -377,14 +377,20 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\AssertTest.c,1$
 
 void assert_test2 ( int n ) ;
 
+void assert_test ( void ) {
+int n = 1 ;
+if ( ! ( n == 1 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n == 1" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\AssertTest.c" , 8 ) ; abort ( ) ; } ;
+
+}
+
 void assert_testX ( void ) {
 int n = 0 ;
 printf ( "Please write a number (not 6 or 7): " ) ;
 scanf ( "%i" , & n ) ;
-if ( ! ( n != 6 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 6" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\AssertTest.c" , 10 ) ; abort ( ) ; } ;
+if ( ! ( n != 6 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 6" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\AssertTest.c" , 16 ) ; abort ( ) ; } ;
 assert_test2 ( n ) ;
 }
 
 void assert_test2X ( int n ) {
-if ( ! ( n != 7 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 7" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\AssertTest.c" , 15 ) ; abort ( ) ; } ;
+if ( ! ( n != 7 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 7" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\AssertTest.c" , 21 ) ; abort ( ) ; } ;
 }
