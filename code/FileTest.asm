@@ -522,10 +522,10 @@ section .text
 	; PostCall 24
 
  file_test$5:
-	; GetReturnValue £temporary3974
+	; GetReturnValue £temporary3973
 
  file_test$6:
-	; Assign inFilePtr £temporary3974
+	; Assign inFilePtr £temporary3973
 	mov [rbp + 24], rbx
 
  file_test$7:
@@ -550,10 +550,10 @@ section .text
 	; PostCall 32
 
  file_test$12:
-	; GetReturnValue £temporary3975
+	; GetReturnValue £temporary3974
 
  file_test$13:
-	; Assign outFilePtr £temporary3975
+	; Assign outFilePtr £temporary3974
 	mov [rbp + 32], rbx
 
  file_test$14:
@@ -683,10 +683,10 @@ section .text
 	; PostCall 40
 
  file_test$42:
-	; GetReturnValue £temporary3984
+	; GetReturnValue £temporary3983
 
  file_test$43:
-	; NotEqual 75 £temporary3984 0
+	; NotEqual 75 £temporary3983 0
 	cmp ebx, 0
 	jne file_test$75
 
@@ -703,12 +703,12 @@ section .text
 	mov qword [rbp + 80], string_25lf#
 
  file_test$47:
-	; Address £temporary3987 value
+	; Address £temporary3986 value
 	mov rsi, rbp
 	add rsi, 40
 
  file_test$48:
-	; Parameter 88 pointer £temporary3987
+	; Parameter 88 pointer £temporary3986
 	mov [rbp + 88], rsi
 
  file_test$49:
@@ -752,10 +752,10 @@ section .text
 	; PostCall 80
 
  file_test$58:
-	; GetReturnValue £temporary3989
+	; GetReturnValue £temporary3988
 
  file_test$59:
-	; Parameter 80 double £temporary3989
+	; Parameter 80 double £temporary3988
 	fstp qword [rbp + 80]
 
  file_test$60:
@@ -804,10 +804,10 @@ section .text
 	; PostCall 88
 
  file_test$70:
-	; GetReturnValue £temporary3991
+	; GetReturnValue £temporary3990
 
  file_test$71:
-	; Parameter 88 double £temporary3991
+	; Parameter 88 double £temporary3990
 	fstp qword [rbp + 88]
 
  file_test$72:
@@ -902,10 +902,10 @@ section .text
 	; PostCall 24
 
  file_test$92:
-	; GetReturnValue £temporary3996
+	; GetReturnValue £temporary3995
 
  file_test$93:
-	; Assign inFilePtr £temporary3996
+	; Assign inFilePtr £temporary3995
 	mov [rbp + 24], rbx
 
  file_test$94:
@@ -930,10 +930,10 @@ section .text
 	; PostCall 32
 
  file_test$99:
-	; GetReturnValue £temporary3997
+	; GetReturnValue £temporary3996
 
  file_test$100:
-	; Assign outFilePtr £temporary3997
+	; Assign outFilePtr £temporary3996
 	mov [rbp + 32], rbx
 
  file_test$101:
@@ -1061,12 +1061,12 @@ section .text
 	mov qword [rbp + 80], string_25i#
 
  file_test$129:
-	; Address £temporary4006 size
+	; Address £temporary4005 size
 	mov rsi, rbp
 	add rsi, 40
 
  file_test$130:
-	; Parameter 88 pointer £temporary4006
+	; Parameter 88 pointer £temporary4005
 	mov [rbp + 88], rsi
 
  file_test$131:
@@ -1157,12 +1157,12 @@ section .text
 	mov qword [rbp + 88], string_25lf#
 
  file_test$149:
-	; Address £temporary4012 value
+	; Address £temporary4011 value
 	mov rsi, rbp
 	add rsi, 48
 
  file_test$150:
-	; Parameter 96 pointer £temporary4012
+	; Parameter 96 pointer £temporary4011
 	mov [rbp + 96], rsi
 
  file_test$151:
@@ -1206,10 +1206,10 @@ section .text
 	; PostCall 88
 
  file_test$160:
-	; GetReturnValue £temporary4014
+	; GetReturnValue £temporary4013
 
  file_test$161:
-	; Parameter 88 double £temporary4014
+	; Parameter 88 double £temporary4013
 	fstp qword [rbp + 88]
 
  file_test$162:
@@ -1258,10 +1258,10 @@ section .text
 	; PostCall 96
 
  file_test$172:
-	; GetReturnValue £temporary4016
+	; GetReturnValue £temporary4015
 
  file_test$173:
-	; Parameter 96 double £temporary4016
+	; Parameter 96 double £temporary4015
 	fstp qword [rbp + 96]
 
  file_test$174:
@@ -1369,10 +1369,10 @@ section .text
 	; PostCall 40
 
  file_test$197:
-	; GetReturnValue £temporary4021
+	; GetReturnValue £temporary4020
 
  file_test$198:
-	; Assign filePtr £temporary4021
+	; Assign filePtr £temporary4020
 	mov [rbp + 40], rbx
 
  file_test$199:
@@ -1440,10 +1440,10 @@ section .text
 	; PostCall 48
 
  file_test$213:
-	; GetReturnValue £temporary4024
+	; GetReturnValue £temporary4023
 
  file_test$214:
-	; NotEqual 222 £temporary4024 0
+	; NotEqual 222 £temporary4023 0
 	cmp ebx, 0
 	jne file_test$222
 
@@ -1511,10 +1511,10 @@ section .text
 	; PostCall 84
 
  file_test$229:
-	; GetReturnValue £temporary4027
+	; GetReturnValue £temporary4026
 
  file_test$230:
-	; Parameter 84 pointer £temporary4027
+	; Parameter 84 pointer £temporary4026
 	mov [rbp + 84], rbx
 
  file_test$231:
@@ -1555,10 +1555,10 @@ section .text
 	; PostCall 32
 
  file_test$239:
-	; GetReturnValue £temporary4029
+	; GetReturnValue £temporary4028
 
  file_test$240:
-	; Assign filePtr £temporary4029
+	; Assign filePtr £temporary4028
 	mov [rbp + 32], rbx
 
  file_test$241:
@@ -1621,10 +1621,10 @@ section .text
 	; PostCall 40
 
  file_test$254:
-	; GetReturnValue £temporary4032
+	; GetReturnValue £temporary4031
 
  file_test$255:
-	; NotEqual 262 £temporary4032 0
+	; NotEqual 262 £temporary4031 0
 	cmp ebx, 0
 	jne file_test$262
 
@@ -1687,10 +1687,10 @@ section .text
 	; PostCall 76
 
  file_test$269:
-	; GetReturnValue £temporary4035
+	; GetReturnValue £temporary4034
 
  file_test$270:
-	; Parameter 76 pointer £temporary4035
+	; Parameter 76 pointer £temporary4034
 	mov [rbp + 76], rbx
 
  file_test$271:
@@ -1727,10 +1727,10 @@ section .text
 	; PostCall 24
 
  file_test$278:
-	; GetReturnValue £temporary4037
+	; GetReturnValue £temporary4036
 
  file_test$279:
-	; Assign inFilePtr £temporary4037
+	; Assign inFilePtr £temporary4036
 	mov [rbp + 24], rbx
 
  file_test$280:
@@ -1854,12 +1854,12 @@ section .text
 	mov qword [rbp + 72], string_25i#
 
  file_test$307:
-	; Address £temporary4044 size
+	; Address £temporary4043 size
 	mov rsi, rbp
 	add rsi, 36
 
  file_test$308:
-	; Parameter 80 pointer £temporary4044
+	; Parameter 80 pointer £temporary4043
 	mov [rbp + 80], rsi
 
  file_test$309:
@@ -2037,10 +2037,10 @@ section .text
 	; PostCall 24
 
  file_test$346:
-	; GetReturnValue £temporary4053
+	; GetReturnValue £temporary4052
 
  file_test$347:
-	; Assign outFilePtr £temporary4053
+	; Assign outFilePtr £temporary4052
 	mov [rbp + 24], rbx
 
  file_test$348:
@@ -2105,12 +2105,12 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$362:
-	; Address £temporary4058 size
+	; Address £temporary4057 size
 	mov rsi, rbp
 	add rsi, 32
 
  file_test$363:
-	; Parameter 64 pointer £temporary4058
+	; Parameter 64 pointer £temporary4057
 	mov [rbp + 64], rsi
 
  file_test$364:
@@ -2147,13 +2147,13 @@ section .text
 	jge file_test$384
 
  file_test$371:
-	; SignedMultiply £temporary4062 index index
+	; SignedMultiply £temporary4061 index index
 	mov eax, [rbp + 36]
 	xor edx, edx
 	imul dword [rbp + 36]
 
  file_test$372:
-	; IntegralToFloating £temporary4063 £temporary4062
+	; IntegralToFloating £temporary4062 £temporary4061
 	mov [container4bytes#], eax
 	fild dword [container4bytes#]
 
@@ -2165,12 +2165,12 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$375:
-	; Address £temporary4064 value
+	; Address £temporary4063 value
 	mov rsi, rbp
 	add rsi, 40
 
  file_test$376:
-	; Parameter 72 pointer £temporary4064
+	; Parameter 72 pointer £temporary4063
 	mov [rbp + 72], rsi
 
  file_test$377:
@@ -2244,10 +2244,10 @@ section .text
 	; PostCall 24
 
  file_test$393:
-	; GetReturnValue £temporary4067
+	; GetReturnValue £temporary4066
 
  file_test$394:
-	; Assign inFilePtr £temporary4067
+	; Assign inFilePtr £temporary4066
 	mov [rbp + 24], rbx
 
  file_test$395:
@@ -2308,12 +2308,12 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$408:
-	; Address £temporary4072 size
+	; Address £temporary4071 size
 	mov rsi, rbp
 	add rsi, 32
 
  file_test$409:
-	; Parameter 64 pointer £temporary4072
+	; Parameter 64 pointer £temporary4071
 	mov [rbp + 64], rsi
 
  file_test$410:
@@ -2377,12 +2377,12 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$423:
-	; Address £temporary4077 value
+	; Address £temporary4076 value
 	mov rsi, rbp
 	add rsi, 40
 
  file_test$424:
-	; Parameter 72 pointer £temporary4077
+	; Parameter 72 pointer £temporary4076
 	mov [rbp + 72], rsi
 
  file_test$425:
@@ -2506,10 +2506,10 @@ section .text
 	; PostCall 24
 
  file_test$452:
-	; GetReturnValue £temporary4082
+	; GetReturnValue £temporary4081
 
  file_test$453:
-	; Assign outFilePtr £temporary4082
+	; Assign outFilePtr £temporary4081
 	mov [rbp + 24], rbx
 
  file_test$454:
@@ -2581,13 +2581,13 @@ section .text
 	jge file_test$482
 
  file_test$469:
-	; SignedMultiply £temporary4089 index index
+	; SignedMultiply £temporary4088 index index
 	mov eax, [rbp + 36]
 	xor edx, edx
 	imul dword [rbp + 36]
 
  file_test$470:
-	; IntegralToFloating £temporary4090 £temporary4089
+	; IntegralToFloating £temporary4089 £temporary4088
 	mov [container4bytes#], eax
 	fild dword [container4bytes#]
 
@@ -2599,12 +2599,12 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$473:
-	; Address £temporary4091 value
+	; Address £temporary4090 value
 	mov rsi, rbp
 	add rsi, 40
 
  file_test$474:
-	; Parameter 72 pointer £temporary4091
+	; Parameter 72 pointer £temporary4090
 	mov [rbp + 72], rsi
 
  file_test$475:
@@ -2678,10 +2678,10 @@ section .text
 	; PostCall 24
 
  file_test$491:
-	; GetReturnValue £temporary4094
+	; GetReturnValue £temporary4093
 
  file_test$492:
-	; Assign inFilePtr £temporary4094
+	; Assign inFilePtr £temporary4093
 	mov [rbp + 24], rbx
 
  file_test$493:
@@ -2746,12 +2746,12 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$507:
-	; Address £temporary4099 value
+	; Address £temporary4098 value
 	mov rsi, rbp
 	add rsi, 36
 
  file_test$508:
-	; Parameter 68 pointer £temporary4099
+	; Parameter 68 pointer £temporary4098
 	mov [rbp + 68], rsi
 
  file_test$509:
@@ -2778,10 +2778,10 @@ section .text
 	; PostCall 44
 
  file_test$514:
-	; GetReturnValue £temporary4100
+	; GetReturnValue £temporary4099
 
  file_test$515:
-	; SignedLessThanEqual 526 £temporary4100 0
+	; SignedLessThanEqual 526 £temporary4099 0
 	cmp ebx, 0
 	jle file_test$526
 
@@ -2793,7 +2793,7 @@ section .text
 	mov qword [rbp + 68], string_index23A2025i3A20value2025f0A#
 
  file_test$518:
-	; Assign £temporary4102 index
+	; Assign £temporary4101 index
 	mov eax, [rbp + 32]
 
  file_test$519:
@@ -2801,7 +2801,7 @@ section .text
 	inc dword [rbp + 32]
 
  file_test$520:
-	; Parameter 76 signedint £temporary4102
+	; Parameter 76 signedint £temporary4101
 	mov [rbp + 76], eax
 
  file_test$521:
@@ -2886,10 +2886,10 @@ section .text
 	; PostCall 24
 
  file_test$539:
-	; GetReturnValue £temporary4106
+	; GetReturnValue £temporary4105
 
  file_test$540:
-	; Assign inFilePtr £temporary4106
+	; Assign inFilePtr £temporary4105
 	mov [rbp + 24], rbx
 
  file_test$541:
@@ -2969,10 +2969,10 @@ section .text
 	; PostCall 36
 
  file_test$558:
-	; GetReturnValue £temporary4111
+	; GetReturnValue £temporary4110
 
  file_test$559:
-	; NotEqual 578 £temporary4111 0
+	; NotEqual 578 £temporary4110 0
 	cmp ebx, 0
 	jne file_test$578
 
@@ -2980,12 +2980,12 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$561:
-	; Address £temporary4114 value
+	; Address £temporary4113 value
 	mov rsi, rbp
 	add rsi, 36
 
  file_test$562:
-	; Parameter 68 pointer £temporary4114
+	; Parameter 68 pointer £temporary4113
 	mov [rbp + 68], rsi
 
  file_test$563:
@@ -3019,7 +3019,7 @@ section .text
 	mov qword [rbp + 68], string_index33A2025i3A20value2025f0A#
 
  file_test$570:
-	; Assign £temporary4116 index
+	; Assign £temporary4115 index
 	mov eax, [rbp + 32]
 
  file_test$571:
@@ -3027,7 +3027,7 @@ section .text
 	inc dword [rbp + 32]
 
  file_test$572:
-	; Parameter 76 signedint £temporary4116
+	; Parameter 76 signedint £temporary4115
 	mov [rbp + 76], eax
 
  file_test$573:
@@ -3112,10 +3112,10 @@ section .text
 	; PostCall 24
 
  file_test$591:
-	; GetReturnValue £temporary4120
+	; GetReturnValue £temporary4119
 
  file_test$592:
-	; Assign inFilePtr £temporary4120
+	; Assign inFilePtr £temporary4119
 	mov [rbp + 24], rbx
 
  file_test$593:
@@ -3176,12 +3176,12 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$606:
-	; Address £temporary4125 size
+	; Address £temporary4124 size
 	mov rsi, rbp
 	add rsi, 32
 
  file_test$607:
-	; Parameter 60 pointer £temporary4125
+	; Parameter 60 pointer £temporary4124
 	mov [rbp + 60], rsi
 
  file_test$608:
@@ -3220,13 +3220,13 @@ section .text
 	mov [rbp + 68], eax
 
  file_test$616:
-	; SignedMultiply £temporary4127 size 8
+	; SignedMultiply £temporary4126 size 8
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [int4$8#]
 
  file_test$617:
-	; Parameter 72 signedint £temporary4127
+	; Parameter 72 signedint £temporary4126
 	mov [rbp + 72], eax
 
  file_test$618:
@@ -3267,25 +3267,25 @@ section .text
 	; PostCall 44
 
  file_test$625:
-	; GetReturnValue £temporary4130
+	; GetReturnValue £temporary4129
 
  file_test$626:
-	; Assign p £temporary4130
+	; Assign p £temporary4129
 	mov [rbp + 44], rbx
 
  file_test$627:
-	; IntegralToIntegral £temporary4131 size
+	; IntegralToIntegral £temporary4130 size
 	mov eax, [rbp + 32]
 	mov rbx, 4294967295
 	and rax, rbx
 
  file_test$628:
-	; UnsignedMultiply £temporary4133 £temporary4131 8
+	; UnsignedMultiply £temporary4132 £temporary4130 8
 	xor rdx, rdx
 	mul qword [int8$8#]
 
  file_test$629:
-	; BinaryAdd endPtr p £temporary4133
+	; BinaryAdd endPtr p £temporary4132
 	mov rbx, [rbp + 44]
 	add rbx, rax
 	mov [rbp + 52], rbx
@@ -3433,30 +3433,30 @@ section .text
 	mov [rbp + 92], eax
 
  file_test$661:
-	; IntegralToIntegral £temporary4143 index
+	; IntegralToIntegral £temporary4142 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
  file_test$662:
-	; UnsignedMultiply £temporary4144 £temporary4143 8
+	; UnsignedMultiply £temporary4143 £temporary4142 8
 	xor rdx, rdx
 	mul qword [int8$8#]
 
  file_test$663:
-	; BinaryAdd £temporary4145 p £temporary4144
+	; BinaryAdd £temporary4144 p £temporary4143
 	mov rsi, [rbp + 44]
 	add rsi, rax
 
  file_test$664:
-	; Dereference £temporary4142 -> £temporary4145 £temporary4145 0
+	; Dereference £temporary4141 -> £temporary4144 £temporary4144 0
 
  file_test$665:
-	; PushFloat £temporary4142 -> £temporary4145
+	; PushFloat £temporary4141 -> £temporary4144
 	fld qword [rsi]
 
  file_test$666:
-	; Parameter 96 double £temporary4142 -> £temporary4145
+	; Parameter 96 double £temporary4141 -> £temporary4144
 	fstp qword [rbp + 96]
 
  file_test$667:
@@ -3771,10 +3771,10 @@ section .text
 	; PostCall 232
 
  file_test$742:
-	; GetReturnValue £temporary4210
+	; GetReturnValue £temporary4209
 
  file_test$743:
-	; Assign outFilePtr £temporary4210
+	; Assign outFilePtr £temporary4209
 	mov [rbp + 232], rbx
 
  file_test$744:
@@ -3799,10 +3799,10 @@ section .text
 	; PostCall 240
 
  file_test$749:
-	; GetReturnValue £temporary4211
+	; GetReturnValue £temporary4210
 
  file_test$750:
-	; Assign inFilePtr £temporary4211
+	; Assign inFilePtr £temporary4210
 	mov [rbp + 240], rbx
 
  file_test$751:
@@ -3981,10 +3981,10 @@ section .text
 	; PostCall 248
 
  file_test$790:
-	; GetReturnValue £temporary4222
+	; GetReturnValue £temporary4221
 
  file_test$791:
-	; NotEqual 811 £temporary4222 0
+	; NotEqual 811 £temporary4221 0
 	cmp ebx, 0
 	jne file_test$811
 
@@ -3992,12 +3992,12 @@ section .text
 	; PreCall 248 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$793:
-	; Address £temporary4225 person
+	; Address £temporary4224 person
 	mov rsi, rbp
 	add rsi, 180
 
  file_test$794:
-	; Parameter 272 pointer £temporary4225
+	; Parameter 272 pointer £temporary4224
 	mov [rbp + 272], rsi
 
  file_test$795:
@@ -4115,10 +4115,10 @@ section .text
 	; PostCall 24
 
  file_test$820:
-	; GetReturnValue £temporary4232
+	; GetReturnValue £temporary4231
 
  file_test$821:
-	; Assign inFilePtr £temporary4232
+	; Assign inFilePtr £temporary4231
 	mov [rbp + 24], rbx
 
  file_test$822:
@@ -4202,10 +4202,10 @@ section .text
 	; PostCall 40
 
  file_test$840:
-	; GetReturnValue £temporary4237
+	; GetReturnValue £temporary4236
 
  file_test$841:
-	; Assign size £temporary4237
+	; Assign size £temporary4236
 	mov [rbp + 40], ebx
 
  file_test$842:
@@ -4234,10 +4234,10 @@ section .text
 	; PostCall 76
 
  file_test$848:
-	; GetReturnValue £temporary4238
+	; GetReturnValue £temporary4237
 
  file_test$849:
-	; Parameter 76 signedint £temporary4238
+	; Parameter 76 signedint £temporary4237
 	mov [rbp + 76], ebx
 
  file_test$850:
@@ -4281,17 +4281,17 @@ section .text
 	; PostCall 44
 
  file_test$858:
-	; GetReturnValue £temporary4242
+	; GetReturnValue £temporary4241
 
  file_test$859:
-	; IntegralToIntegral £temporary4243 £temporary4242
+	; IntegralToIntegral £temporary4242 £temporary4241
 	cmp ebx, 0
 	jge file_test$860
 	neg ebx
 	neg bl
 
  file_test$860:
-	; Assign c £temporary4243
+	; Assign c £temporary4242
 	mov [rbp + 44], bl
 
  file_test$861:
@@ -4302,7 +4302,7 @@ section .text
 	mov qword [rbp + 69], string_3C25c3E2025i2025i0A#
 
  file_test$863:
-	; IntegralToIntegral £temporary4244 c
+	; IntegralToIntegral £temporary4243 c
 	mov al, [rbp + 44]
 	and eax, 255
 	cmp al, 0
@@ -4311,11 +4311,11 @@ section .text
 	neg eax
 
  file_test$864:
-	; Parameter 77 signedint £temporary4244
+	; Parameter 77 signedint £temporary4243
 	mov [rbp + 77], eax
 
  file_test$865:
-	; IntegralToIntegral £temporary4245 c
+	; IntegralToIntegral £temporary4244 c
 	mov al, [rbp + 44]
 	and eax, 255
 	cmp al, 0
@@ -4324,7 +4324,7 @@ section .text
 	neg eax
 
  file_test$866:
-	; Parameter 81 signedint £temporary4245
+	; Parameter 81 signedint £temporary4244
 	mov [rbp + 81], eax
 
  file_test$867:
@@ -4346,10 +4346,10 @@ section .text
 	; PostCall 85
 
  file_test$871:
-	; GetReturnValue £temporary4246
+	; GetReturnValue £temporary4245
 
  file_test$872:
-	; Parameter 85 signedint £temporary4246
+	; Parameter 85 signedint £temporary4245
 	mov [rbp + 85], ebx
 
  file_test$873:
@@ -4373,16 +4373,16 @@ section .text
 	mov [rbp + 69], rax
 
  file_test$877:
-	; BinarySubtract £temporary4248 size index
+	; BinarySubtract £temporary4247 size index
 	mov eax, [rbp + 40]
 	sub eax, [rbp + 36]
 
  file_test$878:
-	; BinarySubtract £temporary4249 £temporary4248 1
+	; BinarySubtract £temporary4248 £temporary4247 1
 	dec eax
 
  file_test$879:
-	; Parameter 77 signedint £temporary4249
+	; Parameter 77 signedint £temporary4248
 	mov [rbp + 77], eax
 
  file_test$880:
@@ -4468,15 +4468,15 @@ section .text
 	; PostCall 56
 
  file_test$899:
-	; GetReturnValue £temporary4253
+	; GetReturnValue £temporary4252
 
  file_test$900:
-	; Equal 903 £temporary4253 0
+	; Equal 903 £temporary4252 0
 	cmp ebx, 0
 	je file_test$903
 
  file_test$901:
-	; Assign £temporary4255 "Yes"
+	; Assign £temporary4254 "Yes"
 	mov eax, string_Yes#
 
  file_test$902:
@@ -4484,11 +4484,11 @@ section .text
 	jmp file_test$904
 
  file_test$903:
-	; Assign £temporary4255 "No"
+	; Assign £temporary4254 "No"
 	mov eax, string_No#
 
  file_test$904:
-	; Parameter 56 pointer £temporary4255
+	; Parameter 56 pointer £temporary4254
 	mov [rbp + 56], eax
 
  file_test$905:
@@ -4528,15 +4528,15 @@ section .text
 	; PostCall 56
 
  file_test$913:
-	; GetReturnValue £temporary4257
+	; GetReturnValue £temporary4256
 
  file_test$914:
-	; Equal 917 £temporary4257 0
+	; Equal 917 £temporary4256 0
 	cmp ebx, 0
 	je file_test$917
 
  file_test$915:
-	; Assign £temporary4259 "Yes"
+	; Assign £temporary4258 "Yes"
 	mov eax, string_Yes#
 
  file_test$916:
@@ -4544,11 +4544,11 @@ section .text
 	jmp file_test$918
 
  file_test$917:
-	; Assign £temporary4259 "No"
+	; Assign £temporary4258 "No"
 	mov eax, string_No#
 
  file_test$918:
-	; Parameter 56 pointer £temporary4259
+	; Parameter 56 pointer £temporary4258
 	mov [rbp + 56], eax
 
  file_test$919:
@@ -4588,15 +4588,15 @@ section .text
 	; PostCall 56
 
  file_test$927:
-	; GetReturnValue £temporary4261
+	; GetReturnValue £temporary4260
 
  file_test$928:
-	; Equal 931 £temporary4261 0
+	; Equal 931 £temporary4260 0
 	cmp ebx, 0
 	je file_test$931
 
  file_test$929:
-	; Assign £temporary4263 "Yes"
+	; Assign £temporary4262 "Yes"
 	mov eax, string_Yes#
 
  file_test$930:
@@ -4604,11 +4604,11 @@ section .text
 	jmp file_test$932
 
  file_test$931:
-	; Assign £temporary4263 "No"
+	; Assign £temporary4262 "No"
 	mov eax, string_No#
 
  file_test$932:
-	; Parameter 56 pointer £temporary4263
+	; Parameter 56 pointer £temporary4262
 	mov [rbp + 56], eax
 
  file_test$933:
@@ -4648,15 +4648,15 @@ section .text
 	; PostCall 56
 
  file_test$941:
-	; GetReturnValue £temporary4265
+	; GetReturnValue £temporary4264
 
  file_test$942:
-	; Equal 945 £temporary4265 0
+	; Equal 945 £temporary4264 0
 	cmp ebx, 0
 	je file_test$945
 
  file_test$943:
-	; Assign £temporary4267 "Yes"
+	; Assign £temporary4266 "Yes"
 	mov eax, string_Yes#
 
  file_test$944:
@@ -4664,11 +4664,11 @@ section .text
 	jmp file_test$946
 
  file_test$945:
-	; Assign £temporary4267 "No"
+	; Assign £temporary4266 "No"
 	mov eax, string_No#
 
  file_test$946:
-	; Parameter 56 pointer £temporary4267
+	; Parameter 56 pointer £temporary4266
 	mov [rbp + 56], eax
 
  file_test$947:
@@ -4708,15 +4708,15 @@ section .text
 	; PostCall 56
 
  file_test$955:
-	; GetReturnValue £temporary4269
+	; GetReturnValue £temporary4268
 
  file_test$956:
-	; Equal 959 £temporary4269 0
+	; Equal 959 £temporary4268 0
 	cmp ebx, 0
 	je file_test$959
 
  file_test$957:
-	; Assign £temporary4271 "Yes"
+	; Assign £temporary4270 "Yes"
 	mov eax, string_Yes#
 
  file_test$958:
@@ -4724,11 +4724,11 @@ section .text
 	jmp file_test$960
 
  file_test$959:
-	; Assign £temporary4271 "No"
+	; Assign £temporary4270 "No"
 	mov eax, string_No#
 
  file_test$960:
-	; Parameter 56 pointer £temporary4271
+	; Parameter 56 pointer £temporary4270
 	mov [rbp + 56], eax
 
  file_test$961:
@@ -4768,15 +4768,15 @@ section .text
 	; PostCall 56
 
  file_test$969:
-	; GetReturnValue £temporary4273
+	; GetReturnValue £temporary4272
 
  file_test$970:
-	; Equal 973 £temporary4273 0
+	; Equal 973 £temporary4272 0
 	cmp ebx, 0
 	je file_test$973
 
  file_test$971:
-	; Assign £temporary4275 "Yes"
+	; Assign £temporary4274 "Yes"
 	mov eax, string_Yes#
 
  file_test$972:
@@ -4784,11 +4784,11 @@ section .text
 	jmp file_test$974
 
  file_test$973:
-	; Assign £temporary4275 "No"
+	; Assign £temporary4274 "No"
 	mov eax, string_No#
 
  file_test$974:
-	; Parameter 56 pointer £temporary4275
+	; Parameter 56 pointer £temporary4274
 	mov [rbp + 56], eax
 
  file_test$975:
@@ -4828,15 +4828,15 @@ section .text
 	; PostCall 56
 
  file_test$983:
-	; GetReturnValue £temporary4277
+	; GetReturnValue £temporary4276
 
  file_test$984:
-	; Equal 987 £temporary4277 0
+	; Equal 987 £temporary4276 0
 	cmp ebx, 0
 	je file_test$987
 
  file_test$985:
-	; Assign £temporary4279 "Yes"
+	; Assign £temporary4278 "Yes"
 	mov eax, string_Yes#
 
  file_test$986:
@@ -4844,11 +4844,11 @@ section .text
 	jmp file_test$988
 
  file_test$987:
-	; Assign £temporary4279 "No"
+	; Assign £temporary4278 "No"
 	mov eax, string_No#
 
  file_test$988:
-	; Parameter 56 pointer £temporary4279
+	; Parameter 56 pointer £temporary4278
 	mov [rbp + 56], eax
 
  file_test$989:
@@ -4888,15 +4888,15 @@ section .text
 	; PostCall 56
 
  file_test$997:
-	; GetReturnValue £temporary4281
+	; GetReturnValue £temporary4280
 
  file_test$998:
-	; Equal 1001 £temporary4281 0
+	; Equal 1001 £temporary4280 0
 	cmp ebx, 0
 	je file_test$1001
 
  file_test$999:
-	; Assign £temporary4283 "Yes"
+	; Assign £temporary4282 "Yes"
 	mov eax, string_Yes#
 
  file_test$1000:
@@ -4904,11 +4904,11 @@ section .text
 	jmp file_test$1002
 
  file_test$1001:
-	; Assign £temporary4283 "No"
+	; Assign £temporary4282 "No"
 	mov eax, string_No#
 
  file_test$1002:
-	; Parameter 56 pointer £temporary4283
+	; Parameter 56 pointer £temporary4282
 	mov [rbp + 56], eax
 
  file_test$1003:
@@ -4948,15 +4948,15 @@ section .text
 	; PostCall 56
 
  file_test$1011:
-	; GetReturnValue £temporary4285
+	; GetReturnValue £temporary4284
 
  file_test$1012:
-	; Equal 1015 £temporary4285 0
+	; Equal 1015 £temporary4284 0
 	cmp ebx, 0
 	je file_test$1015
 
  file_test$1013:
-	; Assign £temporary4287 "Yes"
+	; Assign £temporary4286 "Yes"
 	mov eax, string_Yes#
 
  file_test$1014:
@@ -4964,11 +4964,11 @@ section .text
 	jmp file_test$1016
 
  file_test$1015:
-	; Assign £temporary4287 "No"
+	; Assign £temporary4286 "No"
 	mov eax, string_No#
 
  file_test$1016:
-	; Parameter 56 pointer £temporary4287
+	; Parameter 56 pointer £temporary4286
 	mov [rbp + 56], eax
 
  file_test$1017:
@@ -5008,15 +5008,15 @@ section .text
 	; PostCall 56
 
  file_test$1025:
-	; GetReturnValue £temporary4289
+	; GetReturnValue £temporary4288
 
  file_test$1026:
-	; Equal 1029 £temporary4289 0
+	; Equal 1029 £temporary4288 0
 	cmp ebx, 0
 	je file_test$1029
 
  file_test$1027:
-	; Assign £temporary4291 "Yes"
+	; Assign £temporary4290 "Yes"
 	mov eax, string_Yes#
 
  file_test$1028:
@@ -5024,11 +5024,11 @@ section .text
 	jmp file_test$1030
 
  file_test$1029:
-	; Assign £temporary4291 "No"
+	; Assign £temporary4290 "No"
 	mov eax, string_No#
 
  file_test$1030:
-	; Parameter 56 pointer £temporary4291
+	; Parameter 56 pointer £temporary4290
 	mov [rbp + 56], eax
 
  file_test$1031:
@@ -5068,15 +5068,15 @@ section .text
 	; PostCall 56
 
  file_test$1039:
-	; GetReturnValue £temporary4293
+	; GetReturnValue £temporary4292
 
  file_test$1040:
-	; Equal 1043 £temporary4293 0
+	; Equal 1043 £temporary4292 0
 	cmp ebx, 0
 	je file_test$1043
 
  file_test$1041:
-	; Assign £temporary4295 "Yes"
+	; Assign £temporary4294 "Yes"
 	mov eax, string_Yes#
 
  file_test$1042:
@@ -5084,11 +5084,11 @@ section .text
 	jmp file_test$1044
 
  file_test$1043:
-	; Assign £temporary4295 "No"
+	; Assign £temporary4294 "No"
 	mov eax, string_No#
 
  file_test$1044:
-	; Parameter 56 pointer £temporary4295
+	; Parameter 56 pointer £temporary4294
 	mov [rbp + 56], eax
 
  file_test$1045:
@@ -5128,15 +5128,15 @@ section .text
 	; PostCall 56
 
  file_test$1053:
-	; GetReturnValue £temporary4297
+	; GetReturnValue £temporary4296
 
  file_test$1054:
-	; Equal 1057 £temporary4297 0
+	; Equal 1057 £temporary4296 0
 	cmp ebx, 0
 	je file_test$1057
 
  file_test$1055:
-	; Assign £temporary4299 "Yes"
+	; Assign £temporary4298 "Yes"
 	mov eax, string_Yes#
 
  file_test$1056:
@@ -5144,11 +5144,11 @@ section .text
 	jmp file_test$1058
 
  file_test$1057:
-	; Assign £temporary4299 "No"
+	; Assign £temporary4298 "No"
 	mov eax, string_No#
 
  file_test$1058:
-	; Parameter 56 pointer £temporary4299
+	; Parameter 56 pointer £temporary4298
 	mov [rbp + 56], eax
 
  file_test$1059:

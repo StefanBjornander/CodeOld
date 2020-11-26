@@ -3,16 +3,15 @@
 2: Equal 8 y 0
 3: PushFloat x
 4: PushFloat y
-5: SignedDivide £temporary3546 x y
+5: SignedDivide £temporary3552 x y
 6: SetReturnValue
-7: Return £temporary3546
+7: Return £temporary3552
 8: PreCall 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 9: Parameter 28 pointer buffer
-10: IntegralToIntegral £temporary3547 "Division by Zero."
-11: Parameter 30 signedint £temporary3547
-12: Call 22 longjmp 0
-13: PostCall 22
-14: PushFloat 0
-15: SetReturnValue
-16: Return 0
-17: FunctionEnd divide
+10: Parameter 30 signedint "Division by Zero."
+11: Call 22 longjmp 0
+12: PostCall 22
+13: PushFloat 0
+14: SetReturnValue
+15: Return 0
+16: FunctionEnd divide

@@ -1,0 +1,23 @@
+0: PushFloat y
+1: PushZero
+2: NotEqual PushFloat x y 0
+3: Goto CallHeader 22 longjmp
+4: CheckTrackMapFloatStack
+5: PushFloat x
+6: PushFloat y
+7: SignedDivide £temporary4690 x y
+8: SetReturnValue £temporary4690
+9: Return £temporary4690
+10: Goto Empty
+11: CallHeader 22 longjmp
+12: Parameter 22 buffer 6
+13: Parameter 22 string_Division20by20Zero2E# 8
+14: Call 22 longjmp 0
+15: PostCall 22
+16: PushZero
+17: SetReturnValue 0
+18: Return 0
+19: Goto Empty
+20: Empty
+21: Return 0
+22: FunctionEnd divide

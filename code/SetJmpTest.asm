@@ -316,38 +316,34 @@ section .text
 	mov qword [rbp + 64], buffer
 
  divide$10:
-	; IntegralToIntegral £temporary3731 "Division by Zero."
-	mov eax, string_Division20by20Zero2E#
+	; Parameter 72 signedint "Division by Zero."
+	mov qword [rbp + 72], string_Division20by20Zero2E#
 
  divide$11:
-	; Parameter 72 signedint £temporary3731
-	mov [rbp + 72], eax
-
- divide$12:
 	; Call 40 longjmp 0
-	mov qword [rbp + 40], divide$13
+	mov qword [rbp + 40], divide$12
 	mov [rbp + 48], rbp
 	add rbp, 40
 	jmp longjmp
 
- divide$13:
+ divide$12:
 	; PostCall 40
 
- divide$14:
+ divide$13:
 	; PushFloat 0
 	fldz
 
- divide$15:
+ divide$14:
 	; SetReturnValue
 
- divide$16:
+ divide$15:
 	; Return 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- divide$17:
+ divide$16:
 	; FunctionEnd divide
 
 section .text
@@ -370,15 +366,15 @@ section .text
 	; PostCall 40
 
  test$4:
-	; GetReturnValue £temporary3733
+	; GetReturnValue £temporary3732
 
  test$5:
-	; IntegralToIntegral £temporary3734 £temporary3733
+	; IntegralToIntegral £temporary3733 £temporary3732
 	mov rax, 4294967295
 	and rbx, rax
 
  test$6:
-	; Assign message £temporary3734
+	; Assign message £temporary3733
 	mov [rbp + 32], rbx
 
  test$7:
@@ -423,10 +419,10 @@ section .text
 	; PostCall 80
 
  test$17:
-	; GetReturnValue £temporary3736
+	; GetReturnValue £temporary3735
 
  test$18:
-	; Parameter 80 double £temporary3736
+	; Parameter 80 double £temporary3735
 	fstp qword [rbp + 80]
 
  test$19:
