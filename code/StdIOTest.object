@@ -4,12 +4,12 @@ stdio_test:	; Assign n 0
 2:		mov word [bp + 6], 0
 4:	
 
-stdio_test$1:	; address £temporary5691 n
+stdio_test$1:	; address £temporary5758 n
 5:		mov si, bp
 6:		add si, 6
 8:	
 
-stdio_test$2:	; Assign p £temporary5691
+stdio_test$2:	; Assign p £temporary5758
 9:		mov [bp + 8], si
 11:	
 
@@ -1398,11 +1398,265 @@ stdio_test$326:	; Call 10 printf 0
 stdio_test$327:	; PostCall 10
 1071:	
 
-stdio_test$328:	; Return 0
-1072:		mov ax, [bp]
-1073:		mov di, [bp + 4]
-1074:		mov bp, [bp + 2]
-1075:		jmp ax
+stdio_test$328:	; Assign a 0
+1072:		mov word [bp + 6], 0
+1074:	
+
+stdio_test$329:	; Assign b 0
+1075:		mov word [bp + 8], 0
 1077:	
 
-stdio_test$329:	; FunctionEnd stdio_test
+stdio_test$330:	; Assign n 0
+1078:		mov word [bp + 10], 0
+1080:	
+
+stdio_test$331:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1082:	
+
+stdio_test$332:	; Parameter 12 string_Please20write20three20integers3A20# 6
+1083:		mov word [bp + 18], string_Please20write20three20integers3A20#
+1085:	
+
+stdio_test$333:	; Call 12 printf 0
+1086:		mov word [bp + 12], stdio_test$334
+1087:		mov [bp + 14], bp
+1088:		add bp, 12
+1089:		mov di, bp
+1090:		jmp printf
+1092:	
+
+stdio_test$334:	; PostCall 12
+1094:	
+
+stdio_test$335:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1096:	
+
+stdio_test$336:	; Parameter 12 string_1232045620789# 6
+1097:		mov word [bp + 18], string_1232045620789#
+1099:	
+
+stdio_test$337:	; Parameter 12 string_25i20252Ai2025i2025n# 8
+1100:		mov word [bp + 20], string_25i20252Ai2025i2025n#
+1102:	
+
+stdio_test$338:	; address £temporary5788 a
+1103:		mov si, bp
+1104:		add si, 6
+1106:	
+
+stdio_test$339:	; Parameter 12 £temporary5788 10
+1107:		mov [bp + 22], si
+1109:	
+
+stdio_test$340:	; address £temporary5789 b
+1110:		mov si, bp
+1111:		add si, 8
+1113:	
+
+stdio_test$341:	; Parameter 12 £temporary5789 12
+1114:		mov [bp + 24], si
+1116:	
+
+stdio_test$342:	; address £temporary5790 n
+1117:		mov si, bp
+1118:		add si, 10
+1120:	
+
+stdio_test$343:	; Parameter 12 £temporary5790 14
+1121:		mov [bp + 26], si
+1123:	
+
+stdio_test$344:	; Call 12 sscanf 0
+1124:		mov word [bp + 12], stdio_test$345
+1125:		mov [bp + 14], bp
+1126:		add bp, 12
+1127:		mov di, bp
+1128:		add di, 6
+1129:		jmp sscanf
+1131:	
+
+stdio_test$345:	; PostCall 12
+1133:	
+
+stdio_test$346:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1135:	
+
+stdio_test$347:	; Parameter 12 string_3C25i3E203C25i3E203C25i3E0A# 6
+1136:		mov word [bp + 18], string_3C25i3E203C25i3E203C25i3E0A#
+1138:	
+
+stdio_test$348:	; Parameter 12 a 8
+1139:		mov ax, [bp + 6]
+1140:		mov [bp + 20], ax
+1142:	
+
+stdio_test$349:	; Parameter 12 b 10
+1143:		mov ax, [bp + 8]
+1144:		mov [bp + 22], ax
+1146:	
+
+stdio_test$350:	; Parameter 12 n 12
+1147:		mov ax, [bp + 10]
+1148:		mov [bp + 24], ax
+1150:	
+
+stdio_test$351:	; Call 12 printf 0
+1151:		mov word [bp + 12], stdio_test$352
+1152:		mov [bp + 14], bp
+1153:		add bp, 12
+1154:		mov di, bp
+1155:		add di, 6
+1156:		jmp printf
+1158:	
+
+stdio_test$352:	; PostCall 12
+1160:	
+
+stdio_test$353:	; CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1162:	
+
+stdio_test$354:	; Parameter 106 string_Please20write20the20patterns205Babc5D3A20# 6
+1163:		mov word [bp + 112], string_Please20write20the20patterns205Babc5D3A20#
+1165:	
+
+stdio_test$355:	; Call 106 printf 0
+1166:		mov word [bp + 106], stdio_test$356
+1167:		mov [bp + 108], bp
+1168:		add bp, 106
+1169:		mov di, bp
+1170:		jmp printf
+1172:	
+
+stdio_test$356:	; PostCall 106
+1174:	
+
+stdio_test$357:	; CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1176:	
+
+stdio_test$358:	; Parameter 106 string_abcdef# 6
+1177:		mov word [bp + 112], string_abcdef#
+1179:	
+
+stdio_test$359:	; Parameter 106 string_255Babc5D# 8
+1180:		mov word [bp + 114], string_255Babc5D#
+1182:	
+
+stdio_test$360:	; Parameter 106 s 10
+1183:		mov [bp + 116], bp
+1184:		add word [bp + 116], 6
+1186:	
+
+stdio_test$361:	; Call 106 sscanf 0
+1187:		mov word [bp + 106], stdio_test$362
+1188:		mov [bp + 108], bp
+1189:		add bp, 106
+1190:		mov di, bp
+1191:		add di, 2
+1192:		jmp sscanf
+1194:	
+
+stdio_test$362:	; PostCall 106
+1196:	
+
+stdio_test$363:	; CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1198:	
+
+stdio_test$364:	; Parameter 106 string_3C25s3E0A# 6
+1199:		mov word [bp + 112], string_3C25s3E0A#
+1201:	
+
+stdio_test$365:	; Parameter 106 s 8
+1202:		mov [bp + 114], bp
+1203:		add word [bp + 114], 6
+1205:	
+
+stdio_test$366:	; Call 106 printf 0
+1206:		mov word [bp + 106], stdio_test$367
+1207:		mov [bp + 108], bp
+1208:		add bp, 106
+1209:		mov di, bp
+1210:		add di, 2
+1211:		jmp printf
+1213:	
+
+stdio_test$367:	; PostCall 106
+1215:	
+
+stdio_test$368:	; CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1217:	
+
+stdio_test$369:	; Parameter 106 string_Please20write20the20patterns205B5Eabc5D3A20# 6
+1218:		mov word [bp + 112], string_Please20write20the20patterns205B5Eabc5D3A20#
+1220:	
+
+stdio_test$370:	; Call 106 printf 0
+1221:		mov word [bp + 106], stdio_test$371
+1222:		mov [bp + 108], bp
+1223:		add bp, 106
+1224:		mov di, bp
+1225:		jmp printf
+1227:	
+
+stdio_test$371:	; PostCall 106
+1229:	
+
+stdio_test$372:	; CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1231:	
+
+stdio_test$373:	; Parameter 106 string_defabc# 6
+1232:		mov word [bp + 112], string_defabc#
+1234:	
+
+stdio_test$374:	; Parameter 106 string_255B5Eabc5D# 8
+1235:		mov word [bp + 114], string_255B5Eabc5D#
+1237:	
+
+stdio_test$375:	; Parameter 106 s 10
+1238:		mov [bp + 116], bp
+1239:		add word [bp + 116], 6
+1241:	
+
+stdio_test$376:	; Call 106 sscanf 0
+1242:		mov word [bp + 106], stdio_test$377
+1243:		mov [bp + 108], bp
+1244:		add bp, 106
+1245:		mov di, bp
+1246:		add di, 2
+1247:		jmp sscanf
+1249:	
+
+stdio_test$377:	; PostCall 106
+1251:	
+
+stdio_test$378:	; CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1253:	
+
+stdio_test$379:	; Parameter 106 string_3C25s3E0A0A# 6
+1254:		mov word [bp + 112], string_3C25s3E0A0A#
+1256:	
+
+stdio_test$380:	; Parameter 106 s 8
+1257:		mov [bp + 114], bp
+1258:		add word [bp + 114], 6
+1260:	
+
+stdio_test$381:	; Call 106 printf 0
+1261:		mov word [bp + 106], stdio_test$382
+1262:		mov [bp + 108], bp
+1263:		add bp, 106
+1264:		mov di, bp
+1265:		add di, 2
+1266:		jmp printf
+1268:	
+
+stdio_test$382:	; PostCall 106
+1270:	
+
+stdio_test$383:	; Return 0
+1271:		mov ax, [bp]
+1272:		mov di, [bp + 4]
+1273:		mov bp, [bp + 2]
+1274:		jmp ax
+1276:	
+
+stdio_test$384:	; FunctionEnd stdio_test

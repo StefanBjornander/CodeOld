@@ -55,6 +55,7 @@ int filecreate(const char* name) {
 
 BOOL fileexistsX(const char* name) {
   FILE* filePtr = fopen(name, "r");
+  printf("\nfileexists %s %p\n", name, filePtr);
 
   if (filePtr != NULL) {
     fclose(filePtr);
@@ -242,20 +243,23 @@ int remove(const char* name) {
   register_dx = name;
   interrupt(0x21s);
 
-  if (carry_flag) {
-    errno = FREMOVE;
-    return -1;
+  if (!carry_flag) {
+    return 0;
   }
-
-  return 0;
 #endif
 
 #ifdef __LINUX__
   register_rax = 88L;
   register_rdi = (unsigned long) name;
   syscall();
-  return 0;
+  
+  if (register_ebx == 0) {
+    return 0;
+  }
 #endif
+
+  errno = FREMOVE;
+  return -1;
 }
 
 int rename(const char* oldName, const char* newName) {
@@ -266,9 +270,8 @@ int rename(const char* oldName, const char* newName) {
   register_di = newName;
   interrupt(0x21s);
 
-  if (carry_flag) {
-    errno = FRENAME;
-    return -1;
+  if (!carry_flag) {
+    return 0;
   }
 #endif
 
@@ -277,9 +280,14 @@ int rename(const char* oldName, const char* newName) {
   register_rdi = (unsigned long) oldName;
   register_rsi = (unsigned long) newName;
   syscall();
+
+  if (register_eax == 0) {
+    return 0;
+  }
 #endif
 
-  return 0;
+  errno = FRENAME;
+  return -1;
 }
 
 int setvbuf(FILE* /* stream */, char* /* buffer */,

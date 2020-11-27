@@ -64,7 +64,20 @@ void unscanChar(char /* c */) {
   }
 }
 
-void scanPattern(char* string, char* pattern, BOOL not) {
+static char* strnchr(const char* text, int size, int i) {
+  size_t index;
+  char c = (char) i;
+
+  for (index = 0; index < size; ++index) {
+    if (text[index] == c) {
+      return &text[index];
+    }
+  }
+
+  return NULL;
+}
+
+void scanPattern(char* string, char* pattern, int size, BOOL not) {
   int index = 0;
   char input = scanChar();
 
@@ -73,8 +86,8 @@ void scanPattern(char* string, char* pattern, BOOL not) {
   }
 
   if (string != NULL) {
-    while ((!not && strchr(pattern, input)) ||
-           (not && !strchr(pattern, input))) {
+    while ((!not && strnchr(pattern, size, input)) ||
+           (not && !strnchr(pattern, size, input))) {
       string[index++] = input;
       input = scanChar();
     }
@@ -82,8 +95,8 @@ void scanPattern(char* string, char* pattern, BOOL not) {
     string[index] = '\0';
   }
   else {
-    while ((!not && strchr(pattern, input)) ||
-           (not && !strchr(pattern, input))) {
+    while ((!not && strnchr(pattern, size, input)) ||
+           (not && !strnchr(pattern, size, input))) {
       input = scanChar();
     }
   }
@@ -524,17 +537,24 @@ int scanFormat(char* format, va_list arg_list) {
               }
 
               { int startIndex = index;
+                
                 while (format[index] != ']') {
                   ++index;
                 }
-                format[index] = '\0';
 
-                if (!star) {
-                  char* string = va_arg(arg_list, char*);
-                  scanPattern(string, &format[startIndex], not);
-                }
-                else {
-                  scanPattern(NULL, &format[startIndex], not);
+                { int size = index - startIndex;
+                  char c = format[index];
+                  format[index] = '\0';
+
+                  if (!star) {
+                    char* string = va_arg(arg_list, char*);
+                    scanPattern(string, &format[startIndex], size, not);
+                  }
+                  else {
+                    scanPattern(NULL, &format[startIndex], size, not);
+                  }
+                   
+                  format[index] = c;
                 }
               }
             }
@@ -547,7 +567,7 @@ int scanFormat(char* format, va_list arg_list) {
             break;
 
           default:
-            printf("scanFormat c = '%c'\n", c);
+            //printf("scanFormat c = '%c'\n", c);
             break;
         }
       }

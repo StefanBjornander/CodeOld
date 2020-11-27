@@ -1,6 +1,7 @@
 	global stdio_test
 
 	extern printf
+	extern sscanf
 	extern $StackTop
 
 
@@ -144,6 +145,78 @@ string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A#
 
 section .data
 
+string_Please20write20three20integers3A20#:
+	; Initializer String Please write three integers: 
+	db "Please write three integers: ", 0
+
+section .data
+
+string_1232045620789#:
+	; Initializer String 123 456 789
+	db "123 456 789", 0
+
+section .data
+
+string_25i20252Ai2025i2025n#:
+	; Initializer String %i %*i %i %n
+	db "%i %*i %i %n", 0
+
+section .data
+
+string_3C25i3E203C25i3E203C25i3E0A#:
+	; Initializer String <%i> <%i> <%i>\n
+	db "<%i> <%i> <%i>", 10, 0
+
+section .data
+
+string_Please20write20the20patterns205Babc5D3A20#:
+	; Initializer String Please write the patterns [abc]: 
+	db "Please write the patterns [abc]: ", 0
+
+section .data
+
+string_abcdef#:
+	; Initializer String abcdef
+	db "abcdef", 0
+
+section .data
+
+string_255Babc5D#:
+	; Initializer String %[abc]
+	db "%[abc]", 0
+
+section .data
+
+string_3C25s3E0A#:
+	; Initializer String <%s>\n
+	db "<%s>", 10, 0
+
+section .data
+
+string_Please20write20the20patterns205B5Eabc5D3A20#:
+	; Initializer String Please write the patterns [^abc]: 
+	db "Please write the patterns [^abc]: ", 0
+
+section .data
+
+string_defabc#:
+	; Initializer String defabc
+	db "defabc", 0
+
+section .data
+
+string_255B5Eabc5D#:
+	; Initializer String %[^abc]
+	db "%[^abc]", 0
+
+section .data
+
+string_3C25s3E0A0A#:
+	; Initializer String <%s>\n\n
+	db "<%s>", 10, 10, 0
+
+section .data
+
 float8$123.456#:
 	; Initializer Double 123.456
 	dq 123.456
@@ -173,12 +246,12 @@ section .text
 	mov dword [rbp + 24], 0
 
  stdio_test$1:
-	; Address £temporary4325 n
+	; Address £temporary4365 n
 	mov rsi, rbp
 	add rsi, 24
 
  stdio_test$2:
-	; Assign p £temporary4325
+	; Assign p £temporary4365
 	mov [rbp + 28], rsi
 
  stdio_test$3:
@@ -1567,11 +1640,265 @@ section .text
 	; PostCall 36
 
  stdio_test$328:
+	; Assign a 0
+	mov dword [rbp + 24], 0
+
+ stdio_test$329:
+	; Assign b 0
+	mov dword [rbp + 28], 0
+
+ stdio_test$330:
+	; Assign n 0
+	mov dword [rbp + 32], 0
+
+ stdio_test$331:
+	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ stdio_test$332:
+	; Parameter 60 pointer "Please write three integers: "
+	mov qword [rbp + 60], string_Please20write20three20integers3A20#
+
+ stdio_test$333:
+	; Call 36 printf 0
+	mov qword [rbp + 36], stdio_test$334
+	mov [rbp + 44], rbp
+	add rbp, 36
+	mov rdi, rbp
+	jmp printf
+
+ stdio_test$334:
+	; PostCall 36
+
+ stdio_test$335:
+	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ stdio_test$336:
+	; Parameter 60 pointer "123 456 789"
+	mov qword [rbp + 60], string_1232045620789#
+
+ stdio_test$337:
+	; Parameter 68 pointer "%i %*i %i %n"
+	mov qword [rbp + 68], string_25i20252Ai2025i2025n#
+
+ stdio_test$338:
+	; Address £temporary4395 a
+	mov rsi, rbp
+	add rsi, 24
+
+ stdio_test$339:
+	; Parameter 76 pointer £temporary4395
+	mov [rbp + 76], rsi
+
+ stdio_test$340:
+	; Address £temporary4396 b
+	mov rsi, rbp
+	add rsi, 28
+
+ stdio_test$341:
+	; Parameter 84 pointer £temporary4396
+	mov [rbp + 84], rsi
+
+ stdio_test$342:
+	; Address £temporary4397 n
+	mov rsi, rbp
+	add rsi, 32
+
+ stdio_test$343:
+	; Parameter 92 pointer £temporary4397
+	mov [rbp + 92], rsi
+
+ stdio_test$344:
+	; Call 36 sscanf 24
+	mov qword [rbp + 36], stdio_test$345
+	mov [rbp + 44], rbp
+	add rbp, 36
+	mov rdi, rbp
+	add rdi, 24
+	jmp sscanf
+
+ stdio_test$345:
+	; PostCall 36
+
+ stdio_test$346:
+	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ stdio_test$347:
+	; Parameter 60 pointer "<%i> <%i> <%i>\n"
+	mov qword [rbp + 60], string_3C25i3E203C25i3E203C25i3E0A#
+
+ stdio_test$348:
+	; Parameter 68 signedint a
+	mov eax, [rbp + 24]
+	mov [rbp + 68], eax
+
+ stdio_test$349:
+	; Parameter 72 signedint b
+	mov eax, [rbp + 28]
+	mov [rbp + 72], eax
+
+ stdio_test$350:
+	; Parameter 76 signedint n
+	mov eax, [rbp + 32]
+	mov [rbp + 76], eax
+
+ stdio_test$351:
+	; Call 36 printf 12
+	mov qword [rbp + 36], stdio_test$352
+	mov [rbp + 44], rbp
+	add rbp, 36
+	mov rdi, rbp
+	add rdi, 12
+	jmp printf
+
+ stdio_test$352:
+	; PostCall 36
+
+ stdio_test$353:
+	; PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ stdio_test$354:
+	; Parameter 148 pointer "Please write the patterns [abc]: "
+	mov qword [rbp + 148], string_Please20write20the20patterns205Babc5D3A20#
+
+ stdio_test$355:
+	; Call 124 printf 0
+	mov qword [rbp + 124], stdio_test$356
+	mov [rbp + 132], rbp
+	add rbp, 124
+	mov rdi, rbp
+	jmp printf
+
+ stdio_test$356:
+	; PostCall 124
+
+ stdio_test$357:
+	; PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ stdio_test$358:
+	; Parameter 148 pointer "abcdef"
+	mov qword [rbp + 148], string_abcdef#
+
+ stdio_test$359:
+	; Parameter 156 pointer "%[abc]"
+	mov qword [rbp + 156], string_255Babc5D#
+
+ stdio_test$360:
+	; Parameter 164 pointer s
+	mov [rbp + 164], rbp
+	add qword [rbp + 164], 24
+
+ stdio_test$361:
+	; Call 124 sscanf 8
+	mov qword [rbp + 124], stdio_test$362
+	mov [rbp + 132], rbp
+	add rbp, 124
+	mov rdi, rbp
+	add rdi, 8
+	jmp sscanf
+
+ stdio_test$362:
+	; PostCall 124
+
+ stdio_test$363:
+	; PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ stdio_test$364:
+	; Parameter 148 pointer "<%s>\n"
+	mov qword [rbp + 148], string_3C25s3E0A#
+
+ stdio_test$365:
+	; Parameter 156 pointer s
+	mov [rbp + 156], rbp
+	add qword [rbp + 156], 24
+
+ stdio_test$366:
+	; Call 124 printf 8
+	mov qword [rbp + 124], stdio_test$367
+	mov [rbp + 132], rbp
+	add rbp, 124
+	mov rdi, rbp
+	add rdi, 8
+	jmp printf
+
+ stdio_test$367:
+	; PostCall 124
+
+ stdio_test$368:
+	; PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ stdio_test$369:
+	; Parameter 148 pointer "Please write the patterns [^abc]: "
+	mov qword [rbp + 148], string_Please20write20the20patterns205B5Eabc5D3A20#
+
+ stdio_test$370:
+	; Call 124 printf 0
+	mov qword [rbp + 124], stdio_test$371
+	mov [rbp + 132], rbp
+	add rbp, 124
+	mov rdi, rbp
+	jmp printf
+
+ stdio_test$371:
+	; PostCall 124
+
+ stdio_test$372:
+	; PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ stdio_test$373:
+	; Parameter 148 pointer "defabc"
+	mov qword [rbp + 148], string_defabc#
+
+ stdio_test$374:
+	; Parameter 156 pointer "%[^abc]"
+	mov qword [rbp + 156], string_255B5Eabc5D#
+
+ stdio_test$375:
+	; Parameter 164 pointer s
+	mov [rbp + 164], rbp
+	add qword [rbp + 164], 24
+
+ stdio_test$376:
+	; Call 124 sscanf 8
+	mov qword [rbp + 124], stdio_test$377
+	mov [rbp + 132], rbp
+	add rbp, 124
+	mov rdi, rbp
+	add rdi, 8
+	jmp sscanf
+
+ stdio_test$377:
+	; PostCall 124
+
+ stdio_test$378:
+	; PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ stdio_test$379:
+	; Parameter 148 pointer "<%s>\n\n"
+	mov qword [rbp + 148], string_3C25s3E0A0A#
+
+ stdio_test$380:
+	; Parameter 156 pointer s
+	mov [rbp + 156], rbp
+	add qword [rbp + 156], 24
+
+ stdio_test$381:
+	; Call 124 printf 8
+	mov qword [rbp + 124], stdio_test$382
+	mov [rbp + 132], rbp
+	add rbp, 124
+	mov rdi, rbp
+	add rdi, 8
+	jmp printf
+
+ stdio_test$382:
+	; PostCall 124
+
+ stdio_test$383:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- stdio_test$329:
+ stdio_test$384:
 	; FunctionEnd stdio_test

@@ -4,9 +4,9 @@
 3: Goto PreCall 22
 4: PushFloat x
 5: PushFloat y
-6: SignedDivide £temporary3552 x y
+6: SignedDivide £temporary3553 x y
 7: SetReturnValue
-8: Return £temporary3552
+8: Return £temporary3553
 9: Goto Empty
 10: PreCall 22
 11: Parameter 28 pointer buffer

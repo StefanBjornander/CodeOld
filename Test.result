@@ -1,185 +1,141 @@
-264:
-old  <  tan(1.570796) = 1900275011850.106933, errno = 0>
-new  <  tan(1.570796) = -2147483648.000000, errno = 0>
-
-284:
-old  <  tan(-1.570796) = -1900275011850.106933, errno = 0>
-new  <  tan(-1.570796) = --2147483648.000000, errno = 0>
-
-431:
-old  <"X" has been renamed to "Y".>
-new  <Error 19: error while renaming file.>
-
-478:
-old  <malloc4: 7412746 0 80>
+481:
+old  <malloc4: 7414262 0 80>
 new  <malloc4: 65448 80 65528>
 
-641:
-old  <fileexists X: No>
-new  <fileexists X: Yes>
-
-643:
-old  <fileexists Main.asm: Yes>
-new  <fileexists Main.asm: No>
-
-645:
-old  <fileexists Main.c: Yes>
-new  <fileexists Main.c: No>
-
-646:
-old  <fileexists MainX.c: Yes>
-new  <fileexists MainX.c: No>
-
-647:
-old  <fileexists File.c: Yes>
-new  <fileexists File.c: No>
-
-649:
-old  <fileexists File.h: Yes>
-new  <fileexists File.h: No>
-
-651:
-old  <fileexists File.p: Yes>
-new  <fileexists File.p: No>
-
-672:
-old  <<%> <Hello, World!> <X> <6364302>>
-new  <<%> <Hello, World!> <X> <52217>>
-
-688:
-old  <now 1: 1606398620>
-new  <now 1: 1606398605>
-
-689:
-old  <now 2: 1606398620>
-new  <now 2: 1606398605>
-
-690:
-old  <   gm time: Thu 2020-11-26 13:50:20, year day 330, week day 4, daylight saving time -1>
-new  <   gm time: Thu 2020-11-26 13:50:05, year day 330, week day 4, daylight saving time -1>
-
-691:
-old  <local time: Thu 2020-11-26 14:50:20, year day 330, week day 4, daylight saving time -1>
-new  <local time: Thu 2020-11-26 14:50:05, year day 330, week day 4, daylight saving time -1>
-
-692:
-old  <asctime <Thu Nov 26 13:50:20 2020>, ctime <Thu Nov 26 14:50:20 2020>>
-new  <asctime <Thu Nov 26 13:50:05 2020>, ctime <Thu Nov 26 14:50:05 2020>>
-
-693:
-old  <strftime 287 287 <short day Thu, long day Thursday, short month Nov, long month November, date-time 2020-11-26 14:50:20, mday 26, hour 14, gm hour 2, yday 330, month 11, min 50, am/pm PM, sec 20, week number sun 4, week day 4, week number mon 3, date 14:50:20, time 14:50:20, short year 20, long year 2020>>
-new  <strftime 286 286 <short day Thu, long day Thursday, short month Nov, long month November, date-time 2020-11-26 14:50:05, mday 26, hour 14, gm hour 2, yday 330, month 11, min 50, am/pm PM, sec 5, week number sun 4, week day 4, week number mon 3, date 14:50:05, time 14:50:05, short year 20, long year 2020>>
+675:
+old  <<%> <Hello, World!> <X> <6365818>>
+new  <<%> <Hello, World!> <X> <53269>>
 
 695:
-old  <  Address 7412718, Size 96>
-new  <  Address 65428, Size 96>
+old  <now 1: 1606508104>
+new  <now 1: 1606507027>
 
 696:
-old  <  Address 7412610, Size 96>
-new  <  Address 65328, Size 96>
+old  <now 2: 1606508104>
+new  <now 2: 1606507027>
 
 697:
-old  <  Address 7412502, Size 96>
-new  <  Address 65228, Size 96>
+old  <   gm time: Fri 2020-11-27 20:15:04, year day 331, week day 5, daylight saving time -1>
+new  <   gm time: Fri 2020-11-27 19:57:07, year day 331, week day 5, daylight saving time -1>
+
+698:
+old  <local time: Fri 2020-11-27 21:15:04, year day 331, week day 5, daylight saving time -1>
+new  <local time: Fri 2020-11-27 20:57:07, year day 331, week day 5, daylight saving time -1>
+
+699:
+old  <asctime <Fri Nov 27 20:15:04 2020>, ctime <Fri Nov 27 21:15:04 2020>>
+new  <asctime <Fri Nov 27 19:57:07 2020>, ctime <Fri Nov 27 20:57:07 2020>>
 
 700:
-old  <  Address 7412718, Size 96>
-new  <  Address 65428, Size 96>
-
-701:
-old  <  Address 7412610, Size 52>
-new  <  Address 65328, Size 44>
+old  <strftime 284 284 <short day Fri, long day Friday, short month Nov, long month November, date-time 2020-11-27 21:15:04, mday 27, hour 21, gm hour 9, yday 331, month 11, min 15, am/pm PM, sec 4, week number sun 5, week day 5, week number mon 4, date 21:15:04, time 21:15:04, short year 20, long year 2020>>
+new  <strftime 284 284 <short day Fri, long day Friday, short month Nov, long month November, date-time 2020-11-27 20:57:07, mday 27, hour 20, gm hour 8, yday 331, month 11, min 57, am/pm PM, sec 7, week number sun 5, week day 5, week number mon 4, date 20:57:07, time 20:57:07, short year 20, long year 2020>>
 
 702:
-old  <  Address 7412502, Size 96>
-new  <  Address 65228, Size 96>
-
-705:
-old  <  Address 7412718, Size 96>
+old  <  Address 7414234, Size 96>
 new  <  Address 65428, Size 96>
 
-706:
-old  <  Address 7412610, Size 52>
-new  <  Address 65376, Size 40>
+703:
+old  <  Address 7414126, Size 96>
+new  <  Address 65328, Size 96>
+
+704:
+old  <  Address 7414018, Size 96>
+new  <  Address 65228, Size 96>
 
 707:
-old  <  Address 7412502, Size 96>
-new  <  Address 65328, Size 44>
+old  <  Address 7414234, Size 96>
+new  <  Address 65428, Size 96>
 
 708:
-old  <  Address 7412450, Size 40>
-new  <  Address 65228, Size 96>
+old  <  Address 7414126, Size 52>
+new  <  Address 65328, Size 44>
 
-711:
-old  <  Address 7412610, Size 52>
-new  <  Address 65376, Size 40>
+709:
+old  <  Address 7414018, Size 96>
+new  <  Address 65228, Size 96>
 
 712:
-old  <  Address 7412502, Size 96>
-new  <  Address 65328, Size 44>
+old  <  Address 7414234, Size 96>
+new  <  Address 65428, Size 96>
 
 713:
-old  <  Address 7412450, Size 40>
-new  <  Address 65228, Size 96>
-
-716:
-old  <  Address 7412610, Size 52>
+old  <  Address 7414126, Size 52>
 new  <  Address 65376, Size 40>
 
-717:
-old  <  Address 7412450, Size 40>
+714:
+old  <  Address 7414018, Size 96>
 new  <  Address 65328, Size 44>
 
-733:
+715:
+old  <  Address 7413966, Size 40>
+new  <  Address 65228, Size 96>
+
+718:
+old  <  Address 7414126, Size 52>
+new  <  Address 65376, Size 40>
+
+719:
+old  <  Address 7414018, Size 96>
+new  <  Address 65328, Size 44>
+
+720:
+old  <  Address 7413966, Size 40>
+new  <  Address 65228, Size 96>
+
+723:
+old  <  Address 7414126, Size 52>
+new  <  Address 65376, Size 40>
+
+724:
+old  <  Address 7413966, Size 40>
+new  <  Address 65328, Size 44>
+
+740:
 old  <SHRT_MIN = -32768>
 new  <SHRT_MIN = -128>
 
-734:
+741:
 old  <SHRT_MAX = 32767>
 new  <SHRT_MAX = 127>
 
-735:
+742:
 old  <USHRT_MAX = 65535>
 new  <USHRT_MAX = 255>
 
-737:
+744:
 old  <INT_MIN = -2147483648>
 new  <INT_MIN = -32768>
 
-738:
+745:
 old  <INT_MAX = 2147483647>
 new  <INT_MAX = 32767>
 
-739:
+746:
 old  <UINT_MAX = 4294967295>
 new  <UINT_MAX = 65535>
 
-741:
+748:
 old  <LONG_MIN = -9223372036854775808>
 new  <LONG_MIN = -2147483648>
 
-742:
+749:
 old  <LONG_MAX = 9223372036854775807>
 new  <LONG_MAX = 2147483647>
 
-743:
+750:
 old  <ULONG_MAX = 18446744073709551615>
 new  <ULONG_MAX = 4294967295>
 
-744:
+751:
 old  <ULONG_MAX = ffffffffffffffff>
 new  <ULONG_MAX = ffffffff>
 
-745:
+752:
 old  <ULONG_MAX = FFFFFFFFFFFFFFFF>
 new  <ULONG_MAX = FFFFFFFF>
 
-761:
-old  <strerror(errno) = "no error">
-new  <strerror(errno) = "error while renaming file">
+793:
+old  <<%> <Hello, World!> <X> <6365818>>
+new  <<%> <Hello> <X> <53269>>
 
-786:
-old  <<%> <Hello, World!> <X> <6364302>>
-new  <<%> <Hello> <X> <52217>>
-
-46
+35

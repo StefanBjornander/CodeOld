@@ -39,7 +39,7 @@
 38: PushFloat x
 39: SignedMultiply £temporary717 x x
 40: BinaryAdd £temporary718 1 £temporary717
-41: Parameter 14 £temporary718 6
+41: Parameter 14 £temporary718 14
 42: Call 14 sqrt 0
 43: PostCall 14
 44: GetReturnValue £temporary719

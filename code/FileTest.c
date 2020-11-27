@@ -55,6 +55,16 @@ void file_test() {
     fclose(outFilePtr);
   }
 
+  { char* sourceFile = "Y";
+    
+    if (remove(sourceFile) == 0) {
+      printf("\"%s\" has been removed\n", sourceFile);
+    }
+    else {
+      printf("Error \"%s\" %i: %s.\n", sourceFile, errno, strerror(errno));
+    }
+  }
+
   { char* sourceFile = "X";
     char* targetFile = "Y";
 
@@ -66,21 +76,42 @@ void file_test() {
       printf("\"%s\" has been renamed to \"%s\".\n", sourceFile, targetFile); // Rename FilePtr
     }
     else {
-      printf("Error %i: %s.\n", errno, strerror(errno));
+      printf("Error \"%s\" \"%s\" %i: %s.\n", sourceFile, targetFile, errno, strerror(errno));
     }
   }
 
-  { char* targetFilePtr = "Z";
+  { char* sourceFile = "X2";
+    char* targetFile = "Y2";
+
+    if (rename(sourceFile, targetFile) == 0) {
+      printf("\"%s\" has been renamed to \"%s\".\n", sourceFile, targetFile); // Rename FilePtr
+    }
+    else {
+      printf("Error \"%s\" \"%s\" %i: %s.\n", sourceFile, targetFile, errno, strerror(errno));
+    }
+  }
+
+  { char* targetFile = "Z";
   
-    FILE* filePtr = fopen("Z", "w");
+    FILE* filePtr = fopen(targetFile, "w");
     fprintf(filePtr, "Hello Z");
     fclose(filePtr);
 
-    if (remove(targetFilePtr) == 0) {
-      printf("\"%s\" has been removed.\n", targetFilePtr); // Remove FilePtr
+    if (remove(targetFile) == 0) {
+      printf("\"%s\" has been removed.\n", targetFile); // Remove FilePtr
     }
     else {
-      printf("Error %i: %s.\n", errno, strerror(errno));
+      printf("Error \"%s\" %i: %s.\n", targetFile, errno, strerror(errno));
+    }
+  }
+  
+  { char* targetFile = "Z2";
+  
+    if (remove(targetFile) == 0) {
+      printf("\"%s\" has been removed.\n", targetFile); // Remove FilePtr
+    }
+    else {
+      printf("Error \"%s\" %i: %s.\n", targetFile, errno, strerror(errno));
     }
   }
   
@@ -291,7 +322,7 @@ void file_test() {
     fclose(inFilePtr);
   }
 
-#define X(x) printf("fileexists " x ": %s\n", fileexists(x) ? "Yes" : "No")
+#define X(x) printf("fileexists \"" x "\": %s\n", fileexists(x) ? "Yes" : "No")
   X("X");
   X("Y");
   X("Main.asm");

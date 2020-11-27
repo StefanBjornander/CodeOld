@@ -13,8 +13,8 @@ assert_test$2:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Sym
 10:	
 
 assert_test$3:	; Parameter 8 stderr 6
-11:		mov a2665, [stderr]
-12:		mov [bp + 14], a2665
+11:		mov a2685, [stderr]
+12:		mov [bp + 14], a2685
 14:	
 
 assert_test$4:	; Parameter 8 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
@@ -59,10 +59,10 @@ assert_test$12:	; PostCall 8
 46:	
 
 assert_test$13:	; Return 0
-47:		mov t2666, [bp]
+47:		mov t2686, [bp]
 48:		mov di, [bp + 4]
 49:		mov bp, [bp + 2]
-50:		jmp t2666
+50:		jmp t2686
 52:	
 
 assert_test$14:	; FunctionEnd assert_test
@@ -97,13 +97,13 @@ assert_testX$6:	; Parameter 8 string_25i# 6
 21:		mov word [bp + 14], string_25i#
 23:	
 
-assert_testX$7:	; address £temporary4468 n
-24:		mov t2667, bp
-25:		add t2667, 6
+assert_testX$7:	; address £temporary4490 n
+24:		mov t2687, bp
+25:		add t2687, 6
 27:	
 
-assert_testX$8:	; Parameter 8 £temporary4468 8
-28:		mov [bp + 16], t2667
+assert_testX$8:	; Parameter 8 £temporary4490 8
+28:		mov [bp + 16], t2687
 30:	
 
 assert_testX$9:	; Call 8 scanf 0
@@ -127,8 +127,8 @@ assert_testX$12:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.S
 46:	
 
 assert_testX$13:	; Parameter 8 stderr 6
-47:		mov a2668, [stderr]
-48:		mov [bp + 14], a2668
+47:		mov a2688, [stderr]
+48:		mov [bp + 14], a2688
 50:	
 
 assert_testX$14:	; Parameter 8 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
@@ -176,8 +176,8 @@ assert_testX$23:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.S
 84:	
 
 assert_testX$24:	; Parameter 8 n 6
-85:		mov a2669, [bp + 6]
-86:		mov [bp + 14], a2669
+85:		mov a2689, [bp + 6]
+86:		mov [bp + 14], a2689
 88:	
 
 assert_testX$25:	; Call 8 assert_test2 0
@@ -191,10 +191,10 @@ assert_testX$26:	; PostCall 8
 96:	
 
 assert_testX$27:	; Return 0
-97:		mov t2670, [bp]
+97:		mov t2690, [bp]
 98:		mov di, [bp + 4]
 99:		mov bp, [bp + 2]
-100:		jmp t2670
+100:		jmp t2690
 102:	
 
 assert_testX$28:	; FunctionEnd assert_testX
@@ -209,8 +209,8 @@ assert_test2X$1:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.S
 7:	
 
 assert_test2X$2:	; Parameter 8 stderr 6
-8:		mov a2671, [stderr]
-9:		mov [bp + 14], a2671
+8:		mov a2691, [stderr]
+9:		mov [bp + 14], a2691
 11:	
 
 assert_test2X$3:	; Parameter 8 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
@@ -255,10 +255,10 @@ assert_test2X$11:	; PostCall 8
 43:	
 
 assert_test2X$12:	; Return 0
-44:		mov t2672, [bp]
+44:		mov t2692, [bp]
 45:		mov di, [bp + 4]
 46:		mov bp, [bp + 2]
-47:		jmp t2672
+47:		jmp t2692
 49:	
 
 assert_test2X$13:	; FunctionEnd assert_test2X

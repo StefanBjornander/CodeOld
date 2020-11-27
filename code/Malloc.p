@@ -649,12 +649,12 @@ UINT newBlockSize = ( ( UINT ) ( sizeof ( BLOCK_HEADER ) ) ) + ( ( UINT ) memory
 minGap = 0 ;
 
    
- UINT lastAddress = 65528u ;
+     
   
 
    
 
-           
+UINT lastAddress = ( UINT ) ( stack_top + 1048572u ) ;
 
   
 
@@ -704,11 +704,11 @@ else {
 UINT newAddress = lastAddress - newBlockSize ;
 
    
- UINT stackTop = register_bp ;
+     
   
 
    
-     
+ UINT stackTop = register_rbp ;
   
 
 
@@ -901,12 +901,12 @@ return oldMemoryPtr ;
 
 
    
- { UINT lastAddress = 65528u ;
+      
   
 
    
 
-            
+{ UINT lastAddress = ( UINT ) ( stack_top + 1048572u ) ;
 
   
 

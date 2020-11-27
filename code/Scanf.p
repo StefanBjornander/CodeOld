@@ -498,19 +498,19 @@ stream = ( FILE * ) g_inDevice ;
 
 handle = stream -> handle ;
    
- register_ah = 0x3Fs ;
-register_bx = handle ;
-register_cx = 1 ;
-register_dx = & c ;
-interrupt ( 0x21s ) ;
+    
+   
+   
+    
+    
   
 
    
-    
-         
-        
-   
-   
+ register_rax = 0x00L ;
+register_rdi = ( unsigned long ) stream -> handle ;
+register_rsi = ( unsigned long ) & c ;
+register_rdx = 1L ;
+syscall ( ) ;
   
 
 ++ g_inChars ;
@@ -537,7 +537,20 @@ break ;
 }
 }
 
-void scanPattern ( char * string , char * pattern , int not ) {
+static char * strnchr ( const char * text , int size , int i ) {
+int index ;
+char c = ( char ) i ;
+
+for ( index = 0 ; index < size ; ++ index ) {
+if ( text [ index ] == c ) {
+return & text [ index ];
+}
+}
+
+return ( ( void * ) 0 ) ;
+}
+
+void scanPattern ( char * string , char * pattern , int size , int not ) {
 int index = 0 ;
 char input = scanChar ( ) ;
 
@@ -546,8 +559,8 @@ input = scanChar ( ) ;
 }
 
 if ( string != ( ( void * ) 0 ) ) {
-while ( ( ! not && strchr ( pattern , input ) ) ||
-( not && ! strchr ( pattern , input ) ) ) {
+while ( ( ! not && strnchr ( pattern , size , input ) ) ||
+( not && ! strnchr ( pattern , size , input ) ) ) {
 string [ index ++] = input ;
 input = scanChar ( ) ;
 }
@@ -555,8 +568,8 @@ input = scanChar ( ) ;
 string [ index ] = '\0' ;
 }
 else {
-while ( ( ! not && strchr ( pattern , input ) ) ||
-( not && ! strchr ( pattern , input ) ) ) {
+while ( ( ! not && strnchr ( pattern , size , input ) ) ||
+( not && ! strnchr ( pattern , size , input ) ) ) {
 input = scanChar ( ) ;
 }
 }
@@ -997,17 +1010,24 @@ not = 1 ;
 }
 
 { int startIndex = index ;
+
 while ( format [ index ] != ']' ) {
 ++ index ;
 }
+
+{ int size = index - startIndex ;
+char c = format [ index ];
 format [ index ] = '\0' ;
 
 if ( ! star ) {
 char * string = ( * ( ( arg_list += sizeof ( char * ) ) , ( ( char * * ) ( arg_list - sizeof ( char * ) ) ) ) ) ;
-scanPattern ( string , & format [ startIndex ] , not ) ;
+scanPattern ( string , & format [ startIndex ] , size , not ) ;
 }
 else {
-scanPattern ( ( ( void * ) 0 ) , & format [ startIndex ] , not ) ;
+scanPattern ( ( ( void * ) 0 ) , & format [ startIndex ] , size , not ) ;
+}
+
+format [ index ] = c ;
 }
 }
 }
@@ -1020,7 +1040,7 @@ percent = 0 ;
 break ;
 
 default :
-printf ( "scanFormat c = '%c'\n" , c ) ;
+
 break ;
 }
 }

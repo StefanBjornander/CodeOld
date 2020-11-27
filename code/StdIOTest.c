@@ -47,6 +47,23 @@ void stdio_test(void) {
     printf("<%6.3lf> <%6.3le> <%6.3lE> <%6.3lg> <%6.3lG>\n\n", -123.456L, -123.456L, -123.456L, -123.456L, -123.456L);
   }
 
+
+  { int a = 0, b = 0, n = 0;
+    printf("Please write three integers: ");
+    sscanf("123 456 789", "%i %*i %i %n", &a, &b, &n);
+    printf("<%i> <%i> <%i>\n", a, b, n);
+  }
+
+  { char s[100];
+    printf("Please write the patterns [abc]: ");
+    sscanf("abcdef", "%[abc]", s);
+    printf("<%s>\n", s);
+
+    printf("Please write the patterns [^abc]: ");
+    sscanf("defabc", "%[^abc]", s);
+    printf("<%s>\n\n", s);
+  }
+
   /*{ int a = 0, b = 0, n = 0;
     printf("Please write three integers: ");
     scanf("%i %*i %i %n", &a, &b, &n);

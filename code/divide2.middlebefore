@@ -5,9 +5,9 @@
 4: CheckTrackMapFloatStack
 5: PushFloat x
 6: PushFloat y
-7: SignedDivide £temporary4690 x y
-8: SetReturnValue £temporary4690
-9: Return £temporary4690
+7: SignedDivide £temporary4694 x y
+8: SetReturnValue £temporary4694
+9: Return £temporary4694
 10: Goto Empty
 11: CallHeader 22 longjmp
 12: Parameter 22 buffer 6

@@ -3021,8 +3021,8 @@ atan$40:	; BinaryAdd £temporary718 1 £temporary717
 140:		fadd
 142:	
 
-atan$41:	; Parameter 14 £temporary718 6
-143:		fstp qword [bp + 44]
+atan$41:	; Parameter 14 £temporary718 14
+143:		fstp qword [bp + 52]
 145:	
 
 atan$42:	; Call 14 sqrt 0
