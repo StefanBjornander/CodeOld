@@ -48,10 +48,10 @@ static char* generateTempName(char name[L_tmpnam], int size, int status) {
             return name;
 
           case TEMP_NAME:
-            /*if (!existsTempName(name)) {
+            if (!existsTempName(name)) {
               strcpy(g_tempArray[g_tempSize], name);
               return g_tempArray[g_tempSize++];
-            }*/
+            }
             break;
         }
       }

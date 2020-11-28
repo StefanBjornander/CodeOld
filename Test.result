@@ -1,141 +1,141 @@
 481:
-old  <malloc4: 7414262 0 80>
+old  <malloc4: 7414570 0 80>
 new  <malloc4: 65448 80 65528>
 
-675:
-old  <<%> <Hello, World!> <X> <6365818>>
-new  <<%> <Hello, World!> <X> <53269>>
+656:
+old  <now 1: 1606573369>
+new  <now 1: 1606573307>
 
-695:
-old  <now 1: 1606508104>
-new  <now 1: 1606507027>
+657:
+old  <now 2: 1606573369>
+new  <now 2: 1606573307>
 
-696:
-old  <now 2: 1606508104>
-new  <now 2: 1606507027>
+658:
+old  <   gm time: Sat 2020-11-28 14:22:49, year day 332, week day 6, daylight saving time -1>
+new  <   gm time: Sat 2020-11-28 14:21:47, year day 332, week day 6, daylight saving time -1>
 
-697:
-old  <   gm time: Fri 2020-11-27 20:15:04, year day 331, week day 5, daylight saving time -1>
-new  <   gm time: Fri 2020-11-27 19:57:07, year day 331, week day 5, daylight saving time -1>
+659:
+old  <local time: Sat 2020-11-28 15:22:49, year day 332, week day 6, daylight saving time -1>
+new  <local time: Sat 2020-11-28 15:21:47, year day 332, week day 6, daylight saving time -1>
 
-698:
-old  <local time: Fri 2020-11-27 21:15:04, year day 331, week day 5, daylight saving time -1>
-new  <local time: Fri 2020-11-27 20:57:07, year day 331, week day 5, daylight saving time -1>
+660:
+old  <asctime <Sat Nov 28 14:22:49 2020>, ctime <Sat Nov 28 15:22:49 2020>>
+new  <asctime <Sat Nov 28 14:21:47 2020>, ctime <Sat Nov 28 15:21:47 2020>>
 
-699:
-old  <asctime <Fri Nov 27 20:15:04 2020>, ctime <Fri Nov 27 21:15:04 2020>>
-new  <asctime <Fri Nov 27 19:57:07 2020>, ctime <Fri Nov 27 20:57:07 2020>>
+661:
+old  <strftime 287 287 <short day Sat, long day Saturday, short month Nov, long month November, date-time 2020-11-28 15:22:49, mday 28, hour 15, gm hour 3, yday 332, month 11, min 22, am/pm PM, sec 49, week number sun 6, week day 6, week number mon 5, date 15:22:49, time 15:22:49, short year 20, long year 2020>>
+new  <strftime 287 287 <short day Sat, long day Saturday, short month Nov, long month November, date-time 2020-11-28 15:21:47, mday 28, hour 15, gm hour 3, yday 332, month 11, min 21, am/pm PM, sec 47, week number sun 6, week day 6, week number mon 5, date 15:21:47, time 15:21:47, short year 20, long year 2020>>
 
-700:
-old  <strftime 284 284 <short day Fri, long day Friday, short month Nov, long month November, date-time 2020-11-27 21:15:04, mday 27, hour 21, gm hour 9, yday 331, month 11, min 15, am/pm PM, sec 4, week number sun 5, week day 5, week number mon 4, date 21:15:04, time 21:15:04, short year 20, long year 2020>>
-new  <strftime 284 284 <short day Fri, long day Friday, short month Nov, long month November, date-time 2020-11-27 20:57:07, mday 27, hour 20, gm hour 8, yday 331, month 11, min 57, am/pm PM, sec 7, week number sun 5, week day 5, week number mon 4, date 20:57:07, time 20:57:07, short year 20, long year 2020>>
-
-702:
-old  <  Address 7414234, Size 96>
+663:
+old  <  Address 7414542, Size 96>
 new  <  Address 65428, Size 96>
 
-703:
-old  <  Address 7414126, Size 96>
+664:
+old  <  Address 7414434, Size 96>
 new  <  Address 65328, Size 96>
 
-704:
-old  <  Address 7414018, Size 96>
+665:
+old  <  Address 7414326, Size 96>
 new  <  Address 65228, Size 96>
 
-707:
-old  <  Address 7414234, Size 96>
+668:
+old  <  Address 7414542, Size 96>
 new  <  Address 65428, Size 96>
 
-708:
-old  <  Address 7414126, Size 52>
+669:
+old  <  Address 7414434, Size 52>
 new  <  Address 65328, Size 44>
 
-709:
-old  <  Address 7414018, Size 96>
+670:
+old  <  Address 7414326, Size 96>
 new  <  Address 65228, Size 96>
 
-712:
-old  <  Address 7414234, Size 96>
+673:
+old  <  Address 7414542, Size 96>
 new  <  Address 65428, Size 96>
 
-713:
-old  <  Address 7414126, Size 52>
+674:
+old  <  Address 7414434, Size 52>
 new  <  Address 65376, Size 40>
 
-714:
-old  <  Address 7414018, Size 96>
+675:
+old  <  Address 7414326, Size 96>
 new  <  Address 65328, Size 44>
 
-715:
-old  <  Address 7413966, Size 40>
+676:
+old  <  Address 7414274, Size 40>
 new  <  Address 65228, Size 96>
 
-718:
-old  <  Address 7414126, Size 52>
+679:
+old  <  Address 7414434, Size 52>
 new  <  Address 65376, Size 40>
 
-719:
-old  <  Address 7414018, Size 96>
+680:
+old  <  Address 7414326, Size 96>
 new  <  Address 65328, Size 44>
 
-720:
-old  <  Address 7413966, Size 40>
+681:
+old  <  Address 7414274, Size 40>
 new  <  Address 65228, Size 96>
 
-723:
-old  <  Address 7414126, Size 52>
+684:
+old  <  Address 7414434, Size 52>
 new  <  Address 65376, Size 40>
 
-724:
-old  <  Address 7413966, Size 40>
+685:
+old  <  Address 7414274, Size 40>
 new  <  Address 65328, Size 44>
 
-740:
+701:
 old  <SHRT_MIN = -32768>
 new  <SHRT_MIN = -128>
 
-741:
+702:
 old  <SHRT_MAX = 32767>
 new  <SHRT_MAX = 127>
 
-742:
+703:
 old  <USHRT_MAX = 65535>
 new  <USHRT_MAX = 255>
 
-744:
+705:
 old  <INT_MIN = -2147483648>
 new  <INT_MIN = -32768>
 
-745:
+706:
 old  <INT_MAX = 2147483647>
 new  <INT_MAX = 32767>
 
-746:
+707:
 old  <UINT_MAX = 4294967295>
 new  <UINT_MAX = 65535>
 
-748:
+709:
 old  <LONG_MIN = -9223372036854775808>
 new  <LONG_MIN = -2147483648>
 
-749:
+710:
 old  <LONG_MAX = 9223372036854775807>
 new  <LONG_MAX = 2147483647>
 
-750:
+711:
 old  <ULONG_MAX = 18446744073709551615>
 new  <ULONG_MAX = 4294967295>
 
-751:
+712:
 old  <ULONG_MAX = ffffffffffffffff>
 new  <ULONG_MAX = ffffffff>
 
-752:
+713:
 old  <ULONG_MAX = FFFFFFFFFFFFFFFF>
 new  <ULONG_MAX = FFFFFFFF>
 
-793:
-old  <<%> <Hello, World!> <X> <6365818>>
-new  <<%> <Hello> <X> <53269>>
+736:
+old  <<%> <Hello, World!> <X> <6366126>>
+new  <<%> <Hello, World!> <X> <58605>>
+
+795:
+old  <<%> <Hello, World!> <X> <6366126>>
+new  <<%> <Hello, World!> <X> <58605>>
 
 35

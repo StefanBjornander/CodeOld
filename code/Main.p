@@ -875,7 +875,6 @@ if ( ! ( 1 > 2 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at 
 void main ( void ) {
 math_test ( ) ;
 file_test ( ) ;
-stdio_test ( ) ;
 
 time_test ( ) ;
 assert_test ( ) ;
@@ -883,8 +882,9 @@ malloc_test ( ) ;
 print_test ( ) ;
 limits_test ( ) ;
 float_test ( ) ;
-string_test ( ) ;
 setjmp_test ( ) ;
+stdio_test ( ) ;
+string_test ( ) ;
 stdio_test ( ) ;
 stdlib_test ( ) ;
 strtol_test ( ) ;

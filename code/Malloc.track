@@ -48,15 +48,15 @@ malloc$10:	; Parameter 22 stderr 6
 38:	
 
 malloc$11:	; Parameter 22 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-39:		mov word [bp + 30], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+39:		mov word [bp + 30], @478$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 41:	
 
 malloc$12:	; Parameter 22 string_memorySize203E3D200# 10
-42:		mov word [bp + 32], string_memorySize203E3D200#
+42:		mov word [bp + 32], @479$string_memorySize203E3D200#
 44:	
 
 malloc$13:	; Parameter 22 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec# 12
-45:		mov word [bp + 34], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
+45:		mov word [bp + 34], @480$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 47:	
 
 malloc$14:	; Parameter 22 41 14
@@ -625,15 +625,15 @@ realloc$2:	; Parameter 10 stderr 6
 11:	
 
 realloc$3:	; Parameter 10 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-12:		mov word [bp + 18], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+12:		mov word [bp + 18], @640$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 14:	
 
 realloc$4:	; Parameter 10 string_newMemorySize203E3D200# 10
-15:		mov word [bp + 20], string_newMemorySize203E3D200#
+15:		mov word [bp + 20], @641$string_newMemorySize203E3D200#
 17:	
 
 realloc$5:	; Parameter 10 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec# 12
-18:		mov word [bp + 22], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
+18:		mov word [bp + 22], @642$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 20:	
 
 realloc$6:	; Parameter 10 259 14
@@ -684,15 +684,15 @@ realloc$15:	; Parameter 10 stderr 6
 57:	
 
 realloc$16:	; Parameter 10 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-58:		mov word [bp + 18], string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+58:		mov word [bp + 18], @655$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 60:	
 
 realloc$17:	; Parameter 10 string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029# 10
-61:		mov word [bp + 20], string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#
+61:		mov word [bp + 20], @656$string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#
 63:	
 
 realloc$18:	; Parameter 10 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec# 12
-64:		mov word [bp + 22], string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
+64:		mov word [bp + 22], @657$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 66:	
 
 realloc$19:	; Parameter 10 260 14
@@ -1035,7 +1035,7 @@ print_heap$1:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symb
 7:	
 
 print_heap$2:	; Parameter 8 string_Heap3A0A# 6
-8:		mov word [bp + 14], string_Heap3A0A#
+8:		mov word [bp + 14], @735$string_Heap3A0A#
 10:	
 
 print_heap$3:	; Call 8 printf 0
@@ -1058,7 +1058,7 @@ print_heap$6:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symb
 25:	
 
 print_heap$7:	; Parameter 8 string_2020Address2025u2C20Size2025u0A# 6
-26:		mov word [bp + 14], string_2020Address2025u2C20Size2025u0A#
+26:		mov word [bp + 14], @741$string_2020Address2025u2C20Size2025u0A#
 28:	
 
 print_heap$8:	; IntegralToIntegral £temporary338 currBlockPtr
@@ -1107,7 +1107,7 @@ print_heap$17:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Sym
 64:	
 
 print_heap$18:	; Parameter 8 string_0A# 6
-65:		mov word [bp + 14], string_0A#
+65:		mov word [bp + 14], @746$string_0A#
 67:	
 
 print_heap$19:	; Call 8 printf 0

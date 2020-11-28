@@ -1,12 +1,12 @@
 1:	
 
 setlocale:	; Equal 4 g_currStructPtr 0
-2:		cmp word [@614$g_currStructPtr], 0
+2:		cmp word [@1131$g_currStructPtr], 0
 3:		je setlocale$4
 5:	
 
 setlocale$1:	; Deref £temporary473 -> g_currStructPtr g_currStructPtr 0
-6:		mov a315, [@614$g_currStructPtr]
+6:		mov a315, [@1131$g_currStructPtr]
 8:	
 
 setlocale$2:	; Assign £temporary477 £temporary473 -> g_currStructPtr
@@ -26,7 +26,7 @@ setlocale$5:	; Assign oldName £temporary477
 20:	
 
 setlocale$6:	; Assign g_currStructPtr 0
-21:		mov word [@614$g_currStructPtr], 0
+21:		mov word [@1131$g_currStructPtr], 0
 23:	
 
 setlocale$7:	; Equal 28 newName 0
@@ -39,7 +39,7 @@ setlocale$8:	; Assign index 0
 30:	
 
 setlocale$9:	; SignedGreaterThanEqual 28 index sSize
-31:		mov a318, [@613$sSize]
+31:		mov a318, [@1127$sSize]
 32:		cmp [bp + 10], a318
 33:		jge setlocale$28
 35:	
@@ -55,11 +55,11 @@ setlocale$11:	; Parameter 14 newName 6
 setlocale$12:	; UnsignedMultiply £temporary482 index 4
 42:		mov a320, [bp + 10]
 44:		xor dx, dx
-45:		mul word [int2$4#]
+45:		mul word [@1161$int2$4#]
 51:	
 
 setlocale$13:	; BinaryAdd £temporary483 sArray £temporary482
-52:		mov a324, @612$sArray
+52:		mov a324, @1122$sArray
 53:		add a324, t323
 55:	
 
@@ -92,11 +92,11 @@ setlocale$19:	; NotEqual 26 £temporary484 0
 setlocale$20:	; UnsignedMultiply £temporary487 index 4
 79:		mov a328, [bp + 10]
 81:		xor dx, dx
-82:		mul word [int2$4#]
+82:		mul word [@1170$int2$4#]
 88:	
 
 setlocale$21:	; BinaryAdd £temporary488 sArray £temporary487
-89:		mov a332, @612$sArray
+89:		mov a332, @1122$sArray
 90:		add a332, t331
 92:	
 
@@ -107,7 +107,7 @@ setlocale$23:	; address £temporary489 £temporary486 -> £temporary488
 96:	
 
 setlocale$24:	; Assign g_currStructPtr £temporary489
-97:		mov [@614$g_currStructPtr], a332
+97:		mov [@1131$g_currStructPtr], a332
 99:	
 
 setlocale$25:	; Goto 28
@@ -137,12 +137,12 @@ setlocale$30:	; FunctionEnd setlocale
 1:	
 
 localeconv:	; Equal 4 g_currStructPtr 0
-2:		cmp word [@614$g_currStructPtr], 0
+2:		cmp word [@1131$g_currStructPtr], 0
 3:		je localeconv$4
 5:	
 
 localeconv$1:	; Deref £temporary493 -> g_currStructPtr g_currStructPtr 2
-6:		mov a335, [@614$g_currStructPtr]
+6:		mov a335, [@1131$g_currStructPtr]
 8:	
 
 localeconv$2:	; Assign £temporary497 £temporary493 -> g_currStructPtr

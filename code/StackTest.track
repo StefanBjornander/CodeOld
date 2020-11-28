@@ -4,19 +4,19 @@ stack_test:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol
 3:	
 
 stack_test$1:	; Parameter 6 string_25i20# 6
-4:		mov word [bp + 12], string_25i20#
+4:		mov word [bp + 12], @12698$string_25i20#
 6:	
 
-stack_test$2:	; Assign £temporary6027 i
-7:		mov t3106, [@6924$i]
+stack_test$2:	; Assign £temporary6051 i
+7:		mov t3127, [@12696$i]
 9:	
 
 stack_test$3:	; Increment i
-10:		inc word [@6924$i]
+10:		inc word [@12696$i]
 12:	
 
-stack_test$4:	; Parameter 6 £temporary6027 8
-13:		mov [bp + 14], t3106
+stack_test$4:	; Parameter 6 £temporary6051 8
+13:		mov [bp + 14], t3127
 15:	
 
 stack_test$5:	; Call 6 printf 0
@@ -45,10 +45,10 @@ stack_test$9:	; PostCall 6
 35:	
 
 stack_test$10:	; Return 0
-36:		mov t3107, [bp]
+36:		mov t3128, [bp]
 37:		mov di, [bp + 4]
 38:		mov bp, [bp + 2]
-39:		jmp t3107
+39:		jmp t3128
 41:	
 
 stack_test$11:	; FunctionEnd stack_test
@@ -75,11 +75,11 @@ heap_test$3:	; Call 10 malloc 0
 heap_test$4:	; PostCall 10
 17:	
 
-heap_test$5:	; GetReturnValue £temporary6032
+heap_test$5:	; GetReturnValue £temporary6056
 22:	
 
-heap_test$6:	; Assign pointer £temporary6032
-23:		mov [bp + 8], t3109
+heap_test$6:	; Assign pointer £temporary6056
+23:		mov [bp + 8], t3130
 25:	
 
 heap_test$7:	; Equal 17 pointer 0
@@ -91,24 +91,24 @@ heap_test$8:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symb
 31:	
 
 heap_test$9:	; Parameter 10 string_102420bytes2Dblock20number3A2025i0A# 6
-32:		mov word [bp + 16], string_102420bytes2Dblock20number3A2025i0A#
+32:		mov word [bp + 16], @12717$string_102420bytes2Dblock20number3A2025i0A#
 34:	
 
-heap_test$10:	; Assign £temporary6034 count
-35:		mov t3110, [bp + 6]
+heap_test$10:	; Assign £temporary6058 count
+35:		mov t3131, [bp + 6]
 37:	
 
 heap_test$11:	; Increment count
 38:		inc word [bp + 6]
 40:	
 
-heap_test$12:	; Parameter 10 £temporary6034 8
-41:		mov [bp + 18], t3110
+heap_test$12:	; Parameter 10 £temporary6058 8
+41:		mov [bp + 18], t3131
 43:	
 
 heap_test$13:	; Parameter 10 pointer 10
-44:		mov a3111, [bp + 8]
-45:		mov [bp + 20], a3111
+44:		mov a3132, [bp + 8]
+45:		mov [bp + 20], a3132
 47:	
 
 heap_test$14:	; Call 10 printf 0
@@ -128,10 +128,10 @@ heap_test$16:	; Goto 1
 60:	
 
 heap_test$17:	; Return 0
-61:		mov t3112, [bp]
+61:		mov t3133, [bp]
 62:		mov di, [bp + 4]
 63:		mov bp, [bp + 2]
-64:		jmp t3112
+64:		jmp t3133
 66:	
 
 heap_test$18:	; FunctionEnd heap_test

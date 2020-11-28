@@ -47,6 +47,8 @@ void string_test(void) {
   p = memchr(s, 'x', SIZE * sizeof(char));
   printf("memchr(s, 'x', SIZE * sizeof(char)) = %i\n", (p != NULL) ? (p - s) : -1);
 
+  printf("s: \"%s\", t: \"%s\"\n", s, t);
+  printf("strcmp(s, t) = %i\n", strcmp(s, t));
   printf("memcmp(s, t, SIZE * sizeof(char)) = %i\n", memcmp(s, t, SIZE * sizeof(char)));
 
   printf("strspn(s, \"Hello, C\") = %i\n", strspn(s, "Hello, C"));

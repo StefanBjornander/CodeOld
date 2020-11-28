@@ -449,10 +449,10 @@ case 0 :
 return name ;
 
 case 1 :
-
-
-
-
+if ( ! existsTempName ( name ) ) {
+strcpy ( g_tempArray [ g_tempSize ] , name ) ;
+return g_tempArray [ g_tempSize ++];
+}
 break ;
 }
 }

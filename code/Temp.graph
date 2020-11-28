@@ -37,8 +37,37 @@ generateTempName
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a803 a803 g_tempArray 117 118 123,t804 t804 £temporary1190 123 124)
+  (a803 a803 g_tempArray 117 118 123,t802 t802 £temporary1191 ax 114 118)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a803 a803 g_tempArray si 117 118 123,t804 t804 £temporary1190 ax 123 124)
+  (a803 a803 g_tempArray si 117 118 123,t802 t802 £temporary1191 ax 114 118)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a810 a810 g_tempArray 154 155 160,t811 t811 £temporary1195 bx 160)
+  (a810 a810 g_tempArray 154 155 160,t809 t809 £temporary1196 ax 151 155)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a810 a810 g_tempArray si 154 155 160,t811 t811 £temporary1195 bx 160)
+  (a810 a810 g_tempArray si 154 155 160,t809 t809 £temporary1196 ax 151 155)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a803 a803 g_tempArray si 117 118 123,t804 t804 £temporary1190 ax 123 124)
+  (a803 a803 g_tempArray si 117 118 123,t802 t802 £temporary1191 ax 114 118)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a810 a810 g_tempArray si 154 155 160,t811 t811 £temporary1195 bx 160)
+  (a810 a810 g_tempArray si 154 155 160,t809 t809 £temporary1196 ax 151 155)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>

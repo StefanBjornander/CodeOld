@@ -4,7 +4,7 @@ signal:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
 signal$1:	; Parameter 10 string_Signal2025i20function2025p0A# 6
-4:		mov word [bp + 16], string_Signal2025i20function2025p0A#
+4:		mov word [bp + 16], @1892$string_Signal2025i20function2025p0A#
 6:	
 
 signal$2:	; Parameter 10 sig 8
@@ -56,7 +56,7 @@ signal$11:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol
 47:	
 
 signal$12:	; Parameter 10 string_Signal20done0A# 6
-48:		mov word [bp + 16], string_Signal20done0A#
+48:		mov word [bp + 16], @1901$string_Signal20done0A#
 50:	
 
 signal$13:	; Call 10 printf 0
@@ -84,7 +84,7 @@ raise:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
 raise$1:	; Parameter 8 string_0ARaise20signal2025i0A# 6
-4:		mov word [bp + 14], string_0ARaise20signal2025i0A#
+4:		mov word [bp + 14], @1908$string_0ARaise20signal2025i0A#
 6:	
 
 raise$2:	; Parameter 8 sig 8
@@ -134,7 +134,7 @@ raise$11:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 45:	
 
 raise$12:	; Parameter 10 string_Raise20function2025p0A# 6
-46:		mov word [bp + 16], string_Raise20function2025p0A#
+46:		mov word [bp + 16], @1918$string_Raise20function2025p0A#
 48:	
 
 raise$13:	; Parameter 10 func 8
@@ -163,7 +163,7 @@ raise$17:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 68:	
 
 raise$18:	; Parameter 10 string_Raise20default0A# 6
-69:		mov word [bp + 16], string_Raise20default0A#
+69:		mov word [bp + 16], @1924$string_Raise20default0A#
 71:	
 
 raise$19:	; Call 10 printf 0
@@ -197,7 +197,7 @@ raise$24:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 95:	
 
 raise$25:	; Parameter 10 string_Raise20error0A# 6
-96:		mov word [bp + 16], string_Raise20error0A#
+96:		mov word [bp + 16], @1932$string_Raise20error0A#
 98:	
 
 raise$26:	; Call 10 printf 0
@@ -226,7 +226,7 @@ raise$30:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 118:	
 
 raise$31:	; Parameter 10 string_Raise20function2C20calling2025i20with2025i0A# 6
-119:		mov word [bp + 16], string_Raise20function2C20calling2025i20with2025i0A#
+119:		mov word [bp + 16], @1936$string_Raise20function2C20calling2025i20with2025i0A#
 121:	
 
 raise$32:	; Parameter 10 func 8

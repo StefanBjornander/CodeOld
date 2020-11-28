@@ -7,9 +7,13 @@ string_test
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a2702 a2702 i 174 175 180,a2703 a2703 u 178 179 180 185)>
+  (a2719 a2719 i 174 175 180,a2720 a2720 u 178 179 180 185)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a2702 a2702 i ax 174 175 180,a2703 a2703 u si 178 179 180 185)>
+  (a2719 a2719 i ax 174 175 180,a2720 a2720 u si 178 179 180 185)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>

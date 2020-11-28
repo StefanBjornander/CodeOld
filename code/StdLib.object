@@ -26,20 +26,20 @@ atoi$4:	; Call 8 strtol 0
 atoi$5:	; PostCall 8
 21:	
 
-atoi$6:	; GetReturnValue £temporary2406
+atoi$6:	; GetReturnValue £temporary2420
 26:	
 
-atoi$7:	; IntegralToIntegral £temporary2407 £temporary2406
+atoi$7:	; IntegralToIntegral £temporary2421 £temporary2420
 29:		cmp ebx, 0
 30:		jge atoi$8
 31:		neg ebx
 33:		neg bx
 35:	
 
-atoi$8:	; SetReturnValue £temporary2407
+atoi$8:	; SetReturnValue £temporary2421
 37:	
 
-atoi$9:	; Return £temporary2407
+atoi$9:	; Return £temporary2421
 38:		mov ax, [bp]
 39:		mov di, [bp + 4]
 40:		mov bp, [bp + 2]
@@ -75,13 +75,13 @@ atol$4:	; Call 8 strtol 0
 atol$5:	; PostCall 8
 21:	
 
-atol$6:	; GetReturnValue £temporary2411
+atol$6:	; GetReturnValue £temporary2425
 26:	
 
-atol$7:	; SetReturnValue £temporary2411
+atol$7:	; SetReturnValue £temporary2425
 28:	
 
-atol$8:	; Return £temporary2411
+atol$8:	; Return £temporary2425
 29:		mov ax, [bp]
 30:		mov di, [bp + 4]
 31:		mov bp, [bp + 2]
@@ -122,10 +122,10 @@ strtol$5:	; Call 12 scanLongInt 0
 strtol$6:	; PostCall 12
 25:	
 
-strtol$7:	; GetReturnValue £temporary2415
+strtol$7:	; GetReturnValue £temporary2429
 30:	
 
-strtol$8:	; Assign value £temporary2415
+strtol$8:	; Assign value £temporary2429
 31:		mov [bp + 12], ebx
 33:	
 
@@ -134,11 +134,11 @@ strtol$9:	; Equal 12 endp 0
 35:		je strtol$12
 37:	
 
-strtol$10:	; Deref £temporary2417 -> endp endp 0
+strtol$10:	; Deref £temporary2431 -> endp endp 0
 38:		mov si, [bp + 8]
 40:	
 
-strtol$11:	; BinaryAdd £temporary2417 -> endp s g_inChars
+strtol$11:	; BinaryAdd £temporary2431 -> endp s g_inChars
 41:		mov ax, [bp + 6]
 42:		add ax, [g_inChars]
 43:		mov [si], ax
@@ -214,12 +214,12 @@ strtol_test$13:	; Parameter 21 text 6
 41:		add word [bp + 27], 8
 43:	
 
-strtol_test$14:	; address £temporary2431 pointer
+strtol_test$14:	; address £temporary2445 pointer
 44:		mov si, bp
 45:		add si, 19
 47:	
 
-strtol_test$15:	; Parameter 21 £temporary2431 8
+strtol_test$15:	; Parameter 21 £temporary2445 8
 48:		mov [bp + 29], si
 50:	
 
@@ -238,10 +238,10 @@ strtol_test$17:	; Call 21 strtol 0
 strtol_test$18:	; PostCall 21
 62:	
 
-strtol_test$19:	; GetReturnValue £temporary2432
+strtol_test$19:	; GetReturnValue £temporary2446
 67:	
 
-strtol_test$20:	; Assign value £temporary2432
+strtol_test$20:	; Assign value £temporary2446
 68:		mov [bp + 21], ebx
 70:	
 
@@ -249,7 +249,7 @@ strtol_test$21:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.S
 72:	
 
 strtol_test$22:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-73:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+73:		mov word [bp + 31], @5388$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 75:	
 
 strtol_test$23:	; Parameter 25 text 8
@@ -344,12 +344,12 @@ strtol_test$43:	; Parameter 22 text 6
 144:		add word [bp + 28], 8
 146:	
 
-strtol_test$44:	; address £temporary2446 pointer
+strtol_test$44:	; address £temporary2460 pointer
 147:		mov si, bp
 148:		add si, 20
 150:	
 
-strtol_test$45:	; Parameter 22 £temporary2446 8
+strtol_test$45:	; Parameter 22 £temporary2460 8
 151:		mov [bp + 30], si
 153:	
 
@@ -368,10 +368,10 @@ strtol_test$47:	; Call 22 strtol 0
 strtol_test$48:	; PostCall 22
 165:	
 
-strtol_test$49:	; GetReturnValue £temporary2447
+strtol_test$49:	; GetReturnValue £temporary2461
 170:	
 
-strtol_test$50:	; Assign value £temporary2447
+strtol_test$50:	; Assign value £temporary2461
 171:		mov [bp + 22], ebx
 173:	
 
@@ -379,7 +379,7 @@ strtol_test$51:	; CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.S
 175:	
 
 strtol_test$52:	; Parameter 26 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-176:		mov word [bp + 32], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+176:		mov word [bp + 32], @5435$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 178:	
 
 strtol_test$53:	; Parameter 26 text 8
@@ -478,12 +478,12 @@ strtol_test$74:	; Parameter 23 text 6
 250:		add word [bp + 29], 8
 252:	
 
-strtol_test$75:	; address £temporary2462 pointer
+strtol_test$75:	; address £temporary2476 pointer
 253:		mov si, bp
 254:		add si, 21
 256:	
 
-strtol_test$76:	; Parameter 23 £temporary2462 8
+strtol_test$76:	; Parameter 23 £temporary2476 8
 257:		mov [bp + 31], si
 259:	
 
@@ -502,10 +502,10 @@ strtol_test$78:	; Call 23 strtol 0
 strtol_test$79:	; PostCall 23
 271:	
 
-strtol_test$80:	; GetReturnValue £temporary2463
+strtol_test$80:	; GetReturnValue £temporary2477
 276:	
 
-strtol_test$81:	; Assign value £temporary2463
+strtol_test$81:	; Assign value £temporary2477
 277:		mov [bp + 23], ebx
 279:	
 
@@ -513,7 +513,7 @@ strtol_test$82:	; CallHeader 27 System.Collections.Generic.HashSet`1[CCompiler.S
 281:	
 
 strtol_test$83:	; Parameter 27 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-282:		mov word [bp + 33], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+282:		mov word [bp + 33], @5485$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 284:	
 
 strtol_test$84:	; Parameter 27 text 8
@@ -612,12 +612,12 @@ strtol_test$105:	; Parameter 23 text 6
 356:		add word [bp + 29], 8
 358:	
 
-strtol_test$106:	; address £temporary2478 pointer
+strtol_test$106:	; address £temporary2492 pointer
 359:		mov si, bp
 360:		add si, 21
 362:	
 
-strtol_test$107:	; Parameter 23 £temporary2478 8
+strtol_test$107:	; Parameter 23 £temporary2492 8
 363:		mov [bp + 31], si
 365:	
 
@@ -636,10 +636,10 @@ strtol_test$109:	; Call 23 strtol 0
 strtol_test$110:	; PostCall 23
 377:	
 
-strtol_test$111:	; GetReturnValue £temporary2479
+strtol_test$111:	; GetReturnValue £temporary2493
 382:	
 
-strtol_test$112:	; Assign value £temporary2479
+strtol_test$112:	; Assign value £temporary2493
 383:		mov [bp + 23], ebx
 385:	
 
@@ -647,7 +647,7 @@ strtol_test$113:	; CallHeader 27 System.Collections.Generic.HashSet`1[CCompiler.
 387:	
 
 strtol_test$114:	; Parameter 27 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-388:		mov word [bp + 33], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+388:		mov word [bp + 33], @5535$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 390:	
 
 strtol_test$115:	; Parameter 27 text 8
@@ -738,12 +738,12 @@ strtol_test$134:	; Parameter 21 text 6
 456:		add word [bp + 27], 8
 458:	
 
-strtol_test$135:	; address £temporary2492 pointer
+strtol_test$135:	; address £temporary2506 pointer
 459:		mov si, bp
 460:		add si, 19
 462:	
 
-strtol_test$136:	; Parameter 21 £temporary2492 8
+strtol_test$136:	; Parameter 21 £temporary2506 8
 463:		mov [bp + 29], si
 465:	
 
@@ -762,10 +762,10 @@ strtol_test$138:	; Call 21 strtol 0
 strtol_test$139:	; PostCall 21
 477:	
 
-strtol_test$140:	; GetReturnValue £temporary2493
+strtol_test$140:	; GetReturnValue £temporary2507
 482:	
 
-strtol_test$141:	; Assign value £temporary2493
+strtol_test$141:	; Assign value £temporary2507
 483:		mov [bp + 21], ebx
 485:	
 
@@ -773,7 +773,7 @@ strtol_test$142:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 487:	
 
 strtol_test$143:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-488:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+488:		mov word [bp + 31], @5579$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 490:	
 
 strtol_test$144:	; Parameter 25 text 8
@@ -868,12 +868,12 @@ strtol_test$164:	; Parameter 22 text 6
 559:		add word [bp + 28], 8
 561:	
 
-strtol_test$165:	; address £temporary2507 pointer
+strtol_test$165:	; address £temporary2521 pointer
 562:		mov si, bp
 563:		add si, 20
 565:	
 
-strtol_test$166:	; Parameter 22 £temporary2507 8
+strtol_test$166:	; Parameter 22 £temporary2521 8
 566:		mov [bp + 30], si
 568:	
 
@@ -892,10 +892,10 @@ strtol_test$168:	; Call 22 strtol 0
 strtol_test$169:	; PostCall 22
 580:	
 
-strtol_test$170:	; GetReturnValue £temporary2508
+strtol_test$170:	; GetReturnValue £temporary2522
 585:	
 
-strtol_test$171:	; Assign value £temporary2508
+strtol_test$171:	; Assign value £temporary2522
 586:		mov [bp + 22], ebx
 588:	
 
@@ -903,7 +903,7 @@ strtol_test$172:	; CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.
 590:	
 
 strtol_test$173:	; Parameter 26 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-591:		mov word [bp + 32], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+591:		mov word [bp + 32], @5626$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 593:	
 
 strtol_test$174:	; Parameter 26 text 8
@@ -1002,12 +1002,12 @@ strtol_test$195:	; Parameter 23 text 6
 665:		add word [bp + 29], 8
 667:	
 
-strtol_test$196:	; address £temporary2523 pointer
+strtol_test$196:	; address £temporary2537 pointer
 668:		mov si, bp
 669:		add si, 21
 671:	
 
-strtol_test$197:	; Parameter 23 £temporary2523 8
+strtol_test$197:	; Parameter 23 £temporary2537 8
 672:		mov [bp + 31], si
 674:	
 
@@ -1026,10 +1026,10 @@ strtol_test$199:	; Call 23 strtol 0
 strtol_test$200:	; PostCall 23
 686:	
 
-strtol_test$201:	; GetReturnValue £temporary2524
+strtol_test$201:	; GetReturnValue £temporary2538
 691:	
 
-strtol_test$202:	; Assign value £temporary2524
+strtol_test$202:	; Assign value £temporary2538
 692:		mov [bp + 23], ebx
 694:	
 
@@ -1037,7 +1037,7 @@ strtol_test$203:	; CallHeader 27 System.Collections.Generic.HashSet`1[CCompiler.
 696:	
 
 strtol_test$204:	; Parameter 27 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-697:		mov word [bp + 33], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+697:		mov word [bp + 33], @5676$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 699:	
 
 strtol_test$205:	; Parameter 27 text 8
@@ -1136,12 +1136,12 @@ strtol_test$226:	; Parameter 23 text 6
 771:		add word [bp + 29], 8
 773:	
 
-strtol_test$227:	; address £temporary2539 pointer
+strtol_test$227:	; address £temporary2553 pointer
 774:		mov si, bp
 775:		add si, 21
 777:	
 
-strtol_test$228:	; Parameter 23 £temporary2539 8
+strtol_test$228:	; Parameter 23 £temporary2553 8
 778:		mov [bp + 31], si
 780:	
 
@@ -1160,10 +1160,10 @@ strtol_test$230:	; Call 23 strtol 0
 strtol_test$231:	; PostCall 23
 792:	
 
-strtol_test$232:	; GetReturnValue £temporary2540
+strtol_test$232:	; GetReturnValue £temporary2554
 797:	
 
-strtol_test$233:	; Assign value £temporary2540
+strtol_test$233:	; Assign value £temporary2554
 798:		mov [bp + 23], ebx
 800:	
 
@@ -1171,7 +1171,7 @@ strtol_test$234:	; CallHeader 27 System.Collections.Generic.HashSet`1[CCompiler.
 802:	
 
 strtol_test$235:	; Parameter 27 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-803:		mov word [bp + 33], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+803:		mov word [bp + 33], @5726$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 805:	
 
 strtol_test$236:	; Parameter 27 text 8
@@ -1262,12 +1262,12 @@ strtol_test$255:	; Parameter 21 text 6
 871:		add word [bp + 27], 8
 873:	
 
-strtol_test$256:	; address £temporary2553 pointer
+strtol_test$256:	; address £temporary2567 pointer
 874:		mov si, bp
 875:		add si, 19
 877:	
 
-strtol_test$257:	; Parameter 21 £temporary2553 8
+strtol_test$257:	; Parameter 21 £temporary2567 8
 878:		mov [bp + 29], si
 880:	
 
@@ -1286,10 +1286,10 @@ strtol_test$259:	; Call 21 strtol 0
 strtol_test$260:	; PostCall 21
 892:	
 
-strtol_test$261:	; GetReturnValue £temporary2554
+strtol_test$261:	; GetReturnValue £temporary2568
 897:	
 
-strtol_test$262:	; Assign value £temporary2554
+strtol_test$262:	; Assign value £temporary2568
 898:		mov [bp + 21], ebx
 900:	
 
@@ -1297,7 +1297,7 @@ strtol_test$263:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 902:	
 
 strtol_test$264:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-903:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+903:		mov word [bp + 31], @5770$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 905:	
 
 strtol_test$265:	; Parameter 25 text 8
@@ -1388,12 +1388,12 @@ strtol_test$284:	; Parameter 21 text 6
 971:		add word [bp + 27], 8
 973:	
 
-strtol_test$285:	; address £temporary2567 pointer
+strtol_test$285:	; address £temporary2581 pointer
 974:		mov si, bp
 975:		add si, 19
 977:	
 
-strtol_test$286:	; Parameter 21 £temporary2567 8
+strtol_test$286:	; Parameter 21 £temporary2581 8
 978:		mov [bp + 29], si
 980:	
 
@@ -1412,10 +1412,10 @@ strtol_test$288:	; Call 21 strtol 0
 strtol_test$289:	; PostCall 21
 992:	
 
-strtol_test$290:	; GetReturnValue £temporary2568
+strtol_test$290:	; GetReturnValue £temporary2582
 997:	
 
-strtol_test$291:	; Assign value £temporary2568
+strtol_test$291:	; Assign value £temporary2582
 998:		mov [bp + 21], ebx
 1000:	
 
@@ -1423,7 +1423,7 @@ strtol_test$292:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1002:	
 
 strtol_test$293:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1003:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1003:		mov word [bp + 31], @5814$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1005:	
 
 strtol_test$294:	; Parameter 25 text 8
@@ -1514,12 +1514,12 @@ strtol_test$313:	; Parameter 21 text 6
 1071:		add word [bp + 27], 8
 1073:	
 
-strtol_test$314:	; address £temporary2581 pointer
+strtol_test$314:	; address £temporary2595 pointer
 1074:		mov si, bp
 1075:		add si, 19
 1077:	
 
-strtol_test$315:	; Parameter 21 £temporary2581 8
+strtol_test$315:	; Parameter 21 £temporary2595 8
 1078:		mov [bp + 29], si
 1080:	
 
@@ -1538,10 +1538,10 @@ strtol_test$317:	; Call 21 strtol 0
 strtol_test$318:	; PostCall 21
 1092:	
 
-strtol_test$319:	; GetReturnValue £temporary2582
+strtol_test$319:	; GetReturnValue £temporary2596
 1097:	
 
-strtol_test$320:	; Assign value £temporary2582
+strtol_test$320:	; Assign value £temporary2596
 1098:		mov [bp + 21], ebx
 1100:	
 
@@ -1549,7 +1549,7 @@ strtol_test$321:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1102:	
 
 strtol_test$322:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1103:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1103:		mov word [bp + 31], @5858$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1105:	
 
 strtol_test$323:	; Parameter 25 text 8
@@ -1640,12 +1640,12 @@ strtol_test$342:	; Parameter 21 text 6
 1171:		add word [bp + 27], 8
 1173:	
 
-strtol_test$343:	; address £temporary2595 pointer
+strtol_test$343:	; address £temporary2609 pointer
 1174:		mov si, bp
 1175:		add si, 19
 1177:	
 
-strtol_test$344:	; Parameter 21 £temporary2595 8
+strtol_test$344:	; Parameter 21 £temporary2609 8
 1178:		mov [bp + 29], si
 1180:	
 
@@ -1664,10 +1664,10 @@ strtol_test$346:	; Call 21 strtol 0
 strtol_test$347:	; PostCall 21
 1192:	
 
-strtol_test$348:	; GetReturnValue £temporary2596
+strtol_test$348:	; GetReturnValue £temporary2610
 1197:	
 
-strtol_test$349:	; Assign value £temporary2596
+strtol_test$349:	; Assign value £temporary2610
 1198:		mov [bp + 21], ebx
 1200:	
 
@@ -1675,7 +1675,7 @@ strtol_test$350:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1202:	
 
 strtol_test$351:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1203:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1203:		mov word [bp + 31], @5902$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1205:	
 
 strtol_test$352:	; Parameter 25 text 8
@@ -1766,12 +1766,12 @@ strtol_test$371:	; Parameter 21 text 6
 1271:		add word [bp + 27], 8
 1273:	
 
-strtol_test$372:	; address £temporary2609 pointer
+strtol_test$372:	; address £temporary2623 pointer
 1274:		mov si, bp
 1275:		add si, 19
 1277:	
 
-strtol_test$373:	; Parameter 21 £temporary2609 8
+strtol_test$373:	; Parameter 21 £temporary2623 8
 1278:		mov [bp + 29], si
 1280:	
 
@@ -1790,10 +1790,10 @@ strtol_test$375:	; Call 21 strtol 0
 strtol_test$376:	; PostCall 21
 1292:	
 
-strtol_test$377:	; GetReturnValue £temporary2610
+strtol_test$377:	; GetReturnValue £temporary2624
 1297:	
 
-strtol_test$378:	; Assign value £temporary2610
+strtol_test$378:	; Assign value £temporary2624
 1298:		mov [bp + 21], ebx
 1300:	
 
@@ -1801,7 +1801,7 @@ strtol_test$379:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1302:	
 
 strtol_test$380:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1303:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1303:		mov word [bp + 31], @5946$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1305:	
 
 strtol_test$381:	; Parameter 25 text 8
@@ -1892,12 +1892,12 @@ strtol_test$400:	; Parameter 21 text 6
 1371:		add word [bp + 27], 8
 1373:	
 
-strtol_test$401:	; address £temporary2623 pointer
+strtol_test$401:	; address £temporary2637 pointer
 1374:		mov si, bp
 1375:		add si, 19
 1377:	
 
-strtol_test$402:	; Parameter 21 £temporary2623 8
+strtol_test$402:	; Parameter 21 £temporary2637 8
 1378:		mov [bp + 29], si
 1380:	
 
@@ -1916,10 +1916,10 @@ strtol_test$404:	; Call 21 strtol 0
 strtol_test$405:	; PostCall 21
 1392:	
 
-strtol_test$406:	; GetReturnValue £temporary2624
+strtol_test$406:	; GetReturnValue £temporary2638
 1397:	
 
-strtol_test$407:	; Assign value £temporary2624
+strtol_test$407:	; Assign value £temporary2638
 1398:		mov [bp + 21], ebx
 1400:	
 
@@ -1927,7 +1927,7 @@ strtol_test$408:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1402:	
 
 strtol_test$409:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1403:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1403:		mov word [bp + 31], @5990$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1405:	
 
 strtol_test$410:	; Parameter 25 text 8
@@ -2018,12 +2018,12 @@ strtol_test$429:	; Parameter 21 text 6
 1471:		add word [bp + 27], 8
 1473:	
 
-strtol_test$430:	; address £temporary2637 pointer
+strtol_test$430:	; address £temporary2651 pointer
 1474:		mov si, bp
 1475:		add si, 19
 1477:	
 
-strtol_test$431:	; Parameter 21 £temporary2637 8
+strtol_test$431:	; Parameter 21 £temporary2651 8
 1478:		mov [bp + 29], si
 1480:	
 
@@ -2042,10 +2042,10 @@ strtol_test$433:	; Call 21 strtol 0
 strtol_test$434:	; PostCall 21
 1492:	
 
-strtol_test$435:	; GetReturnValue £temporary2638
+strtol_test$435:	; GetReturnValue £temporary2652
 1497:	
 
-strtol_test$436:	; Assign value £temporary2638
+strtol_test$436:	; Assign value £temporary2652
 1498:		mov [bp + 21], ebx
 1500:	
 
@@ -2053,7 +2053,7 @@ strtol_test$437:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1502:	
 
 strtol_test$438:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1503:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1503:		mov word [bp + 31], @6034$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1505:	
 
 strtol_test$439:	; Parameter 25 text 8
@@ -2144,12 +2144,12 @@ strtol_test$458:	; Parameter 21 text 6
 1571:		add word [bp + 27], 8
 1573:	
 
-strtol_test$459:	; address £temporary2651 pointer
+strtol_test$459:	; address £temporary2665 pointer
 1574:		mov si, bp
 1575:		add si, 19
 1577:	
 
-strtol_test$460:	; Parameter 21 £temporary2651 8
+strtol_test$460:	; Parameter 21 £temporary2665 8
 1578:		mov [bp + 29], si
 1580:	
 
@@ -2168,10 +2168,10 @@ strtol_test$462:	; Call 21 strtol 0
 strtol_test$463:	; PostCall 21
 1592:	
 
-strtol_test$464:	; GetReturnValue £temporary2652
+strtol_test$464:	; GetReturnValue £temporary2666
 1597:	
 
-strtol_test$465:	; Assign value £temporary2652
+strtol_test$465:	; Assign value £temporary2666
 1598:		mov [bp + 21], ebx
 1600:	
 
@@ -2179,7 +2179,7 @@ strtol_test$466:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1602:	
 
 strtol_test$467:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1603:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1603:		mov word [bp + 31], @6078$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1605:	
 
 strtol_test$468:	; Parameter 25 text 8
@@ -2270,12 +2270,12 @@ strtol_test$487:	; Parameter 21 text 6
 1671:		add word [bp + 27], 8
 1673:	
 
-strtol_test$488:	; address £temporary2665 pointer
+strtol_test$488:	; address £temporary2679 pointer
 1674:		mov si, bp
 1675:		add si, 19
 1677:	
 
-strtol_test$489:	; Parameter 21 £temporary2665 8
+strtol_test$489:	; Parameter 21 £temporary2679 8
 1678:		mov [bp + 29], si
 1680:	
 
@@ -2294,10 +2294,10 @@ strtol_test$491:	; Call 21 strtol 0
 strtol_test$492:	; PostCall 21
 1692:	
 
-strtol_test$493:	; GetReturnValue £temporary2666
+strtol_test$493:	; GetReturnValue £temporary2680
 1697:	
 
-strtol_test$494:	; Assign value £temporary2666
+strtol_test$494:	; Assign value £temporary2680
 1698:		mov [bp + 21], ebx
 1700:	
 
@@ -2305,7 +2305,7 @@ strtol_test$495:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1702:	
 
 strtol_test$496:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1703:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1703:		mov word [bp + 31], @6122$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1705:	
 
 strtol_test$497:	; Parameter 25 text 8
@@ -2396,12 +2396,12 @@ strtol_test$516:	; Parameter 21 text 6
 1771:		add word [bp + 27], 8
 1773:	
 
-strtol_test$517:	; address £temporary2679 pointer
+strtol_test$517:	; address £temporary2693 pointer
 1774:		mov si, bp
 1775:		add si, 19
 1777:	
 
-strtol_test$518:	; Parameter 21 £temporary2679 8
+strtol_test$518:	; Parameter 21 £temporary2693 8
 1778:		mov [bp + 29], si
 1780:	
 
@@ -2420,10 +2420,10 @@ strtol_test$520:	; Call 21 strtol 0
 strtol_test$521:	; PostCall 21
 1792:	
 
-strtol_test$522:	; GetReturnValue £temporary2680
+strtol_test$522:	; GetReturnValue £temporary2694
 1797:	
 
-strtol_test$523:	; Assign value £temporary2680
+strtol_test$523:	; Assign value £temporary2694
 1798:		mov [bp + 21], ebx
 1800:	
 
@@ -2431,7 +2431,7 @@ strtol_test$524:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1802:	
 
 strtol_test$525:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1803:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1803:		mov word [bp + 31], @6166$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1805:	
 
 strtol_test$526:	; Parameter 25 text 8
@@ -2507,10 +2507,10 @@ strtoul$5:	; Call 12 scanUnsignedLongInt 0
 strtoul$6:	; PostCall 12
 25:	
 
-strtoul$7:	; GetReturnValue £temporary2844
+strtoul$7:	; GetReturnValue £temporary2858
 30:	
 
-strtoul$8:	; Assign unsignedLongValue £temporary2844
+strtoul$8:	; Assign unsignedLongValue £temporary2858
 31:		mov [bp + 12], ebx
 33:	
 
@@ -2519,11 +2519,11 @@ strtoul$9:	; Equal 12 endp 0
 35:		je strtoul$12
 37:	
 
-strtoul$10:	; Deref £temporary2846 -> endp endp 0
+strtoul$10:	; Deref £temporary2860 -> endp endp 0
 38:		mov si, [bp + 8]
 40:	
 
-strtoul$11:	; BinaryAdd £temporary2846 -> endp s g_inChars
+strtoul$11:	; BinaryAdd £temporary2860 -> endp s g_inChars
 41:		mov ax, [bp + 6]
 42:		add ax, [g_inChars]
 43:		mov [si], ax
@@ -2599,12 +2599,12 @@ strtoul_test$13:	; Parameter 21 text 6
 41:		add word [bp + 27], 8
 43:	
 
-strtoul_test$14:	; address £temporary2860 pointer
+strtoul_test$14:	; address £temporary2874 pointer
 44:		mov si, bp
 45:		add si, 19
 47:	
 
-strtoul_test$15:	; Parameter 21 £temporary2860 8
+strtoul_test$15:	; Parameter 21 £temporary2874 8
 48:		mov [bp + 29], si
 50:	
 
@@ -2623,10 +2623,10 @@ strtoul_test$17:	; Call 21 strtoul 0
 strtoul_test$18:	; PostCall 21
 62:	
 
-strtoul_test$19:	; GetReturnValue £temporary2861
+strtoul_test$19:	; GetReturnValue £temporary2875
 67:	
 
-strtoul_test$20:	; Assign value £temporary2861
+strtoul_test$20:	; Assign value £temporary2875
 68:		mov [bp + 21], ebx
 70:	
 
@@ -2634,7 +2634,7 @@ strtoul_test$21:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 72:	
 
 strtoul_test$22:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-73:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+73:		mov word [bp + 31], @6387$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 75:	
 
 strtoul_test$23:	; Parameter 25 text 8
@@ -2729,12 +2729,12 @@ strtoul_test$43:	; Parameter 22 text 6
 144:		add word [bp + 28], 8
 146:	
 
-strtoul_test$44:	; address £temporary2875 pointer
+strtoul_test$44:	; address £temporary2889 pointer
 147:		mov si, bp
 148:		add si, 20
 150:	
 
-strtoul_test$45:	; Parameter 22 £temporary2875 8
+strtoul_test$45:	; Parameter 22 £temporary2889 8
 151:		mov [bp + 30], si
 153:	
 
@@ -2753,10 +2753,10 @@ strtoul_test$47:	; Call 22 strtoul 0
 strtoul_test$48:	; PostCall 22
 165:	
 
-strtoul_test$49:	; GetReturnValue £temporary2876
+strtoul_test$49:	; GetReturnValue £temporary2890
 170:	
 
-strtoul_test$50:	; Assign value £temporary2876
+strtoul_test$50:	; Assign value £temporary2890
 171:		mov [bp + 22], ebx
 173:	
 
@@ -2764,7 +2764,7 @@ strtoul_test$51:	; CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.
 175:	
 
 strtoul_test$52:	; Parameter 26 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-176:		mov word [bp + 32], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+176:		mov word [bp + 32], @6434$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 178:	
 
 strtoul_test$53:	; Parameter 26 text 8
@@ -2863,12 +2863,12 @@ strtoul_test$74:	; Parameter 23 text 6
 250:		add word [bp + 29], 8
 252:	
 
-strtoul_test$75:	; address £temporary2891 pointer
+strtoul_test$75:	; address £temporary2905 pointer
 253:		mov si, bp
 254:		add si, 21
 256:	
 
-strtoul_test$76:	; Parameter 23 £temporary2891 8
+strtoul_test$76:	; Parameter 23 £temporary2905 8
 257:		mov [bp + 31], si
 259:	
 
@@ -2887,10 +2887,10 @@ strtoul_test$78:	; Call 23 strtoul 0
 strtoul_test$79:	; PostCall 23
 271:	
 
-strtoul_test$80:	; GetReturnValue £temporary2892
+strtoul_test$80:	; GetReturnValue £temporary2906
 276:	
 
-strtoul_test$81:	; Assign value £temporary2892
+strtoul_test$81:	; Assign value £temporary2906
 277:		mov [bp + 23], ebx
 279:	
 
@@ -2898,7 +2898,7 @@ strtoul_test$82:	; CallHeader 27 System.Collections.Generic.HashSet`1[CCompiler.
 281:	
 
 strtoul_test$83:	; Parameter 27 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-282:		mov word [bp + 33], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+282:		mov word [bp + 33], @6484$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 284:	
 
 strtoul_test$84:	; Parameter 27 text 8
@@ -2997,12 +2997,12 @@ strtoul_test$105:	; Parameter 23 text 6
 356:		add word [bp + 29], 8
 358:	
 
-strtoul_test$106:	; address £temporary2907 pointer
+strtoul_test$106:	; address £temporary2921 pointer
 359:		mov si, bp
 360:		add si, 21
 362:	
 
-strtoul_test$107:	; Parameter 23 £temporary2907 8
+strtoul_test$107:	; Parameter 23 £temporary2921 8
 363:		mov [bp + 31], si
 365:	
 
@@ -3021,10 +3021,10 @@ strtoul_test$109:	; Call 23 strtoul 0
 strtoul_test$110:	; PostCall 23
 377:	
 
-strtoul_test$111:	; GetReturnValue £temporary2908
+strtoul_test$111:	; GetReturnValue £temporary2922
 382:	
 
-strtoul_test$112:	; Assign value £temporary2908
+strtoul_test$112:	; Assign value £temporary2922
 383:		mov [bp + 23], ebx
 385:	
 
@@ -3032,7 +3032,7 @@ strtoul_test$113:	; CallHeader 27 System.Collections.Generic.HashSet`1[CCompiler
 387:	
 
 strtoul_test$114:	; Parameter 27 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-388:		mov word [bp + 33], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+388:		mov word [bp + 33], @6534$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 390:	
 
 strtoul_test$115:	; Parameter 27 text 8
@@ -3123,12 +3123,12 @@ strtoul_test$134:	; Parameter 21 text 6
 456:		add word [bp + 27], 8
 458:	
 
-strtoul_test$135:	; address £temporary2921 pointer
+strtoul_test$135:	; address £temporary2935 pointer
 459:		mov si, bp
 460:		add si, 19
 462:	
 
-strtoul_test$136:	; Parameter 21 £temporary2921 8
+strtoul_test$136:	; Parameter 21 £temporary2935 8
 463:		mov [bp + 29], si
 465:	
 
@@ -3147,10 +3147,10 @@ strtoul_test$138:	; Call 21 strtoul 0
 strtoul_test$139:	; PostCall 21
 477:	
 
-strtoul_test$140:	; GetReturnValue £temporary2922
+strtoul_test$140:	; GetReturnValue £temporary2936
 482:	
 
-strtoul_test$141:	; Assign value £temporary2922
+strtoul_test$141:	; Assign value £temporary2936
 483:		mov [bp + 21], ebx
 485:	
 
@@ -3158,7 +3158,7 @@ strtoul_test$142:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 487:	
 
 strtoul_test$143:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-488:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+488:		mov word [bp + 31], @6578$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 490:	
 
 strtoul_test$144:	; Parameter 25 text 8
@@ -3253,12 +3253,12 @@ strtoul_test$164:	; Parameter 22 text 6
 559:		add word [bp + 28], 8
 561:	
 
-strtoul_test$165:	; address £temporary2936 pointer
+strtoul_test$165:	; address £temporary2950 pointer
 562:		mov si, bp
 563:		add si, 20
 565:	
 
-strtoul_test$166:	; Parameter 22 £temporary2936 8
+strtoul_test$166:	; Parameter 22 £temporary2950 8
 566:		mov [bp + 30], si
 568:	
 
@@ -3277,10 +3277,10 @@ strtoul_test$168:	; Call 22 strtoul 0
 strtoul_test$169:	; PostCall 22
 580:	
 
-strtoul_test$170:	; GetReturnValue £temporary2937
+strtoul_test$170:	; GetReturnValue £temporary2951
 585:	
 
-strtoul_test$171:	; Assign value £temporary2937
+strtoul_test$171:	; Assign value £temporary2951
 586:		mov [bp + 22], ebx
 588:	
 
@@ -3288,7 +3288,7 @@ strtoul_test$172:	; CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler
 590:	
 
 strtoul_test$173:	; Parameter 26 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-591:		mov word [bp + 32], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+591:		mov word [bp + 32], @6625$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 593:	
 
 strtoul_test$174:	; Parameter 26 text 8
@@ -3387,12 +3387,12 @@ strtoul_test$195:	; Parameter 23 text 6
 665:		add word [bp + 29], 8
 667:	
 
-strtoul_test$196:	; address £temporary2952 pointer
+strtoul_test$196:	; address £temporary2966 pointer
 668:		mov si, bp
 669:		add si, 21
 671:	
 
-strtoul_test$197:	; Parameter 23 £temporary2952 8
+strtoul_test$197:	; Parameter 23 £temporary2966 8
 672:		mov [bp + 31], si
 674:	
 
@@ -3411,10 +3411,10 @@ strtoul_test$199:	; Call 23 strtoul 0
 strtoul_test$200:	; PostCall 23
 686:	
 
-strtoul_test$201:	; GetReturnValue £temporary2953
+strtoul_test$201:	; GetReturnValue £temporary2967
 691:	
 
-strtoul_test$202:	; Assign value £temporary2953
+strtoul_test$202:	; Assign value £temporary2967
 692:		mov [bp + 23], ebx
 694:	
 
@@ -3422,7 +3422,7 @@ strtoul_test$203:	; CallHeader 27 System.Collections.Generic.HashSet`1[CCompiler
 696:	
 
 strtoul_test$204:	; Parameter 27 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-697:		mov word [bp + 33], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+697:		mov word [bp + 33], @6675$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 699:	
 
 strtoul_test$205:	; Parameter 27 text 8
@@ -3521,12 +3521,12 @@ strtoul_test$226:	; Parameter 23 text 6
 771:		add word [bp + 29], 8
 773:	
 
-strtoul_test$227:	; address £temporary2968 pointer
+strtoul_test$227:	; address £temporary2982 pointer
 774:		mov si, bp
 775:		add si, 21
 777:	
 
-strtoul_test$228:	; Parameter 23 £temporary2968 8
+strtoul_test$228:	; Parameter 23 £temporary2982 8
 778:		mov [bp + 31], si
 780:	
 
@@ -3545,10 +3545,10 @@ strtoul_test$230:	; Call 23 strtoul 0
 strtoul_test$231:	; PostCall 23
 792:	
 
-strtoul_test$232:	; GetReturnValue £temporary2969
+strtoul_test$232:	; GetReturnValue £temporary2983
 797:	
 
-strtoul_test$233:	; Assign value £temporary2969
+strtoul_test$233:	; Assign value £temporary2983
 798:		mov [bp + 23], ebx
 800:	
 
@@ -3556,7 +3556,7 @@ strtoul_test$234:	; CallHeader 27 System.Collections.Generic.HashSet`1[CCompiler
 802:	
 
 strtoul_test$235:	; Parameter 27 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-803:		mov word [bp + 33], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+803:		mov word [bp + 33], @6725$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 805:	
 
 strtoul_test$236:	; Parameter 27 text 8
@@ -3647,12 +3647,12 @@ strtoul_test$255:	; Parameter 21 text 6
 871:		add word [bp + 27], 8
 873:	
 
-strtoul_test$256:	; address £temporary2982 pointer
+strtoul_test$256:	; address £temporary2996 pointer
 874:		mov si, bp
 875:		add si, 19
 877:	
 
-strtoul_test$257:	; Parameter 21 £temporary2982 8
+strtoul_test$257:	; Parameter 21 £temporary2996 8
 878:		mov [bp + 29], si
 880:	
 
@@ -3671,10 +3671,10 @@ strtoul_test$259:	; Call 21 strtoul 0
 strtoul_test$260:	; PostCall 21
 892:	
 
-strtoul_test$261:	; GetReturnValue £temporary2983
+strtoul_test$261:	; GetReturnValue £temporary2997
 897:	
 
-strtoul_test$262:	; Assign value £temporary2983
+strtoul_test$262:	; Assign value £temporary2997
 898:		mov [bp + 21], ebx
 900:	
 
@@ -3682,7 +3682,7 @@ strtoul_test$263:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 902:	
 
 strtoul_test$264:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-903:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+903:		mov word [bp + 31], @6769$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 905:	
 
 strtoul_test$265:	; Parameter 25 text 8
@@ -3773,12 +3773,12 @@ strtoul_test$284:	; Parameter 21 text 6
 971:		add word [bp + 27], 8
 973:	
 
-strtoul_test$285:	; address £temporary2996 pointer
+strtoul_test$285:	; address £temporary3010 pointer
 974:		mov si, bp
 975:		add si, 19
 977:	
 
-strtoul_test$286:	; Parameter 21 £temporary2996 8
+strtoul_test$286:	; Parameter 21 £temporary3010 8
 978:		mov [bp + 29], si
 980:	
 
@@ -3797,10 +3797,10 @@ strtoul_test$288:	; Call 21 strtoul 0
 strtoul_test$289:	; PostCall 21
 992:	
 
-strtoul_test$290:	; GetReturnValue £temporary2997
+strtoul_test$290:	; GetReturnValue £temporary3011
 997:	
 
-strtoul_test$291:	; Assign value £temporary2997
+strtoul_test$291:	; Assign value £temporary3011
 998:		mov [bp + 21], ebx
 1000:	
 
@@ -3808,7 +3808,7 @@ strtoul_test$292:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1002:	
 
 strtoul_test$293:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1003:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1003:		mov word [bp + 31], @6813$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1005:	
 
 strtoul_test$294:	; Parameter 25 text 8
@@ -3899,12 +3899,12 @@ strtoul_test$313:	; Parameter 21 text 6
 1071:		add word [bp + 27], 8
 1073:	
 
-strtoul_test$314:	; address £temporary3010 pointer
+strtoul_test$314:	; address £temporary3024 pointer
 1074:		mov si, bp
 1075:		add si, 19
 1077:	
 
-strtoul_test$315:	; Parameter 21 £temporary3010 8
+strtoul_test$315:	; Parameter 21 £temporary3024 8
 1078:		mov [bp + 29], si
 1080:	
 
@@ -3923,10 +3923,10 @@ strtoul_test$317:	; Call 21 strtoul 0
 strtoul_test$318:	; PostCall 21
 1092:	
 
-strtoul_test$319:	; GetReturnValue £temporary3011
+strtoul_test$319:	; GetReturnValue £temporary3025
 1097:	
 
-strtoul_test$320:	; Assign value £temporary3011
+strtoul_test$320:	; Assign value £temporary3025
 1098:		mov [bp + 21], ebx
 1100:	
 
@@ -3934,7 +3934,7 @@ strtoul_test$321:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1102:	
 
 strtoul_test$322:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1103:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1103:		mov word [bp + 31], @6857$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1105:	
 
 strtoul_test$323:	; Parameter 25 text 8
@@ -4025,12 +4025,12 @@ strtoul_test$342:	; Parameter 21 text 6
 1171:		add word [bp + 27], 8
 1173:	
 
-strtoul_test$343:	; address £temporary3024 pointer
+strtoul_test$343:	; address £temporary3038 pointer
 1174:		mov si, bp
 1175:		add si, 19
 1177:	
 
-strtoul_test$344:	; Parameter 21 £temporary3024 8
+strtoul_test$344:	; Parameter 21 £temporary3038 8
 1178:		mov [bp + 29], si
 1180:	
 
@@ -4049,10 +4049,10 @@ strtoul_test$346:	; Call 21 strtoul 0
 strtoul_test$347:	; PostCall 21
 1192:	
 
-strtoul_test$348:	; GetReturnValue £temporary3025
+strtoul_test$348:	; GetReturnValue £temporary3039
 1197:	
 
-strtoul_test$349:	; Assign value £temporary3025
+strtoul_test$349:	; Assign value £temporary3039
 1198:		mov [bp + 21], ebx
 1200:	
 
@@ -4060,7 +4060,7 @@ strtoul_test$350:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1202:	
 
 strtoul_test$351:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1203:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1203:		mov word [bp + 31], @6901$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1205:	
 
 strtoul_test$352:	; Parameter 25 text 8
@@ -4151,12 +4151,12 @@ strtoul_test$371:	; Parameter 21 text 6
 1271:		add word [bp + 27], 8
 1273:	
 
-strtoul_test$372:	; address £temporary3038 pointer
+strtoul_test$372:	; address £temporary3052 pointer
 1274:		mov si, bp
 1275:		add si, 19
 1277:	
 
-strtoul_test$373:	; Parameter 21 £temporary3038 8
+strtoul_test$373:	; Parameter 21 £temporary3052 8
 1278:		mov [bp + 29], si
 1280:	
 
@@ -4175,10 +4175,10 @@ strtoul_test$375:	; Call 21 strtoul 0
 strtoul_test$376:	; PostCall 21
 1292:	
 
-strtoul_test$377:	; GetReturnValue £temporary3039
+strtoul_test$377:	; GetReturnValue £temporary3053
 1297:	
 
-strtoul_test$378:	; Assign value £temporary3039
+strtoul_test$378:	; Assign value £temporary3053
 1298:		mov [bp + 21], ebx
 1300:	
 
@@ -4186,7 +4186,7 @@ strtoul_test$379:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1302:	
 
 strtoul_test$380:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1303:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1303:		mov word [bp + 31], @6945$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1305:	
 
 strtoul_test$381:	; Parameter 25 text 8
@@ -4277,12 +4277,12 @@ strtoul_test$400:	; Parameter 21 text 6
 1371:		add word [bp + 27], 8
 1373:	
 
-strtoul_test$401:	; address £temporary3052 pointer
+strtoul_test$401:	; address £temporary3066 pointer
 1374:		mov si, bp
 1375:		add si, 19
 1377:	
 
-strtoul_test$402:	; Parameter 21 £temporary3052 8
+strtoul_test$402:	; Parameter 21 £temporary3066 8
 1378:		mov [bp + 29], si
 1380:	
 
@@ -4301,10 +4301,10 @@ strtoul_test$404:	; Call 21 strtoul 0
 strtoul_test$405:	; PostCall 21
 1392:	
 
-strtoul_test$406:	; GetReturnValue £temporary3053
+strtoul_test$406:	; GetReturnValue £temporary3067
 1397:	
 
-strtoul_test$407:	; Assign value £temporary3053
+strtoul_test$407:	; Assign value £temporary3067
 1398:		mov [bp + 21], ebx
 1400:	
 
@@ -4312,7 +4312,7 @@ strtoul_test$408:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1402:	
 
 strtoul_test$409:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1403:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1403:		mov word [bp + 31], @6989$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1405:	
 
 strtoul_test$410:	; Parameter 25 text 8
@@ -4403,12 +4403,12 @@ strtoul_test$429:	; Parameter 21 text 6
 1471:		add word [bp + 27], 8
 1473:	
 
-strtoul_test$430:	; address £temporary3066 pointer
+strtoul_test$430:	; address £temporary3080 pointer
 1474:		mov si, bp
 1475:		add si, 19
 1477:	
 
-strtoul_test$431:	; Parameter 21 £temporary3066 8
+strtoul_test$431:	; Parameter 21 £temporary3080 8
 1478:		mov [bp + 29], si
 1480:	
 
@@ -4427,10 +4427,10 @@ strtoul_test$433:	; Call 21 strtoul 0
 strtoul_test$434:	; PostCall 21
 1492:	
 
-strtoul_test$435:	; GetReturnValue £temporary3067
+strtoul_test$435:	; GetReturnValue £temporary3081
 1497:	
 
-strtoul_test$436:	; Assign value £temporary3067
+strtoul_test$436:	; Assign value £temporary3081
 1498:		mov [bp + 21], ebx
 1500:	
 
@@ -4438,7 +4438,7 @@ strtoul_test$437:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1502:	
 
 strtoul_test$438:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1503:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1503:		mov word [bp + 31], @7033$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1505:	
 
 strtoul_test$439:	; Parameter 25 text 8
@@ -4529,12 +4529,12 @@ strtoul_test$458:	; Parameter 21 text 6
 1571:		add word [bp + 27], 8
 1573:	
 
-strtoul_test$459:	; address £temporary3080 pointer
+strtoul_test$459:	; address £temporary3094 pointer
 1574:		mov si, bp
 1575:		add si, 19
 1577:	
 
-strtoul_test$460:	; Parameter 21 £temporary3080 8
+strtoul_test$460:	; Parameter 21 £temporary3094 8
 1578:		mov [bp + 29], si
 1580:	
 
@@ -4553,10 +4553,10 @@ strtoul_test$462:	; Call 21 strtoul 0
 strtoul_test$463:	; PostCall 21
 1592:	
 
-strtoul_test$464:	; GetReturnValue £temporary3081
+strtoul_test$464:	; GetReturnValue £temporary3095
 1597:	
 
-strtoul_test$465:	; Assign value £temporary3081
+strtoul_test$465:	; Assign value £temporary3095
 1598:		mov [bp + 21], ebx
 1600:	
 
@@ -4564,7 +4564,7 @@ strtoul_test$466:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1602:	
 
 strtoul_test$467:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1603:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1603:		mov word [bp + 31], @7077$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1605:	
 
 strtoul_test$468:	; Parameter 25 text 8
@@ -4655,12 +4655,12 @@ strtoul_test$487:	; Parameter 21 text 6
 1671:		add word [bp + 27], 8
 1673:	
 
-strtoul_test$488:	; address £temporary3094 pointer
+strtoul_test$488:	; address £temporary3108 pointer
 1674:		mov si, bp
 1675:		add si, 19
 1677:	
 
-strtoul_test$489:	; Parameter 21 £temporary3094 8
+strtoul_test$489:	; Parameter 21 £temporary3108 8
 1678:		mov [bp + 29], si
 1680:	
 
@@ -4679,10 +4679,10 @@ strtoul_test$491:	; Call 21 strtoul 0
 strtoul_test$492:	; PostCall 21
 1692:	
 
-strtoul_test$493:	; GetReturnValue £temporary3095
+strtoul_test$493:	; GetReturnValue £temporary3109
 1697:	
 
-strtoul_test$494:	; Assign value £temporary3095
+strtoul_test$494:	; Assign value £temporary3109
 1698:		mov [bp + 21], ebx
 1700:	
 
@@ -4690,7 +4690,7 @@ strtoul_test$495:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1702:	
 
 strtoul_test$496:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1703:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1703:		mov word [bp + 31], @7121$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1705:	
 
 strtoul_test$497:	; Parameter 25 text 8
@@ -4781,12 +4781,12 @@ strtoul_test$516:	; Parameter 21 text 6
 1771:		add word [bp + 27], 8
 1773:	
 
-strtoul_test$517:	; address £temporary3108 pointer
+strtoul_test$517:	; address £temporary3122 pointer
 1774:		mov si, bp
 1775:		add si, 19
 1777:	
 
-strtoul_test$518:	; Parameter 21 £temporary3108 8
+strtoul_test$518:	; Parameter 21 £temporary3122 8
 1778:		mov [bp + 29], si
 1780:	
 
@@ -4805,10 +4805,10 @@ strtoul_test$520:	; Call 21 strtoul 0
 strtoul_test$521:	; PostCall 21
 1792:	
 
-strtoul_test$522:	; GetReturnValue £temporary3109
+strtoul_test$522:	; GetReturnValue £temporary3123
 1797:	
 
-strtoul_test$523:	; Assign value £temporary3109
+strtoul_test$523:	; Assign value £temporary3123
 1798:		mov [bp + 21], ebx
 1800:	
 
@@ -4816,7 +4816,7 @@ strtoul_test$524:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1802:	
 
 strtoul_test$525:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1803:		mov word [bp + 31], string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1803:		mov word [bp + 31], @7165$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1805:	
 
 strtoul_test$526:	; Parameter 25 text 8
@@ -4883,13 +4883,13 @@ atof$3:	; Call 8 strtod 0
 atof$4:	; PostCall 8
 18:	
 
-atof$5:	; GetReturnValue £temporary3273
+atof$5:	; GetReturnValue £temporary3287
 20:	
 
-atof$6:	; SetReturnValue £temporary3273
+atof$6:	; SetReturnValue £temporary3287
 22:	
 
-atof$7:	; Return £temporary3273
+atof$7:	; Return £temporary3287
 23:		mov ax, [bp]
 24:		mov di, [bp + 4]
 25:		mov bp, [bp + 2]
@@ -4920,24 +4920,24 @@ strtod$4:	; Parameter 20 s 6
 16:	
 
 strtod$5:	; Parameter 20 string_25lf25n# 8
-17:		mov word [bp + 28], string_25lf25n#
+17:		mov word [bp + 28], @7344$string_25lf25n#
 19:	
 
-strtod$6:	; address £temporary3276 value
+strtod$6:	; address £temporary3290 value
 20:		mov si, bp
 21:		add si, 12
 23:	
 
-strtod$7:	; Parameter 20 £temporary3276 10
+strtod$7:	; Parameter 20 £temporary3290 10
 24:		mov [bp + 30], si
 26:	
 
-strtod$8:	; address £temporary3277 chars
+strtod$8:	; address £temporary3291 chars
 27:		mov si, bp
 28:		add si, 10
 30:	
 
-strtod$9:	; Parameter 20 £temporary3277 12
+strtod$9:	; Parameter 20 £temporary3291 12
 31:		mov [bp + 32], si
 33:	
 
@@ -4958,11 +4958,11 @@ strtod$12:	; Equal 15 endp 0
 45:		je strtod$15
 47:	
 
-strtod$13:	; Deref £temporary3280 -> endp endp 0
+strtod$13:	; Deref £temporary3294 -> endp endp 0
 48:		mov si, [bp + 8]
 50:	
 
-strtod$14:	; BinaryAdd £temporary3280 -> endp s chars
+strtod$14:	; BinaryAdd £temporary3294 -> endp s chars
 51:		mov ax, [bp + 6]
 52:		add ax, [bp + 10]
 53:		mov [si], ax
@@ -5061,17 +5061,17 @@ bsearch$4:	; Return 0
 20:		jmp ax
 22:	
 
-bsearch$5:	; IntegralToIntegral £temporary3292 valueList
+bsearch$5:	; IntegralToIntegral £temporary3306 valueList
 23:		mov bx, [bp + 8]
 26:	
 
-bsearch$6:	; SignedMultiply £temporary3293 firstIndex valueSize
+bsearch$6:	; SignedMultiply £temporary3307 firstIndex valueSize
 27:		mov ax, [bp + 16]
 29:		xor dx, dx
 30:		imul word [bp + 12]
 36:	
 
-bsearch$7:	; BinaryAdd firstValuePtr £temporary3292 £temporary3293
+bsearch$7:	; BinaryAdd firstValuePtr £temporary3306 £temporary3307
 37:		add bx, ax
 38:		mov [bp + 20], bx
 40:	
@@ -5100,10 +5100,10 @@ bsearch$11:	; Call 22 compare 0
 bsearch$12:	; PostCall 22
 59:	
 
-bsearch$13:	; GetReturnValue £temporary3295
+bsearch$13:	; GetReturnValue £temporary3309
 64:	
 
-bsearch$14:	; Assign firstCompare £temporary3295
+bsearch$14:	; Assign firstCompare £temporary3309
 65:		mov [bp + 22], bx
 67:	
 
@@ -5139,17 +5139,17 @@ bsearch$20:	; Return firstValuePtr
 91:		jmp ax
 93:	
 
-bsearch$21:	; IntegralToIntegral £temporary3298 valueList
+bsearch$21:	; IntegralToIntegral £temporary3312 valueList
 94:		mov bx, [bp + 8]
 97:	
 
-bsearch$22:	; SignedMultiply £temporary3299 lastIndex valueSize
+bsearch$22:	; SignedMultiply £temporary3313 lastIndex valueSize
 98:		mov ax, [bp + 18]
 100:		xor dx, dx
 101:		imul word [bp + 12]
 107:	
 
-bsearch$23:	; BinaryAdd lastValuePtr £temporary3298 £temporary3299
+bsearch$23:	; BinaryAdd lastValuePtr £temporary3312 £temporary3313
 108:		add bx, ax
 109:		mov [bp + 20], bx
 111:	
@@ -5178,10 +5178,10 @@ bsearch$27:	; Call 22 compare 0
 bsearch$28:	; PostCall 22
 130:	
 
-bsearch$29:	; GetReturnValue £temporary3301
+bsearch$29:	; GetReturnValue £temporary3315
 135:	
 
-bsearch$30:	; Assign lastCompare £temporary3301
+bsearch$30:	; Assign lastCompare £temporary3315
 136:		mov [bp + 22], bx
 138:	
 
@@ -5217,28 +5217,28 @@ bsearch$36:	; Return lastValuePtr
 162:		jmp ax
 164:	
 
-bsearch$37:	; BinaryAdd £temporary3304 firstIndex lastIndex
+bsearch$37:	; BinaryAdd £temporary3318 firstIndex lastIndex
 165:		mov ax, [bp + 16]
 166:		add ax, [bp + 18]
 168:	
 
-bsearch$38:	; SignedDivide middleIndex £temporary3304 2
+bsearch$38:	; SignedDivide middleIndex £temporary3318 2
 170:		xor dx, dx
-171:		idiv word [int2$2#]
+171:		idiv word [@7422$int2$2#]
 172:		mov [bp + 20], ax
 174:	
 
-bsearch$39:	; IntegralToIntegral £temporary3306 valueList
+bsearch$39:	; IntegralToIntegral £temporary3320 valueList
 175:		mov bx, [bp + 8]
 178:	
 
-bsearch$40:	; SignedMultiply £temporary3307 middleIndex valueSize
+bsearch$40:	; SignedMultiply £temporary3321 middleIndex valueSize
 179:		mov ax, [bp + 20]
 181:		xor dx, dx
 182:		imul word [bp + 12]
 188:	
 
-bsearch$41:	; BinaryAdd middleValuePtr £temporary3306 £temporary3307
+bsearch$41:	; BinaryAdd middleValuePtr £temporary3320 £temporary3321
 189:		add bx, ax
 190:		mov [bp + 22], bx
 192:	
@@ -5267,10 +5267,10 @@ bsearch$45:	; Call 24 compare 0
 bsearch$46:	; PostCall 24
 211:	
 
-bsearch$47:	; GetReturnValue £temporary3309
+bsearch$47:	; GetReturnValue £temporary3323
 216:	
 
-bsearch$48:	; Assign middleCompare £temporary3309
+bsearch$48:	; Assign middleCompare £temporary3323
 217:		mov [bp + 24], bx
 219:	
 
@@ -5316,34 +5316,34 @@ bsearch$56:	; Return middleValuePtr
 bsearch$57:	; FunctionEnd bsearch
 1:	
 
-rand:	; SignedMultiply £temporary3319 g_randValue 1664525
-2:		mov eax, [@3870$g_randValue]
+rand:	; SignedMultiply £temporary3333 g_randValue 1664525
+2:		mov eax, [@7446$g_randValue]
 4:		xor edx, edx
-5:		imul dword [int4$1664525#]
+5:		imul dword [@7448$int4$1664525#]
 11:	
 
-rand$1:	; BinaryAdd £temporary3320 £temporary3319 1013904223
+rand$1:	; BinaryAdd £temporary3334 £temporary3333 1013904223
 12:		add eax, 1013904223
 14:	
 
-rand$2:	; SignedModulo g_randValue £temporary3320 127
+rand$2:	; SignedModulo g_randValue £temporary3334 127
 16:		xor edx, edx
-17:		idiv dword [int4$127#]
-18:		mov [@3870$g_randValue], edx
+17:		idiv dword [@7454$int4$127#]
+18:		mov [@7446$g_randValue], edx
 20:	
 
-rand$3:	; IntegralToIntegral £temporary3322 g_randValue
-21:		mov ebx, [@3870$g_randValue]
+rand$3:	; IntegralToIntegral £temporary3336 g_randValue
+21:		mov ebx, [@7446$g_randValue]
 24:		cmp ebx, 0
 25:		jge rand$4
 26:		neg ebx
 28:		neg bx
 30:	
 
-rand$4:	; SetReturnValue £temporary3322
+rand$4:	; SetReturnValue £temporary3336
 32:	
 
-rand$5:	; Return £temporary3322
+rand$5:	; Return £temporary3336
 33:		mov ax, [bp]
 34:		mov di, [bp + 4]
 35:		mov bp, [bp + 2]
@@ -5353,13 +5353,13 @@ rand$5:	; Return £temporary3322
 rand$6:	; FunctionEnd rand
 1:	
 
-srand:	; IntegralToIntegral £temporary3323 seed
+srand:	; IntegralToIntegral £temporary3337 seed
 2:		mov ax, [bp + 6]
 4:		and eax, 65535
 6:	
 
-srand$1:	; Assign g_randValue £temporary3323
-7:		mov [@3870$g_randValue], eax
+srand$1:	; Assign g_randValue £temporary3337
+7:		mov [@7446$g_randValue], eax
 9:	
 
 srand$2:	; Return 0
@@ -5381,40 +5381,40 @@ atexit$1:	; SignedGreaterThanEqual 14 index 256
 6:		jge atexit$14
 8:	
 
-atexit$2:	; UnsignedMultiply £temporary3327 index 2
+atexit$2:	; UnsignedMultiply £temporary3341 index 2
 9:		mov ax, [bp + 8]
 11:		xor dx, dx
-12:		mul word [int2$2#]
+12:		mul word [@7474$int2$2#]
 18:	
 
-atexit$3:	; BinaryAdd £temporary3328 g_funcArray £temporary3327
+atexit$3:	; BinaryAdd £temporary3342 g_funcArray £temporary3341
 19:		mov si, g_funcArray
 20:		add si, ax
 22:	
 
-atexit$4:	; Deref £temporary3326 -> £temporary3328 £temporary3328 0
+atexit$4:	; Deref £temporary3340 -> £temporary3342 £temporary3342 0
 24:	
 
-atexit$5:	; NotEqual 12 £temporary3326 -> £temporary3328 0
+atexit$5:	; NotEqual 12 £temporary3340 -> £temporary3342 0
 25:		cmp word [si], 0
 26:		jne atexit$12
 28:	
 
-atexit$6:	; UnsignedMultiply £temporary3331 index 2
+atexit$6:	; UnsignedMultiply £temporary3345 index 2
 29:		mov ax, [bp + 8]
 31:		xor dx, dx
-32:		mul word [int2$2#]
+32:		mul word [@7482$int2$2#]
 38:	
 
-atexit$7:	; BinaryAdd £temporary3332 g_funcArray £temporary3331
+atexit$7:	; BinaryAdd £temporary3346 g_funcArray £temporary3345
 39:		mov si, g_funcArray
 40:		add si, ax
 42:	
 
-atexit$8:	; Deref £temporary3330 -> £temporary3332 £temporary3332 0
+atexit$8:	; Deref £temporary3344 -> £temporary3346 £temporary3346 0
 44:	
 
-atexit$9:	; Assign £temporary3330 -> £temporary3332 fcn
+atexit$9:	; Assign £temporary3344 -> £temporary3346 fcn
 45:		mov ax, [bp + 6]
 46:		mov [si], ax
 48:	
@@ -5461,44 +5461,44 @@ exit$1:	; SignedLessThan 14 index 0
 6:		jl exit$14
 8:	
 
-exit$2:	; UnsignedMultiply £temporary3336 index 2
+exit$2:	; UnsignedMultiply £temporary3350 index 2
 9:		mov ax, [bp + 8]
 11:		xor dx, dx
-12:		mul word [int2$2#]
+12:		mul word [@7501$int2$2#]
 18:	
 
-exit$3:	; BinaryAdd £temporary3337 g_funcArray £temporary3336
+exit$3:	; BinaryAdd £temporary3351 g_funcArray £temporary3350
 19:		mov si, g_funcArray
 20:		add si, ax
 22:	
 
-exit$4:	; Deref £temporary3335 -> £temporary3337 £temporary3337 0
+exit$4:	; Deref £temporary3349 -> £temporary3351 £temporary3351 0
 24:	
 
-exit$5:	; Equal 12 £temporary3335 -> £temporary3337 0
+exit$5:	; Equal 12 £temporary3349 -> £temporary3351 0
 25:		cmp word [si], 0
 26:		je exit$12
 28:	
 
-exit$6:	; UnsignedMultiply £temporary3340 index 2
+exit$6:	; UnsignedMultiply £temporary3354 index 2
 29:		mov ax, [bp + 8]
 31:		xor dx, dx
-32:		mul word [int2$2#]
+32:		mul word [@7509$int2$2#]
 38:	
 
-exit$7:	; BinaryAdd £temporary3341 g_funcArray £temporary3340
+exit$7:	; BinaryAdd £temporary3355 g_funcArray £temporary3354
 39:		mov si, g_funcArray
 40:		add si, ax
 42:	
 
-exit$8:	; Deref £temporary3339 -> £temporary3341 £temporary3341 0
+exit$8:	; Deref £temporary3353 -> £temporary3355 £temporary3355 0
 44:	
 
 exit$9:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 45:		mov [bp + 12], si
 47:	
 
-exit$10:	; Call 12 £temporary3339 -> £temporary3341 0
+exit$10:	; Call 12 £temporary3353 -> £temporary3355 0
 48:		mov word [bp + 14], exit$11
 49:		mov [bp + 16], bp
 50:		mov di, [bp]
@@ -5519,7 +5519,7 @@ exit$13:	; Goto 1
 62:		jmp exit$1
 64:	
 
-exit$14:	; IntegralToIntegral £temporary3344 status
+exit$14:	; IntegralToIntegral £temporary3358 status
 65:		mov ax, [bp + 6]
 68:		cmp ax, 0
 69:		jge exit$15
@@ -5527,7 +5527,7 @@ exit$14:	; IntegralToIntegral £temporary3344 status
 72:		neg al
 74:	
 
-exit$15:	; AssignRegister al £temporary3344
+exit$15:	; AssignRegister al £temporary3358
 76:	
 
 exit$16:	; AssignRegister ah 76
@@ -5548,86 +5548,86 @@ exit$18:	; Return 0
 exit$19:	; FunctionEnd exit
 1:	
 
-@3900$memswap:	; Assign index 0
+@7520$memswap:	; Assign index 0
 2:		mov word [bp + 12], 0
 4:	
 
-@3900$memswap$1:	; SignedGreaterThanEqual 15 index valueSize
+@7520$memswap$1:	; SignedGreaterThanEqual 15 index valueSize
 5:		mov ax, [bp + 10]
 6:		cmp [bp + 12], ax
-7:		jge @3900$memswap$15
+7:		jge @7520$memswap$15
 9:	
 
-@3900$memswap$2:	; BinaryAdd £temporary3349 value1 index
+@7520$memswap$2:	; BinaryAdd £temporary3363 value1 index
 10:		mov si, [bp + 6]
 11:		add si, [bp + 12]
 13:	
 
-@3900$memswap$3:	; Deref £temporary3348 -> £temporary3349 £temporary3349 0
+@7520$memswap$3:	; Deref £temporary3362 -> £temporary3363 £temporary3363 0
 15:	
 
-@3900$memswap$4:	; Assign tempValue £temporary3348 -> £temporary3349
+@7520$memswap$4:	; Assign tempValue £temporary3362 -> £temporary3363
 16:		mov al, [si]
 17:		mov [bp + 14], al
 19:	
 
-@3900$memswap$5:	; BinaryAdd £temporary3351 value1 index
+@7520$memswap$5:	; BinaryAdd £temporary3365 value1 index
 20:		mov si, [bp + 6]
 21:		add si, [bp + 12]
 23:	
 
-@3900$memswap$6:	; Deref £temporary3350 -> £temporary3351 £temporary3351 0
+@7520$memswap$6:	; Deref £temporary3364 -> £temporary3365 £temporary3365 0
 25:	
 
-@3900$memswap$7:	; BinaryAdd £temporary3353 value2 index
+@7520$memswap$7:	; BinaryAdd £temporary3367 value2 index
 26:		mov di, [bp + 8]
 27:		add di, [bp + 12]
 29:	
 
-@3900$memswap$8:	; Deref £temporary3352 -> £temporary3353 £temporary3353 0
+@7520$memswap$8:	; Deref £temporary3366 -> £temporary3367 £temporary3367 0
 31:	
 
-@3900$memswap$9:	; Assign £temporary3350 -> £temporary3351 £temporary3352 -> £temporary3353
+@7520$memswap$9:	; Assign £temporary3364 -> £temporary3365 £temporary3366 -> £temporary3367
 32:		mov al, [di]
 33:		mov [si], al
 35:	
 
-@3900$memswap$10:	; BinaryAdd £temporary3355 value2 index
+@7520$memswap$10:	; BinaryAdd £temporary3369 value2 index
 36:		mov si, [bp + 8]
 37:		add si, [bp + 12]
 39:	
 
-@3900$memswap$11:	; Deref £temporary3354 -> £temporary3355 £temporary3355 0
+@7520$memswap$11:	; Deref £temporary3368 -> £temporary3369 £temporary3369 0
 41:	
 
-@3900$memswap$12:	; Assign £temporary3354 -> £temporary3355 tempValue
+@7520$memswap$12:	; Assign £temporary3368 -> £temporary3369 tempValue
 42:		mov al, [bp + 14]
 43:		mov [si], al
 45:	
 
-@3900$memswap$13:	; Increment index
+@7520$memswap$13:	; Increment index
 46:		inc word [bp + 12]
 48:	
 
-@3900$memswap$14:	; Goto 1
-49:		jmp @3900$memswap$1
+@7520$memswap$14:	; Goto 1
+49:		jmp @7520$memswap$1
 51:	
 
-@3900$memswap$15:	; Return 0
+@7520$memswap$15:	; Return 0
 52:		mov ax, [bp]
 53:		mov di, [bp + 4]
 54:		mov bp, [bp + 2]
 55:		jmp ax
 57:	
 
-@3900$memswap$16:	; FunctionEnd memswap
+@7520$memswap$16:	; FunctionEnd memswap
 1:	
 
-qsort:	; IntegralToIntegral £temporary3356 valueList
+qsort:	; IntegralToIntegral £temporary3370 valueList
 2:		mov ax, [bp + 6]
 5:	
 
-qsort$1:	; Assign charList £temporary3356
+qsort$1:	; Assign charList £temporary3370
 6:		mov [bp + 14], ax
 8:	
 
@@ -5656,29 +5656,29 @@ qsort$6:	; SignedGreaterThanEqual 28 index size
 26:		jge qsort$28
 28:	
 
-qsort$7:	; SignedMultiply £temporary3362 index valueSize
+qsort$7:	; SignedMultiply £temporary3376 index valueSize
 29:		mov ax, [bp + 18]
 31:		xor dx, dx
 32:		imul word [bp + 10]
 38:	
 
-qsort$8:	; BinaryAdd valuePtr1 charList £temporary3362
+qsort$8:	; BinaryAdd valuePtr1 charList £temporary3376
 39:		mov bx, [bp + 14]
 40:		add bx, ax
 41:		mov [bp + 22], bx
 43:	
 
-qsort$9:	; BinaryAdd £temporary3364 index 1
+qsort$9:	; BinaryAdd £temporary3378 index 1
 44:		mov ax, [bp + 18]
 45:		add ax, 1
 47:	
 
-qsort$10:	; SignedMultiply £temporary3365 £temporary3364 valueSize
+qsort$10:	; SignedMultiply £temporary3379 £temporary3378 valueSize
 49:		xor dx, dx
 50:		imul word [bp + 10]
 56:	
 
-qsort$11:	; BinaryAdd valuePtr2 charList £temporary3365
+qsort$11:	; BinaryAdd valuePtr2 charList £temporary3379
 57:		mov bx, [bp + 14]
 58:		add bx, ax
 59:		mov [bp + 24], bx
@@ -5708,10 +5708,10 @@ qsort$15:	; Call 26 compare 0
 qsort$16:	; PostCall 26
 80:	
 
-qsort$17:	; GetReturnValue £temporary3367
+qsort$17:	; GetReturnValue £temporary3381
 85:	
 
-qsort$18:	; SignedLessThanEqual 26 £temporary3367 0
+qsort$18:	; SignedLessThanEqual 26 £temporary3381 0
 86:		cmp bx, 0
 87:		jle qsort$26
 89:	
@@ -5738,7 +5738,7 @@ qsort$23:	; Call 26 memswap 0
 104:		mov word [bp + 26], qsort$24
 105:		mov [bp + 28], bp
 106:		add bp, 26
-107:		jmp @3900$memswap
+107:		jmp @7520$memswap
 109:	
 
 qsort$24:	; PostCall 26
@@ -5784,26 +5784,26 @@ _abs:	; SignedGreaterThanEqual 4 value 0
 3:		jge _abs$4
 5:	
 
-_abs$1:	; UnarySubtract £temporary3378 value
+_abs$1:	; UnarySubtract £temporary3392 value
 6:		mov bx, [bp + 6]
 7:		neg bx
 9:	
 
-_abs$2:	; Assign £temporary3382 £temporary3378
+_abs$2:	; Assign £temporary3396 £temporary3392
 11:	
 
 _abs$3:	; Goto 5
 12:		jmp _abs$5
 14:	
 
-_abs$4:	; Assign £temporary3382 value
+_abs$4:	; Assign £temporary3396 value
 15:		mov bx, [bp + 6]
 17:	
 
-_abs$5:	; SetReturnValue £temporary3382
+_abs$5:	; SetReturnValue £temporary3396
 19:	
 
-_abs$6:	; Return £temporary3382
+_abs$6:	; Return £temporary3396
 20:		mov ax, [bp]
 21:		mov di, [bp + 4]
 22:		mov bp, [bp + 2]
@@ -5818,26 +5818,26 @@ labs:	; SignedGreaterThanEqual 4 value 0
 3:		jge labs$4
 5:	
 
-labs$1:	; UnarySubtract £temporary3384 value
+labs$1:	; UnarySubtract £temporary3398 value
 6:		mov ebx, [bp + 6]
 7:		neg ebx
 9:	
 
-labs$2:	; Assign £temporary3388 £temporary3384
+labs$2:	; Assign £temporary3402 £temporary3398
 11:	
 
 labs$3:	; Goto 5
 12:		jmp labs$5
 14:	
 
-labs$4:	; Assign £temporary3388 value
+labs$4:	; Assign £temporary3402 value
 15:		mov ebx, [bp + 6]
 17:	
 
-labs$5:	; SetReturnValue £temporary3388
+labs$5:	; SetReturnValue £temporary3402
 19:	
 
-labs$6:	; Return £temporary3388
+labs$6:	; Return £temporary3402
 20:		mov ax, [bp]
 21:		mov di, [bp + 4]
 22:		mov bp, [bp + 2]

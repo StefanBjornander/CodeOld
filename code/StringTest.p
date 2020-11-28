@@ -424,6 +424,8 @@ printf ( "memchr(s, 'l', SIZE * sizeof(char)) = %i\n" , ( p != ( ( void * ) 0 ) 
 p = memchr ( s , 'x' , 20 * sizeof ( char ) ) ;
 printf ( "memchr(s, 'x', SIZE * sizeof(char)) = %i\n" , ( p != ( ( void * ) 0 ) ) ? ( p - s ) : -1 ) ;
 
+printf ( "s: \"%s\", t: \"%s\"\n" , s , t ) ;
+printf ( "strcmp(s, t) = %i\n" , strcmp ( s , t ) ) ;
 printf ( "memcmp(s, t, SIZE * sizeof(char)) = %i\n" , memcmp ( s , t , 20 * sizeof ( char ) ) ) ;
 
 printf ( "strspn(s, \"Hello, C\") = %i\n" , strspn ( s , "Hello, C" ) ) ;

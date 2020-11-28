@@ -4,7 +4,7 @@ floating_point_error:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompi
 3:	
 
 floating_point_error$1:	; Parameter 8 string_Floating20point20error3A2025i0A# 6
-4:		mov word [bp + 14], string_Floating20point20error3A2025i0A#
+4:		mov word [bp + 14], @12639$string_Floating20point20error3A2025i0A#
 6:	
 
 floating_point_error$2:	; Parameter 8 sig 8
@@ -38,7 +38,7 @@ exit_handle1:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 3:	
 
 exit_handle1$1:	; Parameter 6 string_exit10A# 6
-4:		mov word [bp + 12], string_exit10A#
+4:		mov word [bp + 12], @12644$string_exit10A#
 6:	
 
 exit_handle1$2:	; Call 6 printf 0
@@ -66,7 +66,7 @@ exit_handle2:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 3:	
 
 exit_handle2$1:	; Parameter 6 string_exit20A# 6
-4:		mov word [bp + 12], string_exit20A#
+4:		mov word [bp + 12], @12648$string_exit20A#
 6:	
 
 exit_handle2$2:	; Call 6 printf 0
@@ -94,7 +94,7 @@ exit_handle3:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 3:	
 
 exit_handle3$1:	; Parameter 6 string_exit30A# 6
-4:		mov word [bp + 12], string_exit30A#
+4:		mov word [bp + 12], @12652$string_exit30A#
 6:	
 
 exit_handle3$2:	; Call 6 printf 0
@@ -137,7 +137,7 @@ signal_test$3:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Sy
 16:	
 
 signal_test$4:	; Parameter 12 string_25i0A# 6
-17:		mov word [bp + 18], string_25i0A#
+17:		mov word [bp + 18], @12664$string_25i0A#
 19:	
 
 signal_test$5:	; Parameter 12 c 8

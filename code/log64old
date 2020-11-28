@@ -478,7 +478,7 @@ index3: 8: value 64.000000
 index3: 9: value 81.000000
 
 size4: 10 total 80
-malloc4: 7414570 0 80
+malloc4: 7414262 0 80
 index4: 0: value 0.000000
 index4: 1: value 1.000000
 index4: 2: value 4.000000
@@ -653,36 +653,36 @@ fileexists "File.h": Yes
 fileexists "File.y": No
 fileexists "File.p": Yes
 fileexists "File.z": No
-now 1: 1606573369
-now 2: 1606573369
-   gm time: Sat 2020-11-28 14:22:49, year day 332, week day 6, daylight saving time -1
-local time: Sat 2020-11-28 15:22:49, year day 332, week day 6, daylight saving time -1
-asctime <Sat Nov 28 14:22:49 2020>, ctime <Sat Nov 28 15:22:49 2020>
-strftime 287 287 <short day Sat, long day Saturday, short month Nov, long month November, date-time 2020-11-28 15:22:49, mday 28, hour 15, gm hour 3, yday 332, month 11, min 22, am/pm PM, sec 49, week number sun 6, week day 6, week number mon 5, date 15:22:49, time 15:22:49, short year 20, long year 2020>
+now 1: 1606569703
+now 2: 1606569703
+   gm time: Sat 2020-11-28 13:21:43, year day 332, week day 6, daylight saving time -1
+local time: Sat 2020-11-28 14:21:43, year day 332, week day 6, daylight saving time -1
+asctime <Sat Nov 28 13:21:43 2020>, ctime <Sat Nov 28 14:21:43 2020>
+strftime 287 287 <short day Sat, long day Saturday, short month Nov, long month November, date-time 2020-11-28 14:21:43, mday 28, hour 14, gm hour 2, yday 332, month 11, min 21, am/pm PM, sec 43, week number sun 6, week day 6, week number mon 5, date 14:21:43, time 14:21:43, short year 20, long year 2020>
 Heap:
-  Address 7414542, Size 96
-  Address 7414434, Size 96
-  Address 7414326, Size 96
+  Address 7414234, Size 96
+  Address 7414126, Size 96
+  Address 7414018, Size 96
 
 Heap:
-  Address 7414542, Size 96
-  Address 7414434, Size 52
-  Address 7414326, Size 96
+  Address 7414234, Size 96
+  Address 7414126, Size 52
+  Address 7414018, Size 96
 
 Heap:
-  Address 7414542, Size 96
-  Address 7414434, Size 52
-  Address 7414326, Size 96
-  Address 7414274, Size 40
+  Address 7414234, Size 96
+  Address 7414126, Size 52
+  Address 7414018, Size 96
+  Address 7413966, Size 40
 
 Heap:
-  Address 7414434, Size 52
-  Address 7414326, Size 96
-  Address 7414274, Size 40
+  Address 7414126, Size 52
+  Address 7414018, Size 96
+  Address 7413966, Size 40
 
 Heap:
-  Address 7414434, Size 52
-  Address 7414274, Size 40
+  Address 7414126, Size 52
+  Address 7413966, Size 40
 
 <     123> <    +123> <     123> <123     > <+123    > <+123    > < 123    > < 123    >
 <    -123> <    -123> <    -123> <-123    > <-123    > <-123    > <-123    > <-123    >
@@ -711,6 +711,24 @@ LONG_MAX = 9223372036854775807
 ULONG_MAX = 18446744073709551615
 ULONG_MAX = ffffffffffffffff
 ULONG_MAX = FFFFFFFFFFFFFFFF
+strlen("Hello, World!") = 13
+t = "Hello, World!", u = "Hello"
+t = "Hello, World!abc", u = "Helloa"
+strcmp(s, u) = -1
+strncmp(s, u, 2) = 0
+strchr(s, 'l') = 2
+strrchr(s, 'l') = 10
+strchr(s, 'x') = -1
+strrchr(s, 'x') = -1
+s = "Hello, World!", t = "Hello, World!", u = "XXXXXXXXXXXXXXXXXXX"
+memchr(s, 'l', SIZE * sizeof(char)) = 2
+memchr(s, 'x', SIZE * sizeof(char)) = -1
+memcmp(s, t, SIZE * sizeof(char)) = 0
+strspn(s, "Hello, C") = 7
+strcspn(s, "Hello, C") = 0
+strerror(errno) = "error while removing file"
+strtok(s, ",") = "Hello"
+strtok(s, ",") = " World!"
 1.0 / 10.000000 = 0.099999
 Division by Zero.
 1.0 / 0.100000 = 9.999999
@@ -733,66 +751,7 @@ Division by Zero.
 
 <7b> <7B> <173> <7b> <7B> <173>
 <0x7b> <0X7B> <0173> <0x7b> <0X7B> <0173>
-<%> <Hello, World!> <X> <6366126>
-
-<123.456000> <1.212163e+2> <1.212163E+2> <1.179328e+5> <1.179328E+5>
-<123.456000> <1.212163e+2> <1.212163E+2> <1.179328e+5> <1.179328E+5>
-<123.456000> <1.212163e+2> <1.212163E+2> <123.456000> <123.456000>
-<123.456000> <1.212163e+2> <1.212163E+2> <123.456000> <123.456000>
-<123.456> <1.212e+2> <1.212E+2> <123.456> <123.456>
-<123.456> <1.212e+2> <1.212E+2> <123.456> <123.456>
-
-<-123.456000> <-1.212163e+2> <-1.212163E+2> <-0.130448e-6> <-0.130448E-6>
-<-123.456000> <-1.212163e+2> <-1.212163E+2> <-0.130448e-6> <-0.130448E-6>
-<-123.456000> <-1.212163e+2> <-1.212163E+2> <-123.456000> <-123.456000>
-<-123.456000> <-1.212163e+2> <-1.212163E+2> <-123.456000> <-123.456000>
-<-123.456> <-1.212e+2> <-1.212E+2> <-123.456> <-123.456>
-<-123.456> <-1.212e+2> <-1.212E+2> <-123.456> <-123.456>
-
-Please write three integers: <123> <789> <11>
-Please write the patterns [abc]: <abc>
-Please write the patterns [^abc]: <def>
-
-strlen("Hello, World!") = 13
-t = "Hello, World!", u = "Hello"
-t = "Hello, World!abc", u = "Helloa"
-strcmp(s, u) = -1
-strncmp(s, u, 2) = 0
-strchr(s, 'l') = 2
-strrchr(s, 'l') = 10
-strchr(s, 'x') = -1
-strrchr(s, 'x') = -1
-s = "Hello, World!", t = "Hello, World!", u = "XXXXXXXXXXXXXXXXXXX"
-memchr(s, 'l', SIZE * sizeof(char)) = 2
-memchr(s, 'x', SIZE * sizeof(char)) = -1
-s: "Hello, World!", t: "Hello, World!"
-strcmp(s, t) = 0
-memcmp(s, t, SIZE * sizeof(char)) = -1
-strspn(s, "Hello, C") = 7
-strcspn(s, "Hello, C") = 0
-strerror(errno) = "error while removing file"
-strtok(s, ",") = "Hello"
-strtok(s, ",") = " World!"
-<123> <-123> <123> <-123> <123> <123>
-
-<   123> <  -123> <   123> <  -123> <   123> <   123>
-<  +123> <  -123> <  +123> <  -123> <  +123> <  +123>
-<123   > <-123  > <123   > <-123  > <123   > <123   >
-<+123  > <-123  > <+123  > <-123  > <+123  > <+123  >
-
-<000123> <-00123> <000123> <-00123> <000123> <000123>
-<+00123> <-00123> <+00123> <-00123> <+00123> <+00123>
-<123   > <-123  > <123   > <-123  > <123   > <123   >
-<+123  > <-123  > <+123  > <-123  > <+123  > <+123  >
-
-<   123> <  -123> <   123> <  -123> <   123> <   123>
-<   123> <  -123> <   123> <  -123> < + 123> < + 123>
-< 123  > <-123  > < 123  > <-123  > < 123  > < 123  >
-< 123  > <-123  > < 123  > <-123  > <+ 123 > <+ 123 >
-
-<7b> <7B> <173> <7b> <7B> <173>
-<0x7b> <0X7B> <0173> <0x7b> <0X7B> <0173>
-<%> <Hello, World!> <X> <6366126>
+<%> <Hello, World!> <X> <6365818>
 
 <123.456000> <1.212163e+2> <1.212163E+2> <1.179328e+5> <1.179328E+5>
 <123.456000> <1.212163e+2> <1.212163E+2> <1.179328e+5> <1.179328E+5>

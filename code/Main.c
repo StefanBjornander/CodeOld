@@ -199,7 +199,6 @@ void maina() {
 void main(void) {
   math_test();
   file_test();
-  stdio_test();
   //signal_test();
   time_test();  
   assert_test();
@@ -207,9 +206,10 @@ void main(void) {
   print_test(); 
   limits_test();
   float_test(); 
-  string_test();
   setjmp_test();
-  stdio_test(); 
+  stdio_test();
+  string_test();
+  stdio_test();
   stdlib_test();
   strtol_test();
   strtoul_test();
