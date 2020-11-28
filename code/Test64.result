@@ -1,0 +1,101 @@
+481:
+old  <malloc4: 7414262 0 80>
+new  <malloc4: 7414550 0 80>
+
+656:
+old  <now 1: 1606570741>
+new  <now 1: 1606570797>
+
+657:
+old  <now 2: 1606570741>
+new  <now 2: 1606570797>
+
+658:
+old  <   gm time: Sat 2020-11-28 13:39:01, year day 332, week day 6, daylight saving time -1>
+new  <   gm time: Sat 2020-11-28 13:39:57, year day 332, week day 6, daylight saving time -1>
+
+659:
+old  <local time: Sat 2020-11-28 14:39:01, year day 332, week day 6, daylight saving time -1>
+new  <local time: Sat 2020-11-28 14:39:57, year day 332, week day 6, daylight saving time -1>
+
+660:
+old  <asctime <Sat Nov 28 13:39:01 2020>, ctime <Sat Nov 28 14:39:01 2020>>
+new  <asctime <Sat Nov 28 13:39:57 2020>, ctime <Sat Nov 28 14:39:57 2020>>
+
+661:
+old  <strftime 286 286 <short day Sat, long day Saturday, short month Nov, long month November, date-time 2020-11-28 14:39:01, mday 28, hour 14, gm hour 2, yday 332, month 11, min 39, am/pm PM, sec 1, week number sun 6, week day 6, week number mon 5, date 14:39:01, time 14:39:01, short year 20, long year 2020>>
+new  <strftime 287 287 <short day Sat, long day Saturday, short month Nov, long month November, date-time 2020-11-28 14:39:57, mday 28, hour 14, gm hour 2, yday 332, month 11, min 39, am/pm PM, sec 57, week number sun 6, week day 6, week number mon 5, date 14:39:57, time 14:39:57, short year 20, long year 2020>>
+
+663:
+old  <  Address 7414234, Size 96>
+new  <  Address 7414522, Size 96>
+
+664:
+old  <  Address 7414126, Size 96>
+new  <  Address 7414414, Size 96>
+
+665:
+old  <  Address 7414018, Size 96>
+new  <  Address 7414306, Size 96>
+
+668:
+old  <  Address 7414234, Size 96>
+new  <  Address 7414522, Size 96>
+
+669:
+old  <  Address 7414126, Size 52>
+new  <  Address 7414414, Size 52>
+
+670:
+old  <  Address 7414018, Size 96>
+new  <  Address 7414306, Size 96>
+
+673:
+old  <  Address 7414234, Size 96>
+new  <  Address 7414522, Size 96>
+
+674:
+old  <  Address 7414126, Size 52>
+new  <  Address 7414414, Size 52>
+
+675:
+old  <  Address 7414018, Size 96>
+new  <  Address 7414306, Size 96>
+
+676:
+old  <  Address 7413966, Size 40>
+new  <  Address 7414254, Size 40>
+
+679:
+old  <  Address 7414126, Size 52>
+new  <  Address 7414414, Size 52>
+
+680:
+old  <  Address 7414018, Size 96>
+new  <  Address 7414306, Size 96>
+
+681:
+old  <  Address 7413966, Size 40>
+new  <  Address 7414254, Size 40>
+
+684:
+old  <  Address 7414126, Size 52>
+new  <  Address 7414414, Size 52>
+
+685:
+old  <  Address 7413966, Size 40>
+new  <  Address 7414254, Size 40>
+
+736:
+old  <<%> <Hello, World!> <X> <6365818>>
+new  <<%> <Hello, World!> <X> <6366106>>
+
+768:
+old  <memcmp(s, t, SIZE * sizeof(char)) = 0>
+new  <memcmp(s, t, SIZE * sizeof(char)) = -1>
+
+793:
+old  <<%> <Hello, World!> <X> <6365818>>
+new  <<%> <Hello, World!> <X> <6366106>>
+
+25
