@@ -7,21 +7,10 @@ static int g_tempSize = 0;
 
 #define PRINT(x,y) { printf(#x " = <%" #y ">\n", (x)); }
 
-//static enum {TEMP_FILE, TEMP_NAME};
-
 #define TEMP_FILE 0
 #define TEMP_NAME 1
 
 #define FILE_NOT_FOUND 0x02
-
-/*static BOOL filedelete(const char* name) {
-  printf("delete <%s>\n", name);
-  register_ah = 0x41s;
-  register_al = 0x00s;
-  register_dx = name;
-  interrupt(0x21s);
-  return !carry_flag;
-}*/
 
 static BOOL existsTempName(char* name) {
   int index;

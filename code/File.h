@@ -7,12 +7,9 @@
 #define fpos_t int
 #define EOF -1
 
-typedef unsigned int UINT;
-typedef unsigned long ULONG;
-
 typedef struct {
   BOOL open;
-  UINT handle;
+  unsigned int handle;
   char name[FILENAME_MAX], ungetc;
   int errno;
   unsigned int position, size;
@@ -24,33 +21,6 @@ extern FILE *stdin, *stdout, *stderr;
 extern enum { EEXIST, ENOENT, EACCES };
 extern enum { SEEK_SET, SEEK_CUR, SEEK_END };
 extern enum { READ, WRITE, READ_WRITE };
-
-/*#ifdef __WINDOWS__
-  #define READ       0
-  #define WRITE      1
-  #define READ_WRITE 2
-#endif
-
-#ifdef __LINUX__
-  #define READ       0
-  #define WRITE      1
-  #define READ_WRITE 2
-#endif*/
-
-#ifdef __LINUX__
-  #define O_RDONLY    0x0000L      /* open for reading only */
-  #define O_WRONLY    0x0001L      /* open for writing only */
-  #define O_CREAT     0x0200L      /* create if nonexistant */
-  #define O_TRUNC     0x0400L      /* truncate to zero length */
-
-  #define FILE_DESC_STDOUT 1
-
-  #define SYS_EXIT 1
-  #define SYS_READ 3
-  #define SYS_WRITE 4
-  #define SYS_OPEN 5
-  #define SYS_CLOSE 6
-#endif
 
 #define getc(stream) fgetc(stream)
 

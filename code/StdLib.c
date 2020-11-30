@@ -9,12 +9,64 @@
 
 extern FILE g_fileArray[];
 
-int atoi(char* s) {
+int atoi(const char* s) {
   return (int) strtol(s, (char**) NULL, 10);
 }
 
-long atol(char* s) {
+long atol(const char* s) {
   return strtol(s, (char**) NULL, 10);
+}
+
+extern int g_inStatus, g_inChars;
+extern void* g_inDevice;
+
+extern long scanLongInt(int base);
+extern unsigned long scanUnsignedLongInt(int base);
+
+long strtol(const char* s, char** endp, int base) {
+  g_inStatus = STRING;
+  g_inDevice = s;
+  g_inChars = 0;
+
+  { long value = scanLongInt(base);
+
+    if (endp != NULL) {
+      *endp = s + g_inChars;
+    }
+
+    return value;
+  }
+}
+
+unsigned long strtoul(const char* s, char** endp, int base) {
+  g_inStatus = STRING;
+  g_inDevice = s;
+  g_inChars = 0;
+  
+  { unsigned long unsignedLongValue = scanUnsignedLongInt(base);
+
+    if (endp != NULL) {
+      *endp = s + g_inChars;
+    }
+
+    return unsignedLongValue;
+  }
+}
+
+double atof(const char* s) {
+  return strtod(s, (char**) NULL);
+}
+
+double strtod(const char* s, char** endp) {
+  int chars = '\0';
+  double value = 0;
+  sscanf(s, "%lf%n", &value, &chars);
+
+  if (endp != NULL) {
+    *endp = s + chars;
+  }
+
+  return value;
 }
 
 /*static BOOL isDigitInBase(char c, int base) {
@@ -48,27 +100,9 @@ static int digitToValue(char c) {
   else {
     return 0;
   }
-}*/
-
-extern int g_inStatus, g_inChars;
-extern void* g_inDevice;
-
-long strtol(char* s, char** endp, int base) {
-  g_inStatus = STRING;
-  g_inDevice = s;
-  g_inChars = 0;
-
-  { long value = scanLongInt(base);
-
-    if (endp != NULL) {
-      *endp = s + g_inChars;
-    }
-
-    return value;
-  }
 }
 
-/*long strtol(char* s, char** endp, int base) {
+long strtol(char* s, char** endp, int base) {
   if (base == 0) {
     int chars = 0;
     long value = 0;
@@ -230,21 +264,6 @@ void strtol_test(void) {
   }
 }
 
-unsigned long strtoul(char* s, char** endp, int base) {
-  g_inStatus = STRING;
-  g_inDevice = s;
-  g_inChars = 0;
-  
-  { unsigned long unsignedLongValue = scanUnsignedLongInt(base);
-
-    if (endp != NULL) {
-      *endp = s + g_inChars;
-    }
-
-    return unsignedLongValue;
-  }
-}
-
 /*unsigned long strtoul(char* s, char** endp, int base) {
   if (base == 0) {
     int chars = 0;
@@ -399,22 +418,6 @@ void strtoul_test(void) {
   }
 }
 
-double atof(char* s) {
-  return strtod(s, (char**) NULL);
-}
-
-double strtod(char* s, char** endp) {
-  int chars = '\0';
-  double value = 0;
-  sscanf(s, "%lf%n", &value, &chars);
-
-  if (endp != NULL) {
-    *endp = s + chars;
-  }
-
-  return value;
-}
-
 void abort(void) {
 #ifdef __WINDOWS__
   register_ah = 0x4Cs;
@@ -470,7 +473,7 @@ void* bsearch(const void* keyPtr, const void* valueList,
     }
 
     { int middleIndex = (firstIndex + lastIndex) / 2;
-      char* middleValuePtr = ((char*)valueList) + (middleIndex * valueSize);
+      char* middleValuePtr = ((char*) valueList) + (middleIndex * valueSize);
       int middleCompare = compare(keyPtr, middleValuePtr);
 
       if (middleCompare < 0) {

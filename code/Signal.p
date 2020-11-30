@@ -3,10 +3,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
    
 
           
-
     
-    
-
     
     
     
@@ -123,10 +120,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
    
 
           
-
     
-    
-
     
     
     
@@ -145,12 +139,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
     
     
 
-typedef unsigned int UINT ;
-typedef unsigned long ULONG ;
-
 typedef struct {
 int open ;
-UINT handle ;
+unsigned int handle ;
 char name [ 16 ] , ungetc ;
 int errno ;
 unsigned int position , size ;
@@ -162,33 +153,6 @@ extern FILE * stdin , * stdout , * stderr ;
 extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-  
 
           
 
@@ -249,19 +213,12 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
 
     
 
-char scanChar ( void ) ;
-void unscanChar ( char c ) ;
-void scanString ( char * string , int precision ) ;
-long scanLongInt ( int base ) ;
-unsigned long scanUnsignedLongInt ( int base ) ;
-long double scanLongDouble ( void ) ;
-
-int scanf ( char * format , ... ) ;
-int vscanf ( char * format , char * arg_list ) ;
-int fscanf ( FILE * inStream , char * format , ... ) ;
-int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
-int sscanf ( char * inString , char * format , ... ) ;
-int vsscanf ( char * inString , char * format , char * arg_list ) ;
+int scanf ( const char * format , ... ) ;
+int vscanf ( const char * format , char * arg_list ) ;
+int fscanf ( FILE * inStream , const char * format , ... ) ;
+int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
+int sscanf ( char * inString , const char * format , ... ) ;
+int vsscanf ( char * inString , const char * format , char * arg_list ) ;
 
   
 
@@ -281,31 +238,12 @@ int putc ( int c , FILE * stream ) ;
 int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
-void printChar ( char c ) ;
-void printChar2 ( char c ) ;
-void printString ( char * s , int precision ) ;
-void printString2 ( char * s ) ;
-void printIntRec ( int intValue ) ;
-void printInt ( int intValue , int plus , int space ) ;
-void printDoublePlain ( double doubleValue , int plus , int space ,
-int grid , int precision ) ;
-void printLongDoublePlain ( long double doubleValue , int plus ,
-int space , int grid , int precision ) ;
-void printInt ( int intValue , int plus , int space ) ;
-void printLongInt ( long longIntValue , int plus , int space ) ;
-void printLongDoubleFraction ( long double longDoubleValue ,
-int grid , int precision ) ;
-void printLongDoublePlain ( long double longDoubleValue , int plus ,
-int space , int grid , int precision ) ;
-int printFormat ( char * format , char * arg_list ) ;
-
-int printf2 ( char * format ) ;
-int printf ( char * format , ... ) ;
-int vprintf ( char * format , char * arg_list ) ;
-int fprintf ( FILE * outStream , char * format , ... ) ;
-int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
-int sprintf ( char * outString , char * format , ... ) ;
-int vsprintf ( char * outString , char * format , char * arg_list ) ;
+int printf ( const char * format , ... ) ;
+int vprintf ( const char * format , char * arg_list ) ;
+int fprintf ( FILE * outStream , const char * format , ... ) ;
+int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
+int sprintf ( char * outString , const char * format , ... ) ;
+int vsprintf ( char * outString , const char * format , char * arg_list ) ;
 
   
 
@@ -319,33 +257,33 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Signal.c,2$
 
 void signal ( int sig , handler func ) {
    
- printf ( "Signal %i function %p\n" , sig , func ) ;
-register_al = ( short ) sig ;
-register_ah = 0x25s ;
-register_dx = func ;
+         
+      
+   
+   
 
 
 
-interrupt ( 0x21s ) ;
-printf ( "Signal done\n" ) ;
+    
+    
   
   
  }
 
 int raise ( int sig ) {
    
- printf ( "\nRaise signal %i\n" , sig ) ;
-register_al = ( short ) sig ;
-register_ah = 0x35s ;
-
-
-interrupt ( 0x21s ) ;
-
-{ handler func = register_bx ;
-
-printf ( "Raise function %p\n" , func ) ;
-  
+       
       
+   
+
+
+    
+
+     
+
+      
+  
+ { handler func = ( ( void * ) 0 ) ;
   
  if ( func == ( ( handler ) 0 ) ) {
 printf ( "Raise default\n" ) ;

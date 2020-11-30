@@ -18,6 +18,22 @@ void* g_outDevice;
 
 #define DEFAULT_PRECISION 6
 
+void printChar(char c);
+void printString(const char* s, int precision);
+void printIntRec(int intValue);
+void printInt(int intValue, BOOL plus, BOOL space);
+void printDoublePlain(double doubleValue, BOOL plus, BOOL space,
+                      BOOL grid, int precision);
+void printLongDoublePlain(long double doubleValue, BOOL plus,
+                          BOOL space, BOOL grid, int precision);
+void printInt(int intValue, BOOL plus, BOOL space);
+void printLongInt(long longIntValue, BOOL plus, BOOL space);
+void printLongDoubleFraction(long double longDoubleValue,
+                             BOOL grid, int precision);
+void printLongDoublePlain(long double longDoubleValue, BOOL plus,
+                          BOOL space, BOOL grid, int precision);
+int printFormat(const char* format, va_list arg_list);
+
 int putc(int i, FILE* stream) {
   g_outStatus = DEVICE;
   g_outDevice = (void*) stream;
@@ -78,7 +94,7 @@ void printChar(char c) {
   }
 }
 
-void printString(char* s, int precision) {
+void printString(const char* s, int precision) {
   if (s != NULL) {
     int index;
 
@@ -257,9 +273,9 @@ va_list checkWidthAndPrecision(va_list arg_list, int* widthPtr,
   return arg_list;
 }
 
-va_list printArgument(char* format, va_list arg_list, BOOL plus, BOOL space,
-                      BOOL grid, int* widthPtr, int precision, BOOL shortInt,
-                      BOOL longInt, BOOL longDouble, BOOL sign,
+va_list printArgument(const char* format, va_list arg_list, BOOL plus,
+                      BOOL space, BOOL grid, int* widthPtr, int precision,
+                      BOOL shortInt, BOOL longInt, BOOL longDouble, BOOL sign,
                       BOOL* negativePtr) {
   char c = format[0], charValue;
   int *intPtr;
@@ -397,7 +413,7 @@ va_list printArgument(char* format, va_list arg_list, BOOL plus, BOOL space,
   return arg_list;
 }
 
-int printFormat(char* format, va_list arg_list) {
+int printFormat(const char* format, va_list arg_list) {
   int index, width = 0, precision = 0;
   BOOL percent = FALSE, plus = FALSE, minus = FALSE, space = FALSE,
        zero = FALSE, grid = FALSE, widthStar = FALSE,
@@ -595,35 +611,35 @@ int printFormat(char* format, va_list arg_list) {
   return g_outChars;
 }
 
-int printf(char* format, ...) {
+int printf(const char* format, ...) {
   va_list arg_list;
   va_start(arg_list, format);
   return vprintf(format, arg_list);
 }
 
-int vprintf(char* format, va_list arg_list) {
+int vprintf(const char* format, va_list arg_list) {
   return vfprintf(stdout, format, arg_list);
 }
 
-int fprintf(FILE* outStream, char* format, ...) {
+int fprintf(FILE* outStream, const char* format, ...) {
   va_list arg_list;
   va_start(arg_list, format);
   return vfprintf(outStream, format, arg_list);
 }
 
-int vfprintf(FILE* outStream, char* format, va_list arg_list) {
+int vfprintf(FILE* outStream, const char* format, va_list arg_list) {
   g_outStatus = DEVICE;
   g_outDevice = (void*) outStream;
   return printFormat(format, arg_list);
 }
 
-int sprintf(char* outString, char* format, ...) {
+int sprintf(char* outString, const char* format, ...) {
   va_list arg_list;
   va_start(arg_list, format);
   return vsprintf(outString, format, arg_list);
 }
 
-int vsprintf(char* outString, char* format, va_list arg_list) {
+int vsprintf(char* outString, const char* format, va_list arg_list) {
   g_outStatus = STRING;
   g_outDevice = (void*) outString;
   return printFormat(format, arg_list);

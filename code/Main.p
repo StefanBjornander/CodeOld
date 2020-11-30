@@ -3,10 +3,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
    
 
           
-
     
-    
-
     
     
     
@@ -19,15 +16,16 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
    
    
 
+    
           
 
-double atof ( char * s ) ;
-int atoi ( char * s ) ;
-long atol ( char * s ) ;
+double atof ( const char * s ) ;
+int atoi ( const char * s ) ;
+long atol ( const char * s ) ;
 
-double strtod ( char * s , char ** endp ) ;
-long strtol ( char * s , char ** endp , int base ) ;
-unsigned long strtoul ( char * s , char ** endp , int base ) ;
+double strtod ( const char * s , char ** endp ) ;
+long strtol ( const char * s , char ** endp , int base ) ;
+unsigned long strtoul ( const char * s , char ** endp , int base ) ;
 
 int rand ( void ) ;
 void srand ( unsigned int seed ) ;
@@ -165,10 +163,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
    
 
           
-
     
-    
-
     
     
     
@@ -187,12 +182,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
     
     
 
-typedef unsigned int UINT ;
-typedef unsigned long ULONG ;
-
 typedef struct {
 int open ;
-UINT handle ;
+unsigned int handle ;
 char name [ 16 ] , ungetc ;
 int errno ;
 unsigned int position , size ;
@@ -204,33 +196,6 @@ extern FILE * stdin , * stdout , * stderr ;
 extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-  
 
           
 
@@ -291,19 +256,12 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
 
     
 
-char scanChar ( void ) ;
-void unscanChar ( char c ) ;
-void scanString ( char * string , int precision ) ;
-long scanLongInt ( int base ) ;
-unsigned long scanUnsignedLongInt ( int base ) ;
-long double scanLongDouble ( void ) ;
-
-int scanf ( char * format , ... ) ;
-int vscanf ( char * format , char * arg_list ) ;
-int fscanf ( FILE * inStream , char * format , ... ) ;
-int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
-int sscanf ( char * inString , char * format , ... ) ;
-int vsscanf ( char * inString , char * format , char * arg_list ) ;
+int scanf ( const char * format , ... ) ;
+int vscanf ( const char * format , char * arg_list ) ;
+int fscanf ( FILE * inStream , const char * format , ... ) ;
+int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
+int sscanf ( char * inString , const char * format , ... ) ;
+int vsscanf ( char * inString , const char * format , char * arg_list ) ;
 
   
 
@@ -323,31 +281,12 @@ int putc ( int c , FILE * stream ) ;
 int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
-void printChar ( char c ) ;
-void printChar2 ( char c ) ;
-void printString ( char * s , int precision ) ;
-void printString2 ( char * s ) ;
-void printIntRec ( int intValue ) ;
-void printInt ( int intValue , int plus , int space ) ;
-void printDoublePlain ( double doubleValue , int plus , int space ,
-int grid , int precision ) ;
-void printLongDoublePlain ( long double doubleValue , int plus ,
-int space , int grid , int precision ) ;
-void printInt ( int intValue , int plus , int space ) ;
-void printLongInt ( long longIntValue , int plus , int space ) ;
-void printLongDoubleFraction ( long double longDoubleValue ,
-int grid , int precision ) ;
-void printLongDoublePlain ( long double longDoubleValue , int plus ,
-int space , int grid , int precision ) ;
-int printFormat ( char * format , char * arg_list ) ;
-
-int printf2 ( char * format ) ;
-int printf ( char * format , ... ) ;
-int vprintf ( char * format , char * arg_list ) ;
-int fprintf ( FILE * outStream , char * format , ... ) ;
-int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
-int sprintf ( char * outString , char * format , ... ) ;
-int vsprintf ( char * outString , char * format , char * arg_list ) ;
+int printf ( const char * format , ... ) ;
+int vprintf ( const char * format , char * arg_list ) ;
+int fprintf ( FILE * outStream , const char * format , ... ) ;
+int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
+int sprintf ( char * outString , const char * format , ... ) ;
+int vsprintf ( char * outString , const char * format , char * arg_list ) ;
 
   
 
@@ -526,15 +465,16 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
    
    
 
+    
           
 
-       
-       
-       
+        
+        
+        
 
-           
-              
+            
                
+                
 
      
        
@@ -635,7 +575,6 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Limits.h,0$
 
     
     
-
     
   
 
@@ -655,11 +594,9 @@ struct tm {
 int tm_sec ;
 int tm_min ;
 int tm_hour ;
-
 int tm_mday ;
 int tm_mon ;
 int tm_year ;
-
 int tm_wday ;
 int tm_yday ;
 int tm_isdst ;
@@ -674,10 +611,9 @@ extern char * asctime ( const struct tm * timeStruct ) ;
 extern char * ctime ( const unsigned long * time ) ;
 extern struct tm * gmtime ( const unsigned long * time ) ;
 extern struct tm * localtime ( const unsigned long * time ) ;
-extern struct tm * localtimeX ( const unsigned long * time ) ;
 
-extern int strftime ( char * buffer , int size ,
-const char * format , const struct tm * timeStruct ) ;
+extern int strftime ( char * buffer , int size , const char * format ,
+const struct tm * timeStruct ) ;
 
   
 
@@ -704,11 +640,6 @@ void stack_test ( void ) ;
 void character_test ( ) ;
 void locale_test ( void ) ;
 
-
-
-
-
-
 struct A ;
 struct B ;
 
@@ -724,153 +655,6 @@ struct B * q ;
 
 struct A a ;
 
-void main2 ( void ) {
-struct C {
-struct C * p ;
-struct B * q ;
-};
-
-
-
-a . p = ( ( void * ) 0 ) ;
-a . q = ( ( void * ) 0 ) ;
-
-
-file_test ( ) ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-void scanString ( char * string , int precision ) ;
-
-void main33 ( ) {
-char s [ 20 ] = "Hello" , t [ 20 ] = "World" ;
-printf ( "<%s> <%s>\n" , s , t ) ;
-
-
-
-
-
-
-}
-
-void main34 ( ) {
-g_outDevice = stdout ;
-printChar ( 'X' ) ;
-printChar ( '\n' ) ;
-}
-
-void mainc ( ) {
-char c ;
-printf ( "Please write a character: " ) ;
-scanf ( "%c" , & c ) ;
-printf ( "You wrote the character '%c'.\n" , c ) ;
-}
-
-void maini ( ) {
-int i ;
-printf ( "Please write an integer: " ) ;
-scanf ( "%i" , & i ) ;
-printf ( "You wrote the integer %i.\n" , i ) ;
-}
-
-void mains ( ) {
-char s [ 20 ];
-printf ( "Please write a string: " ) ;
-scanf ( "%s" , s ) ;
-printf ( "You wrote the string \"%s\".\n" , s ) ;
-}
-
-void maint ( ) {
-limits_test ( ) ;
-time_test ( ) ;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-void mainX ( int argc , char * argv [] ) {
-int index ;
-for ( index = 129 ; index < 255 ; ++ index ) {
-char c = * ( ( char * ) index ) ;
-printf ( "%i: %i <%c>\n" , index , ( int ) c , c ) ;
-}
-
-printf ( "\nargc: %i\n" , argc ) ;
-
-for ( index = 0 ; index < argc ; ++ index ) {
-printf ( "%i: <%s>\n" , index , argv [ index ] ) ;
-}
-
-printf ( "\n" ) ;
-
-for ( index = 0 ; argv [ index ] != ( ( void * ) 0 ) ; ++ index ) {
-printf ( "%i: <%s>\n" , index , argv [ index ] ) ;
-}
-}
-
-void mainm ( int argc , char * argv [] ) {
-
-
-
-}
-
-void maina ( ) {
-if ( ! ( 1 < 2 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "1 < 2" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 195 ) ; abort ( ) ; } ;
-if ( ! ( 1 > 2 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "1 > 2" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 196 ) ; abort ( ) ; } ;
-}
 
 void main ( void ) {
 math_test ( ) ;
@@ -893,18 +677,6 @@ strtoul_test ( ) ;
 
 character_test ( ) ;
 locale_test ( ) ;
-}
-
-void mainX5 ( ) {
-
-
-
-
-
-
-
-
-file_test ( ) ;
 
 
 
@@ -916,685 +688,3 @@ file_test ( ) ;
 
 
 }
-
-void mainX4 ( int argc , char * argv [] ) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-extern enum { ZERO , ONE };
-static enum { ZERO = 0 , ONE = 1 };
-
-extern enum { TWO , THREE };
-static enum { TWO = 2 , THREE = 3 };
-
-printf ( "argc: %i\n" , argc ) ;
-
-{ int index ;
-for ( index = 0 ; index < argc ; ++ index ) {
-printf ( "%i: <%s>\n" , index , argv [ index ] ) ;
-}
-printf ( "\n" ) ;
-
-for ( index = 0 ; argv [ index ] != ( ( void * ) 0 ) ; ++ index ) {
-printf ( "%i: <%s>\n" , index , argv [ index ] ) ;
-}
-printf ( "\n" ) ;
-}
-
-{ int i ;
-double d ;
-char c , s [ 20 ];
-mktime ( ( ( void * ) 0 ) ) ;
-printf ( "Hello!\n" ) ;
-printf ( "Please write a character, a string, an integer, and a double: " ) ;
-scanf ( "%c %s %i %lf" , & c , s , & i , & d ) ;
-printf ( "You wrote the character '%c', the string \"%s\", the integer %i, and the double %f.\n" , c , s , i , d ) ;
-}
-}
-
-void main3 ( ) {
-double x ;
-printf ( ": " ) ;
-scanf ( "%lf" , & x ) ;
-printf ( "<%f>" , x ) ;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-void char_main ( void ) {
-character_test ( 'a' ) ;
-character_test ( 'B' ) ;
-character_test ( '1' ) ;
-character_test ( '.' ) ;
-character_test ( '\n' ) ;
-character_test ( 'f' ) ;
-character_test ( 'g' ) ;
-}
-
-   
-     
-                  
-               
-                             
-
-
-
-    
-  
-  
-      
-    
-    
-               
-            
-
-
-     
-        
-      
-
-
-        
-      
-
-
-        
-      
-
-
-        
-      
-
-
-        
-      
-
-
-        
-      
-
-
-        
-      
-
-
-        
-      
-
-
-        
-      
-
-
-        
-      
-
-
-
-    
-  
-  
-      
-    
-    
-               
-            
-
-
-   
-   
-   
-
-             
-
-  
-
-     
-   
-     
-   
-  
-   
-  
-
-  
-
-    
-   
-    
-   
-  
-   
-  
-
-    
-    
-      
-   
-
-
-
-    
-                    
-
-         
-
-         
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-         
-        
-                           
-
-     
-         
-     
-     
-     
-     
-     
-      
-     
-     
-     
-     
-     
-      
-     
-
-
-
-      
-         
-         
-
-
-
-     
-      
-
-
-     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-      
-  
-  
-    
-               
-    
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-
-           
-
-
-
-
-
-
-
-
-      
-
-  
-             
-           
-
-
-    
-                
-           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-void assert_test2 ( int n ) {
-if ( ! ( n != 7 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "n != 7" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Main.c" , 907 ) ; abort ( ) ; } ;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

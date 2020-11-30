@@ -1,15 +1,16 @@
 #ifndef __STDLIB_H__
 #define __STDLIB_H__
 
+#define size_t int
 #define NULL ((void*) 0)
 
-double atof(char* s);
-int atoi(char* s);
-long atol(char* s);
+double atof(const char* s);
+int atoi(const char* s);
+long atol(const char* s);
 
-double strtod(char* s, char** endp);
-long strtol(char* s, char** endp, int base);
-unsigned long strtoul(char* s, char** endp, int base);
+double strtod(const char* s, char** endp);
+long strtol(const char* s, char** endp, int base);
+unsigned long strtoul(const char* s, char** endp, int base);
 
 int rand(void);
 void srand(unsigned int seed);

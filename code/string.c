@@ -5,7 +5,7 @@
 #include <locale.h>
 
 char* strcpy(char* target, const char* source) {
-  size_t index;
+  int index;
 
   for (index = 0; source[index] != '\0'; ++index) {
     target[index] = source[index];
@@ -16,7 +16,7 @@ char* strcpy(char* target, const char* source) {
 }
 
 char* strncpy(char* target, const char* source, size_t size) {
-  size_t index;
+  int index;
 
   for (index = 0; (index < size) && (source[index] != '\0'); ++index) {
     target[index] = source[index];
@@ -30,8 +30,7 @@ char* strncpy(char* target, const char* source, size_t size) {
 }
 
 char* strcat(char* target, const char* source) {
-  size_t index;
-  size_t targetLength = strlen(target);
+  int index, targetLength = strlen(target);
 
   for (index = 0; source[index] != '\0'; ++index) {
     target[targetLength + index] = source[index];
@@ -42,8 +41,7 @@ char* strcat(char* target, const char* source) {
 }
 
 char* strncat(char* target, const char* source, size_t size) {
-  size_t index;
-  size_t targetLength = strlen(target);
+  int index, targetLength = strlen(target);
 
   for (index = 0; (index < (size - 1)) && (source[index] != '\0'); ++index) {
     target[targetLength + index] = source[index];
@@ -54,7 +52,7 @@ char* strncat(char* target, const char* source, size_t size) {
 }
 
 int strcmp(const char* left, const char* right) {
-  size_t index;
+  int index;
 
   for (index = 0; TRUE; ++index) {
     if ((left[index] == '\0') && (right[index] == '\0')) {
@@ -76,7 +74,7 @@ int strcmp(const char* left, const char* right) {
 }
 
 int strncmp(const char* left, const char* right, size_t size) {
-  size_t index;
+  int index;
 
   for (index = 0; index < size; ++index) {
     if ((left[index] == '\0') && (right[index] == '\0')) {
@@ -100,7 +98,7 @@ int strncmp(const char* left, const char* right, size_t size) {
 }
 
 char* strchr(const char* text, int i) {
-  size_t index;
+  int index;
   char c = (char) i;
 
   for (index = 0; text[index] != '\0'; ++index) {
@@ -113,7 +111,7 @@ char* strchr(const char* text, int i) {
 }
 
 char* strrchr(const char* text, int i) {
-  size_t index;
+  int index;
   char* result = NULL;
   char c = (char) i;
 
@@ -127,7 +125,7 @@ char* strrchr(const char* text, int i) {
 }
 
 size_t strspn(const char* mainString, const char* charSet) {
-  size_t index;
+  int index;
 
   for (index = 0; mainString[index] != '\0'; ++index) {
     if (strchr(charSet, mainString[index]) == NULL) {
@@ -139,7 +137,7 @@ size_t strspn(const char* mainString, const char* charSet) {
 }
 
 size_t strcspn(const char* mainString, const char* charSet) {
-  size_t index;
+  int index;
 
   for (index = 0; mainString[index] != '\0'; ++index) {
     if (strchr(charSet, mainString[index]) != NULL) {
@@ -151,7 +149,7 @@ size_t strcspn(const char* mainString, const char* charSet) {
 }
 
 char* strpbrk(const char* mainString, const char* charSet) {
-  size_t index;
+  int index;
 
   for (index = 0; mainString[index] != '\0'; ++index) {
     if (strchr(charSet, mainString[index]) != NULL) {
@@ -163,7 +161,7 @@ char* strpbrk(const char* mainString, const char* charSet) {
 }
 
 char* strstr(const char* mainString, const char* subString) {
-  size_t index;
+  int index;
 
   for (index = 0; mainString[index] != '\0'; ++index) {
     if (strcmp(mainString + index, subString) == 0) {
@@ -243,7 +241,7 @@ void* memcpy(void* target, const void* source, size_t size) {
   char* charTarget = (char*) target;
   const char* charSource = (const char*) source;
 
-  size_t index;
+  int index;
   for (index = 0; index < size; ++index) {
     charTarget[index] = charSource[index];
   }
@@ -255,7 +253,7 @@ void* memmove(void* target, const void* source, size_t size) {
   char* charTarget = (char*) target;
   const char* charSource = (const char*) source;
 
-  size_t index;
+  int index;
   if (source < target) {
     for (index = (size - 1); index >= 0; --index) {
       charTarget[index] = charSource[index];
@@ -274,7 +272,7 @@ int memcmp(const void* left, const void* right, size_t size) {
   const char* charLeft = (const char*) left;
   const char* charRight = (const char*) right;
 
-  size_t index;
+  int index;
   for (index = 0; index < size; ++index) {
     if (charLeft[index] < charRight[index]) {
       return -1;
@@ -288,8 +286,8 @@ int memcmp(const void* left, const void* right, size_t size) {
 }
 
 void* memchr(const void* block, int i, size_t size) {
-  size_t index;
-  char* charBlock = (char*) block;
+  int index;
+  const char* charBlock = (const char*) block;
   char c = (char) i;
 
   for (index = 0; index < size; ++index) {
@@ -305,7 +303,7 @@ void* memset(void* block, int i, size_t size) {
   char* charBlock = (char*) block;
   char c = (char) i;
 
-  size_t index;
+  int index;
   for (index = 0; index < size; ++index) {
     charBlock[index] = c;
   }

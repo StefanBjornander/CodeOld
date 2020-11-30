@@ -13,6 +13,13 @@ int g_inStatus, g_inChars;
 void* g_inDevice;
 int g_inCount;
 
+char scanChar(void);
+void unscanChar(char c);
+void scanString(char* string, int precision);
+long scanLongInt(int base);
+unsigned long scanUnsignedLongInt(int base);
+long double scanLongDouble(void);
+
 char scanChar(void) {
   char c = '\0';
   FILE* stream;
@@ -586,35 +593,35 @@ int scanFormat(char* format, va_list arg_list) {
   return g_inCount;
 }
 
-int scanf(char* format, ...) {
+int scanf(const char* format, ...) {
   va_list arg_list;
   va_start(arg_list, format);
   return vscanf(format, arg_list);
 }
 
-int vscanf(char* format, va_list arg_list) {
+int vscanf(const char* format, va_list arg_list) {
   return vfscanf(stdin, format, arg_list);
 }
 
-int fscanf(FILE* inStream, char* format, ...) {
+int fscanf(FILE* inStream, const char* format, ...) {
   va_list arg_list;
   va_start(arg_list, format);
   return vfscanf(inStream, format, arg_list);
 }
 
-int vfscanf(FILE* inStream, char* format, va_list arg_list) {
+int vfscanf(FILE* inStream, const char* format, va_list arg_list) {
   g_inStatus = DEVICE;
   g_inDevice = (void*) inStream;
   return scanFormat(format, arg_list);
 }
 
-int sscanf(char* inString, char* format, ...) {
+int sscanf(char* inString, const char* format, ...) {
   va_list arg_list;
   va_start(arg_list, format);
   return vsscanf(inString, format, arg_list);
 }
 
-int vsscanf(char* inString, char* format, va_list arg_list) {
+int vsscanf(char* inString, const char* format, va_list arg_list) {
   g_inStatus = STRING;
   g_inDevice = (void*) inString;
   return scanFormat(format, arg_list);

@@ -150,10 +150,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
    
 
           
-
     
-    
-
     
     
     
@@ -197,15 +194,16 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
    
    
 
+    
           
 
-double atof ( char * s ) ;
-int atoi ( char * s ) ;
-long atol ( char * s ) ;
+double atof ( const char * s ) ;
+int atoi ( const char * s ) ;
+long atol ( const char * s ) ;
 
-double strtod ( char * s , char ** endp ) ;
-long strtol ( char * s , char ** endp , int base ) ;
-unsigned long strtoul ( char * s , char ** endp , int base ) ;
+double strtod ( const char * s , char ** endp ) ;
+long strtol ( const char * s , char ** endp , int base ) ;
+unsigned long strtoul ( const char * s , char ** endp , int base ) ;
 
 int rand ( void ) ;
 void srand ( unsigned int seed ) ;
@@ -343,10 +341,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
    
 
           
-
     
-    
-
     
     
     
@@ -365,12 +360,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
     
     
 
-typedef unsigned int UINT ;
-typedef unsigned long ULONG ;
-
 typedef struct {
 int open ;
-UINT handle ;
+unsigned int handle ;
 char name [ 16 ] , ungetc ;
 int errno ;
 unsigned int position , size ;
@@ -382,33 +374,6 @@ extern FILE * stdin , * stdout , * stderr ;
 extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-  
 
           
 
@@ -469,19 +434,12 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
 
     
 
-char scanChar ( void ) ;
-void unscanChar ( char c ) ;
-void scanString ( char * string , int precision ) ;
-long scanLongInt ( int base ) ;
-unsigned long scanUnsignedLongInt ( int base ) ;
-long double scanLongDouble ( void ) ;
-
-int scanf ( char * format , ... ) ;
-int vscanf ( char * format , char * arg_list ) ;
-int fscanf ( FILE * inStream , char * format , ... ) ;
-int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
-int sscanf ( char * inString , char * format , ... ) ;
-int vsscanf ( char * inString , char * format , char * arg_list ) ;
+int scanf ( const char * format , ... ) ;
+int vscanf ( const char * format , char * arg_list ) ;
+int fscanf ( FILE * inStream , const char * format , ... ) ;
+int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
+int sscanf ( char * inString , const char * format , ... ) ;
+int vsscanf ( char * inString , const char * format , char * arg_list ) ;
 
   
 
@@ -501,31 +459,12 @@ int putc ( int c , FILE * stream ) ;
 int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
-void printChar ( char c ) ;
-void printChar2 ( char c ) ;
-void printString ( char * s , int precision ) ;
-void printString2 ( char * s ) ;
-void printIntRec ( int intValue ) ;
-void printInt ( int intValue , int plus , int space ) ;
-void printDoublePlain ( double doubleValue , int plus , int space ,
-int grid , int precision ) ;
-void printLongDoublePlain ( long double doubleValue , int plus ,
-int space , int grid , int precision ) ;
-void printInt ( int intValue , int plus , int space ) ;
-void printLongInt ( long longIntValue , int plus , int space ) ;
-void printLongDoubleFraction ( long double longDoubleValue ,
-int grid , int precision ) ;
-void printLongDoublePlain ( long double longDoubleValue , int plus ,
-int space , int grid , int precision ) ;
-int printFormat ( char * format , char * arg_list ) ;
-
-int printf2 ( char * format ) ;
-int printf ( char * format , ... ) ;
-int vprintf ( char * format , char * arg_list ) ;
-int fprintf ( FILE * outStream , char * format , ... ) ;
-int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
-int sprintf ( char * outString , char * format , ... ) ;
-int vsprintf ( char * outString , char * format , char * arg_list ) ;
+int printf ( const char * format , ... ) ;
+int vprintf ( const char * format , char * arg_list ) ;
+int fprintf ( FILE * outStream , const char * format , ... ) ;
+int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
+int sprintf ( char * outString , const char * format , ... ) ;
+int vsprintf ( char * outString , const char * format , char * arg_list ) ;
 
   
 
@@ -539,51 +478,21 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,7$
 
 extern FILE g_fileArray [];
 
-int atoi ( char * s ) {
+int atoi ( const char * s ) {
 return ( int ) strtol ( s , ( char ** ) ( ( void * ) 0 ) , 10 ) ;
 }
 
-long atol ( char * s ) {
+long atol ( const char * s ) {
 return strtol ( s , ( char ** ) ( ( void * ) 0 ) , 10 ) ;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 extern int g_inStatus , g_inChars ;
 extern void * g_inDevice ;
 
-long strtol ( char * s , char ** endp , int base ) {
+extern long scanLongInt ( int base ) ;
+extern unsigned long scanUnsignedLongInt ( int base ) ;
+
+long strtol ( const char * s , char ** endp , int base ) {
 g_inStatus = 1 ;
 g_inDevice = s ;
 g_inChars = 0 ;
@@ -597,6 +506,70 @@ if ( endp != ( ( void * ) 0 ) ) {
 return value ;
 }
 }
+
+unsigned long strtoul ( const char * s , char ** endp , int base ) {
+g_inStatus = 1 ;
+g_inDevice = s ;
+g_inChars = 0 ;
+
+{ unsigned long unsignedLongValue = scanUnsignedLongInt ( base ) ;
+
+if ( endp != ( ( void * ) 0 ) ) {
+* endp = s + g_inChars ;
+}
+
+return unsignedLongValue ;
+}
+}
+
+double atof ( const char * s ) {
+return strtod ( s , ( char ** ) ( ( void * ) 0 ) ) ;
+}
+
+double strtod ( const char * s , char ** endp ) {
+int chars = '\0' ;
+double value = 0 ;
+sscanf ( s , "%lf%n" , & value , & chars ) ;
+
+if ( endp != ( ( void * ) 0 ) ) {
+* endp = s + chars ;
+}
+
+return value ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -760,21 +733,6 @@ printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
 }
 }
 
-unsigned long strtoul ( char * s , char ** endp , int base ) {
-g_inStatus = 1 ;
-g_inDevice = s ;
-g_inChars = 0 ;
-
-{ unsigned long unsignedLongValue = scanUnsignedLongInt ( base ) ;
-
-if ( endp != ( ( void * ) 0 ) ) {
-* endp = s + g_inChars ;
-}
-
-return unsignedLongValue ;
-}
-}
-
 
 
 
@@ -929,33 +887,17 @@ printf ( "<%s> <%li> <%s> <%i>\n" , text , value , pointer , base ) ;
 }
 }
 
-double atof ( char * s ) {
-return strtod ( s , ( char ** ) ( ( void * ) 0 ) ) ;
-}
-
-double strtod ( char * s , char ** endp ) {
-int chars = '\0' ;
-double value = 0 ;
-sscanf ( s , "%lf%n" , & value , & chars ) ;
-
-if ( endp != ( ( void * ) 0 ) ) {
-* endp = s + chars ;
-}
-
-return value ;
-}
-
 void abort ( void ) {
-   
- register_ah = 0x4Cs ;
-register_al = ( unsigned char ) -1 ;
-interrupt ( 0x21s ) ;
-  
-
    
     
        
+    
+  
+
    
+ register_rax = 60L ;
+register_rdi = ( unsigned long ) -1 ;
+syscall ( ) ;
   
  }
 
@@ -1061,15 +1003,15 @@ g_funcArray [ index ] ( ) ;
 }
 
    
- register_al = ( short ) status ;
-register_ah = 0x4Cs ;
-interrupt ( 0x21s ) ;
+       
+   
+    
   
 
    
-    
-       
-   
+ register_rax = 60L ;
+register_rdi = ( unsigned long ) status ;
+syscall ( ) ;
   
  }
 

@@ -153,10 +153,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
    
 
           
-
     
-    
-
     
     
     
@@ -175,12 +172,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
     
     
 
-typedef unsigned int UINT ;
-typedef unsigned long ULONG ;
-
 typedef struct {
 int open ;
-UINT handle ;
+unsigned int handle ;
 char name [ 16 ] , ungetc ;
 int errno ;
 unsigned int position , size ;
@@ -192,33 +186,6 @@ extern FILE * stdin , * stdout , * stderr ;
 extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-    
-    
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-  
 
           
 
@@ -279,19 +246,12 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
 
     
 
-char scanChar ( void ) ;
-void unscanChar ( char c ) ;
-void scanString ( char * string , int precision ) ;
-long scanLongInt ( int base ) ;
-unsigned long scanUnsignedLongInt ( int base ) ;
-long double scanLongDouble ( void ) ;
-
-int scanf ( char * format , ... ) ;
-int vscanf ( char * format , char * arg_list ) ;
-int fscanf ( FILE * inStream , char * format , ... ) ;
-int vfscanf ( FILE * inStream , char * format , char * arg_list ) ;
-int sscanf ( char * inString , char * format , ... ) ;
-int vsscanf ( char * inString , char * format , char * arg_list ) ;
+int scanf ( const char * format , ... ) ;
+int vscanf ( const char * format , char * arg_list ) ;
+int fscanf ( FILE * inStream , const char * format , ... ) ;
+int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
+int sscanf ( char * inString , const char * format , ... ) ;
+int vsscanf ( char * inString , const char * format , char * arg_list ) ;
 
   
 
@@ -311,31 +271,12 @@ int putc ( int c , FILE * stream ) ;
 int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
-void printChar ( char c ) ;
-void printChar2 ( char c ) ;
-void printString ( char * s , int precision ) ;
-void printString2 ( char * s ) ;
-void printIntRec ( int intValue ) ;
-void printInt ( int intValue , int plus , int space ) ;
-void printDoublePlain ( double doubleValue , int plus , int space ,
-int grid , int precision ) ;
-void printLongDoublePlain ( long double doubleValue , int plus ,
-int space , int grid , int precision ) ;
-void printInt ( int intValue , int plus , int space ) ;
-void printLongInt ( long longIntValue , int plus , int space ) ;
-void printLongDoubleFraction ( long double longDoubleValue ,
-int grid , int precision ) ;
-void printLongDoublePlain ( long double longDoubleValue , int plus ,
-int space , int grid , int precision ) ;
-int printFormat ( char * format , char * arg_list ) ;
-
-int printf2 ( char * format ) ;
-int printf ( char * format , ... ) ;
-int vprintf ( char * format , char * arg_list ) ;
-int fprintf ( FILE * outStream , char * format , ... ) ;
-int vfprintf ( FILE * outStream , char * format , char * arg_list ) ;
-int sprintf ( char * outString , char * format , ... ) ;
-int vsprintf ( char * outString , char * format , char * arg_list ) ;
+int printf ( const char * format , ... ) ;
+int vprintf ( const char * format , char * arg_list ) ;
+int fprintf ( FILE * outStream , const char * format , ... ) ;
+int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
+int sprintf ( char * outString , const char * format , ... ) ;
+int vsprintf ( char * outString , const char * format , char * arg_list ) ;
 
   
 
@@ -351,10 +292,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
    
 
           
-
     
-    
-
     
     
     
@@ -381,15 +319,16 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
    
    
 
+    
           
 
-double atof ( char * s ) ;
-int atoi ( char * s ) ;
-long atol ( char * s ) ;
+double atof ( const char * s ) ;
+int atoi ( const char * s ) ;
+long atol ( const char * s ) ;
 
-double strtod ( char * s , char ** endp ) ;
-long strtol ( char * s , char ** endp , int base ) ;
-unsigned long strtoul ( char * s , char ** endp , int base ) ;
+double strtod ( const char * s , char ** endp ) ;
+long strtol ( const char * s , char ** endp , int base ) ;
+unsigned long strtoul ( const char * s , char ** endp , int base ) ;
 
 int rand ( void ) ;
 void srand ( unsigned int seed ) ;
@@ -447,19 +386,12 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
 
     
 
-     
-      
           
-      
-       
-      
-
-         
-          
-             
+           
               
-             
+               
               
+               
 
   
 
@@ -479,31 +411,12 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
           
       
 
-      
-      
           
-       
-      
-            
            
-      
-         
-         
-            
-            
-      
-      
-         
-         
-          
-
-       
-         
-          
-             
               
-             
+               
               
+               
 
   
 
@@ -520,6 +433,22 @@ int g_outStatus , g_outChars ;
 void * g_outDevice ;
 
     
+
+void printChar ( char c ) ;
+void printString ( const char * s , int precision ) ;
+void printIntRec ( int intValue ) ;
+void printInt ( int intValue , int plus , int space ) ;
+void printDoublePlain ( double doubleValue , int plus , int space ,
+int grid , int precision ) ;
+void printLongDoublePlain ( long double doubleValue , int plus ,
+int space , int grid , int precision ) ;
+void printInt ( int intValue , int plus , int space ) ;
+void printLongInt ( long longIntValue , int plus , int space ) ;
+void printLongDoubleFraction ( long double longDoubleValue ,
+int grid , int precision ) ;
+void printLongDoublePlain ( long double longDoubleValue , int plus ,
+int space , int grid , int precision ) ;
+int printFormat ( const char * format , char * arg_list ) ;
 
 int putc ( int i , FILE * stream ) {
 g_outStatus = 0 ;
@@ -551,19 +480,19 @@ case 0 : {
 FILE * stream = ( FILE * ) g_outDevice ;
 
    
- register_ah = 0x40s ;
-register_bx = stream -> handle ;
-register_cx = 1 ;
-register_dx = & c ;
-interrupt ( 0x21s ) ;
+    
+     
+   
+    
+    
   
 
    
-    
-         
-        
-   
-   
+ register_rax = 0x01 ;
+register_rdi = ( unsigned long ) stream -> handle ;
+register_rsi = ( unsigned long ) & c ;
+register_rdx = 1 ;
+syscall ( ) ;
   
  ++ g_outChars ;
 break ;
@@ -581,7 +510,7 @@ break ;
 }
 }
 
-void printString ( char * s , int precision ) {
+void printString ( const char * s , int precision ) {
 if ( s != ( ( void * ) 0 ) ) {
 int index ;
 
@@ -760,9 +689,9 @@ if ( ( precisionPtr != ( ( void * ) 0 ) ) && ( * precisionPtr == -1 ) ) {
 return arg_list ;
 }
 
-char * printArgument ( char * format , char * arg_list , int plus , int space ,
-int grid , int * widthPtr , int precision , int shortInt ,
-int longInt , int longDouble , int sign ,
+char * printArgument ( const char * format , char * arg_list , int plus ,
+int space , int grid , int * widthPtr , int precision ,
+int shortInt , int longInt , int longDouble , int sign ,
 int * negativePtr ) {
 char c = format [ 0 ] , charValue ;
 int * intPtr ;
@@ -900,7 +829,7 @@ break ;
 return arg_list ;
 }
 
-int printFormat ( char * format , char * arg_list ) {
+int printFormat ( const char * format , char * arg_list ) {
 int index , width = 0 , precision = 0 ;
 int percent = 0 , plus = 0 , minus = 0 , space = 0 ,
 zero = 0 , grid = 0 , widthStar = 0 ,
@@ -1098,35 +1027,35 @@ outString [ g_outChars ] = '\0' ;
 return g_outChars ;
 }
 
-int printf ( char * format , ... ) {
+int printf ( const char * format , ... ) {
 char * arg_list ;
 ( arg_list = ( ( char * ) & format ) + sizeof ( format ) ) ;
 return vprintf ( format , arg_list ) ;
 }
 
-int vprintf ( char * format , char * arg_list ) {
+int vprintf ( const char * format , char * arg_list ) {
 return vfprintf ( stdout , format , arg_list ) ;
 }
 
-int fprintf ( FILE * outStream , char * format , ... ) {
+int fprintf ( FILE * outStream , const char * format , ... ) {
 char * arg_list ;
 ( arg_list = ( ( char * ) & format ) + sizeof ( format ) ) ;
 return vfprintf ( outStream , format , arg_list ) ;
 }
 
-int vfprintf ( FILE * outStream , char * format , char * arg_list ) {
+int vfprintf ( FILE * outStream , const char * format , char * arg_list ) {
 g_outStatus = 0 ;
 g_outDevice = ( void * ) outStream ;
 return printFormat ( format , arg_list ) ;
 }
 
-int sprintf ( char * outString , char * format , ... ) {
+int sprintf ( char * outString , const char * format , ... ) {
 char * arg_list ;
 ( arg_list = ( ( char * ) & format ) + sizeof ( format ) ) ;
 return vsprintf ( outString , format , arg_list ) ;
 }
 
-int vsprintf ( char * outString , char * format , char * arg_list ) {
+int vsprintf ( char * outString , const char * format , char * arg_list ) {
 g_outStatus = 1 ;
 g_outDevice = ( void * ) outString ;
 return printFormat ( format , arg_list ) ;

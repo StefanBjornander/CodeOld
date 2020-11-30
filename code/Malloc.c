@@ -9,12 +9,12 @@
 #include <Assert.h>
 
 typedef struct block_header {
-  UINT size;
+  unsigned int size;
   struct block_header* next;
 } BLOCK_HEADER;
 
 BLOCK_HEADER* g_firstBlockPtr = NULL;
-#define BLOCK_HEADER_SIZE ((UINT) (sizeof (BLOCK_HEADER)))
+#define BLOCK_HEADER_SIZE ((unsigned int) (sizeof (BLOCK_HEADER)))
 
 // 1. The list is empty.
 // 2. Before the list.
@@ -22,16 +22,16 @@ BLOCK_HEADER* g_firstBlockPtr = NULL;
 // 4. After the list.
 
 void* malloc(size_t memorySize) {
-  UINT newBlockSize = BLOCK_HEADER_SIZE + ((UINT) memorySize),
-       minGap = 0;
+  unsigned int newBlockSize = BLOCK_HEADER_SIZE +
+               ((unsigned int) memorySize),  minGap = 0;
 
 #ifdef __WINDOWS__
-  UINT lastAddress = 65528u;
+  unsigned int lastAddress = 65528u;
 #endif
 
 #ifdef __LINUX__
-  //UINT lastAddress = (UINT)(stack_top + 65528u);
-  UINT lastAddress = (UINT)(stack_top + 1048572u);
+  //unsigned int lastAddress = (unsigned int)(stack_top + 65528u);
+  unsigned int lastAddress = (unsigned int)(stack_top + 1048572u);
   //printf("lastAddress %u\n", lastAddress);
 #endif
 
@@ -45,8 +45,8 @@ void* malloc(size_t memorySize) {
   }
 
   while (currBlockPtr != NULL) {
-    UINT currAddress = (UINT) currBlockPtr;
-    UINT currGap = lastAddress - (currAddress + currBlockPtr->size + BLOCK_HEADER_SIZE);
+    unsigned int currAddress = (unsigned int) currBlockPtr;
+    unsigned int currGap = lastAddress - (currAddress + currBlockPtr->size + BLOCK_HEADER_SIZE);
     //printf("lastAddress %u, size %u, currAddress %u, currGap %u\n", lastAddress, currBlockPtr->size, currAddress, currGap);
 
     if ((newBlockSize <= currGap) && ((minGap == 0u) || (currGap < minGap))) {
@@ -61,7 +61,7 @@ void* malloc(size_t memorySize) {
   }
 
   if (minBlockPtr != NULL) {
-    UINT newAddress = ((UINT) minBlockPtr) + minBlockPtr->size + BLOCK_HEADER_SIZE;
+    unsigned int newAddress = ((unsigned int) minBlockPtr) + minBlockPtr->size + BLOCK_HEADER_SIZE;
     //printf("A newAddress: %u\n", newAddress);
 
     BLOCK_HEADER* newBlockPtr = (BLOCK_HEADER*) newAddress;
@@ -78,14 +78,14 @@ void* malloc(size_t memorySize) {
     return (void*) (newAddress + BLOCK_HEADER_SIZE);
   }
   else {
-    UINT newAddress = lastAddress - newBlockSize;
+    unsigned int newAddress = lastAddress - newBlockSize;
 
 #ifdef __WINDOWS__
-    UINT stackTop = register_bp;
+    unsigned int stackTop = register_bp;
 #endif
 
 #ifdef __LINUX__
-    UINT stackTop = register_rbp;
+    unsigned int stackTop = register_rbp;
 #endif
 
     //printf("B newAddress: %u\n", newAddress);
@@ -102,7 +102,7 @@ void* malloc(size_t memorySize) {
         g_firstBlockPtr = newBlockPtr;
       }
 
-//      UINT* lowHeapPtr = (UINT*) LOW_HEAP_ADDRESS;
+//      unsigned int* lowHeapPtr = (unsigned int*) LOW_HEAP_ADDRESS;
 //      *lowHeapPtr = newAddress;
       return (void*) (newAddress + BLOCK_HEADER_SIZE);
     }
@@ -119,13 +119,13 @@ void* mallocX(size_t memorySize) {
     return NULL;
   }
 
-  UINT newBlockSize = BLOCK_HEADER_SIZE + ((UINT)memorySize),
+  unsigned int newBlockSize = BLOCK_HEADER_SIZE + ((unsigned int)memorySize),
     minGap = 0, lastAddress = LOW_HEAP_ADDRESS;
   BLOCK_HEADER *minBlockPtr = NULL, *minPrevBlockPtr, *prevBlockPtr = NULL,
     *currBlockPtr = g_firstBlockPtr;
 
   while (currBlockPtr != NULL) {
-    UINT currGap = lastAddress - (((UINT)currBlockPtr) + currBlockPtr->size);
+    unsigned int currGap = lastAddress - (((unsigned int)currBlockPtr) + currBlockPtr->size);
 
     if ((newBlockSize <= currGap) && ((minGap == 0u) || (currGap < minGap))) {
       minGap = currGap;
@@ -133,21 +133,21 @@ void* mallocX(size_t memorySize) {
       minPrevBlockPtr = prevBlockPtr;
     }
 
-    lastAddress = (UINT)currBlockPtr;
+    lastAddress = (unsigned int)currBlockPtr;
     prevBlockPtr = currBlockPtr;
     currBlockPtr = currBlockPtr->next;
   }
 
-  UINT newAddress;
+  unsigned int newAddress;
 
   if (minBlockPtr != NULL) {
-    newAddress = ((UINT)minBlockPtr) - minBlockPtr->size;
+    newAddress = ((unsigned int)minBlockPtr) - minBlockPtr->size;
   }
   else {
     newAddress = lastAddress - newBlockSize;
   }
 
-  UINT stackTop;
+  unsigned int stackTop;
   stackTop = register_bp;
 
   if (stackTop <= newAddress) {
@@ -162,7 +162,7 @@ void* mallocX(size_t memorySize) {
       g_firstBlockPtr = newBlockPtr;
     }
 
-    UINT* lowHeapPtr = (UINT*)LOW_HEAP_ADDRESS;
+    unsigned int* lowHeapPtr = (unsigned int*)LOW_HEAP_ADDRESS;
     *lowHeapPtr = newAddress;
     return (void*)(newAddress + BLOCK_HEADER_SIZE);
   }
@@ -182,7 +182,7 @@ void* calloc(size_t number, size_t size) {
 }
 
 void free(void* freeMemoryPtr) {
-  BLOCK_HEADER *freeBlockPtr = (BLOCK_HEADER*) (((UINT) freeMemoryPtr) - BLOCK_HEADER_SIZE),
+  BLOCK_HEADER *freeBlockPtr = (BLOCK_HEADER*) (((unsigned int) freeMemoryPtr) - BLOCK_HEADER_SIZE),
                *prevBlockPtr = NULL, *currBlockPtr = g_firstBlockPtr;
 
   if (freeMemoryPtr == NULL) {
@@ -194,16 +194,16 @@ void free(void* freeMemoryPtr) {
       if ((prevBlockPtr == NULL) && // Only.
           (currBlockPtr->next == NULL)) {
         g_firstBlockPtr = NULL;
-        //UINT* lowHeapPtr = (UINT*) LOW_HEAP_ADDRESS;
-        //*lowHeapPtr = (UINT*) LOW_HEAP_ADDRESS;
+        //unsigned int* lowHeapPtr = (unsigned int*) LOW_HEAP_ADDRESS;
+        //*lowHeapPtr = (unsigned int*) LOW_HEAP_ADDRESS;
       }
       else if (prevBlockPtr == NULL) { // First.
         g_firstBlockPtr = currBlockPtr->next;
       }
       else if (currBlockPtr->next == NULL) { // Last.
         prevBlockPtr->next = NULL;
-        //UINT* lowHeapPtr = (UINT*) LOW_HEAP_ADDRESS;
-        //*lowHeapPtr = (UINT*) prevBlockPtr;
+        //unsigned int* lowHeapPtr = (unsigned int*) LOW_HEAP_ADDRESS;
+        //*lowHeapPtr = (unsigned int*) prevBlockPtr;
       }
       else { // Not first or last.
         prevBlockPtr->next = currBlockPtr->next;
@@ -223,7 +223,7 @@ void freeX(void* freeMemoryPtr) {
     return;
   }
 
-  BLOCK_HEADER *freeBlockPtr = (BLOCK_HEADER*)(((UINT)freeMemoryPtr) - BLOCK_HEADER_SIZE),
+  BLOCK_HEADER *freeBlockPtr = (BLOCK_HEADER*)(((unsigned int)freeMemoryPtr) - BLOCK_HEADER_SIZE),
     *prevBlockPtr = NULL, *currBlockPtr = g_firstBlockPtr;
 
   while (currBlockPtr != NULL) {
@@ -236,13 +236,13 @@ void freeX(void* freeMemoryPtr) {
       }
 
       if (currBlockPtr->next == NULL) { // Last.
-        UINT* lowHeapPtr = (UINT*) LOW_HEAP_ADDRESS;
+        unsigned int* lowHeapPtr = (unsigned int*) LOW_HEAP_ADDRESS;
 
         if (prevBlockPtr != NULL) {
-          *lowHeapPtr = (UINT*) prevBlockPtr; // Not the only.
+          *lowHeapPtr = (unsigned int*) prevBlockPtr; // Not the only.
         }
         else {
-          *lowHeapPtr = (UINT*) LOW_HEAP_ADDRESS; // The only.
+          *lowHeapPtr = (unsigned int*) LOW_HEAP_ADDRESS; // The only.
         }
       }
 
@@ -268,8 +268,8 @@ void* realloc(void* oldMemoryPtr, size_t newMemorySize) {
     return NULL;
   }
 
-  { UINT newBlockSize = ((UINT) newMemorySize) + BLOCK_HEADER_SIZE;
-    BLOCK_HEADER* oldBlockPtr = (BLOCK_HEADER*) (((UINT) oldMemoryPtr) - BLOCK_HEADER_SIZE);
+  { unsigned int newBlockSize = ((unsigned int) newMemorySize) + BLOCK_HEADER_SIZE;
+    BLOCK_HEADER* oldBlockPtr = (BLOCK_HEADER*) (((unsigned int) oldMemoryPtr) - BLOCK_HEADER_SIZE);
 
     if (newBlockSize <= oldBlockPtr->size) {
       oldBlockPtr->size = newBlockSize;
@@ -278,12 +278,12 @@ void* realloc(void* oldMemoryPtr, size_t newMemorySize) {
 
 
 #ifdef __WINDOWS__
-    { UINT lastAddress = 65528u; // LOW_HEAP_ADDRESS;
+    { unsigned int lastAddress = 65528u; // LOW_HEAP_ADDRESS;
 #endif
 
 #ifdef __LINUX__
-    //UINT lastAddress = (UINT)(stack_top + 65528u);
-    { UINT lastAddress = (UINT)(stack_top + 1048572u);
+    //unsigned int lastAddress = (unsigned int)(stack_top + 65528u);
+    { unsigned int lastAddress = (unsigned int)(stack_top + 1048572u);
     //printf("lastAddress %u\n", lastAddress);
 #endif
 
@@ -291,7 +291,7 @@ void* realloc(void* oldMemoryPtr, size_t newMemorySize) {
 
       while (currBlockPtr != NULL) {
         if (currBlockPtr == oldBlockPtr) {
-          UINT availableSize = lastAddress - ((UINT) currBlockPtr);
+          unsigned int availableSize = lastAddress - ((unsigned int) currBlockPtr);
 
           if (availableSize >= newBlockSize) {
             oldBlockPtr->size = newBlockSize;
@@ -302,7 +302,7 @@ void* realloc(void* oldMemoryPtr, size_t newMemorySize) {
           }
         }
 
-        lastAddress = (UINT) currBlockPtr;
+        lastAddress = (unsigned int) currBlockPtr;
         currBlockPtr = currBlockPtr->next;
       }
     }
@@ -325,11 +325,11 @@ void print_heap() {
   printf("Heap:\n");
 
   while (currBlockPtr != NULL) {
-    printf("  Address %u, Size %u\n", (UINT) currBlockPtr, currBlockPtr->size);
+    printf("  Address %u, Size %u\n", (unsigned int) currBlockPtr, currBlockPtr->size);
     currBlockPtr = currBlockPtr->next;
   }
   printf("\n");
 
-  //UINT* lowHeapPtr = (UINT*) LOW_HEAP_ADDRESS;
+  //unsigned int* lowHeapPtr = (unsigned int*) LOW_HEAP_ADDRESS;
   //printf("Low Heap: %u\n", *lowHeapPtr);
 }

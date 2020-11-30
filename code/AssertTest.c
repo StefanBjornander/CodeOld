@@ -17,6 +17,6 @@ void assert_testX(void) {
   assert_test2(n);
 }
 
-void assert_test2X(int n) {
+void assert_test2(int n) {
   assert(n != 7);
 }
