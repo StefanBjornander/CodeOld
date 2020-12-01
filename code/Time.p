@@ -495,57 +495,57 @@ unsigned long time ( unsigned long * timePtr ) {
 unsigned long time ;
 
    
-   
-    
-      
-        
+ int year ;
+short month , monthDay ;
+short hour , min , sec ;
+struct lconv * localeConvPtr = localeconv ( ) ;
 
-   
-    
-     
-     
-   
+register_ah = 0x2As ;
+interrupt ( 0x21s ) ;
+year = register_cx - 1900 ;
+month = register_dh - 1s ;
+monthDay = register_dl ;
 
-   
-    
-   
-   
-   
+register_ah = 0x2Cs ;
+interrupt ( 0x21s ) ;
+hour = register_ch ;
+min = register_cl ;
+sec = register_dh ;
 
-      
-     
+if ( localeConvPtr != ( ( void * ) 0 ) ) {
+hour -= localeConvPtr -> winterTimeZone ;
+}
 
+{ const int leapYear = ( year % 4 ) == 0 ;
+const int daysOfMonthsX [] = { 31 , leapYear ? 29 : 28 , 31 , 30 ,
+31 , 30 , 31 , 31 , 30 , 31 , 30 , 31 };
+int yearDay = monthDay - 1 , mon ;
 
-            
-                 
-               
-        
+for ( mon = 0 ; mon < month ; ++ mon ) {
+yearDay += daysOfMonthsX [ mon ];
+}
 
-             
-     
-
-
-                       
-       
-
-
+{ struct tm s = { sec , min , hour , monthDay , month , year , 0 , yearDay , 0 };
+time = mktime ( & s ) ;
+}
+}
   
 
    
- register_rax = 201L ;
-register_rdi = ( unsigned long ) & time ;
-syscall ( ) ;
+    
+        
+   
 
 
-{ struct timeval tv ;
-struct timezone tz ;
+    
+   
 
-register_rax = 96L ;
-register_rdi = & tv ;
-register_rsi = & tz ;
-syscall ( ) ;
+   
+    
+    
+   
 
-}
+
 
   
 
