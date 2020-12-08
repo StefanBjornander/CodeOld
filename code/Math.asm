@@ -302,7 +302,7 @@ section .text
 	inc dword [rbp + 32]
 
  log$15:
-	; Goto 7
+	; Jump 7
 	jmp log$7
 
  log$16:
@@ -356,7 +356,7 @@ section .text
 	dec dword [rbp + 32]
 
  log$27:
-	; Goto 19
+	; Jump 19
 	jmp log$19
 
  log$28:
@@ -1681,7 +1681,7 @@ section .text
 	; DecreaseStack
 
  modf$22:
-	; Goto 25
+	; Jump 25
 	jmp modf$25
 
  modf$23:
@@ -1719,7 +1719,7 @@ section .text
 	; DecreaseStack
 
  modf$31:
-	; Goto 34
+	; Jump 34
 	jmp modf$34
 
  modf$32:
@@ -1845,7 +1845,7 @@ section .text
 	; DecreaseStack
 
  fmod$23:
-	; Goto 26
+	; Jump 26
 	jmp fmod$26
 
  fmod$24:
@@ -4356,7 +4356,7 @@ section .text
 	; DecreaseStack
 
  round$7:
-	; Goto 11
+	; Jump 11
 	jmp round$11
 
  round$8:
@@ -4423,7 +4423,7 @@ section .text
 	; DecreaseStack
 
  fabs$6:
-	; Goto 8
+	; Jump 8
 	jmp fabs$8
 
  fabs$7:

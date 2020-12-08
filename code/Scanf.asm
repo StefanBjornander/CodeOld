@@ -72,7 +72,7 @@ section .text
 	; CaseEnd g_inStatus
 
  scanChar$4:
-	; Goto 30
+	; Jump 30
 	jmp scanChar$30
 
  scanChar$5:
@@ -214,7 +214,7 @@ section .text
 	; CaseEnd g_inStatus
 
  unscanChar$3:
-	; Goto 7
+	; Jump 7
 	jmp unscanChar$7
 
  unscanChar$4:
@@ -222,7 +222,7 @@ section .text
 	dec dword [g_inChars]
 
  unscanChar$5:
-	; Goto 7
+	; Jump 7
 	jmp unscanChar$7
 
  unscanChar$6:
@@ -315,7 +315,7 @@ section .text
 	inc dword [rbp + 40]
 
  @3519$strnchr$15:
-	; Goto 3
+	; Jump 3
 	jmp @3519$strnchr$3
 
  @3519$strnchr$16:
@@ -413,7 +413,7 @@ section .text
 	mov [rbp + 52], bl
 
  scanPattern$18:
-	; Goto 6
+	; Jump 6
 	jmp scanPattern$6
 
  scanPattern$19:
@@ -566,7 +566,7 @@ section .text
 	mov [rbp + 52], bl
 
  scanPattern$51:
-	; Goto 20
+	; Jump 20
 	jmp scanPattern$20
 
  scanPattern$52:
@@ -588,7 +588,7 @@ section .text
 	mov byte [rsi], 0
 
  scanPattern$56:
-	; Goto 83
+	; Jump 83
 	jmp scanPattern$83
 
  scanPattern$57:
@@ -710,7 +710,7 @@ section .text
 	mov [rbp + 52], bl
 
  scanPattern$82:
-	; Goto 57
+	; Jump 57
 	jmp scanPattern$57
 
  scanPattern$83:
@@ -808,7 +808,7 @@ section .text
 	mov [rbp + 40], bl
 
  scanString$19:
-	; Goto 7
+	; Jump 7
 	jmp scanString$7
 
  scanString$20:
@@ -929,7 +929,7 @@ section .text
 	inc dword [g_inChars]
 
  scanString$45:
-	; Goto 22
+	; Jump 22
 	jmp scanString$22
 
  scanString$46:
@@ -955,7 +955,7 @@ section .text
 	inc dword [g_inChars]
 
  scanString$51:
-	; Goto 130
+	; Jump 130
 	jmp scanString$130
 
  scanString$52:
@@ -1079,7 +1079,7 @@ section .text
 	inc dword [g_inChars]
 
  scanString$78:
-	; Goto 52
+	; Jump 52
 	jmp scanString$52
 
  scanString$79:
@@ -1110,7 +1110,7 @@ section .text
 	inc dword [g_inChars]
 
  scanString$85:
-	; Goto 130
+	; Jump 130
 	jmp scanString$130
 
  scanString$86:
@@ -1200,7 +1200,7 @@ section .text
 	inc dword [g_inChars]
 
  scanString$104:
-	; Goto 87
+	; Jump 87
 	jmp scanString$87
 
  scanString$105:
@@ -1208,7 +1208,7 @@ section .text
 	inc dword [g_inChars]
 
  scanString$106:
-	; Goto 130
+	; Jump 130
 	jmp scanString$130
 
  scanString$107:
@@ -1306,7 +1306,7 @@ section .text
 	inc dword [g_inChars]
 
  scanString$127:
-	; Goto 107
+	; Jump 107
 	jmp scanString$107
 
  scanString$128:
@@ -1406,7 +1406,7 @@ section .text
 	mov ebx, 1
 
  @3658$isDigitInBase$13:
-	; Goto 15
+	; Jump 15
 	jmp @3658$isDigitInBase$15
 
  @3658$isDigitInBase$14:
@@ -1491,7 +1491,7 @@ section .text
 	mov ebx, 1
 
  @3658$isDigitInBase$30:
-	; Goto 32
+	; Jump 32
 	jmp @3658$isDigitInBase$32
 
  @3658$isDigitInBase$31:
@@ -1576,7 +1576,7 @@ section .text
 	mov ebx, 1
 
  @3658$isDigitInBase$47:
-	; Goto 49
+	; Jump 49
 	jmp @3658$isDigitInBase$49
 
  @3658$isDigitInBase$48:
@@ -1891,7 +1891,7 @@ section .text
 	mov [rbp + 44], bl
 
  scanLongInt$20:
-	; Goto 8
+	; Jump 8
 	jmp scanLongInt$8
 
  scanLongInt$21:
@@ -1920,7 +1920,7 @@ section .text
 	mov [rbp + 44], bl
 
  scanLongInt$27:
-	; Goto 35
+	; Jump 35
 	jmp scanLongInt$35
 
  scanLongInt$28:
@@ -2041,7 +2041,7 @@ section .text
 	mov [rbp + 44], bl
 
  scanLongInt$55:
-	; Goto 59
+	; Jump 59
 	jmp scanLongInt$59
 
  scanLongInt$56:
@@ -2049,7 +2049,7 @@ section .text
 	mov dword [rbp + 24], 8
 
  scanLongInt$57:
-	; Goto 59
+	; Jump 59
 	jmp scanLongInt$59
 
  scanLongInt$58:
@@ -2163,7 +2163,7 @@ section .text
 	mov dword [rbp + 40], 1
 
  scanLongInt$81:
-	; Goto 59
+	; Jump 59
 	jmp scanLongInt$59
 
  scanLongInt$82:
@@ -2306,7 +2306,7 @@ section .text
 	mov [rbp + 44], bl
 
  scanUnsignedLongInt$19:
-	; Goto 7
+	; Jump 7
 	jmp scanUnsignedLongInt$7
 
  scanUnsignedLongInt$20:
@@ -2423,7 +2423,7 @@ section .text
 	mov [rbp + 44], bl
 
  scanUnsignedLongInt$46:
-	; Goto 50
+	; Jump 50
 	jmp scanUnsignedLongInt$50
 
  scanUnsignedLongInt$47:
@@ -2431,7 +2431,7 @@ section .text
 	mov dword [rbp + 24], 8
 
  scanUnsignedLongInt$48:
-	; Goto 50
+	; Jump 50
 	jmp scanUnsignedLongInt$50
 
  scanUnsignedLongInt$49:
@@ -2537,7 +2537,7 @@ section .text
 	mov [rbp + 44], bl
 
  scanUnsignedLongInt$72:
-	; Goto 50
+	; Jump 50
 	jmp scanUnsignedLongInt$50
 
  scanUnsignedLongInt$73:
@@ -2712,7 +2712,7 @@ section .text
 	mov [rbp + 48], bl
 
  scanLongDouble$23:
-	; Goto 11
+	; Jump 11
 	jmp scanLongDouble$11
 
  scanLongDouble$24:
@@ -2741,7 +2741,7 @@ section .text
 	mov [rbp + 48], bl
 
  scanLongDouble$30:
-	; Goto 38
+	; Jump 38
 	jmp scanLongDouble$38
 
  scanLongDouble$31:
@@ -2870,7 +2870,7 @@ section .text
 	mov dword [rbp + 28], 1
 
  scanLongDouble$59:
-	; Goto 38
+	; Jump 38
 	jmp scanLongDouble$38
 
  scanLongDouble$60:
@@ -3011,7 +3011,7 @@ section .text
 	mov dword [rbp + 28], 1
 
  scanLongDouble$91:
-	; Goto 66
+	; Jump 66
 	jmp scanLongDouble$66
 
  scanLongDouble$92:
@@ -3126,7 +3126,7 @@ section .text
 	fstp qword [rbp + 32]
 
  scanLongDouble$117:
-	; Goto 122
+	; Jump 122
 	jmp scanLongDouble$122
 
  scanLongDouble$118:
@@ -3370,7 +3370,7 @@ section .text
 	; CaseEnd £temporary1164
 
  scanFormat$37:
-	; Goto 393
+	; Jump 393
 	jmp scanFormat$393
 
  scanFormat$38:
@@ -3378,7 +3378,7 @@ section .text
 	mov dword [rbp + 53], 1
 
  scanFormat$39:
-	; Goto 393
+	; Jump 393
 	jmp scanFormat$393
 
  scanFormat$40:
@@ -3386,7 +3386,7 @@ section .text
 	mov dword [rbp + 57], 1
 
  scanFormat$41:
-	; Goto 393
+	; Jump 393
 	jmp scanFormat$393
 
  scanFormat$42:
@@ -3394,7 +3394,7 @@ section .text
 	mov dword [rbp + 61], 1
 
  scanFormat$43:
-	; Goto 393
+	; Jump 393
 	jmp scanFormat$393
 
  scanFormat$44:
@@ -3402,7 +3402,7 @@ section .text
 	mov dword [rbp + 65], 1
 
  scanFormat$45:
-	; Goto 393
+	; Jump 393
 	jmp scanFormat$393
 
  scanFormat$46:
@@ -3495,7 +3495,7 @@ section .text
 	inc dword [g_inCount]
 
  scanFormat$66:
-	; Goto 393
+	; Jump 393
 	jmp scanFormat$393
 
  scanFormat$67:
@@ -3559,7 +3559,7 @@ section .text
 	; PostCall 157
 
  scanFormat$81:
-	; Goto 87
+	; Jump 87
 	jmp scanFormat$87
 
  scanFormat$82:
@@ -3588,7 +3588,7 @@ section .text
 	mov dword [rbp + 49], 0
 
  scanFormat$88:
-	; Goto 393
+	; Jump 393
 	jmp scanFormat$393
 
  scanFormat$89:
@@ -3675,7 +3675,7 @@ section .text
 	mov [rsi], ax
 
  scanFormat$108:
-	; Goto 132
+	; Jump 132
 	jmp scanFormat$132
 
  scanFormat$109:
@@ -3733,7 +3733,7 @@ section .text
 	mov [rsi], eax
 
  scanFormat$121:
-	; Goto 132
+	; Jump 132
 	jmp scanFormat$132
 
  scanFormat$122:
@@ -3783,7 +3783,7 @@ section .text
 	mov dword [rbp + 49], 0
 
  scanFormat$133:
-	; Goto 393
+	; Jump 393
 	jmp scanFormat$393
 
  scanFormat$134:
@@ -3866,7 +3866,7 @@ section .text
 	mov [rsi], ax
 
  scanFormat$153:
-	; Goto 177
+	; Jump 177
 	jmp scanFormat$177
 
  scanFormat$154:
@@ -3920,7 +3920,7 @@ section .text
 	mov [rsi], eax
 
  scanFormat$166:
-	; Goto 177
+	; Jump 177
 	jmp scanFormat$177
 
  scanFormat$167:
@@ -3970,7 +3970,7 @@ section .text
 	mov dword [rbp + 49], 0
 
  scanFormat$178:
-	; Goto 393
+	; Jump 393
 	jmp scanFormat$393
 
  scanFormat$179:
@@ -4053,7 +4053,7 @@ section .text
 	mov [rsi], ax
 
  scanFormat$198:
-	; Goto 222
+	; Jump 222
 	jmp scanFormat$222
 
  scanFormat$199:
@@ -4107,7 +4107,7 @@ section .text
 	mov [rsi], eax
 
  scanFormat$211:
-	; Goto 222
+	; Jump 222
 	jmp scanFormat$222
 
  scanFormat$212:
@@ -4157,7 +4157,7 @@ section .text
 	mov dword [rbp + 49], 0
 
  scanFormat$223:
-	; Goto 393
+	; Jump 393
 	jmp scanFormat$393
 
  scanFormat$224:
@@ -4240,7 +4240,7 @@ section .text
 	mov [rsi], ax
 
  scanFormat$243:
-	; Goto 267
+	; Jump 267
 	jmp scanFormat$267
 
  scanFormat$244:
@@ -4294,7 +4294,7 @@ section .text
 	mov [rsi], eax
 
  scanFormat$256:
-	; Goto 267
+	; Jump 267
 	jmp scanFormat$267
 
  scanFormat$257:
@@ -4344,7 +4344,7 @@ section .text
 	mov dword [rbp + 49], 0
 
  scanFormat$268:
-	; Goto 393
+	; Jump 393
 	jmp scanFormat$393
 
  scanFormat$269:
@@ -4423,7 +4423,7 @@ section .text
 	fstp qword [rsi]
 
  scanFormat$287:
-	; Goto 312
+	; Jump 312
 	jmp scanFormat$312
 
  scanFormat$288:
@@ -4477,7 +4477,7 @@ section .text
 	fstp qword [rsi]
 
  scanFormat$300:
-	; Goto 312
+	; Jump 312
 	jmp scanFormat$312
 
  scanFormat$301:
@@ -4530,7 +4530,7 @@ section .text
 	mov dword [rbp + 49], 0
 
  scanFormat$313:
-	; Goto 393
+	; Jump 393
 	jmp scanFormat$393
 
  scanFormat$314:
@@ -4597,7 +4597,7 @@ section .text
 	inc dword [rbp + 93]
 
  scanFormat$328:
-	; Goto 323
+	; Jump 323
 	jmp scanFormat$323
 
  scanFormat$329:
@@ -4731,7 +4731,7 @@ section .text
 	; PostCall 178
 
  scanFormat$358:
-	; Goto 370
+	; Jump 370
 	jmp scanFormat$370
 
  scanFormat$359:
@@ -4802,7 +4802,7 @@ section .text
 	mov [rsi], al
 
  scanFormat$374:
-	; Goto 393
+	; Jump 393
 	jmp scanFormat$393
 
  scanFormat$375:
@@ -4852,7 +4852,7 @@ section .text
 	mov dword [rbp + 49], 0
 
  scanFormat$386:
-	; Goto 393
+	; Jump 393
 	jmp scanFormat$393
 
  scanFormat$387:
@@ -4885,7 +4885,7 @@ section .text
 	inc dword [rbp + 93]
 
  scanFormat$394:
-	; Goto 8
+	; Jump 8
 	jmp scanFormat$8
 
  scanFormat$395:

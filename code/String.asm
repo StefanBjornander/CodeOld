@@ -88,7 +88,7 @@ section .text
 	inc dword [rbp + 40]
 
  strcpy$13:
-	; Goto 1
+	; Jump 1
 	jmp strcpy$1
 
  strcpy$14:
@@ -192,7 +192,7 @@ section .text
 	inc dword [rbp + 44]
 
  strncpy$14:
-	; Goto 1
+	; Jump 1
 	jmp strncpy$1
 
  strncpy$15:
@@ -224,7 +224,7 @@ section .text
 	inc dword [rbp + 44]
 
  strncpy$21:
-	; Goto 15
+	; Jump 15
 	jmp strncpy$15
 
  strncpy$22:
@@ -333,7 +333,7 @@ section .text
 	inc dword [rbp + 40]
 
  strcat$20:
-	; Goto 7
+	; Jump 7
 	jmp strcat$7
 
  strcat$21:
@@ -474,7 +474,7 @@ section .text
 	inc dword [rbp + 44]
 
  strncat$22:
-	; Goto 7
+	; Jump 7
 	jmp strncat$7
 
  strncat$23:
@@ -727,7 +727,7 @@ section .text
 	inc dword [rbp + 40]
 
  strcmp$42:
-	; Goto 1
+	; Jump 1
 	jmp strcmp$1
 
  strcmp$43:
@@ -949,7 +949,7 @@ section .text
 	inc dword [rbp + 44]
 
  strncmp$43:
-	; Goto 1
+	; Jump 1
 	jmp strncmp$1
 
  strncmp$44:
@@ -1055,7 +1055,7 @@ section .text
 	inc dword [rbp + 36]
 
  strchr$18:
-	; Goto 3
+	; Jump 3
 	jmp strchr$3
 
  strchr$19:
@@ -1159,7 +1159,7 @@ section .text
 	inc dword [rbp + 36]
 
  strrchr$18:
-	; Goto 4
+	; Jump 4
 	jmp strrchr$4
 
  strrchr$19:
@@ -1270,7 +1270,7 @@ section .text
 	inc dword [rbp + 40]
 
  strspn$19:
-	; Goto 1
+	; Jump 1
 	jmp strspn$1
 
  strspn$20:
@@ -1381,7 +1381,7 @@ section .text
 	inc dword [rbp + 40]
 
  strcspn$19:
-	; Goto 1
+	; Jump 1
 	jmp strcspn$1
 
  strcspn$20:
@@ -1508,7 +1508,7 @@ section .text
 	inc dword [rbp + 40]
 
  strpbrk$23:
-	; Goto 1
+	; Jump 1
 	jmp strpbrk$1
 
  strpbrk$24:
@@ -1623,7 +1623,7 @@ section .text
 	inc dword [rbp + 40]
 
  strstr$21:
-	; Goto 1
+	; Jump 1
 	jmp strstr$1
 
  strstr$22:
@@ -1670,7 +1670,7 @@ section .text
 	inc dword [rbp + 32]
 
  strlen$6:
-	; Goto 1
+	; Jump 1
 	jmp strlen$1
 
  strlen$7:
@@ -1729,7 +1729,7 @@ section .text
 	mov rax, [rsi + 56]
 
  strerror$8:
-	; Goto 10
+	; Jump 10
 	jmp strerror$10
 
  strerror$9:
@@ -1750,7 +1750,7 @@ section .text
 	mov rax, [rbp + 36]
 
  strerror$13:
-	; Goto 15
+	; Jump 15
 	jmp strerror$15
 
  strerror$14:
@@ -1962,7 +1962,7 @@ section .text
 	inc dword [rbp + 40]
 
  strtok$34:
-	; Goto 6
+	; Jump 6
 	jmp strtok$6
 
  strtok$35:
@@ -2173,7 +2173,7 @@ section .text
 	inc dword [rbp + 40]
 
  strtok$79:
-	; Goto 50
+	; Jump 50
 	jmp strtok$50
 
  strtok$80:
@@ -2282,7 +2282,7 @@ section .text
 	inc dword [rbp + 60]
 
  memcpy$14:
-	; Goto 5
+	; Jump 5
 	jmp memcpy$5
 
  memcpy$15:
@@ -2375,7 +2375,7 @@ section .text
 	dec dword [rbp + 60]
 
  memmove$15:
-	; Goto 6
+	; Jump 6
 	jmp memmove$6
 
  memmove$16:
@@ -2426,7 +2426,7 @@ section .text
 	inc dword [rbp + 60]
 
  memmove$26:
-	; Goto 17
+	; Jump 17
 	jmp memmove$17
 
  memmove$27:
@@ -2569,7 +2569,7 @@ section .text
 	inc dword [rbp + 60]
 
  memcmp$25:
-	; Goto 5
+	; Jump 5
 	jmp memcmp$5
 
  memcmp$26:
@@ -2673,7 +2673,7 @@ section .text
 	inc dword [rbp + 40]
 
  memchr$18:
-	; Goto 5
+	; Jump 5
 	jmp memchr$5
 
  memchr$19:
@@ -2746,7 +2746,7 @@ section .text
 	inc dword [rbp + 49]
 
  memset$11:
-	; Goto 5
+	; Jump 5
 	jmp memset$5
 
  memset$12:

@@ -179,7 +179,7 @@ section .text
 	; PostCall 40
 
  @10737$main$31:
-	; Goto 37
+	; Jump 37
 	jmp @10737$main$37
 
  @10737$main$32:
@@ -450,7 +450,7 @@ section .text
 	; PostCall 40
 
  test$21:
-	; Goto 27
+	; Jump 27
 	jmp test$27
 
  test$22:

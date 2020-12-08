@@ -611,7 +611,7 @@ section .text
 	; IntegralToIntegral £temporary3576 £temporary3574
 
  string_test$94:
-	; Goto 96
+	; Jump 96
 	jmp string_test$96
 
  string_test$95:
@@ -684,7 +684,7 @@ section .text
 	; IntegralToIntegral £temporary3583 £temporary3581
 
  string_test$111:
-	; Goto 113
+	; Jump 113
 	jmp string_test$113
 
  string_test$112:
@@ -757,7 +757,7 @@ section .text
 	; IntegralToIntegral £temporary3590 £temporary3588
 
  string_test$128:
-	; Goto 130
+	; Jump 130
 	jmp string_test$130
 
  string_test$129:
@@ -830,7 +830,7 @@ section .text
 	; IntegralToIntegral £temporary3597 £temporary3595
 
  string_test$145:
-	; Goto 147
+	; Jump 147
 	jmp string_test$147
 
  string_test$146:
@@ -1028,7 +1028,7 @@ section .text
 	; IntegralToIntegral £temporary3609 £temporary3607
 
  string_test$190:
-	; Goto 192
+	; Jump 192
 	jmp string_test$192
 
  string_test$191:
@@ -1105,7 +1105,7 @@ section .text
 	; IntegralToIntegral £temporary3616 £temporary3614
 
  string_test$208:
-	; Goto 210
+	; Jump 210
 	jmp string_test$210
 
  string_test$209:
@@ -1486,7 +1486,7 @@ section .text
 	mov [rbp + 236], rbx
 
  string_test$294:
-	; Goto 281
+	; Jump 281
 	jmp string_test$281
 
  string_test$295:

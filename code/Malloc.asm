@@ -239,7 +239,7 @@ section .text
 	mov [rbp + 64], rax
 
  malloc$43:
-	; Goto 26
+	; Jump 26
 	jmp malloc$26
 
  malloc$44:
@@ -307,7 +307,7 @@ section .text
 	mov [rsi + 4], rax
 
  malloc$58:
-	; Goto 60
+	; Jump 60
 	jmp malloc$60
 
  malloc$59:
@@ -399,7 +399,7 @@ section .text
 	mov [rsi + 4], rax
 
  malloc$78:
-	; Goto 80
+	; Jump 80
 	jmp malloc$80
 
  malloc$79:
@@ -589,7 +589,7 @@ section .text
 	mov qword [g_firstBlockPtr], 0
 
  free$14:
-	; Goto 27
+	; Jump 27
 	jmp free$27
 
  free$15:
@@ -607,7 +607,7 @@ section .text
 	mov [g_firstBlockPtr], rax
 
  free$18:
-	; Goto 27
+	; Jump 27
 	jmp free$27
 
  free$19:
@@ -628,7 +628,7 @@ section .text
 	mov qword [rsi + 4], 0
 
  free$23:
-	; Goto 27
+	; Jump 27
 	jmp free$27
 
  free$24:
@@ -666,7 +666,7 @@ section .text
 	mov [rbp + 48], rax
 
  free$31:
-	; Goto 8
+	; Jump 8
 	jmp free$8
 
  free$32:
@@ -1041,7 +1041,7 @@ section .text
 	mov [rbp + 52], rax
 
  realloc$70:
-	; Goto 57
+	; Jump 57
 	jmp realloc$57
 
  realloc$71:
@@ -1239,7 +1239,7 @@ section .text
 	mov [rbp + 24], rax
 
  print_heap$16:
-	; Goto 5
+	; Jump 5
 	jmp print_heap$5
 
  print_heap$17:

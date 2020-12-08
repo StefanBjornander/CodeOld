@@ -96,7 +96,7 @@ section .text
 	inc dword [rbp + 24]
 
  malloc_test2$19:
-	; Goto 9
+	; Jump 9
 	jmp malloc_test2$9
 
  malloc_test2$20:
@@ -1032,7 +1032,7 @@ section .text
 	inc dword [rbp + 24]
 
  malloc_test6$22:
-	; Goto 5
+	; Jump 5
 	jmp malloc_test6$5
 
  malloc_test6$23:

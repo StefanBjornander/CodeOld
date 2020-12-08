@@ -598,7 +598,7 @@ section .text
 	mov rax, [rsi]
 
  setlocale$3:
-	; Goto 5
+	; Jump 5
 	jmp setlocale$5
 
  setlocale$4:
@@ -705,7 +705,7 @@ section .text
 	mov [@1565$g_currStructPtr], rsi
 
  setlocale$27:
-	; Goto 30
+	; Jump 30
 	jmp setlocale$30
 
  setlocale$28:
@@ -713,7 +713,7 @@ section .text
 	inc dword [rbp + 36]
 
  setlocale$29:
-	; Goto 9
+	; Jump 9
 	jmp setlocale$9
 
  setlocale$30:
@@ -746,7 +746,7 @@ section .text
 	mov rbx, [rsi + 8]
 
  localeconv$3:
-	; Goto 5
+	; Jump 5
 	jmp localeconv$5
 
  localeconv$4:

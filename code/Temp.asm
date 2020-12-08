@@ -103,7 +103,7 @@ section .text
 	inc dword [rbp + 32]
 
  @3177$existsTempName$16:
-	; Goto 1
+	; Jump 1
 	jmp @3177$existsTempName$1
 
  @3177$existsTempName$17:
@@ -230,7 +230,7 @@ section .text
 	; CaseEnd status
 
  @3197$generateTempName$21:
-	; Goto 47
+	; Jump 47
 	jmp @3197$generateTempName$47
 
  @3197$generateTempName$22:
@@ -408,7 +408,7 @@ section .text
 	inc byte [rbp + 40]
 
  @3197$generateTempName$60:
-	; Goto 2
+	; Jump 2
 	jmp @3197$generateTempName$2
 
  @3197$generateTempName$61:

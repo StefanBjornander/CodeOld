@@ -327,7 +327,7 @@ section .text
 	mov eax, @9377$string_Yes#
 
  character_testX$18:
-	; Goto 20
+	; Jump 20
 	jmp character_testX$20
 
  character_testX$19:
@@ -409,7 +409,7 @@ section .text
 	mov eax, @9382$string_Yes#
 
  character_testX$35:
-	; Goto 37
+	; Jump 37
 	jmp character_testX$37
 
  character_testX$36:
@@ -491,7 +491,7 @@ section .text
 	mov eax, @9387$string_Yes#
 
  character_testX$52:
-	; Goto 54
+	; Jump 54
 	jmp character_testX$54
 
  character_testX$53:
@@ -573,7 +573,7 @@ section .text
 	mov eax, @9392$string_Yes#
 
  character_testX$69:
-	; Goto 71
+	; Jump 71
 	jmp character_testX$71
 
  character_testX$70:
@@ -655,7 +655,7 @@ section .text
 	mov eax, @9397$string_Yes#
 
  character_testX$86:
-	; Goto 88
+	; Jump 88
 	jmp character_testX$88
 
  character_testX$87:
@@ -737,7 +737,7 @@ section .text
 	mov eax, @9402$string_Yes#
 
  character_testX$103:
-	; Goto 105
+	; Jump 105
 	jmp character_testX$105
 
  character_testX$104:
@@ -819,7 +819,7 @@ section .text
 	mov eax, @9407$string_Yes#
 
  character_testX$120:
-	; Goto 122
+	; Jump 122
 	jmp character_testX$122
 
  character_testX$121:
@@ -901,7 +901,7 @@ section .text
 	mov eax, @9412$string_Yes#
 
  character_testX$137:
-	; Goto 139
+	; Jump 139
 	jmp character_testX$139
 
  character_testX$138:
@@ -983,7 +983,7 @@ section .text
 	mov eax, @9417$string_Yes#
 
  character_testX$154:
-	; Goto 156
+	; Jump 156
 	jmp character_testX$156
 
  character_testX$155:
@@ -1065,7 +1065,7 @@ section .text
 	mov eax, @9422$string_Yes#
 
  character_testX$171:
-	; Goto 173
+	; Jump 173
 	jmp character_testX$173
 
  character_testX$172:
@@ -1147,7 +1147,7 @@ section .text
 	mov eax, @9427$string_Yes#
 
  character_testX$188:
-	; Goto 190
+	; Jump 190
 	jmp character_testX$190
 
  character_testX$189:

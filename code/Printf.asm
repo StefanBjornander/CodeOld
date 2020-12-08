@@ -234,7 +234,7 @@ section .text
 	; CaseEnd g_outStatus
 
  printChar$4:
-	; Goto 28
+	; Jump 28
 	jmp printChar$28
 
  printChar$5:
@@ -286,7 +286,7 @@ section .text
 	inc dword [g_outChars]
 
  printChar$17:
-	; Goto 28
+	; Jump 28
 	jmp printChar$28
 
  printChar$18:
@@ -324,7 +324,7 @@ section .text
 	mov [rsi], al
 
  printChar$26:
-	; Goto 28
+	; Jump 28
 	jmp printChar$28
 
  printChar$27:
@@ -413,7 +413,7 @@ section .text
 	inc dword [rbp + 36]
 
  printString$15:
-	; Goto 3
+	; Jump 3
 	jmp printString$3
 
  printString$16:
@@ -489,7 +489,7 @@ section .text
 	inc dword [rbp + 36]
 
  printString$32:
-	; Goto 17
+	; Jump 17
 	jmp printString$17
 
  printString$33:
@@ -736,7 +736,7 @@ section .text
 	; PostCall 40
 
  printLongInt$7:
-	; Goto 19
+	; Jump 19
 	jmp printLongInt$19
 
  printLongInt$8:
@@ -762,7 +762,7 @@ section .text
 	; PostCall 40
 
  printLongInt$13:
-	; Goto 19
+	; Jump 19
 	jmp printLongInt$19
 
  printLongInt$14:
@@ -810,7 +810,7 @@ section .text
 	; PostCall 40
 
  printLongInt$24:
-	; Goto 29
+	; Jump 29
 	jmp printLongInt$29
 
  printLongInt$25:
@@ -1149,7 +1149,7 @@ section .text
 	mov al, 88
 
  printUnsignedLong$24:
-	; Goto 26
+	; Jump 26
 	jmp printUnsignedLong$26
 
  printUnsignedLong$25:
@@ -1193,7 +1193,7 @@ section .text
 	; PostCall 56
 
  printUnsignedLong$34:
-	; Goto 41
+	; Jump 41
 	jmp printUnsignedLong$41
 
  printUnsignedLong$35:
@@ -1404,7 +1404,7 @@ section .text
 	fstp qword [rbp + 24]
 
  printLongDoubleFraction$34:
-	; Goto 14
+	; Jump 14
 	jmp printLongDoubleFraction$14
 
  printLongDoubleFraction$35:
@@ -1653,7 +1653,7 @@ section .text
 	mov al, 69
 
  printLongDoubleExpo$17:
-	; Goto 19
+	; Jump 19
 	jmp printLongDoubleExpo$19
 
  printLongDoubleExpo$18:
@@ -1692,7 +1692,7 @@ section .text
 	; PostCall 52
 
  printLongDoubleExpo$26:
-	; Goto 80
+	; Jump 80
 	jmp printLongDoubleExpo$80
 
  printLongDoubleExpo$27:
@@ -1874,7 +1874,7 @@ section .text
 	mov al, 69
 
  printLongDoubleExpo$68:
-	; Goto 70
+	; Jump 70
 	jmp printLongDoubleExpo$70
 
  printLongDoubleExpo$69:
@@ -2159,7 +2159,7 @@ section .text
 	; CaseEnd c
 
  printArgument$20:
-	; Goto 396
+	; Jump 396
 	jmp printArgument$396
 
  printArgument$21:
@@ -2217,7 +2217,7 @@ section .text
 	mov [rbp + 114], rax
 
  printArgument$32:
-	; Goto 52
+	; Jump 52
 	jmp printArgument$52
 
  printArgument$33:
@@ -2259,7 +2259,7 @@ section .text
 	mov [rbp + 114], rax
 
  printArgument$42:
-	; Goto 52
+	; Jump 52
 	jmp printArgument$52
 
  printArgument$43:
@@ -2323,7 +2323,7 @@ section .text
 	mov eax, 1
 
  printArgument$56:
-	; Goto 58
+	; Jump 58
 	jmp printArgument$58
 
  printArgument$57:
@@ -2432,7 +2432,7 @@ section .text
 	; PostCall 122
 
  printArgument$81:
-	; Goto 396
+	; Jump 396
 	jmp printArgument$396
 
  printArgument$82:
@@ -2533,7 +2533,7 @@ section .text
 	; PostCall 114
 
  printArgument$104:
-	; Goto 396
+	; Jump 396
 	jmp printArgument$396
 
  printArgument$105:
@@ -2632,7 +2632,7 @@ section .text
 	; PostCall 122
 
  printArgument$127:
-	; Goto 396
+	; Jump 396
 	jmp printArgument$396
 
  printArgument$128:
@@ -2645,7 +2645,7 @@ section .text
 	mov rax, 10
 
  printArgument$130:
-	; Goto 138
+	; Jump 138
 	jmp printArgument$138
 
  printArgument$131:
@@ -2658,7 +2658,7 @@ section .text
 	mov rax, 8
 
  printArgument$133:
-	; Goto 138
+	; Jump 138
 	jmp printArgument$138
 
  printArgument$134:
@@ -2671,7 +2671,7 @@ section .text
 	mov rax, 2
 
  printArgument$136:
-	; Goto 138
+	; Jump 138
 	jmp printArgument$138
 
  printArgument$137:
@@ -2729,7 +2729,7 @@ section .text
 	mov [rbp + 122], rax
 
  printArgument$150:
-	; Goto 170
+	; Jump 170
 	jmp printArgument$170
 
  printArgument$151:
@@ -2771,7 +2771,7 @@ section .text
 	mov [rbp + 122], rax
 
  printArgument$160:
-	; Goto 170
+	; Jump 170
 	jmp printArgument$170
 
  printArgument$161:
@@ -2923,7 +2923,7 @@ section .text
 	; PostCall 130
 
  printArgument$194:
-	; Goto 396
+	; Jump 396
 	jmp printArgument$396
 
  printArgument$195:
@@ -3005,7 +3005,7 @@ section .text
 	; PostCall 114
 
  printArgument$214:
-	; Goto 224
+	; Jump 224
 	jmp printArgument$224
 
  printArgument$215:
@@ -3073,7 +3073,7 @@ section .text
 	mov eax, 1
 
  printArgument$230:
-	; Goto 232
+	; Jump 232
 	jmp printArgument$232
 
  printArgument$231:
@@ -3203,7 +3203,7 @@ section .text
 	; PostCall 114
 
  printArgument$260:
-	; Goto 396
+	; Jump 396
 	jmp printArgument$396
 
  printArgument$261:
@@ -3315,7 +3315,7 @@ section .text
 	; PostCall 114
 
  printArgument$284:
-	; Goto 396
+	; Jump 396
 	jmp printArgument$396
 
  printArgument$285:
@@ -3423,7 +3423,7 @@ section .text
 	; PostCall 118
 
  printArgument$309:
-	; Goto 396
+	; Jump 396
 	jmp printArgument$396
 
  printArgument$310:
@@ -3501,7 +3501,7 @@ section .text
 	; PostCall 118
 
  printArgument$326:
-	; Goto 396
+	; Jump 396
 	jmp printArgument$396
 
  printArgument$327:
@@ -3618,7 +3618,7 @@ section .text
 	; PostCall 114
 
  printArgument$354:
-	; Goto 396
+	; Jump 396
 	jmp printArgument$396
 
  printArgument$355:
@@ -3736,7 +3736,7 @@ section .text
 	mov [rsi], eax
 
  printArgument$382:
-	; Goto 396
+	; Jump 396
 	jmp printArgument$396
 
  printArgument$383:
@@ -4064,7 +4064,7 @@ section .text
 	; CaseEnd c
 
  printFormat$53:
-	; Goto 246
+	; Jump 246
 	jmp printFormat$246
 
  printFormat$54:
@@ -4072,7 +4072,7 @@ section .text
 	mov dword [rbp + 56], 1
 
  printFormat$55:
-	; Goto 291
+	; Jump 291
 	jmp printFormat$291
 
  printFormat$56:
@@ -4080,7 +4080,7 @@ section .text
 	mov dword [rbp + 60], 1
 
  printFormat$57:
-	; Goto 291
+	; Jump 291
 	jmp printFormat$291
 
  printFormat$58:
@@ -4088,7 +4088,7 @@ section .text
 	mov dword [rbp + 64], 1
 
  printFormat$59:
-	; Goto 291
+	; Jump 291
 	jmp printFormat$291
 
  printFormat$60:
@@ -4096,7 +4096,7 @@ section .text
 	mov dword [rbp + 68], 1
 
  printFormat$61:
-	; Goto 291
+	; Jump 291
 	jmp printFormat$291
 
  printFormat$62:
@@ -4104,7 +4104,7 @@ section .text
 	mov dword [rbp + 72], 1
 
  printFormat$63:
-	; Goto 291
+	; Jump 291
 	jmp printFormat$291
 
  printFormat$64:
@@ -4112,7 +4112,7 @@ section .text
 	mov dword [rbp + 80], 1
 
  printFormat$65:
-	; Goto 291
+	; Jump 291
 	jmp printFormat$291
 
  printFormat$66:
@@ -4125,7 +4125,7 @@ section .text
 	mov dword [rbp + 44], -1
 
  printFormat$68:
-	; Goto 291
+	; Jump 291
 	jmp printFormat$291
 
  printFormat$69:
@@ -4133,7 +4133,7 @@ section .text
 	mov dword [rbp + 48], -1
 
  printFormat$70:
-	; Goto 291
+	; Jump 291
 	jmp printFormat$291
 
  printFormat$71:
@@ -4141,7 +4141,7 @@ section .text
 	mov dword [rbp + 88], 1
 
  printFormat$72:
-	; Goto 291
+	; Jump 291
 	jmp printFormat$291
 
  printFormat$73:
@@ -4149,7 +4149,7 @@ section .text
 	mov dword [rbp + 92], 1
 
  printFormat$74:
-	; Goto 291
+	; Jump 291
 	jmp printFormat$291
 
  printFormat$75:
@@ -4157,7 +4157,7 @@ section .text
 	mov dword [rbp + 96], 1
 
  printFormat$76:
-	; Goto 291
+	; Jump 291
 	jmp printFormat$291
 
  printFormat$77:
@@ -4305,7 +4305,7 @@ section .text
 	; PostCall 109
 
  printFormat$109:
-	; Goto 102
+	; Jump 102
 	jmp printFormat$102
 
  printFormat$110:
@@ -4468,7 +4468,7 @@ section .text
 	inc dword [rbp + 113]
 
  printFormat$145:
-	; Goto 159
+	; Jump 159
 	jmp printFormat$159
 
  printFormat$146:
@@ -4498,7 +4498,7 @@ section .text
 	inc dword [rbp + 113]
 
  printFormat$152:
-	; Goto 159
+	; Jump 159
 	jmp printFormat$159
 
  printFormat$153:
@@ -4558,7 +4558,7 @@ section .text
 	; PostCall 117
 
  printFormat$166:
-	; Goto 159
+	; Jump 159
 	jmp printFormat$159
 
  printFormat$167:
@@ -4653,7 +4653,7 @@ section .text
 	mov [rbp + 32], rbx
 
  printFormat$188:
-	; Goto 244
+	; Jump 244
 	jmp printFormat$244
 
  printFormat$189:
@@ -4808,7 +4808,7 @@ section .text
 	; PostCall 113
 
  printFormat$222:
-	; Goto 215
+	; Jump 215
 	jmp printFormat$215
 
  printFormat$223:
@@ -4909,7 +4909,7 @@ section .text
 	mov dword [rbp + 52], 0
 
  printFormat$245:
-	; Goto 291
+	; Jump 291
 	jmp printFormat$291
 
  printFormat$246:
@@ -5001,7 +5001,7 @@ section .text
 	mov [rbp + 100], al
 
  printFormat$264:
-	; Goto 247
+	; Jump 247
 	jmp printFormat$247
 
  printFormat$265:
@@ -5019,7 +5019,7 @@ section .text
 	mov [rbp + 44], eax
 
  printFormat$268:
-	; Goto 291
+	; Jump 291
 	jmp printFormat$291
 
  printFormat$269:
@@ -5028,7 +5028,7 @@ section .text
 	mov [rbp + 48], eax
 
  printFormat$270:
-	; Goto 291
+	; Jump 291
 	jmp printFormat$291
 
  printFormat$271:
@@ -5093,7 +5093,7 @@ section .text
 	mov dword [rbp + 48], 0
 
  printFormat$286:
-	; Goto 291
+	; Jump 291
 	jmp printFormat$291
 
  printFormat$287:
@@ -5119,7 +5119,7 @@ section .text
 	inc dword [rbp + 40]
 
  printFormat$292:
-	; Goto 16
+	; Jump 16
 	jmp printFormat$16
 
  printFormat$293:

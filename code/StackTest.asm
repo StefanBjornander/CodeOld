@@ -152,7 +152,7 @@ section .text
 	; PostCall 36
 
  heap_test$16:
-	; Goto 1
+	; Jump 1
 	jmp heap_test$1
 
  heap_test$17:

@@ -5818,7 +5818,7 @@ section .text
 	mov [rbp + 60], eax
 
  bsearch$54:
-	; Goto 5
+	; Jump 5
 	jmp bsearch$5
 
  bsearch$55:
@@ -5832,7 +5832,7 @@ section .text
 	mov [rbp + 56], eax
 
  bsearch$57:
-	; Goto 5
+	; Jump 5
 	jmp bsearch$5
 
  bsearch$58:
@@ -6023,7 +6023,7 @@ section .text
 	inc dword [rbp + 32]
 
  atexit$15:
-	; Goto 1
+	; Jump 1
 	jmp atexit$1
 
  atexit$16:
@@ -6127,7 +6127,7 @@ section .text
 	dec dword [rbp + 28]
 
  exit$15:
-	; Goto 1
+	; Jump 1
 	jmp exit$1
 
  exit$16:
@@ -6245,7 +6245,7 @@ section .text
 	inc dword [rbp + 44]
 
  @7433$memswap$18:
-	; Goto 1
+	; Jump 1
 	jmp @7433$memswap$1
 
  @7433$memswap$19:
@@ -6400,7 +6400,7 @@ section .text
 	inc dword [rbp + 60]
 
  qsort$29:
-	; Goto 6
+	; Jump 6
 	jmp qsort$6
 
  qsort$30:
@@ -6413,7 +6413,7 @@ section .text
 	dec dword [rbp + 56]
 
  qsort$32:
-	; Goto 3
+	; Jump 3
 	jmp qsort$3
 
  qsort$33:
@@ -6439,7 +6439,7 @@ section .text
 	neg ebx
 
  @abs$2:
-	; Goto 4
+	; Jump 4
 	jmp @abs$4
 
  @abs$3:
@@ -6472,7 +6472,7 @@ section .text
 	neg rbx
 
  labs$2:
-	; Goto 4
+	; Jump 4
 	jmp labs$4
 
  labs$3:

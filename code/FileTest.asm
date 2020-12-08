@@ -1477,7 +1477,7 @@ section .text
 	; PostCall 48
 
  file_test$74:
-	; Goto 38
+	; Jump 38
 	jmp file_test$38
 
  file_test$75:
@@ -1935,7 +1935,7 @@ section .text
 	inc dword [rbp + 44]
 
  file_test$177:
-	; Goto 145
+	; Jump 145
 	jmp file_test$145
 
  file_test$178:
@@ -2047,7 +2047,7 @@ section .text
 	; PostCall 32
 
  file_test$202:
-	; Goto 215
+	; Jump 215
 	jmp file_test$215
 
  file_test$203:
@@ -2243,7 +2243,7 @@ section .text
 	; PostCall 48
 
  file_test$246:
-	; Goto 260
+	; Jump 260
 	jmp file_test$260
 
  file_test$247:
@@ -2374,7 +2374,7 @@ section .text
 	; PostCall 40
 
  file_test$275:
-	; Goto 289
+	; Jump 289
 	jmp file_test$289
 
  file_test$276:
@@ -2561,7 +2561,7 @@ section .text
 	; PostCall 40
 
  file_test$317:
-	; Goto 330
+	; Jump 330
 	jmp file_test$330
 
  file_test$318:
@@ -2673,7 +2673,7 @@ section .text
 	; PostCall 32
 
  file_test$342:
-	; Goto 355
+	; Jump 355
 	jmp file_test$355
 
  file_test$343:
@@ -3001,7 +3001,7 @@ section .text
 	inc dword [rbp + 32]
 
  file_test$414:
-	; Goto 399
+	; Jump 399
 	jmp file_test$399
 
  file_test$415:
@@ -3226,7 +3226,7 @@ section .text
 	inc dword [rbp + 36]
 
  file_test$465:
-	; Goto 452
+	; Jump 452
 	jmp file_test$452
 
  file_test$466:
@@ -3470,7 +3470,7 @@ section .text
 	inc dword [rbp + 36]
 
  file_test$520:
-	; Goto 503
+	; Jump 503
 	jmp file_test$503
 
  file_test$521:
@@ -3660,7 +3660,7 @@ section .text
 	inc dword [rbp + 36]
 
  file_test$563:
-	; Goto 550
+	; Jump 550
 	jmp file_test$550
 
  file_test$564:
@@ -3850,7 +3850,7 @@ section .text
 	; PostCall 44
 
  file_test$607:
-	; Goto 588
+	; Jump 588
 	jmp file_test$588
 
  file_test$608:
@@ -4076,7 +4076,7 @@ section .text
 	; PostCall 44
 
  file_test$659:
-	; Goto 636
+	; Jump 636
 	jmp file_test$636
 
  file_test$660:
@@ -4501,7 +4501,7 @@ section .text
 	inc dword [rbp + 40]
 
  file_test$752:
-	; Goto 739
+	; Jump 739
 	jmp file_test$739
 
  file_test$753:
@@ -5097,7 +5097,7 @@ section .text
 	; PostCall 248
 
  file_test$892:
-	; Goto 868
+	; Jump 868
 	jmp file_test$868
 
  file_test$893:
@@ -5429,7 +5429,7 @@ section .text
 	inc dword [rbp + 36]
 
  file_test$966:
-	; Goto 935
+	; Jump 935
 	jmp file_test$935
 
  file_test$967:
@@ -5505,7 +5505,7 @@ section .text
 	mov eax, @12041$string_Yes#
 
  file_test$984:
-	; Goto 986
+	; Jump 986
 	jmp file_test$986
 
  file_test$985:
@@ -5565,7 +5565,7 @@ section .text
 	mov eax, @12046$string_Yes#
 
  file_test$998:
-	; Goto 1000
+	; Jump 1000
 	jmp file_test$1000
 
  file_test$999:
@@ -5625,7 +5625,7 @@ section .text
 	mov eax, @12051$string_Yes#
 
  file_test$1012:
-	; Goto 1014
+	; Jump 1014
 	jmp file_test$1014
 
  file_test$1013:
@@ -5685,7 +5685,7 @@ section .text
 	mov eax, @12056$string_Yes#
 
  file_test$1026:
-	; Goto 1028
+	; Jump 1028
 	jmp file_test$1028
 
  file_test$1027:
@@ -5745,7 +5745,7 @@ section .text
 	mov eax, @12061$string_Yes#
 
  file_test$1040:
-	; Goto 1042
+	; Jump 1042
 	jmp file_test$1042
 
  file_test$1041:
@@ -5805,7 +5805,7 @@ section .text
 	mov eax, @12066$string_Yes#
 
  file_test$1054:
-	; Goto 1056
+	; Jump 1056
 	jmp file_test$1056
 
  file_test$1055:
@@ -5865,7 +5865,7 @@ section .text
 	mov eax, @12071$string_Yes#
 
  file_test$1068:
-	; Goto 1070
+	; Jump 1070
 	jmp file_test$1070
 
  file_test$1069:
@@ -5925,7 +5925,7 @@ section .text
 	mov eax, @12076$string_Yes#
 
  file_test$1082:
-	; Goto 1084
+	; Jump 1084
 	jmp file_test$1084
 
  file_test$1083:
@@ -5985,7 +5985,7 @@ section .text
 	mov eax, @12081$string_Yes#
 
  file_test$1096:
-	; Goto 1098
+	; Jump 1098
 	jmp file_test$1098
 
  file_test$1097:
@@ -6045,7 +6045,7 @@ section .text
 	mov eax, @12086$string_Yes#
 
  file_test$1110:
-	; Goto 1112
+	; Jump 1112
 	jmp file_test$1112
 
  file_test$1111:
@@ -6105,7 +6105,7 @@ section .text
 	mov eax, @12091$string_Yes#
 
  file_test$1124:
-	; Goto 1126
+	; Jump 1126
 	jmp file_test$1126
 
  file_test$1125:
@@ -6165,7 +6165,7 @@ section .text
 	mov eax, @12096$string_Yes#
 
  file_test$1138:
-	; Goto 1140
+	; Jump 1140
 	jmp file_test$1140
 
  file_test$1139:

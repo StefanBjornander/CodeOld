@@ -1,7 +1,7 @@
 0: PushFloat x
 1: PushFloat 0
 2: SignedLessThan PreCall 14 x 0
-3: Goto PushFloat x
+3: Jump PushFloat x
 4: PreCall 14
 5: PushFloat x
 6: UnarySubtract £temporary448 x
@@ -12,11 +12,11 @@
 11: UnarySubtract £temporary450 £temporary449
 12: SetReturnValue
 13: Return £temporary450
-14: Goto Empty
+14: Jump Empty
 15: PushFloat x
 16: PushFloat 1
 17: SignedGreaterThan PushFloat 1.57 x 1
-18: Goto PushFloat x
+18: Jump PushFloat x
 19: PushFloat 1.57
 20: PreCall 14
 21: PushFloat 1
@@ -29,11 +29,11 @@
 28: BinarySubtract £temporary454 1.57 £temporary453
 29: SetReturnValue
 30: Return £temporary454
-31: Goto Empty
+31: Jump Empty
 32: PushFloat x
 33: PushFloat 0.5
 34: SignedGreaterThan PushFloat 2 x 0.5
-35: Goto PushFloat 0
+35: Jump PushFloat 0
 36: PushFloat 2
 37: PreCall 14
 38: PushFloat x
@@ -57,7 +57,7 @@
 56: SignedMultiply £temporary462 2 £temporary461
 57: SetReturnValue
 58: Return £temporary462
-59: Goto Empty
+59: Jump Empty
 60: PushFloat 0
 61: PopFloat sum
 62: PushFloat 1
@@ -106,10 +106,12 @@
 105: GetReturnValue £temporary470
 106: PushFloat 0.000000001
 107: SignedGreaterThanEqual PushFloat term £temporary470 0.000000001
-108: Goto PushFloat sum
-109: Goto PushFloat term
-110: PushFloat sum
-111: SetReturnValue
-112: Return sum
-113: Empty
-114: FunctionEnd atan
+108: Jump PushFloat sum
+109: PushFloat sum
+110: SetReturnValue
+111: Return sum
+112: Jump Empty
+113: Jump Empty
+114: Jump Empty
+115: Empty
+116: FunctionEnd atan

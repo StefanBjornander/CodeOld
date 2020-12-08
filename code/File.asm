@@ -331,7 +331,7 @@ section .text
 	mov ebx, 1
 
  fileexists$8:
-	; Goto 10
+	; Jump 10
 	jmp fileexists$10
 
  fileexists$9:
@@ -508,7 +508,7 @@ section .text
 	inc dword [rbp + 40]
 
  fopen$22:
-	; Goto 1
+	; Jump 1
 	jmp fopen$1
 
  fopen$23:
@@ -627,7 +627,7 @@ section .text
 	mov [rbp + 48], ebx
 
  freopen$15:
-	; Goto 130
+	; Jump 130
 	jmp freopen$130
 
  freopen$16:
@@ -686,7 +686,7 @@ section .text
 	mov [rbp + 48], ebx
 
  freopen$29:
-	; Goto 130
+	; Jump 130
 	jmp freopen$130
 
  freopen$30:
@@ -780,7 +780,7 @@ section .text
 	; PostCall 52
 
  freopen$51:
-	; Goto 130
+	; Jump 130
 	jmp freopen$130
 
  freopen$52:
@@ -809,7 +809,7 @@ section .text
 	mov [rbp + 48], ebx
 
  freopen$58:
-	; Goto 130
+	; Jump 130
 	jmp freopen$130
 
  freopen$59:
@@ -872,7 +872,7 @@ section .text
 	mov [rbp + 48], ebx
 
  freopen$73:
-	; Goto 130
+	; Jump 130
 	jmp freopen$130
 
  freopen$74:
@@ -961,7 +961,7 @@ section .text
 	mov [rbp + 48], ebx
 
  freopen$94:
-	; Goto 130
+	; Jump 130
 	jmp freopen$130
 
  freopen$95:
@@ -990,7 +990,7 @@ section .text
 	mov [rbp + 48], ebx
 
  freopen$101:
-	; Goto 130
+	; Jump 130
 	jmp freopen$130
 
  freopen$102:
@@ -1084,7 +1084,7 @@ section .text
 	; PostCall 52
 
  freopen$123:
-	; Goto 130
+	; Jump 130
 	jmp freopen$130
 
  freopen$124:
@@ -1325,7 +1325,7 @@ section .text
 	inc dword [rbp + 32]
 
  fflush$22:
-	; Goto 2
+	; Jump 2
 	jmp fflush$2
 
  fflush$23:
@@ -1489,7 +1489,7 @@ section .text
 	inc dword [rbp + 32]
 
  fclose$29:
-	; Goto 9
+	; Jump 9
 	jmp fclose$9
 
  fclose$30:
@@ -1823,7 +1823,7 @@ section .text
 	mov byte [rsi], 0
 
  fgets$18:
-	; Goto 36
+	; Jump 36
 	jmp fgets$36
 
  fgets$19:
@@ -1859,7 +1859,7 @@ section .text
 	mov byte [rsi], 0
 
  fgets$25:
-	; Goto 36
+	; Jump 36
 	jmp fgets$36
 
  fgets$26:
@@ -1904,7 +1904,7 @@ section .text
 	mov [rbp + 48], al
 
  fgets$35:
-	; Goto 2
+	; Jump 2
 	jmp fgets$2
 
  fgets$36:
@@ -1994,7 +1994,7 @@ section .text
 	mov ebx, 0
 
  fputs$16:
-	; Goto 18
+	; Jump 18
 	jmp fputs$18
 
  fputs$17:
@@ -2806,7 +2806,7 @@ section .text
 	mov eax, 1
 
  feof$27:
-	; Goto 29
+	; Jump 29
 	jmp feof$29
 
  feof$28:

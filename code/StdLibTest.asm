@@ -61,7 +61,7 @@ section .text
 	mov ebx, -1
 
  compare$8:
-	; Goto 13
+	; Jump 13
 	jmp compare$13
 
  compare$9:
@@ -75,7 +75,7 @@ section .text
 	mov ebx, 0
 
  compare$11:
-	; Goto 13
+	; Jump 13
 	jmp compare$13
 
  compare$12:
@@ -132,7 +132,7 @@ section .text
 	mov ebx, 1
 
  reverse_compare$8:
-	; Goto 13
+	; Jump 13
 	jmp reverse_compare$13
 
  reverse_compare$9:
@@ -146,7 +146,7 @@ section .text
 	mov ebx, 0
 
  reverse_compare$11:
-	; Goto 13
+	; Jump 13
 	jmp reverse_compare$13
 
  reverse_compare$12:
@@ -1444,7 +1444,7 @@ section .text
 	inc dword [rbp + 44]
 
  stdlib_test$150:
-	; Goto 139
+	; Jump 139
 	jmp stdlib_test$139
 
  stdlib_test$151:
@@ -1555,7 +1555,7 @@ section .text
 	inc dword [rbp + 44]
 
  stdlib_test$174:
-	; Goto 163
+	; Jump 163
 	jmp stdlib_test$163
 
  stdlib_test$175:
@@ -1666,7 +1666,7 @@ section .text
 	inc dword [rbp + 44]
 
  stdlib_test$198:
-	; Goto 187
+	; Jump 187
 	jmp stdlib_test$187
 
  stdlib_test$199:
@@ -1767,7 +1767,7 @@ section .text
 	; IntegralToIntegral £temporary4559 £temporary4556
 
  stdlib_test$221:
-	; Goto 223
+	; Jump 223
 	jmp stdlib_test$223
 
  stdlib_test$222:
@@ -1812,7 +1812,7 @@ section .text
 	inc dword [rbp + 44]
 
  stdlib_test$231:
-	; Goto 204
+	; Jump 204
 	jmp stdlib_test$204
 
  stdlib_test$232:

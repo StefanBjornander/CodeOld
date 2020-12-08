@@ -84,7 +84,7 @@ section .text
 	mov ebx, 1
 
  islower$15:
-	; Goto 17
+	; Jump 17
 	jmp islower$17
 
  islower$16:
@@ -116,7 +116,7 @@ section .text
 	mov ebx, 1
 
  islower$22:
-	; Goto 24
+	; Jump 24
 	jmp islower$24
 
  islower$23:
@@ -203,7 +203,7 @@ section .text
 	mov ebx, 1
 
  isupper$15:
-	; Goto 17
+	; Jump 17
 	jmp isupper$17
 
  isupper$16:
@@ -235,7 +235,7 @@ section .text
 	mov ebx, 1
 
  isupper$22:
-	; Goto 24
+	; Jump 24
 	jmp isupper$24
 
  isupper$23:
@@ -314,7 +314,7 @@ section .text
 	mov ebx, 1
 
  isalpha$13:
-	; Goto 15
+	; Jump 15
 	jmp isalpha$15
 
  isalpha$14:
@@ -351,7 +351,7 @@ section .text
 	mov ebx, 1
 
  isdigit$3:
-	; Goto 5
+	; Jump 5
 	jmp isdigit$5
 
  isdigit$4:
@@ -430,7 +430,7 @@ section .text
 	mov ebx, 1
 
  isalnum$13:
-	; Goto 15
+	; Jump 15
 	jmp isalnum$15
 
  isalnum$14:
@@ -503,7 +503,7 @@ section .text
 	mov ebx, 1
 
  isxdigit$11:
-	; Goto 13
+	; Jump 13
 	jmp isxdigit$13
 
  isxdigit$12:
@@ -540,7 +540,7 @@ section .text
 	mov ebx, 1
 
  isgraph$3:
-	; Goto 5
+	; Jump 5
 	jmp isgraph$5
 
  isgraph$4:
@@ -598,7 +598,7 @@ section .text
 	mov ebx, 1
 
  isprint$8:
-	; Goto 10
+	; Jump 10
 	jmp isprint$10
 
  isprint$9:
@@ -677,7 +677,7 @@ section .text
 	mov ebx, 1
 
  ispunct$13:
-	; Goto 15
+	; Jump 15
 	jmp ispunct$15
 
  ispunct$14:
@@ -730,7 +730,7 @@ section .text
 	mov ebx, 1
 
  iscntrl$7:
-	; Goto 9
+	; Jump 9
 	jmp iscntrl$9
 
  iscntrl$8:
@@ -787,7 +787,7 @@ section .text
 	mov ebx, 1
 
  isspace$7:
-	; Goto 9
+	; Jump 9
 	jmp isspace$9
 
  isspace$8:

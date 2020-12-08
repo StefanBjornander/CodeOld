@@ -374,7 +374,7 @@ section .text
 	mov ebx, 1
 
  @7834$isLeapYear$7:
-	; Goto 9
+	; Jump 9
 	jmp @7834$isLeapYear$9
 
  @7834$isLeapYear$8:
@@ -576,7 +576,7 @@ section .text
 	mov [@7832$g_timeStruct + 24], eax
 
  gmtime$19:
-	; Goto 24
+	; Jump 24
 	jmp gmtime$24
 
  gmtime$20:
@@ -693,7 +693,7 @@ section .text
 	add qword [rbp + 56], 366
 
  gmtime$42:
-	; Goto 44
+	; Jump 44
 	jmp gmtime$44
 
  gmtime$43:
@@ -753,7 +753,7 @@ section .text
 	mov eax, 29
 
  gmtime$55:
-	; Goto 57
+	; Jump 57
 	jmp gmtime$57
 
  gmtime$56:
@@ -885,7 +885,7 @@ section .text
 	sub [rbp + 56], rax
 
  gmtime$83:
-	; Goto 69
+	; Jump 69
 	jmp gmtime$69
 
  gmtime$84:
@@ -1333,7 +1333,7 @@ section .text
 	mov rax, [rsi + 8]
 
  asctime$4:
-	; Goto 6
+	; Jump 6
 	jmp asctime$6
 
  asctime$5:
@@ -1358,7 +1358,7 @@ section .text
 	mov rax, [rsi + 24]
 
  asctime$10:
-	; Goto 12
+	; Jump 12
 	jmp asctime$12
 
  asctime$11:
@@ -1379,7 +1379,7 @@ section .text
 	mov rax, [rbp + 40]
 
  asctime$15:
-	; Goto 17
+	; Jump 17
 	jmp asctime$17
 
  asctime$16:
@@ -1400,7 +1400,7 @@ section .text
 	mov rax, [rbp + 48]
 
  asctime$20:
-	; Goto 22
+	; Jump 22
 	jmp asctime$22
 
  asctime$21:
@@ -1689,7 +1689,7 @@ section .text
 	mov eax, [rsi]
 
  localtime$17:
-	; Goto 20
+	; Jump 20
 	jmp localtime$20
 
  localtime$18:
@@ -1995,7 +1995,7 @@ section .text
 	mov rax, [rsi + 8]
 
  strftime$8:
-	; Goto 10
+	; Jump 10
 	jmp strftime$10
 
  strftime$9:
@@ -2020,7 +2020,7 @@ section .text
 	mov rax, [rsi + 24]
 
  strftime$14:
-	; Goto 16
+	; Jump 16
 	jmp strftime$16
 
  strftime$15:
@@ -2045,7 +2045,7 @@ section .text
 	mov rax, [rsi + 16]
 
  strftime$20:
-	; Goto 22
+	; Jump 22
 	jmp strftime$22
 
  strftime$21:
@@ -2070,7 +2070,7 @@ section .text
 	mov rax, [rsi + 32]
 
  strftime$26:
-	; Goto 28
+	; Jump 28
 	jmp strftime$28
 
  strftime$27:
@@ -2167,7 +2167,7 @@ section .text
 	mov rax, [rbp + 60]
 
  strftime$47:
-	; Goto 49
+	; Jump 49
 	jmp strftime$49
 
  strftime$48:
@@ -2188,7 +2188,7 @@ section .text
 	mov rax, [rbp + 76]
 
  strftime$52:
-	; Goto 54
+	; Jump 54
 	jmp strftime$54
 
  strftime$53:
@@ -2209,7 +2209,7 @@ section .text
 	mov rax, [rbp + 68]
 
  strftime$57:
-	; Goto 59
+	; Jump 59
 	jmp strftime$59
 
  strftime$58:
@@ -2230,7 +2230,7 @@ section .text
 	mov rax, [rbp + 84]
 
  strftime$62:
-	; Goto 64
+	; Jump 64
 	jmp strftime$64
 
  strftime$63:
@@ -2263,7 +2263,7 @@ section .text
 	mov [rbp + 104], eax
 
  strftime$69:
-	; Goto 74
+	; Jump 74
 	jmp strftime$74
 
  strftime$70:
@@ -2309,7 +2309,7 @@ section .text
 	mov [rbp + 108], eax
 
  strftime$78:
-	; Goto 83
+	; Jump 83
 	jmp strftime$83
 
  strftime$79:
@@ -2511,7 +2511,7 @@ section .text
 	; CaseEnd £temporary2888 -> £temporary2891
 
  strftime$120:
-	; Goto 330
+	; Jump 330
 	jmp strftime$330
 
  strftime$121:
@@ -2561,7 +2561,7 @@ section .text
 	; PostCall 136
 
  strftime$131:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$132:
@@ -2611,7 +2611,7 @@ section .text
 	; PostCall 136
 
  strftime$142:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$143:
@@ -2661,7 +2661,7 @@ section .text
 	; PostCall 136
 
  strftime$153:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$154:
@@ -2711,7 +2711,7 @@ section .text
 	; PostCall 136
 
  strftime$164:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$165:
@@ -2801,7 +2801,7 @@ section .text
 	; PostCall 136
 
  strftime$184:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$185:
@@ -2838,7 +2838,7 @@ section .text
 	; PostCall 136
 
  strftime$192:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$193:
@@ -2875,7 +2875,7 @@ section .text
 	; PostCall 136
 
  strftime$200:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$201:
@@ -2917,7 +2917,7 @@ section .text
 	; PostCall 136
 
  strftime$209:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$210:
@@ -2954,7 +2954,7 @@ section .text
 	; PostCall 136
 
  strftime$217:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$218:
@@ -2995,7 +2995,7 @@ section .text
 	; PostCall 136
 
  strftime$226:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$227:
@@ -3032,7 +3032,7 @@ section .text
 	; PostCall 136
 
  strftime$234:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$235:
@@ -3061,7 +3061,7 @@ section .text
 	mov eax, @8188$string_AM#
 
  strftime$241:
-	; Goto 243
+	; Jump 243
 	jmp strftime$243
 
  strftime$242:
@@ -3085,7 +3085,7 @@ section .text
 	; PostCall 136
 
  strftime$246:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$247:
@@ -3122,7 +3122,7 @@ section .text
 	; PostCall 136
 
  strftime$254:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$255:
@@ -3155,7 +3155,7 @@ section .text
 	; PostCall 136
 
  strftime$261:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$262:
@@ -3192,7 +3192,7 @@ section .text
 	; PostCall 136
 
  strftime$269:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$270:
@@ -3225,7 +3225,7 @@ section .text
 	; PostCall 136
 
  strftime$276:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$277:
@@ -3280,7 +3280,7 @@ section .text
 	; PostCall 136
 
  strftime$288:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$289:
@@ -3335,7 +3335,7 @@ section .text
 	; PostCall 136
 
  strftime$300:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$301:
@@ -3377,7 +3377,7 @@ section .text
 	; PostCall 136
 
  strftime$309:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$310:
@@ -3418,7 +3418,7 @@ section .text
 	; PostCall 136
 
  strftime$318:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$319:
@@ -3444,7 +3444,7 @@ section .text
 	; PostCall 136
 
  strftime$324:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$325:
@@ -3492,7 +3492,7 @@ section .text
 	; PostCall 136
 
  strftime$335:
-	; Goto 343
+	; Jump 343
 	jmp strftime$343
 
  strftime$336:
@@ -3616,7 +3616,7 @@ section .text
 	inc dword [rbp + 112]
 
  strftime$363:
-	; Goto 84
+	; Jump 84
 	jmp strftime$84
 
  strftime$364:
