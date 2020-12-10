@@ -1,57 +1,57 @@
 0: PushFloat x
 1: PushFloat 0
 2: SignedGreaterThanEqual 13 x 0
-3: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+3: PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 4: PushFloat x
-5: UnarySubtract £temporary448 x
-6: Parameter 20 double £temporary448
-7: Call 14 atan 0
-8: PostCall 14
-9: GetReturnValue £temporary449
-10: UnarySubtract £temporary450 £temporary449
+5: UnarySubtract £temporary463 x
+6: Parameter 56 double £temporary463
+7: Call 32 atan 0
+8: PostCall 32
+9: GetReturnValue £temporary464
+10: UnarySubtract £temporary465 £temporary464
 11: SetReturnValue
-12: Return £temporary450
+12: Return £temporary465
 13: PushFloat x
 14: PushFloat 1
 15: SignedLessThanEqual 28 x 1
 16: PushFloat 1.57
-17: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
+17: PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
 18: PushFloat 1
 19: PushFloat x
-20: SignedDivide £temporary452 1 x
-21: Parameter 20 double £temporary452
-22: Call 14 atan 0
-23: PostCall 14
-24: GetReturnValue £temporary453
-25: BinarySubtract £temporary454 1.57 £temporary453
+20: SignedDivide £temporary467 1 x
+21: Parameter 56 double £temporary467
+22: Call 32 atan 0
+23: PostCall 32
+24: GetReturnValue £temporary468
+25: BinarySubtract £temporary469 1.57 £temporary468
 26: SetReturnValue
-27: Return £temporary454
+27: Return £temporary469
 28: PushFloat x
 29: PushFloat 0.5
 30: SignedLessThanEqual 54 x 0.5
 31: PushFloat 2
-32: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
+32: PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
 33: PushFloat x
 34: PushFloat 1
-35: PreCall 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 3
+35: PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 3
 36: PushFloat 1
 37: PushFloat x
 38: PushFloat x
-39: SignedMultiply £temporary456 x x
-40: BinaryAdd £temporary457 1 £temporary456
-41: Parameter 20 double £temporary457
-42: Call 14 sqrt 0
-43: PostCall 14
-44: GetReturnValue £temporary458
-45: BinaryAdd £temporary459 1 £temporary458
-46: SignedDivide £temporary460 x £temporary459
-47: Parameter 20 double £temporary460
-48: Call 14 atan 0
-49: PostCall 14
-50: GetReturnValue £temporary461
-51: SignedMultiply £temporary462 2 £temporary461
+39: SignedMultiply £temporary471 x x
+40: BinaryAdd £temporary472 1 £temporary471
+41: Parameter 56 double £temporary472
+42: Call 32 sqrt 0
+43: PostCall 32
+44: GetReturnValue £temporary473
+45: BinaryAdd £temporary474 1 £temporary473
+46: SignedDivide £temporary475 x £temporary474
+47: Parameter 56 double £temporary475
+48: Call 32 atan 0
+49: PostCall 32
+50: GetReturnValue £temporary476
+51: SignedMultiply £temporary477 2 £temporary476
 52: SetReturnValue
-53: Return £temporary462
+53: Return £temporary477
 54: PushFloat 0
 55: PopFloat sum
 56: PushFloat 1
@@ -62,35 +62,35 @@
 61: PopFloat product
 62: PushFloat sign
 63: PushFloat product
-64: SignedMultiply £temporary463 sign product
+64: SignedMultiply £temporary478 sign product
 65: PushFloat denominator
-66: SignedDivide £temporary464 £temporary463 denominator
+66: SignedDivide £temporary479 £temporary478 denominator
 67: PopFloat term
 68: PushFloat sum
 69: PushFloat term
-70: BinaryAdd £temporary465 sum term
+70: BinaryAdd £temporary480 sum term
 71: PopFloat sum
 72: PushFloat sign
-73: UnarySubtract £temporary466 sign
+73: UnarySubtract £temporary481 sign
 74: PopFloat sign
 75: PushFloat product
 76: PushFloat x
 77: PushFloat x
-78: SignedMultiply £temporary467 x x
-79: SignedMultiply £temporary468 product £temporary467
+78: SignedMultiply £temporary482 x x
+79: SignedMultiply £temporary483 product £temporary482
 80: PopFloat product
 81: PushFloat denominator
 82: PushFloat 2
-83: BinaryAdd £temporary469 denominator 2
+83: BinaryAdd £temporary484 denominator 2
 84: PopFloat denominator
-85: PreCall 54 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+85: PreCall 72 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 86: PushFloat term
-87: Parameter 60 double term
-88: Call 54 fabs 0
-89: PostCall 54
-90: GetReturnValue £temporary470
+87: Parameter 96 double term
+88: Call 72 fabs 0
+89: PostCall 72
+90: GetReturnValue £temporary485
 91: PushFloat 0.000000001
-92: SignedGreaterThanEqual 62 £temporary470 0.000000001
+92: SignedGreaterThanEqual 62 £temporary485 0.000000001
 93: PushFloat sum
 94: SetReturnValue
 95: Return sum
