@@ -1,6 +1,8 @@
 	global a
+	global mainX
 	global main
 
+	extern printf
 	extern math_test
 	extern file_test
 	extern time_test
@@ -26,6 +28,79 @@ section .data
 a:
 	; InitializerZero 16
 	times 16 db 0
+
+section .data
+
+@314$count:
+	; Initializer SignedInt 1
+	dd 1
+
+section .data
+
+@317$string_25d20#:
+	; Initializer String %d 
+	db "%d ", 0
+
+section .text
+
+ mainX:
+	; SignedGreaterThan 11 count 10
+	cmp dword [@314$count], 10
+	jg mainX$11
+
+ mainX$1:
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ mainX$2:
+	; Parameter 48 pointer "%d "
+	mov qword [rbp + 48], @317$string_25d20#
+
+ mainX$3:
+	; Assign £temporary1 count
+	mov eax, [@314$count]
+
+ mainX$4:
+	; BinaryAdd count count 1
+	inc dword [@314$count]
+
+ mainX$5:
+	; Parameter 56 signedint £temporary1
+	mov [rbp + 56], eax
+
+ mainX$6:
+	; Call 24 printf 4
+	mov qword [rbp + 24], mainX$7
+	mov [rbp + 32], rbp
+	add rbp, 24
+	mov rdi, rbp
+	add rdi, 4
+	jmp printf
+
+ mainX$7:
+	; PostCall 24
+
+ mainX$8:
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ mainX$9:
+	; Call 24 mainX 0
+	mov qword [rbp + 24], mainX$10
+	mov [rbp + 32], rbp
+	add rbp, 24
+	jmp mainX
+
+ mainX$10:
+	; PostCall 24
+
+ mainX$11:
+	; Return
+	mov rax, [rbp]
+	mov rdi, [rbp + 16]
+	mov rbp, [rbp + 8]
+	jmp rax
+
+ mainX$12:
+	; FunctionEnd mainX
 
 section .text
 

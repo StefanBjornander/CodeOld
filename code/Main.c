@@ -44,6 +44,15 @@ struct B {
 struct A a;
 
 
+void mainX() {
+  static count = 1;
+
+  if (count <= 10) {
+    printf("%d ", count++);
+    mainX();
+  }
+}
+
 void main(void) {
   math_test();
   file_test();
