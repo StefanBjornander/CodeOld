@@ -71,10 +71,10 @@ static struct _s {
   struct lconv* localePtr;
 } sArray[] = {{"", &en_US_utf8}, {"C", &en_US_utf8}, {"US", &en_US_utf8}};
 
-static int sSize = (sizeof sArray) / (sizeof sArray[0]);
+static const int sSize = (sizeof sArray) / (sizeof sArray[0]); 
 static struct _s* g_currStructPtr = &sArray[0];
 
-#define PRINT(x,y) { printf(#x " = <%" #y ">\n", (x)); }
+//#define PRINT(x,y) { printf(#x " = <%" #y ">\n", (x)); }
 
 char* setlocale(int /*flag*/, char* newName) {
   int index;
