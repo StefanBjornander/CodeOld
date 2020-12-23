@@ -4,38 +4,38 @@ strcpy:	; Assign index 0
 2:		mov word [bp + 10], 0
 4:	
 
-strcpy$1:	; BinaryAdd £temporary3907 source index
-5:		mov a2377, [bp + 8]
-6:		add a2377, [bp + 10]
+strcpy$1:	; BinaryAdd £temporary3717 source index
+5:		mov a2303, [bp + 8]
+6:		add a2303, [bp + 10]
 8:	
 
-strcpy$2:	; Deref £temporary3906 -> £temporary3907 £temporary3907 0
+strcpy$2:	; Deref £temporary3716 -> £temporary3717 £temporary3717 0
 10:	
 
-strcpy$3:	; Equal 11 £temporary3906 -> £temporary3907 0
-11:		cmp byte [a2377], 0
+strcpy$3:	; Equal 11 £temporary3716 -> £temporary3717 0
+11:		cmp byte [a2303], 0
 12:		je strcpy$11
 14:	
 
-strcpy$4:	; BinaryAdd £temporary3911 target index
-15:		mov a2378, [bp + 6]
-16:		add a2378, [bp + 10]
+strcpy$4:	; BinaryAdd £temporary3721 target index
+15:		mov a2304, [bp + 6]
+16:		add a2304, [bp + 10]
 18:	
 
-strcpy$5:	; Deref £temporary3910 -> £temporary3911 £temporary3911 0
+strcpy$5:	; Deref £temporary3720 -> £temporary3721 £temporary3721 0
 20:	
 
-strcpy$6:	; BinaryAdd £temporary3913 source index
-21:		mov a2379, [bp + 8]
-22:		add a2379, [bp + 10]
+strcpy$6:	; BinaryAdd £temporary3723 source index
+21:		mov a2305, [bp + 8]
+22:		add a2305, [bp + 10]
 24:	
 
-strcpy$7:	; Deref £temporary3912 -> £temporary3913 £temporary3913 0
+strcpy$7:	; Deref £temporary3722 -> £temporary3723 £temporary3723 0
 26:	
 
-strcpy$8:	; Assign £temporary3910 -> £temporary3911 £temporary3912 -> £temporary3913
-27:		mov t2380, [a2379]
-28:		mov [a2378], t2380
+strcpy$8:	; Assign £temporary3720 -> £temporary3721 £temporary3722 -> £temporary3723
+27:		mov t2306, [a2305]
+28:		mov [a2304], t2306
 30:	
 
 strcpy$9:	; Increment index
@@ -46,27 +46,27 @@ strcpy$10:	; Goto 1
 34:		jmp strcpy$1
 36:	
 
-strcpy$11:	; BinaryAdd £temporary3915 target index
-37:		mov a2381, [bp + 6]
-38:		add a2381, [bp + 10]
+strcpy$11:	; BinaryAdd £temporary3725 target index
+37:		mov a2307, [bp + 6]
+38:		add a2307, [bp + 10]
 40:	
 
-strcpy$12:	; Deref £temporary3914 -> £temporary3915 £temporary3915 0
+strcpy$12:	; Deref £temporary3724 -> £temporary3725 £temporary3725 0
 42:	
 
-strcpy$13:	; Assign £temporary3914 -> £temporary3915 0
-43:		mov byte [a2381], 0
+strcpy$13:	; Assign £temporary3724 -> £temporary3725 0
+43:		mov byte [a2307], 0
 45:	
 
 strcpy$14:	; SetReturnValue target
-46:		mov a2382, [bp + 6]
+46:		mov a2308, [bp + 6]
 48:	
 
 strcpy$15:	; Return target
-49:		mov t2383, [bp]
+49:		mov t2309, [bp]
 50:		mov di, [bp + 4]
 51:		mov bp, [bp + 2]
-52:		jmp t2383
+52:		jmp t2309
 54:	
 
 strcpy$16:	; FunctionEnd strcpy
@@ -77,43 +77,43 @@ strncpy:	; Assign index 0
 4:	
 
 strncpy$1:	; SignedGreaterThanEqual 12 index size
-5:		mov a2384, [bp + 10]
-6:		cmp [bp + 12], a2384
+5:		mov a2310, [bp + 10]
+6:		cmp [bp + 12], a2310
 7:		jge strncpy$12
 9:	
 
-strncpy$2:	; BinaryAdd £temporary3918 source index
-10:		mov a2385, [bp + 8]
-11:		add a2385, [bp + 12]
+strncpy$2:	; BinaryAdd £temporary3728 source index
+10:		mov a2311, [bp + 8]
+11:		add a2311, [bp + 12]
 13:	
 
-strncpy$3:	; Deref £temporary3917 -> £temporary3918 £temporary3918 0
+strncpy$3:	; Deref £temporary3727 -> £temporary3728 £temporary3728 0
 15:	
 
-strncpy$4:	; Equal 12 £temporary3917 -> £temporary3918 0
-16:		cmp byte [a2385], 0
+strncpy$4:	; Equal 12 £temporary3727 -> £temporary3728 0
+16:		cmp byte [a2311], 0
 17:		je strncpy$12
 19:	
 
-strncpy$5:	; BinaryAdd £temporary3923 target index
-20:		mov a2386, [bp + 6]
-21:		add a2386, [bp + 12]
+strncpy$5:	; BinaryAdd £temporary3733 target index
+20:		mov a2312, [bp + 6]
+21:		add a2312, [bp + 12]
 23:	
 
-strncpy$6:	; Deref £temporary3922 -> £temporary3923 £temporary3923 0
+strncpy$6:	; Deref £temporary3732 -> £temporary3733 £temporary3733 0
 25:	
 
-strncpy$7:	; BinaryAdd £temporary3925 source index
-26:		mov a2387, [bp + 8]
-27:		add a2387, [bp + 12]
+strncpy$7:	; BinaryAdd £temporary3735 source index
+26:		mov a2313, [bp + 8]
+27:		add a2313, [bp + 12]
 29:	
 
-strncpy$8:	; Deref £temporary3924 -> £temporary3925 £temporary3925 0
+strncpy$8:	; Deref £temporary3734 -> £temporary3735 £temporary3735 0
 31:	
 
-strncpy$9:	; Assign £temporary3922 -> £temporary3923 £temporary3924 -> £temporary3925
-32:		mov t2388, [a2387]
-33:		mov [a2386], t2388
+strncpy$9:	; Assign £temporary3732 -> £temporary3733 £temporary3734 -> £temporary3735
+32:		mov t2314, [a2313]
+33:		mov [a2312], t2314
 35:	
 
 strncpy$10:	; Increment index
@@ -125,21 +125,21 @@ strncpy$11:	; Goto 1
 41:	
 
 strncpy$12:	; SignedGreaterThanEqual 18 index size
-42:		mov a2389, [bp + 10]
-43:		cmp [bp + 12], a2389
+42:		mov a2315, [bp + 10]
+43:		cmp [bp + 12], a2315
 44:		jge strncpy$18
 46:	
 
-strncpy$13:	; BinaryAdd £temporary3929 target index
-47:		mov a2390, [bp + 6]
-48:		add a2390, [bp + 12]
+strncpy$13:	; BinaryAdd £temporary3739 target index
+47:		mov a2316, [bp + 6]
+48:		add a2316, [bp + 12]
 50:	
 
-strncpy$14:	; Deref £temporary3928 -> £temporary3929 £temporary3929 0
+strncpy$14:	; Deref £temporary3738 -> £temporary3739 £temporary3739 0
 52:	
 
-strncpy$15:	; Assign £temporary3928 -> £temporary3929 0
-53:		mov byte [a2390], 0
+strncpy$15:	; Assign £temporary3738 -> £temporary3739 0
+53:		mov byte [a2316], 0
 55:	
 
 strncpy$16:	; Increment index
@@ -151,14 +151,14 @@ strncpy$17:	; Goto 12
 61:	
 
 strncpy$18:	; SetReturnValue target
-62:		mov a2391, [bp + 6]
+62:		mov a2317, [bp + 6]
 64:	
 
 strncpy$19:	; Return target
-65:		mov t2392, [bp]
+65:		mov t2318, [bp]
 66:		mov di, [bp + 4]
 67:		mov bp, [bp + 2]
-68:		jmp t2392
+68:		jmp t2318
 70:	
 
 strncpy$20:	; FunctionEnd strncpy
@@ -168,8 +168,8 @@ strcat:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
 strcat$1:	; Parameter 12 target 6
-4:		mov a2393, [bp + 6]
-5:		mov [bp + 18], a2393
+4:		mov a2319, [bp + 6]
+5:		mov [bp + 18], a2319
 7:	
 
 strcat$2:	; Call 12 strlen 0
@@ -182,54 +182,54 @@ strcat$2:	; Call 12 strlen 0
 strcat$3:	; PostCall 12
 15:	
 
-strcat$4:	; GetReturnValue £temporary3930
+strcat$4:	; GetReturnValue £temporary3740
 20:	
 
-strcat$5:	; Assign targetLength £temporary3930
-21:		mov [bp + 12], t2395
+strcat$5:	; Assign targetLength £temporary3740
+21:		mov [bp + 12], t2321
 23:	
 
 strcat$6:	; Assign index 0
 24:		mov word [bp + 10], 0
 26:	
 
-strcat$7:	; BinaryAdd £temporary3932 source index
-27:		mov a2396, [bp + 8]
-28:		add a2396, [bp + 10]
+strcat$7:	; BinaryAdd £temporary3742 source index
+27:		mov a2322, [bp + 8]
+28:		add a2322, [bp + 10]
 30:	
 
-strcat$8:	; Deref £temporary3931 -> £temporary3932 £temporary3932 0
+strcat$8:	; Deref £temporary3741 -> £temporary3742 £temporary3742 0
 32:	
 
-strcat$9:	; Equal 18 £temporary3931 -> £temporary3932 0
-33:		cmp byte [a2396], 0
+strcat$9:	; Equal 18 £temporary3741 -> £temporary3742 0
+33:		cmp byte [a2322], 0
 34:		je strcat$18
 36:	
 
-strcat$10:	; BinaryAdd £temporary3935 targetLength index
-37:		mov a2397, [bp + 12]
-38:		add a2397, [bp + 10]
+strcat$10:	; BinaryAdd £temporary3745 targetLength index
+37:		mov a2323, [bp + 12]
+38:		add a2323, [bp + 10]
 40:	
 
-strcat$11:	; BinaryAdd £temporary3937 target £temporary3935
-41:		mov a2398, [bp + 6]
-42:		add a2398, a2397
+strcat$11:	; BinaryAdd £temporary3747 target £temporary3745
+41:		mov a2324, [bp + 6]
+42:		add a2324, a2323
 44:	
 
-strcat$12:	; Deref £temporary3936 -> £temporary3937 £temporary3937 0
+strcat$12:	; Deref £temporary3746 -> £temporary3747 £temporary3747 0
 46:	
 
-strcat$13:	; BinaryAdd £temporary3939 source index
-47:		mov a2399, [bp + 8]
-48:		add a2399, [bp + 10]
+strcat$13:	; BinaryAdd £temporary3749 source index
+47:		mov a2325, [bp + 8]
+48:		add a2325, [bp + 10]
 50:	
 
-strcat$14:	; Deref £temporary3938 -> £temporary3939 £temporary3939 0
+strcat$14:	; Deref £temporary3748 -> £temporary3749 £temporary3749 0
 52:	
 
-strcat$15:	; Assign £temporary3936 -> £temporary3937 £temporary3938 -> £temporary3939
-53:		mov t2400, [a2399]
-54:		mov [a2398], t2400
+strcat$15:	; Assign £temporary3746 -> £temporary3747 £temporary3748 -> £temporary3749
+53:		mov t2326, [a2325]
+54:		mov [a2324], t2326
 56:	
 
 strcat$16:	; Increment index
@@ -240,32 +240,32 @@ strcat$17:	; Goto 7
 60:		jmp strcat$7
 62:	
 
-strcat$18:	; BinaryAdd £temporary3940 targetLength index
-63:		mov a2401, [bp + 12]
-64:		add a2401, [bp + 10]
+strcat$18:	; BinaryAdd £temporary3750 targetLength index
+63:		mov a2327, [bp + 12]
+64:		add a2327, [bp + 10]
 66:	
 
-strcat$19:	; BinaryAdd £temporary3942 target £temporary3940
-67:		mov a2402, [bp + 6]
-68:		add a2402, a2401
+strcat$19:	; BinaryAdd £temporary3752 target £temporary3750
+67:		mov a2328, [bp + 6]
+68:		add a2328, a2327
 70:	
 
-strcat$20:	; Deref £temporary3941 -> £temporary3942 £temporary3942 0
+strcat$20:	; Deref £temporary3751 -> £temporary3752 £temporary3752 0
 72:	
 
-strcat$21:	; Assign £temporary3941 -> £temporary3942 0
-73:		mov byte [a2402], 0
+strcat$21:	; Assign £temporary3751 -> £temporary3752 0
+73:		mov byte [a2328], 0
 75:	
 
 strcat$22:	; SetReturnValue target
-76:		mov a2403, [bp + 6]
+76:		mov a2329, [bp + 6]
 78:	
 
 strcat$23:	; Return target
-79:		mov t2404, [bp]
+79:		mov t2330, [bp]
 80:		mov di, [bp + 4]
 81:		mov bp, [bp + 2]
-82:		jmp t2404
+82:		jmp t2330
 84:	
 
 strcat$24:	; FunctionEnd strcat
@@ -275,8 +275,8 @@ strncat:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 
 3:	
 
 strncat$1:	; Parameter 14 target 6
-4:		mov a2405, [bp + 6]
-5:		mov [bp + 20], a2405
+4:		mov a2331, [bp + 6]
+5:		mov [bp + 20], a2331
 7:	
 
 strncat$2:	; Call 14 strlen 0
@@ -289,64 +289,64 @@ strncat$2:	; Call 14 strlen 0
 strncat$3:	; PostCall 14
 15:	
 
-strncat$4:	; GetReturnValue £temporary3944
+strncat$4:	; GetReturnValue £temporary3754
 20:	
 
-strncat$5:	; Assign targetLength £temporary3944
-21:		mov [bp + 14], t2407
+strncat$5:	; Assign targetLength £temporary3754
+21:		mov [bp + 14], t2333
 23:	
 
 strncat$6:	; Assign index 0
 24:		mov word [bp + 12], 0
 26:	
 
-strncat$7:	; BinarySubtract £temporary3945 size 1
-27:		mov a2408, [bp + 10]
-28:		sub a2408, 1
+strncat$7:	; BinarySubtract £temporary3755 size 1
+27:		mov a2334, [bp + 10]
+28:		sub a2334, 1
 30:	
 
-strncat$8:	; SignedGreaterThanEqual 20 index £temporary3945
-31:		cmp [bp + 12], a2408
+strncat$8:	; SignedGreaterThanEqual 20 index £temporary3755
+31:		cmp [bp + 12], a2334
 32:		jge strncat$20
 34:	
 
-strncat$9:	; BinaryAdd £temporary3948 source index
-35:		mov a2409, [bp + 8]
-36:		add a2409, [bp + 12]
+strncat$9:	; BinaryAdd £temporary3758 source index
+35:		mov a2335, [bp + 8]
+36:		add a2335, [bp + 12]
 38:	
 
-strncat$10:	; Deref £temporary3947 -> £temporary3948 £temporary3948 0
+strncat$10:	; Deref £temporary3757 -> £temporary3758 £temporary3758 0
 40:	
 
-strncat$11:	; Equal 20 £temporary3947 -> £temporary3948 0
-41:		cmp byte [a2409], 0
+strncat$11:	; Equal 20 £temporary3757 -> £temporary3758 0
+41:		cmp byte [a2335], 0
 42:		je strncat$20
 44:	
 
-strncat$12:	; BinaryAdd £temporary3952 targetLength index
-45:		mov a2410, [bp + 14]
-46:		add a2410, [bp + 12]
+strncat$12:	; BinaryAdd £temporary3762 targetLength index
+45:		mov a2336, [bp + 14]
+46:		add a2336, [bp + 12]
 48:	
 
-strncat$13:	; BinaryAdd £temporary3954 target £temporary3952
-49:		mov a2411, [bp + 6]
-50:		add a2411, a2410
+strncat$13:	; BinaryAdd £temporary3764 target £temporary3762
+49:		mov a2337, [bp + 6]
+50:		add a2337, a2336
 52:	
 
-strncat$14:	; Deref £temporary3953 -> £temporary3954 £temporary3954 0
+strncat$14:	; Deref £temporary3763 -> £temporary3764 £temporary3764 0
 54:	
 
-strncat$15:	; BinaryAdd £temporary3956 source index
-55:		mov a2412, [bp + 8]
-56:		add a2412, [bp + 12]
+strncat$15:	; BinaryAdd £temporary3766 source index
+55:		mov a2338, [bp + 8]
+56:		add a2338, [bp + 12]
 58:	
 
-strncat$16:	; Deref £temporary3955 -> £temporary3956 £temporary3956 0
+strncat$16:	; Deref £temporary3765 -> £temporary3766 £temporary3766 0
 60:	
 
-strncat$17:	; Assign £temporary3953 -> £temporary3954 £temporary3955 -> £temporary3956
-61:		mov t2413, [a2412]
-62:		mov [a2411], t2413
+strncat$17:	; Assign £temporary3763 -> £temporary3764 £temporary3765 -> £temporary3766
+61:		mov t2339, [a2338]
+62:		mov [a2337], t2339
 64:	
 
 strncat$18:	; Increment index
@@ -357,36 +357,36 @@ strncat$19:	; Goto 7
 68:		jmp strncat$7
 70:	
 
-strncat$20:	; BinaryAdd £temporary3957 targetLength size
-71:		mov a2414, [bp + 14]
-72:		add a2414, [bp + 10]
+strncat$20:	; BinaryAdd £temporary3767 targetLength size
+71:		mov a2340, [bp + 14]
+72:		add a2340, [bp + 10]
 74:	
 
-strncat$21:	; BinarySubtract £temporary3958 £temporary3957 1
-75:		sub a2414, 1
+strncat$21:	; BinarySubtract £temporary3768 £temporary3767 1
+75:		sub a2340, 1
 77:	
 
-strncat$22:	; BinaryAdd £temporary3960 target £temporary3958
-78:		mov a2415, [bp + 6]
-79:		add a2415, a2414
+strncat$22:	; BinaryAdd £temporary3770 target £temporary3768
+78:		mov a2341, [bp + 6]
+79:		add a2341, a2340
 81:	
 
-strncat$23:	; Deref £temporary3959 -> £temporary3960 £temporary3960 0
+strncat$23:	; Deref £temporary3769 -> £temporary3770 £temporary3770 0
 83:	
 
-strncat$24:	; Assign £temporary3959 -> £temporary3960 0
-84:		mov byte [a2415], 0
+strncat$24:	; Assign £temporary3769 -> £temporary3770 0
+84:		mov byte [a2341], 0
 86:	
 
 strncat$25:	; SetReturnValue target
-87:		mov a2416, [bp + 6]
+87:		mov a2342, [bp + 6]
 89:	
 
 strncat$26:	; Return target
-90:		mov t2417, [bp]
+90:		mov t2343, [bp]
 91:		mov di, [bp + 4]
 92:		mov bp, [bp + 2]
-93:		jmp t2417
+93:		jmp t2343
 95:	
 
 strncat$27:	; FunctionEnd strncat
@@ -396,413 +396,317 @@ strcmp:	; Assign index 0
 2:		mov word [bp + 10], 0
 4:	
 
-strcmp$1:	; BinaryAdd £temporary3964 left index
-5:		mov a2418, [bp + 6]
-6:		add a2418, [bp + 10]
+strcmp$1:	; BinaryAdd £temporary3774 left index
+5:		mov a2344, [bp + 6]
+6:		add a2344, [bp + 10]
 8:	
 
-strcmp$2:	; Deref £temporary3963 -> £temporary3964 £temporary3964 0
+strcmp$2:	; Deref £temporary3773 -> £temporary3774 £temporary3774 0
 10:	
 
-strcmp$3:	; NotEqual 9 £temporary3963 -> £temporary3964 0
-11:		cmp byte [a2418], 0
+strcmp$3:	; NotEqual 9 £temporary3773 -> £temporary3774 0
+11:		cmp byte [a2344], 0
 12:		jne strcmp$9
 14:	
 
-strcmp$4:	; BinaryAdd £temporary3967 right index
-15:		mov a2419, [bp + 8]
-16:		add a2419, [bp + 10]
+strcmp$4:	; BinaryAdd £temporary3777 right index
+15:		mov a2345, [bp + 8]
+16:		add a2345, [bp + 10]
 18:	
 
-strcmp$5:	; Deref £temporary3966 -> £temporary3967 £temporary3967 0
+strcmp$5:	; Deref £temporary3776 -> £temporary3777 £temporary3777 0
 20:	
 
-strcmp$6:	; NotEqual 9 £temporary3966 -> £temporary3967 0
-21:		cmp byte [a2419], 0
+strcmp$6:	; NotEqual 9 £temporary3776 -> £temporary3777 0
+21:		cmp byte [a2345], 0
 22:		jne strcmp$9
 24:	
 
 strcmp$7:	; SetReturnValue 0
-25:		mov a2420, 0
+25:		mov a2346, 0
 27:	
 
 strcmp$8:	; Return 0
-28:		mov t2421, [bp]
+28:		mov t2347, [bp]
 29:		mov di, [bp + 4]
 30:		mov bp, [bp + 2]
-31:		jmp t2421
+31:		jmp t2347
 33:	
 
-strcmp$9:	; BinaryAdd £temporary3971 left index
-34:		mov a2422, [bp + 6]
-35:		add a2422, [bp + 10]
+strcmp$9:	; BinaryAdd £temporary3781 left index
+34:		mov a2348, [bp + 6]
+35:		add a2348, [bp + 10]
 37:	
 
-strcmp$10:	; Deref £temporary3970 -> £temporary3971 £temporary3971 0
+strcmp$10:	; Deref £temporary3780 -> £temporary3781 £temporary3781 0
 39:	
 
-strcmp$11:	; NotEqual 14 £temporary3970 -> £temporary3971 0
-40:		cmp byte [a2422], 0
-41:		jne strcmp$14
+strcmp$11:	; BinaryAdd £temporary3783 right index
+40:		mov a2349, [bp + 8]
+41:		add a2349, [bp + 10]
 43:	
 
-strcmp$12:	; SetReturnValue -1
-44:		mov a2423, -1
-46:	
+strcmp$12:	; Deref £temporary3782 -> £temporary3783 £temporary3783 0
+45:	
 
-strcmp$13:	; Return -1
-47:		mov t2424, [bp]
-48:		mov di, [bp + 4]
-49:		mov bp, [bp + 2]
-50:		jmp t2424
-52:	
+strcmp$13:	; SignedGreaterThanEqual 16 £temporary3780 -> £temporary3781 £temporary3782 -> £temporary3783
+46:		mov t2350, [a2349]
+47:		cmp [a2348], t2350
+48:		jge strcmp$16
+50:	
 
-strcmp$14:	; BinaryAdd £temporary3974 right index
-53:		mov a2425, [bp + 8]
-54:		add a2425, [bp + 10]
-56:	
+strcmp$14:	; SetReturnValue -1
+51:		mov a2351, -1
+53:	
 
-strcmp$15:	; Deref £temporary3973 -> £temporary3974 £temporary3974 0
-58:	
+strcmp$15:	; Return -1
+54:		mov t2352, [bp]
+55:		mov di, [bp + 4]
+56:		mov bp, [bp + 2]
+57:		jmp t2352
+59:	
 
-strcmp$16:	; NotEqual 19 £temporary3973 -> £temporary3974 0
-59:		cmp byte [a2425], 0
-60:		jne strcmp$19
-62:	
+strcmp$16:	; BinaryAdd £temporary3786 left index
+60:		mov a2353, [bp + 6]
+61:		add a2353, [bp + 10]
+63:	
 
-strcmp$17:	; SetReturnValue 1
-63:		mov a2426, 1
+strcmp$17:	; Deref £temporary3785 -> £temporary3786 £temporary3786 0
 65:	
 
-strcmp$18:	; Return 1
-66:		mov t2427, [bp]
-67:		mov di, [bp + 4]
-68:		mov bp, [bp + 2]
-69:		jmp t2427
+strcmp$18:	; BinaryAdd £temporary3788 right index
+66:		mov a2354, [bp + 8]
+67:		add a2354, [bp + 10]
+69:	
+
+strcmp$19:	; Deref £temporary3787 -> £temporary3788 £temporary3788 0
 71:	
 
-strcmp$19:	; BinaryAdd £temporary3977 left index
-72:		mov a2428, [bp + 6]
-73:		add a2428, [bp + 10]
-75:	
+strcmp$20:	; SignedLessThanEqual 23 £temporary3785 -> £temporary3786 £temporary3787 -> £temporary3788
+72:		mov t2355, [a2354]
+73:		cmp [a2353], t2355
+74:		jle strcmp$23
+76:	
 
-strcmp$20:	; Deref £temporary3976 -> £temporary3977 £temporary3977 0
-77:	
+strcmp$21:	; SetReturnValue 1
+77:		mov a2356, 1
+79:	
 
-strcmp$21:	; BinaryAdd £temporary3979 right index
-78:		mov a2429, [bp + 8]
-79:		add a2429, [bp + 10]
-81:	
+strcmp$22:	; Return 1
+80:		mov t2357, [bp]
+81:		mov di, [bp + 4]
+82:		mov bp, [bp + 2]
+83:		jmp t2357
+85:	
 
-strcmp$22:	; Deref £temporary3978 -> £temporary3979 £temporary3979 0
-83:	
-
-strcmp$23:	; SignedGreaterThanEqual 26 £temporary3976 -> £temporary3977 £temporary3978 -> £temporary3979
-84:		mov t2430, [a2429]
-85:		cmp [a2428], t2430
-86:		jge strcmp$26
+strcmp$23:	; Increment index
+86:		inc word [bp + 10]
 88:	
 
-strcmp$24:	; SetReturnValue -1
-89:		mov a2431, -1
+strcmp$24:	; Goto 1
+89:		jmp strcmp$1
 91:	
 
-strcmp$25:	; Return -1
-92:		mov t2432, [bp]
-93:		mov di, [bp + 4]
-94:		mov bp, [bp + 2]
-95:		jmp t2432
-97:	
-
-strcmp$26:	; BinaryAdd £temporary3982 left index
-98:		mov a2433, [bp + 6]
-99:		add a2433, [bp + 10]
-101:	
-
-strcmp$27:	; Deref £temporary3981 -> £temporary3982 £temporary3982 0
-103:	
-
-strcmp$28:	; BinaryAdd £temporary3984 right index
-104:		mov a2434, [bp + 8]
-105:		add a2434, [bp + 10]
-107:	
-
-strcmp$29:	; Deref £temporary3983 -> £temporary3984 £temporary3984 0
-109:	
-
-strcmp$30:	; SignedLessThanEqual 33 £temporary3981 -> £temporary3982 £temporary3983 -> £temporary3984
-110:		mov t2435, [a2434]
-111:		cmp [a2433], t2435
-112:		jle strcmp$33
-114:	
-
-strcmp$31:	; SetReturnValue 1
-115:		mov a2436, 1
-117:	
-
-strcmp$32:	; Return 1
-118:		mov t2437, [bp]
-119:		mov di, [bp + 4]
-120:		mov bp, [bp + 2]
-121:		jmp t2437
-123:	
-
-strcmp$33:	; Increment index
-124:		inc word [bp + 10]
-126:	
-
-strcmp$34:	; Goto 1
-127:		jmp strcmp$1
-129:	
-
-strcmp$35:	; FunctionEnd strcmp
+strcmp$25:	; FunctionEnd strcmp
 1:	
 
 strncmp:	; Assign index 0
 2:		mov word [bp + 12], 0
 4:	
 
-strncmp$1:	; SignedGreaterThanEqual 36 index size
-5:		mov a2438, [bp + 10]
-6:		cmp [bp + 12], a2438
-7:		jge strncmp$36
+strncmp$1:	; SignedGreaterThanEqual 26 index size
+5:		mov a2358, [bp + 10]
+6:		cmp [bp + 12], a2358
+7:		jge strncmp$26
 9:	
 
-strncmp$2:	; BinaryAdd £temporary3990 left index
-10:		mov a2439, [bp + 6]
-11:		add a2439, [bp + 12]
+strncmp$2:	; BinaryAdd £temporary3794 left index
+10:		mov a2359, [bp + 6]
+11:		add a2359, [bp + 12]
 13:	
 
-strncmp$3:	; Deref £temporary3989 -> £temporary3990 £temporary3990 0
+strncmp$3:	; Deref £temporary3793 -> £temporary3794 £temporary3794 0
 15:	
 
-strncmp$4:	; NotEqual 10 £temporary3989 -> £temporary3990 0
-16:		cmp byte [a2439], 0
+strncmp$4:	; NotEqual 10 £temporary3793 -> £temporary3794 0
+16:		cmp byte [a2359], 0
 17:		jne strncmp$10
 19:	
 
-strncmp$5:	; BinaryAdd £temporary3993 right index
-20:		mov a2440, [bp + 8]
-21:		add a2440, [bp + 12]
+strncmp$5:	; BinaryAdd £temporary3797 right index
+20:		mov a2360, [bp + 8]
+21:		add a2360, [bp + 12]
 23:	
 
-strncmp$6:	; Deref £temporary3992 -> £temporary3993 £temporary3993 0
+strncmp$6:	; Deref £temporary3796 -> £temporary3797 £temporary3797 0
 25:	
 
-strncmp$7:	; NotEqual 10 £temporary3992 -> £temporary3993 0
-26:		cmp byte [a2440], 0
+strncmp$7:	; NotEqual 10 £temporary3796 -> £temporary3797 0
+26:		cmp byte [a2360], 0
 27:		jne strncmp$10
 29:	
 
 strncmp$8:	; SetReturnValue 0
-30:		mov a2441, 0
+30:		mov a2361, 0
 32:	
 
 strncmp$9:	; Return 0
-33:		mov t2442, [bp]
+33:		mov t2362, [bp]
 34:		mov di, [bp + 4]
 35:		mov bp, [bp + 2]
-36:		jmp t2442
+36:		jmp t2362
 38:	
 
-strncmp$10:	; BinaryAdd £temporary3997 left index
-39:		mov a2443, [bp + 6]
-40:		add a2443, [bp + 12]
+strncmp$10:	; BinaryAdd £temporary3801 left index
+39:		mov a2363, [bp + 6]
+40:		add a2363, [bp + 12]
 42:	
 
-strncmp$11:	; Deref £temporary3996 -> £temporary3997 £temporary3997 0
+strncmp$11:	; Deref £temporary3800 -> £temporary3801 £temporary3801 0
 44:	
 
-strncmp$12:	; NotEqual 15 £temporary3996 -> £temporary3997 0
-45:		cmp byte [a2443], 0
-46:		jne strncmp$15
+strncmp$12:	; BinaryAdd £temporary3803 right index
+45:		mov a2364, [bp + 8]
+46:		add a2364, [bp + 12]
 48:	
 
-strncmp$13:	; SetReturnValue -1
-49:		mov a2444, -1
-51:	
+strncmp$13:	; Deref £temporary3802 -> £temporary3803 £temporary3803 0
+50:	
 
-strncmp$14:	; Return -1
-52:		mov t2445, [bp]
-53:		mov di, [bp + 4]
-54:		mov bp, [bp + 2]
-55:		jmp t2445
-57:	
+strncmp$14:	; SignedGreaterThanEqual 17 £temporary3800 -> £temporary3801 £temporary3802 -> £temporary3803
+51:		mov t2365, [a2364]
+52:		cmp [a2363], t2365
+53:		jge strncmp$17
+55:	
 
-strncmp$15:	; BinaryAdd £temporary4000 right index
-58:		mov a2446, [bp + 8]
-59:		add a2446, [bp + 12]
-61:	
+strncmp$15:	; SetReturnValue -1
+56:		mov a2366, -1
+58:	
 
-strncmp$16:	; Deref £temporary3999 -> £temporary4000 £temporary4000 0
-63:	
+strncmp$16:	; Return -1
+59:		mov t2367, [bp]
+60:		mov di, [bp + 4]
+61:		mov bp, [bp + 2]
+62:		jmp t2367
+64:	
 
-strncmp$17:	; NotEqual 20 £temporary3999 -> £temporary4000 0
-64:		cmp byte [a2446], 0
-65:		jne strncmp$20
-67:	
+strncmp$17:	; BinaryAdd £temporary3806 left index
+65:		mov a2368, [bp + 6]
+66:		add a2368, [bp + 12]
+68:	
 
-strncmp$18:	; SetReturnValue 1
-68:		mov a2447, 1
+strncmp$18:	; Deref £temporary3805 -> £temporary3806 £temporary3806 0
 70:	
 
-strncmp$19:	; Return 1
-71:		mov t2448, [bp]
-72:		mov di, [bp + 4]
-73:		mov bp, [bp + 2]
-74:		jmp t2448
+strncmp$19:	; BinaryAdd £temporary3808 right index
+71:		mov a2369, [bp + 8]
+72:		add a2369, [bp + 12]
+74:	
+
+strncmp$20:	; Deref £temporary3807 -> £temporary3808 £temporary3808 0
 76:	
 
-strncmp$20:	; BinaryAdd £temporary4003 left index
-77:		mov a2449, [bp + 6]
-78:		add a2449, [bp + 12]
-80:	
+strncmp$21:	; SignedLessThanEqual 24 £temporary3805 -> £temporary3806 £temporary3807 -> £temporary3808
+77:		mov t2370, [a2369]
+78:		cmp [a2368], t2370
+79:		jle strncmp$24
+81:	
 
-strncmp$21:	; Deref £temporary4002 -> £temporary4003 £temporary4003 0
-82:	
+strncmp$22:	; SetReturnValue 1
+82:		mov a2371, 1
+84:	
 
-strncmp$22:	; BinaryAdd £temporary4005 right index
-83:		mov a2450, [bp + 8]
-84:		add a2450, [bp + 12]
-86:	
+strncmp$23:	; Return 1
+85:		mov t2372, [bp]
+86:		mov di, [bp + 4]
+87:		mov bp, [bp + 2]
+88:		jmp t2372
+90:	
 
-strncmp$23:	; Deref £temporary4004 -> £temporary4005 £temporary4005 0
-88:	
-
-strncmp$24:	; SignedGreaterThanEqual 27 £temporary4002 -> £temporary4003 £temporary4004 -> £temporary4005
-89:		mov t2451, [a2450]
-90:		cmp [a2449], t2451
-91:		jge strncmp$27
+strncmp$24:	; Increment index
+91:		inc word [bp + 12]
 93:	
 
-strncmp$25:	; SetReturnValue -1
-94:		mov a2452, -1
+strncmp$25:	; Goto 1
+94:		jmp strncmp$1
 96:	
 
-strncmp$26:	; Return -1
-97:		mov t2453, [bp]
-98:		mov di, [bp + 4]
-99:		mov bp, [bp + 2]
-100:		jmp t2453
-102:	
+strncmp$26:	; SetReturnValue 0
+97:		mov a2373, 0
+99:	
 
-strncmp$27:	; BinaryAdd £temporary4008 left index
-103:		mov a2454, [bp + 6]
-104:		add a2454, [bp + 12]
-106:	
+strncmp$27:	; Return 0
+100:		mov t2374, [bp]
+101:		mov di, [bp + 4]
+102:		mov bp, [bp + 2]
+103:		jmp t2374
+105:	
 
-strncmp$28:	; Deref £temporary4007 -> £temporary4008 £temporary4008 0
-108:	
-
-strncmp$29:	; BinaryAdd £temporary4010 right index
-109:		mov a2455, [bp + 8]
-110:		add a2455, [bp + 12]
-112:	
-
-strncmp$30:	; Deref £temporary4009 -> £temporary4010 £temporary4010 0
-114:	
-
-strncmp$31:	; SignedLessThanEqual 34 £temporary4007 -> £temporary4008 £temporary4009 -> £temporary4010
-115:		mov t2456, [a2455]
-116:		cmp [a2454], t2456
-117:		jle strncmp$34
-119:	
-
-strncmp$32:	; SetReturnValue 1
-120:		mov a2457, 1
-122:	
-
-strncmp$33:	; Return 1
-123:		mov t2458, [bp]
-124:		mov di, [bp + 4]
-125:		mov bp, [bp + 2]
-126:		jmp t2458
-128:	
-
-strncmp$34:	; Increment index
-129:		inc word [bp + 12]
-131:	
-
-strncmp$35:	; Goto 1
-132:		jmp strncmp$1
-134:	
-
-strncmp$36:	; SetReturnValue 0
-135:		mov a2459, 0
-137:	
-
-strncmp$37:	; Return 0
-138:		mov t2460, [bp]
-139:		mov di, [bp + 4]
-140:		mov bp, [bp + 2]
-141:		jmp t2460
-143:	
-
-strncmp$38:	; FunctionEnd strncmp
+strncmp$28:	; FunctionEnd strncmp
 1:	
 
-strchr:	; IntegralToIntegral £temporary4012 i
-2:		mov a2461, [bp + 8]
-5:		cmp a2461, 0
+strchr:	; IntegralToIntegral £temporary3810 i
+2:		mov a2375, [bp + 8]
+5:		cmp a2375, 0
 6:		jge strchr$1
-7:		neg a2461
-9:		neg a2461
+7:		neg a2375
+9:		neg a2375
 11:	
 
-strchr$1:	; Assign c £temporary4012
-12:		mov [bp + 12], a2461
+strchr$1:	; Assign c £temporary3810
+12:		mov [bp + 12], a2375
 14:	
 
 strchr$2:	; Assign index 0
 15:		mov word [bp + 10], 0
 17:	
 
-strchr$3:	; BinaryAdd £temporary4014 text index
-18:		mov a2462, [bp + 6]
-19:		add a2462, [bp + 10]
+strchr$3:	; BinaryAdd £temporary3812 text index
+18:		mov a2376, [bp + 6]
+19:		add a2376, [bp + 10]
 21:	
 
-strchr$4:	; Deref £temporary4013 -> £temporary4014 £temporary4014 0
+strchr$4:	; Deref £temporary3811 -> £temporary3812 £temporary3812 0
 23:	
 
-strchr$5:	; Equal 16 £temporary4013 -> £temporary4014 0
-24:		cmp byte [a2462], 0
+strchr$5:	; Equal 16 £temporary3811 -> £temporary3812 0
+24:		cmp byte [a2376], 0
 25:		je strchr$16
 27:	
 
-strchr$6:	; BinaryAdd £temporary4018 text index
-28:		mov a2463, [bp + 6]
-29:		add a2463, [bp + 10]
+strchr$6:	; BinaryAdd £temporary3816 text index
+28:		mov a2377, [bp + 6]
+29:		add a2377, [bp + 10]
 31:	
 
-strchr$7:	; Deref £temporary4017 -> £temporary4018 £temporary4018 0
+strchr$7:	; Deref £temporary3815 -> £temporary3816 £temporary3816 0
 33:	
 
-strchr$8:	; NotEqual 14 £temporary4017 -> £temporary4018 c
-34:		mov a2464, [bp + 12]
-35:		cmp [a2463], a2464
+strchr$8:	; NotEqual 14 £temporary3815 -> £temporary3816 c
+34:		mov a2378, [bp + 12]
+35:		cmp [a2377], a2378
 36:		jne strchr$14
 38:	
 
-strchr$9:	; BinaryAdd £temporary4021 text index
-39:		mov a2465, [bp + 6]
-40:		add a2465, [bp + 10]
+strchr$9:	; BinaryAdd £temporary3819 text index
+39:		mov a2379, [bp + 6]
+40:		add a2379, [bp + 10]
 42:	
 
-strchr$10:	; Deref £temporary4020 -> £temporary4021 £temporary4021 0
+strchr$10:	; Deref £temporary3818 -> £temporary3819 £temporary3819 0
 44:	
 
-strchr$11:	; address £temporary4022 £temporary4020 -> £temporary4021
+strchr$11:	; address £temporary3820 £temporary3818 -> £temporary3819
 46:	
 
-strchr$12:	; SetReturnValue £temporary4022
+strchr$12:	; SetReturnValue £temporary3820
 48:	
 
-strchr$13:	; Return £temporary4022
-49:		mov t2466, [bp]
+strchr$13:	; Return £temporary3820
+49:		mov t2380, [bp]
 50:		mov di, [bp + 4]
 51:		mov bp, [bp + 2]
-52:		jmp t2466
+52:		jmp t2380
 54:	
 
 strchr$14:	; Increment index
@@ -814,14 +718,14 @@ strchr$15:	; Goto 3
 60:	
 
 strchr$16:	; SetReturnValue 0
-61:		mov a2467, 0
+61:		mov a2381, 0
 63:	
 
 strchr$17:	; Return 0
-64:		mov t2468, [bp]
+64:		mov t2382, [bp]
 65:		mov di, [bp + 4]
 66:		mov bp, [bp + 2]
-67:		jmp t2468
+67:		jmp t2382
 69:	
 
 strchr$18:	; FunctionEnd strchr
@@ -831,62 +735,62 @@ strrchr:	; Assign result 0
 2:		mov word [bp + 12], 0
 4:	
 
-strrchr$1:	; IntegralToIntegral £temporary4023 i
-5:		mov a2469, [bp + 8]
-8:		cmp a2469, 0
+strrchr$1:	; IntegralToIntegral £temporary3821 i
+5:		mov a2383, [bp + 8]
+8:		cmp a2383, 0
 9:		jge strrchr$2
-10:		neg a2469
-12:		neg a2469
+10:		neg a2383
+12:		neg a2383
 14:	
 
-strrchr$2:	; Assign c £temporary4023
-15:		mov [bp + 14], a2469
+strrchr$2:	; Assign c £temporary3821
+15:		mov [bp + 14], a2383
 17:	
 
 strrchr$3:	; Assign index 0
 18:		mov word [bp + 10], 0
 20:	
 
-strrchr$4:	; BinaryAdd £temporary4025 text index
-21:		mov a2470, [bp + 6]
-22:		add a2470, [bp + 10]
+strrchr$4:	; BinaryAdd £temporary3823 text index
+21:		mov a2384, [bp + 6]
+22:		add a2384, [bp + 10]
 24:	
 
-strrchr$5:	; Deref £temporary4024 -> £temporary4025 £temporary4025 0
+strrchr$5:	; Deref £temporary3822 -> £temporary3823 £temporary3823 0
 26:	
 
-strrchr$6:	; Equal 16 £temporary4024 -> £temporary4025 0
-27:		cmp byte [a2470], 0
+strrchr$6:	; Equal 16 £temporary3822 -> £temporary3823 0
+27:		cmp byte [a2384], 0
 28:		je strrchr$16
 30:	
 
-strrchr$7:	; BinaryAdd £temporary4029 text index
-31:		mov a2471, [bp + 6]
-32:		add a2471, [bp + 10]
+strrchr$7:	; BinaryAdd £temporary3827 text index
+31:		mov a2385, [bp + 6]
+32:		add a2385, [bp + 10]
 34:	
 
-strrchr$8:	; Deref £temporary4028 -> £temporary4029 £temporary4029 0
+strrchr$8:	; Deref £temporary3826 -> £temporary3827 £temporary3827 0
 36:	
 
-strrchr$9:	; NotEqual 14 £temporary4028 -> £temporary4029 c
-37:		mov a2472, [bp + 14]
-38:		cmp [a2471], a2472
+strrchr$9:	; NotEqual 14 £temporary3826 -> £temporary3827 c
+37:		mov a2386, [bp + 14]
+38:		cmp [a2385], a2386
 39:		jne strrchr$14
 41:	
 
-strrchr$10:	; BinaryAdd £temporary4032 text index
-42:		mov a2473, [bp + 6]
-43:		add a2473, [bp + 10]
+strrchr$10:	; BinaryAdd £temporary3830 text index
+42:		mov a2387, [bp + 6]
+43:		add a2387, [bp + 10]
 45:	
 
-strrchr$11:	; Deref £temporary4031 -> £temporary4032 £temporary4032 0
+strrchr$11:	; Deref £temporary3829 -> £temporary3830 £temporary3830 0
 47:	
 
-strrchr$12:	; address £temporary4033 £temporary4031 -> £temporary4032
+strrchr$12:	; address £temporary3831 £temporary3829 -> £temporary3830
 49:	
 
-strrchr$13:	; Assign result £temporary4033
-50:		mov [bp + 12], a2473
+strrchr$13:	; Assign result £temporary3831
+50:		mov [bp + 12], a2387
 52:	
 
 strrchr$14:	; Increment index
@@ -898,14 +802,14 @@ strrchr$15:	; Goto 4
 58:	
 
 strrchr$16:	; SetReturnValue result
-59:		mov a2474, [bp + 12]
+59:		mov a2388, [bp + 12]
 61:	
 
 strrchr$17:	; Return result
-62:		mov t2475, [bp]
+62:		mov t2389, [bp]
 63:		mov di, [bp + 4]
 64:		mov bp, [bp + 2]
-65:		jmp t2475
+65:		jmp t2389
 67:	
 
 strrchr$18:	; FunctionEnd strrchr
@@ -915,16 +819,16 @@ strspn:	; Assign index 0
 2:		mov word [bp + 10], 0
 4:	
 
-strspn$1:	; BinaryAdd £temporary4035 mainString index
-5:		mov a2476, [bp + 6]
-6:		add a2476, [bp + 10]
+strspn$1:	; BinaryAdd £temporary3833 mainString index
+5:		mov a2390, [bp + 6]
+6:		add a2390, [bp + 10]
 8:	
 
-strspn$2:	; Deref £temporary4034 -> £temporary4035 £temporary4035 0
+strspn$2:	; Deref £temporary3832 -> £temporary3833 £temporary3833 0
 10:	
 
-strspn$3:	; Equal 18 £temporary4034 -> £temporary4035 0
-11:		cmp byte [a2476], 0
+strspn$3:	; Equal 18 £temporary3832 -> £temporary3833 0
+11:		cmp byte [a2390], 0
 12:		je strspn$18
 14:	
 
@@ -932,29 +836,29 @@ strspn$4:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 16:	
 
 strspn$5:	; Parameter 12 charSet 6
-17:		mov a2477, [bp + 8]
-18:		mov [bp + 18], a2477
+17:		mov a2391, [bp + 8]
+18:		mov [bp + 18], a2391
 20:	
 
-strspn$6:	; BinaryAdd £temporary4039 mainString index
-21:		mov a2478, [bp + 6]
-22:		add a2478, [bp + 10]
+strspn$6:	; BinaryAdd £temporary3837 mainString index
+21:		mov a2392, [bp + 6]
+22:		add a2392, [bp + 10]
 24:	
 
-strspn$7:	; Deref £temporary4038 -> £temporary4039 £temporary4039 0
+strspn$7:	; Deref £temporary3836 -> £temporary3837 £temporary3837 0
 26:	
 
-strspn$8:	; IntegralToIntegral £temporary4040 £temporary4038 -> £temporary4039
-27:		mov t2479, [a2478]
-29:		and t2479, 255
-31:		cmp t2479, 0
+strspn$8:	; IntegralToIntegral £temporary3838 £temporary3836 -> £temporary3837
+27:		mov t2393, [a2392]
+29:		and t2393, 255
+31:		cmp t2393, 0
 32:		jge strspn$9
-33:		neg t2479
-35:		neg t2479
+33:		neg t2393
+35:		neg t2393
 37:	
 
-strspn$9:	; Parameter 12 £temporary4040 8
-38:		mov [bp + 20], t2479
+strspn$9:	; Parameter 12 £temporary3838 8
+38:		mov [bp + 20], t2393
 40:	
 
 strspn$10:	; Call 12 strchr 0
@@ -967,23 +871,23 @@ strspn$10:	; Call 12 strchr 0
 strspn$11:	; PostCall 12
 48:	
 
-strspn$12:	; GetReturnValue £temporary4041
+strspn$12:	; GetReturnValue £temporary3839
 53:	
 
-strspn$13:	; NotEqual 16 £temporary4041 0
-54:		cmp t2481, 0
+strspn$13:	; NotEqual 16 £temporary3839 0
+54:		cmp t2395, 0
 55:		jne strspn$16
 57:	
 
 strspn$14:	; SetReturnValue index
-58:		mov a2482, [bp + 10]
+58:		mov a2396, [bp + 10]
 60:	
 
 strspn$15:	; Return index
-61:		mov t2483, [bp]
+61:		mov t2397, [bp]
 62:		mov di, [bp + 4]
 63:		mov bp, [bp + 2]
-64:		jmp t2483
+64:		jmp t2397
 66:	
 
 strspn$16:	; Increment index
@@ -995,14 +899,14 @@ strspn$17:	; Goto 1
 72:	
 
 strspn$18:	; SetReturnValue -1
-73:		mov a2484, -1
+73:		mov a2398, -1
 75:	
 
 strspn$19:	; Return -1
-76:		mov t2485, [bp]
+76:		mov t2399, [bp]
 77:		mov di, [bp + 4]
 78:		mov bp, [bp + 2]
-79:		jmp t2485
+79:		jmp t2399
 81:	
 
 strspn$20:	; FunctionEnd strspn
@@ -1012,16 +916,16 @@ strcspn:	; Assign index 0
 2:		mov word [bp + 10], 0
 4:	
 
-strcspn$1:	; BinaryAdd £temporary4046 mainString index
-5:		mov a2486, [bp + 6]
-6:		add a2486, [bp + 10]
+strcspn$1:	; BinaryAdd £temporary3844 mainString index
+5:		mov a2400, [bp + 6]
+6:		add a2400, [bp + 10]
 8:	
 
-strcspn$2:	; Deref £temporary4045 -> £temporary4046 £temporary4046 0
+strcspn$2:	; Deref £temporary3843 -> £temporary3844 £temporary3844 0
 10:	
 
-strcspn$3:	; Equal 18 £temporary4045 -> £temporary4046 0
-11:		cmp byte [a2486], 0
+strcspn$3:	; Equal 18 £temporary3843 -> £temporary3844 0
+11:		cmp byte [a2400], 0
 12:		je strcspn$18
 14:	
 
@@ -1029,29 +933,29 @@ strcspn$4:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol
 16:	
 
 strcspn$5:	; Parameter 12 charSet 6
-17:		mov a2487, [bp + 8]
-18:		mov [bp + 18], a2487
+17:		mov a2401, [bp + 8]
+18:		mov [bp + 18], a2401
 20:	
 
-strcspn$6:	; BinaryAdd £temporary4050 mainString index
-21:		mov a2488, [bp + 6]
-22:		add a2488, [bp + 10]
+strcspn$6:	; BinaryAdd £temporary3848 mainString index
+21:		mov a2402, [bp + 6]
+22:		add a2402, [bp + 10]
 24:	
 
-strcspn$7:	; Deref £temporary4049 -> £temporary4050 £temporary4050 0
+strcspn$7:	; Deref £temporary3847 -> £temporary3848 £temporary3848 0
 26:	
 
-strcspn$8:	; IntegralToIntegral £temporary4051 £temporary4049 -> £temporary4050
-27:		mov t2489, [a2488]
-29:		and t2489, 255
-31:		cmp t2489, 0
+strcspn$8:	; IntegralToIntegral £temporary3849 £temporary3847 -> £temporary3848
+27:		mov t2403, [a2402]
+29:		and t2403, 255
+31:		cmp t2403, 0
 32:		jge strcspn$9
-33:		neg t2489
-35:		neg t2489
+33:		neg t2403
+35:		neg t2403
 37:	
 
-strcspn$9:	; Parameter 12 £temporary4051 8
-38:		mov [bp + 20], t2489
+strcspn$9:	; Parameter 12 £temporary3849 8
+38:		mov [bp + 20], t2403
 40:	
 
 strcspn$10:	; Call 12 strchr 0
@@ -1064,23 +968,23 @@ strcspn$10:	; Call 12 strchr 0
 strcspn$11:	; PostCall 12
 48:	
 
-strcspn$12:	; GetReturnValue £temporary4052
+strcspn$12:	; GetReturnValue £temporary3850
 53:	
 
-strcspn$13:	; Equal 16 £temporary4052 0
-54:		cmp t2491, 0
+strcspn$13:	; Equal 16 £temporary3850 0
+54:		cmp t2405, 0
 55:		je strcspn$16
 57:	
 
 strcspn$14:	; SetReturnValue index
-58:		mov a2492, [bp + 10]
+58:		mov a2406, [bp + 10]
 60:	
 
 strcspn$15:	; Return index
-61:		mov t2493, [bp]
+61:		mov t2407, [bp]
 62:		mov di, [bp + 4]
 63:		mov bp, [bp + 2]
-64:		jmp t2493
+64:		jmp t2407
 66:	
 
 strcspn$16:	; Increment index
@@ -1092,14 +996,14 @@ strcspn$17:	; Goto 1
 72:	
 
 strcspn$18:	; SetReturnValue -1
-73:		mov a2494, -1
+73:		mov a2408, -1
 75:	
 
 strcspn$19:	; Return -1
-76:		mov t2495, [bp]
+76:		mov t2409, [bp]
 77:		mov di, [bp + 4]
 78:		mov bp, [bp + 2]
-79:		jmp t2495
+79:		jmp t2409
 81:	
 
 strcspn$20:	; FunctionEnd strcspn
@@ -1109,16 +1013,16 @@ strpbrk:	; Assign index 0
 2:		mov word [bp + 10], 0
 4:	
 
-strpbrk$1:	; BinaryAdd £temporary4057 mainString index
-5:		mov a2496, [bp + 6]
-6:		add a2496, [bp + 10]
+strpbrk$1:	; BinaryAdd £temporary3855 mainString index
+5:		mov a2410, [bp + 6]
+6:		add a2410, [bp + 10]
 8:	
 
-strpbrk$2:	; Deref £temporary4056 -> £temporary4057 £temporary4057 0
+strpbrk$2:	; Deref £temporary3854 -> £temporary3855 £temporary3855 0
 10:	
 
-strpbrk$3:	; Equal 21 £temporary4056 -> £temporary4057 0
-11:		cmp byte [a2496], 0
+strpbrk$3:	; Equal 21 £temporary3854 -> £temporary3855 0
+11:		cmp byte [a2410], 0
 12:		je strpbrk$21
 14:	
 
@@ -1126,29 +1030,29 @@ strpbrk$4:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol
 16:	
 
 strpbrk$5:	; Parameter 12 charSet 6
-17:		mov a2497, [bp + 8]
-18:		mov [bp + 18], a2497
+17:		mov a2411, [bp + 8]
+18:		mov [bp + 18], a2411
 20:	
 
-strpbrk$6:	; BinaryAdd £temporary4061 mainString index
-21:		mov a2498, [bp + 6]
-22:		add a2498, [bp + 10]
+strpbrk$6:	; BinaryAdd £temporary3859 mainString index
+21:		mov a2412, [bp + 6]
+22:		add a2412, [bp + 10]
 24:	
 
-strpbrk$7:	; Deref £temporary4060 -> £temporary4061 £temporary4061 0
+strpbrk$7:	; Deref £temporary3858 -> £temporary3859 £temporary3859 0
 26:	
 
-strpbrk$8:	; IntegralToIntegral £temporary4062 £temporary4060 -> £temporary4061
-27:		mov t2499, [a2498]
-29:		and t2499, 255
-31:		cmp t2499, 0
+strpbrk$8:	; IntegralToIntegral £temporary3860 £temporary3858 -> £temporary3859
+27:		mov t2413, [a2412]
+29:		and t2413, 255
+31:		cmp t2413, 0
 32:		jge strpbrk$9
-33:		neg t2499
-35:		neg t2499
+33:		neg t2413
+35:		neg t2413
 37:	
 
-strpbrk$9:	; Parameter 12 £temporary4062 8
-38:		mov [bp + 20], t2499
+strpbrk$9:	; Parameter 12 £temporary3860 8
+38:		mov [bp + 20], t2413
 40:	
 
 strpbrk$10:	; Call 12 strchr 0
@@ -1161,33 +1065,33 @@ strpbrk$10:	; Call 12 strchr 0
 strpbrk$11:	; PostCall 12
 48:	
 
-strpbrk$12:	; GetReturnValue £temporary4063
+strpbrk$12:	; GetReturnValue £temporary3861
 53:	
 
-strpbrk$13:	; Equal 19 £temporary4063 0
-54:		cmp t2501, 0
+strpbrk$13:	; Equal 19 £temporary3861 0
+54:		cmp t2415, 0
 55:		je strpbrk$19
 57:	
 
-strpbrk$14:	; BinaryAdd £temporary4066 mainString index
-58:		mov a2502, [bp + 6]
-59:		add a2502, [bp + 10]
+strpbrk$14:	; BinaryAdd £temporary3864 mainString index
+58:		mov a2416, [bp + 6]
+59:		add a2416, [bp + 10]
 61:	
 
-strpbrk$15:	; Deref £temporary4065 -> £temporary4066 £temporary4066 0
+strpbrk$15:	; Deref £temporary3863 -> £temporary3864 £temporary3864 0
 63:	
 
-strpbrk$16:	; address £temporary4067 £temporary4065 -> £temporary4066
+strpbrk$16:	; address £temporary3865 £temporary3863 -> £temporary3864
 65:	
 
-strpbrk$17:	; SetReturnValue £temporary4067
+strpbrk$17:	; SetReturnValue £temporary3865
 67:	
 
-strpbrk$18:	; Return £temporary4067
-68:		mov t2503, [bp]
+strpbrk$18:	; Return £temporary3865
+68:		mov t2417, [bp]
 69:		mov di, [bp + 4]
 70:		mov bp, [bp + 2]
-71:		jmp t2503
+71:		jmp t2417
 73:	
 
 strpbrk$19:	; Increment index
@@ -1199,128 +1103,158 @@ strpbrk$20:	; Goto 1
 79:	
 
 strpbrk$21:	; SetReturnValue 0
-80:		mov a2504, 0
+80:		mov a2418, 0
 82:	
 
 strpbrk$22:	; Return 0
-83:		mov t2505, [bp]
+83:		mov t2419, [bp]
 84:		mov di, [bp + 4]
 85:		mov bp, [bp + 2]
-86:		jmp t2505
+86:		jmp t2419
 88:	
 
 strpbrk$23:	; FunctionEnd strpbrk
 1:	
 
-strstr:	; Assign index 0
-2:		mov word [bp + 10], 0
-4:	
+strstr:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+3:	
 
-strstr$1:	; BinaryAdd £temporary4071 mainString index
-5:		mov a2506, [bp + 6]
-6:		add a2506, [bp + 10]
-8:	
+strstr$1:	; Parameter 12 subString 6
+4:		mov a2420, [bp + 8]
+5:		mov [bp + 18], a2420
+7:	
 
-strstr$2:	; Deref £temporary4070 -> £temporary4071 £temporary4071 0
-10:	
+strstr$2:	; Call 12 strlen 0
+8:		mov word [bp + 12], strstr$3
+9:		mov [bp + 14], bp
+10:		add bp, 12
+11:		jmp strlen
+13:	
 
-strstr$3:	; Equal 19 £temporary4070 -> £temporary4071 0
-11:		cmp byte [a2506], 0
-12:		je strstr$19
-14:	
+strstr$3:	; PostCall 12
+15:	
 
-strstr$4:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-16:	
-
-strstr$5:	; BinaryAdd £temporary4074 mainString index
-17:		mov a2507, [bp + 6]
-18:		add a2507, [bp + 10]
+strstr$4:	; GetReturnValue £temporary3868
 20:	
 
-strstr$6:	; Parameter 12 £temporary4074 6
-21:		mov [bp + 18], a2507
+strstr$5:	; Assign subStringSize £temporary3868
+21:		mov [bp + 12], t2422
 23:	
 
-strstr$7:	; Parameter 12 subString 8
-24:		mov a2508, [bp + 8]
-25:		mov [bp + 20], a2508
-27:	
+strstr$6:	; Assign index 0
+24:		mov word [bp + 10], 0
+26:	
 
-strstr$8:	; Call 12 strcmp 0
-28:		mov word [bp + 12], strstr$9
-29:		mov [bp + 14], bp
-30:		add bp, 12
-31:		jmp strcmp
-33:	
+strstr$7:	; BinaryAdd £temporary3870 mainString index
+27:		mov a2423, [bp + 6]
+28:		add a2423, [bp + 10]
+30:	
 
-strstr$9:	; PostCall 12
-35:	
+strstr$8:	; Deref £temporary3869 -> £temporary3870 £temporary3870 0
+32:	
 
-strstr$10:	; GetReturnValue £temporary4075
-40:	
+strstr$9:	; Equal 26 £temporary3869 -> £temporary3870 0
+33:		cmp byte [a2423], 0
+34:		je strstr$26
+36:	
 
-strstr$11:	; NotEqual 17 £temporary4075 0
-41:		cmp t2510, 0
-42:		jne strstr$17
-44:	
+strstr$10:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+38:	
 
-strstr$12:	; BinaryAdd £temporary4078 mainString index
-45:		mov a2511, [bp + 6]
-46:		add a2511, [bp + 10]
-48:	
+strstr$11:	; BinaryAdd £temporary3873 mainString index
+39:		mov a2424, [bp + 6]
+40:		add a2424, [bp + 10]
+42:	
 
-strstr$13:	; Deref £temporary4077 -> £temporary4078 £temporary4078 0
-50:	
+strstr$12:	; Parameter 14 £temporary3873 6
+43:		mov [bp + 20], a2424
+45:	
 
-strstr$14:	; address £temporary4079 £temporary4077 -> £temporary4078
-52:	
+strstr$13:	; Parameter 14 subString 8
+46:		mov a2425, [bp + 8]
+47:		mov [bp + 22], a2425
+49:	
 
-strstr$15:	; SetReturnValue £temporary4079
-54:	
+strstr$14:	; Parameter 14 subStringSize 10
+50:		mov a2426, [bp + 12]
+51:		mov [bp + 24], a2426
+53:	
 
-strstr$16:	; Return £temporary4079
-55:		mov t2512, [bp]
-56:		mov di, [bp + 4]
-57:		mov bp, [bp + 2]
-58:		jmp t2512
-60:	
+strstr$15:	; Call 14 strncmp 0
+54:		mov word [bp + 14], strstr$16
+55:		mov [bp + 16], bp
+56:		add bp, 14
+57:		jmp strncmp
+59:	
 
-strstr$17:	; Increment index
-61:		inc word [bp + 10]
-63:	
+strstr$16:	; PostCall 14
+61:	
 
-strstr$18:	; Goto 1
-64:		jmp strstr$1
+strstr$17:	; GetReturnValue £temporary3874
 66:	
 
-strstr$19:	; SetReturnValue 0
-67:		mov a2513, 0
-69:	
+strstr$18:	; NotEqual 24 £temporary3874 0
+67:		cmp t2428, 0
+68:		jne strstr$24
+70:	
 
-strstr$20:	; Return 0
-70:		mov t2514, [bp]
-71:		mov di, [bp + 4]
-72:		mov bp, [bp + 2]
-73:		jmp t2514
-75:	
+strstr$19:	; BinaryAdd £temporary3877 mainString index
+71:		mov a2429, [bp + 6]
+72:		add a2429, [bp + 10]
+74:	
 
-strstr$21:	; FunctionEnd strstr
+strstr$20:	; Deref £temporary3876 -> £temporary3877 £temporary3877 0
+76:	
+
+strstr$21:	; address £temporary3878 £temporary3876 -> £temporary3877
+78:	
+
+strstr$22:	; SetReturnValue £temporary3878
+80:	
+
+strstr$23:	; Return £temporary3878
+81:		mov t2430, [bp]
+82:		mov di, [bp + 4]
+83:		mov bp, [bp + 2]
+84:		jmp t2430
+86:	
+
+strstr$24:	; Increment index
+87:		inc word [bp + 10]
+89:	
+
+strstr$25:	; Goto 7
+90:		jmp strstr$7
+92:	
+
+strstr$26:	; SetReturnValue 0
+93:		mov a2431, 0
+95:	
+
+strstr$27:	; Return 0
+96:		mov t2432, [bp]
+97:		mov di, [bp + 4]
+98:		mov bp, [bp + 2]
+99:		jmp t2432
+101:	
+
+strstr$28:	; FunctionEnd strstr
 1:	
 
 strlen:	; Assign index 0
 2:		mov word [bp + 8], 0
 4:	
 
-strlen$1:	; BinaryAdd £temporary4083 string index
-5:		mov a2515, [bp + 6]
-6:		add a2515, [bp + 8]
+strlen$1:	; BinaryAdd £temporary3884 string index
+5:		mov a2433, [bp + 6]
+6:		add a2433, [bp + 8]
 8:	
 
-strlen$2:	; Deref £temporary4082 -> £temporary4083 £temporary4083 0
+strlen$2:	; Deref £temporary3883 -> £temporary3884 £temporary3884 0
 10:	
 
-strlen$3:	; Equal 6 £temporary4082 -> £temporary4083 0
-11:		cmp byte [a2515], 0
+strlen$3:	; Equal 6 £temporary3883 -> £temporary3884 0
+11:		cmp byte [a2433], 0
 12:		je strlen$6
 14:	
 
@@ -1333,14 +1267,14 @@ strlen$5:	; Goto 1
 20:	
 
 strlen$6:	; SetReturnValue index
-21:		mov a2516, [bp + 8]
+21:		mov a2434, [bp + 8]
 23:	
 
 strlen$7:	; Return index
-24:		mov t2517, [bp]
+24:		mov t2435, [bp]
 25:		mov di, [bp + 4]
 26:		mov bp, [bp + 2]
-27:		jmp t2517
+27:		jmp t2435
 29:	
 
 strlen$8:	; FunctionEnd strlen
@@ -1359,11 +1293,11 @@ strerror$1:	; Call 8 localeconv 0
 strerror$2:	; PostCall 8
 11:	
 
-strerror$3:	; GetReturnValue £temporary4086
+strerror$3:	; GetReturnValue £temporary3887
 16:	
 
-strerror$4:	; Assign localeConvPtr £temporary4086
-17:		mov [bp + 8], t2519
+strerror$4:	; Assign localeConvPtr £temporary3887
+17:		mov [bp + 8], t2437
 19:	
 
 strerror$5:	; Equal 9 localeConvPtr 0
@@ -1371,24 +1305,24 @@ strerror$5:	; Equal 9 localeConvPtr 0
 21:		je strerror$9
 23:	
 
-strerror$6:	; Deref £temporary4088 -> localeConvPtr localeConvPtr 16
-24:		mov a2520, [bp + 8]
+strerror$6:	; Deref £temporary3889 -> localeConvPtr localeConvPtr 16
+24:		mov a2438, [bp + 8]
 26:	
 
-strerror$7:	; Assign £temporary4092 £temporary4088 -> localeConvPtr
-27:		mov t2521, [a2520 + 16]
+strerror$7:	; Assign £temporary3893 £temporary3889 -> localeConvPtr
+27:		mov t2439, [a2438 + 16]
 29:	
 
 strerror$8:	; Goto 10
 30:		jmp strerror$10
 32:	
 
-strerror$9:	; Assign £temporary4092 0
-33:		mov t2522, 0
+strerror$9:	; Assign £temporary3893 0
+33:		mov t2440, 0
 35:	
 
-strerror$10:	; Assign messageList £temporary4092
-36:		mov [bp + 10], t2522
+strerror$10:	; Assign messageList £temporary3893
+36:		mov [bp + 10], t2440
 38:	
 
 strerror$11:	; Equal 14 messageList 0
@@ -1396,45 +1330,45 @@ strerror$11:	; Equal 14 messageList 0
 40:		je strerror$14
 42:	
 
-strerror$12:	; Assign £temporary4097 messageList
-43:		mov t2523, [bp + 10]
+strerror$12:	; Assign £temporary3898 messageList
+43:		mov t2441, [bp + 10]
 45:	
 
 strerror$13:	; Goto 15
 46:		jmp strerror$15
 48:	
 
-strerror$14:	; Assign £temporary4097 enMessageList
-49:		mov t2524, enMessageList
+strerror$14:	; Assign £temporary3898 enMessageList
+49:		mov t2442, enMessageList
 51:	
 
-strerror$15:	; Assign messageList £temporary4097
-52:		mov [bp + 10], t2524
+strerror$15:	; Assign messageList £temporary3898
+52:		mov [bp + 10], t2442
 54:	
 
-strerror$16:	; UnsignedMultiply £temporary4099 errno 2
-55:		mov a2525, [bp + 6]
+strerror$16:	; UnsignedMultiply £temporary3900 errno 2
+55:		mov a2443, [bp + 6]
 57:		xor dx, dx
-58:		mul word [@9088$int2$2#]
+58:		mul word [@8696$int2$2#]
 64:	
 
-strerror$17:	; BinaryAdd £temporary4100 messageList £temporary4099
-65:		mov a2529, [bp + 10]
-66:		add a2529, t2528
+strerror$17:	; BinaryAdd £temporary3901 messageList £temporary3900
+65:		mov a2447, [bp + 10]
+66:		add a2447, t2446
 68:	
 
-strerror$18:	; Deref £temporary4098 -> £temporary4100 £temporary4100 0
+strerror$18:	; Deref £temporary3899 -> £temporary3901 £temporary3901 0
 70:	
 
-strerror$19:	; SetReturnValue £temporary4098 -> £temporary4100
-71:		mov t2530, [a2529]
+strerror$19:	; SetReturnValue £temporary3899 -> £temporary3901
+71:		mov t2448, [a2447]
 73:	
 
-strerror$20:	; Return £temporary4098 -> £temporary4100
-74:		mov t2531, [bp]
+strerror$20:	; Return £temporary3899 -> £temporary3901
+74:		mov t2449, [bp]
 75:		mov di, [bp + 4]
 76:		mov bp, [bp + 2]
-77:		jmp t2531
+77:		jmp t2449
 79:	
 
 strerror$21:	; FunctionEnd strerror
@@ -1445,40 +1379,40 @@ strtok:	; Equal 37 string 0
 3:		je strtok$37
 5:	
 
-strtok$1:	; Deref £temporary4102 -> string string 0
-6:		mov a2532, [bp + 6]
+strtok$1:	; Deref £temporary3903 -> string string 0
+6:		mov a2450, [bp + 6]
 8:	
 
-strtok$2:	; NotEqual 5 £temporary4102 -> string 0
-9:		cmp byte [a2532], 0
+strtok$2:	; NotEqual 5 £temporary3903 -> string 0
+9:		cmp byte [a2450], 0
 10:		jne strtok$5
 12:	
 
 strtok$3:	; SetReturnValue 0
-13:		mov a2533, 0
+13:		mov a2451, 0
 15:	
 
 strtok$4:	; Return 0
-16:		mov t2534, [bp]
+16:		mov t2452, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
-19:		jmp t2534
+19:		jmp t2452
 21:	
 
 strtok$5:	; Assign index 0
 22:		mov word [bp + 10], 0
 24:	
 
-strtok$6:	; BinaryAdd £temporary4105 string index
-25:		mov a2535, [bp + 6]
-26:		add a2535, [bp + 10]
+strtok$6:	; BinaryAdd £temporary3906 string index
+25:		mov a2453, [bp + 6]
+26:		add a2453, [bp + 10]
 28:	
 
-strtok$7:	; Deref £temporary4104 -> £temporary4105 £temporary4105 0
+strtok$7:	; Deref £temporary3905 -> £temporary3906 £temporary3906 0
 30:	
 
-strtok$8:	; Equal 31 £temporary4104 -> £temporary4105 0
-31:		cmp byte [a2535], 0
+strtok$8:	; Equal 31 £temporary3905 -> £temporary3906 0
+31:		cmp byte [a2453], 0
 32:		je strtok$31
 34:	
 
@@ -1486,29 +1420,29 @@ strtok$9:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 36:	
 
 strtok$10:	; Parameter 14 charSet 6
-37:		mov a2536, [bp + 8]
-38:		mov [bp + 20], a2536
+37:		mov a2454, [bp + 8]
+38:		mov [bp + 20], a2454
 40:	
 
-strtok$11:	; BinaryAdd £temporary4109 string index
-41:		mov a2537, [bp + 6]
-42:		add a2537, [bp + 10]
+strtok$11:	; BinaryAdd £temporary3910 string index
+41:		mov a2455, [bp + 6]
+42:		add a2455, [bp + 10]
 44:	
 
-strtok$12:	; Deref £temporary4108 -> £temporary4109 £temporary4109 0
+strtok$12:	; Deref £temporary3909 -> £temporary3910 £temporary3910 0
 46:	
 
-strtok$13:	; IntegralToIntegral £temporary4110 £temporary4108 -> £temporary4109
-47:		mov t2538, [a2537]
-49:		and t2538, 255
-51:		cmp t2538, 0
+strtok$13:	; IntegralToIntegral £temporary3911 £temporary3909 -> £temporary3910
+47:		mov t2456, [a2455]
+49:		and t2456, 255
+51:		cmp t2456, 0
 52:		jge strtok$14
-53:		neg t2538
-55:		neg t2538
+53:		neg t2456
+55:		neg t2456
 57:	
 
-strtok$14:	; Parameter 14 £temporary4110 8
-58:		mov [bp + 22], t2538
+strtok$14:	; Parameter 14 £temporary3911 8
+58:		mov [bp + 22], t2456
 60:	
 
 strtok$15:	; Call 14 strchr 0
@@ -1521,55 +1455,55 @@ strtok$15:	; Call 14 strchr 0
 strtok$16:	; PostCall 14
 68:	
 
-strtok$17:	; GetReturnValue £temporary4111
+strtok$17:	; GetReturnValue £temporary3912
 73:	
 
-strtok$18:	; Equal 29 £temporary4111 0
-74:		cmp t2540, 0
+strtok$18:	; Equal 29 £temporary3912 0
+74:		cmp t2458, 0
 75:		je strtok$29
 77:	
 
-strtok$19:	; BinaryAdd £temporary4114 string index
-78:		mov a2541, [bp + 6]
-79:		add a2541, [bp + 10]
+strtok$19:	; BinaryAdd £temporary3915 string index
+78:		mov a2459, [bp + 6]
+79:		add a2459, [bp + 10]
 81:	
 
-strtok$20:	; Deref £temporary4113 -> £temporary4114 £temporary4114 0
+strtok$20:	; Deref £temporary3914 -> £temporary3915 £temporary3915 0
 83:	
 
-strtok$21:	; Assign £temporary4113 -> £temporary4114 0
-84:		mov byte [a2541], 0
+strtok$21:	; Assign £temporary3914 -> £temporary3915 0
+84:		mov byte [a2459], 0
 86:	
 
-strtok$22:	; BinaryAdd £temporary4115 index 1
-87:		mov a2542, [bp + 10]
-88:		add a2542, 1
+strtok$22:	; BinaryAdd £temporary3916 index 1
+87:		mov a2460, [bp + 10]
+88:		add a2460, 1
 90:	
 
-strtok$23:	; BinaryAdd £temporary4117 string £temporary4115
-91:		mov a2543, [bp + 6]
-92:		add a2543, a2542
+strtok$23:	; BinaryAdd £temporary3918 string £temporary3916
+91:		mov a2461, [bp + 6]
+92:		add a2461, a2460
 94:	
 
-strtok$24:	; Deref £temporary4116 -> £temporary4117 £temporary4117 0
+strtok$24:	; Deref £temporary3917 -> £temporary3918 £temporary3918 0
 96:	
 
-strtok$25:	; address £temporary4118 £temporary4116 -> £temporary4117
+strtok$25:	; address £temporary3919 £temporary3917 -> £temporary3918
 98:	
 
-strtok$26:	; Assign token £temporary4118
-99:		mov [token], a2543
+strtok$26:	; Assign token £temporary3919
+99:		mov [token], a2461
 101:	
 
 strtok$27:	; SetReturnValue string
-102:		mov a2544, [bp + 6]
+102:		mov a2462, [bp + 6]
 104:	
 
 strtok$28:	; Return string
-105:		mov t2545, [bp]
+105:		mov t2463, [bp]
 106:		mov di, [bp + 4]
 107:		mov bp, [bp + 2]
-108:		jmp t2545
+108:		jmp t2463
 110:	
 
 strtok$29:	; Increment index
@@ -1580,30 +1514,30 @@ strtok$30:	; Goto 6
 114:		jmp strtok$6
 116:	
 
-strtok$31:	; BinaryAdd £temporary4120 string index
-117:		mov a2546, [bp + 6]
-118:		add a2546, [bp + 10]
+strtok$31:	; BinaryAdd £temporary3921 string index
+117:		mov a2464, [bp + 6]
+118:		add a2464, [bp + 10]
 120:	
 
-strtok$32:	; Deref £temporary4119 -> £temporary4120 £temporary4120 0
+strtok$32:	; Deref £temporary3920 -> £temporary3921 £temporary3921 0
 122:	
 
-strtok$33:	; address £temporary4121 £temporary4119 -> £temporary4120
+strtok$33:	; address £temporary3922 £temporary3920 -> £temporary3921
 124:	
 
-strtok$34:	; Assign token £temporary4121
-125:		mov [token], a2546
+strtok$34:	; Assign token £temporary3922
+125:		mov [token], a2464
 127:	
 
 strtok$35:	; SetReturnValue string
-128:		mov a2547, [bp + 6]
+128:		mov a2465, [bp + 6]
 130:	
 
 strtok$36:	; Return string
-131:		mov t2548, [bp]
+131:		mov t2466, [bp]
 132:		mov di, [bp + 4]
 133:		mov bp, [bp + 2]
-134:		jmp t2548
+134:		jmp t2466
 136:	
 
 strtok$37:	; NotEqual 40 token 0
@@ -1612,47 +1546,47 @@ strtok$37:	; NotEqual 40 token 0
 140:	
 
 strtok$38:	; SetReturnValue 0
-141:		mov a2549, 0
+141:		mov a2467, 0
 143:	
 
 strtok$39:	; Return 0
-144:		mov t2550, [bp]
+144:		mov t2468, [bp]
 145:		mov di, [bp + 4]
 146:		mov bp, [bp + 2]
-147:		jmp t2550
+147:		jmp t2468
 149:	
 
 strtok$40:	; NotEqual 43 (token,0) 0
-150:		mov a2551, [token]
-151:		cmp byte [a2551], 0
+150:		mov a2469, [token]
+151:		cmp byte [a2469], 0
 152:		jne strtok$43
 154:	
 
 strtok$41:	; SetReturnValue 0
-155:		mov a2552, 0
+155:		mov a2470, 0
 157:	
 
 strtok$42:	; Return 0
-158:		mov t2553, [bp]
+158:		mov t2471, [bp]
 159:		mov di, [bp + 4]
 160:		mov bp, [bp + 2]
-161:		jmp t2553
+161:		jmp t2471
 163:	
 
 strtok$43:	; Assign index 0
 164:		mov word [bp + 10], 0
 166:	
 
-strtok$44:	; BinaryAdd £temporary4126 token index
-167:		mov a2554, [token]
-168:		add a2554, [bp + 10]
+strtok$44:	; BinaryAdd £temporary3927 token index
+167:		mov a2472, [token]
+168:		add a2472, [bp + 10]
 170:	
 
-strtok$45:	; Deref £temporary4125 -> £temporary4126 £temporary4126 0
+strtok$45:	; Deref £temporary3926 -> £temporary3927 £temporary3927 0
 172:	
 
-strtok$46:	; Equal 70 £temporary4125 -> £temporary4126 0
-173:		cmp byte [a2554], 0
+strtok$46:	; Equal 70 £temporary3926 -> £temporary3927 0
+173:		cmp byte [a2472], 0
 174:		je strtok$70
 176:	
 
@@ -1660,29 +1594,29 @@ strtok$47:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol
 178:	
 
 strtok$48:	; Parameter 14 charSet 6
-179:		mov a2555, [bp + 8]
-180:		mov [bp + 20], a2555
+179:		mov a2473, [bp + 8]
+180:		mov [bp + 20], a2473
 182:	
 
-strtok$49:	; BinaryAdd £temporary4130 token index
-183:		mov a2556, [token]
-184:		add a2556, [bp + 10]
+strtok$49:	; BinaryAdd £temporary3931 token index
+183:		mov a2474, [token]
+184:		add a2474, [bp + 10]
 186:	
 
-strtok$50:	; Deref £temporary4129 -> £temporary4130 £temporary4130 0
+strtok$50:	; Deref £temporary3930 -> £temporary3931 £temporary3931 0
 188:	
 
-strtok$51:	; IntegralToIntegral £temporary4131 £temporary4129 -> £temporary4130
-189:		mov t2557, [a2556]
-191:		and t2557, 255
-193:		cmp t2557, 0
+strtok$51:	; IntegralToIntegral £temporary3932 £temporary3930 -> £temporary3931
+189:		mov t2475, [a2474]
+191:		and t2475, 255
+193:		cmp t2475, 0
 194:		jge strtok$52
-195:		neg t2557
-197:		neg t2557
+195:		neg t2475
+197:		neg t2475
 199:	
 
-strtok$52:	; Parameter 14 £temporary4131 8
-200:		mov [bp + 22], t2557
+strtok$52:	; Parameter 14 £temporary3932 8
+200:		mov [bp + 22], t2475
 202:	
 
 strtok$53:	; Call 14 strchr 0
@@ -1695,60 +1629,60 @@ strtok$53:	; Call 14 strchr 0
 strtok$54:	; PostCall 14
 210:	
 
-strtok$55:	; GetReturnValue £temporary4132
+strtok$55:	; GetReturnValue £temporary3933
 215:	
 
-strtok$56:	; Equal 68 £temporary4132 0
-216:		cmp t2559, 0
+strtok$56:	; Equal 68 £temporary3933 0
+216:		cmp t2477, 0
 217:		je strtok$68
 219:	
 
 strtok$57:	; Assign tokenStart2 token
-220:		mov a2560, [token]
-221:		mov [bp + 14], a2560
+220:		mov a2478, [token]
+221:		mov [bp + 14], a2478
 223:	
 
-strtok$58:	; BinaryAdd £temporary4135 token index
-224:		mov a2561, [token]
-225:		add a2561, [bp + 10]
+strtok$58:	; BinaryAdd £temporary3936 token index
+224:		mov a2479, [token]
+225:		add a2479, [bp + 10]
 227:	
 
-strtok$59:	; Deref £temporary4134 -> £temporary4135 £temporary4135 0
+strtok$59:	; Deref £temporary3935 -> £temporary3936 £temporary3936 0
 229:	
 
-strtok$60:	; Assign £temporary4134 -> £temporary4135 0
-230:		mov byte [a2561], 0
+strtok$60:	; Assign £temporary3935 -> £temporary3936 0
+230:		mov byte [a2479], 0
 232:	
 
-strtok$61:	; BinaryAdd £temporary4136 index 1
-233:		mov a2562, [bp + 10]
-234:		add a2562, 1
+strtok$61:	; BinaryAdd £temporary3937 index 1
+233:		mov a2480, [bp + 10]
+234:		add a2480, 1
 236:	
 
-strtok$62:	; BinaryAdd £temporary4138 token £temporary4136
-237:		mov a2563, [token]
-238:		add a2563, a2562
+strtok$62:	; BinaryAdd £temporary3939 token £temporary3937
+237:		mov a2481, [token]
+238:		add a2481, a2480
 240:	
 
-strtok$63:	; Deref £temporary4137 -> £temporary4138 £temporary4138 0
+strtok$63:	; Deref £temporary3938 -> £temporary3939 £temporary3939 0
 242:	
 
-strtok$64:	; address £temporary4139 £temporary4137 -> £temporary4138
+strtok$64:	; address £temporary3940 £temporary3938 -> £temporary3939
 244:	
 
-strtok$65:	; Assign token £temporary4139
-245:		mov [token], a2563
+strtok$65:	; Assign token £temporary3940
+245:		mov [token], a2481
 247:	
 
 strtok$66:	; SetReturnValue tokenStart2
-248:		mov a2564, [bp + 14]
+248:		mov a2482, [bp + 14]
 250:	
 
 strtok$67:	; Return tokenStart2
-251:		mov t2565, [bp]
+251:		mov t2483, [bp]
 252:		mov di, [bp + 4]
 253:		mov bp, [bp + 2]
-254:		jmp t2565
+254:		jmp t2483
 256:	
 
 strtok$68:	; Increment index
@@ -1760,53 +1694,53 @@ strtok$69:	; Goto 44
 262:	
 
 strtok$70:	; Assign tokenStart token
-263:		mov a2566, [token]
-264:		mov [bp + 12], a2566
+263:		mov a2484, [token]
+264:		mov [bp + 12], a2484
 266:	
 
-strtok$71:	; BinaryAdd £temporary4141 token index
-267:		mov a2567, [token]
-268:		add a2567, [bp + 10]
+strtok$71:	; BinaryAdd £temporary3942 token index
+267:		mov a2485, [token]
+268:		add a2485, [bp + 10]
 270:	
 
-strtok$72:	; Deref £temporary4140 -> £temporary4141 £temporary4141 0
+strtok$72:	; Deref £temporary3941 -> £temporary3942 £temporary3942 0
 272:	
 
-strtok$73:	; address £temporary4142 £temporary4140 -> £temporary4141
+strtok$73:	; address £temporary3943 £temporary3941 -> £temporary3942
 274:	
 
-strtok$74:	; Assign token £temporary4142
-275:		mov [token], a2567
+strtok$74:	; Assign token £temporary3943
+275:		mov [token], a2485
 277:	
 
 strtok$75:	; SetReturnValue tokenStart
-278:		mov a2568, [bp + 12]
+278:		mov a2486, [bp + 12]
 280:	
 
 strtok$76:	; Return tokenStart
-281:		mov t2569, [bp]
+281:		mov t2487, [bp]
 282:		mov di, [bp + 4]
 283:		mov bp, [bp + 2]
-284:		jmp t2569
+284:		jmp t2487
 286:	
 
 strtok$77:	; FunctionEnd strtok
 1:	
 
-memcpy:	; IntegralToIntegral £temporary4147 target
-2:		mov a2570, [bp + 6]
+memcpy:	; IntegralToIntegral £temporary3948 target
+2:		mov a2488, [bp + 6]
 5:	
 
-memcpy$1:	; Assign charTarget £temporary4147
-6:		mov [bp + 12], a2570
+memcpy$1:	; Assign charTarget £temporary3948
+6:		mov [bp + 12], a2488
 8:	
 
-memcpy$2:	; IntegralToIntegral £temporary4148 source
-9:		mov a2571, [bp + 8]
+memcpy$2:	; IntegralToIntegral £temporary3949 source
+9:		mov a2489, [bp + 8]
 12:	
 
-memcpy$3:	; Assign charSource £temporary4148
-13:		mov [bp + 14], a2571
+memcpy$3:	; Assign charSource £temporary3949
+13:		mov [bp + 14], a2489
 15:	
 
 memcpy$4:	; Assign index 0
@@ -1814,30 +1748,30 @@ memcpy$4:	; Assign index 0
 18:	
 
 memcpy$5:	; SignedGreaterThanEqual 13 index size
-19:		mov a2572, [bp + 10]
-20:		cmp [bp + 16], a2572
+19:		mov a2490, [bp + 10]
+20:		cmp [bp + 16], a2490
 21:		jge memcpy$13
 23:	
 
-memcpy$6:	; BinaryAdd £temporary4152 charTarget index
-24:		mov a2573, [bp + 12]
-25:		add a2573, [bp + 16]
+memcpy$6:	; BinaryAdd £temporary3953 charTarget index
+24:		mov a2491, [bp + 12]
+25:		add a2491, [bp + 16]
 27:	
 
-memcpy$7:	; Deref £temporary4151 -> £temporary4152 £temporary4152 0
+memcpy$7:	; Deref £temporary3952 -> £temporary3953 £temporary3953 0
 29:	
 
-memcpy$8:	; BinaryAdd £temporary4154 charSource index
-30:		mov a2574, [bp + 14]
-31:		add a2574, [bp + 16]
+memcpy$8:	; BinaryAdd £temporary3955 charSource index
+30:		mov a2492, [bp + 14]
+31:		add a2492, [bp + 16]
 33:	
 
-memcpy$9:	; Deref £temporary4153 -> £temporary4154 £temporary4154 0
+memcpy$9:	; Deref £temporary3954 -> £temporary3955 £temporary3955 0
 35:	
 
-memcpy$10:	; Assign £temporary4151 -> £temporary4152 £temporary4153 -> £temporary4154
-36:		mov t2575, [a2574]
-37:		mov [a2573], t2575
+memcpy$10:	; Assign £temporary3952 -> £temporary3953 £temporary3954 -> £temporary3955
+36:		mov t2493, [a2492]
+37:		mov [a2491], t2493
 39:	
 
 memcpy$11:	; Increment index
@@ -1848,49 +1782,49 @@ memcpy$12:	; Goto 5
 43:		jmp memcpy$5
 45:	
 
-memcpy$13:	; IntegralToIntegral £temporary4155 target
-46:		mov a2576, [bp + 6]
+memcpy$13:	; IntegralToIntegral £temporary3956 target
+46:		mov a2494, [bp + 6]
 49:	
 
-memcpy$14:	; SetReturnValue £temporary4155
+memcpy$14:	; SetReturnValue £temporary3956
 51:	
 
-memcpy$15:	; Return £temporary4155
-52:		mov t2577, [bp]
+memcpy$15:	; Return £temporary3956
+52:		mov t2495, [bp]
 53:		mov di, [bp + 4]
 54:		mov bp, [bp + 2]
-55:		jmp t2577
+55:		jmp t2495
 57:	
 
 memcpy$16:	; FunctionEnd memcpy
 1:	
 
-memmove:	; IntegralToIntegral £temporary4156 target
-2:		mov a2578, [bp + 6]
+memmove:	; IntegralToIntegral £temporary3957 target
+2:		mov a2496, [bp + 6]
 5:	
 
-memmove$1:	; Assign charTarget £temporary4156
-6:		mov [bp + 12], a2578
+memmove$1:	; Assign charTarget £temporary3957
+6:		mov [bp + 12], a2496
 8:	
 
-memmove$2:	; IntegralToIntegral £temporary4157 source
-9:		mov a2579, [bp + 8]
+memmove$2:	; IntegralToIntegral £temporary3958 source
+9:		mov a2497, [bp + 8]
 12:	
 
-memmove$3:	; Assign charSource £temporary4157
-13:		mov [bp + 14], a2579
+memmove$3:	; Assign charSource £temporary3958
+13:		mov [bp + 14], a2497
 15:	
 
 memmove$4:	; SignedGreaterThanEqual 14 source target
-16:		mov a2580, [bp + 6]
-17:		cmp [bp + 8], a2580
+16:		mov a2498, [bp + 6]
+17:		cmp [bp + 8], a2498
 18:		jge memmove$14
 20:	
 
 memmove$5:	; BinarySubtract index size 1
-21:		mov a2581, [bp + 10]
-22:		sub a2581, 1
-23:		mov [bp + 16], a2581
+21:		mov a2499, [bp + 10]
+22:		sub a2499, 1
+23:		mov [bp + 16], a2499
 25:	
 
 memmove$6:	; SignedLessThan 23 index 0
@@ -1898,25 +1832,25 @@ memmove$6:	; SignedLessThan 23 index 0
 27:		jl memmove$23
 29:	
 
-memmove$7:	; BinaryAdd £temporary4163 charTarget index
-30:		mov a2582, [bp + 12]
-31:		add a2582, [bp + 16]
+memmove$7:	; BinaryAdd £temporary3964 charTarget index
+30:		mov a2500, [bp + 12]
+31:		add a2500, [bp + 16]
 33:	
 
-memmove$8:	; Deref £temporary4162 -> £temporary4163 £temporary4163 0
+memmove$8:	; Deref £temporary3963 -> £temporary3964 £temporary3964 0
 35:	
 
-memmove$9:	; BinaryAdd £temporary4165 charSource index
-36:		mov a2583, [bp + 14]
-37:		add a2583, [bp + 16]
+memmove$9:	; BinaryAdd £temporary3966 charSource index
+36:		mov a2501, [bp + 14]
+37:		add a2501, [bp + 16]
 39:	
 
-memmove$10:	; Deref £temporary4164 -> £temporary4165 £temporary4165 0
+memmove$10:	; Deref £temporary3965 -> £temporary3966 £temporary3966 0
 41:	
 
-memmove$11:	; Assign £temporary4162 -> £temporary4163 £temporary4164 -> £temporary4165
-42:		mov t2584, [a2583]
-43:		mov [a2582], t2584
+memmove$11:	; Assign £temporary3963 -> £temporary3964 £temporary3965 -> £temporary3966
+42:		mov t2502, [a2501]
+43:		mov [a2500], t2502
 45:	
 
 memmove$12:	; Decrement index
@@ -1932,30 +1866,30 @@ memmove$14:	; Assign index 0
 54:	
 
 memmove$15:	; SignedGreaterThanEqual 23 index size
-55:		mov a2585, [bp + 10]
-56:		cmp [bp + 16], a2585
+55:		mov a2503, [bp + 10]
+56:		cmp [bp + 16], a2503
 57:		jge memmove$23
 59:	
 
-memmove$16:	; BinaryAdd £temporary4169 charTarget index
-60:		mov a2586, [bp + 12]
-61:		add a2586, [bp + 16]
+memmove$16:	; BinaryAdd £temporary3970 charTarget index
+60:		mov a2504, [bp + 12]
+61:		add a2504, [bp + 16]
 63:	
 
-memmove$17:	; Deref £temporary4168 -> £temporary4169 £temporary4169 0
+memmove$17:	; Deref £temporary3969 -> £temporary3970 £temporary3970 0
 65:	
 
-memmove$18:	; BinaryAdd £temporary4171 charSource index
-66:		mov a2587, [bp + 14]
-67:		add a2587, [bp + 16]
+memmove$18:	; BinaryAdd £temporary3972 charSource index
+66:		mov a2505, [bp + 14]
+67:		add a2505, [bp + 16]
 69:	
 
-memmove$19:	; Deref £temporary4170 -> £temporary4171 £temporary4171 0
+memmove$19:	; Deref £temporary3971 -> £temporary3972 £temporary3972 0
 71:	
 
-memmove$20:	; Assign £temporary4168 -> £temporary4169 £temporary4170 -> £temporary4171
-72:		mov t2588, [a2587]
-73:		mov [a2586], t2588
+memmove$20:	; Assign £temporary3969 -> £temporary3970 £temporary3971 -> £temporary3972
+72:		mov t2506, [a2505]
+73:		mov [a2504], t2506
 75:	
 
 memmove$21:	; Increment index
@@ -1966,37 +1900,37 @@ memmove$22:	; Goto 15
 79:		jmp memmove$15
 81:	
 
-memmove$23:	; IntegralToIntegral £temporary4172 target
-82:		mov a2589, [bp + 6]
+memmove$23:	; IntegralToIntegral £temporary3973 target
+82:		mov a2507, [bp + 6]
 85:	
 
-memmove$24:	; SetReturnValue £temporary4172
+memmove$24:	; SetReturnValue £temporary3973
 87:	
 
-memmove$25:	; Return £temporary4172
-88:		mov t2590, [bp]
+memmove$25:	; Return £temporary3973
+88:		mov t2508, [bp]
 89:		mov di, [bp + 4]
 90:		mov bp, [bp + 2]
-91:		jmp t2590
+91:		jmp t2508
 93:	
 
 memmove$26:	; FunctionEnd memmove
 1:	
 
-memcmp:	; IntegralToIntegral £temporary4173 left
-2:		mov a2591, [bp + 6]
+memcmp:	; IntegralToIntegral £temporary3974 left
+2:		mov a2509, [bp + 6]
 5:	
 
-memcmp$1:	; Assign charLeft £temporary4173
-6:		mov [bp + 12], a2591
+memcmp$1:	; Assign charLeft £temporary3974
+6:		mov [bp + 12], a2509
 8:	
 
-memcmp$2:	; IntegralToIntegral £temporary4174 right
-9:		mov a2592, [bp + 8]
+memcmp$2:	; IntegralToIntegral £temporary3975 right
+9:		mov a2510, [bp + 8]
 12:	
 
-memcmp$3:	; Assign charRight £temporary4174
-13:		mov [bp + 14], a2592
+memcmp$3:	; Assign charRight £temporary3975
+13:		mov [bp + 14], a2510
 15:	
 
 memcmp$4:	; Assign index 0
@@ -2004,75 +1938,75 @@ memcmp$4:	; Assign index 0
 18:	
 
 memcmp$5:	; SignedGreaterThanEqual 22 index size
-19:		mov a2593, [bp + 10]
-20:		cmp [bp + 16], a2593
+19:		mov a2511, [bp + 10]
+20:		cmp [bp + 16], a2511
 21:		jge memcmp$22
 23:	
 
-memcmp$6:	; BinaryAdd £temporary4178 charLeft index
-24:		mov a2594, [bp + 12]
-25:		add a2594, [bp + 16]
+memcmp$6:	; BinaryAdd £temporary3979 charLeft index
+24:		mov a2512, [bp + 12]
+25:		add a2512, [bp + 16]
 27:	
 
-memcmp$7:	; Deref £temporary4177 -> £temporary4178 £temporary4178 0
+memcmp$7:	; Deref £temporary3978 -> £temporary3979 £temporary3979 0
 29:	
 
-memcmp$8:	; BinaryAdd £temporary4180 charRight index
-30:		mov a2595, [bp + 14]
-31:		add a2595, [bp + 16]
+memcmp$8:	; BinaryAdd £temporary3981 charRight index
+30:		mov a2513, [bp + 14]
+31:		add a2513, [bp + 16]
 33:	
 
-memcmp$9:	; Deref £temporary4179 -> £temporary4180 £temporary4180 0
+memcmp$9:	; Deref £temporary3980 -> £temporary3981 £temporary3981 0
 35:	
 
-memcmp$10:	; SignedGreaterThanEqual 13 £temporary4177 -> £temporary4178 £temporary4179 -> £temporary4180
-36:		mov t2596, [a2595]
-37:		cmp [a2594], t2596
+memcmp$10:	; SignedGreaterThanEqual 13 £temporary3978 -> £temporary3979 £temporary3980 -> £temporary3981
+36:		mov t2514, [a2513]
+37:		cmp [a2512], t2514
 38:		jge memcmp$13
 40:	
 
 memcmp$11:	; SetReturnValue -1
-41:		mov a2597, -1
+41:		mov a2515, -1
 43:	
 
 memcmp$12:	; Return -1
-44:		mov t2598, [bp]
+44:		mov t2516, [bp]
 45:		mov di, [bp + 4]
 46:		mov bp, [bp + 2]
-47:		jmp t2598
+47:		jmp t2516
 49:	
 
-memcmp$13:	; BinaryAdd £temporary4183 charLeft index
-50:		mov a2599, [bp + 12]
-51:		add a2599, [bp + 16]
+memcmp$13:	; BinaryAdd £temporary3984 charLeft index
+50:		mov a2517, [bp + 12]
+51:		add a2517, [bp + 16]
 53:	
 
-memcmp$14:	; Deref £temporary4182 -> £temporary4183 £temporary4183 0
+memcmp$14:	; Deref £temporary3983 -> £temporary3984 £temporary3984 0
 55:	
 
-memcmp$15:	; BinaryAdd £temporary4185 charRight index
-56:		mov a2600, [bp + 14]
-57:		add a2600, [bp + 16]
+memcmp$15:	; BinaryAdd £temporary3986 charRight index
+56:		mov a2518, [bp + 14]
+57:		add a2518, [bp + 16]
 59:	
 
-memcmp$16:	; Deref £temporary4184 -> £temporary4185 £temporary4185 0
+memcmp$16:	; Deref £temporary3985 -> £temporary3986 £temporary3986 0
 61:	
 
-memcmp$17:	; SignedLessThanEqual 20 £temporary4182 -> £temporary4183 £temporary4184 -> £temporary4185
-62:		mov t2601, [a2600]
-63:		cmp [a2599], t2601
+memcmp$17:	; SignedLessThanEqual 20 £temporary3983 -> £temporary3984 £temporary3985 -> £temporary3986
+62:		mov t2519, [a2518]
+63:		cmp [a2517], t2519
 64:		jle memcmp$20
 66:	
 
 memcmp$18:	; SetReturnValue 1
-67:		mov a2602, 1
+67:		mov a2520, 1
 69:	
 
 memcmp$19:	; Return 1
-70:		mov t2603, [bp]
+70:		mov t2521, [bp]
 71:		mov di, [bp + 4]
 72:		mov bp, [bp + 2]
-73:		jmp t2603
+73:		jmp t2521
 75:	
 
 memcmp$20:	; Increment index
@@ -2084,37 +2018,37 @@ memcmp$21:	; Goto 5
 81:	
 
 memcmp$22:	; SetReturnValue 0
-82:		mov a2604, 0
+82:		mov a2522, 0
 84:	
 
 memcmp$23:	; Return 0
-85:		mov t2605, [bp]
+85:		mov t2523, [bp]
 86:		mov di, [bp + 4]
 87:		mov bp, [bp + 2]
-88:		jmp t2605
+88:		jmp t2523
 90:	
 
 memcmp$24:	; FunctionEnd memcmp
 1:	
 
-memchr:	; IntegralToIntegral £temporary4187 block
-2:		mov a2606, [bp + 6]
+memchr:	; IntegralToIntegral £temporary3988 block
+2:		mov a2524, [bp + 6]
 5:	
 
-memchr$1:	; Assign charBlock £temporary4187
-6:		mov [bp + 14], a2606
+memchr$1:	; Assign charBlock £temporary3988
+6:		mov [bp + 14], a2524
 8:	
 
-memchr$2:	; IntegralToIntegral £temporary4188 i
-9:		mov a2607, [bp + 8]
-12:		cmp a2607, 0
+memchr$2:	; IntegralToIntegral £temporary3989 i
+9:		mov a2525, [bp + 8]
+12:		cmp a2525, 0
 13:		jge memchr$3
-14:		neg a2607
-16:		neg a2607
+14:		neg a2525
+16:		neg a2525
 18:	
 
-memchr$3:	; Assign c £temporary4188
-19:		mov [bp + 16], a2607
+memchr$3:	; Assign c £temporary3989
+19:		mov [bp + 16], a2525
 21:	
 
 memchr$4:	; Assign index 0
@@ -2122,47 +2056,47 @@ memchr$4:	; Assign index 0
 24:	
 
 memchr$5:	; SignedGreaterThanEqual 17 index size
-25:		mov a2608, [bp + 10]
-26:		cmp [bp + 12], a2608
+25:		mov a2526, [bp + 10]
+26:		cmp [bp + 12], a2526
 27:		jge memchr$17
 29:	
 
-memchr$6:	; BinaryAdd £temporary4192 charBlock index
-30:		mov a2609, [bp + 14]
-31:		add a2609, [bp + 12]
+memchr$6:	; BinaryAdd £temporary3993 charBlock index
+30:		mov a2527, [bp + 14]
+31:		add a2527, [bp + 12]
 33:	
 
-memchr$7:	; Deref £temporary4191 -> £temporary4192 £temporary4192 0
+memchr$7:	; Deref £temporary3992 -> £temporary3993 £temporary3993 0
 35:	
 
-memchr$8:	; NotEqual 15 £temporary4191 -> £temporary4192 c
-36:		mov a2610, [bp + 16]
-37:		cmp [a2609], a2610
+memchr$8:	; NotEqual 15 £temporary3992 -> £temporary3993 c
+36:		mov a2528, [bp + 16]
+37:		cmp [a2527], a2528
 38:		jne memchr$15
 40:	
 
-memchr$9:	; BinaryAdd £temporary4195 charBlock index
-41:		mov a2611, [bp + 14]
-42:		add a2611, [bp + 12]
+memchr$9:	; BinaryAdd £temporary3996 charBlock index
+41:		mov a2529, [bp + 14]
+42:		add a2529, [bp + 12]
 44:	
 
-memchr$10:	; Deref £temporary4194 -> £temporary4195 £temporary4195 0
+memchr$10:	; Deref £temporary3995 -> £temporary3996 £temporary3996 0
 46:	
 
-memchr$11:	; address £temporary4196 £temporary4194 -> £temporary4195
+memchr$11:	; address £temporary3997 £temporary3995 -> £temporary3996
 48:	
 
-memchr$12:	; IntegralToIntegral £temporary4197 £temporary4196
+memchr$12:	; IntegralToIntegral £temporary3998 £temporary3997
 51:	
 
-memchr$13:	; SetReturnValue £temporary4197
+memchr$13:	; SetReturnValue £temporary3998
 53:	
 
-memchr$14:	; Return £temporary4197
-54:		mov t2612, [bp]
+memchr$14:	; Return £temporary3998
+54:		mov t2530, [bp]
 55:		mov di, [bp + 4]
 56:		mov bp, [bp + 2]
-57:		jmp t2612
+57:		jmp t2530
 59:	
 
 memchr$15:	; Increment index
@@ -2174,37 +2108,37 @@ memchr$16:	; Goto 5
 65:	
 
 memchr$17:	; SetReturnValue 0
-66:		mov a2613, 0
+66:		mov a2531, 0
 68:	
 
 memchr$18:	; Return 0
-69:		mov t2614, [bp]
+69:		mov t2532, [bp]
 70:		mov di, [bp + 4]
 71:		mov bp, [bp + 2]
-72:		jmp t2614
+72:		jmp t2532
 74:	
 
 memchr$19:	; FunctionEnd memchr
 1:	
 
-memset:	; IntegralToIntegral £temporary4198 block
-2:		mov a2615, [bp + 6]
+memset:	; IntegralToIntegral £temporary3999 block
+2:		mov a2533, [bp + 6]
 5:	
 
-memset$1:	; Assign charBlock £temporary4198
-6:		mov [bp + 12], a2615
+memset$1:	; Assign charBlock £temporary3999
+6:		mov [bp + 12], a2533
 8:	
 
-memset$2:	; IntegralToIntegral £temporary4199 i
-9:		mov a2616, [bp + 8]
-12:		cmp a2616, 0
+memset$2:	; IntegralToIntegral £temporary4000 i
+9:		mov a2534, [bp + 8]
+12:		cmp a2534, 0
 13:		jge memset$3
-14:		neg a2616
-16:		neg a2616
+14:		neg a2534
+16:		neg a2534
 18:	
 
-memset$3:	; Assign c £temporary4199
-19:		mov [bp + 14], a2616
+memset$3:	; Assign c £temporary4000
+19:		mov [bp + 14], a2534
 21:	
 
 memset$4:	; Assign index 0
@@ -2212,22 +2146,22 @@ memset$4:	; Assign index 0
 24:	
 
 memset$5:	; SignedGreaterThanEqual 11 index size
-25:		mov a2617, [bp + 10]
-26:		cmp [bp + 15], a2617
+25:		mov a2535, [bp + 10]
+26:		cmp [bp + 15], a2535
 27:		jge memset$11
 29:	
 
-memset$6:	; BinaryAdd £temporary4203 charBlock index
-30:		mov a2618, [bp + 12]
-31:		add a2618, [bp + 15]
+memset$6:	; BinaryAdd £temporary4004 charBlock index
+30:		mov a2536, [bp + 12]
+31:		add a2536, [bp + 15]
 33:	
 
-memset$7:	; Deref £temporary4202 -> £temporary4203 £temporary4203 0
+memset$7:	; Deref £temporary4003 -> £temporary4004 £temporary4004 0
 35:	
 
-memset$8:	; Assign £temporary4202 -> £temporary4203 c
-36:		mov a2619, [bp + 14]
-37:		mov [a2618], a2619
+memset$8:	; Assign £temporary4003 -> £temporary4004 c
+36:		mov a2537, [bp + 14]
+37:		mov [a2536], a2537
 39:	
 
 memset$9:	; Increment index
@@ -2239,14 +2173,14 @@ memset$10:	; Goto 5
 45:	
 
 memset$11:	; SetReturnValue block
-46:		mov a2620, [bp + 6]
+46:		mov a2538, [bp + 6]
 48:	
 
 memset$12:	; Return block
-49:		mov t2621, [bp]
+49:		mov t2539, [bp]
 50:		mov di, [bp + 4]
 51:		mov bp, [bp + 2]
-52:		jmp t2621
+52:		jmp t2539
 54:	
 
 memset$13:	; FunctionEnd memset

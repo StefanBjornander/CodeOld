@@ -6,51 +6,147 @@
 
 section .data
 
-@9144$string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#:
+@9126$string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#:
 	; Initializer String <%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>\n
 	db "<%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>", 10, 0
 
 section .data
 
-@9153$string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#:
+@9135$string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#:
 	; Initializer String <%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>\n
 	db "<%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>", 10, 0
 
 section .data
 
-@9162$string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#:
+@9144$string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#:
 	; Initializer String <%08i> <%+08i> <% 08i> <%0 8i>\n
 	db "<%08i> <%+08i> <% 08i> <%0 8i>", 10, 0
 
 section .data
 
-@9167$string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#:
+@9149$string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#:
 	; Initializer String <%08i> <%+08i> <% 08i> <%0 8i>\n
 	db "<%08i> <%+08i> <% 08i> <%0 8i>", 10, 0
 
 section .data
 
-@9172$string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A#:
+@9154$string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A#:
 	; Initializer String <%12.3f> <%+12.3f> <% 12.3f> <%-12.3f> <%+-12.3f> <%-+12.3f> <% -12.3f> <%- 12.3f>\n
 	db "<%12.3f> <%+12.3f> <% 12.3f> <%-12.3f> <%+-12.3f> <%-+12.3f> <% -12.3f> <%- 12.3f>", 10, 0
 
 section .data
 
-@9181$string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A#:
+@9163$string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A#:
 	; Initializer String <%12.3f> <%+12.3f> <% 12.3f> <%-12.3f> <%+-12.3f> <%-+12.3f> <% -12.3f> <%- 12.3f>\n
 	db "<%12.3f> <%+12.3f> <% 12.3f> <%-12.3f> <%+-12.3f> <%-+12.3f> <% -12.3f> <%- 12.3f>", 10, 0
 
 section .data
 
-@9190$string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A#:
+@9172$string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A#:
 	; Initializer String <%012.3f> <%+012.3f> <% 012.3f> <%0 12.3f>\n
 	db "<%012.3f> <%+012.3f> <% 012.3f> <%0 12.3f>", 10, 0
 
 section .data
 
-@9195$string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A#:
+@9177$string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A#:
 	; Initializer String <%012.3f> <%+012.3f> <% 012.3f> <%0 12.3f>\n
 	db "<%012.3f> <%+012.3f> <% 012.3f> <%0 12.3f>", 10, 0
+
+section .data
+
+@9155$float8$123.456#:
+	; Initializer Double 123.456
+	dq 123.456
+
+section .data
+
+@9156$float8$123.456#:
+	; Initializer Double 123.456
+	dq 123.456
+
+section .data
+
+@9157$float8$123.456#:
+	; Initializer Double 123.456
+	dq 123.456
+
+section .data
+
+@9158$float8$123.456#:
+	; Initializer Double 123.456
+	dq 123.456
+
+section .data
+
+@9159$float8$123.456#:
+	; Initializer Double 123.456
+	dq 123.456
+
+section .data
+
+@9160$float8$123.456#:
+	; Initializer Double 123.456
+	dq 123.456
+
+section .data
+
+@9161$float8$123.456#:
+	; Initializer Double 123.456
+	dq 123.456
+
+section .data
+
+@9162$float8$123.456#:
+	; Initializer Double 123.456
+	dq 123.456
+
+section .data
+
+@9164$float8$minus123.456#:
+	; Initializer Double -123.456
+	dq -123.456
+
+section .data
+
+@9165$float8$minus123.456#:
+	; Initializer Double -123.456
+	dq -123.456
+
+section .data
+
+@9166$float8$minus123.456#:
+	; Initializer Double -123.456
+	dq -123.456
+
+section .data
+
+@9167$float8$minus123.456#:
+	; Initializer Double -123.456
+	dq -123.456
+
+section .data
+
+@9168$float8$minus123.456#:
+	; Initializer Double -123.456
+	dq -123.456
+
+section .data
+
+@9169$float8$minus123.456#:
+	; Initializer Double -123.456
+	dq -123.456
+
+section .data
+
+@9170$float8$minus123.456#:
+	; Initializer Double -123.456
+	dq -123.456
+
+section .data
+
+@9171$float8$minus123.456#:
+	; Initializer Double -123.456
+	dq -123.456
 
 section .data
 
@@ -78,121 +174,25 @@ section .data
 
 section .data
 
-@9177$float8$123.456#:
-	; Initializer Double 123.456
-	dq 123.456
-
-section .data
-
-@9178$float8$123.456#:
-	; Initializer Double 123.456
-	dq 123.456
-
-section .data
-
-@9179$float8$123.456#:
-	; Initializer Double 123.456
-	dq 123.456
-
-section .data
-
-@9180$float8$123.456#:
-	; Initializer Double 123.456
-	dq 123.456
-
-section .data
-
-@9182$float8$minus123.456#:
+@9178$float8$minus123.456#:
 	; Initializer Double -123.456
 	dq -123.456
 
 section .data
 
-@9183$float8$minus123.456#:
+@9179$float8$minus123.456#:
 	; Initializer Double -123.456
 	dq -123.456
 
 section .data
 
-@9184$float8$minus123.456#:
+@9180$float8$minus123.456#:
 	; Initializer Double -123.456
 	dq -123.456
 
 section .data
 
-@9185$float8$minus123.456#:
-	; Initializer Double -123.456
-	dq -123.456
-
-section .data
-
-@9186$float8$minus123.456#:
-	; Initializer Double -123.456
-	dq -123.456
-
-section .data
-
-@9187$float8$minus123.456#:
-	; Initializer Double -123.456
-	dq -123.456
-
-section .data
-
-@9188$float8$minus123.456#:
-	; Initializer Double -123.456
-	dq -123.456
-
-section .data
-
-@9189$float8$minus123.456#:
-	; Initializer Double -123.456
-	dq -123.456
-
-section .data
-
-@9191$float8$123.456#:
-	; Initializer Double 123.456
-	dq 123.456
-
-section .data
-
-@9192$float8$123.456#:
-	; Initializer Double 123.456
-	dq 123.456
-
-section .data
-
-@9193$float8$123.456#:
-	; Initializer Double 123.456
-	dq 123.456
-
-section .data
-
-@9194$float8$123.456#:
-	; Initializer Double 123.456
-	dq 123.456
-
-section .data
-
-@9196$float8$minus123.456#:
-	; Initializer Double -123.456
-	dq -123.456
-
-section .data
-
-@9197$float8$minus123.456#:
-	; Initializer Double -123.456
-	dq -123.456
-
-section .data
-
-@9198$float8$minus123.456#:
-	; Initializer Double -123.456
-	dq -123.456
-
-section .data
-
-@9199$float8$minus123.456#:
+@9181$float8$minus123.456#:
 	; Initializer Double -123.456
 	dq -123.456
 
@@ -203,7 +203,7 @@ section .text
 
  print_test$1:
 	; Parameter 48 pointer "<%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>\n"
-	mov qword [rbp + 48], @9144$string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#
+	mov qword [rbp + 48], @9126$string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#
 
  print_test$2:
 	; Parameter 56 signedint 123
@@ -254,7 +254,7 @@ section .text
 
  print_test$13:
 	; Parameter 48 pointer "<%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>\n"
-	mov qword [rbp + 48], @9153$string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#
+	mov qword [rbp + 48], @9135$string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#
 
  print_test$14:
 	; Parameter 56 signedint -123
@@ -305,7 +305,7 @@ section .text
 
  print_test$25:
 	; Parameter 48 pointer "<%08i> <%+08i> <% 08i> <%0 8i>\n"
-	mov qword [rbp + 48], @9162$string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#
+	mov qword [rbp + 48], @9144$string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#
 
  print_test$26:
 	; Parameter 56 signedint 123
@@ -340,7 +340,7 @@ section .text
 
  print_test$33:
 	; Parameter 48 pointer "<%08i> <%+08i> <% 08i> <%0 8i>\n"
-	mov qword [rbp + 48], @9167$string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#
+	mov qword [rbp + 48], @9149$string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#
 
  print_test$34:
 	; Parameter 56 signedint -123
@@ -375,11 +375,11 @@ section .text
 
  print_test$41:
 	; Parameter 48 pointer "<%12.3f> <%+12.3f> <% 12.3f> <%-12.3f> <%+-12.3f> <%-+12.3f> <% -12.3f> <%- 12.3f>\n"
-	mov qword [rbp + 48], @9172$string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A#
+	mov qword [rbp + 48], @9154$string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A#
 
  print_test$42:
 	; PushFloat 123.456
-	fld qword [@9173$float8$123.456#]
+	fld qword [@9155$float8$123.456#]
 
  print_test$43:
 	; Parameter 56 double 123.456
@@ -387,7 +387,7 @@ section .text
 
  print_test$44:
 	; PushFloat 123.456
-	fld qword [@9174$float8$123.456#]
+	fld qword [@9156$float8$123.456#]
 
  print_test$45:
 	; Parameter 64 double 123.456
@@ -395,7 +395,7 @@ section .text
 
  print_test$46:
 	; PushFloat 123.456
-	fld qword [@9175$float8$123.456#]
+	fld qword [@9157$float8$123.456#]
 
  print_test$47:
 	; Parameter 72 double 123.456
@@ -403,7 +403,7 @@ section .text
 
  print_test$48:
 	; PushFloat 123.456
-	fld qword [@9176$float8$123.456#]
+	fld qword [@9158$float8$123.456#]
 
  print_test$49:
 	; Parameter 80 double 123.456
@@ -411,7 +411,7 @@ section .text
 
  print_test$50:
 	; PushFloat 123.456
-	fld qword [@9177$float8$123.456#]
+	fld qword [@9159$float8$123.456#]
 
  print_test$51:
 	; Parameter 88 double 123.456
@@ -419,7 +419,7 @@ section .text
 
  print_test$52:
 	; PushFloat 123.456
-	fld qword [@9178$float8$123.456#]
+	fld qword [@9160$float8$123.456#]
 
  print_test$53:
 	; Parameter 96 double 123.456
@@ -427,7 +427,7 @@ section .text
 
  print_test$54:
 	; PushFloat 123.456
-	fld qword [@9179$float8$123.456#]
+	fld qword [@9161$float8$123.456#]
 
  print_test$55:
 	; Parameter 104 double 123.456
@@ -435,7 +435,7 @@ section .text
 
  print_test$56:
 	; PushFloat 123.456
-	fld qword [@9180$float8$123.456#]
+	fld qword [@9162$float8$123.456#]
 
  print_test$57:
 	; Parameter 112 double 123.456
@@ -458,11 +458,11 @@ section .text
 
  print_test$61:
 	; Parameter 48 pointer "<%12.3f> <%+12.3f> <% 12.3f> <%-12.3f> <%+-12.3f> <%-+12.3f> <% -12.3f> <%- 12.3f>\n"
-	mov qword [rbp + 48], @9181$string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A#
+	mov qword [rbp + 48], @9163$string_3C25122E3f3E203C252B122E3f3E203C2520122E3f3E203C252D122E3f3E203C252B2D122E3f3E203C252D2B122E3f3E203C25202D122E3f3E203C252D20122E3f3E0A#
 
  print_test$62:
 	; PushFloat -123.456
-	fld qword [@9182$float8$minus123.456#]
+	fld qword [@9164$float8$minus123.456#]
 
  print_test$63:
 	; Parameter 56 double -123.456
@@ -470,7 +470,7 @@ section .text
 
  print_test$64:
 	; PushFloat -123.456
-	fld qword [@9183$float8$minus123.456#]
+	fld qword [@9165$float8$minus123.456#]
 
  print_test$65:
 	; Parameter 64 double -123.456
@@ -478,7 +478,7 @@ section .text
 
  print_test$66:
 	; PushFloat -123.456
-	fld qword [@9184$float8$minus123.456#]
+	fld qword [@9166$float8$minus123.456#]
 
  print_test$67:
 	; Parameter 72 double -123.456
@@ -486,7 +486,7 @@ section .text
 
  print_test$68:
 	; PushFloat -123.456
-	fld qword [@9185$float8$minus123.456#]
+	fld qword [@9167$float8$minus123.456#]
 
  print_test$69:
 	; Parameter 80 double -123.456
@@ -494,7 +494,7 @@ section .text
 
  print_test$70:
 	; PushFloat -123.456
-	fld qword [@9186$float8$minus123.456#]
+	fld qword [@9168$float8$minus123.456#]
 
  print_test$71:
 	; Parameter 88 double -123.456
@@ -502,7 +502,7 @@ section .text
 
  print_test$72:
 	; PushFloat -123.456
-	fld qword [@9187$float8$minus123.456#]
+	fld qword [@9169$float8$minus123.456#]
 
  print_test$73:
 	; Parameter 96 double -123.456
@@ -510,7 +510,7 @@ section .text
 
  print_test$74:
 	; PushFloat -123.456
-	fld qword [@9188$float8$minus123.456#]
+	fld qword [@9170$float8$minus123.456#]
 
  print_test$75:
 	; Parameter 104 double -123.456
@@ -518,7 +518,7 @@ section .text
 
  print_test$76:
 	; PushFloat -123.456
-	fld qword [@9189$float8$minus123.456#]
+	fld qword [@9171$float8$minus123.456#]
 
  print_test$77:
 	; Parameter 112 double -123.456
@@ -541,11 +541,11 @@ section .text
 
  print_test$81:
 	; Parameter 48 pointer "<%012.3f> <%+012.3f> <% 012.3f> <%0 12.3f>\n"
-	mov qword [rbp + 48], @9190$string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A#
+	mov qword [rbp + 48], @9172$string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A#
 
  print_test$82:
 	; PushFloat 123.456
-	fld qword [@9191$float8$123.456#]
+	fld qword [@9173$float8$123.456#]
 
  print_test$83:
 	; Parameter 56 double 123.456
@@ -553,7 +553,7 @@ section .text
 
  print_test$84:
 	; PushFloat 123.456
-	fld qword [@9192$float8$123.456#]
+	fld qword [@9174$float8$123.456#]
 
  print_test$85:
 	; Parameter 64 double 123.456
@@ -561,7 +561,7 @@ section .text
 
  print_test$86:
 	; PushFloat 123.456
-	fld qword [@9193$float8$123.456#]
+	fld qword [@9175$float8$123.456#]
 
  print_test$87:
 	; Parameter 72 double 123.456
@@ -569,7 +569,7 @@ section .text
 
  print_test$88:
 	; PushFloat 123.456
-	fld qword [@9194$float8$123.456#]
+	fld qword [@9176$float8$123.456#]
 
  print_test$89:
 	; Parameter 80 double 123.456
@@ -592,11 +592,11 @@ section .text
 
  print_test$93:
 	; Parameter 48 pointer "<%012.3f> <%+012.3f> <% 012.3f> <%0 12.3f>\n"
-	mov qword [rbp + 48], @9195$string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A#
+	mov qword [rbp + 48], @9177$string_3C250122E3f3E203C252B0122E3f3E203C25200122E3f3E203C25020122E3f3E0A#
 
  print_test$94:
 	; PushFloat -123.456
-	fld qword [@9196$float8$minus123.456#]
+	fld qword [@9178$float8$minus123.456#]
 
  print_test$95:
 	; Parameter 56 double -123.456
@@ -604,7 +604,7 @@ section .text
 
  print_test$96:
 	; PushFloat -123.456
-	fld qword [@9197$float8$minus123.456#]
+	fld qword [@9179$float8$minus123.456#]
 
  print_test$97:
 	; Parameter 64 double -123.456
@@ -612,7 +612,7 @@ section .text
 
  print_test$98:
 	; PushFloat -123.456
-	fld qword [@9198$float8$minus123.456#]
+	fld qword [@9180$float8$minus123.456#]
 
  print_test$99:
 	; Parameter 72 double -123.456
@@ -620,7 +620,7 @@ section .text
 
  print_test$100:
 	; PushFloat -123.456
-	fld qword [@9199$float8$minus123.456#]
+	fld qword [@9181$float8$minus123.456#]
 
  print_test$101:
 	; Parameter 80 double -123.456

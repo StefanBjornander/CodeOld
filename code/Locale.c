@@ -35,15 +35,13 @@ static struct lconv en_US_utf8 = {1, 1, enShortDayList, enLongDayList,
                                   "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
                                   enMessageList};
 
-static struct _s {
+static const struct _s {
   char* name;
   struct lconv* localePtr;
-} sArray[] = {{"", &en_US_utf8}, {"C", &en_US_utf8}, {"US", &en_US_utf8}};
+} g_sArray[] = { { "", &en_US_utf8 }, { "C", &en_US_utf8 }, { "US", &en_US_utf8 } };
 
-static int sSize = (sizeof sArray) / (sizeof sArray[0]);
-static struct _s* g_currStructPtr = &sArray[0];
-
-#define PRINT(x,y) { printf(#x " = <%" #y ">\n", (x)); }
+static const int g_sSize = (sizeof g_sArray) / (sizeof g_sArray[0]);
+static struct _s* g_currStructPtr = &g_sArray[0];
 
 char* setlocale(int /*flag*/, char* newName) {
   int index;
@@ -51,9 +49,9 @@ char* setlocale(int /*flag*/, char* newName) {
   g_currStructPtr = NULL;
 
   if (newName != NULL) {
-    for (index = 0; index < sSize; ++index) {
-      if (strcmp(newName, sArray[index].name) == 0) {
-        g_currStructPtr = &sArray[index];
+    for (index = 0; index < g_sSize; ++index) {
+      if (strcmp(newName, g_sArray[index].name) == 0) {
+        g_currStructPtr = &g_sArray[index];
         break;
       }
     }

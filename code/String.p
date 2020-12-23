@@ -401,7 +401,8 @@ return target ;
 }
 
 char * strncat ( char * target , const char * source , int size ) {
-int index , targetLength = strlen ( target ) ;
+int index ;
+const int targetLength = strlen ( target ) ;
 
 for ( index = 0 ; ( index < ( size - 1 ) ) && ( source [ index ] != '\0' ) ; ++ index ) {
 target [ targetLength + index ] = source [ index ];
@@ -418,12 +419,12 @@ for ( index = 0 ; 1 ; ++ index ) {
 if ( ( left [ index ] == '\0' ) && ( right [ index ] == '\0' ) ) {
 return 0 ;
 }
-else if ( left [ index ] == '\0' ) {
-return -1 ;
-}
-else if ( right [ index ] == '\0' ) {
-return 1 ;
-}
+
+
+
+
+
+
 else if ( left [ index ] < right [ index ] ) {
 return -1 ;
 }
@@ -440,12 +441,12 @@ for ( index = 0 ; index < size ; ++ index ) {
 if ( ( left [ index ] == '\0' ) && ( right [ index ] == '\0' ) ) {
 return 0 ;
 }
-else if ( left [ index ] == '\0' ) {
-return -1 ;
-}
-else if ( right [ index ] == '\0' ) {
-return 1 ;
-}
+
+
+
+
+
+
 else if ( left [ index ] < right [ index ] ) {
 return -1 ;
 }
@@ -522,9 +523,10 @@ return ( ( void * ) 0 ) ;
 
 char * strstr ( const char * mainString , const char * subString ) {
 int index ;
+const int subStringSize = strlen ( subString ) ;
 
 for ( index = 0 ; mainString [ index ] != '\0' ; ++ index ) {
-if ( strcmp ( mainString + index , subString ) == 0 ) {
+if ( strncmp ( mainString + index , subString , subStringSize ) == 0 ) {
 return & mainString [ index ];
 }
 }
@@ -547,7 +549,8 @@ extern char * enMessageList [];
 
 char * strerror ( int errno ) {
 struct lconv * localeConvPtr = localeconv ( ) ;
-char ** messageList = ( localeConvPtr != ( ( void * ) 0 ) ) ? localeConvPtr -> messageList : ( ( void * ) 0 ) ;
+char ** messageList = ( localeConvPtr != ( ( void * ) 0 ) )
+? localeConvPtr -> messageList : ( ( void * ) 0 ) ;
 messageList = ( messageList != ( ( void * ) 0 ) ) ? messageList : enMessageList ;
 return messageList [ errno ];
 }

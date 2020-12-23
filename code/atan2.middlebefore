@@ -5,14 +5,14 @@
 4: CheckTrackMapFloatStack
 5: CallHeader 14 atan
 6: PushFloat x
-7: UnarySubtract £temporary709 x
-8: Parameter 14 £temporary709 6
+7: UnarySubtract £temporary519 x
+8: Parameter 14 £temporary519 6
 9: Call 14 atan 0
 10: PostCall 14
-11: GetReturnValue £temporary710
-12: UnarySubtract £temporary711 £temporary710
-13: SetReturnValue £temporary711
-14: Return £temporary711
+11: GetReturnValue £temporary520
+12: UnarySubtract £temporary521 £temporary520
+13: SetReturnValue £temporary521
+14: Return £temporary521
 15: Goto Empty
 16: PushFloat x
 17: PushOne
@@ -25,14 +25,14 @@
 24: CallHeader 14 atan
 25: PushOne
 26: PushFloat x
-27: SignedDivide £temporary713 1 x
-28: Parameter 14 £temporary713 6
+27: SignedDivide £temporary523 1 x
+28: Parameter 14 £temporary523 6
 29: Call 14 atan 0
 30: PostCall 14
-31: GetReturnValue £temporary714
-32: BinarySubtract £temporary715 1.57 £temporary714
-33: SetReturnValue £temporary715
-34: Return £temporary715
+31: GetReturnValue £temporary524
+32: BinarySubtract £temporary525 1.57 £temporary524
+33: SetReturnValue £temporary525
+34: Return £temporary525
 35: Goto Empty
 36: PushFloat x
 37: PushFloat 0.5
@@ -47,21 +47,21 @@
 46: PushOne
 47: PushFloat x
 48: PushFloat x
-49: SignedMultiply £temporary717 x x
-50: BinaryAdd £temporary718 1 £temporary717
-51: Parameter 14 £temporary718 14
+49: SignedMultiply £temporary527 x x
+50: BinaryAdd £temporary528 1 £temporary527
+51: Parameter 14 £temporary528 14
 52: Call 14 sqrt 0
 53: PostCall 14
-54: GetReturnValue £temporary719
-55: BinaryAdd £temporary720 1 £temporary719
-56: SignedDivide £temporary721 x £temporary720
-57: Parameter 14 £temporary721 6
+54: GetReturnValue £temporary529
+55: BinaryAdd £temporary530 1 £temporary529
+56: SignedDivide £temporary531 x £temporary530
+57: Parameter 14 £temporary531 6
 58: Call 14 atan 0
 59: PostCall 14
-60: GetReturnValue £temporary722
-61: SignedMultiply £temporary723 2 £temporary722
-62: SetReturnValue £temporary723
-63: Return £temporary723
+60: GetReturnValue £temporary532
+61: SignedMultiply £temporary533 2 £temporary532
+62: SetReturnValue £temporary533
+63: Return £temporary533
 64: Goto Empty
 65: PushZero
 66: PopFloat sum
@@ -75,32 +75,32 @@
 74: PopFloat
 75: PushFloat sign
 76: PushFloat product
-77: SignedMultiply £temporary724 sign product
+77: SignedMultiply £temporary534 sign product
 78: PushFloat denominator
-79: SignedDivide £temporary725 £temporary724 denominator
+79: SignedDivide £temporary535 £temporary534 denominator
 80: TopFloat term
 81: PopFloat
 82: PushFloat sum
 83: PushFloat term
-84: BinaryAdd £temporary726 sum term
+84: BinaryAdd £temporary536 sum term
 85: TopFloat sum
 86: PopFloat
 87: PushFloat sign
 88: PopFloat
 89: PushFloat sign
-90: UnarySubtract £temporary727 sign
+90: UnarySubtract £temporary537 sign
 91: TopFloat sign
 92: PopFloat
 93: PushFloat product
 94: PushFloat x
 95: PushFloat x
-96: SignedMultiply £temporary728 x x
-97: SignedMultiply £temporary729 product £temporary728
+96: SignedMultiply £temporary538 x x
+97: SignedMultiply £temporary539 product £temporary538
 98: TopFloat product
 99: PopFloat
 100: PushFloat denominator
 101: PushFloat 2
-102: BinaryAdd £temporary730 denominator 2
+102: BinaryAdd £temporary540 denominator 2
 103: TopFloat denominator
 104: PopFloat
 105: CallHeader 54 fabs
@@ -108,9 +108,9 @@
 107: Parameter 54 term 6
 108: Call 54 fabs 0
 109: PostCall 54
-110: GetReturnValue £temporary731
+110: GetReturnValue £temporary541
 111: PushFloat 0.000000001
-112: SignedGreaterThanEqual PushFloat term £temporary731 0.000000001
+112: SignedGreaterThanEqual PushFloat term £temporary541 0.000000001
 113: Goto PushFloat sum
 114: CheckTrackMapFloatStack
 115: Goto PushFloat term

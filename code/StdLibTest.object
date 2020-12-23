@@ -1,25 +1,25 @@
 1:	
 
-compare:	; IntegralToIntegral £temporary6163 valuePtr1
+compare:	; IntegralToIntegral £temporary5964 valuePtr1
 2:		mov si, [bp + 6]
 5:	
 
-compare$1:	; Deref £temporary6164 -> £temporary6163 £temporary6163 0
+compare$1:	; Deref £temporary5965 -> £temporary5964 £temporary5964 0
 7:	
 
-compare$2:	; Assign intValue1 £temporary6164 -> £temporary6163
+compare$2:	; Assign intValue1 £temporary5965 -> £temporary5964
 8:		mov ax, [si]
 9:		mov [bp + 10], ax
 11:	
 
-compare$3:	; IntegralToIntegral £temporary6165 valuePtr2
+compare$3:	; IntegralToIntegral £temporary5966 valuePtr2
 12:		mov si, [bp + 8]
 15:	
 
-compare$4:	; Deref £temporary6166 -> £temporary6165 £temporary6165 0
+compare$4:	; Deref £temporary5967 -> £temporary5966 £temporary5966 0
 17:	
 
-compare$5:	; Assign intValue2 £temporary6166 -> £temporary6165
+compare$5:	; Assign intValue2 £temporary5967 -> £temporary5966
 18:		mov ax, [si]
 19:		mov [bp + 12], ax
 21:	
@@ -30,7 +30,7 @@ compare$6:	; SignedGreaterThanEqual 9 intValue1 intValue2
 24:		jge compare$9
 26:	
 
-compare$7:	; Assign £temporary6176 -1
+compare$7:	; Assign £temporary5977 -1
 27:		mov bx, -1
 29:	
 
@@ -44,7 +44,7 @@ compare$9:	; NotEqual 12 intValue1 intValue2
 35:		jne compare$12
 37:	
 
-compare$10:	; Assign £temporary6172 0
+compare$10:	; Assign £temporary5973 0
 38:		mov bx, 0
 40:	
 
@@ -52,17 +52,17 @@ compare$11:	; Goto 13
 41:		jmp compare$13
 43:	
 
-compare$12:	; Assign £temporary6172 1
+compare$12:	; Assign £temporary5973 1
 44:		mov bx, 1
 46:	
 
-compare$13:	; Assign £temporary6176 £temporary6172
+compare$13:	; Assign £temporary5977 £temporary5973
 48:	
 
-compare$14:	; SetReturnValue £temporary6176
+compare$14:	; SetReturnValue £temporary5977
 50:	
 
-compare$15:	; Return £temporary6176
+compare$15:	; Return £temporary5977
 51:		mov ax, [bp]
 52:		mov di, [bp + 4]
 53:		mov bp, [bp + 2]
@@ -72,26 +72,26 @@ compare$15:	; Return £temporary6176
 compare$16:	; FunctionEnd compare
 1:	
 
-reverse_compare:	; IntegralToIntegral £temporary6177 valuePtr1
+reverse_compare:	; IntegralToIntegral £temporary5978 valuePtr1
 2:		mov si, [bp + 6]
 5:	
 
-reverse_compare$1:	; Deref £temporary6178 -> £temporary6177 £temporary6177 0
+reverse_compare$1:	; Deref £temporary5979 -> £temporary5978 £temporary5978 0
 7:	
 
-reverse_compare$2:	; Assign intValue1 £temporary6178 -> £temporary6177
+reverse_compare$2:	; Assign intValue1 £temporary5979 -> £temporary5978
 8:		mov ax, [si]
 9:		mov [bp + 10], ax
 11:	
 
-reverse_compare$3:	; IntegralToIntegral £temporary6179 valuePtr2
+reverse_compare$3:	; IntegralToIntegral £temporary5980 valuePtr2
 12:		mov si, [bp + 8]
 15:	
 
-reverse_compare$4:	; Deref £temporary6180 -> £temporary6179 £temporary6179 0
+reverse_compare$4:	; Deref £temporary5981 -> £temporary5980 £temporary5980 0
 17:	
 
-reverse_compare$5:	; Assign intValue2 £temporary6180 -> £temporary6179
+reverse_compare$5:	; Assign intValue2 £temporary5981 -> £temporary5980
 18:		mov ax, [si]
 19:		mov [bp + 12], ax
 21:	
@@ -102,7 +102,7 @@ reverse_compare$6:	; SignedGreaterThanEqual 9 intValue1 intValue2
 24:		jge reverse_compare$9
 26:	
 
-reverse_compare$7:	; Assign £temporary6190 1
+reverse_compare$7:	; Assign £temporary5991 1
 27:		mov bx, 1
 29:	
 
@@ -116,7 +116,7 @@ reverse_compare$9:	; NotEqual 12 intValue1 intValue2
 35:		jne reverse_compare$12
 37:	
 
-reverse_compare$10:	; Assign £temporary6186 0
+reverse_compare$10:	; Assign £temporary5987 0
 38:		mov bx, 0
 40:	
 
@@ -124,17 +124,17 @@ reverse_compare$11:	; Goto 13
 41:		jmp reverse_compare$13
 43:	
 
-reverse_compare$12:	; Assign £temporary6186 -1
+reverse_compare$12:	; Assign £temporary5987 -1
 44:		mov bx, -1
 46:	
 
-reverse_compare$13:	; Assign £temporary6190 £temporary6186
+reverse_compare$13:	; Assign £temporary5991 £temporary5987
 48:	
 
-reverse_compare$14:	; SetReturnValue £temporary6190
+reverse_compare$14:	; SetReturnValue £temporary5991
 50:	
 
-reverse_compare$15:	; Return £temporary6190
+reverse_compare$15:	; Return £temporary5991
 51:		mov ax, [bp]
 52:		mov di, [bp + 4]
 53:		mov bp, [bp + 2]
@@ -148,7 +148,7 @@ print_div:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol
 3:	
 
 print_div$1:	; Parameter 10 string_div_t20quot2025i20rem2025i0A# 6
-4:		mov word [bp + 16], @13018$string_div_t20quot2025i20rem2025i0A#
+4:		mov word [bp + 16], @12626$string_div_t20quot2025i20rem2025i0A#
 6:	
 
 print_div$2:	; Parameter 10 d$quot 8
@@ -200,7 +200,7 @@ print_ldiv:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbo
 3:	
 
 print_ldiv$1:	; Parameter 14 string_ldiv_t20quot2025li20rem2025li0A# 6
-4:		mov word [bp + 20], @13033$string_ldiv_t20quot2025li20rem2025li0A#
+4:		mov word [bp + 20], @12641$string_ldiv_t20quot2025li20rem2025li0A#
 6:	
 
 print_ldiv$2:	; Parameter 14 ld$quot 8
@@ -252,7 +252,7 @@ exit_handle1x:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 3:	
 
 exit_handle1x$1:	; Parameter 6 string_exit10A# 6
-4:		mov word [bp + 12], @13048$string_exit10A#
+4:		mov word [bp + 12], @12656$string_exit10A#
 6:	
 
 exit_handle1x$2:	; Call 6 printf 0
@@ -280,7 +280,7 @@ exit_handle2x:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 3:	
 
 exit_handle2x$1:	; Parameter 6 string_exit20A# 6
-4:		mov word [bp + 12], @13052$string_exit20A#
+4:		mov word [bp + 12], @12660$string_exit20A#
 6:	
 
 exit_handle2x$2:	; Call 6 printf 0
@@ -308,7 +308,7 @@ exit_handle3x:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 3:	
 
 exit_handle3x$1:	; Parameter 6 string_exit30A# 6
-4:		mov word [bp + 12], @13056$string_exit30A#
+4:		mov word [bp + 12], @12664$string_exit30A#
 6:	
 
 exit_handle3x$2:	; Call 6 printf 0
@@ -336,7 +336,7 @@ hello:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
 hello$1:	; Parameter 6 string_HelloFFF# 6
-4:		mov word [bp + 12], @13060$string_HelloFFF#
+4:		mov word [bp + 12], @12668$string_HelloFFF#
 6:	
 
 hello$2:	; Call 6 printf 0
@@ -364,14 +364,14 @@ qtest:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
 qtest$1:	; Parameter 8 string_f3A2025u0A# 6
-4:		mov word [bp + 14], @13064$string_f3A2025u0A#
+4:		mov word [bp + 14], @12672$string_f3A2025u0A#
 6:	
 
-qtest$2:	; IntegralToIntegral £temporary6221 f
+qtest$2:	; IntegralToIntegral £temporary6022 f
 7:		mov ax, [bp + 6]
 10:	
 
-qtest$3:	; Parameter 8 £temporary6221 8
+qtest$3:	; Parameter 8 £temporary6022 8
 11:		mov [bp + 16], ax
 13:	
 
@@ -415,14 +415,14 @@ stdlib_testZ:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 3:	
 
 stdlib_testZ$1:	; Parameter 6 string_hello3A2025u0A# 6
-4:		mov word [bp + 12], @13071$string_hello3A2025u0A#
+4:		mov word [bp + 12], @12679$string_hello3A2025u0A#
 6:	
 
-stdlib_testZ$2:	; IntegralToIntegral £temporary6226 hello
+stdlib_testZ$2:	; IntegralToIntegral £temporary6027 hello
 7:		mov ax, hello
 10:	
 
-stdlib_testZ$3:	; Parameter 6 £temporary6226 8
+stdlib_testZ$3:	; Parameter 6 £temporary6027 8
 11:		mov [bp + 14], ax
 13:	
 
@@ -459,7 +459,7 @@ stdlib_testZ$10:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.S
 38:	
 
 stdlib_testZ$11:	; Parameter 6 string_Y# 6
-39:		mov word [bp + 12], @13075$string_Y#
+39:		mov word [bp + 12], @12683$string_Y#
 41:	
 
 stdlib_testZ$12:	; Call 6 printf 0
@@ -487,14 +487,14 @@ stdlib_test:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbo
 3:	
 
 stdlib_test$1:	; Parameter 8 string_atof28221232E4562229203D2025f0A# 6
-4:		mov word [bp + 14], @13083$string_atof28221232E4562229203D2025f0A#
+4:		mov word [bp + 14], @12691$string_atof28221232E4562229203D2025f0A#
 6:	
 
 stdlib_test$2:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 8:	
 
 stdlib_test$3:	; Parameter 8 string_1232E456# 14
-9:		mov word [bp + 22], @13084$string_1232E456#
+9:		mov word [bp + 22], @12692$string_1232E456#
 11:	
 
 stdlib_test$4:	; Call 8 atof 8
@@ -507,10 +507,10 @@ stdlib_test$4:	; Call 8 atof 8
 stdlib_test$5:	; PostCall 8
 19:	
 
-stdlib_test$6:	; GetReturnValue £temporary6234
+stdlib_test$6:	; GetReturnValue £temporary6035
 21:	
 
-stdlib_test$7:	; Parameter 8 £temporary6234 8
+stdlib_test$7:	; Parameter 8 £temporary6035 8
 22:		fstp qword [bp + 16]
 24:	
 
@@ -530,22 +530,22 @@ stdlib_test$10:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Sy
 36:	
 
 stdlib_test$11:	; Parameter 8 string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A# 6
-37:		mov word [bp + 14], @13087$string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A#
+37:		mov word [bp + 14], @12695$string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A#
 39:	
 
 stdlib_test$12:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 41:	
 
 stdlib_test$13:	; Parameter 8 string_1232E456789abc# 14
-42:		mov word [bp + 22], @13088$string_1232E456789abc#
+42:		mov word [bp + 22], @12696$string_1232E456789abc#
 44:	
 
-stdlib_test$14:	; address £temporary6236 p
+stdlib_test$14:	; address £temporary6037 p
 45:		mov si, bp
 46:		add si, 6
 48:	
 
-stdlib_test$15:	; Parameter 8 £temporary6236 16
+stdlib_test$15:	; Parameter 8 £temporary6037 16
 49:		mov [bp + 24], si
 51:	
 
@@ -559,10 +559,10 @@ stdlib_test$16:	; Call 8 strtod 8
 stdlib_test$17:	; PostCall 8
 59:	
 
-stdlib_test$18:	; GetReturnValue £temporary6237
+stdlib_test$18:	; GetReturnValue £temporary6038
 61:	
 
-stdlib_test$19:	; Parameter 8 £temporary6237 8
+stdlib_test$19:	; Parameter 8 £temporary6038 8
 62:		fstp qword [bp + 16]
 64:	
 
@@ -587,14 +587,14 @@ stdlib_test$23:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 80:	
 
 stdlib_test$24:	; Parameter 6 string_0Agetenv2822path2229203D2025s0A# 6
-81:		mov word [bp + 12], @13092$string_0Agetenv2822path2229203D2025s0A#
+81:		mov word [bp + 12], @12700$string_0Agetenv2822path2229203D2025s0A#
 83:	
 
 stdlib_test$25:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 85:	
 
 stdlib_test$26:	; Parameter 6 string_path# 14
-86:		mov word [bp + 20], @13093$string_path#
+86:		mov word [bp + 20], @12701$string_path#
 88:	
 
 stdlib_test$27:	; Call 6 getenv 8
@@ -607,10 +607,10 @@ stdlib_test$27:	; Call 6 getenv 8
 stdlib_test$28:	; PostCall 6
 96:	
 
-stdlib_test$29:	; GetReturnValue £temporary6239
+stdlib_test$29:	; GetReturnValue £temporary6040
 101:	
 
-stdlib_test$30:	; Parameter 6 £temporary6239 8
+stdlib_test$30:	; Parameter 6 £temporary6040 8
 102:		mov [bp + 14], bx
 104:	
 
@@ -630,7 +630,7 @@ stdlib_test$33:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 116:	
 
 stdlib_test$34:	; Parameter 6 string_system2822dir22290A# 6
-117:		mov word [bp + 12], @13096$string_system2822dir22290A#
+117:		mov word [bp + 12], @12704$string_system2822dir22290A#
 119:	
 
 stdlib_test$35:	; Call 6 printf 0
@@ -648,7 +648,7 @@ stdlib_test$37:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 130:	
 
 stdlib_test$38:	; Parameter 6 string_dir# 6
-131:		mov word [bp + 12], @13098$string_dir#
+131:		mov word [bp + 12], @12706$string_dir#
 133:	
 
 stdlib_test$39:	; Call 6 system 0
@@ -665,7 +665,7 @@ stdlib_test$41:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 143:	
 
 stdlib_test$42:	; Parameter 6 string_0Aabs282D329203D2025i2C20abs28329203D2025i0A# 6
-144:		mov word [bp + 12], @13100$string_0Aabs282D329203D2025i2C20abs28329203D2025i0A#
+144:		mov word [bp + 12], @12708$string_0Aabs282D329203D2025i2C20abs28329203D2025i0A#
 146:	
 
 stdlib_test$43:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -685,10 +685,10 @@ stdlib_test$45:	; Call 6 _abs 8
 stdlib_test$46:	; PostCall 6
 159:	
 
-stdlib_test$47:	; GetReturnValue £temporary6243
+stdlib_test$47:	; GetReturnValue £temporary6044
 164:	
 
-stdlib_test$48:	; Parameter 6 £temporary6243 8
+stdlib_test$48:	; Parameter 6 £temporary6044 8
 165:		mov [bp + 14], bx
 167:	
 
@@ -709,10 +709,10 @@ stdlib_test$51:	; Call 6 _abs 10
 stdlib_test$52:	; PostCall 6
 180:	
 
-stdlib_test$53:	; GetReturnValue £temporary6244
+stdlib_test$53:	; GetReturnValue £temporary6045
 185:	
 
-stdlib_test$54:	; Parameter 6 £temporary6244 10
+stdlib_test$54:	; Parameter 6 £temporary6045 10
 186:		mov [bp + 16], bx
 188:	
 
@@ -732,7 +732,7 @@ stdlib_test$57:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 200:	
 
 stdlib_test$58:	; Parameter 6 string_labs282D3l29203D2025li2C20labs283l29203D2025li0A0A# 6
-201:		mov word [bp + 12], @13108$string_labs282D3l29203D2025li2C20labs283l29203D2025li0A0A#
+201:		mov word [bp + 12], @12716$string_labs282D3l29203D2025li2C20labs283l29203D2025li0A0A#
 203:	
 
 stdlib_test$59:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -752,10 +752,10 @@ stdlib_test$61:	; Call 6 labs 8
 stdlib_test$62:	; PostCall 6
 216:	
 
-stdlib_test$63:	; GetReturnValue £temporary6246
+stdlib_test$63:	; GetReturnValue £temporary6047
 221:	
 
-stdlib_test$64:	; Parameter 6 £temporary6246 8
+stdlib_test$64:	; Parameter 6 £temporary6047 8
 222:		mov [bp + 14], ebx
 224:	
 
@@ -776,10 +776,10 @@ stdlib_test$67:	; Call 6 labs 12
 stdlib_test$68:	; PostCall 6
 237:	
 
-stdlib_test$69:	; GetReturnValue £temporary6247
+stdlib_test$69:	; GetReturnValue £temporary6048
 242:	
 
-stdlib_test$70:	; Parameter 6 £temporary6247 12
+stdlib_test$70:	; Parameter 6 £temporary6048 12
 243:		mov [bp + 18], ebx
 245:	
 
@@ -816,10 +816,10 @@ stdlib_test$76:	; Call 6 div 0
 stdlib_test$77:	; PostCall 6
 271:	
 
-stdlib_test$78:	; GetReturnValue £temporary6249 -> £temporary6250
+stdlib_test$78:	; GetReturnValue £temporary6050 -> £temporary6051
 273:	
 
-stdlib_test$79:	; Assign i £temporary6249 -> £temporary6250
+stdlib_test$79:	; Assign i £temporary6050 -> £temporary6051
 274:		mov si, bp
 275:		add si, 6
 276:		mov al, 4
@@ -839,7 +839,7 @@ stdlib_test$80:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 288:	
 
 stdlib_test$81:	; Parameter 10 string_div_t28102C20329203D202825i2C2025i290A# 6
-289:		mov word [bp + 16], @13123$string_div_t28102C20329203D202825i2C2025i290A#
+289:		mov word [bp + 16], @12731$string_div_t28102C20329203D202825i2C2025i290A#
 291:	
 
 stdlib_test$82:	; Parameter 10 i$quot 8
@@ -898,10 +898,10 @@ stdlib_test$89:	; Call 10 print_div 0
 stdlib_test$90:	; PostCall 10
 336:	
 
-stdlib_test$91:	; GetReturnValue £temporary6254 -> £temporary6255
+stdlib_test$91:	; GetReturnValue £temporary6055 -> £temporary6056
 338:	
 
-stdlib_test$92:	; Assign j £temporary6254 -> £temporary6255
+stdlib_test$92:	; Assign j £temporary6055 -> £temporary6056
 339:		mov si, bp
 340:		add si, 10
 341:		mov al, 4
@@ -921,7 +921,7 @@ stdlib_test$93:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.S
 353:	
 
 stdlib_test$94:	; Parameter 14 string_div_t28102C20329203D202825i2C2025i290A0A# 6
-354:		mov word [bp + 20], @13130$string_div_t28102C20329203D202825i2C2025i290A0A#
+354:		mov word [bp + 20], @12738$string_div_t28102C20329203D202825i2C2025i290A0A#
 356:	
 
 stdlib_test$95:	; Parameter 14 j$quot 8
@@ -967,10 +967,10 @@ stdlib_test$102:	; Call 6 ldiv 0
 stdlib_test$103:	; PostCall 6
 390:	
 
-stdlib_test$104:	; GetReturnValue £temporary6259 -> £temporary6260
+stdlib_test$104:	; GetReturnValue £temporary6060 -> £temporary6061
 392:	
 
-stdlib_test$105:	; Assign li £temporary6259 -> £temporary6260
+stdlib_test$105:	; Assign li £temporary6060 -> £temporary6061
 393:		mov si, bp
 394:		add si, 6
 395:		mov al, 8
@@ -990,7 +990,7 @@ stdlib_test$106:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.
 407:	
 
 stdlib_test$107:	; Parameter 14 string_ldiv_t28102C20329203D202825li2C2025li290A# 6
-408:		mov word [bp + 20], @13141$string_ldiv_t28102C20329203D202825li2C2025li290A#
+408:		mov word [bp + 20], @12749$string_ldiv_t28102C20329203D202825li2C2025li290A#
 410:	
 
 stdlib_test$108:	; Parameter 14 li$quot 8
@@ -1049,10 +1049,10 @@ stdlib_test$115:	; Call 14 print_ldiv 0
 stdlib_test$116:	; PostCall 14
 455:	
 
-stdlib_test$117:	; GetReturnValue £temporary6264 -> £temporary6265
+stdlib_test$117:	; GetReturnValue £temporary6065 -> £temporary6066
 457:	
 
-stdlib_test$118:	; Assign lj £temporary6264 -> £temporary6265
+stdlib_test$118:	; Assign lj £temporary6065 -> £temporary6066
 458:		mov si, bp
 459:		add si, 14
 460:		mov al, 8
@@ -1072,7 +1072,7 @@ stdlib_test$119:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.
 472:	
 
 stdlib_test$120:	; Parameter 22 string_ldiv_t28102C20329203D202825li2C2025li290A0A# 6
-473:		mov word [bp + 28], @13148$string_ldiv_t28102C20329203D202825li2C2025li290A0A#
+473:		mov word [bp + 28], @12756$string_ldiv_t28102C20329203D202825li2C2025li290A0A#
 475:	
 
 stdlib_test$121:	; Parameter 22 lj$quot 8
@@ -1121,7 +1121,7 @@ stdlib_test$130:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.
 510:	
 
 stdlib_test$131:	; Parameter 18 string_0AA20List2013A20# 6
-511:		mov word [bp + 24], @13173$string_0AA20List2013A20#
+511:		mov word [bp + 24], @12781$string_0AA20List2013A20#
 513:	
 
 stdlib_test$132:	; Call 18 printf 0
@@ -1149,25 +1149,25 @@ stdlib_test$136:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.
 532:	
 
 stdlib_test$137:	; Parameter 18 string_25i20# 6
-533:		mov word [bp + 24], @13180$string_25i20#
+533:		mov word [bp + 24], @12788$string_25i20#
 535:	
 
-stdlib_test$138:	; UnsignedMultiply £temporary6277 index 2
+stdlib_test$138:	; UnsignedMultiply £temporary6078 index 2
 536:		mov ax, [bp + 16]
 538:		xor dx, dx
-539:		mul word [@13182$int2$2#]
+539:		mul word [@12790$int2$2#]
 545:	
 
-stdlib_test$139:	; BinaryAdd £temporary6278 list £temporary6277
+stdlib_test$139:	; BinaryAdd £temporary6079 list £temporary6078
 546:		mov si, bp
 547:		add si, 6
 548:		add si, ax
 550:	
 
-stdlib_test$140:	; Deref £temporary6279 -> £temporary6278 £temporary6278 0
+stdlib_test$140:	; Deref £temporary6080 -> £temporary6079 £temporary6079 0
 552:	
 
-stdlib_test$141:	; Parameter 18 £temporary6279 -> £temporary6278 8
+stdlib_test$141:	; Parameter 18 £temporary6080 -> £temporary6079 8
 553:		mov ax, [si]
 554:		mov [bp + 26], ax
 556:	
@@ -1196,7 +1196,7 @@ stdlib_test$146:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.
 574:	
 
 stdlib_test$147:	; Parameter 18 string_0AB20List2023A20# 6
-575:		mov word [bp + 24], @13187$string_0AB20List2023A20#
+575:		mov word [bp + 24], @12795$string_0AB20List2023A20#
 577:	
 
 stdlib_test$148:	; Call 18 printf 0
@@ -1255,25 +1255,25 @@ stdlib_test$159:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.
 620:	
 
 stdlib_test$160:	; Parameter 18 string_25i20# 6
-621:		mov word [bp + 24], @13199$string_25i20#
+621:		mov word [bp + 24], @12807$string_25i20#
 623:	
 
-stdlib_test$161:	; UnsignedMultiply £temporary6286 index 2
+stdlib_test$161:	; UnsignedMultiply £temporary6087 index 2
 624:		mov ax, [bp + 16]
 626:		xor dx, dx
-627:		mul word [@13201$int2$2#]
+627:		mul word [@12809$int2$2#]
 633:	
 
-stdlib_test$162:	; BinaryAdd £temporary6287 list £temporary6286
+stdlib_test$162:	; BinaryAdd £temporary6088 list £temporary6087
 634:		mov si, bp
 635:		add si, 6
 636:		add si, ax
 638:	
 
-stdlib_test$163:	; Deref £temporary6288 -> £temporary6287 £temporary6287 0
+stdlib_test$163:	; Deref £temporary6089 -> £temporary6088 £temporary6088 0
 640:	
 
-stdlib_test$164:	; Parameter 18 £temporary6288 -> £temporary6287 8
+stdlib_test$164:	; Parameter 18 £temporary6089 -> £temporary6088 8
 641:		mov ax, [si]
 642:		mov [bp + 26], ax
 644:	
@@ -1302,7 +1302,7 @@ stdlib_test$169:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.
 662:	
 
 stdlib_test$170:	; Parameter 18 string_0AC20List2033A20# 6
-663:		mov word [bp + 24], @13206$string_0AC20List2033A20#
+663:		mov word [bp + 24], @12814$string_0AC20List2033A20#
 665:	
 
 stdlib_test$171:	; Call 18 printf 0
@@ -1361,25 +1361,25 @@ stdlib_test$182:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.
 708:	
 
 stdlib_test$183:	; Parameter 18 string_25i20# 6
-709:		mov word [bp + 24], @13218$string_25i20#
+709:		mov word [bp + 24], @12826$string_25i20#
 711:	
 
-stdlib_test$184:	; UnsignedMultiply £temporary6295 index 2
+stdlib_test$184:	; UnsignedMultiply £temporary6096 index 2
 712:		mov ax, [bp + 16]
 714:		xor dx, dx
-715:		mul word [@13220$int2$2#]
+715:		mul word [@12828$int2$2#]
 721:	
 
-stdlib_test$185:	; BinaryAdd £temporary6296 list £temporary6295
+stdlib_test$185:	; BinaryAdd £temporary6097 list £temporary6096
 722:		mov si, bp
 723:		add si, 6
 724:		add si, ax
 726:	
 
-stdlib_test$186:	; Deref £temporary6297 -> £temporary6296 £temporary6296 0
+stdlib_test$186:	; Deref £temporary6098 -> £temporary6097 £temporary6097 0
 728:	
 
-stdlib_test$187:	; Parameter 18 £temporary6297 -> £temporary6296 8
+stdlib_test$187:	; Parameter 18 £temporary6098 -> £temporary6097 8
 729:		mov ax, [si]
 730:		mov [bp + 26], ax
 732:	
@@ -1408,7 +1408,7 @@ stdlib_test$192:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.
 750:	
 
 stdlib_test$193:	; Parameter 18 string_0A0ASearch3A0A# 6
-751:		mov word [bp + 24], @13225$string_0A0ASearch3A0A#
+751:		mov word [bp + 24], @12833$string_0A0ASearch3A0A#
 753:	
 
 stdlib_test$194:	; Call 18 printf 0
@@ -1434,12 +1434,12 @@ stdlib_test$197:	; SignedGreaterThanEqual 224 key 6
 stdlib_test$198:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 771:	
 
-stdlib_test$199:	; address £temporary6302 key
+stdlib_test$199:	; address £temporary6103 key
 772:		mov si, bp
 773:		add si, 16
 775:	
 
-stdlib_test$200:	; Parameter 18 £temporary6302 6
+stdlib_test$200:	; Parameter 18 £temporary6103 6
 776:		mov [bp + 24], si
 778:	
 
@@ -1471,13 +1471,13 @@ stdlib_test$205:	; Call 18 bsearch 0
 stdlib_test$206:	; PostCall 18
 800:	
 
-stdlib_test$207:	; GetReturnValue £temporary6304
+stdlib_test$207:	; GetReturnValue £temporary6105
 805:	
 
-stdlib_test$208:	; IntegralToIntegral £temporary6305 £temporary6304
+stdlib_test$208:	; IntegralToIntegral £temporary6106 £temporary6105
 808:	
 
-stdlib_test$209:	; Assign p £temporary6305
+stdlib_test$209:	; Assign p £temporary6106
 809:		mov [bp + 18], bx
 811:	
 
@@ -1486,27 +1486,27 @@ stdlib_test$210:	; Equal 214 p 0
 813:		je stdlib_test$214
 815:	
 
-stdlib_test$211:	; BinarySubtract £temporary6307 p list
+stdlib_test$211:	; BinarySubtract £temporary6108 p list
 816:		mov ax, [bp + 18]
 817:		mov bx, bp
 818:		add bx, 6
 819:		sub ax, bx
 821:	
 
-stdlib_test$212:	; UnsignedDivide £temporary6312 £temporary6307 2
+stdlib_test$212:	; UnsignedDivide £temporary6113 £temporary6108 2
 823:		xor dx, dx
-824:		div word [@13247$int2$2#]
+824:		div word [@12855$int2$2#]
 830:	
 
 stdlib_test$213:	; Goto 215
 831:		jmp stdlib_test$215
 833:	
 
-stdlib_test$214:	; Assign £temporary6312 -1
+stdlib_test$214:	; Assign £temporary6113 -1
 834:		mov ax, -1
 836:	
 
-stdlib_test$215:	; Assign index £temporary6312
+stdlib_test$215:	; Assign index £temporary6113
 837:		mov [bp + 20], ax
 839:	
 
@@ -1514,7 +1514,7 @@ stdlib_test$216:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.
 841:	
 
 stdlib_test$217:	; Parameter 22 string_20202825i2C2025i290A# 6
-842:		mov word [bp + 28], @13258$string_20202825i2C2025i290A#
+842:		mov word [bp + 28], @12866$string_20202825i2C2025i290A#
 844:	
 
 stdlib_test$218:	; Parameter 22 key 8
@@ -1551,7 +1551,7 @@ stdlib_test$224:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.
 870:	
 
 stdlib_test$225:	; Parameter 16 string_0A# 6
-871:		mov word [bp + 22], @13260$string_0A#
+871:		mov word [bp + 22], @12868$string_0A#
 873:	
 
 stdlib_test$226:	; Call 16 printf 0

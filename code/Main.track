@@ -1,0 +1,307 @@
+1:	
+
+mainX:	; SignedGreaterThan 11 count 10
+2:		cmp word [@30$count], 10
+3:		jg mainX$11
+5:	
+
+mainX$1:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+7:	
+
+mainX$2:	; Parameter 6 string_25d20# 6
+8:		mov word [bp + 12], @35$string_25d20#
+10:	
+
+mainX$3:	; Assign £temporary1 count
+11:		mov t0, [@30$count]
+13:	
+
+mainX$4:	; Increment count
+14:		inc word [@30$count]
+16:	
+
+mainX$5:	; Parameter 6 £temporary1 8
+17:		mov [bp + 14], t0
+19:	
+
+mainX$6:	; Call 6 printf 0
+20:		mov word [bp + 6], mainX$7
+21:		mov [bp + 8], bp
+22:		add bp, 6
+23:		mov di, bp
+24:		add di, 2
+25:		jmp printf
+27:	
+
+mainX$7:	; PostCall 6
+29:	
+
+mainX$8:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+31:	
+
+mainX$9:	; Call 6 mainX 0
+32:		mov word [bp + 6], mainX$10
+33:		mov [bp + 8], bp
+34:		add bp, 6
+35:		jmp mainX
+37:	
+
+mainX$10:	; PostCall 6
+39:	
+
+mainX$11:	; Return 0
+40:		mov t1, [bp]
+41:		mov di, [bp + 4]
+42:		mov bp, [bp + 2]
+43:		jmp t1
+45:	
+
+mainX$12:	; FunctionEnd mainX
+0:		; Initialize Stack Pointer
+1:		mov bp, $StackTop
+2:		; Initialize Heap Pointer
+3:		mov word [65534], 65534
+4:		; Initialize FPU Control Word, truncate mode => set bit 10 and 11.
+5:		fstcw [bp]
+6:		or word [bp], 3072
+7:		fldcw [bp]
+8:		mov word [$StackTop], 0
+10:	
+
+main:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+12:	
+
+main$1:	; Call 6 math_test 0
+13:		mov word [bp + 6], main$2
+14:		mov [bp + 8], bp
+15:		add bp, 6
+16:		jmp math_test
+18:	
+
+main$2:	; PostCall 6
+20:	
+
+main$3:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+22:	
+
+main$4:	; Call 6 file_test 0
+23:		mov word [bp + 6], main$5
+24:		mov [bp + 8], bp
+25:		add bp, 6
+26:		jmp file_test
+28:	
+
+main$5:	; PostCall 6
+30:	
+
+main$6:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+32:	
+
+main$7:	; Call 6 time_test 0
+33:		mov word [bp + 6], main$8
+34:		mov [bp + 8], bp
+35:		add bp, 6
+36:		jmp time_test
+38:	
+
+main$8:	; PostCall 6
+40:	
+
+main$9:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+42:	
+
+main$10:	; Call 6 assert_test 0
+43:		mov word [bp + 6], main$11
+44:		mov [bp + 8], bp
+45:		add bp, 6
+46:		jmp assert_test
+48:	
+
+main$11:	; PostCall 6
+50:	
+
+main$12:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+52:	
+
+main$13:	; Call 6 malloc_test 0
+53:		mov word [bp + 6], main$14
+54:		mov [bp + 8], bp
+55:		add bp, 6
+56:		jmp malloc_test
+58:	
+
+main$14:	; PostCall 6
+60:	
+
+main$15:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+62:	
+
+main$16:	; Call 6 print_test 0
+63:		mov word [bp + 6], main$17
+64:		mov [bp + 8], bp
+65:		add bp, 6
+66:		jmp print_test
+68:	
+
+main$17:	; PostCall 6
+70:	
+
+main$18:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+72:	
+
+main$19:	; Call 6 limits_test 0
+73:		mov word [bp + 6], main$20
+74:		mov [bp + 8], bp
+75:		add bp, 6
+76:		jmp limits_test
+78:	
+
+main$20:	; PostCall 6
+80:	
+
+main$21:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+82:	
+
+main$22:	; Call 6 float_test 0
+83:		mov word [bp + 6], main$23
+84:		mov [bp + 8], bp
+85:		add bp, 6
+86:		jmp float_test
+88:	
+
+main$23:	; PostCall 6
+90:	
+
+main$24:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+92:	
+
+main$25:	; Call 6 setjmp_test 0
+93:		mov word [bp + 6], main$26
+94:		mov [bp + 8], bp
+95:		add bp, 6
+96:		jmp setjmp_test
+98:	
+
+main$26:	; PostCall 6
+100:	
+
+main$27:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+102:	
+
+main$28:	; Call 6 stdio_test 0
+103:		mov word [bp + 6], main$29
+104:		mov [bp + 8], bp
+105:		add bp, 6
+106:		jmp stdio_test
+108:	
+
+main$29:	; PostCall 6
+110:	
+
+main$30:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+112:	
+
+main$31:	; Call 6 string_test 0
+113:		mov word [bp + 6], main$32
+114:		mov [bp + 8], bp
+115:		add bp, 6
+116:		jmp string_test
+118:	
+
+main$32:	; PostCall 6
+120:	
+
+main$33:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+122:	
+
+main$34:	; Call 6 stdio_test 0
+123:		mov word [bp + 6], main$35
+124:		mov [bp + 8], bp
+125:		add bp, 6
+126:		jmp stdio_test
+128:	
+
+main$35:	; PostCall 6
+130:	
+
+main$36:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+132:	
+
+main$37:	; Call 6 stdlib_test 0
+133:		mov word [bp + 6], main$38
+134:		mov [bp + 8], bp
+135:		add bp, 6
+136:		jmp stdlib_test
+138:	
+
+main$38:	; PostCall 6
+140:	
+
+main$39:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+142:	
+
+main$40:	; Call 6 strtol_test 0
+143:		mov word [bp + 6], main$41
+144:		mov [bp + 8], bp
+145:		add bp, 6
+146:		jmp strtol_test
+148:	
+
+main$41:	; PostCall 6
+150:	
+
+main$42:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+152:	
+
+main$43:	; Call 6 strtoul_test 0
+153:		mov word [bp + 6], main$44
+154:		mov [bp + 8], bp
+155:		add bp, 6
+156:		jmp strtoul_test
+158:	
+
+main$44:	; PostCall 6
+160:	
+
+main$45:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+162:	
+
+main$46:	; Call 6 character_test 0
+163:		mov word [bp + 6], main$47
+164:		mov [bp + 8], bp
+165:		add bp, 6
+166:		jmp character_test
+168:	
+
+main$47:	; PostCall 6
+170:	
+
+main$48:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+172:	
+
+main$49:	; Call 6 locale_test 0
+173:		mov word [bp + 6], main$50
+174:		mov [bp + 8], bp
+175:		add bp, 6
+176:		jmp locale_test
+178:	
+
+main$50:	; PostCall 6
+180:	
+
+main$51:	; Return 0
+181:		cmp word [bp], 0
+182:		je return_label$0
+183:		mov t2, [bp]
+184:		mov di, [bp + 4]
+185:		mov bp, [bp + 2]
+186:		jmp t2
+187:	
+
+return_label$0:
+188:		mov al, 0
+189:		mov ah, 76
+190:		int 33
+192:	
+
+main$52:	; FunctionEnd main

@@ -27,26 +27,26 @@
 section .text
 
  compare:
-	; IntegralToIntegral £temporary4441 valuePtr1
+	; IntegralToIntegral £temporary4422 valuePtr1
 	mov rsi, [rbp + 24]
 
  compare$1:
-	; Dereference £temporary4442 -> £temporary4441 £temporary4441 0
+	; Dereference £temporary4423 -> £temporary4422 £temporary4422 0
 
  compare$2:
-	; Assign intValue1 £temporary4442 -> £temporary4441
+	; Assign intValue1 £temporary4423 -> £temporary4422
 	mov eax, [rsi]
 	mov [rbp + 40], eax
 
  compare$3:
-	; IntegralToIntegral £temporary4443 valuePtr2
+	; IntegralToIntegral £temporary4424 valuePtr2
 	mov rsi, [rbp + 32]
 
  compare$4:
-	; Dereference £temporary4444 -> £temporary4443 £temporary4443 0
+	; Dereference £temporary4425 -> £temporary4424 £temporary4424 0
 
  compare$5:
-	; Assign intValue2 £temporary4444 -> £temporary4443
+	; Assign intValue2 £temporary4425 -> £temporary4424
 	mov eax, [rsi]
 	mov [rbp + 44], eax
 
@@ -57,7 +57,7 @@ section .text
 	jge compare$9
 
  compare$7:
-	; Assign £temporary4448 -1
+	; Assign £temporary4429 -1
 	mov ebx, -1
 
  compare$8:
@@ -71,7 +71,7 @@ section .text
 	jne compare$12
 
  compare$10:
-	; Assign £temporary4448 0
+	; Assign £temporary4429 0
 	mov ebx, 0
 
  compare$11:
@@ -79,14 +79,14 @@ section .text
 	jmp compare$13
 
  compare$12:
-	; Assign £temporary4448 1
+	; Assign £temporary4429 1
 	mov ebx, 1
 
  compare$13:
 	; SetReturnValue
 
  compare$14:
-	; Return £temporary4448
+	; Return £temporary4429
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -98,26 +98,26 @@ section .text
 section .text
 
  reverse_compare:
-	; IntegralToIntegral £temporary4449 valuePtr1
+	; IntegralToIntegral £temporary4430 valuePtr1
 	mov rsi, [rbp + 24]
 
  reverse_compare$1:
-	; Dereference £temporary4450 -> £temporary4449 £temporary4449 0
+	; Dereference £temporary4431 -> £temporary4430 £temporary4430 0
 
  reverse_compare$2:
-	; Assign intValue1 £temporary4450 -> £temporary4449
+	; Assign intValue1 £temporary4431 -> £temporary4430
 	mov eax, [rsi]
 	mov [rbp + 40], eax
 
  reverse_compare$3:
-	; IntegralToIntegral £temporary4451 valuePtr2
+	; IntegralToIntegral £temporary4432 valuePtr2
 	mov rsi, [rbp + 32]
 
  reverse_compare$4:
-	; Dereference £temporary4452 -> £temporary4451 £temporary4451 0
+	; Dereference £temporary4433 -> £temporary4432 £temporary4432 0
 
  reverse_compare$5:
-	; Assign intValue2 £temporary4452 -> £temporary4451
+	; Assign intValue2 £temporary4433 -> £temporary4432
 	mov eax, [rsi]
 	mov [rbp + 44], eax
 
@@ -128,7 +128,7 @@ section .text
 	jge reverse_compare$9
 
  reverse_compare$7:
-	; Assign £temporary4456 1
+	; Assign £temporary4437 1
 	mov ebx, 1
 
  reverse_compare$8:
@@ -142,7 +142,7 @@ section .text
 	jne reverse_compare$12
 
  reverse_compare$10:
-	; Assign £temporary4456 0
+	; Assign £temporary4437 0
 	mov ebx, 0
 
  reverse_compare$11:
@@ -150,14 +150,14 @@ section .text
 	jmp reverse_compare$13
 
  reverse_compare$12:
-	; Assign £temporary4456 -1
+	; Assign £temporary4437 -1
 	mov ebx, -1
 
  reverse_compare$13:
 	; SetReturnValue
 
  reverse_compare$14:
-	; Return £temporary4456
+	; Return £temporary4437
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -168,7 +168,7 @@ section .text
 
 section .data
 
-@14008$string_div_t20quot2025i20rem2025i0A#:
+@13990$string_div_t20quot2025i20rem2025i0A#:
 	; Initializer String div_t quot %i rem %i\n
 	db "div_t quot %i rem %i", 10, 0
 
@@ -179,7 +179,7 @@ section .text
 
  print_div$1:
 	; Parameter 56 pointer "div_t quot %i rem %i\n"
-	mov qword [rbp + 56], @14008$string_div_t20quot2025i20rem2025i0A#
+	mov qword [rbp + 56], @13990$string_div_t20quot2025i20rem2025i0A#
 
  print_div$2:
 	; Parameter 64 signedint d.quot
@@ -228,7 +228,7 @@ section .text
 
 section .data
 
-@14015$string_ldiv_t20quot2025li20rem2025li0A#:
+@13997$string_ldiv_t20quot2025li20rem2025li0A#:
 	; Initializer String ldiv_t quot %li rem %li\n
 	db "ldiv_t quot %li rem %li", 10, 0
 
@@ -239,7 +239,7 @@ section .text
 
  print_ldiv$1:
 	; Parameter 64 pointer "ldiv_t quot %li rem %li\n"
-	mov qword [rbp + 64], @14015$string_ldiv_t20quot2025li20rem2025li0A#
+	mov qword [rbp + 64], @13997$string_ldiv_t20quot2025li20rem2025li0A#
 
  print_ldiv$2:
 	; Parameter 72 signed long int ld.quot
@@ -288,7 +288,7 @@ section .text
 
 section .data
 
-@14022$string_exit10A#:
+@14004$string_exit10A#:
 	; Initializer String exit1\n
 	db "exit1", 10, 0
 
@@ -299,7 +299,7 @@ section .text
 
  exit_handle1x$1:
 	; Parameter 48 pointer "exit1\n"
-	mov qword [rbp + 48], @14022$string_exit10A#
+	mov qword [rbp + 48], @14004$string_exit10A#
 
  exit_handle1x$2:
 	; Call 24 printf 0
@@ -324,7 +324,7 @@ section .text
 
 section .data
 
-@14025$string_exit20A#:
+@14007$string_exit20A#:
 	; Initializer String exit2\n
 	db "exit2", 10, 0
 
@@ -335,7 +335,7 @@ section .text
 
  exit_handle2x$1:
 	; Parameter 48 pointer "exit2\n"
-	mov qword [rbp + 48], @14025$string_exit20A#
+	mov qword [rbp + 48], @14007$string_exit20A#
 
  exit_handle2x$2:
 	; Call 24 printf 0
@@ -360,7 +360,7 @@ section .text
 
 section .data
 
-@14028$string_exit30A#:
+@14010$string_exit30A#:
 	; Initializer String exit3\n
 	db "exit3", 10, 0
 
@@ -371,7 +371,7 @@ section .text
 
  exit_handle3x$1:
 	; Parameter 48 pointer "exit3\n"
-	mov qword [rbp + 48], @14028$string_exit30A#
+	mov qword [rbp + 48], @14010$string_exit30A#
 
  exit_handle3x$2:
 	; Call 24 printf 0
@@ -396,7 +396,7 @@ section .text
 
 section .data
 
-@14031$string_HelloFFF#:
+@14013$string_HelloFFF#:
 	; Initializer String HelloFFF
 	db "HelloFFF", 0
 
@@ -407,7 +407,7 @@ section .text
 
  hello$1:
 	; Parameter 48 pointer "HelloFFF"
-	mov qword [rbp + 48], @14031$string_HelloFFF#
+	mov qword [rbp + 48], @14013$string_HelloFFF#
 
  hello$2:
 	; Call 24 printf 0
@@ -432,7 +432,7 @@ section .text
 
 section .data
 
-@14035$string_f3A2025u0A#:
+@14017$string_f3A2025u0A#:
 	; Initializer String f: %u\n
 	db "f: %u", 10, 0
 
@@ -443,14 +443,14 @@ section .text
 
  qtest$1:
 	; Parameter 56 pointer "f: %u\n"
-	mov qword [rbp + 56], @14035$string_f3A2025u0A#
+	mov qword [rbp + 56], @14017$string_f3A2025u0A#
 
  qtest$2:
-	; IntegralToIntegral £temporary4477 f
+	; IntegralToIntegral £temporary4458 f
 	mov rax, [rbp + 24]
 
  qtest$3:
-	; Parameter 64 unsigned int £temporary4477
+	; Parameter 64 unsigned int £temporary4458
 	mov [rbp + 64], eax
 
  qtest$4:
@@ -491,13 +491,13 @@ section .text
 
 section .data
 
-@14039$string_hello3A2025u0A#:
+@14021$string_hello3A2025u0A#:
 	; Initializer String hello: %u\n
 	db "hello: %u", 10, 0
 
 section .data
 
-@14040$string_Y#:
+@14022$string_Y#:
 	; Initializer String Y
 	db "Y", 0
 
@@ -508,14 +508,14 @@ section .text
 
  stdlib_testZ$1:
 	; Parameter 48 pointer "hello: %u\n"
-	mov qword [rbp + 48], @14039$string_hello3A2025u0A#
+	mov qword [rbp + 48], @14021$string_hello3A2025u0A#
 
  stdlib_testZ$2:
-	; IntegralToIntegral £temporary4480 hello
+	; IntegralToIntegral £temporary4461 hello
 	mov rax, hello
 
  stdlib_testZ$3:
-	; Parameter 56 unsigned int £temporary4480
+	; Parameter 56 unsigned int £temporary4461
 	mov [rbp + 56], eax
 
  stdlib_testZ$4:
@@ -552,7 +552,7 @@ section .text
 
  stdlib_testZ$11:
 	; Parameter 48 pointer "Y"
-	mov qword [rbp + 48], @14040$string_Y#
+	mov qword [rbp + 48], @14022$string_Y#
 
  stdlib_testZ$12:
 	; Call 24 printf 0
@@ -577,163 +577,163 @@ section .text
 
 section .data
 
-@14047$string_atof28221232E4562229203D2025f0A#:
+@14029$string_atof28221232E4562229203D2025f0A#:
 	; Initializer String atof("123.456") = %f\n
 	db "atof(", 34, "123.456", 34, ") = %f", 10, 0
 
 section .data
 
-@14048$string_1232E456#:
+@14030$string_1232E456#:
 	; Initializer String 123.456
 	db "123.456", 0
 
 section .data
 
-@14049$string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A#:
+@14031$string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A#:
 	; Initializer String strtod("123.456789abc", &p) = (%f, %s)\n
 	db "strtod(", 34, "123.456789abc", 34, ", &p) = (%f, %s)", 10, 0
 
 section .data
 
-@14050$string_1232E456789abc#:
+@14032$string_1232E456789abc#:
 	; Initializer String 123.456789abc
 	db "123.456789abc", 0
 
 section .data
 
-@14051$string_0Agetenv2822path2229203D2025s0A#:
+@14033$string_0Agetenv2822path2229203D2025s0A#:
 	; Initializer String \ngetenv("path") = %s\n
 	db 10, "getenv(", 34, "path", 34, ") = %s", 10, 0
 
 section .data
 
-@14052$string_path#:
+@14034$string_path#:
 	; Initializer String path
 	db "path", 0
 
 section .data
 
-@14053$string_system2822dir22290A#:
+@14035$string_system2822dir22290A#:
 	; Initializer String system("dir")\n
 	db "system(", 34, "dir", 34, ")", 10, 0
 
 section .data
 
-@14054$string_dir#:
+@14036$string_dir#:
 	; Initializer String dir
 	db "dir", 0
 
 section .data
 
-@14055$string_0Aabs282D329203D2025i2C20abs28329203D2025i0A#:
+@14037$string_0Aabs282D329203D2025i2C20abs28329203D2025i0A#:
 	; Initializer String \nabs(-3) = %i, abs(3) = %i\n
 	db 10, "abs(-3) = %i, abs(3) = %i", 10, 0
 
 section .data
 
-@14060$string_labs282D3l29203D2025li2C20labs283l29203D2025li0A0A#:
+@14042$string_labs282D3l29203D2025li2C20labs283l29203D2025li0A0A#:
 	; Initializer String labs(-3l) = %li, labs(3l) = %li\n\n
 	db "labs(-3l) = %li, labs(3l) = %li", 10, 10, 0
 
 section .data
 
-@14070$string_div_t28102C20329203D202825i2C2025i290A#:
+@14052$string_div_t28102C20329203D202825i2C2025i290A#:
 	; Initializer String div_t(10, 3) = (%i, %i)\n
 	db "div_t(10, 3) = (%i, %i)", 10, 0
 
 section .data
 
-@14072$string_div_t28102C20329203D202825i2C2025i290A0A#:
+@14054$string_div_t28102C20329203D202825i2C2025i290A0A#:
 	; Initializer String div_t(10, 3) = (%i, %i)\n\n
 	db "div_t(10, 3) = (%i, %i)", 10, 10, 0
 
 section .data
 
-@14078$string_ldiv_t28102C20329203D202825li2C2025li290A#:
+@14060$string_ldiv_t28102C20329203D202825li2C2025li290A#:
 	; Initializer String ldiv_t(10, 3) = (%li, %li)\n
 	db "ldiv_t(10, 3) = (%li, %li)", 10, 0
 
 section .data
 
-@14080$string_ldiv_t28102C20329203D202825li2C2025li290A0A#:
+@14062$string_ldiv_t28102C20329203D202825li2C2025li290A0A#:
 	; Initializer String ldiv_t(10, 3) = (%li, %li)\n\n
 	db "ldiv_t(10, 3) = (%li, %li)", 10, 10, 0
 
 section .data
 
-@14097$string_0AA20List2013A20#:
+@14079$string_0AA20List2013A20#:
 	; Initializer String \nA List 1: 
 	db 10, "A List 1: ", 0
 
 section .data
 
-@14102$string_25i20#:
+@14084$string_25i20#:
 	; Initializer String %i 
 	db "%i ", 0
 
 section .data
 
-@14105$string_0AB20List2023A20#:
+@14087$string_0AB20List2023A20#:
 	; Initializer String \nB List 2: 
 	db 10, "B List 2: ", 0
 
 section .data
 
-@14113$string_25i20#:
+@14095$string_25i20#:
 	; Initializer String %i 
 	db "%i ", 0
 
 section .data
 
-@14116$string_0AC20List2033A20#:
+@14098$string_0AC20List2033A20#:
 	; Initializer String \nC List 3: 
 	db 10, "C List 3: ", 0
 
 section .data
 
-@14124$string_25i20#:
+@14106$string_25i20#:
 	; Initializer String %i 
 	db "%i ", 0
 
 section .data
 
-@14127$string_0A0ASearch3A0A#:
+@14109$string_0A0ASearch3A0A#:
 	; Initializer String \n\nSearch:\n
 	db 10, 10, "Search:", 10, 0
 
 section .data
 
-@14145$string_20202825i2C2025i290A#:
+@14127$string_20202825i2C2025i290A#:
 	; Initializer String   (%i, %i)\n
 	db "  (%i, %i)", 10, 0
 
 section .data
 
-@14146$string_0A#:
+@14128$string_0A#:
 	; Initializer String \n
 	db 10, 0
 
 section .data
 
-@14103$int8$4#:
+@14085$int8$4#:
 	; Initializer Pointer 4
 	dq 4
 
 section .data
 
-@14114$int8$4#:
+@14096$int8$4#:
 	; Initializer Pointer 4
 	dq 4
 
 section .data
 
-@14125$int8$4#:
+@14107$int8$4#:
 	; Initializer Pointer 4
 	dq 4
 
 section .data
 
-@14141$int8$4#:
+@14123$int8$4#:
 	; Initializer Pointer 4
 	dq 4
 
@@ -744,14 +744,14 @@ section .text
 
  stdlib_test$1:
 	; Parameter 56 pointer "atof("123.456") = %f\n"
-	mov qword [rbp + 56], @14047$string_atof28221232E4562229203D2025f0A#
+	mov qword [rbp + 56], @14029$string_atof28221232E4562229203D2025f0A#
 
  stdlib_test$2:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$3:
 	; Parameter 88 pointer "123.456"
-	mov qword [rbp + 88], @14048$string_1232E456#
+	mov qword [rbp + 88], @14030$string_1232E456#
 
  stdlib_test$4:
 	; Call 64 atof 0
@@ -764,10 +764,10 @@ section .text
 	; PostCall 64
 
  stdlib_test$6:
-	; GetReturnValue £temporary4484
+	; GetReturnValue £temporary4465
 
  stdlib_test$7:
-	; Parameter 64 double £temporary4484
+	; Parameter 64 double £temporary4465
 	fstp qword [rbp + 64]
 
  stdlib_test$8:
@@ -787,22 +787,22 @@ section .text
 
  stdlib_test$11:
 	; Parameter 56 pointer "strtod("123.456789abc", &p) = (%f, %s)\n"
-	mov qword [rbp + 56], @14049$string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A#
+	mov qword [rbp + 56], @14031$string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A#
 
  stdlib_test$12:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$13:
 	; Parameter 88 pointer "123.456789abc"
-	mov qword [rbp + 88], @14050$string_1232E456789abc#
+	mov qword [rbp + 88], @14032$string_1232E456789abc#
 
  stdlib_test$14:
-	; Address £temporary4486 p
+	; Address £temporary4467 p
 	mov rsi, rbp
 	add rsi, 24
 
  stdlib_test$15:
-	; Parameter 96 pointer £temporary4486
+	; Parameter 96 pointer £temporary4467
 	mov [rbp + 96], rsi
 
  stdlib_test$16:
@@ -816,10 +816,10 @@ section .text
 	; PostCall 64
 
  stdlib_test$18:
-	; GetReturnValue £temporary4487
+	; GetReturnValue £temporary4468
 
  stdlib_test$19:
-	; Parameter 64 double £temporary4487
+	; Parameter 64 double £temporary4468
 	fstp qword [rbp + 64]
 
  stdlib_test$20:
@@ -844,14 +844,14 @@ section .text
 
  stdlib_test$24:
 	; Parameter 48 pointer "\ngetenv("path") = %s\n"
-	mov qword [rbp + 48], @14051$string_0Agetenv2822path2229203D2025s0A#
+	mov qword [rbp + 48], @14033$string_0Agetenv2822path2229203D2025s0A#
 
  stdlib_test$25:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$26:
 	; Parameter 80 pointer "path"
-	mov qword [rbp + 80], @14052$string_path#
+	mov qword [rbp + 80], @14034$string_path#
 
  stdlib_test$27:
 	; Call 56 getenv 0
@@ -864,10 +864,10 @@ section .text
 	; PostCall 56
 
  stdlib_test$29:
-	; GetReturnValue £temporary4489
+	; GetReturnValue £temporary4470
 
  stdlib_test$30:
-	; Parameter 56 pointer £temporary4489
+	; Parameter 56 pointer £temporary4470
 	mov [rbp + 56], rbx
 
  stdlib_test$31:
@@ -887,7 +887,7 @@ section .text
 
  stdlib_test$34:
 	; Parameter 48 pointer "system("dir")\n"
-	mov qword [rbp + 48], @14053$string_system2822dir22290A#
+	mov qword [rbp + 48], @14035$string_system2822dir22290A#
 
  stdlib_test$35:
 	; Call 24 printf 0
@@ -905,7 +905,7 @@ section .text
 
  stdlib_test$38:
 	; Parameter 48 pointer "dir"
-	mov qword [rbp + 48], @14054$string_dir#
+	mov qword [rbp + 48], @14036$string_dir#
 
  stdlib_test$39:
 	; Call 24 system 0
@@ -922,7 +922,7 @@ section .text
 
  stdlib_test$42:
 	; Parameter 48 pointer "\nabs(-3) = %i, abs(3) = %i\n"
-	mov qword [rbp + 48], @14055$string_0Aabs282D329203D2025i2C20abs28329203D2025i0A#
+	mov qword [rbp + 48], @14037$string_0Aabs282D329203D2025i2C20abs28329203D2025i0A#
 
  stdlib_test$43:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -942,10 +942,10 @@ section .text
 	; PostCall 56
 
  stdlib_test$47:
-	; GetReturnValue £temporary4493
+	; GetReturnValue £temporary4474
 
  stdlib_test$48:
-	; Parameter 56 signedint £temporary4493
+	; Parameter 56 signedint £temporary4474
 	mov [rbp + 56], ebx
 
  stdlib_test$49:
@@ -966,10 +966,10 @@ section .text
 	; PostCall 60
 
  stdlib_test$53:
-	; GetReturnValue £temporary4494
+	; GetReturnValue £temporary4475
 
  stdlib_test$54:
-	; Parameter 60 signedint £temporary4494
+	; Parameter 60 signedint £temporary4475
 	mov [rbp + 60], ebx
 
  stdlib_test$55:
@@ -989,7 +989,7 @@ section .text
 
  stdlib_test$58:
 	; Parameter 48 pointer "labs(-3l) = %li, labs(3l) = %li\n\n"
-	mov qword [rbp + 48], @14060$string_labs282D3l29203D2025li2C20labs283l29203D2025li0A0A#
+	mov qword [rbp + 48], @14042$string_labs282D3l29203D2025li2C20labs283l29203D2025li0A0A#
 
  stdlib_test$59:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1009,10 +1009,10 @@ section .text
 	; PostCall 56
 
  stdlib_test$63:
-	; GetReturnValue £temporary4496
+	; GetReturnValue £temporary4477
 
  stdlib_test$64:
-	; Parameter 56 signed long int £temporary4496
+	; Parameter 56 signed long int £temporary4477
 	mov [rbp + 56], rbx
 
  stdlib_test$65:
@@ -1033,10 +1033,10 @@ section .text
 	; PostCall 64
 
  stdlib_test$69:
-	; GetReturnValue £temporary4497
+	; GetReturnValue £temporary4478
 
  stdlib_test$70:
-	; Parameter 64 signed long int £temporary4497
+	; Parameter 64 signed long int £temporary4478
 	mov [rbp + 64], rbx
 
  stdlib_test$71:
@@ -1073,16 +1073,16 @@ section .text
 	; PostCall 24
 
  stdlib_test$78:
-	; GetReturnValue £temporary4499 -> £temporary4500
+	; GetReturnValue £temporary4480 -> £temporary4481
 
  stdlib_test$79:
-	; AssignInitSize i £temporary4499 -> £temporary4500
+	; AssignInitSize i £temporary4480 -> £temporary4481
 	mov rsi, rbp
 	add rsi, 24
 	mov al, 8
 
  stdlib_test$80:
-	; Assign i £temporary4499 -> £temporary4500
+	; Assign i £temporary4480 -> £temporary4481
 	mov ah, [rbx]
 	mov [rsi], ah
 	inc rbx
@@ -1096,7 +1096,7 @@ section .text
 
  stdlib_test$82:
 	; Parameter 56 pointer "div_t(10, 3) = (%i, %i)\n"
-	mov qword [rbp + 56], @14070$string_div_t28102C20329203D202825i2C2025i290A#
+	mov qword [rbp + 56], @14052$string_div_t28102C20329203D202825i2C2025i290A#
 
  stdlib_test$83:
 	; Parameter 64 signedint i.quot
@@ -1152,16 +1152,16 @@ section .text
 	; PostCall 32
 
  stdlib_test$92:
-	; GetReturnValue £temporary4504 -> £temporary4505
+	; GetReturnValue £temporary4485 -> £temporary4486
 
  stdlib_test$93:
-	; AssignInitSize j £temporary4504 -> £temporary4505
+	; AssignInitSize j £temporary4485 -> £temporary4486
 	mov rsi, rbp
 	add rsi, 32
 	mov al, 8
 
  stdlib_test$94:
-	; Assign j £temporary4504 -> £temporary4505
+	; Assign j £temporary4485 -> £temporary4486
 	mov ah, [rbx]
 	mov [rsi], ah
 	inc rbx
@@ -1175,7 +1175,7 @@ section .text
 
  stdlib_test$96:
 	; Parameter 64 pointer "div_t(10, 3) = (%i, %i)\n\n"
-	mov qword [rbp + 64], @14072$string_div_t28102C20329203D202825i2C2025i290A0A#
+	mov qword [rbp + 64], @14054$string_div_t28102C20329203D202825i2C2025i290A0A#
 
  stdlib_test$97:
 	; Parameter 72 signedint j.quot
@@ -1221,16 +1221,16 @@ section .text
 	; PostCall 24
 
  stdlib_test$106:
-	; GetReturnValue £temporary4509 -> £temporary4510
+	; GetReturnValue £temporary4490 -> £temporary4491
 
  stdlib_test$107:
-	; AssignInitSize li £temporary4509 -> £temporary4510
+	; AssignInitSize li £temporary4490 -> £temporary4491
 	mov rsi, rbp
 	add rsi, 24
 	mov al, 16
 
  stdlib_test$108:
-	; Assign li £temporary4509 -> £temporary4510
+	; Assign li £temporary4490 -> £temporary4491
 	mov ah, [rbx]
 	mov [rsi], ah
 	inc rbx
@@ -1244,7 +1244,7 @@ section .text
 
  stdlib_test$110:
 	; Parameter 64 pointer "ldiv_t(10, 3) = (%li, %li)\n"
-	mov qword [rbp + 64], @14078$string_ldiv_t28102C20329203D202825li2C2025li290A#
+	mov qword [rbp + 64], @14060$string_ldiv_t28102C20329203D202825li2C2025li290A#
 
  stdlib_test$111:
 	; Parameter 72 signed long int li.quot
@@ -1300,16 +1300,16 @@ section .text
 	; PostCall 40
 
  stdlib_test$120:
-	; GetReturnValue £temporary4514 -> £temporary4515
+	; GetReturnValue £temporary4495 -> £temporary4496
 
  stdlib_test$121:
-	; AssignInitSize lj £temporary4514 -> £temporary4515
+	; AssignInitSize lj £temporary4495 -> £temporary4496
 	mov rsi, rbp
 	add rsi, 40
 	mov al, 16
 
  stdlib_test$122:
-	; Assign lj £temporary4514 -> £temporary4515
+	; Assign lj £temporary4495 -> £temporary4496
 	mov ah, [rbx]
 	mov [rsi], ah
 	inc rbx
@@ -1323,7 +1323,7 @@ section .text
 
  stdlib_test$124:
 	; Parameter 80 pointer "ldiv_t(10, 3) = (%li, %li)\n\n"
-	mov qword [rbp + 80], @14080$string_ldiv_t28102C20329203D202825li2C2025li290A0A#
+	mov qword [rbp + 80], @14062$string_ldiv_t28102C20329203D202825li2C2025li290A0A#
 
  stdlib_test$125:
 	; Parameter 88 signed long int lj.quot
@@ -1372,7 +1372,7 @@ section .text
 
  stdlib_test$135:
 	; Parameter 72 pointer "\nA List 1: "
-	mov qword [rbp + 72], @14097$string_0AA20List2013A20#
+	mov qword [rbp + 72], @14079$string_0AA20List2013A20#
 
  stdlib_test$136:
 	; Call 48 printf 0
@@ -1400,30 +1400,30 @@ section .text
 
  stdlib_test$141:
 	; Parameter 72 pointer "%i "
-	mov qword [rbp + 72], @14102$string_25i20#
+	mov qword [rbp + 72], @14084$string_25i20#
 
  stdlib_test$142:
-	; IntegralToIntegral £temporary4527 index
+	; IntegralToIntegral £temporary4508 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  stdlib_test$143:
-	; UnsignedMultiply £temporary4529 £temporary4527 4
+	; UnsignedMultiply £temporary4510 £temporary4508 4
 	xor rdx, rdx
-	mul qword [@14103$int8$4#]
+	mul qword [@14085$int8$4#]
 
  stdlib_test$144:
-	; BinaryAdd £temporary4528 list £temporary4529
+	; BinaryAdd £temporary4509 list £temporary4510
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
  stdlib_test$145:
-	; Dereference £temporary4530 -> £temporary4528 £temporary4528 0
+	; Dereference £temporary4511 -> £temporary4509 £temporary4509 0
 
  stdlib_test$146:
-	; Parameter 80 signedint £temporary4530 -> £temporary4528
+	; Parameter 80 signedint £temporary4511 -> £temporary4509
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1452,7 +1452,7 @@ section .text
 
  stdlib_test$152:
 	; Parameter 72 pointer "\nB List 2: "
-	mov qword [rbp + 72], @14105$string_0AB20List2023A20#
+	mov qword [rbp + 72], @14087$string_0AB20List2023A20#
 
  stdlib_test$153:
 	; Call 48 printf 0
@@ -1511,30 +1511,30 @@ section .text
 
  stdlib_test$165:
 	; Parameter 72 pointer "%i "
-	mov qword [rbp + 72], @14113$string_25i20#
+	mov qword [rbp + 72], @14095$string_25i20#
 
  stdlib_test$166:
-	; IntegralToIntegral £temporary4537 index
+	; IntegralToIntegral £temporary4518 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  stdlib_test$167:
-	; UnsignedMultiply £temporary4539 £temporary4537 4
+	; UnsignedMultiply £temporary4520 £temporary4518 4
 	xor rdx, rdx
-	mul qword [@14114$int8$4#]
+	mul qword [@14096$int8$4#]
 
  stdlib_test$168:
-	; BinaryAdd £temporary4538 list £temporary4539
+	; BinaryAdd £temporary4519 list £temporary4520
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
  stdlib_test$169:
-	; Dereference £temporary4540 -> £temporary4538 £temporary4538 0
+	; Dereference £temporary4521 -> £temporary4519 £temporary4519 0
 
  stdlib_test$170:
-	; Parameter 80 signedint £temporary4540 -> £temporary4538
+	; Parameter 80 signedint £temporary4521 -> £temporary4519
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1563,7 +1563,7 @@ section .text
 
  stdlib_test$176:
 	; Parameter 72 pointer "\nC List 3: "
-	mov qword [rbp + 72], @14116$string_0AC20List2033A20#
+	mov qword [rbp + 72], @14098$string_0AC20List2033A20#
 
  stdlib_test$177:
 	; Call 48 printf 0
@@ -1622,30 +1622,30 @@ section .text
 
  stdlib_test$189:
 	; Parameter 72 pointer "%i "
-	mov qword [rbp + 72], @14124$string_25i20#
+	mov qword [rbp + 72], @14106$string_25i20#
 
  stdlib_test$190:
-	; IntegralToIntegral £temporary4547 index
+	; IntegralToIntegral £temporary4528 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  stdlib_test$191:
-	; UnsignedMultiply £temporary4549 £temporary4547 4
+	; UnsignedMultiply £temporary4530 £temporary4528 4
 	xor rdx, rdx
-	mul qword [@14125$int8$4#]
+	mul qword [@14107$int8$4#]
 
  stdlib_test$192:
-	; BinaryAdd £temporary4548 list £temporary4549
+	; BinaryAdd £temporary4529 list £temporary4530
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
  stdlib_test$193:
-	; Dereference £temporary4550 -> £temporary4548 £temporary4548 0
+	; Dereference £temporary4531 -> £temporary4529 £temporary4529 0
 
  stdlib_test$194:
-	; Parameter 80 signedint £temporary4550 -> £temporary4548
+	; Parameter 80 signedint £temporary4531 -> £temporary4529
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1674,7 +1674,7 @@ section .text
 
  stdlib_test$200:
 	; Parameter 72 pointer "\n\nSearch:\n"
-	mov qword [rbp + 72], @14127$string_0A0ASearch3A0A#
+	mov qword [rbp + 72], @14109$string_0A0ASearch3A0A#
 
  stdlib_test$201:
 	; Call 48 printf 0
@@ -1700,12 +1700,12 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$206:
-	; Address £temporary4555 key
+	; Address £temporary4536 key
 	mov rsi, rbp
 	add rsi, 44
 
  stdlib_test$207:
-	; Parameter 72 pointer £temporary4555
+	; Parameter 72 pointer £temporary4536
 	mov [rbp + 72], rsi
 
  stdlib_test$208:
@@ -1737,13 +1737,13 @@ section .text
 	; PostCall 48
 
  stdlib_test$214:
-	; GetReturnValue £temporary4557
+	; GetReturnValue £temporary4538
 
  stdlib_test$215:
-	; IntegralToIntegral £temporary4558 £temporary4557
+	; IntegralToIntegral £temporary4539 £temporary4538
 
  stdlib_test$216:
-	; Assign p £temporary4558
+	; Assign p £temporary4539
 	mov [rbp + 48], rbx
 
  stdlib_test$217:
@@ -1752,30 +1752,30 @@ section .text
 	je stdlib_test$222
 
  stdlib_test$218:
-	; BinarySubtract £temporary4561 p list
+	; BinarySubtract £temporary4542 p list
 	mov rax, [rbp + 48]
 	mov rbx, rbp
 	add rbx, 24
 	sub rax, rbx
 
  stdlib_test$219:
-	; UnsignedDivide £temporary4560 £temporary4561 4
+	; UnsignedDivide £temporary4541 £temporary4542 4
 	xor rdx, rdx
-	div qword [@14141$int8$4#]
+	div qword [@14123$int8$4#]
 
  stdlib_test$220:
-	; IntegralToIntegral £temporary4563 £temporary4560
+	; IntegralToIntegral £temporary4544 £temporary4541
 
  stdlib_test$221:
 	; Jump 223
 	jmp stdlib_test$223
 
  stdlib_test$222:
-	; Assign £temporary4563 -1
+	; Assign £temporary4544 -1
 	mov eax, -1
 
  stdlib_test$223:
-	; Assign index £temporary4563
+	; Assign index £temporary4544
 	mov [rbp + 56], eax
 
  stdlib_test$224:
@@ -1783,7 +1783,7 @@ section .text
 
  stdlib_test$225:
 	; Parameter 84 pointer "  (%i, %i)\n"
-	mov qword [rbp + 84], @14145$string_20202825i2C2025i290A#
+	mov qword [rbp + 84], @14127$string_20202825i2C2025i290A#
 
  stdlib_test$226:
 	; Parameter 92 signedint key
@@ -1820,7 +1820,7 @@ section .text
 
  stdlib_test$233:
 	; Parameter 68 pointer "\n"
-	mov qword [rbp + 68], @14146$string_0A#
+	mov qword [rbp + 68], @14128$string_0A#
 
  stdlib_test$234:
 	; Call 44 printf 0

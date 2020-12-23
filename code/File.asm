@@ -87,55 +87,55 @@ stderr:
 
 section .data
 
-@2538$EEXIST:
+@2537$EEXIST:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@2539$ENOENT:
+@2538$ENOENT:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@2540$EACCES:
+@2539$EACCES:
 	; Initializer SignedInt 2
 	dd 2
 
 section .data
 
-@2543$SEEK_SET:
+@2542$SEEK_SET:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@2546$SEEK_CUR:
+@2545$SEEK_CUR:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@2549$SEEK_END:
+@2548$SEEK_END:
 	; Initializer SignedInt 2
 	dd 2
 
 section .data
 
-@2552$READ:
+@2551$READ:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@2555$WRITE:
+@2554$WRITE:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@2558$READ_WRITE:
+@2557$READ_WRITE:
 	; Initializer SignedInt 3
 	dd 3
 
@@ -179,13 +179,13 @@ section .text
 
 section .data
 
-@2565$string_r#:
+@2564$string_r#:
 	; Initializer String r
 	db "r", 0
 
 section .data
 
-@2567$string_0Afileexists2025s2025p0A#:
+@2566$string_0Afileexists2025s2025p0A#:
 	; Initializer String \nfileexists %s %p\n
 	db 10, "fileexists %s %p", 10, 0
 
@@ -201,7 +201,7 @@ section .text
 
  fileexistsX$2:
 	; Parameter 64 pointer "r"
-	mov qword [rbp + 64], @2565$string_r#
+	mov qword [rbp + 64], @2564$string_r#
 
  fileexistsX$3:
 	; Call 32 fopen 0
@@ -225,7 +225,7 @@ section .text
 
  fileexistsX$8:
 	; Parameter 64 pointer "\nfileexists %s %p\n"
-	mov qword [rbp + 64], @2567$string_0Afileexists2025s2025p0A#
+	mov qword [rbp + 64], @2566$string_0Afileexists2025s2025p0A#
 
  fileexistsX$9:
 	; Parameter 72 pointer name
@@ -353,37 +353,37 @@ section .text
 
 section .text
 
- @2592$fileopen:
+ @2591$fileopen:
 	; AssignRegister rax 2
 	mov rax, 2
 
- @2592$fileopen$1:
+ @2591$fileopen$1:
 	; IntegralToIntegral £temporary601 name
 	mov rdi, [rbp + 24]
 
- @2592$fileopen$2:
+ @2591$fileopen$2:
 	; AssignRegister rdi £temporary601
 
- @2592$fileopen$3:
+ @2591$fileopen$3:
 	; IntegralToIntegral £temporary603 mode
 	mov si, [rbp + 32]
 	mov rbx, 65535
 	and rsi, rbx
 
- @2592$fileopen$4:
+ @2591$fileopen$4:
 	; AssignRegister rsi £temporary603
 
- @2592$fileopen$5:
+ @2591$fileopen$5:
 	; SysCall
 	syscall
 
- @2592$fileopen$6:
+ @2591$fileopen$6:
 	; InspectRegister £temporary604 eax
 
- @2592$fileopen$7:
+ @2591$fileopen$7:
 	; SetReturnValue
 
- @2592$fileopen$8:
+ @2591$fileopen$8:
 	; Return £temporary604
 	mov ebx, eax
 	mov rax, [rbp]
@@ -391,18 +391,18 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2592$fileopen$9:
+ @2591$fileopen$9:
 	; FunctionEnd fileopen
 
 section .data
 
-@2604$Array_41#:
+@2603$Array_41#:
 	; Initializer Array 41
 	dq 41
 
 section .data
 
-@2607$Array_41#:
+@2606$Array_41#:
 	; Initializer Array 41
 	dq 41
 
@@ -426,7 +426,7 @@ section .text
  fopen$3:
 	; UnsignedMultiply £temporary609 £temporary608 41
 	xor rdx, rdx
-	mul qword [@2604$Array_41#]
+	mul qword [@2603$Array_41#]
 
  fopen$4:
 	; BinaryAdd £temporary610 g_fileArray £temporary609
@@ -463,7 +463,7 @@ section .text
  fopen$11:
 	; UnsignedMultiply £temporary615 £temporary614 41
 	xor rdx, rdx
-	mul qword [@2607$Array_41#]
+	mul qword [@2606$Array_41#]
 
  fopen$12:
 	; BinaryAdd £temporary616 g_fileArray £temporary615
@@ -527,37 +527,37 @@ section .text
 
 section .data
 
-@2620$string_r#:
+@2619$string_r#:
 	; Initializer String r
 	db "r", 0
 
 section .data
 
-@2625$string_w#:
+@2624$string_w#:
 	; Initializer String w
 	db "w", 0
 
 section .data
 
-@2628$string_a#:
+@2627$string_a#:
 	; Initializer String a
 	db "a", 0
 
 section .data
 
-@2639$string_r2B#:
+@2638$string_r2B#:
 	; Initializer String r+
 	db "r+", 0
 
 section .data
 
-@2644$string_w2B#:
+@2643$string_w2B#:
 	; Initializer String w+
 	db "w+", 0
 
 section .data
 
-@2650$string_a2B#:
+@2649$string_a2B#:
 	; Initializer String a+
 	db "a+", 0
 
@@ -577,7 +577,7 @@ section .text
 
  freopen$3:
 	; Parameter 84 pointer "r"
-	mov qword [rbp + 84], @2620$string_r#
+	mov qword [rbp + 84], @2619$string_r#
 
  freopen$4:
 	; Call 52 strcmp 0
@@ -614,7 +614,7 @@ section .text
 	mov qword [rbp + 52], freopen$12
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2592$fileopen
+	jmp @2591$fileopen
 
  freopen$12:
 	; PostCall 52
@@ -640,7 +640,7 @@ section .text
 
  freopen$18:
 	; Parameter 84 pointer "w"
-	mov qword [rbp + 84], @2625$string_w#
+	mov qword [rbp + 84], @2624$string_w#
 
  freopen$19:
 	; Call 52 strcmp 0
@@ -699,7 +699,7 @@ section .text
 
  freopen$32:
 	; Parameter 84 pointer "a"
-	mov qword [rbp + 84], @2628$string_a#
+	mov qword [rbp + 84], @2627$string_a#
 
  freopen$33:
 	; Call 52 strcmp 0
@@ -736,7 +736,7 @@ section .text
 	mov qword [rbp + 52], freopen$41
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2592$fileopen
+	jmp @2591$fileopen
 
  freopen$41:
 	; PostCall 52
@@ -822,7 +822,7 @@ section .text
 
  freopen$61:
 	; Parameter 84 pointer "r+"
-	mov qword [rbp + 84], @2639$string_r2B#
+	mov qword [rbp + 84], @2638$string_r2B#
 
  freopen$62:
 	; Call 52 strcmp 0
@@ -859,7 +859,7 @@ section .text
 	mov qword [rbp + 52], freopen$70
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2592$fileopen
+	jmp @2591$fileopen
 
  freopen$70:
 	; PostCall 52
@@ -885,7 +885,7 @@ section .text
 
  freopen$76:
 	; Parameter 84 pointer "w+"
-	mov qword [rbp + 84], @2644$string_w2B#
+	mov qword [rbp + 84], @2643$string_w2B#
 
  freopen$77:
 	; Call 52 strcmp 0
@@ -948,7 +948,7 @@ section .text
 	mov qword [rbp + 52], freopen$91
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2592$fileopen
+	jmp @2591$fileopen
 
  freopen$91:
 	; PostCall 52
@@ -1003,7 +1003,7 @@ section .text
 
  freopen$104:
 	; Parameter 84 pointer "a+"
-	mov qword [rbp + 84], @2650$string_a2B#
+	mov qword [rbp + 84], @2649$string_a2B#
 
  freopen$105:
 	; Call 52 strcmp 0
@@ -1040,7 +1040,7 @@ section .text
 	mov qword [rbp + 52], freopen$113
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2592$fileopen
+	jmp @2591$fileopen
 
  freopen$113:
 	; PostCall 52
@@ -1212,13 +1212,13 @@ section .text
 
 section .data
 
-@2724$Array_41#:
+@2723$Array_41#:
 	; Initializer Array 41
 	dq 41
 
 section .data
 
-@2726$Array_41#:
+@2725$Array_41#:
 	; Initializer Array 41
 	dq 41
 
@@ -1247,7 +1247,7 @@ section .text
  fflush$4:
 	; UnsignedMultiply £temporary659 £temporary658 41
 	xor rdx, rdx
-	mul qword [@2724$Array_41#]
+	mul qword [@2723$Array_41#]
 
  fflush$5:
 	; BinaryAdd £temporary660 g_fileArray £temporary659
@@ -1274,7 +1274,7 @@ section .text
  fflush$10:
 	; UnsignedMultiply £temporary663 £temporary662 41
 	xor rdx, rdx
-	mul qword [@2726$Array_41#]
+	mul qword [@2725$Array_41#]
 
  fflush$11:
 	; BinaryAdd £temporary664 g_fileArray £temporary663
@@ -1344,13 +1344,13 @@ section .text
 
 section .data
 
-@2750$Array_41#:
+@2749$Array_41#:
 	; Initializer Array 41
 	dq 41
 
 section .data
 
-@2752$Array_41#:
+@2751$Array_41#:
 	; Initializer Array 41
 	dq 41
 
@@ -1411,7 +1411,7 @@ section .text
  fclose$11:
 	; UnsignedMultiply £temporary678 £temporary677 41
 	xor rdx, rdx
-	mul qword [@2750$Array_41#]
+	mul qword [@2749$Array_41#]
 
  fclose$12:
 	; BinaryAdd £temporary679 g_fileArray £temporary678
@@ -1438,7 +1438,7 @@ section .text
  fclose$17:
 	; UnsignedMultiply £temporary682 £temporary681 41
 	xor rdx, rdx
-	mul qword [@2752$Array_41#]
+	mul qword [@2751$Array_41#]
 
  fclose$18:
 	; BinaryAdd £temporary683 g_fileArray £temporary682
@@ -1733,7 +1733,7 @@ section .text
 
 section .data
 
-@2822$string_25c#:
+@2821$string_25c#:
 	; Initializer String %c
 	db "%c", 0
 
@@ -1771,7 +1771,7 @@ section .text
 
  fgets$7:
 	; Parameter 82 pointer "%c"
-	mov qword [rbp + 82], @2822$string_25c#
+	mov qword [rbp + 82], @2821$string_25c#
 
  fgets$8:
 	; Address £temporary707 currChar
@@ -2853,7 +2853,7 @@ section .text
 
 section .data
 
-@2977$string_25s3A2025s2E0A#:
+@2976$string_25s3A2025s2E0A#:
 	; Initializer String %s: %s.\n
 	db "%s: %s.", 10, 0
 
@@ -2864,7 +2864,7 @@ section .text
 
  perror$1:
 	; Parameter 56 pointer "%s: %s.\n"
-	mov qword [rbp + 56], @2977$string_25s3A2025s2E0A#
+	mov qword [rbp + 56], @2976$string_25s3A2025s2E0A#
 
  perror$2:
 	; Parameter 64 pointer s

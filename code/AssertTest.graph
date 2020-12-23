@@ -6,6 +6,6 @@ assert_testX
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
-assert_test2X
+assert_test2
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>

@@ -1,91 +1,91 @@
 1:	
 
-setjmp:	; InspectRegister £temporary811 bp
+setjmp:	; InspectRegister £temporary621 bp
 3:	
 
-setjmp$1:	; Assign bp_pointer £temporary811
-4:		mov [bp + 8], t405
+setjmp$1:	; Assign bp_pointer £temporary621
+4:		mov [bp + 8], t331
 6:	
 
-setjmp$2:	; Deref £temporary812 -> buf buf 0
-7:		mov a406, [bp + 6]
+setjmp$2:	; Deref £temporary622 -> buf buf 0
+7:		mov a332, [bp + 6]
 9:	
 
-setjmp$3:	; Deref £temporary813 -> bp_pointer bp_pointer 0
-10:		mov a407, [bp + 8]
+setjmp$3:	; Deref £temporary623 -> bp_pointer bp_pointer 0
+10:		mov a333, [bp + 8]
 12:	
 
-setjmp$4:	; Assign £temporary812 -> buf £temporary813 -> bp_pointer
-13:		mov t408, [a407]
-14:		mov [a406], t408
+setjmp$4:	; Assign £temporary622 -> buf £temporary623 -> bp_pointer
+13:		mov t334, [a333]
+14:		mov [a332], t334
 16:	
 
-setjmp$5:	; Deref £temporary814 -> buf buf 2
-17:		mov a409, [bp + 6]
+setjmp$5:	; Deref £temporary624 -> buf buf 2
+17:		mov a335, [bp + 6]
 19:	
 
-setjmp$6:	; Deref £temporary815 -> bp_pointer bp_pointer 2
-20:		mov a410, [bp + 8]
+setjmp$6:	; Deref £temporary625 -> bp_pointer bp_pointer 2
+20:		mov a336, [bp + 8]
 22:	
 
-setjmp$7:	; Assign £temporary814 -> buf £temporary815 -> bp_pointer
-23:		mov t411, [a410 + 2]
-24:		mov [a409 + 2], t411
+setjmp$7:	; Assign £temporary624 -> buf £temporary625 -> bp_pointer
+23:		mov t337, [a336 + 2]
+24:		mov [a335 + 2], t337
 26:	
 
-setjmp$8:	; Deref £temporary816 -> buf buf 4
-27:		mov a412, [bp + 6]
+setjmp$8:	; Deref £temporary626 -> buf buf 4
+27:		mov a338, [bp + 6]
 29:	
 
-setjmp$9:	; Deref £temporary817 -> bp_pointer bp_pointer 4
-30:		mov a413, [bp + 8]
+setjmp$9:	; Deref £temporary627 -> bp_pointer bp_pointer 4
+30:		mov a339, [bp + 8]
 32:	
 
-setjmp$10:	; Assign £temporary816 -> buf £temporary817 -> bp_pointer
-33:		mov t414, [a413 + 4]
-34:		mov [a412 + 4], t414
+setjmp$10:	; Assign £temporary626 -> buf £temporary627 -> bp_pointer
+33:		mov t340, [a339 + 4]
+34:		mov [a338 + 4], t340
 36:	
 
 setjmp$11:	; SetReturnValue 0
-37:		mov a415, 0
+37:		mov a341, 0
 39:	
 
 setjmp$12:	; Return 0
-40:		mov t416, [bp]
+40:		mov t342, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t416
+43:		jmp t342
 45:	
 
 setjmp$13:	; FunctionEnd setjmp
 1:	
 
 longjmp:	; AssignRegister bx return_value
-2:		mov a417, [bp + 8]
+2:		mov a343, [bp + 8]
 4:	
 
-longjmp$1:	; Deref £temporary820 -> buf buf 0
-5:		mov a418, [bp + 6]
+longjmp$1:	; Deref £temporary630 -> buf buf 0
+5:		mov a344, [bp + 6]
 7:	
 
-longjmp$2:	; AssignRegister cx £temporary820 -> buf
-8:		mov t419, [a418]
+longjmp$2:	; AssignRegister cx £temporary630 -> buf
+8:		mov t345, [a344]
 10:	
 
-longjmp$3:	; Deref £temporary822 -> buf buf 4
-11:		mov a420, [bp + 6]
+longjmp$3:	; Deref £temporary632 -> buf buf 4
+11:		mov a346, [bp + 6]
 13:	
 
-longjmp$4:	; AssignRegister di £temporary822 -> buf
-14:		mov t421, [a420 + 4]
+longjmp$4:	; AssignRegister di £temporary632 -> buf
+14:		mov t347, [a346 + 4]
 16:	
 
-longjmp$5:	; Deref £temporary824 -> buf buf 2
-17:		mov a422, [bp + 6]
+longjmp$5:	; Deref £temporary634 -> buf buf 2
+17:		mov a348, [bp + 6]
 19:	
 
-longjmp$6:	; AssignRegister bp £temporary824 -> buf
-20:		mov t423, [a422 + 2]
+longjmp$6:	; AssignRegister bp £temporary634 -> buf
+20:		mov t349, [a348 + 2]
 22:	
 
 longjmp$7:	; JumpRegister cx
@@ -93,10 +93,10 @@ longjmp$7:	; JumpRegister cx
 25:	
 
 longjmp$8:	; Return 0
-26:		mov t424, [bp]
+26:		mov t350, [bp]
 27:		mov di, [bp + 4]
 28:		mov bp, [bp + 2]
-29:		jmp t424
+29:		jmp t350
 31:	
 
 longjmp$9:	; FunctionEnd longjmp

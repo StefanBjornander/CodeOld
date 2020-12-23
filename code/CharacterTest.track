@@ -4,20 +4,20 @@ character_testX:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.S
 3:	
 
 character_testX$1:	; Parameter 7 string_ascii2025i0A# 6
-4:		mov word [bp + 13], @9441$string_ascii2025i0A#
+4:		mov word [bp + 13], @9049$string_ascii2025i0A#
 6:	
 
-character_testX$2:	; IntegralToIntegral £temporary4268 c
-7:		mov a2623, [bp + 6]
-9:		and a2623, 255
-11:		cmp a2623, 0
+character_testX$2:	; IntegralToIntegral £temporary4069 c
+7:		mov a2541, [bp + 6]
+9:		and a2541, 255
+11:		cmp a2541, 0
 12:		jge character_testX$3
-13:		neg a2623
-15:		neg a2623
+13:		neg a2541
+15:		neg a2541
 17:	
 
-character_testX$3:	; Parameter 7 £temporary4268 8
-18:		mov [bp + 15], a2623
+character_testX$3:	; Parameter 7 £temporary4069 8
+18:		mov [bp + 15], a2541
 20:	
 
 character_testX$4:	; Call 7 printf 0
@@ -36,36 +36,36 @@ character_testX$6:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler
 32:	
 
 character_testX$7:	; Parameter 7 string_islower282725c2729203D2025s0A# 6
-33:		mov word [bp + 13], @9444$string_islower282725c2729203D2025s0A#
+33:		mov word [bp + 13], @9052$string_islower282725c2729203D2025s0A#
 35:	
 
-character_testX$8:	; IntegralToIntegral £temporary4270 c
-36:		mov a2624, [bp + 6]
-38:		and a2624, 255
-40:		cmp a2624, 0
+character_testX$8:	; IntegralToIntegral £temporary4071 c
+36:		mov a2542, [bp + 6]
+38:		and a2542, 255
+40:		cmp a2542, 0
 41:		jge character_testX$9
-42:		neg a2624
-44:		neg a2624
+42:		neg a2542
+44:		neg a2542
 46:	
 
-character_testX$9:	; Parameter 7 £temporary4270 8
-47:		mov [bp + 15], a2624
+character_testX$9:	; Parameter 7 £temporary4071 8
+47:		mov [bp + 15], a2542
 49:	
 
 character_testX$10:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 51:	
 
-character_testX$11:	; IntegralToIntegral £temporary4271 c
-52:		mov a2625, [bp + 6]
-54:		and a2625, 255
-56:		cmp a2625, 0
+character_testX$11:	; IntegralToIntegral £temporary4072 c
+52:		mov a2543, [bp + 6]
+54:		and a2543, 255
+56:		cmp a2543, 0
 57:		jge character_testX$12
-58:		neg a2625
-60:		neg a2625
+58:		neg a2543
+60:		neg a2543
 62:	
 
-character_testX$12:	; Parameter 7 £temporary4271 16
-63:		mov [bp + 23], a2625
+character_testX$12:	; Parameter 7 £temporary4072 16
+63:		mov [bp + 23], a2543
 65:	
 
 character_testX$13:	; Call 7 islower 10
@@ -78,28 +78,28 @@ character_testX$13:	; Call 7 islower 10
 character_testX$14:	; PostCall 7
 73:	
 
-character_testX$15:	; GetReturnValue £temporary4272
+character_testX$15:	; GetReturnValue £temporary4073
 78:	
 
-character_testX$16:	; Equal 19 £temporary4272 0
-79:		cmp t2627, 0
+character_testX$16:	; Equal 19 £temporary4073 0
+79:		cmp t2545, 0
 80:		je character_testX$19
 82:	
 
-character_testX$17:	; Assign £temporary4277 string_Yes#
-83:		mov t2628, @9451$string_Yes#
+character_testX$17:	; Assign £temporary4078 string_Yes#
+83:		mov t2546, @9059$string_Yes#
 85:	
 
 character_testX$18:	; Goto 20
 86:		jmp character_testX$20
 88:	
 
-character_testX$19:	; Assign £temporary4277 string_No#
-89:		mov t2629, @9452$string_No#
+character_testX$19:	; Assign £temporary4078 string_No#
+89:		mov t2547, @9060$string_No#
 91:	
 
-character_testX$20:	; Parameter 7 £temporary4277 10
-92:		mov [bp + 17], t2629
+character_testX$20:	; Parameter 7 £temporary4078 10
+92:		mov [bp + 17], t2547
 94:	
 
 character_testX$21:	; Call 7 printf 0
@@ -118,36 +118,36 @@ character_testX$23:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompile
 106:	
 
 character_testX$24:	; Parameter 7 string_isupper282725c2729203D2025s0A# 6
-107:		mov word [bp + 13], @9460$string_isupper282725c2729203D2025s0A#
+107:		mov word [bp + 13], @9068$string_isupper282725c2729203D2025s0A#
 109:	
 
-character_testX$25:	; IntegralToIntegral £temporary4279 c
-110:		mov a2630, [bp + 6]
-112:		and a2630, 255
-114:		cmp a2630, 0
+character_testX$25:	; IntegralToIntegral £temporary4080 c
+110:		mov a2548, [bp + 6]
+112:		and a2548, 255
+114:		cmp a2548, 0
 115:		jge character_testX$26
-116:		neg a2630
-118:		neg a2630
+116:		neg a2548
+118:		neg a2548
 120:	
 
-character_testX$26:	; Parameter 7 £temporary4279 8
-121:		mov [bp + 15], a2630
+character_testX$26:	; Parameter 7 £temporary4080 8
+121:		mov [bp + 15], a2548
 123:	
 
 character_testX$27:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 125:	
 
-character_testX$28:	; IntegralToIntegral £temporary4280 c
-126:		mov a2631, [bp + 6]
-128:		and a2631, 255
-130:		cmp a2631, 0
+character_testX$28:	; IntegralToIntegral £temporary4081 c
+126:		mov a2549, [bp + 6]
+128:		and a2549, 255
+130:		cmp a2549, 0
 131:		jge character_testX$29
-132:		neg a2631
-134:		neg a2631
+132:		neg a2549
+134:		neg a2549
 136:	
 
-character_testX$29:	; Parameter 7 £temporary4280 16
-137:		mov [bp + 23], a2631
+character_testX$29:	; Parameter 7 £temporary4081 16
+137:		mov [bp + 23], a2549
 139:	
 
 character_testX$30:	; Call 7 isupper 10
@@ -160,28 +160,28 @@ character_testX$30:	; Call 7 isupper 10
 character_testX$31:	; PostCall 7
 147:	
 
-character_testX$32:	; GetReturnValue £temporary4281
+character_testX$32:	; GetReturnValue £temporary4082
 152:	
 
-character_testX$33:	; Equal 36 £temporary4281 0
-153:		cmp t2633, 0
+character_testX$33:	; Equal 36 £temporary4082 0
+153:		cmp t2551, 0
 154:		je character_testX$36
 156:	
 
-character_testX$34:	; Assign £temporary4286 string_Yes#
-157:		mov t2634, @9467$string_Yes#
+character_testX$34:	; Assign £temporary4087 string_Yes#
+157:		mov t2552, @9075$string_Yes#
 159:	
 
 character_testX$35:	; Goto 37
 160:		jmp character_testX$37
 162:	
 
-character_testX$36:	; Assign £temporary4286 string_No#
-163:		mov t2635, @9468$string_No#
+character_testX$36:	; Assign £temporary4087 string_No#
+163:		mov t2553, @9076$string_No#
 165:	
 
-character_testX$37:	; Parameter 7 £temporary4286 10
-166:		mov [bp + 17], t2635
+character_testX$37:	; Parameter 7 £temporary4087 10
+166:		mov [bp + 17], t2553
 168:	
 
 character_testX$38:	; Call 7 printf 0
@@ -200,36 +200,36 @@ character_testX$40:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompile
 180:	
 
 character_testX$41:	; Parameter 7 string_isalpha282725c2729203D2025s0A# 6
-181:		mov word [bp + 13], @9476$string_isalpha282725c2729203D2025s0A#
+181:		mov word [bp + 13], @9084$string_isalpha282725c2729203D2025s0A#
 183:	
 
-character_testX$42:	; IntegralToIntegral £temporary4288 c
-184:		mov a2636, [bp + 6]
-186:		and a2636, 255
-188:		cmp a2636, 0
+character_testX$42:	; IntegralToIntegral £temporary4089 c
+184:		mov a2554, [bp + 6]
+186:		and a2554, 255
+188:		cmp a2554, 0
 189:		jge character_testX$43
-190:		neg a2636
-192:		neg a2636
+190:		neg a2554
+192:		neg a2554
 194:	
 
-character_testX$43:	; Parameter 7 £temporary4288 8
-195:		mov [bp + 15], a2636
+character_testX$43:	; Parameter 7 £temporary4089 8
+195:		mov [bp + 15], a2554
 197:	
 
 character_testX$44:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 199:	
 
-character_testX$45:	; IntegralToIntegral £temporary4289 c
-200:		mov a2637, [bp + 6]
-202:		and a2637, 255
-204:		cmp a2637, 0
+character_testX$45:	; IntegralToIntegral £temporary4090 c
+200:		mov a2555, [bp + 6]
+202:		and a2555, 255
+204:		cmp a2555, 0
 205:		jge character_testX$46
-206:		neg a2637
-208:		neg a2637
+206:		neg a2555
+208:		neg a2555
 210:	
 
-character_testX$46:	; Parameter 7 £temporary4289 16
-211:		mov [bp + 23], a2637
+character_testX$46:	; Parameter 7 £temporary4090 16
+211:		mov [bp + 23], a2555
 213:	
 
 character_testX$47:	; Call 7 isalpha 10
@@ -242,28 +242,28 @@ character_testX$47:	; Call 7 isalpha 10
 character_testX$48:	; PostCall 7
 221:	
 
-character_testX$49:	; GetReturnValue £temporary4290
+character_testX$49:	; GetReturnValue £temporary4091
 226:	
 
-character_testX$50:	; Equal 53 £temporary4290 0
-227:		cmp t2639, 0
+character_testX$50:	; Equal 53 £temporary4091 0
+227:		cmp t2557, 0
 228:		je character_testX$53
 230:	
 
-character_testX$51:	; Assign £temporary4295 string_Yes#
-231:		mov t2640, @9483$string_Yes#
+character_testX$51:	; Assign £temporary4096 string_Yes#
+231:		mov t2558, @9091$string_Yes#
 233:	
 
 character_testX$52:	; Goto 54
 234:		jmp character_testX$54
 236:	
 
-character_testX$53:	; Assign £temporary4295 string_No#
-237:		mov t2641, @9484$string_No#
+character_testX$53:	; Assign £temporary4096 string_No#
+237:		mov t2559, @9092$string_No#
 239:	
 
-character_testX$54:	; Parameter 7 £temporary4295 10
-240:		mov [bp + 17], t2641
+character_testX$54:	; Parameter 7 £temporary4096 10
+240:		mov [bp + 17], t2559
 242:	
 
 character_testX$55:	; Call 7 printf 0
@@ -282,36 +282,36 @@ character_testX$57:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompile
 254:	
 
 character_testX$58:	; Parameter 7 string_isdigit282725c2729203D2025s0A# 6
-255:		mov word [bp + 13], @9492$string_isdigit282725c2729203D2025s0A#
+255:		mov word [bp + 13], @9100$string_isdigit282725c2729203D2025s0A#
 257:	
 
-character_testX$59:	; IntegralToIntegral £temporary4297 c
-258:		mov a2642, [bp + 6]
-260:		and a2642, 255
-262:		cmp a2642, 0
+character_testX$59:	; IntegralToIntegral £temporary4098 c
+258:		mov a2560, [bp + 6]
+260:		and a2560, 255
+262:		cmp a2560, 0
 263:		jge character_testX$60
-264:		neg a2642
-266:		neg a2642
+264:		neg a2560
+266:		neg a2560
 268:	
 
-character_testX$60:	; Parameter 7 £temporary4297 8
-269:		mov [bp + 15], a2642
+character_testX$60:	; Parameter 7 £temporary4098 8
+269:		mov [bp + 15], a2560
 271:	
 
 character_testX$61:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 273:	
 
-character_testX$62:	; IntegralToIntegral £temporary4298 c
-274:		mov a2643, [bp + 6]
-276:		and a2643, 255
-278:		cmp a2643, 0
+character_testX$62:	; IntegralToIntegral £temporary4099 c
+274:		mov a2561, [bp + 6]
+276:		and a2561, 255
+278:		cmp a2561, 0
 279:		jge character_testX$63
-280:		neg a2643
-282:		neg a2643
+280:		neg a2561
+282:		neg a2561
 284:	
 
-character_testX$63:	; Parameter 7 £temporary4298 16
-285:		mov [bp + 23], a2643
+character_testX$63:	; Parameter 7 £temporary4099 16
+285:		mov [bp + 23], a2561
 287:	
 
 character_testX$64:	; Call 7 isdigit 10
@@ -324,28 +324,28 @@ character_testX$64:	; Call 7 isdigit 10
 character_testX$65:	; PostCall 7
 295:	
 
-character_testX$66:	; GetReturnValue £temporary4299
+character_testX$66:	; GetReturnValue £temporary4100
 300:	
 
-character_testX$67:	; Equal 70 £temporary4299 0
-301:		cmp t2645, 0
+character_testX$67:	; Equal 70 £temporary4100 0
+301:		cmp t2563, 0
 302:		je character_testX$70
 304:	
 
-character_testX$68:	; Assign £temporary4304 string_Yes#
-305:		mov t2646, @9499$string_Yes#
+character_testX$68:	; Assign £temporary4105 string_Yes#
+305:		mov t2564, @9107$string_Yes#
 307:	
 
 character_testX$69:	; Goto 71
 308:		jmp character_testX$71
 310:	
 
-character_testX$70:	; Assign £temporary4304 string_No#
-311:		mov t2647, @9500$string_No#
+character_testX$70:	; Assign £temporary4105 string_No#
+311:		mov t2565, @9108$string_No#
 313:	
 
-character_testX$71:	; Parameter 7 £temporary4304 10
-314:		mov [bp + 17], t2647
+character_testX$71:	; Parameter 7 £temporary4105 10
+314:		mov [bp + 17], t2565
 316:	
 
 character_testX$72:	; Call 7 printf 0
@@ -364,36 +364,36 @@ character_testX$74:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompile
 328:	
 
 character_testX$75:	; Parameter 7 string_isalnum282725c2729203D2025s0A# 6
-329:		mov word [bp + 13], @9508$string_isalnum282725c2729203D2025s0A#
+329:		mov word [bp + 13], @9116$string_isalnum282725c2729203D2025s0A#
 331:	
 
-character_testX$76:	; IntegralToIntegral £temporary4306 c
-332:		mov a2648, [bp + 6]
-334:		and a2648, 255
-336:		cmp a2648, 0
+character_testX$76:	; IntegralToIntegral £temporary4107 c
+332:		mov a2566, [bp + 6]
+334:		and a2566, 255
+336:		cmp a2566, 0
 337:		jge character_testX$77
-338:		neg a2648
-340:		neg a2648
+338:		neg a2566
+340:		neg a2566
 342:	
 
-character_testX$77:	; Parameter 7 £temporary4306 8
-343:		mov [bp + 15], a2648
+character_testX$77:	; Parameter 7 £temporary4107 8
+343:		mov [bp + 15], a2566
 345:	
 
 character_testX$78:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 347:	
 
-character_testX$79:	; IntegralToIntegral £temporary4307 c
-348:		mov a2649, [bp + 6]
-350:		and a2649, 255
-352:		cmp a2649, 0
+character_testX$79:	; IntegralToIntegral £temporary4108 c
+348:		mov a2567, [bp + 6]
+350:		and a2567, 255
+352:		cmp a2567, 0
 353:		jge character_testX$80
-354:		neg a2649
-356:		neg a2649
+354:		neg a2567
+356:		neg a2567
 358:	
 
-character_testX$80:	; Parameter 7 £temporary4307 16
-359:		mov [bp + 23], a2649
+character_testX$80:	; Parameter 7 £temporary4108 16
+359:		mov [bp + 23], a2567
 361:	
 
 character_testX$81:	; Call 7 isalnum 10
@@ -406,28 +406,28 @@ character_testX$81:	; Call 7 isalnum 10
 character_testX$82:	; PostCall 7
 369:	
 
-character_testX$83:	; GetReturnValue £temporary4308
+character_testX$83:	; GetReturnValue £temporary4109
 374:	
 
-character_testX$84:	; Equal 87 £temporary4308 0
-375:		cmp t2651, 0
+character_testX$84:	; Equal 87 £temporary4109 0
+375:		cmp t2569, 0
 376:		je character_testX$87
 378:	
 
-character_testX$85:	; Assign £temporary4313 string_Yes#
-379:		mov t2652, @9515$string_Yes#
+character_testX$85:	; Assign £temporary4114 string_Yes#
+379:		mov t2570, @9123$string_Yes#
 381:	
 
 character_testX$86:	; Goto 88
 382:		jmp character_testX$88
 384:	
 
-character_testX$87:	; Assign £temporary4313 string_No#
-385:		mov t2653, @9516$string_No#
+character_testX$87:	; Assign £temporary4114 string_No#
+385:		mov t2571, @9124$string_No#
 387:	
 
-character_testX$88:	; Parameter 7 £temporary4313 10
-388:		mov [bp + 17], t2653
+character_testX$88:	; Parameter 7 £temporary4114 10
+388:		mov [bp + 17], t2571
 390:	
 
 character_testX$89:	; Call 7 printf 0
@@ -446,36 +446,36 @@ character_testX$91:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompile
 402:	
 
 character_testX$92:	; Parameter 7 string_isxdigit282725c2729203D2025s0A# 6
-403:		mov word [bp + 13], @9524$string_isxdigit282725c2729203D2025s0A#
+403:		mov word [bp + 13], @9132$string_isxdigit282725c2729203D2025s0A#
 405:	
 
-character_testX$93:	; IntegralToIntegral £temporary4315 c
-406:		mov a2654, [bp + 6]
-408:		and a2654, 255
-410:		cmp a2654, 0
+character_testX$93:	; IntegralToIntegral £temporary4116 c
+406:		mov a2572, [bp + 6]
+408:		and a2572, 255
+410:		cmp a2572, 0
 411:		jge character_testX$94
-412:		neg a2654
-414:		neg a2654
+412:		neg a2572
+414:		neg a2572
 416:	
 
-character_testX$94:	; Parameter 7 £temporary4315 8
-417:		mov [bp + 15], a2654
+character_testX$94:	; Parameter 7 £temporary4116 8
+417:		mov [bp + 15], a2572
 419:	
 
 character_testX$95:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 421:	
 
-character_testX$96:	; IntegralToIntegral £temporary4316 c
-422:		mov a2655, [bp + 6]
-424:		and a2655, 255
-426:		cmp a2655, 0
+character_testX$96:	; IntegralToIntegral £temporary4117 c
+422:		mov a2573, [bp + 6]
+424:		and a2573, 255
+426:		cmp a2573, 0
 427:		jge character_testX$97
-428:		neg a2655
-430:		neg a2655
+428:		neg a2573
+430:		neg a2573
 432:	
 
-character_testX$97:	; Parameter 7 £temporary4316 16
-433:		mov [bp + 23], a2655
+character_testX$97:	; Parameter 7 £temporary4117 16
+433:		mov [bp + 23], a2573
 435:	
 
 character_testX$98:	; Call 7 isxdigit 10
@@ -488,28 +488,28 @@ character_testX$98:	; Call 7 isxdigit 10
 character_testX$99:	; PostCall 7
 443:	
 
-character_testX$100:	; GetReturnValue £temporary4317
+character_testX$100:	; GetReturnValue £temporary4118
 448:	
 
-character_testX$101:	; Equal 104 £temporary4317 0
-449:		cmp t2657, 0
+character_testX$101:	; Equal 104 £temporary4118 0
+449:		cmp t2575, 0
 450:		je character_testX$104
 452:	
 
-character_testX$102:	; Assign £temporary4322 string_Yes#
-453:		mov t2658, @9531$string_Yes#
+character_testX$102:	; Assign £temporary4123 string_Yes#
+453:		mov t2576, @9139$string_Yes#
 455:	
 
 character_testX$103:	; Goto 105
 456:		jmp character_testX$105
 458:	
 
-character_testX$104:	; Assign £temporary4322 string_No#
-459:		mov t2659, @9532$string_No#
+character_testX$104:	; Assign £temporary4123 string_No#
+459:		mov t2577, @9140$string_No#
 461:	
 
-character_testX$105:	; Parameter 7 £temporary4322 10
-462:		mov [bp + 17], t2659
+character_testX$105:	; Parameter 7 £temporary4123 10
+462:		mov [bp + 17], t2577
 464:	
 
 character_testX$106:	; Call 7 printf 0
@@ -528,36 +528,36 @@ character_testX$108:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompil
 476:	
 
 character_testX$109:	; Parameter 7 string_isgraph282725c2729203D2025s0A# 6
-477:		mov word [bp + 13], @9540$string_isgraph282725c2729203D2025s0A#
+477:		mov word [bp + 13], @9148$string_isgraph282725c2729203D2025s0A#
 479:	
 
-character_testX$110:	; IntegralToIntegral £temporary4324 c
-480:		mov a2660, [bp + 6]
-482:		and a2660, 255
-484:		cmp a2660, 0
+character_testX$110:	; IntegralToIntegral £temporary4125 c
+480:		mov a2578, [bp + 6]
+482:		and a2578, 255
+484:		cmp a2578, 0
 485:		jge character_testX$111
-486:		neg a2660
-488:		neg a2660
+486:		neg a2578
+488:		neg a2578
 490:	
 
-character_testX$111:	; Parameter 7 £temporary4324 8
-491:		mov [bp + 15], a2660
+character_testX$111:	; Parameter 7 £temporary4125 8
+491:		mov [bp + 15], a2578
 493:	
 
 character_testX$112:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 495:	
 
-character_testX$113:	; IntegralToIntegral £temporary4325 c
-496:		mov a2661, [bp + 6]
-498:		and a2661, 255
-500:		cmp a2661, 0
+character_testX$113:	; IntegralToIntegral £temporary4126 c
+496:		mov a2579, [bp + 6]
+498:		and a2579, 255
+500:		cmp a2579, 0
 501:		jge character_testX$114
-502:		neg a2661
-504:		neg a2661
+502:		neg a2579
+504:		neg a2579
 506:	
 
-character_testX$114:	; Parameter 7 £temporary4325 16
-507:		mov [bp + 23], a2661
+character_testX$114:	; Parameter 7 £temporary4126 16
+507:		mov [bp + 23], a2579
 509:	
 
 character_testX$115:	; Call 7 isgraph 10
@@ -570,28 +570,28 @@ character_testX$115:	; Call 7 isgraph 10
 character_testX$116:	; PostCall 7
 517:	
 
-character_testX$117:	; GetReturnValue £temporary4326
+character_testX$117:	; GetReturnValue £temporary4127
 522:	
 
-character_testX$118:	; Equal 121 £temporary4326 0
-523:		cmp t2663, 0
+character_testX$118:	; Equal 121 £temporary4127 0
+523:		cmp t2581, 0
 524:		je character_testX$121
 526:	
 
-character_testX$119:	; Assign £temporary4331 string_Yes#
-527:		mov t2664, @9547$string_Yes#
+character_testX$119:	; Assign £temporary4132 string_Yes#
+527:		mov t2582, @9155$string_Yes#
 529:	
 
 character_testX$120:	; Goto 122
 530:		jmp character_testX$122
 532:	
 
-character_testX$121:	; Assign £temporary4331 string_No#
-533:		mov t2665, @9548$string_No#
+character_testX$121:	; Assign £temporary4132 string_No#
+533:		mov t2583, @9156$string_No#
 535:	
 
-character_testX$122:	; Parameter 7 £temporary4331 10
-536:		mov [bp + 17], t2665
+character_testX$122:	; Parameter 7 £temporary4132 10
+536:		mov [bp + 17], t2583
 538:	
 
 character_testX$123:	; Call 7 printf 0
@@ -610,36 +610,36 @@ character_testX$125:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompil
 550:	
 
 character_testX$126:	; Parameter 7 string_isprint282725c2729203D2025s0A# 6
-551:		mov word [bp + 13], @9556$string_isprint282725c2729203D2025s0A#
+551:		mov word [bp + 13], @9164$string_isprint282725c2729203D2025s0A#
 553:	
 
-character_testX$127:	; IntegralToIntegral £temporary4333 c
-554:		mov a2666, [bp + 6]
-556:		and a2666, 255
-558:		cmp a2666, 0
+character_testX$127:	; IntegralToIntegral £temporary4134 c
+554:		mov a2584, [bp + 6]
+556:		and a2584, 255
+558:		cmp a2584, 0
 559:		jge character_testX$128
-560:		neg a2666
-562:		neg a2666
+560:		neg a2584
+562:		neg a2584
 564:	
 
-character_testX$128:	; Parameter 7 £temporary4333 8
-565:		mov [bp + 15], a2666
+character_testX$128:	; Parameter 7 £temporary4134 8
+565:		mov [bp + 15], a2584
 567:	
 
 character_testX$129:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 569:	
 
-character_testX$130:	; IntegralToIntegral £temporary4334 c
-570:		mov a2667, [bp + 6]
-572:		and a2667, 255
-574:		cmp a2667, 0
+character_testX$130:	; IntegralToIntegral £temporary4135 c
+570:		mov a2585, [bp + 6]
+572:		and a2585, 255
+574:		cmp a2585, 0
 575:		jge character_testX$131
-576:		neg a2667
-578:		neg a2667
+576:		neg a2585
+578:		neg a2585
 580:	
 
-character_testX$131:	; Parameter 7 £temporary4334 16
-581:		mov [bp + 23], a2667
+character_testX$131:	; Parameter 7 £temporary4135 16
+581:		mov [bp + 23], a2585
 583:	
 
 character_testX$132:	; Call 7 isprint 10
@@ -652,28 +652,28 @@ character_testX$132:	; Call 7 isprint 10
 character_testX$133:	; PostCall 7
 591:	
 
-character_testX$134:	; GetReturnValue £temporary4335
+character_testX$134:	; GetReturnValue £temporary4136
 596:	
 
-character_testX$135:	; Equal 138 £temporary4335 0
-597:		cmp t2669, 0
+character_testX$135:	; Equal 138 £temporary4136 0
+597:		cmp t2587, 0
 598:		je character_testX$138
 600:	
 
-character_testX$136:	; Assign £temporary4340 string_Yes#
-601:		mov t2670, @9563$string_Yes#
+character_testX$136:	; Assign £temporary4141 string_Yes#
+601:		mov t2588, @9171$string_Yes#
 603:	
 
 character_testX$137:	; Goto 139
 604:		jmp character_testX$139
 606:	
 
-character_testX$138:	; Assign £temporary4340 string_No#
-607:		mov t2671, @9564$string_No#
+character_testX$138:	; Assign £temporary4141 string_No#
+607:		mov t2589, @9172$string_No#
 609:	
 
-character_testX$139:	; Parameter 7 £temporary4340 10
-610:		mov [bp + 17], t2671
+character_testX$139:	; Parameter 7 £temporary4141 10
+610:		mov [bp + 17], t2589
 612:	
 
 character_testX$140:	; Call 7 printf 0
@@ -692,36 +692,36 @@ character_testX$142:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompil
 624:	
 
 character_testX$143:	; Parameter 7 string_ispunct282725c2729203D2025s0A# 6
-625:		mov word [bp + 13], @9572$string_ispunct282725c2729203D2025s0A#
+625:		mov word [bp + 13], @9180$string_ispunct282725c2729203D2025s0A#
 627:	
 
-character_testX$144:	; IntegralToIntegral £temporary4342 c
-628:		mov a2672, [bp + 6]
-630:		and a2672, 255
-632:		cmp a2672, 0
+character_testX$144:	; IntegralToIntegral £temporary4143 c
+628:		mov a2590, [bp + 6]
+630:		and a2590, 255
+632:		cmp a2590, 0
 633:		jge character_testX$145
-634:		neg a2672
-636:		neg a2672
+634:		neg a2590
+636:		neg a2590
 638:	
 
-character_testX$145:	; Parameter 7 £temporary4342 8
-639:		mov [bp + 15], a2672
+character_testX$145:	; Parameter 7 £temporary4143 8
+639:		mov [bp + 15], a2590
 641:	
 
 character_testX$146:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 643:	
 
-character_testX$147:	; IntegralToIntegral £temporary4343 c
-644:		mov a2673, [bp + 6]
-646:		and a2673, 255
-648:		cmp a2673, 0
+character_testX$147:	; IntegralToIntegral £temporary4144 c
+644:		mov a2591, [bp + 6]
+646:		and a2591, 255
+648:		cmp a2591, 0
 649:		jge character_testX$148
-650:		neg a2673
-652:		neg a2673
+650:		neg a2591
+652:		neg a2591
 654:	
 
-character_testX$148:	; Parameter 7 £temporary4343 16
-655:		mov [bp + 23], a2673
+character_testX$148:	; Parameter 7 £temporary4144 16
+655:		mov [bp + 23], a2591
 657:	
 
 character_testX$149:	; Call 7 ispunct 10
@@ -734,28 +734,28 @@ character_testX$149:	; Call 7 ispunct 10
 character_testX$150:	; PostCall 7
 665:	
 
-character_testX$151:	; GetReturnValue £temporary4344
+character_testX$151:	; GetReturnValue £temporary4145
 670:	
 
-character_testX$152:	; Equal 155 £temporary4344 0
-671:		cmp t2675, 0
+character_testX$152:	; Equal 155 £temporary4145 0
+671:		cmp t2593, 0
 672:		je character_testX$155
 674:	
 
-character_testX$153:	; Assign £temporary4349 string_Yes#
-675:		mov t2676, @9579$string_Yes#
+character_testX$153:	; Assign £temporary4150 string_Yes#
+675:		mov t2594, @9187$string_Yes#
 677:	
 
 character_testX$154:	; Goto 156
 678:		jmp character_testX$156
 680:	
 
-character_testX$155:	; Assign £temporary4349 string_No#
-681:		mov t2677, @9580$string_No#
+character_testX$155:	; Assign £temporary4150 string_No#
+681:		mov t2595, @9188$string_No#
 683:	
 
-character_testX$156:	; Parameter 7 £temporary4349 10
-684:		mov [bp + 17], t2677
+character_testX$156:	; Parameter 7 £temporary4150 10
+684:		mov [bp + 17], t2595
 686:	
 
 character_testX$157:	; Call 7 printf 0
@@ -774,36 +774,36 @@ character_testX$159:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompil
 698:	
 
 character_testX$160:	; Parameter 7 string_iscntrl282725c2729203D2025s0A# 6
-699:		mov word [bp + 13], @9588$string_iscntrl282725c2729203D2025s0A#
+699:		mov word [bp + 13], @9196$string_iscntrl282725c2729203D2025s0A#
 701:	
 
-character_testX$161:	; IntegralToIntegral £temporary4351 c
-702:		mov a2678, [bp + 6]
-704:		and a2678, 255
-706:		cmp a2678, 0
+character_testX$161:	; IntegralToIntegral £temporary4152 c
+702:		mov a2596, [bp + 6]
+704:		and a2596, 255
+706:		cmp a2596, 0
 707:		jge character_testX$162
-708:		neg a2678
-710:		neg a2678
+708:		neg a2596
+710:		neg a2596
 712:	
 
-character_testX$162:	; Parameter 7 £temporary4351 8
-713:		mov [bp + 15], a2678
+character_testX$162:	; Parameter 7 £temporary4152 8
+713:		mov [bp + 15], a2596
 715:	
 
 character_testX$163:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 717:	
 
-character_testX$164:	; IntegralToIntegral £temporary4352 c
-718:		mov a2679, [bp + 6]
-720:		and a2679, 255
-722:		cmp a2679, 0
+character_testX$164:	; IntegralToIntegral £temporary4153 c
+718:		mov a2597, [bp + 6]
+720:		and a2597, 255
+722:		cmp a2597, 0
 723:		jge character_testX$165
-724:		neg a2679
-726:		neg a2679
+724:		neg a2597
+726:		neg a2597
 728:	
 
-character_testX$165:	; Parameter 7 £temporary4352 16
-729:		mov [bp + 23], a2679
+character_testX$165:	; Parameter 7 £temporary4153 16
+729:		mov [bp + 23], a2597
 731:	
 
 character_testX$166:	; Call 7 iscntrl 10
@@ -816,28 +816,28 @@ character_testX$166:	; Call 7 iscntrl 10
 character_testX$167:	; PostCall 7
 739:	
 
-character_testX$168:	; GetReturnValue £temporary4353
+character_testX$168:	; GetReturnValue £temporary4154
 744:	
 
-character_testX$169:	; Equal 172 £temporary4353 0
-745:		cmp t2681, 0
+character_testX$169:	; Equal 172 £temporary4154 0
+745:		cmp t2599, 0
 746:		je character_testX$172
 748:	
 
-character_testX$170:	; Assign £temporary4358 string_Yes#
-749:		mov t2682, @9595$string_Yes#
+character_testX$170:	; Assign £temporary4159 string_Yes#
+749:		mov t2600, @9203$string_Yes#
 751:	
 
 character_testX$171:	; Goto 173
 752:		jmp character_testX$173
 754:	
 
-character_testX$172:	; Assign £temporary4358 string_No#
-755:		mov t2683, @9596$string_No#
+character_testX$172:	; Assign £temporary4159 string_No#
+755:		mov t2601, @9204$string_No#
 757:	
 
-character_testX$173:	; Parameter 7 £temporary4358 10
-758:		mov [bp + 17], t2683
+character_testX$173:	; Parameter 7 £temporary4159 10
+758:		mov [bp + 17], t2601
 760:	
 
 character_testX$174:	; Call 7 printf 0
@@ -856,36 +856,36 @@ character_testX$176:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompil
 772:	
 
 character_testX$177:	; Parameter 7 string_isspace282725c2729203D2025s0A# 6
-773:		mov word [bp + 13], @9604$string_isspace282725c2729203D2025s0A#
+773:		mov word [bp + 13], @9212$string_isspace282725c2729203D2025s0A#
 775:	
 
-character_testX$178:	; IntegralToIntegral £temporary4360 c
-776:		mov a2684, [bp + 6]
-778:		and a2684, 255
-780:		cmp a2684, 0
+character_testX$178:	; IntegralToIntegral £temporary4161 c
+776:		mov a2602, [bp + 6]
+778:		and a2602, 255
+780:		cmp a2602, 0
 781:		jge character_testX$179
-782:		neg a2684
-784:		neg a2684
+782:		neg a2602
+784:		neg a2602
 786:	
 
-character_testX$179:	; Parameter 7 £temporary4360 8
-787:		mov [bp + 15], a2684
+character_testX$179:	; Parameter 7 £temporary4161 8
+787:		mov [bp + 15], a2602
 789:	
 
 character_testX$180:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 791:	
 
-character_testX$181:	; IntegralToIntegral £temporary4361 c
-792:		mov a2685, [bp + 6]
-794:		and a2685, 255
-796:		cmp a2685, 0
+character_testX$181:	; IntegralToIntegral £temporary4162 c
+792:		mov a2603, [bp + 6]
+794:		and a2603, 255
+796:		cmp a2603, 0
 797:		jge character_testX$182
-798:		neg a2685
-800:		neg a2685
+798:		neg a2603
+800:		neg a2603
 802:	
 
-character_testX$182:	; Parameter 7 £temporary4361 16
-803:		mov [bp + 23], a2685
+character_testX$182:	; Parameter 7 £temporary4162 16
+803:		mov [bp + 23], a2603
 805:	
 
 character_testX$183:	; Call 7 isspace 10
@@ -898,28 +898,28 @@ character_testX$183:	; Call 7 isspace 10
 character_testX$184:	; PostCall 7
 813:	
 
-character_testX$185:	; GetReturnValue £temporary4362
+character_testX$185:	; GetReturnValue £temporary4163
 818:	
 
-character_testX$186:	; Equal 189 £temporary4362 0
-819:		cmp t2687, 0
+character_testX$186:	; Equal 189 £temporary4163 0
+819:		cmp t2605, 0
 820:		je character_testX$189
 822:	
 
-character_testX$187:	; Assign £temporary4367 string_Yes#
-823:		mov t2688, @9611$string_Yes#
+character_testX$187:	; Assign £temporary4168 string_Yes#
+823:		mov t2606, @9219$string_Yes#
 825:	
 
 character_testX$188:	; Goto 190
 826:		jmp character_testX$190
 828:	
 
-character_testX$189:	; Assign £temporary4367 string_No#
-829:		mov t2689, @9612$string_No#
+character_testX$189:	; Assign £temporary4168 string_No#
+829:		mov t2607, @9220$string_No#
 831:	
 
-character_testX$190:	; Parameter 7 £temporary4367 10
-832:		mov [bp + 17], t2689
+character_testX$190:	; Parameter 7 £temporary4168 10
+832:		mov [bp + 17], t2607
 834:	
 
 character_testX$191:	; Call 7 printf 0
@@ -938,36 +938,36 @@ character_testX$193:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompil
 846:	
 
 character_testX$194:	; Parameter 7 string_tolower282725c2729203D202725c270A# 6
-847:		mov word [bp + 13], @9620$string_tolower282725c2729203D202725c270A#
+847:		mov word [bp + 13], @9228$string_tolower282725c2729203D202725c270A#
 849:	
 
-character_testX$195:	; IntegralToIntegral £temporary4369 c
-850:		mov a2690, [bp + 6]
-852:		and a2690, 255
-854:		cmp a2690, 0
+character_testX$195:	; IntegralToIntegral £temporary4170 c
+850:		mov a2608, [bp + 6]
+852:		and a2608, 255
+854:		cmp a2608, 0
 855:		jge character_testX$196
-856:		neg a2690
-858:		neg a2690
+856:		neg a2608
+858:		neg a2608
 860:	
 
-character_testX$196:	; Parameter 7 £temporary4369 8
-861:		mov [bp + 15], a2690
+character_testX$196:	; Parameter 7 £temporary4170 8
+861:		mov [bp + 15], a2608
 863:	
 
 character_testX$197:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 865:	
 
-character_testX$198:	; IntegralToIntegral £temporary4370 c
-866:		mov a2691, [bp + 6]
-868:		and a2691, 255
-870:		cmp a2691, 0
+character_testX$198:	; IntegralToIntegral £temporary4171 c
+866:		mov a2609, [bp + 6]
+868:		and a2609, 255
+870:		cmp a2609, 0
 871:		jge character_testX$199
-872:		neg a2691
-874:		neg a2691
+872:		neg a2609
+874:		neg a2609
 876:	
 
-character_testX$199:	; Parameter 7 £temporary4370 16
-877:		mov [bp + 23], a2691
+character_testX$199:	; Parameter 7 £temporary4171 16
+877:		mov [bp + 23], a2609
 879:	
 
 character_testX$200:	; Call 7 tolower 10
@@ -980,26 +980,26 @@ character_testX$200:	; Call 7 tolower 10
 character_testX$201:	; PostCall 7
 887:	
 
-character_testX$202:	; GetReturnValue £temporary4371
+character_testX$202:	; GetReturnValue £temporary4172
 892:	
 
-character_testX$203:	; IntegralToIntegral £temporary4372 £temporary4371
-895:		cmp t2693, 0
+character_testX$203:	; IntegralToIntegral £temporary4173 £temporary4172
+895:		cmp t2611, 0
 896:		jge character_testX$204
-897:		neg t2693
-899:		neg t2693
+897:		neg t2611
+899:		neg t2611
 901:	
 
-character_testX$204:	; IntegralToIntegral £temporary4373 £temporary4372
-903:		and t2693, 255
-905:		cmp t2693, 0
+character_testX$204:	; IntegralToIntegral £temporary4174 £temporary4173
+903:		and t2611, 255
+905:		cmp t2611, 0
 906:		jge character_testX$205
-907:		neg t2693
-909:		neg t2693
+907:		neg t2611
+909:		neg t2611
 911:	
 
-character_testX$205:	; Parameter 7 £temporary4373 10
-912:		mov [bp + 17], t2693
+character_testX$205:	; Parameter 7 £temporary4174 10
+912:		mov [bp + 17], t2611
 914:	
 
 character_testX$206:	; Call 7 printf 0
@@ -1018,36 +1018,36 @@ character_testX$208:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompil
 926:	
 
 character_testX$209:	; Parameter 7 string_toupper282725c2729203D202725c270A0A# 6
-927:		mov word [bp + 13], @9627$string_toupper282725c2729203D202725c270A0A#
+927:		mov word [bp + 13], @9235$string_toupper282725c2729203D202725c270A0A#
 929:	
 
-character_testX$210:	; IntegralToIntegral £temporary4375 c
-930:		mov a2694, [bp + 6]
-932:		and a2694, 255
-934:		cmp a2694, 0
+character_testX$210:	; IntegralToIntegral £temporary4176 c
+930:		mov a2612, [bp + 6]
+932:		and a2612, 255
+934:		cmp a2612, 0
 935:		jge character_testX$211
-936:		neg a2694
-938:		neg a2694
+936:		neg a2612
+938:		neg a2612
 940:	
 
-character_testX$211:	; Parameter 7 £temporary4375 8
-941:		mov [bp + 15], a2694
+character_testX$211:	; Parameter 7 £temporary4176 8
+941:		mov [bp + 15], a2612
 943:	
 
 character_testX$212:	; CallHeader 7 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 945:	
 
-character_testX$213:	; IntegralToIntegral £temporary4376 c
-946:		mov a2695, [bp + 6]
-948:		and a2695, 255
-950:		cmp a2695, 0
+character_testX$213:	; IntegralToIntegral £temporary4177 c
+946:		mov a2613, [bp + 6]
+948:		and a2613, 255
+950:		cmp a2613, 0
 951:		jge character_testX$214
-952:		neg a2695
-954:		neg a2695
+952:		neg a2613
+954:		neg a2613
 956:	
 
-character_testX$214:	; Parameter 7 £temporary4376 16
-957:		mov [bp + 23], a2695
+character_testX$214:	; Parameter 7 £temporary4177 16
+957:		mov [bp + 23], a2613
 959:	
 
 character_testX$215:	; Call 7 toupper 10
@@ -1060,26 +1060,26 @@ character_testX$215:	; Call 7 toupper 10
 character_testX$216:	; PostCall 7
 967:	
 
-character_testX$217:	; GetReturnValue £temporary4377
+character_testX$217:	; GetReturnValue £temporary4178
 972:	
 
-character_testX$218:	; IntegralToIntegral £temporary4378 £temporary4377
-975:		cmp t2697, 0
+character_testX$218:	; IntegralToIntegral £temporary4179 £temporary4178
+975:		cmp t2615, 0
 976:		jge character_testX$219
-977:		neg t2697
-979:		neg t2697
+977:		neg t2615
+979:		neg t2615
 981:	
 
-character_testX$219:	; IntegralToIntegral £temporary4379 £temporary4378
-983:		and t2697, 255
-985:		cmp t2697, 0
+character_testX$219:	; IntegralToIntegral £temporary4180 £temporary4179
+983:		and t2615, 255
+985:		cmp t2615, 0
 986:		jge character_testX$220
-987:		neg t2697
-989:		neg t2697
+987:		neg t2615
+989:		neg t2615
 991:	
 
-character_testX$220:	; Parameter 7 £temporary4379 10
-992:		mov [bp + 17], t2697
+character_testX$220:	; Parameter 7 £temporary4180 10
+992:		mov [bp + 17], t2615
 994:	
 
 character_testX$221:	; Call 7 printf 0
@@ -1095,10 +1095,10 @@ character_testX$222:	; PostCall 7
 1004:	
 
 character_testX$223:	; Return 0
-1005:		mov t2698, [bp]
+1005:		mov t2616, [bp]
 1006:		mov di, [bp + 4]
 1007:		mov bp, [bp + 2]
-1008:		jmp t2698
+1008:		jmp t2616
 1010:	
 
 character_testX$224:	; FunctionEnd character_testX
@@ -1224,10 +1224,10 @@ character_test$27:	; PostCall 6
 92:	
 
 character_test$28:	; Return 0
-93:		mov t2699, [bp]
+93:		mov t2617, [bp]
 94:		mov di, [bp + 4]
 95:		mov bp, [bp + 2]
-96:		jmp t2699
+96:		jmp t2617
 98:	
 
 character_test$29:	; FunctionEnd character_test

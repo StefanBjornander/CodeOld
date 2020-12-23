@@ -241,87 +241,87 @@ section .text
 
 section .text
 
- @3528$strnchr:
+ @3527$strnchr:
 	; IntegralToIntegral £temporary872 i
 	mov eax, [rbp + 36]
 	cmp eax, 0
-	jge @3528$strnchr$1
+	jge @3527$strnchr$1
 	neg eax
 	neg al
 
- @3528$strnchr$1:
+ @3527$strnchr$1:
 	; Assign c £temporary872
 	mov [rbp + 44], al
 
- @3528$strnchr$2:
+ @3527$strnchr$2:
 	; Assign index 0
 	mov dword [rbp + 40], 0
 
- @3528$strnchr$3:
+ @3527$strnchr$3:
 	; SignedGreaterThanEqual 16 index size
 	mov eax, [rbp + 32]
 	cmp [rbp + 40], eax
-	jge @3528$strnchr$16
+	jge @3527$strnchr$16
 
- @3528$strnchr$4:
+ @3527$strnchr$4:
 	; IntegralToIntegral £temporary876 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- @3528$strnchr$5:
+ @3527$strnchr$5:
 	; BinaryAdd £temporary878 text £temporary876
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- @3528$strnchr$6:
+ @3527$strnchr$6:
 	; Dereference £temporary875 -> £temporary878 £temporary878 0
 
- @3528$strnchr$7:
+ @3527$strnchr$7:
 	; NotEqual 14 £temporary875 -> £temporary878 c
 	mov al, [rbp + 44]
 	cmp [rsi], al
-	jne @3528$strnchr$14
+	jne @3527$strnchr$14
 
- @3528$strnchr$8:
+ @3527$strnchr$8:
 	; IntegralToIntegral £temporary881 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- @3528$strnchr$9:
+ @3527$strnchr$9:
 	; BinaryAdd £temporary883 text £temporary881
 	mov rbx, [rbp + 24]
 	add rbx, rax
 
- @3528$strnchr$10:
+ @3527$strnchr$10:
 	; Dereference £temporary880 -> £temporary883 £temporary883 0
 
- @3528$strnchr$11:
+ @3527$strnchr$11:
 	; Address £temporary884 £temporary880 -> £temporary883
 
- @3528$strnchr$12:
+ @3527$strnchr$12:
 	; SetReturnValue
 
- @3528$strnchr$13:
+ @3527$strnchr$13:
 	; Return £temporary884
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3528$strnchr$14:
+ @3527$strnchr$14:
 	; BinaryAdd index index 1
 	inc dword [rbp + 40]
 
- @3528$strnchr$15:
+ @3527$strnchr$15:
 	; Jump 3
-	jmp @3528$strnchr$3
+	jmp @3527$strnchr$3
 
- @3528$strnchr$16:
+ @3527$strnchr$16:
 	; SetReturnValue
 
- @3528$strnchr$17:
+ @3527$strnchr$17:
 	; Return 0
 	mov rbx, 0
 	mov rax, [rbp]
@@ -329,7 +329,7 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3528$strnchr$18:
+ @3527$strnchr$18:
 	; FunctionEnd strnchr
 
 section .text
@@ -457,7 +457,7 @@ section .text
 	mov qword [rbp + 53], scanPattern$27
 	mov [rbp + 61], rbp
 	add rbp, 53
-	jmp @3528$strnchr
+	jmp @3527$strnchr
 
  scanPattern$27:
 	; PostCall 53
@@ -506,7 +506,7 @@ section .text
 	mov qword [rbp + 53], scanPattern$37
 	mov [rbp + 61], rbp
 	add rbp, 53
-	jmp @3528$strnchr
+	jmp @3527$strnchr
 
  scanPattern$37:
 	; PostCall 53
@@ -627,7 +627,7 @@ section .text
 	mov qword [rbp + 53], scanPattern$64
 	mov [rbp + 61], rbp
 	add rbp, 53
-	jmp @3528$strnchr
+	jmp @3527$strnchr
 
  scanPattern$64:
 	; PostCall 53
@@ -676,7 +676,7 @@ section .text
 	mov qword [rbp + 53], scanPattern$74
 	mov [rbp + 61], rbp
 	add rbp, 53
-	jmp @3528$strnchr
+	jmp @3527$strnchr
 
  scanPattern$74:
 	; PostCall 53
@@ -1339,264 +1339,264 @@ section .text
 
 section .text
 
- @3667$isDigitInBase:
+ @3666$isDigitInBase:
 	; PreCall 29 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3667$isDigitInBase$1:
+ @3666$isDigitInBase$1:
 	; IntegralToIntegral £temporary1012 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3667$isDigitInBase$2
+	jge @3666$isDigitInBase$2
 	neg al
 	neg eax
 
- @3667$isDigitInBase$2:
+ @3666$isDigitInBase$2:
 	; Parameter 53 signedint £temporary1012
 	mov [rbp + 53], eax
 
- @3667$isDigitInBase$3:
+ @3666$isDigitInBase$3:
 	; Call 29 isdigit 0
-	mov qword [rbp + 29], @3667$isDigitInBase$4
+	mov qword [rbp + 29], @3666$isDigitInBase$4
 	mov [rbp + 37], rbp
 	add rbp, 29
 	jmp isdigit
 
- @3667$isDigitInBase$4:
+ @3666$isDigitInBase$4:
 	; PostCall 29
 
- @3667$isDigitInBase$5:
+ @3666$isDigitInBase$5:
 	; GetReturnValue £temporary1013
 
- @3667$isDigitInBase$6:
+ @3666$isDigitInBase$6:
 	; Equal 17 £temporary1013 0
 	cmp ebx, 0
-	je @3667$isDigitInBase$17
+	je @3666$isDigitInBase$17
 
- @3667$isDigitInBase$7:
+ @3666$isDigitInBase$7:
 	; BinarySubtract £temporary1014 c 48
 	mov al, [rbp + 24]
 	sub al, 48
 
- @3667$isDigitInBase$8:
+ @3666$isDigitInBase$8:
 	; IntegralToIntegral £temporary1015 £temporary1014
 	and eax, 255
 	cmp al, 0
-	jge @3667$isDigitInBase$9
+	jge @3666$isDigitInBase$9
 	neg al
 	neg eax
 
- @3667$isDigitInBase$9:
+ @3666$isDigitInBase$9:
 	; Assign value £temporary1015
 	mov [rbp + 29], eax
 
- @3667$isDigitInBase$10:
+ @3666$isDigitInBase$10:
 	; SignedLessThan 14 value 0
 	cmp dword [rbp + 29], 0
-	jl @3667$isDigitInBase$14
+	jl @3666$isDigitInBase$14
 
- @3667$isDigitInBase$11:
+ @3666$isDigitInBase$11:
 	; SignedGreaterThanEqual 14 value base
 	mov eax, [rbp + 25]
 	cmp [rbp + 29], eax
-	jge @3667$isDigitInBase$14
+	jge @3666$isDigitInBase$14
 
- @3667$isDigitInBase$12:
+ @3666$isDigitInBase$12:
 	; Assign £temporary1019 1
 	mov ebx, 1
 
- @3667$isDigitInBase$13:
+ @3666$isDigitInBase$13:
 	; Jump 15
-	jmp @3667$isDigitInBase$15
+	jmp @3666$isDigitInBase$15
 
- @3667$isDigitInBase$14:
+ @3666$isDigitInBase$14:
 	; Assign £temporary1019 0
 	mov ebx, 0
 
- @3667$isDigitInBase$15:
+ @3666$isDigitInBase$15:
 	; SetReturnValue
 
- @3667$isDigitInBase$16:
+ @3666$isDigitInBase$16:
 	; Return £temporary1019
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3667$isDigitInBase$17:
+ @3666$isDigitInBase$17:
 	; PreCall 29 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3667$isDigitInBase$18:
+ @3666$isDigitInBase$18:
 	; IntegralToIntegral £temporary1020 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3667$isDigitInBase$19
+	jge @3666$isDigitInBase$19
 	neg al
 	neg eax
 
- @3667$isDigitInBase$19:
+ @3666$isDigitInBase$19:
 	; Parameter 53 signedint £temporary1020
 	mov [rbp + 53], eax
 
- @3667$isDigitInBase$20:
+ @3666$isDigitInBase$20:
 	; Call 29 islower 0
-	mov qword [rbp + 29], @3667$isDigitInBase$21
+	mov qword [rbp + 29], @3666$isDigitInBase$21
 	mov [rbp + 37], rbp
 	add rbp, 29
 	jmp islower
 
- @3667$isDigitInBase$21:
+ @3666$isDigitInBase$21:
 	; PostCall 29
 
- @3667$isDigitInBase$22:
+ @3666$isDigitInBase$22:
 	; GetReturnValue £temporary1021
 
- @3667$isDigitInBase$23:
+ @3666$isDigitInBase$23:
 	; Equal 34 £temporary1021 0
 	cmp ebx, 0
-	je @3667$isDigitInBase$34
+	je @3666$isDigitInBase$34
 
- @3667$isDigitInBase$24:
+ @3666$isDigitInBase$24:
 	; BinarySubtract £temporary1022 c 97
 	mov al, [rbp + 24]
 	sub al, 97
 
- @3667$isDigitInBase$25:
+ @3666$isDigitInBase$25:
 	; IntegralToIntegral £temporary1023 £temporary1022
 	and eax, 255
 	cmp al, 0
-	jge @3667$isDigitInBase$26
+	jge @3666$isDigitInBase$26
 	neg al
 	neg eax
 
- @3667$isDigitInBase$26:
+ @3666$isDigitInBase$26:
 	; BinaryAdd value £temporary1023 10
 	add eax, 10
 	mov [rbp + 29], eax
 
- @3667$isDigitInBase$27:
+ @3666$isDigitInBase$27:
 	; SignedLessThan 31 value 0
 	cmp dword [rbp + 29], 0
-	jl @3667$isDigitInBase$31
+	jl @3666$isDigitInBase$31
 
- @3667$isDigitInBase$28:
+ @3666$isDigitInBase$28:
 	; SignedGreaterThanEqual 31 value base
 	mov eax, [rbp + 25]
 	cmp [rbp + 29], eax
-	jge @3667$isDigitInBase$31
+	jge @3666$isDigitInBase$31
 
- @3667$isDigitInBase$29:
+ @3666$isDigitInBase$29:
 	; Assign £temporary1028 1
 	mov ebx, 1
 
- @3667$isDigitInBase$30:
+ @3666$isDigitInBase$30:
 	; Jump 32
-	jmp @3667$isDigitInBase$32
+	jmp @3666$isDigitInBase$32
 
- @3667$isDigitInBase$31:
+ @3666$isDigitInBase$31:
 	; Assign £temporary1028 0
 	mov ebx, 0
 
- @3667$isDigitInBase$32:
+ @3666$isDigitInBase$32:
 	; SetReturnValue
 
- @3667$isDigitInBase$33:
+ @3666$isDigitInBase$33:
 	; Return £temporary1028
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3667$isDigitInBase$34:
+ @3666$isDigitInBase$34:
 	; PreCall 29 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3667$isDigitInBase$35:
+ @3666$isDigitInBase$35:
 	; IntegralToIntegral £temporary1029 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3667$isDigitInBase$36
+	jge @3666$isDigitInBase$36
 	neg al
 	neg eax
 
- @3667$isDigitInBase$36:
+ @3666$isDigitInBase$36:
 	; Parameter 53 signedint £temporary1029
 	mov [rbp + 53], eax
 
- @3667$isDigitInBase$37:
+ @3666$isDigitInBase$37:
 	; Call 29 isupper 0
-	mov qword [rbp + 29], @3667$isDigitInBase$38
+	mov qword [rbp + 29], @3666$isDigitInBase$38
 	mov [rbp + 37], rbp
 	add rbp, 29
 	jmp isupper
 
- @3667$isDigitInBase$38:
+ @3666$isDigitInBase$38:
 	; PostCall 29
 
- @3667$isDigitInBase$39:
+ @3666$isDigitInBase$39:
 	; GetReturnValue £temporary1030
 
- @3667$isDigitInBase$40:
+ @3666$isDigitInBase$40:
 	; Equal 51 £temporary1030 0
 	cmp ebx, 0
-	je @3667$isDigitInBase$51
+	je @3666$isDigitInBase$51
 
- @3667$isDigitInBase$41:
+ @3666$isDigitInBase$41:
 	; BinarySubtract £temporary1031 c 65
 	mov al, [rbp + 24]
 	sub al, 65
 
- @3667$isDigitInBase$42:
+ @3666$isDigitInBase$42:
 	; IntegralToIntegral £temporary1032 £temporary1031
 	and eax, 255
 	cmp al, 0
-	jge @3667$isDigitInBase$43
+	jge @3666$isDigitInBase$43
 	neg al
 	neg eax
 
- @3667$isDigitInBase$43:
+ @3666$isDigitInBase$43:
 	; BinaryAdd value £temporary1032 10
 	add eax, 10
 	mov [rbp + 29], eax
 
- @3667$isDigitInBase$44:
+ @3666$isDigitInBase$44:
 	; SignedLessThan 48 value 0
 	cmp dword [rbp + 29], 0
-	jl @3667$isDigitInBase$48
+	jl @3666$isDigitInBase$48
 
- @3667$isDigitInBase$45:
+ @3666$isDigitInBase$45:
 	; SignedGreaterThanEqual 48 value base
 	mov eax, [rbp + 25]
 	cmp [rbp + 29], eax
-	jge @3667$isDigitInBase$48
+	jge @3666$isDigitInBase$48
 
- @3667$isDigitInBase$46:
+ @3666$isDigitInBase$46:
 	; Assign £temporary1037 1
 	mov ebx, 1
 
- @3667$isDigitInBase$47:
+ @3666$isDigitInBase$47:
 	; Jump 49
-	jmp @3667$isDigitInBase$49
+	jmp @3666$isDigitInBase$49
 
- @3667$isDigitInBase$48:
+ @3666$isDigitInBase$48:
 	; Assign £temporary1037 0
 	mov ebx, 0
 
- @3667$isDigitInBase$49:
+ @3666$isDigitInBase$49:
 	; SetReturnValue
 
- @3667$isDigitInBase$50:
+ @3666$isDigitInBase$50:
 	; Return £temporary1037
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3667$isDigitInBase$51:
+ @3666$isDigitInBase$51:
 	; SetReturnValue
 
- @3667$isDigitInBase$52:
+ @3666$isDigitInBase$52:
 	; Return 0
 	mov ebx, 0
 	mov rax, [rbp]
@@ -1604,194 +1604,194 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3667$isDigitInBase$53:
+ @3666$isDigitInBase$53:
 	; FunctionEnd isDigitInBase
 
 section .text
 
- @3702$digitToValue:
+ @3701$digitToValue:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3702$digitToValue$1:
+ @3701$digitToValue$1:
 	; IntegralToIntegral £temporary1041 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3702$digitToValue$2
+	jge @3701$digitToValue$2
 	neg al
 	neg eax
 
- @3702$digitToValue$2:
+ @3701$digitToValue$2:
 	; Parameter 49 signedint £temporary1041
 	mov [rbp + 49], eax
 
- @3702$digitToValue$3:
+ @3701$digitToValue$3:
 	; Call 25 isdigit 0
-	mov qword [rbp + 25], @3702$digitToValue$4
+	mov qword [rbp + 25], @3701$digitToValue$4
 	mov [rbp + 33], rbp
 	add rbp, 25
 	jmp isdigit
 
- @3702$digitToValue$4:
+ @3701$digitToValue$4:
 	; PostCall 25
 
- @3702$digitToValue$5:
+ @3701$digitToValue$5:
 	; GetReturnValue £temporary1042
 
- @3702$digitToValue$6:
+ @3701$digitToValue$6:
 	; Equal 11 £temporary1042 0
 	cmp ebx, 0
-	je @3702$digitToValue$11
+	je @3701$digitToValue$11
 
- @3702$digitToValue$7:
+ @3701$digitToValue$7:
 	; BinarySubtract £temporary1043 c 48
 	mov bl, [rbp + 24]
 	sub bl, 48
 
- @3702$digitToValue$8:
+ @3701$digitToValue$8:
 	; IntegralToIntegral £temporary1044 £temporary1043
 	and ebx, 255
 	cmp bl, 0
-	jge @3702$digitToValue$9
+	jge @3701$digitToValue$9
 	neg bl
 	neg ebx
 
- @3702$digitToValue$9:
+ @3701$digitToValue$9:
 	; SetReturnValue
 
- @3702$digitToValue$10:
+ @3701$digitToValue$10:
 	; Return £temporary1044
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3702$digitToValue$11:
+ @3701$digitToValue$11:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3702$digitToValue$12:
+ @3701$digitToValue$12:
 	; IntegralToIntegral £temporary1045 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3702$digitToValue$13
+	jge @3701$digitToValue$13
 	neg al
 	neg eax
 
- @3702$digitToValue$13:
+ @3701$digitToValue$13:
 	; Parameter 49 signedint £temporary1045
 	mov [rbp + 49], eax
 
- @3702$digitToValue$14:
+ @3701$digitToValue$14:
 	; Call 25 islower 0
-	mov qword [rbp + 25], @3702$digitToValue$15
+	mov qword [rbp + 25], @3701$digitToValue$15
 	mov [rbp + 33], rbp
 	add rbp, 25
 	jmp islower
 
- @3702$digitToValue$15:
+ @3701$digitToValue$15:
 	; PostCall 25
 
- @3702$digitToValue$16:
+ @3701$digitToValue$16:
 	; GetReturnValue £temporary1046
 
- @3702$digitToValue$17:
+ @3701$digitToValue$17:
 	; Equal 23 £temporary1046 0
 	cmp ebx, 0
-	je @3702$digitToValue$23
+	je @3701$digitToValue$23
 
- @3702$digitToValue$18:
+ @3701$digitToValue$18:
 	; BinarySubtract £temporary1047 c 97
 	mov bl, [rbp + 24]
 	sub bl, 97
 
- @3702$digitToValue$19:
+ @3701$digitToValue$19:
 	; IntegralToIntegral £temporary1048 £temporary1047
 	and ebx, 255
 	cmp bl, 0
-	jge @3702$digitToValue$20
+	jge @3701$digitToValue$20
 	neg bl
 	neg ebx
 
- @3702$digitToValue$20:
+ @3701$digitToValue$20:
 	; BinaryAdd £temporary1049 £temporary1048 10
 	add ebx, 10
 
- @3702$digitToValue$21:
+ @3701$digitToValue$21:
 	; SetReturnValue
 
- @3702$digitToValue$22:
+ @3701$digitToValue$22:
 	; Return £temporary1049
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3702$digitToValue$23:
+ @3701$digitToValue$23:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3702$digitToValue$24:
+ @3701$digitToValue$24:
 	; IntegralToIntegral £temporary1050 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3702$digitToValue$25
+	jge @3701$digitToValue$25
 	neg al
 	neg eax
 
- @3702$digitToValue$25:
+ @3701$digitToValue$25:
 	; Parameter 49 signedint £temporary1050
 	mov [rbp + 49], eax
 
- @3702$digitToValue$26:
+ @3701$digitToValue$26:
 	; Call 25 isupper 0
-	mov qword [rbp + 25], @3702$digitToValue$27
+	mov qword [rbp + 25], @3701$digitToValue$27
 	mov [rbp + 33], rbp
 	add rbp, 25
 	jmp isupper
 
- @3702$digitToValue$27:
+ @3701$digitToValue$27:
 	; PostCall 25
 
- @3702$digitToValue$28:
+ @3701$digitToValue$28:
 	; GetReturnValue £temporary1051
 
- @3702$digitToValue$29:
+ @3701$digitToValue$29:
 	; Equal 35 £temporary1051 0
 	cmp ebx, 0
-	je @3702$digitToValue$35
+	je @3701$digitToValue$35
 
- @3702$digitToValue$30:
+ @3701$digitToValue$30:
 	; BinarySubtract £temporary1052 c 65
 	mov bl, [rbp + 24]
 	sub bl, 65
 
- @3702$digitToValue$31:
+ @3701$digitToValue$31:
 	; IntegralToIntegral £temporary1053 £temporary1052
 	and ebx, 255
 	cmp bl, 0
-	jge @3702$digitToValue$32
+	jge @3701$digitToValue$32
 	neg bl
 	neg ebx
 
- @3702$digitToValue$32:
+ @3701$digitToValue$32:
 	; BinaryAdd £temporary1054 £temporary1053 10
 	add ebx, 10
 
- @3702$digitToValue$33:
+ @3701$digitToValue$33:
 	; SetReturnValue
 
- @3702$digitToValue$34:
+ @3701$digitToValue$34:
 	; Return £temporary1054
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3702$digitToValue$35:
+ @3701$digitToValue$35:
 	; SetReturnValue
 
- @3702$digitToValue$36:
+ @3701$digitToValue$36:
 	; Return 0
 	mov ebx, 0
 	mov rax, [rbp]
@@ -1799,7 +1799,7 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3702$digitToValue$37:
+ @3701$digitToValue$37:
 	; FunctionEnd digitToValue
 
 section .text
@@ -2074,7 +2074,7 @@ section .text
 	mov qword [rbp + 45], scanLongInt$63
 	mov [rbp + 53], rbp
 	add rbp, 45
-	jmp @3667$isDigitInBase
+	jmp @3666$isDigitInBase
 
  scanLongInt$63:
 	; PostCall 45
@@ -2117,7 +2117,7 @@ section .text
 	mov qword [rbp + 45], scanLongInt$71
 	mov [rbp + 53], rbp
 	add rbp, 45
-	jmp @3702$digitToValue
+	jmp @3701$digitToValue
 
  scanLongInt$71:
 	; PostCall 45
@@ -2456,7 +2456,7 @@ section .text
 	mov qword [rbp + 49], scanUnsignedLongInt$54
 	mov [rbp + 57], rbp
 	add rbp, 49
-	jmp @3667$isDigitInBase
+	jmp @3666$isDigitInBase
 
  scanUnsignedLongInt$54:
 	; PostCall 49
@@ -2495,7 +2495,7 @@ section .text
 	mov qword [rbp + 49], scanUnsignedLongInt$62
 	mov [rbp + 57], rbp
 	add rbp, 49
-	jmp @3702$digitToValue
+	jmp @3701$digitToValue
 
  scanUnsignedLongInt$62:
 	; PostCall 49
@@ -2583,7 +2583,7 @@ section .text
 
 section .data
 
-@3830$float8$10.0#:
+@3829$float8$10.0#:
 	; Initializer LongDouble 10.0
 	dq 10.0
 
@@ -2595,7 +2595,7 @@ container4bytes#:
 
 section .data
 
-@3841$float8$10.0#:
+@3840$float8$10.0#:
 	; Initializer LongDouble 10.0
 	dq 10.0
 
@@ -2607,7 +2607,7 @@ container8bytes#:
 
 section .data
 
-@3854$float8$10.0#:
+@3853$float8$10.0#:
 	; Initializer Double 10.0
 	dq 10.0
 
@@ -2809,7 +2809,7 @@ section .text
 
  scanLongDouble$45:
 	; PushFloat 10.0
-	fld qword [@3830$float8$10.0#]
+	fld qword [@3829$float8$10.0#]
 
  scanLongDouble$46:
 	; PushFloat value
@@ -2938,7 +2938,7 @@ section .text
 
  scanLongDouble$74:
 	; PushFloat 10.0
-	fld qword [@3841$float8$10.0#]
+	fld qword [@3840$float8$10.0#]
 
  scanLongDouble$75:
 	; SignedDivide £temporary1134 factor 10.0
@@ -3087,7 +3087,7 @@ section .text
 
  scanLongDouble$108:
 	; PushFloat 10.0
-	fld qword [@3854$float8$10.0#]
+	fld qword [@3853$float8$10.0#]
 
  scanLongDouble$109:
 	; Parameter 81 double 10.0

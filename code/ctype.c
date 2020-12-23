@@ -48,11 +48,11 @@ int isgraph(int c) {
 }
 
 int isprint(int c) {
-  return (isgraph(c) != 0) && (c != ' ');
+  return isgraph(c) && (c != ' ');
 }
 
 int ispunct(int c) {
-  return (isgraph(c) && !isalnum(c));
+  return isgraph(c) && !isalnum(c);
 }
 
 int iscntrl(int c) {

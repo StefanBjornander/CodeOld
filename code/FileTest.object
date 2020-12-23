@@ -4,11 +4,11 @@ file_test:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 3:	
 
 file_test$1:	; Parameter 6 string_in2Etxt# 6
-4:		mov word [bp + 12], @10855$string_in2Etxt#
+4:		mov word [bp + 12], @10463$string_in2Etxt#
 6:	
 
 file_test$2:	; Parameter 6 string_r# 8
-7:		mov word [bp + 14], @10856$string_r#
+7:		mov word [bp + 14], @10464$string_r#
 9:	
 
 file_test$3:	; Call 6 fopen 0
@@ -21,10 +21,10 @@ file_test$3:	; Call 6 fopen 0
 file_test$4:	; PostCall 6
 17:	
 
-file_test$5:	; GetReturnValue £temporary5041
+file_test$5:	; GetReturnValue £temporary4842
 22:	
 
-file_test$6:	; Assign inFilePtr £temporary5041
+file_test$6:	; Assign inFilePtr £temporary4842
 23:		mov [bp + 6], bx
 25:	
 
@@ -32,11 +32,11 @@ file_test$7:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbo
 27:	
 
 file_test$8:	; Parameter 8 string_outX2Etxt# 6
-28:		mov word [bp + 14], @10859$string_outX2Etxt#
+28:		mov word [bp + 14], @10467$string_outX2Etxt#
 30:	
 
 file_test$9:	; Parameter 8 string_w# 8
-31:		mov word [bp + 16], @10860$string_w#
+31:		mov word [bp + 16], @10468$string_w#
 33:	
 
 file_test$10:	; Call 8 fopen 0
@@ -49,10 +49,10 @@ file_test$10:	; Call 8 fopen 0
 file_test$11:	; PostCall 8
 41:	
 
-file_test$12:	; GetReturnValue £temporary5042
+file_test$12:	; GetReturnValue £temporary4843
 46:	
 
-file_test$13:	; Assign outFilePtr £temporary5042
+file_test$13:	; Assign outFilePtr £temporary4843
 47:		mov [bp + 8], bx
 49:	
 
@@ -70,15 +70,15 @@ file_test$16:	; Parameter 10 stderr 6
 59:	
 
 file_test$17:	; Parameter 10 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-60:		mov word [bp + 18], @10868$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+60:		mov word [bp + 18], @10476$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 62:	
 
 file_test$18:	; Parameter 10 string_inFilePtr20213D20NULL# 10
-63:		mov word [bp + 20], @10869$string_inFilePtr20213D20NULL#
+63:		mov word [bp + 20], @10477$string_inFilePtr20213D20NULL#
 65:	
 
 file_test$19:	; Parameter 10 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-66:		mov word [bp + 22], @10870$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+66:		mov word [bp + 22], @10478$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 68:	
 
 file_test$20:	; Parameter 10 14 14
@@ -124,15 +124,15 @@ file_test$28:	; Parameter 10 stderr 6
 101:	
 
 file_test$29:	; Parameter 10 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-102:		mov word [bp + 18], @10879$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+102:		mov word [bp + 18], @10487$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 104:	
 
 file_test$30:	; Parameter 10 string_outFilePtr20213D20NULL# 10
-105:		mov word [bp + 20], @10880$string_outFilePtr20213D20NULL#
+105:		mov word [bp + 20], @10488$string_outFilePtr20213D20NULL#
 107:	
 
 file_test$31:	; Parameter 10 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-108:		mov word [bp + 22], @10881$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+108:		mov word [bp + 22], @10489$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 110:	
 
 file_test$32:	; Parameter 10 15 14
@@ -182,10 +182,10 @@ file_test$40:	; Call 10 feof 0
 file_test$41:	; PostCall 10
 147:	
 
-file_test$42:	; GetReturnValue £temporary5051
+file_test$42:	; GetReturnValue £temporary4852
 152:	
 
-file_test$43:	; NotEqual 75 £temporary5051 0
+file_test$43:	; NotEqual 75 £temporary4852 0
 153:		cmp bx, 0
 154:		jne file_test$75
 156:	
@@ -199,15 +199,15 @@ file_test$45:	; Parameter 18 inFilePtr 6
 162:	
 
 file_test$46:	; Parameter 18 string_25lf# 8
-163:		mov word [bp + 26], @10890$string_25lf#
+163:		mov word [bp + 26], @10498$string_25lf#
 165:	
 
-file_test$47:	; address £temporary5054 value
+file_test$47:	; address £temporary4855 value
 166:		mov si, bp
 167:		add si, 10
 169:	
 
-file_test$48:	; Parameter 18 £temporary5054 10
+file_test$48:	; Parameter 18 £temporary4855 10
 170:		mov [bp + 28], si
 172:	
 
@@ -227,7 +227,7 @@ file_test$51:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Sym
 184:	
 
 file_test$52:	; Parameter 18 string_X12025f0A# 6
-185:		mov word [bp + 24], @10893$string_X12025f0A#
+185:		mov word [bp + 24], @10501$string_X12025f0A#
 187:	
 
 file_test$53:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -251,10 +251,10 @@ file_test$56:	; Call 18 sqrt 8
 file_test$57:	; PostCall 18
 203:	
 
-file_test$58:	; GetReturnValue £temporary5056
+file_test$58:	; GetReturnValue £temporary4857
 205:	
 
-file_test$59:	; Parameter 18 £temporary5056 8
+file_test$59:	; Parameter 18 £temporary4857 8
 206:		fstp qword [bp + 26]
 208:	
 
@@ -279,7 +279,7 @@ file_test$63:	; Parameter 18 outFilePtr 6
 224:	
 
 file_test$64:	; Parameter 18 string_X22025f0A# 8
-225:		mov word [bp + 26], @10896$string_X22025f0A#
+225:		mov word [bp + 26], @10504$string_X22025f0A#
 227:	
 
 file_test$65:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -303,10 +303,10 @@ file_test$68:	; Call 18 sqrt 10
 file_test$69:	; PostCall 18
 243:	
 
-file_test$70:	; GetReturnValue £temporary5058
+file_test$70:	; GetReturnValue £temporary4859
 245:	
 
-file_test$71:	; Parameter 18 £temporary5058 10
+file_test$71:	; Parameter 18 £temporary4859 10
 246:		fstp qword [bp + 28]
 248:	
 
@@ -330,7 +330,7 @@ file_test$75:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sym
 263:	
 
 file_test$76:	; Parameter 10 string_0A# 6
-264:		mov word [bp + 16], @10899$string_0A#
+264:		mov word [bp + 16], @10507$string_0A#
 266:	
 
 file_test$77:	; Call 10 printf 0
@@ -384,11 +384,11 @@ file_test$87:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 305:	
 
 file_test$88:	; Parameter 6 string_in2Etxt# 6
-306:		mov word [bp + 12], @10903$string_in2Etxt#
+306:		mov word [bp + 12], @10511$string_in2Etxt#
 308:	
 
 file_test$89:	; Parameter 6 string_r# 8
-309:		mov word [bp + 14], @10904$string_r#
+309:		mov word [bp + 14], @10512$string_r#
 311:	
 
 file_test$90:	; Call 6 fopen 0
@@ -401,10 +401,10 @@ file_test$90:	; Call 6 fopen 0
 file_test$91:	; PostCall 6
 319:	
 
-file_test$92:	; GetReturnValue £temporary5063
+file_test$92:	; GetReturnValue £temporary4864
 324:	
 
-file_test$93:	; Assign inFilePtr £temporary5063
+file_test$93:	; Assign inFilePtr £temporary4864
 325:		mov [bp + 6], bx
 327:	
 
@@ -412,11 +412,11 @@ file_test$94:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symb
 329:	
 
 file_test$95:	; Parameter 8 string_outY2Etxt# 6
-330:		mov word [bp + 14], @10907$string_outY2Etxt#
+330:		mov word [bp + 14], @10515$string_outY2Etxt#
 332:	
 
 file_test$96:	; Parameter 8 string_w# 8
-333:		mov word [bp + 16], @10908$string_w#
+333:		mov word [bp + 16], @10516$string_w#
 335:	
 
 file_test$97:	; Call 8 fopen 0
@@ -429,10 +429,10 @@ file_test$97:	; Call 8 fopen 0
 file_test$98:	; PostCall 8
 343:	
 
-file_test$99:	; GetReturnValue £temporary5064
+file_test$99:	; GetReturnValue £temporary4865
 348:	
 
-file_test$100:	; Assign outFilePtr £temporary5064
+file_test$100:	; Assign outFilePtr £temporary4865
 349:		mov [bp + 8], bx
 351:	
 
@@ -450,15 +450,15 @@ file_test$103:	; Parameter 10 stderr 6
 361:	
 
 file_test$104:	; Parameter 10 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-362:		mov word [bp + 18], @10916$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+362:		mov word [bp + 18], @10524$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 364:	
 
 file_test$105:	; Parameter 10 string_inFilePtr20213D20NULL# 10
-365:		mov word [bp + 20], @10917$string_inFilePtr20213D20NULL#
+365:		mov word [bp + 20], @10525$string_inFilePtr20213D20NULL#
 367:	
 
 file_test$106:	; Parameter 10 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-368:		mov word [bp + 22], @10918$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+368:		mov word [bp + 22], @10526$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 370:	
 
 file_test$107:	; Parameter 10 34 14
@@ -504,15 +504,15 @@ file_test$115:	; Parameter 10 stderr 6
 403:	
 
 file_test$116:	; Parameter 10 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-404:		mov word [bp + 18], @10927$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+404:		mov word [bp + 18], @10535$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 406:	
 
 file_test$117:	; Parameter 10 string_outFilePtr20213D20NULL# 10
-407:		mov word [bp + 20], @10928$string_outFilePtr20213D20NULL#
+407:		mov word [bp + 20], @10536$string_outFilePtr20213D20NULL#
 409:	
 
 file_test$118:	; Parameter 10 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-410:		mov word [bp + 22], @10929$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+410:		mov word [bp + 22], @10537$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 412:	
 
 file_test$119:	; Parameter 10 35 14
@@ -557,15 +557,15 @@ file_test$127:	; Parameter 14 inFilePtr 6
 444:	
 
 file_test$128:	; Parameter 14 string_25i# 8
-445:		mov word [bp + 22], @10937$string_25i#
+445:		mov word [bp + 22], @10545$string_25i#
 447:	
 
-file_test$129:	; address £temporary5073 size
+file_test$129:	; address £temporary4874 size
 448:		mov si, bp
 449:		add si, 10
 451:	
 
-file_test$130:	; Parameter 14 £temporary5073 10
+file_test$130:	; Parameter 14 £temporary4874 10
 452:		mov [bp + 24], si
 454:	
 
@@ -585,7 +585,7 @@ file_test$133:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Sy
 466:	
 
 file_test$134:	; Parameter 14 string_size2025i0A# 6
-467:		mov word [bp + 20], @10940$string_size2025i0A#
+467:		mov word [bp + 20], @10548$string_size2025i0A#
 469:	
 
 file_test$135:	; Parameter 14 size 8
@@ -614,7 +614,7 @@ file_test$139:	; Parameter 14 outFilePtr 6
 489:	
 
 file_test$140:	; Parameter 14 string_Y20size2025i0A# 8
-490:		mov word [bp + 22], @10942$string_Y20size2025i0A#
+490:		mov word [bp + 22], @10550$string_Y20size2025i0A#
 492:	
 
 file_test$141:	; Parameter 14 size 10
@@ -653,15 +653,15 @@ file_test$147:	; Parameter 22 inFilePtr 6
 520:	
 
 file_test$148:	; Parameter 22 string_25lf# 8
-521:		mov word [bp + 30], @10950$string_25lf#
+521:		mov word [bp + 30], @10558$string_25lf#
 523:	
 
-file_test$149:	; address £temporary5079 value
+file_test$149:	; address £temporary4880 value
 524:		mov si, bp
 525:		add si, 14
 527:	
 
-file_test$150:	; Parameter 22 £temporary5079 10
+file_test$150:	; Parameter 22 £temporary4880 10
 528:		mov [bp + 32], si
 530:	
 
@@ -681,7 +681,7 @@ file_test$153:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Sy
 542:	
 
 file_test$154:	; Parameter 22 string_Y12025f0A# 6
-543:		mov word [bp + 28], @10953$string_Y12025f0A#
+543:		mov word [bp + 28], @10561$string_Y12025f0A#
 545:	
 
 file_test$155:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -705,10 +705,10 @@ file_test$158:	; Call 22 sqrt 8
 file_test$159:	; PostCall 22
 561:	
 
-file_test$160:	; GetReturnValue £temporary5081
+file_test$160:	; GetReturnValue £temporary4882
 563:	
 
-file_test$161:	; Parameter 22 £temporary5081 8
+file_test$161:	; Parameter 22 £temporary4882 8
 564:		fstp qword [bp + 30]
 566:	
 
@@ -733,7 +733,7 @@ file_test$165:	; Parameter 22 outFilePtr 6
 582:	
 
 file_test$166:	; Parameter 22 string_Y22025f0A# 8
-583:		mov word [bp + 30], @10956$string_Y22025f0A#
+583:		mov word [bp + 30], @10564$string_Y22025f0A#
 585:	
 
 file_test$167:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -757,10 +757,10 @@ file_test$170:	; Call 22 sqrt 10
 file_test$171:	; PostCall 22
 601:	
 
-file_test$172:	; GetReturnValue £temporary5083
+file_test$172:	; GetReturnValue £temporary4884
 603:	
 
-file_test$173:	; Parameter 22 £temporary5083 10
+file_test$173:	; Parameter 22 £temporary4884 10
 604:		fstp qword [bp + 32]
 606:	
 
@@ -788,7 +788,7 @@ file_test$178:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Sy
 624:	
 
 file_test$179:	; Parameter 14 string_0A# 6
-625:		mov word [bp + 20], @10959$string_0A#
+625:		mov word [bp + 20], @10567$string_0A#
 627:	
 
 file_test$180:	; Call 14 printf 0
@@ -839,7 +839,7 @@ file_test$189:	; PostCall 10
 664:	
 
 file_test$190:	; Assign sourceFile string_Y#
-665:		mov word [bp + 6], @10963$string_Y#
+665:		mov word [bp + 6], @10571$string_Y#
 667:	
 
 file_test$191:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -860,10 +860,10 @@ file_test$193:	; Call 8 remove 0
 file_test$194:	; PostCall 8
 681:	
 
-file_test$195:	; GetReturnValue £temporary5088
+file_test$195:	; GetReturnValue £temporary4889
 686:	
 
-file_test$196:	; NotEqual 203 £temporary5088 0
+file_test$196:	; NotEqual 203 £temporary4889 0
 687:		cmp bx, 0
 688:		jne file_test$203
 690:	
@@ -872,7 +872,7 @@ file_test$197:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Sym
 692:	
 
 file_test$198:	; Parameter 8 string_2225s2220has20been20removed0A# 6
-693:		mov word [bp + 14], @10969$string_2225s2220has20been20removed0A#
+693:		mov word [bp + 14], @10577$string_2225s2220has20been20removed0A#
 695:	
 
 file_test$199:	; Parameter 8 sourceFile 8
@@ -900,7 +900,7 @@ file_test$203:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Sym
 714:	
 
 file_test$204:	; Parameter 8 string_Error202225s222025i3A2025s2E0A# 6
-715:		mov word [bp + 14], @10971$string_Error202225s222025i3A2025s2E0A#
+715:		mov word [bp + 14], @10579$string_Error202225s222025i3A2025s2E0A#
 717:	
 
 file_test$205:	; Parameter 8 sourceFile 8
@@ -931,10 +931,10 @@ file_test$209:	; Call 8 strerror 12
 file_test$210:	; PostCall 8
 739:	
 
-file_test$211:	; GetReturnValue £temporary5091
+file_test$211:	; GetReturnValue £temporary4892
 744:	
 
-file_test$212:	; Parameter 8 £temporary5091 12
+file_test$212:	; Parameter 8 £temporary4892 12
 745:		mov [bp + 20], bx
 747:	
 
@@ -951,11 +951,11 @@ file_test$214:	; PostCall 8
 757:	
 
 file_test$215:	; Assign sourceFile string_X#
-758:		mov word [bp + 6], @10974$string_X#
+758:		mov word [bp + 6], @10582$string_X#
 760:	
 
 file_test$216:	; Assign targetFile string_Y#
-761:		mov word [bp + 8], @10976$string_Y#
+761:		mov word [bp + 8], @10584$string_Y#
 763:	
 
 file_test$217:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -967,7 +967,7 @@ file_test$218:	; Parameter 10 sourceFile 6
 769:	
 
 file_test$219:	; Parameter 10 string_w# 8
-770:		mov word [bp + 18], @10978$string_w#
+770:		mov word [bp + 18], @10586$string_w#
 772:	
 
 file_test$220:	; Call 10 fopen 0
@@ -980,10 +980,10 @@ file_test$220:	; Call 10 fopen 0
 file_test$221:	; PostCall 10
 780:	
 
-file_test$222:	; GetReturnValue £temporary5093
+file_test$222:	; GetReturnValue £temporary4894
 785:	
 
-file_test$223:	; Assign filePtr £temporary5093
+file_test$223:	; Assign filePtr £temporary4894
 786:		mov [bp + 10], bx
 788:	
 
@@ -996,7 +996,7 @@ file_test$225:	; Parameter 12 filePtr 6
 794:	
 
 file_test$226:	; Parameter 12 string_Hello20X# 8
-795:		mov word [bp + 20], @10981$string_Hello20X#
+795:		mov word [bp + 20], @10589$string_Hello20X#
 797:	
 
 file_test$227:	; Call 12 fprintf 0
@@ -1051,10 +1051,10 @@ file_test$236:	; Call 12 rename 0
 file_test$237:	; PostCall 12
 838:	
 
-file_test$238:	; GetReturnValue £temporary5096
+file_test$238:	; GetReturnValue £temporary4897
 843:	
 
-file_test$239:	; NotEqual 247 £temporary5096 0
+file_test$239:	; NotEqual 247 £temporary4897 0
 844:		cmp bx, 0
 845:		jne file_test$247
 847:	
@@ -1063,7 +1063,7 @@ file_test$240:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Sy
 849:	
 
 file_test$241:	; Parameter 12 string_2225s2220has20been20renamed20to202225s222E0A# 6
-850:		mov word [bp + 18], @10988$string_2225s2220has20been20renamed20to202225s222E0A#
+850:		mov word [bp + 18], @10596$string_2225s2220has20been20renamed20to202225s222E0A#
 852:	
 
 file_test$242:	; Parameter 12 sourceFile 8
@@ -1096,7 +1096,7 @@ file_test$247:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Sy
 875:	
 
 file_test$248:	; Parameter 12 string_Error202225s22202225s222025i3A2025s2E0A# 6
-876:		mov word [bp + 18], @10990$string_Error202225s22202225s222025i3A2025s2E0A#
+876:		mov word [bp + 18], @10598$string_Error202225s22202225s222025i3A2025s2E0A#
 878:	
 
 file_test$249:	; Parameter 12 sourceFile 8
@@ -1132,10 +1132,10 @@ file_test$254:	; Call 12 strerror 14
 file_test$255:	; PostCall 12
 904:	
 
-file_test$256:	; GetReturnValue £temporary5099
+file_test$256:	; GetReturnValue £temporary4900
 909:	
 
-file_test$257:	; Parameter 12 £temporary5099 14
+file_test$257:	; Parameter 12 £temporary4900 14
 910:		mov [bp + 26], bx
 912:	
 
@@ -1152,11 +1152,11 @@ file_test$259:	; PostCall 12
 922:	
 
 file_test$260:	; Assign sourceFile string_X2#
-923:		mov word [bp + 6], @10993$string_X2#
+923:		mov word [bp + 6], @10601$string_X2#
 925:	
 
 file_test$261:	; Assign targetFile string_Y2#
-926:		mov word [bp + 8], @10995$string_Y2#
+926:		mov word [bp + 8], @10603$string_Y2#
 928:	
 
 file_test$262:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1182,10 +1182,10 @@ file_test$265:	; Call 10 rename 0
 file_test$266:	; PostCall 10
 946:	
 
-file_test$267:	; GetReturnValue £temporary5101
+file_test$267:	; GetReturnValue £temporary4902
 951:	
 
-file_test$268:	; NotEqual 276 £temporary5101 0
+file_test$268:	; NotEqual 276 £temporary4902 0
 952:		cmp bx, 0
 953:		jne file_test$276
 955:	
@@ -1194,7 +1194,7 @@ file_test$269:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sy
 957:	
 
 file_test$270:	; Parameter 10 string_2225s2220has20been20renamed20to202225s222E0A# 6
-958:		mov word [bp + 16], @11001$string_2225s2220has20been20renamed20to202225s222E0A#
+958:		mov word [bp + 16], @10609$string_2225s2220has20been20renamed20to202225s222E0A#
 960:	
 
 file_test$271:	; Parameter 10 sourceFile 8
@@ -1227,7 +1227,7 @@ file_test$276:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sy
 983:	
 
 file_test$277:	; Parameter 10 string_Error202225s22202225s222025i3A2025s2E0A# 6
-984:		mov word [bp + 16], @11003$string_Error202225s22202225s222025i3A2025s2E0A#
+984:		mov word [bp + 16], @10611$string_Error202225s22202225s222025i3A2025s2E0A#
 986:	
 
 file_test$278:	; Parameter 10 sourceFile 8
@@ -1263,10 +1263,10 @@ file_test$283:	; Call 10 strerror 14
 file_test$284:	; PostCall 10
 1012:	
 
-file_test$285:	; GetReturnValue £temporary5104
+file_test$285:	; GetReturnValue £temporary4905
 1017:	
 
-file_test$286:	; Parameter 10 £temporary5104 14
+file_test$286:	; Parameter 10 £temporary4905 14
 1018:		mov [bp + 24], bx
 1020:	
 
@@ -1283,7 +1283,7 @@ file_test$288:	; PostCall 10
 1030:	
 
 file_test$289:	; Assign targetFile string_Z#
-1031:		mov word [bp + 6], @11006$string_Z#
+1031:		mov word [bp + 6], @10614$string_Z#
 1033:	
 
 file_test$290:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1295,7 +1295,7 @@ file_test$291:	; Parameter 8 targetFile 6
 1039:	
 
 file_test$292:	; Parameter 8 string_w# 8
-1040:		mov word [bp + 16], @11008$string_w#
+1040:		mov word [bp + 16], @10616$string_w#
 1042:	
 
 file_test$293:	; Call 8 fopen 0
@@ -1308,10 +1308,10 @@ file_test$293:	; Call 8 fopen 0
 file_test$294:	; PostCall 8
 1050:	
 
-file_test$295:	; GetReturnValue £temporary5106
+file_test$295:	; GetReturnValue £temporary4907
 1055:	
 
-file_test$296:	; Assign filePtr £temporary5106
+file_test$296:	; Assign filePtr £temporary4907
 1056:		mov [bp + 8], bx
 1058:	
 
@@ -1324,7 +1324,7 @@ file_test$298:	; Parameter 10 filePtr 6
 1064:	
 
 file_test$299:	; Parameter 10 string_Hello20Z# 8
-1065:		mov word [bp + 18], @11011$string_Hello20Z#
+1065:		mov word [bp + 18], @10619$string_Hello20Z#
 1067:	
 
 file_test$300:	; Call 10 fprintf 0
@@ -1374,10 +1374,10 @@ file_test$308:	; Call 10 remove 0
 file_test$309:	; PostCall 10
 1104:	
 
-file_test$310:	; GetReturnValue £temporary5109
+file_test$310:	; GetReturnValue £temporary4910
 1109:	
 
-file_test$311:	; NotEqual 318 £temporary5109 0
+file_test$311:	; NotEqual 318 £temporary4910 0
 1110:		cmp bx, 0
 1111:		jne file_test$318
 1113:	
@@ -1386,7 +1386,7 @@ file_test$312:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sy
 1115:	
 
 file_test$313:	; Parameter 10 string_2225s2220has20been20removed2E0A# 6
-1116:		mov word [bp + 16], @11018$string_2225s2220has20been20removed2E0A#
+1116:		mov word [bp + 16], @10626$string_2225s2220has20been20removed2E0A#
 1118:	
 
 file_test$314:	; Parameter 10 targetFile 8
@@ -1414,7 +1414,7 @@ file_test$318:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sy
 1137:	
 
 file_test$319:	; Parameter 10 string_Error202225s222025i3A2025s2E0A# 6
-1138:		mov word [bp + 16], @11020$string_Error202225s222025i3A2025s2E0A#
+1138:		mov word [bp + 16], @10628$string_Error202225s222025i3A2025s2E0A#
 1140:	
 
 file_test$320:	; Parameter 10 targetFile 8
@@ -1445,10 +1445,10 @@ file_test$324:	; Call 10 strerror 12
 file_test$325:	; PostCall 10
 1162:	
 
-file_test$326:	; GetReturnValue £temporary5112
+file_test$326:	; GetReturnValue £temporary4913
 1167:	
 
-file_test$327:	; Parameter 10 £temporary5112 12
+file_test$327:	; Parameter 10 £temporary4913 12
 1168:		mov [bp + 22], bx
 1170:	
 
@@ -1465,7 +1465,7 @@ file_test$329:	; PostCall 10
 1180:	
 
 file_test$330:	; Assign targetFile string_Z2#
-1181:		mov word [bp + 6], @11023$string_Z2#
+1181:		mov word [bp + 6], @10631$string_Z2#
 1183:	
 
 file_test$331:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1486,10 +1486,10 @@ file_test$333:	; Call 8 remove 0
 file_test$334:	; PostCall 8
 1197:	
 
-file_test$335:	; GetReturnValue £temporary5114
+file_test$335:	; GetReturnValue £temporary4915
 1202:	
 
-file_test$336:	; NotEqual 343 £temporary5114 0
+file_test$336:	; NotEqual 343 £temporary4915 0
 1203:		cmp bx, 0
 1204:		jne file_test$343
 1206:	
@@ -1498,7 +1498,7 @@ file_test$337:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Sym
 1208:	
 
 file_test$338:	; Parameter 8 string_2225s2220has20been20removed2E0A# 6
-1209:		mov word [bp + 14], @11029$string_2225s2220has20been20removed2E0A#
+1209:		mov word [bp + 14], @10637$string_2225s2220has20been20removed2E0A#
 1211:	
 
 file_test$339:	; Parameter 8 targetFile 8
@@ -1526,7 +1526,7 @@ file_test$343:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Sym
 1230:	
 
 file_test$344:	; Parameter 8 string_Error202225s222025i3A2025s2E0A# 6
-1231:		mov word [bp + 14], @11031$string_Error202225s222025i3A2025s2E0A#
+1231:		mov word [bp + 14], @10639$string_Error202225s222025i3A2025s2E0A#
 1233:	
 
 file_test$345:	; Parameter 8 targetFile 8
@@ -1557,10 +1557,10 @@ file_test$349:	; Call 8 strerror 12
 file_test$350:	; PostCall 8
 1255:	
 
-file_test$351:	; GetReturnValue £temporary5117
+file_test$351:	; GetReturnValue £temporary4918
 1260:	
 
-file_test$352:	; Parameter 8 £temporary5117 12
+file_test$352:	; Parameter 8 £temporary4918 12
 1261:		mov [bp + 20], bx
 1263:	
 
@@ -1580,11 +1580,11 @@ file_test$355:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 1275:	
 
 file_test$356:	; Parameter 6 string_PBook2Etxt# 6
-1276:		mov word [bp + 12], @11034$string_PBook2Etxt#
+1276:		mov word [bp + 12], @10642$string_PBook2Etxt#
 1278:	
 
 file_test$357:	; Parameter 6 string_r# 8
-1279:		mov word [bp + 14], @11035$string_r#
+1279:		mov word [bp + 14], @10643$string_r#
 1281:	
 
 file_test$358:	; Call 6 fopen 0
@@ -1597,10 +1597,10 @@ file_test$358:	; Call 6 fopen 0
 file_test$359:	; PostCall 6
 1289:	
 
-file_test$360:	; GetReturnValue £temporary5119
+file_test$360:	; GetReturnValue £temporary4920
 1294:	
 
-file_test$361:	; Assign inFilePtr £temporary5119
+file_test$361:	; Assign inFilePtr £temporary4920
 1295:		mov [bp + 6], bx
 1297:	
 
@@ -1618,15 +1618,15 @@ file_test$364:	; Parameter 8 stderr 6
 1307:	
 
 file_test$365:	; Parameter 8 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-1308:		mov word [bp + 16], @11043$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+1308:		mov word [bp + 16], @10651$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 1310:	
 
 file_test$366:	; Parameter 8 string_inFilePtr20213D20NULL# 10
-1311:		mov word [bp + 18], @11044$string_inFilePtr20213D20NULL#
+1311:		mov word [bp + 18], @10652$string_inFilePtr20213D20NULL#
 1313:	
 
 file_test$367:	; Parameter 8 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-1314:		mov word [bp + 20], @11045$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+1314:		mov word [bp + 20], @10653$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 1316:	
 
 file_test$368:	; Parameter 8 119 14
@@ -1662,15 +1662,15 @@ file_test$374:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Sym
 1341:	
 
 file_test$375:	; Parameter 8 string_0A252D24s20252D24s0A# 6
-1342:		mov word [bp + 14], @11049$string_0A252D24s20252D24s0A#
+1342:		mov word [bp + 14], @10657$string_0A252D24s20252D24s0A#
 1344:	
 
 file_test$376:	; Parameter 8 string_Name# 8
-1345:		mov word [bp + 16], @11050$string_Name#
+1345:		mov word [bp + 16], @10658$string_Name#
 1347:	
 
 file_test$377:	; Parameter 8 string_Phone# 10
-1348:		mov word [bp + 18], @11051$string_Phone#
+1348:		mov word [bp + 18], @10659$string_Phone#
 1350:	
 
 file_test$378:	; Call 8 printf 0
@@ -1689,15 +1689,15 @@ file_test$380:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Sym
 1362:	
 
 file_test$381:	; Parameter 8 string_252D24s20252D24s0A# 6
-1363:		mov word [bp + 14], @11053$string_252D24s20252D24s0A#
+1363:		mov word [bp + 14], @10661$string_252D24s20252D24s0A#
 1365:	
 
 file_test$382:	; Parameter 8 string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D# 8
-1366:		mov word [bp + 16], @11054$string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#
+1366:		mov word [bp + 16], @10662$string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#
 1368:	
 
 file_test$383:	; Parameter 8 string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D# 10
-1369:		mov word [bp + 18], @11055$string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#
+1369:		mov word [bp + 18], @10663$string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#
 1371:	
 
 file_test$384:	; Call 8 printf 0
@@ -1721,15 +1721,15 @@ file_test$387:	; Parameter 12 inFilePtr 6
 1387:	
 
 file_test$388:	; Parameter 12 string_25i# 8
-1388:		mov word [bp + 20], @11059$string_25i#
+1388:		mov word [bp + 20], @10667$string_25i#
 1390:	
 
-file_test$389:	; address £temporary5126 size
+file_test$389:	; address £temporary4927 size
 1391:		mov si, bp
 1392:		add si, 10
 1394:	
 
-file_test$390:	; Parameter 12 £temporary5126 10
+file_test$390:	; Parameter 12 £temporary4927 10
 1395:		mov [bp + 22], si
 1397:	
 
@@ -1749,7 +1749,7 @@ file_test$393:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Sy
 1409:	
 
 file_test$394:	; Parameter 12 string_size2025i0A# 6
-1410:		mov word [bp + 18], @11062$string_size2025i0A#
+1410:		mov word [bp + 18], @10670$string_size2025i0A#
 1412:	
 
 file_test$395:	; Parameter 12 size 8
@@ -1788,7 +1788,7 @@ file_test$401:	; Parameter 52 inFilePtr 6
 1440:	
 
 file_test$402:	; Parameter 52 string_25s25s# 8
-1441:		mov word [bp + 60], @11075$string_25s25s#
+1441:		mov word [bp + 60], @10683$string_25s25s#
 1443:	
 
 file_test$403:	; Parameter 52 name 10
@@ -1817,7 +1817,7 @@ file_test$407:	; CallHeader 52 System.Collections.Generic.HashSet`1[CCompiler.Sy
 1463:	
 
 file_test$408:	; Parameter 52 string_252D24s20252D24s0A# 6
-1464:		mov word [bp + 58], @11077$string_252D24s20252D24s0A#
+1464:		mov word [bp + 58], @10685$string_252D24s20252D24s0A#
 1466:	
 
 file_test$409:	; Parameter 52 name 8
@@ -1854,7 +1854,7 @@ file_test$415:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Sym
 1492:	
 
 file_test$416:	; Parameter 8 string_0A# 6
-1493:		mov word [bp + 14], @11079$string_0A#
+1493:		mov word [bp + 14], @10687$string_0A#
 1495:	
 
 file_test$417:	; Call 8 printf 0
@@ -1890,11 +1890,11 @@ file_test$423:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 1520:	
 
 file_test$424:	; Parameter 6 string_TestX2Ebin# 6
-1521:		mov word [bp + 12], @11082$string_TestX2Ebin#
+1521:		mov word [bp + 12], @10690$string_TestX2Ebin#
 1523:	
 
 file_test$425:	; Parameter 6 string_w# 8
-1524:		mov word [bp + 14], @11083$string_w#
+1524:		mov word [bp + 14], @10691$string_w#
 1526:	
 
 file_test$426:	; Call 6 fopen 0
@@ -1907,10 +1907,10 @@ file_test$426:	; Call 6 fopen 0
 file_test$427:	; PostCall 6
 1534:	
 
-file_test$428:	; GetReturnValue £temporary5135
+file_test$428:	; GetReturnValue £temporary4936
 1539:	
 
-file_test$429:	; Assign outFilePtr £temporary5135
+file_test$429:	; Assign outFilePtr £temporary4936
 1540:		mov [bp + 6], bx
 1542:	
 
@@ -1928,15 +1928,15 @@ file_test$432:	; Parameter 8 stderr 6
 1552:	
 
 file_test$433:	; Parameter 8 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-1553:		mov word [bp + 16], @11091$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+1553:		mov word [bp + 16], @10699$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 1555:	
 
 file_test$434:	; Parameter 8 string_outFilePtr20213D20NULL# 10
-1556:		mov word [bp + 18], @11092$string_outFilePtr20213D20NULL#
+1556:		mov word [bp + 18], @10700$string_outFilePtr20213D20NULL#
 1558:	
 
 file_test$435:	; Parameter 8 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-1559:		mov word [bp + 20], @11093$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+1559:		mov word [bp + 20], @10701$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 1561:	
 
 file_test$436:	; Parameter 8 171 14
@@ -1975,12 +1975,12 @@ file_test$442:	; Assign size 10
 file_test$443:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1589:	
 
-file_test$444:	; address £temporary5140 size
+file_test$444:	; address £temporary4941 size
 1590:		mov si, bp
 1591:		add si, 8
 1593:	
 
-file_test$445:	; Parameter 12 £temporary5140 6
+file_test$445:	; Parameter 12 £temporary4941 6
 1594:		mov [bp + 18], si
 1596:	
 
@@ -2017,13 +2017,13 @@ file_test$452:	; SignedGreaterThanEqual 466 index size
 1620:		jge file_test$466
 1622:	
 
-file_test$453:	; SignedMultiply £temporary5144 index index
+file_test$453:	; SignedMultiply £temporary4945 index index
 1623:		mov ax, [bp + 10]
 1625:		xor dx, dx
 1626:		imul word [bp + 10]
 1632:	
 
-file_test$454:	; IntegralToFloating £temporary5145 £temporary5144
+file_test$454:	; IntegralToFloating £temporary4946 £temporary4945
 1633:		mov [container2bytes#], ax
 1634:		fild word [container2bytes#]
 1636:	
@@ -2035,12 +2035,12 @@ file_test$455:	; PopFloat value
 file_test$456:	; CallHeader 20 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1641:	
 
-file_test$457:	; address £temporary5146 value
+file_test$457:	; address £temporary4947 value
 1642:		mov si, bp
 1643:		add si, 12
 1645:	
 
-file_test$458:	; Parameter 20 £temporary5146 6
+file_test$458:	; Parameter 20 £temporary4947 6
 1646:		mov [bp + 26], si
 1648:	
 
@@ -2097,11 +2097,11 @@ file_test$470:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 1688:	
 
 file_test$471:	; Parameter 6 string_TestX2Ebin# 6
-1689:		mov word [bp + 12], @11122$string_TestX2Ebin#
+1689:		mov word [bp + 12], @10730$string_TestX2Ebin#
 1691:	
 
 file_test$472:	; Parameter 6 string_r# 8
-1692:		mov word [bp + 14], @11123$string_r#
+1692:		mov word [bp + 14], @10731$string_r#
 1694:	
 
 file_test$473:	; Call 6 fopen 0
@@ -2114,10 +2114,10 @@ file_test$473:	; Call 6 fopen 0
 file_test$474:	; PostCall 6
 1702:	
 
-file_test$475:	; GetReturnValue £temporary5149
+file_test$475:	; GetReturnValue £temporary4950
 1707:	
 
-file_test$476:	; Assign inFilePtr £temporary5149
+file_test$476:	; Assign inFilePtr £temporary4950
 1708:		mov [bp + 6], bx
 1710:	
 
@@ -2135,15 +2135,15 @@ file_test$479:	; Parameter 12 stderr 6
 1720:	
 
 file_test$480:	; Parameter 12 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-1721:		mov word [bp + 20], @11133$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+1721:		mov word [bp + 20], @10741$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 1723:	
 
 file_test$481:	; Parameter 12 string_inFilePtr20213D20NULL# 10
-1724:		mov word [bp + 22], @11134$string_inFilePtr20213D20NULL#
+1724:		mov word [bp + 22], @10742$string_inFilePtr20213D20NULL#
 1726:	
 
 file_test$482:	; Parameter 12 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-1727:		mov word [bp + 24], @11135$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+1727:		mov word [bp + 24], @10743$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 1729:	
 
 file_test$483:	; Parameter 12 188 14
@@ -2178,12 +2178,12 @@ file_test$488:	; PostCall 12
 file_test$489:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1754:	
 
-file_test$490:	; address £temporary5154 size
+file_test$490:	; address £temporary4955 size
 1755:		mov si, bp
 1756:		add si, 8
 1758:	
 
-file_test$491:	; Parameter 12 £temporary5154 6
+file_test$491:	; Parameter 12 £temporary4955 6
 1759:		mov [bp + 18], si
 1761:	
 
@@ -2214,7 +2214,7 @@ file_test$497:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Sy
 1781:	
 
 file_test$498:	; Parameter 12 string_size13A2025i0A# 6
-1782:		mov word [bp + 18], @11145$string_size13A2025i0A#
+1782:		mov word [bp + 18], @10753$string_size13A2025i0A#
 1784:	
 
 file_test$499:	; Parameter 12 size 8
@@ -2247,12 +2247,12 @@ file_test$503:	; SignedGreaterThanEqual 521 index size
 file_test$504:	; CallHeader 20 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1808:	
 
-file_test$505:	; address £temporary5159 value
+file_test$505:	; address £temporary4960 value
 1809:		mov si, bp
 1810:		add si, 12
 1812:	
 
-file_test$506:	; Parameter 20 £temporary5159 6
+file_test$506:	; Parameter 20 £temporary4960 6
 1813:		mov [bp + 26], si
 1815:	
 
@@ -2283,7 +2283,7 @@ file_test$512:	; CallHeader 20 System.Collections.Generic.HashSet`1[CCompiler.Sy
 1835:	
 
 file_test$513:	; Parameter 20 string_index13A2025i3A20value2025f0A# 6
-1836:		mov word [bp + 26], @11159$string_index13A2025i3A20value2025f0A#
+1836:		mov word [bp + 26], @10767$string_index13A2025i3A20value2025f0A#
 1838:	
 
 file_test$514:	; Parameter 20 index 8
@@ -2323,7 +2323,7 @@ file_test$521:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Sy
 1866:	
 
 file_test$522:	; Parameter 12 string_0A# 6
-1867:		mov word [bp + 18], @11161$string_0A#
+1867:		mov word [bp + 18], @10769$string_0A#
 1869:	
 
 file_test$523:	; Call 12 printf 0
@@ -2359,11 +2359,11 @@ file_test$529:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 1894:	
 
 file_test$530:	; Parameter 6 string_TestY2Ebin# 6
-1895:		mov word [bp + 12], @11164$string_TestY2Ebin#
+1895:		mov word [bp + 12], @10772$string_TestY2Ebin#
 1897:	
 
 file_test$531:	; Parameter 6 string_w# 8
-1898:		mov word [bp + 14], @11165$string_w#
+1898:		mov word [bp + 14], @10773$string_w#
 1900:	
 
 file_test$532:	; Call 6 fopen 0
@@ -2376,10 +2376,10 @@ file_test$532:	; Call 6 fopen 0
 file_test$533:	; PostCall 6
 1908:	
 
-file_test$534:	; GetReturnValue £temporary5164
+file_test$534:	; GetReturnValue £temporary4965
 1913:	
 
-file_test$535:	; Assign outFilePtr £temporary5164
+file_test$535:	; Assign outFilePtr £temporary4965
 1914:		mov [bp + 6], bx
 1916:	
 
@@ -2397,15 +2397,15 @@ file_test$538:	; Parameter 8 stderr 6
 1926:	
 
 file_test$539:	; Parameter 8 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-1927:		mov word [bp + 16], @11173$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+1927:		mov word [bp + 16], @10781$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 1929:	
 
 file_test$540:	; Parameter 8 string_outFilePtr20213D20NULL# 10
-1930:		mov word [bp + 18], @11174$string_outFilePtr20213D20NULL#
+1930:		mov word [bp + 18], @10782$string_outFilePtr20213D20NULL#
 1932:	
 
 file_test$541:	; Parameter 8 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-1933:		mov word [bp + 20], @11175$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+1933:		mov word [bp + 20], @10783$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 1935:	
 
 file_test$542:	; Parameter 8 203 14
@@ -2451,13 +2451,13 @@ file_test$550:	; SignedGreaterThanEqual 564 index size
 1967:		jge file_test$564
 1969:	
 
-file_test$551:	; SignedMultiply £temporary5171 index index
+file_test$551:	; SignedMultiply £temporary4972 index index
 1970:		mov ax, [bp + 10]
 1972:		xor dx, dx
 1973:		imul word [bp + 10]
 1979:	
 
-file_test$552:	; IntegralToFloating £temporary5172 £temporary5171
+file_test$552:	; IntegralToFloating £temporary4973 £temporary4972
 1980:		mov [container2bytes#], ax
 1981:		fild word [container2bytes#]
 1983:	
@@ -2469,12 +2469,12 @@ file_test$553:	; PopFloat value
 file_test$554:	; CallHeader 20 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 1988:	
 
-file_test$555:	; address £temporary5173 value
+file_test$555:	; address £temporary4974 value
 1989:		mov si, bp
 1990:		add si, 12
 1992:	
 
-file_test$556:	; Parameter 20 £temporary5173 6
+file_test$556:	; Parameter 20 £temporary4974 6
 1993:		mov [bp + 26], si
 1995:	
 
@@ -2531,11 +2531,11 @@ file_test$568:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 2035:	
 
 file_test$569:	; Parameter 6 string_TestY2Ebin# 6
-2036:		mov word [bp + 12], @11198$string_TestY2Ebin#
+2036:		mov word [bp + 12], @10806$string_TestY2Ebin#
 2038:	
 
 file_test$570:	; Parameter 6 string_r# 8
-2039:		mov word [bp + 14], @11199$string_r#
+2039:		mov word [bp + 14], @10807$string_r#
 2041:	
 
 file_test$571:	; Call 6 fopen 0
@@ -2548,10 +2548,10 @@ file_test$571:	; Call 6 fopen 0
 file_test$572:	; PostCall 6
 2049:	
 
-file_test$573:	; GetReturnValue £temporary5176
+file_test$573:	; GetReturnValue £temporary4977
 2054:	
 
-file_test$574:	; Assign inFilePtr £temporary5176
+file_test$574:	; Assign inFilePtr £temporary4977
 2055:		mov [bp + 6], bx
 2057:	
 
@@ -2569,15 +2569,15 @@ file_test$577:	; Parameter 8 stderr 6
 2067:	
 
 file_test$578:	; Parameter 8 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-2068:		mov word [bp + 16], @11207$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+2068:		mov word [bp + 16], @10815$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 2070:	
 
 file_test$579:	; Parameter 8 string_inFilePtr20213D20NULL# 10
-2071:		mov word [bp + 18], @11208$string_inFilePtr20213D20NULL#
+2071:		mov word [bp + 18], @10816$string_inFilePtr20213D20NULL#
 2073:	
 
 file_test$580:	; Parameter 8 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-2074:		mov word [bp + 20], @11209$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+2074:		mov word [bp + 20], @10817$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 2076:	
 
 file_test$581:	; Parameter 8 217 14
@@ -2616,12 +2616,12 @@ file_test$587:	; Assign index 0
 file_test$588:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 2104:	
 
-file_test$589:	; address £temporary5181 value
+file_test$589:	; address £temporary4982 value
 2105:		mov si, bp
 2106:		add si, 10
 2108:	
 
-file_test$590:	; Parameter 18 £temporary5181 6
+file_test$590:	; Parameter 18 £temporary4982 6
 2109:		mov [bp + 24], si
 2111:	
 
@@ -2648,10 +2648,10 @@ file_test$594:	; Call 18 fread 0
 file_test$595:	; PostCall 18
 2129:	
 
-file_test$596:	; GetReturnValue £temporary5182
+file_test$596:	; GetReturnValue £temporary4983
 2134:	
 
-file_test$597:	; SignedLessThanEqual 608 £temporary5182 0
+file_test$597:	; SignedLessThanEqual 608 £temporary4983 0
 2135:		cmp bx, 0
 2136:		jle file_test$608
 2138:	
@@ -2660,10 +2660,10 @@ file_test$598:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Sy
 2140:	
 
 file_test$599:	; Parameter 18 string_index23A2025i3A20value2025f0A# 6
-2141:		mov word [bp + 24], @11226$string_index23A2025i3A20value2025f0A#
+2141:		mov word [bp + 24], @10834$string_index23A2025i3A20value2025f0A#
 2143:	
 
-file_test$600:	; Assign £temporary5184 index
+file_test$600:	; Assign £temporary4985 index
 2144:		mov ax, [bp + 8]
 2146:	
 
@@ -2671,7 +2671,7 @@ file_test$601:	; Increment index
 2147:		inc word [bp + 8]
 2149:	
 
-file_test$602:	; Parameter 18 £temporary5184 8
+file_test$602:	; Parameter 18 £temporary4985 8
 2150:		mov [bp + 26], ax
 2152:	
 
@@ -2703,7 +2703,7 @@ file_test$608:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Sym
 2173:	
 
 file_test$609:	; Parameter 8 string_0A# 6
-2174:		mov word [bp + 14], @11230$string_0A#
+2174:		mov word [bp + 14], @10838$string_0A#
 2176:	
 
 file_test$610:	; Call 8 printf 0
@@ -2739,11 +2739,11 @@ file_test$616:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 2201:	
 
 file_test$617:	; Parameter 6 string_TestY2Ebin# 6
-2202:		mov word [bp + 12], @11233$string_TestY2Ebin#
+2202:		mov word [bp + 12], @10841$string_TestY2Ebin#
 2204:	
 
 file_test$618:	; Parameter 6 string_r# 8
-2205:		mov word [bp + 14], @11234$string_r#
+2205:		mov word [bp + 14], @10842$string_r#
 2207:	
 
 file_test$619:	; Call 6 fopen 0
@@ -2756,10 +2756,10 @@ file_test$619:	; Call 6 fopen 0
 file_test$620:	; PostCall 6
 2215:	
 
-file_test$621:	; GetReturnValue £temporary5188
+file_test$621:	; GetReturnValue £temporary4989
 2220:	
 
-file_test$622:	; Assign inFilePtr £temporary5188
+file_test$622:	; Assign inFilePtr £temporary4989
 2221:		mov [bp + 6], bx
 2223:	
 
@@ -2777,15 +2777,15 @@ file_test$625:	; Parameter 8 stderr 6
 2233:	
 
 file_test$626:	; Parameter 8 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-2234:		mov word [bp + 16], @11242$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+2234:		mov word [bp + 16], @10850$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 2236:	
 
 file_test$627:	; Parameter 8 string_inFilePtr20213D20NULL# 10
-2237:		mov word [bp + 18], @11243$string_inFilePtr20213D20NULL#
+2237:		mov word [bp + 18], @10851$string_inFilePtr20213D20NULL#
 2239:	
 
 file_test$628:	; Parameter 8 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-2240:		mov word [bp + 20], @11244$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+2240:		mov word [bp + 20], @10852$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 2242:	
 
 file_test$629:	; Parameter 8 232 14
@@ -2839,10 +2839,10 @@ file_test$638:	; Call 10 feof 0
 file_test$639:	; PostCall 10
 2282:	
 
-file_test$640:	; GetReturnValue £temporary5193
+file_test$640:	; GetReturnValue £temporary4994
 2287:	
 
-file_test$641:	; NotEqual 660 £temporary5193 0
+file_test$641:	; NotEqual 660 £temporary4994 0
 2288:		cmp bx, 0
 2289:		jne file_test$660
 2291:	
@@ -2850,12 +2850,12 @@ file_test$641:	; NotEqual 660 £temporary5193 0
 file_test$642:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 2293:	
 
-file_test$643:	; address £temporary5196 value
+file_test$643:	; address £temporary4997 value
 2294:		mov si, bp
 2295:		add si, 10
 2297:	
 
-file_test$644:	; Parameter 18 £temporary5196 6
+file_test$644:	; Parameter 18 £temporary4997 6
 2298:		mov [bp + 24], si
 2300:	
 
@@ -2886,10 +2886,10 @@ file_test$650:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Sy
 2320:	
 
 file_test$651:	; Parameter 18 string_index33A2025i3A20value2025f0A# 6
-2321:		mov word [bp + 24], @11262$string_index33A2025i3A20value2025f0A#
+2321:		mov word [bp + 24], @10870$string_index33A2025i3A20value2025f0A#
 2323:	
 
-file_test$652:	; Assign £temporary5198 index
+file_test$652:	; Assign £temporary4999 index
 2324:		mov ax, [bp + 8]
 2326:	
 
@@ -2897,7 +2897,7 @@ file_test$653:	; Increment index
 2327:		inc word [bp + 8]
 2329:	
 
-file_test$654:	; Parameter 18 £temporary5198 8
+file_test$654:	; Parameter 18 £temporary4999 8
 2330:		mov [bp + 26], ax
 2332:	
 
@@ -2929,7 +2929,7 @@ file_test$660:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Sym
 2353:	
 
 file_test$661:	; Parameter 8 string_0A# 6
-2354:		mov word [bp + 14], @11266$string_0A#
+2354:		mov word [bp + 14], @10874$string_0A#
 2356:	
 
 file_test$662:	; Call 8 printf 0
@@ -2965,11 +2965,11 @@ file_test$668:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 2381:	
 
 file_test$669:	; Parameter 6 string_TestX2Ebin# 6
-2382:		mov word [bp + 12], @11269$string_TestX2Ebin#
+2382:		mov word [bp + 12], @10877$string_TestX2Ebin#
 2384:	
 
 file_test$670:	; Parameter 6 string_r# 8
-2385:		mov word [bp + 14], @11270$string_r#
+2385:		mov word [bp + 14], @10878$string_r#
 2387:	
 
 file_test$671:	; Call 6 fopen 0
@@ -2982,10 +2982,10 @@ file_test$671:	; Call 6 fopen 0
 file_test$672:	; PostCall 6
 2395:	
 
-file_test$673:	; GetReturnValue £temporary5202
+file_test$673:	; GetReturnValue £temporary5003
 2400:	
 
-file_test$674:	; Assign inFilePtr £temporary5202
+file_test$674:	; Assign inFilePtr £temporary5003
 2401:		mov [bp + 6], bx
 2403:	
 
@@ -3003,15 +3003,15 @@ file_test$677:	; Parameter 10 stderr 6
 2413:	
 
 file_test$678:	; Parameter 10 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-2414:		mov word [bp + 18], @11279$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+2414:		mov word [bp + 18], @10887$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 2416:	
 
 file_test$679:	; Parameter 10 string_inFilePtr20213D20NULL# 10
-2417:		mov word [bp + 20], @11280$string_inFilePtr20213D20NULL#
+2417:		mov word [bp + 20], @10888$string_inFilePtr20213D20NULL#
 2419:	
 
 file_test$680:	; Parameter 10 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-2420:		mov word [bp + 22], @11281$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+2420:		mov word [bp + 22], @10889$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 2422:	
 
 file_test$681:	; Parameter 10 250 14
@@ -3046,12 +3046,12 @@ file_test$686:	; PostCall 10
 file_test$687:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 2447:	
 
-file_test$688:	; address £temporary5207 size
+file_test$688:	; address £temporary5008 size
 2448:		mov si, bp
 2449:		add si, 8
 2451:	
 
-file_test$689:	; Parameter 10 £temporary5207 6
+file_test$689:	; Parameter 10 £temporary5008 6
 2452:		mov [bp + 16], si
 2454:	
 
@@ -3082,7 +3082,7 @@ file_test$695:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sy
 2474:	
 
 file_test$696:	; Parameter 10 string_size43A2025i20total2025i0A# 6
-2475:		mov word [bp + 16], @11291$string_size43A2025i20total2025i0A#
+2475:		mov word [bp + 16], @10899$string_size43A2025i20total2025i0A#
 2477:	
 
 file_test$697:	; Parameter 10 size 8
@@ -3090,13 +3090,13 @@ file_test$697:	; Parameter 10 size 8
 2479:		mov [bp + 18], ax
 2481:	
 
-file_test$698:	; SignedMultiply £temporary5209 size 8
+file_test$698:	; SignedMultiply £temporary5010 size 8
 2482:		mov ax, [bp + 8]
 2484:		xor dx, dx
-2485:		imul word [@11293$int2$8#]
+2485:		imul word [@10901$int2$8#]
 2491:	
 
-file_test$699:	; Parameter 10 £temporary5209 10
+file_test$699:	; Parameter 10 £temporary5010 10
 2492:		mov [bp + 20], ax
 2494:	
 
@@ -3115,7 +3115,7 @@ file_test$701:	; PostCall 10
 file_test$702:	; SignedMultiply total size 8
 2505:		mov ax, [bp + 8]
 2507:		xor dx, dx
-2508:		imul word [@11297$int2$8#]
+2508:		imul word [@10905$int2$8#]
 2509:		mov [bp + 10], ax
 2511:	
 
@@ -3137,20 +3137,20 @@ file_test$705:	; Call 14 malloc 0
 file_test$706:	; PostCall 14
 2525:	
 
-file_test$707:	; GetReturnValue £temporary5212
+file_test$707:	; GetReturnValue £temporary5013
 2530:	
 
-file_test$708:	; Assign p £temporary5212
+file_test$708:	; Assign p £temporary5013
 2531:		mov [bp + 14], bx
 2533:	
 
-file_test$709:	; UnsignedMultiply £temporary5213 size 8
+file_test$709:	; UnsignedMultiply £temporary5014 size 8
 2534:		mov ax, [bp + 8]
 2536:		xor dx, dx
-2537:		mul word [@11304$int2$8#]
+2537:		mul word [@10912$int2$8#]
 2543:	
 
-file_test$710:	; BinaryAdd endPtr p £temporary5213
+file_test$710:	; BinaryAdd endPtr p £temporary5014
 2544:		mov bx, [bp + 14]
 2545:		add bx, ax
 2546:		mov [bp + 16], bx
@@ -3170,15 +3170,15 @@ file_test$713:	; Parameter 18 stderr 6
 2558:	
 
 file_test$714:	; Parameter 18 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-2559:		mov word [bp + 26], @11312$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+2559:		mov word [bp + 26], @10920$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 2561:	
 
 file_test$715:	; Parameter 18 string_p20213D20NULL# 10
-2562:		mov word [bp + 28], @11313$string_p20213D20NULL#
+2562:		mov word [bp + 28], @10921$string_p20213D20NULL#
 2564:	
 
 file_test$716:	; Parameter 18 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-2565:		mov word [bp + 30], @11314$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+2565:		mov word [bp + 30], @10922$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 2567:	
 
 file_test$717:	; Parameter 18 257 14
@@ -3214,7 +3214,7 @@ file_test$723:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Sy
 2592:	
 
 file_test$724:	; Parameter 18 string_malloc43A2025u2025u2025u0A# 6
-2593:		mov word [bp + 24], @11318$string_malloc43A2025u2025u2025u0A#
+2593:		mov word [bp + 24], @10926$string_malloc43A2025u2025u2025u0A#
 2595:	
 
 file_test$725:	; Parameter 18 p 8
@@ -3290,7 +3290,7 @@ file_test$739:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Sy
 2652:	
 
 file_test$740:	; Parameter 18 string_index43A2025i3A20value2025f0A# 6
-2653:		mov word [bp + 24], @11328$string_index43A2025i3A20value2025f0A#
+2653:		mov word [bp + 24], @10936$string_index43A2025i3A20value2025f0A#
 2655:	
 
 file_test$741:	; Parameter 18 index 8
@@ -3298,25 +3298,25 @@ file_test$741:	; Parameter 18 index 8
 2657:		mov [bp + 26], ax
 2659:	
 
-file_test$742:	; UnsignedMultiply £temporary5224 index 8
+file_test$742:	; UnsignedMultiply £temporary5025 index 8
 2660:		mov ax, [bp + 12]
 2662:		xor dx, dx
-2663:		mul word [@11330$int2$8#]
+2663:		mul word [@10938$int2$8#]
 2669:	
 
-file_test$743:	; BinaryAdd £temporary5225 p £temporary5224
+file_test$743:	; BinaryAdd £temporary5026 p £temporary5025
 2670:		mov si, [bp + 14]
 2671:		add si, ax
 2673:	
 
-file_test$744:	; Deref £temporary5223 -> £temporary5225 £temporary5225 0
+file_test$744:	; Deref £temporary5024 -> £temporary5026 £temporary5026 0
 2675:	
 
-file_test$745:	; PushFloat £temporary5223 -> £temporary5225
+file_test$745:	; PushFloat £temporary5024 -> £temporary5026
 2676:		fld qword [si]
 2678:	
 
-file_test$746:	; Parameter 18 £temporary5223 -> £temporary5225 10
+file_test$746:	; Parameter 18 £temporary5024 -> £temporary5026 10
 2679:		fstp qword [bp + 28]
 2681:	
 
@@ -3344,7 +3344,7 @@ file_test$751:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Sy
 2699:	
 
 file_test$752:	; Parameter 18 string_0A# 6
-2700:		mov word [bp + 24], @11334$string_0A#
+2700:		mov word [bp + 24], @10942$string_0A#
 2702:	
 
 file_test$753:	; Call 18 printf 0
@@ -3614,11 +3614,11 @@ file_test$817:	; CallHeader 206 System.Collections.Generic.HashSet`1[CCompiler.S
 2903:	
 
 file_test$818:	; Parameter 206 string_Block2Ebin# 6
-2904:		mov word [bp + 212], @11515$string_Block2Ebin#
+2904:		mov word [bp + 212], @11123$string_Block2Ebin#
 2906:	
 
 file_test$819:	; Parameter 206 string_w# 8
-2907:		mov word [bp + 214], @11516$string_w#
+2907:		mov word [bp + 214], @11124$string_w#
 2909:	
 
 file_test$820:	; Call 206 fopen 0
@@ -3631,10 +3631,10 @@ file_test$820:	; Call 206 fopen 0
 file_test$821:	; PostCall 206
 2917:	
 
-file_test$822:	; GetReturnValue £temporary5290
+file_test$822:	; GetReturnValue £temporary5091
 2922:	
 
-file_test$823:	; Assign outFilePtr £temporary5290
+file_test$823:	; Assign outFilePtr £temporary5091
 2923:		mov [bp + 206], bx
 2925:	
 
@@ -3642,11 +3642,11 @@ file_test$824:	; CallHeader 208 System.Collections.Generic.HashSet`1[CCompiler.S
 2927:	
 
 file_test$825:	; Parameter 208 string_Block2Ebin# 6
-2928:		mov word [bp + 214], @11519$string_Block2Ebin#
+2928:		mov word [bp + 214], @11127$string_Block2Ebin#
 2930:	
 
 file_test$826:	; Parameter 208 string_r# 8
-2931:		mov word [bp + 216], @11520$string_r#
+2931:		mov word [bp + 216], @11128$string_r#
 2933:	
 
 file_test$827:	; Call 208 fopen 0
@@ -3659,10 +3659,10 @@ file_test$827:	; Call 208 fopen 0
 file_test$828:	; PostCall 208
 2941:	
 
-file_test$829:	; GetReturnValue £temporary5291
+file_test$829:	; GetReturnValue £temporary5092
 2946:	
 
-file_test$830:	; Assign inFilePtr £temporary5291
+file_test$830:	; Assign inFilePtr £temporary5092
 2947:		mov [bp + 208], bx
 2949:	
 
@@ -3680,15 +3680,15 @@ file_test$833:	; Parameter 210 stderr 6
 2959:	
 
 file_test$834:	; Parameter 210 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-2960:		mov word [bp + 218], @11528$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+2960:		mov word [bp + 218], @11136$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 2962:	
 
 file_test$835:	; Parameter 210 string_outFilePtr20213D20NULL# 10
-2963:		mov word [bp + 220], @11529$string_outFilePtr20213D20NULL#
+2963:		mov word [bp + 220], @11137$string_outFilePtr20213D20NULL#
 2965:	
 
 file_test$836:	; Parameter 210 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-2966:		mov word [bp + 222], @11530$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+2966:		mov word [bp + 222], @11138$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 2968:	
 
 file_test$837:	; Parameter 210 284 14
@@ -3734,15 +3734,15 @@ file_test$845:	; Parameter 210 stderr 6
 3001:	
 
 file_test$846:	; Parameter 210 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-3002:		mov word [bp + 218], @11539$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+3002:		mov word [bp + 218], @11147$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 3004:	
 
 file_test$847:	; Parameter 210 string_inFilePtr20213D20NULL# 10
-3005:		mov word [bp + 220], @11540$string_inFilePtr20213D20NULL#
+3005:		mov word [bp + 220], @11148$string_inFilePtr20213D20NULL#
 3007:	
 
 file_test$848:	; Parameter 210 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-3008:		mov word [bp + 222], @11541$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+3008:		mov word [bp + 222], @11149$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 3010:	
 
 file_test$849:	; Parameter 210 285 14
@@ -3841,10 +3841,10 @@ file_test$868:	; Call 210 feof 0
 file_test$869:	; PostCall 210
 3085:	
 
-file_test$870:	; GetReturnValue £temporary5302
+file_test$870:	; GetReturnValue £temporary5103
 3090:	
 
-file_test$871:	; NotEqual 891 £temporary5302 0
+file_test$871:	; NotEqual 891 £temporary5103 0
 3091:		cmp bx, 0
 3092:		jne file_test$891
 3094:	
@@ -3852,12 +3852,12 @@ file_test$871:	; NotEqual 891 £temporary5302 0
 file_test$872:	; CallHeader 210 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3096:	
 
-file_test$873:	; address £temporary5305 person
+file_test$873:	; address £temporary5106 person
 3097:		mov si, bp
 3098:		add si, 156
 3100:	
 
-file_test$874:	; Parameter 210 £temporary5305 6
+file_test$874:	; Parameter 210 £temporary5106 6
 3101:		mov [bp + 216], si
 3103:	
 
@@ -3888,7 +3888,7 @@ file_test$880:	; CallHeader 210 System.Collections.Generic.HashSet`1[CCompiler.S
 3123:	
 
 file_test$881:	; Parameter 210 string_Name20203A2025s0A# 6
-3124:		mov word [bp + 216], @11561$string_Name20203A2025s0A#
+3124:		mov word [bp + 216], @11169$string_Name20203A2025s0A#
 3126:	
 
 file_test$882:	; Parameter 210 person$name 8
@@ -3912,7 +3912,7 @@ file_test$885:	; CallHeader 210 System.Collections.Generic.HashSet`1[CCompiler.S
 3142:	
 
 file_test$886:	; Parameter 210 string_Phone203A2025d0A# 6
-3143:		mov word [bp + 216], @11564$string_Phone203A2025d0A#
+3143:		mov word [bp + 216], @11172$string_Phone203A2025d0A#
 3145:	
 
 file_test$887:	; Parameter 210 person$phone 8
@@ -3958,11 +3958,11 @@ file_test$895:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 3178:	
 
 file_test$896:	; Parameter 6 string_outx2Etxt# 6
-3179:		mov word [bp + 12], @11568$string_outx2Etxt#
+3179:		mov word [bp + 12], @11176$string_outx2Etxt#
 3181:	
 
 file_test$897:	; Parameter 6 string_r# 8
-3182:		mov word [bp + 14], @11569$string_r#
+3182:		mov word [bp + 14], @11177$string_r#
 3184:	
 
 file_test$898:	; Call 6 fopen 0
@@ -3975,10 +3975,10 @@ file_test$898:	; Call 6 fopen 0
 file_test$899:	; PostCall 6
 3192:	
 
-file_test$900:	; GetReturnValue £temporary5312
+file_test$900:	; GetReturnValue £temporary5113
 3197:	
 
-file_test$901:	; Assign inFilePtr £temporary5312
+file_test$901:	; Assign inFilePtr £temporary5113
 3198:		mov [bp + 6], bx
 3200:	
 
@@ -3996,15 +3996,15 @@ file_test$904:	; Parameter 12 stderr 6
 3210:	
 
 file_test$905:	; Parameter 12 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-3211:		mov word [bp + 20], @11579$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+3211:		mov word [bp + 20], @11187$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 3213:	
 
 file_test$906:	; Parameter 12 string_inFilePtr20213D20NULL# 10
-3214:		mov word [bp + 22], @11580$string_inFilePtr20213D20NULL#
+3214:		mov word [bp + 22], @11188$string_inFilePtr20213D20NULL#
 3216:	
 
 file_test$907:	; Parameter 12 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec# 12
-3217:		mov word [bp + 24], @11581$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+3217:		mov word [bp + 24], @11189$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 3219:	
 
 file_test$908:	; Parameter 12 302 14
@@ -4062,10 +4062,10 @@ file_test$918:	; Call 12 fseek 0
 file_test$919:	; PostCall 12
 3262:	
 
-file_test$920:	; GetReturnValue £temporary5317
+file_test$920:	; GetReturnValue £temporary5118
 3267:	
 
-file_test$921:	; Assign size £temporary5317
+file_test$921:	; Assign size £temporary5118
 3268:		mov [bp + 12], bx
 3270:	
 
@@ -4073,7 +4073,7 @@ file_test$922:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Sy
 3272:	
 
 file_test$923:	; Parameter 14 string_ftell2025i0A# 6
-3273:		mov word [bp + 20], @11590$string_ftell2025i0A#
+3273:		mov word [bp + 20], @11198$string_ftell2025i0A#
 3275:	
 
 file_test$924:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -4094,10 +4094,10 @@ file_test$926:	; Call 14 ftell 8
 file_test$927:	; PostCall 14
 3289:	
 
-file_test$928:	; GetReturnValue £temporary5318
+file_test$928:	; GetReturnValue £temporary5119
 3294:	
 
-file_test$929:	; Parameter 14 £temporary5318 8
+file_test$929:	; Parameter 14 £temporary5119 8
 3295:		mov [bp + 22], bx
 3297:	
 
@@ -4141,17 +4141,17 @@ file_test$936:	; Call 14 fgetc 0
 file_test$937:	; PostCall 14
 3329:	
 
-file_test$938:	; GetReturnValue £temporary5322
+file_test$938:	; GetReturnValue £temporary5123
 3334:	
 
-file_test$939:	; IntegralToIntegral £temporary5323 £temporary5322
+file_test$939:	; IntegralToIntegral £temporary5124 £temporary5123
 3337:		cmp bx, 0
 3338:		jge file_test$940
 3339:		neg bx
 3341:		neg bl
 3343:	
 
-file_test$940:	; Assign c £temporary5323
+file_test$940:	; Assign c £temporary5124
 3344:		mov [bp + 14], bl
 3346:	
 
@@ -4159,10 +4159,10 @@ file_test$941:	; CallHeader 15 System.Collections.Generic.HashSet`1[CCompiler.Sy
 3348:	
 
 file_test$942:	; Parameter 15 string_3C25c3E2025i2025i0A# 6
-3349:		mov word [bp + 21], @11601$string_3C25c3E2025i2025i0A#
+3349:		mov word [bp + 21], @11209$string_3C25c3E2025i2025i0A#
 3351:	
 
-file_test$943:	; IntegralToIntegral £temporary5324 c
+file_test$943:	; IntegralToIntegral £temporary5125 c
 3352:		mov al, [bp + 14]
 3354:		and ax, 255
 3356:		cmp al, 0
@@ -4171,11 +4171,11 @@ file_test$943:	; IntegralToIntegral £temporary5324 c
 3360:		neg ax
 3362:	
 
-file_test$944:	; Parameter 15 £temporary5324 8
+file_test$944:	; Parameter 15 £temporary5125 8
 3363:		mov [bp + 23], ax
 3365:	
 
-file_test$945:	; IntegralToIntegral £temporary5325 c
+file_test$945:	; IntegralToIntegral £temporary5126 c
 3366:		mov al, [bp + 14]
 3368:		and ax, 255
 3370:		cmp al, 0
@@ -4184,7 +4184,7 @@ file_test$945:	; IntegralToIntegral £temporary5325 c
 3374:		neg ax
 3376:	
 
-file_test$946:	; Parameter 15 £temporary5325 10
+file_test$946:	; Parameter 15 £temporary5126 10
 3377:		mov [bp + 25], ax
 3379:	
 
@@ -4206,10 +4206,10 @@ file_test$949:	; Call 15 ftell 12
 file_test$950:	; PostCall 15
 3393:	
 
-file_test$951:	; GetReturnValue £temporary5326
+file_test$951:	; GetReturnValue £temporary5127
 3398:	
 
-file_test$952:	; Parameter 15 £temporary5326 12
+file_test$952:	; Parameter 15 £temporary5127 12
 3399:		mov [bp + 27], bx
 3401:	
 
@@ -4233,16 +4233,16 @@ file_test$956:	; Parameter 15 inFilePtr 6
 3415:		mov [bp + 21], ax
 3417:	
 
-file_test$957:	; BinarySubtract £temporary5328 size index
+file_test$957:	; BinarySubtract £temporary5129 size index
 3418:		mov ax, [bp + 12]
 3419:		sub ax, [bp + 10]
 3421:	
 
-file_test$958:	; BinarySubtract £temporary5329 £temporary5328 1
+file_test$958:	; BinarySubtract £temporary5130 £temporary5129 1
 3422:		sub ax, 1
 3424:	
 
-file_test$959:	; Parameter 15 £temporary5329 8
+file_test$959:	; Parameter 15 £temporary5130 8
 3425:		mov [bp + 23], ax
 3427:	
 
@@ -4272,7 +4272,7 @@ file_test$965:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Sy
 3446:	
 
 file_test$966:	; Parameter 12 string_0A# 6
-3447:		mov word [bp + 18], @11612$string_0A#
+3447:		mov word [bp + 18], @11220$string_0A#
 3449:	
 
 file_test$967:	; Call 12 printf 0
@@ -4308,14 +4308,14 @@ file_test$973:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 3474:	
 
 file_test$974:	; Parameter 6 string_fileexists2022X223A2025s0A# 6
-3475:		mov word [bp + 12], @11615$string_fileexists2022X223A2025s0A#
+3475:		mov word [bp + 12], @11223$string_fileexists2022X223A2025s0A#
 3477:	
 
 file_test$975:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3479:	
 
 file_test$976:	; Parameter 6 string_X# 14
-3480:		mov word [bp + 20], @11616$string_X#
+3480:		mov word [bp + 20], @11224$string_X#
 3482:	
 
 file_test$977:	; Call 6 fileexists 8
@@ -4328,27 +4328,27 @@ file_test$977:	; Call 6 fileexists 8
 file_test$978:	; PostCall 6
 3490:	
 
-file_test$979:	; GetReturnValue £temporary5333
+file_test$979:	; GetReturnValue £temporary5134
 3495:	
 
-file_test$980:	; Equal 983 £temporary5333 0
+file_test$980:	; Equal 983 £temporary5134 0
 3496:		cmp bx, 0
 3497:		je file_test$983
 3499:	
 
-file_test$981:	; Assign £temporary5338 string_Yes#
-3500:		mov ax, @11618$string_Yes#
+file_test$981:	; Assign £temporary5139 string_Yes#
+3500:		mov ax, @11226$string_Yes#
 3502:	
 
 file_test$982:	; Goto 984
 3503:		jmp file_test$984
 3505:	
 
-file_test$983:	; Assign £temporary5338 string_No#
-3506:		mov ax, @11619$string_No#
+file_test$983:	; Assign £temporary5139 string_No#
+3506:		mov ax, @11227$string_No#
 3508:	
 
-file_test$984:	; Parameter 6 £temporary5338 8
+file_test$984:	; Parameter 6 £temporary5139 8
 3509:		mov [bp + 14], ax
 3511:	
 
@@ -4368,14 +4368,14 @@ file_test$987:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 3523:	
 
 file_test$988:	; Parameter 6 string_fileexists2022Y223A2025s0A# 6
-3524:		mov word [bp + 12], @11629$string_fileexists2022Y223A2025s0A#
+3524:		mov word [bp + 12], @11237$string_fileexists2022Y223A2025s0A#
 3526:	
 
 file_test$989:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3528:	
 
 file_test$990:	; Parameter 6 string_Y# 14
-3529:		mov word [bp + 20], @11630$string_Y#
+3529:		mov word [bp + 20], @11238$string_Y#
 3531:	
 
 file_test$991:	; Call 6 fileexists 8
@@ -4388,27 +4388,27 @@ file_test$991:	; Call 6 fileexists 8
 file_test$992:	; PostCall 6
 3539:	
 
-file_test$993:	; GetReturnValue £temporary5340
+file_test$993:	; GetReturnValue £temporary5141
 3544:	
 
-file_test$994:	; Equal 997 £temporary5340 0
+file_test$994:	; Equal 997 £temporary5141 0
 3545:		cmp bx, 0
 3546:		je file_test$997
 3548:	
 
-file_test$995:	; Assign £temporary5345 string_Yes#
-3549:		mov ax, @11632$string_Yes#
+file_test$995:	; Assign £temporary5146 string_Yes#
+3549:		mov ax, @11240$string_Yes#
 3551:	
 
 file_test$996:	; Goto 998
 3552:		jmp file_test$998
 3554:	
 
-file_test$997:	; Assign £temporary5345 string_No#
-3555:		mov ax, @11633$string_No#
+file_test$997:	; Assign £temporary5146 string_No#
+3555:		mov ax, @11241$string_No#
 3557:	
 
-file_test$998:	; Parameter 6 £temporary5345 8
+file_test$998:	; Parameter 6 £temporary5146 8
 3558:		mov [bp + 14], ax
 3560:	
 
@@ -4428,14 +4428,14 @@ file_test$1001:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 3572:	
 
 file_test$1002:	; Parameter 6 string_fileexists2022Main2Easm223A2025s0A# 6
-3573:		mov word [bp + 12], @11643$string_fileexists2022Main2Easm223A2025s0A#
+3573:		mov word [bp + 12], @11251$string_fileexists2022Main2Easm223A2025s0A#
 3575:	
 
 file_test$1003:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3577:	
 
 file_test$1004:	; Parameter 6 string_Main2Easm# 14
-3578:		mov word [bp + 20], @11644$string_Main2Easm#
+3578:		mov word [bp + 20], @11252$string_Main2Easm#
 3580:	
 
 file_test$1005:	; Call 6 fileexists 8
@@ -4448,27 +4448,27 @@ file_test$1005:	; Call 6 fileexists 8
 file_test$1006:	; PostCall 6
 3588:	
 
-file_test$1007:	; GetReturnValue £temporary5347
+file_test$1007:	; GetReturnValue £temporary5148
 3593:	
 
-file_test$1008:	; Equal 1011 £temporary5347 0
+file_test$1008:	; Equal 1011 £temporary5148 0
 3594:		cmp bx, 0
 3595:		je file_test$1011
 3597:	
 
-file_test$1009:	; Assign £temporary5352 string_Yes#
-3598:		mov ax, @11646$string_Yes#
+file_test$1009:	; Assign £temporary5153 string_Yes#
+3598:		mov ax, @11254$string_Yes#
 3600:	
 
 file_test$1010:	; Goto 1012
 3601:		jmp file_test$1012
 3603:	
 
-file_test$1011:	; Assign £temporary5352 string_No#
-3604:		mov ax, @11647$string_No#
+file_test$1011:	; Assign £temporary5153 string_No#
+3604:		mov ax, @11255$string_No#
 3606:	
 
-file_test$1012:	; Parameter 6 £temporary5352 8
+file_test$1012:	; Parameter 6 £temporary5153 8
 3607:		mov [bp + 14], ax
 3609:	
 
@@ -4488,14 +4488,14 @@ file_test$1015:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 3621:	
 
 file_test$1016:	; Parameter 6 string_fileexists2022MainX2Easm223A2025s0A# 6
-3622:		mov word [bp + 12], @11657$string_fileexists2022MainX2Easm223A2025s0A#
+3622:		mov word [bp + 12], @11265$string_fileexists2022MainX2Easm223A2025s0A#
 3624:	
 
 file_test$1017:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3626:	
 
 file_test$1018:	; Parameter 6 string_MainX2Easm# 14
-3627:		mov word [bp + 20], @11658$string_MainX2Easm#
+3627:		mov word [bp + 20], @11266$string_MainX2Easm#
 3629:	
 
 file_test$1019:	; Call 6 fileexists 8
@@ -4508,27 +4508,27 @@ file_test$1019:	; Call 6 fileexists 8
 file_test$1020:	; PostCall 6
 3637:	
 
-file_test$1021:	; GetReturnValue £temporary5354
+file_test$1021:	; GetReturnValue £temporary5155
 3642:	
 
-file_test$1022:	; Equal 1025 £temporary5354 0
+file_test$1022:	; Equal 1025 £temporary5155 0
 3643:		cmp bx, 0
 3644:		je file_test$1025
 3646:	
 
-file_test$1023:	; Assign £temporary5359 string_Yes#
-3647:		mov ax, @11660$string_Yes#
+file_test$1023:	; Assign £temporary5160 string_Yes#
+3647:		mov ax, @11268$string_Yes#
 3649:	
 
 file_test$1024:	; Goto 1026
 3650:		jmp file_test$1026
 3652:	
 
-file_test$1025:	; Assign £temporary5359 string_No#
-3653:		mov ax, @11661$string_No#
+file_test$1025:	; Assign £temporary5160 string_No#
+3653:		mov ax, @11269$string_No#
 3655:	
 
-file_test$1026:	; Parameter 6 £temporary5359 8
+file_test$1026:	; Parameter 6 £temporary5160 8
 3656:		mov [bp + 14], ax
 3658:	
 
@@ -4548,14 +4548,14 @@ file_test$1029:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 3670:	
 
 file_test$1030:	; Parameter 6 string_fileexists2022Main2Ec223A2025s0A# 6
-3671:		mov word [bp + 12], @11671$string_fileexists2022Main2Ec223A2025s0A#
+3671:		mov word [bp + 12], @11279$string_fileexists2022Main2Ec223A2025s0A#
 3673:	
 
 file_test$1031:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3675:	
 
 file_test$1032:	; Parameter 6 string_Main2Ec# 14
-3676:		mov word [bp + 20], @11672$string_Main2Ec#
+3676:		mov word [bp + 20], @11280$string_Main2Ec#
 3678:	
 
 file_test$1033:	; Call 6 fileexists 8
@@ -4568,27 +4568,27 @@ file_test$1033:	; Call 6 fileexists 8
 file_test$1034:	; PostCall 6
 3686:	
 
-file_test$1035:	; GetReturnValue £temporary5361
+file_test$1035:	; GetReturnValue £temporary5162
 3691:	
 
-file_test$1036:	; Equal 1039 £temporary5361 0
+file_test$1036:	; Equal 1039 £temporary5162 0
 3692:		cmp bx, 0
 3693:		je file_test$1039
 3695:	
 
-file_test$1037:	; Assign £temporary5366 string_Yes#
-3696:		mov ax, @11674$string_Yes#
+file_test$1037:	; Assign £temporary5167 string_Yes#
+3696:		mov ax, @11282$string_Yes#
 3698:	
 
 file_test$1038:	; Goto 1040
 3699:		jmp file_test$1040
 3701:	
 
-file_test$1039:	; Assign £temporary5366 string_No#
-3702:		mov ax, @11675$string_No#
+file_test$1039:	; Assign £temporary5167 string_No#
+3702:		mov ax, @11283$string_No#
 3704:	
 
-file_test$1040:	; Parameter 6 £temporary5366 8
+file_test$1040:	; Parameter 6 £temporary5167 8
 3705:		mov [bp + 14], ax
 3707:	
 
@@ -4608,14 +4608,14 @@ file_test$1043:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 3719:	
 
 file_test$1044:	; Parameter 6 string_fileexists2022MainX2Ec223A2025s0A# 6
-3720:		mov word [bp + 12], @11685$string_fileexists2022MainX2Ec223A2025s0A#
+3720:		mov word [bp + 12], @11293$string_fileexists2022MainX2Ec223A2025s0A#
 3722:	
 
 file_test$1045:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3724:	
 
 file_test$1046:	; Parameter 6 string_MainX2Ec# 14
-3725:		mov word [bp + 20], @11686$string_MainX2Ec#
+3725:		mov word [bp + 20], @11294$string_MainX2Ec#
 3727:	
 
 file_test$1047:	; Call 6 fileexists 8
@@ -4628,27 +4628,27 @@ file_test$1047:	; Call 6 fileexists 8
 file_test$1048:	; PostCall 6
 3735:	
 
-file_test$1049:	; GetReturnValue £temporary5368
+file_test$1049:	; GetReturnValue £temporary5169
 3740:	
 
-file_test$1050:	; Equal 1053 £temporary5368 0
+file_test$1050:	; Equal 1053 £temporary5169 0
 3741:		cmp bx, 0
 3742:		je file_test$1053
 3744:	
 
-file_test$1051:	; Assign £temporary5373 string_Yes#
-3745:		mov ax, @11688$string_Yes#
+file_test$1051:	; Assign £temporary5174 string_Yes#
+3745:		mov ax, @11296$string_Yes#
 3747:	
 
 file_test$1052:	; Goto 1054
 3748:		jmp file_test$1054
 3750:	
 
-file_test$1053:	; Assign £temporary5373 string_No#
-3751:		mov ax, @11689$string_No#
+file_test$1053:	; Assign £temporary5174 string_No#
+3751:		mov ax, @11297$string_No#
 3753:	
 
-file_test$1054:	; Parameter 6 £temporary5373 8
+file_test$1054:	; Parameter 6 £temporary5174 8
 3754:		mov [bp + 14], ax
 3756:	
 
@@ -4668,14 +4668,14 @@ file_test$1057:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 3768:	
 
 file_test$1058:	; Parameter 6 string_fileexists2022File2Ec223A2025s0A# 6
-3769:		mov word [bp + 12], @11699$string_fileexists2022File2Ec223A2025s0A#
+3769:		mov word [bp + 12], @11307$string_fileexists2022File2Ec223A2025s0A#
 3771:	
 
 file_test$1059:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3773:	
 
 file_test$1060:	; Parameter 6 string_File2Ec# 14
-3774:		mov word [bp + 20], @11700$string_File2Ec#
+3774:		mov word [bp + 20], @11308$string_File2Ec#
 3776:	
 
 file_test$1061:	; Call 6 fileexists 8
@@ -4688,27 +4688,27 @@ file_test$1061:	; Call 6 fileexists 8
 file_test$1062:	; PostCall 6
 3784:	
 
-file_test$1063:	; GetReturnValue £temporary5375
+file_test$1063:	; GetReturnValue £temporary5176
 3789:	
 
-file_test$1064:	; Equal 1067 £temporary5375 0
+file_test$1064:	; Equal 1067 £temporary5176 0
 3790:		cmp bx, 0
 3791:		je file_test$1067
 3793:	
 
-file_test$1065:	; Assign £temporary5380 string_Yes#
-3794:		mov ax, @11702$string_Yes#
+file_test$1065:	; Assign £temporary5181 string_Yes#
+3794:		mov ax, @11310$string_Yes#
 3796:	
 
 file_test$1066:	; Goto 1068
 3797:		jmp file_test$1068
 3799:	
 
-file_test$1067:	; Assign £temporary5380 string_No#
-3800:		mov ax, @11703$string_No#
+file_test$1067:	; Assign £temporary5181 string_No#
+3800:		mov ax, @11311$string_No#
 3802:	
 
-file_test$1068:	; Parameter 6 £temporary5380 8
+file_test$1068:	; Parameter 6 £temporary5181 8
 3803:		mov [bp + 14], ax
 3805:	
 
@@ -4728,14 +4728,14 @@ file_test$1071:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 3817:	
 
 file_test$1072:	; Parameter 6 string_fileexists2022File2Ex223A2025s0A# 6
-3818:		mov word [bp + 12], @11713$string_fileexists2022File2Ex223A2025s0A#
+3818:		mov word [bp + 12], @11321$string_fileexists2022File2Ex223A2025s0A#
 3820:	
 
 file_test$1073:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3822:	
 
 file_test$1074:	; Parameter 6 string_File2Ex# 14
-3823:		mov word [bp + 20], @11714$string_File2Ex#
+3823:		mov word [bp + 20], @11322$string_File2Ex#
 3825:	
 
 file_test$1075:	; Call 6 fileexists 8
@@ -4748,27 +4748,27 @@ file_test$1075:	; Call 6 fileexists 8
 file_test$1076:	; PostCall 6
 3833:	
 
-file_test$1077:	; GetReturnValue £temporary5382
+file_test$1077:	; GetReturnValue £temporary5183
 3838:	
 
-file_test$1078:	; Equal 1081 £temporary5382 0
+file_test$1078:	; Equal 1081 £temporary5183 0
 3839:		cmp bx, 0
 3840:		je file_test$1081
 3842:	
 
-file_test$1079:	; Assign £temporary5387 string_Yes#
-3843:		mov ax, @11716$string_Yes#
+file_test$1079:	; Assign £temporary5188 string_Yes#
+3843:		mov ax, @11324$string_Yes#
 3845:	
 
 file_test$1080:	; Goto 1082
 3846:		jmp file_test$1082
 3848:	
 
-file_test$1081:	; Assign £temporary5387 string_No#
-3849:		mov ax, @11717$string_No#
+file_test$1081:	; Assign £temporary5188 string_No#
+3849:		mov ax, @11325$string_No#
 3851:	
 
-file_test$1082:	; Parameter 6 £temporary5387 8
+file_test$1082:	; Parameter 6 £temporary5188 8
 3852:		mov [bp + 14], ax
 3854:	
 
@@ -4788,14 +4788,14 @@ file_test$1085:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 3866:	
 
 file_test$1086:	; Parameter 6 string_fileexists2022File2Eh223A2025s0A# 6
-3867:		mov word [bp + 12], @11727$string_fileexists2022File2Eh223A2025s0A#
+3867:		mov word [bp + 12], @11335$string_fileexists2022File2Eh223A2025s0A#
 3869:	
 
 file_test$1087:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3871:	
 
 file_test$1088:	; Parameter 6 string_File2Eh# 14
-3872:		mov word [bp + 20], @11728$string_File2Eh#
+3872:		mov word [bp + 20], @11336$string_File2Eh#
 3874:	
 
 file_test$1089:	; Call 6 fileexists 8
@@ -4808,27 +4808,27 @@ file_test$1089:	; Call 6 fileexists 8
 file_test$1090:	; PostCall 6
 3882:	
 
-file_test$1091:	; GetReturnValue £temporary5389
+file_test$1091:	; GetReturnValue £temporary5190
 3887:	
 
-file_test$1092:	; Equal 1095 £temporary5389 0
+file_test$1092:	; Equal 1095 £temporary5190 0
 3888:		cmp bx, 0
 3889:		je file_test$1095
 3891:	
 
-file_test$1093:	; Assign £temporary5394 string_Yes#
-3892:		mov ax, @11730$string_Yes#
+file_test$1093:	; Assign £temporary5195 string_Yes#
+3892:		mov ax, @11338$string_Yes#
 3894:	
 
 file_test$1094:	; Goto 1096
 3895:		jmp file_test$1096
 3897:	
 
-file_test$1095:	; Assign £temporary5394 string_No#
-3898:		mov ax, @11731$string_No#
+file_test$1095:	; Assign £temporary5195 string_No#
+3898:		mov ax, @11339$string_No#
 3900:	
 
-file_test$1096:	; Parameter 6 £temporary5394 8
+file_test$1096:	; Parameter 6 £temporary5195 8
 3901:		mov [bp + 14], ax
 3903:	
 
@@ -4848,14 +4848,14 @@ file_test$1099:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 3915:	
 
 file_test$1100:	; Parameter 6 string_fileexists2022File2Ey223A2025s0A# 6
-3916:		mov word [bp + 12], @11741$string_fileexists2022File2Ey223A2025s0A#
+3916:		mov word [bp + 12], @11349$string_fileexists2022File2Ey223A2025s0A#
 3918:	
 
 file_test$1101:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3920:	
 
 file_test$1102:	; Parameter 6 string_File2Ey# 14
-3921:		mov word [bp + 20], @11742$string_File2Ey#
+3921:		mov word [bp + 20], @11350$string_File2Ey#
 3923:	
 
 file_test$1103:	; Call 6 fileexists 8
@@ -4868,27 +4868,27 @@ file_test$1103:	; Call 6 fileexists 8
 file_test$1104:	; PostCall 6
 3931:	
 
-file_test$1105:	; GetReturnValue £temporary5396
+file_test$1105:	; GetReturnValue £temporary5197
 3936:	
 
-file_test$1106:	; Equal 1109 £temporary5396 0
+file_test$1106:	; Equal 1109 £temporary5197 0
 3937:		cmp bx, 0
 3938:		je file_test$1109
 3940:	
 
-file_test$1107:	; Assign £temporary5401 string_Yes#
-3941:		mov ax, @11744$string_Yes#
+file_test$1107:	; Assign £temporary5202 string_Yes#
+3941:		mov ax, @11352$string_Yes#
 3943:	
 
 file_test$1108:	; Goto 1110
 3944:		jmp file_test$1110
 3946:	
 
-file_test$1109:	; Assign £temporary5401 string_No#
-3947:		mov ax, @11745$string_No#
+file_test$1109:	; Assign £temporary5202 string_No#
+3947:		mov ax, @11353$string_No#
 3949:	
 
-file_test$1110:	; Parameter 6 £temporary5401 8
+file_test$1110:	; Parameter 6 £temporary5202 8
 3950:		mov [bp + 14], ax
 3952:	
 
@@ -4908,14 +4908,14 @@ file_test$1113:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 3964:	
 
 file_test$1114:	; Parameter 6 string_fileexists2022File2Ep223A2025s0A# 6
-3965:		mov word [bp + 12], @11755$string_fileexists2022File2Ep223A2025s0A#
+3965:		mov word [bp + 12], @11363$string_fileexists2022File2Ep223A2025s0A#
 3967:	
 
 file_test$1115:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3969:	
 
 file_test$1116:	; Parameter 6 string_File2Ep# 14
-3970:		mov word [bp + 20], @11756$string_File2Ep#
+3970:		mov word [bp + 20], @11364$string_File2Ep#
 3972:	
 
 file_test$1117:	; Call 6 fileexists 8
@@ -4928,27 +4928,27 @@ file_test$1117:	; Call 6 fileexists 8
 file_test$1118:	; PostCall 6
 3980:	
 
-file_test$1119:	; GetReturnValue £temporary5403
+file_test$1119:	; GetReturnValue £temporary5204
 3985:	
 
-file_test$1120:	; Equal 1123 £temporary5403 0
+file_test$1120:	; Equal 1123 £temporary5204 0
 3986:		cmp bx, 0
 3987:		je file_test$1123
 3989:	
 
-file_test$1121:	; Assign £temporary5408 string_Yes#
-3990:		mov ax, @11758$string_Yes#
+file_test$1121:	; Assign £temporary5209 string_Yes#
+3990:		mov ax, @11366$string_Yes#
 3992:	
 
 file_test$1122:	; Goto 1124
 3993:		jmp file_test$1124
 3995:	
 
-file_test$1123:	; Assign £temporary5408 string_No#
-3996:		mov ax, @11759$string_No#
+file_test$1123:	; Assign £temporary5209 string_No#
+3996:		mov ax, @11367$string_No#
 3998:	
 
-file_test$1124:	; Parameter 6 £temporary5408 8
+file_test$1124:	; Parameter 6 £temporary5209 8
 3999:		mov [bp + 14], ax
 4001:	
 
@@ -4968,14 +4968,14 @@ file_test$1127:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 4013:	
 
 file_test$1128:	; Parameter 6 string_fileexists2022File2Ez223A2025s0A# 6
-4014:		mov word [bp + 12], @11769$string_fileexists2022File2Ez223A2025s0A#
+4014:		mov word [bp + 12], @11377$string_fileexists2022File2Ez223A2025s0A#
 4016:	
 
 file_test$1129:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 4018:	
 
 file_test$1130:	; Parameter 6 string_File2Ez# 14
-4019:		mov word [bp + 20], @11770$string_File2Ez#
+4019:		mov word [bp + 20], @11378$string_File2Ez#
 4021:	
 
 file_test$1131:	; Call 6 fileexists 8
@@ -4988,27 +4988,27 @@ file_test$1131:	; Call 6 fileexists 8
 file_test$1132:	; PostCall 6
 4029:	
 
-file_test$1133:	; GetReturnValue £temporary5410
+file_test$1133:	; GetReturnValue £temporary5211
 4034:	
 
-file_test$1134:	; Equal 1137 £temporary5410 0
+file_test$1134:	; Equal 1137 £temporary5211 0
 4035:		cmp bx, 0
 4036:		je file_test$1137
 4038:	
 
-file_test$1135:	; Assign £temporary5415 string_Yes#
-4039:		mov ax, @11772$string_Yes#
+file_test$1135:	; Assign £temporary5216 string_Yes#
+4039:		mov ax, @11380$string_Yes#
 4041:	
 
 file_test$1136:	; Goto 1138
 4042:		jmp file_test$1138
 4044:	
 
-file_test$1137:	; Assign £temporary5415 string_No#
-4045:		mov ax, @11773$string_No#
+file_test$1137:	; Assign £temporary5216 string_No#
+4045:		mov ax, @11381$string_No#
 4047:	
 
-file_test$1138:	; Parameter 6 £temporary5415 8
+file_test$1138:	; Parameter 6 £temporary5216 8
 4048:		mov [bp + 14], ax
 4050:	
 

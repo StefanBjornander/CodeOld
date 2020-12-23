@@ -9,42 +9,42 @@
 8:		mov word [$StackTop], 0
 10:	
 
-@10258$main:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+@9866$main:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 12:	
 
-@10258$main$1:	; Parameter 16 string_Please20input20a20value3A20# 6
-13:		mov word [bp + 22], @10261$string_Please20input20a20value3A20#
+@9866$main$1:	; Parameter 16 string_Please20input20a20value3A20# 6
+13:		mov word [bp + 22], @9869$string_Please20input20a20value3A20#
 15:	
 
-@10258$main$2:	; Call 16 printf 0
-16:		mov word [bp + 16], @10258$main$3
+@9866$main$2:	; Call 16 printf 0
+16:		mov word [bp + 16], @9866$main$3
 17:		mov [bp + 18], bp
 18:		add bp, 16
 19:		mov di, bp
 20:		jmp printf
 22:	
 
-@10258$main$3:	; PostCall 16
+@9866$main$3:	; PostCall 16
 24:	
 
-@10258$main$4:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+@9866$main$4:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 26:	
 
-@10258$main$5:	; Parameter 16 string_25lf# 6
-27:		mov word [bp + 22], @10263$string_25lf#
+@9866$main$5:	; Parameter 16 string_25lf# 6
+27:		mov word [bp + 22], @9871$string_25lf#
 29:	
 
-@10258$main$6:	; address £temporary4714 x
-30:		mov t2784, bp
-31:		add t2784, 8
+@9866$main$6:	; address £temporary4515 x
+30:		mov t2702, bp
+31:		add t2702, 8
 33:	
 
-@10258$main$7:	; Parameter 16 £temporary4714 8
-34:		mov [bp + 24], t2784
+@9866$main$7:	; Parameter 16 £temporary4515 8
+34:		mov [bp + 24], t2702
 36:	
 
-@10258$main$8:	; Call 16 scanf 0
-37:		mov word [bp + 16], @10258$main$9
+@9866$main$8:	; Call 16 scanf 0
+37:		mov word [bp + 16], @9866$main$9
 38:		mov [bp + 18], bp
 39:		add bp, 16
 40:		mov di, bp
@@ -52,83 +52,83 @@
 42:		jmp scanf
 44:	
 
-@10258$main$9:	; PostCall 16
+@9866$main$9:	; PostCall 16
 46:	
 
-@10258$main$10:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+@9866$main$10:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 48:	
 
-@10258$main$11:	; Parameter 16 buffer 6
+@9866$main$11:	; Parameter 16 buffer 6
 49:		mov word [bp + 22], buffer
 51:	
 
-@10258$main$12:	; Call 16 setjmp 0
-52:		mov word [bp + 16], @10258$main$13
+@9866$main$12:	; Call 16 setjmp 0
+52:		mov word [bp + 16], @9866$main$13
 53:		mov [bp + 18], bp
 54:		add bp, 16
 55:		jmp setjmp
 57:	
 
-@10258$main$13:	; PostCall 16
+@9866$main$13:	; PostCall 16
 59:	
 
-@10258$main$14:	; GetReturnValue £temporary4716
+@9866$main$14:	; GetReturnValue £temporary4517
 64:	
 
-@10258$main$15:	; Assign message £temporary4716
-65:		mov [bp + 6], t2786
+@9866$main$15:	; Assign message £temporary4517
+65:		mov [bp + 6], t2704
 67:	
 
-@10258$main$16:	; NotEqual 31 message 0
+@9866$main$16:	; NotEqual 31 message 0
 68:		cmp word [bp + 6], 0
-69:		jne @10258$main$31
+69:		jne @9866$main$31
 71:	
 
-@10258$main$17:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+@9866$main$17:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 73:	
 
-@10258$main$18:	; Parameter 16 string_12E0202F2025f203D2025f0A# 6
-74:		mov word [bp + 22], @10270$string_12E0202F2025f203D2025f0A#
+@9866$main$18:	; Parameter 16 string_12E0202F2025f203D2025f0A# 6
+74:		mov word [bp + 22], @9878$string_12E0202F2025f203D2025f0A#
 76:	
 
-@10258$main$19:	; PushFloat x
+@9866$main$19:	; PushFloat x
 77:		fld qword [bp + 8]
 79:	
 
-@10258$main$20:	; Parameter 16 x 8
+@9866$main$20:	; Parameter 16 x 8
 80:		fstp qword [bp + 24]
 82:	
 
-@10258$main$21:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+@9866$main$21:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 84:	
 
-@10258$main$22:	; PushFloat x
+@9866$main$22:	; PushFloat x
 85:		fld qword [bp + 8]
 87:	
 
-@10258$main$23:	; Parameter 16 x 22
+@9866$main$23:	; Parameter 16 x 22
 88:		fstp qword [bp + 38]
 90:	
 
-@10258$main$24:	; Call 16 inverse 16
-91:		mov word [bp + 32], @10258$main$25
+@9866$main$24:	; Call 16 inverse 16
+91:		mov word [bp + 32], @9866$main$25
 92:		mov [bp + 34], bp
 93:		add bp, 32
 94:		jmp inverse
 96:	
 
-@10258$main$25:	; PostCall 16
+@9866$main$25:	; PostCall 16
 98:	
 
-@10258$main$26:	; GetReturnValue £temporary4718
+@9866$main$26:	; GetReturnValue £temporary4519
 100:	
 
-@10258$main$27:	; Parameter 16 £temporary4718 16
+@9866$main$27:	; Parameter 16 £temporary4519 16
 101:		fstp qword [bp + 32]
 103:	
 
-@10258$main$28:	; Call 16 printf 0
-104:		mov word [bp + 16], @10258$main$29
+@9866$main$28:	; Call 16 printf 0
+104:		mov word [bp + 16], @9866$main$29
 105:		mov [bp + 18], bp
 106:		add bp, 16
 107:		mov di, bp
@@ -136,27 +136,27 @@
 109:		jmp printf
 111:	
 
-@10258$main$29:	; PostCall 16
+@9866$main$29:	; PostCall 16
 113:	
 
-@10258$main$30:	; Goto 36
-114:		jmp @10258$main$36
+@9866$main$30:	; Goto 36
+114:		jmp @9866$main$36
 116:	
 
-@10258$main$31:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+@9866$main$31:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 118:	
 
-@10258$main$32:	; Parameter 16 string_25s0A# 6
-119:		mov word [bp + 22], @10273$string_25s0A#
+@9866$main$32:	; Parameter 16 string_25s0A# 6
+119:		mov word [bp + 22], @9881$string_25s0A#
 121:	
 
-@10258$main$33:	; Parameter 16 message 8
-122:		mov a2787, [bp + 6]
-123:		mov [bp + 24], a2787
+@9866$main$33:	; Parameter 16 message 8
+122:		mov a2705, [bp + 6]
+123:		mov [bp + 24], a2705
 125:	
 
-@10258$main$34:	; Call 16 printf 0
-126:		mov word [bp + 16], @10258$main$35
+@9866$main$34:	; Call 16 printf 0
+126:		mov word [bp + 16], @9866$main$35
 127:		mov [bp + 18], bp
 128:		add bp, 16
 129:		mov di, bp
@@ -164,17 +164,17 @@
 131:		jmp printf
 133:	
 
-@10258$main$35:	; PostCall 16
+@9866$main$35:	; PostCall 16
 135:	
 
-@10258$main$36:	; Return 0
-136:		mov t2788, [bp]
+@9866$main$36:	; Return 0
+136:		mov t2706, [bp]
 137:		mov di, [bp + 4]
 138:		mov bp, [bp + 2]
-139:		jmp t2788
+139:		jmp t2706
 141:	
 
-@10258$main$37:	; FunctionEnd main
+@9866$main$37:	; FunctionEnd main
 1:	
 
 inverse:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -206,17 +206,17 @@ inverse$5:	; Call 14 divide 0
 inverse$6:	; PostCall 14
 23:	
 
-inverse$7:	; GetReturnValue £temporary4732
+inverse$7:	; GetReturnValue £temporary4533
 25:	
 
-inverse$8:	; SetReturnValue £temporary4732
+inverse$8:	; SetReturnValue £temporary4533
 27:	
 
-inverse$9:	; Return £temporary4732
-28:		mov t2789, [bp]
+inverse$9:	; Return £temporary4533
+28:		mov t2707, [bp]
 29:		mov di, [bp + 4]
 30:		mov bp, [bp + 2]
-31:		jmp t2789
+31:		jmp t2707
 33:	
 
 inverse$10:	; FunctionEnd inverse
@@ -245,18 +245,18 @@ divide$4:	; PushFloat y
 17:		fld qword [bp + 14]
 19:	
 
-divide$5:	; SignedDivide £temporary4736 x y
+divide$5:	; SignedDivide £temporary4537 x y
 20:		fdiv
 22:	
 
-divide$6:	; SetReturnValue £temporary4736
+divide$6:	; SetReturnValue £temporary4537
 24:	
 
-divide$7:	; Return £temporary4736
-25:		mov t2790, [bp]
+divide$7:	; Return £temporary4537
+25:		mov t2708, [bp]
 26:		mov di, [bp + 4]
 27:		mov bp, [bp + 2]
-28:		jmp t2790
+28:		jmp t2708
 30:	
 
 divide$8:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -267,7 +267,7 @@ divide$9:	; Parameter 22 buffer 6
 35:	
 
 divide$10:	; Parameter 22 string_Division20by20Zero2E# 8
-36:		mov word [bp + 30], @10297$string_Division20by20Zero2E#
+36:		mov word [bp + 30], @9905$string_Division20by20Zero2E#
 38:	
 
 divide$11:	; Call 22 longjmp 0
@@ -288,10 +288,10 @@ divide$14:	; SetReturnValue 0
 51:	
 
 divide$15:	; Return 0
-52:		mov t2791, [bp]
+52:		mov t2709, [bp]
 53:		mov di, [bp + 4]
 54:		mov bp, [bp + 2]
-55:		jmp t2791
+55:		jmp t2709
 57:	
 
 divide$16:	; FunctionEnd divide
@@ -314,11 +314,11 @@ test$2:	; Call 16 setjmp 0
 test$3:	; PostCall 16
 14:	
 
-test$4:	; GetReturnValue £temporary4740
+test$4:	; GetReturnValue £temporary4541
 19:	
 
-test$5:	; Assign message £temporary4740
-20:		mov [bp + 14], t2793
+test$5:	; Assign message £temporary4541
+20:		mov [bp + 14], t2711
 22:	
 
 test$6:	; NotEqual 21 message 0
@@ -330,7 +330,7 @@ test$7:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 28:	
 
 test$8:	; Parameter 16 string_12E0202F2025f203D2025f0A# 6
-29:		mov word [bp + 22], @10309$string_12E0202F2025f203D2025f0A#
+29:		mov word [bp + 22], @9917$string_12E0202F2025f203D2025f0A#
 31:	
 
 test$9:	; PushFloat x
@@ -362,10 +362,10 @@ test$14:	; Call 16 inverse 16
 test$15:	; PostCall 16
 53:	
 
-test$16:	; GetReturnValue £temporary4742
+test$16:	; GetReturnValue £temporary4543
 55:	
 
-test$17:	; Parameter 16 £temporary4742 16
+test$17:	; Parameter 16 £temporary4543 16
 56:		fstp qword [bp + 32]
 58:	
 
@@ -389,12 +389,12 @@ test$21:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 
 73:	
 
 test$22:	; Parameter 16 string_25s0A# 6
-74:		mov word [bp + 22], @10312$string_25s0A#
+74:		mov word [bp + 22], @9920$string_25s0A#
 76:	
 
 test$23:	; Parameter 16 message 8
-77:		mov a2794, [bp + 14]
-78:		mov [bp + 24], a2794
+77:		mov a2712, [bp + 14]
+78:		mov [bp + 24], a2712
 80:	
 
 test$24:	; Call 16 printf 0
@@ -410,10 +410,10 @@ test$25:	; PostCall 16
 90:	
 
 test$26:	; Return 0
-91:		mov t2795, [bp]
+91:		mov t2713, [bp]
 92:		mov di, [bp + 4]
 93:		mov bp, [bp + 2]
-94:		jmp t2795
+94:		jmp t2713
 96:	
 
 test$27:	; FunctionEnd test
@@ -423,7 +423,7 @@ setjmp_test:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbo
 3:	
 
 setjmp_test$1:	; PushFloat 10
-4:		fld qword [@10323$float8$10#]
+4:		fld qword [@9931$float8$10#]
 6:	
 
 setjmp_test$2:	; Parameter 6 10 6
@@ -465,7 +465,7 @@ setjmp_test$10:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 35:	
 
 setjmp_test$11:	; PushFloat 0.1
-36:		fld qword [@10328$float8$0.1#]
+36:		fld qword [@9936$float8$0.1#]
 38:	
 
 setjmp_test$12:	; Parameter 6 0.1 6
@@ -483,10 +483,10 @@ setjmp_test$14:	; PostCall 6
 49:	
 
 setjmp_test$15:	; Return 0
-50:		mov t2796, [bp]
+50:		mov t2714, [bp]
 51:		mov di, [bp + 4]
 52:		mov bp, [bp + 2]
-53:		jmp t2796
+53:		jmp t2714
 55:	
 
 setjmp_test$16:	; FunctionEnd setjmp_test
