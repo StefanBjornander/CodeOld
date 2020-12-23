@@ -8727,38 +8727,31 @@
 2: PostCall 8
 3: GetReturnValue £temporary3887
 4: Assign localeConvPtr £temporary3887
-5: NotEqual 7 localeConvPtr 0
-6: Goto 11
-7: Empty
+5: NotEqual 8 localeConvPtr 0
+6: Goto 20
+7: CheckTrackMapFloatStack
 8: Deref £temporary3889 -> localeConvPtr localeConvPtr 16
-9: Assign £temporary3893 £temporary3889 -> localeConvPtr
-10: Goto 13
-11: Empty
-12: Assign £temporary3893 0
-13: Empty
-14: Assign messageList £temporary3893
-15: NotEqual 17 messageList 0
-16: Goto 20
-17: Empty
-18: Assign £temporary3898 messageList
-19: Goto 22
-20: Empty
-21: Assign £temporary3898 enMessageList
+9: Assign messageList £temporary3889 -> localeConvPtr
+10: NotEqual 13 messageList 0
+11: Goto 20
+12: CheckTrackMapFloatStack
+13: UnsignedMultiply £temporary3892 errno 2
+14: BinaryAdd £temporary3893 messageList £temporary3892
+15: Deref £temporary3891 -> £temporary3893 £temporary3893 0
+16: SetReturnValue £temporary3891 -> £temporary3893
+17: Return £temporary3891 -> £temporary3893
+18: Goto 20
+19: Goto 20
+20: SetReturnValue 0
+21: Return 0
 22: Empty
-23: Assign messageList £temporary3898
-24: UnsignedMultiply £temporary3900 errno 2
-25: BinaryAdd £temporary3901 messageList £temporary3900
-26: Deref £temporary3899 -> £temporary3901 £temporary3901 0
-27: SetReturnValue £temporary3899 -> £temporary3901
-28: Return £temporary3899 -> £temporary3901
-29: Empty
-30: Return 0
-31: FunctionEnd strerror
+23: Return 0
+24: FunctionEnd strerror
 0: NotEqual 3 string 0
 1: Goto 51
 2: CheckTrackMapFloatStack
-3: Deref £temporary3903 -> string string 0
-4: Equal 7 £temporary3903 -> string 0
+3: Deref £temporary3895 -> string string 0
+4: Equal 7 £temporary3895 -> string 0
 5: Goto 10
 6: CheckTrackMapFloatStack
 7: SetReturnValue 0
@@ -8766,42 +8759,42 @@
 9: Goto 10
 10: Assign index 0
 11: Empty
-12: BinaryAdd £temporary3906 string index
-13: Deref £temporary3905 -> £temporary3906 £temporary3906 0
-14: NotEqual 17 £temporary3905 -> £temporary3906 0
+12: BinaryAdd £temporary3898 string index
+13: Deref £temporary3897 -> £temporary3898 £temporary3898 0
+14: NotEqual 17 £temporary3897 -> £temporary3898 0
 15: Goto 44
 16: CheckTrackMapFloatStack
 17: Empty
 18: CallHeader 14 strchr
 19: Parameter 14 charSet 6
-20: BinaryAdd £temporary3910 string index
-21: Deref £temporary3909 -> £temporary3910 £temporary3910 0
-22: IntegralToIntegral £temporary3911 £temporary3909 -> £temporary3910
-23: Parameter 14 £temporary3911 8
+20: BinaryAdd £temporary3902 string index
+21: Deref £temporary3901 -> £temporary3902 £temporary3902 0
+22: IntegralToIntegral £temporary3903 £temporary3901 -> £temporary3902
+23: Parameter 14 £temporary3903 8
 24: Call 14 strchr 0
 25: PostCall 14
-26: GetReturnValue £temporary3912
-27: NotEqual 30 £temporary3912 0
+26: GetReturnValue £temporary3904
+27: NotEqual 30 £temporary3904 0
 28: Goto 41
 29: CheckTrackMapFloatStack
-30: BinaryAdd £temporary3915 string index
-31: Deref £temporary3914 -> £temporary3915 £temporary3915 0
-32: Assign £temporary3914 -> £temporary3915 0
-33: BinaryAdd £temporary3916 index 1
-34: BinaryAdd £temporary3918 string £temporary3916
-35: Deref £temporary3917 -> £temporary3918 £temporary3918 0
-36: address £temporary3919 £temporary3917 -> £temporary3918
-37: Assign token £temporary3919
+30: BinaryAdd £temporary3907 string index
+31: Deref £temporary3906 -> £temporary3907 £temporary3907 0
+32: Assign £temporary3906 -> £temporary3907 0
+33: BinaryAdd £temporary3908 index 1
+34: BinaryAdd £temporary3910 string £temporary3908
+35: Deref £temporary3909 -> £temporary3910 £temporary3910 0
+36: address £temporary3911 £temporary3909 -> £temporary3910
+37: Assign token £temporary3911
 38: SetReturnValue string
 39: Return string
 40: Goto 41
 41: Empty
 42: BinaryAdd index index 1
 43: Goto 11
-44: BinaryAdd £temporary3921 string index
-45: Deref £temporary3920 -> £temporary3921 £temporary3921 0
-46: address £temporary3922 £temporary3920 -> £temporary3921
-47: Assign token £temporary3922
+44: BinaryAdd £temporary3913 string index
+45: Deref £temporary3912 -> £temporary3913 £temporary3913 0
+46: address £temporary3914 £temporary3912 -> £temporary3913
+47: Assign token £temporary3914
 48: SetReturnValue string
 49: Return string
 50: Goto 107
@@ -8811,7 +8804,7 @@
 54: SetReturnValue 0
 55: Return 0
 56: Goto 107
-57: Equal 60 (token,0) 0
+57: Equal 60 (@8690$token,0) 0
 58: Goto 63
 59: CheckTrackMapFloatStack
 60: SetReturnValue 0
@@ -8819,33 +8812,33 @@
 62: Goto 63
 63: Assign index 0
 64: Empty
-65: BinaryAdd £temporary3927 token index
-66: Deref £temporary3926 -> £temporary3927 £temporary3927 0
-67: NotEqual 70 £temporary3926 -> £temporary3927 0
+65: BinaryAdd £temporary3919 token index
+66: Deref £temporary3918 -> £temporary3919 £temporary3919 0
+67: NotEqual 70 £temporary3918 -> £temporary3919 0
 68: Goto 98
 69: CheckTrackMapFloatStack
 70: Empty
 71: CallHeader 14 strchr
 72: Parameter 14 charSet 6
-73: BinaryAdd £temporary3931 token index
-74: Deref £temporary3930 -> £temporary3931 £temporary3931 0
-75: IntegralToIntegral £temporary3932 £temporary3930 -> £temporary3931
-76: Parameter 14 £temporary3932 8
+73: BinaryAdd £temporary3923 token index
+74: Deref £temporary3922 -> £temporary3923 £temporary3923 0
+75: IntegralToIntegral £temporary3924 £temporary3922 -> £temporary3923
+76: Parameter 14 £temporary3924 8
 77: Call 14 strchr 0
 78: PostCall 14
-79: GetReturnValue £temporary3933
-80: NotEqual 83 £temporary3933 0
+79: GetReturnValue £temporary3925
+80: NotEqual 83 £temporary3925 0
 81: Goto 95
 82: CheckTrackMapFloatStack
 83: Assign tokenStart2 token
-84: BinaryAdd £temporary3936 token index
-85: Deref £temporary3935 -> £temporary3936 £temporary3936 0
-86: Assign £temporary3935 -> £temporary3936 0
-87: BinaryAdd £temporary3937 index 1
-88: BinaryAdd £temporary3939 token £temporary3937
-89: Deref £temporary3938 -> £temporary3939 £temporary3939 0
-90: address £temporary3940 £temporary3938 -> £temporary3939
-91: Assign token £temporary3940
+84: BinaryAdd £temporary3928 token index
+85: Deref £temporary3927 -> £temporary3928 £temporary3928 0
+86: Assign £temporary3927 -> £temporary3928 0
+87: BinaryAdd £temporary3929 index 1
+88: BinaryAdd £temporary3931 token £temporary3929
+89: Deref £temporary3930 -> £temporary3931 £temporary3931 0
+90: address £temporary3932 £temporary3930 -> £temporary3931
+91: Assign token £temporary3932
 92: SetReturnValue tokenStart2
 93: Return tokenStart2
 94: Goto 95
@@ -8853,10 +8846,10 @@
 96: BinaryAdd index index 1
 97: Goto 64
 98: Assign tokenStart token
-99: BinaryAdd £temporary3942 token index
-100: Deref £temporary3941 -> £temporary3942 £temporary3942 0
-101: address £temporary3943 £temporary3941 -> £temporary3942
-102: Assign token £temporary3943
+99: BinaryAdd £temporary3934 token index
+100: Deref £temporary3933 -> £temporary3934 £temporary3934 0
+101: address £temporary3935 £temporary3933 -> £temporary3934
+102: Assign token £temporary3935
 103: SetReturnValue tokenStart
 104: Return tokenStart
 105: Goto 107
@@ -8864,49 +8857,49 @@
 107: Empty
 108: Return 0
 109: FunctionEnd strtok
-0: IntegralToIntegral £temporary3948 target
-1: Assign charTarget £temporary3948
-2: IntegralToIntegral £temporary3949 source
-3: Assign charSource £temporary3949
+0: IntegralToIntegral £temporary3940 target
+1: Assign charTarget £temporary3940
+2: IntegralToIntegral £temporary3941 source
+3: Assign charSource £temporary3941
 4: Assign index 0
 5: Empty
 6: SignedLessThan 9 index size
 7: Goto 18
 8: CheckTrackMapFloatStack
 9: Empty
-10: BinaryAdd £temporary3953 charTarget index
-11: Deref £temporary3952 -> £temporary3953 £temporary3953 0
-12: BinaryAdd £temporary3955 charSource index
-13: Deref £temporary3954 -> £temporary3955 £temporary3955 0
-14: Assign £temporary3952 -> £temporary3953 £temporary3954 -> £temporary3955
+10: BinaryAdd £temporary3945 charTarget index
+11: Deref £temporary3944 -> £temporary3945 £temporary3945 0
+12: BinaryAdd £temporary3947 charSource index
+13: Deref £temporary3946 -> £temporary3947 £temporary3947 0
+14: Assign £temporary3944 -> £temporary3945 £temporary3946 -> £temporary3947
 15: Empty
 16: BinaryAdd index index 1
 17: Goto 5
-18: IntegralToIntegral £temporary3956 target
-19: SetReturnValue £temporary3956
-20: Return £temporary3956
+18: IntegralToIntegral £temporary3948 target
+19: SetReturnValue £temporary3948
+20: Return £temporary3948
 21: Empty
 22: Return 0
 23: FunctionEnd memcpy
-0: IntegralToIntegral £temporary3957 target
-1: Assign charTarget £temporary3957
-2: IntegralToIntegral £temporary3958 source
-3: Assign charSource £temporary3958
+0: IntegralToIntegral £temporary3949 target
+1: Assign charTarget £temporary3949
+2: IntegralToIntegral £temporary3950 source
+3: Assign charSource £temporary3950
 4: SignedLessThan 7 source target
 5: Goto 23
 6: CheckTrackMapFloatStack
-7: BinarySubtract £temporary3960 size 1
-8: Assign index £temporary3960
+7: BinarySubtract £temporary3952 size 1
+8: Assign index £temporary3952
 9: Empty
 10: SignedGreaterThanEqual 13 index 0
 11: Goto 38
 12: CheckTrackMapFloatStack
 13: Empty
-14: BinaryAdd £temporary3964 charTarget index
-15: Deref £temporary3963 -> £temporary3964 £temporary3964 0
-16: BinaryAdd £temporary3966 charSource index
-17: Deref £temporary3965 -> £temporary3966 £temporary3966 0
-18: Assign £temporary3963 -> £temporary3964 £temporary3965 -> £temporary3966
+14: BinaryAdd £temporary3956 charTarget index
+15: Deref £temporary3955 -> £temporary3956 £temporary3956 0
+16: BinaryAdd £temporary3958 charSource index
+17: Deref £temporary3957 -> £temporary3958 £temporary3958 0
+18: Assign £temporary3955 -> £temporary3956 £temporary3957 -> £temporary3958
 19: Empty
 20: BinarySubtract index index 1
 21: Goto 9
@@ -8917,46 +8910,46 @@
 26: Goto 38
 27: CheckTrackMapFloatStack
 28: Empty
-29: BinaryAdd £temporary3970 charTarget index
-30: Deref £temporary3969 -> £temporary3970 £temporary3970 0
-31: BinaryAdd £temporary3972 charSource index
-32: Deref £temporary3971 -> £temporary3972 £temporary3972 0
-33: Assign £temporary3969 -> £temporary3970 £temporary3971 -> £temporary3972
+29: BinaryAdd £temporary3962 charTarget index
+30: Deref £temporary3961 -> £temporary3962 £temporary3962 0
+31: BinaryAdd £temporary3964 charSource index
+32: Deref £temporary3963 -> £temporary3964 £temporary3964 0
+33: Assign £temporary3961 -> £temporary3962 £temporary3963 -> £temporary3964
 34: Empty
 35: BinaryAdd index index 1
 36: Goto 24
 37: Goto 38
-38: IntegralToIntegral £temporary3973 target
-39: SetReturnValue £temporary3973
-40: Return £temporary3973
+38: IntegralToIntegral £temporary3965 target
+39: SetReturnValue £temporary3965
+40: Return £temporary3965
 41: Empty
 42: Return 0
 43: FunctionEnd memmove
-0: IntegralToIntegral £temporary3974 left
-1: Assign charLeft £temporary3974
-2: IntegralToIntegral £temporary3975 right
-3: Assign charRight £temporary3975
+0: IntegralToIntegral £temporary3966 left
+1: Assign charLeft £temporary3966
+2: IntegralToIntegral £temporary3967 right
+3: Assign charRight £temporary3967
 4: Assign index 0
 5: Empty
 6: SignedLessThan 9 index size
 7: Goto 34
 8: CheckTrackMapFloatStack
 9: Empty
-10: BinaryAdd £temporary3979 charLeft index
-11: Deref £temporary3978 -> £temporary3979 £temporary3979 0
-12: BinaryAdd £temporary3981 charRight index
-13: Deref £temporary3980 -> £temporary3981 £temporary3981 0
-14: SignedLessThan 17 £temporary3978 -> £temporary3979 £temporary3980 -> £temporary3981
+10: BinaryAdd £temporary3971 charLeft index
+11: Deref £temporary3970 -> £temporary3971 £temporary3971 0
+12: BinaryAdd £temporary3973 charRight index
+13: Deref £temporary3972 -> £temporary3973 £temporary3973 0
+14: SignedLessThan 17 £temporary3970 -> £temporary3971 £temporary3972 -> £temporary3973
 15: Goto 20
 16: CheckTrackMapFloatStack
 17: SetReturnValue -1
 18: Return -1
 19: Goto 31
-20: BinaryAdd £temporary3984 charLeft index
-21: Deref £temporary3983 -> £temporary3984 £temporary3984 0
-22: BinaryAdd £temporary3986 charRight index
-23: Deref £temporary3985 -> £temporary3986 £temporary3986 0
-24: SignedGreaterThan 27 £temporary3983 -> £temporary3984 £temporary3985 -> £temporary3986
+20: BinaryAdd £temporary3976 charLeft index
+21: Deref £temporary3975 -> £temporary3976 £temporary3976 0
+22: BinaryAdd £temporary3978 charRight index
+23: Deref £temporary3977 -> £temporary3978 £temporary3978 0
+24: SignedGreaterThan 27 £temporary3975 -> £temporary3976 £temporary3977 -> £temporary3978
 25: Goto 31
 26: CheckTrackMapFloatStack
 27: SetReturnValue 1
@@ -8971,27 +8964,27 @@
 36: Empty
 37: Return 0
 38: FunctionEnd memcmp
-0: IntegralToIntegral £temporary3988 block
-1: Assign charBlock £temporary3988
-2: IntegralToIntegral £temporary3989 i
-3: Assign c £temporary3989
+0: IntegralToIntegral £temporary3980 block
+1: Assign charBlock £temporary3980
+2: IntegralToIntegral £temporary3981 i
+3: Assign c £temporary3981
 4: Assign index 0
 5: Empty
 6: SignedLessThan 9 index size
 7: Goto 25
 8: CheckTrackMapFloatStack
 9: Empty
-10: BinaryAdd £temporary3993 charBlock index
-11: Deref £temporary3992 -> £temporary3993 £temporary3993 0
-12: Equal 15 £temporary3992 -> £temporary3993 c
+10: BinaryAdd £temporary3985 charBlock index
+11: Deref £temporary3984 -> £temporary3985 £temporary3985 0
+12: Equal 15 £temporary3984 -> £temporary3985 c
 13: Goto 22
 14: CheckTrackMapFloatStack
-15: BinaryAdd £temporary3996 charBlock index
-16: Deref £temporary3995 -> £temporary3996 £temporary3996 0
-17: address £temporary3997 £temporary3995 -> £temporary3996
-18: IntegralToIntegral £temporary3998 £temporary3997
-19: SetReturnValue £temporary3998
-20: Return £temporary3998
+15: BinaryAdd £temporary3988 charBlock index
+16: Deref £temporary3987 -> £temporary3988 £temporary3988 0
+17: address £temporary3989 £temporary3987 -> £temporary3988
+18: IntegralToIntegral £temporary3990 £temporary3989
+19: SetReturnValue £temporary3990
+20: Return £temporary3990
 21: Goto 22
 22: Empty
 23: BinaryAdd index index 1
@@ -9001,19 +8994,19 @@
 27: Empty
 28: Return 0
 29: FunctionEnd memchr
-0: IntegralToIntegral £temporary3999 block
-1: Assign charBlock £temporary3999
-2: IntegralToIntegral £temporary4000 i
-3: Assign c £temporary4000
+0: IntegralToIntegral £temporary3991 block
+1: Assign charBlock £temporary3991
+2: IntegralToIntegral £temporary3992 i
+3: Assign c £temporary3992
 4: Assign index 0
 5: Empty
 6: SignedLessThan 9 index size
 7: Goto 16
 8: CheckTrackMapFloatStack
 9: Empty
-10: BinaryAdd £temporary4004 charBlock index
-11: Deref £temporary4003 -> £temporary4004 £temporary4004 0
-12: Assign £temporary4003 -> £temporary4004 c
+10: BinaryAdd £temporary3996 charBlock index
+11: Deref £temporary3995 -> £temporary3996 £temporary3996 0
+12: Assign £temporary3995 -> £temporary3996 c
 13: Empty
 14: BinaryAdd index index 1
 15: Goto 5
@@ -9131,269 +9124,269 @@
 106: FunctionEnd print_test
 0: CallHeader 7 printf
 1: Parameter 7 string_ascii2025i0A# 6
-2: IntegralToIntegral £temporary4069 c
-3: Parameter 7 £temporary4069 8
+2: IntegralToIntegral £temporary4061 c
+3: Parameter 7 £temporary4061 8
 4: Call 7 printf 0
 5: PostCall 7
 6: CallHeader 7 printf
 7: Parameter 7 string_islower282725c2729203D2025s0A# 6
-8: IntegralToIntegral £temporary4071 c
-9: Parameter 7 £temporary4071 8
+8: IntegralToIntegral £temporary4063 c
+9: Parameter 7 £temporary4063 8
 10: CallHeader 7 islower
-11: IntegralToIntegral £temporary4072 c
-12: Parameter 7 £temporary4072 16
+11: IntegralToIntegral £temporary4064 c
+12: Parameter 7 £temporary4064 16
 13: Call 7 islower 10
 14: PostCall 7
-15: GetReturnValue £temporary4073
-16: NotEqual 18 £temporary4073 0
+15: GetReturnValue £temporary4065
+16: NotEqual 18 £temporary4065 0
 17: Goto 21
 18: Empty
-19: Assign £temporary4078 string_Yes#
+19: Assign £temporary4070 string_Yes#
 20: Goto 23
 21: Empty
-22: Assign £temporary4078 string_No#
+22: Assign £temporary4070 string_No#
 23: Empty
-24: Parameter 7 £temporary4078 10
+24: Parameter 7 £temporary4070 10
 25: Call 7 printf 0
 26: PostCall 7
 27: CallHeader 7 printf
 28: Parameter 7 string_isupper282725c2729203D2025s0A# 6
-29: IntegralToIntegral £temporary4080 c
-30: Parameter 7 £temporary4080 8
+29: IntegralToIntegral £temporary4072 c
+30: Parameter 7 £temporary4072 8
 31: CallHeader 7 isupper
-32: IntegralToIntegral £temporary4081 c
-33: Parameter 7 £temporary4081 16
+32: IntegralToIntegral £temporary4073 c
+33: Parameter 7 £temporary4073 16
 34: Call 7 isupper 10
 35: PostCall 7
-36: GetReturnValue £temporary4082
-37: NotEqual 39 £temporary4082 0
+36: GetReturnValue £temporary4074
+37: NotEqual 39 £temporary4074 0
 38: Goto 42
 39: Empty
-40: Assign £temporary4087 string_Yes#
+40: Assign £temporary4079 string_Yes#
 41: Goto 44
 42: Empty
-43: Assign £temporary4087 string_No#
+43: Assign £temporary4079 string_No#
 44: Empty
-45: Parameter 7 £temporary4087 10
+45: Parameter 7 £temporary4079 10
 46: Call 7 printf 0
 47: PostCall 7
 48: CallHeader 7 printf
 49: Parameter 7 string_isalpha282725c2729203D2025s0A# 6
-50: IntegralToIntegral £temporary4089 c
-51: Parameter 7 £temporary4089 8
+50: IntegralToIntegral £temporary4081 c
+51: Parameter 7 £temporary4081 8
 52: CallHeader 7 isalpha
-53: IntegralToIntegral £temporary4090 c
-54: Parameter 7 £temporary4090 16
+53: IntegralToIntegral £temporary4082 c
+54: Parameter 7 £temporary4082 16
 55: Call 7 isalpha 10
 56: PostCall 7
-57: GetReturnValue £temporary4091
-58: NotEqual 60 £temporary4091 0
+57: GetReturnValue £temporary4083
+58: NotEqual 60 £temporary4083 0
 59: Goto 63
 60: Empty
-61: Assign £temporary4096 string_Yes#
+61: Assign £temporary4088 string_Yes#
 62: Goto 65
 63: Empty
-64: Assign £temporary4096 string_No#
+64: Assign £temporary4088 string_No#
 65: Empty
-66: Parameter 7 £temporary4096 10
+66: Parameter 7 £temporary4088 10
 67: Call 7 printf 0
 68: PostCall 7
 69: CallHeader 7 printf
 70: Parameter 7 string_isdigit282725c2729203D2025s0A# 6
-71: IntegralToIntegral £temporary4098 c
-72: Parameter 7 £temporary4098 8
+71: IntegralToIntegral £temporary4090 c
+72: Parameter 7 £temporary4090 8
 73: CallHeader 7 isdigit
-74: IntegralToIntegral £temporary4099 c
-75: Parameter 7 £temporary4099 16
+74: IntegralToIntegral £temporary4091 c
+75: Parameter 7 £temporary4091 16
 76: Call 7 isdigit 10
 77: PostCall 7
-78: GetReturnValue £temporary4100
-79: NotEqual 81 £temporary4100 0
+78: GetReturnValue £temporary4092
+79: NotEqual 81 £temporary4092 0
 80: Goto 84
 81: Empty
-82: Assign £temporary4105 string_Yes#
+82: Assign £temporary4097 string_Yes#
 83: Goto 86
 84: Empty
-85: Assign £temporary4105 string_No#
+85: Assign £temporary4097 string_No#
 86: Empty
-87: Parameter 7 £temporary4105 10
+87: Parameter 7 £temporary4097 10
 88: Call 7 printf 0
 89: PostCall 7
 90: CallHeader 7 printf
 91: Parameter 7 string_isalnum282725c2729203D2025s0A# 6
-92: IntegralToIntegral £temporary4107 c
-93: Parameter 7 £temporary4107 8
+92: IntegralToIntegral £temporary4099 c
+93: Parameter 7 £temporary4099 8
 94: CallHeader 7 isalnum
-95: IntegralToIntegral £temporary4108 c
-96: Parameter 7 £temporary4108 16
+95: IntegralToIntegral £temporary4100 c
+96: Parameter 7 £temporary4100 16
 97: Call 7 isalnum 10
 98: PostCall 7
-99: GetReturnValue £temporary4109
-100: NotEqual 102 £temporary4109 0
+99: GetReturnValue £temporary4101
+100: NotEqual 102 £temporary4101 0
 101: Goto 105
 102: Empty
-103: Assign £temporary4114 string_Yes#
+103: Assign £temporary4106 string_Yes#
 104: Goto 107
 105: Empty
-106: Assign £temporary4114 string_No#
+106: Assign £temporary4106 string_No#
 107: Empty
-108: Parameter 7 £temporary4114 10
+108: Parameter 7 £temporary4106 10
 109: Call 7 printf 0
 110: PostCall 7
 111: CallHeader 7 printf
 112: Parameter 7 string_isxdigit282725c2729203D2025s0A# 6
-113: IntegralToIntegral £temporary4116 c
-114: Parameter 7 £temporary4116 8
+113: IntegralToIntegral £temporary4108 c
+114: Parameter 7 £temporary4108 8
 115: CallHeader 7 isxdigit
-116: IntegralToIntegral £temporary4117 c
-117: Parameter 7 £temporary4117 16
+116: IntegralToIntegral £temporary4109 c
+117: Parameter 7 £temporary4109 16
 118: Call 7 isxdigit 10
 119: PostCall 7
-120: GetReturnValue £temporary4118
-121: NotEqual 123 £temporary4118 0
+120: GetReturnValue £temporary4110
+121: NotEqual 123 £temporary4110 0
 122: Goto 126
 123: Empty
-124: Assign £temporary4123 string_Yes#
+124: Assign £temporary4115 string_Yes#
 125: Goto 128
 126: Empty
-127: Assign £temporary4123 string_No#
+127: Assign £temporary4115 string_No#
 128: Empty
-129: Parameter 7 £temporary4123 10
+129: Parameter 7 £temporary4115 10
 130: Call 7 printf 0
 131: PostCall 7
 132: CallHeader 7 printf
 133: Parameter 7 string_isgraph282725c2729203D2025s0A# 6
-134: IntegralToIntegral £temporary4125 c
-135: Parameter 7 £temporary4125 8
+134: IntegralToIntegral £temporary4117 c
+135: Parameter 7 £temporary4117 8
 136: CallHeader 7 isgraph
-137: IntegralToIntegral £temporary4126 c
-138: Parameter 7 £temporary4126 16
+137: IntegralToIntegral £temporary4118 c
+138: Parameter 7 £temporary4118 16
 139: Call 7 isgraph 10
 140: PostCall 7
-141: GetReturnValue £temporary4127
-142: NotEqual 144 £temporary4127 0
+141: GetReturnValue £temporary4119
+142: NotEqual 144 £temporary4119 0
 143: Goto 147
 144: Empty
-145: Assign £temporary4132 string_Yes#
+145: Assign £temporary4124 string_Yes#
 146: Goto 149
 147: Empty
-148: Assign £temporary4132 string_No#
+148: Assign £temporary4124 string_No#
 149: Empty
-150: Parameter 7 £temporary4132 10
+150: Parameter 7 £temporary4124 10
 151: Call 7 printf 0
 152: PostCall 7
 153: CallHeader 7 printf
 154: Parameter 7 string_isprint282725c2729203D2025s0A# 6
-155: IntegralToIntegral £temporary4134 c
-156: Parameter 7 £temporary4134 8
+155: IntegralToIntegral £temporary4126 c
+156: Parameter 7 £temporary4126 8
 157: CallHeader 7 isprint
-158: IntegralToIntegral £temporary4135 c
-159: Parameter 7 £temporary4135 16
+158: IntegralToIntegral £temporary4127 c
+159: Parameter 7 £temporary4127 16
 160: Call 7 isprint 10
 161: PostCall 7
-162: GetReturnValue £temporary4136
-163: NotEqual 165 £temporary4136 0
+162: GetReturnValue £temporary4128
+163: NotEqual 165 £temporary4128 0
 164: Goto 168
 165: Empty
-166: Assign £temporary4141 string_Yes#
+166: Assign £temporary4133 string_Yes#
 167: Goto 170
 168: Empty
-169: Assign £temporary4141 string_No#
+169: Assign £temporary4133 string_No#
 170: Empty
-171: Parameter 7 £temporary4141 10
+171: Parameter 7 £temporary4133 10
 172: Call 7 printf 0
 173: PostCall 7
 174: CallHeader 7 printf
 175: Parameter 7 string_ispunct282725c2729203D2025s0A# 6
-176: IntegralToIntegral £temporary4143 c
-177: Parameter 7 £temporary4143 8
+176: IntegralToIntegral £temporary4135 c
+177: Parameter 7 £temporary4135 8
 178: CallHeader 7 ispunct
-179: IntegralToIntegral £temporary4144 c
-180: Parameter 7 £temporary4144 16
+179: IntegralToIntegral £temporary4136 c
+180: Parameter 7 £temporary4136 16
 181: Call 7 ispunct 10
 182: PostCall 7
-183: GetReturnValue £temporary4145
-184: NotEqual 186 £temporary4145 0
+183: GetReturnValue £temporary4137
+184: NotEqual 186 £temporary4137 0
 185: Goto 189
 186: Empty
-187: Assign £temporary4150 string_Yes#
+187: Assign £temporary4142 string_Yes#
 188: Goto 191
 189: Empty
-190: Assign £temporary4150 string_No#
+190: Assign £temporary4142 string_No#
 191: Empty
-192: Parameter 7 £temporary4150 10
+192: Parameter 7 £temporary4142 10
 193: Call 7 printf 0
 194: PostCall 7
 195: CallHeader 7 printf
 196: Parameter 7 string_iscntrl282725c2729203D2025s0A# 6
-197: IntegralToIntegral £temporary4152 c
-198: Parameter 7 £temporary4152 8
+197: IntegralToIntegral £temporary4144 c
+198: Parameter 7 £temporary4144 8
 199: CallHeader 7 iscntrl
-200: IntegralToIntegral £temporary4153 c
-201: Parameter 7 £temporary4153 16
+200: IntegralToIntegral £temporary4145 c
+201: Parameter 7 £temporary4145 16
 202: Call 7 iscntrl 10
 203: PostCall 7
-204: GetReturnValue £temporary4154
-205: NotEqual 207 £temporary4154 0
+204: GetReturnValue £temporary4146
+205: NotEqual 207 £temporary4146 0
 206: Goto 210
 207: Empty
-208: Assign £temporary4159 string_Yes#
+208: Assign £temporary4151 string_Yes#
 209: Goto 212
 210: Empty
-211: Assign £temporary4159 string_No#
+211: Assign £temporary4151 string_No#
 212: Empty
-213: Parameter 7 £temporary4159 10
+213: Parameter 7 £temporary4151 10
 214: Call 7 printf 0
 215: PostCall 7
 216: CallHeader 7 printf
 217: Parameter 7 string_isspace282725c2729203D2025s0A# 6
-218: IntegralToIntegral £temporary4161 c
-219: Parameter 7 £temporary4161 8
+218: IntegralToIntegral £temporary4153 c
+219: Parameter 7 £temporary4153 8
 220: CallHeader 7 isspace
-221: IntegralToIntegral £temporary4162 c
-222: Parameter 7 £temporary4162 16
+221: IntegralToIntegral £temporary4154 c
+222: Parameter 7 £temporary4154 16
 223: Call 7 isspace 10
 224: PostCall 7
-225: GetReturnValue £temporary4163
-226: NotEqual 228 £temporary4163 0
+225: GetReturnValue £temporary4155
+226: NotEqual 228 £temporary4155 0
 227: Goto 231
 228: Empty
-229: Assign £temporary4168 string_Yes#
+229: Assign £temporary4160 string_Yes#
 230: Goto 233
 231: Empty
-232: Assign £temporary4168 string_No#
+232: Assign £temporary4160 string_No#
 233: Empty
-234: Parameter 7 £temporary4168 10
+234: Parameter 7 £temporary4160 10
 235: Call 7 printf 0
 236: PostCall 7
 237: CallHeader 7 printf
 238: Parameter 7 string_tolower282725c2729203D202725c270A# 6
-239: IntegralToIntegral £temporary4170 c
-240: Parameter 7 £temporary4170 8
+239: IntegralToIntegral £temporary4162 c
+240: Parameter 7 £temporary4162 8
 241: CallHeader 7 tolower
-242: IntegralToIntegral £temporary4171 c
-243: Parameter 7 £temporary4171 16
+242: IntegralToIntegral £temporary4163 c
+243: Parameter 7 £temporary4163 16
 244: Call 7 tolower 10
 245: PostCall 7
-246: GetReturnValue £temporary4172
-247: IntegralToIntegral £temporary4173 £temporary4172
-248: IntegralToIntegral £temporary4174 £temporary4173
-249: Parameter 7 £temporary4174 10
+246: GetReturnValue £temporary4164
+247: IntegralToIntegral £temporary4165 £temporary4164
+248: IntegralToIntegral £temporary4166 £temporary4165
+249: Parameter 7 £temporary4166 10
 250: Call 7 printf 0
 251: PostCall 7
 252: CallHeader 7 printf
 253: Parameter 7 string_toupper282725c2729203D202725c270A0A# 6
-254: IntegralToIntegral £temporary4176 c
-255: Parameter 7 £temporary4176 8
+254: IntegralToIntegral £temporary4168 c
+255: Parameter 7 £temporary4168 8
 256: CallHeader 7 toupper
-257: IntegralToIntegral £temporary4177 c
-258: Parameter 7 £temporary4177 16
+257: IntegralToIntegral £temporary4169 c
+258: Parameter 7 £temporary4169 16
 259: Call 7 toupper 10
 260: PostCall 7
-261: GetReturnValue £temporary4178
-262: IntegralToIntegral £temporary4179 £temporary4178
-263: IntegralToIntegral £temporary4180 £temporary4179
-264: Parameter 7 £temporary4180 10
+261: GetReturnValue £temporary4170
+262: IntegralToIntegral £temporary4171 £temporary4170
+263: IntegralToIntegral £temporary4172 £temporary4171
+264: Parameter 7 £temporary4172 10
 265: Call 7 printf 0
 266: PostCall 7
 267: Empty
@@ -9538,8 +9531,8 @@
 4: PostCall 8
 5: CallHeader 8 scanf
 6: Parameter 8 string_25i# 6
-7: address £temporary4305 n
-8: Parameter 8 £temporary4305 8
+7: address £temporary4297 n
+8: Parameter 8 £temporary4297 8
 9: Call 8 scanf 0
 10: PostCall 8
 11: NotEqual 26 n 6
@@ -9592,8 +9585,8 @@
 5: Parameter 212 s 16
 6: Call 212 strlen 10
 7: PostCall 212
-8: GetReturnValue £temporary4331
-9: Parameter 212 £temporary4331 10
+8: GetReturnValue £temporary4323
+9: Parameter 212 £temporary4323 10
 10: Call 212 printf 0
 11: PostCall 212
 12: CallHeader 212 strcpy
@@ -9607,8 +9600,8 @@
 20: Parameter 212 5 10
 21: Call 212 strncpy 0
 22: PostCall 212
-23: Deref £temporary4335 -> u u 5
-24: Assign £temporary4335 -> u 0
+23: Deref £temporary4327 -> u u 5
+24: Assign £temporary4327 -> u 0
 25: CallHeader 212 printf
 26: Parameter 212 string_t203D202225s222C20u203D202225s220A# 6
 27: Parameter 212 t 8
@@ -9624,18 +9617,18 @@
 37: Parameter 212 u 6
 38: Call 212 strlen 0
 39: PostCall 212
-40: GetReturnValue £temporary4338
-41: Assign i £temporary4338
+40: GetReturnValue £temporary4330
+41: Assign i £temporary4330
 42: CallHeader 212 strncat
 43: Parameter 212 u 6
 44: Parameter 212 string_abc# 8
 45: Parameter 212 2 10
 46: Call 212 strncat 0
 47: PostCall 212
-48: BinaryAdd £temporary4340 i 2
-49: BinaryAdd £temporary4342 u £temporary4340
-50: Deref £temporary4341 -> £temporary4342 £temporary4342 0
-51: Assign £temporary4341 -> £temporary4342 0
+48: BinaryAdd £temporary4332 i 2
+49: BinaryAdd £temporary4334 u £temporary4332
+50: Deref £temporary4333 -> £temporary4334 £temporary4334 0
+51: Assign £temporary4333 -> £temporary4334 0
 52: CallHeader 212 printf
 53: Parameter 212 string_t203D202225s222C20u203D202225s220A# 6
 54: Parameter 212 t 8
@@ -9649,8 +9642,8 @@
 62: Parameter 212 u 16
 63: Call 212 strcmp 8
 64: PostCall 212
-65: GetReturnValue £temporary4344
-66: Parameter 212 £temporary4344 8
+65: GetReturnValue £temporary4336
+66: Parameter 212 £temporary4336 8
 67: Call 212 printf 0
 68: PostCall 212
 69: CallHeader 212 printf
@@ -9661,8 +9654,8 @@
 74: Parameter 212 2 18
 75: Call 212 strncmp 8
 76: PostCall 212
-77: GetReturnValue £temporary4346
-78: Parameter 212 £temporary4346 8
+77: GetReturnValue £temporary4338
+78: Parameter 212 £temporary4338 8
 79: Call 212 printf 0
 80: PostCall 212
 81: CallHeader 212 strchr
@@ -9670,20 +9663,20 @@
 83: Parameter 212 108 8
 84: Call 212 strchr 0
 85: PostCall 212
-86: GetReturnValue £temporary4348
-87: Assign p £temporary4348
+86: GetReturnValue £temporary4340
+87: Assign p £temporary4340
 88: CallHeader 212 printf
 89: Parameter 212 string_strchr28s2C2027l2729203D2025i0A# 6
 90: NotEqual 92 p 0
 91: Goto 96
 92: Empty
-93: BinarySubtract £temporary4350 p s
-94: Assign £temporary4354 £temporary4350
+93: BinarySubtract £temporary4342 p s
+94: Assign £temporary4346 £temporary4342
 95: Goto 98
 96: Empty
-97: Assign £temporary4354 -1
+97: Assign £temporary4346 -1
 98: Empty
-99: Parameter 212 £temporary4354 8
+99: Parameter 212 £temporary4346 8
 100: Call 212 printf 0
 101: PostCall 212
 102: CallHeader 212 strrchr
@@ -9691,20 +9684,20 @@
 104: Parameter 212 108 8
 105: Call 212 strrchr 0
 106: PostCall 212
-107: GetReturnValue £temporary4356
-108: Assign p £temporary4356
+107: GetReturnValue £temporary4348
+108: Assign p £temporary4348
 109: CallHeader 212 printf
 110: Parameter 212 string_strrchr28s2C2027l2729203D2025i0A# 6
 111: NotEqual 113 p 0
 112: Goto 117
 113: Empty
-114: BinarySubtract £temporary4358 p s
-115: Assign £temporary4362 £temporary4358
+114: BinarySubtract £temporary4350 p s
+115: Assign £temporary4354 £temporary4350
 116: Goto 119
 117: Empty
-118: Assign £temporary4362 -1
+118: Assign £temporary4354 -1
 119: Empty
-120: Parameter 212 £temporary4362 8
+120: Parameter 212 £temporary4354 8
 121: Call 212 printf 0
 122: PostCall 212
 123: CallHeader 212 strchr
@@ -9712,20 +9705,20 @@
 125: Parameter 212 120 8
 126: Call 212 strchr 0
 127: PostCall 212
-128: GetReturnValue £temporary4364
-129: Assign p £temporary4364
+128: GetReturnValue £temporary4356
+129: Assign p £temporary4356
 130: CallHeader 212 printf
 131: Parameter 212 string_strchr28s2C2027x2729203D2025i0A# 6
 132: NotEqual 134 p 0
 133: Goto 138
 134: Empty
-135: BinarySubtract £temporary4366 p s
-136: Assign £temporary4370 £temporary4366
+135: BinarySubtract £temporary4358 p s
+136: Assign £temporary4362 £temporary4358
 137: Goto 140
 138: Empty
-139: Assign £temporary4370 -1
+139: Assign £temporary4362 -1
 140: Empty
-141: Parameter 212 £temporary4370 8
+141: Parameter 212 £temporary4362 8
 142: Call 212 printf 0
 143: PostCall 212
 144: CallHeader 212 strrchr
@@ -9733,20 +9726,20 @@
 146: Parameter 212 120 8
 147: Call 212 strrchr 0
 148: PostCall 212
-149: GetReturnValue £temporary4372
-150: Assign p £temporary4372
+149: GetReturnValue £temporary4364
+150: Assign p £temporary4364
 151: CallHeader 212 printf
 152: Parameter 212 string_strrchr28s2C2027x2729203D2025i0A# 6
 153: NotEqual 155 p 0
 154: Goto 159
 155: Empty
-156: BinarySubtract £temporary4374 p s
-157: Assign £temporary4378 £temporary4374
+156: BinarySubtract £temporary4366 p s
+157: Assign £temporary4370 £temporary4366
 158: Goto 161
 159: Empty
-160: Assign £temporary4378 -1
+160: Assign £temporary4370 -1
 161: Empty
-162: Parameter 212 £temporary4378 8
+162: Parameter 212 £temporary4370 8
 163: Call 212 printf 0
 164: PostCall 212
 165: CallHeader 212 memcpy
@@ -9767,8 +9760,8 @@
 180: Parameter 212 20 10
 181: Call 212 memset 0
 182: PostCall 212
-183: Deref £temporary4383 -> u u 19
-184: Assign £temporary4383 -> u 0
+183: Deref £temporary4375 -> u u 19
+184: Assign £temporary4375 -> u 0
 185: CallHeader 212 printf
 186: Parameter 212 string_s203D202225s222C20t203D202225s222C20u203D202225s220A# 6
 187: Parameter 212 s 8
@@ -9782,20 +9775,20 @@
 195: Parameter 212 20 10
 196: Call 212 memchr 0
 197: PostCall 212
-198: GetReturnValue £temporary4385
-199: Assign p £temporary4385
+198: GetReturnValue £temporary4377
+199: Assign p £temporary4377
 200: CallHeader 212 printf
 201: Parameter 212 string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A# 6
 202: NotEqual 204 p 0
 203: Goto 208
 204: Empty
-205: BinarySubtract £temporary4387 p s
-206: Assign £temporary4391 £temporary4387
+205: BinarySubtract £temporary4379 p s
+206: Assign £temporary4383 £temporary4379
 207: Goto 210
 208: Empty
-209: Assign £temporary4391 -1
+209: Assign £temporary4383 -1
 210: Empty
-211: Parameter 212 £temporary4391 8
+211: Parameter 212 £temporary4383 8
 212: Call 212 printf 0
 213: PostCall 212
 214: CallHeader 212 memchr
@@ -9804,20 +9797,20 @@
 217: Parameter 212 20 10
 218: Call 212 memchr 0
 219: PostCall 212
-220: GetReturnValue £temporary4393
-221: Assign p £temporary4393
+220: GetReturnValue £temporary4385
+221: Assign p £temporary4385
 222: CallHeader 212 printf
 223: Parameter 212 string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A# 6
 224: NotEqual 226 p 0
 225: Goto 230
 226: Empty
-227: BinarySubtract £temporary4395 p s
-228: Assign £temporary4399 £temporary4395
+227: BinarySubtract £temporary4387 p s
+228: Assign £temporary4391 £temporary4387
 229: Goto 232
 230: Empty
-231: Assign £temporary4399 -1
+231: Assign £temporary4391 -1
 232: Empty
-233: Parameter 212 £temporary4399 8
+233: Parameter 212 £temporary4391 8
 234: Call 212 printf 0
 235: PostCall 212
 236: CallHeader 212 printf
@@ -9833,8 +9826,8 @@
 246: Parameter 212 t 16
 247: Call 212 strcmp 8
 248: PostCall 212
-249: GetReturnValue £temporary4402
-250: Parameter 212 £temporary4402 8
+249: GetReturnValue £temporary4394
+250: Parameter 212 £temporary4394 8
 251: Call 212 printf 0
 252: PostCall 212
 253: CallHeader 212 printf
@@ -9845,8 +9838,8 @@
 258: Parameter 212 20 18
 259: Call 212 memcmp 8
 260: PostCall 212
-261: GetReturnValue £temporary4404
-262: Parameter 212 £temporary4404 8
+261: GetReturnValue £temporary4396
+262: Parameter 212 £temporary4396 8
 263: Call 212 printf 0
 264: PostCall 212
 265: CallHeader 212 printf
@@ -9856,8 +9849,8 @@
 269: Parameter 212 string_Hello2C20C# 16
 270: Call 212 strspn 8
 271: PostCall 212
-272: GetReturnValue £temporary4406
-273: Parameter 212 £temporary4406 8
+272: GetReturnValue £temporary4398
+273: Parameter 212 £temporary4398 8
 274: Call 212 printf 0
 275: PostCall 212
 276: CallHeader 212 printf
@@ -9867,8 +9860,8 @@
 280: Parameter 212 string_Hello2C20C# 16
 281: Call 212 strcspn 8
 282: PostCall 212
-283: GetReturnValue £temporary4408
-284: Parameter 212 £temporary4408 8
+283: GetReturnValue £temporary4400
+284: Parameter 212 £temporary4400 8
 285: Call 212 printf 0
 286: PostCall 212
 287: CallHeader 212 printf
@@ -9877,8 +9870,8 @@
 290: Parameter 212 errno 14
 291: Call 212 strerror 8
 292: PostCall 212
-293: GetReturnValue £temporary4410
-294: Parameter 212 £temporary4410 8
+293: GetReturnValue £temporary4402
+294: Parameter 212 £temporary4402 8
 295: Call 212 printf 0
 296: PostCall 212
 297: CallHeader 212 strtok
@@ -9886,8 +9879,8 @@
 299: Parameter 212 string_2C# 8
 300: Call 212 strtok 0
 301: PostCall 212
-302: GetReturnValue £temporary4412
-303: Assign p £temporary4412
+302: GetReturnValue £temporary4404
+303: Assign p £temporary4404
 304: NotEqual 307 p 0
 305: Goto 320
 306: CheckTrackMapFloatStack
@@ -9901,8 +9894,8 @@
 314: Parameter 212 string_2C# 8
 315: Call 212 strtok 0
 316: PostCall 212
-317: GetReturnValue £temporary4415
-318: Assign p £temporary4415
+317: GetReturnValue £temporary4407
+318: Assign p £temporary4407
 319: Goto 304
 320: Empty
 321: Return 0
@@ -9918,16 +9911,16 @@
 5: Parameter 16 string_25lf# 6
 6: PushFloat x
 7: PopFloat
-8: address £temporary4515 x
-9: Parameter 16 £temporary4515 8
+8: address £temporary4507 x
+9: Parameter 16 £temporary4507 8
 10: Call 16 scanf 0
 11: PostCall 16
 12: CallHeader 16 setjmp
 13: Parameter 16 buffer 6
 14: Call 16 setjmp 0
 15: PostCall 16
-16: GetReturnValue £temporary4517
-17: Assign message £temporary4517
+16: GetReturnValue £temporary4509
+17: Assign message £temporary4509
 18: Equal 21 message 0
 19: Goto 35
 20: CheckTrackMapFloatStack
@@ -9940,8 +9933,8 @@
 27: Parameter 16 x 22
 28: Call 16 inverse 16
 29: PostCall 16
-30: GetReturnValue £temporary4519
-31: Parameter 16 £temporary4519 16
+30: GetReturnValue £temporary4511
+31: Parameter 16 £temporary4511 16
 32: Call 16 printf 0
 33: PostCall 16
 34: Goto 41
@@ -9961,9 +9954,9 @@
 4: Parameter 14 x 14
 5: Call 14 divide 0
 6: PostCall 14
-7: GetReturnValue £temporary4533
-8: SetReturnValue £temporary4533
-9: Return £temporary4533
+7: GetReturnValue £temporary4525
+8: SetReturnValue £temporary4525
+9: Return £temporary4525
 10: Empty
 11: Return 0
 12: FunctionEnd inverse
@@ -9974,9 +9967,9 @@
 4: CheckTrackMapFloatStack
 5: PushFloat x
 6: PushFloat y
-7: SignedDivide £temporary4537 x y
-8: SetReturnValue £temporary4537
-9: Return £temporary4537
+7: SignedDivide £temporary4529 x y
+8: SetReturnValue £temporary4529
+9: Return £temporary4529
 10: Goto 20
 11: CallHeader 22 longjmp
 12: Parameter 22 buffer 6
@@ -9994,8 +9987,8 @@
 1: Parameter 16 buffer 6
 2: Call 16 setjmp 0
 3: PostCall 16
-4: GetReturnValue £temporary4541
-5: Assign message £temporary4541
+4: GetReturnValue £temporary4533
+5: Assign message £temporary4533
 6: Equal 9 message 0
 7: Goto 23
 8: CheckTrackMapFloatStack
@@ -10008,8 +10001,8 @@
 15: Parameter 16 x 22
 16: Call 16 inverse 16
 17: PostCall 16
-18: GetReturnValue £temporary4543
-19: Parameter 16 £temporary4543 16
+18: GetReturnValue £temporary4535
+19: Parameter 16 £temporary4535 16
 20: Call 16 printf 0
 21: PostCall 16
 22: Goto 29
@@ -10109,8 +10102,8 @@
 6: Parameter 14 x 22
 7: Call 14 acos 16
 8: PostCall 14
-9: GetReturnValue £temporary4577
-10: Parameter 14 £temporary4577 16
+9: GetReturnValue £temporary4569
+10: Parameter 14 £temporary4569 16
 11: Parameter 14 errno 24
 12: Call 14 printf 0
 13: PostCall 14
@@ -10127,8 +10120,8 @@
 6: Parameter 14 x 22
 7: Call 14 atan 16
 8: PostCall 14
-9: GetReturnValue £temporary4584
-10: Parameter 14 £temporary4584 16
+9: GetReturnValue £temporary4576
+10: Parameter 14 £temporary4576 16
 11: Parameter 14 errno 24
 12: Call 14 printf 0
 13: PostCall 14
@@ -10328,8 +10321,8 @@
 12: Parameter 14 x 22
 13: Call 14 sin 16
 14: PostCall 14
-15: GetReturnValue £temporary4659
-16: Parameter 14 £temporary4659 16
+15: GetReturnValue £temporary4651
+16: Parameter 14 £temporary4651 16
 17: Parameter 14 errno 24
 18: Call 14 printf 0
 19: PostCall 14
@@ -10343,8 +10336,8 @@
 27: Parameter 14 x 22
 28: Call 14 cos 16
 29: PostCall 14
-30: GetReturnValue £temporary4661
-31: Parameter 14 £temporary4661 16
+30: GetReturnValue £temporary4653
+31: Parameter 14 £temporary4653 16
 32: Parameter 14 errno 24
 33: Call 14 printf 0
 34: PostCall 14
@@ -10358,8 +10351,8 @@
 42: Parameter 14 x 22
 43: Call 14 tan 16
 44: PostCall 14
-45: GetReturnValue £temporary4663
-46: Parameter 14 £temporary4663 16
+45: GetReturnValue £temporary4655
+46: Parameter 14 £temporary4655 16
 47: Parameter 14 errno 24
 48: Call 14 printf 0
 49: PostCall 14
@@ -10373,8 +10366,8 @@
 57: Parameter 14 x 22
 58: Call 14 asin 16
 59: PostCall 14
-60: GetReturnValue £temporary4665
-61: Parameter 14 £temporary4665 16
+60: GetReturnValue £temporary4657
+61: Parameter 14 £temporary4657 16
 62: Parameter 14 errno 24
 63: Call 14 printf 0
 64: PostCall 14
@@ -10388,8 +10381,8 @@
 72: Parameter 14 x 22
 73: Call 14 acos 16
 74: PostCall 14
-75: GetReturnValue £temporary4667
-76: Parameter 14 £temporary4667 16
+75: GetReturnValue £temporary4659
+76: Parameter 14 £temporary4659 16
 77: Parameter 14 errno 24
 78: Call 14 printf 0
 79: PostCall 14
@@ -10403,8 +10396,8 @@
 87: Parameter 14 x 22
 88: Call 14 atan 16
 89: PostCall 14
-90: GetReturnValue £temporary4669
-91: Parameter 14 £temporary4669 16
+90: GetReturnValue £temporary4661
+91: Parameter 14 £temporary4661 16
 92: Parameter 14 errno 24
 93: Call 14 printf 0
 94: PostCall 14
@@ -10418,8 +10411,8 @@
 102: Parameter 14 x 22
 103: Call 14 exp 16
 104: PostCall 14
-105: GetReturnValue £temporary4671
-106: Parameter 14 £temporary4671 16
+105: GetReturnValue £temporary4663
+106: Parameter 14 £temporary4663 16
 107: Parameter 14 errno 24
 108: Call 14 printf 0
 109: PostCall 14
@@ -10433,8 +10426,8 @@
 117: Parameter 14 x 22
 118: Call 14 log 16
 119: PostCall 14
-120: GetReturnValue £temporary4673
-121: Parameter 14 £temporary4673 16
+120: GetReturnValue £temporary4665
+121: Parameter 14 £temporary4665 16
 122: Parameter 14 errno 24
 123: Call 14 printf 0
 124: PostCall 14
@@ -10448,8 +10441,8 @@
 132: Parameter 14 x 22
 133: Call 14 log10 16
 134: PostCall 14
-135: GetReturnValue £temporary4675
-136: Parameter 14 £temporary4675 16
+135: GetReturnValue £temporary4667
+136: Parameter 14 £temporary4667 16
 137: Parameter 14 errno 24
 138: Call 14 printf 0
 139: PostCall 14
@@ -10463,8 +10456,8 @@
 147: Parameter 14 x 22
 148: Call 14 sinh 16
 149: PostCall 14
-150: GetReturnValue £temporary4677
-151: Parameter 14 £temporary4677 16
+150: GetReturnValue £temporary4669
+151: Parameter 14 £temporary4669 16
 152: Parameter 14 errno 24
 153: Call 14 printf 0
 154: PostCall 14
@@ -10478,8 +10471,8 @@
 162: Parameter 14 x 22
 163: Call 14 cosh 16
 164: PostCall 14
-165: GetReturnValue £temporary4679
-166: Parameter 14 £temporary4679 16
+165: GetReturnValue £temporary4671
+166: Parameter 14 £temporary4671 16
 167: Parameter 14 errno 24
 168: Call 14 printf 0
 169: PostCall 14
@@ -10493,8 +10486,8 @@
 177: Parameter 14 x 22
 178: Call 14 tanh 16
 179: PostCall 14
-180: GetReturnValue £temporary4681
-181: Parameter 14 £temporary4681 16
+180: GetReturnValue £temporary4673
+181: Parameter 14 £temporary4673 16
 182: Parameter 14 errno 24
 183: Call 14 printf 0
 184: PostCall 14
@@ -10508,8 +10501,8 @@
 192: Parameter 14 x 22
 193: Call 14 sqrt 16
 194: PostCall 14
-195: GetReturnValue £temporary4683
-196: Parameter 14 £temporary4683 16
+195: GetReturnValue £temporary4675
+196: Parameter 14 £temporary4675 16
 197: Parameter 14 errno 24
 198: Call 14 printf 0
 199: PostCall 14
@@ -10523,8 +10516,8 @@
 207: Parameter 14 x 22
 208: Call 14 floor 16
 209: PostCall 14
-210: GetReturnValue £temporary4685
-211: Parameter 14 £temporary4685 16
+210: GetReturnValue £temporary4677
+211: Parameter 14 £temporary4677 16
 212: Parameter 14 errno 24
 213: Call 14 printf 0
 214: PostCall 14
@@ -10538,8 +10531,8 @@
 222: Parameter 14 x 22
 223: Call 14 ceil 16
 224: PostCall 14
-225: GetReturnValue £temporary4687
-226: Parameter 14 £temporary4687 16
+225: GetReturnValue £temporary4679
+226: Parameter 14 £temporary4679 16
 227: Parameter 14 errno 24
 228: Call 14 printf 0
 229: PostCall 14
@@ -10553,8 +10546,8 @@
 237: Parameter 14 x 22
 238: Call 14 fabs 16
 239: PostCall 14
-240: GetReturnValue £temporary4689
-241: Parameter 14 £temporary4689 16
+240: GetReturnValue £temporary4681
+241: Parameter 14 £temporary4681 16
 242: Parameter 14 errno 24
 243: Call 14 printf 0
 244: PostCall 14
@@ -10563,11 +10556,11 @@
 247: CallHeader 16 frexp
 248: PushFloat x
 249: Parameter 16 x 6
-250: address £temporary4691 j
-251: Parameter 16 £temporary4691 14
+250: address £temporary4683 j
+251: Parameter 16 £temporary4683 14
 252: Call 16 frexp 0
 253: PostCall 16
-254: GetReturnValue £temporary4692
+254: GetReturnValue £temporary4684
 255: PopFloat z
 256: CallHeader 24 printf
 257: Parameter 24 string_frexp202825f2C20p29203D202825f2C2025i292C20errno203D2025i0A# 6
@@ -10595,11 +10588,11 @@
 279: Parameter 22 x 6
 280: PushFloat w
 281: PopFloat
-282: address £temporary4696 w
-283: Parameter 22 £temporary4696 14
+282: address £temporary4688 w
+283: Parameter 22 £temporary4688 14
 284: Call 22 modf 0
 285: PostCall 22
-286: GetReturnValue £temporary4697
+286: GetReturnValue £temporary4689
 287: PopFloat z
 288: CallHeader 30 printf
 289: Parameter 30 string_modf202825f2C20p29203D202825f2C2025f292C20errno203D2025i0A# 6
@@ -10641,8 +10634,8 @@
 10: Parameter 22 y 38
 11: Call 22 fmod 24
 12: PostCall 22
-13: GetReturnValue £temporary4803
-14: Parameter 22 £temporary4803 24
+13: GetReturnValue £temporary4795
+14: Parameter 22 £temporary4795 24
 15: Parameter 22 errno 32
 16: Call 22 printf 0
 17: PostCall 22
@@ -10660,8 +10653,8 @@
 29: Parameter 22 y 38
 30: Call 22 atan2 24
 31: PostCall 22
-32: GetReturnValue £temporary4805
-33: Parameter 22 £temporary4805 24
+32: GetReturnValue £temporary4797
+33: Parameter 22 £temporary4797 24
 34: Parameter 22 errno 32
 35: Call 22 printf 0
 36: PostCall 22
@@ -10679,8 +10672,8 @@
 48: Parameter 22 y 38
 49: Call 22 pow 24
 50: PostCall 22
-51: GetReturnValue £temporary4807
-52: Parameter 22 £temporary4807 24
+51: GetReturnValue £temporary4799
+52: Parameter 22 £temporary4799 24
 53: Parameter 22 errno 32
 54: Call 22 printf 0
 55: PostCall 22
@@ -10694,18 +10687,18 @@
 63: PushFloat x
 64: Parameter 22 x 8
 65: PushFloat y
-66: FloatingToIntegral £temporary4810 y
-67: Parameter 22 £temporary4810 16
+66: FloatingToIntegral £temporary4802 y
+67: Parameter 22 £temporary4802 16
 68: CallHeader 22 ldexp
 69: PushFloat x
 70: Parameter 22 x 24
 71: PushFloat y
-72: FloatingToIntegral £temporary4811 y
-73: Parameter 22 £temporary4811 32
+72: FloatingToIntegral £temporary4803 y
+73: Parameter 22 £temporary4803 32
 74: Call 22 ldexp 18
 75: PostCall 22
-76: GetReturnValue £temporary4812
-77: Parameter 22 £temporary4812 18
+76: GetReturnValue £temporary4804
+77: Parameter 22 £temporary4804 18
 78: Call 22 printf 0
 79: PostCall 22
 80: Empty
@@ -10716,15 +10709,15 @@
 2: Parameter 6 string_r# 8
 3: Call 6 fopen 0
 4: PostCall 6
-5: GetReturnValue £temporary4842
-6: Assign inFilePtr £temporary4842
+5: GetReturnValue £temporary4834
+6: Assign inFilePtr £temporary4834
 7: CallHeader 8 fopen
 8: Parameter 8 string_outX2Etxt# 6
 9: Parameter 8 string_w# 8
 10: Call 8 fopen 0
 11: PostCall 8
-12: GetReturnValue £temporary4843
-13: Assign outFilePtr £temporary4843
+12: GetReturnValue £temporary4835
+13: Assign outFilePtr £temporary4835
 14: NotEqual 29 inFilePtr 0
 15: Goto 17
 16: CheckTrackMapFloatStack
@@ -10761,8 +10754,8 @@
 47: Parameter 10 inFilePtr 6
 48: Call 10 feof 0
 49: PostCall 10
-50: GetReturnValue £temporary4852
-51: NotEqual 87 £temporary4852 0
+50: GetReturnValue £temporary4844
+51: NotEqual 87 £temporary4844 0
 52: Goto 54
 53: CheckTrackMapFloatStack
 54: CallHeader 18 fscanf
@@ -10770,8 +10763,8 @@
 56: Parameter 18 string_25lf# 8
 57: PushFloat value
 58: PopFloat
-59: address £temporary4855 value
-60: Parameter 18 £temporary4855 10
+59: address £temporary4847 value
+60: Parameter 18 £temporary4847 10
 61: Call 18 fscanf 0
 62: PostCall 18
 63: CallHeader 18 printf
@@ -10781,8 +10774,8 @@
 67: Parameter 18 value 14
 68: Call 18 sqrt 8
 69: PostCall 18
-70: GetReturnValue £temporary4857
-71: Parameter 18 £temporary4857 8
+70: GetReturnValue £temporary4849
+71: Parameter 18 £temporary4849 8
 72: Call 18 printf 0
 73: PostCall 18
 74: CallHeader 18 fprintf
@@ -10793,8 +10786,8 @@
 79: Parameter 18 value 16
 80: Call 18 sqrt 10
 81: PostCall 18
-82: GetReturnValue £temporary4859
-83: Parameter 18 £temporary4859 10
+82: GetReturnValue £temporary4851
+83: Parameter 18 £temporary4851 10
 84: Call 18 fprintf 0
 85: PostCall 18
 86: Goto 46
@@ -10815,15 +10808,15 @@
 101: Parameter 6 string_r# 8
 102: Call 6 fopen 0
 103: PostCall 6
-104: GetReturnValue £temporary4864
-105: Assign inFilePtr £temporary4864
+104: GetReturnValue £temporary4856
+105: Assign inFilePtr £temporary4856
 106: CallHeader 8 fopen
 107: Parameter 8 string_outY2Etxt# 6
 108: Parameter 8 string_w# 8
 109: Call 8 fopen 0
 110: PostCall 8
-111: GetReturnValue £temporary4865
-112: Assign outFilePtr £temporary4865
+111: GetReturnValue £temporary4857
+112: Assign outFilePtr £temporary4857
 113: NotEqual 128 inFilePtr 0
 114: Goto 116
 115: CheckTrackMapFloatStack
@@ -10860,8 +10853,8 @@
 146: CallHeader 14 fscanf
 147: Parameter 14 inFilePtr 6
 148: Parameter 14 string_25i# 8
-149: address £temporary4874 size
-150: Parameter 14 £temporary4874 10
+149: address £temporary4866 size
+150: Parameter 14 £temporary4866 10
 151: Call 14 fscanf 0
 152: PostCall 14
 153: CallHeader 14 printf
@@ -10886,8 +10879,8 @@
 172: Parameter 22 string_25lf# 8
 173: PushFloat value
 174: PopFloat
-175: address £temporary4880 value
-176: Parameter 22 £temporary4880 10
+175: address £temporary4872 value
+176: Parameter 22 £temporary4872 10
 177: Call 22 fscanf 0
 178: PostCall 22
 179: CallHeader 22 printf
@@ -10897,8 +10890,8 @@
 183: Parameter 22 value 14
 184: Call 22 sqrt 8
 185: PostCall 22
-186: GetReturnValue £temporary4882
-187: Parameter 22 £temporary4882 8
+186: GetReturnValue £temporary4874
+187: Parameter 22 £temporary4874 8
 188: Call 22 printf 0
 189: PostCall 22
 190: CallHeader 22 fprintf
@@ -10909,8 +10902,8 @@
 195: Parameter 22 value 16
 196: Call 22 sqrt 10
 197: PostCall 22
-198: GetReturnValue £temporary4884
-199: Parameter 22 £temporary4884 10
+198: GetReturnValue £temporary4876
+199: Parameter 22 £temporary4876 10
 200: Call 22 fprintf 0
 201: PostCall 22
 202: Empty
@@ -10933,8 +10926,8 @@
 219: Parameter 8 sourceFile 6
 220: Call 8 remove 0
 221: PostCall 8
-222: GetReturnValue £temporary4889
-223: Equal 226 £temporary4889 0
+222: GetReturnValue £temporary4881
+223: Equal 226 £temporary4881 0
 224: Goto 232
 225: CheckTrackMapFloatStack
 226: CallHeader 8 printf
@@ -10951,8 +10944,8 @@
 237: Parameter 8 errno 18
 238: Call 8 strerror 12
 239: PostCall 8
-240: GetReturnValue £temporary4892
-241: Parameter 8 £temporary4892 12
+240: GetReturnValue £temporary4884
+241: Parameter 8 £temporary4884 12
 242: Call 8 printf 0
 243: PostCall 8
 244: Goto 245
@@ -10963,8 +10956,8 @@
 249: Parameter 10 string_w# 8
 250: Call 10 fopen 0
 251: PostCall 10
-252: GetReturnValue £temporary4894
-253: Assign filePtr £temporary4894
+252: GetReturnValue £temporary4886
+253: Assign filePtr £temporary4886
 254: CallHeader 12 fprintf
 255: Parameter 12 filePtr 6
 256: Parameter 12 string_Hello20X# 8
@@ -10979,8 +10972,8 @@
 265: Parameter 12 targetFile 8
 266: Call 12 rename 0
 267: PostCall 12
-268: GetReturnValue £temporary4897
-269: Equal 272 £temporary4897 0
+268: GetReturnValue £temporary4889
+269: Equal 272 £temporary4889 0
 270: Goto 279
 271: CheckTrackMapFloatStack
 272: CallHeader 12 printf
@@ -10999,8 +10992,8 @@
 285: Parameter 12 errno 20
 286: Call 12 strerror 14
 287: PostCall 12
-288: GetReturnValue £temporary4900
-289: Parameter 12 £temporary4900 14
+288: GetReturnValue £temporary4892
+289: Parameter 12 £temporary4892 14
 290: Call 12 printf 0
 291: PostCall 12
 292: Goto 293
@@ -11011,8 +11004,8 @@
 297: Parameter 10 targetFile 8
 298: Call 10 rename 0
 299: PostCall 10
-300: GetReturnValue £temporary4902
-301: Equal 304 £temporary4902 0
+300: GetReturnValue £temporary4894
+301: Equal 304 £temporary4894 0
 302: Goto 311
 303: CheckTrackMapFloatStack
 304: CallHeader 10 printf
@@ -11031,8 +11024,8 @@
 317: Parameter 10 errno 20
 318: Call 10 strerror 14
 319: PostCall 10
-320: GetReturnValue £temporary4905
-321: Parameter 10 £temporary4905 14
+320: GetReturnValue £temporary4897
+321: Parameter 10 £temporary4897 14
 322: Call 10 printf 0
 323: PostCall 10
 324: Goto 325
@@ -11042,8 +11035,8 @@
 328: Parameter 8 string_w# 8
 329: Call 8 fopen 0
 330: PostCall 8
-331: GetReturnValue £temporary4907
-332: Assign filePtr £temporary4907
+331: GetReturnValue £temporary4899
+332: Assign filePtr £temporary4899
 333: CallHeader 10 fprintf
 334: Parameter 10 filePtr 6
 335: Parameter 10 string_Hello20Z# 8
@@ -11057,8 +11050,8 @@
 343: Parameter 10 targetFile 6
 344: Call 10 remove 0
 345: PostCall 10
-346: GetReturnValue £temporary4910
-347: Equal 350 £temporary4910 0
+346: GetReturnValue £temporary4902
+347: Equal 350 £temporary4902 0
 348: Goto 356
 349: CheckTrackMapFloatStack
 350: CallHeader 10 printf
@@ -11075,8 +11068,8 @@
 361: Parameter 10 errno 18
 362: Call 10 strerror 12
 363: PostCall 10
-364: GetReturnValue £temporary4913
-365: Parameter 10 £temporary4913 12
+364: GetReturnValue £temporary4905
+365: Parameter 10 £temporary4905 12
 366: Call 10 printf 0
 367: PostCall 10
 368: Goto 369
@@ -11085,8 +11078,8 @@
 371: Parameter 8 targetFile 6
 372: Call 8 remove 0
 373: PostCall 8
-374: GetReturnValue £temporary4915
-375: Equal 378 £temporary4915 0
+374: GetReturnValue £temporary4907
+375: Equal 378 £temporary4907 0
 376: Goto 384
 377: CheckTrackMapFloatStack
 378: CallHeader 8 printf
@@ -11103,8 +11096,8 @@
 389: Parameter 8 errno 18
 390: Call 8 strerror 12
 391: PostCall 8
-392: GetReturnValue £temporary4918
-393: Parameter 8 £temporary4918 12
+392: GetReturnValue £temporary4910
+393: Parameter 8 £temporary4910 12
 394: Call 8 printf 0
 395: PostCall 8
 396: Goto 397
@@ -11113,8 +11106,8 @@
 399: Parameter 6 string_r# 8
 400: Call 6 fopen 0
 401: PostCall 6
-402: GetReturnValue £temporary4920
-403: Assign inFilePtr £temporary4920
+402: GetReturnValue £temporary4912
+403: Assign inFilePtr £temporary4912
 404: NotEqual 419 inFilePtr 0
 405: Goto 407
 406: CheckTrackMapFloatStack
@@ -11146,8 +11139,8 @@
 432: CallHeader 12 fscanf
 433: Parameter 12 inFilePtr 6
 434: Parameter 12 string_25i# 8
-435: address £temporary4927 size
-436: Parameter 12 £temporary4927 10
+435: address £temporary4919 size
+436: Parameter 12 £temporary4919 10
 437: Call 12 fscanf 0
 438: PostCall 12
 439: CallHeader 12 printf
@@ -11190,8 +11183,8 @@
 476: Parameter 6 string_w# 8
 477: Call 6 fopen 0
 478: PostCall 6
-479: GetReturnValue £temporary4936
-480: Assign outFilePtr £temporary4936
+479: GetReturnValue £temporary4928
+480: Assign outFilePtr £temporary4928
 481: NotEqual 496 outFilePtr 0
 482: Goto 484
 483: CheckTrackMapFloatStack
@@ -11210,8 +11203,8 @@
 496: Empty
 497: Assign size 10
 498: CallHeader 12 fwrite
-499: address £temporary4941 size
-500: Parameter 12 £temporary4941 6
+499: address £temporary4933 size
+500: Parameter 12 £temporary4933 6
 501: Parameter 12 2 8
 502: Parameter 12 1 10
 503: Parameter 12 outFilePtr 12
@@ -11223,14 +11216,14 @@
 509: Goto 528
 510: CheckTrackMapFloatStack
 511: Empty
-512: SignedMultiply £temporary4945 index index
-513: IntegralToFloating £temporary4946 £temporary4945
+512: SignedMultiply £temporary4937 index index
+513: IntegralToFloating £temporary4938 £temporary4937
 514: PopFloat value
 515: CallHeader 20 fwrite
 516: PushFloat value
 517: PopFloat
-518: address £temporary4947 value
-519: Parameter 20 £temporary4947 6
+518: address £temporary4939 value
+519: Parameter 20 £temporary4939 6
 520: Parameter 20 8 8
 521: Parameter 20 1 10
 522: Parameter 20 outFilePtr 12
@@ -11248,8 +11241,8 @@
 534: Parameter 6 string_r# 8
 535: Call 6 fopen 0
 536: PostCall 6
-537: GetReturnValue £temporary4950
-538: Assign inFilePtr £temporary4950
+537: GetReturnValue £temporary4942
+538: Assign inFilePtr £temporary4942
 539: NotEqual 554 inFilePtr 0
 540: Goto 542
 541: CheckTrackMapFloatStack
@@ -11267,8 +11260,8 @@
 553: Goto 554
 554: Empty
 555: CallHeader 12 fread
-556: address £temporary4955 size
-557: Parameter 12 £temporary4955 6
+556: address £temporary4947 size
+557: Parameter 12 £temporary4947 6
 558: Parameter 12 2 8
 559: Parameter 12 1 10
 560: Parameter 12 inFilePtr 12
@@ -11288,8 +11281,8 @@
 574: CallHeader 20 fread
 575: PushFloat value
 576: PopFloat
-577: address £temporary4960 value
-578: Parameter 20 £temporary4960 6
+577: address £temporary4952 value
+578: Parameter 20 £temporary4952 6
 579: Parameter 20 8 8
 580: Parameter 20 1 10
 581: Parameter 20 inFilePtr 12
@@ -11318,8 +11311,8 @@
 604: Parameter 6 string_w# 8
 605: Call 6 fopen 0
 606: PostCall 6
-607: GetReturnValue £temporary4965
-608: Assign outFilePtr £temporary4965
+607: GetReturnValue £temporary4957
+608: Assign outFilePtr £temporary4957
 609: NotEqual 624 outFilePtr 0
 610: Goto 612
 611: CheckTrackMapFloatStack
@@ -11343,14 +11336,14 @@
 629: Goto 648
 630: CheckTrackMapFloatStack
 631: Empty
-632: SignedMultiply £temporary4972 index index
-633: IntegralToFloating £temporary4973 £temporary4972
+632: SignedMultiply £temporary4964 index index
+633: IntegralToFloating £temporary4965 £temporary4964
 634: PopFloat value
 635: CallHeader 20 fwrite
 636: PushFloat value
 637: PopFloat
-638: address £temporary4974 value
-639: Parameter 20 £temporary4974 6
+638: address £temporary4966 value
+639: Parameter 20 £temporary4966 6
 640: Parameter 20 8 8
 641: Parameter 20 1 10
 642: Parameter 20 outFilePtr 12
@@ -11368,8 +11361,8 @@
 654: Parameter 6 string_r# 8
 655: Call 6 fopen 0
 656: PostCall 6
-657: GetReturnValue £temporary4977
-658: Assign inFilePtr £temporary4977
+657: GetReturnValue £temporary4969
+658: Assign inFilePtr £temporary4969
 659: NotEqual 674 inFilePtr 0
 660: Goto 662
 661: CheckTrackMapFloatStack
@@ -11390,22 +11383,22 @@
 676: CallHeader 18 fread
 677: PushFloat value
 678: PopFloat
-679: address £temporary4982 value
-680: Parameter 18 £temporary4982 6
+679: address £temporary4974 value
+680: Parameter 18 £temporary4974 6
 681: Parameter 18 8 8
 682: Parameter 18 1 10
 683: Parameter 18 inFilePtr 12
 684: Call 18 fread 0
 685: PostCall 18
-686: GetReturnValue £temporary4983
-687: SignedGreaterThan 690 £temporary4983 0
+686: GetReturnValue £temporary4975
+687: SignedGreaterThan 690 £temporary4975 0
 688: Goto 700
 689: CheckTrackMapFloatStack
 690: CallHeader 18 printf
 691: Parameter 18 string_index23A2025i3A20value2025f0A# 6
-692: Assign £temporary4985 index
+692: Assign £temporary4977 index
 693: BinaryAdd index index 1
-694: Parameter 18 £temporary4985 8
+694: Parameter 18 £temporary4977 8
 695: PushFloat value
 696: Parameter 18 value 10
 697: Call 18 printf 0
@@ -11424,8 +11417,8 @@
 710: Parameter 6 string_r# 8
 711: Call 6 fopen 0
 712: PostCall 6
-713: GetReturnValue £temporary4989
-714: Assign inFilePtr £temporary4989
+713: GetReturnValue £temporary4981
+714: Assign inFilePtr £temporary4981
 715: NotEqual 730 inFilePtr 0
 716: Goto 718
 717: CheckTrackMapFloatStack
@@ -11447,15 +11440,15 @@
 733: Parameter 10 inFilePtr 6
 734: Call 10 feof 0
 735: PostCall 10
-736: GetReturnValue £temporary4994
-737: NotEqual 760 £temporary4994 0
+736: GetReturnValue £temporary4986
+737: NotEqual 760 £temporary4986 0
 738: Goto 740
 739: CheckTrackMapFloatStack
 740: CallHeader 18 fread
 741: PushFloat value
 742: PopFloat
-743: address £temporary4997 value
-744: Parameter 18 £temporary4997 6
+743: address £temporary4989 value
+744: Parameter 18 £temporary4989 6
 745: Parameter 18 8 8
 746: Parameter 18 1 10
 747: Parameter 18 inFilePtr 12
@@ -11463,9 +11456,9 @@
 749: PostCall 18
 750: CallHeader 18 printf
 751: Parameter 18 string_index33A2025i3A20value2025f0A# 6
-752: Assign £temporary4999 index
+752: Assign £temporary4991 index
 753: BinaryAdd index index 1
-754: Parameter 18 £temporary4999 8
+754: Parameter 18 £temporary4991 8
 755: PushFloat value
 756: Parameter 18 value 10
 757: Call 18 printf 0
@@ -11484,8 +11477,8 @@
 770: Parameter 6 string_r# 8
 771: Call 6 fopen 0
 772: PostCall 6
-773: GetReturnValue £temporary5003
-774: Assign inFilePtr £temporary5003
+773: GetReturnValue £temporary4995
+774: Assign inFilePtr £temporary4995
 775: NotEqual 790 inFilePtr 0
 776: Goto 778
 777: CheckTrackMapFloatStack
@@ -11503,8 +11496,8 @@
 789: Goto 790
 790: Empty
 791: CallHeader 10 fread
-792: address £temporary5008 size
-793: Parameter 10 £temporary5008 6
+792: address £temporary5000 size
+793: Parameter 10 £temporary5000 6
 794: Parameter 10 2 8
 795: Parameter 10 1 10
 796: Parameter 10 inFilePtr 12
@@ -11513,21 +11506,21 @@
 799: CallHeader 10 printf
 800: Parameter 10 string_size43A2025i20total2025i0A# 6
 801: Parameter 10 size 8
-802: SignedMultiply £temporary5010 size 8
-803: Parameter 10 £temporary5010 10
+802: SignedMultiply £temporary5002 size 8
+803: Parameter 10 £temporary5002 10
 804: Call 10 printf 0
 805: PostCall 10
-806: SignedMultiply £temporary5012 size 8
-807: Assign total £temporary5012
+806: SignedMultiply £temporary5004 size 8
+807: Assign total £temporary5004
 808: CallHeader 14 malloc
 809: Parameter 14 total 6
 810: Call 14 malloc 0
 811: PostCall 14
-812: GetReturnValue £temporary5013
-813: Assign p £temporary5013
-814: UnsignedMultiply £temporary5014 size 8
-815: BinaryAdd £temporary5015 p £temporary5014
-816: Assign endPtr £temporary5015
+812: GetReturnValue £temporary5005
+813: Assign p £temporary5005
+814: UnsignedMultiply £temporary5006 size 8
+815: BinaryAdd £temporary5007 p £temporary5006
+816: Assign endPtr £temporary5007
 817: NotEqual 832 p 0
 818: Goto 820
 819: CheckTrackMapFloatStack
@@ -11567,11 +11560,11 @@
 853: CallHeader 18 printf
 854: Parameter 18 string_index43A2025i3A20value2025f0A# 6
 855: Parameter 18 index 8
-856: UnsignedMultiply £temporary5025 index 8
-857: BinaryAdd £temporary5026 p £temporary5025
-858: Deref £temporary5024 -> £temporary5026 £temporary5026 0
-859: PushFloat £temporary5024 -> £temporary5026
-860: Parameter 18 £temporary5024 -> £temporary5026 10
+856: UnsignedMultiply £temporary5017 index 8
+857: BinaryAdd £temporary5018 p £temporary5017
+858: Deref £temporary5016 -> £temporary5018 £temporary5018 0
+859: PushFloat £temporary5016 -> £temporary5018
+860: Parameter 18 £temporary5016 -> £temporary5018 10
 861: Call 18 printf 0
 862: PostCall 18
 863: Empty
@@ -11648,15 +11641,15 @@
 934: Parameter 206 string_w# 8
 935: Call 206 fopen 0
 936: PostCall 206
-937: GetReturnValue £temporary5091
-938: Assign outFilePtr £temporary5091
+937: GetReturnValue £temporary5083
+938: Assign outFilePtr £temporary5083
 939: CallHeader 208 fopen
 940: Parameter 208 string_Block2Ebin# 6
 941: Parameter 208 string_r# 8
 942: Call 208 fopen 0
 943: PostCall 208
-944: GetReturnValue £temporary5092
-945: Assign inFilePtr £temporary5092
+944: GetReturnValue £temporary5084
+945: Assign inFilePtr £temporary5084
 946: NotEqual 961 outFilePtr 0
 947: Goto 949
 948: CheckTrackMapFloatStack
@@ -11704,13 +11697,13 @@
 990: Parameter 210 inFilePtr 6
 991: Call 210 feof 0
 992: PostCall 210
-993: GetReturnValue £temporary5103
-994: NotEqual 1016 £temporary5103 0
+993: GetReturnValue £temporary5095
+994: NotEqual 1016 £temporary5095 0
 995: Goto 997
 996: CheckTrackMapFloatStack
 997: CallHeader 210 fread
-998: address £temporary5106 person
-999: Parameter 210 £temporary5106 6
+998: address £temporary5098 person
+999: Parameter 210 £temporary5098 6
 1000: Parameter 210 50 8
 1001: Parameter 210 1 10
 1002: Parameter 210 inFilePtr 12
@@ -11736,8 +11729,8 @@
 1022: Parameter 6 string_r# 8
 1023: Call 6 fopen 0
 1024: PostCall 6
-1025: GetReturnValue £temporary5113
-1026: Assign inFilePtr £temporary5113
+1025: GetReturnValue £temporary5105
+1026: Assign inFilePtr £temporary5105
 1027: NotEqual 1042 inFilePtr 0
 1028: Goto 1030
 1029: CheckTrackMapFloatStack
@@ -11760,16 +11753,16 @@
 1046: Parameter 12 2 10
 1047: Call 12 fseek 0
 1048: PostCall 12
-1049: GetReturnValue £temporary5118
-1050: Assign size £temporary5118
+1049: GetReturnValue £temporary5110
+1050: Assign size £temporary5110
 1051: CallHeader 14 printf
 1052: Parameter 14 string_ftell2025i0A# 6
 1053: CallHeader 14 ftell
 1054: Parameter 14 inFilePtr 14
 1055: Call 14 ftell 8
 1056: PostCall 14
-1057: GetReturnValue £temporary5119
-1058: Parameter 14 £temporary5119 8
+1057: GetReturnValue £temporary5111
+1058: Parameter 14 £temporary5111 8
 1059: Call 14 printf 0
 1060: PostCall 14
 1061: Assign index 0
@@ -11782,28 +11775,28 @@
 1068: Parameter 14 inFilePtr 6
 1069: Call 14 fgetc 0
 1070: PostCall 14
-1071: GetReturnValue £temporary5123
-1072: IntegralToIntegral £temporary5124 £temporary5123
-1073: Assign c £temporary5124
+1071: GetReturnValue £temporary5115
+1072: IntegralToIntegral £temporary5116 £temporary5115
+1073: Assign c £temporary5116
 1074: CallHeader 15 printf
 1075: Parameter 15 string_3C25c3E2025i2025i0A# 6
-1076: IntegralToIntegral £temporary5125 c
-1077: Parameter 15 £temporary5125 8
-1078: IntegralToIntegral £temporary5126 c
-1079: Parameter 15 £temporary5126 10
+1076: IntegralToIntegral £temporary5117 c
+1077: Parameter 15 £temporary5117 8
+1078: IntegralToIntegral £temporary5118 c
+1079: Parameter 15 £temporary5118 10
 1080: CallHeader 15 ftell
 1081: Parameter 15 inFilePtr 18
 1082: Call 15 ftell 12
 1083: PostCall 15
-1084: GetReturnValue £temporary5127
-1085: Parameter 15 £temporary5127 12
+1084: GetReturnValue £temporary5119
+1085: Parameter 15 £temporary5119 12
 1086: Call 15 printf 0
 1087: PostCall 15
 1088: CallHeader 15 fseek
 1089: Parameter 15 inFilePtr 6
-1090: BinarySubtract £temporary5129 size index
-1091: BinarySubtract £temporary5130 £temporary5129 1
-1092: Parameter 15 £temporary5130 8
+1090: BinarySubtract £temporary5121 size index
+1091: BinarySubtract £temporary5122 £temporary5121 1
+1092: Parameter 15 £temporary5122 8
 1093: Parameter 15 0 10
 1094: Call 15 fseek 0
 1095: PostCall 15
@@ -11824,16 +11817,16 @@
 1110: Parameter 6 string_X# 14
 1111: Call 6 fileexists 8
 1112: PostCall 6
-1113: GetReturnValue £temporary5134
-1114: NotEqual 1116 £temporary5134 0
+1113: GetReturnValue £temporary5126
+1114: NotEqual 1116 £temporary5126 0
 1115: Goto 1119
 1116: Empty
-1117: Assign £temporary5139 string_Yes#
+1117: Assign £temporary5131 string_Yes#
 1118: Goto 1121
 1119: Empty
-1120: Assign £temporary5139 string_No#
+1120: Assign £temporary5131 string_No#
 1121: Empty
-1122: Parameter 6 £temporary5139 8
+1122: Parameter 6 £temporary5131 8
 1123: Call 6 printf 0
 1124: PostCall 6
 1125: CallHeader 6 printf
@@ -11842,16 +11835,16 @@
 1128: Parameter 6 string_Y# 14
 1129: Call 6 fileexists 8
 1130: PostCall 6
-1131: GetReturnValue £temporary5141
-1132: NotEqual 1134 £temporary5141 0
+1131: GetReturnValue £temporary5133
+1132: NotEqual 1134 £temporary5133 0
 1133: Goto 1137
 1134: Empty
-1135: Assign £temporary5146 string_Yes#
+1135: Assign £temporary5138 string_Yes#
 1136: Goto 1139
 1137: Empty
-1138: Assign £temporary5146 string_No#
+1138: Assign £temporary5138 string_No#
 1139: Empty
-1140: Parameter 6 £temporary5146 8
+1140: Parameter 6 £temporary5138 8
 1141: Call 6 printf 0
 1142: PostCall 6
 1143: CallHeader 6 printf
@@ -11860,16 +11853,16 @@
 1146: Parameter 6 string_Main2Easm# 14
 1147: Call 6 fileexists 8
 1148: PostCall 6
-1149: GetReturnValue £temporary5148
-1150: NotEqual 1152 £temporary5148 0
+1149: GetReturnValue £temporary5140
+1150: NotEqual 1152 £temporary5140 0
 1151: Goto 1155
 1152: Empty
-1153: Assign £temporary5153 string_Yes#
+1153: Assign £temporary5145 string_Yes#
 1154: Goto 1157
 1155: Empty
-1156: Assign £temporary5153 string_No#
+1156: Assign £temporary5145 string_No#
 1157: Empty
-1158: Parameter 6 £temporary5153 8
+1158: Parameter 6 £temporary5145 8
 1159: Call 6 printf 0
 1160: PostCall 6
 1161: CallHeader 6 printf
@@ -11878,16 +11871,16 @@
 1164: Parameter 6 string_MainX2Easm# 14
 1165: Call 6 fileexists 8
 1166: PostCall 6
-1167: GetReturnValue £temporary5155
-1168: NotEqual 1170 £temporary5155 0
+1167: GetReturnValue £temporary5147
+1168: NotEqual 1170 £temporary5147 0
 1169: Goto 1173
 1170: Empty
-1171: Assign £temporary5160 string_Yes#
+1171: Assign £temporary5152 string_Yes#
 1172: Goto 1175
 1173: Empty
-1174: Assign £temporary5160 string_No#
+1174: Assign £temporary5152 string_No#
 1175: Empty
-1176: Parameter 6 £temporary5160 8
+1176: Parameter 6 £temporary5152 8
 1177: Call 6 printf 0
 1178: PostCall 6
 1179: CallHeader 6 printf
@@ -11896,16 +11889,16 @@
 1182: Parameter 6 string_Main2Ec# 14
 1183: Call 6 fileexists 8
 1184: PostCall 6
-1185: GetReturnValue £temporary5162
-1186: NotEqual 1188 £temporary5162 0
+1185: GetReturnValue £temporary5154
+1186: NotEqual 1188 £temporary5154 0
 1187: Goto 1191
 1188: Empty
-1189: Assign £temporary5167 string_Yes#
+1189: Assign £temporary5159 string_Yes#
 1190: Goto 1193
 1191: Empty
-1192: Assign £temporary5167 string_No#
+1192: Assign £temporary5159 string_No#
 1193: Empty
-1194: Parameter 6 £temporary5167 8
+1194: Parameter 6 £temporary5159 8
 1195: Call 6 printf 0
 1196: PostCall 6
 1197: CallHeader 6 printf
@@ -11914,16 +11907,16 @@
 1200: Parameter 6 string_MainX2Ec# 14
 1201: Call 6 fileexists 8
 1202: PostCall 6
-1203: GetReturnValue £temporary5169
-1204: NotEqual 1206 £temporary5169 0
+1203: GetReturnValue £temporary5161
+1204: NotEqual 1206 £temporary5161 0
 1205: Goto 1209
 1206: Empty
-1207: Assign £temporary5174 string_Yes#
+1207: Assign £temporary5166 string_Yes#
 1208: Goto 1211
 1209: Empty
-1210: Assign £temporary5174 string_No#
+1210: Assign £temporary5166 string_No#
 1211: Empty
-1212: Parameter 6 £temporary5174 8
+1212: Parameter 6 £temporary5166 8
 1213: Call 6 printf 0
 1214: PostCall 6
 1215: CallHeader 6 printf
@@ -11932,16 +11925,16 @@
 1218: Parameter 6 string_File2Ec# 14
 1219: Call 6 fileexists 8
 1220: PostCall 6
-1221: GetReturnValue £temporary5176
-1222: NotEqual 1224 £temporary5176 0
+1221: GetReturnValue £temporary5168
+1222: NotEqual 1224 £temporary5168 0
 1223: Goto 1227
 1224: Empty
-1225: Assign £temporary5181 string_Yes#
+1225: Assign £temporary5173 string_Yes#
 1226: Goto 1229
 1227: Empty
-1228: Assign £temporary5181 string_No#
+1228: Assign £temporary5173 string_No#
 1229: Empty
-1230: Parameter 6 £temporary5181 8
+1230: Parameter 6 £temporary5173 8
 1231: Call 6 printf 0
 1232: PostCall 6
 1233: CallHeader 6 printf
@@ -11950,16 +11943,16 @@
 1236: Parameter 6 string_File2Ex# 14
 1237: Call 6 fileexists 8
 1238: PostCall 6
-1239: GetReturnValue £temporary5183
-1240: NotEqual 1242 £temporary5183 0
+1239: GetReturnValue £temporary5175
+1240: NotEqual 1242 £temporary5175 0
 1241: Goto 1245
 1242: Empty
-1243: Assign £temporary5188 string_Yes#
+1243: Assign £temporary5180 string_Yes#
 1244: Goto 1247
 1245: Empty
-1246: Assign £temporary5188 string_No#
+1246: Assign £temporary5180 string_No#
 1247: Empty
-1248: Parameter 6 £temporary5188 8
+1248: Parameter 6 £temporary5180 8
 1249: Call 6 printf 0
 1250: PostCall 6
 1251: CallHeader 6 printf
@@ -11968,16 +11961,16 @@
 1254: Parameter 6 string_File2Eh# 14
 1255: Call 6 fileexists 8
 1256: PostCall 6
-1257: GetReturnValue £temporary5190
-1258: NotEqual 1260 £temporary5190 0
+1257: GetReturnValue £temporary5182
+1258: NotEqual 1260 £temporary5182 0
 1259: Goto 1263
 1260: Empty
-1261: Assign £temporary5195 string_Yes#
+1261: Assign £temporary5187 string_Yes#
 1262: Goto 1265
 1263: Empty
-1264: Assign £temporary5195 string_No#
+1264: Assign £temporary5187 string_No#
 1265: Empty
-1266: Parameter 6 £temporary5195 8
+1266: Parameter 6 £temporary5187 8
 1267: Call 6 printf 0
 1268: PostCall 6
 1269: CallHeader 6 printf
@@ -11986,16 +11979,16 @@
 1272: Parameter 6 string_File2Ey# 14
 1273: Call 6 fileexists 8
 1274: PostCall 6
-1275: GetReturnValue £temporary5197
-1276: NotEqual 1278 £temporary5197 0
+1275: GetReturnValue £temporary5189
+1276: NotEqual 1278 £temporary5189 0
 1277: Goto 1281
 1278: Empty
-1279: Assign £temporary5202 string_Yes#
+1279: Assign £temporary5194 string_Yes#
 1280: Goto 1283
 1281: Empty
-1282: Assign £temporary5202 string_No#
+1282: Assign £temporary5194 string_No#
 1283: Empty
-1284: Parameter 6 £temporary5202 8
+1284: Parameter 6 £temporary5194 8
 1285: Call 6 printf 0
 1286: PostCall 6
 1287: CallHeader 6 printf
@@ -12004,16 +11997,16 @@
 1290: Parameter 6 string_File2Ep# 14
 1291: Call 6 fileexists 8
 1292: PostCall 6
-1293: GetReturnValue £temporary5204
-1294: NotEqual 1296 £temporary5204 0
+1293: GetReturnValue £temporary5196
+1294: NotEqual 1296 £temporary5196 0
 1295: Goto 1299
 1296: Empty
-1297: Assign £temporary5209 string_Yes#
+1297: Assign £temporary5201 string_Yes#
 1298: Goto 1301
 1299: Empty
-1300: Assign £temporary5209 string_No#
+1300: Assign £temporary5201 string_No#
 1301: Empty
-1302: Parameter 6 £temporary5209 8
+1302: Parameter 6 £temporary5201 8
 1303: Call 6 printf 0
 1304: PostCall 6
 1305: CallHeader 6 printf
@@ -12022,24 +12015,24 @@
 1308: Parameter 6 string_File2Ez# 14
 1309: Call 6 fileexists 8
 1310: PostCall 6
-1311: GetReturnValue £temporary5211
-1312: NotEqual 1314 £temporary5211 0
+1311: GetReturnValue £temporary5203
+1312: NotEqual 1314 £temporary5203 0
 1313: Goto 1317
 1314: Empty
-1315: Assign £temporary5216 string_Yes#
+1315: Assign £temporary5208 string_Yes#
 1316: Goto 1319
 1317: Empty
-1318: Assign £temporary5216 string_No#
+1318: Assign £temporary5208 string_No#
 1319: Empty
-1320: Parameter 6 £temporary5216 8
+1320: Parameter 6 £temporary5208 8
 1321: Call 6 printf 0
 1322: PostCall 6
 1323: Empty
 1324: Return 0
 1325: FunctionEnd file_test
 0: Assign n 0
-1: address £temporary5583 n
-2: Assign p £temporary5583
+1: address £temporary5575 n
+2: Assign p £temporary5575
 3: CallHeader 10 printf
 4: Parameter 10 string_3C25i3E203C25i3E203C25li3E203C25li3E203C25u3E203C25lu3E0A0A# 6
 5: Parameter 10 123 8
@@ -12375,12 +12368,12 @@
 335: CallHeader 12 sscanf
 336: Parameter 12 string_1232045620789# 6
 337: Parameter 12 string_25i20252Ai2025i2025n# 8
-338: address £temporary5613 a
-339: Parameter 12 £temporary5613 10
-340: address £temporary5614 b
-341: Parameter 12 £temporary5614 12
-342: address £temporary5615 n
-343: Parameter 12 £temporary5615 14
+338: address £temporary5605 a
+339: Parameter 12 £temporary5605 10
+340: address £temporary5606 b
+341: Parameter 12 £temporary5606 12
+342: address £temporary5607 n
+343: Parameter 12 £temporary5607 14
 344: Call 12 sscanf 0
 345: PostCall 12
 346: CallHeader 12 printf
@@ -12454,8 +12447,8 @@
 6: FunctionEnd exit_handle3
 0: Assign a 1
 1: Assign b 1
-2: SignedDivide £temporary5840 a b
-3: Assign c £temporary5840
+2: SignedDivide £temporary5832 a b
+3: Assign c £temporary5832
 4: CallHeader 12 printf
 5: Parameter 12 string_25i0A# 6
 6: Parameter 12 c 8
@@ -12482,9 +12475,9 @@
 27: FunctionEnd signal_test
 0: CallHeader 6 printf
 1: Parameter 6 string_25i20# 6
-2: Assign £temporary5852 i
+2: Assign £temporary5844 i
 3: BinaryAdd i i 1
-4: Parameter 6 £temporary5852 8
+4: Parameter 6 £temporary5844 8
 5: Call 6 printf 0
 6: PostCall 6
 7: CallHeader 6 stack_test
@@ -12498,16 +12491,16 @@
 2: Parameter 10 1024 6
 3: Call 10 malloc 0
 4: PostCall 10
-5: GetReturnValue £temporary5857
-6: Assign pointer £temporary5857
+5: GetReturnValue £temporary5849
+6: Assign pointer £temporary5849
 7: NotEqual 10 pointer 0
 8: Goto 19
 9: CheckTrackMapFloatStack
 10: CallHeader 10 printf
 11: Parameter 10 string_102420bytes2Dblock20number3A2025i0A# 6
-12: Assign £temporary5859 count
+12: Assign £temporary5851 count
 13: BinaryAdd count count 1
-14: Parameter 10 £temporary5859 8
+14: Parameter 10 £temporary5851 8
 15: Parameter 10 pointer 10
 16: Call 10 printf 0
 17: PostCall 10
@@ -12521,8 +12514,8 @@
 3: Parameter 12 96 6
 4: Call 12 malloc 0
 5: PostCall 12
-6: GetReturnValue £temporary5865
-7: Assign q £temporary5865
+6: GetReturnValue £temporary5857
+7: Assign q £temporary5857
 8: Assign index 0
 9: Empty
 10: SignedLessThan 13 index 10
@@ -12533,8 +12526,8 @@
 15: Parameter 14 96 6
 16: Call 14 malloc 0
 17: PostCall 14
-18: GetReturnValue £temporary5868
-19: Assign p £temporary5868
+18: GetReturnValue £temporary5860
+19: Assign p £temporary5860
 20: Equal 23 index 5
 21: Goto 25
 22: CheckTrackMapFloatStack
@@ -12602,36 +12595,36 @@
 2: Parameter 6 1 8
 3: Call 6 calloc 0
 4: PostCall 6
-5: GetReturnValue £temporary5897
-6: Assign a £temporary5897
+5: GetReturnValue £temporary5889
+6: Assign a £temporary5889
 7: CallHeader 8 calloc
 8: Parameter 8 96 6
 9: Parameter 8 1 8
 10: Call 8 calloc 0
 11: PostCall 8
-12: GetReturnValue £temporary5898
-13: Assign b £temporary5898
+12: GetReturnValue £temporary5890
+13: Assign b £temporary5890
 14: CallHeader 10 calloc
 15: Parameter 10 96 6
 16: Parameter 10 1 8
 17: Call 10 calloc 0
 18: PostCall 10
-19: GetReturnValue £temporary5899
-20: Assign c £temporary5899
+19: GetReturnValue £temporary5891
+20: Assign c £temporary5891
 21: CallHeader 12 calloc
 22: Parameter 12 96 6
 23: Parameter 12 1 8
 24: Call 12 calloc 0
 25: PostCall 12
-26: GetReturnValue £temporary5900
-27: Assign d £temporary5900
+26: GetReturnValue £temporary5892
+27: Assign d £temporary5892
 28: CallHeader 14 calloc
 29: Parameter 14 96 6
 30: Parameter 14 1 8
 31: Call 14 calloc 0
 32: PostCall 14
-33: GetReturnValue £temporary5901
-34: Assign e £temporary5901
+33: GetReturnValue £temporary5893
+34: Assign e £temporary5893
 35: CallHeader 16 print_heap
 36: Call 16 print_heap 0
 37: PostCall 16
@@ -12662,13 +12655,13 @@
 62: Return 0
 63: FunctionEnd malloc_test3
 0: Assign lowHeapPtr 65534
-1: InspectRegister £temporary5924 bp
-2: Assign stackTop £temporary5924
+1: InspectRegister £temporary5916 bp
+2: Assign stackTop £temporary5916
 3: CallHeader 10 printf
 4: Parameter 10 string_Stack20Top3A2025u2C20Low20Heap3A2025u0A# 6
 5: Parameter 10 stackTop 8
-6: Deref £temporary5925 -> lowHeapPtr lowHeapPtr 0
-7: Parameter 10 £temporary5925 -> lowHeapPtr 10
+6: Deref £temporary5917 -> lowHeapPtr lowHeapPtr 0
+7: Parameter 10 £temporary5917 -> lowHeapPtr 10
 8: Call 10 printf 0
 9: PostCall 10
 10: CallHeader 10 rec
@@ -12687,20 +12680,20 @@
 1: Parameter 6 96 6
 2: Call 6 malloc 0
 3: PostCall 6
-4: GetReturnValue £temporary5932
-5: Assign b £temporary5932
+4: GetReturnValue £temporary5924
+5: Assign b £temporary5924
 6: CallHeader 8 malloc
 7: Parameter 8 96 6
 8: Call 8 malloc 0
 9: PostCall 8
-10: GetReturnValue £temporary5933
-11: Assign c £temporary5933
+10: GetReturnValue £temporary5925
+11: Assign c £temporary5925
 12: CallHeader 10 malloc
 13: Parameter 10 96 6
 14: Call 10 malloc 0
 15: PostCall 10
-16: GetReturnValue £temporary5934
-17: Assign d £temporary5934
+16: GetReturnValue £temporary5926
+17: Assign d £temporary5926
 18: CallHeader 12 print_heap
 19: Call 12 print_heap 0
 20: PostCall 12
@@ -12737,8 +12730,8 @@
 51: Return 0
 52: FunctionEnd malloc_test
 0: Assign lowHeapPtr 65534
-1: InspectRegister £temporary5952 bp
-2: Assign stackTop £temporary5952
+1: InspectRegister £temporary5944 bp
+2: Assign stackTop £temporary5944
 3: Assign i 0
 4: Empty
 5: SignedLessThan 8 i 1000
@@ -12749,15 +12742,15 @@
 10: Parameter 12 96 6
 11: Call 12 malloc 0
 12: PostCall 12
-13: GetReturnValue £temporary5955
-14: Assign p £temporary5955
+13: GetReturnValue £temporary5947
+14: Assign p £temporary5947
 15: CallHeader 14 printf
 16: Parameter 14 string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A# 6
 17: Parameter 14 i 8
 18: Parameter 14 p 10
 19: Parameter 14 stackTop 12
-20: Deref £temporary5956 -> lowHeapPtr lowHeapPtr 0
-21: Parameter 14 £temporary5956 -> lowHeapPtr 14
+20: Deref £temporary5948 -> lowHeapPtr lowHeapPtr 0
+21: Parameter 14 £temporary5948 -> lowHeapPtr 14
 22: Call 14 printf 0
 23: PostCall 14
 24: Empty
@@ -12766,57 +12759,57 @@
 27: Empty
 28: Return 0
 29: FunctionEnd malloc_test6
-0: IntegralToIntegral £temporary5964 valuePtr1
-1: Deref £temporary5965 -> £temporary5964 £temporary5964 0
-2: Assign intValue1 £temporary5965 -> £temporary5964
-3: IntegralToIntegral £temporary5966 valuePtr2
-4: Deref £temporary5967 -> £temporary5966 £temporary5966 0
-5: Assign intValue2 £temporary5967 -> £temporary5966
+0: IntegralToIntegral £temporary5956 valuePtr1
+1: Deref £temporary5957 -> £temporary5956 £temporary5956 0
+2: Assign intValue1 £temporary5957 -> £temporary5956
+3: IntegralToIntegral £temporary5958 valuePtr2
+4: Deref £temporary5959 -> £temporary5958 £temporary5958 0
+5: Assign intValue2 £temporary5959 -> £temporary5958
 6: SignedLessThan 8 intValue1 intValue2
 7: Goto 11
 8: Empty
-9: Assign £temporary5977 -1
+9: Assign £temporary5969 -1
 10: Goto 21
 11: Empty
 12: Equal 14 intValue1 intValue2
 13: Goto 17
 14: Empty
-15: Assign £temporary5973 0
+15: Assign £temporary5965 0
 16: Goto 19
 17: Empty
-18: Assign £temporary5973 1
+18: Assign £temporary5965 1
 19: Empty
-20: Assign £temporary5977 £temporary5973
+20: Assign £temporary5969 £temporary5965
 21: Empty
-22: SetReturnValue £temporary5977
-23: Return £temporary5977
+22: SetReturnValue £temporary5969
+23: Return £temporary5969
 24: Empty
 25: Return 0
 26: FunctionEnd compare
-0: IntegralToIntegral £temporary5978 valuePtr1
-1: Deref £temporary5979 -> £temporary5978 £temporary5978 0
-2: Assign intValue1 £temporary5979 -> £temporary5978
-3: IntegralToIntegral £temporary5980 valuePtr2
-4: Deref £temporary5981 -> £temporary5980 £temporary5980 0
-5: Assign intValue2 £temporary5981 -> £temporary5980
+0: IntegralToIntegral £temporary5970 valuePtr1
+1: Deref £temporary5971 -> £temporary5970 £temporary5970 0
+2: Assign intValue1 £temporary5971 -> £temporary5970
+3: IntegralToIntegral £temporary5972 valuePtr2
+4: Deref £temporary5973 -> £temporary5972 £temporary5972 0
+5: Assign intValue2 £temporary5973 -> £temporary5972
 6: SignedLessThan 8 intValue1 intValue2
 7: Goto 11
 8: Empty
-9: Assign £temporary5991 1
+9: Assign £temporary5983 1
 10: Goto 21
 11: Empty
 12: Equal 14 intValue1 intValue2
 13: Goto 17
 14: Empty
-15: Assign £temporary5987 0
+15: Assign £temporary5979 0
 16: Goto 19
 17: Empty
-18: Assign £temporary5987 -1
+18: Assign £temporary5979 -1
 19: Empty
-20: Assign £temporary5991 £temporary5987
+20: Assign £temporary5983 £temporary5979
 21: Empty
-22: SetReturnValue £temporary5991
-23: Return £temporary5991
+22: SetReturnValue £temporary5983
+23: Return £temporary5983
 24: Empty
 25: Return 0
 26: FunctionEnd reverse_compare
@@ -12876,8 +12869,8 @@
 6: FunctionEnd hello
 0: CallHeader 8 printf
 1: Parameter 8 string_f3A2025u0A# 6
-2: IntegralToIntegral £temporary6022 f
-3: Parameter 8 £temporary6022 8
+2: IntegralToIntegral £temporary6014 f
+3: Parameter 8 £temporary6014 8
 4: Call 8 printf 0
 5: PostCall 8
 6: CallHeader 8 f
@@ -12888,8 +12881,8 @@
 11: FunctionEnd qtest
 0: CallHeader 6 printf
 1: Parameter 6 string_hello3A2025u0A# 6
-2: IntegralToIntegral £temporary6027 hello
-3: Parameter 6 £temporary6027 8
+2: IntegralToIntegral £temporary6019 hello
+3: Parameter 6 £temporary6019 8
 4: Call 6 printf 0
 5: PostCall 6
 6: CallHeader 6 qtest
@@ -12909,20 +12902,20 @@
 3: Parameter 8 string_1232E456# 14
 4: Call 8 atof 8
 5: PostCall 8
-6: GetReturnValue £temporary6035
-7: Parameter 8 £temporary6035 8
+6: GetReturnValue £temporary6027
+7: Parameter 8 £temporary6027 8
 8: Call 8 printf 0
 9: PostCall 8
 10: CallHeader 8 printf
 11: Parameter 8 string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A# 6
 12: CallHeader 8 strtod
 13: Parameter 8 string_1232E456789abc# 14
-14: address £temporary6037 p
-15: Parameter 8 £temporary6037 16
+14: address £temporary6029 p
+15: Parameter 8 £temporary6029 16
 16: Call 8 strtod 8
 17: PostCall 8
-18: GetReturnValue £temporary6038
-19: Parameter 8 £temporary6038 8
+18: GetReturnValue £temporary6030
+19: Parameter 8 £temporary6030 8
 20: Parameter 8 p 16
 21: Call 8 printf 0
 22: PostCall 8
@@ -12932,8 +12925,8 @@
 26: Parameter 6 string_path# 14
 27: Call 6 getenv 8
 28: PostCall 6
-29: GetReturnValue £temporary6040
-30: Parameter 6 £temporary6040 8
+29: GetReturnValue £temporary6032
+30: Parameter 6 £temporary6032 8
 31: Call 6 printf 0
 32: PostCall 6
 33: CallHeader 6 printf
@@ -12950,14 +12943,14 @@
 44: Parameter 6 -3 14
 45: Call 6 _abs 8
 46: PostCall 6
-47: GetReturnValue £temporary6044
-48: Parameter 6 £temporary6044 8
+47: GetReturnValue £temporary6036
+48: Parameter 6 £temporary6036 8
 49: CallHeader 6 _abs
 50: Parameter 6 3 16
 51: Call 6 _abs 10
 52: PostCall 6
-53: GetReturnValue £temporary6045
-54: Parameter 6 £temporary6045 10
+53: GetReturnValue £temporary6037
+54: Parameter 6 £temporary6037 10
 55: Call 6 printf 0
 56: PostCall 6
 57: CallHeader 6 printf
@@ -12966,14 +12959,14 @@
 60: Parameter 6 -3 14
 61: Call 6 labs 8
 62: PostCall 6
-63: GetReturnValue £temporary6047
-64: Parameter 6 £temporary6047 8
+63: GetReturnValue £temporary6039
+64: Parameter 6 £temporary6039 8
 65: CallHeader 6 labs
 66: Parameter 6 3 18
 67: Call 6 labs 12
 68: PostCall 6
-69: GetReturnValue £temporary6048
-70: Parameter 6 £temporary6048 12
+69: GetReturnValue £temporary6040
+70: Parameter 6 £temporary6040 12
 71: Call 6 printf 0
 72: PostCall 6
 73: CallHeader 6 div
@@ -12981,8 +12974,8 @@
 75: Parameter 6 3 8
 76: Call 6 div 0
 77: PostCall 6
-78: GetReturnValue £temporary6050 -> £temporary6051
-79: Assign i £temporary6050 -> £temporary6051
+78: GetReturnValue £temporary6042 -> £temporary6043
+79: Assign i £temporary6042 -> £temporary6043
 80: CallHeader 10 printf
 81: Parameter 10 string_div_t28102C20329203D202825i2C2025i290A# 6
 82: Parameter 10 i$quot 8
@@ -12994,8 +12987,8 @@
 88: Parameter 10 i 6
 89: Call 10 print_div 0
 90: PostCall 10
-91: GetReturnValue £temporary6055 -> £temporary6056
-92: Assign j £temporary6055 -> £temporary6056
+91: GetReturnValue £temporary6047 -> £temporary6048
+92: Assign j £temporary6047 -> £temporary6048
 93: CallHeader 14 printf
 94: Parameter 14 string_div_t28102C20329203D202825i2C2025i290A0A# 6
 95: Parameter 14 j$quot 8
@@ -13007,8 +13000,8 @@
 101: Parameter 6 3 10
 102: Call 6 ldiv 0
 103: PostCall 6
-104: GetReturnValue £temporary6060 -> £temporary6061
-105: Assign li £temporary6060 -> £temporary6061
+104: GetReturnValue £temporary6052 -> £temporary6053
+105: Assign li £temporary6052 -> £temporary6053
 106: CallHeader 14 printf
 107: Parameter 14 string_ldiv_t28102C20329203D202825li2C2025li290A# 6
 108: Parameter 14 li$quot 8
@@ -13020,8 +13013,8 @@
 114: Parameter 14 li 6
 115: Call 14 print_ldiv 0
 116: PostCall 14
-117: GetReturnValue £temporary6065 -> £temporary6066
-118: Assign lj £temporary6065 -> £temporary6066
+117: GetReturnValue £temporary6057 -> £temporary6058
+118: Assign lj £temporary6057 -> £temporary6058
 119: CallHeader 22 printf
 120: Parameter 22 string_ldiv_t28102C20329203D202825li2C2025li290A0A# 6
 121: Parameter 22 lj$quot 8
@@ -13045,10 +13038,10 @@
 139: Empty
 140: CallHeader 18 printf
 141: Parameter 18 string_25i20# 6
-142: UnsignedMultiply £temporary6078 index 2
-143: BinaryAdd £temporary6079 list £temporary6078
-144: Deref £temporary6080 -> £temporary6079 £temporary6079 0
-145: Parameter 18 £temporary6080 -> £temporary6079 8
+142: UnsignedMultiply £temporary6070 index 2
+143: BinaryAdd £temporary6071 list £temporary6070
+144: Deref £temporary6072 -> £temporary6071 £temporary6071 0
+145: Parameter 18 £temporary6072 -> £temporary6071 8
 146: Call 18 printf 0
 147: PostCall 18
 148: Empty
@@ -13073,10 +13066,10 @@
 167: Empty
 168: CallHeader 18 printf
 169: Parameter 18 string_25i20# 6
-170: UnsignedMultiply £temporary6087 index 2
-171: BinaryAdd £temporary6088 list £temporary6087
-172: Deref £temporary6089 -> £temporary6088 £temporary6088 0
-173: Parameter 18 £temporary6089 -> £temporary6088 8
+170: UnsignedMultiply £temporary6079 index 2
+171: BinaryAdd £temporary6080 list £temporary6079
+172: Deref £temporary6081 -> £temporary6080 £temporary6080 0
+173: Parameter 18 £temporary6081 -> £temporary6080 8
 174: Call 18 printf 0
 175: PostCall 18
 176: Empty
@@ -13101,10 +13094,10 @@
 195: Empty
 196: CallHeader 18 printf
 197: Parameter 18 string_25i20# 6
-198: UnsignedMultiply £temporary6096 index 2
-199: BinaryAdd £temporary6097 list £temporary6096
-200: Deref £temporary6098 -> £temporary6097 £temporary6097 0
-201: Parameter 18 £temporary6098 -> £temporary6097 8
+198: UnsignedMultiply £temporary6088 index 2
+199: BinaryAdd £temporary6089 list £temporary6088
+200: Deref £temporary6090 -> £temporary6089 £temporary6089 0
+201: Parameter 18 £temporary6090 -> £temporary6089 8
 202: Call 18 printf 0
 203: PostCall 18
 204: Empty
@@ -13121,28 +13114,28 @@
 215: CheckTrackMapFloatStack
 216: Empty
 217: CallHeader 18 bsearch
-218: address £temporary6103 key
-219: Parameter 18 £temporary6103 6
+218: address £temporary6095 key
+219: Parameter 18 £temporary6095 6
 220: Parameter 18 list 8
 221: Parameter 18 size 10
 222: Parameter 18 2 12
 223: Parameter 18 compare 14
 224: Call 18 bsearch 0
 225: PostCall 18
-226: GetReturnValue £temporary6105
-227: IntegralToIntegral £temporary6106 £temporary6105
-228: Assign p £temporary6106
+226: GetReturnValue £temporary6097
+227: IntegralToIntegral £temporary6098 £temporary6097
+228: Assign p £temporary6098
 229: NotEqual 231 p 0
 230: Goto 236
 231: Empty
-232: BinarySubtract £temporary6108 p list
-233: UnsignedDivide £temporary6109 £temporary6108 2
-234: Assign £temporary6113 £temporary6109
+232: BinarySubtract £temporary6100 p list
+233: UnsignedDivide £temporary6101 £temporary6100 2
+234: Assign £temporary6105 £temporary6101
 235: Goto 238
 236: Empty
-237: Assign £temporary6113 -1
+237: Assign £temporary6105 -1
 238: Empty
-239: Assign index £temporary6113
+239: Assign index £temporary6105
 240: CallHeader 22 printf
 241: Parameter 22 string_20202825i2C2025i290A# 6
 242: Parameter 22 key 8
@@ -13170,31 +13163,31 @@
 8: Parameter 20 0 6
 9: Call 20 time 0
 10: PostCall 20
-11: GetReturnValue £temporary6201
-12: Assign now1 £temporary6201
+11: GetReturnValue £temporary6193
+12: Assign now1 £temporary6193
 13: CallHeader 24 gmtime
-14: address £temporary6202 now1
-15: Parameter 24 £temporary6202 6
+14: address £temporary6194 now1
+15: Parameter 24 £temporary6194 6
 16: Call 24 gmtime 0
 17: PostCall 24
-18: GetReturnValue £temporary6203
-19: Deref £temporary6204 -> £temporary6203 £temporary6203 0
-20: Assign s £temporary6204 -> £temporary6203
+18: GetReturnValue £temporary6195
+19: Deref £temporary6196 -> £temporary6195 £temporary6195 0
+20: Assign s £temporary6196 -> £temporary6195
 21: CallHeader 42 localtime
-22: address £temporary6205 now1
-23: Parameter 42 £temporary6205 6
+22: address £temporary6197 now1
+23: Parameter 42 £temporary6197 6
 24: Call 42 localtime 0
 25: PostCall 42
-26: GetReturnValue £temporary6206
-27: Deref £temporary6207 -> £temporary6206 £temporary6206 0
-28: Assign t £temporary6207 -> £temporary6206
+26: GetReturnValue £temporary6198
+27: Deref £temporary6199 -> £temporary6198 £temporary6198 0
+28: Assign t £temporary6199 -> £temporary6198
 29: CallHeader 60 mktime
-30: address £temporary6208 s
-31: Parameter 60 £temporary6208 6
+30: address £temporary6200 s
+31: Parameter 60 £temporary6200 6
 32: Call 60 mktime 0
 33: PostCall 60
-34: GetReturnValue £temporary6209
-35: Assign now2 £temporary6209
+34: GetReturnValue £temporary6201
+35: Assign now2 £temporary6201
 36: CallHeader 64 printf
 37: Parameter 64 string_now2013A2025lu0A# 6
 38: Parameter 64 now1 8
@@ -13207,14 +13200,14 @@
 45: PostCall 64
 46: CallHeader 64 printf
 47: Parameter 64 string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A# 6
-48: UnsignedMultiply £temporary6214 s$tm_wday 2
-49: BinaryAdd £temporary6215 weekdays £temporary6214
-50: Deref £temporary6213 -> £temporary6215 £temporary6215 0
-51: Parameter 64 £temporary6213 -> £temporary6215 8
-52: BinaryAdd £temporary6217 1900 s$tm_year
-53: Parameter 64 £temporary6217 10
-54: BinaryAdd £temporary6219 s$tm_mon 1
-55: Parameter 64 £temporary6219 12
+48: UnsignedMultiply £temporary6206 s$tm_wday 2
+49: BinaryAdd £temporary6207 weekdays £temporary6206
+50: Deref £temporary6205 -> £temporary6207 £temporary6207 0
+51: Parameter 64 £temporary6205 -> £temporary6207 8
+52: BinaryAdd £temporary6209 1900 s$tm_year
+53: Parameter 64 £temporary6209 10
+54: BinaryAdd £temporary6211 s$tm_mon 1
+55: Parameter 64 £temporary6211 12
 56: Parameter 64 s$tm_mday 14
 57: Parameter 64 s$tm_hour 16
 58: Parameter 64 s$tm_min 18
@@ -13226,14 +13219,14 @@
 64: PostCall 64
 65: CallHeader 64 printf
 66: Parameter 64 string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A# 6
-67: UnsignedMultiply £temporary6230 t$tm_wday 2
-68: BinaryAdd £temporary6231 weekdays £temporary6230
-69: Deref £temporary6229 -> £temporary6231 £temporary6231 0
-70: Parameter 64 £temporary6229 -> £temporary6231 8
-71: BinaryAdd £temporary6233 1900 t$tm_year
-72: Parameter 64 £temporary6233 10
-73: BinaryAdd £temporary6235 t$tm_mon 1
-74: Parameter 64 £temporary6235 12
+67: UnsignedMultiply £temporary6222 t$tm_wday 2
+68: BinaryAdd £temporary6223 weekdays £temporary6222
+69: Deref £temporary6221 -> £temporary6223 £temporary6223 0
+70: Parameter 64 £temporary6221 -> £temporary6223 8
+71: BinaryAdd £temporary6225 1900 t$tm_year
+72: Parameter 64 £temporary6225 10
+73: BinaryAdd £temporary6227 t$tm_mon 1
+74: Parameter 64 £temporary6227 12
 75: Parameter 64 t$tm_mday 14
 76: Parameter 64 t$tm_hour 16
 77: Parameter 64 t$tm_min 18
@@ -13246,23 +13239,23 @@
 84: CallHeader 566 strcpy
 85: Parameter 566 buffer1 6
 86: CallHeader 566 asctime
-87: address £temporary6244 s
-88: Parameter 566 £temporary6244 14
+87: address £temporary6236 s
+88: Parameter 566 £temporary6236 14
 89: Call 566 asctime 8
 90: PostCall 566
-91: GetReturnValue £temporary6245
-92: Parameter 566 £temporary6245 8
+91: GetReturnValue £temporary6237
+92: Parameter 566 £temporary6237 8
 93: Call 566 strcpy 0
 94: PostCall 566
 95: CallHeader 566 strcpy
 96: Parameter 566 buffer2 6
 97: CallHeader 566 ctime
-98: address £temporary6247 now1
-99: Parameter 566 £temporary6247 14
+98: address £temporary6239 now1
+99: Parameter 566 £temporary6239 14
 100: Call 566 ctime 8
 101: PostCall 566
-102: GetReturnValue £temporary6248
-103: Parameter 566 £temporary6248 8
+102: GetReturnValue £temporary6240
+103: Parameter 566 £temporary6240 8
 104: Call 566 strcpy 0
 105: PostCall 566
 106: CallHeader 566 printf
@@ -13275,12 +13268,12 @@
 113: Parameter 566 buffer 6
 114: Parameter 566 300 8
 115: Parameter 566 string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y# 10
-116: address £temporary6251 t
-117: Parameter 566 £temporary6251 12
+116: address £temporary6243 t
+117: Parameter 566 £temporary6243 12
 118: Call 566 strftime 0
 119: PostCall 566
-120: GetReturnValue £temporary6252
-121: Assign i £temporary6252
+120: GetReturnValue £temporary6244
+121: Assign i £temporary6244
 122: CallHeader 566 printf
 123: Parameter 566 string_strftime2025i2025i203C25s3E0A# 6
 124: Parameter 566 i 8
@@ -13288,8 +13281,8 @@
 126: Parameter 566 buffer 16
 127: Call 566 strlen 10
 128: PostCall 566
-129: GetReturnValue £temporary6253
-130: Parameter 566 £temporary6253 10
+129: GetReturnValue £temporary6245
+130: Parameter 566 £temporary6245 10
 131: Parameter 566 buffer 12
 132: Call 566 printf 0
 133: PostCall 566

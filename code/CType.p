@@ -1,6 +1,6 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
+
+
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -16,20 +16,19 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\CType.c,0$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
-   
-   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\CType.c,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
 
-    
-    
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
+
+
+
+
+
 
 
 
@@ -64,69 +63,65 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
-   
-   
-
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
 
-     
-                         
-                    
-               
-      
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
 
-          
-    
-    
-    
-    
 
-  
+
+
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
 
-    
-    
 
-    
-    
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
+
+
+
+
+
+
+
+
 
 typedef struct {
 int open ;
@@ -143,7 +138,7 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-          
+
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -175,32 +170,30 @@ int feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
-   
-   
 
-    
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
+
+
+
+
+
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
-   
-   
 
-    
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
 
-    
+
+
+
+
+
+
 
 int scanf ( const char * format , ... ) ;
 int vscanf ( const char * format , char * arg_list ) ;
@@ -209,16 +202,15 @@ int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
 int vsscanf ( char * inString , const char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
-   
-   
 
-    
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
+
+
+
+
+
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -234,25 +226,23 @@ int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
 int vsprintf ( char * outString , const char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-       
 
-  
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\CType.c,1$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\locale.h,0$
-   
-   
 
-    
-    
-    
-    
-    
-    
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\CType.c,2$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\locale.h,1$
+
+
+
+
+
+
+
+
+
 
 struct lconv {
 int summerTimeZone , winterTimeZone ;
@@ -269,15 +259,14 @@ char ** messageList ;
 extern char * setlocale ( int flag , char * name ) ;
 extern struct lconv * localeconv ( void ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\CType.c,2$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\string.h,0$
-   
-   
 
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\CType.c,3$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\string.h,1$
+
+
+
+
 
 extern char * strcpy ( char * target , const char * source ) ;
 extern char * strncpy ( char * target , const char * source , int size ) ;
@@ -300,24 +289,22 @@ extern int memcmp ( const void * left , const void * right , int size ) ;
 extern void * memchr ( const void * block , int i , int size ) ;
 extern void * memset ( void * block , int i , int size ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\CType.c,3$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
-   
-   
-
-          
-    
-    
-    
-    
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\CType.c,4$
-       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\CType.c,5$
 
 int islower ( int c ) {
 struct lconv * localeConvPtr = localeconv ( ) ;
@@ -326,7 +313,7 @@ if ( localeConvPtr != ( ( void * ) 0 ) ) {
 return ( strchr ( localeConvPtr -> lowerCase , c ) != ( ( void * ) 0 ) ) ;
 }
 else {
-return ( ( c >= 'a' ) && ( c <= 'z' ) ) ;
+return ( ( c >= '\141' ) && ( c <= '\172' ) ) ;
 }
 }
 
@@ -337,7 +324,7 @@ if ( localeConvPtr != ( ( void * ) 0 ) ) {
 return ( strchr ( localeConvPtr -> upperCase , c ) != ( ( void * ) 0 ) ) ;
 }
 else {
-return ( ( c >= 'A' ) && ( c <= 'Z' ) ) ;
+return ( ( c >= '\101' ) && ( c <= '\132' ) ) ;
 }
 }
 
@@ -346,7 +333,7 @@ return islower ( c ) || isupper ( c ) ;
 }
 
 int isdigit ( int c ) {
-return ( c >= '0' ) && ( c <= '9' ) ;
+return ( c >= '\060' ) && ( c <= '\071' ) ;
 }
 
 int isalnum ( int c ) {
@@ -354,8 +341,8 @@ return isalpha ( c ) || isdigit ( c ) ;
 }
 
 int isxdigit ( int c ) {
-return isdigit ( c ) || ( ( c >= 'a' ) && ( c <= 'f' ) )
-|| ( ( c >= 'A' ) && ( c <= 'F' ) ) ;
+return isdigit ( c ) || ( ( c >= '\141' ) && ( c <= '\146' ) )
+|| ( ( c >= '\101' ) && ( c <= '\106' ) ) ;
 }
 
 int isgraph ( int c ) {
@@ -363,7 +350,7 @@ return ( c >= 32 ) && ( c <= 126 ) ;
 }
 
 int isprint ( int c ) {
-return isgraph ( c ) && ( c != ' ' ) ;
+return isgraph ( c ) && ( c != '\040' ) ;
 }
 
 int ispunct ( int c ) {
@@ -375,8 +362,8 @@ return ! isprint ( c ) ;
 }
 
 int isspace ( int c ) {
-return ( c == ' ' ) || ( c == '\f' ) || ( c == '\n' ) ||
-( c == '\r' ) || ( c == '\t' ) || ( c == '\v' ) ;
+return ( c == '\040' ) || ( c == '\014' ) || ( c == '\012' ) ||
+( c == '\015' ) || ( c == '\011' ) || ( c == '\013' ) ;
 }
 
 int tolower ( int c ) {
@@ -416,3 +403,4 @@ else {
 return c ;
 }
 }
+

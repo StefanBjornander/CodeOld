@@ -4,10 +4,10 @@ locale_test:	; Empty
 3:	
 
 locale_test$1:	; Return 0
-4:		mov t2701, [bp]
+4:		mov t2700, [bp]
 5:		mov di, [bp + 4]
 6:		mov bp, [bp + 2]
-7:		jmp t2701
+7:		jmp t2700
 9:	
 
 locale_test$2:	; FunctionEnd locale_test

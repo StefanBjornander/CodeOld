@@ -4,7 +4,7 @@ math_test_1x:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 3:	
 
 math_test_1x$1:	; PushFloat -6.28
-4:		fld qword [@9957$float8$minus6.28#]
+4:		fld qword [@9946$float8$minus6.28#]
 6:	
 
 math_test_1x$2:	; Parameter 6 -6.28 6
@@ -25,7 +25,7 @@ math_test_1x$5:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 19:	
 
 math_test_1x$6:	; PushFloat -3.14
-20:		fld qword [@9961$float8$minus3.14#]
+20:		fld qword [@9950$float8$minus3.14#]
 22:	
 
 math_test_1x$7:	; Parameter 6 -3.14 6
@@ -46,7 +46,7 @@ math_test_1x$10:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.S
 35:	
 
 math_test_1x$11:	; PushFloat -1.57
-36:		fld qword [@9967$float8$minus1.57#]
+36:		fld qword [@9956$float8$minus1.57#]
 38:	
 
 math_test_1x$12:	; Parameter 6 -1.57 6
@@ -67,7 +67,7 @@ math_test_1x$15:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.S
 51:	
 
 math_test_1x$16:	; PushFloat -1
-52:		fld qword [@9971$float8$minus1#]
+52:		fld qword [@9960$float8$minus1#]
 54:	
 
 math_test_1x$17:	; Parameter 6 -1 6
@@ -130,7 +130,7 @@ math_test_1x$30:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.S
 99:	
 
 math_test_1x$31:	; PushFloat 1.57
-100:		fld qword [@9981$float8$1.57#]
+100:		fld qword [@9970$float8$1.57#]
 102:	
 
 math_test_1x$32:	; Parameter 6 1.57 6
@@ -151,7 +151,7 @@ math_test_1x$35:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.S
 115:	
 
 math_test_1x$36:	; PushFloat 3.14
-116:		fld qword [@9984$float8$3.14#]
+116:		fld qword [@9973$float8$3.14#]
 118:	
 
 math_test_1x$37:	; Parameter 6 3.14 6
@@ -172,7 +172,7 @@ math_test_1x$40:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.S
 131:	
 
 math_test_1x$41:	; PushFloat 6.28
-132:		fld qword [@9989$float8$6.28#]
+132:		fld qword [@9978$float8$6.28#]
 134:	
 
 math_test_1x$42:	; Parameter 6 6.28 6
@@ -203,7 +203,7 @@ acos_test:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol
 3:	
 
 acos_test$1:	; Parameter 14 string_2020acos2825f29203D2025f2C20errno203D2025i0A# 6
-4:		mov word [bp + 20], @10002$string_2020acos2825f29203D2025f2C20errno203D2025i0A#
+4:		mov word [bp + 20], @9991$string_2020acos2825f29203D2025f2C20errno203D2025i0A#
 6:	
 
 acos_test$2:	; PushFloat x
@@ -235,10 +235,10 @@ acos_test$7:	; Call 14 acos 16
 acos_test$8:	; PostCall 14
 28:	
 
-acos_test$9:	; GetReturnValue £temporary4577
+acos_test$9:	; GetReturnValue £temporary4569
 30:	
 
-acos_test$10:	; Parameter 14 £temporary4577 16
+acos_test$10:	; Parameter 14 £temporary4569 16
 31:		fstp qword [bp + 30]
 33:	
 
@@ -277,7 +277,7 @@ atan_test:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol
 3:	
 
 atan_test$1:	; Parameter 14 string_2020atan2825f29203D2025f2C20errno203D2025i0A# 6
-4:		mov word [bp + 20], @10013$string_2020atan2825f29203D2025f2C20errno203D2025i0A#
+4:		mov word [bp + 20], @10002$string_2020atan2825f29203D2025f2C20errno203D2025i0A#
 6:	
 
 atan_test$2:	; PushFloat x
@@ -309,10 +309,10 @@ atan_test$7:	; Call 14 atan 16
 atan_test$8:	; PostCall 14
 28:	
 
-atan_test$9:	; GetReturnValue £temporary4584
+atan_test$9:	; GetReturnValue £temporary4576
 30:	
 
-atan_test$10:	; Parameter 14 £temporary4584 16
+atan_test$10:	; Parameter 14 £temporary4576 16
 31:		fstp qword [bp + 30]
 33:	
 
@@ -351,7 +351,7 @@ math_test:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 3:	
 
 math_test$1:	; PushFloat 0.333333333
-4:		fld qword [@10024$float8$0.333333333#]
+4:		fld qword [@10013$float8$0.333333333#]
 6:	
 
 math_test$2:	; Parameter 6 0.333333333 6
@@ -372,7 +372,7 @@ math_test$5:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbo
 19:	
 
 math_test$6:	; PushFloat 0.75
-20:		fld qword [@10027$float8$0.75#]
+20:		fld qword [@10016$float8$0.75#]
 22:	
 
 math_test$7:	; Parameter 6 0.75 6
@@ -393,7 +393,7 @@ math_test$10:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 35:	
 
 math_test$11:	; PushFloat 1.000010
-36:		fld qword [@10030$float8$1.000010#]
+36:		fld qword [@10019$float8$1.000010#]
 38:	
 
 math_test$12:	; Parameter 6 1.000010 6
@@ -435,7 +435,7 @@ math_test$20:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 67:	
 
 math_test$21:	; PushFloat 0.999999
-68:		fld qword [@10036$float8$0.999999#]
+68:		fld qword [@10025$float8$0.999999#]
 70:	
 
 math_test$22:	; Parameter 6 0.999999 6
@@ -456,7 +456,7 @@ math_test$25:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 83:	
 
 math_test$26:	; PushFloat 0.000010
-84:		fld qword [@10039$float8$0.000010#]
+84:		fld qword [@10028$float8$0.000010#]
 86:	
 
 math_test$27:	; Parameter 6 0.000010 6
@@ -498,7 +498,7 @@ math_test$35:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 115:	
 
 math_test$36:	; PushFloat -0.000010
-116:		fld qword [@10045$float8$minus0.000010#]
+116:		fld qword [@10034$float8$minus0.000010#]
 118:	
 
 math_test$37:	; Parameter 6 -0.000010 6
@@ -519,7 +519,7 @@ math_test$40:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 131:	
 
 math_test$41:	; PushFloat -0.999999
-132:		fld qword [@10048$float8$minus0.999999#]
+132:		fld qword [@10037$float8$minus0.999999#]
 134:	
 
 math_test$42:	; Parameter 6 -0.999999 6
@@ -540,7 +540,7 @@ math_test$45:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 147:	
 
 math_test$46:	; PushFloat -1.0
-148:		fld qword [@10051$float8$minus1.0#]
+148:		fld qword [@10040$float8$minus1.0#]
 150:	
 
 math_test$47:	; Parameter 6 -1.0 6
@@ -561,7 +561,7 @@ math_test$50:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 163:	
 
 math_test$51:	; PushFloat -1.000010
-164:		fld qword [@10054$float8$minus1.000010#]
+164:		fld qword [@10043$float8$minus1.000010#]
 166:	
 
 math_test$52:	; Parameter 6 -1.000010 6
@@ -582,7 +582,7 @@ math_test$55:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 179:	
 
 math_test$56:	; PushFloat 6.28
-180:		fld qword [@10059$float8$6.28#]
+180:		fld qword [@10048$float8$6.28#]
 182:	
 
 math_test$57:	; Parameter 6 6.28 6
@@ -603,7 +603,7 @@ math_test$60:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 195:	
 
 math_test$61:	; PushFloat 3.14
-196:		fld qword [@10062$float8$3.14#]
+196:		fld qword [@10051$float8$3.14#]
 198:	
 
 math_test$62:	; Parameter 6 3.14 6
@@ -624,7 +624,7 @@ math_test$65:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 211:	
 
 math_test$66:	; PushFloat 1.57
-212:		fld qword [@10067$float8$1.57#]
+212:		fld qword [@10056$float8$1.57#]
 214:	
 
 math_test$67:	; Parameter 6 1.57 6
@@ -645,7 +645,7 @@ math_test$70:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 227:	
 
 math_test$71:	; PushFloat -1.57
-228:		fld qword [@10073$float8$minus1.57#]
+228:		fld qword [@10062$float8$minus1.57#]
 230:	
 
 math_test$72:	; Parameter 6 -1.57 6
@@ -666,7 +666,7 @@ math_test$75:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 243:	
 
 math_test$76:	; PushFloat -3.14
-244:		fld qword [@10077$float8$minus3.14#]
+244:		fld qword [@10066$float8$minus3.14#]
 246:	
 
 math_test$77:	; Parameter 6 -3.14 6
@@ -687,7 +687,7 @@ math_test$80:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 259:	
 
 math_test$81:	; PushFloat -6.28
-260:		fld qword [@10082$float8$minus6.28#]
+260:		fld qword [@10071$float8$minus6.28#]
 262:	
 
 math_test$82:	; Parameter 6 -6.28 6
@@ -716,7 +716,7 @@ math_test$87:	; Parameter 6 1.0 6
 281:	
 
 math_test$88:	; PushFloat 2.0
-282:		fld qword [@10087$float8$2.0#]
+282:		fld qword [@10076$float8$2.0#]
 284:	
 
 math_test$89:	; Parameter 6 2.0 14
@@ -737,7 +737,7 @@ math_test$92:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 297:	
 
 math_test$93:	; PushFloat 3.0
-298:		fld qword [@10090$float8$3.0#]
+298:		fld qword [@10079$float8$3.0#]
 300:	
 
 math_test$94:	; Parameter 6 3.0 6
@@ -745,7 +745,7 @@ math_test$94:	; Parameter 6 3.0 6
 303:	
 
 math_test$95:	; PushFloat 4.0
-304:		fld qword [@10092$float8$4.0#]
+304:		fld qword [@10081$float8$4.0#]
 306:	
 
 math_test$96:	; Parameter 6 4.0 14
@@ -774,7 +774,7 @@ math_test$101:	; Parameter 6 0 6
 325:	
 
 math_test$102:	; PushFloat 2.0
-326:		fld qword [@10097$float8$2.0#]
+326:		fld qword [@10086$float8$2.0#]
 328:	
 
 math_test$103:	; Parameter 6 2.0 14
@@ -803,7 +803,7 @@ math_test$108:	; Parameter 6 0 6
 347:	
 
 math_test$109:	; PushFloat -2.0
-348:		fld qword [@10102$float8$minus2.0#]
+348:		fld qword [@10091$float8$minus2.0#]
 350:	
 
 math_test$110:	; Parameter 6 -2.0 14
@@ -832,7 +832,7 @@ math_test$115:	; Parameter 6 1 6
 369:	
 
 math_test$116:	; PushFloat 2.0
-370:		fld qword [@10107$float8$2.0#]
+370:		fld qword [@10096$float8$2.0#]
 372:	
 
 math_test$117:	; Parameter 6 2.0 14
@@ -861,7 +861,7 @@ math_test$122:	; Parameter 6 1 6
 391:	
 
 math_test$123:	; PushFloat -2.0
-392:		fld qword [@10112$float8$minus2.0#]
+392:		fld qword [@10101$float8$minus2.0#]
 394:	
 
 math_test$124:	; Parameter 6 -2.0 14
@@ -911,7 +911,7 @@ math_test$134:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 429:	
 
 math_test$135:	; PushFloat 2
-430:		fld qword [@10121$float8$2#]
+430:		fld qword [@10110$float8$2#]
 432:	
 
 math_test$136:	; Parameter 6 2 6
@@ -940,7 +940,7 @@ math_test$141:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 451:	
 
 math_test$142:	; PushFloat -2
-452:		fld qword [@10126$float8$minus2#]
+452:		fld qword [@10115$float8$minus2#]
 454:	
 
 math_test$143:	; Parameter 6 -2 6
@@ -969,7 +969,7 @@ math_test$148:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 473:	
 
 math_test$149:	; PushFloat -1.0
-474:		fld qword [@10130$float8$minus1.0#]
+474:		fld qword [@10119$float8$minus1.0#]
 476:	
 
 math_test$150:	; Parameter 6 -1.0 6
@@ -977,7 +977,7 @@ math_test$150:	; Parameter 6 -1.0 6
 479:	
 
 math_test$151:	; PushFloat -1.0
-480:		fld qword [@10132$float8$minus1.0#]
+480:		fld qword [@10121$float8$minus1.0#]
 482:	
 
 math_test$152:	; Parameter 6 -1.0 14
@@ -998,7 +998,7 @@ math_test$155:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 495:	
 
 math_test$156:	; PushFloat -2.0
-496:		fld qword [@10135$float8$minus2.0#]
+496:		fld qword [@10124$float8$minus2.0#]
 498:	
 
 math_test$157:	; Parameter 6 -2.0 6
@@ -1006,7 +1006,7 @@ math_test$157:	; Parameter 6 -2.0 6
 501:	
 
 math_test$158:	; PushFloat -4.0
-502:		fld qword [@10137$float8$minus4.0#]
+502:		fld qword [@10126$float8$minus4.0#]
 504:	
 
 math_test$159:	; Parameter 6 -4.0 14
@@ -1037,7 +1037,7 @@ math_test_1:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symb
 3:	
 
 math_test_1$1:	; Parameter 14 string_3C25f3E0A# 6
-4:		mov word [bp + 20], @10180$string_3C25f3E0A#
+4:		mov word [bp + 20], @10169$string_3C25f3E0A#
 6:	
 
 math_test_1$2:	; PushFloat x
@@ -1064,7 +1064,7 @@ math_test_1$6:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Sy
 24:	
 
 math_test_1$7:	; Parameter 14 string_2020sin2825f29203D2025f2C20errno203D2025i0A# 6
-25:		mov word [bp + 20], @10182$string_2020sin2825f29203D2025f2C20errno203D2025i0A#
+25:		mov word [bp + 20], @10171$string_2020sin2825f29203D2025f2C20errno203D2025i0A#
 27:	
 
 math_test_1$8:	; PushFloat x
@@ -1096,10 +1096,10 @@ math_test_1$13:	; Call 14 sin 16
 math_test_1$14:	; PostCall 14
 49:	
 
-math_test_1$15:	; GetReturnValue £temporary4659
+math_test_1$15:	; GetReturnValue £temporary4651
 51:	
 
-math_test_1$16:	; Parameter 14 £temporary4659 16
+math_test_1$16:	; Parameter 14 £temporary4651 16
 52:		fstp qword [bp + 30]
 54:	
 
@@ -1128,7 +1128,7 @@ math_test_1$21:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.S
 73:	
 
 math_test_1$22:	; Parameter 14 string_2020cos2825f29203D2025f2C20errno203D2025i0A# 6
-74:		mov word [bp + 20], @10187$string_2020cos2825f29203D2025f2C20errno203D2025i0A#
+74:		mov word [bp + 20], @10176$string_2020cos2825f29203D2025f2C20errno203D2025i0A#
 76:	
 
 math_test_1$23:	; PushFloat x
@@ -1160,10 +1160,10 @@ math_test_1$28:	; Call 14 cos 16
 math_test_1$29:	; PostCall 14
 98:	
 
-math_test_1$30:	; GetReturnValue £temporary4661
+math_test_1$30:	; GetReturnValue £temporary4653
 100:	
 
-math_test_1$31:	; Parameter 14 £temporary4661 16
+math_test_1$31:	; Parameter 14 £temporary4653 16
 101:		fstp qword [bp + 30]
 103:	
 
@@ -1192,7 +1192,7 @@ math_test_1$36:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.S
 122:	
 
 math_test_1$37:	; Parameter 14 string_2020tan2825f29203D2025f2C20errno203D2025i0A# 6
-123:		mov word [bp + 20], @10192$string_2020tan2825f29203D2025f2C20errno203D2025i0A#
+123:		mov word [bp + 20], @10181$string_2020tan2825f29203D2025f2C20errno203D2025i0A#
 125:	
 
 math_test_1$38:	; PushFloat x
@@ -1224,10 +1224,10 @@ math_test_1$43:	; Call 14 tan 16
 math_test_1$44:	; PostCall 14
 147:	
 
-math_test_1$45:	; GetReturnValue £temporary4663
+math_test_1$45:	; GetReturnValue £temporary4655
 149:	
 
-math_test_1$46:	; Parameter 14 £temporary4663 16
+math_test_1$46:	; Parameter 14 £temporary4655 16
 150:		fstp qword [bp + 30]
 152:	
 
@@ -1256,7 +1256,7 @@ math_test_1$51:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.S
 171:	
 
 math_test_1$52:	; Parameter 14 string_2020asin2825f29203D2025f2C20errno203D2025i0A# 6
-172:		mov word [bp + 20], @10197$string_2020asin2825f29203D2025f2C20errno203D2025i0A#
+172:		mov word [bp + 20], @10186$string_2020asin2825f29203D2025f2C20errno203D2025i0A#
 174:	
 
 math_test_1$53:	; PushFloat x
@@ -1288,10 +1288,10 @@ math_test_1$58:	; Call 14 asin 16
 math_test_1$59:	; PostCall 14
 196:	
 
-math_test_1$60:	; GetReturnValue £temporary4665
+math_test_1$60:	; GetReturnValue £temporary4657
 198:	
 
-math_test_1$61:	; Parameter 14 £temporary4665 16
+math_test_1$61:	; Parameter 14 £temporary4657 16
 199:		fstp qword [bp + 30]
 201:	
 
@@ -1320,7 +1320,7 @@ math_test_1$66:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.S
 220:	
 
 math_test_1$67:	; Parameter 14 string_2020acos2825f29203D2025f2C20errno203D2025i0A# 6
-221:		mov word [bp + 20], @10202$string_2020acos2825f29203D2025f2C20errno203D2025i0A#
+221:		mov word [bp + 20], @10191$string_2020acos2825f29203D2025f2C20errno203D2025i0A#
 223:	
 
 math_test_1$68:	; PushFloat x
@@ -1352,10 +1352,10 @@ math_test_1$73:	; Call 14 acos 16
 math_test_1$74:	; PostCall 14
 245:	
 
-math_test_1$75:	; GetReturnValue £temporary4667
+math_test_1$75:	; GetReturnValue £temporary4659
 247:	
 
-math_test_1$76:	; Parameter 14 £temporary4667 16
+math_test_1$76:	; Parameter 14 £temporary4659 16
 248:		fstp qword [bp + 30]
 250:	
 
@@ -1384,7 +1384,7 @@ math_test_1$81:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.S
 269:	
 
 math_test_1$82:	; Parameter 14 string_2020atan2825f29203D2025f2C20errno203D2025i0A# 6
-270:		mov word [bp + 20], @10207$string_2020atan2825f29203D2025f2C20errno203D2025i0A#
+270:		mov word [bp + 20], @10196$string_2020atan2825f29203D2025f2C20errno203D2025i0A#
 272:	
 
 math_test_1$83:	; PushFloat x
@@ -1416,10 +1416,10 @@ math_test_1$88:	; Call 14 atan 16
 math_test_1$89:	; PostCall 14
 294:	
 
-math_test_1$90:	; GetReturnValue £temporary4669
+math_test_1$90:	; GetReturnValue £temporary4661
 296:	
 
-math_test_1$91:	; Parameter 14 £temporary4669 16
+math_test_1$91:	; Parameter 14 £temporary4661 16
 297:		fstp qword [bp + 30]
 299:	
 
@@ -1448,7 +1448,7 @@ math_test_1$96:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.S
 318:	
 
 math_test_1$97:	; Parameter 14 string_2020exp2825f29203D2025f2C20errno203D2025i0A# 6
-319:		mov word [bp + 20], @10212$string_2020exp2825f29203D2025f2C20errno203D2025i0A#
+319:		mov word [bp + 20], @10201$string_2020exp2825f29203D2025f2C20errno203D2025i0A#
 321:	
 
 math_test_1$98:	; PushFloat x
@@ -1480,10 +1480,10 @@ math_test_1$103:	; Call 14 exp 16
 math_test_1$104:	; PostCall 14
 343:	
 
-math_test_1$105:	; GetReturnValue £temporary4671
+math_test_1$105:	; GetReturnValue £temporary4663
 345:	
 
-math_test_1$106:	; Parameter 14 £temporary4671 16
+math_test_1$106:	; Parameter 14 £temporary4663 16
 346:		fstp qword [bp + 30]
 348:	
 
@@ -1512,7 +1512,7 @@ math_test_1$111:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.
 367:	
 
 math_test_1$112:	; Parameter 14 string_2020log2825f29203D2025f2C20errno203D2025i0A# 6
-368:		mov word [bp + 20], @10217$string_2020log2825f29203D2025f2C20errno203D2025i0A#
+368:		mov word [bp + 20], @10206$string_2020log2825f29203D2025f2C20errno203D2025i0A#
 370:	
 
 math_test_1$113:	; PushFloat x
@@ -1544,10 +1544,10 @@ math_test_1$118:	; Call 14 log 16
 math_test_1$119:	; PostCall 14
 392:	
 
-math_test_1$120:	; GetReturnValue £temporary4673
+math_test_1$120:	; GetReturnValue £temporary4665
 394:	
 
-math_test_1$121:	; Parameter 14 £temporary4673 16
+math_test_1$121:	; Parameter 14 £temporary4665 16
 395:		fstp qword [bp + 30]
 397:	
 
@@ -1576,7 +1576,7 @@ math_test_1$126:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.
 416:	
 
 math_test_1$127:	; Parameter 14 string_2020log102825f29203D2025f2C20errno203D2025i0A# 6
-417:		mov word [bp + 20], @10222$string_2020log102825f29203D2025f2C20errno203D2025i0A#
+417:		mov word [bp + 20], @10211$string_2020log102825f29203D2025f2C20errno203D2025i0A#
 419:	
 
 math_test_1$128:	; PushFloat x
@@ -1608,10 +1608,10 @@ math_test_1$133:	; Call 14 log10 16
 math_test_1$134:	; PostCall 14
 441:	
 
-math_test_1$135:	; GetReturnValue £temporary4675
+math_test_1$135:	; GetReturnValue £temporary4667
 443:	
 
-math_test_1$136:	; Parameter 14 £temporary4675 16
+math_test_1$136:	; Parameter 14 £temporary4667 16
 444:		fstp qword [bp + 30]
 446:	
 
@@ -1640,7 +1640,7 @@ math_test_1$141:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.
 465:	
 
 math_test_1$142:	; Parameter 14 string_2020sinh2825f29203D2025f2C20errno203D2025i0A# 6
-466:		mov word [bp + 20], @10227$string_2020sinh2825f29203D2025f2C20errno203D2025i0A#
+466:		mov word [bp + 20], @10216$string_2020sinh2825f29203D2025f2C20errno203D2025i0A#
 468:	
 
 math_test_1$143:	; PushFloat x
@@ -1672,10 +1672,10 @@ math_test_1$148:	; Call 14 sinh 16
 math_test_1$149:	; PostCall 14
 490:	
 
-math_test_1$150:	; GetReturnValue £temporary4677
+math_test_1$150:	; GetReturnValue £temporary4669
 492:	
 
-math_test_1$151:	; Parameter 14 £temporary4677 16
+math_test_1$151:	; Parameter 14 £temporary4669 16
 493:		fstp qword [bp + 30]
 495:	
 
@@ -1704,7 +1704,7 @@ math_test_1$156:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.
 514:	
 
 math_test_1$157:	; Parameter 14 string_2020cosh2825f29203D2025f2C20errno203D2025i0A# 6
-515:		mov word [bp + 20], @10232$string_2020cosh2825f29203D2025f2C20errno203D2025i0A#
+515:		mov word [bp + 20], @10221$string_2020cosh2825f29203D2025f2C20errno203D2025i0A#
 517:	
 
 math_test_1$158:	; PushFloat x
@@ -1736,10 +1736,10 @@ math_test_1$163:	; Call 14 cosh 16
 math_test_1$164:	; PostCall 14
 539:	
 
-math_test_1$165:	; GetReturnValue £temporary4679
+math_test_1$165:	; GetReturnValue £temporary4671
 541:	
 
-math_test_1$166:	; Parameter 14 £temporary4679 16
+math_test_1$166:	; Parameter 14 £temporary4671 16
 542:		fstp qword [bp + 30]
 544:	
 
@@ -1768,7 +1768,7 @@ math_test_1$171:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.
 563:	
 
 math_test_1$172:	; Parameter 14 string_2020tanh2825f29203D2025f2C20errno203D2025i0A# 6
-564:		mov word [bp + 20], @10237$string_2020tanh2825f29203D2025f2C20errno203D2025i0A#
+564:		mov word [bp + 20], @10226$string_2020tanh2825f29203D2025f2C20errno203D2025i0A#
 566:	
 
 math_test_1$173:	; PushFloat x
@@ -1800,10 +1800,10 @@ math_test_1$178:	; Call 14 tanh 16
 math_test_1$179:	; PostCall 14
 588:	
 
-math_test_1$180:	; GetReturnValue £temporary4681
+math_test_1$180:	; GetReturnValue £temporary4673
 590:	
 
-math_test_1$181:	; Parameter 14 £temporary4681 16
+math_test_1$181:	; Parameter 14 £temporary4673 16
 591:		fstp qword [bp + 30]
 593:	
 
@@ -1832,7 +1832,7 @@ math_test_1$186:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.
 612:	
 
 math_test_1$187:	; Parameter 14 string_2020sqrt2825f29203D2025f2C20errno203D2025i0A# 6
-613:		mov word [bp + 20], @10242$string_2020sqrt2825f29203D2025f2C20errno203D2025i0A#
+613:		mov word [bp + 20], @10231$string_2020sqrt2825f29203D2025f2C20errno203D2025i0A#
 615:	
 
 math_test_1$188:	; PushFloat x
@@ -1864,10 +1864,10 @@ math_test_1$193:	; Call 14 sqrt 16
 math_test_1$194:	; PostCall 14
 637:	
 
-math_test_1$195:	; GetReturnValue £temporary4683
+math_test_1$195:	; GetReturnValue £temporary4675
 639:	
 
-math_test_1$196:	; Parameter 14 £temporary4683 16
+math_test_1$196:	; Parameter 14 £temporary4675 16
 640:		fstp qword [bp + 30]
 642:	
 
@@ -1896,7 +1896,7 @@ math_test_1$201:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.
 661:	
 
 math_test_1$202:	; Parameter 14 string_2020floor2825f29203D2025f2C20errno203D2025i0A# 6
-662:		mov word [bp + 20], @10247$string_2020floor2825f29203D2025f2C20errno203D2025i0A#
+662:		mov word [bp + 20], @10236$string_2020floor2825f29203D2025f2C20errno203D2025i0A#
 664:	
 
 math_test_1$203:	; PushFloat x
@@ -1928,10 +1928,10 @@ math_test_1$208:	; Call 14 floor 16
 math_test_1$209:	; PostCall 14
 686:	
 
-math_test_1$210:	; GetReturnValue £temporary4685
+math_test_1$210:	; GetReturnValue £temporary4677
 688:	
 
-math_test_1$211:	; Parameter 14 £temporary4685 16
+math_test_1$211:	; Parameter 14 £temporary4677 16
 689:		fstp qword [bp + 30]
 691:	
 
@@ -1960,7 +1960,7 @@ math_test_1$216:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.
 710:	
 
 math_test_1$217:	; Parameter 14 string_2020ceil2825f29203D2025f2C20errno203D2025i0A# 6
-711:		mov word [bp + 20], @10252$string_2020ceil2825f29203D2025f2C20errno203D2025i0A#
+711:		mov word [bp + 20], @10241$string_2020ceil2825f29203D2025f2C20errno203D2025i0A#
 713:	
 
 math_test_1$218:	; PushFloat x
@@ -1992,10 +1992,10 @@ math_test_1$223:	; Call 14 ceil 16
 math_test_1$224:	; PostCall 14
 735:	
 
-math_test_1$225:	; GetReturnValue £temporary4687
+math_test_1$225:	; GetReturnValue £temporary4679
 737:	
 
-math_test_1$226:	; Parameter 14 £temporary4687 16
+math_test_1$226:	; Parameter 14 £temporary4679 16
 738:		fstp qword [bp + 30]
 740:	
 
@@ -2024,7 +2024,7 @@ math_test_1$231:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.
 759:	
 
 math_test_1$232:	; Parameter 14 string_2020fabs2825f29203D2025f2C20errno203D2025i0A# 6
-760:		mov word [bp + 20], @10257$string_2020fabs2825f29203D2025f2C20errno203D2025i0A#
+760:		mov word [bp + 20], @10246$string_2020fabs2825f29203D2025f2C20errno203D2025i0A#
 762:	
 
 math_test_1$233:	; PushFloat x
@@ -2056,10 +2056,10 @@ math_test_1$238:	; Call 14 fabs 16
 math_test_1$239:	; PostCall 14
 784:	
 
-math_test_1$240:	; GetReturnValue £temporary4689
+math_test_1$240:	; GetReturnValue £temporary4681
 786:	
 
-math_test_1$241:	; Parameter 14 £temporary4689 16
+math_test_1$241:	; Parameter 14 £temporary4681 16
 787:		fstp qword [bp + 30]
 789:	
 
@@ -2099,12 +2099,12 @@ math_test_1$249:	; Parameter 16 x 6
 815:		fstp qword [bp + 22]
 817:	
 
-math_test_1$250:	; address £temporary4691 j
+math_test_1$250:	; address £temporary4683 j
 818:		mov si, bp
 819:		add si, 14
 821:	
 
-math_test_1$251:	; Parameter 16 £temporary4691 14
+math_test_1$251:	; Parameter 16 £temporary4683 14
 822:		mov [bp + 30], si
 824:	
 
@@ -2118,7 +2118,7 @@ math_test_1$252:	; Call 16 frexp 0
 math_test_1$253:	; PostCall 16
 832:	
 
-math_test_1$254:	; GetReturnValue £temporary4692
+math_test_1$254:	; GetReturnValue £temporary4684
 834:	
 
 math_test_1$255:	; PopFloat z
@@ -2129,7 +2129,7 @@ math_test_1$256:	; CallHeader 24 System.Collections.Generic.HashSet`1[CCompiler.
 839:	
 
 math_test_1$257:	; Parameter 24 string_frexp202825f2C20p29203D202825f2C2025i292C20errno203D2025i0A# 6
-840:		mov word [bp + 30], @10268$string_frexp202825f2C20p29203D202825f2C2025i292C20errno203D2025i0A#
+840:		mov word [bp + 30], @10257$string_frexp202825f2C20p29203D202825f2C2025i292C20errno203D2025i0A#
 842:	
 
 math_test_1$258:	; PushFloat x
@@ -2179,7 +2179,7 @@ math_test_1$267:	; CallHeader 24 System.Collections.Generic.HashSet`1[CCompiler.
 878:	
 
 math_test_1$268:	; Parameter 24 string_Error20message3A# 6
-879:		mov word [bp + 30], @10273$string_Error20message3A#
+879:		mov word [bp + 30], @10262$string_Error20message3A#
 881:	
 
 math_test_1$269:	; Call 24 perror 0
@@ -2215,12 +2215,12 @@ math_test_1$276:	; Parameter 22 x 6
 904:		fstp qword [bp + 28]
 906:	
 
-math_test_1$277:	; address £temporary4696 w
+math_test_1$277:	; address £temporary4688 w
 907:		mov si, bp
 908:		add si, 14
 910:	
 
-math_test_1$278:	; Parameter 22 £temporary4696 14
+math_test_1$278:	; Parameter 22 £temporary4688 14
 911:		mov [bp + 36], si
 913:	
 
@@ -2234,7 +2234,7 @@ math_test_1$279:	; Call 22 modf 0
 math_test_1$280:	; PostCall 22
 921:	
 
-math_test_1$281:	; GetReturnValue £temporary4697
+math_test_1$281:	; GetReturnValue £temporary4689
 923:	
 
 math_test_1$282:	; PopFloat z
@@ -2245,7 +2245,7 @@ math_test_1$283:	; CallHeader 30 System.Collections.Generic.HashSet`1[CCompiler.
 928:	
 
 math_test_1$284:	; Parameter 30 string_modf202825f2C20p29203D202825f2C2025f292C20errno203D2025i0A# 6
-929:		mov word [bp + 36], @10283$string_modf202825f2C20p29203D202825f2C2025f292C20errno203D2025i0A#
+929:		mov word [bp + 36], @10272$string_modf202825f2C20p29203D202825f2C2025f292C20errno203D2025i0A#
 931:	
 
 math_test_1$285:	; PushFloat x
@@ -2298,7 +2298,7 @@ math_test_1$295:	; CallHeader 30 System.Collections.Generic.HashSet`1[CCompiler.
 969:	
 
 math_test_1$296:	; Parameter 30 string_Error20message3A# 6
-970:		mov word [bp + 36], @10288$string_Error20message3A#
+970:		mov word [bp + 36], @10277$string_Error20message3A#
 972:	
 
 math_test_1$297:	; Call 30 perror 0
@@ -2319,7 +2319,7 @@ math_test_1$300:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.
 985:	
 
 math_test_1$301:	; Parameter 14 string_0A# 6
-986:		mov word [bp + 20], @10292$string_0A#
+986:		mov word [bp + 20], @10281$string_0A#
 988:	
 
 math_test_1$302:	; Call 14 printf 0
@@ -2347,7 +2347,7 @@ math_test_2:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symb
 3:	
 
 math_test_2$1:	; Parameter 22 string_fmod2825f2C2025f29203D2025f2C20errno203D2025i0A# 6
-4:		mov word [bp + 28], @10396$string_fmod2825f2C2025f29203D2025f2C20errno203D2025i0A#
+4:		mov word [bp + 28], @10385$string_fmod2825f2C2025f29203D2025f2C20errno203D2025i0A#
 6:	
 
 math_test_2$2:	; PushFloat x
@@ -2395,10 +2395,10 @@ math_test_2$11:	; Call 22 fmod 24
 math_test_2$12:	; PostCall 22
 40:	
 
-math_test_2$13:	; GetReturnValue £temporary4803
+math_test_2$13:	; GetReturnValue £temporary4795
 42:	
 
-math_test_2$14:	; Parameter 22 £temporary4803 24
+math_test_2$14:	; Parameter 22 £temporary4795 24
 43:		fstp qword [bp + 46]
 45:	
 
@@ -2427,7 +2427,7 @@ math_test_2$19:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.S
 64:	
 
 math_test_2$20:	; Parameter 22 string_atan22825f2C2025f29203D2025f2C20errno203D2025i0A# 6
-65:		mov word [bp + 28], @10401$string_atan22825f2C2025f29203D2025f2C20errno203D2025i0A#
+65:		mov word [bp + 28], @10390$string_atan22825f2C2025f29203D2025f2C20errno203D2025i0A#
 67:	
 
 math_test_2$21:	; PushFloat x
@@ -2475,10 +2475,10 @@ math_test_2$30:	; Call 22 atan2 24
 math_test_2$31:	; PostCall 22
 101:	
 
-math_test_2$32:	; GetReturnValue £temporary4805
+math_test_2$32:	; GetReturnValue £temporary4797
 103:	
 
-math_test_2$33:	; Parameter 22 £temporary4805 24
+math_test_2$33:	; Parameter 22 £temporary4797 24
 104:		fstp qword [bp + 46]
 106:	
 
@@ -2507,7 +2507,7 @@ math_test_2$38:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.S
 125:	
 
 math_test_2$39:	; Parameter 22 string_pow2825f2C2025f29203D2025f2C20errno203D2025i0A# 6
-126:		mov word [bp + 28], @10406$string_pow2825f2C2025f29203D2025f2C20errno203D2025i0A#
+126:		mov word [bp + 28], @10395$string_pow2825f2C2025f29203D2025f2C20errno203D2025i0A#
 128:	
 
 math_test_2$40:	; PushFloat x
@@ -2555,10 +2555,10 @@ math_test_2$49:	; Call 22 pow 24
 math_test_2$50:	; PostCall 22
 162:	
 
-math_test_2$51:	; GetReturnValue £temporary4807
+math_test_2$51:	; GetReturnValue £temporary4799
 164:	
 
-math_test_2$52:	; Parameter 22 £temporary4807 24
+math_test_2$52:	; Parameter 22 £temporary4799 24
 165:		fstp qword [bp + 46]
 167:	
 
@@ -2587,7 +2587,7 @@ math_test_2$57:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.S
 186:	
 
 math_test_2$58:	; Parameter 22 string_0A# 6
-187:		mov word [bp + 28], @10411$string_0A#
+187:		mov word [bp + 28], @10400$string_0A#
 189:	
 
 math_test_2$59:	; Call 22 printf 0
@@ -2605,7 +2605,7 @@ math_test_2$61:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.S
 200:	
 
 math_test_2$62:	; Parameter 22 string_ldexp2825f2C2025i29203D2025f0A0A# 6
-201:		mov word [bp + 28], @10413$string_ldexp2825f2C2025i29203D2025f0A0A#
+201:		mov word [bp + 28], @10402$string_ldexp2825f2C2025i29203D2025f0A0A#
 203:	
 
 math_test_2$63:	; PushFloat x
@@ -2620,12 +2620,12 @@ math_test_2$65:	; PushFloat y
 210:		fld qword [bp + 14]
 212:	
 
-math_test_2$66:	; FloatingToIntegral £temporary4810 y
+math_test_2$66:	; FloatingToIntegral £temporary4802 y
 213:		fistp word [container2bytes#]
 214:		mov ax, [container2bytes#]
 216:	
 
-math_test_2$67:	; Parameter 22 £temporary4810 16
+math_test_2$67:	; Parameter 22 £temporary4802 16
 217:		mov [bp + 38], ax
 219:	
 
@@ -2644,12 +2644,12 @@ math_test_2$71:	; PushFloat y
 228:		fld qword [bp + 14]
 230:	
 
-math_test_2$72:	; FloatingToIntegral £temporary4811 y
+math_test_2$72:	; FloatingToIntegral £temporary4803 y
 231:		fistp word [container2bytes#]
 232:		mov ax, [container2bytes#]
 234:	
 
-math_test_2$73:	; Parameter 22 £temporary4811 32
+math_test_2$73:	; Parameter 22 £temporary4803 32
 235:		mov [bp + 54], ax
 237:	
 
@@ -2663,10 +2663,10 @@ math_test_2$74:	; Call 22 ldexp 18
 math_test_2$75:	; PostCall 22
 245:	
 
-math_test_2$76:	; GetReturnValue £temporary4812
+math_test_2$76:	; GetReturnValue £temporary4804
 247:	
 
-math_test_2$77:	; Parameter 22 £temporary4812 18
+math_test_2$77:	; Parameter 22 £temporary4804 18
 248:		fstp qword [bp + 40]
 250:	
 
