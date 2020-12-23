@@ -355,7 +355,7 @@ char * upperCase ;
 char ** messageList ;
 };
 
-extern char * enMessageList [];
+
 extern char * setlocale ( int flag , char * name ) ;
 extern struct lconv * localeconv ( void ) ;
 
@@ -545,14 +545,20 @@ for ( index = 0 ; string [ index ] != '\0' ; ++ index ) {
 return index ;
 }
 
-extern char * enMessageList [];
+
 
 char * strerror ( int errno ) {
 struct lconv * localeConvPtr = localeconv ( ) ;
-char ** messageList = ( localeConvPtr != ( ( void * ) 0 ) )
-? localeConvPtr -> messageList : ( ( void * ) 0 ) ;
-messageList = ( messageList != ( ( void * ) 0 ) ) ? messageList : enMessageList ;
+
+if ( localeConvPtr != ( ( void * ) 0 ) ) {
+char ** messageList = localeConvPtr -> messageList ;
+
+if ( messageList != ( ( void * ) 0 ) ) {
 return messageList [ errno ];
+}
+}
+
+return ( ( void * ) 0 ) ;
 }
 
 char * token = ( ( void * ) 0 ) ;

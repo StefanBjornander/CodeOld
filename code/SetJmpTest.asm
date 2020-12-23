@@ -69,12 +69,12 @@ section .text
 	mov qword [rbp + 64], @10732$string_25lf#
 
  @10728$main$6:
-	; Address £temporary3619 x
+	; Address £temporary3617 x
 	mov rsi, rbp
 	add rsi, 32
 
  @10728$main$7:
-	; Parameter 72 pointer £temporary3619
+	; Parameter 72 pointer £temporary3617
 	mov [rbp + 72], rsi
 
  @10728$main$8:
@@ -107,15 +107,15 @@ section .text
 	; PostCall 40
 
  @10728$main$14:
-	; GetReturnValue £temporary3621
+	; GetReturnValue £temporary3619
 
  @10728$main$15:
-	; IntegralToIntegral £temporary3622 £temporary3621
+	; IntegralToIntegral £temporary3620 £temporary3619
 	mov rax, 4294967295
 	and rbx, rax
 
  @10728$main$16:
-	; Assign message £temporary3622
+	; Assign message £temporary3620
 	mov [rbp + 24], rbx
 
  @10728$main$17:
@@ -160,10 +160,10 @@ section .text
 	; PostCall 80
 
  @10728$main$27:
-	; GetReturnValue £temporary3624
+	; GetReturnValue £temporary3622
 
  @10728$main$28:
-	; Parameter 80 double £temporary3624
+	; Parameter 80 double £temporary3622
 	fstp qword [rbp + 80]
 
  @10728$main$29:
@@ -248,13 +248,13 @@ section .text
 	; PostCall 32
 
  inverse$7:
-	; GetReturnValue £temporary3631
+	; GetReturnValue £temporary3629
 
  inverse$8:
 	; SetReturnValue
 
  inverse$9:
-	; Return £temporary3631
+	; Return £temporary3629
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -295,14 +295,14 @@ section .text
 	fld qword [rbp + 32]
 
  divide$5:
-	; SignedDivide £temporary3635 x y
+	; SignedDivide £temporary3633 x y
 	fdiv
 
  divide$6:
 	; SetReturnValue
 
  divide$7:
-	; Return £temporary3635
+	; Return £temporary3633
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -378,15 +378,15 @@ section .text
 	; PostCall 40
 
  test$4:
-	; GetReturnValue £temporary3637
+	; GetReturnValue £temporary3635
 
  test$5:
-	; IntegralToIntegral £temporary3638 £temporary3637
+	; IntegralToIntegral £temporary3636 £temporary3635
 	mov rax, 4294967295
 	and rbx, rax
 
  test$6:
-	; Assign message £temporary3638
+	; Assign message £temporary3636
 	mov [rbp + 32], rbx
 
  test$7:
@@ -431,10 +431,10 @@ section .text
 	; PostCall 80
 
  test$17:
-	; GetReturnValue £temporary3640
+	; GetReturnValue £temporary3638
 
  test$18:
-	; Parameter 80 double £temporary3640
+	; Parameter 80 double £temporary3638
 	fstp qword [rbp + 80]
 
  test$19:

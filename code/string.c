@@ -185,17 +185,23 @@ size_t strlen(const char* string) {
   return index;
 }
 
-extern char* enMessageList[];
+//extern char* enMessageList[];
 
 char* strerror(int errno) {
   struct lconv* localeConvPtr = localeconv();
-  char** messageList = (localeConvPtr != NULL)
-                       ? localeConvPtr->messageList : NULL;
-  messageList = (messageList != NULL) ? messageList : enMessageList;
-  return messageList[errno];
+
+  if (localeConvPtr != NULL) {
+    char** messageList = localeConvPtr->messageList;
+
+    if (messageList != NULL) {
+      return messageList[errno];
+    }
+  }
+
+  return NULL;
 }
 
-char* token = NULL;
+static char* token = NULL;
 
 char* strtok(char* string, const char* charSet) {
   int index;

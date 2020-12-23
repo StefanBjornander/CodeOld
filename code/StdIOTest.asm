@@ -618,12 +618,12 @@ section .text
 	mov dword [rbp + 24], 0
 
  stdio_test$1:
-	; Address £temporary4245 n
+	; Address £temporary4243 n
 	mov rsi, rbp
 	add rsi, 24
 
  stdio_test$2:
-	; Assign p £temporary4245
+	; Assign p £temporary4243
 	mov [rbp + 28], rsi
 
  stdio_test$3:
@@ -2053,30 +2053,30 @@ section .text
 	mov qword [rbp + 68], @12780$string_25i20252Ai2025i2025n#
 
  stdio_test$338:
-	; Address £temporary4275 a
+	; Address £temporary4273 a
 	mov rsi, rbp
 	add rsi, 24
 
  stdio_test$339:
-	; Parameter 76 pointer £temporary4275
+	; Parameter 76 pointer £temporary4273
 	mov [rbp + 76], rsi
 
  stdio_test$340:
-	; Address £temporary4276 b
+	; Address £temporary4274 b
 	mov rsi, rbp
 	add rsi, 28
 
  stdio_test$341:
-	; Parameter 84 pointer £temporary4276
+	; Parameter 84 pointer £temporary4274
 	mov [rbp + 84], rsi
 
  stdio_test$342:
-	; Address £temporary4277 n
+	; Address £temporary4275 n
 	mov rsi, rbp
 	add rsi, 32
 
  stdio_test$343:
-	; Parameter 92 pointer £temporary4277
+	; Parameter 92 pointer £temporary4275
 	mov [rbp + 92], rsi
 
  stdio_test$344:

@@ -336,7 +336,7 @@ char * upperCase ;
 char ** messageList ;
 };
 
-extern char * enMessageList [];
+
 extern char * setlocale ( int flag , char * name ) ;
 extern struct lconv * localeconv ( void ) ;
 
