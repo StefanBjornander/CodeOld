@@ -1,13 +1,13 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
+   
+   
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+   
+   
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-
-
-
-
-
+    
+    
 
 
 
@@ -42,12 +42,13 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
+  
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
+   
+   
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -63,44 +64,47 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
+   
+   
+
+     
+                         
+                    
+               
+      
+
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+   
+   
 
+          
+    
+    
+    
+    
 
-
-
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
+   
+   
 
+    
+    
 
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-
-
-
-
-
-
-
-
+    
+    
 
 typedef struct {
 int open ;
@@ -117,7 +121,7 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-
+          
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -149,30 +153,32 @@ int feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-
-
-
-
-
+    
+    
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
+    
+    
 
-
-
-
-
-
-
+    
 
 int scanf ( const char * format , ... ) ;
 int vscanf ( const char * format , char * arg_list ) ;
@@ -181,15 +187,16 @@ int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
 int vsscanf ( char * inString , const char * format , char * arg_list ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-
-
-
-
-
+    
+    
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -205,18 +212,20 @@ int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
 int vsprintf ( char * outString , const char * format , char * arg_list ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+       
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Temp.c,0$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\string.h,0$
+   
+   
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Temp.c,1$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\string.h,1$
-
-
-
-
+    
 
 extern char * strcpy ( char * target , const char * source ) ;
 extern char * strncpy ( char * target , const char * source , int size ) ;
@@ -239,79 +248,81 @@ extern int memcmp ( const void * left , const void * right , int size ) ;
 extern void * memchr ( const void * block , int i , int size ) ;
 extern void * memset ( void * block , int i , int size ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Temp.c,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
+   
+   
+
+    
+    
+
+    
+    
+
+  
+  
+   
+       
+  
+     
+  
+  
+
+          
+
+        
+        
+        
+
+          
+
+        
+              
+                  
+       
+       
+        
+             
+                 
+           
+       
+               
+          
+            
+     
+        
+      
+        
+          
+                 
+                  
+             
+       
+       
+           
+            
+       
+       
+       
+        
+
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Temp.c,2$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Temp.c,3$
+       
 
 static char g_tempArray [ 16 ][ 4 ];
 static int g_tempSize = 0 ;
 
+                        
 
+    
+    
 
-
-
-
-
+    
 
 static int existsTempName ( char * name ) {
 int index ;
@@ -328,9 +339,9 @@ static char * generateTempName ( char name [ 4 ] , int size , int status ) {
 if ( size < ( 4 - 1 ) ) {
 char c ;
 
-for ( c = '\141' ; c <= '\172' ; ++ c ) {
+for ( c = 'a' ; c <= 'z' ; ++ c ) {
 name [ size ] = c ;
-name [ size + 1 ] = '\000' ;
+name [ size + 1 ] = '\0' ;
 
 if ( ! fileexists ( name ) ) {
 switch ( status ) {
@@ -362,7 +373,7 @@ FILE * tmpfile ( void ) {
 FILE * stream ;
 char name [ 4 ];
 
-if ( generateTempName ( name , 0 , 0 ) && ( ( stream = fopen ( name , "\167" ) ) != ( ( void * ) 0 ) ) ) {
+if ( generateTempName ( name , 0 , 0 ) && ( ( stream = fopen ( name , "w" ) ) != ( ( void * ) 0 ) ) ) {
 
 stream -> temporary = 1 ;
 return stream ;
@@ -378,7 +389,6 @@ return generateTempName ( name , 0 , 1 ) ;
 
 return ( ( void * ) 0 ) ;
 }
-
 
 
 
