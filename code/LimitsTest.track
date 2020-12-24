@@ -4,7 +4,7 @@ limits_test:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbo
 3:	
 
 limits_test$1:	; Parameter 6 string_CHAR_BIT203D2025i0A# 6
-4:		mov word [bp + 12], @9340$string_CHAR_BIT203D2025i0A#
+4:		mov word [bp + 12], @9332$string_CHAR_BIT203D2025i0A#
 6:	
 
 limits_test$2:	; Parameter 6 8 8
@@ -27,7 +27,7 @@ limits_test$5:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sym
 21:	
 
 limits_test$6:	; Parameter 6 string_CHAR_MIN203D2025i0A0A# 6
-22:		mov word [bp + 12], @9343$string_CHAR_MIN203D2025i0A0A#
+22:		mov word [bp + 12], @9335$string_CHAR_MIN203D2025i0A0A#
 24:	
 
 limits_test$7:	; Parameter 6 -128 8
@@ -50,7 +50,7 @@ limits_test$10:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 39:	
 
 limits_test$11:	; Parameter 6 string_CHAR_MAX203D2025i0A# 6
-40:		mov word [bp + 12], @9347$string_CHAR_MAX203D2025i0A#
+40:		mov word [bp + 12], @9339$string_CHAR_MAX203D2025i0A#
 42:	
 
 limits_test$12:	; Parameter 6 127 8
@@ -73,7 +73,7 @@ limits_test$15:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 57:	
 
 limits_test$16:	; Parameter 6 string_UCHAR_MAX203D2025u0A0A# 6
-58:		mov word [bp + 12], @9351$string_UCHAR_MAX203D2025u0A0A#
+58:		mov word [bp + 12], @9343$string_UCHAR_MAX203D2025u0A0A#
 60:	
 
 limits_test$17:	; Parameter 6 255 8
@@ -96,7 +96,7 @@ limits_test$20:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 75:	
 
 limits_test$21:	; Parameter 6 string_SHRT_MIN203D2025i0A# 6
-76:		mov word [bp + 12], @9355$string_SHRT_MIN203D2025i0A#
+76:		mov word [bp + 12], @9347$string_SHRT_MIN203D2025i0A#
 78:	
 
 limits_test$22:	; Parameter 6 -128 8
@@ -119,7 +119,7 @@ limits_test$25:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 93:	
 
 limits_test$26:	; Parameter 6 string_SHRT_MAX203D2025i0A# 6
-94:		mov word [bp + 12], @9359$string_SHRT_MAX203D2025i0A#
+94:		mov word [bp + 12], @9351$string_SHRT_MAX203D2025i0A#
 96:	
 
 limits_test$27:	; Parameter 6 127 8
@@ -142,7 +142,7 @@ limits_test$30:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 111:	
 
 limits_test$31:	; Parameter 6 string_USHRT_MAX203D2025u0A0A# 6
-112:		mov word [bp + 12], @9363$string_USHRT_MAX203D2025u0A0A#
+112:		mov word [bp + 12], @9355$string_USHRT_MAX203D2025u0A0A#
 114:	
 
 limits_test$32:	; Parameter 6 255 8
@@ -165,7 +165,7 @@ limits_test$35:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 129:	
 
 limits_test$36:	; Parameter 6 string_INT_MIN203D2025i0A# 6
-130:		mov word [bp + 12], @9367$string_INT_MIN203D2025i0A#
+130:		mov word [bp + 12], @9359$string_INT_MIN203D2025i0A#
 132:	
 
 limits_test$37:	; Parameter 6 -32768 8
@@ -188,7 +188,7 @@ limits_test$40:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 147:	
 
 limits_test$41:	; Parameter 6 string_INT_MAX203D2025i0A# 6
-148:		mov word [bp + 12], @9370$string_INT_MAX203D2025i0A#
+148:		mov word [bp + 12], @9362$string_INT_MAX203D2025i0A#
 150:	
 
 limits_test$42:	; Parameter 6 32767 8
@@ -211,7 +211,7 @@ limits_test$45:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 165:	
 
 limits_test$46:	; Parameter 6 string_UINT_MAX203D2025u0A0A# 6
-166:		mov word [bp + 12], @9373$string_UINT_MAX203D2025u0A0A#
+166:		mov word [bp + 12], @9365$string_UINT_MAX203D2025u0A0A#
 168:	
 
 limits_test$47:	; Parameter 6 65535 8
@@ -234,7 +234,7 @@ limits_test$50:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 183:	
 
 limits_test$51:	; Parameter 6 string_LONG_MIN203D2025li0A# 6
-184:		mov word [bp + 12], @9376$string_LONG_MIN203D2025li0A#
+184:		mov word [bp + 12], @9368$string_LONG_MIN203D2025li0A#
 186:	
 
 limits_test$52:	; Parameter 6 -2147483648 8
@@ -257,7 +257,7 @@ limits_test$55:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 201:	
 
 limits_test$56:	; Parameter 6 string_LONG_MAX203D2025li0A# 6
-202:		mov word [bp + 12], @9379$string_LONG_MAX203D2025li0A#
+202:		mov word [bp + 12], @9371$string_LONG_MAX203D2025li0A#
 204:	
 
 limits_test$57:	; Parameter 6 2147483647 8
@@ -280,7 +280,7 @@ limits_test$60:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 219:	
 
 limits_test$61:	; Parameter 6 string_ULONG_MAX203D2025lu0A# 6
-220:		mov word [bp + 12], @9382$string_ULONG_MAX203D2025lu0A#
+220:		mov word [bp + 12], @9374$string_ULONG_MAX203D2025lu0A#
 222:	
 
 limits_test$62:	; Parameter 6 4294967295 8
@@ -303,7 +303,7 @@ limits_test$65:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 237:	
 
 limits_test$66:	; Parameter 6 string_ULONG_MAX203D2025lx0A# 6
-238:		mov word [bp + 12], @9385$string_ULONG_MAX203D2025lx0A#
+238:		mov word [bp + 12], @9377$string_ULONG_MAX203D2025lx0A#
 240:	
 
 limits_test$67:	; Parameter 6 4294967295 8
@@ -326,7 +326,7 @@ limits_test$70:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Sy
 255:	
 
 limits_test$71:	; Parameter 6 string_ULONG_MAX203D2025lX0A# 6
-256:		mov word [bp + 12], @9388$string_ULONG_MAX203D2025lX0A#
+256:		mov word [bp + 12], @9380$string_ULONG_MAX203D2025lX0A#
 258:	
 
 limits_test$72:	; Parameter 6 4294967295 8
@@ -346,10 +346,10 @@ limits_test$74:	; PostCall 6
 271:	
 
 limits_test$75:	; Return 0
-272:		mov t2618, [bp]
+272:		mov t2616, [bp]
 273:		mov di, [bp + 4]
 274:		mov bp, [bp + 2]
-275:		jmp t2618
+275:		jmp t2616
 277:	
 
 limits_test$76:	; FunctionEnd limits_test

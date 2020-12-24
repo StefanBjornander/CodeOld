@@ -1,9 +1,9 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
 
-    
-    
+
+
+
+
 
 
 
@@ -38,13 +38,12 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.c,0$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
-   
-   
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.c,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
+
+
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -60,117 +59,112 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.c,1$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
-   
-   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.c,2$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
 
-    
-    
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
 
 
 
 
-       
-       
-       
 
-          
-          
-           
 
-       
-           
-          
 
-       
-       
-       
 
-       
-       
-       
 
-       
-       
-       
-          
 
-       
-       
-       
-       
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
-   
-   
 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
 
-     
-                         
-                    
-               
-      
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
 
-          
-    
-    
-    
-    
 
-  
+
+
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
 
-    
-    
 
-    
-    
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
+
+
+
+
+
+
+
+
 
 typedef struct {
 int open ;
@@ -187,7 +181,7 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-          
+
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -219,32 +213,30 @@ int feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
-   
-   
 
-    
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
+
+
+
+
+
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
-   
-   
 
-    
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
 
-    
+
+
+
+
+
+
 
 int scanf ( const char * format , ... ) ;
 int vscanf ( const char * format , char * arg_list ) ;
@@ -253,16 +245,15 @@ int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
 int vsscanf ( char * inString , const char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
-   
-   
 
-    
-    
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
+
+
+
+
+
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -278,49 +269,45 @@ int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
 int vsprintf ( char * outString , const char * format , char * arg_list ) ;
 
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-       
 
-  
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.c,2$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
-   
-   
 
-          
-    
-    
-    
-    
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.c,3$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
 
-     
-                         
-                    
-               
-      
 
-  
+
+
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.c,4$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
 
-    
-          
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.c,5$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
+
+
+
+
+
 
 double atof ( const char * s ) ;
 int atoi ( const char * s ) ;
@@ -342,8 +329,8 @@ void exit ( int status ) ;
 typedef void ( * FUNC_PTR ) ( void ) ;
 int atexit ( FUNC_PTR fcn ) ;
 
-    
-    
+
+
 
 int abs ( int value ) ;
 long labs ( long value ) ;
@@ -373,66 +360,63 @@ long quot , rem ;
 } ldiv_t ;
 
 ldiv_t ldiv ( long num , long denum ) ;
-  
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.c,5$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
-   
-   
-
-    
-    
-
-    
-
-          
-           
-              
-               
-              
-               
-
-  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.c,6$
-       
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
-   
-   
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
 
-    
-    
 
-     
-    
 
-          
-          
-      
 
-          
-           
-              
-               
-              
-               
 
-  
+
+
+
+
+
+
+
+
+
+
+
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.c,7$
-       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
 
-    
-    
-    
 
-                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.c,8$
+
+
+
+
+
+
 
 int g_outStatus , g_outChars ;
 void * g_outDevice ;
 
-    
+
 
 void printChar ( char c ) ;
 void printString ( const char * s , int precision ) ;
@@ -479,22 +463,22 @@ switch ( g_outStatus ) {
 case 0 : {
 FILE * stream = ( FILE * ) g_outDevice ;
 
-   
- register_ah = 0x40s ;
+
+register_ah = 0x40s ;
 register_bx = stream -> handle ;
 register_cx = 1 ;
 register_dx = & c ;
 interrupt ( 0x21s ) ;
-  
 
-   
-    
-         
-        
-   
-   
-  
- ++ g_outChars ;
+
+
+
+
+
+
+
+
+++ g_outChars ;
 break ;
 }
 
@@ -515,23 +499,23 @@ if ( s != ( ( void * ) 0 ) ) {
 int index ;
 
 if ( precision == 0 ) {
-for ( index = 0 ; s [ index ] != '\0' ; ++ index ) {
+for ( index = 0 ; s [ index ] != '\000' ; ++ index ) {
 printChar ( s [ index ] ) ;
 }
 }
 else {
-for ( index = 0 ; ( precision -- > 0 ) && ( s [ index ] != '\0' ) ; ++ index ) {
+for ( index = 0 ; ( precision -- > 0 ) && ( s [ index ] != '\000' ) ; ++ index ) {
 printChar ( s [ index ] ) ;
 }
 }
 }
 else {
-printChar ( '<' ) ;
-printChar ( 'N' ) ;
-printChar ( 'U' ) ;
-printChar ( 'L' ) ;
-printChar ( 'L' ) ;
-printChar ( '>' ) ;
+printChar ( '\074' ) ;
+printChar ( '\116' ) ;
+printChar ( '\125' ) ;
+printChar ( '\114' ) ;
+printChar ( '\114' ) ;
+printChar ( '\076' ) ;
 }
 }
 
@@ -539,24 +523,24 @@ void printLongIntRec ( long longValue ) {
 if ( longValue != 0 ) {
 int digit = ( int ) ( longValue % 10L ) ;
 printLongIntRec ( longValue / 10L ) ;
-printChar ( ( char ) ( digit + '0' ) ) ;
+printChar ( ( char ) ( digit + '\060' ) ) ;
 }
 }
 
 void printLongInt ( long longValue , int plus , int space ) {
 if ( longValue < 0L ) {
 longValue = - longValue ;
-printChar ( '-' ) ;
+printChar ( '\055' ) ;
 }
 else if ( space ) {
-printChar ( ' ' ) ;
+printChar ( '\040' ) ;
 }
 else if ( plus ) {
-printChar ( '+' ) ;
+printChar ( '\053' ) ;
 }
 
 if ( longValue == 0L ) {
-printChar ( '0' ) ;
+printChar ( '\060' ) ;
 }
 else {
 printLongIntRec ( longValue ) ;
@@ -565,13 +549,13 @@ printLongIntRec ( longValue ) ;
 
 char digitToChar ( int digit , int capital ) {
 if ( digit < 10 ) {
-return ( ( char ) ( '0' + digit ) ) ;
+return ( ( char ) ( '\060' + digit ) ) ;
 }
 else if ( capital ) {
-return ( ( char ) ( 'A' + ( digit - 10 ) ) ) ;
+return ( ( char ) ( '\101' + ( digit - 10 ) ) ) ;
 }
 else {
-return ( ( char ) ( 'a' + ( digit - 10 ) ) ) ;
+return ( ( char ) ( '\141' + ( digit - 10 ) ) ) ;
 }
 }
 
@@ -590,26 +574,26 @@ printChar ( c ) ;
 void printUnsignedLong ( unsigned long unsignedValue , int plus , int space ,
 int grid , unsigned long base , int capital ) {
 if ( plus ) {
-printChar ( '+' ) ;
+printChar ( '\053' ) ;
 }
 
 if ( space ) {
-printChar ( ' ' ) ;
+printChar ( '\040' ) ;
 }
 
 if ( grid ) {
 if ( base == 8ul ) {
-printChar ( '0' ) ;
+printChar ( '\060' ) ;
 }
 
 if ( base == 16ul ) {
-printChar ( '0' ) ;
-printChar ( capital ? 'X' : 'x' ) ;
+printChar ( '\060' ) ;
+printChar ( capital ? '\130' : '\170' ) ;
 }
 }
 
 if ( unsignedValue == 0ul ) {
-printChar ( '0' ) ;
+printChar ( '\060' ) ;
 }
 else {
 printUnsignedLongRec ( unsignedValue , base , capital ) ;
@@ -625,13 +609,13 @@ precision = 6 ;
 }
 
 if ( grid || ( precision > 0 ) ) {
-printChar ( '.' ) ;
+printChar ( '\056' ) ;
 }
 
 while ( precision -- > 0 ) {
 long double longDoubleValue10 = 10.0L * longDoubleValue ;
 int digitValue = ( int ) longDoubleValue10 ;
-printChar ( ( char ) ( digitValue + '0' ) ) ;
+printChar ( ( char ) ( digitValue + '\060' ) ) ;
 longDoubleValue = longDoubleValue10 - ( ( long double ) digitValue ) ;
 }
 }
@@ -639,7 +623,7 @@ longDoubleValue = longDoubleValue10 - ( ( long double ) digitValue ) ;
 void printLongDoublePlain ( long double longDoubleValue , int plus ,
 int space , int grid , int precision ) {
 if ( longDoubleValue < 0.0L ) {
-printChar ( '-' ) ;
+printChar ( '\055' ) ;
 longDoubleValue = - longDoubleValue ;
 plus = 0 ;
 space = 0 ;
@@ -655,14 +639,14 @@ printLongDoubleFraction ( longDoubleValue , grid , precision ) ;
 void printLongDoubleExpo ( long double value , int plus , int space ,
 int grid , int precision , int capital ) {
 if ( value == 0.0L ) {
-printChar ( '0' ) ;
+printChar ( '\060' ) ;
 printLongDoubleFraction ( 0.0L , precision , grid ) ;
-printChar ( capital ? 'E' : 'e' ) ;
-printChar ( '0' ) ;
+printChar ( capital ? '\105' : '\145' ) ;
+printChar ( '\060' ) ;
 }
 else {
 if ( value < 0.0L ) {
-printChar ( '-' ) ;
+printChar ( '\055' ) ;
 value = - value ;
 }
 
@@ -670,7 +654,7 @@ value = - value ;
 value /= pow ( 10.0 , expo ) ;
 
 printLongDoublePlain ( value , plus , space , grid , precision ) ;
-printChar ( capital ? 'E' : 'e' ) ;
+printChar ( capital ? '\105' : '\145' ) ;
 printLongInt ( expo , 1 , 0 ) ;
 }
 }
@@ -699,8 +683,8 @@ long double longDoubleValue ;
 void * ptrValue ;
 
 switch ( c ) {
-case 'i' :
-case 'd' : {
+case '\151' :
+case '\144' : {
 long longValue ;
 
 if ( shortInt ) {
@@ -726,26 +710,26 @@ printLongInt ( longValue , plus , space ) ;
 }
 break ;
 
-case 'c' :
+case '\143' :
 charValue = ( char ) ( * ( ( arg_list += sizeof ( int ) ) , ( ( int * ) ( arg_list - sizeof ( int ) ) ) ) ) ;
 arg_list = checkWidthAndPrecision ( arg_list , widthPtr , & precision ) ;
 printChar ( charValue ) ;
 break ;
 
-case 's' : {
+case '\163' : {
 char * stringValue = ( * ( ( arg_list += sizeof ( char * ) ) , ( ( char * * ) ( arg_list - sizeof ( char * ) ) ) ) ) ;
 arg_list = checkWidthAndPrecision ( arg_list , widthPtr , & precision ) ;
 printString ( stringValue , precision ) ;
 }
 break ;
 
-case 'u' :
-case 'o' :
-case 'b' :
-case 'x' :
-case 'X' : {
-unsigned long base = ( ( c == 'u' ) ? 10ul : ( ( c == 'o' ) ? 8ul :
-( ( c == 'b' ) ? 2ul : 16ul ) ) ) ;
+case '\165' :
+case '\157' :
+case '\142' :
+case '\170' :
+case '\130' : {
+unsigned long base = ( ( c == '\165' ) ? 10ul : ( ( c == '\157' ) ? 8ul :
+( ( c == '\142' ) ? 2ul : 16ul ) ) ) ;
 unsigned long value ;
 
 if ( shortInt ) {
@@ -764,11 +748,11 @@ printUnsignedLong ( value , plus , space , grid , base , isupper ( c ) ) ;
 }
 break ;
 
-case 'f' :
-case 'e' :
-case 'E' :
-case 'g' :
-case 'G' :
+case '\146' :
+case '\145' :
+case '\105' :
+case '\147' :
+case '\107' :
 if ( longDouble ) {
 longDoubleValue = ( * ( ( arg_list += sizeof ( long double ) ) , ( ( long double * ) ( arg_list - sizeof ( long double ) ) ) ) ) ;
 printLongDoublePlain ( longDoubleValue , 0 , 0 , 0 , 3 ) ;
@@ -787,10 +771,10 @@ longDoubleValue = fabs ( longDoubleValue ) ;
 
 arg_list = checkWidthAndPrecision ( arg_list , widthPtr , & precision ) ;
 
-if ( c == 'f' ) {
+if ( c == '\146' ) {
 printLongDoublePlain ( longDoubleValue , plus , space , grid , precision ) ;
 }
-else if ( tolower ( c ) == 'e' ) {
+else if ( tolower ( c ) == '\145' ) {
 printLongDoubleExpo ( longDoubleValue , plus , space ,
 grid , precision , isupper ( c ) ) ;
 }
@@ -807,22 +791,22 @@ grid , precision , isupper ( c ) ) ;
 }
 break ;
 
-case 'p' :
+case '\160' :
 ptrValue = ( * ( ( arg_list += sizeof ( void * ) ) , ( ( void * * ) ( arg_list - sizeof ( void * ) ) ) ) ) ;
 arg_list = checkWidthAndPrecision ( arg_list , widthPtr , & precision ) ;
 printUnsignedLong ( ( void * ) ptrValue , 0 , 0 , 0 , 10u , 0 ) ;
 break ;
 
-case 'n' :
+case '\156' :
 ptrValue = ( * ( ( arg_list += sizeof ( void * ) ) , ( ( void * * ) ( arg_list - sizeof ( void * ) ) ) ) ) ;
 intPtr = ( * ( ( arg_list += sizeof ( int * ) ) , ( ( int * * ) ( arg_list - sizeof ( int * ) ) ) ) ) ;
 arg_list = checkWidthAndPrecision ( arg_list , widthPtr , & precision ) ;
 * intPtr = g_outChars ;
 break ;
 
-case '%' :
+case '\045' :
 arg_list = checkWidthAndPrecision ( arg_list , widthPtr , & precision ) ;
-printChar ( '%' ) ;
+printChar ( '\045' ) ;
 break ;
 }
 
@@ -837,36 +821,36 @@ period = 0 , precisionStar = 0 ,
 shortInt = 0 , longInt = 0 , longDouble = 0 ;
 g_outChars = 0 ;
 
-for ( index = 0 ; format [ index ] != '\0' ; ++ index ) {
+for ( index = 0 ; format [ index ] != '\000' ; ++ index ) {
 char c = format [ index ];
 
 if ( percent ) {
 switch ( c ) {
-case '+' :
+case '\053' :
 plus = 1 ;
 break ;
 
-case '-' :
+case '\055' :
 minus = 1 ;
 break ;
 
-case ' ' :
+case '\040' :
 space = 1 ;
 break ;
 
-case '0' :
+case '\060' :
 zero = 1 ;
 break ;
 
-case '#' :
+case '\043' :
 grid = 1 ;
 break ;
 
-case '.' :
+case '\056' :
 period = 1 ;
 break ;
 
-case '*' :
+case '\052' :
 if ( ! period ) {
 width = -1 ;
 }
@@ -875,35 +859,35 @@ precision = -1 ;
 }
 break ;
 
-case 'h' :
+case '\150' :
 shortInt = 1 ;
 break ;
 
-case 'l' :
+case '\154' :
 longInt = 1 ;
 break ;
 
-case 'L' :
+case '\114' :
 longDouble = 1 ;
 break ;
 
-case 'i' :
-case 'd' :
-case 'u' :
-case 'b' :
-case 'o' :
-case 'x' :
-case 'X' :
-case 'c' :
-case 's' :
-case 'f' :
-case 'e' :
-case 'E' :
-case 'g' :
-case 'G' :
-case 'p' :
-case 'n' :
-case '%' : {
+case '\151' :
+case '\144' :
+case '\165' :
+case '\142' :
+case '\157' :
+case '\170' :
+case '\130' :
+case '\143' :
+case '\163' :
+case '\146' :
+case '\145' :
+case '\105' :
+case '\147' :
+case '\107' :
+case '\160' :
+case '\156' :
+case '\045' : {
 if ( minus ) {
 int startChars = g_outChars ;
 arg_list = printArgument ( & format [ index ] , arg_list , plus , space ,
@@ -913,7 +897,7 @@ longInt , longDouble , 1 , ( ( void * ) 0 ) ) ;
 { int field = g_outChars - startChars ;
 
 while ( field ++ < width ) {
-printChar ( ' ' ) ;
+printChar ( '\040' ) ;
 }
 }
 }
@@ -931,20 +915,20 @@ g_outStatus = oldOutStatus ;
 g_outChars = startChars ;
 
 if ( negative ) {
-printChar ( '-' ) ;
+printChar ( '\055' ) ;
 ++ field ;
 }
 else if ( plus ) {
-printChar ( '+' ) ;
+printChar ( '\053' ) ;
 ++ field ;
 }
 else if ( space ) {
-printChar ( ' ' ) ;
+printChar ( '\040' ) ;
 ++ field ;
 }
 
 while ( field ++ < width ) {
-printChar ( '0' ) ;
+printChar ( '\060' ) ;
 }
 
 arg_list = printArgument ( & format [ index ] , arg_list , 0 , 0 ,
@@ -965,7 +949,7 @@ g_outStatus = oldOutStatus ;
 g_outChars = startChars ;
 
 while ( field ++ < width ) {
-printChar ( ' ' ) ;
+printChar ( '\040' ) ;
 }
 
 arg_list = printArgument ( & format [ index ] , arg_list , plus , space ,
@@ -981,7 +965,7 @@ break ;
 default : {
 int value = 0 ;
 while ( isdigit ( c ) ) {
-value = ( 10 * value ) + ( c - '0' ) ;
+value = ( 10 * value ) + ( c - '\060' ) ;
 c = format [++ index ];
 }
 -- index ;
@@ -997,7 +981,7 @@ break ;
 }
 }
 else {
-if ( c == '%' ) {
+if ( c == '\045' ) {
 percent = 1 ;
 plus = 0 ;
 minus = 0 ;
@@ -1021,7 +1005,7 @@ printChar ( c ) ;
 
 if ( g_outStatus == 1 ) {
 char * outString = ( char * ) g_outDevice ;
-outString [ g_outChars ] = '\0' ;
+outString [ g_outChars ] = '\000' ;
 }
 
 return g_outChars ;
@@ -1060,3 +1044,4 @@ g_outStatus = 1 ;
 g_outDevice = ( void * ) outString ;
 return printFormat ( format , arg_list ) ;
 }
+
