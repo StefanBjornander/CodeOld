@@ -212,7 +212,6 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
   const int leapDays = (tp->tm_year - 69) / 4;
   const long totalDays = 365 * (tp->tm_year - 70) + leapDays + tp->tm_yday;
   int yearDaySunday, yearDayMonday;
-  strcpy(s, "");
 
   if ((localeConvPtr != NULL) && (localeConvPtr->shortDayList != NULL)) {
     shortDayList = localeConvPtr->shortDayList;
@@ -221,25 +220,11 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
     shortDayList = g_shortDayList;
   }
 
-  if ((localeConvPtr != NULL) && (localeConvPtr->longDayList != NULL)) {
-    longDayList = localeConvPtr->longDayList;
-  }
-  else {
-    longDayList = g_longDayList;
-  }
-
   if ((localeConvPtr != NULL) && (localeConvPtr->shortMonthList != NULL)) {
     shortMonthList = localeConvPtr->shortMonthList;
   }
   else {
     shortMonthList = g_shortMonthList;
-  }
-
-  if ((localeConvPtr != NULL) && (localeConvPtr->longMonthList != NULL)) {
-    longMonthList = localeConvPtr->longMonthList;
-  }
-  else {
-    longMonthList = g_longMonthList;
   }
 
   // January 1, 1970, was a Thursday
@@ -256,6 +241,8 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
   else {
     yearDayMonday = (totalDays - 4) % 7;
   }
+
+  strcpy(s, "");
 
   { int index;
     for (index = 0; fmt[index] != '\0'; ++index) {

@@ -476,8 +476,7 @@ int tz_dsttime ;
 };
 
 static int isLeapYear ( int year ) {
-return ( ( ( year % 4 ) == 0 ) &&
-( ( year % 100 ) != 0 ) ) || ( ( year % 400 ) == 0 ) ;
+return ( ( ( year % 4 ) == 0 ) && ( ( year % 100 ) != 0 ) ) || ( ( year % 400 ) == 0 ) ;
 }
 
 unsigned long time ( unsigned long * timePtr ) {
@@ -493,7 +492,6 @@ unsigned long time ;
 int year ;
 short month , monthDay ;
 short hour , min , sec ;
-struct lconv * localeConvPtr = localeconv ( ) ;
 
 register_ah = 0x2As ;
 interrupt ( 0x21s ) ;
@@ -507,8 +505,10 @@ hour = register_ch ;
 min = register_cl ;
 sec = register_dh ;
 
+{ struct lconv * localeConvPtr = localeconv ( ) ;
 if ( localeConvPtr != ( ( void * ) 0 ) ) {
 hour -= localeConvPtr -> winterTimeZone ;
+}
 }
 
 { const int daysOfMonths [] = { 31 , isLeapYear ( year ) ? 29 : 28 , 31 ,
@@ -602,35 +602,55 @@ return & g_timeStruct ;
 return ( ( void * ) 0 ) ;
 }
 
+struct tm * localtime ( const unsigned long * timePtr ) {
+struct tm * tmPtr = gmtime ( timePtr ) ;
+unsigned long t = * timePtr ;
+struct lconv * localeConvPtr = localeconv ( ) ;
+
+if ( localeConvPtr != ( ( void * ) 0 ) ) {
+int timeZone = ( tmPtr -> tm_isdst == 1 ) ? localeConvPtr -> summerTimeZone
+: localeConvPtr -> winterTimeZone ;
+t += ( 3600l * timeZone ) ;
+}
+
+return gmtime ( & t ) ;
+}
+
 double difftime ( unsigned long time1 , unsigned long time2 ) {
 return ( double ) ( time2 - time1 ) ;
 }
 
 static char g_timeString [ 256 ];
 
-static char * g_defaultShortDayList [] = { "\123\165\156" , "\115\157\156" , "\124\165\145" , "\127\145\144" ,
+static char * g_shortDayList [] = { "\123\165\156" , "\115\157\156" , "\124\165\145" , "\127\145\144" ,
 "\124\150\165" , "\106\162\151" , "\123\141\164" };
-static char * g_defaultLongDayList [] = { "\123\165\156\144\141\171" , "\115\157\156\144\141\171" , "\124\165\145\163\144\141\171" ,
-"\127\145\144\156\145\163\144\141\171" , "\124\150\165\162\163\144\141\171" , "\106\162\151\144\141\171" , "\123\141\164\165\162\144\141\171" };
-
-static char * g_defaultShortMonthList [] =
-{ "\112\141\156" , "\106\145\142" , "\115\141\162" , "\101\160\162" , "\115\141\171" , "\112\165\156" ,
+static char * g_longDayList [] = { "\123\165\156\144\141\171" , "\115\157\156\144\141\171" , "\124\165\145\163\144\141\171" , "\127\145\144\156\145\163\144\141\171" ,
+"\124\150\165\162\163\144\141\171" , "\106\162\151\144\141\171" , "\123\141\164\165\162\144\141\171" };
+static char * g_shortMonthList [] = { "\112\141\156" , "\106\145\142" , "\115\141\162" , "\101\160\162" , "\115\141\171" , "\112\165\156" ,
 "\112\165\154" , "\101\165\147" , "\123\145\160" , "\117\143\164" , "\116\157\166" , "\104\145\143" };
-static char * g_defaultLongMonthList [] =
-{ "\112\141\156\165\141\162\171" , "\106\145\142\162\165\141\162\171" , "\115\141\162\143\150" , "\101\160\162\151\154" , "\115\141\171" , "\112\165\156\145" ,
-"\112\165\154\171" , "\101\165\147\165\163\164" , "\123\145\160\164\145\155\142\145\162" , "\117\143\164\157\142\145\162" , "\116\157\166\145\155\142\145\162" , "\104\145\143\145\155\142\145\162" };
+static char * g_longMonthList [] = { "\112\141\156\165\141\162\171" , "\106\145\142\162\165\141\162\171" , "\115\141\162\143\150" , "\101\160\162\151\154" ,
+"\115\141\171" , "\112\165\156\145" , "\112\165\154\171" , "\101\165\147\165\163\164" ,
+"\123\145\160\164\145\155\142\145\162" , "\117\143\164\157\142\145\162" ,
+"\116\157\166\145\155\142\145\162" , "\104\145\143\145\155\142\145\162" };
 
 char * asctime ( const struct tm * tp ) {
 struct lconv * localeConvPtr = ( ( void * ) 0 ) ;
-char ** shortDayList = ( localeConvPtr != ( ( void * ) 0 ) ) ? localeConvPtr -> shortDayList
-: ( ( void * ) 0 ) ;
-char ** shortMonthList = ( localeConvPtr != ( ( void * ) 0 ) )
-? localeConvPtr -> shortMonthList : ( ( void * ) 0 ) ;
+char ** shortDayList , ** shortMonthList ;
 
-shortDayList = ( shortDayList != ( ( void * ) 0 ) ) ? shortDayList
-: g_defaultShortDayList ;
-shortMonthList = ( shortMonthList != ( ( void * ) 0 ) ) ? shortMonthList
-: g_defaultShortMonthList ;
+if ( ( localeConvPtr != ( ( void * ) 0 ) ) && ( localeConvPtr -> shortDayList != ( ( void * ) 0 ) ) ) {
+shortDayList = localeConvPtr -> shortDayList ;
+}
+else {
+shortDayList = g_shortDayList ;
+}
+
+if ( ( localeConvPtr != ( ( void * ) 0 ) ) && ( localeConvPtr -> shortMonthList != ( ( void * ) 0 ) ) ) {
+shortMonthList = localeConvPtr -> shortMonthList ;
+}
+else {
+shortMonthList = g_shortMonthList ;
+}
+
 sprintf ( g_timeString , "\045\163\040\045\163\040\045\151\040\045\060\062\151\072\045\060\062\151\072\045\060\062\151\040\045\151" ,
 shortDayList [ tp -> tm_wday ] , shortMonthList [ tp -> tm_mon ] ,
 tp -> tm_mday , tp -> tm_hour , tp -> tm_min ,
@@ -642,44 +662,41 @@ char * ctime ( const unsigned long * time ) {
 return asctime ( localtime ( time ) ) ;
 }
 
-struct tm * localtime ( const unsigned long * timePtr ) {
-struct tm * tmPtr = gmtime ( timePtr ) ;
-struct lconv * localeConvPtr = localeconv ( ) ;
-int timeZone = 0 ;
-
-if ( localeConvPtr != ( ( void * ) 0 ) ) {
-timeZone = ( tmPtr -> tm_isdst == 1 ) ? localeConvPtr -> summerTimeZone
-: localeConvPtr -> winterTimeZone ;
-}
-
-{ unsigned long t = * timePtr + ( 3600l * timeZone ) ;
-return gmtime ( & t ) ;
-}
-}
-
 int strftime ( char * s , int smax , const char * fmt , const struct tm * tp ) {
 struct lconv * localeConvPtr = localeconv ( ) ;
-char ** shortDayList = ( localeConvPtr != ( ( void * ) 0 ) )
-? ( localeConvPtr -> shortDayList ) : ( ( void * ) 0 ) ;
-char ** shortMonthList = ( localeConvPtr != ( ( void * ) 0 ) )
-? ( localeConvPtr -> shortMonthList ) : ( ( void * ) 0 ) ;
-char ** longDayList = ( localeConvPtr != ( ( void * ) 0 ) )
-? ( localeConvPtr -> longDayList ) : ( ( void * ) 0 ) ;
-char ** longMonthList = ( localeConvPtr != ( ( void * ) 0 ) )
-? ( localeConvPtr -> longMonthList ) : ( ( void * ) 0 ) ;
-
+char ** shortDayList , ** shortMonthList , ** longDayList , ** longMonthList ;
 const int leapDays = ( tp -> tm_year - 69 ) / 4 ;
 const long totalDays = 365 * ( tp -> tm_year - 70 ) + leapDays + tp -> tm_yday ;
 int yearDaySunday , yearDayMonday ;
-
 strcpy ( s , "" ) ;
-shortDayList = ( shortDayList != ( ( void * ) 0 ) )
-? shortDayList : g_defaultShortDayList ;
-longDayList = ( longDayList != ( ( void * ) 0 ) ) ? longDayList : g_defaultLongDayList ;
-shortMonthList = ( shortMonthList != ( ( void * ) 0 ) )
-? shortMonthList : g_defaultShortMonthList ;
-longMonthList = ( longMonthList != ( ( void * ) 0 ) )
-? longMonthList : g_defaultLongMonthList ;
+
+if ( ( localeConvPtr != ( ( void * ) 0 ) ) && ( localeConvPtr -> shortDayList != ( ( void * ) 0 ) ) ) {
+shortDayList = localeConvPtr -> shortDayList ;
+}
+else {
+shortDayList = g_shortDayList ;
+}
+
+if ( ( localeConvPtr != ( ( void * ) 0 ) ) && ( localeConvPtr -> longDayList != ( ( void * ) 0 ) ) ) {
+longDayList = localeConvPtr -> longDayList ;
+}
+else {
+longDayList = g_longDayList ;
+}
+
+if ( ( localeConvPtr != ( ( void * ) 0 ) ) && ( localeConvPtr -> shortMonthList != ( ( void * ) 0 ) ) ) {
+shortMonthList = localeConvPtr -> shortMonthList ;
+}
+else {
+shortMonthList = g_shortMonthList ;
+}
+
+if ( ( localeConvPtr != ( ( void * ) 0 ) ) && ( localeConvPtr -> longMonthList != ( ( void * ) 0 ) ) ) {
+longMonthList = localeConvPtr -> longMonthList ;
+}
+else {
+longMonthList = g_longMonthList ;
+}
 
 
 if ( totalDays < 3 ) {
