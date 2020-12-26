@@ -206,13 +206,10 @@ char* ctime(const time_t* time) {
   return asctime(localtime(time));
 }
 
-size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
+size_t strftime(char* result, size_t maxSize,
+                const char* format, const struct tm* tp) {
   struct lconv* localeConvPtr = localeconv();
   char **shortDayList, **shortMonthList, **longDayList, **longMonthList;
-  const int leapDays = (tp->tm_year - 69) / 4;
-  const long totalDays = 365 * (tp->tm_year - 70) + leapDays + tp->tm_yday;
-  int yearDaySunday, yearDayMonday;
-  strcpy(s, "");
 
   if ((localeConvPtr != NULL) && (localeConvPtr->shortDayList != NULL)) {
     shortDayList = localeConvPtr->shortDayList;
@@ -242,27 +239,29 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
     longMonthList = g_longMonthList;
   }
 
-  // January 1, 1970, was a Thursday
-  if (totalDays < 3) {
-    yearDaySunday = totalDays + 4;
-  }
-  else {
-    yearDaySunday = (totalDays - 3) % 7;
-  }
-
-  if (totalDays < 4) {
-    yearDayMonday = totalDays + 3;
-  }
-  else {
-    yearDayMonday = (totalDays - 4) % 7;
-  }
-
+  strcpy(result, "");
   { int index;
-    for (index = 0; fmt[index] != '\0'; ++index) {
-      char add[20];
+    const int weekNumberStartSunday = 0, weekNumberStartMonday = 0;
 
-      if (fmt[index] == '%') {
-        switch (fmt[++index]) {
+    /*const char timeZone[7] = tp->tm_isdst ? "summer" : "winter";
+    const char timeZone[7];
+    
+    if (tp->tm_isdst) {
+      strcpy(timeZone, "summer");
+    }
+    else {
+      strcpy(timeZone, "winter");
+    }
+    printf("timeZone <%s>\n", timeZone);*/
+
+    for (index = 0; format[index] != '\0'; ++index) {
+      char add[20];
+      //printf("index: %i <%c> %i\n", index, format[index], (int) format[index]);
+
+      if (format[index] == '%') {
+        //printf("<%c>\n", format[index + 1]);
+
+        switch (format[++index]) {
           case 'a':
             strcpy(add, shortDayList[tp->tm_wday]);
             break;
@@ -286,27 +285,27 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
             break;
 
           case 'd':
-            sprintf(add, "%i", tp->tm_mday);
+            sprintf(add, "%02i", tp->tm_mday);
             break;
 
           case 'H':
-            sprintf(add, "%i", tp->tm_hour);
+            sprintf(add, "%02i", tp->tm_hour);
             break;
 
           case 'I':
-            sprintf(add, "%i", tp->tm_hour % 12);
+            sprintf(add, "%02i", (tp->tm_hour % 12));
             break;
-
+	
           case 'j':
-            sprintf(add, "%i", tp->tm_yday);
+            sprintf(add, "%03i", tp->tm_yday);
             break;
 
           case 'm':
-            sprintf(add, "%i", tp->tm_mon + 1);
+            sprintf(add, "%02i", tp->tm_mon + 1);
             break;
 
           case 'M':
-            sprintf(add, "%i", tp->tm_min);
+            sprintf(add, "%02i", tp->tm_min);
             break;
 
           case 'p':
@@ -314,19 +313,19 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
             break;
 
           case 'S':
-            sprintf(add, "%i", tp->tm_sec);
+            sprintf(add, "%02i", tp->tm_sec);
             break;
 
           case 'U':
-            sprintf(add, "%i", yearDaySunday);
+            sprintf(add, "%02i", weekNumberStartSunday);
             break;
 
           case 'w':
-            sprintf(add, "%i", tp->tm_wday);
+            sprintf(add, "%02i", tp->tm_wday);
             break;
 
           case 'W':
-            sprintf(add, "%i", yearDayMonday);
+            sprintf(add, "%02i", weekNumberStartMonday);
             break;
 
           case 'x':
@@ -335,19 +334,20 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
             break;
 
           case 'X':
-            sprintf(add, "%02i:%02i:%02i", tp->tm_hour, tp->tm_min, tp->tm_sec); 
+            sprintf(add, "%02i:%02i:%02i", tp->tm_hour,
+                    tp->tm_min, tp->tm_sec); 
             break;
 
           case 'y':
-            sprintf(add, "%i", tp->tm_year % 100);
+            sprintf(add, "%02i", (tp->tm_year % 100));
             break;
 
           case 'Y':
-            sprintf(add, "%i", 1900 + tp->tm_year);
+            sprintf(add, "%02i", 1900 + tp->tm_year);
             break;
 
           case 'Z':
-            strcpy(add, "");
+            strcpy(add, tp->tm_isdst ? "summer" : "winter");
             break;
 
           case '%':
@@ -359,13 +359,13 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
         }
       }
       else {
-        add[0] = fmt[index];
+        add[0] = format[index];
         add[1] = '\0';
       }
 
-      { int x = strlen(s), y = strlen(add);
-        if ((x + y) < smax) {
-          strcat(s, add);
+      { int x = strlen(result), y = strlen(add);
+        if ((x + y) < maxSize) {
+          strcat(result, add);
           //printf("");
         }
         else {
@@ -375,5 +375,5 @@ size_t strftime(char* s, size_t smax, const char* fmt, const struct tm* tp) {
     }
   }
 
-  return strlen(s);
+  return strlen(result);
 }

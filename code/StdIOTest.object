@@ -4,12 +4,12 @@ stdio_test:	; Assign n 0
 2:		mov word [bp + 6], 0
 4:	
 
-stdio_test$1:	; address £temporary5538 n
+stdio_test$1:	; address £temporary5522 n
 5:		mov si, bp
 6:		add si, 6
 8:	
 
-stdio_test$2:	; Assign p £temporary5538
+stdio_test$2:	; Assign p £temporary5522
 9:		mov [bp + 8], si
 11:	
 
@@ -17,7 +17,7 @@ stdio_test$3:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sym
 13:	
 
 stdio_test$4:	; Parameter 10 string_3C25i3E203C25i3E203C25li3E203C25li3E203C25u3E203C25lu3E0A0A# 6
-14:		mov word [bp + 16], @11675$string_3C25i3E203C25i3E203C25li3E203C25li3E203C25u3E203C25lu3E0A0A#
+14:		mov word [bp + 16], @11641$string_3C25i3E203C25i3E203C25li3E203C25li3E203C25u3E203C25lu3E0A0A#
 16:	
 
 stdio_test$5:	; Parameter 10 123 8
@@ -60,7 +60,7 @@ stdio_test$13:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sy
 46:	
 
 stdio_test$14:	; Parameter 10 string_3C256i3E203C256i3E203C256li3E203C256li3E203C256u3E203C256lu3E0A# 6
-47:		mov word [bp + 16], @11683$string_3C256i3E203C256i3E203C256li3E203C256li3E203C256u3E203C256lu3E0A#
+47:		mov word [bp + 16], @11649$string_3C256i3E203C256i3E203C256li3E203C256li3E203C256u3E203C256lu3E0A#
 49:	
 
 stdio_test$15:	; Parameter 10 123 8
@@ -103,7 +103,7 @@ stdio_test$23:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sy
 79:	
 
 stdio_test$24:	; Parameter 10 string_3C252B6i3E203C252B6i3E203C252B6li3E203C252B6li3E203C252B6u3E203C252B6lu3E0A# 6
-80:		mov word [bp + 16], @11691$string_3C252B6i3E203C252B6i3E203C252B6li3E203C252B6li3E203C252B6u3E203C252B6lu3E0A#
+80:		mov word [bp + 16], @11657$string_3C252B6i3E203C252B6i3E203C252B6li3E203C252B6li3E203C252B6u3E203C252B6lu3E0A#
 82:	
 
 stdio_test$25:	; Parameter 10 123 8
@@ -146,7 +146,7 @@ stdio_test$33:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sy
 112:	
 
 stdio_test$34:	; Parameter 10 string_3C252D6i3E203C252D6i3E203C252D6li3E203C252D6li3E203C252D6u3E203C252D6lu3E0A# 6
-113:		mov word [bp + 16], @11699$string_3C252D6i3E203C252D6i3E203C252D6li3E203C252D6li3E203C252D6u3E203C252D6lu3E0A#
+113:		mov word [bp + 16], @11665$string_3C252D6i3E203C252D6i3E203C252D6li3E203C252D6li3E203C252D6u3E203C252D6lu3E0A#
 115:	
 
 stdio_test$35:	; Parameter 10 123 8
@@ -189,7 +189,7 @@ stdio_test$43:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sy
 145:	
 
 stdio_test$44:	; Parameter 10 string_3C252B2D6i3E203C252B2D6i3E203C252B2D6li3E203C252B2D6li3E203C252B2D6u3E203C252B2D6lu3E0A0A# 6
-146:		mov word [bp + 16], @11707$string_3C252B2D6i3E203C252B2D6i3E203C252B2D6li3E203C252B2D6li3E203C252B2D6u3E203C252B2D6lu3E0A0A#
+146:		mov word [bp + 16], @11673$string_3C252B2D6i3E203C252B2D6i3E203C252B2D6li3E203C252B2D6li3E203C252B2D6u3E203C252B2D6lu3E0A0A#
 148:	
 
 stdio_test$45:	; Parameter 10 123 8
@@ -232,7 +232,7 @@ stdio_test$53:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sy
 178:	
 
 stdio_test$54:	; Parameter 10 string_3C2506i3E203C2506i3E203C2506li3E203C2506li3E203C2506u3E203C2506lu3E0A# 6
-179:		mov word [bp + 16], @11719$string_3C2506i3E203C2506i3E203C2506li3E203C2506li3E203C2506u3E203C2506lu3E0A#
+179:		mov word [bp + 16], @11685$string_3C2506i3E203C2506i3E203C2506li3E203C2506li3E203C2506u3E203C2506lu3E0A#
 181:	
 
 stdio_test$55:	; Parameter 10 123 8
@@ -275,7 +275,7 @@ stdio_test$63:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sy
 211:	
 
 stdio_test$64:	; Parameter 10 string_3C252B06i3E203C252B06i3E203C252B06li3E203C252B06li3E203C252B06u3E203C252B06lu3E0A# 6
-212:		mov word [bp + 16], @11727$string_3C252B06i3E203C252B06i3E203C252B06li3E203C252B06li3E203C252B06u3E203C252B06lu3E0A#
+212:		mov word [bp + 16], @11693$string_3C252B06i3E203C252B06i3E203C252B06li3E203C252B06li3E203C252B06u3E203C252B06lu3E0A#
 214:	
 
 stdio_test$65:	; Parameter 10 123 8
@@ -318,7 +318,7 @@ stdio_test$73:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sy
 244:	
 
 stdio_test$74:	; Parameter 10 string_3C252D06i3E203C252D06i3E203C252D06li3E203C252D06li3E203C252D06u3E203C252D06lu3E0A# 6
-245:		mov word [bp + 16], @11735$string_3C252D06i3E203C252D06i3E203C252D06li3E203C252D06li3E203C252D06u3E203C252D06lu3E0A#
+245:		mov word [bp + 16], @11701$string_3C252D06i3E203C252D06i3E203C252D06li3E203C252D06li3E203C252D06u3E203C252D06lu3E0A#
 247:	
 
 stdio_test$75:	; Parameter 10 123 8
@@ -361,7 +361,7 @@ stdio_test$83:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sy
 277:	
 
 stdio_test$84:	; Parameter 10 string_3C252B2D06i3E203C252B2D06i3E203C252B2D06li3E203C252B2D06li3E203C252B2D06u3E203C252B2D06lu3E0A0A# 6
-278:		mov word [bp + 16], @11743$string_3C252B2D06i3E203C252B2D06i3E203C252B2D06li3E203C252B2D06li3E203C252B2D06u3E203C252B2D06lu3E0A0A#
+278:		mov word [bp + 16], @11709$string_3C252B2D06i3E203C252B2D06i3E203C252B2D06li3E203C252B2D06li3E203C252B2D06u3E203C252B2D06lu3E0A0A#
 280:	
 
 stdio_test$85:	; Parameter 10 123 8
@@ -404,7 +404,7 @@ stdio_test$93:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sy
 310:	
 
 stdio_test$94:	; Parameter 10 string_3C25206i3E203C25206i3E203C25206li3E203C25206li3E203C25206u3E203C25206lu3E0A# 6
-311:		mov word [bp + 16], @11751$string_3C25206i3E203C25206i3E203C25206li3E203C25206li3E203C25206u3E203C25206lu3E0A#
+311:		mov word [bp + 16], @11717$string_3C25206i3E203C25206i3E203C25206li3E203C25206li3E203C25206u3E203C25206lu3E0A#
 313:	
 
 stdio_test$95:	; Parameter 10 123 8
@@ -447,7 +447,7 @@ stdio_test$103:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 343:	
 
 stdio_test$104:	; Parameter 10 string_3C252B206i3E203C252B206i3E203C252B206li3E203C252B206li3E203C252B206u3E203C252B206lu3E0A# 6
-344:		mov word [bp + 16], @11759$string_3C252B206i3E203C252B206i3E203C252B206li3E203C252B206li3E203C252B206u3E203C252B206lu3E0A#
+344:		mov word [bp + 16], @11725$string_3C252B206i3E203C252B206i3E203C252B206li3E203C252B206li3E203C252B206u3E203C252B206lu3E0A#
 346:	
 
 stdio_test$105:	; Parameter 10 123 8
@@ -490,7 +490,7 @@ stdio_test$113:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 376:	
 
 stdio_test$114:	; Parameter 10 string_3C252D206i3E203C252D206i3E203C252D206li3E203C252D206li3E203C252D206u3E203C252D206lu3E0A# 6
-377:		mov word [bp + 16], @11767$string_3C252D206i3E203C252D206i3E203C252D206li3E203C252D206li3E203C252D206u3E203C252D206lu3E0A#
+377:		mov word [bp + 16], @11733$string_3C252D206i3E203C252D206i3E203C252D206li3E203C252D206li3E203C252D206u3E203C252D206lu3E0A#
 379:	
 
 stdio_test$115:	; Parameter 10 123 8
@@ -533,7 +533,7 @@ stdio_test$123:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 409:	
 
 stdio_test$124:	; Parameter 10 string_3C252B2D206i3E203C252B2D206i3E203C252B2D206li3E203C252B2D206li3E203C252B2D206u3E203C252B2D206lu3E0A0A# 6
-410:		mov word [bp + 16], @11775$string_3C252B2D206i3E203C252B2D206i3E203C252B2D206li3E203C252B2D206li3E203C252B2D206u3E203C252B2D206lu3E0A0A#
+410:		mov word [bp + 16], @11741$string_3C252B2D206i3E203C252B2D206i3E203C252B2D206li3E203C252B2D206li3E203C252B2D206u3E203C252B2D206lu3E0A0A#
 412:	
 
 stdio_test$125:	; Parameter 10 123 8
@@ -576,7 +576,7 @@ stdio_test$133:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 442:	
 
 stdio_test$134:	; Parameter 10 string_3C25x3E203C25X3E203C25o3E203C25lx3E203C25lX3E203C25lo3E0A# 6
-443:		mov word [bp + 16], @11783$string_3C25x3E203C25X3E203C25o3E203C25lx3E203C25lX3E203C25lo3E0A#
+443:		mov word [bp + 16], @11749$string_3C25x3E203C25X3E203C25o3E203C25lx3E203C25lX3E203C25lo3E0A#
 445:	
 
 stdio_test$135:	; Parameter 10 123 8
@@ -619,7 +619,7 @@ stdio_test$143:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 475:	
 
 stdio_test$144:	; Parameter 10 string_3C2523x3E203C2523X3E203C2523o3E203C2523lx3E203C2523lX3E203C2523lo3E0A# 6
-476:		mov word [bp + 16], @11791$string_3C2523x3E203C2523X3E203C2523o3E203C2523lx3E203C2523lX3E203C2523lo3E0A#
+476:		mov word [bp + 16], @11757$string_3C2523x3E203C2523X3E203C2523o3E203C2523lx3E203C2523lX3E203C2523lo3E0A#
 478:	
 
 stdio_test$145:	; Parameter 10 123 8
@@ -662,11 +662,11 @@ stdio_test$153:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 508:	
 
 stdio_test$154:	; Parameter 10 string_3C25253E203C25s3E203C25c3E203C25p3E0A0A# 6
-509:		mov word [bp + 16], @11799$string_3C25253E203C25s3E203C25c3E203C25p3E0A0A#
+509:		mov word [bp + 16], @11765$string_3C25253E203C25s3E203C25c3E203C25p3E0A0A#
 511:	
 
 stdio_test$155:	; Parameter 10 string_Hello2C20World21# 8
-512:		mov word [bp + 18], @11800$string_Hello2C20World21#
+512:		mov word [bp + 18], @11766$string_Hello2C20World21#
 514:	
 
 stdio_test$156:	; Parameter 10 88 10
@@ -694,11 +694,11 @@ stdio_test$160:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 533:	
 
 stdio_test$161:	; Parameter 10 string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A# 6
-534:		mov word [bp + 16], @11804$string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A#
+534:		mov word [bp + 16], @11770$string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A#
 536:	
 
 stdio_test$162:	; PushFloat 123.456
-537:		fld qword [@11805$float8$123.456#]
+537:		fld qword [@11771$float8$123.456#]
 539:	
 
 stdio_test$163:	; Parameter 10 123.456 8
@@ -706,7 +706,7 @@ stdio_test$163:	; Parameter 10 123.456 8
 542:	
 
 stdio_test$164:	; PushFloat 123.456
-543:		fld qword [@11806$float8$123.456#]
+543:		fld qword [@11772$float8$123.456#]
 545:	
 
 stdio_test$165:	; Parameter 10 123.456 16
@@ -714,7 +714,7 @@ stdio_test$165:	; Parameter 10 123.456 16
 548:	
 
 stdio_test$166:	; PushFloat 123.456
-549:		fld qword [@11807$float8$123.456#]
+549:		fld qword [@11773$float8$123.456#]
 551:	
 
 stdio_test$167:	; Parameter 10 123.456 24
@@ -722,7 +722,7 @@ stdio_test$167:	; Parameter 10 123.456 24
 554:	
 
 stdio_test$168:	; PushFloat 123456.1
-555:		fld qword [@11808$float8$123456.1#]
+555:		fld qword [@11774$float8$123456.1#]
 557:	
 
 stdio_test$169:	; Parameter 10 123456.1 32
@@ -730,7 +730,7 @@ stdio_test$169:	; Parameter 10 123456.1 32
 560:	
 
 stdio_test$170:	; PushFloat 123456.1
-561:		fld qword [@11809$float8$123456.1#]
+561:		fld qword [@11775$float8$123456.1#]
 563:	
 
 stdio_test$171:	; Parameter 10 123456.1 40
@@ -753,11 +753,11 @@ stdio_test$174:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 578:	
 
 stdio_test$175:	; Parameter 10 string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A# 6
-579:		mov word [bp + 16], @11811$string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A#
+579:		mov word [bp + 16], @11777$string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A#
 581:	
 
 stdio_test$176:	; PushFloat 123.456
-582:		fld qword [@11812$float8$123.456#]
+582:		fld qword [@11778$float8$123.456#]
 584:	
 
 stdio_test$177:	; Parameter 10 123.456 8
@@ -765,7 +765,7 @@ stdio_test$177:	; Parameter 10 123.456 8
 587:	
 
 stdio_test$178:	; PushFloat 123.456
-588:		fld qword [@11813$float8$123.456#]
+588:		fld qword [@11779$float8$123.456#]
 590:	
 
 stdio_test$179:	; Parameter 10 123.456 16
@@ -773,7 +773,7 @@ stdio_test$179:	; Parameter 10 123.456 16
 593:	
 
 stdio_test$180:	; PushFloat 123.456
-594:		fld qword [@11814$float8$123.456#]
+594:		fld qword [@11780$float8$123.456#]
 596:	
 
 stdio_test$181:	; Parameter 10 123.456 24
@@ -781,7 +781,7 @@ stdio_test$181:	; Parameter 10 123.456 24
 599:	
 
 stdio_test$182:	; PushFloat 123456.1
-600:		fld qword [@11815$float8$123456.1#]
+600:		fld qword [@11781$float8$123456.1#]
 602:	
 
 stdio_test$183:	; Parameter 10 123456.1 32
@@ -789,7 +789,7 @@ stdio_test$183:	; Parameter 10 123456.1 32
 605:	
 
 stdio_test$184:	; PushFloat 123456.1
-606:		fld qword [@11816$float8$123456.1#]
+606:		fld qword [@11782$float8$123456.1#]
 608:	
 
 stdio_test$185:	; Parameter 10 123456.1 40
@@ -812,11 +812,11 @@ stdio_test$188:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 623:	
 
 stdio_test$189:	; Parameter 10 string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A# 6
-624:		mov word [bp + 16], @11818$string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A#
+624:		mov word [bp + 16], @11784$string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A#
 626:	
 
 stdio_test$190:	; PushFloat 123.456
-627:		fld qword [@11819$float8$123.456#]
+627:		fld qword [@11785$float8$123.456#]
 629:	
 
 stdio_test$191:	; Parameter 10 123.456 8
@@ -824,7 +824,7 @@ stdio_test$191:	; Parameter 10 123.456 8
 632:	
 
 stdio_test$192:	; PushFloat 123.456
-633:		fld qword [@11820$float8$123.456#]
+633:		fld qword [@11786$float8$123.456#]
 635:	
 
 stdio_test$193:	; Parameter 10 123.456 16
@@ -832,7 +832,7 @@ stdio_test$193:	; Parameter 10 123.456 16
 638:	
 
 stdio_test$194:	; PushFloat 123.456
-639:		fld qword [@11821$float8$123.456#]
+639:		fld qword [@11787$float8$123.456#]
 641:	
 
 stdio_test$195:	; Parameter 10 123.456 24
@@ -840,7 +840,7 @@ stdio_test$195:	; Parameter 10 123.456 24
 644:	
 
 stdio_test$196:	; PushFloat 123.456
-645:		fld qword [@11822$float8$123.456#]
+645:		fld qword [@11788$float8$123.456#]
 647:	
 
 stdio_test$197:	; Parameter 10 123.456 32
@@ -848,7 +848,7 @@ stdio_test$197:	; Parameter 10 123.456 32
 650:	
 
 stdio_test$198:	; PushFloat 123.456
-651:		fld qword [@11823$float8$123.456#]
+651:		fld qword [@11789$float8$123.456#]
 653:	
 
 stdio_test$199:	; Parameter 10 123.456 40
@@ -871,11 +871,11 @@ stdio_test$202:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 668:	
 
 stdio_test$203:	; Parameter 10 string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A# 6
-669:		mov word [bp + 16], @11825$string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A#
+669:		mov word [bp + 16], @11791$string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A#
 671:	
 
 stdio_test$204:	; PushFloat 123.456
-672:		fld qword [@11826$float8$123.456#]
+672:		fld qword [@11792$float8$123.456#]
 674:	
 
 stdio_test$205:	; Parameter 10 123.456 8
@@ -883,7 +883,7 @@ stdio_test$205:	; Parameter 10 123.456 8
 677:	
 
 stdio_test$206:	; PushFloat 123.456
-678:		fld qword [@11827$float8$123.456#]
+678:		fld qword [@11793$float8$123.456#]
 680:	
 
 stdio_test$207:	; Parameter 10 123.456 16
@@ -891,7 +891,7 @@ stdio_test$207:	; Parameter 10 123.456 16
 683:	
 
 stdio_test$208:	; PushFloat 123.456
-684:		fld qword [@11828$float8$123.456#]
+684:		fld qword [@11794$float8$123.456#]
 686:	
 
 stdio_test$209:	; Parameter 10 123.456 24
@@ -899,7 +899,7 @@ stdio_test$209:	; Parameter 10 123.456 24
 689:	
 
 stdio_test$210:	; PushFloat 123.456
-690:		fld qword [@11829$float8$123.456#]
+690:		fld qword [@11795$float8$123.456#]
 692:	
 
 stdio_test$211:	; Parameter 10 123.456 32
@@ -907,7 +907,7 @@ stdio_test$211:	; Parameter 10 123.456 32
 695:	
 
 stdio_test$212:	; PushFloat 123.456
-696:		fld qword [@11830$float8$123.456#]
+696:		fld qword [@11796$float8$123.456#]
 698:	
 
 stdio_test$213:	; Parameter 10 123.456 40
@@ -930,11 +930,11 @@ stdio_test$216:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 713:	
 
 stdio_test$217:	; Parameter 10 string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A# 6
-714:		mov word [bp + 16], @11832$string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A#
+714:		mov word [bp + 16], @11798$string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A#
 716:	
 
 stdio_test$218:	; PushFloat 123.456
-717:		fld qword [@11833$float8$123.456#]
+717:		fld qword [@11799$float8$123.456#]
 719:	
 
 stdio_test$219:	; Parameter 10 123.456 8
@@ -942,7 +942,7 @@ stdio_test$219:	; Parameter 10 123.456 8
 722:	
 
 stdio_test$220:	; PushFloat 123.456
-723:		fld qword [@11834$float8$123.456#]
+723:		fld qword [@11800$float8$123.456#]
 725:	
 
 stdio_test$221:	; Parameter 10 123.456 16
@@ -950,7 +950,7 @@ stdio_test$221:	; Parameter 10 123.456 16
 728:	
 
 stdio_test$222:	; PushFloat 123.456
-729:		fld qword [@11835$float8$123.456#]
+729:		fld qword [@11801$float8$123.456#]
 731:	
 
 stdio_test$223:	; Parameter 10 123.456 24
@@ -958,7 +958,7 @@ stdio_test$223:	; Parameter 10 123.456 24
 734:	
 
 stdio_test$224:	; PushFloat 123.456
-735:		fld qword [@11836$float8$123.456#]
+735:		fld qword [@11802$float8$123.456#]
 737:	
 
 stdio_test$225:	; Parameter 10 123.456 32
@@ -966,7 +966,7 @@ stdio_test$225:	; Parameter 10 123.456 32
 740:	
 
 stdio_test$226:	; PushFloat 123.456
-741:		fld qword [@11837$float8$123.456#]
+741:		fld qword [@11803$float8$123.456#]
 743:	
 
 stdio_test$227:	; Parameter 10 123.456 40
@@ -989,11 +989,11 @@ stdio_test$230:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 758:	
 
 stdio_test$231:	; Parameter 10 string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A# 6
-759:		mov word [bp + 16], @11839$string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A#
+759:		mov word [bp + 16], @11805$string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A#
 761:	
 
 stdio_test$232:	; PushFloat 123.456
-762:		fld qword [@11840$float8$123.456#]
+762:		fld qword [@11806$float8$123.456#]
 764:	
 
 stdio_test$233:	; Parameter 10 123.456 8
@@ -1001,7 +1001,7 @@ stdio_test$233:	; Parameter 10 123.456 8
 767:	
 
 stdio_test$234:	; PushFloat 123.456
-768:		fld qword [@11841$float8$123.456#]
+768:		fld qword [@11807$float8$123.456#]
 770:	
 
 stdio_test$235:	; Parameter 10 123.456 16
@@ -1009,7 +1009,7 @@ stdio_test$235:	; Parameter 10 123.456 16
 773:	
 
 stdio_test$236:	; PushFloat 123.456
-774:		fld qword [@11842$float8$123.456#]
+774:		fld qword [@11808$float8$123.456#]
 776:	
 
 stdio_test$237:	; Parameter 10 123.456 24
@@ -1017,7 +1017,7 @@ stdio_test$237:	; Parameter 10 123.456 24
 779:	
 
 stdio_test$238:	; PushFloat 123.456
-780:		fld qword [@11843$float8$123.456#]
+780:		fld qword [@11809$float8$123.456#]
 782:	
 
 stdio_test$239:	; Parameter 10 123.456 32
@@ -1025,7 +1025,7 @@ stdio_test$239:	; Parameter 10 123.456 32
 785:	
 
 stdio_test$240:	; PushFloat 123.456
-786:		fld qword [@11844$float8$123.456#]
+786:		fld qword [@11810$float8$123.456#]
 788:	
 
 stdio_test$241:	; Parameter 10 123.456 40
@@ -1048,11 +1048,11 @@ stdio_test$244:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 803:	
 
 stdio_test$245:	; Parameter 10 string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A# 6
-804:		mov word [bp + 16], @11846$string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A#
+804:		mov word [bp + 16], @11812$string_3C25f3E203C25e3E203C25E3E203C25g3E203C25G3E0A#
 806:	
 
 stdio_test$246:	; PushFloat -123.456
-807:		fld qword [@11847$float8$minus123.456#]
+807:		fld qword [@11813$float8$minus123.456#]
 809:	
 
 stdio_test$247:	; Parameter 10 -123.456 8
@@ -1060,7 +1060,7 @@ stdio_test$247:	; Parameter 10 -123.456 8
 812:	
 
 stdio_test$248:	; PushFloat -123.456
-813:		fld qword [@11848$float8$minus123.456#]
+813:		fld qword [@11814$float8$minus123.456#]
 815:	
 
 stdio_test$249:	; Parameter 10 -123.456 16
@@ -1068,7 +1068,7 @@ stdio_test$249:	; Parameter 10 -123.456 16
 818:	
 
 stdio_test$250:	; PushFloat -123.456
-819:		fld qword [@11849$float8$minus123.456#]
+819:		fld qword [@11815$float8$minus123.456#]
 821:	
 
 stdio_test$251:	; Parameter 10 -123.456 24
@@ -1076,7 +1076,7 @@ stdio_test$251:	; Parameter 10 -123.456 24
 824:	
 
 stdio_test$252:	; PushFloat -0.000000123456
-825:		fld qword [@11850$float8$minus0.000000123456#]
+825:		fld qword [@11816$float8$minus0.000000123456#]
 827:	
 
 stdio_test$253:	; Parameter 10 -0.000000123456 32
@@ -1084,7 +1084,7 @@ stdio_test$253:	; Parameter 10 -0.000000123456 32
 830:	
 
 stdio_test$254:	; PushFloat -0.000000123456
-831:		fld qword [@11851$float8$minus0.000000123456#]
+831:		fld qword [@11817$float8$minus0.000000123456#]
 833:	
 
 stdio_test$255:	; Parameter 10 -0.000000123456 40
@@ -1107,11 +1107,11 @@ stdio_test$258:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 848:	
 
 stdio_test$259:	; Parameter 10 string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A# 6
-849:		mov word [bp + 16], @11853$string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A#
+849:		mov word [bp + 16], @11819$string_3C25lf3E203C25le3E203C25lE3E203C25lg3E203C25lG3E0A#
 851:	
 
 stdio_test$260:	; PushFloat -123.456
-852:		fld qword [@11854$float8$minus123.456#]
+852:		fld qword [@11820$float8$minus123.456#]
 854:	
 
 stdio_test$261:	; Parameter 10 -123.456 8
@@ -1119,7 +1119,7 @@ stdio_test$261:	; Parameter 10 -123.456 8
 857:	
 
 stdio_test$262:	; PushFloat -123.456
-858:		fld qword [@11855$float8$minus123.456#]
+858:		fld qword [@11821$float8$minus123.456#]
 860:	
 
 stdio_test$263:	; Parameter 10 -123.456 16
@@ -1127,7 +1127,7 @@ stdio_test$263:	; Parameter 10 -123.456 16
 863:	
 
 stdio_test$264:	; PushFloat -123.456
-864:		fld qword [@11856$float8$minus123.456#]
+864:		fld qword [@11822$float8$minus123.456#]
 866:	
 
 stdio_test$265:	; Parameter 10 -123.456 24
@@ -1135,7 +1135,7 @@ stdio_test$265:	; Parameter 10 -123.456 24
 869:	
 
 stdio_test$266:	; PushFloat -0.000000123456
-870:		fld qword [@11857$float8$minus0.000000123456#]
+870:		fld qword [@11823$float8$minus0.000000123456#]
 872:	
 
 stdio_test$267:	; Parameter 10 -0.000000123456 32
@@ -1143,7 +1143,7 @@ stdio_test$267:	; Parameter 10 -0.000000123456 32
 875:	
 
 stdio_test$268:	; PushFloat -0.000000123456
-876:		fld qword [@11858$float8$minus0.000000123456#]
+876:		fld qword [@11824$float8$minus0.000000123456#]
 878:	
 
 stdio_test$269:	; Parameter 10 -0.000000123456 40
@@ -1166,11 +1166,11 @@ stdio_test$272:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 893:	
 
 stdio_test$273:	; Parameter 10 string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A# 6
-894:		mov word [bp + 16], @11860$string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A#
+894:		mov word [bp + 16], @11826$string_3C2523f3E203C2523e3E203C2523E3E203C2523g3E203C2523G3E0A#
 896:	
 
 stdio_test$274:	; PushFloat -123.456
-897:		fld qword [@11861$float8$minus123.456#]
+897:		fld qword [@11827$float8$minus123.456#]
 899:	
 
 stdio_test$275:	; Parameter 10 -123.456 8
@@ -1178,7 +1178,7 @@ stdio_test$275:	; Parameter 10 -123.456 8
 902:	
 
 stdio_test$276:	; PushFloat -123.456
-903:		fld qword [@11862$float8$minus123.456#]
+903:		fld qword [@11828$float8$minus123.456#]
 905:	
 
 stdio_test$277:	; Parameter 10 -123.456 16
@@ -1186,7 +1186,7 @@ stdio_test$277:	; Parameter 10 -123.456 16
 908:	
 
 stdio_test$278:	; PushFloat -123.456
-909:		fld qword [@11863$float8$minus123.456#]
+909:		fld qword [@11829$float8$minus123.456#]
 911:	
 
 stdio_test$279:	; Parameter 10 -123.456 24
@@ -1194,7 +1194,7 @@ stdio_test$279:	; Parameter 10 -123.456 24
 914:	
 
 stdio_test$280:	; PushFloat -123.456
-915:		fld qword [@11864$float8$minus123.456#]
+915:		fld qword [@11830$float8$minus123.456#]
 917:	
 
 stdio_test$281:	; Parameter 10 -123.456 32
@@ -1202,7 +1202,7 @@ stdio_test$281:	; Parameter 10 -123.456 32
 920:	
 
 stdio_test$282:	; PushFloat -123.456
-921:		fld qword [@11865$float8$minus123.456#]
+921:		fld qword [@11831$float8$minus123.456#]
 923:	
 
 stdio_test$283:	; Parameter 10 -123.456 40
@@ -1225,11 +1225,11 @@ stdio_test$286:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 938:	
 
 stdio_test$287:	; Parameter 10 string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A# 6
-939:		mov word [bp + 16], @11867$string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A#
+939:		mov word [bp + 16], @11833$string_3C2523lf3E203C2523le3E203C2523lE3E203C2523lg3E203C2523lG3E0A#
 941:	
 
 stdio_test$288:	; PushFloat -123.456
-942:		fld qword [@11868$float8$minus123.456#]
+942:		fld qword [@11834$float8$minus123.456#]
 944:	
 
 stdio_test$289:	; Parameter 10 -123.456 8
@@ -1237,7 +1237,7 @@ stdio_test$289:	; Parameter 10 -123.456 8
 947:	
 
 stdio_test$290:	; PushFloat -123.456
-948:		fld qword [@11869$float8$minus123.456#]
+948:		fld qword [@11835$float8$minus123.456#]
 950:	
 
 stdio_test$291:	; Parameter 10 -123.456 16
@@ -1245,7 +1245,7 @@ stdio_test$291:	; Parameter 10 -123.456 16
 953:	
 
 stdio_test$292:	; PushFloat -123.456
-954:		fld qword [@11870$float8$minus123.456#]
+954:		fld qword [@11836$float8$minus123.456#]
 956:	
 
 stdio_test$293:	; Parameter 10 -123.456 24
@@ -1253,7 +1253,7 @@ stdio_test$293:	; Parameter 10 -123.456 24
 959:	
 
 stdio_test$294:	; PushFloat -123.456
-960:		fld qword [@11871$float8$minus123.456#]
+960:		fld qword [@11837$float8$minus123.456#]
 962:	
 
 stdio_test$295:	; Parameter 10 -123.456 32
@@ -1261,7 +1261,7 @@ stdio_test$295:	; Parameter 10 -123.456 32
 965:	
 
 stdio_test$296:	; PushFloat -123.456
-966:		fld qword [@11872$float8$minus123.456#]
+966:		fld qword [@11838$float8$minus123.456#]
 968:	
 
 stdio_test$297:	; Parameter 10 -123.456 40
@@ -1284,11 +1284,11 @@ stdio_test$300:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 983:	
 
 stdio_test$301:	; Parameter 10 string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A# 6
-984:		mov word [bp + 16], @11874$string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A#
+984:		mov word [bp + 16], @11840$string_3C2562E3f3E203C2562E3e3E203C2562E3E3E203C2562E3g3E203C2562E3G3E0A#
 986:	
 
 stdio_test$302:	; PushFloat -123.456
-987:		fld qword [@11875$float8$minus123.456#]
+987:		fld qword [@11841$float8$minus123.456#]
 989:	
 
 stdio_test$303:	; Parameter 10 -123.456 8
@@ -1296,7 +1296,7 @@ stdio_test$303:	; Parameter 10 -123.456 8
 992:	
 
 stdio_test$304:	; PushFloat -123.456
-993:		fld qword [@11876$float8$minus123.456#]
+993:		fld qword [@11842$float8$minus123.456#]
 995:	
 
 stdio_test$305:	; Parameter 10 -123.456 16
@@ -1304,7 +1304,7 @@ stdio_test$305:	; Parameter 10 -123.456 16
 998:	
 
 stdio_test$306:	; PushFloat -123.456
-999:		fld qword [@11877$float8$minus123.456#]
+999:		fld qword [@11843$float8$minus123.456#]
 1001:	
 
 stdio_test$307:	; Parameter 10 -123.456 24
@@ -1312,7 +1312,7 @@ stdio_test$307:	; Parameter 10 -123.456 24
 1004:	
 
 stdio_test$308:	; PushFloat -123.456
-1005:		fld qword [@11878$float8$minus123.456#]
+1005:		fld qword [@11844$float8$minus123.456#]
 1007:	
 
 stdio_test$309:	; Parameter 10 -123.456 32
@@ -1320,7 +1320,7 @@ stdio_test$309:	; Parameter 10 -123.456 32
 1010:	
 
 stdio_test$310:	; PushFloat -123.456
-1011:		fld qword [@11879$float8$minus123.456#]
+1011:		fld qword [@11845$float8$minus123.456#]
 1013:	
 
 stdio_test$311:	; Parameter 10 -123.456 40
@@ -1343,11 +1343,11 @@ stdio_test$314:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.S
 1028:	
 
 stdio_test$315:	; Parameter 10 string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A# 6
-1029:		mov word [bp + 16], @11881$string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A#
+1029:		mov word [bp + 16], @11847$string_3C2562E3lf3E203C2562E3le3E203C2562E3lE3E203C2562E3lg3E203C2562E3lG3E0A0A#
 1031:	
 
 stdio_test$316:	; PushFloat -123.456
-1032:		fld qword [@11882$float8$minus123.456#]
+1032:		fld qword [@11848$float8$minus123.456#]
 1034:	
 
 stdio_test$317:	; Parameter 10 -123.456 8
@@ -1355,7 +1355,7 @@ stdio_test$317:	; Parameter 10 -123.456 8
 1037:	
 
 stdio_test$318:	; PushFloat -123.456
-1038:		fld qword [@11883$float8$minus123.456#]
+1038:		fld qword [@11849$float8$minus123.456#]
 1040:	
 
 stdio_test$319:	; Parameter 10 -123.456 16
@@ -1363,7 +1363,7 @@ stdio_test$319:	; Parameter 10 -123.456 16
 1043:	
 
 stdio_test$320:	; PushFloat -123.456
-1044:		fld qword [@11884$float8$minus123.456#]
+1044:		fld qword [@11850$float8$minus123.456#]
 1046:	
 
 stdio_test$321:	; Parameter 10 -123.456 24
@@ -1371,7 +1371,7 @@ stdio_test$321:	; Parameter 10 -123.456 24
 1049:	
 
 stdio_test$322:	; PushFloat -123.456
-1050:		fld qword [@11885$float8$minus123.456#]
+1050:		fld qword [@11851$float8$minus123.456#]
 1052:	
 
 stdio_test$323:	; Parameter 10 -123.456 32
@@ -1379,7 +1379,7 @@ stdio_test$323:	; Parameter 10 -123.456 32
 1055:	
 
 stdio_test$324:	; PushFloat -123.456
-1056:		fld qword [@11886$float8$minus123.456#]
+1056:		fld qword [@11852$float8$minus123.456#]
 1058:	
 
 stdio_test$325:	; Parameter 10 -123.456 40
@@ -1414,7 +1414,7 @@ stdio_test$331:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.S
 1082:	
 
 stdio_test$332:	; Parameter 12 string_Please20write20three20integers3A20# 6
-1083:		mov word [bp + 18], @11897$string_Please20write20three20integers3A20#
+1083:		mov word [bp + 18], @11863$string_Please20write20three20integers3A20#
 1085:	
 
 stdio_test$333:	; Call 12 printf 0
@@ -1432,37 +1432,37 @@ stdio_test$335:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.S
 1096:	
 
 stdio_test$336:	; Parameter 12 string_1232045620789# 6
-1097:		mov word [bp + 18], @11899$string_1232045620789#
+1097:		mov word [bp + 18], @11865$string_1232045620789#
 1099:	
 
 stdio_test$337:	; Parameter 12 string_25i20252Ai2025i2025n# 8
-1100:		mov word [bp + 20], @11900$string_25i20252Ai2025i2025n#
+1100:		mov word [bp + 20], @11866$string_25i20252Ai2025i2025n#
 1102:	
 
-stdio_test$338:	; address £temporary5568 a
+stdio_test$338:	; address £temporary5552 a
 1103:		mov si, bp
 1104:		add si, 6
 1106:	
 
-stdio_test$339:	; Parameter 12 £temporary5568 10
+stdio_test$339:	; Parameter 12 £temporary5552 10
 1107:		mov [bp + 22], si
 1109:	
 
-stdio_test$340:	; address £temporary5569 b
+stdio_test$340:	; address £temporary5553 b
 1110:		mov si, bp
 1111:		add si, 8
 1113:	
 
-stdio_test$341:	; Parameter 12 £temporary5569 12
+stdio_test$341:	; Parameter 12 £temporary5553 12
 1114:		mov [bp + 24], si
 1116:	
 
-stdio_test$342:	; address £temporary5570 n
+stdio_test$342:	; address £temporary5554 n
 1117:		mov si, bp
 1118:		add si, 10
 1120:	
 
-stdio_test$343:	; Parameter 12 £temporary5570 14
+stdio_test$343:	; Parameter 12 £temporary5554 14
 1121:		mov [bp + 26], si
 1123:	
 
@@ -1482,7 +1482,7 @@ stdio_test$346:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.S
 1135:	
 
 stdio_test$347:	; Parameter 12 string_3C25i3E203C25i3E203C25i3E0A# 6
-1136:		mov word [bp + 18], @11905$string_3C25i3E203C25i3E203C25i3E0A#
+1136:		mov word [bp + 18], @11871$string_3C25i3E203C25i3E203C25i3E0A#
 1138:	
 
 stdio_test$348:	; Parameter 12 a 8
@@ -1516,7 +1516,7 @@ stdio_test$353:	; CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.
 1162:	
 
 stdio_test$354:	; Parameter 106 string_Please20write20the20patterns205Babc5D3A20# 6
-1163:		mov word [bp + 112], @11910$string_Please20write20the20patterns205Babc5D3A20#
+1163:		mov word [bp + 112], @11876$string_Please20write20the20patterns205Babc5D3A20#
 1165:	
 
 stdio_test$355:	; Call 106 printf 0
@@ -1534,11 +1534,11 @@ stdio_test$357:	; CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.
 1176:	
 
 stdio_test$358:	; Parameter 106 string_abcdef# 6
-1177:		mov word [bp + 112], @11912$string_abcdef#
+1177:		mov word [bp + 112], @11878$string_abcdef#
 1179:	
 
 stdio_test$359:	; Parameter 106 string_255Babc5D# 8
-1180:		mov word [bp + 114], @11913$string_255Babc5D#
+1180:		mov word [bp + 114], @11879$string_255Babc5D#
 1182:	
 
 stdio_test$360:	; Parameter 106 s 10
@@ -1562,7 +1562,7 @@ stdio_test$363:	; CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.
 1198:	
 
 stdio_test$364:	; Parameter 106 string_3C25s3E0A# 6
-1199:		mov word [bp + 112], @11915$string_3C25s3E0A#
+1199:		mov word [bp + 112], @11881$string_3C25s3E0A#
 1201:	
 
 stdio_test$365:	; Parameter 106 s 8
@@ -1586,7 +1586,7 @@ stdio_test$368:	; CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.
 1217:	
 
 stdio_test$369:	; Parameter 106 string_Please20write20the20patterns205B5Eabc5D3A20# 6
-1218:		mov word [bp + 112], @11917$string_Please20write20the20patterns205B5Eabc5D3A20#
+1218:		mov word [bp + 112], @11883$string_Please20write20the20patterns205B5Eabc5D3A20#
 1220:	
 
 stdio_test$370:	; Call 106 printf 0
@@ -1604,11 +1604,11 @@ stdio_test$372:	; CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.
 1231:	
 
 stdio_test$373:	; Parameter 106 string_defabc# 6
-1232:		mov word [bp + 112], @11919$string_defabc#
+1232:		mov word [bp + 112], @11885$string_defabc#
 1234:	
 
 stdio_test$374:	; Parameter 106 string_255B5Eabc5D# 8
-1235:		mov word [bp + 114], @11920$string_255B5Eabc5D#
+1235:		mov word [bp + 114], @11886$string_255B5Eabc5D#
 1237:	
 
 stdio_test$375:	; Parameter 106 s 10
@@ -1632,7 +1632,7 @@ stdio_test$378:	; CallHeader 106 System.Collections.Generic.HashSet`1[CCompiler.
 1253:	
 
 stdio_test$379:	; Parameter 106 string_3C25s3E0A0A# 6
-1254:		mov word [bp + 112], @11922$string_3C25s3E0A0A#
+1254:		mov word [bp + 112], @11888$string_3C25s3E0A0A#
 1256:	
 
 stdio_test$380:	; Parameter 106 s 8

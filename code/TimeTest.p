@@ -1,10 +1,10 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.h,0$
+   
+   
 
-
-
-
-
-
+    
+     
+    
 
 struct tm {
 int tm_sec ;
@@ -31,19 +31,20 @@ extern struct tm * localtime ( const unsigned long * time ) ;
 extern int strftime ( char * buffer , int size , const char * format ,
 const struct tm * timeStruct ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\TimeTest.c,0$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\TimeTest.c,1$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+   
+   
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-
-
-
-
-
+    
+    
 
 
 
@@ -78,12 +79,13 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
+  
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
+   
+   
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -99,44 +101,47 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
+   
+   
+
+     
+                         
+                    
+               
+      
+
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+   
+   
 
+          
+    
+    
+    
+    
 
-
-
-
-
-
-
-
-
+  
 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
+   
+   
 
+    
+    
 
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-
-
-
-
-
-
-
-
+    
+    
 
 typedef struct {
 int open ;
@@ -153,7 +158,7 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-
+          
 
 int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
@@ -185,30 +190,32 @@ int feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-
-
-
-
-
+    
+    
 
 FILE * tmpfile ( void ) ;
 char * tmpnam ( char name [ 4 ] ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
+    
+    
 
-
-
-
-
-
-
+    
 
 int scanf ( const char * format , ... ) ;
 int vscanf ( const char * format , char * arg_list ) ;
@@ -217,15 +224,16 @@ int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
 int vsscanf ( char * inString , const char * format , char * arg_list ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-
-
-
-
-
+    
+    
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -241,19 +249,21 @@ int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
 int vsprintf ( char * outString , const char * format , char * arg_list ) ;
 
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+       
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\TimeTest.c,1$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
+   
+   
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\TimeTest.c,2$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
-
-
-
-
-
+    
+          
 
 double atof ( const char * s ) ;
 int atoi ( const char * s ) ;
@@ -275,8 +285,8 @@ void exit ( int status ) ;
 typedef void ( * FUNC_PTR ) ( void ) ;
 int atexit ( FUNC_PTR fcn ) ;
 
-
-
+    
+    
 
 int abs ( int value ) ;
 long labs ( long value ) ;
@@ -306,14 +316,15 @@ long quot , rem ;
 } ldiv_t ;
 
 ldiv_t ldiv ( long num , long denum ) ;
+  
 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\TimeTest.c,2$
+       
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,0$
+   
+   
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\TimeTest.c,3$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,1$
-
-
-
-
+    
 
 extern char * strcpy ( char * target , const char * source ) ;
 extern char * strncpy ( char * target , const char * source , int size ) ;
@@ -336,26 +347,27 @@ extern int memcmp ( const void * left , const void * right , int size ) ;
 extern void * memchr ( const void * block , int i , int size ) ;
 extern void * memset ( void * block , int i , int size ) ;
 
+  
 
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\TimeTest.c,4$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\TimeTest.c,3$
+       
 
 int struct_to_time ( struct tm * tp ) ;
 void time_to_struct ( unsigned long t , struct tm * tp ) ;
 
 void time_test ( void ) {
-char * weekdays [] = { "\123\165\156" , "\115\157\156" , "\124\165\145" , "\127\145\144" , "\124\150\165" , "\106\162\151" , "\123\141\164" };
+char * weekdays [] = { "Sun" , "Mon" , "Tue" , "Wed" , "Thu" , "Fri" , "Sat" };
 
 { unsigned long now1 = time ( ( ( void * ) 0 ) ) ;
 struct tm s = * gmtime ( & now1 ) , t = * localtime ( & now1 ) ;
 unsigned long now2 = mktime ( & s ) ;
 
-printf ( "\156\157\167\040\061\072\040\045\154\165\012" , now1 ) ;
-printf ( "\156\157\167\040\062\072\040\045\154\165\012" , now2 ) ;
+printf ( "now 1: %lu\n" , now1 ) ;
+printf ( "now 2: %lu\n" , now2 ) ;
 
-printf ( "\040\040\040\147\155\040\164\151\155\145\072\040\045\163\040\045\060\062\151\055\045\060\062\151\055\045\060\062\151\040\045\060\062\151\072\045\060\062\151\072\045\060\062\151\054\040\171\145\141\162\040\144\141\171\040\045\151\054\040\167\145\145\153\040\144\141\171\040\045\151\054\040\144\141\171\154\151\147\150\164\040\163\141\166\151\156\147\040\164\151\155\145\040\045\151\012" , weekdays [ s . tm_wday ] , 1900 + s . tm_year ,
+printf ( "   gm time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i\n" , weekdays [ s . tm_wday ] , 1900 + s . tm_year ,
 s . tm_mon + 1 , s . tm_mday , s . tm_hour , s . tm_min , s . tm_sec , s . tm_yday , s . tm_wday , s . tm_isdst ) ;
-printf ( "\154\157\143\141\154\040\164\151\155\145\072\040\045\163\040\045\060\062\151\055\045\060\062\151\055\045\060\062\151\040\045\060\062\151\072\045\060\062\151\072\045\060\062\151\054\040\171\145\141\162\040\144\141\171\040\045\151\054\040\167\145\145\153\040\144\141\171\040\045\151\054\040\144\141\171\154\151\147\150\164\040\163\141\166\151\156\147\040\164\151\155\145\040\045\151\012" , weekdays [ t . tm_wday ] , 1900 + t . tm_year ,
+printf ( "local time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i\n" , weekdays [ t . tm_wday ] , 1900 + t . tm_year ,
 t . tm_mon + 1 , t . tm_mday , t . tm_hour , t . tm_min , t . tm_sec , t . tm_yday , t . tm_wday , t . tm_isdst ) ;
 
 { char buffer1 [ 100 ] , buffer2 [ 100 ];
@@ -364,10 +376,10 @@ int i ;
 
 strcpy ( buffer1 , asctime ( & s ) ) ;
 strcpy ( buffer2 , ctime ( & now1 ) ) ;
-printf ( "\141\163\143\164\151\155\145\040\074\045\163\076\054\040\143\164\151\155\145\040\074\045\163\076\012" , buffer1 , buffer2 ) ;
+printf ( "asctime <%s>, ctime <%s>\n" , buffer1 , buffer2 ) ;
 
-i = strftime ( buffer , 300 , "\163\150\157\162\164\040\144\141\171\040\045\141\054\040\154\157\156\147\040\144\141\171\040\045\101\054\040\163\150\157\162\164\040\155\157\156\164\150\040\045\142\054\040\154\157\156\147\040\155\157\156\164\150\040\045\102\054\040\144\141\164\145\055\164\151\155\145\040\045\143\054\040\155\144\141\171\040\045\144\054\040\150\157\165\162\040\045\110\054\040\147\155\040\150\157\165\162\040\045\111\054\040\171\144\141\171\040\045\152\054\040\155\157\156\164\150\040\045\155\054\040\155\151\156\040\045\115\054\040\141\155\057\160\155\040\045\160\054\040\163\145\143\040\045\123\054\040\167\145\145\153\040\156\165\155\142\145\162\040\163\165\156\040\045\125\054\040\167\145\145\153\040\144\141\171\040\045\167\054\040\167\145\145\153\040\156\165\155\142\145\162\040\155\157\156\040\045\127\054\040\144\141\164\145\040\045\170\054\040\164\151\155\145\040\045\130\054\040\163\150\157\162\164\040\171\145\141\162\040\045\171\054\040\154\157\156\147\040\171\145\141\162\040\045\131" , & t ) ;
-printf ( "\163\164\162\146\164\151\155\145\040\045\151\040\045\151\040\074\045\163\076\012" , i , strlen ( buffer ) , buffer ) ;
+i = strftime ( buffer , 300 , "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y" , & t ) ;
+printf ( "strftime %i %i <%s>\n" , i , strlen ( buffer ) , buffer ) ;
 }
 
 
@@ -455,4 +467,3 @@ printf ( "\163\164\162\146\164\151\155\145\040\045\151\040\045\151\040\074\045\1
 
 
 }
-
