@@ -653,12 +653,12 @@ fileexists "File.h": Yes
 fileexists "File.y": No
 fileexists "File.p": Yes
 fileexists "File.z": No
-now 1: 1609015028
-now 2: 1609015028
-   gm time: Sat 2020-12-26 20:37:08, year day 360, week day 6, daylight saving time -1
-local time: Sat 2020-12-26 21:37:08, year day 360, week day 6, daylight saving time -1
-asctime <Sat Dec 26 20:37:08 2020>, ctime <Sat Dec 26 21:37:08 2020>
-strftime 291 291 <short day Sat, long day Saturday, short month Dec, long month December, date-time 2020-12-26 21:37:08, mday 26, hour 21, gm hour 09, yday 360, month 12, min 37, am/pm PM, sec 08, week number sun 00, week day 06, week number mon 00, date 21:37:08, time 21:37:08, short year 20, long year 2020>
+now 1: 1609147996
+now 2: 1609147996
+   gm time: Mon 2020-12-28 09:33:16, year day 362, week day 1, daylight saving time -1
+local time: Mon 2020-12-28 10:33:16, year day 362, week day 1, daylight saving time -1
+asctime <Mon Dec 28 09:33:16 2020>, ctime <Mon Dec 28 10:33:16 2020>
+strftime 289 289 <short day Mon, long day Monday, short month Dec, long month December, date-time 2020-12-28 10:33:16, mday 28, hour 10, gm hour 10, yday 362, month 12, min 33, am/pm AM, sec 16, week number sun 00, week day 01, week number mon 00, date 10:33:16, time 10:33:16, short year 20, long year 2020>
 Heap:
   Address 7411020, Size 96
   Address 7410912, Size 96
