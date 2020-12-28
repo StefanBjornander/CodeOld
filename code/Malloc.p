@@ -145,35 +145,35 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
  
  
  
-         
-         
-         
+        
+        
+        
  
-            
-            
-             
- 
-         
-             
+           
+           
             
  
-         
-         
-         
- 
-         
-         
-         
- 
-         
-         
-         
+        
             
+           
  
-         
-         
-         
-         
+        
+        
+        
+ 
+        
+        
+        
+ 
+        
+        
+        
+           
+ 
+        
+        
+        
+        
  
    
  
@@ -183,19 +183,19 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
     
     
  
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
  
    
  
@@ -206,9 +206,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
     
  
       
-                          
-                                     
-       
+                         
+                                    
+      
  
    
  
@@ -253,7 +253,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
  extern enum { SEEK_SET , SEEK_CUR , SEEK_END }; 
  extern enum { READ , WRITE , READ_WRITE }; 
  
-           
+         
  
  int fileexists ( const char * name ) ; 
  FILE * fopen ( const char * filename , const char * mode ) ; 
@@ -358,9 +358,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
     
  
       
-                          
-                                     
-       
+                         
+                                    
+      
  
    
  
@@ -502,65 +502,65 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
      
            
  
-          
-          
-          
- 
-              
-                 
-                  
- 
-       
+         
+         
          
  
-           
-          
- 
-       
-        
- 
-           
-        
- 
-     
-     
- 
-        
-        
- 
-         
              
-            
+                
+                 
+ 
+      
+        
+ 
+          
          
  
-              
+      
+       
+ 
+           
+       
+ 
+     
+     
+ 
+       
+       
+ 
+        
+            
+           
+        
+ 
+             
                  
-               
+              
        
                  
  
-        
-        
+       
+       
  
     
       
     
  
-           
+          
  
     
       
     
  
-           
+          
    
  
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,5$
         
-                                  
+                               
  
    
-       
+      
    
  
    
@@ -586,12 +586,12 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,8$
  ( ( unsigned int ) memorySize ) , minGap = 0 ; 
  
     
-       
+ unsigned int lastAddress = 65528u ; 
    
  
     
  
- unsigned int lastAddress = ( unsigned int ) ( stack_top + 1048572u ) ; 
+               
  
    
  
@@ -641,11 +641,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,8$
  unsigned int newAddress = lastAddress - newBlockSize ; 
  
     
-       
+ unsigned int stackTop = register_bp ; 
    
  
     
- unsigned int stackTop = register_rbp ; 
+       
    
  
  
@@ -838,12 +838,12 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c,8$
  
  
     
-        
+ { unsigned int lastAddress = 65528u ; 
    
  
     
  
- { unsigned int lastAddress = ( unsigned int ) ( stack_top + 1048572u ) ; 
+                
  
    
  

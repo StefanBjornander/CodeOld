@@ -136,9 +136,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
     
  
       
-                          
-                                     
-       
+                         
+                                    
+      
  
    
  
@@ -265,35 +265,35 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
  
  
  
-         
-         
-         
+        
+        
+        
  
-            
-            
-             
- 
-         
-             
+           
+           
             
  
-         
-         
-         
- 
-         
-         
-         
- 
-         
-         
-         
+        
             
+           
  
-         
-         
-         
-         
+        
+        
+        
+ 
+        
+        
+        
+ 
+        
+        
+        
+           
+ 
+        
+        
+        
+        
  
    
  
@@ -303,19 +303,19 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
     
     
  
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
  
    
  
@@ -326,9 +326,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
     
  
       
-                          
-                                     
-       
+                         
+                                    
+      
  
    
  
@@ -373,7 +373,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
  extern enum { SEEK_SET , SEEK_CUR , SEEK_END }; 
  extern enum { READ , WRITE , READ_WRITE }; 
  
-           
+         
  
  int fileexists ( const char * name ) ; 
  FILE * fopen ( const char * filename , const char * mode ) ; 
@@ -887,15 +887,15 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,7$
  
  void abort ( void ) { 
     
-     
-         
-      
+ register_ah = 0x4Cs ; 
+ register_al = ( unsigned char ) -1 ; 
+ interrupt ( 0x21s ) ; 
    
  
     
- register_rax = 60L ; 
- register_rdi = ( unsigned long ) -1 ; 
- syscall ( ) ; 
+     
+         
+    
    
  } 
  
@@ -1001,15 +1001,15 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLib.c,7$
  } 
  
     
-        
-     
-      
+ register_al = ( short ) status ; 
+ register_ah = 0x4Cs ; 
+ interrupt ( 0x21s ) ; 
    
  
     
- register_rax = 60L ; 
- register_rdi = ( unsigned long ) status ; 
- syscall ( ) ; 
+     
+         
+    
    
  } 
  

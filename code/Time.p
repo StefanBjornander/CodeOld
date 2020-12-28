@@ -110,9 +110,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
     
  
       
-                          
-                                     
-       
+                         
+                                    
+      
  
    
  
@@ -157,7 +157,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
  extern enum { SEEK_SET , SEEK_CUR , SEEK_END }; 
  extern enum { READ , WRITE , READ_WRITE }; 
  
-           
+         
  
  int fileexists ( const char * name ) ; 
  FILE * fopen ( const char * filename , const char * mode ) ; 
@@ -409,65 +409,65 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
      
            
  
-          
-          
-          
- 
-              
-                 
-                  
- 
-       
+         
+         
          
  
-           
-          
- 
-       
-        
- 
-           
-        
- 
-     
-     
- 
-        
-        
- 
-         
              
-            
+                
+                 
+ 
+      
+        
+ 
+          
          
  
-              
+      
+       
+ 
+           
+       
+ 
+     
+     
+ 
+       
+       
+ 
+        
+            
+           
+        
+ 
+             
                  
-               
+              
        
                  
  
-        
-        
+       
+       
  
     
       
     
  
-           
+          
  
     
       
     
  
-           
+          
    
  
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\assert.h,5$
         
-                                  
+                               
  
    
-       
+      
    
  
    
@@ -497,46 +497,46 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.c,5$
  unsigned long time ; 
  
     
- register_rax = 201L ; 
- register_rdi = ( unsigned long ) & time ; 
- syscall ( ) ; 
+     
+          
+    
    
  
     
-    
-      
-        
+ int year ; 
+ short month , monthDay ; 
+ short hour , min , sec ; 
  
-     
-      
-       
-       
-     
+ register_ah = 0x2As ; 
+ interrupt ( 0x21s ) ; 
+ year = register_cx - 1900 ; 
+ month = register_dh - 1s ; 
+ monthDay = register_dl ; 
  
-     
-      
-     
-     
-     
+ register_ah = 0x2Cs ; 
+ interrupt ( 0x21s ) ; 
+ hour = register_ch ; 
+ min = register_cl ; 
+ sec = register_dh ; 
  
-           
-        
-       
-  
-  
+ { struct lconv * localeConvPtr = localeconv ( ) ; 
+ if ( localeConvPtr != ( ( void * ) 0 ) ) { 
+ hour -= localeConvPtr -> winterTimeZone ; 
+ } 
+ } 
  
-                     
-                   
-          
+ { const int daysOfMonths [] = { 31 , isLeapYear ( year ) ? 29 : 28 , 31 , 
+ 30 , 31 , 30 , 31 , 31 , 30 , 31 , 30 , 31 }; 
+ int yearDay = monthDay - 1 , monthIndex ; 
  
-               
-       
-  
+ for ( monthIndex = 0 ; monthIndex < month ; ++ monthIndex ) { 
+ yearDay += daysOfMonths [ monthIndex ]; 
+ } 
  
-                         
-         
-  
-  
+ { struct tm s = { sec , min , hour , monthDay , month , year , 0 , yearDay , 0 }; 
+ time = mktime ( & s ) ; 
+ } 
+ } 
    
  
  if ( timePtr != ( ( void * ) 0 ) ) { 

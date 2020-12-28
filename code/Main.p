@@ -149,9 +149,9 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
     
  
       
-                          
-                                     
-       
+                         
+                                    
+      
  
    
  
@@ -196,7 +196,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
  extern enum { SEEK_SET , SEEK_CUR , SEEK_END }; 
  extern enum { READ , WRITE , READ_WRITE }; 
  
-           
+         
  
  int fileexists ( const char * name ) ; 
  FILE * fopen ( const char * filename , const char * mode ) ; 
@@ -306,35 +306,35 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
  
  
  
-         
-         
-         
+        
+        
+        
  
-            
-            
-             
- 
-         
-             
+           
+           
             
  
-         
-         
-         
- 
-         
-         
-         
- 
-         
-         
-         
+        
             
+           
  
-         
-         
-         
-         
+        
+        
+        
+ 
+        
+        
+        
+ 
+        
+        
+        
+           
+ 
+        
+        
+        
+        
  
    
  
@@ -467,65 +467,65 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
      
            
  
-          
-          
-          
- 
-              
-                 
-                  
- 
-       
+         
+         
          
  
-           
-          
- 
-       
-        
- 
-           
-        
- 
-     
-     
- 
-        
-        
- 
-         
              
-            
+                
+                 
+ 
+      
+        
+ 
+          
          
  
-              
+      
+       
+ 
+           
+       
+ 
+     
+     
+ 
+       
+       
+ 
+        
+            
+           
+        
+ 
+             
                  
-               
+              
        
                  
  
-        
-        
+       
+       
  
     
       
     
  
-           
+          
  
     
       
     
  
-           
+          
    
  
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Assert.h,5$
         
-                                  
+                               
  
    
-       
+      
    
  
    
