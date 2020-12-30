@@ -156,15 +156,15 @@ int atexit ( FUNC_PTR fcn ) ;
 int abs ( int value ) ;
 long labs ( long value ) ;
 
-void * malloc ( int size ) ;
-void * realloc ( void * ptr , int newSize ) ;
-void * calloc ( int num , int size ) ;
+void * malloc ( int  size ) ;
+void * realloc ( void * ptr , int  newSize ) ;
+void * calloc ( int  num , int  size ) ;
 void free ( void * ptr ) ;
 
-void qsort ( void * valueList , int listSize , int valueSize ,
+void qsort ( void * valueList , int  listSize , int  valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 void * bsearch ( const void * key , const void * valueList ,
-int listSize , int valueSize ,
+int  listSize , int  valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
 int abs ( int value ) ;
@@ -198,7 +198,7 @@ term = power / faculty ;
 sum += term ;
 power *= x ;
 faculty *= ++ index ;
-} while ( fabs ( term ) >= 1e-9 ) ;
+} while ( fabs ( term ) >= 1e-9  ) ;
 
 return sum ;
 }
@@ -209,13 +209,13 @@ int n = 0 ;
 
 if ( x > 1 ) {
 while ( x > 1 ) {
-x /= 2.71 ;
+x /= 2.71  ;
 ++ n ;
 }
 }
-else if ( x < 0.368 ) {
-while ( x < 0.368 ) {
-x *= 2.71 ;
+else if ( x < 0.368  ) {
+while ( x < 0.368  ) {
+x *= 2.71  ;
 -- n ;
 }
 }
@@ -228,7 +228,7 @@ term = sign * power / index ++;
 sum += term ;
 power *= x_minus_1 ;
 sign *= -1.0 ;
-} while ( fabs ( term ) >= 1e-9 ) ;
+} while ( fabs ( term ) >= 1e-9  ) ;
 
 return sum + n ;
 }
@@ -243,7 +243,7 @@ return 0 ;
 
 
 double log10 ( double x ) {
-return log ( x ) / 2.30 ;
+return log ( x ) / 2.30  ;
 }
 
 double pow ( double x , double y ) {
@@ -280,7 +280,7 @@ return x * pow ( 2 , n ) ;
 
 
 static log2 ( double x ) {
-return log ( x ) / 0.693 ;
+return log ( x ) / 0.693  ;
 }
 
 double frexp ( double x , int * p ) {
@@ -291,14 +291,14 @@ if ( pow ( 2 , exponent ) < x ) {
 ++ exponent ;
 }
 
-if ( p != ( ( void * ) 0 ) ) {
+if ( p != ( ( void * ) 0 )  ) {
 * p = exponent ;
 }
 
 return ( x / pow ( 2 , exponent ) ) ;
 }
 else {
-if ( p != ( ( void * ) 0 ) ) {
+if ( p != ( ( void * ) 0 )  ) {
 * p = 0 ;
 }
 
@@ -313,7 +313,7 @@ double root_i , root_i_plus_1 = 1 ;
 do {
 root_i = root_i_plus_1 ;
 root_i_plus_1 = ( root_i + ( x / root_i ) ) / 2 ;
-} while ( fabs ( root_i_plus_1 - root_i ) >= 1e-9 ) ;
+} while ( fabs ( root_i_plus_1 - root_i ) >= 1e-9  ) ;
 
 return root_i_plus_1 ;
 }
@@ -328,7 +328,7 @@ double abs_x = fabs ( x ) ,
 integral = ( double ) ( ( long ) abs_x ) ,
 fractional = abs_x - integral ;
 
-if ( p != ( ( void * ) 0 ) ) {
+if ( p != ( ( void * ) 0 )  ) {
 * p = ( x > 0 ) ? integral : - integral ;
 }
 
@@ -347,8 +347,8 @@ return 0 ;
 }
 
 double sin ( double x ) {
-if ( fabs ( x ) > ( 2 * 3.14 ) ) {
-x = fmod ( x , 2 * 3.14 ) ;
+if ( fabs ( x ) > ( 2 * 3.14  ) ) {
+x = fmod ( x , 2 * 3.14  ) ;
 }
 
 { double index = 1 , term , sum = 0 , sign = 1 , power = x , faculty = 1 ;
@@ -359,15 +359,15 @@ sum += term ;
 sign *= -1 ;
 power *= x * x ;
 faculty *= ++ index * ++ index ;
-} while ( fabs ( term ) >= 1e-9 ) ;
+} while ( fabs ( term ) >= 1e-9  ) ;
 
 return sum ;
 }
 }
 
 double cos ( double x ) {
-if ( fabs ( x ) > ( 2 * 3.14 ) ) {
-x = fmod ( x , 2 * 3.14 ) ;
+if ( fabs ( x ) > ( 2 * 3.14  ) ) {
+x = fmod ( x , 2 * 3.14  ) ;
 }
 
 { double index = 0 , term , sum = 0 , sign = 1 , power = 1 , faculty = 1 ;
@@ -378,7 +378,7 @@ sum += term ;
 sign *= -1 ;
 power *= x * x ;
 faculty *= ++ index * ++ index ;
-} while ( fabs ( term ) >= 1e-9 ) ;
+} while ( fabs ( term ) >= 1e-9  ) ;
 
 return sum ;
 }
@@ -398,7 +398,7 @@ return 0 ;
 
 double asin ( double x ) {
 if ( x == 1 ) {
-return 3.14 / 2 ;
+return 3.14  / 2 ;
 }
 else if ( x < 0 ) {
 return - asin ( - x ) ;
@@ -414,10 +414,10 @@ return 0 ;
 
 double acos ( double x ) {
 if ( x == 0 ) {
-return 3.14 / 2 ;
+return 3.14  / 2 ;
 }
 else if ( x < 0 ) {
-return 3.14 - acos ( - x ) ;
+return 3.14  - acos ( - x ) ;
 }
 else if ( x <= 1 ) {
 return atan ( sqrt ( 1 - ( x * x ) ) / x ) ;
@@ -433,7 +433,7 @@ if ( x < 0 ) {
 return - atan ( - x ) ;
 }
 else if ( x > 1 ) {
-return 3.14 / 2 - atan ( 1 / x ) ;
+return 3.14  / 2 - atan ( 1 / x ) ;
 }
 else if ( x > 0.5 ) {
 return 2 * atan ( x / ( 1 + sqrt ( 1 + ( x * x ) ) ) ) ;
@@ -447,7 +447,7 @@ sum += term ;
 sign = - sign ;
 product *= x * x ;
 denominator += 2 ;
-} while ( fabs ( term ) >= 1e-9 ) ;
+} while ( fabs ( term ) >= 1e-9  ) ;
 
 return sum ;
 }
@@ -458,16 +458,16 @@ if ( y > 0 ) {
 return atan ( x / y ) ;
 }
 else if ( ( x >= 0 ) && ( y < 0 ) ) {
-return 3.14 + atan ( x / y ) ;
+return 3.14  + atan ( x / y ) ;
 }
 else if ( ( x < 0 ) && ( y < 0 ) ) {
-return ( - 3.14 ) + atan ( x / y ) ;
+return ( - 3.14  ) + atan ( x / y ) ;
 }
 else if ( ( x > 0 ) && ( y == 0 ) ) {
-return 3.14 / 2 ;
+return 3.14  / 2 ;
 }
 else if ( ( x < 0 ) && ( y == 0 ) ) {
-return ( - 3.14 ) / 2 ;
+return ( - 3.14  ) / 2 ;
 }
 else {
 errno = EDOM ;

@@ -139,12 +139,12 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
      
 
 typedef struct {
-int open ;
+int  open ;
 unsigned int handle ;
-char name [ 16 ] , ungetc ;
+char name [ 16  ] , ungetc ;
 int errno ;
 unsigned int position , size ;
-int temporary ;
+int  temporary ;
 } FILE ;
 
 extern FILE * stdin , * stdout , * stderr ;
@@ -155,14 +155,14 @@ extern enum { READ , WRITE , READ_WRITE };
 
          
 
-int fileexists ( const char * name ) ;
+int  fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
 FILE * freopen ( const char * filename , const char * mode , FILE * stream ) ;
 int fflush ( FILE * stream ) ;
 int fclose ( FILE * stream ) ;
 int remove ( const char * name ) ;
 int rename ( const char * oldName , const char * newName ) ;
-int setvbuf ( FILE * stream , char * buffer , int mode , int size ) ;
+int setvbuf ( FILE * stream , char * buffer , int mode , int  size ) ;
 void setbuf ( FILE * stream , char * buffer ) ;
 int fgetc ( FILE * stream ) ;
 char * fgets ( char * s , int n , FILE * stream ) ;
@@ -173,15 +173,15 @@ char * gets ( char * s ) ;
 int putchar ( int c ) ;
 int puts ( const char * s ) ;
 int ungetc ( int c , FILE * stream ) ;
-int fread ( void * ptr , int size , int nobj , FILE * stream ) ;
-int fwrite ( const void * ptr , int size , int nobj , FILE * stream ) ;
+int  fread ( void * ptr , int  size , int  nobj , FILE * stream ) ;
+int  fwrite ( const void * ptr , int  size , int  nobj , FILE * stream ) ;
 int fseek ( FILE * stream , int offset , int origin ) ;
 int ftell ( FILE * stream ) ;
 void rewind ( FILE * stream ) ;
-int fgetpos ( FILE * stream , int * ptr ) ;
-int fsetpos ( FILE * stream , const int * ptr ) ;
+int fgetpos ( FILE * stream , int  * ptr ) ;
+int fsetpos ( FILE * stream , const int  * ptr ) ;
 void clearerr ( FILE * stream ) ;
-int feof ( FILE * stream ) ;
+int  feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
@@ -197,7 +197,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
      
 
 FILE * tmpfile ( void ) ;
-char * tmpnam ( char name [ 4 ] ) ;
+char * tmpnam ( char name [ 4  ] ) ;
 
    
  
@@ -213,11 +213,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
      
 
 int scanf ( const char * format , ... ) ;
-int vscanf ( const char * format , char * arg_list ) ;
+int vscanf ( const char * format , char *  arg_list ) ;
 int fscanf ( FILE * inStream , const char * format , ... ) ;
-int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
+int vfscanf ( FILE * inStream , const char * format , char *  arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
-int vsscanf ( char * inString , const char * format , char * arg_list ) ;
+int vsscanf ( char * inString , const char * format , char *  arg_list ) ;
 
    
  
@@ -238,11 +238,11 @@ int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
 int printf ( const char * format , ... ) ;
-int vprintf ( const char * format , char * arg_list ) ;
+int vprintf ( const char * format , char *  arg_list ) ;
 int fprintf ( FILE * outStream , const char * format , ... ) ;
-int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
+int vfprintf ( FILE * outStream , const char * format , char *  arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
-int vsprintf ( char * outString , const char * format , char * arg_list ) ;
+int vsprintf ( char * outString , const char * format , char *  arg_list ) ;
 
    
  
@@ -256,46 +256,46 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Signal.c,2$
 
 void signal ( int sig , handler func ) { 
     
- printf ( "Signal %i function %p\n" , sig , func ) ;
-register_al = ( short ) sig ;
-register_ah = 0x25s ;
-register_dx = func ;
+        
+      
+   
+   
 
 
 
-interrupt ( 0x21s ) ;
-printf ( "Signal done\n" ) ; 
+   
+    
    
    
  }
 
 int raise ( int sig ) { 
     
- printf ( "\nRaise signal %i\n" , sig ) ;
-register_al = ( short ) sig ;
-register_ah = 0x35s ;
-
-
-interrupt ( 0x21s ) ;
-
-{ handler func = register_bx ;
-
-printf ( "Raise function %p\n" , func ) ; 
+      
+      
    
-       
+
+
    
- if ( func == ( ( handler ) 0 ) ) {
+
+     
+
+      
+   
+ { handler func = ( ( void * ) 0 )  ; 
+   
+ if ( func == ( ( handler ) 0 )  ) {
 printf ( "Raise default\n" ) ;
-return 1 ;
+return 1  ;
 }
-else if ( func == ( ( handler ) 0 ) ) {
+else if ( func == ( ( handler ) 0 )  ) {
 printf ( "Raise error\n" ) ;
-return 0 ;
+return 0  ;
 }
 else {
 printf ( "Raise function, calling %i with %i\n" , func , sig ) ;
 func ( sig ) ;
-return 1 ;
+return 1  ;
 }
 }
 } 

@@ -106,12 +106,12 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
      
 
 typedef struct {
-int open ;
+int  open ;
 unsigned int handle ;
-char name [ 16 ] , ungetc ;
+char name [ 16  ] , ungetc ;
 int errno ;
 unsigned int position , size ;
-int temporary ;
+int  temporary ;
 } FILE ;
 
 extern FILE * stdin , * stdout , * stderr ;
@@ -122,14 +122,14 @@ extern enum { READ , WRITE , READ_WRITE };
 
          
 
-int fileexists ( const char * name ) ;
+int  fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
 FILE * freopen ( const char * filename , const char * mode , FILE * stream ) ;
 int fflush ( FILE * stream ) ;
 int fclose ( FILE * stream ) ;
 int remove ( const char * name ) ;
 int rename ( const char * oldName , const char * newName ) ;
-int setvbuf ( FILE * stream , char * buffer , int mode , int size ) ;
+int setvbuf ( FILE * stream , char * buffer , int mode , int  size ) ;
 void setbuf ( FILE * stream , char * buffer ) ;
 int fgetc ( FILE * stream ) ;
 char * fgets ( char * s , int n , FILE * stream ) ;
@@ -140,15 +140,15 @@ char * gets ( char * s ) ;
 int putchar ( int c ) ;
 int puts ( const char * s ) ;
 int ungetc ( int c , FILE * stream ) ;
-int fread ( void * ptr , int size , int nobj , FILE * stream ) ;
-int fwrite ( const void * ptr , int size , int nobj , FILE * stream ) ;
+int  fread ( void * ptr , int  size , int  nobj , FILE * stream ) ;
+int  fwrite ( const void * ptr , int  size , int  nobj , FILE * stream ) ;
 int fseek ( FILE * stream , int offset , int origin ) ;
 int ftell ( FILE * stream ) ;
 void rewind ( FILE * stream ) ;
-int fgetpos ( FILE * stream , int * ptr ) ;
-int fsetpos ( FILE * stream , const int * ptr ) ;
+int fgetpos ( FILE * stream , int  * ptr ) ;
+int fsetpos ( FILE * stream , const int  * ptr ) ;
 void clearerr ( FILE * stream ) ;
-int feof ( FILE * stream ) ;
+int  feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
@@ -164,7 +164,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
      
 
 FILE * tmpfile ( void ) ;
-char * tmpnam ( char name [ 4 ] ) ;
+char * tmpnam ( char name [ 4  ] ) ;
 
    
  
@@ -180,11 +180,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
      
 
 int scanf ( const char * format , ... ) ;
-int vscanf ( const char * format , char * arg_list ) ;
+int vscanf ( const char * format , char *  arg_list ) ;
 int fscanf ( FILE * inStream , const char * format , ... ) ;
-int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
+int vfscanf ( FILE * inStream , const char * format , char *  arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
-int vsscanf ( char * inString , const char * format , char * arg_list ) ;
+int vsscanf ( char * inString , const char * format , char *  arg_list ) ;
 
    
  
@@ -205,11 +205,11 @@ int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
 int printf ( const char * format , ... ) ;
-int vprintf ( const char * format , char * arg_list ) ;
+int vprintf ( const char * format , char *  arg_list ) ;
 int fprintf ( FILE * outStream , const char * format , ... ) ;
-int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
+int vfprintf ( FILE * outStream , const char * format , char *  arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
-int vsprintf ( char * outString , const char * format , char * arg_list ) ;
+int vsprintf ( char * outString , const char * format , char *  arg_list ) ;
 
    
  
@@ -270,23 +270,23 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\LimitsTest.c,1$
         
 
 void limits_test ( void ) {
-printf ( "CHAR_BIT = %i\n" , 8 ) ;
+printf ( "CHAR_BIT = %i\n" , 8  ) ;
 
-printf ( "CHAR_MIN = %i\n\n" , -128S ) ;
-printf ( "CHAR_MAX = %i\n" , 127S ) ;
-printf ( "UCHAR_MAX = %u\n\n" , 255US ) ;
+printf ( "CHAR_MIN = %i\n\n" , -128S  ) ;
+printf ( "CHAR_MAX = %i\n" , 127S  ) ;
+printf ( "UCHAR_MAX = %u\n\n" , 255US  ) ;
 
-printf ( "SHRT_MIN = %i\n" , -128S ) ;
-printf ( "SHRT_MAX = %i\n" , 127S ) ;
-printf ( "USHRT_MAX = %u\n\n" , 255US ) ;
+printf ( "SHRT_MIN = %i\n" , -32768S  ) ;
+printf ( "SHRT_MAX = %i\n" , 32767S  ) ;
+printf ( "USHRT_MAX = %u\n\n" , 65535US  ) ;
 
-printf ( "INT_MIN = %i\n" , -32768 ) ;
-printf ( "INT_MAX = %i\n" , 32767 ) ;
-printf ( "UINT_MAX = %u\n\n" , 65535U ) ;
+printf ( "INT_MIN = %i\n" , -2147483648  ) ;
+printf ( "INT_MAX = %i\n" , 2147483647  ) ;
+printf ( "UINT_MAX = %u\n\n" , 4294967295U  ) ;
 
-printf ( "LONG_MIN = %li\n" , -2147483648L ) ;
-printf ( "LONG_MAX = %li\n" , 2147483647L ) ;
-printf ( "ULONG_MAX = %lu\n" , 4294967295UL ) ;
-printf ( "ULONG_MAX = %lx\n" , 4294967295UL ) ;
-printf ( "ULONG_MAX = %lX\n" , 4294967295UL ) ;
+printf ( "LONG_MIN = %li\n" , -9223372036854775808L  ) ;
+printf ( "LONG_MAX = %li\n" , 9223372036854775807L  ) ;
+printf ( "ULONG_MAX = %lu\n" , 18446744073709551615UL  ) ;
+printf ( "ULONG_MAX = %lx\n" , 18446744073709551615UL  ) ;
+printf ( "ULONG_MAX = %lX\n" , 18446744073709551615UL  ) ;
 } 

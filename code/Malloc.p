@@ -239,12 +239,12 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
      
 
 typedef struct {
-int open ;
+int  open ;
 unsigned int handle ;
-char name [ 16 ] , ungetc ;
+char name [ 16  ] , ungetc ;
 int errno ;
 unsigned int position , size ;
-int temporary ;
+int  temporary ;
 } FILE ;
 
 extern FILE * stdin , * stdout , * stderr ;
@@ -255,14 +255,14 @@ extern enum { READ , WRITE , READ_WRITE };
 
          
 
-int fileexists ( const char * name ) ;
+int  fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
 FILE * freopen ( const char * filename , const char * mode , FILE * stream ) ;
 int fflush ( FILE * stream ) ;
 int fclose ( FILE * stream ) ;
 int remove ( const char * name ) ;
 int rename ( const char * oldName , const char * newName ) ;
-int setvbuf ( FILE * stream , char * buffer , int mode , int size ) ;
+int setvbuf ( FILE * stream , char * buffer , int mode , int  size ) ;
 void setbuf ( FILE * stream , char * buffer ) ;
 int fgetc ( FILE * stream ) ;
 char * fgets ( char * s , int n , FILE * stream ) ;
@@ -273,15 +273,15 @@ char * gets ( char * s ) ;
 int putchar ( int c ) ;
 int puts ( const char * s ) ;
 int ungetc ( int c , FILE * stream ) ;
-int fread ( void * ptr , int size , int nobj , FILE * stream ) ;
-int fwrite ( const void * ptr , int size , int nobj , FILE * stream ) ;
+int  fread ( void * ptr , int  size , int  nobj , FILE * stream ) ;
+int  fwrite ( const void * ptr , int  size , int  nobj , FILE * stream ) ;
 int fseek ( FILE * stream , int offset , int origin ) ;
 int ftell ( FILE * stream ) ;
 void rewind ( FILE * stream ) ;
-int fgetpos ( FILE * stream , int * ptr ) ;
-int fsetpos ( FILE * stream , const int * ptr ) ;
+int fgetpos ( FILE * stream , int  * ptr ) ;
+int fsetpos ( FILE * stream , const int  * ptr ) ;
 void clearerr ( FILE * stream ) ;
-int feof ( FILE * stream ) ;
+int  feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
@@ -297,7 +297,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
      
 
 FILE * tmpfile ( void ) ;
-char * tmpnam ( char name [ 4 ] ) ;
+char * tmpnam ( char name [ 4  ] ) ;
 
    
  
@@ -313,11 +313,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
      
 
 int scanf ( const char * format , ... ) ;
-int vscanf ( const char * format , char * arg_list ) ;
+int vscanf ( const char * format , char *  arg_list ) ;
 int fscanf ( FILE * inStream , const char * format , ... ) ;
-int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
+int vfscanf ( FILE * inStream , const char * format , char *  arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
-int vsscanf ( char * inString , const char * format , char * arg_list ) ;
+int vsscanf ( char * inString , const char * format , char *  arg_list ) ;
 
    
  
@@ -338,11 +338,11 @@ int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
 int printf ( const char * format , ... ) ;
-int vprintf ( const char * format , char * arg_list ) ;
+int vprintf ( const char * format , char *  arg_list ) ;
 int fprintf ( FILE * outStream , const char * format , ... ) ;
-int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
+int vfprintf ( FILE * outStream , const char * format , char *  arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
-int vsprintf ( char * outString , const char * format , char * arg_list ) ;
+int vsprintf ( char * outString , const char * format , char *  arg_list ) ;
 
    
  
@@ -413,15 +413,15 @@ int atexit ( FUNC_PTR fcn ) ;
 int abs ( int value ) ;
 long labs ( long value ) ;
 
-void * malloc ( int size ) ;
-void * realloc ( void * ptr , int newSize ) ;
-void * calloc ( int num , int size ) ;
+void * malloc ( int  size ) ;
+void * realloc ( void * ptr , int  newSize ) ;
+void * calloc ( int  num , int  size ) ;
 void free ( void * ptr ) ;
 
-void qsort ( void * valueList , int listSize , int valueSize ,
+void qsort ( void * valueList , int  listSize , int  valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 void * bsearch ( const void * key , const void * valueList ,
-int listSize , int valueSize ,
+int  listSize , int  valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
 int abs ( int value ) ;
@@ -449,25 +449,25 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,0$
      
 
 extern char * strcpy ( char * target , const char * source ) ;
-extern char * strncpy ( char * target , const char * source , int size ) ;
+extern char * strncpy ( char * target , const char * source , int  size ) ;
 extern char * strcat ( char * target , const char * source ) ;
-extern char * strncat ( char * target , const char * source , int size ) ;
+extern char * strncat ( char * target , const char * source , int  size ) ;
 extern int strcmp ( const char * left , const char * right ) ;
-extern int strncmp ( const char * left , const char * right , int size ) ;
+extern int strncmp ( const char * left , const char * right , int  size ) ;
 extern char * strchr ( const char * text , int i ) ;
 extern char * strrchr ( const char * text , int i ) ;
-extern int strspn ( const char * mainString , const char * charSet ) ;
-extern int strcspn ( const char * mainString , const char * charSet ) ;
+extern int  strspn ( const char * mainString , const char * charSet ) ;
+extern int  strcspn ( const char * mainString , const char * charSet ) ;
 extern char * strpbrk ( const char * mainString , const char * charSet ) ;
 extern char * strstr ( const char * mainString , const char * subString ) ;
-extern int strlen ( const char * string ) ;
+extern int  strlen ( const char * string ) ;
 extern char * strerror ( int error ) ;
 extern char * strtok ( char * string , const char * charSet ) ;
-extern void * memcpy ( void * target , const void * source , int size ) ;
-extern void * memmove ( void * target , const void * source , int size ) ;
-extern int memcmp ( const void * left , const void * right , int size ) ;
-extern void * memchr ( const void * block , int i , int size ) ;
-extern void * memset ( void * block , int i , int size ) ;
+extern void * memcpy ( void * target , const void * source , int  size ) ;
+extern void * memmove ( void * target , const void * source , int  size ) ;
+extern int memcmp ( const void * left , const void * right , int  size ) ;
+extern void * memchr ( const void * block , int i , int  size ) ;
+extern void * memset ( void * block , int i , int  size ) ;
 
    
  
@@ -573,7 +573,7 @@ unsigned int size ;
 struct block_header * next ;
 } BLOCK_HEADER ;
 
-BLOCK_HEADER * g_firstBlockPtr = ( ( void * ) 0 ) ; 
+BLOCK_HEADER * g_firstBlockPtr = ( ( void * ) 0 )  ; 
                 
 
 
@@ -581,32 +581,32 @@ BLOCK_HEADER * g_firstBlockPtr = ( ( void * ) 0 ) ;
 
 
 
-void * malloc ( int memorySize ) {
-unsigned int newBlockSize = ( ( unsigned int ) ( sizeof ( BLOCK_HEADER ) ) ) +
+void * malloc ( int  memorySize ) {
+unsigned int newBlockSize = ( ( unsigned int ) ( sizeof ( BLOCK_HEADER ) ) )  +
 ( ( unsigned int ) memorySize ) , minGap = 0 ;
 
     
- unsigned int lastAddress = 65528u ; 
+       
    
  
     
 
-             
+unsigned int lastAddress = ( unsigned int ) ( stack_top + 1048572u ) ;
 
    
 
-BLOCK_HEADER * minBlockPtr = ( ( void * ) 0 ) , * minPrevBlockPtr = ( ( void * ) 0 ) , * prevBlockPtr = ( ( void * ) 0 ) ,
+BLOCK_HEADER * minBlockPtr = ( ( void * ) 0 )  , * minPrevBlockPtr = ( ( void * ) 0 )  , * prevBlockPtr = ( ( void * ) 0 )  ,
 * currBlockPtr = g_firstBlockPtr ;
 
-if ( ! ( memorySize >= 0 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "memorySize >= 0" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Malloc.c" , 41 ) ; abort ( ) ; } ;
+if ( ! ( memorySize >= 0 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "memorySize >= 0" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Malloc.c" , 41 ) ; abort ( ) ; }  ;
 
 if ( memorySize == 0 ) {
-return ( ( void * ) 0 ) ;
+return ( ( void * ) 0 )  ;
 }
 
-while ( currBlockPtr != ( ( void * ) 0 ) ) {
+while ( currBlockPtr != ( ( void * ) 0 )  ) {
 unsigned int currAddress = ( unsigned int ) currBlockPtr ;
-unsigned int currGap = lastAddress - ( currAddress + currBlockPtr -> size + ( ( unsigned int ) ( sizeof ( BLOCK_HEADER ) ) ) ) ;
+unsigned int currGap = lastAddress - ( currAddress + currBlockPtr -> size + ( ( unsigned int ) ( sizeof ( BLOCK_HEADER ) ) )  ) ;
 
 
 if ( ( newBlockSize <= currGap ) && ( ( minGap == 0u ) || ( currGap < minGap ) ) ) {
@@ -620,32 +620,32 @@ prevBlockPtr = currBlockPtr ;
 currBlockPtr = currBlockPtr -> next ;
 }
 
-if ( minBlockPtr != ( ( void * ) 0 ) ) {
-unsigned int newAddress = ( ( unsigned int ) minBlockPtr ) + minBlockPtr -> size + ( ( unsigned int ) ( sizeof ( BLOCK_HEADER ) ) ) ;
+if ( minBlockPtr != ( ( void * ) 0 )  ) {
+unsigned int newAddress = ( ( unsigned int ) minBlockPtr ) + minBlockPtr -> size + ( ( unsigned int ) ( sizeof ( BLOCK_HEADER ) ) )  ;
 
 
 BLOCK_HEADER * newBlockPtr = ( BLOCK_HEADER * ) newAddress ;
 newBlockPtr -> size = memorySize ;
 newBlockPtr -> next = minBlockPtr ;
 
-if ( minPrevBlockPtr != ( ( void * ) 0 ) ) {
+if ( minPrevBlockPtr != ( ( void * ) 0 )  ) {
 minPrevBlockPtr -> next = newBlockPtr ;
 }
 else {
 g_firstBlockPtr = newBlockPtr ;
 }
 
-return ( void * ) ( newAddress + ( ( unsigned int ) ( sizeof ( BLOCK_HEADER ) ) ) ) ;
+return ( void * ) ( newAddress + ( ( unsigned int ) ( sizeof ( BLOCK_HEADER ) ) )  ) ;
 }
 else {
 unsigned int newAddress = lastAddress - newBlockSize ;
 
     
- unsigned int stackTop = register_bp ; 
+       
    
  
     
-       
+ unsigned int stackTop = register_rbp ; 
    
 
 
@@ -653,9 +653,9 @@ unsigned int newAddress = lastAddress - newBlockSize ;
 if ( stackTop <= newAddress ) {
 BLOCK_HEADER * newBlockPtr = ( BLOCK_HEADER * ) newAddress ;
 newBlockPtr -> size = memorySize ;
-newBlockPtr -> next = ( ( void * ) 0 ) ;
+newBlockPtr -> next = ( ( void * ) 0 )  ;
 
-if ( prevBlockPtr != ( ( void * ) 0 ) ) {
+if ( prevBlockPtr != ( ( void * ) 0 )  ) {
 prevBlockPtr -> next = newBlockPtr ;
 }
 else {
@@ -664,11 +664,11 @@ g_firstBlockPtr = newBlockPtr ;
 
 
 
-return ( void * ) ( newAddress + ( ( unsigned int ) ( sizeof ( BLOCK_HEADER ) ) ) ) ;
+return ( void * ) ( newAddress + ( ( unsigned int ) ( sizeof ( BLOCK_HEADER ) ) )  ) ;
 }
 }
 
-return ( ( void * ) 0 ) ;
+return ( ( void * ) 0 )  ;
 }
 
 
@@ -731,10 +731,10 @@ return ( ( void * ) 0 ) ;
 
 
 
-void * calloc ( int number , int size ) {
+void * calloc ( int  number , int  size ) {
 void * pointer = malloc ( number * size ) ;
 
-if ( pointer != ( ( void * ) 0 ) ) {
+if ( pointer != ( ( void * ) 0 )  ) {
 memset ( pointer , 0 , size ) ;
 }
 
@@ -742,26 +742,26 @@ return pointer ;
 }
 
 void free ( void * freeMemoryPtr ) {
-BLOCK_HEADER * freeBlockPtr = ( BLOCK_HEADER * ) ( ( ( unsigned int ) freeMemoryPtr ) - ( ( unsigned int ) ( sizeof ( BLOCK_HEADER ) ) ) ) ,
-* prevBlockPtr = ( ( void * ) 0 ) , * currBlockPtr = g_firstBlockPtr ;
+BLOCK_HEADER * freeBlockPtr = ( BLOCK_HEADER * ) ( ( ( unsigned int ) freeMemoryPtr ) - ( ( unsigned int ) ( sizeof ( BLOCK_HEADER ) ) )  ) ,
+* prevBlockPtr = ( ( void * ) 0 )  , * currBlockPtr = g_firstBlockPtr ;
 
-if ( freeMemoryPtr == ( ( void * ) 0 ) ) {
+if ( freeMemoryPtr == ( ( void * ) 0 )  ) {
 return ;
 }
 
-while ( currBlockPtr != ( ( void * ) 0 ) ) {
+while ( currBlockPtr != ( ( void * ) 0 )  ) {
 if ( currBlockPtr == freeBlockPtr ) {
-if ( ( prevBlockPtr == ( ( void * ) 0 ) ) &&
-( currBlockPtr -> next == ( ( void * ) 0 ) ) ) {
-g_firstBlockPtr = ( ( void * ) 0 ) ;
+if ( ( prevBlockPtr == ( ( void * ) 0 )  ) &&
+( currBlockPtr -> next == ( ( void * ) 0 )  ) ) {
+g_firstBlockPtr = ( ( void * ) 0 )  ;
 
 
 }
-else if ( prevBlockPtr == ( ( void * ) 0 ) ) {
+else if ( prevBlockPtr == ( ( void * ) 0 )  ) {
 g_firstBlockPtr = currBlockPtr -> next ;
 }
-else if ( currBlockPtr -> next == ( ( void * ) 0 ) ) {
-prevBlockPtr -> next = ( ( void * ) 0 ) ;
+else if ( currBlockPtr -> next == ( ( void * ) 0 )  ) {
+prevBlockPtr -> next = ( ( void * ) 0 )  ;
 
 
 }
@@ -815,21 +815,21 @@ currBlockPtr = currBlockPtr -> next ;
 
 
 
-void * realloc ( void * oldMemoryPtr , int newMemorySize ) {
-if ( ! ( newMemorySize >= 0 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "newMemorySize >= 0" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Malloc.c" , 259 ) ; abort ( ) ; } ;
-if ( ! ( ( oldMemoryPtr != ( ( void * ) 0 ) ) || ( newMemorySize > 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Malloc.c" , 260 ) ; abort ( ) ; } ;
+void * realloc ( void * oldMemoryPtr , int  newMemorySize ) {
+if ( ! ( newMemorySize >= 0 ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "newMemorySize >= 0" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Malloc.c" , 259 ) ; abort ( ) ; }  ;
+if ( ! ( ( oldMemoryPtr != ( ( void * ) 0 )  ) || ( newMemorySize > 0 ) ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\Malloc.c" , 260 ) ; abort ( ) ; }  ;
 
-if ( oldMemoryPtr == ( ( void * ) 0 ) ) {
+if ( oldMemoryPtr == ( ( void * ) 0 )  ) {
 return malloc ( newMemorySize ) ;
 }
 
 if ( newMemorySize == 0 ) {
 free ( oldMemoryPtr ) ;
-return ( ( void * ) 0 ) ;
+return ( ( void * ) 0 )  ;
 }
 
-{ unsigned int newBlockSize = ( ( unsigned int ) newMemorySize ) + ( ( unsigned int ) ( sizeof ( BLOCK_HEADER ) ) ) ;
-BLOCK_HEADER * oldBlockPtr = ( BLOCK_HEADER * ) ( ( ( unsigned int ) oldMemoryPtr ) - ( ( unsigned int ) ( sizeof ( BLOCK_HEADER ) ) ) ) ;
+{ unsigned int newBlockSize = ( ( unsigned int ) newMemorySize ) + ( ( unsigned int ) ( sizeof ( BLOCK_HEADER ) ) )  ;
+BLOCK_HEADER * oldBlockPtr = ( BLOCK_HEADER * ) ( ( ( unsigned int ) oldMemoryPtr ) - ( ( unsigned int ) ( sizeof ( BLOCK_HEADER ) ) )  ) ;
 
 if ( newBlockSize <= oldBlockPtr -> size ) {
 oldBlockPtr -> size = newBlockSize ;
@@ -838,18 +838,18 @@ return oldMemoryPtr ;
 
 
     
- { unsigned int lastAddress = 65528u ; 
+        
    
  
     
 
-              
+{ unsigned int lastAddress = ( unsigned int ) ( stack_top + 1048572u ) ;
 
    
 
 BLOCK_HEADER * currBlockPtr = g_firstBlockPtr ;
 
-while ( currBlockPtr != ( ( void * ) 0 ) ) {
+while ( currBlockPtr != ( ( void * ) 0 )  ) {
 if ( currBlockPtr == oldBlockPtr ) {
 unsigned int availableSize = lastAddress - ( ( unsigned int ) currBlockPtr ) ;
 
@@ -869,7 +869,7 @@ currBlockPtr = currBlockPtr -> next ;
 
 { void * newMemoryPtr = malloc ( newMemorySize ) ;
 
-if ( newMemoryPtr != ( ( void * ) 0 ) ) {
+if ( newMemoryPtr != ( ( void * ) 0 )  ) {
 memcpy ( newMemoryPtr , oldMemoryPtr , newMemorySize ) ;
 free ( oldMemoryPtr ) ;
 return newMemoryPtr ;
@@ -877,14 +877,14 @@ return newMemoryPtr ;
 }
 }
 
-return ( ( void * ) 0 ) ;
+return ( ( void * ) 0 )  ;
 }
 
 void print_heap ( ) {
 BLOCK_HEADER * currBlockPtr = g_firstBlockPtr ;
 printf ( "Heap:\n" ) ;
 
-while ( currBlockPtr != ( ( void * ) 0 ) ) {
+while ( currBlockPtr != ( ( void * ) 0 )  ) {
 printf ( "  Address %u, Size %u\n" , ( unsigned int ) currBlockPtr , currBlockPtr -> size ) ;
 currBlockPtr = currBlockPtr -> next ;
 }

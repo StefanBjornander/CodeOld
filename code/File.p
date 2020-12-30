@@ -106,12 +106,12 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
      
 
 typedef struct {
-int open ;
+int  open ;
 unsigned int handle ;
-char name [ 16 ] , ungetc ;
+char name [ 16  ] , ungetc ;
 int errno ;
 unsigned int position , size ;
-int temporary ;
+int  temporary ;
 } FILE ;
 
 extern FILE * stdin , * stdout , * stderr ;
@@ -122,14 +122,14 @@ extern enum { READ , WRITE , READ_WRITE };
 
          
 
-int fileexists ( const char * name ) ;
+int  fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
 FILE * freopen ( const char * filename , const char * mode , FILE * stream ) ;
 int fflush ( FILE * stream ) ;
 int fclose ( FILE * stream ) ;
 int remove ( const char * name ) ;
 int rename ( const char * oldName , const char * newName ) ;
-int setvbuf ( FILE * stream , char * buffer , int mode , int size ) ;
+int setvbuf ( FILE * stream , char * buffer , int mode , int  size ) ;
 void setbuf ( FILE * stream , char * buffer ) ;
 int fgetc ( FILE * stream ) ;
 char * fgets ( char * s , int n , FILE * stream ) ;
@@ -140,15 +140,15 @@ char * gets ( char * s ) ;
 int putchar ( int c ) ;
 int puts ( const char * s ) ;
 int ungetc ( int c , FILE * stream ) ;
-int fread ( void * ptr , int size , int nobj , FILE * stream ) ;
-int fwrite ( const void * ptr , int size , int nobj , FILE * stream ) ;
+int  fread ( void * ptr , int  size , int  nobj , FILE * stream ) ;
+int  fwrite ( const void * ptr , int  size , int  nobj , FILE * stream ) ;
 int fseek ( FILE * stream , int offset , int origin ) ;
 int ftell ( FILE * stream ) ;
 void rewind ( FILE * stream ) ;
-int fgetpos ( FILE * stream , int * ptr ) ;
-int fsetpos ( FILE * stream , const int * ptr ) ;
+int fgetpos ( FILE * stream , int  * ptr ) ;
+int fsetpos ( FILE * stream , const int  * ptr ) ;
 void clearerr ( FILE * stream ) ;
-int feof ( FILE * stream ) ;
+int  feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
@@ -164,7 +164,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
      
 
 FILE * tmpfile ( void ) ;
-char * tmpnam ( char name [ 4 ] ) ;
+char * tmpnam ( char name [ 4  ] ) ;
 
    
  
@@ -180,11 +180,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
      
 
 int scanf ( const char * format , ... ) ;
-int vscanf ( const char * format , char * arg_list ) ;
+int vscanf ( const char * format , char *  arg_list ) ;
 int fscanf ( FILE * inStream , const char * format , ... ) ;
-int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
+int vfscanf ( FILE * inStream , const char * format , char *  arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
-int vsscanf ( char * inString , const char * format , char * arg_list ) ;
+int vsscanf ( char * inString , const char * format , char *  arg_list ) ;
 
    
  
@@ -205,11 +205,11 @@ int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
 int printf ( const char * format , ... ) ;
-int vprintf ( const char * format , char * arg_list ) ;
+int vprintf ( const char * format , char *  arg_list ) ;
 int fprintf ( FILE * outStream , const char * format , ... ) ;
-int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
+int vfprintf ( FILE * outStream , const char * format , char *  arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
-int vsprintf ( char * outString , const char * format , char * arg_list ) ;
+int vsprintf ( char * outString , const char * format , char *  arg_list ) ;
 
    
  
@@ -324,32 +324,32 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\string.h,0$
      
 
 extern char * strcpy ( char * target , const char * source ) ;
-extern char * strncpy ( char * target , const char * source , int size ) ;
+extern char * strncpy ( char * target , const char * source , int  size ) ;
 extern char * strcat ( char * target , const char * source ) ;
-extern char * strncat ( char * target , const char * source , int size ) ;
+extern char * strncat ( char * target , const char * source , int  size ) ;
 extern int strcmp ( const char * left , const char * right ) ;
-extern int strncmp ( const char * left , const char * right , int size ) ;
+extern int strncmp ( const char * left , const char * right , int  size ) ;
 extern char * strchr ( const char * text , int i ) ;
 extern char * strrchr ( const char * text , int i ) ;
-extern int strspn ( const char * mainString , const char * charSet ) ;
-extern int strcspn ( const char * mainString , const char * charSet ) ;
+extern int  strspn ( const char * mainString , const char * charSet ) ;
+extern int  strcspn ( const char * mainString , const char * charSet ) ;
 extern char * strpbrk ( const char * mainString , const char * charSet ) ;
 extern char * strstr ( const char * mainString , const char * subString ) ;
-extern int strlen ( const char * string ) ;
+extern int  strlen ( const char * string ) ;
 extern char * strerror ( int error ) ;
 extern char * strtok ( char * string , const char * charSet ) ;
-extern void * memcpy ( void * target , const void * source , int size ) ;
-extern void * memmove ( void * target , const void * source , int size ) ;
-extern int memcmp ( const void * left , const void * right , int size ) ;
-extern void * memchr ( const void * block , int i , int size ) ;
-extern void * memset ( void * block , int i , int size ) ;
+extern void * memcpy ( void * target , const void * source , int  size ) ;
+extern void * memmove ( void * target , const void * source , int  size ) ;
+extern int memcmp ( const void * left , const void * right , int  size ) ;
+extern void * memchr ( const void * block , int i , int  size ) ;
+extern void * memset ( void * block , int i , int  size ) ;
 
    
  
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\File.c,3$
         
 
-FILE g_fileArray [ 20 ] = {{ 1 , 0 } , { 1 , 1 } , { 1 , 2 }};
+FILE g_fileArray [ 20  ] = {{ 1  , 0 } , { 1  , 1 } , { 1  , 2 }};
 FILE * stdin = & g_fileArray [ 0 ] , * stdout = & g_fileArray [ 1 ] ,
 * stderr = & g_fileArray [ 2 ];
 
@@ -357,11 +357,11 @@ enum { EEXIST , ENOENT , EACCES };
 enum { SEEK_SET = 0 , SEEK_CUR = 1 , SEEK_END = 2 };
 
     
- enum { READ = 0x40 , WRITE = 0x41 , READ_WRITE = 0x42 }; 
+               
    
  
     
-               
+ enum { READ = 0 , WRITE = 1 , READ_WRITE = 3 }; 
    
  
                            
@@ -372,98 +372,98 @@ enum { SEEK_SET = 0 , SEEK_CUR = 1 , SEEK_END = 2 };
 
 int filecreate ( const char * name ) { 
     
- register_ah = 0x3Cs ;
-register_cx = 0x00 ;
-register_dx = name ;
-interrupt ( 0x21s ) ;
+    
+   
+   
+   
 
-{ int handle = register_ax ;
+     
 
-if ( carry_flag ) {
-errno = FOPEN ;
-return -1 ;
-}
+    
+   
+  
 
-return handle ;
-} 
+
+  
+ 
    
  
     
-    
-       
-   
-  
-   
+ register_rax = 85 ;
+register_rdi = ( unsigned long ) name ;
+register_rsi = 0777L ;
+syscall ( ) ;
+return register_eax ; 
    
  }
 
                 
 
-int fileexistsX ( const char * name ) {
+int  fileexistsX ( const char * name ) {
 FILE * filePtr = fopen ( name , "r" ) ;
 printf ( "\nfileexists %s %p\n" , name , filePtr ) ;
 
-if ( filePtr != ( ( void * ) 0 ) ) {
+if ( filePtr != ( ( void * ) 0 )  ) {
 fclose ( filePtr ) ;
-return 1 ;
+return 1  ;
 }
 
-return 0 ;
+return 0  ;
 }
 
-int fileexists ( const char * name ) { 
+int  fileexists ( const char * name ) { 
     
- register_ah = 0x43s ;
-register_al = 0x00s ;
-register_dx = name ;
-interrupt ( 0x21s ) ;
-return ! carry_flag ; 
+    
+   
+   
+   
+    
    
  
     
-    
-       
-   
-  
-       
+ register_rax = 21 ;
+register_rdi = ( unsigned long ) name ;
+register_rsi = 0 ;
+syscall ( ) ;
+return ( register_eax == 0 ) ; 
    
  }
 
 static int fileopen ( const char * name , unsigned short mode ) { 
     
- register_ah = 0x3Ds ;
-register_al = mode ;
-register_dx = name ;
-interrupt ( 0x21s ) ;
+    
+   
+   
+   
 
-if ( carry_flag ) {
-errno = FOPEN ;
-return -1 ;
-}
-else {
-return register_ax ;
-} 
+    
+   
+  
+
+ 
+  
+ 
    
  
     
-    
-       
-       
-  
-   
+ register_rax = 2 ;
+register_rdi = ( unsigned long ) name ;
+register_rsi = ( unsigned long ) mode ;
+syscall ( ) ;
+return register_eax ; 
    
  }
 
 FILE * fopen ( const char * name , const char * mode ) {
 int index ;
-for ( index = 0 ; index < 20 ; ++ index ) {
+for ( index = 0 ; index < 20  ; ++ index ) {
 
 if ( ! g_fileArray [ index ]. open ) {
 return freopen ( name , mode , & g_fileArray [ index ] ) ;
 }
 }
 
-return ( ( void * ) 0 ) ;
+return ( ( void * ) 0 )  ;
 }
 
 FILE * freopen ( const char * name , const char * mode , FILE * stream ) {
@@ -509,27 +509,27 @@ handle = filecreate ( name ) ;
 }
 
 if ( handle != -1 ) {
-stream -> open = 1 ;
+stream -> open = 1  ;
 stream -> handle = handle ;
 stream -> size = 0l ;
 strcpy ( stream -> name , name ) ;
-stream -> temporary = 0 ;
+stream -> temporary = 0  ;
 return stream ;
 }
 else {
-stream -> open = 0 ;
-return ( ( void * ) 0 ) ;
+stream -> open = 0  ;
+return ( ( void * ) 0 )  ;
 }
 }
 
 int fflush ( FILE * stream ) {
-if ( stream == ( ( void * ) 0 ) ) {
+if ( stream == ( ( void * ) 0 )  ) {
 int index ;
 
-for ( index = 0 ; index < 20 ; ++ index ) {
+for ( index = 0 ; index < 20  ; ++ index ) {
 if ( g_fileArray [ index ]. open ) {
-if ( fflush ( & g_fileArray [ index ] ) == -1 ) {
-return -1 ;
+if ( fflush ( & g_fileArray [ index ] ) == -1  ) {
+return -1  ;
 }
 }
 }
@@ -541,36 +541,36 @@ return 0 ;
 }
 
 int fclose ( FILE * stream ) {
-if ( stream != ( ( void * ) 0 ) ) { 
+if ( stream != ( ( void * ) 0 )  ) { 
     
- register_ah = 0x3Es ;
-register_bx = stream -> handle ;
-interrupt ( 0x21s ) ;
+    
+     
+   
 
-if ( carry_flag ) {
-errno = FCLOSE ;
-return -1 ;
-}
+    
+   
+  
 
-if ( stream -> temporary ) {
-remove ( stream -> name ) ;
-}
 
-stream -> open = 0 ;
-return 0 ; 
+      
+     
+
+
+     
+   
    
  
     
-    
-         
-  
-   
+ register_rax = 3L ;
+register_rdi = ( unsigned long ) stream -> handle ;
+syscall ( ) ;
+return 0 ; 
    
  }
 else {
 int index ;
 
-for ( index = 0 ; index < 20 ; ++ index ) {
+for ( index = 0 ; index < 20  ; ++ index ) {
 if ( g_fileArray [ index ]. open ) {
 if ( fclose ( & g_fileArray [ index ] ) == -1 ) {
 return -1 ;
@@ -584,24 +584,24 @@ return 0 ;
 
 int remove ( const char * name ) { 
     
- register_ah = 0x41s ;
-register_cl = 0s ;
-register_dx = name ;
-interrupt ( 0x21s ) ;
+    
+   
+   
+   
 
-if ( ! carry_flag ) {
-return 0 ;
-} 
+     
+  
+ 
    
  
     
-    
-       
-  
+ register_rax = 88L ;
+register_rdi = ( unsigned long ) name ;
+syscall ( ) ;
 
-      
-  
- 
+if ( register_ebx == 0 ) {
+return 0 ;
+} 
    
 
 errno = FREMOVE ;
@@ -610,26 +610,26 @@ return -1 ;
 
 int rename ( const char * oldName , const char * newName ) { 
     
- register_ah = 0x56s ;
-register_cl = 0s ;
-register_dx = oldName ;
-register_di = newName ;
-interrupt ( 0x21s ) ;
+    
+   
+   
+   
+   
 
-if ( ! carry_flag ) {
-return 0 ;
-} 
+     
+  
+ 
    
  
     
-    
-       
-       
-  
+ register_rax = 82L ;
+register_rdi = ( unsigned long ) oldName ;
+register_rsi = ( unsigned long ) newName ;
+syscall ( ) ;
 
-      
-  
- 
+if ( register_eax == 0 ) {
+return 0 ;
+} 
    
 
 errno = FRENAME ;
@@ -637,7 +637,7 @@ return -1 ;
 }
 
 int setvbuf ( FILE * , char * ,
-int , int ) {
+int , int  ) {
 return 0 ;
 }
 
@@ -685,7 +685,7 @@ return text ;
 
 int fputs ( const char * s , FILE * stream ) {
 int size = ( strlen ( s ) + 1 ) * sizeof ( char ) ;
-return ( fwrite ( s , size , 1 , stream ) == size ) ? 0 : -1 ;
+return ( fwrite ( s , size , 1 , stream ) == size ) ? 0 : -1  ;
 }
 
 int getchar ( void ) {
@@ -693,7 +693,7 @@ return fgetc ( stdin ) ;
 }
 
 char * gets ( char * s ) {
-if ( fgets ( s , -1 , stdin ) != ( ( void * ) 0 ) ) {
+if ( fgets ( s , -1 , stdin ) != ( ( void * ) 0 )  ) {
 int size = strlen ( s ) ;
 
 if ( size > 0 ) {
@@ -703,7 +703,7 @@ s [ size - 1 ] = '\0' ;
 return s ;
 }
 else {
-return ( ( void * ) 0 ) ;
+return ( ( void * ) 0 )  ;
 }
 }
 
@@ -712,97 +712,97 @@ if ( fputs ( s , stdout ) != 0 ) {
 return fputc ( '\n' , stdout ) ;
 }
 
-return -1 ;
+return -1  ;
 }
 
 int ungetc ( int c , FILE * stream ) {
-if ( stream -> ungetc != -1 ) {
+if ( stream -> ungetc != -1  ) {
 stream -> ungetc = ( char ) c ;
 }
 
 return c ;
 }
 
-int fread ( void * ptr , int size , int nobj , FILE * stream ) { 
+int  fread ( void * ptr , int  size , int  nobj , FILE * stream ) { 
     
- register_bx = stream -> handle ;
-register_cx = size * nobj ;
-register_ah = 0x3Fs ;
-register_dx = ptr ;
-interrupt ( 0x21s ) ;
+      
+     
+   
+   
+   
 
-if ( carry_flag ) {
-stream -> errno = errno = FREAD ;
-return 0 ;
-}
-else {
-return register_ax ;
-} 
+    
+       
+  
+
+ 
+  
+ 
    
  
     
-          
-       
-           
-   
-  
-   
+ register_rdi = ( unsigned long ) stream -> handle ;
+register_rsi = ( unsigned long ) ptr ;
+register_rdx = ( unsigned long ) ( size * nobj ) ;
+register_rax = 0 ;
+syscall ( ) ;
+return register_eax ; 
    
  }
 
-int fwrite ( const void * ptr , int size , int nobj , FILE * stream ) { 
+int  fwrite ( const void * ptr , int  size , int  nobj , FILE * stream ) { 
     
- register_bx = stream -> handle ;
-register_cx = size * nobj ;
-register_ah = 0x40s ;
-register_dx = ptr ;
-interrupt ( 0x21s ) ;
+      
+     
+   
+   
+   
 
-if ( carry_flag ) {
-stream -> errno = errno = FWRITE ;
-return 0 ;
-}
-else {
-return register_ax ;
-} 
+    
+       
+  
+
+ 
+  
+ 
    
  
     
-          
-       
-           
-   
-  
-   
+ register_rdi = ( unsigned long ) stream -> handle ;
+register_rsi = ( unsigned long ) ptr ;
+register_rdx = ( unsigned long ) ( size * nobj ) ;
+register_rax = 1 ;
+syscall ( ) ;
+return register_eax ; 
    
  }
 
 int fseek ( FILE * stream , int offset , int origin ) { 
     
- register_al = ( short ) origin ;
-register_ah = 0x42s ;
-register_bx = stream -> handle ;
-register_cx = 0 ;
-register_dx = ( int ) offset ;
-interrupt ( 0x21s ) ;
+       
+   
+     
+   
+      
+   
 
-if ( ! carry_flag ) {
-stream -> position = register_ax ;
-return stream -> position ;
-}
-else {
-stream -> errno = FSEEK ;
-return -1 ;
-} 
+     
+     
+    
+
+ 
+     
+  
+ 
    
  
     
-    
-         
-       
-       
-  
-   
+ register_rax = 8 ;
+register_rdi = ( unsigned long ) stream -> handle ;
+register_rsi = ( unsigned long ) offset ;
+register_rdx = ( unsigned long ) origin ;
+syscall ( ) ;
+return register_eax ; 
    
  }
 
@@ -814,12 +814,12 @@ void rewind ( FILE * stream ) {
 ( void ) fseek ( stream , 0 , SEEK_SET ) ;
 }
 
-int fgetpos ( FILE * stream , int * ptr ) {
-* ptr = ( int ) ftell ( stream ) ;
+int fgetpos ( FILE * stream , int  * ptr ) {
+* ptr = ( int  ) ftell ( stream ) ;
 return 0 ;
 }
 
-int fsetpos ( FILE * stream , const int * ptr ) {
+int fsetpos ( FILE * stream , const int  * ptr ) {
 return ( ( int ) fseek ( stream , * ptr , ( int ) SEEK_SET ) ) ;
 }
 
@@ -827,12 +827,12 @@ void clearerr ( FILE * stream ) {
 stream -> errno = errno = 0 ;
 }
 
-int feof ( FILE * stream ) {
+int  feof ( FILE * stream ) {
 long unsigned currPosition = fseek ( stream , 0L , ( int ) SEEK_CUR ) ;
 long unsigned lastPosition = fseek ( stream , 0L , ( int ) SEEK_END ) ;
 fseek ( stream , currPosition , ( int ) SEEK_SET ) ;
 
-{ int endOfFile = ( currPosition == lastPosition ) ;
+{ int  endOfFile = ( currPosition == lastPosition ) ;
 return endOfFile ;
 }
 }

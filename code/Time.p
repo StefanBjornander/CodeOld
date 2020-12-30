@@ -18,17 +18,17 @@ int tm_yday ;
 int tm_isdst ;
 };
 
-extern long clock ( void ) ;
-extern unsigned long time ( unsigned long * time ) ;
-extern double difftime ( unsigned long time2 , unsigned long time1 ) ;
-extern unsigned long mktime ( struct tm * timeStruct ) ;
+extern long  clock ( void ) ;
+extern unsigned long  time ( unsigned long  * time ) ;
+extern double difftime ( unsigned long  time2 , unsigned long  time1 ) ;
+extern unsigned long  mktime ( struct tm * timeStruct ) ;
 
 extern char * asctime ( const struct tm * timeStruct ) ;
-extern char * ctime ( const unsigned long * time ) ;
-extern struct tm * gmtime ( const unsigned long * time ) ;
-extern struct tm * localtime ( const unsigned long * time ) ;
+extern char * ctime ( const unsigned long  * time ) ;
+extern struct tm * gmtime ( const unsigned long  * time ) ;
+extern struct tm * localtime ( const unsigned long  * time ) ;
 
-extern int strftime ( char * buffer , int size , const char * format ,
+extern int  strftime ( char * buffer , int  size , const char * format ,
 const struct tm * timeStruct ) ;
 
    
@@ -143,12 +143,12 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
      
 
 typedef struct {
-int open ;
+int  open ;
 unsigned int handle ;
-char name [ 16 ] , ungetc ;
+char name [ 16  ] , ungetc ;
 int errno ;
 unsigned int position , size ;
-int temporary ;
+int  temporary ;
 } FILE ;
 
 extern FILE * stdin , * stdout , * stderr ;
@@ -159,14 +159,14 @@ extern enum { READ , WRITE , READ_WRITE };
 
          
 
-int fileexists ( const char * name ) ;
+int  fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
 FILE * freopen ( const char * filename , const char * mode , FILE * stream ) ;
 int fflush ( FILE * stream ) ;
 int fclose ( FILE * stream ) ;
 int remove ( const char * name ) ;
 int rename ( const char * oldName , const char * newName ) ;
-int setvbuf ( FILE * stream , char * buffer , int mode , int size ) ;
+int setvbuf ( FILE * stream , char * buffer , int mode , int  size ) ;
 void setbuf ( FILE * stream , char * buffer ) ;
 int fgetc ( FILE * stream ) ;
 char * fgets ( char * s , int n , FILE * stream ) ;
@@ -177,15 +177,15 @@ char * gets ( char * s ) ;
 int putchar ( int c ) ;
 int puts ( const char * s ) ;
 int ungetc ( int c , FILE * stream ) ;
-int fread ( void * ptr , int size , int nobj , FILE * stream ) ;
-int fwrite ( const void * ptr , int size , int nobj , FILE * stream ) ;
+int  fread ( void * ptr , int  size , int  nobj , FILE * stream ) ;
+int  fwrite ( const void * ptr , int  size , int  nobj , FILE * stream ) ;
 int fseek ( FILE * stream , int offset , int origin ) ;
 int ftell ( FILE * stream ) ;
 void rewind ( FILE * stream ) ;
-int fgetpos ( FILE * stream , int * ptr ) ;
-int fsetpos ( FILE * stream , const int * ptr ) ;
+int fgetpos ( FILE * stream , int  * ptr ) ;
+int fsetpos ( FILE * stream , const int  * ptr ) ;
 void clearerr ( FILE * stream ) ;
-int feof ( FILE * stream ) ;
+int  feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
@@ -201,7 +201,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
      
 
 FILE * tmpfile ( void ) ;
-char * tmpnam ( char name [ 4 ] ) ;
+char * tmpnam ( char name [ 4  ] ) ;
 
    
  
@@ -217,11 +217,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
      
 
 int scanf ( const char * format , ... ) ;
-int vscanf ( const char * format , char * arg_list ) ;
+int vscanf ( const char * format , char *  arg_list ) ;
 int fscanf ( FILE * inStream , const char * format , ... ) ;
-int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
+int vfscanf ( FILE * inStream , const char * format , char *  arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
-int vsscanf ( char * inString , const char * format , char * arg_list ) ;
+int vsscanf ( char * inString , const char * format , char *  arg_list ) ;
 
    
  
@@ -242,11 +242,11 @@ int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
 int printf ( const char * format , ... ) ;
-int vprintf ( const char * format , char * arg_list ) ;
+int vprintf ( const char * format , char *  arg_list ) ;
 int fprintf ( FILE * outStream , const char * format , ... ) ;
-int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
+int vfprintf ( FILE * outStream , const char * format , char *  arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
-int vsprintf ( char * outString , const char * format , char * arg_list ) ;
+int vsprintf ( char * outString , const char * format , char *  arg_list ) ;
 
    
  
@@ -290,15 +290,15 @@ int atexit ( FUNC_PTR fcn ) ;
 int abs ( int value ) ;
 long labs ( long value ) ;
 
-void * malloc ( int size ) ;
-void * realloc ( void * ptr , int newSize ) ;
-void * calloc ( int num , int size ) ;
+void * malloc ( int  size ) ;
+void * realloc ( void * ptr , int  newSize ) ;
+void * calloc ( int  num , int  size ) ;
 void free ( void * ptr ) ;
 
-void qsort ( void * valueList , int listSize , int valueSize ,
+void qsort ( void * valueList , int  listSize , int  valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 void * bsearch ( const void * key , const void * valueList ,
-int listSize , int valueSize ,
+int  listSize , int  valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
 int abs ( int value ) ;
@@ -326,25 +326,25 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\string.h,0$
      
 
 extern char * strcpy ( char * target , const char * source ) ;
-extern char * strncpy ( char * target , const char * source , int size ) ;
+extern char * strncpy ( char * target , const char * source , int  size ) ;
 extern char * strcat ( char * target , const char * source ) ;
-extern char * strncat ( char * target , const char * source , int size ) ;
+extern char * strncat ( char * target , const char * source , int  size ) ;
 extern int strcmp ( const char * left , const char * right ) ;
-extern int strncmp ( const char * left , const char * right , int size ) ;
+extern int strncmp ( const char * left , const char * right , int  size ) ;
 extern char * strchr ( const char * text , int i ) ;
 extern char * strrchr ( const char * text , int i ) ;
-extern int strspn ( const char * mainString , const char * charSet ) ;
-extern int strcspn ( const char * mainString , const char * charSet ) ;
+extern int  strspn ( const char * mainString , const char * charSet ) ;
+extern int  strcspn ( const char * mainString , const char * charSet ) ;
 extern char * strpbrk ( const char * mainString , const char * charSet ) ;
 extern char * strstr ( const char * mainString , const char * subString ) ;
-extern int strlen ( const char * string ) ;
+extern int  strlen ( const char * string ) ;
 extern char * strerror ( int error ) ;
 extern char * strtok ( char * string , const char * charSet ) ;
-extern void * memcpy ( void * target , const void * source , int size ) ;
-extern void * memmove ( void * target , const void * source , int size ) ;
-extern int memcmp ( const void * left , const void * right , int size ) ;
-extern void * memchr ( const void * block , int i , int size ) ;
-extern void * memset ( void * block , int i , int size ) ;
+extern void * memcpy ( void * target , const void * source , int  size ) ;
+extern void * memmove ( void * target , const void * source , int  size ) ;
+extern int memcmp ( const void * left , const void * right , int  size ) ;
+extern void * memchr ( const void * block , int i , int  size ) ;
+extern void * memset ( void * block , int i , int  size ) ;
 
    
  
@@ -475,7 +475,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\assert.h,5$
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.c,5$
         
 
-long clock ( void ) {
+long  clock ( void ) {
 return -1 ;
 }
 
@@ -489,65 +489,65 @@ int tz_minuteswest ;
 int tz_dsttime ;
 };
 
-static int isLeapYear ( int year ) {
+static int  isLeapYear ( int year ) {
 return ( ( ( year % 4 ) == 0 ) && ( ( year % 100 ) != 0 ) ) || ( ( year % 400 ) == 0 ) ;
 }
 
-unsigned long time ( unsigned long * timePtr ) {
-unsigned long time ;
+unsigned long  time ( unsigned long  * timePtr ) {
+unsigned long  time ;
 
     
-    
-        
-   
+ register_rax = 201L ;
+register_rdi = ( unsigned long ) & time ;
+syscall ( ) ; 
    
  
     
- int year ;
-short month , monthDay ;
-short hour , min , sec ;
+   
+    
+      
 
-register_ah = 0x2As ;
-interrupt ( 0x21s ) ;
-year = register_cx - 1900 ;
-month = register_dh - 1s ;
-monthDay = register_dl ;
-
-register_ah = 0x2Cs ;
-interrupt ( 0x21s ) ;
-hour = register_ch ;
-min = register_cl ;
-sec = register_dh ;
-
-{ struct lconv * localeConvPtr = localeconv ( ) ;
-if ( localeConvPtr != ( ( void * ) 0 ) ) {
-hour -= localeConvPtr -> winterTimeZone ;
-}
-}
-
-{ const int daysOfMonths [] = { 31 , isLeapYear ( year ) ? 29 : 28 , 31 ,
-30 , 31 , 30 , 31 , 31 , 30 , 31 , 30 , 31 };
-int yearDay = monthDay - 1 , monthIndex ;
-
-for ( monthIndex = 0 ; monthIndex < month ; ++ monthIndex ) {
-yearDay += daysOfMonths [ monthIndex ];
-}
-
-{ struct tm s = { sec , min , hour , monthDay , month , year , 0 , yearDay , 0 };
-time = mktime ( & s ) ;
-}
-} 
+   
+   
+     
+     
    
 
-if ( timePtr != ( ( void * ) 0 ) ) {
+   
+   
+   
+   
+   
+
+        
+      
+     
+
+
+
+                  
+                 
+        
+
+             
+     
+
+
+                       
+      
+
+ 
+   
+
+if ( timePtr != ( ( void * ) 0 )  ) {
 * timePtr = time ;
 }
 
 return time ;
 }
 
-unsigned long mktime ( struct tm * tp ) {
-if ( tp != ( ( void * ) 0 ) ) {
+unsigned long  mktime ( struct tm * tp ) {
+if ( tp != ( ( void * ) 0 )  ) {
 const long leapDays = ( tp -> tm_year - 69 ) / 4 ;
 const long totalDays = 365 * ( tp -> tm_year - 70 ) + leapDays + tp -> tm_yday ;
 return ( 86400L * totalDays ) + ( 3600L * tp -> tm_hour ) +
@@ -559,9 +559,9 @@ return 0 ;
 
 static struct tm g_timeStruct ;
 
-struct tm * gmtime ( const unsigned long * timePtr ) {
-if ( timePtr != ( ( void * ) 0 ) ) {
-unsigned long time = * timePtr ;
+struct tm * gmtime ( const unsigned long  * timePtr ) {
+if ( timePtr != ( ( void * ) 0 )  ) {
+unsigned long  time = * timePtr ;
 const long secondsOfDay = time % 86400L ,
 secondsOfHour = secondsOfDay % 3600 ;
 g_timeStruct . tm_hour = secondsOfDay / 3600 ;
@@ -613,15 +613,15 @@ return & g_timeStruct ;
 }
 }
 
-return ( ( void * ) 0 ) ;
+return ( ( void * ) 0 )  ;
 }
 
-struct tm * localtime ( const unsigned long * timePtr ) {
+struct tm * localtime ( const unsigned long  * timePtr ) {
 struct tm * tmPtr = gmtime ( timePtr ) ;
-unsigned long t = * timePtr ;
+unsigned long  t = * timePtr ;
 struct lconv * localeConvPtr = localeconv ( ) ;
 
-if ( localeConvPtr != ( ( void * ) 0 ) ) {
+if ( localeConvPtr != ( ( void * ) 0 )  ) {
 int timeZone = ( tmPtr -> tm_isdst == 1 ) ? localeConvPtr -> summerTimeZone
 : localeConvPtr -> winterTimeZone ;
 t += ( 3600l * timeZone ) ;
@@ -630,7 +630,7 @@ t += ( 3600l * timeZone ) ;
 return gmtime ( & t ) ;
 }
 
-double difftime ( unsigned long time1 , unsigned long time2 ) {
+double difftime ( unsigned long  time1 , unsigned long  time2 ) {
 return ( double ) ( time2 - time1 ) ;
 }
 
@@ -648,17 +648,17 @@ static char * g_longMonthList [] = { "January" , "February" , "March" , "April" 
 "November" , "December" };
 
 char * asctime ( const struct tm * tp ) {
-struct lconv * localeConvPtr = ( ( void * ) 0 ) ;
+struct lconv * localeConvPtr = ( ( void * ) 0 )  ;
 char ** shortDayList , ** shortMonthList ;
 
-if ( ( localeConvPtr != ( ( void * ) 0 ) ) && ( localeConvPtr -> shortDayList != ( ( void * ) 0 ) ) ) {
+if ( ( localeConvPtr != ( ( void * ) 0 )  ) && ( localeConvPtr -> shortDayList != ( ( void * ) 0 )  ) ) {
 shortDayList = localeConvPtr -> shortDayList ;
 }
 else {
 shortDayList = g_shortDayList ;
 }
 
-if ( ( localeConvPtr != ( ( void * ) 0 ) ) && ( localeConvPtr -> shortMonthList != ( ( void * ) 0 ) ) ) {
+if ( ( localeConvPtr != ( ( void * ) 0 )  ) && ( localeConvPtr -> shortMonthList != ( ( void * ) 0 )  ) ) {
 shortMonthList = localeConvPtr -> shortMonthList ;
 }
 else {
@@ -672,37 +672,37 @@ tp -> tm_sec , tp -> tm_year + 1900 ) ;
 return g_timeString ;
 }
 
-char * ctime ( const unsigned long * time ) {
+char * ctime ( const unsigned long  * time ) {
 return asctime ( localtime ( time ) ) ;
 }
 
-int strftime ( char * result , int maxSize ,
+int  strftime ( char * result , int  maxSize ,
 const char * format , const struct tm * tp ) {
 struct lconv * localeConvPtr = localeconv ( ) ;
 char ** shortDayList , ** shortMonthList , ** longDayList , ** longMonthList ;
 
-if ( ( localeConvPtr != ( ( void * ) 0 ) ) && ( localeConvPtr -> shortDayList != ( ( void * ) 0 ) ) ) {
+if ( ( localeConvPtr != ( ( void * ) 0 )  ) && ( localeConvPtr -> shortDayList != ( ( void * ) 0 )  ) ) {
 shortDayList = localeConvPtr -> shortDayList ;
 }
 else {
 shortDayList = g_shortDayList ;
 }
 
-if ( ( localeConvPtr != ( ( void * ) 0 ) ) && ( localeConvPtr -> longDayList != ( ( void * ) 0 ) ) ) {
+if ( ( localeConvPtr != ( ( void * ) 0 )  ) && ( localeConvPtr -> longDayList != ( ( void * ) 0 )  ) ) {
 longDayList = localeConvPtr -> longDayList ;
 }
 else {
 longDayList = g_longDayList ;
 }
 
-if ( ( localeConvPtr != ( ( void * ) 0 ) ) && ( localeConvPtr -> shortMonthList != ( ( void * ) 0 ) ) ) {
+if ( ( localeConvPtr != ( ( void * ) 0 )  ) && ( localeConvPtr -> shortMonthList != ( ( void * ) 0 )  ) ) {
 shortMonthList = localeConvPtr -> shortMonthList ;
 }
 else {
 shortMonthList = g_shortMonthList ;
 }
 
-if ( ( localeConvPtr != ( ( void * ) 0 ) ) && ( localeConvPtr -> longMonthList != ( ( void * ) 0 ) ) ) {
+if ( ( localeConvPtr != ( ( void * ) 0 )  ) && ( localeConvPtr -> longMonthList != ( ( void * ) 0 )  ) ) {
 longMonthList = localeConvPtr -> longMonthList ;
 }
 else {

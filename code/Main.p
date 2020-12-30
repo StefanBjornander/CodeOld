@@ -45,15 +45,15 @@ int atexit ( FUNC_PTR fcn ) ;
 int abs ( int value ) ;
 long labs ( long value ) ;
 
-void * malloc ( int size ) ;
-void * realloc ( void * ptr , int newSize ) ;
-void * calloc ( int num , int size ) ;
+void * malloc ( int  size ) ;
+void * realloc ( void * ptr , int  newSize ) ;
+void * calloc ( int  num , int  size ) ;
 void free ( void * ptr ) ;
 
-void qsort ( void * valueList , int listSize , int valueSize ,
+void qsort ( void * valueList , int  listSize , int  valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 void * bsearch ( const void * key , const void * valueList ,
-int listSize , int valueSize ,
+int  listSize , int  valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
 int abs ( int value ) ;
@@ -182,12 +182,12 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
      
 
 typedef struct {
-int open ;
+int  open ;
 unsigned int handle ;
-char name [ 16 ] , ungetc ;
+char name [ 16  ] , ungetc ;
 int errno ;
 unsigned int position , size ;
-int temporary ;
+int  temporary ;
 } FILE ;
 
 extern FILE * stdin , * stdout , * stderr ;
@@ -198,14 +198,14 @@ extern enum { READ , WRITE , READ_WRITE };
 
          
 
-int fileexists ( const char * name ) ;
+int  fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
 FILE * freopen ( const char * filename , const char * mode , FILE * stream ) ;
 int fflush ( FILE * stream ) ;
 int fclose ( FILE * stream ) ;
 int remove ( const char * name ) ;
 int rename ( const char * oldName , const char * newName ) ;
-int setvbuf ( FILE * stream , char * buffer , int mode , int size ) ;
+int setvbuf ( FILE * stream , char * buffer , int mode , int  size ) ;
 void setbuf ( FILE * stream , char * buffer ) ;
 int fgetc ( FILE * stream ) ;
 char * fgets ( char * s , int n , FILE * stream ) ;
@@ -216,15 +216,15 @@ char * gets ( char * s ) ;
 int putchar ( int c ) ;
 int puts ( const char * s ) ;
 int ungetc ( int c , FILE * stream ) ;
-int fread ( void * ptr , int size , int nobj , FILE * stream ) ;
-int fwrite ( const void * ptr , int size , int nobj , FILE * stream ) ;
+int  fread ( void * ptr , int  size , int  nobj , FILE * stream ) ;
+int  fwrite ( const void * ptr , int  size , int  nobj , FILE * stream ) ;
 int fseek ( FILE * stream , int offset , int origin ) ;
 int ftell ( FILE * stream ) ;
 void rewind ( FILE * stream ) ;
-int fgetpos ( FILE * stream , int * ptr ) ;
-int fsetpos ( FILE * stream , const int * ptr ) ;
+int fgetpos ( FILE * stream , int  * ptr ) ;
+int fsetpos ( FILE * stream , const int  * ptr ) ;
 void clearerr ( FILE * stream ) ;
-int feof ( FILE * stream ) ;
+int  feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
@@ -240,7 +240,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
      
 
 FILE * tmpfile ( void ) ;
-char * tmpnam ( char name [ 4 ] ) ;
+char * tmpnam ( char name [ 4  ] ) ;
 
    
  
@@ -256,11 +256,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
      
 
 int scanf ( const char * format , ... ) ;
-int vscanf ( const char * format , char * arg_list ) ;
+int vscanf ( const char * format , char *  arg_list ) ;
 int fscanf ( FILE * inStream , const char * format , ... ) ;
-int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
+int vfscanf ( FILE * inStream , const char * format , char *  arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
-int vsscanf ( char * inString , const char * format , char * arg_list ) ;
+int vsscanf ( char * inString , const char * format , char *  arg_list ) ;
 
    
  
@@ -281,11 +281,11 @@ int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
 int printf ( const char * format , ... ) ;
-int vprintf ( const char * format , char * arg_list ) ;
+int vprintf ( const char * format , char *  arg_list ) ;
 int fprintf ( FILE * outStream , const char * format , ... ) ;
-int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
+int vfprintf ( FILE * outStream , const char * format , char *  arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
-int vsprintf ( char * outString , const char * format , char * arg_list ) ;
+int vsprintf ( char * outString , const char * format , char *  arg_list ) ;
 
    
  
@@ -347,25 +347,25 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,0$
      
 
 extern char * strcpy ( char * target , const char * source ) ;
-extern char * strncpy ( char * target , const char * source , int size ) ;
+extern char * strncpy ( char * target , const char * source , int  size ) ;
 extern char * strcat ( char * target , const char * source ) ;
-extern char * strncat ( char * target , const char * source , int size ) ;
+extern char * strncat ( char * target , const char * source , int  size ) ;
 extern int strcmp ( const char * left , const char * right ) ;
-extern int strncmp ( const char * left , const char * right , int size ) ;
+extern int strncmp ( const char * left , const char * right , int  size ) ;
 extern char * strchr ( const char * text , int i ) ;
 extern char * strrchr ( const char * text , int i ) ;
-extern int strspn ( const char * mainString , const char * charSet ) ;
-extern int strcspn ( const char * mainString , const char * charSet ) ;
+extern int  strspn ( const char * mainString , const char * charSet ) ;
+extern int  strcspn ( const char * mainString , const char * charSet ) ;
 extern char * strpbrk ( const char * mainString , const char * charSet ) ;
 extern char * strstr ( const char * mainString , const char * subString ) ;
-extern int strlen ( const char * string ) ;
+extern int  strlen ( const char * string ) ;
 extern char * strerror ( int error ) ;
 extern char * strtok ( char * string , const char * charSet ) ;
-extern void * memcpy ( void * target , const void * source , int size ) ;
-extern void * memmove ( void * target , const void * source , int size ) ;
-extern int memcmp ( const void * left , const void * right , int size ) ;
-extern void * memchr ( const void * block , int i , int size ) ;
-extern void * memset ( void * block , int i , int size ) ;
+extern void * memcpy ( void * target , const void * source , int  size ) ;
+extern void * memmove ( void * target , const void * source , int  size ) ;
+extern int memcmp ( const void * left , const void * right , int  size ) ;
+extern void * memchr ( const void * block , int i , int  size ) ;
+extern void * memset ( void * block , int i , int  size ) ;
 
    
  
@@ -600,17 +600,17 @@ int tm_yday ;
 int tm_isdst ;
 };
 
-extern long clock ( void ) ;
-extern unsigned long time ( unsigned long * time ) ;
-extern double difftime ( unsigned long time2 , unsigned long time1 ) ;
-extern unsigned long mktime ( struct tm * timeStruct ) ;
+extern long  clock ( void ) ;
+extern unsigned long  time ( unsigned long  * time ) ;
+extern double difftime ( unsigned long  time2 , unsigned long  time1 ) ;
+extern unsigned long  mktime ( struct tm * timeStruct ) ;
 
 extern char * asctime ( const struct tm * timeStruct ) ;
-extern char * ctime ( const unsigned long * time ) ;
-extern struct tm * gmtime ( const unsigned long * time ) ;
-extern struct tm * localtime ( const unsigned long * time ) ;
+extern char * ctime ( const unsigned long  * time ) ;
+extern struct tm * gmtime ( const unsigned long  * time ) ;
+extern struct tm * localtime ( const unsigned long  * time ) ;
 
-extern int strftime ( char * buffer , int size , const char * format ,
+extern int  strftime ( char * buffer , int  size , const char * format ,
 const struct tm * timeStruct ) ;
 
    

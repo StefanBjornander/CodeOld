@@ -172,12 +172,12 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
      
 
 typedef struct {
-int open ;
+int  open ;
 unsigned int handle ;
-char name [ 16 ] , ungetc ;
+char name [ 16  ] , ungetc ;
 int errno ;
 unsigned int position , size ;
-int temporary ;
+int  temporary ;
 } FILE ;
 
 extern FILE * stdin , * stdout , * stderr ;
@@ -188,14 +188,14 @@ extern enum { READ , WRITE , READ_WRITE };
 
          
 
-int fileexists ( const char * name ) ;
+int  fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
 FILE * freopen ( const char * filename , const char * mode , FILE * stream ) ;
 int fflush ( FILE * stream ) ;
 int fclose ( FILE * stream ) ;
 int remove ( const char * name ) ;
 int rename ( const char * oldName , const char * newName ) ;
-int setvbuf ( FILE * stream , char * buffer , int mode , int size ) ;
+int setvbuf ( FILE * stream , char * buffer , int mode , int  size ) ;
 void setbuf ( FILE * stream , char * buffer ) ;
 int fgetc ( FILE * stream ) ;
 char * fgets ( char * s , int n , FILE * stream ) ;
@@ -206,15 +206,15 @@ char * gets ( char * s ) ;
 int putchar ( int c ) ;
 int puts ( const char * s ) ;
 int ungetc ( int c , FILE * stream ) ;
-int fread ( void * ptr , int size , int nobj , FILE * stream ) ;
-int fwrite ( const void * ptr , int size , int nobj , FILE * stream ) ;
+int  fread ( void * ptr , int  size , int  nobj , FILE * stream ) ;
+int  fwrite ( const void * ptr , int  size , int  nobj , FILE * stream ) ;
 int fseek ( FILE * stream , int offset , int origin ) ;
 int ftell ( FILE * stream ) ;
 void rewind ( FILE * stream ) ;
-int fgetpos ( FILE * stream , int * ptr ) ;
-int fsetpos ( FILE * stream , const int * ptr ) ;
+int fgetpos ( FILE * stream , int  * ptr ) ;
+int fsetpos ( FILE * stream , const int  * ptr ) ;
 void clearerr ( FILE * stream ) ;
-int feof ( FILE * stream ) ;
+int  feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
@@ -230,7 +230,7 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
      
 
 FILE * tmpfile ( void ) ;
-char * tmpnam ( char name [ 4 ] ) ;
+char * tmpnam ( char name [ 4  ] ) ;
 
    
  
@@ -246,11 +246,11 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
      
 
 int scanf ( const char * format , ... ) ;
-int vscanf ( const char * format , char * arg_list ) ;
+int vscanf ( const char * format , char *  arg_list ) ;
 int fscanf ( FILE * inStream , const char * format , ... ) ;
-int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
+int vfscanf ( FILE * inStream , const char * format , char *  arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
-int vsscanf ( char * inString , const char * format , char * arg_list ) ;
+int vsscanf ( char * inString , const char * format , char *  arg_list ) ;
 
    
  
@@ -271,11 +271,11 @@ int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
 int printf ( const char * format , ... ) ;
-int vprintf ( const char * format , char * arg_list ) ;
+int vprintf ( const char * format , char *  arg_list ) ;
 int fprintf ( FILE * outStream , const char * format , ... ) ;
-int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
+int vfprintf ( FILE * outStream , const char * format , char *  arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
-int vsprintf ( char * outString , const char * format , char * arg_list ) ;
+int vsprintf ( char * outString , const char * format , char *  arg_list ) ;
 
    
  
@@ -346,15 +346,15 @@ int atexit ( FUNC_PTR fcn ) ;
 int abs ( int value ) ;
 long labs ( long value ) ;
 
-void * malloc ( int size ) ;
-void * realloc ( void * ptr , int newSize ) ;
-void * calloc ( int num , int size ) ;
+void * malloc ( int  size ) ;
+void * realloc ( void * ptr , int  newSize ) ;
+void * calloc ( int  num , int  size ) ;
 void free ( void * ptr ) ;
 
-void qsort ( void * valueList , int listSize , int valueSize ,
+void qsort ( void * valueList , int  listSize , int  valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 void * bsearch ( const void * key , const void * valueList ,
-int listSize , int valueSize ,
+int  listSize , int  valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
 int abs ( int value ) ;
@@ -435,35 +435,35 @@ void * g_outDevice ;
 void printChar ( char c ) ;
 void printString ( const char * s , int precision ) ;
 void printIntRec ( int intValue ) ;
-void printInt ( int intValue , int plus , int space ) ;
-void printDoublePlain ( double doubleValue , int plus , int space ,
-int grid , int precision ) ;
-void printLongDoublePlain ( long double doubleValue , int plus ,
-int space , int grid , int precision ) ;
-void printInt ( int intValue , int plus , int space ) ;
-void printLongInt ( long longIntValue , int plus , int space ) ;
+void printInt ( int intValue , int  plus , int  space ) ;
+void printDoublePlain ( double doubleValue , int  plus , int  space ,
+int  grid , int precision ) ;
+void printLongDoublePlain ( long double doubleValue , int  plus ,
+int  space , int  grid , int precision ) ;
+void printInt ( int intValue , int  plus , int  space ) ;
+void printLongInt ( long longIntValue , int  plus , int  space ) ;
 void printLongDoubleFraction ( long double longDoubleValue ,
-int grid , int precision ) ;
-void printLongDoublePlain ( long double longDoubleValue , int plus ,
-int space , int grid , int precision ) ;
-int printFormat ( const char * format , char * arg_list ) ;
+int  grid , int precision ) ;
+void printLongDoublePlain ( long double longDoubleValue , int  plus ,
+int  space , int  grid , int precision ) ;
+int printFormat ( const char * format , char *  arg_list ) ;
 
 int putc ( int i , FILE * stream ) {
-g_outStatus = 0 ;
+g_outStatus = 0  ;
 g_outDevice = ( void * ) stream ;
 printChar ( ( char ) i ) ;
 return 1 ;
 }
 
 int fputc ( int i , FILE * stream ) {
-g_outStatus = 0 ;
+g_outStatus = 0  ;
 g_outDevice = ( void * ) stream ;
 printChar ( ( char ) i ) ;
 return 1 ;
 }
 
 int putchar ( int i ) {
-g_outStatus = 0 ;
+g_outStatus = 0  ;
 g_outDevice = ( void * ) stdout ;
 printChar ( ( char ) i ) ;
 return 1 ;
@@ -474,42 +474,42 @@ int handle ;
 char * outString ;
 
 switch ( g_outStatus ) {
-case 0 : {
+case 0  : {
 FILE * stream = ( FILE * ) g_outDevice ;
 
     
- register_ah = 0x40s ;
-register_bx = stream -> handle ;
-register_cx = 1 ;
-register_dx = & c ;
-interrupt ( 0x21s ) ; 
+    
+     
+   
+    
+    
    
  
     
-    
-         
-        
-   
-   
+ register_rax = 0x01 ;
+register_rdi = ( unsigned long ) stream -> handle ;
+register_rsi = ( unsigned long ) & c ;
+register_rdx = 1 ;
+syscall ( ) ; 
    
  ++ g_outChars ;
 break ;
 }
 
-case 1 : {
+case 1  : {
 outString = ( char * ) g_outDevice ;
 outString [ g_outChars ++] = c ;
 }
 break ;
 
-case 2 :
+case 2  :
 g_outChars ++;
 break ;
 }
 }
 
 void printString ( const char * s , int precision ) {
-if ( s != ( ( void * ) 0 ) ) {
+if ( s != ( ( void * ) 0 )  ) {
 int index ;
 
 if ( precision == 0 ) {
@@ -541,7 +541,7 @@ printChar ( ( char ) ( digit + '0' ) ) ;
 }
 }
 
-void printLongInt ( long longValue , int plus , int space ) {
+void printLongInt ( long longValue , int  plus , int  space ) {
 if ( longValue < 0L ) {
 longValue = - longValue ;
 printChar ( '-' ) ;
@@ -561,7 +561,7 @@ printLongIntRec ( longValue ) ;
 }
 }
 
-char digitToChar ( int digit , int capital ) {
+char digitToChar ( int digit , int  capital ) {
 if ( digit < 10 ) {
 return ( ( char ) ( '0' + digit ) ) ;
 }
@@ -574,7 +574,7 @@ return ( ( char ) ( 'a' + ( digit - 10 ) ) ) ;
 }
 
 void printUnsignedLongRec ( unsigned long unsignedValue ,
-unsigned long base , int capital ) {
+unsigned long base , int  capital ) {
 if ( unsignedValue > 0ul ) {
 int digit = ( int ) ( unsignedValue % base ) ;
 printUnsignedLongRec ( unsignedValue / base , base , capital ) ;
@@ -585,8 +585,8 @@ printChar ( c ) ;
 }
 }
 
-void printUnsignedLong ( unsigned long unsignedValue , int plus , int space ,
-int grid , unsigned long base , int capital ) {
+void printUnsignedLong ( unsigned long unsignedValue , int  plus , int  space ,
+int  grid , unsigned long base , int  capital ) {
 if ( plus ) {
 printChar ( '+' ) ;
 }
@@ -615,11 +615,11 @@ printUnsignedLongRec ( unsignedValue , base , capital ) ;
 }
 
 void printLongDoubleFraction ( long double longDoubleValue ,
-int grid , int precision ) {
+int  grid , int precision ) {
 longDoubleValue -= ( long ) longDoubleValue ;
 
 if ( precision == 0 ) {
-precision = 6 ;
+precision = 6  ;
 }
 
 if ( grid || ( precision > 0 ) ) {
@@ -634,13 +634,13 @@ longDoubleValue = longDoubleValue10 - ( ( long double ) digitValue ) ;
 }
 }
 
-void printLongDoublePlain ( long double longDoubleValue , int plus ,
-int space , int grid , int precision ) {
+void printLongDoublePlain ( long double longDoubleValue , int  plus ,
+int  space , int  grid , int precision ) {
 if ( longDoubleValue < 0.0L ) {
 printChar ( '-' ) ;
 longDoubleValue = - longDoubleValue ;
-plus = 0 ;
-space = 0 ;
+plus = 0  ;
+space = 0  ;
 }
 
 { long longValue = ( long ) longDoubleValue ;
@@ -650,8 +650,8 @@ printLongDoubleFraction ( longDoubleValue , grid , precision ) ;
 }
 }
 
-void printLongDoubleExpo ( long double value , int plus , int space ,
-int grid , int precision , int capital ) {
+void printLongDoubleExpo ( long double value , int  plus , int  space ,
+int  grid , int precision , int  capital ) {
 if ( value == 0.0L ) {
 printChar ( '0' ) ;
 printLongDoubleFraction ( 0.0L , precision , grid ) ;
@@ -669,28 +669,28 @@ value /= pow ( 10.0 , expo ) ;
 
 printLongDoublePlain ( value , plus , space , grid , precision ) ;
 printChar ( capital ? 'E' : 'e' ) ;
-printLongInt ( expo , 1 , 0 ) ;
+printLongInt ( expo , 1  , 0  ) ;
 }
 }
 }
 
-char * checkWidthAndPrecision ( char * arg_list , int * widthPtr ,
+char *  checkWidthAndPrecision ( char *  arg_list , int * widthPtr ,
 int * precisionPtr ) {
-if ( ( widthPtr != ( ( void * ) 0 ) ) && ( * widthPtr == -1 ) ) {
-* widthPtr = ( * ( ( arg_list += sizeof ( int ) ) , ( ( int * ) ( arg_list - sizeof ( int ) ) ) ) ) ;
+if ( ( widthPtr != ( ( void * ) 0 )  ) && ( * widthPtr == -1 ) ) {
+* widthPtr = ( * ( ( arg_list += sizeof ( int ) ) , ( ( int * ) ( arg_list - sizeof ( int ) ) ) ) )  ;
 }
 
-if ( ( precisionPtr != ( ( void * ) 0 ) ) && ( * precisionPtr == -1 ) ) {
-* precisionPtr = ( * ( ( arg_list += sizeof ( int ) ) , ( ( int * ) ( arg_list - sizeof ( int ) ) ) ) ) ;
+if ( ( precisionPtr != ( ( void * ) 0 )  ) && ( * precisionPtr == -1 ) ) {
+* precisionPtr = ( * ( ( arg_list += sizeof ( int ) ) , ( ( int * ) ( arg_list - sizeof ( int ) ) ) ) )  ;
 }
 
 return arg_list ;
 }
 
-char * printArgument ( const char * format , char * arg_list , int plus ,
-int space , int grid , int * widthPtr , int precision ,
-int shortInt , int longInt , int longDouble , int sign ,
-int * negativePtr ) {
+char *  printArgument ( const char * format , char *  arg_list , int  plus ,
+int  space , int  grid , int * widthPtr , int precision ,
+int  shortInt , int  longInt , int  longDouble , int  sign ,
+int  * negativePtr ) {
 char c = format [ 0 ] , charValue ;
 int * intPtr ;
 long double longDoubleValue ;
@@ -702,16 +702,16 @@ case 'd' : {
 long longValue ;
 
 if ( shortInt ) {
-longValue = ( long ) ( short ) ( * ( ( arg_list += sizeof ( int ) ) , ( ( int * ) ( arg_list - sizeof ( int ) ) ) ) ) ;
+longValue = ( long ) ( short ) ( * ( ( arg_list += sizeof ( int ) ) , ( ( int * ) ( arg_list - sizeof ( int ) ) ) ) )  ;
 }
 else if ( longInt ) {
-longValue = ( * ( ( arg_list += sizeof ( long ) ) , ( ( long * ) ( arg_list - sizeof ( long ) ) ) ) ) ;
+longValue = ( * ( ( arg_list += sizeof ( long ) ) , ( ( long * ) ( arg_list - sizeof ( long ) ) ) ) )  ;
 }
 else {
-longValue = ( long ) ( * ( ( arg_list += sizeof ( int ) ) , ( ( int * ) ( arg_list - sizeof ( int ) ) ) ) ) ;
+longValue = ( long ) ( * ( ( arg_list += sizeof ( int ) ) , ( ( int * ) ( arg_list - sizeof ( int ) ) ) ) )  ;
 }
 
-if ( negativePtr != ( ( void * ) 0 ) ) {
+if ( negativePtr != ( ( void * ) 0 )  ) {
 * negativePtr = ( longValue < 0 ) ;
 }
 
@@ -725,13 +725,13 @@ printLongInt ( longValue , plus , space ) ;
 break ;
 
 case 'c' :
-charValue = ( char ) ( * ( ( arg_list += sizeof ( int ) ) , ( ( int * ) ( arg_list - sizeof ( int ) ) ) ) ) ;
+charValue = ( char ) ( * ( ( arg_list += sizeof ( int ) ) , ( ( int * ) ( arg_list - sizeof ( int ) ) ) ) )  ;
 arg_list = checkWidthAndPrecision ( arg_list , widthPtr , & precision ) ;
 printChar ( charValue ) ;
 break ;
 
 case 's' : {
-char * stringValue = ( * ( ( arg_list += sizeof ( char * ) ) , ( ( char * * ) ( arg_list - sizeof ( char * ) ) ) ) ) ;
+char * stringValue = ( * ( ( arg_list += sizeof ( char * ) ) , ( ( char * * ) ( arg_list - sizeof ( char * ) ) ) ) )  ;
 arg_list = checkWidthAndPrecision ( arg_list , widthPtr , & precision ) ;
 printString ( stringValue , precision ) ;
 }
@@ -748,13 +748,13 @@ unsigned long value ;
 
 if ( shortInt ) {
 value = ( unsigned long ) ( unsigned short )
-( * ( ( arg_list += sizeof ( unsigned int ) ) , ( ( unsigned int * ) ( arg_list - sizeof ( unsigned int ) ) ) ) ) ;
+( * ( ( arg_list += sizeof ( unsigned int ) ) , ( ( unsigned int * ) ( arg_list - sizeof ( unsigned int ) ) ) ) )  ;
 }
 else if ( longInt ) {
-value = ( * ( ( arg_list += sizeof ( unsigned long ) ) , ( ( unsigned long * ) ( arg_list - sizeof ( unsigned long ) ) ) ) ) ;
+value = ( * ( ( arg_list += sizeof ( unsigned long ) ) , ( ( unsigned long * ) ( arg_list - sizeof ( unsigned long ) ) ) ) )  ;
 }
 else {
-value = ( unsigned long ) ( * ( ( arg_list += sizeof ( unsigned int ) ) , ( ( unsigned int * ) ( arg_list - sizeof ( unsigned int ) ) ) ) ) ;
+value = ( unsigned long ) ( * ( ( arg_list += sizeof ( unsigned int ) ) , ( ( unsigned int * ) ( arg_list - sizeof ( unsigned int ) ) ) ) )  ;
 }
 
 arg_list = checkWidthAndPrecision ( arg_list , widthPtr , & precision ) ;
@@ -768,14 +768,14 @@ case 'E' :
 case 'g' :
 case 'G' :
 if ( longDouble ) {
-longDoubleValue = ( * ( ( arg_list += sizeof ( long double ) ) , ( ( long double * ) ( arg_list - sizeof ( long double ) ) ) ) ) ;
-printLongDoublePlain ( longDoubleValue , 0 , 0 , 0 , 3 ) ;
+longDoubleValue = ( * ( ( arg_list += sizeof ( long double ) ) , ( ( long double * ) ( arg_list - sizeof ( long double ) ) ) ) )  ;
+printLongDoublePlain ( longDoubleValue , 0  , 0  , 0  , 3 ) ;
 }
 else {
-longDoubleValue = ( long double ) ( * ( ( arg_list += sizeof ( double ) ) , ( ( double * ) ( arg_list - sizeof ( double ) ) ) ) ) ;
+longDoubleValue = ( long double ) ( * ( ( arg_list += sizeof ( double ) ) , ( ( double * ) ( arg_list - sizeof ( double ) ) ) ) )  ;
 }
 
-if ( negativePtr != ( ( void * ) 0 ) ) {
+if ( negativePtr != ( ( void * ) 0 )  ) {
 * negativePtr = ( longDoubleValue < 0 ) ;
 }
 
@@ -806,14 +806,14 @@ grid , precision , isupper ( c ) ) ;
 break ;
 
 case 'p' :
-ptrValue = ( * ( ( arg_list += sizeof ( void * ) ) , ( ( void * * ) ( arg_list - sizeof ( void * ) ) ) ) ) ;
+ptrValue = ( * ( ( arg_list += sizeof ( void * ) ) , ( ( void * * ) ( arg_list - sizeof ( void * ) ) ) ) )  ;
 arg_list = checkWidthAndPrecision ( arg_list , widthPtr , & precision ) ;
-printUnsignedLong ( ( void * ) ptrValue , 0 , 0 , 0 , 10u , 0 ) ;
+printUnsignedLong ( ( void * ) ptrValue , 0  , 0  , 0  , 10u , 0  ) ;
 break ;
 
 case 'n' :
-ptrValue = ( * ( ( arg_list += sizeof ( void * ) ) , ( ( void * * ) ( arg_list - sizeof ( void * ) ) ) ) ) ;
-intPtr = ( * ( ( arg_list += sizeof ( int * ) ) , ( ( int * * ) ( arg_list - sizeof ( int * ) ) ) ) ) ;
+ptrValue = ( * ( ( arg_list += sizeof ( void * ) ) , ( ( void * * ) ( arg_list - sizeof ( void * ) ) ) ) )  ;
+intPtr = ( * ( ( arg_list += sizeof ( int * ) ) , ( ( int * * ) ( arg_list - sizeof ( int * ) ) ) ) )  ;
 arg_list = checkWidthAndPrecision ( arg_list , widthPtr , & precision ) ;
 * intPtr = g_outChars ;
 break ;
@@ -827,12 +827,12 @@ break ;
 return arg_list ;
 }
 
-int printFormat ( const char * format , char * arg_list ) {
+int printFormat ( const char * format , char *  arg_list ) {
 int index , width = 0 , precision = 0 ;
-int percent = 0 , plus = 0 , minus = 0 , space = 0 ,
-zero = 0 , grid = 0 , widthStar = 0 ,
-period = 0 , precisionStar = 0 ,
-shortInt = 0 , longInt = 0 , longDouble = 0 ;
+int  percent = 0  , plus = 0  , minus = 0  , space = 0  ,
+zero = 0  , grid = 0  , widthStar = 0  ,
+period = 0  , precisionStar = 0  ,
+shortInt = 0  , longInt = 0  , longDouble = 0  ;
 g_outChars = 0 ;
 
 for ( index = 0 ; format [ index ] != '\0' ; ++ index ) {
@@ -841,27 +841,27 @@ char c = format [ index ];
 if ( percent ) {
 switch ( c ) {
 case '+' :
-plus = 1 ;
+plus = 1  ;
 break ;
 
 case '-' :
-minus = 1 ;
+minus = 1  ;
 break ;
 
 case ' ' :
-space = 1 ;
+space = 1  ;
 break ;
 
 case '0' :
-zero = 1 ;
+zero = 1  ;
 break ;
 
 case '#' :
-grid = 1 ;
+grid = 1  ;
 break ;
 
 case '.' :
-period = 1 ;
+period = 1  ;
 break ;
 
 case '*' :
@@ -874,15 +874,15 @@ precision = -1 ;
 break ;
 
 case 'h' :
-shortInt = 1 ;
+shortInt = 1  ;
 break ;
 
 case 'l' :
-longInt = 1 ;
+longInt = 1  ;
 break ;
 
 case 'L' :
-longDouble = 1 ;
+longDouble = 1  ;
 break ;
 
 case 'i' :
@@ -906,7 +906,7 @@ if ( minus ) {
 int startChars = g_outChars ;
 arg_list = printArgument ( & format [ index ] , arg_list , plus , space ,
 grid , & width , precision , shortInt ,
-longInt , longDouble , 1 , ( ( void * ) 0 ) ) ;
+longInt , longDouble , 1  , ( ( void * ) 0 )  ) ;
 
 { int field = g_outChars - startChars ;
 
@@ -917,12 +917,12 @@ printChar ( ' ' ) ;
 }
 else if ( zero ) {
 int startChars = g_outChars , oldOutStatus = g_outStatus ;
-int negative = 0 ;
+int  negative = 0  ;
 
-g_outStatus = 2 ;
-printArgument ( & format [ index ] , arg_list , 0 , 0 , grid ,
+g_outStatus = 2  ;
+printArgument ( & format [ index ] , arg_list , 0  , 0  , grid ,
 & width , precision , shortInt , longInt ,
-longDouble , 0 , & negative ) ;
+longDouble , 0  , & negative ) ;
 g_outStatus = oldOutStatus ;
 
 { int field = g_outChars - startChars ;
@@ -945,18 +945,18 @@ while ( field ++ < width ) {
 printChar ( '0' ) ;
 }
 
-arg_list = printArgument ( & format [ index ] , arg_list , 0 , 0 ,
-grid , ( ( void * ) 0 ) , precision , shortInt ,
-longInt , longDouble , 0 , ( ( void * ) 0 ) ) ;
+arg_list = printArgument ( & format [ index ] , arg_list , 0  , 0  ,
+grid , ( ( void * ) 0 )  , precision , shortInt ,
+longInt , longDouble , 0  , ( ( void * ) 0 )  ) ;
 }
 }
 else {
 int startChars = g_outChars , oldOutStatus = g_outStatus ;
 
-g_outStatus = 2 ;
+g_outStatus = 2  ;
 printArgument ( & format [ index ] , arg_list , plus , space , grid ,
 & width , precision , shortInt , longInt ,
-longDouble , 1 , ( ( void * ) 0 ) ) ;
+longDouble , 1  , ( ( void * ) 0 )  ) ;
 g_outStatus = oldOutStatus ;
 
 { int field = g_outChars - startChars ;
@@ -967,12 +967,12 @@ printChar ( ' ' ) ;
 }
 
 arg_list = printArgument ( & format [ index ] , arg_list , plus , space ,
-grid , ( ( void * ) 0 ) , precision , shortInt ,
-longInt , longDouble , 1 , ( ( void * ) 0 ) ) ;
+grid , ( ( void * ) 0 )  , precision , shortInt ,
+longInt , longDouble , 1  , ( ( void * ) 0 )  ) ;
 }
 }
 
-percent = 0 ;
+percent = 0  ;
 }
 break ;
 
@@ -996,18 +996,18 @@ break ;
 }
 else {
 if ( c == '%' ) {
-percent = 1 ;
-plus = 0 ;
-minus = 0 ;
-space = 0 ;
-zero = 0 ;
-grid = 0 ;
-widthStar = 0 ;
-period = 0 ;
-precisionStar = 0 ;
-shortInt = 0 ;
-longInt = 0 ;
-longDouble = 0 ;
+percent = 1  ;
+plus = 0  ;
+minus = 0  ;
+space = 0  ;
+zero = 0  ;
+grid = 0  ;
+widthStar = 0  ;
+period = 0  ;
+precisionStar = 0  ;
+shortInt = 0  ;
+longInt = 0  ;
+longDouble = 0  ;
 width = 0 ;
 precision = 0 ;
 }
@@ -1017,7 +1017,7 @@ printChar ( c ) ;
 }
 }
 
-if ( g_outStatus == 1 ) {
+if ( g_outStatus == 1  ) {
 char * outString = ( char * ) g_outDevice ;
 outString [ g_outChars ] = '\0' ;
 }
@@ -1026,35 +1026,35 @@ return g_outChars ;
 }
 
 int printf ( const char * format , ... ) {
-char * arg_list ;
-( arg_list = ( ( char * ) & format ) + sizeof ( format ) ) ;
+char *  arg_list ;
+( arg_list = ( ( char * ) & format ) + sizeof ( format ) )  ;
 return vprintf ( format , arg_list ) ;
 }
 
-int vprintf ( const char * format , char * arg_list ) {
+int vprintf ( const char * format , char *  arg_list ) {
 return vfprintf ( stdout , format , arg_list ) ;
 }
 
 int fprintf ( FILE * outStream , const char * format , ... ) {
-char * arg_list ;
-( arg_list = ( ( char * ) & format ) + sizeof ( format ) ) ;
+char *  arg_list ;
+( arg_list = ( ( char * ) & format ) + sizeof ( format ) )  ;
 return vfprintf ( outStream , format , arg_list ) ;
 }
 
-int vfprintf ( FILE * outStream , const char * format , char * arg_list ) {
-g_outStatus = 0 ;
+int vfprintf ( FILE * outStream , const char * format , char *  arg_list ) {
+g_outStatus = 0  ;
 g_outDevice = ( void * ) outStream ;
 return printFormat ( format , arg_list ) ;
 }
 
 int sprintf ( char * outString , const char * format , ... ) {
-char * arg_list ;
-( arg_list = ( ( char * ) & format ) + sizeof ( format ) ) ;
+char *  arg_list ;
+( arg_list = ( ( char * ) & format ) + sizeof ( format ) )  ;
 return vsprintf ( outString , format , arg_list ) ;
 }
 
-int vsprintf ( char * outString , const char * format , char * arg_list ) {
-g_outStatus = 1 ;
+int vsprintf ( char * outString , const char * format , char *  arg_list ) {
+g_outStatus = 1  ;
 g_outDevice = ( void * ) outString ;
 return printFormat ( format , arg_list ) ;
 } 
