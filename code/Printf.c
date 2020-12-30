@@ -11,7 +11,7 @@
 #define STRING 1
 #define BLANK  2
 
-#define PRINT(x,y) { printf(#x " = <%" #y ">\n", (x)); }
+//#define PRINT(x,y) { printf(#x " = <%" #y ">\n", (x)); }
 
 int g_outStatus, g_outChars;
 void* g_outDevice;

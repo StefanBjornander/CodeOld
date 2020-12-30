@@ -424,8 +424,8 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.c,7$
      
      
      
- 
-                       
+
+
 
 int g_outStatus , g_outChars ;
 void * g_outDevice ;
