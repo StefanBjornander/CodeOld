@@ -389,8 +389,8 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
  
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,7$
         
- 
-                       
+
+
 
 int g_inStatus , g_inChars ;
 void * g_inDevice ;

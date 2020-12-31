@@ -7,7 +7,7 @@
 #include <scanf.h>
 #include <printf.h>
 
-#define PRINT(x,y) { printf(#x " = <%" #y ">\n", (x)); }
+//#define PRINT(x,y) { printf(#x " = <%" #y ">\n", (x)); }
 
 int g_inStatus, g_inChars;
 void* g_inDevice;
