@@ -4,27 +4,27 @@ new  <malloc4: 65448 80 65528>
 
 656:
 old  <now 1: 1609435334>
-new  <now 1: 1609435315>
+new  <now 1: 1609587883>
 
 657:
 old  <now 2: 1609435334>
-new  <now 2: 1609435315>
+new  <now 2: 1609587883>
 
 658:
 old  <   gm time: Thu 2020-12-31 17:22:14, year day 365, week day 4, daylight saving time -1>
-new  <   gm time: Thu 2020-12-31 17:21:55, year day 365, week day 4, daylight saving time -1>
+new  <   gm time: Sat 2021-01-02 11:44:43, year day 1, week day 6, daylight saving time -1>
 
 659:
 old  <local time: Thu 2020-12-31 18:22:14, year day 365, week day 4, daylight saving time -1>
-new  <local time: Thu 2020-12-31 18:21:55, year day 365, week day 4, daylight saving time -1>
+new  <local time: Sat 2021-01-02 12:44:43, year day 1, week day 6, daylight saving time -1>
 
 660:
 old  <asctime <Thu Dec 31 17:22:14 2020>, ctime <Thu Dec 31 18:22:14 2020>>
-new  <asctime <Thu Dec 31 17:21:55 2020>, ctime <Thu Dec 31 18:21:55 2020>>
+new  <asctime <Sat Jan 2 11:44:43 2021>, ctime <Sat Jan 2 12:44:43 2021>>
 
 661:
 old  <strftime 291 291 <short day Thu, long day Thursday, short month Dec, long month December, date-time 2020-12-31 18:22:14, mday 31, hour 18, gm hour 06, yday 365, month 12, min 22, am/pm PM, sec 14, week number sun 00, week day 04, week number mon 00, date 18:22:14, time 18:22:14, short year 20, long year 2020>>
-new  <strftime 291 291 <short day Thu, long day Thursday, short month Dec, long month December, date-time 2020-12-31 18:21:55, mday 31, hour 18, gm hour 06, yday 365, month 12, min 21, am/pm PM, sec 55, week number sun 00, week day 04, week number mon 00, date 18:21:55, time 18:21:55, short year 20, long year 2020>>
+new  <strftime 290 290 <short day Sat, long day Saturday, short month Jan, long month January, date-time 2021-01-02 12:44:43, mday 02, hour 12, gm hour 00, yday 001, month 01, min 44, am/pm PM, sec 43, week number sun 00, week day 06, week number mon 00, date 12:44:43, time 12:44:43, short year 21, long year 2021>>
 
 663:
 old  <  Address 7411020, Size 96>
