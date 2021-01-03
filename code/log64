@@ -478,7 +478,7 @@ index3: 8: value 64.000000
 index3: 9: value 81.000000
 
 size4: 10 total 80
-malloc4: 7411032 0 80
+malloc4: 7410504 0 80
 index4: 0: value 0.000000
 index4: 1: value 1.000000
 index4: 2: value 4.000000
@@ -653,36 +653,36 @@ fileexists "File.h": Yes
 fileexists "File.y": No
 fileexists "File.p": Yes
 fileexists "File.z": No
-now 1: 1609708622
-now 2: 1609708622
-   gm time: Sun 2021-01-03 21:17:02, year day 2, week day 0, daylight saving time -1
-local time: Sun 2021-01-03 22:17:02, year day 2, week day 0, daylight saving time -1
-asctime <Sun Jan 3 21:17:02 2021>, ctime <Sun Jan 3 22:17:02 2021>
-strftime 288 288 <short day Sun, long day Sunday, short month Jan, long month January, date-time 2021-01-03 22:17:02, mday 03, hour 22, gm hour 10, yday 002, month 01, min 17, am/pm PM, sec 02, week number sun 00, week day 00, week number mon 00, date 22:17:02, time 22:17:02, short year 21, long year 2021>
+now 1: 1609709700
+now 2: 1609709700
+   gm time: Sun 2021-01-03 21:35:00, year day 2, week day 0, daylight saving time -1
+local time: Sun 2021-01-03 22:35:00, year day 2, week day 0, daylight saving time -1
+asctime <Sun Jan 3 21:35:00 2021>, ctime <Sun Jan 3 22:35:00 2021>
+strftime 288 288 <short day Sun, long day Sunday, short month Jan, long month January, date-time 2021-01-03 22:35:00, mday 03, hour 22, gm hour 10, yday 002, month 01, min 35, am/pm PM, sec 00, week number sun 00, week day 00, week number mon 00, date 22:35:00, time 22:35:00, short year 21, long year 2021>
 Heap:
-  Address 7411004, Size 96
-  Address 7410896, Size 96
-  Address 7410788, Size 96
+  Address 7410476, Size 96
+  Address 7410368, Size 96
+  Address 7410260, Size 96
 
 Heap:
-  Address 7411004, Size 96
-  Address 7410896, Size 52
-  Address 7410788, Size 96
+  Address 7410476, Size 96
+  Address 7410368, Size 52
+  Address 7410260, Size 96
 
 Heap:
-  Address 7411004, Size 96
-  Address 7410896, Size 52
-  Address 7410788, Size 96
-  Address 7410736, Size 40
+  Address 7410476, Size 96
+  Address 7410368, Size 52
+  Address 7410260, Size 96
+  Address 7410208, Size 40
 
 Heap:
-  Address 7410896, Size 52
-  Address 7410788, Size 96
-  Address 7410736, Size 40
+  Address 7410368, Size 52
+  Address 7410260, Size 96
+  Address 7410208, Size 40
 
 Heap:
-  Address 7410896, Size 52
-  Address 7410736, Size 40
+  Address 7410368, Size 52
+  Address 7410208, Size 40
 
 <     123> <    +123> <     123> <123     > <+123    > <+123    > < 123    > < 123    >
 <    -123> <    -123> <    -123> <-123    > <-123    > <-123    > <-123    > <-123    >
@@ -733,7 +733,7 @@ Division by Zero.
 
 <7b> <7B> <173> <7b> <7B> <173>
 <0x7b> <0X7B> <0173> <0x7b> <0X7B> <0173>
-<%> <Hello, World!> <X> <6362588>
+<%> <Hello, World!> <X> <6362060>
 
 <123.456000> <1.212163e+2> <1.212163E+2> <1.179328e+5> <1.179328E+5>
 <123.456000> <1.212163e+2> <1.212163E+2> <1.179328e+5> <1.179328E+5>
@@ -792,7 +792,7 @@ strtok(s, ",") = " World!"
 
 <7b> <7B> <173> <7b> <7B> <173>
 <0x7b> <0X7B> <0173> <0x7b> <0X7B> <0173>
-<%> <Hello, World!> <X> <6362588>
+<%> <Hello, World!> <X> <6362060>
 
 <123.456000> <1.212163e+2> <1.212163E+2> <1.179328e+5> <1.179328E+5>
 <123.456000> <1.212163e+2> <1.212163E+2> <1.179328e+5> <1.179328E+5>

@@ -160,12 +160,12 @@ section .text
 	mov qword [rbp + 52], @10050$string_25i#
 
  assert_testX$7:
-	; Address £temporary3419 n
+	; Address £temporary3351 n
 	mov rsi, rbp
 	add rsi, 24
 
  assert_testX$8:
-	; Parameter 60 pointer £temporary3419
+	; Parameter 60 pointer £temporary3351
 	mov [rbp + 60], rsi
 
  assert_testX$9:

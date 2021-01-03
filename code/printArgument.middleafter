@@ -1,399 +1,360 @@
-0: Dereference £temporary1591 -> format format 0
-1: Assign c £temporary1591 -> format
+0: Dereference £temporary1549 -> format format 0
+1: Assign c £temporary1549 -> format
 2: Case 21 c 100
 3: Case 21 c 105
-4: Case 82 c 99
-5: Case 105 c 115
-6: Case 128 c 88
-7: Case 128 c 120
-8: Case 128 c 98
-9: Case 128 c 111
-10: Case 128 c 117
-11: Case 195 c 71
-12: Case 195 c 103
-13: Case 195 c 69
-14: Case 195 c 101
-15: Case 195 c 102
-16: Case 327 c 112
-17: Case 355 c 110
-18: Case 383 c 37
+4: Case 73 c 99
+5: Case 93 c 115
+6: Case 113 c 88
+7: Case 113 c 120
+8: Case 113 c 98
+9: Case 113 c 111
+10: Case 113 c 117
+11: Case 171 c 71
+12: Case 171 c 103
+13: Case 171 c 69
+14: Case 171 c 101
+15: Case 171 c 102
+16: Case 297 c 112
+17: Case 322 c 110
+18: Case 344 c 37
 19: CaseEnd c
-20: Jump 396
-21: Equal 33 shortInt 0
-22: BinaryAdd £temporary1592 arg_list 4
-23: IntegralToIntegral £temporary1593 £temporary1592
-24: IntegralToIntegral £temporary1594 £temporary1593
-25: Assign arg_list £temporary1594
-26: BinarySubtract £temporary1595 arg_list 4
-27: IntegralToIntegral £temporary1596 £temporary1595
-28: Dereference £temporary1597 -> £temporary1596 £temporary1596 0
-29: IntegralToIntegral £temporary1598 £temporary1597 -> £temporary1596
-30: IntegralToIntegral £temporary1599 £temporary1598
-31: Assign longValue £temporary1599
-32: Jump 52
-33: Equal 43 longInt 0
-34: BinaryAdd £temporary1600 arg_list 8
-35: IntegralToIntegral £temporary1601 £temporary1600
-36: IntegralToIntegral £temporary1602 £temporary1601
-37: Assign arg_list £temporary1602
-38: BinarySubtract £temporary1603 arg_list 8
-39: IntegralToIntegral £temporary1604 £temporary1603
-40: Dereference £temporary1605 -> £temporary1604 £temporary1604 0
-41: Assign longValue £temporary1605 -> £temporary1604
-42: Jump 52
-43: BinaryAdd £temporary1606 arg_list 4
-44: IntegralToIntegral £temporary1607 £temporary1606
-45: IntegralToIntegral £temporary1608 £temporary1607
-46: Assign arg_list £temporary1608
-47: BinarySubtract £temporary1609 arg_list 4
-48: IntegralToIntegral £temporary1610 £temporary1609
-49: Dereference £temporary1611 -> £temporary1610 £temporary1610 0
-50: IntegralToIntegral £temporary1612 £temporary1611 -> £temporary1610
-51: Assign longValue £temporary1612
-52: Equal 59 negativePtr 0
-53: Dereference £temporary1616 -> negativePtr negativePtr 0
-54: SignedGreaterThanEqual 57 longValue 0
-55: Assign £temporary1618 1
-56: Jump 58
-57: Assign £temporary1618 0
-58: Assign £temporary1616 -> negativePtr £temporary1618
-59: NotEqual 66 sign 0
-60: PreCall 122 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-61: Parameter 146 signed long int longValue
-62: Call 122 labs 0
+20: Jump 357
+21: Equal 30 shortInt 0
+22: BinaryAdd arg_list arg_list 4
+23: BinarySubtract £temporary1551 arg_list 4
+24: IntegralToIntegral £temporary1552 £temporary1551
+25: Dereference £temporary1553 -> £temporary1552 £temporary1552 0
+26: IntegralToIntegral £temporary1554 £temporary1553 -> £temporary1552
+27: IntegralToIntegral £temporary1555 £temporary1554
+28: Assign longValue £temporary1555
+29: Jump 43
+30: Equal 37 longInt 0
+31: BinaryAdd arg_list arg_list 8
+32: BinarySubtract £temporary1557 arg_list 8
+33: IntegralToIntegral £temporary1558 £temporary1557
+34: Dereference £temporary1559 -> £temporary1558 £temporary1558 0
+35: Assign longValue £temporary1559 -> £temporary1558
+36: Jump 43
+37: BinaryAdd arg_list arg_list 4
+38: BinarySubtract £temporary1561 arg_list 4
+39: IntegralToIntegral £temporary1562 £temporary1561
+40: Dereference £temporary1563 -> £temporary1562 £temporary1562 0
+41: IntegralToIntegral £temporary1564 £temporary1563 -> £temporary1562
+42: Assign longValue £temporary1564
+43: Equal 50 negativePtr 0
+44: Dereference £temporary1568 -> negativePtr negativePtr 0
+45: SignedGreaterThanEqual 48 longValue 0
+46: Assign £temporary1570 1
+47: Jump 49
+48: Assign £temporary1570 0
+49: Assign £temporary1568 -> negativePtr £temporary1570
+50: NotEqual 57 sign 0
+51: PreCall 122 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+52: Parameter 146 signed long int longValue
+53: Call 122 labs 0
+54: PostCall 122
+55: GetReturnValue £temporary1573
+56: Assign longValue £temporary1573
+57: PreCall 122 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+58: Parameter 146 pointer arg_list
+59: Parameter 154 pointer widthPtr
+60: Address £temporary1574 precision
+61: Parameter 162 pointer £temporary1574
+62: Call 122 checkWidthAndPrecision 0
 63: PostCall 122
-64: GetReturnValue £temporary1621
-65: Assign longValue £temporary1621
+64: GetReturnValue £temporary1575
+65: Assign arg_list £temporary1575
 66: PreCall 122 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-67: Parameter 146 pointer arg_list
-68: Parameter 154 pointer widthPtr
-69: Address £temporary1622 precision
-70: Parameter 162 pointer £temporary1622
-71: Call 122 checkWidthAndPrecision 0
-72: PostCall 122
-73: GetReturnValue £temporary1623
-74: Assign arg_list £temporary1623
-75: PreCall 122 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-76: Parameter 146 signed long int longValue
-77: Parameter 154 signedint plus
-78: Parameter 158 signedint space
-79: Call 122 printLongInt 0
-80: PostCall 122
-81: Jump 396
-82: BinaryAdd £temporary1625 arg_list 4
-83: IntegralToIntegral £temporary1626 £temporary1625
-84: IntegralToIntegral £temporary1627 £temporary1626
-85: Assign arg_list £temporary1627
-86: BinarySubtract £temporary1628 arg_list 4
-87: IntegralToIntegral £temporary1629 £temporary1628
-88: Dereference £temporary1630 -> £temporary1629 £temporary1629 0
-89: IntegralToIntegral £temporary1631 £temporary1630 -> £temporary1629
-90: Assign charValue £temporary1631
-91: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-92: Parameter 138 pointer arg_list
-93: Parameter 146 pointer widthPtr
-94: Address £temporary1632 precision
-95: Parameter 154 pointer £temporary1632
-96: Call 114 checkWidthAndPrecision 0
-97: PostCall 114
-98: GetReturnValue £temporary1633
-99: Assign arg_list £temporary1633
-100: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-101: Parameter 138 signedchar charValue
-102: Call 114 printChar 0
-103: PostCall 114
-104: Jump 396
-105: BinaryAdd £temporary1635 arg_list 8
-106: IntegralToIntegral £temporary1636 £temporary1635
-107: IntegralToIntegral £temporary1637 £temporary1636
-108: Assign arg_list £temporary1637
-109: BinarySubtract £temporary1638 arg_list 8
-110: IntegralToIntegral £temporary1639 £temporary1638
-111: Dereference £temporary1640 -> £temporary1639 £temporary1639 0
-112: Assign stringValue £temporary1640 -> £temporary1639
-113: PreCall 122 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-114: Parameter 146 pointer arg_list
-115: Parameter 154 pointer widthPtr
-116: Address £temporary1641 precision
-117: Parameter 162 pointer £temporary1641
-118: Call 122 checkWidthAndPrecision 0
-119: PostCall 122
-120: GetReturnValue £temporary1642
-121: Assign arg_list £temporary1642
-122: PreCall 122 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-123: Parameter 146 pointer stringValue
-124: Parameter 154 signedint precision
-125: Call 122 printString 0
-126: PostCall 122
-127: Jump 396
-128: NotEqual 131 c 117
-129: Assign £temporary1649 10
-130: Jump 138
-131: NotEqual 134 c 111
-132: Assign £temporary1649 8
-133: Jump 138
-134: NotEqual 137 c 98
-135: Assign £temporary1649 2
-136: Jump 138
-137: Assign £temporary1649 16
-138: Assign base £temporary1649
-139: Equal 151 shortInt 0
-140: BinaryAdd £temporary1650 arg_list 4
-141: IntegralToIntegral £temporary1651 £temporary1650
-142: IntegralToIntegral £temporary1652 £temporary1651
-143: Assign arg_list £temporary1652
-144: BinarySubtract £temporary1653 arg_list 4
-145: IntegralToIntegral £temporary1654 £temporary1653
-146: Dereference £temporary1655 -> £temporary1654 £temporary1654 0
-147: IntegralToIntegral £temporary1656 £temporary1655 -> £temporary1654
-148: IntegralToIntegral £temporary1657 £temporary1656
-149: Assign value £temporary1657
-150: Jump 170
-151: Equal 161 longInt 0
-152: BinaryAdd £temporary1658 arg_list 8
-153: IntegralToIntegral £temporary1659 £temporary1658
-154: IntegralToIntegral £temporary1660 £temporary1659
-155: Assign arg_list £temporary1660
-156: BinarySubtract £temporary1661 arg_list 8
-157: IntegralToIntegral £temporary1662 £temporary1661
-158: Dereference £temporary1663 -> £temporary1662 £temporary1662 0
-159: Assign value £temporary1663 -> £temporary1662
-160: Jump 170
-161: BinaryAdd £temporary1664 arg_list 4
-162: IntegralToIntegral £temporary1665 £temporary1664
-163: IntegralToIntegral £temporary1666 £temporary1665
-164: Assign arg_list £temporary1666
-165: BinarySubtract £temporary1667 arg_list 4
-166: IntegralToIntegral £temporary1668 £temporary1667
-167: Dereference £temporary1669 -> £temporary1668 £temporary1668 0
-168: IntegralToIntegral £temporary1670 £temporary1669 -> £temporary1668
-169: Assign value £temporary1670
-170: PreCall 130 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-171: Parameter 154 pointer arg_list
-172: Parameter 162 pointer widthPtr
-173: Address £temporary1673 precision
-174: Parameter 170 pointer £temporary1673
-175: Call 130 checkWidthAndPrecision 0
-176: PostCall 130
-177: GetReturnValue £temporary1674
-178: Assign arg_list £temporary1674
-179: PreCall 130 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-180: Parameter 154 unsignedlongint value
-181: Parameter 162 signedint plus
-182: Parameter 166 signedint space
-183: Parameter 170 signedint grid
-184: Parameter 174 unsignedlongint base
-185: PreCall 130 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-186: IntegralToIntegral £temporary1675 c
-187: Parameter 206 signedint £temporary1675
-188: Call 182 isupper 0
-189: PostCall 182
-190: GetReturnValue £temporary1676
-191: Parameter 182 signedint £temporary1676
-192: Call 130 printUnsignedLong 0
-193: PostCall 130
-194: Jump 396
-195: Equal 215 longDouble 0
-196: BinaryAdd £temporary1678 arg_list 8
-197: IntegralToIntegral £temporary1679 £temporary1678
-198: IntegralToIntegral £temporary1680 £temporary1679
-199: Assign arg_list £temporary1680
-200: BinarySubtract £temporary1681 arg_list 8
-201: IntegralToIntegral £temporary1682 £temporary1681
-202: Dereference £temporary1683 -> £temporary1682 £temporary1682 0
-203: PushFloat £temporary1683 -> £temporary1682
-204: PopFloat longDoubleValue
-205: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-206: PushFloat longDoubleValue
-207: Parameter 138 longdouble longDoubleValue
-208: Parameter 146 signedint 0
-209: Parameter 150 signedint 0
-210: Parameter 154 signedint 0
-211: Parameter 158 signedint 3
-212: Call 114 printLongDoublePlain 0
-213: PostCall 114
-214: Jump 224
-215: BinaryAdd £temporary1685 arg_list 8
-216: IntegralToIntegral £temporary1686 £temporary1685
-217: IntegralToIntegral £temporary1687 £temporary1686
-218: Assign arg_list £temporary1687
-219: BinarySubtract £temporary1688 arg_list 8
-220: IntegralToIntegral £temporary1689 £temporary1688
-221: Dereference £temporary1690 -> £temporary1689 £temporary1689 0
-222: PushFloat £temporary1690 -> £temporary1689
-223: PopFloat longDoubleValue
-224: Equal 233 negativePtr 0
-225: Dereference £temporary1694 -> negativePtr negativePtr 0
-226: PushFloat longDoubleValue
-227: PushFloat 0
-228: SignedGreaterThanEqual 231 longDoubleValue 0
-229: Assign £temporary1696 1
-230: Jump 232
-231: Assign £temporary1696 0
-232: Assign £temporary1694 -> negativePtr £temporary1696
-233: NotEqual 241 sign 0
-234: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-235: PushFloat longDoubleValue
-236: Parameter 138 double longDoubleValue
-237: Call 114 fabs 0
-238: PostCall 114
-239: GetReturnValue £temporary1699
-240: PopFloat longDoubleValue
-241: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-242: Parameter 138 pointer arg_list
-243: Parameter 146 pointer widthPtr
-244: Address £temporary1700 precision
-245: Parameter 154 pointer £temporary1700
-246: Call 114 checkWidthAndPrecision 0
-247: PostCall 114
-248: GetReturnValue £temporary1701
-249: Assign arg_list £temporary1701
-250: NotEqual 261 c 102
-251: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-252: PushFloat longDoubleValue
-253: Parameter 138 longdouble longDoubleValue
-254: Parameter 146 signedint plus
-255: Parameter 150 signedint space
-256: Parameter 154 signedint grid
-257: Parameter 158 signedint precision
-258: Call 114 printLongDoublePlain 0
-259: PostCall 114
-260: Jump 396
-261: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-262: IntegralToIntegral £temporary1704 c
-263: Parameter 138 signedint £temporary1704
-264: Call 114 tolower 0
-265: PostCall 114
-266: GetReturnValue £temporary1705
-267: NotEqual 285 £temporary1705 101
-268: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-269: PushFloat longDoubleValue
-270: Parameter 138 longdouble longDoubleValue
-271: Parameter 146 signedint plus
-272: Parameter 150 signedint space
-273: Parameter 154 signedint grid
-274: Parameter 158 signedint precision
-275: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-276: IntegralToIntegral £temporary1707 c
-277: Parameter 186 signedint £temporary1707
-278: Call 162 isupper 0
-279: PostCall 162
-280: GetReturnValue £temporary1708
-281: Parameter 162 signedint £temporary1708
-282: Call 114 printLongDoubleExpo 0
-283: PostCall 114
-284: Jump 396
-285: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-286: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-287: PushFloat longDoubleValue
-288: Parameter 138 double longDoubleValue
-289: Call 114 fabs 0
-290: PostCall 114
-291: GetReturnValue £temporary1710
-292: Parameter 138 double £temporary1710
-293: Call 114 log10 0
-294: PostCall 114
-295: GetReturnValue £temporary1711
-296: FloatingToIntegral £temporary1712 £temporary1711
-297: Assign expo £temporary1712
-298: SignedLessThan 310 expo -3
-299: SignedGreaterThan 310 expo 2
-300: PreCall 118 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-301: PushFloat longDoubleValue
-302: Parameter 142 longdouble longDoubleValue
-303: Parameter 150 signedint plus
-304: Parameter 154 signedint space
-305: Parameter 158 signedint grid
-306: Parameter 162 signedint precision
-307: Call 118 printLongDoublePlain 0
-308: PostCall 118
-309: Jump 396
-310: PreCall 118 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-311: PushFloat longDoubleValue
-312: Parameter 142 longdouble longDoubleValue
-313: Parameter 150 signedint plus
-314: Parameter 154 signedint space
-315: Parameter 158 signedint grid
-316: Parameter 162 signedint precision
-317: PreCall 118 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-318: IntegralToIntegral £temporary1717 c
-319: Parameter 190 signedint £temporary1717
-320: Call 166 isupper 0
-321: PostCall 166
-322: GetReturnValue £temporary1718
-323: Parameter 166 signedint £temporary1718
-324: Call 118 printLongDoubleExpo 0
-325: PostCall 118
-326: Jump 396
-327: BinaryAdd £temporary1720 arg_list 8
-328: IntegralToIntegral £temporary1721 £temporary1720
-329: IntegralToIntegral £temporary1722 £temporary1721
-330: Assign arg_list £temporary1722
-331: BinarySubtract £temporary1723 arg_list 8
-332: IntegralToIntegral £temporary1724 £temporary1723
-333: Dereference £temporary1725 -> £temporary1724 £temporary1724 0
-334: Assign ptrValue £temporary1725 -> £temporary1724
-335: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-336: Parameter 138 pointer arg_list
-337: Parameter 146 pointer widthPtr
-338: Address £temporary1726 precision
-339: Parameter 154 pointer £temporary1726
-340: Call 114 checkWidthAndPrecision 0
-341: PostCall 114
-342: GetReturnValue £temporary1727
-343: Assign arg_list £temporary1727
+67: Parameter 146 signed long int longValue
+68: Parameter 154 signedint plus
+69: Parameter 158 signedint space
+70: Call 122 printLongInt 0
+71: PostCall 122
+72: Jump 357
+73: BinaryAdd arg_list arg_list 4
+74: BinarySubtract £temporary1578 arg_list 4
+75: IntegralToIntegral £temporary1579 £temporary1578
+76: Dereference £temporary1580 -> £temporary1579 £temporary1579 0
+77: IntegralToIntegral £temporary1581 £temporary1580 -> £temporary1579
+78: Assign charValue £temporary1581
+79: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+80: Parameter 138 pointer arg_list
+81: Parameter 146 pointer widthPtr
+82: Address £temporary1582 precision
+83: Parameter 154 pointer £temporary1582
+84: Call 114 checkWidthAndPrecision 0
+85: PostCall 114
+86: GetReturnValue £temporary1583
+87: Assign arg_list £temporary1583
+88: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+89: Parameter 138 signedchar charValue
+90: Call 114 printChar 0
+91: PostCall 114
+92: Jump 357
+93: BinaryAdd arg_list arg_list 8
+94: BinarySubtract £temporary1586 arg_list 8
+95: IntegralToIntegral £temporary1587 £temporary1586
+96: Dereference £temporary1588 -> £temporary1587 £temporary1587 0
+97: Assign stringValue £temporary1588 -> £temporary1587
+98: PreCall 122 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+99: Parameter 146 pointer arg_list
+100: Parameter 154 pointer widthPtr
+101: Address £temporary1589 precision
+102: Parameter 162 pointer £temporary1589
+103: Call 122 checkWidthAndPrecision 0
+104: PostCall 122
+105: GetReturnValue £temporary1590
+106: Assign arg_list £temporary1590
+107: PreCall 122 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+108: Parameter 146 pointer stringValue
+109: Parameter 154 signedint precision
+110: Call 122 printString 0
+111: PostCall 122
+112: Jump 357
+113: NotEqual 116 c 117
+114: Assign £temporary1597 10
+115: Jump 123
+116: NotEqual 119 c 111
+117: Assign £temporary1597 8
+118: Jump 123
+119: NotEqual 122 c 98
+120: Assign £temporary1597 2
+121: Jump 123
+122: Assign £temporary1597 16
+123: Assign base £temporary1597
+124: Equal 133 shortInt 0
+125: BinaryAdd arg_list arg_list 4
+126: BinarySubtract £temporary1599 arg_list 4
+127: IntegralToIntegral £temporary1600 £temporary1599
+128: Dereference £temporary1601 -> £temporary1600 £temporary1600 0
+129: IntegralToIntegral £temporary1602 £temporary1601 -> £temporary1600
+130: IntegralToIntegral £temporary1603 £temporary1602
+131: Assign value £temporary1603
+132: Jump 146
+133: Equal 140 longInt 0
+134: BinaryAdd arg_list arg_list 8
+135: BinarySubtract £temporary1605 arg_list 8
+136: IntegralToIntegral £temporary1606 £temporary1605
+137: Dereference £temporary1607 -> £temporary1606 £temporary1606 0
+138: Assign value £temporary1607 -> £temporary1606
+139: Jump 146
+140: BinaryAdd arg_list arg_list 4
+141: BinarySubtract £temporary1609 arg_list 4
+142: IntegralToIntegral £temporary1610 £temporary1609
+143: Dereference £temporary1611 -> £temporary1610 £temporary1610 0
+144: IntegralToIntegral £temporary1612 £temporary1611 -> £temporary1610
+145: Assign value £temporary1612
+146: PreCall 130 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+147: Parameter 154 pointer arg_list
+148: Parameter 162 pointer widthPtr
+149: Address £temporary1615 precision
+150: Parameter 170 pointer £temporary1615
+151: Call 130 checkWidthAndPrecision 0
+152: PostCall 130
+153: GetReturnValue £temporary1616
+154: Assign arg_list £temporary1616
+155: PreCall 130 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+156: Parameter 154 unsignedlongint value
+157: Parameter 162 signedint plus
+158: Parameter 166 signedint space
+159: Parameter 170 signedint grid
+160: Parameter 174 unsignedlongint base
+161: PreCall 130 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+162: IntegralToIntegral £temporary1617 c
+163: Parameter 206 signedint £temporary1617
+164: Call 182 isupper 0
+165: PostCall 182
+166: GetReturnValue £temporary1618
+167: Parameter 182 signedint £temporary1618
+168: Call 130 printUnsignedLong 0
+169: PostCall 130
+170: Jump 357
+171: Equal 188 longDouble 0
+172: BinaryAdd arg_list arg_list 8
+173: BinarySubtract £temporary1621 arg_list 8
+174: IntegralToIntegral £temporary1622 £temporary1621
+175: Dereference £temporary1623 -> £temporary1622 £temporary1622 0
+176: PushFloat £temporary1623 -> £temporary1622
+177: PopFloat longDoubleValue
+178: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+179: PushFloat longDoubleValue
+180: Parameter 138 longdouble longDoubleValue
+181: Parameter 146 signedint 0
+182: Parameter 150 signedint 0
+183: Parameter 154 signedint 0
+184: Parameter 158 signedint 3
+185: Call 114 printLongDoublePlain 0
+186: PostCall 114
+187: Jump 194
+188: BinaryAdd arg_list arg_list 8
+189: BinarySubtract £temporary1626 arg_list 8
+190: IntegralToIntegral £temporary1627 £temporary1626
+191: Dereference £temporary1628 -> £temporary1627 £temporary1627 0
+192: PushFloat £temporary1628 -> £temporary1627
+193: PopFloat longDoubleValue
+194: Equal 203 negativePtr 0
+195: Dereference £temporary1632 -> negativePtr negativePtr 0
+196: PushFloat longDoubleValue
+197: PushFloat 0
+198: SignedGreaterThanEqual 201 longDoubleValue 0
+199: Assign £temporary1634 1
+200: Jump 202
+201: Assign £temporary1634 0
+202: Assign £temporary1632 -> negativePtr £temporary1634
+203: NotEqual 211 sign 0
+204: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+205: PushFloat longDoubleValue
+206: Parameter 138 double longDoubleValue
+207: Call 114 fabs 0
+208: PostCall 114
+209: GetReturnValue £temporary1637
+210: PopFloat longDoubleValue
+211: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+212: Parameter 138 pointer arg_list
+213: Parameter 146 pointer widthPtr
+214: Address £temporary1638 precision
+215: Parameter 154 pointer £temporary1638
+216: Call 114 checkWidthAndPrecision 0
+217: PostCall 114
+218: GetReturnValue £temporary1639
+219: Assign arg_list £temporary1639
+220: NotEqual 231 c 102
+221: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+222: PushFloat longDoubleValue
+223: Parameter 138 longdouble longDoubleValue
+224: Parameter 146 signedint plus
+225: Parameter 150 signedint space
+226: Parameter 154 signedint grid
+227: Parameter 158 signedint precision
+228: Call 114 printLongDoublePlain 0
+229: PostCall 114
+230: Jump 357
+231: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+232: IntegralToIntegral £temporary1642 c
+233: Parameter 138 signedint £temporary1642
+234: Call 114 tolower 0
+235: PostCall 114
+236: GetReturnValue £temporary1643
+237: NotEqual 255 £temporary1643 101
+238: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+239: PushFloat longDoubleValue
+240: Parameter 138 longdouble longDoubleValue
+241: Parameter 146 signedint plus
+242: Parameter 150 signedint space
+243: Parameter 154 signedint grid
+244: Parameter 158 signedint precision
+245: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+246: IntegralToIntegral £temporary1645 c
+247: Parameter 186 signedint £temporary1645
+248: Call 162 isupper 0
+249: PostCall 162
+250: GetReturnValue £temporary1646
+251: Parameter 162 signedint £temporary1646
+252: Call 114 printLongDoubleExpo 0
+253: PostCall 114
+254: Jump 357
+255: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+256: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+257: PushFloat longDoubleValue
+258: Parameter 138 double longDoubleValue
+259: Call 114 fabs 0
+260: PostCall 114
+261: GetReturnValue £temporary1648
+262: Parameter 138 double £temporary1648
+263: Call 114 log10 0
+264: PostCall 114
+265: GetReturnValue £temporary1649
+266: FloatingToIntegral £temporary1650 £temporary1649
+267: Assign expo £temporary1650
+268: SignedLessThan 280 expo -3
+269: SignedGreaterThan 280 expo 2
+270: PreCall 118 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+271: PushFloat longDoubleValue
+272: Parameter 142 longdouble longDoubleValue
+273: Parameter 150 signedint plus
+274: Parameter 154 signedint space
+275: Parameter 158 signedint grid
+276: Parameter 162 signedint precision
+277: Call 118 printLongDoublePlain 0
+278: PostCall 118
+279: Jump 357
+280: PreCall 118 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+281: PushFloat longDoubleValue
+282: Parameter 142 longdouble longDoubleValue
+283: Parameter 150 signedint plus
+284: Parameter 154 signedint space
+285: Parameter 158 signedint grid
+286: Parameter 162 signedint precision
+287: PreCall 118 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+288: IntegralToIntegral £temporary1655 c
+289: Parameter 190 signedint £temporary1655
+290: Call 166 isupper 0
+291: PostCall 166
+292: GetReturnValue £temporary1656
+293: Parameter 166 signedint £temporary1656
+294: Call 118 printLongDoubleExpo 0
+295: PostCall 118
+296: Jump 357
+297: BinaryAdd arg_list arg_list 8
+298: BinarySubtract £temporary1659 arg_list 8
+299: IntegralToIntegral £temporary1660 £temporary1659
+300: Dereference £temporary1661 -> £temporary1660 £temporary1660 0
+301: Assign ptrValue £temporary1661 -> £temporary1660
+302: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+303: Parameter 138 pointer arg_list
+304: Parameter 146 pointer widthPtr
+305: Address £temporary1662 precision
+306: Parameter 154 pointer £temporary1662
+307: Call 114 checkWidthAndPrecision 0
+308: PostCall 114
+309: GetReturnValue £temporary1663
+310: Assign arg_list £temporary1663
+311: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+312: IntegralToIntegral £temporary1664 ptrValue
+313: Parameter 138 unsignedlongint £temporary1664
+314: Parameter 146 signedint 0
+315: Parameter 150 signedint 0
+316: Parameter 154 signedint 0
+317: Parameter 158 unsignedlongint 10
+318: Parameter 166 signedint 0
+319: Call 114 printUnsignedLong 0
+320: PostCall 114
+321: Jump 357
+322: BinaryAdd arg_list arg_list 8
+323: BinarySubtract £temporary1667 arg_list 8
+324: IntegralToIntegral £temporary1668 £temporary1667
+325: Dereference £temporary1669 -> £temporary1668 £temporary1668 0
+326: Assign ptrValue £temporary1669 -> £temporary1668
+327: BinaryAdd arg_list arg_list 8
+328: BinarySubtract £temporary1671 arg_list 8
+329: IntegralToIntegral £temporary1672 £temporary1671
+330: Dereference £temporary1673 -> £temporary1672 £temporary1672 0
+331: Assign intPtr £temporary1673 -> £temporary1672
+332: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+333: Parameter 138 pointer arg_list
+334: Parameter 146 pointer widthPtr
+335: Address £temporary1674 precision
+336: Parameter 154 pointer £temporary1674
+337: Call 114 checkWidthAndPrecision 0
+338: PostCall 114
+339: GetReturnValue £temporary1675
+340: Assign arg_list £temporary1675
+341: Dereference £temporary1676 -> intPtr intPtr 0
+342: Assign £temporary1676 -> intPtr g_outChars
+343: Jump 357
 344: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-345: IntegralToIntegral £temporary1728 ptrValue
-346: Parameter 138 unsignedlongint £temporary1728
-347: Parameter 146 signedint 0
-348: Parameter 150 signedint 0
-349: Parameter 154 signedint 0
-350: Parameter 158 unsignedlongint 10
-351: Parameter 166 signedint 0
-352: Call 114 printUnsignedLong 0
-353: PostCall 114
-354: Jump 396
-355: BinaryAdd £temporary1730 arg_list 8
-356: IntegralToIntegral £temporary1731 £temporary1730
-357: IntegralToIntegral £temporary1732 £temporary1731
-358: Assign arg_list £temporary1732
-359: BinarySubtract £temporary1733 arg_list 8
-360: IntegralToIntegral £temporary1734 £temporary1733
-361: Dereference £temporary1735 -> £temporary1734 £temporary1734 0
-362: Assign ptrValue £temporary1735 -> £temporary1734
-363: BinaryAdd £temporary1736 arg_list 8
-364: IntegralToIntegral £temporary1737 £temporary1736
-365: IntegralToIntegral £temporary1738 £temporary1737
-366: Assign arg_list £temporary1738
-367: BinarySubtract £temporary1739 arg_list 8
-368: IntegralToIntegral £temporary1740 £temporary1739
-369: Dereference £temporary1741 -> £temporary1740 £temporary1740 0
-370: Assign intPtr £temporary1741 -> £temporary1740
-371: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-372: Parameter 138 pointer arg_list
-373: Parameter 146 pointer widthPtr
-374: Address £temporary1742 precision
-375: Parameter 154 pointer £temporary1742
-376: Call 114 checkWidthAndPrecision 0
-377: PostCall 114
-378: GetReturnValue £temporary1743
-379: Assign arg_list £temporary1743
-380: Dereference £temporary1744 -> intPtr intPtr 0
-381: Assign £temporary1744 -> intPtr g_outChars
-382: Jump 396
-383: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-384: Parameter 138 pointer arg_list
-385: Parameter 146 pointer widthPtr
-386: Address £temporary1745 precision
-387: Parameter 154 pointer £temporary1745
-388: Call 114 checkWidthAndPrecision 0
-389: PostCall 114
-390: GetReturnValue £temporary1746
-391: Assign arg_list £temporary1746
-392: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-393: Parameter 138 signedchar 37
-394: Call 114 printChar 0
-395: PostCall 114
-396: SetReturnValue
-397: Return arg_list
-398: FunctionEnd printArgument
+345: Parameter 138 pointer arg_list
+346: Parameter 146 pointer widthPtr
+347: Address £temporary1677 precision
+348: Parameter 154 pointer £temporary1677
+349: Call 114 checkWidthAndPrecision 0
+350: PostCall 114
+351: GetReturnValue £temporary1678
+352: Assign arg_list £temporary1678
+353: PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+354: Parameter 138 signedchar 37
+355: Call 114 printChar 0
+356: PostCall 114
+357: SetReturnValue
+358: Return arg_list
+359: FunctionEnd printArgument

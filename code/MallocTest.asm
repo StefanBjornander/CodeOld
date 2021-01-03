@@ -42,10 +42,10 @@ section .text
 	; PostCall 44
 
  malloc_test2$6:
-	; GetReturnValue £temporary4255
+	; GetReturnValue £temporary4187
 
  malloc_test2$7:
-	; Assign q £temporary4255
+	; Assign q £temporary4187
 	mov [rbp + 44], rbx
 
  malloc_test2$8:
@@ -75,10 +75,10 @@ section .text
 	; PostCall 52
 
  malloc_test2$14:
-	; GetReturnValue £temporary4258
+	; GetReturnValue £temporary4190
 
  malloc_test2$15:
-	; Assign p £temporary4258
+	; Assign p £temporary4190
 	mov [rbp + 28], rbx
 
  malloc_test2$16:
@@ -356,10 +356,10 @@ section .text
 	; PostCall 24
 
  malloc_test3$5:
-	; GetReturnValue £temporary4273
+	; GetReturnValue £temporary4205
 
  malloc_test3$6:
-	; Assign a £temporary4273
+	; Assign a £temporary4205
 	mov [rbp + 24], rbx
 
  malloc_test3$7:
@@ -384,10 +384,10 @@ section .text
 	; PostCall 32
 
  malloc_test3$12:
-	; GetReturnValue £temporary4274
+	; GetReturnValue £temporary4206
 
  malloc_test3$13:
-	; Assign b £temporary4274
+	; Assign b £temporary4206
 	mov [rbp + 32], rbx
 
  malloc_test3$14:
@@ -412,10 +412,10 @@ section .text
 	; PostCall 40
 
  malloc_test3$19:
-	; GetReturnValue £temporary4275
+	; GetReturnValue £temporary4207
 
  malloc_test3$20:
-	; Assign c £temporary4275
+	; Assign c £temporary4207
 	mov [rbp + 40], rbx
 
  malloc_test3$21:
@@ -440,10 +440,10 @@ section .text
 	; PostCall 48
 
  malloc_test3$26:
-	; GetReturnValue £temporary4276
+	; GetReturnValue £temporary4208
 
  malloc_test3$27:
-	; Assign d £temporary4276
+	; Assign d £temporary4208
 	mov [rbp + 48], rbx
 
  malloc_test3$28:
@@ -468,10 +468,10 @@ section .text
 	; PostCall 56
 
  malloc_test3$33:
-	; GetReturnValue £temporary4277
+	; GetReturnValue £temporary4209
 
  malloc_test3$34:
-	; Assign e £temporary4277
+	; Assign e £temporary4209
 	mov [rbp + 56], rbx
 
  malloc_test3$35:
@@ -613,14 +613,14 @@ section .text
 	mov qword [rbp + 28], 65534
 
  rec$1:
-	; InspectRegister £temporary4285 bp
+	; InspectRegister £temporary4217 bp
 
  rec$2:
-	; IntegralToIntegral £temporary4286 £temporary4285
+	; IntegralToIntegral £temporary4218 £temporary4217
 	and ebp, 65535
 
  rec$3:
-	; Assign stackTop £temporary4286
+	; Assign stackTop £temporary4218
 	mov [rbp + 24], ebp
 
  rec$4:
@@ -636,11 +636,11 @@ section .text
 	mov [rbp + 68], eax
 
  rec$7:
-	; Dereference £temporary4287 -> lowHeapPtr lowHeapPtr 0
+	; Dereference £temporary4219 -> lowHeapPtr lowHeapPtr 0
 	mov rsi, [rbp + 28]
 
  rec$8:
-	; Parameter 72 unsigned int £temporary4287 -> lowHeapPtr
+	; Parameter 72 unsigned int £temporary4219 -> lowHeapPtr
 	mov eax, [rsi]
 	mov [rbp + 72], eax
 
@@ -724,10 +724,10 @@ section .text
 	; PostCall 24
 
  malloc_test$4:
-	; GetReturnValue £temporary4291
+	; GetReturnValue £temporary4223
 
  malloc_test$5:
-	; Assign b £temporary4291
+	; Assign b £temporary4223
 	mov [rbp + 24], rbx
 
  malloc_test$6:
@@ -748,10 +748,10 @@ section .text
 	; PostCall 32
 
  malloc_test$10:
-	; GetReturnValue £temporary4292
+	; GetReturnValue £temporary4224
 
  malloc_test$11:
-	; Assign c £temporary4292
+	; Assign c £temporary4224
 	mov [rbp + 32], rbx
 
  malloc_test$12:
@@ -772,10 +772,10 @@ section .text
 	; PostCall 40
 
  malloc_test$16:
-	; GetReturnValue £temporary4293
+	; GetReturnValue £temporary4225
 
  malloc_test$17:
-	; Assign d £temporary4293
+	; Assign d £temporary4225
 	mov [rbp + 40], rbx
 
  malloc_test$18:
@@ -941,14 +941,14 @@ section .text
 	mov qword [rbp + 32], 65534
 
  malloc_test6$1:
-	; InspectRegister £temporary4303 bp
+	; InspectRegister £temporary4235 bp
 
  malloc_test6$2:
-	; IntegralToIntegral £temporary4304 £temporary4303
+	; IntegralToIntegral £temporary4236 £temporary4235
 	and ebp, 65535
 
  malloc_test6$3:
-	; Assign stackTop £temporary4304
+	; Assign stackTop £temporary4236
 	mov [rbp + 28], ebp
 
  malloc_test6$4:
@@ -978,10 +978,10 @@ section .text
 	; PostCall 40
 
  malloc_test6$10:
-	; GetReturnValue £temporary4307
+	; GetReturnValue £temporary4239
 
  malloc_test6$11:
-	; Assign p £temporary4307
+	; Assign p £temporary4239
 	mov [rbp + 40], rbx
 
  malloc_test6$12:
@@ -1007,11 +1007,11 @@ section .text
 	mov [rbp + 92], eax
 
  malloc_test6$17:
-	; Dereference £temporary4308 -> lowHeapPtr lowHeapPtr 0
+	; Dereference £temporary4240 -> lowHeapPtr lowHeapPtr 0
 	mov rsi, [rbp + 32]
 
  malloc_test6$18:
-	; Parameter 96 unsigned int £temporary4308 -> lowHeapPtr
+	; Parameter 96 unsigned int £temporary4240 -> lowHeapPtr
 	mov eax, [rsi]
 	mov [rbp + 96], eax
 
