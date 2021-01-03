@@ -20,217 +20,217 @@
 
 section .data
 
-@9321$string_ascii2025i0A#:
+@9328$string_ascii2025i0A#:
 	; Initializer String ascii %i\n
 	db "ascii %i", 10, 0
 
 section .data
 
-@9322$string_islower282725c2729203D2025s0A#:
+@9329$string_islower282725c2729203D2025s0A#:
 	; Initializer String islower('%c') = %s\n
 	db "islower(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9325$string_Yes#:
+@9332$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9326$string_No#:
+@9333$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9327$string_isupper282725c2729203D2025s0A#:
+@9334$string_isupper282725c2729203D2025s0A#:
 	; Initializer String isupper('%c') = %s\n
 	db "isupper(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9330$string_Yes#:
+@9337$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9331$string_No#:
+@9338$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9332$string_isalpha282725c2729203D2025s0A#:
+@9339$string_isalpha282725c2729203D2025s0A#:
 	; Initializer String isalpha('%c') = %s\n
 	db "isalpha(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9335$string_Yes#:
+@9342$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9336$string_No#:
+@9343$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9337$string_isdigit282725c2729203D2025s0A#:
+@9344$string_isdigit282725c2729203D2025s0A#:
 	; Initializer String isdigit('%c') = %s\n
 	db "isdigit(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9340$string_Yes#:
+@9347$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9341$string_No#:
+@9348$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9342$string_isalnum282725c2729203D2025s0A#:
+@9349$string_isalnum282725c2729203D2025s0A#:
 	; Initializer String isalnum('%c') = %s\n
 	db "isalnum(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9345$string_Yes#:
+@9352$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9346$string_No#:
+@9353$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9347$string_isxdigit282725c2729203D2025s0A#:
+@9354$string_isxdigit282725c2729203D2025s0A#:
 	; Initializer String isxdigit('%c') = %s\n
 	db "isxdigit(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9350$string_Yes#:
+@9357$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9351$string_No#:
+@9358$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9352$string_isgraph282725c2729203D2025s0A#:
+@9359$string_isgraph282725c2729203D2025s0A#:
 	; Initializer String isgraph('%c') = %s\n
 	db "isgraph(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9355$string_Yes#:
+@9362$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9356$string_No#:
+@9363$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9357$string_isprint282725c2729203D2025s0A#:
+@9364$string_isprint282725c2729203D2025s0A#:
 	; Initializer String isprint('%c') = %s\n
 	db "isprint(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9360$string_Yes#:
+@9367$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9361$string_No#:
+@9368$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9362$string_ispunct282725c2729203D2025s0A#:
+@9369$string_ispunct282725c2729203D2025s0A#:
 	; Initializer String ispunct('%c') = %s\n
 	db "ispunct(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9365$string_Yes#:
+@9372$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9366$string_No#:
+@9373$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9367$string_iscntrl282725c2729203D2025s0A#:
+@9374$string_iscntrl282725c2729203D2025s0A#:
 	; Initializer String iscntrl('%c') = %s\n
 	db "iscntrl(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9370$string_Yes#:
+@9377$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9371$string_No#:
+@9378$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9372$string_isspace282725c2729203D2025s0A#:
+@9379$string_isspace282725c2729203D2025s0A#:
 	; Initializer String isspace('%c') = %s\n
 	db "isspace(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9375$string_Yes#:
+@9382$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9376$string_No#:
+@9383$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9377$string_tolower282725c2729203D202725c270A#:
+@9384$string_tolower282725c2729203D202725c270A#:
 	; Initializer String tolower('%c') = '%c'\n
 	db "tolower(", 39, "%c", 39, ") = ", 39, "%c", 39, 10, 0
 
 section .data
 
-@9378$string_toupper282725c2729203D202725c270A0A#:
+@9385$string_toupper282725c2729203D202725c270A0A#:
 	; Initializer String toupper('%c') = '%c'\n\n
 	db "toupper(", 39, "%c", 39, ") = ", 39, "%c", 39, 10, 10, 0
 
@@ -241,10 +241,10 @@ section .text
 
  character_testX$1:
 	; Parameter 49 pointer "ascii %i\n"
-	mov qword [rbp + 49], @9321$string_ascii2025i0A#
+	mov qword [rbp + 49], @9328$string_ascii2025i0A#
 
  character_testX$2:
-	; IntegralToIntegral £temporary3390 c
+	; IntegralToIntegral £temporary3312 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -253,7 +253,7 @@ section .text
 	neg eax
 
  character_testX$3:
-	; Parameter 57 signedint £temporary3390
+	; Parameter 57 signedint £temporary3312
 	mov [rbp + 57], eax
 
  character_testX$4:
@@ -273,10 +273,10 @@ section .text
 
  character_testX$7:
 	; Parameter 49 pointer "islower('%c') = %s\n"
-	mov qword [rbp + 49], @9322$string_islower282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9329$string_islower282725c2729203D2025s0A#
 
  character_testX$8:
-	; IntegralToIntegral £temporary3392 c
+	; IntegralToIntegral £temporary3314 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -285,14 +285,14 @@ section .text
 	neg eax
 
  character_testX$9:
-	; Parameter 57 signedint £temporary3392
+	; Parameter 57 signedint £temporary3314
 	mov [rbp + 57], eax
 
  character_testX$10:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_testX$11:
-	; IntegralToIntegral £temporary3393 c
+	; IntegralToIntegral £temporary3315 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -301,7 +301,7 @@ section .text
 	neg eax
 
  character_testX$12:
-	; Parameter 85 signedint £temporary3393
+	; Parameter 85 signedint £temporary3315
 	mov [rbp + 85], eax
 
  character_testX$13:
@@ -315,27 +315,27 @@ section .text
 	; PostCall 61
 
  character_testX$15:
-	; GetReturnValue £temporary3394
+	; GetReturnValue £temporary3316
 
  character_testX$16:
-	; Equal 19 £temporary3394 0
+	; Equal 19 £temporary3316 0
 	cmp ebx, 0
 	je character_testX$19
 
  character_testX$17:
-	; Assign £temporary3396 "Yes"
-	mov eax, @9325$string_Yes#
+	; Assign £temporary3318 "Yes"
+	mov eax, @9332$string_Yes#
 
  character_testX$18:
 	; Jump 20
 	jmp character_testX$20
 
  character_testX$19:
-	; Assign £temporary3396 "No"
-	mov eax, @9326$string_No#
+	; Assign £temporary3318 "No"
+	mov eax, @9333$string_No#
 
  character_testX$20:
-	; Parameter 61 pointer £temporary3396
+	; Parameter 61 pointer £temporary3318
 	mov [rbp + 61], eax
 
  character_testX$21:
@@ -355,10 +355,10 @@ section .text
 
  character_testX$24:
 	; Parameter 49 pointer "isupper('%c') = %s\n"
-	mov qword [rbp + 49], @9327$string_isupper282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9334$string_isupper282725c2729203D2025s0A#
 
  character_testX$25:
-	; IntegralToIntegral £temporary3398 c
+	; IntegralToIntegral £temporary3320 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -367,14 +367,14 @@ section .text
 	neg eax
 
  character_testX$26:
-	; Parameter 57 signedint £temporary3398
+	; Parameter 57 signedint £temporary3320
 	mov [rbp + 57], eax
 
  character_testX$27:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_testX$28:
-	; IntegralToIntegral £temporary3399 c
+	; IntegralToIntegral £temporary3321 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -383,7 +383,7 @@ section .text
 	neg eax
 
  character_testX$29:
-	; Parameter 85 signedint £temporary3399
+	; Parameter 85 signedint £temporary3321
 	mov [rbp + 85], eax
 
  character_testX$30:
@@ -397,27 +397,27 @@ section .text
 	; PostCall 61
 
  character_testX$32:
-	; GetReturnValue £temporary3400
+	; GetReturnValue £temporary3322
 
  character_testX$33:
-	; Equal 36 £temporary3400 0
+	; Equal 36 £temporary3322 0
 	cmp ebx, 0
 	je character_testX$36
 
  character_testX$34:
-	; Assign £temporary3402 "Yes"
-	mov eax, @9330$string_Yes#
+	; Assign £temporary3324 "Yes"
+	mov eax, @9337$string_Yes#
 
  character_testX$35:
 	; Jump 37
 	jmp character_testX$37
 
  character_testX$36:
-	; Assign £temporary3402 "No"
-	mov eax, @9331$string_No#
+	; Assign £temporary3324 "No"
+	mov eax, @9338$string_No#
 
  character_testX$37:
-	; Parameter 61 pointer £temporary3402
+	; Parameter 61 pointer £temporary3324
 	mov [rbp + 61], eax
 
  character_testX$38:
@@ -437,10 +437,10 @@ section .text
 
  character_testX$41:
 	; Parameter 49 pointer "isalpha('%c') = %s\n"
-	mov qword [rbp + 49], @9332$string_isalpha282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9339$string_isalpha282725c2729203D2025s0A#
 
  character_testX$42:
-	; IntegralToIntegral £temporary3404 c
+	; IntegralToIntegral £temporary3326 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -449,14 +449,14 @@ section .text
 	neg eax
 
  character_testX$43:
-	; Parameter 57 signedint £temporary3404
+	; Parameter 57 signedint £temporary3326
 	mov [rbp + 57], eax
 
  character_testX$44:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_testX$45:
-	; IntegralToIntegral £temporary3405 c
+	; IntegralToIntegral £temporary3327 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -465,7 +465,7 @@ section .text
 	neg eax
 
  character_testX$46:
-	; Parameter 85 signedint £temporary3405
+	; Parameter 85 signedint £temporary3327
 	mov [rbp + 85], eax
 
  character_testX$47:
@@ -479,27 +479,27 @@ section .text
 	; PostCall 61
 
  character_testX$49:
-	; GetReturnValue £temporary3406
+	; GetReturnValue £temporary3328
 
  character_testX$50:
-	; Equal 53 £temporary3406 0
+	; Equal 53 £temporary3328 0
 	cmp ebx, 0
 	je character_testX$53
 
  character_testX$51:
-	; Assign £temporary3408 "Yes"
-	mov eax, @9335$string_Yes#
+	; Assign £temporary3330 "Yes"
+	mov eax, @9342$string_Yes#
 
  character_testX$52:
 	; Jump 54
 	jmp character_testX$54
 
  character_testX$53:
-	; Assign £temporary3408 "No"
-	mov eax, @9336$string_No#
+	; Assign £temporary3330 "No"
+	mov eax, @9343$string_No#
 
  character_testX$54:
-	; Parameter 61 pointer £temporary3408
+	; Parameter 61 pointer £temporary3330
 	mov [rbp + 61], eax
 
  character_testX$55:
@@ -519,10 +519,10 @@ section .text
 
  character_testX$58:
 	; Parameter 49 pointer "isdigit('%c') = %s\n"
-	mov qword [rbp + 49], @9337$string_isdigit282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9344$string_isdigit282725c2729203D2025s0A#
 
  character_testX$59:
-	; IntegralToIntegral £temporary3410 c
+	; IntegralToIntegral £temporary3332 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -531,14 +531,14 @@ section .text
 	neg eax
 
  character_testX$60:
-	; Parameter 57 signedint £temporary3410
+	; Parameter 57 signedint £temporary3332
 	mov [rbp + 57], eax
 
  character_testX$61:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_testX$62:
-	; IntegralToIntegral £temporary3411 c
+	; IntegralToIntegral £temporary3333 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -547,7 +547,7 @@ section .text
 	neg eax
 
  character_testX$63:
-	; Parameter 85 signedint £temporary3411
+	; Parameter 85 signedint £temporary3333
 	mov [rbp + 85], eax
 
  character_testX$64:
@@ -561,27 +561,27 @@ section .text
 	; PostCall 61
 
  character_testX$66:
-	; GetReturnValue £temporary3412
+	; GetReturnValue £temporary3334
 
  character_testX$67:
-	; Equal 70 £temporary3412 0
+	; Equal 70 £temporary3334 0
 	cmp ebx, 0
 	je character_testX$70
 
  character_testX$68:
-	; Assign £temporary3414 "Yes"
-	mov eax, @9340$string_Yes#
+	; Assign £temporary3336 "Yes"
+	mov eax, @9347$string_Yes#
 
  character_testX$69:
 	; Jump 71
 	jmp character_testX$71
 
  character_testX$70:
-	; Assign £temporary3414 "No"
-	mov eax, @9341$string_No#
+	; Assign £temporary3336 "No"
+	mov eax, @9348$string_No#
 
  character_testX$71:
-	; Parameter 61 pointer £temporary3414
+	; Parameter 61 pointer £temporary3336
 	mov [rbp + 61], eax
 
  character_testX$72:
@@ -601,10 +601,10 @@ section .text
 
  character_testX$75:
 	; Parameter 49 pointer "isalnum('%c') = %s\n"
-	mov qword [rbp + 49], @9342$string_isalnum282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9349$string_isalnum282725c2729203D2025s0A#
 
  character_testX$76:
-	; IntegralToIntegral £temporary3416 c
+	; IntegralToIntegral £temporary3338 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -613,14 +613,14 @@ section .text
 	neg eax
 
  character_testX$77:
-	; Parameter 57 signedint £temporary3416
+	; Parameter 57 signedint £temporary3338
 	mov [rbp + 57], eax
 
  character_testX$78:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_testX$79:
-	; IntegralToIntegral £temporary3417 c
+	; IntegralToIntegral £temporary3339 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -629,7 +629,7 @@ section .text
 	neg eax
 
  character_testX$80:
-	; Parameter 85 signedint £temporary3417
+	; Parameter 85 signedint £temporary3339
 	mov [rbp + 85], eax
 
  character_testX$81:
@@ -643,27 +643,27 @@ section .text
 	; PostCall 61
 
  character_testX$83:
-	; GetReturnValue £temporary3418
+	; GetReturnValue £temporary3340
 
  character_testX$84:
-	; Equal 87 £temporary3418 0
+	; Equal 87 £temporary3340 0
 	cmp ebx, 0
 	je character_testX$87
 
  character_testX$85:
-	; Assign £temporary3420 "Yes"
-	mov eax, @9345$string_Yes#
+	; Assign £temporary3342 "Yes"
+	mov eax, @9352$string_Yes#
 
  character_testX$86:
 	; Jump 88
 	jmp character_testX$88
 
  character_testX$87:
-	; Assign £temporary3420 "No"
-	mov eax, @9346$string_No#
+	; Assign £temporary3342 "No"
+	mov eax, @9353$string_No#
 
  character_testX$88:
-	; Parameter 61 pointer £temporary3420
+	; Parameter 61 pointer £temporary3342
 	mov [rbp + 61], eax
 
  character_testX$89:
@@ -683,10 +683,10 @@ section .text
 
  character_testX$92:
 	; Parameter 49 pointer "isxdigit('%c') = %s\n"
-	mov qword [rbp + 49], @9347$string_isxdigit282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9354$string_isxdigit282725c2729203D2025s0A#
 
  character_testX$93:
-	; IntegralToIntegral £temporary3422 c
+	; IntegralToIntegral £temporary3344 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -695,14 +695,14 @@ section .text
 	neg eax
 
  character_testX$94:
-	; Parameter 57 signedint £temporary3422
+	; Parameter 57 signedint £temporary3344
 	mov [rbp + 57], eax
 
  character_testX$95:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_testX$96:
-	; IntegralToIntegral £temporary3423 c
+	; IntegralToIntegral £temporary3345 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -711,7 +711,7 @@ section .text
 	neg eax
 
  character_testX$97:
-	; Parameter 85 signedint £temporary3423
+	; Parameter 85 signedint £temporary3345
 	mov [rbp + 85], eax
 
  character_testX$98:
@@ -725,27 +725,27 @@ section .text
 	; PostCall 61
 
  character_testX$100:
-	; GetReturnValue £temporary3424
+	; GetReturnValue £temporary3346
 
  character_testX$101:
-	; Equal 104 £temporary3424 0
+	; Equal 104 £temporary3346 0
 	cmp ebx, 0
 	je character_testX$104
 
  character_testX$102:
-	; Assign £temporary3426 "Yes"
-	mov eax, @9350$string_Yes#
+	; Assign £temporary3348 "Yes"
+	mov eax, @9357$string_Yes#
 
  character_testX$103:
 	; Jump 105
 	jmp character_testX$105
 
  character_testX$104:
-	; Assign £temporary3426 "No"
-	mov eax, @9351$string_No#
+	; Assign £temporary3348 "No"
+	mov eax, @9358$string_No#
 
  character_testX$105:
-	; Parameter 61 pointer £temporary3426
+	; Parameter 61 pointer £temporary3348
 	mov [rbp + 61], eax
 
  character_testX$106:
@@ -765,10 +765,10 @@ section .text
 
  character_testX$109:
 	; Parameter 49 pointer "isgraph('%c') = %s\n"
-	mov qword [rbp + 49], @9352$string_isgraph282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9359$string_isgraph282725c2729203D2025s0A#
 
  character_testX$110:
-	; IntegralToIntegral £temporary3428 c
+	; IntegralToIntegral £temporary3350 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -777,14 +777,14 @@ section .text
 	neg eax
 
  character_testX$111:
-	; Parameter 57 signedint £temporary3428
+	; Parameter 57 signedint £temporary3350
 	mov [rbp + 57], eax
 
  character_testX$112:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_testX$113:
-	; IntegralToIntegral £temporary3429 c
+	; IntegralToIntegral £temporary3351 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -793,7 +793,7 @@ section .text
 	neg eax
 
  character_testX$114:
-	; Parameter 85 signedint £temporary3429
+	; Parameter 85 signedint £temporary3351
 	mov [rbp + 85], eax
 
  character_testX$115:
@@ -807,27 +807,27 @@ section .text
 	; PostCall 61
 
  character_testX$117:
-	; GetReturnValue £temporary3430
+	; GetReturnValue £temporary3352
 
  character_testX$118:
-	; Equal 121 £temporary3430 0
+	; Equal 121 £temporary3352 0
 	cmp ebx, 0
 	je character_testX$121
 
  character_testX$119:
-	; Assign £temporary3432 "Yes"
-	mov eax, @9355$string_Yes#
+	; Assign £temporary3354 "Yes"
+	mov eax, @9362$string_Yes#
 
  character_testX$120:
 	; Jump 122
 	jmp character_testX$122
 
  character_testX$121:
-	; Assign £temporary3432 "No"
-	mov eax, @9356$string_No#
+	; Assign £temporary3354 "No"
+	mov eax, @9363$string_No#
 
  character_testX$122:
-	; Parameter 61 pointer £temporary3432
+	; Parameter 61 pointer £temporary3354
 	mov [rbp + 61], eax
 
  character_testX$123:
@@ -847,10 +847,10 @@ section .text
 
  character_testX$126:
 	; Parameter 49 pointer "isprint('%c') = %s\n"
-	mov qword [rbp + 49], @9357$string_isprint282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9364$string_isprint282725c2729203D2025s0A#
 
  character_testX$127:
-	; IntegralToIntegral £temporary3434 c
+	; IntegralToIntegral £temporary3356 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -859,14 +859,14 @@ section .text
 	neg eax
 
  character_testX$128:
-	; Parameter 57 signedint £temporary3434
+	; Parameter 57 signedint £temporary3356
 	mov [rbp + 57], eax
 
  character_testX$129:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_testX$130:
-	; IntegralToIntegral £temporary3435 c
+	; IntegralToIntegral £temporary3357 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -875,7 +875,7 @@ section .text
 	neg eax
 
  character_testX$131:
-	; Parameter 85 signedint £temporary3435
+	; Parameter 85 signedint £temporary3357
 	mov [rbp + 85], eax
 
  character_testX$132:
@@ -889,27 +889,27 @@ section .text
 	; PostCall 61
 
  character_testX$134:
-	; GetReturnValue £temporary3436
+	; GetReturnValue £temporary3358
 
  character_testX$135:
-	; Equal 138 £temporary3436 0
+	; Equal 138 £temporary3358 0
 	cmp ebx, 0
 	je character_testX$138
 
  character_testX$136:
-	; Assign £temporary3438 "Yes"
-	mov eax, @9360$string_Yes#
+	; Assign £temporary3360 "Yes"
+	mov eax, @9367$string_Yes#
 
  character_testX$137:
 	; Jump 139
 	jmp character_testX$139
 
  character_testX$138:
-	; Assign £temporary3438 "No"
-	mov eax, @9361$string_No#
+	; Assign £temporary3360 "No"
+	mov eax, @9368$string_No#
 
  character_testX$139:
-	; Parameter 61 pointer £temporary3438
+	; Parameter 61 pointer £temporary3360
 	mov [rbp + 61], eax
 
  character_testX$140:
@@ -929,10 +929,10 @@ section .text
 
  character_testX$143:
 	; Parameter 49 pointer "ispunct('%c') = %s\n"
-	mov qword [rbp + 49], @9362$string_ispunct282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9369$string_ispunct282725c2729203D2025s0A#
 
  character_testX$144:
-	; IntegralToIntegral £temporary3440 c
+	; IntegralToIntegral £temporary3362 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -941,14 +941,14 @@ section .text
 	neg eax
 
  character_testX$145:
-	; Parameter 57 signedint £temporary3440
+	; Parameter 57 signedint £temporary3362
 	mov [rbp + 57], eax
 
  character_testX$146:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_testX$147:
-	; IntegralToIntegral £temporary3441 c
+	; IntegralToIntegral £temporary3363 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -957,7 +957,7 @@ section .text
 	neg eax
 
  character_testX$148:
-	; Parameter 85 signedint £temporary3441
+	; Parameter 85 signedint £temporary3363
 	mov [rbp + 85], eax
 
  character_testX$149:
@@ -971,27 +971,27 @@ section .text
 	; PostCall 61
 
  character_testX$151:
-	; GetReturnValue £temporary3442
+	; GetReturnValue £temporary3364
 
  character_testX$152:
-	; Equal 155 £temporary3442 0
+	; Equal 155 £temporary3364 0
 	cmp ebx, 0
 	je character_testX$155
 
  character_testX$153:
-	; Assign £temporary3444 "Yes"
-	mov eax, @9365$string_Yes#
+	; Assign £temporary3366 "Yes"
+	mov eax, @9372$string_Yes#
 
  character_testX$154:
 	; Jump 156
 	jmp character_testX$156
 
  character_testX$155:
-	; Assign £temporary3444 "No"
-	mov eax, @9366$string_No#
+	; Assign £temporary3366 "No"
+	mov eax, @9373$string_No#
 
  character_testX$156:
-	; Parameter 61 pointer £temporary3444
+	; Parameter 61 pointer £temporary3366
 	mov [rbp + 61], eax
 
  character_testX$157:
@@ -1011,10 +1011,10 @@ section .text
 
  character_testX$160:
 	; Parameter 49 pointer "iscntrl('%c') = %s\n"
-	mov qword [rbp + 49], @9367$string_iscntrl282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9374$string_iscntrl282725c2729203D2025s0A#
 
  character_testX$161:
-	; IntegralToIntegral £temporary3446 c
+	; IntegralToIntegral £temporary3368 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -1023,14 +1023,14 @@ section .text
 	neg eax
 
  character_testX$162:
-	; Parameter 57 signedint £temporary3446
+	; Parameter 57 signedint £temporary3368
 	mov [rbp + 57], eax
 
  character_testX$163:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_testX$164:
-	; IntegralToIntegral £temporary3447 c
+	; IntegralToIntegral £temporary3369 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -1039,7 +1039,7 @@ section .text
 	neg eax
 
  character_testX$165:
-	; Parameter 85 signedint £temporary3447
+	; Parameter 85 signedint £temporary3369
 	mov [rbp + 85], eax
 
  character_testX$166:
@@ -1053,27 +1053,27 @@ section .text
 	; PostCall 61
 
  character_testX$168:
-	; GetReturnValue £temporary3448
+	; GetReturnValue £temporary3370
 
  character_testX$169:
-	; Equal 172 £temporary3448 0
+	; Equal 172 £temporary3370 0
 	cmp ebx, 0
 	je character_testX$172
 
  character_testX$170:
-	; Assign £temporary3450 "Yes"
-	mov eax, @9370$string_Yes#
+	; Assign £temporary3372 "Yes"
+	mov eax, @9377$string_Yes#
 
  character_testX$171:
 	; Jump 173
 	jmp character_testX$173
 
  character_testX$172:
-	; Assign £temporary3450 "No"
-	mov eax, @9371$string_No#
+	; Assign £temporary3372 "No"
+	mov eax, @9378$string_No#
 
  character_testX$173:
-	; Parameter 61 pointer £temporary3450
+	; Parameter 61 pointer £temporary3372
 	mov [rbp + 61], eax
 
  character_testX$174:
@@ -1093,10 +1093,10 @@ section .text
 
  character_testX$177:
 	; Parameter 49 pointer "isspace('%c') = %s\n"
-	mov qword [rbp + 49], @9372$string_isspace282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9379$string_isspace282725c2729203D2025s0A#
 
  character_testX$178:
-	; IntegralToIntegral £temporary3452 c
+	; IntegralToIntegral £temporary3374 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -1105,14 +1105,14 @@ section .text
 	neg eax
 
  character_testX$179:
-	; Parameter 57 signedint £temporary3452
+	; Parameter 57 signedint £temporary3374
 	mov [rbp + 57], eax
 
  character_testX$180:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_testX$181:
-	; IntegralToIntegral £temporary3453 c
+	; IntegralToIntegral £temporary3375 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -1121,7 +1121,7 @@ section .text
 	neg eax
 
  character_testX$182:
-	; Parameter 85 signedint £temporary3453
+	; Parameter 85 signedint £temporary3375
 	mov [rbp + 85], eax
 
  character_testX$183:
@@ -1135,27 +1135,27 @@ section .text
 	; PostCall 61
 
  character_testX$185:
-	; GetReturnValue £temporary3454
+	; GetReturnValue £temporary3376
 
  character_testX$186:
-	; Equal 189 £temporary3454 0
+	; Equal 189 £temporary3376 0
 	cmp ebx, 0
 	je character_testX$189
 
  character_testX$187:
-	; Assign £temporary3456 "Yes"
-	mov eax, @9375$string_Yes#
+	; Assign £temporary3378 "Yes"
+	mov eax, @9382$string_Yes#
 
  character_testX$188:
 	; Jump 190
 	jmp character_testX$190
 
  character_testX$189:
-	; Assign £temporary3456 "No"
-	mov eax, @9376$string_No#
+	; Assign £temporary3378 "No"
+	mov eax, @9383$string_No#
 
  character_testX$190:
-	; Parameter 61 pointer £temporary3456
+	; Parameter 61 pointer £temporary3378
 	mov [rbp + 61], eax
 
  character_testX$191:
@@ -1175,10 +1175,10 @@ section .text
 
  character_testX$194:
 	; Parameter 49 pointer "tolower('%c') = '%c'\n"
-	mov qword [rbp + 49], @9377$string_tolower282725c2729203D202725c270A#
+	mov qword [rbp + 49], @9384$string_tolower282725c2729203D202725c270A#
 
  character_testX$195:
-	; IntegralToIntegral £temporary3458 c
+	; IntegralToIntegral £temporary3380 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -1187,14 +1187,14 @@ section .text
 	neg eax
 
  character_testX$196:
-	; Parameter 57 signedint £temporary3458
+	; Parameter 57 signedint £temporary3380
 	mov [rbp + 57], eax
 
  character_testX$197:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_testX$198:
-	; IntegralToIntegral £temporary3459 c
+	; IntegralToIntegral £temporary3381 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -1203,7 +1203,7 @@ section .text
 	neg eax
 
  character_testX$199:
-	; Parameter 85 signedint £temporary3459
+	; Parameter 85 signedint £temporary3381
 	mov [rbp + 85], eax
 
  character_testX$200:
@@ -1217,17 +1217,17 @@ section .text
 	; PostCall 61
 
  character_testX$202:
-	; GetReturnValue £temporary3460
+	; GetReturnValue £temporary3382
 
  character_testX$203:
-	; IntegralToIntegral £temporary3461 £temporary3460
+	; IntegralToIntegral £temporary3383 £temporary3382
 	cmp ebx, 0
 	jge character_testX$204
 	neg ebx
 	neg bl
 
  character_testX$204:
-	; IntegralToIntegral £temporary3462 £temporary3461
+	; IntegralToIntegral £temporary3384 £temporary3383
 	and ebx, 255
 	cmp bl, 0
 	jge character_testX$205
@@ -1235,7 +1235,7 @@ section .text
 	neg ebx
 
  character_testX$205:
-	; Parameter 61 signedint £temporary3462
+	; Parameter 61 signedint £temporary3384
 	mov [rbp + 61], ebx
 
  character_testX$206:
@@ -1255,10 +1255,10 @@ section .text
 
  character_testX$209:
 	; Parameter 49 pointer "toupper('%c') = '%c'\n\n"
-	mov qword [rbp + 49], @9378$string_toupper282725c2729203D202725c270A0A#
+	mov qword [rbp + 49], @9385$string_toupper282725c2729203D202725c270A0A#
 
  character_testX$210:
-	; IntegralToIntegral £temporary3464 c
+	; IntegralToIntegral £temporary3386 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -1267,14 +1267,14 @@ section .text
 	neg eax
 
  character_testX$211:
-	; Parameter 57 signedint £temporary3464
+	; Parameter 57 signedint £temporary3386
 	mov [rbp + 57], eax
 
  character_testX$212:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_testX$213:
-	; IntegralToIntegral £temporary3465 c
+	; IntegralToIntegral £temporary3387 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
@@ -1283,7 +1283,7 @@ section .text
 	neg eax
 
  character_testX$214:
-	; Parameter 85 signedint £temporary3465
+	; Parameter 85 signedint £temporary3387
 	mov [rbp + 85], eax
 
  character_testX$215:
@@ -1297,17 +1297,17 @@ section .text
 	; PostCall 61
 
  character_testX$217:
-	; GetReturnValue £temporary3466
+	; GetReturnValue £temporary3388
 
  character_testX$218:
-	; IntegralToIntegral £temporary3467 £temporary3466
+	; IntegralToIntegral £temporary3389 £temporary3388
 	cmp ebx, 0
 	jge character_testX$219
 	neg ebx
 	neg bl
 
  character_testX$219:
-	; IntegralToIntegral £temporary3468 £temporary3467
+	; IntegralToIntegral £temporary3390 £temporary3389
 	and ebx, 255
 	cmp bl, 0
 	jge character_testX$220
@@ -1315,7 +1315,7 @@ section .text
 	neg ebx
 
  character_testX$220:
-	; Parameter 61 signedint £temporary3468
+	; Parameter 61 signedint £temporary3390
 	mov [rbp + 61], ebx
 
  character_testX$221:
