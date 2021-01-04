@@ -6,91 +6,91 @@
 
 section .data
 
-@9761$string_CHAR_BIT203D2025i0A#:
+@9561$string_CHAR_BIT203D2025i0A#:
 	; Initializer String CHAR_BIT = %i\n
 	db "CHAR_BIT = %i", 10, 0
 
 section .data
 
-@9763$string_CHAR_MIN203D2025i0A0A#:
+@9563$string_CHAR_MIN203D2025i0A0A#:
 	; Initializer String CHAR_MIN = %i\n\n
 	db "CHAR_MIN = %i", 10, 10, 0
 
 section .data
 
-@9766$string_CHAR_MAX203D2025i0A#:
+@9566$string_CHAR_MAX203D2025i0A#:
 	; Initializer String CHAR_MAX = %i\n
 	db "CHAR_MAX = %i", 10, 0
 
 section .data
 
-@9769$string_UCHAR_MAX203D2025u0A0A#:
+@9569$string_UCHAR_MAX203D2025u0A0A#:
 	; Initializer String UCHAR_MAX = %u\n\n
 	db "UCHAR_MAX = %u", 10, 10, 0
 
 section .data
 
-@9772$string_SHRT_MIN203D2025i0A#:
+@9572$string_SHRT_MIN203D2025i0A#:
 	; Initializer String SHRT_MIN = %i\n
 	db "SHRT_MIN = %i", 10, 0
 
 section .data
 
-@9775$string_SHRT_MAX203D2025i0A#:
+@9575$string_SHRT_MAX203D2025i0A#:
 	; Initializer String SHRT_MAX = %i\n
 	db "SHRT_MAX = %i", 10, 0
 
 section .data
 
-@9778$string_USHRT_MAX203D2025u0A0A#:
+@9578$string_USHRT_MAX203D2025u0A0A#:
 	; Initializer String USHRT_MAX = %u\n\n
 	db "USHRT_MAX = %u", 10, 10, 0
 
 section .data
 
-@9781$string_INT_MIN203D2025i0A#:
+@9581$string_INT_MIN203D2025i0A#:
 	; Initializer String INT_MIN = %i\n
 	db "INT_MIN = %i", 10, 0
 
 section .data
 
-@9783$string_INT_MAX203D2025i0A#:
+@9583$string_INT_MAX203D2025i0A#:
 	; Initializer String INT_MAX = %i\n
 	db "INT_MAX = %i", 10, 0
 
 section .data
 
-@9785$string_UINT_MAX203D2025u0A0A#:
+@9585$string_UINT_MAX203D2025u0A0A#:
 	; Initializer String UINT_MAX = %u\n\n
 	db "UINT_MAX = %u", 10, 10, 0
 
 section .data
 
-@9787$string_LONG_MIN203D2025li0A#:
+@9587$string_LONG_MIN203D2025li0A#:
 	; Initializer String LONG_MIN = %li\n
 	db "LONG_MIN = %li", 10, 0
 
 section .data
 
-@9789$string_LONG_MAX203D2025li0A#:
+@9589$string_LONG_MAX203D2025li0A#:
 	; Initializer String LONG_MAX = %li\n
 	db "LONG_MAX = %li", 10, 0
 
 section .data
 
-@9791$string_ULONG_MAX203D2025lu0A#:
+@9591$string_ULONG_MAX203D2025lu0A#:
 	; Initializer String ULONG_MAX = %lu\n
 	db "ULONG_MAX = %lu", 10, 0
 
 section .data
 
-@9793$string_ULONG_MAX203D2025lx0A#:
+@9593$string_ULONG_MAX203D2025lx0A#:
 	; Initializer String ULONG_MAX = %lx\n
 	db "ULONG_MAX = %lx", 10, 0
 
 section .data
 
-@9795$string_ULONG_MAX203D2025lX0A#:
+@9595$string_ULONG_MAX203D2025lX0A#:
 	; Initializer String ULONG_MAX = %lX\n
 	db "ULONG_MAX = %lX", 10, 0
 
@@ -101,7 +101,7 @@ section .text
 
  limits_test$1:
 	; Parameter 48 pointer "CHAR_BIT = %i\n"
-	mov qword [rbp + 48], @9761$string_CHAR_BIT203D2025i0A#
+	mov qword [rbp + 48], @9561$string_CHAR_BIT203D2025i0A#
 
  limits_test$2:
 	; Parameter 56 signedint 8
@@ -124,7 +124,7 @@ section .text
 
  limits_test$6:
 	; Parameter 48 pointer "CHAR_MIN = %i\n\n"
-	mov qword [rbp + 48], @9763$string_CHAR_MIN203D2025i0A0A#
+	mov qword [rbp + 48], @9563$string_CHAR_MIN203D2025i0A0A#
 
  limits_test$7:
 	; Parameter 56 signedint -128
@@ -147,7 +147,7 @@ section .text
 
  limits_test$11:
 	; Parameter 48 pointer "CHAR_MAX = %i\n"
-	mov qword [rbp + 48], @9766$string_CHAR_MAX203D2025i0A#
+	mov qword [rbp + 48], @9566$string_CHAR_MAX203D2025i0A#
 
  limits_test$12:
 	; Parameter 56 signedint 127
@@ -170,7 +170,7 @@ section .text
 
  limits_test$16:
 	; Parameter 48 pointer "UCHAR_MAX = %u\n\n"
-	mov qword [rbp + 48], @9769$string_UCHAR_MAX203D2025u0A0A#
+	mov qword [rbp + 48], @9569$string_UCHAR_MAX203D2025u0A0A#
 
  limits_test$17:
 	; Parameter 56 unsigned int 255
@@ -193,7 +193,7 @@ section .text
 
  limits_test$21:
 	; Parameter 48 pointer "SHRT_MIN = %i\n"
-	mov qword [rbp + 48], @9772$string_SHRT_MIN203D2025i0A#
+	mov qword [rbp + 48], @9572$string_SHRT_MIN203D2025i0A#
 
  limits_test$22:
 	; Parameter 56 signedint -32768
@@ -216,7 +216,7 @@ section .text
 
  limits_test$26:
 	; Parameter 48 pointer "SHRT_MAX = %i\n"
-	mov qword [rbp + 48], @9775$string_SHRT_MAX203D2025i0A#
+	mov qword [rbp + 48], @9575$string_SHRT_MAX203D2025i0A#
 
  limits_test$27:
 	; Parameter 56 signedint 32767
@@ -239,7 +239,7 @@ section .text
 
  limits_test$31:
 	; Parameter 48 pointer "USHRT_MAX = %u\n\n"
-	mov qword [rbp + 48], @9778$string_USHRT_MAX203D2025u0A0A#
+	mov qword [rbp + 48], @9578$string_USHRT_MAX203D2025u0A0A#
 
  limits_test$32:
 	; Parameter 56 unsigned int 65535
@@ -262,7 +262,7 @@ section .text
 
  limits_test$36:
 	; Parameter 48 pointer "INT_MIN = %i\n"
-	mov qword [rbp + 48], @9781$string_INT_MIN203D2025i0A#
+	mov qword [rbp + 48], @9581$string_INT_MIN203D2025i0A#
 
  limits_test$37:
 	; Parameter 56 signedint -2147483648
@@ -285,7 +285,7 @@ section .text
 
  limits_test$41:
 	; Parameter 48 pointer "INT_MAX = %i\n"
-	mov qword [rbp + 48], @9783$string_INT_MAX203D2025i0A#
+	mov qword [rbp + 48], @9583$string_INT_MAX203D2025i0A#
 
  limits_test$42:
 	; Parameter 56 signedint 2147483647
@@ -308,7 +308,7 @@ section .text
 
  limits_test$46:
 	; Parameter 48 pointer "UINT_MAX = %u\n\n"
-	mov qword [rbp + 48], @9785$string_UINT_MAX203D2025u0A0A#
+	mov qword [rbp + 48], @9585$string_UINT_MAX203D2025u0A0A#
 
  limits_test$47:
 	; Parameter 56 unsigned int 4294967295
@@ -332,7 +332,7 @@ section .text
 
  limits_test$51:
 	; Parameter 48 pointer "LONG_MIN = %li\n"
-	mov qword [rbp + 48], @9787$string_LONG_MIN203D2025li0A#
+	mov qword [rbp + 48], @9587$string_LONG_MIN203D2025li0A#
 
  limits_test$52:
 	; Parameter 56 signed long int -9223372036854775808
@@ -356,7 +356,7 @@ section .text
 
  limits_test$56:
 	; Parameter 48 pointer "LONG_MAX = %li\n"
-	mov qword [rbp + 48], @9789$string_LONG_MAX203D2025li0A#
+	mov qword [rbp + 48], @9589$string_LONG_MAX203D2025li0A#
 
  limits_test$57:
 	; Parameter 56 signed long int 9223372036854775807
@@ -380,7 +380,7 @@ section .text
 
  limits_test$61:
 	; Parameter 48 pointer "ULONG_MAX = %lu\n"
-	mov qword [rbp + 48], @9791$string_ULONG_MAX203D2025lu0A#
+	mov qword [rbp + 48], @9591$string_ULONG_MAX203D2025lu0A#
 
  limits_test$62:
 	; Parameter 56 unsignedlongint 18446744073709551615
@@ -404,7 +404,7 @@ section .text
 
  limits_test$66:
 	; Parameter 48 pointer "ULONG_MAX = %lx\n"
-	mov qword [rbp + 48], @9793$string_ULONG_MAX203D2025lx0A#
+	mov qword [rbp + 48], @9593$string_ULONG_MAX203D2025lx0A#
 
  limits_test$67:
 	; Parameter 56 unsignedlongint 18446744073709551615
@@ -428,7 +428,7 @@ section .text
 
  limits_test$71:
 	; Parameter 48 pointer "ULONG_MAX = %lX\n"
-	mov qword [rbp + 48], @9795$string_ULONG_MAX203D2025lX0A#
+	mov qword [rbp + 48], @9595$string_ULONG_MAX203D2025lX0A#
 
  limits_test$72:
 	; Parameter 56 unsignedlongint 18446744073709551615

@@ -34,80 +34,80 @@ section .text
 
 section .data
 
-@7816$int4$4#:
+@7648$int4$4#:
 	; Initializer SignedInt 4
 	dd 4
 
 section .data
 
-@7820$int4$100#:
+@7652$int4$100#:
 	; Initializer SignedInt 100
 	dd 100
 
 section .data
 
-@7824$int4$400#:
+@7656$int4$400#:
 	; Initializer SignedInt 400
 	dd 400
 
 section .text
 
- @7814$isLeapYear:
+ @7646$isLeapYear:
 	; SignedModulo £temporary2523 year 4
 	mov eax, [rbp + 24]
 	xor edx, edx
-	idiv dword [@7816$int4$4#]
+	idiv dword [@7648$int4$4#]
 
- @7814$isLeapYear$1:
+ @7646$isLeapYear$1:
 	; NotEqual 4 £temporary2523 0
 	cmp edx, 0
-	jne @7814$isLeapYear$4
+	jne @7646$isLeapYear$4
 
- @7814$isLeapYear$2:
+ @7646$isLeapYear$2:
 	; SignedModulo £temporary2525 year 100
 	mov eax, [rbp + 24]
 	xor edx, edx
-	idiv dword [@7820$int4$100#]
+	idiv dword [@7652$int4$100#]
 
- @7814$isLeapYear$3:
+ @7646$isLeapYear$3:
 	; NotEqual 6 £temporary2525 0
 	cmp edx, 0
-	jne @7814$isLeapYear$6
+	jne @7646$isLeapYear$6
 
- @7814$isLeapYear$4:
+ @7646$isLeapYear$4:
 	; SignedModulo £temporary2528 year 400
 	mov eax, [rbp + 24]
 	xor edx, edx
-	idiv dword [@7824$int4$400#]
+	idiv dword [@7656$int4$400#]
 
- @7814$isLeapYear$5:
+ @7646$isLeapYear$5:
 	; NotEqual 8 £temporary2528 0
 	cmp edx, 0
-	jne @7814$isLeapYear$8
+	jne @7646$isLeapYear$8
 
- @7814$isLeapYear$6:
+ @7646$isLeapYear$6:
 	; Assign £temporary2531 1
 	mov ebx, 1
 
- @7814$isLeapYear$7:
+ @7646$isLeapYear$7:
 	; Jump 9
-	jmp @7814$isLeapYear$9
+	jmp @7646$isLeapYear$9
 
- @7814$isLeapYear$8:
+ @7646$isLeapYear$8:
 	; Assign £temporary2531 0
 	mov ebx, 0
 
- @7814$isLeapYear$9:
+ @7646$isLeapYear$9:
 	; SetReturnValue
 
- @7814$isLeapYear$10:
+ @7646$isLeapYear$10:
 	; Return £temporary2531
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @7814$isLeapYear$11:
+ @7646$isLeapYear$11:
 	; FunctionEnd isLeapYear
 
 section .text
@@ -161,31 +161,31 @@ section .text
 
 section .data
 
-@7843$int4$4#:
+@7675$int4$4#:
 	; Initializer SignedInt 4
 	dd 4
 
 section .data
 
-@7848$int4$365#:
+@7680$int4$365#:
 	; Initializer SignedInt 365
 	dd 365
 
 section .data
 
-@7851$int8$86400#:
+@7683$int8$86400#:
 	; Initializer Signed_Long_Int 86400
 	dq 86400
 
 section .data
 
-@7853$int8$3600#:
+@7685$int8$3600#:
 	; Initializer Signed_Long_Int 3600
 	dq 3600
 
 section .data
 
-@7855$int8$60#:
+@7687$int8$60#:
 	; Initializer Signed_Long_Int 60
 	dq 60
 
@@ -208,7 +208,7 @@ section .text
  mktime$3:
 	; SignedDivide £temporary2542 £temporary2541 4
 	xor edx, edx
-	idiv dword [@7843$int4$4#]
+	idiv dword [@7675$int4$4#]
 
  mktime$4:
 	; IntegralToIntegral £temporary2543 £temporary2542
@@ -235,7 +235,7 @@ section .text
  mktime$8:
 	; SignedMultiply £temporary2546 £temporary2545 365
 	xor edx, edx
-	imul dword [@7848$int4$365#]
+	imul dword [@7680$int4$365#]
 
  mktime$9:
 	; IntegralToIntegral £temporary2547 £temporary2546
@@ -273,7 +273,7 @@ section .text
 	; SignedMultiply £temporary2552 totalDays 86400
 	mov rax, [rbp + 40]
 	xor rdx, rdx
-	imul qword [@7851$int8$86400#]
+	imul qword [@7683$int8$86400#]
 	mov rbx, rax
 
  mktime$15:
@@ -293,7 +293,7 @@ section .text
  mktime$17:
 	; SignedMultiply £temporary2555 £temporary2554 3600
 	xor rdx, rdx
-	imul qword [@7853$int8$3600#]
+	imul qword [@7685$int8$3600#]
 
  mktime$18:
 	; BinaryAdd £temporary2556 £temporary2552 £temporary2555
@@ -316,7 +316,7 @@ section .text
  mktime$21:
 	; SignedMultiply £temporary2559 £temporary2558 60
 	xor rdx, rdx
-	imul qword [@7855$int8$60#]
+	imul qword [@7687$int8$60#]
 
  mktime$22:
 	; BinaryAdd £temporary2560 £temporary2556 £temporary2559
@@ -366,79 +366,79 @@ section .text
 
 section .data
 
-@7858$g_timeStruct:
+@7690$g_timeStruct:
 	; InitializerZero 36
 	times 36 db 0
 
 section .data
 
-@7865$int8$86400#:
+@7697$int8$86400#:
 	; Initializer Signed_Long_Int 86400
 	dq 86400
 
 section .data
 
-@7868$int8$3600#:
+@7700$int8$3600#:
 	; Initializer Signed_Long_Int 3600
 	dq 3600
 
 section .data
 
-@7871$int8$3600#:
+@7703$int8$3600#:
 	; Initializer Signed_Long_Int 3600
 	dq 3600
 
 section .data
 
-@7873$int8$60#:
+@7705$int8$60#:
 	; Initializer Signed_Long_Int 60
 	dq 60
 
 section .data
 
-@7875$int8$60#:
+@7707$int8$60#:
 	; Initializer Signed_Long_Int 60
 	dq 60
 
 section .data
 
-@7877$int8$86400#:
+@7709$int8$86400#:
 	; Initializer Signed_Long_Int 86400
 	dq 86400
 
 section .data
 
-@7886$int8$7#:
+@7718$int8$7#:
 	; Initializer Signed_Long_Int 7
 	dq 7
 
 section .data
 
-@7889$int8$365#:
+@7721$int8$365#:
 	; Initializer Signed_Long_Int 365
 	dq 365
 
 section .data
 
-@7895$int4$4#:
+@7727$int4$4#:
 	; Initializer SignedInt 4
 	dd 4
 
 section .data
 
-@7899$int8$365#:
+@7730$int8$365#:
 	; Initializer Signed_Long_Int 365
 	dq 365
 
 section .data
 
-@7943$Array_4#:
+@7772$Array_4#:
 	; Initializer Array 4
 	dq 4
 
 section .data
 
-@7945$Array_4#:
+@7774$Array_4#:
 	; Initializer Array 4
 	dq 4
 
@@ -462,21 +462,21 @@ section .text
 	; SignedModulo secondsOfDay time 86400
 	mov rax, [rbp + 32]
 	xor rdx, rdx
-	idiv qword [@7865$int8$86400#]
+	idiv qword [@7697$int8$86400#]
 	mov [rbp + 40], rdx
 
  gmtime$4:
 	; SignedModulo secondsOfHour secondsOfDay 3600
 	mov rax, [rbp + 40]
 	xor rdx, rdx
-	idiv qword [@7868$int8$3600#]
+	idiv qword [@7700$int8$3600#]
 	mov [rbp + 48], rdx
 
  gmtime$5:
 	; SignedDivide £temporary2569 secondsOfDay 3600
 	mov rax, [rbp + 40]
 	xor rdx, rdx
-	idiv qword [@7871$int8$3600#]
+	idiv qword [@7703$int8$3600#]
 
  gmtime$6:
 	; IntegralToIntegral £temporary2570 £temporary2569
@@ -487,13 +487,13 @@ section .text
 
  gmtime$7:
 	; Assign g_timeStruct.tm_hour £temporary2570
-	mov [@7858$g_timeStruct + 8], eax
+	mov [@7690$g_timeStruct + 8], eax
 
  gmtime$8:
 	; SignedDivide £temporary2572 secondsOfHour 60
 	mov rax, [rbp + 48]
 	xor rdx, rdx
-	idiv qword [@7873$int8$60#]
+	idiv qword [@7705$int8$60#]
 
  gmtime$9:
 	; IntegralToIntegral £temporary2573 £temporary2572
@@ -504,13 +504,13 @@ section .text
 
  gmtime$10:
 	; Assign g_timeStruct.tm_min £temporary2573
-	mov [@7858$g_timeStruct + 4], eax
+	mov [@7690$g_timeStruct + 4], eax
 
  gmtime$11:
 	; SignedModulo £temporary2575 secondsOfHour 60
 	mov rax, [rbp + 48]
 	xor rdx, rdx
-	idiv qword [@7875$int8$60#]
+	idiv qword [@7707$int8$60#]
 
  gmtime$12:
 	; IntegralToIntegral £temporary2576 £temporary2575
@@ -521,13 +521,13 @@ section .text
 
  gmtime$13:
 	; Assign g_timeStruct.tm_sec £temporary2576
-	mov [@7858$g_timeStruct], edx
+	mov [@7690$g_timeStruct], edx
 
  gmtime$14:
 	; SignedDivide totalDays time 86400
 	mov rax, [rbp + 32]
 	xor rdx, rdx
-	idiv qword [@7877$int8$86400#]
+	idiv qword [@7709$int8$86400#]
 	mov [rbp + 56], rax
 
  gmtime$15:
@@ -549,7 +549,7 @@ section .text
 
  gmtime$18:
 	; Assign g_timeStruct.tm_wday £temporary2581
-	mov [@7858$g_timeStruct + 24], eax
+	mov [@7690$g_timeStruct + 24], eax
 
  gmtime$19:
 	; Jump 24
@@ -563,7 +563,7 @@ section .text
  gmtime$21:
 	; SignedModulo £temporary2584 £temporary2583 7
 	xor rdx, rdx
-	idiv qword [@7886$int8$7#]
+	idiv qword [@7718$int8$7#]
 
  gmtime$22:
 	; IntegralToIntegral £temporary2585 £temporary2584
@@ -574,13 +574,13 @@ section .text
 
  gmtime$23:
 	; Assign g_timeStruct.tm_wday £temporary2585
-	mov [@7858$g_timeStruct + 24], edx
+	mov [@7690$g_timeStruct + 24], edx
 
  gmtime$24:
 	; SignedDivide £temporary2586 totalDays 365
 	mov rax, [rbp + 56]
 	xor rdx, rdx
-	idiv qword [@7889$int8$365#]
+	idiv qword [@7721$int8$365#]
 
  gmtime$25:
 	; BinaryAdd £temporary2587 £temporary2586 1970
@@ -605,14 +605,14 @@ section .text
  gmtime$29:
 	; SignedDivide leapDays £temporary2589 4
 	xor edx, edx
-	idiv dword [@7895$int4$4#]
+	idiv dword [@7727$int4$4#]
 	mov [rbp + 68], eax
 
  gmtime$30:
 	; SignedModulo totalDays totalDays 365
 	mov rax, [rbp + 56]
 	xor rdx, rdx
-	idiv qword [@7899$int8$365#]
+	idiv qword [@7730$int8$365#]
 	mov [rbp + 56], rdx
 
  gmtime$31:
@@ -651,7 +651,7 @@ section .text
 	mov qword [rbp + 72], gmtime$38
 	mov [rbp + 80], rbp
 	add rbp, 72
-	jmp @7814$isLeapYear
+	jmp @7646$isLeapYear
 
  gmtime$38:
 	; PostCall 72
@@ -680,7 +680,7 @@ section .text
 	; BinarySubtract g_timeStruct.tm_year year 1900
 	mov eax, [rbp + 64]
 	sub eax, 1900
-	mov [@7858$g_timeStruct + 20], eax
+	mov [@7690$g_timeStruct + 20], eax
 
  gmtime$45:
 	; IntegralToIntegral £temporary2603 totalDays
@@ -692,7 +692,7 @@ section .text
 
  gmtime$46:
 	; Assign g_timeStruct.tm_yday £temporary2603
-	mov [@7858$g_timeStruct + 28], eax
+	mov [@7690$g_timeStruct + 28], eax
 
  gmtime$47:
 	; Assign daysOfMonths[0] 31
@@ -711,7 +711,7 @@ section .text
 	mov qword [rbp + 76], gmtime$51
 	mov [rbp + 84], rbp
 	add rbp, 76
-	jmp @7814$isLeapYear
+	jmp @7646$isLeapYear
 
  gmtime$51:
 	; PostCall 76
@@ -793,7 +793,7 @@ section .text
  gmtime$70:
 	; UnsignedMultiply £temporary2621 £temporary2620 4
 	xor rdx, rdx
-	mul qword [@7943$Array_4#]
+	mul qword [@7772$Array_4#]
 
  gmtime$71:
 	; BinaryAdd £temporary2622 daysOfMonths £temporary2621
@@ -835,7 +835,7 @@ section .text
  gmtime$78:
 	; UnsignedMultiply £temporary2628 £temporary2627 4
 	xor rdx, rdx
-	mul qword [@7945$Array_4#]
+	mul qword [@7774$Array_4#]
 
  gmtime$79:
 	; BinaryAdd £temporary2629 daysOfMonths £temporary2628
@@ -867,7 +867,7 @@ section .text
  gmtime$84:
 	; Assign g_timeStruct.tm_mon month
 	mov eax, [rbp + 120]
-	mov [@7858$g_timeStruct + 16], eax
+	mov [@7690$g_timeStruct + 16], eax
 
  gmtime$85:
 	; BinaryAdd £temporary2634 totalDays 1
@@ -883,18 +883,18 @@ section .text
 
  gmtime$87:
 	; Assign g_timeStruct.tm_mday £temporary2635
-	mov [@7858$g_timeStruct + 12], eax
+	mov [@7690$g_timeStruct + 12], eax
 
  gmtime$88:
 	; Assign g_timeStruct.tm_isdst -1
-	mov dword [@7858$g_timeStruct + 32], -1
+	mov dword [@7690$g_timeStruct + 32], -1
 
  gmtime$89:
 	; SetReturnValue
 
  gmtime$90:
-	; Return @7858$g_timeStruct
-	mov rbx, @7858$g_timeStruct
+	; Return @7690$g_timeStruct
+	mov rbx, @7690$g_timeStruct
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -916,7 +916,7 @@ section .text
 
 section .data
 
-@7968$int8$3600#:
+@7796$int8$3600#:
 	; Initializer Signed_Long_Int 3600
 	dq 3600
 
@@ -1027,7 +1027,7 @@ section .text
  localtime$23:
 	; SignedMultiply £temporary2647 £temporary2646 3600
 	xor rdx, rdx
-	imul qword [@7968$int8$3600#]
+	imul qword [@7796$int8$3600#]
 
  localtime$24:
 	; BinaryAdd t t £temporary2647
@@ -1104,345 +1104,345 @@ section .text
 
 section .data
 
-@7975$g_timeString:
+@7803$g_timeString:
 	; InitializerZero 256
 	times 256 db 0
 
 section .data
 
-@7976$string_Sun#:
+@7804$string_Sun#:
 	; Initializer String Sun
 	db "Sun", 0
 
 section .data
 
-@7977$string_Mon#:
+@7805$string_Mon#:
 	; Initializer String Mon
 	db "Mon", 0
 
 section .data
 
-@7978$string_Tue#:
+@7806$string_Tue#:
 	; Initializer String Tue
 	db "Tue", 0
 
 section .data
 
-@7979$string_Wed#:
+@7807$string_Wed#:
 	; Initializer String Wed
 	db "Wed", 0
 
 section .data
 
-@7980$string_Thu#:
+@7808$string_Thu#:
 	; Initializer String Thu
 	db "Thu", 0
 
 section .data
 
-@7981$string_Fri#:
+@7809$string_Fri#:
 	; Initializer String Fri
 	db "Fri", 0
 
 section .data
 
-@7982$string_Sat#:
+@7810$string_Sat#:
 	; Initializer String Sat
 	db "Sat", 0
 
 section .data
 
-@7983$g_shortDayList:
-	; Initializer Pointer @7976$string_Sun#
-	dq @7976$string_Sun#
-	; Initializer Pointer @7977$string_Mon#
-	dq @7977$string_Mon#
-	; Initializer Pointer @7978$string_Tue#
-	dq @7978$string_Tue#
-	; Initializer Pointer @7979$string_Wed#
-	dq @7979$string_Wed#
-	; Initializer Pointer @7980$string_Thu#
-	dq @7980$string_Thu#
-	; Initializer Pointer @7981$string_Fri#
-	dq @7981$string_Fri#
-	; Initializer Pointer @7982$string_Sat#
-	dq @7982$string_Sat#
+@7811$g_shortDayList:
+	; Initializer Pointer @7804$string_Sun#
+	dq @7804$string_Sun#
+	; Initializer Pointer @7805$string_Mon#
+	dq @7805$string_Mon#
+	; Initializer Pointer @7806$string_Tue#
+	dq @7806$string_Tue#
+	; Initializer Pointer @7807$string_Wed#
+	dq @7807$string_Wed#
+	; Initializer Pointer @7808$string_Thu#
+	dq @7808$string_Thu#
+	; Initializer Pointer @7809$string_Fri#
+	dq @7809$string_Fri#
+	; Initializer Pointer @7810$string_Sat#
+	dq @7810$string_Sat#
 
 section .data
 
-@7984$string_Sunday#:
+@7812$string_Sunday#:
 	; Initializer String Sunday
 	db "Sunday", 0
 
 section .data
 
-@7985$string_Monday#:
+@7813$string_Monday#:
 	; Initializer String Monday
 	db "Monday", 0
 
 section .data
 
-@7986$string_Tuesday#:
+@7814$string_Tuesday#:
 	; Initializer String Tuesday
 	db "Tuesday", 0
 
 section .data
 
-@7987$string_Wednesday#:
+@7815$string_Wednesday#:
 	; Initializer String Wednesday
 	db "Wednesday", 0
 
 section .data
 
-@7988$string_Thursday#:
+@7816$string_Thursday#:
 	; Initializer String Thursday
 	db "Thursday", 0
 
 section .data
 
-@7989$string_Friday#:
+@7817$string_Friday#:
 	; Initializer String Friday
 	db "Friday", 0
 
 section .data
 
-@7990$string_Saturday#:
+@7818$string_Saturday#:
 	; Initializer String Saturday
 	db "Saturday", 0
 
 section .data
 
-@7991$g_longDayList:
-	; Initializer Pointer @7984$string_Sunday#
-	dq @7984$string_Sunday#
-	; Initializer Pointer @7985$string_Monday#
-	dq @7985$string_Monday#
-	; Initializer Pointer @7986$string_Tuesday#
-	dq @7986$string_Tuesday#
-	; Initializer Pointer @7987$string_Wednesday#
-	dq @7987$string_Wednesday#
-	; Initializer Pointer @7988$string_Thursday#
-	dq @7988$string_Thursday#
-	; Initializer Pointer @7989$string_Friday#
-	dq @7989$string_Friday#
-	; Initializer Pointer @7990$string_Saturday#
-	dq @7990$string_Saturday#
+@7819$g_longDayList:
+	; Initializer Pointer @7812$string_Sunday#
+	dq @7812$string_Sunday#
+	; Initializer Pointer @7813$string_Monday#
+	dq @7813$string_Monday#
+	; Initializer Pointer @7814$string_Tuesday#
+	dq @7814$string_Tuesday#
+	; Initializer Pointer @7815$string_Wednesday#
+	dq @7815$string_Wednesday#
+	; Initializer Pointer @7816$string_Thursday#
+	dq @7816$string_Thursday#
+	; Initializer Pointer @7817$string_Friday#
+	dq @7817$string_Friday#
+	; Initializer Pointer @7818$string_Saturday#
+	dq @7818$string_Saturday#
 
 section .data
 
-@7992$string_Jan#:
+@7820$string_Jan#:
 	; Initializer String Jan
 	db "Jan", 0
 
 section .data
 
-@7993$string_Feb#:
+@7821$string_Feb#:
 	; Initializer String Feb
 	db "Feb", 0
 
 section .data
 
-@7994$string_Mar#:
+@7822$string_Mar#:
 	; Initializer String Mar
 	db "Mar", 0
 
 section .data
 
-@7995$string_Apr#:
+@7823$string_Apr#:
 	; Initializer String Apr
 	db "Apr", 0
 
 section .data
 
-@7996$string_May#:
+@7824$string_May#:
 	; Initializer String May
 	db "May", 0
 
 section .data
 
-@7997$string_Jun#:
+@7825$string_Jun#:
 	; Initializer String Jun
 	db "Jun", 0
 
 section .data
 
-@7998$string_Jul#:
+@7826$string_Jul#:
 	; Initializer String Jul
 	db "Jul", 0
 
 section .data
 
-@7999$string_Aug#:
+@7827$string_Aug#:
 	; Initializer String Aug
 	db "Aug", 0
 
 section .data
 
-@8000$string_Sep#:
+@7828$string_Sep#:
 	; Initializer String Sep
 	db "Sep", 0
 
 section .data
 
-@8001$string_Oct#:
+@7829$string_Oct#:
 	; Initializer String Oct
 	db "Oct", 0
 
 section .data
 
-@8002$string_Nov#:
+@7830$string_Nov#:
 	; Initializer String Nov
 	db "Nov", 0
 
 section .data
 
-@8003$string_Dec#:
+@7831$string_Dec#:
 	; Initializer String Dec
 	db "Dec", 0
 
 section .data
 
-@8004$g_shortMonthList:
-	; Initializer Pointer @7992$string_Jan#
-	dq @7992$string_Jan#
-	; Initializer Pointer @7993$string_Feb#
-	dq @7993$string_Feb#
-	; Initializer Pointer @7994$string_Mar#
-	dq @7994$string_Mar#
-	; Initializer Pointer @7995$string_Apr#
-	dq @7995$string_Apr#
-	; Initializer Pointer @7996$string_May#
-	dq @7996$string_May#
-	; Initializer Pointer @7997$string_Jun#
-	dq @7997$string_Jun#
-	; Initializer Pointer @7998$string_Jul#
-	dq @7998$string_Jul#
-	; Initializer Pointer @7999$string_Aug#
-	dq @7999$string_Aug#
-	; Initializer Pointer @8000$string_Sep#
-	dq @8000$string_Sep#
-	; Initializer Pointer @8001$string_Oct#
-	dq @8001$string_Oct#
-	; Initializer Pointer @8002$string_Nov#
-	dq @8002$string_Nov#
-	; Initializer Pointer @8003$string_Dec#
-	dq @8003$string_Dec#
+@7832$g_shortMonthList:
+	; Initializer Pointer @7820$string_Jan#
+	dq @7820$string_Jan#
+	; Initializer Pointer @7821$string_Feb#
+	dq @7821$string_Feb#
+	; Initializer Pointer @7822$string_Mar#
+	dq @7822$string_Mar#
+	; Initializer Pointer @7823$string_Apr#
+	dq @7823$string_Apr#
+	; Initializer Pointer @7824$string_May#
+	dq @7824$string_May#
+	; Initializer Pointer @7825$string_Jun#
+	dq @7825$string_Jun#
+	; Initializer Pointer @7826$string_Jul#
+	dq @7826$string_Jul#
+	; Initializer Pointer @7827$string_Aug#
+	dq @7827$string_Aug#
+	; Initializer Pointer @7828$string_Sep#
+	dq @7828$string_Sep#
+	; Initializer Pointer @7829$string_Oct#
+	dq @7829$string_Oct#
+	; Initializer Pointer @7830$string_Nov#
+	dq @7830$string_Nov#
+	; Initializer Pointer @7831$string_Dec#
+	dq @7831$string_Dec#
 
 section .data
 
-@8005$string_January#:
+@7833$string_January#:
 	; Initializer String January
 	db "January", 0
 
 section .data
 
-@8006$string_February#:
+@7834$string_February#:
 	; Initializer String February
 	db "February", 0
 
 section .data
 
-@8007$string_March#:
+@7835$string_March#:
 	; Initializer String March
 	db "March", 0
 
 section .data
 
-@8008$string_April#:
+@7836$string_April#:
 	; Initializer String April
 	db "April", 0
 
 section .data
 
-@8009$string_May#:
+@7837$string_May#:
 	; Initializer String May
 	db "May", 0
 
 section .data
 
-@8010$string_June#:
+@7838$string_June#:
 	; Initializer String June
 	db "June", 0
 
 section .data
 
-@8011$string_July#:
+@7839$string_July#:
 	; Initializer String July
 	db "July", 0
 
 section .data
 
-@8012$string_August#:
+@7840$string_August#:
 	; Initializer String August
 	db "August", 0
 
 section .data
 
-@8013$string_September#:
+@7841$string_September#:
 	; Initializer String September
 	db "September", 0
 
 section .data
 
-@8014$string_October#:
+@7842$string_October#:
 	; Initializer String October
 	db "October", 0
 
 section .data
 
-@8015$string_November#:
+@7843$string_November#:
 	; Initializer String November
 	db "November", 0
 
 section .data
 
-@8016$string_December#:
+@7844$string_December#:
 	; Initializer String December
 	db "December", 0
 
 section .data
 
-@8017$g_longMonthList:
-	; Initializer Pointer @8005$string_January#
-	dq @8005$string_January#
-	; Initializer Pointer @8006$string_February#
-	dq @8006$string_February#
-	; Initializer Pointer @8007$string_March#
-	dq @8007$string_March#
-	; Initializer Pointer @8008$string_April#
-	dq @8008$string_April#
-	; Initializer Pointer @8009$string_May#
-	dq @8009$string_May#
-	; Initializer Pointer @8010$string_June#
-	dq @8010$string_June#
-	; Initializer Pointer @8011$string_July#
-	dq @8011$string_July#
-	; Initializer Pointer @8012$string_August#
-	dq @8012$string_August#
-	; Initializer Pointer @8013$string_September#
-	dq @8013$string_September#
-	; Initializer Pointer @8014$string_October#
-	dq @8014$string_October#
-	; Initializer Pointer @8015$string_November#
-	dq @8015$string_November#
-	; Initializer Pointer @8016$string_December#
-	dq @8016$string_December#
+@7845$g_longMonthList:
+	; Initializer Pointer @7833$string_January#
+	dq @7833$string_January#
+	; Initializer Pointer @7834$string_February#
+	dq @7834$string_February#
+	; Initializer Pointer @7835$string_March#
+	dq @7835$string_March#
+	; Initializer Pointer @7836$string_April#
+	dq @7836$string_April#
+	; Initializer Pointer @7837$string_May#
+	dq @7837$string_May#
+	; Initializer Pointer @7838$string_June#
+	dq @7838$string_June#
+	; Initializer Pointer @7839$string_July#
+	dq @7839$string_July#
+	; Initializer Pointer @7840$string_August#
+	dq @7840$string_August#
+	; Initializer Pointer @7841$string_September#
+	dq @7841$string_September#
+	; Initializer Pointer @7842$string_October#
+	dq @7842$string_October#
+	; Initializer Pointer @7843$string_November#
+	dq @7843$string_November#
+	; Initializer Pointer @7844$string_December#
+	dq @7844$string_December#
 
 section .data
 
-@8037$string_25s2025s2025i202502i3A2502i3A2502i2025i#:
+@7865$string_25s2025s2025i202502i3A2502i3A2502i2025i#:
 	; Initializer String %s %s %i %02i:%02i:%02i %i
 	db "%s %s %i %02i:%02i:%02i %i", 0
 
 section .data
 
-@8038$int8$8#:
+@7866$int8$8#:
 	; Initializer Pointer 8
 	dq 8
 
 section .data
 
-@8039$int8$8#:
+@7867$int8$8#:
 	; Initializer Pointer 8
 	dq 8
 
@@ -1481,7 +1481,7 @@ section .text
 
  asctime$7:
 	; Assign shortDayList g_shortDayList
-	mov qword [rbp + 40], @7983$g_shortDayList
+	mov qword [rbp + 40], @7811$g_shortDayList
 
  asctime$8:
 	; Equal 14 localeConvPtr 0
@@ -1512,18 +1512,18 @@ section .text
 
  asctime$14:
 	; Assign shortMonthList g_shortMonthList
-	mov qword [rbp + 48], @8004$g_shortMonthList
+	mov qword [rbp + 48], @7832$g_shortMonthList
 
  asctime$15:
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  asctime$16:
 	; Parameter 80 pointer g_timeString
-	mov qword [rbp + 80], @7975$g_timeString
+	mov qword [rbp + 80], @7803$g_timeString
 
  asctime$17:
 	; Parameter 88 pointer "%s %s %i %02i:%02i:%02i %i"
-	mov qword [rbp + 88], @8037$string_25s2025s2025i202502i3A2502i3A2502i2025i#
+	mov qword [rbp + 88], @7865$string_25s2025s2025i202502i3A2502i3A2502i2025i#
 
  asctime$18:
 	; Dereference £temporary2664 -> tp tp 0
@@ -1538,7 +1538,7 @@ section .text
  asctime$20:
 	; UnsignedMultiply £temporary2667 £temporary2666 8
 	xor rdx, rdx
-	mul qword [@8038$int8$8#]
+	mul qword [@7866$int8$8#]
 
  asctime$21:
 	; BinaryAdd £temporary2668 shortDayList £temporary2667
@@ -1566,7 +1566,7 @@ section .text
  asctime$26:
 	; UnsignedMultiply £temporary2672 £temporary2671 8
 	xor rdx, rdx
-	mul qword [@8039$int8$8#]
+	mul qword [@7867$int8$8#]
 
  asctime$27:
 	; BinaryAdd £temporary2673 shortMonthList £temporary2672
@@ -1647,7 +1647,7 @@ section .text
 
  asctime$44:
 	; Return g_timeString
-	mov rbx, @7975$g_timeString
+	mov rbx, @7803$g_timeString
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1714,175 +1714,175 @@ section .text
 
 section .data
 
-@8087$string_#:
+@7915$string_#:
 	; Initializer String 
 	db 0
 
 section .data
 
-@8124$string_2502i2D2502i2D2502i202502i3A2502i3A2502i#:
+@7951$string_2502i2D2502i2D2502i202502i3A2502i3A2502i#:
 	; Initializer String %02i-%02i-%02i %02i:%02i:%02i
 	db "%02i-%02i-%02i %02i:%02i:%02i", 0
 
 section .data
 
-@8131$string_2502i#:
+@7958$string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8134$string_2502i#:
+@7961$string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8137$string_2502i#:
+@7964$string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8142$string_2503i#:
+@7969$string_2503i#:
 	; Initializer String %03i
 	db "%03i", 0
 
 section .data
 
-@8145$string_2502i#:
+@7972$string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8150$string_2502i#:
+@7977$string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8153$string_25s#:
+@7980$string_25s#:
 	; Initializer String %s
 	db "%s", 0
 
 section .data
 
-@8156$string_AM#:
+@7983$string_AM#:
 	; Initializer String AM
 	db "AM", 0
 
 section .data
 
-@8157$string_PM#:
+@7984$string_PM#:
 	; Initializer String PM
 	db "PM", 0
 
 section .data
 
-@8160$string_2502i#:
+@7987$string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8163$string_2502i#:
+@7990$string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8166$string_2502i#:
+@7993$string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8169$string_2502i#:
+@7996$string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8172$string_2502i3A2502i3A2502i#:
+@7999$string_2502i3A2502i3A2502i#:
 	; Initializer String %02i:%02i:%02i
 	db "%02i:%02i:%02i", 0
 
 section .data
 
-@8175$string_2502i3A2502i3A2502i#:
+@8002$string_2502i3A2502i3A2502i#:
 	; Initializer String %02i:%02i:%02i
 	db "%02i:%02i:%02i", 0
 
 section .data
 
-@8178$string_2502i#:
+@8005$string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8183$string_2502i#:
+@8010$string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8188$string_summer#:
+@8015$string_summer#:
 	; Initializer String summer
 	db "summer", 0
 
 section .data
 
-@8189$string_winter#:
+@8016$string_winter#:
 	; Initializer String winter
 	db "winter", 0
 
 section .data
 
-@8193$string_25#:
+@8020$string_25#:
 	; Initializer String %
 	db "%", 0
 
 section .data
 
-@8194$string_#:
+@8021$string_#:
 	; Initializer String 
 	db 0
 
 section .data
 
-@8112$int8$8#:
+@7939$int8$8#:
 	; Initializer Pointer 8
 	dq 8
 
 section .data
 
-@8115$int8$8#:
+@7942$int8$8#:
 	; Initializer Pointer 8
 	dq 8
 
 section .data
 
-@8118$int8$8#:
+@7945$int8$8#:
 	; Initializer Pointer 8
 	dq 8
 
 section .data
 
-@8121$int8$8#:
+@7948$int8$8#:
 	; Initializer Pointer 8
 	dq 8
 
 section .data
 
-@8139$int4$12#:
+@7966$int4$12#:
 	; Initializer SignedInt 12
 	dd 12
 
 section .data
 
-@8180$int4$100#:
+@8007$int4$100#:
 	; Initializer SignedInt 100
 	dd 100
 
@@ -1937,7 +1937,7 @@ section .text
 
  strftime$11:
 	; Assign shortDayList g_shortDayList
-	mov qword [rbp + 60], @7983$g_shortDayList
+	mov qword [rbp + 60], @7811$g_shortDayList
 
  strftime$12:
 	; Equal 18 localeConvPtr 0
@@ -1968,7 +1968,7 @@ section .text
 
  strftime$18:
 	; Assign longDayList g_longDayList
-	mov qword [rbp + 76], @7991$g_longDayList
+	mov qword [rbp + 76], @7819$g_longDayList
 
  strftime$19:
 	; Equal 25 localeConvPtr 0
@@ -1999,7 +1999,7 @@ section .text
 
  strftime$25:
 	; Assign shortMonthList g_shortMonthList
-	mov qword [rbp + 68], @8004$g_shortMonthList
+	mov qword [rbp + 68], @7832$g_shortMonthList
 
  strftime$26:
 	; Equal 32 localeConvPtr 0
@@ -2030,7 +2030,7 @@ section .text
 
  strftime$32:
 	; Assign longMonthList g_longMonthList
-	mov qword [rbp + 84], @8017$g_longMonthList
+	mov qword [rbp + 84], @7845$g_longMonthList
 
  strftime$33:
 	; PreCall 92 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -2042,7 +2042,7 @@ section .text
 
  strftime$35:
 	; Parameter 124 pointer ""
-	mov qword [rbp + 124], @8087$string_#
+	mov qword [rbp + 124], @7915$string_#
 
  strftime$36:
 	; Call 92 strcpy 0
@@ -2264,7 +2264,7 @@ section .text
  strftime$82:
 	; UnsignedMultiply £temporary2724 £temporary2723 8
 	xor rdx, rdx
-	mul qword [@8112$int8$8#]
+	mul qword [@7939$int8$8#]
 
  strftime$83:
 	; BinaryAdd £temporary2725 shortDayList £temporary2724
@@ -2314,7 +2314,7 @@ section .text
  strftime$93:
 	; UnsignedMultiply £temporary2730 £temporary2729 8
 	xor rdx, rdx
-	mul qword [@8115$int8$8#]
+	mul qword [@7942$int8$8#]
 
  strftime$94:
 	; BinaryAdd £temporary2731 longDayList £temporary2730
@@ -2364,7 +2364,7 @@ section .text
  strftime$104:
 	; UnsignedMultiply £temporary2736 £temporary2735 8
 	xor rdx, rdx
-	mul qword [@8118$int8$8#]
+	mul qword [@7945$int8$8#]
 
  strftime$105:
 	; BinaryAdd £temporary2737 shortMonthList £temporary2736
@@ -2414,7 +2414,7 @@ section .text
  strftime$115:
 	; UnsignedMultiply £temporary2742 £temporary2741 8
 	xor rdx, rdx
-	mul qword [@8121$int8$8#]
+	mul qword [@7948$int8$8#]
 
  strftime$116:
 	; BinaryAdd £temporary2743 longMonthList £temporary2742
@@ -2453,7 +2453,7 @@ section .text
 
  strftime$124:
 	; Parameter 156 pointer "%02i-%02i-%02i %02i:%02i:%02i"
-	mov qword [rbp + 156], @8124$string_2502i2D2502i2D2502i202502i3A2502i3A2502i#
+	mov qword [rbp + 156], @7951$string_2502i2D2502i2D2502i202502i3A2502i3A2502i#
 
  strftime$125:
 	; Dereference £temporary2745 -> tp tp 0
@@ -2543,7 +2543,7 @@ section .text
 
  strftime$144:
 	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8131$string_2502i#
+	mov qword [rbp + 156], @7958$string_2502i#
 
  strftime$145:
 	; Dereference £temporary2754 -> tp tp 0
@@ -2580,7 +2580,7 @@ section .text
 
  strftime$152:
 	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8134$string_2502i#
+	mov qword [rbp + 156], @7961$string_2502i#
 
  strftime$153:
 	; Dereference £temporary2756 -> tp tp 0
@@ -2617,7 +2617,7 @@ section .text
 
  strftime$160:
 	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8137$string_2502i#
+	mov qword [rbp + 156], @7964$string_2502i#
 
  strftime$161:
 	; Dereference £temporary2758 -> tp tp 0
@@ -2627,7 +2627,7 @@ section .text
 	; SignedModulo £temporary2759 £temporary2758 -> tp 12
 	mov eax, [rsi + 8]
 	xor edx, edx
-	idiv dword [@8139$int4$12#]
+	idiv dword [@7966$int4$12#]
 
  strftime$163:
 	; Parameter 164 signedint £temporary2759
@@ -2659,7 +2659,7 @@ section .text
 
  strftime$169:
 	; Parameter 156 pointer "%03i"
-	mov qword [rbp + 156], @8142$string_2503i#
+	mov qword [rbp + 156], @7969$string_2503i#
 
  strftime$170:
 	; Dereference £temporary2761 -> tp tp 0
@@ -2696,7 +2696,7 @@ section .text
 
  strftime$177:
 	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8145$string_2502i#
+	mov qword [rbp + 156], @7972$string_2502i#
 
  strftime$178:
 	; Dereference £temporary2763 -> tp tp 0
@@ -2737,7 +2737,7 @@ section .text
 
  strftime$186:
 	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8150$string_2502i#
+	mov qword [rbp + 156], @7977$string_2502i#
 
  strftime$187:
 	; Dereference £temporary2766 -> tp tp 0
@@ -2774,7 +2774,7 @@ section .text
 
  strftime$194:
 	; Parameter 156 pointer "%s"
-	mov qword [rbp + 156], @8153$string_25s#
+	mov qword [rbp + 156], @7980$string_25s#
 
  strftime$195:
 	; Dereference £temporary2768 -> tp tp 0
@@ -2787,7 +2787,7 @@ section .text
 
  strftime$197:
 	; Assign £temporary2770 "AM"
-	mov eax, @8156$string_AM#
+	mov eax, @7983$string_AM#
 
  strftime$198:
 	; Jump 200
@@ -2795,7 +2795,7 @@ section .text
 
  strftime$199:
 	; Assign £temporary2770 "PM"
-	mov eax, @8157$string_PM#
+	mov eax, @7984$string_PM#
 
  strftime$200:
 	; Parameter 164 pointer £temporary2770
@@ -2827,7 +2827,7 @@ section .text
 
  strftime$206:
 	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8160$string_2502i#
+	mov qword [rbp + 156], @7987$string_2502i#
 
  strftime$207:
 	; Dereference £temporary2772 -> tp tp 0
@@ -2864,7 +2864,7 @@ section .text
 
  strftime$214:
 	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8163$string_2502i#
+	mov qword [rbp + 156], @7990$string_2502i#
 
  strftime$215:
 	; Parameter 164 signedint weekNumberStartSunday
@@ -2897,7 +2897,7 @@ section .text
 
  strftime$221:
 	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8166$string_2502i#
+	mov qword [rbp + 156], @7993$string_2502i#
 
  strftime$222:
 	; Dereference £temporary2775 -> tp tp 0
@@ -2934,7 +2934,7 @@ section .text
 
  strftime$229:
 	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8169$string_2502i#
+	mov qword [rbp + 156], @7996$string_2502i#
 
  strftime$230:
 	; Parameter 164 signedint weekNumberStartMonday
@@ -2967,7 +2967,7 @@ section .text
 
  strftime$236:
 	; Parameter 156 pointer "%02i:%02i:%02i"
-	mov qword [rbp + 156], @8172$string_2502i3A2502i3A2502i#
+	mov qword [rbp + 156], @7999$string_2502i3A2502i3A2502i#
 
  strftime$237:
 	; Dereference £temporary2778 -> tp tp 0
@@ -3022,7 +3022,7 @@ section .text
 
  strftime$248:
 	; Parameter 156 pointer "%02i:%02i:%02i"
-	mov qword [rbp + 156], @8175$string_2502i3A2502i3A2502i#
+	mov qword [rbp + 156], @8002$string_2502i3A2502i3A2502i#
 
  strftime$249:
 	; Dereference £temporary2782 -> tp tp 0
@@ -3077,7 +3077,7 @@ section .text
 
  strftime$260:
 	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8178$string_2502i#
+	mov qword [rbp + 156], @8005$string_2502i#
 
  strftime$261:
 	; Dereference £temporary2786 -> tp tp 0
@@ -3087,7 +3087,7 @@ section .text
 	; SignedModulo £temporary2787 £temporary2786 -> tp 100
 	mov eax, [rsi + 20]
 	xor edx, edx
-	idiv dword [@8180$int4$100#]
+	idiv dword [@8007$int4$100#]
 
  strftime$263:
 	; Parameter 164 signedint £temporary2787
@@ -3119,7 +3119,7 @@ section .text
 
  strftime$269:
 	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8183$string_2502i#
+	mov qword [rbp + 156], @8010$string_2502i#
 
  strftime$270:
 	; Dereference £temporary2789 -> tp tp 0
@@ -3169,7 +3169,7 @@ section .text
 
  strftime$280:
 	; Assign £temporary2794 "summer"
-	mov eax, @8188$string_summer#
+	mov eax, @8015$string_summer#
 
  strftime$281:
 	; Jump 283
@@ -3177,7 +3177,7 @@ section .text
 
  strftime$282:
 	; Assign £temporary2794 "winter"
-	mov eax, @8189$string_winter#
+	mov eax, @8016$string_winter#
 
  strftime$283:
 	; Parameter 156 pointer £temporary2794
@@ -3207,7 +3207,7 @@ section .text
 
  strftime$289:
 	; Parameter 156 pointer "%"
-	mov qword [rbp + 156], @8193$string_25#
+	mov qword [rbp + 156], @8020$string_25#
 
  strftime$290:
 	; Call 124 strcpy 0
@@ -3229,7 +3229,7 @@ section .text
 
  strftime$294:
 	; Parameter 156 pointer ""
-	mov qword [rbp + 156], @8194$string_#
+	mov qword [rbp + 156], @8021$string_#
 
  strftime$295:
 	; Call 124 strcpy 0

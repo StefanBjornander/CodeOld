@@ -1,109 +1,113 @@
 0: Assign longValue 0
 1: Assign minus 0
 2: Assign found 0
-3: PreCall 16
-4: Call 16 scanChar 0
-5: PostCall 16
-6: GetReturnValue £temporary1136
-7: Assign input £temporary1136
-8: PreCall 17
-9: IntegralToIntegral £temporary1137 input
-10: Parameter 23 signedint £temporary1137
-11: Call 17 isspace 0
-12: PostCall 17
-13: GetReturnValue £temporary1138
-14: NotEqual PreCall 17 £temporary1138 0
-15: Goto Equal PreCall 17 input 43
-16: PreCall 17
-17: Call 17 scanChar 0
-18: PostCall 17
-19: GetReturnValue £temporary1139
-20: Assign input £temporary1139
-21: Goto PreCall 17
-22: Equal PreCall 17 input 43
-23: Goto Equal Assign minus 1 input 45
-24: PreCall 17
-25: Call 17 scanChar 0
-26: PostCall 17
-27: GetReturnValue £temporary1142
-28: Assign input £temporary1142
-29: Goto Equal Equal PreCall 17 input 48 base 0
+3: PreCall 44
+4: Call 44 scanChar 0
+5: PostCall 44
+6: GetReturnValue £temporary1054
+7: Assign input £temporary1054
+8: PreCall 45
+9: IntegralToIntegral £temporary1055 input
+10: Parameter 69 signedint £temporary1055
+11: Call 45 isspace 0
+12: PostCall 45
+13: GetReturnValue £temporary1056
+14: NotEqual PreCall 45 £temporary1056 0
+15: Jump Equal PreCall 45 input 43
+16: PreCall 45
+17: Call 45 scanChar 0
+18: PostCall 45
+19: GetReturnValue £temporary1057
+20: Assign input £temporary1057
+21: Jump PreCall 45
+22: Equal PreCall 45 input 43
+23: Jump Equal Assign minus 1 input 45
+24: PreCall 45
+25: Call 45 scanChar 0
+26: PostCall 45
+27: GetReturnValue £temporary1060
+28: Assign input £temporary1060
+29: Jump Equal Equal PreCall 45 input 48 base 0
 30: Equal Assign minus 1 input 45
-31: Goto Equal Equal PreCall 17 input 48 base 0
+31: Jump Equal Equal PreCall 45 input 48 base 0
 32: Assign minus 1
-33: PreCall 17
-34: Call 17 scanChar 0
-35: PostCall 17
-36: GetReturnValue £temporary1144
-37: Assign input £temporary1144
-38: Goto Equal Equal PreCall 17 input 48 base 0
-39: Equal Equal PreCall 17 input 48 base 0
-40: Goto PreCall 17
-41: Equal PreCall 17 input 48
-42: Goto Assign base 10
-43: PreCall 17
-44: Call 17 scanChar 0
-45: PostCall 17
-46: GetReturnValue £temporary1147
-47: Assign input £temporary1147
-48: PreCall 17
-49: IntegralToIntegral £temporary1148 input
-50: Parameter 23 signedint £temporary1148
-51: Call 17 tolower 0
-52: PostCall 17
-53: GetReturnValue £temporary1149
-54: Equal Assign base 16 £temporary1149 120
-55: Goto Assign base 8
-56: Assign base 16
-57: PreCall 17
-58: Call 17 scanChar 0
-59: PostCall 17
-60: GetReturnValue £temporary1151
-61: Assign input £temporary1151
-62: Goto PreCall 17
-63: Assign base 8
-64: Goto PreCall 17
-65: Assign base 10
-66: Goto PreCall 17
-67: PreCall 17
-68: Parameter 23 signedchar input
-69: Parameter 24 signedint base
-70: Call 17 isDigitInBase 0
-71: PostCall 17
-72: GetReturnValue £temporary1152
-73: NotEqual IntegralToIntegral £temporary1153 base £temporary1152 0
-74: Goto NotEqual UnarySubtract £temporary1160 longValue minus 0
-75: IntegralToIntegral £temporary1153 base
-76: SignedMultiply £temporary1154 longValue £temporary1153
-77: Assign longValue £temporary1154
-78: PreCall 17
-79: Parameter 23 signedchar input
-80: Call 17 digitToValue 0
-81: PostCall 17
-82: GetReturnValue £temporary1155
-83: IntegralToIntegral £temporary1156 £temporary1155
-84: BinaryAdd £temporary1157 longValue £temporary1156
-85: Assign longValue £temporary1157
-86: PreCall 17
-87: Call 17 scanChar 0
-88: PostCall 17
-89: GetReturnValue £temporary1158
-90: Assign input £temporary1158
-91: Assign found 1
-92: Goto PreCall 17
-93: NotEqual UnarySubtract £temporary1160 longValue minus 0
-94: Goto NotEqual BinaryAdd g_inCount g_inCount 1 found 0
-95: UnarySubtract £temporary1160 longValue
-96: Assign longValue £temporary1160
-97: Goto NotEqual BinaryAdd g_inCount g_inCount 1 found 0
-98: NotEqual BinaryAdd g_inCount g_inCount 1 found 0
-99: Goto PreCall 17
-100: BinaryAdd g_inCount g_inCount 1
-101: Goto PreCall 17
-102: PreCall 17
-103: Parameter 23 signedchar input
-104: Call 17 unscanChar 0
-105: PostCall 17
-106: Return longValue
-107: Empty
-108: FunctionEnd scanLongInt
+33: PreCall 45
+34: Call 45 scanChar 0
+35: PostCall 45
+36: GetReturnValue £temporary1062
+37: Assign input £temporary1062
+38: Jump Equal Equal PreCall 45 input 48 base 0
+39: Jump Equal Equal PreCall 45 input 48 base 0
+40: Equal Equal PreCall 45 input 48 base 0
+41: Jump PreCall 45
+42: Equal PreCall 45 input 48
+43: Jump Assign base 10
+44: PreCall 45
+45: Call 45 scanChar 0
+46: PostCall 45
+47: GetReturnValue £temporary1065
+48: Assign input £temporary1065
+49: PreCall 45
+50: IntegralToIntegral £temporary1066 input
+51: Parameter 69 signedint £temporary1066
+52: Call 45 tolower 0
+53: PostCall 45
+54: GetReturnValue £temporary1067
+55: Equal Assign base 16 £temporary1067 120
+56: Jump Assign base 8
+57: Assign base 16
+58: PreCall 45
+59: Call 45 scanChar 0
+60: PostCall 45
+61: GetReturnValue £temporary1069
+62: Assign input £temporary1069
+63: Jump PreCall 45
+64: Assign base 8
+65: Jump PreCall 45
+66: Jump PreCall 45
+67: Assign base 10
+68: Jump PreCall 45
+69: Jump PreCall 45
+70: PreCall 45
+71: Parameter 69 signedchar input
+72: Parameter 70 signedint base
+73: Call 45 isDigitInBase 0
+74: PostCall 45
+75: GetReturnValue £temporary1070
+76: NotEqual IntegralToIntegral £temporary1071 base £temporary1070 0
+77: Jump NotEqual UnarySubtract £temporary1078 longValue minus 0
+78: IntegralToIntegral £temporary1071 base
+79: SignedMultiply £temporary1072 longValue £temporary1071
+80: Assign longValue £temporary1072
+81: PreCall 45
+82: Parameter 69 signedchar input
+83: Call 45 digitToValue 0
+84: PostCall 45
+85: GetReturnValue £temporary1073
+86: IntegralToIntegral £temporary1074 £temporary1073
+87: BinaryAdd £temporary1075 longValue £temporary1074
+88: Assign longValue £temporary1075
+89: PreCall 45
+90: Call 45 scanChar 0
+91: PostCall 45
+92: GetReturnValue £temporary1076
+93: Assign input £temporary1076
+94: Assign found 1
+95: Jump PreCall 45
+96: NotEqual UnarySubtract £temporary1078 longValue minus 0
+97: Jump NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+98: UnarySubtract £temporary1078 longValue
+99: Assign longValue £temporary1078
+100: Jump NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+101: NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+102: Jump PreCall 45
+103: BinaryAdd g_inCount g_inCount 1
+104: Jump PreCall 45
+105: PreCall 45
+106: Parameter 69 signedchar input
+107: Call 45 unscanChar 0
+108: PostCall 45
+109: SetReturnValue
+110: Return longValue
+111: Empty
+112: FunctionEnd scanLongInt
