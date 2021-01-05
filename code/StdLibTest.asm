@@ -733,9 +733,9 @@ section .data
 
 section .data
 
-@13745$Array_4#:
-	; Initializer Array 4
-	dq 4
+@13745$int4$4#:
+	; Initializer SignedInt 4
+	dd 4
 
 section .text
 
@@ -1759,12 +1759,12 @@ section .text
 	sub rax, rbx
 
  stdlib_test$219:
-	; UnsignedDivide £temporary4353 £temporary4352 4
-	xor rdx, rdx
-	div qword [@13745$Array_4#]
+	; IntegralToIntegral £temporary4353 £temporary4352
 
  stdlib_test$220:
-	; IntegralToIntegral £temporary4355 £temporary4353
+	; UnsignedDivide £temporary4355 £temporary4353 4
+	xor edx, edx
+	div dword [@13745$int4$4#]
 
  stdlib_test$221:
 	; Jump 223
