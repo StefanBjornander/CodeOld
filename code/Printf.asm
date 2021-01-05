@@ -606,13 +606,13 @@ section .text
 
 section .data
 
-@4504$int8$10#:
+@4456$int8$10#:
 	; Initializer Signed_Long_Int 10
 	dq 10
 
 section .data
 
-@4507$int8$10#:
+@4459$int8$10#:
 	; Initializer Signed_Long_Int 10
 	dq 10
 
@@ -627,7 +627,7 @@ section .text
 	; SignedModulo £temporary1430 longValue 10
 	mov rax, [rbp + 24]
 	xor rdx, rdx
-	idiv qword [@4504$int8$10#]
+	idiv qword [@4456$int8$10#]
 
  printLongIntRec$2:
 	; IntegralToIntegral £temporary1431 £temporary1430
@@ -647,7 +647,7 @@ section .text
 	; SignedDivide £temporary1432 longValue 10
 	mov rax, [rbp + 24]
 	xor rdx, rdx
-	idiv qword [@4507$int8$10#]
+	idiv qword [@4459$int8$10#]
 
  printLongIntRec$6:
 	; Parameter 60 signed long int £temporary1432
@@ -1242,7 +1242,7 @@ container8bytes#:
 
 section .data
 
-@4617$float8$10.0#:
+@4569$float8$10.0#:
 	; Initializer LongDouble 10.0
 	dq 10.0
 
@@ -1331,7 +1331,7 @@ section .text
 
  printLongDoubleFraction$17:
 	; PushFloat 10.0
-	fld qword [@4617$float8$10.0#]
+	fld qword [@4569$float8$10.0#]
 
  printLongDoubleFraction$18:
 	; PushFloat longDoubleValue
@@ -1571,7 +1571,7 @@ section .text
 
 section .data
 
-@4669$float8$10.0#:
+@4621$float8$10.0#:
 	; Initializer Double 10.0
 	dq 10.0
 
@@ -1782,7 +1782,7 @@ section .text
 
  printLongDoubleExpo$47:
 	; PushFloat 10.0
-	fld qword [@4669$float8$10.0#]
+	fld qword [@4621$float8$10.0#]
 
  printLongDoubleExpo$48:
 	; Parameter 80 double 10.0
@@ -3616,7 +3616,7 @@ section .text
 
 section .data
 
-@5220$int4$10#:
+@5142$int4$10#:
 	; Initializer SignedInt 10
 	dd 10
 
@@ -4759,7 +4759,7 @@ section .text
 	; SignedMultiply £temporary1767 value 10
 	mov eax, [rbp + 101]
 	xor edx, edx
-	imul dword [@5220$int4$10#]
+	imul dword [@5142$int4$10#]
 
  printFormat$255:
 	; BinarySubtract £temporary1768 c 48

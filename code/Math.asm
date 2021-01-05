@@ -28,7 +28,7 @@
 
 section .data
 
-@1720$float8$0.000000001#:
+@1716$float8$0.000000001#:
 	; Initializer Double 0.000000001
 	dq 0.000000001
 
@@ -168,7 +168,7 @@ section .text
 
  exp$33:
 	; PushFloat 0.000000001
-	fld qword [@1720$float8$0.000000001#]
+	fld qword [@1716$float8$0.000000001#]
 
  exp$34:
 	; SignedGreaterThanEqual 8 £temporary266 0.000000001
@@ -196,37 +196,37 @@ section .text
 
 section .data
 
-@1733$float8$2.71#:
+@1729$float8$2.71#:
 	; Initializer Double 2.71
 	dq 2.71
 
 section .data
 
-@1736$float8$0.368#:
+@1732$float8$0.368#:
 	; Initializer Double 0.368
 	dq 0.368
 
 section .data
 
-@1738$float8$0.368#:
+@1734$float8$0.368#:
 	; Initializer Double 0.368
 	dq 0.368
 
 section .data
 
-@1740$float8$2.71#:
+@1736$float8$2.71#:
 	; Initializer Double 2.71
 	dq 2.71
 
 section .data
 
-@1758$float8$minus1.0#:
+@1754$float8$minus1.0#:
 	; Initializer Double -1.0
 	dq -1.0
 
 section .data
 
-@1760$float8$0.000000001#:
+@1756$float8$0.000000001#:
 	; Initializer Double 0.000000001
 	dq 0.000000001
 
@@ -287,7 +287,7 @@ section .text
 
  log$11:
 	; PushFloat 2.71
-	fld qword [@1733$float8$2.71#]
+	fld qword [@1729$float8$2.71#]
 
  log$12:
 	; SignedDivide £temporary272 x 2.71
@@ -311,7 +311,7 @@ section .text
 
  log$17:
 	; PushFloat 0.368
-	fld qword [@1736$float8$0.368#]
+	fld qword [@1732$float8$0.368#]
 
  log$18:
 	; SignedGreaterThanEqual 28 x 0.368
@@ -326,7 +326,7 @@ section .text
 
  log$20:
 	; PushFloat 0.368
-	fld qword [@1738$float8$0.368#]
+	fld qword [@1734$float8$0.368#]
 
  log$21:
 	; SignedGreaterThanEqual 28 x 0.368
@@ -341,7 +341,7 @@ section .text
 
  log$23:
 	; PushFloat 2.71
-	fld qword [@1740$float8$2.71#]
+	fld qword [@1736$float8$2.71#]
 
  log$24:
 	; SignedMultiply £temporary276 x 2.71
@@ -489,7 +489,7 @@ section .text
 
  log$60:
 	; PushFloat -1.0
-	fld qword [@1758$float8$minus1.0#]
+	fld qword [@1754$float8$minus1.0#]
 
  log$61:
 	; SignedMultiply £temporary284 sign -1.0
@@ -525,7 +525,7 @@ section .text
 
  log$69:
 	; PushFloat 0.000000001
-	fld qword [@1760$float8$0.000000001#]
+	fld qword [@1756$float8$0.000000001#]
 
  log$70:
 	; SignedGreaterThanEqual 40 £temporary285 0.000000001
@@ -579,7 +579,7 @@ section .text
 
 section .data
 
-@1768$float8$2.30#:
+@1764$float8$2.30#:
 	; Initializer Double 2.30
 	dq 2.30
 
@@ -611,7 +611,7 @@ section .text
 
  log10$6:
 	; PushFloat 2.30
-	fld qword [@1768$float8$2.30#]
+	fld qword [@1764$float8$2.30#]
 
  log10$7:
 	; SignedDivide £temporary291 £temporary290 2.30
@@ -638,7 +638,7 @@ container8bytes#:
 
 section .data
 
-@1789$int8$2#:
+@1785$int8$2#:
 	; Initializer Signed_Long_Int 2
 	dq 2
 
@@ -904,7 +904,7 @@ section .text
 	; SignedModulo £temporary309 long_y 2
 	mov rax, [rbp + 40]
 	xor rdx, rdx
-	idiv qword [@1789$int8$2#]
+	idiv qword [@1785$int8$2#]
 
  pow$56:
 	; NotEqual 73 £temporary309 0
@@ -1078,7 +1078,7 @@ section .text
 
 section .data
 
-@1798$float8$2#:
+@1794$float8$2#:
 	; Initializer Double 2
 	dq 2.0
 
@@ -1094,7 +1094,7 @@ section .text
 
  ldexp$2:
 	; PushFloat 2
-	fld qword [@1798$float8$2#]
+	fld qword [@1794$float8$2#]
 
  ldexp$3:
 	; Parameter 60 double 2
@@ -1143,7 +1143,7 @@ section .text
 
 section .data
 
-@1802$float8$0.693#:
+@1798$float8$0.693#:
 	; Initializer Double 0.693
 	dq 0.693
 
@@ -1155,65 +1155,65 @@ container4bytes#:
 
 section .text
 
- @1800$log2:
+ @1796$log2:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @1800$log2$1:
+ @1796$log2$1:
 	; PushFloat x
 	fld qword [rbp + 24]
 
- @1800$log2$2:
+ @1796$log2$2:
 	; Parameter 56 double x
 	fstp qword [rbp + 56]
 
- @1800$log2$3:
+ @1796$log2$3:
 	; Call 32 log 0
-	mov qword [rbp + 32], @1800$log2$4
+	mov qword [rbp + 32], @1796$log2$4
 	mov [rbp + 40], rbp
 	add rbp, 32
 	jmp log
 
- @1800$log2$4:
+ @1796$log2$4:
 	; PostCall 32
 
- @1800$log2$5:
+ @1796$log2$5:
 	; GetReturnValue £temporary333
 
- @1800$log2$6:
+ @1796$log2$6:
 	; PushFloat 0.693
-	fld qword [@1802$float8$0.693#]
+	fld qword [@1798$float8$0.693#]
 
- @1800$log2$7:
+ @1796$log2$7:
 	; SignedDivide £temporary334 £temporary333 0.693
 	fdiv
 
- @1800$log2$8:
+ @1796$log2$8:
 	; FloatingToIntegral £temporary335 £temporary334
 	fistp dword [container4bytes#]
 	mov ebx, [container4bytes#]
 
- @1800$log2$9:
+ @1796$log2$9:
 	; SetReturnValue
 
- @1800$log2$10:
+ @1796$log2$10:
 	; Return £temporary335
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @1800$log2$11:
+ @1796$log2$11:
 	; FunctionEnd log2
 
 section .data
 
-@1809$float8$2#:
+@1805$float8$2#:
 	; Initializer Double 2
 	dq 2.0
 
 section .data
 
-@1815$float8$2#:
+@1811$float8$2#:
 	; Initializer Double 2
 	dq 2.0
 
@@ -1270,7 +1270,7 @@ section .text
 	mov qword [rbp + 40], frexp$12
 	mov [rbp + 48], rbp
 	add rbp, 40
-	jmp @1800$log2
+	jmp @1796$log2
 
  frexp$12:
 	; PostCall 40
@@ -1290,7 +1290,7 @@ section .text
 
  frexp$17:
 	; PushFloat 2
-	fld qword [@1809$float8$2#]
+	fld qword [@1805$float8$2#]
 
  frexp$18:
 	; Parameter 68 double 2
@@ -1356,7 +1356,7 @@ section .text
 
  frexp$32:
 	; PushFloat 2
-	fld qword [@1815$float8$2#]
+	fld qword [@1811$float8$2#]
 
  frexp$33:
 	; Parameter 68 double 2
@@ -1432,13 +1432,13 @@ section .text
 
 section .data
 
-@1831$float8$2#:
+@1827$float8$2#:
 	; Initializer Double 2
 	dq 2.0
 
 section .data
 
-@1833$float8$0.000000001#:
+@1829$float8$0.000000001#:
 	; Initializer Double 0.000000001
 	dq 0.000000001
 
@@ -1497,7 +1497,7 @@ section .text
 
  sqrt$12:
 	; PushFloat 2
-	fld qword [@1831$float8$2#]
+	fld qword [@1827$float8$2#]
 
  sqrt$13:
 	; SignedDivide £temporary361 £temporary360 2
@@ -1541,7 +1541,7 @@ section .text
 
  sqrt$23:
 	; PushFloat 0.000000001
-	fld qword [@1833$float8$0.000000001#]
+	fld qword [@1829$float8$0.000000001#]
 
  sqrt$24:
 	; SignedGreaterThanEqual 5 £temporary363 0.000000001
@@ -1889,25 +1889,25 @@ section .text
 
 section .data
 
+@1859$float8$6.28#:
+	; Initializer Double 6.28
+	dq 6.28
+
+section .data
+
 @1863$float8$6.28#:
 	; Initializer Double 6.28
 	dq 6.28
 
 section .data
 
-@1867$float8$6.28#:
-	; Initializer Double 6.28
-	dq 6.28
-
-section .data
-
-@1883$float8$minus1#:
+@1879$float8$minus1#:
 	; Initializer Double -1
 	dq -1.0
 
 section .data
 
-@1887$float8$0.000000001#:
+@1883$float8$0.000000001#:
 	; Initializer Double 0.000000001
 	dq 0.000000001
 
@@ -1939,7 +1939,7 @@ section .text
 
  sin$6:
 	; PushFloat 6.28
-	fld qword [@1863$float8$6.28#]
+	fld qword [@1859$float8$6.28#]
 
  sin$7:
 	; SignedLessThanEqual 17 £temporary390 6.28
@@ -1961,7 +1961,7 @@ section .text
 
  sin$11:
 	; PushFloat 6.28
-	fld qword [@1867$float8$6.28#]
+	fld qword [@1863$float8$6.28#]
 
  sin$12:
 	; Parameter 64 double 6.28
@@ -2070,7 +2070,7 @@ section .text
 
  sin$38:
 	; PushFloat -1
-	fld qword [@1883$float8$minus1#]
+	fld qword [@1879$float8$minus1#]
 
  sin$39:
 	; SignedMultiply £temporary396 sign -1
@@ -2178,7 +2178,7 @@ section .text
 
  sin$65:
 	; PushFloat 0.000000001
-	fld qword [@1887$float8$0.000000001#]
+	fld qword [@1883$float8$0.000000001#]
 
  sin$66:
 	; SignedGreaterThanEqual 27 £temporary403 0.000000001
@@ -2206,25 +2206,25 @@ section .text
 
 section .data
 
+@1890$float8$6.28#:
+	; Initializer Double 6.28
+	dq 6.28
+
+section .data
+
 @1894$float8$6.28#:
 	; Initializer Double 6.28
 	dq 6.28
 
 section .data
 
-@1898$float8$6.28#:
-	; Initializer Double 6.28
-	dq 6.28
-
-section .data
-
-@1916$float8$minus1#:
+@1912$float8$minus1#:
 	; Initializer Double -1
 	dq -1.0
 
 section .data
 
-@1920$float8$0.000000001#:
+@1916$float8$0.000000001#:
 	; Initializer Double 0.000000001
 	dq 0.000000001
 
@@ -2256,7 +2256,7 @@ section .text
 
  cos$6:
 	; PushFloat 6.28
-	fld qword [@1894$float8$6.28#]
+	fld qword [@1890$float8$6.28#]
 
  cos$7:
 	; SignedLessThanEqual 17 £temporary409 6.28
@@ -2278,7 +2278,7 @@ section .text
 
  cos$11:
 	; PushFloat 6.28
-	fld qword [@1898$float8$6.28#]
+	fld qword [@1894$float8$6.28#]
 
  cos$12:
 	; Parameter 64 double 6.28
@@ -2387,7 +2387,7 @@ section .text
 
  cos$38:
 	; PushFloat -1
-	fld qword [@1916$float8$minus1#]
+	fld qword [@1912$float8$minus1#]
 
  cos$39:
 	; SignedMultiply £temporary415 sign -1
@@ -2495,7 +2495,7 @@ section .text
 
  cos$65:
 	; PushFloat 0.000000001
-	fld qword [@1920$float8$0.000000001#]
+	fld qword [@1916$float8$0.000000001#]
 
  cos$66:
 	; SignedGreaterThanEqual 27 £temporary422 0.000000001
@@ -2631,7 +2631,7 @@ section .text
 
 section .data
 
-@1936$float8$1.57#:
+@1932$float8$1.57#:
 	; Initializer Double 1.57
 	dq 1.57
 
@@ -2654,7 +2654,7 @@ section .text
 
  asin$3:
 	; PushFloat 1.57
-	fld qword [@1936$float8$1.57#]
+	fld qword [@1932$float8$1.57#]
 
  asin$4:
 	; SetReturnValue
@@ -2843,13 +2843,13 @@ section .text
 
 section .data
 
-@1952$float8$1.57#:
+@1948$float8$1.57#:
 	; Initializer Double 1.57
 	dq 1.57
 
 section .data
 
-@1956$float8$3.14#:
+@1952$float8$3.14#:
 	; Initializer Double 3.14
 	dq 3.14
 
@@ -2872,7 +2872,7 @@ section .text
 
  acos$3:
 	; PushFloat 1.57
-	fld qword [@1952$float8$1.57#]
+	fld qword [@1948$float8$1.57#]
 
  acos$4:
 	; SetReturnValue
@@ -2901,7 +2901,7 @@ section .text
 
  acos$9:
 	; PushFloat 3.14
-	fld qword [@1956$float8$3.14#]
+	fld qword [@1952$float8$3.14#]
 
  acos$10:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -3065,31 +3065,31 @@ section .text
 
 section .data
 
-@1974$float8$1.57#:
+@1970$float8$1.57#:
 	; Initializer Double 1.57
 	dq 1.57
 
 section .data
 
-@1976$float8$0.5#:
+@1972$float8$0.5#:
 	; Initializer Double 0.5
 	dq 0.5
 
 section .data
 
-@1982$float8$2#:
+@1978$float8$2#:
 	; Initializer Double 2
 	dq 2.0
 
 section .data
 
-@1995$float8$2#:
+@1991$float8$2#:
 	; Initializer Double 2
 	dq 2.0
 
 section .data
 
-@1997$float8$0.000000001#:
+@1993$float8$0.000000001#:
 	; Initializer Double 0.000000001
 	dq 0.000000001
 
@@ -3169,7 +3169,7 @@ section .text
 
  atan$16:
 	; PushFloat 1.57
-	fld qword [@1974$float8$1.57#]
+	fld qword [@1970$float8$1.57#]
 
  atan$17:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -3227,7 +3227,7 @@ section .text
 
  atan$29:
 	; PushFloat 0.5
-	fld qword [@1976$float8$0.5#]
+	fld qword [@1972$float8$0.5#]
 
  atan$30:
 	; SignedLessThanEqual 54 x 0.5
@@ -3238,7 +3238,7 @@ section .text
 
  atan$31:
 	; PushFloat 2
-	fld qword [@1982$float8$2#]
+	fld qword [@1978$float8$2#]
 
  atan$32:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -3454,7 +3454,7 @@ section .text
 
  atan$82:
 	; PushFloat 2
-	fld qword [@1995$float8$2#]
+	fld qword [@1991$float8$2#]
 
  atan$83:
 	; BinaryAdd £temporary484 denominator 2
@@ -3490,7 +3490,7 @@ section .text
 
  atan$91:
 	; PushFloat 0.000000001
-	fld qword [@1997$float8$0.000000001#]
+	fld qword [@1993$float8$0.000000001#]
 
  atan$92:
 	; SignedGreaterThanEqual 62 £temporary485 0.000000001
@@ -3518,25 +3518,25 @@ section .text
 
 section .data
 
-@2007$float8$3.14#:
+@2003$float8$3.14#:
 	; Initializer Double 3.14
 	dq 3.14
 
 section .data
 
-@2014$float8$minus3.14#:
+@2010$float8$minus3.14#:
 	; Initializer Double -3.14
 	dq -3.14
 
 section .data
 
-@2022$float8$1.57#:
+@2018$float8$1.57#:
 	; Initializer Double 1.57
 	dq 1.57
 
 section .data
 
-@2031$float8$minus1.57#:
+@2027$float8$minus1.57#:
 	; Initializer Double -1.57
 	dq -1.57
 
@@ -3631,7 +3631,7 @@ section .text
 
  atan2$19:
 	; PushFloat 3.14
-	fld qword [@2007$float8$3.14#]
+	fld qword [@2003$float8$3.14#]
 
  atan2$20:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -3715,7 +3715,7 @@ section .text
 
  atan2$37:
 	; PushFloat -3.14
-	fld qword [@2014$float8$minus3.14#]
+	fld qword [@2010$float8$minus3.14#]
 
  atan2$38:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -3799,7 +3799,7 @@ section .text
 
  atan2$55:
 	; PushFloat 1.57
-	fld qword [@2022$float8$1.57#]
+	fld qword [@2018$float8$1.57#]
 
  atan2$56:
 	; SetReturnValue
@@ -3843,7 +3843,7 @@ section .text
 
  atan2$64:
 	; PushFloat -1.57
-	fld qword [@2031$float8$minus1.57#]
+	fld qword [@2027$float8$minus1.57#]
 
  atan2$65:
 	; SetReturnValue
@@ -3878,7 +3878,7 @@ section .text
 
 section .data
 
-@2037$float8$2#:
+@2033$float8$2#:
 	; Initializer Double 2
 	dq 2.0
 
@@ -3946,7 +3946,7 @@ section .text
 
  sinh$14:
 	; PushFloat 2
-	fld qword [@2037$float8$2#]
+	fld qword [@2033$float8$2#]
 
  sinh$15:
 	; SignedDivide £temporary520 £temporary519 2
@@ -3967,7 +3967,7 @@ section .text
 
 section .data
 
-@2040$float8$2#:
+@2036$float8$2#:
 	; Initializer Double 2
 	dq 2.0
 
@@ -4035,7 +4035,7 @@ section .text
 
  cosh$14:
 	; PushFloat 2
-	fld qword [@2040$float8$2#]
+	fld qword [@2036$float8$2#]
 
  cosh$15:
 	; SignedDivide £temporary527 £temporary526 2
@@ -4213,7 +4213,7 @@ section .text
 
 section .data
 
-@2049$float8$0.999999999999#:
+@2045$float8$0.999999999999#:
 	; Initializer Double 0.999999999999
 	dq 0.999999999999
 
@@ -4282,7 +4282,7 @@ section .text
 
  ceil$14:
 	; PushFloat 0.999999999999
-	fld qword [@2049$float8$0.999999999999#]
+	fld qword [@2045$float8$0.999999999999#]
 
  ceil$15:
 	; BinaryAdd £temporary546 x 0.999999999999
@@ -4313,13 +4313,13 @@ section .text
 
 section .data
 
-@2054$float8$0.5#:
+@2050$float8$0.5#:
 	; Initializer Double 0.5
 	dq 0.5
 
 section .data
 
-@2056$float8$0.5#:
+@2052$float8$0.5#:
 	; Initializer Double 0.5
 	dq 0.5
 
@@ -4346,7 +4346,7 @@ section .text
 
  round$4:
 	; PushFloat 0.5
-	fld qword [@2054$float8$0.5#]
+	fld qword [@2050$float8$0.5#]
 
  round$5:
 	; BinarySubtract £temporary551 x 0.5
@@ -4365,7 +4365,7 @@ section .text
 
  round$9:
 	; PushFloat 0.5
-	fld qword [@2056$float8$0.5#]
+	fld qword [@2052$float8$0.5#]
 
  round$10:
 	; BinaryAdd £temporary552 x 0.5
