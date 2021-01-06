@@ -168,7 +168,7 @@ section .text
 
 section .data
 
-@13521$string_div_t20quot2025i20rem2025i0A#:
+@13563$string_div_t20quot2025i20rem2025i0A#:
 	; Initializer String div_t quot %i rem %i\n
 	db "div_t quot %i rem %i", 10, 0
 
@@ -179,7 +179,7 @@ section .text
 
  print_div$1:
 	; Parameter 56 pointer "div_t quot %i rem %i\n"
-	mov qword [rbp + 56], @13521$string_div_t20quot2025i20rem2025i0A#
+	mov qword [rbp + 56], @13563$string_div_t20quot2025i20rem2025i0A#
 
  print_div$2:
 	; Parameter 64 signedint d.quot
@@ -228,7 +228,7 @@ section .text
 
 section .data
 
-@13528$string_ldiv_t20quot2025li20rem2025li0A#:
+@13570$string_ldiv_t20quot2025li20rem2025li0A#:
 	; Initializer String ldiv_t quot %li rem %li\n
 	db "ldiv_t quot %li rem %li", 10, 0
 
@@ -239,7 +239,7 @@ section .text
 
  print_ldiv$1:
 	; Parameter 64 pointer "ldiv_t quot %li rem %li\n"
-	mov qword [rbp + 64], @13528$string_ldiv_t20quot2025li20rem2025li0A#
+	mov qword [rbp + 64], @13570$string_ldiv_t20quot2025li20rem2025li0A#
 
  print_ldiv$2:
 	; Parameter 72 signed long int ld.quot
@@ -288,7 +288,7 @@ section .text
 
 section .data
 
-@13535$string_exit10A#:
+@13577$string_exit10A#:
 	; Initializer String exit1\n
 	db "exit1", 10, 0
 
@@ -299,7 +299,7 @@ section .text
 
  exit_handle1x$1:
 	; Parameter 48 pointer "exit1\n"
-	mov qword [rbp + 48], @13535$string_exit10A#
+	mov qword [rbp + 48], @13577$string_exit10A#
 
  exit_handle1x$2:
 	; Call 24 printf 0
@@ -324,7 +324,7 @@ section .text
 
 section .data
 
-@13538$string_exit20A#:
+@13580$string_exit20A#:
 	; Initializer String exit2\n
 	db "exit2", 10, 0
 
@@ -335,7 +335,7 @@ section .text
 
  exit_handle2x$1:
 	; Parameter 48 pointer "exit2\n"
-	mov qword [rbp + 48], @13538$string_exit20A#
+	mov qword [rbp + 48], @13580$string_exit20A#
 
  exit_handle2x$2:
 	; Call 24 printf 0
@@ -360,7 +360,7 @@ section .text
 
 section .data
 
-@13541$string_exit30A#:
+@13583$string_exit30A#:
 	; Initializer String exit3\n
 	db "exit3", 10, 0
 
@@ -371,7 +371,7 @@ section .text
 
  exit_handle3x$1:
 	; Parameter 48 pointer "exit3\n"
-	mov qword [rbp + 48], @13541$string_exit30A#
+	mov qword [rbp + 48], @13583$string_exit30A#
 
  exit_handle3x$2:
 	; Call 24 printf 0
@@ -396,7 +396,7 @@ section .text
 
 section .data
 
-@13544$string_HelloFFF#:
+@13586$string_HelloFFF#:
 	; Initializer String HelloFFF
 	db "HelloFFF", 0
 
@@ -407,7 +407,7 @@ section .text
 
  hello$1:
 	; Parameter 48 pointer "HelloFFF"
-	mov qword [rbp + 48], @13544$string_HelloFFF#
+	mov qword [rbp + 48], @13586$string_HelloFFF#
 
  hello$2:
 	; Call 24 printf 0
@@ -432,7 +432,7 @@ section .text
 
 section .data
 
-@13548$string_f3A2025u0A#:
+@13590$string_f3A2025u0A#:
 	; Initializer String f: %u\n
 	db "f: %u", 10, 0
 
@@ -443,7 +443,7 @@ section .text
 
  qtest$1:
 	; Parameter 56 pointer "f: %u\n"
-	mov qword [rbp + 56], @13548$string_f3A2025u0A#
+	mov qword [rbp + 56], @13590$string_f3A2025u0A#
 
  qtest$2:
 	; IntegralToIntegral £temporary4153 f
@@ -491,13 +491,13 @@ section .text
 
 section .data
 
-@13552$string_hello3A2025u0A#:
+@13594$string_hello3A2025u0A#:
 	; Initializer String hello: %u\n
 	db "hello: %u", 10, 0
 
 section .data
 
-@13553$string_Y#:
+@13595$string_Y#:
 	; Initializer String Y
 	db "Y", 0
 
@@ -508,7 +508,7 @@ section .text
 
  stdlib_testZ$1:
 	; Parameter 48 pointer "hello: %u\n"
-	mov qword [rbp + 48], @13552$string_hello3A2025u0A#
+	mov qword [rbp + 48], @13594$string_hello3A2025u0A#
 
  stdlib_testZ$2:
 	; IntegralToIntegral £temporary4156 hello
@@ -552,7 +552,7 @@ section .text
 
  stdlib_testZ$11:
 	; Parameter 48 pointer "Y"
-	mov qword [rbp + 48], @13553$string_Y#
+	mov qword [rbp + 48], @13595$string_Y#
 
  stdlib_testZ$12:
 	; Call 24 printf 0
@@ -577,163 +577,163 @@ section .text
 
 section .data
 
-@13560$string_atof28221232E4562229203D2025f0A#:
+@13602$string_atof28221232E4562229203D2025f0A#:
 	; Initializer String atof("123.456") = %f\n
 	db "atof(", 34, "123.456", 34, ") = %f", 10, 0
 
 section .data
 
-@13561$string_1232E456#:
+@13603$string_1232E456#:
 	; Initializer String 123.456
 	db "123.456", 0
 
 section .data
 
-@13562$string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A#:
+@13604$string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A#:
 	; Initializer String strtod("123.456789abc", &p) = (%f, %s)\n
 	db "strtod(", 34, "123.456789abc", 34, ", &p) = (%f, %s)", 10, 0
 
 section .data
 
-@13563$string_1232E456789abc#:
+@13605$string_1232E456789abc#:
 	; Initializer String 123.456789abc
 	db "123.456789abc", 0
 
 section .data
 
-@13564$string_0Agetenv2822path2229203D2025s0A#:
+@13606$string_0Agetenv2822path2229203D2025s0A#:
 	; Initializer String \ngetenv("path") = %s\n
 	db 10, "getenv(", 34, "path", 34, ") = %s", 10, 0
 
 section .data
 
-@13565$string_path#:
+@13607$string_path#:
 	; Initializer String path
 	db "path", 0
 
 section .data
 
-@13566$string_system2822dir22290A#:
+@13608$string_system2822dir22290A#:
 	; Initializer String system("dir")\n
 	db "system(", 34, "dir", 34, ")", 10, 0
 
 section .data
 
-@13567$string_dir#:
+@13609$string_dir#:
 	; Initializer String dir
 	db "dir", 0
 
 section .data
 
-@13568$string_0Aabs282D329203D2025i2C20abs28329203D2025i0A#:
+@13610$string_0Aabs282D329203D2025i2C20abs28329203D2025i0A#:
 	; Initializer String \nabs(-3) = %i, abs(3) = %i\n
 	db 10, "abs(-3) = %i, abs(3) = %i", 10, 0
 
 section .data
 
-@13573$string_labs282D3l29203D2025li2C20labs283l29203D2025li0A0A#:
+@13615$string_labs282D3l29203D2025li2C20labs283l29203D2025li0A0A#:
 	; Initializer String labs(-3l) = %li, labs(3l) = %li\n\n
 	db "labs(-3l) = %li, labs(3l) = %li", 10, 10, 0
 
 section .data
 
-@13583$string_div_t28102C20329203D202825i2C2025i290A#:
+@13625$string_div_t28102C20329203D202825i2C2025i290A#:
 	; Initializer String div_t(10, 3) = (%i, %i)\n
 	db "div_t(10, 3) = (%i, %i)", 10, 0
 
 section .data
 
-@13585$string_div_t28102C20329203D202825i2C2025i290A0A#:
+@13627$string_div_t28102C20329203D202825i2C2025i290A0A#:
 	; Initializer String div_t(10, 3) = (%i, %i)\n\n
 	db "div_t(10, 3) = (%i, %i)", 10, 10, 0
 
 section .data
 
-@13591$string_ldiv_t28102C20329203D202825li2C2025li290A#:
+@13633$string_ldiv_t28102C20329203D202825li2C2025li290A#:
 	; Initializer String ldiv_t(10, 3) = (%li, %li)\n
 	db "ldiv_t(10, 3) = (%li, %li)", 10, 0
 
 section .data
 
-@13593$string_ldiv_t28102C20329203D202825li2C2025li290A0A#:
+@13635$string_ldiv_t28102C20329203D202825li2C2025li290A0A#:
 	; Initializer String ldiv_t(10, 3) = (%li, %li)\n\n
 	db "ldiv_t(10, 3) = (%li, %li)", 10, 10, 0
 
 section .data
 
-@13610$string_0AA20List2013A20#:
+@13652$string_0AA20List2013A20#:
 	; Initializer String \nA List 1: 
 	db 10, "A List 1: ", 0
 
 section .data
 
-@13614$string_25i20#:
+@13656$string_25i20#:
 	; Initializer String %i 
 	db "%i ", 0
 
 section .data
 
-@13618$string_0AB20List2023A20#:
+@13660$string_0AB20List2023A20#:
 	; Initializer String \nB List 2: 
 	db 10, "B List 2: ", 0
 
 section .data
 
-@13625$string_25i20#:
+@13667$string_25i20#:
 	; Initializer String %i 
 	db "%i ", 0
 
 section .data
 
-@13629$string_0AC20List2033A20#:
+@13671$string_0AC20List2033A20#:
 	; Initializer String \nC List 3: 
 	db 10, "C List 3: ", 0
 
 section .data
 
-@13636$string_25i20#:
+@13678$string_25i20#:
 	; Initializer String %i 
 	db "%i ", 0
 
 section .data
 
-@13640$string_0A0ASearch3A0A#:
+@13682$string_0A0ASearch3A0A#:
 	; Initializer String \n\nSearch:\n
 	db 10, 10, "Search:", 10, 0
 
 section .data
 
-@13658$string_20202825i2C2025i290A#:
+@13700$string_20202825i2C2025i290A#:
 	; Initializer String   (%i, %i)\n
 	db "  (%i, %i)", 10, 0
 
 section .data
 
-@13659$string_0A#:
+@13701$string_0A#:
 	; Initializer String \n
 	db 10, 0
 
 section .data
 
-@13616$int4$4#:
+@13658$int4$4#:
 	; Initializer SignedInt 4
 	dd 4
 
 section .data
 
-@13627$int4$4#:
+@13669$int4$4#:
 	; Initializer SignedInt 4
 	dd 4
 
 section .data
 
-@13638$int4$4#:
+@13680$int4$4#:
 	; Initializer SignedInt 4
 	dd 4
 
 section .data
 
-@13654$int4$4#:
+@13696$int4$4#:
 	; Initializer SignedInt 4
 	dd 4
 
@@ -744,14 +744,14 @@ section .text
 
  stdlib_test$1:
 	; Parameter 56 pointer "atof("123.456") = %f\n"
-	mov qword [rbp + 56], @13560$string_atof28221232E4562229203D2025f0A#
+	mov qword [rbp + 56], @13602$string_atof28221232E4562229203D2025f0A#
 
  stdlib_test$2:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$3:
 	; Parameter 88 pointer "123.456"
-	mov qword [rbp + 88], @13561$string_1232E456#
+	mov qword [rbp + 88], @13603$string_1232E456#
 
  stdlib_test$4:
 	; Call 64 atof 0
@@ -787,14 +787,14 @@ section .text
 
  stdlib_test$11:
 	; Parameter 56 pointer "strtod("123.456789abc", &p) = (%f, %s)\n"
-	mov qword [rbp + 56], @13562$string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A#
+	mov qword [rbp + 56], @13604$string_strtod28221232E456789abc222C2026p29203D202825f2C2025s290A#
 
  stdlib_test$12:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$13:
 	; Parameter 88 pointer "123.456789abc"
-	mov qword [rbp + 88], @13563$string_1232E456789abc#
+	mov qword [rbp + 88], @13605$string_1232E456789abc#
 
  stdlib_test$14:
 	; Address £temporary4162 p
@@ -844,14 +844,14 @@ section .text
 
  stdlib_test$24:
 	; Parameter 48 pointer "\ngetenv("path") = %s\n"
-	mov qword [rbp + 48], @13564$string_0Agetenv2822path2229203D2025s0A#
+	mov qword [rbp + 48], @13606$string_0Agetenv2822path2229203D2025s0A#
 
  stdlib_test$25:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$26:
 	; Parameter 80 pointer "path"
-	mov qword [rbp + 80], @13565$string_path#
+	mov qword [rbp + 80], @13607$string_path#
 
  stdlib_test$27:
 	; Call 56 getenv 0
@@ -887,7 +887,7 @@ section .text
 
  stdlib_test$34:
 	; Parameter 48 pointer "system("dir")\n"
-	mov qword [rbp + 48], @13566$string_system2822dir22290A#
+	mov qword [rbp + 48], @13608$string_system2822dir22290A#
 
  stdlib_test$35:
 	; Call 24 printf 0
@@ -905,7 +905,7 @@ section .text
 
  stdlib_test$38:
 	; Parameter 48 pointer "dir"
-	mov qword [rbp + 48], @13567$string_dir#
+	mov qword [rbp + 48], @13609$string_dir#
 
  stdlib_test$39:
 	; Call 24 system 0
@@ -922,7 +922,7 @@ section .text
 
  stdlib_test$42:
 	; Parameter 48 pointer "\nabs(-3) = %i, abs(3) = %i\n"
-	mov qword [rbp + 48], @13568$string_0Aabs282D329203D2025i2C20abs28329203D2025i0A#
+	mov qword [rbp + 48], @13610$string_0Aabs282D329203D2025i2C20abs28329203D2025i0A#
 
  stdlib_test$43:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -989,7 +989,7 @@ section .text
 
  stdlib_test$58:
 	; Parameter 48 pointer "labs(-3l) = %li, labs(3l) = %li\n\n"
-	mov qword [rbp + 48], @13573$string_labs282D3l29203D2025li2C20labs283l29203D2025li0A0A#
+	mov qword [rbp + 48], @13615$string_labs282D3l29203D2025li2C20labs283l29203D2025li0A0A#
 
  stdlib_test$59:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1096,7 +1096,7 @@ section .text
 
  stdlib_test$82:
 	; Parameter 56 pointer "div_t(10, 3) = (%i, %i)\n"
-	mov qword [rbp + 56], @13583$string_div_t28102C20329203D202825i2C2025i290A#
+	mov qword [rbp + 56], @13625$string_div_t28102C20329203D202825i2C2025i290A#
 
  stdlib_test$83:
 	; Parameter 64 signedint i.quot
@@ -1175,7 +1175,7 @@ section .text
 
  stdlib_test$96:
 	; Parameter 64 pointer "div_t(10, 3) = (%i, %i)\n\n"
-	mov qword [rbp + 64], @13585$string_div_t28102C20329203D202825i2C2025i290A0A#
+	mov qword [rbp + 64], @13627$string_div_t28102C20329203D202825i2C2025i290A0A#
 
  stdlib_test$97:
 	; Parameter 72 signedint j.quot
@@ -1244,7 +1244,7 @@ section .text
 
  stdlib_test$110:
 	; Parameter 64 pointer "ldiv_t(10, 3) = (%li, %li)\n"
-	mov qword [rbp + 64], @13591$string_ldiv_t28102C20329203D202825li2C2025li290A#
+	mov qword [rbp + 64], @13633$string_ldiv_t28102C20329203D202825li2C2025li290A#
 
  stdlib_test$111:
 	; Parameter 72 signed long int li.quot
@@ -1323,7 +1323,7 @@ section .text
 
  stdlib_test$124:
 	; Parameter 80 pointer "ldiv_t(10, 3) = (%li, %li)\n\n"
-	mov qword [rbp + 80], @13593$string_ldiv_t28102C20329203D202825li2C2025li290A0A#
+	mov qword [rbp + 80], @13635$string_ldiv_t28102C20329203D202825li2C2025li290A0A#
 
  stdlib_test$125:
 	; Parameter 88 signed long int lj.quot
@@ -1372,7 +1372,7 @@ section .text
 
  stdlib_test$135:
 	; Parameter 72 pointer "\nA List 1: "
-	mov qword [rbp + 72], @13610$string_0AA20List2013A20#
+	mov qword [rbp + 72], @13652$string_0AA20List2013A20#
 
  stdlib_test$136:
 	; Call 48 printf 0
@@ -1400,13 +1400,13 @@ section .text
 
  stdlib_test$141:
 	; Parameter 72 pointer "%i "
-	mov qword [rbp + 72], @13614$string_25i20#
+	mov qword [rbp + 72], @13656$string_25i20#
 
  stdlib_test$142:
 	; UnsignedMultiply £temporary4203 index 4
 	mov eax, [rbp + 44]
 	xor edx, edx
-	mul dword [@13616$int4$4#]
+	mul dword [@13658$int4$4#]
 
  stdlib_test$143:
 	; IntegralToIntegral £temporary4204 £temporary4203
@@ -1452,7 +1452,7 @@ section .text
 
  stdlib_test$152:
 	; Parameter 72 pointer "\nB List 2: "
-	mov qword [rbp + 72], @13618$string_0AB20List2023A20#
+	mov qword [rbp + 72], @13660$string_0AB20List2023A20#
 
  stdlib_test$153:
 	; Call 48 printf 0
@@ -1511,13 +1511,13 @@ section .text
 
  stdlib_test$165:
 	; Parameter 72 pointer "%i "
-	mov qword [rbp + 72], @13625$string_25i20#
+	mov qword [rbp + 72], @13667$string_25i20#
 
  stdlib_test$166:
 	; UnsignedMultiply £temporary4213 index 4
 	mov eax, [rbp + 44]
 	xor edx, edx
-	mul dword [@13627$int4$4#]
+	mul dword [@13669$int4$4#]
 
  stdlib_test$167:
 	; IntegralToIntegral £temporary4214 £temporary4213
@@ -1563,7 +1563,7 @@ section .text
 
  stdlib_test$176:
 	; Parameter 72 pointer "\nC List 3: "
-	mov qword [rbp + 72], @13629$string_0AC20List2033A20#
+	mov qword [rbp + 72], @13671$string_0AC20List2033A20#
 
  stdlib_test$177:
 	; Call 48 printf 0
@@ -1622,13 +1622,13 @@ section .text
 
  stdlib_test$189:
 	; Parameter 72 pointer "%i "
-	mov qword [rbp + 72], @13636$string_25i20#
+	mov qword [rbp + 72], @13678$string_25i20#
 
  stdlib_test$190:
 	; UnsignedMultiply £temporary4223 index 4
 	mov eax, [rbp + 44]
 	xor edx, edx
-	mul dword [@13638$int4$4#]
+	mul dword [@13680$int4$4#]
 
  stdlib_test$191:
 	; IntegralToIntegral £temporary4224 £temporary4223
@@ -1674,7 +1674,7 @@ section .text
 
  stdlib_test$200:
 	; Parameter 72 pointer "\n\nSearch:\n"
-	mov qword [rbp + 72], @13640$string_0A0ASearch3A0A#
+	mov qword [rbp + 72], @13682$string_0A0ASearch3A0A#
 
  stdlib_test$201:
 	; Call 48 printf 0
@@ -1764,7 +1764,7 @@ section .text
  stdlib_test$220:
 	; UnsignedDivide £temporary4239 £temporary4237 4
 	xor edx, edx
-	div dword [@13654$int4$4#]
+	div dword [@13696$int4$4#]
 
  stdlib_test$221:
 	; Jump 223
@@ -1783,7 +1783,7 @@ section .text
 
  stdlib_test$225:
 	; Parameter 84 pointer "  (%i, %i)\n"
-	mov qword [rbp + 84], @13658$string_20202825i2C2025i290A#
+	mov qword [rbp + 84], @13700$string_20202825i2C2025i290A#
 
  stdlib_test$226:
 	; Parameter 92 signedint key
@@ -1820,7 +1820,7 @@ section .text
 
  stdlib_test$233:
 	; Parameter 68 pointer "\n"
-	mov qword [rbp + 68], @13659$string_0A#
+	mov qword [rbp + 68], @13701$string_0A#
 
  stdlib_test$234:
 	; Call 44 printf 0

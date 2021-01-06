@@ -8,13 +8,13 @@
 
 section .data
 
-@12910$i:
+@12952$i:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@12911$string_25i20#:
+@12953$string_25i20#:
 	; Initializer String %i 
 	db "%i ", 0
 
@@ -25,15 +25,15 @@ section .text
 
  stack_test$1:
 	; Parameter 48 pointer "%i "
-	mov qword [rbp + 48], @12911$string_25i20#
+	mov qword [rbp + 48], @12953$string_25i20#
 
  stack_test$2:
 	; Assign £temporary4055 i
-	mov eax, [@12910$i]
+	mov eax, [@12952$i]
 
  stack_test$3:
 	; BinaryAdd i i 1
-	inc dword [@12910$i]
+	inc dword [@12952$i]
 
  stack_test$4:
 	; Parameter 56 signedint £temporary4055
@@ -76,7 +76,7 @@ section .text
 
 section .data
 
-@12925$string_102420bytes2Dblock20number3A2025i0A#:
+@12967$string_102420bytes2Dblock20number3A2025i0A#:
 	; Initializer String 1024 bytes-block number: %i\n
 	db "1024 bytes-block number: %i", 10, 0
 
@@ -120,7 +120,7 @@ section .text
 
  heap_test$9:
 	; Parameter 60 pointer "1024 bytes-block number: %i\n"
-	mov qword [rbp + 60], @12925$string_102420bytes2Dblock20number3A2025i0A#
+	mov qword [rbp + 60], @12967$string_102420bytes2Dblock20number3A2025i0A#
 
  heap_test$10:
 	; Assign £temporary4060 count

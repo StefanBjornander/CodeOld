@@ -602,7 +602,7 @@ section .text
 
 section .data
 
-@13227$string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#:
+@13269$string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#:
 	; Initializer String Stack Top: %u, Low Heap: %u\n
 	db "Stack Top: %u, Low Heap: %u", 10, 0
 
@@ -628,7 +628,7 @@ section .text
 
  rec$5:
 	; Parameter 60 pointer "Stack Top: %u, Low Heap: %u\n"
-	mov qword [rbp + 60], @13227$string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#
+	mov qword [rbp + 60], @13269$string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#
 
  rec$6:
 	; Parameter 68 unsigned int stackTop
@@ -930,7 +930,7 @@ section .text
 
 section .data
 
-@13269$string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#:
+@13311$string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#:
 	; Initializer String Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u\n
 	db "Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u", 10, 0
 
@@ -989,7 +989,7 @@ section .text
 
  malloc_test6$13:
 	; Parameter 72 pointer "Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u\n"
-	mov qword [rbp + 72], @13269$string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#
+	mov qword [rbp + 72], @13311$string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#
 
  malloc_test6$14:
 	; Parameter 80 signedint i
