@@ -35,43 +35,43 @@
 
 section .data
 
-@10651$float8$minus6.28#:
+@10559$float8$minus6.28#:
 	; Initializer Double -6.28
 	dq -6.28
 
 section .data
 
-@10654$float8$minus3.14#:
+@10562$float8$minus3.14#:
 	; Initializer Double -3.14
 	dq -3.14
 
 section .data
 
-@10659$float8$minus1.57#:
+@10567$float8$minus1.57#:
 	; Initializer Double -1.57
 	dq -1.57
 
 section .data
 
-@10661$float8$minus1#:
+@10569$float8$minus1#:
 	; Initializer Double -1
 	dq -1.0
 
 section .data
 
-@10669$float8$1.57#:
+@10577$float8$1.57#:
 	; Initializer Double 1.57
 	dq 1.57
 
 section .data
 
-@10671$float8$3.14#:
+@10579$float8$3.14#:
 	; Initializer Double 3.14
 	dq 3.14
 
 section .data
 
-@10675$float8$6.28#:
+@10583$float8$6.28#:
 	; Initializer Double 6.28
 	dq 6.28
 
@@ -82,7 +82,7 @@ section .text
 
  math_test_1x$1:
 	; PushFloat -6.28
-	fld qword [@10651$float8$minus6.28#]
+	fld qword [@10559$float8$minus6.28#]
 
  math_test_1x$2:
 	; Parameter 48 double -6.28
@@ -103,7 +103,7 @@ section .text
 
  math_test_1x$6:
 	; PushFloat -3.14
-	fld qword [@10654$float8$minus3.14#]
+	fld qword [@10562$float8$minus3.14#]
 
  math_test_1x$7:
 	; Parameter 48 double -3.14
@@ -124,7 +124,7 @@ section .text
 
  math_test_1x$11:
 	; PushFloat -1.57
-	fld qword [@10659$float8$minus1.57#]
+	fld qword [@10567$float8$minus1.57#]
 
  math_test_1x$12:
 	; Parameter 48 double -1.57
@@ -145,7 +145,7 @@ section .text
 
  math_test_1x$16:
 	; PushFloat -1
-	fld qword [@10661$float8$minus1#]
+	fld qword [@10569$float8$minus1#]
 
  math_test_1x$17:
 	; Parameter 48 double -1
@@ -208,7 +208,7 @@ section .text
 
  math_test_1x$31:
 	; PushFloat 1.57
-	fld qword [@10669$float8$1.57#]
+	fld qword [@10577$float8$1.57#]
 
  math_test_1x$32:
 	; Parameter 48 double 1.57
@@ -229,7 +229,7 @@ section .text
 
  math_test_1x$36:
 	; PushFloat 3.14
-	fld qword [@10671$float8$3.14#]
+	fld qword [@10579$float8$3.14#]
 
  math_test_1x$37:
 	; Parameter 48 double 3.14
@@ -250,7 +250,7 @@ section .text
 
  math_test_1x$41:
 	; PushFloat 6.28
-	fld qword [@10675$float8$6.28#]
+	fld qword [@10583$float8$6.28#]
 
  math_test_1x$42:
 	; Parameter 48 double 6.28
@@ -278,7 +278,7 @@ section .text
 
 section .data
 
-@10677$string_2020acos2825f29203D2025f2C20errno203D2025i0A#:
+@10585$string_2020acos2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   acos(%f) = %f, errno = %i\n
 	db "  acos(%f) = %f, errno = %i", 10, 0
 
@@ -289,7 +289,7 @@ section .text
 
  acos_test$1:
 	; Parameter 56 pointer "  acos(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10677$string_2020acos2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10585$string_2020acos2825f29203D2025f2C20errno203D2025i0A#
 
  acos_test$2:
 	; PushFloat x
@@ -321,10 +321,10 @@ section .text
 	; PostCall 72
 
  acos_test$9:
-	; GetReturnValue £temporary3481
+	; GetReturnValue £temporary3365
 
  acos_test$10:
-	; Parameter 72 double £temporary3481
+	; Parameter 72 double £temporary3365
 	fstp qword [rbp + 72]
 
  acos_test$11:
@@ -360,7 +360,7 @@ section .text
 
 section .data
 
-@10683$string_2020atan2825f29203D2025f2C20errno203D2025i0A#:
+@10591$string_2020atan2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   atan(%f) = %f, errno = %i\n
 	db "  atan(%f) = %f, errno = %i", 10, 0
 
@@ -371,7 +371,7 @@ section .text
 
  atan_test$1:
 	; Parameter 56 pointer "  atan(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10683$string_2020atan2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10591$string_2020atan2825f29203D2025f2C20errno203D2025i0A#
 
  atan_test$2:
 	; PushFloat x
@@ -403,10 +403,10 @@ section .text
 	; PostCall 72
 
  atan_test$9:
-	; GetReturnValue £temporary3486
+	; GetReturnValue £temporary3370
 
  atan_test$10:
-	; Parameter 72 double £temporary3486
+	; Parameter 72 double £temporary3370
 	fstp qword [rbp + 72]
 
  atan_test$11:
@@ -442,169 +442,169 @@ section .text
 
 section .data
 
-@10690$float8$0.333333333#:
+@10598$float8$0.333333333#:
 	; Initializer Double 0.333333333
 	dq 0.333333333
 
 section .data
 
-@10692$float8$0.75#:
+@10600$float8$0.75#:
 	; Initializer Double 0.75
 	dq 0.75
 
 section .data
 
-@10694$float8$1.000010#:
+@10602$float8$1.000010#:
 	; Initializer Double 1.000010
 	dq 1.000010
 
 section .data
 
-@10698$float8$0.999999#:
+@10606$float8$0.999999#:
 	; Initializer Double 0.999999
 	dq 0.999999
 
 section .data
 
-@10700$float8$0.000010#:
+@10608$float8$0.000010#:
 	; Initializer Double 0.000010
 	dq 0.000010
 
 section .data
 
-@10704$float8$minus0.000010#:
+@10612$float8$minus0.000010#:
 	; Initializer Double -0.000010
 	dq -0.000010
 
 section .data
 
-@10706$float8$minus0.999999#:
+@10614$float8$minus0.999999#:
 	; Initializer Double -0.999999
 	dq -0.999999
 
 section .data
 
-@10708$float8$minus1.0#:
+@10616$float8$minus1.0#:
 	; Initializer Double -1.0
 	dq -1.0
 
 section .data
 
-@10710$float8$minus1.000010#:
+@10618$float8$minus1.000010#:
 	; Initializer Double -1.000010
 	dq -1.000010
 
 section .data
 
-@10714$float8$6.28#:
+@10622$float8$6.28#:
 	; Initializer Double 6.28
 	dq 6.28
 
 section .data
 
-@10716$float8$3.14#:
+@10624$float8$3.14#:
 	; Initializer Double 3.14
 	dq 3.14
 
 section .data
 
-@10720$float8$1.57#:
+@10628$float8$1.57#:
 	; Initializer Double 1.57
 	dq 1.57
 
 section .data
 
-@10725$float8$minus1.57#:
+@10633$float8$minus1.57#:
 	; Initializer Double -1.57
 	dq -1.57
 
 section .data
 
-@10728$float8$minus3.14#:
+@10636$float8$minus3.14#:
 	; Initializer Double -3.14
 	dq -3.14
 
 section .data
 
-@10732$float8$minus6.28#:
+@10640$float8$minus6.28#:
 	; Initializer Double -6.28
 	dq -6.28
 
 section .data
 
-@10736$float8$2.0#:
+@10644$float8$2.0#:
 	; Initializer Double 2.0
 	dq 2.0
 
 section .data
 
-@10738$float8$3.0#:
+@10646$float8$3.0#:
 	; Initializer Double 3.0
 	dq 3.0
 
 section .data
 
-@10740$float8$4.0#:
+@10648$float8$4.0#:
 	; Initializer Double 4.0
 	dq 4.0
 
 section .data
 
-@10744$float8$2.0#:
+@10652$float8$2.0#:
 	; Initializer Double 2.0
 	dq 2.0
 
 section .data
 
-@10748$float8$minus2.0#:
+@10656$float8$minus2.0#:
 	; Initializer Double -2.0
 	dq -2.0
 
 section .data
 
-@10752$float8$2.0#:
+@10660$float8$2.0#:
 	; Initializer Double 2.0
 	dq 2.0
 
 section .data
 
-@10756$float8$minus2.0#:
+@10664$float8$minus2.0#:
 	; Initializer Double -2.0
 	dq -2.0
 
 section .data
 
-@10762$float8$2#:
+@10670$float8$2#:
 	; Initializer Double 2
 	dq 2.0
 
 section .data
 
-@10766$float8$minus2#:
+@10674$float8$minus2#:
 	; Initializer Double -2
 	dq -2.0
 
 section .data
 
-@10770$float8$minus1.0#:
+@10678$float8$minus1.0#:
 	; Initializer Double -1.0
 	dq -1.0
 
 section .data
 
-@10772$float8$minus1.0#:
+@10680$float8$minus1.0#:
 	; Initializer Double -1.0
 	dq -1.0
 
 section .data
 
-@10774$float8$minus2.0#:
+@10682$float8$minus2.0#:
 	; Initializer Double -2.0
 	dq -2.0
 
 section .data
 
-@10776$float8$minus4.0#:
+@10684$float8$minus4.0#:
 	; Initializer Double -4.0
 	dq -4.0
 
@@ -615,7 +615,7 @@ section .text
 
  math_test$1:
 	; PushFloat 0.333333333
-	fld qword [@10690$float8$0.333333333#]
+	fld qword [@10598$float8$0.333333333#]
 
  math_test$2:
 	; Parameter 48 double 0.333333333
@@ -636,7 +636,7 @@ section .text
 
  math_test$6:
 	; PushFloat 0.75
-	fld qword [@10692$float8$0.75#]
+	fld qword [@10600$float8$0.75#]
 
  math_test$7:
 	; Parameter 48 double 0.75
@@ -657,7 +657,7 @@ section .text
 
  math_test$11:
 	; PushFloat 1.000010
-	fld qword [@10694$float8$1.000010#]
+	fld qword [@10602$float8$1.000010#]
 
  math_test$12:
 	; Parameter 48 double 1.000010
@@ -699,7 +699,7 @@ section .text
 
  math_test$21:
 	; PushFloat 0.999999
-	fld qword [@10698$float8$0.999999#]
+	fld qword [@10606$float8$0.999999#]
 
  math_test$22:
 	; Parameter 48 double 0.999999
@@ -720,7 +720,7 @@ section .text
 
  math_test$26:
 	; PushFloat 0.000010
-	fld qword [@10700$float8$0.000010#]
+	fld qword [@10608$float8$0.000010#]
 
  math_test$27:
 	; Parameter 48 double 0.000010
@@ -762,7 +762,7 @@ section .text
 
  math_test$36:
 	; PushFloat -0.000010
-	fld qword [@10704$float8$minus0.000010#]
+	fld qword [@10612$float8$minus0.000010#]
 
  math_test$37:
 	; Parameter 48 double -0.000010
@@ -783,7 +783,7 @@ section .text
 
  math_test$41:
 	; PushFloat -0.999999
-	fld qword [@10706$float8$minus0.999999#]
+	fld qword [@10614$float8$minus0.999999#]
 
  math_test$42:
 	; Parameter 48 double -0.999999
@@ -804,7 +804,7 @@ section .text
 
  math_test$46:
 	; PushFloat -1.0
-	fld qword [@10708$float8$minus1.0#]
+	fld qword [@10616$float8$minus1.0#]
 
  math_test$47:
 	; Parameter 48 double -1.0
@@ -825,7 +825,7 @@ section .text
 
  math_test$51:
 	; PushFloat -1.000010
-	fld qword [@10710$float8$minus1.000010#]
+	fld qword [@10618$float8$minus1.000010#]
 
  math_test$52:
 	; Parameter 48 double -1.000010
@@ -846,7 +846,7 @@ section .text
 
  math_test$56:
 	; PushFloat 6.28
-	fld qword [@10714$float8$6.28#]
+	fld qword [@10622$float8$6.28#]
 
  math_test$57:
 	; Parameter 48 double 6.28
@@ -867,7 +867,7 @@ section .text
 
  math_test$61:
 	; PushFloat 3.14
-	fld qword [@10716$float8$3.14#]
+	fld qword [@10624$float8$3.14#]
 
  math_test$62:
 	; Parameter 48 double 3.14
@@ -888,7 +888,7 @@ section .text
 
  math_test$66:
 	; PushFloat 1.57
-	fld qword [@10720$float8$1.57#]
+	fld qword [@10628$float8$1.57#]
 
  math_test$67:
 	; Parameter 48 double 1.57
@@ -909,7 +909,7 @@ section .text
 
  math_test$71:
 	; PushFloat -1.57
-	fld qword [@10725$float8$minus1.57#]
+	fld qword [@10633$float8$minus1.57#]
 
  math_test$72:
 	; Parameter 48 double -1.57
@@ -930,7 +930,7 @@ section .text
 
  math_test$76:
 	; PushFloat -3.14
-	fld qword [@10728$float8$minus3.14#]
+	fld qword [@10636$float8$minus3.14#]
 
  math_test$77:
 	; Parameter 48 double -3.14
@@ -951,7 +951,7 @@ section .text
 
  math_test$81:
 	; PushFloat -6.28
-	fld qword [@10732$float8$minus6.28#]
+	fld qword [@10640$float8$minus6.28#]
 
  math_test$82:
 	; Parameter 48 double -6.28
@@ -980,7 +980,7 @@ section .text
 
  math_test$88:
 	; PushFloat 2.0
-	fld qword [@10736$float8$2.0#]
+	fld qword [@10644$float8$2.0#]
 
  math_test$89:
 	; Parameter 56 double 2.0
@@ -1001,7 +1001,7 @@ section .text
 
  math_test$93:
 	; PushFloat 3.0
-	fld qword [@10738$float8$3.0#]
+	fld qword [@10646$float8$3.0#]
 
  math_test$94:
 	; Parameter 48 double 3.0
@@ -1009,7 +1009,7 @@ section .text
 
  math_test$95:
 	; PushFloat 4.0
-	fld qword [@10740$float8$4.0#]
+	fld qword [@10648$float8$4.0#]
 
  math_test$96:
 	; Parameter 56 double 4.0
@@ -1038,7 +1038,7 @@ section .text
 
  math_test$102:
 	; PushFloat 2.0
-	fld qword [@10744$float8$2.0#]
+	fld qword [@10652$float8$2.0#]
 
  math_test$103:
 	; Parameter 56 double 2.0
@@ -1067,7 +1067,7 @@ section .text
 
  math_test$109:
 	; PushFloat -2.0
-	fld qword [@10748$float8$minus2.0#]
+	fld qword [@10656$float8$minus2.0#]
 
  math_test$110:
 	; Parameter 56 double -2.0
@@ -1096,7 +1096,7 @@ section .text
 
  math_test$116:
 	; PushFloat 2.0
-	fld qword [@10752$float8$2.0#]
+	fld qword [@10660$float8$2.0#]
 
  math_test$117:
 	; Parameter 56 double 2.0
@@ -1125,7 +1125,7 @@ section .text
 
  math_test$123:
 	; PushFloat -2.0
-	fld qword [@10756$float8$minus2.0#]
+	fld qword [@10664$float8$minus2.0#]
 
  math_test$124:
 	; Parameter 56 double -2.0
@@ -1175,7 +1175,7 @@ section .text
 
  math_test$135:
 	; PushFloat 2
-	fld qword [@10762$float8$2#]
+	fld qword [@10670$float8$2#]
 
  math_test$136:
 	; Parameter 48 double 2
@@ -1204,7 +1204,7 @@ section .text
 
  math_test$142:
 	; PushFloat -2
-	fld qword [@10766$float8$minus2#]
+	fld qword [@10674$float8$minus2#]
 
  math_test$143:
 	; Parameter 48 double -2
@@ -1233,7 +1233,7 @@ section .text
 
  math_test$149:
 	; PushFloat -1.0
-	fld qword [@10770$float8$minus1.0#]
+	fld qword [@10678$float8$minus1.0#]
 
  math_test$150:
 	; Parameter 48 double -1.0
@@ -1241,7 +1241,7 @@ section .text
 
  math_test$151:
 	; PushFloat -1.0
-	fld qword [@10772$float8$minus1.0#]
+	fld qword [@10680$float8$minus1.0#]
 
  math_test$152:
 	; Parameter 56 double -1.0
@@ -1262,7 +1262,7 @@ section .text
 
  math_test$156:
 	; PushFloat -2.0
-	fld qword [@10774$float8$minus2.0#]
+	fld qword [@10682$float8$minus2.0#]
 
  math_test$157:
 	; Parameter 48 double -2.0
@@ -1270,7 +1270,7 @@ section .text
 
  math_test$158:
 	; PushFloat -4.0
-	fld qword [@10776$float8$minus4.0#]
+	fld qword [@10684$float8$minus4.0#]
 
  math_test$159:
 	; Parameter 56 double -4.0
@@ -1298,133 +1298,133 @@ section .text
 
 section .data
 
-@10778$string_3C25f3E0A#:
+@10686$string_3C25f3E0A#:
 	; Initializer String <%f>\n
 	db "<%f>", 10, 0
 
 section .data
 
-@10779$string_2020sin2825f29203D2025f2C20errno203D2025i0A#:
+@10687$string_2020sin2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   sin(%f) = %f, errno = %i\n
 	db "  sin(%f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10782$string_2020cos2825f29203D2025f2C20errno203D2025i0A#:
+@10690$string_2020cos2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   cos(%f) = %f, errno = %i\n
 	db "  cos(%f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10785$string_2020tan2825f29203D2025f2C20errno203D2025i0A#:
+@10693$string_2020tan2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   tan(%f) = %f, errno = %i\n
 	db "  tan(%f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10788$string_2020asin2825f29203D2025f2C20errno203D2025i0A#:
+@10696$string_2020asin2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   asin(%f) = %f, errno = %i\n
 	db "  asin(%f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10791$string_2020acos2825f29203D2025f2C20errno203D2025i0A#:
+@10699$string_2020acos2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   acos(%f) = %f, errno = %i\n
 	db "  acos(%f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10794$string_2020atan2825f29203D2025f2C20errno203D2025i0A#:
+@10702$string_2020atan2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   atan(%f) = %f, errno = %i\n
 	db "  atan(%f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10797$string_2020exp2825f29203D2025f2C20errno203D2025i0A#:
+@10705$string_2020exp2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   exp(%f) = %f, errno = %i\n
 	db "  exp(%f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10800$string_2020log2825f29203D2025f2C20errno203D2025i0A#:
+@10708$string_2020log2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   log(%f) = %f, errno = %i\n
 	db "  log(%f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10803$string_2020log102825f29203D2025f2C20errno203D2025i0A#:
+@10711$string_2020log102825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   log10(%f) = %f, errno = %i\n
 	db "  log10(%f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10806$string_2020sinh2825f29203D2025f2C20errno203D2025i0A#:
+@10714$string_2020sinh2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   sinh(%f) = %f, errno = %i\n
 	db "  sinh(%f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10809$string_2020cosh2825f29203D2025f2C20errno203D2025i0A#:
+@10717$string_2020cosh2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   cosh(%f) = %f, errno = %i\n
 	db "  cosh(%f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10812$string_2020tanh2825f29203D2025f2C20errno203D2025i0A#:
+@10720$string_2020tanh2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   tanh(%f) = %f, errno = %i\n
 	db "  tanh(%f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10815$string_2020sqrt2825f29203D2025f2C20errno203D2025i0A#:
+@10723$string_2020sqrt2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   sqrt(%f) = %f, errno = %i\n
 	db "  sqrt(%f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10818$string_2020floor2825f29203D2025f2C20errno203D2025i0A#:
+@10726$string_2020floor2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   floor(%f) = %f, errno = %i\n
 	db "  floor(%f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10821$string_2020ceil2825f29203D2025f2C20errno203D2025i0A#:
+@10729$string_2020ceil2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   ceil(%f) = %f, errno = %i\n
 	db "  ceil(%f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10824$string_2020fabs2825f29203D2025f2C20errno203D2025i0A#:
+@10732$string_2020fabs2825f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String   fabs(%f) = %f, errno = %i\n
 	db "  fabs(%f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10831$string_frexp202825f2C20p29203D202825f2C2025i292C20errno203D2025i0A#:
+@10739$string_frexp202825f2C20p29203D202825f2C2025i292C20errno203D2025i0A#:
 	; Initializer String frexp (%f, p) = (%f, %i), errno = %i\n
 	db "frexp (%f, p) = (%f, %i), errno = %i", 10, 0
 
 section .data
 
-@10834$string_Error20message3A#:
+@10742$string_Error20message3A#:
 	; Initializer String Error message:
 	db "Error message:", 0
 
 section .data
 
-@10841$string_modf202825f2C20p29203D202825f2C2025f292C20errno203D2025i0A#:
+@10749$string_modf202825f2C20p29203D202825f2C2025f292C20errno203D2025i0A#:
 	; Initializer String modf (%f, p) = (%f, %f), errno = %i\n
 	db "modf (%f, p) = (%f, %f), errno = %i", 10, 0
 
 section .data
 
-@10844$string_Error20message3A#:
+@10752$string_Error20message3A#:
 	; Initializer String Error message:
 	db "Error message:", 0
 
 section .data
 
-@10847$string_0A#:
+@10755$string_0A#:
 	; Initializer String \n
 	db 10, 0
 
@@ -1435,7 +1435,7 @@ section .text
 
  math_test_1$1:
 	; Parameter 56 pointer "<%f>\n"
-	mov qword [rbp + 56], @10778$string_3C25f3E0A#
+	mov qword [rbp + 56], @10686$string_3C25f3E0A#
 
  math_test_1$2:
 	; PushFloat x
@@ -1462,7 +1462,7 @@ section .text
 
  math_test_1$7:
 	; Parameter 56 pointer "  sin(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10779$string_2020sin2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10687$string_2020sin2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$8:
 	; PushFloat x
@@ -1494,10 +1494,10 @@ section .text
 	; PostCall 72
 
  math_test_1$15:
-	; GetReturnValue £temporary3559
+	; GetReturnValue £temporary3443
 
  math_test_1$16:
-	; Parameter 72 double £temporary3559
+	; Parameter 72 double £temporary3443
 	fstp qword [rbp + 72]
 
  math_test_1$17:
@@ -1526,7 +1526,7 @@ section .text
 
  math_test_1$22:
 	; Parameter 56 pointer "  cos(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10782$string_2020cos2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10690$string_2020cos2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$23:
 	; PushFloat x
@@ -1558,10 +1558,10 @@ section .text
 	; PostCall 72
 
  math_test_1$30:
-	; GetReturnValue £temporary3561
+	; GetReturnValue £temporary3445
 
  math_test_1$31:
-	; Parameter 72 double £temporary3561
+	; Parameter 72 double £temporary3445
 	fstp qword [rbp + 72]
 
  math_test_1$32:
@@ -1590,7 +1590,7 @@ section .text
 
  math_test_1$37:
 	; Parameter 56 pointer "  tan(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10785$string_2020tan2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10693$string_2020tan2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$38:
 	; PushFloat x
@@ -1622,10 +1622,10 @@ section .text
 	; PostCall 72
 
  math_test_1$45:
-	; GetReturnValue £temporary3563
+	; GetReturnValue £temporary3447
 
  math_test_1$46:
-	; Parameter 72 double £temporary3563
+	; Parameter 72 double £temporary3447
 	fstp qword [rbp + 72]
 
  math_test_1$47:
@@ -1654,7 +1654,7 @@ section .text
 
  math_test_1$52:
 	; Parameter 56 pointer "  asin(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10788$string_2020asin2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10696$string_2020asin2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$53:
 	; PushFloat x
@@ -1686,10 +1686,10 @@ section .text
 	; PostCall 72
 
  math_test_1$60:
-	; GetReturnValue £temporary3565
+	; GetReturnValue £temporary3449
 
  math_test_1$61:
-	; Parameter 72 double £temporary3565
+	; Parameter 72 double £temporary3449
 	fstp qword [rbp + 72]
 
  math_test_1$62:
@@ -1718,7 +1718,7 @@ section .text
 
  math_test_1$67:
 	; Parameter 56 pointer "  acos(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10791$string_2020acos2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10699$string_2020acos2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$68:
 	; PushFloat x
@@ -1750,10 +1750,10 @@ section .text
 	; PostCall 72
 
  math_test_1$75:
-	; GetReturnValue £temporary3567
+	; GetReturnValue £temporary3451
 
  math_test_1$76:
-	; Parameter 72 double £temporary3567
+	; Parameter 72 double £temporary3451
 	fstp qword [rbp + 72]
 
  math_test_1$77:
@@ -1782,7 +1782,7 @@ section .text
 
  math_test_1$82:
 	; Parameter 56 pointer "  atan(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10794$string_2020atan2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10702$string_2020atan2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$83:
 	; PushFloat x
@@ -1814,10 +1814,10 @@ section .text
 	; PostCall 72
 
  math_test_1$90:
-	; GetReturnValue £temporary3569
+	; GetReturnValue £temporary3453
 
  math_test_1$91:
-	; Parameter 72 double £temporary3569
+	; Parameter 72 double £temporary3453
 	fstp qword [rbp + 72]
 
  math_test_1$92:
@@ -1846,7 +1846,7 @@ section .text
 
  math_test_1$97:
 	; Parameter 56 pointer "  exp(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10797$string_2020exp2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10705$string_2020exp2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$98:
 	; PushFloat x
@@ -1878,10 +1878,10 @@ section .text
 	; PostCall 72
 
  math_test_1$105:
-	; GetReturnValue £temporary3571
+	; GetReturnValue £temporary3455
 
  math_test_1$106:
-	; Parameter 72 double £temporary3571
+	; Parameter 72 double £temporary3455
 	fstp qword [rbp + 72]
 
  math_test_1$107:
@@ -1910,7 +1910,7 @@ section .text
 
  math_test_1$112:
 	; Parameter 56 pointer "  log(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10800$string_2020log2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10708$string_2020log2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$113:
 	; PushFloat x
@@ -1942,10 +1942,10 @@ section .text
 	; PostCall 72
 
  math_test_1$120:
-	; GetReturnValue £temporary3573
+	; GetReturnValue £temporary3457
 
  math_test_1$121:
-	; Parameter 72 double £temporary3573
+	; Parameter 72 double £temporary3457
 	fstp qword [rbp + 72]
 
  math_test_1$122:
@@ -1974,7 +1974,7 @@ section .text
 
  math_test_1$127:
 	; Parameter 56 pointer "  log10(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10803$string_2020log102825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10711$string_2020log102825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$128:
 	; PushFloat x
@@ -2006,10 +2006,10 @@ section .text
 	; PostCall 72
 
  math_test_1$135:
-	; GetReturnValue £temporary3575
+	; GetReturnValue £temporary3459
 
  math_test_1$136:
-	; Parameter 72 double £temporary3575
+	; Parameter 72 double £temporary3459
 	fstp qword [rbp + 72]
 
  math_test_1$137:
@@ -2038,7 +2038,7 @@ section .text
 
  math_test_1$142:
 	; Parameter 56 pointer "  sinh(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10806$string_2020sinh2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10714$string_2020sinh2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$143:
 	; PushFloat x
@@ -2070,10 +2070,10 @@ section .text
 	; PostCall 72
 
  math_test_1$150:
-	; GetReturnValue £temporary3577
+	; GetReturnValue £temporary3461
 
  math_test_1$151:
-	; Parameter 72 double £temporary3577
+	; Parameter 72 double £temporary3461
 	fstp qword [rbp + 72]
 
  math_test_1$152:
@@ -2102,7 +2102,7 @@ section .text
 
  math_test_1$157:
 	; Parameter 56 pointer "  cosh(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10809$string_2020cosh2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10717$string_2020cosh2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$158:
 	; PushFloat x
@@ -2134,10 +2134,10 @@ section .text
 	; PostCall 72
 
  math_test_1$165:
-	; GetReturnValue £temporary3579
+	; GetReturnValue £temporary3463
 
  math_test_1$166:
-	; Parameter 72 double £temporary3579
+	; Parameter 72 double £temporary3463
 	fstp qword [rbp + 72]
 
  math_test_1$167:
@@ -2166,7 +2166,7 @@ section .text
 
  math_test_1$172:
 	; Parameter 56 pointer "  tanh(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10812$string_2020tanh2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10720$string_2020tanh2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$173:
 	; PushFloat x
@@ -2198,10 +2198,10 @@ section .text
 	; PostCall 72
 
  math_test_1$180:
-	; GetReturnValue £temporary3581
+	; GetReturnValue £temporary3465
 
  math_test_1$181:
-	; Parameter 72 double £temporary3581
+	; Parameter 72 double £temporary3465
 	fstp qword [rbp + 72]
 
  math_test_1$182:
@@ -2230,7 +2230,7 @@ section .text
 
  math_test_1$187:
 	; Parameter 56 pointer "  sqrt(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10815$string_2020sqrt2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10723$string_2020sqrt2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$188:
 	; PushFloat x
@@ -2262,10 +2262,10 @@ section .text
 	; PostCall 72
 
  math_test_1$195:
-	; GetReturnValue £temporary3583
+	; GetReturnValue £temporary3467
 
  math_test_1$196:
-	; Parameter 72 double £temporary3583
+	; Parameter 72 double £temporary3467
 	fstp qword [rbp + 72]
 
  math_test_1$197:
@@ -2294,7 +2294,7 @@ section .text
 
  math_test_1$202:
 	; Parameter 56 pointer "  floor(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10818$string_2020floor2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10726$string_2020floor2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$203:
 	; PushFloat x
@@ -2326,10 +2326,10 @@ section .text
 	; PostCall 72
 
  math_test_1$210:
-	; GetReturnValue £temporary3585
+	; GetReturnValue £temporary3469
 
  math_test_1$211:
-	; Parameter 72 double £temporary3585
+	; Parameter 72 double £temporary3469
 	fstp qword [rbp + 72]
 
  math_test_1$212:
@@ -2358,7 +2358,7 @@ section .text
 
  math_test_1$217:
 	; Parameter 56 pointer "  ceil(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10821$string_2020ceil2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10729$string_2020ceil2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$218:
 	; PushFloat x
@@ -2390,10 +2390,10 @@ section .text
 	; PostCall 72
 
  math_test_1$225:
-	; GetReturnValue £temporary3587
+	; GetReturnValue £temporary3471
 
  math_test_1$226:
-	; Parameter 72 double £temporary3587
+	; Parameter 72 double £temporary3471
 	fstp qword [rbp + 72]
 
  math_test_1$227:
@@ -2422,7 +2422,7 @@ section .text
 
  math_test_1$232:
 	; Parameter 56 pointer "  fabs(%f) = %f, errno = %i\n"
-	mov qword [rbp + 56], @10824$string_2020fabs2825f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 56], @10732$string_2020fabs2825f29203D2025f2C20errno203D2025i0A#
 
  math_test_1$233:
 	; PushFloat x
@@ -2454,10 +2454,10 @@ section .text
 	; PostCall 72
 
  math_test_1$240:
-	; GetReturnValue £temporary3589
+	; GetReturnValue £temporary3473
 
  math_test_1$241:
-	; Parameter 72 double £temporary3589
+	; Parameter 72 double £temporary3473
 	fstp qword [rbp + 72]
 
  math_test_1$242:
@@ -2497,12 +2497,12 @@ section .text
 	fstp qword [rbp + 60]
 
  math_test_1$250:
-	; Address £temporary3591 j
+	; Address £temporary3475 j
 	mov rsi, rbp
 	add rsi, 32
 
  math_test_1$251:
-	; Parameter 68 pointer £temporary3591
+	; Parameter 68 pointer £temporary3475
 	mov [rbp + 68], rsi
 
  math_test_1$252:
@@ -2516,7 +2516,7 @@ section .text
 	; PostCall 36
 
  math_test_1$254:
-	; GetReturnValue £temporary3592
+	; GetReturnValue £temporary3476
 
  math_test_1$255:
 	; PopFloat z
@@ -2527,7 +2527,7 @@ section .text
 
  math_test_1$257:
 	; Parameter 68 pointer "frexp (%f, p) = (%f, %i), errno = %i\n"
-	mov qword [rbp + 68], @10831$string_frexp202825f2C20p29203D202825f2C2025i292C20errno203D2025i0A#
+	mov qword [rbp + 68], @10739$string_frexp202825f2C20p29203D202825f2C2025i292C20errno203D2025i0A#
 
  math_test_1$258:
 	; PushFloat x
@@ -2577,7 +2577,7 @@ section .text
 
  math_test_1$268:
 	; Parameter 68 pointer "Error message:"
-	mov qword [rbp + 68], @10834$string_Error20message3A#
+	mov qword [rbp + 68], @10742$string_Error20message3A#
 
  math_test_1$269:
 	; Call 44 perror 0
@@ -2613,12 +2613,12 @@ section .text
 	fstp qword [rbp + 64]
 
  math_test_1$277:
-	; Address £temporary3596 w
+	; Address £temporary3480 w
 	mov rsi, rbp
 	add rsi, 32
 
  math_test_1$278:
-	; Parameter 72 pointer £temporary3596
+	; Parameter 72 pointer £temporary3480
 	mov [rbp + 72], rsi
 
  math_test_1$279:
@@ -2632,7 +2632,7 @@ section .text
 	; PostCall 40
 
  math_test_1$281:
-	; GetReturnValue £temporary3597
+	; GetReturnValue £temporary3481
 
  math_test_1$282:
 	; PopFloat z
@@ -2643,7 +2643,7 @@ section .text
 
  math_test_1$284:
 	; Parameter 72 pointer "modf (%f, p) = (%f, %f), errno = %i\n"
-	mov qword [rbp + 72], @10841$string_modf202825f2C20p29203D202825f2C2025f292C20errno203D2025i0A#
+	mov qword [rbp + 72], @10749$string_modf202825f2C20p29203D202825f2C2025f292C20errno203D2025i0A#
 
  math_test_1$285:
 	; PushFloat x
@@ -2696,7 +2696,7 @@ section .text
 
  math_test_1$296:
 	; Parameter 72 pointer "Error message:"
-	mov qword [rbp + 72], @10844$string_Error20message3A#
+	mov qword [rbp + 72], @10752$string_Error20message3A#
 
  math_test_1$297:
 	; Call 48 perror 0
@@ -2717,7 +2717,7 @@ section .text
 
  math_test_1$301:
 	; Parameter 56 pointer "\n"
-	mov qword [rbp + 56], @10847$string_0A#
+	mov qword [rbp + 56], @10755$string_0A#
 
  math_test_1$302:
 	; Call 32 printf 0
@@ -2742,31 +2742,31 @@ section .text
 
 section .data
 
-@10893$string_fmod2825f2C2025f29203D2025f2C20errno203D2025i0A#:
+@10801$string_fmod2825f2C2025f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String fmod(%f, %f) = %f, errno = %i\n
 	db "fmod(%f, %f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10896$string_atan22825f2C2025f29203D2025f2C20errno203D2025i0A#:
+@10804$string_atan22825f2C2025f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String atan2(%f, %f) = %f, errno = %i\n
 	db "atan2(%f, %f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10899$string_pow2825f2C2025f29203D2025f2C20errno203D2025i0A#:
+@10807$string_pow2825f2C2025f29203D2025f2C20errno203D2025i0A#:
 	; Initializer String pow(%f, %f) = %f, errno = %i\n
 	db "pow(%f, %f) = %f, errno = %i", 10, 0
 
 section .data
 
-@10902$string_0A#:
+@10810$string_0A#:
 	; Initializer String \n
 	db 10, 0
 
 section .data
 
-@10903$string_ldexp2825f2C2025i29203D2025f0A0A#:
+@10811$string_ldexp2825f2C2025i29203D2025f0A0A#:
 	; Initializer String ldexp(%f, %i) = %f\n\n
 	db "ldexp(%f, %i) = %f", 10, 10, 0
 
@@ -2783,7 +2783,7 @@ section .text
 
  math_test_2$1:
 	; Parameter 64 pointer "fmod(%f, %f) = %f, errno = %i\n"
-	mov qword [rbp + 64], @10893$string_fmod2825f2C2025f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 64], @10801$string_fmod2825f2C2025f29203D2025f2C20errno203D2025i0A#
 
  math_test_2$2:
 	; PushFloat x
@@ -2831,10 +2831,10 @@ section .text
 	; PostCall 88
 
  math_test_2$13:
-	; GetReturnValue £temporary3660
+	; GetReturnValue £temporary3544
 
  math_test_2$14:
-	; Parameter 88 double £temporary3660
+	; Parameter 88 double £temporary3544
 	fstp qword [rbp + 88]
 
  math_test_2$15:
@@ -2863,7 +2863,7 @@ section .text
 
  math_test_2$20:
 	; Parameter 64 pointer "atan2(%f, %f) = %f, errno = %i\n"
-	mov qword [rbp + 64], @10896$string_atan22825f2C2025f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 64], @10804$string_atan22825f2C2025f29203D2025f2C20errno203D2025i0A#
 
  math_test_2$21:
 	; PushFloat x
@@ -2911,10 +2911,10 @@ section .text
 	; PostCall 88
 
  math_test_2$32:
-	; GetReturnValue £temporary3662
+	; GetReturnValue £temporary3546
 
  math_test_2$33:
-	; Parameter 88 double £temporary3662
+	; Parameter 88 double £temporary3546
 	fstp qword [rbp + 88]
 
  math_test_2$34:
@@ -2943,7 +2943,7 @@ section .text
 
  math_test_2$39:
 	; Parameter 64 pointer "pow(%f, %f) = %f, errno = %i\n"
-	mov qword [rbp + 64], @10899$string_pow2825f2C2025f29203D2025f2C20errno203D2025i0A#
+	mov qword [rbp + 64], @10807$string_pow2825f2C2025f29203D2025f2C20errno203D2025i0A#
 
  math_test_2$40:
 	; PushFloat x
@@ -2991,10 +2991,10 @@ section .text
 	; PostCall 88
 
  math_test_2$51:
-	; GetReturnValue £temporary3664
+	; GetReturnValue £temporary3548
 
  math_test_2$52:
-	; Parameter 88 double £temporary3664
+	; Parameter 88 double £temporary3548
 	fstp qword [rbp + 88]
 
  math_test_2$53:
@@ -3023,7 +3023,7 @@ section .text
 
  math_test_2$58:
 	; Parameter 64 pointer "\n"
-	mov qword [rbp + 64], @10902$string_0A#
+	mov qword [rbp + 64], @10810$string_0A#
 
  math_test_2$59:
 	; Call 40 printf 0
@@ -3041,7 +3041,7 @@ section .text
 
  math_test_2$62:
 	; Parameter 64 pointer "ldexp(%f, %i) = %f\n\n"
-	mov qword [rbp + 64], @10903$string_ldexp2825f2C2025i29203D2025f0A0A#
+	mov qword [rbp + 64], @10811$string_ldexp2825f2C2025i29203D2025f0A0A#
 
  math_test_2$63:
 	; PushFloat x
@@ -3056,12 +3056,12 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$66:
-	; FloatingToIntegral £temporary3667 y
+	; FloatingToIntegral £temporary3551 y
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  math_test_2$67:
-	; Parameter 80 signedint £temporary3667
+	; Parameter 80 signedint £temporary3551
 	mov [rbp + 80], eax
 
  math_test_2$68:
@@ -3080,12 +3080,12 @@ section .text
 	fld qword [rbp + 32]
 
  math_test_2$72:
-	; FloatingToIntegral £temporary3668 y
+	; FloatingToIntegral £temporary3552 y
 	fistp dword [container4bytes#]
 	mov eax, [container4bytes#]
 
  math_test_2$73:
-	; Parameter 116 signedint £temporary3668
+	; Parameter 116 signedint £temporary3552
 	mov [rbp + 116], eax
 
  math_test_2$74:
@@ -3099,10 +3099,10 @@ section .text
 	; PostCall 84
 
  math_test_2$76:
-	; GetReturnValue £temporary3669
+	; GetReturnValue £temporary3553
 
  math_test_2$77:
-	; Parameter 84 double £temporary3669
+	; Parameter 84 double £temporary3553
 	fstp qword [rbp + 84]
 
  math_test_2$78:

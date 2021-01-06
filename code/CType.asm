@@ -922,15 +922,15 @@ section .text
 	and rax, rbx
 
  tolower$26:
-	; BinaryAdd £temporary222 lowerCase £temporary220
+	; BinaryAdd £temporary221 lowerCase £temporary220
 	mov rsi, [rbp + 36]
 	add rsi, rax
 
  tolower$27:
-	; Dereference £temporary219 -> £temporary222 £temporary222 0
+	; Dereference £temporary219 -> £temporary221 £temporary221 0
 
  tolower$28:
-	; IntegralToIntegral £temporary223 £temporary219 -> £temporary222
+	; IntegralToIntegral £temporary222 £temporary219 -> £temporary221
 	mov bl, [rsi]
 	and ebx, 255
 	cmp bl, 0
@@ -942,14 +942,14 @@ section .text
 	; SetReturnValue
 
  tolower$30:
-	; Return £temporary223
+	; Return £temporary222
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  tolower$31:
-	; BinaryAdd £temporary224 c 32
+	; BinaryAdd £temporary223 c 32
 	mov ebx, [rbp + 24]
 	add ebx, 32
 
@@ -957,7 +957,7 @@ section .text
 	; SetReturnValue
 
  tolower$33:
-	; Return £temporary224
+	; Return £temporary223
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -998,10 +998,10 @@ section .text
 	; PostCall 28
 
  toupper$4:
-	; GetReturnValue £temporary226
+	; GetReturnValue £temporary225
 
  toupper$5:
-	; Equal 34 £temporary226 0
+	; Equal 34 £temporary225 0
 	cmp ebx, 0
 	je toupper$34
 
@@ -1019,10 +1019,10 @@ section .text
 	; PostCall 28
 
  toupper$9:
-	; GetReturnValue £temporary227
+	; GetReturnValue £temporary226
 
  toupper$10:
-	; Assign localeConvPtr £temporary227
+	; Assign localeConvPtr £temporary226
 	mov [rbp + 28], rbx
 
  toupper$11:
@@ -1031,20 +1031,20 @@ section .text
 	je toupper$31
 
  toupper$12:
-	; Dereference £temporary229 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary228 -> localeConvPtr localeConvPtr 0
 	mov rsi, [rbp + 28]
 
  toupper$13:
-	; Assign lowerCase £temporary229 -> localeConvPtr
+	; Assign lowerCase £temporary228 -> localeConvPtr
 	mov rax, [rsi + 40]
 	mov [rbp + 36], rax
 
  toupper$14:
-	; Dereference £temporary230 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary229 -> localeConvPtr localeConvPtr 0
 	mov rsi, [rbp + 28]
 
  toupper$15:
-	; Assign upperCase £temporary230 -> localeConvPtr
+	; Assign upperCase £temporary229 -> localeConvPtr
 	mov rax, [rsi + 48]
 	mov [rbp + 44], rax
 
@@ -1072,35 +1072,35 @@ section .text
 	; PostCall 52
 
  toupper$21:
-	; GetReturnValue £temporary231
+	; GetReturnValue £temporary230
 
  toupper$22:
-	; BinarySubtract £temporary232 £temporary231 lowerCase
+	; BinarySubtract £temporary231 £temporary230 lowerCase
 	sub rbx, [rbp + 36]
 
  toupper$23:
-	; IntegralToIntegral £temporary233 £temporary232
+	; IntegralToIntegral £temporary232 £temporary231
 
  toupper$24:
-	; Assign index £temporary233
+	; Assign index £temporary232
 	mov [rbp + 52], ebx
 
  toupper$25:
-	; IntegralToIntegral £temporary235 index
+	; IntegralToIntegral £temporary234 index
 	mov eax, [rbp + 52]
 	mov rbx, 4294967295
 	and rax, rbx
 
  toupper$26:
-	; BinaryAdd £temporary237 upperCase £temporary235
+	; BinaryAdd £temporary235 upperCase £temporary234
 	mov rsi, [rbp + 44]
 	add rsi, rax
 
  toupper$27:
-	; Dereference £temporary234 -> £temporary237 £temporary237 0
+	; Dereference £temporary233 -> £temporary235 £temporary235 0
 
  toupper$28:
-	; IntegralToIntegral £temporary238 £temporary234 -> £temporary237
+	; IntegralToIntegral £temporary236 £temporary233 -> £temporary235
 	mov bl, [rsi]
 	and ebx, 255
 	cmp bl, 0
@@ -1112,14 +1112,14 @@ section .text
 	; SetReturnValue
 
  toupper$30:
-	; Return £temporary238
+	; Return £temporary236
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
  toupper$31:
-	; BinarySubtract £temporary239 c 32
+	; BinarySubtract £temporary237 c 32
 	mov ebx, [rbp + 24]
 	sub ebx, 32
 
@@ -1127,7 +1127,7 @@ section .text
 	; SetReturnValue
 
  toupper$33:
-	; Return £temporary239
+	; Return £temporary237
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]

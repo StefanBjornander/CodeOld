@@ -1,45 +1,45 @@
 0: PreCall 52
 1: Call 52 localeconv 0
 2: PostCall 52
-3: GetReturnValue £temporary2675
-4: Assign localeConvPtr £temporary2675
+3: GetReturnValue £temporary2631
+4: Assign localeConvPtr £temporary2631
 5: NotEqual 7 localeConvPtr 0
 6: Jump 13
-7: Dereference £temporary2677 -> localeConvPtr localeConvPtr 0
-8: NotEqual 10 £temporary2677 -> localeConvPtr 0
+7: Dereference £temporary2633 -> localeConvPtr localeConvPtr 0
+8: NotEqual 10 £temporary2633 -> localeConvPtr 0
 9: Jump 13
-10: Dereference £temporary2680 -> localeConvPtr localeConvPtr 0
-11: Assign shortDayList £temporary2680 -> localeConvPtr
+10: Dereference £temporary2636 -> localeConvPtr localeConvPtr 0
+11: Assign shortDayList £temporary2636 -> localeConvPtr
 12: Jump 15
 13: Assign shortDayList g_shortDayList
 14: Jump 15
 15: NotEqual 17 localeConvPtr 0
 16: Jump 23
-17: Dereference £temporary2682 -> localeConvPtr localeConvPtr 0
-18: NotEqual 20 £temporary2682 -> localeConvPtr 0
+17: Dereference £temporary2638 -> localeConvPtr localeConvPtr 0
+18: NotEqual 20 £temporary2638 -> localeConvPtr 0
 19: Jump 23
-20: Dereference £temporary2685 -> localeConvPtr localeConvPtr 0
-21: Assign longDayList £temporary2685 -> localeConvPtr
+20: Dereference £temporary2641 -> localeConvPtr localeConvPtr 0
+21: Assign longDayList £temporary2641 -> localeConvPtr
 22: Jump 25
 23: Assign longDayList g_longDayList
 24: Jump 25
 25: NotEqual 27 localeConvPtr 0
 26: Jump 33
-27: Dereference £temporary2687 -> localeConvPtr localeConvPtr 0
-28: NotEqual 30 £temporary2687 -> localeConvPtr 0
+27: Dereference £temporary2643 -> localeConvPtr localeConvPtr 0
+28: NotEqual 30 £temporary2643 -> localeConvPtr 0
 29: Jump 33
-30: Dereference £temporary2690 -> localeConvPtr localeConvPtr 0
-31: Assign shortMonthList £temporary2690 -> localeConvPtr
+30: Dereference £temporary2646 -> localeConvPtr localeConvPtr 0
+31: Assign shortMonthList £temporary2646 -> localeConvPtr
 32: Jump 35
 33: Assign shortMonthList g_shortMonthList
 34: Jump 35
 35: NotEqual 37 localeConvPtr 0
 36: Jump 43
-37: Dereference £temporary2692 -> localeConvPtr localeConvPtr 0
-38: NotEqual 40 £temporary2692 -> localeConvPtr 0
+37: Dereference £temporary2648 -> localeConvPtr localeConvPtr 0
+38: NotEqual 40 £temporary2648 -> localeConvPtr 0
 39: Jump 43
-40: Dereference £temporary2695 -> localeConvPtr localeConvPtr 0
-41: Assign longMonthList £temporary2695 -> localeConvPtr
+40: Dereference £temporary2651 -> localeConvPtr localeConvPtr 0
+41: Assign longMonthList £temporary2651 -> localeConvPtr
 42: Jump 45
 43: Assign longMonthList g_longMonthList
 44: Jump 45
@@ -52,318 +52,314 @@
 51: Assign weekNumberStartMonday 0
 52: Assign index 0
 53: Empty
-54: IntegralToIntegral £temporary2698 index
-55: UnsignedMultiply £temporary2699 £temporary2698 1
-56: BinaryAdd £temporary2700 format £temporary2699
-57: Dereference £temporary2697 -> £temporary2700 £temporary2700 0
-58: NotEqual 60 £temporary2697 -> £temporary2700 0
-59: Jump 360
-60: IntegralToIntegral £temporary2704 index
-61: UnsignedMultiply £temporary2705 £temporary2704 1
-62: BinaryAdd £temporary2706 format £temporary2705
-63: Dereference £temporary2703 -> £temporary2706 £temporary2706 0
-64: Equal 66 £temporary2703 -> £temporary2706 37
-65: Jump 325
-66: BinaryAdd index index 1
-67: Assign £temporary2708 index
-68: IntegralToIntegral £temporary2710 £temporary2708
-69: UnsignedMultiply £temporary2711 £temporary2710 1
-70: BinaryAdd £temporary2712 format £temporary2711
-71: Dereference £temporary2709 -> £temporary2712 £temporary2712 0
-72: Case 96 £temporary2709 -> £temporary2712 97
-73: Case 107 £temporary2709 -> £temporary2712 65
-74: Case 118 £temporary2709 -> £temporary2712 98
-75: Case 129 £temporary2709 -> £temporary2712 66
-76: Case 140 £temporary2709 -> £temporary2712 99
-77: Case 160 £temporary2709 -> £temporary2712 100
-78: Case 168 £temporary2709 -> £temporary2712 72
-79: Case 176 £temporary2709 -> £temporary2712 73
-80: Case 185 £temporary2709 -> £temporary2712 106
-81: Case 193 £temporary2709 -> £temporary2712 109
-82: Case 202 £temporary2709 -> £temporary2712 77
-83: Case 210 £temporary2709 -> £temporary2712 112
-84: Case 226 £temporary2709 -> £temporary2712 83
-85: Case 234 £temporary2709 -> £temporary2712 85
-86: Case 241 £temporary2709 -> £temporary2712 119
-87: Case 249 £temporary2709 -> £temporary2712 87
-88: Case 256 £temporary2709 -> £temporary2712 120
-89: Case 268 £temporary2709 -> £temporary2712 88
-90: Case 280 £temporary2709 -> £temporary2712 121
-91: Case 289 £temporary2709 -> £temporary2712 89
-92: Case 298 £temporary2709 -> £temporary2712 90
-93: Case 313 £temporary2709 -> £temporary2712 37
-94: CaseEnd £temporary2709 -> £temporary2712
-95: Jump 318
-96: PreCall 124
-97: Parameter 148 pointer add
-98: Dereference £temporary2713 -> tp tp 0
-99: IntegralToIntegral £temporary2715 £temporary2713 -> tp
-100: UnsignedMultiply £temporary2716 £temporary2715 8
-101: BinaryAdd £temporary2717 shortDayList £temporary2716
-102: Dereference £temporary2714 -> £temporary2717 £temporary2717 0
-103: Parameter 156 pointer £temporary2714 -> £temporary2717
-104: Call 124 strcpy 0
-105: PostCall 124
-106: Jump 334
-107: PreCall 124
-108: Parameter 148 pointer add
-109: Dereference £temporary2719 -> tp tp 0
-110: IntegralToIntegral £temporary2721 £temporary2719 -> tp
-111: UnsignedMultiply £temporary2722 £temporary2721 8
-112: BinaryAdd £temporary2723 longDayList £temporary2722
-113: Dereference £temporary2720 -> £temporary2723 £temporary2723 0
-114: Parameter 156 pointer £temporary2720 -> £temporary2723
-115: Call 124 strcpy 0
-116: PostCall 124
-117: Jump 334
-118: PreCall 124
-119: Parameter 148 pointer add
-120: Dereference £temporary2725 -> tp tp 0
-121: IntegralToIntegral £temporary2727 £temporary2725 -> tp
-122: UnsignedMultiply £temporary2728 £temporary2727 8
-123: BinaryAdd £temporary2729 shortMonthList £temporary2728
-124: Dereference £temporary2726 -> £temporary2729 £temporary2729 0
-125: Parameter 156 pointer £temporary2726 -> £temporary2729
-126: Call 124 strcpy 0
-127: PostCall 124
-128: Jump 334
-129: PreCall 124
-130: Parameter 148 pointer add
-131: Dereference £temporary2731 -> tp tp 0
-132: IntegralToIntegral £temporary2733 £temporary2731 -> tp
-133: UnsignedMultiply £temporary2734 £temporary2733 8
-134: BinaryAdd £temporary2735 longMonthList £temporary2734
-135: Dereference £temporary2732 -> £temporary2735 £temporary2735 0
-136: Parameter 156 pointer £temporary2732 -> £temporary2735
-137: Call 124 strcpy 0
-138: PostCall 124
-139: Jump 334
-140: PreCall 124
-141: Parameter 148 pointer add
-142: Parameter 156 pointer "%02i-%02i-%02i %02i:%02i:%02i"
-143: Dereference £temporary2737 -> tp tp 0
-144: BinaryAdd £temporary2738 1900 £temporary2737 -> tp
-145: Parameter 164 signedint £temporary2738
-146: Dereference £temporary2739 -> tp tp 0
-147: BinaryAdd £temporary2740 £temporary2739 -> tp 1
-148: Parameter 168 signedint £temporary2740
-149: Dereference £temporary2741 -> tp tp 0
-150: Parameter 172 signedint £temporary2741 -> tp
-151: Dereference £temporary2742 -> tp tp 0
-152: Parameter 176 signedint £temporary2742 -> tp
-153: Dereference £temporary2743 -> tp tp 0
-154: Parameter 180 signedint £temporary2743 -> tp
-155: Dereference £temporary2744 -> tp tp 0
-156: Parameter 184 signedint £temporary2744 -> tp
-157: Call 124 sprintf 24
-158: PostCall 124
-159: Jump 334
-160: PreCall 124
-161: Parameter 148 pointer add
-162: Parameter 156 pointer "%02i"
-163: Dereference £temporary2746 -> tp tp 0
-164: Parameter 164 signedint £temporary2746 -> tp
-165: Call 124 sprintf 4
-166: PostCall 124
-167: Jump 334
-168: PreCall 124
-169: Parameter 148 pointer add
-170: Parameter 156 pointer "%02i"
-171: Dereference £temporary2748 -> tp tp 0
-172: Parameter 164 signedint £temporary2748 -> tp
-173: Call 124 sprintf 4
-174: PostCall 124
-175: Jump 334
-176: PreCall 124
-177: Parameter 148 pointer add
-178: Parameter 156 pointer "%02i"
-179: Dereference £temporary2750 -> tp tp 0
-180: SignedModulo £temporary2751 £temporary2750 -> tp 12
-181: Parameter 164 signedint £temporary2751
-182: Call 124 sprintf 4
-183: PostCall 124
-184: Jump 334
-185: PreCall 124
-186: Parameter 148 pointer add
-187: Parameter 156 pointer "%03i"
-188: Dereference £temporary2753 -> tp tp 0
-189: Parameter 164 signedint £temporary2753 -> tp
-190: Call 124 sprintf 4
-191: PostCall 124
-192: Jump 334
-193: PreCall 124
-194: Parameter 148 pointer add
-195: Parameter 156 pointer "%02i"
-196: Dereference £temporary2755 -> tp tp 0
-197: BinaryAdd £temporary2756 £temporary2755 -> tp 1
-198: Parameter 164 signedint £temporary2756
-199: Call 124 sprintf 4
-200: PostCall 124
-201: Jump 334
-202: PreCall 124
-203: Parameter 148 pointer add
-204: Parameter 156 pointer "%02i"
-205: Dereference £temporary2758 -> tp tp 0
-206: Parameter 164 signedint £temporary2758 -> tp
-207: Call 124 sprintf 4
-208: PostCall 124
-209: Jump 334
-210: PreCall 124
-211: Parameter 148 pointer add
-212: Parameter 156 pointer "%s"
-213: Dereference £temporary2760 -> tp tp 0
-214: SignedLessThan 216 £temporary2760 -> tp 12
-215: Jump 219
+54: IntegralToIntegral £temporary2654 index
+55: BinaryAdd £temporary2655 format £temporary2654
+56: Dereference £temporary2653 -> £temporary2655 £temporary2655 0
+57: NotEqual 59 £temporary2653 -> £temporary2655 0
+58: Jump 356
+59: IntegralToIntegral £temporary2659 index
+60: BinaryAdd £temporary2660 format £temporary2659
+61: Dereference £temporary2658 -> £temporary2660 £temporary2660 0
+62: Equal 64 £temporary2658 -> £temporary2660 37
+63: Jump 322
+64: BinaryAdd index index 1
+65: Assign £temporary2662 index
+66: IntegralToIntegral £temporary2664 £temporary2662
+67: BinaryAdd £temporary2665 format £temporary2664
+68: Dereference £temporary2663 -> £temporary2665 £temporary2665 0
+69: Case 93 £temporary2663 -> £temporary2665 97
+70: Case 104 £temporary2663 -> £temporary2665 65
+71: Case 115 £temporary2663 -> £temporary2665 98
+72: Case 126 £temporary2663 -> £temporary2665 66
+73: Case 137 £temporary2663 -> £temporary2665 99
+74: Case 157 £temporary2663 -> £temporary2665 100
+75: Case 165 £temporary2663 -> £temporary2665 72
+76: Case 173 £temporary2663 -> £temporary2665 73
+77: Case 182 £temporary2663 -> £temporary2665 106
+78: Case 190 £temporary2663 -> £temporary2665 109
+79: Case 199 £temporary2663 -> £temporary2665 77
+80: Case 207 £temporary2663 -> £temporary2665 112
+81: Case 223 £temporary2663 -> £temporary2665 83
+82: Case 231 £temporary2663 -> £temporary2665 85
+83: Case 238 £temporary2663 -> £temporary2665 119
+84: Case 246 £temporary2663 -> £temporary2665 87
+85: Case 253 £temporary2663 -> £temporary2665 120
+86: Case 265 £temporary2663 -> £temporary2665 88
+87: Case 277 £temporary2663 -> £temporary2665 121
+88: Case 286 £temporary2663 -> £temporary2665 89
+89: Case 295 £temporary2663 -> £temporary2665 90
+90: Case 310 £temporary2663 -> £temporary2665 37
+91: CaseEnd £temporary2663 -> £temporary2665
+92: Jump 315
+93: PreCall 124
+94: Parameter 148 pointer add
+95: Dereference £temporary2666 -> tp tp 0
+96: UnsignedMultiply £temporary2668 £temporary2666 -> tp 8
+97: IntegralToIntegral £temporary2669 £temporary2668
+98: BinaryAdd £temporary2670 shortDayList £temporary2669
+99: Dereference £temporary2667 -> £temporary2670 £temporary2670 0
+100: Parameter 156 pointer £temporary2667 -> £temporary2670
+101: Call 124 strcpy 0
+102: PostCall 124
+103: Jump 330
+104: PreCall 124
+105: Parameter 148 pointer add
+106: Dereference £temporary2672 -> tp tp 0
+107: UnsignedMultiply £temporary2674 £temporary2672 -> tp 8
+108: IntegralToIntegral £temporary2675 £temporary2674
+109: BinaryAdd £temporary2676 longDayList £temporary2675
+110: Dereference £temporary2673 -> £temporary2676 £temporary2676 0
+111: Parameter 156 pointer £temporary2673 -> £temporary2676
+112: Call 124 strcpy 0
+113: PostCall 124
+114: Jump 330
+115: PreCall 124
+116: Parameter 148 pointer add
+117: Dereference £temporary2678 -> tp tp 0
+118: UnsignedMultiply £temporary2680 £temporary2678 -> tp 8
+119: IntegralToIntegral £temporary2681 £temporary2680
+120: BinaryAdd £temporary2682 shortMonthList £temporary2681
+121: Dereference £temporary2679 -> £temporary2682 £temporary2682 0
+122: Parameter 156 pointer £temporary2679 -> £temporary2682
+123: Call 124 strcpy 0
+124: PostCall 124
+125: Jump 330
+126: PreCall 124
+127: Parameter 148 pointer add
+128: Dereference £temporary2684 -> tp tp 0
+129: UnsignedMultiply £temporary2686 £temporary2684 -> tp 8
+130: IntegralToIntegral £temporary2687 £temporary2686
+131: BinaryAdd £temporary2688 longMonthList £temporary2687
+132: Dereference £temporary2685 -> £temporary2688 £temporary2688 0
+133: Parameter 156 pointer £temporary2685 -> £temporary2688
+134: Call 124 strcpy 0
+135: PostCall 124
+136: Jump 330
+137: PreCall 124
+138: Parameter 148 pointer add
+139: Parameter 156 pointer "%02i-%02i-%02i %02i:%02i:%02i"
+140: Dereference £temporary2690 -> tp tp 0
+141: BinaryAdd £temporary2691 1900 £temporary2690 -> tp
+142: Parameter 164 signedint £temporary2691
+143: Dereference £temporary2692 -> tp tp 0
+144: BinaryAdd £temporary2693 £temporary2692 -> tp 1
+145: Parameter 168 signedint £temporary2693
+146: Dereference £temporary2694 -> tp tp 0
+147: Parameter 172 signedint £temporary2694 -> tp
+148: Dereference £temporary2695 -> tp tp 0
+149: Parameter 176 signedint £temporary2695 -> tp
+150: Dereference £temporary2696 -> tp tp 0
+151: Parameter 180 signedint £temporary2696 -> tp
+152: Dereference £temporary2697 -> tp tp 0
+153: Parameter 184 signedint £temporary2697 -> tp
+154: Call 124 sprintf 24
+155: PostCall 124
+156: Jump 330
+157: PreCall 124
+158: Parameter 148 pointer add
+159: Parameter 156 pointer "%02i"
+160: Dereference £temporary2699 -> tp tp 0
+161: Parameter 164 signedint £temporary2699 -> tp
+162: Call 124 sprintf 4
+163: PostCall 124
+164: Jump 330
+165: PreCall 124
+166: Parameter 148 pointer add
+167: Parameter 156 pointer "%02i"
+168: Dereference £temporary2701 -> tp tp 0
+169: Parameter 164 signedint £temporary2701 -> tp
+170: Call 124 sprintf 4
+171: PostCall 124
+172: Jump 330
+173: PreCall 124
+174: Parameter 148 pointer add
+175: Parameter 156 pointer "%02i"
+176: Dereference £temporary2703 -> tp tp 0
+177: SignedModulo £temporary2704 £temporary2703 -> tp 12
+178: Parameter 164 signedint £temporary2704
+179: Call 124 sprintf 4
+180: PostCall 124
+181: Jump 330
+182: PreCall 124
+183: Parameter 148 pointer add
+184: Parameter 156 pointer "%03i"
+185: Dereference £temporary2706 -> tp tp 0
+186: Parameter 164 signedint £temporary2706 -> tp
+187: Call 124 sprintf 4
+188: PostCall 124
+189: Jump 330
+190: PreCall 124
+191: Parameter 148 pointer add
+192: Parameter 156 pointer "%02i"
+193: Dereference £temporary2708 -> tp tp 0
+194: BinaryAdd £temporary2709 £temporary2708 -> tp 1
+195: Parameter 164 signedint £temporary2709
+196: Call 124 sprintf 4
+197: PostCall 124
+198: Jump 330
+199: PreCall 124
+200: Parameter 148 pointer add
+201: Parameter 156 pointer "%02i"
+202: Dereference £temporary2711 -> tp tp 0
+203: Parameter 164 signedint £temporary2711 -> tp
+204: Call 124 sprintf 4
+205: PostCall 124
+206: Jump 330
+207: PreCall 124
+208: Parameter 148 pointer add
+209: Parameter 156 pointer "%s"
+210: Dereference £temporary2713 -> tp tp 0
+211: SignedLessThan 213 £temporary2713 -> tp 12
+212: Jump 216
+213: Empty
+214: Assign £temporary2715 "AM"
+215: Jump 218
 216: Empty
-217: Assign £temporary2762 "AM"
-218: Jump 221
-219: Empty
-220: Assign £temporary2762 "PM"
-221: Empty
-222: Parameter 164 pointer £temporary2762
-223: Call 124 sprintf 8
-224: PostCall 124
-225: Jump 334
-226: PreCall 124
-227: Parameter 148 pointer add
-228: Parameter 156 pointer "%02i"
-229: Dereference £temporary2764 -> tp tp 0
-230: Parameter 164 signedint £temporary2764 -> tp
-231: Call 124 sprintf 4
-232: PostCall 124
-233: Jump 334
-234: PreCall 124
-235: Parameter 148 pointer add
-236: Parameter 156 pointer "%02i"
-237: Parameter 164 signedint weekNumberStartSunday
-238: Call 124 sprintf 4
-239: PostCall 124
-240: Jump 334
-241: PreCall 124
-242: Parameter 148 pointer add
-243: Parameter 156 pointer "%02i"
-244: Dereference £temporary2767 -> tp tp 0
-245: Parameter 164 signedint £temporary2767 -> tp
-246: Call 124 sprintf 4
-247: PostCall 124
-248: Jump 334
-249: PreCall 124
-250: Parameter 148 pointer add
-251: Parameter 156 pointer "%02i"
-252: Parameter 164 signedint weekNumberStartMonday
-253: Call 124 sprintf 4
-254: PostCall 124
-255: Jump 334
-256: PreCall 124
-257: Parameter 148 pointer add
-258: Parameter 156 pointer "%02i:%02i:%02i"
-259: Dereference £temporary2770 -> tp tp 0
-260: Parameter 164 signedint £temporary2770 -> tp
-261: Dereference £temporary2771 -> tp tp 0
-262: Parameter 168 signedint £temporary2771 -> tp
-263: Dereference £temporary2772 -> tp tp 0
-264: Parameter 172 signedint £temporary2772 -> tp
-265: Call 124 sprintf 12
-266: PostCall 124
-267: Jump 334
-268: PreCall 124
-269: Parameter 148 pointer add
-270: Parameter 156 pointer "%02i:%02i:%02i"
-271: Dereference £temporary2774 -> tp tp 0
-272: Parameter 164 signedint £temporary2774 -> tp
-273: Dereference £temporary2775 -> tp tp 0
-274: Parameter 168 signedint £temporary2775 -> tp
-275: Dereference £temporary2776 -> tp tp 0
-276: Parameter 172 signedint £temporary2776 -> tp
-277: Call 124 sprintf 12
-278: PostCall 124
-279: Jump 334
-280: PreCall 124
-281: Parameter 148 pointer add
-282: Parameter 156 pointer "%02i"
-283: Dereference £temporary2778 -> tp tp 0
-284: SignedModulo £temporary2779 £temporary2778 -> tp 100
-285: Parameter 164 signedint £temporary2779
-286: Call 124 sprintf 4
-287: PostCall 124
-288: Jump 334
-289: PreCall 124
-290: Parameter 148 pointer add
-291: Parameter 156 pointer "%02i"
-292: Dereference £temporary2781 -> tp tp 0
-293: BinaryAdd £temporary2782 1900 £temporary2781 -> tp
-294: Parameter 164 signedint £temporary2782
-295: Call 124 sprintf 4
-296: PostCall 124
-297: Jump 334
-298: PreCall 124
-299: Parameter 148 pointer add
-300: Dereference £temporary2784 -> tp tp 0
-301: NotEqual 303 £temporary2784 -> tp 0
-302: Jump 306
+217: Assign £temporary2715 "PM"
+218: Empty
+219: Parameter 164 pointer £temporary2715
+220: Call 124 sprintf 8
+221: PostCall 124
+222: Jump 330
+223: PreCall 124
+224: Parameter 148 pointer add
+225: Parameter 156 pointer "%02i"
+226: Dereference £temporary2717 -> tp tp 0
+227: Parameter 164 signedint £temporary2717 -> tp
+228: Call 124 sprintf 4
+229: PostCall 124
+230: Jump 330
+231: PreCall 124
+232: Parameter 148 pointer add
+233: Parameter 156 pointer "%02i"
+234: Parameter 164 signedint weekNumberStartSunday
+235: Call 124 sprintf 4
+236: PostCall 124
+237: Jump 330
+238: PreCall 124
+239: Parameter 148 pointer add
+240: Parameter 156 pointer "%02i"
+241: Dereference £temporary2720 -> tp tp 0
+242: Parameter 164 signedint £temporary2720 -> tp
+243: Call 124 sprintf 4
+244: PostCall 124
+245: Jump 330
+246: PreCall 124
+247: Parameter 148 pointer add
+248: Parameter 156 pointer "%02i"
+249: Parameter 164 signedint weekNumberStartMonday
+250: Call 124 sprintf 4
+251: PostCall 124
+252: Jump 330
+253: PreCall 124
+254: Parameter 148 pointer add
+255: Parameter 156 pointer "%02i:%02i:%02i"
+256: Dereference £temporary2723 -> tp tp 0
+257: Parameter 164 signedint £temporary2723 -> tp
+258: Dereference £temporary2724 -> tp tp 0
+259: Parameter 168 signedint £temporary2724 -> tp
+260: Dereference £temporary2725 -> tp tp 0
+261: Parameter 172 signedint £temporary2725 -> tp
+262: Call 124 sprintf 12
+263: PostCall 124
+264: Jump 330
+265: PreCall 124
+266: Parameter 148 pointer add
+267: Parameter 156 pointer "%02i:%02i:%02i"
+268: Dereference £temporary2727 -> tp tp 0
+269: Parameter 164 signedint £temporary2727 -> tp
+270: Dereference £temporary2728 -> tp tp 0
+271: Parameter 168 signedint £temporary2728 -> tp
+272: Dereference £temporary2729 -> tp tp 0
+273: Parameter 172 signedint £temporary2729 -> tp
+274: Call 124 sprintf 12
+275: PostCall 124
+276: Jump 330
+277: PreCall 124
+278: Parameter 148 pointer add
+279: Parameter 156 pointer "%02i"
+280: Dereference £temporary2731 -> tp tp 0
+281: SignedModulo £temporary2732 £temporary2731 -> tp 100
+282: Parameter 164 signedint £temporary2732
+283: Call 124 sprintf 4
+284: PostCall 124
+285: Jump 330
+286: PreCall 124
+287: Parameter 148 pointer add
+288: Parameter 156 pointer "%02i"
+289: Dereference £temporary2734 -> tp tp 0
+290: BinaryAdd £temporary2735 1900 £temporary2734 -> tp
+291: Parameter 164 signedint £temporary2735
+292: Call 124 sprintf 4
+293: PostCall 124
+294: Jump 330
+295: PreCall 124
+296: Parameter 148 pointer add
+297: Dereference £temporary2737 -> tp tp 0
+298: NotEqual 300 £temporary2737 -> tp 0
+299: Jump 303
+300: Empty
+301: Assign £temporary2739 "summer"
+302: Jump 305
 303: Empty
-304: Assign £temporary2786 "summer"
-305: Jump 308
-306: Empty
-307: Assign £temporary2786 "winter"
-308: Empty
-309: Parameter 156 pointer £temporary2786
-310: Call 124 strcpy 0
-311: PostCall 124
-312: Jump 334
-313: PreCall 124
-314: Parameter 148 pointer add
-315: Parameter 156 pointer "%"
-316: Call 124 strcpy 0
-317: PostCall 124
-318: PreCall 124
-319: Parameter 148 pointer add
-320: Parameter 156 pointer ""
-321: Call 124 strcpy 0
-322: PostCall 124
-323: Jump 334
-324: Jump 334
-325: Dereference £temporary2790 -> add add 0
-326: IntegralToIntegral £temporary2792 index
-327: UnsignedMultiply £temporary2793 £temporary2792 1
-328: BinaryAdd £temporary2794 format £temporary2793
-329: Dereference £temporary2791 -> £temporary2794 £temporary2794 0
-330: Assign £temporary2790 -> add £temporary2791 -> £temporary2794
-331: Dereference £temporary2795 -> add add 0
-332: Assign £temporary2795 -> add 0
-333: Jump 334
-334: PreCall 124
-335: Parameter 148 pointer result
-336: Call 124 strlen 0
-337: PostCall 124
-338: GetReturnValue £temporary2796
-339: Assign x £temporary2796
-340: PreCall 128
-341: Parameter 152 pointer add
-342: Call 128 strlen 0
-343: PostCall 128
-344: GetReturnValue £temporary2797
-345: Assign y £temporary2797
-346: BinaryAdd £temporary2798 x y
-347: SignedLessThan 349 £temporary2798 maxSize
-348: Jump 355
-349: PreCall 132
-350: Parameter 156 pointer result
-351: Parameter 164 pointer add
-352: Call 132 strcat 0
-353: PostCall 132
-354: Jump 357
-355: Jump 360
-356: Jump 357
-357: Empty
-358: BinaryAdd index index 1
-359: Jump 53
-360: PreCall 92
-361: Parameter 116 pointer result
-362: Call 92 strlen 0
-363: PostCall 92
-364: GetReturnValue £temporary2801
-365: SetReturnValue
-366: Return £temporary2801
-367: Empty
-368: FunctionEnd strftime
+304: Assign £temporary2739 "winter"
+305: Empty
+306: Parameter 156 pointer £temporary2739
+307: Call 124 strcpy 0
+308: PostCall 124
+309: Jump 330
+310: PreCall 124
+311: Parameter 148 pointer add
+312: Parameter 156 pointer "%"
+313: Call 124 strcpy 0
+314: PostCall 124
+315: PreCall 124
+316: Parameter 148 pointer add
+317: Parameter 156 pointer ""
+318: Call 124 strcpy 0
+319: PostCall 124
+320: Jump 330
+321: Jump 330
+322: Dereference £temporary2743 -> add add 0
+323: IntegralToIntegral £temporary2745 index
+324: BinaryAdd £temporary2746 format £temporary2745
+325: Dereference £temporary2744 -> £temporary2746 £temporary2746 0
+326: Assign £temporary2743 -> add £temporary2744 -> £temporary2746
+327: Dereference £temporary2747 -> add add 0
+328: Assign £temporary2747 -> add 0
+329: Jump 330
+330: PreCall 124
+331: Parameter 148 pointer result
+332: Call 124 strlen 0
+333: PostCall 124
+334: GetReturnValue £temporary2748
+335: Assign x £temporary2748
+336: PreCall 128
+337: Parameter 152 pointer add
+338: Call 128 strlen 0
+339: PostCall 128
+340: GetReturnValue £temporary2749
+341: Assign y £temporary2749
+342: BinaryAdd £temporary2750 x y
+343: SignedLessThan 345 £temporary2750 maxSize
+344: Jump 351
+345: PreCall 132
+346: Parameter 156 pointer result
+347: Parameter 164 pointer add
+348: Call 132 strcat 0
+349: PostCall 132
+350: Jump 353
+351: Jump 356
+352: Jump 353
+353: Empty
+354: BinaryAdd index index 1
+355: Jump 53
+356: PreCall 92
+357: Parameter 116 pointer result
+358: Call 92 strlen 0
+359: PostCall 92
+360: GetReturnValue £temporary2753
+361: SetReturnValue
+362: Return £temporary2753
+363: Empty
+364: FunctionEnd strftime
