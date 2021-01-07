@@ -51,7 +51,7 @@ section .text
 	mov [rbp + 44], eax
 
  compare$6:
-	; SignedGreaterThanEqual 9 intValue1 intValue2
+	; GreaterThanEqual 9 intValue1 intValue2
 	mov eax, [rbp + 44]
 	cmp [rbp + 40], eax
 	jge compare$9
@@ -122,7 +122,7 @@ section .text
 	mov [rbp + 44], eax
 
  reverse_compare$6:
-	; SignedGreaterThanEqual 9 intValue1 intValue2
+	; GreaterThanEqual 9 intValue1 intValue2
 	mov eax, [rbp + 44]
 	cmp [rbp + 40], eax
 	jge reverse_compare$9
@@ -1390,7 +1390,7 @@ section .text
 	mov dword [rbp + 44], 0
 
  stdlib_test$139:
-	; SignedGreaterThanEqual 151 index size
+	; GreaterThanEqual 151 index size
 	mov eax, [rbp + 40]
 	cmp [rbp + 44], eax
 	jge stdlib_test$151
@@ -1403,7 +1403,7 @@ section .text
 	mov qword [rbp + 72], @13656$string_25i20#
 
  stdlib_test$142:
-	; SignedMultiply £temporary4203 index 4
+	; Multiply £temporary4203 index 4
 	mov eax, [rbp + 44]
 	xor edx, edx
 	imul dword [@13658$int4$4#]
@@ -1501,7 +1501,7 @@ section .text
 	mov dword [rbp + 44], 0
 
  stdlib_test$163:
-	; SignedGreaterThanEqual 175 index size
+	; GreaterThanEqual 175 index size
 	mov eax, [rbp + 40]
 	cmp [rbp + 44], eax
 	jge stdlib_test$175
@@ -1514,7 +1514,7 @@ section .text
 	mov qword [rbp + 72], @13667$string_25i20#
 
  stdlib_test$166:
-	; SignedMultiply £temporary4213 index 4
+	; Multiply £temporary4213 index 4
 	mov eax, [rbp + 44]
 	xor edx, edx
 	imul dword [@13669$int4$4#]
@@ -1612,7 +1612,7 @@ section .text
 	mov dword [rbp + 44], 0
 
  stdlib_test$187:
-	; SignedGreaterThanEqual 199 index size
+	; GreaterThanEqual 199 index size
 	mov eax, [rbp + 40]
 	cmp [rbp + 44], eax
 	jge stdlib_test$199
@@ -1625,7 +1625,7 @@ section .text
 	mov qword [rbp + 72], @13678$string_25i20#
 
  stdlib_test$190:
-	; SignedMultiply £temporary4223 index 4
+	; Multiply £temporary4223 index 4
 	mov eax, [rbp + 44]
 	xor edx, edx
 	imul dword [@13680$int4$4#]
@@ -1692,7 +1692,7 @@ section .text
 	mov dword [rbp + 44], 0
 
  stdlib_test$204:
-	; SignedGreaterThanEqual 232 key 6
+	; GreaterThanEqual 232 key 6
 	cmp dword [rbp + 44], 6
 	jge stdlib_test$232
 
@@ -1762,7 +1762,7 @@ section .text
 	; IntegralToIntegral £temporary4237 £temporary4236
 
  stdlib_test$220:
-	; SignedDivide £temporary4239 £temporary4237 4
+	; Divide £temporary4239 £temporary4237 4
 	xor edx, edx
 	idiv dword [@13696$int4$4#]
 

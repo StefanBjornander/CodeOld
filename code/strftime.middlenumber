@@ -94,7 +94,7 @@
 93: PreCall 124
 94: Parameter 148 pointer add
 95: Dereference £temporary2666 -> tp tp 0
-96: SignedMultiply £temporary2668 £temporary2666 -> tp 8
+96: Multiply £temporary2668 £temporary2666 -> tp 8
 97: IntegralToIntegral £temporary2669 £temporary2668
 98: BinaryAdd £temporary2670 shortDayList £temporary2669
 99: Dereference £temporary2667 -> £temporary2670 £temporary2670 0
@@ -105,7 +105,7 @@
 104: PreCall 124
 105: Parameter 148 pointer add
 106: Dereference £temporary2672 -> tp tp 0
-107: SignedMultiply £temporary2674 £temporary2672 -> tp 8
+107: Multiply £temporary2674 £temporary2672 -> tp 8
 108: IntegralToIntegral £temporary2675 £temporary2674
 109: BinaryAdd £temporary2676 longDayList £temporary2675
 110: Dereference £temporary2673 -> £temporary2676 £temporary2676 0
@@ -116,7 +116,7 @@
 115: PreCall 124
 116: Parameter 148 pointer add
 117: Dereference £temporary2678 -> tp tp 0
-118: SignedMultiply £temporary2680 £temporary2678 -> tp 8
+118: Multiply £temporary2680 £temporary2678 -> tp 8
 119: IntegralToIntegral £temporary2681 £temporary2680
 120: BinaryAdd £temporary2682 shortMonthList £temporary2681
 121: Dereference £temporary2679 -> £temporary2682 £temporary2682 0
@@ -127,7 +127,7 @@
 126: PreCall 124
 127: Parameter 148 pointer add
 128: Dereference £temporary2684 -> tp tp 0
-129: SignedMultiply £temporary2686 £temporary2684 -> tp 8
+129: Multiply £temporary2686 £temporary2684 -> tp 8
 130: IntegralToIntegral £temporary2687 £temporary2686
 131: BinaryAdd £temporary2688 longMonthList £temporary2687
 132: Dereference £temporary2685 -> £temporary2688 £temporary2688 0
@@ -175,7 +175,7 @@
 174: Parameter 148 pointer add
 175: Parameter 156 pointer "%02i"
 176: Dereference £temporary2703 -> tp tp 0
-177: SignedModulo £temporary2704 £temporary2703 -> tp 12
+177: Modulo £temporary2704 £temporary2703 -> tp 12
 178: Parameter 164 signedint £temporary2704
 179: Call 124 sprintf 4
 180: PostCall 124
@@ -209,7 +209,7 @@
 208: Parameter 148 pointer add
 209: Parameter 156 pointer "%s"
 210: Dereference £temporary2713 -> tp tp 0
-211: SignedLessThan 213 £temporary2713 -> tp 12
+211: LessThan 213 £temporary2713 -> tp 12
 212: Jump 216
 213: Empty
 214: Assign £temporary2715 "AM"
@@ -279,7 +279,7 @@
 278: Parameter 148 pointer add
 279: Parameter 156 pointer "%02i"
 280: Dereference £temporary2731 -> tp tp 0
-281: SignedModulo £temporary2732 £temporary2731 -> tp 100
+281: Modulo £temporary2732 £temporary2731 -> tp 100
 282: Parameter 164 signedint £temporary2732
 283: Call 124 sprintf 4
 284: PostCall 124
@@ -341,7 +341,7 @@
 340: GetReturnValue £temporary2749
 341: Assign y £temporary2749
 342: BinaryAdd £temporary2750 x y
-343: SignedLessThan 345 £temporary2750 maxSize
+343: LessThan 345 £temporary2750 maxSize
 344: Jump 351
 345: PreCall 132
 346: Parameter 156 pointer result

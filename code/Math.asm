@@ -75,7 +75,7 @@ section .text
 	fld qword [rbp + 56]
 
  exp$10:
-	; SignedDivide £temporary259 power faculty
+	; Divide £temporary259 power faculty
 	fdiv
 
  exp$11:
@@ -107,7 +107,7 @@ section .text
 	fld qword [rbp + 24]
 
  exp$18:
-	; SignedMultiply £temporary261 power x
+	; Multiply £temporary261 power x
 	fmul
 
  exp$19:
@@ -135,7 +135,7 @@ section .text
 	fst qword [rbp + 32]
 
  exp$25:
-	; SignedMultiply £temporary263 faculty £temporary262
+	; Multiply £temporary263 faculty £temporary262
 	fmul
 
  exp$26:
@@ -171,7 +171,7 @@ section .text
 	fld qword [@1718$float8$0.000000001#]
 
  exp$34:
-	; SignedGreaterThanEqual 8 £temporary264 0.000000001
+	; GreaterThanEqual 8 £temporary264 0.000000001
 	fcompp
 	fstsw ax
 	sahf
@@ -241,7 +241,7 @@ section .text
 	fldz
 
  log$2:
-	; SignedLessThanEqual 76 x 0
+	; LessThanEqual 76 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -260,7 +260,7 @@ section .text
 	fld1
 
  log$6:
-	; SignedLessThanEqual 16 x 1
+	; LessThanEqual 16 x 1
 	fcompp
 	fstsw ax
 	sahf
@@ -275,7 +275,7 @@ section .text
 	fld1
 
  log$9:
-	; SignedLessThanEqual 28 x 1
+	; LessThanEqual 28 x 1
 	fcompp
 	fstsw ax
 	sahf
@@ -290,7 +290,7 @@ section .text
 	fld qword [@1731$float8$2.71#]
 
  log$12:
-	; SignedDivide £temporary270 x 2.71
+	; Divide £temporary270 x 2.71
 	fdiv
 
  log$13:
@@ -314,7 +314,7 @@ section .text
 	fld qword [@1734$float8$0.368#]
 
  log$18:
-	; SignedGreaterThanEqual 28 x 0.368
+	; GreaterThanEqual 28 x 0.368
 	fcompp
 	fstsw ax
 	sahf
@@ -329,7 +329,7 @@ section .text
 	fld qword [@1736$float8$0.368#]
 
  log$21:
-	; SignedGreaterThanEqual 28 x 0.368
+	; GreaterThanEqual 28 x 0.368
 	fcompp
 	fstsw ax
 	sahf
@@ -344,7 +344,7 @@ section .text
 	fld qword [@1738$float8$2.71#]
 
  log$24:
-	; SignedMultiply £temporary274 x 2.71
+	; Multiply £temporary274 x 2.71
 	fmul
 
  log$25:
@@ -416,7 +416,7 @@ section .text
 	fld qword [rbp + 76]
 
  log$42:
-	; SignedMultiply £temporary277 sign power
+	; Multiply £temporary277 sign power
 	fmul
 
  log$43:
@@ -444,7 +444,7 @@ section .text
 	fsub
 
  log$49:
-	; SignedDivide £temporary279 £temporary277 £temporary278
+	; Divide £temporary279 £temporary277 £temporary278
 	fdiv
 
  log$50:
@@ -476,7 +476,7 @@ section .text
 	fld qword [rbp + 68]
 
  log$57:
-	; SignedMultiply £temporary281 power x_minus_1
+	; Multiply £temporary281 power x_minus_1
 	fmul
 
  log$58:
@@ -492,7 +492,7 @@ section .text
 	fld qword [@1756$float8$minus1.0#]
 
  log$61:
-	; SignedMultiply £temporary282 sign -1.0
+	; Multiply £temporary282 sign -1.0
 	fmul
 
  log$62:
@@ -528,7 +528,7 @@ section .text
 	fld qword [@1758$float8$0.000000001#]
 
  log$70:
-	; SignedGreaterThanEqual 40 £temporary283 0.000000001
+	; GreaterThanEqual 40 £temporary283 0.000000001
 	fcompp
 	fstsw ax
 	sahf
@@ -614,7 +614,7 @@ section .text
 	fld qword [@1766$float8$2.30#]
 
  log10$7:
-	; SignedDivide £temporary289 £temporary288 2.30
+	; Divide £temporary289 £temporary288 2.30
 	fdiv
 
  log10$8:
@@ -653,7 +653,7 @@ section .text
 	fldz
 
  pow$2:
-	; SignedLessThanEqual 18 x 0
+	; LessThanEqual 18 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -695,7 +695,7 @@ section .text
 	; GetReturnValue £temporary292
 
  pow$11:
-	; SignedMultiply £temporary293 y £temporary292
+	; Multiply £temporary293 y £temporary292
 	fmul
 
  pow$12:
@@ -793,7 +793,7 @@ section .text
 	fldz
 
  pow$32:
-	; SignedLessThanEqual 36 y 0
+	; LessThanEqual 36 y 0
 	fcompp
 	fstsw ax
 	sahf
@@ -822,7 +822,7 @@ section .text
 	fldz
 
  pow$38:
-	; SignedGreaterThanEqual 90 x 0
+	; GreaterThanEqual 90 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -901,7 +901,7 @@ section .text
 	mov [rbp + 40], rax
 
  pow$55:
-	; SignedModulo £temporary307 long_y 2
+	; Modulo £temporary307 long_y 2
 	mov rax, [rbp + 40]
 	xor rdx, rdx
 	idiv qword [@1787$int8$2#]
@@ -951,7 +951,7 @@ section .text
 	; GetReturnValue £temporary310
 
  pow$66:
-	; SignedMultiply £temporary311 y £temporary310
+	; Multiply £temporary311 y £temporary310
 	fmul
 
  pow$67:
@@ -1021,7 +1021,7 @@ section .text
 	; GetReturnValue £temporary314
 
  pow$82:
-	; SignedMultiply £temporary315 y £temporary314
+	; Multiply £temporary315 y £temporary314
 	fmul
 
  pow$83:
@@ -1125,7 +1125,7 @@ section .text
 	; GetReturnValue £temporary327
 
  ldexp$9:
-	; SignedMultiply £temporary328 x £temporary327
+	; Multiply £temporary328 x £temporary327
 	fmul
 
  ldexp$10:
@@ -1184,7 +1184,7 @@ section .text
 	fld qword [@1800$float8$0.693#]
 
  @1798$log2$7:
-	; SignedDivide £temporary332 £temporary331 0.693
+	; Divide £temporary332 £temporary331 0.693
 	fdiv
 
  @1798$log2$8:
@@ -1322,7 +1322,7 @@ section .text
 	fld qword [rbp + 24]
 
  frexp$25:
-	; SignedGreaterThanEqual 27 £temporary340 x
+	; GreaterThanEqual 27 £temporary340 x
 	fcompp
 	fstsw ax
 	sahf
@@ -1387,7 +1387,7 @@ section .text
 	; GetReturnValue £temporary346
 
  frexp$39:
-	; SignedDivide £temporary347 x £temporary346
+	; Divide £temporary347 x £temporary346
 	fdiv
 
  frexp$40:
@@ -1453,7 +1453,7 @@ section .text
 	fldz
 
  sqrt$2:
-	; SignedLessThan 28 x 0
+	; LessThan 28 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -1488,7 +1488,7 @@ section .text
 	fld qword [rbp + 32]
 
  sqrt$10:
-	; SignedDivide £temporary357 x root_i
+	; Divide £temporary357 x root_i
 	fdiv
 
  sqrt$11:
@@ -1500,7 +1500,7 @@ section .text
 	fld qword [@1829$float8$2#]
 
  sqrt$13:
-	; SignedDivide £temporary359 £temporary358 2
+	; Divide £temporary359 £temporary358 2
 	fdiv
 
  sqrt$14:
@@ -1544,7 +1544,7 @@ section .text
 	fld qword [@1831$float8$0.000000001#]
 
  sqrt$24:
-	; SignedGreaterThanEqual 5 £temporary361 0.000000001
+	; GreaterThanEqual 5 £temporary361 0.000000001
 	fcompp
 	fstsw ax
 	sahf
@@ -1667,7 +1667,7 @@ section .text
 	fldz
 
  modf$19:
-	; SignedLessThanEqual 23 x 0
+	; LessThanEqual 23 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -1705,7 +1705,7 @@ section .text
 	fldz
 
  modf$28:
-	; SignedLessThanEqual 32 x 0
+	; LessThanEqual 32 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -1780,7 +1780,7 @@ section .text
 	fld qword [rbp + 32]
 
  fmod$8:
-	; SignedDivide £temporary378 x y
+	; Divide £temporary378 x y
 	fdiv
 
  fmod$9:
@@ -1794,7 +1794,7 @@ section .text
 	fild dword [container4bytes#]
 
  fmod$11:
-	; SignedMultiply £temporary381 y £temporary380
+	; Multiply £temporary381 y £temporary380
 	fmul
 
  fmod$12:
@@ -1831,7 +1831,7 @@ section .text
 	fldz
 
  fmod$20:
-	; SignedLessThanEqual 24 x 0
+	; LessThanEqual 24 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -1942,7 +1942,7 @@ section .text
 	fld qword [@1861$float8$6.28#]
 
  sin$7:
-	; SignedLessThanEqual 17 £temporary388 6.28
+	; LessThanEqual 17 £temporary388 6.28
 	fcompp
 	fstsw ax
 	sahf
@@ -2033,7 +2033,7 @@ section .text
 	fld qword [rbp + 64]
 
  sin$29:
-	; SignedMultiply £temporary391 sign power
+	; Multiply £temporary391 sign power
 	fmul
 
  sin$30:
@@ -2041,7 +2041,7 @@ section .text
 	fld qword [rbp + 72]
 
  sin$31:
-	; SignedDivide £temporary392 £temporary391 faculty
+	; Divide £temporary392 £temporary391 faculty
 	fdiv
 
  sin$32:
@@ -2073,7 +2073,7 @@ section .text
 	fld qword [@1881$float8$minus1#]
 
  sin$39:
-	; SignedMultiply £temporary394 sign -1
+	; Multiply £temporary394 sign -1
 	fmul
 
  sin$40:
@@ -2093,11 +2093,11 @@ section .text
 	fld qword [rbp + 24]
 
  sin$44:
-	; SignedMultiply £temporary395 x x
+	; Multiply £temporary395 x x
 	fmul
 
  sin$45:
-	; SignedMultiply £temporary396 power £temporary395
+	; Multiply £temporary396 power £temporary395
 	fmul
 
  sin$46:
@@ -2141,11 +2141,11 @@ section .text
 	fst qword [rbp + 32]
 
  sin$56:
-	; SignedMultiply £temporary399 £temporary397 £temporary398
+	; Multiply £temporary399 £temporary397 £temporary398
 	fmul
 
  sin$57:
-	; SignedMultiply £temporary400 faculty £temporary399
+	; Multiply £temporary400 faculty £temporary399
 	fmul
 
  sin$58:
@@ -2181,7 +2181,7 @@ section .text
 	fld qword [@1885$float8$0.000000001#]
 
  sin$66:
-	; SignedGreaterThanEqual 27 £temporary401 0.000000001
+	; GreaterThanEqual 27 £temporary401 0.000000001
 	fcompp
 	fstsw ax
 	sahf
@@ -2259,7 +2259,7 @@ section .text
 	fld qword [@1892$float8$6.28#]
 
  cos$7:
-	; SignedLessThanEqual 17 £temporary407 6.28
+	; LessThanEqual 17 £temporary407 6.28
 	fcompp
 	fstsw ax
 	sahf
@@ -2350,7 +2350,7 @@ section .text
 	fld qword [rbp + 64]
 
  cos$29:
-	; SignedMultiply £temporary410 sign power
+	; Multiply £temporary410 sign power
 	fmul
 
  cos$30:
@@ -2358,7 +2358,7 @@ section .text
 	fld qword [rbp + 72]
 
  cos$31:
-	; SignedDivide £temporary411 £temporary410 faculty
+	; Divide £temporary411 £temporary410 faculty
 	fdiv
 
  cos$32:
@@ -2390,7 +2390,7 @@ section .text
 	fld qword [@1914$float8$minus1#]
 
  cos$39:
-	; SignedMultiply £temporary413 sign -1
+	; Multiply £temporary413 sign -1
 	fmul
 
  cos$40:
@@ -2410,11 +2410,11 @@ section .text
 	fld qword [rbp + 24]
 
  cos$44:
-	; SignedMultiply £temporary414 x x
+	; Multiply £temporary414 x x
 	fmul
 
  cos$45:
-	; SignedMultiply £temporary415 power £temporary414
+	; Multiply £temporary415 power £temporary414
 	fmul
 
  cos$46:
@@ -2458,11 +2458,11 @@ section .text
 	fst qword [rbp + 32]
 
  cos$56:
-	; SignedMultiply £temporary418 £temporary416 £temporary417
+	; Multiply £temporary418 £temporary416 £temporary417
 	fmul
 
  cos$57:
-	; SignedMultiply £temporary419 faculty £temporary418
+	; Multiply £temporary419 faculty £temporary418
 	fmul
 
  cos$58:
@@ -2498,7 +2498,7 @@ section .text
 	fld qword [@1918$float8$0.000000001#]
 
  cos$66:
-	; SignedGreaterThanEqual 27 £temporary420 0.000000001
+	; GreaterThanEqual 27 £temporary420 0.000000001
 	fcompp
 	fstsw ax
 	sahf
@@ -2595,7 +2595,7 @@ section .text
 	fld qword [rbp + 32]
 
  tan$17:
-	; SignedDivide £temporary429 £temporary428 cos_of_x
+	; Divide £temporary429 £temporary428 cos_of_x
 	fdiv
 
  tan$18:
@@ -2675,7 +2675,7 @@ section .text
 	fldz
 
  asin$8:
-	; SignedGreaterThanEqual 19 x 0
+	; GreaterThanEqual 19 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -2732,7 +2732,7 @@ section .text
 	fld1
 
  asin$21:
-	; SignedGreaterThanEqual 41 x 1
+	; GreaterThanEqual 41 x 1
 	fcompp
 	fstsw ax
 	sahf
@@ -2762,7 +2762,7 @@ section .text
 	fld qword [rbp + 24]
 
  asin$28:
-	; SignedMultiply £temporary438 x x
+	; Multiply £temporary438 x x
 	fmul
 
  asin$29:
@@ -2790,7 +2790,7 @@ section .text
 	; GetReturnValue £temporary440
 
  asin$34:
-	; SignedDivide £temporary441 x £temporary440
+	; Divide £temporary441 x £temporary440
 	fdiv
 
  asin$35:
@@ -2893,7 +2893,7 @@ section .text
 	fldz
 
  acos$8:
-	; SignedGreaterThanEqual 20 x 0
+	; GreaterThanEqual 20 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -2958,7 +2958,7 @@ section .text
 	fld1
 
  acos$22:
-	; SignedGreaterThan 42 x 1
+	; GreaterThan 42 x 1
 	fcompp
 	fstsw ax
 	sahf
@@ -2983,7 +2983,7 @@ section .text
 	fld qword [rbp + 24]
 
  acos$28:
-	; SignedMultiply £temporary452 x x
+	; Multiply £temporary452 x x
 	fmul
 
  acos$29:
@@ -3012,7 +3012,7 @@ section .text
 	fld qword [rbp + 24]
 
  acos$35:
-	; SignedDivide £temporary455 £temporary454 x
+	; Divide £temporary455 £temporary454 x
 	fdiv
 
  acos$36:
@@ -3104,7 +3104,7 @@ section .text
 	fldz
 
  atan$2:
-	; SignedGreaterThanEqual 13 x 0
+	; GreaterThanEqual 13 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -3161,7 +3161,7 @@ section .text
 	fld1
 
  atan$15:
-	; SignedLessThanEqual 28 x 1
+	; LessThanEqual 28 x 1
 	fcompp
 	fstsw ax
 	sahf
@@ -3184,7 +3184,7 @@ section .text
 	fld qword [rbp + 24]
 
  atan$20:
-	; SignedDivide £temporary465 1 x
+	; Divide £temporary465 1 x
 	fdiv
 
  atan$21:
@@ -3230,7 +3230,7 @@ section .text
 	fld qword [@1974$float8$0.5#]
 
  atan$30:
-	; SignedLessThanEqual 54 x 0.5
+	; LessThanEqual 54 x 0.5
 	fcompp
 	fstsw ax
 	sahf
@@ -3270,7 +3270,7 @@ section .text
 	fld qword [rbp + 24]
 
  atan$39:
-	; SignedMultiply £temporary469 x x
+	; Multiply £temporary469 x x
 	fmul
 
  atan$40:
@@ -3303,7 +3303,7 @@ section .text
 	fadd
 
  atan$46:
-	; SignedDivide £temporary473 x £temporary472
+	; Divide £temporary473 x £temporary472
 	fdiv
 
  atan$47:
@@ -3327,7 +3327,7 @@ section .text
 	; GetReturnValue £temporary474
 
  atan$51:
-	; SignedMultiply £temporary475 2 £temporary474
+	; Multiply £temporary475 2 £temporary474
 	fmul
 
  atan$52:
@@ -3381,7 +3381,7 @@ section .text
 	fld qword [rbp + 64]
 
  atan$64:
-	; SignedMultiply £temporary476 sign product
+	; Multiply £temporary476 sign product
 	fmul
 
  atan$65:
@@ -3389,7 +3389,7 @@ section .text
 	fld qword [rbp + 56]
 
  atan$66:
-	; SignedDivide £temporary477 £temporary476 denominator
+	; Divide £temporary477 £temporary476 denominator
 	fdiv
 
  atan$67:
@@ -3437,11 +3437,11 @@ section .text
 	fld qword [rbp + 24]
 
  atan$78:
-	; SignedMultiply £temporary480 x x
+	; Multiply £temporary480 x x
 	fmul
 
  atan$79:
-	; SignedMultiply £temporary481 product £temporary480
+	; Multiply £temporary481 product £temporary480
 	fmul
 
  atan$80:
@@ -3493,7 +3493,7 @@ section .text
 	fld qword [@1995$float8$0.000000001#]
 
  atan$92:
-	; SignedGreaterThanEqual 62 £temporary483 0.000000001
+	; GreaterThanEqual 62 £temporary483 0.000000001
 	fcompp
 	fstsw ax
 	sahf
@@ -3551,7 +3551,7 @@ section .text
 	fldz
 
  atan2$2:
-	; SignedLessThanEqual 13 y 0
+	; LessThanEqual 13 y 0
 	fcompp
 	fstsw ax
 	sahf
@@ -3569,7 +3569,7 @@ section .text
 	fld qword [rbp + 32]
 
  atan2$6:
-	; SignedDivide £temporary491 x y
+	; Divide £temporary491 x y
 	fdiv
 
  atan2$7:
@@ -3608,7 +3608,7 @@ section .text
 	fldz
 
  atan2$15:
-	; SignedLessThan 31 x 0
+	; LessThan 31 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -3623,7 +3623,7 @@ section .text
 	fldz
 
  atan2$18:
-	; SignedGreaterThanEqual 31 y 0
+	; GreaterThanEqual 31 y 0
 	fcompp
 	fstsw ax
 	sahf
@@ -3646,7 +3646,7 @@ section .text
 	fld qword [rbp + 32]
 
  atan2$23:
-	; SignedDivide £temporary496 x y
+	; Divide £temporary496 x y
 	fdiv
 
  atan2$24:
@@ -3692,7 +3692,7 @@ section .text
 	fldz
 
  atan2$33:
-	; SignedGreaterThanEqual 49 x 0
+	; GreaterThanEqual 49 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -3707,7 +3707,7 @@ section .text
 	fldz
 
  atan2$36:
-	; SignedGreaterThanEqual 49 y 0
+	; GreaterThanEqual 49 y 0
 	fcompp
 	fstsw ax
 	sahf
@@ -3730,7 +3730,7 @@ section .text
 	fld qword [rbp + 32]
 
  atan2$41:
-	; SignedDivide £temporary502 x y
+	; Divide £temporary502 x y
 	fdiv
 
  atan2$42:
@@ -3776,7 +3776,7 @@ section .text
 	fldz
 
  atan2$51:
-	; SignedLessThanEqual 58 x 0
+	; LessThanEqual 58 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -3820,7 +3820,7 @@ section .text
 	fldz
 
  atan2$60:
-	; SignedGreaterThanEqual 67 x 0
+	; GreaterThanEqual 67 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -3949,7 +3949,7 @@ section .text
 	fld qword [@2035$float8$2#]
 
  sinh$15:
-	; SignedDivide £temporary518 £temporary517 2
+	; Divide £temporary518 £temporary517 2
 	fdiv
 
  sinh$16:
@@ -4038,7 +4038,7 @@ section .text
 	fld qword [@2038$float8$2#]
 
  cosh$15:
-	; SignedDivide £temporary525 £temporary524 2
+	; Divide £temporary525 £temporary524 2
 	fdiv
 
  cosh$16:
@@ -4109,7 +4109,7 @@ section .text
 	; GetReturnValue £temporary529
 
  tanh$12:
-	; SignedDivide £temporary530 £temporary528 £temporary529
+	; Divide £temporary530 £temporary528 £temporary529
 	fdiv
 
  tanh$13:
@@ -4136,7 +4136,7 @@ section .text
 	fldz
 
  floor$2:
-	; SignedGreaterThanEqual 13 x 0
+	; GreaterThanEqual 13 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -4228,7 +4228,7 @@ section .text
 	fldz
 
  ceil$2:
-	; SignedGreaterThanEqual 13 x 0
+	; GreaterThanEqual 13 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -4334,7 +4334,7 @@ section .text
 	fldz
 
  round$2:
-	; SignedGreaterThanEqual 8 x 0
+	; GreaterThanEqual 8 x 0
 	fcompp
 	fstsw ax
 	sahf
@@ -4405,7 +4405,7 @@ section .text
 	fldz
 
  fabs$2:
-	; SignedGreaterThanEqual 7 x 0
+	; GreaterThanEqual 7 x 0
 	fcompp
 	fstsw ax
 	sahf

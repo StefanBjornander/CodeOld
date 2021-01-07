@@ -258,7 +258,7 @@ section .text
 	mov dword [rbp + 40], 0
 
  @3488$strnchr$3:
-	; SignedGreaterThanEqual 16 index size
+	; GreaterThanEqual 16 index size
 	mov eax, [rbp + 32]
 	cmp [rbp + 40], eax
 	jge @3488$strnchr$16
@@ -967,7 +967,7 @@ section .text
 	dec dword [rbp + 32]
 
  scanString$54:
-	; SignedLessThanEqual 79 £temporary937 0
+	; LessThanEqual 79 £temporary937 0
 	cmp eax, 0
 	jle scanString$79
 
@@ -1083,7 +1083,7 @@ section .text
 	jmp scanString$52
 
  scanString$79:
-	; SignedLessThanEqual 130 precision 0
+	; LessThanEqual 130 precision 0
 	cmp dword [rbp + 32], 0
 	jle scanString$130
 
@@ -1220,7 +1220,7 @@ section .text
 	dec dword [rbp + 32]
 
  scanString$109:
-	; SignedLessThanEqual 128 £temporary973 0
+	; LessThanEqual 128 £temporary973 0
 	cmp eax, 0
 	jle scanString$128
 
@@ -1310,7 +1310,7 @@ section .text
 	jmp scanString$107
 
  scanString$128:
-	; SignedLessThanEqual 130 precision 0
+	; LessThanEqual 130 precision 0
 	cmp dword [rbp + 32], 0
 	jle scanString$130
 
@@ -1391,12 +1391,12 @@ section .text
 	mov [rbp + 29], eax
 
  @3611$isDigitInBase$10:
-	; SignedLessThan 14 value 0
+	; LessThan 14 value 0
 	cmp dword [rbp + 29], 0
 	jl @3611$isDigitInBase$14
 
  @3611$isDigitInBase$11:
-	; SignedGreaterThanEqual 14 value base
+	; GreaterThanEqual 14 value base
 	mov eax, [rbp + 25]
 	cmp [rbp + 29], eax
 	jge @3611$isDigitInBase$14
@@ -1476,12 +1476,12 @@ section .text
 	mov [rbp + 29], eax
 
  @3611$isDigitInBase$27:
-	; SignedLessThan 31 value 0
+	; LessThan 31 value 0
 	cmp dword [rbp + 29], 0
 	jl @3611$isDigitInBase$31
 
  @3611$isDigitInBase$28:
-	; SignedGreaterThanEqual 31 value base
+	; GreaterThanEqual 31 value base
 	mov eax, [rbp + 25]
 	cmp [rbp + 29], eax
 	jge @3611$isDigitInBase$31
@@ -1561,12 +1561,12 @@ section .text
 	mov [rbp + 29], eax
 
  @3611$isDigitInBase$44:
-	; SignedLessThan 48 value 0
+	; LessThan 48 value 0
 	cmp dword [rbp + 29], 0
 	jl @3611$isDigitInBase$48
 
  @3611$isDigitInBase$45:
-	; SignedGreaterThanEqual 48 value base
+	; GreaterThanEqual 48 value base
 	mov eax, [rbp + 25]
 	cmp [rbp + 29], eax
 	jge @3611$isDigitInBase$48
@@ -2098,7 +2098,7 @@ section .text
 	neg rbx
 
  scanLongInt$67:
-	; SignedMultiply longValue longValue £temporary1054
+	; Multiply longValue longValue £temporary1054
 	mov rax, [rbp + 28]
 	xor rdx, rdx
 	imul rbx
@@ -2476,7 +2476,7 @@ section .text
 	and rbx, rax
 
  scanUnsignedLongInt$58:
-	; SignedMultiply unsignedLongValue unsignedLongValue £temporary1081
+	; Multiply unsignedLongValue unsignedLongValue £temporary1081
 	mov rax, [rbp + 28]
 	xor rdx, rdx
 	mul rbx
@@ -2816,7 +2816,7 @@ section .text
 	fld qword [rbp + 32]
 
  scanLongDouble$47:
-	; SignedMultiply £temporary1102 10.0 value
+	; Multiply £temporary1102 10.0 value
 	fmul
 
  scanLongDouble$48:
@@ -2941,7 +2941,7 @@ section .text
 	fld qword [@3773$float8$10.0#]
 
  scanLongDouble$75:
-	; SignedDivide £temporary1113 factor 10.0
+	; Divide £temporary1113 factor 10.0
 	fdiv
 
  scanLongDouble$76:
@@ -2975,7 +2975,7 @@ section .text
 	fild dword [container4bytes#]
 
  scanLongDouble$82:
-	; SignedMultiply £temporary1117 factor £temporary1115
+	; Multiply £temporary1117 factor £temporary1115
 	fmul
 
  scanLongDouble$83:
@@ -3118,7 +3118,7 @@ section .text
 	; GetReturnValue £temporary1126
 
  scanLongDouble$115:
-	; SignedMultiply £temporary1127 value £temporary1126
+	; Multiply £temporary1127 value £temporary1126
 	fmul
 
  scanLongDouble$116:

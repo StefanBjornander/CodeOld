@@ -53,7 +53,7 @@ section .data
 section .text
 
  @7559$isLeapYear:
-	; SignedModulo £temporary2471 year 4
+	; Modulo £temporary2471 year 4
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [@7561$int4$4#]
@@ -64,7 +64,7 @@ section .text
 	jne @7559$isLeapYear$4
 
  @7559$isLeapYear$2:
-	; SignedModulo £temporary2473 year 100
+	; Modulo £temporary2473 year 100
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [@7565$int4$100#]
@@ -75,7 +75,7 @@ section .text
 	jne @7559$isLeapYear$6
 
  @7559$isLeapYear$4:
-	; SignedModulo £temporary2476 year 400
+	; Modulo £temporary2476 year 400
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [@7569$int4$400#]
@@ -206,7 +206,7 @@ section .text
 	sub eax, 69
 
  mktime$3:
-	; SignedDivide £temporary2490 £temporary2489 4
+	; Divide £temporary2490 £temporary2489 4
 	xor edx, edx
 	idiv dword [@7588$int4$4#]
 
@@ -233,7 +233,7 @@ section .text
 	sub eax, 70
 
  mktime$8:
-	; SignedMultiply £temporary2494 £temporary2493 365
+	; Multiply £temporary2494 £temporary2493 365
 	xor edx, edx
 	imul dword [@7593$int4$365#]
 
@@ -270,7 +270,7 @@ section .text
 	mov [rbp + 40], rax
 
  mktime$14:
-	; SignedMultiply £temporary2500 totalDays 86400
+	; Multiply £temporary2500 totalDays 86400
 	mov rax, [rbp + 40]
 	xor rdx, rdx
 	imul qword [@7596$int8$86400#]
@@ -291,7 +291,7 @@ section .text
 	neg rax
 
  mktime$17:
-	; SignedMultiply £temporary2503 £temporary2502 3600
+	; Multiply £temporary2503 £temporary2502 3600
 	xor rdx, rdx
 	imul qword [@7598$int8$3600#]
 
@@ -314,7 +314,7 @@ section .text
 	neg rax
 
  mktime$21:
-	; SignedMultiply £temporary2507 £temporary2506 60
+	; Multiply £temporary2507 £temporary2506 60
 	xor rdx, rdx
 	imul qword [@7600$int8$60#]
 
@@ -459,21 +459,21 @@ section .text
 	mov [rbp + 32], rax
 
  gmtime$3:
-	; SignedModulo secondsOfDay time 86400
+	; Modulo secondsOfDay time 86400
 	mov rax, [rbp + 32]
 	xor rdx, rdx
 	idiv qword [@7610$int8$86400#]
 	mov [rbp + 40], rdx
 
  gmtime$4:
-	; SignedModulo secondsOfHour secondsOfDay 3600
+	; Modulo secondsOfHour secondsOfDay 3600
 	mov rax, [rbp + 40]
 	xor rdx, rdx
 	idiv qword [@7613$int8$3600#]
 	mov [rbp + 48], rdx
 
  gmtime$5:
-	; SignedDivide £temporary2517 secondsOfDay 3600
+	; Divide £temporary2517 secondsOfDay 3600
 	mov rax, [rbp + 40]
 	xor rdx, rdx
 	idiv qword [@7616$int8$3600#]
@@ -490,7 +490,7 @@ section .text
 	mov [@7603$g_timeStruct + 8], eax
 
  gmtime$8:
-	; SignedDivide £temporary2520 secondsOfHour 60
+	; Divide £temporary2520 secondsOfHour 60
 	mov rax, [rbp + 48]
 	xor rdx, rdx
 	idiv qword [@7618$int8$60#]
@@ -507,7 +507,7 @@ section .text
 	mov [@7603$g_timeStruct + 4], eax
 
  gmtime$11:
-	; SignedModulo £temporary2523 secondsOfHour 60
+	; Modulo £temporary2523 secondsOfHour 60
 	mov rax, [rbp + 48]
 	xor rdx, rdx
 	idiv qword [@7620$int8$60#]
@@ -524,14 +524,14 @@ section .text
 	mov [@7603$g_timeStruct], edx
 
  gmtime$14:
-	; SignedDivide totalDays time 86400
+	; Divide totalDays time 86400
 	mov rax, [rbp + 32]
 	xor rdx, rdx
 	idiv qword [@7622$int8$86400#]
 	mov [rbp + 56], rax
 
  gmtime$15:
-	; SignedGreaterThanEqual 20 totalDays 3
+	; GreaterThanEqual 20 totalDays 3
 	cmp qword [rbp + 56], 3
 	jge gmtime$20
 
@@ -561,7 +561,7 @@ section .text
 	sub rax, 3
 
  gmtime$21:
-	; SignedModulo £temporary2532 £temporary2531 7
+	; Modulo £temporary2532 £temporary2531 7
 	xor rdx, rdx
 	idiv qword [@7631$int8$7#]
 
@@ -577,7 +577,7 @@ section .text
 	mov [@7603$g_timeStruct + 24], edx
 
  gmtime$24:
-	; SignedDivide £temporary2534 totalDays 365
+	; Divide £temporary2534 totalDays 365
 	mov rax, [rbp + 56]
 	xor rdx, rdx
 	idiv qword [@7634$int8$365#]
@@ -603,13 +603,13 @@ section .text
 	sub eax, 1969
 
  gmtime$29:
-	; SignedDivide leapDays £temporary2537 4
+	; Divide leapDays £temporary2537 4
 	xor edx, edx
 	idiv dword [@7640$int4$4#]
 	mov [rbp + 68], eax
 
  gmtime$30:
-	; SignedModulo totalDays totalDays 365
+	; Modulo totalDays totalDays 365
 	mov rax, [rbp + 56]
 	xor rdx, rdx
 	idiv qword [@7643$int8$365#]
@@ -630,7 +630,7 @@ section .text
 	sub [rbp + 56], rax
 
  gmtime$33:
-	; SignedGreaterThanEqual 44 totalDays 0
+	; GreaterThanEqual 44 totalDays 0
 	cmp qword [rbp + 56], 0
 	jge gmtime$44
 
@@ -785,7 +785,7 @@ section .text
 	mov dword [rbp + 120], 0
 
  gmtime$69:
-	; SignedMultiply £temporary2568 month 4
+	; Multiply £temporary2568 month 4
 	mov eax, [rbp + 120]
 	xor edx, edx
 	imul dword [@7686$int4$4#]
@@ -815,7 +815,7 @@ section .text
 	neg rax
 
  gmtime$74:
-	; SignedLessThan 84 totalDays £temporary2571
+	; LessThan 84 totalDays £temporary2571
 	cmp [rbp + 56], rax
 	jl gmtime$84
 
@@ -828,7 +828,7 @@ section .text
 	inc dword [rbp + 120]
 
  gmtime$77:
-	; SignedMultiply £temporary2575 £temporary2573 4
+	; Multiply £temporary2575 £temporary2573 4
 	xor edx, edx
 	imul dword [@7689$int4$4#]
 
@@ -1025,7 +1025,7 @@ section .text
 	neg rax
 
  localtime$23:
-	; SignedMultiply £temporary2595 £temporary2594 3600
+	; Multiply £temporary2595 £temporary2594 3600
 	xor rdx, rdx
 	imul qword [@7711$int8$3600#]
 
@@ -1530,7 +1530,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  asctime$19:
-	; SignedMultiply £temporary2614 £temporary2612 -> tp 8
+	; Multiply £temporary2614 £temporary2612 -> tp 8
 	mov eax, [rsi + 24]
 	xor edx, edx
 	imul dword [@7782$int4$8#]
@@ -1558,7 +1558,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  asctime$25:
-	; SignedMultiply £temporary2619 £temporary2617 -> tp 8
+	; Multiply £temporary2619 £temporary2617 -> tp 8
 	mov eax, [rsi + 16]
 	xor edx, edx
 	imul dword [@7784$int4$8#]
@@ -2256,7 +2256,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$81:
-	; SignedMultiply £temporary2668 £temporary2666 -> tp 8
+	; Multiply £temporary2668 £temporary2666 -> tp 8
 	mov eax, [rsi + 24]
 	xor edx, edx
 	imul dword [@7854$int4$8#]
@@ -2306,7 +2306,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$92:
-	; SignedMultiply £temporary2674 £temporary2672 -> tp 8
+	; Multiply £temporary2674 £temporary2672 -> tp 8
 	mov eax, [rsi + 24]
 	xor edx, edx
 	imul dword [@7858$int4$8#]
@@ -2356,7 +2356,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$103:
-	; SignedMultiply £temporary2680 £temporary2678 -> tp 8
+	; Multiply £temporary2680 £temporary2678 -> tp 8
 	mov eax, [rsi + 16]
 	xor edx, edx
 	imul dword [@7862$int4$8#]
@@ -2406,7 +2406,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$114:
-	; SignedMultiply £temporary2686 £temporary2684 -> tp 8
+	; Multiply £temporary2686 £temporary2684 -> tp 8
 	mov eax, [rsi + 16]
 	xor edx, edx
 	imul dword [@7866$int4$8#]
@@ -2624,7 +2624,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$162:
-	; SignedModulo £temporary2704 £temporary2703 -> tp 12
+	; Modulo £temporary2704 £temporary2703 -> tp 12
 	mov eax, [rsi + 8]
 	xor edx, edx
 	idiv dword [@7884$int4$12#]
@@ -2781,7 +2781,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$196:
-	; SignedGreaterThanEqual 199 £temporary2713 -> tp 12
+	; GreaterThanEqual 199 £temporary2713 -> tp 12
 	cmp dword [rsi + 8], 12
 	jge strftime$199
 
@@ -3084,7 +3084,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$262:
-	; SignedModulo £temporary2732 £temporary2731 -> tp 100
+	; Modulo £temporary2732 £temporary2731 -> tp 100
 	mov eax, [rsi + 20]
 	xor edx, edx
 	idiv dword [@7925$int4$100#]
@@ -3334,7 +3334,7 @@ section .text
 	add eax, [rbp + 128]
 
  strftime$318:
-	; SignedGreaterThanEqual 326 £temporary2750 maxSize
+	; GreaterThanEqual 326 £temporary2750 maxSize
 	cmp eax, [rbp + 32]
 	jge strftime$326
 

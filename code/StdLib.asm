@@ -5584,7 +5584,7 @@ section .text
 	mov rbx, [rbp + 32]
 
  bsearch$6:
-	; SignedMultiply £temporary2361 firstIndex valueSize
+	; Multiply £temporary2361 firstIndex valueSize
 	mov eax, [rbp + 56]
 	xor edx, edx
 	imul dword [rbp + 44]
@@ -5631,7 +5631,7 @@ section .text
 	mov [rbp + 72], ebx
 
  bsearch$16:
-	; SignedGreaterThanEqual 19 firstCompare 0
+	; GreaterThanEqual 19 firstCompare 0
 	cmp dword [rbp + 72], 0
 	jge bsearch$19
 
@@ -5667,7 +5667,7 @@ section .text
 	mov rbx, [rbp + 32]
 
  bsearch$23:
-	; SignedMultiply £temporary2368 lastIndex valueSize
+	; Multiply £temporary2368 lastIndex valueSize
 	mov eax, [rbp + 60]
 	xor edx, edx
 	imul dword [rbp + 44]
@@ -5714,7 +5714,7 @@ section .text
 	mov [rbp + 72], ebx
 
  bsearch$33:
-	; SignedLessThanEqual 36 lastCompare 0
+	; LessThanEqual 36 lastCompare 0
 	cmp dword [rbp + 72], 0
 	jle bsearch$36
 
@@ -5751,7 +5751,7 @@ section .text
 	add eax, [rbp + 60]
 
  bsearch$40:
-	; SignedDivide middleIndex £temporary2374 2
+	; Divide middleIndex £temporary2374 2
 	xor edx, edx
 	idiv dword [@7136$int4$2#]
 	mov [rbp + 64], eax
@@ -5761,7 +5761,7 @@ section .text
 	mov rbx, [rbp + 32]
 
  bsearch$42:
-	; SignedMultiply £temporary2377 middleIndex valueSize
+	; Multiply £temporary2377 middleIndex valueSize
 	mov eax, [rbp + 64]
 	xor edx, edx
 	imul dword [rbp + 44]
@@ -5808,7 +5808,7 @@ section .text
 	mov [rbp + 76], ebx
 
  bsearch$52:
-	; SignedGreaterThanEqual 55 middleCompare 0
+	; GreaterThanEqual 55 middleCompare 0
 	cmp dword [rbp + 76], 0
 	jge bsearch$55
 
@@ -5822,7 +5822,7 @@ section .text
 	jmp bsearch$5
 
  bsearch$55:
-	; SignedLessThanEqual 58 middleCompare 0
+	; LessThanEqual 58 middleCompare 0
 	cmp dword [rbp + 76], 0
 	jle bsearch$58
 
@@ -5870,7 +5870,7 @@ section .data
 section .text
 
  rand:
-	; SignedMultiply £temporary2384 g_randValue 1664525
+	; Multiply £temporary2384 g_randValue 1664525
 	mov rax, [@7150$g_randValue]
 	xor rdx, rdx
 	imul qword [@7153$int8$1664525#]
@@ -5880,7 +5880,7 @@ section .text
 	add rax, 1013904223
 
  rand$2:
-	; SignedModulo g_randValue £temporary2385 127
+	; Modulo g_randValue £temporary2385 127
 	xor rdx, rdx
 	idiv qword [@7157$int8$127#]
 	mov [@7150$g_randValue], rdx
@@ -5955,12 +5955,12 @@ section .text
 	mov dword [rbp + 32], 0
 
  atexit$1:
-	; SignedGreaterThanEqual 16 index 256
+	; GreaterThanEqual 16 index 256
 	cmp dword [rbp + 32], 256
 	jge atexit$16
 
  atexit$2:
-	; SignedMultiply £temporary2392 index 8
+	; Multiply £temporary2392 index 8
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [@7172$int4$8#]
@@ -5984,7 +5984,7 @@ section .text
 	jne atexit$14
 
  atexit$7:
-	; SignedMultiply £temporary2397 index 8
+	; Multiply £temporary2397 index 8
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [@7177$int4$8#]
@@ -6059,12 +6059,12 @@ section .text
 	mov dword [rbp + 28], 255
 
  exit$1:
-	; SignedLessThan 16 index 0
+	; LessThan 16 index 0
 	cmp dword [rbp + 28], 0
 	jl exit$16
 
  exit$2:
-	; SignedMultiply £temporary2403 index 8
+	; Multiply £temporary2403 index 8
 	mov eax, [rbp + 28]
 	xor edx, edx
 	imul dword [@7192$int4$8#]
@@ -6088,7 +6088,7 @@ section .text
 	je exit$14
 
  exit$7:
-	; SignedMultiply £temporary2408 index 8
+	; Multiply £temporary2408 index 8
 	mov eax, [rbp + 28]
 	xor edx, edx
 	imul dword [@7197$int4$8#]
@@ -6164,7 +6164,7 @@ section .text
 	mov dword [rbp + 44], 0
 
  @7203$memswap$1:
-	; SignedGreaterThanEqual 19 index valueSize
+	; GreaterThanEqual 19 index valueSize
 	mov eax, [rbp + 40]
 	cmp [rbp + 44], eax
 	jge @7203$memswap$19
@@ -6275,7 +6275,7 @@ section .text
 	mov [rbp + 56], eax
 
  qsort$3:
-	; SignedLessThanEqual 33 size 0
+	; LessThanEqual 33 size 0
 	cmp dword [rbp + 56], 0
 	jle qsort$33
 
@@ -6288,13 +6288,13 @@ section .text
 	mov dword [rbp + 60], 0
 
  qsort$6:
-	; SignedGreaterThanEqual 30 index size
+	; GreaterThanEqual 30 index size
 	mov eax, [rbp + 56]
 	cmp [rbp + 60], eax
 	jge qsort$30
 
  qsort$7:
-	; SignedMultiply £temporary2435 index valueSize
+	; Multiply £temporary2435 index valueSize
 	mov eax, [rbp + 60]
 	xor edx, edx
 	imul dword [rbp + 36]
@@ -6316,7 +6316,7 @@ section .text
 	inc eax
 
  qsort$11:
-	; SignedMultiply £temporary2439 £temporary2438 valueSize
+	; Multiply £temporary2439 £temporary2438 valueSize
 	xor edx, edx
 	imul dword [rbp + 36]
 
@@ -6359,7 +6359,7 @@ section .text
 	; GetReturnValue £temporary2442
 
  qsort$20:
-	; SignedLessThanEqual 28 £temporary2442 0
+	; LessThanEqual 28 £temporary2442 0
 	cmp ebx, 0
 	jle qsort$28
 
@@ -6429,7 +6429,7 @@ section .text
 section .text
 
  @abs:
-	; SignedGreaterThanEqual 3 value 0
+	; GreaterThanEqual 3 value 0
 	cmp dword [rbp + 24], 0
 	jge @abs$3
 
@@ -6462,7 +6462,7 @@ section .text
 section .text
 
  labs:
-	; SignedGreaterThanEqual 3 value 0
+	; GreaterThanEqual 3 value 0
 	cmp qword [rbp + 24], 0
 	jge labs$3
 
@@ -6524,14 +6524,14 @@ section .text
 	jmp rax
 
  div$6:
-	; SignedDivide result.quot num denum
+	; Divide result.quot num denum
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [rbp + 28]
 	mov [rbp + 32], eax
 
  div$7:
-	; SignedModulo result.rem num denum
+	; Modulo result.rem num denum
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [rbp + 28]
@@ -6584,14 +6584,14 @@ section .text
 	jmp rax
 
  ldiv$6:
-	; SignedDivide result.quot num denum
+	; Divide result.quot num denum
 	mov rax, [rbp + 24]
 	xor rdx, rdx
 	idiv qword [rbp + 32]
 	mov [rbp + 40], rax
 
  ldiv$7:
-	; SignedModulo result.rem num denum
+	; Modulo result.rem num denum
 	mov rax, [rbp + 24]
 	xor rdx, rdx
 	idiv qword [rbp + 32]

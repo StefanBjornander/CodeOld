@@ -429,7 +429,7 @@ section .text
 	dec dword [rbp + 32]
 
  printString$19:
-	; SignedLessThanEqual 57 £temporary1380 0
+	; LessThanEqual 57 £temporary1380 0
 	cmp eax, 0
 	jle printString$57
 
@@ -624,7 +624,7 @@ section .text
 	je printLongIntRec$15
 
  printLongIntRec$1:
-	; SignedModulo £temporary1399 longValue 10
+	; Modulo £temporary1399 longValue 10
 	mov rax, [rbp + 24]
 	xor rdx, rdx
 	idiv qword [@4460$int8$10#]
@@ -644,7 +644,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongIntRec$5:
-	; SignedDivide £temporary1401 longValue 10
+	; Divide £temporary1401 longValue 10
 	mov rax, [rbp + 24]
 	xor rdx, rdx
 	idiv qword [@4463$int8$10#]
@@ -705,7 +705,7 @@ section .text
 section .text
 
  printLongInt:
-	; SignedGreaterThanEqual 8 longValue 0
+	; GreaterThanEqual 8 longValue 0
 	cmp qword [rbp + 24], 0
 	jge printLongInt$8
 
@@ -844,7 +844,7 @@ section .text
 section .text
 
  digitToChar:
-	; SignedGreaterThanEqual 5 digit 10
+	; GreaterThanEqual 5 digit 10
 	cmp dword [rbp + 24], 10
 	jge digitToChar$5
 
@@ -933,12 +933,12 @@ section .text
 section .text
 
  printUnsignedLongRec:
-	; SignedLessThanEqual 22 unsignedValue 0
+	; LessThanEqual 22 unsignedValue 0
 	cmp qword [rbp + 24], 0
 	jbe printUnsignedLongRec$22
 
  printUnsignedLongRec$1:
-	; SignedModulo £temporary1427 unsignedValue base
+	; Modulo £temporary1427 unsignedValue base
 	mov rax, [rbp + 24]
 	xor rdx, rdx
 	div qword [rbp + 32]
@@ -954,7 +954,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printUnsignedLongRec$5:
-	; SignedDivide £temporary1429 unsignedValue base
+	; Divide £temporary1429 unsignedValue base
 	mov rax, [rbp + 24]
 	xor rdx, rdx
 	div qword [rbp + 32]
@@ -1295,7 +1295,7 @@ section .text
 	jne printLongDoubleFraction$10
 
  printLongDoubleFraction$9:
-	; SignedLessThanEqual 14 precision 0
+	; LessThanEqual 14 precision 0
 	cmp dword [rbp + 36], 0
 	jle printLongDoubleFraction$14
 
@@ -1325,7 +1325,7 @@ section .text
 	dec dword [rbp + 36]
 
  printLongDoubleFraction$16:
-	; SignedLessThanEqual 35 £temporary1456 0
+	; LessThanEqual 35 £temporary1456 0
 	cmp eax, 0
 	jle printLongDoubleFraction$35
 
@@ -1338,7 +1338,7 @@ section .text
 	fld qword [rbp + 24]
 
  printLongDoubleFraction$19:
-	; SignedMultiply £temporary1458 10.0 longDoubleValue
+	; Multiply £temporary1458 10.0 longDoubleValue
 	fmul
 
  printLongDoubleFraction$20:
@@ -1428,7 +1428,7 @@ section .text
 	fldz
 
  printLongDoublePlain$2:
-	; SignedGreaterThanEqual 12 longDoubleValue 0.0
+	; GreaterThanEqual 12 longDoubleValue 0.0
 	fcompp
 	fstsw ax
 	sahf
@@ -1704,7 +1704,7 @@ section .text
 	fldz
 
  printLongDoubleExpo$29:
-	; SignedGreaterThanEqual 37 value 0.0
+	; GreaterThanEqual 37 value 0.0
 	fcompp
 	fstsw ax
 	sahf
@@ -1813,7 +1813,7 @@ section .text
 	; GetReturnValue £temporary1487
 
  printLongDoubleExpo$54:
-	; SignedDivide £temporary1488 value £temporary1487
+	; Divide £temporary1488 value £temporary1487
 	fdiv
 
  printLongDoubleExpo$55:
@@ -2249,7 +2249,7 @@ section .text
 	mov rsi, [rbp + 80]
 
  printArgument$45:
-	; SignedGreaterThanEqual 48 longValue 0
+	; GreaterThanEqual 48 longValue 0
 	cmp qword [rbp + 114], 0
 	jge printArgument$48
 
@@ -2906,7 +2906,7 @@ section .text
 	fldz
 
  printArgument$198:
-	; SignedGreaterThanEqual 201 longDoubleValue 0
+	; GreaterThanEqual 201 longDoubleValue 0
 	fcompp
 	fstsw ax
 	sahf
@@ -3216,12 +3216,12 @@ section .text
 	mov [rbp + 114], eax
 
  printArgument$268:
-	; SignedLessThan 280 expo -3
+	; LessThan 280 expo -3
 	cmp dword [rbp + 114], -3
 	jl printArgument$280
 
  printArgument$269:
-	; SignedGreaterThan 280 expo 2
+	; GreaterThan 280 expo 2
 	cmp dword [rbp + 114], 2
 	jg printArgument$280
 
@@ -4088,7 +4088,7 @@ section .text
 	inc dword [rbp + 105]
 
  printFormat$104:
-	; SignedGreaterThanEqual 244 £temporary1682 width
+	; GreaterThanEqual 244 £temporary1682 width
 	cmp eax, [rbp + 44]
 	jge printFormat$244
 
@@ -4341,7 +4341,7 @@ section .text
 	inc dword [rbp + 113]
 
  printFormat$161:
-	; SignedGreaterThanEqual 167 £temporary1702 width
+	; GreaterThanEqual 167 £temporary1702 width
 	cmp eax, [rbp + 44]
 	jge printFormat$167
 
@@ -4591,7 +4591,7 @@ section .text
 	inc dword [rbp + 109]
 
  printFormat$217:
-	; SignedGreaterThanEqual 223 £temporary1717 width
+	; GreaterThanEqual 223 £temporary1717 width
 	cmp eax, [rbp + 44]
 	jge printFormat$223
 
@@ -4756,7 +4756,7 @@ section .text
 	je printFormat$265
 
  printFormat$254:
-	; SignedMultiply £temporary1729 value 10
+	; Multiply £temporary1729 value 10
 	mov eax, [rbp + 101]
 	xor edx, edx
 	imul dword [@5154$int4$10#]

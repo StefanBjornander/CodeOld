@@ -1793,7 +1793,7 @@ section .text
 	mov dword [rbp + 44], 0
 
  file_test$145:
-	; SignedGreaterThanEqual 178 index size
+	; GreaterThanEqual 178 index size
 	mov eax, [rbp + 40]
 	cmp [rbp + 44], eax
 	jge file_test$178
@@ -2928,7 +2928,7 @@ section .text
 	mov dword [rbp + 32], 0
 
  file_test$399:
-	; SignedGreaterThanEqual 415 count size
+	; GreaterThanEqual 415 count size
 	mov eax, [rbp + 36]
 	cmp [rbp + 32], eax
 	jge file_test$415
@@ -3166,13 +3166,13 @@ section .text
 	mov dword [rbp + 36], 0
 
  file_test$452:
-	; SignedGreaterThanEqual 466 index size
+	; GreaterThanEqual 466 index size
 	mov eax, [rbp + 32]
 	cmp [rbp + 36], eax
 	jge file_test$466
 
  file_test$453:
-	; SignedMultiply £temporary3676 index index
+	; Multiply £temporary3676 index index
 	mov eax, [rbp + 36]
 	xor edx, edx
 	imul dword [rbp + 36]
@@ -3393,7 +3393,7 @@ section .text
 	mov dword [rbp + 36], 0
 
  file_test$503:
-	; SignedGreaterThanEqual 521 index size
+	; GreaterThanEqual 521 index size
 	mov eax, [rbp + 32]
 	cmp [rbp + 36], eax
 	jge file_test$521
@@ -3600,13 +3600,13 @@ section .text
 	mov dword [rbp + 36], 0
 
  file_test$550:
-	; SignedGreaterThanEqual 564 index size
+	; GreaterThanEqual 564 index size
 	mov eax, [rbp + 32]
 	cmp [rbp + 36], eax
 	jge file_test$564
 
  file_test$551:
-	; SignedMultiply £temporary3703 index index
+	; Multiply £temporary3703 index index
 	mov eax, [rbp + 36]
 	xor edx, edx
 	imul dword [rbp + 36]
@@ -3806,7 +3806,7 @@ section .text
 	; GetReturnValue £temporary3714
 
  file_test$597:
-	; SignedLessThanEqual 608 £temporary3714 0
+	; LessThanEqual 608 £temporary3714 0
 	cmp ebx, 0
 	jle file_test$608
 
@@ -4245,7 +4245,7 @@ section .text
 	mov [rbp + 68], eax
 
  file_test$698:
-	; SignedMultiply £temporary3741 size 8
+	; Multiply £temporary3741 size 8
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [@11405$int4$8#]
@@ -4267,7 +4267,7 @@ section .text
 	; PostCall 36
 
  file_test$702:
-	; SignedMultiply total size 8
+	; Multiply total size 8
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [@11407$int4$8#]
@@ -4299,7 +4299,7 @@ section .text
 	mov [rbp + 44], rbx
 
  file_test$709:
-	; SignedMultiply £temporary3745 size 8
+	; Multiply £temporary3745 size 8
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [@11412$int4$8#]
@@ -4440,7 +4440,7 @@ section .text
 	mov dword [rbp + 40], 0
 
  file_test$739:
-	; SignedGreaterThanEqual 753 index size
+	; GreaterThanEqual 753 index size
 	mov eax, [rbp + 32]
 	cmp [rbp + 40], eax
 	jge file_test$753
@@ -4458,7 +4458,7 @@ section .text
 	mov [rbp + 92], eax
 
  file_test$743:
-	; SignedMultiply £temporary3757 index 8
+	; Multiply £temporary3757 index 8
 	mov eax, [rbp + 40]
 	xor edx, edx
 	imul dword [@11429$int4$8#]
@@ -5282,7 +5282,7 @@ section .text
 	mov dword [rbp + 36], 0
 
  file_test$935:
-	; SignedGreaterThanEqual 967 index size
+	; GreaterThanEqual 967 index size
 	mov eax, [rbp + 40]
 	cmp [rbp + 36], eax
 	jge file_test$967

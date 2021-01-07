@@ -413,12 +413,12 @@ section .text
 	mov dword [rbp + 40], 0
 
  fopen$1:
-	; SignedGreaterThanEqual 23 index 20
+	; GreaterThanEqual 23 index 20
 	cmp dword [rbp + 40], 20
 	jge fopen$23
 
  fopen$2:
-	; SignedMultiply £temporary602 index 41
+	; Multiply £temporary602 index 41
 	mov eax, [rbp + 40]
 	xor edx, edx
 	imul dword [@2579$int4$41#]
@@ -455,7 +455,7 @@ section .text
 	mov [rbp + 76], rax
 
  fopen$10:
-	; SignedMultiply £temporary608 index 41
+	; Multiply £temporary608 index 41
 	mov eax, [rbp + 40]
 	xor edx, edx
 	imul dword [@2583$int4$41#]
@@ -1234,12 +1234,12 @@ section .text
 	mov dword [rbp + 32], 0
 
  fflush$2:
-	; SignedGreaterThanEqual 23 index 20
+	; GreaterThanEqual 23 index 20
 	cmp dword [rbp + 32], 20
 	jge fflush$23
 
  fflush$3:
-	; SignedMultiply £temporary652 index 41
+	; Multiply £temporary652 index 41
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [@2696$int4$41#]
@@ -1266,7 +1266,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fflush$9:
-	; SignedMultiply £temporary656 index 41
+	; Multiply £temporary656 index 41
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [@2699$int4$41#]
@@ -1398,12 +1398,12 @@ section .text
 	mov dword [rbp + 32], 0
 
  fclose$9:
-	; SignedGreaterThanEqual 30 index 20
+	; GreaterThanEqual 30 index 20
 	cmp dword [rbp + 32], 20
 	jge fclose$30
 
  fclose$10:
-	; SignedMultiply £temporary671 index 41
+	; Multiply £temporary671 index 41
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [@2723$int4$41#]
@@ -1430,7 +1430,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fclose$16:
-	; SignedMultiply £temporary675 index 41
+	; Multiply £temporary675 index 41
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [@2726$int4$41#]
@@ -1694,7 +1694,7 @@ section .text
 	; GetReturnValue £temporary695
 
  fgetc$10:
-	; SignedLessThanEqual 14 £temporary695 0
+	; LessThanEqual 14 £temporary695 0
 	cmp ebx, 0
 	jle fgetc$14
 
@@ -1753,7 +1753,7 @@ section .text
 	dec eax
 
  fgets$3:
-	; SignedGreaterThanEqual 36 count £temporary699
+	; GreaterThanEqual 36 count £temporary699
 	cmp [rbp + 44], eax
 	jge fgets$36
 
@@ -2113,7 +2113,7 @@ section .text
 	mov [rbp + 32], ebx
 
  gets$14:
-	; SignedLessThanEqual 20 size 0
+	; LessThanEqual 20 size 0
 	cmp dword [rbp + 32], 0
 	jle gets$20
 
@@ -2319,7 +2319,7 @@ section .text
 	; AssignRegister rsi £temporary749
 
  fread$5:
-	; SignedMultiply £temporary751 size nobj
+	; Multiply £temporary751 size nobj
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [rbp + 36]
@@ -2381,7 +2381,7 @@ section .text
 	; AssignRegister rsi £temporary759
 
  fwrite$5:
-	; SignedMultiply £temporary761 size nobj
+	; Multiply £temporary761 size nobj
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [rbp + 36]

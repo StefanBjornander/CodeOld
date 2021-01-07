@@ -102,12 +102,12 @@ section .text
 	jmp rax
 
  islower$19:
-	; SignedLessThan 23 c 97
+	; LessThan 23 c 97
 	cmp dword [rbp + 24], 97
 	jl islower$23
 
  islower$20:
-	; SignedGreaterThan 23 c 122
+	; GreaterThan 23 c 122
 	cmp dword [rbp + 24], 122
 	jg islower$23
 
@@ -221,12 +221,12 @@ section .text
 	jmp rax
 
  isupper$19:
-	; SignedLessThan 23 c 65
+	; LessThan 23 c 65
 	cmp dword [rbp + 24], 65
 	jl isupper$23
 
  isupper$20:
-	; SignedGreaterThan 23 c 90
+	; GreaterThan 23 c 90
 	cmp dword [rbp + 24], 90
 	jg isupper$23
 
@@ -337,12 +337,12 @@ section .text
 section .text
 
  isdigit:
-	; SignedLessThan 4 c 48
+	; LessThan 4 c 48
 	cmp dword [rbp + 24], 48
 	jl isdigit$4
 
  isdigit$1:
-	; SignedGreaterThan 4 c 57
+	; GreaterThan 4 c 57
 	cmp dword [rbp + 24], 57
 	jg isdigit$4
 
@@ -479,22 +479,22 @@ section .text
 	jne isxdigit$10
 
  isxdigit$6:
-	; SignedLessThan 8 c 97
+	; LessThan 8 c 97
 	cmp dword [rbp + 24], 97
 	jl isxdigit$8
 
  isxdigit$7:
-	; SignedLessThanEqual 10 c 102
+	; LessThanEqual 10 c 102
 	cmp dword [rbp + 24], 102
 	jle isxdigit$10
 
  isxdigit$8:
-	; SignedLessThan 12 c 65
+	; LessThan 12 c 65
 	cmp dword [rbp + 24], 65
 	jl isxdigit$12
 
  isxdigit$9:
-	; SignedGreaterThan 12 c 70
+	; GreaterThan 12 c 70
 	cmp dword [rbp + 24], 70
 	jg isxdigit$12
 
@@ -526,12 +526,12 @@ section .text
 section .text
 
  isgraph:
-	; SignedLessThan 4 c 32
+	; LessThan 4 c 32
 	cmp dword [rbp + 24], 32
 	jl isgraph$4
 
  isgraph$1:
-	; SignedGreaterThan 4 c 126
+	; GreaterThan 4 c 126
 	cmp dword [rbp + 24], 126
 	jg isgraph$4
 

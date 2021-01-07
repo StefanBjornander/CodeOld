@@ -336,7 +336,7 @@ section .text
 	mov qword [rbp + 192], @14057$string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 
  time_test$50:
-	; SignedMultiply £temporary4276 s.tm_wday 8
+	; Multiply £temporary4276 s.tm_wday 8
 	mov eax, [rbp + 112]
 	xor edx, edx
 	imul dword [@14059$int4$8#]
@@ -433,7 +433,7 @@ section .text
 	mov qword [rbp + 192], @14064$string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 
  time_test$70:
-	; SignedMultiply £temporary4293 t.tm_wday 8
+	; Multiply £temporary4293 t.tm_wday 8
 	mov eax, [rbp + 148]
 	xor edx, edx
 	imul dword [@14066$int4$8#]

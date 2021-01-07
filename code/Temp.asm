@@ -33,7 +33,7 @@ section .text
 	mov dword [rbp + 32], 0
 
  @3150$existsTempName$1:
-	; SignedGreaterThanEqual 17 index g_tempSize
+	; GreaterThanEqual 17 index g_tempSize
 	mov eax, [@3148$g_tempSize]
 	cmp [rbp + 32], eax
 	jge @3150$existsTempName$17
@@ -47,7 +47,7 @@ section .text
 	mov [rbp + 60], rax
 
  @3150$existsTempName$4:
-	; SignedMultiply £temporary798 index 4
+	; Multiply £temporary798 index 4
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [@3156$int4$4#]
@@ -135,7 +135,7 @@ section .data
 section .text
 
  @3170$generateTempName:
-	; SignedGreaterThanEqual 61 size 3
+	; GreaterThanEqual 61 size 3
 	cmp dword [rbp + 32], 3
 	jge @3170$generateTempName$61
 
@@ -144,7 +144,7 @@ section .text
 	mov byte [rbp + 40], 97
 
  @3170$generateTempName$2:
-	; SignedGreaterThan 61 c 122
+	; GreaterThan 61 c 122
 	cmp byte [rbp + 40], 122
 	jg @3170$generateTempName$61
 
@@ -274,7 +274,7 @@ section .text
 	; PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  @3170$generateTempName$31:
-	; SignedMultiply £temporary820 g_tempSize 4
+	; Multiply £temporary820 g_tempSize 4
 	mov eax, [@3148$g_tempSize]
 	xor edx, edx
 	imul dword [@3192$int4$4#]
@@ -320,7 +320,7 @@ section .text
 	inc dword [@3148$g_tempSize]
 
  @3170$generateTempName$41:
-	; SignedMultiply £temporary826 £temporary824 4
+	; Multiply £temporary826 £temporary824 4
 	xor edx, edx
 	imul dword [@3195$int4$4#]
 
@@ -537,7 +537,7 @@ section .text
 section .text
 
  tmpnam:
-	; SignedGreaterThanEqual 10 g_tempSize 16
+	; GreaterThanEqual 10 g_tempSize 16
 	cmp dword [@3148$g_tempSize], 16
 	jge tmpnam$10
 

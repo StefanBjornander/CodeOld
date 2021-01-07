@@ -53,7 +53,7 @@ section .text
 	mov dword [rbp + 24], 0
 
  malloc_test2$9:
-	; SignedGreaterThanEqual 20 index 10
+	; GreaterThanEqual 20 index 10
 	cmp dword [rbp + 24], 10
 	jge malloc_test2$20
 
@@ -956,7 +956,7 @@ section .text
 	mov dword [rbp + 24], 0
 
  malloc_test6$5:
-	; SignedGreaterThanEqual 23 i 1000
+	; GreaterThanEqual 23 i 1000
 	cmp dword [rbp + 24], 1000
 	jge malloc_test6$23
 

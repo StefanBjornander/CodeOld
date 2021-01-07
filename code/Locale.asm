@@ -623,7 +623,7 @@ section .text
 	mov dword [rbp + 36], 0
 
  setlocale$9:
-	; SignedGreaterThanEqual 30 index g_sSize
+	; GreaterThanEqual 30 index g_sSize
 	mov eax, [@1560$g_sSize]
 	cmp [rbp + 36], eax
 	jge setlocale$30
@@ -637,7 +637,7 @@ section .text
 	mov [rbp + 72], rax
 
  setlocale$12:
-	; SignedMultiply £temporary246 index 16
+	; Multiply £temporary246 index 16
 	mov eax, [rbp + 36]
 	xor edx, edx
 	imul dword [@1585$int4$16#]
@@ -679,7 +679,7 @@ section .text
 	jne setlocale$28
 
  setlocale$21:
-	; SignedMultiply £temporary252 index 16
+	; Multiply £temporary252 index 16
 	mov eax, [rbp + 36]
 	xor edx, edx
 	imul dword [@1590$int4$16#]

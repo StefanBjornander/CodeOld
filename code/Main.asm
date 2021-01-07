@@ -44,7 +44,7 @@ section .data
 section .text
 
  mainX:
-	; SignedGreaterThan 11 count 10
+	; GreaterThan 11 count 10
 	cmp dword [@314$count], 10
 	jg mainX$11
 

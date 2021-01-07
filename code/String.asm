@@ -128,7 +128,7 @@ section .text
 	mov dword [rbp + 44], 0
 
  strncpy$1:
-	; SignedGreaterThanEqual 15 index size
+	; GreaterThanEqual 15 index size
 	mov eax, [rbp + 40]
 	cmp [rbp + 44], eax
 	jge strncpy$15
@@ -194,7 +194,7 @@ section .text
 	jmp strncpy$1
 
  strncpy$15:
-	; SignedGreaterThanEqual 22 index size
+	; GreaterThanEqual 22 index size
 	mov eax, [rbp + 40]
 	cmp [rbp + 44], eax
 	jge strncpy$22
@@ -407,7 +407,7 @@ section .text
 	dec eax
 
  strncat$8:
-	; SignedGreaterThanEqual 23 index £temporary2804
+	; GreaterThanEqual 23 index £temporary2804
 	cmp [rbp + 44], eax
 	jge strncat$23
 
@@ -599,7 +599,7 @@ section .text
 	; Dereference £temporary2837 -> £temporary2839 £temporary2839 0
 
  strcmp$17:
-	; SignedGreaterThanEqual 20 £temporary2834 -> £temporary2836 £temporary2837 -> £temporary2839
+	; GreaterThanEqual 20 £temporary2834 -> £temporary2836 £temporary2837 -> £temporary2839
 	mov al, [rdi]
 	cmp [rsi], al
 	jge strcmp$20
@@ -644,7 +644,7 @@ section .text
 	; Dereference £temporary2844 -> £temporary2846 £temporary2846 0
 
  strcmp$26:
-	; SignedLessThanEqual 29 £temporary2841 -> £temporary2843 £temporary2844 -> £temporary2846
+	; LessThanEqual 29 £temporary2841 -> £temporary2843 £temporary2844 -> £temporary2846
 	mov al, [rdi]
 	cmp [rsi], al
 	jle strcmp$29
@@ -678,7 +678,7 @@ section .text
 	mov dword [rbp + 44], 0
 
  strncmp$1:
-	; SignedGreaterThanEqual 32 index size
+	; GreaterThanEqual 32 index size
 	mov eax, [rbp + 40]
 	cmp [rbp + 44], eax
 	jge strncmp$32
@@ -761,7 +761,7 @@ section .text
 	; Dereference £temporary2863 -> £temporary2865 £temporary2865 0
 
  strncmp$18:
-	; SignedGreaterThanEqual 21 £temporary2860 -> £temporary2862 £temporary2863 -> £temporary2865
+	; GreaterThanEqual 21 £temporary2860 -> £temporary2862 £temporary2863 -> £temporary2865
 	mov al, [rdi]
 	cmp [rsi], al
 	jge strncmp$21
@@ -806,7 +806,7 @@ section .text
 	; Dereference £temporary2870 -> £temporary2872 £temporary2872 0
 
  strncmp$27:
-	; SignedLessThanEqual 30 £temporary2867 -> £temporary2869 £temporary2870 -> £temporary2872
+	; LessThanEqual 30 £temporary2867 -> £temporary2869 £temporary2870 -> £temporary2872
 	mov al, [rdi]
 	cmp [rsi], al
 	jle strncmp$30
@@ -1643,7 +1643,7 @@ section .text
 	je strerror$15
 
  strerror$9:
-	; SignedMultiply £temporary2963 errno 8
+	; Multiply £temporary2963 errno 8
 	mov eax, [rbp + 24]
 	xor edx, edx
 	imul dword [@8468$int4$8#]
@@ -2131,7 +2131,7 @@ section .text
 	mov dword [rbp + 60], 0
 
  memcpy$5:
-	; SignedGreaterThanEqual 15 index size
+	; GreaterThanEqual 15 index size
 	mov eax, [rbp + 40]
 	cmp [rbp + 60], eax
 	jge memcpy$15
@@ -2213,7 +2213,7 @@ section .text
 	mov [rbp + 52], rax
 
  memmove$4:
-	; SignedGreaterThanEqual 16 source target
+	; GreaterThanEqual 16 source target
 	mov rax, [rbp + 24]
 	cmp [rbp + 32], rax
 	jge memmove$16
@@ -2225,7 +2225,7 @@ section .text
 	mov [rbp + 60], eax
 
  memmove$6:
-	; SignedLessThan 27 index 0
+	; LessThan 27 index 0
 	cmp dword [rbp + 60], 0
 	jl memmove$27
 
@@ -2275,7 +2275,7 @@ section .text
 	mov dword [rbp + 60], 0
 
  memmove$17:
-	; SignedGreaterThanEqual 27 index size
+	; GreaterThanEqual 27 index size
 	mov eax, [rbp + 40]
 	cmp [rbp + 60], eax
 	jge memmove$27
@@ -2361,7 +2361,7 @@ section .text
 	mov dword [rbp + 60], 0
 
  memcmp$5:
-	; SignedGreaterThanEqual 26 index size
+	; GreaterThanEqual 26 index size
 	mov eax, [rbp + 40]
 	cmp [rbp + 60], eax
 	jge memcmp$26
@@ -2395,7 +2395,7 @@ section .text
 	; Dereference £temporary3057 -> £temporary3059 £temporary3059 0
 
  memcmp$12:
-	; SignedGreaterThanEqual 15 £temporary3054 -> £temporary3056 £temporary3057 -> £temporary3059
+	; GreaterThanEqual 15 £temporary3054 -> £temporary3056 £temporary3057 -> £temporary3059
 	mov al, [rdi]
 	cmp [rsi], al
 	jge memcmp$15
@@ -2440,7 +2440,7 @@ section .text
 	; Dereference £temporary3064 -> £temporary3066 £temporary3066 0
 
  memcmp$21:
-	; SignedLessThanEqual 24 £temporary3061 -> £temporary3063 £temporary3064 -> £temporary3066
+	; LessThanEqual 24 £temporary3061 -> £temporary3063 £temporary3064 -> £temporary3066
 	mov al, [rdi]
 	cmp [rsi], al
 	jle memcmp$24
@@ -2505,7 +2505,7 @@ section .text
 	mov dword [rbp + 40], 0
 
  memchr$5:
-	; SignedGreaterThanEqual 19 index size
+	; GreaterThanEqual 19 index size
 	mov eax, [rbp + 36]
 	cmp [rbp + 40], eax
 	jge memchr$19
@@ -2609,7 +2609,7 @@ section .text
 	mov dword [rbp + 49], 0
 
  memset$5:
-	; SignedGreaterThanEqual 12 index size
+	; GreaterThanEqual 12 index size
 	mov eax, [rbp + 36]
 	cmp [rbp + 49], eax
 	jge memset$12

@@ -86,7 +86,7 @@ section .text
 	mov [rbp + 64], rax
 
  malloc$11:
-	; SignedGreaterThanEqual 23 memorySize 0
+	; GreaterThanEqual 23 memorySize 0
 	cmp dword [rbp + 24], 0
 	jge malloc$23
 
@@ -188,7 +188,7 @@ section .text
 	mov [rbp + 76], ebx
 
  malloc$33:
-	; SignedGreaterThan 39 newBlockSize currGap
+	; GreaterThan 39 newBlockSize currGap
 	mov eax, [rbp + 76]
 	cmp [rbp + 28], eax
 	ja malloc$39
@@ -199,7 +199,7 @@ section .text
 	je malloc$36
 
  malloc$35:
-	; SignedGreaterThanEqual 39 currGap minGap
+	; GreaterThanEqual 39 currGap minGap
 	mov eax, [rbp + 32]
 	cmp [rbp + 76], eax
 	jae malloc$39
@@ -352,7 +352,7 @@ section .text
 	mov [rbp + 76], ebp
 
  malloc$68:
-	; SignedGreaterThan 84 stackTop newAddress
+	; GreaterThan 84 stackTop newAddress
 	mov eax, [rbp + 72]
 	cmp [rbp + 76], eax
 	ja malloc$84
@@ -447,7 +447,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  calloc$1:
-	; SignedMultiply £temporary66 number size
+	; Multiply £temporary66 number size
 	mov eax, [rbp + 24]
 	xor edx, edx
 	imul dword [rbp + 28]
@@ -718,7 +718,7 @@ section .data
 section .text
 
  realloc:
-	; SignedGreaterThanEqual 12 newMemorySize 0
+	; GreaterThanEqual 12 newMemorySize 0
 	cmp dword [rbp + 32], 0
 	jge realloc$12
 
@@ -777,7 +777,7 @@ section .text
 	jne realloc$25
 
  realloc$13:
-	; SignedGreaterThan 25 newMemorySize 0
+	; GreaterThan 25 newMemorySize 0
 	cmp dword [rbp + 32], 0
 	jg realloc$25
 
@@ -931,7 +931,7 @@ section .text
 	mov rsi, [rbp + 40]
 
  realloc$47:
-	; SignedGreaterThan 52 newBlockSize £temporary107 -> oldBlockPtr
+	; GreaterThan 52 newBlockSize £temporary107 -> oldBlockPtr
 	mov eax, [rsi]
 	cmp [rbp + 36], eax
 	ja realloc$52
@@ -998,7 +998,7 @@ section .text
 	mov [rbp + 60], ebx
 
  realloc$61:
-	; SignedLessThan 71 availableSize newBlockSize
+	; LessThan 71 availableSize newBlockSize
 	mov eax, [rbp + 36]
 	cmp [rbp + 60], eax
 	jb realloc$71

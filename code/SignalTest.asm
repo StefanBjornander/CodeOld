@@ -177,7 +177,7 @@ section .text
 	mov dword [rbp + 28], 1
 
  signal_test$2:
-	; SignedDivide c a b
+	; Divide c a b
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [rbp + 28]

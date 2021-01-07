@@ -295,7 +295,7 @@ section .text
 	fld qword [rbp + 32]
 
  divide$5:
-	; SignedDivide £temporary3330 x y
+	; Divide £temporary3330 x y
 	fdiv
 
  divide$6:
