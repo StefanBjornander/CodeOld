@@ -773,7 +773,7 @@
 19: Empty
 20: CallHeader 14 strcmp
 21: Parameter 14 newName 6
-22: UnsignedMultiply £temporary292 index 4
+22: SignedMultiply £temporary292 index 4
 23: BinaryAdd £temporary293 g_sArray £temporary292
 24: Deref £temporary291 -> £temporary293 £temporary293 0
 25: Parameter 14 £temporary291.name$0 -> £temporary293 8
@@ -783,7 +783,7 @@
 29: Equal 32 £temporary294 0
 30: Goto 39
 31: CheckTrackMapFloatStack
-32: UnsignedMultiply £temporary297 index 4
+32: SignedMultiply £temporary297 index 4
 33: BinaryAdd £temporary298 g_sArray £temporary297
 34: Deref £temporary296 -> £temporary298 £temporary298 0
 35: address £temporary299 £temporary296 -> £temporary298
@@ -2247,7 +2247,7 @@
 3: Goto 29
 4: CheckTrackMapFloatStack
 5: Empty
-6: UnsignedMultiply £temporary699 index 29
+6: SignedMultiply £temporary699 index 29
 7: BinaryAdd £temporary700 g_fileArray £temporary699
 8: Deref £temporary698 -> £temporary700 £temporary700 0
 9: NotEqual 26 £temporary698.open$0 -> £temporary700 0
@@ -2256,7 +2256,7 @@
 12: CallHeader 12 freopen
 13: Parameter 12 name 6
 14: Parameter 12 mode 8
-15: UnsignedMultiply £temporary704 index 29
+15: SignedMultiply £temporary704 index 29
 16: BinaryAdd £temporary705 g_fileArray £temporary704
 17: Deref £temporary703 -> £temporary705 £temporary705 0
 18: address £temporary706 £temporary703 -> £temporary705
@@ -2469,14 +2469,14 @@
 6: Goto 35
 7: CheckTrackMapFloatStack
 8: Empty
-9: UnsignedMultiply £temporary785 index 29
+9: SignedMultiply £temporary785 index 29
 10: BinaryAdd £temporary786 g_fileArray £temporary785
 11: Deref £temporary784 -> £temporary786 £temporary786 0
 12: NotEqual 15 £temporary784.open$0 -> £temporary786 0
 13: Goto 31
 14: CheckTrackMapFloatStack
 15: CallHeader 10 fflush
-16: UnsignedMultiply £temporary788 index 29
+16: SignedMultiply £temporary788 index 29
 17: BinaryAdd £temporary789 g_fileArray £temporary788
 18: Deref £temporary787 -> £temporary789 £temporary789 0
 19: address £temporary790 £temporary787 -> £temporary789
@@ -2535,14 +2535,14 @@
 32: Goto 60
 33: CheckTrackMapFloatStack
 34: Empty
-35: UnsignedMultiply £temporary808 index 29
+35: SignedMultiply £temporary808 index 29
 36: BinaryAdd £temporary809 g_fileArray £temporary808
 37: Deref £temporary807 -> £temporary809 £temporary809 0
 38: NotEqual 41 £temporary807.open$0 -> £temporary809 0
 39: Goto 57
 40: CheckTrackMapFloatStack
 41: CallHeader 10 fclose
-42: UnsignedMultiply £temporary811 index 29
+42: SignedMultiply £temporary811 index 29
 43: BinaryAdd £temporary812 g_fileArray £temporary811
 44: Deref £temporary810 -> £temporary812 £temporary812 0
 45: address £temporary813 £temporary810 -> £temporary812
@@ -2981,7 +2981,7 @@
 5: Empty
 6: CallHeader 10 strcmp
 7: Parameter 10 name 6
-8: UnsignedMultiply £temporary980 index 2
+8: SignedMultiply £temporary980 index 2
 9: BinaryAdd £temporary981 g_tempArray £temporary980
 10: Deref £temporary979 -> £temporary981 £temporary981 0
 11: Parameter 10 £temporary979 -> £temporary981 8
@@ -3041,7 +3041,7 @@
 36: Goto 38
 37: CheckTrackMapFloatStack
 38: CallHeader 13 strcpy
-39: UnsignedMultiply £temporary1001 g_tempSize 2
+39: SignedMultiply £temporary1001 g_tempSize 2
 40: BinaryAdd £temporary1002 g_tempArray £temporary1001
 41: Deref £temporary1000 -> £temporary1002 £temporary1002 0
 42: Parameter 13 £temporary1000 -> £temporary1002 6
@@ -3050,7 +3050,7 @@
 45: PostCall 13
 46: Assign £temporary1004 g_tempSize
 47: BinaryAdd g_tempSize g_tempSize 1
-48: UnsignedMultiply £temporary1006 £temporary1004 2
+48: SignedMultiply £temporary1006 £temporary1004 2
 49: BinaryAdd £temporary1007 g_tempArray £temporary1006
 50: Deref £temporary1005 -> £temporary1007 £temporary1007 0
 51: SetReturnValue £temporary1005 -> £temporary1007
@@ -7253,13 +7253,13 @@
 3: Goto 22
 4: CheckTrackMapFloatStack
 5: Empty
-6: UnsignedMultiply £temporary3151 index 2
+6: SignedMultiply £temporary3151 index 2
 7: BinaryAdd £temporary3152 g_funcArray £temporary3151
 8: Deref £temporary3150 -> £temporary3152 £temporary3152 0
 9: Equal 12 £temporary3150 -> £temporary3152 0
 10: Goto 19
 11: CheckTrackMapFloatStack
-12: UnsignedMultiply £temporary3155 index 2
+12: SignedMultiply £temporary3155 index 2
 13: BinaryAdd £temporary3156 g_funcArray £temporary3155
 14: Deref £temporary3154 -> £temporary3156 £temporary3156 0
 15: Assign £temporary3154 -> £temporary3156 fcn
@@ -7280,13 +7280,13 @@
 3: Goto 22
 4: CheckTrackMapFloatStack
 5: Empty
-6: UnsignedMultiply £temporary3160 index 2
+6: SignedMultiply £temporary3160 index 2
 7: BinaryAdd £temporary3161 g_funcArray £temporary3160
 8: Deref £temporary3159 -> £temporary3161 £temporary3161 0
 9: NotEqual 12 £temporary3159 -> £temporary3161 0
 10: Goto 19
 11: CheckTrackMapFloatStack
-12: UnsignedMultiply £temporary3164 index 2
+12: SignedMultiply £temporary3164 index 2
 13: BinaryAdd £temporary3165 g_funcArray £temporary3164
 14: Deref £temporary3163 -> £temporary3165 £temporary3165 0
 15: CallHeader 12 £temporary3163 -> £temporary3165
@@ -7534,7 +7534,7 @@
 64: Goto 75
 65: CheckTrackMapFloatStack
 66: Empty
-67: UnsignedMultiply £temporary3280 monthIndex 2
+67: SignedMultiply £temporary3280 monthIndex 2
 68: BinaryAdd £temporary3281 daysOfMonths £temporary3280
 69: Deref £temporary3279 -> £temporary3281 £temporary3281 0
 70: BinaryAdd £temporary3282 yearDay £temporary3279 -> £temporary3281
@@ -7704,7 +7704,7 @@
 90: Assign daysOfMonths[10] 30
 91: Assign daysOfMonths[11] 31
 92: Assign month 0
-93: UnsignedMultiply £temporary3388 month 2
+93: SignedMultiply £temporary3388 month 2
 94: BinaryAdd £temporary3389 daysOfMonths £temporary3388
 95: Deref £temporary3387 -> £temporary3389 £temporary3389 0
 96: IntegralToIntegral £temporary3390 £temporary3387 -> £temporary3389
@@ -7713,7 +7713,7 @@
 99: CheckTrackMapFloatStack
 100: Assign £temporary3392 month
 101: BinaryAdd month month 1
-102: UnsignedMultiply £temporary3394 £temporary3392 2
+102: SignedMultiply £temporary3394 £temporary3392 2
 103: BinaryAdd £temporary3395 daysOfMonths £temporary3394
 104: Deref £temporary3393 -> £temporary3395 £temporary3395 0
 105: IntegralToIntegral £temporary3396 £temporary3393 -> £temporary3395
@@ -7811,12 +7811,12 @@
 24: Parameter 14 g_timeString 6
 25: Parameter 14 string_25s2025s2025i202502i3A2502i3A2502i2025i# 8
 26: Deref £temporary3437 -> tp tp 12
-27: UnsignedMultiply £temporary3439 £temporary3437 -> tp 2
+27: SignedMultiply £temporary3439 £temporary3437 -> tp 2
 28: BinaryAdd £temporary3440 shortDayList £temporary3439
 29: Deref £temporary3438 -> £temporary3440 £temporary3440 0
 30: Parameter 14 £temporary3438 -> £temporary3440 10
 31: Deref £temporary3441 -> tp tp 8
-32: UnsignedMultiply £temporary3443 £temporary3441 -> tp 2
+32: SignedMultiply £temporary3443 £temporary3441 -> tp 2
 33: BinaryAdd £temporary3444 shortMonthList £temporary3443
 34: Deref £temporary3442 -> £temporary3444 £temporary3444 0
 35: Parameter 14 £temporary3442 -> £temporary3444 12
@@ -7953,7 +7953,7 @@
 97: CallHeader 50 strcpy
 98: Parameter 50 add 6
 99: Deref £temporary3497 -> tp tp 12
-100: UnsignedMultiply £temporary3499 £temporary3497 -> tp 2
+100: SignedMultiply £temporary3499 £temporary3497 -> tp 2
 101: BinaryAdd £temporary3500 shortDayList £temporary3499
 102: Deref £temporary3498 -> £temporary3500 £temporary3500 0
 103: Parameter 50 £temporary3498 -> £temporary3500 8
@@ -7963,7 +7963,7 @@
 107: CallHeader 50 strcpy
 108: Parameter 50 add 6
 109: Deref £temporary3502 -> tp tp 12
-110: UnsignedMultiply £temporary3504 £temporary3502 -> tp 2
+110: SignedMultiply £temporary3504 £temporary3502 -> tp 2
 111: BinaryAdd £temporary3505 longDayList £temporary3504
 112: Deref £temporary3503 -> £temporary3505 £temporary3505 0
 113: Parameter 50 £temporary3503 -> £temporary3505 8
@@ -7973,7 +7973,7 @@
 117: CallHeader 50 strcpy
 118: Parameter 50 add 6
 119: Deref £temporary3507 -> tp tp 8
-120: UnsignedMultiply £temporary3509 £temporary3507 -> tp 2
+120: SignedMultiply £temporary3509 £temporary3507 -> tp 2
 121: BinaryAdd £temporary3510 shortMonthList £temporary3509
 122: Deref £temporary3508 -> £temporary3510 £temporary3510 0
 123: Parameter 50 £temporary3508 -> £temporary3510 8
@@ -7983,7 +7983,7 @@
 127: CallHeader 50 strcpy
 128: Parameter 50 add 6
 129: Deref £temporary3512 -> tp tp 8
-130: UnsignedMultiply £temporary3514 £temporary3512 -> tp 2
+130: SignedMultiply £temporary3514 £temporary3512 -> tp 2
 131: BinaryAdd £temporary3515 longMonthList £temporary3514
 132: Deref £temporary3513 -> £temporary3515 £temporary3515 0
 133: Parameter 50 £temporary3513 -> £temporary3515 8
@@ -8660,7 +8660,7 @@
 10: NotEqual 13 messageList 0
 11: Goto 20
 12: CheckTrackMapFloatStack
-13: UnsignedMultiply £temporary3840 errno 2
+13: SignedMultiply £temporary3840 errno 2
 14: BinaryAdd £temporary3841 messageList £temporary3840
 15: Deref £temporary3839 -> £temporary3841 £temporary3841 0
 16: SetReturnValue £temporary3839 -> £temporary3841
@@ -11443,7 +11443,7 @@
 811: PostCall 14
 812: GetReturnValue £temporary4953
 813: Assign p £temporary4953
-814: UnsignedMultiply £temporary4954 size 8
+814: SignedMultiply £temporary4954 size 8
 815: BinaryAdd £temporary4955 p £temporary4954
 816: Assign endPtr £temporary4955
 817: NotEqual 832 p 0
@@ -11485,7 +11485,7 @@
 853: CallHeader 18 printf
 854: Parameter 18 string_index43A2025i3A20value2025f0A# 6
 855: Parameter 18 index 8
-856: UnsignedMultiply £temporary4965 index 8
+856: SignedMultiply £temporary4965 index 8
 857: BinaryAdd £temporary4966 p £temporary4965
 858: Deref £temporary4964 -> £temporary4966 £temporary4966 0
 859: PushFloat £temporary4964 -> £temporary4966
@@ -12963,7 +12963,7 @@
 139: Empty
 140: CallHeader 18 printf
 141: Parameter 18 string_25i20# 6
-142: UnsignedMultiply £temporary6018 index 2
+142: SignedMultiply £temporary6018 index 2
 143: BinaryAdd £temporary6019 list £temporary6018
 144: Deref £temporary6020 -> £temporary6019 £temporary6019 0
 145: Parameter 18 £temporary6020 -> £temporary6019 8
@@ -12991,7 +12991,7 @@
 167: Empty
 168: CallHeader 18 printf
 169: Parameter 18 string_25i20# 6
-170: UnsignedMultiply £temporary6027 index 2
+170: SignedMultiply £temporary6027 index 2
 171: BinaryAdd £temporary6028 list £temporary6027
 172: Deref £temporary6029 -> £temporary6028 £temporary6028 0
 173: Parameter 18 £temporary6029 -> £temporary6028 8
@@ -13019,7 +13019,7 @@
 195: Empty
 196: CallHeader 18 printf
 197: Parameter 18 string_25i20# 6
-198: UnsignedMultiply £temporary6036 index 2
+198: SignedMultiply £temporary6036 index 2
 199: BinaryAdd £temporary6037 list £temporary6036
 200: Deref £temporary6038 -> £temporary6037 £temporary6037 0
 201: Parameter 18 £temporary6038 -> £temporary6037 8
@@ -13054,7 +13054,7 @@
 230: Goto 236
 231: Empty
 232: BinarySubtract £temporary6048 p list
-233: UnsignedDivide £temporary6049 £temporary6048 2
+233: SignedDivide £temporary6049 £temporary6048 2
 234: Assign £temporary6053 £temporary6049
 235: Goto 238
 236: Empty
@@ -13125,7 +13125,7 @@
 45: PostCall 64
 46: CallHeader 64 printf
 47: Parameter 64 string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A# 6
-48: UnsignedMultiply £temporary6154 s$tm_wday 2
+48: SignedMultiply £temporary6154 s$tm_wday 2
 49: BinaryAdd £temporary6155 weekdays £temporary6154
 50: Deref £temporary6153 -> £temporary6155 £temporary6155 0
 51: Parameter 64 £temporary6153 -> £temporary6155 8
@@ -13144,7 +13144,7 @@
 64: PostCall 64
 65: CallHeader 64 printf
 66: Parameter 64 string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A# 6
-67: UnsignedMultiply £temporary6170 t$tm_wday 2
+67: SignedMultiply £temporary6170 t$tm_wday 2
 68: BinaryAdd £temporary6171 weekdays £temporary6170
 69: Deref £temporary6169 -> £temporary6171 £temporary6171 0
 70: Parameter 64 £temporary6169 -> £temporary6171 8

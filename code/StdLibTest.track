@@ -1152,10 +1152,10 @@ stdlib_test$137:	; Parameter 18 string_25i20# 6
 533:		mov word [bp + 24], @12656$string_25i20#
 535:	
 
-stdlib_test$138:	; UnsignedMultiply £temporary6018 index 2
+stdlib_test$138:	; SignedMultiply £temporary6018 index 2
 536:		mov a3159, [bp + 16]
 538:		xor dx, dx
-539:		mul word [@12658$int2$2#]
+539:		imul word [@12658$int2$2#]
 545:	
 
 stdlib_test$139:	; BinaryAdd £temporary6019 list £temporary6018
@@ -1258,10 +1258,10 @@ stdlib_test$160:	; Parameter 18 string_25i20# 6
 621:		mov word [bp + 24], @12675$string_25i20#
 623:	
 
-stdlib_test$161:	; UnsignedMultiply £temporary6027 index 2
+stdlib_test$161:	; SignedMultiply £temporary6027 index 2
 624:		mov a3167, [bp + 16]
 626:		xor dx, dx
-627:		mul word [@12677$int2$2#]
+627:		imul word [@12677$int2$2#]
 633:	
 
 stdlib_test$162:	; BinaryAdd £temporary6028 list £temporary6027
@@ -1364,10 +1364,10 @@ stdlib_test$183:	; Parameter 18 string_25i20# 6
 709:		mov word [bp + 24], @12694$string_25i20#
 711:	
 
-stdlib_test$184:	; UnsignedMultiply £temporary6036 index 2
+stdlib_test$184:	; SignedMultiply £temporary6036 index 2
 712:		mov a3175, [bp + 16]
 714:		xor dx, dx
-715:		mul word [@12696$int2$2#]
+715:		imul word [@12696$int2$2#]
 721:	
 
 stdlib_test$185:	; BinaryAdd £temporary6037 list £temporary6036
@@ -1493,9 +1493,9 @@ stdlib_test$211:	; BinarySubtract £temporary6048 p list
 819:		sub a3185, a3186
 821:	
 
-stdlib_test$212:	; UnsignedDivide £temporary6053 £temporary6048 2
+stdlib_test$212:	; SignedDivide £temporary6053 £temporary6048 2
 823:		xor dx, dx
-824:		div word [@12723$int2$2#]
+824:		idiv word [@12723$int2$2#]
 830:	
 
 stdlib_test$213:	; Goto 215

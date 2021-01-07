@@ -3144,10 +3144,10 @@ file_test$708:	; Assign p £temporary4953
 2531:		mov [bp + 14], bx
 2533:	
 
-file_test$709:	; UnsignedMultiply £temporary4954 size 8
+file_test$709:	; SignedMultiply £temporary4954 size 8
 2534:		mov ax, [bp + 8]
 2536:		xor dx, dx
-2537:		mul word [@10780$int2$8#]
+2537:		imul word [@10780$int2$8#]
 2543:	
 
 file_test$710:	; BinaryAdd endPtr p £temporary4954
@@ -3298,10 +3298,10 @@ file_test$741:	; Parameter 18 index 8
 2657:		mov [bp + 26], ax
 2659:	
 
-file_test$742:	; UnsignedMultiply £temporary4965 index 8
+file_test$742:	; SignedMultiply £temporary4965 index 8
 2660:		mov ax, [bp + 12]
 2662:		xor dx, dx
-2663:		mul word [@10806$int2$8#]
+2663:		imul word [@10806$int2$8#]
 2669:	
 
 file_test$743:	; BinaryAdd £temporary4966 p £temporary4965

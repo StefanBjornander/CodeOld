@@ -933,12 +933,12 @@ section .text
 section .text
 
  printUnsignedLongRec:
-	; UnsignedLessThanEqual 22 unsignedValue 0
+	; SignedLessThanEqual 22 unsignedValue 0
 	cmp qword [rbp + 24], 0
 	jbe printUnsignedLongRec$22
 
  printUnsignedLongRec$1:
-	; UnsignedModulo £temporary1427 unsignedValue base
+	; SignedModulo £temporary1427 unsignedValue base
 	mov rax, [rbp + 24]
 	xor rdx, rdx
 	div qword [rbp + 32]
@@ -954,7 +954,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printUnsignedLongRec$5:
-	; UnsignedDivide £temporary1429 unsignedValue base
+	; SignedDivide £temporary1429 unsignedValue base
 	mov rax, [rbp + 24]
 	xor rdx, rdx
 	div qword [rbp + 32]

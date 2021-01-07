@@ -18,10 +18,10 @@
 13:		mov [bp + 16], ax
 15:	
 
-@2285$existsTempName$4:	; UnsignedMultiply £temporary980 index 2
+@2285$existsTempName$4:	; SignedMultiply £temporary980 index 2
 16:		mov ax, [bp + 8]
 18:		xor dx, dx
-19:		mul word [@2293$int2$2#]
+19:		imul word [@2293$int2$2#]
 25:	
 
 @2285$existsTempName$5:	; BinaryAdd £temporary981 g_tempArray £temporary980
@@ -216,10 +216,10 @@
 @2309$generateTempName$28:	; CallHeader 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 106:	
 
-@2309$generateTempName$29:	; UnsignedMultiply £temporary1001 g_tempSize 2
+@2309$generateTempName$29:	; SignedMultiply £temporary1001 g_tempSize 2
 107:		mov ax, [@2283$g_tempSize]
 109:		xor dx, dx
-110:		mul word [@2345$int2$2#]
+110:		imul word [@2345$int2$2#]
 116:	
 
 @2309$generateTempName$30:	; BinaryAdd £temporary1002 g_tempArray £temporary1001
@@ -258,9 +258,9 @@
 142:		inc word [@2283$g_tempSize]
 144:	
 
-@2309$generateTempName$38:	; UnsignedMultiply £temporary1006 £temporary1004 2
+@2309$generateTempName$38:	; SignedMultiply £temporary1006 £temporary1004 2
 146:		xor dx, dx
-147:		mul word [@2352$int2$2#]
+147:		imul word [@2352$int2$2#]
 153:	
 
 @2309$generateTempName$39:	; BinaryAdd £temporary1007 g_tempArray £temporary1006

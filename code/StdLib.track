@@ -5381,10 +5381,10 @@ atexit$1:	; SignedGreaterThanEqual 14 index 256
 6:		jge atexit$14
 8:	
 
-atexit$2:	; UnsignedMultiply £temporary3151 index 2
+atexit$2:	; SignedMultiply £temporary3151 index 2
 9:		mov a1861, [bp + 8]
 11:		xor dx, dx
-12:		mul word [@7106$int2$2#]
+12:		imul word [@7106$int2$2#]
 18:	
 
 atexit$3:	; BinaryAdd £temporary3152 g_funcArray £temporary3151
@@ -5400,10 +5400,10 @@ atexit$5:	; NotEqual 12 £temporary3150 -> £temporary3152 0
 26:		jne atexit$12
 28:	
 
-atexit$6:	; UnsignedMultiply £temporary3155 index 2
+atexit$6:	; SignedMultiply £temporary3155 index 2
 29:		mov a1866, [bp + 8]
 31:		xor dx, dx
-32:		mul word [@7114$int2$2#]
+32:		imul word [@7114$int2$2#]
 38:	
 
 atexit$7:	; BinaryAdd £temporary3156 g_funcArray £temporary3155
@@ -5461,10 +5461,10 @@ exit$1:	; SignedLessThan 14 index 0
 6:		jl exit$14
 8:	
 
-exit$2:	; UnsignedMultiply £temporary3160 index 2
+exit$2:	; SignedMultiply £temporary3160 index 2
 9:		mov a1876, [bp + 8]
 11:		xor dx, dx
-12:		mul word [@7133$int2$2#]
+12:		imul word [@7133$int2$2#]
 18:	
 
 exit$3:	; BinaryAdd £temporary3161 g_funcArray £temporary3160
@@ -5480,10 +5480,10 @@ exit$5:	; Equal 12 £temporary3159 -> £temporary3161 0
 26:		je exit$12
 28:	
 
-exit$6:	; UnsignedMultiply £temporary3164 index 2
+exit$6:	; SignedMultiply £temporary3164 index 2
 29:		mov a1881, [bp + 8]
 31:		xor dx, dx
-32:		mul word [@7141$int2$2#]
+32:		imul word [@7141$int2$2#]
 38:	
 
 exit$7:	; BinaryAdd £temporary3165 g_funcArray £temporary3164

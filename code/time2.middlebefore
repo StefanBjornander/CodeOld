@@ -65,7 +65,7 @@
 64: Goto IntegralToIntegral £temporary3284 sec
 65: CheckTrackMapFloatStack
 66: Empty
-67: UnsignedMultiply £temporary3280 monthIndex 2
+67: SignedMultiply £temporary3280 monthIndex 2
 68: BinaryAdd £temporary3281 daysOfMonths £temporary3280
 69: Deref £temporary3279 -> £temporary3281 £temporary3281 0
 70: BinaryAdd £temporary3282 yearDay £temporary3279 -> £temporary3281

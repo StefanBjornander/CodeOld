@@ -303,10 +303,10 @@ time$52:	; SignedGreaterThanEqual 59 monthIndex £temporary3276
 195:		jge time$59
 197:	
 
-time$53:	; UnsignedMultiply £temporary3280 monthIndex 2
+time$53:	; SignedMultiply £temporary3280 monthIndex 2
 198:		mov a1981, [bp + 45]
 200:		xor dx, dx
-201:		mul word [@7436$int2$2#]
+201:		imul word [@7436$int2$2#]
 207:	
 
 time$54:	; BinaryAdd £temporary3281 daysOfMonths £temporary3280
@@ -977,10 +977,10 @@ gmtime$68:	; Assign month 0
 329:		mov word [bp + 52], 0
 331:	
 
-gmtime$69:	; UnsignedMultiply £temporary3388 month 2
+gmtime$69:	; SignedMultiply £temporary3388 month 2
 332:		mov a2077, [bp + 52]
 334:		xor dx, dx
-335:		mul word [@7659$int2$2#]
+335:		imul word [@7659$int2$2#]
 341:	
 
 gmtime$70:	; BinaryAdd £temporary3389 daysOfMonths £temporary3388
@@ -1014,9 +1014,9 @@ gmtime$75:	; Increment month
 367:		inc word [bp + 52]
 369:	
 
-gmtime$76:	; UnsignedMultiply £temporary3394 £temporary3392 2
+gmtime$76:	; SignedMultiply £temporary3394 £temporary3392 2
 371:		xor dx, dx
-372:		mul word [@7667$int2$2#]
+372:		imul word [@7667$int2$2#]
 378:	
 
 gmtime$77:	; BinaryAdd £temporary3395 daysOfMonths £temporary3394
@@ -1347,10 +1347,10 @@ asctime$18:	; Deref £temporary3437 -> tp tp 12
 61:		mov a2123, [bp + 6]
 63:	
 
-asctime$19:	; UnsignedMultiply £temporary3439 £temporary3437 -> tp 2
+asctime$19:	; SignedMultiply £temporary3439 £temporary3437 -> tp 2
 64:		mov t2124, [a2123 + 12]
 66:		xor dx, dx
-67:		mul word [@7801$int2$2#]
+67:		imul word [@7801$int2$2#]
 73:	
 
 asctime$20:	; BinaryAdd £temporary3440 shortDayList £temporary3439
@@ -1370,10 +1370,10 @@ asctime$23:	; Deref £temporary3441 -> tp tp 8
 84:		mov a2130, [bp + 6]
 86:	
 
-asctime$24:	; UnsignedMultiply £temporary3443 £temporary3441 -> tp 2
+asctime$24:	; SignedMultiply £temporary3443 £temporary3441 -> tp 2
 87:		mov t2131, [a2130 + 8]
 89:		xor dx, dx
-90:		mul word [@7806$int2$2#]
+90:		imul word [@7806$int2$2#]
 96:	
 
 asctime$25:	; BinaryAdd £temporary3444 shortMonthList £temporary3443
@@ -1868,10 +1868,10 @@ strftime$77:	; Deref £temporary3497 -> tp tp 12
 274:		mov a2175, [bp + 12]
 276:	
 
-strftime$78:	; UnsignedMultiply £temporary3499 £temporary3497 -> tp 2
+strftime$78:	; SignedMultiply £temporary3499 £temporary3497 -> tp 2
 277:		mov t2176, [a2175 + 12]
 279:		xor dx, dx
-280:		mul word [@7917$int2$2#]
+280:		imul word [@7917$int2$2#]
 286:	
 
 strftime$79:	; BinaryAdd £temporary3500 shortDayList £temporary3499
@@ -1913,10 +1913,10 @@ strftime$87:	; Deref £temporary3502 -> tp tp 12
 314:		mov a2182, [bp + 12]
 316:	
 
-strftime$88:	; UnsignedMultiply £temporary3504 £temporary3502 -> tp 2
+strftime$88:	; SignedMultiply £temporary3504 £temporary3502 -> tp 2
 317:		mov t2183, [a2182 + 12]
 319:		xor dx, dx
-320:		mul word [@7925$int2$2#]
+320:		imul word [@7925$int2$2#]
 326:	
 
 strftime$89:	; BinaryAdd £temporary3505 longDayList £temporary3504
@@ -1958,10 +1958,10 @@ strftime$97:	; Deref £temporary3507 -> tp tp 8
 354:		mov a2189, [bp + 12]
 356:	
 
-strftime$98:	; UnsignedMultiply £temporary3509 £temporary3507 -> tp 2
+strftime$98:	; SignedMultiply £temporary3509 £temporary3507 -> tp 2
 357:		mov t2190, [a2189 + 8]
 359:		xor dx, dx
-360:		mul word [@7933$int2$2#]
+360:		imul word [@7933$int2$2#]
 366:	
 
 strftime$99:	; BinaryAdd £temporary3510 shortMonthList £temporary3509
@@ -2003,10 +2003,10 @@ strftime$107:	; Deref £temporary3512 -> tp tp 8
 394:		mov a2196, [bp + 12]
 396:	
 
-strftime$108:	; UnsignedMultiply £temporary3514 £temporary3512 -> tp 2
+strftime$108:	; SignedMultiply £temporary3514 £temporary3512 -> tp 2
 397:		mov t2197, [a2196 + 8]
 399:		xor dx, dx
-400:		mul word [@7941$int2$2#]
+400:		imul word [@7941$int2$2#]
 406:	
 
 strftime$109:	; BinaryAdd £temporary3515 longMonthList £temporary3514

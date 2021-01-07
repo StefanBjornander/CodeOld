@@ -224,10 +224,10 @@ time_test$47:	; Parameter 64 string_202020gm20time3A2025s202502i2D2502i2D2502i20
 183:		mov word [bp + 70], @12877$string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 185:	
 
-time_test$48:	; UnsignedMultiply £temporary6154 s$tm_wday 2
+time_test$48:	; SignedMultiply £temporary6154 s$tm_wday 2
 186:		mov a3213, [bp + 36]
 188:		xor dx, dx
-189:		mul word [@12880$int2$2#]
+189:		imul word [@12880$int2$2#]
 195:	
 
 time_test$49:	; BinaryAdd £temporary6155 weekdays £temporary6154
@@ -316,10 +316,10 @@ time_test$66:	; Parameter 64 string_local20time3A2025s202502i2D2502i2D2502i20250
 261:		mov word [bp + 70], @12899$string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 263:	
 
-time_test$67:	; UnsignedMultiply £temporary6170 t$tm_wday 2
+time_test$67:	; SignedMultiply £temporary6170 t$tm_wday 2
 264:		mov a3228, [bp + 54]
 266:		xor dx, dx
-267:		mul word [@12902$int2$2#]
+267:		imul word [@12902$int2$2#]
 273:	
 
 time_test$68:	; BinaryAdd £temporary6171 weekdays £temporary6170

@@ -1403,10 +1403,10 @@ section .text
 	mov qword [rbp + 72], @13656$string_25i20#
 
  stdlib_test$142:
-	; UnsignedMultiply £temporary4203 index 4
+	; SignedMultiply £temporary4203 index 4
 	mov eax, [rbp + 44]
 	xor edx, edx
-	mul dword [@13658$int4$4#]
+	imul dword [@13658$int4$4#]
 
  stdlib_test$143:
 	; IntegralToIntegral £temporary4204 £temporary4203
@@ -1514,10 +1514,10 @@ section .text
 	mov qword [rbp + 72], @13667$string_25i20#
 
  stdlib_test$166:
-	; UnsignedMultiply £temporary4213 index 4
+	; SignedMultiply £temporary4213 index 4
 	mov eax, [rbp + 44]
 	xor edx, edx
-	mul dword [@13669$int4$4#]
+	imul dword [@13669$int4$4#]
 
  stdlib_test$167:
 	; IntegralToIntegral £temporary4214 £temporary4213
@@ -1625,10 +1625,10 @@ section .text
 	mov qword [rbp + 72], @13678$string_25i20#
 
  stdlib_test$190:
-	; UnsignedMultiply £temporary4223 index 4
+	; SignedMultiply £temporary4223 index 4
 	mov eax, [rbp + 44]
 	xor edx, edx
-	mul dword [@13680$int4$4#]
+	imul dword [@13680$int4$4#]
 
  stdlib_test$191:
 	; IntegralToIntegral £temporary4224 £temporary4223
@@ -1762,9 +1762,9 @@ section .text
 	; IntegralToIntegral £temporary4237 £temporary4236
 
  stdlib_test$220:
-	; UnsignedDivide £temporary4239 £temporary4237 4
+	; SignedDivide £temporary4239 £temporary4237 4
 	xor edx, edx
-	div dword [@13696$int4$4#]
+	idiv dword [@13696$int4$4#]
 
  stdlib_test$221:
 	; Jump 223

@@ -52,10 +52,10 @@ setlocale$11:	; Parameter 14 newName 6
 39:		mov [bp + 20], ax
 41:	
 
-setlocale$12:	; UnsignedMultiply £temporary292 index 4
+setlocale$12:	; SignedMultiply £temporary292 index 4
 42:		mov ax, [bp + 10]
 44:		xor dx, dx
-45:		mul word [@793$int2$4#]
+45:		imul word [@793$int2$4#]
 51:	
 
 setlocale$13:	; BinaryAdd £temporary293 g_sArray £temporary292
@@ -89,10 +89,10 @@ setlocale$19:	; NotEqual 26 £temporary294 0
 76:		jne setlocale$26
 78:	
 
-setlocale$20:	; UnsignedMultiply £temporary297 index 4
+setlocale$20:	; SignedMultiply £temporary297 index 4
 79:		mov ax, [bp + 10]
 81:		xor dx, dx
-82:		mul word [@802$int2$4#]
+82:		imul word [@802$int2$4#]
 88:	
 
 setlocale$21:	; BinaryAdd £temporary298 g_sArray £temporary297

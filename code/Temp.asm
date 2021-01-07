@@ -47,10 +47,10 @@ section .text
 	mov [rbp + 60], rax
 
  @3150$existsTempName$4:
-	; UnsignedMultiply £temporary798 index 4
+	; SignedMultiply £temporary798 index 4
 	mov eax, [rbp + 32]
 	xor edx, edx
-	mul dword [@3156$int4$4#]
+	imul dword [@3156$int4$4#]
 
  @3150$existsTempName$5:
 	; IntegralToIntegral £temporary799 £temporary798
@@ -274,10 +274,10 @@ section .text
 	; PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  @3170$generateTempName$31:
-	; UnsignedMultiply £temporary820 g_tempSize 4
+	; SignedMultiply £temporary820 g_tempSize 4
 	mov eax, [@3148$g_tempSize]
 	xor edx, edx
-	mul dword [@3192$int4$4#]
+	imul dword [@3192$int4$4#]
 
  @3170$generateTempName$32:
 	; IntegralToIntegral £temporary821 £temporary820
@@ -320,9 +320,9 @@ section .text
 	inc dword [@3148$g_tempSize]
 
  @3170$generateTempName$41:
-	; UnsignedMultiply £temporary826 £temporary824 4
+	; SignedMultiply £temporary826 £temporary824 4
 	xor edx, edx
-	mul dword [@3195$int4$4#]
+	imul dword [@3195$int4$4#]
 
  @3170$generateTempName$42:
 	; IntegralToIntegral £temporary827 £temporary826

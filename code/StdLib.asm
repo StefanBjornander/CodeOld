@@ -5960,10 +5960,10 @@ section .text
 	jge atexit$16
 
  atexit$2:
-	; UnsignedMultiply £temporary2392 index 8
+	; SignedMultiply £temporary2392 index 8
 	mov eax, [rbp + 32]
 	xor edx, edx
-	mul dword [@7172$int4$8#]
+	imul dword [@7172$int4$8#]
 
  atexit$3:
 	; IntegralToIntegral £temporary2393 £temporary2392
@@ -5984,10 +5984,10 @@ section .text
 	jne atexit$14
 
  atexit$7:
-	; UnsignedMultiply £temporary2397 index 8
+	; SignedMultiply £temporary2397 index 8
 	mov eax, [rbp + 32]
 	xor edx, edx
-	mul dword [@7177$int4$8#]
+	imul dword [@7177$int4$8#]
 
  atexit$8:
 	; IntegralToIntegral £temporary2398 £temporary2397
@@ -6064,10 +6064,10 @@ section .text
 	jl exit$16
 
  exit$2:
-	; UnsignedMultiply £temporary2403 index 8
+	; SignedMultiply £temporary2403 index 8
 	mov eax, [rbp + 28]
 	xor edx, edx
-	mul dword [@7192$int4$8#]
+	imul dword [@7192$int4$8#]
 
  exit$3:
 	; IntegralToIntegral £temporary2404 £temporary2403
@@ -6088,10 +6088,10 @@ section .text
 	je exit$14
 
  exit$7:
-	; UnsignedMultiply £temporary2408 index 8
+	; SignedMultiply £temporary2408 index 8
 	mov eax, [rbp + 28]
 	xor edx, edx
-	mul dword [@7197$int4$8#]
+	imul dword [@7197$int4$8#]
 
  exit$8:
 	; IntegralToIntegral £temporary2409 £temporary2408

@@ -51,7 +51,7 @@
 50: Assign monthIndex 0
 51: IntegralToIntegral £temporary3276 month
 52: SignedGreaterThanEqual 59 monthIndex £temporary3276
-53: UnsignedMultiply £temporary3280 monthIndex 2
+53: SignedMultiply £temporary3280 monthIndex 2
 54: BinaryAdd £temporary3281 daysOfMonths £temporary3280
 55: Deref £temporary3279 -> £temporary3281 £temporary3281 0
 56: BinaryAdd yearDay yearDay £temporary3279 -> £temporary3281

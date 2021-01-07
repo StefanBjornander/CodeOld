@@ -1643,10 +1643,10 @@ section .text
 	je strerror$15
 
  strerror$9:
-	; UnsignedMultiply £temporary2963 errno 8
+	; SignedMultiply £temporary2963 errno 8
 	mov eax, [rbp + 24]
 	xor edx, edx
-	mul dword [@8468$int4$8#]
+	imul dword [@8468$int4$8#]
 
  strerror$10:
 	; IntegralToIntegral £temporary2964 £temporary2963

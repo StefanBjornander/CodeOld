@@ -1319,10 +1319,10 @@ strerror$8:	; Equal 14 messageList 0
 32:		je strerror$14
 34:	
 
-strerror$9:	; UnsignedMultiply £temporary3840 errno 2
+strerror$9:	; SignedMultiply £temporary3840 errno 2
 35:		mov a2411, [bp + 6]
 37:		xor dx, dx
-38:		mul word [@8560$int2$2#]
+38:		imul word [@8560$int2$2#]
 44:	
 
 strerror$10:	; BinaryAdd £temporary3841 messageList £temporary3840

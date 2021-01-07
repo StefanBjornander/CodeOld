@@ -418,10 +418,10 @@ section .text
 	jge fopen$23
 
  fopen$2:
-	; UnsignedMultiply £temporary602 index 41
+	; SignedMultiply £temporary602 index 41
 	mov eax, [rbp + 40]
 	xor edx, edx
-	mul dword [@2579$int4$41#]
+	imul dword [@2579$int4$41#]
 
  fopen$3:
 	; IntegralToIntegral £temporary603 £temporary602
@@ -455,10 +455,10 @@ section .text
 	mov [rbp + 76], rax
 
  fopen$10:
-	; UnsignedMultiply £temporary608 index 41
+	; SignedMultiply £temporary608 index 41
 	mov eax, [rbp + 40]
 	xor edx, edx
-	mul dword [@2583$int4$41#]
+	imul dword [@2583$int4$41#]
 
  fopen$11:
 	; IntegralToIntegral £temporary609 £temporary608
@@ -1239,10 +1239,10 @@ section .text
 	jge fflush$23
 
  fflush$3:
-	; UnsignedMultiply £temporary652 index 41
+	; SignedMultiply £temporary652 index 41
 	mov eax, [rbp + 32]
 	xor edx, edx
-	mul dword [@2696$int4$41#]
+	imul dword [@2696$int4$41#]
 
  fflush$4:
 	; IntegralToIntegral £temporary653 £temporary652
@@ -1266,10 +1266,10 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fflush$9:
-	; UnsignedMultiply £temporary656 index 41
+	; SignedMultiply £temporary656 index 41
 	mov eax, [rbp + 32]
 	xor edx, edx
-	mul dword [@2699$int4$41#]
+	imul dword [@2699$int4$41#]
 
  fflush$10:
 	; IntegralToIntegral £temporary657 £temporary656
@@ -1403,10 +1403,10 @@ section .text
 	jge fclose$30
 
  fclose$10:
-	; UnsignedMultiply £temporary671 index 41
+	; SignedMultiply £temporary671 index 41
 	mov eax, [rbp + 32]
 	xor edx, edx
-	mul dword [@2723$int4$41#]
+	imul dword [@2723$int4$41#]
 
  fclose$11:
 	; IntegralToIntegral £temporary672 £temporary671
@@ -1430,10 +1430,10 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fclose$16:
-	; UnsignedMultiply £temporary675 index 41
+	; SignedMultiply £temporary675 index 41
 	mov eax, [rbp + 32]
 	xor edx, edx
-	mul dword [@2726$int4$41#]
+	imul dword [@2726$int4$41#]
 
  fclose$17:
 	; IntegralToIntegral £temporary676 £temporary675

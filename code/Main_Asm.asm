@@ -9123,10 +9123,10 @@ strerror$8:	; Equal 14 messageList 0
 x13374:	cmp word [bp + 10], 0	; 4: 131 126 10 0
 x13378:	je strerror$14	; 2: 116 27
 
-strerror$9:	; UnsignedMultiply £temporary3840 errno 2
+strerror$9:	; SignedMultiply £temporary3840 errno 2
 x13380:	mov ax, [bp + 6]	; 3: 139 70 6
 x13383:	xor dx, dx	; 2: 49 210
-x13385:	mul word [@8560$int2$2#]	; 4: 247 38 109 52
+x13385:	imul word [@8560$int2$2#]	; 4: 247 46 109 52
 
 strerror$10:	; BinaryAdd £temporary3841 messageList £temporary3840
 x13389:	mov si, [bp + 10]	; 3: 139 118 10
@@ -12314,10 +12314,10 @@ file_test$707:	; GetReturnValue £temporary4953
 file_test$708:	; Assign p £temporary4953
 x17887:	mov [bp + 14], bx	; 3: 137 94 14
 
-file_test$709:	; UnsignedMultiply £temporary4954 size 8
+file_test$709:	; SignedMultiply £temporary4954 size 8
 x17890:	mov ax, [bp + 8]	; 3: 139 70 8
 x17893:	xor dx, dx	; 2: 49 210
-x17895:	mul word [@10780$int2$8#]	; 4: 247 38 75 86
+x17895:	imul word [@10780$int2$8#]	; 4: 247 46 75 86
 
 file_test$710:	; BinaryAdd endPtr p £temporary4954
 x17899:	mov bx, [bp + 14]	; 3: 139 94 14
@@ -12435,10 +12435,10 @@ file_test$741:	; Parameter 18 index 8
 x18069:	mov ax, [bp + 12]	; 3: 139 70 12
 x18072:	mov [bp + 26], ax	; 3: 137 70 26
 
-file_test$742:	; UnsignedMultiply £temporary4965 index 8
+file_test$742:	; SignedMultiply £temporary4965 index 8
 x18075:	mov ax, [bp + 12]	; 3: 139 70 12
 x18078:	xor dx, dx	; 2: 49 210
-x18080:	mul word [@10806$int2$8#]	; 4: 247 38 239 86
+x18080:	imul word [@10806$int2$8#]	; 4: 247 46 239 86
 
 file_test$743:	; BinaryAdd £temporary4966 p £temporary4965
 x18084:	mov si, [bp + 14]	; 3: 139 118 14
@@ -14332,10 +14332,10 @@ fopen$1:	; SignedGreaterThanEqual 21 index 20
 x23195:	cmp word [bp + 10], 20	; 4: 131 126 10 20
 x23199:	jge fopen$21	; 2: 125 78
 
-fopen$2:	; UnsignedMultiply £temporary699 index 29
+fopen$2:	; SignedMultiply £temporary699 index 29
 x23201:	mov ax, [bp + 10]	; 3: 139 70 10
 x23204:	xor dx, dx	; 2: 49 210
-x23206:	mul word [@1707$int2$29#]	; 4: 247 38 253 90
+x23206:	imul word [@1707$int2$29#]	; 4: 247 46 253 90
 
 fopen$3:	; BinaryAdd £temporary700 g_fileArray £temporary699
 x23210:	mov si, g_fileArray	; 3: 190 102 13
@@ -14357,10 +14357,10 @@ fopen$8:	; Parameter 12 mode 8
 x23226:	mov ax, [bp + 8]	; 3: 139 70 8
 x23229:	mov [bp + 20], ax	; 3: 137 70 20
 
-fopen$9:	; UnsignedMultiply £temporary704 index 29
+fopen$9:	; SignedMultiply £temporary704 index 29
 x23232:	mov ax, [bp + 10]	; 3: 139 70 10
 x23235:	xor dx, dx	; 2: 49 210
-x23237:	mul word [@1715$int2$29#]	; 4: 247 38 255 90
+x23237:	imul word [@1715$int2$29#]	; 4: 247 46 255 90
 
 fopen$10:	; BinaryAdd £temporary705 g_fileArray £temporary704
 x23241:	mov si, g_fileArray	; 3: 190 102 13
@@ -19186,10 +19186,10 @@ fclose$21:	; SignedGreaterThanEqual 40 index 20
 x29292:	cmp word [bp + 8], 20	; 4: 131 126 8 20
 x29296:	jge fclose$40	; 2: 125 74
 
-fclose$22:	; UnsignedMultiply £temporary808 index 29
+fclose$22:	; SignedMultiply £temporary808 index 29
 x29298:	mov ax, [bp + 8]	; 3: 139 70 8
 x29301:	xor dx, dx	; 2: 49 210
-x29303:	mul word [@1922$int2$29#]	; 4: 247 38 202 114
+x29303:	imul word [@1922$int2$29#]	; 4: 247 46 202 114
 
 fclose$23:	; BinaryAdd £temporary809 g_fileArray £temporary808
 x29307:	mov si, g_fileArray	; 3: 190 102 13
@@ -19203,10 +19203,10 @@ x29315:	je fclose$38	; 2: 116 50
 
 fclose$26:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
-fclose$27:	; UnsignedMultiply £temporary811 index 29
+fclose$27:	; SignedMultiply £temporary811 index 29
 x29317:	mov ax, [bp + 8]	; 3: 139 70 8
 x29320:	xor dx, dx	; 2: 49 210
-x29322:	mul word [@1927$int2$29#]	; 4: 247 38 204 114
+x29322:	imul word [@1927$int2$29#]	; 4: 247 46 204 114
 
 fclose$28:	; BinaryAdd £temporary812 g_fileArray £temporary811
 x29326:	mov si, g_fileArray	; 3: 190 102 13
@@ -20159,10 +20159,10 @@ time_test$46:	; CallHeader 64 System.Collections.Generic.HashSet`1[CCompiler.Sym
 time_test$47:	; Parameter 64 string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A# 6
 x30662:	mov word [bp + 70], @12877$string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#	; 5: 199 70 70 244 121
 
-time_test$48:	; UnsignedMultiply £temporary6154 s$tm_wday 2
+time_test$48:	; SignedMultiply £temporary6154 s$tm_wday 2
 x30667:	mov ax, [bp + 36]	; 3: 139 70 36
 x30670:	xor dx, dx	; 2: 49 210
-x30672:	mul word [@12880$int2$2#]	; 4: 247 38 85 122
+x30672:	imul word [@12880$int2$2#]	; 4: 247 46 85 122
 
 time_test$49:	; BinaryAdd £temporary6155 weekdays £temporary6154
 x30676:	mov si, bp	; 2: 137 238
@@ -20232,10 +20232,10 @@ time_test$65:	; CallHeader 64 System.Collections.Generic.HashSet`1[CCompiler.Sym
 time_test$66:	; Parameter 64 string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A# 6
 x30765:	mov word [bp + 70], @12899$string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#	; 5: 199 70 70 87 122
 
-time_test$67:	; UnsignedMultiply £temporary6170 t$tm_wday 2
+time_test$67:	; SignedMultiply £temporary6170 t$tm_wday 2
 x30770:	mov ax, [bp + 54]	; 3: 139 70 54
 x30773:	xor dx, dx	; 2: 49 210
-x30775:	mul word [@12902$int2$2#]	; 4: 247 38 184 122
+x30775:	imul word [@12902$int2$2#]	; 4: 247 46 184 122
 
 time_test$68:	; BinaryAdd £temporary6171 weekdays £temporary6170
 x30779:	mov si, bp	; 2: 137 238
@@ -20703,10 +20703,10 @@ time$52:	; SignedGreaterThanEqual 59 monthIndex £temporary3276
 x31926:	cmp [bp + 45], ax	; 3: 57 70 45
 x31929:	jge time$59	; 2: 125 26
 
-time$53:	; UnsignedMultiply £temporary3280 monthIndex 2
+time$53:	; SignedMultiply £temporary3280 monthIndex 2
 x31931:	mov ax, [bp + 45]	; 3: 139 70 45
 x31934:	xor dx, dx	; 2: 49 210
-x31936:	mul word [@7436$int2$2#]	; 4: 247 38 121 125
+x31936:	imul word [@7436$int2$2#]	; 4: 247 46 121 125
 
 time$54:	; BinaryAdd £temporary3281 daysOfMonths £temporary3280
 x31940:	mov si, bp	; 2: 137 238
@@ -21318,10 +21318,10 @@ x32906:	mov word [bp + 50], 31	; 5: 199 70 50 31 0
 gmtime$68:	; Assign month 0
 x32911:	mov word [bp + 52], 0	; 5: 199 70 52 0 0
 
-gmtime$69:	; UnsignedMultiply £temporary3388 month 2
+gmtime$69:	; SignedMultiply £temporary3388 month 2
 x32916:	mov ax, [bp + 52]	; 3: 139 70 52
 x32919:	xor dx, dx	; 2: 49 210
-x32921:	mul word [@7659$int2$2#]	; 4: 247 38 91 129
+x32921:	imul word [@7659$int2$2#]	; 4: 247 46 91 129
 
 gmtime$70:	; BinaryAdd £temporary3389 daysOfMonths £temporary3388
 x32925:	mov si, bp	; 2: 137 238
@@ -21348,9 +21348,9 @@ x32956:	mov ax, [bp + 52]	; 3: 139 70 52
 gmtime$75:	; Increment month
 x32959:	inc word [bp + 52]	; 3: 255 70 52
 
-gmtime$76:	; UnsignedMultiply £temporary3394 £temporary3392 2
+gmtime$76:	; SignedMultiply £temporary3394 £temporary3392 2
 x32962:	xor dx, dx	; 2: 49 210
-x32964:	mul word [@7667$int2$2#]	; 4: 247 38 93 129
+x32964:	imul word [@7667$int2$2#]	; 4: 247 46 93 129
 
 gmtime$77:	; BinaryAdd £temporary3395 daysOfMonths £temporary3394
 x32968:	mov si, bp	; 2: 137 238
@@ -21631,10 +21631,10 @@ x33340:	mov word [bp + 22], @7798$string_25s2025s2025i202502i3A2502i3A2502i2025i
 asctime$18:	; Deref £temporary3437 -> tp tp 12
 x33345:	mov si, [bp + 6]	; 3: 139 118 6
 
-asctime$19:	; UnsignedMultiply £temporary3439 £temporary3437 -> tp 2
+asctime$19:	; SignedMultiply £temporary3439 £temporary3437 -> tp 2
 x33348:	mov ax, [si + 12]	; 3: 139 68 12
 x33351:	xor dx, dx	; 2: 49 210
-x33353:	mul word [@7801$int2$2#]	; 4: 247 38 74 132
+x33353:	imul word [@7801$int2$2#]	; 4: 247 46 74 132
 
 asctime$20:	; BinaryAdd £temporary3440 shortDayList £temporary3439
 x33357:	mov si, [bp + 10]	; 3: 139 118 10
@@ -21649,10 +21649,10 @@ x33364:	mov [bp + 24], ax	; 3: 137 70 24
 asctime$23:	; Deref £temporary3441 -> tp tp 8
 x33367:	mov si, [bp + 6]	; 3: 139 118 6
 
-asctime$24:	; UnsignedMultiply £temporary3443 £temporary3441 -> tp 2
+asctime$24:	; SignedMultiply £temporary3443 £temporary3441 -> tp 2
 x33370:	mov ax, [si + 8]	; 3: 139 68 8
 x33373:	xor dx, dx	; 2: 49 210
-x33375:	mul word [@7806$int2$2#]	; 4: 247 38 76 132
+x33375:	imul word [@7806$int2$2#]	; 4: 247 46 76 132
 
 asctime$25:	; BinaryAdd £temporary3444 shortMonthList £temporary3443
 x33379:	mov si, [bp + 12]	; 3: 139 118 12
@@ -22214,10 +22214,10 @@ x34384:	add word [bp + 56], 30	; 4: 131 70 56 30
 strftime$77:	; Deref £temporary3497 -> tp tp 12
 x34388:	mov si, [bp + 12]	; 3: 139 118 12
 
-strftime$78:	; UnsignedMultiply £temporary3499 £temporary3497 -> tp 2
+strftime$78:	; SignedMultiply £temporary3499 £temporary3497 -> tp 2
 x34391:	mov ax, [si + 12]	; 3: 139 68 12
 x34394:	xor dx, dx	; 2: 49 210
-x34396:	mul word [@7917$int2$2#]	; 4: 247 38 195 139
+x34396:	imul word [@7917$int2$2#]	; 4: 247 46 195 139
 
 strftime$79:	; BinaryAdd £temporary3500 shortDayList £temporary3499
 x34400:	mov si, [bp + 16]	; 3: 139 118 16
@@ -22249,10 +22249,10 @@ x34430:	add word [bp + 56], 30	; 4: 131 70 56 30
 strftime$87:	; Deref £temporary3502 -> tp tp 12
 x34434:	mov si, [bp + 12]	; 3: 139 118 12
 
-strftime$88:	; UnsignedMultiply £temporary3504 £temporary3502 -> tp 2
+strftime$88:	; SignedMultiply £temporary3504 £temporary3502 -> tp 2
 x34437:	mov ax, [si + 12]	; 3: 139 68 12
 x34440:	xor dx, dx	; 2: 49 210
-x34442:	mul word [@7925$int2$2#]	; 4: 247 38 197 139
+x34442:	imul word [@7925$int2$2#]	; 4: 247 46 197 139
 
 strftime$89:	; BinaryAdd £temporary3505 longDayList £temporary3504
 x34446:	mov si, [bp + 20]	; 3: 139 118 20
@@ -22284,10 +22284,10 @@ x34476:	add word [bp + 56], 30	; 4: 131 70 56 30
 strftime$97:	; Deref £temporary3507 -> tp tp 8
 x34480:	mov si, [bp + 12]	; 3: 139 118 12
 
-strftime$98:	; UnsignedMultiply £temporary3509 £temporary3507 -> tp 2
+strftime$98:	; SignedMultiply £temporary3509 £temporary3507 -> tp 2
 x34483:	mov ax, [si + 8]	; 3: 139 68 8
 x34486:	xor dx, dx	; 2: 49 210
-x34488:	mul word [@7933$int2$2#]	; 4: 247 38 199 139
+x34488:	imul word [@7933$int2$2#]	; 4: 247 46 199 139
 
 strftime$99:	; BinaryAdd £temporary3510 shortMonthList £temporary3509
 x34492:	mov si, [bp + 18]	; 3: 139 118 18
@@ -22319,10 +22319,10 @@ x34522:	add word [bp + 56], 30	; 4: 131 70 56 30
 strftime$107:	; Deref £temporary3512 -> tp tp 8
 x34526:	mov si, [bp + 12]	; 3: 139 118 12
 
-strftime$108:	; UnsignedMultiply £temporary3514 £temporary3512 -> tp 2
+strftime$108:	; SignedMultiply £temporary3514 £temporary3512 -> tp 2
 x34529:	mov ax, [si + 8]	; 3: 139 68 8
 x34532:	xor dx, dx	; 2: 49 210
-x34534:	mul word [@7941$int2$2#]	; 4: 247 38 201 139
+x34534:	imul word [@7941$int2$2#]	; 4: 247 46 201 139
 
 strftime$109:	; BinaryAdd £temporary3515 longMonthList £temporary3514
 x34538:	mov si, [bp + 22]	; 3: 139 118 22
@@ -29543,10 +29543,10 @@ stdlib_test$136:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.
 stdlib_test$137:	; Parameter 18 string_25i20# 6
 x47956:	mov word [bp + 24], @12656$string_25i20#	; 5: 199 70 24 103 190
 
-stdlib_test$138:	; UnsignedMultiply £temporary6018 index 2
+stdlib_test$138:	; SignedMultiply £temporary6018 index 2
 x47961:	mov ax, [bp + 16]	; 3: 139 70 16
 x47964:	xor dx, dx	; 2: 49 210
-x47966:	mul word [@12658$int2$2#]	; 4: 247 38 107 190
+x47966:	imul word [@12658$int2$2#]	; 4: 247 46 107 190
 
 stdlib_test$139:	; BinaryAdd £temporary6019 list £temporary6018
 x47970:	mov si, bp	; 2: 137 238
@@ -29626,10 +29626,10 @@ stdlib_test$159:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.
 stdlib_test$160:	; Parameter 18 string_25i20# 6
 x48077:	mov word [bp + 24], @12675$string_25i20#	; 5: 199 70 24 177 190
 
-stdlib_test$161:	; UnsignedMultiply £temporary6027 index 2
+stdlib_test$161:	; SignedMultiply £temporary6027 index 2
 x48082:	mov ax, [bp + 16]	; 3: 139 70 16
 x48085:	xor dx, dx	; 2: 49 210
-x48087:	mul word [@12677$int2$2#]	; 4: 247 38 181 190
+x48087:	imul word [@12677$int2$2#]	; 4: 247 46 181 190
 
 stdlib_test$162:	; BinaryAdd £temporary6028 list £temporary6027
 x48091:	mov si, bp	; 2: 137 238
@@ -29709,10 +29709,10 @@ stdlib_test$182:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.
 stdlib_test$183:	; Parameter 18 string_25i20# 6
 x48198:	mov word [bp + 24], @12694$string_25i20#	; 5: 199 70 24 251 190
 
-stdlib_test$184:	; UnsignedMultiply £temporary6036 index 2
+stdlib_test$184:	; SignedMultiply £temporary6036 index 2
 x48203:	mov ax, [bp + 16]	; 3: 139 70 16
 x48206:	xor dx, dx	; 2: 49 210
-x48208:	mul word [@12696$int2$2#]	; 4: 247 38 255 190
+x48208:	imul word [@12696$int2$2#]	; 4: 247 46 255 190
 
 stdlib_test$185:	; BinaryAdd £temporary6037 list £temporary6036
 x48212:	mov si, bp	; 2: 137 238
@@ -29810,9 +29810,9 @@ x48337:	mov bx, bp	; 2: 137 235
 x48339:	add bx, 6	; 3: 131 195 6
 x48342:	sub ax, bx	; 2: 41 216
 
-stdlib_test$212:	; UnsignedDivide £temporary6053 £temporary6048 2
+stdlib_test$212:	; SignedDivide £temporary6053 £temporary6048 2
 x48344:	xor dx, dx	; 2: 49 210
-x48346:	div word [@12723$int2$2#]	; 4: 247 54 12 191
+x48346:	idiv word [@12723$int2$2#]	; 4: 247 62 12 191
 
 stdlib_test$213:	; Goto 215
 x48350:	jmp stdlib_test$215	; 2: 235 3

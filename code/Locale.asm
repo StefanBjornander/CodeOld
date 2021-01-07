@@ -637,10 +637,10 @@ section .text
 	mov [rbp + 72], rax
 
  setlocale$12:
-	; UnsignedMultiply £temporary246 index 16
+	; SignedMultiply £temporary246 index 16
 	mov eax, [rbp + 36]
 	xor edx, edx
-	mul dword [@1585$int4$16#]
+	imul dword [@1585$int4$16#]
 
  setlocale$13:
 	; IntegralToIntegral £temporary247 £temporary246
@@ -679,10 +679,10 @@ section .text
 	jne setlocale$28
 
  setlocale$21:
-	; UnsignedMultiply £temporary252 index 16
+	; SignedMultiply £temporary252 index 16
 	mov eax, [rbp + 36]
 	xor edx, edx
-	mul dword [@1590$int4$16#]
+	imul dword [@1590$int4$16#]
 
  setlocale$22:
 	; IntegralToIntegral £temporary253 £temporary252

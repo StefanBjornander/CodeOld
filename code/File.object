@@ -268,10 +268,10 @@ fopen$1:	; SignedGreaterThanEqual 21 index 20
 6:		jge fopen$21
 8:	
 
-fopen$2:	; UnsignedMultiply £temporary699 index 29
+fopen$2:	; SignedMultiply £temporary699 index 29
 9:		mov ax, [bp + 10]
 11:		xor dx, dx
-12:		mul word [@1707$int2$29#]
+12:		imul word [@1707$int2$29#]
 18:	
 
 fopen$3:	; BinaryAdd £temporary700 g_fileArray £temporary699
@@ -300,10 +300,10 @@ fopen$8:	; Parameter 12 mode 8
 36:		mov [bp + 20], ax
 38:	
 
-fopen$9:	; UnsignedMultiply £temporary704 index 29
+fopen$9:	; SignedMultiply £temporary704 index 29
 39:		mov ax, [bp + 10]
 41:		xor dx, dx
-42:		mul word [@1715$int2$29#]
+42:		imul word [@1715$int2$29#]
 48:	
 
 fopen$10:	; BinaryAdd £temporary705 g_fileArray £temporary704
@@ -1027,10 +1027,10 @@ fflush$2:	; SignedGreaterThanEqual 21 index 20
 10:		jge fflush$21
 12:	
 
-fflush$3:	; UnsignedMultiply £temporary785 index 29
+fflush$3:	; SignedMultiply £temporary785 index 29
 13:		mov ax, [bp + 8]
 15:		xor dx, dx
-16:		mul word [@1868$int2$29#]
+16:		imul word [@1868$int2$29#]
 22:	
 
 fflush$4:	; BinaryAdd £temporary786 g_fileArray £temporary785
@@ -1049,10 +1049,10 @@ fflush$6:	; Equal 19 £temporary784.open$0 -> £temporary786 0
 fflush$7:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 34:	
 
-fflush$8:	; UnsignedMultiply £temporary788 index 29
+fflush$8:	; SignedMultiply £temporary788 index 29
 35:		mov ax, [bp + 8]
 37:		xor dx, dx
-38:		mul word [@1873$int2$29#]
+38:		imul word [@1873$int2$29#]
 44:	
 
 fflush$9:	; BinaryAdd £temporary789 g_fileArray £temporary788
@@ -1220,10 +1220,10 @@ fclose$21:	; SignedGreaterThanEqual 40 index 20
 76:		jge fclose$40
 78:	
 
-fclose$22:	; UnsignedMultiply £temporary808 index 29
+fclose$22:	; SignedMultiply £temporary808 index 29
 79:		mov ax, [bp + 8]
 81:		xor dx, dx
-82:		mul word [@1922$int2$29#]
+82:		imul word [@1922$int2$29#]
 88:	
 
 fclose$23:	; BinaryAdd £temporary809 g_fileArray £temporary808
@@ -1242,10 +1242,10 @@ fclose$25:	; Equal 38 £temporary807.open$0 -> £temporary809 0
 fclose$26:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 100:	
 
-fclose$27:	; UnsignedMultiply £temporary811 index 29
+fclose$27:	; SignedMultiply £temporary811 index 29
 101:		mov ax, [bp + 8]
 103:		xor dx, dx
-104:		mul word [@1927$int2$29#]
+104:		imul word [@1927$int2$29#]
 110:	
 
 fclose$28:	; BinaryAdd £temporary812 g_fileArray £temporary811

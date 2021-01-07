@@ -94,7 +94,7 @@
 93: PreCall 124
 94: Parameter 148 pointer add
 95: Dereference £temporary2666 -> tp tp 0
-96: UnsignedMultiply £temporary2668 £temporary2666 -> tp 8
+96: SignedMultiply £temporary2668 £temporary2666 -> tp 8
 97: IntegralToIntegral £temporary2669 £temporary2668
 98: BinaryAdd £temporary2670 shortDayList £temporary2669
 99: Dereference £temporary2667 -> £temporary2670 £temporary2670 0
@@ -105,7 +105,7 @@
 104: PreCall 124
 105: Parameter 148 pointer add
 106: Dereference £temporary2672 -> tp tp 0
-107: UnsignedMultiply £temporary2674 £temporary2672 -> tp 8
+107: SignedMultiply £temporary2674 £temporary2672 -> tp 8
 108: IntegralToIntegral £temporary2675 £temporary2674
 109: BinaryAdd £temporary2676 longDayList £temporary2675
 110: Dereference £temporary2673 -> £temporary2676 £temporary2676 0
@@ -116,7 +116,7 @@
 115: PreCall 124
 116: Parameter 148 pointer add
 117: Dereference £temporary2678 -> tp tp 0
-118: UnsignedMultiply £temporary2680 £temporary2678 -> tp 8
+118: SignedMultiply £temporary2680 £temporary2678 -> tp 8
 119: IntegralToIntegral £temporary2681 £temporary2680
 120: BinaryAdd £temporary2682 shortMonthList £temporary2681
 121: Dereference £temporary2679 -> £temporary2682 £temporary2682 0
@@ -127,7 +127,7 @@
 126: PreCall 124
 127: Parameter 148 pointer add
 128: Dereference £temporary2684 -> tp tp 0
-129: UnsignedMultiply £temporary2686 £temporary2684 -> tp 8
+129: SignedMultiply £temporary2686 £temporary2684 -> tp 8
 130: IntegralToIntegral £temporary2687 £temporary2686
 131: BinaryAdd £temporary2688 longMonthList £temporary2687
 132: Dereference £temporary2685 -> £temporary2688 £temporary2688 0

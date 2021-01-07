@@ -4299,10 +4299,10 @@ section .text
 	mov [rbp + 44], rbx
 
  file_test$709:
-	; UnsignedMultiply £temporary3745 size 8
+	; SignedMultiply £temporary3745 size 8
 	mov eax, [rbp + 32]
 	xor edx, edx
-	mul dword [@11412$int4$8#]
+	imul dword [@11412$int4$8#]
 
  file_test$710:
 	; IntegralToIntegral £temporary3746 £temporary3745
@@ -4458,10 +4458,10 @@ section .text
 	mov [rbp + 92], eax
 
  file_test$743:
-	; UnsignedMultiply £temporary3757 index 8
+	; SignedMultiply £temporary3757 index 8
 	mov eax, [rbp + 40]
 	xor edx, edx
-	mul dword [@11429$int4$8#]
+	imul dword [@11429$int4$8#]
 
  file_test$744:
 	; IntegralToIntegral £temporary3758 £temporary3757

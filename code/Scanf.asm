@@ -2476,7 +2476,7 @@ section .text
 	and rbx, rax
 
  scanUnsignedLongInt$58:
-	; UnsignedMultiply unsignedLongValue unsignedLongValue £temporary1081
+	; SignedMultiply unsignedLongValue unsignedLongValue £temporary1081
 	mov rax, [rbp + 28]
 	xor rdx, rdx
 	mul rbx

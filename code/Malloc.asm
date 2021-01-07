@@ -188,7 +188,7 @@ section .text
 	mov [rbp + 76], ebx
 
  malloc$33:
-	; UnsignedGreaterThan 39 newBlockSize currGap
+	; SignedGreaterThan 39 newBlockSize currGap
 	mov eax, [rbp + 76]
 	cmp [rbp + 28], eax
 	ja malloc$39
@@ -199,7 +199,7 @@ section .text
 	je malloc$36
 
  malloc$35:
-	; UnsignedGreaterThanEqual 39 currGap minGap
+	; SignedGreaterThanEqual 39 currGap minGap
 	mov eax, [rbp + 32]
 	cmp [rbp + 76], eax
 	jae malloc$39
@@ -352,7 +352,7 @@ section .text
 	mov [rbp + 76], ebp
 
  malloc$68:
-	; UnsignedGreaterThan 84 stackTop newAddress
+	; SignedGreaterThan 84 stackTop newAddress
 	mov eax, [rbp + 72]
 	cmp [rbp + 76], eax
 	ja malloc$84
@@ -931,7 +931,7 @@ section .text
 	mov rsi, [rbp + 40]
 
  realloc$47:
-	; UnsignedGreaterThan 52 newBlockSize £temporary107 -> oldBlockPtr
+	; SignedGreaterThan 52 newBlockSize £temporary107 -> oldBlockPtr
 	mov eax, [rsi]
 	cmp [rbp + 36], eax
 	ja realloc$52
@@ -998,7 +998,7 @@ section .text
 	mov [rbp + 60], ebx
 
  realloc$61:
-	; UnsignedLessThan 71 availableSize newBlockSize
+	; SignedLessThan 71 availableSize newBlockSize
 	mov eax, [rbp + 36]
 	cmp [rbp + 60], eax
 	jb realloc$71

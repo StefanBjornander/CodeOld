@@ -785,10 +785,10 @@ section .text
 	mov dword [rbp + 120], 0
 
  gmtime$69:
-	; UnsignedMultiply £temporary2568 month 4
+	; SignedMultiply £temporary2568 month 4
 	mov eax, [rbp + 120]
 	xor edx, edx
-	mul dword [@7686$int4$4#]
+	imul dword [@7686$int4$4#]
 
  gmtime$70:
 	; IntegralToIntegral £temporary2569 £temporary2568
@@ -828,9 +828,9 @@ section .text
 	inc dword [rbp + 120]
 
  gmtime$77:
-	; UnsignedMultiply £temporary2575 £temporary2573 4
+	; SignedMultiply £temporary2575 £temporary2573 4
 	xor edx, edx
-	mul dword [@7689$int4$4#]
+	imul dword [@7689$int4$4#]
 
  gmtime$78:
 	; IntegralToIntegral £temporary2576 £temporary2575
@@ -1530,10 +1530,10 @@ section .text
 	mov rsi, [rbp + 24]
 
  asctime$19:
-	; UnsignedMultiply £temporary2614 £temporary2612 -> tp 8
+	; SignedMultiply £temporary2614 £temporary2612 -> tp 8
 	mov eax, [rsi + 24]
 	xor edx, edx
-	mul dword [@7782$int4$8#]
+	imul dword [@7782$int4$8#]
 
  asctime$20:
 	; IntegralToIntegral £temporary2615 £temporary2614
@@ -1558,10 +1558,10 @@ section .text
 	mov rsi, [rbp + 24]
 
  asctime$25:
-	; UnsignedMultiply £temporary2619 £temporary2617 -> tp 8
+	; SignedMultiply £temporary2619 £temporary2617 -> tp 8
 	mov eax, [rsi + 16]
 	xor edx, edx
-	mul dword [@7784$int4$8#]
+	imul dword [@7784$int4$8#]
 
  asctime$26:
 	; IntegralToIntegral £temporary2620 £temporary2619
@@ -2256,10 +2256,10 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$81:
-	; UnsignedMultiply £temporary2668 £temporary2666 -> tp 8
+	; SignedMultiply £temporary2668 £temporary2666 -> tp 8
 	mov eax, [rsi + 24]
 	xor edx, edx
-	mul dword [@7854$int4$8#]
+	imul dword [@7854$int4$8#]
 
  strftime$82:
 	; IntegralToIntegral £temporary2669 £temporary2668
@@ -2306,10 +2306,10 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$92:
-	; UnsignedMultiply £temporary2674 £temporary2672 -> tp 8
+	; SignedMultiply £temporary2674 £temporary2672 -> tp 8
 	mov eax, [rsi + 24]
 	xor edx, edx
-	mul dword [@7858$int4$8#]
+	imul dword [@7858$int4$8#]
 
  strftime$93:
 	; IntegralToIntegral £temporary2675 £temporary2674
@@ -2356,10 +2356,10 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$103:
-	; UnsignedMultiply £temporary2680 £temporary2678 -> tp 8
+	; SignedMultiply £temporary2680 £temporary2678 -> tp 8
 	mov eax, [rsi + 16]
 	xor edx, edx
-	mul dword [@7862$int4$8#]
+	imul dword [@7862$int4$8#]
 
  strftime$104:
 	; IntegralToIntegral £temporary2681 £temporary2680
@@ -2406,10 +2406,10 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$114:
-	; UnsignedMultiply £temporary2686 £temporary2684 -> tp 8
+	; SignedMultiply £temporary2686 £temporary2684 -> tp 8
 	mov eax, [rsi + 16]
 	xor edx, edx
-	mul dword [@7866$int4$8#]
+	imul dword [@7866$int4$8#]
 
  strftime$115:
 	; IntegralToIntegral £temporary2687 £temporary2686
