@@ -1,14 +1,102 @@
-0: AssignRegister rax 201
-1: Address £temporary2482 time
-2: IntegralToIntegral £temporary2483 £temporary2482
-3: AssignRegister rdi £temporary2483
-4: SysCall
-5: NotEqual Dereference £temporary2485 -> timePtr timePtr 0 timePtr 0
-6: Jump SetReturnValue
-7: Dereference £temporary2485 -> timePtr timePtr 0
-8: Assign £temporary2485 -> timePtr time
-9: Jump SetReturnValue
-10: SetReturnValue
-11: Return time
-12: Empty
-13: FunctionEnd time
+0: AssignRegister ah 42
+1: Interrupt 33
+2: InspectRegister £temporary2418 cx
+3: BinarySubtract £temporary2419 £temporary2418 1900
+4: Assign year £temporary2419
+5: InspectRegister £temporary2420 dh
+6: BinarySubtract £temporary2421 £temporary2420 1
+7: Assign month £temporary2421
+8: InspectRegister £temporary2422 dl
+9: Assign monthDay £temporary2422
+10: AssignRegister ah 44
+11: Interrupt 33
+12: InspectRegister £temporary2424 ch
+13: Assign hour £temporary2424
+14: InspectRegister £temporary2425 cl
+15: Assign min £temporary2425
+16: InspectRegister £temporary2426 dh
+17: Assign sec £temporary2426
+18: PreCall 19
+19: Call 19 localeconv 0
+20: PostCall 19
+21: GetReturnValue £temporary2427
+22: Assign localeConvPtr £temporary2427
+23: NotEqual IntegralToIntegral £temporary2430 hour localeConvPtr 0
+24: Jump Assign daysOfMonths[0] 31
+25: IntegralToIntegral £temporary2430 hour
+26: Dereference £temporary2429 -> localeConvPtr localeConvPtr 0
+27: BinarySubtract £temporary2431 £temporary2430 £temporary2429 -> localeConvPtr
+28: IntegralToIntegral £temporary2432 £temporary2431
+29: Assign hour £temporary2432
+30: Jump Assign daysOfMonths[0] 31
+31: Assign daysOfMonths[0] 31
+32: PreCall 21
+33: Parameter 27 signedint year
+34: Call 21 isLeapYear 0
+35: PostCall 21
+36: GetReturnValue £temporary2433
+37: NotEqual Empty £temporary2433 0
+38: Jump Empty
+39: Empty
+40: Assign £temporary2435 29
+41: Jump Empty
+42: Empty
+43: Assign £temporary2435 28
+44: Empty
+45: Assign daysOfMonths[1] £temporary2435
+46: Assign daysOfMonths[2] 31
+47: Assign daysOfMonths[3] 30
+48: Assign daysOfMonths[4] 31
+49: Assign daysOfMonths[5] 30
+50: Assign daysOfMonths[6] 31
+51: Assign daysOfMonths[7] 31
+52: Assign daysOfMonths[8] 30
+53: Assign daysOfMonths[9] 31
+54: Assign daysOfMonths[10] 30
+55: Assign daysOfMonths[11] 31
+56: IntegralToIntegral £temporary2448 monthDay
+57: BinarySubtract £temporary2449 £temporary2448 1
+58: Assign yearDay £temporary2449
+59: Assign monthIndex 0
+60: Empty
+61: IntegralToIntegral £temporary2450 month
+62: LessThan Multiply £temporary2454 monthIndex 2 monthIndex £temporary2450
+63: Jump IntegralToIntegral £temporary2458 sec
+64: Multiply £temporary2454 monthIndex 2
+65: BinaryAdd £temporary2455 daysOfMonths £temporary2454
+66: Dereference £temporary2453 -> £temporary2455 £temporary2455 0
+67: BinaryAdd £temporary2456 yearDay £temporary2453 -> £temporary2455
+68: Assign yearDay £temporary2456
+69: Empty
+70: BinaryAdd monthIndex monthIndex 1
+71: Jump Empty
+72: IntegralToIntegral £temporary2458 sec
+73: Assign s.tm_sec £temporary2458
+74: IntegralToIntegral £temporary2460 min
+75: Assign s.tm_min £temporary2460
+76: IntegralToIntegral £temporary2462 hour
+77: Assign s.tm_hour £temporary2462
+78: IntegralToIntegral £temporary2464 monthDay
+79: Assign s.tm_mday £temporary2464
+80: IntegralToIntegral £temporary2466 month
+81: Assign s.tm_mon £temporary2466
+82: Assign s.tm_year year
+83: Assign s.tm_wday 0
+84: Assign s.tm_yday yearDay
+85: Assign s.tm_isdst 0
+86: PreCall 65
+87: Address £temporary2471 s
+88: Parameter 71 pointer £temporary2471
+89: Call 65 mktime 0
+90: PostCall 65
+91: GetReturnValue £temporary2472
+92: Assign time £temporary2472
+93: NotEqual Dereference £temporary2474 -> timePtr timePtr 0 timePtr 0
+94: Jump SetReturnValue
+95: Dereference £temporary2474 -> timePtr timePtr 0
+96: Assign £temporary2474 -> timePtr time
+97: Jump SetReturnValue
+98: SetReturnValue
+99: Return time
+100: Empty
+101: FunctionEnd time

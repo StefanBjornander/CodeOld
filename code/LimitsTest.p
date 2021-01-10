@@ -276,17 +276,17 @@ printf ( "CHAR_MIN = %i\n\n" , -128S  ) ;
 printf ( "CHAR_MAX = %i\n" , 127S  ) ;
 printf ( "UCHAR_MAX = %u\n\n" , 255US  ) ;
 
-printf ( "SHRT_MIN = %i\n" , -32768S  ) ;
-printf ( "SHRT_MAX = %i\n" , 32767S  ) ;
-printf ( "USHRT_MAX = %u\n\n" , 65535US  ) ;
+printf ( "SHRT_MIN = %i\n" , -128S  ) ;
+printf ( "SHRT_MAX = %i\n" , 127S  ) ;
+printf ( "USHRT_MAX = %u\n\n" , 255US  ) ;
 
-printf ( "INT_MIN = %i\n" , -2147483648  ) ;
-printf ( "INT_MAX = %i\n" , 2147483647  ) ;
-printf ( "UINT_MAX = %u\n\n" , 4294967295U  ) ;
+printf ( "INT_MIN = %i\n" , -32768  ) ;
+printf ( "INT_MAX = %i\n" , 32767  ) ;
+printf ( "UINT_MAX = %u\n\n" , 65535U  ) ;
 
-printf ( "LONG_MIN = %li\n" , -9223372036854775808L  ) ;
-printf ( "LONG_MAX = %li\n" , 9223372036854775807L  ) ;
-printf ( "ULONG_MAX = %lu\n" , 18446744073709551615UL  ) ;
-printf ( "ULONG_MAX = %lx\n" , 18446744073709551615UL  ) ;
-printf ( "ULONG_MAX = %lX\n" , 18446744073709551615UL  ) ;
+printf ( "LONG_MIN = %li\n" , -2147483648L  ) ;
+printf ( "LONG_MAX = %li\n" , 2147483647L  ) ;
+printf ( "ULONG_MAX = %lu\n" , 4294967295UL  ) ;
+printf ( "ULONG_MAX = %lx\n" , 4294967295UL  ) ;
+printf ( "ULONG_MAX = %lX\n" , 4294967295UL  ) ;
 } 
