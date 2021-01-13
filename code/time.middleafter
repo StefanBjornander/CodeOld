@@ -1,86 +1,11 @@
-0: AssignRegister ah 42
-1: Interrupt 33
-2: InspectRegister £temporary2418 cx
-3: BinarySubtract year £temporary2418 1900
-4: InspectRegister £temporary2420 dh
-5: BinarySubtract month £temporary2420 1
-6: InspectRegister £temporary2422 dl
-7: Assign monthDay £temporary2422
-8: AssignRegister ah 44
-9: Interrupt 33
-10: InspectRegister £temporary2424 ch
-11: Assign hour £temporary2424
-12: InspectRegister £temporary2425 cl
-13: Assign min £temporary2425
-14: InspectRegister £temporary2426 dh
-15: Assign sec £temporary2426
-16: PreCall 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-17: Call 19 localeconv 0
-18: PostCall 19
-19: GetReturnValue £temporary2427
-20: Assign localeConvPtr £temporary2427
-21: Equal 27 localeConvPtr 0
-22: IntegralToIntegral £temporary2430 hour
-23: Dereference £temporary2429 -> localeConvPtr localeConvPtr 0
-24: BinarySubtract £temporary2431 £temporary2430 £temporary2429 -> localeConvPtr
-25: IntegralToIntegral £temporary2432 £temporary2431
-26: Assign hour £temporary2432
-27: Assign daysOfMonths[0] 31
-28: PreCall 21 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-29: Parameter 27 signedint year
-30: Call 21 isLeapYear 0
-31: PostCall 21
-32: GetReturnValue £temporary2433
-33: Equal 36 £temporary2433 0
-34: Assign £temporary2435 29
-35: Jump 37
-36: Assign £temporary2435 28
-37: Assign daysOfMonths[1] £temporary2435
-38: Assign daysOfMonths[2] 31
-39: Assign daysOfMonths[3] 30
-40: Assign daysOfMonths[4] 31
-41: Assign daysOfMonths[5] 30
-42: Assign daysOfMonths[6] 31
-43: Assign daysOfMonths[7] 31
-44: Assign daysOfMonths[8] 30
-45: Assign daysOfMonths[9] 31
-46: Assign daysOfMonths[10] 30
-47: Assign daysOfMonths[11] 31
-48: IntegralToIntegral £temporary2448 monthDay
-49: BinarySubtract yearDay £temporary2448 1
-50: Assign monthIndex 0
-51: IntegralToIntegral £temporary2450 month
-52: GreaterThanEqual 59 monthIndex £temporary2450
-53: Multiply £temporary2454 monthIndex 2
-54: BinaryAdd £temporary2455 daysOfMonths £temporary2454
-55: Dereference £temporary2453 -> £temporary2455 £temporary2455 0
-56: BinaryAdd yearDay yearDay £temporary2453 -> £temporary2455
-57: BinaryAdd monthIndex monthIndex 1
-58: Jump 51
-59: IntegralToIntegral £temporary2458 sec
-60: Assign s.tm_sec £temporary2458
-61: IntegralToIntegral £temporary2460 min
-62: Assign s.tm_min £temporary2460
-63: IntegralToIntegral £temporary2462 hour
-64: Assign s.tm_hour £temporary2462
-65: IntegralToIntegral £temporary2464 monthDay
-66: Assign s.tm_mday £temporary2464
-67: IntegralToIntegral £temporary2466 month
-68: Assign s.tm_mon £temporary2466
-69: Assign s.tm_year year
-70: Assign s.tm_wday 0
-71: Assign s.tm_yday yearDay
-72: Assign s.tm_isdst 0
-73: PreCall 65 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-74: Address £temporary2471 s
-75: Parameter 71 pointer £temporary2471
-76: Call 65 mktime 0
-77: PostCall 65
-78: GetReturnValue £temporary2472
-79: Assign time £temporary2472
-80: Equal 83 timePtr 0
-81: Dereference £temporary2474 -> timePtr timePtr 0
-82: Assign £temporary2474 -> timePtr time
-83: SetReturnValue
-84: Return time
-85: FunctionEnd time
+0: AssignRegister rax 201
+1: Address £temporary2482 time
+2: IntegralToIntegral £temporary2483 £temporary2482
+3: AssignRegister rdi £temporary2483
+4: SysCall
+5: Equal 8 timePtr 0
+6: Dereference £temporary2485 -> timePtr timePtr 0
+7: Assign £temporary2485 -> timePtr time
+8: SetReturnValue
+9: Return time
+10: FunctionEnd time
