@@ -206,6 +206,29 @@ char* ctime(const time_t* time) {
   return asctime(localtime(time));
 }
 
+static int getWeekNumber(const struct tm* tp) {
+  const long leapDays = (tp->tm_year - 69) / 4;
+  const int totalDays = 365 * (tp->tm_year - 70) + leapDays;
+  int weekDayJanuaryFirst;
+
+  if (totalDays < 3) {
+    weekDayJanuaryFirst = totalDays + 4;
+  }
+  else {
+    weekDayJanuaryFirst = (totalDays - 3) % 7;
+  }
+
+  { int firstWeekSize = 7 - weekDayJanuaryFirst;
+
+    if (tp->tm_yday < firstWeekSize) {
+      return 0;
+    }
+    else {
+      return ((tp->tm_yday - firstWeekSize) / 7) + 1;
+    }
+  }
+}
+
 size_t strftime(char* result, size_t maxSize,
                 const char* format, const struct tm* tp) {
   struct lconv* localeConvPtr = localeconv();
@@ -241,7 +264,12 @@ size_t strftime(char* result, size_t maxSize,
 
   strcpy(result, "");
   { int index;
-    const int weekNumberStartSunday = 0, weekNumberStartMonday = 0;
+    const int weekNumberStartSunday = getWeekNumber(tp);
+    int weekNumberStartMonday = weekNumberStartSunday;
+
+    if (tp->tm_mday == 0) {
+      --weekNumberStartMonday;
+    }
 
     /*const char timeZone[7] = tp->tm_isdst ? "summer" : "winter";
     const char timeZone[7];

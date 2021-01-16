@@ -1,13 +1,13 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
-    
-    
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
-    
-    
- 
-     
-     
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
+
+
+
+
+
 
 
 
@@ -42,13 +42,12 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
-    
-    
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
+
+
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -64,54 +63,52 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
-    
-    
- 
-      
-                         
-                                    
-      
- 
-   
- 
+
+
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
-    
-    
- 
-           
-     
-     
-     
-     
- 
-   
- 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
+
+
+
+
+
+
+
+
+
+
+
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
-    
-    
- 
-     
-     
- 
-     
-     
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
+
+
+
+
+
+
+
+
 
 typedef struct {
-int  open ;
+int open ;
 unsigned int handle ;
-char name [ 16  ] , ungetc ;
+char name [ 16 ] , ungetc ;
 int errno ;
 unsigned int position , size ;
-int  temporary ;
+int temporary ;
 } FILE ;
 
 extern FILE * stdin , * stdout , * stderr ;
@@ -120,16 +117,16 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-         
 
-int  fileexists ( const char * name ) ;
+
+int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
 FILE * freopen ( const char * filename , const char * mode , FILE * stream ) ;
 int fflush ( FILE * stream ) ;
 int fclose ( FILE * stream ) ;
 int remove ( const char * name ) ;
 int rename ( const char * oldName , const char * newName ) ;
-int setvbuf ( FILE * stream , char * buffer , int mode , int  size ) ;
+int setvbuf ( FILE * stream , char * buffer , int mode , int size ) ;
 void setbuf ( FILE * stream , char * buffer ) ;
 int fgetc ( FILE * stream ) ;
 char * fgets ( char * s , int n , FILE * stream ) ;
@@ -140,62 +137,59 @@ char * gets ( char * s ) ;
 int putchar ( int c ) ;
 int puts ( const char * s ) ;
 int ungetc ( int c , FILE * stream ) ;
-int  fread ( void * ptr , int  size , int  nobj , FILE * stream ) ;
-int  fwrite ( const void * ptr , int  size , int  nobj , FILE * stream ) ;
+int fread ( void * ptr , int size , int nobj , FILE * stream ) ;
+int fwrite ( const void * ptr , int size , int nobj , FILE * stream ) ;
 int fseek ( FILE * stream , int offset , int origin ) ;
 int ftell ( FILE * stream ) ;
 void rewind ( FILE * stream ) ;
-int fgetpos ( FILE * stream , int  * ptr ) ;
-int fsetpos ( FILE * stream , const int  * ptr ) ;
+int fgetpos ( FILE * stream , int * ptr ) ;
+int fsetpos ( FILE * stream , const int * ptr ) ;
 void clearerr ( FILE * stream ) ;
-int  feof ( FILE * stream ) ;
+int feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
-    
-    
- 
-     
-     
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
+
+
+
+
+
 
 FILE * tmpfile ( void ) ;
-char * tmpnam ( char name [ 4  ] ) ;
+char * tmpnam ( char name [ 4 ] ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
-    
-    
- 
-     
-     
- 
-     
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
+
+
+
+
+
+
+
 
 int scanf ( const char * format , ... ) ;
-int vscanf ( const char * format , char *  arg_list ) ;
+int vscanf ( const char * format , char * arg_list ) ;
 int fscanf ( FILE * inStream , const char * format , ... ) ;
-int vfscanf ( FILE * inStream , const char * format , char *  arg_list ) ;
+int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
-int vsscanf ( char * inString , const char * format , char *  arg_list ) ;
+int vsscanf ( char * inString , const char * format , char * arg_list ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
-    
-    
- 
-     
-     
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
+
+
+
+
+
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -205,27 +199,25 @@ int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
 int printf ( const char * format , ... ) ;
-int vprintf ( const char * format , char *  arg_list ) ;
+int vprintf ( const char * format , char * arg_list ) ;
 int fprintf ( FILE * outStream , const char * format , ... ) ;
-int vfprintf ( FILE * outStream , const char * format , char *  arg_list ) ;
+int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
-int vsprintf ( char * outString , const char * format , char *  arg_list ) ;
+int vsprintf ( char * outString , const char * format , char * arg_list ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-        
- 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Locale.c,0$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
-    
-    
- 
-     
-           
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Locale.c,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
+
+
+
+
+
 
 double atof ( const char * s ) ;
 int atoi ( const char * s ) ;
@@ -247,21 +239,21 @@ void exit ( int status ) ;
 typedef void ( * FUNC_PTR ) ( void ) ;
 int atexit ( FUNC_PTR fcn ) ;
 
-     
-     
+
+
 
 int abs ( int value ) ;
 long labs ( long value ) ;
 
-void * malloc ( int  size ) ;
-void * realloc ( void * ptr , int  newSize ) ;
-void * calloc ( int  num , int  size ) ;
+void * malloc ( int size ) ;
+void * realloc ( void * ptr , int newSize ) ;
+void * calloc ( int num , int size ) ;
 void free ( void * ptr ) ;
 
-void qsort ( void * valueList , int  listSize , int  valueSize ,
+void qsort ( void * valueList , int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 void * bsearch ( const void * key , const void * valueList ,
-int  listSize , int  valueSize ,
+int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
 int abs ( int value ) ;
@@ -277,52 +269,50 @@ typedef struct {
 long quot , rem ;
 } ldiv_t ;
 
-ldiv_t ldiv ( long num , long denum ) ; 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Locale.c,1$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\string.h,0$
-    
-    
- 
-     
+ldiv_t ldiv ( long num , long denum ) ;
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Locale.c,2$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\string.h,1$
+
+
+
+
 
 extern char * strcpy ( char * target , const char * source ) ;
-extern char * strncpy ( char * target , const char * source , int  size ) ;
+extern char * strncpy ( char * target , const char * source , int size ) ;
 extern char * strcat ( char * target , const char * source ) ;
-extern char * strncat ( char * target , const char * source , int  size ) ;
+extern char * strncat ( char * target , const char * source , int size ) ;
 extern int strcmp ( const char * left , const char * right ) ;
-extern int strncmp ( const char * left , const char * right , int  size ) ;
+extern int strncmp ( const char * left , const char * right , int size ) ;
 extern char * strchr ( const char * text , int i ) ;
 extern char * strrchr ( const char * text , int i ) ;
-extern int  strspn ( const char * mainString , const char * charSet ) ;
-extern int  strcspn ( const char * mainString , const char * charSet ) ;
+extern int strspn ( const char * mainString , const char * charSet ) ;
+extern int strcspn ( const char * mainString , const char * charSet ) ;
 extern char * strpbrk ( const char * mainString , const char * charSet ) ;
 extern char * strstr ( const char * mainString , const char * subString ) ;
-extern int  strlen ( const char * string ) ;
+extern int strlen ( const char * string ) ;
 extern char * strerror ( int error ) ;
 extern char * strtok ( char * string , const char * charSet ) ;
-extern void * memcpy ( void * target , const void * source , int  size ) ;
-extern void * memmove ( void * target , const void * source , int  size ) ;
-extern int memcmp ( const void * left , const void * right , int  size ) ;
-extern void * memchr ( const void * block , int i , int  size ) ;
-extern void * memset ( void * block , int i , int  size ) ;
+extern void * memcpy ( void * target , const void * source , int size ) ;
+extern void * memmove ( void * target , const void * source , int size ) ;
+extern int memcmp ( const void * left , const void * right , int size ) ;
+extern void * memchr ( const void * block , int i , int size ) ;
+extern void * memset ( void * block , int i , int size ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Locale.c,2$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\locale.h,0$
-    
-    
- 
-     
-     
-     
-     
-     
-     
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Locale.c,3$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\locale.h,1$
+
+
+
+
+
+
+
+
+
 
 struct lconv {
 int summerTimeZone , winterTimeZone ;
@@ -339,57 +329,56 @@ char ** messageList ;
 extern char * setlocale ( int flag , char * name ) ;
 extern struct lconv * localeconv ( void ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Locale.c,3$
-        
 
-static char * enShortDayList [] = { "Sun" , "Mon" , "Tue" , "Wed" ,
-"Thu" , "Fri" , "Sat" };
-static char * enLongDayList [] ={ "Sunday" , "Monday" , "Tuesday" , "Wednesday" ,
-"Thursday" , "Friday" , "Saturday" };
 
-static char * enShortMonthList [] = { "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" ,
-"Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec" };
-static char * enLongMonthList [] = { "January" , "February" , "March" , "April" ,
-"May" , "June" , "July" , "August" ,
-"September" , "October" , "November" , "December" };
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Locale.c,4$
+
+static char * enShortDayList [] = { "\123\165\156" , "\115\157\156" , "\124\165\145" , "\127\145\144" ,
+"\124\150\165" , "\106\162\151" , "\123\141\164" };
+static char * enLongDayList [] ={ "\123\165\156\144\141\171" , "\115\157\156\144\141\171" , "\124\165\145\163\144\141\171" , "\127\145\144\156\145\163\144\141\171" ,
+"\124\150\165\162\163\144\141\171" , "\106\162\151\144\141\171" , "\123\141\164\165\162\144\141\171" };
+
+static char * enShortMonthList [] = { "\112\141\156" , "\106\145\142" , "\115\141\162" , "\101\160\162" , "\115\141\171" , "\112\165\156" ,
+"\112\165\154" , "\101\165\147" , "\123\145\160" , "\117\143\164" , "\116\157\166" , "\104\145\143" };
+static char * enLongMonthList [] = { "\112\141\156\165\141\162\171" , "\106\145\142\162\165\141\162\171" , "\115\141\162\143\150" , "\101\160\162\151\154" ,
+"\115\141\171" , "\112\165\156\145" , "\112\165\154\171" , "\101\165\147\165\163\164" ,
+"\123\145\160\164\145\155\142\145\162" , "\117\143\164\157\142\145\162" , "\116\157\166\145\155\142\145\162" , "\104\145\143\145\155\142\145\162" };
 
 extern enum { NO_ERROR , NO_FUNCTION , NO_FILE , NO_PATH , NO_HANDLE , NO_ACCESS ,
 EDOM , ERANGE , EILSEQ , FOPEN , FFLUSH , FCLOSE , NO_MODE , FWRITE ,
 FREAD , FSEEK , FTELL , FSIZE , FREMOVE , FRENAME , FTEMPNAME , FTEMPFILE };
-char * enMessageList [] = { "no error" , "function number invalid" ,
-"file not found" , "path not found" ,
-"no handle available" , "access denied" ,
-"out of domain" , "out of range" ,
-"invalid multibyte sequence" , "error while opening" ,
-"error while flushing" , "error while closing" ,
-"open mode invalid" , "error while writing" ,
-"error while reading" , "error while seeking" ,
-"error while telling" , "error while sizing" ,
-"error while removing file" ,
-"error while renaming file" };
+char * enMessageList [] = { "\156\157\040\145\162\162\157\162" , "\146\165\156\143\164\151\157\156\040\156\165\155\142\145\162\040\151\156\166\141\154\151\144" ,
+"\146\151\154\145\040\156\157\164\040\146\157\165\156\144" , "\160\141\164\150\040\156\157\164\040\146\157\165\156\144" ,
+"\156\157\040\150\141\156\144\154\145\040\141\166\141\151\154\141\142\154\145" , "\141\143\143\145\163\163\040\144\145\156\151\145\144" ,
+"\157\165\164\040\157\146\040\144\157\155\141\151\156" , "\157\165\164\040\157\146\040\162\141\156\147\145" ,
+"\151\156\166\141\154\151\144\040\155\165\154\164\151\142\171\164\145\040\163\145\161\165\145\156\143\145" , "\145\162\162\157\162\040\167\150\151\154\145\040\157\160\145\156\151\156\147" ,
+"\145\162\162\157\162\040\167\150\151\154\145\040\146\154\165\163\150\151\156\147" , "\145\162\162\157\162\040\167\150\151\154\145\040\143\154\157\163\151\156\147" ,
+"\157\160\145\156\040\155\157\144\145\040\151\156\166\141\154\151\144" , "\145\162\162\157\162\040\167\150\151\154\145\040\167\162\151\164\151\156\147" ,
+"\145\162\162\157\162\040\167\150\151\154\145\040\162\145\141\144\151\156\147" , "\145\162\162\157\162\040\167\150\151\154\145\040\163\145\145\153\151\156\147" ,
+"\145\162\162\157\162\040\167\150\151\154\145\040\164\145\154\154\151\156\147" , "\145\162\162\157\162\040\167\150\151\154\145\040\163\151\172\151\156\147" ,
+"\145\162\162\157\162\040\167\150\151\154\145\040\162\145\155\157\166\151\156\147\040\146\151\154\145" ,
+"\145\162\162\157\162\040\167\150\151\154\145\040\162\145\156\141\155\151\156\147\040\146\151\154\145" };
 
 static struct lconv en_US_utf8 = { 1 , 1 , enShortDayList , enLongDayList ,
 enShortMonthList , enLongMonthList ,
-"abcdefghijklmnopqrstuvwxyz" ,
-"ABCDEFGHIJKLMNOPQRSTUVWXYZ" ,
+"\141\142\143\144\145\146\147\150\151\152\153\154\155\156\157\160\161\162\163\164\165\166\167\170\171\172" ,
+"\101\102\103\104\105\106\107\110\111\112\113\114\115\116\117\120\121\122\123\124\125\126\127\130\131\132" ,
 enMessageList };
 
 static const struct _s {
 char * name ;
 struct lconv * localePtr ;
-} g_sArray [] = { { "" , & en_US_utf8 } , { "C" , & en_US_utf8 } , { "US" , & en_US_utf8 } };
+} g_sArray [] = { { "" , & en_US_utf8 } , { "\103" , & en_US_utf8 } , { "\125\123" , & en_US_utf8 } };
 
 static const int g_sSize = ( sizeof g_sArray ) / ( sizeof g_sArray [ 0 ] ) ;
 static struct _s * g_currStructPtr = & g_sArray [ 0 ];
 
 char * setlocale ( int , char * newName ) {
 int index ;
-char * oldName = ( g_currStructPtr != ( ( void * ) 0 )  ) ? g_currStructPtr -> name : ( ( void * ) 0 )  ;
-g_currStructPtr = ( ( void * ) 0 )  ;
+char * oldName = ( g_currStructPtr != ( ( void * ) 0 ) ) ? g_currStructPtr -> name : ( ( void * ) 0 ) ;
+g_currStructPtr = ( ( void * ) 0 ) ;
 
-if ( newName != ( ( void * ) 0 )  ) {
+if ( newName != ( ( void * ) 0 ) ) {
 for ( index = 0 ; index < g_sSize ; ++ index ) {
 if ( strcmp ( newName , g_sArray [ index ]. name ) == 0 ) {
 g_currStructPtr = & g_sArray [ index ];
@@ -402,5 +391,6 @@ return oldName ;
 }
 
 struct lconv * localeconv ( void ) {
-return ( g_currStructPtr != ( ( void * ) 0 )  ) ? g_currStructPtr -> localePtr : ( ( void * ) 0 )  ;
-} 
+return ( g_currStructPtr != ( ( void * ) 0 ) ) ? g_currStructPtr -> localePtr : ( ( void * ) 0 ) ;
+}
+

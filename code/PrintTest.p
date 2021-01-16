@@ -1,13 +1,13 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
-    
-    
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
-    
-    
- 
-     
-     
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
+
+
+
+
+
 
 
 
@@ -42,13 +42,12 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
-    
-    
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
+
+
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -64,54 +63,52 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
-    
-    
- 
-      
-                         
-                                    
-      
- 
-   
- 
+
+
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
-    
-    
- 
-           
-     
-     
-     
-     
- 
-   
- 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
+
+
+
+
+
+
+
+
+
+
+
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
-    
-    
- 
-     
-     
- 
-     
-     
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
+
+
+
+
+
+
+
+
 
 typedef struct {
-int  open ;
+int open ;
 unsigned int handle ;
-char name [ 16  ] , ungetc ;
+char name [ 16 ] , ungetc ;
 int errno ;
 unsigned int position , size ;
-int  temporary ;
+int temporary ;
 } FILE ;
 
 extern FILE * stdin , * stdout , * stderr ;
@@ -120,16 +117,16 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-         
 
-int  fileexists ( const char * name ) ;
+
+int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
 FILE * freopen ( const char * filename , const char * mode , FILE * stream ) ;
 int fflush ( FILE * stream ) ;
 int fclose ( FILE * stream ) ;
 int remove ( const char * name ) ;
 int rename ( const char * oldName , const char * newName ) ;
-int setvbuf ( FILE * stream , char * buffer , int mode , int  size ) ;
+int setvbuf ( FILE * stream , char * buffer , int mode , int size ) ;
 void setbuf ( FILE * stream , char * buffer ) ;
 int fgetc ( FILE * stream ) ;
 char * fgets ( char * s , int n , FILE * stream ) ;
@@ -140,62 +137,59 @@ char * gets ( char * s ) ;
 int putchar ( int c ) ;
 int puts ( const char * s ) ;
 int ungetc ( int c , FILE * stream ) ;
-int  fread ( void * ptr , int  size , int  nobj , FILE * stream ) ;
-int  fwrite ( const void * ptr , int  size , int  nobj , FILE * stream ) ;
+int fread ( void * ptr , int size , int nobj , FILE * stream ) ;
+int fwrite ( const void * ptr , int size , int nobj , FILE * stream ) ;
 int fseek ( FILE * stream , int offset , int origin ) ;
 int ftell ( FILE * stream ) ;
 void rewind ( FILE * stream ) ;
-int fgetpos ( FILE * stream , int  * ptr ) ;
-int fsetpos ( FILE * stream , const int  * ptr ) ;
+int fgetpos ( FILE * stream , int * ptr ) ;
+int fsetpos ( FILE * stream , const int * ptr ) ;
 void clearerr ( FILE * stream ) ;
-int  feof ( FILE * stream ) ;
+int feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
-    
-    
- 
-     
-     
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
+
+
+
+
+
 
 FILE * tmpfile ( void ) ;
-char * tmpnam ( char name [ 4  ] ) ;
+char * tmpnam ( char name [ 4 ] ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
-    
-    
- 
-     
-     
- 
-     
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
+
+
+
+
+
+
+
 
 int scanf ( const char * format , ... ) ;
-int vscanf ( const char * format , char *  arg_list ) ;
+int vscanf ( const char * format , char * arg_list ) ;
 int fscanf ( FILE * inStream , const char * format , ... ) ;
-int vfscanf ( FILE * inStream , const char * format , char *  arg_list ) ;
+int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
-int vsscanf ( char * inString , const char * format , char *  arg_list ) ;
+int vsscanf ( char * inString , const char * format , char * arg_list ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
-    
-    
- 
-     
-     
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
+
+
+
+
+
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -205,21 +199,19 @@ int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
 int printf ( const char * format , ... ) ;
-int vprintf ( const char * format , char *  arg_list ) ;
+int vprintf ( const char * format , char * arg_list ) ;
 int fprintf ( FILE * outStream , const char * format , ... ) ;
-int vfprintf ( FILE * outStream , const char * format , char *  arg_list ) ;
+int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
-int vsprintf ( char * outString , const char * format , char *  arg_list ) ;
+int vsprintf ( char * outString , const char * format , char * arg_list ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-        
- 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\PrintTest.c,0$
-        
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\PrintTest.c,1$
 
 void print_test ( void ) {
 
@@ -231,18 +223,19 @@ void print_test ( void ) {
 
 
 
-printf ( "<%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>\n" , 123 , 123 , 123 , 123 , 123 , 123 , 123 , 123 ) ;
-printf ( "<%8i> <%+8i> <% 8i> <%-8i> <%+-8i> <%-+8i> <% -8i> <%- 8i>\n" , -123 , -123 , -123 , -123 , -123 , -123 , -123 , -123 ) ;
-printf ( "<%08i> <%+08i> <% 08i> <%0 8i>\n" , 123 , 123 , 123 , 123 ) ;
-printf ( "<%08i> <%+08i> <% 08i> <%0 8i>\n" , -123 , -123 , -123 , -123 ) ;
+printf ( "\074\045\070\151\076\040\074\045\053\070\151\076\040\074\045\040\070\151\076\040\074\045\055\070\151\076\040\074\045\053\055\070\151\076\040\074\045\055\053\070\151\076\040\074\045\040\055\070\151\076\040\074\045\055\040\070\151\076\012" , 123 , 123 , 123 , 123 , 123 , 123 , 123 , 123 ) ;
+printf ( "\074\045\070\151\076\040\074\045\053\070\151\076\040\074\045\040\070\151\076\040\074\045\055\070\151\076\040\074\045\053\055\070\151\076\040\074\045\055\053\070\151\076\040\074\045\040\055\070\151\076\040\074\045\055\040\070\151\076\012" , -123 , -123 , -123 , -123 , -123 , -123 , -123 , -123 ) ;
+printf ( "\074\045\060\070\151\076\040\074\045\053\060\070\151\076\040\074\045\040\060\070\151\076\040\074\045\060\040\070\151\076\012" , 123 , 123 , 123 , 123 ) ;
+printf ( "\074\045\060\070\151\076\040\074\045\053\060\070\151\076\040\074\045\040\060\070\151\076\040\074\045\060\040\070\151\076\012" , -123 , -123 , -123 , -123 ) ;
 
-printf ( "<%12.3f> <%+12.3f> <% 12.3f> <%-12.3f> <%+-12.3f> <%-+12.3f> <% -12.3f> <%- 12.3f>\n" , 123.456 , 123.456 , 123.456 , 123.456 , 123.456 , 123.456 , 123.456 , 123.456 ) ;
-printf ( "<%12.3f> <%+12.3f> <% 12.3f> <%-12.3f> <%+-12.3f> <%-+12.3f> <% -12.3f> <%- 12.3f>\n" , -123.456 , -123.456 , -123.456 , -123.456 , -123.456 , -123.456 , -123.456 , -123.456 ) ;
-printf ( "<%012.3f> <%+012.3f> <% 012.3f> <%0 12.3f>\n" , 123.456 , 123.456 , 123.456 , 123.456 ) ;
-printf ( "<%012.3f> <%+012.3f> <% 012.3f> <%0 12.3f>\n" , -123.456 , -123.456 , -123.456 , -123.456 ) ;
-
-
+printf ( "\074\045\061\062\056\063\146\076\040\074\045\053\061\062\056\063\146\076\040\074\045\040\061\062\056\063\146\076\040\074\045\055\061\062\056\063\146\076\040\074\045\053\055\061\062\056\063\146\076\040\074\045\055\053\061\062\056\063\146\076\040\074\045\040\055\061\062\056\063\146\076\040\074\045\055\040\061\062\056\063\146\076\012" , 123.456 , 123.456 , 123.456 , 123.456 , 123.456 , 123.456 , 123.456 , 123.456 ) ;
+printf ( "\074\045\061\062\056\063\146\076\040\074\045\053\061\062\056\063\146\076\040\074\045\040\061\062\056\063\146\076\040\074\045\055\061\062\056\063\146\076\040\074\045\053\055\061\062\056\063\146\076\040\074\045\055\053\061\062\056\063\146\076\040\074\045\040\055\061\062\056\063\146\076\040\074\045\055\040\061\062\056\063\146\076\012" , -123.456 , -123.456 , -123.456 , -123.456 , -123.456 , -123.456 , -123.456 , -123.456 ) ;
+printf ( "\074\045\060\061\062\056\063\146\076\040\074\045\053\060\061\062\056\063\146\076\040\074\045\040\060\061\062\056\063\146\076\040\074\045\060\040\061\062\056\063\146\076\012" , 123.456 , 123.456 , 123.456 , 123.456 ) ;
+printf ( "\074\045\060\061\062\056\063\146\076\040\074\045\053\060\061\062\056\063\146\076\040\074\045\040\060\061\062\056\063\146\076\040\074\045\060\040\061\062\056\063\146\076\012" , -123.456 , -123.456 , -123.456 , -123.456 ) ;
 
 
 
-} 
+
+
+}
+
