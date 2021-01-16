@@ -1,4 +1,3 @@
-void locale_test ( void ) {
+ void locale_test ( void ) {
 
-}
-
+} 

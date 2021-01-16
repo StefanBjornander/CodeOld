@@ -5,6 +5,8 @@
 #include <locale.h>
 #include <assert.h>
 
+int getWeekNumber(const struct tm*);
+
 clock_t clock(void) {
   return -1;
 }
@@ -206,28 +208,6 @@ char* ctime(const time_t* time) {
   return asctime(localtime(time));
 }
 
-static int getWeekNumber(const struct tm* tp) {
-  const long leapDays = (tp->tm_year - 69) / 4;
-  const int totalDays = 365 * (tp->tm_year - 70) + leapDays;
-  int weekDayJanuaryFirst;
-
-  if (totalDays < 3) {
-    weekDayJanuaryFirst = totalDays + 4;
-  }
-  else {
-    weekDayJanuaryFirst = (totalDays - 3) % 7;
-  }
-
-  { int firstWeekSize = 7 - weekDayJanuaryFirst;
-
-    if (tp->tm_yday < firstWeekSize) {
-      return 0;
-    }
-    else {
-      return ((tp->tm_yday - firstWeekSize) / 7) + 1;
-    }
-  }
-}
 
 size_t strftime(char* result, size_t maxSize,
                 const char* format, const struct tm* tp) {
@@ -391,10 +371,16 @@ size_t strftime(char* result, size_t maxSize,
         add[1] = '\0';
       }
 
+      /*if ((strlen(result) + strlen(add)) < maxSize) {
+        strcat(result, add);
+      }
+      else {
+        break;
+      }*/
+
       { int x = strlen(result), y = strlen(add);
-        if ((x + y) < maxSize) {
+        if ((strlen(result) + strlen(add)) < maxSize) {
           strcat(result, add);
-          //printf("");
         }
         else {
           break;
@@ -404,4 +390,27 @@ size_t strftime(char* result, size_t maxSize,
   }
 
   return strlen(result);
+}
+
+int getWeekNumber(const struct tm* tp) {
+  const long leapDays = (tp->tm_year - 69) / 4;
+  const int totalDays = 365 * (tp->tm_year - 70) + leapDays;
+  int weekDayJanuaryFirst;
+
+  if (totalDays < 3) {
+    weekDayJanuaryFirst = totalDays + 4;
+  }
+  else {
+    weekDayJanuaryFirst = (totalDays - 3) % 7;
+  }
+
+  { int firstWeekSize = 7 - weekDayJanuaryFirst;
+
+    if (tp->tm_yday < firstWeekSize) {
+      return 0;
+    }
+    else {
+      return ((tp->tm_yday - firstWeekSize) / 7) + 1;
+    }
+  }
 }
