@@ -133,7 +133,7 @@ exp$32:	; GetReturnValue £temporary313
 100:	
 
 exp$33:	; PushFloat 0.000000001
-101:		fld qword [@846$float8$0.000000001#]
+101:		fld qword [@850$float8$0.000000001#]
 103:	
 
 exp$34:	; SignedGreaterThanEqual 8 £temporary313 0.000000001
@@ -214,7 +214,7 @@ log$10:	; PushFloat x
 43:	
 
 log$11:	; PushFloat 2.71
-44:		fld qword [@863$float8$2.71#]
+44:		fld qword [@867$float8$2.71#]
 46:	
 
 log$12:	; SignedDivide £temporary319 x 2.71
@@ -238,7 +238,7 @@ log$16:	; PushFloat x
 61:	
 
 log$17:	; PushFloat 0.368
-62:		fld qword [@868$float8$0.368#]
+62:		fld qword [@872$float8$0.368#]
 64:	
 
 log$18:	; SignedGreaterThanEqual 28 x 0.368
@@ -253,7 +253,7 @@ log$19:	; PushFloat x
 73:	
 
 log$20:	; PushFloat 0.368
-74:		fld qword [@871$float8$0.368#]
+74:		fld qword [@875$float8$0.368#]
 76:	
 
 log$21:	; SignedGreaterThanEqual 28 x 0.368
@@ -268,7 +268,7 @@ log$22:	; PushFloat x
 85:	
 
 log$23:	; PushFloat 2.71
-86:		fld qword [@874$float8$2.71#]
+86:		fld qword [@878$float8$2.71#]
 88:	
 
 log$24:	; SignedMultiply £temporary323 x 2.71
@@ -416,7 +416,7 @@ log$59:	; PushFloat sign
 196:	
 
 log$60:	; PushFloat -1.0
-197:		fld qword [@900$float8$minus1.0#]
+197:		fld qword [@904$float8$minus1.0#]
 199:	
 
 log$61:	; SignedMultiply £temporary331 sign -1.0
@@ -452,7 +452,7 @@ log$68:	; GetReturnValue £temporary332
 223:	
 
 log$69:	; PushFloat 0.000000001
-224:		fld qword [@904$float8$0.000000001#]
+224:		fld qword [@908$float8$0.000000001#]
 226:	
 
 log$70:	; SignedGreaterThanEqual 40 £temporary332 0.000000001
@@ -530,7 +530,7 @@ log10$5:	; GetReturnValue £temporary337
 19:	
 
 log10$6:	; PushFloat 2.30
-20:		fld qword [@915$float8$2.30#]
+20:		fld qword [@919$float8$2.30#]
 22:	
 
 log10$7:	; SignedDivide £temporary338 £temporary337 2.30
@@ -809,7 +809,7 @@ pow$54:	; Assign long_y £temporary355
 pow$55:	; SignedModulo £temporary356 long_y 2
 203:		mov eax, [bp + 22]
 205:		xor edx, edx
-206:		idiv dword [@954$int4$2#]
+206:		idiv dword [@958$int4$2#]
 212:	
 
 pow$56:	; NotEqual 73 £temporary356 0
@@ -991,7 +991,7 @@ ldexp$1:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 
 7:	
 
 ldexp$2:	; PushFloat 2
-8:		fld qword [@981$float8$2#]
+8:		fld qword [@985$float8$2#]
 10:	
 
 ldexp$3:	; Parameter 16 2 6
@@ -1039,54 +1039,54 @@ ldexp$11:	; Return £temporary377
 ldexp$12:	; FunctionEnd ldexp
 1:	
 
-@988$log2:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+@993$log2:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
-@988$log2$1:	; PushFloat x
+@993$log2$1:	; PushFloat x
 4:		fld qword [bp + 6]
 6:	
 
-@988$log2$2:	; Parameter 14 x 6
+@993$log2$2:	; Parameter 14 x 6
 7:		fstp qword [bp + 20]
 9:	
 
-@988$log2$3:	; Call 14 log 0
-10:		mov word [bp + 14], @988$log2$4
+@993$log2$3:	; Call 14 log 0
+10:		mov word [bp + 14], @993$log2$4
 11:		mov [bp + 16], bp
 12:		add bp, 14
 13:		jmp log
 15:	
 
-@988$log2$4:	; PostCall 14
+@993$log2$4:	; PostCall 14
 17:	
 
-@988$log2$5:	; GetReturnValue £temporary380
+@993$log2$5:	; GetReturnValue £temporary380
 19:	
 
-@988$log2$6:	; PushFloat 0.693
-20:		fld qword [@990$float8$0.693#]
+@993$log2$6:	; PushFloat 0.693
+20:		fld qword [@995$float8$0.693#]
 22:	
 
-@988$log2$7:	; SignedDivide £temporary381 £temporary380 0.693
+@993$log2$7:	; SignedDivide £temporary381 £temporary380 0.693
 23:		fdiv
 25:	
 
-@988$log2$8:	; FloatingToIntegral £temporary382 £temporary381
+@993$log2$8:	; FloatingToIntegral £temporary382 £temporary381
 26:		fistp word [container2bytes#]
 27:		mov bx, [container2bytes#]
 29:	
 
-@988$log2$9:	; SetReturnValue £temporary382
+@993$log2$9:	; SetReturnValue £temporary382
 31:	
 
-@988$log2$10:	; Return £temporary382
+@993$log2$10:	; Return £temporary382
 32:		mov ax, [bp]
 33:		mov di, [bp + 4]
 34:		mov bp, [bp + 2]
 35:		jmp ax
 37:	
 
-@988$log2$11:	; FunctionEnd log2
+@993$log2$11:	; FunctionEnd log2
 1:	
 
 frexp:	; PushFloat x
@@ -1139,7 +1139,7 @@ frexp$11:	; Call 16 log2 0
 37:		mov word [bp + 16], frexp$12
 38:		mov [bp + 18], bp
 39:		add bp, 16
-40:		jmp @988$log2
+40:		jmp @993$log2
 42:	
 
 frexp$12:	; PostCall 16
@@ -1159,7 +1159,7 @@ frexp$16:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 54:	
 
 frexp$17:	; PushFloat 2
-55:		fld qword [@1004$float8$2#]
+55:		fld qword [@1009$float8$2#]
 57:	
 
 frexp$18:	; Parameter 18 2 6
@@ -1225,7 +1225,7 @@ frexp$31:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 105:	
 
 frexp$32:	; PushFloat 2
-106:		fld qword [@1016$float8$2#]
+106:		fld qword [@1022$float8$2#]
 108:	
 
 frexp$33:	; Parameter 18 2 6
@@ -1352,7 +1352,7 @@ sqrt$11:	; BinaryAdd £temporary407 root_i £temporary406
 40:	
 
 sqrt$12:	; PushFloat 2
-41:		fld qword [@1046$float8$2#]
+41:		fld qword [@1053$float8$2#]
 43:	
 
 sqrt$13:	; SignedDivide £temporary408 £temporary407 2
@@ -1396,7 +1396,7 @@ sqrt$22:	; GetReturnValue £temporary410
 73:	
 
 sqrt$23:	; PushFloat 0.000000001
-74:		fld qword [@1050$float8$0.000000001#]
+74:		fld qword [@1057$float8$0.000000001#]
 76:	
 
 sqrt$24:	; SignedGreaterThanEqual 5 £temporary410 0.000000001
@@ -1764,7 +1764,7 @@ sin$5:	; GetReturnValue £temporary446
 19:	
 
 sin$6:	; PushFloat 6.28
-20:		fld qword [@1114$float8$6.28#]
+20:		fld qword [@1121$float8$6.28#]
 22:	
 
 sin$7:	; SignedLessThanEqual 17 £temporary446 6.28
@@ -1786,7 +1786,7 @@ sin$10:	; Parameter 14 x 6
 36:	
 
 sin$11:	; PushFloat 6.28
-37:		fld qword [@1119$float8$6.28#]
+37:		fld qword [@1126$float8$6.28#]
 39:	
 
 sin$12:	; Parameter 14 6.28 14
@@ -1895,7 +1895,7 @@ sin$37:	; PushFloat sign
 118:	
 
 sin$38:	; PushFloat -1
-119:		fld qword [@1140$float8$minus1#]
+119:		fld qword [@1148$float8$minus1#]
 121:	
 
 sin$39:	; SignedMultiply £temporary452 sign -1
@@ -2003,7 +2003,7 @@ sin$64:	; GetReturnValue £temporary459
 199:	
 
 sin$65:	; PushFloat 0.000000001
-200:		fld qword [@1151$float8$0.000000001#]
+200:		fld qword [@1159$float8$0.000000001#]
 202:	
 
 sin$66:	; SignedGreaterThanEqual 27 £temporary459 0.000000001
@@ -2055,7 +2055,7 @@ cos$5:	; GetReturnValue £temporary465
 19:	
 
 cos$6:	; PushFloat 6.28
-20:		fld qword [@1162$float8$6.28#]
+20:		fld qword [@1170$float8$6.28#]
 22:	
 
 cos$7:	; SignedLessThanEqual 17 £temporary465 6.28
@@ -2077,7 +2077,7 @@ cos$10:	; Parameter 14 x 6
 36:	
 
 cos$11:	; PushFloat 6.28
-37:		fld qword [@1167$float8$6.28#]
+37:		fld qword [@1175$float8$6.28#]
 39:	
 
 cos$12:	; Parameter 14 6.28 14
@@ -2186,7 +2186,7 @@ cos$37:	; PushFloat sign
 118:	
 
 cos$38:	; PushFloat -1
-119:		fld qword [@1190$float8$minus1#]
+119:		fld qword [@1199$float8$minus1#]
 121:	
 
 cos$39:	; SignedMultiply £temporary471 sign -1
@@ -2294,7 +2294,7 @@ cos$64:	; GetReturnValue £temporary478
 199:	
 
 cos$65:	; PushFloat 0.000000001
-200:		fld qword [@1201$float8$0.000000001#]
+200:		fld qword [@1210$float8$0.000000001#]
 202:	
 
 cos$66:	; SignedGreaterThanEqual 27 £temporary478 0.000000001
@@ -2443,7 +2443,7 @@ asin$2:	; NotEqual 6 x 1
 13:	
 
 asin$3:	; PushFloat 1.57
-14:		fld qword [@1227$float8$1.57#]
+14:		fld qword [@1236$float8$1.57#]
 16:	
 
 asin$4:	; SetReturnValue 1.57
@@ -2647,7 +2647,7 @@ acos$2:	; NotEqual 6 x 0
 13:	
 
 acos$3:	; PushFloat 1.57
-14:		fld qword [@1257$float8$1.57#]
+14:		fld qword [@1266$float8$1.57#]
 16:	
 
 acos$4:	; SetReturnValue 1.57
@@ -2676,7 +2676,7 @@ acos$8:	; SignedGreaterThanEqual 20 x 0
 36:	
 
 acos$9:	; PushFloat 3.14
-37:		fld qword [@1262$float8$3.14#]
+37:		fld qword [@1271$float8$3.14#]
 39:	
 
 acos$10:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -2912,7 +2912,7 @@ atan$15:	; SignedLessThanEqual 28 x 1
 57:	
 
 atan$16:	; PushFloat 1.57
-58:		fld qword [@1295$float8$1.57#]
+58:		fld qword [@1304$float8$1.57#]
 60:	
 
 atan$17:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -2970,7 +2970,7 @@ atan$28:	; PushFloat x
 102:	
 
 atan$29:	; PushFloat 0.5
-103:		fld qword [@1302$float8$0.5#]
+103:		fld qword [@1311$float8$0.5#]
 105:	
 
 atan$30:	; SignedLessThanEqual 54 x 0.5
@@ -2981,7 +2981,7 @@ atan$30:	; SignedLessThanEqual 54 x 0.5
 111:	
 
 atan$31:	; PushFloat 2
-112:		fld qword [@1316$float8$2#]
+112:		fld qword [@1325$float8$2#]
 114:	
 
 atan$32:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -3197,7 +3197,7 @@ atan$81:	; PushFloat denominator
 276:	
 
 atan$82:	; PushFloat 2
-277:		fld qword [@1336$float8$2#]
+277:		fld qword [@1345$float8$2#]
 279:	
 
 atan$83:	; BinaryAdd £temporary540 denominator 2
@@ -3233,7 +3233,7 @@ atan$90:	; GetReturnValue £temporary541
 303:	
 
 atan$91:	; PushFloat 0.000000001
-304:		fld qword [@1339$float8$0.000000001#]
+304:		fld qword [@1348$float8$0.000000001#]
 306:	
 
 atan$92:	; SignedGreaterThanEqual 62 £temporary541 0.000000001
@@ -3348,7 +3348,7 @@ atan2$18:	; SignedGreaterThanEqual 31 y 0
 69:	
 
 atan2$19:	; PushFloat 3.14
-70:		fld qword [@1360$float8$3.14#]
+70:		fld qword [@1369$float8$3.14#]
 72:	
 
 atan2$20:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -3432,7 +3432,7 @@ atan2$36:	; SignedGreaterThanEqual 49 y 0
 135:	
 
 atan2$37:	; PushFloat -3.14
-136:		fld qword [@1373$float8$minus3.14#]
+136:		fld qword [@1382$float8$minus3.14#]
 138:	
 
 atan2$38:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
@@ -3516,7 +3516,7 @@ atan2$54:	; NotEqual 58 y 0
 201:	
 
 atan2$55:	; PushFloat 1.57
-202:		fld qword [@1387$float8$1.57#]
+202:		fld qword [@1396$float8$1.57#]
 204:	
 
 atan2$56:	; SetReturnValue 1.57
@@ -3560,7 +3560,7 @@ atan2$63:	; NotEqual 67 y 0
 236:	
 
 atan2$64:	; PushFloat -1.57
-237:		fld qword [@1399$float8$minus1.57#]
+237:		fld qword [@1408$float8$minus1.57#]
 239:	
 
 atan2$65:	; SetReturnValue -1.57
@@ -3655,7 +3655,7 @@ sinh$13:	; BinarySubtract £temporary575 £temporary572 £temporary574
 47:	
 
 sinh$14:	; PushFloat 2
-48:		fld qword [@1413$float8$2#]
+48:		fld qword [@1422$float8$2#]
 50:	
 
 sinh$15:	; SignedDivide £temporary576 £temporary575 2
@@ -3736,7 +3736,7 @@ cosh$13:	; BinaryAdd £temporary582 £temporary579 £temporary581
 47:	
 
 cosh$14:	; PushFloat 2
-48:		fld qword [@1423$float8$2#]
+48:		fld qword [@1432$float8$2#]
 50:	
 
 cosh$15:	; SignedDivide £temporary583 £temporary582 2
@@ -3971,7 +3971,7 @@ ceil$13:	; PushFloat x
 48:	
 
 ceil$14:	; PushFloat 0.999999999999
-49:		fld qword [@1450$float8$0.999999999999#]
+49:		fld qword [@1459$float8$0.999999999999#]
 51:	
 
 ceil$15:	; BinaryAdd £temporary602 x 0.999999999999
@@ -4021,7 +4021,7 @@ round$3:	; PushFloat x
 16:	
 
 round$4:	; PushFloat 0.5
-17:		fld qword [@1460$float8$0.5#]
+17:		fld qword [@1469$float8$0.5#]
 19:	
 
 round$5:	; BinarySubtract £temporary607 x 0.5
@@ -4040,7 +4040,7 @@ round$8:	; PushFloat x
 30:	
 
 round$9:	; PushFloat 0.5
-31:		fld qword [@1463$float8$0.5#]
+31:		fld qword [@1472$float8$0.5#]
 33:	
 
 round$10:	; BinaryAdd £temporary608 x 0.5

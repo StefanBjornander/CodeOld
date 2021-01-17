@@ -284,7 +284,7 @@ strtod$4:	; Parameter 20 s 6
 16:	
 
 strtod$5:	; Parameter 20 string_25lf25n# 8
-17:		mov word [bp + 28], @5006$string_25lf25n#
+17:		mov word [bp + 28], @5113$string_25lf25n#
 19:	
 
 strtod$6:	; address £temporary2252 value
@@ -440,7 +440,7 @@ strtol_test$21:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.S
 69:	
 
 strtol_test$22:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-70:		mov word [bp + 31], @5065$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+70:		mov word [bp + 31], @5172$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 72:	
 
 strtol_test$23:	; Parameter 25 text 8
@@ -570,7 +570,7 @@ strtol_test$51:	; CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.S
 169:	
 
 strtol_test$52:	; Parameter 26 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-170:		mov word [bp + 32], @5112$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+170:		mov word [bp + 32], @5219$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 172:	
 
 strtol_test$53:	; Parameter 26 text 8
@@ -704,7 +704,7 @@ strtol_test$82:	; CallHeader 27 System.Collections.Generic.HashSet`1[CCompiler.S
 272:	
 
 strtol_test$83:	; Parameter 27 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-273:		mov word [bp + 33], @5162$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+273:		mov word [bp + 33], @5269$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 275:	
 
 strtol_test$84:	; Parameter 27 text 8
@@ -838,7 +838,7 @@ strtol_test$113:	; CallHeader 27 System.Collections.Generic.HashSet`1[CCompiler.
 375:	
 
 strtol_test$114:	; Parameter 27 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-376:		mov word [bp + 33], @5212$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+376:		mov word [bp + 33], @5319$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 378:	
 
 strtol_test$115:	; Parameter 27 text 8
@@ -964,7 +964,7 @@ strtol_test$142:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 472:	
 
 strtol_test$143:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-473:		mov word [bp + 31], @5256$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+473:		mov word [bp + 31], @5363$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 475:	
 
 strtol_test$144:	; Parameter 25 text 8
@@ -1094,7 +1094,7 @@ strtol_test$172:	; CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.
 572:	
 
 strtol_test$173:	; Parameter 26 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-573:		mov word [bp + 32], @5303$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+573:		mov word [bp + 32], @5410$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 575:	
 
 strtol_test$174:	; Parameter 26 text 8
@@ -1228,7 +1228,7 @@ strtol_test$203:	; CallHeader 27 System.Collections.Generic.HashSet`1[CCompiler.
 675:	
 
 strtol_test$204:	; Parameter 27 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-676:		mov word [bp + 33], @5353$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+676:		mov word [bp + 33], @5460$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 678:	
 
 strtol_test$205:	; Parameter 27 text 8
@@ -1362,7 +1362,7 @@ strtol_test$234:	; CallHeader 27 System.Collections.Generic.HashSet`1[CCompiler.
 778:	
 
 strtol_test$235:	; Parameter 27 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-779:		mov word [bp + 33], @5403$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+779:		mov word [bp + 33], @5510$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 781:	
 
 strtol_test$236:	; Parameter 27 text 8
@@ -1488,7 +1488,7 @@ strtol_test$263:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 875:	
 
 strtol_test$264:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-876:		mov word [bp + 31], @5447$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+876:		mov word [bp + 31], @5554$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 878:	
 
 strtol_test$265:	; Parameter 25 text 8
@@ -1614,7 +1614,7 @@ strtol_test$292:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 972:	
 
 strtol_test$293:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-973:		mov word [bp + 31], @5491$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+973:		mov word [bp + 31], @5598$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 975:	
 
 strtol_test$294:	; Parameter 25 text 8
@@ -1740,7 +1740,7 @@ strtol_test$321:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1069:	
 
 strtol_test$322:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1070:		mov word [bp + 31], @5535$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1070:		mov word [bp + 31], @5642$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1072:	
 
 strtol_test$323:	; Parameter 25 text 8
@@ -1866,7 +1866,7 @@ strtol_test$350:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1166:	
 
 strtol_test$351:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1167:		mov word [bp + 31], @5579$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1167:		mov word [bp + 31], @5686$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1169:	
 
 strtol_test$352:	; Parameter 25 text 8
@@ -1992,7 +1992,7 @@ strtol_test$379:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1263:	
 
 strtol_test$380:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1264:		mov word [bp + 31], @5623$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1264:		mov word [bp + 31], @5730$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1266:	
 
 strtol_test$381:	; Parameter 25 text 8
@@ -2118,7 +2118,7 @@ strtol_test$408:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1360:	
 
 strtol_test$409:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1361:		mov word [bp + 31], @5667$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1361:		mov word [bp + 31], @5774$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1363:	
 
 strtol_test$410:	; Parameter 25 text 8
@@ -2244,7 +2244,7 @@ strtol_test$437:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1457:	
 
 strtol_test$438:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1458:		mov word [bp + 31], @5711$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1458:		mov word [bp + 31], @5818$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1460:	
 
 strtol_test$439:	; Parameter 25 text 8
@@ -2370,7 +2370,7 @@ strtol_test$466:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1554:	
 
 strtol_test$467:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1555:		mov word [bp + 31], @5755$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1555:		mov word [bp + 31], @5862$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1557:	
 
 strtol_test$468:	; Parameter 25 text 8
@@ -2496,7 +2496,7 @@ strtol_test$495:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1651:	
 
 strtol_test$496:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1652:		mov word [bp + 31], @5799$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1652:		mov word [bp + 31], @5906$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1654:	
 
 strtol_test$497:	; Parameter 25 text 8
@@ -2622,7 +2622,7 @@ strtol_test$524:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 1748:	
 
 strtol_test$525:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1749:		mov word [bp + 31], @5843$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1749:		mov word [bp + 31], @5950$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1751:	
 
 strtol_test$526:	; Parameter 25 text 8
@@ -2758,7 +2758,7 @@ strtoul_test$21:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler.
 69:	
 
 strtoul_test$22:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-70:		mov word [bp + 31], @6050$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+70:		mov word [bp + 31], @6157$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 72:	
 
 strtoul_test$23:	; Parameter 25 text 8
@@ -2888,7 +2888,7 @@ strtoul_test$51:	; CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.
 169:	
 
 strtoul_test$52:	; Parameter 26 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-170:		mov word [bp + 32], @6097$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+170:		mov word [bp + 32], @6204$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 172:	
 
 strtoul_test$53:	; Parameter 26 text 8
@@ -3022,7 +3022,7 @@ strtoul_test$82:	; CallHeader 27 System.Collections.Generic.HashSet`1[CCompiler.
 272:	
 
 strtoul_test$83:	; Parameter 27 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-273:		mov word [bp + 33], @6147$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+273:		mov word [bp + 33], @6254$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 275:	
 
 strtoul_test$84:	; Parameter 27 text 8
@@ -3156,7 +3156,7 @@ strtoul_test$113:	; CallHeader 27 System.Collections.Generic.HashSet`1[CCompiler
 375:	
 
 strtoul_test$114:	; Parameter 27 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-376:		mov word [bp + 33], @6197$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+376:		mov word [bp + 33], @6304$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 378:	
 
 strtoul_test$115:	; Parameter 27 text 8
@@ -3282,7 +3282,7 @@ strtoul_test$142:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 472:	
 
 strtoul_test$143:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-473:		mov word [bp + 31], @6241$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+473:		mov word [bp + 31], @6348$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 475:	
 
 strtoul_test$144:	; Parameter 25 text 8
@@ -3412,7 +3412,7 @@ strtoul_test$172:	; CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler
 572:	
 
 strtoul_test$173:	; Parameter 26 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-573:		mov word [bp + 32], @6288$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+573:		mov word [bp + 32], @6395$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 575:	
 
 strtoul_test$174:	; Parameter 26 text 8
@@ -3546,7 +3546,7 @@ strtoul_test$203:	; CallHeader 27 System.Collections.Generic.HashSet`1[CCompiler
 675:	
 
 strtoul_test$204:	; Parameter 27 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-676:		mov word [bp + 33], @6338$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+676:		mov word [bp + 33], @6445$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 678:	
 
 strtoul_test$205:	; Parameter 27 text 8
@@ -3680,7 +3680,7 @@ strtoul_test$234:	; CallHeader 27 System.Collections.Generic.HashSet`1[CCompiler
 778:	
 
 strtoul_test$235:	; Parameter 27 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-779:		mov word [bp + 33], @6388$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+779:		mov word [bp + 33], @6495$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 781:	
 
 strtoul_test$236:	; Parameter 27 text 8
@@ -3806,7 +3806,7 @@ strtoul_test$263:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 875:	
 
 strtoul_test$264:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-876:		mov word [bp + 31], @6432$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+876:		mov word [bp + 31], @6539$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 878:	
 
 strtoul_test$265:	; Parameter 25 text 8
@@ -3932,7 +3932,7 @@ strtoul_test$292:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 972:	
 
 strtoul_test$293:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-973:		mov word [bp + 31], @6476$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+973:		mov word [bp + 31], @6583$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 975:	
 
 strtoul_test$294:	; Parameter 25 text 8
@@ -4058,7 +4058,7 @@ strtoul_test$321:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1069:	
 
 strtoul_test$322:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1070:		mov word [bp + 31], @6520$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1070:		mov word [bp + 31], @6627$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1072:	
 
 strtoul_test$323:	; Parameter 25 text 8
@@ -4184,7 +4184,7 @@ strtoul_test$350:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1166:	
 
 strtoul_test$351:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1167:		mov word [bp + 31], @6564$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1167:		mov word [bp + 31], @6671$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1169:	
 
 strtoul_test$352:	; Parameter 25 text 8
@@ -4310,7 +4310,7 @@ strtoul_test$379:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1263:	
 
 strtoul_test$380:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1264:		mov word [bp + 31], @6608$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1264:		mov word [bp + 31], @6715$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1266:	
 
 strtoul_test$381:	; Parameter 25 text 8
@@ -4436,7 +4436,7 @@ strtoul_test$408:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1360:	
 
 strtoul_test$409:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1361:		mov word [bp + 31], @6652$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1361:		mov word [bp + 31], @6759$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1363:	
 
 strtoul_test$410:	; Parameter 25 text 8
@@ -4562,7 +4562,7 @@ strtoul_test$437:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1457:	
 
 strtoul_test$438:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1458:		mov word [bp + 31], @6696$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1458:		mov word [bp + 31], @6803$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1460:	
 
 strtoul_test$439:	; Parameter 25 text 8
@@ -4688,7 +4688,7 @@ strtoul_test$466:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1554:	
 
 strtoul_test$467:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1555:		mov word [bp + 31], @6740$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1555:		mov word [bp + 31], @6847$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1557:	
 
 strtoul_test$468:	; Parameter 25 text 8
@@ -4814,7 +4814,7 @@ strtoul_test$495:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1651:	
 
 strtoul_test$496:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1652:		mov word [bp + 31], @6784$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1652:		mov word [bp + 31], @6891$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1654:	
 
 strtoul_test$497:	; Parameter 25 text 8
@@ -4940,7 +4940,7 @@ strtoul_test$524:	; CallHeader 25 System.Collections.Generic.HashSet`1[CCompiler
 1748:	
 
 strtoul_test$525:	; Parameter 25 string_3C25s3E203C25li3E203C25s3E203C25i3E0A# 6
-1749:		mov word [bp + 31], @6828$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+1749:		mov word [bp + 31], @6935$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 1751:	
 
 strtoul_test$526:	; Parameter 25 text 8
@@ -5224,7 +5224,7 @@ bsearch$37:	; BinaryAdd £temporary3128 firstIndex lastIndex
 
 bsearch$38:	; SignedDivide middleIndex £temporary3128 2
 164:		xor dx, dx
-165:		idiv word [@7054$int2$2#]
+165:		idiv word [@7161$int2$2#]
 166:		mov [bp + 20], ax
 168:	
 
@@ -5317,9 +5317,9 @@ bsearch$57:	; FunctionEnd bsearch
 1:	
 
 rand:	; SignedMultiply £temporary3143 g_randValue 1664525
-2:		mov eax, [@7078$g_randValue]
+2:		mov eax, [@7185$g_randValue]
 4:		xor edx, edx
-5:		imul dword [@7080$int4$1664525#]
+5:		imul dword [@7187$int4$1664525#]
 11:	
 
 rand$1:	; BinaryAdd £temporary3144 £temporary3143 1013904223
@@ -5328,12 +5328,12 @@ rand$1:	; BinaryAdd £temporary3144 £temporary3143 1013904223
 
 rand$2:	; SignedModulo g_randValue £temporary3144 127
 16:		xor edx, edx
-17:		idiv dword [@7086$int4$127#]
-18:		mov [@7078$g_randValue], edx
+17:		idiv dword [@7193$int4$127#]
+18:		mov [@7185$g_randValue], edx
 20:	
 
 rand$3:	; IntegralToIntegral £temporary3146 g_randValue
-21:		mov ebx, [@7078$g_randValue]
+21:		mov ebx, [@7185$g_randValue]
 24:		cmp ebx, 0
 25:		jge rand$4
 26:		neg ebx
@@ -5359,7 +5359,7 @@ srand:	; IntegralToIntegral £temporary3147 seed
 6:	
 
 srand$1:	; Assign g_randValue £temporary3147
-7:		mov [@7078$g_randValue], eax
+7:		mov [@7185$g_randValue], eax
 9:	
 
 srand$2:	; Return 0
@@ -5384,7 +5384,7 @@ atexit$1:	; SignedGreaterThanEqual 14 index 256
 atexit$2:	; SignedMultiply £temporary3151 index 2
 9:		mov ax, [bp + 8]
 11:		xor dx, dx
-12:		imul word [@7106$int2$2#]
+12:		imul word [@7213$int2$2#]
 18:	
 
 atexit$3:	; BinaryAdd £temporary3152 g_funcArray £temporary3151
@@ -5403,7 +5403,7 @@ atexit$5:	; NotEqual 12 £temporary3150 -> £temporary3152 0
 atexit$6:	; SignedMultiply £temporary3155 index 2
 29:		mov ax, [bp + 8]
 31:		xor dx, dx
-32:		imul word [@7114$int2$2#]
+32:		imul word [@7221$int2$2#]
 38:	
 
 atexit$7:	; BinaryAdd £temporary3156 g_funcArray £temporary3155
@@ -5464,7 +5464,7 @@ exit$1:	; SignedLessThan 14 index 0
 exit$2:	; SignedMultiply £temporary3160 index 2
 9:		mov ax, [bp + 8]
 11:		xor dx, dx
-12:		imul word [@7133$int2$2#]
+12:		imul word [@7240$int2$2#]
 18:	
 
 exit$3:	; BinaryAdd £temporary3161 g_funcArray £temporary3160
@@ -5483,7 +5483,7 @@ exit$5:	; Equal 12 £temporary3159 -> £temporary3161 0
 exit$6:	; SignedMultiply £temporary3164 index 2
 29:		mov ax, [bp + 8]
 31:		xor dx, dx
-32:		imul word [@7141$int2$2#]
+32:		imul word [@7248$int2$2#]
 38:	
 
 exit$7:	; BinaryAdd £temporary3165 g_funcArray £temporary3164
@@ -5548,79 +5548,79 @@ exit$18:	; Return 0
 exit$19:	; FunctionEnd exit
 1:	
 
-@7152$memswap:	; Assign index 0
+@7259$memswap:	; Assign index 0
 2:		mov word [bp + 12], 0
 4:	
 
-@7152$memswap$1:	; SignedGreaterThanEqual 15 index valueSize
+@7259$memswap$1:	; SignedGreaterThanEqual 15 index valueSize
 5:		mov ax, [bp + 10]
 6:		cmp [bp + 12], ax
-7:		jge @7152$memswap$15
+7:		jge @7259$memswap$15
 9:	
 
-@7152$memswap$2:	; BinaryAdd £temporary3173 value1 index
+@7259$memswap$2:	; BinaryAdd £temporary3173 value1 index
 10:		mov si, [bp + 6]
 11:		add si, [bp + 12]
 13:	
 
-@7152$memswap$3:	; Deref £temporary3172 -> £temporary3173 £temporary3173 0
+@7259$memswap$3:	; Deref £temporary3172 -> £temporary3173 £temporary3173 0
 15:	
 
-@7152$memswap$4:	; Assign tempValue £temporary3172 -> £temporary3173
+@7259$memswap$4:	; Assign tempValue £temporary3172 -> £temporary3173
 16:		mov al, [si]
 17:		mov [bp + 14], al
 19:	
 
-@7152$memswap$5:	; BinaryAdd £temporary3175 value1 index
+@7259$memswap$5:	; BinaryAdd £temporary3175 value1 index
 20:		mov si, [bp + 6]
 21:		add si, [bp + 12]
 23:	
 
-@7152$memswap$6:	; Deref £temporary3174 -> £temporary3175 £temporary3175 0
+@7259$memswap$6:	; Deref £temporary3174 -> £temporary3175 £temporary3175 0
 25:	
 
-@7152$memswap$7:	; BinaryAdd £temporary3177 value2 index
+@7259$memswap$7:	; BinaryAdd £temporary3177 value2 index
 26:		mov di, [bp + 8]
 27:		add di, [bp + 12]
 29:	
 
-@7152$memswap$8:	; Deref £temporary3176 -> £temporary3177 £temporary3177 0
+@7259$memswap$8:	; Deref £temporary3176 -> £temporary3177 £temporary3177 0
 31:	
 
-@7152$memswap$9:	; Assign £temporary3174 -> £temporary3175 £temporary3176 -> £temporary3177
+@7259$memswap$9:	; Assign £temporary3174 -> £temporary3175 £temporary3176 -> £temporary3177
 32:		mov al, [di]
 33:		mov [si], al
 35:	
 
-@7152$memswap$10:	; BinaryAdd £temporary3179 value2 index
+@7259$memswap$10:	; BinaryAdd £temporary3179 value2 index
 36:		mov si, [bp + 8]
 37:		add si, [bp + 12]
 39:	
 
-@7152$memswap$11:	; Deref £temporary3178 -> £temporary3179 £temporary3179 0
+@7259$memswap$11:	; Deref £temporary3178 -> £temporary3179 £temporary3179 0
 41:	
 
-@7152$memswap$12:	; Assign £temporary3178 -> £temporary3179 tempValue
+@7259$memswap$12:	; Assign £temporary3178 -> £temporary3179 tempValue
 42:		mov al, [bp + 14]
 43:		mov [si], al
 45:	
 
-@7152$memswap$13:	; Increment index
+@7259$memswap$13:	; Increment index
 46:		inc word [bp + 12]
 48:	
 
-@7152$memswap$14:	; Goto 1
-49:		jmp @7152$memswap$1
+@7259$memswap$14:	; Goto 1
+49:		jmp @7259$memswap$1
 51:	
 
-@7152$memswap$15:	; Return 0
+@7259$memswap$15:	; Return 0
 52:		mov ax, [bp]
 53:		mov di, [bp + 4]
 54:		mov bp, [bp + 2]
 55:		jmp ax
 57:	
 
-@7152$memswap$16:	; FunctionEnd memswap
+@7259$memswap$16:	; FunctionEnd memswap
 1:	
 
 qsort:	; IntegralToIntegral £temporary3180 valueList
@@ -5738,7 +5738,7 @@ qsort$23:	; Call 26 memswap 0
 101:		mov word [bp + 26], qsort$24
 102:		mov [bp + 28], bp
 103:		add bp, 26
-104:		jmp @7152$memswap
+104:		jmp @7259$memswap
 106:	
 
 qsort$24:	; PostCall 26

@@ -65,7 +65,7 @@ fileexistsX$1:	; Parameter 8 name 6
 7:	
 
 fileexistsX$2:	; Parameter 8 string_r# 8
-8:		mov word [bp + 16], @1651$string_r#
+8:		mov word [bp + 16], @1660$string_r#
 10:	
 
 fileexistsX$3:	; Call 8 fopen 0
@@ -89,7 +89,7 @@ fileexistsX$7:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Sy
 25:	
 
 fileexistsX$8:	; Parameter 10 string_0Afileexists2025s2025p0A# 6
-26:		mov word [bp + 16], @1654$string_0Afileexists2025s2025p0A#
+26:		mov word [bp + 16], @1663$string_0Afileexists2025s2025p0A#
 28:	
 
 fileexistsX$9:	; Parameter 10 name 8
@@ -207,56 +207,56 @@ fileexists$9:	; Return £temporary690
 fileexists$10:	; FunctionEnd fileexists
 1:	
 
-@1685$fileopen:	; AssignRegister ah 61
+@1694$fileopen:	; AssignRegister ah 61
 2:		mov a389, 61
 4:	
 
-@1685$fileopen$1:	; AssignRegister al mode
+@1694$fileopen$1:	; AssignRegister al mode
 5:		mov a390, [bp + 8]
 7:	
 
-@1685$fileopen$2:	; AssignRegister dx name
+@1694$fileopen$2:	; AssignRegister dx name
 8:		mov a391, [bp + 6]
 10:	
 
-@1685$fileopen$3:	; Interrupt 33
+@1694$fileopen$3:	; Interrupt 33
 11:		int 33
 13:	
 
-@1685$fileopen$4:	; NotCarry 8
-14:		jnc @1685$fileopen$8
+@1694$fileopen$4:	; NotCarry 8
+14:		jnc @1694$fileopen$8
 16:	
 
-@1685$fileopen$5:	; Assign errno 9
+@1694$fileopen$5:	; Assign errno 9
 17:		mov word [errno], 9
 19:	
 
-@1685$fileopen$6:	; SetReturnValue -1
+@1694$fileopen$6:	; SetReturnValue -1
 20:		mov a392, -1
 22:	
 
-@1685$fileopen$7:	; Return -1
+@1694$fileopen$7:	; Return -1
 23:		mov t393, [bp]
 24:		mov di, [bp + 4]
 25:		mov bp, [bp + 2]
 26:		jmp t393
 28:	
 
-@1685$fileopen$8:	; InspectRegister £temporary695 ax
+@1694$fileopen$8:	; InspectRegister £temporary695 ax
 30:	
 
-@1685$fileopen$9:	; SetReturnValue £temporary695
+@1694$fileopen$9:	; SetReturnValue £temporary695
 31:		mov t395, t394
 33:	
 
-@1685$fileopen$10:	; Return £temporary695
+@1694$fileopen$10:	; Return £temporary695
 34:		mov t396, [bp]
 35:		mov di, [bp + 4]
 36:		mov bp, [bp + 2]
 37:		jmp t396
 39:	
 
-@1685$fileopen$11:	; FunctionEnd fileopen
+@1694$fileopen$11:	; FunctionEnd fileopen
 1:	
 
 fopen:	; Assign index 0
@@ -271,7 +271,7 @@ fopen$1:	; SignedGreaterThanEqual 21 index 20
 fopen$2:	; SignedMultiply £temporary699 index 29
 9:		mov a397, [bp + 10]
 11:		xor dx, dx
-12:		imul word [@1707$int2$29#]
+12:		imul word [@1716$int2$29#]
 18:	
 
 fopen$3:	; BinaryAdd £temporary700 g_fileArray £temporary699
@@ -303,7 +303,7 @@ fopen$8:	; Parameter 12 mode 8
 fopen$9:	; SignedMultiply £temporary704 index 29
 39:		mov a404, [bp + 10]
 41:		xor dx, dx
-42:		imul word [@1715$int2$29#]
+42:		imul word [@1724$int2$29#]
 48:	
 
 fopen$10:	; BinaryAdd £temporary705 g_fileArray £temporary704
@@ -379,7 +379,7 @@ freopen$2:	; Parameter 14 mode 6
 10:	
 
 freopen$3:	; Parameter 14 string_r# 8
-11:		mov word [bp + 22], @1730$string_r#
+11:		mov word [bp + 22], @1739$string_r#
 13:	
 
 freopen$4:	; Call 14 strcmp 0
@@ -416,7 +416,7 @@ freopen$11:	; Call 14 fileopen 0
 37:		mov word [bp + 14], freopen$12
 38:		mov [bp + 16], bp
 39:		add bp, 14
-40:		jmp @1685$fileopen
+40:		jmp @1694$fileopen
 42:	
 
 freopen$12:	; PostCall 14
@@ -442,7 +442,7 @@ freopen$17:	; Parameter 14 mode 6
 58:	
 
 freopen$18:	; Parameter 14 string_w# 8
-59:		mov word [bp + 22], @1738$string_w#
+59:		mov word [bp + 22], @1748$string_w#
 61:	
 
 freopen$19:	; Call 14 strcmp 0
@@ -501,7 +501,7 @@ freopen$31:	; Parameter 14 mode 6
 103:	
 
 freopen$32:	; Parameter 14 string_a# 8
-104:		mov word [bp + 22], @1744$string_a#
+104:		mov word [bp + 22], @1754$string_a#
 106:	
 
 freopen$33:	; Call 14 strcmp 0
@@ -538,7 +538,7 @@ freopen$40:	; Call 14 fileopen 0
 130:		mov word [bp + 14], freopen$41
 131:		mov [bp + 16], bp
 132:		add bp, 14
-133:		jmp @1685$fileopen
+133:		jmp @1694$fileopen
 135:	
 
 freopen$41:	; PostCall 14
@@ -624,7 +624,7 @@ freopen$60:	; Parameter 14 mode 6
 197:	
 
 freopen$61:	; Parameter 14 string_r2B# 8
-198:		mov word [bp + 22], @1761$string_r2B#
+198:		mov word [bp + 22], @1774$string_r2B#
 200:	
 
 freopen$62:	; Call 14 strcmp 0
@@ -661,7 +661,7 @@ freopen$69:	; Call 14 fileopen 0
 224:		mov word [bp + 14], freopen$70
 225:		mov [bp + 16], bp
 226:		add bp, 14
-227:		jmp @1685$fileopen
+227:		jmp @1694$fileopen
 229:	
 
 freopen$70:	; PostCall 14
@@ -687,7 +687,7 @@ freopen$75:	; Parameter 14 mode 6
 245:	
 
 freopen$76:	; Parameter 14 string_w2B# 8
-246:		mov word [bp + 22], @1769$string_w2B#
+246:		mov word [bp + 22], @1783$string_w2B#
 248:	
 
 freopen$77:	; Call 14 strcmp 0
@@ -750,7 +750,7 @@ freopen$90:	; Call 14 fileopen 0
 292:		mov word [bp + 14], freopen$91
 293:		mov [bp + 16], bp
 294:		add bp, 14
-295:		jmp @1685$fileopen
+295:		jmp @1694$fileopen
 297:	
 
 freopen$91:	; PostCall 14
@@ -805,7 +805,7 @@ freopen$103:	; Parameter 14 mode 6
 335:	
 
 freopen$104:	; Parameter 14 string_a2B# 8
-336:		mov word [bp + 22], @1781$string_a2B#
+336:		mov word [bp + 22], @1796$string_a2B#
 338:	
 
 freopen$105:	; Call 14 strcmp 0
@@ -842,7 +842,7 @@ freopen$112:	; Call 14 fileopen 0
 362:		mov word [bp + 14], freopen$113
 363:		mov [bp + 16], bp
 364:		add bp, 14
-365:		jmp @1685$fileopen
+365:		jmp @1694$fileopen
 367:	
 
 freopen$113:	; PostCall 14
@@ -1030,7 +1030,7 @@ fflush$2:	; SignedGreaterThanEqual 21 index 20
 fflush$3:	; SignedMultiply £temporary785 index 29
 13:		mov a462, [bp + 8]
 15:		xor dx, dx
-16:		imul word [@1868$int2$29#]
+16:		imul word [@1886$int2$29#]
 22:	
 
 fflush$4:	; BinaryAdd £temporary786 g_fileArray £temporary785
@@ -1052,7 +1052,7 @@ fflush$7:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 fflush$8:	; SignedMultiply £temporary788 index 29
 35:		mov a467, [bp + 8]
 37:		xor dx, dx
-38:		imul word [@1873$int2$29#]
+38:		imul word [@1891$int2$29#]
 44:	
 
 fflush$9:	; BinaryAdd £temporary789 g_fileArray £temporary788
@@ -1223,7 +1223,7 @@ fclose$21:	; SignedGreaterThanEqual 40 index 20
 fclose$22:	; SignedMultiply £temporary808 index 29
 79:		mov a488, [bp + 8]
 81:		xor dx, dx
-82:		imul word [@1922$int2$29#]
+82:		imul word [@1940$int2$29#]
 88:	
 
 fclose$23:	; BinaryAdd £temporary809 g_fileArray £temporary808
@@ -1245,7 +1245,7 @@ fclose$26:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol
 fclose$27:	; SignedMultiply £temporary811 index 29
 101:		mov a493, [bp + 8]
 103:		xor dx, dx
-104:		imul word [@1927$int2$29#]
+104:		imul word [@1945$int2$29#]
 110:	
 
 fclose$28:	; BinaryAdd £temporary812 g_fileArray £temporary811
@@ -1554,7 +1554,7 @@ fgets$6:	; Parameter 16 stream 6
 24:	
 
 fgets$7:	; Parameter 16 string_25c# 8
-25:		mov word [bp + 24], @2013$string_25c#
+25:		mov word [bp + 24], @2033$string_25c#
 27:	
 
 fgets$8:	; address £temporary841 currChar
@@ -1716,7 +1716,7 @@ fputs$5:	; BinaryAdd £temporary863 £temporary862 1
 fputs$6:	; SignedMultiply size £temporary863 1
 21:		mov t543, type542
 23:		xor dx, dx
-24:		imul word [@2056$int2$1#]
+24:		imul word [@2076$int2$1#]
 25:		mov [bp + 10], ax
 27:	
 
@@ -2655,7 +2655,7 @@ perror:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
 perror$1:	; Parameter 8 string_25s3A2025s2E0A# 6
-4:		mov word [bp + 14], @2257$string_25s3A2025s2E0A#
+4:		mov word [bp + 14], @2290$string_25s3A2025s2E0A#
 6:	
 
 perror$2:	; Parameter 8 s 8

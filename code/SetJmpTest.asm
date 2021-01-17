@@ -19,201 +19,201 @@ buffer:
 
 section .data
 
-@10366$string_Please20input20a20value3A20#:
+@10389$string_Please20input20a20value3A20#:
 	; Initializer String Please input a value: 
 	db "Please input a value: ", 0
 
 section .data
 
-@10367$string_25lf#:
+@10390$string_25lf#:
 	; Initializer String %lf
 	db "%lf", 0
 
 section .data
 
-@10370$string_12E0202F2025f203D2025f0A#:
+@10393$string_12E0202F2025f203D2025f0A#:
 	; Initializer String 1.0 / %f = %f\n
 	db "1.0 / %f = %f", 10, 0
 
 section .data
 
-@10371$string_25s0A#:
+@10394$string_25s0A#:
 	; Initializer String %s\n
 	db "%s", 10, 0
 
 section .text
 
- @10363$main:
+ @10386$main:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @10363$main$1:
+ @10386$main$1:
 	; Parameter 64 pointer "Please input a value: "
-	mov qword [rbp + 64], @10366$string_Please20input20a20value3A20#
+	mov qword [rbp + 64], @10389$string_Please20input20a20value3A20#
 
- @10363$main$2:
+ @10386$main$2:
 	; Call 40 printf 0
-	mov qword [rbp + 40], @10363$main$3
+	mov qword [rbp + 40], @10386$main$3
 	mov [rbp + 48], rbp
 	add rbp, 40
 	mov rdi, rbp
 	jmp printf
 
- @10363$main$3:
+ @10386$main$3:
 	; PostCall 40
 
- @10363$main$4:
+ @10386$main$4:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @10363$main$5:
+ @10386$main$5:
 	; Parameter 64 pointer "%lf"
-	mov qword [rbp + 64], @10367$string_25lf#
+	mov qword [rbp + 64], @10390$string_25lf#
 
- @10363$main$6:
-	; Address £temporary3341 x
+ @10386$main$6:
+	; Address £temporary3266 x
 	mov rsi, rbp
 	add rsi, 32
 
- @10363$main$7:
-	; Parameter 72 pointer £temporary3341
+ @10386$main$7:
+	; Parameter 72 pointer £temporary3266
 	mov [rbp + 72], rsi
 
- @10363$main$8:
+ @10386$main$8:
 	; Call 40 scanf 8
-	mov qword [rbp + 40], @10363$main$9
+	mov qword [rbp + 40], @10386$main$9
 	mov [rbp + 48], rbp
 	add rbp, 40
 	mov rdi, rbp
 	add rdi, 8
 	jmp scanf
 
- @10363$main$9:
+ @10386$main$9:
 	; PostCall 40
 
- @10363$main$10:
+ @10386$main$10:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @10363$main$11:
+ @10386$main$11:
 	; Parameter 64 pointer buffer
 	mov qword [rbp + 64], buffer
 
- @10363$main$12:
+ @10386$main$12:
 	; Call 40 setjmp 0
-	mov qword [rbp + 40], @10363$main$13
+	mov qword [rbp + 40], @10386$main$13
 	mov [rbp + 48], rbp
 	add rbp, 40
 	jmp setjmp
 
- @10363$main$13:
+ @10386$main$13:
 	; PostCall 40
 
- @10363$main$14:
-	; GetReturnValue £temporary3343
+ @10386$main$14:
+	; GetReturnValue £temporary3268
 
- @10363$main$15:
-	; IntegralToIntegral £temporary3344 £temporary3343
+ @10386$main$15:
+	; IntegralToIntegral £temporary3269 £temporary3268
 	mov rax, 4294967295
 	and rbx, rax
 
- @10363$main$16:
-	; Assign message £temporary3344
+ @10386$main$16:
+	; Assign message £temporary3269
 	mov [rbp + 24], rbx
 
- @10363$main$17:
+ @10386$main$17:
 	; NotEqual 32 message 0
 	cmp qword [rbp + 24], 0
-	jne @10363$main$32
+	jne @10386$main$32
 
- @10363$main$18:
+ @10386$main$18:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @10363$main$19:
+ @10386$main$19:
 	; Parameter 64 pointer "1.0 / %f = %f\n"
-	mov qword [rbp + 64], @10370$string_12E0202F2025f203D2025f0A#
+	mov qword [rbp + 64], @10393$string_12E0202F2025f203D2025f0A#
 
- @10363$main$20:
+ @10386$main$20:
 	; PushFloat x
 	fld qword [rbp + 32]
 
- @10363$main$21:
+ @10386$main$21:
 	; Parameter 72 double x
 	fstp qword [rbp + 72]
 
- @10363$main$22:
+ @10386$main$22:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @10363$main$23:
+ @10386$main$23:
 	; PushFloat x
 	fld qword [rbp + 32]
 
- @10363$main$24:
+ @10386$main$24:
 	; Parameter 104 double x
 	fstp qword [rbp + 104]
 
- @10363$main$25:
+ @10386$main$25:
 	; Call 80 inverse 0
-	mov qword [rbp + 80], @10363$main$26
+	mov qword [rbp + 80], @10386$main$26
 	mov [rbp + 88], rbp
 	add rbp, 80
 	jmp inverse
 
- @10363$main$26:
+ @10386$main$26:
 	; PostCall 80
 
- @10363$main$27:
-	; GetReturnValue £temporary3346
+ @10386$main$27:
+	; GetReturnValue £temporary3271
 
- @10363$main$28:
-	; Parameter 80 double £temporary3346
+ @10386$main$28:
+	; Parameter 80 double £temporary3271
 	fstp qword [rbp + 80]
 
- @10363$main$29:
+ @10386$main$29:
 	; Call 40 printf 16
-	mov qword [rbp + 40], @10363$main$30
+	mov qword [rbp + 40], @10386$main$30
 	mov [rbp + 48], rbp
 	add rbp, 40
 	mov rdi, rbp
 	add rdi, 16
 	jmp printf
 
- @10363$main$30:
+ @10386$main$30:
 	; PostCall 40
 
- @10363$main$31:
+ @10386$main$31:
 	; Jump 37
-	jmp @10363$main$37
+	jmp @10386$main$37
 
- @10363$main$32:
+ @10386$main$32:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @10363$main$33:
+ @10386$main$33:
 	; Parameter 64 pointer "%s\n"
-	mov qword [rbp + 64], @10371$string_25s0A#
+	mov qword [rbp + 64], @10394$string_25s0A#
 
- @10363$main$34:
+ @10386$main$34:
 	; Parameter 72 pointer message
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
- @10363$main$35:
+ @10386$main$35:
 	; Call 40 printf 8
-	mov qword [rbp + 40], @10363$main$36
+	mov qword [rbp + 40], @10386$main$36
 	mov [rbp + 48], rbp
 	add rbp, 40
 	mov rdi, rbp
 	add rdi, 8
 	jmp printf
 
- @10363$main$36:
+ @10386$main$36:
 	; PostCall 40
 
- @10363$main$37:
+ @10386$main$37:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @10363$main$38:
+ @10386$main$38:
 	; FunctionEnd main
 
 section .text
@@ -248,13 +248,13 @@ section .text
 	; PostCall 32
 
  inverse$7:
-	; GetReturnValue £temporary3353
+	; GetReturnValue £temporary3278
 
  inverse$8:
 	; SetReturnValue
 
  inverse$9:
-	; Return £temporary3353
+	; Return £temporary3278
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -265,7 +265,7 @@ section .text
 
 section .data
 
-@10386$string_Division20by20Zero2E#:
+@10410$string_Division20by20Zero2E#:
 	; Initializer String Division by Zero.
 	db "Division by Zero.", 0
 
@@ -295,14 +295,14 @@ section .text
 	fld qword [rbp + 32]
 
  divide$5:
-	; Divide £temporary3357 x y
+	; Divide £temporary3282 x y
 	fdiv
 
  divide$6:
 	; SetReturnValue
 
  divide$7:
-	; Return £temporary3357
+	; Return £temporary3282
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -317,7 +317,7 @@ section .text
 
  divide$10:
 	; Parameter 72 signedint "Division by Zero."
-	mov qword [rbp + 72], @10386$string_Division20by20Zero2E#
+	mov qword [rbp + 72], @10410$string_Division20by20Zero2E#
 
  divide$11:
 	; Call 40 longjmp 0
@@ -348,13 +348,13 @@ section .text
 
 section .data
 
-@10395$string_12E0202F2025f203D2025f0A#:
+@10419$string_12E0202F2025f203D2025f0A#:
 	; Initializer String 1.0 / %f = %f\n
 	db "1.0 / %f = %f", 10, 0
 
 section .data
 
-@10396$string_25s0A#:
+@10420$string_25s0A#:
 	; Initializer String %s\n
 	db "%s", 10, 0
 
@@ -378,15 +378,15 @@ section .text
 	; PostCall 40
 
  test$4:
-	; GetReturnValue £temporary3359
+	; GetReturnValue £temporary3284
 
  test$5:
-	; IntegralToIntegral £temporary3360 £temporary3359
+	; IntegralToIntegral £temporary3285 £temporary3284
 	mov rax, 4294967295
 	and rbx, rax
 
  test$6:
-	; Assign message £temporary3360
+	; Assign message £temporary3285
 	mov [rbp + 32], rbx
 
  test$7:
@@ -399,7 +399,7 @@ section .text
 
  test$9:
 	; Parameter 64 pointer "1.0 / %f = %f\n"
-	mov qword [rbp + 64], @10395$string_12E0202F2025f203D2025f0A#
+	mov qword [rbp + 64], @10419$string_12E0202F2025f203D2025f0A#
 
  test$10:
 	; PushFloat x
@@ -431,10 +431,10 @@ section .text
 	; PostCall 80
 
  test$17:
-	; GetReturnValue £temporary3362
+	; GetReturnValue £temporary3287
 
  test$18:
-	; Parameter 80 double £temporary3362
+	; Parameter 80 double £temporary3287
 	fstp qword [rbp + 80]
 
  test$19:
@@ -458,7 +458,7 @@ section .text
 
  test$23:
 	; Parameter 64 pointer "%s\n"
-	mov qword [rbp + 64], @10396$string_25s0A#
+	mov qword [rbp + 64], @10420$string_25s0A#
 
  test$24:
 	; Parameter 72 pointer message
@@ -489,13 +489,13 @@ section .text
 
 section .data
 
-@10403$float8$10#:
+@10428$float8$10#:
 	; Initializer Double 10
 	dq 10.0
 
 section .data
 
-@10407$float8$0.1#:
+@10434$float8$0.1#:
 	; Initializer Double 0.1
 	dq 0.1
 
@@ -506,7 +506,7 @@ section .text
 
  setjmp_test$1:
 	; PushFloat 10
-	fld qword [@10403$float8$10#]
+	fld qword [@10428$float8$10#]
 
  setjmp_test$2:
 	; Parameter 48 double 10
@@ -548,7 +548,7 @@ section .text
 
  setjmp_test$11:
 	; PushFloat 0.1
-	fld qword [@10407$float8$0.1#]
+	fld qword [@10434$float8$0.1#]
 
  setjmp_test$12:
 	; Parameter 48 double 0.1

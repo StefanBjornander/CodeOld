@@ -270,7 +270,7 @@ size_t strftime(char* result, size_t maxSize,
         //printf("<%c>\n", format[index + 1]);
 
         switch (format[++index]) {
-          case 'a':
+          /*case 'a':
             strcpy(add, shortDayList[tp->tm_wday]);
             break;
 
@@ -314,13 +314,16 @@ size_t strftime(char* result, size_t maxSize,
 
           case 'M':
             sprintf(add, "%02i", tp->tm_min);
-            break;
+            break;*/
 
-          case 'p':
+          case 'p': {
+            //int i = tp->tm_hour < 12;
+            //sprintf(add, "%i", tp->tm_hour < 12);
             sprintf(add, "%s", (tp->tm_hour < 12) ? "AM" : "PM");
             break;
+            }
 
-          case 'S':
+          /*case 'S':
             sprintf(add, "%02i", tp->tm_sec);
             break;
 
@@ -363,7 +366,7 @@ size_t strftime(char* result, size_t maxSize,
 
           default:
             strcpy(add, "");
-            break;
+            break;*/
         }
       }
       else {
@@ -371,14 +374,7 @@ size_t strftime(char* result, size_t maxSize,
         add[1] = '\0';
       }
 
-      /*if ((strlen(result) + strlen(add)) < maxSize) {
-        strcat(result, add);
-      }
-      else {
-        break;
-      }*/
-
-      { int x = strlen(result), y = strlen(add);
+      { double x;
         if ((strlen(result) + strlen(add)) < maxSize) {
           strcat(result, add);
         }

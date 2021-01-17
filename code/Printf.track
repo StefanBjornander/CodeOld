@@ -512,7 +512,7 @@ printLongIntRec:	; Equal 15 longValue 0
 printLongIntRec$1:	; SignedModulo £temporary1649 longValue 10
 6:		mov a1076, [bp + 6]
 8:		xor edx, edx
-9:		idiv dword [@3712$int4$10#]
+9:		idiv dword [@3765$int4$10#]
 15:	
 
 printLongIntRec$2:	; IntegralToIntegral £temporary1650 £temporary1649
@@ -532,7 +532,7 @@ printLongIntRec$4:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompile
 printLongIntRec$5:	; SignedDivide £temporary1651 longValue 10
 30:		mov a1079, [bp + 6]
 32:		xor edx, edx
-33:		idiv dword [@3717$int4$10#]
+33:		idiv dword [@3770$int4$10#]
 39:	
 
 printLongIntRec$6:	; Parameter 12 £temporary1651 6
@@ -1188,7 +1188,7 @@ printLongDoubleFraction$16:	; SignedLessThanEqual 35 £temporary1731 0
 59:	
 
 printLongDoubleFraction$17:	; PushFloat 10.0
-60:		fld qword [@3876$float8$10.0#]
+60:		fld qword [@3939$float8$10.0#]
 62:	
 
 printLongDoubleFraction$18:	; PushFloat longDoubleValue
@@ -1629,7 +1629,7 @@ printLongDoubleExpo$46:	; CallHeader 26 System.Collections.Generic.HashSet`1[CCo
 157:	
 
 printLongDoubleExpo$47:	; PushFloat 10.0
-158:		fld qword [@3952$float8$10.0#]
+158:		fld qword [@4020$float8$10.0#]
 160:	
 
 printLongDoubleExpo$48:	; Parameter 26 10.0 6
@@ -4557,7 +4557,7 @@ printFormat$246:	; Equal 257 £temporary2104 0
 printFormat$247:	; SignedMultiply £temporary2105 value 10
 849:		mov a1334, [bp + 41]
 851:		xor dx, dx
-852:		imul word [@4710$int2$10#]
+852:		imul word [@4812$int2$10#]
 858:	
 
 printFormat$248:	; BinarySubtract £temporary2106 c 48

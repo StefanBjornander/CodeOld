@@ -681,37 +681,37 @@ section .text
 
 section .data
 
-@728$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+@730$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
 	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
-@729$string_newMemorySize203E3D200#:
+@731$string_newMemorySize203E3D200#:
 	; Initializer String newMemorySize >= 0
 	db "newMemorySize >= 0", 0
 
 section .data
 
-@730$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#:
+@732$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#:
 	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c", 0
 
 section .data
 
-@737$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+@740$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
 	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
-@738$string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#:
+@741$string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#:
 	; Initializer String ( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )
 	db "( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )", 0
 
 section .data
 
-@739$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#:
+@742$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#:
 	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c", 0
 
@@ -732,15 +732,15 @@ section .text
 
  realloc$3:
 	; Parameter 68 pointer "Assertion failed: "%s" in file %s at line %i\n"
-	mov qword [rbp + 68], @728$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 68], @730$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  realloc$4:
 	; Parameter 76 pointer "newMemorySize >= 0"
-	mov qword [rbp + 76], @729$string_newMemorySize203E3D200#
+	mov qword [rbp + 76], @731$string_newMemorySize203E3D200#
 
  realloc$5:
 	; Parameter 84 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c"
-	mov qword [rbp + 84], @730$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
+	mov qword [rbp + 84], @732$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  realloc$6:
 	; Parameter 92 signedint 259
@@ -791,15 +791,15 @@ section .text
 
  realloc$16:
 	; Parameter 68 pointer "Assertion failed: "%s" in file %s at line %i\n"
-	mov qword [rbp + 68], @737$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 68], @740$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  realloc$17:
 	; Parameter 76 pointer "( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )"
-	mov qword [rbp + 76], @738$string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#
+	mov qword [rbp + 76], @741$string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#
 
  realloc$18:
 	; Parameter 84 pointer "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c"
-	mov qword [rbp + 84], @739$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
+	mov qword [rbp + 84], @742$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  realloc$19:
 	; Parameter 92 signedint 260
@@ -1147,19 +1147,19 @@ section .text
 
 section .data
 
-@791$string_Heap3A0A#:
+@795$string_Heap3A0A#:
 	; Initializer String Heap:\n
 	db "Heap:", 10, 0
 
 section .data
 
-@795$string_2020Address2025u2C20Size2025u0A#:
+@799$string_2020Address2025u2C20Size2025u0A#:
 	; Initializer String   Address %u, Size %u\n
 	db "  Address %u, Size %u", 10, 0
 
 section .data
 
-@796$string_0A#:
+@800$string_0A#:
 	; Initializer String \n
 	db 10, 0
 
@@ -1175,7 +1175,7 @@ section .text
 
  print_heap$2:
 	; Parameter 56 pointer "Heap:\n"
-	mov qword [rbp + 56], @791$string_Heap3A0A#
+	mov qword [rbp + 56], @795$string_Heap3A0A#
 
  print_heap$3:
 	; Call 32 printf 0
@@ -1198,7 +1198,7 @@ section .text
 
  print_heap$7:
 	; Parameter 56 pointer "  Address %u, Size %u\n"
-	mov qword [rbp + 56], @795$string_2020Address2025u2C20Size2025u0A#
+	mov qword [rbp + 56], @799$string_2020Address2025u2C20Size2025u0A#
 
  print_heap$8:
 	; IntegralToIntegral £temporary127 currBlockPtr
@@ -1247,7 +1247,7 @@ section .text
 
  print_heap$18:
 	; Parameter 56 pointer "\n"
-	mov qword [rbp + 56], @796$string_0A#
+	mov qword [rbp + 56], @800$string_0A#
 
  print_heap$19:
 	; Call 32 printf 0

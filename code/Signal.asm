@@ -19,19 +19,19 @@ section .text
 
 section .data
 
-@2243$string_Raise20default0A#:
+@2252$string_Raise20default0A#:
 	; Initializer String Raise default\n
 	db "Raise default", 10, 0
 
 section .data
 
-@2249$string_Raise20error0A#:
+@2258$string_Raise20error0A#:
 	; Initializer String Raise error\n
 	db "Raise error", 10, 0
 
 section .data
 
-@2252$string_Raise20function2C20calling2025i20with2025i0A#:
+@2261$string_Raise20function2C20calling2025i20with2025i0A#:
 	; Initializer String Raise function, calling %i with %i\n
 	db "Raise function, calling %i with %i", 10, 0
 
@@ -51,7 +51,7 @@ section .text
 
  raise$3:
 	; Parameter 60 pointer "Raise default\n"
-	mov qword [rbp + 60], @2243$string_Raise20default0A#
+	mov qword [rbp + 60], @2252$string_Raise20default0A#
 
  raise$4:
 	; Call 36 printf 0
@@ -85,7 +85,7 @@ section .text
 
  raise$10:
 	; Parameter 60 pointer "Raise error\n"
-	mov qword [rbp + 60], @2249$string_Raise20error0A#
+	mov qword [rbp + 60], @2258$string_Raise20error0A#
 
  raise$11:
 	; Call 36 printf 0
@@ -114,7 +114,7 @@ section .text
 
  raise$16:
 	; Parameter 60 pointer "Raise function, calling %i with %i\n"
-	mov qword [rbp + 60], @2252$string_Raise20function2C20calling2025i20with2025i0A#
+	mov qword [rbp + 60], @2261$string_Raise20function2C20calling2025i20with2025i0A#
 
  raise$17:
 	; Parameter 68 pointer func
