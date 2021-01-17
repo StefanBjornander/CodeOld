@@ -1146,156 +1146,156 @@ frexp$12:	; PostCall 16
 44:	
 
 frexp$13:	; GetReturnValue £temporary386
-49:	
+46:	
 
 frexp$14:	; IntegralToIntegral £temporary387 £temporary386
-52:	
+49:	
 
 frexp$15:	; Assign exponent £temporary387
-53:		mov [bp + 16], bx
-55:	
+50:		mov [bp + 16], bx
+52:	
 
 frexp$16:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-57:	
+54:	
 
 frexp$17:	; PushFloat 2
-58:		fld qword [@1004$float8$2#]
-60:	
+55:		fld qword [@1004$float8$2#]
+57:	
 
 frexp$18:	; Parameter 18 2 6
-61:		fstp qword [bp + 24]
-63:	
+58:		fstp qword [bp + 24]
+60:	
 
 frexp$19:	; IntegralToFloating £temporary388 exponent
-64:		fild word [bp + 16]
-66:	
+61:		fild word [bp + 16]
+63:	
 
 frexp$20:	; Parameter 18 £temporary388 14
-67:		fstp qword [bp + 32]
-69:	
+64:		fstp qword [bp + 32]
+66:	
 
 frexp$21:	; Call 18 pow 0
-70:		mov word [bp + 18], frexp$22
-71:		mov [bp + 20], bp
-72:		add bp, 18
-73:		jmp pow
-75:	
+67:		mov word [bp + 18], frexp$22
+68:		mov [bp + 20], bp
+69:		add bp, 18
+70:		jmp pow
+72:	
 
 frexp$22:	; PostCall 18
-77:	
+74:	
 
 frexp$23:	; GetReturnValue £temporary389
-79:	
+76:	
 
 frexp$24:	; PushFloat x
-80:		fld qword [bp + 6]
-82:	
+77:		fld qword [bp + 6]
+79:	
 
 frexp$25:	; SignedGreaterThanEqual 27 £temporary389 x
-83:		fcompp
-84:		fstsw ax
-85:		sahf
-86:		jbe frexp$27
-88:	
+80:		fcompp
+81:		fstsw ax
+82:		sahf
+83:		jbe frexp$27
+85:	
 
 frexp$26:	; Increment exponent
-89:		inc word [bp + 16]
-91:	
+86:		inc word [bp + 16]
+88:	
 
 frexp$27:	; Equal 30 p 0
-92:		cmp word [bp + 14], 0
-93:		je frexp$30
-95:	
+89:		cmp word [bp + 14], 0
+90:		je frexp$30
+92:	
 
 frexp$28:	; Deref £temporary393 -> p p 0
-96:		mov si, [bp + 14]
-98:	
+93:		mov si, [bp + 14]
+95:	
 
 frexp$29:	; Assign £temporary393 -> p exponent
-99:		mov ax, [bp + 16]
-100:		mov [si], ax
-102:	
+96:		mov ax, [bp + 16]
+97:		mov [si], ax
+99:	
 
 frexp$30:	; PushFloat x
-103:		fld qword [bp + 6]
-105:	
+100:		fld qword [bp + 6]
+102:	
 
 frexp$31:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
-106:		fstp qword [bp + 18]
-108:	
+103:		fstp qword [bp + 18]
+105:	
 
 frexp$32:	; PushFloat 2
-109:		fld qword [@1016$float8$2#]
-111:	
+106:		fld qword [@1016$float8$2#]
+108:	
 
 frexp$33:	; Parameter 18 2 6
-112:		fstp qword [bp + 32]
-114:	
+109:		fstp qword [bp + 32]
+111:	
 
 frexp$34:	; IntegralToFloating £temporary394 exponent
-115:		fild word [bp + 16]
-117:	
+112:		fild word [bp + 16]
+114:	
 
 frexp$35:	; Parameter 18 £temporary394 14
-118:		fstp qword [bp + 40]
-120:	
+115:		fstp qword [bp + 40]
+117:	
 
 frexp$36:	; Call 18 pow 0
-121:		mov word [bp + 26], frexp$37
-122:		mov [bp + 28], bp
-123:		add bp, 26
-124:		jmp pow
-126:	
+118:		mov word [bp + 26], frexp$37
+119:		mov [bp + 28], bp
+120:		add bp, 26
+121:		jmp pow
+123:	
 
 frexp$37:	; PostCall 18
-127:		fstp qword [bp + 26]
-128:		fld qword [bp + 18]
-129:		fld qword [bp + 26]
-131:	
+124:		fstp qword [bp + 26]
+125:		fld qword [bp + 18]
+126:		fld qword [bp + 26]
+128:	
 
 frexp$38:	; GetReturnValue £temporary395
-133:	
+130:	
 
 frexp$39:	; SignedDivide £temporary396 x £temporary395
-134:		fdiv
-136:	
+131:		fdiv
+133:	
 
 frexp$40:	; SetReturnValue £temporary396
-138:	
+135:	
 
 frexp$41:	; Return £temporary396
-139:		mov ax, [bp]
-140:		mov di, [bp + 4]
-141:		mov bp, [bp + 2]
-142:		jmp ax
-144:	
+136:		mov ax, [bp]
+137:		mov di, [bp + 4]
+138:		mov bp, [bp + 2]
+139:		jmp ax
+141:	
 
 frexp$42:	; Equal 45 p 0
-145:		cmp word [bp + 14], 0
-146:		je frexp$45
-148:	
+142:		cmp word [bp + 14], 0
+143:		je frexp$45
+145:	
 
 frexp$43:	; Deref £temporary398 -> p p 0
-149:		mov si, [bp + 14]
-151:	
+146:		mov si, [bp + 14]
+148:	
 
 frexp$44:	; Assign £temporary398 -> p 0
-152:		mov word [si], 0
-154:	
+149:		mov word [si], 0
+151:	
 
 frexp$45:	; PushZero
-155:		fldz
-157:	
+152:		fldz
+154:	
 
 frexp$46:	; SetReturnValue 0
-159:	
+156:	
 
 frexp$47:	; Return 0
-160:		mov ax, [bp]
-161:		mov di, [bp + 4]
-162:		mov bp, [bp + 2]
-163:		jmp ax
-165:	
+157:		mov ax, [bp]
+158:		mov di, [bp + 4]
+159:		mov bp, [bp + 2]
+160:		jmp ax
+162:	
 
 frexp$48:	; FunctionEnd frexp
 1:	

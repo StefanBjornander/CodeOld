@@ -50,10 +50,10 @@ mainX$10:	; PostCall 6
 39:	
 
 mainX$11:	; Return 0
-40:		mov t1, [bp]
+40:		mov t2, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t1
+43:		jmp t2
 45:	
 
 mainX$12:	; FunctionEnd mainX
@@ -292,10 +292,10 @@ main$50:	; PostCall 6
 main$51:	; Return 0
 181:		cmp word [bp], 0
 182:		je return_label$0
-183:		mov t2, [bp]
+183:		mov t3, [bp]
 184:		mov di, [bp + 4]
 185:		mov bp, [bp + 2]
-186:		jmp t2
+186:		jmp t3
 187:	
 
 return_label$0:

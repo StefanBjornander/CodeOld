@@ -23087,19 +23087,16 @@ x35609:	add bp, 56	; 3: 131 197 56
 x35612:	jmp strlen	; 3: 233 91 2
 
 strftime$325:	; PostCall 54
-x35615:	mov bx, [bp + 54]	; 3: 139 94 54
-x35618:	mov ax, bx	; 2: 137 216
+x35615:	mov ax, bx	; 2: 137 216
+x35617:	mov bx, [bp + 54]	; 3: 139 94 54
 
 strftime$326:	; GetReturnValue £temporary3587
 
 strftime$327:	; BinaryAdd £temporary3588 £temporary3586 £temporary3587
-x35620:	add ax, bx	; 2: 1 216
+x35620:	add bx, ax	; 2: 1 195
 
 strftime$328:	; SignedGreaterThanEqual 336 £temporary3588 maxSize
-x35622:	cmp ax, [bp + 8]	; 3: 59 70 8
-
-
-
+x35622:	cmp bx, [bp + 8]	; 3: 59 94 8
 x35625:	jge strftime$336	; 2: 125 33
 
 strftime$329:	; CallHeader 54 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0

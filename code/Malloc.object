@@ -403,54 +403,54 @@ calloc$4:	; PostCall 10
 24:	
 
 calloc$5:	; GetReturnValue £temporary70
-29:	
+26:	
 
 calloc$6:	; Assign pointer £temporary70
-30:		mov [bp + 10], bx
-32:	
+27:		mov [bp + 10], bx
+29:	
 
 calloc$7:	; Equal 14 pointer 0
-33:		cmp word [bp + 10], 0
-34:		je calloc$14
-36:	
+30:		cmp word [bp + 10], 0
+31:		je calloc$14
+33:	
 
 calloc$8:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-38:	
+35:	
 
 calloc$9:	; Parameter 12 pointer 6
-39:		mov ax, [bp + 10]
-40:		mov [bp + 18], ax
-42:	
+36:		mov ax, [bp + 10]
+37:		mov [bp + 18], ax
+39:	
 
 calloc$10:	; Parameter 12 0 8
-43:		mov word [bp + 20], 0
-45:	
+40:		mov word [bp + 20], 0
+42:	
 
 calloc$11:	; Parameter 12 size 10
-46:		mov ax, [bp + 8]
-47:		mov [bp + 22], ax
-49:	
+43:		mov ax, [bp + 8]
+44:		mov [bp + 22], ax
+46:	
 
 calloc$12:	; Call 12 memset 0
-50:		mov word [bp + 12], calloc$13
-51:		mov [bp + 14], bp
-52:		add bp, 12
-53:		jmp memset
-55:	
+47:		mov word [bp + 12], calloc$13
+48:		mov [bp + 14], bp
+49:		add bp, 12
+50:		jmp memset
+52:	
 
 calloc$13:	; PostCall 12
-57:	
+54:	
 
 calloc$14:	; SetReturnValue pointer
-58:		mov bx, [bp + 10]
-60:	
+55:		mov bx, [bp + 10]
+57:	
 
 calloc$15:	; Return pointer
-61:		mov ax, [bp]
-62:		mov di, [bp + 4]
-63:		mov bp, [bp + 2]
-64:		jmp ax
-66:	
+58:		mov ax, [bp]
+59:		mov di, [bp + 4]
+60:		mov bp, [bp + 2]
+61:		jmp ax
+63:	
 
 calloc$16:	; FunctionEnd calloc
 1:	
@@ -748,280 +748,280 @@ realloc$29:	; PostCall 10
 107:	
 
 realloc$30:	; GetReturnValue £temporary106
-112:	
+109:	
 
 realloc$31:	; SetReturnValue £temporary106
-114:	
+111:	
 
 realloc$32:	; Return £temporary106
-115:		mov ax, [bp]
-116:		mov di, [bp + 4]
-117:		mov bp, [bp + 2]
-118:		jmp ax
-120:	
+112:		mov ax, [bp]
+113:		mov di, [bp + 4]
+114:		mov bp, [bp + 2]
+115:		jmp ax
+117:	
 
 realloc$33:	; NotEqual 40 newMemorySize 0
-121:		cmp word [bp + 8], 0
-122:		jne realloc$40
-124:	
+118:		cmp word [bp + 8], 0
+119:		jne realloc$40
+121:	
 
 realloc$34:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-126:	
+123:	
 
 realloc$35:	; Parameter 10 oldMemoryPtr 6
-127:		mov ax, [bp + 6]
-128:		mov [bp + 16], ax
-130:	
+124:		mov ax, [bp + 6]
+125:		mov [bp + 16], ax
+127:	
 
 realloc$36:	; Call 10 free 0
-131:		mov word [bp + 10], realloc$37
-132:		mov [bp + 12], bp
-133:		add bp, 10
-134:		jmp free
-136:	
+128:		mov word [bp + 10], realloc$37
+129:		mov [bp + 12], bp
+130:		add bp, 10
+131:		jmp free
+133:	
 
 realloc$37:	; PostCall 10
-138:	
+135:	
 
 realloc$38:	; SetReturnValue 0
-139:		mov bx, 0
-141:	
+136:		mov bx, 0
+138:	
 
 realloc$39:	; Return 0
-142:		mov ax, [bp]
-143:		mov di, [bp + 4]
-144:		mov bp, [bp + 2]
-145:		jmp ax
-147:	
+139:		mov ax, [bp]
+140:		mov di, [bp + 4]
+141:		mov bp, [bp + 2]
+142:		jmp ax
+144:	
 
 realloc$40:	; IntegralToIntegral £temporary109 newMemorySize
-148:		mov ax, [bp + 8]
-151:	
+145:		mov ax, [bp + 8]
+148:	
 
 realloc$41:	; BinaryAdd newBlockSize £temporary109 4
-152:		add ax, 4
-153:		mov [bp + 10], ax
-155:	
+149:		add ax, 4
+150:		mov [bp + 10], ax
+152:	
 
 realloc$42:	; IntegralToIntegral £temporary111 oldMemoryPtr
-156:		mov ax, [bp + 6]
-159:	
+153:		mov ax, [bp + 6]
+156:	
 
 realloc$43:	; BinarySubtract £temporary112 £temporary111 4
-160:		sub ax, 4
-162:	
+157:		sub ax, 4
+159:	
 
 realloc$44:	; IntegralToIntegral £temporary113 £temporary112
-165:	
+162:	
 
 realloc$45:	; Assign oldBlockPtr £temporary113
-166:		mov [bp + 12], ax
-168:	
+163:		mov [bp + 12], ax
+165:	
 
 realloc$46:	; Deref £temporary114 -> oldBlockPtr oldBlockPtr 0
-169:		mov si, [bp + 12]
-171:	
+166:		mov si, [bp + 12]
+168:	
 
 realloc$47:	; UnsignedGreaterThan 52 newBlockSize £temporary114 -> oldBlockPtr
-172:		mov ax, [si]
-173:		cmp [bp + 10], ax
-174:		ja realloc$52
-176:	
+169:		mov ax, [si]
+170:		cmp [bp + 10], ax
+171:		ja realloc$52
+173:	
 
 realloc$48:	; Deref £temporary116 -> oldBlockPtr oldBlockPtr 0
-177:		mov si, [bp + 12]
-179:	
+174:		mov si, [bp + 12]
+176:	
 
 realloc$49:	; Assign £temporary116 -> oldBlockPtr newBlockSize
-180:		mov ax, [bp + 10]
-181:		mov [si], ax
-183:	
+177:		mov ax, [bp + 10]
+178:		mov [si], ax
+180:	
 
 realloc$50:	; SetReturnValue oldMemoryPtr
-184:		mov bx, [bp + 6]
-186:	
+181:		mov bx, [bp + 6]
+183:	
 
 realloc$51:	; Return oldMemoryPtr
-187:		mov ax, [bp]
-188:		mov di, [bp + 4]
-189:		mov bp, [bp + 2]
-190:		jmp ax
-192:	
+184:		mov ax, [bp]
+185:		mov di, [bp + 4]
+186:		mov bp, [bp + 2]
+187:		jmp ax
+189:	
 
 realloc$52:	; Assign lastAddress 65528
-193:		mov word [bp + 14], 65528
-195:	
+190:		mov word [bp + 14], 65528
+192:	
 
 realloc$53:	; Assign currBlockPtr g_firstBlockPtr
-196:		mov ax, [g_firstBlockPtr]
-197:		mov [bp + 16], ax
-199:	
+193:		mov ax, [g_firstBlockPtr]
+194:		mov [bp + 16], ax
+196:	
 
 realloc$54:	; Equal 68 currBlockPtr 0
-200:		cmp word [bp + 16], 0
-201:		je realloc$68
-203:	
+197:		cmp word [bp + 16], 0
+198:		je realloc$68
+200:	
 
 realloc$55:	; NotEqual 63 currBlockPtr oldBlockPtr
-204:		mov ax, [bp + 12]
-205:		cmp [bp + 16], ax
-206:		jne realloc$63
-208:	
+201:		mov ax, [bp + 12]
+202:		cmp [bp + 16], ax
+203:		jne realloc$63
+205:	
 
 realloc$56:	; IntegralToIntegral £temporary119 currBlockPtr
-209:		mov ax, [bp + 16]
-212:	
+206:		mov ax, [bp + 16]
+209:	
 
 realloc$57:	; BinarySubtract availableSize lastAddress £temporary119
-213:		mov bx, [bp + 14]
-214:		sub bx, ax
-215:		mov [bp + 18], bx
-217:	
+210:		mov bx, [bp + 14]
+211:		sub bx, ax
+212:		mov [bp + 18], bx
+214:	
 
 realloc$58:	; UnsignedLessThan 68 availableSize newBlockSize
-218:		mov ax, [bp + 10]
-219:		cmp [bp + 18], ax
-220:		jb realloc$68
-222:	
+215:		mov ax, [bp + 10]
+216:		cmp [bp + 18], ax
+217:		jb realloc$68
+219:	
 
 realloc$59:	; Deref £temporary122 -> oldBlockPtr oldBlockPtr 0
-223:		mov si, [bp + 12]
-225:	
+220:		mov si, [bp + 12]
+222:	
 
 realloc$60:	; Assign £temporary122 -> oldBlockPtr newBlockSize
-226:		mov ax, [bp + 10]
-227:		mov [si], ax
-229:	
+223:		mov ax, [bp + 10]
+224:		mov [si], ax
+226:	
 
 realloc$61:	; SetReturnValue oldMemoryPtr
-230:		mov bx, [bp + 6]
-232:	
+227:		mov bx, [bp + 6]
+229:	
 
 realloc$62:	; Return oldMemoryPtr
-233:		mov ax, [bp]
-234:		mov di, [bp + 4]
-235:		mov bp, [bp + 2]
-236:		jmp ax
-238:	
+230:		mov ax, [bp]
+231:		mov di, [bp + 4]
+232:		mov bp, [bp + 2]
+233:		jmp ax
+235:	
 
 realloc$63:	; IntegralToIntegral £temporary123 currBlockPtr
-239:		mov ax, [bp + 16]
-242:	
+236:		mov ax, [bp + 16]
+239:	
 
 realloc$64:	; Assign lastAddress £temporary123
-243:		mov [bp + 14], ax
-245:	
+240:		mov [bp + 14], ax
+242:	
 
 realloc$65:	; Deref £temporary124 -> currBlockPtr currBlockPtr 2
-246:		mov si, [bp + 16]
-248:	
+243:		mov si, [bp + 16]
+245:	
 
 realloc$66:	; Assign currBlockPtr £temporary124 -> currBlockPtr
-249:		mov ax, [si + 2]
-250:		mov [bp + 16], ax
-252:	
+246:		mov ax, [si + 2]
+247:		mov [bp + 16], ax
+249:	
 
 realloc$67:	; Goto 54
-253:		jmp realloc$54
-255:	
+250:		jmp realloc$54
+252:	
 
 realloc$68:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-257:	
+254:	
 
 realloc$69:	; Parameter 14 newMemorySize 6
-258:		mov ax, [bp + 8]
-259:		mov [bp + 20], ax
-261:	
+255:		mov ax, [bp + 8]
+256:		mov [bp + 20], ax
+258:	
 
 realloc$70:	; Call 14 malloc 0
-262:		mov word [bp + 14], realloc$71
-263:		mov [bp + 16], bp
-264:		add bp, 14
-265:		jmp malloc
-267:	
+259:		mov word [bp + 14], realloc$71
+260:		mov [bp + 16], bp
+261:		add bp, 14
+262:		jmp malloc
+264:	
 
 realloc$71:	; PostCall 14
-269:	
+266:	
 
 realloc$72:	; GetReturnValue £temporary125
-274:	
+268:	
 
 realloc$73:	; Assign newMemoryPtr £temporary125
-275:		mov [bp + 14], bx
-277:	
+269:		mov [bp + 14], bx
+271:	
 
 realloc$74:	; Equal 87 newMemoryPtr 0
-278:		cmp word [bp + 14], 0
-279:		je realloc$87
-281:	
+272:		cmp word [bp + 14], 0
+273:		je realloc$87
+275:	
 
 realloc$75:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-283:	
+277:	
 
 realloc$76:	; Parameter 16 newMemoryPtr 6
-284:		mov ax, [bp + 14]
-285:		mov [bp + 22], ax
-287:	
+278:		mov ax, [bp + 14]
+279:		mov [bp + 22], ax
+281:	
 
 realloc$77:	; Parameter 16 oldMemoryPtr 8
-288:		mov ax, [bp + 6]
-289:		mov [bp + 24], ax
-291:	
+282:		mov ax, [bp + 6]
+283:		mov [bp + 24], ax
+285:	
 
 realloc$78:	; Parameter 16 newMemorySize 10
-292:		mov ax, [bp + 8]
-293:		mov [bp + 26], ax
-295:	
+286:		mov ax, [bp + 8]
+287:		mov [bp + 26], ax
+289:	
 
 realloc$79:	; Call 16 memcpy 0
-296:		mov word [bp + 16], realloc$80
-297:		mov [bp + 18], bp
-298:		add bp, 16
-299:		jmp memcpy
-301:	
+290:		mov word [bp + 16], realloc$80
+291:		mov [bp + 18], bp
+292:		add bp, 16
+293:		jmp memcpy
+295:	
 
 realloc$80:	; PostCall 16
-303:	
+297:	
 
 realloc$81:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-305:	
+299:	
 
 realloc$82:	; Parameter 16 oldMemoryPtr 6
-306:		mov ax, [bp + 6]
-307:		mov [bp + 22], ax
-309:	
+300:		mov ax, [bp + 6]
+301:		mov [bp + 22], ax
+303:	
 
 realloc$83:	; Call 16 free 0
-310:		mov word [bp + 16], realloc$84
-311:		mov [bp + 18], bp
-312:		add bp, 16
-313:		jmp free
-315:	
+304:		mov word [bp + 16], realloc$84
+305:		mov [bp + 18], bp
+306:		add bp, 16
+307:		jmp free
+309:	
 
 realloc$84:	; PostCall 16
-317:	
+311:	
 
 realloc$85:	; SetReturnValue newMemoryPtr
-318:		mov bx, [bp + 14]
-320:	
+312:		mov bx, [bp + 14]
+314:	
 
 realloc$86:	; Return newMemoryPtr
-321:		mov ax, [bp]
-322:		mov di, [bp + 4]
-323:		mov bp, [bp + 2]
-324:		jmp ax
-326:	
+315:		mov ax, [bp]
+316:		mov di, [bp + 4]
+317:		mov bp, [bp + 2]
+318:		jmp ax
+320:	
 
 realloc$87:	; SetReturnValue 0
-327:		mov bx, 0
-329:	
+321:		mov bx, 0
+323:	
 
 realloc$88:	; Return 0
-330:		mov ax, [bp]
-331:		mov di, [bp + 4]
-332:		mov bp, [bp + 2]
-333:		jmp ax
-335:	
+324:		mov ax, [bp]
+325:		mov di, [bp + 4]
+326:		mov bp, [bp + 2]
+327:		jmp ax
+329:	
 
 realloc$89:	; FunctionEnd realloc
 1:	

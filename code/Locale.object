@@ -82,56 +82,56 @@ setlocale$17:	; PostCall 14
 69:	
 
 setlocale$18:	; GetReturnValue £temporary294
-74:	
+71:	
 
 setlocale$19:	; NotEqual 26 £temporary294 0
-75:		cmp bx, 0
-76:		jne setlocale$26
-78:	
+72:		cmp bx, 0
+73:		jne setlocale$26
+75:	
 
 setlocale$20:	; SignedMultiply £temporary297 index 4
-79:		mov ax, [bp + 10]
-81:		xor dx, dx
-82:		imul word [@802$int2$4#]
-88:	
+76:		mov ax, [bp + 10]
+78:		xor dx, dx
+79:		imul word [@802$int2$4#]
+85:	
 
 setlocale$21:	; BinaryAdd £temporary298 g_sArray £temporary297
-89:		mov si, @754$g_sArray
-90:		add si, ax
-92:	
+86:		mov si, @754$g_sArray
+87:		add si, ax
+89:	
 
 setlocale$22:	; Deref £temporary296 -> £temporary298 £temporary298 0
-94:	
+91:	
 
 setlocale$23:	; address £temporary299 £temporary296 -> £temporary298
-96:	
+93:	
 
 setlocale$24:	; Assign g_currStructPtr £temporary299
-97:		mov [@763$g_currStructPtr], si
-99:	
+94:		mov [@763$g_currStructPtr], si
+96:	
 
 setlocale$25:	; Goto 28
-100:		jmp setlocale$28
-102:	
+97:		jmp setlocale$28
+99:	
 
 setlocale$26:	; Increment index
-103:		inc word [bp + 10]
-105:	
+100:		inc word [bp + 10]
+102:	
 
 setlocale$27:	; Goto 9
-106:		jmp setlocale$9
-108:	
+103:		jmp setlocale$9
+105:	
 
 setlocale$28:	; SetReturnValue oldName
-109:		mov bx, [bp + 12]
-111:	
+106:		mov bx, [bp + 12]
+108:	
 
 setlocale$29:	; Return oldName
-112:		mov ax, [bp]
-113:		mov di, [bp + 4]
-114:		mov bp, [bp + 2]
-115:		jmp ax
-117:	
+109:		mov ax, [bp]
+110:		mov di, [bp + 4]
+111:		mov bp, [bp + 2]
+112:		jmp ax
+114:	
 
 setlocale$30:	; FunctionEnd setlocale
 1:	

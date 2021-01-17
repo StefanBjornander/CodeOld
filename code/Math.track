@@ -151,10 +151,10 @@ exp$36:	; SetReturnValue sum
 114:	
 
 exp$37:	; Return sum
-115:		mov t265, [bp]
+115:		mov t251, [bp]
 116:		mov di, [bp + 4]
 117:		mov bp, [bp + 2]
-118:		jmp t265
+118:		jmp t251
 120:	
 
 exp$38:	; FunctionEnd exp
@@ -478,10 +478,10 @@ log$74:	; SetReturnValue £temporary335
 243:	
 
 log$75:	; Return £temporary335
-244:		mov t266, [bp]
+244:		mov t252, [bp]
 245:		mov di, [bp + 4]
 246:		mov bp, [bp + 2]
-247:		jmp t266
+247:		jmp t252
 249:	
 
 log$76:	; Assign errno 6
@@ -496,10 +496,10 @@ log$78:	; SetReturnValue 0
 257:	
 
 log$79:	; Return 0
-258:		mov t267, [bp]
+258:		mov t253, [bp]
 259:		mov di, [bp + 4]
 260:		mov bp, [bp + 2]
-261:		jmp t267
+261:		jmp t253
 263:	
 
 log$80:	; FunctionEnd log
@@ -541,10 +541,10 @@ log10$8:	; SetReturnValue £temporary338
 27:	
 
 log10$9:	; Return £temporary338
-28:		mov t268, [bp]
+28:		mov t254, [bp]
 29:		mov di, [bp + 4]
 30:		mov bp, [bp + 2]
-31:		jmp t268
+31:		jmp t254
 33:	
 
 log10$10:	; FunctionEnd log10
@@ -625,10 +625,10 @@ pow$16:	; SetReturnValue £temporary343
 58:	
 
 pow$17:	; Return £temporary343
-59:		mov t269, [bp]
+59:		mov t255, [bp]
 60:		mov di, [bp + 4]
 61:		mov bp, [bp + 2]
-62:		jmp t269
+62:		jmp t255
 64:	
 
 pow$18:	; PushFloat x
@@ -669,10 +669,10 @@ pow$25:	; SetReturnValue 1
 93:	
 
 pow$26:	; Return 1
-94:		mov t270, [bp]
+94:		mov t256, [bp]
 95:		mov di, [bp + 4]
 96:		mov bp, [bp + 2]
-97:		jmp t270
+97:		jmp t256
 99:	
 
 pow$27:	; PushFloat x
@@ -713,10 +713,10 @@ pow$34:	; SetReturnValue 0
 128:	
 
 pow$35:	; Return 0
-129:		mov t271, [bp]
+129:		mov t257, [bp]
 130:		mov di, [bp + 4]
 131:		mov bp, [bp + 2]
-132:		jmp t271
+132:		jmp t257
 134:	
 
 pow$36:	; PushFloat x
@@ -799,21 +799,21 @@ pow$52:	; PushFloat y
 
 pow$53:	; FloatingToIntegral £temporary355 y
 196:		fistp dword [container4bytes#]
-197:		mov t272, [container4bytes#]
+197:		mov t258, [container4bytes#]
 199:	
 
 pow$54:	; Assign long_y £temporary355
-200:		mov [bp + 22], t272
+200:		mov [bp + 22], t258
 202:	
 
 pow$55:	; SignedModulo £temporary356 long_y 2
-203:		mov a273, [bp + 22]
+203:		mov a259, [bp + 22]
 205:		xor edx, edx
 206:		idiv dword [@954$int4$2#]
 212:	
 
 pow$56:	; NotEqual 73 £temporary356 0
-213:		cmp t275, 0
+213:		cmp t261, 0
 214:		jne pow$73
 216:	
 
@@ -881,10 +881,10 @@ pow$71:	; SetReturnValue £temporary361
 264:	
 
 pow$72:	; Return £temporary361
-265:		mov t276, [bp]
+265:		mov t262, [bp]
 266:		mov di, [bp + 4]
 267:		mov bp, [bp + 2]
-268:		jmp t276
+268:		jmp t262
 270:	
 
 pow$73:	; CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -955,10 +955,10 @@ pow$88:	; SetReturnValue £temporary366
 321:	
 
 pow$89:	; Return £temporary366
-322:		mov t277, [bp]
+322:		mov t263, [bp]
 323:		mov di, [bp + 4]
 324:		mov bp, [bp + 2]
-325:		jmp t277
+325:		jmp t263
 327:	
 
 pow$90:	; Assign errno 6
@@ -973,10 +973,10 @@ pow$92:	; SetReturnValue 0
 335:	
 
 pow$93:	; Return 0
-336:		mov t278, [bp]
+336:		mov t264, [bp]
 337:		mov di, [bp + 4]
 338:		mov bp, [bp + 2]
-339:		jmp t278
+339:		jmp t264
 341:	
 
 pow$94:	; FunctionEnd pow
@@ -1030,10 +1030,10 @@ ldexp$10:	; SetReturnValue £temporary377
 37:	
 
 ldexp$11:	; Return £temporary377
-38:		mov t279, [bp]
+38:		mov t265, [bp]
 39:		mov di, [bp + 4]
 40:		mov bp, [bp + 2]
-41:		jmp t279
+41:		jmp t265
 43:	
 
 ldexp$12:	; FunctionEnd ldexp
@@ -1073,17 +1073,17 @@ ldexp$12:	; FunctionEnd ldexp
 
 @988$log2$8:	; FloatingToIntegral £temporary382 £temporary381
 26:		fistp word [container2bytes#]
-27:		mov t280, [container2bytes#]
+27:		mov t266, [container2bytes#]
 29:	
 
 @988$log2$9:	; SetReturnValue £temporary382
 31:	
 
 @988$log2$10:	; Return £temporary382
-32:		mov t281, [bp]
+32:		mov t267, [bp]
 33:		mov di, [bp + 4]
 34:		mov bp, [bp + 2]
-35:		jmp t281
+35:		jmp t267
 37:	
 
 @988$log2$11:	; FunctionEnd log2
@@ -1146,156 +1146,156 @@ frexp$12:	; PostCall 16
 44:	
 
 frexp$13:	; GetReturnValue £temporary386
-49:	
+46:	
 
 frexp$14:	; IntegralToIntegral £temporary387 £temporary386
-52:	
+49:	
 
 frexp$15:	; Assign exponent £temporary387
-53:		mov [bp + 16], t283
-55:	
+50:		mov [bp + 16], type268
+52:	
 
 frexp$16:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-57:	
+54:	
 
 frexp$17:	; PushFloat 2
-58:		fld qword [@1004$float8$2#]
-60:	
+55:		fld qword [@1004$float8$2#]
+57:	
 
 frexp$18:	; Parameter 18 2 6
-61:		fstp qword [bp + 24]
-63:	
+58:		fstp qword [bp + 24]
+60:	
 
 frexp$19:	; IntegralToFloating £temporary388 exponent
-64:		fild word [bp + 16]
-66:	
+61:		fild word [bp + 16]
+63:	
 
 frexp$20:	; Parameter 18 £temporary388 14
-67:		fstp qword [bp + 32]
-69:	
+64:		fstp qword [bp + 32]
+66:	
 
 frexp$21:	; Call 18 pow 0
-70:		mov word [bp + 18], frexp$22
-71:		mov [bp + 20], bp
-72:		add bp, 18
-73:		jmp pow
-75:	
+67:		mov word [bp + 18], frexp$22
+68:		mov [bp + 20], bp
+69:		add bp, 18
+70:		jmp pow
+72:	
 
 frexp$22:	; PostCall 18
-77:	
+74:	
 
 frexp$23:	; GetReturnValue £temporary389
-79:	
+76:	
 
 frexp$24:	; PushFloat x
-80:		fld qword [bp + 6]
-82:	
+77:		fld qword [bp + 6]
+79:	
 
 frexp$25:	; SignedGreaterThanEqual 27 £temporary389 x
-83:		fcompp
-84:		fstsw ax
-85:		sahf
-86:		jbe frexp$27
-88:	
+80:		fcompp
+81:		fstsw ax
+82:		sahf
+83:		jbe frexp$27
+85:	
 
 frexp$26:	; Increment exponent
-89:		inc word [bp + 16]
-91:	
+86:		inc word [bp + 16]
+88:	
 
 frexp$27:	; Equal 30 p 0
-92:		cmp word [bp + 14], 0
-93:		je frexp$30
-95:	
+89:		cmp word [bp + 14], 0
+90:		je frexp$30
+92:	
 
 frexp$28:	; Deref £temporary393 -> p p 0
-96:		mov a284, [bp + 14]
-98:	
+93:		mov a269, [bp + 14]
+95:	
 
 frexp$29:	; Assign £temporary393 -> p exponent
-99:		mov a285, [bp + 16]
-100:		mov [a284], a285
-102:	
+96:		mov a270, [bp + 16]
+97:		mov [a269], a270
+99:	
 
 frexp$30:	; PushFloat x
-103:		fld qword [bp + 6]
-105:	
+100:		fld qword [bp + 6]
+102:	
 
 frexp$31:	; CallHeader 18 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 1
-106:		fstp qword [bp + 18]
-108:	
+103:		fstp qword [bp + 18]
+105:	
 
 frexp$32:	; PushFloat 2
-109:		fld qword [@1016$float8$2#]
-111:	
+106:		fld qword [@1016$float8$2#]
+108:	
 
 frexp$33:	; Parameter 18 2 6
-112:		fstp qword [bp + 32]
-114:	
+109:		fstp qword [bp + 32]
+111:	
 
 frexp$34:	; IntegralToFloating £temporary394 exponent
-115:		fild word [bp + 16]
-117:	
+112:		fild word [bp + 16]
+114:	
 
 frexp$35:	; Parameter 18 £temporary394 14
-118:		fstp qword [bp + 40]
-120:	
+115:		fstp qword [bp + 40]
+117:	
 
 frexp$36:	; Call 18 pow 0
-121:		mov word [bp + 26], frexp$37
-122:		mov [bp + 28], bp
-123:		add bp, 26
-124:		jmp pow
-126:	
+118:		mov word [bp + 26], frexp$37
+119:		mov [bp + 28], bp
+120:		add bp, 26
+121:		jmp pow
+123:	
 
 frexp$37:	; PostCall 18
-127:		fstp qword [bp + 26]
-128:		fld qword [bp + 18]
-129:		fld qword [bp + 26]
-131:	
+124:		fstp qword [bp + 26]
+125:		fld qword [bp + 18]
+126:		fld qword [bp + 26]
+128:	
 
 frexp$38:	; GetReturnValue £temporary395
-133:	
+130:	
 
 frexp$39:	; SignedDivide £temporary396 x £temporary395
-134:		fdiv
-136:	
+131:		fdiv
+133:	
 
 frexp$40:	; SetReturnValue £temporary396
-138:	
+135:	
 
 frexp$41:	; Return £temporary396
-139:		mov t286, [bp]
-140:		mov di, [bp + 4]
-141:		mov bp, [bp + 2]
-142:		jmp t286
-144:	
+136:		mov t271, [bp]
+137:		mov di, [bp + 4]
+138:		mov bp, [bp + 2]
+139:		jmp t271
+141:	
 
 frexp$42:	; Equal 45 p 0
-145:		cmp word [bp + 14], 0
-146:		je frexp$45
-148:	
+142:		cmp word [bp + 14], 0
+143:		je frexp$45
+145:	
 
 frexp$43:	; Deref £temporary398 -> p p 0
-149:		mov a287, [bp + 14]
-151:	
+146:		mov a272, [bp + 14]
+148:	
 
 frexp$44:	; Assign £temporary398 -> p 0
-152:		mov word [a287], 0
-154:	
+149:		mov word [a272], 0
+151:	
 
 frexp$45:	; PushZero
-155:		fldz
-157:	
+152:		fldz
+154:	
 
 frexp$46:	; SetReturnValue 0
-159:	
+156:	
 
 frexp$47:	; Return 0
-160:		mov t288, [bp]
-161:		mov di, [bp + 4]
-162:		mov bp, [bp + 2]
-163:		jmp t288
-165:	
+157:		mov t273, [bp]
+158:		mov di, [bp + 4]
+159:		mov bp, [bp + 2]
+160:		jmp t273
+162:	
 
 frexp$48:	; FunctionEnd frexp
 1:	
@@ -1414,10 +1414,10 @@ sqrt$26:	; SetReturnValue root_i_plus_1
 87:	
 
 sqrt$27:	; Return root_i_plus_1
-88:		mov t289, [bp]
+88:		mov t274, [bp]
 89:		mov di, [bp + 4]
 90:		mov bp, [bp + 2]
-91:		jmp t289
+91:		jmp t274
 93:	
 
 sqrt$28:	; Assign errno 6
@@ -1432,10 +1432,10 @@ sqrt$30:	; SetReturnValue 0
 101:	
 
 sqrt$31:	; Return 0
-102:		mov t290, [bp]
+102:		mov t275, [bp]
 103:		mov di, [bp + 4]
 104:		mov bp, [bp + 2]
-105:		jmp t290
+105:		jmp t275
 107:	
 
 sqrt$32:	; FunctionEnd sqrt
@@ -1475,11 +1475,11 @@ modf$7:	; PushFloat abs_x
 
 modf$8:	; FloatingToIntegral £temporary414 abs_x
 26:		fistp dword [container4bytes#]
-27:		mov t291, [container4bytes#]
+27:		mov t276, [container4bytes#]
 29:	
 
 modf$9:	; IntegralToFloating £temporary415 £temporary414
-30:		mov [container4bytes#], t291
+30:		mov [container4bytes#], t276
 31:		fild dword [container4bytes#]
 33:	
 
@@ -1509,7 +1509,7 @@ modf$15:	; Equal 26 p 0
 52:	
 
 modf$16:	; Deref £temporary418 -> p p 0
-53:		mov a292, [bp + 14]
+53:		mov a277, [bp + 14]
 55:	
 
 modf$17:	; PushFloat x
@@ -1547,7 +1547,7 @@ modf$24:	; UnarySubtract £temporary420 integral
 81:	
 
 modf$25:	; PopFloat £temporary418 -> p
-82:		fstp qword [a292]
+82:		fstp qword [a277]
 84:	
 
 modf$26:	; PushFloat x
@@ -1588,10 +1588,10 @@ modf$34:	; SetReturnValue £temporary430
 112:	
 
 modf$35:	; Return £temporary430
-113:		mov t293, [bp]
+113:		mov t278, [bp]
 114:		mov di, [bp + 4]
 115:		mov bp, [bp + 2]
-116:		jmp t293
+116:		jmp t278
 118:	
 
 modf$36:	; FunctionEnd modf
@@ -1637,11 +1637,11 @@ fmod$8:	; SignedDivide £temporary433 x y
 
 fmod$9:	; FloatingToIntegral £temporary434 £temporary433
 31:		fistp word [container2bytes#]
-32:		mov t294, [container2bytes#]
+32:		mov t279, [container2bytes#]
 34:	
 
 fmod$10:	; IntegralToFloating £temporary435 £temporary434
-35:		mov [container2bytes#], t294
+35:		mov [container2bytes#], t279
 36:		fild word [container2bytes#]
 38:	
 
@@ -1712,10 +1712,10 @@ fmod$26:	; SetReturnValue £temporary444
 88:	
 
 fmod$27:	; Return £temporary444
-89:		mov t295, [bp]
+89:		mov t280, [bp]
 90:		mov di, [bp + 4]
 91:		mov bp, [bp + 2]
-92:		jmp t295
+92:		jmp t280
 94:	
 
 fmod$28:	; Assign errno 6
@@ -1730,10 +1730,10 @@ fmod$30:	; SetReturnValue 0
 102:	
 
 fmod$31:	; Return 0
-103:		mov t296, [bp]
+103:		mov t281, [bp]
 104:		mov di, [bp + 4]
 105:		mov bp, [bp + 2]
-106:		jmp t296
+106:		jmp t281
 108:	
 
 fmod$32:	; FunctionEnd fmod
@@ -2021,10 +2021,10 @@ sin$68:	; SetReturnValue sum
 213:	
 
 sin$69:	; Return sum
-214:		mov t297, [bp]
+214:		mov t282, [bp]
 215:		mov di, [bp + 4]
 216:		mov bp, [bp + 2]
-217:		jmp t297
+217:		jmp t282
 219:	
 
 sin$70:	; FunctionEnd sin
@@ -2312,10 +2312,10 @@ cos$68:	; SetReturnValue sum
 213:	
 
 cos$69:	; Return sum
-214:		mov t298, [bp]
+214:		mov t283, [bp]
 215:		mov di, [bp + 4]
 216:		mov bp, [bp + 2]
-217:		jmp t298
+217:		jmp t283
 219:	
 
 cos$70:	; FunctionEnd cos
@@ -2400,10 +2400,10 @@ tan$18:	; SetReturnValue £temporary487
 60:	
 
 tan$19:	; Return £temporary487
-61:		mov t299, [bp]
+61:		mov t284, [bp]
 62:		mov di, [bp + 4]
 63:		mov bp, [bp + 2]
-64:		jmp t299
+64:		jmp t284
 66:	
 
 tan$20:	; Assign errno 6
@@ -2418,10 +2418,10 @@ tan$22:	; SetReturnValue 0
 74:	
 
 tan$23:	; Return 0
-75:		mov t300, [bp]
+75:		mov t285, [bp]
 76:		mov di, [bp + 4]
 77:		mov bp, [bp + 2]
-78:		jmp t300
+78:		jmp t285
 80:	
 
 tan$24:	; FunctionEnd tan
@@ -2450,10 +2450,10 @@ asin$4:	; SetReturnValue 1.57
 18:	
 
 asin$5:	; Return 1.57
-19:		mov t301, [bp]
+19:		mov t286, [bp]
 20:		mov di, [bp + 4]
 21:		mov bp, [bp + 2]
-22:		jmp t301
+22:		jmp t286
 24:	
 
 asin$6:	; PushFloat x
@@ -2507,10 +2507,10 @@ asin$17:	; SetReturnValue £temporary494
 62:	
 
 asin$18:	; Return £temporary494
-63:		mov t302, [bp]
+63:		mov t287, [bp]
 64:		mov di, [bp + 4]
 65:		mov bp, [bp + 2]
-66:		jmp t302
+66:		jmp t287
 68:	
 
 asin$19:	; PushFloat x
@@ -2604,10 +2604,10 @@ asin$39:	; SetReturnValue £temporary500
 137:	
 
 asin$40:	; Return £temporary500
-138:		mov t303, [bp]
+138:		mov t288, [bp]
 139:		mov di, [bp + 4]
 140:		mov bp, [bp + 2]
-141:		jmp t303
+141:		jmp t288
 143:	
 
 asin$41:	; Assign errno 6
@@ -2622,10 +2622,10 @@ asin$43:	; SetReturnValue 0
 151:	
 
 asin$44:	; Return 0
-152:		mov t304, [bp]
+152:		mov t289, [bp]
 153:		mov di, [bp + 4]
 154:		mov bp, [bp + 2]
-155:		jmp t304
+155:		jmp t289
 157:	
 
 asin$45:	; FunctionEnd asin
@@ -2654,10 +2654,10 @@ acos$4:	; SetReturnValue 1.57
 18:	
 
 acos$5:	; Return 1.57
-19:		mov t305, [bp]
+19:		mov t290, [bp]
 20:		mov di, [bp + 4]
 21:		mov bp, [bp + 2]
-22:		jmp t305
+22:		jmp t290
 24:	
 
 acos$6:	; PushFloat x
@@ -2719,10 +2719,10 @@ acos$18:	; SetReturnValue £temporary508
 69:	
 
 acos$19:	; Return £temporary508
-70:		mov t306, [bp]
+70:		mov t291, [bp]
 71:		mov di, [bp + 4]
 72:		mov bp, [bp + 2]
-73:		jmp t306
+73:		jmp t291
 75:	
 
 acos$20:	; PushFloat x
@@ -2812,10 +2812,10 @@ acos$40:	; SetReturnValue £temporary514
 140:	
 
 acos$41:	; Return £temporary514
-141:		mov t307, [bp]
+141:		mov t292, [bp]
 142:		mov di, [bp + 4]
 143:		mov bp, [bp + 2]
-144:		jmp t307
+144:		jmp t292
 146:	
 
 acos$42:	; Assign errno 6
@@ -2830,10 +2830,10 @@ acos$44:	; SetReturnValue 0
 154:	
 
 acos$45:	; Return 0
-155:		mov t308, [bp]
+155:		mov t293, [bp]
 156:		mov di, [bp + 4]
 157:		mov bp, [bp + 2]
-158:		jmp t308
+158:		jmp t293
 160:	
 
 acos$46:	; FunctionEnd acos
@@ -2890,10 +2890,10 @@ atan$11:	; SetReturnValue £temporary521
 39:	
 
 atan$12:	; Return £temporary521
-40:		mov t309, [bp]
+40:		mov t294, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t309
+43:		jmp t294
 45:	
 
 atan$13:	; PushFloat x
@@ -2959,10 +2959,10 @@ atan$26:	; SetReturnValue £temporary525
 93:	
 
 atan$27:	; Return £temporary525
-94:		mov t310, [bp]
+94:		mov t295, [bp]
 95:		mov di, [bp + 4]
 96:		mov bp, [bp + 2]
-97:		jmp t310
+97:		jmp t295
 99:	
 
 atan$28:	; PushFloat x
@@ -3078,10 +3078,10 @@ atan$52:	; SetReturnValue £temporary533
 186:	
 
 atan$53:	; Return £temporary533
-187:		mov t311, [bp]
+187:		mov t296, [bp]
 188:		mov di, [bp + 4]
 189:		mov bp, [bp + 2]
-190:		jmp t311
+190:		jmp t296
 192:	
 
 atan$54:	; PushZero
@@ -3251,10 +3251,10 @@ atan$94:	; SetReturnValue sum
 317:	
 
 atan$95:	; Return sum
-318:		mov t312, [bp]
+318:		mov t297, [bp]
 319:		mov di, [bp + 4]
 320:		mov bp, [bp + 2]
-321:		jmp t312
+321:		jmp t297
 323:	
 
 atan$96:	; FunctionEnd atan
@@ -3311,10 +3311,10 @@ atan2$11:	; SetReturnValue £temporary550
 39:	
 
 atan2$12:	; Return £temporary550
-40:		mov t313, [bp]
+40:		mov t298, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t313
+43:		jmp t298
 45:	
 
 atan2$13:	; PushFloat x
@@ -3395,10 +3395,10 @@ atan2$29:	; SetReturnValue £temporary556
 105:	
 
 atan2$30:	; Return £temporary556
-106:		mov t314, [bp]
+106:		mov t299, [bp]
 107:		mov di, [bp + 4]
 108:		mov bp, [bp + 2]
-109:		jmp t314
+109:		jmp t299
 111:	
 
 atan2$31:	; PushFloat x
@@ -3479,10 +3479,10 @@ atan2$47:	; SetReturnValue £temporary562
 171:	
 
 atan2$48:	; Return £temporary562
-172:		mov t315, [bp]
+172:		mov t300, [bp]
 173:		mov di, [bp + 4]
 174:		mov bp, [bp + 2]
-175:		jmp t315
+175:		jmp t300
 177:	
 
 atan2$49:	; PushFloat x
@@ -3523,10 +3523,10 @@ atan2$56:	; SetReturnValue 1.57
 206:	
 
 atan2$57:	; Return 1.57
-207:		mov t316, [bp]
+207:		mov t301, [bp]
 208:		mov di, [bp + 4]
 209:		mov bp, [bp + 2]
-210:		jmp t316
+210:		jmp t301
 212:	
 
 atan2$58:	; PushFloat x
@@ -3567,10 +3567,10 @@ atan2$65:	; SetReturnValue -1.57
 241:	
 
 atan2$66:	; Return -1.57
-242:		mov t317, [bp]
+242:		mov t302, [bp]
 243:		mov di, [bp + 4]
 244:		mov bp, [bp + 2]
-245:		jmp t317
+245:		jmp t302
 247:	
 
 atan2$67:	; Assign errno 6
@@ -3585,10 +3585,10 @@ atan2$69:	; SetReturnValue 0
 255:	
 
 atan2$70:	; Return 0
-256:		mov t318, [bp]
+256:		mov t303, [bp]
 257:		mov di, [bp + 4]
 258:		mov bp, [bp + 2]
-259:		jmp t318
+259:		jmp t303
 261:	
 
 atan2$71:	; FunctionEnd atan2
@@ -3666,10 +3666,10 @@ sinh$16:	; SetReturnValue £temporary576
 55:	
 
 sinh$17:	; Return £temporary576
-56:		mov t319, [bp]
+56:		mov t304, [bp]
 57:		mov di, [bp + 4]
 58:		mov bp, [bp + 2]
-59:		jmp t319
+59:		jmp t304
 61:	
 
 sinh$18:	; FunctionEnd sinh
@@ -3747,10 +3747,10 @@ cosh$16:	; SetReturnValue £temporary583
 55:	
 
 cosh$17:	; Return £temporary583
-56:		mov t320, [bp]
+56:		mov t305, [bp]
 57:		mov di, [bp + 4]
 58:		mov bp, [bp + 2]
-59:		jmp t320
+59:		jmp t305
 61:	
 
 cosh$18:	; FunctionEnd cosh
@@ -3816,10 +3816,10 @@ tanh$13:	; SetReturnValue £temporary588
 46:	
 
 tanh$14:	; Return £temporary588
-47:		mov t321, [bp]
+47:		mov t306, [bp]
 48:		mov di, [bp + 4]
 49:		mov bp, [bp + 2]
-50:		jmp t321
+50:		jmp t306
 52:	
 
 tanh$15:	; FunctionEnd tanh
@@ -3876,10 +3876,10 @@ floor$11:	; SetReturnValue £temporary594
 39:	
 
 floor$12:	; Return £temporary594
-40:		mov t322, [bp]
+40:		mov t307, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t322
+43:		jmp t307
 45:	
 
 floor$13:	; PushFloat x
@@ -3888,11 +3888,11 @@ floor$13:	; PushFloat x
 
 floor$14:	; FloatingToIntegral £temporary595 x
 49:		fistp dword [container4bytes#]
-50:		mov t323, [container4bytes#]
+50:		mov t308, [container4bytes#]
 52:	
 
 floor$15:	; IntegralToFloating £temporary596 £temporary595
-53:		mov [container4bytes#], t323
+53:		mov [container4bytes#], t308
 54:		fild dword [container4bytes#]
 56:	
 
@@ -3900,10 +3900,10 @@ floor$16:	; SetReturnValue £temporary596
 58:	
 
 floor$17:	; Return £temporary596
-59:		mov t324, [bp]
+59:		mov t309, [bp]
 60:		mov di, [bp + 4]
 61:		mov bp, [bp + 2]
-62:		jmp t324
+62:		jmp t309
 64:	
 
 floor$18:	; FunctionEnd floor
@@ -3960,10 +3960,10 @@ ceil$11:	; SetReturnValue £temporary601
 39:	
 
 ceil$12:	; Return £temporary601
-40:		mov t325, [bp]
+40:		mov t310, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t325
+43:		jmp t310
 45:	
 
 ceil$13:	; PushFloat x
@@ -3980,11 +3980,11 @@ ceil$15:	; BinaryAdd £temporary602 x 0.999999999999
 
 ceil$16:	; FloatingToIntegral £temporary603 £temporary602
 55:		fistp dword [container4bytes#]
-56:		mov t326, [container4bytes#]
+56:		mov t311, [container4bytes#]
 58:	
 
 ceil$17:	; IntegralToFloating £temporary604 £temporary603
-59:		mov [container4bytes#], t326
+59:		mov [container4bytes#], t311
 60:		fild dword [container4bytes#]
 62:	
 
@@ -3992,10 +3992,10 @@ ceil$18:	; SetReturnValue £temporary604
 64:	
 
 ceil$19:	; Return £temporary604
-65:		mov t327, [bp]
+65:		mov t312, [bp]
 66:		mov di, [bp + 4]
 67:		mov bp, [bp + 2]
-68:		jmp t327
+68:		jmp t312
 70:	
 
 ceil$20:	; FunctionEnd ceil
@@ -4049,11 +4049,11 @@ round$10:	; BinaryAdd £temporary608 x 0.5
 
 round$11:	; FloatingToIntegral £temporary613 £temporary612
 37:		fistp dword [container4bytes#]
-38:		mov t328, [container4bytes#]
+38:		mov t313, [container4bytes#]
 40:	
 
 round$12:	; IntegralToFloating £temporary614 £temporary613
-41:		mov [container4bytes#], t328
+41:		mov [container4bytes#], t313
 42:		fild dword [container4bytes#]
 44:	
 
@@ -4061,10 +4061,10 @@ round$13:	; SetReturnValue £temporary614
 46:	
 
 round$14:	; Return £temporary614
-47:		mov t329, [bp]
+47:		mov t314, [bp]
 48:		mov di, [bp + 4]
 49:		mov bp, [bp + 2]
-50:		jmp t329
+50:		jmp t314
 52:	
 
 round$15:	; FunctionEnd round
@@ -4108,10 +4108,10 @@ fabs$8:	; SetReturnValue £temporary620
 29:	
 
 fabs$9:	; Return £temporary620
-30:		mov t330, [bp]
+30:		mov t315, [bp]
 31:		mov di, [bp + 4]
 32:		mov bp, [bp + 2]
-33:		jmp t330
+33:		jmp t315
 35:	
 
 fabs$10:	; FunctionEnd fabs

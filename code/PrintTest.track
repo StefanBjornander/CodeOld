@@ -441,10 +441,10 @@ print_test$103:	; PostCall 6
 337:	
 
 print_test$104:	; Return 0
-338:		mov t2545, [bp]
+338:		mov t2414, [bp]
 339:		mov di, [bp + 4]
 340:		mov bp, [bp + 2]
-341:		jmp t2545
+341:		jmp t2414
 343:	
 
 print_test$105:	; FunctionEnd print_test

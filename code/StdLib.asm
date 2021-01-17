@@ -6121,6 +6121,7 @@ section .text
 
  exit$13:
 	; PostCall 32
+	mov rbx, [rbp + 32]
 
  exit$14:
 	; BinarySubtract index index 1

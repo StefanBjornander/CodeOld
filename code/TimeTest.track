@@ -46,585 +46,585 @@ time_test$10:	; PostCall 20
 35:	
 
 time_test$11:	; GetReturnValue £temporary6171
-40:	
+37:	
 
 time_test$12:	; Assign now1 £temporary6171
-41:		mov [bp + 20], t3230
-43:	
+38:		mov [bp + 20], type3284
+40:	
 
 time_test$13:	; CallHeader 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-45:	
+42:	
 
 time_test$14:	; address £temporary6172 now1
-46:		mov t3231, bp
-47:		add t3231, 20
-49:	
+43:		mov t3285, bp
+44:		add t3285, 20
+46:	
 
 time_test$15:	; Parameter 24 £temporary6172 6
-50:		mov [bp + 30], t3231
-52:	
+47:		mov [bp + 30], t3285
+49:	
 
 time_test$16:	; Call 24 gmtime 0
-53:		mov word [bp + 24], time_test$17
-54:		mov [bp + 26], bp
-55:		add bp, 24
-56:		jmp gmtime
-58:	
+50:		mov word [bp + 24], time_test$17
+51:		mov [bp + 26], bp
+52:		add bp, 24
+53:		jmp gmtime
+55:	
 
 time_test$17:	; PostCall 24
-60:	
+57:	
 
 time_test$18:	; GetReturnValue £temporary6173
-65:	
+59:	
 
 time_test$19:	; Deref £temporary6174 -> £temporary6173 £temporary6173 0
-67:	
+61:	
 
 time_test$20:	; Assign s £temporary6174 -> £temporary6173
-68:		mov t3234, bp
-69:		add t3234, 24
-70:		mov t3235, 18
-71:	
+62:		mov t3287, bp
+63:		add t3287, 24
+64:		mov t3288, 18
+65:	
 
 time_test$20$Loop:
-72:		mov t3236, [t3233]
-73:		mov [t3234], t3236
-74:		inc t3233
-75:		inc t3234
-76:		dec t3235
-77:		cmp t3235, 0
-78:		jne time_test$20$Loop
-80:	
+66:		mov t3289, [type3286]
+67:		mov [t3287], t3289
+68:		inc type3286
+69:		inc t3287
+70:		dec t3288
+71:		cmp t3288, 0
+72:		jne time_test$20$Loop
+74:	
 
 time_test$21:	; CallHeader 42 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-82:	
+76:	
 
 time_test$22:	; address £temporary6175 now1
-83:		mov t3237, bp
-84:		add t3237, 20
-86:	
+77:		mov t3290, bp
+78:		add t3290, 20
+80:	
 
 time_test$23:	; Parameter 42 £temporary6175 6
-87:		mov [bp + 48], t3237
-89:	
+81:		mov [bp + 48], t3290
+83:	
 
 time_test$24:	; Call 42 localtime 0
-90:		mov word [bp + 42], time_test$25
-91:		mov [bp + 44], bp
-92:		add bp, 42
-93:		jmp localtime
-95:	
+84:		mov word [bp + 42], time_test$25
+85:		mov [bp + 44], bp
+86:		add bp, 42
+87:		jmp localtime
+89:	
 
 time_test$25:	; PostCall 42
-97:	
+91:	
 
 time_test$26:	; GetReturnValue £temporary6176
-102:	
+93:	
 
 time_test$27:	; Deref £temporary6177 -> £temporary6176 £temporary6176 0
-104:	
+95:	
 
 time_test$28:	; Assign t £temporary6177 -> £temporary6176
-105:		mov t3240, bp
-106:		add t3240, 42
-107:		mov t3241, 18
-108:	
+96:		mov t3292, bp
+97:		add t3292, 42
+98:		mov t3293, 18
+99:	
 
 time_test$28$Loop:
-109:		mov t3242, [t3239]
-110:		mov [t3240], t3242
-111:		inc t3239
-112:		inc t3240
-113:		dec t3241
-114:		cmp t3241, 0
-115:		jne time_test$28$Loop
-117:	
+100:		mov t3294, [type3291]
+101:		mov [t3292], t3294
+102:		inc type3291
+103:		inc t3292
+104:		dec t3293
+105:		cmp t3293, 0
+106:		jne time_test$28$Loop
+108:	
 
 time_test$29:	; CallHeader 60 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-119:	
+110:	
 
 time_test$30:	; address £temporary6178 s
-120:		mov t3243, bp
-121:		add t3243, 24
-123:	
+111:		mov t3295, bp
+112:		add t3295, 24
+114:	
 
 time_test$31:	; Parameter 60 £temporary6178 6
-124:		mov [bp + 66], t3243
-126:	
+115:		mov [bp + 66], t3295
+117:	
 
 time_test$32:	; Call 60 mktime 0
-127:		mov word [bp + 60], time_test$33
-128:		mov [bp + 62], bp
-129:		add bp, 60
-130:		jmp mktime
-132:	
+118:		mov word [bp + 60], time_test$33
+119:		mov [bp + 62], bp
+120:		add bp, 60
+121:		jmp mktime
+123:	
 
 time_test$33:	; PostCall 60
-134:	
+125:	
 
 time_test$34:	; GetReturnValue £temporary6179
-139:	
+127:	
 
 time_test$35:	; Assign now2 £temporary6179
-140:		mov [bp + 60], t3245
-142:	
+128:		mov [bp + 60], type3296
+130:	
 
 time_test$36:	; CallHeader 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-144:	
+132:	
 
 time_test$37:	; Parameter 64 string_now2013A2025lu0A# 6
-145:		mov word [bp + 70], @12931$string_now2013A2025lu0A#
-147:	
+133:		mov word [bp + 70], @12931$string_now2013A2025lu0A#
+135:	
 
 time_test$38:	; Parameter 64 now1 8
-148:		mov a3246, [bp + 20]
-149:		mov [bp + 72], a3246
-151:	
+136:		mov a3297, [bp + 20]
+137:		mov [bp + 72], a3297
+139:	
 
 time_test$39:	; Call 64 printf 0
-152:		mov word [bp + 64], time_test$40
-153:		mov [bp + 66], bp
-154:		add bp, 64
-155:		mov di, bp
-156:		add di, 4
-157:		jmp printf
-159:	
+140:		mov word [bp + 64], time_test$40
+141:		mov [bp + 66], bp
+142:		add bp, 64
+143:		mov di, bp
+144:		add di, 4
+145:		jmp printf
+147:	
 
 time_test$40:	; PostCall 64
-161:	
+149:	
 
 time_test$41:	; CallHeader 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-163:	
+151:	
 
 time_test$42:	; Parameter 64 string_now2023A2025lu0A# 6
-164:		mov word [bp + 70], @12933$string_now2023A2025lu0A#
-166:	
+152:		mov word [bp + 70], @12933$string_now2023A2025lu0A#
+154:	
 
 time_test$43:	; Parameter 64 now2 8
-167:		mov a3247, [bp + 60]
-168:		mov [bp + 72], a3247
-170:	
+155:		mov a3299, [bp + 60]
+156:		mov [bp + 72], a3299
+158:	
 
 time_test$44:	; Call 64 printf 0
-171:		mov word [bp + 64], time_test$45
-172:		mov [bp + 66], bp
-173:		add bp, 64
-174:		mov di, bp
-175:		add di, 4
-176:		jmp printf
-178:	
+159:		mov word [bp + 64], time_test$45
+160:		mov [bp + 66], bp
+161:		add bp, 64
+162:		mov di, bp
+163:		add di, 4
+164:		jmp printf
+166:	
 
 time_test$45:	; PostCall 64
-180:	
+168:	
 
 time_test$46:	; CallHeader 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-182:	
+170:	
 
 time_test$47:	; Parameter 64 string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A# 6
-183:		mov word [bp + 70], @12935$string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
-185:	
+171:		mov word [bp + 70], @12935$string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
+173:	
 
 time_test$48:	; SignedMultiply £temporary6184 s$tm_wday 2
-186:		mov a3248, [bp + 36]
-188:		xor dx, dx
-189:		imul word [@12938$int2$2#]
-195:	
+174:		mov a3301, [bp + 36]
+176:		xor dx, dx
+177:		imul word [@12938$int2$2#]
+183:	
 
 time_test$49:	; BinaryAdd £temporary6185 weekdays £temporary6184
-196:		mov a3252, bp
-197:		add a3252, 6
-198:		add a3252, t3251
-200:	
+184:		mov a3305, bp
+185:		add a3305, 6
+186:		add a3305, t3304
+188:	
 
 time_test$50:	; Deref £temporary6183 -> £temporary6185 £temporary6185 0
-202:	
+190:	
 
 time_test$51:	; Parameter 64 £temporary6183 -> £temporary6185 8
-203:		mov t3253, [a3252]
-204:		mov [bp + 72], t3253
-206:	
+191:		mov t3306, [a3305]
+192:		mov [bp + 72], t3306
+194:	
 
 time_test$52:	; BinaryAdd £temporary6187 s$tm_year 1900
-207:		mov a3254, [bp + 34]
-208:		add a3254, 1900
-210:	
+195:		mov a3307, [bp + 34]
+196:		add a3307, 1900
+198:	
 
 time_test$53:	; Parameter 64 £temporary6187 10
-211:		mov [bp + 74], a3254
-213:	
+199:		mov [bp + 74], a3307
+201:	
 
 time_test$54:	; BinaryAdd £temporary6189 s$tm_mon 1
-214:		mov a3255, [bp + 32]
-215:		add a3255, 1
-217:	
+202:		mov a3308, [bp + 32]
+203:		add a3308, 1
+205:	
 
 time_test$55:	; Parameter 64 £temporary6189 12
-218:		mov [bp + 76], a3255
-220:	
+206:		mov [bp + 76], a3308
+208:	
 
 time_test$56:	; Parameter 64 s$tm_mday 14
-221:		mov a3256, [bp + 30]
-222:		mov [bp + 78], a3256
-224:	
+209:		mov a3309, [bp + 30]
+210:		mov [bp + 78], a3309
+212:	
 
 time_test$57:	; Parameter 64 s$tm_hour 16
-225:		mov a3257, [bp + 28]
-226:		mov [bp + 80], a3257
-228:	
+213:		mov a3310, [bp + 28]
+214:		mov [bp + 80], a3310
+216:	
 
 time_test$58:	; Parameter 64 s$tm_min 18
-229:		mov a3258, [bp + 26]
-230:		mov [bp + 82], a3258
-232:	
+217:		mov a3311, [bp + 26]
+218:		mov [bp + 82], a3311
+220:	
 
 time_test$59:	; Parameter 64 s$tm_sec 20
-233:		mov a3259, [bp + 24]
-234:		mov [bp + 84], a3259
-236:	
+221:		mov a3312, [bp + 24]
+222:		mov [bp + 84], a3312
+224:	
 
 time_test$60:	; Parameter 64 s$tm_yday 22
-237:		mov a3260, [bp + 38]
-238:		mov [bp + 86], a3260
-240:	
+225:		mov a3313, [bp + 38]
+226:		mov [bp + 86], a3313
+228:	
 
 time_test$61:	; Parameter 64 s$tm_wday 24
-241:		mov a3261, [bp + 36]
-242:		mov [bp + 88], a3261
-244:	
+229:		mov a3314, [bp + 36]
+230:		mov [bp + 88], a3314
+232:	
 
 time_test$62:	; Parameter 64 s$tm_isdst 26
-245:		mov a3262, [bp + 40]
-246:		mov [bp + 90], a3262
-248:	
+233:		mov a3315, [bp + 40]
+234:		mov [bp + 90], a3315
+236:	
 
 time_test$63:	; Call 64 printf 0
-249:		mov word [bp + 64], time_test$64
-250:		mov [bp + 66], bp
-251:		add bp, 64
-252:		mov di, bp
-253:		add di, 20
-254:		jmp printf
-256:	
+237:		mov word [bp + 64], time_test$64
+238:		mov [bp + 66], bp
+239:		add bp, 64
+240:		mov di, bp
+241:		add di, 20
+242:		jmp printf
+244:	
 
 time_test$64:	; PostCall 64
-258:	
+246:	
 
 time_test$65:	; CallHeader 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-260:	
+248:	
 
 time_test$66:	; Parameter 64 string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A# 6
-261:		mov word [bp + 70], @12957$string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
-263:	
+249:		mov word [bp + 70], @12957$string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
+251:	
 
 time_test$67:	; SignedMultiply £temporary6200 t$tm_wday 2
-264:		mov a3263, [bp + 54]
-266:		xor dx, dx
-267:		imul word [@12960$int2$2#]
-273:	
+252:		mov a3317, [bp + 54]
+254:		xor dx, dx
+255:		imul word [@12960$int2$2#]
+261:	
 
 time_test$68:	; BinaryAdd £temporary6201 weekdays £temporary6200
-274:		mov a3267, bp
-275:		add a3267, 6
-276:		add a3267, t3266
-278:	
+262:		mov a3321, bp
+263:		add a3321, 6
+264:		add a3321, t3320
+266:	
 
 time_test$69:	; Deref £temporary6199 -> £temporary6201 £temporary6201 0
-280:	
+268:	
 
 time_test$70:	; Parameter 64 £temporary6199 -> £temporary6201 8
-281:		mov t3268, [a3267]
-282:		mov [bp + 72], t3268
-284:	
+269:		mov t3322, [a3321]
+270:		mov [bp + 72], t3322
+272:	
 
 time_test$71:	; BinaryAdd £temporary6203 t$tm_year 1900
-285:		mov a3269, [bp + 52]
-286:		add a3269, 1900
-288:	
+273:		mov a3323, [bp + 52]
+274:		add a3323, 1900
+276:	
 
 time_test$72:	; Parameter 64 £temporary6203 10
-289:		mov [bp + 74], a3269
-291:	
+277:		mov [bp + 74], a3323
+279:	
 
 time_test$73:	; BinaryAdd £temporary6205 t$tm_mon 1
-292:		mov a3270, [bp + 50]
-293:		add a3270, 1
-295:	
+280:		mov a3324, [bp + 50]
+281:		add a3324, 1
+283:	
 
 time_test$74:	; Parameter 64 £temporary6205 12
-296:		mov [bp + 76], a3270
-298:	
+284:		mov [bp + 76], a3324
+286:	
 
 time_test$75:	; Parameter 64 t$tm_mday 14
-299:		mov a3271, [bp + 48]
-300:		mov [bp + 78], a3271
-302:	
+287:		mov a3325, [bp + 48]
+288:		mov [bp + 78], a3325
+290:	
 
 time_test$76:	; Parameter 64 t$tm_hour 16
-303:		mov a3272, [bp + 46]
-304:		mov [bp + 80], a3272
-306:	
+291:		mov a3326, [bp + 46]
+292:		mov [bp + 80], a3326
+294:	
 
 time_test$77:	; Parameter 64 t$tm_min 18
-307:		mov a3273, [bp + 44]
-308:		mov [bp + 82], a3273
-310:	
+295:		mov a3327, [bp + 44]
+296:		mov [bp + 82], a3327
+298:	
 
 time_test$78:	; Parameter 64 t$tm_sec 20
-311:		mov a3274, [bp + 42]
-312:		mov [bp + 84], a3274
-314:	
+299:		mov a3328, [bp + 42]
+300:		mov [bp + 84], a3328
+302:	
 
 time_test$79:	; Parameter 64 t$tm_yday 22
-315:		mov a3275, [bp + 56]
-316:		mov [bp + 86], a3275
-318:	
+303:		mov a3329, [bp + 56]
+304:		mov [bp + 86], a3329
+306:	
 
 time_test$80:	; Parameter 64 t$tm_wday 24
-319:		mov a3276, [bp + 54]
-320:		mov [bp + 88], a3276
-322:	
+307:		mov a3330, [bp + 54]
+308:		mov [bp + 88], a3330
+310:	
 
 time_test$81:	; Parameter 64 t$tm_isdst 26
-323:		mov a3277, [bp + 58]
-324:		mov [bp + 90], a3277
-326:	
+311:		mov a3331, [bp + 58]
+312:		mov [bp + 90], a3331
+314:	
 
 time_test$82:	; Call 64 printf 0
-327:		mov word [bp + 64], time_test$83
-328:		mov [bp + 66], bp
-329:		add bp, 64
-330:		mov di, bp
-331:		add di, 20
-332:		jmp printf
-334:	
+315:		mov word [bp + 64], time_test$83
+316:		mov [bp + 66], bp
+317:		add bp, 64
+318:		mov di, bp
+319:		add di, 20
+320:		jmp printf
+322:	
 
 time_test$83:	; PostCall 64
-336:	
+324:	
 
 time_test$84:	; CallHeader 666 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-338:	
+326:	
 
 time_test$85:	; Parameter 666 buffer1 6
-339:		mov [bp + 672], bp
-340:		add word [bp + 672], 64
-342:	
+327:		mov [bp + 672], bp
+328:		add word [bp + 672], 64
+330:	
 
 time_test$86:	; CallHeader 666 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-344:	
+332:	
 
 time_test$87:	; address £temporary6214 s
-345:		mov t3278, bp
-346:		add t3278, 24
-348:	
+333:		mov t3333, bp
+334:		add t3333, 24
+336:	
 
 time_test$88:	; Parameter 666 £temporary6214 14
-349:		mov [bp + 680], t3278
-351:	
+337:		mov [bp + 680], t3333
+339:	
 
 time_test$89:	; Call 666 asctime 8
-352:		mov word [bp + 674], time_test$90
-353:		mov [bp + 676], bp
-354:		add bp, 674
-355:		jmp asctime
-357:	
+340:		mov word [bp + 674], time_test$90
+341:		mov [bp + 676], bp
+342:		add bp, 674
+343:		jmp asctime
+345:	
 
 time_test$90:	; PostCall 666
-359:	
+347:	
 
 time_test$91:	; GetReturnValue £temporary6215
-364:	
+349:	
 
 time_test$92:	; Parameter 666 £temporary6215 8
-365:		mov [bp + 674], t3280
-367:	
+350:		mov [bp + 674], type3334
+352:	
 
 time_test$93:	; Call 666 strcpy 0
-368:		mov word [bp + 666], time_test$94
-369:		mov [bp + 668], bp
-370:		add bp, 666
-371:		jmp strcpy
-373:	
+353:		mov word [bp + 666], time_test$94
+354:		mov [bp + 668], bp
+355:		add bp, 666
+356:		jmp strcpy
+358:	
 
 time_test$94:	; PostCall 666
-375:	
+360:	
 
 time_test$95:	; CallHeader 666 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-377:	
+362:	
 
 time_test$96:	; Parameter 666 buffer2 6
-378:		mov [bp + 672], bp
-379:		add word [bp + 672], 164
-381:	
+363:		mov [bp + 672], bp
+364:		add word [bp + 672], 164
+366:	
 
 time_test$97:	; CallHeader 666 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-383:	
+368:	
 
 time_test$98:	; address £temporary6217 now1
-384:		mov t3281, bp
-385:		add t3281, 20
-387:	
+369:		mov t3336, bp
+370:		add t3336, 20
+372:	
 
 time_test$99:	; Parameter 666 £temporary6217 14
-388:		mov [bp + 680], t3281
-390:	
+373:		mov [bp + 680], t3336
+375:	
 
 time_test$100:	; Call 666 ctime 8
-391:		mov word [bp + 674], time_test$101
-392:		mov [bp + 676], bp
-393:		add bp, 674
-394:		jmp ctime
-396:	
+376:		mov word [bp + 674], time_test$101
+377:		mov [bp + 676], bp
+378:		add bp, 674
+379:		jmp ctime
+381:	
 
 time_test$101:	; PostCall 666
-398:	
+383:	
 
 time_test$102:	; GetReturnValue £temporary6218
-403:	
+385:	
 
 time_test$103:	; Parameter 666 £temporary6218 8
-404:		mov [bp + 674], t3283
-406:	
+386:		mov [bp + 674], type3337
+388:	
 
 time_test$104:	; Call 666 strcpy 0
-407:		mov word [bp + 666], time_test$105
-408:		mov [bp + 668], bp
-409:		add bp, 666
-410:		jmp strcpy
-412:	
+389:		mov word [bp + 666], time_test$105
+390:		mov [bp + 668], bp
+391:		add bp, 666
+392:		jmp strcpy
+394:	
 
 time_test$105:	; PostCall 666
-414:	
+396:	
 
 time_test$106:	; CallHeader 666 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-416:	
+398:	
 
 time_test$107:	; Parameter 666 string_asctime203C25s3E2C20ctime203C25s3E0A# 6
-417:		mov word [bp + 672], @12995$string_asctime203C25s3E2C20ctime203C25s3E0A#
-419:	
+399:		mov word [bp + 672], @12995$string_asctime203C25s3E2C20ctime203C25s3E0A#
+401:	
 
 time_test$108:	; Parameter 666 buffer1 8
-420:		mov [bp + 674], bp
-421:		add word [bp + 674], 64
-423:	
+402:		mov [bp + 674], bp
+403:		add word [bp + 674], 64
+405:	
 
 time_test$109:	; Parameter 666 buffer2 10
-424:		mov [bp + 676], bp
-425:		add word [bp + 676], 164
-427:	
+406:		mov [bp + 676], bp
+407:		add word [bp + 676], 164
+409:	
 
 time_test$110:	; Call 666 printf 0
-428:		mov word [bp + 666], time_test$111
-429:		mov [bp + 668], bp
-430:		add bp, 666
-431:		mov di, bp
-432:		add di, 4
-433:		jmp printf
-435:	
+410:		mov word [bp + 666], time_test$111
+411:		mov [bp + 668], bp
+412:		add bp, 666
+413:		mov di, bp
+414:		add di, 4
+415:		jmp printf
+417:	
 
 time_test$111:	; PostCall 666
-437:	
+419:	
 
 time_test$112:	; CallHeader 666 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-439:	
+421:	
 
 time_test$113:	; Parameter 666 buffer 6
-440:		mov [bp + 672], bp
-441:		add word [bp + 672], 264
-443:	
+422:		mov [bp + 672], bp
+423:		add word [bp + 672], 264
+425:	
 
 time_test$114:	; Parameter 666 400 8
-444:		mov word [bp + 674], 400
-446:	
+426:		mov word [bp + 674], 400
+428:	
 
 time_test$115:	; Parameter 666 string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y2C20summer2Fwinter2025Z# 10
-447:		mov word [bp + 676], @12999$string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y2C20summer2Fwinter2025Z#
-449:	
+429:		mov word [bp + 676], @12999$string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y2C20summer2Fwinter2025Z#
+431:	
 
 time_test$116:	; address £temporary6221 t
-450:		mov t3284, bp
-451:		add t3284, 42
-453:	
+432:		mov t3340, bp
+433:		add t3340, 42
+435:	
 
 time_test$117:	; Parameter 666 £temporary6221 12
-454:		mov [bp + 678], t3284
-456:	
+436:		mov [bp + 678], t3340
+438:	
 
 time_test$118:	; Call 666 strftime 0
-457:		mov word [bp + 666], time_test$119
-458:		mov [bp + 668], bp
-459:		add bp, 666
-460:		jmp strftime
-462:	
+439:		mov word [bp + 666], time_test$119
+440:		mov [bp + 668], bp
+441:		add bp, 666
+442:		jmp strftime
+444:	
 
 time_test$119:	; PostCall 666
-464:	
+446:	
 
 time_test$120:	; GetReturnValue £temporary6222
-469:	
+448:	
 
 time_test$121:	; Assign i £temporary6222
-470:		mov [bp + 664], t3286
-472:	
+449:		mov [bp + 664], type3341
+451:	
 
 time_test$122:	; CallHeader 666 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-474:	
+453:	
 
 time_test$123:	; Parameter 666 string_strftime2025i2025i203C25s3E0A# 6
-475:		mov word [bp + 672], @13002$string_strftime2025i2025i203C25s3E0A#
-477:	
+454:		mov word [bp + 672], @13002$string_strftime2025i2025i203C25s3E0A#
+456:	
 
 time_test$124:	; Parameter 666 i 8
-478:		mov a3287, [bp + 664]
-479:		mov [bp + 674], a3287
-481:	
+457:		mov a3342, [bp + 664]
+458:		mov [bp + 674], a3342
+460:	
 
 time_test$125:	; CallHeader 666 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-483:	
+462:	
 
 time_test$126:	; Parameter 666 buffer 16
-484:		mov [bp + 682], bp
-485:		add word [bp + 682], 264
-487:	
+463:		mov [bp + 682], bp
+464:		add word [bp + 682], 264
+466:	
 
 time_test$127:	; Call 666 strlen 10
-488:		mov word [bp + 676], time_test$128
-489:		mov [bp + 678], bp
-490:		add bp, 676
-491:		jmp strlen
-493:	
+467:		mov word [bp + 676], time_test$128
+468:		mov [bp + 678], bp
+469:		add bp, 676
+470:		jmp strlen
+472:	
 
 time_test$128:	; PostCall 666
-495:	
+474:	
 
 time_test$129:	; GetReturnValue £temporary6223
-500:	
+476:	
 
 time_test$130:	; Parameter 666 £temporary6223 10
-501:		mov [bp + 676], t3289
-503:	
+477:		mov [bp + 676], type3343
+479:	
 
 time_test$131:	; Parameter 666 buffer 12
-504:		mov [bp + 678], bp
-505:		add word [bp + 678], 264
-507:	
+480:		mov [bp + 678], bp
+481:		add word [bp + 678], 264
+483:	
 
 time_test$132:	; Call 666 printf 0
-508:		mov word [bp + 666], time_test$133
-509:		mov [bp + 668], bp
-510:		add bp, 666
-511:		mov di, bp
-512:		add di, 6
-513:		jmp printf
-515:	
+484:		mov word [bp + 666], time_test$133
+485:		mov [bp + 668], bp
+486:		add bp, 666
+487:		mov di, bp
+488:		add di, 6
+489:		jmp printf
+491:	
 
 time_test$133:	; PostCall 666
-517:	
+493:	
 
 time_test$134:	; Return 0
-518:		mov t3290, [bp]
-519:		mov di, [bp + 4]
-520:		mov bp, [bp + 2]
-521:		jmp t3290
-523:	
+494:		mov t3345, [bp]
+495:		mov di, [bp + 4]
+496:		mov bp, [bp + 2]
+497:		jmp t3345
+499:	
 
 time_test$135:	; FunctionEnd time_test

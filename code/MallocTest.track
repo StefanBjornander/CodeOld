@@ -26,292 +26,292 @@ malloc_test2$5:	; PostCall 12
 20:	
 
 malloc_test2$6:	; GetReturnValue £temporary5835
-25:	
+22:	
 
 malloc_test2$7:	; Assign q £temporary5835
-26:		mov [bp + 12], t3058
-28:	
+23:		mov [bp + 12], type3086
+25:	
 
 malloc_test2$8:	; Assign index 0
-29:		mov word [bp + 6], 0
-31:	
+26:		mov word [bp + 6], 0
+28:	
 
 malloc_test2$9:	; SignedGreaterThanEqual 20 index 10
-32:		cmp word [bp + 6], 10
-33:		jge malloc_test2$20
-35:	
+29:		cmp word [bp + 6], 10
+30:		jge malloc_test2$20
+32:	
 
 malloc_test2$10:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-37:	
+34:	
 
 malloc_test2$11:	; Parameter 14 96 6
-38:		mov word [bp + 20], 96
-40:	
+35:		mov word [bp + 20], 96
+37:	
 
 malloc_test2$12:	; Call 14 malloc 0
-41:		mov word [bp + 14], malloc_test2$13
-42:		mov [bp + 16], bp
-43:		add bp, 14
-44:		jmp malloc
-46:	
+38:		mov word [bp + 14], malloc_test2$13
+39:		mov [bp + 16], bp
+40:		add bp, 14
+41:		jmp malloc
+43:	
 
 malloc_test2$13:	; PostCall 14
-48:	
+45:	
 
 malloc_test2$14:	; GetReturnValue £temporary5838
-53:	
+47:	
 
 malloc_test2$15:	; Assign p £temporary5838
-54:		mov [bp + 8], t3060
-56:	
+48:		mov [bp + 8], type3087
+50:	
 
 malloc_test2$16:	; NotEqual 18 index 5
-57:		cmp word [bp + 6], 5
-58:		jne malloc_test2$18
-60:	
+51:		cmp word [bp + 6], 5
+52:		jne malloc_test2$18
+54:	
 
 malloc_test2$17:	; Assign r p
-61:		mov a3061, [bp + 8]
-62:		mov [bp + 10], a3061
-64:	
+55:		mov a3088, [bp + 8]
+56:		mov [bp + 10], a3088
+58:	
 
 malloc_test2$18:	; Increment index
-65:		inc word [bp + 6]
-67:	
+59:		inc word [bp + 6]
+61:	
 
 malloc_test2$19:	; Goto 9
-68:		jmp malloc_test2$9
-70:	
+62:		jmp malloc_test2$9
+64:	
 
 malloc_test2$20:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-72:	
+66:	
 
 malloc_test2$21:	; Call 14 print_heap 0
-73:		mov word [bp + 14], malloc_test2$22
-74:		mov [bp + 16], bp
-75:		add bp, 14
-76:		jmp print_heap
-78:	
+67:		mov word [bp + 14], malloc_test2$22
+68:		mov [bp + 16], bp
+69:		add bp, 14
+70:		jmp print_heap
+72:	
 
 malloc_test2$22:	; PostCall 14
-80:	
+74:	
 
 malloc_test2$23:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-82:	
+76:	
 
 malloc_test2$24:	; Parameter 14 q 6
-83:		mov a3062, [bp + 12]
-84:		mov [bp + 20], a3062
-86:	
+77:		mov a3089, [bp + 12]
+78:		mov [bp + 20], a3089
+80:	
 
 malloc_test2$25:	; Parameter 14 50 8
-87:		mov word [bp + 22], 50
-89:	
+81:		mov word [bp + 22], 50
+83:	
 
 malloc_test2$26:	; Call 14 realloc 0
-90:		mov word [bp + 14], malloc_test2$27
-91:		mov [bp + 16], bp
-92:		add bp, 14
-93:		jmp realloc
-95:	
+84:		mov word [bp + 14], malloc_test2$27
+85:		mov [bp + 16], bp
+86:		add bp, 14
+87:		jmp realloc
+89:	
 
 malloc_test2$27:	; PostCall 14
-97:	
+91:	
 
 malloc_test2$28:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-99:	
+93:	
 
 malloc_test2$29:	; Call 14 print_heap 0
-100:		mov word [bp + 14], malloc_test2$30
-101:		mov [bp + 16], bp
-102:		add bp, 14
-103:		jmp print_heap
-105:	
+94:		mov word [bp + 14], malloc_test2$30
+95:		mov [bp + 16], bp
+96:		add bp, 14
+97:		jmp print_heap
+99:	
 
 malloc_test2$30:	; PostCall 14
-107:	
+101:	
 
 malloc_test2$31:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-109:	
+103:	
 
 malloc_test2$32:	; Parameter 14 r 6
-110:		mov a3063, [bp + 10]
-111:		mov [bp + 20], a3063
-113:	
+104:		mov a3091, [bp + 10]
+105:		mov [bp + 20], a3091
+107:	
 
 malloc_test2$33:	; Parameter 14 50 8
-114:		mov word [bp + 22], 50
-116:	
+108:		mov word [bp + 22], 50
+110:	
 
 malloc_test2$34:	; Call 14 realloc 0
-117:		mov word [bp + 14], malloc_test2$35
-118:		mov [bp + 16], bp
-119:		add bp, 14
-120:		jmp realloc
-122:	
+111:		mov word [bp + 14], malloc_test2$35
+112:		mov [bp + 16], bp
+113:		add bp, 14
+114:		jmp realloc
+116:	
 
 malloc_test2$35:	; PostCall 14
-124:	
+118:	
 
 malloc_test2$36:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-126:	
+120:	
 
 malloc_test2$37:	; Call 14 print_heap 0
-127:		mov word [bp + 14], malloc_test2$38
-128:		mov [bp + 16], bp
-129:		add bp, 14
-130:		jmp print_heap
-132:	
+121:		mov word [bp + 14], malloc_test2$38
+122:		mov [bp + 16], bp
+123:		add bp, 14
+124:		jmp print_heap
+126:	
 
 malloc_test2$38:	; PostCall 14
-134:	
+128:	
 
 malloc_test2$39:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-136:	
+130:	
 
 malloc_test2$40:	; Parameter 14 p 6
-137:		mov a3064, [bp + 8]
-138:		mov [bp + 20], a3064
-140:	
+131:		mov a3093, [bp + 8]
+132:		mov [bp + 20], a3093
+134:	
 
 malloc_test2$41:	; Parameter 14 50 8
-141:		mov word [bp + 22], 50
-143:	
+135:		mov word [bp + 22], 50
+137:	
 
 malloc_test2$42:	; Call 14 realloc 0
-144:		mov word [bp + 14], malloc_test2$43
-145:		mov [bp + 16], bp
-146:		add bp, 14
-147:		jmp realloc
-149:	
+138:		mov word [bp + 14], malloc_test2$43
+139:		mov [bp + 16], bp
+140:		add bp, 14
+141:		jmp realloc
+143:	
 
 malloc_test2$43:	; PostCall 14
-151:	
+145:	
 
 malloc_test2$44:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-153:	
+147:	
 
 malloc_test2$45:	; Call 14 print_heap 0
-154:		mov word [bp + 14], malloc_test2$46
-155:		mov [bp + 16], bp
-156:		add bp, 14
-157:		jmp print_heap
-159:	
+148:		mov word [bp + 14], malloc_test2$46
+149:		mov [bp + 16], bp
+150:		add bp, 14
+151:		jmp print_heap
+153:	
 
 malloc_test2$46:	; PostCall 14
-161:	
+155:	
 
 malloc_test2$47:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-163:	
+157:	
 
 malloc_test2$48:	; Parameter 14 q 6
-164:		mov a3065, [bp + 12]
-165:		mov [bp + 20], a3065
-167:	
+158:		mov a3095, [bp + 12]
+159:		mov [bp + 20], a3095
+161:	
 
 malloc_test2$49:	; Parameter 14 200 8
-168:		mov word [bp + 22], 200
-170:	
+162:		mov word [bp + 22], 200
+164:	
 
 malloc_test2$50:	; Call 14 realloc 0
-171:		mov word [bp + 14], malloc_test2$51
-172:		mov [bp + 16], bp
-173:		add bp, 14
-174:		jmp realloc
-176:	
+165:		mov word [bp + 14], malloc_test2$51
+166:		mov [bp + 16], bp
+167:		add bp, 14
+168:		jmp realloc
+170:	
 
 malloc_test2$51:	; PostCall 14
-178:	
+172:	
 
 malloc_test2$52:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-180:	
+174:	
 
 malloc_test2$53:	; Call 14 print_heap 0
-181:		mov word [bp + 14], malloc_test2$54
-182:		mov [bp + 16], bp
-183:		add bp, 14
-184:		jmp print_heap
-186:	
+175:		mov word [bp + 14], malloc_test2$54
+176:		mov [bp + 16], bp
+177:		add bp, 14
+178:		jmp print_heap
+180:	
 
 malloc_test2$54:	; PostCall 14
-188:	
+182:	
 
 malloc_test2$55:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-190:	
+184:	
 
 malloc_test2$56:	; Parameter 14 r 6
-191:		mov a3066, [bp + 10]
-192:		mov [bp + 20], a3066
-194:	
+185:		mov a3097, [bp + 10]
+186:		mov [bp + 20], a3097
+188:	
 
 malloc_test2$57:	; Parameter 14 200 8
-195:		mov word [bp + 22], 200
-197:	
+189:		mov word [bp + 22], 200
+191:	
 
 malloc_test2$58:	; Call 14 realloc 0
-198:		mov word [bp + 14], malloc_test2$59
-199:		mov [bp + 16], bp
-200:		add bp, 14
-201:		jmp realloc
-203:	
+192:		mov word [bp + 14], malloc_test2$59
+193:		mov [bp + 16], bp
+194:		add bp, 14
+195:		jmp realloc
+197:	
 
 malloc_test2$59:	; PostCall 14
-205:	
+199:	
 
 malloc_test2$60:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-207:	
+201:	
 
 malloc_test2$61:	; Call 14 print_heap 0
-208:		mov word [bp + 14], malloc_test2$62
-209:		mov [bp + 16], bp
-210:		add bp, 14
-211:		jmp print_heap
-213:	
+202:		mov word [bp + 14], malloc_test2$62
+203:		mov [bp + 16], bp
+204:		add bp, 14
+205:		jmp print_heap
+207:	
 
 malloc_test2$62:	; PostCall 14
-215:	
+209:	
 
 malloc_test2$63:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-217:	
+211:	
 
 malloc_test2$64:	; Parameter 14 p 6
-218:		mov a3067, [bp + 8]
-219:		mov [bp + 20], a3067
-221:	
+212:		mov a3099, [bp + 8]
+213:		mov [bp + 20], a3099
+215:	
 
 malloc_test2$65:	; Parameter 14 200 8
-222:		mov word [bp + 22], 200
-224:	
+216:		mov word [bp + 22], 200
+218:	
 
 malloc_test2$66:	; Call 14 realloc 0
-225:		mov word [bp + 14], malloc_test2$67
-226:		mov [bp + 16], bp
-227:		add bp, 14
-228:		jmp realloc
-230:	
+219:		mov word [bp + 14], malloc_test2$67
+220:		mov [bp + 16], bp
+221:		add bp, 14
+222:		jmp realloc
+224:	
 
 malloc_test2$67:	; PostCall 14
-232:	
+226:	
 
 malloc_test2$68:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-234:	
+228:	
 
 malloc_test2$69:	; Call 14 print_heap 0
-235:		mov word [bp + 14], malloc_test2$70
-236:		mov [bp + 16], bp
-237:		add bp, 14
-238:		jmp print_heap
-240:	
+229:		mov word [bp + 14], malloc_test2$70
+230:		mov [bp + 16], bp
+231:		add bp, 14
+232:		jmp print_heap
+234:	
 
 malloc_test2$70:	; PostCall 14
-242:	
+236:	
 
 malloc_test2$71:	; Return 0
-243:		mov t3068, [bp]
-244:		mov di, [bp + 4]
-245:		mov bp, [bp + 2]
-246:		jmp t3068
-248:	
+237:		mov t3101, [bp]
+238:		mov di, [bp + 4]
+239:		mov bp, [bp + 2]
+240:		jmp t3101
+242:	
 
 malloc_test2$72:	; FunctionEnd malloc_test2
 1:	
@@ -338,246 +338,246 @@ malloc_test3$4:	; PostCall 6
 17:	
 
 malloc_test3$5:	; GetReturnValue £temporary5867
-22:	
+19:	
 
 malloc_test3$6:	; Assign a £temporary5867
-23:		mov [bp + 6], t3070
-25:	
+20:		mov [bp + 6], type3102
+22:	
 
 malloc_test3$7:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-27:	
+24:	
 
 malloc_test3$8:	; Parameter 8 96 6
-28:		mov word [bp + 14], 96
-30:	
+25:		mov word [bp + 14], 96
+27:	
 
 malloc_test3$9:	; Parameter 8 1 8
-31:		mov word [bp + 16], 1
-33:	
+28:		mov word [bp + 16], 1
+30:	
 
 malloc_test3$10:	; Call 8 calloc 0
-34:		mov word [bp + 8], malloc_test3$11
-35:		mov [bp + 10], bp
-36:		add bp, 8
-37:		jmp calloc
-39:	
+31:		mov word [bp + 8], malloc_test3$11
+32:		mov [bp + 10], bp
+33:		add bp, 8
+34:		jmp calloc
+36:	
 
 malloc_test3$11:	; PostCall 8
-41:	
+38:	
 
 malloc_test3$12:	; GetReturnValue £temporary5868
-46:	
+40:	
 
 malloc_test3$13:	; Assign b £temporary5868
-47:		mov [bp + 8], t3072
-49:	
+41:		mov [bp + 8], type3103
+43:	
 
 malloc_test3$14:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-51:	
+45:	
 
 malloc_test3$15:	; Parameter 10 96 6
-52:		mov word [bp + 16], 96
-54:	
+46:		mov word [bp + 16], 96
+48:	
 
 malloc_test3$16:	; Parameter 10 1 8
-55:		mov word [bp + 18], 1
-57:	
+49:		mov word [bp + 18], 1
+51:	
 
 malloc_test3$17:	; Call 10 calloc 0
-58:		mov word [bp + 10], malloc_test3$18
-59:		mov [bp + 12], bp
-60:		add bp, 10
-61:		jmp calloc
-63:	
+52:		mov word [bp + 10], malloc_test3$18
+53:		mov [bp + 12], bp
+54:		add bp, 10
+55:		jmp calloc
+57:	
 
 malloc_test3$18:	; PostCall 10
-65:	
+59:	
 
 malloc_test3$19:	; GetReturnValue £temporary5869
-70:	
+61:	
 
 malloc_test3$20:	; Assign c £temporary5869
-71:		mov [bp + 10], t3074
-73:	
+62:		mov [bp + 10], type3104
+64:	
 
 malloc_test3$21:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-75:	
+66:	
 
 malloc_test3$22:	; Parameter 12 96 6
-76:		mov word [bp + 18], 96
-78:	
+67:		mov word [bp + 18], 96
+69:	
 
 malloc_test3$23:	; Parameter 12 1 8
-79:		mov word [bp + 20], 1
-81:	
+70:		mov word [bp + 20], 1
+72:	
 
 malloc_test3$24:	; Call 12 calloc 0
-82:		mov word [bp + 12], malloc_test3$25
-83:		mov [bp + 14], bp
-84:		add bp, 12
-85:		jmp calloc
-87:	
+73:		mov word [bp + 12], malloc_test3$25
+74:		mov [bp + 14], bp
+75:		add bp, 12
+76:		jmp calloc
+78:	
 
 malloc_test3$25:	; PostCall 12
-89:	
+80:	
 
 malloc_test3$26:	; GetReturnValue £temporary5870
-94:	
+82:	
 
 malloc_test3$27:	; Assign d £temporary5870
-95:		mov [bp + 12], t3076
-97:	
+83:		mov [bp + 12], type3105
+85:	
 
 malloc_test3$28:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-99:	
+87:	
 
 malloc_test3$29:	; Parameter 14 96 6
-100:		mov word [bp + 20], 96
-102:	
+88:		mov word [bp + 20], 96
+90:	
 
 malloc_test3$30:	; Parameter 14 1 8
-103:		mov word [bp + 22], 1
-105:	
+91:		mov word [bp + 22], 1
+93:	
 
 malloc_test3$31:	; Call 14 calloc 0
-106:		mov word [bp + 14], malloc_test3$32
-107:		mov [bp + 16], bp
-108:		add bp, 14
-109:		jmp calloc
-111:	
+94:		mov word [bp + 14], malloc_test3$32
+95:		mov [bp + 16], bp
+96:		add bp, 14
+97:		jmp calloc
+99:	
 
 malloc_test3$32:	; PostCall 14
-113:	
+101:	
 
 malloc_test3$33:	; GetReturnValue £temporary5871
-118:	
+103:	
 
 malloc_test3$34:	; Assign e £temporary5871
-119:		mov [bp + 14], t3078
-121:	
+104:		mov [bp + 14], type3106
+106:	
 
 malloc_test3$35:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-123:	
+108:	
 
 malloc_test3$36:	; Call 16 print_heap 0
-124:		mov word [bp + 16], malloc_test3$37
-125:		mov [bp + 18], bp
-126:		add bp, 16
-127:		jmp print_heap
-129:	
+109:		mov word [bp + 16], malloc_test3$37
+110:		mov [bp + 18], bp
+111:		add bp, 16
+112:		jmp print_heap
+114:	
 
 malloc_test3$37:	; PostCall 16
-131:	
+116:	
 
 malloc_test3$38:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-133:	
+118:	
 
 malloc_test3$39:	; Parameter 16 a 6
-134:		mov a3079, [bp + 6]
-135:		mov [bp + 22], a3079
-137:	
+119:		mov a3107, [bp + 6]
+120:		mov [bp + 22], a3107
+122:	
 
 malloc_test3$40:	; Call 16 free 0
-138:		mov word [bp + 16], malloc_test3$41
-139:		mov [bp + 18], bp
-140:		add bp, 16
-141:		jmp free
-143:	
+123:		mov word [bp + 16], malloc_test3$41
+124:		mov [bp + 18], bp
+125:		add bp, 16
+126:		jmp free
+128:	
 
 malloc_test3$41:	; PostCall 16
-145:	
+130:	
 
 malloc_test3$42:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-147:	
+132:	
 
 malloc_test3$43:	; Parameter 16 b 6
-148:		mov a3080, [bp + 8]
-149:		mov [bp + 22], a3080
-151:	
+133:		mov a3108, [bp + 8]
+134:		mov [bp + 22], a3108
+136:	
 
 malloc_test3$44:	; Call 16 free 0
-152:		mov word [bp + 16], malloc_test3$45
-153:		mov [bp + 18], bp
-154:		add bp, 16
-155:		jmp free
-157:	
+137:		mov word [bp + 16], malloc_test3$45
+138:		mov [bp + 18], bp
+139:		add bp, 16
+140:		jmp free
+142:	
 
 malloc_test3$45:	; PostCall 16
-159:	
+144:	
 
 malloc_test3$46:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-161:	
+146:	
 
 malloc_test3$47:	; Parameter 16 c 6
-162:		mov a3081, [bp + 10]
-163:		mov [bp + 22], a3081
-165:	
+147:		mov a3109, [bp + 10]
+148:		mov [bp + 22], a3109
+150:	
 
 malloc_test3$48:	; Call 16 free 0
-166:		mov word [bp + 16], malloc_test3$49
-167:		mov [bp + 18], bp
-168:		add bp, 16
-169:		jmp free
-171:	
+151:		mov word [bp + 16], malloc_test3$49
+152:		mov [bp + 18], bp
+153:		add bp, 16
+154:		jmp free
+156:	
 
 malloc_test3$49:	; PostCall 16
-173:	
+158:	
 
 malloc_test3$50:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-175:	
+160:	
 
 malloc_test3$51:	; Parameter 16 d 6
-176:		mov a3082, [bp + 12]
-177:		mov [bp + 22], a3082
-179:	
+161:		mov a3110, [bp + 12]
+162:		mov [bp + 22], a3110
+164:	
 
 malloc_test3$52:	; Call 16 free 0
-180:		mov word [bp + 16], malloc_test3$53
-181:		mov [bp + 18], bp
-182:		add bp, 16
-183:		jmp free
-185:	
+165:		mov word [bp + 16], malloc_test3$53
+166:		mov [bp + 18], bp
+167:		add bp, 16
+168:		jmp free
+170:	
 
 malloc_test3$53:	; PostCall 16
-187:	
+172:	
 
 malloc_test3$54:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-189:	
+174:	
 
 malloc_test3$55:	; Parameter 16 e 6
-190:		mov a3083, [bp + 14]
-191:		mov [bp + 22], a3083
-193:	
+175:		mov a3111, [bp + 14]
+176:		mov [bp + 22], a3111
+178:	
 
 malloc_test3$56:	; Call 16 free 0
-194:		mov word [bp + 16], malloc_test3$57
-195:		mov [bp + 18], bp
-196:		add bp, 16
-197:		jmp free
-199:	
+179:		mov word [bp + 16], malloc_test3$57
+180:		mov [bp + 18], bp
+181:		add bp, 16
+182:		jmp free
+184:	
 
 malloc_test3$57:	; PostCall 16
-201:	
+186:	
 
 malloc_test3$58:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-203:	
+188:	
 
 malloc_test3$59:	; Call 16 print_heap 0
-204:		mov word [bp + 16], malloc_test3$60
-205:		mov [bp + 18], bp
-206:		add bp, 16
-207:		jmp print_heap
-209:	
+189:		mov word [bp + 16], malloc_test3$60
+190:		mov [bp + 18], bp
+191:		add bp, 16
+192:		jmp print_heap
+194:	
 
 malloc_test3$60:	; PostCall 16
-211:	
+196:	
 
 malloc_test3$61:	; Return 0
-212:		mov t3084, [bp]
-213:		mov di, [bp + 4]
-214:		mov bp, [bp + 2]
-215:		jmp t3084
-217:	
+197:		mov t3112, [bp]
+198:		mov di, [bp + 4]
+199:		mov bp, [bp + 2]
+200:		jmp t3112
+202:	
 
 malloc_test3$62:	; FunctionEnd malloc_test3
 1:	
@@ -590,7 +590,7 @@ rec$1:	; InspectRegister £temporary5894 bp
 6:	
 
 rec$2:	; Assign stackTop £temporary5894
-7:		mov [bp + 6], t3085
+7:		mov [bp + 6], t3113
 9:	
 
 rec$3:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -601,17 +601,17 @@ rec$4:	; Parameter 10 string_Stack20Top3A2025u2C20Low20Heap3A2025u0A# 6
 14:	
 
 rec$5:	; Parameter 10 stackTop 8
-15:		mov a3086, [bp + 6]
-16:		mov [bp + 18], a3086
+15:		mov a3114, [bp + 6]
+16:		mov [bp + 18], a3114
 18:	
 
 rec$6:	; Deref £temporary5895 -> lowHeapPtr lowHeapPtr 0
-19:		mov a3087, [bp + 8]
+19:		mov a3115, [bp + 8]
 21:	
 
 rec$7:	; Parameter 10 £temporary5895 -> lowHeapPtr 10
-22:		mov t3088, [a3087]
-23:		mov [bp + 20], t3088
+22:		mov t3116, [a3115]
+23:		mov [bp + 20], t3116
 25:	
 
 rec$8:	; Call 10 printf 0
@@ -640,10 +640,10 @@ rec$12:	; PostCall 10
 45:	
 
 rec$13:	; Return 0
-46:		mov t3089, [bp]
+46:		mov t3118, [bp]
 47:		mov di, [bp + 4]
 48:		mov bp, [bp + 2]
-49:		jmp t3089
+49:		jmp t3118
 51:	
 
 rec$14:	; FunctionEnd rec
@@ -663,10 +663,10 @@ malloc_test4$2:	; PostCall 6
 11:	
 
 malloc_test4$3:	; Return 0
-12:		mov t3090, [bp]
+12:		mov t3119, [bp]
 13:		mov di, [bp + 4]
 14:		mov bp, [bp + 2]
-15:		jmp t3090
+15:		jmp t3119
 17:	
 
 malloc_test4$4:	; FunctionEnd malloc_test4
@@ -690,206 +690,206 @@ malloc_test$3:	; PostCall 6
 14:	
 
 malloc_test$4:	; GetReturnValue £temporary5902
-19:	
+16:	
 
 malloc_test$5:	; Assign b £temporary5902
-20:		mov [bp + 6], t3092
-22:	
+17:		mov [bp + 6], type3120
+19:	
 
 malloc_test$6:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-24:	
+21:	
 
 malloc_test$7:	; Parameter 8 96 6
-25:		mov word [bp + 14], 96
-27:	
+22:		mov word [bp + 14], 96
+24:	
 
 malloc_test$8:	; Call 8 malloc 0
-28:		mov word [bp + 8], malloc_test$9
-29:		mov [bp + 10], bp
-30:		add bp, 8
-31:		jmp malloc
-33:	
+25:		mov word [bp + 8], malloc_test$9
+26:		mov [bp + 10], bp
+27:		add bp, 8
+28:		jmp malloc
+30:	
 
 malloc_test$9:	; PostCall 8
-35:	
+32:	
 
 malloc_test$10:	; GetReturnValue £temporary5903
-40:	
+34:	
 
 malloc_test$11:	; Assign c £temporary5903
-41:		mov [bp + 8], t3094
-43:	
+35:		mov [bp + 8], type3121
+37:	
 
 malloc_test$12:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-45:	
+39:	
 
 malloc_test$13:	; Parameter 10 96 6
-46:		mov word [bp + 16], 96
-48:	
+40:		mov word [bp + 16], 96
+42:	
 
 malloc_test$14:	; Call 10 malloc 0
-49:		mov word [bp + 10], malloc_test$15
-50:		mov [bp + 12], bp
-51:		add bp, 10
-52:		jmp malloc
-54:	
+43:		mov word [bp + 10], malloc_test$15
+44:		mov [bp + 12], bp
+45:		add bp, 10
+46:		jmp malloc
+48:	
 
 malloc_test$15:	; PostCall 10
-56:	
+50:	
 
 malloc_test$16:	; GetReturnValue £temporary5904
-61:	
+52:	
 
 malloc_test$17:	; Assign d £temporary5904
-62:		mov [bp + 10], t3096
-64:	
+53:		mov [bp + 10], type3122
+55:	
 
 malloc_test$18:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-66:	
+57:	
 
 malloc_test$19:	; Call 12 print_heap 0
-67:		mov word [bp + 12], malloc_test$20
-68:		mov [bp + 14], bp
-69:		add bp, 12
-70:		jmp print_heap
-72:	
+58:		mov word [bp + 12], malloc_test$20
+59:		mov [bp + 14], bp
+60:		add bp, 12
+61:		jmp print_heap
+63:	
 
 malloc_test$20:	; PostCall 12
-74:	
+65:	
 
 malloc_test$21:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-76:	
+67:	
 
 malloc_test$22:	; Parameter 12 c 6
-77:		mov a3097, [bp + 8]
-78:		mov [bp + 18], a3097
-80:	
+68:		mov a3123, [bp + 8]
+69:		mov [bp + 18], a3123
+71:	
 
 malloc_test$23:	; Parameter 12 40 8
-81:		mov word [bp + 20], 40
-83:	
+72:		mov word [bp + 20], 40
+74:	
 
 malloc_test$24:	; Call 12 realloc 0
-84:		mov word [bp + 12], malloc_test$25
-85:		mov [bp + 14], bp
-86:		add bp, 12
-87:		jmp realloc
-89:	
+75:		mov word [bp + 12], malloc_test$25
+76:		mov [bp + 14], bp
+77:		add bp, 12
+78:		jmp realloc
+80:	
 
 malloc_test$25:	; PostCall 12
-91:	
+82:	
 
 malloc_test$26:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-93:	
+84:	
 
 malloc_test$27:	; Call 12 print_heap 0
-94:		mov word [bp + 12], malloc_test$28
-95:		mov [bp + 14], bp
-96:		add bp, 12
-97:		jmp print_heap
-99:	
+85:		mov word [bp + 12], malloc_test$28
+86:		mov [bp + 14], bp
+87:		add bp, 12
+88:		jmp print_heap
+90:	
 
 malloc_test$28:	; PostCall 12
-101:	
+92:	
 
 malloc_test$29:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-103:	
+94:	
 
 malloc_test$30:	; Parameter 12 40 6
-104:		mov word [bp + 18], 40
-106:	
+95:		mov word [bp + 18], 40
+97:	
 
 malloc_test$31:	; Call 12 malloc 0
-107:		mov word [bp + 12], malloc_test$32
-108:		mov [bp + 14], bp
-109:		add bp, 12
-110:		jmp malloc
-112:	
+98:		mov word [bp + 12], malloc_test$32
+99:		mov [bp + 14], bp
+100:		add bp, 12
+101:		jmp malloc
+103:	
 
 malloc_test$32:	; PostCall 12
-114:	
+105:	
 
 malloc_test$33:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-116:	
+107:	
 
 malloc_test$34:	; Call 12 print_heap 0
-117:		mov word [bp + 12], malloc_test$35
-118:		mov [bp + 14], bp
-119:		add bp, 12
-120:		jmp print_heap
-122:	
+108:		mov word [bp + 12], malloc_test$35
+109:		mov [bp + 14], bp
+110:		add bp, 12
+111:		jmp print_heap
+113:	
 
 malloc_test$35:	; PostCall 12
-124:	
+115:	
 
 malloc_test$36:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-126:	
+117:	
 
 malloc_test$37:	; Parameter 12 b 6
-127:		mov a3098, [bp + 6]
-128:		mov [bp + 18], a3098
-130:	
+118:		mov a3126, [bp + 6]
+119:		mov [bp + 18], a3126
+121:	
 
 malloc_test$38:	; Call 12 free 0
-131:		mov word [bp + 12], malloc_test$39
-132:		mov [bp + 14], bp
-133:		add bp, 12
-134:		jmp free
-136:	
+122:		mov word [bp + 12], malloc_test$39
+123:		mov [bp + 14], bp
+124:		add bp, 12
+125:		jmp free
+127:	
 
 malloc_test$39:	; PostCall 12
-138:	
+129:	
 
 malloc_test$40:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-140:	
+131:	
 
 malloc_test$41:	; Call 12 print_heap 0
-141:		mov word [bp + 12], malloc_test$42
-142:		mov [bp + 14], bp
-143:		add bp, 12
-144:		jmp print_heap
-146:	
+132:		mov word [bp + 12], malloc_test$42
+133:		mov [bp + 14], bp
+134:		add bp, 12
+135:		jmp print_heap
+137:	
 
 malloc_test$42:	; PostCall 12
-148:	
+139:	
 
 malloc_test$43:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-150:	
+141:	
 
 malloc_test$44:	; Parameter 12 d 6
-151:		mov a3099, [bp + 10]
-152:		mov [bp + 18], a3099
-154:	
+142:		mov a3127, [bp + 10]
+143:		mov [bp + 18], a3127
+145:	
 
 malloc_test$45:	; Call 12 free 0
-155:		mov word [bp + 12], malloc_test$46
-156:		mov [bp + 14], bp
-157:		add bp, 12
-158:		jmp free
-160:	
+146:		mov word [bp + 12], malloc_test$46
+147:		mov [bp + 14], bp
+148:		add bp, 12
+149:		jmp free
+151:	
 
 malloc_test$46:	; PostCall 12
-162:	
+153:	
 
 malloc_test$47:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-164:	
+155:	
 
 malloc_test$48:	; Call 12 print_heap 0
-165:		mov word [bp + 12], malloc_test$49
-166:		mov [bp + 14], bp
-167:		add bp, 12
-168:		jmp print_heap
-170:	
+156:		mov word [bp + 12], malloc_test$49
+157:		mov [bp + 14], bp
+158:		add bp, 12
+159:		jmp print_heap
+161:	
 
 malloc_test$49:	; PostCall 12
-172:	
+163:	
 
 malloc_test$50:	; Return 0
-173:		mov t3100, [bp]
-174:		mov di, [bp + 4]
-175:		mov bp, [bp + 2]
-176:		jmp t3100
-178:	
+164:		mov t3128, [bp]
+165:		mov di, [bp + 4]
+166:		mov bp, [bp + 2]
+167:		jmp t3128
+169:	
 
 malloc_test$51:	; FunctionEnd malloc_test
 1:	
@@ -902,7 +902,7 @@ malloc_test6$1:	; InspectRegister £temporary5922 bp
 6:	
 
 malloc_test6$2:	; Assign stackTop £temporary5922
-7:		mov [bp + 8], t3101
+7:		mov [bp + 8], t3129
 9:	
 
 malloc_test6$3:	; Assign i 0
@@ -932,68 +932,68 @@ malloc_test6$8:	; PostCall 12
 29:	
 
 malloc_test6$9:	; GetReturnValue £temporary5925
-34:	
+31:	
 
 malloc_test6$10:	; Assign p £temporary5925
-35:		mov [bp + 12], t3103
-37:	
+32:		mov [bp + 12], type3130
+34:	
 
 malloc_test6$11:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-39:	
+36:	
 
 malloc_test6$12:	; Parameter 14 string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A# 6
-40:		mov word [bp + 20], @12463$string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#
-42:	
+37:		mov word [bp + 20], @12463$string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#
+39:	
 
 malloc_test6$13:	; Parameter 14 i 8
-43:		mov a3104, [bp + 6]
-44:		mov [bp + 22], a3104
-46:	
+40:		mov a3131, [bp + 6]
+41:		mov [bp + 22], a3131
+43:	
 
 malloc_test6$14:	; Parameter 14 p 10
-47:		mov a3105, [bp + 12]
-48:		mov [bp + 24], a3105
-50:	
+44:		mov a3132, [bp + 12]
+45:		mov [bp + 24], a3132
+47:	
 
 malloc_test6$15:	; Parameter 14 stackTop 12
-51:		mov a3106, [bp + 8]
-52:		mov [bp + 26], a3106
-54:	
+48:		mov a3133, [bp + 8]
+49:		mov [bp + 26], a3133
+51:	
 
 malloc_test6$16:	; Deref £temporary5926 -> lowHeapPtr lowHeapPtr 0
-55:		mov a3107, [bp + 10]
-57:	
+52:		mov a3134, [bp + 10]
+54:	
 
 malloc_test6$17:	; Parameter 14 £temporary5926 -> lowHeapPtr 14
-58:		mov t3108, [a3107]
-59:		mov [bp + 28], t3108
-61:	
+55:		mov t3135, [a3134]
+56:		mov [bp + 28], t3135
+58:	
 
 malloc_test6$18:	; Call 14 printf 0
-62:		mov word [bp + 14], malloc_test6$19
-63:		mov [bp + 16], bp
-64:		add bp, 14
-65:		mov di, bp
-66:		add di, 8
-67:		jmp printf
-69:	
+59:		mov word [bp + 14], malloc_test6$19
+60:		mov [bp + 16], bp
+61:		add bp, 14
+62:		mov di, bp
+63:		add di, 8
+64:		jmp printf
+66:	
 
 malloc_test6$19:	; PostCall 14
-71:	
+68:	
 
 malloc_test6$20:	; Increment i
-72:		inc word [bp + 6]
-74:	
+69:		inc word [bp + 6]
+71:	
 
 malloc_test6$21:	; Goto 4
-75:		jmp malloc_test6$4
-77:	
+72:		jmp malloc_test6$4
+74:	
 
 malloc_test6$22:	; Return 0
-78:		mov t3109, [bp]
-79:		mov di, [bp + 4]
-80:		mov bp, [bp + 2]
-81:		jmp t3109
-83:	
+75:		mov t3137, [bp]
+76:		mov di, [bp + 4]
+77:		mov bp, [bp + 2]
+78:		jmp t3137
+80:	
 
 malloc_test6$23:	; FunctionEnd malloc_test6
