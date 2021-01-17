@@ -4,27 +4,27 @@ new  <malloc4: 65448 80 65528>
 
 656:
 old  <now 1: 1610833065>
-new  <now 1: 1610832894>
+new  <now 1: 1610870228>
 
 657:
 old  <now 2: 1610833065>
-new  <now 2: 1610832894>
+new  <now 2: 1610870228>
 
 658:
 old  <   gm time: Sat 2021-01-16 21:37:45, year day 15, week day 6, daylight saving time -1>
-new  <   gm time: Sat 2021-01-16 21:34:54, year day 15, week day 6, daylight saving time -1>
+new  <   gm time: Sun 2021-01-17 07:57:08, year day 16, week day 0, daylight saving time -1>
 
 659:
 old  <local time: Sat 2021-01-16 22:37:45, year day 15, week day 6, daylight saving time -1>
-new  <local time: Sat 2021-01-16 22:34:54, year day 15, week day 6, daylight saving time -1>
+new  <local time: Sun 2021-01-17 08:57:08, year day 16, week day 0, daylight saving time -1>
 
 660:
 old  <asctime <Sat Jan 16 21:37:45 2021>, ctime <Sat Jan 16 22:37:45 2021>>
-new  <asctime <Sat Jan 16 21:34:54 2021>, ctime <Sat Jan 16 22:34:54 2021>>
+new  <asctime <Sun Jan 17 07:57:08 2021>, ctime <Sun Jan 17 08:57:08 2021>>
 
 661:
 old  <strftime 312 312 <short day Sat, long day Saturday, short month Jan, long month January, date-time 2021-01-16 22:37:45, mday 16, hour 22, gm hour 10, yday 015, month 01, min 37, am/pm PM, sec 45, week number sun 02, week day 06, week number mon 02, date 22:37:45, time 22:37:45, short year 21, long year 2021, summer/winter summer>>
-new  <strftime 312 312 <short day Sat, long day Saturday, short month Jan, long month January, date-time 2021-01-16 22:34:54, mday 16, hour 22, gm hour 10, yday 015, month 01, min 34, am/pm PM, sec 54, week number sun 02, week day 06, week number mon 02, date 22:34:54, time 22:34:54, short year 21, long year 2021, summer/winter summer>>
+new  <strftime 310 310 <short day Sun, long day Sunday, short month Jan, long month January, date-time 2021-01-17 08:57:08, mday 17, hour 08, gm hour 08, yday 016, month 01, min 57, am/pm AM, sec 08, week number sun 03, week day 00, week number mon 03, date 08:57:08, time 08:57:08, short year 21, long year 2021, summer/winter summer>>
 
 663:
 old  <  Address 7410760, Size 96>
