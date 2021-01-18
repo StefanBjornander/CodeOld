@@ -1518,6 +1518,154 @@ ctime$11:	; Return £temporary3462
 ctime$12:	; FunctionEnd ctime
 1:	
 
+getWeekNumber:	; Deref £temporary3465 -> tp tp 10
+2:		mov a2009, [bp + 6]
+4:	
+
+getWeekNumber$1:	; BinarySubtract £temporary3466 £temporary3465 -> tp 69
+5:		mov t2010, [a2009 + 10]
+6:		sub t2010, 69
+8:	
+
+getWeekNumber$2:	; SignedDivide £temporary3467 £temporary3466 4
+10:		xor dx, dx
+11:		idiv word [@7945$int2$4#]
+17:	
+
+getWeekNumber$3:	; IntegralToIntegral £temporary3468 £temporary3467
+19:		and t2013, 65535
+21:		cmp t2013, 0
+22:		jge getWeekNumber$4
+23:		neg t2013
+25:		neg t2013
+27:	
+
+getWeekNumber$4:	; Assign leapDays £temporary3468
+28:		mov [bp + 8], t2013
+30:	
+
+getWeekNumber$5:	; Deref £temporary3469 -> tp tp 10
+31:		mov a2014, [bp + 6]
+33:	
+
+getWeekNumber$6:	; BinarySubtract £temporary3470 £temporary3469 -> tp 70
+34:		mov t2015, [a2014 + 10]
+35:		sub t2015, 70
+37:	
+
+getWeekNumber$7:	; SignedMultiply £temporary3471 £temporary3470 365
+39:		xor dx, dx
+40:		imul word [@7954$int2$365#]
+46:	
+
+getWeekNumber$8:	; IntegralToIntegral £temporary3472 £temporary3471
+48:		and t2018, 65535
+50:		cmp t2018, 0
+51:		jge getWeekNumber$9
+52:		neg t2018
+54:		neg t2018
+56:	
+
+getWeekNumber$9:	; BinaryAdd £temporary3473 £temporary3472 leapDays
+57:		add t2018, [bp + 8]
+59:	
+
+getWeekNumber$10:	; IntegralToIntegral £temporary3474 £temporary3473
+62:		cmp t2018, 0
+63:		jge getWeekNumber$11
+64:		neg t2018
+66:		neg t2018
+68:	
+
+getWeekNumber$11:	; Assign totalDays £temporary3474
+69:		mov [bp + 12], t2018
+71:	
+
+getWeekNumber$12:	; SignedGreaterThanEqual 15 totalDays 3
+72:		cmp word [bp + 12], 3
+73:		jge getWeekNumber$15
+75:	
+
+getWeekNumber$13:	; BinaryAdd weekDayJanuaryFirst totalDays 4
+76:		mov a2019, [bp + 12]
+77:		add a2019, 4
+78:		mov [bp + 14], a2019
+80:	
+
+getWeekNumber$14:	; Goto 17
+81:		jmp getWeekNumber$17
+83:	
+
+getWeekNumber$15:	; BinarySubtract £temporary3477 totalDays 3
+84:		mov a2020, [bp + 12]
+85:		sub a2020, 3
+87:	
+
+getWeekNumber$16:	; SignedModulo weekDayJanuaryFirst £temporary3477 7
+89:		xor dx, dx
+90:		idiv word [@7971$int2$7#]
+91:		mov [bp + 14], dx
+93:	
+
+getWeekNumber$17:	; BinarySubtract firstWeekSize 7 weekDayJanuaryFirst
+94:		mov a2022, 7
+95:		sub a2022, [bp + 14]
+96:		mov [bp + 16], a2022
+98:	
+
+getWeekNumber$18:	; Deref £temporary3480 -> tp tp 14
+99:		mov a2023, [bp + 6]
+101:	
+
+getWeekNumber$19:	; SignedGreaterThanEqual 22 £temporary3480 -> tp firstWeekSize
+102:		mov a2024, [bp + 16]
+103:		cmp [a2023 + 14], a2024
+104:		jge getWeekNumber$22
+106:	
+
+getWeekNumber$20:	; SetReturnValue 0
+107:		mov a2025, 0
+109:	
+
+getWeekNumber$21:	; Return 0
+110:		mov t2026, [bp]
+111:		mov di, [bp + 4]
+112:		mov bp, [bp + 2]
+113:		jmp t2026
+115:	
+
+getWeekNumber$22:	; Deref £temporary3482 -> tp tp 14
+116:		mov a2027, [bp + 6]
+118:	
+
+getWeekNumber$23:	; BinarySubtract £temporary3483 £temporary3482 -> tp firstWeekSize
+119:		mov t2028, [a2027 + 14]
+120:		sub t2028, [bp + 16]
+122:	
+
+getWeekNumber$24:	; SignedDivide £temporary3484 £temporary3483 7
+124:		xor dx, dx
+125:		idiv word [@7984$int2$7#]
+131:	
+
+getWeekNumber$25:	; BinaryAdd £temporary3485 £temporary3484 1
+132:		add t2031, 1
+134:	
+
+getWeekNumber$26:	; SetReturnValue £temporary3485
+135:		mov t2032, t2031
+137:	
+
+getWeekNumber$27:	; Return £temporary3485
+138:		mov t2033, [bp]
+139:		mov di, [bp + 4]
+140:		mov bp, [bp + 2]
+141:		jmp t2033
+143:	
+
+getWeekNumber$28:	; FunctionEnd getWeekNumber
+1:	
+
 strftime:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
@@ -1531,11 +1679,11 @@ strftime$1:	; Call 14 localeconv 0
 strftime$2:	; PostCall 14
 11:	
 
-strftime$3:	; GetReturnValue £temporary3465
+strftime$3:	; GetReturnValue £temporary3486
 13:	
 
-strftime$4:	; Assign localeConvPtr £temporary3465
-14:		mov [bp + 14], type2009
+strftime$4:	; Assign localeConvPtr £temporary3486
+14:		mov [bp + 14], type2034
 16:	
 
 strftime$5:	; Equal 11 localeConvPtr 0
@@ -1543,22 +1691,22 @@ strftime$5:	; Equal 11 localeConvPtr 0
 18:		je strftime$11
 20:	
 
-strftime$6:	; Deref £temporary3467 -> localeConvPtr localeConvPtr 4
-21:		mov a2010, [bp + 14]
+strftime$6:	; Deref £temporary3488 -> localeConvPtr localeConvPtr 4
+21:		mov a2035, [bp + 14]
 23:	
 
-strftime$7:	; Equal 11 £temporary3467 -> localeConvPtr 0
-24:		cmp word [a2010 + 4], 0
+strftime$7:	; Equal 11 £temporary3488 -> localeConvPtr 0
+24:		cmp word [a2035 + 4], 0
 25:		je strftime$11
 27:	
 
-strftime$8:	; Deref £temporary3470 -> localeConvPtr localeConvPtr 4
-28:		mov a2011, [bp + 14]
+strftime$8:	; Deref £temporary3491 -> localeConvPtr localeConvPtr 4
+28:		mov a2036, [bp + 14]
 30:	
 
-strftime$9:	; Assign shortDayList £temporary3470 -> localeConvPtr
-31:		mov t2012, [a2011 + 4]
-32:		mov [bp + 16], t2012
+strftime$9:	; Assign shortDayList £temporary3491 -> localeConvPtr
+31:		mov t2037, [a2036 + 4]
+32:		mov [bp + 16], t2037
 34:	
 
 strftime$10:	; Goto 12
@@ -1574,22 +1722,22 @@ strftime$12:	; Equal 18 localeConvPtr 0
 42:		je strftime$18
 44:	
 
-strftime$13:	; Deref £temporary3472 -> localeConvPtr localeConvPtr 6
-45:		mov a2013, [bp + 14]
+strftime$13:	; Deref £temporary3493 -> localeConvPtr localeConvPtr 6
+45:		mov a2038, [bp + 14]
 47:	
 
-strftime$14:	; Equal 18 £temporary3472 -> localeConvPtr 0
-48:		cmp word [a2013 + 6], 0
+strftime$14:	; Equal 18 £temporary3493 -> localeConvPtr 0
+48:		cmp word [a2038 + 6], 0
 49:		je strftime$18
 51:	
 
-strftime$15:	; Deref £temporary3475 -> localeConvPtr localeConvPtr 6
-52:		mov a2014, [bp + 14]
+strftime$15:	; Deref £temporary3496 -> localeConvPtr localeConvPtr 6
+52:		mov a2039, [bp + 14]
 54:	
 
-strftime$16:	; Assign longDayList £temporary3475 -> localeConvPtr
-55:		mov t2015, [a2014 + 6]
-56:		mov [bp + 20], t2015
+strftime$16:	; Assign longDayList £temporary3496 -> localeConvPtr
+55:		mov t2040, [a2039 + 6]
+56:		mov [bp + 20], t2040
 58:	
 
 strftime$17:	; Goto 19
@@ -1605,22 +1753,22 @@ strftime$19:	; Equal 25 localeConvPtr 0
 66:		je strftime$25
 68:	
 
-strftime$20:	; Deref £temporary3477 -> localeConvPtr localeConvPtr 8
-69:		mov a2016, [bp + 14]
+strftime$20:	; Deref £temporary3498 -> localeConvPtr localeConvPtr 8
+69:		mov a2041, [bp + 14]
 71:	
 
-strftime$21:	; Equal 25 £temporary3477 -> localeConvPtr 0
-72:		cmp word [a2016 + 8], 0
+strftime$21:	; Equal 25 £temporary3498 -> localeConvPtr 0
+72:		cmp word [a2041 + 8], 0
 73:		je strftime$25
 75:	
 
-strftime$22:	; Deref £temporary3480 -> localeConvPtr localeConvPtr 8
-76:		mov a2017, [bp + 14]
+strftime$22:	; Deref £temporary3501 -> localeConvPtr localeConvPtr 8
+76:		mov a2042, [bp + 14]
 78:	
 
-strftime$23:	; Assign shortMonthList £temporary3480 -> localeConvPtr
-79:		mov t2018, [a2017 + 8]
-80:		mov [bp + 18], t2018
+strftime$23:	; Assign shortMonthList £temporary3501 -> localeConvPtr
+79:		mov t2043, [a2042 + 8]
+80:		mov [bp + 18], t2043
 82:	
 
 strftime$24:	; Goto 26
@@ -1636,22 +1784,22 @@ strftime$26:	; Equal 32 localeConvPtr 0
 90:		je strftime$32
 92:	
 
-strftime$27:	; Deref £temporary3482 -> localeConvPtr localeConvPtr 10
-93:		mov a2019, [bp + 14]
+strftime$27:	; Deref £temporary3503 -> localeConvPtr localeConvPtr 10
+93:		mov a2044, [bp + 14]
 95:	
 
-strftime$28:	; Equal 32 £temporary3482 -> localeConvPtr 0
-96:		cmp word [a2019 + 10], 0
+strftime$28:	; Equal 32 £temporary3503 -> localeConvPtr 0
+96:		cmp word [a2044 + 10], 0
 97:		je strftime$32
 99:	
 
-strftime$29:	; Deref £temporary3485 -> localeConvPtr localeConvPtr 10
-100:		mov a2020, [bp + 14]
+strftime$29:	; Deref £temporary3506 -> localeConvPtr localeConvPtr 10
+100:		mov a2045, [bp + 14]
 102:	
 
-strftime$30:	; Assign longMonthList £temporary3485 -> localeConvPtr
-103:		mov t2021, [a2020 + 10]
-104:		mov [bp + 22], t2021
+strftime$30:	; Assign longMonthList £temporary3506 -> localeConvPtr
+103:		mov t2046, [a2045 + 10]
+104:		mov [bp + 22], t2046
 106:	
 
 strftime$31:	; Goto 33
@@ -1666,12 +1814,12 @@ strftime$33:	; CallHeader 24 System.Collections.Generic.HashSet`1[CCompiler.Symb
 114:	
 
 strftime$34:	; Parameter 24 result 6
-115:		mov a2022, [bp + 6]
-116:		mov [bp + 30], a2022
+115:		mov a2047, [bp + 6]
+116:		mov [bp + 30], a2047
 118:	
 
 strftime$35:	; Parameter 24 string_# 8
-119:		mov word [bp + 32], @7990$string_#
+119:		mov word [bp + 32], @8040$string_#
 121:	
 
 strftime$36:	; Call 24 strcpy 0
@@ -1688,8 +1836,8 @@ strftime$38:	; CallHeader 26 System.Collections.Generic.HashSet`1[CCompiler.Symb
 131:	
 
 strftime$39:	; Parameter 26 tp 6
-132:		mov a2024, [bp + 12]
-133:		mov [bp + 32], a2024
+132:		mov a2049, [bp + 12]
+133:		mov [bp + 32], a2049
 135:	
 
 strftime$40:	; Call 26 getWeekNumber 0
@@ -1702,24 +1850,24 @@ strftime$40:	; Call 26 getWeekNumber 0
 strftime$41:	; PostCall 26
 143:	
 
-strftime$42:	; GetReturnValue £temporary3487
+strftime$42:	; GetReturnValue £temporary3508
 145:	
 
-strftime$43:	; Assign weekNumberStartSunday £temporary3487
-146:		mov [bp + 26], type2025
+strftime$43:	; Assign weekNumberStartSunday £temporary3508
+146:		mov [bp + 26], type2050
 148:	
 
 strftime$44:	; Assign weekNumberStartMonday weekNumberStartSunday
-149:		mov a2026, [bp + 26]
-150:		mov [bp + 28], a2026
+149:		mov a2051, [bp + 26]
+150:		mov [bp + 28], a2051
 152:	
 
-strftime$45:	; Deref £temporary3488 -> tp tp 6
-153:		mov a2027, [bp + 12]
+strftime$45:	; Deref £temporary3509 -> tp tp 6
+153:		mov a2052, [bp + 12]
 155:	
 
-strftime$46:	; NotEqual 48 £temporary3488 -> tp 0
-156:		cmp word [a2027 + 6], 0
+strftime$46:	; NotEqual 48 £temporary3509 -> tp 0
+156:		cmp word [a2052 + 6], 0
 157:		jne strftime$48
 159:	
 
@@ -1731,403 +1879,1285 @@ strftime$48:	; Assign index 0
 163:		mov word [bp + 24], 0
 165:	
 
-strftime$49:	; BinaryAdd £temporary3492 format index
-166:		mov a2028, [bp + 10]
-167:		add a2028, [bp + 24]
+strftime$49:	; BinaryAdd £temporary3513 format index
+166:		mov a2053, [bp + 10]
+167:		add a2053, [bp + 24]
 169:	
 
-strftime$50:	; Deref £temporary3491 -> £temporary3492 £temporary3492 0
+strftime$50:	; Deref £temporary3512 -> £temporary3513 £temporary3513 0
 171:	
 
-strftime$51:	; Equal 99 £temporary3491 -> £temporary3492 0
-172:		cmp byte [a2028], 0
-173:		je strftime$99
+strftime$51:	; Equal 323 £temporary3512 -> £temporary3513 0
+172:		cmp byte [a2053], 0
+173:		je strftime$323
 175:	
 
-strftime$52:	; BinaryAdd £temporary3496 format index
-176:		mov a2029, [bp + 10]
-177:		add a2029, [bp + 24]
+strftime$52:	; BinaryAdd £temporary3517 format index
+176:		mov a2054, [bp + 10]
+177:		add a2054, [bp + 24]
 179:	
 
-strftime$53:	; Deref £temporary3495 -> £temporary3496 £temporary3496 0
+strftime$53:	; Deref £temporary3516 -> £temporary3517 £temporary3517 0
 181:	
 
-strftime$54:	; NotEqual 74 £temporary3495 -> £temporary3496 37
-182:		cmp byte [a2029], 37
-183:		jne strftime$74
+strftime$54:	; NotEqual 298 £temporary3516 -> £temporary3517 37
+182:		cmp byte [a2054], 37
+183:		jne strftime$298
 185:	
 
 strftime$55:	; Increment index
 186:		inc word [bp + 24]
 188:	
 
-strftime$56:	; Assign £temporary3498 index
-189:		mov t2030, [bp + 24]
+strftime$56:	; Assign £temporary3519 index
+189:		mov t2055, [bp + 24]
 191:	
 
-strftime$57:	; BinaryAdd £temporary3500 format £temporary3498
-192:		mov a2031, [bp + 10]
-193:		add a2031, t2030
+strftime$57:	; BinaryAdd £temporary3521 format £temporary3519
+192:		mov a2056, [bp + 10]
+193:		add a2056, t2055
 195:	
 
-strftime$58:	; Deref £temporary3499 -> £temporary3500 £temporary3500 0
+strftime$58:	; Deref £temporary3520 -> £temporary3521 £temporary3521 0
 197:	
 
-strftime$59:	; Case 62 £temporary3499 -> £temporary3500 112
-198:		mov t2032, [a2031]
-199:		cmp t2032, 112
-200:		je strftime$62
+strftime$59:	; Case 83 £temporary3520 -> £temporary3521 97
+198:		mov t2057, [a2056]
+199:		cmp t2057, 97
+200:		je strftime$83
 202:	
 
-strftime$60:	; CaseEnd £temporary3499 -> £temporary3500
-204:	
+strftime$60:	; Case 93 £temporary3520 -> £temporary3521 65
+203:		cmp t2057, 65
+204:		je strftime$93
+206:	
 
-strftime$61:	; Goto 80
-205:		jmp strftime$80
-207:	
+strftime$61:	; Case 103 £temporary3520 -> £temporary3521 98
+207:		cmp t2057, 98
+208:		je strftime$103
+210:	
 
-strftime$62:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-209:	
+strftime$62:	; Case 113 £temporary3520 -> £temporary3521 66
+211:		cmp t2057, 66
+212:		je strftime$113
+214:	
 
-strftime$63:	; Parameter 50 add 6
-210:		mov [bp + 56], bp
-211:		add word [bp + 56], 30
-213:	
+strftime$63:	; Case 123 £temporary3520 -> £temporary3521 99
+215:		cmp t2057, 99
+216:		je strftime$123
+218:	
 
-strftime$64:	; Parameter 50 string_25s# 8
-214:		mov word [bp + 58], @8025$string_25s#
-216:	
+strftime$64:	; Case 143 £temporary3520 -> £temporary3521 100
+219:		cmp t2057, 100
+220:		je strftime$143
+222:	
 
-strftime$65:	; Deref £temporary3501 -> tp tp 4
-217:		mov a2033, [bp + 12]
-219:	
-
-strftime$66:	; SignedGreaterThanEqual 69 £temporary3501 -> tp 12
-220:		cmp word [a2033 + 4], 12
-221:		jge strftime$69
-223:	
-
-strftime$67:	; Assign £temporary3506 string_AM#
-224:		mov t2034, @8030$string_AM#
+strftime$65:	; Case 151 £temporary3520 -> £temporary3521 72
+223:		cmp t2057, 72
+224:		je strftime$151
 226:	
 
-strftime$68:	; Goto 70
-227:		jmp strftime$70
-229:	
+strftime$66:	; Case 159 £temporary3520 -> £temporary3521 73
+227:		cmp t2057, 73
+228:		je strftime$159
+230:	
 
-strftime$69:	; Assign £temporary3506 string_PM#
-230:		mov t2035, @8031$string_PM#
-232:	
+strftime$67:	; Case 168 £temporary3520 -> £temporary3521 106
+231:		cmp t2057, 106
+232:		je strftime$168
+234:	
 
-strftime$70:	; Parameter 50 £temporary3506 10
-233:		mov [bp + 60], t2035
-235:	
+strftime$68:	; Case 176 £temporary3520 -> £temporary3521 109
+235:		cmp t2057, 109
+236:		je strftime$176
+238:	
 
-strftime$71:	; Call 50 sprintf 0
-236:		mov word [bp + 50], strftime$72
-237:		mov [bp + 52], bp
-238:		add bp, 50
-239:		mov di, bp
-240:		add di, 2
-241:		jmp sprintf
-243:	
+strftime$69:	; Case 185 £temporary3520 -> £temporary3521 77
+239:		cmp t2057, 77
+240:		je strftime$185
+242:	
 
-strftime$72:	; PostCall 50
-245:	
+strftime$70:	; Case 193 £temporary3520 -> £temporary3521 112
+243:		cmp t2057, 112
+244:		je strftime$193
+246:	
 
-strftime$73:	; Goto 80
-246:		jmp strftime$80
-248:	
+strftime$71:	; Case 204 £temporary3520 -> £temporary3521 83
+247:		cmp t2057, 83
+248:		je strftime$204
+250:	
 
-strftime$74:	; Deref £temporary3508 -> add add 0
-249:		mov a2037, bp
-250:		add a2037, 30
-252:	
+strftime$72:	; Case 212 £temporary3520 -> £temporary3521 85
+251:		cmp t2057, 85
+252:		je strftime$212
+254:	
 
-strftime$75:	; BinaryAdd £temporary3510 format index
-253:		mov a2038, [bp + 10]
-254:		add a2038, [bp + 24]
-256:	
-
-strftime$76:	; Deref £temporary3509 -> £temporary3510 £temporary3510 0
+strftime$73:	; Case 219 £temporary3520 -> £temporary3521 119
+255:		cmp t2057, 119
+256:		je strftime$219
 258:	
 
-strftime$77:	; Assign £temporary3508 -> add £temporary3509 -> £temporary3510
-259:		mov t2039, [a2038]
-260:		mov [a2037], t2039
+strftime$74:	; Case 227 £temporary3520 -> £temporary3521 87
+259:		cmp t2057, 87
+260:		je strftime$227
 262:	
 
-strftime$78:	; Deref £temporary3511 -> add add 1
-263:		mov a2040, bp
-264:		add a2040, 30
+strftime$75:	; Case 234 £temporary3520 -> £temporary3521 120
+263:		cmp t2057, 120
+264:		je strftime$234
 266:	
 
-strftime$79:	; Assign £temporary3511 -> add 0
-267:		mov byte [a2040 + 1], 0
-269:	
+strftime$76:	; Case 246 £temporary3520 -> £temporary3521 88
+267:		cmp t2057, 88
+268:		je strftime$246
+270:	
 
-strftime$80:	; CallHeader 58 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-271:	
+strftime$77:	; Case 258 £temporary3520 -> £temporary3521 121
+271:		cmp t2057, 121
+272:		je strftime$258
+274:	
 
-strftime$81:	; Parameter 58 result 6
-272:		mov a2041, [bp + 6]
-273:		mov [bp + 64], a2041
-275:	
+strftime$78:	; Case 267 £temporary3520 -> £temporary3521 89
+275:		cmp t2057, 89
+276:		je strftime$267
+278:	
 
-strftime$82:	; Call 58 strlen 0
-276:		mov word [bp + 58], strftime$83
-277:		mov [bp + 60], bp
-278:		add bp, 58
-279:		jmp strlen
-281:	
+strftime$79:	; Case 276 £temporary3520 -> £temporary3521 90
+279:		cmp t2057, 90
+280:		je strftime$276
+282:	
 
-strftime$83:	; PostCall 58
-283:	
+strftime$80:	; Case 287 £temporary3520 -> £temporary3521 37
+283:		cmp t2057, 37
+284:		je strftime$287
+286:	
 
-strftime$84:	; GetReturnValue £temporary3512
-285:	
-
-strftime$85:	; CallHeader 58 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-286:		mov [bp + 58], type2042
+strftime$81:	; CaseEnd £temporary3520 -> £temporary3521
 288:	
 
-strftime$86:	; Parameter 58 add 6
-289:		mov [bp + 66], bp
-290:		add word [bp + 66], 30
-292:	
+strftime$82:	; Goto 292
+289:		jmp strftime$292
+291:	
 
-strftime$87:	; Call 58 strlen 0
-293:		mov word [bp + 60], strftime$88
-294:		mov [bp + 62], bp
-295:		add bp, 60
-296:		jmp strlen
-298:	
+strftime$83:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+293:	
 
-strftime$88:	; PostCall 58
-299:		mov type2043, bx
-300:		mov type2042, [bp + 58]
-302:	
+strftime$84:	; Parameter 50 add 6
+294:		mov [bp + 56], bp
+295:		add word [bp + 56], 30
+297:	
 
-strftime$89:	; GetReturnValue £temporary3513
-304:	
+strftime$85:	; Deref £temporary3522 -> tp tp 12
+298:		mov a2058, [bp + 12]
+300:	
 
-strftime$90:	; BinaryAdd £temporary3514 £temporary3512 £temporary3513
-305:		add type2042, type2043
-307:	
+strftime$86:	; SignedMultiply £temporary3524 £temporary3522 -> tp 2
+301:		mov t2059, [a2058 + 12]
+303:		xor dx, dx
+304:		imul word [@8077$int2$2#]
+310:	
 
-strftime$91:	; SignedGreaterThanEqual 99 £temporary3514 maxSize
-308:		cmp type2042, [bp + 8]
-309:		jge strftime$99
-311:	
+strftime$87:	; BinaryAdd £temporary3525 shortDayList £temporary3524
+311:		mov a2063, [bp + 16]
+312:		add a2063, t2062
+314:	
 
-strftime$92:	; CallHeader 58 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-313:	
+strftime$88:	; Deref £temporary3523 -> £temporary3525 £temporary3525 0
+316:	
 
-strftime$93:	; Parameter 58 result 6
-314:		mov a2044, [bp + 6]
-315:		mov [bp + 64], a2044
-317:	
+strftime$89:	; Parameter 50 £temporary3523 -> £temporary3525 8
+317:		mov t2064, [a2063]
+318:		mov [bp + 58], t2064
+320:	
 
-strftime$94:	; Parameter 58 add 8
-318:		mov [bp + 66], bp
-319:		add word [bp + 66], 30
-321:	
+strftime$90:	; Call 50 strcpy 0
+321:		mov word [bp + 50], strftime$91
+322:		mov [bp + 52], bp
+323:		add bp, 50
+324:		jmp strcpy
+326:	
 
-strftime$95:	; Call 58 strcat 0
-322:		mov word [bp + 58], strftime$96
-323:		mov [bp + 60], bp
-324:		add bp, 58
-325:		jmp strcat
-327:	
+strftime$91:	; PostCall 50
+328:	
 
-strftime$96:	; PostCall 58
-329:	
+strftime$92:	; Goto 304
+329:		jmp strftime$304
+331:	
 
-strftime$97:	; Increment index
-330:		inc word [bp + 24]
-332:	
+strftime$93:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+333:	
 
-strftime$98:	; Goto 49
-333:		jmp strftime$49
-335:	
-
-strftime$99:	; CallHeader 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+strftime$94:	; Parameter 50 add 6
+334:		mov [bp + 56], bp
+335:		add word [bp + 56], 30
 337:	
 
-strftime$100:	; Parameter 24 result 6
-338:		mov a2046, [bp + 6]
-339:		mov [bp + 30], a2046
-341:	
+strftime$95:	; Deref £temporary3527 -> tp tp 12
+338:		mov a2066, [bp + 12]
+340:	
 
-strftime$101:	; Call 24 strlen 0
-342:		mov word [bp + 24], strftime$102
-343:		mov [bp + 26], bp
-344:		add bp, 24
-345:		jmp strlen
-347:	
+strftime$96:	; SignedMultiply £temporary3529 £temporary3527 -> tp 2
+341:		mov t2067, [a2066 + 12]
+343:		xor dx, dx
+344:		imul word [@8085$int2$2#]
+350:	
 
-strftime$102:	; PostCall 24
-349:	
+strftime$97:	; BinaryAdd £temporary3530 longDayList £temporary3529
+351:		mov a2071, [bp + 20]
+352:		add a2071, t2070
+354:	
 
-strftime$103:	; GetReturnValue £temporary3517
-351:	
+strftime$98:	; Deref £temporary3528 -> £temporary3530 £temporary3530 0
+356:	
 
-strftime$104:	; SetReturnValue £temporary3517
-353:	
+strftime$99:	; Parameter 50 £temporary3528 -> £temporary3530 8
+357:		mov t2072, [a2071]
+358:		mov [bp + 58], t2072
+360:	
 
-strftime$105:	; Return £temporary3517
-354:		mov t2048, [bp]
-355:		mov di, [bp + 4]
-356:		mov bp, [bp + 2]
-357:		jmp t2048
-359:	
+strftime$100:	; Call 50 strcpy 0
+361:		mov word [bp + 50], strftime$101
+362:		mov [bp + 52], bp
+363:		add bp, 50
+364:		jmp strcpy
+366:	
 
-strftime$106:	; FunctionEnd strftime
-1:	
+strftime$101:	; PostCall 50
+368:	
 
-getWeekNumber:	; Deref £temporary3529 -> tp tp 10
-2:		mov a2049, [bp + 6]
-4:	
+strftime$102:	; Goto 304
+369:		jmp strftime$304
+371:	
 
-getWeekNumber$1:	; BinarySubtract £temporary3530 £temporary3529 -> tp 69
-5:		mov t2050, [a2049 + 10]
-6:		sub t2050, 69
-8:	
+strftime$103:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+373:	
 
-getWeekNumber$2:	; SignedDivide £temporary3531 £temporary3530 4
-10:		xor dx, dx
-11:		idiv word [@8072$int2$4#]
-17:	
+strftime$104:	; Parameter 50 add 6
+374:		mov [bp + 56], bp
+375:		add word [bp + 56], 30
+377:	
 
-getWeekNumber$3:	; IntegralToIntegral £temporary3532 £temporary3531
-19:		and t2053, 65535
-21:		cmp t2053, 0
-22:		jge getWeekNumber$4
-23:		neg t2053
-25:		neg t2053
-27:	
+strftime$105:	; Deref £temporary3532 -> tp tp 8
+378:		mov a2074, [bp + 12]
+380:	
 
-getWeekNumber$4:	; Assign leapDays £temporary3532
-28:		mov [bp + 8], t2053
-30:	
+strftime$106:	; SignedMultiply £temporary3534 £temporary3532 -> tp 2
+381:		mov t2075, [a2074 + 8]
+383:		xor dx, dx
+384:		imul word [@8093$int2$2#]
+390:	
 
-getWeekNumber$5:	; Deref £temporary3533 -> tp tp 10
-31:		mov a2054, [bp + 6]
-33:	
+strftime$107:	; BinaryAdd £temporary3535 shortMonthList £temporary3534
+391:		mov a2079, [bp + 18]
+392:		add a2079, t2078
+394:	
 
-getWeekNumber$6:	; BinarySubtract £temporary3534 £temporary3533 -> tp 70
-34:		mov t2055, [a2054 + 10]
-35:		sub t2055, 70
-37:	
+strftime$108:	; Deref £temporary3533 -> £temporary3535 £temporary3535 0
+396:	
 
-getWeekNumber$7:	; SignedMultiply £temporary3535 £temporary3534 365
-39:		xor dx, dx
-40:		imul word [@8081$int2$365#]
-46:	
+strftime$109:	; Parameter 50 £temporary3533 -> £temporary3535 8
+397:		mov t2080, [a2079]
+398:		mov [bp + 58], t2080
+400:	
 
-getWeekNumber$8:	; IntegralToIntegral £temporary3536 £temporary3535
-48:		and t2058, 65535
-50:		cmp t2058, 0
-51:		jge getWeekNumber$9
-52:		neg t2058
-54:		neg t2058
-56:	
+strftime$110:	; Call 50 strcpy 0
+401:		mov word [bp + 50], strftime$111
+402:		mov [bp + 52], bp
+403:		add bp, 50
+404:		jmp strcpy
+406:	
 
-getWeekNumber$9:	; BinaryAdd £temporary3537 £temporary3536 leapDays
-57:		add t2058, [bp + 8]
-59:	
+strftime$111:	; PostCall 50
+408:	
 
-getWeekNumber$10:	; IntegralToIntegral £temporary3538 £temporary3537
-62:		cmp t2058, 0
-63:		jge getWeekNumber$11
-64:		neg t2058
-66:		neg t2058
-68:	
+strftime$112:	; Goto 304
+409:		jmp strftime$304
+411:	
 
-getWeekNumber$11:	; Assign totalDays £temporary3538
-69:		mov [bp + 12], t2058
-71:	
+strftime$113:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+413:	
 
-getWeekNumber$12:	; SignedGreaterThanEqual 15 totalDays 3
-72:		cmp word [bp + 12], 3
-73:		jge getWeekNumber$15
-75:	
+strftime$114:	; Parameter 50 add 6
+414:		mov [bp + 56], bp
+415:		add word [bp + 56], 30
+417:	
 
-getWeekNumber$13:	; BinaryAdd weekDayJanuaryFirst totalDays 4
-76:		mov a2059, [bp + 12]
-77:		add a2059, 4
-78:		mov [bp + 14], a2059
-80:	
+strftime$115:	; Deref £temporary3537 -> tp tp 8
+418:		mov a2082, [bp + 12]
+420:	
 
-getWeekNumber$14:	; Goto 17
-81:		jmp getWeekNumber$17
-83:	
+strftime$116:	; SignedMultiply £temporary3539 £temporary3537 -> tp 2
+421:		mov t2083, [a2082 + 8]
+423:		xor dx, dx
+424:		imul word [@8101$int2$2#]
+430:	
 
-getWeekNumber$15:	; BinarySubtract £temporary3541 totalDays 3
-84:		mov a2060, [bp + 12]
-85:		sub a2060, 3
-87:	
+strftime$117:	; BinaryAdd £temporary3540 longMonthList £temporary3539
+431:		mov a2087, [bp + 22]
+432:		add a2087, t2086
+434:	
 
-getWeekNumber$16:	; SignedModulo weekDayJanuaryFirst £temporary3541 7
-89:		xor dx, dx
-90:		idiv word [@8098$int2$7#]
-91:		mov [bp + 14], dx
-93:	
+strftime$118:	; Deref £temporary3538 -> £temporary3540 £temporary3540 0
+436:	
 
-getWeekNumber$17:	; BinarySubtract firstWeekSize 7 weekDayJanuaryFirst
-94:		mov a2062, 7
-95:		sub a2062, [bp + 14]
-96:		mov [bp + 16], a2062
-98:	
+strftime$119:	; Parameter 50 £temporary3538 -> £temporary3540 8
+437:		mov t2088, [a2087]
+438:		mov [bp + 58], t2088
+440:	
 
-getWeekNumber$18:	; Deref £temporary3544 -> tp tp 14
-99:		mov a2063, [bp + 6]
-101:	
+strftime$120:	; Call 50 strcpy 0
+441:		mov word [bp + 50], strftime$121
+442:		mov [bp + 52], bp
+443:		add bp, 50
+444:		jmp strcpy
+446:	
 
-getWeekNumber$19:	; SignedGreaterThanEqual 22 £temporary3544 -> tp firstWeekSize
-102:		mov a2064, [bp + 16]
-103:		cmp [a2063 + 14], a2064
-104:		jge getWeekNumber$22
-106:	
+strftime$121:	; PostCall 50
+448:	
 
-getWeekNumber$20:	; SetReturnValue 0
-107:		mov a2065, 0
-109:	
+strftime$122:	; Goto 304
+449:		jmp strftime$304
+451:	
 
-getWeekNumber$21:	; Return 0
-110:		mov t2066, [bp]
-111:		mov di, [bp + 4]
-112:		mov bp, [bp + 2]
-113:		jmp t2066
-115:	
+strftime$123:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+453:	
 
-getWeekNumber$22:	; Deref £temporary3546 -> tp tp 14
-116:		mov a2067, [bp + 6]
-118:	
+strftime$124:	; Parameter 50 add 6
+454:		mov [bp + 56], bp
+455:		add word [bp + 56], 30
+457:	
 
-getWeekNumber$23:	; BinarySubtract £temporary3547 £temporary3546 -> tp firstWeekSize
-119:		mov t2068, [a2067 + 14]
-120:		sub t2068, [bp + 16]
-122:	
+strftime$125:	; Parameter 50 string_2502i2D2502i2D2502i202502i3A2502i3A2502i# 8
+458:		mov word [bp + 58], @8107$string_2502i2D2502i2D2502i202502i3A2502i3A2502i#
+460:	
 
-getWeekNumber$24:	; SignedDivide £temporary3548 £temporary3547 7
-124:		xor dx, dx
-125:		idiv word [@8111$int2$7#]
-131:	
+strftime$126:	; Deref £temporary3542 -> tp tp 10
+461:		mov a2090, [bp + 12]
+463:	
 
-getWeekNumber$25:	; BinaryAdd £temporary3549 £temporary3548 1
-132:		add t2071, 1
-134:	
+strftime$127:	; BinaryAdd £temporary3543 £temporary3542 -> tp 1900
+464:		mov t2091, [a2090 + 10]
+465:		add t2091, 1900
+467:	
 
-getWeekNumber$26:	; SetReturnValue £temporary3549
-135:		mov t2072, t2071
-137:	
+strftime$128:	; Parameter 50 £temporary3543 10
+468:		mov [bp + 60], t2091
+470:	
 
-getWeekNumber$27:	; Return £temporary3549
-138:		mov t2073, [bp]
-139:		mov di, [bp + 4]
-140:		mov bp, [bp + 2]
-141:		jmp t2073
-143:	
+strftime$129:	; Deref £temporary3544 -> tp tp 8
+471:		mov a2092, [bp + 12]
+473:	
 
-getWeekNumber$28:	; FunctionEnd getWeekNumber
+strftime$130:	; BinaryAdd £temporary3545 £temporary3544 -> tp 1
+474:		mov t2093, [a2092 + 8]
+475:		add t2093, 1
+477:	
+
+strftime$131:	; Parameter 50 £temporary3545 12
+478:		mov [bp + 62], t2093
+480:	
+
+strftime$132:	; Deref £temporary3546 -> tp tp 6
+481:		mov a2094, [bp + 12]
+483:	
+
+strftime$133:	; Parameter 50 £temporary3546 -> tp 14
+484:		mov t2095, [a2094 + 6]
+485:		mov [bp + 64], t2095
+487:	
+
+strftime$134:	; Deref £temporary3547 -> tp tp 4
+488:		mov a2096, [bp + 12]
+490:	
+
+strftime$135:	; Parameter 50 £temporary3547 -> tp 16
+491:		mov t2097, [a2096 + 4]
+492:		mov [bp + 66], t2097
+494:	
+
+strftime$136:	; Deref £temporary3548 -> tp tp 2
+495:		mov a2098, [bp + 12]
+497:	
+
+strftime$137:	; Parameter 50 £temporary3548 -> tp 18
+498:		mov t2099, [a2098 + 2]
+499:		mov [bp + 68], t2099
+501:	
+
+strftime$138:	; Deref £temporary3549 -> tp tp 0
+502:		mov a2100, [bp + 12]
+504:	
+
+strftime$139:	; Parameter 50 £temporary3549 -> tp 20
+505:		mov t2101, [a2100]
+506:		mov [bp + 70], t2101
+508:	
+
+strftime$140:	; Call 50 sprintf 0
+509:		mov word [bp + 50], strftime$141
+510:		mov [bp + 52], bp
+511:		add bp, 50
+512:		mov di, bp
+513:		add di, 12
+514:		jmp sprintf
+516:	
+
+strftime$141:	; PostCall 50
+518:	
+
+strftime$142:	; Goto 304
+519:		jmp strftime$304
+521:	
+
+strftime$143:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+523:	
+
+strftime$144:	; Parameter 50 add 6
+524:		mov [bp + 56], bp
+525:		add word [bp + 56], 30
+527:	
+
+strftime$145:	; Parameter 50 string_2502i# 8
+528:		mov word [bp + 58], @8123$string_2502i#
+530:	
+
+strftime$146:	; Deref £temporary3551 -> tp tp 6
+531:		mov a2103, [bp + 12]
+533:	
+
+strftime$147:	; Parameter 50 £temporary3551 -> tp 10
+534:		mov t2104, [a2103 + 6]
+535:		mov [bp + 60], t2104
+537:	
+
+strftime$148:	; Call 50 sprintf 0
+538:		mov word [bp + 50], strftime$149
+539:		mov [bp + 52], bp
+540:		add bp, 50
+541:		mov di, bp
+542:		add di, 2
+543:		jmp sprintf
+545:	
+
+strftime$149:	; PostCall 50
+547:	
+
+strftime$150:	; Goto 304
+548:		jmp strftime$304
+550:	
+
+strftime$151:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+552:	
+
+strftime$152:	; Parameter 50 add 6
+553:		mov [bp + 56], bp
+554:		add word [bp + 56], 30
+556:	
+
+strftime$153:	; Parameter 50 string_2502i# 8
+557:		mov word [bp + 58], @8128$string_2502i#
+559:	
+
+strftime$154:	; Deref £temporary3553 -> tp tp 4
+560:		mov a2106, [bp + 12]
+562:	
+
+strftime$155:	; Parameter 50 £temporary3553 -> tp 10
+563:		mov t2107, [a2106 + 4]
+564:		mov [bp + 60], t2107
+566:	
+
+strftime$156:	; Call 50 sprintf 0
+567:		mov word [bp + 50], strftime$157
+568:		mov [bp + 52], bp
+569:		add bp, 50
+570:		mov di, bp
+571:		add di, 2
+572:		jmp sprintf
+574:	
+
+strftime$157:	; PostCall 50
+576:	
+
+strftime$158:	; Goto 304
+577:		jmp strftime$304
+579:	
+
+strftime$159:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+581:	
+
+strftime$160:	; Parameter 50 add 6
+582:		mov [bp + 56], bp
+583:		add word [bp + 56], 30
+585:	
+
+strftime$161:	; Parameter 50 string_2502i# 8
+586:		mov word [bp + 58], @8133$string_2502i#
+588:	
+
+strftime$162:	; Deref £temporary3555 -> tp tp 4
+589:		mov a2109, [bp + 12]
+591:	
+
+strftime$163:	; SignedModulo £temporary3556 £temporary3555 -> tp 12
+592:		mov t2110, [a2109 + 4]
+594:		xor dx, dx
+595:		idiv word [@8136$int2$12#]
+601:	
+
+strftime$164:	; Parameter 50 £temporary3556 10
+602:		mov [bp + 60], t2112
+604:	
+
+strftime$165:	; Call 50 sprintf 0
+605:		mov word [bp + 50], strftime$166
+606:		mov [bp + 52], bp
+607:		add bp, 50
+608:		mov di, bp
+609:		add di, 2
+610:		jmp sprintf
+612:	
+
+strftime$166:	; PostCall 50
+614:	
+
+strftime$167:	; Goto 304
+615:		jmp strftime$304
+617:	
+
+strftime$168:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+619:	
+
+strftime$169:	; Parameter 50 add 6
+620:		mov [bp + 56], bp
+621:		add word [bp + 56], 30
+623:	
+
+strftime$170:	; Parameter 50 string_2503i# 8
+624:		mov word [bp + 58], @8141$string_2503i#
+626:	
+
+strftime$171:	; Deref £temporary3558 -> tp tp 14
+627:		mov a2114, [bp + 12]
+629:	
+
+strftime$172:	; Parameter 50 £temporary3558 -> tp 10
+630:		mov t2115, [a2114 + 14]
+631:		mov [bp + 60], t2115
+633:	
+
+strftime$173:	; Call 50 sprintf 0
+634:		mov word [bp + 50], strftime$174
+635:		mov [bp + 52], bp
+636:		add bp, 50
+637:		mov di, bp
+638:		add di, 2
+639:		jmp sprintf
+641:	
+
+strftime$174:	; PostCall 50
+643:	
+
+strftime$175:	; Goto 304
+644:		jmp strftime$304
+646:	
+
+strftime$176:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+648:	
+
+strftime$177:	; Parameter 50 add 6
+649:		mov [bp + 56], bp
+650:		add word [bp + 56], 30
+652:	
+
+strftime$178:	; Parameter 50 string_2502i# 8
+653:		mov word [bp + 58], @8146$string_2502i#
+655:	
+
+strftime$179:	; Deref £temporary3560 -> tp tp 8
+656:		mov a2117, [bp + 12]
+658:	
+
+strftime$180:	; BinaryAdd £temporary3561 £temporary3560 -> tp 1
+659:		mov t2118, [a2117 + 8]
+660:		add t2118, 1
+662:	
+
+strftime$181:	; Parameter 50 £temporary3561 10
+663:		mov [bp + 60], t2118
+665:	
+
+strftime$182:	; Call 50 sprintf 0
+666:		mov word [bp + 50], strftime$183
+667:		mov [bp + 52], bp
+668:		add bp, 50
+669:		mov di, bp
+670:		add di, 2
+671:		jmp sprintf
+673:	
+
+strftime$183:	; PostCall 50
+675:	
+
+strftime$184:	; Goto 304
+676:		jmp strftime$304
+678:	
+
+strftime$185:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+680:	
+
+strftime$186:	; Parameter 50 add 6
+681:		mov [bp + 56], bp
+682:		add word [bp + 56], 30
+684:	
+
+strftime$187:	; Parameter 50 string_2502i# 8
+685:		mov word [bp + 58], @8154$string_2502i#
+687:	
+
+strftime$188:	; Deref £temporary3563 -> tp tp 2
+688:		mov a2120, [bp + 12]
+690:	
+
+strftime$189:	; Parameter 50 £temporary3563 -> tp 10
+691:		mov t2121, [a2120 + 2]
+692:		mov [bp + 60], t2121
+694:	
+
+strftime$190:	; Call 50 sprintf 0
+695:		mov word [bp + 50], strftime$191
+696:		mov [bp + 52], bp
+697:		add bp, 50
+698:		mov di, bp
+699:		add di, 2
+700:		jmp sprintf
+702:	
+
+strftime$191:	; PostCall 50
+704:	
+
+strftime$192:	; Goto 304
+705:		jmp strftime$304
+707:	
+
+strftime$193:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+709:	
+
+strftime$194:	; Parameter 50 add 6
+710:		mov [bp + 56], bp
+711:		add word [bp + 56], 30
+713:	
+
+strftime$195:	; Parameter 50 string_25s# 8
+714:		mov word [bp + 58], @8159$string_25s#
+716:	
+
+strftime$196:	; Equal 199 index 0
+717:		cmp word [bp + 24], 0
+718:		je strftime$199
+720:	
+
+strftime$197:	; Assign £temporary3569 string_AM#
+721:		mov t2123, @8160$string_AM#
+723:	
+
+strftime$198:	; Goto 200
+724:		jmp strftime$200
+726:	
+
+strftime$199:	; Assign £temporary3569 string_PM#
+727:		mov t2124, @8161$string_PM#
+729:	
+
+strftime$200:	; Parameter 50 £temporary3569 10
+730:		mov [bp + 60], t2124
+732:	
+
+strftime$201:	; Call 50 sprintf 0
+733:		mov word [bp + 50], strftime$202
+734:		mov [bp + 52], bp
+735:		add bp, 50
+736:		mov di, bp
+737:		add di, 2
+738:		jmp sprintf
+740:	
+
+strftime$202:	; PostCall 50
+742:	
+
+strftime$203:	; Goto 304
+743:		jmp strftime$304
+745:	
+
+strftime$204:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+747:	
+
+strftime$205:	; Parameter 50 add 6
+748:		mov [bp + 56], bp
+749:		add word [bp + 56], 30
+751:	
+
+strftime$206:	; Parameter 50 string_2502i# 8
+752:		mov word [bp + 58], @8173$string_2502i#
+754:	
+
+strftime$207:	; Deref £temporary3571 -> tp tp 0
+755:		mov a2126, [bp + 12]
+757:	
+
+strftime$208:	; Parameter 50 £temporary3571 -> tp 10
+758:		mov t2127, [a2126]
+759:		mov [bp + 60], t2127
+761:	
+
+strftime$209:	; Call 50 sprintf 0
+762:		mov word [bp + 50], strftime$210
+763:		mov [bp + 52], bp
+764:		add bp, 50
+765:		mov di, bp
+766:		add di, 2
+767:		jmp sprintf
+769:	
+
+strftime$210:	; PostCall 50
+771:	
+
+strftime$211:	; Goto 304
+772:		jmp strftime$304
+774:	
+
+strftime$212:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+776:	
+
+strftime$213:	; Parameter 50 add 6
+777:		mov [bp + 56], bp
+778:		add word [bp + 56], 30
+780:	
+
+strftime$214:	; Parameter 50 string_2502i# 8
+781:		mov word [bp + 58], @8178$string_2502i#
+783:	
+
+strftime$215:	; Parameter 50 weekNumberStartSunday 10
+784:		mov a2129, [bp + 26]
+785:		mov [bp + 60], a2129
+787:	
+
+strftime$216:	; Call 50 sprintf 0
+788:		mov word [bp + 50], strftime$217
+789:		mov [bp + 52], bp
+790:		add bp, 50
+791:		mov di, bp
+792:		add di, 2
+793:		jmp sprintf
+795:	
+
+strftime$217:	; PostCall 50
+797:	
+
+strftime$218:	; Goto 304
+798:		jmp strftime$304
+800:	
+
+strftime$219:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+802:	
+
+strftime$220:	; Parameter 50 add 6
+803:		mov [bp + 56], bp
+804:		add word [bp + 56], 30
+806:	
+
+strftime$221:	; Parameter 50 string_2502i# 8
+807:		mov word [bp + 58], @8182$string_2502i#
+809:	
+
+strftime$222:	; Deref £temporary3574 -> tp tp 12
+810:		mov a2131, [bp + 12]
+812:	
+
+strftime$223:	; Parameter 50 £temporary3574 -> tp 10
+813:		mov t2132, [a2131 + 12]
+814:		mov [bp + 60], t2132
+816:	
+
+strftime$224:	; Call 50 sprintf 0
+817:		mov word [bp + 50], strftime$225
+818:		mov [bp + 52], bp
+819:		add bp, 50
+820:		mov di, bp
+821:		add di, 2
+822:		jmp sprintf
+824:	
+
+strftime$225:	; PostCall 50
+826:	
+
+strftime$226:	; Goto 304
+827:		jmp strftime$304
+829:	
+
+strftime$227:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+831:	
+
+strftime$228:	; Parameter 50 add 6
+832:		mov [bp + 56], bp
+833:		add word [bp + 56], 30
+835:	
+
+strftime$229:	; Parameter 50 string_2502i# 8
+836:		mov word [bp + 58], @8187$string_2502i#
+838:	
+
+strftime$230:	; Parameter 50 weekNumberStartMonday 10
+839:		mov a2134, [bp + 28]
+840:		mov [bp + 60], a2134
+842:	
+
+strftime$231:	; Call 50 sprintf 0
+843:		mov word [bp + 50], strftime$232
+844:		mov [bp + 52], bp
+845:		add bp, 50
+846:		mov di, bp
+847:		add di, 2
+848:		jmp sprintf
+850:	
+
+strftime$232:	; PostCall 50
+852:	
+
+strftime$233:	; Goto 304
+853:		jmp strftime$304
+855:	
+
+strftime$234:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+857:	
+
+strftime$235:	; Parameter 50 add 6
+858:		mov [bp + 56], bp
+859:		add word [bp + 56], 30
+861:	
+
+strftime$236:	; Parameter 50 string_2502i3A2502i3A2502i# 8
+862:		mov word [bp + 58], @8191$string_2502i3A2502i3A2502i#
+864:	
+
+strftime$237:	; Deref £temporary3577 -> tp tp 4
+865:		mov a2136, [bp + 12]
+867:	
+
+strftime$238:	; Parameter 50 £temporary3577 -> tp 10
+868:		mov t2137, [a2136 + 4]
+869:		mov [bp + 60], t2137
+871:	
+
+strftime$239:	; Deref £temporary3578 -> tp tp 2
+872:		mov a2138, [bp + 12]
+874:	
+
+strftime$240:	; Parameter 50 £temporary3578 -> tp 12
+875:		mov t2139, [a2138 + 2]
+876:		mov [bp + 62], t2139
+878:	
+
+strftime$241:	; Deref £temporary3579 -> tp tp 0
+879:		mov a2140, [bp + 12]
+881:	
+
+strftime$242:	; Parameter 50 £temporary3579 -> tp 14
+882:		mov t2141, [a2140]
+883:		mov [bp + 64], t2141
+885:	
+
+strftime$243:	; Call 50 sprintf 0
+886:		mov word [bp + 50], strftime$244
+887:		mov [bp + 52], bp
+888:		add bp, 50
+889:		mov di, bp
+890:		add di, 6
+891:		jmp sprintf
+893:	
+
+strftime$244:	; PostCall 50
+895:	
+
+strftime$245:	; Goto 304
+896:		jmp strftime$304
+898:	
+
+strftime$246:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+900:	
+
+strftime$247:	; Parameter 50 add 6
+901:		mov [bp + 56], bp
+902:		add word [bp + 56], 30
+904:	
+
+strftime$248:	; Parameter 50 string_2502i3A2502i3A2502i# 8
+905:		mov word [bp + 58], @8198$string_2502i3A2502i3A2502i#
+907:	
+
+strftime$249:	; Deref £temporary3581 -> tp tp 4
+908:		mov a2143, [bp + 12]
+910:	
+
+strftime$250:	; Parameter 50 £temporary3581 -> tp 10
+911:		mov t2144, [a2143 + 4]
+912:		mov [bp + 60], t2144
+914:	
+
+strftime$251:	; Deref £temporary3582 -> tp tp 2
+915:		mov a2145, [bp + 12]
+917:	
+
+strftime$252:	; Parameter 50 £temporary3582 -> tp 12
+918:		mov t2146, [a2145 + 2]
+919:		mov [bp + 62], t2146
+921:	
+
+strftime$253:	; Deref £temporary3583 -> tp tp 0
+922:		mov a2147, [bp + 12]
+924:	
+
+strftime$254:	; Parameter 50 £temporary3583 -> tp 14
+925:		mov t2148, [a2147]
+926:		mov [bp + 64], t2148
+928:	
+
+strftime$255:	; Call 50 sprintf 0
+929:		mov word [bp + 50], strftime$256
+930:		mov [bp + 52], bp
+931:		add bp, 50
+932:		mov di, bp
+933:		add di, 6
+934:		jmp sprintf
+936:	
+
+strftime$256:	; PostCall 50
+938:	
+
+strftime$257:	; Goto 304
+939:		jmp strftime$304
+941:	
+
+strftime$258:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+943:	
+
+strftime$259:	; Parameter 50 add 6
+944:		mov [bp + 56], bp
+945:		add word [bp + 56], 30
+947:	
+
+strftime$260:	; Parameter 50 string_2502i# 8
+948:		mov word [bp + 58], @8205$string_2502i#
+950:	
+
+strftime$261:	; Deref £temporary3585 -> tp tp 10
+951:		mov a2150, [bp + 12]
+953:	
+
+strftime$262:	; SignedModulo £temporary3586 £temporary3585 -> tp 100
+954:		mov t2151, [a2150 + 10]
+956:		xor dx, dx
+957:		idiv word [@8208$int2$100#]
+963:	
+
+strftime$263:	; Parameter 50 £temporary3586 10
+964:		mov [bp + 60], t2153
+966:	
+
+strftime$264:	; Call 50 sprintf 0
+967:		mov word [bp + 50], strftime$265
+968:		mov [bp + 52], bp
+969:		add bp, 50
+970:		mov di, bp
+971:		add di, 2
+972:		jmp sprintf
+974:	
+
+strftime$265:	; PostCall 50
+976:	
+
+strftime$266:	; Goto 304
+977:		jmp strftime$304
+979:	
+
+strftime$267:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+981:	
+
+strftime$268:	; Parameter 50 add 6
+982:		mov [bp + 56], bp
+983:		add word [bp + 56], 30
+985:	
+
+strftime$269:	; Parameter 50 string_2502i# 8
+986:		mov word [bp + 58], @8213$string_2502i#
+988:	
+
+strftime$270:	; Deref £temporary3588 -> tp tp 10
+989:		mov a2155, [bp + 12]
+991:	
+
+strftime$271:	; BinaryAdd £temporary3589 £temporary3588 -> tp 1900
+992:		mov t2156, [a2155 + 10]
+993:		add t2156, 1900
+995:	
+
+strftime$272:	; Parameter 50 £temporary3589 10
+996:		mov [bp + 60], t2156
+998:	
+
+strftime$273:	; Call 50 sprintf 0
+999:		mov word [bp + 50], strftime$274
+1000:		mov [bp + 52], bp
+1001:		add bp, 50
+1002:		mov di, bp
+1003:		add di, 2
+1004:		jmp sprintf
+1006:	
+
+strftime$274:	; PostCall 50
+1008:	
+
+strftime$275:	; Goto 304
+1009:		jmp strftime$304
+1011:	
+
+strftime$276:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1013:	
+
+strftime$277:	; Parameter 50 add 6
+1014:		mov [bp + 56], bp
+1015:		add word [bp + 56], 30
+1017:	
+
+strftime$278:	; Deref £temporary3591 -> tp tp 16
+1018:		mov a2158, [bp + 12]
+1020:	
+
+strftime$279:	; Equal 282 £temporary3591 -> tp 0
+1021:		cmp word [a2158 + 16], 0
+1022:		je strftime$282
+1024:	
+
+strftime$280:	; Assign £temporary3596 string_summer#
+1025:		mov t2159, @8222$string_summer#
+1027:	
+
+strftime$281:	; Goto 283
+1028:		jmp strftime$283
+1030:	
+
+strftime$282:	; Assign £temporary3596 string_winter#
+1031:		mov t2160, @8223$string_winter#
+1033:	
+
+strftime$283:	; Parameter 50 £temporary3596 8
+1034:		mov [bp + 58], t2160
+1036:	
+
+strftime$284:	; Call 50 strcpy 0
+1037:		mov word [bp + 50], strftime$285
+1038:		mov [bp + 52], bp
+1039:		add bp, 50
+1040:		jmp strcpy
+1042:	
+
+strftime$285:	; PostCall 50
+1044:	
+
+strftime$286:	; Goto 304
+1045:		jmp strftime$304
+1047:	
+
+strftime$287:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1049:	
+
+strftime$288:	; Parameter 50 add 6
+1050:		mov [bp + 56], bp
+1051:		add word [bp + 56], 30
+1053:	
+
+strftime$289:	; Parameter 50 string_25# 8
+1054:		mov word [bp + 58], @8235$string_25#
+1056:	
+
+strftime$290:	; Call 50 strcpy 0
+1057:		mov word [bp + 50], strftime$291
+1058:		mov [bp + 52], bp
+1059:		add bp, 50
+1060:		jmp strcpy
+1062:	
+
+strftime$291:	; PostCall 50
+1064:	
+
+strftime$292:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1066:	
+
+strftime$293:	; Parameter 50 add 6
+1067:		mov [bp + 56], bp
+1068:		add word [bp + 56], 30
+1070:	
+
+strftime$294:	; Parameter 50 string_# 8
+1071:		mov word [bp + 58], @8237$string_#
+1073:	
+
+strftime$295:	; Call 50 strcpy 0
+1074:		mov word [bp + 50], strftime$296
+1075:		mov [bp + 52], bp
+1076:		add bp, 50
+1077:		jmp strcpy
+1079:	
+
+strftime$296:	; PostCall 50
+1081:	
+
+strftime$297:	; Goto 304
+1082:		jmp strftime$304
+1084:	
+
+strftime$298:	; Deref £temporary3600 -> add add 0
+1085:		mov a2164, bp
+1086:		add a2164, 30
+1088:	
+
+strftime$299:	; BinaryAdd £temporary3602 format index
+1089:		mov a2165, [bp + 10]
+1090:		add a2165, [bp + 24]
+1092:	
+
+strftime$300:	; Deref £temporary3601 -> £temporary3602 £temporary3602 0
+1094:	
+
+strftime$301:	; Assign £temporary3600 -> add £temporary3601 -> £temporary3602
+1095:		mov t2166, [a2165]
+1096:		mov [a2164], t2166
+1098:	
+
+strftime$302:	; Deref £temporary3603 -> add add 1
+1099:		mov a2167, bp
+1100:		add a2167, 30
+1102:	
+
+strftime$303:	; Assign £temporary3603 -> add 0
+1103:		mov byte [a2167 + 1], 0
+1105:	
+
+strftime$304:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1107:	
+
+strftime$305:	; Parameter 50 result 6
+1108:		mov a2168, [bp + 6]
+1109:		mov [bp + 56], a2168
+1111:	
+
+strftime$306:	; Call 50 strlen 0
+1112:		mov word [bp + 50], strftime$307
+1113:		mov [bp + 52], bp
+1114:		add bp, 50
+1115:		jmp strlen
+1117:	
+
+strftime$307:	; PostCall 50
+1119:	
+
+strftime$308:	; GetReturnValue £temporary3604
+1121:	
+
+strftime$309:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1122:		mov [bp + 50], type2169
+1124:	
+
+strftime$310:	; Parameter 50 add 6
+1125:		mov [bp + 58], bp
+1126:		add word [bp + 58], 30
+1128:	
+
+strftime$311:	; Call 50 strlen 0
+1129:		mov word [bp + 52], strftime$312
+1130:		mov [bp + 54], bp
+1131:		add bp, 52
+1132:		jmp strlen
+1134:	
+
+strftime$312:	; PostCall 50
+1135:		mov type2170, bx
+1136:		mov type2169, [bp + 50]
+1138:	
+
+strftime$313:	; GetReturnValue £temporary3605
+1140:	
+
+strftime$314:	; BinaryAdd £temporary3606 £temporary3604 £temporary3605
+1141:		add type2169, type2170
+1143:	
+
+strftime$315:	; SignedGreaterThanEqual 323 £temporary3606 maxSize
+1144:		cmp type2169, [bp + 8]
+1145:		jge strftime$323
+1147:	
+
+strftime$316:	; CallHeader 50 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1149:	
+
+strftime$317:	; Parameter 50 result 6
+1150:		mov a2171, [bp + 6]
+1151:		mov [bp + 56], a2171
+1153:	
+
+strftime$318:	; Parameter 50 add 8
+1154:		mov [bp + 58], bp
+1155:		add word [bp + 58], 30
+1157:	
+
+strftime$319:	; Call 50 strcat 0
+1158:		mov word [bp + 50], strftime$320
+1159:		mov [bp + 52], bp
+1160:		add bp, 50
+1161:		jmp strcat
+1163:	
+
+strftime$320:	; PostCall 50
+1165:	
+
+strftime$321:	; Increment index
+1166:		inc word [bp + 24]
+1168:	
+
+strftime$322:	; Goto 49
+1169:		jmp strftime$49
+1171:	
+
+strftime$323:	; CallHeader 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+1173:	
+
+strftime$324:	; Parameter 24 result 6
+1174:		mov a2173, [bp + 6]
+1175:		mov [bp + 30], a2173
+1177:	
+
+strftime$325:	; Call 24 strlen 0
+1178:		mov word [bp + 24], strftime$326
+1179:		mov [bp + 26], bp
+1180:		add bp, 24
+1181:		jmp strlen
+1183:	
+
+strftime$326:	; PostCall 24
+1185:	
+
+strftime$327:	; GetReturnValue £temporary3609
+1187:	
+
+strftime$328:	; SetReturnValue £temporary3609
+1189:	
+
+strftime$329:	; Return £temporary3609
+1190:		mov t2175, [bp]
+1191:		mov di, [bp + 4]
+1192:		mov bp, [bp + 2]
+1193:		jmp t2175
+1195:	
+
+strftime$330:	; FunctionEnd strftime
