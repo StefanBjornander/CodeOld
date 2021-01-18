@@ -4,23 +4,27 @@ new  <malloc4: 65448 80 65528>
 
 656:
 old  <now 1: 1610917114>
-new  <now 1: 1610916957>
+new  <now 1: 1610955761>
 
 657:
 old  <now 2: 1610917114>
-new  <now 2: 1610916957>
+new  <now 2: 1610955761>
 
 658:
 old  <   gm time: Sun 2021-01-17 20:58:34, year day 16, week day 0, daylight saving time -1>
-new  <   gm time: Sun 2021-01-17 20:55:57, year day 16, week day 0, daylight saving time -1>
+new  <   gm time: Mon 2021-01-18 07:42:41, year day 17, week day 1, daylight saving time -1>
 
 659:
 old  <local time: Sun 2021-01-17 21:58:34, year day 16, week day 0, daylight saving time -1>
-new  <local time: Sun 2021-01-17 21:55:57, year day 16, week day 0, daylight saving time -1>
+new  <local time: Mon 2021-01-18 08:42:41, year day 17, week day 1, daylight saving time -1>
 
 660:
 old  <asctime <Sun Jan 17 20:58:34 2021>, ctime <Sun Jan 17 21:58:34 2021>>
-new  <asctime <Sun Jan 17 20:55:57 2021>, ctime <Sun Jan 17 21:55:57 2021>>
+new  <asctime <Mon Jan 18 07:42:41 2021>, ctime <Mon Jan 18 08:42:41 2021>>
+
+661:
+old  <strftime 243 243 <short day  , long day  , short month  , long month  , date-time  , mday  , hour  , gm hour  , yday  , month  , min  , am/pm PM, sec  , week number sun  , week day  , week number mon  , date  , time  , short year  , long year  , summer/winter  >>
+new  <strftime 243 243 <short day  , long day  , short month  , long month  , date-time  , mday  , hour  , gm hour  , yday  , month  , min  , am/pm AM, sec  , week number sun  , week day  , week number mon  , date  , time  , short year  , long year  , summer/winter  >>
 
 663:
 old  <  Address 7409576, Size 96>
@@ -134,4 +138,4 @@ new  <<%> <Hello, World!> <X> <57268>>
 old  <<%> <Hello, World!> <X> <6361160>>
 new  <<%> <Hello, World!> <X> <57268>>
 
-34
+35
