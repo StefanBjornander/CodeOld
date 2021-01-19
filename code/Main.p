@@ -663,7 +663,15 @@ mainX ( ) ;
 }
 }
 
+void random_access ( void ) ;
+void temp_file ( void ) ;
+
 void main ( void ) {
+
+temp_file ( ) ;
+}
+
+void mainXXX ( void ) {
 math_test ( ) ;
 file_test ( ) ;
 

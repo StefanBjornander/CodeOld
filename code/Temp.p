@@ -373,7 +373,7 @@ FILE * stream ;
 char name [ 4  ];
 
 if ( generateTempName ( name , 0 , 0  ) && ( ( stream = fopen ( name , "w" ) ) != ( ( void * ) 0 )  ) ) {
-
+printf ( "temp name: <%s>\n" , name ) ;
 stream -> temporary = 1  ;
 return stream ;
 }

@@ -810,6 +810,7 @@ printf ( "fileexists \"File.y\": %s\n" , fileexists ( "File.y" ) ? "Yes" : "No" 
 printf ( "fileexists \"File.p\": %s\n" , fileexists ( "File.p" ) ? "Yes" : "No" )  ;
 printf ( "fileexists \"File.z\": %s\n" , fileexists ( "File.z" ) ? "Yes" : "No" )  ;
 
+{
 
 
 
@@ -843,6 +844,66 @@ printf ( "fileexists \"File.z\": %s\n" , fileexists ( "File.z" ) ? "Yes" : "No" 
 
 
 
+}
+}
+
+void random_access ( void ) {
+FILE * inFilePtr = fopen ( "outx.txt" , "r" ) ;
+unsigned int u , index ;
+if ( ! ( inFilePtr != ( ( void * ) 0 )  ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 379 ) ; abort ( ) ; }  ;
+
+{ int size = fseek ( inFilePtr , 0 , SEEK_END ) ;
+
+printf ( "ftell %i\n" , ftell ( inFilePtr ) ) ;
 
 
+
+
+
+
+
+for ( index = 0 ; index < size ; ++ index ) {
+char c = ( char ) fgetc ( inFilePtr ) ;
+printf ( "<%c> %i %i\n" , c , ( int ) c , ftell ( inFilePtr ) ) ;
+fseek ( inFilePtr , size - index - 1 , SEEK_SET ) ;
+}
+}
+
+printf ( "\n" ) ;
+fclose ( inFilePtr ) ;
+}
+
+void temp_file ( void ) {
+FILE * tempFilePtr ;
+FILE * inOutFilePtr = fopen ( "PBookX.txt" , "r+" ) ;
+if ( ! ( inOutFilePtr != ( ( void * ) 0 )  ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inOutFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 405 ) ; abort ( ) ; }  ;
+
+tempFilePtr = tmpfile ( ) ;
+if ( ! ( tempFilePtr != ( ( void * ) 0 )  ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "tempFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 408 ) ; abort ( ) ; }  ;
+
+while ( 1  ) {
+char c = ( char ) fgetc ( inOutFilePtr )  ;
+
+if ( c == -1  ) {
+break ;
+}
+
+putc ( toupper ( c ) , tempFilePtr ) ;
+}
+
+rewind ( tempFilePtr ) ;
+fprintf ( inOutFilePtr , "\n------------\n" ) ;
+
+while ( 1  ) {
+char c = ( char ) fgetc ( tempFilePtr )  ;
+
+if ( c == -1  ) {
+break ;
+}
+
+putc ( c , inOutFilePtr ) ;
+}
+
+fclose ( inOutFilePtr ) ;
+fclose ( tempFilePtr ) ;
 } 

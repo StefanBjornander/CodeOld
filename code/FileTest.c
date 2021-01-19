@@ -336,7 +336,7 @@ void file_test() {
   X("File.p");
   X("File.z");
 
-/*  { FILE* tempFilePtr;
+  { /*FILE* tempFilePtr;
     FILE* inOutFilePtr = fopen("PBookX.txt", "r+"); // Temp FilePtr
     assert(inOutFilePtr != NULL);
 
@@ -369,6 +369,67 @@ void file_test() {
     }
 
     fclose(inOutFilePtr);
-    fclose(tempFilePtr);
-  }*/
+    fclose(tempFilePtr);*/
+  }
+}
+
+void random_access(void) {
+  FILE* inFilePtr = fopen("outx.txt", "r"); // Random Access
+  unsigned int u, index;
+  assert(inFilePtr != NULL);
+    
+  { int size = fseek(inFilePtr, 0, SEEK_END);
+    //fseek(inFilePtr, 100, SEEK_SET);
+    printf("ftell %i\n", ftell(inFilePtr));
+
+    /*for (index = 0; index < 130; ++index) {
+      char c = (char) fgetc(inFilePtr);
+      printf("<%c> %i %i\n", c, (int) c, ftell(inFilePtr));
+    }*/
+
+    //while (ftell(inFilePtr) >= 0) {
+    for (index = 0; index < size; ++index) {
+      char c = (char) fgetc(inFilePtr);
+      printf("<%c> %i %i\n", c, (int) c, ftell(inFilePtr));
+      fseek(inFilePtr, size - index - 1, SEEK_SET);
+    }
+  }
+
+  printf("\n");
+  fclose(inFilePtr);
+}
+
+void temp_file(void) {
+  FILE* tempFilePtr;
+  FILE* inOutFilePtr = fopen("PBookX.txt", "r+"); // Temp FilePtr
+  assert(inOutFilePtr != NULL);
+
+  tempFilePtr = tmpfile();
+  assert(tempFilePtr != NULL);
+
+  while (TRUE) {
+    char c = (char) getc(inOutFilePtr);
+
+    if (c == EOF) {
+      break;
+    }
+
+    putc(toupper(c), tempFilePtr);
+  }
+
+  rewind(tempFilePtr);
+  fprintf(inOutFilePtr, "\n------------\n");
+
+  while (TRUE) {
+    char c = (char) getc(tempFilePtr);
+
+    if (c == EOF) {
+      break;
+    }
+
+    putc(c, inOutFilePtr);
+  }
+
+  fclose(inOutFilePtr);
+  fclose(tempFilePtr);
 }

@@ -62,7 +62,7 @@ FILE* tmpfile(void) {
   char name[L_tmpnam];
 
   if (generateTempName(name, 0, TEMP_FILE) && ((stream = fopen(name, "w")) != NULL)) {
-    //printf("stream\n");
+    printf("temp name: <%s>\n", name);
     stream->temporary = TRUE;
     return stream;
   }
