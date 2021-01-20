@@ -4,7 +4,7 @@ signal:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
 signal$1:	; Parameter 10 string_Signal2025i20function2025p0A# 6
-4:		mov word [bp + 16], @1533$string_Signal2025i20function2025p0A#
+4:		mov word [bp + 16], @1535$string_Signal2025i20function2025p0A#
 6:	
 
 signal$2:	; Parameter 10 sig 8
@@ -29,7 +29,7 @@ signal$4:	; Call 10 printf 0
 signal$5:	; PostCall 10
 24:	
 
-signal$6:	; IntegralToIntegral £temporary637 sig
+signal$6:	; IntegralToIntegral £temporary638 sig
 25:		mov ax, [bp + 6]
 28:		cmp ax, 0
 29:		jge signal$7
@@ -37,7 +37,7 @@ signal$6:	; IntegralToIntegral £temporary637 sig
 32:		neg al
 34:	
 
-signal$7:	; AssignRegister al £temporary637
+signal$7:	; AssignRegister al £temporary638
 36:	
 
 signal$8:	; AssignRegister ah 37
@@ -56,7 +56,7 @@ signal$11:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol
 47:	
 
 signal$12:	; Parameter 10 string_Signal20done0A# 6
-48:		mov word [bp + 16], @1542$string_Signal20done0A#
+48:		mov word [bp + 16], @1544$string_Signal20done0A#
 50:	
 
 signal$13:	; Call 10 printf 0
@@ -84,7 +84,7 @@ raise:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
 raise$1:	; Parameter 8 string_0ARaise20signal2025i0A# 6
-4:		mov word [bp + 14], @1549$string_0ARaise20signal2025i0A#
+4:		mov word [bp + 14], @1551$string_0ARaise20signal2025i0A#
 6:	
 
 raise$2:	; Parameter 8 sig 8
@@ -104,7 +104,7 @@ raise$3:	; Call 8 printf 0
 raise$4:	; PostCall 8
 20:	
 
-raise$5:	; IntegralToIntegral £temporary647 sig
+raise$5:	; IntegralToIntegral £temporary648 sig
 21:		mov ax, [bp + 6]
 24:		cmp ax, 0
 25:		jge raise$6
@@ -112,7 +112,7 @@ raise$5:	; IntegralToIntegral £temporary647 sig
 28:		neg al
 30:	
 
-raise$6:	; AssignRegister al £temporary647
+raise$6:	; AssignRegister al £temporary648
 32:	
 
 raise$7:	; AssignRegister ah 53
@@ -123,10 +123,10 @@ raise$8:	; Interrupt 33
 36:		int 33
 38:	
 
-raise$9:	; InspectRegister £temporary649 bx
+raise$9:	; InspectRegister £temporary650 bx
 40:	
 
-raise$10:	; Assign func £temporary649
+raise$10:	; Assign func £temporary650
 41:		mov [bp + 8], bx
 43:	
 
@@ -134,7 +134,7 @@ raise$11:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 45:	
 
 raise$12:	; Parameter 10 string_Raise20function2025p0A# 6
-46:		mov word [bp + 16], @1559$string_Raise20function2025p0A#
+46:		mov word [bp + 16], @1561$string_Raise20function2025p0A#
 48:	
 
 raise$13:	; Parameter 10 func 8
@@ -163,7 +163,7 @@ raise$17:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 68:	
 
 raise$18:	; Parameter 10 string_Raise20default0A# 6
-69:		mov word [bp + 16], @1565$string_Raise20default0A#
+69:		mov word [bp + 16], @1567$string_Raise20default0A#
 71:	
 
 raise$19:	; Call 10 printf 0
@@ -197,7 +197,7 @@ raise$24:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 95:	
 
 raise$25:	; Parameter 10 string_Raise20error0A# 6
-96:		mov word [bp + 16], @1573$string_Raise20error0A#
+96:		mov word [bp + 16], @1575$string_Raise20error0A#
 98:	
 
 raise$26:	; Call 10 printf 0
@@ -226,7 +226,7 @@ raise$30:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 118:	
 
 raise$31:	; Parameter 10 string_Raise20function2C20calling2025i20with2025i0A# 6
-119:		mov word [bp + 16], @1577$string_Raise20function2C20calling2025i20with2025i0A#
+119:		mov word [bp + 16], @1579$string_Raise20function2C20calling2025i20with2025i0A#
 121:	
 
 raise$32:	; Parameter 10 func 8

@@ -56,12 +56,13 @@ void mainX() {
 void random_access(void);
 void temp_file(void);
 
-void main(void) {
-  //random_access();
+BOOL generateName(int index, char* text, int max);
+
+void mainXXX(void) {
   temp_file();
 }
 
-void mainXXX(void) {
+void main(void) {
   math_test();
   file_test();
   //signal_test();

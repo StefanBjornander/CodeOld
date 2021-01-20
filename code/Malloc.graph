@@ -5,14 +5,14 @@ malloc
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a11 a11 currBlockPtr 95 99,a12 a12 currAddress 98 99 102 106)
-  (a12 a12 currAddress 98 99 102 106,a13 a13 lastAddress 105 106 107)>
+  (a12 a12 currBlockPtr 95 99,a13 a13 currAddress 98 99 102 106)
+  (a13 a13 currAddress 98 99 102 106,a14 a14 lastAddress 105 106 107)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a11 a11 currBlockPtr si 95 99,a12 a12 currAddress ax 98 99 102 106)
-  (a12 a12 currAddress ax 98 99 102 106,a13 a13 lastAddress bx 105 106 107)>
+  (a12 a12 currBlockPtr si 95 99,a13 a13 currAddress ax 98 99 102 106)
+  (a13 a13 currAddress ax 98 99 102 106,a14 a14 lastAddress bx 105 106 107)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a11 a11 currBlockPtr si 95 99,a12 a12 currAddress ax 98 99 102 106)
-  (a12 a12 currAddress ax 98 99 102 106,a13 a13 lastAddress bx 105 106 107)>
+  (a12 a12 currBlockPtr si 95 99,a13 a13 currAddress ax 98 99 102 106)
+  (a13 a13 currAddress ax 98 99 102 106,a14 a14 lastAddress bx 105 106 107)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
@@ -21,41 +21,41 @@ malloc
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a21 a21 currBlockPtr 144 147,t22 t22 £temporary41 147 148)>
+  (a22 a22 currBlockPtr 144 147,t23 t23 £temporary42 147 148)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a21 a21 currBlockPtr si 144 147,t22 t22 £temporary41 ax 147 148)>
+  (a22 a22 currBlockPtr si 144 147,t23 t23 £temporary42 ax 147 148)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a23 a23 minBlockPtr 158 165 168 169,a24 a24 minBlockPtr 162 165)>
+  (a24 a24 minBlockPtr 158 165 168 169,a25 a25 minBlockPtr 162 165)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a23 a23 minBlockPtr ax 158 165 168 169,a24 a24 minBlockPtr si 162 165)>
+  (a24 a24 minBlockPtr ax 158 165 168 169,a25 a25 minBlockPtr si 162 165)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a26 a26 newBlockPtr 179 183,a27 a27 memorySize 182 183)>
+  (a27 a27 newBlockPtr 179 183,a28 a28 memorySize 182 183)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a26 a26 newBlockPtr si 179 183,a27 a27 memorySize ax 182 183)>
+  (a27 a27 newBlockPtr si 179 183,a28 a28 memorySize ax 182 183)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a28 a28 newBlockPtr 186 190,a29 a29 minBlockPtr 189 190)>
+  (a29 a29 newBlockPtr 186 190,a30 a30 minBlockPtr 189 190)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a28 a28 newBlockPtr si 186 190,a29 a29 minBlockPtr ax 189 190)>
+  (a29 a29 newBlockPtr si 186 190,a30 a30 minBlockPtr ax 189 190)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a30 a30 minPrevBlockPtr 197 201,a31 a31 newBlockPtr 200 201)>
+  (a31 a31 minPrevBlockPtr 197 201,a32 a32 newBlockPtr 200 201)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a30 a30 minPrevBlockPtr si 197 201,a31 a31 newBlockPtr ax 200 201)>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+  (a31 a31 minPrevBlockPtr si 197 201,a32 a32 newBlockPtr ax 200 201)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a39 a39 newBlockPtr 248 252,a40 a40 memorySize 251 252)>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a39 a39 newBlockPtr si 248 252,a40 a40 memorySize ax 251 252)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a42 a42 prevBlockPtr 265 269,a43 a43 newBlockPtr 268 269)>
+  (a40 a40 newBlockPtr 248 252,a41 a41 memorySize 251 252)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a42 a42 prevBlockPtr si 265 269,a43 a43 newBlockPtr ax 268 269)>
+  (a40 a40 newBlockPtr si 248 252,a41 a41 memorySize ax 251 252)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a43 a43 prevBlockPtr 265 269,a44 a44 newBlockPtr 268 269)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]
+  (a43 a43 prevBlockPtr si 265 269,a44 a44 newBlockPtr ax 268 269)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
@@ -79,28 +79,28 @@ free
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a64 a64 currBlockPtr 62 65,t65 t65 £temporary88 65 66)>
+  (a65 a65 currBlockPtr 62 65,t66 t66 £temporary89 65 66)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a64 a64 currBlockPtr si 62 65,t65 t65 £temporary88 ax 65 66)>
+  (a65 a65 currBlockPtr si 62 65,t66 t66 £temporary89 ax 65 66)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a68 a68 prevBlockPtr 88 95,a69 a69 currBlockPtr 91 94)
-  (a68 a68 prevBlockPtr 88 95,t70 t70 £temporary93 94 95)
-  (a69 a69 currBlockPtr 91 94,t70 t70 £temporary93 94 95)>
+  (a69 a69 prevBlockPtr 88 95,a70 a70 currBlockPtr 91 94)
+  (a69 a69 prevBlockPtr 88 95,t71 t71 £temporary94 94 95)
+  (a70 a70 currBlockPtr 91 94,t71 t71 £temporary94 94 95)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a68 a68 prevBlockPtr si 88 95,a69 a69 currBlockPtr di 91 94)
-  (a68 a68 prevBlockPtr si 88 95,t70 t70 £temporary93 ax 94 95)
-  (a69 a69 currBlockPtr di 91 94,t70 t70 £temporary93 ax 94 95)>
+  (a69 a69 prevBlockPtr si 88 95,a70 a70 currBlockPtr di 91 94)
+  (a69 a69 prevBlockPtr si 88 95,t71 t71 £temporary94 ax 94 95)
+  (a70 a70 currBlockPtr di 91 94,t71 t71 £temporary94 ax 94 95)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a68 a68 prevBlockPtr si 88 95,a69 a69 currBlockPtr di 91 94)
-  (a68 a68 prevBlockPtr si 88 95,t70 t70 £temporary93 ax 94 95)
-  (a69 a69 currBlockPtr di 91 94,t70 t70 £temporary93 ax 94 95)>
+  (a69 a69 prevBlockPtr si 88 95,a70 a70 currBlockPtr di 91 94)
+  (a69 a69 prevBlockPtr si 88 95,t71 t71 £temporary94 ax 94 95)
+  (a70 a70 currBlockPtr di 91 94,t71 t71 £temporary94 ax 94 95)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a73 a73 currBlockPtr 108 111,t74 t74 £temporary94 111 112)>
+  (a74 a74 currBlockPtr 108 111,t75 t75 £temporary95 111 112)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a73 a73 currBlockPtr si 108 111,t74 t74 £temporary94 ax 111 112)>
+  (a74 a74 currBlockPtr si 108 111,t75 t75 £temporary95 ax 111 112)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
@@ -113,31 +113,31 @@ realloc
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a88 a88 oldBlockPtr 166 169,t89 t89 £temporary114 169 170)>
+  (a89 a89 oldBlockPtr 166 169,t90 t90 £temporary115 169 170)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a88 a88 oldBlockPtr si 166 169,t89 t89 £temporary114 ax 169 170)>
+  (a89 a89 oldBlockPtr si 166 169,t90 t90 £temporary115 ax 169 170)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a90 a90 oldBlockPtr 174 178,a91 a91 newBlockSize 177 178)>
+  (a91 a91 oldBlockPtr 174 178,a92 a92 newBlockSize 177 178)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a90 a90 oldBlockPtr si 174 178,a91 a91 newBlockSize ax 177 178)>
+  (a91 a91 oldBlockPtr si 174 178,a92 a92 newBlockSize ax 177 178)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a96 a96 currBlockPtr 206 211,a97 a97 lastAddress 210 211 212)>
+  (a97 a97 currBlockPtr 206 211,a98 a98 lastAddress 210 211 212)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a96 a96 currBlockPtr ax 206 211,a97 a97 lastAddress bx 210 211 212)>
+  (a97 a97 currBlockPtr ax 206 211,a98 a98 lastAddress bx 210 211 212)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a99 a99 oldBlockPtr 220 224,a100 a100 newBlockSize 223 224)>
+  (a100 a100 oldBlockPtr 220 224,a101 a101 newBlockSize 223 224)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a99 a99 oldBlockPtr si 220 224,a100 a100 newBlockSize ax 223 224)>
+  (a100 a100 oldBlockPtr si 220 224,a101 a101 newBlockSize ax 223 224)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a104 a104 currBlockPtr 243 246,t105 t105 £temporary124 246 247)>
+  (a105 a105 currBlockPtr 243 246,t106 t106 £temporary125 246 247)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a104 a104 currBlockPtr si 243 246,t105 t105 £temporary124 ax 246 247)>
+  (a105 a105 currBlockPtr si 243 246,t106 t106 £temporary125 ax 246 247)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
@@ -156,11 +156,11 @@ print_heap
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a120 a120 currBlockPtr 36 39,t121 t121 £temporary149 39 40)>
+  (a121 a121 currBlockPtr 36 39,t122 t122 £temporary150 39 40)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a120 a120 currBlockPtr si 36 39,t121 t121 £temporary149 ax 39 40)>
+  (a121 a121 currBlockPtr si 36 39,t122 t122 £temporary150 ax 39 40)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a123 a123 currBlockPtr 53 56,t124 t124 £temporary151 56 57)>
+  (a124 a124 currBlockPtr 53 56,t125 t125 £temporary152 56 57)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a123 a123 currBlockPtr si 53 56,t124 t124 £temporary151 ax 56 57)>
+  (a124 a124 currBlockPtr si 53 56,t125 t125 £temporary152 ax 56 57)>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>

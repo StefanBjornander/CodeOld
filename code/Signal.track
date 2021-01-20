@@ -4,17 +4,17 @@ signal:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
 signal$1:	; Parameter 10 string_Signal2025i20function2025p0A# 6
-4:		mov word [bp + 16], @1533$string_Signal2025i20function2025p0A#
+4:		mov word [bp + 16], @1535$string_Signal2025i20function2025p0A#
 6:	
 
 signal$2:	; Parameter 10 sig 8
-7:		mov a336, [bp + 6]
-8:		mov [bp + 18], a336
+7:		mov a337, [bp + 6]
+8:		mov [bp + 18], a337
 10:	
 
 signal$3:	; Parameter 10 func 10
-11:		mov a337, [bp + 8]
-12:		mov [bp + 20], a337
+11:		mov a338, [bp + 8]
+12:		mov [bp + 20], a338
 14:	
 
 signal$4:	; Call 10 printf 0
@@ -29,23 +29,23 @@ signal$4:	; Call 10 printf 0
 signal$5:	; PostCall 10
 24:	
 
-signal$6:	; IntegralToIntegral £temporary637 sig
-25:		mov a339, [bp + 6]
-28:		cmp a339, 0
+signal$6:	; IntegralToIntegral £temporary638 sig
+25:		mov a340, [bp + 6]
+28:		cmp a340, 0
 29:		jge signal$7
-30:		neg a339
-32:		neg a339
+30:		neg a340
+32:		neg a340
 34:	
 
-signal$7:	; AssignRegister al £temporary637
+signal$7:	; AssignRegister al £temporary638
 36:	
 
 signal$8:	; AssignRegister ah 37
-37:		mov a340, 37
+37:		mov a341, 37
 39:	
 
 signal$9:	; AssignRegister dx func
-40:		mov a341, [bp + 8]
+40:		mov a342, [bp + 8]
 42:	
 
 signal$10:	; Interrupt 33
@@ -56,7 +56,7 @@ signal$11:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol
 47:	
 
 signal$12:	; Parameter 10 string_Signal20done0A# 6
-48:		mov word [bp + 16], @1542$string_Signal20done0A#
+48:		mov word [bp + 16], @1544$string_Signal20done0A#
 50:	
 
 signal$13:	; Call 10 printf 0
@@ -71,10 +71,10 @@ signal$14:	; PostCall 10
 59:	
 
 signal$15:	; Return 0
-60:		mov t343, [bp]
+60:		mov t344, [bp]
 61:		mov di, [bp + 4]
 62:		mov bp, [bp + 2]
-63:		jmp t343
+63:		jmp t344
 65:	
 
 signal$16:	; FunctionEnd signal
@@ -84,12 +84,12 @@ raise:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
 raise$1:	; Parameter 8 string_0ARaise20signal2025i0A# 6
-4:		mov word [bp + 14], @1549$string_0ARaise20signal2025i0A#
+4:		mov word [bp + 14], @1551$string_0ARaise20signal2025i0A#
 6:	
 
 raise$2:	; Parameter 8 sig 8
-7:		mov a344, [bp + 6]
-8:		mov [bp + 16], a344
+7:		mov a345, [bp + 6]
+8:		mov [bp + 16], a345
 10:	
 
 raise$3:	; Call 8 printf 0
@@ -104,42 +104,42 @@ raise$3:	; Call 8 printf 0
 raise$4:	; PostCall 8
 20:	
 
-raise$5:	; IntegralToIntegral £temporary647 sig
-21:		mov a346, [bp + 6]
-24:		cmp a346, 0
+raise$5:	; IntegralToIntegral £temporary648 sig
+21:		mov a347, [bp + 6]
+24:		cmp a347, 0
 25:		jge raise$6
-26:		neg a346
-28:		neg a346
+26:		neg a347
+28:		neg a347
 30:	
 
-raise$6:	; AssignRegister al £temporary647
+raise$6:	; AssignRegister al £temporary648
 32:	
 
 raise$7:	; AssignRegister ah 53
-33:		mov a347, 53
+33:		mov a348, 53
 35:	
 
 raise$8:	; Interrupt 33
 36:		int 33
 38:	
 
-raise$9:	; InspectRegister £temporary649 bx
+raise$9:	; InspectRegister £temporary650 bx
 40:	
 
-raise$10:	; Assign func £temporary649
-41:		mov [bp + 8], t348
+raise$10:	; Assign func £temporary650
+41:		mov [bp + 8], t349
 43:	
 
 raise$11:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 45:	
 
 raise$12:	; Parameter 10 string_Raise20function2025p0A# 6
-46:		mov word [bp + 16], @1559$string_Raise20function2025p0A#
+46:		mov word [bp + 16], @1561$string_Raise20function2025p0A#
 48:	
 
 raise$13:	; Parameter 10 func 8
-49:		mov a349, [bp + 8]
-50:		mov [bp + 18], a349
+49:		mov a350, [bp + 8]
+50:		mov [bp + 18], a350
 52:	
 
 raise$14:	; Call 10 printf 0
@@ -163,7 +163,7 @@ raise$17:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 68:	
 
 raise$18:	; Parameter 10 string_Raise20default0A# 6
-69:		mov word [bp + 16], @1565$string_Raise20default0A#
+69:		mov word [bp + 16], @1567$string_Raise20default0A#
 71:	
 
 raise$19:	; Call 10 printf 0
@@ -178,14 +178,14 @@ raise$20:	; PostCall 10
 80:	
 
 raise$21:	; SetReturnValue 1
-81:		mov a352, 1
+81:		mov a353, 1
 83:	
 
 raise$22:	; Return 1
-84:		mov t353, [bp]
+84:		mov t354, [bp]
 85:		mov di, [bp + 4]
 86:		mov bp, [bp + 2]
-87:		jmp t353
+87:		jmp t354
 89:	
 
 raise$23:	; NotEqual 30 func 0
@@ -197,7 +197,7 @@ raise$24:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 95:	
 
 raise$25:	; Parameter 10 string_Raise20error0A# 6
-96:		mov word [bp + 16], @1573$string_Raise20error0A#
+96:		mov word [bp + 16], @1575$string_Raise20error0A#
 98:	
 
 raise$26:	; Call 10 printf 0
@@ -212,31 +212,31 @@ raise$27:	; PostCall 10
 107:	
 
 raise$28:	; SetReturnValue 0
-108:		mov a355, 0
+108:		mov a356, 0
 110:	
 
 raise$29:	; Return 0
-111:		mov t356, [bp]
+111:		mov t357, [bp]
 112:		mov di, [bp + 4]
 113:		mov bp, [bp + 2]
-114:		jmp t356
+114:		jmp t357
 116:	
 
 raise$30:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 118:	
 
 raise$31:	; Parameter 10 string_Raise20function2C20calling2025i20with2025i0A# 6
-119:		mov word [bp + 16], @1577$string_Raise20function2C20calling2025i20with2025i0A#
+119:		mov word [bp + 16], @1579$string_Raise20function2C20calling2025i20with2025i0A#
 121:	
 
 raise$32:	; Parameter 10 func 8
-122:		mov a357, [bp + 8]
-123:		mov [bp + 18], a357
+122:		mov a358, [bp + 8]
+123:		mov [bp + 18], a358
 125:	
 
 raise$33:	; Parameter 10 sig 10
-126:		mov a358, [bp + 6]
-127:		mov [bp + 20], a358
+126:		mov a359, [bp + 6]
+127:		mov [bp + 20], a359
 129:	
 
 raise$34:	; Call 10 printf 0
@@ -255,30 +255,30 @@ raise$36:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol]
 141:	
 
 raise$37:	; Parameter 10 sig 6
-142:		mov a360, [bp + 6]
-143:		mov [bp + 16], a360
+142:		mov a361, [bp + 6]
+143:		mov [bp + 16], a361
 145:	
 
 raise$38:	; Call 10 func 0
 146:		mov word [bp + 10], raise$39
 147:		mov [bp + 12], bp
-148:		mov a361, [bp + 8]
+148:		mov a362, [bp + 8]
 149:		add bp, 10
-150:		jmp a361 a361 func 148 150
+150:		jmp a362 a362 func 148 150
 152:	
 
 raise$39:	; PostCall 10
 154:	
 
 raise$40:	; SetReturnValue 1
-155:		mov a362, 1
+155:		mov a363, 1
 157:	
 
 raise$41:	; Return 1
-158:		mov t363, [bp]
+158:		mov t364, [bp]
 159:		mov di, [bp + 4]
 160:		mov bp, [bp + 2]
-161:		jmp t363
+161:		jmp t364
 163:	
 
 raise$42:	; FunctionEnd raise

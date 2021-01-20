@@ -4,12 +4,12 @@ floating_point_error:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompi
 3:	
 
 floating_point_error$1:	; Parameter 8 string_Floating20point20error3A2025i0A# 6
-4:		mov word [bp + 14], @12604$string_Floating20point20error3A2025i0A#
+4:		mov word [bp + 14], @12633$string_Floating20point20error3A2025i0A#
 6:	
 
 floating_point_error$2:	; Parameter 8 sig 8
-7:		mov a3056, [bp + 6]
-8:		mov [bp + 16], a3056
+7:		mov a3052, [bp + 6]
+8:		mov [bp + 16], a3052
 10:	
 
 floating_point_error$3:	; Call 8 printf 0
@@ -25,10 +25,10 @@ floating_point_error$4:	; PostCall 8
 20:	
 
 floating_point_error$5:	; Return 0
-21:		mov t3058, [bp]
+21:		mov t3054, [bp]
 22:		mov di, [bp + 4]
 23:		mov bp, [bp + 2]
-24:		jmp t3058
+24:		jmp t3054
 26:	
 
 floating_point_error$6:	; FunctionEnd floating_point_error
@@ -38,7 +38,7 @@ exit_handle1:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 3:	
 
 exit_handle1$1:	; Parameter 6 string_exit10A# 6
-4:		mov word [bp + 12], @12609$string_exit10A#
+4:		mov word [bp + 12], @12638$string_exit10A#
 6:	
 
 exit_handle1$2:	; Call 6 printf 0
@@ -53,10 +53,10 @@ exit_handle1$3:	; PostCall 6
 15:	
 
 exit_handle1$4:	; Return 0
-16:		mov t3060, [bp]
+16:		mov t3056, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
-19:		jmp t3060
+19:		jmp t3056
 21:	
 
 exit_handle1$5:	; FunctionEnd exit_handle1
@@ -66,7 +66,7 @@ exit_handle2:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 3:	
 
 exit_handle2$1:	; Parameter 6 string_exit20A# 6
-4:		mov word [bp + 12], @12613$string_exit20A#
+4:		mov word [bp + 12], @12642$string_exit20A#
 6:	
 
 exit_handle2$2:	; Call 6 printf 0
@@ -81,10 +81,10 @@ exit_handle2$3:	; PostCall 6
 15:	
 
 exit_handle2$4:	; Return 0
-16:		mov t3062, [bp]
+16:		mov t3058, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
-19:		jmp t3062
+19:		jmp t3058
 21:	
 
 exit_handle2$5:	; FunctionEnd exit_handle2
@@ -94,7 +94,7 @@ exit_handle3:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symb
 3:	
 
 exit_handle3$1:	; Parameter 6 string_exit30A# 6
-4:		mov word [bp + 12], @12617$string_exit30A#
+4:		mov word [bp + 12], @12646$string_exit30A#
 6:	
 
 exit_handle3$2:	; Call 6 printf 0
@@ -109,10 +109,10 @@ exit_handle3$3:	; PostCall 6
 15:	
 
 exit_handle3$4:	; Return 0
-16:		mov t3064, [bp]
+16:		mov t3060, [bp]
 17:		mov di, [bp + 4]
 18:		mov bp, [bp + 2]
-19:		jmp t3064
+19:		jmp t3060
 21:	
 
 exit_handle3$5:	; FunctionEnd exit_handle3
@@ -127,7 +127,7 @@ signal_test$1:	; Assign b 1
 7:	
 
 signal_test$2:	; SignedDivide c a b
-8:		mov a3065, [bp + 6]
+8:		mov a3061, [bp + 6]
 10:		xor dx, dx
 11:		idiv word [bp + 8]
 12:		mov [bp + 10], ax
@@ -137,12 +137,12 @@ signal_test$3:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Sy
 16:	
 
 signal_test$4:	; Parameter 12 string_25i0A# 6
-17:		mov word [bp + 18], @12629$string_25i0A#
+17:		mov word [bp + 18], @12658$string_25i0A#
 19:	
 
 signal_test$5:	; Parameter 12 c 8
-20:		mov a3068, [bp + 10]
-21:		mov [bp + 20], a3068
+20:		mov a3064, [bp + 10]
+21:		mov [bp + 20], a3064
 23:	
 
 signal_test$6:	; Call 12 printf 0
@@ -226,10 +226,10 @@ signal_test$23:	; PostCall 12
 85:	
 
 signal_test$24:	; Return 0
-86:		mov t3073, [bp]
+86:		mov t3069, [bp]
 87:		mov di, [bp + 4]
 88:		mov bp, [bp + 2]
-89:		jmp t3073
+89:		jmp t3069
 91:	
 
 signal_test$25:	; FunctionEnd signal_test

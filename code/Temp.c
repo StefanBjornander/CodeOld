@@ -12,7 +12,7 @@ static int g_tempSize = 0;
 
 #define FILE_NOT_FOUND 0x02
 
-static BOOL existsTempName(char* name) {
+/*static BOOL existsTempName(char* name) {
   int index;
   for (index = 0; index < g_tempSize; ++index) {
     if (strcmp(name, g_tempArray[index]) == 0) {
@@ -21,9 +21,50 @@ static BOOL existsTempName(char* name) {
   }
 
   return FALSE;
+}*/
+
+BOOL generateName(int index, char* name, int max) {
+  if ((index + 1) < max) {
+    char c;
+    name[index + 1] = '\0';
+
+    for (c = 'a'; c <= 'z'; ++c) {
+      name[index] = c;
+
+      if (!fileexists(name) || generateName(index + 1, name, max)) {
+        return TRUE;
+      }
+    }
+  }
+  else if (index < max) {
+    name[index] = '\0';
+  }
+
+  return FALSE;
 }
 
-static char* generateTempName(char name[L_tmpnam], int size, int status) {
+char* tmpnam(char name[L_tmpnam]) {
+  if (generateName(0, name, L_tmpnam)) {
+    return name;
+  }
+
+  return NULL;
+}
+
+FILE* tmpfile(void) {
+  FILE* stream;
+  char name[L_tmpnam];
+
+  if (generateName(0, name, L_tmpnam) &&
+      ((stream = fopen(name, "w")) != NULL)) {
+    stream->temporary = TRUE;
+    return stream;
+  }
+
+  return NULL;
+}
+
+/*static char* generateTempNameX(char name[L_tmpnam], int size, int status) {
   if (size < (L_tmpnam - 1)) {
     char c;
 
@@ -60,8 +101,10 @@ static char* generateTempName(char name[L_tmpnam], int size, int status) {
 FILE* tmpfile(void) {
   FILE* stream;
   char name[L_tmpnam];
+  printf("Test\n");
 
-  if (generateTempName(name, 0, TEMP_FILE) && ((stream = fopen(name, "w")) != NULL)) {
+  if (generateTempName(name, 0, TEMP_FILE) &&
+      ((stream = fopen(name, "w")) != NULL)) {
     printf("temp name: <%s>\n", name);
     stream->temporary = TRUE;
     return stream;
@@ -70,15 +113,6 @@ FILE* tmpfile(void) {
   return NULL;
 }
 
-char* tmpnam(char name[L_tmpnam]) {
-  if (g_tempSize < TMP_MAX) {
-    return generateTempName(name, 0, TEMP_NAME);
-  }
-
-  return NULL;
-}
-
-/*
 void main() {
   int index;
   for (index = 0; index < TMP_MAX; ++index) {

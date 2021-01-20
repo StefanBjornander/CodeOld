@@ -1,50 +1,50 @@
 0: AssignRegister ah 42
 1: Interrupt 33
-2: InspectRegister £temporary3241 cx
-3: BinarySubtract £temporary3242 £temporary3241 1900
-4: Assign year £temporary3242
-5: InspectRegister £temporary3243 dh
-6: BinarySubtract £temporary3244 £temporary3243 1
-7: Assign month £temporary3244
-8: InspectRegister £temporary3245 dl
-9: Assign monthDay £temporary3245
+2: InspectRegister £temporary3228 cx
+3: BinarySubtract £temporary3229 £temporary3228 1900
+4: Assign year £temporary3229
+5: InspectRegister £temporary3230 dh
+6: BinarySubtract £temporary3231 £temporary3230 1
+7: Assign month £temporary3231
+8: InspectRegister £temporary3232 dl
+9: Assign monthDay £temporary3232
 10: AssignRegister ah 44
 11: Interrupt 33
-12: InspectRegister £temporary3247 ch
-13: Assign hour £temporary3247
-14: InspectRegister £temporary3248 cl
-15: Assign min £temporary3248
-16: InspectRegister £temporary3249 dh
-17: Assign sec £temporary3249
+12: InspectRegister £temporary3234 ch
+13: Assign hour £temporary3234
+14: InspectRegister £temporary3235 cl
+15: Assign min £temporary3235
+16: InspectRegister £temporary3236 dh
+17: Assign sec £temporary3236
 18: CallHeader 19 localeconv
 19: Call 19 localeconv 0
 20: PostCall 19
-21: GetReturnValue £temporary3250
-22: Assign localeConvPtr £temporary3250
-23: NotEqual IntegralToIntegral £temporary3253 hour localeConvPtr 0
+21: GetReturnValue £temporary3237
+22: Assign localeConvPtr £temporary3237
+23: NotEqual IntegralToIntegral £temporary3240 hour localeConvPtr 0
 24: Goto Assign daysOfMonths[0] 31
 25: CheckTrackMapFloatStack
-26: IntegralToIntegral £temporary3253 hour
-27: Deref £temporary3252 -> localeConvPtr localeConvPtr 2
-28: BinarySubtract £temporary3254 £temporary3253 £temporary3252 -> localeConvPtr
-29: IntegralToIntegral £temporary3255 £temporary3254
-30: Assign hour £temporary3255
+26: IntegralToIntegral £temporary3240 hour
+27: Deref £temporary3239 -> localeConvPtr localeConvPtr 2
+28: BinarySubtract £temporary3241 £temporary3240 £temporary3239 -> localeConvPtr
+29: IntegralToIntegral £temporary3242 £temporary3241
+30: Assign hour £temporary3242
 31: Goto Assign daysOfMonths[0] 31
 32: Assign daysOfMonths[0] 31
 33: CallHeader 21 isLeapYear
 34: Parameter 21 year 6
 35: Call 21 isLeapYear 0
 36: PostCall 21
-37: GetReturnValue £temporary3256
-38: NotEqual Empty £temporary3256 0
+37: GetReturnValue £temporary3243
+38: NotEqual Empty £temporary3243 0
 39: Goto Empty
 40: Empty
-41: Assign £temporary3261 29
+41: Assign £temporary3248 29
 42: Goto Empty
 43: Empty
-44: Assign £temporary3261 28
+44: Assign £temporary3248 28
 45: Empty
-46: Assign daysOfMonths[1] £temporary3261
+46: Assign daysOfMonths[1] £temporary3248
 47: Assign daysOfMonths[2] 31
 48: Assign daysOfMonths[3] 30
 49: Assign daysOfMonths[4] 31
@@ -55,50 +55,50 @@
 54: Assign daysOfMonths[9] 31
 55: Assign daysOfMonths[10] 30
 56: Assign daysOfMonths[11] 31
-57: IntegralToIntegral £temporary3274 monthDay
-58: BinarySubtract £temporary3275 £temporary3274 1
-59: Assign yearDay £temporary3275
+57: IntegralToIntegral £temporary3261 monthDay
+58: BinarySubtract £temporary3262 £temporary3261 1
+59: Assign yearDay £temporary3262
 60: Assign monthIndex 0
 61: Empty
-62: IntegralToIntegral £temporary3276 month
-63: SignedLessThan Empty monthIndex £temporary3276
-64: Goto IntegralToIntegral £temporary3284 sec
+62: IntegralToIntegral £temporary3263 month
+63: SignedLessThan Empty monthIndex £temporary3263
+64: Goto IntegralToIntegral £temporary3271 sec
 65: CheckTrackMapFloatStack
 66: Empty
-67: SignedMultiply £temporary3280 monthIndex 2
-68: BinaryAdd £temporary3281 daysOfMonths £temporary3280
-69: Deref £temporary3279 -> £temporary3281 £temporary3281 0
-70: BinaryAdd £temporary3282 yearDay £temporary3279 -> £temporary3281
-71: Assign yearDay £temporary3282
+67: SignedMultiply £temporary3267 monthIndex 2
+68: BinaryAdd £temporary3268 daysOfMonths £temporary3267
+69: Deref £temporary3266 -> £temporary3268 £temporary3268 0
+70: BinaryAdd £temporary3269 yearDay £temporary3266 -> £temporary3268
+71: Assign yearDay £temporary3269
 72: Empty
 73: BinaryAdd monthIndex monthIndex 1
 74: Goto Empty
-75: IntegralToIntegral £temporary3284 sec
-76: Assign s$tm_sec £temporary3284
-77: IntegralToIntegral £temporary3286 min
-78: Assign s$tm_min £temporary3286
-79: IntegralToIntegral £temporary3288 hour
-80: Assign s$tm_hour £temporary3288
-81: IntegralToIntegral £temporary3290 monthDay
-82: Assign s$tm_mday £temporary3290
-83: IntegralToIntegral £temporary3292 month
-84: Assign s$tm_mon £temporary3292
+75: IntegralToIntegral £temporary3271 sec
+76: Assign s$tm_sec £temporary3271
+77: IntegralToIntegral £temporary3273 min
+78: Assign s$tm_min £temporary3273
+79: IntegralToIntegral £temporary3275 hour
+80: Assign s$tm_hour £temporary3275
+81: IntegralToIntegral £temporary3277 monthDay
+82: Assign s$tm_mday £temporary3277
+83: IntegralToIntegral £temporary3279 month
+84: Assign s$tm_mon £temporary3279
 85: Assign s$tm_year year
 86: Assign s$tm_wday 0
 87: Assign s$tm_yday yearDay
 88: Assign s$tm_isdst 0
 89: CallHeader 65 mktime
-90: address £temporary3297 s
-91: Parameter 65 £temporary3297 6
+90: address £temporary3284 s
+91: Parameter 65 £temporary3284 6
 92: Call 65 mktime 0
 93: PostCall 65
-94: GetReturnValue £temporary3298
-95: Assign time £temporary3298
-96: NotEqual Deref £temporary3300 -> timePtr timePtr 0 timePtr 0
+94: GetReturnValue £temporary3285
+95: Assign time £temporary3285
+96: NotEqual Deref £temporary3287 -> timePtr timePtr 0 timePtr 0
 97: Goto SetReturnValue time
 98: CheckTrackMapFloatStack
-99: Deref £temporary3300 -> timePtr timePtr 0
-100: Assign £temporary3300 -> timePtr time
+99: Deref £temporary3287 -> timePtr timePtr 0
+100: Assign £temporary3287 -> timePtr time
 101: Goto SetReturnValue time
 102: SetReturnValue time
 103: Return time
