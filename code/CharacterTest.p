@@ -1,13 +1,13 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-
-
-
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
+    
+    
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+    
+    
+ 
+     
+     
 
 
 
@@ -42,12 +42,13 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-
-
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
+    
+    
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -63,52 +64,54 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-
-
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
+    
+    
+ 
+      
+                         
+                                    
+      
+ 
+   
+ 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
-
-
-
-
-
-
-
-
-
-
-
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+    
+    
+ 
+           
+     
+     
+     
+     
+ 
+   
+ 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-
-
-
-
-
-
-
-
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
+    
+    
+ 
+     
+     
+ 
+     
+     
 
 typedef struct {
-int open ;
+int  open ;
 unsigned int handle ;
-char name [ 16 ] , ungetc ;
+char name [ 16  ] , ungetc ;
 int errno ;
 unsigned int position , size ;
-int temporary ;
+int  temporary ;
 } FILE ;
 
 extern FILE * stdin , * stdout , * stderr ;
@@ -117,16 +120,16 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
+         
 
-
-int fileexists ( const char * name ) ;
+int  fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
 FILE * freopen ( const char * filename , const char * mode , FILE * stream ) ;
 int fflush ( FILE * stream ) ;
 int fclose ( FILE * stream ) ;
 int remove ( const char * name ) ;
 int rename ( const char * oldName , const char * newName ) ;
-int setvbuf ( FILE * stream , char * buffer , int mode , int size ) ;
+int setvbuf ( FILE * stream , char * buffer , int mode , int  size ) ;
 void setbuf ( FILE * stream , char * buffer ) ;
 int fgetc ( FILE * stream ) ;
 char * fgets ( char * s , int n , FILE * stream ) ;
@@ -137,59 +140,62 @@ char * gets ( char * s ) ;
 int putchar ( int c ) ;
 int puts ( const char * s ) ;
 int ungetc ( int c , FILE * stream ) ;
-int fread ( void * ptr , int size , int nobj , FILE * stream ) ;
-int fwrite ( const void * ptr , int size , int nobj , FILE * stream ) ;
+int  fread ( void * ptr , int  size , int  nobj , FILE * stream ) ;
+int  fwrite ( const void * ptr , int  size , int  nobj , FILE * stream ) ;
 int fseek ( FILE * stream , int offset , int origin ) ;
 int ftell ( FILE * stream ) ;
 void rewind ( FILE * stream ) ;
-int fgetpos ( FILE * stream , int * ptr ) ;
-int fsetpos ( FILE * stream , const int * ptr ) ;
+int fgetpos ( FILE * stream , int  * ptr ) ;
+int fsetpos ( FILE * stream , const int  * ptr ) ;
 void clearerr ( FILE * stream ) ;
-int feof ( FILE * stream ) ;
+int  feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-
-
-
-
-
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
+    
+    
+ 
+     
+     
 
 FILE * tmpfile ( void ) ;
-char * tmpnam ( char name [ 4 ] ) ;
+char * tmpnam ( char name [ 4  ] ) ;
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
-
-
-
-
-
-
-
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
+    
+    
+ 
+     
+     
+ 
+     
 
 int scanf ( const char * format , ... ) ;
-int vscanf ( const char * format , char * arg_list ) ;
+int vscanf ( const char * format , char *  arg_list ) ;
 int fscanf ( FILE * inStream , const char * format , ... ) ;
-int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
+int vfscanf ( FILE * inStream , const char * format , char *  arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
-int vsscanf ( char * inString , const char * format , char * arg_list ) ;
+int vsscanf ( char * inString , const char * format , char *  arg_list ) ;
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-
-
-
-
-
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
+    
+    
+ 
+     
+     
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -199,69 +205,71 @@ int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
 int printf ( const char * format , ... ) ;
-int vprintf ( const char * format , char * arg_list ) ;
+int vprintf ( const char * format , char *  arg_list ) ;
 int fprintf ( FILE * outStream , const char * format , ... ) ;
-int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
+int vfprintf ( FILE * outStream , const char * format , char *  arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
-int vsprintf ( char * outString , const char * format , char * arg_list ) ;
+int vsprintf ( char * outString , const char * format , char *  arg_list ) ;
 
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+        
+ 
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\CharacterTest.c,0$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
+    
+    
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
-
-
-
+   
+ 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\CharacterTest.c,1$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\CharacterTest.c,2$
-
-
+        
+ 
+                            
 
 void character_testX ( char c ) {
-printf ( "\141\163\143\151\151\040\045\151\012" , ( int ) c ) ;
+printf ( "ascii %i\n" , ( int ) c ) ;
 
-printf ( "\151\163\154\157\167\145\162\050\047\045\143\047\051\040\075\040\045\163\012" , c , ( islower ( ( int ) c ) != 0 ) ? "\131\145\163" : "\116\157" ) ;
-printf ( "\151\163\165\160\160\145\162\050\047\045\143\047\051\040\075\040\045\163\012" , c , ( isupper ( ( int ) c ) != 0 ) ? "\131\145\163" : "\116\157" ) ;
-printf ( "\151\163\141\154\160\150\141\050\047\045\143\047\051\040\075\040\045\163\012" , c , ( isalpha ( ( int ) c ) != 0 ) ? "\131\145\163" : "\116\157" ) ;
-printf ( "\151\163\144\151\147\151\164\050\047\045\143\047\051\040\075\040\045\163\012" , c , ( isdigit ( ( int ) c ) != 0 ) ? "\131\145\163" : "\116\157" ) ;
-printf ( "\151\163\141\154\156\165\155\050\047\045\143\047\051\040\075\040\045\163\012" , c , ( isalnum ( ( int ) c ) != 0 ) ? "\131\145\163" : "\116\157" ) ;
-printf ( "\151\163\170\144\151\147\151\164\050\047\045\143\047\051\040\075\040\045\163\012" , c , ( isxdigit ( ( int ) c ) != 0 ) ? "\131\145\163" : "\116\157" ) ;
-printf ( "\151\163\147\162\141\160\150\050\047\045\143\047\051\040\075\040\045\163\012" , c , ( isgraph ( ( int ) c ) != 0 ) ? "\131\145\163" : "\116\157" ) ;
-printf ( "\151\163\160\162\151\156\164\050\047\045\143\047\051\040\075\040\045\163\012" , c , ( isprint ( ( int ) c ) != 0 ) ? "\131\145\163" : "\116\157" ) ;
-printf ( "\151\163\160\165\156\143\164\050\047\045\143\047\051\040\075\040\045\163\012" , c , ( ispunct ( ( int ) c ) != 0 ) ? "\131\145\163" : "\116\157" ) ;
-printf ( "\151\163\143\156\164\162\154\050\047\045\143\047\051\040\075\040\045\163\012" , c , ( iscntrl ( ( int ) c ) != 0 ) ? "\131\145\163" : "\116\157" ) ;
-printf ( "\151\163\163\160\141\143\145\050\047\045\143\047\051\040\075\040\045\163\012" , c , ( isspace ( ( int ) c ) != 0 ) ? "\131\145\163" : "\116\157" ) ;
+printf ( "islower('%c') = %s\n" , c , ( islower ( ( int ) c ) != 0 ) ? "Yes" : "No" )  ;
+printf ( "isupper('%c') = %s\n" , c , ( isupper ( ( int ) c ) != 0 ) ? "Yes" : "No" )  ;
+printf ( "isalpha('%c') = %s\n" , c , ( isalpha ( ( int ) c ) != 0 ) ? "Yes" : "No" )  ;
+printf ( "isdigit('%c') = %s\n" , c , ( isdigit ( ( int ) c ) != 0 ) ? "Yes" : "No" )  ;
+printf ( "isalnum('%c') = %s\n" , c , ( isalnum ( ( int ) c ) != 0 ) ? "Yes" : "No" )  ;
+printf ( "isxdigit('%c') = %s\n" , c , ( isxdigit ( ( int ) c ) != 0 ) ? "Yes" : "No" )  ;
+printf ( "isgraph('%c') = %s\n" , c , ( isgraph ( ( int ) c ) != 0 ) ? "Yes" : "No" )  ;
+printf ( "isprint('%c') = %s\n" , c , ( isprint ( ( int ) c ) != 0 ) ? "Yes" : "No" )  ;
+printf ( "ispunct('%c') = %s\n" , c , ( ispunct ( ( int ) c ) != 0 ) ? "Yes" : "No" )  ;
+printf ( "iscntrl('%c') = %s\n" , c , ( iscntrl ( ( int ) c ) != 0 ) ? "Yes" : "No" )  ;
+printf ( "isspace('%c') = %s\n" , c , ( isspace ( ( int ) c ) != 0 ) ? "Yes" : "No" )  ;
 
-printf ( "\164\157\154\157\167\145\162\050\047\045\143\047\051\040\075\040\047\045\143\047\012" , c , ( char ) tolower ( c ) ) ;
-printf ( "\164\157\165\160\160\145\162\050\047\045\143\047\051\040\075\040\047\045\143\047\012\012" , c , ( char ) toupper ( c ) ) ;
+printf ( "tolower('%c') = '%c'\n" , c , ( char ) tolower ( c ) ) ;
+printf ( "toupper('%c') = '%c'\n\n" , c , ( char ) toupper ( c ) ) ;
 }
 
 void character_test ( ) {
-character_testX ( '\141' ) ;
-character_testX ( '\102' ) ;
-character_testX ( '\061' ) ;
-character_testX ( '\056' ) ;
-character_testX ( '\012' ) ;
-character_testX ( '\146' ) ;
-character_testX ( '\147' ) ;
-}
-
+character_testX ( 'a' ) ;
+character_testX ( 'B' ) ;
+character_testX ( '1' ) ;
+character_testX ( '.' ) ;
+character_testX ( '\n' ) ;
+character_testX ( 'f' ) ;
+character_testX ( 'g' ) ;
+} 

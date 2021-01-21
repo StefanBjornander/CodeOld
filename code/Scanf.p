@@ -1,9 +1,9 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-
-
-
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+    
+    
+ 
+     
+     
 
 
 
@@ -38,12 +38,13 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,1$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-
-
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,0$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
+    
+    
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -59,120 +60,124 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,2$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-
-
-
-
-
-
-
-
-
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,1$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
+    
+    
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+    
+    
+ 
+     
+     
 
 
 
 
+      
+      
+      
 
+         
+         
+          
 
+      
+          
+         
 
+      
+      
+      
 
+      
+      
+      
 
+      
+      
+      
+         
 
+      
+      
+      
+      
 
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
+    
+    
 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
+ 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
+    
+    
+ 
+      
+                         
+                                    
+      
+ 
+   
+ 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
-
-
-
-
-
-
-
-
-
-
-
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+    
+    
+ 
+           
+     
+     
+     
+     
+ 
+   
+ 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-
-
-
-
-
-
-
-
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
+    
+    
+ 
+     
+     
+ 
+     
+     
 
 typedef struct {
-int open ;
+int  open ;
 unsigned int handle ;
-char name [ 16 ] , ungetc ;
+char name [ 16  ] , ungetc ;
 int errno ;
 unsigned int position , size ;
-int temporary ;
+int  temporary ;
 } FILE ;
 
 extern FILE * stdin , * stdout , * stderr ;
@@ -181,16 +186,16 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
+         
 
-
-int fileexists ( const char * name ) ;
+int  fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
 FILE * freopen ( const char * filename , const char * mode , FILE * stream ) ;
 int fflush ( FILE * stream ) ;
 int fclose ( FILE * stream ) ;
 int remove ( const char * name ) ;
 int rename ( const char * oldName , const char * newName ) ;
-int setvbuf ( FILE * stream , char * buffer , int mode , int size ) ;
+int setvbuf ( FILE * stream , char * buffer , int mode , int  size ) ;
 void setbuf ( FILE * stream , char * buffer ) ;
 int fgetc ( FILE * stream ) ;
 char * fgets ( char * s , int n , FILE * stream ) ;
@@ -201,59 +206,62 @@ char * gets ( char * s ) ;
 int putchar ( int c ) ;
 int puts ( const char * s ) ;
 int ungetc ( int c , FILE * stream ) ;
-int fread ( void * ptr , int size , int nobj , FILE * stream ) ;
-int fwrite ( const void * ptr , int size , int nobj , FILE * stream ) ;
+int  fread ( void * ptr , int  size , int  nobj , FILE * stream ) ;
+int  fwrite ( const void * ptr , int  size , int  nobj , FILE * stream ) ;
 int fseek ( FILE * stream , int offset , int origin ) ;
 int ftell ( FILE * stream ) ;
 void rewind ( FILE * stream ) ;
-int fgetpos ( FILE * stream , int * ptr ) ;
-int fsetpos ( FILE * stream , const int * ptr ) ;
+int fgetpos ( FILE * stream , int  * ptr ) ;
+int fsetpos ( FILE * stream , const int  * ptr ) ;
 void clearerr ( FILE * stream ) ;
-int feof ( FILE * stream ) ;
+int  feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-
-
-
-
-
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
+    
+    
+ 
+     
+     
 
 FILE * tmpfile ( void ) ;
-char * tmpnam ( char name [ 4 ] ) ;
+char * tmpnam ( char name [ 4  ] ) ;
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
-
-
-
-
-
-
-
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
+    
+    
+ 
+     
+     
+ 
+     
 
 int scanf ( const char * format , ... ) ;
-int vscanf ( const char * format , char * arg_list ) ;
+int vscanf ( const char * format , char *  arg_list ) ;
 int fscanf ( FILE * inStream , const char * format , ... ) ;
-int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
+int vfscanf ( FILE * inStream , const char * format , char *  arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
-int vsscanf ( char * inString , const char * format , char * arg_list ) ;
+int vsscanf ( char * inString , const char * format , char *  arg_list ) ;
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-
-
-
-
-
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
+    
+    
+ 
+     
+     
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -263,118 +271,124 @@ int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
 int printf ( const char * format , ... ) ;
-int vprintf ( const char * format , char * arg_list ) ;
+int vprintf ( const char * format , char *  arg_list ) ;
 int fprintf ( FILE * outStream , const char * format , ... ) ;
-int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
+int vfprintf ( FILE * outStream , const char * format , char *  arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
-int vsprintf ( char * outString , const char * format , char * arg_list ) ;
+int vsprintf ( char * outString , const char * format , char *  arg_list ) ;
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
-
-
-
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+        
+ 
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,2$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+    
+    
+ 
+           
+     
+     
+     
+     
+ 
+   
+ 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,3$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
-
-
-
-
-
-
-
-
-
-
-
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
+    
+    
+ 
+      
+                         
+                                    
+      
+ 
+   
+ 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,4$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,5$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,1$
-
-
-
-
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\String.h,0$
+    
+    
+ 
+     
 
 extern char * strcpy ( char * target , const char * source ) ;
-extern char * strncpy ( char * target , const char * source , int size ) ;
+extern char * strncpy ( char * target , const char * source , int  size ) ;
 extern char * strcat ( char * target , const char * source ) ;
-extern char * strncat ( char * target , const char * source , int size ) ;
+extern char * strncat ( char * target , const char * source , int  size ) ;
 extern int strcmp ( const char * left , const char * right ) ;
-extern int strncmp ( const char * left , const char * right , int size ) ;
+extern int strncmp ( const char * left , const char * right , int  size ) ;
 extern char * strchr ( const char * text , int i ) ;
 extern char * strrchr ( const char * text , int i ) ;
-extern int strspn ( const char * mainString , const char * charSet ) ;
-extern int strcspn ( const char * mainString , const char * charSet ) ;
+extern int  strspn ( const char * mainString , const char * charSet ) ;
+extern int  strcspn ( const char * mainString , const char * charSet ) ;
 extern char * strpbrk ( const char * mainString , const char * charSet ) ;
 extern char * strstr ( const char * mainString , const char * subString ) ;
-extern int strlen ( const char * string ) ;
+extern int  strlen ( const char * string ) ;
 extern char * strerror ( int error ) ;
 extern char * strtok ( char * string , const char * charSet ) ;
-extern void * memcpy ( void * target , const void * source , int size ) ;
-extern void * memmove ( void * target , const void * source , int size ) ;
-extern int memcmp ( const void * left , const void * right , int size ) ;
-extern void * memchr ( const void * block , int i , int size ) ;
-extern void * memset ( void * block , int i , int size ) ;
+extern void * memcpy ( void * target , const void * source , int  size ) ;
+extern void * memmove ( void * target , const void * source , int  size ) ;
+extern int memcmp ( const void * left , const void * right , int  size ) ;
+extern void * memchr ( const void * block , int i , int  size ) ;
+extern void * memset ( void * block , int i , int  size ) ;
 
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,5$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
+    
+    
+ 
+     
+     
+ 
+     
 
+         
+          
+             
+              
+             
+              
 
+   
+ 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,6$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
+    
+    
+ 
+     
+     
 
+     
+    
 
+         
+         
+     
 
+         
+          
+             
+              
+             
+              
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
+ 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,7$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Scanf.c,8$
+        
 
 
 
@@ -390,58 +404,58 @@ unsigned long scanUnsignedLongInt ( int base ) ;
 long double scanLongDouble ( void ) ;
 
 char scanChar ( void ) {
-char c = '\000' ;
+char c = '\0' ;
 FILE * stream ;
 int handle ;
 char * inString ;
 
 switch ( g_inStatus ) {
-case 0 :
+case 0  :
 stream = ( FILE * ) g_inDevice ;
 
-handle = stream -> handle ;
-
-register_ah = 0x3Fs ;
-register_bx = handle ;
-register_cx = 1 ;
-register_dx = & c ;
-interrupt ( 0x21s ) ;
-
-
-
-
-
-
-
-
-
+handle = stream -> handle ; 
+    
+    
+   
+   
+    
+    
+   
+ 
+    
+ register_rax = 0x00L ;
+register_rdi = ( unsigned long ) stream -> handle ;
+register_rsi = ( unsigned long ) & c ;
+register_rdx = 1L ;
+syscall ( ) ; 
+   
 
 ++ g_inChars ;
 return c ;
 
-case 1 :
+case 1  :
 inString = ( char * ) g_inDevice ;
 return inString [ g_inChars ++];
 
 default :
-return '\000' ;
+return '\0' ;
 }
 }
 
 void unscanChar ( char ) {
 switch ( g_inStatus ) {
-case 0 :
+case 0  :
 -- g_inChars ;
 break ;
 
-case 1 :
+case 1  :
 -- g_inChars ;
 break ;
 }
 }
 
 static char * strnchr ( const char * text , int size , int i ) {
-int index ;
+int  index ;
 char c = ( char ) i ;
 
 for ( index = 0 ; index < size ; ++ index ) {
@@ -450,10 +464,10 @@ return & text [ index ];
 }
 }
 
-return ( ( void * ) 0 ) ;
+return ( ( void * ) 0 )  ;
 }
 
-void scanPattern ( char * string , char * pattern , int size , int not ) {
+void scanPattern ( char * string , char * pattern , int size , int  not ) {
 int index = 0 ;
 char input = scanChar ( ) ;
 
@@ -461,14 +475,14 @@ while ( isspace ( input ) ) {
 input = scanChar ( ) ;
 }
 
-if ( string != ( ( void * ) 0 ) ) {
+if ( string != ( ( void * ) 0 )  ) {
 while ( ( ! not && strnchr ( pattern , size , input ) ) ||
 ( not && ! strnchr ( pattern , size , input ) ) ) {
 string [ index ++] = input ;
 input = scanChar ( ) ;
 }
 
-string [ index ] = '\000' ;
+string [ index ] = '\0' ;
 }
 else {
 while ( ( ! not && strnchr ( pattern , size , input ) ) ||
@@ -481,45 +495,45 @@ input = scanChar ( ) ;
 void scanString ( char * string , int precision ) {
 int index = 0 ;
 char input = scanChar ( ) ;
-int found = 0 ;
+int  found = 0  ;
 
 while ( isspace ( input ) ) {
 input = scanChar ( ) ;
 }
 
-if ( string != ( ( void * ) 0 ) ) {
+if ( string != ( ( void * ) 0 )  ) {
 if ( precision == 0 ) {
-while ( ! isspace ( input ) && ( input != -1 ) && ( input != '\012' ) ) {
+while ( ! isspace ( input ) && ( input != -1  ) && ( input != '\n' ) ) {
 string [ index ++] = input ;
 input = scanChar ( ) ;
-found = 1 ;
+found = 1  ;
 ++ g_inChars ;
 }
 
-string [ index ] = '\000' ;
+string [ index ] = '\0' ;
 ++ g_inChars ;
 }
 else {
 while ( ( precision -- > 0 ) && ( ! isspace ( input ) &&
-( input != -1 ) && ( input != '\012' ) ) ) {
+( input != -1  ) && ( input != '\n' ) ) ) {
 string [ index ++] = input ;
 input = scanChar ( ) ;
-found = 1 ;
+found = 1  ;
 ++ g_inChars ;
 }
 
 if ( precision > 0 ) {
-string [ index ] = '\000' ;
+string [ index ] = '\0' ;
 ++ g_inChars ;
 }
 }
 }
 else {
 if ( precision == 0 ) {
-while ( ! isspace ( input ) && ( input != -1 ) &&
-( input != '\012' ) ) {
+while ( ! isspace ( input ) && ( input != -1  ) &&
+( input != '\n' ) ) {
 input = scanChar ( ) ;
-found = 1 ;
+found = 1  ;
 ++ g_inChars ;
 }
 
@@ -527,9 +541,9 @@ found = 1 ;
 }
 else {
 while ( ( precision -- > 0 ) && ( ! isspace ( input ) &&
-( input != -1 ) && ( input != '\012' ) ) ) {
+( input != -1  ) && ( input != '\n' ) ) ) {
 input = scanChar ( ) ;
-found = 1 ;
+found = 1  ;
 ++ g_inChars ;
 }
 
@@ -544,33 +558,33 @@ if ( found ) {
 }
 }
 
-static int isDigitInBase ( char c , int base ) {
+static int  isDigitInBase ( char c , int base ) {
 if ( isdigit ( c ) ) {
-int value = c - '\060' ;
+int value = c - '0' ;
 return ( ( value >= 0 ) && ( value < base ) ) ;
 }
 else if ( islower ( c ) ) {
-int value = ( c - '\141' ) + 10 ;
+int value = ( c - 'a' ) + 10 ;
 return ( ( value >= 0 ) && ( value < base ) ) ;
 }
 else if ( isupper ( c ) ) {
-int value = ( c - '\101' ) + 10 ;
+int value = ( c - 'A' ) + 10 ;
 return ( ( value >= 0 ) && ( value < base ) ) ;
 }
 else {
-return 0 ;
+return 0  ;
 }
 }
 
 static int digitToValue ( char c ) {
 if ( isdigit ( c ) ) {
-return ( c - '\060' ) ;
+return ( c - '0' ) ;
 }
 else if ( islower ( c ) ) {
-return ( ( c - '\141' ) + 10 ) ;
+return ( ( c - 'a' ) + 10 ) ;
 }
 else if ( isupper ( c ) ) {
-return ( ( c - '\101' ) + 10 ) ;
+return ( ( c - 'A' ) + 10 ) ;
 }
 else {
 return 0 ;
@@ -579,26 +593,26 @@ return 0 ;
 
 long scanLongInt ( int base ) {
 long longValue = 0l ;
-int minus = 0 , found = 0 ;
+int  minus = 0  , found = 0  ;
 char input = scanChar ( ) ;
 
 while ( isspace ( input ) ) {
 input = scanChar ( ) ;
 }
 
-if ( input == '\053' ) {
+if ( input == '+' ) {
 input = scanChar ( ) ;
 }
-else if ( input == '\055' ) {
-minus = 1 ;
+else if ( input == '-' ) {
+minus = 1  ;
 input = scanChar ( ) ;
 }
 
 if ( base == 0 ) {
-if ( input == '\060' ) {
+if ( input == '0' ) {
 input = scanChar ( ) ;
 
-if ( tolower ( input ) == '\170' ) {
+if ( tolower ( input ) == 'x' ) {
 base = 16 ;
 input = scanChar ( ) ;
 }
@@ -615,7 +629,7 @@ while ( isDigitInBase ( input , base ) ) {
 longValue *= base ;
 longValue += digitToValue ( input ) ;
 input = scanChar ( ) ;
-found = 1 ;
+found = 1  ;
 }
 
 if ( minus ) {
@@ -633,21 +647,21 @@ return longValue ;
 unsigned long scanUnsignedLongInt ( int base ) {
 unsigned long unsignedLongValue = 0 , digit ;
 char input = scanChar ( ) ;
-int found = 1 ;
+int  found = 1  ;
 
 while ( isspace ( input ) ) {
 input = scanChar ( ) ;
 }
 
-if ( input == '\053' ) {
+if ( input == '+' ) {
 input = scanChar ( ) ;
 }
 
 if ( base == 0 ) {
-if ( input == '\060' ) {
+if ( input == '0' ) {
 input = scanChar ( ) ;
 
-if ( tolower ( input ) == '\170' ) {
+if ( tolower ( input ) == 'x' ) {
 base = 16 ;
 input = scanChar ( ) ;
 }
@@ -663,7 +677,7 @@ base = 10 ;
 while ( isDigitInBase ( input , base ) ) {
 unsignedLongValue *= base ;
 unsignedLongValue += digitToValue ( input ) ;
-found = 1 ;
+found = 1  ;
 input = scanChar ( ) ;
 }
 
@@ -676,7 +690,7 @@ return unsignedLongValue ;
 }
 
 long double scanLongDouble ( void ) {
-int minus = 0 , found = 0 ;
+int  minus = 0  , found = 0  ;
 long double value = 0.0L , factor = 1.0L ;
 char input = scanChar ( ) ;
 
@@ -684,32 +698,32 @@ while ( isspace ( input ) ) {
 input = scanChar ( ) ;
 }
 
-if ( input == '\053' ) {
+if ( input == '+' ) {
 input = scanChar ( ) ;
 }
-else if ( input == '\055' ) {
-minus = 1 ;
+else if ( input == '-' ) {
+minus = 1  ;
 input = scanChar ( ) ;
 }
 
 while ( isdigit ( input ) ) {
-value = ( 10.0L * value ) + ( ( long double ) ( input - '\060' ) ) ;
+value = ( 10.0L * value ) + ( ( long double ) ( input - '0' ) ) ;
 input = scanChar ( ) ;
-found = 1 ;
+found = 1  ;
 }
 
-if ( input == '\056' ) {
+if ( input == '.' ) {
 input = scanChar ( ) ;
 
 while ( isdigit ( input ) ) {
 factor /= 10.0L ;
-value += factor * ( ( long double ) ( input - '\060' ) ) ;
+value += factor * ( ( long double ) ( input - '0' ) ) ;
 input = scanChar ( ) ;
-found = 1 ;
+found = 1  ;
 }
 }
 
-if ( tolower ( input ) == '\145' ) {
+if ( tolower ( input ) == 'e' ) {
 double exponent = ( double ) scanLongInt ( 10 ) ;
 value *= pow ( 10.0 , exponent ) ;
 }
@@ -728,10 +742,10 @@ if ( found ) {
 return value ;
 }
 
-int scanFormat ( char * format , char * arg_list ) {
+int scanFormat ( char * format , char *  arg_list ) {
 char c , * charPtr ;
-int percent = 0 , shortInt = 0 , longIntOrDouble = 0 ,
-longDouble = 0 , star = 0 ;
+int  percent = 0  , shortInt = 0  , longIntOrDouble = 0  ,
+longDouble = 0  , star = 0  ;
 
 long longValue , * longPtr ;
 short * shortPtr ;
@@ -745,189 +759,189 @@ long double longDoubleValue ;
 g_inCount = 0 ;
 g_inChars = 0 ;
 
-for ( index = 0 ; format [ index ] != '\000' ; ++ index ) {
+for ( index = 0 ; format [ index ] != '\0' ; ++ index ) {
 c = format [ index ];
 
 { int d = c + 1 ;
 if ( percent ) {
 switch ( d - 1 ) {
-case '\150' :
-shortInt = 1 ;
+case 'h' :
+shortInt = 1  ;
 break ;
 
-case '\154' :
-longIntOrDouble = 1 ;
+case 'l' :
+longIntOrDouble = 1  ;
 break ;
 
-case '\114' :
-longDouble = 1 ;
+case 'L' :
+longDouble = 1  ;
 break ;
 
-case '\052' :
-star = 1 ;
+case '*' :
+star = 1  ;
 break ;
 
-case '\143' : {
+case 'c' : {
 char charValue = scanChar ( ) ;
 
 if ( ! star ) {
-charPtr = ( * ( ( arg_list += sizeof ( char * ) ) , ( ( char * * ) ( arg_list - sizeof ( char * ) ) ) ) ) ;
+charPtr = ( * ( ( arg_list += sizeof ( char * ) ) , ( ( char * * ) ( arg_list - sizeof ( char * ) ) ) ) )  ;
 * charPtr = charValue ;
 }
 
-percent = 0 ;
+percent = 0  ;
 
-if ( charValue != -1 ) {
+if ( charValue != -1  ) {
 ++ g_inCount ;
 }
 }
 break ;
 
-case '\163' :
+case 's' :
 if ( ! star ) {
-charPtr = ( * ( ( arg_list += sizeof ( char * ) ) , ( ( char * * ) ( arg_list - sizeof ( char * ) ) ) ) ) ;
+charPtr = ( * ( ( arg_list += sizeof ( char * ) ) , ( ( char * * ) ( arg_list - sizeof ( char * ) ) ) ) )  ;
 scanString ( charPtr , 0 ) ;
 }
 else {
-scanString ( ( ( void * ) 0 ) , 0 ) ;
+scanString ( ( ( void * ) 0 )  , 0 ) ;
 }
 
-percent = 0 ;
+percent = 0  ;
 break ;
 
-case '\151' :
-case '\144' :
+case 'i' :
+case 'd' :
 longValue = scanLongInt ( 10 ) ;
 
 if ( ! star ) {
 if ( shortInt ) {
-shortPtr = ( * ( ( arg_list += sizeof ( short * ) ) , ( ( short * * ) ( arg_list - sizeof ( short * ) ) ) ) ) ;
+shortPtr = ( * ( ( arg_list += sizeof ( short * ) ) , ( ( short * * ) ( arg_list - sizeof ( short * ) ) ) ) )  ;
 * shortPtr = ( short ) longValue ;
 }
 else if ( ! longIntOrDouble ) {
-intPtr = ( * ( ( arg_list += sizeof ( int * ) ) , ( ( int * * ) ( arg_list - sizeof ( int * ) ) ) ) ) ;
+intPtr = ( * ( ( arg_list += sizeof ( int * ) ) , ( ( int * * ) ( arg_list - sizeof ( int * ) ) ) ) )  ;
 * intPtr = ( int ) longValue ;
 }
 else {
-longPtr = ( * ( ( arg_list += sizeof ( long * ) ) , ( ( long * * ) ( arg_list - sizeof ( long * ) ) ) ) ) ;
+longPtr = ( * ( ( arg_list += sizeof ( long * ) ) , ( ( long * * ) ( arg_list - sizeof ( long * ) ) ) ) )  ;
 * longPtr = longValue ;
 }
 }
 
-percent = 0 ;
+percent = 0  ;
 break ;
 
-case '\157' :
+case 'o' :
 unsignedLongValue = scanUnsignedLongInt ( 8 ) ;
 
 if ( ! star ) {
 if ( shortInt ) {
-unsignedShortPtr = ( * ( ( arg_list += sizeof ( unsigned short * ) ) , ( ( unsigned short * * ) ( arg_list - sizeof ( unsigned short * ) ) ) ) ) ;
+unsignedShortPtr = ( * ( ( arg_list += sizeof ( unsigned short * ) ) , ( ( unsigned short * * ) ( arg_list - sizeof ( unsigned short * ) ) ) ) )  ;
 * unsignedShortPtr = ( short ) unsignedLongValue ;
 }
 else if ( ! longIntOrDouble ) {
-unsignedIntPtr = ( * ( ( arg_list += sizeof ( unsigned int * ) ) , ( ( unsigned int * * ) ( arg_list - sizeof ( unsigned int * ) ) ) ) ) ;
+unsignedIntPtr = ( * ( ( arg_list += sizeof ( unsigned int * ) ) , ( ( unsigned int * * ) ( arg_list - sizeof ( unsigned int * ) ) ) ) )  ;
 * unsignedIntPtr = ( int ) unsignedLongValue ;
 }
 else {
-unsignedLongPtr = ( * ( ( arg_list += sizeof ( unsigned long * ) ) , ( ( unsigned long * * ) ( arg_list - sizeof ( unsigned long * ) ) ) ) ) ;
+unsignedLongPtr = ( * ( ( arg_list += sizeof ( unsigned long * ) ) , ( ( unsigned long * * ) ( arg_list - sizeof ( unsigned long * ) ) ) ) )  ;
 * unsignedLongPtr = unsignedLongValue ;
 }
 }
 
-percent = 0 ;
+percent = 0  ;
 break ;
 
-case '\170' :
+case 'x' :
 unsignedLongValue = scanUnsignedLongInt ( 16 ) ;
 
 if ( ! star ) {
 if ( shortInt ) {
-unsignedShortPtr = ( * ( ( arg_list += sizeof ( unsigned short * ) ) , ( ( unsigned short * * ) ( arg_list - sizeof ( unsigned short * ) ) ) ) ) ;
+unsignedShortPtr = ( * ( ( arg_list += sizeof ( unsigned short * ) ) , ( ( unsigned short * * ) ( arg_list - sizeof ( unsigned short * ) ) ) ) )  ;
 * unsignedShortPtr = ( short ) unsignedLongValue ;
 }
 else if ( ! longIntOrDouble ) {
-unsignedIntPtr = ( * ( ( arg_list += sizeof ( unsigned int * ) ) , ( ( unsigned int * * ) ( arg_list - sizeof ( unsigned int * ) ) ) ) ) ;
+unsignedIntPtr = ( * ( ( arg_list += sizeof ( unsigned int * ) ) , ( ( unsigned int * * ) ( arg_list - sizeof ( unsigned int * ) ) ) ) )  ;
 * unsignedIntPtr = ( int ) unsignedLongValue ;
 }
 else {
-unsignedLongPtr = ( * ( ( arg_list += sizeof ( unsigned long * ) ) , ( ( unsigned long * * ) ( arg_list - sizeof ( unsigned long * ) ) ) ) ) ;
+unsignedLongPtr = ( * ( ( arg_list += sizeof ( unsigned long * ) ) , ( ( unsigned long * * ) ( arg_list - sizeof ( unsigned long * ) ) ) ) )  ;
 * unsignedLongPtr = unsignedLongValue ;
 }
 }
 
-percent = 0 ;
+percent = 0  ;
 break ;
 
-case '\165' :
+case 'u' :
 unsignedLongValue = scanUnsignedLongInt ( 0 ) ;
 
 if ( ! star ) {
 if ( shortInt ) {
-unsignedShortPtr = ( * ( ( arg_list += sizeof ( unsigned short * ) ) , ( ( unsigned short * * ) ( arg_list - sizeof ( unsigned short * ) ) ) ) ) ;
+unsignedShortPtr = ( * ( ( arg_list += sizeof ( unsigned short * ) ) , ( ( unsigned short * * ) ( arg_list - sizeof ( unsigned short * ) ) ) ) )  ;
 * unsignedShortPtr = ( short ) unsignedLongValue ;
 }
 else if ( ! longIntOrDouble ) {
-unsignedIntPtr = ( * ( ( arg_list += sizeof ( unsigned int * ) ) , ( ( unsigned int * * ) ( arg_list - sizeof ( unsigned int * ) ) ) ) ) ;
+unsignedIntPtr = ( * ( ( arg_list += sizeof ( unsigned int * ) ) , ( ( unsigned int * * ) ( arg_list - sizeof ( unsigned int * ) ) ) ) )  ;
 * unsignedIntPtr = ( int ) unsignedLongValue ;
 }
 else {
-unsignedLongPtr = ( * ( ( arg_list += sizeof ( unsigned long * ) ) , ( ( unsigned long * * ) ( arg_list - sizeof ( unsigned long * ) ) ) ) ) ;
+unsignedLongPtr = ( * ( ( arg_list += sizeof ( unsigned long * ) ) , ( ( unsigned long * * ) ( arg_list - sizeof ( unsigned long * ) ) ) ) )  ;
 * unsignedLongPtr = unsignedLongValue ;
 }
 }
 
-percent = 0 ;
+percent = 0  ;
 break ;
 
-case '\145' :
-case '\146' :
-case '\147' :
+case 'e' :
+case 'f' :
+case 'g' :
 longDoubleValue = scanLongDouble ( ) ;
 
 if ( ! star ) {
 if ( longIntOrDouble ) {
-double * doublePtr = ( * ( ( arg_list += sizeof ( double * ) ) , ( ( double * * ) ( arg_list - sizeof ( double * ) ) ) ) ) ;
+double * doublePtr = ( * ( ( arg_list += sizeof ( double * ) ) , ( ( double * * ) ( arg_list - sizeof ( double * ) ) ) ) )  ;
 * doublePtr = ( double ) longDoubleValue ;
 }
 else if ( longDouble ) {
-long double * longDoublePtr = ( * ( ( arg_list += sizeof ( long double * ) ) , ( ( long double * * ) ( arg_list - sizeof ( long double * ) ) ) ) ) ;
+long double * longDoublePtr = ( * ( ( arg_list += sizeof ( long double * ) ) , ( ( long double * * ) ( arg_list - sizeof ( long double * ) ) ) ) )  ;
 * longDoublePtr = longDoubleValue ;
 }
 else {
-float * floatPtr = ( * ( ( arg_list += sizeof ( float * ) ) , ( ( float * * ) ( arg_list - sizeof ( float * ) ) ) ) ) ;
+float * floatPtr = ( * ( ( arg_list += sizeof ( float * ) ) , ( ( float * * ) ( arg_list - sizeof ( float * ) ) ) ) )  ;
 * floatPtr = ( float ) longDoubleValue ;
 }
 }
 
-percent = 0 ;
+percent = 0  ;
 break ;
 
-case '\133' : {
-int not = 0 ;
+case '[' : {
+int  not = 0  ;
 ++ index ;
 
-if ( format [ index ] == '\136' ) {
-not = 1 ;
+if ( format [ index ] == '^' ) {
+not = 1  ;
 ++ index ;
 }
 
 { int startIndex = index ;
 
-while ( format [ index ] != '\135' ) {
+while ( format [ index ] != ']' ) {
 ++ index ;
 }
 
 { int size = index - startIndex ;
 char c = format [ index ];
-format [ index ] = '\000' ;
+format [ index ] = '\0' ;
 
 if ( ! star ) {
-char * string = ( * ( ( arg_list += sizeof ( char * ) ) , ( ( char * * ) ( arg_list - sizeof ( char * ) ) ) ) ) ;
+char * string = ( * ( ( arg_list += sizeof ( char * ) ) , ( ( char * * ) ( arg_list - sizeof ( char * ) ) ) ) )  ;
 scanPattern ( string , & format [ startIndex ] , size , not ) ;
 }
 else {
-scanPattern ( ( ( void * ) 0 ) , & format [ startIndex ] , size , not ) ;
+scanPattern ( ( ( void * ) 0 )  , & format [ startIndex ] , size , not ) ;
 }
 
 format [ index ] = c ;
@@ -936,10 +950,10 @@ format [ index ] = c ;
 }
 break ;
 
-case '\156' :
-charsPtr = ( * ( ( arg_list += sizeof ( int * ) ) , ( ( int * * ) ( arg_list - sizeof ( int * ) ) ) ) ) ;
+case 'n' :
+charsPtr = ( * ( ( arg_list += sizeof ( int * ) ) , ( ( int * * ) ( arg_list - sizeof ( int * ) ) ) ) )  ;
 * charsPtr = g_inChars ;
-percent = 0 ;
+percent = 0  ;
 break ;
 
 default :
@@ -948,12 +962,12 @@ break ;
 }
 }
 else {
-if ( c == '\045' ) {
-percent = 1 ;
-shortInt = 0 ;
-longIntOrDouble = 0 ;
-longDouble = 0 ;
-star = 0 ;
+if ( c == '%' ) {
+percent = 1  ;
+shortInt = 0  ;
+longIntOrDouble = 0  ;
+longDouble = 0  ;
+star = 0  ;
 }
 }
 }
@@ -963,36 +977,35 @@ return g_inCount ;
 }
 
 int scanf ( const char * format , ... ) {
-char * arg_list ;
-( arg_list = ( ( char * ) & format ) + sizeof ( format ) ) ;
+char *  arg_list ;
+( arg_list = ( ( char * ) & format ) + sizeof ( format ) )  ;
 return vscanf ( format , arg_list ) ;
 }
 
-int vscanf ( const char * format , char * arg_list ) {
+int vscanf ( const char * format , char *  arg_list ) {
 return vfscanf ( stdin , format , arg_list ) ;
 }
 
 int fscanf ( FILE * inStream , const char * format , ... ) {
-char * arg_list ;
-( arg_list = ( ( char * ) & format ) + sizeof ( format ) ) ;
+char *  arg_list ;
+( arg_list = ( ( char * ) & format ) + sizeof ( format ) )  ;
 return vfscanf ( inStream , format , arg_list ) ;
 }
 
-int vfscanf ( FILE * inStream , const char * format , char * arg_list ) {
-g_inStatus = 0 ;
+int vfscanf ( FILE * inStream , const char * format , char *  arg_list ) {
+g_inStatus = 0  ;
 g_inDevice = ( void * ) inStream ;
 return scanFormat ( format , arg_list ) ;
 }
 
 int sscanf ( char * inString , const char * format , ... ) {
-char * arg_list ;
-( arg_list = ( ( char * ) & format ) + sizeof ( format ) ) ;
+char *  arg_list ;
+( arg_list = ( ( char * ) & format ) + sizeof ( format ) )  ;
 return vsscanf ( inString , format , arg_list ) ;
 }
 
-int vsscanf ( char * inString , const char * format , char * arg_list ) {
-g_inStatus = 1 ;
+int vsscanf ( char * inString , const char * format , char *  arg_list ) {
+g_inStatus = 1  ;
 g_inDevice = ( void * ) inString ;
 return scanFormat ( format , arg_list ) ;
-}
-
+} 
