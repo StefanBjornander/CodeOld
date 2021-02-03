@@ -1,10 +1,10 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.h,0$
-    
-    
- 
-     
-      
-     
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.h,1$
+
+
+
+
+
+
 
 struct tm {
 int tm_sec ;
@@ -18,33 +18,32 @@ int tm_yday ;
 int tm_isdst ;
 };
 
-extern long  clock ( void ) ;
-extern unsigned long  time ( unsigned long  * time ) ;
-extern double difftime ( unsigned long  time2 , unsigned long  time1 ) ;
-extern unsigned long  mktime ( struct tm * timeStruct ) ;
+extern long clock ( void ) ;
+extern unsigned long time ( unsigned long * time ) ;
+extern double difftime ( unsigned long time2 , unsigned long time1 ) ;
+extern unsigned long mktime ( struct tm * timeStruct ) ;
 
 extern char * asctime ( const struct tm * timeStruct ) ;
-extern char * ctime ( const unsigned long  * time ) ;
-extern struct tm * gmtime ( const unsigned long  * time ) ;
-extern struct tm * localtime ( const unsigned long  * time ) ;
+extern char * ctime ( const unsigned long * time ) ;
+extern struct tm * gmtime ( const unsigned long * time ) ;
+extern struct tm * localtime ( const unsigned long * time ) ;
 
-extern int  strftime ( char * buffer , int  size , const char * format ,
+extern int strftime ( char * buffer , int size , const char * format ,
 const struct tm * timeStruct ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLibTest.c,0$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
-    
-    
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
-    
-    
- 
-     
-     
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLibTest.c,1$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
+
+
+
+
+
 
 
 
@@ -79,13 +78,12 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
-    
-    
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
+
+
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -101,54 +99,52 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
-    
-    
- 
-      
-                         
-                                    
-      
- 
-   
- 
+
+
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
-    
-    
- 
-           
-     
-     
-     
-     
- 
-   
- 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
+
+
+
+
+
+
+
+
+
+
+
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
-    
-    
- 
-     
-     
- 
-     
-     
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
+
+
+
+
+
+
+
+
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
+
+
+
+
+
+
+
+
 
 typedef struct {
-int  open ;
+int open ;
 unsigned int handle ;
-char name [ 16  ] , ungetc ;
+char name [ 16 ] , ungetc ;
 int errno ;
 unsigned int position , size ;
-int  temporary ;
+int temporary ;
 } FILE ;
 
 extern FILE * stdin , * stdout , * stderr ;
@@ -157,16 +153,16 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
-         
 
-int  fileexists ( const char * name ) ;
+
+int fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
 FILE * freopen ( const char * filename , const char * mode , FILE * stream ) ;
 int fflush ( FILE * stream ) ;
 int fclose ( FILE * stream ) ;
 int remove ( const char * name ) ;
 int rename ( const char * oldName , const char * newName ) ;
-int setvbuf ( FILE * stream , char * buffer , int mode , int  size ) ;
+int setvbuf ( FILE * stream , char * buffer , int mode , int size ) ;
 void setbuf ( FILE * stream , char * buffer ) ;
 int fgetc ( FILE * stream ) ;
 char * fgets ( char * s , int n , FILE * stream ) ;
@@ -177,62 +173,59 @@ char * gets ( char * s ) ;
 int putchar ( int c ) ;
 int puts ( const char * s ) ;
 int ungetc ( int c , FILE * stream ) ;
-int  fread ( void * ptr , int  size , int  nobj , FILE * stream ) ;
-int  fwrite ( const void * ptr , int  size , int  nobj , FILE * stream ) ;
+int fread ( void * ptr , int size , int nobj , FILE * stream ) ;
+int fwrite ( const void * ptr , int size , int nobj , FILE * stream ) ;
 int fseek ( FILE * stream , int offset , int origin ) ;
 int ftell ( FILE * stream ) ;
 void rewind ( FILE * stream ) ;
-int fgetpos ( FILE * stream , int  * ptr ) ;
-int fsetpos ( FILE * stream , const int  * ptr ) ;
+int fgetpos ( FILE * stream , int * ptr ) ;
+int fsetpos ( FILE * stream , const int * ptr ) ;
 void clearerr ( FILE * stream ) ;
-int  feof ( FILE * stream ) ;
+int feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
-    
-    
- 
-     
-     
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
+
+
+
+
+
 
 FILE * tmpfile ( void ) ;
-char * tmpnam ( char name [ 4  ] ) ;
+char * tmpnam ( char name [ 4 ] ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
-    
-    
- 
-     
-     
- 
-     
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
+
+
+
+
+
+
+
 
 int scanf ( const char * format , ... ) ;
-int vscanf ( const char * format , char *  arg_list ) ;
+int vscanf ( const char * format , char * arg_list ) ;
 int fscanf ( FILE * inStream , const char * format , ... ) ;
-int vfscanf ( FILE * inStream , const char * format , char *  arg_list ) ;
+int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
-int vsscanf ( char * inString , const char * format , char *  arg_list ) ;
+int vsscanf ( char * inString , const char * format , char * arg_list ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
-    
-    
- 
-     
-     
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
+
+
+
+
+
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -242,27 +235,25 @@ int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
 int printf ( const char * format , ... ) ;
-int vprintf ( const char * format , char *  arg_list ) ;
+int vprintf ( const char * format , char * arg_list ) ;
 int fprintf ( FILE * outStream , const char * format , ... ) ;
-int vfprintf ( FILE * outStream , const char * format , char *  arg_list ) ;
+int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
-int vsprintf ( char * outString , const char * format , char *  arg_list ) ;
+int vsprintf ( char * outString , const char * format , char * arg_list ) ;
 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-        
- 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLibTest.c,1$
-        
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,0$
-    
-    
- 
-     
-           
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
+
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLibTest.c,2$
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdlib.h,1$
+
+
+
+
+
 
 double atof ( const char * s ) ;
 int atoi ( const char * s ) ;
@@ -284,21 +275,21 @@ void exit ( int status ) ;
 typedef void ( * FUNC_PTR ) ( void ) ;
 int atexit ( FUNC_PTR fcn ) ;
 
-     
-     
+
+
 
 int abs ( int value ) ;
 long labs ( long value ) ;
 
-void * malloc ( int  size ) ;
-void * realloc ( void * ptr , int  newSize ) ;
-void * calloc ( int  num , int  size ) ;
+void * malloc ( int size ) ;
+void * realloc ( void * ptr , int newSize ) ;
+void * calloc ( int num , int size ) ;
 void free ( void * ptr ) ;
 
-void qsort ( void * valueList , int  listSize , int  valueSize ,
+void qsort ( void * valueList , int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 void * bsearch ( const void * key , const void * valueList ,
-int  listSize , int  valueSize ,
+int listSize , int valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
 int abs ( int value ) ;
@@ -314,11 +305,10 @@ typedef struct {
 long quot , rem ;
 } ldiv_t ;
 
-ldiv_t ldiv ( long num , long denum ) ; 
-   
- 
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLibTest.c,2$
-        
+ldiv_t ldiv ( long num , long denum ) ;
+
+
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdLibTest.c,3$
 
 
 
@@ -338,72 +328,72 @@ return ( intValue1 < intValue2 ) ? 1 : ( ( intValue1 == intValue2 ) ? 0 : -1 ) ;
 }
 
 div_t print_div ( div_t d ) {
-printf ( "div_t quot %i rem %i\n" , d . quot , d . rem ) ;
+printf ( "\144\151\166\137\164\040\161\165\157\164\040\045\151\040\162\145\155\040\045\151\012" , d . quot , d . rem ) ;
 ++ d . quot ;
 d . rem ++;
 return d ;
 }
 
 ldiv_t print_ldiv ( ldiv_t ld ) {
-printf ( "ldiv_t quot %li rem %li\n" , ld . quot , ld . rem ) ;
+printf ( "\154\144\151\166\137\164\040\161\165\157\164\040\045\154\151\040\162\145\155\040\045\154\151\012" , ld . quot , ld . rem ) ;
 -- ld . quot ;
 ld . rem --;
 return ld ;
 }
 
 void exit_handle1x ( void ) {
-printf ( "exit1\n" ) ;
+printf ( "\145\170\151\164\061\012" ) ;
 }
 
 void exit_handle2x ( void ) {
-printf ( "exit2\n" ) ;
+printf ( "\145\170\151\164\062\012" ) ;
 }
 
 void exit_handle3x ( void ) {
-printf ( "exit3\n" ) ;
+printf ( "\145\170\151\164\063\012" ) ;
 }
 
 void hello ( void ) {
-printf ( "HelloFFF" ) ;
+printf ( "\110\145\154\154\157\106\106\106" ) ;
 }
 
 void qtest ( void f ( void ) ) {
-printf ( "f: %u\n" , ( unsigned ) f ) ;
+printf ( "\146\072\040\045\165\012" , ( unsigned ) f ) ;
 f ( ) ;
 }
 
 void stdlib_testZ ( void ) {
-printf ( "hello: %u\n" , ( unsigned ) hello ) ;
+printf ( "\150\145\154\154\157\072\040\045\165\012" , ( unsigned ) hello ) ;
 qtest ( hello ) ;
-printf ( "Y" ) ;
+printf ( "\131" ) ;
 }
 
 void stdlib_test ( void ) {
 { char * p ;
-printf ( "atof(\"123.456\") = %f\n" , atof ( "123.456" ) ) ;
-printf ( "strtod(\"123.456789abc\", &p) = (%f, %s)\n" , strtod ( "123.456789abc" , & p ) , p ) ;
+printf ( "\141\164\157\146\050\042\061\062\063\056\064\065\066\042\051\040\075\040\045\146\012" , atof ( "\061\062\063\056\064\065\066" ) ) ;
+printf ( "\163\164\162\164\157\144\050\042\061\062\063\056\064\065\066\067\070\071\141\142\143\042\054\040\046\160\051\040\075\040\050\045\146\054\040\045\163\051\012" , strtod ( "\061\062\063\056\064\065\066\067\070\071\141\142\143" , & p ) , p ) ;
 }
 
-printf ( "\ngetenv(\"path\") = %s\n" , getenv ( "path" ) ) ;
-printf ( "system(\"dir\")\n" ) ;
-system ( "dir" ) ;
+printf ( "\012\147\145\164\145\156\166\050\042\160\141\164\150\042\051\040\075\040\045\163\012" , getenv ( "\160\141\164\150" ) ) ;
+printf ( "\163\171\163\164\145\155\050\042\144\151\162\042\051\012" ) ;
+system ( "\144\151\162" ) ;
 
-printf ( "\nabs(-3) = %i, abs(3) = %i\n" , abs ( -3 ) , abs ( 3 ) ) ;
-printf ( "labs(-3l) = %li, labs(3l) = %li\n\n" , labs ( -3l ) , labs ( 3l ) ) ;
+printf ( "\012\141\142\163\050\055\063\051\040\075\040\045\151\054\040\141\142\163\050\063\051\040\075\040\045\151\012" , abs ( -3 ) , abs ( 3 ) ) ;
+printf ( "\154\141\142\163\050\055\063\154\051\040\075\040\045\154\151\054\040\154\141\142\163\050\063\154\051\040\075\040\045\154\151\012\012" , labs ( -3l ) , labs ( 3l ) ) ;
 
 { div_t i = div ( 10 , 3 ) ;
-printf ( "div_t(10, 3) = (%i, %i)\n" , i . quot , i . rem ) ;
+printf ( "\144\151\166\137\164\050\061\060\054\040\063\051\040\075\040\050\045\151\054\040\045\151\051\012" , i . quot , i . rem ) ;
 
 { div_t j = print_div ( i ) ;
-printf ( "div_t(10, 3) = (%i, %i)\n\n" , j . quot , j . rem ) ;
+printf ( "\144\151\166\137\164\050\061\060\054\040\063\051\040\075\040\050\045\151\054\040\045\151\051\012\012" , j . quot , j . rem ) ;
 }
 }
 
 { ldiv_t li = ldiv ( 10 , 3 ) ;
-printf ( "ldiv_t(10, 3) = (%li, %li)\n" , li . quot , li . rem ) ;
+printf ( "\154\144\151\166\137\164\050\061\060\054\040\063\051\040\075\040\050\045\154\151\054\040\045\154\151\051\012" , li . quot , li . rem ) ;
 
 { ldiv_t lj = print_ldiv ( li ) ;
-printf ( "ldiv_t(10, 3) = (%li, %li)\n\n" , lj . quot , lj . rem ) ;
+printf ( "\154\144\151\166\137\164\050\061\060\054\040\063\051\040\075\040\050\045\154\151\054\040\045\154\151\051\012\012" , lj . quot , lj . rem ) ;
 }
 }
 
@@ -411,38 +401,38 @@ printf ( "ldiv_t(10, 3) = (%li, %li)\n\n" , lj . quot , lj . rem ) ;
 int size = sizeof list / sizeof list [ 0 ];
 
 { int index ;
-printf ( "\nA List 1: " ) ;
+printf ( "\012\101\040\114\151\163\164\040\061\072\040" ) ;
 for ( index = 0 ; index < size ; ++ index ) {
-printf ( "%i " , * ( list + index ) ) ;
+printf ( "\045\151\040" , * ( list + index ) ) ;
 }
 }
 
 { int index ;
-printf ( "\nB List 2: " ) ;
+printf ( "\012\102\040\114\151\163\164\040\062\072\040" ) ;
 qsort ( list , size , sizeof list [ 0 ] , compare ) ;
 for ( index = 0 ; index < size ; ++ index ) {
-printf ( "%i " , * ( list + index ) ) ;
+printf ( "\045\151\040" , * ( list + index ) ) ;
 }
 }
 
 { int index ;
-printf ( "\nC List 3: " ) ;
+printf ( "\012\103\040\114\151\163\164\040\063\072\040" ) ;
 qsort ( list , size , sizeof list [ 0 ] , reverse_compare ) ;
 for ( index = 0 ; index < size ; ++ index ) {
-printf ( "%i " , * ( list + index ) ) ;
+printf ( "\045\151\040" , * ( list + index ) ) ;
 }
 }
 
 { int key ;
-printf ( "\n\nSearch:\n" ) ;
+printf ( "\012\012\123\145\141\162\143\150\072\012" ) ;
 for ( key = 0 ; key < 6 ; ++ key ) {
 int * p = ( int * ) bsearch ( & key , list , size , sizeof list [ 0 ] , compare ) ;
-int index = ( p != ( ( void * ) 0 )  ) ? ( p - list ) : -1 ;
-printf ( "  (%i, %i)\n" , key , index ) ;
+int index = ( p != ( ( void * ) 0 ) ) ? ( p - list ) : -1 ;
+printf ( "\040\040\050\045\151\054\040\045\151\051\012" , key , index ) ;
 }
 }
 
-printf ( "\n" ) ;
+printf ( "\012" ) ;
 }
 
 
@@ -463,4 +453,5 @@ printf ( "\n" ) ;
 
 
 
-} 
+}
+
