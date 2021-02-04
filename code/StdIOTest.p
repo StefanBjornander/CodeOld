@@ -1,13 +1,13 @@
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,1$
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,1$
-
-
-
-
-
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,0$
+    
+    
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\math.h,0$
+    
+    
+ 
+     
+     
 
 
 
@@ -42,12 +42,13 @@ extern double ceil ( double x ) ;
 extern double round ( double x ) ;
 extern double fabs ( double x ) ;
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,1$
-
-
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,3$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\ctype.h,0$
+    
+    
 
 extern int islower ( int c ) ;
 extern int isupper ( int c ) ;
@@ -63,52 +64,54 @@ extern int isspace ( int c ) ;
 extern int tolower ( int c ) ;
 extern int toupper ( int c ) ;
 
-
-
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,4$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,0$
+    
+    
+ 
+      
+                         
+                                    
+      
+ 
+   
+ 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,5$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdarg.h,1$
-
-
-
-
-
-
-
-
-
-
-
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,0$
+    
+    
+ 
+           
+     
+     
+     
+     
+ 
+   
+ 
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,6$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stddef.h,1$
-
-
-
-
-
-
-
-
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,1$
-
-
-
-
-
-
-
-
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\file.h,0$
+    
+    
+ 
+     
+     
+ 
+     
+     
 
 typedef struct {
-int open ;
+int  open ;
 unsigned int handle ;
-char name [ 16 ] , ungetc ;
+char name [ 16  ] , ungetc ;
 int errno ;
 unsigned int position , size ;
-int temporary ;
+int  temporary ;
 } FILE ;
 
 extern FILE * stdin , * stdout , * stderr ;
@@ -117,16 +120,16 @@ extern enum { EEXIST , ENOENT , EACCES };
 extern enum { SEEK_SET , SEEK_CUR , SEEK_END };
 extern enum { READ , WRITE , READ_WRITE };
 
+         
 
-
-int fileexists ( const char * name ) ;
+int  fileexists ( const char * name ) ;
 FILE * fopen ( const char * filename , const char * mode ) ;
 FILE * freopen ( const char * filename , const char * mode , FILE * stream ) ;
 int fflush ( FILE * stream ) ;
 int fclose ( FILE * stream ) ;
 int remove ( const char * name ) ;
 int rename ( const char * oldName , const char * newName ) ;
-int setvbuf ( FILE * stream , char * buffer , int mode , int size ) ;
+int setvbuf ( FILE * stream , char * buffer , int mode , int  size ) ;
 void setbuf ( FILE * stream , char * buffer ) ;
 int fgetc ( FILE * stream ) ;
 char * fgets ( char * s , int n , FILE * stream ) ;
@@ -137,59 +140,62 @@ char * gets ( char * s ) ;
 int putchar ( int c ) ;
 int puts ( const char * s ) ;
 int ungetc ( int c , FILE * stream ) ;
-int fread ( void * ptr , int size , int nobj , FILE * stream ) ;
-int fwrite ( const void * ptr , int size , int nobj , FILE * stream ) ;
+int  fread ( void * ptr , int  size , int  nobj , FILE * stream ) ;
+int  fwrite ( const void * ptr , int  size , int  nobj , FILE * stream ) ;
 int fseek ( FILE * stream , int offset , int origin ) ;
 int ftell ( FILE * stream ) ;
 void rewind ( FILE * stream ) ;
-int fgetpos ( FILE * stream , int * ptr ) ;
-int fsetpos ( FILE * stream , const int * ptr ) ;
+int fgetpos ( FILE * stream , int  * ptr ) ;
+int fsetpos ( FILE * stream , const int  * ptr ) ;
 void clearerr ( FILE * stream ) ;
-int feof ( FILE * stream ) ;
+int  feof ( FILE * stream ) ;
 int ferror ( FILE * stream ) ;
 void perror ( const char * s ) ;
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,1$
-
-
-
-
-
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,7$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\temp.h,0$
+    
+    
+ 
+     
+     
 
 FILE * tmpfile ( void ) ;
-char * tmpnam ( char name [ 4 ] ) ;
+char * tmpnam ( char name [ 4  ] ) ;
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,1$
-
-
-
-
-
-
-
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,8$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\scanf.h,0$
+    
+    
+ 
+     
+     
+ 
+     
 
 int scanf ( const char * format , ... ) ;
-int vscanf ( const char * format , char * arg_list ) ;
+int vscanf ( const char * format , char *  arg_list ) ;
 int fscanf ( FILE * inStream , const char * format , ... ) ;
-int vfscanf ( FILE * inStream , const char * format , char * arg_list ) ;
+int vfscanf ( FILE * inStream , const char * format , char *  arg_list ) ;
 int sscanf ( char * inString , const char * format , ... ) ;
-int vsscanf ( char * inString , const char * format , char * arg_list ) ;
+int vsscanf ( char * inString , const char * format , char *  arg_list ) ;
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,1$
-
-
-
-
-
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,9$
+        
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\printf.h,0$
+    
+    
+ 
+     
+     
 
 extern int g_outStatus , g_charCount ;
 extern void * g_outDevice ;
@@ -199,81 +205,83 @@ int fputc ( int c , FILE * stream ) ;
 int putchar ( int c ) ;
 
 int printf ( const char * format , ... ) ;
-int vprintf ( const char * format , char * arg_list ) ;
+int vprintf ( const char * format , char *  arg_list ) ;
 int fprintf ( FILE * outStream , const char * format , ... ) ;
-int vfprintf ( FILE * outStream , const char * format , char * arg_list ) ;
+int vfprintf ( FILE * outStream , const char * format , char *  arg_list ) ;
 int sprintf ( char * outString , const char * format , ... ) ;
-int vsprintf ( char * outString , const char * format , char * arg_list ) ;
+int vsprintf ( char * outString , const char * format , char *  arg_list ) ;
 
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,11$
-
-
-
-$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIOTest.c,1$
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\stdio.h,10$
+        
+ 
+   
+ 
+$C:\Users\Stefan\Documents\vagrant\homestead\code\code\StdIOTest.c,0$
+        
 
 void stdio_test ( void ) {
 { int n = 0 ;
 int * p = & n ;
 
-printf ( "\074\045\151\076\040\074\045\151\076\040\074\045\154\151\076\040\074\045\154\151\076\040\074\045\165\076\040\074\045\154\165\076\012\012" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
+printf ( "<%i> <%i> <%li> <%li> <%u> <%lu>\n\n" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
 
-printf ( "\074\045\066\151\076\040\074\045\066\151\076\040\074\045\066\154\151\076\040\074\045\066\154\151\076\040\074\045\066\165\076\040\074\045\066\154\165\076\012" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
-printf ( "\074\045\053\066\151\076\040\074\045\053\066\151\076\040\074\045\053\066\154\151\076\040\074\045\053\066\154\151\076\040\074\045\053\066\165\076\040\074\045\053\066\154\165\076\012" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
-printf ( "\074\045\055\066\151\076\040\074\045\055\066\151\076\040\074\045\055\066\154\151\076\040\074\045\055\066\154\151\076\040\074\045\055\066\165\076\040\074\045\055\066\154\165\076\012" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
-printf ( "\074\045\053\055\066\151\076\040\074\045\053\055\066\151\076\040\074\045\053\055\066\154\151\076\040\074\045\053\055\066\154\151\076\040\074\045\053\055\066\165\076\040\074\045\053\055\066\154\165\076\012\012" , 123 , +- 123 , 123L , +- 123L , 123 , 123L ) ;
+printf ( "<%6i> <%6i> <%6li> <%6li> <%6u> <%6lu>\n" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
+printf ( "<%+6i> <%+6i> <%+6li> <%+6li> <%+6u> <%+6lu>\n" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
+printf ( "<%-6i> <%-6i> <%-6li> <%-6li> <%-6u> <%-6lu>\n" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
+printf ( "<%+-6i> <%+-6i> <%+-6li> <%+-6li> <%+-6u> <%+-6lu>\n\n" , 123 , +- 123 , 123L , +- 123L , 123 , 123L ) ;
 
-printf ( "\074\045\060\066\151\076\040\074\045\060\066\151\076\040\074\045\060\066\154\151\076\040\074\045\060\066\154\151\076\040\074\045\060\066\165\076\040\074\045\060\066\154\165\076\012" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
-printf ( "\074\045\053\060\066\151\076\040\074\045\053\060\066\151\076\040\074\045\053\060\066\154\151\076\040\074\045\053\060\066\154\151\076\040\074\045\053\060\066\165\076\040\074\045\053\060\066\154\165\076\012" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
-printf ( "\074\045\055\060\066\151\076\040\074\045\055\060\066\151\076\040\074\045\055\060\066\154\151\076\040\074\045\055\060\066\154\151\076\040\074\045\055\060\066\165\076\040\074\045\055\060\066\154\165\076\012" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
-printf ( "\074\045\053\055\060\066\151\076\040\074\045\053\055\060\066\151\076\040\074\045\053\055\060\066\154\151\076\040\074\045\053\055\060\066\154\151\076\040\074\045\053\055\060\066\165\076\040\074\045\053\055\060\066\154\165\076\012\012" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
+printf ( "<%06i> <%06i> <%06li> <%06li> <%06u> <%06lu>\n" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
+printf ( "<%+06i> <%+06i> <%+06li> <%+06li> <%+06u> <%+06lu>\n" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
+printf ( "<%-06i> <%-06i> <%-06li> <%-06li> <%-06u> <%-06lu>\n" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
+printf ( "<%+-06i> <%+-06i> <%+-06li> <%+-06li> <%+-06u> <%+-06lu>\n\n" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
 
-printf ( "\074\045\040\066\151\076\040\074\045\040\066\151\076\040\074\045\040\066\154\151\076\040\074\045\040\066\154\151\076\040\074\045\040\066\165\076\040\074\045\040\066\154\165\076\012" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
-printf ( "\074\045\053\040\066\151\076\040\074\045\053\040\066\151\076\040\074\045\053\040\066\154\151\076\040\074\045\053\040\066\154\151\076\040\074\045\053\040\066\165\076\040\074\045\053\040\066\154\165\076\012" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
-printf ( "\074\045\055\040\066\151\076\040\074\045\055\040\066\151\076\040\074\045\055\040\066\154\151\076\040\074\045\055\040\066\154\151\076\040\074\045\055\040\066\165\076\040\074\045\055\040\066\154\165\076\012" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
-printf ( "\074\045\053\055\040\066\151\076\040\074\045\053\055\040\066\151\076\040\074\045\053\055\040\066\154\151\076\040\074\045\053\055\040\066\154\151\076\040\074\045\053\055\040\066\165\076\040\074\045\053\055\040\066\154\165\076\012\012" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
+printf ( "<% 6i> <% 6i> <% 6li> <% 6li> <% 6u> <% 6lu>\n" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
+printf ( "<%+ 6i> <%+ 6i> <%+ 6li> <%+ 6li> <%+ 6u> <%+ 6lu>\n" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
+printf ( "<%- 6i> <%- 6i> <%- 6li> <%- 6li> <%- 6u> <%- 6lu>\n" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
+printf ( "<%+- 6i> <%+- 6i> <%+- 6li> <%+- 6li> <%+- 6u> <%+- 6lu>\n\n" , 123 , -123 , 123L , -123L , 123 , 123L ) ;
 
-printf ( "\074\045\170\076\040\074\045\130\076\040\074\045\157\076\040\074\045\154\170\076\040\074\045\154\130\076\040\074\045\154\157\076\012" , 123 , 123 , 123 , 123L , 123L , 123L ) ;
-printf ( "\074\045\043\170\076\040\074\045\043\130\076\040\074\045\043\157\076\040\074\045\043\154\170\076\040\074\045\043\154\130\076\040\074\045\043\154\157\076\012" , 123 , 123 , 123 , 123L , 123L , 123L ) ;
-printf ( "\074\045\045\076\040\074\045\163\076\040\074\045\143\076\040\074\045\160\076\012\012" , "\110\145\154\154\157\054\040\127\157\162\154\144\041" , '\130' , p ) ;
+printf ( "<%x> <%X> <%o> <%lx> <%lX> <%lo>\n" , 123 , 123 , 123 , 123L , 123L , 123L ) ;
+printf ( "<%#x> <%#X> <%#o> <%#lx> <%#lX> <%#lo>\n" , 123 , 123 , 123 , 123L , 123L , 123L ) ;
+printf ( "<%%> <%s> <%c> <%p>\n\n" , "Hello, World!" , 'X' , p ) ;
 
-printf ( "\074\045\146\076\040\074\045\145\076\040\074\045\105\076\040\074\045\147\076\040\074\045\107\076\012" , 123.456 , 123.456 , 123.456 , 123456.1 , 123456.1 ) ;
-printf ( "\074\045\154\146\076\040\074\045\154\145\076\040\074\045\154\105\076\040\074\045\154\147\076\040\074\045\154\107\076\012" , 123.456L , 123.456L , 123.456L , 123456.1L , 123456.1L ) ;
+printf ( "<%f> <%e> <%E> <%g> <%G>\n" , 123.456 , 123.456 , 123.456 , 123456.1 , 123456.1 ) ;
+printf ( "<%lf> <%le> <%lE> <%lg> <%lG>\n" , 123.456L , 123.456L , 123.456L , 123456.1L , 123456.1L ) ;
 
-printf ( "\074\045\043\146\076\040\074\045\043\145\076\040\074\045\043\105\076\040\074\045\043\147\076\040\074\045\043\107\076\012" , 123.456 , 123.456 , 123.456 , 123.456 , 123.456 ) ;
-printf ( "\074\045\043\154\146\076\040\074\045\043\154\145\076\040\074\045\043\154\105\076\040\074\045\043\154\147\076\040\074\045\043\154\107\076\012" , 123.456L , 123.456L , 123.456L , 123.456L , 123.456L ) ;
+printf ( "<%#f> <%#e> <%#E> <%#g> <%#G>\n" , 123.456 , 123.456 , 123.456 , 123.456 , 123.456 ) ;
+printf ( "<%#lf> <%#le> <%#lE> <%#lg> <%#lG>\n" , 123.456L , 123.456L , 123.456L , 123.456L , 123.456L ) ;
 
-printf ( "\074\045\066\056\063\146\076\040\074\045\066\056\063\145\076\040\074\045\066\056\063\105\076\040\074\045\066\056\063\147\076\040\074\045\066\056\063\107\076\012" , 123.456 , 123.456 , 123.456 , 123.456 , 123.456 ) ;
-printf ( "\074\045\066\056\063\154\146\076\040\074\045\066\056\063\154\145\076\040\074\045\066\056\063\154\105\076\040\074\045\066\056\063\154\147\076\040\074\045\066\056\063\154\107\076\012\012" , 123.456L , 123.456L , 123.456L , 123.456L , 123.456L ) ;
-
-
+printf ( "<%6.3f> <%6.3e> <%6.3E> <%6.3g> <%6.3G>\n" , 123.456 , 123.456 , 123.456 , 123.456 , 123.456 ) ;
+printf ( "<%6.3lf> <%6.3le> <%6.3lE> <%6.3lg> <%6.3lG>\n\n" , 123.456L , 123.456L , 123.456L , 123.456L , 123.456L ) ;
 
 
-printf ( "\074\045\146\076\040\074\045\145\076\040\074\045\105\076\040\074\045\147\076\040\074\045\107\076\012" , -123.456 , -123.456 , -123.456 , -0.000000123456 , -0.000000123456 ) ;
-printf ( "\074\045\154\146\076\040\074\045\154\145\076\040\074\045\154\105\076\040\074\045\154\147\076\040\074\045\154\107\076\012" , -123.456L , -123.456L , -123.456L , -0.000000123456L , -0.000000123456L ) ;
 
-printf ( "\074\045\043\146\076\040\074\045\043\145\076\040\074\045\043\105\076\040\074\045\043\147\076\040\074\045\043\107\076\012" , -123.456 , -123.456 , -123.456 , -123.456 , -123.456 ) ;
-printf ( "\074\045\043\154\146\076\040\074\045\043\154\145\076\040\074\045\043\154\105\076\040\074\045\043\154\147\076\040\074\045\043\154\107\076\012" , -123.456L , -123.456L , -123.456L , -123.456L , -123.456L ) ;
 
-printf ( "\074\045\066\056\063\146\076\040\074\045\066\056\063\145\076\040\074\045\066\056\063\105\076\040\074\045\066\056\063\147\076\040\074\045\066\056\063\107\076\012" , -123.456 , -123.456 , -123.456 , -123.456 , -123.456 ) ;
-printf ( "\074\045\066\056\063\154\146\076\040\074\045\066\056\063\154\145\076\040\074\045\066\056\063\154\105\076\040\074\045\066\056\063\154\147\076\040\074\045\066\056\063\154\107\076\012\012" , -123.456L , -123.456L , -123.456L , -123.456L , -123.456L ) ;
+printf ( "<%f> <%e> <%E> <%g> <%G>\n" , -123.456 , -123.456 , -123.456 , -0.000000123456 , -0.000000123456 ) ;
+printf ( "<%lf> <%le> <%lE> <%lg> <%lG>\n" , -123.456L , -123.456L , -123.456L , -0.000000123456L , -0.000000123456L ) ;
+
+printf ( "<%#f> <%#e> <%#E> <%#g> <%#G>\n" , -123.456 , -123.456 , -123.456 , -123.456 , -123.456 ) ;
+printf ( "<%#lf> <%#le> <%#lE> <%#lg> <%#lG>\n" , -123.456L , -123.456L , -123.456L , -123.456L , -123.456L ) ;
+
+printf ( "<%6.3f> <%6.3e> <%6.3E> <%6.3g> <%6.3G>\n" , -123.456 , -123.456 , -123.456 , -123.456 , -123.456 ) ;
+printf ( "<%6.3lf> <%6.3le> <%6.3lE> <%6.3lg> <%6.3lG>\n\n" , -123.456L , -123.456L , -123.456L , -123.456L , -123.456L ) ;
 }
 
 { int a = 0 , b = 0 , n = 0 ;
-printf ( "\120\154\145\141\163\145\040\167\162\151\164\145\040\164\150\162\145\145\040\151\156\164\145\147\145\162\163\072\040" ) ;
-sscanf ( "\061\062\063\040\064\065\066\040\067\070\071" , "\045\151\040\045\052\151\040\045\151\040\045\156" , & a , & b , & n ) ;
-printf ( "\074\045\151\076\040\074\045\151\076\040\074\045\151\076\012" , a , b , n ) ;
+printf ( "Please write three integers: " ) ;
+sscanf ( "123 456 789" , "%i %*i %i %n" , & a , & b , & n ) ;
+printf ( "<%i> <%i> <%i>\n" , a , b , n ) ;
 }
 
 { char s [ 100 ];
-printf ( "\120\154\145\141\163\145\040\167\162\151\164\145\040\164\150\145\040\160\141\164\164\145\162\156\163\040\133\141\142\143\135\072\040" ) ;
-sscanf ( "\141\142\143\144\145\146" , "\045\133\141\142\143\135" , s ) ;
-printf ( "\074\045\163\076\012" , s ) ;
+printf ( "Please write the patterns [abc]: " ) ;
+sscanf ( "abcdef" , "%[abc]" , s ) ;
+printf ( "<%s>\n" , s ) ;
 
-printf ( "\120\154\145\141\163\145\040\167\162\151\164\145\040\164\150\145\040\160\141\164\164\145\162\156\163\040\133\136\141\142\143\135\072\040" ) ;
-sscanf ( "\144\145\146\141\142\143" , "\045\133\136\141\142\143\135" , s ) ;
-printf ( "\074\045\163\076\012\012" , s ) ;
+printf ( "Please write the patterns [^abc]: " ) ;
+sscanf ( "defabc" , "%[^abc]" , s ) ;
+printf ( "<%s>\n\n" , s ) ;
 }
 
 
@@ -291,5 +299,4 @@ printf ( "\074\045\163\076\012\012" , s ) ;
 
 
 
-}
-
+} 
