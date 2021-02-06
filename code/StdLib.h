@@ -41,8 +41,8 @@ void* bsearch(const void* key, const void* valueList,
               size_t listSize, size_t valueSize,
               int (*compare)(const void*, const void*));
 
-int abs(int value);
 long labs(long value);
+int abs(int value);
 
 typedef struct {
   int quot, rem;
