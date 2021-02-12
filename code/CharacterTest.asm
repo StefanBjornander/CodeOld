@@ -20,217 +20,217 @@
 
 section .data
 
-@9132$string_ascii2025i0A#:
+@9150$string_ascii2025i0A#:
 	; Initializer String ascii %i\n
 	db "ascii %i", 10, 0
 
 section .data
 
-@9133$string_islower282725c2729203D2025s0A#:
+@9151$string_islower282725c2729203D2025s0A#:
 	; Initializer String islower('%c') = %s\n
 	db "islower(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9136$string_Yes#:
+@9154$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9137$string_No#:
+@9155$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9138$string_isupper282725c2729203D2025s0A#:
+@9156$string_isupper282725c2729203D2025s0A#:
 	; Initializer String isupper('%c') = %s\n
 	db "isupper(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9141$string_Yes#:
+@9159$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9142$string_No#:
+@9160$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9143$string_isalpha282725c2729203D2025s0A#:
+@9161$string_isalpha282725c2729203D2025s0A#:
 	; Initializer String isalpha('%c') = %s\n
 	db "isalpha(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9146$string_Yes#:
+@9164$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9147$string_No#:
+@9165$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9148$string_isdigit282725c2729203D2025s0A#:
+@9166$string_isdigit282725c2729203D2025s0A#:
 	; Initializer String isdigit('%c') = %s\n
 	db "isdigit(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9151$string_Yes#:
+@9169$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9152$string_No#:
+@9170$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9153$string_isalnum282725c2729203D2025s0A#:
+@9171$string_isalnum282725c2729203D2025s0A#:
 	; Initializer String isalnum('%c') = %s\n
 	db "isalnum(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9156$string_Yes#:
+@9174$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9157$string_No#:
+@9175$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9158$string_isxdigit282725c2729203D2025s0A#:
+@9176$string_isxdigit282725c2729203D2025s0A#:
 	; Initializer String isxdigit('%c') = %s\n
 	db "isxdigit(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9161$string_Yes#:
+@9179$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9162$string_No#:
+@9180$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9163$string_isgraph282725c2729203D2025s0A#:
+@9181$string_isgraph282725c2729203D2025s0A#:
 	; Initializer String isgraph('%c') = %s\n
 	db "isgraph(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9166$string_Yes#:
+@9184$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9167$string_No#:
+@9185$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9168$string_isprint282725c2729203D2025s0A#:
+@9186$string_isprint282725c2729203D2025s0A#:
 	; Initializer String isprint('%c') = %s\n
 	db "isprint(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9171$string_Yes#:
+@9189$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9172$string_No#:
+@9190$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9173$string_ispunct282725c2729203D2025s0A#:
+@9191$string_ispunct282725c2729203D2025s0A#:
 	; Initializer String ispunct('%c') = %s\n
 	db "ispunct(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9176$string_Yes#:
+@9194$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9177$string_No#:
+@9195$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9178$string_iscntrl282725c2729203D2025s0A#:
+@9196$string_iscntrl282725c2729203D2025s0A#:
 	; Initializer String iscntrl('%c') = %s\n
 	db "iscntrl(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9181$string_Yes#:
+@9199$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9182$string_No#:
+@9200$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9183$string_isspace282725c2729203D2025s0A#:
+@9201$string_isspace282725c2729203D2025s0A#:
 	; Initializer String isspace('%c') = %s\n
 	db "isspace(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9186$string_Yes#:
+@9204$string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9187$string_No#:
+@9205$string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9188$string_tolower282725c2729203D202725c270A#:
+@9206$string_tolower282725c2729203D202725c270A#:
 	; Initializer String tolower('%c') = '%c'\n
 	db "tolower(", 39, "%c", 39, ") = ", 39, "%c", 39, 10, 0
 
 section .data
 
-@9189$string_toupper282725c2729203D202725c270A0A#:
+@9207$string_toupper282725c2729203D202725c270A0A#:
 	; Initializer String toupper('%c') = '%c'\n\n
 	db "toupper(", 39, "%c", 39, ") = ", 39, "%c", 39, 10, 10, 0
 
@@ -241,7 +241,7 @@ section .text
 
  character_testX$1:
 	; Parameter 49 pointer "ascii %i\n"
-	mov qword [rbp + 49], @9132$string_ascii2025i0A#
+	mov qword [rbp + 49], @9150$string_ascii2025i0A#
 
  character_testX$2:
 	; IntegralToIntegral £temporary3132 c
@@ -273,7 +273,7 @@ section .text
 
  character_testX$7:
 	; Parameter 49 pointer "islower('%c') = %s\n"
-	mov qword [rbp + 49], @9133$string_islower282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9151$string_islower282725c2729203D2025s0A#
 
  character_testX$8:
 	; IntegralToIntegral £temporary3134 c
@@ -324,7 +324,7 @@ section .text
 
  character_testX$17:
 	; Assign £temporary3138 "Yes"
-	mov rax, @9136$string_Yes#
+	mov rax, @9154$string_Yes#
 
  character_testX$18:
 	; Jump 20
@@ -332,7 +332,7 @@ section .text
 
  character_testX$19:
 	; Assign £temporary3138 "No"
-	mov rax, @9137$string_No#
+	mov rax, @9155$string_No#
 
  character_testX$20:
 	; Parameter 61 pointer £temporary3138
@@ -355,7 +355,7 @@ section .text
 
  character_testX$24:
 	; Parameter 49 pointer "isupper('%c') = %s\n"
-	mov qword [rbp + 49], @9138$string_isupper282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9156$string_isupper282725c2729203D2025s0A#
 
  character_testX$25:
 	; IntegralToIntegral £temporary3140 c
@@ -406,7 +406,7 @@ section .text
 
  character_testX$34:
 	; Assign £temporary3144 "Yes"
-	mov rax, @9141$string_Yes#
+	mov rax, @9159$string_Yes#
 
  character_testX$35:
 	; Jump 37
@@ -414,7 +414,7 @@ section .text
 
  character_testX$36:
 	; Assign £temporary3144 "No"
-	mov rax, @9142$string_No#
+	mov rax, @9160$string_No#
 
  character_testX$37:
 	; Parameter 61 pointer £temporary3144
@@ -437,7 +437,7 @@ section .text
 
  character_testX$41:
 	; Parameter 49 pointer "isalpha('%c') = %s\n"
-	mov qword [rbp + 49], @9143$string_isalpha282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9161$string_isalpha282725c2729203D2025s0A#
 
  character_testX$42:
 	; IntegralToIntegral £temporary3146 c
@@ -488,7 +488,7 @@ section .text
 
  character_testX$51:
 	; Assign £temporary3150 "Yes"
-	mov rax, @9146$string_Yes#
+	mov rax, @9164$string_Yes#
 
  character_testX$52:
 	; Jump 54
@@ -496,7 +496,7 @@ section .text
 
  character_testX$53:
 	; Assign £temporary3150 "No"
-	mov rax, @9147$string_No#
+	mov rax, @9165$string_No#
 
  character_testX$54:
 	; Parameter 61 pointer £temporary3150
@@ -519,7 +519,7 @@ section .text
 
  character_testX$58:
 	; Parameter 49 pointer "isdigit('%c') = %s\n"
-	mov qword [rbp + 49], @9148$string_isdigit282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9166$string_isdigit282725c2729203D2025s0A#
 
  character_testX$59:
 	; IntegralToIntegral £temporary3152 c
@@ -570,7 +570,7 @@ section .text
 
  character_testX$68:
 	; Assign £temporary3156 "Yes"
-	mov rax, @9151$string_Yes#
+	mov rax, @9169$string_Yes#
 
  character_testX$69:
 	; Jump 71
@@ -578,7 +578,7 @@ section .text
 
  character_testX$70:
 	; Assign £temporary3156 "No"
-	mov rax, @9152$string_No#
+	mov rax, @9170$string_No#
 
  character_testX$71:
 	; Parameter 61 pointer £temporary3156
@@ -601,7 +601,7 @@ section .text
 
  character_testX$75:
 	; Parameter 49 pointer "isalnum('%c') = %s\n"
-	mov qword [rbp + 49], @9153$string_isalnum282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9171$string_isalnum282725c2729203D2025s0A#
 
  character_testX$76:
 	; IntegralToIntegral £temporary3158 c
@@ -652,7 +652,7 @@ section .text
 
  character_testX$85:
 	; Assign £temporary3162 "Yes"
-	mov rax, @9156$string_Yes#
+	mov rax, @9174$string_Yes#
 
  character_testX$86:
 	; Jump 88
@@ -660,7 +660,7 @@ section .text
 
  character_testX$87:
 	; Assign £temporary3162 "No"
-	mov rax, @9157$string_No#
+	mov rax, @9175$string_No#
 
  character_testX$88:
 	; Parameter 61 pointer £temporary3162
@@ -683,7 +683,7 @@ section .text
 
  character_testX$92:
 	; Parameter 49 pointer "isxdigit('%c') = %s\n"
-	mov qword [rbp + 49], @9158$string_isxdigit282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9176$string_isxdigit282725c2729203D2025s0A#
 
  character_testX$93:
 	; IntegralToIntegral £temporary3164 c
@@ -734,7 +734,7 @@ section .text
 
  character_testX$102:
 	; Assign £temporary3168 "Yes"
-	mov rax, @9161$string_Yes#
+	mov rax, @9179$string_Yes#
 
  character_testX$103:
 	; Jump 105
@@ -742,7 +742,7 @@ section .text
 
  character_testX$104:
 	; Assign £temporary3168 "No"
-	mov rax, @9162$string_No#
+	mov rax, @9180$string_No#
 
  character_testX$105:
 	; Parameter 61 pointer £temporary3168
@@ -765,7 +765,7 @@ section .text
 
  character_testX$109:
 	; Parameter 49 pointer "isgraph('%c') = %s\n"
-	mov qword [rbp + 49], @9163$string_isgraph282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9181$string_isgraph282725c2729203D2025s0A#
 
  character_testX$110:
 	; IntegralToIntegral £temporary3170 c
@@ -816,7 +816,7 @@ section .text
 
  character_testX$119:
 	; Assign £temporary3174 "Yes"
-	mov rax, @9166$string_Yes#
+	mov rax, @9184$string_Yes#
 
  character_testX$120:
 	; Jump 122
@@ -824,7 +824,7 @@ section .text
 
  character_testX$121:
 	; Assign £temporary3174 "No"
-	mov rax, @9167$string_No#
+	mov rax, @9185$string_No#
 
  character_testX$122:
 	; Parameter 61 pointer £temporary3174
@@ -847,7 +847,7 @@ section .text
 
  character_testX$126:
 	; Parameter 49 pointer "isprint('%c') = %s\n"
-	mov qword [rbp + 49], @9168$string_isprint282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9186$string_isprint282725c2729203D2025s0A#
 
  character_testX$127:
 	; IntegralToIntegral £temporary3176 c
@@ -898,7 +898,7 @@ section .text
 
  character_testX$136:
 	; Assign £temporary3180 "Yes"
-	mov rax, @9171$string_Yes#
+	mov rax, @9189$string_Yes#
 
  character_testX$137:
 	; Jump 139
@@ -906,7 +906,7 @@ section .text
 
  character_testX$138:
 	; Assign £temporary3180 "No"
-	mov rax, @9172$string_No#
+	mov rax, @9190$string_No#
 
  character_testX$139:
 	; Parameter 61 pointer £temporary3180
@@ -929,7 +929,7 @@ section .text
 
  character_testX$143:
 	; Parameter 49 pointer "ispunct('%c') = %s\n"
-	mov qword [rbp + 49], @9173$string_ispunct282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9191$string_ispunct282725c2729203D2025s0A#
 
  character_testX$144:
 	; IntegralToIntegral £temporary3182 c
@@ -980,7 +980,7 @@ section .text
 
  character_testX$153:
 	; Assign £temporary3186 "Yes"
-	mov rax, @9176$string_Yes#
+	mov rax, @9194$string_Yes#
 
  character_testX$154:
 	; Jump 156
@@ -988,7 +988,7 @@ section .text
 
  character_testX$155:
 	; Assign £temporary3186 "No"
-	mov rax, @9177$string_No#
+	mov rax, @9195$string_No#
 
  character_testX$156:
 	; Parameter 61 pointer £temporary3186
@@ -1011,7 +1011,7 @@ section .text
 
  character_testX$160:
 	; Parameter 49 pointer "iscntrl('%c') = %s\n"
-	mov qword [rbp + 49], @9178$string_iscntrl282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9196$string_iscntrl282725c2729203D2025s0A#
 
  character_testX$161:
 	; IntegralToIntegral £temporary3188 c
@@ -1062,7 +1062,7 @@ section .text
 
  character_testX$170:
 	; Assign £temporary3192 "Yes"
-	mov rax, @9181$string_Yes#
+	mov rax, @9199$string_Yes#
 
  character_testX$171:
 	; Jump 173
@@ -1070,7 +1070,7 @@ section .text
 
  character_testX$172:
 	; Assign £temporary3192 "No"
-	mov rax, @9182$string_No#
+	mov rax, @9200$string_No#
 
  character_testX$173:
 	; Parameter 61 pointer £temporary3192
@@ -1093,7 +1093,7 @@ section .text
 
  character_testX$177:
 	; Parameter 49 pointer "isspace('%c') = %s\n"
-	mov qword [rbp + 49], @9183$string_isspace282725c2729203D2025s0A#
+	mov qword [rbp + 49], @9201$string_isspace282725c2729203D2025s0A#
 
  character_testX$178:
 	; IntegralToIntegral £temporary3194 c
@@ -1144,7 +1144,7 @@ section .text
 
  character_testX$187:
 	; Assign £temporary3198 "Yes"
-	mov rax, @9186$string_Yes#
+	mov rax, @9204$string_Yes#
 
  character_testX$188:
 	; Jump 190
@@ -1152,7 +1152,7 @@ section .text
 
  character_testX$189:
 	; Assign £temporary3198 "No"
-	mov rax, @9187$string_No#
+	mov rax, @9205$string_No#
 
  character_testX$190:
 	; Parameter 61 pointer £temporary3198
@@ -1175,7 +1175,7 @@ section .text
 
  character_testX$194:
 	; Parameter 49 pointer "tolower('%c') = '%c'\n"
-	mov qword [rbp + 49], @9188$string_tolower282725c2729203D202725c270A#
+	mov qword [rbp + 49], @9206$string_tolower282725c2729203D202725c270A#
 
  character_testX$195:
 	; IntegralToIntegral £temporary3200 c
@@ -1255,7 +1255,7 @@ section .text
 
  character_testX$209:
 	; Parameter 49 pointer "toupper('%c') = '%c'\n\n"
-	mov qword [rbp + 49], @9189$string_toupper282725c2729203D202725c270A0A#
+	mov qword [rbp + 49], @9207$string_toupper282725c2729203D202725c270A0A#
 
  character_testX$210:
 	; IntegralToIntegral £temporary3206 c

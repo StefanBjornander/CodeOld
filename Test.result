@@ -3,28 +3,28 @@ old  <malloc4: 7411300 0 80>
 new  <malloc4: 65448 80 65528>
 
 522:
-old  <now 1: 1612822787>
-new  <now 1: 1612866704>
+old  <now 1: 1613163311>
+new  <now 1: 1613163289>
 
 523:
-old  <now 2: 1612822787>
-new  <now 2: 1612866704>
+old  <now 2: 1613163311>
+new  <now 2: 1613163289>
 
 524:
-old  <   gm time: Mon 2021-02-08 22:19:47, year day 38, week day 1, daylight saving time -1>
-new  <   gm time: Tue 2021-02-09 10:31:44, year day 39, week day 2, daylight saving time -1>
+old  <   gm time: Fri 2021-02-12 20:55:11, year day 42, week day 5, daylight saving time -1>
+new  <   gm time: Fri 2021-02-12 20:54:49, year day 42, week day 5, daylight saving time -1>
 
 525:
-old  <local time: Mon 2021-02-08 23:19:47, year day 38, week day 1, daylight saving time -1>
-new  <local time: Tue 2021-02-09 11:31:44, year day 39, week day 2, daylight saving time -1>
+old  <local time: Fri 2021-02-12 21:55:11, year day 42, week day 5, daylight saving time -1>
+new  <local time: Fri 2021-02-12 21:54:49, year day 42, week day 5, daylight saving time -1>
 
 526:
-old  <asctime <Mon Feb 8 22:19:47 2021>, ctime <Mon Feb 8 23:19:47 2021>>
-new  <asctime <Tue Feb 9 10:31:44 2021>, ctime <Tue Feb 9 11:31:44 2021>>
+old  <asctime <Fri Feb 12 20:55:11 2021>, ctime <Fri Feb 12 21:55:11 2021>>
+new  <asctime <Fri Feb 12 20:54:49 2021>, ctime <Fri Feb 12 21:54:49 2021>>
 
 527:
-old  <strftime 311 311 <short day Mon, long day Monday, short month Feb, long month February, date-time 2021-02-08 23:19:47, mday 08, hour 23, gm hour 11, yday 038, month 02, min 19, am/pm AM, sec 47, week number sun 06, week day 01, week number mon 06, date 23:19:47, time 23:19:47, short year 21, long year 2021, summer/winter summer>>
-new  <strftime 312 312 <short day Tue, long day Tuesday, short month Feb, long month February, date-time 2021-02-09 11:31:44, mday 09, hour 11, gm hour 11, yday 039, month 02, min 31, am/pm AM, sec 44, week number sun 06, week day 02, week number mon 06, date 11:31:44, time 11:31:44, short year 21, long year 2021, summer/winter summer>>
+old  <strftime 311 311 <short day Fri, long day Friday, short month Feb, long month February, date-time 2021-02-12 21:55:11, mday 12, hour 21, gm hour 09, yday 042, month 02, min 55, am/pm AM, sec 11, week number sun 06, week day 05, week number mon 06, date 21:55:11, time 21:55:11, short year 21, long year 2021, summer/winter summer>>
+new  <strftime 311 311 <short day Fri, long day Friday, short month Feb, long month February, date-time 2021-02-12 21:54:49, mday 12, hour 21, gm hour 09, yday 042, month 02, min 54, am/pm AM, sec 49, week number sun 06, week day 05, week number mon 06, date 21:54:49, time 21:54:49, short year 21, long year 2021, summer/winter summer>>
 
 529:
 old  <  Address 7411272, Size 96>

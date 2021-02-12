@@ -25,169 +25,169 @@
 
 section .data
 
-@10126$string_Hello2C20World21#:
+@10144$string_Hello2C20World21#:
 	; Initializer String Hello, World!
 	db "Hello, World!", 0
 
 section .data
 
-@10135$string_strlen282225s2229203D2025i0A#:
+@10153$string_strlen282225s2229203D2025i0A#:
 	; Initializer String strlen("%s") = %i\n
 	db "strlen(", 34, "%s", 34, ") = %i", 10, 0
 
 section .data
 
-@10142$string_t203D202225s222C20u203D202225s220A#:
+@10160$string_t203D202225s222C20u203D202225s220A#:
 	; Initializer String t = "%s", u = "%s"\n
 	db "t = ", 34, "%s", 34, ", u = ", 34, "%s", 34, 10, 0
 
 section .data
 
-@10143$string_abc#:
+@10161$string_abc#:
 	; Initializer String abc
 	db "abc", 0
 
 section .data
 
-@10144$string_abc#:
+@10162$string_abc#:
 	; Initializer String abc
 	db "abc", 0
 
 section .data
 
-@10152$string_t203D202225s222C20u203D202225s220A#:
+@10170$string_t203D202225s222C20u203D202225s220A#:
 	; Initializer String t = "%s", u = "%s"\n
 	db "t = ", 34, "%s", 34, ", u = ", 34, "%s", 34, 10, 0
 
 section .data
 
-@10153$string_strcmp28s2C20u29203D2025i0A#:
+@10171$string_strcmp28s2C20u29203D2025i0A#:
 	; Initializer String strcmp(s, u) = %i\n
 	db "strcmp(s, u) = %i", 10, 0
 
 section .data
 
-@10154$string_strncmp28s2C20u2C20229203D2025i0A#:
+@10172$string_strncmp28s2C20u2C20229203D2025i0A#:
 	; Initializer String strncmp(s, u, 2) = %i\n
 	db "strncmp(s, u, 2) = %i", 10, 0
 
 section .data
 
-@10161$string_strchr28s2C2027l2729203D2025i0A#:
+@10179$string_strchr28s2C2027l2729203D2025i0A#:
 	; Initializer String strchr(s, 'l') = %i\n
 	db "strchr(s, ", 39, "l", 39, ") = %i", 10, 0
 
 section .data
 
-@10170$string_strrchr28s2C2027l2729203D2025i0A#:
+@10188$string_strrchr28s2C2027l2729203D2025i0A#:
 	; Initializer String strrchr(s, 'l') = %i\n
 	db "strrchr(s, ", 39, "l", 39, ") = %i", 10, 0
 
 section .data
 
-@10179$string_strchr28s2C2027x2729203D2025i0A#:
+@10197$string_strchr28s2C2027x2729203D2025i0A#:
 	; Initializer String strchr(s, 'x') = %i\n
 	db "strchr(s, ", 39, "x", 39, ") = %i", 10, 0
 
 section .data
 
-@10188$string_strrchr28s2C2027x2729203D2025i0A#:
+@10206$string_strrchr28s2C2027x2729203D2025i0A#:
 	; Initializer String strrchr(s, 'x') = %i\n
 	db "strrchr(s, ", 39, "x", 39, ") = %i", 10, 0
 
 section .data
 
-@10194$string_Hello2C20World21#:
+@10212$string_Hello2C20World21#:
 	; Initializer String Hello, World!
 	db "Hello, World!", 0
 
 section .data
 
-@10200$string_Hello2C20World21#:
+@10218$string_Hello2C20World21#:
 	; Initializer String Hello, World!
 	db "Hello, World!", 0
 
 section .data
 
-@10219$string_s203D202225s222C20t203D202225s222C20u203D202225s220A#:
+@10237$string_s203D202225s222C20t203D202225s222C20u203D202225s220A#:
 	; Initializer String s = "%s", t = "%s", u = "%s"\n
 	db "s = ", 34, "%s", 34, ", t = ", 34, "%s", 34, ", u = ", 34, "%s", 34, 10, 0
 
 section .data
 
-@10228$string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A#:
+@10246$string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A#:
 	; Initializer String memchr(s, 'l', SIZE * sizeof(char)) = %i\n
 	db "memchr(s, ", 39, "l", 39, ", SIZE * sizeof(char)) = %i", 10, 0
 
 section .data
 
-@10242$string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A#:
+@10260$string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A#:
 	; Initializer String memchr(s, 'x', SIZE * sizeof(char)) = %i\n
 	db "memchr(s, ", 39, "x", 39, ", SIZE * sizeof(char)) = %i", 10, 0
 
 section .data
 
-@10248$string_s3A202225s222C20t3A202225s220A#:
+@10266$string_s3A202225s222C20t3A202225s220A#:
 	; Initializer String s: "%s", t: "%s"\n
 	db "s: ", 34, "%s", 34, ", t: ", 34, "%s", 34, 10, 0
 
 section .data
 
-@10249$string_strcmp28s2C20t29203D2025i0A#:
+@10267$string_strcmp28s2C20t29203D2025i0A#:
 	; Initializer String strcmp(s, t) = %i\n
 	db "strcmp(s, t) = %i", 10, 0
 
 section .data
 
-@10250$string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A#:
+@10268$string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A#:
 	; Initializer String memcmp(s, t, SIZE * sizeof(char)) = %i\n
 	db "memcmp(s, t, SIZE * sizeof(char)) = %i", 10, 0
 
 section .data
 
-@10256$string_strspn28s2C2022Hello2C20C2229203D2025i0A#:
+@10274$string_strspn28s2C2022Hello2C20C2229203D2025i0A#:
 	; Initializer String strspn(s, "Hello, C") = %i\n
 	db "strspn(s, ", 34, "Hello, C", 34, ") = %i", 10, 0
 
 section .data
 
-@10257$string_Hello2C20C#:
+@10275$string_Hello2C20C#:
 	; Initializer String Hello, C
 	db "Hello, C", 0
 
 section .data
 
-@10258$string_strcspn28s2C2022Hello2C20C2229203D2025i0A#:
+@10276$string_strcspn28s2C2022Hello2C20C2229203D2025i0A#:
 	; Initializer String strcspn(s, "Hello, C") = %i\n
 	db "strcspn(s, ", 34, "Hello, C", 34, ") = %i", 10, 0
 
 section .data
 
-@10259$string_Hello2C20C#:
+@10277$string_Hello2C20C#:
 	; Initializer String Hello, C
 	db "Hello, C", 0
 
 section .data
 
-@10260$string_strerror28errno29203D202225s220A#:
+@10278$string_strerror28errno29203D202225s220A#:
 	; Initializer String strerror(errno) = "%s"\n
 	db "strerror(errno) = ", 34, "%s", 34, 10, 0
 
 section .data
 
-@10261$string_2C#:
+@10279$string_2C#:
 	; Initializer String ,
 	db ",", 0
 
 section .data
 
-@10265$string_strtok28s2C20222C2229203D202225s220A#:
+@10283$string_strtok28s2C20222C2229203D202225s220A#:
 	; Initializer String strtok(s, ",") = "%s"\n
 	db "strtok(s, ", 34, ",", 34, ") = ", 34, "%s", 34, 10, 0
 
 section .data
 
-@10269$string_2C#:
+@10287$string_2C#:
 	; Initializer String ,
 	db ",", 0
 
@@ -195,14 +195,14 @@ section .text
 
  string_test:
 	; Assign s "Hello, World!"
-	mov qword [rbp + 28], @10126$string_Hello2C20World21#
+	mov qword [rbp + 28], @10144$string_Hello2C20World21#
 
  string_test$1:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$2:
 	; Parameter 268 pointer "strlen("%s") = %i\n"
-	mov qword [rbp + 268], @10135$string_strlen282225s2229203D2025i0A#
+	mov qword [rbp + 268], @10153$string_strlen282225s2229203D2025i0A#
 
  string_test$3:
 	; Parameter 276 pointer s
@@ -310,7 +310,7 @@ section .text
 
  string_test$26:
 	; Parameter 268 pointer "t = "%s", u = "%s"\n"
-	mov qword [rbp + 268], @10142$string_t203D202225s222C20u203D202225s220A#
+	mov qword [rbp + 268], @10160$string_t203D202225s222C20u203D202225s220A#
 
  string_test$27:
 	; Parameter 276 pointer t
@@ -344,7 +344,7 @@ section .text
 
  string_test$33:
 	; Parameter 276 pointer "abc"
-	mov qword [rbp + 276], @10143$string_abc#
+	mov qword [rbp + 276], @10161$string_abc#
 
  string_test$34:
 	; Call 244 strcat 0
@@ -391,7 +391,7 @@ section .text
 
  string_test$44:
 	; Parameter 276 pointer "abc"
-	mov qword [rbp + 276], @10144$string_abc#
+	mov qword [rbp + 276], @10162$string_abc#
 
  string_test$45:
 	; Parameter 284 signedint 2
@@ -435,7 +435,7 @@ section .text
 
  string_test$54:
 	; Parameter 268 pointer "t = "%s", u = "%s"\n"
-	mov qword [rbp + 268], @10152$string_t203D202225s222C20u203D202225s220A#
+	mov qword [rbp + 268], @10170$string_t203D202225s222C20u203D202225s220A#
 
  string_test$55:
 	; Parameter 276 pointer t
@@ -464,7 +464,7 @@ section .text
 
  string_test$60:
 	; Parameter 268 pointer "strcmp(s, u) = %i\n"
-	mov qword [rbp + 268], @10153$string_strcmp28s2C20u29203D2025i0A#
+	mov qword [rbp + 268], @10171$string_strcmp28s2C20u29203D2025i0A#
 
  string_test$61:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -513,7 +513,7 @@ section .text
 
  string_test$71:
 	; Parameter 268 pointer "strncmp(s, u, 2) = %i\n"
-	mov qword [rbp + 268], @10154$string_strncmp28s2C20u2C20229203D2025i0A#
+	mov qword [rbp + 268], @10172$string_strncmp28s2C20u2C20229203D2025i0A#
 
  string_test$72:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -595,7 +595,7 @@ section .text
 
  string_test$90:
 	; Parameter 268 pointer "strchr(s, 'l') = %i\n"
-	mov qword [rbp + 268], @10161$string_strchr28s2C2027l2729203D2025i0A#
+	mov qword [rbp + 268], @10179$string_strchr28s2C2027l2729203D2025i0A#
 
  string_test$91:
 	; Equal 95 p 0
@@ -668,7 +668,7 @@ section .text
 
  string_test$107:
 	; Parameter 268 pointer "strrchr(s, 'l') = %i\n"
-	mov qword [rbp + 268], @10170$string_strrchr28s2C2027l2729203D2025i0A#
+	mov qword [rbp + 268], @10188$string_strrchr28s2C2027l2729203D2025i0A#
 
  string_test$108:
 	; Equal 112 p 0
@@ -741,7 +741,7 @@ section .text
 
  string_test$124:
 	; Parameter 268 pointer "strchr(s, 'x') = %i\n"
-	mov qword [rbp + 268], @10179$string_strchr28s2C2027x2729203D2025i0A#
+	mov qword [rbp + 268], @10197$string_strchr28s2C2027x2729203D2025i0A#
 
  string_test$125:
 	; Equal 129 p 0
@@ -814,7 +814,7 @@ section .text
 
  string_test$141:
 	; Parameter 268 pointer "strrchr(s, 'x') = %i\n"
-	mov qword [rbp + 268], @10188$string_strrchr28s2C2027x2729203D2025i0A#
+	mov qword [rbp + 268], @10206$string_strrchr28s2C2027x2729203D2025i0A#
 
  string_test$142:
 	; Equal 146 p 0
@@ -863,7 +863,7 @@ section .text
 
  string_test$152:
 	; Parameter 276 pointer "Hello, World!"
-	mov qword [rbp + 276], @10194$string_Hello2C20World21#
+	mov qword [rbp + 276], @10212$string_Hello2C20World21#
 
  string_test$153:
 	; Parameter 284 signedint 20
@@ -889,7 +889,7 @@ section .text
 
  string_test$158:
 	; Parameter 276 pointer "Hello, World!"
-	mov qword [rbp + 276], @10200$string_Hello2C20World21#
+	mov qword [rbp + 276], @10218$string_Hello2C20World21#
 
  string_test$159:
 	; Parameter 284 signedint 20
@@ -945,7 +945,7 @@ section .text
 
  string_test$171:
 	; Parameter 268 pointer "s = "%s", t = "%s", u = "%s"\n"
-	mov qword [rbp + 268], @10219$string_s203D202225s222C20t203D202225s222C20u203D202225s220A#
+	mov qword [rbp + 268], @10237$string_s203D202225s222C20t203D202225s222C20u203D202225s220A#
 
  string_test$172:
 	; Parameter 276 pointer s
@@ -1012,7 +1012,7 @@ section .text
 
  string_test$186:
 	; Parameter 268 pointer "memchr(s, 'l', SIZE * sizeof(char)) = %i\n"
-	mov qword [rbp + 268], @10228$string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A#
+	mov qword [rbp + 268], @10246$string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A#
 
  string_test$187:
 	; Equal 191 p 0
@@ -1089,7 +1089,7 @@ section .text
 
  string_test$204:
 	; Parameter 268 pointer "memchr(s, 'x', SIZE * sizeof(char)) = %i\n"
-	mov qword [rbp + 268], @10242$string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A#
+	mov qword [rbp + 268], @10260$string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A#
 
  string_test$205:
 	; Equal 209 p 0
@@ -1133,7 +1133,7 @@ section .text
 
  string_test$214:
 	; Parameter 268 pointer "s: "%s", t: "%s"\n"
-	mov qword [rbp + 268], @10248$string_s3A202225s222C20t3A202225s220A#
+	mov qword [rbp + 268], @10266$string_s3A202225s222C20t3A202225s220A#
 
  string_test$215:
 	; Parameter 276 pointer s
@@ -1162,7 +1162,7 @@ section .text
 
  string_test$220:
 	; Parameter 268 pointer "strcmp(s, t) = %i\n"
-	mov qword [rbp + 268], @10249$string_strcmp28s2C20t29203D2025i0A#
+	mov qword [rbp + 268], @10267$string_strcmp28s2C20t29203D2025i0A#
 
  string_test$221:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1211,7 +1211,7 @@ section .text
 
  string_test$231:
 	; Parameter 268 pointer "memcmp(s, t, SIZE * sizeof(char)) = %i\n"
-	mov qword [rbp + 268], @10250$string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A#
+	mov qword [rbp + 268], @10268$string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A#
 
  string_test$232:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1264,7 +1264,7 @@ section .text
 
  string_test$243:
 	; Parameter 268 pointer "strspn(s, "Hello, C") = %i\n"
-	mov qword [rbp + 268], @10256$string_strspn28s2C2022Hello2C20C2229203D2025i0A#
+	mov qword [rbp + 268], @10274$string_strspn28s2C2022Hello2C20C2229203D2025i0A#
 
  string_test$244:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1276,7 +1276,7 @@ section .text
 
  string_test$246:
 	; Parameter 308 pointer "Hello, C"
-	mov qword [rbp + 308], @10257$string_Hello2C20C#
+	mov qword [rbp + 308], @10275$string_Hello2C20C#
 
  string_test$247:
 	; Call 276 strspn 0
@@ -1312,7 +1312,7 @@ section .text
 
  string_test$254:
 	; Parameter 268 pointer "strcspn(s, "Hello, C") = %i\n"
-	mov qword [rbp + 268], @10258$string_strcspn28s2C2022Hello2C20C2229203D2025i0A#
+	mov qword [rbp + 268], @10276$string_strcspn28s2C2022Hello2C20C2229203D2025i0A#
 
  string_test$255:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1324,7 +1324,7 @@ section .text
 
  string_test$257:
 	; Parameter 308 pointer "Hello, C"
-	mov qword [rbp + 308], @10259$string_Hello2C20C#
+	mov qword [rbp + 308], @10277$string_Hello2C20C#
 
  string_test$258:
 	; Call 276 strcspn 0
@@ -1360,7 +1360,7 @@ section .text
 
  string_test$265:
 	; Parameter 268 pointer "strerror(errno) = "%s"\n"
-	mov qword [rbp + 268], @10260$string_strerror28errno29203D202225s220A#
+	mov qword [rbp + 268], @10278$string_strerror28errno29203D202225s220A#
 
  string_test$266:
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1409,7 +1409,7 @@ section .text
 
  string_test$276:
 	; Parameter 276 pointer ","
-	mov qword [rbp + 276], @10261$string_2C#
+	mov qword [rbp + 276], @10279$string_2C#
 
  string_test$277:
 	; Call 244 strtok 0
@@ -1438,7 +1438,7 @@ section .text
 
  string_test$283:
 	; Parameter 268 pointer "strtok(s, ",") = "%s"\n"
-	mov qword [rbp + 268], @10265$string_strtok28s2C20222C2229203D202225s220A#
+	mov qword [rbp + 268], @10283$string_strtok28s2C20222C2229203D202225s220A#
 
  string_test$284:
 	; Parameter 276 pointer p
@@ -1466,7 +1466,7 @@ section .text
 
  string_test$289:
 	; Parameter 276 pointer ","
-	mov qword [rbp + 276], @10269$string_2C#
+	mov qword [rbp + 276], @10287$string_2C#
 
  string_test$290:
 	; Call 244 strtok 0

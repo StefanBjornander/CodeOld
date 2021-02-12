@@ -9,13 +9,13 @@
 
 section .data
 
-@3188$g_tempArray:
+@3206$g_tempArray:
 	; InitializerZero 64
 	times 64 db 0
 
 section .data
 
-@3191$g_tempSize:
+@3209$g_tempSize:
 	; Initializer SignedInt 0
 	dd 0
 
@@ -267,7 +267,7 @@ section .text
 
 section .data
 
-@3248$string_w#:
+@3266$string_w#:
 	; Initializer String w
 	db "w", 0
 
@@ -317,7 +317,7 @@ section .text
 
  tmpfile$10:
 	; Parameter 68 pointer "w"
-	mov qword [rbp + 68], @3248$string_w#
+	mov qword [rbp + 68], @3266$string_w#
 
  tmpfile$11:
 	; Call 36 fopen 0
