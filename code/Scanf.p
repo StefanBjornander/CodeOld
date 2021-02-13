@@ -415,19 +415,19 @@ stream = ( FILE * ) g_inDevice ;
 
 handle = stream -> handle ; 
     
- register_ah = 0x3Fs ;
-register_bx = handle ;
-register_cx = 1 ;
-register_dx = & c ;
-interrupt ( 0x21s ) ; 
+    
+   
+   
+    
+    
    
  
     
-    
-         
-        
-   
-   
+ register_rax = 0x00L ;
+register_rdi = ( unsigned long ) stream -> handle ;
+register_rsi = ( unsigned long ) & c ;
+register_rdx = 1L ;
+syscall ( ) ; 
    
 
 ++ g_inChars ;
