@@ -39,14 +39,14 @@ section .data
 
 section .data
 
-@317$string_25d20#:
+@317string_25d20#:
 	; Initializer String %d 
 	db "%d ", 0
 
 section .text
 
  mainX:
-	; GreaterThan 11 count 10
+	; GreaterThan 11 count SignedInt$10#
 	cmp dword [@314$count], 10
 	jg mainX$11
 
@@ -54,15 +54,15 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  mainX$2:
-	; Parameter 48 pointer "%d "
-	mov qword [rbp + 48], @317$string_25d20#
+	; Parameter 48 pointer string_25d20#
+	mov qword [rbp + 48], @317string_25d20#
 
  mainX$3:
 	; Assign £temporary1 count
 	mov eax, [@314$count]
 
  mainX$4:
-	; Add count count 1
+	; Add count count SignedInt$1#
 	inc dword [@314$count]
 
  mainX$5:

@@ -6,91 +6,91 @@
 
 section .data
 
-@9590$string_CHAR_BIT203D2025i0A#:
+@9590string_CHAR_BIT203D2025i0A#:
 	; Initializer String CHAR_BIT = %i\n
 	db "CHAR_BIT = %i", 10, 0
 
 section .data
 
-@9593$string_CHAR_MIN203D2025i0A0A#:
+@9593string_CHAR_MIN203D2025i0A0A#:
 	; Initializer String CHAR_MIN = %i\n\n
 	db "CHAR_MIN = %i", 10, 10, 0
 
 section .data
 
-@9597$string_CHAR_MAX203D2025i0A#:
+@9597string_CHAR_MAX203D2025i0A#:
 	; Initializer String CHAR_MAX = %i\n
 	db "CHAR_MAX = %i", 10, 0
 
 section .data
 
-@9601$string_UCHAR_MAX203D2025u0A0A#:
+@9601string_UCHAR_MAX203D2025u0A0A#:
 	; Initializer String UCHAR_MAX = %u\n\n
 	db "UCHAR_MAX = %u", 10, 10, 0
 
 section .data
 
-@9605$string_SHRT_MIN203D2025i0A#:
+@9605string_SHRT_MIN203D2025i0A#:
 	; Initializer String SHRT_MIN = %i\n
 	db "SHRT_MIN = %i", 10, 0
 
 section .data
 
-@9609$string_SHRT_MAX203D2025i0A#:
+@9609string_SHRT_MAX203D2025i0A#:
 	; Initializer String SHRT_MAX = %i\n
 	db "SHRT_MAX = %i", 10, 0
 
 section .data
 
-@9613$string_USHRT_MAX203D2025u0A0A#:
+@9613string_USHRT_MAX203D2025u0A0A#:
 	; Initializer String USHRT_MAX = %u\n\n
 	db "USHRT_MAX = %u", 10, 10, 0
 
 section .data
 
-@9617$string_INT_MIN203D2025i0A#:
+@9617string_INT_MIN203D2025i0A#:
 	; Initializer String INT_MIN = %i\n
 	db "INT_MIN = %i", 10, 0
 
 section .data
 
-@9620$string_INT_MAX203D2025i0A#:
+@9620string_INT_MAX203D2025i0A#:
 	; Initializer String INT_MAX = %i\n
 	db "INT_MAX = %i", 10, 0
 
 section .data
 
-@9623$string_UINT_MAX203D2025u0A0A#:
+@9623string_UINT_MAX203D2025u0A0A#:
 	; Initializer String UINT_MAX = %u\n\n
 	db "UINT_MAX = %u", 10, 10, 0
 
 section .data
 
-@9626$string_LONG_MIN203D2025li0A#:
+@9626string_LONG_MIN203D2025li0A#:
 	; Initializer String LONG_MIN = %li\n
 	db "LONG_MIN = %li", 10, 0
 
 section .data
 
-@9629$string_LONG_MAX203D2025li0A#:
+@9629string_LONG_MAX203D2025li0A#:
 	; Initializer String LONG_MAX = %li\n
 	db "LONG_MAX = %li", 10, 0
 
 section .data
 
-@9632$string_ULONG_MAX203D2025lu0A#:
+@9632string_ULONG_MAX203D2025lu0A#:
 	; Initializer String ULONG_MAX = %lu\n
 	db "ULONG_MAX = %lu", 10, 0
 
 section .data
 
-@9635$string_ULONG_MAX203D2025lx0A#:
+@9635string_ULONG_MAX203D2025lx0A#:
 	; Initializer String ULONG_MAX = %lx\n
 	db "ULONG_MAX = %lx", 10, 0
 
 section .data
 
-@9638$string_ULONG_MAX203D2025lX0A#:
+@9638string_ULONG_MAX203D2025lX0A#:
 	; Initializer String ULONG_MAX = %lX\n
 	db "ULONG_MAX = %lX", 10, 0
 
@@ -100,11 +100,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  limits_test$1:
-	; Parameter 48 pointer "CHAR_BIT = %i\n"
-	mov qword [rbp + 48], @9590$string_CHAR_BIT203D2025i0A#
+	; Parameter 48 pointer string_CHAR_BIT203D2025i0A#
+	mov qword [rbp + 48], @9590string_CHAR_BIT203D2025i0A#
 
  limits_test$2:
-	; Parameter 56 signedint 8
+	; Parameter 56 signedint SignedInt$8#
 	mov dword [rbp + 56], 8
 
  limits_test$3:
@@ -123,11 +123,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  limits_test$6:
-	; Parameter 48 pointer "CHAR_MIN = %i\n\n"
-	mov qword [rbp + 48], @9593$string_CHAR_MIN203D2025i0A0A#
+	; Parameter 48 pointer string_CHAR_MIN203D2025i0A0A#
+	mov qword [rbp + 48], @9593string_CHAR_MIN203D2025i0A0A#
 
  limits_test$7:
-	; Parameter 56 signedint -128
+	; Parameter 56 signedint SignedInt$minus128#
 	mov dword [rbp + 56], -128
 
  limits_test$8:
@@ -146,11 +146,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  limits_test$11:
-	; Parameter 48 pointer "CHAR_MAX = %i\n"
-	mov qword [rbp + 48], @9597$string_CHAR_MAX203D2025i0A#
+	; Parameter 48 pointer string_CHAR_MAX203D2025i0A#
+	mov qword [rbp + 48], @9597string_CHAR_MAX203D2025i0A#
 
  limits_test$12:
-	; Parameter 56 signedint 127
+	; Parameter 56 signedint SignedInt$127#
 	mov dword [rbp + 56], 127
 
  limits_test$13:
@@ -169,11 +169,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  limits_test$16:
-	; Parameter 48 pointer "UCHAR_MAX = %u\n\n"
-	mov qword [rbp + 48], @9601$string_UCHAR_MAX203D2025u0A0A#
+	; Parameter 48 pointer string_UCHAR_MAX203D2025u0A0A#
+	mov qword [rbp + 48], @9601string_UCHAR_MAX203D2025u0A0A#
 
  limits_test$17:
-	; Parameter 56 unsigned int 255
+	; Parameter 56 unsigned int Unsigned_Int$255#
 	mov dword [rbp + 56], 255
 
  limits_test$18:
@@ -192,11 +192,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  limits_test$21:
-	; Parameter 48 pointer "SHRT_MIN = %i\n"
-	mov qword [rbp + 48], @9605$string_SHRT_MIN203D2025i0A#
+	; Parameter 48 pointer string_SHRT_MIN203D2025i0A#
+	mov qword [rbp + 48], @9605string_SHRT_MIN203D2025i0A#
 
  limits_test$22:
-	; Parameter 56 signedint -32768
+	; Parameter 56 signedint SignedInt$minus32768#
 	mov dword [rbp + 56], -32768
 
  limits_test$23:
@@ -215,11 +215,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  limits_test$26:
-	; Parameter 48 pointer "SHRT_MAX = %i\n"
-	mov qword [rbp + 48], @9609$string_SHRT_MAX203D2025i0A#
+	; Parameter 48 pointer string_SHRT_MAX203D2025i0A#
+	mov qword [rbp + 48], @9609string_SHRT_MAX203D2025i0A#
 
  limits_test$27:
-	; Parameter 56 signedint 32767
+	; Parameter 56 signedint SignedInt$32767#
 	mov dword [rbp + 56], 32767
 
  limits_test$28:
@@ -238,11 +238,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  limits_test$31:
-	; Parameter 48 pointer "USHRT_MAX = %u\n\n"
-	mov qword [rbp + 48], @9613$string_USHRT_MAX203D2025u0A0A#
+	; Parameter 48 pointer string_USHRT_MAX203D2025u0A0A#
+	mov qword [rbp + 48], @9613string_USHRT_MAX203D2025u0A0A#
 
  limits_test$32:
-	; Parameter 56 unsigned int 65535
+	; Parameter 56 unsigned int Unsigned_Int$65535#
 	mov dword [rbp + 56], 65535
 
  limits_test$33:
@@ -261,11 +261,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  limits_test$36:
-	; Parameter 48 pointer "INT_MIN = %i\n"
-	mov qword [rbp + 48], @9617$string_INT_MIN203D2025i0A#
+	; Parameter 48 pointer string_INT_MIN203D2025i0A#
+	mov qword [rbp + 48], @9617string_INT_MIN203D2025i0A#
 
  limits_test$37:
-	; Parameter 56 signedint -2147483648
+	; Parameter 56 signedint SignedInt$minus2147483648#
 	mov dword [rbp + 56], -2147483648
 
  limits_test$38:
@@ -284,11 +284,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  limits_test$41:
-	; Parameter 48 pointer "INT_MAX = %i\n"
-	mov qword [rbp + 48], @9620$string_INT_MAX203D2025i0A#
+	; Parameter 48 pointer string_INT_MAX203D2025i0A#
+	mov qword [rbp + 48], @9620string_INT_MAX203D2025i0A#
 
  limits_test$42:
-	; Parameter 56 signedint 2147483647
+	; Parameter 56 signedint SignedInt$2147483647#
 	mov dword [rbp + 56], 2147483647
 
  limits_test$43:
@@ -307,11 +307,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  limits_test$46:
-	; Parameter 48 pointer "UINT_MAX = %u\n\n"
-	mov qword [rbp + 48], @9623$string_UINT_MAX203D2025u0A0A#
+	; Parameter 48 pointer string_UINT_MAX203D2025u0A0A#
+	mov qword [rbp + 48], @9623string_UINT_MAX203D2025u0A0A#
 
  limits_test$47:
-	; Parameter 56 unsigned int 4294967295
+	; Parameter 56 unsigned int Unsigned_Int$4294967295#
 	mov eax, 4294967295
 	mov [rbp + 56], eax
 
@@ -331,11 +331,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  limits_test$51:
-	; Parameter 48 pointer "LONG_MIN = %li\n"
-	mov qword [rbp + 48], @9626$string_LONG_MIN203D2025li0A#
+	; Parameter 48 pointer string_LONG_MIN203D2025li0A#
+	mov qword [rbp + 48], @9626string_LONG_MIN203D2025li0A#
 
  limits_test$52:
-	; Parameter 56 signed long int -9223372036854775808
+	; Parameter 56 signed long int Signed_Long_Int$minus9223372036854775808#
 	mov rax, -9223372036854775808
 	mov [rbp + 56], rax
 
@@ -355,11 +355,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  limits_test$56:
-	; Parameter 48 pointer "LONG_MAX = %li\n"
-	mov qword [rbp + 48], @9629$string_LONG_MAX203D2025li0A#
+	; Parameter 48 pointer string_LONG_MAX203D2025li0A#
+	mov qword [rbp + 48], @9629string_LONG_MAX203D2025li0A#
 
  limits_test$57:
-	; Parameter 56 signed long int 9223372036854775807
+	; Parameter 56 signed long int Signed_Long_Int$9223372036854775807#
 	mov rax, 9223372036854775807
 	mov [rbp + 56], rax
 
@@ -379,11 +379,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  limits_test$61:
-	; Parameter 48 pointer "ULONG_MAX = %lu\n"
-	mov qword [rbp + 48], @9632$string_ULONG_MAX203D2025lu0A#
+	; Parameter 48 pointer string_ULONG_MAX203D2025lu0A#
+	mov qword [rbp + 48], @9632string_ULONG_MAX203D2025lu0A#
 
  limits_test$62:
-	; Parameter 56 unsignedlongint 18446744073709551615
+	; Parameter 56 unsignedlongint UnsignedLongInt$18446744073709551615#
 	mov rax, 18446744073709551615
 	mov [rbp + 56], rax
 
@@ -403,11 +403,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  limits_test$66:
-	; Parameter 48 pointer "ULONG_MAX = %lx\n"
-	mov qword [rbp + 48], @9635$string_ULONG_MAX203D2025lx0A#
+	; Parameter 48 pointer string_ULONG_MAX203D2025lx0A#
+	mov qword [rbp + 48], @9635string_ULONG_MAX203D2025lx0A#
 
  limits_test$67:
-	; Parameter 56 unsignedlongint 18446744073709551615
+	; Parameter 56 unsignedlongint UnsignedLongInt$18446744073709551615#
 	mov rax, 18446744073709551615
 	mov [rbp + 56], rax
 
@@ -427,11 +427,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  limits_test$71:
-	; Parameter 48 pointer "ULONG_MAX = %lX\n"
-	mov qword [rbp + 48], @9638$string_ULONG_MAX203D2025lX0A#
+	; Parameter 48 pointer string_ULONG_MAX203D2025lX0A#
+	mov qword [rbp + 48], @9638string_ULONG_MAX203D2025lX0A#
 
  limits_test$72:
-	; Parameter 56 unsignedlongint 18446744073709551615
+	; Parameter 56 unsignedlongint UnsignedLongInt$18446744073709551615#
 	mov rax, 18446744073709551615
 	mov [rbp + 56], rax
 

@@ -40,7 +40,7 @@ section .text
 	mov [rbp + 28], rbx
 
  islower$5:
-	; Equal 19 localeConvPtr 0
+	; Equal 19 localeConvPtr Pointer$0#
 	cmp qword [rbp + 28], 0
 	je islower$19
 
@@ -48,11 +48,11 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  islower$7:
-	; Dereference £temporary135 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary135 localeConvPtr 0
 	mov rsi, [rbp + 28]
 
  islower$8:
-	; Parameter 60 pointer £temporary135 -> localeConvPtr
+	; Parameter 60 pointer £temporary135
 	mov rax, [rsi + 40]
 	mov [rbp + 60], rax
 
@@ -75,12 +75,12 @@ section .text
 	; GetReturnValue £temporary136
 
  islower$13:
-	; Equal 16 £temporary136 0
+	; Equal 16 £temporary136 Pointer$0#
 	cmp rbx, 0
 	je islower$16
 
  islower$14:
-	; Assign £temporary138 1
+	; Assign £temporary138 SignedInt$1#
 	mov ebx, 1
 
  islower$15:
@@ -88,7 +88,7 @@ section .text
 	jmp islower$17
 
  islower$16:
-	; Assign £temporary138 0
+	; Assign £temporary138 SignedInt$0#
 	mov ebx, 0
 
  islower$17:
@@ -102,17 +102,17 @@ section .text
 	jmp rax
 
  islower$19:
-	; LessThan 23 c 97
+	; LessThan 23 c SignedInt$97#
 	cmp dword [rbp + 24], 97
 	jl islower$23
 
  islower$20:
-	; GreaterThan 23 c 122
+	; GreaterThan 23 c SignedInt$122#
 	cmp dword [rbp + 24], 122
 	jg islower$23
 
  islower$21:
-	; Assign £temporary142 1
+	; Assign £temporary142 SignedInt$1#
 	mov ebx, 1
 
  islower$22:
@@ -120,7 +120,7 @@ section .text
 	jmp islower$24
 
  islower$23:
-	; Assign £temporary142 0
+	; Assign £temporary142 SignedInt$0#
 	mov ebx, 0
 
  islower$24:
@@ -159,7 +159,7 @@ section .text
 	mov [rbp + 28], rbx
 
  isupper$5:
-	; Equal 19 localeConvPtr 0
+	; Equal 19 localeConvPtr Pointer$0#
 	cmp qword [rbp + 28], 0
 	je isupper$19
 
@@ -167,11 +167,11 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  isupper$7:
-	; Dereference £temporary145 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary145 localeConvPtr 0
 	mov rsi, [rbp + 28]
 
  isupper$8:
-	; Parameter 60 pointer £temporary145 -> localeConvPtr
+	; Parameter 60 pointer £temporary145
 	mov rax, [rsi + 48]
 	mov [rbp + 60], rax
 
@@ -194,12 +194,12 @@ section .text
 	; GetReturnValue £temporary146
 
  isupper$13:
-	; Equal 16 £temporary146 0
+	; Equal 16 £temporary146 Pointer$0#
 	cmp rbx, 0
 	je isupper$16
 
  isupper$14:
-	; Assign £temporary148 1
+	; Assign £temporary148 SignedInt$1#
 	mov ebx, 1
 
  isupper$15:
@@ -207,7 +207,7 @@ section .text
 	jmp isupper$17
 
  isupper$16:
-	; Assign £temporary148 0
+	; Assign £temporary148 SignedInt$0#
 	mov ebx, 0
 
  isupper$17:
@@ -221,17 +221,17 @@ section .text
 	jmp rax
 
  isupper$19:
-	; LessThan 23 c 65
+	; LessThan 23 c SignedInt$65#
 	cmp dword [rbp + 24], 65
 	jl isupper$23
 
  isupper$20:
-	; GreaterThan 23 c 90
+	; GreaterThan 23 c SignedInt$90#
 	cmp dword [rbp + 24], 90
 	jg isupper$23
 
  isupper$21:
-	; Assign £temporary152 1
+	; Assign £temporary152 SignedInt$1#
 	mov ebx, 1
 
  isupper$22:
@@ -239,7 +239,7 @@ section .text
 	jmp isupper$24
 
  isupper$23:
-	; Assign £temporary152 0
+	; Assign £temporary152 SignedInt$0#
 	mov ebx, 0
 
  isupper$24:
@@ -279,7 +279,7 @@ section .text
 	; GetReturnValue £temporary153
 
  isalpha$5:
-	; NotEqual 12 £temporary153 0
+	; NotEqual 12 £temporary153 Logical$0#
 	cmp ebx, 0
 	jne isalpha$12
 
@@ -305,12 +305,12 @@ section .text
 	; GetReturnValue £temporary154
 
  isalpha$11:
-	; Equal 14 £temporary154 0
+	; Equal 14 £temporary154 Logical$0#
 	cmp ebx, 0
 	je isalpha$14
 
  isalpha$12:
-	; Assign £temporary158 1
+	; Assign £temporary158 SignedInt$1#
 	mov ebx, 1
 
  isalpha$13:
@@ -318,7 +318,7 @@ section .text
 	jmp isalpha$15
 
  isalpha$14:
-	; Assign £temporary158 0
+	; Assign £temporary158 SignedInt$0#
 	mov ebx, 0
 
  isalpha$15:
@@ -337,17 +337,17 @@ section .text
 section .text
 
  isdigit:
-	; LessThan 4 c 48
+	; LessThan 4 c SignedInt$48#
 	cmp dword [rbp + 24], 48
 	jl isdigit$4
 
  isdigit$1:
-	; GreaterThan 4 c 57
+	; GreaterThan 4 c SignedInt$57#
 	cmp dword [rbp + 24], 57
 	jg isdigit$4
 
  isdigit$2:
-	; Assign £temporary162 1
+	; Assign £temporary162 SignedInt$1#
 	mov ebx, 1
 
  isdigit$3:
@@ -355,7 +355,7 @@ section .text
 	jmp isdigit$5
 
  isdigit$4:
-	; Assign £temporary162 0
+	; Assign £temporary162 SignedInt$0#
 	mov ebx, 0
 
  isdigit$5:
@@ -395,7 +395,7 @@ section .text
 	; GetReturnValue £temporary163
 
  isalnum$5:
-	; NotEqual 12 £temporary163 0
+	; NotEqual 12 £temporary163 Logical$0#
 	cmp ebx, 0
 	jne isalnum$12
 
@@ -421,12 +421,12 @@ section .text
 	; GetReturnValue £temporary164
 
  isalnum$11:
-	; Equal 14 £temporary164 0
+	; Equal 14 £temporary164 Logical$0#
 	cmp ebx, 0
 	je isalnum$14
 
  isalnum$12:
-	; Assign £temporary168 1
+	; Assign £temporary168 SignedInt$1#
 	mov ebx, 1
 
  isalnum$13:
@@ -434,7 +434,7 @@ section .text
 	jmp isalnum$15
 
  isalnum$14:
-	; Assign £temporary168 0
+	; Assign £temporary168 SignedInt$0#
 	mov ebx, 0
 
  isalnum$15:
@@ -474,32 +474,32 @@ section .text
 	; GetReturnValue £temporary169
 
  isxdigit$5:
-	; NotEqual 10 £temporary169 0
+	; NotEqual 10 £temporary169 Logical$0#
 	cmp ebx, 0
 	jne isxdigit$10
 
  isxdigit$6:
-	; LessThan 8 c 97
+	; LessThan 8 c SignedInt$97#
 	cmp dword [rbp + 24], 97
 	jl isxdigit$8
 
  isxdigit$7:
-	; LessThanEqual 10 c 102
+	; LessThanEqual 10 c SignedInt$102#
 	cmp dword [rbp + 24], 102
 	jle isxdigit$10
 
  isxdigit$8:
-	; LessThan 12 c 65
+	; LessThan 12 c SignedInt$65#
 	cmp dword [rbp + 24], 65
 	jl isxdigit$12
 
  isxdigit$9:
-	; GreaterThan 12 c 70
+	; GreaterThan 12 c SignedInt$70#
 	cmp dword [rbp + 24], 70
 	jg isxdigit$12
 
  isxdigit$10:
-	; Assign £temporary179 1
+	; Assign £temporary179 SignedInt$1#
 	mov ebx, 1
 
  isxdigit$11:
@@ -507,7 +507,7 @@ section .text
 	jmp isxdigit$13
 
  isxdigit$12:
-	; Assign £temporary179 0
+	; Assign £temporary179 SignedInt$0#
 	mov ebx, 0
 
  isxdigit$13:
@@ -526,17 +526,17 @@ section .text
 section .text
 
  isgraph:
-	; LessThan 4 c 32
+	; LessThan 4 c SignedInt$32#
 	cmp dword [rbp + 24], 32
 	jl isgraph$4
 
  isgraph$1:
-	; GreaterThan 4 c 126
+	; GreaterThan 4 c SignedInt$126#
 	cmp dword [rbp + 24], 126
 	jg isgraph$4
 
  isgraph$2:
-	; Assign £temporary183 1
+	; Assign £temporary183 SignedInt$1#
 	mov ebx, 1
 
  isgraph$3:
@@ -544,7 +544,7 @@ section .text
 	jmp isgraph$5
 
  isgraph$4:
-	; Assign £temporary183 0
+	; Assign £temporary183 SignedInt$0#
 	mov ebx, 0
 
  isgraph$5:
@@ -584,17 +584,17 @@ section .text
 	; GetReturnValue £temporary184
 
  isprint$5:
-	; Equal 9 £temporary184 0
+	; Equal 9 £temporary184 Logical$0#
 	cmp ebx, 0
 	je isprint$9
 
  isprint$6:
-	; Equal 9 c 32
+	; Equal 9 c SignedInt$32#
 	cmp dword [rbp + 24], 32
 	je isprint$9
 
  isprint$7:
-	; Assign £temporary188 1
+	; Assign £temporary188 SignedInt$1#
 	mov ebx, 1
 
  isprint$8:
@@ -602,7 +602,7 @@ section .text
 	jmp isprint$10
 
  isprint$9:
-	; Assign £temporary188 0
+	; Assign £temporary188 SignedInt$0#
 	mov ebx, 0
 
  isprint$10:
@@ -642,7 +642,7 @@ section .text
 	; GetReturnValue £temporary189
 
  ispunct$5:
-	; Equal 14 £temporary189 0
+	; Equal 14 £temporary189 Logical$0#
 	cmp ebx, 0
 	je ispunct$14
 
@@ -668,12 +668,12 @@ section .text
 	; GetReturnValue £temporary190
 
  ispunct$11:
-	; NotEqual 14 £temporary190 0
+	; NotEqual 14 £temporary190 Logical$0#
 	cmp ebx, 0
 	jne ispunct$14
 
  ispunct$12:
-	; Assign £temporary195 1
+	; Assign £temporary195 SignedInt$1#
 	mov ebx, 1
 
  ispunct$13:
@@ -681,7 +681,7 @@ section .text
 	jmp ispunct$15
 
  ispunct$14:
-	; Assign £temporary195 0
+	; Assign £temporary195 SignedInt$0#
 	mov ebx, 0
 
  ispunct$15:
@@ -721,12 +721,12 @@ section .text
 	; GetReturnValue £temporary196
 
  iscntrl$5:
-	; NotEqual 8 £temporary196 0
+	; NotEqual 8 £temporary196 Logical$0#
 	cmp ebx, 0
 	jne iscntrl$8
 
  iscntrl$6:
-	; Assign £temporary199 1
+	; Assign £temporary199 SignedInt$1#
 	mov ebx, 1
 
  iscntrl$7:
@@ -734,7 +734,7 @@ section .text
 	jmp iscntrl$9
 
  iscntrl$8:
-	; Assign £temporary199 0
+	; Assign £temporary199 SignedInt$0#
 	mov ebx, 0
 
  iscntrl$9:
@@ -753,37 +753,37 @@ section .text
 section .text
 
  isspace:
-	; Equal 6 c 32
+	; Equal 6 c SignedInt$32#
 	cmp dword [rbp + 24], 32
 	je isspace$6
 
  isspace$1:
-	; Equal 6 c 12
+	; Equal 6 c SignedInt$12#
 	cmp dword [rbp + 24], 12
 	je isspace$6
 
  isspace$2:
-	; Equal 6 c 10
+	; Equal 6 c SignedInt$10#
 	cmp dword [rbp + 24], 10
 	je isspace$6
 
  isspace$3:
-	; Equal 6 c 13
+	; Equal 6 c SignedInt$13#
 	cmp dword [rbp + 24], 13
 	je isspace$6
 
  isspace$4:
-	; Equal 6 c 9
+	; Equal 6 c SignedInt$9#
 	cmp dword [rbp + 24], 9
 	je isspace$6
 
  isspace$5:
-	; NotEqual 8 c 11
+	; NotEqual 8 c SignedInt$11#
 	cmp dword [rbp + 24], 11
 	jne isspace$8
 
  isspace$6:
-	; Assign £temporary211 1
+	; Assign £temporary211 SignedInt$1#
 	mov ebx, 1
 
  isspace$7:
@@ -791,7 +791,7 @@ section .text
 	jmp isspace$9
 
  isspace$8:
-	; Assign £temporary211 0
+	; Assign £temporary211 SignedInt$0#
 	mov ebx, 0
 
  isspace$9:
@@ -831,7 +831,7 @@ section .text
 	; GetReturnValue £temporary212
 
  tolower$5:
-	; Equal 34 £temporary212 0
+	; Equal 34 £temporary212 Logical$0#
 	cmp ebx, 0
 	je tolower$34
 
@@ -856,25 +856,25 @@ section .text
 	mov [rbp + 28], rbx
 
  tolower$11:
-	; Equal 31 localeConvPtr 0
+	; Equal 31 localeConvPtr Pointer$0#
 	cmp qword [rbp + 28], 0
 	je tolower$31
 
  tolower$12:
-	; Dereference £temporary215 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary215 localeConvPtr 0
 	mov rsi, [rbp + 28]
 
  tolower$13:
-	; Assign lowerCase £temporary215 -> localeConvPtr
+	; Assign lowerCase £temporary215
 	mov rax, [rsi + 40]
 	mov [rbp + 36], rax
 
  tolower$14:
-	; Dereference £temporary216 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary216 localeConvPtr 0
 	mov rsi, [rbp + 28]
 
  tolower$15:
-	; Assign upperCase £temporary216 -> localeConvPtr
+	; Assign upperCase £temporary216
 	mov rax, [rsi + 48]
 	mov [rbp + 44], rax
 
@@ -927,10 +927,10 @@ section .text
 	add rsi, rax
 
  tolower$27:
-	; Dereference £temporary220 -> £temporary222 £temporary222 0
+	; Dereference £temporary220 £temporary222 0
 
  tolower$28:
-	; IntegralToIntegral £temporary223 £temporary220 -> £temporary222
+	; IntegralToIntegral £temporary223 £temporary220
 	mov bl, [rsi]
 	and ebx, 255
 	cmp bl, 0
@@ -949,7 +949,7 @@ section .text
 	jmp rax
 
  tolower$31:
-	; Add £temporary224 c 32
+	; Add £temporary224 c SignedInt$32#
 	mov ebx, [rbp + 24]
 	add ebx, 32
 
@@ -1001,7 +1001,7 @@ section .text
 	; GetReturnValue £temporary226
 
  toupper$5:
-	; Equal 34 £temporary226 0
+	; Equal 34 £temporary226 Logical$0#
 	cmp ebx, 0
 	je toupper$34
 
@@ -1026,25 +1026,25 @@ section .text
 	mov [rbp + 28], rbx
 
  toupper$11:
-	; Equal 31 localeConvPtr 0
+	; Equal 31 localeConvPtr Pointer$0#
 	cmp qword [rbp + 28], 0
 	je toupper$31
 
  toupper$12:
-	; Dereference £temporary229 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary229 localeConvPtr 0
 	mov rsi, [rbp + 28]
 
  toupper$13:
-	; Assign lowerCase £temporary229 -> localeConvPtr
+	; Assign lowerCase £temporary229
 	mov rax, [rsi + 40]
 	mov [rbp + 36], rax
 
  toupper$14:
-	; Dereference £temporary230 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary230 localeConvPtr 0
 	mov rsi, [rbp + 28]
 
  toupper$15:
-	; Assign upperCase £temporary230 -> localeConvPtr
+	; Assign upperCase £temporary230
 	mov rax, [rsi + 48]
 	mov [rbp + 44], rax
 
@@ -1097,10 +1097,10 @@ section .text
 	add rsi, rax
 
  toupper$27:
-	; Dereference £temporary234 -> £temporary236 £temporary236 0
+	; Dereference £temporary234 £temporary236 0
 
  toupper$28:
-	; IntegralToIntegral £temporary237 £temporary234 -> £temporary236
+	; IntegralToIntegral £temporary237 £temporary234
 	mov bl, [rsi]
 	and ebx, 255
 	cmp bl, 0
@@ -1119,7 +1119,7 @@ section .text
 	jmp rax
 
  toupper$31:
-	; Subtract £temporary238 c 32
+	; Subtract £temporary238 c SignedInt$32#
 	mov ebx, [rbp + 24]
 	sub ebx, 32
 

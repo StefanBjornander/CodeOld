@@ -56,7 +56,7 @@ g_outDevice:
 section .text
 
  putc:
-	; Assign g_outStatus 0
+	; Assign g_outStatus SignedInt$0#
 	mov dword [g_outStatus], 0
 
  putc$1:
@@ -96,7 +96,7 @@ section .text
 	; SetReturnValue
 
  putc$9:
-	; Return 1
+	; Return SignedInt$1#
 	mov ebx, 1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -109,7 +109,7 @@ section .text
 section .text
 
  fputc:
-	; Assign g_outStatus 0
+	; Assign g_outStatus SignedInt$0#
 	mov dword [g_outStatus], 0
 
  fputc$1:
@@ -149,7 +149,7 @@ section .text
 	; SetReturnValue
 
  fputc$9:
-	; Return 1
+	; Return SignedInt$1#
 	mov ebx, 1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -162,7 +162,7 @@ section .text
 section .text
 
  putchar:
-	; Assign g_outStatus 0
+	; Assign g_outStatus SignedInt$0#
 	mov dword [g_outStatus], 0
 
  putchar$1:
@@ -202,7 +202,7 @@ section .text
 	; SetReturnValue
 
  putchar$9:
-	; Return 1
+	; Return SignedInt$1#
 	mov ebx, 1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -215,18 +215,18 @@ section .text
 section .text
 
  printChar:
-	; Case 5 g_outStatus 0
+	; Case 5 g_outStatus SignedInt$0#
 	mov eax, [g_outStatus]
 	cmp eax, 0
 	je printChar$5
 
  printChar$1:
-	; Case 18 g_outStatus 1
+	; Case 18 g_outStatus SignedInt$1#
 	cmp eax, 1
 	je printChar$18
 
  printChar$2:
-	; Case 27 g_outStatus 2
+	; Case 27 g_outStatus SignedInt$2#
 	cmp eax, 2
 	je printChar$27
 
@@ -246,15 +246,15 @@ section .text
 	mov [rbp + 37], rax
 
  printChar$7:
-	; AssignRegister rax 1
+	; AssignRegister rax UnsignedLongInt$1#
 	mov rax, 1
 
  printChar$8:
-	; Dereference £temporary1343 -> stream stream 0
+	; Dereference £temporary1343 stream 0
 	mov rsi, [rbp + 37]
 
  printChar$9:
-	; IntegralToIntegral £temporary1344 £temporary1343 -> stream
+	; IntegralToIntegral £temporary1344 £temporary1343
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
@@ -274,7 +274,7 @@ section .text
 	; AssignRegister rsi £temporary1347
 
  printChar$14:
-	; AssignRegister rdx 1
+	; AssignRegister rdx UnsignedLongInt$1#
 	mov rdx, 1
 
  printChar$15:
@@ -282,7 +282,7 @@ section .text
 	syscall
 
  printChar$16:
-	; Add g_outChars g_outChars 1
+	; Add g_outChars g_outChars SignedInt$1#
 	inc dword [g_outChars]
 
  printChar$17:
@@ -302,7 +302,7 @@ section .text
 	mov eax, [g_outChars]
 
  printChar$21:
-	; Add g_outChars g_outChars 1
+	; Add g_outChars g_outChars SignedInt$1#
 	inc dword [g_outChars]
 
  printChar$22:
@@ -316,10 +316,10 @@ section .text
 	add rsi, rax
 
  printChar$24:
-	; Dereference £temporary1352 -> £temporary1354 £temporary1354 0
+	; Dereference £temporary1352 £temporary1354 0
 
  printChar$25:
-	; Assign £temporary1352 -> £temporary1354 c
+	; Assign £temporary1352 c
 	mov al, [rbp + 24]
 	mov [rsi], al
 
@@ -328,7 +328,7 @@ section .text
 	jmp printChar$28
 
  printChar$27:
-	; Add g_outChars g_outChars 1
+	; Add g_outChars g_outChars SignedInt$1#
 	inc dword [g_outChars]
 
  printChar$28:
@@ -344,17 +344,17 @@ section .text
 section .text
 
  printString:
-	; Equal 33 s 0
+	; Equal 33 s Pointer$0#
 	cmp qword [rbp + 24], 0
 	je printString$33
 
  printString$1:
-	; NotEqual 16 precision 0
+	; NotEqual 16 precision SignedInt$0#
 	cmp dword [rbp + 32], 0
 	jne printString$16
 
  printString$2:
-	; Assign index 0
+	; Assign index SignedInt$0#
 	mov dword [rbp + 36], 0
 
  printString$3:
@@ -369,10 +369,10 @@ section .text
 	add rsi, rax
 
  printString$5:
-	; Dereference £temporary1359 -> £temporary1361 £temporary1361 0
+	; Dereference £temporary1359 £temporary1361 0
 
  printString$6:
-	; Equal 57 £temporary1359 -> £temporary1361 0
+	; Equal 57 £temporary1359 SignedChar$0#
 	cmp byte [rsi], 0
 	je printString$57
 
@@ -391,10 +391,10 @@ section .text
 	add rsi, rax
 
  printString$10:
-	; Dereference £temporary1364 -> £temporary1366 £temporary1366 0
+	; Dereference £temporary1364 £temporary1366 0
 
  printString$11:
-	; Parameter 64 signedchar £temporary1364 -> £temporary1366
+	; Parameter 64 signedchar £temporary1364
 	mov al, [rsi]
 	mov [rbp + 64], al
 
@@ -409,7 +409,7 @@ section .text
 	; PostCall 40
 
  printString$14:
-	; Add index index 1
+	; Add index index SignedInt$1#
 	inc dword [rbp + 36]
 
  printString$15:
@@ -417,7 +417,7 @@ section .text
 	jmp printString$3
 
  printString$16:
-	; Assign index 0
+	; Assign index SignedInt$0#
 	mov dword [rbp + 36], 0
 
  printString$17:
@@ -425,11 +425,11 @@ section .text
 	mov eax, [rbp + 32]
 
  printString$18:
-	; Subtract precision precision 1
+	; Subtract precision precision SignedInt$1#
 	dec dword [rbp + 32]
 
  printString$19:
-	; LessThanEqual 57 £temporary1368 0
+	; LessThanEqual 57 £temporary1368 SignedInt$0#
 	cmp eax, 0
 	jle printString$57
 
@@ -445,10 +445,10 @@ section .text
 	add rsi, rax
 
  printString$22:
-	; Dereference £temporary1370 -> £temporary1372 £temporary1372 0
+	; Dereference £temporary1370 £temporary1372 0
 
  printString$23:
-	; Equal 57 £temporary1370 -> £temporary1372 0
+	; Equal 57 £temporary1370 SignedChar$0#
 	cmp byte [rsi], 0
 	je printString$57
 
@@ -467,10 +467,10 @@ section .text
 	add rsi, rax
 
  printString$27:
-	; Dereference £temporary1376 -> £temporary1378 £temporary1378 0
+	; Dereference £temporary1376 £temporary1378 0
 
  printString$28:
-	; Parameter 64 signedchar £temporary1376 -> £temporary1378
+	; Parameter 64 signedchar £temporary1376
 	mov al, [rsi]
 	mov [rbp + 64], al
 
@@ -485,7 +485,7 @@ section .text
 	; PostCall 40
 
  printString$31:
-	; Add index index 1
+	; Add index index SignedInt$1#
 	inc dword [rbp + 36]
 
  printString$32:
@@ -496,7 +496,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printString$34:
-	; Parameter 60 signedchar 60
+	; Parameter 60 signedchar SignedChar$60#
 	mov byte [rbp + 60], 60
 
  printString$35:
@@ -513,7 +513,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printString$38:
-	; Parameter 60 signedchar 78
+	; Parameter 60 signedchar SignedChar$78#
 	mov byte [rbp + 60], 78
 
  printString$39:
@@ -530,7 +530,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printString$42:
-	; Parameter 60 signedchar 85
+	; Parameter 60 signedchar SignedChar$85#
 	mov byte [rbp + 60], 85
 
  printString$43:
@@ -547,7 +547,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printString$46:
-	; Parameter 60 signedchar 76
+	; Parameter 60 signedchar SignedChar$76#
 	mov byte [rbp + 60], 76
 
  printString$47:
@@ -564,7 +564,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printString$50:
-	; Parameter 60 signedchar 76
+	; Parameter 60 signedchar SignedChar$76#
 	mov byte [rbp + 60], 76
 
  printString$51:
@@ -581,7 +581,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printString$54:
-	; Parameter 60 signedchar 62
+	; Parameter 60 signedchar SignedChar$62#
 	mov byte [rbp + 60], 62
 
  printString$55:
@@ -606,28 +606,28 @@ section .text
 
 section .data
 
-@4504$int8$10#:
+@4504Signed_Long_Int$10#:
 	; Initializer Signed_Long_Int 10
 	dq 10
 
 section .data
 
-@4507$int8$10#:
+@4507Signed_Long_Int$10#:
 	; Initializer Signed_Long_Int 10
 	dq 10
 
 section .text
 
  printLongIntRec:
-	; Equal 15 longValue 0
+	; Equal 15 longValue Signed_Long_Int$0#
 	cmp qword [rbp + 24], 0
 	je printLongIntRec$15
 
  printLongIntRec$1:
-	; Modulo £temporary1387 longValue 10
+	; Modulo £temporary1387 longValue Signed_Long_Int$10#
 	mov rax, [rbp + 24]
 	xor rdx, rdx
-	idiv qword [@4504$int8$10#]
+	idiv qword [@4504Signed_Long_Int$10#]
 
  printLongIntRec$2:
 	; IntegralToIntegral £temporary1388 £temporary1387
@@ -644,10 +644,10 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongIntRec$5:
-	; Divide £temporary1389 longValue 10
+	; Divide £temporary1389 longValue Signed_Long_Int$10#
 	mov rax, [rbp + 24]
 	xor rdx, rdx
-	idiv qword [@4507$int8$10#]
+	idiv qword [@4507Signed_Long_Int$10#]
 
  printLongIntRec$6:
 	; Parameter 60 signed long int £temporary1389
@@ -667,7 +667,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongIntRec$10:
-	; Add £temporary1391 digit 48
+	; Add £temporary1391 digit SignedInt$48#
 	mov eax, [rbp + 32]
 	add eax, 48
 
@@ -705,7 +705,7 @@ section .text
 section .text
 
  printLongInt:
-	; GreaterThanEqual 8 longValue 0
+	; GreaterThanEqual 8 longValue Signed_Long_Int$0#
 	cmp qword [rbp + 24], 0
 	jge printLongInt$8
 
@@ -722,7 +722,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongInt$4:
-	; Parameter 64 signedchar 45
+	; Parameter 64 signedchar SignedChar$45#
 	mov byte [rbp + 64], 45
 
  printLongInt$5:
@@ -740,7 +740,7 @@ section .text
 	jmp printLongInt$19
 
  printLongInt$8:
-	; Equal 14 space 0
+	; Equal 14 space Logical$0#
 	cmp dword [rbp + 36], 0
 	je printLongInt$14
 
@@ -748,7 +748,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongInt$10:
-	; Parameter 64 signedchar 32
+	; Parameter 64 signedchar SignedChar$32#
 	mov byte [rbp + 64], 32
 
  printLongInt$11:
@@ -766,7 +766,7 @@ section .text
 	jmp printLongInt$19
 
  printLongInt$14:
-	; Equal 19 plus 0
+	; Equal 19 plus Logical$0#
 	cmp dword [rbp + 32], 0
 	je printLongInt$19
 
@@ -774,7 +774,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongInt$16:
-	; Parameter 64 signedchar 43
+	; Parameter 64 signedchar SignedChar$43#
 	mov byte [rbp + 64], 43
 
  printLongInt$17:
@@ -788,7 +788,7 @@ section .text
 	; PostCall 40
 
  printLongInt$19:
-	; NotEqual 25 longValue 0
+	; NotEqual 25 longValue Signed_Long_Int$0#
 	cmp qword [rbp + 24], 0
 	jne printLongInt$25
 
@@ -796,7 +796,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongInt$21:
-	; Parameter 64 signedchar 48
+	; Parameter 64 signedchar SignedChar$48#
 	mov byte [rbp + 64], 48
 
  printLongInt$22:
@@ -844,12 +844,12 @@ section .text
 section .text
 
  digitToChar:
-	; GreaterThanEqual 5 digit 10
+	; GreaterThanEqual 5 digit SignedInt$10#
 	cmp dword [rbp + 24], 10
 	jge digitToChar$5
 
  digitToChar$1:
-	; Add £temporary1405 digit 48
+	; Add £temporary1405 digit SignedInt$48#
 	mov ebx, [rbp + 24]
 	add ebx, 48
 
@@ -871,17 +871,17 @@ section .text
 	jmp rax
 
  digitToChar$5:
-	; Equal 11 capital 0
+	; Equal 11 capital Logical$0#
 	cmp dword [rbp + 28], 0
 	je digitToChar$11
 
  digitToChar$6:
-	; Subtract £temporary1407 digit 10
+	; Subtract £temporary1407 digit SignedInt$10#
 	mov ebx, [rbp + 24]
 	sub ebx, 10
 
  digitToChar$7:
-	; Add £temporary1408 £temporary1407 65
+	; Add £temporary1408 £temporary1407 SignedInt$65#
 	add ebx, 65
 
  digitToChar$8:
@@ -902,12 +902,12 @@ section .text
 	jmp rax
 
  digitToChar$11:
-	; Subtract £temporary1410 digit 10
+	; Subtract £temporary1410 digit SignedInt$10#
 	mov ebx, [rbp + 24]
 	sub ebx, 10
 
  digitToChar$12:
-	; Add £temporary1411 £temporary1410 97
+	; Add £temporary1411 £temporary1410 SignedInt$97#
 	add ebx, 97
 
  digitToChar$13:
@@ -933,7 +933,7 @@ section .text
 section .text
 
  printUnsignedLongRec:
-	; LessThanEqual 22 unsignedValue 0
+	; LessThanEqual 22 unsignedValue UnsignedLongInt$0#
 	cmp qword [rbp + 24], 0
 	jbe printUnsignedLongRec$22
 
@@ -1044,7 +1044,7 @@ section .text
 section .text
 
  printUnsignedLong:
-	; Equal 5 plus 0
+	; Equal 5 plus Logical$0#
 	cmp dword [rbp + 32], 0
 	je printUnsignedLong$5
 
@@ -1052,7 +1052,7 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printUnsignedLong$2:
-	; Parameter 80 signedchar 43
+	; Parameter 80 signedchar SignedChar$43#
 	mov byte [rbp + 80], 43
 
  printUnsignedLong$3:
@@ -1066,7 +1066,7 @@ section .text
 	; PostCall 56
 
  printUnsignedLong$5:
-	; Equal 10 space 0
+	; Equal 10 space Logical$0#
 	cmp dword [rbp + 36], 0
 	je printUnsignedLong$10
 
@@ -1074,7 +1074,7 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printUnsignedLong$7:
-	; Parameter 80 signedchar 32
+	; Parameter 80 signedchar SignedChar$32#
 	mov byte [rbp + 80], 32
 
  printUnsignedLong$8:
@@ -1088,12 +1088,12 @@ section .text
 	; PostCall 56
 
  printUnsignedLong$10:
-	; Equal 29 grid 0
+	; Equal 29 grid Logical$0#
 	cmp dword [rbp + 40], 0
 	je printUnsignedLong$29
 
  printUnsignedLong$11:
-	; NotEqual 16 base 8
+	; NotEqual 16 base UnsignedLongInt$8#
 	cmp qword [rbp + 44], 8
 	jne printUnsignedLong$16
 
@@ -1101,7 +1101,7 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printUnsignedLong$13:
-	; Parameter 80 signedchar 48
+	; Parameter 80 signedchar SignedChar$48#
 	mov byte [rbp + 80], 48
 
  printUnsignedLong$14:
@@ -1115,7 +1115,7 @@ section .text
 	; PostCall 56
 
  printUnsignedLong$16:
-	; NotEqual 29 base 16
+	; NotEqual 29 base UnsignedLongInt$16#
 	cmp qword [rbp + 44], 16
 	jne printUnsignedLong$29
 
@@ -1123,7 +1123,7 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printUnsignedLong$18:
-	; Parameter 80 signedchar 48
+	; Parameter 80 signedchar SignedChar$48#
 	mov byte [rbp + 80], 48
 
  printUnsignedLong$19:
@@ -1140,12 +1140,12 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printUnsignedLong$22:
-	; Equal 25 capital 0
+	; Equal 25 capital Logical$0#
 	cmp dword [rbp + 52], 0
 	je printUnsignedLong$25
 
  printUnsignedLong$23:
-	; Assign £temporary1430 88
+	; Assign £temporary1430 SignedChar$88#
 	mov al, 88
 
  printUnsignedLong$24:
@@ -1153,7 +1153,7 @@ section .text
 	jmp printUnsignedLong$26
 
  printUnsignedLong$25:
-	; Assign £temporary1430 120
+	; Assign £temporary1430 SignedChar$120#
 	mov al, 120
 
  printUnsignedLong$26:
@@ -1171,7 +1171,7 @@ section .text
 	; PostCall 56
 
  printUnsignedLong$29:
-	; NotEqual 35 unsignedValue 0
+	; NotEqual 35 unsignedValue UnsignedLongInt$0#
 	cmp qword [rbp + 24], 0
 	jne printUnsignedLong$35
 
@@ -1179,7 +1179,7 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printUnsignedLong$31:
-	; Parameter 80 signedchar 48
+	; Parameter 80 signedchar SignedChar$48#
 	mov byte [rbp + 80], 48
 
  printUnsignedLong$32:
@@ -1242,7 +1242,7 @@ container8bytes#:
 
 section .data
 
-@4627$float8$10.0#:
+@4627LongDouble$10.0#:
 	; Initializer LongDouble 10.0
 	dq 10.0
 
@@ -1281,21 +1281,21 @@ section .text
 	fstp qword [rbp + 24]
 
  printLongDoubleFraction$6:
-	; NotEqual 8 precision 0
+	; NotEqual 8 precision SignedInt$0#
 	cmp dword [rbp + 36], 0
 	jne printLongDoubleFraction$8
 
  printLongDoubleFraction$7:
-	; Assign precision 6
+	; Assign precision SignedInt$6#
 	mov dword [rbp + 36], 6
 
  printLongDoubleFraction$8:
-	; NotEqual 10 grid 0
+	; NotEqual 10 grid Logical$0#
 	cmp dword [rbp + 32], 0
 	jne printLongDoubleFraction$10
 
  printLongDoubleFraction$9:
-	; LessThanEqual 14 precision 0
+	; LessThanEqual 14 precision SignedInt$0#
 	cmp dword [rbp + 36], 0
 	jle printLongDoubleFraction$14
 
@@ -1303,7 +1303,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongDoubleFraction$11:
-	; Parameter 64 signedchar 46
+	; Parameter 64 signedchar SignedChar$46#
 	mov byte [rbp + 64], 46
 
  printLongDoubleFraction$12:
@@ -1321,24 +1321,24 @@ section .text
 	mov eax, [rbp + 36]
 
  printLongDoubleFraction$15:
-	; Subtract precision precision 1
+	; Subtract precision precision SignedInt$1#
 	dec dword [rbp + 36]
 
  printLongDoubleFraction$16:
-	; LessThanEqual 35 £temporary1444 0
+	; LessThanEqual 35 £temporary1444 SignedInt$0#
 	cmp eax, 0
 	jle printLongDoubleFraction$35
 
  printLongDoubleFraction$17:
-	; PushFloat 10.0
-	fld qword [@4627$float8$10.0#]
+	; PushFloat LongDouble$10.0#
+	fld qword [@4627LongDouble$10.0#]
 
  printLongDoubleFraction$18:
 	; PushFloat longDoubleValue
 	fld qword [rbp + 24]
 
  printLongDoubleFraction$19:
-	; Multiply £temporary1446 10.0 longDoubleValue
+	; Multiply £temporary1446 LongDouble$10.0# longDoubleValue
 	fmul
 
  printLongDoubleFraction$20:
@@ -1362,7 +1362,7 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongDoubleFraction$25:
-	; Add £temporary1448 digitValue 48
+	; Add £temporary1448 digitValue SignedInt$48#
 	mov eax, [rbp + 48]
 	add eax, 48
 
@@ -1424,11 +1424,11 @@ section .text
 	fld qword [rbp + 24]
 
  printLongDoublePlain$1:
-	; PushFloat 0.0
+	; PushFloat LongDouble$0.0#
 	fldz
 
  printLongDoublePlain$2:
-	; GreaterThanEqual 12 longDoubleValue 0.0
+	; GreaterThanEqual 12 longDoubleValue LongDouble$0.0#
 	fcompp
 	fstsw ax
 	sahf
@@ -1438,7 +1438,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongDoublePlain$4:
-	; Parameter 72 signedchar 45
+	; Parameter 72 signedchar SignedChar$45#
 	mov byte [rbp + 72], 45
 
  printLongDoublePlain$5:
@@ -1464,11 +1464,11 @@ section .text
 	fstp qword [rbp + 24]
 
  printLongDoublePlain$10:
-	; Assign plus 0
+	; Assign plus SignedInt$0#
 	mov dword [rbp + 32], 0
 
  printLongDoublePlain$11:
-	; Assign space 0
+	; Assign space SignedInt$0#
 	mov dword [rbp + 36], 0
 
  printLongDoublePlain$12:
@@ -1571,7 +1571,7 @@ section .text
 
 section .data
 
-@4685$float8$10.0#:
+@4685Double$10.0#:
 	; Initializer Double 10.0
 	dq 10.0
 
@@ -1582,11 +1582,11 @@ section .text
 	fld qword [rbp + 24]
 
  printLongDoubleExpo$1:
-	; PushFloat 0.0
+	; PushFloat LongDouble$0.0#
 	fldz
 
  printLongDoubleExpo$2:
-	; NotEqual 27 value 0.0
+	; NotEqual 27 value LongDouble$0.0#
 	fcompp
 	fstsw ax
 	sahf
@@ -1596,7 +1596,7 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongDoubleExpo$4:
-	; Parameter 76 signedchar 48
+	; Parameter 76 signedchar SignedChar$48#
 	mov byte [rbp + 76], 48
 
  printLongDoubleExpo$5:
@@ -1613,11 +1613,11 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongDoubleExpo$8:
-	; PushFloat 0.0
+	; PushFloat LongDouble$0.0#
 	fldz
 
  printLongDoubleExpo$9:
-	; Parameter 76 longdouble 0.0
+	; Parameter 76 longdouble LongDouble$0.0#
 	fstp qword [rbp + 76]
 
  printLongDoubleExpo$10:
@@ -1644,12 +1644,12 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongDoubleExpo$15:
-	; Equal 18 capital 0
+	; Equal 18 capital Logical$0#
 	cmp dword [rbp + 48], 0
 	je printLongDoubleExpo$18
 
  printLongDoubleExpo$16:
-	; Assign £temporary1466 69
+	; Assign £temporary1466 SignedChar$69#
 	mov al, 69
 
  printLongDoubleExpo$17:
@@ -1657,7 +1657,7 @@ section .text
 	jmp printLongDoubleExpo$19
 
  printLongDoubleExpo$18:
-	; Assign £temporary1466 101
+	; Assign £temporary1466 SignedChar$101#
 	mov al, 101
 
  printLongDoubleExpo$19:
@@ -1678,7 +1678,7 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongDoubleExpo$23:
-	; Parameter 76 signedchar 48
+	; Parameter 76 signedchar SignedChar$48#
 	mov byte [rbp + 76], 48
 
  printLongDoubleExpo$24:
@@ -1700,11 +1700,11 @@ section .text
 	fld qword [rbp + 24]
 
  printLongDoubleExpo$28:
-	; PushFloat 0.0
+	; PushFloat LongDouble$0.0#
 	fldz
 
  printLongDoubleExpo$29:
-	; GreaterThanEqual 37 value 0.0
+	; GreaterThanEqual 37 value LongDouble$0.0#
 	fcompp
 	fstsw ax
 	sahf
@@ -1714,7 +1714,7 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongDoubleExpo$31:
-	; Parameter 76 signedchar 45
+	; Parameter 76 signedchar SignedChar$45#
 	mov byte [rbp + 76], 45
 
  printLongDoubleExpo$32:
@@ -1781,11 +1781,11 @@ section .text
 	fstp qword [rbp + 56]
 
  printLongDoubleExpo$47:
-	; PushFloat 10.0
-	fld qword [@4685$float8$10.0#]
+	; PushFloat Double$10.0#
+	fld qword [@4685Double$10.0#]
 
  printLongDoubleExpo$48:
-	; Parameter 80 double 10.0
+	; Parameter 80 double Double$10.0#
 	fstp qword [rbp + 88]
 
  printLongDoubleExpo$49:
@@ -1865,12 +1865,12 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongDoubleExpo$66:
-	; Equal 69 capital 0
+	; Equal 69 capital Logical$0#
 	cmp dword [rbp + 48], 0
 	je printLongDoubleExpo$69
 
  printLongDoubleExpo$67:
-	; Assign £temporary1479 69
+	; Assign £temporary1479 SignedChar$69#
 	mov al, 69
 
  printLongDoubleExpo$68:
@@ -1878,7 +1878,7 @@ section .text
 	jmp printLongDoubleExpo$70
 
  printLongDoubleExpo$69:
-	; Assign £temporary1479 101
+	; Assign £temporary1479 SignedChar$101#
 	mov al, 101
 
  printLongDoubleExpo$70:
@@ -1913,11 +1913,11 @@ section .text
 	mov [rbp + 80], rax
 
  printLongDoubleExpo$76:
-	; Parameter 88 signedint 1
+	; Parameter 88 signedint SignedInt$1#
 	mov dword [rbp + 88], 1
 
  printLongDoubleExpo$77:
-	; Parameter 92 signedint 0
+	; Parameter 92 signedint SignedInt$0#
 	mov dword [rbp + 92], 0
 
  printLongDoubleExpo$78:
@@ -1943,29 +1943,29 @@ section .text
 section .text
 
  checkWidthAndPrecision:
-	; Equal 9 widthPtr 0
+	; Equal 9 widthPtr Pointer$0#
 	cmp qword [rbp + 32], 0
 	je checkWidthAndPrecision$9
 
  checkWidthAndPrecision$1:
-	; Dereference £temporary1489 -> widthPtr widthPtr 0
+	; Dereference £temporary1489 widthPtr 0
 	mov rsi, [rbp + 32]
 
  checkWidthAndPrecision$2:
-	; NotEqual 9 £temporary1489 -> widthPtr -1
+	; NotEqual 9 £temporary1489 SignedInt$minus1#
 	cmp dword [rsi], -1
 	jne checkWidthAndPrecision$9
 
  checkWidthAndPrecision$3:
-	; Dereference £temporary1492 -> widthPtr widthPtr 0
+	; Dereference £temporary1492 widthPtr 0
 	mov rsi, [rbp + 32]
 
  checkWidthAndPrecision$4:
-	; Add arg_list arg_list 4
+	; Add arg_list arg_list Pointer$4#
 	add qword [rbp + 24], 4
 
  checkWidthAndPrecision$5:
-	; Subtract £temporary1494 arg_list 4
+	; Subtract £temporary1494 arg_list Pointer$4#
 	mov rdi, [rbp + 24]
 	sub rdi, 4
 
@@ -1973,37 +1973,37 @@ section .text
 	; IntegralToIntegral £temporary1495 £temporary1494
 
  checkWidthAndPrecision$7:
-	; Dereference £temporary1496 -> £temporary1495 £temporary1495 0
+	; Dereference £temporary1496 £temporary1495 0
 
  checkWidthAndPrecision$8:
-	; Assign £temporary1492 -> widthPtr £temporary1496 -> £temporary1495
+	; Assign £temporary1492 £temporary1496
 	mov eax, [rdi]
 	mov [rsi], eax
 
  checkWidthAndPrecision$9:
-	; Equal 18 precisionPtr 0
+	; Equal 18 precisionPtr Pointer$0#
 	cmp qword [rbp + 40], 0
 	je checkWidthAndPrecision$18
 
  checkWidthAndPrecision$10:
-	; Dereference £temporary1498 -> precisionPtr precisionPtr 0
+	; Dereference £temporary1498 precisionPtr 0
 	mov rsi, [rbp + 40]
 
  checkWidthAndPrecision$11:
-	; NotEqual 18 £temporary1498 -> precisionPtr -1
+	; NotEqual 18 £temporary1498 SignedInt$minus1#
 	cmp dword [rsi], -1
 	jne checkWidthAndPrecision$18
 
  checkWidthAndPrecision$12:
-	; Dereference £temporary1501 -> precisionPtr precisionPtr 0
+	; Dereference £temporary1501 precisionPtr 0
 	mov rsi, [rbp + 40]
 
  checkWidthAndPrecision$13:
-	; Add arg_list arg_list 4
+	; Add arg_list arg_list Pointer$4#
 	add qword [rbp + 24], 4
 
  checkWidthAndPrecision$14:
-	; Subtract £temporary1503 arg_list 4
+	; Subtract £temporary1503 arg_list Pointer$4#
 	mov rdi, [rbp + 24]
 	sub rdi, 4
 
@@ -2011,10 +2011,10 @@ section .text
 	; IntegralToIntegral £temporary1504 £temporary1503
 
  checkWidthAndPrecision$16:
-	; Dereference £temporary1505 -> £temporary1504 £temporary1504 0
+	; Dereference £temporary1505 £temporary1504 0
 
  checkWidthAndPrecision$17:
-	; Assign £temporary1501 -> precisionPtr £temporary1505 -> £temporary1504
+	; Assign £temporary1501 £temporary1505
 	mov eax, [rdi]
 	mov [rsi], eax
 
@@ -2035,97 +2035,97 @@ section .text
 section .text
 
  printArgument:
-	; Dereference £temporary1506 -> format format 0
+	; Dereference £temporary1506 format 0
 	mov rsi, [rbp + 24]
 
  printArgument$1:
-	; Assign c £temporary1506 -> format
+	; Assign c £temporary1506
 	mov al, [rsi]
 	mov [rbp + 88], al
 
  printArgument$2:
-	; Case 21 c 100
+	; Case 21 c SignedChar$100#
 	mov al, [rbp + 88]
 	cmp al, 100
 	je printArgument$21
 
  printArgument$3:
-	; Case 21 c 105
+	; Case 21 c SignedChar$105#
 	cmp al, 105
 	je printArgument$21
 
  printArgument$4:
-	; Case 73 c 99
+	; Case 73 c SignedChar$99#
 	cmp al, 99
 	je printArgument$73
 
  printArgument$5:
-	; Case 93 c 115
+	; Case 93 c SignedChar$115#
 	cmp al, 115
 	je printArgument$93
 
  printArgument$6:
-	; Case 113 c 88
+	; Case 113 c SignedChar$88#
 	cmp al, 88
 	je printArgument$113
 
  printArgument$7:
-	; Case 113 c 120
+	; Case 113 c SignedChar$120#
 	cmp al, 120
 	je printArgument$113
 
  printArgument$8:
-	; Case 113 c 98
+	; Case 113 c SignedChar$98#
 	cmp al, 98
 	je printArgument$113
 
  printArgument$9:
-	; Case 113 c 111
+	; Case 113 c SignedChar$111#
 	cmp al, 111
 	je printArgument$113
 
  printArgument$10:
-	; Case 113 c 117
+	; Case 113 c SignedChar$117#
 	cmp al, 117
 	je printArgument$113
 
  printArgument$11:
-	; Case 171 c 71
+	; Case 171 c SignedChar$71#
 	cmp al, 71
 	je printArgument$171
 
  printArgument$12:
-	; Case 171 c 103
+	; Case 171 c SignedChar$103#
 	cmp al, 103
 	je printArgument$171
 
  printArgument$13:
-	; Case 171 c 69
+	; Case 171 c SignedChar$69#
 	cmp al, 69
 	je printArgument$171
 
  printArgument$14:
-	; Case 171 c 101
+	; Case 171 c SignedChar$101#
 	cmp al, 101
 	je printArgument$171
 
  printArgument$15:
-	; Case 171 c 102
+	; Case 171 c SignedChar$102#
 	cmp al, 102
 	je printArgument$171
 
  printArgument$16:
-	; Case 297 c 112
+	; Case 297 c SignedChar$112#
 	cmp al, 112
 	je printArgument$297
 
  printArgument$17:
-	; Case 322 c 110
+	; Case 322 c SignedChar$110#
 	cmp al, 110
 	je printArgument$322
 
  printArgument$18:
-	; Case 344 c 37
+	; Case 344 c SignedChar$37#
 	cmp al, 37
 	je printArgument$344
 
@@ -2137,16 +2137,16 @@ section .text
 	jmp printArgument$357
 
  printArgument$21:
-	; Equal 30 shortInt 0
+	; Equal 30 shortInt Logical$0#
 	cmp dword [rbp + 64], 0
 	je printArgument$30
 
  printArgument$22:
-	; Add arg_list arg_list 4
+	; Add arg_list arg_list Pointer$4#
 	add qword [rbp + 32], 4
 
  printArgument$23:
-	; Subtract £temporary1508 arg_list 4
+	; Subtract £temporary1508 arg_list Pointer$4#
 	mov rsi, [rbp + 32]
 	sub rsi, 4
 
@@ -2154,10 +2154,10 @@ section .text
 	; IntegralToIntegral £temporary1509 £temporary1508
 
  printArgument$25:
-	; Dereference £temporary1510 -> £temporary1509 £temporary1509 0
+	; Dereference £temporary1510 £temporary1509 0
 
  printArgument$26:
-	; IntegralToIntegral £temporary1511 £temporary1510 -> £temporary1509
+	; IntegralToIntegral £temporary1511 £temporary1510
 	mov eax, [rsi]
 	cmp eax, 0
 	jge printArgument$27
@@ -2182,16 +2182,16 @@ section .text
 	jmp printArgument$43
 
  printArgument$30:
-	; Equal 37 longInt 0
+	; Equal 37 longInt Logical$0#
 	cmp dword [rbp + 68], 0
 	je printArgument$37
 
  printArgument$31:
-	; Add arg_list arg_list 8
+	; Add arg_list arg_list Pointer$8#
 	add qword [rbp + 32], 8
 
  printArgument$32:
-	; Subtract £temporary1514 arg_list 8
+	; Subtract £temporary1514 arg_list Pointer$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -2199,10 +2199,10 @@ section .text
 	; IntegralToIntegral £temporary1515 £temporary1514
 
  printArgument$34:
-	; Dereference £temporary1516 -> £temporary1515 £temporary1515 0
+	; Dereference £temporary1516 £temporary1515 0
 
  printArgument$35:
-	; Assign longValue £temporary1516 -> £temporary1515
+	; Assign longValue £temporary1516
 	mov rax, [rsi]
 	mov [rbp + 114], rax
 
@@ -2211,11 +2211,11 @@ section .text
 	jmp printArgument$43
 
  printArgument$37:
-	; Add arg_list arg_list 4
+	; Add arg_list arg_list Pointer$4#
 	add qword [rbp + 32], 4
 
  printArgument$38:
-	; Subtract £temporary1518 arg_list 4
+	; Subtract £temporary1518 arg_list Pointer$4#
 	mov rsi, [rbp + 32]
 	sub rsi, 4
 
@@ -2223,10 +2223,10 @@ section .text
 	; IntegralToIntegral £temporary1519 £temporary1518
 
  printArgument$40:
-	; Dereference £temporary1520 -> £temporary1519 £temporary1519 0
+	; Dereference £temporary1520 £temporary1519 0
 
  printArgument$41:
-	; IntegralToIntegral £temporary1521 £temporary1520 -> £temporary1519
+	; IntegralToIntegral £temporary1521 £temporary1520
 	mov eax, [rsi]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2240,21 +2240,21 @@ section .text
 	mov [rbp + 114], rax
 
  printArgument$43:
-	; Equal 50 negativePtr 0
+	; Equal 50 negativePtr Pointer$0#
 	cmp qword [rbp + 80], 0
 	je printArgument$50
 
  printArgument$44:
-	; Dereference £temporary1525 -> negativePtr negativePtr 0
+	; Dereference £temporary1525 negativePtr 0
 	mov rsi, [rbp + 80]
 
  printArgument$45:
-	; GreaterThanEqual 48 longValue 0
+	; GreaterThanEqual 48 longValue Signed_Long_Int$0#
 	cmp qword [rbp + 114], 0
 	jge printArgument$48
 
  printArgument$46:
-	; Assign £temporary1527 1
+	; Assign £temporary1527 SignedInt$1#
 	mov eax, 1
 
  printArgument$47:
@@ -2262,15 +2262,15 @@ section .text
 	jmp printArgument$49
 
  printArgument$48:
-	; Assign £temporary1527 0
+	; Assign £temporary1527 SignedInt$0#
 	mov eax, 0
 
  printArgument$49:
-	; Assign £temporary1525 -> negativePtr £temporary1527
+	; Assign £temporary1525 £temporary1527
 	mov [rsi], eax
 
  printArgument$50:
-	; NotEqual 57 sign 0
+	; NotEqual 57 sign Logical$0#
 	cmp dword [rbp + 76], 0
 	jne printArgument$57
 
@@ -2371,11 +2371,11 @@ section .text
 	jmp printArgument$357
 
  printArgument$73:
-	; Add arg_list arg_list 4
+	; Add arg_list arg_list Pointer$4#
 	add qword [rbp + 32], 4
 
  printArgument$74:
-	; Subtract £temporary1535 arg_list 4
+	; Subtract £temporary1535 arg_list Pointer$4#
 	mov rsi, [rbp + 32]
 	sub rsi, 4
 
@@ -2383,10 +2383,10 @@ section .text
 	; IntegralToIntegral £temporary1536 £temporary1535
 
  printArgument$76:
-	; Dereference £temporary1537 -> £temporary1536 £temporary1536 0
+	; Dereference £temporary1537 £temporary1536 0
 
  printArgument$77:
-	; IntegralToIntegral £temporary1538 £temporary1537 -> £temporary1536
+	; IntegralToIntegral £temporary1538 £temporary1537
 	mov eax, [rsi]
 	cmp eax, 0
 	jge printArgument$78
@@ -2459,11 +2459,11 @@ section .text
 	jmp printArgument$357
 
  printArgument$93:
-	; Add arg_list arg_list 8
+	; Add arg_list arg_list Pointer$8#
 	add qword [rbp + 32], 8
 
  printArgument$94:
-	; Subtract £temporary1543 arg_list 8
+	; Subtract £temporary1543 arg_list Pointer$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -2471,10 +2471,10 @@ section .text
 	; IntegralToIntegral £temporary1544 £temporary1543
 
  printArgument$96:
-	; Dereference £temporary1545 -> £temporary1544 £temporary1544 0
+	; Dereference £temporary1545 £temporary1544 0
 
  printArgument$97:
-	; Assign stringValue £temporary1545 -> £temporary1544
+	; Assign stringValue £temporary1545
 	mov rax, [rsi]
 	mov [rbp + 114], rax
 
@@ -2545,12 +2545,12 @@ section .text
 	jmp printArgument$357
 
  printArgument$113:
-	; NotEqual 116 c 117
+	; NotEqual 116 c SignedChar$117#
 	cmp byte [rbp + 88], 117
 	jne printArgument$116
 
  printArgument$114:
-	; Assign £temporary1554 10
+	; Assign £temporary1554 UnsignedLongInt$10#
 	mov rax, 10
 
  printArgument$115:
@@ -2558,12 +2558,12 @@ section .text
 	jmp printArgument$123
 
  printArgument$116:
-	; NotEqual 119 c 111
+	; NotEqual 119 c SignedChar$111#
 	cmp byte [rbp + 88], 111
 	jne printArgument$119
 
  printArgument$117:
-	; Assign £temporary1554 8
+	; Assign £temporary1554 UnsignedLongInt$8#
 	mov rax, 8
 
  printArgument$118:
@@ -2571,12 +2571,12 @@ section .text
 	jmp printArgument$123
 
  printArgument$119:
-	; NotEqual 122 c 98
+	; NotEqual 122 c SignedChar$98#
 	cmp byte [rbp + 88], 98
 	jne printArgument$122
 
  printArgument$120:
-	; Assign £temporary1554 2
+	; Assign £temporary1554 UnsignedLongInt$2#
 	mov rax, 2
 
  printArgument$121:
@@ -2584,7 +2584,7 @@ section .text
 	jmp printArgument$123
 
  printArgument$122:
-	; Assign £temporary1554 16
+	; Assign £temporary1554 UnsignedLongInt$16#
 	mov rax, 16
 
  printArgument$123:
@@ -2592,16 +2592,16 @@ section .text
 	mov [rbp + 114], rax
 
  printArgument$124:
-	; Equal 133 shortInt 0
+	; Equal 133 shortInt Logical$0#
 	cmp dword [rbp + 64], 0
 	je printArgument$133
 
  printArgument$125:
-	; Add arg_list arg_list 4
+	; Add arg_list arg_list Pointer$4#
 	add qword [rbp + 32], 4
 
  printArgument$126:
-	; Subtract £temporary1556 arg_list 4
+	; Subtract £temporary1556 arg_list Pointer$4#
 	mov rsi, [rbp + 32]
 	sub rsi, 4
 
@@ -2609,10 +2609,10 @@ section .text
 	; IntegralToIntegral £temporary1557 £temporary1556
 
  printArgument$128:
-	; Dereference £temporary1558 -> £temporary1557 £temporary1557 0
+	; Dereference £temporary1558 £temporary1557 0
 
  printArgument$129:
-	; IntegralToIntegral £temporary1559 £temporary1558 -> £temporary1557
+	; IntegralToIntegral £temporary1559 £temporary1558
 	mov eax, [rsi]
 
  printArgument$130:
@@ -2629,16 +2629,16 @@ section .text
 	jmp printArgument$146
 
  printArgument$133:
-	; Equal 140 longInt 0
+	; Equal 140 longInt Logical$0#
 	cmp dword [rbp + 68], 0
 	je printArgument$140
 
  printArgument$134:
-	; Add arg_list arg_list 8
+	; Add arg_list arg_list Pointer$8#
 	add qword [rbp + 32], 8
 
  printArgument$135:
-	; Subtract £temporary1562 arg_list 8
+	; Subtract £temporary1562 arg_list Pointer$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -2646,10 +2646,10 @@ section .text
 	; IntegralToIntegral £temporary1563 £temporary1562
 
  printArgument$137:
-	; Dereference £temporary1564 -> £temporary1563 £temporary1563 0
+	; Dereference £temporary1564 £temporary1563 0
 
  printArgument$138:
-	; Assign value £temporary1564 -> £temporary1563
+	; Assign value £temporary1564
 	mov rax, [rsi]
 	mov [rbp + 122], rax
 
@@ -2658,11 +2658,11 @@ section .text
 	jmp printArgument$146
 
  printArgument$140:
-	; Add arg_list arg_list 4
+	; Add arg_list arg_list Pointer$4#
 	add qword [rbp + 32], 4
 
  printArgument$141:
-	; Subtract £temporary1566 arg_list 4
+	; Subtract £temporary1566 arg_list Pointer$4#
 	mov rsi, [rbp + 32]
 	sub rsi, 4
 
@@ -2670,10 +2670,10 @@ section .text
 	; IntegralToIntegral £temporary1567 £temporary1566
 
  printArgument$143:
-	; Dereference £temporary1568 -> £temporary1567 £temporary1567 0
+	; Dereference £temporary1568 £temporary1567 0
 
  printArgument$144:
-	; IntegralToIntegral £temporary1569 £temporary1568 -> £temporary1567
+	; IntegralToIntegral £temporary1569 £temporary1568
 	mov eax, [rsi]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -2797,16 +2797,16 @@ section .text
 	jmp printArgument$357
 
  printArgument$171:
-	; Equal 188 longDouble 0
+	; Equal 188 longDouble Logical$0#
 	cmp dword [rbp + 72], 0
 	je printArgument$188
 
  printArgument$172:
-	; Add arg_list arg_list 8
+	; Add arg_list arg_list Pointer$8#
 	add qword [rbp + 32], 8
 
  printArgument$173:
-	; Subtract £temporary1578 arg_list 8
+	; Subtract £temporary1578 arg_list Pointer$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -2814,10 +2814,10 @@ section .text
 	; IntegralToIntegral £temporary1579 £temporary1578
 
  printArgument$175:
-	; Dereference £temporary1580 -> £temporary1579 £temporary1579 0
+	; Dereference £temporary1580 £temporary1579 0
 
  printArgument$176:
-	; PushFloat £temporary1580 -> £temporary1579
+	; PushFloat £temporary1580
 	fld qword [rsi]
 
  printArgument$177:
@@ -2836,19 +2836,19 @@ section .text
 	fstp qword [rbp + 138]
 
  printArgument$181:
-	; Parameter 146 signedint 0
+	; Parameter 146 signedint SignedInt$0#
 	mov dword [rbp + 146], 0
 
  printArgument$182:
-	; Parameter 150 signedint 0
+	; Parameter 150 signedint SignedInt$0#
 	mov dword [rbp + 150], 0
 
  printArgument$183:
-	; Parameter 154 signedint 0
+	; Parameter 154 signedint SignedInt$0#
 	mov dword [rbp + 154], 0
 
  printArgument$184:
-	; Parameter 158 signedint 3
+	; Parameter 158 signedint SignedInt$3#
 	mov dword [rbp + 158], 3
 
  printArgument$185:
@@ -2866,11 +2866,11 @@ section .text
 	jmp printArgument$194
 
  printArgument$188:
-	; Add arg_list arg_list 8
+	; Add arg_list arg_list Pointer$8#
 	add qword [rbp + 32], 8
 
  printArgument$189:
-	; Subtract £temporary1583 arg_list 8
+	; Subtract £temporary1583 arg_list Pointer$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -2878,10 +2878,10 @@ section .text
 	; IntegralToIntegral £temporary1584 £temporary1583
 
  printArgument$191:
-	; Dereference £temporary1585 -> £temporary1584 £temporary1584 0
+	; Dereference £temporary1585 £temporary1584 0
 
  printArgument$192:
-	; PushFloat £temporary1585 -> £temporary1584
+	; PushFloat £temporary1585
 	fld qword [rsi]
 
  printArgument$193:
@@ -2889,12 +2889,12 @@ section .text
 	fstp qword [rbp + 98]
 
  printArgument$194:
-	; Equal 203 negativePtr 0
+	; Equal 203 negativePtr Pointer$0#
 	cmp qword [rbp + 80], 0
 	je printArgument$203
 
  printArgument$195:
-	; Dereference £temporary1589 -> negativePtr negativePtr 0
+	; Dereference £temporary1589 negativePtr 0
 	mov rsi, [rbp + 80]
 
  printArgument$196:
@@ -2902,18 +2902,18 @@ section .text
 	fld qword [rbp + 98]
 
  printArgument$197:
-	; PushFloat 0
+	; PushFloat LongDouble$0#
 	fldz
 
  printArgument$198:
-	; GreaterThanEqual 201 longDoubleValue 0
+	; GreaterThanEqual 201 longDoubleValue LongDouble$0#
 	fcompp
 	fstsw ax
 	sahf
 	jbe printArgument$201
 
  printArgument$199:
-	; Assign £temporary1591 1
+	; Assign £temporary1591 SignedInt$1#
 	mov eax, 1
 
  printArgument$200:
@@ -2921,15 +2921,15 @@ section .text
 	jmp printArgument$202
 
  printArgument$201:
-	; Assign £temporary1591 0
+	; Assign £temporary1591 SignedInt$0#
 	mov eax, 0
 
  printArgument$202:
-	; Assign £temporary1589 -> negativePtr £temporary1591
+	; Assign £temporary1589 £temporary1591
 	mov [rsi], eax
 
  printArgument$203:
-	; NotEqual 211 sign 0
+	; NotEqual 211 sign Logical$0#
 	cmp dword [rbp + 76], 0
 	jne printArgument$211
 
@@ -3001,7 +3001,7 @@ section .text
 	mov [rbp + 32], rbx
 
  printArgument$220:
-	; NotEqual 231 c 102
+	; NotEqual 231 c SignedChar$102#
 	cmp byte [rbp + 88], 102
 	jne printArgument$231
 
@@ -3080,7 +3080,7 @@ section .text
 	; GetReturnValue £temporary1600
 
  printArgument$237:
-	; NotEqual 255 £temporary1600 101
+	; NotEqual 255 £temporary1600 SignedInt$101#
 	cmp ebx, 101
 	jne printArgument$255
 
@@ -3216,12 +3216,12 @@ section .text
 	mov [rbp + 114], eax
 
  printArgument$268:
-	; LessThan 280 expo -3
+	; LessThan 280 expo SignedInt$minus3#
 	cmp dword [rbp + 114], -3
 	jl printArgument$280
 
  printArgument$269:
-	; GreaterThan 280 expo 2
+	; GreaterThan 280 expo SignedInt$2#
 	cmp dword [rbp + 114], 2
 	jg printArgument$280
 
@@ -3349,11 +3349,11 @@ section .text
 	jmp printArgument$357
 
  printArgument$297:
-	; Add arg_list arg_list 8
+	; Add arg_list arg_list Pointer$8#
 	add qword [rbp + 32], 8
 
  printArgument$298:
-	; Subtract £temporary1616 arg_list 8
+	; Subtract £temporary1616 arg_list Pointer$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -3361,10 +3361,10 @@ section .text
 	; IntegralToIntegral £temporary1617 £temporary1616
 
  printArgument$300:
-	; Dereference £temporary1618 -> £temporary1617 £temporary1617 0
+	; Dereference £temporary1618 £temporary1617 0
 
  printArgument$301:
-	; Assign ptrValue £temporary1618 -> £temporary1617
+	; Assign ptrValue £temporary1618
 	mov rax, [rsi]
 	mov [rbp + 106], rax
 
@@ -3419,23 +3419,23 @@ section .text
 	mov [rbp + 138], rax
 
  printArgument$314:
-	; Parameter 146 signedint 0
+	; Parameter 146 signedint SignedInt$0#
 	mov dword [rbp + 146], 0
 
  printArgument$315:
-	; Parameter 150 signedint 0
+	; Parameter 150 signedint SignedInt$0#
 	mov dword [rbp + 150], 0
 
  printArgument$316:
-	; Parameter 154 signedint 0
+	; Parameter 154 signedint SignedInt$0#
 	mov dword [rbp + 154], 0
 
  printArgument$317:
-	; Parameter 158 unsignedlongint 10
+	; Parameter 158 unsignedlongint UnsignedLongInt$10#
 	mov qword [rbp + 158], 10
 
  printArgument$318:
-	; Parameter 166 signedint 0
+	; Parameter 166 signedint SignedInt$0#
 	mov dword [rbp + 166], 0
 
  printArgument$319:
@@ -3453,11 +3453,11 @@ section .text
 	jmp printArgument$357
 
  printArgument$322:
-	; Add arg_list arg_list 8
+	; Add arg_list arg_list Pointer$8#
 	add qword [rbp + 32], 8
 
  printArgument$323:
-	; Subtract £temporary1624 arg_list 8
+	; Subtract £temporary1624 arg_list Pointer$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -3465,19 +3465,19 @@ section .text
 	; IntegralToIntegral £temporary1625 £temporary1624
 
  printArgument$325:
-	; Dereference £temporary1626 -> £temporary1625 £temporary1625 0
+	; Dereference £temporary1626 £temporary1625 0
 
  printArgument$326:
-	; Assign ptrValue £temporary1626 -> £temporary1625
+	; Assign ptrValue £temporary1626
 	mov rax, [rsi]
 	mov [rbp + 106], rax
 
  printArgument$327:
-	; Add arg_list arg_list 8
+	; Add arg_list arg_list Pointer$8#
 	add qword [rbp + 32], 8
 
  printArgument$328:
-	; Subtract £temporary1628 arg_list 8
+	; Subtract £temporary1628 arg_list Pointer$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -3485,10 +3485,10 @@ section .text
 	; IntegralToIntegral £temporary1629 £temporary1628
 
  printArgument$330:
-	; Dereference £temporary1630 -> £temporary1629 £temporary1629 0
+	; Dereference £temporary1630 £temporary1629 0
 
  printArgument$331:
-	; Assign intPtr £temporary1630 -> £temporary1629
+	; Assign intPtr £temporary1630
 	mov rax, [rsi]
 	mov [rbp + 90], rax
 
@@ -3532,11 +3532,11 @@ section .text
 	mov [rbp + 32], rbx
 
  printArgument$341:
-	; Dereference £temporary1633 -> intPtr intPtr 0
+	; Dereference £temporary1633 intPtr 0
 	mov rsi, [rbp + 90]
 
  printArgument$342:
-	; Assign £temporary1633 -> intPtr g_outChars
+	; Assign £temporary1633 g_outChars
 	mov eax, [g_outChars]
 	mov [rsi], eax
 
@@ -3587,7 +3587,7 @@ section .text
 	; PreCall 114 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printArgument$354:
-	; Parameter 138 signedchar 37
+	; Parameter 138 signedchar SignedChar$37#
 	mov byte [rbp + 138], 37
 
  printArgument$355:
@@ -3616,74 +3616,74 @@ section .text
 
 section .data
 
-@5247$int4$10#:
+@5247SignedInt$10#:
 	; Initializer SignedInt 10
 	dd 10
 
 section .text
 
  printFormat:
-	; Assign width 0
+	; Assign width SignedInt$0#
 	mov dword [rbp + 44], 0
 
  printFormat$1:
-	; Assign precision 0
+	; Assign precision SignedInt$0#
 	mov dword [rbp + 48], 0
 
  printFormat$2:
-	; Assign percent 0
+	; Assign percent SignedInt$0#
 	mov dword [rbp + 52], 0
 
  printFormat$3:
-	; Assign plus 0
+	; Assign plus SignedInt$0#
 	mov dword [rbp + 56], 0
 
  printFormat$4:
-	; Assign minus 0
+	; Assign minus SignedInt$0#
 	mov dword [rbp + 60], 0
 
  printFormat$5:
-	; Assign space 0
+	; Assign space SignedInt$0#
 	mov dword [rbp + 64], 0
 
  printFormat$6:
-	; Assign zero 0
+	; Assign zero SignedInt$0#
 	mov dword [rbp + 68], 0
 
  printFormat$7:
-	; Assign grid 0
+	; Assign grid SignedInt$0#
 	mov dword [rbp + 72], 0
 
  printFormat$8:
-	; Assign widthStar 0
+	; Assign widthStar SignedInt$0#
 	mov dword [rbp + 76], 0
 
  printFormat$9:
-	; Assign period 0
+	; Assign period SignedInt$0#
 	mov dword [rbp + 80], 0
 
  printFormat$10:
-	; Assign precisionStar 0
+	; Assign precisionStar SignedInt$0#
 	mov dword [rbp + 84], 0
 
  printFormat$11:
-	; Assign shortInt 0
+	; Assign shortInt SignedInt$0#
 	mov dword [rbp + 88], 0
 
  printFormat$12:
-	; Assign longInt 0
+	; Assign longInt SignedInt$0#
 	mov dword [rbp + 92], 0
 
  printFormat$13:
-	; Assign longDouble 0
+	; Assign longDouble SignedInt$0#
 	mov dword [rbp + 96], 0
 
  printFormat$14:
-	; Assign g_outChars 0
+	; Assign g_outChars SignedInt$0#
 	mov dword [g_outChars], 0
 
  printFormat$15:
-	; Assign index 0
+	; Assign index SignedInt$0#
 	mov dword [rbp + 40], 0
 
  printFormat$16:
@@ -3698,10 +3698,10 @@ section .text
 	add rsi, rax
 
  printFormat$18:
-	; Dereference £temporary1653 -> £temporary1655 £temporary1655 0
+	; Dereference £temporary1653 £temporary1655 0
 
  printFormat$19:
-	; Equal 293 £temporary1653 -> £temporary1655 0
+	; Equal 293 £temporary1653 SignedChar$0#
 	cmp byte [rsi], 0
 	je printFormat$293
 
@@ -3717,151 +3717,151 @@ section .text
 	add rsi, rax
 
  printFormat$22:
-	; Dereference £temporary1658 -> £temporary1660 £temporary1660 0
+	; Dereference £temporary1658 £temporary1660 0
 
  printFormat$23:
-	; Assign c £temporary1658 -> £temporary1660
+	; Assign c £temporary1658
 	mov al, [rsi]
 	mov [rbp + 100], al
 
  printFormat$24:
-	; Equal 271 percent 0
+	; Equal 271 percent Logical$0#
 	cmp dword [rbp + 52], 0
 	je printFormat$271
 
  printFormat$25:
-	; Case 54 c 43
+	; Case 54 c SignedChar$43#
 	mov al, [rbp + 100]
 	cmp al, 43
 	je printFormat$54
 
  printFormat$26:
-	; Case 56 c 45
+	; Case 56 c SignedChar$45#
 	cmp al, 45
 	je printFormat$56
 
  printFormat$27:
-	; Case 58 c 32
+	; Case 58 c SignedChar$32#
 	cmp al, 32
 	je printFormat$58
 
  printFormat$28:
-	; Case 60 c 48
+	; Case 60 c SignedChar$48#
 	cmp al, 48
 	je printFormat$60
 
  printFormat$29:
-	; Case 62 c 35
+	; Case 62 c SignedChar$35#
 	cmp al, 35
 	je printFormat$62
 
  printFormat$30:
-	; Case 64 c 46
+	; Case 64 c SignedChar$46#
 	cmp al, 46
 	je printFormat$64
 
  printFormat$31:
-	; Case 66 c 42
+	; Case 66 c SignedChar$42#
 	cmp al, 42
 	je printFormat$66
 
  printFormat$32:
-	; Case 71 c 104
+	; Case 71 c SignedChar$104#
 	cmp al, 104
 	je printFormat$71
 
  printFormat$33:
-	; Case 73 c 108
+	; Case 73 c SignedChar$108#
 	cmp al, 108
 	je printFormat$73
 
  printFormat$34:
-	; Case 75 c 76
+	; Case 75 c SignedChar$76#
 	cmp al, 76
 	je printFormat$75
 
  printFormat$35:
-	; Case 77 c 37
+	; Case 77 c SignedChar$37#
 	cmp al, 37
 	je printFormat$77
 
  printFormat$36:
-	; Case 77 c 110
+	; Case 77 c SignedChar$110#
 	cmp al, 110
 	je printFormat$77
 
  printFormat$37:
-	; Case 77 c 112
+	; Case 77 c SignedChar$112#
 	cmp al, 112
 	je printFormat$77
 
  printFormat$38:
-	; Case 77 c 71
+	; Case 77 c SignedChar$71#
 	cmp al, 71
 	je printFormat$77
 
  printFormat$39:
-	; Case 77 c 103
+	; Case 77 c SignedChar$103#
 	cmp al, 103
 	je printFormat$77
 
  printFormat$40:
-	; Case 77 c 69
+	; Case 77 c SignedChar$69#
 	cmp al, 69
 	je printFormat$77
 
  printFormat$41:
-	; Case 77 c 101
+	; Case 77 c SignedChar$101#
 	cmp al, 101
 	je printFormat$77
 
  printFormat$42:
-	; Case 77 c 102
+	; Case 77 c SignedChar$102#
 	cmp al, 102
 	je printFormat$77
 
  printFormat$43:
-	; Case 77 c 115
+	; Case 77 c SignedChar$115#
 	cmp al, 115
 	je printFormat$77
 
  printFormat$44:
-	; Case 77 c 99
+	; Case 77 c SignedChar$99#
 	cmp al, 99
 	je printFormat$77
 
  printFormat$45:
-	; Case 77 c 88
+	; Case 77 c SignedChar$88#
 	cmp al, 88
 	je printFormat$77
 
  printFormat$46:
-	; Case 77 c 120
+	; Case 77 c SignedChar$120#
 	cmp al, 120
 	je printFormat$77
 
  printFormat$47:
-	; Case 77 c 111
+	; Case 77 c SignedChar$111#
 	cmp al, 111
 	je printFormat$77
 
  printFormat$48:
-	; Case 77 c 98
+	; Case 77 c SignedChar$98#
 	cmp al, 98
 	je printFormat$77
 
  printFormat$49:
-	; Case 77 c 117
+	; Case 77 c SignedChar$117#
 	cmp al, 117
 	je printFormat$77
 
  printFormat$50:
-	; Case 77 c 100
+	; Case 77 c SignedChar$100#
 	cmp al, 100
 	je printFormat$77
 
  printFormat$51:
-	; Case 77 c 105
+	; Case 77 c SignedChar$105#
 	cmp al, 105
 	je printFormat$77
 
@@ -3873,7 +3873,7 @@ section .text
 	jmp printFormat$246
 
  printFormat$54:
-	; Assign plus 1
+	; Assign plus SignedInt$1#
 	mov dword [rbp + 56], 1
 
  printFormat$55:
@@ -3881,7 +3881,7 @@ section .text
 	jmp printFormat$291
 
  printFormat$56:
-	; Assign minus 1
+	; Assign minus SignedInt$1#
 	mov dword [rbp + 60], 1
 
  printFormat$57:
@@ -3889,7 +3889,7 @@ section .text
 	jmp printFormat$291
 
  printFormat$58:
-	; Assign space 1
+	; Assign space SignedInt$1#
 	mov dword [rbp + 64], 1
 
  printFormat$59:
@@ -3897,7 +3897,7 @@ section .text
 	jmp printFormat$291
 
  printFormat$60:
-	; Assign zero 1
+	; Assign zero SignedInt$1#
 	mov dword [rbp + 68], 1
 
  printFormat$61:
@@ -3905,7 +3905,7 @@ section .text
 	jmp printFormat$291
 
  printFormat$62:
-	; Assign grid 1
+	; Assign grid SignedInt$1#
 	mov dword [rbp + 72], 1
 
  printFormat$63:
@@ -3913,7 +3913,7 @@ section .text
 	jmp printFormat$291
 
  printFormat$64:
-	; Assign period 1
+	; Assign period SignedInt$1#
 	mov dword [rbp + 80], 1
 
  printFormat$65:
@@ -3921,12 +3921,12 @@ section .text
 	jmp printFormat$291
 
  printFormat$66:
-	; NotEqual 69 period 0
+	; NotEqual 69 period Logical$0#
 	cmp dword [rbp + 80], 0
 	jne printFormat$69
 
  printFormat$67:
-	; Assign width -1
+	; Assign width SignedInt$minus1#
 	mov dword [rbp + 44], -1
 
  printFormat$68:
@@ -3934,7 +3934,7 @@ section .text
 	jmp printFormat$291
 
  printFormat$69:
-	; Assign precision -1
+	; Assign precision SignedInt$minus1#
 	mov dword [rbp + 48], -1
 
  printFormat$70:
@@ -3942,7 +3942,7 @@ section .text
 	jmp printFormat$291
 
  printFormat$71:
-	; Assign shortInt 1
+	; Assign shortInt SignedInt$1#
 	mov dword [rbp + 88], 1
 
  printFormat$72:
@@ -3950,7 +3950,7 @@ section .text
 	jmp printFormat$291
 
  printFormat$73:
-	; Assign longInt 1
+	; Assign longInt SignedInt$1#
 	mov dword [rbp + 92], 1
 
  printFormat$74:
@@ -3958,7 +3958,7 @@ section .text
 	jmp printFormat$291
 
  printFormat$75:
-	; Assign longDouble 1
+	; Assign longDouble SignedInt$1#
 	mov dword [rbp + 96], 1
 
  printFormat$76:
@@ -3966,7 +3966,7 @@ section .text
 	jmp printFormat$291
 
  printFormat$77:
-	; Equal 110 minus 0
+	; Equal 110 minus Logical$0#
 	cmp dword [rbp + 60], 0
 	je printFormat$110
 
@@ -3990,10 +3990,10 @@ section .text
 	add rsi, rax
 
  printFormat$82:
-	; Dereference £temporary1663 -> £temporary1665 £temporary1665 0
+	; Dereference £temporary1663 £temporary1665 0
 
  printFormat$83:
-	; Address £temporary1666 £temporary1663 -> £temporary1665
+	; Address £temporary1666 £temporary1663
 
  printFormat$84:
 	; Parameter 129 pointer £temporary1666
@@ -4049,11 +4049,11 @@ section .text
 	mov [rbp + 177], eax
 
  printFormat$95:
-	; Parameter 181 signedint 1
+	; Parameter 181 signedint SignedInt$1#
 	mov dword [rbp + 181], 1
 
  printFormat$96:
-	; Parameter 185 pointer 0
+	; Parameter 185 pointer Pointer$0#
 	mov qword [rbp + 185], 0
 
  printFormat$97:
@@ -4084,7 +4084,7 @@ section .text
 	mov eax, [rbp + 105]
 
  printFormat$103:
-	; Add field field 1
+	; Add field field SignedInt$1#
 	inc dword [rbp + 105]
 
  printFormat$104:
@@ -4096,7 +4096,7 @@ section .text
 	; PreCall 109 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printFormat$106:
-	; Parameter 133 signedchar 32
+	; Parameter 133 signedchar SignedChar$32#
 	mov byte [rbp + 133], 32
 
  printFormat$107:
@@ -4114,7 +4114,7 @@ section .text
 	jmp printFormat$102
 
  printFormat$110:
-	; Equal 189 zero 0
+	; Equal 189 zero Logical$0#
 	cmp dword [rbp + 68], 0
 	je printFormat$189
 
@@ -4129,11 +4129,11 @@ section .text
 	mov [rbp + 105], eax
 
  printFormat$113:
-	; Assign negative 0
+	; Assign negative SignedInt$0#
 	mov dword [rbp + 109], 0
 
  printFormat$114:
-	; Assign g_outStatus 2
+	; Assign g_outStatus SignedInt$2#
 	mov dword [g_outStatus], 2
 
  printFormat$115:
@@ -4151,10 +4151,10 @@ section .text
 	add rsi, rax
 
  printFormat$118:
-	; Dereference £temporary1673 -> £temporary1675 £temporary1675 0
+	; Dereference £temporary1673 £temporary1675 0
 
  printFormat$119:
-	; Address £temporary1676 £temporary1673 -> £temporary1675
+	; Address £temporary1676 £temporary1673
 
  printFormat$120:
 	; Parameter 137 pointer £temporary1676
@@ -4166,11 +4166,11 @@ section .text
 	mov [rbp + 145], rax
 
  printFormat$122:
-	; Parameter 153 signedint 0
+	; Parameter 153 signedint SignedInt$0#
 	mov dword [rbp + 153], 0
 
  printFormat$123:
-	; Parameter 157 signedint 0
+	; Parameter 157 signedint SignedInt$0#
 	mov dword [rbp + 157], 0
 
  printFormat$124:
@@ -4208,7 +4208,7 @@ section .text
 	mov [rbp + 185], eax
 
  printFormat$131:
-	; Parameter 189 signedint 0
+	; Parameter 189 signedint SignedInt$0#
 	mov dword [rbp + 189], 0
 
  printFormat$132:
@@ -4247,7 +4247,7 @@ section .text
 	mov [g_outChars], eax
 
  printFormat$139:
-	; Equal 146 negative 0
+	; Equal 146 negative Logical$0#
 	cmp dword [rbp + 109], 0
 	je printFormat$146
 
@@ -4255,7 +4255,7 @@ section .text
 	; PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printFormat$141:
-	; Parameter 141 signedchar 45
+	; Parameter 141 signedchar SignedChar$45#
 	mov byte [rbp + 141], 45
 
  printFormat$142:
@@ -4269,7 +4269,7 @@ section .text
 	; PostCall 117
 
  printFormat$144:
-	; Add field field 1
+	; Add field field SignedInt$1#
 	inc dword [rbp + 113]
 
  printFormat$145:
@@ -4277,7 +4277,7 @@ section .text
 	jmp printFormat$159
 
  printFormat$146:
-	; Equal 153 plus 0
+	; Equal 153 plus Logical$0#
 	cmp dword [rbp + 56], 0
 	je printFormat$153
 
@@ -4285,7 +4285,7 @@ section .text
 	; PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printFormat$148:
-	; Parameter 141 signedchar 43
+	; Parameter 141 signedchar SignedChar$43#
 	mov byte [rbp + 141], 43
 
  printFormat$149:
@@ -4299,7 +4299,7 @@ section .text
 	; PostCall 117
 
  printFormat$151:
-	; Add field field 1
+	; Add field field SignedInt$1#
 	inc dword [rbp + 113]
 
  printFormat$152:
@@ -4307,7 +4307,7 @@ section .text
 	jmp printFormat$159
 
  printFormat$153:
-	; Equal 159 space 0
+	; Equal 159 space Logical$0#
 	cmp dword [rbp + 64], 0
 	je printFormat$159
 
@@ -4315,7 +4315,7 @@ section .text
 	; PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printFormat$155:
-	; Parameter 141 signedchar 32
+	; Parameter 141 signedchar SignedChar$32#
 	mov byte [rbp + 141], 32
 
  printFormat$156:
@@ -4329,7 +4329,7 @@ section .text
 	; PostCall 117
 
  printFormat$158:
-	; Add field field 1
+	; Add field field SignedInt$1#
 	inc dword [rbp + 113]
 
  printFormat$159:
@@ -4337,7 +4337,7 @@ section .text
 	mov eax, [rbp + 113]
 
  printFormat$160:
-	; Add field field 1
+	; Add field field SignedInt$1#
 	inc dword [rbp + 113]
 
  printFormat$161:
@@ -4349,7 +4349,7 @@ section .text
 	; PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printFormat$163:
-	; Parameter 141 signedchar 48
+	; Parameter 141 signedchar SignedChar$48#
 	mov byte [rbp + 141], 48
 
  printFormat$164:
@@ -4381,10 +4381,10 @@ section .text
 	add rsi, rax
 
  printFormat$170:
-	; Dereference £temporary1693 -> £temporary1695 £temporary1695 0
+	; Dereference £temporary1693 £temporary1695 0
 
  printFormat$171:
-	; Address £temporary1696 £temporary1693 -> £temporary1695
+	; Address £temporary1696 £temporary1693
 
  printFormat$172:
 	; Parameter 141 pointer £temporary1696
@@ -4396,11 +4396,11 @@ section .text
 	mov [rbp + 149], rax
 
  printFormat$174:
-	; Parameter 157 signedint 0
+	; Parameter 157 signedint SignedInt$0#
 	mov dword [rbp + 157], 0
 
  printFormat$175:
-	; Parameter 161 signedint 0
+	; Parameter 161 signedint SignedInt$0#
 	mov dword [rbp + 161], 0
 
  printFormat$176:
@@ -4409,7 +4409,7 @@ section .text
 	mov [rbp + 165], eax
 
  printFormat$177:
-	; Parameter 169 pointer 0
+	; Parameter 169 pointer Pointer$0#
 	mov qword [rbp + 169], 0
 
  printFormat$178:
@@ -4433,11 +4433,11 @@ section .text
 	mov [rbp + 189], eax
 
  printFormat$182:
-	; Parameter 193 signedint 0
+	; Parameter 193 signedint SignedInt$0#
 	mov dword [rbp + 193], 0
 
  printFormat$183:
-	; Parameter 197 pointer 0
+	; Parameter 197 pointer Pointer$0#
 	mov qword [rbp + 197], 0
 
  printFormat$184:
@@ -4472,7 +4472,7 @@ section .text
 	mov [rbp + 105], eax
 
  printFormat$191:
-	; Assign g_outStatus 2
+	; Assign g_outStatus SignedInt$2#
 	mov dword [g_outStatus], 2
 
  printFormat$192:
@@ -4490,10 +4490,10 @@ section .text
 	add rsi, rax
 
  printFormat$195:
-	; Dereference £temporary1698 -> £temporary1700 £temporary1700 0
+	; Dereference £temporary1698 £temporary1700 0
 
  printFormat$196:
-	; Address £temporary1701 £temporary1698 -> £temporary1700
+	; Address £temporary1701 £temporary1698
 
  printFormat$197:
 	; Parameter 133 pointer £temporary1701
@@ -4549,11 +4549,11 @@ section .text
 	mov [rbp + 181], eax
 
  printFormat$208:
-	; Parameter 185 signedint 1
+	; Parameter 185 signedint SignedInt$1#
 	mov dword [rbp + 185], 1
 
  printFormat$209:
-	; Parameter 189 pointer 0
+	; Parameter 189 pointer Pointer$0#
 	mov qword [rbp + 189], 0
 
  printFormat$210:
@@ -4587,7 +4587,7 @@ section .text
 	mov eax, [rbp + 109]
 
  printFormat$216:
-	; Add field field 1
+	; Add field field SignedInt$1#
 	inc dword [rbp + 109]
 
  printFormat$217:
@@ -4599,7 +4599,7 @@ section .text
 	; PreCall 113 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printFormat$219:
-	; Parameter 137 signedchar 32
+	; Parameter 137 signedchar SignedChar$32#
 	mov byte [rbp + 137], 32
 
  printFormat$220:
@@ -4631,10 +4631,10 @@ section .text
 	add rsi, rax
 
  printFormat$226:
-	; Dereference £temporary1708 -> £temporary1710 £temporary1710 0
+	; Dereference £temporary1708 £temporary1710 0
 
  printFormat$227:
-	; Address £temporary1711 £temporary1708 -> £temporary1710
+	; Address £temporary1711 £temporary1708
 
  printFormat$228:
 	; Parameter 137 pointer £temporary1711
@@ -4661,7 +4661,7 @@ section .text
 	mov [rbp + 161], eax
 
  printFormat$233:
-	; Parameter 165 pointer 0
+	; Parameter 165 pointer Pointer$0#
 	mov qword [rbp + 165], 0
 
  printFormat$234:
@@ -4685,11 +4685,11 @@ section .text
 	mov [rbp + 185], eax
 
  printFormat$238:
-	; Parameter 189 signedint 1
+	; Parameter 189 signedint SignedInt$1#
 	mov dword [rbp + 189], 1
 
  printFormat$239:
-	; Parameter 193 pointer 0
+	; Parameter 193 pointer Pointer$0#
 	mov qword [rbp + 193], 0
 
  printFormat$240:
@@ -4710,7 +4710,7 @@ section .text
 	mov [rbp + 32], rbx
 
  printFormat$244:
-	; Assign percent 0
+	; Assign percent SignedInt$0#
 	mov dword [rbp + 52], 0
 
  printFormat$245:
@@ -4718,7 +4718,7 @@ section .text
 	jmp printFormat$291
 
  printFormat$246:
-	; Assign value 0
+	; Assign value SignedInt$0#
 	mov dword [rbp + 101], 0
 
  printFormat$247:
@@ -4751,18 +4751,18 @@ section .text
 	; GetReturnValue £temporary1716
 
  printFormat$253:
-	; Equal 265 £temporary1716 0
+	; Equal 265 £temporary1716 Logical$0#
 	cmp ebx, 0
 	je printFormat$265
 
  printFormat$254:
-	; Multiply £temporary1717 value 10
+	; Multiply £temporary1717 value SignedInt$10#
 	mov eax, [rbp + 101]
 	xor edx, edx
-	imul dword [@5247$int4$10#]
+	imul dword [@5247SignedInt$10#]
 
  printFormat$255:
-	; Subtract £temporary1718 c 48
+	; Subtract £temporary1718 c SignedChar$48#
 	mov bl, [rbp + 100]
 	sub bl, 48
 
@@ -4780,7 +4780,7 @@ section .text
 	mov [rbp + 101], eax
 
  printFormat$258:
-	; Add index index 1
+	; Add index index SignedInt$1#
 	inc dword [rbp + 40]
 
  printFormat$259:
@@ -4798,10 +4798,10 @@ section .text
 	add rsi, rax
 
  printFormat$262:
-	; Dereference £temporary1722 -> £temporary1724 £temporary1724 0
+	; Dereference £temporary1722 £temporary1724 0
 
  printFormat$263:
-	; Assign c £temporary1722 -> £temporary1724
+	; Assign c £temporary1722
 	mov al, [rsi]
 	mov [rbp + 100], al
 
@@ -4810,11 +4810,11 @@ section .text
 	jmp printFormat$247
 
  printFormat$265:
-	; Subtract index index 1
+	; Subtract index index SignedInt$1#
 	dec dword [rbp + 40]
 
  printFormat$266:
-	; NotEqual 269 period 0
+	; NotEqual 269 period Logical$0#
 	cmp dword [rbp + 80], 0
 	jne printFormat$269
 
@@ -4837,64 +4837,64 @@ section .text
 	jmp printFormat$291
 
  printFormat$271:
-	; NotEqual 287 c 37
+	; NotEqual 287 c SignedChar$37#
 	cmp byte [rbp + 100], 37
 	jne printFormat$287
 
  printFormat$272:
-	; Assign percent 1
+	; Assign percent SignedInt$1#
 	mov dword [rbp + 52], 1
 
  printFormat$273:
-	; Assign plus 0
+	; Assign plus SignedInt$0#
 	mov dword [rbp + 56], 0
 
  printFormat$274:
-	; Assign minus 0
+	; Assign minus SignedInt$0#
 	mov dword [rbp + 60], 0
 
  printFormat$275:
-	; Assign space 0
+	; Assign space SignedInt$0#
 	mov dword [rbp + 64], 0
 
  printFormat$276:
-	; Assign zero 0
+	; Assign zero SignedInt$0#
 	mov dword [rbp + 68], 0
 
  printFormat$277:
-	; Assign grid 0
+	; Assign grid SignedInt$0#
 	mov dword [rbp + 72], 0
 
  printFormat$278:
-	; Assign widthStar 0
+	; Assign widthStar SignedInt$0#
 	mov dword [rbp + 76], 0
 
  printFormat$279:
-	; Assign period 0
+	; Assign period SignedInt$0#
 	mov dword [rbp + 80], 0
 
  printFormat$280:
-	; Assign precisionStar 0
+	; Assign precisionStar SignedInt$0#
 	mov dword [rbp + 84], 0
 
  printFormat$281:
-	; Assign shortInt 0
+	; Assign shortInt SignedInt$0#
 	mov dword [rbp + 88], 0
 
  printFormat$282:
-	; Assign longInt 0
+	; Assign longInt SignedInt$0#
 	mov dword [rbp + 92], 0
 
  printFormat$283:
-	; Assign longDouble 0
+	; Assign longDouble SignedInt$0#
 	mov dword [rbp + 96], 0
 
  printFormat$284:
-	; Assign width 0
+	; Assign width SignedInt$0#
 	mov dword [rbp + 44], 0
 
  printFormat$285:
-	; Assign precision 0
+	; Assign precision SignedInt$0#
 	mov dword [rbp + 48], 0
 
  printFormat$286:
@@ -4920,7 +4920,7 @@ section .text
 	; PostCall 101
 
  printFormat$291:
-	; Add index index 1
+	; Add index index SignedInt$1#
 	inc dword [rbp + 40]
 
  printFormat$292:
@@ -4928,7 +4928,7 @@ section .text
 	jmp printFormat$16
 
  printFormat$293:
-	; NotEqual 300 g_outStatus 1
+	; NotEqual 300 g_outStatus SignedInt$1#
 	cmp dword [g_outStatus], 1
 	jne printFormat$300
 
@@ -4952,10 +4952,10 @@ section .text
 	add rsi, rax
 
  printFormat$298:
-	; Dereference £temporary1734 -> £temporary1736 £temporary1736 0
+	; Dereference £temporary1734 £temporary1736 0
 
  printFormat$299:
-	; Assign £temporary1734 -> £temporary1736 0
+	; Assign £temporary1734 SignedChar$0#
 	mov byte [rsi], 0
 
  printFormat$300:
@@ -4983,7 +4983,7 @@ section .text
 	; IntegralToIntegral £temporary1742 £temporary1741
 
  printf$2:
-	; Add arg_list £temporary1742 8
+	; Add arg_list £temporary1742 Pointer$8#
 	add rsi, 8
 	mov [rdi + 32], rsi
 
@@ -5085,7 +5085,7 @@ section .text
 	; IntegralToIntegral £temporary1748 £temporary1747
 
  fprintf$2:
-	; Add arg_list £temporary1748 8
+	; Add arg_list £temporary1748 Pointer$8#
 	add rsi, 8
 	mov [rdi + 40], rsi
 
@@ -5138,7 +5138,7 @@ section .text
 section .text
 
  vfprintf:
-	; Assign g_outStatus 0
+	; Assign g_outStatus SignedInt$0#
 	mov dword [g_outStatus], 0
 
  vfprintf$1:
@@ -5199,7 +5199,7 @@ section .text
 	; IntegralToIntegral £temporary1755 £temporary1754
 
  sprintf$2:
-	; Add arg_list £temporary1755 8
+	; Add arg_list £temporary1755 Pointer$8#
 	add rsi, 8
 	mov [rdi + 40], rsi
 
@@ -5252,7 +5252,7 @@ section .text
 section .text
 
  vsprintf:
-	; Assign g_outStatus 1
+	; Assign g_outStatus SignedInt$1#
 	mov dword [g_outStatus], 1
 
  vsprintf$1:

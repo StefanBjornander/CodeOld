@@ -23,7 +23,7 @@ section .text
 	; SetReturnValue
 
  clock$1:
-	; Return -1
+	; Return Signed_Long_Int$minus1#
 	mov rbx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -35,59 +35,59 @@ section .text
 
 section .data
 
-@7660$int4$4#:
+@7660SignedInt$4#:
 	; Initializer SignedInt 4
 	dd 4
 
 section .data
 
-@7664$int4$100#:
+@7664SignedInt$100#:
 	; Initializer SignedInt 100
 	dd 100
 
 section .data
 
-@7668$int4$400#:
+@7668SignedInt$400#:
 	; Initializer SignedInt 400
 	dd 400
 
 section .text
 
  @7658$isLeapYear:
-	; Modulo £temporary2459 year 4
+	; Modulo £temporary2459 year SignedInt$4#
 	mov eax, [rbp + 24]
 	xor edx, edx
-	idiv dword [@7660$int4$4#]
+	idiv dword [@7660SignedInt$4#]
 
  @7658$isLeapYear$1:
-	; NotEqual 4 £temporary2459 0
+	; NotEqual 4 £temporary2459 SignedInt$0#
 	cmp edx, 0
 	jne @7658$isLeapYear$4
 
  @7658$isLeapYear$2:
-	; Modulo £temporary2461 year 100
+	; Modulo £temporary2461 year SignedInt$100#
 	mov eax, [rbp + 24]
 	xor edx, edx
-	idiv dword [@7664$int4$100#]
+	idiv dword [@7664SignedInt$100#]
 
  @7658$isLeapYear$3:
-	; NotEqual 6 £temporary2461 0
+	; NotEqual 6 £temporary2461 SignedInt$0#
 	cmp edx, 0
 	jne @7658$isLeapYear$6
 
  @7658$isLeapYear$4:
-	; Modulo £temporary2464 year 400
+	; Modulo £temporary2464 year SignedInt$400#
 	mov eax, [rbp + 24]
 	xor edx, edx
-	idiv dword [@7668$int4$400#]
+	idiv dword [@7668SignedInt$400#]
 
  @7658$isLeapYear$5:
-	; NotEqual 8 £temporary2464 0
+	; NotEqual 8 £temporary2464 SignedInt$0#
 	cmp edx, 0
 	jne @7658$isLeapYear$8
 
  @7658$isLeapYear$6:
-	; Assign £temporary2467 1
+	; Assign £temporary2467 SignedInt$1#
 	mov ebx, 1
 
  @7658$isLeapYear$7:
@@ -95,7 +95,7 @@ section .text
 	jmp @7658$isLeapYear$9
 
  @7658$isLeapYear$8:
-	; Assign £temporary2467 0
+	; Assign £temporary2467 SignedInt$0#
 	mov ebx, 0
 
  @7658$isLeapYear$9:
@@ -114,7 +114,7 @@ section .text
 section .text
 
  time:
-	; AssignRegister rax 201
+	; AssignRegister rax UnsignedLongInt$201#
 	mov rax, 201
 
  time$1:
@@ -133,16 +133,16 @@ section .text
 	syscall
 
  time$5:
-	; Equal 8 timePtr 0
+	; Equal 8 timePtr Pointer$0#
 	cmp qword [rbp + 24], 0
 	je time$8
 
  time$6:
-	; Dereference £temporary2473 -> timePtr timePtr 0
+	; Dereference £temporary2473 timePtr 0
 	mov rsi, [rbp + 24]
 
  time$7:
-	; Assign £temporary2473 -> timePtr time
+	; Assign £temporary2473 time
 	mov rax, [rbp + 32]
 	mov [rsi], rax
 
@@ -162,54 +162,54 @@ section .text
 
 section .data
 
-@7687$int4$4#:
+@7687SignedInt$4#:
 	; Initializer SignedInt 4
 	dd 4
 
 section .data
 
-@7692$int4$365#:
+@7692SignedInt$365#:
 	; Initializer SignedInt 365
 	dd 365
 
 section .data
 
-@7695$int8$86400#:
+@7695Signed_Long_Int$86400#:
 	; Initializer Signed_Long_Int 86400
 	dq 86400
 
 section .data
 
-@7697$int8$3600#:
+@7697Signed_Long_Int$3600#:
 	; Initializer Signed_Long_Int 3600
 	dq 3600
 
 section .data
 
-@7699$int8$60#:
+@7699Signed_Long_Int$60#:
 	; Initializer Signed_Long_Int 60
 	dq 60
 
 section .text
 
  mktime:
-	; Equal 28 tp 0
+	; Equal 28 tp Pointer$0#
 	cmp qword [rbp + 24], 0
 	je mktime$28
 
  mktime$1:
-	; Dereference £temporary2476 -> tp tp 0
+	; Dereference £temporary2476 tp 0
 	mov rsi, [rbp + 24]
 
  mktime$2:
-	; Subtract £temporary2477 £temporary2476 -> tp 69
+	; Subtract £temporary2477 £temporary2476 SignedInt$69#
 	mov eax, [rsi + 20]
 	sub eax, 69
 
  mktime$3:
-	; Divide £temporary2478 £temporary2477 4
+	; Divide £temporary2478 £temporary2477 SignedInt$4#
 	xor edx, edx
-	idiv dword [@7687$int4$4#]
+	idiv dword [@7687SignedInt$4#]
 
  mktime$4:
 	; IntegralToIntegral £temporary2479 £temporary2478
@@ -225,18 +225,18 @@ section .text
 	mov [rbp + 32], rax
 
  mktime$6:
-	; Dereference £temporary2480 -> tp tp 0
+	; Dereference £temporary2480 tp 0
 	mov rsi, [rbp + 24]
 
  mktime$7:
-	; Subtract £temporary2481 £temporary2480 -> tp 70
+	; Subtract £temporary2481 £temporary2480 SignedInt$70#
 	mov eax, [rsi + 20]
 	sub eax, 70
 
  mktime$8:
-	; Multiply £temporary2482 £temporary2481 365
+	; Multiply £temporary2482 £temporary2481 SignedInt$365#
 	xor edx, edx
-	imul dword [@7692$int4$365#]
+	imul dword [@7692SignedInt$365#]
 
  mktime$9:
 	; IntegralToIntegral £temporary2483 £temporary2482
@@ -252,11 +252,11 @@ section .text
 	add rax, [rbp + 32]
 
  mktime$11:
-	; Dereference £temporary2485 -> tp tp 0
+	; Dereference £temporary2485 tp 0
 	mov rsi, [rbp + 24]
 
  mktime$12:
-	; IntegralToIntegral £temporary2486 £temporary2485 -> tp
+	; IntegralToIntegral £temporary2486 £temporary2485
 	mov ebx, [rsi + 28]
 	mov rcx, 4294967295
 	and rbx, rcx
@@ -271,18 +271,18 @@ section .text
 	mov [rbp + 40], rax
 
  mktime$14:
-	; Multiply £temporary2488 totalDays 86400
+	; Multiply £temporary2488 totalDays Signed_Long_Int$86400#
 	mov rax, [rbp + 40]
 	xor rdx, rdx
-	imul qword [@7695$int8$86400#]
+	imul qword [@7695Signed_Long_Int$86400#]
 	mov rbx, rax
 
  mktime$15:
-	; Dereference £temporary2489 -> tp tp 0
+	; Dereference £temporary2489 tp 0
 	mov rsi, [rbp + 24]
 
  mktime$16:
-	; IntegralToIntegral £temporary2490 £temporary2489 -> tp
+	; IntegralToIntegral £temporary2490 £temporary2489
 	mov eax, [rsi + 8]
 	mov rcx, 4294967295
 	and rax, rcx
@@ -292,20 +292,20 @@ section .text
 	neg rax
 
  mktime$17:
-	; Multiply £temporary2491 £temporary2490 3600
+	; Multiply £temporary2491 £temporary2490 Signed_Long_Int$3600#
 	xor rdx, rdx
-	imul qword [@7697$int8$3600#]
+	imul qword [@7697Signed_Long_Int$3600#]
 
  mktime$18:
 	; Add £temporary2492 £temporary2488 £temporary2491
 	add rbx, rax
 
  mktime$19:
-	; Dereference £temporary2493 -> tp tp 0
+	; Dereference £temporary2493 tp 0
 	mov rsi, [rbp + 24]
 
  mktime$20:
-	; IntegralToIntegral £temporary2494 £temporary2493 -> tp
+	; IntegralToIntegral £temporary2494 £temporary2493
 	mov eax, [rsi + 4]
 	mov rcx, 4294967295
 	and rax, rcx
@@ -315,20 +315,20 @@ section .text
 	neg rax
 
  mktime$21:
-	; Multiply £temporary2495 £temporary2494 60
+	; Multiply £temporary2495 £temporary2494 Signed_Long_Int$60#
 	xor rdx, rdx
-	imul qword [@7699$int8$60#]
+	imul qword [@7699Signed_Long_Int$60#]
 
  mktime$22:
 	; Add £temporary2496 £temporary2492 £temporary2495
 	add rbx, rax
 
  mktime$23:
-	; Dereference £temporary2497 -> tp tp 0
+	; Dereference £temporary2497 tp 0
 	mov rsi, [rbp + 24]
 
  mktime$24:
-	; IntegralToIntegral £temporary2498 £temporary2497 -> tp
+	; IntegralToIntegral £temporary2498 £temporary2497
 	mov eax, [rsi]
 	mov rcx, 4294967295
 	and rax, rcx
@@ -355,7 +355,7 @@ section .text
 	; SetReturnValue
 
  mktime$29:
-	; Return 0
+	; Return UnsignedLongInt$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -373,111 +373,111 @@ section .data
 
 section .data
 
-@7709$int8$86400#:
+@7709Signed_Long_Int$86400#:
 	; Initializer Signed_Long_Int 86400
 	dq 86400
 
 section .data
 
-@7712$int8$3600#:
+@7712Signed_Long_Int$3600#:
 	; Initializer Signed_Long_Int 3600
 	dq 3600
 
 section .data
 
-@7715$int8$3600#:
+@7715Signed_Long_Int$3600#:
 	; Initializer Signed_Long_Int 3600
 	dq 3600
 
 section .data
 
-@7717$int8$60#:
+@7717Signed_Long_Int$60#:
 	; Initializer Signed_Long_Int 60
 	dq 60
 
 section .data
 
-@7719$int8$60#:
+@7719Signed_Long_Int$60#:
 	; Initializer Signed_Long_Int 60
 	dq 60
 
 section .data
 
-@7721$int8$86400#:
+@7721Signed_Long_Int$86400#:
 	; Initializer Signed_Long_Int 86400
 	dq 86400
 
 section .data
 
-@7730$int8$7#:
+@7730Signed_Long_Int$7#:
 	; Initializer Signed_Long_Int 7
 	dq 7
 
 section .data
 
-@7733$int8$365#:
+@7733Signed_Long_Int$365#:
 	; Initializer Signed_Long_Int 365
 	dq 365
 
 section .data
 
-@7739$int4$4#:
+@7739SignedInt$4#:
 	; Initializer SignedInt 4
 	dd 4
 
 section .data
 
-@7742$int8$365#:
+@7742Signed_Long_Int$365#:
 	; Initializer Signed_Long_Int 365
 	dq 365
 
 section .data
 
-@7785$int4$4#:
+@7785SignedInt$4#:
 	; Initializer SignedInt 4
 	dd 4
 
 section .data
 
-@7788$int4$4#:
+@7788SignedInt$4#:
 	; Initializer SignedInt 4
 	dd 4
 
 section .text
 
  gmtime:
-	; Equal 91 timePtr 0
+	; Equal 91 timePtr Pointer$0#
 	cmp qword [rbp + 24], 0
 	je gmtime$91
 
  gmtime$1:
-	; Dereference £temporary2501 -> timePtr timePtr 0
+	; Dereference £temporary2501 timePtr 0
 	mov rsi, [rbp + 24]
 
  gmtime$2:
-	; Assign time £temporary2501 -> timePtr
+	; Assign time £temporary2501
 	mov rax, [rsi]
 	mov [rbp + 32], rax
 
  gmtime$3:
-	; Modulo secondsOfDay time 86400
+	; Modulo secondsOfDay time Signed_Long_Int$86400#
 	mov rax, [rbp + 32]
 	xor rdx, rdx
-	idiv qword [@7709$int8$86400#]
+	idiv qword [@7709Signed_Long_Int$86400#]
 	mov [rbp + 40], rdx
 
  gmtime$4:
-	; Modulo secondsOfHour secondsOfDay 3600
+	; Modulo secondsOfHour secondsOfDay Signed_Long_Int$3600#
 	mov rax, [rbp + 40]
 	xor rdx, rdx
-	idiv qword [@7712$int8$3600#]
+	idiv qword [@7712Signed_Long_Int$3600#]
 	mov [rbp + 48], rdx
 
  gmtime$5:
-	; Divide £temporary2505 secondsOfDay 3600
+	; Divide £temporary2505 secondsOfDay Signed_Long_Int$3600#
 	mov rax, [rbp + 40]
 	xor rdx, rdx
-	idiv qword [@7715$int8$3600#]
+	idiv qword [@7715Signed_Long_Int$3600#]
 
  gmtime$6:
 	; IntegralToIntegral £temporary2506 £temporary2505
@@ -491,10 +491,10 @@ section .text
 	mov [@7702$g_timeStruct + 8], eax
 
  gmtime$8:
-	; Divide £temporary2508 secondsOfHour 60
+	; Divide £temporary2508 secondsOfHour Signed_Long_Int$60#
 	mov rax, [rbp + 48]
 	xor rdx, rdx
-	idiv qword [@7717$int8$60#]
+	idiv qword [@7717Signed_Long_Int$60#]
 
  gmtime$9:
 	; IntegralToIntegral £temporary2509 £temporary2508
@@ -508,10 +508,10 @@ section .text
 	mov [@7702$g_timeStruct + 4], eax
 
  gmtime$11:
-	; Modulo £temporary2511 secondsOfHour 60
+	; Modulo £temporary2511 secondsOfHour Signed_Long_Int$60#
 	mov rax, [rbp + 48]
 	xor rdx, rdx
-	idiv qword [@7719$int8$60#]
+	idiv qword [@7719Signed_Long_Int$60#]
 
  gmtime$12:
 	; IntegralToIntegral £temporary2512 £temporary2511
@@ -525,19 +525,19 @@ section .text
 	mov [@7702$g_timeStruct], edx
 
  gmtime$14:
-	; Divide totalDays time 86400
+	; Divide totalDays time Signed_Long_Int$86400#
 	mov rax, [rbp + 32]
 	xor rdx, rdx
-	idiv qword [@7721$int8$86400#]
+	idiv qword [@7721Signed_Long_Int$86400#]
 	mov [rbp + 56], rax
 
  gmtime$15:
-	; GreaterThanEqual 20 totalDays 3
+	; GreaterThanEqual 20 totalDays Signed_Long_Int$3#
 	cmp qword [rbp + 56], 3
 	jge gmtime$20
 
  gmtime$16:
-	; Add £temporary2516 totalDays 4
+	; Add £temporary2516 totalDays Signed_Long_Int$4#
 	mov rax, [rbp + 56]
 	add rax, 4
 
@@ -557,14 +557,14 @@ section .text
 	jmp gmtime$24
 
  gmtime$20:
-	; Subtract £temporary2519 totalDays 3
+	; Subtract £temporary2519 totalDays Signed_Long_Int$3#
 	mov rax, [rbp + 56]
 	sub rax, 3
 
  gmtime$21:
-	; Modulo £temporary2520 £temporary2519 7
+	; Modulo £temporary2520 £temporary2519 Signed_Long_Int$7#
 	xor rdx, rdx
-	idiv qword [@7730$int8$7#]
+	idiv qword [@7730Signed_Long_Int$7#]
 
  gmtime$22:
 	; IntegralToIntegral £temporary2521 £temporary2520
@@ -578,13 +578,13 @@ section .text
 	mov [@7702$g_timeStruct + 24], edx
 
  gmtime$24:
-	; Divide £temporary2522 totalDays 365
+	; Divide £temporary2522 totalDays Signed_Long_Int$365#
 	mov rax, [rbp + 56]
 	xor rdx, rdx
-	idiv qword [@7733$int8$365#]
+	idiv qword [@7733Signed_Long_Int$365#]
 
  gmtime$25:
-	; Add £temporary2523 £temporary2522 1970
+	; Add £temporary2523 £temporary2522 Signed_Long_Int$1970#
 	add rax, 1970
 
  gmtime$26:
@@ -599,21 +599,21 @@ section .text
 	mov [rbp + 64], eax
 
  gmtime$28:
-	; Subtract £temporary2525 year 1969
+	; Subtract £temporary2525 year SignedInt$1969#
 	mov eax, [rbp + 64]
 	sub eax, 1969
 
  gmtime$29:
-	; Divide leapDays £temporary2525 4
+	; Divide leapDays £temporary2525 SignedInt$4#
 	xor edx, edx
-	idiv dword [@7739$int4$4#]
+	idiv dword [@7739SignedInt$4#]
 	mov [rbp + 68], eax
 
  gmtime$30:
-	; Modulo totalDays totalDays 365
+	; Modulo totalDays totalDays Signed_Long_Int$365#
 	mov rax, [rbp + 56]
 	xor rdx, rdx
-	idiv qword [@7742$int8$365#]
+	idiv qword [@7742Signed_Long_Int$365#]
 	mov [rbp + 56], rdx
 
  gmtime$31:
@@ -631,12 +631,12 @@ section .text
 	sub [rbp + 56], rax
 
  gmtime$33:
-	; GreaterThanEqual 44 totalDays 0
+	; GreaterThanEqual 44 totalDays Signed_Long_Int$0#
 	cmp qword [rbp + 56], 0
 	jge gmtime$44
 
  gmtime$34:
-	; Subtract year year 1
+	; Subtract year year SignedInt$1#
 	dec dword [rbp + 64]
 
  gmtime$35:
@@ -661,12 +661,12 @@ section .text
 	; GetReturnValue £temporary2532
 
  gmtime$40:
-	; Equal 43 £temporary2532 0
+	; Equal 43 £temporary2532 Logical$0#
 	cmp ebx, 0
 	je gmtime$43
 
  gmtime$41:
-	; Add totalDays totalDays 366
+	; Add totalDays totalDays Signed_Long_Int$366#
 	add qword [rbp + 56], 366
 
  gmtime$42:
@@ -674,11 +674,11 @@ section .text
 	jmp gmtime$44
 
  gmtime$43:
-	; Add totalDays totalDays 365
+	; Add totalDays totalDays Signed_Long_Int$365#
 	add qword [rbp + 56], 365
 
  gmtime$44:
-	; Subtract g_timeStruct.tm_year year 1900
+	; Subtract g_timeStruct.tm_year year SignedInt$1900#
 	mov eax, [rbp + 64]
 	sub eax, 1900
 	mov [@7702$g_timeStruct + 20], eax
@@ -696,7 +696,7 @@ section .text
 	mov [@7702$g_timeStruct + 28], eax
 
  gmtime$47:
-	; Assign daysOfMonths[0] 31
+	; Assign daysOfMonths[0] SignedInt$31#
 	mov dword [rbp + 72], 31
 
  gmtime$48:
@@ -721,12 +721,12 @@ section .text
 	; GetReturnValue £temporary2540
 
  gmtime$53:
-	; Equal 56 £temporary2540 0
+	; Equal 56 £temporary2540 Logical$0#
 	cmp ebx, 0
 	je gmtime$56
 
  gmtime$54:
-	; Assign £temporary2542 29
+	; Assign £temporary2542 SignedInt$29#
 	mov eax, 29
 
  gmtime$55:
@@ -734,7 +734,7 @@ section .text
 	jmp gmtime$57
 
  gmtime$56:
-	; Assign £temporary2542 28
+	; Assign £temporary2542 SignedInt$28#
 	mov eax, 28
 
  gmtime$57:
@@ -742,54 +742,54 @@ section .text
 	mov [rbp + 76], eax
 
  gmtime$58:
-	; Assign daysOfMonths[2] 31
+	; Assign daysOfMonths[2] SignedInt$31#
 	mov dword [rbp + 80], 31
 
  gmtime$59:
-	; Assign daysOfMonths[3] 30
+	; Assign daysOfMonths[3] SignedInt$30#
 	mov dword [rbp + 84], 30
 
  gmtime$60:
-	; Assign daysOfMonths[4] 31
+	; Assign daysOfMonths[4] SignedInt$31#
 	mov dword [rbp + 88], 31
 
  gmtime$61:
-	; Assign daysOfMonths[5] 30
+	; Assign daysOfMonths[5] SignedInt$30#
 	mov dword [rbp + 92], 30
 
  gmtime$62:
-	; Assign daysOfMonths[6] 31
+	; Assign daysOfMonths[6] SignedInt$31#
 	mov dword [rbp + 96], 31
 
  gmtime$63:
-	; Assign daysOfMonths[7] 31
+	; Assign daysOfMonths[7] SignedInt$31#
 	mov dword [rbp + 100], 31
 
  gmtime$64:
-	; Assign daysOfMonths[8] 30
+	; Assign daysOfMonths[8] SignedInt$30#
 	mov dword [rbp + 104], 30
 
  gmtime$65:
-	; Assign daysOfMonths[9] 31
+	; Assign daysOfMonths[9] SignedInt$31#
 	mov dword [rbp + 108], 31
 
  gmtime$66:
-	; Assign daysOfMonths[10] 30
+	; Assign daysOfMonths[10] SignedInt$30#
 	mov dword [rbp + 112], 30
 
  gmtime$67:
-	; Assign daysOfMonths[11] 31
+	; Assign daysOfMonths[11] SignedInt$31#
 	mov dword [rbp + 116], 31
 
  gmtime$68:
-	; Assign month 0
+	; Assign month SignedInt$0#
 	mov dword [rbp + 120], 0
 
  gmtime$69:
-	; Multiply £temporary2556 month 4
+	; Multiply £temporary2556 month SignedInt$4#
 	mov eax, [rbp + 120]
 	xor edx, edx
-	imul dword [@7785$int4$4#]
+	imul dword [@7785SignedInt$4#]
 
  gmtime$70:
 	; IntegralToIntegral £temporary2557 £temporary2556
@@ -803,10 +803,10 @@ section .text
 	add rsi, rax
 
  gmtime$72:
-	; Dereference £temporary2555 -> £temporary2558 £temporary2558 0
+	; Dereference £temporary2555 £temporary2558 0
 
  gmtime$73:
-	; IntegralToIntegral £temporary2559 £temporary2555 -> £temporary2558
+	; IntegralToIntegral £temporary2559 £temporary2555
 	mov eax, [rsi]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -825,13 +825,13 @@ section .text
 	mov eax, [rbp + 120]
 
  gmtime$76:
-	; Add month month 1
+	; Add month month SignedInt$1#
 	inc dword [rbp + 120]
 
  gmtime$77:
-	; Multiply £temporary2563 £temporary2561 4
+	; Multiply £temporary2563 £temporary2561 SignedInt$4#
 	xor edx, edx
-	imul dword [@7788$int4$4#]
+	imul dword [@7788SignedInt$4#]
 
  gmtime$78:
 	; IntegralToIntegral £temporary2564 £temporary2563
@@ -845,10 +845,10 @@ section .text
 	add rsi, rax
 
  gmtime$80:
-	; Dereference £temporary2562 -> £temporary2565 £temporary2565 0
+	; Dereference £temporary2562 £temporary2565 0
 
  gmtime$81:
-	; IntegralToIntegral £temporary2566 £temporary2562 -> £temporary2565
+	; IntegralToIntegral £temporary2566 £temporary2562
 	mov eax, [rsi]
 	mov rbx, 4294967295
 	and rax, rbx
@@ -871,7 +871,7 @@ section .text
 	mov [@7702$g_timeStruct + 16], eax
 
  gmtime$85:
-	; Add £temporary2570 totalDays 1
+	; Add £temporary2570 totalDays Signed_Long_Int$1#
 	mov rax, [rbp + 56]
 	inc rax
 
@@ -887,14 +887,14 @@ section .text
 	mov [@7702$g_timeStruct + 12], eax
 
  gmtime$88:
-	; Assign g_timeStruct.tm_isdst -1
+	; Assign g_timeStruct.tm_isdst SignedInt$minus1#
 	mov dword [@7702$g_timeStruct + 32], -1
 
  gmtime$89:
 	; SetReturnValue
 
  gmtime$90:
-	; Return @7702$g_timeStruct
+	; Return StaticAddress_@7702$g_timeStruct_0#
 	mov rbx, @7702$g_timeStruct
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -905,7 +905,7 @@ section .text
 	; SetReturnValue
 
  gmtime$92:
-	; Return 0
+	; Return Pointer$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -917,7 +917,7 @@ section .text
 
 section .data
 
-@7810$int8$3600#:
+@7810Signed_Long_Int$3600#:
 	; Initializer Signed_Long_Int 3600
 	dq 3600
 
@@ -949,11 +949,11 @@ section .text
 	mov [rbp + 32], rbx
 
  localtime$6:
-	; Dereference £temporary2574 -> timePtr timePtr 0
+	; Dereference £temporary2574 timePtr 0
 	mov rsi, [rbp + 24]
 
  localtime$7:
-	; Assign t £temporary2574 -> timePtr
+	; Assign t £temporary2574
 	mov rax, [rsi]
 	mov [rbp + 40], rax
 
@@ -978,25 +978,25 @@ section .text
 	mov [rbp + 48], rbx
 
  localtime$13:
-	; Equal 25 localeConvPtr 0
+	; Equal 25 localeConvPtr Pointer$0#
 	cmp qword [rbp + 48], 0
 	je localtime$25
 
  localtime$14:
-	; Dereference £temporary2577 -> tmPtr tmPtr 0
+	; Dereference £temporary2577 tmPtr 0
 	mov rsi, [rbp + 32]
 
  localtime$15:
-	; NotEqual 19 £temporary2577 -> tmPtr 1
+	; NotEqual 19 £temporary2577 SignedInt$1#
 	cmp dword [rsi + 32], 1
 	jne localtime$19
 
  localtime$16:
-	; Dereference £temporary2579 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2579 localeConvPtr 0
 	mov rsi, [rbp + 48]
 
  localtime$17:
-	; Assign £temporary2581 £temporary2579 -> localeConvPtr
+	; Assign £temporary2581 £temporary2579
 	mov eax, [rsi]
 
  localtime$18:
@@ -1004,11 +1004,11 @@ section .text
 	jmp localtime$21
 
  localtime$19:
-	; Dereference £temporary2580 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2580 localeConvPtr 0
 	mov rsi, [rbp + 48]
 
  localtime$20:
-	; Assign £temporary2581 £temporary2580 -> localeConvPtr
+	; Assign £temporary2581 £temporary2580
 	mov eax, [rsi + 4]
 
  localtime$21:
@@ -1026,9 +1026,9 @@ section .text
 	neg rax
 
  localtime$23:
-	; Multiply £temporary2583 £temporary2582 3600
+	; Multiply £temporary2583 £temporary2582 Signed_Long_Int$3600#
 	xor rdx, rdx
-	imul qword [@7810$int8$3600#]
+	imul qword [@7810Signed_Long_Int$3600#]
 
  localtime$24:
 	; Add t t £temporary2583
@@ -1111,368 +1111,368 @@ section .data
 
 section .data
 
-@7818$string_Sun#:
+@7818string_Sun#:
 	; Initializer String Sun
 	db "Sun", 0
 
 section .data
 
-@7819$string_Mon#:
+@7819string_Mon#:
 	; Initializer String Mon
 	db "Mon", 0
 
 section .data
 
-@7820$string_Tue#:
+@7820string_Tue#:
 	; Initializer String Tue
 	db "Tue", 0
 
 section .data
 
-@7821$string_Wed#:
+@7821string_Wed#:
 	; Initializer String Wed
 	db "Wed", 0
 
 section .data
 
-@7822$string_Thu#:
+@7822string_Thu#:
 	; Initializer String Thu
 	db "Thu", 0
 
 section .data
 
-@7823$string_Fri#:
+@7823string_Fri#:
 	; Initializer String Fri
 	db "Fri", 0
 
 section .data
 
-@7824$string_Sat#:
+@7824string_Sat#:
 	; Initializer String Sat
 	db "Sat", 0
 
 section .data
 
 @7825$g_shortDayList:
-	; Initializer Pointer @7818$string_Sun#
-	dq @7818$string_Sun#
-	; Initializer Pointer @7819$string_Mon#
-	dq @7819$string_Mon#
-	; Initializer Pointer @7820$string_Tue#
-	dq @7820$string_Tue#
-	; Initializer Pointer @7821$string_Wed#
-	dq @7821$string_Wed#
-	; Initializer Pointer @7822$string_Thu#
-	dq @7822$string_Thu#
-	; Initializer Pointer @7823$string_Fri#
-	dq @7823$string_Fri#
-	; Initializer Pointer @7824$string_Sat#
-	dq @7824$string_Sat#
+	; Initializer Pointer @7818string_Sun#
+	dq @7818string_Sun#
+	; Initializer Pointer @7819string_Mon#
+	dq @7819string_Mon#
+	; Initializer Pointer @7820string_Tue#
+	dq @7820string_Tue#
+	; Initializer Pointer @7821string_Wed#
+	dq @7821string_Wed#
+	; Initializer Pointer @7822string_Thu#
+	dq @7822string_Thu#
+	; Initializer Pointer @7823string_Fri#
+	dq @7823string_Fri#
+	; Initializer Pointer @7824string_Sat#
+	dq @7824string_Sat#
 
 section .data
 
-@7826$string_Sunday#:
+@7826string_Sunday#:
 	; Initializer String Sunday
 	db "Sunday", 0
 
 section .data
 
-@7827$string_Monday#:
+@7827string_Monday#:
 	; Initializer String Monday
 	db "Monday", 0
 
 section .data
 
-@7828$string_Tuesday#:
+@7828string_Tuesday#:
 	; Initializer String Tuesday
 	db "Tuesday", 0
 
 section .data
 
-@7829$string_Wednesday#:
+@7829string_Wednesday#:
 	; Initializer String Wednesday
 	db "Wednesday", 0
 
 section .data
 
-@7830$string_Thursday#:
+@7830string_Thursday#:
 	; Initializer String Thursday
 	db "Thursday", 0
 
 section .data
 
-@7831$string_Friday#:
+@7831string_Friday#:
 	; Initializer String Friday
 	db "Friday", 0
 
 section .data
 
-@7832$string_Saturday#:
+@7832string_Saturday#:
 	; Initializer String Saturday
 	db "Saturday", 0
 
 section .data
 
 @7833$g_longDayList:
-	; Initializer Pointer @7826$string_Sunday#
-	dq @7826$string_Sunday#
-	; Initializer Pointer @7827$string_Monday#
-	dq @7827$string_Monday#
-	; Initializer Pointer @7828$string_Tuesday#
-	dq @7828$string_Tuesday#
-	; Initializer Pointer @7829$string_Wednesday#
-	dq @7829$string_Wednesday#
-	; Initializer Pointer @7830$string_Thursday#
-	dq @7830$string_Thursday#
-	; Initializer Pointer @7831$string_Friday#
-	dq @7831$string_Friday#
-	; Initializer Pointer @7832$string_Saturday#
-	dq @7832$string_Saturday#
+	; Initializer Pointer @7826string_Sunday#
+	dq @7826string_Sunday#
+	; Initializer Pointer @7827string_Monday#
+	dq @7827string_Monday#
+	; Initializer Pointer @7828string_Tuesday#
+	dq @7828string_Tuesday#
+	; Initializer Pointer @7829string_Wednesday#
+	dq @7829string_Wednesday#
+	; Initializer Pointer @7830string_Thursday#
+	dq @7830string_Thursday#
+	; Initializer Pointer @7831string_Friday#
+	dq @7831string_Friday#
+	; Initializer Pointer @7832string_Saturday#
+	dq @7832string_Saturday#
 
 section .data
 
-@7834$string_Jan#:
+@7834string_Jan#:
 	; Initializer String Jan
 	db "Jan", 0
 
 section .data
 
-@7835$string_Feb#:
+@7835string_Feb#:
 	; Initializer String Feb
 	db "Feb", 0
 
 section .data
 
-@7836$string_Mar#:
+@7836string_Mar#:
 	; Initializer String Mar
 	db "Mar", 0
 
 section .data
 
-@7837$string_Apr#:
+@7837string_Apr#:
 	; Initializer String Apr
 	db "Apr", 0
 
 section .data
 
-@7838$string_May#:
+@7838string_May#:
 	; Initializer String May
 	db "May", 0
 
 section .data
 
-@7839$string_Jun#:
+@7839string_Jun#:
 	; Initializer String Jun
 	db "Jun", 0
 
 section .data
 
-@7840$string_Jul#:
+@7840string_Jul#:
 	; Initializer String Jul
 	db "Jul", 0
 
 section .data
 
-@7841$string_Aug#:
+@7841string_Aug#:
 	; Initializer String Aug
 	db "Aug", 0
 
 section .data
 
-@7842$string_Sep#:
+@7842string_Sep#:
 	; Initializer String Sep
 	db "Sep", 0
 
 section .data
 
-@7843$string_Oct#:
+@7843string_Oct#:
 	; Initializer String Oct
 	db "Oct", 0
 
 section .data
 
-@7844$string_Nov#:
+@7844string_Nov#:
 	; Initializer String Nov
 	db "Nov", 0
 
 section .data
 
-@7845$string_Dec#:
+@7845string_Dec#:
 	; Initializer String Dec
 	db "Dec", 0
 
 section .data
 
 @7846$g_shortMonthList:
-	; Initializer Pointer @7834$string_Jan#
-	dq @7834$string_Jan#
-	; Initializer Pointer @7835$string_Feb#
-	dq @7835$string_Feb#
-	; Initializer Pointer @7836$string_Mar#
-	dq @7836$string_Mar#
-	; Initializer Pointer @7837$string_Apr#
-	dq @7837$string_Apr#
-	; Initializer Pointer @7838$string_May#
-	dq @7838$string_May#
-	; Initializer Pointer @7839$string_Jun#
-	dq @7839$string_Jun#
-	; Initializer Pointer @7840$string_Jul#
-	dq @7840$string_Jul#
-	; Initializer Pointer @7841$string_Aug#
-	dq @7841$string_Aug#
-	; Initializer Pointer @7842$string_Sep#
-	dq @7842$string_Sep#
-	; Initializer Pointer @7843$string_Oct#
-	dq @7843$string_Oct#
-	; Initializer Pointer @7844$string_Nov#
-	dq @7844$string_Nov#
-	; Initializer Pointer @7845$string_Dec#
-	dq @7845$string_Dec#
+	; Initializer Pointer @7834string_Jan#
+	dq @7834string_Jan#
+	; Initializer Pointer @7835string_Feb#
+	dq @7835string_Feb#
+	; Initializer Pointer @7836string_Mar#
+	dq @7836string_Mar#
+	; Initializer Pointer @7837string_Apr#
+	dq @7837string_Apr#
+	; Initializer Pointer @7838string_May#
+	dq @7838string_May#
+	; Initializer Pointer @7839string_Jun#
+	dq @7839string_Jun#
+	; Initializer Pointer @7840string_Jul#
+	dq @7840string_Jul#
+	; Initializer Pointer @7841string_Aug#
+	dq @7841string_Aug#
+	; Initializer Pointer @7842string_Sep#
+	dq @7842string_Sep#
+	; Initializer Pointer @7843string_Oct#
+	dq @7843string_Oct#
+	; Initializer Pointer @7844string_Nov#
+	dq @7844string_Nov#
+	; Initializer Pointer @7845string_Dec#
+	dq @7845string_Dec#
 
 section .data
 
-@7847$string_January#:
+@7847string_January#:
 	; Initializer String January
 	db "January", 0
 
 section .data
 
-@7848$string_February#:
+@7848string_February#:
 	; Initializer String February
 	db "February", 0
 
 section .data
 
-@7849$string_March#:
+@7849string_March#:
 	; Initializer String March
 	db "March", 0
 
 section .data
 
-@7850$string_April#:
+@7850string_April#:
 	; Initializer String April
 	db "April", 0
 
 section .data
 
-@7851$string_May#:
+@7851string_May#:
 	; Initializer String May
 	db "May", 0
 
 section .data
 
-@7852$string_June#:
+@7852string_June#:
 	; Initializer String June
 	db "June", 0
 
 section .data
 
-@7853$string_July#:
+@7853string_July#:
 	; Initializer String July
 	db "July", 0
 
 section .data
 
-@7854$string_August#:
+@7854string_August#:
 	; Initializer String August
 	db "August", 0
 
 section .data
 
-@7855$string_September#:
+@7855string_September#:
 	; Initializer String September
 	db "September", 0
 
 section .data
 
-@7856$string_October#:
+@7856string_October#:
 	; Initializer String October
 	db "October", 0
 
 section .data
 
-@7857$string_November#:
+@7857string_November#:
 	; Initializer String November
 	db "November", 0
 
 section .data
 
-@7858$string_December#:
+@7858string_December#:
 	; Initializer String December
 	db "December", 0
 
 section .data
 
 @7859$g_longMonthList:
-	; Initializer Pointer @7847$string_January#
-	dq @7847$string_January#
-	; Initializer Pointer @7848$string_February#
-	dq @7848$string_February#
-	; Initializer Pointer @7849$string_March#
-	dq @7849$string_March#
-	; Initializer Pointer @7850$string_April#
-	dq @7850$string_April#
-	; Initializer Pointer @7851$string_May#
-	dq @7851$string_May#
-	; Initializer Pointer @7852$string_June#
-	dq @7852$string_June#
-	; Initializer Pointer @7853$string_July#
-	dq @7853$string_July#
-	; Initializer Pointer @7854$string_August#
-	dq @7854$string_August#
-	; Initializer Pointer @7855$string_September#
-	dq @7855$string_September#
-	; Initializer Pointer @7856$string_October#
-	dq @7856$string_October#
-	; Initializer Pointer @7857$string_November#
-	dq @7857$string_November#
-	; Initializer Pointer @7858$string_December#
-	dq @7858$string_December#
+	; Initializer Pointer @7847string_January#
+	dq @7847string_January#
+	; Initializer Pointer @7848string_February#
+	dq @7848string_February#
+	; Initializer Pointer @7849string_March#
+	dq @7849string_March#
+	; Initializer Pointer @7850string_April#
+	dq @7850string_April#
+	; Initializer Pointer @7851string_May#
+	dq @7851string_May#
+	; Initializer Pointer @7852string_June#
+	dq @7852string_June#
+	; Initializer Pointer @7853string_July#
+	dq @7853string_July#
+	; Initializer Pointer @7854string_August#
+	dq @7854string_August#
+	; Initializer Pointer @7855string_September#
+	dq @7855string_September#
+	; Initializer Pointer @7856string_October#
+	dq @7856string_October#
+	; Initializer Pointer @7857string_November#
+	dq @7857string_November#
+	; Initializer Pointer @7858string_December#
+	dq @7858string_December#
 
 section .data
 
-@7879$string_25s2025s2025i202502i3A2502i3A2502i2025i#:
+@7879string_25s2025s2025i202502i3A2502i3A2502i2025i#:
 	; Initializer String %s %s %i %02i:%02i:%02i %i
 	db "%s %s %i %02i:%02i:%02i %i", 0
 
 section .data
 
-@7881$int4$8#:
+@7881SignedInt$8#:
 	; Initializer SignedInt 8
 	dd 8
 
 section .data
 
-@7883$int4$8#:
+@7883SignedInt$8#:
 	; Initializer SignedInt 8
 	dd 8
 
 section .text
 
  asctime:
-	; Assign localeConvPtr 0
+	; Assign localeConvPtr Pointer$0#
 	mov qword [rbp + 32], 0
 
  asctime$1:
-	; Equal 7 localeConvPtr 0
+	; Equal 7 localeConvPtr Pointer$0#
 	cmp qword [rbp + 32], 0
 	je asctime$7
 
  asctime$2:
-	; Dereference £temporary2591 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2591 localeConvPtr 0
 	mov rsi, [rbp + 32]
 
  asctime$3:
-	; Equal 7 £temporary2591 -> localeConvPtr 0
+	; Equal 7 £temporary2591 Pointer$0#
 	cmp qword [rsi + 8], 0
 	je asctime$7
 
  asctime$4:
-	; Dereference £temporary2594 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2594 localeConvPtr 0
 	mov rsi, [rbp + 32]
 
  asctime$5:
-	; Assign shortDayList £temporary2594 -> localeConvPtr
+	; Assign shortDayList £temporary2594
 	mov rax, [rsi + 8]
 	mov [rbp + 40], rax
 
@@ -1485,25 +1485,25 @@ section .text
 	mov qword [rbp + 40], @7825$g_shortDayList
 
  asctime$8:
-	; Equal 14 localeConvPtr 0
+	; Equal 14 localeConvPtr Pointer$0#
 	cmp qword [rbp + 32], 0
 	je asctime$14
 
  asctime$9:
-	; Dereference £temporary2596 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2596 localeConvPtr 0
 	mov rsi, [rbp + 32]
 
  asctime$10:
-	; Equal 14 £temporary2596 -> localeConvPtr 0
+	; Equal 14 £temporary2596 Pointer$0#
 	cmp qword [rsi + 24], 0
 	je asctime$14
 
  asctime$11:
-	; Dereference £temporary2599 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2599 localeConvPtr 0
 	mov rsi, [rbp + 32]
 
  asctime$12:
-	; Assign shortMonthList £temporary2599 -> localeConvPtr
+	; Assign shortMonthList £temporary2599
 	mov rax, [rsi + 24]
 	mov [rbp + 48], rax
 
@@ -1523,18 +1523,18 @@ section .text
 	mov qword [rbp + 80], @7817$g_timeString
 
  asctime$17:
-	; Parameter 88 pointer "%s %s %i %02i:%02i:%02i %i"
-	mov qword [rbp + 88], @7879$string_25s2025s2025i202502i3A2502i3A2502i2025i#
+	; Parameter 88 pointer string_25s2025s2025i202502i3A2502i3A2502i2025i#
+	mov qword [rbp + 88], @7879string_25s2025s2025i202502i3A2502i3A2502i2025i#
 
  asctime$18:
-	; Dereference £temporary2600 -> tp tp 0
+	; Dereference £temporary2600 tp 0
 	mov rsi, [rbp + 24]
 
  asctime$19:
-	; Multiply £temporary2602 £temporary2600 -> tp 8
+	; Multiply £temporary2602 £temporary2600 SignedInt$8#
 	mov eax, [rsi + 24]
 	xor edx, edx
-	imul dword [@7881$int4$8#]
+	imul dword [@7881SignedInt$8#]
 
  asctime$20:
 	; IntegralToIntegral £temporary2603 £temporary2602
@@ -1547,22 +1547,22 @@ section .text
 	add rsi, rax
 
  asctime$22:
-	; Dereference £temporary2601 -> £temporary2604 £temporary2604 0
+	; Dereference £temporary2601 £temporary2604 0
 
  asctime$23:
-	; Parameter 96 pointer £temporary2601 -> £temporary2604
+	; Parameter 96 pointer £temporary2601
 	mov rax, [rsi]
 	mov [rbp + 96], rax
 
  asctime$24:
-	; Dereference £temporary2605 -> tp tp 0
+	; Dereference £temporary2605 tp 0
 	mov rsi, [rbp + 24]
 
  asctime$25:
-	; Multiply £temporary2607 £temporary2605 -> tp 8
+	; Multiply £temporary2607 £temporary2605 SignedInt$8#
 	mov eax, [rsi + 16]
 	xor edx, edx
-	imul dword [@7883$int4$8#]
+	imul dword [@7883SignedInt$8#]
 
  asctime$26:
 	; IntegralToIntegral £temporary2608 £temporary2607
@@ -1575,55 +1575,55 @@ section .text
 	add rsi, rax
 
  asctime$28:
-	; Dereference £temporary2606 -> £temporary2609 £temporary2609 0
+	; Dereference £temporary2606 £temporary2609 0
 
  asctime$29:
-	; Parameter 104 pointer £temporary2606 -> £temporary2609
+	; Parameter 104 pointer £temporary2606
 	mov rax, [rsi]
 	mov [rbp + 104], rax
 
  asctime$30:
-	; Dereference £temporary2610 -> tp tp 0
+	; Dereference £temporary2610 tp 0
 	mov rsi, [rbp + 24]
 
  asctime$31:
-	; Parameter 112 signedint £temporary2610 -> tp
+	; Parameter 112 signedint £temporary2610
 	mov eax, [rsi + 12]
 	mov [rbp + 112], eax
 
  asctime$32:
-	; Dereference £temporary2611 -> tp tp 0
+	; Dereference £temporary2611 tp 0
 	mov rsi, [rbp + 24]
 
  asctime$33:
-	; Parameter 116 signedint £temporary2611 -> tp
+	; Parameter 116 signedint £temporary2611
 	mov eax, [rsi + 8]
 	mov [rbp + 116], eax
 
  asctime$34:
-	; Dereference £temporary2612 -> tp tp 0
+	; Dereference £temporary2612 tp 0
 	mov rsi, [rbp + 24]
 
  asctime$35:
-	; Parameter 120 signedint £temporary2612 -> tp
+	; Parameter 120 signedint £temporary2612
 	mov eax, [rsi + 4]
 	mov [rbp + 120], eax
 
  asctime$36:
-	; Dereference £temporary2613 -> tp tp 0
+	; Dereference £temporary2613 tp 0
 	mov rsi, [rbp + 24]
 
  asctime$37:
-	; Parameter 124 signedint £temporary2613 -> tp
+	; Parameter 124 signedint £temporary2613
 	mov eax, [rsi]
 	mov [rbp + 124], eax
 
  asctime$38:
-	; Dereference £temporary2614 -> tp tp 0
+	; Dereference £temporary2614 tp 0
 	mov rsi, [rbp + 24]
 
  asctime$39:
-	; Add £temporary2615 £temporary2614 -> tp 1900
+	; Add £temporary2615 £temporary2614 SignedInt$1900#
 	mov eax, [rsi + 20]
 	add eax, 1900
 
@@ -1715,43 +1715,43 @@ section .text
 
 section .data
 
-@7902$int4$4#:
+@7902SignedInt$4#:
 	; Initializer SignedInt 4
 	dd 4
 
 section .data
 
-@7907$int4$365#:
+@7907SignedInt$365#:
 	; Initializer SignedInt 365
 	dd 365
 
 section .data
 
-@7917$int4$7#:
+@7917SignedInt$7#:
 	; Initializer SignedInt 7
 	dd 7
 
 section .data
 
-@7924$int4$7#:
+@7924SignedInt$7#:
 	; Initializer SignedInt 7
 	dd 7
 
 section .text
 
  getWeekNumber:
-	; Dereference £temporary2619 -> tp tp 0
+	; Dereference £temporary2619 tp 0
 	mov rsi, [rbp + 24]
 
  getWeekNumber$1:
-	; Subtract £temporary2620 £temporary2619 -> tp 69
+	; Subtract £temporary2620 £temporary2619 SignedInt$69#
 	mov eax, [rsi + 20]
 	sub eax, 69
 
  getWeekNumber$2:
-	; Divide £temporary2621 £temporary2620 4
+	; Divide £temporary2621 £temporary2620 SignedInt$4#
 	xor edx, edx
-	idiv dword [@7902$int4$4#]
+	idiv dword [@7902SignedInt$4#]
 
  getWeekNumber$3:
 	; IntegralToIntegral £temporary2622 £temporary2621
@@ -1767,18 +1767,18 @@ section .text
 	mov [rbp + 32], rax
 
  getWeekNumber$5:
-	; Dereference £temporary2623 -> tp tp 0
+	; Dereference £temporary2623 tp 0
 	mov rsi, [rbp + 24]
 
  getWeekNumber$6:
-	; Subtract £temporary2624 £temporary2623 -> tp 70
+	; Subtract £temporary2624 £temporary2623 SignedInt$70#
 	mov eax, [rsi + 20]
 	sub eax, 70
 
  getWeekNumber$7:
-	; Multiply £temporary2625 £temporary2624 365
+	; Multiply £temporary2625 £temporary2624 SignedInt$365#
 	xor edx, edx
-	imul dword [@7907$int4$365#]
+	imul dword [@7907SignedInt$365#]
 
  getWeekNumber$8:
 	; IntegralToIntegral £temporary2626 £temporary2625
@@ -1805,12 +1805,12 @@ section .text
 	mov [rbp + 40], eax
 
  getWeekNumber$12:
-	; GreaterThanEqual 15 totalDays 3
+	; GreaterThanEqual 15 totalDays SignedInt$3#
 	cmp dword [rbp + 40], 3
 	jge getWeekNumber$15
 
  getWeekNumber$13:
-	; Add weekDayJanuaryFirst totalDays 4
+	; Add weekDayJanuaryFirst totalDays SignedInt$4#
 	mov eax, [rbp + 40]
 	add eax, 4
 	mov [rbp + 44], eax
@@ -1820,28 +1820,28 @@ section .text
 	jmp getWeekNumber$17
 
  getWeekNumber$15:
-	; Subtract £temporary2631 totalDays 3
+	; Subtract £temporary2631 totalDays SignedInt$3#
 	mov eax, [rbp + 40]
 	sub eax, 3
 
  getWeekNumber$16:
-	; Modulo weekDayJanuaryFirst £temporary2631 7
+	; Modulo weekDayJanuaryFirst £temporary2631 SignedInt$7#
 	xor edx, edx
-	idiv dword [@7917$int4$7#]
+	idiv dword [@7917SignedInt$7#]
 	mov [rbp + 44], edx
 
  getWeekNumber$17:
-	; Subtract firstWeekSize 7 weekDayJanuaryFirst
+	; Subtract firstWeekSize SignedInt$7# weekDayJanuaryFirst
 	mov eax, 7
 	sub eax, [rbp + 44]
 	mov [rbp + 48], eax
 
  getWeekNumber$18:
-	; Dereference £temporary2634 -> tp tp 0
+	; Dereference £temporary2634 tp 0
 	mov rsi, [rbp + 24]
 
  getWeekNumber$19:
-	; GreaterThanEqual 22 £temporary2634 -> tp firstWeekSize
+	; GreaterThanEqual 22 £temporary2634 firstWeekSize
 	mov eax, [rbp + 48]
 	cmp [rsi + 28], eax
 	jge getWeekNumber$22
@@ -1850,7 +1850,7 @@ section .text
 	; SetReturnValue
 
  getWeekNumber$21:
-	; Return 0
+	; Return SignedInt$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1858,21 +1858,21 @@ section .text
 	jmp rax
 
  getWeekNumber$22:
-	; Dereference £temporary2636 -> tp tp 0
+	; Dereference £temporary2636 tp 0
 	mov rsi, [rbp + 24]
 
  getWeekNumber$23:
-	; Subtract £temporary2637 £temporary2636 -> tp firstWeekSize
+	; Subtract £temporary2637 £temporary2636 firstWeekSize
 	mov eax, [rsi + 28]
 	sub eax, [rbp + 48]
 
  getWeekNumber$24:
-	; Divide £temporary2638 £temporary2637 7
+	; Divide £temporary2638 £temporary2637 SignedInt$7#
 	xor edx, edx
-	idiv dword [@7924$int4$7#]
+	idiv dword [@7924SignedInt$7#]
 
  getWeekNumber$25:
-	; Add £temporary2639 £temporary2638 1
+	; Add £temporary2639 £temporary2638 SignedInt$1#
 	inc eax
 
  getWeekNumber$26:
@@ -1891,175 +1891,175 @@ section .text
 
 section .data
 
-@7960$string_#:
+@7960string_#:
 	; Initializer String 
 	db 0
 
 section .data
 
-@7996$string_2502i2D2502i2D2502i202502i3A2502i3A2502i#:
+@7996string_2502i2D2502i2D2502i202502i3A2502i3A2502i#:
 	; Initializer String %02i-%02i-%02i %02i:%02i:%02i
 	db "%02i-%02i-%02i %02i:%02i:%02i", 0
 
 section .data
 
-@8003$string_2502i#:
+@8003string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8006$string_2502i#:
+@8006string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8009$string_2502i#:
+@8009string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8014$string_2503i#:
+@8014string_2503i#:
 	; Initializer String %03i
 	db "%03i", 0
 
 section .data
 
-@8017$string_2502i#:
+@8017string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8022$string_2502i#:
+@8022string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8025$string_25s#:
+@8025string_25s#:
 	; Initializer String %s
 	db "%s", 0
 
 section .data
 
-@8026$string_AM#:
+@8026string_AM#:
 	; Initializer String AM
 	db "AM", 0
 
 section .data
 
-@8027$string_PM#:
+@8027string_PM#:
 	; Initializer String PM
 	db "PM", 0
 
 section .data
 
-@8031$string_2502i#:
+@8031string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8034$string_2502i#:
+@8034string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8037$string_2502i#:
+@8037string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8040$string_2502i#:
+@8040string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8043$string_2502i3A2502i3A2502i#:
+@8043string_2502i3A2502i3A2502i#:
 	; Initializer String %02i:%02i:%02i
 	db "%02i:%02i:%02i", 0
 
 section .data
 
-@8046$string_2502i3A2502i3A2502i#:
+@8046string_2502i3A2502i3A2502i#:
 	; Initializer String %02i:%02i:%02i
 	db "%02i:%02i:%02i", 0
 
 section .data
 
-@8049$string_2502i#:
+@8049string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8054$string_2502i#:
+@8054string_2502i#:
 	; Initializer String %02i
 	db "%02i", 0
 
 section .data
 
-@8059$string_summer#:
+@8059string_summer#:
 	; Initializer String summer
 	db "summer", 0
 
 section .data
 
-@8060$string_winter#:
+@8060string_winter#:
 	; Initializer String winter
 	db "winter", 0
 
 section .data
 
-@8064$string_25#:
+@8064string_25#:
 	; Initializer String %
 	db "%", 0
 
 section .data
 
-@8065$string_#:
+@8065string_#:
 	; Initializer String 
 	db 0
 
 section .data
 
-@7981$int4$8#:
+@7981SignedInt$8#:
 	; Initializer SignedInt 8
 	dd 8
 
 section .data
 
-@7985$int4$8#:
+@7985SignedInt$8#:
 	; Initializer SignedInt 8
 	dd 8
 
 section .data
 
-@7989$int4$8#:
+@7989SignedInt$8#:
 	; Initializer SignedInt 8
 	dd 8
 
 section .data
 
-@7993$int4$8#:
+@7993SignedInt$8#:
 	; Initializer SignedInt 8
 	dd 8
 
 section .data
 
-@8011$int4$12#:
+@8011SignedInt$12#:
 	; Initializer SignedInt 12
 	dd 12
 
 section .data
 
-@8051$int4$100#:
+@8051SignedInt$100#:
 	; Initializer SignedInt 100
 	dd 100
 
@@ -2086,25 +2086,25 @@ section .text
 	mov [rbp + 52], rbx
 
  strftime$5:
-	; Equal 11 localeConvPtr 0
+	; Equal 11 localeConvPtr Pointer$0#
 	cmp qword [rbp + 52], 0
 	je strftime$11
 
  strftime$6:
-	; Dereference £temporary2642 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2642 localeConvPtr 0
 	mov rsi, [rbp + 52]
 
  strftime$7:
-	; Equal 11 £temporary2642 -> localeConvPtr 0
+	; Equal 11 £temporary2642 Pointer$0#
 	cmp qword [rsi + 8], 0
 	je strftime$11
 
  strftime$8:
-	; Dereference £temporary2645 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2645 localeConvPtr 0
 	mov rsi, [rbp + 52]
 
  strftime$9:
-	; Assign shortDayList £temporary2645 -> localeConvPtr
+	; Assign shortDayList £temporary2645
 	mov rax, [rsi + 8]
 	mov [rbp + 60], rax
 
@@ -2117,25 +2117,25 @@ section .text
 	mov qword [rbp + 60], @7825$g_shortDayList
 
  strftime$12:
-	; Equal 18 localeConvPtr 0
+	; Equal 18 localeConvPtr Pointer$0#
 	cmp qword [rbp + 52], 0
 	je strftime$18
 
  strftime$13:
-	; Dereference £temporary2647 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2647 localeConvPtr 0
 	mov rsi, [rbp + 52]
 
  strftime$14:
-	; Equal 18 £temporary2647 -> localeConvPtr 0
+	; Equal 18 £temporary2647 Pointer$0#
 	cmp qword [rsi + 16], 0
 	je strftime$18
 
  strftime$15:
-	; Dereference £temporary2650 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2650 localeConvPtr 0
 	mov rsi, [rbp + 52]
 
  strftime$16:
-	; Assign longDayList £temporary2650 -> localeConvPtr
+	; Assign longDayList £temporary2650
 	mov rax, [rsi + 16]
 	mov [rbp + 76], rax
 
@@ -2148,25 +2148,25 @@ section .text
 	mov qword [rbp + 76], @7833$g_longDayList
 
  strftime$19:
-	; Equal 25 localeConvPtr 0
+	; Equal 25 localeConvPtr Pointer$0#
 	cmp qword [rbp + 52], 0
 	je strftime$25
 
  strftime$20:
-	; Dereference £temporary2652 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2652 localeConvPtr 0
 	mov rsi, [rbp + 52]
 
  strftime$21:
-	; Equal 25 £temporary2652 -> localeConvPtr 0
+	; Equal 25 £temporary2652 Pointer$0#
 	cmp qword [rsi + 24], 0
 	je strftime$25
 
  strftime$22:
-	; Dereference £temporary2655 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2655 localeConvPtr 0
 	mov rsi, [rbp + 52]
 
  strftime$23:
-	; Assign shortMonthList £temporary2655 -> localeConvPtr
+	; Assign shortMonthList £temporary2655
 	mov rax, [rsi + 24]
 	mov [rbp + 68], rax
 
@@ -2179,25 +2179,25 @@ section .text
 	mov qword [rbp + 68], @7846$g_shortMonthList
 
  strftime$26:
-	; Equal 32 localeConvPtr 0
+	; Equal 32 localeConvPtr Pointer$0#
 	cmp qword [rbp + 52], 0
 	je strftime$32
 
  strftime$27:
-	; Dereference £temporary2657 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2657 localeConvPtr 0
 	mov rsi, [rbp + 52]
 
  strftime$28:
-	; Equal 32 £temporary2657 -> localeConvPtr 0
+	; Equal 32 £temporary2657 Pointer$0#
 	cmp qword [rsi + 32], 0
 	je strftime$32
 
  strftime$29:
-	; Dereference £temporary2660 -> localeConvPtr localeConvPtr 0
+	; Dereference £temporary2660 localeConvPtr 0
 	mov rsi, [rbp + 52]
 
  strftime$30:
-	; Assign longMonthList £temporary2660 -> localeConvPtr
+	; Assign longMonthList £temporary2660
 	mov rax, [rsi + 32]
 	mov [rbp + 84], rax
 
@@ -2218,8 +2218,8 @@ section .text
 	mov [rbp + 116], rax
 
  strftime$35:
-	; Parameter 124 pointer ""
-	mov qword [rbp + 124], @7960$string_#
+	; Parameter 124 pointer string_#
+	mov qword [rbp + 124], @7960string_#
 
  strftime$36:
 	; Call 92 strcpy 0
@@ -2262,20 +2262,20 @@ section .text
 	mov [rbp + 100], eax
 
  strftime$45:
-	; Dereference £temporary2663 -> tp tp 0
+	; Dereference £temporary2663 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$46:
-	; NotEqual 48 £temporary2663 -> tp 0
+	; NotEqual 48 £temporary2663 SignedInt$0#
 	cmp dword [rsi + 12], 0
 	jne strftime$48
 
  strftime$47:
-	; Subtract weekNumberStartMonday weekNumberStartMonday 1
+	; Subtract weekNumberStartMonday weekNumberStartMonday SignedInt$1#
 	dec dword [rbp + 100]
 
  strftime$48:
-	; Assign index 0
+	; Assign index SignedInt$0#
 	mov dword [rbp + 92], 0
 
  strftime$49:
@@ -2290,10 +2290,10 @@ section .text
 	add rsi, rax
 
  strftime$51:
-	; Dereference £temporary2666 -> £temporary2668 £temporary2668 0
+	; Dereference £temporary2666 £temporary2668 0
 
  strftime$52:
-	; Equal 331 £temporary2666 -> £temporary2668 0
+	; Equal 331 £temporary2666 SignedChar$0#
 	cmp byte [rsi], 0
 	je strftime$331
 
@@ -2309,15 +2309,15 @@ section .text
 	add rsi, rax
 
  strftime$55:
-	; Dereference £temporary2671 -> £temporary2673 £temporary2673 0
+	; Dereference £temporary2671 £temporary2673 0
 
  strftime$56:
-	; NotEqual 305 £temporary2671 -> £temporary2673 37
+	; NotEqual 305 £temporary2671 SignedChar$37#
 	cmp byte [rsi], 37
 	jne strftime$305
 
  strftime$57:
-	; Add index index 1
+	; Add index index SignedInt$1#
 	inc dword [rbp + 92]
 
  strftime$58:
@@ -2335,121 +2335,121 @@ section .text
 	add rsi, rax
 
  strftime$61:
-	; Dereference £temporary2676 -> £temporary2678 £temporary2678 0
+	; Dereference £temporary2676 £temporary2678 0
 
  strftime$62:
-	; Case 86 £temporary2676 -> £temporary2678 97
+	; Case 86 £temporary2676 SignedChar$97#
 	mov al, [rsi]
 	cmp al, 97
 	je strftime$86
 
  strftime$63:
-	; Case 97 £temporary2676 -> £temporary2678 65
+	; Case 97 £temporary2676 SignedChar$65#
 	cmp al, 65
 	je strftime$97
 
  strftime$64:
-	; Case 108 £temporary2676 -> £temporary2678 98
+	; Case 108 £temporary2676 SignedChar$98#
 	cmp al, 98
 	je strftime$108
 
  strftime$65:
-	; Case 119 £temporary2676 -> £temporary2678 66
+	; Case 119 £temporary2676 SignedChar$66#
 	cmp al, 66
 	je strftime$119
 
  strftime$66:
-	; Case 130 £temporary2676 -> £temporary2678 99
+	; Case 130 £temporary2676 SignedChar$99#
 	cmp al, 99
 	je strftime$130
 
  strftime$67:
-	; Case 150 £temporary2676 -> £temporary2678 100
+	; Case 150 £temporary2676 SignedChar$100#
 	cmp al, 100
 	je strftime$150
 
  strftime$68:
-	; Case 158 £temporary2676 -> £temporary2678 72
+	; Case 158 £temporary2676 SignedChar$72#
 	cmp al, 72
 	je strftime$158
 
  strftime$69:
-	; Case 166 £temporary2676 -> £temporary2678 73
+	; Case 166 £temporary2676 SignedChar$73#
 	cmp al, 73
 	je strftime$166
 
  strftime$70:
-	; Case 175 £temporary2676 -> £temporary2678 106
+	; Case 175 £temporary2676 SignedChar$106#
 	cmp al, 106
 	je strftime$175
 
  strftime$71:
-	; Case 183 £temporary2676 -> £temporary2678 109
+	; Case 183 £temporary2676 SignedChar$109#
 	cmp al, 109
 	je strftime$183
 
  strftime$72:
-	; Case 192 £temporary2676 -> £temporary2678 77
+	; Case 192 £temporary2676 SignedChar$77#
 	cmp al, 77
 	je strftime$192
 
  strftime$73:
-	; Case 200 £temporary2676 -> £temporary2678 112
+	; Case 200 £temporary2676 SignedChar$112#
 	cmp al, 112
 	je strftime$200
 
  strftime$74:
-	; Case 211 £temporary2676 -> £temporary2678 83
+	; Case 211 £temporary2676 SignedChar$83#
 	cmp al, 83
 	je strftime$211
 
  strftime$75:
-	; Case 219 £temporary2676 -> £temporary2678 85
+	; Case 219 £temporary2676 SignedChar$85#
 	cmp al, 85
 	je strftime$219
 
  strftime$76:
-	; Case 226 £temporary2676 -> £temporary2678 119
+	; Case 226 £temporary2676 SignedChar$119#
 	cmp al, 119
 	je strftime$226
 
  strftime$77:
-	; Case 234 £temporary2676 -> £temporary2678 87
+	; Case 234 £temporary2676 SignedChar$87#
 	cmp al, 87
 	je strftime$234
 
  strftime$78:
-	; Case 241 £temporary2676 -> £temporary2678 120
+	; Case 241 £temporary2676 SignedChar$120#
 	cmp al, 120
 	je strftime$241
 
  strftime$79:
-	; Case 253 £temporary2676 -> £temporary2678 88
+	; Case 253 £temporary2676 SignedChar$88#
 	cmp al, 88
 	je strftime$253
 
  strftime$80:
-	; Case 265 £temporary2676 -> £temporary2678 121
+	; Case 265 £temporary2676 SignedChar$121#
 	cmp al, 121
 	je strftime$265
 
  strftime$81:
-	; Case 274 £temporary2676 -> £temporary2678 89
+	; Case 274 £temporary2676 SignedChar$89#
 	cmp al, 89
 	je strftime$274
 
  strftime$82:
-	; Case 283 £temporary2676 -> £temporary2678 90
+	; Case 283 £temporary2676 SignedChar$90#
 	cmp al, 90
 	je strftime$283
 
  strftime$83:
-	; Case 294 £temporary2676 -> £temporary2678 37
+	; Case 294 £temporary2676 SignedChar$37#
 	cmp al, 37
 	je strftime$294
 
  strftime$84:
-	; CaseEnd £temporary2676 -> £temporary2678
+	; CaseEnd £temporary2676
 
  strftime$85:
 	; Jump 299
@@ -2464,14 +2464,14 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$88:
-	; Dereference £temporary2679 -> tp tp 0
+	; Dereference £temporary2679 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$89:
-	; Multiply £temporary2681 £temporary2679 -> tp 8
+	; Multiply £temporary2681 £temporary2679 SignedInt$8#
 	mov eax, [rsi + 24]
 	xor edx, edx
-	imul dword [@7981$int4$8#]
+	imul dword [@7981SignedInt$8#]
 
  strftime$90:
 	; IntegralToIntegral £temporary2682 £temporary2681
@@ -2484,10 +2484,10 @@ section .text
 	add rsi, rax
 
  strftime$92:
-	; Dereference £temporary2680 -> £temporary2683 £temporary2683 0
+	; Dereference £temporary2680 £temporary2683 0
 
  strftime$93:
-	; Parameter 156 pointer £temporary2680 -> £temporary2683
+	; Parameter 156 pointer £temporary2680
 	mov rax, [rsi]
 	mov [rbp + 156], rax
 
@@ -2514,14 +2514,14 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$99:
-	; Dereference £temporary2685 -> tp tp 0
+	; Dereference £temporary2685 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$100:
-	; Multiply £temporary2687 £temporary2685 -> tp 8
+	; Multiply £temporary2687 £temporary2685 SignedInt$8#
 	mov eax, [rsi + 24]
 	xor edx, edx
-	imul dword [@7985$int4$8#]
+	imul dword [@7985SignedInt$8#]
 
  strftime$101:
 	; IntegralToIntegral £temporary2688 £temporary2687
@@ -2534,10 +2534,10 @@ section .text
 	add rsi, rax
 
  strftime$103:
-	; Dereference £temporary2686 -> £temporary2689 £temporary2689 0
+	; Dereference £temporary2686 £temporary2689 0
 
  strftime$104:
-	; Parameter 156 pointer £temporary2686 -> £temporary2689
+	; Parameter 156 pointer £temporary2686
 	mov rax, [rsi]
 	mov [rbp + 156], rax
 
@@ -2564,14 +2564,14 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$110:
-	; Dereference £temporary2691 -> tp tp 0
+	; Dereference £temporary2691 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$111:
-	; Multiply £temporary2693 £temporary2691 -> tp 8
+	; Multiply £temporary2693 £temporary2691 SignedInt$8#
 	mov eax, [rsi + 16]
 	xor edx, edx
-	imul dword [@7989$int4$8#]
+	imul dword [@7989SignedInt$8#]
 
  strftime$112:
 	; IntegralToIntegral £temporary2694 £temporary2693
@@ -2584,10 +2584,10 @@ section .text
 	add rsi, rax
 
  strftime$114:
-	; Dereference £temporary2692 -> £temporary2695 £temporary2695 0
+	; Dereference £temporary2692 £temporary2695 0
 
  strftime$115:
-	; Parameter 156 pointer £temporary2692 -> £temporary2695
+	; Parameter 156 pointer £temporary2692
 	mov rax, [rsi]
 	mov [rbp + 156], rax
 
@@ -2614,14 +2614,14 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$121:
-	; Dereference £temporary2697 -> tp tp 0
+	; Dereference £temporary2697 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$122:
-	; Multiply £temporary2699 £temporary2697 -> tp 8
+	; Multiply £temporary2699 £temporary2697 SignedInt$8#
 	mov eax, [rsi + 16]
 	xor edx, edx
-	imul dword [@7993$int4$8#]
+	imul dword [@7993SignedInt$8#]
 
  strftime$123:
 	; IntegralToIntegral £temporary2700 £temporary2699
@@ -2634,10 +2634,10 @@ section .text
 	add rsi, rax
 
  strftime$125:
-	; Dereference £temporary2698 -> £temporary2701 £temporary2701 0
+	; Dereference £temporary2698 £temporary2701 0
 
  strftime$126:
-	; Parameter 156 pointer £temporary2698 -> £temporary2701
+	; Parameter 156 pointer £temporary2698
 	mov rax, [rsi]
 	mov [rbp + 156], rax
 
@@ -2664,15 +2664,15 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$132:
-	; Parameter 156 pointer "%02i-%02i-%02i %02i:%02i:%02i"
-	mov qword [rbp + 156], @7996$string_2502i2D2502i2D2502i202502i3A2502i3A2502i#
+	; Parameter 156 pointer string_2502i2D2502i2D2502i202502i3A2502i3A2502i#
+	mov qword [rbp + 156], @7996string_2502i2D2502i2D2502i202502i3A2502i3A2502i#
 
  strftime$133:
-	; Dereference £temporary2703 -> tp tp 0
+	; Dereference £temporary2703 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$134:
-	; Add £temporary2704 £temporary2703 -> tp 1900
+	; Add £temporary2704 £temporary2703 SignedInt$1900#
 	mov eax, [rsi + 20]
 	add eax, 1900
 
@@ -2681,11 +2681,11 @@ section .text
 	mov [rbp + 164], eax
 
  strftime$136:
-	; Dereference £temporary2705 -> tp tp 0
+	; Dereference £temporary2705 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$137:
-	; Add £temporary2706 £temporary2705 -> tp 1
+	; Add £temporary2706 £temporary2705 SignedInt$1#
 	mov eax, [rsi + 16]
 	inc eax
 
@@ -2694,38 +2694,38 @@ section .text
 	mov [rbp + 168], eax
 
  strftime$139:
-	; Dereference £temporary2707 -> tp tp 0
+	; Dereference £temporary2707 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$140:
-	; Parameter 172 signedint £temporary2707 -> tp
+	; Parameter 172 signedint £temporary2707
 	mov eax, [rsi + 12]
 	mov [rbp + 172], eax
 
  strftime$141:
-	; Dereference £temporary2708 -> tp tp 0
+	; Dereference £temporary2708 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$142:
-	; Parameter 176 signedint £temporary2708 -> tp
+	; Parameter 176 signedint £temporary2708
 	mov eax, [rsi + 8]
 	mov [rbp + 176], eax
 
  strftime$143:
-	; Dereference £temporary2709 -> tp tp 0
+	; Dereference £temporary2709 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$144:
-	; Parameter 180 signedint £temporary2709 -> tp
+	; Parameter 180 signedint £temporary2709
 	mov eax, [rsi + 4]
 	mov [rbp + 180], eax
 
  strftime$145:
-	; Dereference £temporary2710 -> tp tp 0
+	; Dereference £temporary2710 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$146:
-	; Parameter 184 signedint £temporary2710 -> tp
+	; Parameter 184 signedint £temporary2710
 	mov eax, [rsi]
 	mov [rbp + 184], eax
 
@@ -2754,15 +2754,15 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$152:
-	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8003$string_2502i#
+	; Parameter 156 pointer string_2502i#
+	mov qword [rbp + 156], @8003string_2502i#
 
  strftime$153:
-	; Dereference £temporary2712 -> tp tp 0
+	; Dereference £temporary2712 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$154:
-	; Parameter 164 signedint £temporary2712 -> tp
+	; Parameter 164 signedint £temporary2712
 	mov eax, [rsi + 12]
 	mov [rbp + 164], eax
 
@@ -2791,15 +2791,15 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$160:
-	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8006$string_2502i#
+	; Parameter 156 pointer string_2502i#
+	mov qword [rbp + 156], @8006string_2502i#
 
  strftime$161:
-	; Dereference £temporary2714 -> tp tp 0
+	; Dereference £temporary2714 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$162:
-	; Parameter 164 signedint £temporary2714 -> tp
+	; Parameter 164 signedint £temporary2714
 	mov eax, [rsi + 8]
 	mov [rbp + 164], eax
 
@@ -2828,18 +2828,18 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$168:
-	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8009$string_2502i#
+	; Parameter 156 pointer string_2502i#
+	mov qword [rbp + 156], @8009string_2502i#
 
  strftime$169:
-	; Dereference £temporary2716 -> tp tp 0
+	; Dereference £temporary2716 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$170:
-	; Modulo £temporary2717 £temporary2716 -> tp 12
+	; Modulo £temporary2717 £temporary2716 SignedInt$12#
 	mov eax, [rsi + 8]
 	xor edx, edx
-	idiv dword [@8011$int4$12#]
+	idiv dword [@8011SignedInt$12#]
 
  strftime$171:
 	; Parameter 164 signedint £temporary2717
@@ -2870,15 +2870,15 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$177:
-	; Parameter 156 pointer "%03i"
-	mov qword [rbp + 156], @8014$string_2503i#
+	; Parameter 156 pointer string_2503i#
+	mov qword [rbp + 156], @8014string_2503i#
 
  strftime$178:
-	; Dereference £temporary2719 -> tp tp 0
+	; Dereference £temporary2719 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$179:
-	; Parameter 164 signedint £temporary2719 -> tp
+	; Parameter 164 signedint £temporary2719
 	mov eax, [rsi + 28]
 	mov [rbp + 164], eax
 
@@ -2907,15 +2907,15 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$185:
-	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8017$string_2502i#
+	; Parameter 156 pointer string_2502i#
+	mov qword [rbp + 156], @8017string_2502i#
 
  strftime$186:
-	; Dereference £temporary2721 -> tp tp 0
+	; Dereference £temporary2721 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$187:
-	; Add £temporary2722 £temporary2721 -> tp 1
+	; Add £temporary2722 £temporary2721 SignedInt$1#
 	mov eax, [rsi + 16]
 	inc eax
 
@@ -2948,15 +2948,15 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$194:
-	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8022$string_2502i#
+	; Parameter 156 pointer string_2502i#
+	mov qword [rbp + 156], @8022string_2502i#
 
  strftime$195:
-	; Dereference £temporary2724 -> tp tp 0
+	; Dereference £temporary2724 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$196:
-	; Parameter 164 signedint £temporary2724 -> tp
+	; Parameter 164 signedint £temporary2724
 	mov eax, [rsi + 4]
 	mov [rbp + 164], eax
 
@@ -2985,25 +2985,25 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$202:
-	; Parameter 156 pointer "%s"
-	mov qword [rbp + 156], @8025$string_25s#
+	; Parameter 156 pointer string_25s#
+	mov qword [rbp + 156], @8025string_25s#
 
  strftime$203:
-	; Equal 206 index 0
+	; Equal 206 index Logical$0#
 	cmp dword [rbp + 92], 0
 	je strftime$206
 
  strftime$204:
-	; Assign £temporary2727 "AM"
-	mov rax, @8026$string_AM#
+	; Assign £temporary2727 string_AM#
+	mov rax, @8026string_AM#
 
  strftime$205:
 	; Jump 207
 	jmp strftime$207
 
  strftime$206:
-	; Assign £temporary2727 "PM"
-	mov rax, @8027$string_PM#
+	; Assign £temporary2727 string_PM#
+	mov rax, @8027string_PM#
 
  strftime$207:
 	; Parameter 164 pointer £temporary2727
@@ -3034,15 +3034,15 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$213:
-	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8031$string_2502i#
+	; Parameter 156 pointer string_2502i#
+	mov qword [rbp + 156], @8031string_2502i#
 
  strftime$214:
-	; Dereference £temporary2729 -> tp tp 0
+	; Dereference £temporary2729 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$215:
-	; Parameter 164 signedint £temporary2729 -> tp
+	; Parameter 164 signedint £temporary2729
 	mov eax, [rsi]
 	mov [rbp + 164], eax
 
@@ -3071,8 +3071,8 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$221:
-	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8034$string_2502i#
+	; Parameter 156 pointer string_2502i#
+	mov qword [rbp + 156], @8034string_2502i#
 
  strftime$222:
 	; Parameter 164 signedint weekNumberStartSunday
@@ -3104,15 +3104,15 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$228:
-	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8037$string_2502i#
+	; Parameter 156 pointer string_2502i#
+	mov qword [rbp + 156], @8037string_2502i#
 
  strftime$229:
-	; Dereference £temporary2732 -> tp tp 0
+	; Dereference £temporary2732 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$230:
-	; Parameter 164 signedint £temporary2732 -> tp
+	; Parameter 164 signedint £temporary2732
 	mov eax, [rsi + 24]
 	mov [rbp + 164], eax
 
@@ -3141,8 +3141,8 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$236:
-	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8040$string_2502i#
+	; Parameter 156 pointer string_2502i#
+	mov qword [rbp + 156], @8040string_2502i#
 
  strftime$237:
 	; Parameter 164 signedint weekNumberStartMonday
@@ -3174,33 +3174,33 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$243:
-	; Parameter 156 pointer "%02i:%02i:%02i"
-	mov qword [rbp + 156], @8043$string_2502i3A2502i3A2502i#
+	; Parameter 156 pointer string_2502i3A2502i3A2502i#
+	mov qword [rbp + 156], @8043string_2502i3A2502i3A2502i#
 
  strftime$244:
-	; Dereference £temporary2735 -> tp tp 0
+	; Dereference £temporary2735 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$245:
-	; Parameter 164 signedint £temporary2735 -> tp
+	; Parameter 164 signedint £temporary2735
 	mov eax, [rsi + 8]
 	mov [rbp + 164], eax
 
  strftime$246:
-	; Dereference £temporary2736 -> tp tp 0
+	; Dereference £temporary2736 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$247:
-	; Parameter 168 signedint £temporary2736 -> tp
+	; Parameter 168 signedint £temporary2736
 	mov eax, [rsi + 4]
 	mov [rbp + 168], eax
 
  strftime$248:
-	; Dereference £temporary2737 -> tp tp 0
+	; Dereference £temporary2737 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$249:
-	; Parameter 172 signedint £temporary2737 -> tp
+	; Parameter 172 signedint £temporary2737
 	mov eax, [rsi]
 	mov [rbp + 172], eax
 
@@ -3229,33 +3229,33 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$255:
-	; Parameter 156 pointer "%02i:%02i:%02i"
-	mov qword [rbp + 156], @8046$string_2502i3A2502i3A2502i#
+	; Parameter 156 pointer string_2502i3A2502i3A2502i#
+	mov qword [rbp + 156], @8046string_2502i3A2502i3A2502i#
 
  strftime$256:
-	; Dereference £temporary2739 -> tp tp 0
+	; Dereference £temporary2739 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$257:
-	; Parameter 164 signedint £temporary2739 -> tp
+	; Parameter 164 signedint £temporary2739
 	mov eax, [rsi + 8]
 	mov [rbp + 164], eax
 
  strftime$258:
-	; Dereference £temporary2740 -> tp tp 0
+	; Dereference £temporary2740 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$259:
-	; Parameter 168 signedint £temporary2740 -> tp
+	; Parameter 168 signedint £temporary2740
 	mov eax, [rsi + 4]
 	mov [rbp + 168], eax
 
  strftime$260:
-	; Dereference £temporary2741 -> tp tp 0
+	; Dereference £temporary2741 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$261:
-	; Parameter 172 signedint £temporary2741 -> tp
+	; Parameter 172 signedint £temporary2741
 	mov eax, [rsi]
 	mov [rbp + 172], eax
 
@@ -3284,18 +3284,18 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$267:
-	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8049$string_2502i#
+	; Parameter 156 pointer string_2502i#
+	mov qword [rbp + 156], @8049string_2502i#
 
  strftime$268:
-	; Dereference £temporary2743 -> tp tp 0
+	; Dereference £temporary2743 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$269:
-	; Modulo £temporary2744 £temporary2743 -> tp 100
+	; Modulo £temporary2744 £temporary2743 SignedInt$100#
 	mov eax, [rsi + 20]
 	xor edx, edx
-	idiv dword [@8051$int4$100#]
+	idiv dword [@8051SignedInt$100#]
 
  strftime$270:
 	; Parameter 164 signedint £temporary2744
@@ -3326,15 +3326,15 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$276:
-	; Parameter 156 pointer "%02i"
-	mov qword [rbp + 156], @8054$string_2502i#
+	; Parameter 156 pointer string_2502i#
+	mov qword [rbp + 156], @8054string_2502i#
 
  strftime$277:
-	; Dereference £temporary2746 -> tp tp 0
+	; Dereference £temporary2746 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$278:
-	; Add £temporary2747 £temporary2746 -> tp 1900
+	; Add £temporary2747 £temporary2746 SignedInt$1900#
 	mov eax, [rsi + 20]
 	add eax, 1900
 
@@ -3367,25 +3367,25 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$285:
-	; Dereference £temporary2749 -> tp tp 0
+	; Dereference £temporary2749 tp 0
 	mov rsi, [rbp + 44]
 
  strftime$286:
-	; Equal 289 £temporary2749 -> tp 0
+	; Equal 289 £temporary2749 Logical$0#
 	cmp dword [rsi + 32], 0
 	je strftime$289
 
  strftime$287:
-	; Assign £temporary2751 "summer"
-	mov rax, @8059$string_summer#
+	; Assign £temporary2751 string_summer#
+	mov rax, @8059string_summer#
 
  strftime$288:
 	; Jump 290
 	jmp strftime$290
 
  strftime$289:
-	; Assign £temporary2751 "winter"
-	mov rax, @8060$string_winter#
+	; Assign £temporary2751 string_winter#
+	mov rax, @8060string_winter#
 
  strftime$290:
 	; Parameter 156 pointer £temporary2751
@@ -3414,8 +3414,8 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$296:
-	; Parameter 156 pointer "%"
-	mov qword [rbp + 156], @8064$string_25#
+	; Parameter 156 pointer string_25#
+	mov qword [rbp + 156], @8064string_25#
 
  strftime$297:
 	; Call 124 strcpy 0
@@ -3436,8 +3436,8 @@ section .text
 	add qword [rbp + 148], 104
 
  strftime$301:
-	; Parameter 156 pointer ""
-	mov qword [rbp + 156], @8065$string_#
+	; Parameter 156 pointer string_#
+	mov qword [rbp + 156], @8065string_#
 
  strftime$302:
 	; Call 124 strcpy 0
@@ -3454,7 +3454,7 @@ section .text
 	jmp strftime$312
 
  strftime$305:
-	; Dereference £temporary2755 -> add add 0
+	; Dereference £temporary2755 add 0
 	mov rsi, rbp
 	add rsi, 104
 
@@ -3470,20 +3470,20 @@ section .text
 	add rdi, rax
 
  strftime$308:
-	; Dereference £temporary2756 -> £temporary2758 £temporary2758 0
+	; Dereference £temporary2756 £temporary2758 0
 
  strftime$309:
-	; Assign £temporary2755 -> add £temporary2756 -> £temporary2758
+	; Assign £temporary2755 £temporary2756
 	mov al, [rdi]
 	mov [rsi], al
 
  strftime$310:
-	; Dereference £temporary2759 -> add add 0
+	; Dereference £temporary2759 add 0
 	mov rsi, rbp
 	add rsi, 104
 
  strftime$311:
-	; Assign £temporary2759 -> add 0
+	; Assign £temporary2759 SignedChar$0#
 	mov byte [rsi + 1], 0
 
  strftime$312:
@@ -3564,7 +3564,7 @@ section .text
 	; PostCall 124
 
  strftime$329:
-	; Add index index 1
+	; Add index index SignedInt$1#
 	inc dword [rbp + 92]
 
  strftime$330:

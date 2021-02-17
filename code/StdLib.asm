@@ -43,11 +43,11 @@ section .text
 	mov [rbp + 56], rax
 
  atoi$2:
-	; Parameter 64 pointer 0
+	; Parameter 64 pointer Pointer$0#
 	mov qword [rbp + 64], 0
 
  atoi$3:
-	; Parameter 72 signedint 10
+	; Parameter 72 signedint SignedInt$10#
 	mov dword [rbp + 72], 10
 
  atoi$4:
@@ -94,11 +94,11 @@ section .text
 	mov [rbp + 56], rax
 
  atol$2:
-	; Parameter 64 pointer 0
+	; Parameter 64 pointer Pointer$0#
 	mov qword [rbp + 64], 0
 
  atol$3:
-	; Parameter 72 signedint 10
+	; Parameter 72 signedint SignedInt$10#
 	mov dword [rbp + 72], 10
 
  atol$4:
@@ -130,7 +130,7 @@ section .text
 section .text
 
  strtol:
-	; Assign g_inStatus 1
+	; Assign g_inStatus SignedInt$1#
 	mov dword [g_inStatus], 1
 
  strtol$1:
@@ -139,7 +139,7 @@ section .text
 	mov [g_inDevice], rax
 
  strtol$2:
-	; Assign g_inChars 0
+	; Assign g_inChars SignedInt$0#
 	mov dword [g_inChars], 0
 
  strtol$3:
@@ -168,12 +168,12 @@ section .text
 	mov [rbp + 44], rbx
 
  strtol$9:
-	; Equal 13 endp 0
+	; Equal 13 endp Pointer$0#
 	cmp qword [rbp + 32], 0
 	je strtol$13
 
  strtol$10:
-	; Dereference £temporary1766 -> endp endp 0
+	; Dereference £temporary1766 endp 0
 	mov rsi, [rbp + 32]
 
  strtol$11:
@@ -183,7 +183,7 @@ section .text
 	and rax, rbx
 
  strtol$12:
-	; Add £temporary1766 -> endp s £temporary1767
+	; Add £temporary1766 s £temporary1767
 	mov rbx, [rbp + 24]
 	add rbx, rax
 	mov [rsi], rbx
@@ -205,7 +205,7 @@ section .text
 section .text
 
  strtoul:
-	; Assign g_inStatus 1
+	; Assign g_inStatus SignedInt$1#
 	mov dword [g_inStatus], 1
 
  strtoul$1:
@@ -214,7 +214,7 @@ section .text
 	mov [g_inDevice], rax
 
  strtoul$2:
-	; Assign g_inChars 0
+	; Assign g_inChars SignedInt$0#
 	mov dword [g_inChars], 0
 
  strtoul$3:
@@ -243,12 +243,12 @@ section .text
 	mov [rbp + 44], rbx
 
  strtoul$9:
-	; Equal 13 endp 0
+	; Equal 13 endp Pointer$0#
 	cmp qword [rbp + 32], 0
 	je strtoul$13
 
  strtoul$10:
-	; Dereference £temporary1771 -> endp endp 0
+	; Dereference £temporary1771 endp 0
 	mov rsi, [rbp + 32]
 
  strtoul$11:
@@ -258,7 +258,7 @@ section .text
 	and rax, rbx
 
  strtoul$12:
-	; Add £temporary1771 -> endp s £temporary1772
+	; Add £temporary1771 s £temporary1772
 	mov rbx, [rbp + 24]
 	add rbx, rax
 	mov [rsi], rbx
@@ -288,7 +288,7 @@ section .text
 	mov [rbp + 56], rax
 
  atof$2:
-	; Parameter 64 pointer 0
+	; Parameter 64 pointer Pointer$0#
 	mov qword [rbp + 64], 0
 
  atof$3:
@@ -319,18 +319,18 @@ section .text
 
 section .data
 
-@5765$string_25lf25n#:
+@5765string_25lf25n#:
 	; Initializer String %lf%n
 	db "%lf%n", 0
 
 section .text
 
  strtod:
-	; Assign chars 0
+	; Assign chars SignedInt$0#
 	mov dword [rbp + 40], 0
 
  strtod$1:
-	; PushFloat 0
+	; PushFloat Double$0#
 	fldz
 
  strtod$2:
@@ -346,8 +346,8 @@ section .text
 	mov [rbp + 76], rax
 
  strtod$5:
-	; Parameter 84 pointer "%lf%n"
-	mov qword [rbp + 84], @5765$string_25lf25n#
+	; Parameter 84 pointer string_25lf25n#
+	mov qword [rbp + 84], @5765string_25lf25n#
 
  strtod$6:
 	; Address £temporary1775 value
@@ -380,12 +380,12 @@ section .text
 	; PostCall 52
 
  strtod$12:
-	; Equal 16 endp 0
+	; Equal 16 endp Pointer$0#
 	cmp qword [rbp + 32], 0
 	je strtod$16
 
  strtod$13:
-	; Dereference £temporary1779 -> endp endp 0
+	; Dereference £temporary1779 endp 0
 	mov rsi, [rbp + 32]
 
  strtod$14:
@@ -395,7 +395,7 @@ section .text
 	and rax, rbx
 
  strtod$15:
-	; Add £temporary1779 -> endp s £temporary1780
+	; Add £temporary1779 s £temporary1780
 	mov rbx, [rbp + 24]
 	add rbx, rax
 	mov [rsi], rbx
@@ -419,268 +419,268 @@ section .text
 
 section .data
 
-@5777$string_2020202B123abc#:
+@5777string_2020202B123abc#:
 	; Initializer String    +123abc
 	db "   +123abc", 0
 
 section .data
 
-@5803$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@5803string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@5807$string_2020202B0123abc#:
+@5807string_2020202B0123abc#:
 	; Initializer String    +0123abc
 	db "   +0123abc", 0
 
 section .data
 
-@5835$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@5835string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@5839$string_2020202B0x123ABC#:
+@5839string_2020202B0x123ABC#:
 	; Initializer String    +0x123ABC
 	db "   +0x123ABC", 0
 
 section .data
 
-@5869$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@5869string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@5873$string_2020202B0X123abc#:
+@5873string_2020202B0X123abc#:
 	; Initializer String    +0X123abc
 	db "   +0X123abc", 0
 
 section .data
 
-@5903$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@5903string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@5907$string_2020202D123abc#:
+@5907string_2020202D123abc#:
 	; Initializer String    -123abc
 	db "   -123abc", 0
 
 section .data
 
-@5933$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@5933string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@5937$string_2020202D0123abc#:
+@5937string_2020202D0123abc#:
 	; Initializer String    -0123abc
 	db "   -0123abc", 0
 
 section .data
 
-@5965$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@5965string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@5969$string_2020202D0x123ABC#:
+@5969string_2020202D0x123ABC#:
 	; Initializer String    -0x123ABC
 	db "   -0x123ABC", 0
 
 section .data
 
-@5999$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@5999string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6003$string_2020202D0X123abc#:
+@6003string_2020202D0X123abc#:
 	; Initializer String    -0X123abc
 	db "   -0X123abc", 0
 
 section .data
 
-@6033$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6033string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6037$string_2020202B123abc#:
+@6037string_2020202B123abc#:
 	; Initializer String    +123abc
 	db "   +123abc", 0
 
 section .data
 
-@6063$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6063string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6067$string_2020202B123abc#:
+@6067string_2020202B123abc#:
 	; Initializer String    +123abc
 	db "   +123abc", 0
 
 section .data
 
-@6093$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6093string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6097$string_2020202B123abc#:
+@6097string_2020202B123abc#:
 	; Initializer String    +123abc
 	db "   +123abc", 0
 
 section .data
 
-@6123$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6123string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6127$string_2020202B123ABC#:
+@6127string_2020202B123ABC#:
 	; Initializer String    +123ABC
 	db "   +123ABC", 0
 
 section .data
 
-@6153$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6153string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6157$string_2020202B123abc#:
+@6157string_2020202B123abc#:
 	; Initializer String    +123abc
 	db "   +123abc", 0
 
 section .data
 
-@6183$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6183string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6187$string_2020202D123abc#:
+@6187string_2020202D123abc#:
 	; Initializer String    -123abc
 	db "   -123abc", 0
 
 section .data
 
-@6213$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6213string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6217$string_2020202D123abc#:
+@6217string_2020202D123abc#:
 	; Initializer String    -123abc
 	db "   -123abc", 0
 
 section .data
 
-@6243$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6243string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6247$string_2020202D123abc#:
+@6247string_2020202D123abc#:
 	; Initializer String    -123abc
 	db "   -123abc", 0
 
 section .data
 
-@6273$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6273string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6277$string_2020202D123ABC#:
+@6277string_2020202D123ABC#:
 	; Initializer String    -123ABC
 	db "   -123ABC", 0
 
 section .data
 
-@6303$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6303string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6307$string_2020202D123abc#:
+@6307string_2020202D123abc#:
 	; Initializer String    -123abc
 	db "   -123abc", 0
 
 section .data
 
-@6333$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6333string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .text
 
  strtol_test:
-	; Assign base 0
+	; Assign base SignedInt$0#
 	mov dword [rbp + 24], 0
 
  strtol_test$1:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$2:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$3:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$4:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtol_test$5:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtol_test$6:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtol_test$7:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtol_test$8:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtol_test$9:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtol_test$10:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtol_test$11:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtol_test$12:
@@ -726,8 +726,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$22:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @5803$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @5803string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$23:
 	; Parameter 87 pointer text
@@ -762,55 +762,55 @@ section .text
 	; PostCall 55
 
  strtol_test$29:
-	; Assign base 0
+	; Assign base SignedInt$0#
 	mov dword [rbp + 24], 0
 
  strtol_test$30:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$31:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$32:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$33:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtol_test$34:
-	; Assign text[4] 48
+	; Assign text[4] SignedChar$48#
 	mov byte [rbp + 32], 48
 
  strtol_test$35:
-	; Assign text[5] 49
+	; Assign text[5] SignedChar$49#
 	mov byte [rbp + 33], 49
 
  strtol_test$36:
-	; Assign text[6] 50
+	; Assign text[6] SignedChar$50#
 	mov byte [rbp + 34], 50
 
  strtol_test$37:
-	; Assign text[7] 51
+	; Assign text[7] SignedChar$51#
 	mov byte [rbp + 35], 51
 
  strtol_test$38:
-	; Assign text[8] 97
+	; Assign text[8] SignedChar$97#
 	mov byte [rbp + 36], 97
 
  strtol_test$39:
-	; Assign text[9] 98
+	; Assign text[9] SignedChar$98#
 	mov byte [rbp + 37], 98
 
  strtol_test$40:
-	; Assign text[10] 99
+	; Assign text[10] SignedChar$99#
 	mov byte [rbp + 38], 99
 
  strtol_test$41:
-	; Assign text[11] 0
+	; Assign text[11] SignedChar$0#
 	mov byte [rbp + 39], 0
 
  strtol_test$42:
@@ -856,8 +856,8 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$52:
-	; Parameter 80 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 80], @5835$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 80 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 80], @5835string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$53:
 	; Parameter 88 pointer text
@@ -892,59 +892,59 @@ section .text
 	; PostCall 56
 
  strtol_test$59:
-	; Assign base 0
+	; Assign base SignedInt$0#
 	mov dword [rbp + 24], 0
 
  strtol_test$60:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$61:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$62:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$63:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtol_test$64:
-	; Assign text[4] 48
+	; Assign text[4] SignedChar$48#
 	mov byte [rbp + 32], 48
 
  strtol_test$65:
-	; Assign text[5] 120
+	; Assign text[5] SignedChar$120#
 	mov byte [rbp + 33], 120
 
  strtol_test$66:
-	; Assign text[6] 49
+	; Assign text[6] SignedChar$49#
 	mov byte [rbp + 34], 49
 
  strtol_test$67:
-	; Assign text[7] 50
+	; Assign text[7] SignedChar$50#
 	mov byte [rbp + 35], 50
 
  strtol_test$68:
-	; Assign text[8] 51
+	; Assign text[8] SignedChar$51#
 	mov byte [rbp + 36], 51
 
  strtol_test$69:
-	; Assign text[9] 65
+	; Assign text[9] SignedChar$65#
 	mov byte [rbp + 37], 65
 
  strtol_test$70:
-	; Assign text[10] 66
+	; Assign text[10] SignedChar$66#
 	mov byte [rbp + 38], 66
 
  strtol_test$71:
-	; Assign text[11] 67
+	; Assign text[11] SignedChar$67#
 	mov byte [rbp + 39], 67
 
  strtol_test$72:
-	; Assign text[12] 0
+	; Assign text[12] SignedChar$0#
 	mov byte [rbp + 40], 0
 
  strtol_test$73:
@@ -990,8 +990,8 @@ section .text
 	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$83:
-	; Parameter 81 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 81], @5869$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 81 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 81], @5869string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$84:
 	; Parameter 89 pointer text
@@ -1026,59 +1026,59 @@ section .text
 	; PostCall 57
 
  strtol_test$90:
-	; Assign base 0
+	; Assign base SignedInt$0#
 	mov dword [rbp + 24], 0
 
  strtol_test$91:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$92:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$93:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$94:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtol_test$95:
-	; Assign text[4] 48
+	; Assign text[4] SignedChar$48#
 	mov byte [rbp + 32], 48
 
  strtol_test$96:
-	; Assign text[5] 88
+	; Assign text[5] SignedChar$88#
 	mov byte [rbp + 33], 88
 
  strtol_test$97:
-	; Assign text[6] 49
+	; Assign text[6] SignedChar$49#
 	mov byte [rbp + 34], 49
 
  strtol_test$98:
-	; Assign text[7] 50
+	; Assign text[7] SignedChar$50#
 	mov byte [rbp + 35], 50
 
  strtol_test$99:
-	; Assign text[8] 51
+	; Assign text[8] SignedChar$51#
 	mov byte [rbp + 36], 51
 
  strtol_test$100:
-	; Assign text[9] 97
+	; Assign text[9] SignedChar$97#
 	mov byte [rbp + 37], 97
 
  strtol_test$101:
-	; Assign text[10] 98
+	; Assign text[10] SignedChar$98#
 	mov byte [rbp + 38], 98
 
  strtol_test$102:
-	; Assign text[11] 99
+	; Assign text[11] SignedChar$99#
 	mov byte [rbp + 39], 99
 
  strtol_test$103:
-	; Assign text[12] 0
+	; Assign text[12] SignedChar$0#
 	mov byte [rbp + 40], 0
 
  strtol_test$104:
@@ -1124,8 +1124,8 @@ section .text
 	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$114:
-	; Parameter 81 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 81], @5903$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 81 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 81], @5903string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$115:
 	; Parameter 89 pointer text
@@ -1160,51 +1160,51 @@ section .text
 	; PostCall 57
 
  strtol_test$121:
-	; Assign base 0
+	; Assign base SignedInt$0#
 	mov dword [rbp + 24], 0
 
  strtol_test$122:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$123:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$124:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$125:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtol_test$126:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtol_test$127:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtol_test$128:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtol_test$129:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtol_test$130:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtol_test$131:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtol_test$132:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtol_test$133:
@@ -1250,8 +1250,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$143:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @5933$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @5933string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$144:
 	; Parameter 87 pointer text
@@ -1286,55 +1286,55 @@ section .text
 	; PostCall 55
 
  strtol_test$150:
-	; Assign base 0
+	; Assign base SignedInt$0#
 	mov dword [rbp + 24], 0
 
  strtol_test$151:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$152:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$153:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$154:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtol_test$155:
-	; Assign text[4] 48
+	; Assign text[4] SignedChar$48#
 	mov byte [rbp + 32], 48
 
  strtol_test$156:
-	; Assign text[5] 49
+	; Assign text[5] SignedChar$49#
 	mov byte [rbp + 33], 49
 
  strtol_test$157:
-	; Assign text[6] 50
+	; Assign text[6] SignedChar$50#
 	mov byte [rbp + 34], 50
 
  strtol_test$158:
-	; Assign text[7] 51
+	; Assign text[7] SignedChar$51#
 	mov byte [rbp + 35], 51
 
  strtol_test$159:
-	; Assign text[8] 97
+	; Assign text[8] SignedChar$97#
 	mov byte [rbp + 36], 97
 
  strtol_test$160:
-	; Assign text[9] 98
+	; Assign text[9] SignedChar$98#
 	mov byte [rbp + 37], 98
 
  strtol_test$161:
-	; Assign text[10] 99
+	; Assign text[10] SignedChar$99#
 	mov byte [rbp + 38], 99
 
  strtol_test$162:
-	; Assign text[11] 0
+	; Assign text[11] SignedChar$0#
 	mov byte [rbp + 39], 0
 
  strtol_test$163:
@@ -1380,8 +1380,8 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$173:
-	; Parameter 80 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 80], @5965$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 80 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 80], @5965string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$174:
 	; Parameter 88 pointer text
@@ -1416,59 +1416,59 @@ section .text
 	; PostCall 56
 
  strtol_test$180:
-	; Assign base 0
+	; Assign base SignedInt$0#
 	mov dword [rbp + 24], 0
 
  strtol_test$181:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$182:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$183:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$184:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtol_test$185:
-	; Assign text[4] 48
+	; Assign text[4] SignedChar$48#
 	mov byte [rbp + 32], 48
 
  strtol_test$186:
-	; Assign text[5] 120
+	; Assign text[5] SignedChar$120#
 	mov byte [rbp + 33], 120
 
  strtol_test$187:
-	; Assign text[6] 49
+	; Assign text[6] SignedChar$49#
 	mov byte [rbp + 34], 49
 
  strtol_test$188:
-	; Assign text[7] 50
+	; Assign text[7] SignedChar$50#
 	mov byte [rbp + 35], 50
 
  strtol_test$189:
-	; Assign text[8] 51
+	; Assign text[8] SignedChar$51#
 	mov byte [rbp + 36], 51
 
  strtol_test$190:
-	; Assign text[9] 65
+	; Assign text[9] SignedChar$65#
 	mov byte [rbp + 37], 65
 
  strtol_test$191:
-	; Assign text[10] 66
+	; Assign text[10] SignedChar$66#
 	mov byte [rbp + 38], 66
 
  strtol_test$192:
-	; Assign text[11] 67
+	; Assign text[11] SignedChar$67#
 	mov byte [rbp + 39], 67
 
  strtol_test$193:
-	; Assign text[12] 0
+	; Assign text[12] SignedChar$0#
 	mov byte [rbp + 40], 0
 
  strtol_test$194:
@@ -1514,8 +1514,8 @@ section .text
 	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$204:
-	; Parameter 81 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 81], @5999$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 81 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 81], @5999string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$205:
 	; Parameter 89 pointer text
@@ -1550,59 +1550,59 @@ section .text
 	; PostCall 57
 
  strtol_test$211:
-	; Assign base 0
+	; Assign base SignedInt$0#
 	mov dword [rbp + 24], 0
 
  strtol_test$212:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$213:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$214:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$215:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtol_test$216:
-	; Assign text[4] 48
+	; Assign text[4] SignedChar$48#
 	mov byte [rbp + 32], 48
 
  strtol_test$217:
-	; Assign text[5] 88
+	; Assign text[5] SignedChar$88#
 	mov byte [rbp + 33], 88
 
  strtol_test$218:
-	; Assign text[6] 49
+	; Assign text[6] SignedChar$49#
 	mov byte [rbp + 34], 49
 
  strtol_test$219:
-	; Assign text[7] 50
+	; Assign text[7] SignedChar$50#
 	mov byte [rbp + 35], 50
 
  strtol_test$220:
-	; Assign text[8] 51
+	; Assign text[8] SignedChar$51#
 	mov byte [rbp + 36], 51
 
  strtol_test$221:
-	; Assign text[9] 97
+	; Assign text[9] SignedChar$97#
 	mov byte [rbp + 37], 97
 
  strtol_test$222:
-	; Assign text[10] 98
+	; Assign text[10] SignedChar$98#
 	mov byte [rbp + 38], 98
 
  strtol_test$223:
-	; Assign text[11] 99
+	; Assign text[11] SignedChar$99#
 	mov byte [rbp + 39], 99
 
  strtol_test$224:
-	; Assign text[12] 0
+	; Assign text[12] SignedChar$0#
 	mov byte [rbp + 40], 0
 
  strtol_test$225:
@@ -1648,8 +1648,8 @@ section .text
 	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$235:
-	; Parameter 81 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 81], @6033$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 81 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 81], @6033string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$236:
 	; Parameter 89 pointer text
@@ -1684,51 +1684,51 @@ section .text
 	; PostCall 57
 
  strtol_test$242:
-	; Assign base 9
+	; Assign base SignedInt$9#
 	mov dword [rbp + 24], 9
 
  strtol_test$243:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$244:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$245:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$246:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtol_test$247:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtol_test$248:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtol_test$249:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtol_test$250:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtol_test$251:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtol_test$252:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtol_test$253:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtol_test$254:
@@ -1774,8 +1774,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$264:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6063$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6063string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$265:
 	; Parameter 87 pointer text
@@ -1810,51 +1810,51 @@ section .text
 	; PostCall 55
 
  strtol_test$271:
-	; Assign base 10
+	; Assign base SignedInt$10#
 	mov dword [rbp + 24], 10
 
  strtol_test$272:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$273:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$274:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$275:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtol_test$276:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtol_test$277:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtol_test$278:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtol_test$279:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtol_test$280:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtol_test$281:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtol_test$282:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtol_test$283:
@@ -1900,8 +1900,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$293:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6093$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6093string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$294:
 	; Parameter 87 pointer text
@@ -1936,51 +1936,51 @@ section .text
 	; PostCall 55
 
  strtol_test$300:
-	; Assign base 11
+	; Assign base SignedInt$11#
 	mov dword [rbp + 24], 11
 
  strtol_test$301:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$302:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$303:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$304:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtol_test$305:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtol_test$306:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtol_test$307:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtol_test$308:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtol_test$309:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtol_test$310:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtol_test$311:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtol_test$312:
@@ -2026,8 +2026,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$322:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6123$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6123string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$323:
 	; Parameter 87 pointer text
@@ -2062,51 +2062,51 @@ section .text
 	; PostCall 55
 
  strtol_test$329:
-	; Assign base 12
+	; Assign base SignedInt$12#
 	mov dword [rbp + 24], 12
 
  strtol_test$330:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$331:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$332:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$333:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtol_test$334:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtol_test$335:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtol_test$336:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtol_test$337:
-	; Assign text[7] 65
+	; Assign text[7] SignedChar$65#
 	mov byte [rbp + 35], 65
 
  strtol_test$338:
-	; Assign text[8] 66
+	; Assign text[8] SignedChar$66#
 	mov byte [rbp + 36], 66
 
  strtol_test$339:
-	; Assign text[9] 67
+	; Assign text[9] SignedChar$67#
 	mov byte [rbp + 37], 67
 
  strtol_test$340:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtol_test$341:
@@ -2152,8 +2152,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$351:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6153$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6153string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$352:
 	; Parameter 87 pointer text
@@ -2188,51 +2188,51 @@ section .text
 	; PostCall 55
 
  strtol_test$358:
-	; Assign base 13
+	; Assign base SignedInt$13#
 	mov dword [rbp + 24], 13
 
  strtol_test$359:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$360:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$361:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$362:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtol_test$363:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtol_test$364:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtol_test$365:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtol_test$366:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtol_test$367:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtol_test$368:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtol_test$369:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtol_test$370:
@@ -2278,8 +2278,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$380:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6183$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6183string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$381:
 	; Parameter 87 pointer text
@@ -2314,51 +2314,51 @@ section .text
 	; PostCall 55
 
  strtol_test$387:
-	; Assign base 9
+	; Assign base SignedInt$9#
 	mov dword [rbp + 24], 9
 
  strtol_test$388:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$389:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$390:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$391:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtol_test$392:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtol_test$393:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtol_test$394:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtol_test$395:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtol_test$396:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtol_test$397:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtol_test$398:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtol_test$399:
@@ -2404,8 +2404,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$409:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6213$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6213string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$410:
 	; Parameter 87 pointer text
@@ -2440,51 +2440,51 @@ section .text
 	; PostCall 55
 
  strtol_test$416:
-	; Assign base 10
+	; Assign base SignedInt$10#
 	mov dword [rbp + 24], 10
 
  strtol_test$417:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$418:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$419:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$420:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtol_test$421:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtol_test$422:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtol_test$423:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtol_test$424:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtol_test$425:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtol_test$426:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtol_test$427:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtol_test$428:
@@ -2530,8 +2530,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$438:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6243$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6243string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$439:
 	; Parameter 87 pointer text
@@ -2566,51 +2566,51 @@ section .text
 	; PostCall 55
 
  strtol_test$445:
-	; Assign base 11
+	; Assign base SignedInt$11#
 	mov dword [rbp + 24], 11
 
  strtol_test$446:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$447:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$448:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$449:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtol_test$450:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtol_test$451:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtol_test$452:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtol_test$453:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtol_test$454:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtol_test$455:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtol_test$456:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtol_test$457:
@@ -2656,8 +2656,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$467:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6273$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6273string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$468:
 	; Parameter 87 pointer text
@@ -2692,51 +2692,51 @@ section .text
 	; PostCall 55
 
  strtol_test$474:
-	; Assign base 12
+	; Assign base SignedInt$12#
 	mov dword [rbp + 24], 12
 
  strtol_test$475:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$476:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$477:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$478:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtol_test$479:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtol_test$480:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtol_test$481:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtol_test$482:
-	; Assign text[7] 65
+	; Assign text[7] SignedChar$65#
 	mov byte [rbp + 35], 65
 
  strtol_test$483:
-	; Assign text[8] 66
+	; Assign text[8] SignedChar$66#
 	mov byte [rbp + 36], 66
 
  strtol_test$484:
-	; Assign text[9] 67
+	; Assign text[9] SignedChar$67#
 	mov byte [rbp + 37], 67
 
  strtol_test$485:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtol_test$486:
@@ -2782,8 +2782,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$496:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6303$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6303string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$497:
 	; Parameter 87 pointer text
@@ -2818,51 +2818,51 @@ section .text
 	; PostCall 55
 
  strtol_test$503:
-	; Assign base 13
+	; Assign base SignedInt$13#
 	mov dword [rbp + 24], 13
 
  strtol_test$504:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtol_test$505:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtol_test$506:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtol_test$507:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtol_test$508:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtol_test$509:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtol_test$510:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtol_test$511:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtol_test$512:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtol_test$513:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtol_test$514:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtol_test$515:
@@ -2908,8 +2908,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol_test$525:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6333$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6333string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtol_test$526:
 	; Parameter 87 pointer text
@@ -2955,268 +2955,268 @@ section .text
 
 section .data
 
-@6482$string_2020202B123abc#:
+@6482string_2020202B123abc#:
 	; Initializer String    +123abc
 	db "   +123abc", 0
 
 section .data
 
-@6508$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6508string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6512$string_2020202B0123abc#:
+@6512string_2020202B0123abc#:
 	; Initializer String    +0123abc
 	db "   +0123abc", 0
 
 section .data
 
-@6540$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6540string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6544$string_2020202B0x123ABC#:
+@6544string_2020202B0x123ABC#:
 	; Initializer String    +0x123ABC
 	db "   +0x123ABC", 0
 
 section .data
 
-@6574$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6574string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6578$string_2020202B0X123abc#:
+@6578string_2020202B0X123abc#:
 	; Initializer String    +0X123abc
 	db "   +0X123abc", 0
 
 section .data
 
-@6608$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6608string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6612$string_2020202D123abc#:
+@6612string_2020202D123abc#:
 	; Initializer String    -123abc
 	db "   -123abc", 0
 
 section .data
 
-@6638$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6638string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6642$string_2020202D0123abc#:
+@6642string_2020202D0123abc#:
 	; Initializer String    -0123abc
 	db "   -0123abc", 0
 
 section .data
 
-@6670$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6670string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6674$string_2020202D0x123ABC#:
+@6674string_2020202D0x123ABC#:
 	; Initializer String    -0x123ABC
 	db "   -0x123ABC", 0
 
 section .data
 
-@6704$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6704string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6708$string_2020202D0X123abc#:
+@6708string_2020202D0X123abc#:
 	; Initializer String    -0X123abc
 	db "   -0X123abc", 0
 
 section .data
 
-@6738$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6738string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6742$string_2020202B123abc#:
+@6742string_2020202B123abc#:
 	; Initializer String    +123abc
 	db "   +123abc", 0
 
 section .data
 
-@6768$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6768string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6772$string_2020202B123abc#:
+@6772string_2020202B123abc#:
 	; Initializer String    +123abc
 	db "   +123abc", 0
 
 section .data
 
-@6798$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6798string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6802$string_2020202B123abc#:
+@6802string_2020202B123abc#:
 	; Initializer String    +123abc
 	db "   +123abc", 0
 
 section .data
 
-@6828$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6828string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6832$string_2020202B123ABC#:
+@6832string_2020202B123ABC#:
 	; Initializer String    +123ABC
 	db "   +123ABC", 0
 
 section .data
 
-@6858$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6858string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6862$string_2020202B123abc#:
+@6862string_2020202B123abc#:
 	; Initializer String    +123abc
 	db "   +123abc", 0
 
 section .data
 
-@6888$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6888string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6892$string_2020202D123abc#:
+@6892string_2020202D123abc#:
 	; Initializer String    -123abc
 	db "   -123abc", 0
 
 section .data
 
-@6918$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6918string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6922$string_2020202D123abc#:
+@6922string_2020202D123abc#:
 	; Initializer String    -123abc
 	db "   -123abc", 0
 
 section .data
 
-@6948$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6948string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6952$string_2020202D123abc#:
+@6952string_2020202D123abc#:
 	; Initializer String    -123abc
 	db "   -123abc", 0
 
 section .data
 
-@6978$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@6978string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@6982$string_2020202D123ABC#:
+@6982string_2020202D123ABC#:
 	; Initializer String    -123ABC
 	db "   -123ABC", 0
 
 section .data
 
-@7008$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@7008string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .data
 
-@7012$string_2020202D123abc#:
+@7012string_2020202D123abc#:
 	; Initializer String    -123abc
 	db "   -123abc", 0
 
 section .data
 
-@7038$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
+@7038string_3C25s3E203C25li3E203C25s3E203C25i3E0A#:
 	; Initializer String <%s> <%li> <%s> <%i>\n
 	db "<%s> <%li> <%s> <%i>", 10, 0
 
 section .text
 
  strtoul_test:
-	; Assign base 0
+	; Assign base SignedInt$0#
 	mov dword [rbp + 24], 0
 
  strtoul_test$1:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$2:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$3:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$4:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtoul_test$5:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtoul_test$6:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtoul_test$7:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtoul_test$8:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtoul_test$9:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtoul_test$10:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtoul_test$11:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtoul_test$12:
@@ -3262,8 +3262,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$22:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6508$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6508string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$23:
 	; Parameter 87 pointer text
@@ -3298,55 +3298,55 @@ section .text
 	; PostCall 55
 
  strtoul_test$29:
-	; Assign base 0
+	; Assign base SignedInt$0#
 	mov dword [rbp + 24], 0
 
  strtoul_test$30:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$31:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$32:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$33:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtoul_test$34:
-	; Assign text[4] 48
+	; Assign text[4] SignedChar$48#
 	mov byte [rbp + 32], 48
 
  strtoul_test$35:
-	; Assign text[5] 49
+	; Assign text[5] SignedChar$49#
 	mov byte [rbp + 33], 49
 
  strtoul_test$36:
-	; Assign text[6] 50
+	; Assign text[6] SignedChar$50#
 	mov byte [rbp + 34], 50
 
  strtoul_test$37:
-	; Assign text[7] 51
+	; Assign text[7] SignedChar$51#
 	mov byte [rbp + 35], 51
 
  strtoul_test$38:
-	; Assign text[8] 97
+	; Assign text[8] SignedChar$97#
 	mov byte [rbp + 36], 97
 
  strtoul_test$39:
-	; Assign text[9] 98
+	; Assign text[9] SignedChar$98#
 	mov byte [rbp + 37], 98
 
  strtoul_test$40:
-	; Assign text[10] 99
+	; Assign text[10] SignedChar$99#
 	mov byte [rbp + 38], 99
 
  strtoul_test$41:
-	; Assign text[11] 0
+	; Assign text[11] SignedChar$0#
 	mov byte [rbp + 39], 0
 
  strtoul_test$42:
@@ -3392,8 +3392,8 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$52:
-	; Parameter 80 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 80], @6540$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 80 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 80], @6540string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$53:
 	; Parameter 88 pointer text
@@ -3428,59 +3428,59 @@ section .text
 	; PostCall 56
 
  strtoul_test$59:
-	; Assign base 0
+	; Assign base SignedInt$0#
 	mov dword [rbp + 24], 0
 
  strtoul_test$60:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$61:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$62:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$63:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtoul_test$64:
-	; Assign text[4] 48
+	; Assign text[4] SignedChar$48#
 	mov byte [rbp + 32], 48
 
  strtoul_test$65:
-	; Assign text[5] 120
+	; Assign text[5] SignedChar$120#
 	mov byte [rbp + 33], 120
 
  strtoul_test$66:
-	; Assign text[6] 49
+	; Assign text[6] SignedChar$49#
 	mov byte [rbp + 34], 49
 
  strtoul_test$67:
-	; Assign text[7] 50
+	; Assign text[7] SignedChar$50#
 	mov byte [rbp + 35], 50
 
  strtoul_test$68:
-	; Assign text[8] 51
+	; Assign text[8] SignedChar$51#
 	mov byte [rbp + 36], 51
 
  strtoul_test$69:
-	; Assign text[9] 65
+	; Assign text[9] SignedChar$65#
 	mov byte [rbp + 37], 65
 
  strtoul_test$70:
-	; Assign text[10] 66
+	; Assign text[10] SignedChar$66#
 	mov byte [rbp + 38], 66
 
  strtoul_test$71:
-	; Assign text[11] 67
+	; Assign text[11] SignedChar$67#
 	mov byte [rbp + 39], 67
 
  strtoul_test$72:
-	; Assign text[12] 0
+	; Assign text[12] SignedChar$0#
 	mov byte [rbp + 40], 0
 
  strtoul_test$73:
@@ -3526,8 +3526,8 @@ section .text
 	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$83:
-	; Parameter 81 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 81], @6574$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 81 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 81], @6574string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$84:
 	; Parameter 89 pointer text
@@ -3562,59 +3562,59 @@ section .text
 	; PostCall 57
 
  strtoul_test$90:
-	; Assign base 0
+	; Assign base SignedInt$0#
 	mov dword [rbp + 24], 0
 
  strtoul_test$91:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$92:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$93:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$94:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtoul_test$95:
-	; Assign text[4] 48
+	; Assign text[4] SignedChar$48#
 	mov byte [rbp + 32], 48
 
  strtoul_test$96:
-	; Assign text[5] 88
+	; Assign text[5] SignedChar$88#
 	mov byte [rbp + 33], 88
 
  strtoul_test$97:
-	; Assign text[6] 49
+	; Assign text[6] SignedChar$49#
 	mov byte [rbp + 34], 49
 
  strtoul_test$98:
-	; Assign text[7] 50
+	; Assign text[7] SignedChar$50#
 	mov byte [rbp + 35], 50
 
  strtoul_test$99:
-	; Assign text[8] 51
+	; Assign text[8] SignedChar$51#
 	mov byte [rbp + 36], 51
 
  strtoul_test$100:
-	; Assign text[9] 97
+	; Assign text[9] SignedChar$97#
 	mov byte [rbp + 37], 97
 
  strtoul_test$101:
-	; Assign text[10] 98
+	; Assign text[10] SignedChar$98#
 	mov byte [rbp + 38], 98
 
  strtoul_test$102:
-	; Assign text[11] 99
+	; Assign text[11] SignedChar$99#
 	mov byte [rbp + 39], 99
 
  strtoul_test$103:
-	; Assign text[12] 0
+	; Assign text[12] SignedChar$0#
 	mov byte [rbp + 40], 0
 
  strtoul_test$104:
@@ -3660,8 +3660,8 @@ section .text
 	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$114:
-	; Parameter 81 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 81], @6608$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 81 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 81], @6608string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$115:
 	; Parameter 89 pointer text
@@ -3696,51 +3696,51 @@ section .text
 	; PostCall 57
 
  strtoul_test$121:
-	; Assign base 0
+	; Assign base SignedInt$0#
 	mov dword [rbp + 24], 0
 
  strtoul_test$122:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$123:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$124:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$125:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtoul_test$126:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtoul_test$127:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtoul_test$128:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtoul_test$129:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtoul_test$130:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtoul_test$131:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtoul_test$132:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtoul_test$133:
@@ -3786,8 +3786,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$143:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6638$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6638string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$144:
 	; Parameter 87 pointer text
@@ -3822,55 +3822,55 @@ section .text
 	; PostCall 55
 
  strtoul_test$150:
-	; Assign base 0
+	; Assign base SignedInt$0#
 	mov dword [rbp + 24], 0
 
  strtoul_test$151:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$152:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$153:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$154:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtoul_test$155:
-	; Assign text[4] 48
+	; Assign text[4] SignedChar$48#
 	mov byte [rbp + 32], 48
 
  strtoul_test$156:
-	; Assign text[5] 49
+	; Assign text[5] SignedChar$49#
 	mov byte [rbp + 33], 49
 
  strtoul_test$157:
-	; Assign text[6] 50
+	; Assign text[6] SignedChar$50#
 	mov byte [rbp + 34], 50
 
  strtoul_test$158:
-	; Assign text[7] 51
+	; Assign text[7] SignedChar$51#
 	mov byte [rbp + 35], 51
 
  strtoul_test$159:
-	; Assign text[8] 97
+	; Assign text[8] SignedChar$97#
 	mov byte [rbp + 36], 97
 
  strtoul_test$160:
-	; Assign text[9] 98
+	; Assign text[9] SignedChar$98#
 	mov byte [rbp + 37], 98
 
  strtoul_test$161:
-	; Assign text[10] 99
+	; Assign text[10] SignedChar$99#
 	mov byte [rbp + 38], 99
 
  strtoul_test$162:
-	; Assign text[11] 0
+	; Assign text[11] SignedChar$0#
 	mov byte [rbp + 39], 0
 
  strtoul_test$163:
@@ -3916,8 +3916,8 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$173:
-	; Parameter 80 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 80], @6670$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 80 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 80], @6670string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$174:
 	; Parameter 88 pointer text
@@ -3952,59 +3952,59 @@ section .text
 	; PostCall 56
 
  strtoul_test$180:
-	; Assign base 0
+	; Assign base SignedInt$0#
 	mov dword [rbp + 24], 0
 
  strtoul_test$181:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$182:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$183:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$184:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtoul_test$185:
-	; Assign text[4] 48
+	; Assign text[4] SignedChar$48#
 	mov byte [rbp + 32], 48
 
  strtoul_test$186:
-	; Assign text[5] 120
+	; Assign text[5] SignedChar$120#
 	mov byte [rbp + 33], 120
 
  strtoul_test$187:
-	; Assign text[6] 49
+	; Assign text[6] SignedChar$49#
 	mov byte [rbp + 34], 49
 
  strtoul_test$188:
-	; Assign text[7] 50
+	; Assign text[7] SignedChar$50#
 	mov byte [rbp + 35], 50
 
  strtoul_test$189:
-	; Assign text[8] 51
+	; Assign text[8] SignedChar$51#
 	mov byte [rbp + 36], 51
 
  strtoul_test$190:
-	; Assign text[9] 65
+	; Assign text[9] SignedChar$65#
 	mov byte [rbp + 37], 65
 
  strtoul_test$191:
-	; Assign text[10] 66
+	; Assign text[10] SignedChar$66#
 	mov byte [rbp + 38], 66
 
  strtoul_test$192:
-	; Assign text[11] 67
+	; Assign text[11] SignedChar$67#
 	mov byte [rbp + 39], 67
 
  strtoul_test$193:
-	; Assign text[12] 0
+	; Assign text[12] SignedChar$0#
 	mov byte [rbp + 40], 0
 
  strtoul_test$194:
@@ -4050,8 +4050,8 @@ section .text
 	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$204:
-	; Parameter 81 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 81], @6704$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 81 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 81], @6704string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$205:
 	; Parameter 89 pointer text
@@ -4086,59 +4086,59 @@ section .text
 	; PostCall 57
 
  strtoul_test$211:
-	; Assign base 0
+	; Assign base SignedInt$0#
 	mov dword [rbp + 24], 0
 
  strtoul_test$212:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$213:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$214:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$215:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtoul_test$216:
-	; Assign text[4] 48
+	; Assign text[4] SignedChar$48#
 	mov byte [rbp + 32], 48
 
  strtoul_test$217:
-	; Assign text[5] 88
+	; Assign text[5] SignedChar$88#
 	mov byte [rbp + 33], 88
 
  strtoul_test$218:
-	; Assign text[6] 49
+	; Assign text[6] SignedChar$49#
 	mov byte [rbp + 34], 49
 
  strtoul_test$219:
-	; Assign text[7] 50
+	; Assign text[7] SignedChar$50#
 	mov byte [rbp + 35], 50
 
  strtoul_test$220:
-	; Assign text[8] 51
+	; Assign text[8] SignedChar$51#
 	mov byte [rbp + 36], 51
 
  strtoul_test$221:
-	; Assign text[9] 97
+	; Assign text[9] SignedChar$97#
 	mov byte [rbp + 37], 97
 
  strtoul_test$222:
-	; Assign text[10] 98
+	; Assign text[10] SignedChar$98#
 	mov byte [rbp + 38], 98
 
  strtoul_test$223:
-	; Assign text[11] 99
+	; Assign text[11] SignedChar$99#
 	mov byte [rbp + 39], 99
 
  strtoul_test$224:
-	; Assign text[12] 0
+	; Assign text[12] SignedChar$0#
 	mov byte [rbp + 40], 0
 
  strtoul_test$225:
@@ -4184,8 +4184,8 @@ section .text
 	; PreCall 57 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$235:
-	; Parameter 81 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 81], @6738$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 81 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 81], @6738string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$236:
 	; Parameter 89 pointer text
@@ -4220,51 +4220,51 @@ section .text
 	; PostCall 57
 
  strtoul_test$242:
-	; Assign base 9
+	; Assign base SignedInt$9#
 	mov dword [rbp + 24], 9
 
  strtoul_test$243:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$244:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$245:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$246:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtoul_test$247:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtoul_test$248:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtoul_test$249:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtoul_test$250:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtoul_test$251:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtoul_test$252:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtoul_test$253:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtoul_test$254:
@@ -4310,8 +4310,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$264:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6768$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6768string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$265:
 	; Parameter 87 pointer text
@@ -4346,51 +4346,51 @@ section .text
 	; PostCall 55
 
  strtoul_test$271:
-	; Assign base 10
+	; Assign base SignedInt$10#
 	mov dword [rbp + 24], 10
 
  strtoul_test$272:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$273:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$274:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$275:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtoul_test$276:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtoul_test$277:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtoul_test$278:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtoul_test$279:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtoul_test$280:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtoul_test$281:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtoul_test$282:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtoul_test$283:
@@ -4436,8 +4436,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$293:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6798$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6798string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$294:
 	; Parameter 87 pointer text
@@ -4472,51 +4472,51 @@ section .text
 	; PostCall 55
 
  strtoul_test$300:
-	; Assign base 11
+	; Assign base SignedInt$11#
 	mov dword [rbp + 24], 11
 
  strtoul_test$301:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$302:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$303:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$304:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtoul_test$305:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtoul_test$306:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtoul_test$307:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtoul_test$308:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtoul_test$309:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtoul_test$310:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtoul_test$311:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtoul_test$312:
@@ -4562,8 +4562,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$322:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6828$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6828string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$323:
 	; Parameter 87 pointer text
@@ -4598,51 +4598,51 @@ section .text
 	; PostCall 55
 
  strtoul_test$329:
-	; Assign base 12
+	; Assign base SignedInt$12#
 	mov dword [rbp + 24], 12
 
  strtoul_test$330:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$331:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$332:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$333:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtoul_test$334:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtoul_test$335:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtoul_test$336:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtoul_test$337:
-	; Assign text[7] 65
+	; Assign text[7] SignedChar$65#
 	mov byte [rbp + 35], 65
 
  strtoul_test$338:
-	; Assign text[8] 66
+	; Assign text[8] SignedChar$66#
 	mov byte [rbp + 36], 66
 
  strtoul_test$339:
-	; Assign text[9] 67
+	; Assign text[9] SignedChar$67#
 	mov byte [rbp + 37], 67
 
  strtoul_test$340:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtoul_test$341:
@@ -4688,8 +4688,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$351:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6858$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6858string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$352:
 	; Parameter 87 pointer text
@@ -4724,51 +4724,51 @@ section .text
 	; PostCall 55
 
  strtoul_test$358:
-	; Assign base 13
+	; Assign base SignedInt$13#
 	mov dword [rbp + 24], 13
 
  strtoul_test$359:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$360:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$361:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$362:
-	; Assign text[3] 43
+	; Assign text[3] SignedChar$43#
 	mov byte [rbp + 31], 43
 
  strtoul_test$363:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtoul_test$364:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtoul_test$365:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtoul_test$366:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtoul_test$367:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtoul_test$368:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtoul_test$369:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtoul_test$370:
@@ -4814,8 +4814,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$380:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6888$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6888string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$381:
 	; Parameter 87 pointer text
@@ -4850,51 +4850,51 @@ section .text
 	; PostCall 55
 
  strtoul_test$387:
-	; Assign base 9
+	; Assign base SignedInt$9#
 	mov dword [rbp + 24], 9
 
  strtoul_test$388:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$389:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$390:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$391:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtoul_test$392:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtoul_test$393:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtoul_test$394:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtoul_test$395:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtoul_test$396:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtoul_test$397:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtoul_test$398:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtoul_test$399:
@@ -4940,8 +4940,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$409:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6918$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6918string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$410:
 	; Parameter 87 pointer text
@@ -4976,51 +4976,51 @@ section .text
 	; PostCall 55
 
  strtoul_test$416:
-	; Assign base 10
+	; Assign base SignedInt$10#
 	mov dword [rbp + 24], 10
 
  strtoul_test$417:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$418:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$419:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$420:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtoul_test$421:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtoul_test$422:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtoul_test$423:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtoul_test$424:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtoul_test$425:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtoul_test$426:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtoul_test$427:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtoul_test$428:
@@ -5066,8 +5066,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$438:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6948$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6948string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$439:
 	; Parameter 87 pointer text
@@ -5102,51 +5102,51 @@ section .text
 	; PostCall 55
 
  strtoul_test$445:
-	; Assign base 11
+	; Assign base SignedInt$11#
 	mov dword [rbp + 24], 11
 
  strtoul_test$446:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$447:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$448:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$449:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtoul_test$450:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtoul_test$451:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtoul_test$452:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtoul_test$453:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtoul_test$454:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtoul_test$455:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtoul_test$456:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtoul_test$457:
@@ -5192,8 +5192,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$467:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @6978$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @6978string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$468:
 	; Parameter 87 pointer text
@@ -5228,51 +5228,51 @@ section .text
 	; PostCall 55
 
  strtoul_test$474:
-	; Assign base 12
+	; Assign base SignedInt$12#
 	mov dword [rbp + 24], 12
 
  strtoul_test$475:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$476:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$477:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$478:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtoul_test$479:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtoul_test$480:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtoul_test$481:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtoul_test$482:
-	; Assign text[7] 65
+	; Assign text[7] SignedChar$65#
 	mov byte [rbp + 35], 65
 
  strtoul_test$483:
-	; Assign text[8] 66
+	; Assign text[8] SignedChar$66#
 	mov byte [rbp + 36], 66
 
  strtoul_test$484:
-	; Assign text[9] 67
+	; Assign text[9] SignedChar$67#
 	mov byte [rbp + 37], 67
 
  strtoul_test$485:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtoul_test$486:
@@ -5318,8 +5318,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$496:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @7008$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @7008string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$497:
 	; Parameter 87 pointer text
@@ -5354,51 +5354,51 @@ section .text
 	; PostCall 55
 
  strtoul_test$503:
-	; Assign base 13
+	; Assign base SignedInt$13#
 	mov dword [rbp + 24], 13
 
  strtoul_test$504:
-	; Assign text[0] 32
+	; Assign text[0] SignedChar$32#
 	mov byte [rbp + 28], 32
 
  strtoul_test$505:
-	; Assign text[1] 32
+	; Assign text[1] SignedChar$32#
 	mov byte [rbp + 29], 32
 
  strtoul_test$506:
-	; Assign text[2] 32
+	; Assign text[2] SignedChar$32#
 	mov byte [rbp + 30], 32
 
  strtoul_test$507:
-	; Assign text[3] 45
+	; Assign text[3] SignedChar$45#
 	mov byte [rbp + 31], 45
 
  strtoul_test$508:
-	; Assign text[4] 49
+	; Assign text[4] SignedChar$49#
 	mov byte [rbp + 32], 49
 
  strtoul_test$509:
-	; Assign text[5] 50
+	; Assign text[5] SignedChar$50#
 	mov byte [rbp + 33], 50
 
  strtoul_test$510:
-	; Assign text[6] 51
+	; Assign text[6] SignedChar$51#
 	mov byte [rbp + 34], 51
 
  strtoul_test$511:
-	; Assign text[7] 97
+	; Assign text[7] SignedChar$97#
 	mov byte [rbp + 35], 97
 
  strtoul_test$512:
-	; Assign text[8] 98
+	; Assign text[8] SignedChar$98#
 	mov byte [rbp + 36], 98
 
  strtoul_test$513:
-	; Assign text[9] 99
+	; Assign text[9] SignedChar$99#
 	mov byte [rbp + 37], 99
 
  strtoul_test$514:
-	; Assign text[10] 0
+	; Assign text[10] SignedChar$0#
 	mov byte [rbp + 38], 0
 
  strtoul_test$515:
@@ -5444,8 +5444,8 @@ section .text
 	; PreCall 55 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul_test$525:
-	; Parameter 79 pointer "<%s> <%li> <%s> <%i>\n"
-	mov qword [rbp + 79], @7038$string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	; Parameter 79 pointer string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
+	mov qword [rbp + 79], @7038string_3C25s3E203C25li3E203C25s3E203C25i3E0A#
 
  strtoul_test$526:
 	; Parameter 87 pointer text
@@ -5492,11 +5492,11 @@ section .text
 section .text
 
  abort:
-	; AssignRegister rax 60
+	; AssignRegister rax UnsignedLongInt$60#
 	mov rax, 60
 
  abort$1:
-	; AssignRegister rdi 18446744073709551615
+	; AssignRegister rdi UnsignedLongInt$18446744073709551615#
 	mov rdi, 18446744073709551615
 
  abort$2:
@@ -5519,7 +5519,7 @@ section .text
 	; SetReturnValue
 
  getenv$1:
-	; Return 0
+	; Return Pointer$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -5535,7 +5535,7 @@ section .text
 	; SetReturnValue
 
  system$1:
-	; Return -1
+	; Return SignedInt$minus1#
 	mov ebx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -5547,24 +5547,24 @@ section .text
 
 section .data
 
-@7234$int4$2#:
+@7234SignedInt$2#:
 	; Initializer SignedInt 2
 	dd 2
 
 section .text
 
  bsearch:
-	; Assign firstIndex 0
+	; Assign firstIndex SignedInt$0#
 	mov dword [rbp + 56], 0
 
  bsearch$1:
-	; Subtract lastIndex listSize 1
+	; Subtract lastIndex listSize SignedInt$1#
 	mov eax, [rbp + 40]
 	dec eax
 	mov [rbp + 60], eax
 
  bsearch$2:
-	; NotEqual 5 listSize 0
+	; NotEqual 5 listSize SignedInt$0#
 	cmp dword [rbp + 40], 0
 	jne bsearch$5
 
@@ -5572,7 +5572,7 @@ section .text
 	; SetReturnValue
 
  bsearch$4:
-	; Return 0
+	; Return Pointer$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -5631,7 +5631,7 @@ section .text
 	mov [rbp + 72], ebx
 
  bsearch$16:
-	; GreaterThanEqual 19 firstCompare 0
+	; GreaterThanEqual 19 firstCompare SignedInt$0#
 	cmp dword [rbp + 72], 0
 	jge bsearch$19
 
@@ -5639,7 +5639,7 @@ section .text
 	; SetReturnValue
 
  bsearch$18:
-	; Return 0
+	; Return Pointer$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -5647,7 +5647,7 @@ section .text
 	jmp rax
 
  bsearch$19:
-	; NotEqual 22 firstCompare 0
+	; NotEqual 22 firstCompare SignedInt$0#
 	cmp dword [rbp + 72], 0
 	jne bsearch$22
 
@@ -5714,7 +5714,7 @@ section .text
 	mov [rbp + 72], ebx
 
  bsearch$33:
-	; LessThanEqual 36 lastCompare 0
+	; LessThanEqual 36 lastCompare SignedInt$0#
 	cmp dword [rbp + 72], 0
 	jle bsearch$36
 
@@ -5722,7 +5722,7 @@ section .text
 	; SetReturnValue
 
  bsearch$35:
-	; Return 0
+	; Return Pointer$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -5730,7 +5730,7 @@ section .text
 	jmp rax
 
  bsearch$36:
-	; NotEqual 39 lastCompare 0
+	; NotEqual 39 lastCompare SignedInt$0#
 	cmp dword [rbp + 72], 0
 	jne bsearch$39
 
@@ -5751,9 +5751,9 @@ section .text
 	add eax, [rbp + 60]
 
  bsearch$40:
-	; Divide middleIndex £temporary2362 2
+	; Divide middleIndex £temporary2362 SignedInt$2#
 	xor edx, edx
-	idiv dword [@7234$int4$2#]
+	idiv dword [@7234SignedInt$2#]
 	mov [rbp + 64], eax
 
  bsearch$41:
@@ -5808,7 +5808,7 @@ section .text
 	mov [rbp + 76], ebx
 
  bsearch$52:
-	; GreaterThanEqual 55 middleCompare 0
+	; GreaterThanEqual 55 middleCompare SignedInt$0#
 	cmp dword [rbp + 76], 0
 	jge bsearch$55
 
@@ -5822,7 +5822,7 @@ section .text
 	jmp bsearch$5
 
  bsearch$55:
-	; LessThanEqual 58 middleCompare 0
+	; LessThanEqual 58 middleCompare SignedInt$0#
 	cmp dword [rbp + 76], 0
 	jle bsearch$58
 
@@ -5857,32 +5857,32 @@ section .data
 
 section .data
 
-@7251$int8$1664525#:
+@7251Signed_Long_Int$1664525#:
 	; Initializer Signed_Long_Int 1664525
 	dq 1664525
 
 section .data
 
-@7255$int8$127#:
+@7255Signed_Long_Int$127#:
 	; Initializer Signed_Long_Int 127
 	dq 127
 
 section .text
 
  rand:
-	; Multiply £temporary2372 g_randValue 1664525
+	; Multiply £temporary2372 g_randValue Signed_Long_Int$1664525#
 	mov rax, [@7248$g_randValue]
 	xor rdx, rdx
-	imul qword [@7251$int8$1664525#]
+	imul qword [@7251Signed_Long_Int$1664525#]
 
  rand$1:
-	; Add £temporary2373 £temporary2372 1013904223
+	; Add £temporary2373 £temporary2372 Signed_Long_Int$1013904223#
 	add rax, 1013904223
 
  rand$2:
-	; Modulo g_randValue £temporary2373 127
+	; Modulo g_randValue £temporary2373 Signed_Long_Int$127#
 	xor rdx, rdx
-	idiv qword [@7255$int8$127#]
+	idiv qword [@7255Signed_Long_Int$127#]
 	mov [@7248$g_randValue], rdx
 
  rand$3:
@@ -5938,32 +5938,32 @@ g_funcArray:
 
 section .data
 
-@7270$int4$8#:
+@7270SignedInt$8#:
 	; Initializer SignedInt 8
 	dd 8
 
 section .data
 
-@7275$int4$8#:
+@7275SignedInt$8#:
 	; Initializer SignedInt 8
 	dd 8
 
 section .text
 
  atexit:
-	; Assign index 0
+	; Assign index SignedInt$0#
 	mov dword [rbp + 32], 0
 
  atexit$1:
-	; GreaterThanEqual 16 index 256
+	; GreaterThanEqual 16 index SignedInt$256#
 	cmp dword [rbp + 32], 256
 	jge atexit$16
 
  atexit$2:
-	; Multiply £temporary2380 index 8
+	; Multiply £temporary2380 index SignedInt$8#
 	mov eax, [rbp + 32]
 	xor edx, edx
-	imul dword [@7270$int4$8#]
+	imul dword [@7270SignedInt$8#]
 
  atexit$3:
 	; IntegralToIntegral £temporary2381 £temporary2380
@@ -5976,18 +5976,18 @@ section .text
 	add rsi, rax
 
  atexit$5:
-	; Dereference £temporary2379 -> £temporary2382 £temporary2382 0
+	; Dereference £temporary2379 £temporary2382 0
 
  atexit$6:
-	; NotEqual 14 £temporary2379 -> £temporary2382 0
+	; NotEqual 14 £temporary2379 Pointer$0#
 	cmp qword [rsi], 0
 	jne atexit$14
 
  atexit$7:
-	; Multiply £temporary2385 index 8
+	; Multiply £temporary2385 index SignedInt$8#
 	mov eax, [rbp + 32]
 	xor edx, edx
-	imul dword [@7275$int4$8#]
+	imul dword [@7275SignedInt$8#]
 
  atexit$8:
 	; IntegralToIntegral £temporary2386 £temporary2385
@@ -6000,10 +6000,10 @@ section .text
 	add rsi, rax
 
  atexit$10:
-	; Dereference £temporary2384 -> £temporary2387 £temporary2387 0
+	; Dereference £temporary2384 £temporary2387 0
 
  atexit$11:
-	; Assign £temporary2384 -> £temporary2387 fcn
+	; Assign £temporary2384 fcn
 	mov rax, [rbp + 24]
 	mov [rsi], rax
 
@@ -6011,7 +6011,7 @@ section .text
 	; SetReturnValue
 
  atexit$13:
-	; Return 0
+	; Return SignedInt$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -6019,7 +6019,7 @@ section .text
 	jmp rax
 
  atexit$14:
-	; Add index index 1
+	; Add index index SignedInt$1#
 	inc dword [rbp + 32]
 
  atexit$15:
@@ -6030,7 +6030,7 @@ section .text
 	; SetReturnValue
 
  atexit$17:
-	; Return -1
+	; Return SignedInt$minus1#
 	mov ebx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -6042,32 +6042,32 @@ section .text
 
 section .data
 
-@7290$int4$8#:
+@7290SignedInt$8#:
 	; Initializer SignedInt 8
 	dd 8
 
 section .data
 
-@7295$int4$8#:
+@7295SignedInt$8#:
 	; Initializer SignedInt 8
 	dd 8
 
 section .text
 
  exit:
-	; Assign index 255
+	; Assign index SignedInt$255#
 	mov dword [rbp + 28], 255
 
  exit$1:
-	; LessThan 16 index 0
+	; LessThan 16 index SignedInt$0#
 	cmp dword [rbp + 28], 0
 	jl exit$16
 
  exit$2:
-	; Multiply £temporary2391 index 8
+	; Multiply £temporary2391 index SignedInt$8#
 	mov eax, [rbp + 28]
 	xor edx, edx
-	imul dword [@7290$int4$8#]
+	imul dword [@7290SignedInt$8#]
 
  exit$3:
 	; IntegralToIntegral £temporary2392 £temporary2391
@@ -6080,18 +6080,18 @@ section .text
 	add rsi, rax
 
  exit$5:
-	; Dereference £temporary2390 -> £temporary2393 £temporary2393 0
+	; Dereference £temporary2390 £temporary2393 0
 
  exit$6:
-	; Equal 14 £temporary2390 -> £temporary2393 0
+	; Equal 14 £temporary2390 Pointer$0#
 	cmp qword [rsi], 0
 	je exit$14
 
  exit$7:
-	; Multiply £temporary2396 index 8
+	; Multiply £temporary2396 index SignedInt$8#
 	mov eax, [rbp + 28]
 	xor edx, edx
-	imul dword [@7295$int4$8#]
+	imul dword [@7295SignedInt$8#]
 
  exit$8:
 	; IntegralToIntegral £temporary2397 £temporary2396
@@ -6104,14 +6104,14 @@ section .text
 	add rbx, rax
 
  exit$10:
-	; Dereference £temporary2395 -> £temporary2398 £temporary2398 0
+	; Dereference £temporary2395 £temporary2398 0
 
  exit$11:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 	mov [rbp + 32], rbx
 
  exit$12:
-	; Call 32 £temporary2395 -> £temporary2398 0
+	; Call 32 £temporary2395 0
 	mov qword [rbp + 2080], exit$13
 	mov [rbp + 2088], rbp
 	mov rsi, rbp
@@ -6124,7 +6124,7 @@ section .text
 	mov rbx, [rbp + 32]
 
  exit$14:
-	; Subtract index index 1
+	; Subtract index index SignedInt$1#
 	dec dword [rbp + 28]
 
  exit$15:
@@ -6132,7 +6132,7 @@ section .text
 	jmp exit$1
 
  exit$16:
-	; AssignRegister rax 60
+	; AssignRegister rax UnsignedLongInt$60#
 	mov rax, 60
 
  exit$17:
@@ -6161,7 +6161,7 @@ section .text
 section .text
 
  @7301$memswap:
-	; Assign index 0
+	; Assign index SignedInt$0#
 	mov dword [rbp + 44], 0
 
  @7301$memswap$1:
@@ -6182,10 +6182,10 @@ section .text
 	add rsi, rax
 
  @7301$memswap$4:
-	; Dereference £temporary2405 -> £temporary2407 £temporary2407 0
+	; Dereference £temporary2405 £temporary2407 0
 
  @7301$memswap$5:
-	; Assign tempValue £temporary2405 -> £temporary2407
+	; Assign tempValue £temporary2405
 	mov al, [rsi]
 	mov [rbp + 48], al
 
@@ -6201,7 +6201,7 @@ section .text
 	add rsi, rax
 
  @7301$memswap$8:
-	; Dereference £temporary2408 -> £temporary2410 £temporary2410 0
+	; Dereference £temporary2408 £temporary2410 0
 
  @7301$memswap$9:
 	; IntegralToIntegral £temporary2412 index
@@ -6215,10 +6215,10 @@ section .text
 	add rdi, rax
 
  @7301$memswap$11:
-	; Dereference £temporary2411 -> £temporary2413 £temporary2413 0
+	; Dereference £temporary2411 £temporary2413 0
 
  @7301$memswap$12:
-	; Assign £temporary2408 -> £temporary2410 £temporary2411 -> £temporary2413
+	; Assign £temporary2408 £temporary2411
 	mov al, [rdi]
 	mov [rsi], al
 
@@ -6234,15 +6234,15 @@ section .text
 	add rsi, rax
 
  @7301$memswap$15:
-	; Dereference £temporary2414 -> £temporary2416 £temporary2416 0
+	; Dereference £temporary2414 £temporary2416 0
 
  @7301$memswap$16:
-	; Assign £temporary2414 -> £temporary2416 tempValue
+	; Assign £temporary2414 tempValue
 	mov al, [rbp + 48]
 	mov [rsi], al
 
  @7301$memswap$17:
-	; Add index index 1
+	; Add index index SignedInt$1#
 	inc dword [rbp + 44]
 
  @7301$memswap$18:
@@ -6270,22 +6270,22 @@ section .text
 	mov [rbp + 48], rax
 
  qsort$2:
-	; Subtract size listSize 1
+	; Subtract size listSize SignedInt$1#
 	mov eax, [rbp + 32]
 	dec eax
 	mov [rbp + 56], eax
 
  qsort$3:
-	; LessThanEqual 33 size 0
+	; LessThanEqual 33 size SignedInt$0#
 	cmp dword [rbp + 56], 0
 	jle qsort$33
 
  qsort$4:
-	; Assign update 0
+	; Assign update SignedInt$0#
 	mov dword [rbp + 64], 0
 
  qsort$5:
-	; Assign index 0
+	; Assign index SignedInt$0#
 	mov dword [rbp + 60], 0
 
  qsort$6:
@@ -6312,7 +6312,7 @@ section .text
 	mov [rbp + 68], rbx
 
  qsort$10:
-	; Add £temporary2426 index 1
+	; Add £temporary2426 index SignedInt$1#
 	mov eax, [rbp + 60]
 	inc eax
 
@@ -6360,7 +6360,7 @@ section .text
 	; GetReturnValue £temporary2430
 
  qsort$20:
-	; LessThanEqual 28 £temporary2430 0
+	; LessThanEqual 28 £temporary2430 SignedInt$0#
 	cmp ebx, 0
 	jle qsort$28
 
@@ -6393,11 +6393,11 @@ section .text
 	; PostCall 84
 
  qsort$27:
-	; Assign update 1
+	; Assign update SignedInt$1#
 	mov dword [rbp + 64], 1
 
  qsort$28:
-	; Add index index 1
+	; Add index index SignedInt$1#
 	inc dword [rbp + 60]
 
  qsort$29:
@@ -6405,12 +6405,12 @@ section .text
 	jmp qsort$6
 
  qsort$30:
-	; Equal 33 update 0
+	; Equal 33 update Logical$0#
 	cmp dword [rbp + 64], 0
 	je qsort$33
 
  qsort$31:
-	; Subtract size size 1
+	; Subtract size size SignedInt$1#
 	dec dword [rbp + 56]
 
  qsort$32:
@@ -6430,7 +6430,7 @@ section .text
 section .text
 
  @abs:
-	; GreaterThanEqual 3 value 0
+	; GreaterThanEqual 3 value SignedInt$0#
 	cmp dword [rbp + 24], 0
 	jge @abs$3
 
@@ -6463,7 +6463,7 @@ section .text
 section .text
 
  labs:
-	; GreaterThanEqual 3 value 0
+	; GreaterThanEqual 3 value Signed_Long_Int$0#
 	cmp qword [rbp + 24], 0
 	jge labs$3
 
@@ -6496,20 +6496,20 @@ section .text
 section .text
 
  div:
-	; Assign result.quot 0
+	; Assign result.quot SignedInt$0#
 	mov dword [rbp + 32], 0
 
  div$1:
-	; Assign result.rem 0
+	; Assign result.rem SignedInt$0#
 	mov dword [rbp + 36], 0
 
  div$2:
-	; NotEqual 6 denum 0
+	; NotEqual 6 denum SignedInt$0#
 	cmp dword [rbp + 28], 0
 	jne div$6
 
  div$3:
-	; Assign errno 6
+	; Assign errno SignedInt$6#
 	mov dword [errno], 6
 
  div$4:
@@ -6556,20 +6556,20 @@ section .text
 section .text
 
  ldiv:
-	; Assign result.quot 0
+	; Assign result.quot Signed_Long_Int$0#
 	mov qword [rbp + 40], 0
 
  ldiv$1:
-	; Assign result.rem 0
+	; Assign result.rem Signed_Long_Int$0#
 	mov qword [rbp + 48], 0
 
  ldiv$2:
-	; NotEqual 6 denum 0
+	; NotEqual 6 denum Signed_Long_Int$0#
 	cmp qword [rbp + 32], 0
 	jne ldiv$6
 
  ldiv$3:
-	; Assign errno 6
+	; Assign errno SignedInt$6#
 	mov dword [errno], 6
 
  ldiv$4:
