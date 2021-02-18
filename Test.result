@@ -4,27 +4,27 @@ new  <malloc4: 65448 80 65528>
 
 522:
 old  <now 1: 1613597623>
-new  <now 1: 1613597472>
+new  <now 1: 1613641875>
 
 523:
 old  <now 2: 1613597623>
-new  <now 2: 1613597472>
+new  <now 2: 1613641875>
 
 524:
 old  <   gm time: Wed 2021-02-17 21:33:43, year day 47, week day 3, daylight saving time -1>
-new  <   gm time: Wed 2021-02-17 21:31:12, year day 47, week day 3, daylight saving time -1>
+new  <   gm time: Thu 2021-02-18 09:51:15, year day 48, week day 4, daylight saving time -1>
 
 525:
 old  <local time: Wed 2021-02-17 22:33:43, year day 47, week day 3, daylight saving time -1>
-new  <local time: Wed 2021-02-17 22:31:12, year day 47, week day 3, daylight saving time -1>
+new  <local time: Thu 2021-02-18 10:51:15, year day 48, week day 4, daylight saving time -1>
 
 526:
 old  <asctime <Wed Feb 17 21:33:43 2021>, ctime <Wed Feb 17 22:33:43 2021>>
-new  <asctime <Wed Feb 17 21:31:12 2021>, ctime <Wed Feb 17 22:31:12 2021>>
+new  <asctime <Thu Feb 18 09:51:15 2021>, ctime <Thu Feb 18 10:51:15 2021>>
 
 527:
 old  <strftime 314 314 <short day Wed, long day Wednesday, short month Feb, long month February, date-time 2021-02-17 22:33:43, mday 17, hour 22, gm hour 10, yday 047, month 02, min 33, am/pm AM, sec 43, week number sun 07, week day 03, week number mon 07, date 22:33:43, time 22:33:43, short year 21, long year 2021, summer/winter summer>>
-new  <strftime 314 314 <short day Wed, long day Wednesday, short month Feb, long month February, date-time 2021-02-17 22:31:12, mday 17, hour 22, gm hour 10, yday 047, month 02, min 31, am/pm AM, sec 12, week number sun 07, week day 03, week number mon 07, date 22:31:12, time 22:31:12, short year 21, long year 2021, summer/winter summer>>
+new  <strftime 313 313 <short day Thu, long day Thursday, short month Feb, long month February, date-time 2021-02-18 10:51:15, mday 18, hour 10, gm hour 10, yday 048, month 02, min 51, am/pm AM, sec 15, week number sun 07, week day 04, week number mon 07, date 10:51:15, time 10:51:15, short year 21, long year 2021, summer/winter summer>>
 
 529:
 old  <  Address 7411272, Size 96>
