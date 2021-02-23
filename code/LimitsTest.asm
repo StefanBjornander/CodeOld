@@ -104,7 +104,7 @@ section .text
 	mov qword [rbp + 48], @9590string_CHAR_BIT203D2025i0A#
 
  limits_test$2:
-	; Parameter 56 signedint SignedInt$8#
+	; Parameter 56 signed int SignedInt$8#
 	mov dword [rbp + 56], 8
 
  limits_test$3:
@@ -127,7 +127,7 @@ section .text
 	mov qword [rbp + 48], @9593string_CHAR_MIN203D2025i0A0A#
 
  limits_test$7:
-	; Parameter 56 signedint SignedInt$minus128#
+	; Parameter 56 signed int SignedInt$minus128#
 	mov dword [rbp + 56], -128
 
  limits_test$8:
@@ -150,7 +150,7 @@ section .text
 	mov qword [rbp + 48], @9597string_CHAR_MAX203D2025i0A#
 
  limits_test$12:
-	; Parameter 56 signedint SignedInt$127#
+	; Parameter 56 signed int SignedInt$127#
 	mov dword [rbp + 56], 127
 
  limits_test$13:
@@ -173,7 +173,7 @@ section .text
 	mov qword [rbp + 48], @9601string_UCHAR_MAX203D2025u0A0A#
 
  limits_test$17:
-	; Parameter 56 unsignedint UnsignedInt$255#
+	; Parameter 56 unsigned int UnsignedInt$255#
 	mov dword [rbp + 56], 255
 
  limits_test$18:
@@ -196,7 +196,7 @@ section .text
 	mov qword [rbp + 48], @9605string_SHRT_MIN203D2025i0A#
 
  limits_test$22:
-	; Parameter 56 signedint SignedInt$minus32768#
+	; Parameter 56 signed int SignedInt$minus32768#
 	mov dword [rbp + 56], -32768
 
  limits_test$23:
@@ -219,7 +219,7 @@ section .text
 	mov qword [rbp + 48], @9609string_SHRT_MAX203D2025i0A#
 
  limits_test$27:
-	; Parameter 56 signedint SignedInt$32767#
+	; Parameter 56 signed int SignedInt$32767#
 	mov dword [rbp + 56], 32767
 
  limits_test$28:
@@ -242,7 +242,7 @@ section .text
 	mov qword [rbp + 48], @9613string_USHRT_MAX203D2025u0A0A#
 
  limits_test$32:
-	; Parameter 56 unsignedint UnsignedInt$65535#
+	; Parameter 56 unsigned int UnsignedInt$65535#
 	mov dword [rbp + 56], 65535
 
  limits_test$33:
@@ -265,7 +265,7 @@ section .text
 	mov qword [rbp + 48], @9617string_INT_MIN203D2025i0A#
 
  limits_test$37:
-	; Parameter 56 signedint SignedInt$minus2147483648#
+	; Parameter 56 signed int SignedInt$minus2147483648#
 	mov dword [rbp + 56], -2147483648
 
  limits_test$38:
@@ -288,7 +288,7 @@ section .text
 	mov qword [rbp + 48], @9620string_INT_MAX203D2025i0A#
 
  limits_test$42:
-	; Parameter 56 signedint SignedInt$2147483647#
+	; Parameter 56 signed int SignedInt$2147483647#
 	mov dword [rbp + 56], 2147483647
 
  limits_test$43:
@@ -311,7 +311,7 @@ section .text
 	mov qword [rbp + 48], @9623string_UINT_MAX203D2025u0A0A#
 
  limits_test$47:
-	; Parameter 56 unsignedint UnsignedInt$4294967295#
+	; Parameter 56 unsigned int UnsignedInt$4294967295#
 	mov eax, 4294967295
 	mov [rbp + 56], eax
 
@@ -335,7 +335,7 @@ section .text
 	mov qword [rbp + 48], @9626string_LONG_MIN203D2025li0A#
 
  limits_test$52:
-	; Parameter 56 signedlongint SignedLongInt$minus9223372036854775808#
+	; Parameter 56 signed long int SignedLongInt$minus9223372036854775808#
 	mov rax, -9223372036854775808
 	mov [rbp + 56], rax
 
@@ -359,7 +359,7 @@ section .text
 	mov qword [rbp + 48], @9629string_LONG_MAX203D2025li0A#
 
  limits_test$57:
-	; Parameter 56 signedlongint SignedLongInt$9223372036854775807#
+	; Parameter 56 signed long int SignedLongInt$9223372036854775807#
 	mov rax, 9223372036854775807
 	mov [rbp + 56], rax
 
@@ -383,7 +383,7 @@ section .text
 	mov qword [rbp + 48], @9632string_ULONG_MAX203D2025lu0A#
 
  limits_test$62:
-	; Parameter 56 unsignedlongint UnsignedLongInt$18446744073709551615#
+	; Parameter 56 unsigned long int UnsignedLongInt$18446744073709551615#
 	mov rax, 18446744073709551615
 	mov [rbp + 56], rax
 
@@ -407,7 +407,7 @@ section .text
 	mov qword [rbp + 48], @9635string_ULONG_MAX203D2025lx0A#
 
  limits_test$67:
-	; Parameter 56 unsignedlongint UnsignedLongInt$18446744073709551615#
+	; Parameter 56 unsigned long int UnsignedLongInt$18446744073709551615#
 	mov rax, 18446744073709551615
 	mov [rbp + 56], rax
 
@@ -431,7 +431,7 @@ section .text
 	mov qword [rbp + 48], @9638string_ULONG_MAX203D2025lX0A#
 
  limits_test$72:
-	; Parameter 56 unsignedlongint UnsignedLongInt$18446744073709551615#
+	; Parameter 56 unsigned long int UnsignedLongInt$18446744073709551615#
 	mov rax, 18446744073709551615
 	mov [rbp + 56], rax
 

@@ -478,7 +478,7 @@ index3: 8: value 64.000000
 index3: 9: value 81.000000
 
 size4: 10 total 80
-malloc4: 7411300 0 80
+malloc4: 7411476 0 80
 index4: 0: value 0.000000
 index4: 1: value 1.000000
 index4: 2: value 4.000000
@@ -519,36 +519,36 @@ fileexists "File.h": Yes
 fileexists "File.y": No
 fileexists "File.p": Yes
 fileexists "File.z": No
-now 1: 1613988127
-now 2: 1613988127
-   gm time: Mon 2021-02-22 10:02:07, year day 52, week day 1, daylight saving time -1
-local time: Mon 2021-02-22 11:02:07, year day 52, week day 1, daylight saving time -1
-asctime <Mon Feb 22 10:02:07 2021>, ctime <Mon Feb 22 11:02:07 2021>
-strftime 311 311 <short day Mon, long day Monday, short month Feb, long month February, date-time 2021-02-22 11:02:07, mday 22, hour 11, gm hour 11, yday 052, month 02, min 02, am/pm AM, sec 07, week number sun 08, week day 01, week number mon 08, date 11:02:07, time 11:02:07, short year 21, long year 2021, summer/winter summer>
+now 1: 1614099418
+now 2: 1614099418
+   gm time: Tue 2021-02-23 16:56:58, year day 53, week day 2, daylight saving time -1
+local time: Tue 2021-02-23 17:56:58, year day 53, week day 2, daylight saving time -1
+asctime <Tue Feb 23 16:56:58 2021>, ctime <Tue Feb 23 17:56:58 2021>
+strftime 312 312 <short day Tue, long day Tuesday, short month Feb, long month February, date-time 2021-02-23 17:56:58, mday 23, hour 17, gm hour 05, yday 053, month 02, min 56, am/pm AM, sec 58, week number sun 08, week day 02, week number mon 08, date 17:56:58, time 17:56:58, short year 21, long year 2021, summer/winter summer>
 Heap:
-  Address 7411272, Size 96
-  Address 7411164, Size 96
-  Address 7411056, Size 96
+  Address 7411448, Size 96
+  Address 7411340, Size 96
+  Address 7411232, Size 96
 
 Heap:
-  Address 7411272, Size 96
-  Address 7411164, Size 52
-  Address 7411056, Size 96
+  Address 7411448, Size 96
+  Address 7411340, Size 52
+  Address 7411232, Size 96
 
 Heap:
-  Address 7411272, Size 96
-  Address 7411164, Size 52
-  Address 7411056, Size 96
-  Address 7411004, Size 40
+  Address 7411448, Size 96
+  Address 7411340, Size 52
+  Address 7411232, Size 96
+  Address 7411180, Size 40
 
 Heap:
-  Address 7411164, Size 52
-  Address 7411056, Size 96
-  Address 7411004, Size 40
+  Address 7411340, Size 52
+  Address 7411232, Size 96
+  Address 7411180, Size 40
 
 Heap:
-  Address 7411164, Size 52
-  Address 7411004, Size 40
+  Address 7411340, Size 52
+  Address 7411180, Size 40
 
 <     123> <    +123> <     123> <123     > <+123    > <+123    > < 123    > < 123    >
 <    -123> <    -123> <    -123> <-123    > <-123    > <-123    > <-123    > <-123    >
@@ -599,7 +599,7 @@ Division by Zero.
 
 <7b> <7B> <173> <7b> <7B> <173>
 <0x7b> <0X7B> <0173> <0x7b> <0X7B> <0173>
-<%> <Hello, World!> <X> <6362856>
+<%> <Hello, World!> <X> <6363032>
 
 <123.456000> <1.212163e+2> <1.212163E+2> <1.179328e+5> <1.179328E+5>
 <123.456000> <1.212163e+2> <1.212163E+2> <1.179328e+5> <1.179328E+5>
@@ -658,7 +658,7 @@ strtok(s, ",") = " World!"
 
 <7b> <7B> <173> <7b> <7B> <173>
 <0x7b> <0X7B> <0173> <0x7b> <0X7B> <0173>
-<%> <Hello, World!> <X> <6362856>
+<%> <Hello, World!> <X> <6363032>
 
 <123.456000> <1.212163e+2> <1.212163E+2> <1.179328e+5> <1.179328E+5>
 <123.456000> <1.212163e+2> <1.212163E+2> <1.179328e+5> <1.179328E+5>
@@ -699,13 +699,14 @@ ldiv_t(10, 3) = (2, 0)
 A List 1: 3 4 2 1 
 B List 2: 1 2 3 4 
 C List 3: 4 3 2 1 
+B List 4: 1 2 3 4 
 
 Search:
   (0, -1)
-  (1, -1)
-  (2, -1)
-  (3, -1)
-  (4, 0)
+  (1, 0)
+  (2, 1)
+  (3, 2)
+  (4, 3)
   (5, -1)
 
 <   +123abc> <123> <abc> <0>

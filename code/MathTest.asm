@@ -328,7 +328,7 @@ section .text
 	fstp qword [rbp + 72]
 
  acos_test$11:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -410,7 +410,7 @@ section .text
 	fstp qword [rbp + 72]
 
  atan_test$11:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -1501,7 +1501,7 @@ section .text
 	fstp qword [rbp + 72]
 
  math_test_1$17:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -1565,7 +1565,7 @@ section .text
 	fstp qword [rbp + 72]
 
  math_test_1$32:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -1629,7 +1629,7 @@ section .text
 	fstp qword [rbp + 72]
 
  math_test_1$47:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -1693,7 +1693,7 @@ section .text
 	fstp qword [rbp + 72]
 
  math_test_1$62:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -1757,7 +1757,7 @@ section .text
 	fstp qword [rbp + 72]
 
  math_test_1$77:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -1821,7 +1821,7 @@ section .text
 	fstp qword [rbp + 72]
 
  math_test_1$92:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -1885,7 +1885,7 @@ section .text
 	fstp qword [rbp + 72]
 
  math_test_1$107:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -1949,7 +1949,7 @@ section .text
 	fstp qword [rbp + 72]
 
  math_test_1$122:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -2013,7 +2013,7 @@ section .text
 	fstp qword [rbp + 72]
 
  math_test_1$137:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -2077,7 +2077,7 @@ section .text
 	fstp qword [rbp + 72]
 
  math_test_1$152:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -2141,7 +2141,7 @@ section .text
 	fstp qword [rbp + 72]
 
  math_test_1$167:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -2205,7 +2205,7 @@ section .text
 	fstp qword [rbp + 72]
 
  math_test_1$182:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -2269,7 +2269,7 @@ section .text
 	fstp qword [rbp + 72]
 
  math_test_1$197:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -2333,7 +2333,7 @@ section .text
 	fstp qword [rbp + 72]
 
  math_test_1$212:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -2397,7 +2397,7 @@ section .text
 	fstp qword [rbp + 72]
 
  math_test_1$227:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -2461,7 +2461,7 @@ section .text
 	fstp qword [rbp + 72]
 
  math_test_1$242:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -2546,12 +2546,12 @@ section .text
 	fstp qword [rbp + 84]
 
  math_test_1$262:
-	; Parameter 92 signedint j
+	; Parameter 92 signed int j
 	mov eax, [rbp + 32]
 	mov [rbp + 92], eax
 
  math_test_1$263:
-	; Parameter 96 signedint errno
+	; Parameter 96 signed int errno
 	mov eax, [errno]
 	mov [rbp + 96], eax
 
@@ -2670,7 +2670,7 @@ section .text
 	fstp qword [rbp + 96]
 
  math_test_1$291:
-	; Parameter 104 signedint errno
+	; Parameter 104 signed int errno
 	mov eax, [errno]
 	mov [rbp + 104], eax
 
@@ -2838,7 +2838,7 @@ section .text
 	fstp qword [rbp + 88]
 
  math_test_2$15:
-	; Parameter 96 signedint errno
+	; Parameter 96 signed int errno
 	mov eax, [errno]
 	mov [rbp + 96], eax
 
@@ -2918,7 +2918,7 @@ section .text
 	fstp qword [rbp + 88]
 
  math_test_2$34:
-	; Parameter 96 signedint errno
+	; Parameter 96 signed int errno
 	mov eax, [errno]
 	mov [rbp + 96], eax
 
@@ -2998,7 +2998,7 @@ section .text
 	fstp qword [rbp + 88]
 
  math_test_2$53:
-	; Parameter 96 signedint errno
+	; Parameter 96 signed int errno
 	mov eax, [errno]
 	mov [rbp + 96], eax
 
@@ -3061,7 +3061,7 @@ section .text
 	mov eax, [container4bytes#]
 
  math_test_2$67:
-	; Parameter 80 signedint £temporary3564
+	; Parameter 80 signed int £temporary3564
 	mov [rbp + 80], eax
 
  math_test_2$68:
@@ -3085,7 +3085,7 @@ section .text
 	mov eax, [container4bytes#]
 
  math_test_2$73:
-	; Parameter 116 signedint £temporary3565
+	; Parameter 116 signed int £temporary3565
 	mov [rbp + 116], eax
 
  math_test_2$74:

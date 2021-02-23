@@ -618,7 +618,7 @@ section .text
 	mov [rbp + 76], rax
 
  freopen$10:
-	; Parameter 84 unsignedshortint UnsignedShortInt$0#
+	; Parameter 84 unsigned short int UnsignedShortInt$0#
 	mov word [rbp + 84], 0
 
  freopen$11:
@@ -740,7 +740,7 @@ section .text
 	mov [rbp + 76], rax
 
  freopen$39:
-	; Parameter 84 unsignedshortint UnsignedShortInt$1#
+	; Parameter 84 unsigned short int UnsignedShortInt$1#
 	mov word [rbp + 84], 1
 
  freopen$40:
@@ -774,11 +774,11 @@ section .text
 	mov [rbp + 76], rax
 
  freopen$47:
-	; Parameter 84 signedint SignedInt$0#
+	; Parameter 84 signed int SignedInt$0#
 	mov dword [rbp + 84], 0
 
  freopen$48:
-	; Parameter 88 signedint SignedInt$2#
+	; Parameter 88 signed int SignedInt$2#
 	mov dword [rbp + 88], 2
 
  freopen$49:
@@ -881,7 +881,7 @@ section .text
 	mov [rbp + 76], rax
 
  freopen$72:
-	; Parameter 84 unsignedshortint UnsignedShortInt$3#
+	; Parameter 84 unsigned short int UnsignedShortInt$3#
 	mov word [rbp + 84], 3
 
  freopen$73:
@@ -988,7 +988,7 @@ section .text
 	mov [rbp + 76], rax
 
  freopen$97:
-	; Parameter 84 unsignedshortint UnsignedShortInt$3#
+	; Parameter 84 unsigned short int UnsignedShortInt$3#
 	mov word [rbp + 84], 3
 
  freopen$98:
@@ -1080,7 +1080,7 @@ section .text
 	mov [rbp + 76], rax
 
  freopen$119:
-	; Parameter 84 unsignedshortint UnsignedShortInt$3#
+	; Parameter 84 unsigned short int UnsignedShortInt$3#
 	mov word [rbp + 84], 3
 
  freopen$120:
@@ -1114,11 +1114,11 @@ section .text
 	mov [rbp + 76], rax
 
  freopen$127:
-	; Parameter 84 signedint SignedInt$0#
+	; Parameter 84 signed int SignedInt$0#
 	mov dword [rbp + 84], 0
 
  freopen$128:
-	; Parameter 88 signedint SignedInt$2#
+	; Parameter 88 signed int SignedInt$2#
 	mov dword [rbp + 88], 2
 
  freopen$129:
@@ -1716,11 +1716,11 @@ section .text
 	mov [rbp + 57], rsi
 
  fgetc$4:
-	; Parameter 65 signedint SignedInt$1#
+	; Parameter 65 signed int SignedInt$1#
 	mov dword [rbp + 65], 1
 
  fgetc$5:
-	; Parameter 69 signedint SignedInt$1#
+	; Parameter 69 signed int SignedInt$1#
 	mov dword [rbp + 69], 1
 
  fgetc$6:
@@ -2006,12 +2006,12 @@ section .text
 	mov [rbp + 68], rax
 
  fputs$8:
-	; Parameter 76 signedint size
+	; Parameter 76 signed int size
 	mov eax, [rbp + 40]
 	mov [rbp + 76], eax
 
  fputs$9:
-	; Parameter 80 signedint SignedInt$1#
+	; Parameter 80 signed int SignedInt$1#
 	mov dword [rbp + 80], 1
 
  fputs$10:
@@ -2109,7 +2109,7 @@ section .text
 	mov [rbp + 56], rax
 
  gets$2:
-	; Parameter 64 signedint SignedInt$minus1#
+	; Parameter 64 signed int SignedInt$minus1#
 	mov dword [rbp + 64], -1
 
  gets$3:
@@ -2249,7 +2249,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  puts$8:
-	; Parameter 56 signedint SignedInt$10#
+	; Parameter 56 signed int SignedInt$10#
 	mov dword [rbp + 56], 10
 
  puts$9:
@@ -2537,11 +2537,11 @@ section .text
 	mov [rbp + 56], rax
 
  ftell$2:
-	; Parameter 64 signedint SignedInt$0#
+	; Parameter 64 signed int SignedInt$0#
 	mov dword [rbp + 64], 0
 
  ftell$3:
-	; Parameter 68 signedint SignedInt$1#
+	; Parameter 68 signed int SignedInt$1#
 	mov dword [rbp + 68], 1
 
  ftell$4:
@@ -2581,11 +2581,11 @@ section .text
 	mov [rbp + 56], rax
 
  rewind$2:
-	; Parameter 64 signedint SignedInt$0#
+	; Parameter 64 signed int SignedInt$0#
 	mov dword [rbp + 64], 0
 
  rewind$3:
-	; Parameter 68 signedint SignedInt$0#
+	; Parameter 68 signed int SignedInt$0#
 	mov dword [rbp + 68], 0
 
  rewind$4:
@@ -2673,12 +2673,12 @@ section .text
 	mov rsi, [rbp + 32]
 
  fsetpos$3:
-	; Parameter 72 signedint £temporary783
+	; Parameter 72 signed int £temporary783
 	mov eax, [rsi]
 	mov [rbp + 72], eax
 
  fsetpos$4:
-	; Parameter 76 signedint SignedInt$0#
+	; Parameter 76 signed int SignedInt$0#
 	mov dword [rbp + 76], 0
 
  fsetpos$5:
@@ -2746,11 +2746,11 @@ section .text
 	mov [rbp + 56], rax
 
  feof$2:
-	; Parameter 64 signedint SignedInt$0#
+	; Parameter 64 signed int SignedInt$0#
 	mov dword [rbp + 64], 0
 
  feof$3:
-	; Parameter 68 signedint SignedInt$1#
+	; Parameter 68 signed int SignedInt$1#
 	mov dword [rbp + 68], 1
 
  feof$4:
@@ -2784,11 +2784,11 @@ section .text
 	mov [rbp + 64], rax
 
  feof$11:
-	; Parameter 72 signedint SignedInt$0#
+	; Parameter 72 signed int SignedInt$0#
 	mov dword [rbp + 72], 0
 
  feof$12:
-	; Parameter 76 signedint SignedInt$2#
+	; Parameter 76 signed int SignedInt$2#
 	mov dword [rbp + 76], 2
 
  feof$13:
@@ -2826,11 +2826,11 @@ section .text
 	mov rax, [rbp + 32]
 
  feof$21:
-	; Parameter 80 signedint £temporary791
+	; Parameter 80 signed int £temporary791
 	mov [rbp + 80], eax
 
  feof$22:
-	; Parameter 84 signedint SignedInt$0#
+	; Parameter 84 signed int SignedInt$0#
 	mov dword [rbp + 84], 0
 
  feof$23:
@@ -2923,7 +2923,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  perror$4:
-	; Parameter 96 signedint errno
+	; Parameter 96 signed int errno
 	mov eax, [errno]
 	mov [rbp + 96], eax
 

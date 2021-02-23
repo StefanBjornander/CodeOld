@@ -1224,7 +1224,7 @@ section .text
 	mov qword [rbp + 88], @11429string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$20:
-	; Parameter 96 signedint SignedInt$14#
+	; Parameter 96 signed int SignedInt$14#
 	mov dword [rbp + 96], 14
 
  file_test$21:
@@ -1278,7 +1278,7 @@ section .text
 	mov qword [rbp + 88], @11437string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$32:
-	; Parameter 96 signedint SignedInt$15#
+	; Parameter 96 signed int SignedInt$15#
 	mov dword [rbp + 96], 15
 
  file_test$33:
@@ -1604,7 +1604,7 @@ section .text
 	mov qword [rbp + 88], @11457string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$107:
-	; Parameter 96 signedint SignedInt$34#
+	; Parameter 96 signed int SignedInt$34#
 	mov dword [rbp + 96], 34
 
  file_test$108:
@@ -1658,7 +1658,7 @@ section .text
 	mov qword [rbp + 88], @11465string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$119:
-	; Parameter 96 signedint SignedInt$35#
+	; Parameter 96 signed int SignedInt$35#
 	mov dword [rbp + 96], 35
 
  file_test$120:
@@ -1731,7 +1731,7 @@ section .text
 	mov qword [rbp + 72], @11473string_size2025i0A#
 
  file_test$135:
-	; Parameter 80 signedint size
+	; Parameter 80 signed int size
 	mov eax, [rbp + 40]
 	mov [rbp + 80], eax
 
@@ -1760,7 +1760,7 @@ section .text
 	mov qword [rbp + 80], @11474string_Y20size2025i0A#
 
  file_test$141:
-	; Parameter 88 signedint size
+	; Parameter 88 signed int size
 	mov eax, [rbp + 40]
 	mov [rbp + 88], eax
 
@@ -2051,7 +2051,7 @@ section .text
 	mov [rbp + 64], rax
 
  file_test$206:
-	; Parameter 72 signedint errno
+	; Parameter 72 signed int errno
 	mov eax, [errno]
 	mov [rbp + 72], eax
 
@@ -2059,7 +2059,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$208:
-	; Parameter 100 signedint errno
+	; Parameter 100 signed int errno
 	mov eax, [errno]
 	mov [rbp + 100], eax
 
@@ -2252,7 +2252,7 @@ section .text
 	mov [rbp + 88], rax
 
  file_test$251:
-	; Parameter 96 signedint errno
+	; Parameter 96 signed int errno
 	mov eax, [errno]
 	mov [rbp + 96], eax
 
@@ -2260,7 +2260,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$253:
-	; Parameter 124 signedint errno
+	; Parameter 124 signed int errno
 	mov eax, [errno]
 	mov [rbp + 124], eax
 
@@ -2383,7 +2383,7 @@ section .text
 	mov [rbp + 80], rax
 
  file_test$280:
-	; Parameter 88 signedint errno
+	; Parameter 88 signed int errno
 	mov eax, [errno]
 	mov [rbp + 88], eax
 
@@ -2391,7 +2391,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$282:
-	; Parameter 116 signedint errno
+	; Parameter 116 signed int errno
 	mov eax, [errno]
 	mov [rbp + 116], eax
 
@@ -2565,7 +2565,7 @@ section .text
 	mov [rbp + 72], rax
 
  file_test$321:
-	; Parameter 80 signedint errno
+	; Parameter 80 signed int errno
 	mov eax, [errno]
 	mov [rbp + 80], eax
 
@@ -2573,7 +2573,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$323:
-	; Parameter 108 signedint errno
+	; Parameter 108 signed int errno
 	mov eax, [errno]
 	mov [rbp + 108], eax
 
@@ -2677,7 +2677,7 @@ section .text
 	mov [rbp + 64], rax
 
  file_test$346:
-	; Parameter 72 signedint errno
+	; Parameter 72 signed int errno
 	mov eax, [errno]
 	mov [rbp + 72], eax
 
@@ -2685,7 +2685,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$348:
-	; Parameter 100 signedint errno
+	; Parameter 100 signed int errno
 	mov eax, [errno]
 	mov [rbp + 100], eax
 
@@ -2772,7 +2772,7 @@ section .text
 	mov qword [rbp + 80], @11531string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$368:
-	; Parameter 88 signedint SignedInt$119#
+	; Parameter 88 signed int SignedInt$119#
 	mov dword [rbp + 88], 119
 
  file_test$369:
@@ -2895,7 +2895,7 @@ section .text
 	mov qword [rbp + 64], @11543string_size2025i0A#
 
  file_test$395:
-	; Parameter 72 signedint size
+	; Parameter 72 signed int size
 	mov eax, [rbp + 36]
 	mov [rbp + 72], eax
 
@@ -3082,7 +3082,7 @@ section .text
 	mov qword [rbp + 80], @11564string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$436:
-	; Parameter 88 signedint SignedInt$171#
+	; Parameter 88 signed int SignedInt$171#
 	mov dword [rbp + 88], 171
 
  file_test$437:
@@ -3127,11 +3127,11 @@ section .text
 	mov [rbp + 64], rsi
 
  file_test$446:
-	; Parameter 72 signedint SignedInt$4#
+	; Parameter 72 signed int SignedInt$4#
 	mov dword [rbp + 72], 4
 
  file_test$447:
-	; Parameter 76 signedint SignedInt$1#
+	; Parameter 76 signed int SignedInt$1#
 	mov dword [rbp + 76], 1
 
  file_test$448:
@@ -3187,11 +3187,11 @@ section .text
 	mov [rbp + 72], rsi
 
  file_test$459:
-	; Parameter 80 signedint SignedInt$8#
+	; Parameter 80 signed int SignedInt$8#
 	mov dword [rbp + 80], 8
 
  file_test$460:
-	; Parameter 84 signedint SignedInt$1#
+	; Parameter 84 signed int SignedInt$1#
 	mov dword [rbp + 84], 1
 
  file_test$461:
@@ -3289,7 +3289,7 @@ section .text
 	mov qword [rbp + 88], @11597string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$483:
-	; Parameter 96 signedint SignedInt$188#
+	; Parameter 96 signed int SignedInt$188#
 	mov dword [rbp + 96], 188
 
  file_test$484:
@@ -3330,11 +3330,11 @@ section .text
 	mov [rbp + 64], rsi
 
  file_test$492:
-	; Parameter 72 signedint SignedInt$4#
+	; Parameter 72 signed int SignedInt$4#
 	mov dword [rbp + 72], 4
 
  file_test$493:
-	; Parameter 76 signedint SignedInt$1#
+	; Parameter 76 signed int SignedInt$1#
 	mov dword [rbp + 76], 1
 
  file_test$494:
@@ -3360,7 +3360,7 @@ section .text
 	mov qword [rbp + 64], @11606string_size13A2025i0A#
 
  file_test$499:
-	; Parameter 72 signedint size
+	; Parameter 72 signed int size
 	mov eax, [rbp + 32]
 	mov [rbp + 72], eax
 
@@ -3399,11 +3399,11 @@ section .text
 	mov [rbp + 72], rsi
 
  file_test$507:
-	; Parameter 80 signedint SignedInt$8#
+	; Parameter 80 signed int SignedInt$8#
 	mov dword [rbp + 80], 8
 
  file_test$508:
-	; Parameter 84 signedint SignedInt$1#
+	; Parameter 84 signed int SignedInt$1#
 	mov dword [rbp + 84], 1
 
  file_test$509:
@@ -3429,7 +3429,7 @@ section .text
 	mov qword [rbp + 72], @11617string_index13A2025i3A20value2025f0A#
 
  file_test$514:
-	; Parameter 80 signedint index
+	; Parameter 80 signed int index
 	mov eax, [rbp + 36]
 	mov [rbp + 80], eax
 
@@ -3551,7 +3551,7 @@ section .text
 	mov qword [rbp + 80], @11627string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$542:
-	; Parameter 88 signedint SignedInt$203#
+	; Parameter 88 signed int SignedInt$203#
 	mov dword [rbp + 88], 203
 
  file_test$543:
@@ -3621,11 +3621,11 @@ section .text
 	mov [rbp + 72], rsi
 
  file_test$557:
-	; Parameter 80 signedint SignedInt$8#
+	; Parameter 80 signed int SignedInt$8#
 	mov dword [rbp + 80], 8
 
  file_test$558:
-	; Parameter 84 signedint SignedInt$1#
+	; Parameter 84 signed int SignedInt$1#
 	mov dword [rbp + 84], 1
 
  file_test$559:
@@ -3723,7 +3723,7 @@ section .text
 	mov qword [rbp + 80], @11652string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$581:
-	; Parameter 88 signedint SignedInt$217#
+	; Parameter 88 signed int SignedInt$217#
 	mov dword [rbp + 88], 217
 
  file_test$582:
@@ -3768,11 +3768,11 @@ section .text
 	mov [rbp + 68], rsi
 
  file_test$591:
-	; Parameter 76 signedint SignedInt$8#
+	; Parameter 76 signed int SignedInt$8#
 	mov dword [rbp + 76], 8
 
  file_test$592:
-	; Parameter 80 signedint SignedInt$1#
+	; Parameter 80 signed int SignedInt$1#
 	mov dword [rbp + 80], 1
 
  file_test$593:
@@ -3814,7 +3814,7 @@ section .text
 	inc dword [rbp + 32]
 
  file_test$602:
-	; Parameter 76 signedint £temporary3729
+	; Parameter 76 signed int £temporary3729
 	mov [rbp + 76], eax
 
  file_test$603:
@@ -3931,7 +3931,7 @@ section .text
 	mov qword [rbp + 80], @11678string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$629:
-	; Parameter 88 signedint SignedInt$232#
+	; Parameter 88 signed int SignedInt$232#
 	mov dword [rbp + 88], 232
 
  file_test$630:
@@ -4002,11 +4002,11 @@ section .text
 	mov [rbp + 68], rsi
 
  file_test$645:
-	; Parameter 76 signedint SignedInt$8#
+	; Parameter 76 signed int SignedInt$8#
 	mov dword [rbp + 76], 8
 
  file_test$646:
-	; Parameter 80 signedint SignedInt$1#
+	; Parameter 80 signed int SignedInt$1#
 	mov dword [rbp + 80], 1
 
  file_test$647:
@@ -4040,7 +4040,7 @@ section .text
 	inc dword [rbp + 32]
 
  file_test$654:
-	; Parameter 76 signedint £temporary3743
+	; Parameter 76 signed int £temporary3743
 	mov [rbp + 76], eax
 
  file_test$655:
@@ -4157,7 +4157,7 @@ section .text
 	mov qword [rbp + 84], @11704string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$681:
-	; Parameter 92 signedint SignedInt$250#
+	; Parameter 92 signed int SignedInt$250#
 	mov dword [rbp + 92], 250
 
  file_test$682:
@@ -4198,11 +4198,11 @@ section .text
 	mov [rbp + 60], rsi
 
  file_test$690:
-	; Parameter 68 signedint SignedInt$4#
+	; Parameter 68 signed int SignedInt$4#
 	mov dword [rbp + 68], 4
 
  file_test$691:
-	; Parameter 72 signedint SignedInt$1#
+	; Parameter 72 signed int SignedInt$1#
 	mov dword [rbp + 72], 1
 
  file_test$692:
@@ -4228,7 +4228,7 @@ section .text
 	mov qword [rbp + 60], @11713string_size43A2025i20total2025i0A#
 
  file_test$697:
-	; Parameter 68 signedint size
+	; Parameter 68 signed int size
 	mov eax, [rbp + 32]
 	mov [rbp + 68], eax
 
@@ -4239,7 +4239,7 @@ section .text
 	imul dword [@11715SignedInt$8#]
 
  file_test$699:
-	; Parameter 72 signedint £temporary3754
+	; Parameter 72 signed int £temporary3754
 	mov [rbp + 72], eax
 
  file_test$700:
@@ -4265,7 +4265,7 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$704:
-	; Parameter 68 signedint total
+	; Parameter 68 signed int total
 	mov eax, [rbp + 36]
 	mov [rbp + 68], eax
 
@@ -4329,7 +4329,7 @@ section .text
 	mov qword [rbp + 108], @11729string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$718:
-	; Parameter 116 signedint SignedInt$257#
+	; Parameter 116 signed int SignedInt$257#
 	mov dword [rbp + 116], 257
 
  file_test$719:
@@ -4370,7 +4370,7 @@ section .text
 	mov [rbp + 92], rax
 
  file_test$727:
-	; Parameter 100 signedint total
+	; Parameter 100 signed int total
 	mov eax, [rbp + 36]
 	mov [rbp + 100], eax
 
@@ -4400,12 +4400,12 @@ section .text
 	mov [rbp + 84], rax
 
  file_test$733:
-	; Parameter 92 signedint total
+	; Parameter 92 signed int total
 	mov eax, [rbp + 36]
 	mov [rbp + 92], eax
 
  file_test$734:
-	; Parameter 96 signedint SignedInt$1#
+	; Parameter 96 signed int SignedInt$1#
 	mov dword [rbp + 96], 1
 
  file_test$735:
@@ -4441,7 +4441,7 @@ section .text
 	mov qword [rbp + 84], @11739string_index43A2025i3A20value2025f0A#
 
  file_test$742:
-	; Parameter 92 signedint index
+	; Parameter 92 signed int index
 	mov eax, [rbp + 40]
 	mov [rbp + 92], eax
 
@@ -4844,7 +4844,7 @@ section .text
 	mov qword [rbp + 296], @11871string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$839:
-	; Parameter 304 signedint SignedInt$284#
+	; Parameter 304 signed int SignedInt$284#
 	mov dword [rbp + 304], 284
 
  file_test$840:
@@ -4898,7 +4898,7 @@ section .text
 	mov qword [rbp + 296], @11879string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$851:
-	; Parameter 304 signedint SignedInt$285#
+	; Parameter 304 signed int SignedInt$285#
 	mov dword [rbp + 304], 285
 
  file_test$852:
@@ -4935,11 +4935,11 @@ section .text
 	add qword [rbp + 272], 24
 
  file_test$859:
-	; Parameter 280 signedint SignedInt$156#
+	; Parameter 280 signed int SignedInt$156#
 	mov dword [rbp + 280], 156
 
  file_test$860:
-	; Parameter 284 signedint SignedInt$1#
+	; Parameter 284 signed int SignedInt$1#
 	mov dword [rbp + 284], 1
 
  file_test$861:
@@ -5014,11 +5014,11 @@ section .text
 	mov [rbp + 272], rsi
 
  file_test$877:
-	; Parameter 280 signedint SignedInt$52#
+	; Parameter 280 signed int SignedInt$52#
 	mov dword [rbp + 280], 52
 
  file_test$878:
-	; Parameter 284 signedint SignedInt$1#
+	; Parameter 284 signed int SignedInt$1#
 	mov dword [rbp + 284], 1
 
  file_test$879:
@@ -5068,7 +5068,7 @@ section .text
 	mov qword [rbp + 272], @11896string_Phone203A2025d0A#
 
  file_test$889:
-	; Parameter 280 signedint person.phone
+	; Parameter 280 signed int person.phone
 	mov eax, [rbp + 228]
 	mov [rbp + 280], eax
 
@@ -5160,7 +5160,7 @@ section .text
 	mov qword [rbp + 80], @11905string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$910:
-	; Parameter 88 signedint SignedInt$301#
+	; Parameter 88 signed int SignedInt$301#
 	mov dword [rbp + 88], 301
 
  file_test$911:
@@ -5197,11 +5197,11 @@ section .text
 	mov [rbp + 56], rax
 
  file_test$918:
-	; Parameter 64 signedint SignedInt$0#
+	; Parameter 64 signed int SignedInt$0#
 	mov dword [rbp + 64], 0
 
  file_test$919:
-	; Parameter 68 signedint SignedInt$2#
+	; Parameter 68 signed int SignedInt$2#
 	mov dword [rbp + 68], 2
 
  file_test$920:
@@ -5264,11 +5264,11 @@ section .text
 	mov eax, [rbp + 32]
 
  file_test$934:
-	; Parameter 68 signedint £temporary3867
+	; Parameter 68 signed int £temporary3867
 	mov [rbp + 68], eax
 
  file_test$935:
-	; Parameter 72 signedint SignedInt$0#
+	; Parameter 72 signed int SignedInt$0#
 	mov dword [rbp + 72], 0
 
  file_test$936:
@@ -5306,7 +5306,7 @@ section .text
 	; GetReturnValue £temporary3869
 
  file_test$944:
-	; Parameter 60 signedint £temporary3869
+	; Parameter 60 signed int £temporary3869
 	mov [rbp + 60], ebx
 
  file_test$945:
@@ -6211,7 +6211,7 @@ section .text
 	mov qword [rbp + 88], @12323string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  temp_file$17:
-	; Parameter 96 signedint SignedInt$369#
+	; Parameter 96 signed int SignedInt$369#
 	mov dword [rbp + 96], 369
 
  temp_file$18:
@@ -6303,7 +6303,7 @@ section .text
 	mov qword [rbp + 88], @12332string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  temp_file$38:
-	; Parameter 96 signedint SignedInt$372#
+	; Parameter 96 signed int SignedInt$372#
 	mov dword [rbp + 96], 372
 
  temp_file$39:
@@ -6393,7 +6393,7 @@ section .text
 	neg eax
 
  temp_file$56:
-	; Parameter 65 signedint £temporary3961
+	; Parameter 65 signed int £temporary3961
 	mov [rbp + 65], eax
 
  temp_file$57:
@@ -6410,7 +6410,7 @@ section .text
 	; GetReturnValue £temporary3962
 
  temp_file$60:
-	; Parameter 65 signedint £temporary3962
+	; Parameter 65 signed int £temporary3962
 	mov [rbp + 65], ebx
 
  temp_file$61:
@@ -6532,7 +6532,7 @@ section .text
 	neg eax
 
  temp_file$85:
-	; Parameter 65 signedint £temporary3971
+	; Parameter 65 signed int £temporary3971
 	mov [rbp + 65], eax
 
  temp_file$86:

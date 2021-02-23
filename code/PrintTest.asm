@@ -206,35 +206,35 @@ section .text
 	mov qword [rbp + 48], @8864string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#
 
  print_test$2:
-	; Parameter 56 signedint SignedInt$123#
+	; Parameter 56 signed int SignedInt$123#
 	mov dword [rbp + 56], 123
 
  print_test$3:
-	; Parameter 60 signedint SignedInt$123#
+	; Parameter 60 signed int SignedInt$123#
 	mov dword [rbp + 60], 123
 
  print_test$4:
-	; Parameter 64 signedint SignedInt$123#
+	; Parameter 64 signed int SignedInt$123#
 	mov dword [rbp + 64], 123
 
  print_test$5:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  print_test$6:
-	; Parameter 72 signedint SignedInt$123#
+	; Parameter 72 signed int SignedInt$123#
 	mov dword [rbp + 72], 123
 
  print_test$7:
-	; Parameter 76 signedint SignedInt$123#
+	; Parameter 76 signed int SignedInt$123#
 	mov dword [rbp + 76], 123
 
  print_test$8:
-	; Parameter 80 signedint SignedInt$123#
+	; Parameter 80 signed int SignedInt$123#
 	mov dword [rbp + 80], 123
 
  print_test$9:
-	; Parameter 84 signedint SignedInt$123#
+	; Parameter 84 signed int SignedInt$123#
 	mov dword [rbp + 84], 123
 
  print_test$10:
@@ -257,35 +257,35 @@ section .text
 	mov qword [rbp + 48], @8881string_3C258i3E203C252B8i3E203C25208i3E203C252D8i3E203C252B2D8i3E203C252D2B8i3E203C25202D8i3E203C252D208i3E0A#
 
  print_test$14:
-	; Parameter 56 signedint SignedInt$minus123#
+	; Parameter 56 signed int SignedInt$minus123#
 	mov dword [rbp + 56], -123
 
  print_test$15:
-	; Parameter 60 signedint SignedInt$minus123#
+	; Parameter 60 signed int SignedInt$minus123#
 	mov dword [rbp + 60], -123
 
  print_test$16:
-	; Parameter 64 signedint SignedInt$minus123#
+	; Parameter 64 signed int SignedInt$minus123#
 	mov dword [rbp + 64], -123
 
  print_test$17:
-	; Parameter 68 signedint SignedInt$minus123#
+	; Parameter 68 signed int SignedInt$minus123#
 	mov dword [rbp + 68], -123
 
  print_test$18:
-	; Parameter 72 signedint SignedInt$minus123#
+	; Parameter 72 signed int SignedInt$minus123#
 	mov dword [rbp + 72], -123
 
  print_test$19:
-	; Parameter 76 signedint SignedInt$minus123#
+	; Parameter 76 signed int SignedInt$minus123#
 	mov dword [rbp + 76], -123
 
  print_test$20:
-	; Parameter 80 signedint SignedInt$minus123#
+	; Parameter 80 signed int SignedInt$minus123#
 	mov dword [rbp + 80], -123
 
  print_test$21:
-	; Parameter 84 signedint SignedInt$minus123#
+	; Parameter 84 signed int SignedInt$minus123#
 	mov dword [rbp + 84], -123
 
  print_test$22:
@@ -308,19 +308,19 @@ section .text
 	mov qword [rbp + 48], @8898string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#
 
  print_test$26:
-	; Parameter 56 signedint SignedInt$123#
+	; Parameter 56 signed int SignedInt$123#
 	mov dword [rbp + 56], 123
 
  print_test$27:
-	; Parameter 60 signedint SignedInt$123#
+	; Parameter 60 signed int SignedInt$123#
 	mov dword [rbp + 60], 123
 
  print_test$28:
-	; Parameter 64 signedint SignedInt$123#
+	; Parameter 64 signed int SignedInt$123#
 	mov dword [rbp + 64], 123
 
  print_test$29:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  print_test$30:
@@ -343,19 +343,19 @@ section .text
 	mov qword [rbp + 48], @8907string_3C2508i3E203C252B08i3E203C252008i3E203C250208i3E0A#
 
  print_test$34:
-	; Parameter 56 signedint SignedInt$minus123#
+	; Parameter 56 signed int SignedInt$minus123#
 	mov dword [rbp + 56], -123
 
  print_test$35:
-	; Parameter 60 signedint SignedInt$minus123#
+	; Parameter 60 signed int SignedInt$minus123#
 	mov dword [rbp + 60], -123
 
  print_test$36:
-	; Parameter 64 signedint SignedInt$minus123#
+	; Parameter 64 signed int SignedInt$minus123#
 	mov dword [rbp + 64], -123
 
  print_test$37:
-	; Parameter 68 signedint SignedInt$minus123#
+	; Parameter 68 signed int SignedInt$minus123#
 	mov dword [rbp + 68], -123
 
  print_test$38:

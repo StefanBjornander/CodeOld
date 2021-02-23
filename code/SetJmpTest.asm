@@ -320,7 +320,7 @@ section .text
 	mov rax, @10570string_Division20by20Zero2E#
 
  divide$11:
-	; Parameter 72 signedint £temporary3343
+	; Parameter 72 signed int £temporary3343
 	mov [rbp + 72], eax
 
  divide$12:

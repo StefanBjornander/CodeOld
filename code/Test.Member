@@ -13133,54 +13133,82 @@
 205: BinaryAdd index index 1
 206: Goto 191
 207: CallHeader 18 printf
-208: Parameter 18 string_0A0ASearch3A0A# 6
+208: Parameter 18 string_0AB20List2043A20# 6
 209: Call 18 printf 0
 210: PostCall 18
-211: Assign key 0
-212: Empty
-213: SignedLessThan 216 key 6
-214: Goto 249
-215: CheckTrackMapFloatStack
-216: Empty
-217: CallHeader 18 bsearch
-218: address £temporary6097 key
-219: Parameter 18 £temporary6097 6
-220: Parameter 18 list 8
-221: Parameter 18 size 10
-222: Parameter 18 2 12
-223: Parameter 18 compare 14
-224: Call 18 bsearch 0
-225: PostCall 18
-226: GetReturnValue £temporary6099
-227: IntegralToIntegral £temporary6100 £temporary6099
-228: Assign p £temporary6100
-229: NotEqual 231 p 0
-230: Goto 236
-231: Empty
-232: BinarySubtract £temporary6102 p list
-233: SignedDivide £temporary6103 £temporary6102 2
-234: Assign £temporary6107 £temporary6103
-235: Goto 238
-236: Empty
-237: Assign £temporary6107 -1
-238: Empty
-239: Assign index £temporary6107
-240: CallHeader 22 printf
-241: Parameter 22 string_20202825i2C2025i290A# 6
-242: Parameter 22 key 8
-243: Parameter 22 index 10
-244: Call 22 printf 0
-245: PostCall 22
-246: Empty
-247: BinaryAdd key key 1
-248: Goto 212
-249: CallHeader 16 printf
-250: Parameter 16 string_0A# 6
-251: Call 16 printf 0
-252: PostCall 16
-253: Empty
-254: Return 0
-255: FunctionEnd stdlib_test
+211: CallHeader 18 qsort
+212: Parameter 18 list 6
+213: Parameter 18 size 8
+214: Parameter 18 2 10
+215: Parameter 18 compare 12
+216: Call 18 qsort 0
+217: PostCall 18
+218: Assign index 0
+219: Empty
+220: SignedLessThan 223 index size
+221: Goto 235
+222: CheckTrackMapFloatStack
+223: Empty
+224: CallHeader 18 printf
+225: Parameter 18 string_25i20# 6
+226: SignedMultiply £temporary6099 index 2
+227: BinaryAdd £temporary6100 list £temporary6099
+228: Deref £temporary6101 -> £temporary6100 £temporary6100 0
+229: Parameter 18 £temporary6101 -> £temporary6100 8
+230: Call 18 printf 0
+231: PostCall 18
+232: Empty
+233: BinaryAdd index index 1
+234: Goto 219
+235: CallHeader 18 printf
+236: Parameter 18 string_0A0ASearch3A0A# 6
+237: Call 18 printf 0
+238: PostCall 18
+239: Assign key 0
+240: Empty
+241: SignedLessThan 244 key 6
+242: Goto 277
+243: CheckTrackMapFloatStack
+244: Empty
+245: CallHeader 18 bsearch
+246: address £temporary6106 key
+247: Parameter 18 £temporary6106 6
+248: Parameter 18 list 8
+249: Parameter 18 size 10
+250: Parameter 18 2 12
+251: Parameter 18 compare 14
+252: Call 18 bsearch 0
+253: PostCall 18
+254: GetReturnValue £temporary6108
+255: IntegralToIntegral £temporary6109 £temporary6108
+256: Assign p £temporary6109
+257: NotEqual 259 p 0
+258: Goto 264
+259: Empty
+260: BinarySubtract £temporary6111 p list
+261: SignedDivide £temporary6112 £temporary6111 2
+262: Assign £temporary6116 £temporary6112
+263: Goto 266
+264: Empty
+265: Assign £temporary6116 -1
+266: Empty
+267: Assign index £temporary6116
+268: CallHeader 22 printf
+269: Parameter 22 string_20202825i2C2025i290A# 6
+270: Parameter 22 key 8
+271: Parameter 22 index 10
+272: Call 22 printf 0
+273: PostCall 22
+274: Empty
+275: BinaryAdd key key 1
+276: Goto 240
+277: CallHeader 16 printf
+278: Parameter 16 string_0A# 6
+279: Call 16 printf 0
+280: PostCall 16
+281: Empty
+282: Return 0
+283: FunctionEnd stdlib_test
 0: Assign weekdays[0] string_Sun#
 1: Assign weekdays[1] string_Mon#
 2: Assign weekdays[2] string_Tue#
@@ -13192,31 +13220,31 @@
 8: Parameter 20 0 6
 9: Call 20 time 0
 10: PostCall 20
-11: GetReturnValue £temporary6195
-12: Assign now1 £temporary6195
+11: GetReturnValue £temporary6211
+12: Assign now1 £temporary6211
 13: CallHeader 24 gmtime
-14: address £temporary6196 now1
-15: Parameter 24 £temporary6196 6
+14: address £temporary6212 now1
+15: Parameter 24 £temporary6212 6
 16: Call 24 gmtime 0
 17: PostCall 24
-18: GetReturnValue £temporary6197
-19: Deref £temporary6198 -> £temporary6197 £temporary6197 0
-20: Assign s £temporary6198 -> £temporary6197
+18: GetReturnValue £temporary6213
+19: Deref £temporary6214 -> £temporary6213 £temporary6213 0
+20: Assign s £temporary6214 -> £temporary6213
 21: CallHeader 42 localtime
-22: address £temporary6199 now1
-23: Parameter 42 £temporary6199 6
+22: address £temporary6215 now1
+23: Parameter 42 £temporary6215 6
 24: Call 42 localtime 0
 25: PostCall 42
-26: GetReturnValue £temporary6200
-27: Deref £temporary6201 -> £temporary6200 £temporary6200 0
-28: Assign t £temporary6201 -> £temporary6200
+26: GetReturnValue £temporary6216
+27: Deref £temporary6217 -> £temporary6216 £temporary6216 0
+28: Assign t £temporary6217 -> £temporary6216
 29: CallHeader 60 mktime
-30: address £temporary6202 s
-31: Parameter 60 £temporary6202 6
+30: address £temporary6218 s
+31: Parameter 60 £temporary6218 6
 32: Call 60 mktime 0
 33: PostCall 60
-34: GetReturnValue £temporary6203
-35: Assign now2 £temporary6203
+34: GetReturnValue £temporary6219
+35: Assign now2 £temporary6219
 36: CallHeader 64 printf
 37: Parameter 64 string_now2013A2025lu0A# 6
 38: Parameter 64 now1 8
@@ -13229,14 +13257,14 @@
 45: PostCall 64
 46: CallHeader 64 printf
 47: Parameter 64 string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A# 6
-48: SignedMultiply £temporary6208 s$tm_wday 2
-49: BinaryAdd £temporary6209 weekdays £temporary6208
-50: Deref £temporary6207 -> £temporary6209 £temporary6209 0
-51: Parameter 64 £temporary6207 -> £temporary6209 8
-52: BinaryAdd £temporary6211 1900 s$tm_year
-53: Parameter 64 £temporary6211 10
-54: BinaryAdd £temporary6213 s$tm_mon 1
-55: Parameter 64 £temporary6213 12
+48: SignedMultiply £temporary6224 s$tm_wday 2
+49: BinaryAdd £temporary6225 weekdays £temporary6224
+50: Deref £temporary6223 -> £temporary6225 £temporary6225 0
+51: Parameter 64 £temporary6223 -> £temporary6225 8
+52: BinaryAdd £temporary6227 1900 s$tm_year
+53: Parameter 64 £temporary6227 10
+54: BinaryAdd £temporary6229 s$tm_mon 1
+55: Parameter 64 £temporary6229 12
 56: Parameter 64 s$tm_mday 14
 57: Parameter 64 s$tm_hour 16
 58: Parameter 64 s$tm_min 18
@@ -13248,14 +13276,14 @@
 64: PostCall 64
 65: CallHeader 64 printf
 66: Parameter 64 string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A# 6
-67: SignedMultiply £temporary6224 t$tm_wday 2
-68: BinaryAdd £temporary6225 weekdays £temporary6224
-69: Deref £temporary6223 -> £temporary6225 £temporary6225 0
-70: Parameter 64 £temporary6223 -> £temporary6225 8
-71: BinaryAdd £temporary6227 1900 t$tm_year
-72: Parameter 64 £temporary6227 10
-73: BinaryAdd £temporary6229 t$tm_mon 1
-74: Parameter 64 £temporary6229 12
+67: SignedMultiply £temporary6240 t$tm_wday 2
+68: BinaryAdd £temporary6241 weekdays £temporary6240
+69: Deref £temporary6239 -> £temporary6241 £temporary6241 0
+70: Parameter 64 £temporary6239 -> £temporary6241 8
+71: BinaryAdd £temporary6243 1900 t$tm_year
+72: Parameter 64 £temporary6243 10
+73: BinaryAdd £temporary6245 t$tm_mon 1
+74: Parameter 64 £temporary6245 12
 75: Parameter 64 t$tm_mday 14
 76: Parameter 64 t$tm_hour 16
 77: Parameter 64 t$tm_min 18
@@ -13268,23 +13296,23 @@
 84: CallHeader 666 strcpy
 85: Parameter 666 buffer1 6
 86: CallHeader 666 asctime
-87: address £temporary6238 s
-88: Parameter 666 £temporary6238 14
+87: address £temporary6254 s
+88: Parameter 666 £temporary6254 14
 89: Call 666 asctime 8
 90: PostCall 666
-91: GetReturnValue £temporary6239
-92: Parameter 666 £temporary6239 8
+91: GetReturnValue £temporary6255
+92: Parameter 666 £temporary6255 8
 93: Call 666 strcpy 0
 94: PostCall 666
 95: CallHeader 666 strcpy
 96: Parameter 666 buffer2 6
 97: CallHeader 666 ctime
-98: address £temporary6241 now1
-99: Parameter 666 £temporary6241 14
+98: address £temporary6257 now1
+99: Parameter 666 £temporary6257 14
 100: Call 666 ctime 8
 101: PostCall 666
-102: GetReturnValue £temporary6242
-103: Parameter 666 £temporary6242 8
+102: GetReturnValue £temporary6258
+103: Parameter 666 £temporary6258 8
 104: Call 666 strcpy 0
 105: PostCall 666
 106: CallHeader 666 printf
@@ -13297,12 +13325,12 @@
 113: Parameter 666 buffer 6
 114: Parameter 666 400 8
 115: Parameter 666 string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y2C20summer2Fwinter2025Z# 10
-116: address £temporary6245 t
-117: Parameter 666 £temporary6245 12
+116: address £temporary6261 t
+117: Parameter 666 £temporary6261 12
 118: Call 666 strftime 0
 119: PostCall 666
-120: GetReturnValue £temporary6246
-121: Assign i £temporary6246
+120: GetReturnValue £temporary6262
+121: Assign i £temporary6262
 122: CallHeader 666 printf
 123: Parameter 666 string_strftime2025i2025i203C25s3E0A# 6
 124: Parameter 666 i 8
@@ -13310,8 +13338,8 @@
 126: Parameter 666 buffer 16
 127: Call 666 strlen 10
 128: PostCall 666
-129: GetReturnValue £temporary6247
-130: Parameter 666 £temporary6247 10
+129: GetReturnValue £temporary6263
+130: Parameter 666 £temporary6263 10
 131: Parameter 666 buffer 12
 132: Call 666 printf 0
 133: PostCall 666

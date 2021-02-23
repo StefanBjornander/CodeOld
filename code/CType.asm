@@ -57,7 +57,7 @@ section .text
 	mov [rbp + 60], rax
 
  islower$9:
-	; Parameter 68 signedint c
+	; Parameter 68 signed int c
 	mov eax, [rbp + 24]
 	mov [rbp + 68], eax
 
@@ -176,7 +176,7 @@ section .text
 	mov [rbp + 60], rax
 
  isupper$9:
-	; Parameter 68 signedint c
+	; Parameter 68 signed int c
 	mov eax, [rbp + 24]
 	mov [rbp + 68], eax
 
@@ -261,7 +261,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  isalpha$1:
-	; Parameter 52 signedint c
+	; Parameter 52 signed int c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
@@ -287,7 +287,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  isalpha$7:
-	; Parameter 52 signedint c
+	; Parameter 52 signed int c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
@@ -377,7 +377,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  isalnum$1:
-	; Parameter 52 signedint c
+	; Parameter 52 signed int c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
@@ -403,7 +403,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  isalnum$7:
-	; Parameter 52 signedint c
+	; Parameter 52 signed int c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
@@ -456,7 +456,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  isxdigit$1:
-	; Parameter 52 signedint c
+	; Parameter 52 signed int c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
@@ -566,7 +566,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  isprint$1:
-	; Parameter 52 signedint c
+	; Parameter 52 signed int c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
@@ -624,7 +624,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  ispunct$1:
-	; Parameter 52 signedint c
+	; Parameter 52 signed int c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
@@ -650,7 +650,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  ispunct$7:
-	; Parameter 52 signedint c
+	; Parameter 52 signed int c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
@@ -703,7 +703,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  iscntrl$1:
-	; Parameter 52 signedint c
+	; Parameter 52 signed int c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
@@ -813,7 +813,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  tolower$1:
-	; Parameter 52 signedint c
+	; Parameter 52 signed int c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
@@ -887,7 +887,7 @@ section .text
 	mov [rbp + 76], rax
 
  tolower$18:
-	; Parameter 84 signedint c
+	; Parameter 84 signed int c
 	mov eax, [rbp + 24]
 	mov [rbp + 84], eax
 
@@ -983,7 +983,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  toupper$1:
-	; Parameter 52 signedint c
+	; Parameter 52 signed int c
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
@@ -1057,7 +1057,7 @@ section .text
 	mov [rbp + 76], rax
 
  toupper$18:
-	; Parameter 84 signedint c
+	; Parameter 84 signed int c
 	mov eax, [rbp + 24]
 	mov [rbp + 84], eax
 

@@ -111,7 +111,7 @@ section .text
 	mov qword [rbp + 120], @633string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  malloc$17:
-	; Parameter 128 signedint SignedInt$41#
+	; Parameter 128 signed int SignedInt$41#
 	mov dword [rbp + 128], 41
 
  malloc$18:
@@ -453,7 +453,7 @@ section .text
 	imul dword [rbp + 28]
 
  calloc$2:
-	; Parameter 56 signedint £temporary67
+	; Parameter 56 signed int £temporary67
 	mov [rbp + 56], eax
 
  calloc$3:
@@ -487,11 +487,11 @@ section .text
 	mov [rbp + 64], rax
 
  calloc$10:
-	; Parameter 72 signedint SignedInt$0#
+	; Parameter 72 signed int SignedInt$0#
 	mov dword [rbp + 72], 0
 
  calloc$11:
-	; Parameter 76 signedint size
+	; Parameter 76 signed int size
 	mov eax, [rbp + 28]
 	mov [rbp + 76], eax
 
@@ -743,7 +743,7 @@ section .text
 	mov qword [rbp + 84], @738string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  realloc$6:
-	; Parameter 92 signedint SignedInt$259#
+	; Parameter 92 signed int SignedInt$259#
 	mov dword [rbp + 92], 259
 
  realloc$7:
@@ -802,7 +802,7 @@ section .text
 	mov qword [rbp + 84], @748string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  realloc$19:
-	; Parameter 92 signedint SignedInt$260#
+	; Parameter 92 signed int SignedInt$260#
 	mov dword [rbp + 92], 260
 
  realloc$20:
@@ -839,7 +839,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$27:
-	; Parameter 60 signedint newMemorySize
+	; Parameter 60 signed int newMemorySize
 	mov eax, [rbp + 32]
 	mov [rbp + 60], eax
 
@@ -1048,7 +1048,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  realloc$72:
-	; Parameter 72 signedint newMemorySize
+	; Parameter 72 signed int newMemorySize
 	mov eax, [rbp + 32]
 	mov [rbp + 72], eax
 
@@ -1088,7 +1088,7 @@ section .text
 	mov [rbp + 88], rax
 
  realloc$81:
-	; Parameter 96 signedint newMemorySize
+	; Parameter 96 signed int newMemorySize
 	mov eax, [rbp + 32]
 	mov [rbp + 96], eax
 
@@ -1205,7 +1205,7 @@ section .text
 	mov rax, [rbp + 24]
 
  print_heap$9:
-	; Parameter 64 unsignedint £temporary128
+	; Parameter 64 unsigned int £temporary128
 	mov [rbp + 64], eax
 
  print_heap$10:
@@ -1213,7 +1213,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  print_heap$11:
-	; Parameter 68 unsignedint £temporary129
+	; Parameter 68 unsigned int £temporary129
 	mov eax, [rsi]
 	mov [rbp + 68], eax
 

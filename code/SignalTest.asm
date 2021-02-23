@@ -26,7 +26,7 @@ section .text
 	mov qword [rbp + 52], @13235string_Floating20point20error3A2025i0A#
 
  floating_point_error$2:
-	; Parameter 60 signedint sig
+	; Parameter 60 signed int sig
 	mov eax, [rbp + 24]
 	mov [rbp + 60], eax
 
@@ -191,7 +191,7 @@ section .text
 	mov qword [rbp + 60], @13255string_25i0A#
 
  signal_test$5:
-	; Parameter 68 signedint c
+	; Parameter 68 signed int c
 	mov eax, [rbp + 32]
 	mov [rbp + 68], eax
 
@@ -262,7 +262,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  signal_test$21:
-	; Parameter 60 signedint SignedInt$0#
+	; Parameter 60 signed int SignedInt$0#
 	mov dword [rbp + 60], 0
 
  signal_test$22:

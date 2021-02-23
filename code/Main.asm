@@ -66,7 +66,7 @@ section .text
 	inc dword [@314$count]
 
  mainX$5:
-	; Parameter 56 signedint £temporary1
+	; Parameter 56 signed int £temporary1
 	mov [rbp + 56], eax
 
  mainX$6:

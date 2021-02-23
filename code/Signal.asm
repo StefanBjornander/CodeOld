@@ -122,7 +122,7 @@ section .text
 	mov [rbp + 68], rax
 
  raise$18:
-	; Parameter 76 signedint sig
+	; Parameter 76 signed int sig
 	mov eax, [rbp + 24]
 	mov [rbp + 76], eax
 
@@ -142,7 +142,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  raise$22:
-	; Parameter 60 signedint sig
+	; Parameter 60 signed int sig
 	mov eax, [rbp + 24]
 	mov [rbp + 60], eax
 

@@ -371,7 +371,7 @@ section .text
 	neg eax
 
  scanPattern$8:
-	; Parameter 77 signedint £temporary859
+	; Parameter 77 signed int £temporary859
 	mov [rbp + 77], eax
 
  scanPattern$9:
@@ -435,7 +435,7 @@ section .text
 	mov [rbp + 77], rax
 
  scanPattern$23:
-	; Parameter 85 signedint size
+	; Parameter 85 signed int size
 	mov eax, [rbp + 40]
 	mov [rbp + 85], eax
 
@@ -449,7 +449,7 @@ section .text
 	neg eax
 
  scanPattern$25:
-	; Parameter 89 signedint £temporary866
+	; Parameter 89 signed int £temporary866
 	mov [rbp + 89], eax
 
  scanPattern$26:
@@ -484,7 +484,7 @@ section .text
 	mov [rbp + 77], rax
 
  scanPattern$33:
-	; Parameter 85 signedint size
+	; Parameter 85 signed int size
 	mov eax, [rbp + 40]
 	mov [rbp + 85], eax
 
@@ -498,7 +498,7 @@ section .text
 	neg eax
 
  scanPattern$35:
-	; Parameter 89 signedint £temporary870
+	; Parameter 89 signed int £temporary870
 	mov [rbp + 89], eax
 
  scanPattern$36:
@@ -605,7 +605,7 @@ section .text
 	mov [rbp + 77], rax
 
  scanPattern$60:
-	; Parameter 85 signedint size
+	; Parameter 85 signed int size
 	mov eax, [rbp + 40]
 	mov [rbp + 85], eax
 
@@ -619,7 +619,7 @@ section .text
 	neg eax
 
  scanPattern$62:
-	; Parameter 89 signedint £temporary887
+	; Parameter 89 signed int £temporary887
 	mov [rbp + 89], eax
 
  scanPattern$63:
@@ -654,7 +654,7 @@ section .text
 	mov [rbp + 77], rax
 
  scanPattern$70:
-	; Parameter 85 signedint size
+	; Parameter 85 signed int size
 	mov eax, [rbp + 40]
 	mov [rbp + 85], eax
 
@@ -668,7 +668,7 @@ section .text
 	neg eax
 
  scanPattern$72:
-	; Parameter 89 signedint £temporary891
+	; Parameter 89 signed int £temporary891
 	mov [rbp + 89], eax
 
  scanPattern$73:
@@ -766,7 +766,7 @@ section .text
 	neg eax
 
  scanString$9:
-	; Parameter 69 signedint £temporary900
+	; Parameter 69 signed int £temporary900
 	mov [rbp + 69], eax
 
  scanString$10:
@@ -834,7 +834,7 @@ section .text
 	neg eax
 
  scanString$24:
-	; Parameter 69 signedint £temporary906
+	; Parameter 69 signed int £temporary906
 	mov [rbp + 69], eax
 
  scanString$25:
@@ -984,7 +984,7 @@ section .text
 	neg eax
 
  scanString$57:
-	; Parameter 69 signedint £temporary927
+	; Parameter 69 signed int £temporary927
 	mov [rbp + 69], eax
 
  scanString$58:
@@ -1131,7 +1131,7 @@ section .text
 	neg eax
 
  scanString$89:
-	; Parameter 69 signedint £temporary949
+	; Parameter 69 signed int £temporary949
 	mov [rbp + 69], eax
 
  scanString$90:
@@ -1237,7 +1237,7 @@ section .text
 	neg eax
 
  scanString$112:
-	; Parameter 69 signedint £temporary963
+	; Parameter 69 signed int £temporary963
 	mov [rbp + 69], eax
 
  scanString$113:
@@ -1352,7 +1352,7 @@ section .text
 	neg eax
 
  @3639$isDigitInBase$2:
-	; Parameter 53 signedint £temporary979
+	; Parameter 53 signed int £temporary979
 	mov [rbp + 53], eax
 
  @3639$isDigitInBase$3:
@@ -1436,7 +1436,7 @@ section .text
 	neg eax
 
  @3639$isDigitInBase$19:
-	; Parameter 53 signedint £temporary987
+	; Parameter 53 signed int £temporary987
 	mov [rbp + 53], eax
 
  @3639$isDigitInBase$20:
@@ -1521,7 +1521,7 @@ section .text
 	neg eax
 
  @3639$isDigitInBase$36:
-	; Parameter 53 signedint £temporary996
+	; Parameter 53 signed int £temporary996
 	mov [rbp + 53], eax
 
  @3639$isDigitInBase$37:
@@ -1622,7 +1622,7 @@ section .text
 	neg eax
 
  @3674$digitToValue$2:
-	; Parameter 49 signedint £temporary1008
+	; Parameter 49 signed int £temporary1008
 	mov [rbp + 49], eax
 
  @3674$digitToValue$3:
@@ -1679,7 +1679,7 @@ section .text
 	neg eax
 
  @3674$digitToValue$13:
-	; Parameter 49 signedint £temporary1012
+	; Parameter 49 signed int £temporary1012
 	mov [rbp + 49], eax
 
  @3674$digitToValue$14:
@@ -1740,7 +1740,7 @@ section .text
 	neg eax
 
  @3674$digitToValue$25:
-	; Parameter 49 signedint £temporary1017
+	; Parameter 49 signed int £temporary1017
 	mov [rbp + 49], eax
 
  @3674$digitToValue$26:
@@ -1849,7 +1849,7 @@ section .text
 	neg eax
 
  scanLongInt$10:
-	; Parameter 69 signedint £temporary1026
+	; Parameter 69 signed int £temporary1026
 	mov [rbp + 69], eax
 
  scanLongInt$11:
@@ -1995,7 +1995,7 @@ section .text
 	neg eax
 
  scanLongInt$44:
-	; Parameter 69 signedint £temporary1037
+	; Parameter 69 signed int £temporary1037
 	mov [rbp + 69], eax
 
  scanLongInt$45:
@@ -2060,12 +2060,12 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongInt$60:
-	; Parameter 69 signedchar input
+	; Parameter 69 signed char input
 	mov al, [rbp + 44]
 	mov [rbp + 69], al
 
  scanLongInt$61:
-	; Parameter 70 signedint base
+	; Parameter 70 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 70], eax
 
@@ -2108,7 +2108,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongInt$69:
-	; Parameter 69 signedchar input
+	; Parameter 69 signed char input
 	mov al, [rbp + 44]
 	mov [rbp + 69], al
 
@@ -2193,7 +2193,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongInt$88:
-	; Parameter 69 signedchar input
+	; Parameter 69 signed char input
 	mov al, [rbp + 44]
 	mov [rbp + 69], al
 
@@ -2264,7 +2264,7 @@ section .text
 	neg eax
 
  scanUnsignedLongInt$9:
-	; Parameter 73 signedint £temporary1055
+	; Parameter 73 signed int £temporary1055
 	mov [rbp + 73], eax
 
  scanUnsignedLongInt$10:
@@ -2377,7 +2377,7 @@ section .text
 	neg eax
 
  scanUnsignedLongInt$35:
-	; Parameter 73 signedint £temporary1064
+	; Parameter 73 signed int £temporary1064
 	mov [rbp + 73], eax
 
  scanUnsignedLongInt$36:
@@ -2442,12 +2442,12 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanUnsignedLongInt$51:
-	; Parameter 73 signedchar input
+	; Parameter 73 signed char input
 	mov al, [rbp + 44]
 	mov [rbp + 73], al
 
  scanUnsignedLongInt$52:
-	; Parameter 74 signedint base
+	; Parameter 74 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 74], eax
 
@@ -2486,7 +2486,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanUnsignedLongInt$60:
-	; Parameter 73 signedchar input
+	; Parameter 73 signed char input
 	mov al, [rbp + 44]
 	mov [rbp + 73], al
 
@@ -2553,7 +2553,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanUnsignedLongInt$76:
-	; Parameter 73 signedchar input
+	; Parameter 73 signed char input
 	mov al, [rbp + 44]
 	mov [rbp + 73], al
 
@@ -2670,7 +2670,7 @@ section .text
 	neg eax
 
  scanLongDouble$13:
-	; Parameter 73 signedint £temporary1080
+	; Parameter 73 signed int £temporary1080
 	mov [rbp + 73], eax
 
  scanLongDouble$14:
@@ -2786,7 +2786,7 @@ section .text
 	neg eax
 
  scanLongDouble$40:
-	; Parameter 73 signedint £temporary1088
+	; Parameter 73 signed int £temporary1088
 	mov [rbp + 73], eax
 
  scanLongDouble$41:
@@ -2911,7 +2911,7 @@ section .text
 	neg eax
 
  scanLongDouble$68:
-	; Parameter 73 signedint £temporary1099
+	; Parameter 73 signed int £temporary1099
 	mov [rbp + 73], eax
 
  scanLongDouble$69:
@@ -3027,7 +3027,7 @@ section .text
 	neg eax
 
  scanLongDouble$94:
-	; Parameter 73 signedint £temporary1109
+	; Parameter 73 signed int £temporary1109
 	mov [rbp + 73], eax
 
  scanLongDouble$95:
@@ -3052,7 +3052,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongDouble$100:
-	; Parameter 73 signedint SignedInt$10#
+	; Parameter 73 signed int SignedInt$10#
 	mov dword [rbp + 73], 10
 
  scanLongDouble$101:
@@ -3133,7 +3133,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongDouble$119:
-	; Parameter 73 signedchar input
+	; Parameter 73 signed char input
 	mov al, [rbp + 48]
 	mov [rbp + 73], al
 
@@ -3519,7 +3519,7 @@ section .text
 	mov [rbp + 181], rax
 
  scanFormat$72:
-	; Parameter 189 signedint SignedInt$0#
+	; Parameter 189 signed int SignedInt$0#
 	mov dword [rbp + 189], 0
 
  scanFormat$73:
@@ -3544,7 +3544,7 @@ section .text
 	mov qword [rbp + 181], 0
 
  scanFormat$78:
-	; Parameter 189 signedint SignedInt$0#
+	; Parameter 189 signed int SignedInt$0#
 	mov dword [rbp + 189], 0
 
  scanFormat$79:
@@ -3569,7 +3569,7 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$84:
-	; Parameter 181 signedint SignedInt$10#
+	; Parameter 181 signed int SignedInt$10#
 	mov dword [rbp + 181], 10
 
  scanFormat$85:
@@ -3725,7 +3725,7 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$120:
-	; Parameter 181 signedint SignedInt$8#
+	; Parameter 181 signed int SignedInt$8#
 	mov dword [rbp + 181], 8
 
  scanFormat$121:
@@ -3873,7 +3873,7 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$156:
-	; Parameter 181 signedint SignedInt$16#
+	; Parameter 181 signed int SignedInt$16#
 	mov dword [rbp + 181], 16
 
  scanFormat$157:
@@ -4021,7 +4021,7 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$192:
-	; Parameter 181 signedint SignedInt$0#
+	; Parameter 181 signed int SignedInt$0#
 	mov dword [rbp + 181], 0
 
  scanFormat$193:
@@ -4477,12 +4477,12 @@ section .text
 	mov [rbp + 210], rsi
 
  scanFormat$300:
-	; Parameter 218 signedint size
+	; Parameter 218 signed int size
 	mov eax, [rbp + 165]
 	mov [rbp + 218], eax
 
  scanFormat$301:
-	; Parameter 222 signedint not
+	; Parameter 222 signed int not
 	mov eax, [rbp + 157]
 	mov [rbp + 222], eax
 
@@ -4529,12 +4529,12 @@ section .text
 	mov [rbp + 202], rsi
 
  scanFormat$312:
-	; Parameter 210 signedint size
+	; Parameter 210 signed int size
 	mov eax, [rbp + 165]
 	mov [rbp + 210], eax
 
  scanFormat$313:
-	; Parameter 214 signedint not
+	; Parameter 214 signed int not
 	mov eax, [rbp + 157]
 	mov [rbp + 214], eax
 

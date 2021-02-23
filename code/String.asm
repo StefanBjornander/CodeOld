@@ -1111,7 +1111,7 @@ section .text
 	neg eax
 
  strspn$11:
-	; Parameter 76 signedint £temporary2922
+	; Parameter 76 signed int £temporary2922
 	mov [rbp + 76], eax
 
  strspn$12:
@@ -1222,7 +1222,7 @@ section .text
 	neg eax
 
  strcspn$11:
-	; Parameter 76 signedint £temporary2933
+	; Parameter 76 signed int £temporary2933
 	mov [rbp + 76], eax
 
  strcspn$12:
@@ -1333,7 +1333,7 @@ section .text
 	neg eax
 
  strpbrk$11:
-	; Parameter 76 signedint £temporary2944
+	; Parameter 76 signed int £temporary2944
 	mov [rbp + 76], eax
 
  strpbrk$12:
@@ -1477,7 +1477,7 @@ section .text
 	mov [rbp + 80], rax
 
  strstr$16:
-	; Parameter 88 signedint subStringSize
+	; Parameter 88 signed int subStringSize
 	mov eax, [rbp + 44]
 	mov [rbp + 88], eax
 
@@ -1774,7 +1774,7 @@ section .text
 	neg eax
 
  strtok$16:
-	; Parameter 84 signedint £temporary2989
+	; Parameter 84 signed int £temporary2989
 	mov [rbp + 84], eax
 
  strtok$17:
@@ -1980,7 +1980,7 @@ section .text
 	neg eax
 
  strtok$60:
-	; Parameter 84 signedint £temporary3015
+	; Parameter 84 signed int £temporary3015
 	mov [rbp + 84], eax
 
  strtok$61:

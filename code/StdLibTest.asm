@@ -182,12 +182,12 @@ section .text
 	mov qword [rbp + 56], @14105string_div_t20quot2025i20rem2025i0A#
 
  print_div$2:
-	; Parameter 64 signedint d.quot
+	; Parameter 64 signed int d.quot
 	mov eax, [rbp + 24]
 	mov [rbp + 64], eax
 
  print_div$3:
-	; Parameter 68 signedint d.rem
+	; Parameter 68 signed int d.rem
 	mov eax, [rbp + 28]
 	mov [rbp + 68], eax
 
@@ -242,12 +242,12 @@ section .text
 	mov qword [rbp + 64], @14112string_ldiv_t20quot2025li20rem2025li0A#
 
  print_ldiv$2:
-	; Parameter 72 signedlongint ld.quot
+	; Parameter 72 signed long int ld.quot
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
  print_ldiv$3:
-	; Parameter 80 signedlongint ld.rem
+	; Parameter 80 signed long int ld.rem
 	mov rax, [rbp + 32]
 	mov [rbp + 80], rax
 
@@ -450,7 +450,7 @@ section .text
 	mov rax, [rbp + 24]
 
  qtest$3:
-	; Parameter 64 unsignedint £temporary4189
+	; Parameter 64 unsigned int £temporary4189
 	mov [rbp + 64], eax
 
  qtest$4:
@@ -515,7 +515,7 @@ section .text
 	mov rax, hello
 
  stdlib_testZ$3:
-	; Parameter 56 unsignedint £temporary4192
+	; Parameter 56 unsigned int £temporary4192
 	mov [rbp + 56], eax
 
  stdlib_testZ$4:
@@ -697,19 +697,31 @@ section .data
 
 section .data
 
-@14234string_0A0ASearch3A0A#:
+@14234string_0AB20List2043A20#:
+	; Initializer String \nB List 4: 
+	db 10, "B List 4: ", 0
+
+section .data
+
+@14242string_25i20#:
+	; Initializer String %i 
+	db "%i ", 0
+
+section .data
+
+@14246string_0A0ASearch3A0A#:
 	; Initializer String \n\nSearch:\n
 	db 10, 10, "Search:", 10, 0
 
 section .data
 
-@14253string_20202825i2C2025i290A#:
+@14265string_20202825i2C2025i290A#:
 	; Initializer String   (%i, %i)\n
 	db "  (%i, %i)", 10, 0
 
 section .data
 
-@14254string_0A#:
+@14266string_0A#:
 	; Initializer String \n
 	db 10, 0
 
@@ -733,7 +745,13 @@ section .data
 
 section .data
 
-@14249SignedInt$4#:
+@14244SignedInt$4#:
+	; Initializer SignedInt 4
+	dd 4
+
+section .data
+
+@14261SignedInt$4#:
 	; Initializer SignedInt 4
 	dd 4
 
@@ -928,7 +946,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$44:
-	; Parameter 80 signedint SignedInt$minus3#
+	; Parameter 80 signed int SignedInt$minus3#
 	mov dword [rbp + 80], -3
 
  stdlib_test$45:
@@ -945,14 +963,14 @@ section .text
 	; GetReturnValue £temporary4205
 
  stdlib_test$48:
-	; Parameter 56 signedint £temporary4205
+	; Parameter 56 signed int £temporary4205
 	mov [rbp + 56], ebx
 
  stdlib_test$49:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$50:
-	; Parameter 84 signedint SignedInt$3#
+	; Parameter 84 signed int SignedInt$3#
 	mov dword [rbp + 84], 3
 
  stdlib_test$51:
@@ -969,7 +987,7 @@ section .text
 	; GetReturnValue £temporary4206
 
  stdlib_test$54:
-	; Parameter 60 signedint £temporary4206
+	; Parameter 60 signed int £temporary4206
 	mov [rbp + 60], ebx
 
  stdlib_test$55:
@@ -995,7 +1013,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$60:
-	; Parameter 80 signedlongint SignedLongInt$minus3#
+	; Parameter 80 signed long int SignedLongInt$minus3#
 	mov qword [rbp + 80], -3
 
  stdlib_test$61:
@@ -1012,14 +1030,14 @@ section .text
 	; GetReturnValue £temporary4208
 
  stdlib_test$64:
-	; Parameter 56 signedlongint £temporary4208
+	; Parameter 56 signed long int £temporary4208
 	mov [rbp + 56], rbx
 
  stdlib_test$65:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$66:
-	; Parameter 88 signedlongint SignedLongInt$3#
+	; Parameter 88 signed long int SignedLongInt$3#
 	mov qword [rbp + 88], 3
 
  stdlib_test$67:
@@ -1036,7 +1054,7 @@ section .text
 	; GetReturnValue £temporary4209
 
  stdlib_test$70:
-	; Parameter 64 signedlongint £temporary4209
+	; Parameter 64 signed long int £temporary4209
 	mov [rbp + 64], rbx
 
  stdlib_test$71:
@@ -1055,11 +1073,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$74:
-	; Parameter 48 signedint SignedInt$10#
+	; Parameter 48 signed int SignedInt$10#
 	mov dword [rbp + 48], 10
 
  stdlib_test$75:
-	; Parameter 52 signedint SignedInt$3#
+	; Parameter 52 signed int SignedInt$3#
 	mov dword [rbp + 52], 3
 
  stdlib_test$76:
@@ -1099,12 +1117,12 @@ section .text
 	mov qword [rbp + 56], @14173string_div_t28102C20329203D202825i2C2025i290A#
 
  stdlib_test$83:
-	; Parameter 64 signedint i.quot
+	; Parameter 64 signed int i.quot
 	mov eax, [rbp + 24]
 	mov [rbp + 64], eax
 
  stdlib_test$84:
-	; Parameter 68 signedint i.rem
+	; Parameter 68 signed int i.rem
 	mov eax, [rbp + 28]
 	mov [rbp + 68], eax
 
@@ -1178,12 +1196,12 @@ section .text
 	mov qword [rbp + 64], @14175string_div_t28102C20329203D202825i2C2025i290A0A#
 
  stdlib_test$97:
-	; Parameter 72 signedint j.quot
+	; Parameter 72 signed int j.quot
 	mov eax, [rbp + 32]
 	mov [rbp + 72], eax
 
  stdlib_test$98:
-	; Parameter 76 signedint j.rem
+	; Parameter 76 signed int j.rem
 	mov eax, [rbp + 36]
 	mov [rbp + 76], eax
 
@@ -1203,11 +1221,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$102:
-	; Parameter 48 signedlongint SignedLongInt$10#
+	; Parameter 48 signed long int SignedLongInt$10#
 	mov qword [rbp + 48], 10
 
  stdlib_test$103:
-	; Parameter 56 signedlongint SignedLongInt$3#
+	; Parameter 56 signed long int SignedLongInt$3#
 	mov qword [rbp + 56], 3
 
  stdlib_test$104:
@@ -1247,12 +1265,12 @@ section .text
 	mov qword [rbp + 64], @14183string_ldiv_t28102C20329203D202825li2C2025li290A#
 
  stdlib_test$111:
-	; Parameter 72 signedlongint li.quot
+	; Parameter 72 signed long int li.quot
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
  stdlib_test$112:
-	; Parameter 80 signedlongint li.rem
+	; Parameter 80 signed long int li.rem
 	mov rax, [rbp + 32]
 	mov [rbp + 80], rax
 
@@ -1326,12 +1344,12 @@ section .text
 	mov qword [rbp + 80], @14185string_ldiv_t28102C20329203D202825li2C2025li290A0A#
 
  stdlib_test$125:
-	; Parameter 88 signedlongint lj.quot
+	; Parameter 88 signed long int lj.quot
 	mov rax, [rbp + 40]
 	mov [rbp + 88], rax
 
  stdlib_test$126:
-	; Parameter 96 signedlongint lj.rem
+	; Parameter 96 signed long int lj.rem
 	mov rax, [rbp + 48]
 	mov [rbp + 96], rax
 
@@ -1423,7 +1441,7 @@ section .text
 	; Dereference £temporary4242 £temporary4241 0
 
  stdlib_test$146:
-	; Parameter 80 signedint £temporary4242
+	; Parameter 80 signed int £temporary4242
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1474,12 +1492,12 @@ section .text
 	add qword [rbp + 72], 24
 
  stdlib_test$157:
-	; Parameter 80 signedint size
+	; Parameter 80 signed int size
 	mov eax, [rbp + 40]
 	mov [rbp + 80], eax
 
  stdlib_test$158:
-	; Parameter 84 signedint SignedInt$4#
+	; Parameter 84 signed int SignedInt$4#
 	mov dword [rbp + 84], 4
 
  stdlib_test$159:
@@ -1534,7 +1552,7 @@ section .text
 	; Dereference £temporary4252 £temporary4251 0
 
  stdlib_test$170:
-	; Parameter 80 signedint £temporary4252
+	; Parameter 80 signed int £temporary4252
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1585,12 +1603,12 @@ section .text
 	add qword [rbp + 72], 24
 
  stdlib_test$181:
-	; Parameter 80 signedint size
+	; Parameter 80 signed int size
 	mov eax, [rbp + 40]
 	mov [rbp + 80], eax
 
  stdlib_test$182:
-	; Parameter 84 signedint SignedInt$4#
+	; Parameter 84 signed int SignedInt$4#
 	mov dword [rbp + 84], 4
 
  stdlib_test$183:
@@ -1645,7 +1663,7 @@ section .text
 	; Dereference £temporary4262 £temporary4261 0
 
  stdlib_test$194:
-	; Parameter 80 signedint £temporary4262
+	; Parameter 80 signed int £temporary4262
 	mov eax, [rsi]
 	mov [rbp + 80], eax
 
@@ -1673,8 +1691,8 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$200:
-	; Parameter 72 pointer string_0A0ASearch3A0A#
-	mov qword [rbp + 72], @14234string_0A0ASearch3A0A#
+	; Parameter 72 pointer string_0AB20List2043A20#
+	mov qword [rbp + 72], @14234string_0AB20List2043A20#
 
  stdlib_test$201:
 	; Call 48 printf 0
@@ -1688,157 +1706,268 @@ section .text
 	; PostCall 48
 
  stdlib_test$203:
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ stdlib_test$204:
+	; Parameter 72 pointer list
+	mov [rbp + 72], rbp
+	add qword [rbp + 72], 24
+
+ stdlib_test$205:
+	; Parameter 80 signed int size
+	mov eax, [rbp + 40]
+	mov [rbp + 80], eax
+
+ stdlib_test$206:
+	; Parameter 84 signed int SignedInt$4#
+	mov dword [rbp + 84], 4
+
+ stdlib_test$207:
+	; Parameter 88 pointer compare
+	mov qword [rbp + 88], compare
+
+ stdlib_test$208:
+	; Call 48 qsort 0
+	mov qword [rbp + 48], stdlib_test$209
+	mov [rbp + 56], rbp
+	add rbp, 48
+	jmp qsort
+
+ stdlib_test$209:
+	; PostCall 48
+
+ stdlib_test$210:
+	; Assign index SignedInt$0#
+	mov dword [rbp + 44], 0
+
+ stdlib_test$211:
+	; GreaterThanEqual 223 index size
+	mov eax, [rbp + 40]
+	cmp [rbp + 44], eax
+	jge stdlib_test$223
+
+ stdlib_test$212:
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ stdlib_test$213:
+	; Parameter 72 pointer string_25i20#
+	mov qword [rbp + 72], @14242string_25i20#
+
+ stdlib_test$214:
+	; Multiply £temporary4269 index SignedInt$4#
+	mov eax, [rbp + 44]
+	xor edx, edx
+	imul dword [@14244SignedInt$4#]
+
+ stdlib_test$215:
+	; IntegralToIntegral £temporary4270 £temporary4269
+	mov rbx, 4294967295
+	and rax, rbx
+
+ stdlib_test$216:
+	; Add £temporary4271 list £temporary4270
+	mov rsi, rbp
+	add rsi, 24
+	add rsi, rax
+
+ stdlib_test$217:
+	; Dereference £temporary4272 £temporary4271 0
+
+ stdlib_test$218:
+	; Parameter 80 signed int £temporary4272
+	mov eax, [rsi]
+	mov [rbp + 80], eax
+
+ stdlib_test$219:
+	; Call 48 printf 4
+	mov qword [rbp + 48], stdlib_test$220
+	mov [rbp + 56], rbp
+	add rbp, 48
+	mov rdi, rbp
+	add rdi, 4
+	jmp printf
+
+ stdlib_test$220:
+	; PostCall 48
+
+ stdlib_test$221:
+	; Add index index SignedInt$1#
+	inc dword [rbp + 44]
+
+ stdlib_test$222:
+	; Jump 211
+	jmp stdlib_test$211
+
+ stdlib_test$223:
+	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ stdlib_test$224:
+	; Parameter 72 pointer string_0A0ASearch3A0A#
+	mov qword [rbp + 72], @14246string_0A0ASearch3A0A#
+
+ stdlib_test$225:
+	; Call 48 printf 0
+	mov qword [rbp + 48], stdlib_test$226
+	mov [rbp + 56], rbp
+	add rbp, 48
+	mov rdi, rbp
+	jmp printf
+
+ stdlib_test$226:
+	; PostCall 48
+
+ stdlib_test$227:
 	; Assign key SignedInt$0#
 	mov dword [rbp + 44], 0
 
- stdlib_test$204:
-	; GreaterThanEqual 232 key SignedInt$6#
+ stdlib_test$228:
+	; GreaterThanEqual 256 key SignedInt$6#
 	cmp dword [rbp + 44], 6
-	jge stdlib_test$232
+	jge stdlib_test$256
 
- stdlib_test$205:
+ stdlib_test$229:
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- stdlib_test$206:
-	; Address £temporary4267 key
+ stdlib_test$230:
+	; Address £temporary4277 key
 	mov rsi, rbp
 	add rsi, 44
 
- stdlib_test$207:
-	; Parameter 72 pointer £temporary4267
+ stdlib_test$231:
+	; Parameter 72 pointer £temporary4277
 	mov [rbp + 72], rsi
 
- stdlib_test$208:
+ stdlib_test$232:
 	; Parameter 80 pointer list
 	mov [rbp + 80], rbp
 	add qword [rbp + 80], 24
 
- stdlib_test$209:
-	; Parameter 88 signedint size
+ stdlib_test$233:
+	; Parameter 88 signed int size
 	mov eax, [rbp + 40]
 	mov [rbp + 88], eax
 
- stdlib_test$210:
-	; Parameter 92 signedint SignedInt$4#
+ stdlib_test$234:
+	; Parameter 92 signed int SignedInt$4#
 	mov dword [rbp + 92], 4
 
- stdlib_test$211:
+ stdlib_test$235:
 	; Parameter 96 pointer compare
 	mov qword [rbp + 96], compare
 
- stdlib_test$212:
+ stdlib_test$236:
 	; Call 48 bsearch 0
-	mov qword [rbp + 48], stdlib_test$213
+	mov qword [rbp + 48], stdlib_test$237
 	mov [rbp + 56], rbp
 	add rbp, 48
 	jmp bsearch
 
- stdlib_test$213:
+ stdlib_test$237:
 	; PostCall 48
 
- stdlib_test$214:
-	; GetReturnValue £temporary4269
+ stdlib_test$238:
+	; GetReturnValue £temporary4279
 
- stdlib_test$215:
-	; IntegralToIntegral £temporary4270 £temporary4269
+ stdlib_test$239:
+	; IntegralToIntegral £temporary4280 £temporary4279
 
- stdlib_test$216:
-	; Assign p £temporary4270
+ stdlib_test$240:
+	; Assign p £temporary4280
 	mov [rbp + 48], rbx
 
- stdlib_test$217:
-	; Equal 222 p Pointer$0#
+ stdlib_test$241:
+	; Equal 246 p Pointer$0#
 	cmp qword [rbp + 48], 0
-	je stdlib_test$222
+	je stdlib_test$246
 
- stdlib_test$218:
-	; Subtract £temporary4272 p list
+ stdlib_test$242:
+	; Subtract £temporary4282 p list
 	mov rax, [rbp + 48]
 	mov rbx, rbp
 	add rbx, 24
 	sub rax, rbx
 
- stdlib_test$219:
-	; IntegralToIntegral £temporary4273 £temporary4272
+ stdlib_test$243:
+	; IntegralToIntegral £temporary4283 £temporary4282
 
- stdlib_test$220:
-	; Divide £temporary4275 £temporary4273 SignedInt$4#
+ stdlib_test$244:
+	; Divide £temporary4285 £temporary4283 SignedInt$4#
 	xor edx, edx
-	idiv dword [@14249SignedInt$4#]
+	idiv dword [@14261SignedInt$4#]
 
- stdlib_test$221:
-	; Jump 223
-	jmp stdlib_test$223
+ stdlib_test$245:
+	; Jump 247
+	jmp stdlib_test$247
 
- stdlib_test$222:
-	; Assign £temporary4275 SignedInt$minus1#
+ stdlib_test$246:
+	; Assign £temporary4285 SignedInt$minus1#
 	mov eax, -1
 
- stdlib_test$223:
-	; Assign index £temporary4275
+ stdlib_test$247:
+	; Assign index £temporary4285
 	mov [rbp + 56], eax
 
- stdlib_test$224:
+ stdlib_test$248:
 	; PreCall 60 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- stdlib_test$225:
+ stdlib_test$249:
 	; Parameter 84 pointer string_20202825i2C2025i290A#
-	mov qword [rbp + 84], @14253string_20202825i2C2025i290A#
+	mov qword [rbp + 84], @14265string_20202825i2C2025i290A#
 
- stdlib_test$226:
-	; Parameter 92 signedint key
+ stdlib_test$250:
+	; Parameter 92 signed int key
 	mov eax, [rbp + 44]
 	mov [rbp + 92], eax
 
- stdlib_test$227:
-	; Parameter 96 signedint index
+ stdlib_test$251:
+	; Parameter 96 signed int index
 	mov eax, [rbp + 56]
 	mov [rbp + 96], eax
 
- stdlib_test$228:
+ stdlib_test$252:
 	; Call 60 printf 8
-	mov qword [rbp + 60], stdlib_test$229
+	mov qword [rbp + 60], stdlib_test$253
 	mov [rbp + 68], rbp
 	add rbp, 60
 	mov rdi, rbp
 	add rdi, 8
 	jmp printf
 
- stdlib_test$229:
+ stdlib_test$253:
 	; PostCall 60
 
- stdlib_test$230:
+ stdlib_test$254:
 	; Add key key SignedInt$1#
 	inc dword [rbp + 44]
 
- stdlib_test$231:
-	; Jump 204
-	jmp stdlib_test$204
+ stdlib_test$255:
+	; Jump 228
+	jmp stdlib_test$228
 
- stdlib_test$232:
+ stdlib_test$256:
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- stdlib_test$233:
+ stdlib_test$257:
 	; Parameter 68 pointer string_0A#
-	mov qword [rbp + 68], @14254string_0A#
+	mov qword [rbp + 68], @14266string_0A#
 
- stdlib_test$234:
+ stdlib_test$258:
 	; Call 44 printf 0
-	mov qword [rbp + 44], stdlib_test$235
+	mov qword [rbp + 44], stdlib_test$259
 	mov [rbp + 52], rbp
 	add rbp, 44
 	mov rdi, rbp
 	jmp printf
 
- stdlib_test$235:
+ stdlib_test$259:
 	; PostCall 44
 
- stdlib_test$236:
+ stdlib_test$260:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- stdlib_test$237:
+ stdlib_test$261:
 	; FunctionEnd stdlib_test

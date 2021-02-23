@@ -116,7 +116,7 @@ section .text
 	inc eax
 
  generateName$21:
-	; Parameter 65 signedint £temporary812
+	; Parameter 65 signed int £temporary812
 	mov [rbp + 65], eax
 
  generateName$22:
@@ -125,7 +125,7 @@ section .text
 	mov [rbp + 69], rax
 
  generateName$23:
-	; Parameter 77 signedint max
+	; Parameter 77 signed int max
 	mov eax, [rbp + 36]
 	mov [rbp + 77], eax
 
@@ -210,7 +210,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  tmpnam$1:
-	; Parameter 56 signedint SignedInt$0#
+	; Parameter 56 signed int SignedInt$0#
 	mov dword [rbp + 56], 0
 
  tmpnam$2:
@@ -219,7 +219,7 @@ section .text
 	mov [rbp + 60], rax
 
  tmpnam$3:
-	; Parameter 68 signedint SignedInt$4#
+	; Parameter 68 signed int SignedInt$4#
 	mov dword [rbp + 68], 4
 
  tmpnam$4:
@@ -277,7 +277,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  tmpfile$1:
-	; Parameter 60 signedint SignedInt$0#
+	; Parameter 60 signed int SignedInt$0#
 	mov dword [rbp + 60], 0
 
  tmpfile$2:
@@ -286,7 +286,7 @@ section .text
 	add qword [rbp + 64], 32
 
  tmpfile$3:
-	; Parameter 72 signedint SignedInt$4#
+	; Parameter 72 signed int SignedInt$4#
 	mov dword [rbp + 72], 4
 
  tmpfile$4:

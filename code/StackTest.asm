@@ -36,7 +36,7 @@ section .text
 	inc dword [@13469$i]
 
  stack_test$4:
-	; Parameter 56 signedint £temporary4091
+	; Parameter 56 signed int £temporary4091
 	mov [rbp + 56], eax
 
  stack_test$5:
@@ -90,7 +90,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  heap_test$2:
-	; Parameter 60 signedint SignedInt$1024#
+	; Parameter 60 signed int SignedInt$1024#
 	mov dword [rbp + 60], 1024
 
  heap_test$3:
@@ -131,7 +131,7 @@ section .text
 	inc dword [rbp + 24]
 
  heap_test$12:
-	; Parameter 68 signedint £temporary4096
+	; Parameter 68 signed int £temporary4096
 	mov [rbp + 68], eax
 
  heap_test$13:

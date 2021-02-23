@@ -253,7 +253,7 @@ section .text
 	neg eax
 
  character_testX$3:
-	; Parameter 57 signedint £temporary3132
+	; Parameter 57 signed int £temporary3132
 	mov [rbp + 57], eax
 
  character_testX$4:
@@ -285,7 +285,7 @@ section .text
 	neg eax
 
  character_testX$9:
-	; Parameter 57 signedint £temporary3134
+	; Parameter 57 signed int £temporary3134
 	mov [rbp + 57], eax
 
  character_testX$10:
@@ -301,7 +301,7 @@ section .text
 	neg eax
 
  character_testX$12:
-	; Parameter 85 signedint £temporary3135
+	; Parameter 85 signed int £temporary3135
 	mov [rbp + 85], eax
 
  character_testX$13:
@@ -367,7 +367,7 @@ section .text
 	neg eax
 
  character_testX$26:
-	; Parameter 57 signedint £temporary3140
+	; Parameter 57 signed int £temporary3140
 	mov [rbp + 57], eax
 
  character_testX$27:
@@ -383,7 +383,7 @@ section .text
 	neg eax
 
  character_testX$29:
-	; Parameter 85 signedint £temporary3141
+	; Parameter 85 signed int £temporary3141
 	mov [rbp + 85], eax
 
  character_testX$30:
@@ -449,7 +449,7 @@ section .text
 	neg eax
 
  character_testX$43:
-	; Parameter 57 signedint £temporary3146
+	; Parameter 57 signed int £temporary3146
 	mov [rbp + 57], eax
 
  character_testX$44:
@@ -465,7 +465,7 @@ section .text
 	neg eax
 
  character_testX$46:
-	; Parameter 85 signedint £temporary3147
+	; Parameter 85 signed int £temporary3147
 	mov [rbp + 85], eax
 
  character_testX$47:
@@ -531,7 +531,7 @@ section .text
 	neg eax
 
  character_testX$60:
-	; Parameter 57 signedint £temporary3152
+	; Parameter 57 signed int £temporary3152
 	mov [rbp + 57], eax
 
  character_testX$61:
@@ -547,7 +547,7 @@ section .text
 	neg eax
 
  character_testX$63:
-	; Parameter 85 signedint £temporary3153
+	; Parameter 85 signed int £temporary3153
 	mov [rbp + 85], eax
 
  character_testX$64:
@@ -613,7 +613,7 @@ section .text
 	neg eax
 
  character_testX$77:
-	; Parameter 57 signedint £temporary3158
+	; Parameter 57 signed int £temporary3158
 	mov [rbp + 57], eax
 
  character_testX$78:
@@ -629,7 +629,7 @@ section .text
 	neg eax
 
  character_testX$80:
-	; Parameter 85 signedint £temporary3159
+	; Parameter 85 signed int £temporary3159
 	mov [rbp + 85], eax
 
  character_testX$81:
@@ -695,7 +695,7 @@ section .text
 	neg eax
 
  character_testX$94:
-	; Parameter 57 signedint £temporary3164
+	; Parameter 57 signed int £temporary3164
 	mov [rbp + 57], eax
 
  character_testX$95:
@@ -711,7 +711,7 @@ section .text
 	neg eax
 
  character_testX$97:
-	; Parameter 85 signedint £temporary3165
+	; Parameter 85 signed int £temporary3165
 	mov [rbp + 85], eax
 
  character_testX$98:
@@ -777,7 +777,7 @@ section .text
 	neg eax
 
  character_testX$111:
-	; Parameter 57 signedint £temporary3170
+	; Parameter 57 signed int £temporary3170
 	mov [rbp + 57], eax
 
  character_testX$112:
@@ -793,7 +793,7 @@ section .text
 	neg eax
 
  character_testX$114:
-	; Parameter 85 signedint £temporary3171
+	; Parameter 85 signed int £temporary3171
 	mov [rbp + 85], eax
 
  character_testX$115:
@@ -859,7 +859,7 @@ section .text
 	neg eax
 
  character_testX$128:
-	; Parameter 57 signedint £temporary3176
+	; Parameter 57 signed int £temporary3176
 	mov [rbp + 57], eax
 
  character_testX$129:
@@ -875,7 +875,7 @@ section .text
 	neg eax
 
  character_testX$131:
-	; Parameter 85 signedint £temporary3177
+	; Parameter 85 signed int £temporary3177
 	mov [rbp + 85], eax
 
  character_testX$132:
@@ -941,7 +941,7 @@ section .text
 	neg eax
 
  character_testX$145:
-	; Parameter 57 signedint £temporary3182
+	; Parameter 57 signed int £temporary3182
 	mov [rbp + 57], eax
 
  character_testX$146:
@@ -957,7 +957,7 @@ section .text
 	neg eax
 
  character_testX$148:
-	; Parameter 85 signedint £temporary3183
+	; Parameter 85 signed int £temporary3183
 	mov [rbp + 85], eax
 
  character_testX$149:
@@ -1023,7 +1023,7 @@ section .text
 	neg eax
 
  character_testX$162:
-	; Parameter 57 signedint £temporary3188
+	; Parameter 57 signed int £temporary3188
 	mov [rbp + 57], eax
 
  character_testX$163:
@@ -1039,7 +1039,7 @@ section .text
 	neg eax
 
  character_testX$165:
-	; Parameter 85 signedint £temporary3189
+	; Parameter 85 signed int £temporary3189
 	mov [rbp + 85], eax
 
  character_testX$166:
@@ -1105,7 +1105,7 @@ section .text
 	neg eax
 
  character_testX$179:
-	; Parameter 57 signedint £temporary3194
+	; Parameter 57 signed int £temporary3194
 	mov [rbp + 57], eax
 
  character_testX$180:
@@ -1121,7 +1121,7 @@ section .text
 	neg eax
 
  character_testX$182:
-	; Parameter 85 signedint £temporary3195
+	; Parameter 85 signed int £temporary3195
 	mov [rbp + 85], eax
 
  character_testX$183:
@@ -1187,7 +1187,7 @@ section .text
 	neg eax
 
  character_testX$196:
-	; Parameter 57 signedint £temporary3200
+	; Parameter 57 signed int £temporary3200
 	mov [rbp + 57], eax
 
  character_testX$197:
@@ -1203,7 +1203,7 @@ section .text
 	neg eax
 
  character_testX$199:
-	; Parameter 85 signedint £temporary3201
+	; Parameter 85 signed int £temporary3201
 	mov [rbp + 85], eax
 
  character_testX$200:
@@ -1235,7 +1235,7 @@ section .text
 	neg ebx
 
  character_testX$205:
-	; Parameter 61 signedint £temporary3204
+	; Parameter 61 signed int £temporary3204
 	mov [rbp + 61], ebx
 
  character_testX$206:
@@ -1267,7 +1267,7 @@ section .text
 	neg eax
 
  character_testX$211:
-	; Parameter 57 signedint £temporary3206
+	; Parameter 57 signed int £temporary3206
 	mov [rbp + 57], eax
 
  character_testX$212:
@@ -1283,7 +1283,7 @@ section .text
 	neg eax
 
  character_testX$214:
-	; Parameter 85 signedint £temporary3207
+	; Parameter 85 signed int £temporary3207
 	mov [rbp + 85], eax
 
  character_testX$215:
@@ -1315,7 +1315,7 @@ section .text
 	neg ebx
 
  character_testX$220:
-	; Parameter 61 signedint £temporary3210
+	; Parameter 61 signed int £temporary3210
 	mov [rbp + 61], ebx
 
  character_testX$221:
@@ -1346,7 +1346,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_test$1:
-	; Parameter 48 signedchar SignedChar$97#
+	; Parameter 48 signed char SignedChar$97#
 	mov byte [rbp + 48], 97
 
  character_test$2:
@@ -1363,7 +1363,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_test$5:
-	; Parameter 48 signedchar SignedChar$66#
+	; Parameter 48 signed char SignedChar$66#
 	mov byte [rbp + 48], 66
 
  character_test$6:
@@ -1380,7 +1380,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_test$9:
-	; Parameter 48 signedchar SignedChar$49#
+	; Parameter 48 signed char SignedChar$49#
 	mov byte [rbp + 48], 49
 
  character_test$10:
@@ -1397,7 +1397,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_test$13:
-	; Parameter 48 signedchar SignedChar$46#
+	; Parameter 48 signed char SignedChar$46#
 	mov byte [rbp + 48], 46
 
  character_test$14:
@@ -1414,7 +1414,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_test$17:
-	; Parameter 48 signedchar SignedChar$10#
+	; Parameter 48 signed char SignedChar$10#
 	mov byte [rbp + 48], 10
 
  character_test$18:
@@ -1431,7 +1431,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_test$21:
-	; Parameter 48 signedchar SignedChar$102#
+	; Parameter 48 signed char SignedChar$102#
 	mov byte [rbp + 48], 102
 
  character_test$22:
@@ -1448,7 +1448,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_test$25:
-	; Parameter 48 signedchar SignedChar$103#
+	; Parameter 48 signed char SignedChar$103#
 	mov byte [rbp + 48], 103
 
  character_test$26:

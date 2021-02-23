@@ -643,7 +643,7 @@ section .text
 	; PreCall 72 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  gmtime$36:
-	; Parameter 96 signedint year
+	; Parameter 96 signed int year
 	mov eax, [rbp + 64]
 	mov [rbp + 96], eax
 
@@ -703,7 +703,7 @@ section .text
 	; PreCall 76 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  gmtime$49:
-	; Parameter 100 signedint year
+	; Parameter 100 signed int year
 	mov eax, [rbp + 64]
 	mov [rbp + 100], eax
 
@@ -1587,7 +1587,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  asctime$31:
-	; Parameter 112 signedint £temporary2610
+	; Parameter 112 signed int £temporary2610
 	mov eax, [rsi + 12]
 	mov [rbp + 112], eax
 
@@ -1596,7 +1596,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  asctime$33:
-	; Parameter 116 signedint £temporary2611
+	; Parameter 116 signed int £temporary2611
 	mov eax, [rsi + 8]
 	mov [rbp + 116], eax
 
@@ -1605,7 +1605,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  asctime$35:
-	; Parameter 120 signedint £temporary2612
+	; Parameter 120 signed int £temporary2612
 	mov eax, [rsi + 4]
 	mov [rbp + 120], eax
 
@@ -1614,7 +1614,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  asctime$37:
-	; Parameter 124 signedint £temporary2613
+	; Parameter 124 signed int £temporary2613
 	mov eax, [rsi]
 	mov [rbp + 124], eax
 
@@ -1628,7 +1628,7 @@ section .text
 	add eax, 1900
 
  asctime$40:
-	; Parameter 128 signedint £temporary2615
+	; Parameter 128 signed int £temporary2615
 	mov [rbp + 128], eax
 
  asctime$41:
@@ -2677,7 +2677,7 @@ section .text
 	add eax, 1900
 
  strftime$135:
-	; Parameter 164 signedint £temporary2704
+	; Parameter 164 signed int £temporary2704
 	mov [rbp + 164], eax
 
  strftime$136:
@@ -2690,7 +2690,7 @@ section .text
 	inc eax
 
  strftime$138:
-	; Parameter 168 signedint £temporary2706
+	; Parameter 168 signed int £temporary2706
 	mov [rbp + 168], eax
 
  strftime$139:
@@ -2698,7 +2698,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$140:
-	; Parameter 172 signedint £temporary2707
+	; Parameter 172 signed int £temporary2707
 	mov eax, [rsi + 12]
 	mov [rbp + 172], eax
 
@@ -2707,7 +2707,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$142:
-	; Parameter 176 signedint £temporary2708
+	; Parameter 176 signed int £temporary2708
 	mov eax, [rsi + 8]
 	mov [rbp + 176], eax
 
@@ -2716,7 +2716,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$144:
-	; Parameter 180 signedint £temporary2709
+	; Parameter 180 signed int £temporary2709
 	mov eax, [rsi + 4]
 	mov [rbp + 180], eax
 
@@ -2725,7 +2725,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$146:
-	; Parameter 184 signedint £temporary2710
+	; Parameter 184 signed int £temporary2710
 	mov eax, [rsi]
 	mov [rbp + 184], eax
 
@@ -2762,7 +2762,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$154:
-	; Parameter 164 signedint £temporary2712
+	; Parameter 164 signed int £temporary2712
 	mov eax, [rsi + 12]
 	mov [rbp + 164], eax
 
@@ -2799,7 +2799,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$162:
-	; Parameter 164 signedint £temporary2714
+	; Parameter 164 signed int £temporary2714
 	mov eax, [rsi + 8]
 	mov [rbp + 164], eax
 
@@ -2842,7 +2842,7 @@ section .text
 	idiv dword [@8011SignedInt$12#]
 
  strftime$171:
-	; Parameter 164 signedint £temporary2717
+	; Parameter 164 signed int £temporary2717
 	mov [rbp + 164], edx
 
  strftime$172:
@@ -2878,7 +2878,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$179:
-	; Parameter 164 signedint £temporary2719
+	; Parameter 164 signed int £temporary2719
 	mov eax, [rsi + 28]
 	mov [rbp + 164], eax
 
@@ -2920,7 +2920,7 @@ section .text
 	inc eax
 
  strftime$188:
-	; Parameter 164 signedint £temporary2722
+	; Parameter 164 signed int £temporary2722
 	mov [rbp + 164], eax
 
  strftime$189:
@@ -2956,7 +2956,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$196:
-	; Parameter 164 signedint £temporary2724
+	; Parameter 164 signed int £temporary2724
 	mov eax, [rsi + 4]
 	mov [rbp + 164], eax
 
@@ -3042,7 +3042,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$215:
-	; Parameter 164 signedint £temporary2729
+	; Parameter 164 signed int £temporary2729
 	mov eax, [rsi]
 	mov [rbp + 164], eax
 
@@ -3075,7 +3075,7 @@ section .text
 	mov qword [rbp + 156], @8034string_2502i#
 
  strftime$222:
-	; Parameter 164 signedint weekNumberStartSunday
+	; Parameter 164 signed int weekNumberStartSunday
 	mov eax, [rbp + 96]
 	mov [rbp + 164], eax
 
@@ -3112,7 +3112,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$230:
-	; Parameter 164 signedint £temporary2732
+	; Parameter 164 signed int £temporary2732
 	mov eax, [rsi + 24]
 	mov [rbp + 164], eax
 
@@ -3145,7 +3145,7 @@ section .text
 	mov qword [rbp + 156], @8040string_2502i#
 
  strftime$237:
-	; Parameter 164 signedint weekNumberStartMonday
+	; Parameter 164 signed int weekNumberStartMonday
 	mov eax, [rbp + 100]
 	mov [rbp + 164], eax
 
@@ -3182,7 +3182,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$245:
-	; Parameter 164 signedint £temporary2735
+	; Parameter 164 signed int £temporary2735
 	mov eax, [rsi + 8]
 	mov [rbp + 164], eax
 
@@ -3191,7 +3191,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$247:
-	; Parameter 168 signedint £temporary2736
+	; Parameter 168 signed int £temporary2736
 	mov eax, [rsi + 4]
 	mov [rbp + 168], eax
 
@@ -3200,7 +3200,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$249:
-	; Parameter 172 signedint £temporary2737
+	; Parameter 172 signed int £temporary2737
 	mov eax, [rsi]
 	mov [rbp + 172], eax
 
@@ -3237,7 +3237,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$257:
-	; Parameter 164 signedint £temporary2739
+	; Parameter 164 signed int £temporary2739
 	mov eax, [rsi + 8]
 	mov [rbp + 164], eax
 
@@ -3246,7 +3246,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$259:
-	; Parameter 168 signedint £temporary2740
+	; Parameter 168 signed int £temporary2740
 	mov eax, [rsi + 4]
 	mov [rbp + 168], eax
 
@@ -3255,7 +3255,7 @@ section .text
 	mov rsi, [rbp + 44]
 
  strftime$261:
-	; Parameter 172 signedint £temporary2741
+	; Parameter 172 signed int £temporary2741
 	mov eax, [rsi]
 	mov [rbp + 172], eax
 
@@ -3298,7 +3298,7 @@ section .text
 	idiv dword [@8051SignedInt$100#]
 
  strftime$270:
-	; Parameter 164 signedint £temporary2744
+	; Parameter 164 signed int £temporary2744
 	mov [rbp + 164], edx
 
  strftime$271:
@@ -3339,7 +3339,7 @@ section .text
 	add eax, 1900
 
  strftime$279:
-	; Parameter 164 signedint £temporary2747
+	; Parameter 164 signed int £temporary2747
 	mov [rbp + 164], eax
 
  strftime$280:

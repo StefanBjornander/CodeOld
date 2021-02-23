@@ -231,7 +231,7 @@ section .text
 	; GetReturnValue £temporary3251
 
  string_test$9:
-	; Parameter 284 signedint £temporary3251
+	; Parameter 284 signed int £temporary3251
 	mov [rbp + 284], ebx
 
  string_test$10:
@@ -283,7 +283,7 @@ section .text
 	mov [rbp + 276], rax
 
  string_test$20:
-	; Parameter 284 signedint SignedInt$5#
+	; Parameter 284 signed int SignedInt$5#
 	mov dword [rbp + 284], 5
 
  string_test$21:
@@ -394,7 +394,7 @@ section .text
 	mov qword [rbp + 276], @10162string_abc#
 
  string_test$45:
-	; Parameter 284 signedint SignedInt$2#
+	; Parameter 284 signed int SignedInt$2#
 	mov dword [rbp + 284], 2
 
  string_test$46:
@@ -493,7 +493,7 @@ section .text
 	; GetReturnValue £temporary3265
 
  string_test$67:
-	; Parameter 276 signedint £temporary3265
+	; Parameter 276 signed int £temporary3265
 	mov [rbp + 276], ebx
 
  string_test$68:
@@ -529,7 +529,7 @@ section .text
 	add qword [rbp + 308], 136
 
  string_test$75:
-	; Parameter 316 signedint SignedInt$2#
+	; Parameter 316 signed int SignedInt$2#
 	mov dword [rbp + 316], 2
 
  string_test$76:
@@ -546,7 +546,7 @@ section .text
 	; GetReturnValue £temporary3267
 
  string_test$79:
-	; Parameter 276 signedint £temporary3267
+	; Parameter 276 signed int £temporary3267
 	mov [rbp + 276], ebx
 
  string_test$80:
@@ -570,7 +570,7 @@ section .text
 	mov [rbp + 268], rax
 
  string_test$84:
-	; Parameter 276 signedint SignedInt$108#
+	; Parameter 276 signed int SignedInt$108#
 	mov dword [rbp + 276], 108
 
  string_test$85:
@@ -619,7 +619,7 @@ section .text
 	mov eax, -1
 
  string_test$96:
-	; Parameter 276 signedint £temporary3273
+	; Parameter 276 signed int £temporary3273
 	mov [rbp + 276], eax
 
  string_test$97:
@@ -643,7 +643,7 @@ section .text
 	mov [rbp + 268], rax
 
  string_test$101:
-	; Parameter 276 signedint SignedInt$108#
+	; Parameter 276 signed int SignedInt$108#
 	mov dword [rbp + 276], 108
 
  string_test$102:
@@ -692,7 +692,7 @@ section .text
 	mov eax, -1
 
  string_test$113:
-	; Parameter 276 signedint £temporary3279
+	; Parameter 276 signed int £temporary3279
 	mov [rbp + 276], eax
 
  string_test$114:
@@ -716,7 +716,7 @@ section .text
 	mov [rbp + 268], rax
 
  string_test$118:
-	; Parameter 276 signedint SignedInt$120#
+	; Parameter 276 signed int SignedInt$120#
 	mov dword [rbp + 276], 120
 
  string_test$119:
@@ -765,7 +765,7 @@ section .text
 	mov eax, -1
 
  string_test$130:
-	; Parameter 276 signedint £temporary3285
+	; Parameter 276 signed int £temporary3285
 	mov [rbp + 276], eax
 
  string_test$131:
@@ -789,7 +789,7 @@ section .text
 	mov [rbp + 268], rax
 
  string_test$135:
-	; Parameter 276 signedint SignedInt$120#
+	; Parameter 276 signed int SignedInt$120#
 	mov dword [rbp + 276], 120
 
  string_test$136:
@@ -838,7 +838,7 @@ section .text
 	mov eax, -1
 
  string_test$147:
-	; Parameter 276 signedint £temporary3291
+	; Parameter 276 signed int £temporary3291
 	mov [rbp + 276], eax
 
  string_test$148:
@@ -866,7 +866,7 @@ section .text
 	mov qword [rbp + 276], @10212string_Hello2C20World21#
 
  string_test$153:
-	; Parameter 284 signedint SignedInt$20#
+	; Parameter 284 signed int SignedInt$20#
 	mov dword [rbp + 284], 20
 
  string_test$154:
@@ -892,7 +892,7 @@ section .text
 	mov qword [rbp + 276], @10218string_Hello2C20World21#
 
  string_test$159:
-	; Parameter 284 signedint SignedInt$20#
+	; Parameter 284 signed int SignedInt$20#
 	mov dword [rbp + 284], 20
 
  string_test$160:
@@ -914,11 +914,11 @@ section .text
 	add qword [rbp + 268], 136
 
  string_test$164:
-	; Parameter 276 signedint SignedInt$88#
+	; Parameter 276 signed int SignedInt$88#
 	mov dword [rbp + 276], 88
 
  string_test$165:
-	; Parameter 280 signedint SignedInt$20#
+	; Parameter 280 signed int SignedInt$20#
 	mov dword [rbp + 280], 20
 
  string_test$166:
@@ -983,11 +983,11 @@ section .text
 	mov [rbp + 268], rax
 
  string_test$179:
-	; Parameter 276 signedint SignedInt$108#
+	; Parameter 276 signed int SignedInt$108#
 	mov dword [rbp + 276], 108
 
  string_test$180:
-	; Parameter 280 signedint SignedInt$20#
+	; Parameter 280 signed int SignedInt$20#
 	mov dword [rbp + 280], 20
 
  string_test$181:
@@ -1036,7 +1036,7 @@ section .text
 	mov eax, -1
 
  string_test$192:
-	; Parameter 276 signedint £temporary3302
+	; Parameter 276 signed int £temporary3302
 	mov [rbp + 276], eax
 
  string_test$193:
@@ -1060,11 +1060,11 @@ section .text
 	mov [rbp + 268], rax
 
  string_test$197:
-	; Parameter 276 signedint SignedInt$120#
+	; Parameter 276 signed int SignedInt$120#
 	mov dword [rbp + 276], 120
 
  string_test$198:
-	; Parameter 280 signedint SignedInt$20#
+	; Parameter 280 signed int SignedInt$20#
 	mov dword [rbp + 280], 20
 
  string_test$199:
@@ -1113,7 +1113,7 @@ section .text
 	mov eax, -1
 
  string_test$210:
-	; Parameter 276 signedint £temporary3308
+	; Parameter 276 signed int £temporary3308
 	mov [rbp + 276], eax
 
  string_test$211:
@@ -1191,7 +1191,7 @@ section .text
 	; GetReturnValue £temporary3311
 
  string_test$227:
-	; Parameter 276 signedint £temporary3311
+	; Parameter 276 signed int £temporary3311
 	mov [rbp + 276], ebx
 
  string_test$228:
@@ -1227,7 +1227,7 @@ section .text
 	add qword [rbp + 308], 36
 
  string_test$235:
-	; Parameter 316 signedint SignedInt$20#
+	; Parameter 316 signed int SignedInt$20#
 	mov dword [rbp + 316], 20
 
  string_test$236:
@@ -1244,7 +1244,7 @@ section .text
 	; GetReturnValue £temporary3313
 
  string_test$239:
-	; Parameter 276 signedint £temporary3313
+	; Parameter 276 signed int £temporary3313
 	mov [rbp + 276], ebx
 
  string_test$240:
@@ -1292,7 +1292,7 @@ section .text
 	; GetReturnValue £temporary3315
 
  string_test$250:
-	; Parameter 276 signedint £temporary3315
+	; Parameter 276 signed int £temporary3315
 	mov [rbp + 276], ebx
 
  string_test$251:
@@ -1340,7 +1340,7 @@ section .text
 	; GetReturnValue £temporary3317
 
  string_test$261:
-	; Parameter 276 signedint £temporary3317
+	; Parameter 276 signed int £temporary3317
 	mov [rbp + 276], ebx
 
  string_test$262:
@@ -1366,7 +1366,7 @@ section .text
 	; PreCall 244 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  string_test$267:
-	; Parameter 300 signedint errno
+	; Parameter 300 signed int errno
 	mov eax, [errno]
 	mov [rbp + 300], eax
 

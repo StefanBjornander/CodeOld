@@ -60,7 +60,7 @@ section .text
 	mov qword [rbp + 76], @9882string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CAssertTest2Ec#
 
  assert_test$7:
-	; Parameter 84 signedint SignedInt$8#
+	; Parameter 84 signed int SignedInt$8#
 	mov dword [rbp + 84], 8
 
  assert_test$8:
@@ -206,7 +206,7 @@ section .text
 	mov qword [rbp + 76], @9900string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CAssertTest2Ec#
 
  assert_testX$17:
-	; Parameter 84 signedint SignedInt$16#
+	; Parameter 84 signed int SignedInt$16#
 	mov dword [rbp + 84], 16
 
  assert_testX$18:
@@ -238,7 +238,7 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  assert_testX$24:
-	; Parameter 52 signedint n
+	; Parameter 52 signed int n
 	mov eax, [rbp + 24]
 	mov [rbp + 52], eax
 
@@ -308,7 +308,7 @@ section .text
 	mov qword [rbp + 76], @9917string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CAssertTest2Ec#
 
  assert_test2$6:
-	; Parameter 84 signedint SignedInt$21#
+	; Parameter 84 signed int SignedInt$21#
 	mov dword [rbp + 84], 21
 
  assert_test2$7:

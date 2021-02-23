@@ -47,7 +47,7 @@ section .text
 	mov qword [rbp + 64], 0
 
  atoi$3:
-	; Parameter 72 signedint SignedInt$10#
+	; Parameter 72 signed int SignedInt$10#
 	mov dword [rbp + 72], 10
 
  atoi$4:
@@ -98,7 +98,7 @@ section .text
 	mov qword [rbp + 64], 0
 
  atol$3:
-	; Parameter 72 signedint SignedInt$10#
+	; Parameter 72 signed int SignedInt$10#
 	mov dword [rbp + 72], 10
 
  atol$4:
@@ -146,7 +146,7 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtol$4:
-	; Parameter 68 signedint base
+	; Parameter 68 signed int base
 	mov eax, [rbp + 40]
 	mov [rbp + 68], eax
 
@@ -221,7 +221,7 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  strtoul$4:
-	; Parameter 68 signedint base
+	; Parameter 68 signed int base
 	mov eax, [rbp + 40]
 	mov [rbp + 68], eax
 
@@ -701,7 +701,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtol_test$16:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -735,7 +735,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$24:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -745,7 +745,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtol_test$26:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -831,7 +831,7 @@ section .text
 	mov [rbp + 80], rsi
 
  strtol_test$46:
-	; Parameter 88 signedint base
+	; Parameter 88 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 88], eax
 
@@ -865,7 +865,7 @@ section .text
 	add qword [rbp + 88], 28
 
  strtol_test$54:
-	; Parameter 96 signedlongint value
+	; Parameter 96 signed long int value
 	mov rax, [rbp + 48]
 	mov [rbp + 96], rax
 
@@ -875,7 +875,7 @@ section .text
 	mov [rbp + 104], rax
 
  strtol_test$56:
-	; Parameter 112 signedint base
+	; Parameter 112 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 112], eax
 
@@ -965,7 +965,7 @@ section .text
 	mov [rbp + 81], rsi
 
  strtol_test$77:
-	; Parameter 89 signedint base
+	; Parameter 89 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 89], eax
 
@@ -999,7 +999,7 @@ section .text
 	add qword [rbp + 89], 28
 
  strtol_test$85:
-	; Parameter 97 signedlongint value
+	; Parameter 97 signed long int value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
@@ -1009,7 +1009,7 @@ section .text
 	mov [rbp + 105], rax
 
  strtol_test$87:
-	; Parameter 113 signedint base
+	; Parameter 113 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 113], eax
 
@@ -1099,7 +1099,7 @@ section .text
 	mov [rbp + 81], rsi
 
  strtol_test$108:
-	; Parameter 89 signedint base
+	; Parameter 89 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 89], eax
 
@@ -1133,7 +1133,7 @@ section .text
 	add qword [rbp + 89], 28
 
  strtol_test$116:
-	; Parameter 97 signedlongint value
+	; Parameter 97 signed long int value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
@@ -1143,7 +1143,7 @@ section .text
 	mov [rbp + 105], rax
 
  strtol_test$118:
-	; Parameter 113 signedint base
+	; Parameter 113 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 113], eax
 
@@ -1225,7 +1225,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtol_test$137:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -1259,7 +1259,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$145:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -1269,7 +1269,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtol_test$147:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -1355,7 +1355,7 @@ section .text
 	mov [rbp + 80], rsi
 
  strtol_test$167:
-	; Parameter 88 signedint base
+	; Parameter 88 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 88], eax
 
@@ -1389,7 +1389,7 @@ section .text
 	add qword [rbp + 88], 28
 
  strtol_test$175:
-	; Parameter 96 signedlongint value
+	; Parameter 96 signed long int value
 	mov rax, [rbp + 48]
 	mov [rbp + 96], rax
 
@@ -1399,7 +1399,7 @@ section .text
 	mov [rbp + 104], rax
 
  strtol_test$177:
-	; Parameter 112 signedint base
+	; Parameter 112 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 112], eax
 
@@ -1489,7 +1489,7 @@ section .text
 	mov [rbp + 81], rsi
 
  strtol_test$198:
-	; Parameter 89 signedint base
+	; Parameter 89 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 89], eax
 
@@ -1523,7 +1523,7 @@ section .text
 	add qword [rbp + 89], 28
 
  strtol_test$206:
-	; Parameter 97 signedlongint value
+	; Parameter 97 signed long int value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
@@ -1533,7 +1533,7 @@ section .text
 	mov [rbp + 105], rax
 
  strtol_test$208:
-	; Parameter 113 signedint base
+	; Parameter 113 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 113], eax
 
@@ -1623,7 +1623,7 @@ section .text
 	mov [rbp + 81], rsi
 
  strtol_test$229:
-	; Parameter 89 signedint base
+	; Parameter 89 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 89], eax
 
@@ -1657,7 +1657,7 @@ section .text
 	add qword [rbp + 89], 28
 
  strtol_test$237:
-	; Parameter 97 signedlongint value
+	; Parameter 97 signed long int value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
@@ -1667,7 +1667,7 @@ section .text
 	mov [rbp + 105], rax
 
  strtol_test$239:
-	; Parameter 113 signedint base
+	; Parameter 113 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 113], eax
 
@@ -1749,7 +1749,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtol_test$258:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -1783,7 +1783,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$266:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -1793,7 +1793,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtol_test$268:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -1875,7 +1875,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtol_test$287:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -1909,7 +1909,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$295:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -1919,7 +1919,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtol_test$297:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -2001,7 +2001,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtol_test$316:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -2035,7 +2035,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$324:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -2045,7 +2045,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtol_test$326:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -2127,7 +2127,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtol_test$345:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -2161,7 +2161,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$353:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -2171,7 +2171,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtol_test$355:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -2253,7 +2253,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtol_test$374:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -2287,7 +2287,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$382:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -2297,7 +2297,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtol_test$384:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -2379,7 +2379,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtol_test$403:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -2413,7 +2413,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$411:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -2423,7 +2423,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtol_test$413:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -2505,7 +2505,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtol_test$432:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -2539,7 +2539,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$440:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -2549,7 +2549,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtol_test$442:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -2631,7 +2631,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtol_test$461:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -2665,7 +2665,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$469:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -2675,7 +2675,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtol_test$471:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -2757,7 +2757,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtol_test$490:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -2791,7 +2791,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$498:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -2801,7 +2801,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtol_test$500:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -2883,7 +2883,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtol_test$519:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -2917,7 +2917,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$527:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -2927,7 +2927,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtol_test$529:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -3237,7 +3237,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtoul_test$16:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -3271,7 +3271,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$24:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -3281,7 +3281,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtoul_test$26:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -3367,7 +3367,7 @@ section .text
 	mov [rbp + 80], rsi
 
  strtoul_test$46:
-	; Parameter 88 signedint base
+	; Parameter 88 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 88], eax
 
@@ -3401,7 +3401,7 @@ section .text
 	add qword [rbp + 88], 28
 
  strtoul_test$54:
-	; Parameter 96 signedlongint value
+	; Parameter 96 signed long int value
 	mov rax, [rbp + 48]
 	mov [rbp + 96], rax
 
@@ -3411,7 +3411,7 @@ section .text
 	mov [rbp + 104], rax
 
  strtoul_test$56:
-	; Parameter 112 signedint base
+	; Parameter 112 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 112], eax
 
@@ -3501,7 +3501,7 @@ section .text
 	mov [rbp + 81], rsi
 
  strtoul_test$77:
-	; Parameter 89 signedint base
+	; Parameter 89 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 89], eax
 
@@ -3535,7 +3535,7 @@ section .text
 	add qword [rbp + 89], 28
 
  strtoul_test$85:
-	; Parameter 97 signedlongint value
+	; Parameter 97 signed long int value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
@@ -3545,7 +3545,7 @@ section .text
 	mov [rbp + 105], rax
 
  strtoul_test$87:
-	; Parameter 113 signedint base
+	; Parameter 113 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 113], eax
 
@@ -3635,7 +3635,7 @@ section .text
 	mov [rbp + 81], rsi
 
  strtoul_test$108:
-	; Parameter 89 signedint base
+	; Parameter 89 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 89], eax
 
@@ -3669,7 +3669,7 @@ section .text
 	add qword [rbp + 89], 28
 
  strtoul_test$116:
-	; Parameter 97 signedlongint value
+	; Parameter 97 signed long int value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
@@ -3679,7 +3679,7 @@ section .text
 	mov [rbp + 105], rax
 
  strtoul_test$118:
-	; Parameter 113 signedint base
+	; Parameter 113 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 113], eax
 
@@ -3761,7 +3761,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtoul_test$137:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -3795,7 +3795,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$145:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -3805,7 +3805,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtoul_test$147:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -3891,7 +3891,7 @@ section .text
 	mov [rbp + 80], rsi
 
  strtoul_test$167:
-	; Parameter 88 signedint base
+	; Parameter 88 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 88], eax
 
@@ -3925,7 +3925,7 @@ section .text
 	add qword [rbp + 88], 28
 
  strtoul_test$175:
-	; Parameter 96 signedlongint value
+	; Parameter 96 signed long int value
 	mov rax, [rbp + 48]
 	mov [rbp + 96], rax
 
@@ -3935,7 +3935,7 @@ section .text
 	mov [rbp + 104], rax
 
  strtoul_test$177:
-	; Parameter 112 signedint base
+	; Parameter 112 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 112], eax
 
@@ -4025,7 +4025,7 @@ section .text
 	mov [rbp + 81], rsi
 
  strtoul_test$198:
-	; Parameter 89 signedint base
+	; Parameter 89 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 89], eax
 
@@ -4059,7 +4059,7 @@ section .text
 	add qword [rbp + 89], 28
 
  strtoul_test$206:
-	; Parameter 97 signedlongint value
+	; Parameter 97 signed long int value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
@@ -4069,7 +4069,7 @@ section .text
 	mov [rbp + 105], rax
 
  strtoul_test$208:
-	; Parameter 113 signedint base
+	; Parameter 113 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 113], eax
 
@@ -4159,7 +4159,7 @@ section .text
 	mov [rbp + 81], rsi
 
  strtoul_test$229:
-	; Parameter 89 signedint base
+	; Parameter 89 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 89], eax
 
@@ -4193,7 +4193,7 @@ section .text
 	add qword [rbp + 89], 28
 
  strtoul_test$237:
-	; Parameter 97 signedlongint value
+	; Parameter 97 signed long int value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
@@ -4203,7 +4203,7 @@ section .text
 	mov [rbp + 105], rax
 
  strtoul_test$239:
-	; Parameter 113 signedint base
+	; Parameter 113 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 113], eax
 
@@ -4285,7 +4285,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtoul_test$258:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -4319,7 +4319,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$266:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -4329,7 +4329,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtoul_test$268:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -4411,7 +4411,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtoul_test$287:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -4445,7 +4445,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$295:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -4455,7 +4455,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtoul_test$297:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -4537,7 +4537,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtoul_test$316:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -4571,7 +4571,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$324:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -4581,7 +4581,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtoul_test$326:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -4663,7 +4663,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtoul_test$345:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -4697,7 +4697,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$353:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -4707,7 +4707,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtoul_test$355:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -4789,7 +4789,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtoul_test$374:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -4823,7 +4823,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$382:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -4833,7 +4833,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtoul_test$384:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -4915,7 +4915,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtoul_test$403:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -4949,7 +4949,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$411:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -4959,7 +4959,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtoul_test$413:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -5041,7 +5041,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtoul_test$432:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -5075,7 +5075,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$440:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -5085,7 +5085,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtoul_test$442:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -5167,7 +5167,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtoul_test$461:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -5201,7 +5201,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$469:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -5211,7 +5211,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtoul_test$471:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -5293,7 +5293,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtoul_test$490:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -5327,7 +5327,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$498:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -5337,7 +5337,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtoul_test$500:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -5419,7 +5419,7 @@ section .text
 	mov [rbp + 79], rsi
 
  strtoul_test$519:
-	; Parameter 87 signedint base
+	; Parameter 87 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 87], eax
 
@@ -5453,7 +5453,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$527:
-	; Parameter 95 signedlongint value
+	; Parameter 95 signed long int value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -5463,7 +5463,7 @@ section .text
 	mov [rbp + 103], rax
 
  strtoul_test$529:
-	; Parameter 111 signedint base
+	; Parameter 111 signed int base
 	mov eax, [rbp + 24]
 	mov [rbp + 111], eax
 
@@ -6378,7 +6378,7 @@ section .text
 	mov [rbp + 116], rax
 
  qsort$24:
-	; Parameter 124 signedint valueSize
+	; Parameter 124 signed int valueSize
 	mov eax, [rbp + 36]
 	mov [rbp + 124], eax
 

@@ -28,7 +28,7 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$3:
-	; Parameter 68 signedint SignedInt$96#
+	; Parameter 68 signed int SignedInt$96#
 	mov dword [rbp + 68], 96
 
  malloc_test2$4:
@@ -61,7 +61,7 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$11:
-	; Parameter 76 signedint SignedInt$96#
+	; Parameter 76 signed int SignedInt$96#
 	mov dword [rbp + 76], 96
 
  malloc_test2$12:
@@ -121,7 +121,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$25:
-	; Parameter 84 signedint SignedInt$50#
+	; Parameter 84 signed int SignedInt$50#
 	mov dword [rbp + 84], 50
 
  malloc_test2$26:
@@ -156,7 +156,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$33:
-	; Parameter 84 signedint SignedInt$50#
+	; Parameter 84 signed int SignedInt$50#
 	mov dword [rbp + 84], 50
 
  malloc_test2$34:
@@ -191,7 +191,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$41:
-	; Parameter 84 signedint SignedInt$50#
+	; Parameter 84 signed int SignedInt$50#
 	mov dword [rbp + 84], 50
 
  malloc_test2$42:
@@ -226,7 +226,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$49:
-	; Parameter 84 signedint SignedInt$200#
+	; Parameter 84 signed int SignedInt$200#
 	mov dword [rbp + 84], 200
 
  malloc_test2$50:
@@ -261,7 +261,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$57:
-	; Parameter 84 signedint SignedInt$200#
+	; Parameter 84 signed int SignedInt$200#
 	mov dword [rbp + 84], 200
 
  malloc_test2$58:
@@ -296,7 +296,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$65:
-	; Parameter 84 signedint SignedInt$200#
+	; Parameter 84 signed int SignedInt$200#
 	mov dword [rbp + 84], 200
 
  malloc_test2$66:
@@ -338,11 +338,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$1:
-	; Parameter 48 signedint SignedInt$96#
+	; Parameter 48 signed int SignedInt$96#
 	mov dword [rbp + 48], 96
 
  malloc_test3$2:
-	; Parameter 52 signedint SignedInt$1#
+	; Parameter 52 signed int SignedInt$1#
 	mov dword [rbp + 52], 1
 
  malloc_test3$3:
@@ -366,11 +366,11 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$8:
-	; Parameter 56 signedint SignedInt$96#
+	; Parameter 56 signed int SignedInt$96#
 	mov dword [rbp + 56], 96
 
  malloc_test3$9:
-	; Parameter 60 signedint SignedInt$1#
+	; Parameter 60 signed int SignedInt$1#
 	mov dword [rbp + 60], 1
 
  malloc_test3$10:
@@ -394,11 +394,11 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$15:
-	; Parameter 64 signedint SignedInt$96#
+	; Parameter 64 signed int SignedInt$96#
 	mov dword [rbp + 64], 96
 
  malloc_test3$16:
-	; Parameter 68 signedint SignedInt$1#
+	; Parameter 68 signed int SignedInt$1#
 	mov dword [rbp + 68], 1
 
  malloc_test3$17:
@@ -422,11 +422,11 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$22:
-	; Parameter 72 signedint SignedInt$96#
+	; Parameter 72 signed int SignedInt$96#
 	mov dword [rbp + 72], 96
 
  malloc_test3$23:
-	; Parameter 76 signedint SignedInt$1#
+	; Parameter 76 signed int SignedInt$1#
 	mov dword [rbp + 76], 1
 
  malloc_test3$24:
@@ -450,11 +450,11 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$29:
-	; Parameter 80 signedint SignedInt$96#
+	; Parameter 80 signed int SignedInt$96#
 	mov dword [rbp + 80], 96
 
  malloc_test3$30:
-	; Parameter 84 signedint SignedInt$1#
+	; Parameter 84 signed int SignedInt$1#
 	mov dword [rbp + 84], 1
 
  malloc_test3$31:
@@ -631,7 +631,7 @@ section .text
 	mov qword [rbp + 60], @13805string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#
 
  rec$6:
-	; Parameter 68 unsignedint stackTop
+	; Parameter 68 unsigned int stackTop
 	mov eax, [rbp + 24]
 	mov [rbp + 68], eax
 
@@ -640,7 +640,7 @@ section .text
 	mov rsi, [rbp + 28]
 
  rec$8:
-	; Parameter 72 unsignedint £temporary4130
+	; Parameter 72 unsigned int £temporary4130
 	mov eax, [rsi]
 	mov [rbp + 72], eax
 
@@ -710,7 +710,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$1:
-	; Parameter 48 signedint SignedInt$96#
+	; Parameter 48 signed int SignedInt$96#
 	mov dword [rbp + 48], 96
 
  malloc_test$2:
@@ -734,7 +734,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$7:
-	; Parameter 56 signedint SignedInt$96#
+	; Parameter 56 signed int SignedInt$96#
 	mov dword [rbp + 56], 96
 
  malloc_test$8:
@@ -758,7 +758,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$13:
-	; Parameter 64 signedint SignedInt$96#
+	; Parameter 64 signed int SignedInt$96#
 	mov dword [rbp + 64], 96
 
  malloc_test$14:
@@ -800,7 +800,7 @@ section .text
 	mov [rbp + 72], rax
 
  malloc_test$23:
-	; Parameter 80 signedint SignedInt$40#
+	; Parameter 80 signed int SignedInt$40#
 	mov dword [rbp + 80], 40
 
  malloc_test$24:
@@ -830,7 +830,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$30:
-	; Parameter 72 signedint SignedInt$40#
+	; Parameter 72 signed int SignedInt$40#
 	mov dword [rbp + 72], 40
 
  malloc_test$31:
@@ -964,7 +964,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test6$7:
-	; Parameter 64 signedint SignedInt$96#
+	; Parameter 64 signed int SignedInt$96#
 	mov dword [rbp + 64], 96
 
  malloc_test6$8:
@@ -992,7 +992,7 @@ section .text
 	mov qword [rbp + 72], @13853string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#
 
  malloc_test6$14:
-	; Parameter 80 signedint i
+	; Parameter 80 signed int i
 	mov eax, [rbp + 24]
 	mov [rbp + 80], eax
 
@@ -1002,7 +1002,7 @@ section .text
 	mov [rbp + 84], rax
 
  malloc_test6$16:
-	; Parameter 92 unsignedint stackTop
+	; Parameter 92 unsigned int stackTop
 	mov eax, [rbp + 28]
 	mov [rbp + 92], eax
 
@@ -1011,7 +1011,7 @@ section .text
 	mov rsi, [rbp + 32]
 
  malloc_test6$18:
-	; Parameter 96 unsignedint £temporary4151
+	; Parameter 96 unsigned int £temporary4151
 	mov eax, [rsi]
 	mov [rbp + 96], eax
 

@@ -115,6 +115,14 @@ void stdlib_test(void) {
       }
     }
 
+    { int index;
+      printf("\nB List 4: ");
+      qsort(list, size, sizeof list[0], compare);
+      for (index = 0; index < size; ++index) {
+        printf("%i ", *(list + index));
+      }
+    }
+
     { int key;
       printf("\n\nSearch:\n");
       for (key = 0; key < 6; ++key) {

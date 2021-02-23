@@ -634,27 +634,27 @@ section .text
 	mov qword [rbp + 60], @12524string_3C25i3E203C25i3E203C25li3E203C25li3E203C25u3E203C25lu3E0A0A#
 
  stdio_test$5:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  stdio_test$6:
-	; Parameter 72 signedint SignedInt$minus123#
+	; Parameter 72 signed int SignedInt$minus123#
 	mov dword [rbp + 72], -123
 
  stdio_test$7:
-	; Parameter 76 signedlongint SignedLongInt$123#
+	; Parameter 76 signed long int SignedLongInt$123#
 	mov qword [rbp + 76], 123
 
  stdio_test$8:
-	; Parameter 84 signedlongint SignedLongInt$minus123#
+	; Parameter 84 signed long int SignedLongInt$minus123#
 	mov qword [rbp + 84], -123
 
  stdio_test$9:
-	; Parameter 92 signedint SignedInt$123#
+	; Parameter 92 signed int SignedInt$123#
 	mov dword [rbp + 92], 123
 
  stdio_test$10:
-	; Parameter 96 signedlongint SignedLongInt$123#
+	; Parameter 96 signed long int SignedLongInt$123#
 	mov qword [rbp + 96], 123
 
  stdio_test$11:
@@ -677,27 +677,27 @@ section .text
 	mov qword [rbp + 60], @12537string_3C256i3E203C256i3E203C256li3E203C256li3E203C256u3E203C256lu3E0A#
 
  stdio_test$15:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  stdio_test$16:
-	; Parameter 72 signedint SignedInt$minus123#
+	; Parameter 72 signed int SignedInt$minus123#
 	mov dword [rbp + 72], -123
 
  stdio_test$17:
-	; Parameter 76 signedlongint SignedLongInt$123#
+	; Parameter 76 signed long int SignedLongInt$123#
 	mov qword [rbp + 76], 123
 
  stdio_test$18:
-	; Parameter 84 signedlongint SignedLongInt$minus123#
+	; Parameter 84 signed long int SignedLongInt$minus123#
 	mov qword [rbp + 84], -123
 
  stdio_test$19:
-	; Parameter 92 signedint SignedInt$123#
+	; Parameter 92 signed int SignedInt$123#
 	mov dword [rbp + 92], 123
 
  stdio_test$20:
-	; Parameter 96 signedlongint SignedLongInt$123#
+	; Parameter 96 signed long int SignedLongInt$123#
 	mov qword [rbp + 96], 123
 
  stdio_test$21:
@@ -720,27 +720,27 @@ section .text
 	mov qword [rbp + 60], @12550string_3C252B6i3E203C252B6i3E203C252B6li3E203C252B6li3E203C252B6u3E203C252B6lu3E0A#
 
  stdio_test$25:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  stdio_test$26:
-	; Parameter 72 signedint SignedInt$minus123#
+	; Parameter 72 signed int SignedInt$minus123#
 	mov dword [rbp + 72], -123
 
  stdio_test$27:
-	; Parameter 76 signedlongint SignedLongInt$123#
+	; Parameter 76 signed long int SignedLongInt$123#
 	mov qword [rbp + 76], 123
 
  stdio_test$28:
-	; Parameter 84 signedlongint SignedLongInt$minus123#
+	; Parameter 84 signed long int SignedLongInt$minus123#
 	mov qword [rbp + 84], -123
 
  stdio_test$29:
-	; Parameter 92 signedint SignedInt$123#
+	; Parameter 92 signed int SignedInt$123#
 	mov dword [rbp + 92], 123
 
  stdio_test$30:
-	; Parameter 96 signedlongint SignedLongInt$123#
+	; Parameter 96 signed long int SignedLongInt$123#
 	mov qword [rbp + 96], 123
 
  stdio_test$31:
@@ -763,27 +763,27 @@ section .text
 	mov qword [rbp + 60], @12563string_3C252D6i3E203C252D6i3E203C252D6li3E203C252D6li3E203C252D6u3E203C252D6lu3E0A#
 
  stdio_test$35:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  stdio_test$36:
-	; Parameter 72 signedint SignedInt$minus123#
+	; Parameter 72 signed int SignedInt$minus123#
 	mov dword [rbp + 72], -123
 
  stdio_test$37:
-	; Parameter 76 signedlongint SignedLongInt$123#
+	; Parameter 76 signed long int SignedLongInt$123#
 	mov qword [rbp + 76], 123
 
  stdio_test$38:
-	; Parameter 84 signedlongint SignedLongInt$minus123#
+	; Parameter 84 signed long int SignedLongInt$minus123#
 	mov qword [rbp + 84], -123
 
  stdio_test$39:
-	; Parameter 92 signedint SignedInt$123#
+	; Parameter 92 signed int SignedInt$123#
 	mov dword [rbp + 92], 123
 
  stdio_test$40:
-	; Parameter 96 signedlongint SignedLongInt$123#
+	; Parameter 96 signed long int SignedLongInt$123#
 	mov qword [rbp + 96], 123
 
  stdio_test$41:
@@ -806,27 +806,27 @@ section .text
 	mov qword [rbp + 60], @12576string_3C252B2D6i3E203C252B2D6i3E203C252B2D6li3E203C252B2D6li3E203C252B2D6u3E203C252B2D6lu3E0A0A#
 
  stdio_test$45:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  stdio_test$46:
-	; Parameter 72 signedint SignedInt$minus123#
+	; Parameter 72 signed int SignedInt$minus123#
 	mov dword [rbp + 72], -123
 
  stdio_test$47:
-	; Parameter 76 signedlongint SignedLongInt$123#
+	; Parameter 76 signed long int SignedLongInt$123#
 	mov qword [rbp + 76], 123
 
  stdio_test$48:
-	; Parameter 84 signedlongint SignedLongInt$minus123#
+	; Parameter 84 signed long int SignedLongInt$minus123#
 	mov qword [rbp + 84], -123
 
  stdio_test$49:
-	; Parameter 92 signedint SignedInt$123#
+	; Parameter 92 signed int SignedInt$123#
 	mov dword [rbp + 92], 123
 
  stdio_test$50:
-	; Parameter 96 signedlongint SignedLongInt$123#
+	; Parameter 96 signed long int SignedLongInt$123#
 	mov qword [rbp + 96], 123
 
  stdio_test$51:
@@ -849,27 +849,27 @@ section .text
 	mov qword [rbp + 60], @12593string_3C2506i3E203C2506i3E203C2506li3E203C2506li3E203C2506u3E203C2506lu3E0A#
 
  stdio_test$55:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  stdio_test$56:
-	; Parameter 72 signedint SignedInt$minus123#
+	; Parameter 72 signed int SignedInt$minus123#
 	mov dword [rbp + 72], -123
 
  stdio_test$57:
-	; Parameter 76 signedlongint SignedLongInt$123#
+	; Parameter 76 signed long int SignedLongInt$123#
 	mov qword [rbp + 76], 123
 
  stdio_test$58:
-	; Parameter 84 signedlongint SignedLongInt$minus123#
+	; Parameter 84 signed long int SignedLongInt$minus123#
 	mov qword [rbp + 84], -123
 
  stdio_test$59:
-	; Parameter 92 signedint SignedInt$123#
+	; Parameter 92 signed int SignedInt$123#
 	mov dword [rbp + 92], 123
 
  stdio_test$60:
-	; Parameter 96 signedlongint SignedLongInt$123#
+	; Parameter 96 signed long int SignedLongInt$123#
 	mov qword [rbp + 96], 123
 
  stdio_test$61:
@@ -892,27 +892,27 @@ section .text
 	mov qword [rbp + 60], @12606string_3C252B06i3E203C252B06i3E203C252B06li3E203C252B06li3E203C252B06u3E203C252B06lu3E0A#
 
  stdio_test$65:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  stdio_test$66:
-	; Parameter 72 signedint SignedInt$minus123#
+	; Parameter 72 signed int SignedInt$minus123#
 	mov dword [rbp + 72], -123
 
  stdio_test$67:
-	; Parameter 76 signedlongint SignedLongInt$123#
+	; Parameter 76 signed long int SignedLongInt$123#
 	mov qword [rbp + 76], 123
 
  stdio_test$68:
-	; Parameter 84 signedlongint SignedLongInt$minus123#
+	; Parameter 84 signed long int SignedLongInt$minus123#
 	mov qword [rbp + 84], -123
 
  stdio_test$69:
-	; Parameter 92 signedint SignedInt$123#
+	; Parameter 92 signed int SignedInt$123#
 	mov dword [rbp + 92], 123
 
  stdio_test$70:
-	; Parameter 96 signedlongint SignedLongInt$123#
+	; Parameter 96 signed long int SignedLongInt$123#
 	mov qword [rbp + 96], 123
 
  stdio_test$71:
@@ -935,27 +935,27 @@ section .text
 	mov qword [rbp + 60], @12619string_3C252D06i3E203C252D06i3E203C252D06li3E203C252D06li3E203C252D06u3E203C252D06lu3E0A#
 
  stdio_test$75:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  stdio_test$76:
-	; Parameter 72 signedint SignedInt$minus123#
+	; Parameter 72 signed int SignedInt$minus123#
 	mov dword [rbp + 72], -123
 
  stdio_test$77:
-	; Parameter 76 signedlongint SignedLongInt$123#
+	; Parameter 76 signed long int SignedLongInt$123#
 	mov qword [rbp + 76], 123
 
  stdio_test$78:
-	; Parameter 84 signedlongint SignedLongInt$minus123#
+	; Parameter 84 signed long int SignedLongInt$minus123#
 	mov qword [rbp + 84], -123
 
  stdio_test$79:
-	; Parameter 92 signedint SignedInt$123#
+	; Parameter 92 signed int SignedInt$123#
 	mov dword [rbp + 92], 123
 
  stdio_test$80:
-	; Parameter 96 signedlongint SignedLongInt$123#
+	; Parameter 96 signed long int SignedLongInt$123#
 	mov qword [rbp + 96], 123
 
  stdio_test$81:
@@ -978,27 +978,27 @@ section .text
 	mov qword [rbp + 60], @12632string_3C252B2D06i3E203C252B2D06i3E203C252B2D06li3E203C252B2D06li3E203C252B2D06u3E203C252B2D06lu3E0A0A#
 
  stdio_test$85:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  stdio_test$86:
-	; Parameter 72 signedint SignedInt$minus123#
+	; Parameter 72 signed int SignedInt$minus123#
 	mov dword [rbp + 72], -123
 
  stdio_test$87:
-	; Parameter 76 signedlongint SignedLongInt$123#
+	; Parameter 76 signed long int SignedLongInt$123#
 	mov qword [rbp + 76], 123
 
  stdio_test$88:
-	; Parameter 84 signedlongint SignedLongInt$minus123#
+	; Parameter 84 signed long int SignedLongInt$minus123#
 	mov qword [rbp + 84], -123
 
  stdio_test$89:
-	; Parameter 92 signedint SignedInt$123#
+	; Parameter 92 signed int SignedInt$123#
 	mov dword [rbp + 92], 123
 
  stdio_test$90:
-	; Parameter 96 signedlongint SignedLongInt$123#
+	; Parameter 96 signed long int SignedLongInt$123#
 	mov qword [rbp + 96], 123
 
  stdio_test$91:
@@ -1021,27 +1021,27 @@ section .text
 	mov qword [rbp + 60], @12645string_3C25206i3E203C25206i3E203C25206li3E203C25206li3E203C25206u3E203C25206lu3E0A#
 
  stdio_test$95:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  stdio_test$96:
-	; Parameter 72 signedint SignedInt$minus123#
+	; Parameter 72 signed int SignedInt$minus123#
 	mov dword [rbp + 72], -123
 
  stdio_test$97:
-	; Parameter 76 signedlongint SignedLongInt$123#
+	; Parameter 76 signed long int SignedLongInt$123#
 	mov qword [rbp + 76], 123
 
  stdio_test$98:
-	; Parameter 84 signedlongint SignedLongInt$minus123#
+	; Parameter 84 signed long int SignedLongInt$minus123#
 	mov qword [rbp + 84], -123
 
  stdio_test$99:
-	; Parameter 92 signedint SignedInt$123#
+	; Parameter 92 signed int SignedInt$123#
 	mov dword [rbp + 92], 123
 
  stdio_test$100:
-	; Parameter 96 signedlongint SignedLongInt$123#
+	; Parameter 96 signed long int SignedLongInt$123#
 	mov qword [rbp + 96], 123
 
  stdio_test$101:
@@ -1064,27 +1064,27 @@ section .text
 	mov qword [rbp + 60], @12658string_3C252B206i3E203C252B206i3E203C252B206li3E203C252B206li3E203C252B206u3E203C252B206lu3E0A#
 
  stdio_test$105:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  stdio_test$106:
-	; Parameter 72 signedint SignedInt$minus123#
+	; Parameter 72 signed int SignedInt$minus123#
 	mov dword [rbp + 72], -123
 
  stdio_test$107:
-	; Parameter 76 signedlongint SignedLongInt$123#
+	; Parameter 76 signed long int SignedLongInt$123#
 	mov qword [rbp + 76], 123
 
  stdio_test$108:
-	; Parameter 84 signedlongint SignedLongInt$minus123#
+	; Parameter 84 signed long int SignedLongInt$minus123#
 	mov qword [rbp + 84], -123
 
  stdio_test$109:
-	; Parameter 92 signedint SignedInt$123#
+	; Parameter 92 signed int SignedInt$123#
 	mov dword [rbp + 92], 123
 
  stdio_test$110:
-	; Parameter 96 signedlongint SignedLongInt$123#
+	; Parameter 96 signed long int SignedLongInt$123#
 	mov qword [rbp + 96], 123
 
  stdio_test$111:
@@ -1107,27 +1107,27 @@ section .text
 	mov qword [rbp + 60], @12671string_3C252D206i3E203C252D206i3E203C252D206li3E203C252D206li3E203C252D206u3E203C252D206lu3E0A#
 
  stdio_test$115:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  stdio_test$116:
-	; Parameter 72 signedint SignedInt$minus123#
+	; Parameter 72 signed int SignedInt$minus123#
 	mov dword [rbp + 72], -123
 
  stdio_test$117:
-	; Parameter 76 signedlongint SignedLongInt$123#
+	; Parameter 76 signed long int SignedLongInt$123#
 	mov qword [rbp + 76], 123
 
  stdio_test$118:
-	; Parameter 84 signedlongint SignedLongInt$minus123#
+	; Parameter 84 signed long int SignedLongInt$minus123#
 	mov qword [rbp + 84], -123
 
  stdio_test$119:
-	; Parameter 92 signedint SignedInt$123#
+	; Parameter 92 signed int SignedInt$123#
 	mov dword [rbp + 92], 123
 
  stdio_test$120:
-	; Parameter 96 signedlongint SignedLongInt$123#
+	; Parameter 96 signed long int SignedLongInt$123#
 	mov qword [rbp + 96], 123
 
  stdio_test$121:
@@ -1150,27 +1150,27 @@ section .text
 	mov qword [rbp + 60], @12684string_3C252B2D206i3E203C252B2D206i3E203C252B2D206li3E203C252B2D206li3E203C252B2D206u3E203C252B2D206lu3E0A0A#
 
  stdio_test$125:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  stdio_test$126:
-	; Parameter 72 signedint SignedInt$minus123#
+	; Parameter 72 signed int SignedInt$minus123#
 	mov dword [rbp + 72], -123
 
  stdio_test$127:
-	; Parameter 76 signedlongint SignedLongInt$123#
+	; Parameter 76 signed long int SignedLongInt$123#
 	mov qword [rbp + 76], 123
 
  stdio_test$128:
-	; Parameter 84 signedlongint SignedLongInt$minus123#
+	; Parameter 84 signed long int SignedLongInt$minus123#
 	mov qword [rbp + 84], -123
 
  stdio_test$129:
-	; Parameter 92 signedint SignedInt$123#
+	; Parameter 92 signed int SignedInt$123#
 	mov dword [rbp + 92], 123
 
  stdio_test$130:
-	; Parameter 96 signedlongint SignedLongInt$123#
+	; Parameter 96 signed long int SignedLongInt$123#
 	mov qword [rbp + 96], 123
 
  stdio_test$131:
@@ -1193,27 +1193,27 @@ section .text
 	mov qword [rbp + 60], @12697string_3C25x3E203C25X3E203C25o3E203C25lx3E203C25lX3E203C25lo3E0A#
 
  stdio_test$135:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  stdio_test$136:
-	; Parameter 72 signedint SignedInt$123#
+	; Parameter 72 signed int SignedInt$123#
 	mov dword [rbp + 72], 123
 
  stdio_test$137:
-	; Parameter 76 signedint SignedInt$123#
+	; Parameter 76 signed int SignedInt$123#
 	mov dword [rbp + 76], 123
 
  stdio_test$138:
-	; Parameter 80 signedlongint SignedLongInt$123#
+	; Parameter 80 signed long int SignedLongInt$123#
 	mov qword [rbp + 80], 123
 
  stdio_test$139:
-	; Parameter 88 signedlongint SignedLongInt$123#
+	; Parameter 88 signed long int SignedLongInt$123#
 	mov qword [rbp + 88], 123
 
  stdio_test$140:
-	; Parameter 96 signedlongint SignedLongInt$123#
+	; Parameter 96 signed long int SignedLongInt$123#
 	mov qword [rbp + 96], 123
 
  stdio_test$141:
@@ -1236,27 +1236,27 @@ section .text
 	mov qword [rbp + 60], @12710string_3C2523x3E203C2523X3E203C2523o3E203C2523lx3E203C2523lX3E203C2523lo3E0A#
 
  stdio_test$145:
-	; Parameter 68 signedint SignedInt$123#
+	; Parameter 68 signed int SignedInt$123#
 	mov dword [rbp + 68], 123
 
  stdio_test$146:
-	; Parameter 72 signedint SignedInt$123#
+	; Parameter 72 signed int SignedInt$123#
 	mov dword [rbp + 72], 123
 
  stdio_test$147:
-	; Parameter 76 signedint SignedInt$123#
+	; Parameter 76 signed int SignedInt$123#
 	mov dword [rbp + 76], 123
 
  stdio_test$148:
-	; Parameter 80 signedlongint SignedLongInt$123#
+	; Parameter 80 signed long int SignedLongInt$123#
 	mov qword [rbp + 80], 123
 
  stdio_test$149:
-	; Parameter 88 signedlongint SignedLongInt$123#
+	; Parameter 88 signed long int SignedLongInt$123#
 	mov qword [rbp + 88], 123
 
  stdio_test$150:
-	; Parameter 96 signedlongint SignedLongInt$123#
+	; Parameter 96 signed long int SignedLongInt$123#
 	mov qword [rbp + 96], 123
 
  stdio_test$151:
@@ -1283,7 +1283,7 @@ section .text
 	mov qword [rbp + 68], @12724string_Hello2C20World21#
 
  stdio_test$156:
-	; Parameter 76 signedint SignedInt$88#
+	; Parameter 76 signed int SignedInt$88#
 	mov dword [rbp + 76], 88
 
  stdio_test$157:
@@ -1374,7 +1374,7 @@ section .text
 	fld qword [@12745LongDouble$123.456#]
 
  stdio_test$177:
-	; Parameter 68 longdouble LongDouble$123.456#
+	; Parameter 68 long double LongDouble$123.456#
 	fstp qword [rbp + 68]
 
  stdio_test$178:
@@ -1382,7 +1382,7 @@ section .text
 	fld qword [@12746LongDouble$123.456#]
 
  stdio_test$179:
-	; Parameter 76 longdouble LongDouble$123.456#
+	; Parameter 76 long double LongDouble$123.456#
 	fstp qword [rbp + 76]
 
  stdio_test$180:
@@ -1390,7 +1390,7 @@ section .text
 	fld qword [@12747LongDouble$123.456#]
 
  stdio_test$181:
-	; Parameter 84 longdouble LongDouble$123.456#
+	; Parameter 84 long double LongDouble$123.456#
 	fstp qword [rbp + 84]
 
  stdio_test$182:
@@ -1398,7 +1398,7 @@ section .text
 	fld qword [@12748LongDouble$123456.1#]
 
  stdio_test$183:
-	; Parameter 92 longdouble LongDouble$123456.1#
+	; Parameter 92 long double LongDouble$123456.1#
 	fstp qword [rbp + 92]
 
  stdio_test$184:
@@ -1406,7 +1406,7 @@ section .text
 	fld qword [@12749LongDouble$123456.1#]
 
  stdio_test$185:
-	; Parameter 100 longdouble LongDouble$123456.1#
+	; Parameter 100 long double LongDouble$123456.1#
 	fstp qword [rbp + 100]
 
  stdio_test$186:
@@ -1492,7 +1492,7 @@ section .text
 	fld qword [@12767LongDouble$123.456#]
 
  stdio_test$205:
-	; Parameter 68 longdouble LongDouble$123.456#
+	; Parameter 68 long double LongDouble$123.456#
 	fstp qword [rbp + 68]
 
  stdio_test$206:
@@ -1500,7 +1500,7 @@ section .text
 	fld qword [@12768LongDouble$123.456#]
 
  stdio_test$207:
-	; Parameter 76 longdouble LongDouble$123.456#
+	; Parameter 76 long double LongDouble$123.456#
 	fstp qword [rbp + 76]
 
  stdio_test$208:
@@ -1508,7 +1508,7 @@ section .text
 	fld qword [@12769LongDouble$123.456#]
 
  stdio_test$209:
-	; Parameter 84 longdouble LongDouble$123.456#
+	; Parameter 84 long double LongDouble$123.456#
 	fstp qword [rbp + 84]
 
  stdio_test$210:
@@ -1516,7 +1516,7 @@ section .text
 	fld qword [@12770LongDouble$123.456#]
 
  stdio_test$211:
-	; Parameter 92 longdouble LongDouble$123.456#
+	; Parameter 92 long double LongDouble$123.456#
 	fstp qword [rbp + 92]
 
  stdio_test$212:
@@ -1524,7 +1524,7 @@ section .text
 	fld qword [@12771LongDouble$123.456#]
 
  stdio_test$213:
-	; Parameter 100 longdouble LongDouble$123.456#
+	; Parameter 100 long double LongDouble$123.456#
 	fstp qword [rbp + 100]
 
  stdio_test$214:
@@ -1610,7 +1610,7 @@ section .text
 	fld qword [@12789LongDouble$123.456#]
 
  stdio_test$233:
-	; Parameter 68 longdouble LongDouble$123.456#
+	; Parameter 68 long double LongDouble$123.456#
 	fstp qword [rbp + 68]
 
  stdio_test$234:
@@ -1618,7 +1618,7 @@ section .text
 	fld qword [@12790LongDouble$123.456#]
 
  stdio_test$235:
-	; Parameter 76 longdouble LongDouble$123.456#
+	; Parameter 76 long double LongDouble$123.456#
 	fstp qword [rbp + 76]
 
  stdio_test$236:
@@ -1626,7 +1626,7 @@ section .text
 	fld qword [@12791LongDouble$123.456#]
 
  stdio_test$237:
-	; Parameter 84 longdouble LongDouble$123.456#
+	; Parameter 84 long double LongDouble$123.456#
 	fstp qword [rbp + 84]
 
  stdio_test$238:
@@ -1634,7 +1634,7 @@ section .text
 	fld qword [@12792LongDouble$123.456#]
 
  stdio_test$239:
-	; Parameter 92 longdouble LongDouble$123.456#
+	; Parameter 92 long double LongDouble$123.456#
 	fstp qword [rbp + 92]
 
  stdio_test$240:
@@ -1642,7 +1642,7 @@ section .text
 	fld qword [@12793LongDouble$123.456#]
 
  stdio_test$241:
-	; Parameter 100 longdouble LongDouble$123.456#
+	; Parameter 100 long double LongDouble$123.456#
 	fstp qword [rbp + 100]
 
  stdio_test$242:
@@ -1728,7 +1728,7 @@ section .text
 	fld qword [@12811LongDouble$minus123.456#]
 
  stdio_test$261:
-	; Parameter 68 longdouble LongDouble$minus123.456#
+	; Parameter 68 long double LongDouble$minus123.456#
 	fstp qword [rbp + 68]
 
  stdio_test$262:
@@ -1736,7 +1736,7 @@ section .text
 	fld qword [@12812LongDouble$minus123.456#]
 
  stdio_test$263:
-	; Parameter 76 longdouble LongDouble$minus123.456#
+	; Parameter 76 long double LongDouble$minus123.456#
 	fstp qword [rbp + 76]
 
  stdio_test$264:
@@ -1744,7 +1744,7 @@ section .text
 	fld qword [@12813LongDouble$minus123.456#]
 
  stdio_test$265:
-	; Parameter 84 longdouble LongDouble$minus123.456#
+	; Parameter 84 long double LongDouble$minus123.456#
 	fstp qword [rbp + 84]
 
  stdio_test$266:
@@ -1752,7 +1752,7 @@ section .text
 	fld qword [@12814LongDouble$minus0.000000123456#]
 
  stdio_test$267:
-	; Parameter 92 longdouble LongDouble$minus0.000000123456#
+	; Parameter 92 long double LongDouble$minus0.000000123456#
 	fstp qword [rbp + 92]
 
  stdio_test$268:
@@ -1760,7 +1760,7 @@ section .text
 	fld qword [@12815LongDouble$minus0.000000123456#]
 
  stdio_test$269:
-	; Parameter 100 longdouble LongDouble$minus0.000000123456#
+	; Parameter 100 long double LongDouble$minus0.000000123456#
 	fstp qword [rbp + 100]
 
  stdio_test$270:
@@ -1846,7 +1846,7 @@ section .text
 	fld qword [@12833LongDouble$minus123.456#]
 
  stdio_test$289:
-	; Parameter 68 longdouble LongDouble$minus123.456#
+	; Parameter 68 long double LongDouble$minus123.456#
 	fstp qword [rbp + 68]
 
  stdio_test$290:
@@ -1854,7 +1854,7 @@ section .text
 	fld qword [@12834LongDouble$minus123.456#]
 
  stdio_test$291:
-	; Parameter 76 longdouble LongDouble$minus123.456#
+	; Parameter 76 long double LongDouble$minus123.456#
 	fstp qword [rbp + 76]
 
  stdio_test$292:
@@ -1862,7 +1862,7 @@ section .text
 	fld qword [@12835LongDouble$minus123.456#]
 
  stdio_test$293:
-	; Parameter 84 longdouble LongDouble$minus123.456#
+	; Parameter 84 long double LongDouble$minus123.456#
 	fstp qword [rbp + 84]
 
  stdio_test$294:
@@ -1870,7 +1870,7 @@ section .text
 	fld qword [@12836LongDouble$minus123.456#]
 
  stdio_test$295:
-	; Parameter 92 longdouble LongDouble$minus123.456#
+	; Parameter 92 long double LongDouble$minus123.456#
 	fstp qword [rbp + 92]
 
  stdio_test$296:
@@ -1878,7 +1878,7 @@ section .text
 	fld qword [@12837LongDouble$minus123.456#]
 
  stdio_test$297:
-	; Parameter 100 longdouble LongDouble$minus123.456#
+	; Parameter 100 long double LongDouble$minus123.456#
 	fstp qword [rbp + 100]
 
  stdio_test$298:
@@ -1964,7 +1964,7 @@ section .text
 	fld qword [@12855LongDouble$minus123.456#]
 
  stdio_test$317:
-	; Parameter 68 longdouble LongDouble$minus123.456#
+	; Parameter 68 long double LongDouble$minus123.456#
 	fstp qword [rbp + 68]
 
  stdio_test$318:
@@ -1972,7 +1972,7 @@ section .text
 	fld qword [@12856LongDouble$minus123.456#]
 
  stdio_test$319:
-	; Parameter 76 longdouble LongDouble$minus123.456#
+	; Parameter 76 long double LongDouble$minus123.456#
 	fstp qword [rbp + 76]
 
  stdio_test$320:
@@ -1980,7 +1980,7 @@ section .text
 	fld qword [@12857LongDouble$minus123.456#]
 
  stdio_test$321:
-	; Parameter 84 longdouble LongDouble$minus123.456#
+	; Parameter 84 long double LongDouble$minus123.456#
 	fstp qword [rbp + 84]
 
  stdio_test$322:
@@ -1988,7 +1988,7 @@ section .text
 	fld qword [@12858LongDouble$minus123.456#]
 
  stdio_test$323:
-	; Parameter 92 longdouble LongDouble$minus123.456#
+	; Parameter 92 long double LongDouble$minus123.456#
 	fstp qword [rbp + 92]
 
  stdio_test$324:
@@ -1996,7 +1996,7 @@ section .text
 	fld qword [@12859LongDouble$minus123.456#]
 
  stdio_test$325:
-	; Parameter 100 longdouble LongDouble$minus123.456#
+	; Parameter 100 long double LongDouble$minus123.456#
 	fstp qword [rbp + 100]
 
  stdio_test$326:
@@ -2099,17 +2099,17 @@ section .text
 	mov qword [rbp + 60], @12872string_3C25i3E203C25i3E203C25i3E0A#
 
  stdio_test$348:
-	; Parameter 68 signedint a
+	; Parameter 68 signed int a
 	mov eax, [rbp + 24]
 	mov [rbp + 68], eax
 
  stdio_test$349:
-	; Parameter 72 signedint b
+	; Parameter 72 signed int b
 	mov eax, [rbp + 28]
 	mov [rbp + 72], eax
 
  stdio_test$350:
-	; Parameter 76 signedint n
+	; Parameter 76 signed int n
 	mov eax, [rbp + 32]
 	mov [rbp + 76], eax
 
