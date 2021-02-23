@@ -3,40 +3,40 @@
 2: PostCall 52
 3: GetReturnValue £temporary2640
 4: Assign localeConvPtr £temporary2640
-5: NotEqual 7 localeConvPtr Pointer$0#
+5: NotEqual 7 localeConvPtr integral8$0#
 6: Jump 13
 7: Dereference £temporary2642 localeConvPtr 0
-8: NotEqual 10 £temporary2642 Pointer$0#
+8: NotEqual 10 £temporary2642 integral8$0#
 9: Jump 13
 10: Dereference £temporary2645 localeConvPtr 0
 11: Assign shortDayList £temporary2645
 12: Jump 15
 13: Assign shortDayList g_shortDayList
 14: Jump 15
-15: NotEqual 17 localeConvPtr Pointer$0#
+15: NotEqual 17 localeConvPtr integral8$0#
 16: Jump 23
 17: Dereference £temporary2647 localeConvPtr 0
-18: NotEqual 20 £temporary2647 Pointer$0#
+18: NotEqual 20 £temporary2647 integral8$0#
 19: Jump 23
 20: Dereference £temporary2650 localeConvPtr 0
 21: Assign longDayList £temporary2650
 22: Jump 25
 23: Assign longDayList g_longDayList
 24: Jump 25
-25: NotEqual 27 localeConvPtr Pointer$0#
+25: NotEqual 27 localeConvPtr integral8$0#
 26: Jump 33
 27: Dereference £temporary2652 localeConvPtr 0
-28: NotEqual 30 £temporary2652 Pointer$0#
+28: NotEqual 30 £temporary2652 integral8$0#
 29: Jump 33
 30: Dereference £temporary2655 localeConvPtr 0
 31: Assign shortMonthList £temporary2655
 32: Jump 35
 33: Assign shortMonthList g_shortMonthList
 34: Jump 35
-35: NotEqual 37 localeConvPtr Pointer$0#
+35: NotEqual 37 localeConvPtr integral8$0#
 36: Jump 43
 37: Dereference £temporary2657 localeConvPtr 0
-38: NotEqual 40 £temporary2657 Pointer$0#
+38: NotEqual 40 £temporary2657 integral8$0#
 39: Jump 43
 40: Dereference £temporary2660 localeConvPtr 0
 41: Assign longMonthList £temporary2660
@@ -56,55 +56,55 @@
 55: Assign weekNumberStartSunday £temporary2662
 56: Assign weekNumberStartMonday weekNumberStartSunday
 57: Dereference £temporary2663 tp 0
-58: Equal 60 £temporary2663 SignedInt$0#
+58: Equal 60 £temporary2663 integral4$0#
 59: Jump 62
-60: Subtract weekNumberStartMonday weekNumberStartMonday SignedInt$1#
+60: Subtract weekNumberStartMonday weekNumberStartMonday integral4$1#
 61: Jump 62
-62: Assign index SignedInt$0#
+62: Assign index integral4$0#
 63: Empty
 64: IntegralToIntegral £temporary2667 index
 65: Add £temporary2668 format £temporary2667
 66: Dereference £temporary2666 £temporary2668 0
-67: NotEqual 69 £temporary2666 SignedChar$0#
+67: NotEqual 69 £temporary2666 integral1$0#
 68: Jump 363
 69: IntegralToIntegral £temporary2672 index
 70: Add £temporary2673 format £temporary2672
 71: Dereference £temporary2671 £temporary2673 0
-72: Equal 74 £temporary2671 SignedChar$37#
+72: Equal 74 £temporary2671 integral1$37#
 73: Jump 331
-74: Add index index SignedInt$1#
+74: Add index index integral4$1#
 75: Assign £temporary2675 index
 76: IntegralToIntegral £temporary2677 £temporary2675
 77: Add £temporary2678 format £temporary2677
 78: Dereference £temporary2676 £temporary2678 0
-79: Case 103 £temporary2676 SignedChar$97#
-80: Case 114 £temporary2676 SignedChar$65#
-81: Case 125 £temporary2676 SignedChar$98#
-82: Case 136 £temporary2676 SignedChar$66#
-83: Case 147 £temporary2676 SignedChar$99#
-84: Case 167 £temporary2676 SignedChar$100#
-85: Case 175 £temporary2676 SignedChar$72#
-86: Case 183 £temporary2676 SignedChar$73#
-87: Case 192 £temporary2676 SignedChar$106#
-88: Case 200 £temporary2676 SignedChar$109#
-89: Case 209 £temporary2676 SignedChar$77#
-90: Case 217 £temporary2676 SignedChar$112#
-91: Case 232 £temporary2676 SignedChar$83#
-92: Case 240 £temporary2676 SignedChar$85#
-93: Case 247 £temporary2676 SignedChar$119#
-94: Case 255 £temporary2676 SignedChar$87#
-95: Case 262 £temporary2676 SignedChar$120#
-96: Case 274 £temporary2676 SignedChar$88#
-97: Case 286 £temporary2676 SignedChar$121#
-98: Case 295 £temporary2676 SignedChar$89#
-99: Case 304 £temporary2676 SignedChar$90#
-100: Case 319 £temporary2676 SignedChar$37#
+79: Case 103 £temporary2676 integral1$97#
+80: Case 114 £temporary2676 integral1$65#
+81: Case 125 £temporary2676 integral1$98#
+82: Case 136 £temporary2676 integral1$66#
+83: Case 147 £temporary2676 integral1$99#
+84: Case 167 £temporary2676 integral1$100#
+85: Case 175 £temporary2676 integral1$72#
+86: Case 183 £temporary2676 integral1$73#
+87: Case 192 £temporary2676 integral1$106#
+88: Case 200 £temporary2676 integral1$109#
+89: Case 209 £temporary2676 integral1$77#
+90: Case 217 £temporary2676 integral1$112#
+91: Case 232 £temporary2676 integral1$83#
+92: Case 240 £temporary2676 integral1$85#
+93: Case 247 £temporary2676 integral1$119#
+94: Case 255 £temporary2676 integral1$87#
+95: Case 262 £temporary2676 integral1$120#
+96: Case 274 £temporary2676 integral1$88#
+97: Case 286 £temporary2676 integral1$121#
+98: Case 295 £temporary2676 integral1$89#
+99: Case 304 £temporary2676 integral1$90#
+100: Case 319 £temporary2676 integral1$37#
 101: CaseEnd £temporary2676
 102: Jump 324
 103: PreCall 124
 104: Parameter 148 pointer add
 105: Dereference £temporary2679 tp 0
-106: Multiply £temporary2681 £temporary2679 SignedInt$8#
+106: Multiply £temporary2681 £temporary2679 integral4$8#
 107: IntegralToIntegral £temporary2682 £temporary2681
 108: Add £temporary2683 shortDayList £temporary2682
 109: Dereference £temporary2680 £temporary2683 0
@@ -115,7 +115,7 @@
 114: PreCall 124
 115: Parameter 148 pointer add
 116: Dereference £temporary2685 tp 0
-117: Multiply £temporary2687 £temporary2685 SignedInt$8#
+117: Multiply £temporary2687 £temporary2685 integral4$8#
 118: IntegralToIntegral £temporary2688 £temporary2687
 119: Add £temporary2689 longDayList £temporary2688
 120: Dereference £temporary2686 £temporary2689 0
@@ -126,7 +126,7 @@
 125: PreCall 124
 126: Parameter 148 pointer add
 127: Dereference £temporary2691 tp 0
-128: Multiply £temporary2693 £temporary2691 SignedInt$8#
+128: Multiply £temporary2693 £temporary2691 integral4$8#
 129: IntegralToIntegral £temporary2694 £temporary2693
 130: Add £temporary2695 shortMonthList £temporary2694
 131: Dereference £temporary2692 £temporary2695 0
@@ -137,7 +137,7 @@
 136: PreCall 124
 137: Parameter 148 pointer add
 138: Dereference £temporary2697 tp 0
-139: Multiply £temporary2699 £temporary2697 SignedInt$8#
+139: Multiply £temporary2699 £temporary2697 integral4$8#
 140: IntegralToIntegral £temporary2700 £temporary2699
 141: Add £temporary2701 longMonthList £temporary2700
 142: Dereference £temporary2698 £temporary2701 0
@@ -149,10 +149,10 @@
 148: Parameter 148 pointer add
 149: Parameter 156 pointer string_2502i2D2502i2D2502i202502i3A2502i3A2502i#
 150: Dereference £temporary2703 tp 0
-151: Add £temporary2704 SignedInt$1900# £temporary2703
+151: Add £temporary2704 integral4$1900# £temporary2703
 152: Parameter 164 signed int £temporary2704
 153: Dereference £temporary2705 tp 0
-154: Add £temporary2706 £temporary2705 SignedInt$1#
+154: Add £temporary2706 £temporary2705 integral4$1#
 155: Parameter 168 signed int £temporary2706
 156: Dereference £temporary2707 tp 0
 157: Parameter 172 signed int £temporary2707
@@ -185,7 +185,7 @@
 184: Parameter 148 pointer add
 185: Parameter 156 pointer string_2502i#
 186: Dereference £temporary2716 tp 0
-187: Modulo £temporary2717 £temporary2716 SignedInt$12#
+187: Modulo £temporary2717 £temporary2716 integral4$12#
 188: Parameter 164 signed int £temporary2717
 189: Call 124 sprintf 4
 190: PostCall 124
@@ -202,7 +202,7 @@
 201: Parameter 148 pointer add
 202: Parameter 156 pointer string_2502i#
 203: Dereference £temporary2721 tp 0
-204: Add £temporary2722 £temporary2721 SignedInt$1#
+204: Add £temporary2722 £temporary2721 integral4$1#
 205: Parameter 164 signed int £temporary2722
 206: Call 124 sprintf 4
 207: PostCall 124
@@ -218,7 +218,7 @@
 217: PreCall 124
 218: Parameter 148 pointer add
 219: Parameter 156 pointer string_25s#
-220: NotEqual 222 index Logical$0#
+220: NotEqual 222 index integral4$0#
 221: Jump 225
 222: Empty
 223: Assign £temporary2727 string_AM#
@@ -288,7 +288,7 @@
 287: Parameter 148 pointer add
 288: Parameter 156 pointer string_2502i#
 289: Dereference £temporary2743 tp 0
-290: Modulo £temporary2744 £temporary2743 SignedInt$100#
+290: Modulo £temporary2744 £temporary2743 integral4$100#
 291: Parameter 164 signed int £temporary2744
 292: Call 124 sprintf 4
 293: PostCall 124
@@ -297,7 +297,7 @@
 296: Parameter 148 pointer add
 297: Parameter 156 pointer string_2502i#
 298: Dereference £temporary2746 tp 0
-299: Add £temporary2747 SignedInt$1900# £temporary2746
+299: Add £temporary2747 integral4$1900# £temporary2746
 300: Parameter 164 signed int £temporary2747
 301: Call 124 sprintf 4
 302: PostCall 124
@@ -305,7 +305,7 @@
 304: PreCall 124
 305: Parameter 148 pointer add
 306: Dereference £temporary2749 tp 0
-307: NotEqual 309 £temporary2749 Logical$0#
+307: NotEqual 309 £temporary2749 integral4$0#
 308: Jump 312
 309: Empty
 310: Assign £temporary2751 string_summer#
@@ -335,7 +335,7 @@
 334: Dereference £temporary2756 £temporary2758 0
 335: Assign £temporary2755 £temporary2756
 336: Dereference £temporary2759 add 0
-337: Assign £temporary2759 SignedChar$0#
+337: Assign £temporary2759 integral1$0#
 338: Jump 339
 339: PreCall 124
 340: Parameter 148 pointer result
@@ -359,7 +359,7 @@
 358: Jump 363
 359: Jump 360
 360: Empty
-361: Add index index SignedInt$1#
+361: Add index index integral4$1#
 362: Jump 63
 363: PreCall 92
 364: Parameter 116 pointer result

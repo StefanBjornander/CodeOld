@@ -26,7 +26,7 @@
 section .text
 
  strcpy:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 40], 0
 
  strcpy$1:
@@ -44,7 +44,7 @@ section .text
 	; Dereference £temporary2766 £temporary2768 0
 
  strcpy$4:
-	; Equal 14 £temporary2766 SignedChar$0#
+	; Equal 14 £temporary2766 integral1$0#
 	cmp byte [rsi], 0
 	je strcpy$14
 
@@ -82,7 +82,7 @@ section .text
 	mov [rsi], al
 
  strcpy$12:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 40]
 
  strcpy$13:
@@ -104,7 +104,7 @@ section .text
 	; Dereference £temporary2777 £temporary2779 0
 
  strcpy$17:
-	; Assign £temporary2777 SignedChar$0#
+	; Assign £temporary2777 integral1$0#
 	mov byte [rsi], 0
 
  strcpy$18:
@@ -124,7 +124,7 @@ section .text
 section .text
 
  strncpy:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 44], 0
 
  strncpy$1:
@@ -148,7 +148,7 @@ section .text
 	; Dereference £temporary2781 £temporary2783 0
 
  strncpy$5:
-	; Equal 15 £temporary2781 SignedChar$0#
+	; Equal 15 £temporary2781 integral1$0#
 	cmp byte [rsi], 0
 	je strncpy$15
 
@@ -186,7 +186,7 @@ section .text
 	mov [rsi], al
 
  strncpy$13:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 44]
 
  strncpy$14:
@@ -214,11 +214,11 @@ section .text
 	; Dereference £temporary2795 £temporary2797 0
 
  strncpy$19:
-	; Assign £temporary2795 SignedChar$0#
+	; Assign £temporary2795 integral1$0#
 	mov byte [rsi], 0
 
  strncpy$20:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 44]
 
  strncpy$21:
@@ -267,7 +267,7 @@ section .text
 	mov [rbp + 44], ebx
 
  strcat$6:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 40], 0
 
  strcat$7:
@@ -285,7 +285,7 @@ section .text
 	; Dereference £temporary2799 £temporary2801 0
 
  strcat$10:
-	; Equal 21 £temporary2799 SignedChar$0#
+	; Equal 21 £temporary2799 integral1$0#
 	cmp byte [rsi], 0
 	je strcat$21
 
@@ -327,7 +327,7 @@ section .text
 	mov [rsi], al
 
  strcat$19:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 40]
 
  strcat$20:
@@ -353,7 +353,7 @@ section .text
 	; Dereference £temporary2812 £temporary2814 0
 
  strcat$25:
-	; Assign £temporary2812 SignedChar$0#
+	; Assign £temporary2812 integral1$0#
 	mov byte [rsi], 0
 
  strcat$26:
@@ -398,11 +398,11 @@ section .text
 	mov [rbp + 48], ebx
 
  strncat$6:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 44], 0
 
  strncat$7:
-	; Subtract £temporary2816 size SignedInt$1#
+	; Subtract £temporary2816 size integral4$1#
 	mov eax, [rbp + 40]
 	dec eax
 
@@ -426,7 +426,7 @@ section .text
 	; Dereference £temporary2818 £temporary2820 0
 
  strncat$12:
-	; Equal 23 £temporary2818 SignedChar$0#
+	; Equal 23 £temporary2818 integral1$0#
 	cmp byte [rsi], 0
 	je strncat$23
 
@@ -468,7 +468,7 @@ section .text
 	mov [rsi], al
 
  strncat$21:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 44]
 
  strncat$22:
@@ -481,7 +481,7 @@ section .text
 	add eax, [rbp + 40]
 
  strncat$24:
-	; Subtract £temporary2832 £temporary2831 SignedInt$1#
+	; Subtract £temporary2832 £temporary2831 integral4$1#
 	dec eax
 
  strncat$25:
@@ -498,7 +498,7 @@ section .text
 	; Dereference £temporary2833 £temporary2835 0
 
  strncat$28:
-	; Assign £temporary2833 SignedChar$0#
+	; Assign £temporary2833 integral1$0#
 	mov byte [rsi], 0
 
  strncat$29:
@@ -518,7 +518,7 @@ section .text
 section .text
 
  strcmp:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 40], 0
 
  strcmp$1:
@@ -536,7 +536,7 @@ section .text
 	; Dereference £temporary2837 £temporary2839 0
 
  strcmp$4:
-	; NotEqual 11 £temporary2837 SignedChar$0#
+	; NotEqual 11 £temporary2837 integral1$0#
 	cmp byte [rsi], 0
 	jne strcmp$11
 
@@ -555,7 +555,7 @@ section .text
 	; Dereference £temporary2841 £temporary2843 0
 
  strcmp$8:
-	; NotEqual 11 £temporary2841 SignedChar$0#
+	; NotEqual 11 £temporary2841 integral1$0#
 	cmp byte [rsi], 0
 	jne strcmp$11
 
@@ -563,7 +563,7 @@ section .text
 	; SetReturnValue
 
  strcmp$10:
-	; Return SignedInt$0#
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -608,7 +608,7 @@ section .text
 	; SetReturnValue
 
  strcmp$19:
-	; Return SignedInt$minus1#
+	; Return integral4$minus1#
 	mov ebx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -653,7 +653,7 @@ section .text
 	; SetReturnValue
 
  strcmp$28:
-	; Return SignedInt$1#
+	; Return integral4$1#
 	mov ebx, 1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -661,7 +661,7 @@ section .text
 	jmp rax
 
  strcmp$29:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 40]
 
  strcmp$30:
@@ -674,7 +674,7 @@ section .text
 section .text
 
  strncmp:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 44], 0
 
  strncmp$1:
@@ -698,7 +698,7 @@ section .text
 	; Dereference £temporary2863 £temporary2865 0
 
  strncmp$5:
-	; NotEqual 12 £temporary2863 SignedChar$0#
+	; NotEqual 12 £temporary2863 integral1$0#
 	cmp byte [rsi], 0
 	jne strncmp$12
 
@@ -717,7 +717,7 @@ section .text
 	; Dereference £temporary2867 £temporary2869 0
 
  strncmp$9:
-	; NotEqual 12 £temporary2867 SignedChar$0#
+	; NotEqual 12 £temporary2867 integral1$0#
 	cmp byte [rsi], 0
 	jne strncmp$12
 
@@ -725,7 +725,7 @@ section .text
 	; SetReturnValue
 
  strncmp$11:
-	; Return SignedInt$0#
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -770,7 +770,7 @@ section .text
 	; SetReturnValue
 
  strncmp$20:
-	; Return SignedInt$minus1#
+	; Return integral4$minus1#
 	mov ebx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -815,7 +815,7 @@ section .text
 	; SetReturnValue
 
  strncmp$29:
-	; Return SignedInt$1#
+	; Return integral4$1#
 	mov ebx, 1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -823,7 +823,7 @@ section .text
 	jmp rax
 
  strncmp$30:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 44]
 
  strncmp$31:
@@ -834,7 +834,7 @@ section .text
 	; SetReturnValue
 
  strncmp$33:
-	; Return SignedInt$0#
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -859,7 +859,7 @@ section .text
 	mov [rbp + 40], al
 
  strchr$2:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 36], 0
 
  strchr$3:
@@ -877,7 +877,7 @@ section .text
 	; Dereference £temporary2887 £temporary2889 0
 
  strchr$6:
-	; Equal 19 £temporary2887 SignedChar$0#
+	; Equal 19 £temporary2887 integral1$0#
 	cmp byte [rsi], 0
 	je strchr$19
 
@@ -929,7 +929,7 @@ section .text
 	jmp rax
 
  strchr$17:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 36]
 
  strchr$18:
@@ -940,7 +940,7 @@ section .text
 	; SetReturnValue
 
  strchr$20:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -953,7 +953,7 @@ section .text
 section .text
 
  strrchr:
-	; Assign result Pointer$0#
+	; Assign result integral8$0#
 	mov qword [rbp + 40], 0
 
  strrchr$1:
@@ -969,7 +969,7 @@ section .text
 	mov [rbp + 48], al
 
  strrchr$3:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 36], 0
 
  strrchr$4:
@@ -987,7 +987,7 @@ section .text
 	; Dereference £temporary2901 £temporary2903 0
 
  strrchr$7:
-	; Equal 19 £temporary2901 SignedChar$0#
+	; Equal 19 £temporary2901 integral1$0#
 	cmp byte [rsi], 0
 	je strrchr$19
 
@@ -1033,7 +1033,7 @@ section .text
 	mov [rbp + 40], rsi
 
  strrchr$17:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 36]
 
  strrchr$18:
@@ -1057,7 +1057,7 @@ section .text
 section .text
 
  strspn:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 40], 0
 
  strspn$1:
@@ -1075,7 +1075,7 @@ section .text
 	; Dereference £temporary2914 £temporary2916 0
 
  strspn$4:
-	; Equal 20 £temporary2914 SignedChar$0#
+	; Equal 20 £temporary2914 integral1$0#
 	cmp byte [rsi], 0
 	je strspn$20
 
@@ -1128,7 +1128,7 @@ section .text
 	; GetReturnValue £temporary2923
 
  strspn$15:
-	; NotEqual 18 £temporary2923 Pointer$0#
+	; NotEqual 18 £temporary2923 integral8$0#
 	cmp rbx, 0
 	jne strspn$18
 
@@ -1144,7 +1144,7 @@ section .text
 	jmp rax
 
  strspn$18:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 40]
 
  strspn$19:
@@ -1155,7 +1155,7 @@ section .text
 	; SetReturnValue
 
  strspn$21:
-	; Return SignedInt$minus1#
+	; Return integral4$minus1#
 	mov ebx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1168,7 +1168,7 @@ section .text
 section .text
 
  strcspn:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 40], 0
 
  strcspn$1:
@@ -1186,7 +1186,7 @@ section .text
 	; Dereference £temporary2925 £temporary2927 0
 
  strcspn$4:
-	; Equal 20 £temporary2925 SignedChar$0#
+	; Equal 20 £temporary2925 integral1$0#
 	cmp byte [rsi], 0
 	je strcspn$20
 
@@ -1239,7 +1239,7 @@ section .text
 	; GetReturnValue £temporary2934
 
  strcspn$15:
-	; Equal 18 £temporary2934 Pointer$0#
+	; Equal 18 £temporary2934 integral8$0#
 	cmp rbx, 0
 	je strcspn$18
 
@@ -1255,7 +1255,7 @@ section .text
 	jmp rax
 
  strcspn$18:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 40]
 
  strcspn$19:
@@ -1266,7 +1266,7 @@ section .text
 	; SetReturnValue
 
  strcspn$21:
-	; Return SignedInt$minus1#
+	; Return integral4$minus1#
 	mov ebx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1279,7 +1279,7 @@ section .text
 section .text
 
  strpbrk:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 40], 0
 
  strpbrk$1:
@@ -1297,7 +1297,7 @@ section .text
 	; Dereference £temporary2936 £temporary2938 0
 
  strpbrk$4:
-	; Equal 24 £temporary2936 SignedChar$0#
+	; Equal 24 £temporary2936 integral1$0#
 	cmp byte [rsi], 0
 	je strpbrk$24
 
@@ -1350,7 +1350,7 @@ section .text
 	; GetReturnValue £temporary2945
 
  strpbrk$15:
-	; Equal 22 £temporary2945 Pointer$0#
+	; Equal 22 £temporary2945 integral8$0#
 	cmp rbx, 0
 	je strpbrk$22
 
@@ -1382,7 +1382,7 @@ section .text
 	jmp rax
 
  strpbrk$22:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 40]
 
  strpbrk$23:
@@ -1393,7 +1393,7 @@ section .text
 	; SetReturnValue
 
  strpbrk$25:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1431,7 +1431,7 @@ section .text
 	mov [rbp + 44], ebx
 
  strstr$6:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 40], 0
 
  strstr$7:
@@ -1449,7 +1449,7 @@ section .text
 	; Dereference £temporary2952 £temporary2954 0
 
  strstr$10:
-	; Equal 29 £temporary2952 SignedChar$0#
+	; Equal 29 £temporary2952 integral1$0#
 	cmp byte [rsi], 0
 	je strstr$29
 
@@ -1495,7 +1495,7 @@ section .text
 	; GetReturnValue £temporary2959
 
  strstr$20:
-	; NotEqual 27 £temporary2959 SignedInt$0#
+	; NotEqual 27 £temporary2959 integral4$0#
 	cmp ebx, 0
 	jne strstr$27
 
@@ -1527,7 +1527,7 @@ section .text
 	jmp rax
 
  strstr$27:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 40]
 
  strstr$28:
@@ -1538,7 +1538,7 @@ section .text
 	; SetReturnValue
 
  strstr$30:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1551,7 +1551,7 @@ section .text
 section .text
 
  strlen:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 32], 0
 
  strlen$1:
@@ -1569,12 +1569,12 @@ section .text
 	; Dereference £temporary2965 £temporary2967 0
 
  strlen$4:
-	; Equal 7 £temporary2965 SignedChar$0#
+	; Equal 7 £temporary2965 integral1$0#
 	cmp byte [rsi], 0
 	je strlen$7
 
  strlen$5:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 32]
 
  strlen$6:
@@ -1597,7 +1597,7 @@ section .text
 
 section .data
 
-@8593SignedInt$8#:
+@7257integral4$8#:
 	; Initializer SignedInt 8
 	dd 8
 
@@ -1624,7 +1624,7 @@ section .text
 	mov [rbp + 28], rbx
 
  strerror$5:
-	; Equal 15 localeConvPtr Pointer$0#
+	; Equal 15 localeConvPtr integral8$0#
 	cmp qword [rbp + 28], 0
 	je strerror$15
 
@@ -1638,15 +1638,15 @@ section .text
 	mov [rbp + 36], rax
 
  strerror$8:
-	; Equal 15 messageList Pointer$0#
+	; Equal 15 messageList integral8$0#
 	cmp qword [rbp + 36], 0
 	je strerror$15
 
  strerror$9:
-	; Multiply £temporary2975 errno SignedInt$8#
+	; Multiply £temporary2975 errno integral4$8#
 	mov eax, [rbp + 24]
 	xor edx, edx
-	imul dword [@8593SignedInt$8#]
+	imul dword [@7257integral4$8#]
 
  strerror$10:
 	; IntegralToIntegral £temporary2976 £temporary2975
@@ -1676,7 +1676,7 @@ section .text
 	; SetReturnValue
 
  strerror$16:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1688,14 +1688,14 @@ section .text
 
 section .data
 
-@8600$token:
+@7262$token:
 	; Initializer Pointer 0
 	dq 0
 
 section .text
 
  strtok:
-	; Equal 42 string Pointer$0#
+	; Equal 42 string integral8$0#
 	cmp qword [rbp + 24], 0
 	je strtok$42
 
@@ -1704,7 +1704,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  strtok$2:
-	; NotEqual 5 £temporary2979 SignedChar$0#
+	; NotEqual 5 £temporary2979 integral1$0#
 	cmp byte [rsi], 0
 	jne strtok$5
 
@@ -1712,7 +1712,7 @@ section .text
 	; SetReturnValue
 
  strtok$4:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1720,7 +1720,7 @@ section .text
 	jmp rax
 
  strtok$5:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 40], 0
 
  strtok$6:
@@ -1738,7 +1738,7 @@ section .text
 	; Dereference £temporary2981 £temporary2983 0
 
  strtok$9:
-	; Equal 35 £temporary2981 SignedChar$0#
+	; Equal 35 £temporary2981 integral1$0#
 	cmp byte [rsi], 0
 	je strtok$35
 
@@ -1791,7 +1791,7 @@ section .text
 	; GetReturnValue £temporary2990
 
  strtok$20:
-	; Equal 33 £temporary2990 Pointer$0#
+	; Equal 33 £temporary2990 integral8$0#
 	cmp rbx, 0
 	je strtok$33
 
@@ -1810,11 +1810,11 @@ section .text
 	; Dereference £temporary2992 £temporary2994 0
 
  strtok$24:
-	; Assign £temporary2992 SignedChar$0#
+	; Assign £temporary2992 integral1$0#
 	mov byte [rsi], 0
 
  strtok$25:
-	; Add £temporary2995 index SignedInt$1#
+	; Add £temporary2995 index integral4$1#
 	mov eax, [rbp + 40]
 	inc eax
 
@@ -1836,7 +1836,7 @@ section .text
 
  strtok$30:
 	; Assign token £temporary2999
-	mov [@8600$token], rsi
+	mov [@7262$token], rsi
 
  strtok$31:
 	; SetReturnValue
@@ -1850,7 +1850,7 @@ section .text
 	jmp rax
 
  strtok$33:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 40]
 
  strtok$34:
@@ -1876,7 +1876,7 @@ section .text
 
  strtok$39:
 	; Assign token £temporary3003
-	mov [@8600$token], rsi
+	mov [@7262$token], rsi
 
  strtok$40:
 	; SetReturnValue
@@ -1890,15 +1890,15 @@ section .text
 	jmp rax
 
  strtok$42:
-	; NotEqual 45 token Pointer$0#
-	cmp qword [@8600$token], 0
+	; NotEqual 45 token integral8$0#
+	cmp qword [@7262$token], 0
 	jne strtok$45
 
  strtok$43:
 	; SetReturnValue
 
  strtok$44:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1907,10 +1907,10 @@ section .text
 
  strtok$45:
 	; Dereference £temporary3005 token 0
-	mov rsi, [@8600$token]
+	mov rsi, [@7262$token]
 
  strtok$46:
-	; NotEqual 49 £temporary3005 SignedChar$0#
+	; NotEqual 49 £temporary3005 integral1$0#
 	cmp byte [rsi], 0
 	jne strtok$49
 
@@ -1918,7 +1918,7 @@ section .text
 	; SetReturnValue
 
  strtok$48:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1926,7 +1926,7 @@ section .text
 	jmp rax
 
  strtok$49:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 40], 0
 
  strtok$50:
@@ -1937,14 +1937,14 @@ section .text
 
  strtok$51:
 	; Add £temporary3009 token £temporary3008
-	mov rsi, [@8600$token]
+	mov rsi, [@7262$token]
 	add rsi, rax
 
  strtok$52:
 	; Dereference £temporary3007 £temporary3009 0
 
  strtok$53:
-	; Equal 80 £temporary3007 SignedChar$0#
+	; Equal 80 £temporary3007 integral1$0#
 	cmp byte [rsi], 0
 	je strtok$80
 
@@ -1964,7 +1964,7 @@ section .text
 
  strtok$57:
 	; Add £temporary3014 token £temporary3013
-	mov rsi, [@8600$token]
+	mov rsi, [@7262$token]
 	add rsi, rax
 
  strtok$58:
@@ -1997,13 +1997,13 @@ section .text
 	; GetReturnValue £temporary3016
 
  strtok$64:
-	; Equal 78 £temporary3016 Pointer$0#
+	; Equal 78 £temporary3016 integral8$0#
 	cmp rbx, 0
 	je strtok$78
 
  strtok$65:
 	; Assign tokenStart2 token
-	mov rax, [@8600$token]
+	mov rax, [@7262$token]
 	mov [rbp + 52], rax
 
  strtok$66:
@@ -2014,18 +2014,18 @@ section .text
 
  strtok$67:
 	; Add £temporary3020 token £temporary3019
-	mov rsi, [@8600$token]
+	mov rsi, [@7262$token]
 	add rsi, rax
 
  strtok$68:
 	; Dereference £temporary3018 £temporary3020 0
 
  strtok$69:
-	; Assign £temporary3018 SignedChar$0#
+	; Assign £temporary3018 integral1$0#
 	mov byte [rsi], 0
 
  strtok$70:
-	; Add £temporary3021 index SignedInt$1#
+	; Add £temporary3021 index integral4$1#
 	mov eax, [rbp + 40]
 	inc eax
 
@@ -2036,7 +2036,7 @@ section .text
 
  strtok$72:
 	; Add £temporary3024 token £temporary3023
-	mov rsi, [@8600$token]
+	mov rsi, [@7262$token]
 	add rsi, rax
 
  strtok$73:
@@ -2047,7 +2047,7 @@ section .text
 
  strtok$75:
 	; Assign token £temporary3025
-	mov [@8600$token], rsi
+	mov [@7262$token], rsi
 
  strtok$76:
 	; SetReturnValue
@@ -2061,7 +2061,7 @@ section .text
 	jmp rax
 
  strtok$78:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 40]
 
  strtok$79:
@@ -2070,7 +2070,7 @@ section .text
 
  strtok$80:
 	; Assign tokenStart token
-	mov rax, [@8600$token]
+	mov rax, [@7262$token]
 	mov [rbp + 44], rax
 
  strtok$81:
@@ -2081,7 +2081,7 @@ section .text
 
  strtok$82:
 	; Add £temporary3028 token £temporary3027
-	mov rsi, [@8600$token]
+	mov rsi, [@7262$token]
 	add rsi, rax
 
  strtok$83:
@@ -2092,7 +2092,7 @@ section .text
 
  strtok$85:
 	; Assign token £temporary3029
-	mov [@8600$token], rsi
+	mov [@7262$token], rsi
 
  strtok$86:
 	; SetReturnValue
@@ -2127,7 +2127,7 @@ section .text
 	mov [rbp + 52], rax
 
  memcpy$4:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 60], 0
 
  memcpy$5:
@@ -2170,7 +2170,7 @@ section .text
 	mov [rsi], al
 
  memcpy$13:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 60]
 
  memcpy$14:
@@ -2219,13 +2219,13 @@ section .text
 	jge memmove$16
 
  memmove$5:
-	; Subtract index size SignedInt$1#
+	; Subtract index size integral4$1#
 	mov eax, [rbp + 40]
 	dec eax
 	mov [rbp + 60], eax
 
  memmove$6:
-	; LessThan 27 index SignedInt$0#
+	; LessThan 27 index integral4$0#
 	cmp dword [rbp + 60], 0
 	jl memmove$27
 
@@ -2263,7 +2263,7 @@ section .text
 	mov [rsi], al
 
  memmove$14:
-	; Subtract index index SignedInt$1#
+	; Subtract index index integral4$1#
 	dec dword [rbp + 60]
 
  memmove$15:
@@ -2271,7 +2271,7 @@ section .text
 	jmp memmove$6
 
  memmove$16:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 60], 0
 
  memmove$17:
@@ -2314,7 +2314,7 @@ section .text
 	mov [rsi], al
 
  memmove$25:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 60]
 
  memmove$26:
@@ -2357,7 +2357,7 @@ section .text
 	mov [rbp + 52], rax
 
  memcmp$4:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 60], 0
 
  memcmp$5:
@@ -2404,7 +2404,7 @@ section .text
 	; SetReturnValue
 
  memcmp$14:
-	; Return SignedInt$minus1#
+	; Return integral4$minus1#
 	mov ebx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -2449,7 +2449,7 @@ section .text
 	; SetReturnValue
 
  memcmp$23:
-	; Return SignedInt$1#
+	; Return integral4$1#
 	mov ebx, 1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -2457,7 +2457,7 @@ section .text
 	jmp rax
 
  memcmp$24:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 60]
 
  memcmp$25:
@@ -2468,7 +2468,7 @@ section .text
 	; SetReturnValue
 
  memcmp$27:
-	; Return SignedInt$0#
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -2501,7 +2501,7 @@ section .text
 	mov [rbp + 52], al
 
  memchr$4:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 40], 0
 
  memchr$5:
@@ -2561,7 +2561,7 @@ section .text
 	jmp rax
 
  memchr$17:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 40]
 
  memchr$18:
@@ -2572,7 +2572,7 @@ section .text
 	; SetReturnValue
 
  memchr$20:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -2605,7 +2605,7 @@ section .text
 	mov [rbp + 48], al
 
  memset$4:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 49], 0
 
  memset$5:
@@ -2634,7 +2634,7 @@ section .text
 	mov [rsi], al
 
  memset$10:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 49]
 
  memset$11:

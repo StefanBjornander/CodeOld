@@ -8,13 +8,13 @@
 
 section .data
 
-@13469$i:
+@11530$i:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@13470string_25i20#:
+@11531string_25i20#:
 	; Initializer String %i 
 	db "%i ", 0
 
@@ -25,15 +25,15 @@ section .text
 
  stack_test$1:
 	; Parameter 48 pointer string_25i20#
-	mov qword [rbp + 48], @13470string_25i20#
+	mov qword [rbp + 48], @11531string_25i20#
 
  stack_test$2:
 	; Assign £temporary4091 i
-	mov eax, [@13469$i]
+	mov eax, [@11530$i]
 
  stack_test$3:
-	; Add i i SignedInt$1#
-	inc dword [@13469$i]
+	; Add i i integral4$1#
+	inc dword [@11530$i]
 
  stack_test$4:
 	; Parameter 56 signed int £temporary4091
@@ -76,21 +76,21 @@ section .text
 
 section .data
 
-@13485string_102420bytes2Dblock20number3A2025i0A#:
+@11542string_102420bytes2Dblock20number3A2025i0A#:
 	; Initializer String 1024 bytes-block number: %i\n
 	db "1024 bytes-block number: %i", 10, 0
 
 section .text
 
  heap_test:
-	; Assign count SignedInt$0#
+	; Assign count integral4$0#
 	mov dword [rbp + 24], 0
 
  heap_test$1:
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  heap_test$2:
-	; Parameter 60 signed int SignedInt$1024#
+	; Parameter 60 signed int integral4$1024#
 	mov dword [rbp + 60], 1024
 
  heap_test$3:
@@ -111,7 +111,7 @@ section .text
 	mov [rbp + 28], rbx
 
  heap_test$7:
-	; Equal 17 pointer Pointer$0#
+	; Equal 17 pointer integral8$0#
 	cmp qword [rbp + 28], 0
 	je heap_test$17
 
@@ -120,14 +120,14 @@ section .text
 
  heap_test$9:
 	; Parameter 60 pointer string_102420bytes2Dblock20number3A2025i0A#
-	mov qword [rbp + 60], @13485string_102420bytes2Dblock20number3A2025i0A#
+	mov qword [rbp + 60], @11542string_102420bytes2Dblock20number3A2025i0A#
 
  heap_test$10:
 	; Assign £temporary4096 count
 	mov eax, [rbp + 24]
 
  heap_test$11:
-	; Add count count SignedInt$1#
+	; Add count count integral4$1#
 	inc dword [rbp + 24]
 
  heap_test$12:

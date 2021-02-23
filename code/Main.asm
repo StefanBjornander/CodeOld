@@ -33,21 +33,21 @@ a:
 
 section .data
 
-@314$count:
+@313$count:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@317string_25d20#:
+@315string_25d20#:
 	; Initializer String %d 
 	db "%d ", 0
 
 section .text
 
  mainX:
-	; GreaterThan 11 count SignedInt$10#
-	cmp dword [@314$count], 10
+	; GreaterThan 11 count integral4$10#
+	cmp dword [@313$count], 10
 	jg mainX$11
 
  mainX$1:
@@ -55,15 +55,15 @@ section .text
 
  mainX$2:
 	; Parameter 48 pointer string_25d20#
-	mov qword [rbp + 48], @317string_25d20#
+	mov qword [rbp + 48], @315string_25d20#
 
  mainX$3:
 	; Assign £temporary1 count
-	mov eax, [@314$count]
+	mov eax, [@313$count]
 
  mainX$4:
-	; Add count count SignedInt$1#
-	inc dword [@314$count]
+	; Add count count integral4$1#
+	inc dword [@313$count]
 
  mainX$5:
 	; Parameter 56 signed int £temporary1

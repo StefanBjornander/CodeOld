@@ -17,18 +17,18 @@
 section .text
 
  malloc_test2:
-	; Assign p Pointer$0#
+	; Assign p integral8$0#
 	mov qword [rbp + 28], 0
 
  malloc_test2$1:
-	; Assign r Pointer$0#
+	; Assign r integral8$0#
 	mov qword [rbp + 36], 0
 
  malloc_test2$2:
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$3:
-	; Parameter 68 signed int SignedInt$96#
+	; Parameter 68 signed int integral4$96#
 	mov dword [rbp + 68], 96
 
  malloc_test2$4:
@@ -49,11 +49,11 @@ section .text
 	mov [rbp + 44], rbx
 
  malloc_test2$8:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 24], 0
 
  malloc_test2$9:
-	; GreaterThanEqual 20 index SignedInt$10#
+	; GreaterThanEqual 20 index integral4$10#
 	cmp dword [rbp + 24], 10
 	jge malloc_test2$20
 
@@ -61,7 +61,7 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$11:
-	; Parameter 76 signed int SignedInt$96#
+	; Parameter 76 signed int integral4$96#
 	mov dword [rbp + 76], 96
 
  malloc_test2$12:
@@ -82,7 +82,7 @@ section .text
 	mov [rbp + 28], rbx
 
  malloc_test2$16:
-	; NotEqual 18 index SignedInt$5#
+	; NotEqual 18 index integral4$5#
 	cmp dword [rbp + 24], 5
 	jne malloc_test2$18
 
@@ -92,7 +92,7 @@ section .text
 	mov [rbp + 36], rax
 
  malloc_test2$18:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 24]
 
  malloc_test2$19:
@@ -121,7 +121,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$25:
-	; Parameter 84 signed int SignedInt$50#
+	; Parameter 84 signed int integral4$50#
 	mov dword [rbp + 84], 50
 
  malloc_test2$26:
@@ -156,7 +156,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$33:
-	; Parameter 84 signed int SignedInt$50#
+	; Parameter 84 signed int integral4$50#
 	mov dword [rbp + 84], 50
 
  malloc_test2$34:
@@ -191,7 +191,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$41:
-	; Parameter 84 signed int SignedInt$50#
+	; Parameter 84 signed int integral4$50#
 	mov dword [rbp + 84], 50
 
  malloc_test2$42:
@@ -226,7 +226,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$49:
-	; Parameter 84 signed int SignedInt$200#
+	; Parameter 84 signed int integral4$200#
 	mov dword [rbp + 84], 200
 
  malloc_test2$50:
@@ -261,7 +261,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$57:
-	; Parameter 84 signed int SignedInt$200#
+	; Parameter 84 signed int integral4$200#
 	mov dword [rbp + 84], 200
 
  malloc_test2$58:
@@ -296,7 +296,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$65:
-	; Parameter 84 signed int SignedInt$200#
+	; Parameter 84 signed int integral4$200#
 	mov dword [rbp + 84], 200
 
  malloc_test2$66:
@@ -338,11 +338,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$1:
-	; Parameter 48 signed int SignedInt$96#
+	; Parameter 48 signed int integral4$96#
 	mov dword [rbp + 48], 96
 
  malloc_test3$2:
-	; Parameter 52 signed int SignedInt$1#
+	; Parameter 52 signed int integral4$1#
 	mov dword [rbp + 52], 1
 
  malloc_test3$3:
@@ -366,11 +366,11 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$8:
-	; Parameter 56 signed int SignedInt$96#
+	; Parameter 56 signed int integral4$96#
 	mov dword [rbp + 56], 96
 
  malloc_test3$9:
-	; Parameter 60 signed int SignedInt$1#
+	; Parameter 60 signed int integral4$1#
 	mov dword [rbp + 60], 1
 
  malloc_test3$10:
@@ -394,11 +394,11 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$15:
-	; Parameter 64 signed int SignedInt$96#
+	; Parameter 64 signed int integral4$96#
 	mov dword [rbp + 64], 96
 
  malloc_test3$16:
-	; Parameter 68 signed int SignedInt$1#
+	; Parameter 68 signed int integral4$1#
 	mov dword [rbp + 68], 1
 
  malloc_test3$17:
@@ -422,11 +422,11 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$22:
-	; Parameter 72 signed int SignedInt$96#
+	; Parameter 72 signed int integral4$96#
 	mov dword [rbp + 72], 96
 
  malloc_test3$23:
-	; Parameter 76 signed int SignedInt$1#
+	; Parameter 76 signed int integral4$1#
 	mov dword [rbp + 76], 1
 
  malloc_test3$24:
@@ -450,11 +450,11 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$29:
-	; Parameter 80 signed int SignedInt$96#
+	; Parameter 80 signed int integral4$96#
 	mov dword [rbp + 80], 96
 
  malloc_test3$30:
-	; Parameter 84 signed int SignedInt$1#
+	; Parameter 84 signed int integral4$1#
 	mov dword [rbp + 84], 1
 
  malloc_test3$31:
@@ -602,14 +602,14 @@ section .text
 
 section .data
 
-@13805string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#:
+@11820string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#:
 	; Initializer String Stack Top: %u, Low Heap: %u\n
 	db "Stack Top: %u, Low Heap: %u", 10, 0
 
 section .text
 
  rec:
-	; Assign lowHeapPtr Pointer$65534#
+	; Assign lowHeapPtr integral8$65534#
 	mov qword [rbp + 28], 65534
 
  rec$1:
@@ -628,7 +628,7 @@ section .text
 
  rec$5:
 	; Parameter 60 pointer string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#
-	mov qword [rbp + 60], @13805string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#
+	mov qword [rbp + 60], @11820string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#
 
  rec$6:
 	; Parameter 68 unsigned int stackTop
@@ -710,7 +710,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$1:
-	; Parameter 48 signed int SignedInt$96#
+	; Parameter 48 signed int integral4$96#
 	mov dword [rbp + 48], 96
 
  malloc_test$2:
@@ -734,7 +734,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$7:
-	; Parameter 56 signed int SignedInt$96#
+	; Parameter 56 signed int integral4$96#
 	mov dword [rbp + 56], 96
 
  malloc_test$8:
@@ -758,7 +758,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$13:
-	; Parameter 64 signed int SignedInt$96#
+	; Parameter 64 signed int integral4$96#
 	mov dword [rbp + 64], 96
 
  malloc_test$14:
@@ -800,7 +800,7 @@ section .text
 	mov [rbp + 72], rax
 
  malloc_test$23:
-	; Parameter 80 signed int SignedInt$40#
+	; Parameter 80 signed int integral4$40#
 	mov dword [rbp + 80], 40
 
  malloc_test$24:
@@ -830,7 +830,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$30:
-	; Parameter 72 signed int SignedInt$40#
+	; Parameter 72 signed int integral4$40#
 	mov dword [rbp + 72], 40
 
  malloc_test$31:
@@ -930,14 +930,14 @@ section .text
 
 section .data
 
-@13853string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#:
+@11853string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#:
 	; Initializer String Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u\n
 	db "Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u", 10, 0
 
 section .text
 
  malloc_test6:
-	; Assign lowHeapPtr Pointer$65534#
+	; Assign lowHeapPtr integral8$65534#
 	mov qword [rbp + 32], 65534
 
  malloc_test6$1:
@@ -952,11 +952,11 @@ section .text
 	mov [rbp + 28], ebp
 
  malloc_test6$4:
-	; Assign i SignedInt$0#
+	; Assign i integral4$0#
 	mov dword [rbp + 24], 0
 
  malloc_test6$5:
-	; GreaterThanEqual 23 i SignedInt$1000#
+	; GreaterThanEqual 23 i integral4$1000#
 	cmp dword [rbp + 24], 1000
 	jge malloc_test6$23
 
@@ -964,7 +964,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test6$7:
-	; Parameter 64 signed int SignedInt$96#
+	; Parameter 64 signed int integral4$96#
 	mov dword [rbp + 64], 96
 
  malloc_test6$8:
@@ -989,7 +989,7 @@ section .text
 
  malloc_test6$13:
 	; Parameter 72 pointer string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#
-	mov qword [rbp + 72], @13853string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#
+	mov qword [rbp + 72], @11853string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#
 
  malloc_test6$14:
 	; Parameter 80 signed int i
@@ -1028,7 +1028,7 @@ section .text
 	; PostCall 48
 
  malloc_test6$21:
-	; Add i i SignedInt$1#
+	; Add i i integral4$1#
 	inc dword [rbp + 24]
 
  malloc_test6$22:

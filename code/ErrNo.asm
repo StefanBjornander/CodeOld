@@ -5,133 +5,133 @@
 
 section .data
 
-@1158$NO_ERROR:
+@1096$NO_ERROR:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@1159$NO_FUNCTION:
+@1097$NO_FUNCTION:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@1160$NO_FILE:
+@1098$NO_FILE:
 	; Initializer SignedInt 2
 	dd 2
 
 section .data
 
-@1161$NO_PATH:
+@1099$NO_PATH:
 	; Initializer SignedInt 3
 	dd 3
 
 section .data
 
-@1162$NO_HANDLE:
+@1100$NO_HANDLE:
 	; Initializer SignedInt 4
 	dd 4
 
 section .data
 
-@1163$NO_ACCESS:
+@1101$NO_ACCESS:
 	; Initializer SignedInt 5
 	dd 5
 
 section .data
 
-@1164$EDOM:
+@1102$EDOM:
 	; Initializer SignedInt 6
 	dd 6
 
 section .data
 
-@1165$ERANGE:
+@1103$ERANGE:
 	; Initializer SignedInt 7
 	dd 7
 
 section .data
 
-@1166$EILSEQ:
+@1104$EILSEQ:
 	; Initializer SignedInt 8
 	dd 8
 
 section .data
 
-@1167$FOPEN:
+@1105$FOPEN:
 	; Initializer SignedInt 9
 	dd 9
 
 section .data
 
-@1168$FFLUSH:
+@1106$FFLUSH:
 	; Initializer SignedInt 10
 	dd 10
 
 section .data
 
-@1169$FCLOSE:
+@1107$FCLOSE:
 	; Initializer SignedInt 11
 	dd 11
 
 section .data
 
-@1170$NO_MODE:
+@1108$NO_MODE:
 	; Initializer SignedInt 12
 	dd 12
 
 section .data
 
-@1171$FWRITE:
+@1109$FWRITE:
 	; Initializer SignedInt 13
 	dd 13
 
 section .data
 
-@1172$FREAD:
+@1110$FREAD:
 	; Initializer SignedInt 14
 	dd 14
 
 section .data
 
-@1173$FSEEK:
+@1111$FSEEK:
 	; Initializer SignedInt 15
 	dd 15
 
 section .data
 
-@1174$FTELL:
+@1112$FTELL:
 	; Initializer SignedInt 16
 	dd 16
 
 section .data
 
-@1175$FSIZE:
+@1113$FSIZE:
 	; Initializer SignedInt 17
 	dd 17
 
 section .data
 
-@1176$FREMOVE:
+@1114$FREMOVE:
 	; Initializer SignedInt 18
 	dd 18
 
 section .data
 
-@1177$FRENAME:
+@1115$FRENAME:
 	; Initializer SignedInt 19
 	dd 19
 
 section .data
 
-@1178$FTEMPNAME:
+@1116$FTEMPNAME:
 	; Initializer SignedInt 20
 	dd 20
 
 section .data
 
-@1179$FTEMPFILE:
+@1117$FTEMPFILE:
 	; Initializer SignedInt 21
 	dd 21
 

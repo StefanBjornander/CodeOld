@@ -15,97 +15,97 @@
 
 section .data
 
-@14612string_Sun#:
+@12566string_Sun#:
 	; Initializer String Sun
 	db "Sun", 0
 
 section .data
 
-@14613string_Mon#:
+@12567string_Mon#:
 	; Initializer String Mon
 	db "Mon", 0
 
 section .data
 
-@14614string_Tue#:
+@12568string_Tue#:
 	; Initializer String Tue
 	db "Tue", 0
 
 section .data
 
-@14615string_Wed#:
+@12569string_Wed#:
 	; Initializer String Wed
 	db "Wed", 0
 
 section .data
 
-@14616string_Thu#:
+@12570string_Thu#:
 	; Initializer String Thu
 	db "Thu", 0
 
 section .data
 
-@14617string_Fri#:
+@12571string_Fri#:
 	; Initializer String Fri
 	db "Fri", 0
 
 section .data
 
-@14618string_Sat#:
+@12572string_Sat#:
 	; Initializer String Sat
 	db "Sat", 0
 
 section .data
 
-@14628string_now2013A2025lu0A#:
+@12580string_now2013A2025lu0A#:
 	; Initializer String now 1: %lu\n
 	db "now 1: %lu", 10, 0
 
 section .data
 
-@14629string_now2023A2025lu0A#:
+@12581string_now2023A2025lu0A#:
 	; Initializer String now 2: %lu\n
 	db "now 2: %lu", 10, 0
 
 section .data
 
-@14630string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#:
+@12582string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#:
 	; Initializer String    gm time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i\n
 	db "   gm time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i", 10, 0
 
 section .data
 
-@14637string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#:
+@12586string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#:
 	; Initializer String local time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i\n
 	db "local time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i, daylight saving time %i", 10, 0
 
 section .data
 
-@14654string_asctime203C25s3E2C20ctime203C25s3E0A#:
+@12600string_asctime203C25s3E2C20ctime203C25s3E0A#:
 	; Initializer String asctime <%s>, ctime <%s>\n
 	db "asctime <%s>, ctime <%s>", 10, 0
 
 section .data
 
-@14657string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y2C20summer2Fwinter2025Z#:
+@12602string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y2C20summer2Fwinter2025Z#:
 	; Initializer String short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y, summer/winter %Z
 	db "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y, summer/winter %Z", 0
 
 section .data
 
-@14659string_strftime2025i2025i203C25s3E0A#:
+@12603string_strftime2025i2025i203C25s3E0A#:
 	; Initializer String strftime %i %i <%s>\n
 	db "strftime %i %i <%s>", 10, 0
 
 section .data
 
-@14632SignedInt$8#:
+@12583integral4$8#:
 	; Initializer SignedInt 8
 	dd 8
 
 section .data
 
-@14639SignedInt$8#:
+@12587integral4$8#:
 	; Initializer SignedInt 8
 	dd 8
 
@@ -113,37 +113,37 @@ section .text
 
  time_test:
 	; Assign weekdays[0] string_Sun#
-	mov qword [rbp + 24], @14612string_Sun#
+	mov qword [rbp + 24], @12566string_Sun#
 
  time_test$1:
 	; Assign weekdays[1] string_Mon#
-	mov qword [rbp + 32], @14613string_Mon#
+	mov qword [rbp + 32], @12567string_Mon#
 
  time_test$2:
 	; Assign weekdays[2] string_Tue#
-	mov qword [rbp + 40], @14614string_Tue#
+	mov qword [rbp + 40], @12568string_Tue#
 
  time_test$3:
 	; Assign weekdays[3] string_Wed#
-	mov qword [rbp + 48], @14615string_Wed#
+	mov qword [rbp + 48], @12569string_Wed#
 
  time_test$4:
 	; Assign weekdays[4] string_Thu#
-	mov qword [rbp + 56], @14616string_Thu#
+	mov qword [rbp + 56], @12570string_Thu#
 
  time_test$5:
 	; Assign weekdays[5] string_Fri#
-	mov qword [rbp + 64], @14617string_Fri#
+	mov qword [rbp + 64], @12571string_Fri#
 
  time_test$6:
 	; Assign weekdays[6] string_Sat#
-	mov qword [rbp + 72], @14618string_Sat#
+	mov qword [rbp + 72], @12572string_Sat#
 
  time_test$7:
 	; PreCall 80 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  time_test$8:
-	; Parameter 104 pointer Pointer$0#
+	; Parameter 104 pointer integral8$0#
 	mov qword [rbp + 104], 0
 
  time_test$9:
@@ -285,7 +285,7 @@ section .text
 
  time_test$39:
 	; Parameter 192 pointer string_now2013A2025lu0A#
-	mov qword [rbp + 192], @14628string_now2013A2025lu0A#
+	mov qword [rbp + 192], @12580string_now2013A2025lu0A#
 
  time_test$40:
 	; Parameter 200 unsigned long int now1
@@ -309,7 +309,7 @@ section .text
 
  time_test$44:
 	; Parameter 192 pointer string_now2023A2025lu0A#
-	mov qword [rbp + 192], @14629string_now2023A2025lu0A#
+	mov qword [rbp + 192], @12581string_now2023A2025lu0A#
 
  time_test$45:
 	; Parameter 200 unsigned long int now2
@@ -333,13 +333,13 @@ section .text
 
  time_test$49:
 	; Parameter 192 pointer string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
-	mov qword [rbp + 192], @14630string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
+	mov qword [rbp + 192], @12582string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 
  time_test$50:
-	; Multiply £temporary4322 s.tm_wday SignedInt$8#
+	; Multiply £temporary4322 s.tm_wday integral4$8#
 	mov eax, [rbp + 112]
 	xor edx, edx
-	imul dword [@14632SignedInt$8#]
+	imul dword [@12583integral4$8#]
 
  time_test$51:
 	; IntegralToIntegral £temporary4323 £temporary4322
@@ -361,7 +361,7 @@ section .text
 	mov [rbp + 200], rax
 
  time_test$55:
-	; Add £temporary4326 s.tm_year SignedInt$1900#
+	; Add £temporary4326 s.tm_year integral4$1900#
 	mov eax, [rbp + 108]
 	add eax, 1900
 
@@ -370,7 +370,7 @@ section .text
 	mov [rbp + 208], eax
 
  time_test$57:
-	; Add £temporary4328 s.tm_mon SignedInt$1#
+	; Add £temporary4328 s.tm_mon integral4$1#
 	mov eax, [rbp + 104]
 	inc eax
 
@@ -430,13 +430,13 @@ section .text
 
  time_test$69:
 	; Parameter 192 pointer string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
-	mov qword [rbp + 192], @14637string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
+	mov qword [rbp + 192], @12586string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 
  time_test$70:
-	; Multiply £temporary4339 t.tm_wday SignedInt$8#
+	; Multiply £temporary4339 t.tm_wday integral4$8#
 	mov eax, [rbp + 148]
 	xor edx, edx
-	imul dword [@14639SignedInt$8#]
+	imul dword [@12587integral4$8#]
 
  time_test$71:
 	; IntegralToIntegral £temporary4340 £temporary4339
@@ -458,7 +458,7 @@ section .text
 	mov [rbp + 200], rax
 
  time_test$75:
-	; Add £temporary4343 t.tm_year SignedInt$1900#
+	; Add £temporary4343 t.tm_year integral4$1900#
 	mov eax, [rbp + 144]
 	add eax, 1900
 
@@ -467,7 +467,7 @@ section .text
 	mov [rbp + 208], eax
 
  time_test$77:
-	; Add £temporary4345 t.tm_mon SignedInt$1#
+	; Add £temporary4345 t.tm_mon integral4$1#
 	mov eax, [rbp + 140]
 	inc eax
 
@@ -621,7 +621,7 @@ section .text
 
  time_test$111:
 	; Parameter 796 pointer string_asctime203C25s3E2C20ctime203C25s3E0A#
-	mov qword [rbp + 796], @14654string_asctime203C25s3E2C20ctime203C25s3E0A#
+	mov qword [rbp + 796], @12600string_asctime203C25s3E2C20ctime203C25s3E0A#
 
  time_test$112:
 	; Parameter 804 pointer buffer1
@@ -654,12 +654,12 @@ section .text
 	add qword [rbp + 796], 368
 
  time_test$118:
-	; Parameter 804 signed int SignedInt$400#
+	; Parameter 804 signed int integral4$400#
 	mov dword [rbp + 804], 400
 
  time_test$119:
 	; Parameter 808 pointer string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y2C20summer2Fwinter2025Z#
-	mov qword [rbp + 808], @14657string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y2C20summer2Fwinter2025Z#
+	mov qword [rbp + 808], @12602string_short20day2025a2C20long20day2025A2C20short20month2025b2C20long20month2025B2C20date2Dtime2025c2C20mday2025d2C20hour2025H2C20gm20hour2025I2C20yday2025j2C20month2025m2C20min2025M2C20am2Fpm2025p2C20sec2025S2C20week20number20sun2025U2C20week20day2025w2C20week20number20mon2025W2C20date2025x2C20time2025X2C20short20year2025y2C20long20year2025Y2C20summer2Fwinter2025Z#
 
  time_test$120:
 	; Address £temporary4361 t
@@ -692,7 +692,7 @@ section .text
 
  time_test$127:
 	; Parameter 796 pointer string_strftime2025i2025i203C25s3E0A#
-	mov qword [rbp + 796], @14659string_strftime2025i2025i203C25s3E0A#
+	mov qword [rbp + 796], @12603string_strftime2025i2025i203C25s3E0A#
 
  time_test$128:
 	; Parameter 804 signed int i

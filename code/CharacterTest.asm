@@ -20,217 +20,217 @@
 
 section .data
 
-@9150string_ascii2025i0A#:
+@7736string_ascii2025i0A#:
 	; Initializer String ascii %i\n
 	db "ascii %i", 10, 0
 
 section .data
 
-@9151string_islower282725c2729203D2025s0A#:
+@7737string_islower282725c2729203D2025s0A#:
 	; Initializer String islower('%c') = %s\n
 	db "islower(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9154string_Yes#:
+@7739string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9155string_No#:
+@7740string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9156string_isupper282725c2729203D2025s0A#:
+@7741string_isupper282725c2729203D2025s0A#:
 	; Initializer String isupper('%c') = %s\n
 	db "isupper(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9159string_Yes#:
+@7743string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9160string_No#:
+@7744string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9161string_isalpha282725c2729203D2025s0A#:
+@7745string_isalpha282725c2729203D2025s0A#:
 	; Initializer String isalpha('%c') = %s\n
 	db "isalpha(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9164string_Yes#:
+@7747string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9165string_No#:
+@7748string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9166string_isdigit282725c2729203D2025s0A#:
+@7749string_isdigit282725c2729203D2025s0A#:
 	; Initializer String isdigit('%c') = %s\n
 	db "isdigit(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9169string_Yes#:
+@7751string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9170string_No#:
+@7752string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9171string_isalnum282725c2729203D2025s0A#:
+@7753string_isalnum282725c2729203D2025s0A#:
 	; Initializer String isalnum('%c') = %s\n
 	db "isalnum(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9174string_Yes#:
+@7755string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9175string_No#:
+@7756string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9176string_isxdigit282725c2729203D2025s0A#:
+@7757string_isxdigit282725c2729203D2025s0A#:
 	; Initializer String isxdigit('%c') = %s\n
 	db "isxdigit(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9179string_Yes#:
+@7759string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9180string_No#:
+@7760string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9181string_isgraph282725c2729203D2025s0A#:
+@7761string_isgraph282725c2729203D2025s0A#:
 	; Initializer String isgraph('%c') = %s\n
 	db "isgraph(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9184string_Yes#:
+@7763string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9185string_No#:
+@7764string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9186string_isprint282725c2729203D2025s0A#:
+@7765string_isprint282725c2729203D2025s0A#:
 	; Initializer String isprint('%c') = %s\n
 	db "isprint(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9189string_Yes#:
+@7767string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9190string_No#:
+@7768string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9191string_ispunct282725c2729203D2025s0A#:
+@7769string_ispunct282725c2729203D2025s0A#:
 	; Initializer String ispunct('%c') = %s\n
 	db "ispunct(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9194string_Yes#:
+@7771string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9195string_No#:
+@7772string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9196string_iscntrl282725c2729203D2025s0A#:
+@7773string_iscntrl282725c2729203D2025s0A#:
 	; Initializer String iscntrl('%c') = %s\n
 	db "iscntrl(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9199string_Yes#:
+@7775string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9200string_No#:
+@7776string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9201string_isspace282725c2729203D2025s0A#:
+@7777string_isspace282725c2729203D2025s0A#:
 	; Initializer String isspace('%c') = %s\n
 	db "isspace(", 39, "%c", 39, ") = %s", 10, 0
 
 section .data
 
-@9204string_Yes#:
+@7779string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@9205string_No#:
+@7780string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@9206string_tolower282725c2729203D202725c270A#:
+@7781string_tolower282725c2729203D202725c270A#:
 	; Initializer String tolower('%c') = '%c'\n
 	db "tolower(", 39, "%c", 39, ") = ", 39, "%c", 39, 10, 0
 
 section .data
 
-@9207string_toupper282725c2729203D202725c270A0A#:
+@7782string_toupper282725c2729203D202725c270A0A#:
 	; Initializer String toupper('%c') = '%c'\n\n
 	db "toupper(", 39, "%c", 39, ") = ", 39, "%c", 39, 10, 10, 0
 
@@ -241,7 +241,7 @@ section .text
 
  character_testX$1:
 	; Parameter 49 pointer string_ascii2025i0A#
-	mov qword [rbp + 49], @9150string_ascii2025i0A#
+	mov qword [rbp + 49], @7736string_ascii2025i0A#
 
  character_testX$2:
 	; IntegralToIntegral £temporary3132 c
@@ -273,7 +273,7 @@ section .text
 
  character_testX$7:
 	; Parameter 49 pointer string_islower282725c2729203D2025s0A#
-	mov qword [rbp + 49], @9151string_islower282725c2729203D2025s0A#
+	mov qword [rbp + 49], @7737string_islower282725c2729203D2025s0A#
 
  character_testX$8:
 	; IntegralToIntegral £temporary3134 c
@@ -318,13 +318,13 @@ section .text
 	; GetReturnValue £temporary3136
 
  character_testX$16:
-	; Equal 19 £temporary3136 SignedInt$0#
+	; Equal 19 £temporary3136 integral4$0#
 	cmp ebx, 0
 	je character_testX$19
 
  character_testX$17:
 	; Assign £temporary3138 string_Yes#
-	mov rax, @9154string_Yes#
+	mov rax, @7739string_Yes#
 
  character_testX$18:
 	; Jump 20
@@ -332,7 +332,7 @@ section .text
 
  character_testX$19:
 	; Assign £temporary3138 string_No#
-	mov rax, @9155string_No#
+	mov rax, @7740string_No#
 
  character_testX$20:
 	; Parameter 61 pointer £temporary3138
@@ -355,7 +355,7 @@ section .text
 
  character_testX$24:
 	; Parameter 49 pointer string_isupper282725c2729203D2025s0A#
-	mov qword [rbp + 49], @9156string_isupper282725c2729203D2025s0A#
+	mov qword [rbp + 49], @7741string_isupper282725c2729203D2025s0A#
 
  character_testX$25:
 	; IntegralToIntegral £temporary3140 c
@@ -400,13 +400,13 @@ section .text
 	; GetReturnValue £temporary3142
 
  character_testX$33:
-	; Equal 36 £temporary3142 SignedInt$0#
+	; Equal 36 £temporary3142 integral4$0#
 	cmp ebx, 0
 	je character_testX$36
 
  character_testX$34:
 	; Assign £temporary3144 string_Yes#
-	mov rax, @9159string_Yes#
+	mov rax, @7743string_Yes#
 
  character_testX$35:
 	; Jump 37
@@ -414,7 +414,7 @@ section .text
 
  character_testX$36:
 	; Assign £temporary3144 string_No#
-	mov rax, @9160string_No#
+	mov rax, @7744string_No#
 
  character_testX$37:
 	; Parameter 61 pointer £temporary3144
@@ -437,7 +437,7 @@ section .text
 
  character_testX$41:
 	; Parameter 49 pointer string_isalpha282725c2729203D2025s0A#
-	mov qword [rbp + 49], @9161string_isalpha282725c2729203D2025s0A#
+	mov qword [rbp + 49], @7745string_isalpha282725c2729203D2025s0A#
 
  character_testX$42:
 	; IntegralToIntegral £temporary3146 c
@@ -482,13 +482,13 @@ section .text
 	; GetReturnValue £temporary3148
 
  character_testX$50:
-	; Equal 53 £temporary3148 SignedInt$0#
+	; Equal 53 £temporary3148 integral4$0#
 	cmp ebx, 0
 	je character_testX$53
 
  character_testX$51:
 	; Assign £temporary3150 string_Yes#
-	mov rax, @9164string_Yes#
+	mov rax, @7747string_Yes#
 
  character_testX$52:
 	; Jump 54
@@ -496,7 +496,7 @@ section .text
 
  character_testX$53:
 	; Assign £temporary3150 string_No#
-	mov rax, @9165string_No#
+	mov rax, @7748string_No#
 
  character_testX$54:
 	; Parameter 61 pointer £temporary3150
@@ -519,7 +519,7 @@ section .text
 
  character_testX$58:
 	; Parameter 49 pointer string_isdigit282725c2729203D2025s0A#
-	mov qword [rbp + 49], @9166string_isdigit282725c2729203D2025s0A#
+	mov qword [rbp + 49], @7749string_isdigit282725c2729203D2025s0A#
 
  character_testX$59:
 	; IntegralToIntegral £temporary3152 c
@@ -564,13 +564,13 @@ section .text
 	; GetReturnValue £temporary3154
 
  character_testX$67:
-	; Equal 70 £temporary3154 SignedInt$0#
+	; Equal 70 £temporary3154 integral4$0#
 	cmp ebx, 0
 	je character_testX$70
 
  character_testX$68:
 	; Assign £temporary3156 string_Yes#
-	mov rax, @9169string_Yes#
+	mov rax, @7751string_Yes#
 
  character_testX$69:
 	; Jump 71
@@ -578,7 +578,7 @@ section .text
 
  character_testX$70:
 	; Assign £temporary3156 string_No#
-	mov rax, @9170string_No#
+	mov rax, @7752string_No#
 
  character_testX$71:
 	; Parameter 61 pointer £temporary3156
@@ -601,7 +601,7 @@ section .text
 
  character_testX$75:
 	; Parameter 49 pointer string_isalnum282725c2729203D2025s0A#
-	mov qword [rbp + 49], @9171string_isalnum282725c2729203D2025s0A#
+	mov qword [rbp + 49], @7753string_isalnum282725c2729203D2025s0A#
 
  character_testX$76:
 	; IntegralToIntegral £temporary3158 c
@@ -646,13 +646,13 @@ section .text
 	; GetReturnValue £temporary3160
 
  character_testX$84:
-	; Equal 87 £temporary3160 SignedInt$0#
+	; Equal 87 £temporary3160 integral4$0#
 	cmp ebx, 0
 	je character_testX$87
 
  character_testX$85:
 	; Assign £temporary3162 string_Yes#
-	mov rax, @9174string_Yes#
+	mov rax, @7755string_Yes#
 
  character_testX$86:
 	; Jump 88
@@ -660,7 +660,7 @@ section .text
 
  character_testX$87:
 	; Assign £temporary3162 string_No#
-	mov rax, @9175string_No#
+	mov rax, @7756string_No#
 
  character_testX$88:
 	; Parameter 61 pointer £temporary3162
@@ -683,7 +683,7 @@ section .text
 
  character_testX$92:
 	; Parameter 49 pointer string_isxdigit282725c2729203D2025s0A#
-	mov qword [rbp + 49], @9176string_isxdigit282725c2729203D2025s0A#
+	mov qword [rbp + 49], @7757string_isxdigit282725c2729203D2025s0A#
 
  character_testX$93:
 	; IntegralToIntegral £temporary3164 c
@@ -728,13 +728,13 @@ section .text
 	; GetReturnValue £temporary3166
 
  character_testX$101:
-	; Equal 104 £temporary3166 SignedInt$0#
+	; Equal 104 £temporary3166 integral4$0#
 	cmp ebx, 0
 	je character_testX$104
 
  character_testX$102:
 	; Assign £temporary3168 string_Yes#
-	mov rax, @9179string_Yes#
+	mov rax, @7759string_Yes#
 
  character_testX$103:
 	; Jump 105
@@ -742,7 +742,7 @@ section .text
 
  character_testX$104:
 	; Assign £temporary3168 string_No#
-	mov rax, @9180string_No#
+	mov rax, @7760string_No#
 
  character_testX$105:
 	; Parameter 61 pointer £temporary3168
@@ -765,7 +765,7 @@ section .text
 
  character_testX$109:
 	; Parameter 49 pointer string_isgraph282725c2729203D2025s0A#
-	mov qword [rbp + 49], @9181string_isgraph282725c2729203D2025s0A#
+	mov qword [rbp + 49], @7761string_isgraph282725c2729203D2025s0A#
 
  character_testX$110:
 	; IntegralToIntegral £temporary3170 c
@@ -810,13 +810,13 @@ section .text
 	; GetReturnValue £temporary3172
 
  character_testX$118:
-	; Equal 121 £temporary3172 SignedInt$0#
+	; Equal 121 £temporary3172 integral4$0#
 	cmp ebx, 0
 	je character_testX$121
 
  character_testX$119:
 	; Assign £temporary3174 string_Yes#
-	mov rax, @9184string_Yes#
+	mov rax, @7763string_Yes#
 
  character_testX$120:
 	; Jump 122
@@ -824,7 +824,7 @@ section .text
 
  character_testX$121:
 	; Assign £temporary3174 string_No#
-	mov rax, @9185string_No#
+	mov rax, @7764string_No#
 
  character_testX$122:
 	; Parameter 61 pointer £temporary3174
@@ -847,7 +847,7 @@ section .text
 
  character_testX$126:
 	; Parameter 49 pointer string_isprint282725c2729203D2025s0A#
-	mov qword [rbp + 49], @9186string_isprint282725c2729203D2025s0A#
+	mov qword [rbp + 49], @7765string_isprint282725c2729203D2025s0A#
 
  character_testX$127:
 	; IntegralToIntegral £temporary3176 c
@@ -892,13 +892,13 @@ section .text
 	; GetReturnValue £temporary3178
 
  character_testX$135:
-	; Equal 138 £temporary3178 SignedInt$0#
+	; Equal 138 £temporary3178 integral4$0#
 	cmp ebx, 0
 	je character_testX$138
 
  character_testX$136:
 	; Assign £temporary3180 string_Yes#
-	mov rax, @9189string_Yes#
+	mov rax, @7767string_Yes#
 
  character_testX$137:
 	; Jump 139
@@ -906,7 +906,7 @@ section .text
 
  character_testX$138:
 	; Assign £temporary3180 string_No#
-	mov rax, @9190string_No#
+	mov rax, @7768string_No#
 
  character_testX$139:
 	; Parameter 61 pointer £temporary3180
@@ -929,7 +929,7 @@ section .text
 
  character_testX$143:
 	; Parameter 49 pointer string_ispunct282725c2729203D2025s0A#
-	mov qword [rbp + 49], @9191string_ispunct282725c2729203D2025s0A#
+	mov qword [rbp + 49], @7769string_ispunct282725c2729203D2025s0A#
 
  character_testX$144:
 	; IntegralToIntegral £temporary3182 c
@@ -974,13 +974,13 @@ section .text
 	; GetReturnValue £temporary3184
 
  character_testX$152:
-	; Equal 155 £temporary3184 SignedInt$0#
+	; Equal 155 £temporary3184 integral4$0#
 	cmp ebx, 0
 	je character_testX$155
 
  character_testX$153:
 	; Assign £temporary3186 string_Yes#
-	mov rax, @9194string_Yes#
+	mov rax, @7771string_Yes#
 
  character_testX$154:
 	; Jump 156
@@ -988,7 +988,7 @@ section .text
 
  character_testX$155:
 	; Assign £temporary3186 string_No#
-	mov rax, @9195string_No#
+	mov rax, @7772string_No#
 
  character_testX$156:
 	; Parameter 61 pointer £temporary3186
@@ -1011,7 +1011,7 @@ section .text
 
  character_testX$160:
 	; Parameter 49 pointer string_iscntrl282725c2729203D2025s0A#
-	mov qword [rbp + 49], @9196string_iscntrl282725c2729203D2025s0A#
+	mov qword [rbp + 49], @7773string_iscntrl282725c2729203D2025s0A#
 
  character_testX$161:
 	; IntegralToIntegral £temporary3188 c
@@ -1056,13 +1056,13 @@ section .text
 	; GetReturnValue £temporary3190
 
  character_testX$169:
-	; Equal 172 £temporary3190 SignedInt$0#
+	; Equal 172 £temporary3190 integral4$0#
 	cmp ebx, 0
 	je character_testX$172
 
  character_testX$170:
 	; Assign £temporary3192 string_Yes#
-	mov rax, @9199string_Yes#
+	mov rax, @7775string_Yes#
 
  character_testX$171:
 	; Jump 173
@@ -1070,7 +1070,7 @@ section .text
 
  character_testX$172:
 	; Assign £temporary3192 string_No#
-	mov rax, @9200string_No#
+	mov rax, @7776string_No#
 
  character_testX$173:
 	; Parameter 61 pointer £temporary3192
@@ -1093,7 +1093,7 @@ section .text
 
  character_testX$177:
 	; Parameter 49 pointer string_isspace282725c2729203D2025s0A#
-	mov qword [rbp + 49], @9201string_isspace282725c2729203D2025s0A#
+	mov qword [rbp + 49], @7777string_isspace282725c2729203D2025s0A#
 
  character_testX$178:
 	; IntegralToIntegral £temporary3194 c
@@ -1138,13 +1138,13 @@ section .text
 	; GetReturnValue £temporary3196
 
  character_testX$186:
-	; Equal 189 £temporary3196 SignedInt$0#
+	; Equal 189 £temporary3196 integral4$0#
 	cmp ebx, 0
 	je character_testX$189
 
  character_testX$187:
 	; Assign £temporary3198 string_Yes#
-	mov rax, @9204string_Yes#
+	mov rax, @7779string_Yes#
 
  character_testX$188:
 	; Jump 190
@@ -1152,7 +1152,7 @@ section .text
 
  character_testX$189:
 	; Assign £temporary3198 string_No#
-	mov rax, @9205string_No#
+	mov rax, @7780string_No#
 
  character_testX$190:
 	; Parameter 61 pointer £temporary3198
@@ -1175,7 +1175,7 @@ section .text
 
  character_testX$194:
 	; Parameter 49 pointer string_tolower282725c2729203D202725c270A#
-	mov qword [rbp + 49], @9206string_tolower282725c2729203D202725c270A#
+	mov qword [rbp + 49], @7781string_tolower282725c2729203D202725c270A#
 
  character_testX$195:
 	; IntegralToIntegral £temporary3200 c
@@ -1255,7 +1255,7 @@ section .text
 
  character_testX$209:
 	; Parameter 49 pointer string_toupper282725c2729203D202725c270A0A#
-	mov qword [rbp + 49], @9207string_toupper282725c2729203D202725c270A0A#
+	mov qword [rbp + 49], @7782string_toupper282725c2729203D202725c270A0A#
 
  character_testX$210:
 	; IntegralToIntegral £temporary3206 c
@@ -1346,7 +1346,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_test$1:
-	; Parameter 48 signed char SignedChar$97#
+	; Parameter 48 signed char integral1$97#
 	mov byte [rbp + 48], 97
 
  character_test$2:
@@ -1363,7 +1363,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_test$5:
-	; Parameter 48 signed char SignedChar$66#
+	; Parameter 48 signed char integral1$66#
 	mov byte [rbp + 48], 66
 
  character_test$6:
@@ -1380,7 +1380,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_test$9:
-	; Parameter 48 signed char SignedChar$49#
+	; Parameter 48 signed char integral1$49#
 	mov byte [rbp + 48], 49
 
  character_test$10:
@@ -1397,7 +1397,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_test$13:
-	; Parameter 48 signed char SignedChar$46#
+	; Parameter 48 signed char integral1$46#
 	mov byte [rbp + 48], 46
 
  character_test$14:
@@ -1414,7 +1414,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_test$17:
-	; Parameter 48 signed char SignedChar$10#
+	; Parameter 48 signed char integral1$10#
 	mov byte [rbp + 48], 10
 
  character_test$18:
@@ -1431,7 +1431,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_test$21:
-	; Parameter 48 signed char SignedChar$102#
+	; Parameter 48 signed char integral1$102#
 	mov byte [rbp + 48], 102
 
  character_test$22:
@@ -1448,7 +1448,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  character_test$25:
-	; Parameter 48 signed char SignedChar$103#
+	; Parameter 48 signed char integral1$103#
 	mov byte [rbp + 48], 103
 
  character_test$26:

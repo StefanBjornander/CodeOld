@@ -54,17 +54,17 @@ g_inCount:
 section .text
 
  scanChar:
-	; Assign c SignedChar$0#
+	; Assign c integral1$0#
 	mov byte [rbp + 24], 0
 
  scanChar$1:
-	; Case 5 g_inStatus SignedInt$0#
+	; Case 5 g_inStatus integral4$0#
 	mov eax, [g_inStatus]
 	cmp eax, 0
 	je scanChar$5
 
  scanChar$2:
-	; Case 21 g_inStatus SignedInt$1#
+	; Case 21 g_inStatus integral4$1#
 	cmp eax, 1
 	je scanChar$21
 
@@ -93,7 +93,7 @@ section .text
 	mov [rbp + 33], eax
 
  scanChar$9:
-	; AssignRegister rax UnsignedLongInt$0#
+	; AssignRegister rax integral8$0#
 	mov rax, 0
 
  scanChar$10:
@@ -121,7 +121,7 @@ section .text
 	; AssignRegister rsi £temporary836
 
  scanChar$16:
-	; AssignRegister rdx UnsignedLongInt$1#
+	; AssignRegister rdx integral8$1#
 	mov rdx, 1
 
  scanChar$17:
@@ -129,7 +129,7 @@ section .text
 	syscall
 
  scanChar$18:
-	; Add g_inChars g_inChars SignedInt$1#
+	; Add g_inChars g_inChars integral4$1#
 	inc dword [g_inChars]
 
  scanChar$19:
@@ -156,7 +156,7 @@ section .text
 	mov eax, [g_inChars]
 
  scanChar$24:
-	; Add g_inChars g_inChars SignedInt$1#
+	; Add g_inChars g_inChars integral4$1#
 	inc dword [g_inChars]
 
  scanChar$25:
@@ -187,7 +187,7 @@ section .text
 	; SetReturnValue
 
  scanChar$31:
-	; Return SignedChar$0#
+	; Return integral1$0#
 	mov bl, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -200,13 +200,13 @@ section .text
 section .text
 
  unscanChar:
-	; Case 4 g_inStatus SignedInt$0#
+	; Case 4 g_inStatus integral4$0#
 	mov eax, [g_inStatus]
 	cmp eax, 0
 	je unscanChar$4
 
  unscanChar$1:
-	; Case 6 g_inStatus SignedInt$1#
+	; Case 6 g_inStatus integral4$1#
 	cmp eax, 1
 	je unscanChar$6
 
@@ -218,7 +218,7 @@ section .text
 	jmp unscanChar$7
 
  unscanChar$4:
-	; Subtract g_inChars g_inChars SignedInt$1#
+	; Subtract g_inChars g_inChars integral4$1#
 	dec dword [g_inChars]
 
  unscanChar$5:
@@ -226,7 +226,7 @@ section .text
 	jmp unscanChar$7
 
  unscanChar$6:
-	; Subtract g_inChars g_inChars SignedInt$1#
+	; Subtract g_inChars g_inChars integral4$1#
 	dec dword [g_inChars]
 
  unscanChar$7:
@@ -241,101 +241,101 @@ section .text
 
 section .text
 
- @3516$strnchr:
+ @3230$strnchr:
 	; IntegralToIntegral £temporary847 i
 	mov eax, [rbp + 36]
 	cmp eax, 0
-	jge @3516$strnchr$1
+	jge @3230$strnchr$1
 	neg eax
 	neg al
 
- @3516$strnchr$1:
+ @3230$strnchr$1:
 	; Assign c £temporary847
 	mov [rbp + 44], al
 
- @3516$strnchr$2:
-	; Assign index SignedInt$0#
+ @3230$strnchr$2:
+	; Assign index integral4$0#
 	mov dword [rbp + 40], 0
 
- @3516$strnchr$3:
+ @3230$strnchr$3:
 	; GreaterThanEqual 16 index size
 	mov eax, [rbp + 32]
 	cmp [rbp + 40], eax
-	jge @3516$strnchr$16
+	jge @3230$strnchr$16
 
- @3516$strnchr$4:
+ @3230$strnchr$4:
 	; IntegralToIntegral £temporary851 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- @3516$strnchr$5:
+ @3230$strnchr$5:
 	; Add £temporary852 text £temporary851
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- @3516$strnchr$6:
+ @3230$strnchr$6:
 	; Dereference £temporary850 £temporary852 0
 
- @3516$strnchr$7:
+ @3230$strnchr$7:
 	; NotEqual 14 £temporary850 c
 	mov al, [rbp + 44]
 	cmp [rsi], al
-	jne @3516$strnchr$14
+	jne @3230$strnchr$14
 
- @3516$strnchr$8:
+ @3230$strnchr$8:
 	; IntegralToIntegral £temporary855 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- @3516$strnchr$9:
+ @3230$strnchr$9:
 	; Add £temporary856 text £temporary855
 	mov rbx, [rbp + 24]
 	add rbx, rax
 
- @3516$strnchr$10:
+ @3230$strnchr$10:
 	; Dereference £temporary854 £temporary856 0
 
- @3516$strnchr$11:
+ @3230$strnchr$11:
 	; Address £temporary857 £temporary854
 
- @3516$strnchr$12:
+ @3230$strnchr$12:
 	; SetReturnValue
 
- @3516$strnchr$13:
+ @3230$strnchr$13:
 	; Return £temporary857
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3516$strnchr$14:
-	; Add index index SignedInt$1#
+ @3230$strnchr$14:
+	; Add index index integral4$1#
 	inc dword [rbp + 40]
 
- @3516$strnchr$15:
+ @3230$strnchr$15:
 	; Jump 3
-	jmp @3516$strnchr$3
+	jmp @3230$strnchr$3
 
- @3516$strnchr$16:
+ @3230$strnchr$16:
 	; SetReturnValue
 
- @3516$strnchr$17:
-	; Return Pointer$0#
+ @3230$strnchr$17:
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3516$strnchr$18:
+ @3230$strnchr$18:
 	; FunctionEnd strnchr
 
 section .text
 
  scanPattern:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 48], 0
 
  scanPattern$1:
@@ -388,7 +388,7 @@ section .text
 	; GetReturnValue £temporary860
 
  scanPattern$12:
-	; Equal 19 £temporary860 Logical$0#
+	; Equal 19 £temporary860 integral4$0#
 	cmp ebx, 0
 	je scanPattern$19
 
@@ -417,12 +417,12 @@ section .text
 	jmp scanPattern$6
 
  scanPattern$19:
-	; Equal 57 string Pointer$0#
+	; Equal 57 string integral8$0#
 	cmp qword [rbp + 24], 0
 	je scanPattern$57
 
  scanPattern$20:
-	; NotEqual 30 not Logical$0#
+	; NotEqual 30 not integral4$0#
 	cmp dword [rbp + 44], 0
 	jne scanPattern$30
 
@@ -457,7 +457,7 @@ section .text
 	mov qword [rbp + 53], scanPattern$27
 	mov [rbp + 61], rbp
 	add rbp, 53
-	jmp @3516$strnchr
+	jmp @3230$strnchr
 
  scanPattern$27:
 	; PostCall 53
@@ -466,12 +466,12 @@ section .text
 	; GetReturnValue £temporary867
 
  scanPattern$29:
-	; NotEqual 40 £temporary867 Logical$0#
+	; NotEqual 40 £temporary867 integral4$0#
 	cmp rbx, 0
 	jne scanPattern$40
 
  scanPattern$30:
-	; Equal 52 not Logical$0#
+	; Equal 52 not integral4$0#
 	cmp dword [rbp + 44], 0
 	je scanPattern$52
 
@@ -506,7 +506,7 @@ section .text
 	mov qword [rbp + 53], scanPattern$37
 	mov [rbp + 61], rbp
 	add rbp, 53
-	jmp @3516$strnchr
+	jmp @3230$strnchr
 
  scanPattern$37:
 	; PostCall 53
@@ -515,7 +515,7 @@ section .text
 	; GetReturnValue £temporary871
 
  scanPattern$39:
-	; NotEqual 52 £temporary871 Logical$0#
+	; NotEqual 52 £temporary871 integral4$0#
 	cmp rbx, 0
 	jne scanPattern$52
 
@@ -524,7 +524,7 @@ section .text
 	mov eax, [rbp + 48]
 
  scanPattern$41:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 48]
 
  scanPattern$42:
@@ -584,7 +584,7 @@ section .text
 	; Dereference £temporary882 £temporary884 0
 
  scanPattern$55:
-	; Assign £temporary882 SignedChar$0#
+	; Assign £temporary882 integral1$0#
 	mov byte [rsi], 0
 
  scanPattern$56:
@@ -592,7 +592,7 @@ section .text
 	jmp scanPattern$83
 
  scanPattern$57:
-	; NotEqual 67 not Logical$0#
+	; NotEqual 67 not integral4$0#
 	cmp dword [rbp + 44], 0
 	jne scanPattern$67
 
@@ -627,7 +627,7 @@ section .text
 	mov qword [rbp + 53], scanPattern$64
 	mov [rbp + 61], rbp
 	add rbp, 53
-	jmp @3516$strnchr
+	jmp @3230$strnchr
 
  scanPattern$64:
 	; PostCall 53
@@ -636,12 +636,12 @@ section .text
 	; GetReturnValue £temporary888
 
  scanPattern$66:
-	; NotEqual 77 £temporary888 Logical$0#
+	; NotEqual 77 £temporary888 integral4$0#
 	cmp rbx, 0
 	jne scanPattern$77
 
  scanPattern$67:
-	; Equal 83 not Logical$0#
+	; Equal 83 not integral4$0#
 	cmp dword [rbp + 44], 0
 	je scanPattern$83
 
@@ -676,7 +676,7 @@ section .text
 	mov qword [rbp + 53], scanPattern$74
 	mov [rbp + 61], rbp
 	add rbp, 53
-	jmp @3516$strnchr
+	jmp @3230$strnchr
 
  scanPattern$74:
 	; PostCall 53
@@ -685,7 +685,7 @@ section .text
 	; GetReturnValue £temporary892
 
  scanPattern$76:
-	; NotEqual 83 £temporary892 Logical$0#
+	; NotEqual 83 £temporary892 integral4$0#
 	cmp rbx, 0
 	jne scanPattern$83
 
@@ -726,7 +726,7 @@ section .text
 section .text
 
  scanString:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 36], 0
 
  scanString$1:
@@ -750,7 +750,7 @@ section .text
 	mov [rbp + 40], bl
 
  scanString$6:
-	; Assign found SignedInt$0#
+	; Assign found integral4$0#
 	mov dword [rbp + 41], 0
 
  scanString$7:
@@ -783,7 +783,7 @@ section .text
 	; GetReturnValue £temporary901
 
  scanString$13:
-	; Equal 20 £temporary901 Logical$0#
+	; Equal 20 £temporary901 integral4$0#
 	cmp ebx, 0
 	je scanString$20
 
@@ -812,12 +812,12 @@ section .text
 	jmp scanString$7
 
  scanString$20:
-	; Equal 86 string Pointer$0#
+	; Equal 86 string integral8$0#
 	cmp qword [rbp + 24], 0
 	je scanString$86
 
  scanString$21:
-	; NotEqual 52 precision SignedInt$0#
+	; NotEqual 52 precision integral4$0#
 	cmp dword [rbp + 32], 0
 	jne scanString$52
 
@@ -851,7 +851,7 @@ section .text
 	; GetReturnValue £temporary907
 
  scanString$28:
-	; NotEqual 46 £temporary907 Logical$0#
+	; NotEqual 46 £temporary907 integral4$0#
 	cmp ebx, 0
 	jne scanString$46
 
@@ -865,12 +865,12 @@ section .text
 	neg eax
 
  scanString$30:
-	; Equal 46 £temporary910 SignedInt$minus1#
+	; Equal 46 £temporary910 integral4$minus1#
 	cmp eax, -1
 	je scanString$46
 
  scanString$31:
-	; Equal 46 input SignedChar$10#
+	; Equal 46 input integral1$10#
 	cmp byte [rbp + 40], 10
 	je scanString$46
 
@@ -879,7 +879,7 @@ section .text
 	mov eax, [rbp + 36]
 
  scanString$33:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 36]
 
  scanString$34:
@@ -921,11 +921,11 @@ section .text
 	mov [rbp + 40], bl
 
  scanString$43:
-	; Assign found SignedInt$1#
+	; Assign found integral4$1#
 	mov dword [rbp + 41], 1
 
  scanString$44:
-	; Add g_inChars g_inChars SignedInt$1#
+	; Add g_inChars g_inChars integral4$1#
 	inc dword [g_inChars]
 
  scanString$45:
@@ -947,11 +947,11 @@ section .text
 	; Dereference £temporary921 £temporary923 0
 
  scanString$49:
-	; Assign £temporary921 SignedChar$0#
+	; Assign £temporary921 integral1$0#
 	mov byte [rsi], 0
 
  scanString$50:
-	; Add g_inChars g_inChars SignedInt$1#
+	; Add g_inChars g_inChars integral4$1#
 	inc dword [g_inChars]
 
  scanString$51:
@@ -963,11 +963,11 @@ section .text
 	mov eax, [rbp + 32]
 
  scanString$53:
-	; Subtract precision precision SignedInt$1#
+	; Subtract precision precision integral4$1#
 	dec dword [rbp + 32]
 
  scanString$54:
-	; LessThanEqual 79 £temporary925 SignedInt$0#
+	; LessThanEqual 79 £temporary925 integral4$0#
 	cmp eax, 0
 	jle scanString$79
 
@@ -1001,7 +1001,7 @@ section .text
 	; GetReturnValue £temporary928
 
  scanString$61:
-	; NotEqual 79 £temporary928 Logical$0#
+	; NotEqual 79 £temporary928 integral4$0#
 	cmp ebx, 0
 	jne scanString$79
 
@@ -1015,12 +1015,12 @@ section .text
 	neg eax
 
  scanString$63:
-	; Equal 79 £temporary931 SignedInt$minus1#
+	; Equal 79 £temporary931 integral4$minus1#
 	cmp eax, -1
 	je scanString$79
 
  scanString$64:
-	; Equal 79 input SignedChar$10#
+	; Equal 79 input integral1$10#
 	cmp byte [rbp + 40], 10
 	je scanString$79
 
@@ -1029,7 +1029,7 @@ section .text
 	mov eax, [rbp + 36]
 
  scanString$66:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 36]
 
  scanString$67:
@@ -1071,11 +1071,11 @@ section .text
 	mov [rbp + 40], bl
 
  scanString$76:
-	; Assign found SignedInt$1#
+	; Assign found integral4$1#
 	mov dword [rbp + 41], 1
 
  scanString$77:
-	; Add g_inChars g_inChars SignedInt$1#
+	; Add g_inChars g_inChars integral4$1#
 	inc dword [g_inChars]
 
  scanString$78:
@@ -1083,7 +1083,7 @@ section .text
 	jmp scanString$52
 
  scanString$79:
-	; LessThanEqual 130 precision SignedInt$0#
+	; LessThanEqual 130 precision integral4$0#
 	cmp dword [rbp + 32], 0
 	jle scanString$130
 
@@ -1102,11 +1102,11 @@ section .text
 	; Dereference £temporary944 £temporary946 0
 
  scanString$83:
-	; Assign £temporary944 SignedChar$0#
+	; Assign £temporary944 integral1$0#
 	mov byte [rsi], 0
 
  scanString$84:
-	; Add g_inChars g_inChars SignedInt$1#
+	; Add g_inChars g_inChars integral4$1#
 	inc dword [g_inChars]
 
  scanString$85:
@@ -1114,7 +1114,7 @@ section .text
 	jmp scanString$130
 
  scanString$86:
-	; NotEqual 107 precision SignedInt$0#
+	; NotEqual 107 precision integral4$0#
 	cmp dword [rbp + 32], 0
 	jne scanString$107
 
@@ -1148,7 +1148,7 @@ section .text
 	; GetReturnValue £temporary950
 
  scanString$93:
-	; NotEqual 105 £temporary950 Logical$0#
+	; NotEqual 105 £temporary950 integral4$0#
 	cmp ebx, 0
 	jne scanString$105
 
@@ -1162,12 +1162,12 @@ section .text
 	neg eax
 
  scanString$95:
-	; Equal 105 £temporary953 SignedInt$minus1#
+	; Equal 105 £temporary953 integral4$minus1#
 	cmp eax, -1
 	je scanString$105
 
  scanString$96:
-	; Equal 105 input SignedChar$10#
+	; Equal 105 input integral1$10#
 	cmp byte [rbp + 40], 10
 	je scanString$105
 
@@ -1192,11 +1192,11 @@ section .text
 	mov [rbp + 40], bl
 
  scanString$102:
-	; Assign found SignedInt$1#
+	; Assign found integral4$1#
 	mov dword [rbp + 41], 1
 
  scanString$103:
-	; Add g_inChars g_inChars SignedInt$1#
+	; Add g_inChars g_inChars integral4$1#
 	inc dword [g_inChars]
 
  scanString$104:
@@ -1204,7 +1204,7 @@ section .text
 	jmp scanString$87
 
  scanString$105:
-	; Add g_inChars g_inChars SignedInt$1#
+	; Add g_inChars g_inChars integral4$1#
 	inc dword [g_inChars]
 
  scanString$106:
@@ -1216,11 +1216,11 @@ section .text
 	mov eax, [rbp + 32]
 
  scanString$108:
-	; Subtract precision precision SignedInt$1#
+	; Subtract precision precision integral4$1#
 	dec dword [rbp + 32]
 
  scanString$109:
-	; LessThanEqual 128 £temporary961 SignedInt$0#
+	; LessThanEqual 128 £temporary961 integral4$0#
 	cmp eax, 0
 	jle scanString$128
 
@@ -1254,7 +1254,7 @@ section .text
 	; GetReturnValue £temporary964
 
  scanString$116:
-	; NotEqual 128 £temporary964 Logical$0#
+	; NotEqual 128 £temporary964 integral4$0#
 	cmp ebx, 0
 	jne scanString$128
 
@@ -1268,12 +1268,12 @@ section .text
 	neg eax
 
  scanString$118:
-	; Equal 128 £temporary967 SignedInt$minus1#
+	; Equal 128 £temporary967 integral4$minus1#
 	cmp eax, -1
 	je scanString$128
 
  scanString$119:
-	; Equal 128 input SignedChar$10#
+	; Equal 128 input integral1$10#
 	cmp byte [rbp + 40], 10
 	je scanString$128
 
@@ -1298,11 +1298,11 @@ section .text
 	mov [rbp + 40], bl
 
  scanString$125:
-	; Assign found SignedInt$1#
+	; Assign found integral4$1#
 	mov dword [rbp + 41], 1
 
  scanString$126:
-	; Add g_inChars g_inChars SignedInt$1#
+	; Add g_inChars g_inChars integral4$1#
 	inc dword [g_inChars]
 
  scanString$127:
@@ -1310,21 +1310,21 @@ section .text
 	jmp scanString$107
 
  scanString$128:
-	; LessThanEqual 130 precision SignedInt$0#
+	; LessThanEqual 130 precision integral4$0#
 	cmp dword [rbp + 32], 0
 	jle scanString$130
 
  scanString$129:
-	; Add g_inChars g_inChars SignedInt$1#
+	; Add g_inChars g_inChars integral4$1#
 	inc dword [g_inChars]
 
  scanString$130:
-	; Equal 132 found Logical$0#
+	; Equal 132 found integral4$0#
 	cmp dword [rbp + 41], 0
 	je scanString$132
 
  scanString$131:
-	; Add g_inCount g_inCount SignedInt$1#
+	; Add g_inCount g_inCount integral4$1#
 	inc dword [g_inCount]
 
  scanString$132:
@@ -1339,481 +1339,481 @@ section .text
 
 section .text
 
- @3639$isDigitInBase:
+ @3325$isDigitInBase:
 	; PreCall 29 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3639$isDigitInBase$1:
+ @3325$isDigitInBase$1:
 	; IntegralToIntegral £temporary979 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3639$isDigitInBase$2
+	jge @3325$isDigitInBase$2
 	neg al
 	neg eax
 
- @3639$isDigitInBase$2:
+ @3325$isDigitInBase$2:
 	; Parameter 53 signed int £temporary979
 	mov [rbp + 53], eax
 
- @3639$isDigitInBase$3:
+ @3325$isDigitInBase$3:
 	; Call 29 isdigit 0
-	mov qword [rbp + 29], @3639$isDigitInBase$4
+	mov qword [rbp + 29], @3325$isDigitInBase$4
 	mov [rbp + 37], rbp
 	add rbp, 29
 	jmp isdigit
 
- @3639$isDigitInBase$4:
+ @3325$isDigitInBase$4:
 	; PostCall 29
 
- @3639$isDigitInBase$5:
+ @3325$isDigitInBase$5:
 	; GetReturnValue £temporary980
 
- @3639$isDigitInBase$6:
-	; Equal 17 £temporary980 Logical$0#
+ @3325$isDigitInBase$6:
+	; Equal 17 £temporary980 integral4$0#
 	cmp ebx, 0
-	je @3639$isDigitInBase$17
+	je @3325$isDigitInBase$17
 
- @3639$isDigitInBase$7:
-	; Subtract £temporary981 c SignedChar$48#
+ @3325$isDigitInBase$7:
+	; Subtract £temporary981 c integral1$48#
 	mov al, [rbp + 24]
 	sub al, 48
 
- @3639$isDigitInBase$8:
+ @3325$isDigitInBase$8:
 	; IntegralToIntegral £temporary982 £temporary981
 	and eax, 255
 	cmp al, 0
-	jge @3639$isDigitInBase$9
+	jge @3325$isDigitInBase$9
 	neg al
 	neg eax
 
- @3639$isDigitInBase$9:
+ @3325$isDigitInBase$9:
 	; Assign value £temporary982
 	mov [rbp + 29], eax
 
- @3639$isDigitInBase$10:
-	; LessThan 14 value SignedInt$0#
+ @3325$isDigitInBase$10:
+	; LessThan 14 value integral4$0#
 	cmp dword [rbp + 29], 0
-	jl @3639$isDigitInBase$14
+	jl @3325$isDigitInBase$14
 
- @3639$isDigitInBase$11:
+ @3325$isDigitInBase$11:
 	; GreaterThanEqual 14 value base
 	mov eax, [rbp + 25]
 	cmp [rbp + 29], eax
-	jge @3639$isDigitInBase$14
+	jge @3325$isDigitInBase$14
 
- @3639$isDigitInBase$12:
-	; Assign £temporary986 SignedInt$1#
+ @3325$isDigitInBase$12:
+	; Assign £temporary986 integral4$1#
 	mov ebx, 1
 
- @3639$isDigitInBase$13:
+ @3325$isDigitInBase$13:
 	; Jump 15
-	jmp @3639$isDigitInBase$15
+	jmp @3325$isDigitInBase$15
 
- @3639$isDigitInBase$14:
-	; Assign £temporary986 SignedInt$0#
+ @3325$isDigitInBase$14:
+	; Assign £temporary986 integral4$0#
 	mov ebx, 0
 
- @3639$isDigitInBase$15:
+ @3325$isDigitInBase$15:
 	; SetReturnValue
 
- @3639$isDigitInBase$16:
+ @3325$isDigitInBase$16:
 	; Return £temporary986
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3639$isDigitInBase$17:
+ @3325$isDigitInBase$17:
 	; PreCall 29 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3639$isDigitInBase$18:
+ @3325$isDigitInBase$18:
 	; IntegralToIntegral £temporary987 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3639$isDigitInBase$19
+	jge @3325$isDigitInBase$19
 	neg al
 	neg eax
 
- @3639$isDigitInBase$19:
+ @3325$isDigitInBase$19:
 	; Parameter 53 signed int £temporary987
 	mov [rbp + 53], eax
 
- @3639$isDigitInBase$20:
+ @3325$isDigitInBase$20:
 	; Call 29 islower 0
-	mov qword [rbp + 29], @3639$isDigitInBase$21
+	mov qword [rbp + 29], @3325$isDigitInBase$21
 	mov [rbp + 37], rbp
 	add rbp, 29
 	jmp islower
 
- @3639$isDigitInBase$21:
+ @3325$isDigitInBase$21:
 	; PostCall 29
 
- @3639$isDigitInBase$22:
+ @3325$isDigitInBase$22:
 	; GetReturnValue £temporary988
 
- @3639$isDigitInBase$23:
-	; Equal 34 £temporary988 Logical$0#
+ @3325$isDigitInBase$23:
+	; Equal 34 £temporary988 integral4$0#
 	cmp ebx, 0
-	je @3639$isDigitInBase$34
+	je @3325$isDigitInBase$34
 
- @3639$isDigitInBase$24:
-	; Subtract £temporary989 c SignedChar$97#
+ @3325$isDigitInBase$24:
+	; Subtract £temporary989 c integral1$97#
 	mov al, [rbp + 24]
 	sub al, 97
 
- @3639$isDigitInBase$25:
+ @3325$isDigitInBase$25:
 	; IntegralToIntegral £temporary990 £temporary989
 	and eax, 255
 	cmp al, 0
-	jge @3639$isDigitInBase$26
+	jge @3325$isDigitInBase$26
 	neg al
 	neg eax
 
- @3639$isDigitInBase$26:
-	; Add value £temporary990 SignedInt$10#
+ @3325$isDigitInBase$26:
+	; Add value £temporary990 integral4$10#
 	add eax, 10
 	mov [rbp + 29], eax
 
- @3639$isDigitInBase$27:
-	; LessThan 31 value SignedInt$0#
+ @3325$isDigitInBase$27:
+	; LessThan 31 value integral4$0#
 	cmp dword [rbp + 29], 0
-	jl @3639$isDigitInBase$31
+	jl @3325$isDigitInBase$31
 
- @3639$isDigitInBase$28:
+ @3325$isDigitInBase$28:
 	; GreaterThanEqual 31 value base
 	mov eax, [rbp + 25]
 	cmp [rbp + 29], eax
-	jge @3639$isDigitInBase$31
+	jge @3325$isDigitInBase$31
 
- @3639$isDigitInBase$29:
-	; Assign £temporary995 SignedInt$1#
+ @3325$isDigitInBase$29:
+	; Assign £temporary995 integral4$1#
 	mov ebx, 1
 
- @3639$isDigitInBase$30:
+ @3325$isDigitInBase$30:
 	; Jump 32
-	jmp @3639$isDigitInBase$32
+	jmp @3325$isDigitInBase$32
 
- @3639$isDigitInBase$31:
-	; Assign £temporary995 SignedInt$0#
+ @3325$isDigitInBase$31:
+	; Assign £temporary995 integral4$0#
 	mov ebx, 0
 
- @3639$isDigitInBase$32:
+ @3325$isDigitInBase$32:
 	; SetReturnValue
 
- @3639$isDigitInBase$33:
+ @3325$isDigitInBase$33:
 	; Return £temporary995
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3639$isDigitInBase$34:
+ @3325$isDigitInBase$34:
 	; PreCall 29 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3639$isDigitInBase$35:
+ @3325$isDigitInBase$35:
 	; IntegralToIntegral £temporary996 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3639$isDigitInBase$36
+	jge @3325$isDigitInBase$36
 	neg al
 	neg eax
 
- @3639$isDigitInBase$36:
+ @3325$isDigitInBase$36:
 	; Parameter 53 signed int £temporary996
 	mov [rbp + 53], eax
 
- @3639$isDigitInBase$37:
+ @3325$isDigitInBase$37:
 	; Call 29 isupper 0
-	mov qword [rbp + 29], @3639$isDigitInBase$38
+	mov qword [rbp + 29], @3325$isDigitInBase$38
 	mov [rbp + 37], rbp
 	add rbp, 29
 	jmp isupper
 
- @3639$isDigitInBase$38:
+ @3325$isDigitInBase$38:
 	; PostCall 29
 
- @3639$isDigitInBase$39:
+ @3325$isDigitInBase$39:
 	; GetReturnValue £temporary997
 
- @3639$isDigitInBase$40:
-	; Equal 51 £temporary997 Logical$0#
+ @3325$isDigitInBase$40:
+	; Equal 51 £temporary997 integral4$0#
 	cmp ebx, 0
-	je @3639$isDigitInBase$51
+	je @3325$isDigitInBase$51
 
- @3639$isDigitInBase$41:
-	; Subtract £temporary998 c SignedChar$65#
+ @3325$isDigitInBase$41:
+	; Subtract £temporary998 c integral1$65#
 	mov al, [rbp + 24]
 	sub al, 65
 
- @3639$isDigitInBase$42:
+ @3325$isDigitInBase$42:
 	; IntegralToIntegral £temporary999 £temporary998
 	and eax, 255
 	cmp al, 0
-	jge @3639$isDigitInBase$43
+	jge @3325$isDigitInBase$43
 	neg al
 	neg eax
 
- @3639$isDigitInBase$43:
-	; Add value £temporary999 SignedInt$10#
+ @3325$isDigitInBase$43:
+	; Add value £temporary999 integral4$10#
 	add eax, 10
 	mov [rbp + 29], eax
 
- @3639$isDigitInBase$44:
-	; LessThan 48 value SignedInt$0#
+ @3325$isDigitInBase$44:
+	; LessThan 48 value integral4$0#
 	cmp dword [rbp + 29], 0
-	jl @3639$isDigitInBase$48
+	jl @3325$isDigitInBase$48
 
- @3639$isDigitInBase$45:
+ @3325$isDigitInBase$45:
 	; GreaterThanEqual 48 value base
 	mov eax, [rbp + 25]
 	cmp [rbp + 29], eax
-	jge @3639$isDigitInBase$48
+	jge @3325$isDigitInBase$48
 
- @3639$isDigitInBase$46:
-	; Assign £temporary1004 SignedInt$1#
+ @3325$isDigitInBase$46:
+	; Assign £temporary1004 integral4$1#
 	mov ebx, 1
 
- @3639$isDigitInBase$47:
+ @3325$isDigitInBase$47:
 	; Jump 49
-	jmp @3639$isDigitInBase$49
+	jmp @3325$isDigitInBase$49
 
- @3639$isDigitInBase$48:
-	; Assign £temporary1004 SignedInt$0#
+ @3325$isDigitInBase$48:
+	; Assign £temporary1004 integral4$0#
 	mov ebx, 0
 
- @3639$isDigitInBase$49:
+ @3325$isDigitInBase$49:
 	; SetReturnValue
 
- @3639$isDigitInBase$50:
+ @3325$isDigitInBase$50:
 	; Return £temporary1004
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3639$isDigitInBase$51:
+ @3325$isDigitInBase$51:
 	; SetReturnValue
 
- @3639$isDigitInBase$52:
-	; Return SignedInt$0#
+ @3325$isDigitInBase$52:
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3639$isDigitInBase$53:
+ @3325$isDigitInBase$53:
 	; FunctionEnd isDigitInBase
 
 section .text
 
- @3674$digitToValue:
+ @3351$digitToValue:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3674$digitToValue$1:
+ @3351$digitToValue$1:
 	; IntegralToIntegral £temporary1008 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3674$digitToValue$2
+	jge @3351$digitToValue$2
 	neg al
 	neg eax
 
- @3674$digitToValue$2:
+ @3351$digitToValue$2:
 	; Parameter 49 signed int £temporary1008
 	mov [rbp + 49], eax
 
- @3674$digitToValue$3:
+ @3351$digitToValue$3:
 	; Call 25 isdigit 0
-	mov qword [rbp + 25], @3674$digitToValue$4
+	mov qword [rbp + 25], @3351$digitToValue$4
 	mov [rbp + 33], rbp
 	add rbp, 25
 	jmp isdigit
 
- @3674$digitToValue$4:
+ @3351$digitToValue$4:
 	; PostCall 25
 
- @3674$digitToValue$5:
+ @3351$digitToValue$5:
 	; GetReturnValue £temporary1009
 
- @3674$digitToValue$6:
-	; Equal 11 £temporary1009 Logical$0#
+ @3351$digitToValue$6:
+	; Equal 11 £temporary1009 integral4$0#
 	cmp ebx, 0
-	je @3674$digitToValue$11
+	je @3351$digitToValue$11
 
- @3674$digitToValue$7:
-	; Subtract £temporary1010 c SignedChar$48#
+ @3351$digitToValue$7:
+	; Subtract £temporary1010 c integral1$48#
 	mov bl, [rbp + 24]
 	sub bl, 48
 
- @3674$digitToValue$8:
+ @3351$digitToValue$8:
 	; IntegralToIntegral £temporary1011 £temporary1010
 	and ebx, 255
 	cmp bl, 0
-	jge @3674$digitToValue$9
+	jge @3351$digitToValue$9
 	neg bl
 	neg ebx
 
- @3674$digitToValue$9:
+ @3351$digitToValue$9:
 	; SetReturnValue
 
- @3674$digitToValue$10:
+ @3351$digitToValue$10:
 	; Return £temporary1011
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3674$digitToValue$11:
+ @3351$digitToValue$11:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3674$digitToValue$12:
+ @3351$digitToValue$12:
 	; IntegralToIntegral £temporary1012 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3674$digitToValue$13
+	jge @3351$digitToValue$13
 	neg al
 	neg eax
 
- @3674$digitToValue$13:
+ @3351$digitToValue$13:
 	; Parameter 49 signed int £temporary1012
 	mov [rbp + 49], eax
 
- @3674$digitToValue$14:
+ @3351$digitToValue$14:
 	; Call 25 islower 0
-	mov qword [rbp + 25], @3674$digitToValue$15
+	mov qword [rbp + 25], @3351$digitToValue$15
 	mov [rbp + 33], rbp
 	add rbp, 25
 	jmp islower
 
- @3674$digitToValue$15:
+ @3351$digitToValue$15:
 	; PostCall 25
 
- @3674$digitToValue$16:
+ @3351$digitToValue$16:
 	; GetReturnValue £temporary1013
 
- @3674$digitToValue$17:
-	; Equal 23 £temporary1013 Logical$0#
+ @3351$digitToValue$17:
+	; Equal 23 £temporary1013 integral4$0#
 	cmp ebx, 0
-	je @3674$digitToValue$23
+	je @3351$digitToValue$23
 
- @3674$digitToValue$18:
-	; Subtract £temporary1014 c SignedChar$97#
+ @3351$digitToValue$18:
+	; Subtract £temporary1014 c integral1$97#
 	mov bl, [rbp + 24]
 	sub bl, 97
 
- @3674$digitToValue$19:
+ @3351$digitToValue$19:
 	; IntegralToIntegral £temporary1015 £temporary1014
 	and ebx, 255
 	cmp bl, 0
-	jge @3674$digitToValue$20
+	jge @3351$digitToValue$20
 	neg bl
 	neg ebx
 
- @3674$digitToValue$20:
-	; Add £temporary1016 £temporary1015 SignedInt$10#
+ @3351$digitToValue$20:
+	; Add £temporary1016 £temporary1015 integral4$10#
 	add ebx, 10
 
- @3674$digitToValue$21:
+ @3351$digitToValue$21:
 	; SetReturnValue
 
- @3674$digitToValue$22:
+ @3351$digitToValue$22:
 	; Return £temporary1016
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3674$digitToValue$23:
+ @3351$digitToValue$23:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3674$digitToValue$24:
+ @3351$digitToValue$24:
 	; IntegralToIntegral £temporary1017 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3674$digitToValue$25
+	jge @3351$digitToValue$25
 	neg al
 	neg eax
 
- @3674$digitToValue$25:
+ @3351$digitToValue$25:
 	; Parameter 49 signed int £temporary1017
 	mov [rbp + 49], eax
 
- @3674$digitToValue$26:
+ @3351$digitToValue$26:
 	; Call 25 isupper 0
-	mov qword [rbp + 25], @3674$digitToValue$27
+	mov qword [rbp + 25], @3351$digitToValue$27
 	mov [rbp + 33], rbp
 	add rbp, 25
 	jmp isupper
 
- @3674$digitToValue$27:
+ @3351$digitToValue$27:
 	; PostCall 25
 
- @3674$digitToValue$28:
+ @3351$digitToValue$28:
 	; GetReturnValue £temporary1018
 
- @3674$digitToValue$29:
-	; Equal 35 £temporary1018 Logical$0#
+ @3351$digitToValue$29:
+	; Equal 35 £temporary1018 integral4$0#
 	cmp ebx, 0
-	je @3674$digitToValue$35
+	je @3351$digitToValue$35
 
- @3674$digitToValue$30:
-	; Subtract £temporary1019 c SignedChar$65#
+ @3351$digitToValue$30:
+	; Subtract £temporary1019 c integral1$65#
 	mov bl, [rbp + 24]
 	sub bl, 65
 
- @3674$digitToValue$31:
+ @3351$digitToValue$31:
 	; IntegralToIntegral £temporary1020 £temporary1019
 	and ebx, 255
 	cmp bl, 0
-	jge @3674$digitToValue$32
+	jge @3351$digitToValue$32
 	neg bl
 	neg ebx
 
- @3674$digitToValue$32:
-	; Add £temporary1021 £temporary1020 SignedInt$10#
+ @3351$digitToValue$32:
+	; Add £temporary1021 £temporary1020 integral4$10#
 	add ebx, 10
 
- @3674$digitToValue$33:
+ @3351$digitToValue$33:
 	; SetReturnValue
 
- @3674$digitToValue$34:
+ @3351$digitToValue$34:
 	; Return £temporary1021
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3674$digitToValue$35:
+ @3351$digitToValue$35:
 	; SetReturnValue
 
- @3674$digitToValue$36:
-	; Return SignedInt$0#
+ @3351$digitToValue$36:
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3674$digitToValue$37:
+ @3351$digitToValue$37:
 	; FunctionEnd digitToValue
 
 section .text
 
  scanLongInt:
-	; Assign longValue SignedLongInt$0#
+	; Assign longValue integral8$0#
 	mov qword [rbp + 28], 0
 
  scanLongInt$1:
-	; Assign minus SignedInt$0#
+	; Assign minus integral4$0#
 	mov dword [rbp + 36], 0
 
  scanLongInt$2:
-	; Assign found SignedInt$0#
+	; Assign found integral4$0#
 	mov dword [rbp + 40], 0
 
  scanLongInt$3:
@@ -1866,7 +1866,7 @@ section .text
 	; GetReturnValue £temporary1027
 
  scanLongInt$14:
-	; Equal 21 £temporary1027 Logical$0#
+	; Equal 21 £temporary1027 integral4$0#
 	cmp ebx, 0
 	je scanLongInt$21
 
@@ -1895,7 +1895,7 @@ section .text
 	jmp scanLongInt$8
 
  scanLongInt$21:
-	; NotEqual 28 input SignedChar$43#
+	; NotEqual 28 input integral1$43#
 	cmp byte [rbp + 44], 43
 	jne scanLongInt$28
 
@@ -1924,12 +1924,12 @@ section .text
 	jmp scanLongInt$35
 
  scanLongInt$28:
-	; NotEqual 35 input SignedChar$45#
+	; NotEqual 35 input integral1$45#
 	cmp byte [rbp + 44], 45
 	jne scanLongInt$35
 
  scanLongInt$29:
-	; Assign minus SignedInt$1#
+	; Assign minus integral4$1#
 	mov dword [rbp + 36], 1
 
  scanLongInt$30:
@@ -1953,12 +1953,12 @@ section .text
 	mov [rbp + 44], bl
 
  scanLongInt$35:
-	; NotEqual 59 base SignedInt$0#
+	; NotEqual 59 base integral4$0#
 	cmp dword [rbp + 24], 0
 	jne scanLongInt$59
 
  scanLongInt$36:
-	; NotEqual 58 input SignedChar$48#
+	; NotEqual 58 input integral1$48#
 	cmp byte [rbp + 44], 48
 	jne scanLongInt$58
 
@@ -2012,12 +2012,12 @@ section .text
 	; GetReturnValue £temporary1038
 
  scanLongInt$48:
-	; NotEqual 56 £temporary1038 SignedInt$120#
+	; NotEqual 56 £temporary1038 integral4$120#
 	cmp ebx, 120
 	jne scanLongInt$56
 
  scanLongInt$49:
-	; Assign base SignedInt$16#
+	; Assign base integral4$16#
 	mov dword [rbp + 24], 16
 
  scanLongInt$50:
@@ -2045,7 +2045,7 @@ section .text
 	jmp scanLongInt$59
 
  scanLongInt$56:
-	; Assign base SignedInt$8#
+	; Assign base integral4$8#
 	mov dword [rbp + 24], 8
 
  scanLongInt$57:
@@ -2053,7 +2053,7 @@ section .text
 	jmp scanLongInt$59
 
  scanLongInt$58:
-	; Assign base SignedInt$10#
+	; Assign base integral4$10#
 	mov dword [rbp + 24], 10
 
  scanLongInt$59:
@@ -2074,7 +2074,7 @@ section .text
 	mov qword [rbp + 45], scanLongInt$63
 	mov [rbp + 53], rbp
 	add rbp, 45
-	jmp @3639$isDigitInBase
+	jmp @3325$isDigitInBase
 
  scanLongInt$63:
 	; PostCall 45
@@ -2083,7 +2083,7 @@ section .text
 	; GetReturnValue £temporary1041
 
  scanLongInt$65:
-	; Equal 82 £temporary1041 Logical$0#
+	; Equal 82 £temporary1041 integral4$0#
 	cmp ebx, 0
 	je scanLongInt$82
 
@@ -2117,7 +2117,7 @@ section .text
 	mov qword [rbp + 45], scanLongInt$71
 	mov [rbp + 53], rbp
 	add rbp, 45
-	jmp @3674$digitToValue
+	jmp @3351$digitToValue
 
  scanLongInt$71:
 	; PostCall 45
@@ -2159,7 +2159,7 @@ section .text
 	mov [rbp + 44], bl
 
  scanLongInt$80:
-	; Assign found SignedInt$1#
+	; Assign found integral4$1#
 	mov dword [rbp + 40], 1
 
  scanLongInt$81:
@@ -2167,7 +2167,7 @@ section .text
 	jmp scanLongInt$59
 
  scanLongInt$82:
-	; Equal 85 minus Logical$0#
+	; Equal 85 minus integral4$0#
 	cmp dword [rbp + 36], 0
 	je scanLongInt$85
 
@@ -2181,12 +2181,12 @@ section .text
 	mov [rbp + 28], rax
 
  scanLongInt$85:
-	; Equal 87 found Logical$0#
+	; Equal 87 found integral4$0#
 	cmp dword [rbp + 40], 0
 	je scanLongInt$87
 
  scanLongInt$86:
-	; Add g_inCount g_inCount SignedInt$1#
+	; Add g_inCount g_inCount integral4$1#
 	inc dword [g_inCount]
 
  scanLongInt$87:
@@ -2224,7 +2224,7 @@ section .text
 section .text
 
  scanUnsignedLongInt:
-	; Assign unsignedLongValue UnsignedLongInt$0#
+	; Assign unsignedLongValue integral8$0#
 	mov qword [rbp + 28], 0
 
  scanUnsignedLongInt$1:
@@ -2248,7 +2248,7 @@ section .text
 	mov [rbp + 44], bl
 
  scanUnsignedLongInt$6:
-	; Assign found SignedInt$1#
+	; Assign found integral4$1#
 	mov dword [rbp + 45], 1
 
  scanUnsignedLongInt$7:
@@ -2281,7 +2281,7 @@ section .text
 	; GetReturnValue £temporary1056
 
  scanUnsignedLongInt$13:
-	; Equal 20 £temporary1056 Logical$0#
+	; Equal 20 £temporary1056 integral4$0#
 	cmp ebx, 0
 	je scanUnsignedLongInt$20
 
@@ -2310,7 +2310,7 @@ section .text
 	jmp scanUnsignedLongInt$7
 
  scanUnsignedLongInt$20:
-	; NotEqual 26 input SignedChar$43#
+	; NotEqual 26 input integral1$43#
 	cmp byte [rbp + 44], 43
 	jne scanUnsignedLongInt$26
 
@@ -2335,12 +2335,12 @@ section .text
 	mov [rbp + 44], bl
 
  scanUnsignedLongInt$26:
-	; NotEqual 50 base SignedInt$0#
+	; NotEqual 50 base integral4$0#
 	cmp dword [rbp + 24], 0
 	jne scanUnsignedLongInt$50
 
  scanUnsignedLongInt$27:
-	; NotEqual 49 input SignedChar$48#
+	; NotEqual 49 input integral1$48#
 	cmp byte [rbp + 44], 48
 	jne scanUnsignedLongInt$49
 
@@ -2394,12 +2394,12 @@ section .text
 	; GetReturnValue £temporary1065
 
  scanUnsignedLongInt$39:
-	; NotEqual 47 £temporary1065 SignedInt$120#
+	; NotEqual 47 £temporary1065 integral4$120#
 	cmp ebx, 120
 	jne scanUnsignedLongInt$47
 
  scanUnsignedLongInt$40:
-	; Assign base SignedInt$16#
+	; Assign base integral4$16#
 	mov dword [rbp + 24], 16
 
  scanUnsignedLongInt$41:
@@ -2427,7 +2427,7 @@ section .text
 	jmp scanUnsignedLongInt$50
 
  scanUnsignedLongInt$47:
-	; Assign base SignedInt$8#
+	; Assign base integral4$8#
 	mov dword [rbp + 24], 8
 
  scanUnsignedLongInt$48:
@@ -2435,7 +2435,7 @@ section .text
 	jmp scanUnsignedLongInt$50
 
  scanUnsignedLongInt$49:
-	; Assign base SignedInt$10#
+	; Assign base integral4$10#
 	mov dword [rbp + 24], 10
 
  scanUnsignedLongInt$50:
@@ -2456,7 +2456,7 @@ section .text
 	mov qword [rbp + 49], scanUnsignedLongInt$54
 	mov [rbp + 57], rbp
 	add rbp, 49
-	jmp @3639$isDigitInBase
+	jmp @3325$isDigitInBase
 
  scanUnsignedLongInt$54:
 	; PostCall 49
@@ -2465,7 +2465,7 @@ section .text
 	; GetReturnValue £temporary1068
 
  scanUnsignedLongInt$56:
-	; Equal 73 £temporary1068 Logical$0#
+	; Equal 73 £temporary1068 integral4$0#
 	cmp ebx, 0
 	je scanUnsignedLongInt$73
 
@@ -2495,7 +2495,7 @@ section .text
 	mov qword [rbp + 49], scanUnsignedLongInt$62
 	mov [rbp + 57], rbp
 	add rbp, 49
-	jmp @3674$digitToValue
+	jmp @3351$digitToValue
 
  scanUnsignedLongInt$62:
 	; PostCall 49
@@ -2513,7 +2513,7 @@ section .text
 	add [rbp + 28], rbx
 
  scanUnsignedLongInt$66:
-	; Assign found SignedInt$1#
+	; Assign found integral4$1#
 	mov dword [rbp + 45], 1
 
  scanUnsignedLongInt$67:
@@ -2541,12 +2541,12 @@ section .text
 	jmp scanUnsignedLongInt$50
 
  scanUnsignedLongInt$73:
-	; Equal 75 found Logical$0#
+	; Equal 75 found integral4$0#
 	cmp dword [rbp + 45], 0
 	je scanUnsignedLongInt$75
 
  scanUnsignedLongInt$74:
-	; Add g_inCount g_inCount SignedInt$1#
+	; Add g_inCount g_inCount integral4$1#
 	inc dword [g_inCount]
 
  scanUnsignedLongInt$75:
@@ -2583,7 +2583,7 @@ section .text
 
 section .data
 
-@3792LongDouble$10.0#:
+@3435floating8$10.0#:
 	; Initializer LongDouble 10.0
 	dq 10.0
 
@@ -2595,7 +2595,7 @@ container4bytes#:
 
 section .data
 
-@3801LongDouble$10.0#:
+@3440floating8$10.0#:
 	; Initializer LongDouble 10.0
 	dq 10.0
 
@@ -2607,22 +2607,22 @@ container8bytes#:
 
 section .data
 
-@3815Double$10.0#:
+@3448floating8$10.0#:
 	; Initializer Double 10.0
 	dq 10.0
 
 section .text
 
  scanLongDouble:
-	; Assign minus SignedInt$0#
+	; Assign minus integral4$0#
 	mov dword [rbp + 24], 0
 
  scanLongDouble$1:
-	; Assign found SignedInt$0#
+	; Assign found integral4$0#
 	mov dword [rbp + 28], 0
 
  scanLongDouble$2:
-	; PushFloat LongDouble$0.0#
+	; PushFloat floating8$0.0#
 	fldz
 
  scanLongDouble$3:
@@ -2630,7 +2630,7 @@ section .text
 	fstp qword [rbp + 32]
 
  scanLongDouble$4:
-	; PushFloat LongDouble$1.0#
+	; PushFloat floating8$1.0#
 	fld1
 
  scanLongDouble$5:
@@ -2687,7 +2687,7 @@ section .text
 	; GetReturnValue £temporary1081
 
  scanLongDouble$17:
-	; Equal 24 £temporary1081 Logical$0#
+	; Equal 24 £temporary1081 integral4$0#
 	cmp ebx, 0
 	je scanLongDouble$24
 
@@ -2716,7 +2716,7 @@ section .text
 	jmp scanLongDouble$11
 
  scanLongDouble$24:
-	; NotEqual 31 input SignedChar$43#
+	; NotEqual 31 input integral1$43#
 	cmp byte [rbp + 48], 43
 	jne scanLongDouble$31
 
@@ -2745,12 +2745,12 @@ section .text
 	jmp scanLongDouble$38
 
  scanLongDouble$31:
-	; NotEqual 38 input SignedChar$45#
+	; NotEqual 38 input integral1$45#
 	cmp byte [rbp + 48], 45
 	jne scanLongDouble$38
 
  scanLongDouble$32:
-	; Assign minus SignedInt$1#
+	; Assign minus integral4$1#
 	mov dword [rbp + 24], 1
 
  scanLongDouble$33:
@@ -2803,24 +2803,24 @@ section .text
 	; GetReturnValue £temporary1089
 
  scanLongDouble$44:
-	; Equal 60 £temporary1089 Logical$0#
+	; Equal 60 £temporary1089 integral4$0#
 	cmp ebx, 0
 	je scanLongDouble$60
 
  scanLongDouble$45:
-	; PushFloat LongDouble$10.0#
-	fld qword [@3792LongDouble$10.0#]
+	; PushFloat floating8$10.0#
+	fld qword [@3435floating8$10.0#]
 
  scanLongDouble$46:
 	; PushFloat value
 	fld qword [rbp + 32]
 
  scanLongDouble$47:
-	; Multiply £temporary1090 LongDouble$10.0# value
+	; Multiply £temporary1090 floating8$10.0# value
 	fmul
 
  scanLongDouble$48:
-	; Subtract £temporary1091 input SignedChar$48#
+	; Subtract £temporary1091 input integral1$48#
 	mov al, [rbp + 48]
 	sub al, 48
 
@@ -2866,7 +2866,7 @@ section .text
 	mov [rbp + 48], bl
 
  scanLongDouble$58:
-	; Assign found SignedInt$1#
+	; Assign found integral4$1#
 	mov dword [rbp + 28], 1
 
  scanLongDouble$59:
@@ -2874,7 +2874,7 @@ section .text
 	jmp scanLongDouble$38
 
  scanLongDouble$60:
-	; NotEqual 92 input SignedChar$46#
+	; NotEqual 92 input integral1$46#
 	cmp byte [rbp + 48], 46
 	jne scanLongDouble$92
 
@@ -2928,7 +2928,7 @@ section .text
 	; GetReturnValue £temporary1100
 
  scanLongDouble$72:
-	; Equal 92 £temporary1100 Logical$0#
+	; Equal 92 £temporary1100 integral4$0#
 	cmp ebx, 0
 	je scanLongDouble$92
 
@@ -2937,11 +2937,11 @@ section .text
 	fld qword [rbp + 40]
 
  scanLongDouble$74:
-	; PushFloat LongDouble$10.0#
-	fld qword [@3801LongDouble$10.0#]
+	; PushFloat floating8$10.0#
+	fld qword [@3440floating8$10.0#]
 
  scanLongDouble$75:
-	; Divide £temporary1101 factor LongDouble$10.0#
+	; Divide £temporary1101 factor floating8$10.0#
 	fdiv
 
  scanLongDouble$76:
@@ -2957,7 +2957,7 @@ section .text
 	fld qword [rbp + 40]
 
  scanLongDouble$79:
-	; Subtract £temporary1102 input SignedChar$48#
+	; Subtract £temporary1102 input integral1$48#
 	mov al, [rbp + 48]
 	sub al, 48
 
@@ -3007,7 +3007,7 @@ section .text
 	mov [rbp + 48], bl
 
  scanLongDouble$90:
-	; Assign found SignedInt$1#
+	; Assign found integral4$1#
 	mov dword [rbp + 28], 1
 
  scanLongDouble$91:
@@ -3044,7 +3044,7 @@ section .text
 	; GetReturnValue £temporary1110
 
  scanLongDouble$98:
-	; NotEqual 118 £temporary1110 SignedInt$101#
+	; NotEqual 118 £temporary1110 integral4$101#
 	cmp ebx, 101
 	jne scanLongDouble$118
 
@@ -3052,7 +3052,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongDouble$100:
-	; Parameter 73 signed int SignedInt$10#
+	; Parameter 73 signed int integral4$10#
 	mov dword [rbp + 73], 10
 
  scanLongDouble$101:
@@ -3086,11 +3086,11 @@ section .text
 	fstp qword [rbp + 57]
 
  scanLongDouble$108:
-	; PushFloat Double$10.0#
-	fld qword [@3815Double$10.0#]
+	; PushFloat floating8$10.0#
+	fld qword [@3448floating8$10.0#]
 
  scanLongDouble$109:
-	; Parameter 81 double Double$10.0#
+	; Parameter 81 double floating8$10.0#
 	fstp qword [rbp + 89]
 
  scanLongDouble$110:
@@ -3148,7 +3148,7 @@ section .text
 	; PostCall 49
 
  scanLongDouble$122:
-	; Equal 126 minus Logical$0#
+	; Equal 126 minus integral4$0#
 	cmp dword [rbp + 24], 0
 	je scanLongDouble$126
 
@@ -3165,12 +3165,12 @@ section .text
 	fstp qword [rbp + 32]
 
  scanLongDouble$126:
-	; Equal 128 found Logical$0#
+	; Equal 128 found integral4$0#
 	cmp dword [rbp + 28], 0
 	je scanLongDouble$128
 
  scanLongDouble$127:
-	; Add g_inCount g_inCount SignedInt$1#
+	; Add g_inCount g_inCount integral4$1#
 	inc dword [g_inCount]
 
  scanLongDouble$128:
@@ -3193,35 +3193,35 @@ section .text
 section .text
 
  scanFormat:
-	; Assign percent SignedInt$0#
+	; Assign percent integral4$0#
 	mov dword [rbp + 49], 0
 
  scanFormat$1:
-	; Assign shortInt SignedInt$0#
+	; Assign shortInt integral4$0#
 	mov dword [rbp + 53], 0
 
  scanFormat$2:
-	; Assign longIntOrDouble SignedInt$0#
+	; Assign longIntOrDouble integral4$0#
 	mov dword [rbp + 57], 0
 
  scanFormat$3:
-	; Assign longDouble SignedInt$0#
+	; Assign longDouble integral4$0#
 	mov dword [rbp + 61], 0
 
  scanFormat$4:
-	; Assign star SignedInt$0#
+	; Assign star integral4$0#
 	mov dword [rbp + 65], 0
 
  scanFormat$5:
-	; Assign g_inCount SignedInt$0#
+	; Assign g_inCount integral4$0#
 	mov dword [g_inCount], 0
 
  scanFormat$6:
-	; Assign g_inChars SignedInt$0#
+	; Assign g_inChars integral4$0#
 	mov dword [g_inChars], 0
 
  scanFormat$7:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 93], 0
 
  scanFormat$8:
@@ -3239,7 +3239,7 @@ section .text
 	; Dereference £temporary1123 £temporary1125 0
 
  scanFormat$11:
-	; Equal 338 £temporary1123 SignedChar$0#
+	; Equal 338 £temporary1123 integral1$0#
 	cmp byte [rsi], 0
 	je scanFormat$338
 
@@ -3272,97 +3272,97 @@ section .text
 	neg eax
 
  scanFormat$17:
-	; Add d £temporary1131 SignedInt$1#
+	; Add d £temporary1131 integral4$1#
 	inc eax
 	mov [rbp + 153], eax
 
  scanFormat$18:
-	; Equal 330 percent Logical$0#
+	; Equal 330 percent integral4$0#
 	cmp dword [rbp + 49], 0
 	je scanFormat$330
 
  scanFormat$19:
-	; Subtract £temporary1133 d SignedInt$1#
+	; Subtract £temporary1133 d integral4$1#
 	mov eax, [rbp + 153]
 	dec eax
 
  scanFormat$20:
-	; Case 38 £temporary1133 SignedInt$104#
+	; Case 38 £temporary1133 integral4$104#
 	cmp eax, 104
 	je scanFormat$38
 
  scanFormat$21:
-	; Case 40 £temporary1133 SignedInt$108#
+	; Case 40 £temporary1133 integral4$108#
 	cmp eax, 108
 	je scanFormat$40
 
  scanFormat$22:
-	; Case 42 £temporary1133 SignedInt$76#
+	; Case 42 £temporary1133 integral4$76#
 	cmp eax, 76
 	je scanFormat$42
 
  scanFormat$23:
-	; Case 44 £temporary1133 SignedInt$42#
+	; Case 44 £temporary1133 integral4$42#
 	cmp eax, 42
 	je scanFormat$44
 
  scanFormat$24:
-	; Case 46 £temporary1133 SignedInt$99#
+	; Case 46 £temporary1133 integral4$99#
 	cmp eax, 99
 	je scanFormat$46
 
  scanFormat$25:
-	; Case 64 £temporary1133 SignedInt$115#
+	; Case 64 £temporary1133 integral4$115#
 	cmp eax, 115
 	je scanFormat$64
 
  scanFormat$26:
-	; Case 83 £temporary1133 SignedInt$100#
+	; Case 83 £temporary1133 integral4$100#
 	cmp eax, 100
 	je scanFormat$83
 
  scanFormat$27:
-	; Case 83 £temporary1133 SignedInt$105#
+	; Case 83 £temporary1133 integral4$105#
 	cmp eax, 105
 	je scanFormat$83
 
  scanFormat$28:
-	; Case 119 £temporary1133 SignedInt$111#
+	; Case 119 £temporary1133 integral4$111#
 	cmp eax, 111
 	je scanFormat$119
 
  scanFormat$29:
-	; Case 155 £temporary1133 SignedInt$120#
+	; Case 155 £temporary1133 integral4$120#
 	cmp eax, 120
 	je scanFormat$155
 
  scanFormat$30:
-	; Case 191 £temporary1133 SignedInt$117#
+	; Case 191 £temporary1133 integral4$117#
 	cmp eax, 117
 	je scanFormat$191
 
  scanFormat$31:
-	; Case 227 £temporary1133 SignedInt$103#
+	; Case 227 £temporary1133 integral4$103#
 	cmp eax, 103
 	je scanFormat$227
 
  scanFormat$32:
-	; Case 227 £temporary1133 SignedInt$102#
+	; Case 227 £temporary1133 integral4$102#
 	cmp eax, 102
 	je scanFormat$227
 
  scanFormat$33:
-	; Case 227 £temporary1133 SignedInt$101#
+	; Case 227 £temporary1133 integral4$101#
 	cmp eax, 101
 	je scanFormat$227
 
  scanFormat$34:
-	; Case 263 £temporary1133 SignedInt$91#
+	; Case 263 £temporary1133 integral4$91#
 	cmp eax, 91
 	je scanFormat$263
 
  scanFormat$35:
-	; Case 321 £temporary1133 SignedInt$110#
+	; Case 321 £temporary1133 integral4$110#
 	cmp eax, 110
 	je scanFormat$321
 
@@ -3374,7 +3374,7 @@ section .text
 	jmp scanFormat$336
 
  scanFormat$38:
-	; Assign shortInt SignedInt$1#
+	; Assign shortInt integral4$1#
 	mov dword [rbp + 53], 1
 
  scanFormat$39:
@@ -3382,7 +3382,7 @@ section .text
 	jmp scanFormat$336
 
  scanFormat$40:
-	; Assign longIntOrDouble SignedInt$1#
+	; Assign longIntOrDouble integral4$1#
 	mov dword [rbp + 57], 1
 
  scanFormat$41:
@@ -3390,7 +3390,7 @@ section .text
 	jmp scanFormat$336
 
  scanFormat$42:
-	; Assign longDouble SignedInt$1#
+	; Assign longDouble integral4$1#
 	mov dword [rbp + 61], 1
 
  scanFormat$43:
@@ -3398,7 +3398,7 @@ section .text
 	jmp scanFormat$336
 
  scanFormat$44:
-	; Assign star SignedInt$1#
+	; Assign star integral4$1#
 	mov dword [rbp + 65], 1
 
  scanFormat$45:
@@ -3426,16 +3426,16 @@ section .text
 	mov [rbp + 157], bl
 
  scanFormat$51:
-	; NotEqual 59 star Logical$0#
+	; NotEqual 59 star integral4$0#
 	cmp dword [rbp + 65], 0
 	jne scanFormat$59
 
  scanFormat$52:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$53:
-	; Subtract £temporary1138 arg_list Pointer$8#
+	; Subtract £temporary1138 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -3460,7 +3460,7 @@ section .text
 	mov [rsi], al
 
  scanFormat$59:
-	; Assign percent SignedInt$0#
+	; Assign percent integral4$0#
 	mov dword [rbp + 49], 0
 
  scanFormat$60:
@@ -3473,12 +3473,12 @@ section .text
 	neg eax
 
  scanFormat$61:
-	; Equal 336 £temporary1142 SignedInt$minus1#
+	; Equal 336 £temporary1142 integral4$minus1#
 	cmp eax, -1
 	je scanFormat$336
 
  scanFormat$62:
-	; Add g_inCount g_inCount SignedInt$1#
+	; Add g_inCount g_inCount integral4$1#
 	inc dword [g_inCount]
 
  scanFormat$63:
@@ -3486,16 +3486,16 @@ section .text
 	jmp scanFormat$336
 
  scanFormat$64:
-	; NotEqual 76 star Logical$0#
+	; NotEqual 76 star integral4$0#
 	cmp dword [rbp + 65], 0
 	jne scanFormat$76
 
  scanFormat$65:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$66:
-	; Subtract £temporary1148 arg_list Pointer$8#
+	; Subtract £temporary1148 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -3519,7 +3519,7 @@ section .text
 	mov [rbp + 181], rax
 
  scanFormat$72:
-	; Parameter 189 signed int SignedInt$0#
+	; Parameter 189 signed int integral4$0#
 	mov dword [rbp + 189], 0
 
  scanFormat$73:
@@ -3540,11 +3540,11 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$77:
-	; Parameter 181 pointer Pointer$0#
+	; Parameter 181 pointer integral8$0#
 	mov qword [rbp + 181], 0
 
  scanFormat$78:
-	; Parameter 189 signed int SignedInt$0#
+	; Parameter 189 signed int integral4$0#
 	mov dword [rbp + 189], 0
 
  scanFormat$79:
@@ -3558,7 +3558,7 @@ section .text
 	; PostCall 157
 
  scanFormat$81:
-	; Assign percent SignedInt$0#
+	; Assign percent integral4$0#
 	mov dword [rbp + 49], 0
 
  scanFormat$82:
@@ -3569,7 +3569,7 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$84:
-	; Parameter 181 signed int SignedInt$10#
+	; Parameter 181 signed int integral4$10#
 	mov dword [rbp + 181], 10
 
  scanFormat$85:
@@ -3590,21 +3590,21 @@ section .text
 	mov [rbp + 69], rbx
 
  scanFormat$89:
-	; NotEqual 117 star Logical$0#
+	; NotEqual 117 star integral4$0#
 	cmp dword [rbp + 65], 0
 	jne scanFormat$117
 
  scanFormat$90:
-	; Equal 100 shortInt Logical$0#
+	; Equal 100 shortInt integral4$0#
 	cmp dword [rbp + 53], 0
 	je scanFormat$100
 
  scanFormat$91:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$92:
-	; Subtract £temporary1157 arg_list Pointer$8#
+	; Subtract £temporary1157 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -3640,16 +3640,16 @@ section .text
 	jmp scanFormat$117
 
  scanFormat$100:
-	; NotEqual 110 longIntOrDouble Logical$0#
+	; NotEqual 110 longIntOrDouble integral4$0#
 	cmp dword [rbp + 57], 0
 	jne scanFormat$110
 
  scanFormat$101:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$102:
-	; Subtract £temporary1165 arg_list Pointer$8#
+	; Subtract £temporary1165 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -3685,11 +3685,11 @@ section .text
 	jmp scanFormat$117
 
  scanFormat$110:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$111:
-	; Subtract £temporary1171 arg_list Pointer$8#
+	; Subtract £temporary1171 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -3714,7 +3714,7 @@ section .text
 	mov [rsi], rax
 
  scanFormat$117:
-	; Assign percent SignedInt$0#
+	; Assign percent integral4$0#
 	mov dword [rbp + 49], 0
 
  scanFormat$118:
@@ -3725,7 +3725,7 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$120:
-	; Parameter 181 signed int SignedInt$8#
+	; Parameter 181 signed int integral4$8#
 	mov dword [rbp + 181], 8
 
  scanFormat$121:
@@ -3746,21 +3746,21 @@ section .text
 	mov [rbp + 113], rbx
 
  scanFormat$125:
-	; NotEqual 153 star Logical$0#
+	; NotEqual 153 star integral4$0#
 	cmp dword [rbp + 65], 0
 	jne scanFormat$153
 
  scanFormat$126:
-	; Equal 136 shortInt Logical$0#
+	; Equal 136 shortInt integral4$0#
 	cmp dword [rbp + 53], 0
 	je scanFormat$136
 
  scanFormat$127:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$128:
-	; Subtract £temporary1180 arg_list Pointer$8#
+	; Subtract £temporary1180 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -3792,16 +3792,16 @@ section .text
 	jmp scanFormat$153
 
  scanFormat$136:
-	; NotEqual 146 longIntOrDouble Logical$0#
+	; NotEqual 146 longIntOrDouble integral4$0#
 	cmp dword [rbp + 57], 0
 	jne scanFormat$146
 
  scanFormat$137:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$138:
-	; Subtract £temporary1188 arg_list Pointer$8#
+	; Subtract £temporary1188 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -3833,11 +3833,11 @@ section .text
 	jmp scanFormat$153
 
  scanFormat$146:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$147:
-	; Subtract £temporary1194 arg_list Pointer$8#
+	; Subtract £temporary1194 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -3862,7 +3862,7 @@ section .text
 	mov [rsi], rax
 
  scanFormat$153:
-	; Assign percent SignedInt$0#
+	; Assign percent integral4$0#
 	mov dword [rbp + 49], 0
 
  scanFormat$154:
@@ -3873,7 +3873,7 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$156:
-	; Parameter 181 signed int SignedInt$16#
+	; Parameter 181 signed int integral4$16#
 	mov dword [rbp + 181], 16
 
  scanFormat$157:
@@ -3894,21 +3894,21 @@ section .text
 	mov [rbp + 113], rbx
 
  scanFormat$161:
-	; NotEqual 189 star Logical$0#
+	; NotEqual 189 star integral4$0#
 	cmp dword [rbp + 65], 0
 	jne scanFormat$189
 
  scanFormat$162:
-	; Equal 172 shortInt Logical$0#
+	; Equal 172 shortInt integral4$0#
 	cmp dword [rbp + 53], 0
 	je scanFormat$172
 
  scanFormat$163:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$164:
-	; Subtract £temporary1203 arg_list Pointer$8#
+	; Subtract £temporary1203 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -3940,16 +3940,16 @@ section .text
 	jmp scanFormat$189
 
  scanFormat$172:
-	; NotEqual 182 longIntOrDouble Logical$0#
+	; NotEqual 182 longIntOrDouble integral4$0#
 	cmp dword [rbp + 57], 0
 	jne scanFormat$182
 
  scanFormat$173:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$174:
-	; Subtract £temporary1211 arg_list Pointer$8#
+	; Subtract £temporary1211 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -3981,11 +3981,11 @@ section .text
 	jmp scanFormat$189
 
  scanFormat$182:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$183:
-	; Subtract £temporary1217 arg_list Pointer$8#
+	; Subtract £temporary1217 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -4010,7 +4010,7 @@ section .text
 	mov [rsi], rax
 
  scanFormat$189:
-	; Assign percent SignedInt$0#
+	; Assign percent integral4$0#
 	mov dword [rbp + 49], 0
 
  scanFormat$190:
@@ -4021,7 +4021,7 @@ section .text
 	; PreCall 157 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$192:
-	; Parameter 181 signed int SignedInt$0#
+	; Parameter 181 signed int integral4$0#
 	mov dword [rbp + 181], 0
 
  scanFormat$193:
@@ -4042,21 +4042,21 @@ section .text
 	mov [rbp + 113], rbx
 
  scanFormat$197:
-	; NotEqual 225 star Logical$0#
+	; NotEqual 225 star integral4$0#
 	cmp dword [rbp + 65], 0
 	jne scanFormat$225
 
  scanFormat$198:
-	; Equal 208 shortInt Logical$0#
+	; Equal 208 shortInt integral4$0#
 	cmp dword [rbp + 53], 0
 	je scanFormat$208
 
  scanFormat$199:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$200:
-	; Subtract £temporary1226 arg_list Pointer$8#
+	; Subtract £temporary1226 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -4088,16 +4088,16 @@ section .text
 	jmp scanFormat$225
 
  scanFormat$208:
-	; NotEqual 218 longIntOrDouble Logical$0#
+	; NotEqual 218 longIntOrDouble integral4$0#
 	cmp dword [rbp + 57], 0
 	jne scanFormat$218
 
  scanFormat$209:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$210:
-	; Subtract £temporary1234 arg_list Pointer$8#
+	; Subtract £temporary1234 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -4129,11 +4129,11 @@ section .text
 	jmp scanFormat$225
 
  scanFormat$218:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$219:
-	; Subtract £temporary1240 arg_list Pointer$8#
+	; Subtract £temporary1240 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -4158,7 +4158,7 @@ section .text
 	mov [rsi], rax
 
  scanFormat$225:
-	; Assign percent SignedInt$0#
+	; Assign percent integral4$0#
 	mov dword [rbp + 49], 0
 
  scanFormat$226:
@@ -4186,21 +4186,21 @@ section .text
 	fstp qword [rbp + 145]
 
  scanFormat$232:
-	; NotEqual 261 star Logical$0#
+	; NotEqual 261 star integral4$0#
 	cmp dword [rbp + 65], 0
 	jne scanFormat$261
 
  scanFormat$233:
-	; Equal 243 longIntOrDouble Logical$0#
+	; Equal 243 longIntOrDouble integral4$0#
 	cmp dword [rbp + 57], 0
 	je scanFormat$243
 
  scanFormat$234:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$235:
-	; Subtract £temporary1249 arg_list Pointer$8#
+	; Subtract £temporary1249 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -4232,16 +4232,16 @@ section .text
 	jmp scanFormat$261
 
  scanFormat$243:
-	; Equal 253 longDouble Logical$0#
+	; Equal 253 longDouble integral4$0#
 	cmp dword [rbp + 61], 0
 	je scanFormat$253
 
  scanFormat$244:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$245:
-	; Subtract £temporary1255 arg_list Pointer$8#
+	; Subtract £temporary1255 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -4273,11 +4273,11 @@ section .text
 	jmp scanFormat$261
 
  scanFormat$253:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$254:
-	; Subtract £temporary1260 arg_list Pointer$8#
+	; Subtract £temporary1260 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -4305,7 +4305,7 @@ section .text
 	fstp dword [rsi]
 
  scanFormat$261:
-	; Assign percent SignedInt$0#
+	; Assign percent integral4$0#
 	mov dword [rbp + 49], 0
 
  scanFormat$262:
@@ -4313,11 +4313,11 @@ section .text
 	jmp scanFormat$336
 
  scanFormat$263:
-	; Assign not SignedInt$0#
+	; Assign not integral4$0#
 	mov dword [rbp + 157], 0
 
  scanFormat$264:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 93]
 
  scanFormat$265:
@@ -4335,16 +4335,16 @@ section .text
 	; Dereference £temporary1268 £temporary1270 0
 
  scanFormat$268:
-	; NotEqual 271 £temporary1268 SignedChar$94#
+	; NotEqual 271 £temporary1268 integral1$94#
 	cmp byte [rsi], 94
 	jne scanFormat$271
 
  scanFormat$269:
-	; Assign not SignedInt$1#
+	; Assign not integral4$1#
 	mov dword [rbp + 157], 1
 
  scanFormat$270:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 93]
 
  scanFormat$271:
@@ -4367,12 +4367,12 @@ section .text
 	; Dereference £temporary1273 £temporary1275 0
 
  scanFormat$275:
-	; Equal 278 £temporary1273 SignedChar$93#
+	; Equal 278 £temporary1273 integral1$93#
 	cmp byte [rsi], 93
 	je scanFormat$278
 
  scanFormat$276:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 93]
 
  scanFormat$277:
@@ -4419,20 +4419,20 @@ section .text
 	; Dereference £temporary1282 £temporary1284 0
 
  scanFormat$286:
-	; Assign £temporary1282 SignedChar$0#
+	; Assign £temporary1282 integral1$0#
 	mov byte [rsi], 0
 
  scanFormat$287:
-	; NotEqual 305 star Logical$0#
+	; NotEqual 305 star integral4$0#
 	cmp dword [rbp + 65], 0
 	jne scanFormat$305
 
  scanFormat$288:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$289:
-	; Subtract £temporary1288 arg_list Pointer$8#
+	; Subtract £temporary1288 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -4504,7 +4504,7 @@ section .text
 	; PreCall 170 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanFormat$306:
-	; Parameter 194 pointer Pointer$0#
+	; Parameter 194 pointer integral8$0#
 	mov qword [rbp + 194], 0
 
  scanFormat$307:
@@ -4572,11 +4572,11 @@ section .text
 	jmp scanFormat$336
 
  scanFormat$321:
-	; Add arg_list arg_list Pointer$8#
+	; Add arg_list arg_list integral8$8#
 	add qword [rbp + 32], 8
 
  scanFormat$322:
-	; Subtract £temporary1305 arg_list Pointer$8#
+	; Subtract £temporary1305 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
@@ -4601,7 +4601,7 @@ section .text
 	mov [rsi], eax
 
  scanFormat$328:
-	; Assign percent SignedInt$0#
+	; Assign percent integral4$0#
 	mov dword [rbp + 49], 0
 
  scanFormat$329:
@@ -4609,32 +4609,32 @@ section .text
 	jmp scanFormat$336
 
  scanFormat$330:
-	; NotEqual 336 c SignedChar$37#
+	; NotEqual 336 c integral1$37#
 	cmp byte [rbp + 40], 37
 	jne scanFormat$336
 
  scanFormat$331:
-	; Assign percent SignedInt$1#
+	; Assign percent integral4$1#
 	mov dword [rbp + 49], 1
 
  scanFormat$332:
-	; Assign shortInt SignedInt$0#
+	; Assign shortInt integral4$0#
 	mov dword [rbp + 53], 0
 
  scanFormat$333:
-	; Assign longIntOrDouble SignedInt$0#
+	; Assign longIntOrDouble integral4$0#
 	mov dword [rbp + 57], 0
 
  scanFormat$334:
-	; Assign longDouble SignedInt$0#
+	; Assign longDouble integral4$0#
 	mov dword [rbp + 61], 0
 
  scanFormat$335:
-	; Assign star SignedInt$0#
+	; Assign star integral4$0#
 	mov dword [rbp + 65], 0
 
  scanFormat$336:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 93]
 
  scanFormat$337:
@@ -4666,7 +4666,7 @@ section .text
 	; IntegralToIntegral £temporary1312 £temporary1311
 
  scanf$2:
-	; Add arg_list £temporary1312 Pointer$8#
+	; Add arg_list £temporary1312 integral8$8#
 	add rsi, 8
 	mov [rdi + 32], rsi
 
@@ -4768,7 +4768,7 @@ section .text
 	; IntegralToIntegral £temporary1318 £temporary1317
 
  fscanf$2:
-	; Add arg_list £temporary1318 Pointer$8#
+	; Add arg_list £temporary1318 integral8$8#
 	add rsi, 8
 	mov [rdi + 40], rsi
 
@@ -4821,7 +4821,7 @@ section .text
 section .text
 
  vfscanf:
-	; Assign g_inStatus SignedInt$0#
+	; Assign g_inStatus integral4$0#
 	mov dword [g_inStatus], 0
 
  vfscanf$1:
@@ -4882,7 +4882,7 @@ section .text
 	; IntegralToIntegral £temporary1325 £temporary1324
 
  sscanf$2:
-	; Add arg_list £temporary1325 Pointer$8#
+	; Add arg_list £temporary1325 integral8$8#
 	add rsi, 8
 	mov [rdi + 40], rsi
 
@@ -4935,7 +4935,7 @@ section .text
 section .text
 
  vsscanf:
-	; Assign g_inStatus SignedInt$1#
+	; Assign g_inStatus integral4$1#
 	mov dword [g_inStatus], 1
 
  vsscanf$1:

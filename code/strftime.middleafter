@@ -3,30 +3,30 @@
 2: PostCall 52
 3: GetReturnValue £temporary2640
 4: Assign localeConvPtr £temporary2640
-5: Equal 11 localeConvPtr Pointer$0#
+5: Equal 11 localeConvPtr integral8$0#
 6: Dereference £temporary2642 localeConvPtr 0
-7: Equal 11 £temporary2642 Pointer$0#
+7: Equal 11 £temporary2642 integral8$0#
 8: Dereference £temporary2645 localeConvPtr 0
 9: Assign shortDayList £temporary2645
 10: Jump 12
 11: Assign shortDayList g_shortDayList
-12: Equal 18 localeConvPtr Pointer$0#
+12: Equal 18 localeConvPtr integral8$0#
 13: Dereference £temporary2647 localeConvPtr 0
-14: Equal 18 £temporary2647 Pointer$0#
+14: Equal 18 £temporary2647 integral8$0#
 15: Dereference £temporary2650 localeConvPtr 0
 16: Assign longDayList £temporary2650
 17: Jump 19
 18: Assign longDayList g_longDayList
-19: Equal 25 localeConvPtr Pointer$0#
+19: Equal 25 localeConvPtr integral8$0#
 20: Dereference £temporary2652 localeConvPtr 0
-21: Equal 25 £temporary2652 Pointer$0#
+21: Equal 25 £temporary2652 integral8$0#
 22: Dereference £temporary2655 localeConvPtr 0
 23: Assign shortMonthList £temporary2655
 24: Jump 26
 25: Assign shortMonthList g_shortMonthList
-26: Equal 32 localeConvPtr Pointer$0#
+26: Equal 32 localeConvPtr integral8$0#
 27: Dereference £temporary2657 localeConvPtr 0
-28: Equal 32 £temporary2657 Pointer$0#
+28: Equal 32 £temporary2657 integral8$0#
 29: Dereference £temporary2660 localeConvPtr 0
 30: Assign longMonthList £temporary2660
 31: Jump 33
@@ -44,50 +44,50 @@
 43: Assign weekNumberStartSunday £temporary2662
 44: Assign weekNumberStartMonday weekNumberStartSunday
 45: Dereference £temporary2663 tp 0
-46: NotEqual 48 £temporary2663 SignedInt$0#
-47: Subtract weekNumberStartMonday weekNumberStartMonday SignedInt$1#
-48: Assign index SignedInt$0#
+46: NotEqual 48 £temporary2663 integral4$0#
+47: Subtract weekNumberStartMonday weekNumberStartMonday integral4$1#
+48: Assign index integral4$0#
 49: IntegralToIntegral £temporary2667 index
 50: Add £temporary2668 format £temporary2667
 51: Dereference £temporary2666 £temporary2668 0
-52: Equal 331 £temporary2666 SignedChar$0#
+52: Equal 331 £temporary2666 integral1$0#
 53: IntegralToIntegral £temporary2672 index
 54: Add £temporary2673 format £temporary2672
 55: Dereference £temporary2671 £temporary2673 0
-56: NotEqual 305 £temporary2671 SignedChar$37#
-57: Add index index SignedInt$1#
+56: NotEqual 305 £temporary2671 integral1$37#
+57: Add index index integral4$1#
 58: Assign £temporary2675 index
 59: IntegralToIntegral £temporary2677 £temporary2675
 60: Add £temporary2678 format £temporary2677
 61: Dereference £temporary2676 £temporary2678 0
-62: Case 86 £temporary2676 SignedChar$97#
-63: Case 97 £temporary2676 SignedChar$65#
-64: Case 108 £temporary2676 SignedChar$98#
-65: Case 119 £temporary2676 SignedChar$66#
-66: Case 130 £temporary2676 SignedChar$99#
-67: Case 150 £temporary2676 SignedChar$100#
-68: Case 158 £temporary2676 SignedChar$72#
-69: Case 166 £temporary2676 SignedChar$73#
-70: Case 175 £temporary2676 SignedChar$106#
-71: Case 183 £temporary2676 SignedChar$109#
-72: Case 192 £temporary2676 SignedChar$77#
-73: Case 200 £temporary2676 SignedChar$112#
-74: Case 211 £temporary2676 SignedChar$83#
-75: Case 219 £temporary2676 SignedChar$85#
-76: Case 226 £temporary2676 SignedChar$119#
-77: Case 234 £temporary2676 SignedChar$87#
-78: Case 241 £temporary2676 SignedChar$120#
-79: Case 253 £temporary2676 SignedChar$88#
-80: Case 265 £temporary2676 SignedChar$121#
-81: Case 274 £temporary2676 SignedChar$89#
-82: Case 283 £temporary2676 SignedChar$90#
-83: Case 294 £temporary2676 SignedChar$37#
+62: Case 86 £temporary2676 integral1$97#
+63: Case 97 £temporary2676 integral1$65#
+64: Case 108 £temporary2676 integral1$98#
+65: Case 119 £temporary2676 integral1$66#
+66: Case 130 £temporary2676 integral1$99#
+67: Case 150 £temporary2676 integral1$100#
+68: Case 158 £temporary2676 integral1$72#
+69: Case 166 £temporary2676 integral1$73#
+70: Case 175 £temporary2676 integral1$106#
+71: Case 183 £temporary2676 integral1$109#
+72: Case 192 £temporary2676 integral1$77#
+73: Case 200 £temporary2676 integral1$112#
+74: Case 211 £temporary2676 integral1$83#
+75: Case 219 £temporary2676 integral1$85#
+76: Case 226 £temporary2676 integral1$119#
+77: Case 234 £temporary2676 integral1$87#
+78: Case 241 £temporary2676 integral1$120#
+79: Case 253 £temporary2676 integral1$88#
+80: Case 265 £temporary2676 integral1$121#
+81: Case 274 £temporary2676 integral1$89#
+82: Case 283 £temporary2676 integral1$90#
+83: Case 294 £temporary2676 integral1$37#
 84: CaseEnd £temporary2676
 85: Jump 299
 86: PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 87: Parameter 148 pointer add
 88: Dereference £temporary2679 tp 0
-89: Multiply £temporary2681 £temporary2679 SignedInt$8#
+89: Multiply £temporary2681 £temporary2679 integral4$8#
 90: IntegralToIntegral £temporary2682 £temporary2681
 91: Add £temporary2683 shortDayList £temporary2682
 92: Dereference £temporary2680 £temporary2683 0
@@ -98,7 +98,7 @@
 97: PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 98: Parameter 148 pointer add
 99: Dereference £temporary2685 tp 0
-100: Multiply £temporary2687 £temporary2685 SignedInt$8#
+100: Multiply £temporary2687 £temporary2685 integral4$8#
 101: IntegralToIntegral £temporary2688 £temporary2687
 102: Add £temporary2689 longDayList £temporary2688
 103: Dereference £temporary2686 £temporary2689 0
@@ -109,7 +109,7 @@
 108: PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 109: Parameter 148 pointer add
 110: Dereference £temporary2691 tp 0
-111: Multiply £temporary2693 £temporary2691 SignedInt$8#
+111: Multiply £temporary2693 £temporary2691 integral4$8#
 112: IntegralToIntegral £temporary2694 £temporary2693
 113: Add £temporary2695 shortMonthList £temporary2694
 114: Dereference £temporary2692 £temporary2695 0
@@ -120,7 +120,7 @@
 119: PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 120: Parameter 148 pointer add
 121: Dereference £temporary2697 tp 0
-122: Multiply £temporary2699 £temporary2697 SignedInt$8#
+122: Multiply £temporary2699 £temporary2697 integral4$8#
 123: IntegralToIntegral £temporary2700 £temporary2699
 124: Add £temporary2701 longMonthList £temporary2700
 125: Dereference £temporary2698 £temporary2701 0
@@ -132,10 +132,10 @@
 131: Parameter 148 pointer add
 132: Parameter 156 pointer string_2502i2D2502i2D2502i202502i3A2502i3A2502i#
 133: Dereference £temporary2703 tp 0
-134: Add £temporary2704 £temporary2703 SignedInt$1900#
+134: Add £temporary2704 £temporary2703 integral4$1900#
 135: Parameter 164 signed int £temporary2704
 136: Dereference £temporary2705 tp 0
-137: Add £temporary2706 £temporary2705 SignedInt$1#
+137: Add £temporary2706 £temporary2705 integral4$1#
 138: Parameter 168 signed int £temporary2706
 139: Dereference £temporary2707 tp 0
 140: Parameter 172 signed int £temporary2707
@@ -168,7 +168,7 @@
 167: Parameter 148 pointer add
 168: Parameter 156 pointer string_2502i#
 169: Dereference £temporary2716 tp 0
-170: Modulo £temporary2717 £temporary2716 SignedInt$12#
+170: Modulo £temporary2717 £temporary2716 integral4$12#
 171: Parameter 164 signed int £temporary2717
 172: Call 124 sprintf 4
 173: PostCall 124
@@ -185,7 +185,7 @@
 184: Parameter 148 pointer add
 185: Parameter 156 pointer string_2502i#
 186: Dereference £temporary2721 tp 0
-187: Add £temporary2722 £temporary2721 SignedInt$1#
+187: Add £temporary2722 £temporary2721 integral4$1#
 188: Parameter 164 signed int £temporary2722
 189: Call 124 sprintf 4
 190: PostCall 124
@@ -201,7 +201,7 @@
 200: PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 201: Parameter 148 pointer add
 202: Parameter 156 pointer string_25s#
-203: Equal 206 index Logical$0#
+203: Equal 206 index integral4$0#
 204: Assign £temporary2727 string_AM#
 205: Jump 207
 206: Assign £temporary2727 string_PM#
@@ -267,7 +267,7 @@
 266: Parameter 148 pointer add
 267: Parameter 156 pointer string_2502i#
 268: Dereference £temporary2743 tp 0
-269: Modulo £temporary2744 £temporary2743 SignedInt$100#
+269: Modulo £temporary2744 £temporary2743 integral4$100#
 270: Parameter 164 signed int £temporary2744
 271: Call 124 sprintf 4
 272: PostCall 124
@@ -276,7 +276,7 @@
 275: Parameter 148 pointer add
 276: Parameter 156 pointer string_2502i#
 277: Dereference £temporary2746 tp 0
-278: Add £temporary2747 £temporary2746 SignedInt$1900#
+278: Add £temporary2747 £temporary2746 integral4$1900#
 279: Parameter 164 signed int £temporary2747
 280: Call 124 sprintf 4
 281: PostCall 124
@@ -284,7 +284,7 @@
 283: PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 284: Parameter 148 pointer add
 285: Dereference £temporary2749 tp 0
-286: Equal 289 £temporary2749 Logical$0#
+286: Equal 289 £temporary2749 integral4$0#
 287: Assign £temporary2751 string_summer#
 288: Jump 290
 289: Assign £temporary2751 string_winter#
@@ -309,7 +309,7 @@
 308: Dereference £temporary2756 £temporary2758 0
 309: Assign £temporary2755 £temporary2756
 310: Dereference £temporary2759 add 0
-311: Assign £temporary2759 SignedChar$0#
+311: Assign £temporary2759 integral1$0#
 312: PreCall 124 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 313: Parameter 148 pointer result
 314: Call 124 strlen 0
@@ -327,7 +327,7 @@
 326: Parameter 156 pointer add
 327: Call 124 strcat 0
 328: PostCall 124
-329: Add index index SignedInt$1#
+329: Add index index integral4$1#
 330: Jump 49
 331: PreCall 92 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 332: Parameter 116 pointer result

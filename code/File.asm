@@ -48,19 +48,19 @@ section .data
 g_fileArray:
 	; Initializer SignedInt 1
 	dd 1
-	; Initializer UnsignedInt 0
+	; Initializer SignedInt 0
 	dd 0
 	; InitializerZero 33
 	times 33 db 0
 	; Initializer SignedInt 1
 	dd 1
-	; Initializer UnsignedInt 1
+	; Initializer SignedInt 1
 	dd 1
 	; InitializerZero 33
 	times 33 db 0
 	; Initializer SignedInt 1
 	dd 1
-	; Initializer UnsignedInt 2
+	; Initializer SignedInt 2
 	dd 2
 	; InitializerZero 33
 	times 33 db 0
@@ -87,62 +87,62 @@ stderr:
 
 section .data
 
-@2347$EEXIST:
+@2217$EEXIST:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@2348$ENOENT:
+@2218$ENOENT:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@2349$EACCES:
+@2219$EACCES:
 	; Initializer SignedInt 2
 	dd 2
 
 section .data
 
-@2350$SEEK_SET:
+@2220$SEEK_SET:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@2351$SEEK_CUR:
+@2221$SEEK_CUR:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@2352$SEEK_END:
+@2222$SEEK_END:
 	; Initializer SignedInt 2
 	dd 2
 
 section .data
 
-@2353$READ:
+@2223$READ:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@2354$WRITE:
+@2224$WRITE:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@2355$READ_WRITE:
+@2225$READ_WRITE:
 	; Initializer SignedInt 3
 	dd 3
 
 section .text
 
  filecreate:
-	; AssignRegister rax UnsignedLongInt$85#
+	; AssignRegister rax integral8$85#
 	mov rax, 85
 
  filecreate$1:
@@ -153,7 +153,7 @@ section .text
 	; AssignRegister rdi £temporary580
 
  filecreate$3:
-	; AssignRegister rsi UnsignedLongInt$511#
+	; AssignRegister rsi integral8$511#
 	mov rsi, 511
 
  filecreate$4:
@@ -179,13 +179,13 @@ section .text
 
 section .data
 
-@2573string_r#:
+@2436string_r#:
 	; Initializer String r
 	db "r", 0
 
 section .data
 
-@2575string_0Afileexists2025s2025p0A#:
+@2438string_0Afileexists2025s2025p0A#:
 	; Initializer String \nfileexists %s %p\n
 	db 10, "fileexists %s %p", 10, 0
 
@@ -201,7 +201,7 @@ section .text
 
  fileexistsX$2:
 	; Parameter 64 pointer string_r#
-	mov qword [rbp + 64], @2573string_r#
+	mov qword [rbp + 64], @2436string_r#
 
  fileexistsX$3:
 	; Call 32 fopen 0
@@ -225,7 +225,7 @@ section .text
 
  fileexistsX$8:
 	; Parameter 64 pointer string_0Afileexists2025s2025p0A#
-	mov qword [rbp + 64], @2575string_0Afileexists2025s2025p0A#
+	mov qword [rbp + 64], @2438string_0Afileexists2025s2025p0A#
 
  fileexistsX$9:
 	; Parameter 72 pointer name
@@ -250,7 +250,7 @@ section .text
 	; PostCall 40
 
  fileexistsX$13:
-	; Equal 20 filePtr Pointer$0#
+	; Equal 20 filePtr integral8$0#
 	cmp qword [rbp + 32], 0
 	je fileexistsX$20
 
@@ -276,7 +276,7 @@ section .text
 	; SetReturnValue
 
  fileexistsX$19:
-	; Return SignedInt$1#
+	; Return integral4$1#
 	mov ebx, 1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -287,7 +287,7 @@ section .text
 	; SetReturnValue
 
  fileexistsX$21:
-	; Return SignedInt$0#
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -300,7 +300,7 @@ section .text
 section .text
 
  fileexists:
-	; AssignRegister rax UnsignedLongInt$21#
+	; AssignRegister rax integral8$21#
 	mov rax, 21
 
  fileexists$1:
@@ -311,7 +311,7 @@ section .text
 	; AssignRegister rdi £temporary589
 
  fileexists$3:
-	; AssignRegister rsi UnsignedLongInt$0#
+	; AssignRegister rsi integral8$0#
 	mov rsi, 0
 
  fileexists$4:
@@ -322,12 +322,12 @@ section .text
 	; InspectRegister £temporary591 eax
 
  fileexists$6:
-	; NotEqual 9 £temporary591 SignedInt$0#
+	; NotEqual 9 £temporary591 integral4$0#
 	cmp eax, 0
 	jne fileexists$9
 
  fileexists$7:
-	; Assign £temporary593 SignedInt$1#
+	; Assign £temporary593 integral4$1#
 	mov ebx, 1
 
  fileexists$8:
@@ -335,7 +335,7 @@ section .text
 	jmp fileexists$10
 
  fileexists$9:
-	; Assign £temporary593 SignedInt$0#
+	; Assign £temporary593 integral4$0#
 	mov ebx, 0
 
  fileexists$10:
@@ -353,37 +353,37 @@ section .text
 
 section .text
 
- @2600$fileopen:
-	; AssignRegister rax UnsignedLongInt$2#
+ @2459$fileopen:
+	; AssignRegister rax integral8$2#
 	mov rax, 2
 
- @2600$fileopen$1:
+ @2459$fileopen$1:
 	; IntegralToIntegral £temporary596 name
 	mov rdi, [rbp + 24]
 
- @2600$fileopen$2:
+ @2459$fileopen$2:
 	; AssignRegister rdi £temporary596
 
- @2600$fileopen$3:
+ @2459$fileopen$3:
 	; IntegralToIntegral £temporary598 mode
 	mov si, [rbp + 32]
 	mov rbx, 65535
 	and rsi, rbx
 
- @2600$fileopen$4:
+ @2459$fileopen$4:
 	; AssignRegister rsi £temporary598
 
- @2600$fileopen$5:
+ @2459$fileopen$5:
 	; SysCall
 	syscall
 
- @2600$fileopen$6:
+ @2459$fileopen$6:
 	; InspectRegister £temporary599 eax
 
- @2600$fileopen$7:
+ @2459$fileopen$7:
 	; SetReturnValue
 
- @2600$fileopen$8:
+ @2459$fileopen$8:
 	; Return £temporary599
 	mov ebx, eax
 	mov rax, [rbp]
@@ -391,37 +391,37 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2600$fileopen$9:
+ @2459$fileopen$9:
 	; FunctionEnd fileopen
 
 section .data
 
-@2612SignedInt$41#:
+@2468integral4$41#:
 	; Initializer SignedInt 41
 	dd 41
 
 section .data
 
-@2616SignedInt$41#:
+@2471integral4$41#:
 	; Initializer SignedInt 41
 	dd 41
 
 section .text
 
  fopen:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 40], 0
 
  fopen$1:
-	; GreaterThanEqual 23 index SignedInt$20#
+	; GreaterThanEqual 23 index integral4$20#
 	cmp dword [rbp + 40], 20
 	jge fopen$23
 
  fopen$2:
-	; Multiply £temporary603 index SignedInt$41#
+	; Multiply £temporary603 index integral4$41#
 	mov eax, [rbp + 40]
 	xor edx, edx
-	imul dword [@2612SignedInt$41#]
+	imul dword [@2468integral4$41#]
 
  fopen$3:
 	; IntegralToIntegral £temporary604 £temporary603
@@ -437,7 +437,7 @@ section .text
 	; Dereference £temporary602 £temporary605 0
 
  fopen$6:
-	; NotEqual 21 £temporary602.open Logical$0#
+	; NotEqual 21 £temporary602.open integral4$0#
 	cmp dword [rsi], 0
 	jne fopen$21
 
@@ -455,10 +455,10 @@ section .text
 	mov [rbp + 76], rax
 
  fopen$10:
-	; Multiply £temporary609 index SignedInt$41#
+	; Multiply £temporary609 index integral4$41#
 	mov eax, [rbp + 40]
 	xor edx, edx
-	imul dword [@2616SignedInt$41#]
+	imul dword [@2471integral4$41#]
 
  fopen$11:
 	; IntegralToIntegral £temporary610 £temporary609
@@ -504,7 +504,7 @@ section .text
 	jmp rax
 
  fopen$21:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 40]
 
  fopen$22:
@@ -515,7 +515,7 @@ section .text
 	; SetReturnValue
 
  fopen$24:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -527,56 +527,56 @@ section .text
 
 section .data
 
-@2629string_r#:
+@2482string_r#:
 	; Initializer String r
 	db "r", 0
 
 section .data
 
-@2635string_w#:
+@2485string_w#:
 	; Initializer String w
 	db "w", 0
 
 section .data
 
-@2638string_a#:
+@2487string_a#:
 	; Initializer String a
 	db "a", 0
 
 section .data
 
-@2652string_r2B#:
+@2494string_r2B#:
 	; Initializer String r+
 	db "r+", 0
 
 section .data
 
-@2655string_r2B10A#:
+@2496string_r2B10A#:
 	; Initializer String r+1\n
 	db "r+1", 10, 0
 
 section .data
 
-@2659string_r2B20A#:
+@2498string_r2B20A#:
 	; Initializer String r+2\n
 	db "r+2", 10, 0
 
 section .data
 
-@2660string_w2B#:
+@2499string_w2B#:
 	; Initializer String w+
 	db "w+", 0
 
 section .data
 
-@2667string_a2B#:
+@2503string_a2B#:
 	; Initializer String a+
 	db "a+", 0
 
 section .text
 
  freopen:
-	; Assign handle SignedInt$minus1#
+	; Assign handle integral4$minus1#
 	mov dword [rbp + 48], -1
 
  freopen$1:
@@ -589,7 +589,7 @@ section .text
 
  freopen$3:
 	; Parameter 84 pointer string_r#
-	mov qword [rbp + 84], @2629string_r#
+	mov qword [rbp + 84], @2482string_r#
 
  freopen$4:
 	; Call 52 strcmp 0
@@ -605,7 +605,7 @@ section .text
 	; GetReturnValue £temporary614
 
  freopen$7:
-	; NotEqual 16 £temporary614 SignedInt$0#
+	; NotEqual 16 £temporary614 integral4$0#
 	cmp ebx, 0
 	jne freopen$16
 
@@ -618,7 +618,7 @@ section .text
 	mov [rbp + 76], rax
 
  freopen$10:
-	; Parameter 84 unsigned short int UnsignedShortInt$0#
+	; Parameter 84 unsigned short int integral2$0#
 	mov word [rbp + 84], 0
 
  freopen$11:
@@ -626,7 +626,7 @@ section .text
 	mov qword [rbp + 52], freopen$12
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2600$fileopen
+	jmp @2459$fileopen
 
  freopen$12:
 	; PostCall 52
@@ -652,7 +652,7 @@ section .text
 
  freopen$18:
 	; Parameter 84 pointer string_w#
-	mov qword [rbp + 84], @2635string_w#
+	mov qword [rbp + 84], @2485string_w#
 
  freopen$19:
 	; Call 52 strcmp 0
@@ -668,7 +668,7 @@ section .text
 	; GetReturnValue £temporary617
 
  freopen$22:
-	; NotEqual 30 £temporary617 SignedInt$0#
+	; NotEqual 30 £temporary617 integral4$0#
 	cmp ebx, 0
 	jne freopen$30
 
@@ -711,7 +711,7 @@ section .text
 
  freopen$32:
 	; Parameter 84 pointer string_a#
-	mov qword [rbp + 84], @2638string_a#
+	mov qword [rbp + 84], @2487string_a#
 
  freopen$33:
 	; Call 52 strcmp 0
@@ -727,7 +727,7 @@ section .text
 	; GetReturnValue £temporary620
 
  freopen$36:
-	; NotEqual 59 £temporary620 SignedInt$0#
+	; NotEqual 59 £temporary620 integral4$0#
 	cmp ebx, 0
 	jne freopen$59
 
@@ -740,7 +740,7 @@ section .text
 	mov [rbp + 76], rax
 
  freopen$39:
-	; Parameter 84 unsigned short int UnsignedShortInt$1#
+	; Parameter 84 unsigned short int integral2$1#
 	mov word [rbp + 84], 1
 
  freopen$40:
@@ -748,7 +748,7 @@ section .text
 	mov qword [rbp + 52], freopen$41
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2600$fileopen
+	jmp @2459$fileopen
 
  freopen$41:
 	; PostCall 52
@@ -761,7 +761,7 @@ section .text
 	mov [rbp + 48], ebx
 
  freopen$44:
-	; Equal 52 handle SignedInt$minus1#
+	; Equal 52 handle integral4$minus1#
 	cmp dword [rbp + 48], -1
 	je freopen$52
 
@@ -774,11 +774,11 @@ section .text
 	mov [rbp + 76], rax
 
  freopen$47:
-	; Parameter 84 signed int SignedInt$0#
+	; Parameter 84 signed int integral4$0#
 	mov dword [rbp + 84], 0
 
  freopen$48:
-	; Parameter 88 signed int SignedInt$2#
+	; Parameter 88 signed int integral4$2#
 	mov dword [rbp + 88], 2
 
  freopen$49:
@@ -834,7 +834,7 @@ section .text
 
  freopen$61:
 	; Parameter 84 pointer string_r2B#
-	mov qword [rbp + 84], @2652string_r2B#
+	mov qword [rbp + 84], @2494string_r2B#
 
  freopen$62:
 	; Call 52 strcmp 0
@@ -850,7 +850,7 @@ section .text
 	; GetReturnValue £temporary626
 
  freopen$65:
-	; NotEqual 82 £temporary626 SignedInt$0#
+	; NotEqual 82 £temporary626 integral4$0#
 	cmp ebx, 0
 	jne freopen$82
 
@@ -859,7 +859,7 @@ section .text
 
  freopen$67:
 	; Parameter 76 pointer string_r2B10A#
-	mov qword [rbp + 76], @2655string_r2B10A#
+	mov qword [rbp + 76], @2496string_r2B10A#
 
  freopen$68:
 	; Call 52 printf 0
@@ -881,7 +881,7 @@ section .text
 	mov [rbp + 76], rax
 
  freopen$72:
-	; Parameter 84 unsigned short int UnsignedShortInt$3#
+	; Parameter 84 unsigned short int integral2$3#
 	mov word [rbp + 84], 3
 
  freopen$73:
@@ -889,7 +889,7 @@ section .text
 	mov qword [rbp + 52], freopen$74
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2600$fileopen
+	jmp @2459$fileopen
 
  freopen$74:
 	; PostCall 52
@@ -906,7 +906,7 @@ section .text
 
  freopen$78:
 	; Parameter 76 pointer string_r2B20A#
-	mov qword [rbp + 76], @2659string_r2B20A#
+	mov qword [rbp + 76], @2498string_r2B20A#
 
  freopen$79:
 	; Call 52 printf 0
@@ -933,7 +933,7 @@ section .text
 
  freopen$84:
 	; Parameter 84 pointer string_w2B#
-	mov qword [rbp + 84], @2660string_w2B#
+	mov qword [rbp + 84], @2499string_w2B#
 
  freopen$85:
 	; Call 52 strcmp 0
@@ -949,7 +949,7 @@ section .text
 	; GetReturnValue £temporary631
 
  freopen$88:
-	; NotEqual 110 £temporary631 SignedInt$0#
+	; NotEqual 110 £temporary631 integral4$0#
 	cmp ebx, 0
 	jne freopen$110
 
@@ -975,7 +975,7 @@ section .text
 	; GetReturnValue £temporary633
 
  freopen$94:
-	; Equal 103 £temporary633 Logical$0#
+	; Equal 103 £temporary633 integral4$0#
 	cmp ebx, 0
 	je freopen$103
 
@@ -988,7 +988,7 @@ section .text
 	mov [rbp + 76], rax
 
  freopen$97:
-	; Parameter 84 unsigned short int UnsignedShortInt$3#
+	; Parameter 84 unsigned short int integral2$3#
 	mov word [rbp + 84], 3
 
  freopen$98:
@@ -996,7 +996,7 @@ section .text
 	mov qword [rbp + 52], freopen$99
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2600$fileopen
+	jmp @2459$fileopen
 
  freopen$99:
 	; PostCall 52
@@ -1051,7 +1051,7 @@ section .text
 
  freopen$112:
 	; Parameter 84 pointer string_a2B#
-	mov qword [rbp + 84], @2667string_a2B#
+	mov qword [rbp + 84], @2503string_a2B#
 
  freopen$113:
 	; Call 52 strcmp 0
@@ -1067,7 +1067,7 @@ section .text
 	; GetReturnValue £temporary637
 
  freopen$116:
-	; NotEqual 138 £temporary637 SignedInt$0#
+	; NotEqual 138 £temporary637 integral4$0#
 	cmp ebx, 0
 	jne freopen$138
 
@@ -1080,7 +1080,7 @@ section .text
 	mov [rbp + 76], rax
 
  freopen$119:
-	; Parameter 84 unsigned short int UnsignedShortInt$3#
+	; Parameter 84 unsigned short int integral2$3#
 	mov word [rbp + 84], 3
 
  freopen$120:
@@ -1088,7 +1088,7 @@ section .text
 	mov qword [rbp + 52], freopen$121
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2600$fileopen
+	jmp @2459$fileopen
 
  freopen$121:
 	; PostCall 52
@@ -1101,7 +1101,7 @@ section .text
 	mov [rbp + 48], ebx
 
  freopen$124:
-	; Equal 132 handle SignedInt$minus1#
+	; Equal 132 handle integral4$minus1#
 	cmp dword [rbp + 48], -1
 	je freopen$132
 
@@ -1114,11 +1114,11 @@ section .text
 	mov [rbp + 76], rax
 
  freopen$127:
-	; Parameter 84 signed int SignedInt$0#
+	; Parameter 84 signed int integral4$0#
 	mov dword [rbp + 84], 0
 
  freopen$128:
-	; Parameter 88 signed int SignedInt$2#
+	; Parameter 88 signed int integral4$2#
 	mov dword [rbp + 88], 2
 
  freopen$129:
@@ -1161,7 +1161,7 @@ section .text
 	mov [rbp + 48], ebx
 
  freopen$138:
-	; Equal 155 handle SignedInt$minus1#
+	; Equal 155 handle integral4$minus1#
 	cmp dword [rbp + 48], -1
 	je freopen$155
 
@@ -1170,7 +1170,7 @@ section .text
 	mov rsi, [rbp + 40]
 
  freopen$140:
-	; Assign £temporary644 SignedInt$1#
+	; Assign £temporary644 integral4$1#
 	mov dword [rsi], 1
 
  freopen$141:
@@ -1187,7 +1187,7 @@ section .text
 	mov rsi, [rbp + 40]
 
  freopen$144:
-	; Assign £temporary646 UnsignedInt$0#
+	; Assign £temporary646 integral4$0#
 	mov dword [rsi + 33], 0
 
  freopen$145:
@@ -1222,7 +1222,7 @@ section .text
 	mov rsi, [rbp + 40]
 
  freopen$152:
-	; Assign £temporary649 SignedInt$0#
+	; Assign £temporary649 integral4$0#
 	mov dword [rsi + 37], 0
 
  freopen$153:
@@ -1241,14 +1241,14 @@ section .text
 	mov rsi, [rbp + 40]
 
  freopen$156:
-	; Assign £temporary650 SignedInt$0#
+	; Assign £temporary650 integral4$0#
 	mov dword [rsi], 0
 
  freopen$157:
 	; SetReturnValue
 
  freopen$158:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1260,37 +1260,37 @@ section .text
 
 section .data
 
-@2742SignedInt$41#:
+@2562integral4$41#:
 	; Initializer SignedInt 41
 	dd 41
 
 section .data
 
-@2745SignedInt$41#:
+@2564integral4$41#:
 	; Initializer SignedInt 41
 	dd 41
 
 section .text
 
  fflush:
-	; NotEqual 23 stream Pointer$0#
+	; NotEqual 23 stream integral8$0#
 	cmp qword [rbp + 24], 0
 	jne fflush$23
 
  fflush$1:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 32], 0
 
  fflush$2:
-	; GreaterThanEqual 23 index SignedInt$20#
+	; GreaterThanEqual 23 index integral4$20#
 	cmp dword [rbp + 32], 20
 	jge fflush$23
 
  fflush$3:
-	; Multiply £temporary655 index SignedInt$41#
+	; Multiply £temporary655 index integral4$41#
 	mov eax, [rbp + 32]
 	xor edx, edx
-	imul dword [@2742SignedInt$41#]
+	imul dword [@2562integral4$41#]
 
  fflush$4:
 	; IntegralToIntegral £temporary656 £temporary655
@@ -1306,7 +1306,7 @@ section .text
 	; Dereference £temporary654 £temporary657 0
 
  fflush$7:
-	; Equal 21 £temporary654.open Logical$0#
+	; Equal 21 £temporary654.open integral4$0#
 	cmp dword [rsi], 0
 	je fflush$21
 
@@ -1314,10 +1314,10 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fflush$9:
-	; Multiply £temporary659 index SignedInt$41#
+	; Multiply £temporary659 index integral4$41#
 	mov eax, [rbp + 32]
 	xor edx, edx
-	imul dword [@2745SignedInt$41#]
+	imul dword [@2564integral4$41#]
 
  fflush$10:
 	; IntegralToIntegral £temporary660 £temporary659
@@ -1353,7 +1353,7 @@ section .text
 	; GetReturnValue £temporary663
 
  fflush$18:
-	; NotEqual 21 £temporary663 SignedInt$minus1#
+	; NotEqual 21 £temporary663 integral4$minus1#
 	cmp ebx, -1
 	jne fflush$21
 
@@ -1361,7 +1361,7 @@ section .text
 	; SetReturnValue
 
  fflush$20:
-	; Return SignedInt$minus1#
+	; Return integral4$minus1#
 	mov ebx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1369,7 +1369,7 @@ section .text
 	jmp rax
 
  fflush$21:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 32]
 
  fflush$22:
@@ -1380,7 +1380,7 @@ section .text
 	; SetReturnValue
 
  fflush$24:
-	; Return SignedInt$0#
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1392,25 +1392,25 @@ section .text
 
 section .data
 
-@2769SignedInt$41#:
+@2579integral4$41#:
 	; Initializer SignedInt 41
 	dd 41
 
 section .data
 
-@2772SignedInt$41#:
+@2581integral4$41#:
 	; Initializer SignedInt 41
 	dd 41
 
 section .text
 
  fclose:
-	; Equal 8 stream Pointer$0#
+	; Equal 8 stream integral8$0#
 	cmp qword [rbp + 24], 0
 	je fclose$8
 
  fclose$1:
-	; AssignRegister rax UnsignedLongInt$3#
+	; AssignRegister rax integral8$3#
 	mov rax, 3
 
  fclose$2:
@@ -1434,7 +1434,7 @@ section .text
 	; SetReturnValue
 
  fclose$7:
-	; Return SignedInt$0#
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1442,19 +1442,19 @@ section .text
 	jmp rax
 
  fclose$8:
-	; Assign index SignedInt$0#
+	; Assign index integral4$0#
 	mov dword [rbp + 32], 0
 
  fclose$9:
-	; GreaterThanEqual 30 index SignedInt$20#
+	; GreaterThanEqual 30 index integral4$20#
 	cmp dword [rbp + 32], 20
 	jge fclose$30
 
  fclose$10:
-	; Multiply £temporary674 index SignedInt$41#
+	; Multiply £temporary674 index integral4$41#
 	mov eax, [rbp + 32]
 	xor edx, edx
-	imul dword [@2769SignedInt$41#]
+	imul dword [@2579integral4$41#]
 
  fclose$11:
 	; IntegralToIntegral £temporary675 £temporary674
@@ -1470,7 +1470,7 @@ section .text
 	; Dereference £temporary673 £temporary676 0
 
  fclose$14:
-	; Equal 28 £temporary673.open Logical$0#
+	; Equal 28 £temporary673.open integral4$0#
 	cmp dword [rsi], 0
 	je fclose$28
 
@@ -1478,10 +1478,10 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fclose$16:
-	; Multiply £temporary678 index SignedInt$41#
+	; Multiply £temporary678 index integral4$41#
 	mov eax, [rbp + 32]
 	xor edx, edx
-	imul dword [@2772SignedInt$41#]
+	imul dword [@2581integral4$41#]
 
  fclose$17:
 	; IntegralToIntegral £temporary679 £temporary678
@@ -1517,7 +1517,7 @@ section .text
 	; GetReturnValue £temporary682
 
  fclose$25:
-	; NotEqual 28 £temporary682 SignedInt$minus1#
+	; NotEqual 28 £temporary682 integral4$minus1#
 	cmp ebx, -1
 	jne fclose$28
 
@@ -1525,7 +1525,7 @@ section .text
 	; SetReturnValue
 
  fclose$27:
-	; Return SignedInt$minus1#
+	; Return integral4$minus1#
 	mov ebx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1533,7 +1533,7 @@ section .text
 	jmp rax
 
  fclose$28:
-	; Add index index SignedInt$1#
+	; Add index index integral4$1#
 	inc dword [rbp + 32]
 
  fclose$29:
@@ -1544,7 +1544,7 @@ section .text
 	; SetReturnValue
 
  fclose$31:
-	; Return SignedInt$0#
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1557,7 +1557,7 @@ section .text
 section .text
 
  remove:
-	; AssignRegister rax UnsignedLongInt$88#
+	; AssignRegister rax integral8$88#
 	mov rax, 88
 
  remove$1:
@@ -1575,7 +1575,7 @@ section .text
 	; InspectRegister £temporary688 ebx
 
  remove$5:
-	; NotEqual 8 £temporary688 SignedInt$0#
+	; NotEqual 8 £temporary688 integral4$0#
 	cmp ebx, 0
 	jne remove$8
 
@@ -1583,7 +1583,7 @@ section .text
 	; SetReturnValue
 
  remove$7:
-	; Return SignedInt$0#
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1591,14 +1591,14 @@ section .text
 	jmp rax
 
  remove$8:
-	; Assign errno SignedInt$18#
+	; Assign errno FREMOVE
 	mov dword [errno], 18
 
  remove$9:
 	; SetReturnValue
 
  remove$10:
-	; Return SignedInt$minus1#
+	; Return integral4$minus1#
 	mov ebx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1611,7 +1611,7 @@ section .text
 section .text
 
  rename:
-	; AssignRegister rax UnsignedLongInt$82#
+	; AssignRegister rax integral8$82#
 	mov rax, 82
 
  rename$1:
@@ -1636,7 +1636,7 @@ section .text
 	; InspectRegister £temporary695 eax
 
  rename$7:
-	; NotEqual 10 £temporary695 SignedInt$0#
+	; NotEqual 10 £temporary695 integral4$0#
 	cmp eax, 0
 	jne rename$10
 
@@ -1644,7 +1644,7 @@ section .text
 	; SetReturnValue
 
  rename$9:
-	; Return SignedInt$0#
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1652,14 +1652,14 @@ section .text
 	jmp rax
 
  rename$10:
-	; Assign errno SignedInt$19#
+	; Assign errno FRENAME
 	mov dword [errno], 19
 
  rename$11:
 	; SetReturnValue
 
  rename$12:
-	; Return SignedInt$minus1#
+	; Return integral4$minus1#
 	mov ebx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1675,7 +1675,7 @@ section .text
 	; SetReturnValue
 
  setvbuf$1:
-	; Return SignedInt$0#
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1700,7 +1700,7 @@ section .text
 section .text
 
  fgetc:
-	; Assign c SignedChar$0#
+	; Assign c integral1$0#
 	mov byte [rbp + 32], 0
 
  fgetc$1:
@@ -1716,11 +1716,11 @@ section .text
 	mov [rbp + 57], rsi
 
  fgetc$4:
-	; Parameter 65 signed int SignedInt$1#
+	; Parameter 65 signed int integral4$1#
 	mov dword [rbp + 65], 1
 
  fgetc$5:
-	; Parameter 69 signed int SignedInt$1#
+	; Parameter 69 signed int integral4$1#
 	mov dword [rbp + 69], 1
 
  fgetc$6:
@@ -1742,7 +1742,7 @@ section .text
 	; GetReturnValue £temporary698
 
  fgetc$10:
-	; LessThanEqual 14 £temporary698 SignedInt$0#
+	; LessThanEqual 14 £temporary698 integral4$0#
 	cmp ebx, 0
 	jle fgetc$14
 
@@ -1769,7 +1769,7 @@ section .text
 	; SetReturnValue
 
  fgetc$15:
-	; Return SignedInt$minus1#
+	; Return integral4$minus1#
 	mov ebx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1781,22 +1781,22 @@ section .text
 
 section .data
 
-@2842string_25c#:
+@2626string_25c#:
 	; Initializer String %c
 	db "%c", 0
 
 section .text
 
  fgets:
-	; Assign count SignedInt$0#
+	; Assign count integral4$0#
 	mov dword [rbp + 44], 0
 
  fgets$1:
-	; Assign prevChar SignedChar$0#
+	; Assign prevChar integral1$0#
 	mov byte [rbp + 48], 0
 
  fgets$2:
-	; Subtract £temporary702 size SignedInt$1#
+	; Subtract £temporary702 size integral4$1#
 	mov eax, [rbp + 32]
 	dec eax
 
@@ -1806,7 +1806,7 @@ section .text
 	jge fgets$36
 
  fgets$4:
-	; Assign currChar SignedChar$0#
+	; Assign currChar integral1$0#
 	mov byte [rbp + 49], 0
 
  fgets$5:
@@ -1819,7 +1819,7 @@ section .text
 
  fgets$7:
 	; Parameter 82 pointer string_25c#
-	mov qword [rbp + 82], @2842string_25c#
+	mov qword [rbp + 82], @2626string_25c#
 
  fgets$8:
 	; Address £temporary704 currChar
@@ -1843,12 +1843,12 @@ section .text
 	; PostCall 50
 
  fgets$12:
-	; NotEqual 19 prevChar SignedChar$13#
+	; NotEqual 19 prevChar integral1$13#
 	cmp byte [rbp + 48], 13
 	jne fgets$19
 
  fgets$13:
-	; NotEqual 19 currChar SignedChar$10#
+	; NotEqual 19 currChar integral1$10#
 	cmp byte [rbp + 49], 10
 	jne fgets$19
 
@@ -1867,7 +1867,7 @@ section .text
 	; Dereference £temporary709 £temporary711 0
 
  fgets$17:
-	; Assign £temporary709 SignedChar$0#
+	; Assign £temporary709 integral1$0#
 	mov byte [rsi], 0
 
  fgets$18:
@@ -1884,7 +1884,7 @@ section .text
 	neg eax
 
  fgets$20:
-	; NotEqual 26 £temporary712 SignedInt$minus1#
+	; NotEqual 26 £temporary712 integral4$minus1#
 	cmp eax, -1
 	jne fgets$26
 
@@ -1903,7 +1903,7 @@ section .text
 	; Dereference £temporary714 £temporary716 0
 
  fgets$24:
-	; Assign £temporary714 SignedChar$0#
+	; Assign £temporary714 integral1$0#
 	mov byte [rsi], 0
 
  fgets$25:
@@ -1911,12 +1911,12 @@ section .text
 	jmp fgets$36
 
  fgets$26:
-	; Equal 34 currChar SignedChar$13#
+	; Equal 34 currChar integral1$13#
 	cmp byte [rbp + 49], 13
 	je fgets$34
 
  fgets$27:
-	; Equal 34 currChar SignedChar$10#
+	; Equal 34 currChar integral1$10#
 	cmp byte [rbp + 49], 10
 	je fgets$34
 
@@ -1925,7 +1925,7 @@ section .text
 	mov eax, [rbp + 44]
 
  fgets$29:
-	; Add count count SignedInt$1#
+	; Add count count integral4$1#
 	inc dword [rbp + 44]
 
  fgets$30:
@@ -1993,7 +1993,7 @@ section .text
 	; GetReturnValue £temporary725
 
  fputs$5:
-	; Add size £temporary725 SignedInt$1#
+	; Add size £temporary725 integral4$1#
 	inc ebx
 	mov [rbp + 40], ebx
 
@@ -2011,7 +2011,7 @@ section .text
 	mov [rbp + 76], eax
 
  fputs$9:
-	; Parameter 80 signed int SignedInt$1#
+	; Parameter 80 signed int integral4$1#
 	mov dword [rbp + 80], 1
 
  fputs$10:
@@ -2038,7 +2038,7 @@ section .text
 	jne fputs$17
 
  fputs$15:
-	; Assign £temporary730 SignedInt$0#
+	; Assign £temporary730 integral4$0#
 	mov ebx, 0
 
  fputs$16:
@@ -2046,7 +2046,7 @@ section .text
 	jmp fputs$18
 
  fputs$17:
-	; Assign £temporary730 SignedInt$minus1#
+	; Assign £temporary730 integral4$minus1#
 	mov ebx, -1
 
  fputs$18:
@@ -2109,7 +2109,7 @@ section .text
 	mov [rbp + 56], rax
 
  gets$2:
-	; Parameter 64 signed int SignedInt$minus1#
+	; Parameter 64 signed int integral4$minus1#
 	mov dword [rbp + 64], -1
 
  gets$3:
@@ -2131,7 +2131,7 @@ section .text
 	; GetReturnValue £temporary732
 
  gets$7:
-	; Equal 22 £temporary732 Pointer$0#
+	; Equal 22 £temporary732 integral8$0#
 	cmp rbx, 0
 	je gets$22
 
@@ -2161,12 +2161,12 @@ section .text
 	mov [rbp + 32], ebx
 
  gets$14:
-	; LessThanEqual 20 size SignedInt$0#
+	; LessThanEqual 20 size integral4$0#
 	cmp dword [rbp + 32], 0
 	jle gets$20
 
  gets$15:
-	; Subtract £temporary736 size SignedInt$1#
+	; Subtract £temporary736 size integral4$1#
 	mov eax, [rbp + 32]
 	dec eax
 
@@ -2184,7 +2184,7 @@ section .text
 	; Dereference £temporary737 £temporary739 0
 
  gets$19:
-	; Assign £temporary737 SignedChar$0#
+	; Assign £temporary737 integral1$0#
 	mov byte [rsi], 0
 
  gets$20:
@@ -2202,7 +2202,7 @@ section .text
 	; SetReturnValue
 
  gets$23:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -2241,7 +2241,7 @@ section .text
 	; GetReturnValue £temporary740
 
  puts$6:
-	; Equal 15 £temporary740 SignedInt$0#
+	; Equal 15 £temporary740 integral4$0#
 	cmp ebx, 0
 	je puts$15
 
@@ -2249,7 +2249,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  puts$8:
-	; Parameter 56 signed int SignedInt$10#
+	; Parameter 56 signed int integral4$10#
 	mov dword [rbp + 56], 10
 
  puts$9:
@@ -2284,7 +2284,7 @@ section .text
 	; SetReturnValue
 
  puts$16:
-	; Return SignedInt$minus1#
+	; Return integral4$minus1#
 	mov ebx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -2310,7 +2310,7 @@ section .text
 	neg eax
 
  ungetc$2:
-	; Equal 6 £temporary744 SignedInt$minus1#
+	; Equal 6 £temporary744 integral4$minus1#
 	cmp eax, -1
 	je ungetc$6
 
@@ -2382,7 +2382,7 @@ section .text
 	mov rdx, rax
 
  fread$8:
-	; AssignRegister rax UnsignedLongInt$0#
+	; AssignRegister rax integral8$0#
 	mov rax, 0
 
  fread$9:
@@ -2444,7 +2444,7 @@ section .text
 	mov rdx, rax
 
  fwrite$8:
-	; AssignRegister rax UnsignedLongInt$1#
+	; AssignRegister rax integral8$1#
 	mov rax, 1
 
  fwrite$9:
@@ -2471,7 +2471,7 @@ section .text
 section .text
 
  fseek:
-	; AssignRegister rax UnsignedLongInt$8#
+	; AssignRegister rax integral8$8#
 	mov rax, 8
 
  fseek$1:
@@ -2537,11 +2537,11 @@ section .text
 	mov [rbp + 56], rax
 
  ftell$2:
-	; Parameter 64 signed int SignedInt$0#
+	; Parameter 64 signed int integral4$0#
 	mov dword [rbp + 64], 0
 
  ftell$3:
-	; Parameter 68 signed int SignedInt$1#
+	; Parameter 68 signed int SEEK_CUR
 	mov dword [rbp + 68], 1
 
  ftell$4:
@@ -2581,11 +2581,11 @@ section .text
 	mov [rbp + 56], rax
 
  rewind$2:
-	; Parameter 64 signed int SignedInt$0#
+	; Parameter 64 signed int integral4$0#
 	mov dword [rbp + 64], 0
 
  rewind$3:
-	; Parameter 68 signed int SignedInt$0#
+	; Parameter 68 signed int SEEK_SET
 	mov dword [rbp + 68], 0
 
  rewind$4:
@@ -2648,7 +2648,7 @@ section .text
 	; SetReturnValue
 
  fgetpos$9:
-	; Return SignedInt$0#
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -2678,7 +2678,7 @@ section .text
 	mov [rbp + 72], eax
 
  fsetpos$4:
-	; Parameter 76 signed int SignedInt$0#
+	; Parameter 76 signed int integral4$0#
 	mov dword [rbp + 76], 0
 
  fsetpos$5:
@@ -2717,7 +2717,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  clearerr$1:
-	; Assign errno SignedInt$0#
+	; Assign errno integral4$0#
 	mov dword [errno], 0
 
  clearerr$2:
@@ -2746,11 +2746,11 @@ section .text
 	mov [rbp + 56], rax
 
  feof$2:
-	; Parameter 64 signed int SignedInt$0#
+	; Parameter 64 signed int integral4$0#
 	mov dword [rbp + 64], 0
 
  feof$3:
-	; Parameter 68 signed int SignedInt$1#
+	; Parameter 68 signed int integral4$1#
 	mov dword [rbp + 68], 1
 
  feof$4:
@@ -2784,11 +2784,11 @@ section .text
 	mov [rbp + 64], rax
 
  feof$11:
-	; Parameter 72 signed int SignedInt$0#
+	; Parameter 72 signed int integral4$0#
 	mov dword [rbp + 72], 0
 
  feof$12:
-	; Parameter 76 signed int SignedInt$2#
+	; Parameter 76 signed int integral4$2#
 	mov dword [rbp + 76], 2
 
  feof$13:
@@ -2830,7 +2830,7 @@ section .text
 	mov [rbp + 80], eax
 
  feof$22:
-	; Parameter 84 signed int SignedInt$0#
+	; Parameter 84 signed int integral4$0#
 	mov dword [rbp + 84], 0
 
  feof$23:
@@ -2850,7 +2850,7 @@ section .text
 	jne feof$28
 
  feof$26:
-	; Assign £temporary794 SignedInt$1#
+	; Assign £temporary794 integral4$1#
 	mov eax, 1
 
  feof$27:
@@ -2858,7 +2858,7 @@ section .text
 	jmp feof$29
 
  feof$28:
-	; Assign £temporary794 SignedInt$0#
+	; Assign £temporary794 integral4$0#
 	mov eax, 0
 
  feof$29:
@@ -2901,7 +2901,7 @@ section .text
 
 section .data
 
-@3002string_25s3A2025s2E0A#:
+@2742string_25s3A2025s2E0A#:
 	; Initializer String %s: %s.\n
 	db "%s: %s.", 10, 0
 
@@ -2912,7 +2912,7 @@ section .text
 
  perror$1:
 	; Parameter 56 pointer string_25s3A2025s2E0A#
-	mov qword [rbp + 56], @3002string_25s3A2025s2E0A#
+	mov qword [rbp + 56], @2742string_25s3A2025s2E0A#
 
  perror$2:
 	; Parameter 64 pointer s

@@ -22,19 +22,19 @@ g_firstBlockPtr:
 
 section .data
 
-@631string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+@621string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
 	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
-@632string_memorySize203E3D200#:
+@622string_memorySize203E3D200#:
 	; Initializer String memorySize >= 0
 	db "memorySize >= 0", 0
 
 section .data
 
-@633string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#:
+@623string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#:
 	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c", 0
 
@@ -45,12 +45,12 @@ section .text
 	mov eax, [rbp + 24]
 
  malloc$1:
-	; Add newBlockSize £temporary22 UnsignedInt$12#
+	; Add newBlockSize £temporary22 integral4$12#
 	add eax, 12
 	mov [rbp + 28], eax
 
  malloc$2:
-	; Assign minGap UnsignedInt$0#
+	; Assign minGap integral4$0#
 	mov dword [rbp + 32], 0
 
  malloc$3:
@@ -58,7 +58,7 @@ section .text
 	mov rax, $StackTop
 
  malloc$4:
-	; Add £temporary25 £temporary24 Pointer$1048572#
+	; Add £temporary25 £temporary24 integral8$1048572#
 	add rax, 1048572
 
  malloc$5:
@@ -69,15 +69,15 @@ section .text
 	mov [rbp + 36], eax
 
  malloc$7:
-	; Assign minBlockPtr Pointer$0#
+	; Assign minBlockPtr integral8$0#
 	mov qword [rbp + 40], 0
 
  malloc$8:
-	; Assign minPrevBlockPtr Pointer$0#
+	; Assign minPrevBlockPtr integral8$0#
 	mov qword [rbp + 48], 0
 
  malloc$9:
-	; Assign prevBlockPtr Pointer$0#
+	; Assign prevBlockPtr integral8$0#
 	mov qword [rbp + 56], 0
 
  malloc$10:
@@ -86,7 +86,7 @@ section .text
 	mov [rbp + 64], rax
 
  malloc$11:
-	; GreaterThanEqual 23 memorySize SignedInt$0#
+	; GreaterThanEqual 23 memorySize integral4$0#
 	cmp dword [rbp + 24], 0
 	jge malloc$23
 
@@ -100,18 +100,18 @@ section .text
 
  malloc$14:
 	; Parameter 104 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 104], @631string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 104], @621string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  malloc$15:
 	; Parameter 112 pointer string_memorySize203E3D200#
-	mov qword [rbp + 112], @632string_memorySize203E3D200#
+	mov qword [rbp + 112], @622string_memorySize203E3D200#
 
  malloc$16:
 	; Parameter 120 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
-	mov qword [rbp + 120], @633string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
+	mov qword [rbp + 120], @623string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  malloc$17:
-	; Parameter 128 signed int SignedInt$41#
+	; Parameter 128 signed int integral4$41#
 	mov dword [rbp + 128], 41
 
  malloc$18:
@@ -140,7 +140,7 @@ section .text
 	; PostCall 72
 
  malloc$23:
-	; NotEqual 26 memorySize SignedInt$0#
+	; NotEqual 26 memorySize integral4$0#
 	cmp dword [rbp + 24], 0
 	jne malloc$26
 
@@ -148,7 +148,7 @@ section .text
 	; SetReturnValue
 
  malloc$25:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -156,7 +156,7 @@ section .text
 	jmp rax
 
  malloc$26:
-	; Equal 44 currBlockPtr Pointer$0#
+	; Equal 44 currBlockPtr integral8$0#
 	cmp qword [rbp + 64], 0
 	je malloc$44
 
@@ -178,7 +178,7 @@ section .text
 	add eax, [rsi]
 
  malloc$31:
-	; Add £temporary36 £temporary35 UnsignedInt$12#
+	; Add £temporary36 £temporary35 integral4$12#
 	add eax, 12
 
  malloc$32:
@@ -194,7 +194,7 @@ section .text
 	ja malloc$39
 
  malloc$34:
-	; Equal 36 minGap UnsignedInt$0#
+	; Equal 36 minGap integral4$0#
 	cmp dword [rbp + 32], 0
 	je malloc$36
 
@@ -243,7 +243,7 @@ section .text
 	jmp malloc$26
 
  malloc$44:
-	; Equal 64 minBlockPtr Pointer$0#
+	; Equal 64 minBlockPtr integral8$0#
 	cmp qword [rbp + 40], 0
 	je malloc$64
 
@@ -260,7 +260,7 @@ section .text
 	add eax, [rsi]
 
  malloc$48:
-	; Add newAddress £temporary47 UnsignedInt$12#
+	; Add newAddress £temporary47 integral4$12#
 	add eax, 12
 	mov [rbp + 72], eax
 
@@ -293,7 +293,7 @@ section .text
 	mov [rsi + 4], rax
 
  malloc$55:
-	; Equal 59 minPrevBlockPtr Pointer$0#
+	; Equal 59 minPrevBlockPtr integral8$0#
 	cmp qword [rbp + 48], 0
 	je malloc$59
 
@@ -316,7 +316,7 @@ section .text
 	mov [g_firstBlockPtr], rax
 
  malloc$60:
-	; Add £temporary54 newAddress UnsignedInt$12#
+	; Add £temporary54 newAddress integral4$12#
 	mov ebx, [rbp + 72]
 	add ebx, 12
 
@@ -381,11 +381,11 @@ section .text
 	mov rsi, [rbp + 80]
 
  malloc$74:
-	; Assign £temporary62 Pointer$0#
+	; Assign £temporary62 integral8$0#
 	mov qword [rsi + 4], 0
 
  malloc$75:
-	; Equal 79 prevBlockPtr Pointer$0#
+	; Equal 79 prevBlockPtr integral8$0#
 	cmp qword [rbp + 56], 0
 	je malloc$79
 
@@ -408,7 +408,7 @@ section .text
 	mov [g_firstBlockPtr], rax
 
  malloc$80:
-	; Add £temporary65 newAddress UnsignedInt$12#
+	; Add £temporary65 newAddress integral4$12#
 	mov ebx, [rbp + 72]
 	add ebx, 12
 
@@ -431,7 +431,7 @@ section .text
 	; SetReturnValue
 
  malloc$85:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -474,7 +474,7 @@ section .text
 	mov [rbp + 32], rbx
 
  calloc$7:
-	; Equal 14 pointer Pointer$0#
+	; Equal 14 pointer integral8$0#
 	cmp qword [rbp + 32], 0
 	je calloc$14
 
@@ -487,7 +487,7 @@ section .text
 	mov [rbp + 64], rax
 
  calloc$10:
-	; Parameter 72 signed int SignedInt$0#
+	; Parameter 72 signed int integral4$0#
 	mov dword [rbp + 72], 0
 
  calloc$11:
@@ -526,7 +526,7 @@ section .text
 	mov rax, [rbp + 24]
 
  free$1:
-	; Subtract £temporary72 £temporary71 UnsignedInt$12#
+	; Subtract £temporary72 £temporary71 integral4$12#
 	sub eax, 12
 
  free$2:
@@ -539,7 +539,7 @@ section .text
 	mov [rbp + 32], rax
 
  free$4:
-	; Assign prevBlockPtr Pointer$0#
+	; Assign prevBlockPtr integral8$0#
 	mov qword [rbp + 40], 0
 
  free$5:
@@ -548,7 +548,7 @@ section .text
 	mov [rbp + 48], rax
 
  free$6:
-	; NotEqual 8 freeMemoryPtr Pointer$0#
+	; NotEqual 8 freeMemoryPtr integral8$0#
 	cmp qword [rbp + 24], 0
 	jne free$8
 
@@ -560,7 +560,7 @@ section .text
 	jmp rax
 
  free$8:
-	; Equal 32 currBlockPtr Pointer$0#
+	; Equal 32 currBlockPtr integral8$0#
 	cmp qword [rbp + 48], 0
 	je free$32
 
@@ -571,7 +571,7 @@ section .text
 	jne free$28
 
  free$10:
-	; NotEqual 15 prevBlockPtr Pointer$0#
+	; NotEqual 15 prevBlockPtr integral8$0#
 	cmp qword [rbp + 40], 0
 	jne free$15
 
@@ -580,12 +580,12 @@ section .text
 	mov rsi, [rbp + 48]
 
  free$12:
-	; NotEqual 15 £temporary78 Pointer$0#
+	; NotEqual 15 £temporary78 integral8$0#
 	cmp qword [rsi + 4], 0
 	jne free$15
 
  free$13:
-	; Assign g_firstBlockPtr Pointer$0#
+	; Assign g_firstBlockPtr integral8$0#
 	mov qword [g_firstBlockPtr], 0
 
  free$14:
@@ -593,7 +593,7 @@ section .text
 	jmp free$27
 
  free$15:
-	; NotEqual 19 prevBlockPtr Pointer$0#
+	; NotEqual 19 prevBlockPtr integral8$0#
 	cmp qword [rbp + 40], 0
 	jne free$19
 
@@ -615,7 +615,7 @@ section .text
 	mov rsi, [rbp + 48]
 
  free$20:
-	; NotEqual 24 £temporary83 Pointer$0#
+	; NotEqual 24 £temporary83 integral8$0#
 	cmp qword [rsi + 4], 0
 	jne free$24
 
@@ -624,7 +624,7 @@ section .text
 	mov rsi, [rbp + 40]
 
  free$22:
-	; Assign £temporary85 Pointer$0#
+	; Assign £temporary85 integral8$0#
 	mov qword [rsi + 4], 0
 
  free$23:
@@ -681,44 +681,44 @@ section .text
 
 section .data
 
-@736string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+@698string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
 	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
-@737string_newMemorySize203E3D200#:
+@699string_newMemorySize203E3D200#:
 	; Initializer String newMemorySize >= 0
 	db "newMemorySize >= 0", 0
 
 section .data
 
-@738string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#:
+@700string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#:
 	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c", 0
 
 section .data
 
-@746string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+@705string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
 	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
-@747string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#:
+@706string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#:
 	; Initializer String ( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )
 	db "( oldMemoryPtr != NULL ) || ( newMemorySize > 0 )", 0
 
 section .data
 
-@748string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#:
+@707string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#:
 	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\Malloc.c", 0
 
 section .text
 
  realloc:
-	; GreaterThanEqual 12 newMemorySize SignedInt$0#
+	; GreaterThanEqual 12 newMemorySize integral4$0#
 	cmp dword [rbp + 32], 0
 	jge realloc$12
 
@@ -732,18 +732,18 @@ section .text
 
  realloc$3:
 	; Parameter 68 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 68], @736string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 68], @698string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  realloc$4:
 	; Parameter 76 pointer string_newMemorySize203E3D200#
-	mov qword [rbp + 76], @737string_newMemorySize203E3D200#
+	mov qword [rbp + 76], @699string_newMemorySize203E3D200#
 
  realloc$5:
 	; Parameter 84 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
-	mov qword [rbp + 84], @738string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
+	mov qword [rbp + 84], @700string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  realloc$6:
-	; Parameter 92 signed int SignedInt$259#
+	; Parameter 92 signed int integral4$259#
 	mov dword [rbp + 92], 259
 
  realloc$7:
@@ -772,12 +772,12 @@ section .text
 	; PostCall 36
 
  realloc$12:
-	; NotEqual 25 oldMemoryPtr Pointer$0#
+	; NotEqual 25 oldMemoryPtr integral8$0#
 	cmp qword [rbp + 24], 0
 	jne realloc$25
 
  realloc$13:
-	; GreaterThan 25 newMemorySize SignedInt$0#
+	; GreaterThan 25 newMemorySize integral4$0#
 	cmp dword [rbp + 32], 0
 	jg realloc$25
 
@@ -791,18 +791,18 @@ section .text
 
  realloc$16:
 	; Parameter 68 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 68], @746string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 68], @705string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  realloc$17:
 	; Parameter 76 pointer string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#
-	mov qword [rbp + 76], @747string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#
+	mov qword [rbp + 76], @706string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#
 
  realloc$18:
 	; Parameter 84 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
-	mov qword [rbp + 84], @748string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
+	mov qword [rbp + 84], @707string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 
  realloc$19:
-	; Parameter 92 signed int SignedInt$260#
+	; Parameter 92 signed int integral4$260#
 	mov dword [rbp + 92], 260
 
  realloc$20:
@@ -831,7 +831,7 @@ section .text
 	; PostCall 36
 
  realloc$25:
-	; NotEqual 33 oldMemoryPtr Pointer$0#
+	; NotEqual 33 oldMemoryPtr integral8$0#
 	cmp qword [rbp + 24], 0
 	jne realloc$33
 
@@ -867,7 +867,7 @@ section .text
 	jmp rax
 
  realloc$33:
-	; NotEqual 40 newMemorySize SignedInt$0#
+	; NotEqual 40 newMemorySize integral4$0#
 	cmp dword [rbp + 32], 0
 	jne realloc$40
 
@@ -893,7 +893,7 @@ section .text
 	; SetReturnValue
 
  realloc$39:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -905,7 +905,7 @@ section .text
 	mov eax, [rbp + 32]
 
  realloc$41:
-	; Add newBlockSize £temporary103 UnsignedInt$12#
+	; Add newBlockSize £temporary103 integral4$12#
 	add eax, 12
 	mov [rbp + 36], eax
 
@@ -914,7 +914,7 @@ section .text
 	mov rax, [rbp + 24]
 
  realloc$43:
-	; Subtract £temporary106 £temporary105 UnsignedInt$12#
+	; Subtract £temporary106 £temporary105 integral4$12#
 	sub eax, 12
 
  realloc$44:
@@ -961,7 +961,7 @@ section .text
 	mov rax, $StackTop
 
  realloc$53:
-	; Add £temporary112 £temporary111 Pointer$1048572#
+	; Add £temporary112 £temporary111 integral8$1048572#
 	add rax, 1048572
 
  realloc$54:
@@ -977,7 +977,7 @@ section .text
 	mov [rbp + 52], rax
 
  realloc$57:
-	; Equal 71 currBlockPtr Pointer$0#
+	; Equal 71 currBlockPtr integral8$0#
 	cmp qword [rbp + 52], 0
 	je realloc$71
 
@@ -1070,7 +1070,7 @@ section .text
 	mov [rbp + 48], rbx
 
  realloc$77:
-	; Equal 90 newMemoryPtr Pointer$0#
+	; Equal 90 newMemoryPtr integral8$0#
 	cmp qword [rbp + 48], 0
 	je realloc$90
 
@@ -1135,7 +1135,7 @@ section .text
 	; SetReturnValue
 
  realloc$91:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -1147,19 +1147,19 @@ section .text
 
 section .data
 
-@801string_Heap3A0A#:
+@750string_Heap3A0A#:
 	; Initializer String Heap:\n
 	db "Heap:", 10, 0
 
 section .data
 
-@805string_2020Address2025u2C20Size2025u0A#:
+@753string_2020Address2025u2C20Size2025u0A#:
 	; Initializer String   Address %u, Size %u\n
 	db "  Address %u, Size %u", 10, 0
 
 section .data
 
-@806string_0A#:
+@754string_0A#:
 	; Initializer String \n
 	db 10, 0
 
@@ -1175,7 +1175,7 @@ section .text
 
  print_heap$2:
 	; Parameter 56 pointer string_Heap3A0A#
-	mov qword [rbp + 56], @801string_Heap3A0A#
+	mov qword [rbp + 56], @750string_Heap3A0A#
 
  print_heap$3:
 	; Call 32 printf 0
@@ -1189,7 +1189,7 @@ section .text
 	; PostCall 32
 
  print_heap$5:
-	; Equal 17 currBlockPtr Pointer$0#
+	; Equal 17 currBlockPtr integral8$0#
 	cmp qword [rbp + 24], 0
 	je print_heap$17
 
@@ -1198,7 +1198,7 @@ section .text
 
  print_heap$7:
 	; Parameter 56 pointer string_2020Address2025u2C20Size2025u0A#
-	mov qword [rbp + 56], @805string_2020Address2025u2C20Size2025u0A#
+	mov qword [rbp + 56], @753string_2020Address2025u2C20Size2025u0A#
 
  print_heap$8:
 	; IntegralToIntegral £temporary128 currBlockPtr
@@ -1247,7 +1247,7 @@ section .text
 
  print_heap$18:
 	; Parameter 56 pointer string_0A#
-	mov qword [rbp + 56], @806string_0A#
+	mov qword [rbp + 56], @754string_0A#
 
  print_heap$19:
 	; Call 32 printf 0

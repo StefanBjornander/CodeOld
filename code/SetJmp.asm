@@ -56,7 +56,7 @@ section .text
 	; SetReturnValue
 
  setjmp$12:
-	; Return SignedInt$0#
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]

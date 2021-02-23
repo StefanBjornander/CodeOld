@@ -9,20 +9,20 @@
 
 section .data
 
-@3206$g_tempArray:
+@2946$g_tempArray:
 	; InitializerZero 64
 	times 64 db 0
 
 section .data
 
-@3209$g_tempSize:
+@2948$g_tempSize:
 	; Initializer SignedInt 0
 	dd 0
 
 section .text
 
  generateName:
-	; Add £temporary798 index SignedInt$1#
+	; Add £temporary798 index integral4$1#
 	mov eax, [rbp + 24]
 	inc eax
 
@@ -32,7 +32,7 @@ section .text
 	jge generateName$32
 
  generateName$2:
-	; Add £temporary800 index SignedInt$1#
+	; Add £temporary800 index integral4$1#
 	mov eax, [rbp + 24]
 	inc eax
 
@@ -50,15 +50,15 @@ section .text
 	; Dereference £temporary801 £temporary803 0
 
  generateName$6:
-	; Assign £temporary801 SignedChar$0#
+	; Assign £temporary801 integral1$0#
 	mov byte [rsi], 0
 
  generateName$7:
-	; Assign c SignedChar$97#
+	; Assign c integral1$97#
 	mov byte [rbp + 40], 97
 
  generateName$8:
-	; GreaterThan 37 c SignedChar$122#
+	; GreaterThan 37 c integral1$122#
 	cmp byte [rbp + 40], 122
 	jg generateName$37
 
@@ -103,7 +103,7 @@ section .text
 	; GetReturnValue £temporary809
 
  generateName$18:
-	; Equal 28 £temporary809 Logical$0#
+	; Equal 28 £temporary809 integral4$0#
 	cmp ebx, 0
 	je generateName$28
 
@@ -111,7 +111,7 @@ section .text
 	; PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  generateName$20:
-	; Add £temporary812 index SignedInt$1#
+	; Add £temporary812 index integral4$1#
 	mov eax, [rbp + 24]
 	inc eax
 
@@ -143,7 +143,7 @@ section .text
 	; GetReturnValue £temporary813
 
  generateName$27:
-	; Equal 30 £temporary813 Logical$0#
+	; Equal 30 £temporary813 integral4$0#
 	cmp ebx, 0
 	je generateName$30
 
@@ -151,7 +151,7 @@ section .text
 	; SetReturnValue
 
  generateName$29:
-	; Return SignedInt$1#
+	; Return integral4$1#
 	mov ebx, 1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -159,7 +159,7 @@ section .text
 	jmp rax
 
  generateName$30:
-	; Add c c SignedChar$1#
+	; Add c c integral1$1#
 	inc byte [rbp + 40]
 
  generateName$31:
@@ -187,14 +187,14 @@ section .text
 	; Dereference £temporary817 £temporary819 0
 
  generateName$36:
-	; Assign £temporary817 SignedChar$0#
+	; Assign £temporary817 integral1$0#
 	mov byte [rsi], 0
 
  generateName$37:
 	; SetReturnValue
 
  generateName$38:
-	; Return SignedInt$0#
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -210,7 +210,7 @@ section .text
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  tmpnam$1:
-	; Parameter 56 signed int SignedInt$0#
+	; Parameter 56 signed int integral4$0#
 	mov dword [rbp + 56], 0
 
  tmpnam$2:
@@ -219,7 +219,7 @@ section .text
 	mov [rbp + 60], rax
 
  tmpnam$3:
-	; Parameter 68 signed int SignedInt$4#
+	; Parameter 68 signed int integral4$4#
 	mov dword [rbp + 68], 4
 
  tmpnam$4:
@@ -236,7 +236,7 @@ section .text
 	; GetReturnValue £temporary820
 
  tmpnam$7:
-	; Equal 10 £temporary820 Logical$0#
+	; Equal 10 £temporary820 integral4$0#
 	cmp ebx, 0
 	je tmpnam$10
 
@@ -255,7 +255,7 @@ section .text
 	; SetReturnValue
 
  tmpnam$11:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -267,7 +267,7 @@ section .text
 
 section .data
 
-@3266string_w#:
+@2987string_w#:
 	; Initializer String w
 	db "w", 0
 
@@ -277,7 +277,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  tmpfile$1:
-	; Parameter 60 signed int SignedInt$0#
+	; Parameter 60 signed int integral4$0#
 	mov dword [rbp + 60], 0
 
  tmpfile$2:
@@ -286,7 +286,7 @@ section .text
 	add qword [rbp + 64], 32
 
  tmpfile$3:
-	; Parameter 72 signed int SignedInt$4#
+	; Parameter 72 signed int integral4$4#
 	mov dword [rbp + 72], 4
 
  tmpfile$4:
@@ -303,7 +303,7 @@ section .text
 	; GetReturnValue £temporary822
 
  tmpfile$7:
-	; Equal 20 £temporary822 Logical$0#
+	; Equal 20 £temporary822 integral4$0#
 	cmp ebx, 0
 	je tmpfile$20
 
@@ -317,7 +317,7 @@ section .text
 
  tmpfile$10:
 	; Parameter 68 pointer string_w#
-	mov qword [rbp + 68], @3266string_w#
+	mov qword [rbp + 68], @2987string_w#
 
  tmpfile$11:
 	; Call 36 fopen 0
@@ -337,7 +337,7 @@ section .text
 	mov [rbp + 24], rbx
 
  tmpfile$15:
-	; Equal 20 stream Pointer$0#
+	; Equal 20 stream integral8$0#
 	cmp qword [rbp + 24], 0
 	je tmpfile$20
 
@@ -346,7 +346,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  tmpfile$17:
-	; Assign £temporary827 SignedInt$1#
+	; Assign £temporary827 integral4$1#
 	mov dword [rsi + 37], 1
 
  tmpfile$18:
@@ -364,7 +364,7 @@ section .text
 	; SetReturnValue
 
  tmpfile$21:
-	; Return Pointer$0#
+	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]

@@ -12,7 +12,7 @@
 
 section .data
 
-@13235string_Floating20point20error3A2025i0A#:
+@11301string_Floating20point20error3A2025i0A#:
 	; Initializer String Floating point error: %i\n
 	db "Floating point error: %i", 10, 0
 
@@ -23,7 +23,7 @@ section .text
 
  floating_point_error$1:
 	; Parameter 52 pointer string_Floating20point20error3A2025i0A#
-	mov qword [rbp + 52], @13235string_Floating20point20error3A2025i0A#
+	mov qword [rbp + 52], @11301string_Floating20point20error3A2025i0A#
 
  floating_point_error$2:
 	; Parameter 60 signed int sig
@@ -54,7 +54,7 @@ section .text
 
 section .data
 
-@13239string_exit10A#:
+@11305string_exit10A#:
 	; Initializer String exit1\n
 	db "exit1", 10, 0
 
@@ -65,7 +65,7 @@ section .text
 
  exit_handle1$1:
 	; Parameter 48 pointer string_exit10A#
-	mov qword [rbp + 48], @13239string_exit10A#
+	mov qword [rbp + 48], @11305string_exit10A#
 
  exit_handle1$2:
 	; Call 24 printf 0
@@ -90,7 +90,7 @@ section .text
 
 section .data
 
-@13242string_exit20A#:
+@11308string_exit20A#:
 	; Initializer String exit2\n
 	db "exit2", 10, 0
 
@@ -101,7 +101,7 @@ section .text
 
  exit_handle2$1:
 	; Parameter 48 pointer string_exit20A#
-	mov qword [rbp + 48], @13242string_exit20A#
+	mov qword [rbp + 48], @11308string_exit20A#
 
  exit_handle2$2:
 	; Call 24 printf 0
@@ -126,7 +126,7 @@ section .text
 
 section .data
 
-@13245string_exit30A#:
+@11311string_exit30A#:
 	; Initializer String exit3\n
 	db "exit3", 10, 0
 
@@ -137,7 +137,7 @@ section .text
 
  exit_handle3$1:
 	; Parameter 48 pointer string_exit30A#
-	mov qword [rbp + 48], @13245string_exit30A#
+	mov qword [rbp + 48], @11311string_exit30A#
 
  exit_handle3$2:
 	; Call 24 printf 0
@@ -162,18 +162,18 @@ section .text
 
 section .data
 
-@13255string_25i0A#:
+@11319string_25i0A#:
 	; Initializer String %i\n
 	db "%i", 10, 0
 
 section .text
 
  signal_test:
-	; Assign a SignedInt$1#
+	; Assign a integral4$1#
 	mov dword [rbp + 24], 1
 
  signal_test$1:
-	; Assign b SignedInt$1#
+	; Assign b integral4$1#
 	mov dword [rbp + 28], 1
 
  signal_test$2:
@@ -188,7 +188,7 @@ section .text
 
  signal_test$4:
 	; Parameter 60 pointer string_25i0A#
-	mov qword [rbp + 60], @13255string_25i0A#
+	mov qword [rbp + 60], @11319string_25i0A#
 
  signal_test$5:
 	; Parameter 68 signed int c
@@ -262,7 +262,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  signal_test$21:
-	; Parameter 60 signed int SignedInt$0#
+	; Parameter 60 signed int integral4$0#
 	mov dword [rbp + 60], 0
 
  signal_test$22:
