@@ -45,12 +45,12 @@ section .text
 	mov eax, [rbp + 24]
 
  malloc$1:
-	; Add newBlockSize £temporary22 Unsigned_Int$12#
+	; Add newBlockSize £temporary22 UnsignedInt$12#
 	add eax, 12
 	mov [rbp + 28], eax
 
  malloc$2:
-	; Assign minGap Unsigned_Int$0#
+	; Assign minGap UnsignedInt$0#
 	mov dword [rbp + 32], 0
 
  malloc$3:
@@ -178,7 +178,7 @@ section .text
 	add eax, [rsi]
 
  malloc$31:
-	; Add £temporary36 £temporary35 Unsigned_Int$12#
+	; Add £temporary36 £temporary35 UnsignedInt$12#
 	add eax, 12
 
  malloc$32:
@@ -194,7 +194,7 @@ section .text
 	ja malloc$39
 
  malloc$34:
-	; Equal 36 minGap Unsigned_Int$0#
+	; Equal 36 minGap UnsignedInt$0#
 	cmp dword [rbp + 32], 0
 	je malloc$36
 
@@ -260,7 +260,7 @@ section .text
 	add eax, [rsi]
 
  malloc$48:
-	; Add newAddress £temporary47 Unsigned_Int$12#
+	; Add newAddress £temporary47 UnsignedInt$12#
 	add eax, 12
 	mov [rbp + 72], eax
 
@@ -316,7 +316,7 @@ section .text
 	mov [g_firstBlockPtr], rax
 
  malloc$60:
-	; Add £temporary54 newAddress Unsigned_Int$12#
+	; Add £temporary54 newAddress UnsignedInt$12#
 	mov ebx, [rbp + 72]
 	add ebx, 12
 
@@ -408,7 +408,7 @@ section .text
 	mov [g_firstBlockPtr], rax
 
  malloc$80:
-	; Add £temporary65 newAddress Unsigned_Int$12#
+	; Add £temporary65 newAddress UnsignedInt$12#
 	mov ebx, [rbp + 72]
 	add ebx, 12
 
@@ -526,7 +526,7 @@ section .text
 	mov rax, [rbp + 24]
 
  free$1:
-	; Subtract £temporary72 £temporary71 Unsigned_Int$12#
+	; Subtract £temporary72 £temporary71 UnsignedInt$12#
 	sub eax, 12
 
  free$2:
@@ -905,7 +905,7 @@ section .text
 	mov eax, [rbp + 32]
 
  realloc$41:
-	; Add newBlockSize £temporary103 Unsigned_Int$12#
+	; Add newBlockSize £temporary103 UnsignedInt$12#
 	add eax, 12
 	mov [rbp + 36], eax
 
@@ -914,7 +914,7 @@ section .text
 	mov rax, [rbp + 24]
 
  realloc$43:
-	; Subtract £temporary106 £temporary105 Unsigned_Int$12#
+	; Subtract £temporary106 £temporary105 UnsignedInt$12#
 	sub eax, 12
 
  realloc$44:
@@ -1205,7 +1205,7 @@ section .text
 	mov rax, [rbp + 24]
 
  print_heap$9:
-	; Parameter 64 unsigned int £temporary128
+	; Parameter 64 unsignedint £temporary128
 	mov [rbp + 64], eax
 
  print_heap$10:
@@ -1213,7 +1213,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  print_heap$11:
-	; Parameter 68 unsigned int £temporary129
+	; Parameter 68 unsignedint £temporary129
 	mov eax, [rsi]
 	mov [rbp + 68], eax
 

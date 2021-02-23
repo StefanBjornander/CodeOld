@@ -735,7 +735,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$24:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -865,7 +865,7 @@ section .text
 	add qword [rbp + 88], 28
 
  strtol_test$54:
-	; Parameter 96 signed long int value
+	; Parameter 96 signedlongint value
 	mov rax, [rbp + 48]
 	mov [rbp + 96], rax
 
@@ -999,7 +999,7 @@ section .text
 	add qword [rbp + 89], 28
 
  strtol_test$85:
-	; Parameter 97 signed long int value
+	; Parameter 97 signedlongint value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
@@ -1133,7 +1133,7 @@ section .text
 	add qword [rbp + 89], 28
 
  strtol_test$116:
-	; Parameter 97 signed long int value
+	; Parameter 97 signedlongint value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
@@ -1259,7 +1259,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$145:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -1389,7 +1389,7 @@ section .text
 	add qword [rbp + 88], 28
 
  strtol_test$175:
-	; Parameter 96 signed long int value
+	; Parameter 96 signedlongint value
 	mov rax, [rbp + 48]
 	mov [rbp + 96], rax
 
@@ -1523,7 +1523,7 @@ section .text
 	add qword [rbp + 89], 28
 
  strtol_test$206:
-	; Parameter 97 signed long int value
+	; Parameter 97 signedlongint value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
@@ -1657,7 +1657,7 @@ section .text
 	add qword [rbp + 89], 28
 
  strtol_test$237:
-	; Parameter 97 signed long int value
+	; Parameter 97 signedlongint value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
@@ -1783,7 +1783,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$266:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -1909,7 +1909,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$295:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -2035,7 +2035,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$324:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -2161,7 +2161,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$353:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -2287,7 +2287,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$382:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -2413,7 +2413,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$411:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -2539,7 +2539,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$440:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -2665,7 +2665,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$469:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -2791,7 +2791,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$498:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -2917,7 +2917,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtol_test$527:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -3271,7 +3271,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$24:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -3401,7 +3401,7 @@ section .text
 	add qword [rbp + 88], 28
 
  strtoul_test$54:
-	; Parameter 96 signed long int value
+	; Parameter 96 signedlongint value
 	mov rax, [rbp + 48]
 	mov [rbp + 96], rax
 
@@ -3535,7 +3535,7 @@ section .text
 	add qword [rbp + 89], 28
 
  strtoul_test$85:
-	; Parameter 97 signed long int value
+	; Parameter 97 signedlongint value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
@@ -3669,7 +3669,7 @@ section .text
 	add qword [rbp + 89], 28
 
  strtoul_test$116:
-	; Parameter 97 signed long int value
+	; Parameter 97 signedlongint value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
@@ -3795,7 +3795,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$145:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -3925,7 +3925,7 @@ section .text
 	add qword [rbp + 88], 28
 
  strtoul_test$175:
-	; Parameter 96 signed long int value
+	; Parameter 96 signedlongint value
 	mov rax, [rbp + 48]
 	mov [rbp + 96], rax
 
@@ -4059,7 +4059,7 @@ section .text
 	add qword [rbp + 89], 28
 
  strtoul_test$206:
-	; Parameter 97 signed long int value
+	; Parameter 97 signedlongint value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
@@ -4193,7 +4193,7 @@ section .text
 	add qword [rbp + 89], 28
 
  strtoul_test$237:
-	; Parameter 97 signed long int value
+	; Parameter 97 signedlongint value
 	mov rax, [rbp + 49]
 	mov [rbp + 97], rax
 
@@ -4319,7 +4319,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$266:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -4445,7 +4445,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$295:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -4571,7 +4571,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$324:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -4697,7 +4697,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$353:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -4823,7 +4823,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$382:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -4949,7 +4949,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$411:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -5075,7 +5075,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$440:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -5201,7 +5201,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$469:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -5327,7 +5327,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$498:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -5453,7 +5453,7 @@ section .text
 	add qword [rbp + 87], 28
 
  strtoul_test$527:
-	; Parameter 95 signed long int value
+	; Parameter 95 signedlongint value
 	mov rax, [rbp + 47]
 	mov [rbp + 95], rax
 
@@ -5857,32 +5857,32 @@ section .data
 
 section .data
 
-@7251Signed_Long_Int$1664525#:
-	; Initializer Signed_Long_Int 1664525
+@7251SignedLongInt$1664525#:
+	; Initializer SignedLongInt 1664525
 	dq 1664525
 
 section .data
 
-@7255Signed_Long_Int$127#:
-	; Initializer Signed_Long_Int 127
+@7255SignedLongInt$127#:
+	; Initializer SignedLongInt 127
 	dq 127
 
 section .text
 
  rand:
-	; Multiply £temporary2372 g_randValue Signed_Long_Int$1664525#
+	; Multiply £temporary2372 g_randValue SignedLongInt$1664525#
 	mov rax, [@7248$g_randValue]
 	xor rdx, rdx
-	imul qword [@7251Signed_Long_Int$1664525#]
+	imul qword [@7251SignedLongInt$1664525#]
 
  rand$1:
-	; Add £temporary2373 £temporary2372 Signed_Long_Int$1013904223#
+	; Add £temporary2373 £temporary2372 SignedLongInt$1013904223#
 	add rax, 1013904223
 
  rand$2:
-	; Modulo g_randValue £temporary2373 Signed_Long_Int$127#
+	; Modulo g_randValue £temporary2373 SignedLongInt$127#
 	xor rdx, rdx
-	idiv qword [@7255Signed_Long_Int$127#]
+	idiv qword [@7255SignedLongInt$127#]
 	mov [@7248$g_randValue], rdx
 
  rand$3:
@@ -6463,7 +6463,7 @@ section .text
 section .text
 
  labs:
-	; GreaterThanEqual 3 value Signed_Long_Int$0#
+	; GreaterThanEqual 3 value SignedLongInt$0#
 	cmp qword [rbp + 24], 0
 	jge labs$3
 
@@ -6556,15 +6556,15 @@ section .text
 section .text
 
  ldiv:
-	; Assign result.quot Signed_Long_Int$0#
+	; Assign result.quot SignedLongInt$0#
 	mov qword [rbp + 40], 0
 
  ldiv$1:
-	; Assign result.rem Signed_Long_Int$0#
+	; Assign result.rem SignedLongInt$0#
 	mov qword [rbp + 48], 0
 
  ldiv$2:
-	; NotEqual 6 denum Signed_Long_Int$0#
+	; NotEqual 6 denum SignedLongInt$0#
 	cmp qword [rbp + 32], 0
 	jne ldiv$6
 

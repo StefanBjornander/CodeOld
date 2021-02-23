@@ -638,8 +638,8 @@ container8bytes#:
 
 section .data
 
-@1797Signed_Long_Int$2#:
-	; Initializer Signed_Long_Int 2
+@1797SignedLongInt$2#:
+	; Initializer SignedLongInt 2
 	dq 2
 
 section .text
@@ -901,13 +901,13 @@ section .text
 	mov [rbp + 40], rax
 
  pow$55:
-	; Modulo £temporary308 long_y Signed_Long_Int$2#
+	; Modulo £temporary308 long_y SignedLongInt$2#
 	mov rax, [rbp + 40]
 	xor rdx, rdx
-	idiv qword [@1797Signed_Long_Int$2#]
+	idiv qword [@1797SignedLongInt$2#]
 
  pow$56:
-	; NotEqual 73 £temporary308 Signed_Long_Int$0#
+	; NotEqual 73 £temporary308 SignedLongInt$0#
 	cmp rdx, 0
 	jne pow$73
 

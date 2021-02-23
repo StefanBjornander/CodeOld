@@ -631,7 +631,7 @@ section .text
 	mov qword [rbp + 60], @13805string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#
 
  rec$6:
-	; Parameter 68 unsigned int stackTop
+	; Parameter 68 unsignedint stackTop
 	mov eax, [rbp + 24]
 	mov [rbp + 68], eax
 
@@ -640,7 +640,7 @@ section .text
 	mov rsi, [rbp + 28]
 
  rec$8:
-	; Parameter 72 unsigned int £temporary4130
+	; Parameter 72 unsignedint £temporary4130
 	mov eax, [rsi]
 	mov [rbp + 72], eax
 
@@ -1002,7 +1002,7 @@ section .text
 	mov [rbp + 84], rax
 
  malloc_test6$16:
-	; Parameter 92 unsigned int stackTop
+	; Parameter 92 unsignedint stackTop
 	mov eax, [rbp + 28]
 	mov [rbp + 92], eax
 
@@ -1011,7 +1011,7 @@ section .text
 	mov rsi, [rbp + 32]
 
  malloc_test6$18:
-	; Parameter 96 unsigned int £temporary4151
+	; Parameter 96 unsignedint £temporary4151
 	mov eax, [rsi]
 	mov [rbp + 96], eax
 

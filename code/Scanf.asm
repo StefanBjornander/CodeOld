@@ -1805,7 +1805,7 @@ section .text
 section .text
 
  scanLongInt:
-	; Assign longValue Signed_Long_Int$0#
+	; Assign longValue SignedLongInt$0#
 	mov qword [rbp + 28], 0
 
  scanLongInt$1:

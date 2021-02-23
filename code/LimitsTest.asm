@@ -173,7 +173,7 @@ section .text
 	mov qword [rbp + 48], @9601string_UCHAR_MAX203D2025u0A0A#
 
  limits_test$17:
-	; Parameter 56 unsigned int Unsigned_Int$255#
+	; Parameter 56 unsignedint UnsignedInt$255#
 	mov dword [rbp + 56], 255
 
  limits_test$18:
@@ -242,7 +242,7 @@ section .text
 	mov qword [rbp + 48], @9613string_USHRT_MAX203D2025u0A0A#
 
  limits_test$32:
-	; Parameter 56 unsigned int Unsigned_Int$65535#
+	; Parameter 56 unsignedint UnsignedInt$65535#
 	mov dword [rbp + 56], 65535
 
  limits_test$33:
@@ -311,7 +311,7 @@ section .text
 	mov qword [rbp + 48], @9623string_UINT_MAX203D2025u0A0A#
 
  limits_test$47:
-	; Parameter 56 unsigned int Unsigned_Int$4294967295#
+	; Parameter 56 unsignedint UnsignedInt$4294967295#
 	mov eax, 4294967295
 	mov [rbp + 56], eax
 
@@ -335,7 +335,7 @@ section .text
 	mov qword [rbp + 48], @9626string_LONG_MIN203D2025li0A#
 
  limits_test$52:
-	; Parameter 56 signed long int Signed_Long_Int$minus9223372036854775808#
+	; Parameter 56 signedlongint SignedLongInt$minus9223372036854775808#
 	mov rax, -9223372036854775808
 	mov [rbp + 56], rax
 
@@ -359,7 +359,7 @@ section .text
 	mov qword [rbp + 48], @9629string_LONG_MAX203D2025li0A#
 
  limits_test$57:
-	; Parameter 56 signed long int Signed_Long_Int$9223372036854775807#
+	; Parameter 56 signedlongint SignedLongInt$9223372036854775807#
 	mov rax, 9223372036854775807
 	mov [rbp + 56], rax
 

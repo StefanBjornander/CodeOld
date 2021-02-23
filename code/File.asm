@@ -48,19 +48,19 @@ section .data
 g_fileArray:
 	; Initializer SignedInt 1
 	dd 1
-	; Initializer Unsigned_Int 0
+	; Initializer UnsignedInt 0
 	dd 0
 	; InitializerZero 33
 	times 33 db 0
 	; Initializer SignedInt 1
 	dd 1
-	; Initializer Unsigned_Int 1
+	; Initializer UnsignedInt 1
 	dd 1
 	; InitializerZero 33
 	times 33 db 0
 	; Initializer SignedInt 1
 	dd 1
-	; Initializer Unsigned_Int 2
+	; Initializer UnsignedInt 2
 	dd 2
 	; InitializerZero 33
 	times 33 db 0
@@ -1187,7 +1187,7 @@ section .text
 	mov rsi, [rbp + 40]
 
  freopen$144:
-	; Assign £temporary646 Unsigned_Int$0#
+	; Assign £temporary646 UnsignedInt$0#
 	mov dword [rsi + 33], 0
 
  freopen$145:

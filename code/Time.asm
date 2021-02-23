@@ -23,7 +23,7 @@ section .text
 	; SetReturnValue
 
  clock$1:
-	; Return Signed_Long_Int$minus1#
+	; Return SignedLongInt$minus1#
 	mov rbx, -1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -174,20 +174,20 @@ section .data
 
 section .data
 
-@7695Signed_Long_Int$86400#:
-	; Initializer Signed_Long_Int 86400
+@7695SignedLongInt$86400#:
+	; Initializer SignedLongInt 86400
 	dq 86400
 
 section .data
 
-@7697Signed_Long_Int$3600#:
-	; Initializer Signed_Long_Int 3600
+@7697SignedLongInt$3600#:
+	; Initializer SignedLongInt 3600
 	dq 3600
 
 section .data
 
-@7699Signed_Long_Int$60#:
-	; Initializer Signed_Long_Int 60
+@7699SignedLongInt$60#:
+	; Initializer SignedLongInt 60
 	dq 60
 
 section .text
@@ -271,10 +271,10 @@ section .text
 	mov [rbp + 40], rax
 
  mktime$14:
-	; Multiply £temporary2488 totalDays Signed_Long_Int$86400#
+	; Multiply £temporary2488 totalDays SignedLongInt$86400#
 	mov rax, [rbp + 40]
 	xor rdx, rdx
-	imul qword [@7695Signed_Long_Int$86400#]
+	imul qword [@7695SignedLongInt$86400#]
 	mov rbx, rax
 
  mktime$15:
@@ -292,9 +292,9 @@ section .text
 	neg rax
 
  mktime$17:
-	; Multiply £temporary2491 £temporary2490 Signed_Long_Int$3600#
+	; Multiply £temporary2491 £temporary2490 SignedLongInt$3600#
 	xor rdx, rdx
-	imul qword [@7697Signed_Long_Int$3600#]
+	imul qword [@7697SignedLongInt$3600#]
 
  mktime$18:
 	; Add £temporary2492 £temporary2488 £temporary2491
@@ -315,9 +315,9 @@ section .text
 	neg rax
 
  mktime$21:
-	; Multiply £temporary2495 £temporary2494 Signed_Long_Int$60#
+	; Multiply £temporary2495 £temporary2494 SignedLongInt$60#
 	xor rdx, rdx
-	imul qword [@7699Signed_Long_Int$60#]
+	imul qword [@7699SignedLongInt$60#]
 
  mktime$22:
 	; Add £temporary2496 £temporary2492 £temporary2495
@@ -373,50 +373,50 @@ section .data
 
 section .data
 
-@7709Signed_Long_Int$86400#:
-	; Initializer Signed_Long_Int 86400
+@7709SignedLongInt$86400#:
+	; Initializer SignedLongInt 86400
 	dq 86400
 
 section .data
 
-@7712Signed_Long_Int$3600#:
-	; Initializer Signed_Long_Int 3600
+@7712SignedLongInt$3600#:
+	; Initializer SignedLongInt 3600
 	dq 3600
 
 section .data
 
-@7715Signed_Long_Int$3600#:
-	; Initializer Signed_Long_Int 3600
+@7715SignedLongInt$3600#:
+	; Initializer SignedLongInt 3600
 	dq 3600
 
 section .data
 
-@7717Signed_Long_Int$60#:
-	; Initializer Signed_Long_Int 60
+@7717SignedLongInt$60#:
+	; Initializer SignedLongInt 60
 	dq 60
 
 section .data
 
-@7719Signed_Long_Int$60#:
-	; Initializer Signed_Long_Int 60
+@7719SignedLongInt$60#:
+	; Initializer SignedLongInt 60
 	dq 60
 
 section .data
 
-@7721Signed_Long_Int$86400#:
-	; Initializer Signed_Long_Int 86400
+@7721SignedLongInt$86400#:
+	; Initializer SignedLongInt 86400
 	dq 86400
 
 section .data
 
-@7730Signed_Long_Int$7#:
-	; Initializer Signed_Long_Int 7
+@7730SignedLongInt$7#:
+	; Initializer SignedLongInt 7
 	dq 7
 
 section .data
 
-@7733Signed_Long_Int$365#:
-	; Initializer Signed_Long_Int 365
+@7733SignedLongInt$365#:
+	; Initializer SignedLongInt 365
 	dq 365
 
 section .data
@@ -427,8 +427,8 @@ section .data
 
 section .data
 
-@7742Signed_Long_Int$365#:
-	; Initializer Signed_Long_Int 365
+@7742SignedLongInt$365#:
+	; Initializer SignedLongInt 365
 	dq 365
 
 section .data
@@ -460,24 +460,24 @@ section .text
 	mov [rbp + 32], rax
 
  gmtime$3:
-	; Modulo secondsOfDay time Signed_Long_Int$86400#
+	; Modulo secondsOfDay time SignedLongInt$86400#
 	mov rax, [rbp + 32]
 	xor rdx, rdx
-	idiv qword [@7709Signed_Long_Int$86400#]
+	idiv qword [@7709SignedLongInt$86400#]
 	mov [rbp + 40], rdx
 
  gmtime$4:
-	; Modulo secondsOfHour secondsOfDay Signed_Long_Int$3600#
+	; Modulo secondsOfHour secondsOfDay SignedLongInt$3600#
 	mov rax, [rbp + 40]
 	xor rdx, rdx
-	idiv qword [@7712Signed_Long_Int$3600#]
+	idiv qword [@7712SignedLongInt$3600#]
 	mov [rbp + 48], rdx
 
  gmtime$5:
-	; Divide £temporary2505 secondsOfDay Signed_Long_Int$3600#
+	; Divide £temporary2505 secondsOfDay SignedLongInt$3600#
 	mov rax, [rbp + 40]
 	xor rdx, rdx
-	idiv qword [@7715Signed_Long_Int$3600#]
+	idiv qword [@7715SignedLongInt$3600#]
 
  gmtime$6:
 	; IntegralToIntegral £temporary2506 £temporary2505
@@ -491,10 +491,10 @@ section .text
 	mov [@7702$g_timeStruct + 8], eax
 
  gmtime$8:
-	; Divide £temporary2508 secondsOfHour Signed_Long_Int$60#
+	; Divide £temporary2508 secondsOfHour SignedLongInt$60#
 	mov rax, [rbp + 48]
 	xor rdx, rdx
-	idiv qword [@7717Signed_Long_Int$60#]
+	idiv qword [@7717SignedLongInt$60#]
 
  gmtime$9:
 	; IntegralToIntegral £temporary2509 £temporary2508
@@ -508,10 +508,10 @@ section .text
 	mov [@7702$g_timeStruct + 4], eax
 
  gmtime$11:
-	; Modulo £temporary2511 secondsOfHour Signed_Long_Int$60#
+	; Modulo £temporary2511 secondsOfHour SignedLongInt$60#
 	mov rax, [rbp + 48]
 	xor rdx, rdx
-	idiv qword [@7719Signed_Long_Int$60#]
+	idiv qword [@7719SignedLongInt$60#]
 
  gmtime$12:
 	; IntegralToIntegral £temporary2512 £temporary2511
@@ -525,19 +525,19 @@ section .text
 	mov [@7702$g_timeStruct], edx
 
  gmtime$14:
-	; Divide totalDays time Signed_Long_Int$86400#
+	; Divide totalDays time SignedLongInt$86400#
 	mov rax, [rbp + 32]
 	xor rdx, rdx
-	idiv qword [@7721Signed_Long_Int$86400#]
+	idiv qword [@7721SignedLongInt$86400#]
 	mov [rbp + 56], rax
 
  gmtime$15:
-	; GreaterThanEqual 20 totalDays Signed_Long_Int$3#
+	; GreaterThanEqual 20 totalDays SignedLongInt$3#
 	cmp qword [rbp + 56], 3
 	jge gmtime$20
 
  gmtime$16:
-	; Add £temporary2516 totalDays Signed_Long_Int$4#
+	; Add £temporary2516 totalDays SignedLongInt$4#
 	mov rax, [rbp + 56]
 	add rax, 4
 
@@ -557,14 +557,14 @@ section .text
 	jmp gmtime$24
 
  gmtime$20:
-	; Subtract £temporary2519 totalDays Signed_Long_Int$3#
+	; Subtract £temporary2519 totalDays SignedLongInt$3#
 	mov rax, [rbp + 56]
 	sub rax, 3
 
  gmtime$21:
-	; Modulo £temporary2520 £temporary2519 Signed_Long_Int$7#
+	; Modulo £temporary2520 £temporary2519 SignedLongInt$7#
 	xor rdx, rdx
-	idiv qword [@7730Signed_Long_Int$7#]
+	idiv qword [@7730SignedLongInt$7#]
 
  gmtime$22:
 	; IntegralToIntegral £temporary2521 £temporary2520
@@ -578,13 +578,13 @@ section .text
 	mov [@7702$g_timeStruct + 24], edx
 
  gmtime$24:
-	; Divide £temporary2522 totalDays Signed_Long_Int$365#
+	; Divide £temporary2522 totalDays SignedLongInt$365#
 	mov rax, [rbp + 56]
 	xor rdx, rdx
-	idiv qword [@7733Signed_Long_Int$365#]
+	idiv qword [@7733SignedLongInt$365#]
 
  gmtime$25:
-	; Add £temporary2523 £temporary2522 Signed_Long_Int$1970#
+	; Add £temporary2523 £temporary2522 SignedLongInt$1970#
 	add rax, 1970
 
  gmtime$26:
@@ -610,10 +610,10 @@ section .text
 	mov [rbp + 68], eax
 
  gmtime$30:
-	; Modulo totalDays totalDays Signed_Long_Int$365#
+	; Modulo totalDays totalDays SignedLongInt$365#
 	mov rax, [rbp + 56]
 	xor rdx, rdx
-	idiv qword [@7742Signed_Long_Int$365#]
+	idiv qword [@7742SignedLongInt$365#]
 	mov [rbp + 56], rdx
 
  gmtime$31:
@@ -631,7 +631,7 @@ section .text
 	sub [rbp + 56], rax
 
  gmtime$33:
-	; GreaterThanEqual 44 totalDays Signed_Long_Int$0#
+	; GreaterThanEqual 44 totalDays SignedLongInt$0#
 	cmp qword [rbp + 56], 0
 	jge gmtime$44
 
@@ -666,7 +666,7 @@ section .text
 	je gmtime$43
 
  gmtime$41:
-	; Add totalDays totalDays Signed_Long_Int$366#
+	; Add totalDays totalDays SignedLongInt$366#
 	add qword [rbp + 56], 366
 
  gmtime$42:
@@ -674,7 +674,7 @@ section .text
 	jmp gmtime$44
 
  gmtime$43:
-	; Add totalDays totalDays Signed_Long_Int$365#
+	; Add totalDays totalDays SignedLongInt$365#
 	add qword [rbp + 56], 365
 
  gmtime$44:
@@ -871,7 +871,7 @@ section .text
 	mov [@7702$g_timeStruct + 16], eax
 
  gmtime$85:
-	; Add £temporary2570 totalDays Signed_Long_Int$1#
+	; Add £temporary2570 totalDays SignedLongInt$1#
 	mov rax, [rbp + 56]
 	inc rax
 
@@ -917,8 +917,8 @@ section .text
 
 section .data
 
-@7810Signed_Long_Int$3600#:
-	; Initializer Signed_Long_Int 3600
+@7810SignedLongInt$3600#:
+	; Initializer SignedLongInt 3600
 	dq 3600
 
 section .text
@@ -1026,9 +1026,9 @@ section .text
 	neg rax
 
  localtime$23:
-	; Multiply £temporary2583 £temporary2582 Signed_Long_Int$3600#
+	; Multiply £temporary2583 £temporary2582 SignedLongInt$3600#
 	xor rdx, rdx
-	imul qword [@7810Signed_Long_Int$3600#]
+	imul qword [@7810SignedLongInt$3600#]
 
  localtime$24:
 	; Add t t £temporary2583

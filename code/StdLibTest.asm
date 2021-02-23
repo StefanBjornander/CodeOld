@@ -242,12 +242,12 @@ section .text
 	mov qword [rbp + 64], @14112string_ldiv_t20quot2025li20rem2025li0A#
 
  print_ldiv$2:
-	; Parameter 72 signed long int ld.quot
+	; Parameter 72 signedlongint ld.quot
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
  print_ldiv$3:
-	; Parameter 80 signed long int ld.rem
+	; Parameter 80 signedlongint ld.rem
 	mov rax, [rbp + 32]
 	mov [rbp + 80], rax
 
@@ -264,11 +264,11 @@ section .text
 	; PostCall 40
 
  print_ldiv$6:
-	; Subtract ld.quot ld.quot Signed_Long_Int$1#
+	; Subtract ld.quot ld.quot SignedLongInt$1#
 	dec qword [rbp + 24]
 
  print_ldiv$7:
-	; Subtract ld.rem ld.rem Signed_Long_Int$1#
+	; Subtract ld.rem ld.rem SignedLongInt$1#
 	dec qword [rbp + 32]
 
  print_ldiv$8:
@@ -450,7 +450,7 @@ section .text
 	mov rax, [rbp + 24]
 
  qtest$3:
-	; Parameter 64 unsigned int £temporary4189
+	; Parameter 64 unsignedint £temporary4189
 	mov [rbp + 64], eax
 
  qtest$4:
@@ -515,7 +515,7 @@ section .text
 	mov rax, hello
 
  stdlib_testZ$3:
-	; Parameter 56 unsigned int £temporary4192
+	; Parameter 56 unsignedint £temporary4192
 	mov [rbp + 56], eax
 
  stdlib_testZ$4:
@@ -995,7 +995,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$60:
-	; Parameter 80 signed long int Signed_Long_Int$minus3#
+	; Parameter 80 signedlongint SignedLongInt$minus3#
 	mov qword [rbp + 80], -3
 
  stdlib_test$61:
@@ -1012,14 +1012,14 @@ section .text
 	; GetReturnValue £temporary4208
 
  stdlib_test$64:
-	; Parameter 56 signed long int £temporary4208
+	; Parameter 56 signedlongint £temporary4208
 	mov [rbp + 56], rbx
 
  stdlib_test$65:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$66:
-	; Parameter 88 signed long int Signed_Long_Int$3#
+	; Parameter 88 signedlongint SignedLongInt$3#
 	mov qword [rbp + 88], 3
 
  stdlib_test$67:
@@ -1036,7 +1036,7 @@ section .text
 	; GetReturnValue £temporary4209
 
  stdlib_test$70:
-	; Parameter 64 signed long int £temporary4209
+	; Parameter 64 signedlongint £temporary4209
 	mov [rbp + 64], rbx
 
  stdlib_test$71:
@@ -1203,11 +1203,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  stdlib_test$102:
-	; Parameter 48 signed long int Signed_Long_Int$10#
+	; Parameter 48 signedlongint SignedLongInt$10#
 	mov qword [rbp + 48], 10
 
  stdlib_test$103:
-	; Parameter 56 signed long int Signed_Long_Int$3#
+	; Parameter 56 signedlongint SignedLongInt$3#
 	mov qword [rbp + 56], 3
 
  stdlib_test$104:
@@ -1247,12 +1247,12 @@ section .text
 	mov qword [rbp + 64], @14183string_ldiv_t28102C20329203D202825li2C2025li290A#
 
  stdlib_test$111:
-	; Parameter 72 signed long int li.quot
+	; Parameter 72 signedlongint li.quot
 	mov rax, [rbp + 24]
 	mov [rbp + 72], rax
 
  stdlib_test$112:
-	; Parameter 80 signed long int li.rem
+	; Parameter 80 signedlongint li.rem
 	mov rax, [rbp + 32]
 	mov [rbp + 80], rax
 
@@ -1326,12 +1326,12 @@ section .text
 	mov qword [rbp + 80], @14185string_ldiv_t28102C20329203D202825li2C2025li290A0A#
 
  stdlib_test$125:
-	; Parameter 88 signed long int lj.quot
+	; Parameter 88 signedlongint lj.quot
 	mov rax, [rbp + 40]
 	mov [rbp + 88], rax
 
  stdlib_test$126:
-	; Parameter 96 signed long int lj.rem
+	; Parameter 96 signedlongint lj.rem
 	mov rax, [rbp + 48]
 	mov [rbp + 96], rax
 

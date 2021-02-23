@@ -606,28 +606,28 @@ section .text
 
 section .data
 
-@4504Signed_Long_Int$10#:
-	; Initializer Signed_Long_Int 10
+@4504SignedLongInt$10#:
+	; Initializer SignedLongInt 10
 	dq 10
 
 section .data
 
-@4507Signed_Long_Int$10#:
-	; Initializer Signed_Long_Int 10
+@4507SignedLongInt$10#:
+	; Initializer SignedLongInt 10
 	dq 10
 
 section .text
 
  printLongIntRec:
-	; Equal 15 longValue Signed_Long_Int$0#
+	; Equal 15 longValue SignedLongInt$0#
 	cmp qword [rbp + 24], 0
 	je printLongIntRec$15
 
  printLongIntRec$1:
-	; Modulo £temporary1387 longValue Signed_Long_Int$10#
+	; Modulo £temporary1387 longValue SignedLongInt$10#
 	mov rax, [rbp + 24]
 	xor rdx, rdx
-	idiv qword [@4504Signed_Long_Int$10#]
+	idiv qword [@4504SignedLongInt$10#]
 
  printLongIntRec$2:
 	; IntegralToIntegral £temporary1388 £temporary1387
@@ -644,13 +644,13 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongIntRec$5:
-	; Divide £temporary1389 longValue Signed_Long_Int$10#
+	; Divide £temporary1389 longValue SignedLongInt$10#
 	mov rax, [rbp + 24]
 	xor rdx, rdx
-	idiv qword [@4507Signed_Long_Int$10#]
+	idiv qword [@4507SignedLongInt$10#]
 
  printLongIntRec$6:
-	; Parameter 60 signed long int £temporary1389
+	; Parameter 60 signedlongint £temporary1389
 	mov [rbp + 60], rax
 
  printLongIntRec$7:
@@ -705,7 +705,7 @@ section .text
 section .text
 
  printLongInt:
-	; GreaterThanEqual 8 longValue Signed_Long_Int$0#
+	; GreaterThanEqual 8 longValue SignedLongInt$0#
 	cmp qword [rbp + 24], 0
 	jge printLongInt$8
 
@@ -788,7 +788,7 @@ section .text
 	; PostCall 40
 
  printLongInt$19:
-	; NotEqual 25 longValue Signed_Long_Int$0#
+	; NotEqual 25 longValue SignedLongInt$0#
 	cmp qword [rbp + 24], 0
 	jne printLongInt$25
 
@@ -817,7 +817,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongInt$26:
-	; Parameter 64 signed long int longValue
+	; Parameter 64 signedlongint longValue
 	mov rax, [rbp + 24]
 	mov [rbp + 64], rax
 
@@ -1488,7 +1488,7 @@ section .text
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printLongDoublePlain$16:
-	; Parameter 80 signed long int longValue
+	; Parameter 80 signedlongint longValue
 	mov rax, [rbp + 48]
 	mov [rbp + 80], rax
 
@@ -1909,7 +1909,7 @@ section .text
 	neg rax
 
  printLongDoubleExpo$75:
-	; Parameter 80 signed long int £temporary1481
+	; Parameter 80 signedlongint £temporary1481
 	mov [rbp + 80], rax
 
  printLongDoubleExpo$76:
@@ -2249,7 +2249,7 @@ section .text
 	mov rsi, [rbp + 80]
 
  printArgument$45:
-	; GreaterThanEqual 48 longValue Signed_Long_Int$0#
+	; GreaterThanEqual 48 longValue SignedLongInt$0#
 	cmp qword [rbp + 114], 0
 	jge printArgument$48
 
@@ -2278,7 +2278,7 @@ section .text
 	; PreCall 122 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printArgument$52:
-	; Parameter 146 signed long int longValue
+	; Parameter 146 signedlongint longValue
 	mov rax, [rbp + 114]
 	mov [rbp + 146], rax
 
@@ -2342,7 +2342,7 @@ section .text
 	; PreCall 122 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printArgument$67:
-	; Parameter 146 signed long int longValue
+	; Parameter 146 signedlongint longValue
 	mov rax, [rbp + 114]
 	mov [rbp + 146], rax
 
