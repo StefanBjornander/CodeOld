@@ -3,27 +3,27 @@ old  <malloc4: 7411476 0 80>
 new  <malloc4: 65448 80 65528>
 
 522:
-old  <now 1: 1614205148>
+old  <now 1: 1614269668>
 new  <now 1: 1614205004>
 
 523:
-old  <now 2: 1614205148>
+old  <now 2: 1614269668>
 new  <now 2: 1614205004>
 
 524:
-old  <   gm time: Wed 2021-02-24 22:19:08, year day 54, week day 3, daylight saving time -1>
+old  <   gm time: Thu 2021-02-25 16:14:28, year day 55, week day 4, daylight saving time -1>
 new  <   gm time: Wed 2021-02-24 22:16:44, year day 54, week day 3, daylight saving time -1>
 
 525:
-old  <local time: Wed 2021-02-24 23:19:08, year day 54, week day 3, daylight saving time -1>
+old  <local time: Thu 2021-02-25 17:14:28, year day 55, week day 4, daylight saving time -1>
 new  <local time: Wed 2021-02-24 23:16:44, year day 54, week day 3, daylight saving time -1>
 
 526:
-old  <asctime <Wed Feb 24 22:19:08 2021>, ctime <Wed Feb 24 23:19:08 2021>>
+old  <asctime <Thu Feb 25 16:14:28 2021>, ctime <Thu Feb 25 17:14:28 2021>>
 new  <asctime <Wed Feb 24 22:16:44 2021>, ctime <Wed Feb 24 23:16:44 2021>>
 
 527:
-old  <strftime 314 314 <short day Wed, long day Wednesday, short month Feb, long month February, date-time 2021-02-24 23:19:08, mday 24, hour 23, gm hour 11, yday 054, month 02, min 19, am/pm AM, sec 08, week number sun 08, week day 03, week number mon 08, date 23:19:08, time 23:19:08, short year 21, long year 2021, summer/winter summer>>
+old  <strftime 313 313 <short day Thu, long day Thursday, short month Feb, long month February, date-time 2021-02-25 17:14:28, mday 25, hour 17, gm hour 05, yday 055, month 02, min 14, am/pm AM, sec 28, week number sun 08, week day 04, week number mon 08, date 17:14:28, time 17:14:28, short year 21, long year 2021, summer/winter summer>>
 new  <strftime 314 314 <short day Wed, long day Wednesday, short month Feb, long month February, date-time 2021-02-24 23:16:44, mday 24, hour 23, gm hour 11, yday 054, month 02, min 16, am/pm AM, sec 44, week number sun 08, week day 03, week number mon 08, date 23:16:44, time 23:16:44, short year 21, long year 2021, summer/winter summer>>
 
 529:
