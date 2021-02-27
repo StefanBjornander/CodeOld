@@ -2,37 +2,29 @@
 old  <malloc4: 7411476 0 80>
 new  <malloc4: 65448 80 65528>
 
-490:
-old  <index4: 8: value 64.000000>
-new  <index4: 8: value --2147483648.000000>
-
-491:
-old  <index4: 9: value 81.000000>
-new  <index4: 9: value 0.000000>
-
 522:
-old  <now 1: 1614378314>
-new  <now 1: 1614424258>
+old  <now 1: 1614465672>
+new  <now 1: 1614465508>
 
 523:
-old  <now 2: 1614378314>
-new  <now 2: 1614424258>
+old  <now 2: 1614465672>
+new  <now 2: 1614465508>
 
 524:
-old  <   gm time: Fri 2021-02-26 22:25:14, year day 56, week day 5, daylight saving time -1>
-new  <   gm time: Sat 2021-02-27 11:10:58, year day 57, week day 6, daylight saving time -1>
+old  <   gm time: Sat 2021-02-27 22:41:12, year day 57, week day 6, daylight saving time -1>
+new  <   gm time: Sat 2021-02-27 22:38:28, year day 57, week day 6, daylight saving time -1>
 
 525:
-old  <local time: Fri 2021-02-26 23:25:14, year day 56, week day 5, daylight saving time -1>
-new  <local time: Sat 2021-02-27 12:10:58, year day 57, week day 6, daylight saving time -1>
+old  <local time: Sat 2021-02-27 23:41:12, year day 57, week day 6, daylight saving time -1>
+new  <local time: Sat 2021-02-27 23:38:28, year day 57, week day 6, daylight saving time -1>
 
 526:
-old  <asctime <Fri Feb 26 22:25:14 2021>, ctime <Fri Feb 26 23:25:14 2021>>
-new  <asctime <Sat Feb 27 11:10:58 2021>, ctime <Sat Feb 27 12:10:58 2021>>
+old  <asctime <Sat Feb 27 22:41:12 2021>, ctime <Sat Feb 27 23:41:12 2021>>
+new  <asctime <Sat Feb 27 22:38:28 2021>, ctime <Sat Feb 27 23:38:28 2021>>
 
 527:
-old  <strftime 311 311 <short day Fri, long day Friday, short month Feb, long month February, date-time 2021-02-26 23:25:14, mday 26, hour 23, gm hour 11, yday 056, month 02, min 25, am/pm AM, sec 14, week number sun 08, week day 05, week number mon 08, date 23:25:14, time 23:25:14, short year 21, long year 2021, summer/winter summer>>
-new  <strftime 313 313 <short day Sat, long day Saturday, short month Feb, long month February, date-time 2021-02-27 12:10:58, mday 27, hour 12, gm hour 00, yday 057, month 02, min 10, am/pm AM, sec 58, week number sun 08, week day 06, week number mon 08, date 12:10:58, time 12:10:58, short year 21, long year 2021, summer/winter summer>>
+old  <strftime 313 313 <short day Sat, long day Saturday, short month Feb, long month February, date-time 2021-02-27 23:41:12, mday 27, hour 23, gm hour 11, yday 057, month 02, min 41, am/pm AM, sec 12, week number sun 08, week day 06, week number mon 08, date 23:41:12, time 23:41:12, short year 21, long year 2021, summer/winter summer>>
+new  <strftime 313 313 <short day Sat, long day Saturday, short month Feb, long month February, date-time 2021-02-27 23:38:28, mday 27, hour 23, gm hour 11, yday 057, month 02, min 38, am/pm AM, sec 28, week number sun 08, week day 06, week number mon 08, date 23:38:28, time 23:38:28, short year 21, long year 2021, summer/winter summer>>
 
 529:
 old  <  Address 7411448, Size 96>
@@ -146,4 +138,4 @@ new  <<%> <Hello, World!> <X> <58645>>
 old  <<%> <Hello, World!> <X> <6363032>>
 new  <<%> <Hello, World!> <X> <58645>>
 
-37
+35
