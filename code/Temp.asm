@@ -9,48 +9,48 @@
 
 section .data
 
-@2940$g_tempArray:
+@2942$g_tempArray:
 	; InitializerZero 64
 	times 64 db 0
 
 section .data
 
-@2942$g_tempSize:
+@2944$g_tempSize:
 	; Initializer SignedInt 0
 	dd 0
 
 section .text
 
  generateName:
-	; Add £temporary805 index integral4$1#
+	; Add £temporary809 index integral4$1#
 	mov eax, [rbp + 24]
 	inc eax
 
  generateName$1:
-	; GreaterThanEqual 32 £temporary805 max
+	; GreaterThanEqual 32 £temporary809 max
 	cmp eax, [rbp + 36]
 	jge generateName$32
 
  generateName$2:
-	; Add £temporary807 index integral4$1#
+	; Add £temporary811 index integral4$1#
 	mov eax, [rbp + 24]
 	inc eax
 
  generateName$3:
-	; IntegralToIntegral £temporary809 £temporary807
+	; IntegralToIntegral £temporary813 £temporary811
 	mov rbx, 4294967295
 	and rax, rbx
 
  generateName$4:
-	; Add £temporary810 name £temporary809
+	; Add £temporary814 name £temporary813
 	mov rsi, [rbp + 28]
 	add rsi, rax
 
  generateName$5:
-	; Dereference £temporary808 £temporary810 0
+	; Dereference £temporary812 £temporary814 0
 
  generateName$6:
-	; Assign £temporary808 integral1$0#
+	; Assign £temporary812 integral1$0#
 	mov byte [rsi], 0
 
  generateName$7:
@@ -63,21 +63,21 @@ section .text
 	jg generateName$37
 
  generateName$9:
-	; IntegralToIntegral £temporary814 index
+	; IntegralToIntegral £temporary818 index
 	mov eax, [rbp + 24]
 	mov rbx, 4294967295
 	and rax, rbx
 
  generateName$10:
-	; Add £temporary815 name £temporary814
+	; Add £temporary819 name £temporary818
 	mov rsi, [rbp + 28]
 	add rsi, rax
 
  generateName$11:
-	; Dereference £temporary813 £temporary815 0
+	; Dereference £temporary817 £temporary819 0
 
  generateName$12:
-	; Assign £temporary813 c
+	; Assign £temporary817 c
 	mov al, [rbp + 40]
 	mov [rsi], al
 
@@ -100,10 +100,10 @@ section .text
 	; PostCall 41
 
  generateName$17:
-	; GetReturnValue £temporary816
+	; GetReturnValue £temporary820
 
  generateName$18:
-	; Equal 28 £temporary816 integral4$0#
+	; Equal 28 £temporary820 integral4$0#
 	cmp ebx, 0
 	je generateName$28
 
@@ -111,12 +111,12 @@ section .text
 	; PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  generateName$20:
-	; Add £temporary819 index integral4$1#
+	; Add £temporary823 index integral4$1#
 	mov eax, [rbp + 24]
 	inc eax
 
  generateName$21:
-	; Parameter 65 signed int £temporary819
+	; Parameter 65 signed int £temporary823
 	mov [rbp + 65], eax
 
  generateName$22:
@@ -140,10 +140,10 @@ section .text
 	; PostCall 41
 
  generateName$26:
-	; GetReturnValue £temporary820
+	; GetReturnValue £temporary824
 
  generateName$27:
-	; Equal 30 £temporary820 integral4$0#
+	; Equal 30 £temporary824 integral4$0#
 	cmp ebx, 0
 	je generateName$30
 
@@ -173,21 +173,21 @@ section .text
 	jge generateName$37
 
  generateName$33:
-	; IntegralToIntegral £temporary825 index
+	; IntegralToIntegral £temporary829 index
 	mov eax, [rbp + 24]
 	mov rbx, 4294967295
 	and rax, rbx
 
  generateName$34:
-	; Add £temporary826 name £temporary825
+	; Add £temporary830 name £temporary829
 	mov rsi, [rbp + 28]
 	add rsi, rax
 
  generateName$35:
-	; Dereference £temporary824 £temporary826 0
+	; Dereference £temporary828 £temporary830 0
 
  generateName$36:
-	; Assign £temporary824 integral1$0#
+	; Assign £temporary828 integral1$0#
 	mov byte [rsi], 0
 
  generateName$37:
@@ -233,10 +233,10 @@ section .text
 	; PostCall 32
 
  tmpnam$6:
-	; GetReturnValue £temporary827
+	; GetReturnValue £temporary831
 
  tmpnam$7:
-	; Equal 10 £temporary827 integral4$0#
+	; Equal 10 £temporary831 integral4$0#
 	cmp ebx, 0
 	je tmpnam$10
 
@@ -267,7 +267,7 @@ section .text
 
 section .data
 
-@2981string_w#:
+@2983string_w#:
 	; Initializer String w
 	db "w", 0
 
@@ -300,10 +300,10 @@ section .text
 	; PostCall 36
 
  tmpfile$6:
-	; GetReturnValue £temporary829
+	; GetReturnValue £temporary833
 
  tmpfile$7:
-	; Equal 20 £temporary829 integral4$0#
+	; Equal 20 £temporary833 integral4$0#
 	cmp ebx, 0
 	je tmpfile$20
 
@@ -317,7 +317,7 @@ section .text
 
  tmpfile$10:
 	; Parameter 68 pointer string_w#
-	mov qword [rbp + 68], @2981string_w#
+	mov qword [rbp + 68], @2983string_w#
 
  tmpfile$11:
 	; Call 36 fopen 0
@@ -330,10 +330,10 @@ section .text
 	; PostCall 36
 
  tmpfile$13:
-	; GetReturnValue £temporary830
+	; GetReturnValue £temporary834
 
  tmpfile$14:
-	; Assign stream £temporary830
+	; Assign stream £temporary834
 	mov [rbp + 24], rbx
 
  tmpfile$15:
@@ -342,11 +342,11 @@ section .text
 	je tmpfile$20
 
  tmpfile$16:
-	; Dereference £temporary834 stream 0
+	; Dereference £temporary838 stream 0
 	mov rsi, [rbp + 24]
 
  tmpfile$17:
-	; Assign £temporary834 integral4$1#
+	; Assign £temporary838 integral4$1#
 	mov dword [rsi + 37], 1
 
  tmpfile$18:

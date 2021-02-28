@@ -10,7 +10,7 @@
 9: LessThanEqual 28 x floating8$1#
 10: PushFloat x
 11: PushFloat floating8$2.71#
-12: Divide £temporary273 x floating8$2.71#
+12: Divide £temporary274 x floating8$2.71#
 13: PopFloat x
 14: Add n n integral4$1#
 15: Jump 7
@@ -22,7 +22,7 @@
 21: GreaterThanEqual 28 x floating8$0.368#
 22: PushFloat x
 23: PushFloat floating8$2.71#
-24: Multiply £temporary277 x floating8$2.71#
+24: Multiply £temporary278 x floating8$2.71#
 25: PopFloat x
 26: Subtract n n integral4$1#
 27: Jump 19
@@ -34,45 +34,45 @@
 33: PopFloat sign
 34: PushFloat x
 35: PushFloat floating8$1#
-36: Subtract £temporary279 x floating8$1#
+36: Subtract £temporary280 x floating8$1#
 37: PopFloat x_minus_1
 38: PushFloat x_minus_1
 39: PopFloat power
 40: PushFloat sign
 41: PushFloat power
-42: Multiply £temporary280 sign power
+42: Multiply £temporary281 sign power
 43: PushFloat index
 44: PushFloat index
 45: PushOne
 46: Add index index floating8$1#
 47: PopFloat index
-48: Divide £temporary282 £temporary280 £temporary281
+48: Divide £temporary285 £temporary281 £temporary284
 49: PopFloat term
 50: PushFloat sum
 51: PushFloat term
-52: Add £temporary283 sum term
+52: Add £temporary286 sum term
 53: PopFloat sum
 54: PushFloat power
 55: PushFloat x_minus_1
-56: Multiply £temporary284 power x_minus_1
+56: Multiply £temporary287 power x_minus_1
 57: PopFloat power
 58: PushFloat sign
 59: PushFloat floating8$minus1.0#
-60: Multiply £temporary285 sign floating8$minus1.0#
+60: Multiply £temporary288 sign floating8$minus1.0#
 61: PopFloat sign
 62: PreCall 84 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 63: PushFloat term
 64: Parameter 108 double term
 65: Call 84 fabs 0
 66: PostCall 84
-67: GetReturnValue £temporary286
+67: GetReturnValue £temporary289
 68: PushFloat floating8$0.000000001#
-69: GreaterThanEqual 40 £temporary286 floating8$0.000000001#
+69: GreaterThanEqual 40 £temporary289 floating8$0.000000001#
 70: PushFloat sum
-71: IntegralToFloating £temporary288 n
-72: Add £temporary289 sum £temporary288
+71: IntegralToFloating £temporary291 n
+72: Add £temporary292 sum £temporary291
 73: SetReturnValue
-74: Return £temporary289
+74: Return £temporary292
 75: Assign errno EDOM
 76: PushFloat floating8$0#
 77: SetReturnValue

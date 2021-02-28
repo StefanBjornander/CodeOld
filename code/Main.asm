@@ -58,7 +58,7 @@ section .text
 	mov qword [rbp + 48], @315string_25d20#
 
  mainX$3:
-	; Assign £temporary1 count
+	; Assign £temporary2 count
 	mov eax, [@313$count]
 
  mainX$4:
@@ -66,7 +66,7 @@ section .text
 	inc dword [@313$count]
 
  mainX$5:
-	; Parameter 56 signed int £temporary1
+	; Parameter 56 signed int £temporary2
 	mov [rbp + 56], eax
 
  mainX$6:

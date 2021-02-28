@@ -87,55 +87,55 @@ stderr:
 
 section .data
 
-@2211$EEXIST:
+@2212$EEXIST:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@2212$ENOENT:
+@2213$ENOENT:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@2213$EACCES:
+@2214$EACCES:
 	; Initializer SignedInt 2
 	dd 2
 
 section .data
 
-@2214$SEEK_SET:
+@2215$SEEK_SET:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@2215$SEEK_CUR:
+@2216$SEEK_CUR:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@2216$SEEK_END:
+@2217$SEEK_END:
 	; Initializer SignedInt 2
 	dd 2
 
 section .data
 
-@2217$READ:
+@2218$READ:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@2218$WRITE:
+@2219$WRITE:
 	; Initializer SignedInt 1
 	dd 1
 
 section .data
 
-@2219$READ_WRITE:
+@2220$READ_WRITE:
 	; Initializer SignedInt 3
 	dd 3
 
@@ -146,11 +146,11 @@ section .text
 	mov rax, 85
 
  filecreate$1:
-	; IntegralToIntegral £temporary586 name
+	; IntegralToIntegral £temporary589 name
 	mov rdi, [rbp + 24]
 
  filecreate$2:
-	; AssignRegister rdi £temporary586
+	; AssignRegister rdi £temporary589
 
  filecreate$3:
 	; AssignRegister rsi integral8$511#
@@ -161,13 +161,13 @@ section .text
 	syscall
 
  filecreate$5:
-	; InspectRegister £temporary588 eax
+	; InspectRegister £temporary591 eax
 
  filecreate$6:
 	; SetReturnValue
 
  filecreate$7:
-	; Return £temporary588
+	; Return £temporary591
 	mov ebx, eax
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -179,13 +179,13 @@ section .text
 
 section .data
 
-@2430string_r#:
+@2431string_r#:
 	; Initializer String r
 	db "r", 0
 
 section .data
 
-@2432string_0Afileexists2025s2025p0A#:
+@2433string_0Afileexists2025s2025p0A#:
 	; Initializer String \nfileexists %s %p\n
 	db 10, "fileexists %s %p", 10, 0
 
@@ -201,7 +201,7 @@ section .text
 
  fileexistsX$2:
 	; Parameter 64 pointer string_r#
-	mov qword [rbp + 64], @2430string_r#
+	mov qword [rbp + 64], @2431string_r#
 
  fileexistsX$3:
 	; Call 32 fopen 0
@@ -214,10 +214,10 @@ section .text
 	; PostCall 32
 
  fileexistsX$5:
-	; GetReturnValue £temporary589
+	; GetReturnValue £temporary592
 
  fileexistsX$6:
-	; Assign filePtr £temporary589
+	; Assign filePtr £temporary592
 	mov [rbp + 32], rbx
 
  fileexistsX$7:
@@ -225,7 +225,7 @@ section .text
 
  fileexistsX$8:
 	; Parameter 64 pointer string_0Afileexists2025s2025p0A#
-	mov qword [rbp + 64], @2432string_0Afileexists2025s2025p0A#
+	mov qword [rbp + 64], @2433string_0Afileexists2025s2025p0A#
 
  fileexistsX$9:
 	; Parameter 72 pointer name
@@ -304,11 +304,11 @@ section .text
 	mov rax, 21
 
  fileexists$1:
-	; IntegralToIntegral £temporary595 name
+	; IntegralToIntegral £temporary598 name
 	mov rdi, [rbp + 24]
 
  fileexists$2:
-	; AssignRegister rdi £temporary595
+	; AssignRegister rdi £temporary598
 
  fileexists$3:
 	; AssignRegister rsi integral8$0#
@@ -319,15 +319,15 @@ section .text
 	syscall
 
  fileexists$5:
-	; InspectRegister £temporary597 eax
+	; InspectRegister £temporary600 eax
 
  fileexists$6:
-	; NotEqual 9 £temporary597 integral4$0#
+	; NotEqual 9 £temporary600 integral4$0#
 	cmp eax, 0
 	jne fileexists$9
 
  fileexists$7:
-	; Assign £temporary599 integral4$1#
+	; Assign £temporary602 integral4$1#
 	mov ebx, 1
 
  fileexists$8:
@@ -335,14 +335,14 @@ section .text
 	jmp fileexists$10
 
  fileexists$9:
-	; Assign £temporary599 integral4$0#
+	; Assign £temporary602 integral4$0#
 	mov ebx, 0
 
  fileexists$10:
 	; SetReturnValue
 
  fileexists$11:
-	; Return £temporary599
+	; Return £temporary602
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -353,56 +353,56 @@ section .text
 
 section .text
 
- @2453$fileopen:
+ @2454$fileopen:
 	; AssignRegister rax integral8$2#
 	mov rax, 2
 
- @2453$fileopen$1:
-	; IntegralToIntegral £temporary602 name
+ @2454$fileopen$1:
+	; IntegralToIntegral £temporary605 name
 	mov rdi, [rbp + 24]
 
- @2453$fileopen$2:
-	; AssignRegister rdi £temporary602
+ @2454$fileopen$2:
+	; AssignRegister rdi £temporary605
 
- @2453$fileopen$3:
-	; IntegralToIntegral £temporary604 mode
+ @2454$fileopen$3:
+	; IntegralToIntegral £temporary607 mode
 	mov si, [rbp + 32]
 	mov rbx, 65535
 	and rsi, rbx
 
- @2453$fileopen$4:
-	; AssignRegister rsi £temporary604
+ @2454$fileopen$4:
+	; AssignRegister rsi £temporary607
 
- @2453$fileopen$5:
+ @2454$fileopen$5:
 	; SysCall
 	syscall
 
- @2453$fileopen$6:
-	; InspectRegister £temporary605 eax
+ @2454$fileopen$6:
+	; InspectRegister £temporary608 eax
 
- @2453$fileopen$7:
+ @2454$fileopen$7:
 	; SetReturnValue
 
- @2453$fileopen$8:
-	; Return £temporary605
+ @2454$fileopen$8:
+	; Return £temporary608
 	mov ebx, eax
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @2453$fileopen$9:
+ @2454$fileopen$9:
 	; FunctionEnd fileopen
 
 section .data
 
-@2462integral4$41#:
+@2463integral4$41#:
 	; Initializer SignedInt 41
 	dd 41
 
 section .data
 
-@2465integral4$41#:
+@2466integral4$41#:
 	; Initializer SignedInt 41
 	dd 41
 
@@ -418,26 +418,26 @@ section .text
 	jge fopen$23
 
  fopen$2:
-	; Multiply £temporary609 index integral4$41#
+	; Multiply £temporary612 index integral4$41#
 	mov eax, [rbp + 40]
 	xor edx, edx
-	imul dword [@2462integral4$41#]
+	imul dword [@2463integral4$41#]
 
  fopen$3:
-	; IntegralToIntegral £temporary610 £temporary609
+	; IntegralToIntegral £temporary613 £temporary612
 	mov rbx, 4294967295
 	and rax, rbx
 
  fopen$4:
-	; Add £temporary611 g_fileArray £temporary610
+	; Add £temporary614 g_fileArray £temporary613
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fopen$5:
-	; Dereference £temporary608 £temporary611 0
+	; Dereference £temporary611 £temporary614 0
 
  fopen$6:
-	; NotEqual 21 £temporary608.open integral4$0#
+	; NotEqual 21 £temporary611.open integral4$0#
 	cmp dword [rsi], 0
 	jne fopen$21
 
@@ -455,29 +455,29 @@ section .text
 	mov [rbp + 76], rax
 
  fopen$10:
-	; Multiply £temporary615 index integral4$41#
+	; Multiply £temporary618 index integral4$41#
 	mov eax, [rbp + 40]
 	xor edx, edx
-	imul dword [@2465integral4$41#]
+	imul dword [@2466integral4$41#]
 
  fopen$11:
-	; IntegralToIntegral £temporary616 £temporary615
+	; IntegralToIntegral £temporary619 £temporary618
 	mov rbx, 4294967295
 	and rax, rbx
 
  fopen$12:
-	; Add £temporary617 g_fileArray £temporary616
+	; Add £temporary620 g_fileArray £temporary619
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fopen$13:
-	; Dereference £temporary614 £temporary617 0
+	; Dereference £temporary617 £temporary620 0
 
  fopen$14:
-	; Address £temporary618 £temporary614
+	; Address £temporary621 £temporary617
 
  fopen$15:
-	; Parameter 84 pointer £temporary618
+	; Parameter 84 pointer £temporary621
 	mov [rbp + 84], rsi
 
  fopen$16:
@@ -491,13 +491,13 @@ section .text
 	; PostCall 44
 
  fopen$18:
-	; GetReturnValue £temporary619
+	; GetReturnValue £temporary622
 
  fopen$19:
 	; SetReturnValue
 
  fopen$20:
-	; Return £temporary619
+	; Return £temporary622
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -527,49 +527,49 @@ section .text
 
 section .data
 
-@2476string_r#:
+@2477string_r#:
 	; Initializer String r
 	db "r", 0
 
 section .data
 
-@2479string_w#:
+@2480string_w#:
 	; Initializer String w
 	db "w", 0
 
 section .data
 
-@2481string_a#:
+@2482string_a#:
 	; Initializer String a
 	db "a", 0
 
 section .data
 
-@2488string_r2B#:
+@2489string_r2B#:
 	; Initializer String r+
 	db "r+", 0
 
 section .data
 
-@2490string_r2B10A#:
+@2491string_r2B10A#:
 	; Initializer String r+1\n
 	db "r+1", 10, 0
 
 section .data
 
-@2492string_r2B20A#:
+@2493string_r2B20A#:
 	; Initializer String r+2\n
 	db "r+2", 10, 0
 
 section .data
 
-@2493string_w2B#:
+@2494string_w2B#:
 	; Initializer String w+
 	db "w+", 0
 
 section .data
 
-@2497string_a2B#:
+@2498string_a2B#:
 	; Initializer String a+
 	db "a+", 0
 
@@ -589,7 +589,7 @@ section .text
 
  freopen$3:
 	; Parameter 84 pointer string_r#
-	mov qword [rbp + 84], @2476string_r#
+	mov qword [rbp + 84], @2477string_r#
 
  freopen$4:
 	; Call 52 strcmp 0
@@ -602,10 +602,10 @@ section .text
 	; PostCall 52
 
  freopen$6:
-	; GetReturnValue £temporary620
+	; GetReturnValue £temporary623
 
  freopen$7:
-	; NotEqual 16 £temporary620 integral4$0#
+	; NotEqual 16 £temporary623 integral4$0#
 	cmp ebx, 0
 	jne freopen$16
 
@@ -626,16 +626,16 @@ section .text
 	mov qword [rbp + 52], freopen$12
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2453$fileopen
+	jmp @2454$fileopen
 
  freopen$12:
 	; PostCall 52
 
  freopen$13:
-	; GetReturnValue £temporary622
+	; GetReturnValue £temporary625
 
  freopen$14:
-	; Assign handle £temporary622
+	; Assign handle £temporary625
 	mov [rbp + 48], ebx
 
  freopen$15:
@@ -652,7 +652,7 @@ section .text
 
  freopen$18:
 	; Parameter 84 pointer string_w#
-	mov qword [rbp + 84], @2479string_w#
+	mov qword [rbp + 84], @2480string_w#
 
  freopen$19:
 	; Call 52 strcmp 0
@@ -665,10 +665,10 @@ section .text
 	; PostCall 52
 
  freopen$21:
-	; GetReturnValue £temporary623
+	; GetReturnValue £temporary626
 
  freopen$22:
-	; NotEqual 30 £temporary623 integral4$0#
+	; NotEqual 30 £temporary626 integral4$0#
 	cmp ebx, 0
 	jne freopen$30
 
@@ -691,10 +691,10 @@ section .text
 	; PostCall 52
 
  freopen$27:
-	; GetReturnValue £temporary625
+	; GetReturnValue £temporary628
 
  freopen$28:
-	; Assign handle £temporary625
+	; Assign handle £temporary628
 	mov [rbp + 48], ebx
 
  freopen$29:
@@ -711,7 +711,7 @@ section .text
 
  freopen$32:
 	; Parameter 84 pointer string_a#
-	mov qword [rbp + 84], @2481string_a#
+	mov qword [rbp + 84], @2482string_a#
 
  freopen$33:
 	; Call 52 strcmp 0
@@ -724,10 +724,10 @@ section .text
 	; PostCall 52
 
  freopen$35:
-	; GetReturnValue £temporary626
+	; GetReturnValue £temporary629
 
  freopen$36:
-	; NotEqual 59 £temporary626 integral4$0#
+	; NotEqual 59 £temporary629 integral4$0#
 	cmp ebx, 0
 	jne freopen$59
 
@@ -748,16 +748,16 @@ section .text
 	mov qword [rbp + 52], freopen$41
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2453$fileopen
+	jmp @2454$fileopen
 
  freopen$41:
 	; PostCall 52
 
  freopen$42:
-	; GetReturnValue £temporary628
+	; GetReturnValue £temporary631
 
  freopen$43:
-	; Assign handle £temporary628
+	; Assign handle £temporary631
 	mov [rbp + 48], ebx
 
  freopen$44:
@@ -814,10 +814,10 @@ section .text
 	; PostCall 52
 
  freopen$56:
-	; GetReturnValue £temporary631
+	; GetReturnValue £temporary634
 
  freopen$57:
-	; Assign handle £temporary631
+	; Assign handle £temporary634
 	mov [rbp + 48], ebx
 
  freopen$58:
@@ -834,7 +834,7 @@ section .text
 
  freopen$61:
 	; Parameter 84 pointer string_r2B#
-	mov qword [rbp + 84], @2488string_r2B#
+	mov qword [rbp + 84], @2489string_r2B#
 
  freopen$62:
 	; Call 52 strcmp 0
@@ -847,10 +847,10 @@ section .text
 	; PostCall 52
 
  freopen$64:
-	; GetReturnValue £temporary632
+	; GetReturnValue £temporary635
 
  freopen$65:
-	; NotEqual 82 £temporary632 integral4$0#
+	; NotEqual 82 £temporary635 integral4$0#
 	cmp ebx, 0
 	jne freopen$82
 
@@ -859,7 +859,7 @@ section .text
 
  freopen$67:
 	; Parameter 76 pointer string_r2B10A#
-	mov qword [rbp + 76], @2490string_r2B10A#
+	mov qword [rbp + 76], @2491string_r2B10A#
 
  freopen$68:
 	; Call 52 printf 0
@@ -889,16 +889,16 @@ section .text
 	mov qword [rbp + 52], freopen$74
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2453$fileopen
+	jmp @2454$fileopen
 
  freopen$74:
 	; PostCall 52
 
  freopen$75:
-	; GetReturnValue £temporary635
+	; GetReturnValue £temporary638
 
  freopen$76:
-	; Assign handle £temporary635
+	; Assign handle £temporary638
 	mov [rbp + 48], ebx
 
  freopen$77:
@@ -906,7 +906,7 @@ section .text
 
  freopen$78:
 	; Parameter 76 pointer string_r2B20A#
-	mov qword [rbp + 76], @2492string_r2B20A#
+	mov qword [rbp + 76], @2493string_r2B20A#
 
  freopen$79:
 	; Call 52 printf 0
@@ -933,7 +933,7 @@ section .text
 
  freopen$84:
 	; Parameter 84 pointer string_w2B#
-	mov qword [rbp + 84], @2493string_w2B#
+	mov qword [rbp + 84], @2494string_w2B#
 
  freopen$85:
 	; Call 52 strcmp 0
@@ -946,10 +946,10 @@ section .text
 	; PostCall 52
 
  freopen$87:
-	; GetReturnValue £temporary637
+	; GetReturnValue £temporary640
 
  freopen$88:
-	; NotEqual 110 £temporary637 integral4$0#
+	; NotEqual 110 £temporary640 integral4$0#
 	cmp ebx, 0
 	jne freopen$110
 
@@ -972,10 +972,10 @@ section .text
 	; PostCall 52
 
  freopen$93:
-	; GetReturnValue £temporary639
+	; GetReturnValue £temporary642
 
  freopen$94:
-	; Equal 103 £temporary639 integral4$0#
+	; Equal 103 £temporary642 integral4$0#
 	cmp ebx, 0
 	je freopen$103
 
@@ -996,16 +996,16 @@ section .text
 	mov qword [rbp + 52], freopen$99
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2453$fileopen
+	jmp @2454$fileopen
 
  freopen$99:
 	; PostCall 52
 
  freopen$100:
-	; GetReturnValue £temporary640
+	; GetReturnValue £temporary643
 
  freopen$101:
-	; Assign handle £temporary640
+	; Assign handle £temporary643
 	mov [rbp + 48], ebx
 
  freopen$102:
@@ -1031,10 +1031,10 @@ section .text
 	; PostCall 52
 
  freopen$107:
-	; GetReturnValue £temporary641
+	; GetReturnValue £temporary644
 
  freopen$108:
-	; Assign handle £temporary641
+	; Assign handle £temporary644
 	mov [rbp + 48], ebx
 
  freopen$109:
@@ -1051,7 +1051,7 @@ section .text
 
  freopen$112:
 	; Parameter 84 pointer string_a2B#
-	mov qword [rbp + 84], @2497string_a2B#
+	mov qword [rbp + 84], @2498string_a2B#
 
  freopen$113:
 	; Call 52 strcmp 0
@@ -1064,10 +1064,10 @@ section .text
 	; PostCall 52
 
  freopen$115:
-	; GetReturnValue £temporary643
+	; GetReturnValue £temporary646
 
  freopen$116:
-	; NotEqual 138 £temporary643 integral4$0#
+	; NotEqual 138 £temporary646 integral4$0#
 	cmp ebx, 0
 	jne freopen$138
 
@@ -1088,16 +1088,16 @@ section .text
 	mov qword [rbp + 52], freopen$121
 	mov [rbp + 60], rbp
 	add rbp, 52
-	jmp @2453$fileopen
+	jmp @2454$fileopen
 
  freopen$121:
 	; PostCall 52
 
  freopen$122:
-	; GetReturnValue £temporary645
+	; GetReturnValue £temporary648
 
  freopen$123:
-	; Assign handle £temporary645
+	; Assign handle £temporary648
 	mov [rbp + 48], ebx
 
  freopen$124:
@@ -1154,10 +1154,10 @@ section .text
 	; PostCall 52
 
  freopen$136:
-	; GetReturnValue £temporary648
+	; GetReturnValue £temporary651
 
  freopen$137:
-	; Assign handle £temporary648
+	; Assign handle £temporary651
 	mov [rbp + 48], ebx
 
  freopen$138:
@@ -1166,39 +1166,39 @@ section .text
 	je freopen$155
 
  freopen$139:
-	; Dereference £temporary650 stream 0
+	; Dereference £temporary653 stream 0
 	mov rsi, [rbp + 40]
 
  freopen$140:
-	; Assign £temporary650 integral4$1#
+	; Assign £temporary653 integral4$1#
 	mov dword [rsi], 1
 
  freopen$141:
-	; Dereference £temporary651 stream 0
+	; Dereference £temporary654 stream 0
 	mov rsi, [rbp + 40]
 
  freopen$142:
-	; Assign £temporary651 handle
+	; Assign £temporary654 handle
 	mov eax, [rbp + 48]
 	mov [rsi + 4], eax
 
  freopen$143:
-	; Dereference £temporary652 stream 0
+	; Dereference £temporary655 stream 0
 	mov rsi, [rbp + 40]
 
  freopen$144:
-	; Assign £temporary652 integral4$0#
+	; Assign £temporary655 integral4$0#
 	mov dword [rsi + 33], 0
 
  freopen$145:
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  freopen$146:
-	; Dereference £temporary653 stream 0
+	; Dereference £temporary656 stream 0
 	mov rsi, [rbp + 40]
 
  freopen$147:
-	; Parameter 76 pointer £temporary653
+	; Parameter 76 pointer £temporary656
 	mov [rbp + 76], rsi
 	add qword [rbp + 76], 8
 
@@ -1218,11 +1218,11 @@ section .text
 	; PostCall 52
 
  freopen$151:
-	; Dereference £temporary655 stream 0
+	; Dereference £temporary658 stream 0
 	mov rsi, [rbp + 40]
 
  freopen$152:
-	; Assign £temporary655 integral4$0#
+	; Assign £temporary658 integral4$0#
 	mov dword [rsi + 37], 0
 
  freopen$153:
@@ -1237,11 +1237,11 @@ section .text
 	jmp rax
 
  freopen$155:
-	; Dereference £temporary656 stream 0
+	; Dereference £temporary659 stream 0
 	mov rsi, [rbp + 40]
 
  freopen$156:
-	; Assign £temporary656 integral4$0#
+	; Assign £temporary659 integral4$0#
 	mov dword [rsi], 0
 
  freopen$157:
@@ -1260,13 +1260,13 @@ section .text
 
 section .data
 
-@2556integral4$41#:
+@2557integral4$41#:
 	; Initializer SignedInt 41
 	dd 41
 
 section .data
 
-@2558integral4$41#:
+@2559integral4$41#:
 	; Initializer SignedInt 41
 	dd 41
 
@@ -1287,26 +1287,26 @@ section .text
 	jge fflush$23
 
  fflush$3:
-	; Multiply £temporary661 index integral4$41#
+	; Multiply £temporary664 index integral4$41#
 	mov eax, [rbp + 32]
 	xor edx, edx
-	imul dword [@2556integral4$41#]
+	imul dword [@2557integral4$41#]
 
  fflush$4:
-	; IntegralToIntegral £temporary662 £temporary661
+	; IntegralToIntegral £temporary665 £temporary664
 	mov rbx, 4294967295
 	and rax, rbx
 
  fflush$5:
-	; Add £temporary663 g_fileArray £temporary662
+	; Add £temporary666 g_fileArray £temporary665
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fflush$6:
-	; Dereference £temporary660 £temporary663 0
+	; Dereference £temporary663 £temporary666 0
 
  fflush$7:
-	; Equal 21 £temporary660.open integral4$0#
+	; Equal 21 £temporary663.open integral4$0#
 	cmp dword [rsi], 0
 	je fflush$21
 
@@ -1314,29 +1314,29 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fflush$9:
-	; Multiply £temporary665 index integral4$41#
+	; Multiply £temporary668 index integral4$41#
 	mov eax, [rbp + 32]
 	xor edx, edx
-	imul dword [@2558integral4$41#]
+	imul dword [@2559integral4$41#]
 
  fflush$10:
-	; IntegralToIntegral £temporary666 £temporary665
+	; IntegralToIntegral £temporary669 £temporary668
 	mov rbx, 4294967295
 	and rax, rbx
 
  fflush$11:
-	; Add £temporary667 g_fileArray £temporary666
+	; Add £temporary670 g_fileArray £temporary669
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fflush$12:
-	; Dereference £temporary664 £temporary667 0
+	; Dereference £temporary667 £temporary670 0
 
  fflush$13:
-	; Address £temporary668 £temporary664
+	; Address £temporary671 £temporary667
 
  fflush$14:
-	; Parameter 60 pointer £temporary668
+	; Parameter 60 pointer £temporary671
 	mov [rbp + 60], rsi
 
  fflush$15:
@@ -1350,10 +1350,10 @@ section .text
 	; PostCall 36
 
  fflush$17:
-	; GetReturnValue £temporary669
+	; GetReturnValue £temporary672
 
  fflush$18:
-	; NotEqual 21 £temporary669 integral4$minus1#
+	; NotEqual 21 £temporary672 integral4$minus1#
 	cmp ebx, -1
 	jne fflush$21
 
@@ -1392,13 +1392,13 @@ section .text
 
 section .data
 
-@2573integral4$41#:
+@2574integral4$41#:
 	; Initializer SignedInt 41
 	dd 41
 
 section .data
 
-@2575integral4$41#:
+@2576integral4$41#:
 	; Initializer SignedInt 41
 	dd 41
 
@@ -1414,17 +1414,17 @@ section .text
 	mov rax, 3
 
  fclose$2:
-	; Dereference £temporary675 stream 0
+	; Dereference £temporary678 stream 0
 	mov rsi, [rbp + 24]
 
  fclose$3:
-	; IntegralToIntegral £temporary676 £temporary675
+	; IntegralToIntegral £temporary679 £temporary678
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
 
  fclose$4:
-	; AssignRegister rdi £temporary676
+	; AssignRegister rdi £temporary679
 
  fclose$5:
 	; SysCall
@@ -1451,26 +1451,26 @@ section .text
 	jge fclose$30
 
  fclose$10:
-	; Multiply £temporary680 index integral4$41#
+	; Multiply £temporary683 index integral4$41#
 	mov eax, [rbp + 32]
 	xor edx, edx
-	imul dword [@2573integral4$41#]
+	imul dword [@2574integral4$41#]
 
  fclose$11:
-	; IntegralToIntegral £temporary681 £temporary680
+	; IntegralToIntegral £temporary684 £temporary683
 	mov rbx, 4294967295
 	and rax, rbx
 
  fclose$12:
-	; Add £temporary682 g_fileArray £temporary681
+	; Add £temporary685 g_fileArray £temporary684
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fclose$13:
-	; Dereference £temporary679 £temporary682 0
+	; Dereference £temporary682 £temporary685 0
 
  fclose$14:
-	; Equal 28 £temporary679.open integral4$0#
+	; Equal 28 £temporary682.open integral4$0#
 	cmp dword [rsi], 0
 	je fclose$28
 
@@ -1478,29 +1478,29 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fclose$16:
-	; Multiply £temporary684 index integral4$41#
+	; Multiply £temporary687 index integral4$41#
 	mov eax, [rbp + 32]
 	xor edx, edx
-	imul dword [@2575integral4$41#]
+	imul dword [@2576integral4$41#]
 
  fclose$17:
-	; IntegralToIntegral £temporary685 £temporary684
+	; IntegralToIntegral £temporary688 £temporary687
 	mov rbx, 4294967295
 	and rax, rbx
 
  fclose$18:
-	; Add £temporary686 g_fileArray £temporary685
+	; Add £temporary689 g_fileArray £temporary688
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fclose$19:
-	; Dereference £temporary683 £temporary686 0
+	; Dereference £temporary686 £temporary689 0
 
  fclose$20:
-	; Address £temporary687 £temporary683
+	; Address £temporary690 £temporary686
 
  fclose$21:
-	; Parameter 60 pointer £temporary687
+	; Parameter 60 pointer £temporary690
 	mov [rbp + 60], rsi
 
  fclose$22:
@@ -1514,10 +1514,10 @@ section .text
 	; PostCall 36
 
  fclose$24:
-	; GetReturnValue £temporary688
+	; GetReturnValue £temporary691
 
  fclose$25:
-	; NotEqual 28 £temporary688 integral4$minus1#
+	; NotEqual 28 £temporary691 integral4$minus1#
 	cmp ebx, -1
 	jne fclose$28
 
@@ -1561,21 +1561,21 @@ section .text
 	mov rax, 88
 
  remove$1:
-	; IntegralToIntegral £temporary693 name
+	; IntegralToIntegral £temporary696 name
 	mov rdi, [rbp + 24]
 
  remove$2:
-	; AssignRegister rdi £temporary693
+	; AssignRegister rdi £temporary696
 
  remove$3:
 	; SysCall
 	syscall
 
  remove$4:
-	; InspectRegister £temporary694 ebx
+	; InspectRegister £temporary697 ebx
 
  remove$5:
-	; NotEqual 8 £temporary694 integral4$0#
+	; NotEqual 8 £temporary697 integral4$0#
 	cmp ebx, 0
 	jne remove$8
 
@@ -1615,28 +1615,28 @@ section .text
 	mov rax, 82
 
  rename$1:
-	; IntegralToIntegral £temporary698 oldName
+	; IntegralToIntegral £temporary701 oldName
 	mov rdi, [rbp + 24]
 
  rename$2:
-	; AssignRegister rdi £temporary698
+	; AssignRegister rdi £temporary701
 
  rename$3:
-	; IntegralToIntegral £temporary700 newName
+	; IntegralToIntegral £temporary703 newName
 	mov rsi, [rbp + 32]
 
  rename$4:
-	; AssignRegister rsi £temporary700
+	; AssignRegister rsi £temporary703
 
  rename$5:
 	; SysCall
 	syscall
 
  rename$6:
-	; InspectRegister £temporary701 eax
+	; InspectRegister £temporary704 eax
 
  rename$7:
-	; NotEqual 10 £temporary701 integral4$0#
+	; NotEqual 10 £temporary704 integral4$0#
 	cmp eax, 0
 	jne rename$10
 
@@ -1707,12 +1707,12 @@ section .text
 	; PreCall 33 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fgetc$2:
-	; Address £temporary703 c
+	; Address £temporary706 c
 	mov rsi, rbp
 	add rsi, 32
 
  fgetc$3:
-	; Parameter 57 pointer £temporary703
+	; Parameter 57 pointer £temporary706
 	mov [rbp + 57], rsi
 
  fgetc$4:
@@ -1739,15 +1739,15 @@ section .text
 	; PostCall 33
 
  fgetc$9:
-	; GetReturnValue £temporary704
+	; GetReturnValue £temporary707
 
  fgetc$10:
-	; LessThanEqual 14 £temporary704 integral4$0#
+	; LessThanEqual 14 £temporary707 integral4$0#
 	cmp ebx, 0
 	jle fgetc$14
 
  fgetc$11:
-	; IntegralToIntegral £temporary706 c
+	; IntegralToIntegral £temporary709 c
 	mov bl, [rbp + 32]
 	and ebx, 255
 	cmp bl, 0
@@ -1759,7 +1759,7 @@ section .text
 	; SetReturnValue
 
  fgetc$13:
-	; Return £temporary706
+	; Return £temporary709
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -1781,7 +1781,7 @@ section .text
 
 section .data
 
-@2620string_25c#:
+@2621string_25c#:
 	; Initializer String %c
 	db "%c", 0
 
@@ -1796,12 +1796,12 @@ section .text
 	mov byte [rbp + 48], 0
 
  fgets$2:
-	; Subtract £temporary708 size integral4$1#
+	; Subtract £temporary711 size integral4$1#
 	mov eax, [rbp + 32]
 	dec eax
 
  fgets$3:
-	; GreaterThanEqual 36 count £temporary708
+	; GreaterThanEqual 36 count £temporary711
 	cmp [rbp + 44], eax
 	jge fgets$36
 
@@ -1819,15 +1819,15 @@ section .text
 
  fgets$7:
 	; Parameter 82 pointer string_25c#
-	mov qword [rbp + 82], @2620string_25c#
+	mov qword [rbp + 82], @2621string_25c#
 
  fgets$8:
-	; Address £temporary710 currChar
+	; Address £temporary713 currChar
 	mov rsi, rbp
 	add rsi, 49
 
  fgets$9:
-	; Parameter 90 pointer £temporary710
+	; Parameter 90 pointer £temporary713
 	mov [rbp + 90], rsi
 
  fgets$10:
@@ -1853,21 +1853,21 @@ section .text
 	jne fgets$19
 
  fgets$14:
-	; IntegralToIntegral £temporary716 count
+	; IntegralToIntegral £temporary719 count
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  fgets$15:
-	; Add £temporary717 text £temporary716
+	; Add £temporary720 text £temporary719
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  fgets$16:
-	; Dereference £temporary715 £temporary717 0
+	; Dereference £temporary718 £temporary720 0
 
  fgets$17:
-	; Assign £temporary715 integral1$0#
+	; Assign £temporary718 integral1$0#
 	mov byte [rsi], 0
 
  fgets$18:
@@ -1875,7 +1875,7 @@ section .text
 	jmp fgets$36
 
  fgets$19:
-	; IntegralToIntegral £temporary718 currChar
+	; IntegralToIntegral £temporary721 currChar
 	mov al, [rbp + 49]
 	and eax, 255
 	cmp al, 0
@@ -1884,26 +1884,26 @@ section .text
 	neg eax
 
  fgets$20:
-	; NotEqual 26 £temporary718 integral4$minus1#
+	; NotEqual 26 £temporary721 integral4$minus1#
 	cmp eax, -1
 	jne fgets$26
 
  fgets$21:
-	; IntegralToIntegral £temporary721 count
+	; IntegralToIntegral £temporary724 count
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  fgets$22:
-	; Add £temporary722 text £temporary721
+	; Add £temporary725 text £temporary724
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  fgets$23:
-	; Dereference £temporary720 £temporary722 0
+	; Dereference £temporary723 £temporary725 0
 
  fgets$24:
-	; Assign £temporary720 integral1$0#
+	; Assign £temporary723 integral1$0#
 	mov byte [rsi], 0
 
  fgets$25:
@@ -1921,7 +1921,7 @@ section .text
 	je fgets$34
 
  fgets$28:
-	; Assign £temporary726 count
+	; Assign £temporary730 count
 	mov eax, [rbp + 44]
 
  fgets$29:
@@ -1929,20 +1929,20 @@ section .text
 	inc dword [rbp + 44]
 
  fgets$30:
-	; IntegralToIntegral £temporary729 £temporary726
+	; IntegralToIntegral £temporary733 £temporary730
 	mov rbx, 4294967295
 	and rax, rbx
 
  fgets$31:
-	; Add £temporary730 text £temporary729
+	; Add £temporary734 text £temporary733
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  fgets$32:
-	; Dereference £temporary728 £temporary730 0
+	; Dereference £temporary732 £temporary734 0
 
  fgets$33:
-	; Assign £temporary728 currChar
+	; Assign £temporary732 currChar
 	mov al, [rbp + 49]
 	mov [rsi], al
 
@@ -1990,10 +1990,10 @@ section .text
 	; PostCall 40
 
  fputs$4:
-	; GetReturnValue £temporary732
+	; GetReturnValue £temporary736
 
  fputs$5:
-	; Add size £temporary732 integral4$1#
+	; Add size £temporary736 integral4$1#
 	inc ebx
 	mov [rbp + 40], ebx
 
@@ -2030,15 +2030,15 @@ section .text
 	; PostCall 44
 
  fputs$13:
-	; GetReturnValue £temporary735
+	; GetReturnValue £temporary739
 
  fputs$14:
-	; NotEqual 17 £temporary735 size
+	; NotEqual 17 £temporary739 size
 	cmp ebx, [rbp + 40]
 	jne fputs$17
 
  fputs$15:
-	; Assign £temporary737 integral4$0#
+	; Assign £temporary741 integral4$0#
 	mov ebx, 0
 
  fputs$16:
@@ -2046,14 +2046,14 @@ section .text
 	jmp fputs$18
 
  fputs$17:
-	; Assign £temporary737 integral4$minus1#
+	; Assign £temporary741 integral4$minus1#
 	mov ebx, -1
 
  fputs$18:
 	; SetReturnValue
 
  fputs$19:
-	; Return £temporary737
+	; Return £temporary741
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2083,13 +2083,13 @@ section .text
 	; PostCall 24
 
  getchar$4:
-	; GetReturnValue £temporary738
+	; GetReturnValue £temporary742
 
  getchar$5:
 	; SetReturnValue
 
  getchar$6:
-	; Return £temporary738
+	; Return £temporary742
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2128,10 +2128,10 @@ section .text
 	; PostCall 32
 
  gets$6:
-	; GetReturnValue £temporary739
+	; GetReturnValue £temporary743
 
  gets$7:
-	; Equal 22 £temporary739 integral8$0#
+	; Equal 22 £temporary743 integral8$0#
 	cmp rbx, 0
 	je gets$22
 
@@ -2154,10 +2154,10 @@ section .text
 	; PostCall 32
 
  gets$12:
-	; GetReturnValue £temporary741
+	; GetReturnValue £temporary745
 
  gets$13:
-	; Assign size £temporary741
+	; Assign size £temporary745
 	mov [rbp + 32], ebx
 
  gets$14:
@@ -2166,25 +2166,25 @@ section .text
 	jle gets$20
 
  gets$15:
-	; Subtract £temporary743 size integral4$1#
+	; Subtract £temporary747 size integral4$1#
 	mov eax, [rbp + 32]
 	dec eax
 
  gets$16:
-	; IntegralToIntegral £temporary745 £temporary743
+	; IntegralToIntegral £temporary749 £temporary747
 	mov rbx, 4294967295
 	and rax, rbx
 
  gets$17:
-	; Add £temporary746 s £temporary745
+	; Add £temporary750 s £temporary749
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  gets$18:
-	; Dereference £temporary744 £temporary746 0
+	; Dereference £temporary748 £temporary750 0
 
  gets$19:
-	; Assign £temporary744 integral1$0#
+	; Assign £temporary748 integral1$0#
 	mov byte [rsi], 0
 
  gets$20:
@@ -2238,10 +2238,10 @@ section .text
 	; PostCall 32
 
  puts$5:
-	; GetReturnValue £temporary747
+	; GetReturnValue £temporary751
 
  puts$6:
-	; Equal 15 £temporary747 integral4$0#
+	; Equal 15 £temporary751 integral4$0#
 	cmp ebx, 0
 	je puts$15
 
@@ -2268,13 +2268,13 @@ section .text
 	; PostCall 32
 
  puts$12:
-	; GetReturnValue £temporary749
+	; GetReturnValue £temporary753
 
  puts$13:
 	; SetReturnValue
 
  puts$14:
-	; Return £temporary749
+	; Return £temporary753
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2297,11 +2297,11 @@ section .text
 section .text
 
  ungetc:
-	; Dereference £temporary750 stream 0
+	; Dereference £temporary754 stream 0
 	mov rsi, [rbp + 28]
 
  ungetc$1:
-	; IntegralToIntegral £temporary751 £temporary750
+	; IntegralToIntegral £temporary755 £temporary754
 	mov al, [rsi + 24]
 	and eax, 255
 	cmp al, 0
@@ -2310,16 +2310,16 @@ section .text
 	neg eax
 
  ungetc$2:
-	; Equal 6 £temporary751 integral4$minus1#
+	; Equal 6 £temporary755 integral4$minus1#
 	cmp eax, -1
 	je ungetc$6
 
  ungetc$3:
-	; Dereference £temporary753 stream 0
+	; Dereference £temporary757 stream 0
 	mov rsi, [rbp + 28]
 
  ungetc$4:
-	; IntegralToIntegral £temporary754 c
+	; IntegralToIntegral £temporary758 c
 	mov eax, [rbp + 24]
 	cmp eax, 0
 	jge ungetc$5
@@ -2327,7 +2327,7 @@ section .text
 	neg al
 
  ungetc$5:
-	; Assign £temporary753 £temporary754
+	; Assign £temporary757 £temporary758
 	mov [rsi + 24], al
 
  ungetc$6:
@@ -2347,38 +2347,38 @@ section .text
 section .text
 
  fread:
-	; Dereference £temporary756 stream 0
+	; Dereference £temporary760 stream 0
 	mov rsi, [rbp + 40]
 
  fread$1:
-	; IntegralToIntegral £temporary757 £temporary756
+	; IntegralToIntegral £temporary761 £temporary760
 	mov edi, [rsi + 4]
 	mov rax, 4294967295
 	and rdi, rax
 
  fread$2:
-	; AssignRegister rdi £temporary757
+	; AssignRegister rdi £temporary761
 
  fread$3:
-	; IntegralToIntegral £temporary759 ptr
+	; IntegralToIntegral £temporary763 ptr
 	mov rsi, [rbp + 24]
 
  fread$4:
-	; AssignRegister rsi £temporary759
+	; AssignRegister rsi £temporary763
 
  fread$5:
-	; Multiply £temporary761 size nobj
+	; Multiply £temporary765 size nobj
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [rbp + 36]
 
  fread$6:
-	; IntegralToIntegral £temporary762 £temporary761
+	; IntegralToIntegral £temporary766 £temporary765
 	mov rbx, 4294967295
 	and rax, rbx
 
  fread$7:
-	; AssignRegister rdx £temporary762
+	; AssignRegister rdx £temporary766
 	mov rdx, rax
 
  fread$8:
@@ -2390,13 +2390,13 @@ section .text
 	syscall
 
  fread$10:
-	; InspectRegister £temporary764 eax
+	; InspectRegister £temporary768 eax
 
  fread$11:
 	; SetReturnValue
 
  fread$12:
-	; Return £temporary764
+	; Return £temporary768
 	mov ebx, eax
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -2409,38 +2409,38 @@ section .text
 section .text
 
  fwrite:
-	; Dereference £temporary766 stream 0
+	; Dereference £temporary770 stream 0
 	mov rsi, [rbp + 40]
 
  fwrite$1:
-	; IntegralToIntegral £temporary767 £temporary766
+	; IntegralToIntegral £temporary771 £temporary770
 	mov edi, [rsi + 4]
 	mov rax, 4294967295
 	and rdi, rax
 
  fwrite$2:
-	; AssignRegister rdi £temporary767
+	; AssignRegister rdi £temporary771
 
  fwrite$3:
-	; IntegralToIntegral £temporary769 ptr
+	; IntegralToIntegral £temporary773 ptr
 	mov rsi, [rbp + 24]
 
  fwrite$4:
-	; AssignRegister rsi £temporary769
+	; AssignRegister rsi £temporary773
 
  fwrite$5:
-	; Multiply £temporary771 size nobj
+	; Multiply £temporary775 size nobj
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [rbp + 36]
 
  fwrite$6:
-	; IntegralToIntegral £temporary772 £temporary771
+	; IntegralToIntegral £temporary776 £temporary775
 	mov rbx, 4294967295
 	and rax, rbx
 
  fwrite$7:
-	; AssignRegister rdx £temporary772
+	; AssignRegister rdx £temporary776
 	mov rdx, rax
 
  fwrite$8:
@@ -2452,13 +2452,13 @@ section .text
 	syscall
 
  fwrite$10:
-	; InspectRegister £temporary774 eax
+	; InspectRegister £temporary778 eax
 
  fwrite$11:
 	; SetReturnValue
 
  fwrite$12:
-	; Return £temporary774
+	; Return £temporary778
 	mov ebx, eax
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -2475,48 +2475,48 @@ section .text
 	mov rax, 8
 
  fseek$1:
-	; Dereference £temporary777 stream 0
+	; Dereference £temporary781 stream 0
 	mov rsi, [rbp + 24]
 
  fseek$2:
-	; IntegralToIntegral £temporary778 £temporary777
+	; IntegralToIntegral £temporary782 £temporary781
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
 
  fseek$3:
-	; AssignRegister rdi £temporary778
+	; AssignRegister rdi £temporary782
 
  fseek$4:
-	; IntegralToIntegral £temporary780 offset
+	; IntegralToIntegral £temporary784 offset
 	mov esi, [rbp + 32]
 	mov rbx, 4294967295
 	and rsi, rbx
 
  fseek$5:
-	; AssignRegister rsi £temporary780
+	; AssignRegister rsi £temporary784
 
  fseek$6:
-	; IntegralToIntegral £temporary782 origin
+	; IntegralToIntegral £temporary786 origin
 	mov edx, [rbp + 36]
 	mov rbx, 4294967295
 	and rdx, rbx
 
  fseek$7:
-	; AssignRegister rdx £temporary782
+	; AssignRegister rdx £temporary786
 
  fseek$8:
 	; SysCall
 	syscall
 
  fseek$9:
-	; InspectRegister £temporary783 eax
+	; InspectRegister £temporary787 eax
 
  fseek$10:
 	; SetReturnValue
 
  fseek$11:
-	; Return £temporary783
+	; Return £temporary787
 	mov ebx, eax
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -2555,13 +2555,13 @@ section .text
 	; PostCall 32
 
  ftell$6:
-	; GetReturnValue £temporary784
+	; GetReturnValue £temporary788
 
  ftell$7:
 	; SetReturnValue
 
  ftell$8:
-	; Return £temporary784
+	; Return £temporary788
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2611,7 +2611,7 @@ section .text
 section .text
 
  fgetpos:
-	; Dereference £temporary787 ptr 0
+	; Dereference £temporary791 ptr 0
 	mov rsi, [rbp + 32]
 
  fgetpos$1:
@@ -2635,13 +2635,13 @@ section .text
 	mov rsi, [rbp + 40]
 
  fgetpos$5:
-	; GetReturnValue £temporary788
+	; GetReturnValue £temporary792
 
  fgetpos$6:
-	; IntegralToIntegral £temporary789 £temporary788
+	; IntegralToIntegral £temporary793 £temporary792
 
  fgetpos$7:
-	; Assign £temporary787 £temporary789
+	; Assign £temporary791 £temporary793
 	mov [rsi], ebx
 
  fgetpos$8:
@@ -2669,11 +2669,11 @@ section .text
 	mov [rbp + 64], rax
 
  fsetpos$2:
-	; Dereference £temporary790 ptr 0
+	; Dereference £temporary794 ptr 0
 	mov rsi, [rbp + 32]
 
  fsetpos$3:
-	; Parameter 72 signed int £temporary790
+	; Parameter 72 signed int £temporary794
 	mov eax, [rsi]
 	mov [rbp + 72], eax
 
@@ -2692,16 +2692,16 @@ section .text
 	; PostCall 40
 
  fsetpos$7:
-	; GetReturnValue £temporary791
+	; GetReturnValue £temporary795
 
  fsetpos$8:
-	; IntegralToIntegral £temporary792 £temporary791
+	; IntegralToIntegral £temporary796 £temporary795
 
  fsetpos$9:
 	; SetReturnValue
 
  fsetpos$10:
-	; Return £temporary792
+	; Return £temporary796
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -2713,7 +2713,7 @@ section .text
 section .text
 
  clearerr:
-	; Dereference £temporary793 stream 0
+	; Dereference £temporary797 stream 0
 	mov rsi, [rbp + 24]
 
  clearerr$1:
@@ -2721,7 +2721,7 @@ section .text
 	mov dword [errno], 0
 
  clearerr$2:
-	; Assign £temporary793 errno
+	; Assign £temporary797 errno
 	mov eax, [errno]
 	mov [rsi + 25], eax
 
@@ -2764,15 +2764,15 @@ section .text
 	; PostCall 32
 
  feof$6:
-	; GetReturnValue £temporary794
+	; GetReturnValue £temporary798
 
  feof$7:
-	; IntegralToIntegral £temporary795 £temporary794
+	; IntegralToIntegral £temporary799 £temporary798
 	mov rax, 4294967295
 	and rbx, rax
 
  feof$8:
-	; Assign currPosition £temporary795
+	; Assign currPosition £temporary799
 	mov [rbp + 32], rbx
 
  feof$9:
@@ -2802,15 +2802,15 @@ section .text
 	; PostCall 40
 
  feof$15:
-	; GetReturnValue £temporary796
+	; GetReturnValue £temporary800
 
  feof$16:
-	; IntegralToIntegral £temporary797 £temporary796
+	; IntegralToIntegral £temporary801 £temporary800
 	mov rax, 4294967295
 	and rbx, rax
 
  feof$17:
-	; Assign lastPosition £temporary797
+	; Assign lastPosition £temporary801
 	mov [rbp + 40], rbx
 
  feof$18:
@@ -2822,11 +2822,11 @@ section .text
 	mov [rbp + 72], rax
 
  feof$20:
-	; IntegralToIntegral £temporary798 currPosition
+	; IntegralToIntegral £temporary802 currPosition
 	mov rax, [rbp + 32]
 
  feof$21:
-	; Parameter 80 signed int £temporary798
+	; Parameter 80 signed int £temporary802
 	mov [rbp + 80], eax
 
  feof$22:
@@ -2850,7 +2850,7 @@ section .text
 	jne feof$28
 
  feof$26:
-	; Assign £temporary801 integral4$1#
+	; Assign £temporary805 integral4$1#
 	mov eax, 1
 
  feof$27:
@@ -2858,11 +2858,11 @@ section .text
 	jmp feof$29
 
  feof$28:
-	; Assign £temporary801 integral4$0#
+	; Assign £temporary805 integral4$0#
 	mov eax, 0
 
  feof$29:
-	; Assign endOfFile £temporary801
+	; Assign endOfFile £temporary805
 	mov [rbp + 48], eax
 
  feof$30:
@@ -2882,14 +2882,14 @@ section .text
 section .text
 
  ferror:
-	; Dereference £temporary802 stream 0
+	; Dereference £temporary806 stream 0
 	mov rsi, [rbp + 24]
 
  ferror$1:
 	; SetReturnValue
 
  ferror$2:
-	; Return £temporary802
+	; Return £temporary806
 	mov ebx, [rsi + 25]
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -2901,7 +2901,7 @@ section .text
 
 section .data
 
-@2736string_25s3A2025s2E0A#:
+@2738string_25s3A2025s2E0A#:
 	; Initializer String %s: %s.\n
 	db "%s: %s.", 10, 0
 
@@ -2912,7 +2912,7 @@ section .text
 
  perror$1:
 	; Parameter 56 pointer string_25s3A2025s2E0A#
-	mov qword [rbp + 56], @2736string_25s3A2025s2E0A#
+	mov qword [rbp + 56], @2738string_25s3A2025s2E0A#
 
  perror$2:
 	; Parameter 64 pointer s
@@ -2938,10 +2938,10 @@ section .text
 	; PostCall 72
 
  perror$7:
-	; GetReturnValue £temporary803
+	; GetReturnValue £temporary807
 
  perror$8:
-	; Parameter 72 pointer £temporary803
+	; Parameter 72 pointer £temporary807
 	mov [rbp + 72], rbx
 
  perror$9:
