@@ -1,0 +1,50 @@
+0: PushOne
+1: PopFloat index
+2: PushOne
+3: PopFloat sum
+4: PushOne
+5: PopFloat faculty
+6: PushFloat x
+7: PopFloat power
+8: PushFloat term
+9: PopFloat
+10: PushFloat power
+11: PushFloat faculty
+12: SignedDivide £temporary309 power faculty
+13: TopFloat term
+14: PopFloat
+15: PushFloat sum
+16: PushFloat term
+17: BinaryAdd £temporary310 sum term
+18: TopFloat sum
+19: PopFloat
+20: PushFloat power
+21: PushFloat x
+22: SignedMultiply £temporary311 power x
+23: TopFloat power
+24: PopFloat
+25: PushFloat faculty
+26: PushFloat index
+27: PushOne
+28: BinaryAdd index index 1
+29: TopFloat index
+30: SignedMultiply £temporary313 faculty £temporary312
+31: TopFloat faculty
+32: PopFloat
+33: CallHeader 54 fabs
+34: PushFloat term
+35: Parameter 54 term 6
+36: Call 54 fabs 0
+37: PostCall 54
+38: GetReturnValue £temporary314
+39: PushFloat 0.000000001
+40: SignedGreaterThanEqual PushFloat term £temporary314 0.000000001
+41: Goto PushFloat sum
+42: CheckTrackMapFloatStack
+43: Goto PushFloat term
+44: PushFloat sum
+45: SetReturnValue sum
+46: Return sum
+47: Empty
+48: Return 0
+49: FunctionEnd exp

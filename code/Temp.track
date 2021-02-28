@@ -1,29 +1,29 @@
 1:	
 
-generateName:	; BinaryAdd £temporary982 index 1
+generateName:	; BinaryAdd £temporary989 index 1
 2:		mov a669, [bp + 6]
 3:		add a669, 1
 5:	
 
-generateName$1:	; SignedGreaterThanEqual 30 £temporary982 max
+generateName$1:	; SignedGreaterThanEqual 30 £temporary989 max
 6:		cmp a669, [bp + 10]
 7:		jge generateName$30
 9:	
 
-generateName$2:	; BinaryAdd £temporary984 index 1
+generateName$2:	; BinaryAdd £temporary991 index 1
 10:		mov a670, [bp + 6]
 11:		add a670, 1
 13:	
 
-generateName$3:	; BinaryAdd £temporary986 name £temporary984
+generateName$3:	; BinaryAdd £temporary993 name £temporary991
 14:		mov a671, [bp + 8]
 15:		add a671, a670
 17:	
 
-generateName$4:	; Deref £temporary985 -> £temporary986 £temporary986 0
+generateName$4:	; Deref £temporary992 -> £temporary993 £temporary993 0
 19:	
 
-generateName$5:	; Assign £temporary985 -> £temporary986 0
+generateName$5:	; Assign £temporary992 -> £temporary993 0
 20:		mov byte [a671], 0
 22:	
 
@@ -36,15 +36,15 @@ generateName$7:	; SignedGreaterThan 34 c 122
 27:		jg generateName$34
 29:	
 
-generateName$8:	; BinaryAdd £temporary990 name index
+generateName$8:	; BinaryAdd £temporary997 name index
 30:		mov a672, [bp + 8]
 31:		add a672, [bp + 6]
 33:	
 
-generateName$9:	; Deref £temporary989 -> £temporary990 £temporary990 0
+generateName$9:	; Deref £temporary996 -> £temporary997 £temporary997 0
 35:	
 
-generateName$10:	; Assign £temporary989 -> £temporary990 c
+generateName$10:	; Assign £temporary996 -> £temporary997 c
 36:		mov a673, [bp + 12]
 37:		mov [a672], a673
 39:	
@@ -67,10 +67,10 @@ generateName$13:	; Call 13 fileexists 0
 generateName$14:	; PostCall 13
 53:	
 
-generateName$15:	; GetReturnValue £temporary991
+generateName$15:	; GetReturnValue £temporary998
 55:	
 
-generateName$16:	; Equal 26 £temporary991 0
+generateName$16:	; Equal 26 £temporary998 0
 56:		cmp type675, 0
 57:		je generateName$26
 59:	
@@ -78,12 +78,12 @@ generateName$16:	; Equal 26 £temporary991 0
 generateName$17:	; CallHeader 13 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 61:	
 
-generateName$18:	; BinaryAdd £temporary994 index 1
+generateName$18:	; BinaryAdd £temporary1001 index 1
 62:		mov a676, [bp + 6]
 63:		add a676, 1
 65:	
 
-generateName$19:	; Parameter 13 £temporary994 6
+generateName$19:	; Parameter 13 £temporary1001 6
 66:		mov [bp + 19], a676
 68:	
 
@@ -107,10 +107,10 @@ generateName$22:	; Call 13 generateName 0
 generateName$23:	; PostCall 13
 84:	
 
-generateName$24:	; GetReturnValue £temporary995
+generateName$24:	; GetReturnValue £temporary1002
 86:	
 
-generateName$25:	; Equal 28 £temporary995 0
+generateName$25:	; Equal 28 £temporary1002 0
 87:		cmp type679, 0
 88:		je generateName$28
 90:	
@@ -140,15 +140,15 @@ generateName$30:	; SignedGreaterThanEqual 34 index max
 108:		jge generateName$34
 110:	
 
-generateName$31:	; BinaryAdd £temporary1000 name index
+generateName$31:	; BinaryAdd £temporary1007 name index
 111:		mov a683, [bp + 8]
 112:		add a683, [bp + 6]
 114:	
 
-generateName$32:	; Deref £temporary999 -> £temporary1000 £temporary1000 0
+generateName$32:	; Deref £temporary1006 -> £temporary1007 £temporary1007 0
 116:	
 
-generateName$33:	; Assign £temporary999 -> £temporary1000 0
+generateName$33:	; Assign £temporary1006 -> £temporary1007 0
 117:		mov byte [a683], 0
 119:	
 
@@ -192,10 +192,10 @@ tmpnam$4:	; Call 8 generateName 0
 tmpnam$5:	; PostCall 8
 21:	
 
-tmpnam$6:	; GetReturnValue £temporary1005
+tmpnam$6:	; GetReturnValue £temporary1012
 23:	
 
-tmpnam$7:	; Equal 10 £temporary1005 0
+tmpnam$7:	; Equal 10 £temporary1012 0
 24:		cmp type687, 0
 25:		je tmpnam$10
 27:	
@@ -251,10 +251,10 @@ tmpfile$4:	; Call 12 generateName 0
 tmpfile$5:	; PostCall 12
 21:	
 
-tmpfile$6:	; GetReturnValue £temporary1010
+tmpfile$6:	; GetReturnValue £temporary1017
 23:	
 
-tmpfile$7:	; Equal 20 £temporary1010 0
+tmpfile$7:	; Equal 20 £temporary1017 0
 24:		cmp type692, 0
 25:		je tmpfile$20
 27:	
@@ -268,7 +268,7 @@ tmpfile$9:	; Parameter 12 name 6
 33:	
 
 tmpfile$10:	; Parameter 12 string_w# 8
-34:		mov word [bp + 20], @2401$string_w#
+34:		mov word [bp + 20], @2413$string_w#
 36:	
 
 tmpfile$11:	; Call 12 fopen 0
@@ -281,10 +281,10 @@ tmpfile$11:	; Call 12 fopen 0
 tmpfile$12:	; PostCall 12
 44:	
 
-tmpfile$13:	; GetReturnValue £temporary1011
+tmpfile$13:	; GetReturnValue £temporary1018
 46:	
 
-tmpfile$14:	; Assign stream £temporary1011
+tmpfile$14:	; Assign stream £temporary1018
 47:		mov [bp + 6], type693
 49:	
 
@@ -293,11 +293,11 @@ tmpfile$15:	; Equal 20 stream 0
 51:		je tmpfile$20
 53:	
 
-tmpfile$16:	; Deref £temporary1015 -> stream stream 27
+tmpfile$16:	; Deref £temporary1022 -> stream stream 27
 54:		mov a694, [bp + 6]
 56:	
 
-tmpfile$17:	; Assign £temporary1015 -> stream 1
+tmpfile$17:	; Assign £temporary1022 -> stream 1
 57:		mov word [a694 + 27], 1
 59:	
 

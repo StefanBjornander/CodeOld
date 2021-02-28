@@ -25,10 +25,10 @@ malloc_test2$4:	; Call 12 malloc 0
 malloc_test2$5:	; PostCall 12
 20:	
 
-malloc_test2$6:	; GetReturnValue £temporary5859
+malloc_test2$6:	; GetReturnValue £temporary5884
 22:	
 
-malloc_test2$7:	; Assign q £temporary5859
+malloc_test2$7:	; Assign q £temporary5884
 23:		mov [bp + 12], bx
 25:	
 
@@ -58,10 +58,10 @@ malloc_test2$12:	; Call 14 malloc 0
 malloc_test2$13:	; PostCall 14
 45:	
 
-malloc_test2$14:	; GetReturnValue £temporary5862
+malloc_test2$14:	; GetReturnValue £temporary5887
 47:	
 
-malloc_test2$15:	; Assign p £temporary5862
+malloc_test2$15:	; Assign p £temporary5887
 48:		mov [bp + 8], bx
 50:	
 
@@ -337,10 +337,10 @@ malloc_test3$3:	; Call 6 calloc 0
 malloc_test3$4:	; PostCall 6
 17:	
 
-malloc_test3$5:	; GetReturnValue £temporary5891
+malloc_test3$5:	; GetReturnValue £temporary5916
 19:	
 
-malloc_test3$6:	; Assign a £temporary5891
+malloc_test3$6:	; Assign a £temporary5916
 20:		mov [bp + 6], bx
 22:	
 
@@ -365,10 +365,10 @@ malloc_test3$10:	; Call 8 calloc 0
 malloc_test3$11:	; PostCall 8
 38:	
 
-malloc_test3$12:	; GetReturnValue £temporary5892
+malloc_test3$12:	; GetReturnValue £temporary5917
 40:	
 
-malloc_test3$13:	; Assign b £temporary5892
+malloc_test3$13:	; Assign b £temporary5917
 41:		mov [bp + 8], bx
 43:	
 
@@ -393,10 +393,10 @@ malloc_test3$17:	; Call 10 calloc 0
 malloc_test3$18:	; PostCall 10
 59:	
 
-malloc_test3$19:	; GetReturnValue £temporary5893
+malloc_test3$19:	; GetReturnValue £temporary5918
 61:	
 
-malloc_test3$20:	; Assign c £temporary5893
+malloc_test3$20:	; Assign c £temporary5918
 62:		mov [bp + 10], bx
 64:	
 
@@ -421,10 +421,10 @@ malloc_test3$24:	; Call 12 calloc 0
 malloc_test3$25:	; PostCall 12
 80:	
 
-malloc_test3$26:	; GetReturnValue £temporary5894
+malloc_test3$26:	; GetReturnValue £temporary5919
 82:	
 
-malloc_test3$27:	; Assign d £temporary5894
+malloc_test3$27:	; Assign d £temporary5919
 83:		mov [bp + 12], bx
 85:	
 
@@ -449,10 +449,10 @@ malloc_test3$31:	; Call 14 calloc 0
 malloc_test3$32:	; PostCall 14
 101:	
 
-malloc_test3$33:	; GetReturnValue £temporary5895
+malloc_test3$33:	; GetReturnValue £temporary5920
 103:	
 
-malloc_test3$34:	; Assign e £temporary5895
+malloc_test3$34:	; Assign e £temporary5920
 104:		mov [bp + 14], bx
 106:	
 
@@ -586,10 +586,10 @@ rec:	; Assign lowHeapPtr 65534
 2:		mov word [bp + 8], 65534
 4:	
 
-rec$1:	; InspectRegister £temporary5918 bp
+rec$1:	; InspectRegister £temporary5943 bp
 6:	
 
-rec$2:	; Assign stackTop £temporary5918
+rec$2:	; Assign stackTop £temporary5943
 7:		mov [bp + 6], bp
 9:	
 
@@ -597,7 +597,7 @@ rec$3:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 11:	
 
 rec$4:	; Parameter 10 string_Stack20Top3A2025u2C20Low20Heap3A2025u0A# 6
-12:		mov word [bp + 16], @12881$string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#
+12:		mov word [bp + 16], @12999$string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#
 14:	
 
 rec$5:	; Parameter 10 stackTop 8
@@ -605,11 +605,11 @@ rec$5:	; Parameter 10 stackTop 8
 16:		mov [bp + 18], ax
 18:	
 
-rec$6:	; Deref £temporary5919 -> lowHeapPtr lowHeapPtr 0
+rec$6:	; Deref £temporary5944 -> lowHeapPtr lowHeapPtr 0
 19:		mov si, [bp + 8]
 21:	
 
-rec$7:	; Parameter 10 £temporary5919 -> lowHeapPtr 10
+rec$7:	; Parameter 10 £temporary5944 -> lowHeapPtr 10
 22:		mov ax, [si]
 23:		mov [bp + 20], ax
 25:	
@@ -689,10 +689,10 @@ malloc_test$2:	; Call 6 malloc 0
 malloc_test$3:	; PostCall 6
 14:	
 
-malloc_test$4:	; GetReturnValue £temporary5926
+malloc_test$4:	; GetReturnValue £temporary5951
 16:	
 
-malloc_test$5:	; Assign b £temporary5926
+malloc_test$5:	; Assign b £temporary5951
 17:		mov [bp + 6], bx
 19:	
 
@@ -713,10 +713,10 @@ malloc_test$8:	; Call 8 malloc 0
 malloc_test$9:	; PostCall 8
 32:	
 
-malloc_test$10:	; GetReturnValue £temporary5927
+malloc_test$10:	; GetReturnValue £temporary5952
 34:	
 
-malloc_test$11:	; Assign c £temporary5927
+malloc_test$11:	; Assign c £temporary5952
 35:		mov [bp + 8], bx
 37:	
 
@@ -737,10 +737,10 @@ malloc_test$14:	; Call 10 malloc 0
 malloc_test$15:	; PostCall 10
 50:	
 
-malloc_test$16:	; GetReturnValue £temporary5928
+malloc_test$16:	; GetReturnValue £temporary5953
 52:	
 
-malloc_test$17:	; Assign d £temporary5928
+malloc_test$17:	; Assign d £temporary5953
 53:		mov [bp + 10], bx
 55:	
 
@@ -898,10 +898,10 @@ malloc_test6:	; Assign lowHeapPtr 65534
 2:		mov word [bp + 10], 65534
 4:	
 
-malloc_test6$1:	; InspectRegister £temporary5946 bp
+malloc_test6$1:	; InspectRegister £temporary5971 bp
 6:	
 
-malloc_test6$2:	; Assign stackTop £temporary5946
+malloc_test6$2:	; Assign stackTop £temporary5971
 7:		mov [bp + 8], bp
 9:	
 
@@ -931,10 +931,10 @@ malloc_test6$7:	; Call 12 malloc 0
 malloc_test6$8:	; PostCall 12
 29:	
 
-malloc_test6$9:	; GetReturnValue £temporary5949
+malloc_test6$9:	; GetReturnValue £temporary5974
 31:	
 
-malloc_test6$10:	; Assign p £temporary5949
+malloc_test6$10:	; Assign p £temporary5974
 32:		mov [bp + 12], bx
 34:	
 
@@ -942,7 +942,7 @@ malloc_test6$11:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.
 36:	
 
 malloc_test6$12:	; Parameter 14 string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A# 6
-37:		mov word [bp + 20], @12949$string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#
+37:		mov word [bp + 20], @13068$string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#
 39:	
 
 malloc_test6$13:	; Parameter 14 i 8
@@ -960,11 +960,11 @@ malloc_test6$15:	; Parameter 14 stackTop 12
 49:		mov [bp + 26], ax
 51:	
 
-malloc_test6$16:	; Deref £temporary5950 -> lowHeapPtr lowHeapPtr 0
+malloc_test6$16:	; Deref £temporary5975 -> lowHeapPtr lowHeapPtr 0
 52:		mov si, [bp + 10]
 54:	
 
-malloc_test6$17:	; Parameter 14 £temporary5950 -> lowHeapPtr 14
+malloc_test6$17:	; Parameter 14 £temporary5975 -> lowHeapPtr 14
 55:		mov ax, [si]
 56:		mov [bp + 28], ax
 58:	

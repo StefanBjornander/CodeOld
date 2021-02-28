@@ -32,27 +32,45 @@
 
 section .data
 
-@9799string_in2Etxt#:
+@9793string_in2Etxt#:
 	; Initializer String in.txt
 	db "in.txt", 0
 
 section .data
 
-@9800string_r#:
+@9794string_r#:
 	; Initializer String r
 	db "r", 0
 
 section .data
 
-@9802string_outX2Etxt#:
+@9796string_outX2Etxt#:
 	; Initializer String outX.txt
 	db "outX.txt", 0
 
 section .data
 
-@9803string_w#:
+@9797string_w#:
 	; Initializer String w
 	db "w", 0
+
+section .data
+
+@9801string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+	; Initializer String Assertion failed: "%s" in file %s at line %i\n
+	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
+
+section .data
+
+@9802string_inFilePtr20213D20NULL#:
+	; Initializer String inFilePtr != NULL
+	db "inFilePtr != NULL", 0
+
+section .data
+
+@9803string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
+	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
+	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
 
 section .data
 
@@ -62,9 +80,9 @@ section .data
 
 section .data
 
-@9808string_inFilePtr20213D20NULL#:
-	; Initializer String inFilePtr != NULL
-	db "inFilePtr != NULL", 0
+@9808string_outFilePtr20213D20NULL#:
+	; Initializer String outFilePtr != NULL
+	db "outFilePtr != NULL", 0
 
 section .data
 
@@ -74,69 +92,69 @@ section .data
 
 section .data
 
-@9813string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
-	; Initializer String Assertion failed: "%s" in file %s at line %i\n
-	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
-
-section .data
-
-@9814string_outFilePtr20213D20NULL#:
-	; Initializer String outFilePtr != NULL
-	db "outFilePtr != NULL", 0
-
-section .data
-
-@9815string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
-	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
-	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
-
-section .data
-
-@9819string_25lf#:
+@9813string_25lf#:
 	; Initializer String %lf
 	db "%lf", 0
 
 section .data
 
-@9820string_X12025f0A#:
+@9814string_X12025f0A#:
 	; Initializer String X1 %f\n
 	db "X1 %f", 10, 0
 
 section .data
 
-@9821string_X22025f0A#:
+@9815string_X22025f0A#:
 	; Initializer String X2 %f\n
 	db "X2 %f", 10, 0
 
 section .data
 
-@9822string_0A#:
+@9816string_0A#:
 	; Initializer String \n
 	db 10, 0
 
 section .data
 
-@9823string_in2Etxt#:
+@9817string_in2Etxt#:
 	; Initializer String in.txt
 	db "in.txt", 0
 
 section .data
 
-@9824string_r#:
+@9818string_r#:
 	; Initializer String r
 	db "r", 0
 
 section .data
 
-@9826string_outY2Etxt#:
+@9820string_outY2Etxt#:
 	; Initializer String outY.txt
 	db "outY.txt", 0
 
 section .data
 
-@9827string_w#:
+@9821string_w#:
 	; Initializer String w
 	db "w", 0
+
+section .data
+
+@9825string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+	; Initializer String Assertion failed: "%s" in file %s at line %i\n
+	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
+
+section .data
+
+@9826string_inFilePtr20213D20NULL#:
+	; Initializer String inFilePtr != NULL
+	db "inFilePtr != NULL", 0
+
+section .data
+
+@9827string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
+	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
+	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
 
 section .data
 
@@ -146,9 +164,9 @@ section .data
 
 section .data
 
-@9832string_inFilePtr20213D20NULL#:
-	; Initializer String inFilePtr != NULL
-	db "inFilePtr != NULL", 0
+@9832string_outFilePtr20213D20NULL#:
+	; Initializer String outFilePtr != NULL
+	db "outFilePtr != NULL", 0
 
 section .data
 
@@ -158,591 +176,591 @@ section .data
 
 section .data
 
-@9837string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
-	; Initializer String Assertion failed: "%s" in file %s at line %i\n
-	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
-
-section .data
-
-@9838string_outFilePtr20213D20NULL#:
-	; Initializer String outFilePtr != NULL
-	db "outFilePtr != NULL", 0
-
-section .data
-
-@9839string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
-	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
-	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
-
-section .data
-
-@9844string_25i#:
+@9838string_25i#:
 	; Initializer String %i
 	db "%i", 0
 
 section .data
 
-@9845string_size2025i0A#:
+@9839string_size2025i0A#:
 	; Initializer String size %i\n
 	db "size %i", 10, 0
 
 section .data
 
-@9846string_Y20size2025i0A#:
+@9840string_Y20size2025i0A#:
 	; Initializer String Y size %i\n
 	db "Y size %i", 10, 0
 
 section .data
 
-@9850string_25lf#:
+@9844string_25lf#:
 	; Initializer String %lf
 	db "%lf", 0
 
 section .data
 
-@9851string_Y12025f0A#:
+@9845string_Y12025f0A#:
 	; Initializer String Y1 %f\n
 	db "Y1 %f", 10, 0
 
 section .data
 
-@9852string_Y22025f0A#:
+@9846string_Y22025f0A#:
 	; Initializer String Y2 %f\n
 	db "Y2 %f", 10, 0
 
 section .data
 
-@9853string_0A#:
+@9847string_0A#:
 	; Initializer String \n
 	db 10, 0
 
 section .data
 
-@9854string_Y#:
+@9848string_Y#:
 	; Initializer String Y
 	db "Y", 0
 
 section .data
 
-@9857string_2225s2220has20been20removed0A#:
+@9851string_2225s2220has20been20removed0A#:
 	; Initializer String "%s" has been removed\n
 	db 34, "%s", 34, " has been removed", 10, 0
 
 section .data
 
-@9858string_Error202225s222025i3A2025s2E0A#:
+@9852string_Error202225s222025i3A2025s2E0A#:
 	; Initializer String Error "%s" %i: %s.\n
 	db "Error ", 34, "%s", 34, " %i: %s.", 10, 0
 
 section .data
 
-@9859string_X#:
+@9853string_X#:
 	; Initializer String X
 	db "X", 0
 
 section .data
 
-@9861string_Y#:
+@9855string_Y#:
 	; Initializer String Y
 	db "Y", 0
 
 section .data
 
-@9863string_w#:
+@9857string_w#:
 	; Initializer String w
 	db "w", 0
 
 section .data
 
-@9865string_Hello20X#:
+@9859string_Hello20X#:
 	; Initializer String Hello X
 	db "Hello X", 0
 
 section .data
 
-@9867string_2225s2220has20been20renamed20to202225s222E0A#:
+@9861string_2225s2220has20been20renamed20to202225s222E0A#:
 	; Initializer String "%s" has been renamed to "%s".\n
 	db 34, "%s", 34, " has been renamed to ", 34, "%s", 34, ".", 10, 0
 
 section .data
 
-@9868string_Error202225s22202225s222025i3A2025s2E0A#:
+@9862string_Error202225s22202225s222025i3A2025s2E0A#:
 	; Initializer String Error "%s" "%s" %i: %s.\n
 	db "Error ", 34, "%s", 34, " ", 34, "%s", 34, " %i: %s.", 10, 0
 
 section .data
 
-@9869string_X2#:
+@9863string_X2#:
 	; Initializer String X2
 	db "X2", 0
 
 section .data
 
-@9871string_Y2#:
+@9865string_Y2#:
 	; Initializer String Y2
 	db "Y2", 0
 
 section .data
 
-@9874string_2225s2220has20been20renamed20to202225s222E0A#:
+@9868string_2225s2220has20been20renamed20to202225s222E0A#:
 	; Initializer String "%s" has been renamed to "%s".\n
 	db 34, "%s", 34, " has been renamed to ", 34, "%s", 34, ".", 10, 0
 
 section .data
 
-@9875string_Error202225s22202225s222025i3A2025s2E0A#:
+@9869string_Error202225s22202225s222025i3A2025s2E0A#:
 	; Initializer String Error "%s" "%s" %i: %s.\n
 	db "Error ", 34, "%s", 34, " ", 34, "%s", 34, " %i: %s.", 10, 0
 
 section .data
 
-@9876string_Z#:
+@9870string_Z#:
 	; Initializer String Z
 	db "Z", 0
 
 section .data
 
-@9878string_w#:
+@9872string_w#:
 	; Initializer String w
 	db "w", 0
 
 section .data
 
-@9880string_Hello20Z#:
+@9874string_Hello20Z#:
 	; Initializer String Hello Z
 	db "Hello Z", 0
 
 section .data
 
-@9882string_2225s2220has20been20removed2E0A#:
+@9876string_2225s2220has20been20removed2E0A#:
 	; Initializer String "%s" has been removed.\n
 	db 34, "%s", 34, " has been removed.", 10, 0
 
 section .data
 
-@9883string_Error202225s222025i3A2025s2E0A#:
+@9877string_Error202225s222025i3A2025s2E0A#:
 	; Initializer String Error "%s" %i: %s.\n
 	db "Error ", 34, "%s", 34, " %i: %s.", 10, 0
 
 section .data
 
-@9884string_Z2#:
+@9878string_Z2#:
 	; Initializer String Z2
 	db "Z2", 0
 
 section .data
 
-@9887string_2225s2220has20been20removed2E0A#:
+@9881string_2225s2220has20been20removed2E0A#:
 	; Initializer String "%s" has been removed.\n
 	db 34, "%s", 34, " has been removed.", 10, 0
 
 section .data
 
-@9888string_Error202225s222025i3A2025s2E0A#:
+@9882string_Error202225s222025i3A2025s2E0A#:
 	; Initializer String Error "%s" %i: %s.\n
 	db "Error ", 34, "%s", 34, " %i: %s.", 10, 0
 
 section .data
 
-@9889string_PBook2Etxt#:
+@9883string_PBook2Etxt#:
 	; Initializer String PBook.txt
 	db "PBook.txt", 0
 
 section .data
 
-@9890string_r#:
+@9884string_r#:
 	; Initializer String r
 	db "r", 0
 
 section .data
 
-@9894string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+@9888string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
 	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
-@9895string_inFilePtr20213D20NULL#:
+@9889string_inFilePtr20213D20NULL#:
 	; Initializer String inFilePtr != NULL
 	db "inFilePtr != NULL", 0
 
 section .data
 
-@9896string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
+@9890string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
 	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
 
 section .data
 
-@9898string_0A252D24s20252D24s0A#:
+@9892string_0A252D24s20252D24s0A#:
 	; Initializer String \n%-24s %-24s\n
 	db 10, "%-24s %-24s", 10, 0
 
 section .data
 
-@9899string_Name#:
+@9893string_Name#:
 	; Initializer String Name
 	db "Name", 0
 
 section .data
 
-@9900string_Phone#:
+@9894string_Phone#:
 	; Initializer String Phone
 	db "Phone", 0
 
 section .data
 
-@9901string_252D24s20252D24s0A#:
+@9895string_252D24s20252D24s0A#:
 	; Initializer String %-24s %-24s\n
 	db "%-24s %-24s", 10, 0
 
 section .data
 
-@9902string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#:
+@9896string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#:
 	; Initializer String ========================
 	db "========================", 0
 
 section .data
 
-@9903string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#:
+@9897string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#:
 	; Initializer String ========================
 	db "========================", 0
 
 section .data
 
-@9906string_25i#:
+@9900string_25i#:
 	; Initializer String %i
 	db "%i", 0
 
 section .data
 
-@9907string_size2025i0A#:
+@9901string_size2025i0A#:
 	; Initializer String size %i\n
 	db "size %i", 10, 0
 
 section .data
 
-@9916string_25s25s#:
+@9910string_25s25s#:
 	; Initializer String %s%s
 	db "%s%s", 0
 
 section .data
 
-@9917string_252D24s20252D24s0A#:
+@9911string_252D24s20252D24s0A#:
 	; Initializer String %-24s %-24s\n
 	db "%-24s %-24s", 10, 0
 
 section .data
 
-@9918string_0A#:
+@9912string_0A#:
 	; Initializer String \n
 	db 10, 0
 
 section .data
 
-@9919string_TestX2Ebin#:
+@9913string_TestX2Ebin#:
 	; Initializer String TestX.bin
 	db "TestX.bin", 0
 
 section .data
 
-@9920string_w#:
+@9914string_w#:
 	; Initializer String w
 	db "w", 0
 
 section .data
 
-@9924string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+@9918string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
 	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
-@9925string_outFilePtr20213D20NULL#:
+@9919string_outFilePtr20213D20NULL#:
 	; Initializer String outFilePtr != NULL
 	db "outFilePtr != NULL", 0
 
 section .data
 
-@9926string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
+@9920string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
 	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
 
 section .data
 
-@9938string_TestX2Ebin#:
+@9932string_TestX2Ebin#:
 	; Initializer String TestX.bin
 	db "TestX.bin", 0
 
 section .data
 
-@9939string_r#:
+@9933string_r#:
 	; Initializer String r
 	db "r", 0
 
 section .data
 
-@9945string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+@9939string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
 	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
-@9946string_inFilePtr20213D20NULL#:
+@9940string_inFilePtr20213D20NULL#:
 	; Initializer String inFilePtr != NULL
 	db "inFilePtr != NULL", 0
 
 section .data
 
-@9947string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
+@9941string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
 	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
 
 section .data
 
-@9951string_size13A2025i0A#:
+@9945string_size13A2025i0A#:
 	; Initializer String size1: %i\n
 	db "size1: %i", 10, 0
 
 section .data
 
-@9957string_index13A2025i3A20value2025f0A#:
+@9951string_index13A2025i3A20value2025f0A#:
 	; Initializer String index1: %i: value %f\n
 	db "index1: %i: value %f", 10, 0
 
 section .data
 
-@9958string_0A#:
+@9952string_0A#:
 	; Initializer String \n
 	db 10, 0
 
 section .data
 
-@9959string_TestY2Ebin#:
+@9953string_TestY2Ebin#:
 	; Initializer String TestY.bin
 	db "TestY.bin", 0
 
 section .data
 
-@9960string_w#:
+@9954string_w#:
 	; Initializer String w
 	db "w", 0
 
 section .data
 
-@9964string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+@9958string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
 	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
-@9965string_outFilePtr20213D20NULL#:
+@9959string_outFilePtr20213D20NULL#:
 	; Initializer String outFilePtr != NULL
 	db "outFilePtr != NULL", 0
 
 section .data
 
-@9966string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
+@9960string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
 	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
 
 section .data
 
-@9976string_TestY2Ebin#:
+@9970string_TestY2Ebin#:
 	; Initializer String TestY.bin
 	db "TestY.bin", 0
 
 section .data
 
-@9977string_r#:
+@9971string_r#:
 	; Initializer String r
 	db "r", 0
 
 section .data
 
-@9981string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+@9975string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
 	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
-@9982string_inFilePtr20213D20NULL#:
+@9976string_inFilePtr20213D20NULL#:
 	; Initializer String inFilePtr != NULL
 	db "inFilePtr != NULL", 0
 
 section .data
 
-@9983string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
+@9977string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
 	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
 
 section .data
 
-@9991string_index23A2025i3A20value2025f0A#:
+@9985string_index23A2025i3A20value2025f0A#:
 	; Initializer String index2: %i: value %f\n
 	db "index2: %i: value %f", 10, 0
 
 section .data
 
-@9993string_0A#:
+@9987string_0A#:
 	; Initializer String \n
 	db 10, 0
 
 section .data
 
-@9994string_TestY2Ebin#:
+@9988string_TestY2Ebin#:
 	; Initializer String TestY.bin
 	db "TestY.bin", 0
 
 section .data
 
-@9995string_r#:
+@9989string_r#:
 	; Initializer String r
 	db "r", 0
 
 section .data
 
-@9999string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+@9993string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
 	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
-@10000string_inFilePtr20213D20NULL#:
+@9994string_inFilePtr20213D20NULL#:
 	; Initializer String inFilePtr != NULL
 	db "inFilePtr != NULL", 0
 
 section .data
 
-@10001string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
+@9995string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
 	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
 
 section .data
 
-@10009string_index33A2025i3A20value2025f0A#:
+@10003string_index33A2025i3A20value2025f0A#:
 	; Initializer String index3: %i: value %f\n
 	db "index3: %i: value %f", 10, 0
 
 section .data
 
-@10011string_0A#:
+@10005string_0A#:
 	; Initializer String \n
 	db 10, 0
 
 section .data
 
-@10012string_TestX2Ebin#:
+@10006string_TestX2Ebin#:
 	; Initializer String TestX.bin
 	db "TestX.bin", 0
 
 section .data
 
-@10013string_r#:
+@10007string_r#:
 	; Initializer String r
 	db "r", 0
 
 section .data
 
-@10018string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+@10012string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
 	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
-@10019string_inFilePtr20213D20NULL#:
+@10013string_inFilePtr20213D20NULL#:
 	; Initializer String inFilePtr != NULL
 	db "inFilePtr != NULL", 0
 
 section .data
 
-@10020string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
+@10014string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
 	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
 
 section .data
 
-@10024string_size43A2025i20total2025i0A#:
+@10018string_size43A2025i20total2025i0A#:
 	; Initializer String size4: %i total %i\n
 	db "size4: %i total %i", 10, 0
 
 section .data
 
-@10034string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+@10028string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
 	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
-@10035string_p20213D20NULL#:
+@10029string_p20213D20NULL#:
 	; Initializer String p != NULL
 	db "p != NULL", 0
 
 section .data
 
-@10036string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
+@10030string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
 	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
 
 section .data
 
-@10038string_malloc43A2025u2025u2025u0A#:
+@10032string_malloc43A2025u2025u2025u0A#:
 	; Initializer String malloc4: %u %u %u\n
 	db "malloc4: %u %u %u", 10, 0
 
 section .data
 
-@10042string_index43A2025i3A20value2025f0A#:
+@10036string_index43A2025i3A20value2025f0A#:
 	; Initializer String index4: %i: value %f\n
 	db "index4: %i: value %f", 10, 0
 
 section .data
 
-@10044string_0A#:
+@10038string_0A#:
 	; Initializer String \n
 	db 10, 0
 
 section .data
 
-@10049string_Adam20Bertilsson#:
+@10043string_Adam20Bertilsson#:
 	; Initializer String Adam Bertilsson
 	db "Adam Bertilsson", 0
 
 section .data
 
-@10051string_Bertil20Ceasarsson#:
+@10045string_Bertil20Ceasarsson#:
 	; Initializer String Bertil Ceasarsson
 	db "Bertil Ceasarsson", 0
 
 section .data
 
-@10053string_Ceasar20Davidsson#:
+@10047string_Ceasar20Davidsson#:
 	; Initializer String Ceasar Davidsson
 	db "Ceasar Davidsson", 0
 
 section .data
 
-@10108string_Block2Ebin#:
+@10102string_Block2Ebin#:
 	; Initializer String Block.bin
 	db "Block.bin", 0
 
 section .data
 
-@10109string_w#:
+@10103string_w#:
 	; Initializer String w
 	db "w", 0
 
 section .data
 
-@10111string_Block2Ebin#:
+@10105string_Block2Ebin#:
 	; Initializer String Block.bin
 	db "Block.bin", 0
 
 section .data
 
-@10112string_r#:
+@10106string_r#:
 	; Initializer String r
 	db "r", 0
+
+section .data
+
+@10110string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+	; Initializer String Assertion failed: "%s" in file %s at line %i\n
+	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
+
+section .data
+
+@10111string_outFilePtr20213D20NULL#:
+	; Initializer String outFilePtr != NULL
+	db "outFilePtr != NULL", 0
+
+section .data
+
+@10112string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
+	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
+	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
 
 section .data
 
@@ -752,9 +770,9 @@ section .data
 
 section .data
 
-@10117string_outFilePtr20213D20NULL#:
-	; Initializer String outFilePtr != NULL
-	db "outFilePtr != NULL", 0
+@10117string_inFilePtr20213D20NULL#:
+	; Initializer String inFilePtr != NULL
+	db "inFilePtr != NULL", 0
 
 section .data
 
@@ -764,349 +782,331 @@ section .data
 
 section .data
 
-@10122string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
-	; Initializer String Assertion failed: "%s" in file %s at line %i\n
-	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
-
-section .data
-
-@10123string_inFilePtr20213D20NULL#:
-	; Initializer String inFilePtr != NULL
-	db "inFilePtr != NULL", 0
-
-section .data
-
-@10124string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
-	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
-	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
-
-section .data
-
-@10131string_Name20203A2025s0A#:
+@10125string_Name20203A2025s0A#:
 	; Initializer String Name  : %s\n
 	db "Name  : %s", 10, 0
 
 section .data
 
-@10132string_Phone203A2025d0A#:
+@10126string_Phone203A2025d0A#:
 	; Initializer String Phone : %d\n
 	db "Phone : %d", 10, 0
 
 section .data
 
-@10133string_outx2Etxt#:
+@10127string_outx2Etxt#:
 	; Initializer String outx.txt
 	db "outx.txt", 0
 
 section .data
 
-@10134string_r#:
+@10128string_r#:
 	; Initializer String r
 	db "r", 0
 
 section .data
 
-@10138string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+@10132string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
 	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
-@10139string_inFilePtr20213D20NULL#:
+@10133string_inFilePtr20213D20NULL#:
 	; Initializer String inFilePtr != NULL
 	db "inFilePtr != NULL", 0
 
 section .data
 
-@10140string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
+@10134string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
 	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
 
 section .data
 
-@10146string_fileexists2022X223A2025s0A#:
+@10140string_fileexists2022X223A2025s0A#:
 	; Initializer String fileexists "X": %s\n
 	db "fileexists ", 34, "X", 34, ": %s", 10, 0
 
 section .data
 
-@10147string_X#:
+@10141string_X#:
 	; Initializer String X
 	db "X", 0
 
 section .data
 
-@10148string_Yes#:
+@10142string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@10149string_No#:
+@10143string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@10151string_fileexists2022Y223A2025s0A#:
+@10145string_fileexists2022Y223A2025s0A#:
 	; Initializer String fileexists "Y": %s\n
 	db "fileexists ", 34, "Y", 34, ": %s", 10, 0
 
 section .data
 
-@10152string_Y#:
+@10146string_Y#:
 	; Initializer String Y
 	db "Y", 0
 
 section .data
 
-@10153string_Yes#:
+@10147string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@10154string_No#:
+@10148string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@10156string_fileexists2022Main2Easm223A2025s0A#:
+@10150string_fileexists2022Main2Easm223A2025s0A#:
 	; Initializer String fileexists "Main.asm": %s\n
 	db "fileexists ", 34, "Main.asm", 34, ": %s", 10, 0
 
 section .data
 
-@10157string_Main2Easm#:
+@10151string_Main2Easm#:
 	; Initializer String Main.asm
 	db "Main.asm", 0
 
 section .data
 
-@10158string_Yes#:
+@10152string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@10159string_No#:
+@10153string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@10161string_fileexists2022MainX2Easm223A2025s0A#:
+@10155string_fileexists2022MainX2Easm223A2025s0A#:
 	; Initializer String fileexists "MainX.asm": %s\n
 	db "fileexists ", 34, "MainX.asm", 34, ": %s", 10, 0
 
 section .data
 
-@10162string_MainX2Easm#:
+@10156string_MainX2Easm#:
 	; Initializer String MainX.asm
 	db "MainX.asm", 0
 
 section .data
 
-@10163string_Yes#:
+@10157string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@10164string_No#:
+@10158string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@10166string_fileexists2022Main2Ec223A2025s0A#:
+@10160string_fileexists2022Main2Ec223A2025s0A#:
 	; Initializer String fileexists "Main.c": %s\n
 	db "fileexists ", 34, "Main.c", 34, ": %s", 10, 0
 
 section .data
 
-@10167string_Main2Ec#:
+@10161string_Main2Ec#:
 	; Initializer String Main.c
 	db "Main.c", 0
 
 section .data
 
-@10168string_Yes#:
+@10162string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@10169string_No#:
+@10163string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@10171string_fileexists2022MainX2Ec223A2025s0A#:
+@10165string_fileexists2022MainX2Ec223A2025s0A#:
 	; Initializer String fileexists "MainX.c": %s\n
 	db "fileexists ", 34, "MainX.c", 34, ": %s", 10, 0
 
 section .data
 
-@10172string_MainX2Ec#:
+@10166string_MainX2Ec#:
 	; Initializer String MainX.c
 	db "MainX.c", 0
 
 section .data
 
-@10173string_Yes#:
+@10167string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@10174string_No#:
+@10168string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@10176string_fileexists2022File2Ec223A2025s0A#:
+@10170string_fileexists2022File2Ec223A2025s0A#:
 	; Initializer String fileexists "File.c": %s\n
 	db "fileexists ", 34, "File.c", 34, ": %s", 10, 0
 
 section .data
 
-@10177string_File2Ec#:
+@10171string_File2Ec#:
 	; Initializer String File.c
 	db "File.c", 0
 
 section .data
 
-@10178string_Yes#:
+@10172string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@10179string_No#:
+@10173string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@10181string_fileexists2022File2Ex223A2025s0A#:
+@10175string_fileexists2022File2Ex223A2025s0A#:
 	; Initializer String fileexists "File.x": %s\n
 	db "fileexists ", 34, "File.x", 34, ": %s", 10, 0
 
 section .data
 
-@10182string_File2Ex#:
+@10176string_File2Ex#:
 	; Initializer String File.x
 	db "File.x", 0
 
 section .data
 
-@10183string_Yes#:
+@10177string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@10184string_No#:
+@10178string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@10186string_fileexists2022File2Eh223A2025s0A#:
+@10180string_fileexists2022File2Eh223A2025s0A#:
 	; Initializer String fileexists "File.h": %s\n
 	db "fileexists ", 34, "File.h", 34, ": %s", 10, 0
 
 section .data
 
-@10187string_File2Eh#:
+@10181string_File2Eh#:
 	; Initializer String File.h
 	db "File.h", 0
 
 section .data
 
-@10188string_Yes#:
+@10182string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@10189string_No#:
+@10183string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@10191string_fileexists2022File2Ey223A2025s0A#:
+@10185string_fileexists2022File2Ey223A2025s0A#:
 	; Initializer String fileexists "File.y": %s\n
 	db "fileexists ", 34, "File.y", 34, ": %s", 10, 0
 
 section .data
 
-@10192string_File2Ey#:
+@10186string_File2Ey#:
 	; Initializer String File.y
 	db "File.y", 0
 
 section .data
 
-@10193string_Yes#:
+@10187string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@10194string_No#:
+@10188string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@10196string_fileexists2022File2Ep223A2025s0A#:
+@10190string_fileexists2022File2Ep223A2025s0A#:
 	; Initializer String fileexists "File.p": %s\n
 	db "fileexists ", 34, "File.p", 34, ": %s", 10, 0
 
 section .data
 
-@10197string_File2Ep#:
+@10191string_File2Ep#:
 	; Initializer String File.p
 	db "File.p", 0
 
 section .data
 
-@10198string_Yes#:
+@10192string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@10199string_No#:
+@10193string_No#:
 	; Initializer String No
 	db "No", 0
 
 section .data
 
-@10201string_fileexists2022File2Ez223A2025s0A#:
+@10195string_fileexists2022File2Ez223A2025s0A#:
 	; Initializer String fileexists "File.z": %s\n
 	db "fileexists ", 34, "File.z", 34, ": %s", 10, 0
 
 section .data
 
-@10202string_File2Ez#:
+@10196string_File2Ez#:
 	; Initializer String File.z
 	db "File.z", 0
 
 section .data
 
-@10203string_Yes#:
+@10197string_Yes#:
 	; Initializer String Yes
 	db "Yes", 0
 
 section .data
 
-@10204string_No#:
+@10198string_No#:
 	; Initializer String No
 	db "No", 0
 
@@ -1118,25 +1118,25 @@ container4bytes#:
 
 section .data
 
-@10025integral4$8#:
+@10019integral4$8#:
 	; Initializer SignedInt 8
 	dd 8
 
 section .data
 
-@10026integral4$8#:
+@10020integral4$8#:
 	; Initializer SignedInt 8
 	dd 8
 
 section .data
 
-@10030integral4$8#:
+@10024integral4$8#:
 	; Initializer SignedInt 8
 	dd 8
 
 section .data
 
-@10043integral4$8#:
+@10037integral4$8#:
 	; Initializer SignedInt 8
 	dd 8
 
@@ -1147,11 +1147,11 @@ section .text
 
  file_test$1:
 	; Parameter 48 pointer string_in2Etxt#
-	mov qword [rbp + 48], @9799string_in2Etxt#
+	mov qword [rbp + 48], @9793string_in2Etxt#
 
  file_test$2:
 	; Parameter 56 pointer string_r#
-	mov qword [rbp + 56], @9800string_r#
+	mov qword [rbp + 56], @9794string_r#
 
  file_test$3:
 	; Call 24 fopen 0
@@ -1164,10 +1164,10 @@ section .text
 	; PostCall 24
 
  file_test$5:
-	; GetReturnValue £temporary3586
+	; GetReturnValue £temporary3607
 
  file_test$6:
-	; Assign inFilePtr £temporary3586
+	; Assign inFilePtr £temporary3607
 	mov [rbp + 24], rbx
 
  file_test$7:
@@ -1175,11 +1175,11 @@ section .text
 
  file_test$8:
 	; Parameter 56 pointer string_outX2Etxt#
-	mov qword [rbp + 56], @9802string_outX2Etxt#
+	mov qword [rbp + 56], @9796string_outX2Etxt#
 
  file_test$9:
 	; Parameter 64 pointer string_w#
-	mov qword [rbp + 64], @9803string_w#
+	mov qword [rbp + 64], @9797string_w#
 
  file_test$10:
 	; Call 32 fopen 0
@@ -1192,10 +1192,10 @@ section .text
 	; PostCall 32
 
  file_test$12:
-	; GetReturnValue £temporary3587
+	; GetReturnValue £temporary3608
 
  file_test$13:
-	; Assign outFilePtr £temporary3587
+	; Assign outFilePtr £temporary3608
 	mov [rbp + 32], rbx
 
  file_test$14:
@@ -1213,15 +1213,15 @@ section .text
 
  file_test$17:
 	; Parameter 72 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 72], @9807string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 72], @9801string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  file_test$18:
 	; Parameter 80 pointer string_inFilePtr20213D20NULL#
-	mov qword [rbp + 80], @9808string_inFilePtr20213D20NULL#
+	mov qword [rbp + 80], @9802string_inFilePtr20213D20NULL#
 
  file_test$19:
 	; Parameter 88 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 88], @9809string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 88], @9803string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$20:
 	; Parameter 96 signed int integral4$14#
@@ -1267,15 +1267,15 @@ section .text
 
  file_test$29:
 	; Parameter 72 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 72], @9813string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 72], @9807string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  file_test$30:
 	; Parameter 80 pointer string_outFilePtr20213D20NULL#
-	mov qword [rbp + 80], @9814string_outFilePtr20213D20NULL#
+	mov qword [rbp + 80], @9808string_outFilePtr20213D20NULL#
 
  file_test$31:
 	; Parameter 88 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 88], @9815string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 88], @9809string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$32:
 	; Parameter 96 signed int integral4$15#
@@ -1325,10 +1325,10 @@ section .text
 	; PostCall 40
 
  file_test$42:
-	; GetReturnValue £temporary3596
+	; GetReturnValue £temporary3617
 
  file_test$43:
-	; NotEqual 75 £temporary3596 integral4$0#
+	; NotEqual 75 £temporary3617 integral4$0#
 	cmp ebx, 0
 	jne file_test$75
 
@@ -1342,15 +1342,15 @@ section .text
 
  file_test$46:
 	; Parameter 80 pointer string_25lf#
-	mov qword [rbp + 80], @9819string_25lf#
+	mov qword [rbp + 80], @9813string_25lf#
 
  file_test$47:
-	; Address £temporary3599 value
+	; Address £temporary3620 value
 	mov rsi, rbp
 	add rsi, 40
 
  file_test$48:
-	; Parameter 88 pointer £temporary3599
+	; Parameter 88 pointer £temporary3620
 	mov [rbp + 88], rsi
 
  file_test$49:
@@ -1370,7 +1370,7 @@ section .text
 
  file_test$52:
 	; Parameter 72 pointer string_X12025f0A#
-	mov qword [rbp + 72], @9820string_X12025f0A#
+	mov qword [rbp + 72], @9814string_X12025f0A#
 
  file_test$53:
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1394,10 +1394,10 @@ section .text
 	; PostCall 80
 
  file_test$58:
-	; GetReturnValue £temporary3601
+	; GetReturnValue £temporary3622
 
  file_test$59:
-	; Parameter 80 double £temporary3601
+	; Parameter 80 double £temporary3622
 	fstp qword [rbp + 80]
 
  file_test$60:
@@ -1422,7 +1422,7 @@ section .text
 
  file_test$64:
 	; Parameter 80 pointer string_X22025f0A#
-	mov qword [rbp + 80], @9821string_X22025f0A#
+	mov qword [rbp + 80], @9815string_X22025f0A#
 
  file_test$65:
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1446,10 +1446,10 @@ section .text
 	; PostCall 88
 
  file_test$70:
-	; GetReturnValue £temporary3603
+	; GetReturnValue £temporary3624
 
  file_test$71:
-	; Parameter 88 double £temporary3603
+	; Parameter 88 double £temporary3624
 	fstp qword [rbp + 88]
 
  file_test$72:
@@ -1473,7 +1473,7 @@ section .text
 
  file_test$76:
 	; Parameter 64 pointer string_0A#
-	mov qword [rbp + 64], @9822string_0A#
+	mov qword [rbp + 64], @9816string_0A#
 
  file_test$77:
 	; Call 40 printf 0
@@ -1527,11 +1527,11 @@ section .text
 
  file_test$88:
 	; Parameter 48 pointer string_in2Etxt#
-	mov qword [rbp + 48], @9823string_in2Etxt#
+	mov qword [rbp + 48], @9817string_in2Etxt#
 
  file_test$89:
 	; Parameter 56 pointer string_r#
-	mov qword [rbp + 56], @9824string_r#
+	mov qword [rbp + 56], @9818string_r#
 
  file_test$90:
 	; Call 24 fopen 0
@@ -1544,10 +1544,10 @@ section .text
 	; PostCall 24
 
  file_test$92:
-	; GetReturnValue £temporary3608
+	; GetReturnValue £temporary3629
 
  file_test$93:
-	; Assign inFilePtr £temporary3608
+	; Assign inFilePtr £temporary3629
 	mov [rbp + 24], rbx
 
  file_test$94:
@@ -1555,11 +1555,11 @@ section .text
 
  file_test$95:
 	; Parameter 56 pointer string_outY2Etxt#
-	mov qword [rbp + 56], @9826string_outY2Etxt#
+	mov qword [rbp + 56], @9820string_outY2Etxt#
 
  file_test$96:
 	; Parameter 64 pointer string_w#
-	mov qword [rbp + 64], @9827string_w#
+	mov qword [rbp + 64], @9821string_w#
 
  file_test$97:
 	; Call 32 fopen 0
@@ -1572,10 +1572,10 @@ section .text
 	; PostCall 32
 
  file_test$99:
-	; GetReturnValue £temporary3609
+	; GetReturnValue £temporary3630
 
  file_test$100:
-	; Assign outFilePtr £temporary3609
+	; Assign outFilePtr £temporary3630
 	mov [rbp + 32], rbx
 
  file_test$101:
@@ -1593,15 +1593,15 @@ section .text
 
  file_test$104:
 	; Parameter 72 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 72], @9831string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 72], @9825string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  file_test$105:
 	; Parameter 80 pointer string_inFilePtr20213D20NULL#
-	mov qword [rbp + 80], @9832string_inFilePtr20213D20NULL#
+	mov qword [rbp + 80], @9826string_inFilePtr20213D20NULL#
 
  file_test$106:
 	; Parameter 88 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 88], @9833string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 88], @9827string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$107:
 	; Parameter 96 signed int integral4$34#
@@ -1647,15 +1647,15 @@ section .text
 
  file_test$116:
 	; Parameter 72 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 72], @9837string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 72], @9831string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  file_test$117:
 	; Parameter 80 pointer string_outFilePtr20213D20NULL#
-	mov qword [rbp + 80], @9838string_outFilePtr20213D20NULL#
+	mov qword [rbp + 80], @9832string_outFilePtr20213D20NULL#
 
  file_test$118:
 	; Parameter 88 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 88], @9839string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 88], @9833string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$119:
 	; Parameter 96 signed int integral4$35#
@@ -1700,15 +1700,15 @@ section .text
 
  file_test$128:
 	; Parameter 80 pointer string_25i#
-	mov qword [rbp + 80], @9844string_25i#
+	mov qword [rbp + 80], @9838string_25i#
 
  file_test$129:
-	; Address £temporary3618 size
+	; Address £temporary3639 size
 	mov rsi, rbp
 	add rsi, 40
 
  file_test$130:
-	; Parameter 88 pointer £temporary3618
+	; Parameter 88 pointer £temporary3639
 	mov [rbp + 88], rsi
 
  file_test$131:
@@ -1728,7 +1728,7 @@ section .text
 
  file_test$134:
 	; Parameter 72 pointer string_size2025i0A#
-	mov qword [rbp + 72], @9845string_size2025i0A#
+	mov qword [rbp + 72], @9839string_size2025i0A#
 
  file_test$135:
 	; Parameter 80 signed int size
@@ -1757,7 +1757,7 @@ section .text
 
  file_test$140:
 	; Parameter 80 pointer string_Y20size2025i0A#
-	mov qword [rbp + 80], @9846string_Y20size2025i0A#
+	mov qword [rbp + 80], @9840string_Y20size2025i0A#
 
  file_test$141:
 	; Parameter 88 signed int size
@@ -1796,15 +1796,15 @@ section .text
 
  file_test$148:
 	; Parameter 88 pointer string_25lf#
-	mov qword [rbp + 88], @9850string_25lf#
+	mov qword [rbp + 88], @9844string_25lf#
 
  file_test$149:
-	; Address £temporary3624 value
+	; Address £temporary3645 value
 	mov rsi, rbp
 	add rsi, 48
 
  file_test$150:
-	; Parameter 96 pointer £temporary3624
+	; Parameter 96 pointer £temporary3645
 	mov [rbp + 96], rsi
 
  file_test$151:
@@ -1824,7 +1824,7 @@ section .text
 
  file_test$154:
 	; Parameter 80 pointer string_Y12025f0A#
-	mov qword [rbp + 80], @9851string_Y12025f0A#
+	mov qword [rbp + 80], @9845string_Y12025f0A#
 
  file_test$155:
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1848,10 +1848,10 @@ section .text
 	; PostCall 88
 
  file_test$160:
-	; GetReturnValue £temporary3626
+	; GetReturnValue £temporary3647
 
  file_test$161:
-	; Parameter 88 double £temporary3626
+	; Parameter 88 double £temporary3647
 	fstp qword [rbp + 88]
 
  file_test$162:
@@ -1876,7 +1876,7 @@ section .text
 
  file_test$166:
 	; Parameter 88 pointer string_Y22025f0A#
-	mov qword [rbp + 88], @9852string_Y22025f0A#
+	mov qword [rbp + 88], @9846string_Y22025f0A#
 
  file_test$167:
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -1900,10 +1900,10 @@ section .text
 	; PostCall 96
 
  file_test$172:
-	; GetReturnValue £temporary3628
+	; GetReturnValue £temporary3649
 
  file_test$173:
-	; Parameter 96 double £temporary3628
+	; Parameter 96 double £temporary3649
 	fstp qword [rbp + 96]
 
  file_test$174:
@@ -1931,7 +1931,7 @@ section .text
 
  file_test$179:
 	; Parameter 72 pointer string_0A#
-	mov qword [rbp + 72], @9853string_0A#
+	mov qword [rbp + 72], @9847string_0A#
 
  file_test$180:
 	; Call 48 printf 0
@@ -1982,7 +1982,7 @@ section .text
 
  file_test$190:
 	; Assign sourceFile string_Y#
-	mov qword [rbp + 24], @9854string_Y#
+	mov qword [rbp + 24], @9848string_Y#
 
  file_test$191:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -2003,10 +2003,10 @@ section .text
 	; PostCall 32
 
  file_test$195:
-	; GetReturnValue £temporary3633
+	; GetReturnValue £temporary3654
 
  file_test$196:
-	; NotEqual 203 £temporary3633 integral4$0#
+	; NotEqual 203 £temporary3654 integral4$0#
 	cmp ebx, 0
 	jne file_test$203
 
@@ -2015,7 +2015,7 @@ section .text
 
  file_test$198:
 	; Parameter 56 pointer string_2225s2220has20been20removed0A#
-	mov qword [rbp + 56], @9857string_2225s2220has20been20removed0A#
+	mov qword [rbp + 56], @9851string_2225s2220has20been20removed0A#
 
  file_test$199:
 	; Parameter 64 pointer sourceFile
@@ -2043,7 +2043,7 @@ section .text
 
  file_test$204:
 	; Parameter 56 pointer string_Error202225s222025i3A2025s2E0A#
-	mov qword [rbp + 56], @9858string_Error202225s222025i3A2025s2E0A#
+	mov qword [rbp + 56], @9852string_Error202225s222025i3A2025s2E0A#
 
  file_test$205:
 	; Parameter 64 pointer sourceFile
@@ -2074,10 +2074,10 @@ section .text
 	; PostCall 76
 
  file_test$211:
-	; GetReturnValue £temporary3636
+	; GetReturnValue £temporary3657
 
  file_test$212:
-	; Parameter 76 pointer £temporary3636
+	; Parameter 76 pointer £temporary3657
 	mov [rbp + 76], rbx
 
  file_test$213:
@@ -2094,11 +2094,11 @@ section .text
 
  file_test$215:
 	; Assign sourceFile string_X#
-	mov qword [rbp + 24], @9859string_X#
+	mov qword [rbp + 24], @9853string_X#
 
  file_test$216:
 	; Assign targetFile string_Y#
-	mov qword [rbp + 32], @9861string_Y#
+	mov qword [rbp + 32], @9855string_Y#
 
  file_test$217:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -2110,7 +2110,7 @@ section .text
 
  file_test$219:
 	; Parameter 72 pointer string_w#
-	mov qword [rbp + 72], @9863string_w#
+	mov qword [rbp + 72], @9857string_w#
 
  file_test$220:
 	; Call 40 fopen 0
@@ -2123,10 +2123,10 @@ section .text
 	; PostCall 40
 
  file_test$222:
-	; GetReturnValue £temporary3638
+	; GetReturnValue £temporary3659
 
  file_test$223:
-	; Assign filePtr £temporary3638
+	; Assign filePtr £temporary3659
 	mov [rbp + 40], rbx
 
  file_test$224:
@@ -2139,7 +2139,7 @@ section .text
 
  file_test$226:
 	; Parameter 80 pointer string_Hello20X#
-	mov qword [rbp + 80], @9865string_Hello20X#
+	mov qword [rbp + 80], @9859string_Hello20X#
 
  file_test$227:
 	; Call 48 fprintf 0
@@ -2194,10 +2194,10 @@ section .text
 	; PostCall 48
 
  file_test$238:
-	; GetReturnValue £temporary3641
+	; GetReturnValue £temporary3662
 
  file_test$239:
-	; NotEqual 247 £temporary3641 integral4$0#
+	; NotEqual 247 £temporary3662 integral4$0#
 	cmp ebx, 0
 	jne file_test$247
 
@@ -2206,7 +2206,7 @@ section .text
 
  file_test$241:
 	; Parameter 72 pointer string_2225s2220has20been20renamed20to202225s222E0A#
-	mov qword [rbp + 72], @9867string_2225s2220has20been20renamed20to202225s222E0A#
+	mov qword [rbp + 72], @9861string_2225s2220has20been20renamed20to202225s222E0A#
 
  file_test$242:
 	; Parameter 80 pointer sourceFile
@@ -2239,7 +2239,7 @@ section .text
 
  file_test$248:
 	; Parameter 72 pointer string_Error202225s22202225s222025i3A2025s2E0A#
-	mov qword [rbp + 72], @9868string_Error202225s22202225s222025i3A2025s2E0A#
+	mov qword [rbp + 72], @9862string_Error202225s22202225s222025i3A2025s2E0A#
 
  file_test$249:
 	; Parameter 80 pointer sourceFile
@@ -2275,10 +2275,10 @@ section .text
 	; PostCall 100
 
  file_test$256:
-	; GetReturnValue £temporary3644
+	; GetReturnValue £temporary3665
 
  file_test$257:
-	; Parameter 100 pointer £temporary3644
+	; Parameter 100 pointer £temporary3665
 	mov [rbp + 100], rbx
 
  file_test$258:
@@ -2295,11 +2295,11 @@ section .text
 
  file_test$260:
 	; Assign sourceFile string_X2#
-	mov qword [rbp + 24], @9869string_X2#
+	mov qword [rbp + 24], @9863string_X2#
 
  file_test$261:
 	; Assign targetFile string_Y2#
-	mov qword [rbp + 32], @9871string_Y2#
+	mov qword [rbp + 32], @9865string_Y2#
 
  file_test$262:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -2325,10 +2325,10 @@ section .text
 	; PostCall 40
 
  file_test$267:
-	; GetReturnValue £temporary3646
+	; GetReturnValue £temporary3667
 
  file_test$268:
-	; NotEqual 276 £temporary3646 integral4$0#
+	; NotEqual 276 £temporary3667 integral4$0#
 	cmp ebx, 0
 	jne file_test$276
 
@@ -2337,7 +2337,7 @@ section .text
 
  file_test$270:
 	; Parameter 64 pointer string_2225s2220has20been20renamed20to202225s222E0A#
-	mov qword [rbp + 64], @9874string_2225s2220has20been20renamed20to202225s222E0A#
+	mov qword [rbp + 64], @9868string_2225s2220has20been20renamed20to202225s222E0A#
 
  file_test$271:
 	; Parameter 72 pointer sourceFile
@@ -2370,7 +2370,7 @@ section .text
 
  file_test$277:
 	; Parameter 64 pointer string_Error202225s22202225s222025i3A2025s2E0A#
-	mov qword [rbp + 64], @9875string_Error202225s22202225s222025i3A2025s2E0A#
+	mov qword [rbp + 64], @9869string_Error202225s22202225s222025i3A2025s2E0A#
 
  file_test$278:
 	; Parameter 72 pointer sourceFile
@@ -2406,10 +2406,10 @@ section .text
 	; PostCall 92
 
  file_test$285:
-	; GetReturnValue £temporary3649
+	; GetReturnValue £temporary3670
 
  file_test$286:
-	; Parameter 92 pointer £temporary3649
+	; Parameter 92 pointer £temporary3670
 	mov [rbp + 92], rbx
 
  file_test$287:
@@ -2426,7 +2426,7 @@ section .text
 
  file_test$289:
 	; Assign targetFile string_Z#
-	mov qword [rbp + 24], @9876string_Z#
+	mov qword [rbp + 24], @9870string_Z#
 
  file_test$290:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -2438,7 +2438,7 @@ section .text
 
  file_test$292:
 	; Parameter 64 pointer string_w#
-	mov qword [rbp + 64], @9878string_w#
+	mov qword [rbp + 64], @9872string_w#
 
  file_test$293:
 	; Call 32 fopen 0
@@ -2451,10 +2451,10 @@ section .text
 	; PostCall 32
 
  file_test$295:
-	; GetReturnValue £temporary3651
+	; GetReturnValue £temporary3672
 
  file_test$296:
-	; Assign filePtr £temporary3651
+	; Assign filePtr £temporary3672
 	mov [rbp + 32], rbx
 
  file_test$297:
@@ -2467,7 +2467,7 @@ section .text
 
  file_test$299:
 	; Parameter 72 pointer string_Hello20Z#
-	mov qword [rbp + 72], @9880string_Hello20Z#
+	mov qword [rbp + 72], @9874string_Hello20Z#
 
  file_test$300:
 	; Call 40 fprintf 0
@@ -2517,10 +2517,10 @@ section .text
 	; PostCall 40
 
  file_test$310:
-	; GetReturnValue £temporary3654
+	; GetReturnValue £temporary3675
 
  file_test$311:
-	; NotEqual 318 £temporary3654 integral4$0#
+	; NotEqual 318 £temporary3675 integral4$0#
 	cmp ebx, 0
 	jne file_test$318
 
@@ -2529,7 +2529,7 @@ section .text
 
  file_test$313:
 	; Parameter 64 pointer string_2225s2220has20been20removed2E0A#
-	mov qword [rbp + 64], @9882string_2225s2220has20been20removed2E0A#
+	mov qword [rbp + 64], @9876string_2225s2220has20been20removed2E0A#
 
  file_test$314:
 	; Parameter 72 pointer targetFile
@@ -2557,7 +2557,7 @@ section .text
 
  file_test$319:
 	; Parameter 64 pointer string_Error202225s222025i3A2025s2E0A#
-	mov qword [rbp + 64], @9883string_Error202225s222025i3A2025s2E0A#
+	mov qword [rbp + 64], @9877string_Error202225s222025i3A2025s2E0A#
 
  file_test$320:
 	; Parameter 72 pointer targetFile
@@ -2588,10 +2588,10 @@ section .text
 	; PostCall 84
 
  file_test$326:
-	; GetReturnValue £temporary3657
+	; GetReturnValue £temporary3678
 
  file_test$327:
-	; Parameter 84 pointer £temporary3657
+	; Parameter 84 pointer £temporary3678
 	mov [rbp + 84], rbx
 
  file_test$328:
@@ -2608,7 +2608,7 @@ section .text
 
  file_test$330:
 	; Assign targetFile string_Z2#
-	mov qword [rbp + 24], @9884string_Z2#
+	mov qword [rbp + 24], @9878string_Z2#
 
  file_test$331:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -2629,10 +2629,10 @@ section .text
 	; PostCall 32
 
  file_test$335:
-	; GetReturnValue £temporary3659
+	; GetReturnValue £temporary3680
 
  file_test$336:
-	; NotEqual 343 £temporary3659 integral4$0#
+	; NotEqual 343 £temporary3680 integral4$0#
 	cmp ebx, 0
 	jne file_test$343
 
@@ -2641,7 +2641,7 @@ section .text
 
  file_test$338:
 	; Parameter 56 pointer string_2225s2220has20been20removed2E0A#
-	mov qword [rbp + 56], @9887string_2225s2220has20been20removed2E0A#
+	mov qword [rbp + 56], @9881string_2225s2220has20been20removed2E0A#
 
  file_test$339:
 	; Parameter 64 pointer targetFile
@@ -2669,7 +2669,7 @@ section .text
 
  file_test$344:
 	; Parameter 56 pointer string_Error202225s222025i3A2025s2E0A#
-	mov qword [rbp + 56], @9888string_Error202225s222025i3A2025s2E0A#
+	mov qword [rbp + 56], @9882string_Error202225s222025i3A2025s2E0A#
 
  file_test$345:
 	; Parameter 64 pointer targetFile
@@ -2700,10 +2700,10 @@ section .text
 	; PostCall 76
 
  file_test$351:
-	; GetReturnValue £temporary3662
+	; GetReturnValue £temporary3683
 
  file_test$352:
-	; Parameter 76 pointer £temporary3662
+	; Parameter 76 pointer £temporary3683
 	mov [rbp + 76], rbx
 
  file_test$353:
@@ -2723,11 +2723,11 @@ section .text
 
  file_test$356:
 	; Parameter 48 pointer string_PBook2Etxt#
-	mov qword [rbp + 48], @9889string_PBook2Etxt#
+	mov qword [rbp + 48], @9883string_PBook2Etxt#
 
  file_test$357:
 	; Parameter 56 pointer string_r#
-	mov qword [rbp + 56], @9890string_r#
+	mov qword [rbp + 56], @9884string_r#
 
  file_test$358:
 	; Call 24 fopen 0
@@ -2740,10 +2740,10 @@ section .text
 	; PostCall 24
 
  file_test$360:
-	; GetReturnValue £temporary3664
+	; GetReturnValue £temporary3685
 
  file_test$361:
-	; Assign inFilePtr £temporary3664
+	; Assign inFilePtr £temporary3685
 	mov [rbp + 24], rbx
 
  file_test$362:
@@ -2761,15 +2761,15 @@ section .text
 
  file_test$365:
 	; Parameter 64 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 64], @9894string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 64], @9888string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  file_test$366:
 	; Parameter 72 pointer string_inFilePtr20213D20NULL#
-	mov qword [rbp + 72], @9895string_inFilePtr20213D20NULL#
+	mov qword [rbp + 72], @9889string_inFilePtr20213D20NULL#
 
  file_test$367:
 	; Parameter 80 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 80], @9896string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 80], @9890string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$368:
 	; Parameter 88 signed int integral4$119#
@@ -2805,15 +2805,15 @@ section .text
 
  file_test$375:
 	; Parameter 56 pointer string_0A252D24s20252D24s0A#
-	mov qword [rbp + 56], @9898string_0A252D24s20252D24s0A#
+	mov qword [rbp + 56], @9892string_0A252D24s20252D24s0A#
 
  file_test$376:
 	; Parameter 64 pointer string_Name#
-	mov qword [rbp + 64], @9899string_Name#
+	mov qword [rbp + 64], @9893string_Name#
 
  file_test$377:
 	; Parameter 72 pointer string_Phone#
-	mov qword [rbp + 72], @9900string_Phone#
+	mov qword [rbp + 72], @9894string_Phone#
 
  file_test$378:
 	; Call 32 printf 16
@@ -2832,15 +2832,15 @@ section .text
 
  file_test$381:
 	; Parameter 56 pointer string_252D24s20252D24s0A#
-	mov qword [rbp + 56], @9901string_252D24s20252D24s0A#
+	mov qword [rbp + 56], @9895string_252D24s20252D24s0A#
 
  file_test$382:
 	; Parameter 64 pointer string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#
-	mov qword [rbp + 64], @9902string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#
+	mov qword [rbp + 64], @9896string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#
 
  file_test$383:
 	; Parameter 72 pointer string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#
-	mov qword [rbp + 72], @9903string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#
+	mov qword [rbp + 72], @9897string_3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D3D#
 
  file_test$384:
 	; Call 32 printf 16
@@ -2864,15 +2864,15 @@ section .text
 
  file_test$388:
 	; Parameter 72 pointer string_25i#
-	mov qword [rbp + 72], @9906string_25i#
+	mov qword [rbp + 72], @9900string_25i#
 
  file_test$389:
-	; Address £temporary3671 size
+	; Address £temporary3692 size
 	mov rsi, rbp
 	add rsi, 36
 
  file_test$390:
-	; Parameter 80 pointer £temporary3671
+	; Parameter 80 pointer £temporary3692
 	mov [rbp + 80], rsi
 
  file_test$391:
@@ -2892,7 +2892,7 @@ section .text
 
  file_test$394:
 	; Parameter 64 pointer string_size2025i0A#
-	mov qword [rbp + 64], @9907string_size2025i0A#
+	mov qword [rbp + 64], @9901string_size2025i0A#
 
  file_test$395:
 	; Parameter 72 signed int size
@@ -2931,7 +2931,7 @@ section .text
 
  file_test$402:
 	; Parameter 112 pointer string_25s25s#
-	mov qword [rbp + 112], @9916string_25s25s#
+	mov qword [rbp + 112], @9910string_25s25s#
 
  file_test$403:
 	; Parameter 120 pointer name
@@ -2960,7 +2960,7 @@ section .text
 
  file_test$408:
 	; Parameter 104 pointer string_252D24s20252D24s0A#
-	mov qword [rbp + 104], @9917string_252D24s20252D24s0A#
+	mov qword [rbp + 104], @9911string_252D24s20252D24s0A#
 
  file_test$409:
 	; Parameter 112 pointer name
@@ -2997,7 +2997,7 @@ section .text
 
  file_test$416:
 	; Parameter 56 pointer string_0A#
-	mov qword [rbp + 56], @9918string_0A#
+	mov qword [rbp + 56], @9912string_0A#
 
  file_test$417:
 	; Call 32 printf 0
@@ -3033,11 +3033,11 @@ section .text
 
  file_test$424:
 	; Parameter 48 pointer string_TestX2Ebin#
-	mov qword [rbp + 48], @9919string_TestX2Ebin#
+	mov qword [rbp + 48], @9913string_TestX2Ebin#
 
  file_test$425:
 	; Parameter 56 pointer string_w#
-	mov qword [rbp + 56], @9920string_w#
+	mov qword [rbp + 56], @9914string_w#
 
  file_test$426:
 	; Call 24 fopen 0
@@ -3050,10 +3050,10 @@ section .text
 	; PostCall 24
 
  file_test$428:
-	; GetReturnValue £temporary3680
+	; GetReturnValue £temporary3701
 
  file_test$429:
-	; Assign outFilePtr £temporary3680
+	; Assign outFilePtr £temporary3701
 	mov [rbp + 24], rbx
 
  file_test$430:
@@ -3071,15 +3071,15 @@ section .text
 
  file_test$433:
 	; Parameter 64 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 64], @9924string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 64], @9918string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  file_test$434:
 	; Parameter 72 pointer string_outFilePtr20213D20NULL#
-	mov qword [rbp + 72], @9925string_outFilePtr20213D20NULL#
+	mov qword [rbp + 72], @9919string_outFilePtr20213D20NULL#
 
  file_test$435:
 	; Parameter 80 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 80], @9926string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 80], @9920string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$436:
 	; Parameter 88 signed int integral4$171#
@@ -3118,12 +3118,12 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$444:
-	; Address £temporary3685 size
+	; Address £temporary3706 size
 	mov rsi, rbp
 	add rsi, 32
 
  file_test$445:
-	; Parameter 64 pointer £temporary3685
+	; Parameter 64 pointer £temporary3706
 	mov [rbp + 64], rsi
 
  file_test$446:
@@ -3160,13 +3160,13 @@ section .text
 	jge file_test$466
 
  file_test$453:
-	; Multiply £temporary3689 index index
+	; Multiply £temporary3710 index index
 	mov eax, [rbp + 36]
 	xor edx, edx
 	imul dword [rbp + 36]
 
  file_test$454:
-	; IntegralToFloating £temporary3690 £temporary3689
+	; IntegralToFloating £temporary3711 £temporary3710
 	mov [container4bytes#], eax
 	fild dword [container4bytes#]
 
@@ -3178,12 +3178,12 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$457:
-	; Address £temporary3691 value
+	; Address £temporary3712 value
 	mov rsi, rbp
 	add rsi, 40
 
  file_test$458:
-	; Parameter 72 pointer £temporary3691
+	; Parameter 72 pointer £temporary3712
 	mov [rbp + 72], rsi
 
  file_test$459:
@@ -3240,11 +3240,11 @@ section .text
 
  file_test$471:
 	; Parameter 48 pointer string_TestX2Ebin#
-	mov qword [rbp + 48], @9938string_TestX2Ebin#
+	mov qword [rbp + 48], @9932string_TestX2Ebin#
 
  file_test$472:
 	; Parameter 56 pointer string_r#
-	mov qword [rbp + 56], @9939string_r#
+	mov qword [rbp + 56], @9933string_r#
 
  file_test$473:
 	; Call 24 fopen 0
@@ -3257,10 +3257,10 @@ section .text
 	; PostCall 24
 
  file_test$475:
-	; GetReturnValue £temporary3694
+	; GetReturnValue £temporary3715
 
  file_test$476:
-	; Assign inFilePtr £temporary3694
+	; Assign inFilePtr £temporary3715
 	mov [rbp + 24], rbx
 
  file_test$477:
@@ -3278,15 +3278,15 @@ section .text
 
  file_test$480:
 	; Parameter 72 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 72], @9945string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 72], @9939string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  file_test$481:
 	; Parameter 80 pointer string_inFilePtr20213D20NULL#
-	mov qword [rbp + 80], @9946string_inFilePtr20213D20NULL#
+	mov qword [rbp + 80], @9940string_inFilePtr20213D20NULL#
 
  file_test$482:
 	; Parameter 88 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 88], @9947string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 88], @9941string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$483:
 	; Parameter 96 signed int integral4$188#
@@ -3321,12 +3321,12 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$490:
-	; Address £temporary3699 size
+	; Address £temporary3720 size
 	mov rsi, rbp
 	add rsi, 32
 
  file_test$491:
-	; Parameter 64 pointer £temporary3699
+	; Parameter 64 pointer £temporary3720
 	mov [rbp + 64], rsi
 
  file_test$492:
@@ -3357,7 +3357,7 @@ section .text
 
  file_test$498:
 	; Parameter 64 pointer string_size13A2025i0A#
-	mov qword [rbp + 64], @9951string_size13A2025i0A#
+	mov qword [rbp + 64], @9945string_size13A2025i0A#
 
  file_test$499:
 	; Parameter 72 signed int size
@@ -3390,12 +3390,12 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$505:
-	; Address £temporary3704 value
+	; Address £temporary3725 value
 	mov rsi, rbp
 	add rsi, 40
 
  file_test$506:
-	; Parameter 72 pointer £temporary3704
+	; Parameter 72 pointer £temporary3725
 	mov [rbp + 72], rsi
 
  file_test$507:
@@ -3426,7 +3426,7 @@ section .text
 
  file_test$513:
 	; Parameter 72 pointer string_index13A2025i3A20value2025f0A#
-	mov qword [rbp + 72], @9957string_index13A2025i3A20value2025f0A#
+	mov qword [rbp + 72], @9951string_index13A2025i3A20value2025f0A#
 
  file_test$514:
 	; Parameter 80 signed int index
@@ -3466,7 +3466,7 @@ section .text
 
  file_test$522:
 	; Parameter 64 pointer string_0A#
-	mov qword [rbp + 64], @9958string_0A#
+	mov qword [rbp + 64], @9952string_0A#
 
  file_test$523:
 	; Call 40 printf 0
@@ -3502,11 +3502,11 @@ section .text
 
  file_test$530:
 	; Parameter 48 pointer string_TestY2Ebin#
-	mov qword [rbp + 48], @9959string_TestY2Ebin#
+	mov qword [rbp + 48], @9953string_TestY2Ebin#
 
  file_test$531:
 	; Parameter 56 pointer string_w#
-	mov qword [rbp + 56], @9960string_w#
+	mov qword [rbp + 56], @9954string_w#
 
  file_test$532:
 	; Call 24 fopen 0
@@ -3519,10 +3519,10 @@ section .text
 	; PostCall 24
 
  file_test$534:
-	; GetReturnValue £temporary3709
+	; GetReturnValue £temporary3730
 
  file_test$535:
-	; Assign outFilePtr £temporary3709
+	; Assign outFilePtr £temporary3730
 	mov [rbp + 24], rbx
 
  file_test$536:
@@ -3540,15 +3540,15 @@ section .text
 
  file_test$539:
 	; Parameter 64 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 64], @9964string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 64], @9958string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  file_test$540:
 	; Parameter 72 pointer string_outFilePtr20213D20NULL#
-	mov qword [rbp + 72], @9965string_outFilePtr20213D20NULL#
+	mov qword [rbp + 72], @9959string_outFilePtr20213D20NULL#
 
  file_test$541:
 	; Parameter 80 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 80], @9966string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 80], @9960string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$542:
 	; Parameter 88 signed int integral4$203#
@@ -3594,13 +3594,13 @@ section .text
 	jge file_test$564
 
  file_test$551:
-	; Multiply £temporary3716 index index
+	; Multiply £temporary3737 index index
 	mov eax, [rbp + 36]
 	xor edx, edx
 	imul dword [rbp + 36]
 
  file_test$552:
-	; IntegralToFloating £temporary3717 £temporary3716
+	; IntegralToFloating £temporary3738 £temporary3737
 	mov [container4bytes#], eax
 	fild dword [container4bytes#]
 
@@ -3612,12 +3612,12 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$555:
-	; Address £temporary3718 value
+	; Address £temporary3739 value
 	mov rsi, rbp
 	add rsi, 40
 
  file_test$556:
-	; Parameter 72 pointer £temporary3718
+	; Parameter 72 pointer £temporary3739
 	mov [rbp + 72], rsi
 
  file_test$557:
@@ -3674,11 +3674,11 @@ section .text
 
  file_test$569:
 	; Parameter 48 pointer string_TestY2Ebin#
-	mov qword [rbp + 48], @9976string_TestY2Ebin#
+	mov qword [rbp + 48], @9970string_TestY2Ebin#
 
  file_test$570:
 	; Parameter 56 pointer string_r#
-	mov qword [rbp + 56], @9977string_r#
+	mov qword [rbp + 56], @9971string_r#
 
  file_test$571:
 	; Call 24 fopen 0
@@ -3691,10 +3691,10 @@ section .text
 	; PostCall 24
 
  file_test$573:
-	; GetReturnValue £temporary3721
+	; GetReturnValue £temporary3742
 
  file_test$574:
-	; Assign inFilePtr £temporary3721
+	; Assign inFilePtr £temporary3742
 	mov [rbp + 24], rbx
 
  file_test$575:
@@ -3712,15 +3712,15 @@ section .text
 
  file_test$578:
 	; Parameter 64 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 64], @9981string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 64], @9975string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  file_test$579:
 	; Parameter 72 pointer string_inFilePtr20213D20NULL#
-	mov qword [rbp + 72], @9982string_inFilePtr20213D20NULL#
+	mov qword [rbp + 72], @9976string_inFilePtr20213D20NULL#
 
  file_test$580:
 	; Parameter 80 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 80], @9983string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 80], @9977string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$581:
 	; Parameter 88 signed int integral4$217#
@@ -3759,12 +3759,12 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$589:
-	; Address £temporary3726 value
+	; Address £temporary3747 value
 	mov rsi, rbp
 	add rsi, 36
 
  file_test$590:
-	; Parameter 68 pointer £temporary3726
+	; Parameter 68 pointer £temporary3747
 	mov [rbp + 68], rsi
 
  file_test$591:
@@ -3791,10 +3791,10 @@ section .text
 	; PostCall 44
 
  file_test$596:
-	; GetReturnValue £temporary3727
+	; GetReturnValue £temporary3748
 
  file_test$597:
-	; LessThanEqual 608 £temporary3727 integral4$0#
+	; LessThanEqual 608 £temporary3748 integral4$0#
 	cmp ebx, 0
 	jle file_test$608
 
@@ -3803,10 +3803,10 @@ section .text
 
  file_test$599:
 	; Parameter 68 pointer string_index23A2025i3A20value2025f0A#
-	mov qword [rbp + 68], @9991string_index23A2025i3A20value2025f0A#
+	mov qword [rbp + 68], @9985string_index23A2025i3A20value2025f0A#
 
  file_test$600:
-	; Assign £temporary3729 index
+	; Assign £temporary3750 index
 	mov eax, [rbp + 32]
 
  file_test$601:
@@ -3814,7 +3814,7 @@ section .text
 	inc dword [rbp + 32]
 
  file_test$602:
-	; Parameter 76 signed int £temporary3729
+	; Parameter 76 signed int £temporary3750
 	mov [rbp + 76], eax
 
  file_test$603:
@@ -3846,7 +3846,7 @@ section .text
 
  file_test$609:
 	; Parameter 56 pointer string_0A#
-	mov qword [rbp + 56], @9993string_0A#
+	mov qword [rbp + 56], @9987string_0A#
 
  file_test$610:
 	; Call 32 printf 0
@@ -3882,11 +3882,11 @@ section .text
 
  file_test$617:
 	; Parameter 48 pointer string_TestY2Ebin#
-	mov qword [rbp + 48], @9994string_TestY2Ebin#
+	mov qword [rbp + 48], @9988string_TestY2Ebin#
 
  file_test$618:
 	; Parameter 56 pointer string_r#
-	mov qword [rbp + 56], @9995string_r#
+	mov qword [rbp + 56], @9989string_r#
 
  file_test$619:
 	; Call 24 fopen 0
@@ -3899,10 +3899,10 @@ section .text
 	; PostCall 24
 
  file_test$621:
-	; GetReturnValue £temporary3733
+	; GetReturnValue £temporary3755
 
  file_test$622:
-	; Assign inFilePtr £temporary3733
+	; Assign inFilePtr £temporary3755
 	mov [rbp + 24], rbx
 
  file_test$623:
@@ -3920,15 +3920,15 @@ section .text
 
  file_test$626:
 	; Parameter 64 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 64], @9999string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 64], @9993string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  file_test$627:
 	; Parameter 72 pointer string_inFilePtr20213D20NULL#
-	mov qword [rbp + 72], @10000string_inFilePtr20213D20NULL#
+	mov qword [rbp + 72], @9994string_inFilePtr20213D20NULL#
 
  file_test$628:
 	; Parameter 80 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 80], @10001string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 80], @9995string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$629:
 	; Parameter 88 signed int integral4$232#
@@ -3982,10 +3982,10 @@ section .text
 	; PostCall 36
 
  file_test$640:
-	; GetReturnValue £temporary3738
+	; GetReturnValue £temporary3760
 
  file_test$641:
-	; NotEqual 660 £temporary3738 integral4$0#
+	; NotEqual 660 £temporary3760 integral4$0#
 	cmp ebx, 0
 	jne file_test$660
 
@@ -3993,12 +3993,12 @@ section .text
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$643:
-	; Address £temporary3741 value
+	; Address £temporary3763 value
 	mov rsi, rbp
 	add rsi, 36
 
  file_test$644:
-	; Parameter 68 pointer £temporary3741
+	; Parameter 68 pointer £temporary3763
 	mov [rbp + 68], rsi
 
  file_test$645:
@@ -4029,10 +4029,10 @@ section .text
 
  file_test$651:
 	; Parameter 68 pointer string_index33A2025i3A20value2025f0A#
-	mov qword [rbp + 68], @10009string_index33A2025i3A20value2025f0A#
+	mov qword [rbp + 68], @10003string_index33A2025i3A20value2025f0A#
 
  file_test$652:
-	; Assign £temporary3743 index
+	; Assign £temporary3765 index
 	mov eax, [rbp + 32]
 
  file_test$653:
@@ -4040,7 +4040,7 @@ section .text
 	inc dword [rbp + 32]
 
  file_test$654:
-	; Parameter 76 signed int £temporary3743
+	; Parameter 76 signed int £temporary3765
 	mov [rbp + 76], eax
 
  file_test$655:
@@ -4072,7 +4072,7 @@ section .text
 
  file_test$661:
 	; Parameter 56 pointer string_0A#
-	mov qword [rbp + 56], @10011string_0A#
+	mov qword [rbp + 56], @10005string_0A#
 
  file_test$662:
 	; Call 32 printf 0
@@ -4108,11 +4108,11 @@ section .text
 
  file_test$669:
 	; Parameter 48 pointer string_TestX2Ebin#
-	mov qword [rbp + 48], @10012string_TestX2Ebin#
+	mov qword [rbp + 48], @10006string_TestX2Ebin#
 
  file_test$670:
 	; Parameter 56 pointer string_r#
-	mov qword [rbp + 56], @10013string_r#
+	mov qword [rbp + 56], @10007string_r#
 
  file_test$671:
 	; Call 24 fopen 0
@@ -4125,10 +4125,10 @@ section .text
 	; PostCall 24
 
  file_test$673:
-	; GetReturnValue £temporary3747
+	; GetReturnValue £temporary3770
 
  file_test$674:
-	; Assign inFilePtr £temporary3747
+	; Assign inFilePtr £temporary3770
 	mov [rbp + 24], rbx
 
  file_test$675:
@@ -4146,15 +4146,15 @@ section .text
 
  file_test$678:
 	; Parameter 68 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 68], @10018string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 68], @10012string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  file_test$679:
 	; Parameter 76 pointer string_inFilePtr20213D20NULL#
-	mov qword [rbp + 76], @10019string_inFilePtr20213D20NULL#
+	mov qword [rbp + 76], @10013string_inFilePtr20213D20NULL#
 
  file_test$680:
 	; Parameter 84 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 84], @10020string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 84], @10014string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$681:
 	; Parameter 92 signed int integral4$250#
@@ -4189,12 +4189,12 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$688:
-	; Address £temporary3752 size
+	; Address £temporary3775 size
 	mov rsi, rbp
 	add rsi, 32
 
  file_test$689:
-	; Parameter 60 pointer £temporary3752
+	; Parameter 60 pointer £temporary3775
 	mov [rbp + 60], rsi
 
  file_test$690:
@@ -4225,7 +4225,7 @@ section .text
 
  file_test$696:
 	; Parameter 60 pointer string_size43A2025i20total2025i0A#
-	mov qword [rbp + 60], @10024string_size43A2025i20total2025i0A#
+	mov qword [rbp + 60], @10018string_size43A2025i20total2025i0A#
 
  file_test$697:
 	; Parameter 68 signed int size
@@ -4233,13 +4233,13 @@ section .text
 	mov [rbp + 68], eax
 
  file_test$698:
-	; Multiply £temporary3754 size integral4$8#
+	; Multiply £temporary3777 size integral4$8#
 	mov eax, [rbp + 32]
 	xor edx, edx
-	imul dword [@10025integral4$8#]
+	imul dword [@10019integral4$8#]
 
  file_test$699:
-	; Parameter 72 signed int £temporary3754
+	; Parameter 72 signed int £temporary3777
 	mov [rbp + 72], eax
 
  file_test$700:
@@ -4258,7 +4258,7 @@ section .text
 	; Multiply total size integral4$8#
 	mov eax, [rbp + 32]
 	xor edx, edx
-	imul dword [@10026integral4$8#]
+	imul dword [@10020integral4$8#]
 	mov [rbp + 36], eax
 
  file_test$703:
@@ -4280,25 +4280,25 @@ section .text
 	; PostCall 44
 
  file_test$707:
-	; GetReturnValue £temporary3757
+	; GetReturnValue £temporary3780
 
  file_test$708:
-	; Assign p £temporary3757
+	; Assign p £temporary3780
 	mov [rbp + 44], rbx
 
  file_test$709:
-	; Multiply £temporary3758 size integral4$8#
+	; Multiply £temporary3781 size integral4$8#
 	mov eax, [rbp + 32]
 	xor edx, edx
-	imul dword [@10030integral4$8#]
+	imul dword [@10024integral4$8#]
 
  file_test$710:
-	; IntegralToIntegral £temporary3759 £temporary3758
+	; IntegralToIntegral £temporary3782 £temporary3781
 	mov rbx, 4294967295
 	and rax, rbx
 
  file_test$711:
-	; Add endPtr p £temporary3759
+	; Add endPtr p £temporary3782
 	mov rbx, [rbp + 44]
 	add rbx, rax
 	mov [rbp + 52], rbx
@@ -4318,15 +4318,15 @@ section .text
 
  file_test$715:
 	; Parameter 92 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 92], @10034string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 92], @10028string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  file_test$716:
 	; Parameter 100 pointer string_p20213D20NULL#
-	mov qword [rbp + 100], @10035string_p20213D20NULL#
+	mov qword [rbp + 100], @10029string_p20213D20NULL#
 
  file_test$717:
 	; Parameter 108 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 108], @10036string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 108], @10030string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$718:
 	; Parameter 116 signed int integral4$257#
@@ -4362,7 +4362,7 @@ section .text
 
  file_test$725:
 	; Parameter 84 pointer string_malloc43A2025u2025u2025u0A#
-	mov qword [rbp + 84], @10038string_malloc43A2025u2025u2025u0A#
+	mov qword [rbp + 84], @10032string_malloc43A2025u2025u2025u0A#
 
  file_test$726:
 	; Parameter 92 pointer p
@@ -4438,7 +4438,7 @@ section .text
 
  file_test$741:
 	; Parameter 84 pointer string_index43A2025i3A20value2025f0A#
-	mov qword [rbp + 84], @10042string_index43A2025i3A20value2025f0A#
+	mov qword [rbp + 84], @10036string_index43A2025i3A20value2025f0A#
 
  file_test$742:
 	; Parameter 92 signed int index
@@ -4446,30 +4446,30 @@ section .text
 	mov [rbp + 92], eax
 
  file_test$743:
-	; Multiply £temporary3770 index integral4$8#
+	; Multiply £temporary3793 index integral4$8#
 	mov eax, [rbp + 40]
 	xor edx, edx
-	imul dword [@10043integral4$8#]
+	imul dword [@10037integral4$8#]
 
  file_test$744:
-	; IntegralToIntegral £temporary3771 £temporary3770
+	; IntegralToIntegral £temporary3794 £temporary3793
 	mov rbx, 4294967295
 	and rax, rbx
 
  file_test$745:
-	; Add £temporary3772 p £temporary3771
+	; Add £temporary3795 p £temporary3794
 	mov rsi, [rbp + 44]
 	add rsi, rax
 
  file_test$746:
-	; Dereference £temporary3769 £temporary3772 0
+	; Dereference £temporary3792 £temporary3795 0
 
  file_test$747:
-	; PushFloat £temporary3769
+	; PushFloat £temporary3792
 	fld qword [rsi]
 
  file_test$748:
-	; Parameter 96 double £temporary3769
+	; Parameter 96 double £temporary3792
 	fstp qword [rbp + 96]
 
  file_test$749:
@@ -4497,7 +4497,7 @@ section .text
 
  file_test$754:
 	; Parameter 84 pointer string_0A#
-	mov qword [rbp + 84], @10044string_0A#
+	mov qword [rbp + 84], @10038string_0A#
 
  file_test$755:
 	; Call 60 printf 0
@@ -4767,11 +4767,11 @@ section .text
 
  file_test$820:
 	; Parameter 256 pointer string_Block2Ebin#
-	mov qword [rbp + 256], @10108string_Block2Ebin#
+	mov qword [rbp + 256], @10102string_Block2Ebin#
 
  file_test$821:
 	; Parameter 264 pointer string_w#
-	mov qword [rbp + 264], @10109string_w#
+	mov qword [rbp + 264], @10103string_w#
 
  file_test$822:
 	; Call 232 fopen 0
@@ -4784,10 +4784,10 @@ section .text
 	; PostCall 232
 
  file_test$824:
-	; GetReturnValue £temporary3837
+	; GetReturnValue £temporary3860
 
  file_test$825:
-	; Assign outFilePtr £temporary3837
+	; Assign outFilePtr £temporary3860
 	mov [rbp + 232], rbx
 
  file_test$826:
@@ -4795,11 +4795,11 @@ section .text
 
  file_test$827:
 	; Parameter 264 pointer string_Block2Ebin#
-	mov qword [rbp + 264], @10111string_Block2Ebin#
+	mov qword [rbp + 264], @10105string_Block2Ebin#
 
  file_test$828:
 	; Parameter 272 pointer string_r#
-	mov qword [rbp + 272], @10112string_r#
+	mov qword [rbp + 272], @10106string_r#
 
  file_test$829:
 	; Call 240 fopen 0
@@ -4812,10 +4812,10 @@ section .text
 	; PostCall 240
 
  file_test$831:
-	; GetReturnValue £temporary3838
+	; GetReturnValue £temporary3861
 
  file_test$832:
-	; Assign inFilePtr £temporary3838
+	; Assign inFilePtr £temporary3861
 	mov [rbp + 240], rbx
 
  file_test$833:
@@ -4833,15 +4833,15 @@ section .text
 
  file_test$836:
 	; Parameter 280 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 280], @10116string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 280], @10110string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  file_test$837:
 	; Parameter 288 pointer string_outFilePtr20213D20NULL#
-	mov qword [rbp + 288], @10117string_outFilePtr20213D20NULL#
+	mov qword [rbp + 288], @10111string_outFilePtr20213D20NULL#
 
  file_test$838:
 	; Parameter 296 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 296], @10118string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 296], @10112string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$839:
 	; Parameter 304 signed int integral4$284#
@@ -4887,15 +4887,15 @@ section .text
 
  file_test$848:
 	; Parameter 280 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 280], @10122string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 280], @10116string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  file_test$849:
 	; Parameter 288 pointer string_inFilePtr20213D20NULL#
-	mov qword [rbp + 288], @10123string_inFilePtr20213D20NULL#
+	mov qword [rbp + 288], @10117string_inFilePtr20213D20NULL#
 
  file_test$850:
 	; Parameter 296 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 296], @10124string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 296], @10118string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$851:
 	; Parameter 304 signed int integral4$285#
@@ -4994,10 +4994,10 @@ section .text
 	; PostCall 248
 
  file_test$872:
-	; GetReturnValue £temporary3849
+	; GetReturnValue £temporary3872
 
  file_test$873:
-	; NotEqual 893 £temporary3849 integral4$0#
+	; NotEqual 893 £temporary3872 integral4$0#
 	cmp ebx, 0
 	jne file_test$893
 
@@ -5005,12 +5005,12 @@ section .text
 	; PreCall 248 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$875:
-	; Address £temporary3852 person
+	; Address £temporary3875 person
 	mov rsi, rbp
 	add rsi, 180
 
  file_test$876:
-	; Parameter 272 pointer £temporary3852
+	; Parameter 272 pointer £temporary3875
 	mov [rbp + 272], rsi
 
  file_test$877:
@@ -5041,7 +5041,7 @@ section .text
 
  file_test$883:
 	; Parameter 272 pointer string_Name20203A2025s0A#
-	mov qword [rbp + 272], @10131string_Name20203A2025s0A#
+	mov qword [rbp + 272], @10125string_Name20203A2025s0A#
 
  file_test$884:
 	; Parameter 280 pointer person.name
@@ -5065,7 +5065,7 @@ section .text
 
  file_test$888:
 	; Parameter 272 pointer string_Phone203A2025d0A#
-	mov qword [rbp + 272], @10132string_Phone203A2025d0A#
+	mov qword [rbp + 272], @10126string_Phone203A2025d0A#
 
  file_test$889:
 	; Parameter 280 signed int person.phone
@@ -5111,11 +5111,11 @@ section .text
 
  file_test$898:
 	; Parameter 48 pointer string_outx2Etxt#
-	mov qword [rbp + 48], @10133string_outx2Etxt#
+	mov qword [rbp + 48], @10127string_outx2Etxt#
 
  file_test$899:
 	; Parameter 56 pointer string_r#
-	mov qword [rbp + 56], @10134string_r#
+	mov qword [rbp + 56], @10128string_r#
 
  file_test$900:
 	; Call 24 fopen 0
@@ -5128,10 +5128,10 @@ section .text
 	; PostCall 24
 
  file_test$902:
-	; GetReturnValue £temporary3859
+	; GetReturnValue £temporary3882
 
  file_test$903:
-	; Assign inFilePtr £temporary3859
+	; Assign inFilePtr £temporary3882
 	mov [rbp + 24], rbx
 
  file_test$904:
@@ -5149,15 +5149,15 @@ section .text
 
  file_test$907:
 	; Parameter 64 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 64], @10138string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 64], @10132string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  file_test$908:
 	; Parameter 72 pointer string_inFilePtr20213D20NULL#
-	mov qword [rbp + 72], @10139string_inFilePtr20213D20NULL#
+	mov qword [rbp + 72], @10133string_inFilePtr20213D20NULL#
 
  file_test$909:
 	; Parameter 80 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 80], @10140string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 80], @10134string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  file_test$910:
 	; Parameter 88 signed int integral4$301#
@@ -5215,10 +5215,10 @@ section .text
 	; PostCall 32
 
  file_test$922:
-	; GetReturnValue £temporary3864
+	; GetReturnValue £temporary3887
 
  file_test$923:
-	; Assign size £temporary3864
+	; Assign size £temporary3887
 	mov [rbp + 32], ebx
 
  file_test$924:
@@ -5240,12 +5240,12 @@ section .text
 	; PostCall 36
 
  file_test$928:
-	; GetReturnValue £temporary3865
+	; GetReturnValue £temporary3888
 
  file_test$929:
-	; LessThanEqual 948 £temporary3865 integral4$1#
+	; LessThanEqual 947 £temporary3888 integral4$1#
 	cmp ebx, 1
-	jle file_test$948
+	jle file_test$947
 
  file_test$930:
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
@@ -5260,880 +5260,877 @@ section .text
 	dec dword [rbp + 32]
 
  file_test$933:
-	; Assign £temporary3867 size
+	; Parameter 68 signed int size
 	mov eax, [rbp + 32]
-
- file_test$934:
-	; Parameter 68 signed int £temporary3867
 	mov [rbp + 68], eax
 
- file_test$935:
+ file_test$934:
 	; Parameter 72 signed int SEEK_SET
 	mov dword [rbp + 72], 0
 
- file_test$936:
+ file_test$935:
 	; Call 36 fseek 0
-	mov qword [rbp + 36], file_test$937
+	mov qword [rbp + 36], file_test$936
 	mov [rbp + 44], rbp
 	add rbp, 36
 	jmp fseek
 
- file_test$937:
+ file_test$936:
 	; PostCall 36
+
+ file_test$937:
+	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$938:
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$939:
-	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-
- file_test$940:
 	; Parameter 60 pointer inFilePtr
 	mov rax, [rbp + 24]
 	mov [rbp + 60], rax
 
- file_test$941:
+ file_test$940:
 	; Call 36 fgetc 0
-	mov qword [rbp + 36], file_test$942
+	mov qword [rbp + 36], file_test$941
 	mov [rbp + 44], rbp
 	add rbp, 36
 	jmp fgetc
 
- file_test$942:
+ file_test$941:
 	; PostCall 36
 
- file_test$943:
-	; GetReturnValue £temporary3869
+ file_test$942:
+	; GetReturnValue £temporary3892
 
- file_test$944:
-	; Parameter 60 signed int £temporary3869
+ file_test$943:
+	; Parameter 60 signed int £temporary3892
 	mov [rbp + 60], ebx
 
- file_test$945:
+ file_test$944:
 	; Call 36 putchar 0
-	mov qword [rbp + 36], file_test$946
+	mov qword [rbp + 36], file_test$945
 	mov [rbp + 44], rbp
 	add rbp, 36
 	jmp putchar
 
- file_test$946:
+ file_test$945:
 	; PostCall 36
 
- file_test$947:
+ file_test$946:
 	; Jump 924
 	jmp file_test$924
 
- file_test$948:
+ file_test$947:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- file_test$949:
+ file_test$948:
 	; Parameter 56 pointer inFilePtr
 	mov rax, [rbp + 24]
 	mov [rbp + 56], rax
 
- file_test$950:
+ file_test$949:
 	; Call 32 fclose 0
-	mov qword [rbp + 32], file_test$951
+	mov qword [rbp + 32], file_test$950
 	mov [rbp + 40], rbp
 	add rbp, 32
 	jmp fclose
 
- file_test$951:
+ file_test$950:
 	; PostCall 32
 
- file_test$952:
+ file_test$951:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ file_test$952:
+	; Parameter 48 pointer string_fileexists2022X223A2025s0A#
+	mov qword [rbp + 48], @10140string_fileexists2022X223A2025s0A#
 
  file_test$953:
-	; Parameter 48 pointer string_fileexists2022X223A2025s0A#
-	mov qword [rbp + 48], @10146string_fileexists2022X223A2025s0A#
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$954:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 80 pointer string_X#
+	mov qword [rbp + 80], @10141string_X#
 
  file_test$955:
-	; Parameter 80 pointer string_X#
-	mov qword [rbp + 80], @10147string_X#
+	; Call 56 fileexists 0
+	mov qword [rbp + 56], file_test$956
+	mov [rbp + 64], rbp
+	add rbp, 56
+	jmp fileexists
 
  file_test$956:
-	; Call 56 fileexists 0
-	mov qword [rbp + 56], file_test$957
-	mov [rbp + 64], rbp
-	add rbp, 56
-	jmp fileexists
+	; PostCall 56
 
  file_test$957:
-	; PostCall 56
+	; GetReturnValue £temporary3895
 
  file_test$958:
-	; GetReturnValue £temporary3872
+	; Equal 961 £temporary3895 integral4$0#
+	cmp ebx, 0
+	je file_test$961
 
  file_test$959:
-	; Equal 962 £temporary3872 integral4$0#
-	cmp ebx, 0
-	je file_test$962
+	; Assign £temporary3897 string_Yes#
+	mov rax, @10142string_Yes#
 
  file_test$960:
-	; Assign £temporary3874 string_Yes#
-	mov rax, @10148string_Yes#
+	; Jump 962
+	jmp file_test$962
 
  file_test$961:
-	; Jump 963
-	jmp file_test$963
+	; Assign £temporary3897 string_No#
+	mov rax, @10143string_No#
 
  file_test$962:
-	; Assign £temporary3874 string_No#
-	mov rax, @10149string_No#
+	; Parameter 56 pointer £temporary3897
+	mov [rbp + 56], rax
 
  file_test$963:
-	; Parameter 56 pointer £temporary3874
-	mov [rbp + 56], rax
+	; Call 24 printf 8
+	mov qword [rbp + 24], file_test$964
+	mov [rbp + 32], rbp
+	add rbp, 24
+	mov rdi, rbp
+	add rdi, 8
+	jmp printf
 
  file_test$964:
-	; Call 24 printf 8
-	mov qword [rbp + 24], file_test$965
-	mov [rbp + 32], rbp
-	add rbp, 24
-	mov rdi, rbp
-	add rdi, 8
-	jmp printf
+	; PostCall 24
 
  file_test$965:
-	; PostCall 24
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$966:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 48 pointer string_fileexists2022Y223A2025s0A#
+	mov qword [rbp + 48], @10145string_fileexists2022Y223A2025s0A#
 
  file_test$967:
-	; Parameter 48 pointer string_fileexists2022Y223A2025s0A#
-	mov qword [rbp + 48], @10151string_fileexists2022Y223A2025s0A#
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$968:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 80 pointer string_Y#
+	mov qword [rbp + 80], @10146string_Y#
 
  file_test$969:
-	; Parameter 80 pointer string_Y#
-	mov qword [rbp + 80], @10152string_Y#
+	; Call 56 fileexists 0
+	mov qword [rbp + 56], file_test$970
+	mov [rbp + 64], rbp
+	add rbp, 56
+	jmp fileexists
 
  file_test$970:
-	; Call 56 fileexists 0
-	mov qword [rbp + 56], file_test$971
-	mov [rbp + 64], rbp
-	add rbp, 56
-	jmp fileexists
+	; PostCall 56
 
  file_test$971:
-	; PostCall 56
+	; GetReturnValue £temporary3899
 
  file_test$972:
-	; GetReturnValue £temporary3876
+	; Equal 975 £temporary3899 integral4$0#
+	cmp ebx, 0
+	je file_test$975
 
  file_test$973:
-	; Equal 976 £temporary3876 integral4$0#
-	cmp ebx, 0
-	je file_test$976
+	; Assign £temporary3901 string_Yes#
+	mov rax, @10147string_Yes#
 
  file_test$974:
-	; Assign £temporary3878 string_Yes#
-	mov rax, @10153string_Yes#
+	; Jump 976
+	jmp file_test$976
 
  file_test$975:
-	; Jump 977
-	jmp file_test$977
+	; Assign £temporary3901 string_No#
+	mov rax, @10148string_No#
 
  file_test$976:
-	; Assign £temporary3878 string_No#
-	mov rax, @10154string_No#
+	; Parameter 56 pointer £temporary3901
+	mov [rbp + 56], rax
 
  file_test$977:
-	; Parameter 56 pointer £temporary3878
-	mov [rbp + 56], rax
+	; Call 24 printf 8
+	mov qword [rbp + 24], file_test$978
+	mov [rbp + 32], rbp
+	add rbp, 24
+	mov rdi, rbp
+	add rdi, 8
+	jmp printf
 
  file_test$978:
-	; Call 24 printf 8
-	mov qword [rbp + 24], file_test$979
-	mov [rbp + 32], rbp
-	add rbp, 24
-	mov rdi, rbp
-	add rdi, 8
-	jmp printf
+	; PostCall 24
 
  file_test$979:
-	; PostCall 24
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$980:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 48 pointer string_fileexists2022Main2Easm223A2025s0A#
+	mov qword [rbp + 48], @10150string_fileexists2022Main2Easm223A2025s0A#
 
  file_test$981:
-	; Parameter 48 pointer string_fileexists2022Main2Easm223A2025s0A#
-	mov qword [rbp + 48], @10156string_fileexists2022Main2Easm223A2025s0A#
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$982:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 80 pointer string_Main2Easm#
+	mov qword [rbp + 80], @10151string_Main2Easm#
 
  file_test$983:
-	; Parameter 80 pointer string_Main2Easm#
-	mov qword [rbp + 80], @10157string_Main2Easm#
+	; Call 56 fileexists 0
+	mov qword [rbp + 56], file_test$984
+	mov [rbp + 64], rbp
+	add rbp, 56
+	jmp fileexists
 
  file_test$984:
-	; Call 56 fileexists 0
-	mov qword [rbp + 56], file_test$985
-	mov [rbp + 64], rbp
-	add rbp, 56
-	jmp fileexists
+	; PostCall 56
 
  file_test$985:
-	; PostCall 56
+	; GetReturnValue £temporary3903
 
  file_test$986:
-	; GetReturnValue £temporary3880
+	; Equal 989 £temporary3903 integral4$0#
+	cmp ebx, 0
+	je file_test$989
 
  file_test$987:
-	; Equal 990 £temporary3880 integral4$0#
-	cmp ebx, 0
-	je file_test$990
+	; Assign £temporary3905 string_Yes#
+	mov rax, @10152string_Yes#
 
  file_test$988:
-	; Assign £temporary3882 string_Yes#
-	mov rax, @10158string_Yes#
+	; Jump 990
+	jmp file_test$990
 
  file_test$989:
-	; Jump 991
-	jmp file_test$991
+	; Assign £temporary3905 string_No#
+	mov rax, @10153string_No#
 
  file_test$990:
-	; Assign £temporary3882 string_No#
-	mov rax, @10159string_No#
+	; Parameter 56 pointer £temporary3905
+	mov [rbp + 56], rax
 
  file_test$991:
-	; Parameter 56 pointer £temporary3882
-	mov [rbp + 56], rax
+	; Call 24 printf 8
+	mov qword [rbp + 24], file_test$992
+	mov [rbp + 32], rbp
+	add rbp, 24
+	mov rdi, rbp
+	add rdi, 8
+	jmp printf
 
  file_test$992:
-	; Call 24 printf 8
-	mov qword [rbp + 24], file_test$993
-	mov [rbp + 32], rbp
-	add rbp, 24
-	mov rdi, rbp
-	add rdi, 8
-	jmp printf
+	; PostCall 24
 
  file_test$993:
-	; PostCall 24
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$994:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 48 pointer string_fileexists2022MainX2Easm223A2025s0A#
+	mov qword [rbp + 48], @10155string_fileexists2022MainX2Easm223A2025s0A#
 
  file_test$995:
-	; Parameter 48 pointer string_fileexists2022MainX2Easm223A2025s0A#
-	mov qword [rbp + 48], @10161string_fileexists2022MainX2Easm223A2025s0A#
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$996:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 80 pointer string_MainX2Easm#
+	mov qword [rbp + 80], @10156string_MainX2Easm#
 
  file_test$997:
-	; Parameter 80 pointer string_MainX2Easm#
-	mov qword [rbp + 80], @10162string_MainX2Easm#
+	; Call 56 fileexists 0
+	mov qword [rbp + 56], file_test$998
+	mov [rbp + 64], rbp
+	add rbp, 56
+	jmp fileexists
 
  file_test$998:
-	; Call 56 fileexists 0
-	mov qword [rbp + 56], file_test$999
-	mov [rbp + 64], rbp
-	add rbp, 56
-	jmp fileexists
+	; PostCall 56
 
  file_test$999:
-	; PostCall 56
+	; GetReturnValue £temporary3907
 
  file_test$1000:
-	; GetReturnValue £temporary3884
+	; Equal 1003 £temporary3907 integral4$0#
+	cmp ebx, 0
+	je file_test$1003
 
  file_test$1001:
-	; Equal 1004 £temporary3884 integral4$0#
-	cmp ebx, 0
-	je file_test$1004
+	; Assign £temporary3909 string_Yes#
+	mov rax, @10157string_Yes#
 
  file_test$1002:
-	; Assign £temporary3886 string_Yes#
-	mov rax, @10163string_Yes#
+	; Jump 1004
+	jmp file_test$1004
 
  file_test$1003:
-	; Jump 1005
-	jmp file_test$1005
+	; Assign £temporary3909 string_No#
+	mov rax, @10158string_No#
 
  file_test$1004:
-	; Assign £temporary3886 string_No#
-	mov rax, @10164string_No#
+	; Parameter 56 pointer £temporary3909
+	mov [rbp + 56], rax
 
  file_test$1005:
-	; Parameter 56 pointer £temporary3886
-	mov [rbp + 56], rax
+	; Call 24 printf 8
+	mov qword [rbp + 24], file_test$1006
+	mov [rbp + 32], rbp
+	add rbp, 24
+	mov rdi, rbp
+	add rdi, 8
+	jmp printf
 
  file_test$1006:
-	; Call 24 printf 8
-	mov qword [rbp + 24], file_test$1007
-	mov [rbp + 32], rbp
-	add rbp, 24
-	mov rdi, rbp
-	add rdi, 8
-	jmp printf
+	; PostCall 24
 
  file_test$1007:
-	; PostCall 24
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$1008:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 48 pointer string_fileexists2022Main2Ec223A2025s0A#
+	mov qword [rbp + 48], @10160string_fileexists2022Main2Ec223A2025s0A#
 
  file_test$1009:
-	; Parameter 48 pointer string_fileexists2022Main2Ec223A2025s0A#
-	mov qword [rbp + 48], @10166string_fileexists2022Main2Ec223A2025s0A#
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$1010:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 80 pointer string_Main2Ec#
+	mov qword [rbp + 80], @10161string_Main2Ec#
 
  file_test$1011:
-	; Parameter 80 pointer string_Main2Ec#
-	mov qword [rbp + 80], @10167string_Main2Ec#
+	; Call 56 fileexists 0
+	mov qword [rbp + 56], file_test$1012
+	mov [rbp + 64], rbp
+	add rbp, 56
+	jmp fileexists
 
  file_test$1012:
-	; Call 56 fileexists 0
-	mov qword [rbp + 56], file_test$1013
-	mov [rbp + 64], rbp
-	add rbp, 56
-	jmp fileexists
+	; PostCall 56
 
  file_test$1013:
-	; PostCall 56
+	; GetReturnValue £temporary3911
 
  file_test$1014:
-	; GetReturnValue £temporary3888
+	; Equal 1017 £temporary3911 integral4$0#
+	cmp ebx, 0
+	je file_test$1017
 
  file_test$1015:
-	; Equal 1018 £temporary3888 integral4$0#
-	cmp ebx, 0
-	je file_test$1018
+	; Assign £temporary3913 string_Yes#
+	mov rax, @10162string_Yes#
 
  file_test$1016:
-	; Assign £temporary3890 string_Yes#
-	mov rax, @10168string_Yes#
+	; Jump 1018
+	jmp file_test$1018
 
  file_test$1017:
-	; Jump 1019
-	jmp file_test$1019
+	; Assign £temporary3913 string_No#
+	mov rax, @10163string_No#
 
  file_test$1018:
-	; Assign £temporary3890 string_No#
-	mov rax, @10169string_No#
+	; Parameter 56 pointer £temporary3913
+	mov [rbp + 56], rax
 
  file_test$1019:
-	; Parameter 56 pointer £temporary3890
-	mov [rbp + 56], rax
+	; Call 24 printf 8
+	mov qword [rbp + 24], file_test$1020
+	mov [rbp + 32], rbp
+	add rbp, 24
+	mov rdi, rbp
+	add rdi, 8
+	jmp printf
 
  file_test$1020:
-	; Call 24 printf 8
-	mov qword [rbp + 24], file_test$1021
-	mov [rbp + 32], rbp
-	add rbp, 24
-	mov rdi, rbp
-	add rdi, 8
-	jmp printf
+	; PostCall 24
 
  file_test$1021:
-	; PostCall 24
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$1022:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 48 pointer string_fileexists2022MainX2Ec223A2025s0A#
+	mov qword [rbp + 48], @10165string_fileexists2022MainX2Ec223A2025s0A#
 
  file_test$1023:
-	; Parameter 48 pointer string_fileexists2022MainX2Ec223A2025s0A#
-	mov qword [rbp + 48], @10171string_fileexists2022MainX2Ec223A2025s0A#
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$1024:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 80 pointer string_MainX2Ec#
+	mov qword [rbp + 80], @10166string_MainX2Ec#
 
  file_test$1025:
-	; Parameter 80 pointer string_MainX2Ec#
-	mov qword [rbp + 80], @10172string_MainX2Ec#
+	; Call 56 fileexists 0
+	mov qword [rbp + 56], file_test$1026
+	mov [rbp + 64], rbp
+	add rbp, 56
+	jmp fileexists
 
  file_test$1026:
-	; Call 56 fileexists 0
-	mov qword [rbp + 56], file_test$1027
-	mov [rbp + 64], rbp
-	add rbp, 56
-	jmp fileexists
+	; PostCall 56
 
  file_test$1027:
-	; PostCall 56
+	; GetReturnValue £temporary3915
 
  file_test$1028:
-	; GetReturnValue £temporary3892
+	; Equal 1031 £temporary3915 integral4$0#
+	cmp ebx, 0
+	je file_test$1031
 
  file_test$1029:
-	; Equal 1032 £temporary3892 integral4$0#
-	cmp ebx, 0
-	je file_test$1032
+	; Assign £temporary3917 string_Yes#
+	mov rax, @10167string_Yes#
 
  file_test$1030:
-	; Assign £temporary3894 string_Yes#
-	mov rax, @10173string_Yes#
+	; Jump 1032
+	jmp file_test$1032
 
  file_test$1031:
-	; Jump 1033
-	jmp file_test$1033
+	; Assign £temporary3917 string_No#
+	mov rax, @10168string_No#
 
  file_test$1032:
-	; Assign £temporary3894 string_No#
-	mov rax, @10174string_No#
+	; Parameter 56 pointer £temporary3917
+	mov [rbp + 56], rax
 
  file_test$1033:
-	; Parameter 56 pointer £temporary3894
-	mov [rbp + 56], rax
+	; Call 24 printf 8
+	mov qword [rbp + 24], file_test$1034
+	mov [rbp + 32], rbp
+	add rbp, 24
+	mov rdi, rbp
+	add rdi, 8
+	jmp printf
 
  file_test$1034:
-	; Call 24 printf 8
-	mov qword [rbp + 24], file_test$1035
-	mov [rbp + 32], rbp
-	add rbp, 24
-	mov rdi, rbp
-	add rdi, 8
-	jmp printf
+	; PostCall 24
 
  file_test$1035:
-	; PostCall 24
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$1036:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 48 pointer string_fileexists2022File2Ec223A2025s0A#
+	mov qword [rbp + 48], @10170string_fileexists2022File2Ec223A2025s0A#
 
  file_test$1037:
-	; Parameter 48 pointer string_fileexists2022File2Ec223A2025s0A#
-	mov qword [rbp + 48], @10176string_fileexists2022File2Ec223A2025s0A#
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$1038:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 80 pointer string_File2Ec#
+	mov qword [rbp + 80], @10171string_File2Ec#
 
  file_test$1039:
-	; Parameter 80 pointer string_File2Ec#
-	mov qword [rbp + 80], @10177string_File2Ec#
+	; Call 56 fileexists 0
+	mov qword [rbp + 56], file_test$1040
+	mov [rbp + 64], rbp
+	add rbp, 56
+	jmp fileexists
 
  file_test$1040:
-	; Call 56 fileexists 0
-	mov qword [rbp + 56], file_test$1041
-	mov [rbp + 64], rbp
-	add rbp, 56
-	jmp fileexists
+	; PostCall 56
 
  file_test$1041:
-	; PostCall 56
+	; GetReturnValue £temporary3919
 
  file_test$1042:
-	; GetReturnValue £temporary3896
+	; Equal 1045 £temporary3919 integral4$0#
+	cmp ebx, 0
+	je file_test$1045
 
  file_test$1043:
-	; Equal 1046 £temporary3896 integral4$0#
-	cmp ebx, 0
-	je file_test$1046
+	; Assign £temporary3921 string_Yes#
+	mov rax, @10172string_Yes#
 
  file_test$1044:
-	; Assign £temporary3898 string_Yes#
-	mov rax, @10178string_Yes#
+	; Jump 1046
+	jmp file_test$1046
 
  file_test$1045:
-	; Jump 1047
-	jmp file_test$1047
+	; Assign £temporary3921 string_No#
+	mov rax, @10173string_No#
 
  file_test$1046:
-	; Assign £temporary3898 string_No#
-	mov rax, @10179string_No#
+	; Parameter 56 pointer £temporary3921
+	mov [rbp + 56], rax
 
  file_test$1047:
-	; Parameter 56 pointer £temporary3898
-	mov [rbp + 56], rax
+	; Call 24 printf 8
+	mov qword [rbp + 24], file_test$1048
+	mov [rbp + 32], rbp
+	add rbp, 24
+	mov rdi, rbp
+	add rdi, 8
+	jmp printf
 
  file_test$1048:
-	; Call 24 printf 8
-	mov qword [rbp + 24], file_test$1049
-	mov [rbp + 32], rbp
-	add rbp, 24
-	mov rdi, rbp
-	add rdi, 8
-	jmp printf
+	; PostCall 24
 
  file_test$1049:
-	; PostCall 24
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$1050:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 48 pointer string_fileexists2022File2Ex223A2025s0A#
+	mov qword [rbp + 48], @10175string_fileexists2022File2Ex223A2025s0A#
 
  file_test$1051:
-	; Parameter 48 pointer string_fileexists2022File2Ex223A2025s0A#
-	mov qword [rbp + 48], @10181string_fileexists2022File2Ex223A2025s0A#
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$1052:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 80 pointer string_File2Ex#
+	mov qword [rbp + 80], @10176string_File2Ex#
 
  file_test$1053:
-	; Parameter 80 pointer string_File2Ex#
-	mov qword [rbp + 80], @10182string_File2Ex#
+	; Call 56 fileexists 0
+	mov qword [rbp + 56], file_test$1054
+	mov [rbp + 64], rbp
+	add rbp, 56
+	jmp fileexists
 
  file_test$1054:
-	; Call 56 fileexists 0
-	mov qword [rbp + 56], file_test$1055
-	mov [rbp + 64], rbp
-	add rbp, 56
-	jmp fileexists
+	; PostCall 56
 
  file_test$1055:
-	; PostCall 56
+	; GetReturnValue £temporary3923
 
  file_test$1056:
-	; GetReturnValue £temporary3900
+	; Equal 1059 £temporary3923 integral4$0#
+	cmp ebx, 0
+	je file_test$1059
 
  file_test$1057:
-	; Equal 1060 £temporary3900 integral4$0#
-	cmp ebx, 0
-	je file_test$1060
+	; Assign £temporary3925 string_Yes#
+	mov rax, @10177string_Yes#
 
  file_test$1058:
-	; Assign £temporary3902 string_Yes#
-	mov rax, @10183string_Yes#
+	; Jump 1060
+	jmp file_test$1060
 
  file_test$1059:
-	; Jump 1061
-	jmp file_test$1061
+	; Assign £temporary3925 string_No#
+	mov rax, @10178string_No#
 
  file_test$1060:
-	; Assign £temporary3902 string_No#
-	mov rax, @10184string_No#
+	; Parameter 56 pointer £temporary3925
+	mov [rbp + 56], rax
 
  file_test$1061:
-	; Parameter 56 pointer £temporary3902
-	mov [rbp + 56], rax
+	; Call 24 printf 8
+	mov qword [rbp + 24], file_test$1062
+	mov [rbp + 32], rbp
+	add rbp, 24
+	mov rdi, rbp
+	add rdi, 8
+	jmp printf
 
  file_test$1062:
-	; Call 24 printf 8
-	mov qword [rbp + 24], file_test$1063
-	mov [rbp + 32], rbp
-	add rbp, 24
-	mov rdi, rbp
-	add rdi, 8
-	jmp printf
+	; PostCall 24
 
  file_test$1063:
-	; PostCall 24
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$1064:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 48 pointer string_fileexists2022File2Eh223A2025s0A#
+	mov qword [rbp + 48], @10180string_fileexists2022File2Eh223A2025s0A#
 
  file_test$1065:
-	; Parameter 48 pointer string_fileexists2022File2Eh223A2025s0A#
-	mov qword [rbp + 48], @10186string_fileexists2022File2Eh223A2025s0A#
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$1066:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 80 pointer string_File2Eh#
+	mov qword [rbp + 80], @10181string_File2Eh#
 
  file_test$1067:
-	; Parameter 80 pointer string_File2Eh#
-	mov qword [rbp + 80], @10187string_File2Eh#
+	; Call 56 fileexists 0
+	mov qword [rbp + 56], file_test$1068
+	mov [rbp + 64], rbp
+	add rbp, 56
+	jmp fileexists
 
  file_test$1068:
-	; Call 56 fileexists 0
-	mov qword [rbp + 56], file_test$1069
-	mov [rbp + 64], rbp
-	add rbp, 56
-	jmp fileexists
+	; PostCall 56
 
  file_test$1069:
-	; PostCall 56
+	; GetReturnValue £temporary3927
 
  file_test$1070:
-	; GetReturnValue £temporary3904
+	; Equal 1073 £temporary3927 integral4$0#
+	cmp ebx, 0
+	je file_test$1073
 
  file_test$1071:
-	; Equal 1074 £temporary3904 integral4$0#
-	cmp ebx, 0
-	je file_test$1074
+	; Assign £temporary3929 string_Yes#
+	mov rax, @10182string_Yes#
 
  file_test$1072:
-	; Assign £temporary3906 string_Yes#
-	mov rax, @10188string_Yes#
+	; Jump 1074
+	jmp file_test$1074
 
  file_test$1073:
-	; Jump 1075
-	jmp file_test$1075
+	; Assign £temporary3929 string_No#
+	mov rax, @10183string_No#
 
  file_test$1074:
-	; Assign £temporary3906 string_No#
-	mov rax, @10189string_No#
+	; Parameter 56 pointer £temporary3929
+	mov [rbp + 56], rax
 
  file_test$1075:
-	; Parameter 56 pointer £temporary3906
-	mov [rbp + 56], rax
+	; Call 24 printf 8
+	mov qword [rbp + 24], file_test$1076
+	mov [rbp + 32], rbp
+	add rbp, 24
+	mov rdi, rbp
+	add rdi, 8
+	jmp printf
 
  file_test$1076:
-	; Call 24 printf 8
-	mov qword [rbp + 24], file_test$1077
-	mov [rbp + 32], rbp
-	add rbp, 24
-	mov rdi, rbp
-	add rdi, 8
-	jmp printf
+	; PostCall 24
 
  file_test$1077:
-	; PostCall 24
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$1078:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 48 pointer string_fileexists2022File2Ey223A2025s0A#
+	mov qword [rbp + 48], @10185string_fileexists2022File2Ey223A2025s0A#
 
  file_test$1079:
-	; Parameter 48 pointer string_fileexists2022File2Ey223A2025s0A#
-	mov qword [rbp + 48], @10191string_fileexists2022File2Ey223A2025s0A#
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$1080:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 80 pointer string_File2Ey#
+	mov qword [rbp + 80], @10186string_File2Ey#
 
  file_test$1081:
-	; Parameter 80 pointer string_File2Ey#
-	mov qword [rbp + 80], @10192string_File2Ey#
+	; Call 56 fileexists 0
+	mov qword [rbp + 56], file_test$1082
+	mov [rbp + 64], rbp
+	add rbp, 56
+	jmp fileexists
 
  file_test$1082:
-	; Call 56 fileexists 0
-	mov qword [rbp + 56], file_test$1083
-	mov [rbp + 64], rbp
-	add rbp, 56
-	jmp fileexists
+	; PostCall 56
 
  file_test$1083:
-	; PostCall 56
+	; GetReturnValue £temporary3931
 
  file_test$1084:
-	; GetReturnValue £temporary3908
+	; Equal 1087 £temporary3931 integral4$0#
+	cmp ebx, 0
+	je file_test$1087
 
  file_test$1085:
-	; Equal 1088 £temporary3908 integral4$0#
-	cmp ebx, 0
-	je file_test$1088
+	; Assign £temporary3933 string_Yes#
+	mov rax, @10187string_Yes#
 
  file_test$1086:
-	; Assign £temporary3910 string_Yes#
-	mov rax, @10193string_Yes#
+	; Jump 1088
+	jmp file_test$1088
 
  file_test$1087:
-	; Jump 1089
-	jmp file_test$1089
+	; Assign £temporary3933 string_No#
+	mov rax, @10188string_No#
 
  file_test$1088:
-	; Assign £temporary3910 string_No#
-	mov rax, @10194string_No#
+	; Parameter 56 pointer £temporary3933
+	mov [rbp + 56], rax
 
  file_test$1089:
-	; Parameter 56 pointer £temporary3910
-	mov [rbp + 56], rax
+	; Call 24 printf 8
+	mov qword [rbp + 24], file_test$1090
+	mov [rbp + 32], rbp
+	add rbp, 24
+	mov rdi, rbp
+	add rdi, 8
+	jmp printf
 
  file_test$1090:
-	; Call 24 printf 8
-	mov qword [rbp + 24], file_test$1091
-	mov [rbp + 32], rbp
-	add rbp, 24
-	mov rdi, rbp
-	add rdi, 8
-	jmp printf
+	; PostCall 24
 
  file_test$1091:
-	; PostCall 24
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$1092:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 48 pointer string_fileexists2022File2Ep223A2025s0A#
+	mov qword [rbp + 48], @10190string_fileexists2022File2Ep223A2025s0A#
 
  file_test$1093:
-	; Parameter 48 pointer string_fileexists2022File2Ep223A2025s0A#
-	mov qword [rbp + 48], @10196string_fileexists2022File2Ep223A2025s0A#
+	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  file_test$1094:
-	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+	; Parameter 80 pointer string_File2Ep#
+	mov qword [rbp + 80], @10191string_File2Ep#
 
  file_test$1095:
-	; Parameter 80 pointer string_File2Ep#
-	mov qword [rbp + 80], @10197string_File2Ep#
+	; Call 56 fileexists 0
+	mov qword [rbp + 56], file_test$1096
+	mov [rbp + 64], rbp
+	add rbp, 56
+	jmp fileexists
 
  file_test$1096:
-	; Call 56 fileexists 0
-	mov qword [rbp + 56], file_test$1097
-	mov [rbp + 64], rbp
-	add rbp, 56
-	jmp fileexists
+	; PostCall 56
 
  file_test$1097:
-	; PostCall 56
+	; GetReturnValue £temporary3935
 
  file_test$1098:
-	; GetReturnValue £temporary3912
+	; Equal 1101 £temporary3935 integral4$0#
+	cmp ebx, 0
+	je file_test$1101
 
  file_test$1099:
-	; Equal 1102 £temporary3912 integral4$0#
-	cmp ebx, 0
-	je file_test$1102
+	; Assign £temporary3937 string_Yes#
+	mov rax, @10192string_Yes#
 
  file_test$1100:
-	; Assign £temporary3914 string_Yes#
-	mov rax, @10198string_Yes#
+	; Jump 1102
+	jmp file_test$1102
 
  file_test$1101:
-	; Jump 1103
-	jmp file_test$1103
+	; Assign £temporary3937 string_No#
+	mov rax, @10193string_No#
 
  file_test$1102:
-	; Assign £temporary3914 string_No#
-	mov rax, @10199string_No#
-
- file_test$1103:
-	; Parameter 56 pointer £temporary3914
+	; Parameter 56 pointer £temporary3937
 	mov [rbp + 56], rax
 
- file_test$1104:
+ file_test$1103:
 	; Call 24 printf 8
-	mov qword [rbp + 24], file_test$1105
+	mov qword [rbp + 24], file_test$1104
 	mov [rbp + 32], rbp
 	add rbp, 24
 	mov rdi, rbp
 	add rdi, 8
 	jmp printf
 
- file_test$1105:
+ file_test$1104:
 	; PostCall 24
 
- file_test$1106:
+ file_test$1105:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+
+ file_test$1106:
+	; Parameter 48 pointer string_fileexists2022File2Ez223A2025s0A#
+	mov qword [rbp + 48], @10195string_fileexists2022File2Ez223A2025s0A#
 
  file_test$1107:
-	; Parameter 48 pointer string_fileexists2022File2Ez223A2025s0A#
-	mov qword [rbp + 48], @10201string_fileexists2022File2Ez223A2025s0A#
-
- file_test$1108:
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- file_test$1109:
+ file_test$1108:
 	; Parameter 80 pointer string_File2Ez#
-	mov qword [rbp + 80], @10202string_File2Ez#
+	mov qword [rbp + 80], @10196string_File2Ez#
 
- file_test$1110:
+ file_test$1109:
 	; Call 56 fileexists 0
-	mov qword [rbp + 56], file_test$1111
+	mov qword [rbp + 56], file_test$1110
 	mov [rbp + 64], rbp
 	add rbp, 56
 	jmp fileexists
 
- file_test$1111:
+ file_test$1110:
 	; PostCall 56
 
+ file_test$1111:
+	; GetReturnValue £temporary3939
+
  file_test$1112:
-	; GetReturnValue £temporary3916
+	; Equal 1115 £temporary3939 integral4$0#
+	cmp ebx, 0
+	je file_test$1115
 
  file_test$1113:
-	; Equal 1116 £temporary3916 integral4$0#
-	cmp ebx, 0
-	je file_test$1116
+	; Assign £temporary3941 string_Yes#
+	mov rax, @10197string_Yes#
 
  file_test$1114:
-	; Assign £temporary3918 string_Yes#
-	mov rax, @10203string_Yes#
+	; Jump 1116
+	jmp file_test$1116
 
  file_test$1115:
-	; Jump 1117
-	jmp file_test$1117
+	; Assign £temporary3941 string_No#
+	mov rax, @10198string_No#
 
  file_test$1116:
-	; Assign £temporary3918 string_No#
-	mov rax, @10204string_No#
-
- file_test$1117:
-	; Parameter 56 pointer £temporary3918
+	; Parameter 56 pointer £temporary3941
 	mov [rbp + 56], rax
 
- file_test$1118:
+ file_test$1117:
 	; Call 24 printf 8
-	mov qword [rbp + 24], file_test$1119
+	mov qword [rbp + 24], file_test$1118
 	mov [rbp + 32], rbp
 	add rbp, 24
 	mov rdi, rbp
 	add rdi, 8
 	jmp printf
 
- file_test$1119:
+ file_test$1118:
 	; PostCall 24
 
- file_test$1120:
+ file_test$1119:
 	; Return
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- file_test$1121:
+ file_test$1120:
 	; FunctionEnd file_test
 
 section .data
 
-@10540string_Hello0A#:
+@10534string_Hello0A#:
 	; Initializer String Hello\n
 	db "Hello", 10, 0
 
 section .data
 
-@10542string_PBookX2Etxt#:
+@10536string_PBookX2Etxt#:
 	; Initializer String PBookX.txt
 	db "PBookX.txt", 0
 
 section .data
 
-@10543string_r2B#:
+@10537string_r2B#:
 	; Initializer String r+
 	db "r+", 0
 
 section .data
 
-@10547string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+@10541string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
 	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
-@10548string_inOutFilePtr20213D20NULL#:
+@10542string_inOutFilePtr20213D20NULL#:
 	; Initializer String inOutFilePtr != NULL
 	db "inOutFilePtr != NULL", 0
 
 section .data
 
-@10549string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
+@10543string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
 	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
 
 section .data
 
-@10551string_Temp0A#:
+@10545string_Temp0A#:
 	; Initializer String Temp\n
 	db "Temp", 10, 0
 
 section .data
 
-@10554string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
+@10548string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#:
 	; Initializer String Assertion failed: "%s" in file %s at line %i\n
 	db "Assertion failed: ", 34, "%s", 34, " in file %s at line %i", 10, 0
 
 section .data
 
-@10555string_tempFilePtr20213D20NULL#:
+@10549string_tempFilePtr20213D20NULL#:
 	; Initializer String tempFilePtr != NULL
 	db "tempFilePtr != NULL", 0
 
 section .data
 
-@10556string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
+@10550string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#:
 	; Initializer String C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c
 	db "C:\Users\Stefan\Documents\vagrant\homestead\code\code\FileTest.c", 0
 
 section .data
 
-@10561string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A#:
+@10555string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A#:
 	; Initializer String \n------------\n
 	db 10, "------------", 10, 0
 
@@ -6144,7 +6141,7 @@ section .text
 
  temp_file$1:
 	; Parameter 48 pointer string_Hello0A#
-	mov qword [rbp + 48], @10540string_Hello0A#
+	mov qword [rbp + 48], @10534string_Hello0A#
 
  temp_file$2:
 	; Call 24 printf 0
@@ -6162,11 +6159,11 @@ section .text
 
  temp_file$5:
 	; Parameter 56 pointer string_PBookX2Etxt#
-	mov qword [rbp + 56], @10542string_PBookX2Etxt#
+	mov qword [rbp + 56], @10536string_PBookX2Etxt#
 
  temp_file$6:
 	; Parameter 64 pointer string_r2B#
-	mov qword [rbp + 64], @10543string_r2B#
+	mov qword [rbp + 64], @10537string_r2B#
 
  temp_file$7:
 	; Call 32 fopen 0
@@ -6179,10 +6176,10 @@ section .text
 	; PostCall 32
 
  temp_file$9:
-	; GetReturnValue £temporary3946
+	; GetReturnValue £temporary3969
 
  temp_file$10:
-	; Assign inOutFilePtr £temporary3946
+	; Assign inOutFilePtr £temporary3969
 	mov [rbp + 32], rbx
 
  temp_file$11:
@@ -6200,15 +6197,15 @@ section .text
 
  temp_file$14:
 	; Parameter 72 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 72], @10547string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 72], @10541string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  temp_file$15:
 	; Parameter 80 pointer string_inOutFilePtr20213D20NULL#
-	mov qword [rbp + 80], @10548string_inOutFilePtr20213D20NULL#
+	mov qword [rbp + 80], @10542string_inOutFilePtr20213D20NULL#
 
  temp_file$16:
 	; Parameter 88 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 88], @10549string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 88], @10543string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  temp_file$17:
 	; Parameter 96 signed int integral4$369#
@@ -6244,7 +6241,7 @@ section .text
 
  temp_file$24:
 	; Parameter 64 pointer string_Temp0A#
-	mov qword [rbp + 64], @10551string_Temp0A#
+	mov qword [rbp + 64], @10545string_Temp0A#
 
  temp_file$25:
 	; Call 40 printf 0
@@ -6271,10 +6268,10 @@ section .text
 	; PostCall 40
 
  temp_file$30:
-	; GetReturnValue £temporary3952
+	; GetReturnValue £temporary3975
 
  temp_file$31:
-	; Assign tempFilePtr £temporary3952
+	; Assign tempFilePtr £temporary3975
 	mov [rbp + 24], rbx
 
  temp_file$32:
@@ -6292,15 +6289,15 @@ section .text
 
  temp_file$35:
 	; Parameter 72 pointer string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
-	mov qword [rbp + 72], @10554string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+	mov qword [rbp + 72], @10548string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 
  temp_file$36:
 	; Parameter 80 pointer string_tempFilePtr20213D20NULL#
-	mov qword [rbp + 80], @10555string_tempFilePtr20213D20NULL#
+	mov qword [rbp + 80], @10549string_tempFilePtr20213D20NULL#
 
  temp_file$37:
 	; Parameter 88 pointer string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
-	mov qword [rbp + 88], @10556string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
+	mov qword [rbp + 88], @10550string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CFileTest2Ec#
 
  temp_file$38:
 	; Parameter 96 signed int integral4$372#
@@ -6350,21 +6347,21 @@ section .text
 	; PostCall 40
 
  temp_file$48:
-	; GetReturnValue £temporary3957
+	; GetReturnValue £temporary3980
 
  temp_file$49:
-	; IntegralToIntegral £temporary3958 £temporary3957
+	; IntegralToIntegral £temporary3981 £temporary3980
 	cmp ebx, 0
 	jge temp_file$50
 	neg ebx
 	neg bl
 
  temp_file$50:
-	; Assign c £temporary3958
+	; Assign c £temporary3981
 	mov [rbp + 40], bl
 
  temp_file$51:
-	; IntegralToIntegral £temporary3959 c
+	; IntegralToIntegral £temporary3982 c
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
@@ -6373,7 +6370,7 @@ section .text
 	neg eax
 
  temp_file$52:
-	; Equal 65 £temporary3959 integral4$minus1#
+	; Equal 65 £temporary3982 integral4$minus1#
 	cmp eax, -1
 	je temp_file$65
 
@@ -6384,7 +6381,7 @@ section .text
 	; PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  temp_file$55:
-	; IntegralToIntegral £temporary3961 c
+	; IntegralToIntegral £temporary3984 c
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
@@ -6393,7 +6390,7 @@ section .text
 	neg eax
 
  temp_file$56:
-	; Parameter 65 signed int £temporary3961
+	; Parameter 65 signed int £temporary3984
 	mov [rbp + 65], eax
 
  temp_file$57:
@@ -6407,10 +6404,10 @@ section .text
 	; PostCall 41
 
  temp_file$59:
-	; GetReturnValue £temporary3962
+	; GetReturnValue £temporary3985
 
  temp_file$60:
-	; Parameter 65 signed int £temporary3962
+	; Parameter 65 signed int £temporary3985
 	mov [rbp + 65], ebx
 
  temp_file$61:
@@ -6460,7 +6457,7 @@ section .text
 
  temp_file$71:
 	; Parameter 72 pointer string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A#
-	mov qword [rbp + 72], @10561string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A#
+	mov qword [rbp + 72], @10555string_0A2D2D2D2D2D2D2D2D2D2D2D2D0A#
 
  temp_file$72:
 	; Call 40 fprintf 0
@@ -6492,21 +6489,21 @@ section .text
 	; PostCall 40
 
  temp_file$78:
-	; GetReturnValue £temporary3967
+	; GetReturnValue £temporary3990
 
  temp_file$79:
-	; IntegralToIntegral £temporary3968 £temporary3967
+	; IntegralToIntegral £temporary3991 £temporary3990
 	cmp ebx, 0
 	jge temp_file$80
 	neg ebx
 	neg bl
 
  temp_file$80:
-	; Assign c £temporary3968
+	; Assign c £temporary3991
 	mov [rbp + 40], bl
 
  temp_file$81:
-	; IntegralToIntegral £temporary3969 c
+	; IntegralToIntegral £temporary3992 c
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
@@ -6515,7 +6512,7 @@ section .text
 	neg eax
 
  temp_file$82:
-	; Equal 90 £temporary3969 integral4$minus1#
+	; Equal 90 £temporary3992 integral4$minus1#
 	cmp eax, -1
 	je temp_file$90
 
@@ -6523,7 +6520,7 @@ section .text
 	; PreCall 41 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  temp_file$84:
-	; IntegralToIntegral £temporary3971 c
+	; IntegralToIntegral £temporary3994 c
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
@@ -6532,7 +6529,7 @@ section .text
 	neg eax
 
  temp_file$85:
-	; Parameter 65 signed int £temporary3971
+	; Parameter 65 signed int £temporary3994
 	mov [rbp + 65], eax
 
  temp_file$86:

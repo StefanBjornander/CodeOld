@@ -7,48 +7,48 @@
 section .text
 
  setjmp:
-	; InspectRegister £temporary558 rbp
+	; InspectRegister £temporary564 rbp
 
  setjmp$1:
-	; Assign rbp_pointer £temporary558
+	; Assign rbp_pointer £temporary564
 	mov [rbp + 32], rbp
 
  setjmp$2:
-	; Dereference £temporary559 buf 0
+	; Dereference £temporary565 buf 0
 	mov rsi, [rbp + 24]
 
  setjmp$3:
-	; Dereference £temporary560 rbp_pointer 0
+	; Dereference £temporary566 rbp_pointer 0
 	mov rdi, [rbp + 32]
 
  setjmp$4:
-	; Assign £temporary559 £temporary560
+	; Assign £temporary565 £temporary566
 	mov rax, [rdi]
 	mov [rsi], rax
 
  setjmp$5:
-	; Dereference £temporary561 buf 0
+	; Dereference £temporary567 buf 0
 	mov rsi, [rbp + 24]
 
  setjmp$6:
-	; Dereference £temporary562 rbp_pointer 0
+	; Dereference £temporary568 rbp_pointer 0
 	mov rdi, [rbp + 32]
 
  setjmp$7:
-	; Assign £temporary561 £temporary562
+	; Assign £temporary567 £temporary568
 	mov rax, [rdi + 8]
 	mov [rsi + 8], rax
 
  setjmp$8:
-	; Dereference £temporary563 buf 0
+	; Dereference £temporary569 buf 0
 	mov rsi, [rbp + 24]
 
  setjmp$9:
-	; Dereference £temporary564 rbp_pointer 0
+	; Dereference £temporary570 rbp_pointer 0
 	mov rdi, [rbp + 32]
 
  setjmp$10:
-	; Assign £temporary563 £temporary564
+	; Assign £temporary569 £temporary570
 	mov rax, [rdi + 16]
 	mov [rsi + 16], rax
 
@@ -73,27 +73,27 @@ section .text
 	mov ebx, [rbp + 32]
 
  longjmp$1:
-	; Dereference £temporary567 buf 0
+	; Dereference £temporary573 buf 0
 	mov rsi, [rbp + 24]
 
  longjmp$2:
-	; AssignRegister rcx £temporary567
+	; AssignRegister rcx £temporary573
 	mov rcx, [rsi]
 
  longjmp$3:
-	; Dereference £temporary569 buf 0
+	; Dereference £temporary575 buf 0
 	mov rsi, [rbp + 24]
 
  longjmp$4:
-	; AssignRegister rdi £temporary569
+	; AssignRegister rdi £temporary575
 	mov rdi, [rsi + 16]
 
  longjmp$5:
-	; Dereference £temporary571 buf 0
+	; Dereference £temporary577 buf 0
 	mov rsi, [rbp + 24]
 
  longjmp$6:
-	; AssignRegister rbp £temporary571
+	; AssignRegister rbp £temporary577
 	mov rbp, [rsi + 8]
 
  longjmp$7:

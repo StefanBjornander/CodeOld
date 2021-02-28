@@ -76,19 +76,19 @@ section .text
 	jmp scanChar$30
 
  scanChar$5:
-	; IntegralToIntegral £temporary828 g_inDevice
+	; IntegralToIntegral £temporary835 g_inDevice
 	mov rax, [g_inDevice]
 
  scanChar$6:
-	; Assign stream £temporary828
+	; Assign stream £temporary835
 	mov [rbp + 25], rax
 
  scanChar$7:
-	; Dereference £temporary829 stream 0
+	; Dereference £temporary836 stream 0
 	mov rsi, [rbp + 25]
 
  scanChar$8:
-	; Assign handle £temporary829
+	; Assign handle £temporary836
 	mov eax, [rsi + 4]
 	mov [rbp + 33], eax
 
@@ -97,28 +97,28 @@ section .text
 	mov rax, 0
 
  scanChar$10:
-	; Dereference £temporary832 stream 0
+	; Dereference £temporary839 stream 0
 	mov rsi, [rbp + 25]
 
  scanChar$11:
-	; IntegralToIntegral £temporary833 £temporary832
+	; IntegralToIntegral £temporary840 £temporary839
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
 
  scanChar$12:
-	; AssignRegister rdi £temporary833
+	; AssignRegister rdi £temporary840
 
  scanChar$13:
-	; Address £temporary835 c
+	; Address £temporary842 c
 	mov rsi, rbp
 	add rsi, 24
 
  scanChar$14:
-	; IntegralToIntegral £temporary836 £temporary835
+	; IntegralToIntegral £temporary843 £temporary842
 
  scanChar$15:
-	; AssignRegister rsi £temporary836
+	; AssignRegister rsi £temporary843
 
  scanChar$16:
 	; AssignRegister rdx integral8$1#
@@ -144,15 +144,15 @@ section .text
 	jmp rax
 
  scanChar$21:
-	; IntegralToIntegral £temporary839 g_inDevice
+	; IntegralToIntegral £temporary846 g_inDevice
 	mov rax, [g_inDevice]
 
  scanChar$22:
-	; Assign inString £temporary839
+	; Assign inString £temporary846
 	mov [rbp + 37], rax
 
  scanChar$23:
-	; Assign £temporary840 g_inChars
+	; Assign £temporary847 g_inChars
 	mov eax, [g_inChars]
 
  scanChar$24:
@@ -160,23 +160,23 @@ section .text
 	inc dword [g_inChars]
 
  scanChar$25:
-	; IntegralToIntegral £temporary842 £temporary840
+	; IntegralToIntegral £temporary850 £temporary847
 	mov rbx, 4294967295
 	and rax, rbx
 
  scanChar$26:
-	; Add £temporary843 inString £temporary842
+	; Add £temporary851 inString £temporary850
 	mov rsi, [rbp + 37]
 	add rsi, rax
 
  scanChar$27:
-	; Dereference £temporary841 £temporary843 0
+	; Dereference £temporary849 £temporary851 0
 
  scanChar$28:
 	; SetReturnValue
 
  scanChar$29:
-	; Return £temporary841
+	; Return £temporary849
 	mov bl, [rsi]
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -241,87 +241,87 @@ section .text
 
 section .text
 
- @3230$strnchr:
-	; IntegralToIntegral £temporary847 i
+ @3224$strnchr:
+	; IntegralToIntegral £temporary855 i
 	mov eax, [rbp + 36]
 	cmp eax, 0
-	jge @3230$strnchr$1
+	jge @3224$strnchr$1
 	neg eax
 	neg al
 
- @3230$strnchr$1:
-	; Assign c £temporary847
+ @3224$strnchr$1:
+	; Assign c £temporary855
 	mov [rbp + 44], al
 
- @3230$strnchr$2:
+ @3224$strnchr$2:
 	; Assign index integral4$0#
 	mov dword [rbp + 40], 0
 
- @3230$strnchr$3:
+ @3224$strnchr$3:
 	; GreaterThanEqual 16 index size
 	mov eax, [rbp + 32]
 	cmp [rbp + 40], eax
-	jge @3230$strnchr$16
+	jge @3224$strnchr$16
 
- @3230$strnchr$4:
-	; IntegralToIntegral £temporary851 index
+ @3224$strnchr$4:
+	; IntegralToIntegral £temporary859 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- @3230$strnchr$5:
-	; Add £temporary852 text £temporary851
+ @3224$strnchr$5:
+	; Add £temporary860 text £temporary859
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
- @3230$strnchr$6:
-	; Dereference £temporary850 £temporary852 0
+ @3224$strnchr$6:
+	; Dereference £temporary858 £temporary860 0
 
- @3230$strnchr$7:
-	; NotEqual 14 £temporary850 c
+ @3224$strnchr$7:
+	; NotEqual 14 £temporary858 c
 	mov al, [rbp + 44]
 	cmp [rsi], al
-	jne @3230$strnchr$14
+	jne @3224$strnchr$14
 
- @3230$strnchr$8:
-	; IntegralToIntegral £temporary855 index
+ @3224$strnchr$8:
+	; IntegralToIntegral £temporary863 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
- @3230$strnchr$9:
-	; Add £temporary856 text £temporary855
+ @3224$strnchr$9:
+	; Add £temporary864 text £temporary863
 	mov rbx, [rbp + 24]
 	add rbx, rax
 
- @3230$strnchr$10:
-	; Dereference £temporary854 £temporary856 0
+ @3224$strnchr$10:
+	; Dereference £temporary862 £temporary864 0
 
- @3230$strnchr$11:
-	; Address £temporary857 £temporary854
+ @3224$strnchr$11:
+	; Address £temporary865 £temporary862
 
- @3230$strnchr$12:
+ @3224$strnchr$12:
 	; SetReturnValue
 
- @3230$strnchr$13:
-	; Return £temporary857
+ @3224$strnchr$13:
+	; Return £temporary865
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3230$strnchr$14:
+ @3224$strnchr$14:
 	; Add index index integral4$1#
 	inc dword [rbp + 40]
 
- @3230$strnchr$15:
+ @3224$strnchr$15:
 	; Jump 3
-	jmp @3230$strnchr$3
+	jmp @3224$strnchr$3
 
- @3230$strnchr$16:
+ @3224$strnchr$16:
 	; SetReturnValue
 
- @3230$strnchr$17:
+ @3224$strnchr$17:
 	; Return integral8$0#
 	mov rbx, 0
 	mov rax, [rbp]
@@ -329,7 +329,7 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3230$strnchr$18:
+ @3224$strnchr$18:
 	; FunctionEnd strnchr
 
 section .text
@@ -352,17 +352,17 @@ section .text
 	; PostCall 52
 
  scanPattern$4:
-	; GetReturnValue £temporary858
+	; GetReturnValue £temporary866
 
  scanPattern$5:
-	; Assign input £temporary858
+	; Assign input £temporary866
 	mov [rbp + 52], bl
 
  scanPattern$6:
 	; PreCall 53 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanPattern$7:
-	; IntegralToIntegral £temporary859 input
+	; IntegralToIntegral £temporary867 input
 	mov al, [rbp + 52]
 	and eax, 255
 	cmp al, 0
@@ -371,7 +371,7 @@ section .text
 	neg eax
 
  scanPattern$8:
-	; Parameter 77 signed int £temporary859
+	; Parameter 77 signed int £temporary867
 	mov [rbp + 77], eax
 
  scanPattern$9:
@@ -385,10 +385,10 @@ section .text
 	; PostCall 53
 
  scanPattern$11:
-	; GetReturnValue £temporary860
+	; GetReturnValue £temporary868
 
  scanPattern$12:
-	; Equal 19 £temporary860 integral4$0#
+	; Equal 19 £temporary868 integral4$0#
 	cmp ebx, 0
 	je scanPattern$19
 
@@ -406,10 +406,10 @@ section .text
 	; PostCall 53
 
  scanPattern$16:
-	; GetReturnValue £temporary861
+	; GetReturnValue £temporary869
 
  scanPattern$17:
-	; Assign input £temporary861
+	; Assign input £temporary869
 	mov [rbp + 52], bl
 
  scanPattern$18:
@@ -440,7 +440,7 @@ section .text
 	mov [rbp + 85], eax
 
  scanPattern$24:
-	; IntegralToIntegral £temporary866 input
+	; IntegralToIntegral £temporary874 input
 	mov al, [rbp + 52]
 	and eax, 255
 	cmp al, 0
@@ -449,7 +449,7 @@ section .text
 	neg eax
 
  scanPattern$25:
-	; Parameter 89 signed int £temporary866
+	; Parameter 89 signed int £temporary874
 	mov [rbp + 89], eax
 
  scanPattern$26:
@@ -457,16 +457,16 @@ section .text
 	mov qword [rbp + 53], scanPattern$27
 	mov [rbp + 61], rbp
 	add rbp, 53
-	jmp @3230$strnchr
+	jmp @3224$strnchr
 
  scanPattern$27:
 	; PostCall 53
 
  scanPattern$28:
-	; GetReturnValue £temporary867
+	; GetReturnValue £temporary875
 
  scanPattern$29:
-	; NotEqual 40 £temporary867 integral4$0#
+	; NotEqual 40 £temporary875 integral4$0#
 	cmp rbx, 0
 	jne scanPattern$40
 
@@ -489,7 +489,7 @@ section .text
 	mov [rbp + 85], eax
 
  scanPattern$34:
-	; IntegralToIntegral £temporary870 input
+	; IntegralToIntegral £temporary878 input
 	mov al, [rbp + 52]
 	and eax, 255
 	cmp al, 0
@@ -498,7 +498,7 @@ section .text
 	neg eax
 
  scanPattern$35:
-	; Parameter 89 signed int £temporary870
+	; Parameter 89 signed int £temporary878
 	mov [rbp + 89], eax
 
  scanPattern$36:
@@ -506,21 +506,21 @@ section .text
 	mov qword [rbp + 53], scanPattern$37
 	mov [rbp + 61], rbp
 	add rbp, 53
-	jmp @3230$strnchr
+	jmp @3224$strnchr
 
  scanPattern$37:
 	; PostCall 53
 
  scanPattern$38:
-	; GetReturnValue £temporary871
+	; GetReturnValue £temporary879
 
  scanPattern$39:
-	; NotEqual 52 £temporary871 integral4$0#
+	; NotEqual 52 £temporary879 integral4$0#
 	cmp rbx, 0
 	jne scanPattern$52
 
  scanPattern$40:
-	; Assign £temporary877 index
+	; Assign £temporary885 index
 	mov eax, [rbp + 48]
 
  scanPattern$41:
@@ -528,20 +528,20 @@ section .text
 	inc dword [rbp + 48]
 
  scanPattern$42:
-	; IntegralToIntegral £temporary879 £temporary877
+	; IntegralToIntegral £temporary888 £temporary885
 	mov rbx, 4294967295
 	and rax, rbx
 
  scanPattern$43:
-	; Add £temporary880 string £temporary879
+	; Add £temporary889 string £temporary888
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  scanPattern$44:
-	; Dereference £temporary878 £temporary880 0
+	; Dereference £temporary887 £temporary889 0
 
  scanPattern$45:
-	; Assign £temporary878 input
+	; Assign £temporary887 input
 	mov al, [rbp + 52]
 	mov [rsi], al
 
@@ -559,10 +559,10 @@ section .text
 	; PostCall 53
 
  scanPattern$49:
-	; GetReturnValue £temporary881
+	; GetReturnValue £temporary890
 
  scanPattern$50:
-	; Assign input £temporary881
+	; Assign input £temporary890
 	mov [rbp + 52], bl
 
  scanPattern$51:
@@ -570,21 +570,21 @@ section .text
 	jmp scanPattern$20
 
  scanPattern$52:
-	; IntegralToIntegral £temporary883 index
+	; IntegralToIntegral £temporary892 index
 	mov eax, [rbp + 48]
 	mov rbx, 4294967295
 	and rax, rbx
 
  scanPattern$53:
-	; Add £temporary884 string £temporary883
+	; Add £temporary893 string £temporary892
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  scanPattern$54:
-	; Dereference £temporary882 £temporary884 0
+	; Dereference £temporary891 £temporary893 0
 
  scanPattern$55:
-	; Assign £temporary882 integral1$0#
+	; Assign £temporary891 integral1$0#
 	mov byte [rsi], 0
 
  scanPattern$56:
@@ -610,7 +610,7 @@ section .text
 	mov [rbp + 85], eax
 
  scanPattern$61:
-	; IntegralToIntegral £temporary887 input
+	; IntegralToIntegral £temporary896 input
 	mov al, [rbp + 52]
 	and eax, 255
 	cmp al, 0
@@ -619,7 +619,7 @@ section .text
 	neg eax
 
  scanPattern$62:
-	; Parameter 89 signed int £temporary887
+	; Parameter 89 signed int £temporary896
 	mov [rbp + 89], eax
 
  scanPattern$63:
@@ -627,16 +627,16 @@ section .text
 	mov qword [rbp + 53], scanPattern$64
 	mov [rbp + 61], rbp
 	add rbp, 53
-	jmp @3230$strnchr
+	jmp @3224$strnchr
 
  scanPattern$64:
 	; PostCall 53
 
  scanPattern$65:
-	; GetReturnValue £temporary888
+	; GetReturnValue £temporary897
 
  scanPattern$66:
-	; NotEqual 77 £temporary888 integral4$0#
+	; NotEqual 77 £temporary897 integral4$0#
 	cmp rbx, 0
 	jne scanPattern$77
 
@@ -659,7 +659,7 @@ section .text
 	mov [rbp + 85], eax
 
  scanPattern$71:
-	; IntegralToIntegral £temporary891 input
+	; IntegralToIntegral £temporary900 input
 	mov al, [rbp + 52]
 	and eax, 255
 	cmp al, 0
@@ -668,7 +668,7 @@ section .text
 	neg eax
 
  scanPattern$72:
-	; Parameter 89 signed int £temporary891
+	; Parameter 89 signed int £temporary900
 	mov [rbp + 89], eax
 
  scanPattern$73:
@@ -676,16 +676,16 @@ section .text
 	mov qword [rbp + 53], scanPattern$74
 	mov [rbp + 61], rbp
 	add rbp, 53
-	jmp @3230$strnchr
+	jmp @3224$strnchr
 
  scanPattern$74:
 	; PostCall 53
 
  scanPattern$75:
-	; GetReturnValue £temporary892
+	; GetReturnValue £temporary901
 
  scanPattern$76:
-	; NotEqual 83 £temporary892 integral4$0#
+	; NotEqual 83 £temporary901 integral4$0#
 	cmp rbx, 0
 	jne scanPattern$83
 
@@ -703,10 +703,10 @@ section .text
 	; PostCall 53
 
  scanPattern$80:
-	; GetReturnValue £temporary898
+	; GetReturnValue £temporary907
 
  scanPattern$81:
-	; Assign input £temporary898
+	; Assign input £temporary907
 	mov [rbp + 52], bl
 
  scanPattern$82:
@@ -743,10 +743,10 @@ section .text
 	; PostCall 40
 
  scanString$4:
-	; GetReturnValue £temporary899
+	; GetReturnValue £temporary908
 
  scanString$5:
-	; Assign input £temporary899
+	; Assign input £temporary908
 	mov [rbp + 40], bl
 
  scanString$6:
@@ -757,7 +757,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanString$8:
-	; IntegralToIntegral £temporary900 input
+	; IntegralToIntegral £temporary909 input
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
@@ -766,7 +766,7 @@ section .text
 	neg eax
 
  scanString$9:
-	; Parameter 69 signed int £temporary900
+	; Parameter 69 signed int £temporary909
 	mov [rbp + 69], eax
 
  scanString$10:
@@ -780,10 +780,10 @@ section .text
 	; PostCall 45
 
  scanString$12:
-	; GetReturnValue £temporary901
+	; GetReturnValue £temporary910
 
  scanString$13:
-	; Equal 20 £temporary901 integral4$0#
+	; Equal 20 £temporary910 integral4$0#
 	cmp ebx, 0
 	je scanString$20
 
@@ -801,10 +801,10 @@ section .text
 	; PostCall 45
 
  scanString$17:
-	; GetReturnValue £temporary902
+	; GetReturnValue £temporary911
 
  scanString$18:
-	; Assign input £temporary902
+	; Assign input £temporary911
 	mov [rbp + 40], bl
 
  scanString$19:
@@ -825,7 +825,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanString$23:
-	; IntegralToIntegral £temporary906 input
+	; IntegralToIntegral £temporary915 input
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
@@ -834,7 +834,7 @@ section .text
 	neg eax
 
  scanString$24:
-	; Parameter 69 signed int £temporary906
+	; Parameter 69 signed int £temporary915
 	mov [rbp + 69], eax
 
  scanString$25:
@@ -848,15 +848,15 @@ section .text
 	; PostCall 45
 
  scanString$27:
-	; GetReturnValue £temporary907
+	; GetReturnValue £temporary916
 
  scanString$28:
-	; NotEqual 46 £temporary907 integral4$0#
+	; NotEqual 46 £temporary916 integral4$0#
 	cmp ebx, 0
 	jne scanString$46
 
  scanString$29:
-	; IntegralToIntegral £temporary910 input
+	; IntegralToIntegral £temporary919 input
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
@@ -865,7 +865,7 @@ section .text
 	neg eax
 
  scanString$30:
-	; Equal 46 £temporary910 integral4$minus1#
+	; Equal 46 £temporary919 integral4$minus1#
 	cmp eax, -1
 	je scanString$46
 
@@ -875,7 +875,7 @@ section .text
 	je scanString$46
 
  scanString$32:
-	; Assign £temporary915 index
+	; Assign £temporary924 index
 	mov eax, [rbp + 36]
 
  scanString$33:
@@ -883,20 +883,20 @@ section .text
 	inc dword [rbp + 36]
 
  scanString$34:
-	; IntegralToIntegral £temporary917 £temporary915
+	; IntegralToIntegral £temporary927 £temporary924
 	mov rbx, 4294967295
 	and rax, rbx
 
  scanString$35:
-	; Add £temporary918 string £temporary917
+	; Add £temporary928 string £temporary927
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  scanString$36:
-	; Dereference £temporary916 £temporary918 0
+	; Dereference £temporary926 £temporary928 0
 
  scanString$37:
-	; Assign £temporary916 input
+	; Assign £temporary926 input
 	mov al, [rbp + 40]
 	mov [rsi], al
 
@@ -914,10 +914,10 @@ section .text
 	; PostCall 45
 
  scanString$41:
-	; GetReturnValue £temporary919
+	; GetReturnValue £temporary929
 
  scanString$42:
-	; Assign input £temporary919
+	; Assign input £temporary929
 	mov [rbp + 40], bl
 
  scanString$43:
@@ -933,21 +933,21 @@ section .text
 	jmp scanString$22
 
  scanString$46:
-	; IntegralToIntegral £temporary922 index
+	; IntegralToIntegral £temporary932 index
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
  scanString$47:
-	; Add £temporary923 string £temporary922
+	; Add £temporary933 string £temporary932
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  scanString$48:
-	; Dereference £temporary921 £temporary923 0
+	; Dereference £temporary931 £temporary933 0
 
  scanString$49:
-	; Assign £temporary921 integral1$0#
+	; Assign £temporary931 integral1$0#
 	mov byte [rsi], 0
 
  scanString$50:
@@ -959,7 +959,7 @@ section .text
 	jmp scanString$130
 
  scanString$52:
-	; Assign £temporary925 precision
+	; Assign £temporary935 precision
 	mov eax, [rbp + 32]
 
  scanString$53:
@@ -967,7 +967,7 @@ section .text
 	dec dword [rbp + 32]
 
  scanString$54:
-	; LessThanEqual 79 £temporary925 integral4$0#
+	; LessThanEqual 79 £temporary935 integral4$0#
 	cmp eax, 0
 	jle scanString$79
 
@@ -975,7 +975,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanString$56:
-	; IntegralToIntegral £temporary927 input
+	; IntegralToIntegral £temporary938 input
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
@@ -984,7 +984,7 @@ section .text
 	neg eax
 
  scanString$57:
-	; Parameter 69 signed int £temporary927
+	; Parameter 69 signed int £temporary938
 	mov [rbp + 69], eax
 
  scanString$58:
@@ -998,15 +998,15 @@ section .text
 	; PostCall 45
 
  scanString$60:
-	; GetReturnValue £temporary928
+	; GetReturnValue £temporary939
 
  scanString$61:
-	; NotEqual 79 £temporary928 integral4$0#
+	; NotEqual 79 £temporary939 integral4$0#
 	cmp ebx, 0
 	jne scanString$79
 
  scanString$62:
-	; IntegralToIntegral £temporary931 input
+	; IntegralToIntegral £temporary942 input
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
@@ -1015,7 +1015,7 @@ section .text
 	neg eax
 
  scanString$63:
-	; Equal 79 £temporary931 integral4$minus1#
+	; Equal 79 £temporary942 integral4$minus1#
 	cmp eax, -1
 	je scanString$79
 
@@ -1025,7 +1025,7 @@ section .text
 	je scanString$79
 
  scanString$65:
-	; Assign £temporary937 index
+	; Assign £temporary948 index
 	mov eax, [rbp + 36]
 
  scanString$66:
@@ -1033,20 +1033,20 @@ section .text
 	inc dword [rbp + 36]
 
  scanString$67:
-	; IntegralToIntegral £temporary939 £temporary937
+	; IntegralToIntegral £temporary951 £temporary948
 	mov rbx, 4294967295
 	and rax, rbx
 
  scanString$68:
-	; Add £temporary940 string £temporary939
+	; Add £temporary952 string £temporary951
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  scanString$69:
-	; Dereference £temporary938 £temporary940 0
+	; Dereference £temporary950 £temporary952 0
 
  scanString$70:
-	; Assign £temporary938 input
+	; Assign £temporary950 input
 	mov al, [rbp + 40]
 	mov [rsi], al
 
@@ -1064,10 +1064,10 @@ section .text
 	; PostCall 45
 
  scanString$74:
-	; GetReturnValue £temporary941
+	; GetReturnValue £temporary953
 
  scanString$75:
-	; Assign input £temporary941
+	; Assign input £temporary953
 	mov [rbp + 40], bl
 
  scanString$76:
@@ -1088,21 +1088,21 @@ section .text
 	jle scanString$130
 
  scanString$80:
-	; IntegralToIntegral £temporary945 index
+	; IntegralToIntegral £temporary957 index
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
  scanString$81:
-	; Add £temporary946 string £temporary945
+	; Add £temporary958 string £temporary957
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  scanString$82:
-	; Dereference £temporary944 £temporary946 0
+	; Dereference £temporary956 £temporary958 0
 
  scanString$83:
-	; Assign £temporary944 integral1$0#
+	; Assign £temporary956 integral1$0#
 	mov byte [rsi], 0
 
  scanString$84:
@@ -1122,7 +1122,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanString$88:
-	; IntegralToIntegral £temporary949 input
+	; IntegralToIntegral £temporary961 input
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
@@ -1131,7 +1131,7 @@ section .text
 	neg eax
 
  scanString$89:
-	; Parameter 69 signed int £temporary949
+	; Parameter 69 signed int £temporary961
 	mov [rbp + 69], eax
 
  scanString$90:
@@ -1145,15 +1145,15 @@ section .text
 	; PostCall 45
 
  scanString$92:
-	; GetReturnValue £temporary950
+	; GetReturnValue £temporary962
 
  scanString$93:
-	; NotEqual 105 £temporary950 integral4$0#
+	; NotEqual 105 £temporary962 integral4$0#
 	cmp ebx, 0
 	jne scanString$105
 
  scanString$94:
-	; IntegralToIntegral £temporary953 input
+	; IntegralToIntegral £temporary965 input
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
@@ -1162,7 +1162,7 @@ section .text
 	neg eax
 
  scanString$95:
-	; Equal 105 £temporary953 integral4$minus1#
+	; Equal 105 £temporary965 integral4$minus1#
 	cmp eax, -1
 	je scanString$105
 
@@ -1185,10 +1185,10 @@ section .text
 	; PostCall 45
 
  scanString$100:
-	; GetReturnValue £temporary958
+	; GetReturnValue £temporary970
 
  scanString$101:
-	; Assign input £temporary958
+	; Assign input £temporary970
 	mov [rbp + 40], bl
 
  scanString$102:
@@ -1212,7 +1212,7 @@ section .text
 	jmp scanString$130
 
  scanString$107:
-	; Assign £temporary961 precision
+	; Assign £temporary973 precision
 	mov eax, [rbp + 32]
 
  scanString$108:
@@ -1220,7 +1220,7 @@ section .text
 	dec dword [rbp + 32]
 
  scanString$109:
-	; LessThanEqual 128 £temporary961 integral4$0#
+	; LessThanEqual 128 £temporary973 integral4$0#
 	cmp eax, 0
 	jle scanString$128
 
@@ -1228,7 +1228,7 @@ section .text
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanString$111:
-	; IntegralToIntegral £temporary963 input
+	; IntegralToIntegral £temporary976 input
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
@@ -1237,7 +1237,7 @@ section .text
 	neg eax
 
  scanString$112:
-	; Parameter 69 signed int £temporary963
+	; Parameter 69 signed int £temporary976
 	mov [rbp + 69], eax
 
  scanString$113:
@@ -1251,15 +1251,15 @@ section .text
 	; PostCall 45
 
  scanString$115:
-	; GetReturnValue £temporary964
+	; GetReturnValue £temporary977
 
  scanString$116:
-	; NotEqual 128 £temporary964 integral4$0#
+	; NotEqual 128 £temporary977 integral4$0#
 	cmp ebx, 0
 	jne scanString$128
 
  scanString$117:
-	; IntegralToIntegral £temporary967 input
+	; IntegralToIntegral £temporary980 input
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
@@ -1268,7 +1268,7 @@ section .text
 	neg eax
 
  scanString$118:
-	; Equal 128 £temporary967 integral4$minus1#
+	; Equal 128 £temporary980 integral4$minus1#
 	cmp eax, -1
 	je scanString$128
 
@@ -1291,10 +1291,10 @@ section .text
 	; PostCall 45
 
  scanString$123:
-	; GetReturnValue £temporary973
+	; GetReturnValue £temporary986
 
  scanString$124:
-	; Assign input £temporary973
+	; Assign input £temporary986
 	mov [rbp + 40], bl
 
  scanString$125:
@@ -1339,264 +1339,264 @@ section .text
 
 section .text
 
- @3325$isDigitInBase:
+ @3319$isDigitInBase:
 	; PreCall 29 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3325$isDigitInBase$1:
-	; IntegralToIntegral £temporary979 c
+ @3319$isDigitInBase$1:
+	; IntegralToIntegral £temporary992 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3325$isDigitInBase$2
+	jge @3319$isDigitInBase$2
 	neg al
 	neg eax
 
- @3325$isDigitInBase$2:
-	; Parameter 53 signed int £temporary979
+ @3319$isDigitInBase$2:
+	; Parameter 53 signed int £temporary992
 	mov [rbp + 53], eax
 
- @3325$isDigitInBase$3:
+ @3319$isDigitInBase$3:
 	; Call 29 isdigit 0
-	mov qword [rbp + 29], @3325$isDigitInBase$4
+	mov qword [rbp + 29], @3319$isDigitInBase$4
 	mov [rbp + 37], rbp
 	add rbp, 29
 	jmp isdigit
 
- @3325$isDigitInBase$4:
+ @3319$isDigitInBase$4:
 	; PostCall 29
 
- @3325$isDigitInBase$5:
-	; GetReturnValue £temporary980
+ @3319$isDigitInBase$5:
+	; GetReturnValue £temporary993
 
- @3325$isDigitInBase$6:
-	; Equal 17 £temporary980 integral4$0#
+ @3319$isDigitInBase$6:
+	; Equal 17 £temporary993 integral4$0#
 	cmp ebx, 0
-	je @3325$isDigitInBase$17
+	je @3319$isDigitInBase$17
 
- @3325$isDigitInBase$7:
-	; Subtract £temporary981 c integral1$48#
+ @3319$isDigitInBase$7:
+	; Subtract £temporary994 c integral1$48#
 	mov al, [rbp + 24]
 	sub al, 48
 
- @3325$isDigitInBase$8:
-	; IntegralToIntegral £temporary982 £temporary981
+ @3319$isDigitInBase$8:
+	; IntegralToIntegral £temporary995 £temporary994
 	and eax, 255
 	cmp al, 0
-	jge @3325$isDigitInBase$9
+	jge @3319$isDigitInBase$9
 	neg al
 	neg eax
 
- @3325$isDigitInBase$9:
-	; Assign value £temporary982
+ @3319$isDigitInBase$9:
+	; Assign value £temporary995
 	mov [rbp + 29], eax
 
- @3325$isDigitInBase$10:
+ @3319$isDigitInBase$10:
 	; LessThan 14 value integral4$0#
 	cmp dword [rbp + 29], 0
-	jl @3325$isDigitInBase$14
+	jl @3319$isDigitInBase$14
 
- @3325$isDigitInBase$11:
+ @3319$isDigitInBase$11:
 	; GreaterThanEqual 14 value base
 	mov eax, [rbp + 25]
 	cmp [rbp + 29], eax
-	jge @3325$isDigitInBase$14
+	jge @3319$isDigitInBase$14
 
- @3325$isDigitInBase$12:
-	; Assign £temporary986 integral4$1#
+ @3319$isDigitInBase$12:
+	; Assign £temporary999 integral4$1#
 	mov ebx, 1
 
- @3325$isDigitInBase$13:
+ @3319$isDigitInBase$13:
 	; Jump 15
-	jmp @3325$isDigitInBase$15
+	jmp @3319$isDigitInBase$15
 
- @3325$isDigitInBase$14:
-	; Assign £temporary986 integral4$0#
+ @3319$isDigitInBase$14:
+	; Assign £temporary999 integral4$0#
 	mov ebx, 0
 
- @3325$isDigitInBase$15:
+ @3319$isDigitInBase$15:
 	; SetReturnValue
 
- @3325$isDigitInBase$16:
-	; Return £temporary986
+ @3319$isDigitInBase$16:
+	; Return £temporary999
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3325$isDigitInBase$17:
+ @3319$isDigitInBase$17:
 	; PreCall 29 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3325$isDigitInBase$18:
-	; IntegralToIntegral £temporary987 c
+ @3319$isDigitInBase$18:
+	; IntegralToIntegral £temporary1000 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3325$isDigitInBase$19
+	jge @3319$isDigitInBase$19
 	neg al
 	neg eax
 
- @3325$isDigitInBase$19:
-	; Parameter 53 signed int £temporary987
+ @3319$isDigitInBase$19:
+	; Parameter 53 signed int £temporary1000
 	mov [rbp + 53], eax
 
- @3325$isDigitInBase$20:
+ @3319$isDigitInBase$20:
 	; Call 29 islower 0
-	mov qword [rbp + 29], @3325$isDigitInBase$21
+	mov qword [rbp + 29], @3319$isDigitInBase$21
 	mov [rbp + 37], rbp
 	add rbp, 29
 	jmp islower
 
- @3325$isDigitInBase$21:
+ @3319$isDigitInBase$21:
 	; PostCall 29
 
- @3325$isDigitInBase$22:
-	; GetReturnValue £temporary988
+ @3319$isDigitInBase$22:
+	; GetReturnValue £temporary1001
 
- @3325$isDigitInBase$23:
-	; Equal 34 £temporary988 integral4$0#
+ @3319$isDigitInBase$23:
+	; Equal 34 £temporary1001 integral4$0#
 	cmp ebx, 0
-	je @3325$isDigitInBase$34
+	je @3319$isDigitInBase$34
 
- @3325$isDigitInBase$24:
-	; Subtract £temporary989 c integral1$97#
+ @3319$isDigitInBase$24:
+	; Subtract £temporary1002 c integral1$97#
 	mov al, [rbp + 24]
 	sub al, 97
 
- @3325$isDigitInBase$25:
-	; IntegralToIntegral £temporary990 £temporary989
+ @3319$isDigitInBase$25:
+	; IntegralToIntegral £temporary1003 £temporary1002
 	and eax, 255
 	cmp al, 0
-	jge @3325$isDigitInBase$26
+	jge @3319$isDigitInBase$26
 	neg al
 	neg eax
 
- @3325$isDigitInBase$26:
-	; Add value £temporary990 integral4$10#
+ @3319$isDigitInBase$26:
+	; Add value £temporary1003 integral4$10#
 	add eax, 10
 	mov [rbp + 29], eax
 
- @3325$isDigitInBase$27:
+ @3319$isDigitInBase$27:
 	; LessThan 31 value integral4$0#
 	cmp dword [rbp + 29], 0
-	jl @3325$isDigitInBase$31
+	jl @3319$isDigitInBase$31
 
- @3325$isDigitInBase$28:
+ @3319$isDigitInBase$28:
 	; GreaterThanEqual 31 value base
 	mov eax, [rbp + 25]
 	cmp [rbp + 29], eax
-	jge @3325$isDigitInBase$31
+	jge @3319$isDigitInBase$31
 
- @3325$isDigitInBase$29:
-	; Assign £temporary995 integral4$1#
+ @3319$isDigitInBase$29:
+	; Assign £temporary1008 integral4$1#
 	mov ebx, 1
 
- @3325$isDigitInBase$30:
+ @3319$isDigitInBase$30:
 	; Jump 32
-	jmp @3325$isDigitInBase$32
+	jmp @3319$isDigitInBase$32
 
- @3325$isDigitInBase$31:
-	; Assign £temporary995 integral4$0#
+ @3319$isDigitInBase$31:
+	; Assign £temporary1008 integral4$0#
 	mov ebx, 0
 
- @3325$isDigitInBase$32:
+ @3319$isDigitInBase$32:
 	; SetReturnValue
 
- @3325$isDigitInBase$33:
-	; Return £temporary995
+ @3319$isDigitInBase$33:
+	; Return £temporary1008
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3325$isDigitInBase$34:
+ @3319$isDigitInBase$34:
 	; PreCall 29 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3325$isDigitInBase$35:
-	; IntegralToIntegral £temporary996 c
+ @3319$isDigitInBase$35:
+	; IntegralToIntegral £temporary1009 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3325$isDigitInBase$36
+	jge @3319$isDigitInBase$36
 	neg al
 	neg eax
 
- @3325$isDigitInBase$36:
-	; Parameter 53 signed int £temporary996
+ @3319$isDigitInBase$36:
+	; Parameter 53 signed int £temporary1009
 	mov [rbp + 53], eax
 
- @3325$isDigitInBase$37:
+ @3319$isDigitInBase$37:
 	; Call 29 isupper 0
-	mov qword [rbp + 29], @3325$isDigitInBase$38
+	mov qword [rbp + 29], @3319$isDigitInBase$38
 	mov [rbp + 37], rbp
 	add rbp, 29
 	jmp isupper
 
- @3325$isDigitInBase$38:
+ @3319$isDigitInBase$38:
 	; PostCall 29
 
- @3325$isDigitInBase$39:
-	; GetReturnValue £temporary997
+ @3319$isDigitInBase$39:
+	; GetReturnValue £temporary1010
 
- @3325$isDigitInBase$40:
-	; Equal 51 £temporary997 integral4$0#
+ @3319$isDigitInBase$40:
+	; Equal 51 £temporary1010 integral4$0#
 	cmp ebx, 0
-	je @3325$isDigitInBase$51
+	je @3319$isDigitInBase$51
 
- @3325$isDigitInBase$41:
-	; Subtract £temporary998 c integral1$65#
+ @3319$isDigitInBase$41:
+	; Subtract £temporary1011 c integral1$65#
 	mov al, [rbp + 24]
 	sub al, 65
 
- @3325$isDigitInBase$42:
-	; IntegralToIntegral £temporary999 £temporary998
+ @3319$isDigitInBase$42:
+	; IntegralToIntegral £temporary1012 £temporary1011
 	and eax, 255
 	cmp al, 0
-	jge @3325$isDigitInBase$43
+	jge @3319$isDigitInBase$43
 	neg al
 	neg eax
 
- @3325$isDigitInBase$43:
-	; Add value £temporary999 integral4$10#
+ @3319$isDigitInBase$43:
+	; Add value £temporary1012 integral4$10#
 	add eax, 10
 	mov [rbp + 29], eax
 
- @3325$isDigitInBase$44:
+ @3319$isDigitInBase$44:
 	; LessThan 48 value integral4$0#
 	cmp dword [rbp + 29], 0
-	jl @3325$isDigitInBase$48
+	jl @3319$isDigitInBase$48
 
- @3325$isDigitInBase$45:
+ @3319$isDigitInBase$45:
 	; GreaterThanEqual 48 value base
 	mov eax, [rbp + 25]
 	cmp [rbp + 29], eax
-	jge @3325$isDigitInBase$48
+	jge @3319$isDigitInBase$48
 
- @3325$isDigitInBase$46:
-	; Assign £temporary1004 integral4$1#
+ @3319$isDigitInBase$46:
+	; Assign £temporary1017 integral4$1#
 	mov ebx, 1
 
- @3325$isDigitInBase$47:
+ @3319$isDigitInBase$47:
 	; Jump 49
-	jmp @3325$isDigitInBase$49
+	jmp @3319$isDigitInBase$49
 
- @3325$isDigitInBase$48:
-	; Assign £temporary1004 integral4$0#
+ @3319$isDigitInBase$48:
+	; Assign £temporary1017 integral4$0#
 	mov ebx, 0
 
- @3325$isDigitInBase$49:
+ @3319$isDigitInBase$49:
 	; SetReturnValue
 
- @3325$isDigitInBase$50:
-	; Return £temporary1004
+ @3319$isDigitInBase$50:
+	; Return £temporary1017
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3325$isDigitInBase$51:
+ @3319$isDigitInBase$51:
 	; SetReturnValue
 
- @3325$isDigitInBase$52:
+ @3319$isDigitInBase$52:
 	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
@@ -1604,194 +1604,194 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3325$isDigitInBase$53:
+ @3319$isDigitInBase$53:
 	; FunctionEnd isDigitInBase
 
 section .text
 
- @3351$digitToValue:
+ @3345$digitToValue:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3351$digitToValue$1:
-	; IntegralToIntegral £temporary1008 c
+ @3345$digitToValue$1:
+	; IntegralToIntegral £temporary1021 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3351$digitToValue$2
+	jge @3345$digitToValue$2
 	neg al
 	neg eax
 
- @3351$digitToValue$2:
-	; Parameter 49 signed int £temporary1008
+ @3345$digitToValue$2:
+	; Parameter 49 signed int £temporary1021
 	mov [rbp + 49], eax
 
- @3351$digitToValue$3:
+ @3345$digitToValue$3:
 	; Call 25 isdigit 0
-	mov qword [rbp + 25], @3351$digitToValue$4
+	mov qword [rbp + 25], @3345$digitToValue$4
 	mov [rbp + 33], rbp
 	add rbp, 25
 	jmp isdigit
 
- @3351$digitToValue$4:
+ @3345$digitToValue$4:
 	; PostCall 25
 
- @3351$digitToValue$5:
-	; GetReturnValue £temporary1009
+ @3345$digitToValue$5:
+	; GetReturnValue £temporary1022
 
- @3351$digitToValue$6:
-	; Equal 11 £temporary1009 integral4$0#
+ @3345$digitToValue$6:
+	; Equal 11 £temporary1022 integral4$0#
 	cmp ebx, 0
-	je @3351$digitToValue$11
+	je @3345$digitToValue$11
 
- @3351$digitToValue$7:
-	; Subtract £temporary1010 c integral1$48#
+ @3345$digitToValue$7:
+	; Subtract £temporary1023 c integral1$48#
 	mov bl, [rbp + 24]
 	sub bl, 48
 
- @3351$digitToValue$8:
-	; IntegralToIntegral £temporary1011 £temporary1010
+ @3345$digitToValue$8:
+	; IntegralToIntegral £temporary1024 £temporary1023
 	and ebx, 255
 	cmp bl, 0
-	jge @3351$digitToValue$9
+	jge @3345$digitToValue$9
 	neg bl
 	neg ebx
 
- @3351$digitToValue$9:
+ @3345$digitToValue$9:
 	; SetReturnValue
 
- @3351$digitToValue$10:
-	; Return £temporary1011
+ @3345$digitToValue$10:
+	; Return £temporary1024
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3351$digitToValue$11:
+ @3345$digitToValue$11:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3351$digitToValue$12:
-	; IntegralToIntegral £temporary1012 c
+ @3345$digitToValue$12:
+	; IntegralToIntegral £temporary1025 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3351$digitToValue$13
+	jge @3345$digitToValue$13
 	neg al
 	neg eax
 
- @3351$digitToValue$13:
-	; Parameter 49 signed int £temporary1012
+ @3345$digitToValue$13:
+	; Parameter 49 signed int £temporary1025
 	mov [rbp + 49], eax
 
- @3351$digitToValue$14:
+ @3345$digitToValue$14:
 	; Call 25 islower 0
-	mov qword [rbp + 25], @3351$digitToValue$15
+	mov qword [rbp + 25], @3345$digitToValue$15
 	mov [rbp + 33], rbp
 	add rbp, 25
 	jmp islower
 
- @3351$digitToValue$15:
+ @3345$digitToValue$15:
 	; PostCall 25
 
- @3351$digitToValue$16:
-	; GetReturnValue £temporary1013
+ @3345$digitToValue$16:
+	; GetReturnValue £temporary1026
 
- @3351$digitToValue$17:
-	; Equal 23 £temporary1013 integral4$0#
+ @3345$digitToValue$17:
+	; Equal 23 £temporary1026 integral4$0#
 	cmp ebx, 0
-	je @3351$digitToValue$23
+	je @3345$digitToValue$23
 
- @3351$digitToValue$18:
-	; Subtract £temporary1014 c integral1$97#
+ @3345$digitToValue$18:
+	; Subtract £temporary1027 c integral1$97#
 	mov bl, [rbp + 24]
 	sub bl, 97
 
- @3351$digitToValue$19:
-	; IntegralToIntegral £temporary1015 £temporary1014
+ @3345$digitToValue$19:
+	; IntegralToIntegral £temporary1028 £temporary1027
 	and ebx, 255
 	cmp bl, 0
-	jge @3351$digitToValue$20
+	jge @3345$digitToValue$20
 	neg bl
 	neg ebx
 
- @3351$digitToValue$20:
-	; Add £temporary1016 £temporary1015 integral4$10#
+ @3345$digitToValue$20:
+	; Add £temporary1029 £temporary1028 integral4$10#
 	add ebx, 10
 
- @3351$digitToValue$21:
+ @3345$digitToValue$21:
 	; SetReturnValue
 
- @3351$digitToValue$22:
-	; Return £temporary1016
+ @3345$digitToValue$22:
+	; Return £temporary1029
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3351$digitToValue$23:
+ @3345$digitToValue$23:
 	; PreCall 25 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
- @3351$digitToValue$24:
-	; IntegralToIntegral £temporary1017 c
+ @3345$digitToValue$24:
+	; IntegralToIntegral £temporary1030 c
 	mov al, [rbp + 24]
 	and eax, 255
 	cmp al, 0
-	jge @3351$digitToValue$25
+	jge @3345$digitToValue$25
 	neg al
 	neg eax
 
- @3351$digitToValue$25:
-	; Parameter 49 signed int £temporary1017
+ @3345$digitToValue$25:
+	; Parameter 49 signed int £temporary1030
 	mov [rbp + 49], eax
 
- @3351$digitToValue$26:
+ @3345$digitToValue$26:
 	; Call 25 isupper 0
-	mov qword [rbp + 25], @3351$digitToValue$27
+	mov qword [rbp + 25], @3345$digitToValue$27
 	mov [rbp + 33], rbp
 	add rbp, 25
 	jmp isupper
 
- @3351$digitToValue$27:
+ @3345$digitToValue$27:
 	; PostCall 25
 
- @3351$digitToValue$28:
-	; GetReturnValue £temporary1018
+ @3345$digitToValue$28:
+	; GetReturnValue £temporary1031
 
- @3351$digitToValue$29:
-	; Equal 35 £temporary1018 integral4$0#
+ @3345$digitToValue$29:
+	; Equal 35 £temporary1031 integral4$0#
 	cmp ebx, 0
-	je @3351$digitToValue$35
+	je @3345$digitToValue$35
 
- @3351$digitToValue$30:
-	; Subtract £temporary1019 c integral1$65#
+ @3345$digitToValue$30:
+	; Subtract £temporary1032 c integral1$65#
 	mov bl, [rbp + 24]
 	sub bl, 65
 
- @3351$digitToValue$31:
-	; IntegralToIntegral £temporary1020 £temporary1019
+ @3345$digitToValue$31:
+	; IntegralToIntegral £temporary1033 £temporary1032
 	and ebx, 255
 	cmp bl, 0
-	jge @3351$digitToValue$32
+	jge @3345$digitToValue$32
 	neg bl
 	neg ebx
 
- @3351$digitToValue$32:
-	; Add £temporary1021 £temporary1020 integral4$10#
+ @3345$digitToValue$32:
+	; Add £temporary1034 £temporary1033 integral4$10#
 	add ebx, 10
 
- @3351$digitToValue$33:
+ @3345$digitToValue$33:
 	; SetReturnValue
 
- @3351$digitToValue$34:
-	; Return £temporary1021
+ @3345$digitToValue$34:
+	; Return £temporary1034
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3351$digitToValue$35:
+ @3345$digitToValue$35:
 	; SetReturnValue
 
- @3351$digitToValue$36:
+ @3345$digitToValue$36:
 	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
@@ -1799,7 +1799,7 @@ section .text
 	mov rbp, [rbp + 8]
 	jmp rax
 
- @3351$digitToValue$37:
+ @3345$digitToValue$37:
 	; FunctionEnd digitToValue
 
 section .text
@@ -1830,17 +1830,17 @@ section .text
 	; PostCall 44
 
  scanLongInt$6:
-	; GetReturnValue £temporary1025
+	; GetReturnValue £temporary1038
 
  scanLongInt$7:
-	; Assign input £temporary1025
+	; Assign input £temporary1038
 	mov [rbp + 44], bl
 
  scanLongInt$8:
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongInt$9:
-	; IntegralToIntegral £temporary1026 input
+	; IntegralToIntegral £temporary1039 input
 	mov al, [rbp + 44]
 	and eax, 255
 	cmp al, 0
@@ -1849,7 +1849,7 @@ section .text
 	neg eax
 
  scanLongInt$10:
-	; Parameter 69 signed int £temporary1026
+	; Parameter 69 signed int £temporary1039
 	mov [rbp + 69], eax
 
  scanLongInt$11:
@@ -1863,10 +1863,10 @@ section .text
 	; PostCall 45
 
  scanLongInt$13:
-	; GetReturnValue £temporary1027
+	; GetReturnValue £temporary1040
 
  scanLongInt$14:
-	; Equal 21 £temporary1027 integral4$0#
+	; Equal 21 £temporary1040 integral4$0#
 	cmp ebx, 0
 	je scanLongInt$21
 
@@ -1884,10 +1884,10 @@ section .text
 	; PostCall 45
 
  scanLongInt$18:
-	; GetReturnValue £temporary1028
+	; GetReturnValue £temporary1041
 
  scanLongInt$19:
-	; Assign input £temporary1028
+	; Assign input £temporary1041
 	mov [rbp + 44], bl
 
  scanLongInt$20:
@@ -1913,10 +1913,10 @@ section .text
 	; PostCall 45
 
  scanLongInt$25:
-	; GetReturnValue £temporary1031
+	; GetReturnValue £temporary1044
 
  scanLongInt$26:
-	; Assign input £temporary1031
+	; Assign input £temporary1044
 	mov [rbp + 44], bl
 
  scanLongInt$27:
@@ -1946,10 +1946,10 @@ section .text
 	; PostCall 45
 
  scanLongInt$33:
-	; GetReturnValue £temporary1033
+	; GetReturnValue £temporary1046
 
  scanLongInt$34:
-	; Assign input £temporary1033
+	; Assign input £temporary1046
 	mov [rbp + 44], bl
 
  scanLongInt$35:
@@ -1976,17 +1976,17 @@ section .text
 	; PostCall 45
 
  scanLongInt$40:
-	; GetReturnValue £temporary1036
+	; GetReturnValue £temporary1049
 
  scanLongInt$41:
-	; Assign input £temporary1036
+	; Assign input £temporary1049
 	mov [rbp + 44], bl
 
  scanLongInt$42:
 	; PreCall 45 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongInt$43:
-	; IntegralToIntegral £temporary1037 input
+	; IntegralToIntegral £temporary1050 input
 	mov al, [rbp + 44]
 	and eax, 255
 	cmp al, 0
@@ -1995,7 +1995,7 @@ section .text
 	neg eax
 
  scanLongInt$44:
-	; Parameter 69 signed int £temporary1037
+	; Parameter 69 signed int £temporary1050
 	mov [rbp + 69], eax
 
  scanLongInt$45:
@@ -2009,10 +2009,10 @@ section .text
 	; PostCall 45
 
  scanLongInt$47:
-	; GetReturnValue £temporary1038
+	; GetReturnValue £temporary1051
 
  scanLongInt$48:
-	; NotEqual 56 £temporary1038 integral4$120#
+	; NotEqual 56 £temporary1051 integral4$120#
 	cmp ebx, 120
 	jne scanLongInt$56
 
@@ -2034,10 +2034,10 @@ section .text
 	; PostCall 45
 
  scanLongInt$53:
-	; GetReturnValue £temporary1040
+	; GetReturnValue £temporary1053
 
  scanLongInt$54:
-	; Assign input £temporary1040
+	; Assign input £temporary1053
 	mov [rbp + 44], bl
 
  scanLongInt$55:
@@ -2074,21 +2074,21 @@ section .text
 	mov qword [rbp + 45], scanLongInt$63
 	mov [rbp + 53], rbp
 	add rbp, 45
-	jmp @3325$isDigitInBase
+	jmp @3319$isDigitInBase
 
  scanLongInt$63:
 	; PostCall 45
 
  scanLongInt$64:
-	; GetReturnValue £temporary1041
+	; GetReturnValue £temporary1054
 
  scanLongInt$65:
-	; Equal 82 £temporary1041 integral4$0#
+	; Equal 82 £temporary1054 integral4$0#
 	cmp ebx, 0
 	je scanLongInt$82
 
  scanLongInt$66:
-	; IntegralToIntegral £temporary1042 base
+	; IntegralToIntegral £temporary1055 base
 	mov ebx, [rbp + 24]
 	mov rax, 4294967295
 	and rbx, rax
@@ -2098,7 +2098,7 @@ section .text
 	neg rbx
 
  scanLongInt$67:
-	; Multiply longValue longValue £temporary1042
+	; Multiply longValue longValue £temporary1055
 	mov rax, [rbp + 28]
 	xor rdx, rdx
 	imul rbx
@@ -2117,16 +2117,16 @@ section .text
 	mov qword [rbp + 45], scanLongInt$71
 	mov [rbp + 53], rbp
 	add rbp, 45
-	jmp @3351$digitToValue
+	jmp @3345$digitToValue
 
  scanLongInt$71:
 	; PostCall 45
 
  scanLongInt$72:
-	; GetReturnValue £temporary1044
+	; GetReturnValue £temporary1057
 
  scanLongInt$73:
-	; IntegralToIntegral £temporary1045 £temporary1044
+	; IntegralToIntegral £temporary1058 £temporary1057
 	mov rax, 4294967295
 	and rbx, rax
 	cmp ebx, 0
@@ -2135,7 +2135,7 @@ section .text
 	neg rbx
 
  scanLongInt$74:
-	; Add longValue longValue £temporary1045
+	; Add longValue longValue £temporary1058
 	add [rbp + 28], rbx
 
  scanLongInt$75:
@@ -2152,10 +2152,10 @@ section .text
 	; PostCall 45
 
  scanLongInt$78:
-	; GetReturnValue £temporary1047
+	; GetReturnValue £temporary1060
 
  scanLongInt$79:
-	; Assign input £temporary1047
+	; Assign input £temporary1060
 	mov [rbp + 44], bl
 
  scanLongInt$80:
@@ -2172,12 +2172,12 @@ section .text
 	je scanLongInt$85
 
  scanLongInt$83:
-	; Minus £temporary1049 longValue
+	; Minus £temporary1062 longValue
 	mov rax, [rbp + 28]
 	neg rax
 
  scanLongInt$84:
-	; Assign longValue £temporary1049
+	; Assign longValue £temporary1062
 	mov [rbp + 28], rax
 
  scanLongInt$85:
@@ -2241,10 +2241,10 @@ section .text
 	; PostCall 44
 
  scanUnsignedLongInt$4:
-	; GetReturnValue £temporary1054
+	; GetReturnValue £temporary1067
 
  scanUnsignedLongInt$5:
-	; Assign input £temporary1054
+	; Assign input £temporary1067
 	mov [rbp + 44], bl
 
  scanUnsignedLongInt$6:
@@ -2255,7 +2255,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanUnsignedLongInt$8:
-	; IntegralToIntegral £temporary1055 input
+	; IntegralToIntegral £temporary1068 input
 	mov al, [rbp + 44]
 	and eax, 255
 	cmp al, 0
@@ -2264,7 +2264,7 @@ section .text
 	neg eax
 
  scanUnsignedLongInt$9:
-	; Parameter 73 signed int £temporary1055
+	; Parameter 73 signed int £temporary1068
 	mov [rbp + 73], eax
 
  scanUnsignedLongInt$10:
@@ -2278,10 +2278,10 @@ section .text
 	; PostCall 49
 
  scanUnsignedLongInt$12:
-	; GetReturnValue £temporary1056
+	; GetReturnValue £temporary1069
 
  scanUnsignedLongInt$13:
-	; Equal 20 £temporary1056 integral4$0#
+	; Equal 20 £temporary1069 integral4$0#
 	cmp ebx, 0
 	je scanUnsignedLongInt$20
 
@@ -2299,10 +2299,10 @@ section .text
 	; PostCall 49
 
  scanUnsignedLongInt$17:
-	; GetReturnValue £temporary1057
+	; GetReturnValue £temporary1070
 
  scanUnsignedLongInt$18:
-	; Assign input £temporary1057
+	; Assign input £temporary1070
 	mov [rbp + 44], bl
 
  scanUnsignedLongInt$19:
@@ -2328,10 +2328,10 @@ section .text
 	; PostCall 49
 
  scanUnsignedLongInt$24:
-	; GetReturnValue £temporary1060
+	; GetReturnValue £temporary1073
 
  scanUnsignedLongInt$25:
-	; Assign input £temporary1060
+	; Assign input £temporary1073
 	mov [rbp + 44], bl
 
  scanUnsignedLongInt$26:
@@ -2358,17 +2358,17 @@ section .text
 	; PostCall 49
 
  scanUnsignedLongInt$31:
-	; GetReturnValue £temporary1063
+	; GetReturnValue £temporary1076
 
  scanUnsignedLongInt$32:
-	; Assign input £temporary1063
+	; Assign input £temporary1076
 	mov [rbp + 44], bl
 
  scanUnsignedLongInt$33:
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanUnsignedLongInt$34:
-	; IntegralToIntegral £temporary1064 input
+	; IntegralToIntegral £temporary1077 input
 	mov al, [rbp + 44]
 	and eax, 255
 	cmp al, 0
@@ -2377,7 +2377,7 @@ section .text
 	neg eax
 
  scanUnsignedLongInt$35:
-	; Parameter 73 signed int £temporary1064
+	; Parameter 73 signed int £temporary1077
 	mov [rbp + 73], eax
 
  scanUnsignedLongInt$36:
@@ -2391,10 +2391,10 @@ section .text
 	; PostCall 49
 
  scanUnsignedLongInt$38:
-	; GetReturnValue £temporary1065
+	; GetReturnValue £temporary1078
 
  scanUnsignedLongInt$39:
-	; NotEqual 47 £temporary1065 integral4$120#
+	; NotEqual 47 £temporary1078 integral4$120#
 	cmp ebx, 120
 	jne scanUnsignedLongInt$47
 
@@ -2416,10 +2416,10 @@ section .text
 	; PostCall 49
 
  scanUnsignedLongInt$44:
-	; GetReturnValue £temporary1067
+	; GetReturnValue £temporary1080
 
  scanUnsignedLongInt$45:
-	; Assign input £temporary1067
+	; Assign input £temporary1080
 	mov [rbp + 44], bl
 
  scanUnsignedLongInt$46:
@@ -2456,27 +2456,27 @@ section .text
 	mov qword [rbp + 49], scanUnsignedLongInt$54
 	mov [rbp + 57], rbp
 	add rbp, 49
-	jmp @3325$isDigitInBase
+	jmp @3319$isDigitInBase
 
  scanUnsignedLongInt$54:
 	; PostCall 49
 
  scanUnsignedLongInt$55:
-	; GetReturnValue £temporary1068
+	; GetReturnValue £temporary1081
 
  scanUnsignedLongInt$56:
-	; Equal 73 £temporary1068 integral4$0#
+	; Equal 73 £temporary1081 integral4$0#
 	cmp ebx, 0
 	je scanUnsignedLongInt$73
 
  scanUnsignedLongInt$57:
-	; IntegralToIntegral £temporary1069 base
+	; IntegralToIntegral £temporary1082 base
 	mov ebx, [rbp + 24]
 	mov rax, 4294967295
 	and rbx, rax
 
  scanUnsignedLongInt$58:
-	; Multiply unsignedLongValue unsignedLongValue £temporary1069
+	; Multiply unsignedLongValue unsignedLongValue £temporary1082
 	mov rax, [rbp + 28]
 	xor rdx, rdx
 	mul rbx
@@ -2495,21 +2495,21 @@ section .text
 	mov qword [rbp + 49], scanUnsignedLongInt$62
 	mov [rbp + 57], rbp
 	add rbp, 49
-	jmp @3351$digitToValue
+	jmp @3345$digitToValue
 
  scanUnsignedLongInt$62:
 	; PostCall 49
 
  scanUnsignedLongInt$63:
-	; GetReturnValue £temporary1071
+	; GetReturnValue £temporary1084
 
  scanUnsignedLongInt$64:
-	; IntegralToIntegral £temporary1072 £temporary1071
+	; IntegralToIntegral £temporary1085 £temporary1084
 	mov rax, 4294967295
 	and rbx, rax
 
  scanUnsignedLongInt$65:
-	; Add unsignedLongValue unsignedLongValue £temporary1072
+	; Add unsignedLongValue unsignedLongValue £temporary1085
 	add [rbp + 28], rbx
 
  scanUnsignedLongInt$66:
@@ -2530,10 +2530,10 @@ section .text
 	; PostCall 49
 
  scanUnsignedLongInt$70:
-	; GetReturnValue £temporary1074
+	; GetReturnValue £temporary1087
 
  scanUnsignedLongInt$71:
-	; Assign input £temporary1074
+	; Assign input £temporary1087
 	mov [rbp + 44], bl
 
  scanUnsignedLongInt$72:
@@ -2583,7 +2583,7 @@ section .text
 
 section .data
 
-@3435floating8$10.0#:
+@3429floating8$10.0#:
 	; Initializer LongDouble 10.0
 	dq 10.0
 
@@ -2595,7 +2595,7 @@ container4bytes#:
 
 section .data
 
-@3440floating8$10.0#:
+@3434floating8$10.0#:
 	; Initializer LongDouble 10.0
 	dq 10.0
 
@@ -2607,7 +2607,7 @@ container8bytes#:
 
 section .data
 
-@3448floating8$10.0#:
+@3442floating8$10.0#:
 	; Initializer Double 10.0
 	dq 10.0
 
@@ -2651,17 +2651,17 @@ section .text
 	; PostCall 48
 
  scanLongDouble$9:
-	; GetReturnValue £temporary1079
+	; GetReturnValue £temporary1092
 
  scanLongDouble$10:
-	; Assign input £temporary1079
+	; Assign input £temporary1092
 	mov [rbp + 48], bl
 
  scanLongDouble$11:
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongDouble$12:
-	; IntegralToIntegral £temporary1080 input
+	; IntegralToIntegral £temporary1093 input
 	mov al, [rbp + 48]
 	and eax, 255
 	cmp al, 0
@@ -2670,7 +2670,7 @@ section .text
 	neg eax
 
  scanLongDouble$13:
-	; Parameter 73 signed int £temporary1080
+	; Parameter 73 signed int £temporary1093
 	mov [rbp + 73], eax
 
  scanLongDouble$14:
@@ -2684,10 +2684,10 @@ section .text
 	; PostCall 49
 
  scanLongDouble$16:
-	; GetReturnValue £temporary1081
+	; GetReturnValue £temporary1094
 
  scanLongDouble$17:
-	; Equal 24 £temporary1081 integral4$0#
+	; Equal 24 £temporary1094 integral4$0#
 	cmp ebx, 0
 	je scanLongDouble$24
 
@@ -2705,10 +2705,10 @@ section .text
 	; PostCall 49
 
  scanLongDouble$21:
-	; GetReturnValue £temporary1082
+	; GetReturnValue £temporary1095
 
  scanLongDouble$22:
-	; Assign input £temporary1082
+	; Assign input £temporary1095
 	mov [rbp + 48], bl
 
  scanLongDouble$23:
@@ -2734,10 +2734,10 @@ section .text
 	; PostCall 49
 
  scanLongDouble$28:
-	; GetReturnValue £temporary1085
+	; GetReturnValue £temporary1098
 
  scanLongDouble$29:
-	; Assign input £temporary1085
+	; Assign input £temporary1098
 	mov [rbp + 48], bl
 
  scanLongDouble$30:
@@ -2767,17 +2767,17 @@ section .text
 	; PostCall 49
 
  scanLongDouble$36:
-	; GetReturnValue £temporary1087
+	; GetReturnValue £temporary1100
 
  scanLongDouble$37:
-	; Assign input £temporary1087
+	; Assign input £temporary1100
 	mov [rbp + 48], bl
 
  scanLongDouble$38:
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongDouble$39:
-	; IntegralToIntegral £temporary1088 input
+	; IntegralToIntegral £temporary1101 input
 	mov al, [rbp + 48]
 	and eax, 255
 	cmp al, 0
@@ -2786,7 +2786,7 @@ section .text
 	neg eax
 
  scanLongDouble$40:
-	; Parameter 73 signed int £temporary1088
+	; Parameter 73 signed int £temporary1101
 	mov [rbp + 73], eax
 
  scanLongDouble$41:
@@ -2800,32 +2800,32 @@ section .text
 	; PostCall 49
 
  scanLongDouble$43:
-	; GetReturnValue £temporary1089
+	; GetReturnValue £temporary1102
 
  scanLongDouble$44:
-	; Equal 60 £temporary1089 integral4$0#
+	; Equal 60 £temporary1102 integral4$0#
 	cmp ebx, 0
 	je scanLongDouble$60
 
  scanLongDouble$45:
 	; PushFloat floating8$10.0#
-	fld qword [@3435floating8$10.0#]
+	fld qword [@3429floating8$10.0#]
 
  scanLongDouble$46:
 	; PushFloat value
 	fld qword [rbp + 32]
 
  scanLongDouble$47:
-	; Multiply £temporary1090 floating8$10.0# value
+	; Multiply £temporary1103 floating8$10.0# value
 	fmul
 
  scanLongDouble$48:
-	; Subtract £temporary1091 input integral1$48#
+	; Subtract £temporary1104 input integral1$48#
 	mov al, [rbp + 48]
 	sub al, 48
 
  scanLongDouble$49:
-	; IntegralToIntegral £temporary1093 £temporary1091
+	; IntegralToIntegral £temporary1106 £temporary1104
 	and eax, 255
 	cmp al, 0
 	jge scanLongDouble$50
@@ -2833,12 +2833,12 @@ section .text
 	neg eax
 
  scanLongDouble$50:
-	; IntegralToFloating £temporary1092 £temporary1093
+	; IntegralToFloating £temporary1105 £temporary1106
 	mov [container4bytes#], eax
 	fild dword [container4bytes#]
 
  scanLongDouble$51:
-	; Add £temporary1094 £temporary1090 £temporary1092
+	; Add £temporary1107 £temporary1103 £temporary1105
 	fadd
 
  scanLongDouble$52:
@@ -2859,10 +2859,10 @@ section .text
 	; PostCall 49
 
  scanLongDouble$56:
-	; GetReturnValue £temporary1095
+	; GetReturnValue £temporary1108
 
  scanLongDouble$57:
-	; Assign input £temporary1095
+	; Assign input £temporary1108
 	mov [rbp + 48], bl
 
  scanLongDouble$58:
@@ -2892,17 +2892,17 @@ section .text
 	; PostCall 49
 
  scanLongDouble$64:
-	; GetReturnValue £temporary1098
+	; GetReturnValue £temporary1111
 
  scanLongDouble$65:
-	; Assign input £temporary1098
+	; Assign input £temporary1111
 	mov [rbp + 48], bl
 
  scanLongDouble$66:
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongDouble$67:
-	; IntegralToIntegral £temporary1099 input
+	; IntegralToIntegral £temporary1112 input
 	mov al, [rbp + 48]
 	and eax, 255
 	cmp al, 0
@@ -2911,7 +2911,7 @@ section .text
 	neg eax
 
  scanLongDouble$68:
-	; Parameter 73 signed int £temporary1099
+	; Parameter 73 signed int £temporary1112
 	mov [rbp + 73], eax
 
  scanLongDouble$69:
@@ -2925,10 +2925,10 @@ section .text
 	; PostCall 49
 
  scanLongDouble$71:
-	; GetReturnValue £temporary1100
+	; GetReturnValue £temporary1113
 
  scanLongDouble$72:
-	; Equal 92 £temporary1100 integral4$0#
+	; Equal 92 £temporary1113 integral4$0#
 	cmp ebx, 0
 	je scanLongDouble$92
 
@@ -2938,10 +2938,10 @@ section .text
 
  scanLongDouble$74:
 	; PushFloat floating8$10.0#
-	fld qword [@3440floating8$10.0#]
+	fld qword [@3434floating8$10.0#]
 
  scanLongDouble$75:
-	; Divide £temporary1101 factor floating8$10.0#
+	; Divide £temporary1114 factor floating8$10.0#
 	fdiv
 
  scanLongDouble$76:
@@ -2957,12 +2957,12 @@ section .text
 	fld qword [rbp + 40]
 
  scanLongDouble$79:
-	; Subtract £temporary1102 input integral1$48#
+	; Subtract £temporary1115 input integral1$48#
 	mov al, [rbp + 48]
 	sub al, 48
 
  scanLongDouble$80:
-	; IntegralToIntegral £temporary1104 £temporary1102
+	; IntegralToIntegral £temporary1117 £temporary1115
 	and eax, 255
 	cmp al, 0
 	jge scanLongDouble$81
@@ -2970,16 +2970,16 @@ section .text
 	neg eax
 
  scanLongDouble$81:
-	; IntegralToFloating £temporary1103 £temporary1104
+	; IntegralToFloating £temporary1116 £temporary1117
 	mov [container4bytes#], eax
 	fild dword [container4bytes#]
 
  scanLongDouble$82:
-	; Multiply £temporary1105 factor £temporary1103
+	; Multiply £temporary1118 factor £temporary1116
 	fmul
 
  scanLongDouble$83:
-	; Add £temporary1106 value £temporary1105
+	; Add £temporary1119 value £temporary1118
 	fadd
 
  scanLongDouble$84:
@@ -3000,10 +3000,10 @@ section .text
 	; PostCall 49
 
  scanLongDouble$88:
-	; GetReturnValue £temporary1107
+	; GetReturnValue £temporary1120
 
  scanLongDouble$89:
-	; Assign input £temporary1107
+	; Assign input £temporary1120
 	mov [rbp + 48], bl
 
  scanLongDouble$90:
@@ -3018,7 +3018,7 @@ section .text
 	; PreCall 49 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  scanLongDouble$93:
-	; IntegralToIntegral £temporary1109 input
+	; IntegralToIntegral £temporary1122 input
 	mov al, [rbp + 48]
 	and eax, 255
 	cmp al, 0
@@ -3027,7 +3027,7 @@ section .text
 	neg eax
 
  scanLongDouble$94:
-	; Parameter 73 signed int £temporary1109
+	; Parameter 73 signed int £temporary1122
 	mov [rbp + 73], eax
 
  scanLongDouble$95:
@@ -3041,10 +3041,10 @@ section .text
 	; PostCall 49
 
  scanLongDouble$97:
-	; GetReturnValue £temporary1110
+	; GetReturnValue £temporary1123
 
  scanLongDouble$98:
-	; NotEqual 118 £temporary1110 integral4$101#
+	; NotEqual 118 £temporary1123 integral4$101#
 	cmp ebx, 101
 	jne scanLongDouble$118
 
@@ -3066,10 +3066,10 @@ section .text
 	; PostCall 49
 
  scanLongDouble$103:
-	; GetReturnValue £temporary1112
+	; GetReturnValue £temporary1125
 
  scanLongDouble$104:
-	; IntegralToFloating £temporary1113 £temporary1112
+	; IntegralToFloating £temporary1126 £temporary1125
 	mov [container8bytes#], rbx
 	fild qword [container8bytes#]
 
@@ -3087,7 +3087,7 @@ section .text
 
  scanLongDouble$108:
 	; PushFloat floating8$10.0#
-	fld qword [@3448floating8$10.0#]
+	fld qword [@3442floating8$10.0#]
 
  scanLongDouble$109:
 	; Parameter 81 double floating8$10.0#
@@ -3115,10 +3115,10 @@ section .text
 	fld qword [rbp + 65]
 
  scanLongDouble$114:
-	; GetReturnValue £temporary1114
+	; GetReturnValue £temporary1127
 
  scanLongDouble$115:
-	; Multiply £temporary1115 value £temporary1114
+	; Multiply £temporary1128 value £temporary1127
 	fmul
 
  scanLongDouble$116:
@@ -3157,7 +3157,7 @@ section .text
 	fld qword [rbp + 32]
 
  scanLongDouble$124:
-	; Minus £temporary1117 value
+	; Minus £temporary1130 value
 	fchs
 
  scanLongDouble$125:
@@ -3225,45 +3225,45 @@ section .text
 	mov dword [rbp + 93], 0
 
  scanFormat$8:
-	; IntegralToIntegral £temporary1124 index
+	; IntegralToIntegral £temporary1137 index
 	mov eax, [rbp + 93]
 	mov rbx, 4294967295
 	and rax, rbx
 
  scanFormat$9:
-	; Add £temporary1125 format £temporary1124
+	; Add £temporary1138 format £temporary1137
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  scanFormat$10:
-	; Dereference £temporary1123 £temporary1125 0
+	; Dereference £temporary1136 £temporary1138 0
 
  scanFormat$11:
-	; Equal 338 £temporary1123 integral1$0#
+	; Equal 338 £temporary1136 integral1$0#
 	cmp byte [rsi], 0
 	je scanFormat$338
 
  scanFormat$12:
-	; IntegralToIntegral £temporary1129 index
+	; IntegralToIntegral £temporary1142 index
 	mov eax, [rbp + 93]
 	mov rbx, 4294967295
 	and rax, rbx
 
  scanFormat$13:
-	; Add £temporary1130 format £temporary1129
+	; Add £temporary1143 format £temporary1142
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  scanFormat$14:
-	; Dereference £temporary1128 £temporary1130 0
+	; Dereference £temporary1141 £temporary1143 0
 
  scanFormat$15:
-	; Assign c £temporary1128
+	; Assign c £temporary1141
 	mov al, [rsi]
 	mov [rbp + 40], al
 
  scanFormat$16:
-	; IntegralToIntegral £temporary1131 c
+	; IntegralToIntegral £temporary1144 c
 	mov al, [rbp + 40]
 	and eax, 255
 	cmp al, 0
@@ -3272,7 +3272,7 @@ section .text
 	neg eax
 
  scanFormat$17:
-	; Add d £temporary1131 integral4$1#
+	; Add d £temporary1144 integral4$1#
 	inc eax
 	mov [rbp + 153], eax
 
@@ -3282,92 +3282,92 @@ section .text
 	je scanFormat$330
 
  scanFormat$19:
-	; Subtract £temporary1133 d integral4$1#
+	; Subtract £temporary1146 d integral4$1#
 	mov eax, [rbp + 153]
 	dec eax
 
  scanFormat$20:
-	; Case 38 £temporary1133 integral4$104#
+	; Case 38 £temporary1146 integral4$104#
 	cmp eax, 104
 	je scanFormat$38
 
  scanFormat$21:
-	; Case 40 £temporary1133 integral4$108#
+	; Case 40 £temporary1146 integral4$108#
 	cmp eax, 108
 	je scanFormat$40
 
  scanFormat$22:
-	; Case 42 £temporary1133 integral4$76#
+	; Case 42 £temporary1146 integral4$76#
 	cmp eax, 76
 	je scanFormat$42
 
  scanFormat$23:
-	; Case 44 £temporary1133 integral4$42#
+	; Case 44 £temporary1146 integral4$42#
 	cmp eax, 42
 	je scanFormat$44
 
  scanFormat$24:
-	; Case 46 £temporary1133 integral4$99#
+	; Case 46 £temporary1146 integral4$99#
 	cmp eax, 99
 	je scanFormat$46
 
  scanFormat$25:
-	; Case 64 £temporary1133 integral4$115#
+	; Case 64 £temporary1146 integral4$115#
 	cmp eax, 115
 	je scanFormat$64
 
  scanFormat$26:
-	; Case 83 £temporary1133 integral4$100#
+	; Case 83 £temporary1146 integral4$100#
 	cmp eax, 100
 	je scanFormat$83
 
  scanFormat$27:
-	; Case 83 £temporary1133 integral4$105#
+	; Case 83 £temporary1146 integral4$105#
 	cmp eax, 105
 	je scanFormat$83
 
  scanFormat$28:
-	; Case 119 £temporary1133 integral4$111#
+	; Case 119 £temporary1146 integral4$111#
 	cmp eax, 111
 	je scanFormat$119
 
  scanFormat$29:
-	; Case 155 £temporary1133 integral4$120#
+	; Case 155 £temporary1146 integral4$120#
 	cmp eax, 120
 	je scanFormat$155
 
  scanFormat$30:
-	; Case 191 £temporary1133 integral4$117#
+	; Case 191 £temporary1146 integral4$117#
 	cmp eax, 117
 	je scanFormat$191
 
  scanFormat$31:
-	; Case 227 £temporary1133 integral4$103#
+	; Case 227 £temporary1146 integral4$103#
 	cmp eax, 103
 	je scanFormat$227
 
  scanFormat$32:
-	; Case 227 £temporary1133 integral4$102#
+	; Case 227 £temporary1146 integral4$102#
 	cmp eax, 102
 	je scanFormat$227
 
  scanFormat$33:
-	; Case 227 £temporary1133 integral4$101#
+	; Case 227 £temporary1146 integral4$101#
 	cmp eax, 101
 	je scanFormat$227
 
  scanFormat$34:
-	; Case 263 £temporary1133 integral4$91#
+	; Case 263 £temporary1146 integral4$91#
 	cmp eax, 91
 	je scanFormat$263
 
  scanFormat$35:
-	; Case 321 £temporary1133 integral4$110#
+	; Case 321 £temporary1146 integral4$110#
 	cmp eax, 110
 	je scanFormat$321
 
  scanFormat$36:
-	; CaseEnd £temporary1133
+	; CaseEnd £temporary1146
 
  scanFormat$37:
 	; Jump 336
@@ -3419,10 +3419,10 @@ section .text
 	; PostCall 157
 
  scanFormat$49:
-	; GetReturnValue £temporary1134
+	; GetReturnValue £temporary1147
 
  scanFormat$50:
-	; Assign charValue £temporary1134
+	; Assign charValue £temporary1147
 	mov [rbp + 157], bl
 
  scanFormat$51:
@@ -3435,27 +3435,27 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$53:
-	; Subtract £temporary1138 arg_list integral8$8#
+	; Subtract £temporary1151 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$54:
-	; IntegralToIntegral £temporary1139 £temporary1138
+	; IntegralToIntegral £temporary1152 £temporary1151
 
  scanFormat$55:
-	; Dereference £temporary1140 £temporary1139 0
+	; Dereference £temporary1153 £temporary1152 0
 
  scanFormat$56:
-	; Assign charPtr £temporary1140
+	; Assign charPtr £temporary1153
 	mov rax, [rsi]
 	mov [rbp + 41], rax
 
  scanFormat$57:
-	; Dereference £temporary1141 charPtr 0
+	; Dereference £temporary1154 charPtr 0
 	mov rsi, [rbp + 41]
 
  scanFormat$58:
-	; Assign £temporary1141 charValue
+	; Assign £temporary1154 charValue
 	mov al, [rbp + 157]
 	mov [rsi], al
 
@@ -3464,7 +3464,7 @@ section .text
 	mov dword [rbp + 49], 0
 
  scanFormat$60:
-	; IntegralToIntegral £temporary1142 charValue
+	; IntegralToIntegral £temporary1155 charValue
 	mov al, [rbp + 157]
 	and eax, 255
 	cmp al, 0
@@ -3473,7 +3473,7 @@ section .text
 	neg eax
 
  scanFormat$61:
-	; Equal 336 £temporary1142 integral4$minus1#
+	; Equal 336 £temporary1155 integral4$minus1#
 	cmp eax, -1
 	je scanFormat$336
 
@@ -3495,18 +3495,18 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$66:
-	; Subtract £temporary1148 arg_list integral8$8#
+	; Subtract £temporary1161 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$67:
-	; IntegralToIntegral £temporary1149 £temporary1148
+	; IntegralToIntegral £temporary1162 £temporary1161
 
  scanFormat$68:
-	; Dereference £temporary1150 £temporary1149 0
+	; Dereference £temporary1163 £temporary1162 0
 
  scanFormat$69:
-	; Assign charPtr £temporary1150
+	; Assign charPtr £temporary1163
 	mov rax, [rsi]
 	mov [rbp + 41], rax
 
@@ -3583,10 +3583,10 @@ section .text
 	; PostCall 157
 
  scanFormat$87:
-	; GetReturnValue £temporary1153
+	; GetReturnValue £temporary1166
 
  scanFormat$88:
-	; Assign longValue £temporary1153
+	; Assign longValue £temporary1166
 	mov [rbp + 69], rbx
 
  scanFormat$89:
@@ -3604,27 +3604,27 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$92:
-	; Subtract £temporary1157 arg_list integral8$8#
+	; Subtract £temporary1170 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$93:
-	; IntegralToIntegral £temporary1158 £temporary1157
+	; IntegralToIntegral £temporary1171 £temporary1170
 
  scanFormat$94:
-	; Dereference £temporary1159 £temporary1158 0
+	; Dereference £temporary1172 £temporary1171 0
 
  scanFormat$95:
-	; Assign shortPtr £temporary1159
+	; Assign shortPtr £temporary1172
 	mov rax, [rsi]
 	mov [rbp + 85], rax
 
  scanFormat$96:
-	; Dereference £temporary1160 shortPtr 0
+	; Dereference £temporary1173 shortPtr 0
 	mov rsi, [rbp + 85]
 
  scanFormat$97:
-	; IntegralToIntegral £temporary1161 longValue
+	; IntegralToIntegral £temporary1174 longValue
 	mov rax, [rbp + 69]
 	cmp rax, 0
 	jge scanFormat$98
@@ -3632,7 +3632,7 @@ section .text
 	neg ax
 
  scanFormat$98:
-	; Assign £temporary1160 £temporary1161
+	; Assign £temporary1173 £temporary1174
 	mov [rsi], ax
 
  scanFormat$99:
@@ -3649,27 +3649,27 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$102:
-	; Subtract £temporary1165 arg_list integral8$8#
+	; Subtract £temporary1178 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$103:
-	; IntegralToIntegral £temporary1166 £temporary1165
+	; IntegralToIntegral £temporary1179 £temporary1178
 
  scanFormat$104:
-	; Dereference £temporary1167 £temporary1166 0
+	; Dereference £temporary1180 £temporary1179 0
 
  scanFormat$105:
-	; Assign intPtr £temporary1167
+	; Assign intPtr £temporary1180
 	mov rax, [rsi]
 	mov [rbp + 97], rax
 
  scanFormat$106:
-	; Dereference £temporary1168 intPtr 0
+	; Dereference £temporary1181 intPtr 0
 	mov rsi, [rbp + 97]
 
  scanFormat$107:
-	; IntegralToIntegral £temporary1169 longValue
+	; IntegralToIntegral £temporary1182 longValue
 	mov rax, [rbp + 69]
 	cmp rax, 0
 	jge scanFormat$108
@@ -3677,7 +3677,7 @@ section .text
 	neg eax
 
  scanFormat$108:
-	; Assign £temporary1168 £temporary1169
+	; Assign £temporary1181 £temporary1182
 	mov [rsi], eax
 
  scanFormat$109:
@@ -3689,27 +3689,27 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$111:
-	; Subtract £temporary1171 arg_list integral8$8#
+	; Subtract £temporary1184 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$112:
-	; IntegralToIntegral £temporary1172 £temporary1171
+	; IntegralToIntegral £temporary1185 £temporary1184
 
  scanFormat$113:
-	; Dereference £temporary1173 £temporary1172 0
+	; Dereference £temporary1186 £temporary1185 0
 
  scanFormat$114:
-	; Assign longPtr £temporary1173
+	; Assign longPtr £temporary1186
 	mov rax, [rsi]
 	mov [rbp + 77], rax
 
  scanFormat$115:
-	; Dereference £temporary1174 longPtr 0
+	; Dereference £temporary1187 longPtr 0
 	mov rsi, [rbp + 77]
 
  scanFormat$116:
-	; Assign £temporary1174 longValue
+	; Assign £temporary1187 longValue
 	mov rax, [rbp + 69]
 	mov [rsi], rax
 
@@ -3739,10 +3739,10 @@ section .text
 	; PostCall 157
 
  scanFormat$123:
-	; GetReturnValue £temporary1176
+	; GetReturnValue £temporary1189
 
  scanFormat$124:
-	; Assign unsignedLongValue £temporary1176
+	; Assign unsignedLongValue £temporary1189
 	mov [rbp + 113], rbx
 
  scanFormat$125:
@@ -3760,31 +3760,31 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$128:
-	; Subtract £temporary1180 arg_list integral8$8#
+	; Subtract £temporary1193 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$129:
-	; IntegralToIntegral £temporary1181 £temporary1180
+	; IntegralToIntegral £temporary1194 £temporary1193
 
  scanFormat$130:
-	; Dereference £temporary1182 £temporary1181 0
+	; Dereference £temporary1195 £temporary1194 0
 
  scanFormat$131:
-	; Assign unsignedShortPtr £temporary1182
+	; Assign unsignedShortPtr £temporary1195
 	mov rax, [rsi]
 	mov [rbp + 129], rax
 
  scanFormat$132:
-	; Dereference £temporary1183 unsignedShortPtr 0
+	; Dereference £temporary1196 unsignedShortPtr 0
 	mov rsi, [rbp + 129]
 
  scanFormat$133:
-	; IntegralToIntegral £temporary1184 unsignedLongValue
+	; IntegralToIntegral £temporary1197 unsignedLongValue
 	mov rax, [rbp + 113]
 
  scanFormat$134:
-	; Assign £temporary1183 £temporary1184
+	; Assign £temporary1196 £temporary1197
 	mov [rsi], ax
 
  scanFormat$135:
@@ -3801,31 +3801,31 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$138:
-	; Subtract £temporary1188 arg_list integral8$8#
+	; Subtract £temporary1201 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$139:
-	; IntegralToIntegral £temporary1189 £temporary1188
+	; IntegralToIntegral £temporary1202 £temporary1201
 
  scanFormat$140:
-	; Dereference £temporary1190 £temporary1189 0
+	; Dereference £temporary1203 £temporary1202 0
 
  scanFormat$141:
-	; Assign unsignedIntPtr £temporary1190
+	; Assign unsignedIntPtr £temporary1203
 	mov rax, [rsi]
 	mov [rbp + 137], rax
 
  scanFormat$142:
-	; Dereference £temporary1191 unsignedIntPtr 0
+	; Dereference £temporary1204 unsignedIntPtr 0
 	mov rsi, [rbp + 137]
 
  scanFormat$143:
-	; IntegralToIntegral £temporary1192 unsignedLongValue
+	; IntegralToIntegral £temporary1205 unsignedLongValue
 	mov rax, [rbp + 113]
 
  scanFormat$144:
-	; Assign £temporary1191 £temporary1192
+	; Assign £temporary1204 £temporary1205
 	mov [rsi], eax
 
  scanFormat$145:
@@ -3837,27 +3837,27 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$147:
-	; Subtract £temporary1194 arg_list integral8$8#
+	; Subtract £temporary1207 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$148:
-	; IntegralToIntegral £temporary1195 £temporary1194
+	; IntegralToIntegral £temporary1208 £temporary1207
 
  scanFormat$149:
-	; Dereference £temporary1196 £temporary1195 0
+	; Dereference £temporary1209 £temporary1208 0
 
  scanFormat$150:
-	; Assign unsignedLongPtr £temporary1196
+	; Assign unsignedLongPtr £temporary1209
 	mov rax, [rsi]
 	mov [rbp + 121], rax
 
  scanFormat$151:
-	; Dereference £temporary1197 unsignedLongPtr 0
+	; Dereference £temporary1210 unsignedLongPtr 0
 	mov rsi, [rbp + 121]
 
  scanFormat$152:
-	; Assign £temporary1197 unsignedLongValue
+	; Assign £temporary1210 unsignedLongValue
 	mov rax, [rbp + 113]
 	mov [rsi], rax
 
@@ -3887,10 +3887,10 @@ section .text
 	; PostCall 157
 
  scanFormat$159:
-	; GetReturnValue £temporary1199
+	; GetReturnValue £temporary1212
 
  scanFormat$160:
-	; Assign unsignedLongValue £temporary1199
+	; Assign unsignedLongValue £temporary1212
 	mov [rbp + 113], rbx
 
  scanFormat$161:
@@ -3908,31 +3908,31 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$164:
-	; Subtract £temporary1203 arg_list integral8$8#
+	; Subtract £temporary1216 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$165:
-	; IntegralToIntegral £temporary1204 £temporary1203
+	; IntegralToIntegral £temporary1217 £temporary1216
 
  scanFormat$166:
-	; Dereference £temporary1205 £temporary1204 0
+	; Dereference £temporary1218 £temporary1217 0
 
  scanFormat$167:
-	; Assign unsignedShortPtr £temporary1205
+	; Assign unsignedShortPtr £temporary1218
 	mov rax, [rsi]
 	mov [rbp + 129], rax
 
  scanFormat$168:
-	; Dereference £temporary1206 unsignedShortPtr 0
+	; Dereference £temporary1219 unsignedShortPtr 0
 	mov rsi, [rbp + 129]
 
  scanFormat$169:
-	; IntegralToIntegral £temporary1207 unsignedLongValue
+	; IntegralToIntegral £temporary1220 unsignedLongValue
 	mov rax, [rbp + 113]
 
  scanFormat$170:
-	; Assign £temporary1206 £temporary1207
+	; Assign £temporary1219 £temporary1220
 	mov [rsi], ax
 
  scanFormat$171:
@@ -3949,31 +3949,31 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$174:
-	; Subtract £temporary1211 arg_list integral8$8#
+	; Subtract £temporary1224 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$175:
-	; IntegralToIntegral £temporary1212 £temporary1211
+	; IntegralToIntegral £temporary1225 £temporary1224
 
  scanFormat$176:
-	; Dereference £temporary1213 £temporary1212 0
+	; Dereference £temporary1226 £temporary1225 0
 
  scanFormat$177:
-	; Assign unsignedIntPtr £temporary1213
+	; Assign unsignedIntPtr £temporary1226
 	mov rax, [rsi]
 	mov [rbp + 137], rax
 
  scanFormat$178:
-	; Dereference £temporary1214 unsignedIntPtr 0
+	; Dereference £temporary1227 unsignedIntPtr 0
 	mov rsi, [rbp + 137]
 
  scanFormat$179:
-	; IntegralToIntegral £temporary1215 unsignedLongValue
+	; IntegralToIntegral £temporary1228 unsignedLongValue
 	mov rax, [rbp + 113]
 
  scanFormat$180:
-	; Assign £temporary1214 £temporary1215
+	; Assign £temporary1227 £temporary1228
 	mov [rsi], eax
 
  scanFormat$181:
@@ -3985,27 +3985,27 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$183:
-	; Subtract £temporary1217 arg_list integral8$8#
+	; Subtract £temporary1230 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$184:
-	; IntegralToIntegral £temporary1218 £temporary1217
+	; IntegralToIntegral £temporary1231 £temporary1230
 
  scanFormat$185:
-	; Dereference £temporary1219 £temporary1218 0
+	; Dereference £temporary1232 £temporary1231 0
 
  scanFormat$186:
-	; Assign unsignedLongPtr £temporary1219
+	; Assign unsignedLongPtr £temporary1232
 	mov rax, [rsi]
 	mov [rbp + 121], rax
 
  scanFormat$187:
-	; Dereference £temporary1220 unsignedLongPtr 0
+	; Dereference £temporary1233 unsignedLongPtr 0
 	mov rsi, [rbp + 121]
 
  scanFormat$188:
-	; Assign £temporary1220 unsignedLongValue
+	; Assign £temporary1233 unsignedLongValue
 	mov rax, [rbp + 113]
 	mov [rsi], rax
 
@@ -4035,10 +4035,10 @@ section .text
 	; PostCall 157
 
  scanFormat$195:
-	; GetReturnValue £temporary1222
+	; GetReturnValue £temporary1235
 
  scanFormat$196:
-	; Assign unsignedLongValue £temporary1222
+	; Assign unsignedLongValue £temporary1235
 	mov [rbp + 113], rbx
 
  scanFormat$197:
@@ -4056,31 +4056,31 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$200:
-	; Subtract £temporary1226 arg_list integral8$8#
+	; Subtract £temporary1239 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$201:
-	; IntegralToIntegral £temporary1227 £temporary1226
+	; IntegralToIntegral £temporary1240 £temporary1239
 
  scanFormat$202:
-	; Dereference £temporary1228 £temporary1227 0
+	; Dereference £temporary1241 £temporary1240 0
 
  scanFormat$203:
-	; Assign unsignedShortPtr £temporary1228
+	; Assign unsignedShortPtr £temporary1241
 	mov rax, [rsi]
 	mov [rbp + 129], rax
 
  scanFormat$204:
-	; Dereference £temporary1229 unsignedShortPtr 0
+	; Dereference £temporary1242 unsignedShortPtr 0
 	mov rsi, [rbp + 129]
 
  scanFormat$205:
-	; IntegralToIntegral £temporary1230 unsignedLongValue
+	; IntegralToIntegral £temporary1243 unsignedLongValue
 	mov rax, [rbp + 113]
 
  scanFormat$206:
-	; Assign £temporary1229 £temporary1230
+	; Assign £temporary1242 £temporary1243
 	mov [rsi], ax
 
  scanFormat$207:
@@ -4097,31 +4097,31 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$210:
-	; Subtract £temporary1234 arg_list integral8$8#
+	; Subtract £temporary1247 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$211:
-	; IntegralToIntegral £temporary1235 £temporary1234
+	; IntegralToIntegral £temporary1248 £temporary1247
 
  scanFormat$212:
-	; Dereference £temporary1236 £temporary1235 0
+	; Dereference £temporary1249 £temporary1248 0
 
  scanFormat$213:
-	; Assign unsignedIntPtr £temporary1236
+	; Assign unsignedIntPtr £temporary1249
 	mov rax, [rsi]
 	mov [rbp + 137], rax
 
  scanFormat$214:
-	; Dereference £temporary1237 unsignedIntPtr 0
+	; Dereference £temporary1250 unsignedIntPtr 0
 	mov rsi, [rbp + 137]
 
  scanFormat$215:
-	; IntegralToIntegral £temporary1238 unsignedLongValue
+	; IntegralToIntegral £temporary1251 unsignedLongValue
 	mov rax, [rbp + 113]
 
  scanFormat$216:
-	; Assign £temporary1237 £temporary1238
+	; Assign £temporary1250 £temporary1251
 	mov [rsi], eax
 
  scanFormat$217:
@@ -4133,27 +4133,27 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$219:
-	; Subtract £temporary1240 arg_list integral8$8#
+	; Subtract £temporary1253 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$220:
-	; IntegralToIntegral £temporary1241 £temporary1240
+	; IntegralToIntegral £temporary1254 £temporary1253
 
  scanFormat$221:
-	; Dereference £temporary1242 £temporary1241 0
+	; Dereference £temporary1255 £temporary1254 0
 
  scanFormat$222:
-	; Assign unsignedLongPtr £temporary1242
+	; Assign unsignedLongPtr £temporary1255
 	mov rax, [rsi]
 	mov [rbp + 121], rax
 
  scanFormat$223:
-	; Dereference £temporary1243 unsignedLongPtr 0
+	; Dereference £temporary1256 unsignedLongPtr 0
 	mov rsi, [rbp + 121]
 
  scanFormat$224:
-	; Assign £temporary1243 unsignedLongValue
+	; Assign £temporary1256 unsignedLongValue
 	mov rax, [rbp + 113]
 	mov [rsi], rax
 
@@ -4179,7 +4179,7 @@ section .text
 	; PostCall 157
 
  scanFormat$230:
-	; GetReturnValue £temporary1245
+	; GetReturnValue £temporary1258
 
  scanFormat$231:
 	; PopFloat longDoubleValue
@@ -4200,23 +4200,23 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$235:
-	; Subtract £temporary1249 arg_list integral8$8#
+	; Subtract £temporary1262 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$236:
-	; IntegralToIntegral £temporary1250 £temporary1249
+	; IntegralToIntegral £temporary1263 £temporary1262
 
  scanFormat$237:
-	; Dereference £temporary1251 £temporary1250 0
+	; Dereference £temporary1264 £temporary1263 0
 
  scanFormat$238:
-	; Assign doublePtr £temporary1251
+	; Assign doublePtr £temporary1264
 	mov rax, [rsi]
 	mov [rbp + 157], rax
 
  scanFormat$239:
-	; Dereference £temporary1252 doublePtr 0
+	; Dereference £temporary1265 doublePtr 0
 	mov rsi, [rbp + 157]
 
  scanFormat$240:
@@ -4224,7 +4224,7 @@ section .text
 	fld qword [rbp + 145]
 
  scanFormat$241:
-	; PopFloat £temporary1252
+	; PopFloat £temporary1265
 	fstp qword [rsi]
 
  scanFormat$242:
@@ -4241,23 +4241,23 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$245:
-	; Subtract £temporary1255 arg_list integral8$8#
+	; Subtract £temporary1268 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$246:
-	; IntegralToIntegral £temporary1256 £temporary1255
+	; IntegralToIntegral £temporary1269 £temporary1268
 
  scanFormat$247:
-	; Dereference £temporary1257 £temporary1256 0
+	; Dereference £temporary1270 £temporary1269 0
 
  scanFormat$248:
-	; Assign longDoublePtr £temporary1257
+	; Assign longDoublePtr £temporary1270
 	mov rax, [rsi]
 	mov [rbp + 157], rax
 
  scanFormat$249:
-	; Dereference £temporary1258 longDoublePtr 0
+	; Dereference £temporary1271 longDoublePtr 0
 	mov rsi, [rbp + 157]
 
  scanFormat$250:
@@ -4265,7 +4265,7 @@ section .text
 	fld qword [rbp + 145]
 
  scanFormat$251:
-	; PopFloat £temporary1258
+	; PopFloat £temporary1271
 	fstp qword [rsi]
 
  scanFormat$252:
@@ -4277,23 +4277,23 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$254:
-	; Subtract £temporary1260 arg_list integral8$8#
+	; Subtract £temporary1273 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$255:
-	; IntegralToIntegral £temporary1261 £temporary1260
+	; IntegralToIntegral £temporary1274 £temporary1273
 
  scanFormat$256:
-	; Dereference £temporary1262 £temporary1261 0
+	; Dereference £temporary1275 £temporary1274 0
 
  scanFormat$257:
-	; Assign floatPtr £temporary1262
+	; Assign floatPtr £temporary1275
 	mov rax, [rsi]
 	mov [rbp + 157], rax
 
  scanFormat$258:
-	; Dereference £temporary1263 floatPtr 0
+	; Dereference £temporary1276 floatPtr 0
 	mov rsi, [rbp + 157]
 
  scanFormat$259:
@@ -4301,7 +4301,7 @@ section .text
 	fld qword [rbp + 145]
 
  scanFormat$260:
-	; PopFloat £temporary1263
+	; PopFloat £temporary1276
 	fstp dword [rsi]
 
  scanFormat$261:
@@ -4321,21 +4321,21 @@ section .text
 	inc dword [rbp + 93]
 
  scanFormat$265:
-	; IntegralToIntegral £temporary1269 index
+	; IntegralToIntegral £temporary1282 index
 	mov eax, [rbp + 93]
 	mov rbx, 4294967295
 	and rax, rbx
 
  scanFormat$266:
-	; Add £temporary1270 format £temporary1269
+	; Add £temporary1283 format £temporary1282
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  scanFormat$267:
-	; Dereference £temporary1268 £temporary1270 0
+	; Dereference £temporary1281 £temporary1283 0
 
  scanFormat$268:
-	; NotEqual 271 £temporary1268 integral1$94#
+	; NotEqual 271 £temporary1281 integral1$94#
 	cmp byte [rsi], 94
 	jne scanFormat$271
 
@@ -4353,21 +4353,21 @@ section .text
 	mov [rbp + 161], eax
 
  scanFormat$272:
-	; IntegralToIntegral £temporary1274 index
+	; IntegralToIntegral £temporary1287 index
 	mov eax, [rbp + 93]
 	mov rbx, 4294967295
 	and rax, rbx
 
  scanFormat$273:
-	; Add £temporary1275 format £temporary1274
+	; Add £temporary1288 format £temporary1287
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  scanFormat$274:
-	; Dereference £temporary1273 £temporary1275 0
+	; Dereference £temporary1286 £temporary1288 0
 
  scanFormat$275:
-	; Equal 278 £temporary1273 integral1$93#
+	; Equal 278 £temporary1286 integral1$93#
 	cmp byte [rsi], 93
 	je scanFormat$278
 
@@ -4386,40 +4386,40 @@ section .text
 	mov [rbp + 165], eax
 
  scanFormat$279:
-	; IntegralToIntegral £temporary1280 index
+	; IntegralToIntegral £temporary1293 index
 	mov eax, [rbp + 93]
 	mov rbx, 4294967295
 	and rax, rbx
 
  scanFormat$280:
-	; Add £temporary1281 format £temporary1280
+	; Add £temporary1294 format £temporary1293
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  scanFormat$281:
-	; Dereference £temporary1279 £temporary1281 0
+	; Dereference £temporary1292 £temporary1294 0
 
  scanFormat$282:
-	; Assign c £temporary1279
+	; Assign c £temporary1292
 	mov al, [rsi]
 	mov [rbp + 169], al
 
  scanFormat$283:
-	; IntegralToIntegral £temporary1283 index
+	; IntegralToIntegral £temporary1296 index
 	mov eax, [rbp + 93]
 	mov rbx, 4294967295
 	and rax, rbx
 
  scanFormat$284:
-	; Add £temporary1284 format £temporary1283
+	; Add £temporary1297 format £temporary1296
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  scanFormat$285:
-	; Dereference £temporary1282 £temporary1284 0
+	; Dereference £temporary1295 £temporary1297 0
 
  scanFormat$286:
-	; Assign £temporary1282 integral1$0#
+	; Assign £temporary1295 integral1$0#
 	mov byte [rsi], 0
 
  scanFormat$287:
@@ -4432,18 +4432,18 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$289:
-	; Subtract £temporary1288 arg_list integral8$8#
+	; Subtract £temporary1301 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$290:
-	; IntegralToIntegral £temporary1289 £temporary1288
+	; IntegralToIntegral £temporary1302 £temporary1301
 
  scanFormat$291:
-	; Dereference £temporary1290 £temporary1289 0
+	; Dereference £temporary1303 £temporary1302 0
 
  scanFormat$292:
-	; Assign string £temporary1290
+	; Assign string £temporary1303
 	mov rax, [rsi]
 	mov [rbp + 170], rax
 
@@ -4456,24 +4456,24 @@ section .text
 	mov [rbp + 202], rax
 
  scanFormat$295:
-	; IntegralToIntegral £temporary1292 startIndex
+	; IntegralToIntegral £temporary1305 startIndex
 	mov eax, [rbp + 161]
 	mov rbx, 4294967295
 	and rax, rbx
 
  scanFormat$296:
-	; Add £temporary1293 format £temporary1292
+	; Add £temporary1306 format £temporary1305
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  scanFormat$297:
-	; Dereference £temporary1291 £temporary1293 0
+	; Dereference £temporary1304 £temporary1306 0
 
  scanFormat$298:
-	; Address £temporary1294 £temporary1291
+	; Address £temporary1307 £temporary1304
 
  scanFormat$299:
-	; Parameter 210 pointer £temporary1294
+	; Parameter 210 pointer £temporary1307
 	mov [rbp + 210], rsi
 
  scanFormat$300:
@@ -4508,24 +4508,24 @@ section .text
 	mov qword [rbp + 194], 0
 
  scanFormat$307:
-	; IntegralToIntegral £temporary1297 startIndex
+	; IntegralToIntegral £temporary1310 startIndex
 	mov eax, [rbp + 161]
 	mov rbx, 4294967295
 	and rax, rbx
 
  scanFormat$308:
-	; Add £temporary1298 format £temporary1297
+	; Add £temporary1311 format £temporary1310
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  scanFormat$309:
-	; Dereference £temporary1296 £temporary1298 0
+	; Dereference £temporary1309 £temporary1311 0
 
  scanFormat$310:
-	; Address £temporary1299 £temporary1296
+	; Address £temporary1312 £temporary1309
 
  scanFormat$311:
-	; Parameter 202 pointer £temporary1299
+	; Parameter 202 pointer £temporary1312
 	mov [rbp + 202], rsi
 
  scanFormat$312:
@@ -4549,21 +4549,21 @@ section .text
 	; PostCall 170
 
  scanFormat$316:
-	; IntegralToIntegral £temporary1302 index
+	; IntegralToIntegral £temporary1315 index
 	mov eax, [rbp + 93]
 	mov rbx, 4294967295
 	and rax, rbx
 
  scanFormat$317:
-	; Add £temporary1303 format £temporary1302
+	; Add £temporary1316 format £temporary1315
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  scanFormat$318:
-	; Dereference £temporary1301 £temporary1303 0
+	; Dereference £temporary1314 £temporary1316 0
 
  scanFormat$319:
-	; Assign £temporary1301 c
+	; Assign £temporary1314 c
 	mov al, [rbp + 169]
 	mov [rsi], al
 
@@ -4576,27 +4576,27 @@ section .text
 	add qword [rbp + 32], 8
 
  scanFormat$322:
-	; Subtract £temporary1305 arg_list integral8$8#
+	; Subtract £temporary1318 arg_list integral8$8#
 	mov rsi, [rbp + 32]
 	sub rsi, 8
 
  scanFormat$323:
-	; IntegralToIntegral £temporary1306 £temporary1305
+	; IntegralToIntegral £temporary1319 £temporary1318
 
  scanFormat$324:
-	; Dereference £temporary1307 £temporary1306 0
+	; Dereference £temporary1320 £temporary1319 0
 
  scanFormat$325:
-	; Assign charsPtr £temporary1307
+	; Assign charsPtr £temporary1320
 	mov rax, [rsi]
 	mov [rbp + 105], rax
 
  scanFormat$326:
-	; Dereference £temporary1308 charsPtr 0
+	; Dereference £temporary1321 charsPtr 0
 	mov rsi, [rbp + 105]
 
  scanFormat$327:
-	; Assign £temporary1308 g_inChars
+	; Assign £temporary1321 g_inChars
 	mov eax, [g_inChars]
 	mov [rsi], eax
 
@@ -4658,15 +4658,15 @@ section .text
 section .text
 
  scanf:
-	; Address £temporary1311 format
+	; Address £temporary1324 format
 	mov rsi, rbp
 	add rsi, 24
 
  scanf$1:
-	; IntegralToIntegral £temporary1312 £temporary1311
+	; IntegralToIntegral £temporary1325 £temporary1324
 
  scanf$2:
-	; Add arg_list £temporary1312 integral8$8#
+	; Add arg_list £temporary1325 integral8$8#
 	add rsi, 8
 	mov [rdi + 32], rsi
 
@@ -4696,13 +4696,13 @@ section .text
 	; PostCall 40
 
  scanf$8:
-	; GetReturnValue £temporary1314
+	; GetReturnValue £temporary1327
 
  scanf$9:
 	; SetReturnValue
 
  scanf$10:
-	; Return £temporary1314
+	; Return £temporary1327
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -4742,13 +4742,13 @@ section .text
 	; PostCall 40
 
  vscanf$6:
-	; GetReturnValue £temporary1316
+	; GetReturnValue £temporary1329
 
  vscanf$7:
 	; SetReturnValue
 
  vscanf$8:
-	; Return £temporary1316
+	; Return £temporary1329
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -4760,15 +4760,15 @@ section .text
 section .text
 
  fscanf:
-	; Address £temporary1317 format
+	; Address £temporary1330 format
 	mov rsi, rbp
 	add rsi, 32
 
  fscanf$1:
-	; IntegralToIntegral £temporary1318 £temporary1317
+	; IntegralToIntegral £temporary1331 £temporary1330
 
  fscanf$2:
-	; Add arg_list £temporary1318 integral8$8#
+	; Add arg_list £temporary1331 integral8$8#
 	add rsi, 8
 	mov [rdi + 40], rsi
 
@@ -4803,13 +4803,13 @@ section .text
 	; PostCall 48
 
  fscanf$9:
-	; GetReturnValue £temporary1320
+	; GetReturnValue £temporary1333
 
  fscanf$10:
 	; SetReturnValue
 
  fscanf$11:
-	; Return £temporary1320
+	; Return £temporary1333
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -4825,11 +4825,11 @@ section .text
 	mov dword [g_inStatus], 0
 
  vfscanf$1:
-	; IntegralToIntegral £temporary1322 inStream
+	; IntegralToIntegral £temporary1335 inStream
 	mov rax, [rbp + 24]
 
  vfscanf$2:
-	; Assign g_inDevice £temporary1322
+	; Assign g_inDevice £temporary1335
 	mov [g_inDevice], rax
 
  vfscanf$3:
@@ -4856,13 +4856,13 @@ section .text
 	; PostCall 48
 
  vfscanf$8:
-	; GetReturnValue £temporary1323
+	; GetReturnValue £temporary1336
 
  vfscanf$9:
 	; SetReturnValue
 
  vfscanf$10:
-	; Return £temporary1323
+	; Return £temporary1336
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -4874,15 +4874,15 @@ section .text
 section .text
 
  sscanf:
-	; Address £temporary1324 format
+	; Address £temporary1337 format
 	mov rsi, rbp
 	add rsi, 32
 
  sscanf$1:
-	; IntegralToIntegral £temporary1325 £temporary1324
+	; IntegralToIntegral £temporary1338 £temporary1337
 
  sscanf$2:
-	; Add arg_list £temporary1325 integral8$8#
+	; Add arg_list £temporary1338 integral8$8#
 	add rsi, 8
 	mov [rdi + 40], rsi
 
@@ -4917,13 +4917,13 @@ section .text
 	; PostCall 48
 
  sscanf$9:
-	; GetReturnValue £temporary1327
+	; GetReturnValue £temporary1340
 
  sscanf$10:
 	; SetReturnValue
 
  sscanf$11:
-	; Return £temporary1327
+	; Return £temporary1340
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
@@ -4939,11 +4939,11 @@ section .text
 	mov dword [g_inStatus], 1
 
  vsscanf$1:
-	; IntegralToIntegral £temporary1329 inString
+	; IntegralToIntegral £temporary1342 inString
 	mov rax, [rbp + 24]
 
  vsscanf$2:
-	; Assign g_inDevice £temporary1329
+	; Assign g_inDevice £temporary1342
 	mov [g_inDevice], rax
 
  vsscanf$3:
@@ -4970,13 +4970,13 @@ section .text
 	; PostCall 48
 
  vsscanf$8:
-	; GetReturnValue £temporary1330
+	; GetReturnValue £temporary1343
 
  vsscanf$9:
 	; SetReturnValue
 
  vsscanf$10:
-	; Return £temporary1330
+	; Return £temporary1343
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
 	mov rbp, [rbp + 8]
