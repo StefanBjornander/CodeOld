@@ -413,21 +413,21 @@ section .text
 	add eax, 2
 
  string_test$49:
-	; IntegralToIntegral £temporary3301 £temporary3299
+	; IntegralToIntegral £temporary3300 £temporary3299
 	mov rbx, 4294967295
 	and rax, rbx
 
  string_test$50:
-	; Add £temporary3302 u £temporary3301
+	; Add £temporary3301 u £temporary3300
 	mov rsi, rbp
 	add rsi, 136
 	add rsi, rax
 
  string_test$51:
-	; Dereference £temporary3300 £temporary3302 0
+	; Dereference £temporary3302 £temporary3301 0
 
  string_test$52:
-	; Assign £temporary3300 integral1$0#
+	; Assign £temporary3302 integral1$0#
 	mov byte [rsi], 0
 
  string_test$53:

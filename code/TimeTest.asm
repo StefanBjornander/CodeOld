@@ -336,27 +336,27 @@ section .text
 	mov qword [rbp + 192], @12598string_202020gm20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 
  time_test$50:
-	; Multiply £temporary4373 s.tm_wday integral4$8#
+	; Multiply £temporary4372 s.tm_wday integral4$8#
 	mov eax, [rbp + 112]
 	xor edx, edx
 	imul dword [@12599integral4$8#]
 
  time_test$51:
-	; IntegralToIntegral £temporary4374 £temporary4373
+	; IntegralToIntegral £temporary4373 £temporary4372
 	mov rbx, 4294967295
 	and rax, rbx
 
  time_test$52:
-	; Add £temporary4375 weekdays £temporary4374
+	; Add £temporary4374 weekdays £temporary4373
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
  time_test$53:
-	; Dereference £temporary4372 £temporary4375 0
+	; Dereference £temporary4375 £temporary4374 0
 
  time_test$54:
-	; Parameter 200 pointer £temporary4372
+	; Parameter 200 pointer £temporary4375
 	mov rax, [rsi]
 	mov [rbp + 200], rax
 
@@ -433,27 +433,27 @@ section .text
 	mov qword [rbp + 192], @12602string_local20time3A2025s202502i2D2502i2D2502i202502i3A2502i3A2502i2C20year20day2025i2C20week20day2025i2C20daylight20saving20time2025i0A#
 
  time_test$70:
-	; Multiply £temporary4390 t.tm_wday integral4$8#
+	; Multiply £temporary4389 t.tm_wday integral4$8#
 	mov eax, [rbp + 148]
 	xor edx, edx
 	imul dword [@12603integral4$8#]
 
  time_test$71:
-	; IntegralToIntegral £temporary4391 £temporary4390
+	; IntegralToIntegral £temporary4390 £temporary4389
 	mov rbx, 4294967295
 	and rax, rbx
 
  time_test$72:
-	; Add £temporary4392 weekdays £temporary4391
+	; Add £temporary4391 weekdays £temporary4390
 	mov rsi, rbp
 	add rsi, 24
 	add rsi, rax
 
  time_test$73:
-	; Dereference £temporary4389 £temporary4392 0
+	; Dereference £temporary4392 £temporary4391 0
 
  time_test$74:
-	; Parameter 200 pointer £temporary4389
+	; Parameter 200 pointer £temporary4392
 	mov rax, [rsi]
 	mov [rbp + 200], rax
 

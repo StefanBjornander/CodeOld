@@ -916,21 +916,21 @@ section .text
 	mov [rbp + 52], ebx
 
  tolower$25:
-	; IntegralToIntegral £temporary223 index
+	; IntegralToIntegral £temporary222 index
 	mov eax, [rbp + 52]
 	mov rbx, 4294967295
 	and rax, rbx
 
  tolower$26:
-	; Add £temporary224 lowerCase £temporary223
+	; Add £temporary223 lowerCase £temporary222
 	mov rsi, [rbp + 36]
 	add rsi, rax
 
  tolower$27:
-	; Dereference £temporary222 £temporary224 0
+	; Dereference £temporary224 £temporary223 0
 
  tolower$28:
-	; IntegralToIntegral £temporary225 £temporary222
+	; IntegralToIntegral £temporary225 £temporary224
 	mov bl, [rsi]
 	and ebx, 255
 	cmp bl, 0
@@ -1086,21 +1086,21 @@ section .text
 	mov [rbp + 52], ebx
 
  toupper$25:
-	; IntegralToIntegral £temporary237 index
+	; IntegralToIntegral £temporary236 index
 	mov eax, [rbp + 52]
 	mov rbx, 4294967295
 	and rax, rbx
 
  toupper$26:
-	; Add £temporary238 upperCase £temporary237
+	; Add £temporary237 upperCase £temporary236
 	mov rsi, [rbp + 44]
 	add rsi, rax
 
  toupper$27:
-	; Dereference £temporary236 £temporary238 0
+	; Dereference £temporary238 £temporary237 0
 
  toupper$28:
-	; IntegralToIntegral £temporary239 £temporary236
+	; IntegralToIntegral £temporary239 £temporary238
 	mov bl, [rsi]
 	and ebx, 255
 	cmp bl, 0

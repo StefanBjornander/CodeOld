@@ -37,20 +37,20 @@ section .text
 	inc eax
 
  generateName$3:
-	; IntegralToIntegral £temporary813 £temporary811
+	; IntegralToIntegral £temporary812 £temporary811
 	mov rbx, 4294967295
 	and rax, rbx
 
  generateName$4:
-	; Add £temporary814 name £temporary813
+	; Add £temporary813 name £temporary812
 	mov rsi, [rbp + 28]
 	add rsi, rax
 
  generateName$5:
-	; Dereference £temporary812 £temporary814 0
+	; Dereference £temporary814 £temporary813 0
 
  generateName$6:
-	; Assign £temporary812 integral1$0#
+	; Assign £temporary814 integral1$0#
 	mov byte [rsi], 0
 
  generateName$7:
@@ -63,21 +63,21 @@ section .text
 	jg generateName$37
 
  generateName$9:
-	; IntegralToIntegral £temporary818 index
+	; IntegralToIntegral £temporary817 index
 	mov eax, [rbp + 24]
 	mov rbx, 4294967295
 	and rax, rbx
 
  generateName$10:
-	; Add £temporary819 name £temporary818
+	; Add £temporary818 name £temporary817
 	mov rsi, [rbp + 28]
 	add rsi, rax
 
  generateName$11:
-	; Dereference £temporary817 £temporary819 0
+	; Dereference £temporary819 £temporary818 0
 
  generateName$12:
-	; Assign £temporary817 c
+	; Assign £temporary819 c
 	mov al, [rbp + 40]
 	mov [rsi], al
 
@@ -173,21 +173,21 @@ section .text
 	jge generateName$37
 
  generateName$33:
-	; IntegralToIntegral £temporary829 index
+	; IntegralToIntegral £temporary828 index
 	mov eax, [rbp + 24]
 	mov rbx, 4294967295
 	and rax, rbx
 
  generateName$34:
-	; Add £temporary830 name £temporary829
+	; Add £temporary829 name £temporary828
 	mov rsi, [rbp + 28]
 	add rsi, rax
 
  generateName$35:
-	; Dereference £temporary828 £temporary830 0
+	; Dereference £temporary830 £temporary829 0
 
  generateName$36:
-	; Assign £temporary828 integral1$0#
+	; Assign £temporary830 integral1$0#
 	mov byte [rsi], 0
 
  generateName$37:

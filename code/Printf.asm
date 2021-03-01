@@ -306,20 +306,20 @@ section .text
 	inc dword [g_outChars]
 
  printChar$22:
-	; IntegralToIntegral £temporary1378 £temporary1375
+	; IntegralToIntegral £temporary1377 £temporary1375
 	mov rbx, 4294967295
 	and rax, rbx
 
  printChar$23:
-	; Add £temporary1379 outString £temporary1378
+	; Add £temporary1378 outString £temporary1377
 	mov rsi, [rbp + 29]
 	add rsi, rax
 
  printChar$24:
-	; Dereference £temporary1377 £temporary1379 0
+	; Dereference £temporary1379 £temporary1378 0
 
  printChar$25:
-	; Assign £temporary1377 c
+	; Assign £temporary1379 c
 	mov al, [rbp + 24]
 	mov [rsi], al
 
@@ -362,21 +362,21 @@ section .text
 	mov dword [rbp + 36], 0
 
  printString$3:
-	; IntegralToIntegral £temporary1387 index
+	; IntegralToIntegral £temporary1386 index
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
  printString$4:
-	; Add £temporary1388 s £temporary1387
+	; Add £temporary1387 s £temporary1386
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  printString$5:
-	; Dereference £temporary1386 £temporary1388 0
+	; Dereference £temporary1388 £temporary1387 0
 
  printString$6:
-	; Equal 57 £temporary1386 integral1$0#
+	; Equal 57 £temporary1388 integral1$0#
 	cmp byte [rsi], 0
 	je printString$57
 
@@ -384,21 +384,21 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printString$8:
-	; IntegralToIntegral £temporary1392 index
+	; IntegralToIntegral £temporary1391 index
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
  printString$9:
-	; Add £temporary1393 s £temporary1392
+	; Add £temporary1392 s £temporary1391
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  printString$10:
-	; Dereference £temporary1391 £temporary1393 0
+	; Dereference £temporary1393 £temporary1392 0
 
  printString$11:
-	; Parameter 64 signed char £temporary1391
+	; Parameter 64 signed char £temporary1393
 	mov al, [rsi]
 	mov [rbp + 64], al
 
@@ -438,21 +438,21 @@ section .text
 	jle printString$57
 
  printString$20:
-	; IntegralToIntegral £temporary1400 index
+	; IntegralToIntegral £temporary1399 index
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
  printString$21:
-	; Add £temporary1401 s £temporary1400
+	; Add £temporary1400 s £temporary1399
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  printString$22:
-	; Dereference £temporary1399 £temporary1401 0
+	; Dereference £temporary1401 £temporary1400 0
 
  printString$23:
-	; Equal 57 £temporary1399 integral1$0#
+	; Equal 57 £temporary1401 integral1$0#
 	cmp byte [rsi], 0
 	je printString$57
 
@@ -460,21 +460,21 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printString$25:
-	; IntegralToIntegral £temporary1406 index
+	; IntegralToIntegral £temporary1405 index
 	mov eax, [rbp + 36]
 	mov rbx, 4294967295
 	and rax, rbx
 
  printString$26:
-	; Add £temporary1407 s £temporary1406
+	; Add £temporary1406 s £temporary1405
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  printString$27:
-	; Dereference £temporary1405 £temporary1407 0
+	; Dereference £temporary1407 £temporary1406 0
 
  printString$28:
-	; Parameter 64 signed char £temporary1405
+	; Parameter 64 signed char £temporary1407
 	mov al, [rsi]
 	mov [rbp + 64], al
 
@@ -3691,40 +3691,40 @@ section .text
 	mov dword [rbp + 40], 0
 
  printFormat$16:
-	; IntegralToIntegral £temporary1685 index
+	; IntegralToIntegral £temporary1684 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
  printFormat$17:
-	; Add £temporary1686 format £temporary1685
+	; Add £temporary1685 format £temporary1684
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  printFormat$18:
-	; Dereference £temporary1684 £temporary1686 0
+	; Dereference £temporary1686 £temporary1685 0
 
  printFormat$19:
-	; Equal 292 £temporary1684 integral1$0#
+	; Equal 292 £temporary1686 integral1$0#
 	cmp byte [rsi], 0
 	je printFormat$292
 
  printFormat$20:
-	; IntegralToIntegral £temporary1690 index
+	; IntegralToIntegral £temporary1689 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
  printFormat$21:
-	; Add £temporary1691 format £temporary1690
+	; Add £temporary1690 format £temporary1689
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  printFormat$22:
-	; Dereference £temporary1689 £temporary1691 0
+	; Dereference £temporary1691 £temporary1690 0
 
  printFormat$23:
-	; Assign c £temporary1689
+	; Assign c £temporary1691
 	mov al, [rsi]
 	mov [rbp + 100], al
 
@@ -3983,21 +3983,21 @@ section .text
 	; PreCall 105 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printFormat$80:
-	; IntegralToIntegral £temporary1695 index
+	; IntegralToIntegral £temporary1694 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
  printFormat$81:
-	; Add £temporary1696 format £temporary1695
+	; Add £temporary1695 format £temporary1694
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  printFormat$82:
-	; Dereference £temporary1694 £temporary1696 0
+	; Dereference £temporary1696 £temporary1695 0
 
  printFormat$83:
-	; Address £temporary1697 £temporary1694
+	; Address £temporary1697 £temporary1696
 
  printFormat$84:
 	; Parameter 129 pointer £temporary1697
@@ -4144,21 +4144,21 @@ section .text
 	; PreCall 113 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printFormat$116:
-	; IntegralToIntegral £temporary1707 index
+	; IntegralToIntegral £temporary1706 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
  printFormat$117:
-	; Add £temporary1708 format £temporary1707
+	; Add £temporary1707 format £temporary1706
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  printFormat$118:
-	; Dereference £temporary1706 £temporary1708 0
+	; Dereference £temporary1708 £temporary1707 0
 
  printFormat$119:
-	; Address £temporary1709 £temporary1706
+	; Address £temporary1709 £temporary1708
 
  printFormat$120:
 	; Parameter 137 pointer £temporary1709
@@ -4374,21 +4374,21 @@ section .text
 	; PreCall 117 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printFormat$168:
-	; IntegralToIntegral £temporary1729 index
+	; IntegralToIntegral £temporary1728 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
  printFormat$169:
-	; Add £temporary1730 format £temporary1729
+	; Add £temporary1729 format £temporary1728
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  printFormat$170:
-	; Dereference £temporary1728 £temporary1730 0
+	; Dereference £temporary1730 £temporary1729 0
 
  printFormat$171:
-	; Address £temporary1731 £temporary1728
+	; Address £temporary1731 £temporary1730
 
  printFormat$172:
 	; Parameter 141 pointer £temporary1731
@@ -4483,21 +4483,21 @@ section .text
 	; PreCall 109 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printFormat$193:
-	; IntegralToIntegral £temporary1734 index
+	; IntegralToIntegral £temporary1733 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
  printFormat$194:
-	; Add £temporary1735 format £temporary1734
+	; Add £temporary1734 format £temporary1733
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  printFormat$195:
-	; Dereference £temporary1733 £temporary1735 0
+	; Dereference £temporary1735 £temporary1734 0
 
  printFormat$196:
-	; Address £temporary1736 £temporary1733
+	; Address £temporary1736 £temporary1735
 
  printFormat$197:
 	; Parameter 133 pointer £temporary1736
@@ -4624,21 +4624,21 @@ section .text
 	; PreCall 113 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  printFormat$224:
-	; IntegralToIntegral £temporary1746 index
+	; IntegralToIntegral £temporary1745 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
  printFormat$225:
-	; Add £temporary1747 format £temporary1746
+	; Add £temporary1746 format £temporary1745
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  printFormat$226:
-	; Dereference £temporary1745 £temporary1747 0
+	; Dereference £temporary1747 £temporary1746 0
 
  printFormat$227:
-	; Address £temporary1748 £temporary1745
+	; Address £temporary1748 £temporary1747
 
  printFormat$228:
 	; Parameter 137 pointer £temporary1748
@@ -4788,21 +4788,21 @@ section .text
 	inc dword [rbp + 40]
 
  printFormat$259:
-	; IntegralToIntegral £temporary1760 index
+	; IntegralToIntegral £temporary1759 index
 	mov eax, [rbp + 40]
 	mov rbx, 4294967295
 	and rax, rbx
 
  printFormat$260:
-	; Add £temporary1761 format £temporary1760
+	; Add £temporary1760 format £temporary1759
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  printFormat$261:
-	; Dereference £temporary1759 £temporary1761 0
+	; Dereference £temporary1761 £temporary1760 0
 
  printFormat$262:
-	; Assign c £temporary1759
+	; Assign c £temporary1761
 	mov al, [rsi]
 	mov [rbp + 100], al
 
@@ -4942,21 +4942,21 @@ section .text
 	mov [rbp + 100], rax
 
  printFormat$295:
-	; IntegralToIntegral £temporary1772 g_outChars
+	; IntegralToIntegral £temporary1771 g_outChars
 	mov eax, [g_outChars]
 	mov rbx, 4294967295
 	and rax, rbx
 
  printFormat$296:
-	; Add £temporary1773 outString £temporary1772
+	; Add £temporary1772 outString £temporary1771
 	mov rsi, [rbp + 100]
 	add rsi, rax
 
  printFormat$297:
-	; Dereference £temporary1771 £temporary1773 0
+	; Dereference £temporary1773 £temporary1772 0
 
  printFormat$298:
-	; Assign £temporary1771 integral1$0#
+	; Assign £temporary1773 integral1$0#
 	mov byte [rsi], 0
 
  printFormat$299:

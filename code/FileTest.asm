@@ -4446,30 +4446,30 @@ section .text
 	mov [rbp + 92], eax
 
  file_test$743:
-	; Multiply £temporary3813 index integral4$8#
+	; Multiply £temporary3812 index integral4$8#
 	mov eax, [rbp + 40]
 	xor edx, edx
 	imul dword [@10055integral4$8#]
 
  file_test$744:
-	; IntegralToIntegral £temporary3814 £temporary3813
+	; IntegralToIntegral £temporary3813 £temporary3812
 	mov rbx, 4294967295
 	and rax, rbx
 
  file_test$745:
-	; Add £temporary3815 p £temporary3814
+	; Add £temporary3814 p £temporary3813
 	mov rsi, [rbp + 44]
 	add rsi, rax
 
  file_test$746:
-	; Dereference £temporary3812 £temporary3815 0
+	; Dereference £temporary3815 £temporary3814 0
 
  file_test$747:
-	; PushFloat £temporary3812
+	; PushFloat £temporary3815
 	fld qword [rsi]
 
  file_test$748:
-	; Parameter 96 double £temporary3812
+	; Parameter 96 double £temporary3815
 	fstp qword [rbp + 96]
 
  file_test$749:

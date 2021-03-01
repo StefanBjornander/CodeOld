@@ -418,26 +418,26 @@ section .text
 	jge fopen$23
 
  fopen$2:
-	; Multiply £temporary612 index integral4$41#
+	; Multiply £temporary611 index integral4$41#
 	mov eax, [rbp + 40]
 	xor edx, edx
 	imul dword [@2463integral4$41#]
 
  fopen$3:
-	; IntegralToIntegral £temporary613 £temporary612
+	; IntegralToIntegral £temporary612 £temporary611
 	mov rbx, 4294967295
 	and rax, rbx
 
  fopen$4:
-	; Add £temporary614 g_fileArray £temporary613
+	; Add £temporary613 g_fileArray £temporary612
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fopen$5:
-	; Dereference £temporary611 £temporary614 0
+	; Dereference £temporary614 £temporary613 0
 
  fopen$6:
-	; NotEqual 21 £temporary611.open integral4$0#
+	; NotEqual 21 £temporary614.open integral4$0#
 	cmp dword [rsi], 0
 	jne fopen$21
 
@@ -455,26 +455,26 @@ section .text
 	mov [rbp + 76], rax
 
  fopen$10:
-	; Multiply £temporary618 index integral4$41#
+	; Multiply £temporary617 index integral4$41#
 	mov eax, [rbp + 40]
 	xor edx, edx
 	imul dword [@2466integral4$41#]
 
  fopen$11:
-	; IntegralToIntegral £temporary619 £temporary618
+	; IntegralToIntegral £temporary618 £temporary617
 	mov rbx, 4294967295
 	and rax, rbx
 
  fopen$12:
-	; Add £temporary620 g_fileArray £temporary619
+	; Add £temporary619 g_fileArray £temporary618
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fopen$13:
-	; Dereference £temporary617 £temporary620 0
+	; Dereference £temporary620 £temporary619 0
 
  fopen$14:
-	; Address £temporary621 £temporary617
+	; Address £temporary621 £temporary620
 
  fopen$15:
 	; Parameter 84 pointer £temporary621
@@ -1287,26 +1287,26 @@ section .text
 	jge fflush$23
 
  fflush$3:
-	; Multiply £temporary664 index integral4$41#
+	; Multiply £temporary663 index integral4$41#
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [@2557integral4$41#]
 
  fflush$4:
-	; IntegralToIntegral £temporary665 £temporary664
+	; IntegralToIntegral £temporary664 £temporary663
 	mov rbx, 4294967295
 	and rax, rbx
 
  fflush$5:
-	; Add £temporary666 g_fileArray £temporary665
+	; Add £temporary665 g_fileArray £temporary664
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fflush$6:
-	; Dereference £temporary663 £temporary666 0
+	; Dereference £temporary666 £temporary665 0
 
  fflush$7:
-	; Equal 21 £temporary663.open integral4$0#
+	; Equal 21 £temporary666.open integral4$0#
 	cmp dword [rsi], 0
 	je fflush$21
 
@@ -1314,26 +1314,26 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fflush$9:
-	; Multiply £temporary668 index integral4$41#
+	; Multiply £temporary667 index integral4$41#
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [@2559integral4$41#]
 
  fflush$10:
-	; IntegralToIntegral £temporary669 £temporary668
+	; IntegralToIntegral £temporary668 £temporary667
 	mov rbx, 4294967295
 	and rax, rbx
 
  fflush$11:
-	; Add £temporary670 g_fileArray £temporary669
+	; Add £temporary669 g_fileArray £temporary668
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fflush$12:
-	; Dereference £temporary667 £temporary670 0
+	; Dereference £temporary670 £temporary669 0
 
  fflush$13:
-	; Address £temporary671 £temporary667
+	; Address £temporary671 £temporary670
 
  fflush$14:
 	; Parameter 60 pointer £temporary671
@@ -1451,26 +1451,26 @@ section .text
 	jge fclose$30
 
  fclose$10:
-	; Multiply £temporary683 index integral4$41#
+	; Multiply £temporary682 index integral4$41#
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [@2574integral4$41#]
 
  fclose$11:
-	; IntegralToIntegral £temporary684 £temporary683
+	; IntegralToIntegral £temporary683 £temporary682
 	mov rbx, 4294967295
 	and rax, rbx
 
  fclose$12:
-	; Add £temporary685 g_fileArray £temporary684
+	; Add £temporary684 g_fileArray £temporary683
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fclose$13:
-	; Dereference £temporary682 £temporary685 0
+	; Dereference £temporary685 £temporary684 0
 
  fclose$14:
-	; Equal 28 £temporary682.open integral4$0#
+	; Equal 28 £temporary685.open integral4$0#
 	cmp dword [rsi], 0
 	je fclose$28
 
@@ -1478,26 +1478,26 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  fclose$16:
-	; Multiply £temporary687 index integral4$41#
+	; Multiply £temporary686 index integral4$41#
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [@2576integral4$41#]
 
  fclose$17:
-	; IntegralToIntegral £temporary688 £temporary687
+	; IntegralToIntegral £temporary687 £temporary686
 	mov rbx, 4294967295
 	and rax, rbx
 
  fclose$18:
-	; Add £temporary689 g_fileArray £temporary688
+	; Add £temporary688 g_fileArray £temporary687
 	mov rsi, g_fileArray
 	add rsi, rax
 
  fclose$19:
-	; Dereference £temporary686 £temporary689 0
+	; Dereference £temporary689 £temporary688 0
 
  fclose$20:
-	; Address £temporary690 £temporary686
+	; Address £temporary690 £temporary689
 
  fclose$21:
 	; Parameter 60 pointer £temporary690
@@ -1853,21 +1853,21 @@ section .text
 	jne fgets$19
 
  fgets$14:
-	; IntegralToIntegral £temporary719 count
+	; IntegralToIntegral £temporary718 count
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  fgets$15:
-	; Add £temporary720 text £temporary719
+	; Add £temporary719 text £temporary718
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  fgets$16:
-	; Dereference £temporary718 £temporary720 0
+	; Dereference £temporary720 £temporary719 0
 
  fgets$17:
-	; Assign £temporary718 integral1$0#
+	; Assign £temporary720 integral1$0#
 	mov byte [rsi], 0
 
  fgets$18:
@@ -1889,21 +1889,21 @@ section .text
 	jne fgets$26
 
  fgets$21:
-	; IntegralToIntegral £temporary724 count
+	; IntegralToIntegral £temporary723 count
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  fgets$22:
-	; Add £temporary725 text £temporary724
+	; Add £temporary724 text £temporary723
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  fgets$23:
-	; Dereference £temporary723 £temporary725 0
+	; Dereference £temporary725 £temporary724 0
 
  fgets$24:
-	; Assign £temporary723 integral1$0#
+	; Assign £temporary725 integral1$0#
 	mov byte [rsi], 0
 
  fgets$25:
@@ -1929,20 +1929,20 @@ section .text
 	inc dword [rbp + 44]
 
  fgets$30:
-	; IntegralToIntegral £temporary733 £temporary730
+	; IntegralToIntegral £temporary732 £temporary730
 	mov rbx, 4294967295
 	and rax, rbx
 
  fgets$31:
-	; Add £temporary734 text £temporary733
+	; Add £temporary733 text £temporary732
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  fgets$32:
-	; Dereference £temporary732 £temporary734 0
+	; Dereference £temporary734 £temporary733 0
 
  fgets$33:
-	; Assign £temporary732 currChar
+	; Assign £temporary734 currChar
 	mov al, [rbp + 49]
 	mov [rsi], al
 
@@ -2171,20 +2171,20 @@ section .text
 	dec eax
 
  gets$16:
-	; IntegralToIntegral £temporary749 £temporary747
+	; IntegralToIntegral £temporary748 £temporary747
 	mov rbx, 4294967295
 	and rax, rbx
 
  gets$17:
-	; Add £temporary750 s £temporary749
+	; Add £temporary749 s £temporary748
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  gets$18:
-	; Dereference £temporary748 £temporary750 0
+	; Dereference £temporary750 £temporary749 0
 
  gets$19:
-	; Assign £temporary748 integral1$0#
+	; Assign £temporary750 integral1$0#
 	mov byte [rsi], 0
 
  gets$20:

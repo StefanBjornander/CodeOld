@@ -5960,50 +5960,50 @@ section .text
 	jge atexit$16
 
  atexit$2:
-	; Multiply £temporary2417 index integral4$8#
+	; Multiply £temporary2416 index integral4$8#
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [@6108integral4$8#]
 
  atexit$3:
-	; IntegralToIntegral £temporary2418 £temporary2417
+	; IntegralToIntegral £temporary2417 £temporary2416
 	mov rbx, 4294967295
 	and rax, rbx
 
  atexit$4:
-	; Add £temporary2419 g_funcArray £temporary2418
+	; Add £temporary2418 g_funcArray £temporary2417
 	mov rsi, g_funcArray
 	add rsi, rax
 
  atexit$5:
-	; Dereference £temporary2416 £temporary2419 0
+	; Dereference £temporary2419 £temporary2418 0
 
  atexit$6:
-	; NotEqual 14 £temporary2416 integral8$0#
+	; NotEqual 14 £temporary2419 integral8$0#
 	cmp qword [rsi], 0
 	jne atexit$14
 
  atexit$7:
-	; Multiply £temporary2422 index integral4$8#
+	; Multiply £temporary2421 index integral4$8#
 	mov eax, [rbp + 32]
 	xor edx, edx
 	imul dword [@6111integral4$8#]
 
  atexit$8:
-	; IntegralToIntegral £temporary2423 £temporary2422
+	; IntegralToIntegral £temporary2422 £temporary2421
 	mov rbx, 4294967295
 	and rax, rbx
 
  atexit$9:
-	; Add £temporary2424 g_funcArray £temporary2423
+	; Add £temporary2423 g_funcArray £temporary2422
 	mov rsi, g_funcArray
 	add rsi, rax
 
  atexit$10:
-	; Dereference £temporary2421 £temporary2424 0
+	; Dereference £temporary2424 £temporary2423 0
 
  atexit$11:
-	; Assign £temporary2421 fcn
+	; Assign £temporary2424 fcn
 	mov rax, [rbp + 24]
 	mov [rsi], rax
 
@@ -6064,54 +6064,54 @@ section .text
 	jl exit$16
 
  exit$2:
-	; Multiply £temporary2428 index integral4$8#
+	; Multiply £temporary2427 index integral4$8#
 	mov eax, [rbp + 28]
 	xor edx, edx
 	imul dword [@6121integral4$8#]
 
  exit$3:
-	; IntegralToIntegral £temporary2429 £temporary2428
+	; IntegralToIntegral £temporary2428 £temporary2427
 	mov rbx, 4294967295
 	and rax, rbx
 
  exit$4:
-	; Add £temporary2430 g_funcArray £temporary2429
+	; Add £temporary2429 g_funcArray £temporary2428
 	mov rsi, g_funcArray
 	add rsi, rax
 
  exit$5:
-	; Dereference £temporary2427 £temporary2430 0
+	; Dereference £temporary2430 £temporary2429 0
 
  exit$6:
-	; Equal 14 £temporary2427 integral8$0#
+	; Equal 14 £temporary2430 integral8$0#
 	cmp qword [rsi], 0
 	je exit$14
 
  exit$7:
-	; Multiply £temporary2433 index integral4$8#
+	; Multiply £temporary2432 index integral4$8#
 	mov eax, [rbp + 28]
 	xor edx, edx
 	imul dword [@6124integral4$8#]
 
  exit$8:
-	; IntegralToIntegral £temporary2434 £temporary2433
+	; IntegralToIntegral £temporary2433 £temporary2432
 	mov rbx, 4294967295
 	and rax, rbx
 
  exit$9:
-	; Add £temporary2435 g_funcArray £temporary2434
+	; Add £temporary2434 g_funcArray £temporary2433
 	mov rbx, g_funcArray
 	add rbx, rax
 
  exit$10:
-	; Dereference £temporary2432 £temporary2435 0
+	; Dereference £temporary2435 £temporary2434 0
 
  exit$11:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 	mov [rbp + 32], rbx
 
  exit$12:
-	; Call 32 £temporary2432 0
+	; Call 32 £temporary2435 0
 	mov qword [rbp + 2080], exit$13
 	mov [rbp + 2088], rbp
 	mov rsi, rbp
@@ -6171,73 +6171,73 @@ section .text
 	jge @6129$memswap$19
 
  @6129$memswap$2:
-	; IntegralToIntegral £temporary2443 index
+	; IntegralToIntegral £temporary2442 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  @6129$memswap$3:
-	; Add £temporary2444 value1 £temporary2443
+	; Add £temporary2443 value1 £temporary2442
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  @6129$memswap$4:
-	; Dereference £temporary2442 £temporary2444 0
+	; Dereference £temporary2444 £temporary2443 0
 
  @6129$memswap$5:
-	; Assign tempValue £temporary2442
+	; Assign tempValue £temporary2444
 	mov al, [rsi]
 	mov [rbp + 48], al
 
  @6129$memswap$6:
-	; IntegralToIntegral £temporary2446 index
+	; IntegralToIntegral £temporary2445 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  @6129$memswap$7:
-	; Add £temporary2447 value1 £temporary2446
+	; Add £temporary2446 value1 £temporary2445
 	mov rsi, [rbp + 24]
 	add rsi, rax
 
  @6129$memswap$8:
-	; Dereference £temporary2445 £temporary2447 0
+	; Dereference £temporary2447 £temporary2446 0
 
  @6129$memswap$9:
-	; IntegralToIntegral £temporary2449 index
+	; IntegralToIntegral £temporary2448 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  @6129$memswap$10:
-	; Add £temporary2450 value2 £temporary2449
+	; Add £temporary2449 value2 £temporary2448
 	mov rdi, [rbp + 32]
 	add rdi, rax
 
  @6129$memswap$11:
-	; Dereference £temporary2448 £temporary2450 0
+	; Dereference £temporary2450 £temporary2449 0
 
  @6129$memswap$12:
-	; Assign £temporary2445 £temporary2448
+	; Assign £temporary2447 £temporary2450
 	mov al, [rdi]
 	mov [rsi], al
 
  @6129$memswap$13:
-	; IntegralToIntegral £temporary2452 index
+	; IntegralToIntegral £temporary2451 index
 	mov eax, [rbp + 44]
 	mov rbx, 4294967295
 	and rax, rbx
 
  @6129$memswap$14:
-	; Add £temporary2453 value2 £temporary2452
+	; Add £temporary2452 value2 £temporary2451
 	mov rsi, [rbp + 32]
 	add rsi, rax
 
  @6129$memswap$15:
-	; Dereference £temporary2451 £temporary2453 0
+	; Dereference £temporary2453 £temporary2452 0
 
  @6129$memswap$16:
-	; Assign £temporary2451 tempValue
+	; Assign £temporary2453 tempValue
 	mov al, [rbp + 48]
 	mov [rsi], al
 
