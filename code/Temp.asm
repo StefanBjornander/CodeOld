@@ -9,13 +9,13 @@
 
 section .data
 
-@2969$g_tempArray:
+@3018$g_tempArray:
 	; InitializerZero 64
 	times 64 db 0
 
 section .data
 
-@2971$g_tempSize:
+@3020$g_tempSize:
 	; Initializer SignedInt 0
 	dd 0
 
@@ -267,7 +267,7 @@ section .text
 
 section .data
 
-@3010string_w#:
+@3059string_w#:
 	; Initializer String w
 	db "w", 0
 
@@ -317,7 +317,7 @@ section .text
 
  tmpfile$10:
 	; Parameter 68 pointer string_w#
-	mov qword [rbp + 68], @3010string_w#
+	mov qword [rbp + 68], @3059string_w#
 
  tmpfile$11:
 	; Call 36 fopen 0
@@ -346,7 +346,7 @@ section .text
 	mov rsi, [rbp + 24]
 
  tmpfile$17:
-	; Assign £temporary847 integral4$1#
+	; Assign £temporary847.temporary integral4$1#
 	mov dword [rsi + 37], 1
 
  tmpfile$18:

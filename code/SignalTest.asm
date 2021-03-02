@@ -12,7 +12,7 @@
 
 section .data
 
-@11363string_Floating20point20error3A2025i0A#:
+@11477string_Floating20point20error3A2025i0A#:
 	; Initializer String Floating point error: %i\n
 	db "Floating point error: %i", 10, 0
 
@@ -23,7 +23,7 @@ section .text
 
  floating_point_error$1:
 	; Parameter 52 pointer string_Floating20point20error3A2025i0A#
-	mov qword [rbp + 52], @11363string_Floating20point20error3A2025i0A#
+	mov qword [rbp + 52], @11477string_Floating20point20error3A2025i0A#
 
  floating_point_error$2:
 	; Parameter 60 signed int sig
@@ -54,7 +54,7 @@ section .text
 
 section .data
 
-@11367string_exit10A#:
+@11481string_exit10A#:
 	; Initializer String exit1\n
 	db "exit1", 10, 0
 
@@ -65,7 +65,7 @@ section .text
 
  exit_handle1$1:
 	; Parameter 48 pointer string_exit10A#
-	mov qword [rbp + 48], @11367string_exit10A#
+	mov qword [rbp + 48], @11481string_exit10A#
 
  exit_handle1$2:
 	; Call 24 printf 0
@@ -90,7 +90,7 @@ section .text
 
 section .data
 
-@11370string_exit20A#:
+@11484string_exit20A#:
 	; Initializer String exit2\n
 	db "exit2", 10, 0
 
@@ -101,7 +101,7 @@ section .text
 
  exit_handle2$1:
 	; Parameter 48 pointer string_exit20A#
-	mov qword [rbp + 48], @11370string_exit20A#
+	mov qword [rbp + 48], @11484string_exit20A#
 
  exit_handle2$2:
 	; Call 24 printf 0
@@ -126,7 +126,7 @@ section .text
 
 section .data
 
-@11373string_exit30A#:
+@11487string_exit30A#:
 	; Initializer String exit3\n
 	db "exit3", 10, 0
 
@@ -137,7 +137,7 @@ section .text
 
  exit_handle3$1:
 	; Parameter 48 pointer string_exit30A#
-	mov qword [rbp + 48], @11373string_exit30A#
+	mov qword [rbp + 48], @11487string_exit30A#
 
  exit_handle3$2:
 	; Call 24 printf 0
@@ -162,7 +162,7 @@ section .text
 
 section .data
 
-@11381string_25i0A#:
+@11495string_25i0A#:
 	; Initializer String %i\n
 	db "%i", 10, 0
 
@@ -188,7 +188,7 @@ section .text
 
  signal_test$4:
 	; Parameter 60 pointer string_25i0A#
-	mov qword [rbp + 60], @11381string_25i0A#
+	mov qword [rbp + 60], @11495string_25i0A#
 
  signal_test$5:
 	; Parameter 68 signed int c

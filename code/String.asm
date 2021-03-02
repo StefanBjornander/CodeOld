@@ -1597,7 +1597,7 @@ section .text
 
 section .data
 
-@7311integral4$8#:
+@7425integral4$8#:
 	; Initializer SignedInt 8
 	dd 8
 
@@ -1633,7 +1633,7 @@ section .text
 	mov rsi, [rbp + 28]
 
  strerror$7:
-	; Assign messageList £temporary3009
+	; Assign messageList £temporary3009.messageList
 	mov rax, [rsi + 56]
 	mov [rbp + 36], rax
 
@@ -1646,7 +1646,7 @@ section .text
 	; Multiply £temporary3011 errno integral4$8#
 	mov eax, [rbp + 24]
 	xor edx, edx
-	imul dword [@7311integral4$8#]
+	imul dword [@7425integral4$8#]
 
  strerror$10:
 	; IntegralToIntegral £temporary3012 £temporary3011
@@ -1688,7 +1688,7 @@ section .text
 
 section .data
 
-@7316$token:
+@7430$token:
 	; Initializer Pointer 0
 	dq 0
 
@@ -1836,7 +1836,7 @@ section .text
 
  strtok$30:
 	; Assign token £temporary3037
-	mov [@7316$token], rsi
+	mov [@7430$token], rsi
 
  strtok$31:
 	; SetReturnValue
@@ -1876,7 +1876,7 @@ section .text
 
  strtok$39:
 	; Assign token £temporary3041
-	mov [@7316$token], rsi
+	mov [@7430$token], rsi
 
  strtok$40:
 	; SetReturnValue
@@ -1891,7 +1891,7 @@ section .text
 
  strtok$42:
 	; NotEqual 45 token integral8$0#
-	cmp qword [@7316$token], 0
+	cmp qword [@7430$token], 0
 	jne strtok$45
 
  strtok$43:
@@ -1907,7 +1907,7 @@ section .text
 
  strtok$45:
 	; Dereference £temporary3044 £temporary3043 0
-	mov rsi, [@7316$token]
+	mov rsi, [@7430$token]
 
  strtok$46:
 	; NotEqual 49 £temporary3044 integral1$0#
@@ -1937,7 +1937,7 @@ section .text
 
  strtok$51:
 	; Add £temporary3047 token £temporary3046
-	mov rsi, [@7316$token]
+	mov rsi, [@7430$token]
 	add rsi, rax
 
  strtok$52:
@@ -1964,7 +1964,7 @@ section .text
 
  strtok$57:
 	; Add £temporary3052 token £temporary3051
-	mov rsi, [@7316$token]
+	mov rsi, [@7430$token]
 	add rsi, rax
 
  strtok$58:
@@ -2003,7 +2003,7 @@ section .text
 
  strtok$65:
 	; Assign tokenStart2 token
-	mov rax, [@7316$token]
+	mov rax, [@7430$token]
 	mov [rbp + 52], rax
 
  strtok$66:
@@ -2014,7 +2014,7 @@ section .text
 
  strtok$67:
 	; Add £temporary3058 token £temporary3057
-	mov rsi, [@7316$token]
+	mov rsi, [@7430$token]
 	add rsi, rax
 
  strtok$68:
@@ -2036,7 +2036,7 @@ section .text
 
  strtok$72:
 	; Add £temporary3062 token £temporary3061
-	mov rsi, [@7316$token]
+	mov rsi, [@7430$token]
 	add rsi, rax
 
  strtok$73:
@@ -2047,7 +2047,7 @@ section .text
 
  strtok$75:
 	; Assign token £temporary3064
-	mov [@7316$token], rsi
+	mov [@7430$token], rsi
 
  strtok$76:
 	; SetReturnValue
@@ -2070,7 +2070,7 @@ section .text
 
  strtok$80:
 	; Assign tokenStart token
-	mov rax, [@7316$token]
+	mov rax, [@7430$token]
 	mov [rbp + 44], rax
 
  strtok$81:
@@ -2081,7 +2081,7 @@ section .text
 
  strtok$82:
 	; Add £temporary3066 token £temporary3065
-	mov rsi, [@7316$token]
+	mov rsi, [@7430$token]
 	add rsi, rax
 
  strtok$83:
@@ -2092,7 +2092,7 @@ section .text
 
  strtok$85:
 	; Assign token £temporary3068
-	mov [@7316$token], rsi
+	mov [@7430$token], rsi
 
  strtok$86:
 	; SetReturnValue

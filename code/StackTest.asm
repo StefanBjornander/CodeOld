@@ -8,13 +8,13 @@
 
 section .data
 
-@11592$i:
+@11706$i:
 	; Initializer SignedInt 0
 	dd 0
 
 section .data
 
-@11593string_25i20#:
+@11707string_25i20#:
 	; Initializer String %i 
 	db "%i ", 0
 
@@ -25,15 +25,15 @@ section .text
 
  stack_test$1:
 	; Parameter 48 pointer string_25i20#
-	mov qword [rbp + 48], @11593string_25i20#
+	mov qword [rbp + 48], @11707string_25i20#
 
  stack_test$2:
 	; Assign £temporary4135 i
-	mov eax, [@11592$i]
+	mov eax, [@11706$i]
 
  stack_test$3:
 	; Add i i integral4$1#
-	inc dword [@11592$i]
+	inc dword [@11706$i]
 
  stack_test$4:
 	; Parameter 56 signed int £temporary4135
@@ -76,7 +76,7 @@ section .text
 
 section .data
 
-@11605string_102420bytes2Dblock20number3A2025i0A#:
+@11719string_102420bytes2Dblock20number3A2025i0A#:
 	; Initializer String 1024 bytes-block number: %i\n
 	db "1024 bytes-block number: %i", 10, 0
 
@@ -120,7 +120,7 @@ section .text
 
  heap_test$9:
 	; Parameter 60 pointer string_102420bytes2Dblock20number3A2025i0A#
-	mov qword [rbp + 60], @11605string_102420bytes2Dblock20number3A2025i0A#
+	mov qword [rbp + 60], @11719string_102420bytes2Dblock20number3A2025i0A#
 
  heap_test$10:
 	; Assign £temporary4142 count

@@ -254,7 +254,7 @@ section .text
 	mov rsi, [rbp + 37]
 
  printChar$9:
-	; IntegralToIntegral £temporary1376 £temporary1375
+	; IntegralToIntegral £temporary1376 £temporary1375.handle
 	mov edi, [rsi + 4]
 	mov rbx, 4294967295
 	and rdi, rbx
@@ -610,13 +610,13 @@ section .text
 
 section .data
 
-@4068integral8$10#:
+@4121integral8$10#:
 	; Initializer SignedLongInt 10
 	dq 10
 
 section .data
 
-@4070integral8$10#:
+@4123integral8$10#:
 	; Initializer SignedLongInt 10
 	dq 10
 
@@ -631,7 +631,7 @@ section .text
 	; Modulo £temporary1425 longValue integral8$10#
 	mov rax, [rbp + 24]
 	xor rdx, rdx
-	idiv qword [@4068integral8$10#]
+	idiv qword [@4121integral8$10#]
 
  printLongIntRec$2:
 	; IntegralToIntegral £temporary1426 £temporary1425
@@ -651,7 +651,7 @@ section .text
 	; Divide £temporary1427 longValue integral8$10#
 	mov rax, [rbp + 24]
 	xor rdx, rdx
-	idiv qword [@4070integral8$10#]
+	idiv qword [@4123integral8$10#]
 
  printLongIntRec$6:
 	; Parameter 60 signed long int £temporary1427
@@ -1246,7 +1246,7 @@ container8bytes#:
 
 section .data
 
-@4155floating8$10.0#:
+@4208floating8$10.0#:
 	; Initializer LongDouble 10.0
 	dq 10.0
 
@@ -1335,7 +1335,7 @@ section .text
 
  printLongDoubleFraction$17:
 	; PushFloat floating8$10.0#
-	fld qword [@4155floating8$10.0#]
+	fld qword [@4208floating8$10.0#]
 
  printLongDoubleFraction$18:
 	; PushFloat longDoubleValue
@@ -1575,7 +1575,7 @@ section .text
 
 section .data
 
-@4194floating8$10.0#:
+@4247floating8$10.0#:
 	; Initializer Double 10.0
 	dq 10.0
 
@@ -1786,7 +1786,7 @@ section .text
 
  printLongDoubleExpo$47:
 	; PushFloat floating8$10.0#
-	fld qword [@4194floating8$10.0#]
+	fld qword [@4247floating8$10.0#]
 
  printLongDoubleExpo$48:
 	; Parameter 80 double floating8$10.0#
@@ -3620,7 +3620,7 @@ section .text
 
 section .data
 
-@4628integral4$10#:
+@4681integral4$10#:
 	; Initializer SignedInt 10
 	dd 10
 
@@ -4763,7 +4763,7 @@ section .text
 	; Multiply £temporary1764 value integral4$10#
 	mov eax, [rbp + 101]
 	xor edx, edx
-	imul dword [@4628integral4$10#]
+	imul dword [@4681integral4$10#]
 
  printFormat$255:
 	; Subtract £temporary1765 c integral1$48#

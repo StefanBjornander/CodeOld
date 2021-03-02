@@ -52,7 +52,7 @@ section .text
 	mov rsi, [rbp + 28]
 
  islower$8:
-	; Parameter 60 pointer £temporary137
+	; Parameter 60 pointer £temporary137.lowerCase
 	mov rax, [rsi + 40]
 	mov [rbp + 60], rax
 
@@ -171,7 +171,7 @@ section .text
 	mov rsi, [rbp + 28]
 
  isupper$8:
-	; Parameter 60 pointer £temporary147
+	; Parameter 60 pointer £temporary147.upperCase
 	mov rax, [rsi + 48]
 	mov [rbp + 60], rax
 
@@ -865,7 +865,7 @@ section .text
 	mov rsi, [rbp + 28]
 
  tolower$13:
-	; Assign lowerCase £temporary217
+	; Assign lowerCase £temporary217.lowerCase
 	mov rax, [rsi + 40]
 	mov [rbp + 36], rax
 
@@ -874,7 +874,7 @@ section .text
 	mov rsi, [rbp + 28]
 
  tolower$15:
-	; Assign upperCase £temporary218
+	; Assign upperCase £temporary218.upperCase
 	mov rax, [rsi + 48]
 	mov [rbp + 44], rax
 
@@ -1035,7 +1035,7 @@ section .text
 	mov rsi, [rbp + 28]
 
  toupper$13:
-	; Assign lowerCase £temporary231
+	; Assign lowerCase £temporary231.lowerCase
 	mov rax, [rsi + 40]
 	mov [rbp + 36], rax
 
@@ -1044,7 +1044,7 @@ section .text
 	mov rsi, [rbp + 28]
 
  toupper$15:
-	; Assign upperCase £temporary232
+	; Assign upperCase £temporary232.upperCase
 	mov rax, [rsi + 48]
 	mov [rbp + 44], rax
 
