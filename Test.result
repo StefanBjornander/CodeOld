@@ -3,28 +3,28 @@ old  <malloc4: 7411476 0 80>
 new  <malloc4: 65448 80 65528>
 
 522:
-old  <now 1: 1615330722>
-new  <now 1: 1615330529>
+old  <now 1: 1615389857>
+new  <now 1: 1615389788>
 
 523:
-old  <now 2: 1615330722>
-new  <now 2: 1615330529>
+old  <now 2: 1615389857>
+new  <now 2: 1615389788>
 
 524:
-old  <   gm time: Tue 2021-03-09 22:58:42, year day 67, week day 2, daylight saving time -1>
-new  <   gm time: Tue 2021-03-09 22:55:29, year day 67, week day 2, daylight saving time -1>
+old  <   gm time: Wed 2021-03-10 15:24:17, year day 68, week day 3, daylight saving time -1>
+new  <   gm time: Wed 2021-03-10 15:23:08, year day 68, week day 3, daylight saving time -1>
 
 525:
-old  <local time: Tue 2021-03-09 23:58:42, year day 67, week day 2, daylight saving time -1>
-new  <local time: Tue 2021-03-09 23:55:29, year day 67, week day 2, daylight saving time -1>
+old  <local time: Wed 2021-03-10 16:24:17, year day 68, week day 3, daylight saving time -1>
+new  <local time: Wed 2021-03-10 16:23:08, year day 68, week day 3, daylight saving time -1>
 
 526:
-old  <asctime <Tue Mar 9 22:58:42 2021>, ctime <Tue Mar 9 23:58:42 2021>>
-new  <asctime <Tue Mar 9 22:55:29 2021>, ctime <Tue Mar 9 23:55:29 2021>>
+old  <asctime <Wed Mar 10 15:24:17 2021>, ctime <Wed Mar 10 16:24:17 2021>>
+new  <asctime <Wed Mar 10 15:23:08 2021>, ctime <Wed Mar 10 16:23:08 2021>>
 
 527:
-old  <strftime 309 309 <short day Tue, long day Tuesday, short month Mar, long month March, date-time 2021-03-09 23:58:42, mday 09, hour 23, gm hour 11, yday 067, month 03, min 58, am/pm AM, sec 42, week number sun 10, week day 02, week number mon 10, date 23:58:42, time 23:58:42, short year 21, long year 2021, summer/winter summer>>
-new  <strftime 309 309 <short day Tue, long day Tuesday, short month Mar, long month March, date-time 2021-03-09 23:55:29, mday 09, hour 23, gm hour 11, yday 067, month 03, min 55, am/pm AM, sec 29, week number sun 10, week day 02, week number mon 10, date 23:55:29, time 23:55:29, short year 21, long year 2021, summer/winter summer>>
+old  <strftime 311 311 <short day Wed, long day Wednesday, short month Mar, long month March, date-time 2021-03-10 16:24:17, mday 10, hour 16, gm hour 04, yday 068, month 03, min 24, am/pm AM, sec 17, week number sun 10, week day 03, week number mon 10, date 16:24:17, time 16:24:17, short year 21, long year 2021, summer/winter summer>>
+new  <strftime 311 311 <short day Wed, long day Wednesday, short month Mar, long month March, date-time 2021-03-10 16:23:08, mday 10, hour 16, gm hour 04, yday 068, month 03, min 23, am/pm AM, sec 08, week number sun 10, week day 03, week number mon 10, date 16:23:08, time 16:23:08, short year 21, long year 2021, summer/winter summer>>
 
 529:
 old  <  Address 7411448, Size 96>
@@ -132,10 +132,10 @@ new  <ULONG_MAX = FFFFFFFF>
 
 602:
 old  <<%> <Hello, World!> <X> <6363032>>
-new  <<%> <Hello, World!> <X> <58650>>
+new  <<%> <Hello, World!> <X> <58648>>
 
 661:
 old  <<%> <Hello, World!> <X> <6363032>>
-new  <<%> <Hello, World!> <X> <58650>>
+new  <<%> <Hello, World!> <X> <58648>>
 
 35

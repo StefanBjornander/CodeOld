@@ -1891,9 +1891,8 @@ section .text
  stdlib_test$242:
 	; Subtract £temporary4322 p list
 	mov rax, [rbp + 48]
-	mov rbx, rbp
-	add rbx, 24
-	sub rax, rbx
+	sub rax, rbp
+	sub rax, 24
 
  stdlib_test$243:
 	; IntegralToIntegral £temporary4323 £temporary4322

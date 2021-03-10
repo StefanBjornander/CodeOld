@@ -1602,88 +1602,87 @@ stdlib_test$233:	; Equal 237 p 0
 
 stdlib_test$234:	; BinarySubtract £temporary6138 p list
 886:		mov ax, [bp + 18]
-887:		mov bx, bp
-888:		add bx, 6
-889:		sub ax, bx
-891:	
+887:		sub ax, bp
+888:		sub ax, 6
+890:	
 
 stdlib_test$235:	; SignedDivide £temporary6143 £temporary6138 2
-893:		xor dx, dx
-894:		idiv word [@13428$int2$2#]
-900:	
+892:		xor dx, dx
+893:		idiv word [@13428$int2$2#]
+899:	
 
 stdlib_test$236:	; Goto 238
-901:		jmp stdlib_test$238
-903:	
+900:		jmp stdlib_test$238
+902:	
 
 stdlib_test$237:	; Assign £temporary6143 -1
-904:		mov ax, -1
-906:	
+903:		mov ax, -1
+905:	
 
 stdlib_test$238:	; Assign index £temporary6143
-907:		mov [bp + 20], ax
-909:	
+906:		mov [bp + 20], ax
+908:	
 
 stdlib_test$239:	; CallHeader 22 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-911:	
+910:	
 
 stdlib_test$240:	; Parameter 22 string_20202825i2C2025i290A# 6
-912:		mov word [bp + 28], @13439$string_20202825i2C2025i290A#
-914:	
+911:		mov word [bp + 28], @13439$string_20202825i2C2025i290A#
+913:	
 
 stdlib_test$241:	; Parameter 22 key 8
-915:		mov ax, [bp + 16]
-916:		mov [bp + 30], ax
-918:	
+914:		mov ax, [bp + 16]
+915:		mov [bp + 30], ax
+917:	
 
 stdlib_test$242:	; Parameter 22 index 10
-919:		mov ax, [bp + 20]
-920:		mov [bp + 32], ax
-922:	
+918:		mov ax, [bp + 20]
+919:		mov [bp + 32], ax
+921:	
 
 stdlib_test$243:	; Call 22 printf 0
-923:		mov word [bp + 22], stdlib_test$244
-924:		mov [bp + 24], bp
-925:		add bp, 22
-926:		mov di, bp
-927:		add di, 4
-928:		jmp printf
-930:	
+922:		mov word [bp + 22], stdlib_test$244
+923:		mov [bp + 24], bp
+924:		add bp, 22
+925:		mov di, bp
+926:		add di, 4
+927:		jmp printf
+929:	
 
 stdlib_test$244:	; PostCall 22
-932:	
+931:	
 
 stdlib_test$245:	; Increment key
-933:		inc word [bp + 16]
-935:	
+932:		inc word [bp + 16]
+934:	
 
 stdlib_test$246:	; Goto 220
-936:		jmp stdlib_test$220
-938:	
+935:		jmp stdlib_test$220
+937:	
 
 stdlib_test$247:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-940:	
+939:	
 
 stdlib_test$248:	; Parameter 16 string_0A# 6
-941:		mov word [bp + 22], @13441$string_0A#
-943:	
+940:		mov word [bp + 22], @13441$string_0A#
+942:	
 
 stdlib_test$249:	; Call 16 printf 0
-944:		mov word [bp + 16], stdlib_test$250
-945:		mov [bp + 18], bp
-946:		add bp, 16
-947:		mov di, bp
-948:		jmp printf
-950:	
+943:		mov word [bp + 16], stdlib_test$250
+944:		mov [bp + 18], bp
+945:		add bp, 16
+946:		mov di, bp
+947:		jmp printf
+949:	
 
 stdlib_test$250:	; PostCall 16
-952:	
+951:	
 
 stdlib_test$251:	; Return 0
-953:		mov ax, [bp]
-954:		mov di, [bp + 4]
-955:		mov bp, [bp + 2]
-956:		jmp ax
-958:	
+952:		mov ax, [bp]
+953:		mov di, [bp + 4]
+954:		mov bp, [bp + 2]
+955:		jmp ax
+957:	
 
 stdlib_test$252:	; FunctionEnd stdlib_test

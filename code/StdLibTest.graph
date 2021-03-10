@@ -140,10 +140,7 @@ stdlib_test
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a3276 a3276 p ax 886 889 892,a3277 a3277 list 887 888 889)>
-<System.Collections.Generic.HashSet`1[CCompiler.Track]
-  (a3276 a3276 p ax 886 889 892,a3277 a3277 list bx 887 888 889)>
+<System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
 <System.Collections.Generic.HashSet`1[CCompiler.Track]>
