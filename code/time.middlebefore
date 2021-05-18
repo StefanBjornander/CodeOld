@@ -1,103 +1,14 @@
-0: PreCall 19
-1: Call 19 localeconv 0
-2: PostCall 19
-3: GetReturnValue £temporary2633
-4: Assign localeConvPtr £temporary2633
-5: AssignRegister ah 42
-6: Interrupt 33
-7: InspectRegister £temporary2635 cx
-8: BinarySubtract £temporary2636 £temporary2635 1900
-9: Assign year £temporary2636
-10: InspectRegister £temporary2637 dh
-11: BinarySubtract £temporary2638 £temporary2637 1
-12: Assign month £temporary2638
-13: InspectRegister £temporary2639 dl
-14: Assign monthDay £temporary2639
-15: AssignRegister ah 44
-16: Interrupt 33
-17: InspectRegister £temporary2641 ch
-18: Assign hour £temporary2641
-19: InspectRegister £temporary2642 cl
-20: Assign min £temporary2642
-21: InspectRegister £temporary2643 dh
-22: Assign sec £temporary2643
-23: NotEqual Dereference £temporary2645 -> localeConvPtr localeConvPtr 0 localeConvPtr 0
-24: Goto SignedModulo £temporary2648 year 4
-25: Dereference £temporary2645 -> localeConvPtr localeConvPtr 0
-26: IntegralToIntegral £temporary2646 £temporary2645 -> localeConvPtr
-27: BinarySubtract £temporary2647 hour £temporary2646
-28: Assign hour £temporary2647
-29: Goto SignedModulo £temporary2648 year 4
-30: SignedModulo £temporary2648 year 4
-31: Equal Assign £temporary2650 1 £temporary2648 0
-32: Goto Assign £temporary2650 0
-33: Assign £temporary2650 1
-34: Goto Empty
-35: Assign £temporary2650 0
-36: Empty
-37: Assign leapYear £temporary2650
-38: Assign daysOfMonthsX[0] 31
-39: NotEqual Empty leapYear 0
-40: Goto Empty
-41: Empty
-42: Assign £temporary2652 29
-43: Goto Empty
-44: Empty
-45: Assign £temporary2652 28
-46: Empty
-47: Assign daysOfMonthsX[1] £temporary2652
-48: Assign daysOfMonthsX[2] 31
-49: Assign daysOfMonthsX[3] 30
-50: Assign daysOfMonthsX[4] 31
-51: Assign daysOfMonthsX[5] 30
-52: Assign daysOfMonthsX[6] 31
-53: Assign daysOfMonthsX[7] 31
-54: Assign daysOfMonthsX[8] 30
-55: Assign daysOfMonthsX[9] 31
-56: Assign daysOfMonthsX[10] 30
-57: Assign daysOfMonthsX[11] 31
-58: IntegralToIntegral £temporary2665 monthDay
-59: BinarySubtract £temporary2666 £temporary2665 1
-60: Assign yearDay £temporary2666
-61: Assign mon 0
-62: Empty
-63: IntegralToIntegral £temporary2667 month
-64: SignedLessThan UnsignedMultiply £temporary2671 mon 2 mon £temporary2667
-65: Goto IntegralToIntegral £temporary2675 sec
-66: UnsignedMultiply £temporary2671 mon 2
-67: BinaryAdd £temporary2672 daysOfMonthsX £temporary2671
-68: Dereference £temporary2670 -> £temporary2672 £temporary2672 0
-69: BinaryAdd £temporary2673 yearDay £temporary2670 -> £temporary2672
-70: Assign yearDay £temporary2673
-71: Empty
-72: BinaryAdd mon mon 1
-73: Goto Empty
-74: IntegralToIntegral £temporary2675 sec
-75: Assign s.tm_sec £temporary2675
-76: IntegralToIntegral £temporary2677 min
-77: Assign s.tm_min £temporary2677
-78: IntegralToIntegral £temporary2679 hour
-79: Assign s.tm_hour £temporary2679
-80: IntegralToIntegral £temporary2681 monthDay
-81: Assign s.tm_mday £temporary2681
-82: IntegralToIntegral £temporary2683 month
-83: Assign s.tm_mon £temporary2683
-84: Assign s.tm_year year
-85: Assign s.tm_wday 0
-86: Assign s.tm_yday yearDay
-87: Assign s.tm_isdst 0
-88: PreCall 69
-89: Address £temporary2688 s
-90: Parameter 75 pointer £temporary2688
-91: Call 69 mktime 0
-92: PostCall 69
-93: GetReturnValue £temporary2689
-94: Assign time £temporary2689
-95: NotEqual Dereference £temporary2691 -> timePtr timePtr 0 timePtr 0
-96: Goto Return time
-97: Dereference £temporary2691 -> timePtr timePtr 0
-98: Assign £temporary2691 -> timePtr time
-99: Goto Return time
-100: Return time
-101: Empty
-102: FunctionEnd time
+0: AssignRegister rax 201
+1: Address £temporary2482 time
+2: IntegralToIntegral £temporary2483 £temporary2482
+3: AssignRegister rdi £temporary2483
+4: SysCall
+5: NotEqual Dereference £temporary2485 -> timePtr timePtr 0 timePtr 0
+6: Jump SetReturnValue
+7: Dereference £temporary2485 -> timePtr timePtr 0
+8: Assign £temporary2485 -> timePtr time
+9: Jump SetReturnValue
+10: SetReturnValue
+11: Return time
+12: Empty
+13: FunctionEnd time

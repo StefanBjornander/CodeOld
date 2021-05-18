@@ -5,6 +5,8 @@
 #include <locale.h>
 #include <assert.h>
 
+int getWeekNumber(const struct tm*);
+
 clock_t clock(void) {
   return -1;
 }
@@ -206,6 +208,29 @@ char* ctime(const time_t* time) {
   return asctime(localtime(time));
 }
 
+int getWeekNumber(const struct tm* tp) {
+  const long leapDays = (tp->tm_year - 69) / 4;
+  const int totalDays = 365 * (tp->tm_year - 70) + leapDays;
+  int weekDayJanuaryFirst;
+
+  if (totalDays < 3) {
+    weekDayJanuaryFirst = totalDays + 4;
+  }
+  else {
+    weekDayJanuaryFirst = (totalDays - 3) % 7;
+  }
+
+  { int firstWeekSize = 7 - weekDayJanuaryFirst;
+
+    if (tp->tm_yday < firstWeekSize) {
+      return 0;
+    }
+    else {
+      return ((tp->tm_yday - firstWeekSize) / 7) + 1;
+    }
+  }
+}
+
 size_t strftime(char* result, size_t maxSize,
                 const char* format, const struct tm* tp) {
   struct lconv* localeConvPtr = localeconv();
@@ -241,26 +266,17 @@ size_t strftime(char* result, size_t maxSize,
 
   strcpy(result, "");
   { int index;
-    const int weekNumberStartSunday = 0, weekNumberStartMonday = 0;
+    const int weekNumberStartSunday = getWeekNumber(tp);
+    int weekNumberStartMonday = weekNumberStartSunday;
 
-    /*const char timeZone[7] = tp->tm_isdst ? "summer" : "winter";
-    const char timeZone[7];
-    
-    if (tp->tm_isdst) {
-      strcpy(timeZone, "summer");
+    if (tp->tm_mday == 0) {
+      --weekNumberStartMonday;
     }
-    else {
-      strcpy(timeZone, "winter");
-    }
-    printf("timeZone <%s>\n", timeZone);*/
 
     for (index = 0; format[index] != '\0'; ++index) {
       char add[20];
-      //printf("index: %i <%c> %i\n", index, format[index], (int) format[index]);
 
       if (format[index] == '%') {
-        //printf("<%c>\n", format[index + 1]);
-
         switch (format[++index]) {
           case 'a':
             strcpy(add, shortDayList[tp->tm_wday]);
@@ -308,8 +324,8 @@ size_t strftime(char* result, size_t maxSize,
             sprintf(add, "%02i", tp->tm_min);
             break;
 
-          case 'p':
-            sprintf(add, "%s", (tp->tm_hour < 12) ? "AM" : "PM");
+          case 'p': 
+            sprintf(add, "%s", index ? "AM" : "PM");
             break;
 
           case 'S':
@@ -363,14 +379,11 @@ size_t strftime(char* result, size_t maxSize,
         add[1] = '\0';
       }
 
-      { int x = strlen(result), y = strlen(add);
-        if ((x + y) < maxSize) {
-          strcat(result, add);
-          //printf("");
-        }
-        else {
-          break;
-        }
+      if ((strlen(result) + strlen(add)) < maxSize) {
+        strcat(result, add);
+      }
+      else {
+        break;
       }
     }
   }

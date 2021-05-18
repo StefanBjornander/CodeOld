@@ -12,7 +12,7 @@
 
 section .data
 
-@13101$string_Floating20point20error3A2025i0A#:
+@11477string_Floating20point20error3A2025i0A#:
 	; Initializer String Floating point error: %i\n
 	db "Floating point error: %i", 10, 0
 
@@ -22,11 +22,11 @@ section .text
 	; PreCall 28 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  floating_point_error$1:
-	; Parameter 52 pointer "Floating point error: %i\n"
-	mov qword [rbp + 52], @13101$string_Floating20point20error3A2025i0A#
+	; Parameter 52 pointer string_Floating20point20error3A2025i0A#
+	mov qword [rbp + 52], @11477string_Floating20point20error3A2025i0A#
 
  floating_point_error$2:
-	; Parameter 60 signedint sig
+	; Parameter 60 signed int sig
 	mov eax, [rbp + 24]
 	mov [rbp + 60], eax
 
@@ -54,7 +54,7 @@ section .text
 
 section .data
 
-@13105$string_exit10A#:
+@11481string_exit10A#:
 	; Initializer String exit1\n
 	db "exit1", 10, 0
 
@@ -64,8 +64,8 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  exit_handle1$1:
-	; Parameter 48 pointer "exit1\n"
-	mov qword [rbp + 48], @13105$string_exit10A#
+	; Parameter 48 pointer string_exit10A#
+	mov qword [rbp + 48], @11481string_exit10A#
 
  exit_handle1$2:
 	; Call 24 printf 0
@@ -90,7 +90,7 @@ section .text
 
 section .data
 
-@13108$string_exit20A#:
+@11484string_exit20A#:
 	; Initializer String exit2\n
 	db "exit2", 10, 0
 
@@ -100,8 +100,8 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  exit_handle2$1:
-	; Parameter 48 pointer "exit2\n"
-	mov qword [rbp + 48], @13108$string_exit20A#
+	; Parameter 48 pointer string_exit20A#
+	mov qword [rbp + 48], @11484string_exit20A#
 
  exit_handle2$2:
 	; Call 24 printf 0
@@ -126,7 +126,7 @@ section .text
 
 section .data
 
-@13111$string_exit30A#:
+@11487string_exit30A#:
 	; Initializer String exit3\n
 	db "exit3", 10, 0
 
@@ -136,8 +136,8 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  exit_handle3$1:
-	; Parameter 48 pointer "exit3\n"
-	mov qword [rbp + 48], @13111$string_exit30A#
+	; Parameter 48 pointer string_exit30A#
+	mov qword [rbp + 48], @11487string_exit30A#
 
  exit_handle3$2:
 	; Call 24 printf 0
@@ -162,22 +162,22 @@ section .text
 
 section .data
 
-@13121$string_25i0A#:
+@11495string_25i0A#:
 	; Initializer String %i\n
 	db "%i", 10, 0
 
 section .text
 
  signal_test:
-	; Assign a 1
+	; Assign a integral4$1#
 	mov dword [rbp + 24], 1
 
  signal_test$1:
-	; Assign b 1
+	; Assign b integral4$1#
 	mov dword [rbp + 28], 1
 
  signal_test$2:
-	; SignedDivide c a b
+	; Divide c a b
 	mov eax, [rbp + 24]
 	xor edx, edx
 	idiv dword [rbp + 28]
@@ -187,11 +187,11 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  signal_test$4:
-	; Parameter 60 pointer "%i\n"
-	mov qword [rbp + 60], @13121$string_25i0A#
+	; Parameter 60 pointer string_25i0A#
+	mov qword [rbp + 60], @11495string_25i0A#
 
  signal_test$5:
-	; Parameter 68 signedint c
+	; Parameter 68 signed int c
 	mov eax, [rbp + 32]
 	mov [rbp + 68], eax
 
@@ -262,7 +262,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  signal_test$21:
-	; Parameter 60 signedint 0
+	; Parameter 60 signed int integral4$0#
 	mov dword [rbp + 60], 0
 
  signal_test$22:

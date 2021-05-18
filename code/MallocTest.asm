@@ -17,18 +17,18 @@
 section .text
 
  malloc_test2:
-	; Assign p 0
+	; Assign p integral8$0#
 	mov qword [rbp + 28], 0
 
  malloc_test2$1:
-	; Assign r 0
+	; Assign r integral8$0#
 	mov qword [rbp + 36], 0
 
  malloc_test2$2:
 	; PreCall 44 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$3:
-	; Parameter 68 signedint 96
+	; Parameter 68 signed int integral4$96#
 	mov dword [rbp + 68], 96
 
  malloc_test2$4:
@@ -42,18 +42,18 @@ section .text
 	; PostCall 44
 
  malloc_test2$6:
-	; GetReturnValue £temporary4339
+	; GetReturnValue £temporary4145
 
  malloc_test2$7:
-	; Assign q £temporary4339
+	; Assign q £temporary4145
 	mov [rbp + 44], rbx
 
  malloc_test2$8:
-	; Assign index 0
+	; Assign index integral4$0#
 	mov dword [rbp + 24], 0
 
  malloc_test2$9:
-	; SignedGreaterThanEqual 20 index 10
+	; GreaterThanEqual 20 index integral4$10#
 	cmp dword [rbp + 24], 10
 	jge malloc_test2$20
 
@@ -61,7 +61,7 @@ section .text
 	; PreCall 52 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test2$11:
-	; Parameter 76 signedint 96
+	; Parameter 76 signed int integral4$96#
 	mov dword [rbp + 76], 96
 
  malloc_test2$12:
@@ -75,14 +75,14 @@ section .text
 	; PostCall 52
 
  malloc_test2$14:
-	; GetReturnValue £temporary4342
+	; GetReturnValue £temporary4148
 
  malloc_test2$15:
-	; Assign p £temporary4342
+	; Assign p £temporary4148
 	mov [rbp + 28], rbx
 
  malloc_test2$16:
-	; NotEqual 18 index 5
+	; NotEqual 18 index integral4$5#
 	cmp dword [rbp + 24], 5
 	jne malloc_test2$18
 
@@ -92,7 +92,7 @@ section .text
 	mov [rbp + 36], rax
 
  malloc_test2$18:
-	; BinaryAdd index index 1
+	; Add index index integral4$1#
 	inc dword [rbp + 24]
 
  malloc_test2$19:
@@ -121,7 +121,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$25:
-	; Parameter 84 signedint 50
+	; Parameter 84 signed int integral4$50#
 	mov dword [rbp + 84], 50
 
  malloc_test2$26:
@@ -156,7 +156,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$33:
-	; Parameter 84 signedint 50
+	; Parameter 84 signed int integral4$50#
 	mov dword [rbp + 84], 50
 
  malloc_test2$34:
@@ -191,7 +191,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$41:
-	; Parameter 84 signedint 50
+	; Parameter 84 signed int integral4$50#
 	mov dword [rbp + 84], 50
 
  malloc_test2$42:
@@ -226,7 +226,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$49:
-	; Parameter 84 signedint 200
+	; Parameter 84 signed int integral4$200#
 	mov dword [rbp + 84], 200
 
  malloc_test2$50:
@@ -261,7 +261,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$57:
-	; Parameter 84 signedint 200
+	; Parameter 84 signed int integral4$200#
 	mov dword [rbp + 84], 200
 
  malloc_test2$58:
@@ -296,7 +296,7 @@ section .text
 	mov [rbp + 76], rax
 
  malloc_test2$65:
-	; Parameter 84 signedint 200
+	; Parameter 84 signed int integral4$200#
 	mov dword [rbp + 84], 200
 
  malloc_test2$66:
@@ -338,11 +338,11 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$1:
-	; Parameter 48 signedint 96
+	; Parameter 48 signed int integral4$96#
 	mov dword [rbp + 48], 96
 
  malloc_test3$2:
-	; Parameter 52 signedint 1
+	; Parameter 52 signed int integral4$1#
 	mov dword [rbp + 52], 1
 
  malloc_test3$3:
@@ -356,21 +356,21 @@ section .text
 	; PostCall 24
 
  malloc_test3$5:
-	; GetReturnValue £temporary4357
+	; GetReturnValue £temporary4163
 
  malloc_test3$6:
-	; Assign a £temporary4357
+	; Assign a £temporary4163
 	mov [rbp + 24], rbx
 
  malloc_test3$7:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$8:
-	; Parameter 56 signedint 96
+	; Parameter 56 signed int integral4$96#
 	mov dword [rbp + 56], 96
 
  malloc_test3$9:
-	; Parameter 60 signedint 1
+	; Parameter 60 signed int integral4$1#
 	mov dword [rbp + 60], 1
 
  malloc_test3$10:
@@ -384,21 +384,21 @@ section .text
 	; PostCall 32
 
  malloc_test3$12:
-	; GetReturnValue £temporary4358
+	; GetReturnValue £temporary4164
 
  malloc_test3$13:
-	; Assign b £temporary4358
+	; Assign b £temporary4164
 	mov [rbp + 32], rbx
 
  malloc_test3$14:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$15:
-	; Parameter 64 signedint 96
+	; Parameter 64 signed int integral4$96#
 	mov dword [rbp + 64], 96
 
  malloc_test3$16:
-	; Parameter 68 signedint 1
+	; Parameter 68 signed int integral4$1#
 	mov dword [rbp + 68], 1
 
  malloc_test3$17:
@@ -412,21 +412,21 @@ section .text
 	; PostCall 40
 
  malloc_test3$19:
-	; GetReturnValue £temporary4359
+	; GetReturnValue £temporary4165
 
  malloc_test3$20:
-	; Assign c £temporary4359
+	; Assign c £temporary4165
 	mov [rbp + 40], rbx
 
  malloc_test3$21:
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$22:
-	; Parameter 72 signedint 96
+	; Parameter 72 signed int integral4$96#
 	mov dword [rbp + 72], 96
 
  malloc_test3$23:
-	; Parameter 76 signedint 1
+	; Parameter 76 signed int integral4$1#
 	mov dword [rbp + 76], 1
 
  malloc_test3$24:
@@ -440,21 +440,21 @@ section .text
 	; PostCall 48
 
  malloc_test3$26:
-	; GetReturnValue £temporary4360
+	; GetReturnValue £temporary4166
 
  malloc_test3$27:
-	; Assign d £temporary4360
+	; Assign d £temporary4166
 	mov [rbp + 48], rbx
 
  malloc_test3$28:
 	; PreCall 56 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test3$29:
-	; Parameter 80 signedint 96
+	; Parameter 80 signed int integral4$96#
 	mov dword [rbp + 80], 96
 
  malloc_test3$30:
-	; Parameter 84 signedint 1
+	; Parameter 84 signed int integral4$1#
 	mov dword [rbp + 84], 1
 
  malloc_test3$31:
@@ -468,10 +468,10 @@ section .text
 	; PostCall 56
 
  malloc_test3$33:
-	; GetReturnValue £temporary4361
+	; GetReturnValue £temporary4167
 
  malloc_test3$34:
-	; Assign e £temporary4361
+	; Assign e £temporary4167
 	mov [rbp + 56], rbx
 
  malloc_test3$35:
@@ -602,33 +602,33 @@ section .text
 
 section .data
 
-@13652$string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#:
+@11998string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#:
 	; Initializer String Stack Top: %u, Low Heap: %u\n
 	db "Stack Top: %u, Low Heap: %u", 10, 0
 
 section .text
 
  rec:
-	; Assign lowHeapPtr 65534
+	; Assign lowHeapPtr integral8$65534#
 	mov qword [rbp + 28], 65534
 
  rec$1:
-	; InspectRegister £temporary4369 bp
+	; InspectRegister £temporary4175 bp
 
  rec$2:
-	; IntegralToIntegral £temporary4370 £temporary4369
+	; IntegralToIntegral £temporary4176 £temporary4175
 	and ebp, 65535
 
  rec$3:
-	; Assign stackTop £temporary4370
+	; Assign stackTop £temporary4176
 	mov [rbp + 24], ebp
 
  rec$4:
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  rec$5:
-	; Parameter 60 pointer "Stack Top: %u, Low Heap: %u\n"
-	mov qword [rbp + 60], @13652$string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#
+	; Parameter 60 pointer string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#
+	mov qword [rbp + 60], @11998string_Stack20Top3A2025u2C20Low20Heap3A2025u0A#
 
  rec$6:
 	; Parameter 68 unsigned int stackTop
@@ -636,11 +636,11 @@ section .text
 	mov [rbp + 68], eax
 
  rec$7:
-	; Dereference £temporary4371 -> lowHeapPtr lowHeapPtr 0
+	; Dereference £temporary4177 lowHeapPtr 0
 	mov rsi, [rbp + 28]
 
  rec$8:
-	; Parameter 72 unsigned int £temporary4371 -> lowHeapPtr
+	; Parameter 72 unsigned int £temporary4177
 	mov eax, [rsi]
 	mov [rbp + 72], eax
 
@@ -710,7 +710,7 @@ section .text
 	; PreCall 24 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$1:
-	; Parameter 48 signedint 96
+	; Parameter 48 signed int integral4$96#
 	mov dword [rbp + 48], 96
 
  malloc_test$2:
@@ -724,17 +724,17 @@ section .text
 	; PostCall 24
 
  malloc_test$4:
-	; GetReturnValue £temporary4375
+	; GetReturnValue £temporary4181
 
  malloc_test$5:
-	; Assign b £temporary4375
+	; Assign b £temporary4181
 	mov [rbp + 24], rbx
 
  malloc_test$6:
 	; PreCall 32 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$7:
-	; Parameter 56 signedint 96
+	; Parameter 56 signed int integral4$96#
 	mov dword [rbp + 56], 96
 
  malloc_test$8:
@@ -748,17 +748,17 @@ section .text
 	; PostCall 32
 
  malloc_test$10:
-	; GetReturnValue £temporary4376
+	; GetReturnValue £temporary4182
 
  malloc_test$11:
-	; Assign c £temporary4376
+	; Assign c £temporary4182
 	mov [rbp + 32], rbx
 
  malloc_test$12:
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$13:
-	; Parameter 64 signedint 96
+	; Parameter 64 signed int integral4$96#
 	mov dword [rbp + 64], 96
 
  malloc_test$14:
@@ -772,10 +772,10 @@ section .text
 	; PostCall 40
 
  malloc_test$16:
-	; GetReturnValue £temporary4377
+	; GetReturnValue £temporary4183
 
  malloc_test$17:
-	; Assign d £temporary4377
+	; Assign d £temporary4183
 	mov [rbp + 40], rbx
 
  malloc_test$18:
@@ -800,7 +800,7 @@ section .text
 	mov [rbp + 72], rax
 
  malloc_test$23:
-	; Parameter 80 signedint 40
+	; Parameter 80 signed int integral4$40#
 	mov dword [rbp + 80], 40
 
  malloc_test$24:
@@ -830,7 +830,7 @@ section .text
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test$30:
-	; Parameter 72 signedint 40
+	; Parameter 72 signed int integral4$40#
 	mov dword [rbp + 72], 40
 
  malloc_test$31:
@@ -930,33 +930,33 @@ section .text
 
 section .data
 
-@13695$string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#:
+@12031string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#:
 	; Initializer String Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u\n
 	db "Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u", 10, 0
 
 section .text
 
  malloc_test6:
-	; Assign lowHeapPtr 65534
+	; Assign lowHeapPtr integral8$65534#
 	mov qword [rbp + 32], 65534
 
  malloc_test6$1:
-	; InspectRegister £temporary4387 bp
+	; InspectRegister £temporary4193 bp
 
  malloc_test6$2:
-	; IntegralToIntegral £temporary4388 £temporary4387
+	; IntegralToIntegral £temporary4194 £temporary4193
 	and ebp, 65535
 
  malloc_test6$3:
-	; Assign stackTop £temporary4388
+	; Assign stackTop £temporary4194
 	mov [rbp + 28], ebp
 
  malloc_test6$4:
-	; Assign i 0
+	; Assign i integral4$0#
 	mov dword [rbp + 24], 0
 
  malloc_test6$5:
-	; SignedGreaterThanEqual 23 i 1000
+	; GreaterThanEqual 23 i integral4$1000#
 	cmp dword [rbp + 24], 1000
 	jge malloc_test6$23
 
@@ -964,7 +964,7 @@ section .text
 	; PreCall 40 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test6$7:
-	; Parameter 64 signedint 96
+	; Parameter 64 signed int integral4$96#
 	mov dword [rbp + 64], 96
 
  malloc_test6$8:
@@ -978,21 +978,21 @@ section .text
 	; PostCall 40
 
  malloc_test6$10:
-	; GetReturnValue £temporary4391
+	; GetReturnValue £temporary4197
 
  malloc_test6$11:
-	; Assign p £temporary4391
+	; Assign p £temporary4197
 	mov [rbp + 40], rbx
 
  malloc_test6$12:
 	; PreCall 48 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  malloc_test6$13:
-	; Parameter 72 pointer "Index: %i, Pointer: %u, Stack top: %u, Low Heap: %u\n"
-	mov qword [rbp + 72], @13695$string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#
+	; Parameter 72 pointer string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#
+	mov qword [rbp + 72], @12031string_Index3A2025i2C20Pointer3A2025u2C20Stack20top3A2025u2C20Low20Heap3A2025u0A#
 
  malloc_test6$14:
-	; Parameter 80 signedint i
+	; Parameter 80 signed int i
 	mov eax, [rbp + 24]
 	mov [rbp + 80], eax
 
@@ -1007,11 +1007,11 @@ section .text
 	mov [rbp + 92], eax
 
  malloc_test6$17:
-	; Dereference £temporary4392 -> lowHeapPtr lowHeapPtr 0
+	; Dereference £temporary4198 lowHeapPtr 0
 	mov rsi, [rbp + 32]
 
  malloc_test6$18:
-	; Parameter 96 unsigned int £temporary4392 -> lowHeapPtr
+	; Parameter 96 unsigned int £temporary4198
 	mov eax, [rsi]
 	mov [rbp + 96], eax
 
@@ -1028,7 +1028,7 @@ section .text
 	; PostCall 48
 
  malloc_test6$21:
-	; BinaryAdd i i 1
+	; Add i i integral4$1#
 	inc dword [rbp + 24]
 
  malloc_test6$22:

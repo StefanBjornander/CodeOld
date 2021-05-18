@@ -450,8 +450,8 @@ void * bsearch ( const void * key , const void * valueList ,
 int  listSize , int  valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
-int abs ( int value ) ;
 long labs ( long value ) ;
+int abs ( int value ) ;
 
 typedef struct {
 int quot , rem ;
@@ -772,27 +772,15 @@ fclose ( inFilePtr ) ;
 }
 
 { FILE * inFilePtr = fopen ( "outx.txt" , "r" ) ;
-unsigned int u , index ;
-if ( ! ( inFilePtr != ( ( void * ) 0 )  ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 302 ) ; abort ( ) ; }  ;
+if ( ! ( inFilePtr != ( ( void * ) 0 )  ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 301 ) ; abort ( ) ; }  ;
 
 { int size = fseek ( inFilePtr , 0 , SEEK_END ) ;
-
-printf ( "ftell %i\n" , ftell ( inFilePtr ) ) ;
-
-
-
-
-
-
-
-for ( index = 0 ; index < size ; ++ index ) {
-char c = ( char ) fgetc ( inFilePtr ) ;
-printf ( "<%c> %i %i\n" , c , ( int ) c , ftell ( inFilePtr ) ) ;
-fseek ( inFilePtr , size - index - 1 , SEEK_SET ) ;
+while ( ftell ( inFilePtr ) > 1 ) {
+fseek ( inFilePtr , -- size , SEEK_SET ) ;
+putchar ( fgetc ( inFilePtr ) ) ;
 }
 }
 
-printf ( "\n" ) ;
 fclose ( inFilePtr ) ;
 }
 
@@ -845,4 +833,42 @@ printf ( "fileexists \"File.z\": %s\n" , fileexists ( "File.z" ) ? "Yes" : "No" 
 
 
 
+}
+
+void temp_file ( void ) {
+printf ( "Hello\n" ) ;
+
+{ FILE * tempFilePtr ;
+FILE * inOutFilePtr = fopen ( "PBookX.txt" , "r+" ) ;
+if ( ! ( inOutFilePtr != ( ( void * ) 0 )  ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "inOutFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 369 ) ; abort ( ) ; }  ;
+printf ( "Temp\n" ) ;
+tempFilePtr = tmpfile ( ) ;
+if ( ! ( tempFilePtr != ( ( void * ) 0 )  ) ) { fprintf ( stderr , "Assertion failed: \"%s\" in file %s at line %i\n" , "tempFilePtr != NULL" , "C:\\Users\\Stefan\\Documents\\vagrant\\homestead\\code\\code\\FileTest.c" , 372 ) ; abort ( ) ; }  ;
+
+while ( 1  ) {
+char c = ( char ) fgetc ( inOutFilePtr )  ;
+
+if ( c == -1  ) {
+break ;
+}
+
+putc ( toupper ( c ) , tempFilePtr ) ;
+}
+
+rewind ( tempFilePtr ) ;
+fprintf ( inOutFilePtr , "\n------------\n" ) ;
+
+while ( 1  ) {
+char c = ( char ) fgetc ( tempFilePtr )  ;
+
+if ( c == -1  ) {
+break ;
+}
+
+putc ( c , inOutFilePtr ) ;
+}
+
+fclose ( inOutFilePtr ) ;
+fclose ( tempFilePtr ) ;
+}
 } 

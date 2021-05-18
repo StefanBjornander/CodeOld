@@ -1,10 +1,10 @@
 1:	
 
-malloc:	; IntegralToIntegral £temporary23 memorySize
+malloc:	; IntegralToIntegral £temporary25 memorySize
 2:		mov ax, [bp + 6]
 5:	
 
-malloc$1:	; BinaryAdd newBlockSize £temporary23 4
+malloc$1:	; BinaryAdd newBlockSize £temporary25 4
 6:		add ax, 4
 7:		mov [bp + 8], ax
 9:	
@@ -48,15 +48,15 @@ malloc$10:	; Parameter 22 stderr 6
 38:	
 
 malloc$11:	; Parameter 22 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-39:		mov word [bp + 30], @111$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+39:		mov word [bp + 30], @115$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 41:	
 
 malloc$12:	; Parameter 22 string_memorySize203E3D200# 10
-42:		mov word [bp + 32], @112$string_memorySize203E3D200#
+42:		mov word [bp + 32], @116$string_memorySize203E3D200#
 44:	
 
 malloc$13:	; Parameter 22 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec# 12
-45:		mov word [bp + 34], @113$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
+45:		mov word [bp + 34], @117$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 47:	
 
 malloc$14:	; Parameter 22 41 14
@@ -109,28 +109,28 @@ malloc$23:	; Equal 41 currBlockPtr 0
 85:		je malloc$41
 87:	
 
-malloc$24:	; IntegralToIntegral £temporary31 currBlockPtr
+malloc$24:	; IntegralToIntegral £temporary33 currBlockPtr
 88:		mov ax, [bp + 20]
 91:	
 
-malloc$25:	; Assign currAddress £temporary31
+malloc$25:	; Assign currAddress £temporary33
 92:		mov [bp + 22], ax
 94:	
 
-malloc$26:	; Deref £temporary32 -> currBlockPtr currBlockPtr 0
+malloc$26:	; Deref £temporary34 -> currBlockPtr currBlockPtr 0
 95:		mov si, [bp + 20]
 97:	
 
-malloc$27:	; BinaryAdd £temporary33 currAddress £temporary32 -> currBlockPtr
+malloc$27:	; BinaryAdd £temporary35 currAddress £temporary34 -> currBlockPtr
 98:		mov ax, [bp + 22]
 99:		add ax, [si]
 101:	
 
-malloc$28:	; BinaryAdd £temporary34 £temporary33 4
+malloc$28:	; BinaryAdd £temporary36 £temporary35 4
 102:		add ax, 4
 104:	
 
-malloc$29:	; BinarySubtract currGap lastAddress £temporary34
+malloc$29:	; BinarySubtract currGap lastAddress £temporary36
 105:		mov bx, [bp + 12]
 106:		sub bx, ax
 107:		mov [bp + 24], bx
@@ -178,11 +178,11 @@ malloc$37:	; Assign prevBlockPtr currBlockPtr
 141:		mov [bp + 18], ax
 143:	
 
-malloc$38:	; Deref £temporary41 -> currBlockPtr currBlockPtr 2
+malloc$38:	; Deref £temporary43 -> currBlockPtr currBlockPtr 2
 144:		mov si, [bp + 20]
 146:	
 
-malloc$39:	; Assign currBlockPtr £temporary41 -> currBlockPtr
+malloc$39:	; Assign currBlockPtr £temporary43 -> currBlockPtr
 147:		mov ax, [si + 2]
 148:		mov [bp + 20], ax
 150:	
@@ -196,45 +196,45 @@ malloc$41:	; Equal 61 minBlockPtr 0
 155:		je malloc$61
 157:	
 
-malloc$42:	; IntegralToIntegral £temporary43 minBlockPtr
+malloc$42:	; IntegralToIntegral £temporary45 minBlockPtr
 158:		mov ax, [bp + 14]
 161:	
 
-malloc$43:	; Deref £temporary44 -> minBlockPtr minBlockPtr 0
+malloc$43:	; Deref £temporary46 -> minBlockPtr minBlockPtr 0
 162:		mov si, [bp + 14]
 164:	
 
-malloc$44:	; BinaryAdd £temporary45 £temporary43 £temporary44 -> minBlockPtr
+malloc$44:	; BinaryAdd £temporary47 £temporary45 £temporary46 -> minBlockPtr
 165:		add ax, [si]
 167:	
 
-malloc$45:	; BinaryAdd newAddress £temporary45 4
+malloc$45:	; BinaryAdd newAddress £temporary47 4
 168:		add ax, 4
 169:		mov [bp + 22], ax
 171:	
 
-malloc$46:	; IntegralToIntegral £temporary47 newAddress
+malloc$46:	; IntegralToIntegral £temporary49 newAddress
 172:		mov ax, [bp + 22]
 175:	
 
-malloc$47:	; Assign newBlockPtr £temporary47
+malloc$47:	; Assign newBlockPtr £temporary49
 176:		mov [bp + 24], ax
 178:	
 
-malloc$48:	; Deref £temporary48 -> newBlockPtr newBlockPtr 0
+malloc$48:	; Deref £temporary50 -> newBlockPtr newBlockPtr 0
 179:		mov si, [bp + 24]
 181:	
 
-malloc$49:	; Assign £temporary48 -> newBlockPtr memorySize
+malloc$49:	; Assign £temporary50 -> newBlockPtr memorySize
 182:		mov ax, [bp + 6]
 183:		mov [si], ax
 185:	
 
-malloc$50:	; Deref £temporary49 -> newBlockPtr newBlockPtr 2
+malloc$50:	; Deref £temporary51 -> newBlockPtr newBlockPtr 2
 186:		mov si, [bp + 24]
 188:	
 
-malloc$51:	; Assign £temporary49 -> newBlockPtr minBlockPtr
+malloc$51:	; Assign £temporary51 -> newBlockPtr minBlockPtr
 189:		mov ax, [bp + 14]
 190:		mov [si + 2], ax
 192:	
@@ -244,11 +244,11 @@ malloc$52:	; Equal 56 minPrevBlockPtr 0
 194:		je malloc$56
 196:	
 
-malloc$53:	; Deref £temporary51 -> minPrevBlockPtr minPrevBlockPtr 2
+malloc$53:	; Deref £temporary53 -> minPrevBlockPtr minPrevBlockPtr 2
 197:		mov si, [bp + 16]
 199:	
 
-malloc$54:	; Assign £temporary51 -> minPrevBlockPtr newBlockPtr
+malloc$54:	; Assign £temporary53 -> minPrevBlockPtr newBlockPtr
 200:		mov ax, [bp + 24]
 201:		mov [si + 2], ax
 203:	
@@ -262,18 +262,18 @@ malloc$56:	; Assign g_firstBlockPtr newBlockPtr
 208:		mov [g_firstBlockPtr], ax
 210:	
 
-malloc$57:	; BinaryAdd £temporary52 newAddress 4
+malloc$57:	; BinaryAdd £temporary54 newAddress 4
 211:		mov bx, [bp + 22]
 212:		add bx, 4
 214:	
 
-malloc$58:	; IntegralToIntegral £temporary53 £temporary52
+malloc$58:	; IntegralToIntegral £temporary55 £temporary54
 217:	
 
-malloc$59:	; SetReturnValue £temporary53
+malloc$59:	; SetReturnValue £temporary55
 219:	
 
-malloc$60:	; Return £temporary53
+malloc$60:	; Return £temporary55
 220:		mov ax, [bp]
 221:		mov di, [bp + 4]
 222:		mov bp, [bp + 2]
@@ -286,10 +286,10 @@ malloc$61:	; BinarySubtract newAddress lastAddress newBlockSize
 228:		mov [bp + 22], ax
 230:	
 
-malloc$62:	; InspectRegister £temporary55 bp
+malloc$62:	; InspectRegister £temporary57 bp
 232:	
 
-malloc$63:	; Assign stackTop £temporary55
+malloc$63:	; Assign stackTop £temporary57
 233:		mov [bp + 24], bp
 235:	
 
@@ -299,28 +299,28 @@ malloc$64:	; UnsignedGreaterThan 80 stackTop newAddress
 238:		ja malloc$80
 240:	
 
-malloc$65:	; IntegralToIntegral £temporary57 newAddress
+malloc$65:	; IntegralToIntegral £temporary59 newAddress
 241:		mov ax, [bp + 22]
 244:	
 
-malloc$66:	; Assign newBlockPtr £temporary57
+malloc$66:	; Assign newBlockPtr £temporary59
 245:		mov [bp + 26], ax
 247:	
 
-malloc$67:	; Deref £temporary58 -> newBlockPtr newBlockPtr 0
+malloc$67:	; Deref £temporary60 -> newBlockPtr newBlockPtr 0
 248:		mov si, [bp + 26]
 250:	
 
-malloc$68:	; Assign £temporary58 -> newBlockPtr memorySize
+malloc$68:	; Assign £temporary60 -> newBlockPtr memorySize
 251:		mov ax, [bp + 6]
 252:		mov [si], ax
 254:	
 
-malloc$69:	; Deref £temporary59 -> newBlockPtr newBlockPtr 2
+malloc$69:	; Deref £temporary61 -> newBlockPtr newBlockPtr 2
 255:		mov si, [bp + 26]
 257:	
 
-malloc$70:	; Assign £temporary59 -> newBlockPtr 0
+malloc$70:	; Assign £temporary61 -> newBlockPtr 0
 258:		mov word [si + 2], 0
 260:	
 
@@ -329,11 +329,11 @@ malloc$71:	; Equal 75 prevBlockPtr 0
 262:		je malloc$75
 264:	
 
-malloc$72:	; Deref £temporary61 -> prevBlockPtr prevBlockPtr 2
+malloc$72:	; Deref £temporary63 -> prevBlockPtr prevBlockPtr 2
 265:		mov si, [bp + 18]
 267:	
 
-malloc$73:	; Assign £temporary61 -> prevBlockPtr newBlockPtr
+malloc$73:	; Assign £temporary63 -> prevBlockPtr newBlockPtr
 268:		mov ax, [bp + 26]
 269:		mov [si + 2], ax
 271:	
@@ -347,18 +347,18 @@ malloc$75:	; Assign g_firstBlockPtr newBlockPtr
 276:		mov [g_firstBlockPtr], ax
 278:	
 
-malloc$76:	; BinaryAdd £temporary62 newAddress 4
+malloc$76:	; BinaryAdd £temporary64 newAddress 4
 279:		mov bx, [bp + 22]
 280:		add bx, 4
 282:	
 
-malloc$77:	; IntegralToIntegral £temporary63 £temporary62
+malloc$77:	; IntegralToIntegral £temporary65 £temporary64
 285:	
 
-malloc$78:	; SetReturnValue £temporary63
+malloc$78:	; SetReturnValue £temporary65
 287:	
 
-malloc$79:	; Return £temporary63
+malloc$79:	; Return £temporary65
 288:		mov ax, [bp]
 289:		mov di, [bp + 4]
 290:		mov bp, [bp + 2]
@@ -382,13 +382,13 @@ malloc$82:	; FunctionEnd malloc
 calloc:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 3:	
 
-calloc$1:	; SignedMultiply £temporary69 number size
+calloc$1:	; SignedMultiply £temporary71 number size
 4:		mov ax, [bp + 6]
 6:		xor dx, dx
 7:		imul word [bp + 8]
 13:	
 
-calloc$2:	; Parameter 10 £temporary69 6
+calloc$2:	; Parameter 10 £temporary71 6
 14:		mov [bp + 16], ax
 16:	
 
@@ -402,71 +402,71 @@ calloc$3:	; Call 10 malloc 0
 calloc$4:	; PostCall 10
 24:	
 
-calloc$5:	; GetReturnValue £temporary70
+calloc$5:	; GetReturnValue £temporary72
+26:	
+
+calloc$6:	; Assign pointer £temporary72
+27:		mov [bp + 10], bx
 29:	
 
-calloc$6:	; Assign pointer £temporary70
-30:		mov [bp + 10], bx
-32:	
-
 calloc$7:	; Equal 14 pointer 0
-33:		cmp word [bp + 10], 0
-34:		je calloc$14
-36:	
+30:		cmp word [bp + 10], 0
+31:		je calloc$14
+33:	
 
 calloc$8:	; CallHeader 12 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-38:	
+35:	
 
 calloc$9:	; Parameter 12 pointer 6
-39:		mov ax, [bp + 10]
-40:		mov [bp + 18], ax
-42:	
+36:		mov ax, [bp + 10]
+37:		mov [bp + 18], ax
+39:	
 
 calloc$10:	; Parameter 12 0 8
-43:		mov word [bp + 20], 0
-45:	
+40:		mov word [bp + 20], 0
+42:	
 
 calloc$11:	; Parameter 12 size 10
-46:		mov ax, [bp + 8]
-47:		mov [bp + 22], ax
-49:	
+43:		mov ax, [bp + 8]
+44:		mov [bp + 22], ax
+46:	
 
 calloc$12:	; Call 12 memset 0
-50:		mov word [bp + 12], calloc$13
-51:		mov [bp + 14], bp
-52:		add bp, 12
-53:		jmp memset
-55:	
+47:		mov word [bp + 12], calloc$13
+48:		mov [bp + 14], bp
+49:		add bp, 12
+50:		jmp memset
+52:	
 
 calloc$13:	; PostCall 12
-57:	
+54:	
 
 calloc$14:	; SetReturnValue pointer
-58:		mov bx, [bp + 10]
-60:	
+55:		mov bx, [bp + 10]
+57:	
 
 calloc$15:	; Return pointer
-61:		mov ax, [bp]
-62:		mov di, [bp + 4]
-63:		mov bp, [bp + 2]
-64:		jmp ax
-66:	
+58:		mov ax, [bp]
+59:		mov di, [bp + 4]
+60:		mov bp, [bp + 2]
+61:		jmp ax
+63:	
 
 calloc$16:	; FunctionEnd calloc
 1:	
 
-free:	; IntegralToIntegral £temporary77 freeMemoryPtr
+free:	; IntegralToIntegral £temporary79 freeMemoryPtr
 2:		mov ax, [bp + 6]
 5:	
 
-free$1:	; BinarySubtract £temporary78 £temporary77 4
+free$1:	; BinarySubtract £temporary80 £temporary79 4
 6:		sub ax, 4
 8:	
 
-free$2:	; IntegralToIntegral £temporary79 £temporary78
+free$2:	; IntegralToIntegral £temporary81 £temporary80
 11:	
 
-free$3:	; Assign freeBlockPtr £temporary79
+free$3:	; Assign freeBlockPtr £temporary81
 12:		mov [bp + 8], ax
 14:	
 
@@ -507,11 +507,11 @@ free$10:	; NotEqual 15 prevBlockPtr 0
 42:		jne free$15
 44:	
 
-free$11:	; Deref £temporary84 -> currBlockPtr currBlockPtr 2
+free$11:	; Deref £temporary86 -> currBlockPtr currBlockPtr 2
 45:		mov si, [bp + 12]
 47:	
 
-free$12:	; NotEqual 15 £temporary84 -> currBlockPtr 0
+free$12:	; NotEqual 15 £temporary86 -> currBlockPtr 0
 48:		cmp word [si + 2], 0
 49:		jne free$15
 51:	
@@ -529,11 +529,11 @@ free$15:	; NotEqual 19 prevBlockPtr 0
 59:		jne free$19
 61:	
 
-free$16:	; Deref £temporary88 -> currBlockPtr currBlockPtr 2
+free$16:	; Deref £temporary90 -> currBlockPtr currBlockPtr 2
 62:		mov si, [bp + 12]
 64:	
 
-free$17:	; Assign g_firstBlockPtr £temporary88 -> currBlockPtr
+free$17:	; Assign g_firstBlockPtr £temporary90 -> currBlockPtr
 65:		mov ax, [si + 2]
 66:		mov [g_firstBlockPtr], ax
 68:	
@@ -542,20 +542,20 @@ free$18:	; Goto 27
 69:		jmp free$27
 71:	
 
-free$19:	; Deref £temporary89 -> currBlockPtr currBlockPtr 2
+free$19:	; Deref £temporary91 -> currBlockPtr currBlockPtr 2
 72:		mov si, [bp + 12]
 74:	
 
-free$20:	; NotEqual 24 £temporary89 -> currBlockPtr 0
+free$20:	; NotEqual 24 £temporary91 -> currBlockPtr 0
 75:		cmp word [si + 2], 0
 76:		jne free$24
 78:	
 
-free$21:	; Deref £temporary91 -> prevBlockPtr prevBlockPtr 2
+free$21:	; Deref £temporary93 -> prevBlockPtr prevBlockPtr 2
 79:		mov si, [bp + 10]
 81:	
 
-free$22:	; Assign £temporary91 -> prevBlockPtr 0
+free$22:	; Assign £temporary93 -> prevBlockPtr 0
 82:		mov word [si + 2], 0
 84:	
 
@@ -563,15 +563,15 @@ free$23:	; Goto 27
 85:		jmp free$27
 87:	
 
-free$24:	; Deref £temporary92 -> prevBlockPtr prevBlockPtr 2
+free$24:	; Deref £temporary94 -> prevBlockPtr prevBlockPtr 2
 88:		mov si, [bp + 10]
 90:	
 
-free$25:	; Deref £temporary93 -> currBlockPtr currBlockPtr 2
+free$25:	; Deref £temporary95 -> currBlockPtr currBlockPtr 2
 91:		mov di, [bp + 12]
 93:	
 
-free$26:	; Assign £temporary92 -> prevBlockPtr £temporary93 -> currBlockPtr
+free$26:	; Assign £temporary94 -> prevBlockPtr £temporary95 -> currBlockPtr
 94:		mov ax, [di + 2]
 95:		mov [si + 2], ax
 97:	
@@ -588,11 +588,11 @@ free$28:	; Assign prevBlockPtr currBlockPtr
 105:		mov [bp + 10], ax
 107:	
 
-free$29:	; Deref £temporary94 -> currBlockPtr currBlockPtr 2
+free$29:	; Deref £temporary96 -> currBlockPtr currBlockPtr 2
 108:		mov si, [bp + 12]
 110:	
 
-free$30:	; Assign currBlockPtr £temporary94 -> currBlockPtr
+free$30:	; Assign currBlockPtr £temporary96 -> currBlockPtr
 111:		mov ax, [si + 2]
 112:		mov [bp + 12], ax
 114:	
@@ -625,15 +625,15 @@ realloc$2:	; Parameter 10 stderr 6
 11:	
 
 realloc$3:	; Parameter 10 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-12:		mov word [bp + 18], @273$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+12:		mov word [bp + 18], @279$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 14:	
 
 realloc$4:	; Parameter 10 string_newMemorySize203E3D200# 10
-15:		mov word [bp + 20], @274$string_newMemorySize203E3D200#
+15:		mov word [bp + 20], @280$string_newMemorySize203E3D200#
 17:	
 
 realloc$5:	; Parameter 10 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec# 12
-18:		mov word [bp + 22], @275$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
+18:		mov word [bp + 22], @281$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 20:	
 
 realloc$6:	; Parameter 10 259 14
@@ -684,15 +684,15 @@ realloc$15:	; Parameter 10 stderr 6
 57:	
 
 realloc$16:	; Parameter 10 string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A# 8
-58:		mov word [bp + 18], @288$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
+58:		mov word [bp + 18], @295$string_Assertion20failed3A202225s2220in20file2025s20at20line2025i0A#
 60:	
 
 realloc$17:	; Parameter 10 string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029# 10
-61:		mov word [bp + 20], @289$string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#
+61:		mov word [bp + 20], @296$string_2820oldMemoryPtr20213D20NULL2029207C7C202820newMemorySize203E2002029#
 63:	
 
 realloc$18:	; Parameter 10 string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec# 12
-64:		mov word [bp + 22], @290$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
+64:		mov word [bp + 22], @297$string_C3A5CUsers5CStefan5CDocuments5Cvagrant5Chomestead5Ccode5Ccode5CMalloc2Ec#
 66:	
 
 realloc$19:	; Parameter 10 260 14
@@ -747,281 +747,281 @@ realloc$28:	; Call 10 malloc 0
 realloc$29:	; PostCall 10
 107:	
 
-realloc$30:	; GetReturnValue £temporary106
-112:	
+realloc$30:	; GetReturnValue £temporary108
+109:	
 
-realloc$31:	; SetReturnValue £temporary106
-114:	
+realloc$31:	; SetReturnValue £temporary108
+111:	
 
-realloc$32:	; Return £temporary106
-115:		mov ax, [bp]
-116:		mov di, [bp + 4]
-117:		mov bp, [bp + 2]
-118:		jmp ax
-120:	
+realloc$32:	; Return £temporary108
+112:		mov ax, [bp]
+113:		mov di, [bp + 4]
+114:		mov bp, [bp + 2]
+115:		jmp ax
+117:	
 
 realloc$33:	; NotEqual 40 newMemorySize 0
-121:		cmp word [bp + 8], 0
-122:		jne realloc$40
-124:	
+118:		cmp word [bp + 8], 0
+119:		jne realloc$40
+121:	
 
 realloc$34:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-126:	
+123:	
 
 realloc$35:	; Parameter 10 oldMemoryPtr 6
-127:		mov ax, [bp + 6]
-128:		mov [bp + 16], ax
-130:	
+124:		mov ax, [bp + 6]
+125:		mov [bp + 16], ax
+127:	
 
 realloc$36:	; Call 10 free 0
-131:		mov word [bp + 10], realloc$37
-132:		mov [bp + 12], bp
-133:		add bp, 10
-134:		jmp free
-136:	
+128:		mov word [bp + 10], realloc$37
+129:		mov [bp + 12], bp
+130:		add bp, 10
+131:		jmp free
+133:	
 
 realloc$37:	; PostCall 10
-138:	
+135:	
 
 realloc$38:	; SetReturnValue 0
-139:		mov bx, 0
-141:	
+136:		mov bx, 0
+138:	
 
 realloc$39:	; Return 0
-142:		mov ax, [bp]
-143:		mov di, [bp + 4]
-144:		mov bp, [bp + 2]
-145:		jmp ax
-147:	
+139:		mov ax, [bp]
+140:		mov di, [bp + 4]
+141:		mov bp, [bp + 2]
+142:		jmp ax
+144:	
 
-realloc$40:	; IntegralToIntegral £temporary109 newMemorySize
-148:		mov ax, [bp + 8]
-151:	
+realloc$40:	; IntegralToIntegral £temporary111 newMemorySize
+145:		mov ax, [bp + 8]
+148:	
 
-realloc$41:	; BinaryAdd newBlockSize £temporary109 4
-152:		add ax, 4
-153:		mov [bp + 10], ax
-155:	
+realloc$41:	; BinaryAdd newBlockSize £temporary111 4
+149:		add ax, 4
+150:		mov [bp + 10], ax
+152:	
 
-realloc$42:	; IntegralToIntegral £temporary111 oldMemoryPtr
-156:		mov ax, [bp + 6]
+realloc$42:	; IntegralToIntegral £temporary113 oldMemoryPtr
+153:		mov ax, [bp + 6]
+156:	
+
+realloc$43:	; BinarySubtract £temporary114 £temporary113 4
+157:		sub ax, 4
 159:	
 
-realloc$43:	; BinarySubtract £temporary112 £temporary111 4
-160:		sub ax, 4
+realloc$44:	; IntegralToIntegral £temporary115 £temporary114
 162:	
 
-realloc$44:	; IntegralToIntegral £temporary113 £temporary112
+realloc$45:	; Assign oldBlockPtr £temporary115
+163:		mov [bp + 12], ax
 165:	
 
-realloc$45:	; Assign oldBlockPtr £temporary113
-166:		mov [bp + 12], ax
+realloc$46:	; Deref £temporary116 -> oldBlockPtr oldBlockPtr 0
+166:		mov si, [bp + 12]
 168:	
 
-realloc$46:	; Deref £temporary114 -> oldBlockPtr oldBlockPtr 0
-169:		mov si, [bp + 12]
-171:	
+realloc$47:	; UnsignedGreaterThan 52 newBlockSize £temporary116 -> oldBlockPtr
+169:		mov ax, [si]
+170:		cmp [bp + 10], ax
+171:		ja realloc$52
+173:	
 
-realloc$47:	; UnsignedGreaterThan 52 newBlockSize £temporary114 -> oldBlockPtr
-172:		mov ax, [si]
-173:		cmp [bp + 10], ax
-174:		ja realloc$52
+realloc$48:	; Deref £temporary118 -> oldBlockPtr oldBlockPtr 0
+174:		mov si, [bp + 12]
 176:	
 
-realloc$48:	; Deref £temporary116 -> oldBlockPtr oldBlockPtr 0
-177:		mov si, [bp + 12]
-179:	
-
-realloc$49:	; Assign £temporary116 -> oldBlockPtr newBlockSize
-180:		mov ax, [bp + 10]
-181:		mov [si], ax
-183:	
+realloc$49:	; Assign £temporary118 -> oldBlockPtr newBlockSize
+177:		mov ax, [bp + 10]
+178:		mov [si], ax
+180:	
 
 realloc$50:	; SetReturnValue oldMemoryPtr
-184:		mov bx, [bp + 6]
-186:	
+181:		mov bx, [bp + 6]
+183:	
 
 realloc$51:	; Return oldMemoryPtr
-187:		mov ax, [bp]
-188:		mov di, [bp + 4]
-189:		mov bp, [bp + 2]
-190:		jmp ax
-192:	
+184:		mov ax, [bp]
+185:		mov di, [bp + 4]
+186:		mov bp, [bp + 2]
+187:		jmp ax
+189:	
 
 realloc$52:	; Assign lastAddress 65528
-193:		mov word [bp + 14], 65528
-195:	
+190:		mov word [bp + 14], 65528
+192:	
 
 realloc$53:	; Assign currBlockPtr g_firstBlockPtr
-196:		mov ax, [g_firstBlockPtr]
-197:		mov [bp + 16], ax
-199:	
+193:		mov ax, [g_firstBlockPtr]
+194:		mov [bp + 16], ax
+196:	
 
 realloc$54:	; Equal 68 currBlockPtr 0
-200:		cmp word [bp + 16], 0
-201:		je realloc$68
-203:	
+197:		cmp word [bp + 16], 0
+198:		je realloc$68
+200:	
 
 realloc$55:	; NotEqual 63 currBlockPtr oldBlockPtr
-204:		mov ax, [bp + 12]
-205:		cmp [bp + 16], ax
-206:		jne realloc$63
-208:	
+201:		mov ax, [bp + 12]
+202:		cmp [bp + 16], ax
+203:		jne realloc$63
+205:	
 
-realloc$56:	; IntegralToIntegral £temporary119 currBlockPtr
-209:		mov ax, [bp + 16]
-212:	
+realloc$56:	; IntegralToIntegral £temporary121 currBlockPtr
+206:		mov ax, [bp + 16]
+209:	
 
-realloc$57:	; BinarySubtract availableSize lastAddress £temporary119
-213:		mov bx, [bp + 14]
-214:		sub bx, ax
-215:		mov [bp + 18], bx
-217:	
+realloc$57:	; BinarySubtract availableSize lastAddress £temporary121
+210:		mov bx, [bp + 14]
+211:		sub bx, ax
+212:		mov [bp + 18], bx
+214:	
 
 realloc$58:	; UnsignedLessThan 68 availableSize newBlockSize
-218:		mov ax, [bp + 10]
-219:		cmp [bp + 18], ax
-220:		jb realloc$68
+215:		mov ax, [bp + 10]
+216:		cmp [bp + 18], ax
+217:		jb realloc$68
+219:	
+
+realloc$59:	; Deref £temporary124 -> oldBlockPtr oldBlockPtr 0
+220:		mov si, [bp + 12]
 222:	
 
-realloc$59:	; Deref £temporary122 -> oldBlockPtr oldBlockPtr 0
-223:		mov si, [bp + 12]
-225:	
-
-realloc$60:	; Assign £temporary122 -> oldBlockPtr newBlockSize
-226:		mov ax, [bp + 10]
-227:		mov [si], ax
-229:	
+realloc$60:	; Assign £temporary124 -> oldBlockPtr newBlockSize
+223:		mov ax, [bp + 10]
+224:		mov [si], ax
+226:	
 
 realloc$61:	; SetReturnValue oldMemoryPtr
-230:		mov bx, [bp + 6]
-232:	
+227:		mov bx, [bp + 6]
+229:	
 
 realloc$62:	; Return oldMemoryPtr
-233:		mov ax, [bp]
-234:		mov di, [bp + 4]
-235:		mov bp, [bp + 2]
-236:		jmp ax
-238:	
+230:		mov ax, [bp]
+231:		mov di, [bp + 4]
+232:		mov bp, [bp + 2]
+233:		jmp ax
+235:	
 
-realloc$63:	; IntegralToIntegral £temporary123 currBlockPtr
-239:		mov ax, [bp + 16]
+realloc$63:	; IntegralToIntegral £temporary125 currBlockPtr
+236:		mov ax, [bp + 16]
+239:	
+
+realloc$64:	; Assign lastAddress £temporary125
+240:		mov [bp + 14], ax
 242:	
 
-realloc$64:	; Assign lastAddress £temporary123
-243:		mov [bp + 14], ax
+realloc$65:	; Deref £temporary126 -> currBlockPtr currBlockPtr 2
+243:		mov si, [bp + 16]
 245:	
 
-realloc$65:	; Deref £temporary124 -> currBlockPtr currBlockPtr 2
-246:		mov si, [bp + 16]
-248:	
-
-realloc$66:	; Assign currBlockPtr £temporary124 -> currBlockPtr
-249:		mov ax, [si + 2]
-250:		mov [bp + 16], ax
-252:	
+realloc$66:	; Assign currBlockPtr £temporary126 -> currBlockPtr
+246:		mov ax, [si + 2]
+247:		mov [bp + 16], ax
+249:	
 
 realloc$67:	; Goto 54
-253:		jmp realloc$54
-255:	
+250:		jmp realloc$54
+252:	
 
 realloc$68:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-257:	
+254:	
 
 realloc$69:	; Parameter 14 newMemorySize 6
-258:		mov ax, [bp + 8]
-259:		mov [bp + 20], ax
-261:	
+255:		mov ax, [bp + 8]
+256:		mov [bp + 20], ax
+258:	
 
 realloc$70:	; Call 14 malloc 0
-262:		mov word [bp + 14], realloc$71
-263:		mov [bp + 16], bp
-264:		add bp, 14
-265:		jmp malloc
-267:	
+259:		mov word [bp + 14], realloc$71
+260:		mov [bp + 16], bp
+261:		add bp, 14
+262:		jmp malloc
+264:	
 
 realloc$71:	; PostCall 14
-269:	
+266:	
 
-realloc$72:	; GetReturnValue £temporary125
-274:	
+realloc$72:	; GetReturnValue £temporary127
+268:	
 
-realloc$73:	; Assign newMemoryPtr £temporary125
-275:		mov [bp + 14], bx
-277:	
+realloc$73:	; Assign newMemoryPtr £temporary127
+269:		mov [bp + 14], bx
+271:	
 
 realloc$74:	; Equal 87 newMemoryPtr 0
-278:		cmp word [bp + 14], 0
-279:		je realloc$87
-281:	
+272:		cmp word [bp + 14], 0
+273:		je realloc$87
+275:	
 
 realloc$75:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-283:	
+277:	
 
 realloc$76:	; Parameter 16 newMemoryPtr 6
-284:		mov ax, [bp + 14]
-285:		mov [bp + 22], ax
-287:	
+278:		mov ax, [bp + 14]
+279:		mov [bp + 22], ax
+281:	
 
 realloc$77:	; Parameter 16 oldMemoryPtr 8
-288:		mov ax, [bp + 6]
-289:		mov [bp + 24], ax
-291:	
+282:		mov ax, [bp + 6]
+283:		mov [bp + 24], ax
+285:	
 
 realloc$78:	; Parameter 16 newMemorySize 10
-292:		mov ax, [bp + 8]
-293:		mov [bp + 26], ax
-295:	
+286:		mov ax, [bp + 8]
+287:		mov [bp + 26], ax
+289:	
 
 realloc$79:	; Call 16 memcpy 0
-296:		mov word [bp + 16], realloc$80
-297:		mov [bp + 18], bp
-298:		add bp, 16
-299:		jmp memcpy
-301:	
+290:		mov word [bp + 16], realloc$80
+291:		mov [bp + 18], bp
+292:		add bp, 16
+293:		jmp memcpy
+295:	
 
 realloc$80:	; PostCall 16
-303:	
+297:	
 
 realloc$81:	; CallHeader 16 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-305:	
+299:	
 
 realloc$82:	; Parameter 16 oldMemoryPtr 6
-306:		mov ax, [bp + 6]
-307:		mov [bp + 22], ax
-309:	
+300:		mov ax, [bp + 6]
+301:		mov [bp + 22], ax
+303:	
 
 realloc$83:	; Call 16 free 0
-310:		mov word [bp + 16], realloc$84
-311:		mov [bp + 18], bp
-312:		add bp, 16
-313:		jmp free
-315:	
+304:		mov word [bp + 16], realloc$84
+305:		mov [bp + 18], bp
+306:		add bp, 16
+307:		jmp free
+309:	
 
 realloc$84:	; PostCall 16
-317:	
+311:	
 
 realloc$85:	; SetReturnValue newMemoryPtr
-318:		mov bx, [bp + 14]
-320:	
+312:		mov bx, [bp + 14]
+314:	
 
 realloc$86:	; Return newMemoryPtr
-321:		mov ax, [bp]
-322:		mov di, [bp + 4]
-323:		mov bp, [bp + 2]
-324:		jmp ax
-326:	
+315:		mov ax, [bp]
+316:		mov di, [bp + 4]
+317:		mov bp, [bp + 2]
+318:		jmp ax
+320:	
 
 realloc$87:	; SetReturnValue 0
-327:		mov bx, 0
-329:	
+321:		mov bx, 0
+323:	
 
 realloc$88:	; Return 0
-330:		mov ax, [bp]
-331:		mov di, [bp + 4]
-332:		mov bp, [bp + 2]
-333:		jmp ax
-335:	
+324:		mov ax, [bp]
+325:		mov di, [bp + 4]
+326:		mov bp, [bp + 2]
+327:		jmp ax
+329:	
 
 realloc$89:	; FunctionEnd realloc
 1:	
@@ -1035,7 +1035,7 @@ print_heap$1:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symb
 7:	
 
 print_heap$2:	; Parameter 8 string_Heap3A0A# 6
-8:		mov word [bp + 14], @368$string_Heap3A0A#
+8:		mov word [bp + 14], @376$string_Heap3A0A#
 10:	
 
 print_heap$3:	; Call 8 printf 0
@@ -1058,22 +1058,22 @@ print_heap$6:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symb
 25:	
 
 print_heap$7:	; Parameter 8 string_2020Address2025u2C20Size2025u0A# 6
-26:		mov word [bp + 14], @374$string_2020Address2025u2C20Size2025u0A#
+26:		mov word [bp + 14], @382$string_2020Address2025u2C20Size2025u0A#
 28:	
 
-print_heap$8:	; IntegralToIntegral £temporary148 currBlockPtr
+print_heap$8:	; IntegralToIntegral £temporary150 currBlockPtr
 29:		mov ax, [bp + 6]
 32:	
 
-print_heap$9:	; Parameter 8 £temporary148 8
+print_heap$9:	; Parameter 8 £temporary150 8
 33:		mov [bp + 16], ax
 35:	
 
-print_heap$10:	; Deref £temporary149 -> currBlockPtr currBlockPtr 0
+print_heap$10:	; Deref £temporary151 -> currBlockPtr currBlockPtr 0
 36:		mov si, [bp + 6]
 38:	
 
-print_heap$11:	; Parameter 8 £temporary149 -> currBlockPtr 10
+print_heap$11:	; Parameter 8 £temporary151 -> currBlockPtr 10
 39:		mov ax, [si]
 40:		mov [bp + 18], ax
 42:	
@@ -1090,11 +1090,11 @@ print_heap$12:	; Call 8 printf 0
 print_heap$13:	; PostCall 8
 52:	
 
-print_heap$14:	; Deref £temporary151 -> currBlockPtr currBlockPtr 2
+print_heap$14:	; Deref £temporary153 -> currBlockPtr currBlockPtr 2
 53:		mov si, [bp + 6]
 55:	
 
-print_heap$15:	; Assign currBlockPtr £temporary151 -> currBlockPtr
+print_heap$15:	; Assign currBlockPtr £temporary153 -> currBlockPtr
 56:		mov ax, [si + 2]
 57:		mov [bp + 6], ax
 59:	
@@ -1107,7 +1107,7 @@ print_heap$17:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Sym
 64:	
 
 print_heap$18:	; Parameter 8 string_0A# 6
-65:		mov word [bp + 14], @379$string_0A#
+65:		mov word [bp + 14], @387$string_0A#
 67:	
 
 print_heap$19:	; Call 8 printf 0

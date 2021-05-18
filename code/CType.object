@@ -13,106 +13,106 @@ islower$1:	; Call 8 localeconv 0
 islower$2:	; PostCall 8
 11:	
 
-islower$3:	; GetReturnValue £temporary158
+islower$3:	; GetReturnValue £temporary160
+13:	
+
+islower$4:	; Assign localeConvPtr £temporary160
+14:		mov [bp + 8], bx
 16:	
 
-islower$4:	; Assign localeConvPtr £temporary158
-17:		mov [bp + 8], bx
-19:	
-
 islower$5:	; Equal 19 localeConvPtr 0
-20:		cmp word [bp + 8], 0
-21:		je islower$19
-23:	
+17:		cmp word [bp + 8], 0
+18:		je islower$19
+20:	
 
 islower$6:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+22:	
+
+islower$7:	; Deref £temporary162 -> localeConvPtr localeConvPtr 12
+23:		mov si, [bp + 8]
 25:	
 
-islower$7:	; Deref £temporary160 -> localeConvPtr localeConvPtr 12
-26:		mov si, [bp + 8]
-28:	
-
-islower$8:	; Parameter 10 £temporary160 -> localeConvPtr 6
-29:		mov ax, [si + 12]
-30:		mov [bp + 16], ax
-32:	
+islower$8:	; Parameter 10 £temporary162 -> localeConvPtr 6
+26:		mov ax, [si + 12]
+27:		mov [bp + 16], ax
+29:	
 
 islower$9:	; Parameter 10 c 8
-33:		mov ax, [bp + 6]
-34:		mov [bp + 18], ax
-36:	
+30:		mov ax, [bp + 6]
+31:		mov [bp + 18], ax
+33:	
 
 islower$10:	; Call 10 strchr 0
-37:		mov word [bp + 10], islower$11
-38:		mov [bp + 12], bp
-39:		add bp, 10
-40:		jmp strchr
-42:	
+34:		mov word [bp + 10], islower$11
+35:		mov [bp + 12], bp
+36:		add bp, 10
+37:		jmp strchr
+39:	
 
 islower$11:	; PostCall 10
-44:	
+41:	
 
-islower$12:	; GetReturnValue £temporary161
-49:	
+islower$12:	; GetReturnValue £temporary163
+43:	
 
-islower$13:	; Equal 16 £temporary161 0
-50:		cmp bx, 0
-51:		je islower$16
-53:	
+islower$13:	; Equal 16 £temporary163 0
+44:		cmp bx, 0
+45:		je islower$16
+47:	
 
-islower$14:	; Assign £temporary163 1
-54:		mov bx, 1
-56:	
+islower$14:	; Assign £temporary165 1
+48:		mov bx, 1
+50:	
 
 islower$15:	; Goto 17
-57:		jmp islower$17
-59:	
+51:		jmp islower$17
+53:	
 
-islower$16:	; Assign £temporary163 0
-60:		mov bx, 0
-62:	
+islower$16:	; Assign £temporary165 0
+54:		mov bx, 0
+56:	
 
-islower$17:	; SetReturnValue £temporary163
+islower$17:	; SetReturnValue £temporary165
+58:	
+
+islower$18:	; Return £temporary165
+59:		mov ax, [bp]
+60:		mov di, [bp + 4]
+61:		mov bp, [bp + 2]
+62:		jmp ax
 64:	
 
-islower$18:	; Return £temporary163
-65:		mov ax, [bp]
-66:		mov di, [bp + 4]
-67:		mov bp, [bp + 2]
-68:		jmp ax
-70:	
-
 islower$19:	; SignedLessThan 23 c 97
-71:		cmp word [bp + 6], 97
-72:		jl islower$23
-74:	
+65:		cmp word [bp + 6], 97
+66:		jl islower$23
+68:	
 
 islower$20:	; SignedGreaterThan 23 c 122
-75:		cmp word [bp + 6], 122
-76:		jg islower$23
-78:	
+69:		cmp word [bp + 6], 122
+70:		jg islower$23
+72:	
 
-islower$21:	; Assign £temporary167 1
-79:		mov bx, 1
-81:	
+islower$21:	; Assign £temporary169 1
+73:		mov bx, 1
+75:	
 
 islower$22:	; Goto 24
-82:		jmp islower$24
-84:	
+76:		jmp islower$24
+78:	
 
-islower$23:	; Assign £temporary167 0
-85:		mov bx, 0
-87:	
+islower$23:	; Assign £temporary169 0
+79:		mov bx, 0
+81:	
 
-islower$24:	; SetReturnValue £temporary167
+islower$24:	; SetReturnValue £temporary169
+83:	
+
+islower$25:	; Return £temporary169
+84:		mov ax, [bp]
+85:		mov di, [bp + 4]
+86:		mov bp, [bp + 2]
+87:		jmp ax
 89:	
-
-islower$25:	; Return £temporary167
-90:		mov ax, [bp]
-91:		mov di, [bp + 4]
-92:		mov bp, [bp + 2]
-93:		jmp ax
-95:	
 
 islower$26:	; FunctionEnd islower
 1:	
@@ -130,106 +130,106 @@ isupper$1:	; Call 8 localeconv 0
 isupper$2:	; PostCall 8
 11:	
 
-isupper$3:	; GetReturnValue £temporary170
+isupper$3:	; GetReturnValue £temporary172
+13:	
+
+isupper$4:	; Assign localeConvPtr £temporary172
+14:		mov [bp + 8], bx
 16:	
 
-isupper$4:	; Assign localeConvPtr £temporary170
-17:		mov [bp + 8], bx
-19:	
-
 isupper$5:	; Equal 19 localeConvPtr 0
-20:		cmp word [bp + 8], 0
-21:		je isupper$19
-23:	
+17:		cmp word [bp + 8], 0
+18:		je isupper$19
+20:	
 
 isupper$6:	; CallHeader 10 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+22:	
+
+isupper$7:	; Deref £temporary174 -> localeConvPtr localeConvPtr 14
+23:		mov si, [bp + 8]
 25:	
 
-isupper$7:	; Deref £temporary172 -> localeConvPtr localeConvPtr 14
-26:		mov si, [bp + 8]
-28:	
-
-isupper$8:	; Parameter 10 £temporary172 -> localeConvPtr 6
-29:		mov ax, [si + 14]
-30:		mov [bp + 16], ax
-32:	
+isupper$8:	; Parameter 10 £temporary174 -> localeConvPtr 6
+26:		mov ax, [si + 14]
+27:		mov [bp + 16], ax
+29:	
 
 isupper$9:	; Parameter 10 c 8
-33:		mov ax, [bp + 6]
-34:		mov [bp + 18], ax
-36:	
+30:		mov ax, [bp + 6]
+31:		mov [bp + 18], ax
+33:	
 
 isupper$10:	; Call 10 strchr 0
-37:		mov word [bp + 10], isupper$11
-38:		mov [bp + 12], bp
-39:		add bp, 10
-40:		jmp strchr
-42:	
+34:		mov word [bp + 10], isupper$11
+35:		mov [bp + 12], bp
+36:		add bp, 10
+37:		jmp strchr
+39:	
 
 isupper$11:	; PostCall 10
-44:	
+41:	
 
-isupper$12:	; GetReturnValue £temporary173
-49:	
+isupper$12:	; GetReturnValue £temporary175
+43:	
 
-isupper$13:	; Equal 16 £temporary173 0
-50:		cmp bx, 0
-51:		je isupper$16
-53:	
+isupper$13:	; Equal 16 £temporary175 0
+44:		cmp bx, 0
+45:		je isupper$16
+47:	
 
-isupper$14:	; Assign £temporary175 1
-54:		mov bx, 1
-56:	
+isupper$14:	; Assign £temporary177 1
+48:		mov bx, 1
+50:	
 
 isupper$15:	; Goto 17
-57:		jmp isupper$17
-59:	
+51:		jmp isupper$17
+53:	
 
-isupper$16:	; Assign £temporary175 0
-60:		mov bx, 0
-62:	
+isupper$16:	; Assign £temporary177 0
+54:		mov bx, 0
+56:	
 
-isupper$17:	; SetReturnValue £temporary175
+isupper$17:	; SetReturnValue £temporary177
+58:	
+
+isupper$18:	; Return £temporary177
+59:		mov ax, [bp]
+60:		mov di, [bp + 4]
+61:		mov bp, [bp + 2]
+62:		jmp ax
 64:	
 
-isupper$18:	; Return £temporary175
-65:		mov ax, [bp]
-66:		mov di, [bp + 4]
-67:		mov bp, [bp + 2]
-68:		jmp ax
-70:	
-
 isupper$19:	; SignedLessThan 23 c 65
-71:		cmp word [bp + 6], 65
-72:		jl isupper$23
-74:	
+65:		cmp word [bp + 6], 65
+66:		jl isupper$23
+68:	
 
 isupper$20:	; SignedGreaterThan 23 c 90
-75:		cmp word [bp + 6], 90
-76:		jg isupper$23
-78:	
+69:		cmp word [bp + 6], 90
+70:		jg isupper$23
+72:	
 
-isupper$21:	; Assign £temporary179 1
-79:		mov bx, 1
-81:	
+isupper$21:	; Assign £temporary181 1
+73:		mov bx, 1
+75:	
 
 isupper$22:	; Goto 24
-82:		jmp isupper$24
-84:	
+76:		jmp isupper$24
+78:	
 
-isupper$23:	; Assign £temporary179 0
-85:		mov bx, 0
-87:	
+isupper$23:	; Assign £temporary181 0
+79:		mov bx, 0
+81:	
 
-isupper$24:	; SetReturnValue £temporary179
+isupper$24:	; SetReturnValue £temporary181
+83:	
+
+isupper$25:	; Return £temporary181
+84:		mov ax, [bp]
+85:		mov di, [bp + 4]
+86:		mov bp, [bp + 2]
+87:		jmp ax
 89:	
-
-isupper$25:	; Return £temporary179
-90:		mov ax, [bp]
-91:		mov di, [bp + 4]
-92:		mov bp, [bp + 2]
-93:		jmp ax
-95:	
 
 isupper$26:	; FunctionEnd isupper
 1:	
@@ -252,61 +252,61 @@ isalpha$2:	; Call 8 islower 0
 isalpha$3:	; PostCall 8
 15:	
 
-isalpha$4:	; GetReturnValue £temporary182
-20:	
+isalpha$4:	; GetReturnValue £temporary184
+17:	
 
-isalpha$5:	; NotEqual 12 £temporary182 0
-21:		cmp bx, 0
-22:		jne isalpha$12
-24:	
+isalpha$5:	; NotEqual 12 £temporary184 0
+18:		cmp bx, 0
+19:		jne isalpha$12
+21:	
 
 isalpha$6:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-26:	
+23:	
 
 isalpha$7:	; Parameter 8 c 6
-27:		mov ax, [bp + 6]
-28:		mov [bp + 14], ax
-30:	
+24:		mov ax, [bp + 6]
+25:		mov [bp + 14], ax
+27:	
 
 isalpha$8:	; Call 8 isupper 0
-31:		mov word [bp + 8], isalpha$9
-32:		mov [bp + 10], bp
-33:		add bp, 8
-34:		jmp isupper
-36:	
+28:		mov word [bp + 8], isalpha$9
+29:		mov [bp + 10], bp
+30:		add bp, 8
+31:		jmp isupper
+33:	
 
 isalpha$9:	; PostCall 8
-38:	
+35:	
 
-isalpha$10:	; GetReturnValue £temporary183
-43:	
+isalpha$10:	; GetReturnValue £temporary185
+37:	
 
-isalpha$11:	; Equal 14 £temporary183 0
-44:		cmp bx, 0
-45:		je isalpha$14
-47:	
+isalpha$11:	; Equal 14 £temporary185 0
+38:		cmp bx, 0
+39:		je isalpha$14
+41:	
 
-isalpha$12:	; Assign £temporary187 1
-48:		mov bx, 1
-50:	
+isalpha$12:	; Assign £temporary189 1
+42:		mov bx, 1
+44:	
 
 isalpha$13:	; Goto 15
-51:		jmp isalpha$15
-53:	
+45:		jmp isalpha$15
+47:	
 
-isalpha$14:	; Assign £temporary187 0
-54:		mov bx, 0
-56:	
+isalpha$14:	; Assign £temporary189 0
+48:		mov bx, 0
+50:	
 
-isalpha$15:	; SetReturnValue £temporary187
+isalpha$15:	; SetReturnValue £temporary189
+52:	
+
+isalpha$16:	; Return £temporary189
+53:		mov ax, [bp]
+54:		mov di, [bp + 4]
+55:		mov bp, [bp + 2]
+56:		jmp ax
 58:	
-
-isalpha$16:	; Return £temporary187
-59:		mov ax, [bp]
-60:		mov di, [bp + 4]
-61:		mov bp, [bp + 2]
-62:		jmp ax
-64:	
 
 isalpha$17:	; FunctionEnd isalpha
 1:	
@@ -321,7 +321,7 @@ isdigit$1:	; SignedGreaterThan 4 c 57
 7:		jg isdigit$4
 9:	
 
-isdigit$2:	; Assign £temporary193 1
+isdigit$2:	; Assign £temporary195 1
 10:		mov bx, 1
 12:	
 
@@ -329,14 +329,14 @@ isdigit$3:	; Goto 5
 13:		jmp isdigit$5
 15:	
 
-isdigit$4:	; Assign £temporary193 0
+isdigit$4:	; Assign £temporary195 0
 16:		mov bx, 0
 18:	
 
-isdigit$5:	; SetReturnValue £temporary193
+isdigit$5:	; SetReturnValue £temporary195
 20:	
 
-isdigit$6:	; Return £temporary193
+isdigit$6:	; Return £temporary195
 21:		mov ax, [bp]
 22:		mov di, [bp + 4]
 23:		mov bp, [bp + 2]
@@ -364,61 +364,61 @@ isalnum$2:	; Call 8 isalpha 0
 isalnum$3:	; PostCall 8
 15:	
 
-isalnum$4:	; GetReturnValue £temporary194
-20:	
+isalnum$4:	; GetReturnValue £temporary196
+17:	
 
-isalnum$5:	; NotEqual 12 £temporary194 0
-21:		cmp bx, 0
-22:		jne isalnum$12
-24:	
+isalnum$5:	; NotEqual 12 £temporary196 0
+18:		cmp bx, 0
+19:		jne isalnum$12
+21:	
 
 isalnum$6:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-26:	
+23:	
 
 isalnum$7:	; Parameter 8 c 6
-27:		mov ax, [bp + 6]
-28:		mov [bp + 14], ax
-30:	
+24:		mov ax, [bp + 6]
+25:		mov [bp + 14], ax
+27:	
 
 isalnum$8:	; Call 8 isdigit 0
-31:		mov word [bp + 8], isalnum$9
-32:		mov [bp + 10], bp
-33:		add bp, 8
-34:		jmp isdigit
-36:	
+28:		mov word [bp + 8], isalnum$9
+29:		mov [bp + 10], bp
+30:		add bp, 8
+31:		jmp isdigit
+33:	
 
 isalnum$9:	; PostCall 8
-38:	
+35:	
 
-isalnum$10:	; GetReturnValue £temporary195
-43:	
+isalnum$10:	; GetReturnValue £temporary197
+37:	
 
-isalnum$11:	; Equal 14 £temporary195 0
-44:		cmp bx, 0
-45:		je isalnum$14
-47:	
+isalnum$11:	; Equal 14 £temporary197 0
+38:		cmp bx, 0
+39:		je isalnum$14
+41:	
 
-isalnum$12:	; Assign £temporary199 1
-48:		mov bx, 1
-50:	
+isalnum$12:	; Assign £temporary201 1
+42:		mov bx, 1
+44:	
 
 isalnum$13:	; Goto 15
-51:		jmp isalnum$15
-53:	
+45:		jmp isalnum$15
+47:	
 
-isalnum$14:	; Assign £temporary199 0
-54:		mov bx, 0
-56:	
+isalnum$14:	; Assign £temporary201 0
+48:		mov bx, 0
+50:	
 
-isalnum$15:	; SetReturnValue £temporary199
+isalnum$15:	; SetReturnValue £temporary201
+52:	
+
+isalnum$16:	; Return £temporary201
+53:		mov ax, [bp]
+54:		mov di, [bp + 4]
+55:		mov bp, [bp + 2]
+56:		jmp ax
 58:	
-
-isalnum$16:	; Return £temporary199
-59:		mov ax, [bp]
-60:		mov di, [bp + 4]
-61:		mov bp, [bp + 2]
-62:		jmp ax
-64:	
 
 isalnum$17:	; FunctionEnd isalnum
 1:	
@@ -441,55 +441,55 @@ isxdigit$2:	; Call 8 isdigit 0
 isxdigit$3:	; PostCall 8
 15:	
 
-isxdigit$4:	; GetReturnValue £temporary202
-20:	
+isxdigit$4:	; GetReturnValue £temporary204
+17:	
 
-isxdigit$5:	; NotEqual 10 £temporary202 0
-21:		cmp bx, 0
-22:		jne isxdigit$10
-24:	
+isxdigit$5:	; NotEqual 10 £temporary204 0
+18:		cmp bx, 0
+19:		jne isxdigit$10
+21:	
 
 isxdigit$6:	; SignedLessThan 8 c 97
-25:		cmp word [bp + 6], 97
-26:		jl isxdigit$8
-28:	
+22:		cmp word [bp + 6], 97
+23:		jl isxdigit$8
+25:	
 
 isxdigit$7:	; SignedLessThanEqual 10 c 102
-29:		cmp word [bp + 6], 102
-30:		jle isxdigit$10
-32:	
+26:		cmp word [bp + 6], 102
+27:		jle isxdigit$10
+29:	
 
 isxdigit$8:	; SignedLessThan 12 c 65
-33:		cmp word [bp + 6], 65
-34:		jl isxdigit$12
-36:	
+30:		cmp word [bp + 6], 65
+31:		jl isxdigit$12
+33:	
 
 isxdigit$9:	; SignedGreaterThan 12 c 70
-37:		cmp word [bp + 6], 70
-38:		jg isxdigit$12
+34:		cmp word [bp + 6], 70
+35:		jg isxdigit$12
+37:	
+
+isxdigit$10:	; Assign £temporary214 1
+38:		mov bx, 1
 40:	
 
-isxdigit$10:	; Assign £temporary212 1
-41:		mov bx, 1
+isxdigit$11:	; Goto 13
+41:		jmp isxdigit$13
 43:	
 
-isxdigit$11:	; Goto 13
-44:		jmp isxdigit$13
+isxdigit$12:	; Assign £temporary214 0
+44:		mov bx, 0
 46:	
 
-isxdigit$12:	; Assign £temporary212 0
-47:		mov bx, 0
-49:	
+isxdigit$13:	; SetReturnValue £temporary214
+48:	
 
-isxdigit$13:	; SetReturnValue £temporary212
-51:	
-
-isxdigit$14:	; Return £temporary212
-52:		mov ax, [bp]
-53:		mov di, [bp + 4]
-54:		mov bp, [bp + 2]
-55:		jmp ax
-57:	
+isxdigit$14:	; Return £temporary214
+49:		mov ax, [bp]
+50:		mov di, [bp + 4]
+51:		mov bp, [bp + 2]
+52:		jmp ax
+54:	
 
 isxdigit$15:	; FunctionEnd isxdigit
 1:	
@@ -504,7 +504,7 @@ isgraph$1:	; SignedGreaterThan 4 c 126
 7:		jg isgraph$4
 9:	
 
-isgraph$2:	; Assign £temporary217 1
+isgraph$2:	; Assign £temporary219 1
 10:		mov bx, 1
 12:	
 
@@ -512,14 +512,14 @@ isgraph$3:	; Goto 5
 13:		jmp isgraph$5
 15:	
 
-isgraph$4:	; Assign £temporary217 0
+isgraph$4:	; Assign £temporary219 0
 16:		mov bx, 0
 18:	
 
-isgraph$5:	; SetReturnValue £temporary217
+isgraph$5:	; SetReturnValue £temporary219
 20:	
 
-isgraph$6:	; Return £temporary217
+isgraph$6:	; Return £temporary219
 21:		mov ax, [bp]
 22:		mov di, [bp + 4]
 23:		mov bp, [bp + 2]
@@ -547,40 +547,40 @@ isprint$2:	; Call 8 isgraph 0
 isprint$3:	; PostCall 8
 15:	
 
-isprint$4:	; GetReturnValue £temporary218
-20:	
+isprint$4:	; GetReturnValue £temporary220
+17:	
 
-isprint$5:	; Equal 9 £temporary218 0
-21:		cmp bx, 0
-22:		je isprint$9
-24:	
+isprint$5:	; Equal 9 £temporary220 0
+18:		cmp bx, 0
+19:		je isprint$9
+21:	
 
 isprint$6:	; Equal 9 c 32
-25:		cmp word [bp + 6], 32
-26:		je isprint$9
+22:		cmp word [bp + 6], 32
+23:		je isprint$9
+25:	
+
+isprint$7:	; Assign £temporary224 1
+26:		mov bx, 1
 28:	
 
-isprint$7:	; Assign £temporary222 1
-29:		mov bx, 1
+isprint$8:	; Goto 10
+29:		jmp isprint$10
 31:	
 
-isprint$8:	; Goto 10
-32:		jmp isprint$10
+isprint$9:	; Assign £temporary224 0
+32:		mov bx, 0
 34:	
 
-isprint$9:	; Assign £temporary222 0
-35:		mov bx, 0
-37:	
+isprint$10:	; SetReturnValue £temporary224
+36:	
 
-isprint$10:	; SetReturnValue £temporary222
-39:	
-
-isprint$11:	; Return £temporary222
-40:		mov ax, [bp]
-41:		mov di, [bp + 4]
-42:		mov bp, [bp + 2]
-43:		jmp ax
-45:	
+isprint$11:	; Return £temporary224
+37:		mov ax, [bp]
+38:		mov di, [bp + 4]
+39:		mov bp, [bp + 2]
+40:		jmp ax
+42:	
 
 isprint$12:	; FunctionEnd isprint
 1:	
@@ -603,61 +603,61 @@ ispunct$2:	; Call 8 isgraph 0
 ispunct$3:	; PostCall 8
 15:	
 
-ispunct$4:	; GetReturnValue £temporary224
-20:	
+ispunct$4:	; GetReturnValue £temporary226
+17:	
 
-ispunct$5:	; Equal 14 £temporary224 0
-21:		cmp bx, 0
-22:		je ispunct$14
-24:	
+ispunct$5:	; Equal 14 £temporary226 0
+18:		cmp bx, 0
+19:		je ispunct$14
+21:	
 
 ispunct$6:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-26:	
+23:	
 
 ispunct$7:	; Parameter 8 c 6
-27:		mov ax, [bp + 6]
-28:		mov [bp + 14], ax
-30:	
+24:		mov ax, [bp + 6]
+25:		mov [bp + 14], ax
+27:	
 
 ispunct$8:	; Call 8 isalnum 0
-31:		mov word [bp + 8], ispunct$9
-32:		mov [bp + 10], bp
-33:		add bp, 8
-34:		jmp isalnum
-36:	
+28:		mov word [bp + 8], ispunct$9
+29:		mov [bp + 10], bp
+30:		add bp, 8
+31:		jmp isalnum
+33:	
 
 ispunct$9:	; PostCall 8
-38:	
+35:	
 
-ispunct$10:	; GetReturnValue £temporary225
-43:	
+ispunct$10:	; GetReturnValue £temporary227
+37:	
 
-ispunct$11:	; NotEqual 14 £temporary225 0
-44:		cmp bx, 0
-45:		jne ispunct$14
-47:	
+ispunct$11:	; NotEqual 14 £temporary227 0
+38:		cmp bx, 0
+39:		jne ispunct$14
+41:	
 
-ispunct$12:	; Assign £temporary230 1
-48:		mov bx, 1
-50:	
+ispunct$12:	; Assign £temporary232 1
+42:		mov bx, 1
+44:	
 
 ispunct$13:	; Goto 15
-51:		jmp ispunct$15
-53:	
+45:		jmp ispunct$15
+47:	
 
-ispunct$14:	; Assign £temporary230 0
-54:		mov bx, 0
-56:	
+ispunct$14:	; Assign £temporary232 0
+48:		mov bx, 0
+50:	
 
-ispunct$15:	; SetReturnValue £temporary230
+ispunct$15:	; SetReturnValue £temporary232
+52:	
+
+ispunct$16:	; Return £temporary232
+53:		mov ax, [bp]
+54:		mov di, [bp + 4]
+55:		mov bp, [bp + 2]
+56:		jmp ax
 58:	
-
-ispunct$16:	; Return £temporary230
-59:		mov ax, [bp]
-60:		mov di, [bp + 4]
-61:		mov bp, [bp + 2]
-62:		jmp ax
-64:	
 
 ispunct$17:	; FunctionEnd ispunct
 1:	
@@ -680,35 +680,35 @@ iscntrl$2:	; Call 8 isprint 0
 iscntrl$3:	; PostCall 8
 15:	
 
-iscntrl$4:	; GetReturnValue £temporary233
-20:	
+iscntrl$4:	; GetReturnValue £temporary235
+17:	
 
-iscntrl$5:	; NotEqual 8 £temporary233 0
-21:		cmp bx, 0
-22:		jne iscntrl$8
+iscntrl$5:	; NotEqual 8 £temporary235 0
+18:		cmp bx, 0
+19:		jne iscntrl$8
+21:	
+
+iscntrl$6:	; Assign £temporary238 1
+22:		mov bx, 1
 24:	
 
-iscntrl$6:	; Assign £temporary236 1
-25:		mov bx, 1
+iscntrl$7:	; Goto 9
+25:		jmp iscntrl$9
 27:	
 
-iscntrl$7:	; Goto 9
-28:		jmp iscntrl$9
+iscntrl$8:	; Assign £temporary238 0
+28:		mov bx, 0
 30:	
 
-iscntrl$8:	; Assign £temporary236 0
-31:		mov bx, 0
-33:	
+iscntrl$9:	; SetReturnValue £temporary238
+32:	
 
-iscntrl$9:	; SetReturnValue £temporary236
-35:	
-
-iscntrl$10:	; Return £temporary236
-36:		mov ax, [bp]
-37:		mov di, [bp + 4]
-38:		mov bp, [bp + 2]
-39:		jmp ax
-41:	
+iscntrl$10:	; Return £temporary238
+33:		mov ax, [bp]
+34:		mov di, [bp + 4]
+35:		mov bp, [bp + 2]
+36:		jmp ax
+38:	
 
 iscntrl$11:	; FunctionEnd iscntrl
 1:	
@@ -743,7 +743,7 @@ isspace$5:	; NotEqual 8 c 11
 23:		jne isspace$8
 25:	
 
-isspace$6:	; Assign £temporary249 1
+isspace$6:	; Assign £temporary251 1
 26:		mov bx, 1
 28:	
 
@@ -751,14 +751,14 @@ isspace$7:	; Goto 9
 29:		jmp isspace$9
 31:	
 
-isspace$8:	; Assign £temporary249 0
+isspace$8:	; Assign £temporary251 0
 32:		mov bx, 0
 34:	
 
-isspace$9:	; SetReturnValue £temporary249
+isspace$9:	; SetReturnValue £temporary251
 36:	
 
-isspace$10:	; Return £temporary249
+isspace$10:	; Return £temporary251
 37:		mov ax, [bp]
 38:		mov di, [bp + 4]
 39:		mov bp, [bp + 2]
@@ -786,140 +786,140 @@ tolower$2:	; Call 8 isupper 0
 tolower$3:	; PostCall 8
 15:	
 
-tolower$4:	; GetReturnValue £temporary250
-20:	
+tolower$4:	; GetReturnValue £temporary252
+17:	
 
-tolower$5:	; Equal 31 £temporary250 0
-21:		cmp bx, 0
-22:		je tolower$31
-24:	
+tolower$5:	; Equal 31 £temporary252 0
+18:		cmp bx, 0
+19:		je tolower$31
+21:	
 
 tolower$6:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-26:	
+23:	
 
 tolower$7:	; Call 8 localeconv 0
-27:		mov word [bp + 8], tolower$8
-28:		mov [bp + 10], bp
-29:		add bp, 8
-30:		jmp localeconv
-32:	
+24:		mov word [bp + 8], tolower$8
+25:		mov [bp + 10], bp
+26:		add bp, 8
+27:		jmp localeconv
+29:	
 
 tolower$8:	; PostCall 8
-34:	
+31:	
 
-tolower$9:	; GetReturnValue £temporary251
-39:	
+tolower$9:	; GetReturnValue £temporary253
+33:	
 
-tolower$10:	; Assign localeConvPtr £temporary251
-40:		mov [bp + 8], bx
-42:	
+tolower$10:	; Assign localeConvPtr £temporary253
+34:		mov [bp + 8], bx
+36:	
 
 tolower$11:	; Equal 28 localeConvPtr 0
-43:		cmp word [bp + 8], 0
-44:		je tolower$28
-46:	
+37:		cmp word [bp + 8], 0
+38:		je tolower$28
+40:	
 
-tolower$12:	; Deref £temporary253 -> localeConvPtr localeConvPtr 12
-47:		mov si, [bp + 8]
-49:	
+tolower$12:	; Deref £temporary255 -> localeConvPtr localeConvPtr 12
+41:		mov si, [bp + 8]
+43:	
 
-tolower$13:	; Assign lowerCase £temporary253 -> localeConvPtr
-50:		mov ax, [si + 12]
-51:		mov [bp + 10], ax
-53:	
+tolower$13:	; Assign lowerCase £temporary255 -> localeConvPtr
+44:		mov ax, [si + 12]
+45:		mov [bp + 10], ax
+47:	
 
-tolower$14:	; Deref £temporary254 -> localeConvPtr localeConvPtr 14
-54:		mov si, [bp + 8]
-56:	
+tolower$14:	; Deref £temporary256 -> localeConvPtr localeConvPtr 14
+48:		mov si, [bp + 8]
+50:	
 
-tolower$15:	; Assign upperCase £temporary254 -> localeConvPtr
-57:		mov ax, [si + 14]
-58:		mov [bp + 12], ax
-60:	
+tolower$15:	; Assign upperCase £temporary256 -> localeConvPtr
+51:		mov ax, [si + 14]
+52:		mov [bp + 12], ax
+54:	
 
 tolower$16:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-62:	
+56:	
 
 tolower$17:	; Parameter 14 upperCase 6
-63:		mov ax, [bp + 12]
-64:		mov [bp + 20], ax
-66:	
+57:		mov ax, [bp + 12]
+58:		mov [bp + 20], ax
+60:	
 
 tolower$18:	; Parameter 14 c 8
-67:		mov ax, [bp + 6]
-68:		mov [bp + 22], ax
-70:	
+61:		mov ax, [bp + 6]
+62:		mov [bp + 22], ax
+64:	
 
 tolower$19:	; Call 14 strchr 0
-71:		mov word [bp + 14], tolower$20
-72:		mov [bp + 16], bp
-73:		add bp, 14
-74:		jmp strchr
-76:	
+65:		mov word [bp + 14], tolower$20
+66:		mov [bp + 16], bp
+67:		add bp, 14
+68:		jmp strchr
+70:	
 
 tolower$20:	; PostCall 14
+72:	
+
+tolower$21:	; GetReturnValue £temporary257
+74:	
+
+tolower$22:	; BinarySubtract index £temporary257 upperCase
+75:		sub bx, [bp + 12]
+76:		mov [bp + 14], bx
 78:	
 
-tolower$21:	; GetReturnValue £temporary255
-83:	
+tolower$23:	; BinaryAdd £temporary260 lowerCase index
+79:		mov si, [bp + 10]
+80:		add si, [bp + 14]
+82:	
 
-tolower$22:	; BinarySubtract index £temporary255 upperCase
-84:		sub bx, [bp + 12]
-85:		mov [bp + 14], bx
-87:	
+tolower$24:	; Deref £temporary259 -> £temporary260 £temporary260 0
+84:	
 
-tolower$23:	; BinaryAdd £temporary258 lowerCase index
-88:		mov si, [bp + 10]
-89:		add si, [bp + 14]
-91:	
+tolower$25:	; IntegralToIntegral £temporary261 £temporary259 -> £temporary260
+85:		mov bl, [si]
+87:		and bx, 255
+89:		cmp bl, 0
+90:		jge tolower$26
+91:		neg bl
+93:		neg bx
+95:	
 
-tolower$24:	; Deref £temporary257 -> £temporary258 £temporary258 0
-93:	
+tolower$26:	; SetReturnValue £temporary261
+97:	
 
-tolower$25:	; IntegralToIntegral £temporary259 £temporary257 -> £temporary258
-94:		mov bl, [si]
-96:		and bx, 255
-98:		cmp bl, 0
-99:		jge tolower$26
-100:		neg bl
-102:		neg bx
-104:	
+tolower$27:	; Return £temporary261
+98:		mov ax, [bp]
+99:		mov di, [bp + 4]
+100:		mov bp, [bp + 2]
+101:		jmp ax
+103:	
 
-tolower$26:	; SetReturnValue £temporary259
-106:	
+tolower$28:	; BinaryAdd £temporary262 c 32
+104:		mov bx, [bp + 6]
+105:		add bx, 32
+107:	
 
-tolower$27:	; Return £temporary259
-107:		mov ax, [bp]
-108:		mov di, [bp + 4]
-109:		mov bp, [bp + 2]
-110:		jmp ax
-112:	
+tolower$29:	; SetReturnValue £temporary262
+109:	
 
-tolower$28:	; BinaryAdd £temporary260 c 32
-113:		mov bx, [bp + 6]
-114:		add bx, 32
-116:	
+tolower$30:	; Return £temporary262
+110:		mov ax, [bp]
+111:		mov di, [bp + 4]
+112:		mov bp, [bp + 2]
+113:		jmp ax
+115:	
 
-tolower$29:	; SetReturnValue £temporary260
+tolower$31:	; SetReturnValue c
+116:		mov bx, [bp + 6]
 118:	
 
-tolower$30:	; Return £temporary260
+tolower$32:	; Return c
 119:		mov ax, [bp]
 120:		mov di, [bp + 4]
 121:		mov bp, [bp + 2]
 122:		jmp ax
 124:	
-
-tolower$31:	; SetReturnValue c
-125:		mov bx, [bp + 6]
-127:	
-
-tolower$32:	; Return c
-128:		mov ax, [bp]
-129:		mov di, [bp + 4]
-130:		mov bp, [bp + 2]
-131:		jmp ax
-133:	
 
 tolower$33:	; FunctionEnd tolower
 1:	
@@ -942,139 +942,139 @@ toupper$2:	; Call 8 islower 0
 toupper$3:	; PostCall 8
 15:	
 
-toupper$4:	; GetReturnValue £temporary265
-20:	
+toupper$4:	; GetReturnValue £temporary267
+17:	
 
-toupper$5:	; Equal 31 £temporary265 0
-21:		cmp bx, 0
-22:		je toupper$31
-24:	
+toupper$5:	; Equal 31 £temporary267 0
+18:		cmp bx, 0
+19:		je toupper$31
+21:	
 
 toupper$6:	; CallHeader 8 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-26:	
+23:	
 
 toupper$7:	; Call 8 localeconv 0
-27:		mov word [bp + 8], toupper$8
-28:		mov [bp + 10], bp
-29:		add bp, 8
-30:		jmp localeconv
-32:	
+24:		mov word [bp + 8], toupper$8
+25:		mov [bp + 10], bp
+26:		add bp, 8
+27:		jmp localeconv
+29:	
 
 toupper$8:	; PostCall 8
-34:	
+31:	
 
-toupper$9:	; GetReturnValue £temporary266
-39:	
+toupper$9:	; GetReturnValue £temporary268
+33:	
 
-toupper$10:	; Assign localeConvPtr £temporary266
-40:		mov [bp + 8], bx
-42:	
+toupper$10:	; Assign localeConvPtr £temporary268
+34:		mov [bp + 8], bx
+36:	
 
 toupper$11:	; Equal 28 localeConvPtr 0
-43:		cmp word [bp + 8], 0
-44:		je toupper$28
-46:	
+37:		cmp word [bp + 8], 0
+38:		je toupper$28
+40:	
 
-toupper$12:	; Deref £temporary268 -> localeConvPtr localeConvPtr 12
-47:		mov si, [bp + 8]
-49:	
+toupper$12:	; Deref £temporary270 -> localeConvPtr localeConvPtr 12
+41:		mov si, [bp + 8]
+43:	
 
-toupper$13:	; Assign lowerCase £temporary268 -> localeConvPtr
-50:		mov ax, [si + 12]
-51:		mov [bp + 10], ax
-53:	
+toupper$13:	; Assign lowerCase £temporary270 -> localeConvPtr
+44:		mov ax, [si + 12]
+45:		mov [bp + 10], ax
+47:	
 
-toupper$14:	; Deref £temporary269 -> localeConvPtr localeConvPtr 14
-54:		mov si, [bp + 8]
-56:	
+toupper$14:	; Deref £temporary271 -> localeConvPtr localeConvPtr 14
+48:		mov si, [bp + 8]
+50:	
 
-toupper$15:	; Assign upperCase £temporary269 -> localeConvPtr
-57:		mov ax, [si + 14]
-58:		mov [bp + 12], ax
-60:	
+toupper$15:	; Assign upperCase £temporary271 -> localeConvPtr
+51:		mov ax, [si + 14]
+52:		mov [bp + 12], ax
+54:	
 
 toupper$16:	; CallHeader 14 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-62:	
+56:	
 
 toupper$17:	; Parameter 14 lowerCase 6
-63:		mov ax, [bp + 10]
-64:		mov [bp + 20], ax
-66:	
+57:		mov ax, [bp + 10]
+58:		mov [bp + 20], ax
+60:	
 
 toupper$18:	; Parameter 14 c 8
-67:		mov ax, [bp + 6]
-68:		mov [bp + 22], ax
-70:	
+61:		mov ax, [bp + 6]
+62:		mov [bp + 22], ax
+64:	
 
 toupper$19:	; Call 14 strchr 0
-71:		mov word [bp + 14], toupper$20
-72:		mov [bp + 16], bp
-73:		add bp, 14
-74:		jmp strchr
-76:	
+65:		mov word [bp + 14], toupper$20
+66:		mov [bp + 16], bp
+67:		add bp, 14
+68:		jmp strchr
+70:	
 
 toupper$20:	; PostCall 14
+72:	
+
+toupper$21:	; GetReturnValue £temporary272
+74:	
+
+toupper$22:	; BinarySubtract index £temporary272 lowerCase
+75:		sub bx, [bp + 10]
+76:		mov [bp + 14], bx
 78:	
 
-toupper$21:	; GetReturnValue £temporary270
-83:	
+toupper$23:	; BinaryAdd £temporary275 upperCase index
+79:		mov si, [bp + 12]
+80:		add si, [bp + 14]
+82:	
 
-toupper$22:	; BinarySubtract index £temporary270 lowerCase
-84:		sub bx, [bp + 10]
-85:		mov [bp + 14], bx
-87:	
+toupper$24:	; Deref £temporary274 -> £temporary275 £temporary275 0
+84:	
 
-toupper$23:	; BinaryAdd £temporary273 upperCase index
-88:		mov si, [bp + 12]
-89:		add si, [bp + 14]
-91:	
+toupper$25:	; IntegralToIntegral £temporary276 £temporary274 -> £temporary275
+85:		mov bl, [si]
+87:		and bx, 255
+89:		cmp bl, 0
+90:		jge toupper$26
+91:		neg bl
+93:		neg bx
+95:	
 
-toupper$24:	; Deref £temporary272 -> £temporary273 £temporary273 0
-93:	
+toupper$26:	; SetReturnValue £temporary276
+97:	
 
-toupper$25:	; IntegralToIntegral £temporary274 £temporary272 -> £temporary273
-94:		mov bl, [si]
-96:		and bx, 255
-98:		cmp bl, 0
-99:		jge toupper$26
-100:		neg bl
-102:		neg bx
-104:	
+toupper$27:	; Return £temporary276
+98:		mov ax, [bp]
+99:		mov di, [bp + 4]
+100:		mov bp, [bp + 2]
+101:		jmp ax
+103:	
 
-toupper$26:	; SetReturnValue £temporary274
-106:	
+toupper$28:	; BinarySubtract £temporary277 c 32
+104:		mov bx, [bp + 6]
+105:		sub bx, 32
+107:	
 
-toupper$27:	; Return £temporary274
-107:		mov ax, [bp]
-108:		mov di, [bp + 4]
-109:		mov bp, [bp + 2]
-110:		jmp ax
-112:	
+toupper$29:	; SetReturnValue £temporary277
+109:	
 
-toupper$28:	; BinarySubtract £temporary275 c 32
-113:		mov bx, [bp + 6]
-114:		sub bx, 32
-116:	
+toupper$30:	; Return £temporary277
+110:		mov ax, [bp]
+111:		mov di, [bp + 4]
+112:		mov bp, [bp + 2]
+113:		jmp ax
+115:	
 
-toupper$29:	; SetReturnValue £temporary275
+toupper$31:	; SetReturnValue c
+116:		mov bx, [bp + 6]
 118:	
 
-toupper$30:	; Return £temporary275
+toupper$32:	; Return c
 119:		mov ax, [bp]
 120:		mov di, [bp + 4]
 121:		mov bp, [bp + 2]
 122:		jmp ax
 124:	
-
-toupper$31:	; SetReturnValue c
-125:		mov bx, [bp + 6]
-127:	
-
-toupper$32:	; Return c
-128:		mov ax, [bp]
-129:		mov di, [bp + 4]
-130:		mov bp, [bp + 2]
-131:		jmp ax
-133:	
 
 toupper$33:	; FunctionEnd toupper

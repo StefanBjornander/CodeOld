@@ -1,38 +1,38 @@
-0: PushFloat 1
+0: PushFloat floating8$1#
 1: PopFloat index
-2: PushFloat 1
+2: PushFloat floating8$1#
 3: PopFloat sum
-4: PushFloat 1
+4: PushFloat floating8$1#
 5: PopFloat faculty
 6: PushFloat x
 7: PopFloat power
 8: PushFloat power
 9: PushFloat faculty
-10: SignedDivide £temporary370 power faculty
+10: Divide £temporary249 power faculty
 11: PopFloat term
 12: PushFloat sum
 13: PushFloat term
-14: BinaryAdd £temporary371 sum term
+14: Add £temporary250 sum term
 15: PopFloat sum
 16: PushFloat power
 17: PushFloat x
-18: SignedMultiply £temporary372 power x
+18: Multiply £temporary251 power x
 19: PopFloat power
 20: PushFloat faculty
 21: PushFloat index
 22: PushOne
-23: BinaryAdd index index 1
+23: Add £temporary253 index £temporary252
 24: TopFloat index
-25: SignedMultiply £temporary374 faculty £temporary373
+25: Multiply £temporary254 faculty index
 26: PopFloat faculty
 27: PreCall 54 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 28: PushFloat term
 29: Parameter 60 double term
 30: Call 54 fabs 0
 31: PostCall 54
-32: GetReturnValue £temporary375
-33: PushFloat 0.000000001
-34: SignedGreaterThanEqual 8 £temporary375 0.000000001
+32: GetReturnValue £temporary255
+33: PushFloat floating8$0.000000001#
+34: GreaterThanEqual 8 £temporary255 floating8$0.000000001#
 35: PushFloat sum
 36: SetReturnValue
 37: Return sum

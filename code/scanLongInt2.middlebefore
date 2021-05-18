@@ -1,0 +1,123 @@
+0: Assign longValue 0
+1: Assign minus 0
+2: Assign found 0
+3: CallHeader 16 scanChar
+4: Call 16 scanChar 0
+5: PostCall 16
+6: GetReturnValue £temporary1243
+7: Assign input £temporary1243
+8: CallHeader 17 isspace
+9: IntegralToIntegral £temporary1244 input
+10: Parameter 17 £temporary1244 6
+11: Call 17 isspace 0
+12: PostCall 17
+13: GetReturnValue £temporary1245
+14: NotEqual CallHeader 17 scanChar £temporary1245 0
+15: Goto Equal CallHeader 17 scanChar input 43
+16: CheckTrackMapFloatStack
+17: CallHeader 17 scanChar
+18: Call 17 scanChar 0
+19: PostCall 17
+20: GetReturnValue £temporary1246
+21: Assign input £temporary1246
+22: Goto CallHeader 17 isspace
+23: Equal CallHeader 17 scanChar input 43
+24: Goto Equal Assign minus 1 input 45
+25: CheckTrackMapFloatStack
+26: CallHeader 17 scanChar
+27: Call 17 scanChar 0
+28: PostCall 17
+29: GetReturnValue £temporary1249
+30: Assign input £temporary1249
+31: Goto Equal Equal CallHeader 17 scanChar input 48 base 0
+32: Equal Assign minus 1 input 45
+33: Goto Equal Equal CallHeader 17 scanChar input 48 base 0
+34: CheckTrackMapFloatStack
+35: Assign minus 1
+36: CallHeader 17 scanChar
+37: Call 17 scanChar 0
+38: PostCall 17
+39: GetReturnValue £temporary1251
+40: Assign input £temporary1251
+41: Goto Equal Equal CallHeader 17 scanChar input 48 base 0
+42: Goto Equal Equal CallHeader 17 scanChar input 48 base 0
+43: Equal Equal CallHeader 17 scanChar input 48 base 0
+44: Goto CallHeader 17 isDigitInBase
+45: CheckTrackMapFloatStack
+46: Equal CallHeader 17 scanChar input 48
+47: Goto Assign base 10
+48: CheckTrackMapFloatStack
+49: CallHeader 17 scanChar
+50: Call 17 scanChar 0
+51: PostCall 17
+52: GetReturnValue £temporary1254
+53: Assign input £temporary1254
+54: CallHeader 17 tolower
+55: IntegralToIntegral £temporary1255 input
+56: Parameter 17 £temporary1255 6
+57: Call 17 tolower 0
+58: PostCall 17
+59: GetReturnValue £temporary1256
+60: Equal Assign base 16 £temporary1256 120
+61: Goto Assign base 8
+62: CheckTrackMapFloatStack
+63: Assign base 16
+64: CallHeader 17 scanChar
+65: Call 17 scanChar 0
+66: PostCall 17
+67: GetReturnValue £temporary1258
+68: Assign input £temporary1258
+69: Goto CallHeader 17 isDigitInBase
+70: Assign base 8
+71: Goto CallHeader 17 isDigitInBase
+72: Goto CallHeader 17 isDigitInBase
+73: Assign base 10
+74: Goto CallHeader 17 isDigitInBase
+75: Goto CallHeader 17 isDigitInBase
+76: CallHeader 17 isDigitInBase
+77: Parameter 17 input 6
+78: Parameter 17 base 7
+79: Call 17 isDigitInBase 0
+80: PostCall 17
+81: GetReturnValue £temporary1259
+82: NotEqual IntegralToIntegral £temporary1260 base £temporary1259 0
+83: Goto NotEqual UnarySubtract £temporary1267 longValue minus 0
+84: CheckTrackMapFloatStack
+85: IntegralToIntegral £temporary1260 base
+86: SignedMultiply £temporary1261 longValue £temporary1260
+87: Assign longValue £temporary1261
+88: CallHeader 17 digitToValue
+89: Parameter 17 input 6
+90: Call 17 digitToValue 0
+91: PostCall 17
+92: GetReturnValue £temporary1262
+93: IntegralToIntegral £temporary1263 £temporary1262
+94: BinaryAdd £temporary1264 longValue £temporary1263
+95: Assign longValue £temporary1264
+96: CallHeader 17 scanChar
+97: Call 17 scanChar 0
+98: PostCall 17
+99: GetReturnValue £temporary1265
+100: Assign input £temporary1265
+101: Assign found 1
+102: Goto CallHeader 17 isDigitInBase
+103: NotEqual UnarySubtract £temporary1267 longValue minus 0
+104: Goto NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+105: CheckTrackMapFloatStack
+106: UnarySubtract £temporary1267 longValue
+107: Assign longValue £temporary1267
+108: Goto NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+109: NotEqual BinaryAdd g_inCount g_inCount 1 found 0
+110: Goto CallHeader 17 unscanChar
+111: CheckTrackMapFloatStack
+112: BinaryAdd g_inCount g_inCount 1
+113: Goto CallHeader 17 unscanChar
+114: CallHeader 17 unscanChar
+115: Parameter 17 input 6
+116: Call 17 unscanChar 0
+117: PostCall 17
+118: SetReturnValue longValue
+119: Return longValue
+120: Empty
+121: Return 0
+122: FunctionEnd scanLongInt

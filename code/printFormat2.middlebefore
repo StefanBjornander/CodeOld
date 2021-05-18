@@ -1,345 +1,353 @@
-0: width = 0
-1: precision = 0
-2: percent = 0
-3: plus = 0
-4: minus = 0
-5: space = 0
-6: zero = 0
-7: grid = 0
-8: widthStar = 0
-9: period = 0
-10: precisionStar = 0
-11: shortInt = 0
-12: longInt = 0
-13: longDouble = 0
-14: g_outChars = 0
-15: index = 0
-16: empty
-17: £temporary2233 = format + index
-18: £temporary2232 -> £temporary2233 = *£temporary2233
-19: if £temporary2232 -> £temporary2233 != 0 goto <MiddleCode>
-20: goto <MiddleCode>
-21: check track map float stack
-22: empty
-23: £temporary2237 = format + index
-24: £temporary2236 -> £temporary2237 = *£temporary2237
-25: c = £temporary2236 -> £temporary2237
-26: if percent != 0 goto <MiddleCode>
-27: goto <MiddleCode>
-28: check track map float stack
-29: case c == 43 goto plus = 1
-30: case c == 45 goto minus = 1
-31: case c == 32 goto space = 1
-32: case c == 48 goto zero = 1
-33: case c == 35 goto grid = 1
-34: case c == 46 goto period = 1
-35: case c == 42 goto if period != 0 goto <MiddleCode>
-36: case c == 104 goto shortInt = 1
-37: case c == 108 goto longInt = 1
-38: case c == 76 goto longDouble = 1
-39: case c == 37 goto if minus != 0 goto <MiddleCode>
-40: case c == 110 goto if minus != 0 goto <MiddleCode>
-41: case c == 112 goto if minus != 0 goto <MiddleCode>
-42: case c == 71 goto if minus != 0 goto <MiddleCode>
-43: case c == 103 goto if minus != 0 goto <MiddleCode>
-44: case c == 69 goto if minus != 0 goto <MiddleCode>
-45: case c == 101 goto if minus != 0 goto <MiddleCode>
-46: case c == 102 goto if minus != 0 goto <MiddleCode>
-47: case c == 115 goto if minus != 0 goto <MiddleCode>
-48: case c == 99 goto if minus != 0 goto <MiddleCode>
-49: case c == 88 goto if minus != 0 goto <MiddleCode>
-50: case c == 120 goto if minus != 0 goto <MiddleCode>
-51: case c == 111 goto if minus != 0 goto <MiddleCode>
-52: case c == 98 goto if minus != 0 goto <MiddleCode>
-53: case c == 117 goto if minus != 0 goto <MiddleCode>
-54: case c == 100 goto if minus != 0 goto <MiddleCode>
-55: case c == 105 goto if minus != 0 goto <MiddleCode>
-56: case end c
-57: goto <MiddleCode>
-58: plus = 1
-59: goto <MiddleCode>
-60: minus = 1
-61: goto <MiddleCode>
-62: space = 1
-63: goto <MiddleCode>
-64: zero = 1
-65: goto <MiddleCode>
-66: grid = 1
-67: goto <MiddleCode>
-68: period = 1
-69: goto <MiddleCode>
-70: if period != 0 goto <MiddleCode>
-71: goto <MiddleCode>
-72: check track map float stack
-73: width = -1
-74: goto <MiddleCode>
-75: precision = -1
-76: goto <MiddleCode>
-77: goto <MiddleCode>
-78: shortInt = 1
-79: goto <MiddleCode>
-80: longInt = 1
-81: goto <MiddleCode>
-82: longDouble = 1
-83: goto <MiddleCode>
-84: if minus != 0 goto <MiddleCode>
-85: goto <MiddleCode>
-86: check track map float stack
-87: startChars = g_outChars
-88: call header
-89: £temporary2241 = format + index
-90: £temporary2240 -> £temporary2241 = *£temporary2241
-91: £temporary2242 = &£temporary2240 -> £temporary2241
-92: parameter £temporary2242, offset 6
-93: parameter arg_list, offset 8
-94: parameter plus, offset 10
-95: parameter space, offset 12
-96: parameter grid, offset 14
-97: £temporary2243 = &width
-98: parameter £temporary2243, offset 16
-99: parameter precision, offset 18
-100: parameter shortInt, offset 20
-101: parameter longInt, offset 22
-102: parameter longDouble, offset 24
-103: parameter 1, offset 26
-104: parameter 0, offset 28
-105: call function noellipse-noellipse printArgument
-106: post call
-107: £temporary2244 = return_value
-108: arg_list = £temporary2244
-109: £temporary2245 = g_outChars - startChars
-110: field = £temporary2245
-111: £temporary2246 = field
-112: field = field + 1
-113: if £temporary2246 < width goto <MiddleCode>
-114: goto <MiddleCode>
-115: check track map float stack
-116: call header
-117: parameter 32, offset 6
-118: call function noellipse-noellipse printChar
-119: post call
-120: goto <MiddleCode>
-121: goto <MiddleCode>
-122: if zero != 0 goto <MiddleCode>
-123: goto <MiddleCode>
-124: check track map float stack
-125: startChars = g_outChars
-126: oldOutStatus = g_outStatus
-127: negative = 0
-128: g_outStatus = 2
-129: call header
-130: £temporary2250 = format + index
-131: £temporary2249 -> £temporary2250 = *£temporary2250
-132: £temporary2251 = &£temporary2249 -> £temporary2250
-133: parameter £temporary2251, offset 6
-134: parameter arg_list, offset 8
-135: parameter 0, offset 10
-136: parameter 0, offset 12
-137: parameter grid, offset 14
-138: £temporary2252 = &width
-139: parameter £temporary2252, offset 16
-140: parameter precision, offset 18
-141: parameter shortInt, offset 20
-142: parameter longInt, offset 22
-143: parameter longDouble, offset 24
-144: parameter 0, offset 26
-145: £temporary2253 = &negative
-146: parameter £temporary2253, offset 28
-147: call function noellipse-noellipse printArgument
-148: post call
-149: g_outStatus = oldOutStatus
-150: £temporary2255 = g_outChars - startChars
-151: field = £temporary2255
-152: g_outChars = startChars
-153: if negative != 0 goto <MiddleCode>
-154: goto <MiddleCode>
-155: check track map float stack
-156: call header
-157: parameter 45, offset 6
-158: call function noellipse-noellipse printChar
-159: post call
-160: field = field + 1
-161: goto <MiddleCode>
-162: if plus != 0 goto <MiddleCode>
-163: goto <MiddleCode>
-164: check track map float stack
-165: call header
-166: parameter 43, offset 6
-167: call function noellipse-noellipse printChar
-168: post call
-169: field = field + 1
-170: goto <MiddleCode>
-171: if space != 0 goto <MiddleCode>
-172: goto <MiddleCode>
-173: check track map float stack
-174: call header
-175: parameter 32, offset 6
-176: call function noellipse-noellipse printChar
-177: post call
-178: field = field + 1
-179: goto <MiddleCode>
-180: goto <MiddleCode>
-181: goto <MiddleCode>
-182: £temporary2265 = field
-183: field = field + 1
-184: if £temporary2265 < width goto <MiddleCode>
-185: goto <MiddleCode>
-186: check track map float stack
-187: call header
-188: parameter 48, offset 6
-189: call function noellipse-noellipse printChar
-190: post call
-191: goto <MiddleCode>
-192: call header
-193: £temporary2269 = format + index
-194: £temporary2268 -> £temporary2269 = *£temporary2269
-195: £temporary2270 = &£temporary2268 -> £temporary2269
-196: parameter £temporary2270, offset 6
-197: parameter arg_list, offset 8
-198: parameter 0, offset 10
-199: parameter 0, offset 12
-200: parameter grid, offset 14
-201: parameter 0, offset 16
-202: parameter precision, offset 18
-203: parameter shortInt, offset 20
-204: parameter longInt, offset 22
-205: parameter longDouble, offset 24
-206: parameter 0, offset 26
-207: parameter 0, offset 28
-208: call function noellipse-noellipse printArgument
-209: post call
-210: £temporary2271 = return_value
-211: arg_list = £temporary2271
-212: goto <MiddleCode>
-213: startChars = g_outChars
-214: oldOutStatus = g_outStatus
-215: g_outStatus = 2
-216: call header
-217: £temporary2273 = format + index
-218: £temporary2272 -> £temporary2273 = *£temporary2273
-219: £temporary2274 = &£temporary2272 -> £temporary2273
-220: parameter £temporary2274, offset 6
-221: parameter arg_list, offset 8
-222: parameter plus, offset 10
-223: parameter space, offset 12
-224: parameter grid, offset 14
-225: £temporary2275 = &width
-226: parameter £temporary2275, offset 16
-227: parameter precision, offset 18
-228: parameter shortInt, offset 20
-229: parameter longInt, offset 22
-230: parameter longDouble, offset 24
-231: parameter 1, offset 26
-232: parameter 0, offset 28
-233: call function noellipse-noellipse printArgument
-234: post call
-235: g_outStatus = oldOutStatus
-236: £temporary2277 = g_outChars - startChars
-237: field = £temporary2277
-238: g_outChars = startChars
-239: £temporary2278 = field
-240: field = field + 1
-241: if £temporary2278 < width goto <MiddleCode>
-242: goto <MiddleCode>
-243: check track map float stack
-244: call header
-245: parameter 32, offset 6
-246: call function noellipse-noellipse printChar
-247: post call
-248: goto <MiddleCode>
-249: call header
-250: £temporary2282 = format + index
-251: £temporary2281 -> £temporary2282 = *£temporary2282
-252: £temporary2283 = &£temporary2281 -> £temporary2282
-253: parameter £temporary2283, offset 6
-254: parameter arg_list, offset 8
-255: parameter plus, offset 10
-256: parameter space, offset 12
-257: parameter grid, offset 14
-258: parameter 0, offset 16
-259: parameter precision, offset 18
-260: parameter shortInt, offset 20
-261: parameter longInt, offset 22
-262: parameter longDouble, offset 24
-263: parameter 1, offset 26
-264: parameter 0, offset 28
-265: call function noellipse-noellipse printArgument
-266: post call
-267: £temporary2284 = return_value
-268: arg_list = £temporary2284
-269: goto <MiddleCode>
-270: goto <MiddleCode>
-271: percent = 0
-272: goto <MiddleCode>
-273: value = 0
-274: call header
-275: £temporary2287 = int_to_int c (Signed_Char -> Signed_Int)
-276: parameter £temporary2287, offset 6
-277: call function noellipse-noellipse isdigit
-278: post call
-279: £temporary2288 = return_value
-280: if £temporary2288 != 0 goto <MiddleCode>
-281: goto <MiddleCode>
-282: check track map float stack
-283: £temporary2289 = 10 * value
-284: £temporary2290 = c - 48
-285: £temporary2291 = int_to_int £temporary2290 (Signed_Char -> Signed_Int)
-286: £temporary2292 = £temporary2289 + £temporary2291
-287: value = £temporary2292
-288: index = index + 1
-289: £temporary2293 = index
-290: £temporary2295 = format + £temporary2293
-291: £temporary2294 -> £temporary2295 = *£temporary2295
-292: c = £temporary2294 -> £temporary2295
-293: goto <MiddleCode>
-294: index = index - 1
-295: if period != 0 goto <MiddleCode>
-296: goto <MiddleCode>
-297: check track map float stack
-298: width = value
-299: goto <MiddleCode>
-300: precision = value
-301: goto <MiddleCode>
-302: goto <MiddleCode>
-303: goto <MiddleCode>
-304: if c == 37 goto <MiddleCode>
-305: goto <MiddleCode>
-306: check track map float stack
-307: percent = 1
-308: plus = 0
-309: minus = 0
-310: space = 0
-311: zero = 0
-312: grid = 0
-313: widthStar = 0
-314: period = 0
-315: precisionStar = 0
-316: shortInt = 0
-317: longInt = 0
-318: longDouble = 0
-319: width = 0
-320: precision = 0
-321: goto <MiddleCode>
-322: call header
-323: parameter c, offset 6
-324: call function noellipse-noellipse printChar
-325: post call
-326: goto <MiddleCode>
-327: goto <MiddleCode>
-328: empty
-329: index = index + 1
-330: goto <MiddleCode>
-331: if g_outStatus == 1 goto <MiddleCode>
-332: goto <MiddleCode>
-333: check track map float stack
-334: £temporary2304 = int_to_int g_outDevice (Pointer -> Pointer)
-335: outString = £temporary2304
-336: £temporary2306 = outString + g_outChars
-337: £temporary2305 -> £temporary2306 = *£temporary2306
-338: £temporary2305 -> £temporary2306 = 0
-339: goto <MiddleCode>
-340: return_value = g_outChars
-341: return
-342: empty
-343: return
-344: function end printFormat
+0: Assign width 0
+1: Assign precision 0
+2: Assign percent 0
+3: Assign plus 0
+4: Assign minus 0
+5: Assign space 0
+6: Assign zero 0
+7: Assign grid 0
+8: Assign widthStar 0
+9: Assign period 0
+10: Assign precisionStar 0
+11: Assign shortInt 0
+12: Assign longInt 0
+13: Assign longDouble 0
+14: Assign g_outChars 0
+15: Assign index 0
+16: Empty
+17: BinaryAdd £temporary2053 format index
+18: Deref £temporary2052 -> £temporary2053 £temporary2053 0
+19: NotEqual Empty £temporary2052 -> £temporary2053 0
+20: Goto Equal IntegralToIntegral £temporary2127 g_outDevice g_outStatus 1
+21: CheckTrackMapFloatStack
+22: Empty
+23: BinaryAdd £temporary2057 format index
+24: Deref £temporary2056 -> £temporary2057 £temporary2057 0
+25: Assign c £temporary2056 -> £temporary2057
+26: NotEqual Case Assign plus 1 c 43 percent 0
+27: Goto Equal Assign percent 1 c 37
+28: CheckTrackMapFloatStack
+29: Case Assign plus 1 c 43
+30: Case Assign minus 1 c 45
+31: Case Assign space 1 c 32
+32: Case Assign zero 1 c 48
+33: Case Assign grid 1 c 35
+34: Case Assign period 1 c 46
+35: Case NotEqual Assign precision -1 period 0 c 42
+36: Case Assign shortInt 1 c 104
+37: Case Assign longInt 1 c 108
+38: Case Assign longDouble 1 c 76
+39: Case NotEqual Assign startChars g_outChars minus 0 c 37
+40: Case NotEqual Assign startChars g_outChars minus 0 c 110
+41: Case NotEqual Assign startChars g_outChars minus 0 c 112
+42: Case NotEqual Assign startChars g_outChars minus 0 c 71
+43: Case NotEqual Assign startChars g_outChars minus 0 c 103
+44: Case NotEqual Assign startChars g_outChars minus 0 c 69
+45: Case NotEqual Assign startChars g_outChars minus 0 c 101
+46: Case NotEqual Assign startChars g_outChars minus 0 c 102
+47: Case NotEqual Assign startChars g_outChars minus 0 c 115
+48: Case NotEqual Assign startChars g_outChars minus 0 c 99
+49: Case NotEqual Assign startChars g_outChars minus 0 c 88
+50: Case NotEqual Assign startChars g_outChars minus 0 c 120
+51: Case NotEqual Assign startChars g_outChars minus 0 c 111
+52: Case NotEqual Assign startChars g_outChars minus 0 c 98
+53: Case NotEqual Assign startChars g_outChars minus 0 c 117
+54: Case NotEqual Assign startChars g_outChars minus 0 c 100
+55: Case NotEqual Assign startChars g_outChars minus 0 c 105
+56: CaseEnd c
+57: Goto Assign value 0
+58: Assign plus 1
+59: Goto Empty
+60: Assign minus 1
+61: Goto Empty
+62: Assign space 1
+63: Goto Empty
+64: Assign zero 1
+65: Goto Empty
+66: Assign grid 1
+67: Goto Empty
+68: Assign period 1
+69: Goto Empty
+70: NotEqual Assign precision -1 period 0
+71: Goto Assign width -1
+72: CheckTrackMapFloatStack
+73: Assign width -1
+74: Goto Goto Empty
+75: Assign precision -1
+76: Goto Goto Empty
+77: Goto Empty
+78: Assign shortInt 1
+79: Goto Empty
+80: Assign longInt 1
+81: Goto Empty
+82: Assign longDouble 1
+83: Goto Empty
+84: NotEqual Assign startChars g_outChars minus 0
+85: Goto NotEqual Assign startChars g_outChars zero 0
+86: CheckTrackMapFloatStack
+87: Assign startChars g_outChars
+88: CallHeader 43 printArgument
+89: BinaryAdd £temporary2061 format index
+90: Deref £temporary2060 -> £temporary2061 £temporary2061 0
+91: address £temporary2062 £temporary2060 -> £temporary2061
+92: Parameter 43 £temporary2062 6
+93: Parameter 43 arg_list 8
+94: Parameter 43 plus 10
+95: Parameter 43 space 12
+96: Parameter 43 grid 14
+97: address £temporary2063 width
+98: Parameter 43 £temporary2063 16
+99: Parameter 43 precision 18
+100: Parameter 43 shortInt 20
+101: Parameter 43 longInt 22
+102: Parameter 43 longDouble 24
+103: Parameter 43 1 26
+104: Parameter 43 0 28
+105: Call 43 printArgument 0
+106: PostCall 43
+107: GetReturnValue £temporary2064
+108: Assign arg_list £temporary2064
+109: BinarySubtract £temporary2065 g_outChars startChars
+110: Assign field £temporary2065
+111: Assign £temporary2066 field
+112: BinaryAdd £temporary2067 field 1
+113: Assign field £temporary2067
+114: SignedLessThan CallHeader 45 printChar £temporary2066 width
+115: Goto Assign percent 0
+116: CheckTrackMapFloatStack
+117: CallHeader 45 printChar
+118: Parameter 45 32 6
+119: Call 45 printChar 0
+120: PostCall 45
+121: Goto Assign £temporary2066 field
+122: Goto Assign percent 0
+123: NotEqual Assign startChars g_outChars zero 0
+124: Goto Assign startChars g_outChars
+125: CheckTrackMapFloatStack
+126: Assign startChars g_outChars
+127: Assign oldOutStatus g_outStatus
+128: Assign negative 0
+129: Assign g_outStatus 2
+130: CallHeader 47 printArgument
+131: BinaryAdd £temporary2071 format index
+132: Deref £temporary2070 -> £temporary2071 £temporary2071 0
+133: address £temporary2072 £temporary2070 -> £temporary2071
+134: Parameter 47 £temporary2072 6
+135: Parameter 47 arg_list 8
+136: Parameter 47 0 10
+137: Parameter 47 0 12
+138: Parameter 47 grid 14
+139: address £temporary2073 width
+140: Parameter 47 £temporary2073 16
+141: Parameter 47 precision 18
+142: Parameter 47 shortInt 20
+143: Parameter 47 longInt 22
+144: Parameter 47 longDouble 24
+145: Parameter 47 0 26
+146: address £temporary2074 negative
+147: Parameter 47 £temporary2074 28
+148: Call 47 printArgument 0
+149: PostCall 47
+150: Assign g_outStatus oldOutStatus
+151: BinarySubtract £temporary2076 g_outChars startChars
+152: Assign field £temporary2076
+153: Assign g_outChars startChars
+154: NotEqual CallHeader 49 printChar negative 0
+155: Goto NotEqual CallHeader 49 printChar plus 0
+156: CheckTrackMapFloatStack
+157: CallHeader 49 printChar
+158: Parameter 49 45 6
+159: Call 49 printChar 0
+160: PostCall 49
+161: BinaryAdd £temporary2078 field 1
+162: Assign field £temporary2078
+163: Goto Assign £temporary2086 field
+164: NotEqual CallHeader 49 printChar plus 0
+165: Goto NotEqual CallHeader 49 printChar space 0
+166: CheckTrackMapFloatStack
+167: CallHeader 49 printChar
+168: Parameter 49 43 6
+169: Call 49 printChar 0
+170: PostCall 49
+171: BinaryAdd £temporary2080 field 1
+172: Assign field £temporary2080
+173: Goto Assign £temporary2086 field
+174: NotEqual CallHeader 49 printChar space 0
+175: Goto Assign £temporary2086 field
+176: CheckTrackMapFloatStack
+177: CallHeader 49 printChar
+178: Parameter 49 32 6
+179: Call 49 printChar 0
+180: PostCall 49
+181: BinaryAdd £temporary2082 field 1
+182: Assign field £temporary2082
+183: Goto Assign £temporary2086 field
+184: Goto Assign £temporary2086 field
+185: Goto Assign £temporary2086 field
+186: Assign £temporary2086 field
+187: BinaryAdd £temporary2087 field 1
+188: Assign field £temporary2087
+189: SignedLessThan CallHeader 49 printChar £temporary2086 width
+190: Goto CallHeader 49 printArgument
+191: CheckTrackMapFloatStack
+192: CallHeader 49 printChar
+193: Parameter 49 48 6
+194: Call 49 printChar 0
+195: PostCall 49
+196: Goto Assign £temporary2086 field
+197: CallHeader 49 printArgument
+198: BinaryAdd £temporary2091 format index
+199: Deref £temporary2090 -> £temporary2091 £temporary2091 0
+200: address £temporary2092 £temporary2090 -> £temporary2091
+201: Parameter 49 £temporary2092 6
+202: Parameter 49 arg_list 8
+203: Parameter 49 0 10
+204: Parameter 49 0 12
+205: Parameter 49 grid 14
+206: Parameter 49 0 16
+207: Parameter 49 precision 18
+208: Parameter 49 shortInt 20
+209: Parameter 49 longInt 22
+210: Parameter 49 longDouble 24
+211: Parameter 49 0 26
+212: Parameter 49 0 28
+213: Call 49 printArgument 0
+214: PostCall 49
+215: GetReturnValue £temporary2093
+216: Assign arg_list £temporary2093
+217: Goto Assign percent 0
+218: Assign startChars g_outChars
+219: Assign oldOutStatus g_outStatus
+220: Assign g_outStatus 2
+221: CallHeader 45 printArgument
+222: BinaryAdd £temporary2095 format index
+223: Deref £temporary2094 -> £temporary2095 £temporary2095 0
+224: address £temporary2096 £temporary2094 -> £temporary2095
+225: Parameter 45 £temporary2096 6
+226: Parameter 45 arg_list 8
+227: Parameter 45 plus 10
+228: Parameter 45 space 12
+229: Parameter 45 grid 14
+230: address £temporary2097 width
+231: Parameter 45 £temporary2097 16
+232: Parameter 45 precision 18
+233: Parameter 45 shortInt 20
+234: Parameter 45 longInt 22
+235: Parameter 45 longDouble 24
+236: Parameter 45 1 26
+237: Parameter 45 0 28
+238: Call 45 printArgument 0
+239: PostCall 45
+240: Assign g_outStatus oldOutStatus
+241: BinarySubtract £temporary2099 g_outChars startChars
+242: Assign field £temporary2099
+243: Assign g_outChars startChars
+244: Assign £temporary2100 field
+245: BinaryAdd £temporary2101 field 1
+246: Assign field £temporary2101
+247: SignedLessThan CallHeader 47 printChar £temporary2100 width
+248: Goto CallHeader 47 printArgument
+249: CheckTrackMapFloatStack
+250: CallHeader 47 printChar
+251: Parameter 47 32 6
+252: Call 47 printChar 0
+253: PostCall 47
+254: Goto Assign £temporary2100 field
+255: CallHeader 47 printArgument
+256: BinaryAdd £temporary2105 format index
+257: Deref £temporary2104 -> £temporary2105 £temporary2105 0
+258: address £temporary2106 £temporary2104 -> £temporary2105
+259: Parameter 47 £temporary2106 6
+260: Parameter 47 arg_list 8
+261: Parameter 47 plus 10
+262: Parameter 47 space 12
+263: Parameter 47 grid 14
+264: Parameter 47 0 16
+265: Parameter 47 precision 18
+266: Parameter 47 shortInt 20
+267: Parameter 47 longInt 22
+268: Parameter 47 longDouble 24
+269: Parameter 47 1 26
+270: Parameter 47 0 28
+271: Call 47 printArgument 0
+272: PostCall 47
+273: GetReturnValue £temporary2107
+274: Assign arg_list £temporary2107
+275: Goto Assign percent 0
+276: Goto Assign percent 0
+277: Assign percent 0
+278: Goto Empty
+279: Assign value 0
+280: CallHeader 43 isdigit
+281: IntegralToIntegral £temporary2110 c
+282: Parameter 43 £temporary2110 6
+283: Call 43 isdigit 0
+284: PostCall 43
+285: GetReturnValue £temporary2111
+286: NotEqual SignedMultiply £temporary2112 10 value £temporary2111 0
+287: Goto BinarySubtract £temporary2120 index 1
+288: CheckTrackMapFloatStack
+289: SignedMultiply £temporary2112 10 value
+290: BinarySubtract £temporary2113 c 48
+291: IntegralToIntegral £temporary2114 £temporary2113
+292: BinaryAdd £temporary2115 £temporary2112 £temporary2114
+293: Assign value £temporary2115
+294: BinaryAdd £temporary2116 index 1
+295: Assign index £temporary2116
+296: BinaryAdd £temporary2118 format index
+297: Deref £temporary2117 -> £temporary2118 £temporary2118 0
+298: Assign c £temporary2117 -> £temporary2118
+299: Goto CallHeader 43 isdigit
+300: BinarySubtract £temporary2120 index 1
+301: Assign index £temporary2120
+302: NotEqual Assign precision value period 0
+303: Goto Assign width value
+304: CheckTrackMapFloatStack
+305: Assign width value
+306: Goto Goto Empty
+307: Assign precision value
+308: Goto Goto Empty
+309: Goto Empty
+310: Goto Empty
+311: Equal Assign percent 1 c 37
+312: Goto CallHeader 41 printChar
+313: CheckTrackMapFloatStack
+314: Assign percent 1
+315: Assign plus 0
+316: Assign minus 0
+317: Assign space 0
+318: Assign zero 0
+319: Assign grid 0
+320: Assign widthStar 0
+321: Assign period 0
+322: Assign precisionStar 0
+323: Assign shortInt 0
+324: Assign longInt 0
+325: Assign longDouble 0
+326: Assign width 0
+327: Assign precision 0
+328: Goto Empty
+329: CallHeader 41 printChar
+330: Parameter 41 c 6
+331: Call 41 printChar 0
+332: PostCall 41
+333: Goto Empty
+334: Goto Empty
+335: Empty
+336: BinaryAdd £temporary2055 index 1
+337: Assign index £temporary2055
+338: Goto Empty
+339: Equal IntegralToIntegral £temporary2127 g_outDevice g_outStatus 1
+340: Goto SetReturnValue g_outChars
+341: CheckTrackMapFloatStack
+342: IntegralToIntegral £temporary2127 g_outDevice
+343: Assign outString £temporary2127
+344: BinaryAdd £temporary2129 outString g_outChars
+345: Deref £temporary2128 -> £temporary2129 £temporary2129 0
+346: Assign £temporary2128 -> £temporary2129 0
+347: Goto SetReturnValue g_outChars
+348: SetReturnValue g_outChars
+349: Return g_outChars
+350: Empty
+351: Return 0
+352: FunctionEnd printFormat

@@ -301,8 +301,8 @@ void * bsearch ( const void * key , const void * valueList ,
 int  listSize , int  valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
-int abs ( int value ) ;
 long labs ( long value ) ;
+int abs ( int value ) ;
 
 typedef struct {
 int quot , rem ;
@@ -370,14 +370,14 @@ printf ( "local time: %s %02i-%02i-%02i %02i:%02i:%02i, year day %i, week day %i
 t . tm_mon + 1 , t . tm_mday , t . tm_hour , t . tm_min , t . tm_sec , t . tm_yday , t . tm_wday , t . tm_isdst ) ;
 
 { char buffer1 [ 100 ] , buffer2 [ 100 ];
-char buffer [ 300 ];
+char buffer [ 400 ];
 int i ;
 
 strcpy ( buffer1 , asctime ( & s ) ) ;
 strcpy ( buffer2 , ctime ( & now1 ) ) ;
 printf ( "asctime <%s>, ctime <%s>\n" , buffer1 , buffer2 ) ;
 
-i = strftime ( buffer , 300 , "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y" , & t ) ;
+i = strftime ( buffer , 400 , "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y, summer/winter %Z" , & t ) ;
 printf ( "strftime %i %i <%s>\n" , i , strlen ( buffer ) , buffer ) ;
 }
 

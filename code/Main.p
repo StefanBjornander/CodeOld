@@ -56,8 +56,8 @@ void * bsearch ( const void * key , const void * valueList ,
 int  listSize , int  valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
-int abs ( int value ) ;
 long labs ( long value ) ;
+int abs ( int value ) ;
 
 typedef struct {
 int quot , rem ;
@@ -661,6 +661,15 @@ if ( count <= 10 ) {
 printf ( "%d " , count ++ ) ;
 mainX ( ) ;
 }
+}
+
+void random_access ( void ) ;
+void temp_file ( void ) ;
+
+int  generateName ( int index , char * text , int max ) ;
+
+void mainXXX ( void ) {
+temp_file ( ) ;
 }
 
 void main ( void ) {

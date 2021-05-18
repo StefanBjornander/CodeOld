@@ -1,81 +1,80 @@
 0: PushFloat x
-1: PushFloat 0
-2: SignedLessThanEqual 76 x 0
-3: Assign n 0
+1: PushFloat floating8$0#
+2: LessThanEqual 75 x floating8$0#
+3: Assign n integral2$0#
 4: PushFloat x
-5: PushFloat 1
-6: SignedLessThanEqual 16 x 1
+5: PushFloat floating8$1#
+6: LessThanEqual 16 x floating8$1#
 7: PushFloat x
-8: PushFloat 1
-9: SignedLessThanEqual 28 x 1
+8: PushFloat floating8$1#
+9: LessThanEqual 28 x floating8$1#
 10: PushFloat x
-11: PushFloat 2.71
-12: SignedDivide £temporary381 x 2.71
+11: PushFloat floating8$2.71#
+12: Divide £temporary263 x floating8$2.71#
 13: PopFloat x
-14: BinaryAdd n n 1
-15: Goto 7
+14: Add n n integral2$1#
+15: Jump 7
 16: PushFloat x
-17: PushFloat 0.3690036900369003690036900369
-18: SignedGreaterThanEqual 28 x 0.3690036900369003690036900369
+17: PushFloat floating8$0.368#
+18: GreaterThanEqual 28 x floating8$0.368#
 19: PushFloat x
-20: PushFloat 0.3690036900369003690036900369
-21: SignedGreaterThanEqual 28 x 0.3690036900369003690036900369
+20: PushFloat floating8$0.368#
+21: GreaterThanEqual 28 x floating8$0.368#
 22: PushFloat x
-23: PushFloat 2.71
-24: SignedMultiply £temporary385 x 2.71
+23: PushFloat floating8$2.71#
+24: Multiply £temporary267 x floating8$2.71#
 25: PopFloat x
-26: BinarySubtract n n 1
-27: Goto 19
-28: PushFloat 1
+26: Subtract n n integral2$1#
+27: Jump 19
+28: PushFloat floating8$1#
 29: PopFloat index
-30: PushFloat 0
+30: PushFloat floating8$0#
 31: PopFloat sum
-32: PushFloat 1
+32: PushFloat floating8$1#
 33: PopFloat sign
 34: PushFloat x
-35: PushFloat 1
-36: BinarySubtract £temporary387 x 1
+35: PushFloat floating8$1#
+36: Subtract £temporary269 x floating8$1#
 37: PopFloat x_minus_1
 38: PushFloat x_minus_1
 39: PopFloat power
 40: PushFloat sign
 41: PushFloat power
-42: SignedMultiply £temporary388 sign power
+42: Multiply £temporary270 sign power
 43: PushFloat index
-44: PushOne
-45: BinaryAdd index index 1
-46: TopFloat index
-47: PushOne
-48: BinarySubtract index index 1
-49: SignedDivide £temporary390 £temporary388 £temporary389
-50: PopFloat term
-51: PushFloat sum
-52: PushFloat term
-53: BinaryAdd £temporary391 sum term
-54: PopFloat sum
-55: PushFloat power
-56: PushFloat x_minus_1
-57: SignedMultiply £temporary392 power x_minus_1
-58: PopFloat power
-59: PushFloat sign
-60: PushFloat -1.0
-61: SignedMultiply £temporary393 sign -1.0
-62: PopFloat sign
-63: PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-64: PushFloat term
-65: Parameter 70 double term
-66: Call 64 fabs 0
-67: PostCall 64
-68: GetReturnValue £temporary394
-69: PushFloat 0.000000001
-70: SignedGreaterThanEqual 40 £temporary394 0.000000001
-71: PushFloat sum
-72: IntegralToFloating £temporary396 n
-73: BinaryAdd £temporary397 sum £temporary396
-74: SetReturnValue
-75: Return £temporary397
-76: Assign errno 6
-77: PushFloat 0
-78: SetReturnValue
-79: Return 0
-80: FunctionEnd log
+44: PushFloat index
+45: PushOne
+46: Add index index floating8$1#
+47: PopFloat index
+48: Divide £temporary274 £temporary270 £temporary273
+49: PopFloat term
+50: PushFloat sum
+51: PushFloat term
+52: Add £temporary275 sum term
+53: PopFloat sum
+54: PushFloat power
+55: PushFloat x_minus_1
+56: Multiply £temporary276 power x_minus_1
+57: PopFloat power
+58: PushFloat sign
+59: PushFloat floating8$minus1.0#
+60: Multiply £temporary277 sign floating8$minus1.0#
+61: PopFloat sign
+62: PreCall 64 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+63: PushFloat term
+64: Parameter 70 double term
+65: Call 64 fabs 0
+66: PostCall 64
+67: GetReturnValue £temporary278
+68: PushFloat floating8$0.000000001#
+69: GreaterThanEqual 40 £temporary278 floating8$0.000000001#
+70: PushFloat sum
+71: IntegralToFloating £temporary280 n
+72: Add £temporary281 sum £temporary280
+73: SetReturnValue
+74: Return £temporary281
+75: Assign errno EDOM
+76: PushFloat floating8$0#
+77: SetReturnValue
+78: Return floating8$0#
+79: FunctionEnd log

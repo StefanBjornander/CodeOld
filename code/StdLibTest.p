@@ -301,8 +301,8 @@ void * bsearch ( const void * key , const void * valueList ,
 int  listSize , int  valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
-int abs ( int value ) ;
 long labs ( long value ) ;
+int abs ( int value ) ;
 
 typedef struct {
 int quot , rem ;
@@ -428,6 +428,14 @@ printf ( "%i " , * ( list + index ) ) ;
 { int index ;
 printf ( "\nC List 3: " ) ;
 qsort ( list , size , sizeof list [ 0 ] , reverse_compare ) ;
+for ( index = 0 ; index < size ; ++ index ) {
+printf ( "%i " , * ( list + index ) ) ;
+}
+}
+
+{ int index ;
+printf ( "\nB List 4: " ) ;
+qsort ( list , size , sizeof list [ 0 ] , compare ) ;
 for ( index = 0 ; index < size ; ++ index ) {
 printf ( "%i " , * ( list + index ) ) ;
 }

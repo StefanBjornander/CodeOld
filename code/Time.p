@@ -301,8 +301,8 @@ void * bsearch ( const void * key , const void * valueList ,
 int  listSize , int  valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
-int abs ( int value ) ;
 long labs ( long value ) ;
+int abs ( int value ) ;
 
 typedef struct {
 int quot , rem ;
@@ -474,6 +474,8 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\assert.h,5$
  
 $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Time.c,5$
         
+
+int getWeekNumber ( const struct tm * ) ;
 
 long  clock ( void ) {
 return -1 ;
@@ -676,6 +678,29 @@ char * ctime ( const unsigned long  * time ) {
 return asctime ( localtime ( time ) ) ;
 }
 
+int getWeekNumber ( const struct tm * tp ) {
+const long leapDays = ( tp -> tm_year - 69 ) / 4 ;
+const int totalDays = 365 * ( tp -> tm_year - 70 ) + leapDays ;
+int weekDayJanuaryFirst ;
+
+if ( totalDays < 3 ) {
+weekDayJanuaryFirst = totalDays + 4 ;
+}
+else {
+weekDayJanuaryFirst = ( totalDays - 3 ) % 7 ;
+}
+
+{ int firstWeekSize = 7 - weekDayJanuaryFirst ;
+
+if ( tp -> tm_yday < firstWeekSize ) {
+return 0 ;
+}
+else {
+return ( ( tp -> tm_yday - firstWeekSize ) / 7 ) + 1 ;
+}
+}
+}
+
 int  strftime ( char * result , int  maxSize ,
 const char * format , const struct tm * tp ) {
 struct lconv * localeConvPtr = localeconv ( ) ;
@@ -711,26 +736,17 @@ longMonthList = g_longMonthList ;
 
 strcpy ( result , "" ) ;
 { int index ;
-const int weekNumberStartSunday = 0 , weekNumberStartMonday = 0 ;
+const int weekNumberStartSunday = getWeekNumber ( tp ) ;
+int weekNumberStartMonday = weekNumberStartSunday ;
 
-
-
-
-
-
-
-
-
-
-
+if ( tp -> tm_mday == 0 ) {
+-- weekNumberStartMonday ;
+}
 
 for ( index = 0 ; format [ index ] != '\0' ; ++ index ) {
 char add [ 20 ];
 
-
 if ( format [ index ] == '%' ) {
-
-
 switch ( format [++ index ] ) {
 case 'a' :
 strcpy ( add , shortDayList [ tp -> tm_wday ] ) ;
@@ -779,7 +795,7 @@ sprintf ( add , "%02i" , tp -> tm_min ) ;
 break ;
 
 case 'p' :
-sprintf ( add , "%s" , ( tp -> tm_hour < 12 ) ? "AM" : "PM" ) ;
+sprintf ( add , "%s" , index ? "AM" : "PM" ) ;
 break ;
 
 case 'S' :
@@ -833,18 +849,14 @@ add [ 0 ] = format [ index ];
 add [ 1 ] = '\0' ;
 }
 
-{ int x = strlen ( result ) , y = strlen ( add ) ;
-if ( ( x + y ) < maxSize ) {
+if ( ( strlen ( result ) + strlen ( add ) ) < maxSize ) {
 strcat ( result , add ) ;
-
 }
 else {
 break ;
 }
 }
 }
-}
 
 return strlen ( result ) ;
-}
-
+} 

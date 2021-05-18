@@ -55,7 +55,7 @@ int filecreate(const char* name) {
 
 BOOL fileexistsX(const char* name) {
   FILE* filePtr = fopen(name, "r");
-  printf("\nfileexists %s %p\n", name, filePtr);
+  //printf("\nfileexists %s %p\n", name, filePtr);
 
   if (filePtr != NULL) {
     fclose(filePtr);
@@ -84,6 +84,8 @@ BOOL fileexists(const char* name) {
 }
 
 static int fileopen(const char* name, unsigned short mode) {
+  printf("fileopen1\n");
+
 #ifdef __WINDOWS__
   register_ah = 0x3Ds;
   register_al = mode;
@@ -98,25 +100,31 @@ static int fileopen(const char* name, unsigned short mode) {
     return register_ax;
   }
 #endif
+  printf("fileopen2 <%s> %i\n", name, mode);
 
 #ifdef __LINUX__
   register_rax = 2;
   register_rdi = (unsigned long) name;
   register_rsi = (unsigned long) mode;
   syscall();
+  printf("fileopen3\n");
   return register_eax;
 #endif
 }
 
 FILE* fopen(const char* name, const char* mode) {
   int index;
+  printf("fopen1\n");
   for (index = 0; index < FOPEN_MAX; ++index) {
+    printf("index %i\n", index);
 
     if (!g_fileArray[index].open) {
+      printf("fopen2\n");
       return freopen(name, mode, &g_fileArray[index]);
     }
   }
 
+  //printf("null\n");
   return NULL;
 }
 
@@ -126,40 +134,31 @@ FILE* freopen(const char* name, const char* mode, FILE* stream) {
   if (strcmp(mode, "r") == 0) {
     handle = fileopen(name, (unsigned short) READ);
   }
-  else if (strcmp(mode, "w") == 0) {
-    handle = filecreate(name);
-    //printf("create handle %u\n", handle);
-  }
-  else if (strcmp(mode, "a") == 0) {
-    handle = fileopen(name, (unsigned short) WRITE);
+  else if ((strcmp(mode, "w") == 0) || (strcmp(mode, "a") == 0)) {
+    if (fileexists(name)) {
+      fileremove(name);
+    }
 
-    if (handle != -1) {
-      fseek(stream, 0L, (int) SEEK_END);
-    }
-    else {
-      handle = filecreate(name);
-    }
+    flose(filecreate(name));
+    handle = fileopen(name, (unsigned short) WRITE);
   }
   else if (strcmp(mode, "r+") == 0) {
     handle = fileopen(name, (unsigned short) READ_WRITE);
   }
   else if (strcmp(mode, "w+") == 0) {
     if (fileexists(name)) {
-      handle = fileopen(name, (unsigned short) READ_WRITE);
+      fileremove(name);
     }
-    else {
-      handle = filecreate(name);
-    }
+
+    flose(filecreate(name));
+    handle = fileopen(name, (unsigned short) READ_WRITE);
   }
   else if (strcmp(mode, "a+") == 0) {
-    handle = fileopen(name, (unsigned short) READ_WRITE);
+    if (!fileexists(name)) {
+      flose(filecreate(name));
+    }
 
-    if (handle != -1) {
-      fseek(stream, 0L, (int) SEEK_END);
-    }
-    else {
-      handle = filecreate(name);
-    }
+    handle = fileopen(name, (unsigned short) READ_WRITE);
   }
 
   if (handle != -1) {
@@ -168,6 +167,11 @@ FILE* freopen(const char* name, const char* mode, FILE* stream) {
     stream->size = 0l; // filesize(handle);
     strcpy(stream->name, name);
     stream->temporary = FALSE;
+
+    if ((strcmp(mode, "a") == 0) || (strcmp(mode, "a+") == 0)) {
+      fseek(stream, 0, (int) SEEK_END);
+    }
+
     return stream;
   }
   else {

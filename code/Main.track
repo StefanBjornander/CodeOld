@@ -50,13 +50,36 @@ mainX$10:	; PostCall 6
 39:	
 
 mainX$11:	; Return 0
-40:		mov t1, [bp]
+40:		mov t2, [bp]
 41:		mov di, [bp + 4]
 42:		mov bp, [bp + 2]
-43:		jmp t1
+43:		jmp t2
 45:	
 
 mainX$12:	; FunctionEnd mainX
+1:	
+
+mainXXX:	; CallHeader 6 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+3:	
+
+mainXXX$1:	; Call 6 temp_file 0
+4:		mov word [bp + 6], mainXXX$2
+5:		mov [bp + 8], bp
+6:		add bp, 6
+7:		jmp temp_file
+9:	
+
+mainXXX$2:	; PostCall 6
+11:	
+
+mainXXX$3:	; Return 0
+12:		mov t3, [bp]
+13:		mov di, [bp + 4]
+14:		mov bp, [bp + 2]
+15:		jmp t3
+17:	
+
+mainXXX$4:	; FunctionEnd mainXXX
 0:		; Initialize Stack Pointer
 1:		mov bp, $StackTop
 2:		; Initialize Heap Pointer
@@ -292,10 +315,10 @@ main$50:	; PostCall 6
 main$51:	; Return 0
 181:		cmp word [bp], 0
 182:		je return_label$0
-183:		mov t2, [bp]
+183:		mov t4, [bp]
 184:		mov di, [bp + 4]
 185:		mov bp, [bp + 2]
-186:		jmp t2
+186:		jmp t4
 187:	
 
 return_label$0:

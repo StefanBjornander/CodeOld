@@ -1,27 +1,27 @@
 1:	
 
 string_test:	; Assign s string_Hello2C20World21#
-2:		mov word [bp + 8], @9394$string_Hello2C20World21#
+2:		mov word [bp + 8], @9688$string_Hello2C20World21#
 4:	
 
 string_test$1:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 6:	
 
 string_test$2:	; Parameter 212 string_strlen282225s2229203D2025i0A# 6
-7:		mov word [bp + 218], @9403$string_strlen282225s2229203D2025i0A#
+7:		mov word [bp + 218], @9697$string_strlen282225s2229203D2025i0A#
 9:	
 
 string_test$3:	; Parameter 212 s 8
-10:		mov a2598, [bp + 8]
-11:		mov [bp + 220], a2598
+10:		mov a2492, [bp + 8]
+11:		mov [bp + 220], a2492
 13:	
 
 string_test$4:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 15:	
 
 string_test$5:	; Parameter 212 s 16
-16:		mov a2599, [bp + 8]
-17:		mov [bp + 228], a2599
+16:		mov a2493, [bp + 8]
+17:		mov [bp + 228], a2493
 19:	
 
 string_test$6:	; Call 212 strlen 10
@@ -34,1145 +34,1203 @@ string_test$6:	; Call 212 strlen 10
 string_test$7:	; PostCall 212
 27:	
 
-string_test$8:	; GetReturnValue £temporary4270
+string_test$8:	; GetReturnValue £temporary4304
+29:	
+
+string_test$9:	; Parameter 212 £temporary4304 10
+30:		mov [bp + 222], type2494
 32:	
 
-string_test$9:	; Parameter 212 £temporary4270 10
-33:		mov [bp + 222], t2601
-35:	
-
 string_test$10:	; Call 212 printf 0
-36:		mov word [bp + 212], string_test$11
-37:		mov [bp + 214], bp
-38:		add bp, 212
-39:		mov di, bp
-40:		add di, 4
-41:		jmp printf
-43:	
+33:		mov word [bp + 212], string_test$11
+34:		mov [bp + 214], bp
+35:		add bp, 212
+36:		mov di, bp
+37:		add di, 4
+38:		jmp printf
+40:	
 
 string_test$11:	; PostCall 212
-45:	
+42:	
 
 string_test$12:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-47:	
+44:	
 
 string_test$13:	; Parameter 212 t 6
-48:		mov [bp + 218], bp
-49:		add word [bp + 218], 10
-51:	
+45:		mov [bp + 218], bp
+46:		add word [bp + 218], 10
+48:	
 
 string_test$14:	; Parameter 212 s 8
-52:		mov a2602, [bp + 8]
-53:		mov [bp + 220], a2602
-55:	
+49:		mov a2496, [bp + 8]
+50:		mov [bp + 220], a2496
+52:	
 
 string_test$15:	; Call 212 strcpy 0
-56:		mov word [bp + 212], string_test$16
-57:		mov [bp + 214], bp
-58:		add bp, 212
-59:		jmp strcpy
-61:	
+53:		mov word [bp + 212], string_test$16
+54:		mov [bp + 214], bp
+55:		add bp, 212
+56:		jmp strcpy
+58:	
 
 string_test$16:	; PostCall 212
-63:	
+60:	
 
 string_test$17:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-65:	
+62:	
 
 string_test$18:	; Parameter 212 u 6
-66:		mov [bp + 218], bp
-67:		add word [bp + 218], 110
-69:	
+63:		mov [bp + 218], bp
+64:		add word [bp + 218], 110
+66:	
 
 string_test$19:	; Parameter 212 s 8
-70:		mov a2603, [bp + 8]
-71:		mov [bp + 220], a2603
-73:	
+67:		mov a2498, [bp + 8]
+68:		mov [bp + 220], a2498
+70:	
 
 string_test$20:	; Parameter 212 5 10
-74:		mov word [bp + 222], 5
-76:	
+71:		mov word [bp + 222], 5
+73:	
 
 string_test$21:	; Call 212 strncpy 0
-77:		mov word [bp + 212], string_test$22
-78:		mov [bp + 214], bp
-79:		add bp, 212
-80:		jmp strncpy
-82:	
+74:		mov word [bp + 212], string_test$22
+75:		mov [bp + 214], bp
+76:		add bp, 212
+77:		jmp strncpy
+79:	
 
 string_test$22:	; PostCall 212
-84:	
+81:	
 
-string_test$23:	; Deref £temporary4274 -> u u 5
-85:		mov a2604, bp
-86:		add a2604, 110
+string_test$23:	; Deref £temporary4308 -> u u 5
+82:		mov a2500, bp
+83:		add a2500, 110
+85:	
+
+string_test$24:	; Assign £temporary4308 -> u 0
+86:		mov byte [a2500 + 5], 0
 88:	
 
-string_test$24:	; Assign £temporary4274 -> u 0
-89:		mov byte [a2604 + 5], 0
-91:	
-
 string_test$25:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-93:	
+90:	
 
 string_test$26:	; Parameter 212 string_t203D202225s222C20u203D202225s220A# 6
-94:		mov word [bp + 218], @9414$string_t203D202225s222C20u203D202225s220A#
-96:	
+91:		mov word [bp + 218], @9709$string_t203D202225s222C20u203D202225s220A#
+93:	
 
 string_test$27:	; Parameter 212 t 8
-97:		mov [bp + 220], bp
-98:		add word [bp + 220], 10
-100:	
+94:		mov [bp + 220], bp
+95:		add word [bp + 220], 10
+97:	
 
 string_test$28:	; Parameter 212 u 10
-101:		mov [bp + 222], bp
-102:		add word [bp + 222], 110
-104:	
+98:		mov [bp + 222], bp
+99:		add word [bp + 222], 110
+101:	
 
 string_test$29:	; Call 212 printf 0
-105:		mov word [bp + 212], string_test$30
-106:		mov [bp + 214], bp
-107:		add bp, 212
-108:		mov di, bp
-109:		add di, 4
-110:		jmp printf
-112:	
+102:		mov word [bp + 212], string_test$30
+103:		mov [bp + 214], bp
+104:		add bp, 212
+105:		mov di, bp
+106:		add di, 4
+107:		jmp printf
+109:	
 
 string_test$30:	; PostCall 212
-114:	
+111:	
 
 string_test$31:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-116:	
+113:	
 
 string_test$32:	; Parameter 212 t 6
-117:		mov [bp + 218], bp
-118:		add word [bp + 218], 10
-120:	
+114:		mov [bp + 218], bp
+115:		add word [bp + 218], 10
+117:	
 
 string_test$33:	; Parameter 212 string_abc# 8
-121:		mov word [bp + 220], @9416$string_abc#
-123:	
+118:		mov word [bp + 220], @9711$string_abc#
+120:	
 
 string_test$34:	; Call 212 strcat 0
-124:		mov word [bp + 212], string_test$35
-125:		mov [bp + 214], bp
-126:		add bp, 212
-127:		jmp strcat
-129:	
+121:		mov word [bp + 212], string_test$35
+122:		mov [bp + 214], bp
+123:		add bp, 212
+124:		jmp strcat
+126:	
 
 string_test$35:	; PostCall 212
-131:	
+128:	
 
 string_test$36:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-133:	
+130:	
 
 string_test$37:	; Parameter 212 u 6
-134:		mov [bp + 218], bp
-135:		add word [bp + 218], 110
-137:	
+131:		mov [bp + 218], bp
+132:		add word [bp + 218], 110
+134:	
 
 string_test$38:	; Call 212 strlen 0
-138:		mov word [bp + 212], string_test$39
-139:		mov [bp + 214], bp
-140:		add bp, 212
-141:		jmp strlen
-143:	
+135:		mov word [bp + 212], string_test$39
+136:		mov [bp + 214], bp
+137:		add bp, 212
+138:		jmp strlen
+140:	
 
 string_test$39:	; PostCall 212
-145:	
+142:	
 
-string_test$40:	; GetReturnValue £temporary4277
-150:	
+string_test$40:	; GetReturnValue £temporary4311
+144:	
 
-string_test$41:	; Assign i £temporary4277
-151:		mov [bp + 6], t2606
-153:	
+string_test$41:	; Assign i £temporary4311
+145:		mov [bp + 6], type2503
+147:	
 
 string_test$42:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-155:	
+149:	
 
 string_test$43:	; Parameter 212 u 6
-156:		mov [bp + 218], bp
-157:		add word [bp + 218], 110
-159:	
+150:		mov [bp + 218], bp
+151:		add word [bp + 218], 110
+153:	
 
 string_test$44:	; Parameter 212 string_abc# 8
-160:		mov word [bp + 220], @9419$string_abc#
-162:	
+154:		mov word [bp + 220], @9714$string_abc#
+156:	
 
 string_test$45:	; Parameter 212 2 10
-163:		mov word [bp + 222], 2
-165:	
+157:		mov word [bp + 222], 2
+159:	
 
 string_test$46:	; Call 212 strncat 0
-166:		mov word [bp + 212], string_test$47
-167:		mov [bp + 214], bp
-168:		add bp, 212
-169:		jmp strncat
-171:	
+160:		mov word [bp + 212], string_test$47
+161:		mov [bp + 214], bp
+162:		add bp, 212
+163:		jmp strncat
+165:	
 
 string_test$47:	; PostCall 212
-173:	
+167:	
 
-string_test$48:	; BinaryAdd £temporary4279 i 2
-174:		mov a2607, [bp + 6]
-175:		add a2607, 2
-177:	
+string_test$48:	; BinaryAdd £temporary4313 i 2
+168:		mov a2505, [bp + 6]
+169:		add a2505, 2
+171:	
 
-string_test$49:	; BinaryAdd £temporary4281 u £temporary4279
-178:		mov a2608, bp
-179:		add a2608, 110
-180:		add a2608, a2607
-182:	
+string_test$49:	; BinaryAdd £temporary4315 u £temporary4313
+172:		mov a2506, bp
+173:		add a2506, 110
+174:		add a2506, a2505
+176:	
 
-string_test$50:	; Deref £temporary4280 -> £temporary4281 £temporary4281 0
-184:	
+string_test$50:	; Deref £temporary4314 -> £temporary4315 £temporary4315 0
+178:	
 
-string_test$51:	; Assign £temporary4280 -> £temporary4281 0
-185:		mov byte [a2608], 0
-187:	
+string_test$51:	; Assign £temporary4314 -> £temporary4315 0
+179:		mov byte [a2506], 0
+181:	
 
 string_test$52:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-189:	
+183:	
 
 string_test$53:	; Parameter 212 string_t203D202225s222C20u203D202225s220A# 6
-190:		mov word [bp + 218], @9430$string_t203D202225s222C20u203D202225s220A#
-192:	
+184:		mov word [bp + 218], @9726$string_t203D202225s222C20u203D202225s220A#
+186:	
 
 string_test$54:	; Parameter 212 t 8
-193:		mov [bp + 220], bp
-194:		add word [bp + 220], 10
-196:	
+187:		mov [bp + 220], bp
+188:		add word [bp + 220], 10
+190:	
 
 string_test$55:	; Parameter 212 u 10
-197:		mov [bp + 222], bp
-198:		add word [bp + 222], 110
-200:	
+191:		mov [bp + 222], bp
+192:		add word [bp + 222], 110
+194:	
 
 string_test$56:	; Call 212 printf 0
-201:		mov word [bp + 212], string_test$57
-202:		mov [bp + 214], bp
-203:		add bp, 212
-204:		mov di, bp
-205:		add di, 4
-206:		jmp printf
-208:	
+195:		mov word [bp + 212], string_test$57
+196:		mov [bp + 214], bp
+197:		add bp, 212
+198:		mov di, bp
+199:		add di, 4
+200:		jmp printf
+202:	
 
 string_test$57:	; PostCall 212
-210:	
+204:	
 
 string_test$58:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-212:	
+206:	
 
 string_test$59:	; Parameter 212 string_strcmp28s2C20u29203D2025i0A# 6
-213:		mov word [bp + 218], @9432$string_strcmp28s2C20u29203D2025i0A#
-215:	
+207:		mov word [bp + 218], @9728$string_strcmp28s2C20u29203D2025i0A#
+209:	
 
 string_test$60:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-217:	
+211:	
 
 string_test$61:	; Parameter 212 s 14
-218:		mov a2609, [bp + 8]
-219:		mov [bp + 226], a2609
-221:	
+212:		mov a2508, [bp + 8]
+213:		mov [bp + 226], a2508
+215:	
 
 string_test$62:	; Parameter 212 u 16
-222:		mov [bp + 228], bp
-223:		add word [bp + 228], 110
-225:	
+216:		mov [bp + 228], bp
+217:		add word [bp + 228], 110
+219:	
 
 string_test$63:	; Call 212 strcmp 8
-226:		mov word [bp + 220], string_test$64
-227:		mov [bp + 222], bp
-228:		add bp, 220
-229:		jmp strcmp
-231:	
+220:		mov word [bp + 220], string_test$64
+221:		mov [bp + 222], bp
+222:		add bp, 220
+223:		jmp strcmp
+225:	
 
 string_test$64:	; PostCall 212
-233:	
+227:	
 
-string_test$65:	; GetReturnValue £temporary4283
-238:	
+string_test$65:	; GetReturnValue £temporary4317
+229:	
 
-string_test$66:	; Parameter 212 £temporary4283 8
-239:		mov [bp + 220], t2611
-241:	
+string_test$66:	; Parameter 212 £temporary4317 8
+230:		mov [bp + 220], type2509
+232:	
 
 string_test$67:	; Call 212 printf 0
-242:		mov word [bp + 212], string_test$68
-243:		mov [bp + 214], bp
-244:		add bp, 212
-245:		mov di, bp
-246:		add di, 2
-247:		jmp printf
-249:	
+233:		mov word [bp + 212], string_test$68
+234:		mov [bp + 214], bp
+235:		add bp, 212
+236:		mov di, bp
+237:		add di, 2
+238:		jmp printf
+240:	
 
 string_test$68:	; PostCall 212
-251:	
+242:	
 
 string_test$69:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-253:	
+244:	
 
 string_test$70:	; Parameter 212 string_strncmp28s2C20u2C20229203D2025i0A# 6
-254:		mov word [bp + 218], @9435$string_strncmp28s2C20u2C20229203D2025i0A#
-256:	
+245:		mov word [bp + 218], @9731$string_strncmp28s2C20u2C20229203D2025i0A#
+247:	
 
 string_test$71:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-258:	
+249:	
 
 string_test$72:	; Parameter 212 s 14
-259:		mov a2612, [bp + 8]
-260:		mov [bp + 226], a2612
-262:	
+250:		mov a2511, [bp + 8]
+251:		mov [bp + 226], a2511
+253:	
 
 string_test$73:	; Parameter 212 u 16
-263:		mov [bp + 228], bp
-264:		add word [bp + 228], 110
-266:	
+254:		mov [bp + 228], bp
+255:		add word [bp + 228], 110
+257:	
 
 string_test$74:	; Parameter 212 2 18
-267:		mov word [bp + 230], 2
-269:	
+258:		mov word [bp + 230], 2
+260:	
 
 string_test$75:	; Call 212 strncmp 8
-270:		mov word [bp + 220], string_test$76
-271:		mov [bp + 222], bp
-272:		add bp, 220
-273:		jmp strncmp
-275:	
+261:		mov word [bp + 220], string_test$76
+262:		mov [bp + 222], bp
+263:		add bp, 220
+264:		jmp strncmp
+266:	
 
 string_test$76:	; PostCall 212
-277:	
+268:	
 
-string_test$77:	; GetReturnValue £temporary4285
-282:	
+string_test$77:	; GetReturnValue £temporary4319
+270:	
 
-string_test$78:	; Parameter 212 £temporary4285 8
-283:		mov [bp + 220], t2614
-285:	
+string_test$78:	; Parameter 212 £temporary4319 8
+271:		mov [bp + 220], type2512
+273:	
 
 string_test$79:	; Call 212 printf 0
-286:		mov word [bp + 212], string_test$80
-287:		mov [bp + 214], bp
-288:		add bp, 212
-289:		mov di, bp
-290:		add di, 2
-291:		jmp printf
-293:	
+274:		mov word [bp + 212], string_test$80
+275:		mov [bp + 214], bp
+276:		add bp, 212
+277:		mov di, bp
+278:		add di, 2
+279:		jmp printf
+281:	
 
 string_test$80:	; PostCall 212
-295:	
+283:	
 
 string_test$81:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-297:	
+285:	
 
 string_test$82:	; Parameter 212 s 6
-298:		mov a2615, [bp + 8]
-299:		mov [bp + 218], a2615
-301:	
+286:		mov a2514, [bp + 8]
+287:		mov [bp + 218], a2514
+289:	
 
 string_test$83:	; Parameter 212 108 8
-302:		mov word [bp + 220], 108
-304:	
+290:		mov word [bp + 220], 108
+292:	
 
 string_test$84:	; Call 212 strchr 0
-305:		mov word [bp + 212], string_test$85
-306:		mov [bp + 214], bp
-307:		add bp, 212
-308:		jmp strchr
-310:	
+293:		mov word [bp + 212], string_test$85
+294:		mov [bp + 214], bp
+295:		add bp, 212
+296:		jmp strchr
+298:	
 
 string_test$85:	; PostCall 212
-312:	
+300:	
 
-string_test$86:	; GetReturnValue £temporary4287
-317:	
+string_test$86:	; GetReturnValue £temporary4321
+302:	
 
-string_test$87:	; Assign p £temporary4287
-318:		mov [bp + 210], t2617
-320:	
+string_test$87:	; Assign p £temporary4321
+303:		mov [bp + 210], type2515
+305:	
 
 string_test$88:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-322:	
+307:	
 
 string_test$89:	; Parameter 212 string_strchr28s2C2027l2729203D2025i0A# 6
-323:		mov word [bp + 218], @9443$string_strchr28s2C2027l2729203D2025i0A#
-325:	
+308:		mov word [bp + 218], @9741$string_strchr28s2C2027l2729203D2025i0A#
+310:	
 
 string_test$90:	; Equal 93 p 0
-326:		cmp word [bp + 210], 0
-327:		je string_test$93
-329:	
+311:		cmp word [bp + 210], 0
+312:		je string_test$93
+314:	
 
-string_test$91:	; BinarySubtract £temporary4293 p s
-330:		mov a2618, [bp + 210]
-331:		sub a2618, [bp + 8]
-333:	
+string_test$91:	; BinarySubtract £temporary4327 p s
+315:		mov a2516, [bp + 210]
+316:		sub a2516, [bp + 8]
+318:	
 
 string_test$92:	; Goto 94
-334:		jmp string_test$94
-336:	
+319:		jmp string_test$94
+321:	
 
-string_test$93:	; Assign £temporary4293 -1
-337:		mov t2619, -1
-339:	
+string_test$93:	; Assign £temporary4327 -1
+322:		mov t2517, -1
+324:	
 
-string_test$94:	; Parameter 212 £temporary4293 8
-340:		mov [bp + 220], t2619
-342:	
+string_test$94:	; Parameter 212 £temporary4327 8
+325:		mov [bp + 220], t2517
+327:	
 
 string_test$95:	; Call 212 printf 0
-343:		mov word [bp + 212], string_test$96
-344:		mov [bp + 214], bp
-345:		add bp, 212
-346:		mov di, bp
-347:		add di, 2
-348:		jmp printf
-350:	
+328:		mov word [bp + 212], string_test$96
+329:		mov [bp + 214], bp
+330:		add bp, 212
+331:		mov di, bp
+332:		add di, 2
+333:		jmp printf
+335:	
 
 string_test$96:	; PostCall 212
-352:	
+337:	
 
 string_test$97:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-354:	
+339:	
 
 string_test$98:	; Parameter 212 s 6
-355:		mov a2620, [bp + 8]
-356:		mov [bp + 218], a2620
-358:	
+340:		mov a2519, [bp + 8]
+341:		mov [bp + 218], a2519
+343:	
 
 string_test$99:	; Parameter 212 108 8
-359:		mov word [bp + 220], 108
-361:	
+344:		mov word [bp + 220], 108
+346:	
 
 string_test$100:	; Call 212 strrchr 0
-362:		mov word [bp + 212], string_test$101
-363:		mov [bp + 214], bp
-364:		add bp, 212
-365:		jmp strrchr
-367:	
+347:		mov word [bp + 212], string_test$101
+348:		mov [bp + 214], bp
+349:		add bp, 212
+350:		jmp strrchr
+352:	
 
 string_test$101:	; PostCall 212
-369:	
+354:	
 
-string_test$102:	; GetReturnValue £temporary4295
-374:	
+string_test$102:	; GetReturnValue £temporary4329
+356:	
 
-string_test$103:	; Assign p £temporary4295
-375:		mov [bp + 210], t2622
-377:	
+string_test$103:	; Assign p £temporary4329
+357:		mov [bp + 210], type2520
+359:	
 
 string_test$104:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-379:	
+361:	
 
 string_test$105:	; Parameter 212 string_strrchr28s2C2027l2729203D2025i0A# 6
-380:		mov word [bp + 218], @9461$string_strrchr28s2C2027l2729203D2025i0A#
-382:	
+362:		mov word [bp + 218], @9760$string_strrchr28s2C2027l2729203D2025i0A#
+364:	
 
 string_test$106:	; Equal 109 p 0
-383:		cmp word [bp + 210], 0
-384:		je string_test$109
-386:	
+365:		cmp word [bp + 210], 0
+366:		je string_test$109
+368:	
 
-string_test$107:	; BinarySubtract £temporary4301 p s
-387:		mov a2623, [bp + 210]
-388:		sub a2623, [bp + 8]
-390:	
+string_test$107:	; BinarySubtract £temporary4335 p s
+369:		mov a2521, [bp + 210]
+370:		sub a2521, [bp + 8]
+372:	
 
 string_test$108:	; Goto 110
-391:		jmp string_test$110
-393:	
+373:		jmp string_test$110
+375:	
 
-string_test$109:	; Assign £temporary4301 -1
-394:		mov t2624, -1
-396:	
+string_test$109:	; Assign £temporary4335 -1
+376:		mov t2522, -1
+378:	
 
-string_test$110:	; Parameter 212 £temporary4301 8
-397:		mov [bp + 220], t2624
-399:	
+string_test$110:	; Parameter 212 £temporary4335 8
+379:		mov [bp + 220], t2522
+381:	
 
 string_test$111:	; Call 212 printf 0
-400:		mov word [bp + 212], string_test$112
-401:		mov [bp + 214], bp
-402:		add bp, 212
-403:		mov di, bp
-404:		add di, 2
-405:		jmp printf
-407:	
+382:		mov word [bp + 212], string_test$112
+383:		mov [bp + 214], bp
+384:		add bp, 212
+385:		mov di, bp
+386:		add di, 2
+387:		jmp printf
+389:	
 
 string_test$112:	; PostCall 212
-409:	
+391:	
 
 string_test$113:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-411:	
+393:	
 
 string_test$114:	; Parameter 212 s 6
-412:		mov a2625, [bp + 8]
-413:		mov [bp + 218], a2625
-415:	
+394:		mov a2524, [bp + 8]
+395:		mov [bp + 218], a2524
+397:	
 
 string_test$115:	; Parameter 212 120 8
-416:		mov word [bp + 220], 120
-418:	
+398:		mov word [bp + 220], 120
+400:	
 
 string_test$116:	; Call 212 strchr 0
-419:		mov word [bp + 212], string_test$117
-420:		mov [bp + 214], bp
-421:		add bp, 212
-422:		jmp strchr
-424:	
+401:		mov word [bp + 212], string_test$117
+402:		mov [bp + 214], bp
+403:		add bp, 212
+404:		jmp strchr
+406:	
 
 string_test$117:	; PostCall 212
-426:	
+408:	
 
-string_test$118:	; GetReturnValue £temporary4303
-431:	
+string_test$118:	; GetReturnValue £temporary4337
+410:	
 
-string_test$119:	; Assign p £temporary4303
-432:		mov [bp + 210], t2627
-434:	
+string_test$119:	; Assign p £temporary4337
+411:		mov [bp + 210], type2525
+413:	
 
 string_test$120:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-436:	
+415:	
 
 string_test$121:	; Parameter 212 string_strchr28s2C2027x2729203D2025i0A# 6
-437:		mov word [bp + 218], @9479$string_strchr28s2C2027x2729203D2025i0A#
-439:	
+416:		mov word [bp + 218], @9779$string_strchr28s2C2027x2729203D2025i0A#
+418:	
 
 string_test$122:	; Equal 125 p 0
-440:		cmp word [bp + 210], 0
-441:		je string_test$125
-443:	
+419:		cmp word [bp + 210], 0
+420:		je string_test$125
+422:	
 
-string_test$123:	; BinarySubtract £temporary4309 p s
-444:		mov a2628, [bp + 210]
-445:		sub a2628, [bp + 8]
-447:	
+string_test$123:	; BinarySubtract £temporary4343 p s
+423:		mov a2526, [bp + 210]
+424:		sub a2526, [bp + 8]
+426:	
 
 string_test$124:	; Goto 126
-448:		jmp string_test$126
-450:	
+427:		jmp string_test$126
+429:	
 
-string_test$125:	; Assign £temporary4309 -1
-451:		mov t2629, -1
-453:	
+string_test$125:	; Assign £temporary4343 -1
+430:		mov t2527, -1
+432:	
 
-string_test$126:	; Parameter 212 £temporary4309 8
-454:		mov [bp + 220], t2629
-456:	
+string_test$126:	; Parameter 212 £temporary4343 8
+433:		mov [bp + 220], t2527
+435:	
 
 string_test$127:	; Call 212 printf 0
-457:		mov word [bp + 212], string_test$128
-458:		mov [bp + 214], bp
-459:		add bp, 212
-460:		mov di, bp
-461:		add di, 2
-462:		jmp printf
-464:	
+436:		mov word [bp + 212], string_test$128
+437:		mov [bp + 214], bp
+438:		add bp, 212
+439:		mov di, bp
+440:		add di, 2
+441:		jmp printf
+443:	
 
 string_test$128:	; PostCall 212
-466:	
+445:	
 
 string_test$129:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-468:	
+447:	
 
 string_test$130:	; Parameter 212 s 6
-469:		mov a2630, [bp + 8]
-470:		mov [bp + 218], a2630
-472:	
+448:		mov a2529, [bp + 8]
+449:		mov [bp + 218], a2529
+451:	
 
 string_test$131:	; Parameter 212 120 8
-473:		mov word [bp + 220], 120
-475:	
+452:		mov word [bp + 220], 120
+454:	
 
 string_test$132:	; Call 212 strrchr 0
-476:		mov word [bp + 212], string_test$133
-477:		mov [bp + 214], bp
-478:		add bp, 212
-479:		jmp strrchr
-481:	
+455:		mov word [bp + 212], string_test$133
+456:		mov [bp + 214], bp
+457:		add bp, 212
+458:		jmp strrchr
+460:	
 
 string_test$133:	; PostCall 212
-483:	
+462:	
 
-string_test$134:	; GetReturnValue £temporary4311
-488:	
+string_test$134:	; GetReturnValue £temporary4345
+464:	
 
-string_test$135:	; Assign p £temporary4311
-489:		mov [bp + 210], t2632
-491:	
+string_test$135:	; Assign p £temporary4345
+465:		mov [bp + 210], type2530
+467:	
 
 string_test$136:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-493:	
+469:	
 
 string_test$137:	; Parameter 212 string_strrchr28s2C2027x2729203D2025i0A# 6
-494:		mov word [bp + 218], @9497$string_strrchr28s2C2027x2729203D2025i0A#
-496:	
+470:		mov word [bp + 218], @9798$string_strrchr28s2C2027x2729203D2025i0A#
+472:	
 
 string_test$138:	; Equal 141 p 0
-497:		cmp word [bp + 210], 0
-498:		je string_test$141
-500:	
+473:		cmp word [bp + 210], 0
+474:		je string_test$141
+476:	
 
-string_test$139:	; BinarySubtract £temporary4317 p s
-501:		mov a2633, [bp + 210]
-502:		sub a2633, [bp + 8]
-504:	
+string_test$139:	; BinarySubtract £temporary4351 p s
+477:		mov a2531, [bp + 210]
+478:		sub a2531, [bp + 8]
+480:	
 
 string_test$140:	; Goto 142
-505:		jmp string_test$142
-507:	
+481:		jmp string_test$142
+483:	
 
-string_test$141:	; Assign £temporary4317 -1
-508:		mov t2634, -1
-510:	
+string_test$141:	; Assign £temporary4351 -1
+484:		mov t2532, -1
+486:	
 
-string_test$142:	; Parameter 212 £temporary4317 8
-511:		mov [bp + 220], t2634
-513:	
+string_test$142:	; Parameter 212 £temporary4351 8
+487:		mov [bp + 220], t2532
+489:	
 
 string_test$143:	; Call 212 printf 0
-514:		mov word [bp + 212], string_test$144
-515:		mov [bp + 214], bp
-516:		add bp, 212
-517:		mov di, bp
-518:		add di, 2
-519:		jmp printf
-521:	
+490:		mov word [bp + 212], string_test$144
+491:		mov [bp + 214], bp
+492:		add bp, 212
+493:		mov di, bp
+494:		add di, 2
+495:		jmp printf
+497:	
 
 string_test$144:	; PostCall 212
-523:	
+499:	
 
 string_test$145:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-525:	
+501:	
 
 string_test$146:	; Parameter 212 s 6
-526:		mov a2635, [bp + 8]
-527:		mov [bp + 218], a2635
-529:	
+502:		mov a2534, [bp + 8]
+503:		mov [bp + 218], a2534
+505:	
 
 string_test$147:	; Parameter 212 string_Hello2C20World21# 8
-530:		mov word [bp + 220], @9512$string_Hello2C20World21#
-532:	
+506:		mov word [bp + 220], @9813$string_Hello2C20World21#
+508:	
 
 string_test$148:	; Parameter 212 20 10
-533:		mov word [bp + 222], 20
-535:	
+509:		mov word [bp + 222], 20
+511:	
 
 string_test$149:	; Call 212 memcpy 0
-536:		mov word [bp + 212], string_test$150
-537:		mov [bp + 214], bp
-538:		add bp, 212
-539:		jmp memcpy
-541:	
+512:		mov word [bp + 212], string_test$150
+513:		mov [bp + 214], bp
+514:		add bp, 212
+515:		jmp memcpy
+517:	
 
 string_test$150:	; PostCall 212
-543:	
+519:	
 
 string_test$151:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-545:	
+521:	
 
 string_test$152:	; Parameter 212 t 6
-546:		mov [bp + 218], bp
-547:		add word [bp + 218], 10
-549:	
+522:		mov [bp + 218], bp
+523:		add word [bp + 218], 10
+525:	
 
 string_test$153:	; Parameter 212 string_Hello2C20World21# 8
-550:		mov word [bp + 220], @9518$string_Hello2C20World21#
-552:	
+526:		mov word [bp + 220], @9820$string_Hello2C20World21#
+528:	
 
 string_test$154:	; Parameter 212 20 10
-553:		mov word [bp + 222], 20
-555:	
+529:		mov word [bp + 222], 20
+531:	
 
 string_test$155:	; Call 212 memmove 0
-556:		mov word [bp + 212], string_test$156
-557:		mov [bp + 214], bp
-558:		add bp, 212
-559:		jmp memmove
-561:	
+532:		mov word [bp + 212], string_test$156
+533:		mov [bp + 214], bp
+534:		add bp, 212
+535:		jmp memmove
+537:	
 
 string_test$156:	; PostCall 212
-563:	
+539:	
 
 string_test$157:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-565:	
+541:	
 
 string_test$158:	; Parameter 212 u 6
-566:		mov [bp + 218], bp
-567:		add word [bp + 218], 110
-569:	
+542:		mov [bp + 218], bp
+543:		add word [bp + 218], 110
+545:	
 
 string_test$159:	; Parameter 212 88 8
-570:		mov word [bp + 220], 88
-572:	
+546:		mov word [bp + 220], 88
+548:	
 
 string_test$160:	; Parameter 212 20 10
-573:		mov word [bp + 222], 20
-575:	
+549:		mov word [bp + 222], 20
+551:	
 
 string_test$161:	; Call 212 memset 0
-576:		mov word [bp + 212], string_test$162
-577:		mov [bp + 214], bp
-578:		add bp, 212
-579:		jmp memset
-581:	
+552:		mov word [bp + 212], string_test$162
+553:		mov [bp + 214], bp
+554:		add bp, 212
+555:		jmp memset
+557:	
 
 string_test$162:	; PostCall 212
-583:	
+559:	
 
-string_test$163:	; Deref £temporary4322 -> u u 19
-584:		mov a2636, bp
-585:		add a2636, 110
-587:	
+string_test$163:	; Deref £temporary4356 -> u u 19
+560:		mov a2538, bp
+561:		add a2538, 110
+563:	
 
-string_test$164:	; Assign £temporary4322 -> u 0
-588:		mov byte [a2636 + 19], 0
-590:	
+string_test$164:	; Assign £temporary4356 -> u 0
+564:		mov byte [a2538 + 19], 0
+566:	
 
 string_test$165:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-592:	
+568:	
 
 string_test$166:	; Parameter 212 string_s203D202225s222C20t203D202225s222C20u203D202225s220A# 6
-593:		mov word [bp + 218], @9537$string_s203D202225s222C20t203D202225s222C20u203D202225s220A#
-595:	
+569:		mov word [bp + 218], @9842$string_s203D202225s222C20t203D202225s222C20u203D202225s220A#
+571:	
 
 string_test$167:	; Parameter 212 s 8
-596:		mov a2637, [bp + 8]
-597:		mov [bp + 220], a2637
-599:	
+572:		mov a2539, [bp + 8]
+573:		mov [bp + 220], a2539
+575:	
 
 string_test$168:	; Parameter 212 t 10
-600:		mov [bp + 222], bp
-601:		add word [bp + 222], 10
-603:	
+576:		mov [bp + 222], bp
+577:		add word [bp + 222], 10
+579:	
 
 string_test$169:	; Parameter 212 u 12
-604:		mov [bp + 224], bp
-605:		add word [bp + 224], 110
-607:	
+580:		mov [bp + 224], bp
+581:		add word [bp + 224], 110
+583:	
 
 string_test$170:	; Call 212 printf 0
-608:		mov word [bp + 212], string_test$171
-609:		mov [bp + 214], bp
-610:		add bp, 212
-611:		mov di, bp
-612:		add di, 6
-613:		jmp printf
-615:	
+584:		mov word [bp + 212], string_test$171
+585:		mov [bp + 214], bp
+586:		add bp, 212
+587:		mov di, bp
+588:		add di, 6
+589:		jmp printf
+591:	
 
 string_test$171:	; PostCall 212
-617:	
+593:	
 
 string_test$172:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-619:	
+595:	
 
 string_test$173:	; Parameter 212 s 6
-620:		mov a2638, [bp + 8]
-621:		mov [bp + 218], a2638
-623:	
+596:		mov a2541, [bp + 8]
+597:		mov [bp + 218], a2541
+599:	
 
 string_test$174:	; Parameter 212 108 8
-624:		mov word [bp + 220], 108
-626:	
+600:		mov word [bp + 220], 108
+602:	
 
 string_test$175:	; Parameter 212 20 10
-627:		mov word [bp + 222], 20
-629:	
+603:		mov word [bp + 222], 20
+605:	
 
 string_test$176:	; Call 212 memchr 0
-630:		mov word [bp + 212], string_test$177
-631:		mov [bp + 214], bp
-632:		add bp, 212
-633:		jmp memchr
-635:	
+606:		mov word [bp + 212], string_test$177
+607:		mov [bp + 214], bp
+608:		add bp, 212
+609:		jmp memchr
+611:	
 
 string_test$177:	; PostCall 212
-637:	
+613:	
 
-string_test$178:	; GetReturnValue £temporary4324
-642:	
+string_test$178:	; GetReturnValue £temporary4358
+615:	
 
-string_test$179:	; Assign p £temporary4324
-643:		mov [bp + 210], t2640
-645:	
+string_test$179:	; Assign p £temporary4358
+616:		mov [bp + 210], type2542
+618:	
 
 string_test$180:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-647:	
+620:	
 
 string_test$181:	; Parameter 212 string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A# 6
-648:		mov word [bp + 218], @9546$string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A#
-650:	
+621:		mov word [bp + 218], @9853$string_memchr28s2C2027l272C20SIZE202A20sizeof28char2929203D2025i0A#
+623:	
 
 string_test$182:	; Equal 185 p 0
-651:		cmp word [bp + 210], 0
-652:		je string_test$185
-654:	
+624:		cmp word [bp + 210], 0
+625:		je string_test$185
+627:	
 
-string_test$183:	; BinarySubtract £temporary4330 p s
-655:		mov a2641, [bp + 210]
-656:		sub a2641, [bp + 8]
-658:	
+string_test$183:	; BinarySubtract £temporary4364 p s
+628:		mov a2543, [bp + 210]
+629:		sub a2543, [bp + 8]
+631:	
 
 string_test$184:	; Goto 186
-659:		jmp string_test$186
-661:	
+632:		jmp string_test$186
+634:	
 
-string_test$185:	; Assign £temporary4330 -1
-662:		mov t2642, -1
-664:	
+string_test$185:	; Assign £temporary4364 -1
+635:		mov t2544, -1
+637:	
 
-string_test$186:	; Parameter 212 £temporary4330 8
-665:		mov [bp + 220], t2642
-667:	
+string_test$186:	; Parameter 212 £temporary4364 8
+638:		mov [bp + 220], t2544
+640:	
 
 string_test$187:	; Call 212 printf 0
-668:		mov word [bp + 212], string_test$188
-669:		mov [bp + 214], bp
-670:		add bp, 212
-671:		mov di, bp
-672:		add di, 2
-673:		jmp printf
-675:	
+641:		mov word [bp + 212], string_test$188
+642:		mov [bp + 214], bp
+643:		add bp, 212
+644:		mov di, bp
+645:		add di, 2
+646:		jmp printf
+648:	
 
 string_test$188:	; PostCall 212
-677:	
+650:	
 
 string_test$189:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-679:	
+652:	
 
 string_test$190:	; Parameter 212 s 6
-680:		mov a2643, [bp + 8]
-681:		mov [bp + 218], a2643
-683:	
+653:		mov a2546, [bp + 8]
+654:		mov [bp + 218], a2546
+656:	
 
 string_test$191:	; Parameter 212 120 8
-684:		mov word [bp + 220], 120
-686:	
+657:		mov word [bp + 220], 120
+659:	
 
 string_test$192:	; Parameter 212 20 10
-687:		mov word [bp + 222], 20
-689:	
+660:		mov word [bp + 222], 20
+662:	
 
 string_test$193:	; Call 212 memchr 0
-690:		mov word [bp + 212], string_test$194
-691:		mov [bp + 214], bp
-692:		add bp, 212
-693:		jmp memchr
-695:	
+663:		mov word [bp + 212], string_test$194
+664:		mov [bp + 214], bp
+665:		add bp, 212
+666:		jmp memchr
+668:	
 
 string_test$194:	; PostCall 212
-697:	
+670:	
 
-string_test$195:	; GetReturnValue £temporary4332
-702:	
+string_test$195:	; GetReturnValue £temporary4366
+672:	
 
-string_test$196:	; Assign p £temporary4332
-703:		mov [bp + 210], t2645
-705:	
+string_test$196:	; Assign p £temporary4366
+673:		mov [bp + 210], type2547
+675:	
 
 string_test$197:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-707:	
+677:	
 
 string_test$198:	; Parameter 212 string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A# 6
-708:		mov word [bp + 218], @9568$string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A#
-710:	
+678:		mov word [bp + 218], @9877$string_memchr28s2C2027x272C20SIZE202A20sizeof28char2929203D2025i0A#
+680:	
 
 string_test$199:	; Equal 202 p 0
-711:		cmp word [bp + 210], 0
-712:		je string_test$202
-714:	
+681:		cmp word [bp + 210], 0
+682:		je string_test$202
+684:	
 
-string_test$200:	; BinarySubtract £temporary4338 p s
-715:		mov a2646, [bp + 210]
-716:		sub a2646, [bp + 8]
-718:	
+string_test$200:	; BinarySubtract £temporary4372 p s
+685:		mov a2548, [bp + 210]
+686:		sub a2548, [bp + 8]
+688:	
 
 string_test$201:	; Goto 203
-719:		jmp string_test$203
-721:	
+689:		jmp string_test$203
+691:	
 
-string_test$202:	; Assign £temporary4338 -1
-722:		mov t2647, -1
-724:	
+string_test$202:	; Assign £temporary4372 -1
+692:		mov t2549, -1
+694:	
 
-string_test$203:	; Parameter 212 £temporary4338 8
-725:		mov [bp + 220], t2647
-727:	
+string_test$203:	; Parameter 212 £temporary4372 8
+695:		mov [bp + 220], t2549
+697:	
 
 string_test$204:	; Call 212 printf 0
-728:		mov word [bp + 212], string_test$205
-729:		mov [bp + 214], bp
-730:		add bp, 212
-731:		mov di, bp
-732:		add di, 2
-733:		jmp printf
-735:	
+698:		mov word [bp + 212], string_test$205
+699:		mov [bp + 214], bp
+700:		add bp, 212
+701:		mov di, bp
+702:		add di, 2
+703:		jmp printf
+705:	
 
 string_test$205:	; PostCall 212
-737:	
+707:	
 
 string_test$206:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-739:	
+709:	
 
 string_test$207:	; Parameter 212 string_s3A202225s222C20t3A202225s220A# 6
-740:		mov word [bp + 218], @9583$string_s3A202225s222C20t3A202225s220A#
-742:	
+710:		mov word [bp + 218], @9892$string_s3A202225s222C20t3A202225s220A#
+712:	
 
 string_test$208:	; Parameter 212 s 8
-743:		mov a2648, [bp + 8]
-744:		mov [bp + 220], a2648
-746:	
+713:		mov a2551, [bp + 8]
+714:		mov [bp + 220], a2551
+716:	
 
 string_test$209:	; Parameter 212 t 10
-747:		mov [bp + 222], bp
-748:		add word [bp + 222], 10
-750:	
+717:		mov [bp + 222], bp
+718:		add word [bp + 222], 10
+720:	
 
 string_test$210:	; Call 212 printf 0
-751:		mov word [bp + 212], string_test$211
-752:		mov [bp + 214], bp
-753:		add bp, 212
-754:		mov di, bp
-755:		add di, 4
-756:		jmp printf
-758:	
+721:		mov word [bp + 212], string_test$211
+722:		mov [bp + 214], bp
+723:		add bp, 212
+724:		mov di, bp
+725:		add di, 4
+726:		jmp printf
+728:	
 
 string_test$211:	; PostCall 212
-760:	
+730:	
 
 string_test$212:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-762:	
+732:	
 
 string_test$213:	; Parameter 212 string_strcmp28s2C20t29203D2025i0A# 6
-763:		mov word [bp + 218], @9585$string_strcmp28s2C20t29203D2025i0A#
-765:	
+733:		mov word [bp + 218], @9894$string_strcmp28s2C20t29203D2025i0A#
+735:	
 
 string_test$214:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-767:	
+737:	
 
 string_test$215:	; Parameter 212 s 14
-768:		mov a2649, [bp + 8]
-769:		mov [bp + 226], a2649
-771:	
+738:		mov a2553, [bp + 8]
+739:		mov [bp + 226], a2553
+741:	
 
 string_test$216:	; Parameter 212 t 16
-772:		mov [bp + 228], bp
-773:		add word [bp + 228], 10
-775:	
+742:		mov [bp + 228], bp
+743:		add word [bp + 228], 10
+745:	
 
 string_test$217:	; Call 212 strcmp 8
-776:		mov word [bp + 220], string_test$218
-777:		mov [bp + 222], bp
-778:		add bp, 220
-779:		jmp strcmp
-781:	
+746:		mov word [bp + 220], string_test$218
+747:		mov [bp + 222], bp
+748:		add bp, 220
+749:		jmp strcmp
+751:	
 
 string_test$218:	; PostCall 212
-783:	
+753:	
 
-string_test$219:	; GetReturnValue £temporary4341
-788:	
+string_test$219:	; GetReturnValue £temporary4375
+755:	
 
-string_test$220:	; Parameter 212 £temporary4341 8
-789:		mov [bp + 220], t2651
-791:	
+string_test$220:	; Parameter 212 £temporary4375 8
+756:		mov [bp + 220], type2554
+758:	
 
 string_test$221:	; Call 212 printf 0
-792:		mov word [bp + 212], string_test$222
-793:		mov [bp + 214], bp
-794:		add bp, 212
-795:		mov di, bp
-796:		add di, 2
-797:		jmp printf
-799:	
+759:		mov word [bp + 212], string_test$222
+760:		mov [bp + 214], bp
+761:		add bp, 212
+762:		mov di, bp
+763:		add di, 2
+764:		jmp printf
+766:	
 
 string_test$222:	; PostCall 212
-801:	
+768:	
 
 string_test$223:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-803:	
+770:	
 
 string_test$224:	; Parameter 212 string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A# 6
-804:		mov word [bp + 218], @9588$string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A#
-806:	
+771:		mov word [bp + 218], @9897$string_memcmp28s2C20t2C20SIZE202A20sizeof28char2929203D2025i0A#
+773:	
 
 string_test$225:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-808:	
+775:	
 
 string_test$226:	; Parameter 212 s 14
-809:		mov a2652, [bp + 8]
-810:		mov [bp + 226], a2652
-812:	
+776:		mov a2556, [bp + 8]
+777:		mov [bp + 226], a2556
+779:	
 
 string_test$227:	; Parameter 212 t 16
-813:		mov [bp + 228], bp
-814:		add word [bp + 228], 10
-816:	
+780:		mov [bp + 228], bp
+781:		add word [bp + 228], 10
+783:	
 
 string_test$228:	; Parameter 212 20 18
-817:		mov word [bp + 230], 20
-819:	
+784:		mov word [bp + 230], 20
+786:	
 
 string_test$229:	; Call 212 memcmp 8
-820:		mov word [bp + 220], string_test$230
-821:		mov [bp + 222], bp
-822:		add bp, 220
-823:		jmp memcmp
-825:	
+787:		mov word [bp + 220], string_test$230
+788:		mov [bp + 222], bp
+789:		add bp, 220
+790:		jmp memcmp
+792:	
 
 string_test$230:	; PostCall 212
-827:	
+794:	
 
-string_test$231:	; GetReturnValue £temporary4343
-832:	
+string_test$231:	; GetReturnValue £temporary4377
+796:	
 
-string_test$232:	; Parameter 212 £temporary4343 8
-833:		mov [bp + 220], t2654
-835:	
+string_test$232:	; Parameter 212 £temporary4377 8
+797:		mov [bp + 220], type2557
+799:	
 
 string_test$233:	; Call 212 printf 0
-836:		mov word [bp + 212], string_test$234
-837:		mov [bp + 214], bp
-838:		add bp, 212
-839:		mov di, bp
-840:		add di, 2
-841:		jmp printf
-843:	
+800:		mov word [bp + 212], string_test$234
+801:		mov [bp + 214], bp
+802:		add bp, 212
+803:		mov di, bp
+804:		add di, 2
+805:		jmp printf
+807:	
 
 string_test$234:	; PostCall 212
-845:	
+809:	
 
 string_test$235:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-847:	
+811:	
 
 string_test$236:	; Parameter 212 string_strspn28s2C2022Hello2C20C2229203D2025i0A# 6
-848:		mov word [bp + 218], @9595$string_strspn28s2C2022Hello2C20C2229203D2025i0A#
-850:	
+812:		mov word [bp + 218], @9905$string_strspn28s2C2022Hello2C20C2229203D2025i0A#
+814:	
 
 string_test$237:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-852:	
+816:	
 
 string_test$238:	; Parameter 212 s 14
-853:		mov a2655, [bp + 8]
-854:		mov [bp + 226], a2655
-856:	
+817:		mov a2559, [bp + 8]
+818:		mov [bp + 226], a2559
+820:	
 
 string_test$239:	; Parameter 212 string_Hello2C20C# 16
-857:		mov word [bp + 228], @9596$string_Hello2C20C#
-859:	
+821:		mov word [bp + 228], @9906$string_Hello2C20C#
+823:	
 
 string_test$240:	; Call 212 strspn 8
-860:		mov word [bp + 220], string_test$241
-861:		mov [bp + 222], bp
-862:		add bp, 220
-863:		jmp strspn
-865:	
+824:		mov word [bp + 220], string_test$241
+825:		mov [bp + 222], bp
+826:		add bp, 220
+827:		jmp strspn
+829:	
 
 string_test$241:	; PostCall 212
-867:	
+831:	
 
-string_test$242:	; GetReturnValue £temporary4345
-872:	
+string_test$242:	; GetReturnValue £temporary4379
+833:	
 
-string_test$243:	; Parameter 212 £temporary4345 8
-873:		mov [bp + 220], t2657
-875:	
+string_test$243:	; Parameter 212 £temporary4379 8
+834:		mov [bp + 220], type2560
+836:	
 
 string_test$244:	; Call 212 printf 0
-876:		mov word [bp + 212], string_test$245
-877:		mov [bp + 214], bp
-878:		add bp, 212
-879:		mov di, bp
-880:		add di, 2
-881:		jmp printf
-883:	
+837:		mov word [bp + 212], string_test$245
+838:		mov [bp + 214], bp
+839:		add bp, 212
+840:		mov di, bp
+841:		add di, 2
+842:		jmp printf
+844:	
 
 string_test$245:	; PostCall 212
-885:	
+846:	
 
 string_test$246:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-887:	
+848:	
 
 string_test$247:	; Parameter 212 string_strcspn28s2C2022Hello2C20C2229203D2025i0A# 6
-888:		mov word [bp + 218], @9599$string_strcspn28s2C2022Hello2C20C2229203D2025i0A#
-890:	
+849:		mov word [bp + 218], @9909$string_strcspn28s2C2022Hello2C20C2229203D2025i0A#
+851:	
 
 string_test$248:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-892:	
+853:	
 
 string_test$249:	; Parameter 212 s 14
-893:		mov a2658, [bp + 8]
-894:		mov [bp + 226], a2658
-896:	
+854:		mov a2562, [bp + 8]
+855:		mov [bp + 226], a2562
+857:	
 
 string_test$250:	; Parameter 212 string_Hello2C20C# 16
-897:		mov word [bp + 228], @9600$string_Hello2C20C#
-899:	
+858:		mov word [bp + 228], @9910$string_Hello2C20C#
+860:	
 
 string_test$251:	; Call 212 strcspn 8
-900:		mov word [bp + 220], string_test$252
-901:		mov [bp + 222], bp
-902:		add bp, 220
-903:		jmp strcspn
-905:	
+861:		mov word [bp + 220], string_test$252
+862:		mov [bp + 222], bp
+863:		add bp, 220
+864:		jmp strcspn
+866:	
 
 string_test$252:	; PostCall 212
-907:	
+868:	
 
-string_test$253:	; GetReturnValue £temporary4347
-912:	
+string_test$253:	; GetReturnValue £temporary4381
+870:	
 
-string_test$254:	; Parameter 212 £temporary4347 8
-913:		mov [bp + 220], t2660
-915:	
+string_test$254:	; Parameter 212 £temporary4381 8
+871:		mov [bp + 220], type2563
+873:	
 
 string_test$255:	; Call 212 printf 0
-916:		mov word [bp + 212], string_test$256
-917:		mov [bp + 214], bp
-918:		add bp, 212
-919:		mov di, bp
-920:		add di, 2
-921:		jmp printf
-923:	
+874:		mov word [bp + 212], string_test$256
+875:		mov [bp + 214], bp
+876:		add bp, 212
+877:		mov di, bp
+878:		add di, 2
+879:		jmp printf
+881:	
 
 string_test$256:	; PostCall 212
-925:	
+883:	
 
 string_test$257:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-927:	
+885:	
 
 string_test$258:	; Parameter 212 string_strerror28errno29203D202225s220A# 6
-928:		mov word [bp + 218], @9603$string_strerror28errno29203D202225s220A#
-930:	
+886:		mov word [bp + 218], @9913$string_strerror28errno29203D202225s220A#
+888:	
 
 string_test$259:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-932:	
+890:	
 
 string_test$260:	; Parameter 212 errno 14
-933:		mov a2661, [errno]
-934:		mov [bp + 226], a2661
-936:	
+891:		mov a2565, [errno]
+892:		mov [bp + 226], a2565
+894:	
 
 string_test$261:	; Call 212 strerror 8
-937:		mov word [bp + 220], string_test$262
-938:		mov [bp + 222], bp
-939:		add bp, 220
-940:		jmp strerror
-942:	
+895:		mov word [bp + 220], string_test$262
+896:		mov [bp + 222], bp
+897:		add bp, 220
+898:		jmp strerror
+900:	
 
 string_test$262:	; PostCall 212
-944:	
+902:	
 
-string_test$263:	; GetReturnValue £temporary4349
-949:	
+string_test$263:	; GetReturnValue £temporary4383
+904:	
 
-string_test$264:	; Parameter 212 £temporary4349 8
-950:		mov [bp + 220], t2663
-952:	
+string_test$264:	; Parameter 212 £temporary4383 8
+905:		mov [bp + 220], type2566
+907:	
 
 string_test$265:	; Call 212 printf 0
-953:		mov word [bp + 212], string_test$266
+908:		mov word [bp + 212], string_test$266
+909:		mov [bp + 214], bp
+910:		add bp, 212
+911:		mov di, bp
+912:		add di, 2
+913:		jmp printf
+915:	
+
+string_test$266:	; PostCall 212
+917:	
+
+string_test$267:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+919:	
+
+string_test$268:	; Parameter 212 s 6
+920:		mov a2568, [bp + 8]
+921:		mov [bp + 218], a2568
+923:	
+
+string_test$269:	; Parameter 212 string_2C# 8
+924:		mov word [bp + 220], @9916$string_2C#
+926:	
+
+string_test$270:	; Call 212 strtok 0
+927:		mov word [bp + 212], string_test$271
+928:		mov [bp + 214], bp
+929:		add bp, 212
+930:		jmp strtok
+932:	
+
+string_test$271:	; PostCall 212
+934:	
+
+string_test$272:	; GetReturnValue £temporary4385
+936:	
+
+string_test$273:	; Assign p £temporary4385
+937:		mov [bp + 210], type2569
+939:	
+
+string_test$274:	; Equal 288 p 0
+940:		cmp word [bp + 210], 0
+941:		je string_test$288
+943:	
+
+string_test$275:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+945:	
+
+string_test$276:	; Parameter 212 string_strtok28s2C20222C2229203D202225s220A# 6
+946:		mov word [bp + 218], @9922$string_strtok28s2C20222C2229203D202225s220A#
+948:	
+
+string_test$277:	; Parameter 212 p 8
+949:		mov a2570, [bp + 210]
+950:		mov [bp + 220], a2570
+952:	
+
+string_test$278:	; Call 212 printf 0
+953:		mov word [bp + 212], string_test$279
 954:		mov [bp + 214], bp
 955:		add bp, 212
 956:		mov di, bp
@@ -1180,104 +1238,46 @@ string_test$265:	; Call 212 printf 0
 958:		jmp printf
 960:	
 
-string_test$266:	; PostCall 212
+string_test$279:	; PostCall 212
 962:	
 
-string_test$267:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+string_test$280:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 964:	
 
-string_test$268:	; Parameter 212 s 6
-965:		mov a2664, [bp + 8]
-966:		mov [bp + 218], a2664
-968:	
-
-string_test$269:	; Parameter 212 string_2C# 8
-969:		mov word [bp + 220], @9606$string_2C#
-971:	
-
-string_test$270:	; Call 212 strtok 0
-972:		mov word [bp + 212], string_test$271
-973:		mov [bp + 214], bp
-974:		add bp, 212
-975:		jmp strtok
-977:	
-
-string_test$271:	; PostCall 212
-979:	
-
-string_test$272:	; GetReturnValue £temporary4351
-984:	
-
-string_test$273:	; Assign p £temporary4351
-985:		mov [bp + 210], t2666
-987:	
-
-string_test$274:	; Equal 288 p 0
-988:		cmp word [bp + 210], 0
-989:		je string_test$288
-991:	
-
-string_test$275:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-993:	
-
-string_test$276:	; Parameter 212 string_strtok28s2C20222C2229203D202225s220A# 6
-994:		mov word [bp + 218], @9612$string_strtok28s2C20222C2229203D202225s220A#
-996:	
-
-string_test$277:	; Parameter 212 p 8
-997:		mov a2667, [bp + 210]
-998:		mov [bp + 220], a2667
-1000:	
-
-string_test$278:	; Call 212 printf 0
-1001:		mov word [bp + 212], string_test$279
-1002:		mov [bp + 214], bp
-1003:		add bp, 212
-1004:		mov di, bp
-1005:		add di, 2
-1006:		jmp printf
-1008:	
-
-string_test$279:	; PostCall 212
-1010:	
-
-string_test$280:	; CallHeader 212 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-1012:	
-
 string_test$281:	; Parameter 212 0 6
-1013:		mov word [bp + 218], 0
-1015:	
+965:		mov word [bp + 218], 0
+967:	
 
 string_test$282:	; Parameter 212 string_2C# 8
-1016:		mov word [bp + 220], @9617$string_2C#
-1018:	
+968:		mov word [bp + 220], @9927$string_2C#
+970:	
 
 string_test$283:	; Call 212 strtok 0
-1019:		mov word [bp + 212], string_test$284
-1020:		mov [bp + 214], bp
-1021:		add bp, 212
-1022:		jmp strtok
-1024:	
+971:		mov word [bp + 212], string_test$284
+972:		mov [bp + 214], bp
+973:		add bp, 212
+974:		jmp strtok
+976:	
 
 string_test$284:	; PostCall 212
-1026:	
+978:	
 
-string_test$285:	; GetReturnValue £temporary4354
-1031:	
+string_test$285:	; GetReturnValue £temporary4388
+980:	
 
-string_test$286:	; Assign p £temporary4354
-1032:		mov [bp + 210], t2669
-1034:	
+string_test$286:	; Assign p £temporary4388
+981:		mov [bp + 210], type2572
+983:	
 
 string_test$287:	; Goto 274
-1035:		jmp string_test$274
-1037:	
+984:		jmp string_test$274
+986:	
 
 string_test$288:	; Return 0
-1038:		mov t2670, [bp]
-1039:		mov di, [bp + 4]
-1040:		mov bp, [bp + 2]
-1041:		jmp t2670
-1043:	
+987:		mov t2573, [bp]
+988:		mov di, [bp + 4]
+989:		mov bp, [bp + 2]
+990:		jmp t2573
+992:	
 
 string_test$289:	; FunctionEnd string_test

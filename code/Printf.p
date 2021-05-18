@@ -357,8 +357,8 @@ void * bsearch ( const void * key , const void * valueList ,
 int  listSize , int  valueSize ,
 int ( * compare ) ( const void * , const void * ) ) ;
 
-int abs ( int value ) ;
 long labs ( long value ) ;
+int abs ( int value ) ;
 
 typedef struct {
 int quot , rem ;
@@ -424,8 +424,8 @@ $C:\Users\Stefan\Documents\vagrant\homestead\code\code\Printf.c,7$
      
      
      
- 
-                       
+
+
 
 int g_outStatus , g_outChars ;
 void * g_outDevice ;

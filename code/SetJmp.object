@@ -1,47 +1,47 @@
 1:	
 
-setjmp:	; InspectRegister £temporary621 bp
+setjmp:	; InspectRegister £temporary628 bp
 3:	
 
-setjmp$1:	; Assign bp_pointer £temporary621
+setjmp$1:	; Assign bp_pointer £temporary628
 4:		mov [bp + 8], bp
 6:	
 
-setjmp$2:	; Deref £temporary622 -> buf buf 0
+setjmp$2:	; Deref £temporary629 -> buf buf 0
 7:		mov si, [bp + 6]
 9:	
 
-setjmp$3:	; Deref £temporary623 -> bp_pointer bp_pointer 0
+setjmp$3:	; Deref £temporary630 -> bp_pointer bp_pointer 0
 10:		mov di, [bp + 8]
 12:	
 
-setjmp$4:	; Assign £temporary622 -> buf £temporary623 -> bp_pointer
+setjmp$4:	; Assign £temporary629 -> buf £temporary630 -> bp_pointer
 13:		mov ax, [di]
 14:		mov [si], ax
 16:	
 
-setjmp$5:	; Deref £temporary624 -> buf buf 2
+setjmp$5:	; Deref £temporary631 -> buf buf 2
 17:		mov si, [bp + 6]
 19:	
 
-setjmp$6:	; Deref £temporary625 -> bp_pointer bp_pointer 2
+setjmp$6:	; Deref £temporary632 -> bp_pointer bp_pointer 2
 20:		mov di, [bp + 8]
 22:	
 
-setjmp$7:	; Assign £temporary624 -> buf £temporary625 -> bp_pointer
+setjmp$7:	; Assign £temporary631 -> buf £temporary632 -> bp_pointer
 23:		mov ax, [di + 2]
 24:		mov [si + 2], ax
 26:	
 
-setjmp$8:	; Deref £temporary626 -> buf buf 4
+setjmp$8:	; Deref £temporary633 -> buf buf 4
 27:		mov si, [bp + 6]
 29:	
 
-setjmp$9:	; Deref £temporary627 -> bp_pointer bp_pointer 4
+setjmp$9:	; Deref £temporary634 -> bp_pointer bp_pointer 4
 30:		mov di, [bp + 8]
 32:	
 
-setjmp$10:	; Assign £temporary626 -> buf £temporary627 -> bp_pointer
+setjmp$10:	; Assign £temporary633 -> buf £temporary634 -> bp_pointer
 33:		mov ax, [di + 4]
 34:		mov [si + 4], ax
 36:	
@@ -64,27 +64,27 @@ longjmp:	; AssignRegister bx return_value
 2:		mov bx, [bp + 8]
 4:	
 
-longjmp$1:	; Deref £temporary630 -> buf buf 0
+longjmp$1:	; Deref £temporary637 -> buf buf 0
 5:		mov si, [bp + 6]
 7:	
 
-longjmp$2:	; AssignRegister cx £temporary630 -> buf
+longjmp$2:	; AssignRegister cx £temporary637 -> buf
 8:		mov cx, [si]
 10:	
 
-longjmp$3:	; Deref £temporary632 -> buf buf 4
+longjmp$3:	; Deref £temporary639 -> buf buf 4
 11:		mov si, [bp + 6]
 13:	
 
-longjmp$4:	; AssignRegister di £temporary632 -> buf
+longjmp$4:	; AssignRegister di £temporary639 -> buf
 14:		mov di, [si + 4]
 16:	
 
-longjmp$5:	; Deref £temporary634 -> buf buf 2
+longjmp$5:	; Deref £temporary641 -> buf buf 2
 17:		mov si, [bp + 6]
 19:	
 
-longjmp$6:	; AssignRegister bp £temporary634 -> buf
+longjmp$6:	; AssignRegister bp £temporary641 -> buf
 20:		mov bp, [si + 2]
 22:	
 

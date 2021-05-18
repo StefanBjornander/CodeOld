@@ -1,85 +1,86 @@
-0: CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-1: Call 19 localeconv 0
-2: PostCall 19
-3: GetReturnValue £temporary3385
-4: Assign localeConvPtr £temporary3385
-5: AssignRegister ah 42
-6: Interrupt 33
-7: InspectRegister £temporary3387 cx
-8: BinarySubtract year £temporary3387 1900
-9: InspectRegister £temporary3389 dh
-10: BinarySubtract month £temporary3389 1
-11: InspectRegister £temporary3391 dl
-12: Assign monthDay £temporary3391
-13: AssignRegister ah 44
-14: Interrupt 33
-15: InspectRegister £temporary3393 ch
-16: Assign hour £temporary3393
-17: InspectRegister £temporary3394 cl
-18: Assign min £temporary3394
-19: InspectRegister £temporary3395 dh
-20: Assign sec £temporary3395
-21: Equal 25 localeConvPtr 0
-22: Deref £temporary3397 -> localeConvPtr localeConvPtr 2
-23: IntegralToIntegral £temporary3398 £temporary3397 -> localeConvPtr
-24: BinarySubtract hour hour £temporary3398
-25: SignedModulo £temporary3400 year 4
-26: NotEqual 29 £temporary3400 0
-27: Assign £temporary3402 1
-28: Goto 30
-29: Assign £temporary3402 0
-30: Assign leapYear £temporary3402
-31: Assign daysOfMonthsX[0] 31
-32: Equal 35 leapYear 0
-33: Assign £temporary3407 29
-34: Goto 36
-35: Assign £temporary3407 28
-36: Assign daysOfMonthsX[1] £temporary3407
-37: Assign daysOfMonthsX[2] 31
-38: Assign daysOfMonthsX[3] 30
-39: Assign daysOfMonthsX[4] 31
-40: Assign daysOfMonthsX[5] 30
-41: Assign daysOfMonthsX[6] 31
-42: Assign daysOfMonthsX[7] 31
-43: Assign daysOfMonthsX[8] 30
-44: Assign daysOfMonthsX[9] 31
-45: Assign daysOfMonthsX[10] 30
-46: Assign daysOfMonthsX[11] 31
-47: IntegralToIntegral £temporary3420 monthDay
-48: BinarySubtract yearDay £temporary3420 1
-49: Assign mon 0
-50: IntegralToIntegral £temporary3422 month
-51: SignedGreaterThanEqual 58 mon £temporary3422
-52: UnsignedMultiply £temporary3426 mon 2
-53: BinaryAdd £temporary3427 daysOfMonthsX £temporary3426
-54: Deref £temporary3425 -> £temporary3427 £temporary3427 0
-55: BinaryAdd yearDay yearDay £temporary3425 -> £temporary3427
-56: Increment mon
-57: Goto 50
-58: IntegralToIntegral £temporary3430 sec
-59: Assign s$tm_sec £temporary3430
-60: IntegralToIntegral £temporary3432 min
-61: Assign s$tm_min £temporary3432
-62: IntegralToIntegral £temporary3434 hour
-63: Assign s$tm_hour £temporary3434
-64: IntegralToIntegral £temporary3436 monthDay
-65: Assign s$tm_mday £temporary3436
-66: IntegralToIntegral £temporary3438 month
-67: Assign s$tm_mon £temporary3438
-68: Assign s$tm_year year
-69: Assign s$tm_wday 0
-70: Assign s$tm_yday yearDay
-71: Assign s$tm_isdst 0
-72: CallHeader 69 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
-73: address £temporary3443 s
-74: Parameter 69 £temporary3443 6
-75: Call 69 mktime 0
-76: PostCall 69
-77: GetReturnValue £temporary3444
-78: Assign time £temporary3444
-79: Equal 82 timePtr 0
-80: Deref £temporary3446 -> timePtr timePtr 0
-81: Assign £temporary3446 -> timePtr time
-82: SetReturnValue time
-83: Return time
-84: FunctionEnd time
+0: AssignRegister ah 42
+1: Interrupt 33
+2: InspectRegister £temporary3228 cx
+3: BinarySubtract year £temporary3228 1900
+4: InspectRegister £temporary3230 dh
+5: BinarySubtract month £temporary3230 1
+6: InspectRegister £temporary3232 dl
+7: Assign monthDay £temporary3232
+8: AssignRegister ah 44
+9: Interrupt 33
+10: InspectRegister £temporary3234 ch
+11: Assign hour £temporary3234
+12: InspectRegister £temporary3235 cl
+13: Assign min £temporary3235
+14: InspectRegister £temporary3236 dh
+15: Assign sec £temporary3236
+16: CallHeader 19 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+17: Call 19 localeconv 0
+18: PostCall 19
+19: GetReturnValue £temporary3237
+20: Assign localeConvPtr £temporary3237
+21: Equal 27 localeConvPtr 0
+22: IntegralToIntegral £temporary3240 hour
+23: Deref £temporary3239 -> localeConvPtr localeConvPtr 2
+24: BinarySubtract £temporary3241 £temporary3240 £temporary3239 -> localeConvPtr
+25: IntegralToIntegral £temporary3242 £temporary3241
+26: Assign hour £temporary3242
+27: Assign daysOfMonths[0] 31
+28: CallHeader 21 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+29: Parameter 21 year 6
+30: Call 21 isLeapYear 0
+31: PostCall 21
+32: GetReturnValue £temporary3243
+33: Equal 36 £temporary3243 0
+34: Assign £temporary3248 29
+35: Goto 37
+36: Assign £temporary3248 28
+37: Assign daysOfMonths[1] £temporary3248
+38: Assign daysOfMonths[2] 31
+39: Assign daysOfMonths[3] 30
+40: Assign daysOfMonths[4] 31
+41: Assign daysOfMonths[5] 30
+42: Assign daysOfMonths[6] 31
+43: Assign daysOfMonths[7] 31
+44: Assign daysOfMonths[8] 30
+45: Assign daysOfMonths[9] 31
+46: Assign daysOfMonths[10] 30
+47: Assign daysOfMonths[11] 31
+48: IntegralToIntegral £temporary3261 monthDay
+49: BinarySubtract yearDay £temporary3261 1
+50: Assign monthIndex 0
+51: IntegralToIntegral £temporary3263 month
+52: SignedGreaterThanEqual 59 monthIndex £temporary3263
+53: SignedMultiply £temporary3267 monthIndex 2
+54: BinaryAdd £temporary3268 daysOfMonths £temporary3267
+55: Deref £temporary3266 -> £temporary3268 £temporary3268 0
+56: BinaryAdd yearDay yearDay £temporary3266 -> £temporary3268
+57: Increment monthIndex
+58: Goto 51
+59: IntegralToIntegral £temporary3271 sec
+60: Assign s$tm_sec £temporary3271
+61: IntegralToIntegral £temporary3273 min
+62: Assign s$tm_min £temporary3273
+63: IntegralToIntegral £temporary3275 hour
+64: Assign s$tm_hour £temporary3275
+65: IntegralToIntegral £temporary3277 monthDay
+66: Assign s$tm_mday £temporary3277
+67: IntegralToIntegral £temporary3279 month
+68: Assign s$tm_mon £temporary3279
+69: Assign s$tm_year year
+70: Assign s$tm_wday 0
+71: Assign s$tm_yday yearDay
+72: Assign s$tm_isdst 0
+73: CallHeader 65 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
+74: address £temporary3284 s
+75: Parameter 65 £temporary3284 6
+76: Call 65 mktime 0
+77: PostCall 65
+78: GetReturnValue £temporary3285
+79: Assign time £temporary3285
+80: Equal 83 timePtr 0
+81: Deref £temporary3287 -> timePtr timePtr 0
+82: Assign £temporary3287 -> timePtr time
+83: SetReturnValue time
+84: Return time
+85: FunctionEnd time

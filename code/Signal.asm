@@ -19,30 +19,30 @@ section .text
 
 section .data
 
-@2267$string_Raise20default0A#:
+@2204string_Raise20default0A#:
 	; Initializer String Raise default\n
 	db "Raise default", 10, 0
 
 section .data
 
-@2273$string_Raise20error0A#:
+@2208string_Raise20error0A#:
 	; Initializer String Raise error\n
 	db "Raise error", 10, 0
 
 section .data
 
-@2276$string_Raise20function2C20calling2025i20with2025i0A#:
+@2210string_Raise20function2C20calling2025i20with2025i0A#:
 	; Initializer String Raise function, calling %i with %i\n
 	db "Raise function, calling %i with %i", 10, 0
 
 section .text
 
  raise:
-	; Assign func 0
+	; Assign func integral8$0#
 	mov qword [rbp + 28], 0
 
  raise$1:
-	; NotEqual 8 func 0
+	; NotEqual 8 func integral8$0#
 	cmp qword [rbp + 28], 0
 	jne raise$8
 
@@ -50,8 +50,8 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  raise$3:
-	; Parameter 60 pointer "Raise default\n"
-	mov qword [rbp + 60], @2267$string_Raise20default0A#
+	; Parameter 60 pointer string_Raise20default0A#
+	mov qword [rbp + 60], @2204string_Raise20default0A#
 
  raise$4:
 	; Call 36 printf 0
@@ -68,7 +68,7 @@ section .text
 	; SetReturnValue
 
  raise$7:
-	; Return 1
+	; Return integral4$1#
 	mov ebx, 1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -76,7 +76,7 @@ section .text
 	jmp rax
 
  raise$8:
-	; NotEqual 15 func 0
+	; NotEqual 15 func integral8$0#
 	cmp qword [rbp + 28], 0
 	jne raise$15
 
@@ -84,8 +84,8 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  raise$10:
-	; Parameter 60 pointer "Raise error\n"
-	mov qword [rbp + 60], @2273$string_Raise20error0A#
+	; Parameter 60 pointer string_Raise20error0A#
+	mov qword [rbp + 60], @2208string_Raise20error0A#
 
  raise$11:
 	; Call 36 printf 0
@@ -102,7 +102,7 @@ section .text
 	; SetReturnValue
 
  raise$14:
-	; Return 0
+	; Return integral4$0#
 	mov ebx, 0
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]
@@ -113,8 +113,8 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  raise$16:
-	; Parameter 60 pointer "Raise function, calling %i with %i\n"
-	mov qword [rbp + 60], @2276$string_Raise20function2C20calling2025i20with2025i0A#
+	; Parameter 60 pointer string_Raise20function2C20calling2025i20with2025i0A#
+	mov qword [rbp + 60], @2210string_Raise20function2C20calling2025i20with2025i0A#
 
  raise$17:
 	; Parameter 68 pointer func
@@ -122,7 +122,7 @@ section .text
 	mov [rbp + 68], rax
 
  raise$18:
-	; Parameter 76 signedint sig
+	; Parameter 76 signed int sig
 	mov eax, [rbp + 24]
 	mov [rbp + 76], eax
 
@@ -142,7 +142,7 @@ section .text
 	; PreCall 36 System.Collections.Generic.HashSet`1[CCompiler.Symbol] 0
 
  raise$22:
-	; Parameter 60 signedint sig
+	; Parameter 60 signed int sig
 	mov eax, [rbp + 24]
 	mov [rbp + 60], eax
 
@@ -161,7 +161,7 @@ section .text
 	; SetReturnValue
 
  raise$26:
-	; Return 1
+	; Return integral4$1#
 	mov ebx, 1
 	mov rax, [rbp]
 	mov rdi, [rbp + 16]

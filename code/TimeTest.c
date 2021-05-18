@@ -22,14 +22,14 @@ void time_test(void) {
            t.tm_mon + 1, t.tm_mday, t.tm_hour, t.tm_min, t.tm_sec, t.tm_yday, t.tm_wday, t.tm_isdst);
 
     { char buffer1[100], buffer2[100];
-      char buffer[300];
+      char buffer[400];
       int i;
 
       strcpy(buffer1, asctime(&s));
       strcpy(buffer2, ctime(&now1));
       printf("asctime <%s>, ctime <%s>\n", buffer1, buffer2);
 
-      i = strftime(buffer, 300, "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y", &t);
+      i = strftime(buffer, 400, "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, week number sun %U, week day %w, week number mon %W, date %x, time %X, short year %y, long year %Y, summer/winter %Z", &t);
       printf("strftime %i %i <%s>\n", i, strlen(buffer), buffer);
     }
 
@@ -40,7 +40,7 @@ void time_test(void) {
                     t.tm_mon + 1, t.tm_mday, t.tm_hour, t.tm_min, t.tm_sec, t.tm_yday, t.tm_wday, t.tm_isdst);
     printf("asctime <%s>\nctime <%s>\n", asctime(&s), ctime(&now));
 
-    i = strftime(buffer, 300, "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, wday sun %U, wday %w, wday mon %W, date %x, time %X, short year %y, long year %Y", &t);
+    i = strftime(buffer, 400, "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, wday sun %U, wday %w, wday mon %W, date %x, time %X, short year %y, long year %Y", &t);
     printf("strftime <%i> <%s>\n", i, buffer);
     printf("<difftime %lu>\n", difftime(max, now));*/
   }
@@ -113,8 +113,8 @@ void time_test(void) {
     struct tm *q = gmtime(&now);
     printf("gm asctime q <%s>\n", asctime(q));
 
-    char buffer[300];
-    int i = strftime(buffer, 300, "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, wday sun %U, wday %w, wday mon %W, date %x, time %X, short year %y, long year %Y", p);
+    char buffer[400];
+    int i = strftime(buffer, 400, "short day %a, long day %A, short month %b, long month %B, date-time %c, mday %d, hour %H, gm hour %I, yday %j, month %m, min %M, am/pm %p, sec %S, wday sun %U, wday %w, wday mon %W, date %x, time %X, short year %y, long year %Y", p);
     printf("\n%i <%s>\n", i, buffer);
   }*/
 }

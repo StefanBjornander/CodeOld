@@ -444,7 +444,8 @@ static int fileopen ( const char * name , unsigned short mode ) {
   
  
    
- 
+
+
     
  register_rax = 2 ;
 register_rdi = ( unsigned long ) name ;
@@ -452,7 +453,8 @@ register_rsi = ( unsigned long ) mode ;
 syscall ( ) ;
 return register_eax ; 
    
- }
+
+}
 
 FILE * fopen ( const char * name , const char * mode ) {
 int index ;
@@ -487,7 +489,9 @@ handle = filecreate ( name ) ;
 }
 }
 else if ( strcmp ( mode , "r+" ) == 0 ) {
+printf ( "r+1\n" ) ;
 handle = fileopen ( name , ( unsigned short ) READ_WRITE ) ;
+printf ( "r+2\n" ) ;
 }
 else if ( strcmp ( mode , "w+" ) == 0 ) {
 if ( fileexists ( name ) ) {

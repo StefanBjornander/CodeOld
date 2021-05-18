@@ -4,14 +4,14 @@
 3: Jump PushFloat x
 4: PreCall 32
 5: PushFloat x
-6: UnarySubtract £temporary467 x
-7: Parameter 56 double £temporary467
+6: UnarySubtract £temporary465 x
+7: Parameter 56 double £temporary465
 8: Call 32 atan 0
 9: PostCall 32
-10: GetReturnValue £temporary468
-11: UnarySubtract £temporary469 £temporary468
+10: GetReturnValue £temporary466
+11: UnarySubtract £temporary467 £temporary466
 12: SetReturnValue
-13: Return £temporary469
+13: Return £temporary467
 14: Jump Empty
 15: PushFloat x
 16: PushFloat 1
@@ -21,14 +21,14 @@
 20: PreCall 32
 21: PushFloat 1
 22: PushFloat x
-23: SignedDivide £temporary471 1 x
-24: Parameter 56 double £temporary471
+23: SignedDivide £temporary469 1 x
+24: Parameter 56 double £temporary469
 25: Call 32 atan 0
 26: PostCall 32
-27: GetReturnValue £temporary472
-28: BinarySubtract £temporary473 1.57 £temporary472
+27: GetReturnValue £temporary470
+28: BinarySubtract £temporary471 1.57 £temporary470
 29: SetReturnValue
-30: Return £temporary473
+30: Return £temporary471
 31: Jump Empty
 32: PushFloat x
 33: PushFloat 0.5
@@ -42,21 +42,21 @@
 41: PushFloat 1
 42: PushFloat x
 43: PushFloat x
-44: SignedMultiply £temporary475 x x
-45: BinaryAdd £temporary476 1 £temporary475
-46: Parameter 56 double £temporary476
+44: SignedMultiply £temporary473 x x
+45: BinaryAdd £temporary474 1 £temporary473
+46: Parameter 56 double £temporary474
 47: Call 32 sqrt 0
 48: PostCall 32
-49: GetReturnValue £temporary477
-50: BinaryAdd £temporary478 1 £temporary477
-51: SignedDivide £temporary479 x £temporary478
-52: Parameter 56 double £temporary479
+49: GetReturnValue £temporary475
+50: BinaryAdd £temporary476 1 £temporary475
+51: SignedDivide £temporary477 x £temporary476
+52: Parameter 56 double £temporary477
 53: Call 32 atan 0
 54: PostCall 32
-55: GetReturnValue £temporary480
-56: SignedMultiply £temporary481 2 £temporary480
+55: GetReturnValue £temporary478
+56: SignedMultiply £temporary479 2 £temporary478
 57: SetReturnValue
-58: Return £temporary481
+58: Return £temporary479
 59: Jump Empty
 60: PushFloat 0
 61: PopFloat sum
@@ -70,32 +70,32 @@
 69: PopFloat
 70: PushFloat sign
 71: PushFloat product
-72: SignedMultiply £temporary482 sign product
+72: SignedMultiply £temporary480 sign product
 73: PushFloat denominator
-74: SignedDivide £temporary483 £temporary482 denominator
+74: SignedDivide £temporary481 £temporary480 denominator
 75: TopFloat term
 76: PopFloat
 77: PushFloat sum
 78: PushFloat term
-79: BinaryAdd £temporary484 sum term
+79: BinaryAdd £temporary482 sum term
 80: TopFloat sum
 81: PopFloat
 82: PushFloat sign
 83: PopFloat
 84: PushFloat sign
-85: UnarySubtract £temporary485 sign
+85: UnarySubtract £temporary483 sign
 86: TopFloat sign
 87: PopFloat
 88: PushFloat product
 89: PushFloat x
 90: PushFloat x
-91: SignedMultiply £temporary486 x x
-92: SignedMultiply £temporary487 product £temporary486
+91: SignedMultiply £temporary484 x x
+92: SignedMultiply £temporary485 product £temporary484
 93: TopFloat product
 94: PopFloat
 95: PushFloat denominator
 96: PushFloat 2
-97: BinaryAdd £temporary488 denominator 2
+97: BinaryAdd £temporary486 denominator 2
 98: TopFloat denominator
 99: PopFloat
 100: PreCall 72
@@ -103,9 +103,9 @@
 102: Parameter 96 double term
 103: Call 72 fabs 0
 104: PostCall 72
-105: GetReturnValue £temporary489
+105: GetReturnValue £temporary487
 106: PushFloat 0.000000001
-107: SignedGreaterThanEqual PushFloat term £temporary489 0.000000001
+107: SignedGreaterThanEqual PushFloat term £temporary487 0.000000001
 108: Jump PushFloat sum
 109: PushFloat sum
 110: SetReturnValue

@@ -53,6 +53,15 @@ void mainX() {
   }
 }
 
+void random_access(void);
+void temp_file(void);
+
+BOOL generateName(int index, char* text, int max);
+
+void mainXXX(void) {
+  temp_file();
+}
+
 void main(void) {
   math_test();
   file_test();

@@ -323,46 +323,40 @@ static int g_tempSize = 0 ;
  
      
 
-static int  existsTempName ( char * name ) {
-int index ;
-for ( index = 0 ; index < g_tempSize ; ++ index ) {
-if ( strcmp ( name , g_tempArray [ index ] ) == 0 ) {
+
+
+
+
+
+
+
+
+
+
+
+int  generateName ( int index , char * name , int max ) {
+if ( ( index + 1 ) < max ) {
+char c ;
+name [ index + 1 ] = '\0' ;
+
+for ( c = 'a' ; c <= 'z' ; ++ c ) {
+name [ index ] = c ;
+
+if ( ! fileexists ( name ) || generateName ( index + 1 , name , max ) ) {
 return 1  ;
 }
+}
+}
+else if ( index < max ) {
+name [ index ] = '\0' ;
 }
 
 return 0  ;
 }
 
-static char * generateTempName ( char name [ 4  ] , int size , int status ) {
-if ( size < ( 4  - 1 ) ) {
-char c ;
-
-for ( c = 'a' ; c <= 'z' ; ++ c ) {
-name [ size ] = c ;
-name [ size + 1 ] = '\0' ;
-
-if ( ! fileexists ( name ) ) {
-switch ( status ) {
-case 0  :
+char * tmpnam ( char name [ 4  ] ) {
+if ( generateName ( 0 , name , 4  ) ) {
 return name ;
-
-case 1  :
-if ( ! existsTempName ( name ) ) {
-strcpy ( g_tempArray [ g_tempSize ] , name ) ;
-return g_tempArray [ g_tempSize ++];
-}
-break ;
-}
-}
-
-{ char * result = generateTempName ( name , size + 1 , status ) ;
-
-if ( result != ( ( void * ) 0 )  ) {
-return result ;
-}
-}
-}
 }
 
 return ( ( void * ) 0 )  ;
@@ -372,8 +366,8 @@ FILE * tmpfile ( void ) {
 FILE * stream ;
 char name [ 4  ];
 
-if ( generateTempName ( name , 0 , 0  ) && ( ( stream = fopen ( name , "w" ) ) != ( ( void * ) 0 )  ) ) {
-
+if ( generateName ( 0 , name , 4  ) &&
+( ( stream = fopen ( name , "w" ) ) != ( ( void * ) 0 )  ) ) {
 stream -> temporary = 1  ;
 return stream ;
 }
@@ -381,13 +375,53 @@ return stream ;
 return ( ( void * ) 0 )  ;
 }
 
-char * tmpnam ( char name [ 4  ] ) {
-if ( g_tempSize < 16  ) {
-return generateTempName ( name , 0 , 1  ) ;
-}
 
-return ( ( void * ) 0 )  ;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
