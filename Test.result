@@ -3,28 +3,28 @@ old  <malloc4: 7411476 0 80>
 new  <malloc4: 65448 80 65528>
 
 522:
-old  <now 1: 1622444383>
-new  <now 1: 1622447382>
+old  <now 1: 1622561054>
+new  <now 1: 1622564156>
 
 523:
-old  <now 2: 1622444383>
-new  <now 2: 1622447382>
+old  <now 2: 1622561054>
+new  <now 2: 1622564156>
 
 524:
-old  <   gm time: Mon 2021-05-31 06:59:43, year day 150, week day 1, daylight saving time -1>
-new  <   gm time: Mon 2021-05-31 07:49:42, year day 150, week day 1, daylight saving time -1>
+old  <   gm time: Tue 2021-06-01 15:24:14, year day 151, week day 2, daylight saving time -1>
+new  <   gm time: Tue 2021-06-01 16:15:56, year day 151, week day 2, daylight saving time -1>
 
 525:
-old  <local time: Mon 2021-05-31 07:59:43, year day 150, week day 1, daylight saving time -1>
-new  <local time: Mon 2021-05-31 08:49:42, year day 150, week day 1, daylight saving time -1>
+old  <local time: Tue 2021-06-01 16:24:14, year day 151, week day 2, daylight saving time -1>
+new  <local time: Tue 2021-06-01 17:15:56, year day 151, week day 2, daylight saving time -1>
 
 526:
-old  <asctime <Mon May 31 06:59:43 2021>, ctime <Mon May 31 07:59:43 2021>>
-new  <asctime <Mon May 31 07:49:42 2021>, ctime <Mon May 31 08:49:42 2021>>
+old  <asctime <Tue Jun 1 15:24:14 2021>, ctime <Tue Jun 1 16:24:14 2021>>
+new  <asctime <Tue Jun 1 16:15:56 2021>, ctime <Tue Jun 1 17:15:56 2021>>
 
 527:
-old  <strftime 306 306 <short day Mon, long day Monday, short month May, long month May, date-time 2021-05-31 07:59:43, mday 31, hour 07, gm hour 07, yday 150, month 05, min 59, am/pm AM, sec 43, week number sun 22, week day 01, week number mon 22, date 07:59:43, time 07:59:43, short year 21, long year 2021, summer/winter summer>>
-new  <strftime 306 306 <short day Mon, long day Monday, short month May, long month May, date-time 2021-05-31 08:49:42, mday 31, hour 08, gm hour 08, yday 150, month 05, min 49, am/pm AM, sec 42, week number sun 22, week day 01, week number mon 22, date 08:49:42, time 08:49:42, short year 21, long year 2021, summer/winter summer>>
+old  <strftime 308 308 <short day Tue, long day Tuesday, short month Jun, long month June, date-time 2021-06-01 16:24:14, mday 01, hour 16, gm hour 04, yday 151, month 06, min 24, am/pm AM, sec 14, week number sun 22, week day 02, week number mon 22, date 16:24:14, time 16:24:14, short year 21, long year 2021, summer/winter summer>>
+new  <strftime 308 308 <short day Tue, long day Tuesday, short month Jun, long month June, date-time 2021-06-01 17:15:56, mday 01, hour 17, gm hour 05, yday 151, month 06, min 15, am/pm AM, sec 56, week number sun 22, week day 02, week number mon 22, date 17:15:56, time 17:15:56, short year 21, long year 2021, summer/winter summer>>
 
 529:
 old  <  Address 7411448, Size 96>
