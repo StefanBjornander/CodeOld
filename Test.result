@@ -2,37 +2,29 @@
 old  <malloc4: 7411476 0 80>
 new  <malloc4: 65448 80 65528>
 
-490:
-old  <index4: 8: value 64.000000>
-new  <index4: 8: value --2147483648.000000>
-
-491:
-old  <index4: 9: value 81.000000>
-new  <index4: 9: value 0.000000>
-
 522:
 old  <now 1: 1622561054>
-new  <now 1: 1622619374>
+new  <now 1: 1622624317>
 
 523:
 old  <now 2: 1622561054>
-new  <now 2: 1622619374>
+new  <now 2: 1622624317>
 
 524:
 old  <   gm time: Tue 2021-06-01 15:24:14, year day 151, week day 2, daylight saving time -1>
-new  <   gm time: Wed 2021-06-02 07:36:14, year day 152, week day 3, daylight saving time -1>
+new  <   gm time: Wed 2021-06-02 08:58:37, year day 152, week day 3, daylight saving time -1>
 
 525:
 old  <local time: Tue 2021-06-01 16:24:14, year day 151, week day 2, daylight saving time -1>
-new  <local time: Wed 2021-06-02 08:36:14, year day 152, week day 3, daylight saving time -1>
+new  <local time: Wed 2021-06-02 09:58:37, year day 152, week day 3, daylight saving time -1>
 
 526:
 old  <asctime <Tue Jun 1 15:24:14 2021>, ctime <Tue Jun 1 16:24:14 2021>>
-new  <asctime <Wed Jun 2 07:36:14 2021>, ctime <Wed Jun 2 08:36:14 2021>>
+new  <asctime <Wed Jun 2 08:58:37 2021>, ctime <Wed Jun 2 09:58:37 2021>>
 
 527:
 old  <strftime 308 308 <short day Tue, long day Tuesday, short month Jun, long month June, date-time 2021-06-01 16:24:14, mday 01, hour 16, gm hour 04, yday 151, month 06, min 24, am/pm AM, sec 14, week number sun 22, week day 02, week number mon 22, date 16:24:14, time 16:24:14, short year 21, long year 2021, summer/winter summer>>
-new  <strftime 310 310 <short day Wed, long day Wednesday, short month Jun, long month June, date-time 2021-06-02 08:36:14, mday 02, hour 08, gm hour 08, yday 152, month 06, min 36, am/pm AM, sec 14, week number sun 22, week day 03, week number mon 22, date 08:36:14, time 08:36:14, short year 21, long year 2021, summer/winter summer>>
+new  <strftime 310 310 <short day Wed, long day Wednesday, short month Jun, long month June, date-time 2021-06-02 09:58:37, mday 02, hour 09, gm hour 09, yday 152, month 06, min 58, am/pm AM, sec 37, week number sun 22, week day 03, week number mon 22, date 09:58:37, time 09:58:37, short year 21, long year 2021, summer/winter summer>>
 
 529:
 old  <  Address 7411448, Size 96>
@@ -146,4 +138,4 @@ new  <<%> <Hello, World!> <X> <58648>>
 old  <<%> <Hello, World!> <X> <6363032>>
 new  <<%> <Hello, World!> <X> <58648>>
 
-37
+35

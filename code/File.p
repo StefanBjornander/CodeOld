@@ -357,11 +357,11 @@ enum { EEXIST , ENOENT , EACCES };
 enum { SEEK_SET = 0 , SEEK_CUR = 1 , SEEK_END = 2 };
 
     
-               
+ enum { READ = 0x40 , WRITE = 0x41 , READ_WRITE = 0x42 }; 
    
  
     
- enum { READ = 0 , WRITE = 1 , READ_WRITE = 3 }; 
+               
    
  
                            
@@ -372,28 +372,28 @@ enum { SEEK_SET = 0 , SEEK_CUR = 1 , SEEK_END = 2 };
 
 int filecreate ( const char * name ) { 
     
-    
-   
-   
-   
+ register_ah = 0x3Cs ;
+register_cx = 0x00 ;
+register_dx = name ;
+interrupt ( 0x21s ) ;
 
-     
+{ int handle = register_ax ;
 
+if ( carry_flag ) {
+errno = FOPEN ;
+return -1 ;
+}
+
+return handle ;
+} 
+   
+ 
     
+    
+       
    
   
-
-
-  
- 
    
- 
-    
- register_rax = 85 ;
-register_rdi = ( unsigned long ) name ;
-register_rsi = 0777L ;
-syscall ( ) ;
-return register_eax ; 
    
  }
 
@@ -413,45 +413,45 @@ return 0  ;
 
 int  fileexists ( const char * name ) { 
     
-    
-   
-   
-   
-    
+ register_ah = 0x43s ;
+register_al = 0x00s ;
+register_dx = name ;
+interrupt ( 0x21s ) ;
+return ! carry_flag ; 
    
  
     
- register_rax = 21 ;
-register_rdi = ( unsigned long ) name ;
-register_rsi = 0 ;
-syscall ( ) ;
-return ( register_eax == 0 ) ; 
+    
+       
+   
+  
+       
    
  }
 
 static int fileopen ( const char * name , unsigned short mode ) { 
     
-    
-   
-   
+ register_ah = 0x3Ds ;
+register_al = mode ;
+register_dx = name ;
+interrupt ( 0x21s ) ;
+
+if ( carry_flag ) {
+errno = FOPEN ;
+return -1 ;
+}
+else {
+return register_ax ;
+} 
    
 
+
     
-   
+    
+       
+       
   
-
- 
-  
- 
    
-
-
-    
- register_rax = 2 ;
-register_rdi = ( unsigned long ) name ;
-register_rsi = ( unsigned long ) mode ;
-syscall ( ) ;
-return register_eax ; 
    
 
 }
@@ -547,28 +547,28 @@ return 0 ;
 int fclose ( FILE * stream ) {
 if ( stream != ( ( void * ) 0 )  ) { 
     
-    
-     
-   
+ register_ah = 0x3Es ;
+register_bx = stream -> handle ;
+interrupt ( 0x21s ) ;
 
-    
-   
-  
+if ( carry_flag ) {
+errno = FCLOSE ;
+return -1 ;
+}
 
+if ( stream -> temporary ) {
+remove ( stream -> name ) ;
+}
 
-      
-     
-
-
-     
-   
+stream -> open = 0  ;
+return 0 ; 
    
  
     
- register_rax = 3L ;
-register_rdi = ( unsigned long ) stream -> handle ;
-syscall ( ) ;
-return 0 ; 
+    
+         
+  
+   
    
  }
 else {
@@ -588,24 +588,24 @@ return 0 ;
 
 int remove ( const char * name ) { 
     
-    
-   
-   
-   
+ register_ah = 0x41s ;
+register_cl = 0s ;
+register_dx = name ;
+interrupt ( 0x21s ) ;
 
-     
-  
- 
-   
- 
-    
- register_rax = 88L ;
-register_rdi = ( unsigned long ) name ;
-syscall ( ) ;
-
-if ( register_ebx == 0 ) {
+if ( ! carry_flag ) {
 return 0 ;
 } 
+   
+ 
+    
+    
+       
+  
+
+      
+  
+ 
    
 
 errno = FREMOVE ;
@@ -614,26 +614,26 @@ return -1 ;
 
 int rename ( const char * oldName , const char * newName ) { 
     
-    
-   
-   
-   
-   
+ register_ah = 0x56s ;
+register_cl = 0s ;
+register_dx = oldName ;
+register_di = newName ;
+interrupt ( 0x21s ) ;
 
-     
-  
- 
-   
- 
-    
- register_rax = 82L ;
-register_rdi = ( unsigned long ) oldName ;
-register_rsi = ( unsigned long ) newName ;
-syscall ( ) ;
-
-if ( register_eax == 0 ) {
+if ( ! carry_flag ) {
 return 0 ;
 } 
+   
+ 
+    
+    
+       
+       
+  
+
+      
+  
+ 
    
 
 errno = FRENAME ;
@@ -729,84 +729,84 @@ return c ;
 
 int  fread ( void * ptr , int  size , int  nobj , FILE * stream ) { 
     
-      
-     
-   
-   
-   
+ register_bx = stream -> handle ;
+register_cx = size * nobj ;
+register_ah = 0x3Fs ;
+register_dx = ptr ;
+interrupt ( 0x21s ) ;
 
+if ( carry_flag ) {
+stream -> errno = errno = FREAD ;
+return 0 ;
+}
+else {
+return register_ax ;
+} 
+   
+ 
     
+          
        
-  
-
- 
-  
- 
+           
    
- 
-    
- register_rdi = ( unsigned long ) stream -> handle ;
-register_rsi = ( unsigned long ) ptr ;
-register_rdx = ( unsigned long ) ( size * nobj ) ;
-register_rax = 0 ;
-syscall ( ) ;
-return register_eax ; 
+  
+   
    
  }
 
 int  fwrite ( const void * ptr , int  size , int  nobj , FILE * stream ) { 
     
-      
-     
-   
-   
-   
+ register_bx = stream -> handle ;
+register_cx = size * nobj ;
+register_ah = 0x40s ;
+register_dx = ptr ;
+interrupt ( 0x21s ) ;
 
+if ( carry_flag ) {
+stream -> errno = errno = FWRITE ;
+return 0 ;
+}
+else {
+return register_ax ;
+} 
+   
+ 
     
+          
        
-  
-
- 
-  
- 
+           
    
- 
-    
- register_rdi = ( unsigned long ) stream -> handle ;
-register_rsi = ( unsigned long ) ptr ;
-register_rdx = ( unsigned long ) ( size * nobj ) ;
-register_rax = 1 ;
-syscall ( ) ;
-return register_eax ; 
+  
+   
    
  }
 
 int fseek ( FILE * stream , int offset , int origin ) { 
     
+ register_al = ( short ) origin ;
+register_ah = 0x42s ;
+register_bx = stream -> handle ;
+register_cx = 0 ;
+register_dx = ( int ) offset ;
+interrupt ( 0x21s ) ;
+
+if ( ! carry_flag ) {
+stream -> position = register_ax ;
+return stream -> position ;
+}
+else {
+stream -> errno = FSEEK ;
+return -1 ;
+} 
+   
+ 
+    
+    
+         
        
-   
-     
-   
-      
-   
-
-     
-     
-    
-
- 
-     
+       
   
- 
    
- 
-    
- register_rax = 8 ;
-register_rdi = ( unsigned long ) stream -> handle ;
-register_rsi = ( unsigned long ) offset ;
-register_rdx = ( unsigned long ) origin ;
-syscall ( ) ;
-return register_eax ; 
    
  }
 
