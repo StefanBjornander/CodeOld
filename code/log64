@@ -519,12 +519,12 @@ fileexists "File.h": Yes
 fileexists "File.y": No
 fileexists "File.p": Yes
 fileexists "File.z": No
-now 1: 1622561054
-now 2: 1622561054
-   gm time: Tue 2021-06-01 15:24:14, year day 151, week day 2, daylight saving time -1
-local time: Tue 2021-06-01 16:24:14, year day 151, week day 2, daylight saving time -1
-asctime <Tue Jun 1 15:24:14 2021>, ctime <Tue Jun 1 16:24:14 2021>
-strftime 308 308 <short day Tue, long day Tuesday, short month Jun, long month June, date-time 2021-06-01 16:24:14, mday 01, hour 16, gm hour 04, yday 151, month 06, min 24, am/pm AM, sec 14, week number sun 22, week day 02, week number mon 22, date 16:24:14, time 16:24:14, short year 21, long year 2021, summer/winter summer>
+now 1: 1622963443
+now 2: 1622963443
+   gm time: Sun 2021-06-06 07:10:43, year day 156, week day 0, daylight saving time -1
+local time: Sun 2021-06-06 08:10:43, year day 156, week day 0, daylight saving time -1
+asctime <Sun Jun 6 07:10:43 2021>, ctime <Sun Jun 6 08:10:43 2021>
+strftime 307 307 <short day Sun, long day Sunday, short month Jun, long month June, date-time 2021-06-06 08:10:43, mday 06, hour 08, gm hour 08, yday 156, month 06, min 10, am/pm AM, sec 43, week number sun 23, week day 00, week number mon 23, date 08:10:43, time 08:10:43, short year 21, long year 2021, summer/winter summer>
 Heap:
   Address 7411448, Size 96
   Address 7411340, Size 96
